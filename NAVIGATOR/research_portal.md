@@ -1,41 +1,40 @@
-# NEXAH Research Portal
+# NEXAH Framework - Research Portal
 
-Welcome to the NEXAH Research Portal. Here, you'll find all the theoretical foundations, axioms, principles, and theorems that form the backbone of the **NEXAH framework**. This section is dedicated to the deep research and exploration of the system's core ideas, offering a clear understanding of how it models complex systems.
+Welcome to the NEXAH Research Portal! This portal provides the necessary resources and documentation to dive deep into the theoretical foundations and research of the NEXAH framework.
 
-![Research Framework](./visuals/Explore_Framework.png)
+![NEXAH Repository - Research & Application](./visuals/Nexah_Repository_Research_Application.png)
 
----
+## 🔎 Research & Exploration
 
-## 🔎 What is the NEXAH Framework?
+### Why NEXAH?
 
-The **NEXAH Framework** is a relational modeling system that structures complex systems and enables their dynamic navigation. It combines **modular design**, **explicit orientation**, and **stability field modeling** to create a comprehensive approach to understanding and managing complex changes and regime shifts.
+NEXAH was created as a **universal model** for complex systems. It aims to provide the tools to understand dynamic changes, regime shifts, and structural orientation in systems of all types.
 
-## 📂 **Core Research Areas**
+### Core Areas of NEXAH:
 
-- **Axioms**: Foundational principles that define the NEXAH framework and the core logic behind relational modeling.
-- **Principles**: Structural concepts for applying NEXAH across various disciplines and systems.
-- **Theorems**: Formal derivations and applications based on the framework, providing mathematical and theoretical insights into its functionality.
+- **META**: Framework structure — defines relational order.
+- **ARCHY**: Stability regimes — governs transitions between system states.
+- **NEXAH**: Orientation and frames — enables navigability within the system.
 
-![Theoretical Foundations](./visuals/Practical_Applications_Visual.png)
-
----
-
-## 📚 Research Documents
-
-- **Axioms** – Learn about the essential building blocks of NEXAH that guide its relational model.
-- **Principles** – Discover the structural rules and concepts that help implement NEXAH.
-- **Theorems** – Delve into the formal derivations that show how NEXAH works.
+![Research Overview](./visuals/Nexah_Repository_Research_Application_ii.png)
 
 ---
 
-## 🧠 **Further Research Opportunities**
+### **Research Documentation**
 
-We encourage researchers to explore the **relational models**, **stability systems**, and **orientation frameworks** of NEXAH. As this framework is flexible, we invite new research directions and case studies to advance its evolution.
+Explore the research papers and documentation related to NEXAH's theoretical principles:
+
+- **Axioms** – Foundational principles of NEXAH.
+- **Principles** – Core structural logic for applying NEXAH.
+- **Theorems** – Formal derivations and applications based on NEXAH.
 
 ---
 
 ## 🚀 Next Steps:
+- **Dive Deeper**: Explore the full **framework structure** and understand the principles behind NEXAH.
+- **Practical Applications**: Learn how NEXAH can be applied in real-world scenarios.
+- **Contribute**: Contribute to the ongoing research by suggesting improvements or adding new insights.
 
-- **Explore the Code**: Check out the repository to see the technical implementation of NEXAH's core modules.
-- **Contribute to Research**: If you have theoretical insights, contribute by forking the repository and enhancing the research.
-- **Read More**: Check out the available papers and modules for detailed information.
+---
+
+This repository serves as the gateway to understanding and contributing to the **NEXAH framework**. The structure is designed to support research and applications that utilize relational modeling and explicit orientation.
