@@ -46,7 +46,7 @@ Each layer in the system stack feeds into the next, creating a continuous feedba
 This system stack is what powers the **NEXAH Framework**, allowing it to effectively model complex systems and provide clarity in navigating through them.
 
 
-![The Flow of Interaction- NEXAH](./visuals/Flow_of_Interaciton.png)
+./visuals/Flow_of_Interaction.png
 ---
 
 ## Conclusion
