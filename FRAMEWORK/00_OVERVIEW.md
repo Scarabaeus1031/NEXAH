@@ -66,3 +66,52 @@ The **System Stack** is the backbone of the NEXAH Framework. Understanding how e
 ### Next Steps:
 - **Explore Framework**: Dive deeper into each of the layers (META, ARCHY, and NEXAH) to understand their roles within the system.
 - **Implement in Practice**: Use the system stack for real-world applications, tackling challenges and improving system behaviors.
+
+---
+
+## 📚 **Key Documents:**
+Here’s a breakdown of the essential documents that explain the components of the NEXAH Framework, structured according to the system stack:
+
+1. **[system_stack.md](./system_stack.md)**  
+   - **Purpose**: Overview of the entire system stack architecture.  
+   - **Content**: Provides a detailed breakdown of how META, ARCHY, and NEXAH layers interact.
+
+2. **[axioms.md](./axioms.md)**  
+   - **Purpose**: Defines the foundational axioms of NEXAH.  
+   - **Content**: Lists and explains the core principles that guide the framework’s relational structure.
+
+3. **[theorems.md](./theorems.md)**  
+   - **Purpose**: Formal derivations based on the axioms and principles.  
+   - **Content**: Provides theoretical proofs and mathematical support for the NEXAH framework.
+
+4. **[stack_structure.md](./stack_structure.md)**  
+   - **Purpose**: Describes how the NEXAH system stack operates at a granular level.  
+   - **Content**: Explains the interrelationship and dependencies of the stack’s components.
+
+5. **[frame_operator.md](./frame_operator.md)**  
+   - **Purpose**: Defines how frames are established and applied in the NEXAH system.  
+   - **Content**: Describes the process and logic behind the operation of frames.
+
+6. **[minimal_logic.md](./minimal_logic.md)**  
+   - **Purpose**: Explains the minimal logic underpinning the relational model.  
+   - **Content**: Outlines the fundamental logical principles for constructing relationships.
+
+7. **[modules.md](./modules.md)**  
+   - **Purpose**: Overview of the different modules within the NEXAH framework.  
+   - **Content**: Lists and categorizes the modules, detailing their respective functions.
+
+8. **[regime_operator.md](./regime_operator.md)**  
+   - **Purpose**: Explains how system regimes are defined and applied.  
+   - **Content**: Details the logic behind managing system state changes.
+
+9. **[relational_model.md](./relational_model.md)**  
+   - **Purpose**: Describes the core relational model of the system.  
+   - **Content**: Provides an in-depth view of how system elements are structured based on relational principles.
+
+10. **[research_papers.md](./research_papers.md)**  
+    - **Purpose**: Collection of foundational and applied research papers.  
+    - **Content**: Links to the theoretical and applied research supporting the NEXAH framework.
+
+11. **[application_cases.md](./application_cases.md)**  
+    - **Purpose**: Showcases use cases for NEXAH in various domains.  
+    - **Content**: Examples of how NEXAH is applied in architecture, engineering, data science, and urban systems.
