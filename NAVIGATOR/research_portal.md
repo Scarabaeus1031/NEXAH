@@ -2,7 +2,7 @@
 
 Welcome to the NEXAH Research Portal. Here, you'll find all the theoretical foundations, axioms, principles, and theorems that form the backbone of the **NEXAH framework**. This section is dedicated to the deep research and exploration of the system's core ideas, offering a clear understanding of how it models complex systems.
 
-![Research Framework](./NAVIGATOR/visuals/Explore_Framework.png)
+![Research Framework](./visuals/Explore_Framework.png)
 
 ---
 
@@ -16,7 +16,7 @@ The **NEXAH Framework** is a relational modeling system that structures complex 
 - **Principles**: Structural concepts for applying NEXAH across various disciplines and systems.
 - **Theorems**: Formal derivations and applications based on the framework, providing mathematical and theoretical insights into its functionality.
 
-![Theoretical Foundations](./NAVIGATOR/visuals/Practical_Applications_Visual.png)
+![Theoretical Foundations](./visuals/Practical_Applications_Visual.png)
 
 ---
 
