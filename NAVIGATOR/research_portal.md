@@ -2,7 +2,7 @@
 
 Welcome to the NEXAH Research Portal! This portal provides the necessary resources and documentation to dive deep into the theoretical foundations and research of the NEXAH framework.
 
-![Research Framework](./NAVIGATOR/visuals/Explore_Framework.png)
+![Research Framework](./visuals/Explore_Framework.png)
 
 ## 🔎 Research & Exploration
 
