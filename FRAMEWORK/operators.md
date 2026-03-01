@@ -21,9 +21,13 @@ The **Operators** in the NEXAH framework are key to understanding how transforma
    - **Description**: The fixpoint operator identifies a stable equilibrium in a system that can be reached after several iterations.
    - **Usage**: Essential for systems where feedback loops stabilize over time, such as in economic models or iterative computation systems.
 
+### 5. **Q° (The Aperture Connection)**
+
+   - **Description**: The Q° operator defines the threshold for system transitions, aligning with the relational model. It acts as a symbolic and operational marker in the system's behavior during dynamic shifts. The operator facilitates a transitional boundary before formal axiomatic principles are applied.
+   - **Usage**: In **NEXAH**, Q° serves to articulate the transition boundaries between states, representing a critical moment when the system changes its orientation or frame. This operator is symbolic and operational in nature, allowing for smooth transitions between system states.
+
 ## Operator Use in NEXAH
 
 Each of these operators plays a pivotal role in the operation of NEXAH. They are combined in various ways to model the structure, transitions, and stability of complex systems. Their modular design allows them to be applied to a wide variety of system types and scenarios.
 
 These operators are fundamental tools for creating dynamic models, ensuring stability, and guiding the system through necessary transformations.
-
