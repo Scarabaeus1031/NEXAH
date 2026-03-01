@@ -35,7 +35,7 @@ Here are some of the key areas where NEXAH's framework has been applied:
 
 ### **NEXAH in Action**
 
-![Practical Application Visual](./visuals/Practical_Applications_Visual.png)
+![Practical Application Visual](./visuals/Nexah_Application.png)
 
 ---
 
