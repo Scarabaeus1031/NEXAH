@@ -12,7 +12,7 @@ The **META** layer defines the relational order within the system. It sets the f
 - **Purpose**: Establishes the rules of the system.
 - **Key Focus**: Relations between elements, including ordering and hierarchy.
 
-![System Stack - META](./FRAMEWORK/visuals/Systemstack_Structure_Meta.png)
+![System Stack - META](./visuals/Systemstack_Structure_Meta.png)
 
 ---
 
@@ -22,7 +22,7 @@ The **ARCHY** layer governs the stability of the system. It defines and enforces
 - **Purpose**: Maintains system stability.
 - **Key Focus**: Defines regimes and transitions between system states.
 
-![System Stack - ARCHY](./FRAMEWORK/visuals/Systemstack_Structure_Archy.png)
+![System Stack - ARCHY](./visuals/Systemstack_Structure_Archy.png)
 
 ---
 
@@ -32,7 +32,7 @@ The **NEXAH** layer provides the navigability within the system. It defines the 
 - **Purpose**: Provides orientation and navigation.
 - **Key Focus**: Defines frames of reference within the system.
 
-![System Stack - NEXAH](./FRAMEWORK/visuals/Systemstack_Structure_Nexah.png)
+![System Stack - NEXAH](./visuals/Systemstack_Structure_Nexah.png)
 
 ---
 
