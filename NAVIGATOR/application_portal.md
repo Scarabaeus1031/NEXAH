@@ -2,7 +2,7 @@
 
 Welcome to the **NEXAH Applications Portal**! Here, you'll explore the practical implementation and real-world applications of the NEXAH framework. This portal provides resources for how to use NEXAH for dynamic, complex system modeling and problem-solving.
 
-![Applications Overview](./visuals/Nexah_Repository_Research_Application_ii.png)
+![Applications Overview](./visuals/Nexah_Application.png)
 
 ---
 
@@ -35,7 +35,7 @@ Here are some of the key areas where NEXAH's framework has been applied:
 
 ### **NEXAH in Action**
 
-![Practical Application Visual](./visuals/Nexah_Application.png)
+![Practical Application Visual](./visuals/Practical_Applications_Visual.png)
 
 ---
 
