@@ -19,6 +19,8 @@ NEXAH was developed as a **universal model** for complex systems. It enables the
 ### 🔧 **Framework Structure**
 Learn about how the **NEXAH Framework** works and how its modular design allows integration into various disciplines.
 
+![Framework Structure](./Explore_Framework.png)
+
 #### 🧠 **Research**
 Explore the research and theoretical foundations of NEXAH:
 
