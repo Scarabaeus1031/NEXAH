@@ -2,7 +2,9 @@
 
 Welcome to the **NEXAH Repository**! This portal is designed to help you navigate and explore the NEXAH framework and its components. It offers detailed documentation, an overview of the framework, and guidance on how to start applying NEXAH in your own projects.
 
-![Explore Repository Overview](./visuals/Explore_Repository.png)
+
+![Repository Overview](./visuals/Nexah_Entry_Diagram.png)
+
 
 ## 🔎 Explore the Repository Structure
 
@@ -20,7 +22,7 @@ The main modules that power NEXAH are organized under the following components:
 - **Regime Operator**: Governs stability transitions.
 - **Frame Operator**: Deals with system orientations.
 
-![Repository Overview](./visuals/Nexah_Entry_Diagram.png)
+![Explore Repository Overview](./visuals/Explore_Repository.png)
 
 ---
 
