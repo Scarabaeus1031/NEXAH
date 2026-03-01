@@ -56,7 +56,7 @@ The **System Stack** is the backbone of the NEXAH Framework. Understanding how e
 
 ---
 
-### 📚 **Explore the System Stack:**
+## 📚 **Explore the System Stack:**
 - [META Layer](./META/readme.md)
 - [ARCHY Layer](./ARCHY/readme.md)
 - [NEXAH Layer](./NEXAH/readme.md)
