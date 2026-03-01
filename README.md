@@ -19,7 +19,7 @@ NEXAH was developed as a **universal model** for complex systems. It enables the
 ### 🔧 **Framework Structure**
 Learn about how the **NEXAH Framework** works and how its modular design allows integration into various disciplines.
 
-![Framework Structure](./NEXAH/NAVIGATOR/visuals/Explore_Repository.png)
+![Explore Framework](./NAVIGATOR/visuals/Explore_Framework.png)
 
 #### 🧠 **Research**
 Explore the research and theoretical foundations of NEXAH:
@@ -36,7 +36,7 @@ NEXAH's framework is designed to solve real-world challenges across various doma
 - **Data Classification Models**
 - **Urban Systems**
 
-![Practical Applications](./NEXAH/NAVIGATOR/visuals/Practical_Applications_Visual.png)
+![Practical Applications Visual](./NAVIGATOR/visuals/Practical_Applications_Visual.png)
 
 ### ⚙️ **Modules and Operators**
 NEXAH is built on several key modules and operators that allow for modular applications and structural modeling across fields. Key tools include:
