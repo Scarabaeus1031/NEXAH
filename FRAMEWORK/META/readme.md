@@ -5,7 +5,7 @@ Welcome to the **META Layer** of the NEXAH Framework. This section defines the f
 The **META** layer sets the **relational order** for the entire framework and provides the theoretical structure that supports the implementation of NEXAH.
 
 ---
-
+ 
 ## 📚 Key Areas
 
 ### **Axioms**
