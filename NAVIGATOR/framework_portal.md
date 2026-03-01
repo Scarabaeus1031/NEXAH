@@ -32,7 +32,7 @@ NEXAH serves as a universal modeling system for complex systems. It enables the 
 - **Operators**: Key tools and functions that power the framework.
 - **Modules**: A collection of core and interdisciplinary modules for specialized applications.
 
-![NEXAH Application](./visuals/Nexah_Application_Navi.png)
+![NEXAH Application](./visuals/Nexah_Application.png)
 
 Explore this portal to understand how NEXAH is built and how it can be applied to your projects.
 
