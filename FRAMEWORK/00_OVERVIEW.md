@@ -1,3 +1,4 @@
+
 # NEXAH Framework - System Stack
 
 The **System Stack** of the NEXAH Framework represents its core architecture, defining how the layers **META**, **ARCHY**, and **NEXAH** interact and form a cohesive system. This stack enables us to understand the relationships between the components of a complex system and manage how they evolve.
