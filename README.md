@@ -2,7 +2,7 @@
 
 The official repository for **NEXAH framework** development — a modular system for **structural modeling** and **relational navigation**.
 
-![Explore Framework](./NEXAH/NAVIGATOR/visuals/Explore_Framework.png)
+![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
 ---
 
