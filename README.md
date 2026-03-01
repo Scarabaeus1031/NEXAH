@@ -1,6 +1,9 @@
-# NEXAH
+# NEXAH Framework
 
-**NEXAH** is a structural modeling framework designed to understand and navigate complex systems. It is organized into **META**, **ARCHY**, and **NEXAH** layers, each contributing to the system's organization, stability, and navigation.
+The official repository for NEXAH framework development — a modular system for structural modeling and relational navigation.
+
+![NEXAH Framework Diagram](./Nexah_Entry_Diagram.png)
+
 
 ## 🔎 Explore NEXAH
 
