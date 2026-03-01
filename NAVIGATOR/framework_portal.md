@@ -20,7 +20,7 @@ The NEXAH framework is organized into the following layers:
 
 These layers are the foundational elements that guide the design and implementation of NEXAH in real-world applications.
 
-./NAVIGATOR/visuals/Explore_Framework.png)
+![Explore Framework](./visuals/Explore_Framework.png)
 
 ## Purpose and Use
 
@@ -32,7 +32,7 @@ NEXAH serves as a universal modeling system for complex systems. It enables the 
 - **Operators**: Key tools and functions that power the framework.
 - **Modules**: A collection of core and interdisciplinary modules for specialized applications.
 
-./NAVIGATOR/visuals/Nexah_Application.png)
+![NEXAH Application](./visuals/Nexah_Application.png)
 
 Explore this portal to understand how NEXAH is built and how it can be applied to your projects.
 
