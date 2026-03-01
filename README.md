@@ -2,7 +2,7 @@
 
 The official repository for **NEXAH framework** development — a modular system for **structural modeling** and **relational navigation**.
 
-![NEXAH Framework Diagram](./Nexah_Entry_Diagram.png)
+![NEXAH Framework Diagram](./NEXAH/NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
 ---
 
@@ -19,7 +19,7 @@ NEXAH was developed as a **universal model** for complex systems. It enables the
 ### 🔧 **Framework Structure**
 Learn about how the **NEXAH Framework** works and how its modular design allows integration into various disciplines.
 
-![Framework Structure](./Explore_Framework.png)
+![Framework Structure](./NEXAH/NAVIGATOR/visuals/Explore_Framework.png)
 
 #### 🧠 **Research**
 Explore the research and theoretical foundations of NEXAH:
@@ -35,6 +35,8 @@ NEXAH's framework is designed to solve real-world challenges across various doma
 - **Engineering Solutions**
 - **Data Classification Models**
 - **Urban Systems**
+
+![Practical Applications](./NEXAH/NAVIGATOR/visuals/Practical_Applications_Visual.png)
 
 ### ⚙️ **Modules and Operators**
 NEXAH is built on several key modules and operators that allow for modular applications and structural modeling across fields. Key tools include:
