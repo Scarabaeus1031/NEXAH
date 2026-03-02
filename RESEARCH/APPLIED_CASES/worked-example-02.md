@@ -1,5 +1,7 @@
 # Worked Example 02 — Multiple Basins & Regime Partition
 
+![Worked Example 02 – Basin Partition](../visuals/worked_example_02_basin_partition.png)
+
 ---
 
 ## 1. Setup
@@ -63,14 +65,14 @@ Then:
 
 ## 4. Structural Interpretation
 
-META:
-- Underlying order remains unchanged.
+**META**  
+Underlying order remains unchanged.
 
-ARCHY:
-- Regime operator induces basin geometry.
+**ARCHY**  
+The regime operator induces basin geometry.
 
-NEXAH:
-- Frame selection determines interpretation of basin structure.
+**NEXAH**  
+Frame selection determines interpretation of basin structure.
 
 Different admissible frames may yield different linearizations of basin relations.
 
@@ -80,10 +82,10 @@ Different admissible frames may yield different linearizations of basin relation
 
 The structure now exhibits:
 
-- Stabilization regions
-- Regime domains
-- Threshold boundaries
-- Operator-induced hierarchy
+- Stabilization regions  
+- Regime domains  
+- Threshold boundaries  
+- Operator-induced hierarchy  
 
 This is the first non-trivial structural geometry produced by the framework.
 
@@ -100,11 +102,11 @@ This example shows:
 
 This is directly applicable to:
 
-- Threshold systems
-- Stability modeling
-- Decision domains
-- Urban system segmentation
-- Engineering state classification
+- Threshold systems  
+- Stability modeling  
+- Decision domains  
+- Urban system segmentation  
+- Engineering state classification  
 
 ---
 
