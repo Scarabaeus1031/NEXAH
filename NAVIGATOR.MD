@@ -1,3 +1,4 @@
+
 # NEXAH Framework - Navigator
 
 Welcome to the **NEXAH Framework Navigator**. This document tracks the progress and structure of the NEXAH repository, offering a comprehensive guide for each layer of the framework and its components.
