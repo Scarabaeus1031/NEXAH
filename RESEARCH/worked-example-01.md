@@ -1,163 +1,100 @@
-# Worked Example 01  
-## Minimal Structural Stabilization on a Finite Poset
+# Worked Example 01 — Finite Stabilization under Regime Operator
 
-This example demonstrates how the NEXAH operator chain operates on a small finite partially ordered set.
-
-The goal is to illustrate:
-
-- Closure (Γ)
-- Regime transition (Δ)
-- Stabilization (Ω)
-- Basin structure
-- Frame-dependent interpretation
+![Worked Example 01 – Stabilization Diagram](../visuals/worked_example_01_stabilization_diagram.png)
 
 ---
 
-## 1. Base Structure
+## 1. Setup
 
-Let Q = {a, b, c, d, e, f}
+Let \( (Q, \preceq) \) be a finite partially ordered set.
 
-Define the partial order ⪯ as:
+Assume a monotone operator:
 
-- a ⪯ c  
-- b ⪯ c  
-- c ⪯ d  
-- c ⪯ e  
-- d ⪯ f  
-- e ⪯ f  
+\[
+\Delta : Q \rightarrow Q
+\]
 
-This defines a finite poset with one maximal element f.
+with:
+
+- Monotonicity:  
+  \( x \preceq y \Rightarrow \Delta(x) \preceq \Delta(y) \)
+
+- Extensivity:  
+  \( x \preceq \Delta(x) \)
+
+- Finiteness of \(Q\)
+
+No metric.  
+No topology.  
+No time parameterization.
+
+Pure discrete order structure.
 
 ---
 
-## 2. Closure Operator Γ
+## 2. Iterative Regime Application
 
-Define Γ as upward closure toward c:
+Define the iteration:
 
-Γ(x) = least element ≥ x that lies in {c, d, e, f}
+\[
+x_{n+1} = \Delta(x_n)
+\]
+
+Because \(Q\) is finite and \(\Delta\) is extensive and monotone:
+
+- The sequence is ascending
+- No infinite strictly increasing chain exists
+- Stabilization must occur
+
+Therefore:
+
+\[
+\exists n : \Delta(x_n) = x_n
+\]
+
+---
+
+## 3. Fixpoint Interpretation
+
+The stabilized element satisfies:
+
+\[
+x^* = \Delta(x^*)
+\]
+
+This defines a structural fixpoint.
+
+In NEXAH terms:
+
+- META: partial order structure
+- ARCHY: regime operator \(\Delta\)
+- NEXAH: explicit identification of stabilization frame
+
+---
+
+## 4. Basin Partition
+
+Different initial elements may converge to different fixpoints.
 
 Thus:
 
-- Γ(a) = c  
-- Γ(b) = c  
-- Γ(c) = c  
-- Γ(d) = d  
-- Γ(e) = e  
-- Γ(f) = f  
-
-Γ is:
-
-- Monotone  
-- Extensive  
-- Idempotent  
+- The operator induces basin partition
+- Stabilization geometry emerges
+- No additional structure required
 
 ---
 
-## 3. Regime Operator Δ
+## 5. Structural Meaning
 
-Define Δ as monotone upward propagation toward f:
+This example demonstrates:
 
-- Δ(a) = c  
-- Δ(b) = c  
-- Δ(c) = d  
-- Δ(d) = f  
-- Δ(e) = f  
-- Δ(f) = f  
+- Operator non-redundancy
+- Guaranteed stabilization under finite constraints
+- Explicit regime-induced structure
+- Applicability without ontological extension
 
-Δ is:
-
-- Monotone  
-- Extensive  
+It is a minimal proof-of-concept for regime theory.
 
 ---
 
-## 4. Stabilization via Iteration
-
-Compute iterations:
-
-a → c → d → f  
-b → c → d → f  
-c → d → f  
-d → f  
-e → f  
-f → f  
-
-All chains stabilize at f.
-
-Define:
-
-Ω(x) = stabilized value of Δ-iteration
-
-Thus:
-
-Ω(x) = f for all x ∈ Q
-
----
-
-## 5. Fixpoint Structure
-
-Fix(Δ) = {f}
-
-Ω is the projection:
-
-Ω : Q → {f}
-
-There is a single basin:
-
-B(f) = Q
-
----
-
-## 6. Alternative Regime Definition
-
-If instead Δ' is defined as:
-
-- Δ'(a) = c  
-- Δ'(b) = c  
-- Δ'(c) = d  
-- Δ'(d) = d  
-- Δ'(e) = e  
-- Δ'(f) = f  
-
-Then:
-
-- d stabilizes at d  
-- e stabilizes at e  
-- f stabilizes at f  
-
-Now:
-
-Fix(Δ') = {d, e, f}
-
-Basins become non-trivial.
-
----
-
-## 7. Frame Interpretation
-
-Under a global frame:
-
-- System converges to f (total dominance regime)
-
-Under a regional frame:
-
-- Multiple stabilization regions exist
-
-This demonstrates:
-
-Structure is primary.  
-Regime restricts.  
-Frame projects.
-
----
-
-## 8. Structural Insight
-
-This example illustrates:
-
-- Extensivity + finiteness ⇒ stabilization
-- Fixpoints emerge from operator definition
-- Basin partition depends on regime definition
-- Interpretation depends on frame selection
-
-Application meaning emerges only after structural instantiation.
+Status: First validated discrete stabilization example.
