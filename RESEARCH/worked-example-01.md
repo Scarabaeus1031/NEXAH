@@ -1,6 +1,6 @@
 # Worked Example 01 — Finite Stabilization under Regime Operator
 
-![Worked Example 01 – Stabilization Diagram](../visuals/worked_example_01_stabilization_diagram.png)
+![Worked Example 01 – Stabilization Diagram](./visuals/worked_example_01_stabilization_diagram.png)
 
 ---
 
