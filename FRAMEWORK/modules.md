@@ -15,9 +15,9 @@ The NEXAH Framework is built around a **modular design**, where each module serv
 The core modules form the backbone of the NEXAH framework. These modules handle the fundamental operations and provide the primary structure of the system.
 
 - **Examples**:
-  - **Relational Model**: Handles the relational structure of the system. **[Principle: Relational Primacy](./META/Principles.md)**
-  - **Regime Operator**: Governs the transitions and stability of the system. **[Principle: Regime Restriction](./ARCHY/Principles.md)**
-  - **Frame Operator**: Provides the tools for navigating and interacting with the system. **[Principle: Frame Admissibility](./NEXAH/Principles.md)**
+  - **Relational Model**: Handles the relational structure of the system. **[Principle: Relational Primacy](./META/meta_layer_principles.md)**
+  - **Regime Operator**: Governs the transitions and stability of the system. **[Principle: Regime Restriction](./ARCHY/archy_layer_principles.md)**
+  - **Frame Operator**: Provides the tools for navigating and interacting with the system. **[Principle: Frame Admissibility](./NEXAH/nexah_layer_principles.md)**
 
 ### **Specialized Modules**
 In addition to the core modules, NEXAH also includes specialized modules for specific applications or domains. These modules provide additional functionality tailored to particular use cases.
