@@ -1,5 +1,7 @@
 # NEXAH Research
 
+![Research Architecture](./visuals/Research_Architecture_Opener.png)
+
 This section consolidates the formal and structural foundations of the NEXAH framework.
 
 NEXAH is positioned as a structural modeling system grounded in finite order theory and operator-based transformations. The research layer does not introduce a new mathematical ontology. It reorganizes known order-theoretic principles into an operative framework designed for application.
@@ -57,6 +59,10 @@ Any transition beyond finite discrete order requires additional assumptions.
 
 ---
 
+![Scope & Validation Overview](./visuals/research_scope_model_boundary_research_validation_application_bridge.png)
+
+---
+
 ## 4. Validation Strategy
 
 NEXAH research is not an end in itself.
@@ -70,9 +76,9 @@ The framework must demonstrate:
 
 Validation will proceed through:
 
-1. Minimal worked examples
-2. Applied structural case studies
-3. Operator implementation prototypes
+1. Minimal worked examples  
+2. Applied structural case studies  
+3. Operator implementation prototypes  
 
 Applications serve as proof-of-concept.
 
@@ -97,5 +103,5 @@ NEXAH becomes meaningful only when structurally instantiated.
 
 ---
 
-Status: Phase I–II formally consolidated.  
-Next stage: Applied validation.
+**Status:** Phase I–II formally consolidated.  
+**Next stage:** Applied validation.
