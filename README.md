@@ -1,63 +1,107 @@
-
 # NEXAH Framework
 
-The official repository for **NEXAH framework** development — a modular system for **structural modeling** and **relational navigation**.
+The official repository for **NEXAH framework** development --- a
+modular system for structural modeling and relational navigation.
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
----
+------------------------------------------------------------------------
 
-## 🔎 Explore NEXAH
+## Relational Modeling & Explicit Orientation
 
-### Why does NEXAH exist?
-NEXAH was developed as a **universal model** for complex systems. It enables the understanding of **dynamic changes** and **regime shifts** in various systems, offering a way to structure and navigate complex environments.
+NEXAH is designed as a structural modeling framework for navigating
+complex systems.
 
-#### 📂 **Core Areas**:
-- **META**: Framework structure — defines relational order.
-- **ARCHY**: Stability regimes — governs transitions between system states.
-- **NEXAH**: Orientation and frames — enables navigability within the system.
+It is structured across three interdependent layers contributing to:
 
-### 🔧 **Framework Structure**
-Learn about how the **NEXAH Framework** works and how its modular design allows integration into various disciplines.
+-   Organization\
+-   Stability\
+-   Orientation
+
+### Core Layers
+
+-   **META** --- Framework Structure (relational order)
+-   **ARCHY** --- Stability Regimes (transitions between system states)
+-   **NEXAH** --- Orientation & Frames (explicit navigability)
 
 ![Explore Framework](./NAVIGATOR/visuals/Explore_Framework.png)
 
-#### 🧠 **Research**
-Explore the research and theoretical foundations of NEXAH:
+------------------------------------------------------------------------
 
-- **Axioms** – Foundational principles that define NEXAH.
-- **Principles** – Core structural logic for applying NEXAH.
-- **Theorems** – Formal derivations and applications based on the NEXAH framework.
+## NEXAH in Practice
 
-### 🛠️ **Practical Applications**
-NEXAH's framework is designed to solve real-world challenges across various domains, including:
+NEXAH distinguishes three practical dimensions:
 
-- **Architectural Systems**
-- **Engineering Solutions**
-- **Data Classification Models**
-- **Urban Systems**
+-   **Formal Core**\
+    Relational modeling and structural orientation.
 
-![Practical Applications Visual](./NAVIGATOR/visuals/Practical_Applications_Visual.png)
+-   **Regime Theory**\
+    Thresholds and transitions in system states.
 
-### ⚙️ **Modules and Operators**
-NEXAH is built on several key modules and operators that allow for modular applications and structural modeling across fields. Key tools include:
+-   **Documented Applications**\
+    Case studies demonstrating applied structural modeling.
 
-- **Core Operators**: Functions that enable structural modeling.
-- **Modules**: Specialized areas of application for NEXAH's versatility.
+![Practical
+Applications](./NAVIGATOR/visuals/Practical_Applications_Visual.png)
 
----
+------------------------------------------------------------------------
 
-## 📚 Explore the Repository
+## System Stack Overview
 
-- **Framework**: Dive into the core framework, structured by META, ARCHY, and NEXAH layers.
-- **Applications**: Learn about documented applications and real-world use cases.
-- **Research Papers**: Access research and theoretical papers exploring the foundational principles and proofs.
-- **Modules**: Browse through the individual modules and understand their applications in practice.
+→ [System Stack Overview](./system_stack.md)
 
----
+------------------------------------------------------------------------
 
-## 🚀 Next Steps:
-- **Explore the Code**: Browse the repository to see the implementation of the NEXAH framework and its core components.
+## Explore the Core Layers
+
+-   → [META Layer](./META/readme.md)\
+-   → [ARCHY Layer](./ARCHY/readme.md)\
+-   → [NEXAH Layer](./NEXAH/readme.md)
+
+------------------------------------------------------------------------
+
+## Theoretical Foundations
+
+Core formal documents:
+
+-   → [Axioms](./axioms.md)\
+-   → [Theorems](./theorems.md)\
+-   → [Minimal Logic](./minimal_logic.md)\
+-   → [Relational Model](./relational_model.md)\
+-   → [Frame Operator](./frame_operator.md)\
+-   → [Regime Operator](./regime_operator.md)
+
+------------------------------------------------------------------------
+
+## Modules
+
+→ [Modules Overview](./FRAMEWORK/modules.md)
+
+------------------------------------------------------------------------
+
+## Research & Applications
+
+-   → [Research Papers](./research_papers.md)\
+-   → [Application Cases](./application_cases.md)
+
+------------------------------------------------------------------------
+
+## Current Status
+
+NEXAH is currently in a documentation-driven, pre-implementation phase.
+
+-   The theoretical architecture (META--ARCHY--NEXAH) is defined.
+-   Core operators are specified.
+-   Formal axioms and theorems are documented.
+-   Research material exists and is being structured.
+-   No executable reference implementation exists yet.
+
+The repository currently serves as a formal structural base for future
+applied modules and demonstrable case studies.
+
+------------------------------------------------------------------------
+
+© NEXAH Framework
 - **Start Applying**: Begin using the NEXAH framework in your own projects and experiments.
 - **Contribute**: If you have insights or improvements, feel free to fork the repository and contribute to the ongoing development!
 
