@@ -4,7 +4,7 @@ The core layer implements the structural primitives of the NEXAH Engine.
 
 It provides a minimal, finite, deterministic execution model based on discrete order theory.
 
-![Core Operator Stack](./visuals/core_operator_stack_structure.png)
+![Core Operator Stack](../visuals/core_operator_stack_structure.png)
 
 ---
 
