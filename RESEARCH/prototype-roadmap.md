@@ -1,8 +1,7 @@
 # Minimal Prototype Roadmap
 
 The transition from formal structure to executable model proceeds in incremental stages.
-
-![Applied Case 06 – Multi-Regime Interaction](./visuals/applied_case_06_multi_regime_interaction.png)
+![Minimal Prototype Roadmap – From Structure to Executable Engine](./visuals/prototype_roadmap_minimal_structure_to_engine.png)
 ---
 
 ## Stage 1 – Finite Order Engine
