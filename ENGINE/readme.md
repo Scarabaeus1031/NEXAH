@@ -1,6 +1,6 @@
 # NEXAH Engine (v0.1)
 
-![NEXAH Engine – Execution Architecture](./visuals/engine_architecture_execution_layer_dark.png)
+![NEXAH Engine – Execution Architecture](visuals/engine_architecture_execution_layer_dark.png)
 
 The NEXAH Engine is the minimal executable core of the NEXAH framework.
 
