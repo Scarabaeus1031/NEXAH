@@ -1,3 +1,4 @@
+
 # NEXAH Framework
 
 The official repository for **NEXAH framework** development — a modular system for **structural modeling** and **relational navigation**.
@@ -64,4 +65,3 @@ NEXAH is built on several key modules and operators that allow for modular appli
 
 This repository represents the **NEXAH framework's** ongoing development, offering a flexible, adaptable model for structural modeling and relational navigation.
 
-For more details, see the [official documentation](link-to-docs).
