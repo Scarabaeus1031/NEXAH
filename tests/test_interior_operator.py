@@ -13,19 +13,30 @@ def chain_poset(n=3):
     return FinitePoset(elements, leq)
 
 
+# ----------------------------
+# A correct interior example:
+# clamp to {0,2} by mapping:
+# I(0)=0, I(1)=0, I(2)=2, I(3)=2, ...
+# This is contractive, monotone, idempotent.
+# ----------------------------
+
 def test_interior_axioms_hold():
     P = chain_poset(3)
 
-    # contractive + monotone + idempotent interior
-    # I(0)=0, I(1)=0, I(2)=1, I(3)=2
     def I(x):
-        return max(0, x - 1)
+        return 0 if x < 2 else 2
 
     op = InteriorOperator(P, I)
 
     # contractive
     for x in P.elements:
         assert P.is_leq(op.apply(x), x)
+
+    # monotone (checked in ctor, but we sanity-check)
+    for x in P.elements:
+        for y in P.elements:
+            if P.is_leq(x, y):
+                assert P.is_leq(op.apply(x), op.apply(y))
 
     # idempotent
     for x in P.elements:
@@ -42,27 +53,35 @@ def test_interior_not_contractive_fails():
         InteriorOperator(P, bad_I)
 
 
+def test_interior_not_idempotent_fails():
+    P = chain_poset(3)
+
+    def not_idempotent(x):
+        return max(0, x - 1)  # contractive+monotone, but NOT idempotent
+
+    with pytest.raises(ValueError):
+        InteriorOperator(P, not_idempotent)
+
+
 def test_interior_fixpoints():
     P = chain_poset(3)
 
     def I(x):
-        return max(0, x - 1)
+        return 0 if x < 2 else 2
 
     op = InteriorOperator(P, I)
-    fps = op.fixpoints()
-
-    # Fixpoints: x = max(0, x-1) => only 0 satisfies
-    assert fps == {0}
+    assert op.fixpoints() == {0, 2}
 
 
 def test_interior_stabilize():
     P = chain_poset(5)
 
     def I(x):
-        return max(0, x - 1)
+        return 0 if x < 2 else 2
 
     op = InteriorOperator(P, I)
-    assert op.stabilize(5) == 0
+    assert op.stabilize(5) == 2
+    assert op.stabilize(1) == 0
 
 
 def test_interior_must_return_carrier_element():
