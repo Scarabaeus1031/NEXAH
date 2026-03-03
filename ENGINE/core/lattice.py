@@ -1,119 +1,132 @@
-import pytest
+"""
+NEXAH Engine – Core Layer
+Lattice utilities built on top of FinitePoset.
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Any, Iterable, Optional, Set
+
 from ENGINE.core.poset import FinitePoset
-from ENGINE.core.lattice import LatticeOps
 
 
-# -------------------------------------------------
-# Helper posets
-# -------------------------------------------------
+@dataclass(frozen=True)
+class LatticeOps:
+    """
+    Utility wrapper: provides lattice operations for a given FinitePoset.
+    """
 
-def chain_poset():
-    # 0 <= 1 <= 2
-    elements = {0, 1, 2}
-    return FinitePoset(elements, lambda x, y: x <= y)
+    poset: FinitePoset
 
+    # -----------------------------
+    # Bounds
+    # -----------------------------
 
-def vee_poset():
-    # V-shape:
-    #   1   2
-    #    \ /
-    #     0
-    elements = {0, 1, 2}
+    def upper_bounds(self, subset: Iterable[Any]) -> Set[Any]:
+        S = set(subset)
+        if not S:
+            raise ValueError("upper_bounds() needs a non-empty subset.")
+        return {
+            u for u in self.poset.elements
+            if all(self.poset.is_leq(x, u) for x in S)
+        }
 
-    def leq(x, y):
-        if x == y:
-            return True
-        if x == 0:
-            return True
-        return False
+    def lower_bounds(self, subset: Iterable[Any]) -> Set[Any]:
+        S = set(subset)
+        if not S:
+            raise ValueError("lower_bounds() needs a non-empty subset.")
+        return {
+            l for l in self.poset.elements
+            if all(self.poset.is_leq(l, x) for x in S)
+        }
 
-    return FinitePoset(elements, leq)
+    # -----------------------------
+    # Extremal elements
+    # -----------------------------
 
+    def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
+        A = set(subset)
+        return {
+            x for x in A
+            if not any(self.poset.is_leq(y, x) and y != x for y in A)
+        }
 
-# -------------------------------------------------
-# 1. upper_bounds / lower_bounds empty input
-# -------------------------------------------------
+    def maximal_in(self, subset: Iterable[Any]) -> Set[Any]:
+        A = set(subset)
+        return {
+            x for x in A
+            if not any(self.poset.is_leq(x, y) and y != x for y in A)
+        }
 
-def test_upper_bounds_empty():
-    L = LatticeOps(chain_poset())
-    with pytest.raises(ValueError):
-        L.upper_bounds([])
+    # -----------------------------
+    # Join / Meet
+    # -----------------------------
 
+    def join(self, a: Any, b: Any) -> Any:
+        U = self.upper_bounds({a, b})
+        mins = self.minimal_in(U)
+        if len(mins) != 1:
+            raise ValueError(
+                f"join({a},{b}) not unique / does not exist. Candidates={mins}"
+            )
+        return next(iter(mins))
 
-def test_lower_bounds_empty():
-    L = LatticeOps(chain_poset())
-    with pytest.raises(ValueError):
-        L.lower_bounds([])
+    def meet(self, a: Any, b: Any) -> Any:
+        L = self.lower_bounds({a, b})
+        maxs = self.maximal_in(L)
+        if len(maxs) != 1:
+            raise ValueError(
+                f"meet({a},{b}) not unique / does not exist. Candidates={maxs}"
+            )
+        return next(iter(maxs))
 
+    # -----------------------------
+    # Lattice checks
+    # -----------------------------
 
-# -------------------------------------------------
-# 2. join does not exist (vee shape)
-# -------------------------------------------------
+    def is_lattice(self) -> bool:
+        elems = list(self.poset.elements)
+        for a in elems:
+            for b in elems:
+                try:
+                    _ = self.join(a, b)
+                    _ = self.meet(a, b)
+                except ValueError:
+                    return False
+        return True
 
-def test_join_not_unique():
-    L = LatticeOps(vee_poset())
-    with pytest.raises(ValueError):
-        L.join(1, 2)
+    # -----------------------------
+    # Distributivity
+    # -----------------------------
 
+    def is_distributive(self) -> bool:
+        elems = list(self.poset.elements)
 
-def test_meet_not_unique():
-    L = LatticeOps(vee_poset())
-    with pytest.raises(ValueError):
-        L.meet(1, 2)
+        for a in elems:
+            for b in elems:
+                for c in elems:
+                    try:
+                        left = self.meet(a, self.join(b, c))
+                        right = self.join(
+                            self.meet(a, b),
+                            self.meet(a, c)
+                        )
+                        if left != right:
+                            return False
+                    except ValueError:
+                        return False
 
+        return True
 
-# -------------------------------------------------
-# 3. is_lattice false
-# -------------------------------------------------
+    # -----------------------------
+    # Extremal elements
+    # -----------------------------
 
-def test_is_not_lattice():
-    L = LatticeOps(vee_poset())
-    assert not L.is_lattice()
+    def top(self) -> Optional[Any]:
+        mx = self.poset.maximal_elements()
+        return next(iter(mx)) if len(mx) == 1 else None
 
-
-# -------------------------------------------------
-# 4. distributivity failure (diamond lattice M3)
-# -------------------------------------------------
-
-def diamond_poset():
-    # classic nondistributive lattice M3
-    #    3
-    #   / \
-    #  1   2
-    #   \ /
-    #    0
-    elements = {0, 1, 2, 3}
-
-    def leq(x, y):
-        if x == y:
-            return True
-        if x == 0:
-            return True
-        if y == 3:
-            return True
-        if x in {1, 2} and y == 3:
-            return True
-        return False
-
-    return FinitePoset(elements, leq)
-
-
-def test_not_distributive():
-    L = LatticeOps(diamond_poset())
-    assert L.is_lattice()
-    assert not L.is_distributive()
-
-
-# -------------------------------------------------
-# 5. top / bottom
-# -------------------------------------------------
-
-def test_top_bottom_chain():
-    L = LatticeOps(chain_poset())
-    assert L.top() == 2
-    assert L.bottom() == 0
-
-
-def test_no_unique_top():
-    L = LatticeOps(vee_poset())
-    assert L.top() is None
+    def bottom(self) -> Optional[Any]:
+        mn = self.poset.minimal_elements()
+        return next(iter(mn)) if len(mn) == 1 else None
