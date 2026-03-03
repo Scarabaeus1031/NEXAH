@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from ENGINE.core.worklist_fixpoint import solve_worklist
-from ENGINE.core.lattice import LatticeOps
+from typing import Dict, Set
 
+from ENGINE.core.worklist_fixpoint import solve_worklist
 from ENGINE.applications.constant_lattice import (
     ConstVal,
     State,
@@ -10,15 +10,15 @@ from ENGINE.applications.constant_lattice import (
 )
 
 
-def main():
+def main() -> None:
 
-    variables = {"x"}
-    constants = {1, 2}
+    variables: Set[str] = {"x"}
+    constants: Set[int] = {1, 2}
 
     lattice = build_state_lattice(variables, constants)
 
-    nodes = {1, 2, 3, 4}
-    edges = {
+    nodes: Set[int] = {1, 2, 3, 4}
+    edges: Set[tuple[int, int]] = {
         (1, 2),
         (1, 3),
         (2, 4),
@@ -30,7 +30,7 @@ def main():
         frozenset((v, bottom) for v in variables)
     )
 
-    initial = {n: bottom_state for n in nodes}
+    initial: Dict[int, State] = {n: bottom_state for n in nodes}
 
     def transfer(node: int, state: State) -> State:
 
