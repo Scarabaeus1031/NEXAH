@@ -146,7 +146,7 @@ def solve_worklist(
         values=values,
         iterations=iters,
         pops=pops,
-    )    while worklist:
+        while worklist:
         pops += 1
         if pops > max_pops:
             raise RuntimeError(
