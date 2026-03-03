@@ -1,40 +1,38 @@
 """
-NEXAH Engine – Closure Operator (Γ)
+NEXAH Engine – Closure Operator
 
-Implements finite closure operators on a given FinitePoset.
+Defines a closure operator Γ on a finite poset and provides
+fixpoint utilities and structural checks.
 """
 
-from typing import Callable, Any, Set
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Any, Callable, Set
+
 from ENGINE.core.poset import FinitePoset
-from ENGINE.core.lattice import LatticeOps
 
 
+@dataclass(frozen=True)
 class ClosureOperator:
     """
-    Represents a closure operator Γ: Q → Q
-    satisfying:
-
-        1. Monotonicity
-        2. Extensivity
-        3. Idempotence
+    Closure operator Γ on a finite poset.
     """
 
-    def __init__(self, poset: FinitePoset, operator: Callable[[Any], Any]):
-        self.poset = poset
-        self.operator = operator
+    poset: FinitePoset
+    operator: Callable[[Any], Any]
 
-        self._validate_closure_properties()
+    # -----------------------------
+    # Basic properties
+    # -----------------------------
 
-    # -----------------------------------------------------
-    # Validation
-    # -----------------------------------------------------
+    def is_extensive(self) -> bool:
+        return all(
+            self.poset.is_leq(x, self.operator(x))
+            for x in self.poset.elements
+        )
 
-    def _validate_closure_properties(self):
-        self._check_monotone()
-        self._check_extensive()
-        self._check_idempotent()
-
-    def _check_monotone(self):
+    def is_monotone(self) -> bool:
         for x in self.poset.elements:
             for y in self.poset.elements:
                 if self.poset.is_leq(x, y):
@@ -42,65 +40,42 @@ class ClosureOperator:
                         self.operator(x),
                         self.operator(y),
                     ):
-                        raise ValueError("Closure operator is not monotone.")
+                        return False
+        return True
 
-    def _check_extensive(self):
-        for x in self.poset.elements:
-            if not self.poset.is_leq(x, self.operator(x)):
-                raise ValueError("Closure operator is not extensive.")
+    def is_idempotent(self) -> bool:
+        return all(
+            self.operator(self.operator(x)) == self.operator(x)
+            for x in self.poset.elements
+        )
 
-    def _check_idempotent(self):
-        for x in self.poset.elements:
-            if self.operator(self.operator(x)) != self.operator(x):
-                raise ValueError("Closure operator is not idempotent.")
+    def is_closure_operator(self) -> bool:
+        return (
+            self.is_extensive()
+            and self.is_monotone()
+            and self.is_idempotent()
+        )
 
-    # -----------------------------------------------------
-    # Basic Operations
-    # -----------------------------------------------------
-
-    def apply(self, x: Any) -> Any:
-        return self.operator(x)
+    # -----------------------------
+    # Fixpoints
+    # -----------------------------
 
     def fixpoints(self) -> Set[Any]:
-        """
-        Returns all fixpoints Γ(x) = x.
-        """
         return {
-            x
-            for x in self.poset.elements
+            x for x in self.poset.elements
             if self.operator(x) == x
         }
 
-    # -----------------------------------------------------
-    # Fixpoint Structure
-    # -----------------------------------------------------
+    # -----------------------------
+    # Induced lattice (lazy import)
+    # -----------------------------
 
-    def fixpoint_poset(self) -> FinitePoset:
+    def fixpoint_lattice(self):
         """
-        Returns the induced FinitePoset on Fix(Γ)
-        with inherited order ≤.
+        Returns LatticeOps on the induced fixpoint poset.
+        Lazy import prevents circular dependency.
         """
-        fps = self.fixpoints()
+        from ENGINE.core.fixpoint_lattice import build_fixpoint_structure
 
-        def inherited_leq(x: Any, y: Any) -> bool:
-            return self.poset.is_leq(x, y)
-
-        return FinitePoset(fps, inherited_leq)
-
-    def fixpoint_lattice(self, strict: bool = True) -> LatticeOps:
-        """
-        Returns LatticeOps on the fixpoint set.
-
-        If strict=True (default), raises ValueError if the
-        fixpoints do not form a lattice under the inherited order.
-        """
-
-        fp_poset = self.fixpoint_poset()
-        ops = LatticeOps(fp_poset)
-
-        if strict and not ops.is_lattice():
-            raise ValueError(
-                "Fixpoints do not form a lattice under inherited order."
-            )
-
-        return ops
+        structure = build_fixpoint_structure(self.poset, self.operator)
+        return structure.lattice
