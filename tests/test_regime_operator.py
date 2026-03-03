@@ -2,11 +2,19 @@ import pytest
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.regime_operator import RegimeOperator
+from ENGINE.core.lattice import LatticeOps
+from ENGINE.core.closure_operator import ClosureOperator
 
+
+# -------------------------------------------------
+# Basic restriction
+# -------------------------------------------------
 
 def test_basic_restriction():
     elements = {1, 2, 3, 4}
-    def leq(x, y): return x <= y
+
+    def leq(x, y):
+        return x <= y
 
     P = FinitePoset(elements, leq)
     Δ = RegimeOperator(P)
@@ -18,59 +26,92 @@ def test_basic_restriction():
     assert not P2.is_leq(4, 3)
 
 
+# -------------------------------------------------
+# Empty restriction must fail
+# -------------------------------------------------
+
 def test_empty_restriction_fails():
     elements = {1, 2}
-    def leq(x, y): return x <= y
+
+    def leq(x, y):
+        return x <= y
 
     P = FinitePoset(elements, leq)
     Δ = RegimeOperator(P)
 
     with pytest.raises(ValueError):
         Δ.restrict(lambda x: False)
+
+
+# -------------------------------------------------
+# Order structure preserved
+# -------------------------------------------------
+
 def test_restriction_preserves_order_structure():
     elements = {1, 2, 3, 4}
-    def leq(x, y): return x <= y
+
+    def leq(x, y):
+        return x <= y
 
     P = FinitePoset(elements, leq)
     Δ = RegimeOperator(P)
 
     P2 = Δ.restrict(lambda x: x % 2 == 0)
 
-    # check reflexivity
+    # reflexivity
     for x in P2.elements:
         assert P2.is_leq(x, x)
 
-    # check transitivity
+    # transitivity
     for a in P2.elements:
         for b in P2.elements:
             for c in P2.elements:
                 if P2.is_leq(a, b) and P2.is_leq(b, c):
                     assert P2.is_leq(a, c)
 
-from ENGINE.core.lattice import LatticeOps
 
+# -------------------------------------------------
+# Δ can destroy lattice structure (true example)
+# -------------------------------------------------
 
 def test_lattice_can_be_destroyed():
-    elements = {0, 1, 2}
-    def leq(x, y): return x <= y
+    elements = {"bottom", "a", "b", "top"}
+
+    order = {
+        ("bottom", "bottom"),
+        ("a", "a"),
+        ("b", "b"),
+        ("top", "top"),
+        ("bottom", "a"),
+        ("bottom", "b"),
+        ("a", "top"),
+        ("b", "top"),
+        ("bottom", "top"),
+    }
+
+    def leq(x, y):
+        return (x, y) in order
 
     P = FinitePoset(elements, leq)
     Δ = RegimeOperator(P)
 
-    # remove top element
-    P2 = Δ.restrict(lambda x: x < 2)
+    # Remove top element → destroys join for a,b
+    P2 = Δ.restrict(lambda x: x != "top")
 
     lat = LatticeOps(P2)
 
-    # This might no longer be a full lattice
     assert not lat.is_lattice()
 
-from ENGINE.core.closure_operator import ClosureOperator
 
+# -------------------------------------------------
+# Closure inside regime
+# -------------------------------------------------
 
 def test_closure_inside_regime():
     elements = {0, 1, 2}
-    def leq(x, y): return x <= y
+
+    def leq(x, y):
+        return x <= y
 
     P = FinitePoset(elements, leq)
 
@@ -82,7 +123,7 @@ def test_closure_inside_regime():
 
     P2 = Δ.restrict(lambda x: x >= 1)
 
-    # closure inside regime
+    # Closure restricted to regime
     Γ2 = ClosureOperator(P2, gamma)
 
     assert Γ2.apply(1) in P2.elements
