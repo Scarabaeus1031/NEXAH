@@ -1,5 +1,16 @@
 """
 NEXAH Engine – Worklist Fixpoint Solver (finite)
+
+Computes least fixpoint over a directed graph using:
+- a join-semilattice (via LatticeOps)
+- transfer functions (monotone in typical use)
+- classic worklist propagation
+
+Typical use: abstract interpretation / dataflow analysis.
+
+We assume:
+- finite set of nodes
+- finite lattice carrier
 """
 
 from __future__ import annotations
@@ -9,7 +20,6 @@ from typing import Any, Callable, Dict, Hashable, Iterable, List, Tuple
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
-
 
 Node = Hashable
 Value = Any
@@ -23,18 +33,6 @@ class WorklistResult:
     pops: int
 
 
-def _in_carrier_strict(value: Any, carrier) -> bool:
-    """
-    Strict carrier membership:
-    - same value
-    - same type
-    """
-    for e in carrier:
-        if value == e and type(value) is type(e):
-            return True
-    return False
-
-
 def solve_worklist(
     nodes: Iterable[Node],
     edges: Iterable[Tuple[Node, Node]],
@@ -44,6 +42,17 @@ def solve_worklist(
     strict: bool = True,
     max_pops: int = 100_000,
 ) -> WorklistResult:
+    """
+    Least fixpoint solver.
+
+    For each edge u -> v:
+        new_v = join(old_v, transfer(v, old_u))
+
+    - value_poset: lattice carrier for values
+    - initial: initial state (must provide each node)
+    - transfer: node-local transformer
+    - strict: require value_poset to be a lattice
+    """
 
     nodes_list = list(nodes)
     node_set = set(nodes_list)
@@ -54,7 +63,7 @@ def solve_worklist(
     succ: Dict[Node, List[Node]] = {n: [] for n in node_set}
     for u, v in edges:
         if u not in node_set or v not in node_set:
-            raise ValueError("Edges refer to unknown nodes.")
+            raise ValueError("Edges refer to nodes not in `nodes`.")
         succ[u].append(v)
 
     # -----------------------------------------------------
@@ -65,18 +74,29 @@ def solve_worklist(
         raise ValueError("value_poset must be a lattice (strict=True).")
 
     # -----------------------------------------------------
-    # Validate initial values
+    # Validate initial mapping (MUST be in carrier set)
+    # Use hash-based membership; if unhashable -> error.
     # -----------------------------------------------------
+    carrier = value_poset.elements
     for n in node_set:
         if n not in initial:
             raise ValueError(f"Missing initial value for node {n!r}.")
-        if not _in_carrier_strict(initial[n], value_poset.elements):
+        try:
+            ok = initial[n] in carrier
+        except TypeError:
+            raise ValueError(
+                f"Initial value for {n!r} is non-hashable (not a valid lattice element): {initial[n]!r}"
+            )
+        if not ok:
             raise ValueError(
                 f"Initial value for {n!r} not in lattice carrier: {initial[n]!r}"
             )
 
     values: Dict[Node, Value] = dict(initial)
 
+    # -----------------------------------------------------
+    # Worklist algorithm
+    # -----------------------------------------------------
     worklist: List[Node] = list(nodes_list)
     pops = 0
     iters = 0
@@ -84,7 +104,10 @@ def solve_worklist(
     while worklist:
         pops += 1
         if pops > max_pops:
-            raise RuntimeError("Worklist exceeded max_pops.")
+            raise RuntimeError(
+                f"Worklist exceeded max_pops={max_pops}. "
+                "Possible non-termination or exploding state space."
+            )
 
         u = worklist.pop(0)
         iters += 1
@@ -94,8 +117,14 @@ def solve_worklist(
         for v in succ[u]:
             cand = transfer(v, u_val)
 
-            # 🔥 STRICT validation BEFORE join
-            if not _in_carrier_strict(cand, value_poset.elements):
+            # Critical: validate BEFORE lattice operations
+            try:
+                ok = cand in carrier
+            except TypeError:
+                raise ValueError(
+                    f"transfer produced non-hashable value (not a valid lattice element): {cand!r}"
+                )
+            if not ok:
                 raise ValueError(
                     f"transfer produced value not in lattice carrier: {cand!r}"
                 )
