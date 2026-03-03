@@ -5,18 +5,21 @@ NEXAH Engine – Monotone Operators on Finite Posets
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Callable, Dict, List, Set, Tuple
+from typing import Callable, Dict, Generic, List, Set, Tuple, TypeVar
+from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
 
+T = TypeVar("T", bound=Hashable)
+
 
 @dataclass(frozen=True)
-class MonotoneOperator:
-    poset: FinitePoset
-    f: Callable[[Any], Any]
+class MonotoneOperator(Generic[T]):
+    poset: FinitePoset[T]
+    f: Callable[[T], T]
 
     def __post_init__(self) -> None:
-        # ensure mapping into carrier
+        # Ensure mapping into carrier
         for x in self.poset.elements:
             fx = self.f(x)
             if fx not in self.poset.elements:
@@ -41,23 +44,23 @@ class MonotoneOperator:
     # Core API
     # -----------------------------------------------------
 
-    def apply(self, x: Any) -> Any:
+    def apply(self, x: T) -> T:
         return self.f(x)
 
-    def iterate_from(self, x0: Any, max_steps: int = 100) -> Tuple[Any, List[Any]]:
+    def iterate_from(self, x0: T, max_steps: int = 100) -> Tuple[T, List[T]]:
         if x0 not in self.poset.elements:
             raise ValueError(f"{x0} not in poset")
 
-        seen: Dict[Any, int] = {}
-        traj: List[Any] = [x0]
-        current = x0
+        seen: Dict[T, int] = {}
+        traj: List[T] = [x0]
+        current: T = x0
 
         for _ in range(max_steps):
             if current in seen:
                 raise RuntimeError(f"Cycle detected: {traj}")
 
             seen[current] = len(traj) - 1
-            nxt = self.f(current)
+            nxt: T = self.f(current)
             traj.append(nxt)
 
             if nxt == current:
@@ -71,26 +74,27 @@ class MonotoneOperator:
     # Fixpoint sets
     # -----------------------------------------------------
 
-    def fixpoints(self) -> Set[Any]:
+    def fixpoints(self) -> Set[T]:
         return {x for x in self.poset.elements if self.f(x) == x}
 
-    def prefixed_points(self) -> Set[Any]:
+    def prefixed_points(self) -> Set[T]:
         return {x for x in self.poset.elements if self.poset.is_leq(self.f(x), x)}
 
-    def postfixed_points(self) -> Set[Any]:
+    def postfixed_points(self) -> Set[T]:
         return {x for x in self.poset.elements if self.poset.is_leq(x, self.f(x))}
 
     # -----------------------------------------------------
     # Enumeration-based least / greatest fixpoint
     # -----------------------------------------------------
 
-    def least_fixpoint(self) -> Any:
+    def least_fixpoint(self) -> T:
         fps = list(self.fixpoints())
         if not fps:
             raise ValueError("No fixpoints")
 
         minimals = [
-            x for x in fps
+            x
+            for x in fps
             if all(not self.poset.is_leq(y, x) or y == x for y in fps)
         ]
 
@@ -99,13 +103,14 @@ class MonotoneOperator:
 
         return minimals[0]
 
-    def greatest_fixpoint(self) -> Any:
+    def greatest_fixpoint(self) -> T:
         fps = list(self.fixpoints())
         if not fps:
             raise ValueError("No fixpoints")
 
         maximals = [
-            x for x in fps
+            x
+            for x in fps
             if all(not self.poset.is_leq(x, y) or y == x for y in fps)
         ]
 
@@ -118,7 +123,7 @@ class MonotoneOperator:
     # Tarski characterization
     # -----------------------------------------------------
 
-    def tarski_least_fixpoint(self) -> Any:
+    def tarski_least_fixpoint(self) -> T:
         from ENGINE.core.lattice import LatticeOps
 
         lat = LatticeOps(self.poset)
@@ -129,13 +134,13 @@ class MonotoneOperator:
         if not pref:
             raise ValueError("No prefixed points")
 
-        result = pref[0]
+        result: T = pref[0]
         for x in pref[1:]:
             result = lat.meet(result, x)
 
         return result
 
-    def tarski_greatest_fixpoint(self) -> Any:
+    def tarski_greatest_fixpoint(self) -> T:
         from ENGINE.core.lattice import LatticeOps
 
         lat = LatticeOps(self.poset)
@@ -146,7 +151,7 @@ class MonotoneOperator:
         if not post:
             raise ValueError("No postfixed points")
 
-        result = post[0]
+        result: T = post[0]
         for x in post[1:]:
             result = lat.join(result, x)
 
