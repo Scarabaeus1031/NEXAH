@@ -129,3 +129,35 @@ class FinitePoset(Generic[T]):
         if len(maxs) == 1:
             return next(iter(maxs))
         return None
+
+from typing import Iterable, Set
+
+    # -------------------------------------------------
+    # Bounds
+    # -------------------------------------------------
+
+    def upper_bounds(self, subset: Iterable[T]) -> Set[T]:
+        subset_list = list(subset)
+        if not subset_list:
+            raise ValueError("Subset must be non-empty.")
+
+        result: Set[T] = set()
+
+        for candidate in self.elements:
+            if all(self.is_leq(x, candidate) for x in subset_list):
+                result.add(candidate)
+
+        return result
+
+    def lower_bounds(self, subset: Iterable[T]) -> Set[T]:
+        subset_list = list(subset)
+        if not subset_list:
+            raise ValueError("Subset must be non-empty.")
+
+        result: Set[T] = set()
+
+        for candidate in self.elements:
+            if all(self.is_leq(candidate, x) for x in subset_list):
+                result.add(candidate)
+
+        return result
