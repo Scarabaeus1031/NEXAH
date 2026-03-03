@@ -9,40 +9,41 @@ we construct the projected poset F(P) on Y with the induced order:
     a ≤_F b    iff    for every x in X with F(x)=a,
                       there exists y in X with F(y)=b
                       such that x ≤ y.
-
-This guarantees reflexivity on the image, and tends to preserve antisymmetry
-better than naive existential lifting (which usually collapses too much).
 """
 
 from __future__ import annotations
 
-from typing import Callable, Any, Dict, Set, Iterable
+from typing import Callable, Dict, Generic, Iterable, Set, TypeVar
+from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
 
+X = TypeVar("X", bound=Hashable)  # original carrier type
+Y = TypeVar("Y", bound=Hashable)  # projected carrier type
 
-class FrameOperator:
-    def __init__(self, mapping: Callable[[Any], Any]):
+
+class FrameOperator(Generic[X, Y]):
+    def __init__(self, mapping: Callable[[X], Y]) -> None:
         if not callable(mapping):
             raise TypeError("FrameOperator requires a callable mapping.")
-        self.mapping = mapping
+        self.mapping: Callable[[X], Y] = mapping
 
-    def apply(self, x: Any) -> Any:
+    def apply(self, x: X) -> Y:
         return self.mapping(x)
 
-    def project_set(self, elements: Iterable[Any]) -> Set[Any]:
+    def project_set(self, elements: Iterable[X]) -> Set[Y]:
         return {self.mapping(x) for x in elements}
 
-    def on_poset(self, poset: FinitePoset) -> FinitePoset:
-        image = self.project_set(poset.elements)
+    def on_poset(self, poset: FinitePoset[X]) -> FinitePoset[Y]:
+        image: Set[Y] = self.project_set(poset.elements)
 
         # Preimages: a -> { x in X | F(x)=a }
-        pre: Dict[Any, Set[Any]] = {a: set() for a in image}
+        pre: Dict[Y, Set[X]] = {a: set() for a in image}
         for x in poset.elements:
             pre[self.mapping(x)].add(x)
 
-        def induced_leq(a, b) -> bool:
-            # a,b are in the image, hence pre[a], pre[b] non-empty
+        def induced_leq(a: Y, b: Y) -> bool:
+            # a,b are in the image; pre[a], pre[b] are defined
             for x in pre[a]:
                 ok = False
                 for y in pre[b]:
