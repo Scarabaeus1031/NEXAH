@@ -180,10 +180,11 @@ The ENGINE implements the executable backbone of these layers in finite algebrai
 ---
 
 ### Phase C — Dynamic System Layer (planned)
-- [ ] Regime operator Δ (constraint / restriction layer)
-- [ ] Frame operator F (projection / selection layer)
-- [ ] multi-regime interaction examples
-- [ ] transition graph layer
+- [ ] Regime operator Δ (constraint / restriction operator over finite posets)
+- [ ] Frame operator F (projection / selection operator)
+- [ ] Δ–Γ interaction algebra (operator composition structure)
+- [ ] Δ-induced substructure modeling
+- [ ] transition graph layer (explicit regime transitions)
 - [ ] visualization integration (Hasse + regime shifts)
 
 ---
