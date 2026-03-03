@@ -44,7 +44,7 @@ def test_full_structure_calls_all_delegations():
 
     # Delegations
     assert struct.is_lattice()
-    assert not struct.is_distributive()
+    assert struct.is_distributive()
 
     # Extremal
     assert struct.top() == "1"
