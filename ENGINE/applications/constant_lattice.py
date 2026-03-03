@@ -1,28 +1,21 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Optional, Set
+from typing import Dict, Optional, Set
 
 from ENGINE.core.poset import FinitePoset
+from ENGINE.core.lattice import LatticeOps
 
+
+# ---------------------------------------------------------
+# Atomic constant lattice element
+# ---------------------------------------------------------
 
 @dataclass(frozen=True)
 class ConstVal:
-    """
-    Finite constant-propagation lattice element.
-
-    ⊥  = bottom (no information)
-    Const(n)
-    ⊤  = top (conflict / unknown)
-    """
-
     value: Optional[int]
     is_top: bool = False
     is_bottom: bool = False
-
-    # -------------------------------------------------
-    # Constructors
-    # -------------------------------------------------
 
     @staticmethod
     def bottom() -> ConstVal:
@@ -36,10 +29,6 @@ class ConstVal:
     def const(n: int) -> ConstVal:
         return ConstVal(value=n)
 
-    # -------------------------------------------------
-    # Pretty print
-    # -------------------------------------------------
-
     def __str__(self) -> str:
         if self.is_bottom:
             return "⊥"
@@ -51,21 +40,7 @@ class ConstVal:
         return self.__str__()
 
 
-# ---------------------------------------------------------
-# Lattice builder
-# ---------------------------------------------------------
-
-def build_const_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
-    """
-    Builds a finite constant propagation lattice:
-
-           ⊤
-        /   |   \
-    Const(n) ...
-        \   |   /
-           ⊥
-    """
-
+def build_atomic_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
     bottom = ConstVal.bottom()
     top = ConstVal.top()
 
@@ -73,27 +48,60 @@ def build_const_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
     elements = {bottom, top} | const_elems
 
     def leq(a: ConstVal, b: ConstVal) -> bool:
-        # identical elements
         if a == b:
             return True
-
-        # bottom ≤ everything
         if a.is_bottom:
             return True
-
-        # everything ≤ top
         if b.is_top:
             return True
-
-        # constants only ≤ themselves
-        if (
-            not a.is_bottom
-            and not a.is_top
-            and not b.is_bottom
-            and not b.is_top
-        ):
+        if not a.is_top and not b.is_top and not a.is_bottom and not b.is_bottom:
             return a.value == b.value
-
         return False
+
+    return FinitePoset(elements, leq)
+
+
+# ---------------------------------------------------------
+# State lattice (mapping variable -> ConstVal)
+# ---------------------------------------------------------
+
+@dataclass(frozen=True)
+class State:
+    values: Dict[str, ConstVal]
+
+    def __repr__(self) -> str:
+        return str(self.values)
+
+
+def build_state_lattice(
+    variables: Set[str],
+    constants: Set[int],
+) -> FinitePoset[State]:
+
+    atomic = build_atomic_lattice(constants)
+    atomic_ops = LatticeOps(atomic)
+
+    # build full finite carrier
+    atomic_elements = list(atomic.elements)
+
+    def generate_states(vars_list, idx=0, current=None):
+        if current is None:
+            current = {}
+        if idx == len(vars_list):
+            yield State(dict(current))
+            return
+        var = vars_list[idx]
+        for val in atomic_elements:
+            current[var] = val
+            yield from generate_states(vars_list, idx + 1, current)
+
+    vars_list = sorted(list(variables))
+    elements = set(generate_states(vars_list))
+
+    def leq(a: State, b: State) -> bool:
+        for v in vars_list:
+            if not atomic.is_leq(a.values[v], b.values[v]):
+                return False
+        return True
 
     return FinitePoset(elements, leq)
