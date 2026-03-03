@@ -7,6 +7,7 @@ Adds:
 - join (least upper bound)
 - meet (greatest lower bound)
 - lattice checks
+- distributivity check
 """
 
 from __future__ import annotations
@@ -33,13 +34,19 @@ class LatticeOps:
         S = set(subset)
         if not S:
             raise ValueError("upper_bounds() needs a non-empty subset.")
-        return {u for u in self.poset.elements if all(self.poset.is_leq(x, u) for x in S)}
+        return {
+            u for u in self.poset.elements
+            if all(self.poset.is_leq(x, u) for x in S)
+        }
 
     def lower_bounds(self, subset: Iterable[Any]) -> Set[Any]:
         S = set(subset)
         if not S:
             raise ValueError("lower_bounds() needs a non-empty subset.")
-        return {l for l in self.poset.elements if all(self.poset.is_leq(l, x) for x in S)}
+        return {
+            l for l in self.poset.elements
+            if all(self.poset.is_leq(l, x) for x in S)
+        }
 
     # -----------------------------
     # Extremal elements within a subset
@@ -47,11 +54,17 @@ class LatticeOps:
 
     def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
         A = set(subset)
-        return {x for x in A if not any(self.poset.is_leq(y, x) and y != x for y in A)}
+        return {
+            x for x in A
+            if not any(self.poset.is_leq(y, x) and y != x for y in A)
+        }
 
     def maximal_in(self, subset: Iterable[Any]) -> Set[Any]:
         A = set(subset)
-        return {x for x in A if not any(self.poset.is_leq(x, y) and y != x for y in A)}
+        return {
+            x for x in A
+            if not any(self.poset.is_leq(x, y) and y != x for y in A)
+        }
 
     # -----------------------------
     # Join / Meet
@@ -59,22 +72,28 @@ class LatticeOps:
 
     def join(self, a: Any, b: Any) -> Any:
         """
-        Least upper bound (a ∨ b). Raises ValueError if not unique / doesn't exist.
+        Least upper bound (a ∨ b).
+        Raises ValueError if not unique / doesn't exist.
         """
         U = self.upper_bounds({a, b})
         mins = self.minimal_in(U)
         if len(mins) != 1:
-            raise ValueError(f"join({a},{b}) not unique / does not exist. Candidates={mins}")
+            raise ValueError(
+                f"join({a},{b}) not unique / does not exist. Candidates={mins}"
+            )
         return next(iter(mins))
 
     def meet(self, a: Any, b: Any) -> Any:
         """
-        Greatest lower bound (a ∧ b). Raises ValueError if not unique / doesn't exist.
+        Greatest lower bound (a ∧ b).
+        Raises ValueError if not unique / doesn't exist.
         """
         L = self.lower_bounds({a, b})
         maxs = self.maximal_in(L)
         if len(maxs) != 1:
-            raise ValueError(f"meet({a},{b}) not unique / does not exist. Candidates={maxs}")
+            raise ValueError(
+                f"meet({a},{b}) not unique / does not exist. Candidates={maxs}"
+            )
         return next(iter(maxs))
 
     # -----------------------------
@@ -86,15 +105,46 @@ class LatticeOps:
         True iff every pair has a unique join and meet.
         """
         elems = list(self.poset.elements)
-        for i in range(len(elems)):
-            for j in range(len(elems)):
-                a, b = elems[i], elems[j]
+        for a in elems:
+            for b in elems:
                 try:
                     _ = self.join(a, b)
                     _ = self.meet(a, b)
                 except ValueError:
                     return False
         return True
+
+    # -----------------------------
+    # Distributivity
+    # -----------------------------
+
+    def is_distributive(self) -> bool:
+        """
+        Checks distributivity:
+        a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
+        for all triples (a, b, c).
+        """
+        elems = list(self.poset.elements)
+
+        for a in elems:
+            for b in elems:
+                for c in elems:
+                    try:
+                        left = self.meet(a, self.join(b, c))
+                        right = self.join(
+                            self.meet(a, b),
+                            self.meet(a, c)
+                        )
+                        if left != right:
+                            return False
+                    except ValueError:
+                        return False
+
+        return True
+
+    # -----------------------------
+    # Extremal elements
+    # -----------------------------
 
     def top(self) -> Optional[Any]:
         mx = self.poset.maximal_elements()
