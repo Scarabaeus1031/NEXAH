@@ -52,7 +52,10 @@ def main():
         ("bottom", "top"),
     }
 
-    poset = FinitePoset(elements=elements, leq_pairs=leq_pairs)
+ def leq(x, y):
+    return (x, y) in leq_pairs
+
+poset = FinitePoset(elements, leq)
 
     # ---------------------------------------------------------
     # 2) Define a closure operator Γ: Q → Q
