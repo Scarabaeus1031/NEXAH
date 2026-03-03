@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, Optional, Set
+from typing import FrozenSet, Optional, Set, Tuple
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
@@ -62,15 +62,26 @@ def build_atomic_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
 
 
 # ---------------------------------------------------------
-# State lattice (mapping variable -> ConstVal)
+# State lattice (hashable)
 # ---------------------------------------------------------
 
 @dataclass(frozen=True)
 class State:
-    values: Dict[str, ConstVal]
+    values: FrozenSet[Tuple[str, ConstVal]]
+
+    def get(self, key: str) -> ConstVal:
+        for k, v in self.values:
+            if k == key:
+                return v
+        raise KeyError(key)
+
+    def with_update(self, key: str, value: ConstVal) -> State:
+        new_items = dict(self.values)
+        new_items[key] = value
+        return State(frozenset(new_items.items()))
 
     def __repr__(self) -> str:
-        return str(self.values)
+        return str(dict(self.values))
 
 
 def build_state_lattice(
@@ -81,26 +92,25 @@ def build_state_lattice(
     atomic = build_atomic_lattice(constants)
     atomic_ops = LatticeOps(atomic)
 
-    # build full finite carrier
     atomic_elements = list(atomic.elements)
+    vars_list = sorted(list(variables))
 
-    def generate_states(vars_list, idx=0, current=None):
+    def generate_states(idx=0, current=None):
         if current is None:
             current = {}
         if idx == len(vars_list):
-            yield State(dict(current))
+            yield State(frozenset(current.items()))
             return
         var = vars_list[idx]
         for val in atomic_elements:
             current[var] = val
-            yield from generate_states(vars_list, idx + 1, current)
+            yield from generate_states(idx + 1, current)
 
-    vars_list = sorted(list(variables))
-    elements = set(generate_states(vars_list))
+    elements = set(generate_states())
 
     def leq(a: State, b: State) -> bool:
         for v in vars_list:
-            if not atomic.is_leq(a.values[v], b.values[v]):
+            if not atomic.is_leq(a.get(v), b.get(v)):
                 return False
         return True
 
