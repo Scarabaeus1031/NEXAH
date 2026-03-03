@@ -16,9 +16,13 @@ class ConstVal:
     ⊤  = top (conflict / unknown)
     """
 
-    value: Optional[int]  # None represents bottom or top
+    value: Optional[int]
     is_top: bool = False
     is_bottom: bool = False
+
+    # -------------------------------------------------
+    # Constructors
+    # -------------------------------------------------
 
     @staticmethod
     def bottom() -> ConstVal:
@@ -32,19 +36,47 @@ class ConstVal:
     def const(n: int) -> ConstVal:
         return ConstVal(value=n)
 
+    # -------------------------------------------------
+    # Pretty print
+    # -------------------------------------------------
+
     def __str__(self) -> str:
         if self.is_bottom:
             return "⊥"
         if self.is_top:
             return "⊤"
-        return f"{self.value}"
+        return str(self.value)
 
+    def __repr__(self) -> str:
+        return self.__str__()
+
+
+# ---------------------------------------------------------
+# Lattice builder
+# ---------------------------------------------------------
 
 def build_const_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
-    elements = {ConstVal.bottom(), ConstVal.top()}
-    elements |= {ConstVal.const(c) for c in constants}
+    """
+    Builds a finite constant propagation lattice:
+
+           ⊤
+        /   |   \
+    Const(n) ...
+        \   |   /
+           ⊥
+    """
+
+    bottom = ConstVal.bottom()
+    top = ConstVal.top()
+
+    const_elems = {ConstVal.const(c) for c in constants}
+    elements = {bottom, top} | const_elems
 
     def leq(a: ConstVal, b: ConstVal) -> bool:
+        # identical elements
+        if a == b:
+            return True
+
         # bottom ≤ everything
         if a.is_bottom:
             return True
@@ -53,11 +85,15 @@ def build_const_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
         if b.is_top:
             return True
 
-        # equal constants
-        if not a.is_top and not b.is_top and not a.is_bottom and not b.is_bottom:
+        # constants only ≤ themselves
+        if (
+            not a.is_bottom
+            and not a.is_top
+            and not b.is_bottom
+            and not b.is_top
+        ):
             return a.value == b.value
 
-        # constant ≤ itself
-        return a == b
+        return False
 
     return FinitePoset(elements, leq)
