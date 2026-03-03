@@ -31,6 +31,10 @@ N = TypeVar("N", bound=Hashable)
 V = TypeVar("V", bound=Hashable)
 
 
+# ---------------------------------------------------------
+# Result container (single definition!)
+# ---------------------------------------------------------
+
 @dataclass(frozen=True)
 class WorklistResult(Generic[N, V]):
     in_values: Dict[N, V]
@@ -38,6 +42,19 @@ class WorklistResult(Generic[N, V]):
     iterations: int
     pops: int
 
+    @property
+    def values(self) -> Dict[N, V]:
+        """
+        Backward compatibility:
+        Old API exposed only a single 'values' map.
+        We interpret that as OUT values.
+        """
+        return self.out_values
+
+
+# ---------------------------------------------------------
+# Internal validation helper
+# ---------------------------------------------------------
 
 def _require_in_carrier(value: V, carrier: Iterable[V], *, where: str) -> None:
     for e in carrier:
@@ -45,6 +62,10 @@ def _require_in_carrier(value: V, carrier: Iterable[V], *, where: str) -> None:
             return
     raise ValueError(f"{where}: value not in lattice carrier: {value!r}")
 
+
+# ---------------------------------------------------------
+# Solver
+# ---------------------------------------------------------
 
 def solve_worklist(
     nodes: Iterable[N],
@@ -81,7 +102,7 @@ def solve_worklist(
 
     in_values: Dict[N, V] = dict(initial_in)
 
-    # Initialize OUT as transfer(IN) once (validated)
+    # Initialize OUT once
     out_values: Dict[N, V] = {}
     for n in node_set:
         out_n = transfer(n, in_values[n])
@@ -100,14 +121,14 @@ def solve_worklist(
         u = worklist.pop(0)
         iters += 1
 
-        # Recompute OUT[u] from current IN[u]
+        # Recompute OUT[u]
         new_out_u = transfer(u, in_values[u])
         _require_in_carrier(new_out_u, carrier, where="transfer(...)")
 
         if new_out_u != out_values[u]:
             out_values[u] = new_out_u
 
-        # Propagate OUT[u] to successors' IN
+        # Propagate to successors
         for v in succ[u]:
             new_in_v = lat.join(in_values[v], out_values[u])
             if new_in_v != in_values[v]:
@@ -121,19 +142,3 @@ def solve_worklist(
         iterations=iters,
         pops=pops,
     )
-
-@dataclass(frozen=True)
-class WorklistResult(Generic[N, V]):
-    in_values: Dict[N, V]
-    out_values: Dict[N, V]
-    iterations: int
-    pops: int
-
-    @property
-    def values(self) -> Dict[N, V]:
-        """
-        Backward compatibility:
-        Old API exposed only a single 'values' map.
-        We interpret that as OUT values.
-        """
-        return self.out_values
