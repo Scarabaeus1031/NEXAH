@@ -9,12 +9,13 @@ A closure operator Γ on a poset (P, ≤) should satisfy:
 This module provides:
 - ClosureOperator wrapper with validation
 - Fixpoint poset / lattice construction helpers
+- Stabilization + least/greatest fixpoint helpers (finite posets)
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Callable
+from typing import Any, Callable, Set, Optional
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.fixpoint_lattice import (
@@ -73,6 +74,93 @@ class ClosureOperator:
                     if not self.poset.is_leq(gx, gy):
                         raise ValueError(
                             f"Not monotone: {x} ≤ {y} but "
+                            f"gamma({x}) ≤ gamma({y}) fails "
+                            f"(gamma({x})={gx}, gamma({y})={gy})."
+                        )
+
+    def _validate_idempotent(self) -> None:
+        for x in self.poset.elements:
+            gx = self.gamma(x)
+            ggx = self.gamma(gx)
+            if ggx != gx:
+                raise ValueError(
+                    f"Not idempotent: gamma(gamma({x})) != gamma({x}) "
+                    f"(gamma({x})={gx}, gamma(gamma({x}))={ggx})."
+                )
+
+    # -----------------------------------------------------
+    # Core API
+    # -----------------------------------------------------
+
+    def apply(self, x: Any) -> Any:
+        return self.gamma(x)
+
+    def stabilize(self, x: Any, max_steps: int = 100) -> Any:
+        """
+        Iterates gamma until stabilization: gamma^n(x)=gamma^(n+1)(x).
+        On a finite poset, closure operators stabilize quickly.
+        """
+        current = x
+        for _ in range(max_steps):
+            nxt = self.gamma(current)
+            if nxt == current:
+                return current
+            current = nxt
+        raise RuntimeError(
+            f"Did not stabilize within {max_steps} steps from {x}."
+        )
+
+    # -----------------------------------------------------
+    # Fixpoints
+    # -----------------------------------------------------
+
+    def fixpoints(self) -> Set[Any]:
+        """
+        Returns the set {x in P | gamma(x) = x}.
+        """
+        return {x for x in self.poset.elements if self.gamma(x) == x}
+
+    def least_fixpoint(self, max_steps: int = 100) -> Any:
+        """
+        Least fixpoint via iteration from bottom element.
+        Requires unique bottom element in the poset.
+        """
+        bottom = self.poset.bottom()
+        if bottom is None:
+            raise ValueError("Cannot compute least_fixpoint(): poset has no unique bottom.")
+        return self.stabilize(bottom, max_steps=max_steps)
+
+    def greatest_fixpoint(self, max_steps: int = 100) -> Any:
+        """
+        Greatest fixpoint.
+        For a closure operator (extensive + monotone + idempotent),
+        the top element is always a fixpoint if a unique top exists.
+        We still compute it safely.
+        """
+        top = self.poset.top()
+        if top is None:
+            raise ValueError("Cannot compute greatest_fixpoint(): poset has no unique top.")
+        # For safety / consistency (and to keep behavior general), stabilize from top.
+        return self.stabilize(top, max_steps=max_steps)
+
+    # -----------------------------------------------------
+    # Fixpoint-induced structure
+    # -----------------------------------------------------
+
+    def fixpoint_lattice(self, strict: bool = False) -> FixpointStructure:
+        """
+        Builds Fix(Γ) with inherited order and lattice operations.
+
+        If strict=True:
+            Require the induced structure to be a lattice.
+            Raise ValueError otherwise.
+        """
+        fp = build_fixpoint_structure(self.poset, self.gamma)
+
+        if strict and not fp.is_lattice():
+            raise ValueError("Fixpoint structure is not a lattice (strict=True).")
+
+        return fp                            f"Not monotone: {x} ≤ {y} but "
                             f"gamma({x}) ≤ gamma({y}) fails "
                             f"(gamma({x})={gx}, gamma({y})={gy})."
                         )
