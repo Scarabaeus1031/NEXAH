@@ -1,55 +1,59 @@
 """
-NEXAH Engine — Rank / Height utilities for finite posets.
+NEXAH Engine – Rank / Height utilities for finite posets
 
-Height(x) = length of longest chain from a minimal element to x.
+Provides:
+- rank_map(): longest-chain rank from minimal elements (height)
+- height(): maximal rank value (None if empty)
 """
 
 from __future__ import annotations
 
-from typing import Dict, Any
+from dataclasses import dataclass
+from typing import Dict, Generic, Optional, TypeVar
+from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
 
+T = TypeVar("T", bound=Hashable)
 
-class RankStructure:
-    def __init__(self, poset: FinitePoset):
-        self.poset = poset
-        self._cache: Dict[Any, int] = {}
 
-    # -----------------
-    # Public API
-    # -----------------
+@dataclass(frozen=True)
+class RankStructure(Generic[T]):
+    poset: FinitePoset[T]
 
-    def height(self, x: Any) -> int:
-        if x not in self.poset.elements:
-            raise ValueError(f"{x!r} not in poset.")
+    def rank_map(self) -> Dict[T, int]:
+        # Empty carrier → empty rank map
+        if not self.poset.elements:
+            return {}
 
-        return self._height_recursive(x)
+        elems = list(self.poset.elements)
 
-    def rank(self, x: Any) -> int:
-        return self.height(x)
+        # Compute strict predecessors for each element (y < x)
+        preds: Dict[T, list[T]] = {}
+        for x in elems:
+            px: list[T] = []
+            for y in elems:
+                if y == x:
+                    continue
+                if self.poset.is_leq(y, x) and not self.poset.is_leq(x, y):
+                    px.append(y)
+            preds[x] = px
 
-    def max_height(self) -> int:
-        return max(self.height(x) for x in self.poset.elements)
+        memo: Dict[T, int] = {}
 
-    # -----------------
-    # Internal
-    # -----------------
+        def r(x: T) -> int:
+            if x in memo:
+                return memo[x]
+            if not preds[x]:
+                memo[x] = 0
+                return 0
+            memo[x] = 1 + max(r(y) for y in preds[x])
+            return memo[x]
 
-    def _height_recursive(self, x: Any) -> int:
-        if x in self._cache:
-            return self._cache[x]
+        return {x: r(x) for x in elems}
 
-        # predecessors strictly below x
-        preds = [
-            y for y in self.poset.elements
-            if y != x and self.poset.is_leq(y, x)
-        ]
-
-        if not preds:
-            self._cache[x] = 0
-            return 0
-
-        value = 1 + max(self._height_recursive(p) for p in preds)
-        self._cache[x] = value
-        return value
+    def height(self) -> Optional[int]:
+        rm = self.rank_map()
+        if not rm:
+            return None
+        return max(rm.values())
