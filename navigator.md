@@ -1,200 +1,192 @@
-# NEXAH Framework Navigator  
-Version 0.8 – Stable Finite Algebra Core
+# NEXAH Framework Navigator
 
-This document provides a structural overview of the NEXAH repository, its current implementation state, architectural layers, quality status, and roadmap.
+Version 0.9 – Finite Abstract Interpretation Core
 
----
+⸻
 
-## 0. Executive Summary
+0. Executive Summary
 
-The ENGINE core now implements a fully validated finite structural algebra layer.
+The ENGINE now implements a fully validated finite structural algebra core plus a working static analysis application layer.
 
-Implemented:
+Structural Core
+	•	Finite partially ordered sets
+	•	Lattice operations and structural checks
+	•	Closure (Γ) and Interior (Ι) operators
+	•	General monotone operators
+	•	Fixpoint-induced structures
+	•	Rank / height analysis
+	•	Hasse cover extraction
+	•	Regime restriction (Δ)
+	•	Frame projection (F)
 
-- Finite partially ordered sets
-- Lattice operations and structural checks
-- Closure and Interior operators
-- General monotone operators
-- Fixpoint-induced structures
-- Worklist-based fixpoint propagation
-- Rank / height analysis
-- Hasse cover extraction
-- Regime restriction (Δ)
-- Frame projection (F)
+Dynamic Core
+	•	Explicit IN/OUT worklist fixpoint solver
+	•	Strict carrier validation
+	•	Join-semilattice propagation
 
-Status:
-- 76 tests passing
-- `mypy --strict` clean
-- Defensive carrier validation enforced
-- Finite algebra core considered stable
+Application Layer
+	•	Constant propagation lattice
+	•	Product state lattice
+	•	Mini IR (typed instruction set)
+	•	Linear CFG analysis
+	•	Branching CFG analysis (conflict → ⊤)
 
-Current version: v0.8 (pre-1.0 freeze candidate)
+⸻
 
----
+Status
+	•	76 tests passing
+	•	mypy --strict clean
+	•	Mini IR demos validated
+	•	Finite abstract interpretation operational
 
-## 1. Repository Structure
+Current version: v0.9 (Application Layer operational)
 
-### ENGINE
+⸻
 
-Executable algebraic core (finite scope).
+1. Repository Structure
 
-Modules:
+ENGINE
 
-- `poset.py` — FinitePoset (validated partial orders)
-- `lattice.py` — LatticeOps (join/meet, lattice/distributivity checks)
-- `closure_operator.py` — ClosureOperator Γ
-- `interior_operator.py` — InteriorOperator Ι
-- `monotone_operator.py` — General monotone maps
-- `fixpoint_lattice.py` — Fixpoint-induced structures
-- `worklist_fixpoint.py` — Finite worklist propagation
-- `rank.py` — RankStructure (height analysis)
-- `hasse.py` — HasseDiagram (cover extraction)
-- `regime_operator.py` — Regime restriction Δ
-- `frame_operator.py` — Frame projection F
+Executable finite algebra + analysis core.
 
----
+Core Modules
+	•	poset.py — FinitePoset (validated partial orders)
+	•	lattice.py — LatticeOps (join/meet, lattice/distributivity checks)
+	•	closure_operator.py — ClosureOperator Γ
+	•	interior_operator.py — InteriorOperator Ι
+	•	monotone_operator.py — General monotone maps
+	•	fixpoint_lattice.py — Fixpoint-induced structures
+	•	worklist_fixpoint.py — IN/OUT worklist propagation
+	•	rank.py — RankStructure (height analysis)
+	•	hasse.py — HasseDiagram (cover extraction)
+	•	regime_operator.py — Regime restriction Δ
+	•	frame_operator.py — Frame projection F
 
-### FRAMEWORK
+Application Modules
+	•	constant_lattice.py — Atomic + product lattice for constant propagation
+	•	mini_ir.py — Minimal typed IR
+	•	mini_ir_demo.py — Linear CFG analysis demo
+	•	mini_ir_branch_demo.py — Branch + conflict demo
 
-Conceptual layer definitions:
+⸻
 
-- META — relational structure
-- ARCHY — stabilization logic
-- NEXAH — navigational transition logic
+2. Algebraic Layer Summary
 
-ENGINE provides the executable backbone for these layers.
+Structural Layer
+	•	FinitePoset validation (reflexive / antisymmetric / transitive)
+	•	Extremal element detection (top / bottom)
+	•	Hasse cover extraction
+	•	Rank / height analysis
 
----
+⸻
 
-### RESEARCH
+Lattice Layer
+	•	Join / meet
+	•	Lattice detection
+	•	Distributivity checks
+	•	Top / bottom detection
+	•	Product lattice via state construction
 
-Applied prototypes and dynamic interaction experiments:
+⸻
 
-- Stability detection
-- Regime transitions
-- Δ–F interaction experiments
-- Composition analysis
+Stabilization Layer
+	•	Closure operator Γ (extensive / monotone / idempotent)
+	•	Interior operator Ι (contractive / monotone / idempotent)
+	•	Fixpoint extraction
+	•	Induced fixpoint poset
 
----
+⸻
 
-## 2. Algebraic Layer Summary
+Dynamic Layer
+	•	Monotone operators
+	•	IN/OUT worklist fixpoint solver
+	•	Regime restriction Δ
+	•	Frame projection F
+	•	Δ ∘ F interaction capability
 
-### Structural Layer
+⸻
 
-- FinitePoset validation (reflexive / antisymmetric / transitive)
-- Extremal element detection (top / bottom)
-- Hasse cover extraction
-- Rank / height analysis
+Application Layer (New in v0.9)
+	•	Finite constant propagation lattice
+	•	Product state space modeling
+	•	Typed Mini IR
+	•	Automatic transfer generation
+	•	Linear dataflow analysis
+	•	Branching join resolution (conflict → ⊤)
 
----
+This establishes NEXAH as a finite abstract interpretation kernel.
 
-### Lattice Layer
+⸻
 
-- Join / meet
-- Lattice detection
-- Distributivity checks
-- Top / bottom detection
+3. Quality Status
+	•	76 tests passing
+	•	Positive and negative path validation
+	•	Strict carrier enforcement
+	•	Deterministic IN/OUT semantics
+	•	No implicit coercion
+	•	No dynamic type leaks
+	•	mypy --strict clean
+	•	Application demos validated
 
----
+ENGINE stability: high (finite scope, operational).
 
-### Stabilization Layer
+⸻
 
-- Closure operator Γ (extensive / monotone / idempotent)
-- Interior operator Ι (contractive / monotone / idempotent)
-- Fixpoint extraction
-- Induced fixpoint poset
-- Lattice utilities over fixpoints
+4. Intentional Constraints
+	•	Finite structures only
+	•	No widening/narrowing yet
+	•	No infinite lattices
+	•	No performance scaling layer
+	•	No graph visualization yet
 
----
+These constraints define the design boundary.
 
-### Dynamic Layer
+⸻
 
-- Monotone operators (finite iteration utilities)
-- Worklist fixpoint solver
-- Regime restriction Δ (induced sub-poset)
-- Frame projection F (induced image poset)
-- Basic Δ ∘ F interaction testing
+5. Development Roadmap
 
----
+Phase A — Finite Algebra Core ✔
 
-## 3. Quality Status
+Complete.
 
-- 76 tests passing
-- Positive + negative path validation
-- Strict carrier enforcement
-- No implicit coercion
-- No dynamic type leaks
-- `mypy --strict` clean
-- Finite scope intentionally enforced
+⸻
 
-ENGINE stability: high (finite-only design).
+Phase B — Application Stabilization (current)
+	•	Convert Mini IR demos into regression tests
+	•	CI integration (pytest + mypy gate)
+	•	Coverage threshold enforcement
+	•	Documentation refinement
+	•	API freeze candidate review
 
----
+⸻
 
-## 4. Known Constraints (Intentional)
+Phase C — Extended Analysis Layer
+	•	Widening / narrowing operators
+	•	Guarded branches (condition-sensitive Δ)
+	•	Loop analysis examples
+	•	Transition graph export
+	•	Visualization layer
 
-- Finite structures only
-- No infinite lattice support
-- No probabilistic weights
-- No performance scaling layer
-- No visualization export yet
+⸻
 
-These are deliberate scope boundaries.
+6. Versioning Policy
 
----
+v0.x → evolving algebra
+v0.8 → finite algebra stable
+v0.9 → abstract interpretation operational
+v1.0 → API frozen + CI stabilized
 
-## 5. Development Roadmap
+⸻
 
-### Phase A — Algebra Completion ✔
+7. Project Objective
 
-- [x] Closure Γ
-- [x] Interior Ι
-- [x] Monotone operators
-- [x] Fixpoint extraction
-- [x] Fixpoint-induced structures
-- [x] Worklist propagation
-- [x] Regime operator Δ
-- [x] Frame operator F
-- [x] Rank / height
-- [x] Hasse diagram
+To construct a mathematically grounded, executable structural engine
+for stabilization, regime restriction, projection, and finite abstract interpretation
+within complex systems.
 
-Finite algebra core complete.
+Current state:
+Finite abstract interpretation kernel operational.
 
----
-
-### Phase B — Robustness Hardening (next)
-
-- [ ] CI integration (pytest + mypy gate)
-- [ ] Coverage threshold enforcement
-- [ ] Benchmark sanity checks
-- [ ] API freeze candidate review
-- [ ] Example stabilization cleanup
-
----
-
-### Phase C — Application Layer
-
-- [ ] Dataflow analysis demo
-- [ ] Constraint stabilization demo
-- [ ] Regime transition modeling
-- [ ] Graph export / visualization
-- [ ] Operator composition formalization
-
----
-
-## 6. Versioning Policy
-
-v0.x → Algebra evolving  
-v0.8 → Finite algebra stable  
-v1.0 → API frozen + CI stabilized  
-
----
-
-## 7. Project Objective
-
-To construct a mathematically grounded, executable structural engine  
-for stabilization, regime restriction, projection, and navigable transitions  
-within finite complex systems.
-
-Current state: finite structural algebra stable.  
-Next step: robustness + applied layer.
+Next step:
+Robustness hardening + CI + formal API freeze candidate.
+:::
