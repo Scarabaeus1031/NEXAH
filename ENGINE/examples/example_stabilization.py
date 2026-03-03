@@ -90,6 +90,8 @@ def main():
     print("  a ∨ bottom =", lat.join("a", "bottom"))
     print("  b ∧ top =", lat.meet("b", "top"))
 
+    print("Is distributive:", lat.is_distributive())
+    
     print("\nDone.\n")
 
 
