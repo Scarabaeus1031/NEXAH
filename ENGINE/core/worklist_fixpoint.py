@@ -34,6 +34,19 @@ class WorklistResult:
     pops: int
 
 
+def _in_carrier_hashsafe(value: Any, carrier: Iterable[Any]) -> bool:
+    """
+    Hash-safe membership test for carrier sets that may contain unhashable values
+    or when `value` itself may be unhashable (e.g. `set`).
+
+    We avoid: value in carrier_set  (would hash `value`)
+    """
+    for elem in carrier:
+        if value == elem:
+            return True
+    return False
+
+
 def solve_worklist(
     nodes: Iterable[Node],
     edges: Iterable[Tuple[Node, Node]],
@@ -61,7 +74,6 @@ def solve_worklist(
     # -----------------------------------------------------
     # Build successor map
     # -----------------------------------------------------
-
     succ: Dict[Node, List[Node]] = {n: [] for n in node_set}
     for u, v in edges:
         if u not in node_set or v not in node_set:
@@ -71,20 +83,17 @@ def solve_worklist(
     # -----------------------------------------------------
     # Lattice validation
     # -----------------------------------------------------
-
     lat = LatticeOps(value_poset)
-
     if strict and not lat.is_lattice():
         raise ValueError("value_poset must be a lattice (strict=True).")
 
     # -----------------------------------------------------
-    # Validate initial mapping
+    # Validate initial mapping (hash-safe)
     # -----------------------------------------------------
-
     for n in node_set:
         if n not in initial:
             raise ValueError(f"Missing initial value for node {n!r}.")
-        if initial[n] not in value_poset.elements:
+        if not _in_carrier_hashsafe(initial[n], value_poset.elements):
             raise ValueError(
                 f"Initial value for {n!r} not in lattice carrier: {initial[n]!r}"
             )
@@ -94,7 +103,6 @@ def solve_worklist(
     # -----------------------------------------------------
     # Worklist algorithm
     # -----------------------------------------------------
-
     worklist: List[Node] = list(nodes_list)
     pops = 0
     iters = 0
@@ -116,17 +124,10 @@ def solve_worklist(
             cand = transfer(v, u_val)
 
             # -------------------------------------------------
-            # SAFE VALIDATION (hash-safe)
+            # Validate transfer result BEFORE lattice ops
+            # (hash-safe membership check)
             # -------------------------------------------------
-
-            try:
-                is_member = cand in value_poset.elements
-            except TypeError:
-                raise ValueError(
-                    f"transfer produced non-hashable value: {cand!r}"
-                )
-
-            if not is_member:
+            if not _in_carrier_hashsafe(cand, value_poset.elements):
                 raise ValueError(
                     f"transfer produced value not in lattice carrier: {cand!r}"
                 )
@@ -134,7 +135,6 @@ def solve_worklist(
             # -------------------------------------------------
             # Lattice join
             # -------------------------------------------------
-
             new_v = lat.join(values[v], cand)
 
             if new_v != values[v]:
@@ -142,41 +142,4 @@ def solve_worklist(
                 if v not in worklist:
                     worklist.append(v)
 
-    return WorklistResult(
-        values=values,
-        iterations=iters,
-        pops=pops,
-        while worklist:
-        pops += 1
-        if pops > max_pops:
-            raise RuntimeError(
-                f"Worklist exceeded max_pops={max_pops}. "
-                "Possible non-termination or exploding state space."
-            )
-
-        u = worklist.pop(0)
-        iters += 1
-
-        u_val = values[u]
-
-        for v in succ[u]:
-            cand = transfer(v, u_val)
-
-            # 🔥 Critical: validate BEFORE lattice operations
-            if cand not in value_poset.elements:
-                raise ValueError(
-                    f"transfer produced value not in lattice carrier: {cand!r}"
-                )
-
-            new_v = lat.join(values[v], cand)
-
-            if new_v != values[v]:
-                values[v] = new_v
-                if v not in worklist:
-                    worklist.append(v)
-
-    return WorklistResult(
-        values=values,
-        iterations=iters,
-        pops=pops,
-    )
+    return WorklistResult(values=values, iterations=iters, pops=pops)
