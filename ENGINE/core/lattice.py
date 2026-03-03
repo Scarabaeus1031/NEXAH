@@ -1,100 +1,55 @@
-"""
-NEXAH Engine – Core Layer
-Lattice utilities built on top of FinitePoset.
-"""
-
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Any, Iterable, Optional, Set, List
+from typing import Generic, Iterable, Optional, Set, TypeVar
 
 from ENGINE.core.poset import FinitePoset
 
+T = TypeVar("T")
 
-@dataclass(frozen=True)
-class LatticeOps:
+
+class LatticeOps(Generic[T]):
     """
-    Utility wrapper: provides lattice operations for a given FinitePoset.
-
-    Note:
-    - We avoid converting arbitrary subsets into Python sets, because
-      lattice elements might be unhashable (e.g., set-like carriers).
-    - If your FinitePoset.elements is itself a Python set, those elements
-      are hashable by construction, but this keeps the API robust anyway.
+    Finite lattice utilities over a FinitePoset.
     """
 
-    poset: FinitePoset
+    def __init__(self, poset: FinitePoset[T]) -> None:
+        self.poset = poset
 
     # -------------------------------------------------
     # Bounds
     # -------------------------------------------------
 
-    def upper_bounds(self, subset: Iterable[Any]) -> Set[Any]:
-        S: List[Any] = list(subset)
-        if not S:
-            raise ValueError("upper_bounds() needs a non-empty subset.")
-        return {
-            u for u in self.poset.elements
-            if all(self.poset.is_leq(x, u) for x in S)
-        }
+    def upper_bounds(self, subset: Iterable[T]) -> Set[T]:
+        return self.poset.upper_bounds(subset)
 
-    def lower_bounds(self, subset: Iterable[Any]) -> Set[Any]:
-        S: List[Any] = list(subset)
-        if not S:
-            raise ValueError("lower_bounds() needs a non-empty subset.")
-        return {
-            l for l in self.poset.elements
-            if all(self.poset.is_leq(l, x) for x in S)
-        }
-
-    # -------------------------------------------------
-    # Extremal elements in subset
-    # -------------------------------------------------
-
-    def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
-        A = list(subset)
-        return {
-            x for x in A
-            if not any(self.poset.is_leq(y, x) and y != x for y in A)
-        }
-
-    def maximal_in(self, subset: Iterable[Any]) -> Set[Any]:
-        A = list(subset)
-        return {
-            x for x in A
-            if not any(self.poset.is_leq(x, y) and y != x for y in A)
-        }
+    def lower_bounds(self, subset: Iterable[T]) -> Set[T]:
+        return self.poset.lower_bounds(subset)
 
     # -------------------------------------------------
     # Join / Meet
     # -------------------------------------------------
 
-    def join(self, a: Any, b: Any) -> Any:
-        U = self.upper_bounds([a, b])
-        mins = self.minimal_in(U)
+    def join(self, a: T, b: T) -> T:
+        ubs = self.upper_bounds([a, b])
+        mins = self._minimal(ubs)
         if len(mins) != 1:
-            raise ValueError(
-                f"join({a},{b}) not unique / does not exist. Candidates={mins}"
-            )
+            raise ValueError("Join not unique.")
         return next(iter(mins))
 
-    def meet(self, a: Any, b: Any) -> Any:
-        L = self.lower_bounds([a, b])
-        maxs = self.maximal_in(L)
+    def meet(self, a: T, b: T) -> T:
+        lbs = self.lower_bounds([a, b])
+        maxs = self._maximal(lbs)
         if len(maxs) != 1:
-            raise ValueError(
-                f"meet({a},{b}) not unique / does not exist. Candidates={maxs}"
-            )
+            raise ValueError("Meet not unique.")
         return next(iter(maxs))
 
     # -------------------------------------------------
-    # Lattice checks
+    # Structure Checks
     # -------------------------------------------------
 
     def is_lattice(self) -> bool:
-        elems = list(self.poset.elements)
-        for a in elems:
-            for b in elems:
+        for a in self.poset.elements:
+            for b in self.poset.elements:
                 try:
                     self.join(a, b)
                     self.meet(a, b)
@@ -102,45 +57,50 @@ class LatticeOps:
                     return False
         return True
 
-    # -------------------------------------------------
-    # Full Distributivity Check
-    # -------------------------------------------------
-
     def is_distributive(self) -> bool:
-        """
-        Full distributivity requires BOTH:
-
-        1) a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
-        2) a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)
-        """
-        elems = list(self.poset.elements)
-
-        for a in elems:
-            for b in elems:
-                for c in elems:
-                    try:
-                        left1 = self.meet(a, self.join(b, c))
-                        right1 = self.join(self.meet(a, b), self.meet(a, c))
-                        if left1 != right1:
-                            return False
-
-                        left2 = self.join(a, self.meet(b, c))
-                        right2 = self.meet(self.join(a, b), self.join(a, c))
-                        if left2 != right2:
-                            return False
-                    except ValueError:
+        for a in self.poset.elements:
+            for b in self.poset.elements:
+                for c in self.poset.elements:
+                    left = self.meet(a, self.join(b, c))
+                    right = self.join(self.meet(a, b), self.meet(a, c))
+                    if left != right:
                         return False
-
         return True
 
     # -------------------------------------------------
-    # Extremal elements
+    # Extremal Elements
     # -------------------------------------------------
 
-    def top(self) -> Optional[Any]:
-        mx = self.poset.maximal_elements()
-        return next(iter(mx)) if len(mx) == 1 else None
+    def top(self) -> Optional[T]:
+        return self.poset.top()
 
-    def bottom(self) -> Optional[Any]:
-        mn = self.poset.minimal_elements()
-        return next(iter(mn)) if len(mn) == 1 else None
+    def bottom(self) -> Optional[T]:
+        return self.poset.bottom()
+
+    # -------------------------------------------------
+    # Helpers
+    # -------------------------------------------------
+
+    def _minimal(self, subset: Iterable[T]) -> Set[T]:
+        mins: Set[T] = set()
+        for x in subset:
+            is_min = True
+            for y in subset:
+                if x != y and self.poset.is_leq(y, x):
+                    is_min = False
+                    break
+            if is_min:
+                mins.add(x)
+        return mins
+
+    def _maximal(self, subset: Iterable[T]) -> Set[T]:
+        maxs: Set[T] = set()
+        for x in subset:
+            is_max = True
+            for y in subset:
+                if x != y and self.poset.is_leq(x, y):
+                    is_max = False
+                    break
+            if is_max:
+                maxs.add(x)
+        return maxs
