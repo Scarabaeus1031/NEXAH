@@ -34,21 +34,19 @@ class WorklistResult:
     pops: int
 
 
-def _require_in_carrier(value: Any, carrier: set, *, where: str) -> None:
+def _require_in_carrier(value: Any, carrier, *, where: str) -> None:
     """
     Strict carrier check:
-    - membership in the carrier SET (hash-based)
-    - if value is unhashable -> ValueError
-    This intentionally rejects values that are equal-but-not-the-same-representation,
-    e.g. {'x'} vs frozenset({'x'}) when the carrier uses frozenset.
+    - same type
+    - same value
+    - no equality-only matches
     """
-    try:
-        ok = value in carrier
-    except TypeError as e:
-        raise ValueError(f"{where}: value is not hashable: {value!r}") from e
 
-    if not ok:
-        raise ValueError(f"{where}: value not in lattice carrier: {value!r}")
+    for e in carrier:
+        if type(value) is type(e) and value == e:
+            return
+
+    raise ValueError(f"{where}: value not in lattice carrier: {value!r}")
 
 
 def solve_worklist(
