@@ -1,14 +1,14 @@
 # NEXAH Engine
 
-Version 0.2 -- Executable Structural Core
+Version 0.9 --- Finite Abstract Interpretation Core
 
-The NEXAH Engine is the executable algebraic layer of the NEXAH
-framework.
+The NEXAH Engine is the executable algebraic and analysis layer of the
+NEXAH framework.
 
-It operationalizes discrete structural modeling based on finite order
-theory.
+It operationalizes finite structural modeling and abstract
+interpretation based on order theory and lattice semantics.
 
-![NEXAH Engine -- Execution
+![NEXAH Engine --- Execution
 Architecture](visuals/engine_architecture_execution_layer_dark.png)
 
 ------------------------------------------------------------------------
@@ -22,51 +22,77 @@ RESEARCH\
 → STRUCTURAL OUTPUT
 
 The Engine translates formal structural theory into executable algebraic
-models.
+models and finite abstract interpretation systems.
 
 ------------------------------------------------------------------------
 
-## 2. Core Operator Stack (Conceptual)
+## 2. Core Operator Stack
 
-The architecture diagram represents the intended operator stack:
+The conceptual operator stack is now fully implemented:
 
 FinitePoset\
+→ LatticeOps\
 → Closure Operator (Γ)\
+→ Interior Operator (Ι)\
+→ Monotone Operators\
 → Regime Operator (Δ)\
 → Frame Projection (F)\
-→ Fixpoint
+→ Fixpoint Structures\
+→ Worklist Fixpoint Solver
 
-### Current implementation status
+### Implementation Status
 
 ✔ FinitePoset\
+✔ LatticeOps (join/meet, distributivity, top/bottom)\
 ✔ Closure Operator (Γ)\
-✔ Fixpoint detection\
-✔ Lattice utilities
+✔ Interior Operator (Ι)\
+✔ Monotone Operators\
+✔ Fixpoint-induced structures\
+✔ Rank / height analysis\
+✔ Hasse cover extraction\
+✔ Regime Operator (Δ)\
+✔ Frame Projection (F)\
+✔ IN/OUT Worklist Fixpoint Solver\
+✔ Application Layer (Mini IR + constant propagation)
 
-### Planned (not yet implemented)
-
-□ Regime Operator (Δ)\
-□ Frame Projection Operator (F)\
-□ Multi-regime interaction layer
-
-The diagram reflects the full architectural direction, not current
-completeness.
+Finite algebra core complete.\
+Finite abstract interpretation operational.
 
 ------------------------------------------------------------------------
 
-## 3. What the Engine Currently Demonstrates
+## 3. What the Engine Now Demonstrates
 
-The current version supports:
+### Structural Layer
 
--   Finite partially ordered sets\
--   Monotone closure operators\
--   Deterministic stabilization\
--   Fixpoint extraction\
--   Lattice construction\
--   Distributivity verification
+-   Finite partially ordered sets (validated)
+-   Lattice construction and distributivity checks
+-   Extremal element detection
+-   Rank / height computation
+-   Hasse cover extraction
 
-The provided example demonstrates structural stabilization within a
-finite poset.
+### Stabilization Layer
+
+-   Closure operators (extensive / monotone / idempotent)
+-   Interior operators (contractive / monotone / idempotent)
+-   Fixpoint extraction
+-   Fixpoint-induced lattices
+
+### Dynamic Layer
+
+-   Monotone operators with iteration
+-   Explicit IN/OUT worklist fixpoint solver
+-   Regime restriction (Δ)
+-   Frame projection (F)
+
+### Application Layer
+
+-   Finite constant propagation lattice
+-   Product state lattice construction
+-   Typed Mini IR
+-   Linear CFG analysis
+-   Branching CFG analysis with join conflict → ⊤
+
+The engine now functions as a finite abstract interpretation kernel.
 
 ------------------------------------------------------------------------
 
@@ -75,59 +101,102 @@ finite poset.
 ENGINE/\
 ├── core/\
 │ ├── poset.py\
-│ ├── closure_operator.py\
 │ ├── lattice.py\
-│ └── README.md\
+│ ├── closure_operator.py\
+│ ├── interior_operator.py\
+│ ├── monotone_operator.py\
+│ ├── fixpoint_lattice.py\
+│ ├── worklist_fixpoint.py\
+│ ├── rank.py\
+│ ├── hasse.py\
+│ ├── regime_operator.py\
+│ └── frame_operator.py\
+│\
+├── applications/\
+│ ├── constant_lattice.py\
+│ ├── mini_ir.py\
+│ ├── mini_ir_demo.py\
+│ └── mini_ir_branch_demo.py\
+│\
 ├── examples/\
 │ └── example_stabilization.py\
+│\
 └── visuals/
-
-The `core/` folder contains the validated algebraic primitives.\
-The `examples/` folder demonstrates executable structural modeling.
 
 ------------------------------------------------------------------------
 
-## 5. Running the Example
+## 5. Running the Demos
 
 From repository root:
 
-python3 -B -m ENGINE.examples.example_stabilization
+Linear Mini IR:
 
-This produces:
+    python -m ENGINE.applications.mini_ir_demo
 
--   Stabilization results\
--   Fixpoints\
--   Lattice properties\
--   Distributivity status
+Branching Mini IR (join conflict):
+
+    python -m ENGINE.applications.mini_ir_branch_demo
+
+Stabilization example:
+
+    python -m ENGINE.examples.example_stabilization
 
 ------------------------------------------------------------------------
 
-## 6. Design Philosophy
+## 6. Quality Status
+
+-   76 tests passing
+-   Strict carrier enforcement
+-   Deterministic IN/OUT semantics
+-   `mypy --strict` clean
+-   Finite scope intentionally enforced
+
+------------------------------------------------------------------------
+
+## 7. Design Philosophy
 
 The engine is:
 
--   Finite\
--   Deterministic\
--   Algebraically validated\
--   Explicit in structure\
+-   Finite
+-   Deterministic
+-   Algebraically validated
+-   Explicit in structure
+-   Type-safe
 -   Extension-oriented
 
 It is not a simulation engine.
 
-It is a structural execution layer for regime modeling.
+It is a structural execution and finite abstract interpretation layer.
 
 ------------------------------------------------------------------------
 
-## 7. Development Roadmap
+## 8. Known Constraints (Intentional)
 
-Next planned extensions:
-
-1.  Regime Operator (Δ)\
-2.  Frame Projection Layer (F)\
-3.  Fixpoint-Lattice construction\
-4.  Multi-regime example\
-5.  Test suite formalization
+-   Finite structures only
+-   No widening/narrowing operators yet
+-   No infinite lattices
+-   No performance scaling layer
+-   No visualization export
 
 ------------------------------------------------------------------------
 
-End of NEXAH Engine v0.2
+## 9. Development Roadmap
+
+Phase A --- Finite Algebra Core ✔
+
+Phase B --- Application Stabilization\
+- Convert Mini IR demos into regression tests\
+- CI integration (pytest + mypy gate)\
+- Coverage threshold enforcement\
+- API freeze candidate review
+
+Phase C --- Extended Analysis Layer\
+- Widening / narrowing operators\
+- Guarded branch modeling\
+- Loop analysis examples\
+- Transition graph export\
+- Visualization layer
+
+------------------------------------------------------------------------
+
+End of NEXAH Engine v0.9
