@@ -5,20 +5,24 @@ from ENGINE.core.lattice import LatticeOps
 
 from ENGINE.applications.constant_lattice import (
     ConstVal,
-    build_const_lattice,
+    State,
+    build_state_lattice,
 )
 
 
 def main():
     # -------------------------------------------------
-    # Lattice
+    # Variables
     # -------------------------------------------------
 
-    lattice = build_const_lattice({1, 2})
+    variables = {"x", "y", "z"}
+    constants = {1, 2}
+
+    lattice = build_state_lattice(variables, constants)
     lat = LatticeOps(lattice)
 
     # -------------------------------------------------
-    # Control Flow Graph
+    # CFG
     # -------------------------------------------------
 
     nodes = {1, 2, 3}
@@ -28,28 +32,32 @@ def main():
     # Initial state
     # -------------------------------------------------
 
-    bottom = ConstVal.bottom()
+    bottom_atomic = ConstVal.bottom()
+    bottom_state = State({v: bottom_atomic for v in variables})
 
-    initial = {
-        1: bottom,
-        2: bottom,
-        3: bottom,
-    }
+    initial = {n: bottom_state for n in nodes}
 
     # -------------------------------------------------
-    # Transfer function
+    # Transfer functions
     # -------------------------------------------------
 
-    def transfer(node: int, val: ConstVal) -> ConstVal:
+    def transfer(node: int, state: State) -> State:
+        new_vals = dict(state.values)
+
         if node == 1:
-            return ConstVal.const(1)
+            new_vals["x"] = ConstVal.const(1)
+
         if node == 2:
-            return val
+            new_vals["y"] = state.values["x"]
+
         if node == 3:
-            if not val.is_top and not val.is_bottom:
-                return ConstVal.const(val.value + 1)
-            return ConstVal.top()
-        return ConstVal.top()
+            x_val = state.values["y"]
+            if not x_val.is_top and not x_val.is_bottom:
+                new_vals["z"] = ConstVal.const(x_val.value + 1)
+            else:
+                new_vals["z"] = ConstVal.top()
+
+        return State(new_vals)
 
     # -------------------------------------------------
     # Solve
@@ -64,8 +72,8 @@ def main():
     )
 
     print("\nConstant Propagation Result:")
-    for n, v in sorted(result.values.items()):
-        print(f"Node {n}: {v}")
+    for n in sorted(result.values):
+        print(f"Node {n}: {result.values[n]}")
 
 
 if __name__ == "__main__":
