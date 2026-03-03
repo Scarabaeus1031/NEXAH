@@ -17,7 +17,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Callable, Dict, Generic, Iterable, List, Tuple, TypeVar
-from collections import deque
 from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
@@ -78,11 +77,6 @@ def solve_worklist(
 
     For each edge u -> v:
         new_v = join(old_v, transfer(v, old_u))
-
-    - value_poset: lattice carrier for values
-    - initial: initial state (must provide each node)
-    - transfer: node-local transformer
-    - strict: require value_poset to be a lattice
     """
 
     nodes_list: List[N] = list(nodes)
@@ -122,90 +116,7 @@ def solve_worklist(
     values: Dict[N, V] = dict(initial)
 
     # -----------------------------------------------------
-    # Worklist algorithm (FIFO via deque)
-    # -----------------------------------------------------
-
-    worklist = deque(nodes_list)
-    pops = 0
-    iters = 0
-
-    while worklist:
-        pops += 1
-
-        if pops > max_pops:
-            raise RuntimeError(
-                f"Worklist exceeded max_pops={max_pops}. "
-                "Possible non-termination or exploding state space."
-            )
-
-        u = worklist.popleft()
-        iters += 1
-
-        u_val = values[u]
-
-        for v in succ[u]:
-            cand = transfer(v, u_val)
-
-            # Validate transfer result BEFORE lattice ops
-            _require_in_carrier(cand, carrier, where="transfer(...)")
-
-            new_v = lat.join(values[v], cand)
-
-            if new_v != values[v]:
-                values[v] = new_v
-                if v not in worklist:
-                    worklist.append(v)
-
-    return WorklistResult(values=values, iterations=iters, pops=pops)    """
-    Least fixpoint solver.
-
-    For each edge u -> v:
-        new_v = join(old_v, transfer(v, old_u))
-
-    - value_poset: lattice carrier for values
-    - initial: initial state (must provide each node)
-    - transfer: node-local transformer
-    - strict: require value_poset to be a lattice
-    """
-
-    nodes_list: List[N] = list(nodes)
-    node_set = set(nodes_list)
-
-    # -----------------------------------------------------
-    # Build successor map
-    # -----------------------------------------------------
-
-    succ: Dict[N, List[N]] = {n: [] for n in node_set}
-
-    for u, v in edges:
-        if u not in node_set or v not in node_set:
-            raise ValueError("Edges refer to nodes not in `nodes`.")
-        succ[u].append(v)
-
-    # -----------------------------------------------------
-    # Lattice validation
-    # -----------------------------------------------------
-
-    lat = LatticeOps(value_poset)
-
-    if strict and not lat.is_lattice():
-        raise ValueError("value_poset must be a lattice (strict=True).")
-
-    # -----------------------------------------------------
-    # Validate initial mapping
-    # -----------------------------------------------------
-
-    carrier = value_poset.elements
-
-    for n in node_set:
-        if n not in initial:
-            raise ValueError(f"Missing initial value for node {n!r}.")
-        _require_in_carrier(initial[n], carrier, where=f"initial[{n!r}]")
-
-    values: Dict[N, V] = dict(initial)
-
-    # -----------------------------------------------------
-    # Worklist algorithm
+    # Worklist algorithm (stable FIFO list version)
     # -----------------------------------------------------
 
     worklist: List[N] = list(nodes_list)
@@ -218,10 +129,10 @@ def solve_worklist(
         if pops > max_pops:
             raise RuntimeError(
                 f"Worklist exceeded max_pops={max_pops}. "
-                "Possible non-termination or exploding state space."
+                "Possible non-termination."
             )
 
-        u = worklist.pop(0)  # FIFO
+        u = worklist.pop(0)
         iters += 1
 
         u_val = values[u]
@@ -229,7 +140,6 @@ def solve_worklist(
         for v in succ[u]:
             cand = transfer(v, u_val)
 
-            # Validate transfer result BEFORE lattice ops
             _require_in_carrier(cand, carrier, where="transfer(...)")
 
             new_v = lat.join(values[v], cand)
