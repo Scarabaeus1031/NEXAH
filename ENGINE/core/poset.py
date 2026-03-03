@@ -130,8 +130,6 @@ class FinitePoset(Generic[T]):
             return next(iter(maxs))
         return None
 
-from typing import Iterable, Set
-
     # -------------------------------------------------
     # Bounds
     # -------------------------------------------------
