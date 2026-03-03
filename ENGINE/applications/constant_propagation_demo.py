@@ -42,22 +42,20 @@ def main():
     # -------------------------------------------------
 
     def transfer(node: int, state: State) -> State:
-        new_vals = dict(state.values)
 
-        if node == 1:
-            new_vals["x"] = ConstVal.const(1)
+    if node == 1:
+        return state.with_update("x", ConstVal.const(1))
 
-        if node == 2:
-            new_vals["y"] = state.values["x"]
+    if node == 2:
+        return state.with_update("y", state.get("x"))
 
-        if node == 3:
-            x_val = state.values["y"]
-            if not x_val.is_top and not x_val.is_bottom:
-                new_vals["z"] = ConstVal.const(x_val.value + 1)
-            else:
-                new_vals["z"] = ConstVal.top()
+    if node == 3:
+        y_val = state.get("y")
+        if not y_val.is_top and not y_val.is_bottom:
+            return state.with_update("z", ConstVal.const(y_val.value + 1))
+        return state.with_update("z", ConstVal.top())
 
-        return State(new_vals)
+    return state
 
     # -------------------------------------------------
     # Solve
