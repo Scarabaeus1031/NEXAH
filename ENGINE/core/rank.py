@@ -1,15 +1,11 @@
 """
 NEXAH Engine – Rank / Height utilities for finite posets
-
-Provides:
-- rank_map(): longest-chain rank from minimal elements (height)
-- height(): maximal rank value (None if empty)
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, Generic, Optional, TypeVar
+from typing import Dict, Generic, TypeVar
 from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
@@ -22,13 +18,8 @@ class RankStructure(Generic[T]):
     poset: FinitePoset[T]
 
     def rank_map(self) -> Dict[T, int]:
-        # Empty carrier → empty rank map
-        if not self.poset.elements:
-            return {}
-
         elems = list(self.poset.elements)
 
-        # Compute strict predecessors for each element (y < x)
         preds: Dict[T, list[T]] = {}
         for x in elems:
             px: list[T] = []
@@ -52,8 +43,15 @@ class RankStructure(Generic[T]):
 
         return {x: r(x) for x in elems}
 
-    def height(self) -> Optional[int]:
+    def height(self, x: T) -> int:
+        if x not in self.poset.elements:
+            raise ValueError(f"{x} not in poset")
+
+        rm = self.rank_map()
+        return rm[x]
+
+    def total_height(self) -> int:
         rm = self.rank_map()
         if not rm:
-            return None
+            raise ValueError("Empty poset")
         return max(rm.values())
