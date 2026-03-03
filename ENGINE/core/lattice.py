@@ -10,10 +10,15 @@ T = TypeVar("T")
 class LatticeOps(Generic[T]):
     """
     Finite lattice utilities over a FinitePoset.
+    Lean version with join/meet caching.
     """
 
     def __init__(self, poset: FinitePoset[T]) -> None:
         self.poset = poset
+
+        # --- Lean performance caches ---
+        self._join_cache: dict[tuple[T, T], T] = {}
+        self._meet_cache: dict[tuple[T, T], T] = {}
 
     # -------------------------------------------------
     # Bounds
@@ -26,22 +31,40 @@ class LatticeOps(Generic[T]):
         return self.poset.lower_bounds(subset)
 
     # -------------------------------------------------
-    # Join / Meet
+    # Join / Meet (with caching)
     # -------------------------------------------------
 
     def join(self, a: T, b: T) -> T:
+        key = (a, b)
+
+        if key in self._join_cache:
+            return self._join_cache[key]
+
         ubs = self.upper_bounds([a, b])
         mins = self._minimal(ubs)
+
         if len(mins) != 1:
             raise ValueError("Join not unique.")
-        return next(iter(mins))
+
+        result = next(iter(mins))
+        self._join_cache[key] = result
+        return result
 
     def meet(self, a: T, b: T) -> T:
+        key = (a, b)
+
+        if key in self._meet_cache:
+            return self._meet_cache[key]
+
         lbs = self.lower_bounds([a, b])
         maxs = self._maximal(lbs)
+
         if len(maxs) != 1:
             raise ValueError("Meet not unique.")
-        return next(iter(maxs))
+
+        result = next(iter(maxs))
+        self._meet_cache[key] = result
+        return result
 
     # -------------------------------------------------
     # Structure Checks
