@@ -59,7 +59,7 @@ def gamma(x: str) -> str:
 def main():
 
     poset = build_poset()
-    closure = ClosureOperator(poset=poset, operator=gamma)
+    closure = ClosureOperator(poset, gamma)
 
     print("\n=== NEXAH Engine – Stabilization Example ===\n")
 
