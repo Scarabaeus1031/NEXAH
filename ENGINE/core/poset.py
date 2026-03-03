@@ -1,81 +1,77 @@
-"""
-NEXAH Engine – Core Layer
-Finite Partially Ordered Set (Poset) Implementation
-"""
+from __future__ import annotations
 
-from typing import Iterable, Callable, Set
+from typing import TypeVar, Generic, Callable, Set, Iterable
+
+T = TypeVar("T")
 
 
-class FinitePoset:
-    """
-    Represents a finite partially ordered set (Q, <=).
+class FinitePoset(Generic[T]):
 
-    The order relation is given as a binary predicate.
-    """
-
-    def __init__(self, elements: Iterable, leq: Callable):
-        self.elements: Set = set(elements)
-        self.leq = leq
-
+    def __init__(
+        self,
+        elements: Iterable[T],
+        leq: Callable[[T, T], bool],
+    ) -> None:
+        self.elements: Set[T] = set(elements)
+        self.leq: Callable[[T, T], bool] = leq
         self._validate_partial_order()
 
-    # -----------------------------------------------------
-    # Order Validation
-    # -----------------------------------------------------
+    # -------------------------
+    # Public API
+    # -------------------------
 
-    def _validate_partial_order(self):
+    def is_leq(self, x: T, y: T) -> bool:
+        return self.leq(x, y)
+
+    def minimal_elements(self) -> Set[T]:
+        return {
+            x for x in self.elements
+            if not any(
+                self.is_leq(y, x) and y != x
+                for y in self.elements
+            )
+        }
+
+    def maximal_elements(self) -> Set[T]:
+        return {
+            x for x in self.elements
+            if not any(
+                self.is_leq(x, y) and y != x
+                for y in self.elements
+            )
+        }
+
+    # -------------------------
+    # Validation
+    # -------------------------
+
+    def _validate_partial_order(self) -> None:
         self._check_reflexive()
         self._check_antisymmetric()
         self._check_transitive()
 
-    def _check_reflexive(self):
+    def _check_reflexive(self) -> None:
         for x in self.elements:
-            if not self.leq(x, x):
+            if not self.is_leq(x, x):
                 raise ValueError("Relation is not reflexive.")
 
-    def _check_antisymmetric(self):
+    def _check_antisymmetric(self) -> None:
         for x in self.elements:
             for y in self.elements:
-                if self.leq(x, y) and self.leq(y, x) and x != y:
+                if (
+                    self.is_leq(x, y)
+                    and self.is_leq(y, x)
+                    and x != y
+                ):
                     raise ValueError("Relation is not antisymmetric.")
 
-    def _check_transitive(self):
+    def _check_transitive(self) -> None:
         for x in self.elements:
             for y in self.elements:
                 for z in self.elements:
-                    if self.leq(x, y) and self.leq(y, z) and not self.leq(x, z):
+                    if (
+                        self.is_leq(x, y)
+                        and self.is_leq(y, z)
+                        and not self.is_leq(x, z)
+                    ):
                         raise ValueError("Relation is not transitive.")
-
-    # -----------------------------------------------------
-    # Order Queries
-    # -----------------------------------------------------
-
-    def is_leq(self, x, y) -> bool:
-        return self.leq(x, y)
-
-    def minimal_elements(self) -> Set:
-        return {
-            x for x in self.elements
-            if not any(self.leq(y, x) and y != x for y in self.elements)
-        }
-
-    def maximal_elements(self) -> Set:
-        return {
-            x for x in self.elements
-            if not any(self.leq(x, y) and y != x for y in self.elements)
-        }
-
-    # -----------------------------------------------------
-    # Closure Iteration (generic)
-    # -----------------------------------------------------
-
-    def iterate_until_fixpoint(self, f: Callable, start):
-        """
-        Iteratively applies a function until stabilization.
-        """
-        current = start
-        while True:
-            next_val = f(current)
-            if next_val == current:
-                return current
-            current = next_val
