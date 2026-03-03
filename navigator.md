@@ -12,7 +12,7 @@ It defines the current implementation state, conceptual architecture, quality st
 - Closure operators (Γ) and general monotone operators are supported and validated where applicable.
 - Fixpoints are computable via direct iteration and via classic worklist propagation (dataflow-style).
 - Induced fixpoint structures (poset + lattice checks) are available without completeness assumptions.
-- Current state: implementation-first, finite + explicit, test-driven hardening underway.
+- Current state: finite algebra stabilized, implementation-first, explicit validation enforced.
 - Next milestones: visualization (Hasse), operator duals (interior), and the Dynamic Layer (Δ, F).
 
 ---
