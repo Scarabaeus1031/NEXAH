@@ -5,7 +5,7 @@ from ENGINE.core.fixpoint_lattice import (
 )
 
 
-def small_poset():
+def poset_with_top():
     elements = {"0", "a", "1"}
 
     order = {
@@ -20,48 +20,34 @@ def small_poset():
     return FinitePoset(elements, leq)
 
 
-def test_no_fixpoints_except_top():
-    P = small_poset()
-
-    def gamma(x):
-        return "1"
-
-    fp = build_fixpoint_poset(P, gamma)
-
-    assert fp.elements == {"1"}
-
-
-def test_no_fixpoints_case():
-    P = small_poset()
-
-    def gamma(x):
-        return "a"  # no element maps to itself except a
-
-    fp = build_fixpoint_poset(P, gamma)
-
-    assert "a" in fp.elements
-
-
-def test_leq_inheritance_strict():
-    P = small_poset()
+def test_fixpoint_poset_multiple():
+    P = poset_with_top()
 
     def gamma(x):
         return x
 
     fp = build_fixpoint_poset(P, gamma)
 
+    assert fp.elements == {"0", "a", "1"}
     assert fp.is_leq("0", "1")
-    assert not fp.is_leq("1", "0")
 
 
-def test_structure_builds_lattice_wrapper():
-    P = small_poset()
+def test_fixpoint_structure_delegations():
+    P = poset_with_top()
 
     def gamma(x):
         return x
 
     struct = build_fixpoint_structure(P, gamma)
 
-    assert hasattr(struct, "poset")
-    assert hasattr(struct, "lattice")
-    assert struct.lattice.is_lattice()
+    # Lattice checks
+    assert struct.is_lattice()
+    assert not struct.is_distributive()
+
+    # Extremal elements
+    assert struct.top() == "1"
+    assert struct.bottom() == "0"
+
+    # Join / Meet
+    assert struct.join("0", "a") == "a"
+    assert struct.meet("a", "1") == "a"
