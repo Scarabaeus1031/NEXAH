@@ -6,17 +6,23 @@ from ENGINE.core.lattice import LatticeOps
 
 def nondistributive_poset():
     """
-    Classic M3 diamond lattice (non-distributive).
+    True M3 lattice (5 elements, non-distributive).
     """
 
-    elements = {"0", "a", "b", "1"}
+    elements = {"0", "a", "b", "c", "1"}
 
-    # Explicit relation table for clarity & correctness
     order = {
-        ("0", "0"), ("a", "a"), ("b", "b"), ("1", "1"),
-        ("0", "a"), ("0", "b"),
-        ("a", "1"), ("b", "1"),
-        ("0", "1"),
+        # reflexive
+        ("0","0"), ("a","a"), ("b","b"), ("c","c"), ("1","1"),
+
+        # bottom relations
+        ("0","a"), ("0","b"), ("0","c"),
+
+        # top relations
+        ("a","1"), ("b","1"), ("c","1"),
+
+        # transitive
+        ("0","1"),
     }
 
     def leq(x, y):
@@ -29,10 +35,7 @@ def test_join_and_meet():
     P = nondistributive_poset()
     L = LatticeOps(P)
 
-    # join(a, b) = 1
     assert L.join("a", "b") == "1"
-
-    # meet(a, b) = 0
     assert L.meet("a", "b") == "0"
 
 
@@ -58,5 +61,4 @@ def test_is_distributive_false():
     P = nondistributive_poset()
     L = LatticeOps(P)
 
-    # M3 diamond is NOT distributive
     assert not L.is_distributive()
