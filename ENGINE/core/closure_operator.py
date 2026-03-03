@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Callable, TypeVar, Generic, Set
+from typing import Callable, Generic, Set, TypeVar
 
 from ENGINE.core.poset import FinitePoset
+from ENGINE.core.fixpoint_lattice import build_fixpoint_poset
+from ENGINE.core.lattice import LatticeOps
 
 T = TypeVar("T")
 
@@ -19,7 +21,9 @@ class ClosureOperator(Generic[T]):
         self._validate_monotone()
         self._validate_idempotent()
 
-    # -----------------
+    # -------------------------------------------------
+    # Public API
+    # -------------------------------------------------
 
     def apply(self, x: T) -> T:
         return self.gamma(x)
@@ -28,22 +32,25 @@ class ClosureOperator(Generic[T]):
         return {x for x in self.poset.elements if self.apply(x) == x}
 
     def stabilize(self, x: T) -> T:
-        seen: Set[T] = set()
-        cur = x
+        return self.poset.iterate_until_fixpoint(self.gamma, x)
 
-        while True:
-            if cur in seen:
-                raise RuntimeError("Closure did not converge.")
-            seen.add(cur)
+    def fixpoint_lattice(self, strict: bool = False):
+        """
+        Return induced fixpoint poset.
+        If strict=True, require it to form a lattice.
+        """
+        fp_poset = build_fixpoint_poset(self.poset, self.gamma)
 
-            nxt = self.apply(cur)
-            if nxt == cur:
-                return cur
-            cur = nxt
+        if strict:
+            lat = LatticeOps(fp_poset)
+            if not lat.is_lattice():
+                raise ValueError("Fixpoint structure is not a lattice.")
 
-    # -----------------
+        return fp_poset
+
+    # -------------------------------------------------
     # Validation
-    # -----------------
+    # -------------------------------------------------
 
     def _validate_returns_in_carrier(self) -> None:
         for x in self.poset.elements:
