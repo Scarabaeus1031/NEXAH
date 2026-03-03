@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: NEXAH Engine
+message: "If you use this project, please cite it as below."
+type: software
+authors:
+  - family-names: Hofmann
+    given-names: Thomas
+year: 2026
+license: Apache-2.0
+repository-code: https://github.com/Scarabaeus1031/NEXAH
