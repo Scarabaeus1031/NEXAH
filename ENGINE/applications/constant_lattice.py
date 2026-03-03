@@ -1,33 +1,40 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import FrozenSet, Optional, Set, Tuple
+from typing import FrozenSet, Iterable, Optional, Set, Tuple
 
 from ENGINE.core.poset import FinitePoset
-from ENGINE.core.lattice import LatticeOps
 
 
-# ---------------------------------------------------------
-# Atomic constant lattice element
-# ---------------------------------------------------------
+# =========================================================
+# Atomic lattice element: ⊥, Const(n), ⊤
+# =========================================================
 
 @dataclass(frozen=True)
 class ConstVal:
-    value: Optional[int]
+    """
+    Atomic constant-propagation lattice element.
+
+    ⊥  = bottom (no information)
+    Const(n)
+    ⊤  = top (conflict / unknown)
+    """
+
+    value: Optional[int] = None
     is_top: bool = False
     is_bottom: bool = False
 
     @staticmethod
-    def bottom() -> ConstVal:
+    def bottom() -> "ConstVal":
         return ConstVal(value=None, is_bottom=True)
 
     @staticmethod
-    def top() -> ConstVal:
+    def top() -> "ConstVal":
         return ConstVal(value=None, is_top=True)
 
     @staticmethod
-    def const(n: int) -> ConstVal:
-        return ConstVal(value=n)
+    def const(n: int) -> "ConstVal":
+        return ConstVal(value=n, is_top=False, is_bottom=False)
 
     def __str__(self) -> str:
         if self.is_bottom:
@@ -37,15 +44,22 @@ class ConstVal:
         return str(self.value)
 
     def __repr__(self) -> str:
-        return self.__str__()
+        return str(self)
 
 
 def build_atomic_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
+    """
+    Carrier = {⊥, ⊤} ∪ {Const(c) | c in constants}
+
+    Order:
+      ⊥ ≤ x for all x
+      x ≤ ⊤ for all x
+      Const(a) ≤ Const(b) iff a == b
+    """
     bottom = ConstVal.bottom()
     top = ConstVal.top()
-
     const_elems = {ConstVal.const(c) for c in constants}
-    elements = {bottom, top} | const_elems
+    elements: Set[ConstVal] = {bottom, top} | const_elems
 
     def leq(a: ConstVal, b: ConstVal) -> bool:
         if a == b:
@@ -54,19 +68,25 @@ def build_atomic_lattice(constants: Set[int]) -> FinitePoset[ConstVal]:
             return True
         if b.is_top:
             return True
-        if not a.is_top and not b.is_top and not a.is_bottom and not b.is_bottom:
-            return a.value == b.value
+        # Distinct constants are incomparable
         return False
 
     return FinitePoset(elements, leq)
 
 
-# ---------------------------------------------------------
-# State lattice (hashable)
-# ---------------------------------------------------------
+# =========================================================
+# State lattice: product of atomic lattices (hashable!)
+# =========================================================
 
 @dataclass(frozen=True)
 class State:
+    """
+    Hashable store: a frozenset of (var, ConstVal).
+
+    IMPORTANT: values must be a FrozenSet[Tuple[str, ConstVal]]
+    so State can live in FinitePoset.elements (a set).
+    """
+
     values: FrozenSet[Tuple[str, ConstVal]]
 
     def get(self, key: str) -> ConstVal:
@@ -75,29 +95,32 @@ class State:
                 return v
         raise KeyError(key)
 
-    def with_update(self, key: str, value: ConstVal) -> State:
-        new_items = dict(self.values)
-        new_items[key] = value
-        return State(frozenset(new_items.items()))
+    def with_update(self, key: str, value: ConstVal) -> "State":
+        d = dict(self.values)
+        d[key] = value
+        return State(frozenset(d.items()))
 
     def __repr__(self) -> str:
-        return str(dict(self.values))
+        # Pretty output
+        return str({k: v for k, v in sorted(self.values)})
 
 
-def build_state_lattice(
-    variables: Set[str],
-    constants: Set[int],
-) -> FinitePoset[State]:
+def build_state_lattice(variables: Set[str], constants: Set[int]) -> FinitePoset[State]:
+    """
+    Finite product lattice over variables:
+      State = Π_{v in variables} Atomic
 
+    Order is pointwise:
+      s ≤ t  iff  for all var: s[var] ≤ t[var]  (in atomic lattice)
+
+    Carrier is finite:
+      |Atomic|^(|variables|)
+    """
     atomic = build_atomic_lattice(constants)
-    atomic_ops = LatticeOps(atomic)
-
     atomic_elements = list(atomic.elements)
-    vars_list = sorted(list(variables))
+    vars_list = sorted(variables)
 
-    def generate_states(idx=0, current=None):
-        if current is None:
-            current = {}
+    def generate_states(idx: int, current: dict[str, ConstVal]) -> Iterable[State]:
         if idx == len(vars_list):
             yield State(frozenset(current.items()))
             return
@@ -106,11 +129,11 @@ def build_state_lattice(
             current[var] = val
             yield from generate_states(idx + 1, current)
 
-    elements = set(generate_states())
+    elements: Set[State] = set(generate_states(0, {}))
 
     def leq(a: State, b: State) -> bool:
-        for v in vars_list:
-            if not atomic.is_leq(a.get(v), b.get(v)):
+        for var in vars_list:
+            if not atomic.is_leq(a.get(var), b.get(var)):
                 return False
         return True
 
