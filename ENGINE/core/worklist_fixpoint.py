@@ -16,7 +16,7 @@ We assume:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Callable, Dict, Hashable, Iterable, List, Optional, Set, Tuple
+from typing import Any, Callable, Dict, Hashable, Iterable, List, Tuple
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
@@ -44,19 +44,23 @@ def solve_worklist(
     max_pops: int = 100_000,
 ) -> WorklistResult:
     """
-    Least fixpoint solver:
+    Least fixpoint solver.
 
-    For each edge u->v:
+    For each edge u -> v:
         new_v = join(old_v, transfer(v, old_u))
 
-    - value_poset: the lattice carrier for values
+    - value_poset: lattice carrier for values
     - initial: initial state (must provide each node)
-    - transfer: node-local transformer (often monotone)
+    - transfer: node-local transformer
     - strict: require value_poset to be a lattice
     """
 
     nodes_list = list(nodes)
     node_set = set(nodes_list)
+
+    # -----------------------------------------------------
+    # Build successor map
+    # -----------------------------------------------------
 
     succ: Dict[Node, List[Node]] = {n: [] for n in node_set}
     for u, v in edges:
@@ -64,23 +68,33 @@ def solve_worklist(
             raise ValueError("Edges refer to nodes not in `nodes`.")
         succ[u].append(v)
 
-    # Lattice for values
+    # -----------------------------------------------------
+    # Lattice validation
+    # -----------------------------------------------------
+
     lat = LatticeOps(value_poset)
+
     if strict and not lat.is_lattice():
         raise ValueError("value_poset must be a lattice (strict=True).")
 
+    # -----------------------------------------------------
     # Validate initial mapping
+    # -----------------------------------------------------
+
     for n in node_set:
         if n not in initial:
             raise ValueError(f"Missing initial value for node {n!r}.")
         if initial[n] not in value_poset.elements:
             raise ValueError(
-                f"Initial value for {n!r} not in value_poset.elements: {initial[n]!r}"
+                f"Initial value for {n!r} not in lattice carrier: {initial[n]!r}"
             )
 
     values: Dict[Node, Value] = dict(initial)
 
-    # Worklist (classic queue)
+    # -----------------------------------------------------
+    # Worklist algorithm
+    # -----------------------------------------------------
+
     worklist: List[Node] = list(nodes_list)
     pops = 0
     iters = 0
@@ -90,7 +104,7 @@ def solve_worklist(
         if pops > max_pops:
             raise RuntimeError(
                 f"Worklist exceeded max_pops={max_pops}. "
-                "Likely non-terminating or exploding due to bad lattice/transfer."
+                "Possible non-termination or exploding state space."
             )
 
         u = worklist.pop(0)
@@ -100,6 +114,8 @@ def solve_worklist(
 
         for v in succ[u]:
             cand = transfer(v, u_val)
+
+            # 🔥 Critical: validate BEFORE lattice operations
             if cand not in value_poset.elements:
                 raise ValueError(
                     f"transfer produced value not in lattice carrier: {cand!r}"
@@ -109,8 +125,11 @@ def solve_worklist(
 
             if new_v != values[v]:
                 values[v] = new_v
-                # v needs reprocessing because it changed
                 if v not in worklist:
                     worklist.append(v)
 
-    return WorklistResult(values=values, iterations=iters, pops=pops)
+    return WorklistResult(
+        values=values,
+        iterations=iters,
+        pops=pops,
+    )
