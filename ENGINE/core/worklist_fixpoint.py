@@ -115,6 +115,53 @@ def solve_worklist(
         for v in succ[u]:
             cand = transfer(v, u_val)
 
+            # -------------------------------------------------
+            # SAFE VALIDATION (hash-safe)
+            # -------------------------------------------------
+
+            try:
+                is_member = cand in value_poset.elements
+            except TypeError:
+                raise ValueError(
+                    f"transfer produced non-hashable value: {cand!r}"
+                )
+
+            if not is_member:
+                raise ValueError(
+                    f"transfer produced value not in lattice carrier: {cand!r}"
+                )
+
+            # -------------------------------------------------
+            # Lattice join
+            # -------------------------------------------------
+
+            new_v = lat.join(values[v], cand)
+
+            if new_v != values[v]:
+                values[v] = new_v
+                if v not in worklist:
+                    worklist.append(v)
+
+    return WorklistResult(
+        values=values,
+        iterations=iters,
+        pops=pops,
+    )    while worklist:
+        pops += 1
+        if pops > max_pops:
+            raise RuntimeError(
+                f"Worklist exceeded max_pops={max_pops}. "
+                "Possible non-termination or exploding state space."
+            )
+
+        u = worklist.pop(0)
+        iters += 1
+
+        u_val = values[u]
+
+        for v in succ[u]:
+            cand = transfer(v, u_val)
+
             # 🔥 Critical: validate BEFORE lattice operations
             if cand not in value_poset.elements:
                 raise ValueError(
