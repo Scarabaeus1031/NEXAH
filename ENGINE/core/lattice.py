@@ -23,20 +23,7 @@ class LatticeOps:
     # Internal helpers
     # -------------------------------------------------
 
-    def _safe_contains(self, x: Any) -> bool:
-        """
-        Safe membership test for poset.elements (a set).
-        Returns False if x is unhashable.
-        """
-        try:
-            return x in self.poset.elements
-        except TypeError:
-            return False
-
     def _require_in_carrier(self, x: Any, ctx: str = "value") -> None:
-        """
-        Raise ValueError if x is not a valid carrier element (incl. unhashable).
-        """
         try:
             if x not in self.poset.elements:
                 raise ValueError(f"{ctx} not in poset carrier: {x!r}")
@@ -48,10 +35,6 @@ class LatticeOps:
     # -------------------------------------------------
 
     def upper_bounds(self, subset: Iterable[Any]) -> Set[Any]:
-        """
-        Returns {u in P | for all x in subset: x ≤ u}.
-        Requires subset elements to be in the carrier.
-        """
         S: List[Any] = list(subset)
         if not S:
             raise ValueError("upper_bounds() needs a non-empty subset.")
@@ -65,10 +48,6 @@ class LatticeOps:
         }
 
     def lower_bounds(self, subset: Iterable[Any]) -> Set[Any]:
-        """
-        Returns {l in P | for all x in subset: l ≤ x}.
-        Requires subset elements to be in the carrier.
-        """
         S: List[Any] = list(subset)
         if not S:
             raise ValueError("lower_bounds() needs a non-empty subset.")
@@ -82,7 +61,7 @@ class LatticeOps:
         }
 
     # -------------------------------------------------
-    # Extremal elements in subset
+    # Extremal elements
     # -------------------------------------------------
 
     def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
@@ -104,7 +83,6 @@ class LatticeOps:
     # -------------------------------------------------
 
     def join(self, a: Any, b: Any) -> Any:
-        # Guard early: avoid {a,b} crash if unhashable
         self._require_in_carrier(a, ctx="join arg a")
         self._require_in_carrier(b, ctx="join arg b")
 
@@ -118,7 +96,6 @@ class LatticeOps:
         return next(iter(mins))
 
     def meet(self, a: Any, b: Any) -> Any:
-        # Guard early: avoid {a,b} crash if unhashable
         self._require_in_carrier(a, ctx="meet arg a")
         self._require_in_carrier(b, ctx="meet arg b")
 
@@ -147,16 +124,10 @@ class LatticeOps:
         return True
 
     # -------------------------------------------------
-    # Full Distributivity Check
+    # Distributivity
     # -------------------------------------------------
 
     def is_distributive(self) -> bool:
-        """
-        Full distributivity requires BOTH:
-
-        1) a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
-        2) a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)
-        """
         elems = list(self.poset.elements)
 
         for a in elems:
@@ -164,12 +135,18 @@ class LatticeOps:
                 for c in elems:
                     try:
                         left1 = self.meet(a, self.join(b, c))
-                        right1 = self.join(self.meet(a, b), self.meet(a, c))
+                        right1 = self.join(
+                            self.meet(a, b),
+                            self.meet(a, c)
+                        )
                         if left1 != right1:
                             return False
 
                         left2 = self.join(a, self.meet(b, c))
-                        right2 = self.meet(self.join(a, b), self.join(a, c))
+                        right2 = self.meet(
+                            self.join(a, b),
+                            self.join(a, c)
+                        )
                         if left2 != right2:
                             return False
 
