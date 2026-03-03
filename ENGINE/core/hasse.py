@@ -6,33 +6,38 @@ Extracts cover relations.
 
 from __future__ import annotations
 
-from typing import Set, Tuple, Any
+from typing import Generic, Set, Tuple, TypeVar
+from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
 
+T = TypeVar("T", bound=Hashable)
 
-class HasseDiagram:
-    def __init__(self, poset: FinitePoset):
-        self.poset = poset
 
-    def covers(self) -> Set[Tuple[Any, Any]]:
-        result = set()
+class HasseDiagram(Generic[T]):
+    def __init__(self, poset: FinitePoset[T]) -> None:
+        self.poset: FinitePoset[T] = poset
 
-        for a in self.poset.elements:
-            for b in self.poset.elements:
+    def covers(self) -> Set[Tuple[T, T]]:
+        result: Set[Tuple[T, T]] = set()
+
+        elems = list(self.poset.elements)
+
+        for a in elems:
+            for b in elems:
                 if a == b:
                     continue
 
                 if not self.poset.is_leq(a, b):
                     continue
 
-                # Check strict
+                # Strict: a < b
                 if self.poset.is_leq(b, a):
                     continue
 
-                # Check minimality: no c with a < c < b
+                # Minimality: no c with a < c < b
                 is_cover = True
-                for c in self.poset.elements:
+                for c in elems:
                     if c == a or c == b:
                         continue
 
