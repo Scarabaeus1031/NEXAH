@@ -16,25 +16,35 @@ We assume:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Callable, Dict, Iterable, List, Tuple, TypeVar
+from typing import Callable, Dict, Generic, Iterable, List, Tuple, TypeVar
 from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
 
 
-N = TypeVar("N", bound=Hashable)   # node type
-V = TypeVar("V", bound=Hashable)   # lattice value type
+# ---------------------------------------------------------
+# Type variables
+# ---------------------------------------------------------
 
-Transfer = Callable[[N, V], V]
+N = TypeVar("N", bound=Hashable)  # node type
+V = TypeVar("V", bound=Hashable)  # lattice value type
 
+
+# ---------------------------------------------------------
+# Result container
+# ---------------------------------------------------------
 
 @dataclass(frozen=True)
-class WorklistResult:
+class WorklistResult(Generic[N, V]):
     values: Dict[N, V]
     iterations: int
     pops: int
 
+
+# ---------------------------------------------------------
+# Internal helper
+# ---------------------------------------------------------
 
 def _require_in_carrier(value: V, carrier: Iterable[V], *, where: str) -> None:
     """
@@ -49,15 +59,19 @@ def _require_in_carrier(value: V, carrier: Iterable[V], *, where: str) -> None:
     raise ValueError(f"{where}: value not in lattice carrier: {value!r}")
 
 
+# ---------------------------------------------------------
+# Main solver
+# ---------------------------------------------------------
+
 def solve_worklist(
     nodes: Iterable[N],
     edges: Iterable[Tuple[N, N]],
     value_poset: FinitePoset[V],
     initial: Dict[N, V],
-    transfer: Transfer[N, V],
+    transfer: Callable[[N, V], V],
     strict: bool = True,
     max_pops: int = 100_000,
-) -> WorklistResult:
+) -> WorklistResult[N, V]:
     """
     Least fixpoint solver.
 
@@ -76,7 +90,9 @@ def solve_worklist(
     # -----------------------------------------------------
     # Build successor map
     # -----------------------------------------------------
+
     succ: Dict[N, List[N]] = {n: [] for n in node_set}
+
     for u, v in edges:
         if u not in node_set or v not in node_set:
             raise ValueError("Edges refer to nodes not in `nodes`.")
@@ -85,14 +101,18 @@ def solve_worklist(
     # -----------------------------------------------------
     # Lattice validation
     # -----------------------------------------------------
+
     lat = LatticeOps(value_poset)
+
     if strict and not lat.is_lattice():
         raise ValueError("value_poset must be a lattice (strict=True).")
 
     # -----------------------------------------------------
-    # Validate initial mapping (strict carrier membership)
+    # Validate initial mapping
     # -----------------------------------------------------
+
     carrier = value_poset.elements
+
     for n in node_set:
         if n not in initial:
             raise ValueError(f"Missing initial value for node {n!r}.")
@@ -103,12 +123,14 @@ def solve_worklist(
     # -----------------------------------------------------
     # Worklist algorithm
     # -----------------------------------------------------
+
     worklist: List[N] = list(nodes_list)
     pops = 0
     iters = 0
 
     while worklist:
         pops += 1
+
         if pops > max_pops:
             raise RuntimeError(
                 f"Worklist exceeded max_pops={max_pops}. "
