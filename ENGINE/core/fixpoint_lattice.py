@@ -15,7 +15,6 @@ from dataclasses import dataclass
 from typing import Any, Callable, Set
 
 from ENGINE.core.poset import FinitePoset
-from ENGINE.core.lattice import LatticeOps
 
 
 @dataclass(frozen=True)
@@ -24,25 +23,40 @@ class FixpointStructure:
     Container for the induced structure on fixpoints of a closure operator.
     """
     poset: FinitePoset
-    lattice: LatticeOps
+    lattice: Any  # Avoid top-level LatticeOps import (prevents circular import)
 
 
-def build_fixpoint_poset(base_poset: FinitePoset, operator: Callable[[Any], Any]) -> FinitePoset:
+def build_fixpoint_poset(
+    base_poset: FinitePoset,
+    operator: Callable[[Any], Any],
+) -> FinitePoset:
     """
     Returns the induced poset on fixpoints Fix(Γ), with the inherited order ≤.
     """
-    fps: Set[Any] = {x for x in base_poset.elements if operator(x) == x}
+    fps: Set[Any] = {
+        x for x in base_poset.elements
+        if operator(x) == x
+    }
 
     def leq_fp(x: Any, y: Any) -> bool:
-        # inherited order
         return base_poset.is_leq(x, y)
 
     return FinitePoset(elements=fps, leq=leq_fp)
 
 
-def build_fixpoint_structure(base_poset: FinitePoset, operator: Callable[[Any], Any]) -> FixpointStructure:
+def build_fixpoint_structure(
+    base_poset: FinitePoset,
+    operator: Callable[[Any], Any],
+) -> FixpointStructure:
     """
     Convenience: returns FixpointStructure(poset, latticeOps).
     """
+    # LAZY IMPORT to avoid circular dependency
+    from ENGINE.core.lattice import LatticeOps
+
     fp_poset = build_fixpoint_poset(base_poset, operator)
-    return FixpointStructure(poset=fp_poset, lattice=LatticeOps(fp_poset))
+
+    return FixpointStructure(
+        poset=fp_poset,
+        lattice=LatticeOps(fp_poset),
+    )
