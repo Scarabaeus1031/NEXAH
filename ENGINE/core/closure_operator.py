@@ -4,9 +4,9 @@ NEXAH Engine – Closure Operator (Γ)
 Implements finite closure operators on a given FinitePoset.
 """
 
-from typing import Callable
-from .poset import FinitePoset
-from .lattice import LatticeOps
+from typing import Callable, Any, Set
+from ENGINE.core.poset import FinitePoset
+from ENGINE.core.lattice import LatticeOps
 
 
 class ClosureOperator:
@@ -19,14 +19,14 @@ class ClosureOperator:
         3. Idempotence
     """
 
-    def __init__(self, poset: FinitePoset, operator: Callable):
+    def __init__(self, poset: FinitePoset, operator: Callable[[Any], Any]):
         self.poset = poset
         self.operator = operator
 
         self._validate_closure_properties()
 
     # -----------------------------------------------------
-    # Core Properties
+    # Validation
     # -----------------------------------------------------
 
     def _validate_closure_properties(self):
@@ -40,7 +40,7 @@ class ClosureOperator:
                 if self.poset.is_leq(x, y):
                     if not self.poset.is_leq(
                         self.operator(x),
-                        self.operator(y)
+                        self.operator(y),
                     ):
                         raise ValueError("Closure operator is not monotone.")
 
@@ -55,18 +55,19 @@ class ClosureOperator:
                 raise ValueError("Closure operator is not idempotent.")
 
     # -----------------------------------------------------
-    # Application
+    # Basic Operations
     # -----------------------------------------------------
 
-    def apply(self, x):
+    def apply(self, x: Any) -> Any:
         return self.operator(x)
 
-    def fixpoints(self):
+    def fixpoints(self) -> Set[Any]:
         """
         Returns all fixpoints Γ(x) = x.
         """
         return {
-            x for x in self.poset.elements
+            x
+            for x in self.poset.elements
             if self.operator(x) == x
         }
 
@@ -76,26 +77,24 @@ class ClosureOperator:
 
     def fixpoint_poset(self) -> FinitePoset:
         """
-        Returns the induced sub-poset on Fix(Γ) = { x | Γ(x) = x }.
-        The order relation is inherited from the underlying poset.
+        Returns the induced FinitePoset on Fix(Γ)
+        with inherited order ≤.
         """
         fps = self.fixpoints()
 
-        if not fps:
-            raise ValueError("Closure operator has no fixpoints.")
-
-        def inherited_leq(x, y):
+        def inherited_leq(x: Any, y: Any) -> bool:
             return self.poset.is_leq(x, y)
 
         return FinitePoset(fps, inherited_leq)
 
     def fixpoint_lattice(self, strict: bool = True) -> LatticeOps:
         """
-        Returns lattice operations on the fixpoint set.
+        Returns LatticeOps on the fixpoint set.
 
         If strict=True (default), raises ValueError if the
         fixpoints do not form a lattice under the inherited order.
         """
+
         fp_poset = self.fixpoint_poset()
         ops = LatticeOps(fp_poset)
 
@@ -105,17 +104,3 @@ class ClosureOperator:
             )
 
         return ops
-    def fixpoint_poset(self):
-        """
-        Returns the induced FinitePoset on Fix(Γ) with inherited order ≤.
-        """
-        from ENGINE.core.fixpoint_lattice import build_fixpoint_poset
-        return build_fixpoint_poset(self.poset, self.operator)
-
-    def fixpoint_lattice(self):
-        """
-        Returns LatticeOps on the induced fixpoint poset.
-        (This does not claim it is always a lattice; you can test via .is_lattice().)
-        """
-        from ENGINE.core.lattice import LatticeOps
-        return LatticeOps(self.fixpoint_poset())
