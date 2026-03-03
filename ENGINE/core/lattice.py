@@ -15,20 +15,15 @@ from ENGINE.core.poset import FinitePoset
 class LatticeOps:
     """
     Utility wrapper: provides lattice operations for a given FinitePoset.
+
+    Note:
+    - We avoid converting arbitrary subsets into Python sets, because
+      lattice elements might be unhashable (e.g., set-like carriers).
+    - If your FinitePoset.elements is itself a Python set, those elements
+      are hashable by construction, but this keeps the API robust anyway.
     """
 
     poset: FinitePoset
-
-    # -------------------------------------------------
-    # Internal helpers
-    # -------------------------------------------------
-
-    def _require_in_carrier(self, x: Any, ctx: str = "value") -> None:
-        try:
-            if x not in self.poset.elements:
-                raise ValueError(f"{ctx} not in poset carrier: {x!r}")
-        except TypeError:
-            raise ValueError(f"{ctx} is unhashable and cannot be in poset carrier: {x!r}")
 
     # -------------------------------------------------
     # Bounds
@@ -38,10 +33,6 @@ class LatticeOps:
         S: List[Any] = list(subset)
         if not S:
             raise ValueError("upper_bounds() needs a non-empty subset.")
-
-        for x in S:
-            self._require_in_carrier(x, ctx="upper_bounds subset element")
-
         return {
             u for u in self.poset.elements
             if all(self.poset.is_leq(x, u) for x in S)
@@ -51,28 +42,24 @@ class LatticeOps:
         S: List[Any] = list(subset)
         if not S:
             raise ValueError("lower_bounds() needs a non-empty subset.")
-
-        for x in S:
-            self._require_in_carrier(x, ctx="lower_bounds subset element")
-
         return {
             l for l in self.poset.elements
             if all(self.poset.is_leq(l, x) for x in S)
         }
 
     # -------------------------------------------------
-    # Extremal elements
+    # Extremal elements in subset
     # -------------------------------------------------
 
     def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
-        A = set(subset)
+        A = list(subset)
         return {
             x for x in A
             if not any(self.poset.is_leq(y, x) and y != x for y in A)
         }
 
     def maximal_in(self, subset: Iterable[Any]) -> Set[Any]:
-        A = set(subset)
+        A = list(subset)
         return {
             x for x in A
             if not any(self.poset.is_leq(x, y) and y != x for y in A)
@@ -83,28 +70,20 @@ class LatticeOps:
     # -------------------------------------------------
 
     def join(self, a: Any, b: Any) -> Any:
-        self._require_in_carrier(a, ctx="join arg a")
-        self._require_in_carrier(b, ctx="join arg b")
-
         U = self.upper_bounds([a, b])
         mins = self.minimal_in(U)
-
         if len(mins) != 1:
             raise ValueError(
-                f"join({a!r},{b!r}) not unique / does not exist. Candidates={mins}"
+                f"join({a},{b}) not unique / does not exist. Candidates={mins}"
             )
         return next(iter(mins))
 
     def meet(self, a: Any, b: Any) -> Any:
-        self._require_in_carrier(a, ctx="meet arg a")
-        self._require_in_carrier(b, ctx="meet arg b")
-
         L = self.lower_bounds([a, b])
         maxs = self.maximal_in(L)
-
         if len(maxs) != 1:
             raise ValueError(
-                f"meet({a!r},{b!r}) not unique / does not exist. Candidates={maxs}"
+                f"meet({a},{b}) not unique / does not exist. Candidates={maxs}"
             )
         return next(iter(maxs))
 
@@ -124,10 +103,16 @@ class LatticeOps:
         return True
 
     # -------------------------------------------------
-    # Distributivity
+    # Full Distributivity Check
     # -------------------------------------------------
 
     def is_distributive(self) -> bool:
+        """
+        Full distributivity requires BOTH:
+
+        1) a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
+        2) a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)
+        """
         elems = list(self.poset.elements)
 
         for a in elems:
@@ -135,21 +120,14 @@ class LatticeOps:
                 for c in elems:
                     try:
                         left1 = self.meet(a, self.join(b, c))
-                        right1 = self.join(
-                            self.meet(a, b),
-                            self.meet(a, c)
-                        )
+                        right1 = self.join(self.meet(a, b), self.meet(a, c))
                         if left1 != right1:
                             return False
 
                         left2 = self.join(a, self.meet(b, c))
-                        right2 = self.meet(
-                            self.join(a, b),
-                            self.join(a, c)
-                        )
+                        right2 = self.meet(self.join(a, b), self.join(a, c))
                         if left2 != right2:
                             return False
-
                     except ValueError:
                         return False
 
