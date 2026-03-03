@@ -1,5 +1,5 @@
 # NEXAH Framework Navigator  
-Version 0.6 – Engine Core Stabilized + Worklist Fixpoints + Monotone Layer
+Version 0.7 – Algebra Completion + Structural Graph Layer
 
 This document provides a structural overview of the NEXAH repository.  
 It defines the current implementation state, conceptual architecture, quality status, and development roadmap.
@@ -8,27 +8,33 @@ It defines the current implementation state, conceptual architecture, quality st
 
 ## 0. Executive Summary
 
-- The ENGINE core implements finite order structures with validated operator dynamics.
-- Closure operators (Γ) and general monotone operators are supported and validated where applicable.
-- Fixpoints are computable via direct iteration and via classic worklist propagation (dataflow-style).
-- Induced fixpoint structures (poset + lattice checks) are available without completeness assumptions.
-- Current state: finite algebra stabilized, implementation-first, explicit validation enforced.
-- Next milestones: visualization (Hasse), operator duals (interior), and the Dynamic Layer (Δ, F).
+- The ENGINE core implements finite order structures with fully validated operator dynamics.
+- Closure (Γ) and Interior (Ι) operators form a dual stabilization pair.
+- Regime (Δ) and Frame (F) operators enable structural restriction and projection.
+- Fixpoints are computable via direct iteration and worklist propagation.
+- Rank/height analysis and Hasse cover extraction are implemented.
+- Current state: finite algebra structurally complete.
+- Next milestone: robustness hardening and dynamic composition formalization.
 
 ---
 
 ## 1. Repository Map
 
 ### ENGINE
-Executable algebraic core (finite, validated order-theory + fixpoints).
+Executable algebraic core (finite, validated order-theory + operator dynamics).
 
 Implements:
 - FinitePoset
-- LatticeOps (join/meet + lattice/distributivity checks)
-- ClosureOperator (Γ) with axiom validation
-- MonotoneOperator (general monotone maps; closure is a special case)
-- Fixpoint structures (induced poset/lattice)
-- Worklist fixpoint solver (finite propagation)
+- LatticeOps
+- ClosureOperator (Γ)
+- InteriorOperator (Ι)
+- MonotoneOperator
+- Fixpoint structures
+- Worklist fixpoint solver
+- RankStructure (height / rank)
+- HasseDiagram (cover extraction)
+- RegimeOperator (Δ)
+- FrameOperator (F)
 
 ---
 
@@ -38,46 +44,188 @@ Conceptual layer definitions:
 - ARCHY (stabilization logic)
 - NEXAH (navigation & transitions)
 
-Contains principles, operator taxonomy, stack definitions, and structural models.
-
 ---
 
 ### RESEARCH
-Worked examples and applied cases:
+Applied cases and dynamic interaction prototypes:
 - Stability detection
-- Basin partitioning
 - Regime shifts
-- Multi-regime interaction
+- Δ–F interaction scenarios
 - Prototype roadmap
-
----
-
-### NAVIGATOR
-Repository-level orientation:
-- Portal-style documentation
-- Visual maps
-- Structural roadmap
 
 ---
 
 ## 2. Current Implementation Status (ENGINE)
 
 ### 2.1 FinitePoset ✔
-- Validation: reflexive, antisymmetric, transitive
+- Reflexive, antisymmetric, transitive validation
 - Minimal / maximal element detection
-- Explicit order validation on construction
 
 ---
 
 ### 2.2 LatticeOps ✔
-- Upper / lower bounds
-- Join (least upper bound)
-- Meet (greatest lower bound)
+- Join / meet
 - Lattice detection
-- Top / Bottom detection
-- Distributivity check
-- Robustness note: lattice operations are intended to be safe under finite carriers and defensive validation.
+- Distributivity checks
+- Top / bottom detection
 
+---
+
+### 2.3 ClosureOperator Γ ✔
+Validated automatically:
+- Extensivity
+- Monotonicity
+- Idempotence
+- Stabilization
+- Fixpoint extraction
+
+---
+
+### 2.4 InteriorOperator Ι ✔
+Dual of closure:
+- Contractive
+- Monotone
+- Idempotent
+- Stabilization
+- Fixpoint extraction
+
+---
+
+### 2.5 MonotoneOperator ✔
+General monotone maps (not necessarily closure/interior).
+
+---
+
+### 2.6 Worklist Fixpoint Solver ✔
+Finite propagation layer with strict carrier validation.
+
+---
+
+### 2.7 Rank / Height ✔
+- `height(x)`
+- `rank(x)`
+- `max_height()`
+- Longest chain analysis
+
+---
+
+### 2.8 Hasse Diagram ✔
+- Minimal cover extraction
+- Structural graph representation
+
+---
+
+### 2.9 RegimeOperator Δ ✔
+- Induced sub-poset construction
+- Explicit empty-regime rejection
+- No lattice preservation guarantees
+
+---
+
+### 2.10 FrameOperator F ✔
+- Projection onto image
+- Induced poset construction
+- Reflexive, antisymmetric, transitive validation
+
+---
+
+## 3. Algebraic Layer Summary
+
+The ENGINE now supports:
+
+Structural layer:
+- Posets
+- Lattices
+- Cover graphs
+- Height analysis
+
+Stabilization layer:
+- Closure Γ
+- Interior Ι
+- Fixpoints
+
+Dynamic layer:
+- Regime Δ
+- Frame F
+- Δ ∘ F interaction tests
+- Worklist propagation
+
+This completes the finite structural algebra core.
+
+---
+
+## 4. Quality Status
+
+- 76 tests passing
+- Positive and negative path validation
+- Defensive carrier enforcement
+- Strict operator validation
+- Structural invariants verified
+
+ENGINE stability: high (finite scope).
+
+---
+
+## 5. Development Roadmap
+
+### Phase A — Algebra Completion ✔
+- [x] Closure
+- [x] Interior
+- [x] Monotone operators
+- [x] Fixpoint extraction
+- [x] Worklist propagation
+- [x] Regime operator Δ
+- [x] Frame operator F
+- [x] Rank / height
+- [x] Hasse diagram extraction
+
+---
+
+### Phase B — Engine Robustness (next focus)
+- [ ] Type-hint enforcement
+- [ ] Static analysis (mypy / lint gate)
+- [ ] CI integration
+- [ ] Coverage threshold enforcement
+- [ ] Micro-benchmark profiling
+
+---
+
+### Phase C — Dynamic Composition Layer
+- [ ] Formal Δ–Γ algebra
+- [ ] Γ–Ι interaction theory
+- [ ] Δ–F composition properties
+- [ ] Regime transition graphs
+- [ ] Visualization layer (graph export)
+
+---
+
+## 6. Known Gaps
+
+- No performance scaling (finite-only intentional)
+- No infinite lattice support
+- No probabilistic or weighted structures
+- No visualization export yet
+
+---
+
+## 7. Versioning Policy
+
+v0.x → Algebra evolving  
+v0.7 → Structural algebra complete (finite scope)  
+v1.0 → API frozen + CI stabilized  
+
+Current version: v0.7
+
+---
+
+## 8. Project Objective
+
+To construct a mathematically grounded, executable structural engine  
+for stabilization, regime restriction, projection, and navigable transitions  
+within finite complex systems.
+
+Current state: finite structural algebra complete.  
+Next: robustness hardening and formal dynamic composition theory.
 ---
 
 ### 2.3 ClosureOperator Γ ✔
