@@ -4,6 +4,7 @@ NEXAH Engine – Example 01: Stabilization via Closure Operator (Γ)
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.closure_operator import ClosureOperator
+from ENGINE.core.lattice import LatticeOps
 
 
 def main():
@@ -71,6 +72,23 @@ def main():
     print("\nFixpoints Γ(x)=x:")
     for x in sorted(fps):
         print(" ", x)
+
+    # ---------------------------------------------------------
+    # 4) Lattice structure
+    # ---------------------------------------------------------
+
+    lat = LatticeOps(poset)
+
+    print("\n--- Lattice Structure ---\n")
+    print("Is lattice:", lat.is_lattice())
+    print("Top element:", lat.top())
+    print("Bottom element:", lat.bottom())
+
+    print("\nJoin / Meet examples:")
+    print("  a ∨ b =", lat.join("a", "b"))
+    print("  a ∧ b =", lat.meet("a", "b"))
+    print("  a ∨ bottom =", lat.join("a", "bottom"))
+    print("  b ∧ top =", lat.meet("b", "top"))
 
     print("\nDone.\n")
 
