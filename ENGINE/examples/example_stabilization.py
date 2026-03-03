@@ -1,14 +1,9 @@
+from __future__ import annotations
+
 """
 NEXAH Engine – Example 01
 Stabilization via Closure Operator Γ
-Demonstrates:
-- FinitePoset
-- ClosureOperator
-- LatticeOps
-- Fixpoint-induced lattice
 """
-
-from __future__ import annotations
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.closure_operator import ClosureOperator
@@ -65,18 +60,12 @@ def main() -> None:
     print("\n=== NEXAH Engine – Stabilization Example ===\n")
     print("Elements:", sorted(poset.elements))
 
-    # -----------------------------------------------------
-    # Fixpoints
-    # -----------------------------------------------------
     fixpoints = closure.fixpoints()
 
     print("\nFixpoints Γ(x)=x:")
     for x in sorted(fixpoints):
         print("  ", x)
 
-    # -----------------------------------------------------
-    # Full lattice structure
-    # -----------------------------------------------------
     lat = LatticeOps(poset)
 
     print("\n--- Full Lattice ---")
@@ -86,49 +75,8 @@ def main() -> None:
     print("Is distributive:", lat.is_distributive())
 
     print("\nJoin / Meet:")
-    print("  a ∨ b =", lat.join("a", "b"))
-    print("  a ∧ b =", lat.meet("a", "b"))
-
-    # -----------------------------------------------------
-    # Fixpoint-induced lattice
-    # -----------------------------------------------------
-    fp_structure = closure.fixpoint_lattice(strict=False)
-
-    print("\n--- Fixpoint-Induced Structure ---")
-    print("Fixpoint elements:", sorted(fp_structure.poset.elements))
-    print("Is lattice:", fp_structure.is_lattice())
-
-    if fp_structure.is_lattice():
-        print("Top fixpoint:", fp_structure.top())
-        print("Bottom fixpoint:", fp_structure.bottom())
-        print("Distributive:", fp_structure.is_distributive())
-
-    print("\nDone.\n")
-
-
-if __name__ == "__main__":
-    main()    for x in sorted(fixpoints):
-        print("  ", x)
-
-    # -----------------------------------------------------
-    # Full lattice structure
-    # -----------------------------------------------------
-
-    lat = LatticeOps(poset)
-
-    print("\n--- Full Lattice ---")
-    print("Is lattice:", lat.is_lattice())
-    print("Top:", lat.top())
-    print("Bottom:", lat.bottom())
-    print("Is distributive:", lat.is_distributive())
-
-    print("\nJoin / Meet:")
-    print("  a ∨ b =", lat.join("a", "b"))
-    print("  a ∧ b =", lat.meet("a", "b"))
-
-    # -----------------------------------------------------
-    # Fixpoint-induced lattice
-    # -----------------------------------------------------
+    print("  a OR b =", lat.join("a", "b"))
+    print("  a AND b =", lat.meet("a", "b"))
 
     fp_structure = closure.fixpoint_lattice(strict=False)
 
