@@ -163,3 +163,10 @@ Current focus areas:
 ------------------------------------------------------------------------
 
 © NEXAH Framework
+
+## License
+
+Code: Apache License 2.0  
+Documentation & Research: CC BY 4.0  
+
+© 2026 Thomas Hofmann
