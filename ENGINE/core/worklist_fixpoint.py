@@ -1,16 +1,13 @@
 """
-NEXAH Engine – Worklist Fixpoint Solver (finite)
+NEXAH Engine – Worklist Fixpoint Solver (Forward Semantics)
 
-Computes least fixpoint over a directed graph using:
-- a join-semilattice (via LatticeOps)
-- transfer functions (monotone in typical use)
-- classic worklist propagation
+Forward dataflow semantics:
 
-Typical use: abstract interpretation / dataflow analysis.
+For each node u:
+    out_u = transfer(u, values[u])
 
-We assume:
-- finite set of nodes
-- finite lattice carrier (FinitePoset.elements must be hashable)
+For each edge u -> v:
+    values[v] = join(values[v], out_u)
 """
 
 from __future__ import annotations
@@ -23,17 +20,9 @@ from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
 
 
-# ---------------------------------------------------------
-# Type variables
-# ---------------------------------------------------------
+N = TypeVar("N", bound=Hashable)
+V = TypeVar("V", bound=Hashable)
 
-N = TypeVar("N", bound=Hashable)  # node type
-V = TypeVar("V", bound=Hashable)  # lattice value type
-
-
-# ---------------------------------------------------------
-# Result container
-# ---------------------------------------------------------
 
 @dataclass(frozen=True)
 class WorklistResult(Generic[N, V]):
@@ -42,26 +31,12 @@ class WorklistResult(Generic[N, V]):
     pops: int
 
 
-# ---------------------------------------------------------
-# Internal helper
-# ---------------------------------------------------------
-
 def _require_in_carrier(value: V, carrier: Iterable[V], *, where: str) -> None:
-    """
-    Strict carrier check:
-    - same type
-    - same value
-    - no equality-only matches across different types
-    """
     for e in carrier:
         if type(value) is type(e) and value == e:
             return
     raise ValueError(f"{where}: value not in lattice carrier: {value!r}")
 
-
-# ---------------------------------------------------------
-# Main solver
-# ---------------------------------------------------------
 
 def solve_worklist(
     nodes: Iterable[N],
@@ -72,39 +47,21 @@ def solve_worklist(
     strict: bool = True,
     max_pops: int = 100_000,
 ) -> WorklistResult[N, V]:
-    """
-    Least fixpoint solver.
-
-    For each edge u -> v:
-        new_v = join(old_v, transfer(v, old_u))
-    """
 
     nodes_list: List[N] = list(nodes)
     node_set = set(nodes_list)
 
-    # -----------------------------------------------------
-    # Build successor map
-    # -----------------------------------------------------
-
+    # Successor map
     succ: Dict[N, List[N]] = {n: [] for n in node_set}
-
     for u, v in edges:
         if u not in node_set or v not in node_set:
             raise ValueError("Edges refer to nodes not in `nodes`.")
         succ[u].append(v)
 
-    # -----------------------------------------------------
     # Lattice validation
-    # -----------------------------------------------------
-
     lat = LatticeOps(value_poset)
-
     if strict and not lat.is_lattice():
         raise ValueError("value_poset must be a lattice (strict=True).")
-
-    # -----------------------------------------------------
-    # Validate initial mapping
-    # -----------------------------------------------------
 
     carrier = value_poset.elements
 
@@ -115,34 +72,24 @@ def solve_worklist(
 
     values: Dict[N, V] = dict(initial)
 
-    # -----------------------------------------------------
-    # Worklist algorithm (stable FIFO list version)
-    # -----------------------------------------------------
-
     worklist: List[N] = list(nodes_list)
     pops = 0
     iters = 0
 
     while worklist:
         pops += 1
-
         if pops > max_pops:
-            raise RuntimeError(
-                f"Worklist exceeded max_pops={max_pops}. "
-                "Possible non-termination."
-            )
+            raise RuntimeError("Worklist exceeded max_pops.")
 
         u = worklist.pop(0)
         iters += 1
 
-        u_val = values[u]
+        # NEW: apply transfer at node u
+        out_u = transfer(u, values[u])
+        _require_in_carrier(out_u, carrier, where="transfer(...)")
 
         for v in succ[u]:
-            cand = transfer(v, u_val)
-
-            _require_in_carrier(cand, carrier, where="transfer(...)")
-
-            new_v = lat.join(values[v], cand)
+            new_v = lat.join(values[v], out_u)
 
             if new_v != values[v]:
                 values[v] = new_v
