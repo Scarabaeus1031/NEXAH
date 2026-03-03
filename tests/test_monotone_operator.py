@@ -81,3 +81,50 @@ def test_iteration_stabilizes():
     fx, traj = M.iterate_from("0")
     assert fx == "1"
     assert traj[-1] == "1"
+        # -----------------------------------------------------
+    # Tarski characterization (finite case)
+    # -----------------------------------------------------
+
+    def tarski_least_fixpoint(self) -> Any:
+        """
+        lfp(f) = meet of all prefixed points {x | f(x) ≤ x}
+        Requires the poset to be a lattice.
+        """
+        from ENGINE.core.lattice import LatticeOps
+
+        lat = LatticeOps(self.poset)
+
+        if not lat.is_lattice():
+            raise ValueError("Poset is not a lattice.")
+
+        pref = list(self.prefixed_points())
+        if not pref:
+            raise ValueError("No prefixed points exist.")
+
+        result = pref[0]
+        for x in pref[1:]:
+            result = lat.meet(result, x)
+
+        return result
+
+    def tarski_greatest_fixpoint(self) -> Any:
+        """
+        gfp(f) = join of all postfixed points {x | x ≤ f(x)}
+        Requires the poset to be a lattice.
+        """
+        from ENGINE.core.lattice import LatticeOps
+
+        lat = LatticeOps(self.poset)
+
+        if not lat.is_lattice():
+            raise ValueError("Poset is not a lattice.")
+
+        post = list(self.postfixed_points())
+        if not post:
+            raise ValueError("No postfixed points exist.")
+
+        result = post[0]
+        for x in post[1:]:
+            result = lat.join(result, x)
+
+        return result
