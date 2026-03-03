@@ -13,9 +13,11 @@ NEXAH is a structured modeling framework designed to analyze and navigate comple
 
 The repository consists of:
 
-- A **formal conceptual framework**
 - A **finite executable algebra engine**
+- A **formal conceptual framework**
 - A **research and application layer**
+
+The system is implementation-first and mathematically grounded.
 
 ---
 
@@ -27,62 +29,57 @@ Location: `/ENGINE`
 
 Implements finite order-theoretic structures:
 
-- `poset.py` — Finite partially ordered sets  
-- `lattice.py` — Join/meet operations, lattice detection  
-- `closure_operator.py` — Closure operators (Γ)  
-- `monotone_operator.py` — General monotone operators  
-- `fixpoint_lattice.py` — Induced fixpoint structures  
-- `worklist_fixpoint.py` — Finite worklist fixpoint solver  
+- `poset.py` — Finite partially ordered sets (validated)
+- `lattice.py` — Join/meet operations, lattice detection, distributivity
+- `closure_operator.py` — Closure operators (Γ)
+- `monotone_operator.py` — General monotone operators
+- `fixpoint_lattice.py` — Induced fixpoint structures
+- `worklist_fixpoint.py` — Finite worklist-based fixpoint propagation
 
-Validated via pytest test suite (`/tests`).
+Validated via pytest test suite located in `/tests`.
+
+The ENGINE provides the executable backbone of the framework.
 
 ---
 
 ## FRAMEWORK (Conceptual Layer)
 
-Defines the three core structural layers:
+Defines the three structural layers:
 
-- **META** — Relational structure  
-- **ARCHY** — Stability regimes  
-- **NEXAH** — Orientation & frames  
+- **META** — Relational order
+- **ARCHY** — Stabilization logic
+- **NEXAH** — Orientation and transition modeling
 
-Includes axioms, operators, and system stack definitions.
+Includes axioms, operator definitions, system stack documentation, and structural principles.
 
 ---
 
 ## RESEARCH
 
 Applied cases and exploratory models:
+
 - Stability detection
 - Regime shifts
 - Transition modeling
-- Prototype development roadmap
-
----
-
-## Conceptual Architecture
-
-NEXAH is structured across three interdependent layers:
-
-- **META** — Structural order  
-- **ARCHY** — Stabilization dynamics  
-- **NEXAH** — Navigable orientation  
-
-The ENGINE provides the finite executable backbone of these concepts.
+- Multi-regime interaction
+- Prototype roadmap
 
 ---
 
 # 🧪 Implementation Status
 
-Current state:
+Current state (v0.6):
 
 - Finite algebra engine operational
 - Closure and monotone operators validated
 - Fixpoint structures supported
 - Worklist propagation implemented
-- Test suite active (pytest)
+- Defensive validation enforced (carrier safety)
+- Test suite active (pytest, positive + negative cases)
 
-The system remains finite and implementation-first.
+The system is finite by design and explicitly validated.
+
+Public API boundaries are not yet frozen (pre-1.0).
 
 ---
 
@@ -90,12 +87,12 @@ The system remains finite and implementation-first.
 
 Core formal documents:
 
-- [Axioms](./axioms.md)  
-- [Theorems](./theorems.md)  
-- [Minimal Logic](./minimal_logic.md)  
-- [Relational Model](./relational_model.md)  
-- [Frame Operator](./frame_operator.md)  
-- [Regime Operator](./regime_operator.md)  
+- [Axioms](./axioms.md)
+- [Theorems](./theorems.md)
+- [Minimal Logic](./minimal_logic.md)
+- [Relational Model](./relational_model.md)
+- [Frame Operator](./frame_operator.md)
+- [Regime Operator](./regime_operator.md)
 
 ---
 
@@ -107,7 +104,7 @@ Core formal documents:
 
 # 🧠 Research & Applications
 
-- [Research Papers](./research_papers.md)  
+- [Research Papers](./research_papers.md)
 - [Application Cases](./application_cases.md)
 
 ---
@@ -116,107 +113,28 @@ Core formal documents:
 
 Current focus:
 
-- Robustness hardening (typing, API stabilization)
-- Visualization layer (Hasse diagrams)
+- Algebra completion (Hasse diagrams, rank/height)
+- Robustness hardening (typing, API stabilization, CI)
+- Visualization layer
 - Regime (Δ) and Frame (F) operators
 - Applied case demonstrations
 
 ---
 
-# License
+# 📦 Versioning
 
-Code: Apache License 2.0  
-Documentation & Research: CC BY 4.0  
+The ENGINE follows semantic versioning principles:
 
-© 2026 Thomas Hofmann
-------------------------------------------------------------------------
+- v0.x → Algebra under construction, API not frozen
+- v1.0 → Core algebra stable, API frozen
+- v1.x → Backward-compatible extensions
+- v2.x → Structural changes
 
-## Research & Applications
-
--   → [Research Papers](./research_papers.md)\
--   → [Application Cases](./application_cases.md)
-
-------------------------------------------------------------------------
-
-## Current Status
-
-NEXAH is currently in a documentation-driven, pre-implementation phase.
-
--   The theoretical architecture (META--ARCHY--NEXAH) is defined.
--   Core operators are specified.
--   Formal axioms and theorems are documented.
--   Research material exists and is being structured.
--   No executable reference implementation exists yet.
-
-The repository currently serves as a formal structural base for future
-applied modules and demonstrable case studies.
-
-------------------------------------------------------------------------
-
-© NEXAH Framework
-- **Start Applying**: Begin using the NEXAH framework in your own projects and experiments.
-- **Contribute**: If you have insights or improvements, feel free to fork the repository and contribute to the ongoing development!
+Current version: **v0.6 — Core algebra stabilized + monotone/worklist layer operational**
 
 ---
 
-This repository represents the **NEXAH framework's** ongoing development, offering a flexible, adaptable model for structural modeling and relational navigation.
-
-------------------------------------------------------------------------
-
-## 🏗️ System Stack Overview
-
-→ [System Stack Overview](./system_stack.md)
-
-------------------------------------------------------------------------
-
-## 📚 Explore the Core Layers
-
--   → [META Layer](./META/readme.md)\
--   → [ARCHY Layer](./ARCHY/readme.md)\
--   → [NEXAH Layer](./NEXAH/readme.md)
-
-------------------------------------------------------------------------
-
-## 📖 Theoretical Foundations
-
-Core formal documents:
-
--   → [Axioms](./axioms.md)\
--   → [Theorems](./theorems.md)\
--   → [Minimal Logic](./minimal_logic.md)\
--   → [Relational Model](./relational_model.md)\
--   → [Frame Operator](./frame_operator.md)\
--   → [Regime Operator](./regime_operator.md)
-
-------------------------------------------------------------------------
-
-## 🧩 Modules
-
-→ [Modules Overview](./FRAMEWORK/modules.md)
-
-------------------------------------------------------------------------
-
-## 🧠 Research
-
--   → [Research Papers](./research_papers.md)\
--   → [Application Cases](./application_cases.md)
-
-------------------------------------------------------------------------
-
-## 🚀 Development Status
-
-Current focus areas:
-
--   Formalization of research material\
--   Integration of modules\
--   Preparation for practical applications\
--   Transition from conceptual framework to demonstrable case studies
-
-------------------------------------------------------------------------
-
-© NEXAH Framework
-
-## License
+# License
 
 Code: Apache License 2.0  
 Documentation & Research: CC BY 4.0  
