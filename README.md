@@ -9,48 +9,65 @@ a modular system for structural modeling, stabilization, and relational navigati
 
 ## Overview
 
-NEXAH is a structured modeling framework designed to analyze and navigate complex systems through explicit relational order, stabilization logic, and transition modeling.
+NEXAH is a mathematically grounded structural framework for modeling:
 
-The repository consists of:
+- Relational order
+- Stabilization regimes
+- Orientation and transition systems
 
-- A **finite executable algebra engine**
-- A **formal conceptual framework**
-- A **research and application layer**
+The framework consists of:
 
-The system is implementation-first and mathematically grounded.
+1. A validated **finite executable algebra engine**
+2. A formal **conceptual system stack (META / ARCHY / NEXAH)**
+3. A research and application layer
+
+The system is implementation-first and structurally verified.
 
 ---
 
 # 🏗 Repository Structure
 
-## ENGINE (Executable Core)
+## ENGINE (Executable Core) — Stable (v1.0.0)
 
 Location: `/ENGINE`
 
-Implements finite order-theoretic structures:
+Implements finite order-theoretic structures and abstract interpretation:
 
+### Structural Algebra
 - `poset.py` — Finite partially ordered sets (validated)
-- `lattice.py` — Join/meet operations, lattice detection, distributivity
+- `lattice.py` — Join/meet, lattice checks, distributivity
+- `hasse.py` — Cover extraction
+- `rank.py` — Height analysis
+
+### Stabilization Layer
 - `closure_operator.py` — Closure operators (Γ)
-- `monotone_operator.py` — General monotone operators
+- `interior_operator.py` — Interior operators (Ι)
+- `monotone_operator.py` — Monotone maps + fixpoints
 - `fixpoint_lattice.py` — Induced fixpoint structures
-- `worklist_fixpoint.py` — Finite worklist-based fixpoint propagation
 
-Validated via pytest test suite located in `/tests`.
+### Dynamic Layer
+- `worklist_fixpoint.py` — Explicit IN/OUT worklist solver
+- `regime_operator.py` — Regime restriction (Δ)
+- `frame_operator.py` — Frame projection (F)
 
-The ENGINE provides the executable backbone of the framework.
+### Application Layer
+- `constant_lattice.py` — Finite constant propagation lattice
+- `mini_ir.py` — Typed Mini IR
+- Linear and branching CFG analysis demos
+
+Validated via pytest test suite (`/tests`).
 
 ---
 
-## FRAMEWORK (Conceptual Layer)
+## FRAMEWORK (Conceptual Stack)
 
 Defines the three structural layers:
 
-- **META** — Relational order
-- **ARCHY** — Stabilization logic
+- **META** — Relational order (formalized in ENGINE)
+- **ARCHY** — Stabilization regimes (formalized in ENGINE)
 - **NEXAH** — Orientation and transition modeling
 
-Includes axioms, operator definitions, system stack documentation, and structural principles.
+The ENGINE operationalizes large parts of META and ARCHY.
 
 ---
 
@@ -68,24 +85,21 @@ Applied cases and exploratory models:
 
 # 🧪 Implementation Status
 
-Current state (v0.6):
+Current release: **v1.0.0**
 
-- Finite algebra engine operational
-- Closure and monotone operators validated
-- Fixpoint structures supported
-- Worklist propagation implemented
-- Defensive validation enforced (carrier safety)
-- Test suite active (pytest, positive + negative cases)
+- Finite algebra engine stable
+- Monotone + fixpoint structures validated
+- IN/OUT worklist solver operational
+- Constant propagation application layer implemented
+- 95% test coverage (core modules)
+- `mypy --strict` clean
+- API frozen for finite scope
 
-The system is finite by design and explicitly validated.
-
-Public API boundaries are not yet frozen (pre-1.0).
+The system is finite by design and structurally verified.
 
 ---
 
 # 📚 Theoretical Foundations
-
-Core formal documents:
 
 - [Axioms](./axioms.md)
 - [Theorems](./theorems.md)
@@ -109,28 +123,15 @@ Core formal documents:
 
 ---
 
-# 🚀 Development Direction
-
-Current focus:
-
-- Algebra completion (Hasse diagrams, rank/height)
-- Robustness hardening (typing, API stabilization, CI)
-- Visualization layer
-- Regime (Δ) and Frame (F) operators
-- Applied case demonstrations
-
----
-
 # 📦 Versioning
 
-The ENGINE follows semantic versioning principles:
+The ENGINE follows semantic versioning:
 
-- v0.x → Algebra under construction, API not frozen
-- v1.0 → Core algebra stable, API frozen
+- v1.0 → Finite core stable, API frozen
 - v1.x → Backward-compatible extensions
 - v2.x → Structural changes
 
-Current version: **v0.6 — Core algebra stabilized + monotone/worklist layer operational**
+Current version: **v1.0.0**
 
 ---
 
