@@ -16,7 +16,7 @@ class LatticeOps(Generic[T]):
     def __init__(self, poset: FinitePoset[T]) -> None:
         self.poset = poset
 
-        # --- Lean performance caches ---
+        # Lean performance caches
         self._join_cache: dict[tuple[T, T], T] = {}
         self._meet_cache: dict[tuple[T, T], T] = {}
 
