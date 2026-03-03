@@ -226,4 +226,42 @@ within complex systems.
 
 ---
 
+---
+
+## ENGINE (Executable Core)
+Location: `/ENGINE`
+
+Core modules:
+
+- `poset.py`  
+  Finite partially ordered sets (validation, iteration, extremal elements)
+
+- `lattice.py`  
+  Join/meet operations, lattice checks, distributivity, top/bottom detection
+
+- `closure_operator.py`  
+  Closure operators (Γ): monotone, extensive, idempotent
+
+- `monotone_operator.py`  
+  General monotone maps + fixpoint utilities (finite case)
+
+- `fixpoint_lattice.py`  
+  Induced fixpoint structures (Fix(Γ) as poset/lattice)
+
+- `worklist_fixpoint.py`  
+  Finite worklist-based fixpoint propagation (dataflow-style)
+
+---
+
+### Test Coverage
+
+Located in `/tests`:
+
+- `test_poset_*.py`
+- `test_lattice_*.py`
+- `test_closure_*.py`
+- `test_monotone_operator.py`
+- `test_worklist_fixpoint.py`
+- `test_fixpoint_*.py`
+
 End of Navigator v0.6
