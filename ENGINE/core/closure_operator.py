@@ -105,3 +105,17 @@ class ClosureOperator:
             )
 
         return ops
+    def fixpoint_poset(self):
+        """
+        Returns the induced FinitePoset on Fix(Γ) with inherited order ≤.
+        """
+        from ENGINE.core.fixpoint_lattice import build_fixpoint_poset
+        return build_fixpoint_poset(self.poset, self.operator)
+
+    def fixpoint_lattice(self):
+        """
+        Returns LatticeOps on the induced fixpoint poset.
+        (This does not claim it is always a lattice; you can test via .is_lattice().)
+        """
+        from ENGINE.core.lattice import LatticeOps
+        return LatticeOps(self.fixpoint_poset())
