@@ -1,23 +1,11 @@
 """
 NEXAH Engine – Mini IR (minimal intermediate representation)
-
-Goal:
-- Provide a tiny, typed instruction set for finite abstract interpretation demos.
-- Works with the Worklist solver by supplying per-node transfer functions.
-
-Design:
-- Instructions operate on a State lattice (see ENGINE/applications/constant_lattice.py).
-- Unknown / conflicts are handled by the lattice (⊥ / ⊤ / Const(n)).
-
-Notes:
-- We keep this IR deliberately small and explicit.
-- Add new ops later (mul, compare, branches, guards) without touching the ENGINE core.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Iterable, List, Protocol, Sequence
+from typing import Callable, List, Protocol
 
 from ENGINE.applications.constant_lattice import ConstVal, State
 
@@ -64,11 +52,6 @@ class AssignVar:
 class AddConst:
     """
     dst := src + k
-
-    Semantics in the ConstVal lattice:
-    - ⊥ + k = ⊥ (no info stays no info)
-    - ⊤ + k = ⊤ (unknown stays unknown)
-    - Const(n) + k = Const(n+k)
     """
     dst: str
     src: str
@@ -76,11 +59,13 @@ class AddConst:
 
     def apply(self, st: State) -> State:
         v = st.get(self.src)
+
         if v.is_bottom:
             return st.with_update(self.dst, ConstVal.bottom())
+
         if v.is_top:
             return st.with_update(self.dst, ConstVal.top())
-        # Const(n)
+
         assert v.value is not None
         return st.with_update(self.dst, ConstVal.const(v.value + self.k))
 
@@ -92,16 +77,6 @@ class AddConst:
 
 @dataclass(frozen=True)
 class Program:
-    """
-    A program is a sequence of instructions indexed by node id (1..n).
-
-    Convention (simple linear CFG):
-        edges = {(i, i+1) for i in 1..n-1}
-
-    For non-linear CFGs (branches/joins), build edges separately
-    and still index into `instrs` by node id.
-    """
-
     instrs: List[Instr]
 
     def __post_init__(self) -> None:
@@ -113,7 +88,9 @@ class Program:
 
     def instr_at(self, node: int) -> Instr:
         if node < 1 or node > len(self.instrs):
-            raise IndexError(f"Invalid node id {node}; valid range is 1..{len(self.instrs)}")
+            raise IndexError(
+                f"Invalid node id {node}; valid range is 1..{len(self.instrs)}"
+            )
         return self.instrs[node - 1]
 
     def linear_edges(self) -> set[tuple[int, int]]:
@@ -121,15 +98,16 @@ class Program:
         return {(i, i + 1) for i in range(1, n)}
 
 
-def make_transfer(program: Program):
-    """
-    Build a transfer function compatible with solve_worklist:
+# ---------------------------------------------------------
+# Transfer builder
+# ---------------------------------------------------------
 
-        transfer(node, in_state) -> out_state
 
-    We interpret node as the *destination node* (i.e. execute instr at `node`)
-    which matches the usual forward dataflow style when edges flow into node.
+def make_transfer(program: Program) -> Callable[[int, State], State]:
     """
+    Build a transfer function compatible with solve_worklist.
+    """
+
     def transfer(node: int, st: State) -> State:
         instr = program.instr_at(node)
         return instr.apply(st)
