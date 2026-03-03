@@ -4,8 +4,8 @@ from dataclasses import dataclass
 from typing import Callable, Generic, Set, TypeVar
 
 from ENGINE.core.poset import FinitePoset
-from ENGINE.core.fixpoint_lattice import build_fixpoint_poset
 from ENGINE.core.lattice import LatticeOps
+from ENGINE.core.fixpoint_lattice import FixpointLatticeStructure, build_fixpoint_poset
 
 T = TypeVar("T")
 
@@ -34,19 +34,19 @@ class ClosureOperator(Generic[T]):
     def stabilize(self, x: T) -> T:
         return self.poset.iterate_until_fixpoint(self.gamma, x)
 
-    def fixpoint_lattice(self, strict: bool = False):
+    def fixpoint_lattice(self, strict: bool = False) -> FixpointLatticeStructure[T]:
         """
-        Return induced fixpoint poset.
-        If strict=True, require it to form a lattice.
+        Return fixpoint structure wrapper with .poset and .lattice.
+
+        If strict=True, require Fix(Γ) to form a lattice.
         """
         fp_poset = build_fixpoint_poset(self.poset, self.gamma)
+        lat = LatticeOps(fp_poset)
 
-        if strict:
-            lat = LatticeOps(fp_poset)
-            if not lat.is_lattice():
-                raise ValueError("Fixpoint structure is not a lattice.")
+        if strict and not lat.is_lattice():
+            raise ValueError("Fixpoint structure is not a lattice.")
 
-        return fp_poset
+        return FixpointLatticeStructure(poset=fp_poset, lattice=lat)
 
     # -------------------------------------------------
     # Validation
