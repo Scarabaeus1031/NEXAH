@@ -71,70 +71,11 @@ class FinitePoset:
 
     def iterate_until_fixpoint(self, f: Callable, start):
         """
-        Iteratively applies a monotone function until stabilization.
+        Iteratively applies a function until stabilization.
         """
         current = start
         while True:
             next_val = f(current)
             if next_val == current:
                 return current
-            current = next_val        Raises ValueError if not unique / doesn't exist.
-        """
-        L = self.lower_bounds({a, b})
-        maxs = self.maximal_in(L)
-        if len(maxs) != 1:
-            raise ValueError(f"meet({a},{b}) not unique / does not exist. Candidates={maxs}")
-        return next(iter(maxs))
-
-    # -----------------------------
-    # Lattice checks
-    # -----------------------------
-
-    def is_lattice(self) -> bool:
-        """
-        True iff every pair has a unique join and meet.
-        """
-        elems = list(self.poset.elements)
-        for a in elems:
-            for b in elems:
-                try:
-                    _ = self.join(a, b)
-                    _ = self.meet(a, b)
-                except ValueError:
-                    return False
-        return True
-
-    # -----------------------------
-    # Distributivity
-    # -----------------------------
-
-    def is_distributive(self) -> bool:
-        """
-        Checks distributivity:
-        a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
-        for all triples (a, b, c).
-        """
-        elems = list(self.poset.elements)
-        for a in elems:
-            for b in elems:
-                for c in elems:
-                    try:
-                        left = self.meet(a, self.join(b, c))
-                        right = self.join(self.meet(a, b), self.meet(a, c))
-                        if left != right:
-                            return False
-                    except ValueError:
-                        return False
-        return True
-
-    # -----------------------------
-    # Extremal elements
-    # -----------------------------
-
-    def top(self) -> Optional[Any]:
-        mx = self.poset.maximal_elements()
-        return next(iter(mx)) if len(mx) == 1 else None
-
-    def bottom(self) -> Optional[Any]:
-        mn = self.poset.minimal_elements()
-        return next(iter(mn)) if len(mn) == 1 else None
+            current = next_val
