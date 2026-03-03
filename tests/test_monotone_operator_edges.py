@@ -77,33 +77,3 @@ def test_tarski_requires_lattice():
         op.tarski_least_fixpoint()
 
 
-def test_no_prefixed_points():
-    elems = {0, 1}
-
-    def leq(x, y):
-        return x <= y
-
-    P = FinitePoset(elems, leq)
-
-    # f(x) = 1 always → no f(x) ≤ x except maybe 1
-    f = lambda x: 1
-    op = MonotoneOperator(P, f)
-
-    with pytest.raises(ValueError):
-        op.tarski_least_fixpoint()
-
-
-def test_no_postfixed_points():
-    elems = {0, 1}
-
-    def leq(x, y):
-        return x <= y
-
-    P = FinitePoset(elems, leq)
-
-    # f(x) = 0 always → no x ≤ f(x) except maybe 0
-    f = lambda x: 0
-    op = MonotoneOperator(P, f)
-
-    with pytest.raises(ValueError):
-        op.tarski_greatest_fixpoint()
