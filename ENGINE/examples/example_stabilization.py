@@ -57,7 +57,9 @@ def main():
             if nxt == current:
                 return current
             current = nxt
-        raise RuntimeError(f"Did not stabilize within {max_steps} steps from {x}.")
+        raise RuntimeError(
+            f"Did not stabilize within {max_steps} steps from {x}."
+        )
 
     print("\n--- NEXAH Example: Stabilization (Γ) ---\n")
     print("Elements:", sorted(poset.elements))
@@ -74,12 +76,12 @@ def main():
         print(" ", x)
 
     # ---------------------------------------------------------
-    # 4) Lattice structure
+    # 4) Lattice structure (full poset)
     # ---------------------------------------------------------
 
     lat = LatticeOps(poset)
 
-    print("\n--- Lattice Structure ---\n")
+    print("\n--- Lattice Structure (Full Poset) ---\n")
     print("Is lattice:", lat.is_lattice())
     print("Top element:", lat.top())
     print("Bottom element:", lat.bottom())
@@ -91,7 +93,23 @@ def main():
     print("  b ∧ top =", lat.meet("b", "top"))
 
     print("Is distributive:", lat.is_distributive())
-    
+
+    # ---------------------------------------------------------
+    # 5) Fixpoint-induced structure
+    # ---------------------------------------------------------
+
+    print("\n--- Fixpoint Structure ---\n")
+
+    fp_lat = closure.fixpoint_lattice(strict=False)
+
+    print("Fixpoint elements:", sorted(fp_lat.poset.elements))
+    print("Is fixpoint-poset a lattice?:", fp_lat.is_lattice())
+
+    if fp_lat.is_lattice():
+        print("Top fixpoint:", fp_lat.top())
+        print("Bottom fixpoint:", fp_lat.bottom())
+        print("Is distributive (fixpoints)?:", fp_lat.is_distributive())
+
     print("\nDone.\n")
 
 
