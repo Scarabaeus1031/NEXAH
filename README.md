@@ -1,82 +1,134 @@
 # NEXAH Framework
 
-The official repository for **NEXAH framework** development --- a
-modular system for structural modeling and relational navigation.
+The official repository for the **NEXAH Framework** —  
+a modular system for structural modeling, stabilization, and relational navigation.
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
-------------------------------------------------------------------------
+---
 
-## Relational Modeling & Explicit Orientation
+## Overview
 
-NEXAH is designed as a structural modeling framework for navigating
-complex systems.
+NEXAH is a structured modeling framework designed to analyze and navigate complex systems through explicit relational order, stabilization logic, and transition modeling.
 
-It is structured across three interdependent layers contributing to:
+The repository consists of:
 
--   Organization\
--   Stability\
--   Orientation
+- A **formal conceptual framework**
+- A **finite executable algebra engine**
+- A **research and application layer**
 
-### Core Layers
+---
 
--   **META** --- Framework Structure (relational order)
--   **ARCHY** --- Stability Regimes (transitions between system states)
--   **NEXAH** --- Orientation & Frames (explicit navigability)
+# 🏗 Repository Structure
 
-![Explore Framework](./NAVIGATOR/visuals/Explore_Framework.png)
+## ENGINE (Executable Core)
 
-------------------------------------------------------------------------
+Location: `/ENGINE`
 
-## NEXAH in Practice
+Implements finite order-theoretic structures:
 
-NEXAH distinguishes three practical dimensions:
+- `poset.py` — Finite partially ordered sets  
+- `lattice.py` — Join/meet operations, lattice detection  
+- `closure_operator.py` — Closure operators (Γ)  
+- `monotone_operator.py` — General monotone operators  
+- `fixpoint_lattice.py` — Induced fixpoint structures  
+- `worklist_fixpoint.py` — Finite worklist fixpoint solver  
 
--   **Formal Core**\
-    Relational modeling and structural orientation.
+Validated via pytest test suite (`/tests`).
 
--   **Regime Theory**\
-    Thresholds and transitions in system states.
+---
 
--   **Documented Applications**\
-    Case studies demonstrating applied structural modeling.
+## FRAMEWORK (Conceptual Layer)
 
-![Practical
-Applications](./NAVIGATOR/visuals/Practical_Applications_Visual.png)
+Defines the three core structural layers:
 
-------------------------------------------------------------------------
+- **META** — Relational structure  
+- **ARCHY** — Stability regimes  
+- **NEXAH** — Orientation & frames  
 
-## System Stack Overview
+Includes axioms, operators, and system stack definitions.
 
-→ [System Stack Overview](./system_stack.md)
+---
 
-------------------------------------------------------------------------
+## RESEARCH
 
-## Explore the Core Layers
+Applied cases and exploratory models:
+- Stability detection
+- Regime shifts
+- Transition modeling
+- Prototype development roadmap
 
--   → [META Layer](./META/readme.md)\
--   → [ARCHY Layer](./ARCHY/readme.md)\
--   → [NEXAH Layer](./NEXAH/readme.md)
+---
 
-------------------------------------------------------------------------
+## Conceptual Architecture
 
-## Theoretical Foundations
+NEXAH is structured across three interdependent layers:
+
+- **META** — Structural order  
+- **ARCHY** — Stabilization dynamics  
+- **NEXAH** — Navigable orientation  
+
+The ENGINE provides the finite executable backbone of these concepts.
+
+---
+
+# 🧪 Implementation Status
+
+Current state:
+
+- Finite algebra engine operational
+- Closure and monotone operators validated
+- Fixpoint structures supported
+- Worklist propagation implemented
+- Test suite active (pytest)
+
+The system remains finite and implementation-first.
+
+---
+
+# 📚 Theoretical Foundations
 
 Core formal documents:
 
--   → [Axioms](./axioms.md)\
--   → [Theorems](./theorems.md)\
--   → [Minimal Logic](./minimal_logic.md)\
--   → [Relational Model](./relational_model.md)\
--   → [Frame Operator](./frame_operator.md)\
--   → [Regime Operator](./regime_operator.md)
+- [Axioms](./axioms.md)  
+- [Theorems](./theorems.md)  
+- [Minimal Logic](./minimal_logic.md)  
+- [Relational Model](./relational_model.md)  
+- [Frame Operator](./frame_operator.md)  
+- [Regime Operator](./regime_operator.md)  
 
-------------------------------------------------------------------------
+---
 
-## Modules
+# 🧩 Modules
 
 → [Modules Overview](./FRAMEWORK/modules.md)
 
+---
+
+# 🧠 Research & Applications
+
+- [Research Papers](./research_papers.md)  
+- [Application Cases](./application_cases.md)
+
+---
+
+# 🚀 Development Direction
+
+Current focus:
+
+- Robustness hardening (typing, API stabilization)
+- Visualization layer (Hasse diagrams)
+- Regime (Δ) and Frame (F) operators
+- Applied case demonstrations
+
+---
+
+# License
+
+Code: Apache License 2.0  
+Documentation & Research: CC BY 4.0  
+
+© 2026 Thomas Hofmann
 ------------------------------------------------------------------------
 
 ## Research & Applications
