@@ -1,85 +1,151 @@
 # NEXAH Engine – Core Layer
+Version 0.5 – Algebraic Execution Layer
 
-The core layer implements the structural primitives of the NEXAH Engine.
+The Core Layer implements the formal algebraic backbone of the NEXAH Engine.
 
-It provides a minimal, finite, deterministic execution model based on discrete order theory.
+It provides validated finite order structures, closure operators,
+and lattice utilities required for structural stabilization analysis.
 
 ![Core Operator Stack](./visuals/core_operator_stack_structure.png)
 
 ---
 
-## Scope
+# 1. Scope
 
-The core layer defines:
+The core layer currently implements:
 
 - Finite partially ordered sets
 - Closure operators (Γ)
-- Regime restriction operators (Δ)
-- Frame projection operators (F)
+- Lattice construction utilities
 - Fixpoint detection
 
-All operations remain strictly within finite discrete structures.
+All structures are finite and explicitly validated.
 
-No metric space.  
+No metric assumptions.  
 No topology.  
-No time parameterization.
+No continuous dynamics.
+
+The engine operates strictly on discrete order-theoretic foundations.
 
 ---
 
-## Modules
+# 2. Implemented Modules
 
-### poset.py
-Defines the `FinitePoset` class.
+## poset.py
 
-Implements:
+Defines `FinitePoset`.
 
-- Element storage
-- Order relation validation
-- Reflexivity check
-- Antisymmetry check
-- Transitivity check
-- Upper and lower set extraction
+Features:
 
----
-
-### closure.py
-Implements monotone closure operators.
-
-Defines stabilization through iterative application.
+- Reflexivity validation
+- Antisymmetry validation
+- Transitivity validation
+- Minimal / maximal element detection
+- Generic fixpoint iteration support
 
 ---
 
-### regime.py
-Defines constraint-based restriction operators.
+## closure_operator.py
 
-Implements admissible subset extraction.
+Defines `ClosureOperator`.
 
----
+Validates automatically:
 
-### frame.py
-Defines projection operators for ranking and selection.
+- Monotonicity
+- Extensivity
+- Idempotence
 
-Separates structure from interpretation.
+Provides:
 
----
-
-### fixpoint.py
-Implements deterministic fixpoint detection.
-
-Provides convergence verification.
+- Operator application
+- Fixpoint extraction
 
 ---
 
-## Design Principles
+## lattice.py
 
-The core layer is:
+Defines `LatticeOps`.
 
-- Minimal
-- Explicit
-- Deterministic
-- Testable
-- Structurally bounded
+Provides:
 
-It is not a simulation engine.
+- Upper bounds
+- Lower bounds
+- Join (least upper bound)
+- Meet (greatest lower bound)
+- Lattice detection
+- Top / Bottom detection
+- Distributivity check
 
-It is a structural execution layer.
+---
+
+# 3. Conceptual Stack
+
+The visual diagram represents the conceptual operator stack:
+
+FinitePoset  
+→ Closure (Γ)  
+→ Regime (Δ)  
+→ Frame (F)  
+→ Fixpoint  
+
+Currently implemented layers:
+
+✔ FinitePoset  
+✔ Closure  
+✔ Fixpoint (via closure)  
+
+Planned layers:
+
+□ Regime operator (Δ)  
+□ Frame projection operator (F)  
+
+The diagram reflects the intended structural direction,
+not the fully implemented state.
+
+---
+
+# 4. Algebraic Status
+
+The engine supports:
+
+- Finite lattices
+- Finite distributive lattices
+- Closure-induced stabilization
+
+Not yet implemented:
+
+- Modular lattice detection
+- Boolean lattice recognition
+- Complemented lattices
+- Explicit Fixpoint-Lattice construction
+- Regime / Frame operators
+
+---
+
+# 5. Design Philosophy
+
+- Finite, computable structures
+- Strict validation of algebraic properties
+- Clear separation between structure and interpretation
+- Deterministic stabilization
+- Extension-oriented architecture
+
+The core layer is a structural execution engine,
+not a simulation environment.
+
+---
+
+# 6. Future Extensions
+
+Planned:
+
+- Regime operator (Δ)
+- Frame projection operator (F)
+- Fixpoint-lattice construction
+- Hasse diagram generator
+- Operator composition algebra
+- Test suite expansion
+
+---
+
+End of Core Layer Documentation
