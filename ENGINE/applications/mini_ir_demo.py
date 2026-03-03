@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Dict, Set
+
 from ENGINE.core.worklist_fixpoint import solve_worklist
 from ENGINE.applications.constant_lattice import (
     ConstVal,
@@ -15,14 +17,10 @@ from ENGINE.applications.mini_ir import (
 )
 
 
-def main():
+def main() -> None:
 
-    # -------------------------------------
-    # Define variables + lattice
-    # -------------------------------------
-
-    variables = {"x", "y", "z"}
-    constants = {1, 2, 3}
+    variables: Set[str] = {"x", "y", "z"}
+    constants: Set[int] = {1, 2, 3}
 
     lattice = build_state_lattice(variables, constants)
 
@@ -31,26 +29,18 @@ def main():
         frozenset((v, bottom) for v in variables)
     )
 
-    # -------------------------------------
-    # Build program
-    # -------------------------------------
-
     prog = Program([
         AssignConst("x", 1),     # 1
         AssignVar("y", "x"),     # 2
         AddConst("z", "y", 1),   # 3
     ])
 
-    nodes = set(prog.node_ids())
-    edges = prog.linear_edges()
+    nodes: Set[int] = set(prog.node_ids())
+    edges: Set[tuple[int, int]] = prog.linear_edges()
 
     transfer = make_transfer(prog)
 
-    initial = {n: bottom_state for n in nodes}
-
-    # -------------------------------------
-    # Run analysis
-    # -------------------------------------
+    initial: Dict[int, State] = {n: bottom_state for n in nodes}
 
     result = solve_worklist(
         nodes=nodes,
