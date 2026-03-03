@@ -25,10 +25,14 @@ def test_iterate_max_steps():
 
 
 def test_least_fixpoint_no_unique():
-    elems = {0, 1}
-    def leq(x, y): return True
+    elems = {"a", "b"}
+
+    def leq(x, y):
+        return x == y
+
     P = FinitePoset(elems, leq)
     op = MonotoneOperator(P, lambda x: x)
+
     with pytest.raises(ValueError):
         op.least_fixpoint()
 
