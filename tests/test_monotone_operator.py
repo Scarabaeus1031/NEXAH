@@ -107,24 +107,13 @@ def test_iteration_stabilizes():
 
         return result
 
-    def tarski_greatest_fixpoint(self) -> Any:
-        """
-        gfp(f) = join of all postfixed points {x | x ≤ f(x)}
-        Requires the poset to be a lattice.
-        """
-        from ENGINE.core.lattice import LatticeOps
+    def test_tarski_matches_enumeration():
+    P = chain_3()
 
-        lat = LatticeOps(self.poset)
+    def f(x):
+        return {"0": "0", "a": "1", "1": "1"}[x]
 
-        if not lat.is_lattice():
-            raise ValueError("Poset is not a lattice.")
+    M = MonotoneOperator(P, f)
 
-        post = list(self.postfixed_points())
-        if not post:
-            raise ValueError("No postfixed points exist.")
-
-        result = post[0]
-        for x in post[1:]:
-            result = lat.join(result, x)
-
-        return result
+    assert M.least_fixpoint() == M.tarski_least_fixpoint()
+    assert M.greatest_fixpoint() == M.tarski_greatest_fixpoint()
