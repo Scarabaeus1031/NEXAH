@@ -1,48 +1,53 @@
+"""
+NEXAH Engine – Frame Operator F
+
+F is a projection operator.
+
+On posets:
+    F(P) = projected poset with induced order:
+        a ≤_F b  iff  ∃ x,y ∈ P:
+            F(x)=a, F(y)=b, and x ≤ y
+"""
+
+from __future__ import annotations
+
+from typing import Callable, Any, Iterable, Set
+
 from ENGINE.core.poset import FinitePoset
-from ENGINE.core.frame_operator import FrameOperator
 
 
-def simple_chain():
-    elements = {1, 2, 3, 4}
+class FrameOperator:
+    def __init__(self, mapping: Callable[[Any], Any]):
+        if not callable(mapping):
+            raise TypeError("FrameOperator requires a callable mapping.")
+        self.mapping = mapping
 
-    def leq(x, y):
-        return x <= y
+    # ------------------------
+    # Value-level projection
+    # ------------------------
 
-    return FinitePoset(elements, leq)
+    def apply(self, x: Any) -> Any:
+        return self.mapping(x)
 
+    def project_set(self, elements: Iterable[Any]) -> Set[Any]:
+        return {self.mapping(x) for x in elements}
 
-def test_frame_on_poset_elements():
-    P = simple_chain()
-    F = FrameOperator(lambda x: x % 2)
+    # ------------------------
+    # Poset-level projection
+    # ------------------------
 
-    FP = F.on_poset(P)
+    def on_poset(self, poset: FinitePoset) -> FinitePoset:
+        new_elements = self.project_set(poset.elements)
 
-    assert FP.elements == {0, 1}
+        def induced_leq(a, b):
+            for x in poset.elements:
+                if self.mapping(x) != a:
+                    continue
+                for y in poset.elements:
+                    if self.mapping(y) != b:
+                        continue
+                    if poset.is_leq(x, y):
+                        return True
+            return False
 
-
-def test_frame_induced_order():
-    P = simple_chain()
-    F = FrameOperator(lambda x: x % 2)
-
-    FP = F.on_poset(P)
-
-    # In original: 1 ≤ 2
-    # So 1%2=1 ≤_F 0=2%2
-    assert FP.is_leq(1, 0)
-
-    # reflexivity
-    for x in FP.elements:
-        assert FP.is_leq(x, x)
-
-
-def test_frame_non_injective_order():
-    P = simple_chain()
-    F = FrameOperator(lambda x: 0)
-
-    FP = F.on_poset(P)
-
-    # Only one element
-    assert FP.elements == {0}
-
-    # must be reflexive
-    assert FP.is_leq(0, 0)
+        return FinitePoset(new_elements, induced_leq)
