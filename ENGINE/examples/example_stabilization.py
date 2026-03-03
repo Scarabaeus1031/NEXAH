@@ -1,5 +1,11 @@
 """
-NEXAH Engine – Example 01: Stabilization via Closure Operator (Γ)
+NEXAH Engine – Example 01
+Stabilization via Closure Operator Γ
+Demonstrates:
+- FinitePoset
+- ClosureOperator
+- LatticeOps
+- Fixpoint-induced lattice
 """
 
 from ENGINE.core.poset import FinitePoset
@@ -7,11 +13,11 @@ from ENGINE.core.closure_operator import ClosureOperator
 from ENGINE.core.lattice import LatticeOps
 
 
-def main():
-    # ---------------------------------------------------------
-    # 1) Define a small finite poset (Q, ≤)
-    # ---------------------------------------------------------
+# ---------------------------------------------------------
+# 1) Define finite poset (Q, ≤)
+# ---------------------------------------------------------
 
+def build_poset() -> FinitePoset:
     elements = {"bottom", "a", "b", "top"}
 
     leq_pairs = {
@@ -29,86 +35,76 @@ def main():
     def leq(x, y):
         return (x, y) in leq_pairs
 
-    poset = FinitePoset(elements, leq)
+    return FinitePoset(elements, leq)
 
-    # ---------------------------------------------------------
-    # 2) Define closure operator Γ
-    # ---------------------------------------------------------
 
-    def gamma(x: str) -> str:
-        mapping = {
-            "bottom": "a",
-            "a": "a",
-            "b": "top",
-            "top": "top",
-        }
-        return mapping[x]
+# ---------------------------------------------------------
+# 2) Closure operator Γ
+# ---------------------------------------------------------
 
+def gamma(x: str) -> str:
+    mapping = {
+        "bottom": "a",
+        "a": "a",
+        "b": "top",
+        "top": "top",
+    }
+    return mapping[x]
+
+
+# ---------------------------------------------------------
+# 3) Example execution
+# ---------------------------------------------------------
+
+def main():
+
+    poset = build_poset()
     closure = ClosureOperator(poset=poset, operator=gamma)
 
-    # ---------------------------------------------------------
-    # 3) Iterate Γ until stabilization
-    # ---------------------------------------------------------
+    print("\n=== NEXAH Engine – Stabilization Example ===\n")
 
-    def stabilize(x: str, max_steps: int = 25) -> str:
-        current = x
-        for _ in range(max_steps):
-            nxt = closure.apply(current)
-            if nxt == current:
-                return current
-            current = nxt
-        raise RuntimeError(
-            f"Did not stabilize within {max_steps} steps from {x}."
-        )
-
-    print("\n--- NEXAH Example: Stabilization (Γ) ---\n")
     print("Elements:", sorted(poset.elements))
 
-    print("\nStabilization results:")
-    for x in sorted(poset.elements):
-        fx = stabilize(x)
-        print(f"  {x:>7}  ->  {fx}")
+    # -----------------------------------------------------
+    # Fixpoints
+    # -----------------------------------------------------
 
-    fps = closure.fixpoints()
+    fixpoints = closure.fixpoints()
 
     print("\nFixpoints Γ(x)=x:")
-    for x in sorted(fps):
-        print(" ", x)
+    for x in sorted(fixpoints):
+        print("  ", x)
 
-    # ---------------------------------------------------------
-    # 4) Lattice structure (full poset)
-    # ---------------------------------------------------------
+    # -----------------------------------------------------
+    # Full lattice structure
+    # -----------------------------------------------------
 
     lat = LatticeOps(poset)
 
-    print("\n--- Lattice Structure (Full Poset) ---\n")
+    print("\n--- Full Lattice ---")
     print("Is lattice:", lat.is_lattice())
-    print("Top element:", lat.top())
-    print("Bottom element:", lat.bottom())
-
-    print("\nJoin / Meet examples:")
-    print("  a ∨ b =", lat.join("a", "b"))
-    print("  a ∧ b =", lat.meet("a", "b"))
-    print("  a ∨ bottom =", lat.join("a", "bottom"))
-    print("  b ∧ top =", lat.meet("b", "top"))
-
+    print("Top:", lat.top())
+    print("Bottom:", lat.bottom())
     print("Is distributive:", lat.is_distributive())
 
-    # ---------------------------------------------------------
-    # 5) Fixpoint-induced structure
-    # ---------------------------------------------------------
+    print("\nJoin / Meet:")
+    print("  a ∨ b =", lat.join("a", "b"))
+    print("  a ∧ b =", lat.meet("a", "b"))
 
-    print("\n--- Fixpoint Structure ---\n")
+    # -----------------------------------------------------
+    # Fixpoint-induced lattice
+    # -----------------------------------------------------
 
-    fp_lat = closure.fixpoint_lattice(strict=False)
+    fp_structure = closure.fixpoint_lattice(strict=False)
 
-    print("Fixpoint elements:", sorted(fp_lat.poset.elements))
-    print("Is fixpoint-poset a lattice?:", fp_lat.is_lattice())
+    print("\n--- Fixpoint-Induced Structure ---")
+    print("Fixpoint elements:", sorted(fp_structure.poset.elements))
+    print("Is lattice:", fp_structure.is_lattice())
 
-    if fp_lat.is_lattice():
-        print("Top fixpoint:", fp_lat.top())
-        print("Bottom fixpoint:", fp_lat.bottom())
-        print("Is distributive (fixpoints)?:", fp_lat.is_distributive())
+    if fp_structure.is_lattice():
+        print("Top fixpoint:", fp_structure.top())
+        print("Bottom fixpoint:", fp_structure.bottom())
+        print("Distributive:", fp_structure.is_distributive())
 
     print("\nDone.\n")
 
