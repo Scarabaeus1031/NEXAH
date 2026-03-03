@@ -121,3 +121,19 @@ def solve_worklist(
         iterations=iters,
         pops=pops,
     )
+
+@dataclass(frozen=True)
+class WorklistResult(Generic[N, V]):
+    in_values: Dict[N, V]
+    out_values: Dict[N, V]
+    iterations: int
+    pops: int
+
+    @property
+    def values(self) -> Dict[N, V]:
+        """
+        Backward compatibility:
+        Old API exposed only a single 'values' map.
+        We interpret that as OUT values.
+        """
+        return self.out_values
