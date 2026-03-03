@@ -19,9 +19,9 @@ class LatticeOps:
 
     poset: FinitePoset
 
-    # -----------------------------
+    # -------------------------------------------------
     # Bounds
-    # -----------------------------
+    # -------------------------------------------------
 
     def upper_bounds(self, subset: Iterable[Any]) -> Set[Any]:
         S = set(subset)
@@ -41,9 +41,9 @@ class LatticeOps:
             if all(self.poset.is_leq(l, x) for x in S)
         }
 
-    # -----------------------------
-    # Extremal elements
-    # -----------------------------
+    # -------------------------------------------------
+    # Extremal elements in subset
+    # -------------------------------------------------
 
     def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
         A = set(subset)
@@ -59,9 +59,9 @@ class LatticeOps:
             if not any(self.poset.is_leq(x, y) and y != x for y in A)
         }
 
-    # -----------------------------
+    # -------------------------------------------------
     # Join / Meet
-    # -----------------------------
+    # -------------------------------------------------
 
     def join(self, a: Any, b: Any) -> Any:
         U = self.upper_bounds({a, b})
@@ -81,28 +81,28 @@ class LatticeOps:
             )
         return next(iter(maxs))
 
-    # -----------------------------
+    # -------------------------------------------------
     # Lattice checks
-    # -----------------------------
+    # -------------------------------------------------
 
     def is_lattice(self) -> bool:
         elems = list(self.poset.elements)
         for a in elems:
             for b in elems:
                 try:
-                    _ = self.join(a, b)
-                    _ = self.meet(a, b)
+                    self.join(a, b)
+                    self.meet(a, b)
                 except ValueError:
                     return False
         return True
 
-    # -----------------------------
-    # Distributivity (FULL check)
-    # -----------------------------
+    # -------------------------------------------------
+    # Full Distributivity Check
+    # -------------------------------------------------
 
     def is_distributive(self) -> bool:
         """
-        Checks full distributivity:
+        Full distributivity requires BOTH:
 
         1) a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
         2) a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)
@@ -120,7 +120,6 @@ class LatticeOps:
                             self.meet(a, b),
                             self.meet(a, c)
                         )
-
                         if left1 != right1:
                             return False
 
@@ -130,18 +129,18 @@ class LatticeOps:
                             self.join(a, b),
                             self.join(a, c)
                         )
-
                         if left2 != right2:
                             return False
 
                     except ValueError:
+                        # If join/meet fails, it's not a distributive lattice
                         return False
 
         return True
 
-    # -----------------------------
+    # -------------------------------------------------
     # Extremal elements
-    # -----------------------------
+    # -------------------------------------------------
 
     def top(self) -> Optional[Any]:
         mx = self.poset.maximal_elements()
