@@ -141,9 +141,14 @@ The ENGINE implements the executable backbone of these layers in finite algebrai
 ## 4. Quality Status
 
 ### Testing ✔ (baseline established)
-- pytest suite present
-- core structures and negative cases validated
-- regression behavior stabilized (tests green)
+
+- pytest suite active
+- positive and negative case coverage
+- closure axiom validation tests (extensive / monotone / idempotent)
+- lattice and distributivity validation tests
+- strict failure tests (defensive validation paths)
+- transfer carrier safety tests (worklist layer)
+- regression stabilized (tests green)
 
 ### API Stability (in progress)
 - naming and signatures settling (pre-1.0)
