@@ -4,15 +4,13 @@ from ENGINE.core.poset import FinitePoset
 from ENGINE.core.closure_operator import ClosureOperator
 
 
-def non_lattice_poset():
+def nonlattice_poset():
     """
-    Poset where join does not exist uniquely.
+    Poset that is NOT a lattice:
+    0 <= a, 0 <= b, but a and b have no join (no top element).
     """
     elements = {"0", "a", "b"}
 
-    # 0 < a
-    # 0 < b
-    # a and b incomparable
     order = {
         ("0", "0"), ("a", "a"), ("b", "b"),
         ("0", "a"), ("0", "b"),
@@ -25,13 +23,13 @@ def non_lattice_poset():
 
 
 def test_strict_fixpoint_lattice_failure():
-    P = non_lattice_poset()
+    P = nonlattice_poset()
 
     def gamma(x):
-        return x  # identity closure
+        return x  # identity closure operator (valid)
 
     closure = ClosureOperator(P, gamma)
 
-    # Fix(Γ) = P, but P is NOT a lattice
+    # strict=True requires Fix(Γ) to form a lattice
     with pytest.raises(ValueError):
-        closure.fixpoint_lattice(strict=True)
+        _ = closure.fixpoint_lattice(strict=True)
