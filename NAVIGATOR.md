@@ -1,159 +1,125 @@
 # NEXAH Framework Navigator  
-Version 0.4 – Algebraic Core Stabilized
+Version 0.5 – Engine Core Stabilized + Fixpoint Structure
 
-This document provides a structural overview of the entire NEXAH repository.
-It tracks the current state of the Engine, Framework layers, Research components,
+This document provides a structural overview of the NEXAH repository.
+It defines the current implementation state, the conceptual architecture,
 and the development roadmap.
 
 ---
 
-# 1. Current System Status
+## 0. Executive Summary
 
-## 1.1 Engine Core (Stable)
-
-The algebraic engine layer is now operational and validated.
-
-Implemented components:
-
-### FinitePoset
-- Reflexive validation
-- Antisymmetric validation
-- Transitive validation
-- Minimal / maximal element detection
-
-### ClosureOperator
-- Monotonicity validation
-- Extensivity validation
-- Idempotence validation
-- Fixpoint extraction
-
-### LatticeOps
-- Upper / lower bounds
-- Join (least upper bound)
-- Meet (greatest lower bound)
-- Lattice detection
-- Top / Bottom detection
-- Distributivity check
-
-The engine currently supports validated finite distributive lattices derived from closure operators.
+- The ENGINE core implements finite order structures and validated closure dynamics.
+- Fixpoints and induced fixpoint structures (poset + lattice checks) are now supported.
+- Next milestones: Regime operator (Δ), Frame operator (F), and a test suite formalization.
 
 ---
 
-# 2. Conceptual Architecture
+## 1. Repository Map
 
-NEXAH is structured across three structural layers:
+### ENGINE
+Executable algebraic core (finite, validated order-theory).
 
-## META
-- Relational structure
-- Order theory foundation
-- Poset formalization
+### FRAMEWORK
+Conceptual layer definitions (META / ARCHY / NEXAH), operators, principles, system stack.
 
-## ARCHY
-- Closure operators
-- Stability regimes
-- Fixpoint formation
+### RESEARCH
+Worked examples and applied cases (stability, regime shifts, interactions).
 
-## NEXAH
-- Navigation within stabilized regimes
-- Lattice orientation structures
-- Regime transitions
-
-The Engine implements the formal backbone of these layers.
+### NAVIGATOR
+Portal-style docs and visual maps for orientation.
 
 ---
 
-# 3. Repository Structure
+## 2. Current Implementation Status (ENGINE)
 
-## ENGINE
-Formal algebraic execution layer.
+### 2.1 FinitePoset (implemented)
+- Validation: reflexive, antisymmetric, transitive
+- Queries: minimal/maximal elements
+- Generic fixpoint iteration support (stabilization loops)
 
-## FRAMEWORK
-Conceptual structure:
-- META principles
-- ARCHY principles
-- NEXAH principles
-- Operators
-- Regime models
-- System stack definitions
+### 2.2 ClosureOperator Γ (implemented)
+- Validation: monotone, extensive, idempotent
+- Operations: apply, fixpoints
 
-## RESEARCH
-Applied cases and worked examples:
-- Stability detection
-- Regime transitions
-- Basin partitioning
-- Multi-regime interaction
-- Prototype roadmap
+### 2.3 LatticeOps (implemented)
+- Bounds: upper/lower bounds
+- Pair-operations: join / meet (when unique)
+- Checks: lattice detection, top/bottom detection, distributivity check
 
-## NAVIGATOR
-Repository-level orientation:
-- Portal documents
-- Visual maps
-- Application pathways
+### 2.4 Fixpoint Structure (implemented)
+- Induced fixpoint poset: Fix(Γ) with inherited order ≤
+- Lattice utilities on fixpoints via LatticeOps (property checks, not assumptions)
 
 ---
 
-# 4. Algebraic Development Roadmap
+## 3. Conceptual Architecture
 
-## Phase A – Algebra Completion
-- [ ] Explicit Fixpoint-Lattice construction
-- [ ] Modular lattice detection
-- [ ] Complemented lattice detection
-- [ ] Boolean lattice recognition
-- [ ] Height / rank functions
-- [ ] Interior operators (dual of closure)
+NEXAH is structured across three conceptual layers:
 
-## Phase B – Engine Robustness
-- [ ] Unit testing (pytest suite)
-- [ ] Type strengthening
-- [ ] Performance optimization
-- [ ] API formalization
-- [ ] Documentation standardization
+### META
+Relational structure and order-theoretic grounding.
 
-## Phase C – Dynamic System Layer
-- [ ] Generalized iteration engine
-- [ ] Regime transition modeling
-- [ ] Closure operator families
-- [ ] State transition graph layer
-- [ ] Hasse diagram generator
-- [ ] Visualization integration
+### ARCHY
+Stabilization logic via closure dynamics and regime constraints.
+
+### NEXAH
+Navigation and orientation across stabilized structures and transitions.
+
+ENGINE implements the executable backbone of these layers in finite form.
 
 ---
 
-# 5. Research Track
+## 4. Development Roadmap
 
-Ongoing theoretical formalization includes:
+### Phase A — Algebra Completion (in progress)
+- [x] Closure stabilization + fixpoint extraction
+- [x] Lattice utilities + distributivity checks
+- [x] Induced fixpoint structure (poset + lattice checks)
+- [ ] Hasse diagram generator (posets / lattices)
+- [ ] Rank / height functions
+- [ ] Interior operator (dual of closure)
 
-- Proof that fixpoints of closure form a complete lattice
-- Closure operator algebra
-- Regime transition formalization
-- Distributive vs modular stability regimes
-- Application to engineering and policy systems
+### Phase B — Engine Robustness (planned)
+- [ ] pytest suite (unit tests for core structures)
+- [ ] stricter typing + API surface stabilization
+- [ ] documentation standardization (docstrings + READMEs)
 
----
-
-# 6. Known Gaps
-
-- Formal theorem proofs incomplete
-- Limited automated testing
-- Performance scaling not yet addressed
-- No formal API contract
-- No external validation dataset
-
----
-
-# 7. Strategic Direction
-
-The long-term objective of NEXAH is:
-
-To construct a mathematically rigorous structural engine
-for modeling stabilization, regime transitions,
-and ordered navigation within complex systems.
-
-Current Status:
-Core algebra stable.
-Structural expansion ongoing.
-System dynamics layer pending.
+### Phase C — Dynamic System Layer (planned)
+- [ ] Regime operator Δ (constraint/restriction layer)
+- [ ] Frame operator F (projection/selection layer)
+- [ ] multi-regime interaction examples
+- [ ] transition graph layer + visualization integration
 
 ---
 
-End of Navigator v0.4
+## 5. Research Track (parallel)
+
+Ongoing formalization targets:
+- Fixpoint structures and their algebraic behavior under Γ
+- Operator composition and stability classes
+- Regime-shift modeling (Δ) and frame-dependence (F)
+- Applied case studies (engineering / policy / thresholds)
+
+---
+
+## 6. Known Gaps / Risks
+
+- Formal proofs are incomplete (engine remains implementation-first)
+- Automated test coverage not yet established
+- Scaling/performance not addressed (finite focus is intentional)
+- Public API contract not frozen yet
+
+---
+
+## 7. Project Objective
+
+To construct a mathematically grounded, executable structural engine
+for stabilization, regime restriction, and navigable transitions
+within complex systems.
+
+**Current status:** Core algebra stable.  
+**Next:** Robustness + Regime/Frame layers.
+
+---
+End of Navigator v0.5
