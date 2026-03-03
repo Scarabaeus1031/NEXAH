@@ -1,13 +1,22 @@
 """
-NEXAH Engine – Worklist Fixpoint Solver (Forward Semantics)
+NEXAH Engine – Worklist Fixpoint Solver (Forward OUT Semantics)
 
-Forward dataflow semantics:
+We store OUT[u] in values[u].
 
-For each node u:
+Algorithm:
+
+Initialize:
+    values[u] = initial[u]
+
+Loop:
     out_u = transfer(u, values[u])
 
-For each edge u -> v:
-    values[v] = join(values[v], out_u)
+    values[u] = join(values[u], out_u)
+
+    For each successor v:
+        values[v] = join(values[v], values[u])
+
+Until stabilization.
 """
 
 from __future__ import annotations
@@ -20,9 +29,17 @@ from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
 
 
+# ---------------------------------------------------------
+# Type variables
+# ---------------------------------------------------------
+
 N = TypeVar("N", bound=Hashable)
 V = TypeVar("V", bound=Hashable)
 
+
+# ---------------------------------------------------------
+# Result container
+# ---------------------------------------------------------
 
 @dataclass(frozen=True)
 class WorklistResult(Generic[N, V]):
@@ -31,12 +48,20 @@ class WorklistResult(Generic[N, V]):
     pops: int
 
 
+# ---------------------------------------------------------
+# Carrier validation
+# ---------------------------------------------------------
+
 def _require_in_carrier(value: V, carrier: Iterable[V], *, where: str) -> None:
     for e in carrier:
         if type(value) is type(e) and value == e:
             return
     raise ValueError(f"{where}: value not in lattice carrier: {value!r}")
 
+
+# ---------------------------------------------------------
+# Solver
+# ---------------------------------------------------------
 
 def solve_worklist(
     nodes: Iterable[N],
@@ -65,6 +90,7 @@ def solve_worklist(
 
     carrier = value_poset.elements
 
+    # Validate initial values
     for n in node_set:
         if n not in initial:
             raise ValueError(f"Missing initial value for node {n!r}.")
@@ -84,13 +110,21 @@ def solve_worklist(
         u = worklist.pop(0)
         iters += 1
 
-        # NEW: apply transfer at node u
+        # Apply transfer
         out_u = transfer(u, values[u])
         _require_in_carrier(out_u, carrier, where="transfer(...)")
 
-        for v in succ[u]:
-            new_v = lat.join(values[v], out_u)
+        # Self-update (OUT semantics)
+        new_u = lat.join(values[u], out_u)
+        if new_u != values[u]:
+            values[u] = new_u
+            for v in succ[u]:
+                if v not in worklist:
+                    worklist.append(v)
 
+        # Propagate to successors
+        for v in succ[u]:
+            new_v = lat.join(values[v], values[u])
             if new_v != values[v]:
                 values[v] = new_v
                 if v not in worklist:
