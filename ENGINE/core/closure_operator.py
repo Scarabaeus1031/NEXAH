@@ -6,6 +6,7 @@ Implements finite closure operators on a given FinitePoset.
 
 from typing import Callable
 from .poset import FinitePoset
+from .lattice import LatticeOps
 
 
 class ClosureOperator:
@@ -68,3 +69,39 @@ class ClosureOperator:
             x for x in self.poset.elements
             if self.operator(x) == x
         }
+
+    # -----------------------------------------------------
+    # Fixpoint Structure
+    # -----------------------------------------------------
+
+    def fixpoint_poset(self) -> FinitePoset:
+        """
+        Returns the induced sub-poset on Fix(Γ) = { x | Γ(x) = x }.
+        The order relation is inherited from the underlying poset.
+        """
+        fps = self.fixpoints()
+
+        if not fps:
+            raise ValueError("Closure operator has no fixpoints.")
+
+        def inherited_leq(x, y):
+            return self.poset.is_leq(x, y)
+
+        return FinitePoset(fps, inherited_leq)
+
+    def fixpoint_lattice(self, strict: bool = True) -> LatticeOps:
+        """
+        Returns lattice operations on the fixpoint set.
+
+        If strict=True (default), raises ValueError if the
+        fixpoints do not form a lattice under the inherited order.
+        """
+        fp_poset = self.fixpoint_poset()
+        ops = LatticeOps(fp_poset)
+
+        if strict and not ops.is_lattice():
+            raise ValueError(
+                "Fixpoints do not form a lattice under inherited order."
+            )
+
+        return ops
