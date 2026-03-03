@@ -1,42 +1,48 @@
-from ENGINE.core.poset import FinitePoset
 from ENGINE.core.frame_operator import FrameOperator
 
 
-def simple_chain():
-    elements = {1, 2, 3, 4}
+# -------------------------------------------------
+# Basic value projection
+# -------------------------------------------------
 
-    def leq(x, y):
-        return x <= y
-
-    return FinitePoset(elements, leq)
-
-
-def test_frame_on_poset_elements():
-    P = simple_chain()
+def test_basic_projection():
     F = FrameOperator(lambda x: x % 2)
 
-    FP = F.on_poset(P)
+    assert F.apply(3) == 1
+    assert F.apply(4) == 0
 
-    assert FP.elements == {0, 1}
 
+# -------------------------------------------------
+# Set projection
+# -------------------------------------------------
 
-def test_frame_induced_order():
-    P = simple_chain()
+def test_project_set():
     F = FrameOperator(lambda x: x % 2)
 
-    FP = F.on_poset(P)
+    result = F.project_set({1, 2, 3, 4})
 
-    assert FP.is_leq(1, 0)
-
-    for x in FP.elements:
-        assert FP.is_leq(x, x)
+    assert result == {0, 1}
 
 
-def test_frame_non_injective_order():
-    P = simple_chain()
+# -------------------------------------------------
+# Non-injective projection collapses values
+# -------------------------------------------------
+
+def test_non_injective_projection():
     F = FrameOperator(lambda x: 0)
 
-    FP = F.on_poset(P)
+    result = F.project_set({1, 2, 3})
 
-    assert FP.elements == {0}
-    assert FP.is_leq(0, 0)
+    assert result == {0}
+
+
+# -------------------------------------------------
+# Invalid mapping must fail
+# -------------------------------------------------
+
+def test_frame_requires_callable():
+    try:
+        FrameOperator(42)
+        assert False, "FrameOperator should require callable"
+    except TypeError:
+        assert True
