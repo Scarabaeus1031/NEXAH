@@ -74,7 +74,7 @@ def main():
         print(" ", x)
 
     # ---------------------------------------------------------
-    # 4) Lattice structure demonstration
+    # 4) Lattice structure
     # ---------------------------------------------------------
 
     lat = LatticeOps(poset)
