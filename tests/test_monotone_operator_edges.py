@@ -1,0 +1,42 @@
+import pytest
+from ENGINE.core.poset import FinitePoset
+from ENGINE.core.monotone_operator import MonotoneOperator
+
+
+def simple_chain():
+    elems = {0, 1}
+    def leq(x, y): return x <= y
+    return FinitePoset(elems, leq)
+
+
+def test_cycle_detection():
+    P = simple_chain()
+    f = lambda x: 1 - x
+    with pytest.raises(ValueError):
+        MonotoneOperator(P, f)
+
+
+def test_iterate_max_steps():
+    P = simple_chain()
+    f = lambda x: x
+    op = MonotoneOperator(P, f)
+    result, traj = op.iterate_from(0, max_steps=1)
+    assert result == 0
+
+
+def test_least_fixpoint_no_unique():
+    elems = {0, 1}
+    def leq(x, y): return True
+    P = FinitePoset(elems, leq)
+    op = MonotoneOperator(P, lambda x: x)
+    with pytest.raises(ValueError):
+        op.least_fixpoint()
+
+
+def test_tarski_non_lattice():
+    elems = {0, 1}
+    def leq(x, y): return x == y
+    P = FinitePoset(elems, leq)
+    op = MonotoneOperator(P, lambda x: x)
+    with pytest.raises(ValueError):
+        op.tarski_least_fixpoint()
