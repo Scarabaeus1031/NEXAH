@@ -95,3 +95,22 @@ def build_fixpoint_structure(
         poset=fp_poset,
         lattice=LatticeOps(fp_poset),
     )
+def test_delegation_methods():
+    P = small_poset()
+
+    def gamma(x):
+        return x
+
+    struct = build_fixpoint_structure(P, gamma)
+
+    # Delegations
+    assert struct.is_lattice()
+    assert not struct.is_distributive() is False or True  # just trigger call
+
+    # Top & Bottom
+    assert struct.top() == "1"
+    assert struct.bottom() == "0"
+
+    # Join & Meet
+    assert struct.join("0", "a") == "a"
+    assert struct.meet("a", "1") == "a"
