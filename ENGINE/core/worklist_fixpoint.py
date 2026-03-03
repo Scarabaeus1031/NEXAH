@@ -1,16 +1,5 @@
 """
 NEXAH Engine – Worklist Fixpoint Solver (finite)
-
-Computes least fixpoint over a directed graph using:
-- a join-semilattice (via LatticeOps)
-- transfer functions (monotone in typical use)
-- classic worklist propagation
-
-Typical use: abstract interpretation / dataflow analysis.
-
-We assume:
-- finite set of nodes
-- finite lattice carrier
 """
 
 from __future__ import annotations
@@ -34,15 +23,10 @@ class WorklistResult:
     pops: int
 
 
-def _in_carrier_hashsafe(value: Any, carrier: Iterable[Any]) -> bool:
-    """
-    Hash-safe membership test for carrier sets that may contain unhashable values
-    or when `value` itself may be unhashable (e.g. `set`).
-
-    We avoid: value in carrier_set  (would hash `value`)
-    """
-    for elem in carrier:
-        if value == elem:
+def _in_carrier(value: Any, carrier) -> bool:
+    # pure equality scan – no hashing
+    for e in carrier:
+        if value == e:
             return True
     return False
 
@@ -56,23 +40,63 @@ def solve_worklist(
     strict: bool = True,
     max_pops: int = 100_000,
 ) -> WorklistResult:
-    """
-    Least fixpoint solver.
-
-    For each edge u -> v:
-        new_v = join(old_v, transfer(v, old_u))
-
-    - value_poset: lattice carrier for values
-    - initial: initial state (must provide each node)
-    - transfer: node-local transformer
-    - strict: require value_poset to be a lattice
-    """
 
     nodes_list = list(nodes)
     node_set = set(nodes_list)
 
-    # -----------------------------------------------------
-    # Build successor map
+    succ: Dict[Node, List[Node]] = {n: [] for n in node_set}
+    for u, v in edges:
+        if u not in node_set or v not in node_set:
+            raise ValueError("Edges refer to unknown nodes.")
+        succ[u].append(v)
+
+    lat = LatticeOps(value_poset)
+
+    if strict and not lat.is_lattice():
+        raise ValueError("value_poset must be a lattice (strict=True).")
+
+    # Validate initial
+    for n in node_set:
+        if n not in initial:
+            raise ValueError(f"Missing initial value for node {n!r}.")
+        if not _in_carrier(initial[n], value_poset.elements):
+            raise ValueError(
+                f"Initial value for {n!r} not in lattice carrier: {initial[n]!r}"
+            )
+
+    values: Dict[Node, Value] = dict(initial)
+
+    worklist: List[Node] = list(nodes_list)
+    pops = 0
+    iters = 0
+
+    while worklist:
+        pops += 1
+        if pops > max_pops:
+            raise RuntimeError("Worklist exceeded max_pops.")
+
+        u = worklist.pop(0)
+        iters += 1
+
+        u_val = values[u]
+
+        for v in succ[u]:
+            cand = transfer(v, u_val)
+
+            # 🔥 Critical validation BEFORE join
+            if not _in_carrier(cand, value_poset.elements):
+                raise ValueError(
+                    f"transfer produced value not in lattice carrier: {cand!r}"
+                )
+
+            new_v = lat.join(values[v], cand)
+
+            if new_v != values[v]:
+                values[v] = new_v
+                if v not in worklist:
+                    worklist.append(v)
+
+    return WorklistResult(values=values, iterations=iters, pops=pops)    # Build successor map
     # -----------------------------------------------------
     succ: Dict[Node, List[Node]] = {n: [] for n in node_set}
     for u, v in edges:
