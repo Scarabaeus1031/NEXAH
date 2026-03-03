@@ -50,7 +50,7 @@ class RankStructure(Generic[T]):
         rm = self.rank_map()
         return rm[x]
 
-    def total_height(self) -> int:
+    def max_height(self) -> int:
         rm = self.rank_map()
         if not rm:
             raise ValueError("Empty poset")
