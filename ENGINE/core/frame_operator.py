@@ -1,34 +1,48 @@
-"""
-NEXAH Engine – Frame Operator F
-
-F is a projection operator.
-
-Given:
-    F: X → Y
-
-It maps elements into a new representation space.
-
-F does NOT guarantee:
-    - injectivity
-    - order preservation
-    - lattice preservation
-
-It is purely a projection mechanism.
-"""
-
-from __future__ import annotations
-
-from typing import Callable, Any, Iterable, Set
+from ENGINE.core.poset import FinitePoset
+from ENGINE.core.frame_operator import FrameOperator
 
 
-class FrameOperator:
-    def __init__(self, mapping: Callable[[Any], Any]):
-        if not callable(mapping):
-            raise TypeError("FrameOperator requires a callable mapping.")
-        self.mapping = mapping
+def simple_chain():
+    elements = {1, 2, 3, 4}
 
-    def apply(self, x: Any) -> Any:
-        return self.mapping(x)
+    def leq(x, y):
+        return x <= y
 
-    def project_set(self, elements: Iterable[Any]) -> Set[Any]:
-        return {self.mapping(x) for x in elements}
+    return FinitePoset(elements, leq)
+
+
+def test_frame_on_poset_elements():
+    P = simple_chain()
+    F = FrameOperator(lambda x: x % 2)
+
+    FP = F.on_poset(P)
+
+    assert FP.elements == {0, 1}
+
+
+def test_frame_induced_order():
+    P = simple_chain()
+    F = FrameOperator(lambda x: x % 2)
+
+    FP = F.on_poset(P)
+
+    # In original: 1 ≤ 2
+    # So 1%2=1 ≤_F 0=2%2
+    assert FP.is_leq(1, 0)
+
+    # reflexivity
+    for x in FP.elements:
+        assert FP.is_leq(x, x)
+
+
+def test_frame_non_injective_order():
+    P = simple_chain()
+    F = FrameOperator(lambda x: 0)
+
+    FP = F.on_poset(P)
+
+    # Only one element
+    assert FP.elements == {0}
+
+    # must be reflexive
+    assert FP.is_leq(0, 0)
