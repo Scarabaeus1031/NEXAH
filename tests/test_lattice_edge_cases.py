@@ -4,35 +4,43 @@ from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
 
 
-def diamond_poset():
-    # classic diamond M3 (non-distributive)
-    elements = {"bottom", "a", "b", "top"}
+def nondistributive_poset():
+    """
+    Classic N5 lattice (guaranteed non-distributive)
+    """
+
+    elements = {"0", "a", "b", "c", "1"}
 
     def leq(x, y):
         if x == y:
             return True
-        if x == "bottom":
+        if x == "0":
             return True
-        if y == "top":
+        if y == "1":
+            return True
+        if x == "a" and y == "c":
+            return True
+        if x == "c" and y == "1":
+            return True
+        if x == "0" and y in {"a", "b"}:
+            return True
+        if x == "b" and y == "1":
             return True
         return False
 
     return FinitePoset(elements, leq)
 
 
-def test_join_not_unique():
-    P = diamond_poset()
+def test_join_and_meet():
+    P = nondistributive_poset()
     L = LatticeOps(P)
 
-    # join(a, b) = top (unique)
-    assert L.join("a", "b") == "top"
-
-    # meet(a, b) = bottom
-    assert L.meet("a", "b") == "bottom"
+    assert L.join("a", "b") == "1"
+    assert L.meet("a", "b") == "0"
 
 
 def test_upper_bounds_empty_subset():
-    P = diamond_poset()
+    P = nondistributive_poset()
     L = LatticeOps(P)
 
     with pytest.raises(ValueError):
@@ -43,15 +51,14 @@ def test_upper_bounds_empty_subset():
 
 
 def test_is_lattice_true():
-    P = diamond_poset()
+    P = nondistributive_poset()
     L = LatticeOps(P)
 
     assert L.is_lattice()
 
 
 def test_is_distributive_false():
-    P = diamond_poset()
+    P = nondistributive_poset()
     L = LatticeOps(P)
 
-    # diamond is NOT distributive
     assert not L.is_distributive()
