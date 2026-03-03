@@ -1,22 +1,22 @@
 """
 NEXAH Engine – Frame Operator F
 
-F is a projection operator.
+F is a projection / framing operator.
 
-On posets:
-    F(P) = projected poset with induced order:
+Given a finite poset P = (X, ≤) and a mapping F: X → Y,
+we construct the projected poset F(P) on Y with the induced order:
 
-        a ≤_F b  iff
-            for all x,y with F(x)=a and F(y)=b:
-                x ≤ y
+    a ≤_F b    iff    for every x in X with F(x)=a,
+                      there exists y in X with F(y)=b
+                      such that x ≤ y.
 
-This ensures antisymmetry and produces a valid poset
-(even when F is not injective).
+This guarantees reflexivity on the image, and tends to preserve antisymmetry
+better than naive existential lifting (which usually collapses too much).
 """
 
 from __future__ import annotations
 
-from typing import Callable, Any, Iterable, Set
+from typing import Callable, Any, Dict, Set, Iterable
 
 from ENGINE.core.poset import FinitePoset
 
@@ -27,40 +27,30 @@ class FrameOperator:
             raise TypeError("FrameOperator requires a callable mapping.")
         self.mapping = mapping
 
-    # ------------------------
-    # Value-level projection
-    # ------------------------
-
     def apply(self, x: Any) -> Any:
         return self.mapping(x)
 
     def project_set(self, elements: Iterable[Any]) -> Set[Any]:
         return {self.mapping(x) for x in elements}
 
-    # ------------------------
-    # Poset-level projection
-    # ------------------------
-
     def on_poset(self, poset: FinitePoset) -> FinitePoset:
-        new_elements = self.project_set(poset.elements)
+        image = self.project_set(poset.elements)
 
-        def induced_leq(a, b):
-            found_pair = False
+        # Preimages: a -> { x in X | F(x)=a }
+        pre: Dict[Any, Set[Any]] = {a: set() for a in image}
+        for x in poset.elements:
+            pre[self.mapping(x)].add(x)
 
-            for x in poset.elements:
-                if self.mapping(x) != a:
-                    continue
+        def induced_leq(a, b) -> bool:
+            # a,b are in the image, hence pre[a], pre[b] non-empty
+            for x in pre[a]:
+                ok = False
+                for y in pre[b]:
+                    if poset.is_leq(x, y):
+                        ok = True
+                        break
+                if not ok:
+                    return False
+            return True
 
-                for y in poset.elements:
-                    if self.mapping(y) != b:
-                        continue
-
-                    found_pair = True
-
-                    # If any representative pair violates order → no relation
-                    if not poset.is_leq(x, y):
-                        return False
-
-            return found_pair  # ensures reflexivity when a == b
-
-        return FinitePoset(new_elements, induced_leq)
+        return FinitePoset(image, induced_leq)
