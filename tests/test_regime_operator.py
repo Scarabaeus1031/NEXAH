@@ -104,7 +104,7 @@ def test_lattice_can_be_destroyed():
 
 
 # -------------------------------------------------
-# Closure inside regime
+# Closure inside regime (using valid idempotent closure)
 # -------------------------------------------------
 
 def test_closure_inside_regime():
@@ -115,15 +115,15 @@ def test_closure_inside_regime():
 
     P = FinitePoset(elements, leq)
 
+    # Proper closure: idempotent, monotone, extensive
     def gamma(x):
-        return min(x + 1, 2)
+        return 2 if x >= 1 else 0
 
     Γ = ClosureOperator(P, gamma)
     Δ = RegimeOperator(P)
 
     P2 = Δ.restrict(lambda x: x >= 1)
 
-    # Closure restricted to regime
     Γ2 = ClosureOperator(P2, gamma)
 
     assert Γ2.apply(1) in P2.elements
