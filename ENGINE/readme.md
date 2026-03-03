@@ -1,169 +1,133 @@
 # NEXAH Engine
-Version 0.2 – Algebraic Execution Core
 
-The NEXAH Engine is the executable algebraic core of the NEXAH framework.
+Version 0.2 -- Executable Structural Core
 
-It implements finite order-theoretic structures for deterministic stabilization analysis.
+The NEXAH Engine is the executable algebraic layer of the NEXAH
+framework.
 
-![NEXAH Engine – Execution Architecture](visuals/engine_architecture_execution_layer_dark.png)
+It operationalizes discrete structural modeling based on finite order
+theory.
 
----
+![NEXAH Engine -- Execution
+Architecture](visuals/engine_architecture_execution_layer_dark.png)
 
-# 1. Scope
+------------------------------------------------------------------------
 
-The engine currently implements:
+## 1. Architectural Position
 
-- Finite partially ordered sets
-- Closure operators (Γ)
-- Lattice construction utilities
-- Fixpoint detection
+The NEXAH architecture consists of three conceptual layers:
 
-All operations are strictly finite and deterministic.
+RESEARCH\
+→ ENGINE\
+→ STRUCTURAL OUTPUT
 
-No metric geometry.  
-No topology.  
-No continuous-time modeling.  
-No stochastic simulation.
+The Engine translates formal structural theory into executable algebraic
+models.
 
-The engine operates entirely within discrete order theory.
+------------------------------------------------------------------------
 
----
+## 2. Core Operator Stack (Conceptual)
 
-# 2. Implemented Modules
+The architecture diagram represents the intended operator stack:
 
-## 2.1 core/poset.py
+FinitePoset\
+→ Closure Operator (Γ)\
+→ Regime Operator (Δ)\
+→ Frame Projection (F)\
+→ Fixpoint
 
-Defines the `FinitePoset` class.
+### Current implementation status
 
-Implements:
+✔ FinitePoset\
+✔ Closure Operator (Γ)\
+✔ Fixpoint detection\
+✔ Lattice utilities
 
-- Element storage
-- Order relation validation:
-  - Reflexivity
-  - Antisymmetry
-  - Transitivity
-- Minimal element detection
-- Maximal element detection
-- Generic fixpoint iteration support
+### Planned (not yet implemented)
 
-This module provides the structural base layer.
+□ Regime Operator (Δ)\
+□ Frame Projection Operator (F)\
+□ Multi-regime interaction layer
 
----
+The diagram reflects the full architectural direction, not current
+completeness.
 
-## 2.2 core/closure_operator.py
+------------------------------------------------------------------------
 
-Defines the `ClosureOperator` class.
+## 3. What the Engine Currently Demonstrates
 
-A closure operator Γ: Q → Q is validated to satisfy:
+The current version supports:
 
-1. Monotonicity  
-2. Extensivity  
-3. Idempotence  
+-   Finite partially ordered sets\
+-   Monotone closure operators\
+-   Deterministic stabilization\
+-   Fixpoint extraction\
+-   Lattice construction\
+-   Distributivity verification
 
-Provides:
+The provided example demonstrates structural stabilization within a
+finite poset.
 
-- Operator application
-- Fixpoint extraction
+------------------------------------------------------------------------
 
-This module implements structural stabilization.
+## 4. Repository Structure
 
----
+ENGINE/\
+├── core/\
+│ ├── poset.py\
+│ ├── closure_operator.py\
+│ ├── lattice.py\
+│ └── README.md\
+├── examples/\
+│ └── example_stabilization.py\
+└── visuals/
 
-## 2.3 core/lattice.py
+The `core/` folder contains the validated algebraic primitives.\
+The `examples/` folder demonstrates executable structural modeling.
 
-Defines `LatticeOps`.
+------------------------------------------------------------------------
 
-Provides lattice-theoretic utilities on a validated `FinitePoset`.
+## 5. Running the Example
 
-Includes:
+From repository root:
 
-- Upper bounds
-- Lower bounds
-- Join (least upper bound)
-- Meet (greatest lower bound)
-- Lattice detection
-- Top / Bottom detection
-- Distributivity check
+python3 -B -m ENGINE.examples.example_stabilization
 
-This module provides structural orientation over stabilized regimes.
+This produces:
 
----
+-   Stabilization results\
+-   Fixpoints\
+-   Lattice properties\
+-   Distributivity status
 
-## 2.4 examples/example_stabilization.py
+------------------------------------------------------------------------
 
-Demonstrates:
-
-- Poset creation
-- Closure definition
-- Stabilization
-- Fixpoint extraction
-- Lattice construction
-- Distributivity verification
-
-This example represents the minimal executable demonstration of the engine.
-
----
-
-# 3. Conceptual Stack
-
-The visual architecture diagram represents the intended operator stack:
-
-FinitePoset  
-→ Closure (Γ)  
-→ Regime (Δ)  
-→ Frame (F)  
-→ Fixpoint  
-
-Currently implemented:
-
-✔ FinitePoset  
-✔ Closure (Γ)  
-✔ Fixpoint detection  
-✔ Lattice structure  
-
-Planned (not yet implemented):
-
-□ Regime operator (Δ)  
-□ Frame projection operator (F)  
-
-The diagram expresses architectural direction, not current completeness.
-
----
-
-# 4. Algebraic Status
-
-The engine currently supports:
-
-- Finite lattices
-- Finite distributive lattices
-- Closure-induced stabilization
-- Deterministic fixpoint convergence
-
-Not yet implemented:
-
-- Modular lattice detection
-- Boolean lattice recognition
-- Complemented lattices
-- Explicit Fixpoint-Lattice construction
-- Regime operator layer
-- Frame projection layer
-
----
-
-# 5. Design Principles
+## 6. Design Philosophy
 
 The engine is:
 
-- Finite
-- Deterministic
-- Structurally validated
-- Algebra-first
-- Extension-ready
+-   Finite\
+-   Deterministic\
+-   Algebraically validated\
+-   Explicit in structure\
+-   Extension-oriented
 
 It is not a simulation engine.
 
 It is a structural execution layer for regime modeling.
 
----
+------------------------------------------------------------------------
+
+## 7. Development Roadmap
+
+Next planned extensions:
+
+1.  Regime Operator (Δ)\
+2.  Frame Projection Layer (F)\
+3.  Fixpoint-Lattice construction\
+4.  Multi-regime example\
+5.  Test suite formalization
+
+------------------------------------------------------------------------
 
 End of NEXAH Engine v0.2
