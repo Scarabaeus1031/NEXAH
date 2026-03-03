@@ -1,55 +1,105 @@
+
 # NEXAH Framework Navigator  
 Version 0.5 – Engine Core Stabilized + Fixpoint Structure
 
-This document provides a structural overview of the NEXAH repository.
-It defines the current implementation state, the conceptual architecture,
-and the development roadmap.
+This document provides a structural overview of the NEXAH repository.  
+It defines the current implementation state, conceptual architecture, quality status, and development roadmap.
 
 ---
 
 ## 0. Executive Summary
 
 - The ENGINE core implements finite order structures and validated closure dynamics.
-- Fixpoints and induced fixpoint structures (poset + lattice checks) are now supported.
-- Next milestones: Regime operator (Δ), Frame operator (F), and a test suite formalization.
+- Fixpoints and induced fixpoint structures (poset + lattice checks) are supported.
+- Algebraic stabilization mechanics are operational and property-validated.
+- The system remains finite, explicit, and implementation-first.
+- Next milestones: robustness layer (testing + API stabilization), Regime operator (Δ), Frame operator (F).
 
 ---
 
 ## 1. Repository Map
 
 ### ENGINE
+
 Executable algebraic core (finite, validated order-theory).
 
+Implements:
+- FinitePoset
+- ClosureOperator (Γ)
+- LatticeOps
+- Fixpoint structures
+
+---
+
 ### FRAMEWORK
-Conceptual layer definitions (META / ARCHY / NEXAH), operators, principles, system stack.
+
+Conceptual layer definitions:
+- META (relational structure)
+- ARCHY (stabilization logic)
+- NEXAH (navigation & transitions)
+
+Contains principles, operators, stack definitions, and structural models.
+
+---
 
 ### RESEARCH
-Worked examples and applied cases (stability, regime shifts, interactions).
+
+Worked examples and applied cases:
+- Stability detection
+- Basin partitioning
+- Regime shifts
+- Multi-regime interaction
+- Prototype roadmap
+
+---
 
 ### NAVIGATOR
-Portal-style docs and visual maps for orientation.
+
+Repository-level orientation:
+- Portal-style documentation
+- Visual maps
+- Structural roadmap
 
 ---
 
 ## 2. Current Implementation Status (ENGINE)
 
-### 2.1 FinitePoset (implemented)
+### 2.1 FinitePoset ✔
 - Validation: reflexive, antisymmetric, transitive
-- Queries: minimal/maximal elements
-- Generic fixpoint iteration support (stabilization loops)
+- Minimal / maximal element detection
+- Explicit order validation on construction
 
-### 2.2 ClosureOperator Γ (implemented)
-- Validation: monotone, extensive, idempotent
-- Operations: apply, fixpoints
+---
 
-### 2.3 LatticeOps (implemented)
-- Bounds: upper/lower bounds
-- Pair-operations: join / meet (when unique)
-- Checks: lattice detection, top/bottom detection, distributivity check
+### 2.2 ClosureOperator Γ ✔
 
-### 2.4 Fixpoint Structure (implemented)
+Validated automatically:
+- Monotonicity
+- Extensivity
+- Idempotence
+
+Provides:
+- `apply(x)`
+- `fixpoints()`
+- `fixpoint_poset()`
+- `fixpoint_lattice(strict=True)`
+
+---
+
+### 2.3 LatticeOps ✔
+- Upper / lower bounds
+- Join (least upper bound)
+- Meet (greatest lower bound)
+- Lattice detection
+- Top / Bottom detection
+- Distributivity check
+
+---
+
+### 2.4 Fixpoint Structure ✔
 - Induced fixpoint poset: Fix(Γ) with inherited order ≤
-- Lattice utilities on fixpoints via LatticeOps (property checks, not assumptions)
+- Lattice utilities on fixpoints via `LatticeOps`
+- Property validation (no completeness assumptions)
 
 ---
 
@@ -66,7 +116,7 @@ Stabilization logic via closure dynamics and regime constraints.
 ### NEXAH
 Navigation and orientation across stabilized structures and transitions.
 
-ENGINE implements the executable backbone of these layers in finite form.
+The ENGINE implements the executable backbone of these layers in finite algebraic form.
 
 ---
 
@@ -80,46 +130,82 @@ ENGINE implements the executable backbone of these layers in finite form.
 - [ ] Rank / height functions
 - [ ] Interior operator (dual of closure)
 
+---
+
 ### Phase B — Engine Robustness (planned)
-- [ ] pytest suite (unit tests for core structures)
-- [ ] stricter typing + API surface stabilization
-- [ ] documentation standardization (docstrings + READMEs)
+
+#### Testing Infrastructure
+- [ ] pytest suite (core structures)
+- [ ] Poset validation tests
+- [ ] Closure property tests (monotone / extensive / idempotent)
+- [ ] Lattice detection tests
+- [ ] Fixpoint-lattice consistency tests
+- [ ] Negative-case validation tests (invalid operators)
+
+#### Structural Hardening
+- [ ] stricter typing (type hints enforcement)
+- [ ] API surface stabilization
+- [ ] documentation standardization (docstrings + README alignment)
+- [ ] minimal benchmark profiling (sanity performance checks)
+
+#### Release Governance
+- [ ] versioning policy formalization (semantic versioning)
+- [ ] v0.5 tag creation
+- [ ] criteria definition for v1.0
+
+---
 
 ### Phase C — Dynamic System Layer (planned)
-- [ ] Regime operator Δ (constraint/restriction layer)
-- [ ] Frame operator F (projection/selection layer)
+- [ ] Regime operator Δ (constraint / restriction layer)
+- [ ] Frame operator F (projection / selection layer)
 - [ ] multi-regime interaction examples
-- [ ] transition graph layer + visualization integration
+- [ ] transition graph layer
+- [ ] visualization integration (Hasse + regime shifts)
 
 ---
 
 ## 5. Research Track (parallel)
 
 Ongoing formalization targets:
-- Fixpoint structures and their algebraic behavior under Γ
-- Operator composition and stability classes
+- Fixpoint structures and algebraic properties under Γ
+- Operator composition algebra
+- Stability classes and regime behavior
 - Regime-shift modeling (Δ) and frame-dependence (F)
 - Applied case studies (engineering / policy / thresholds)
 
 ---
 
 ## 6. Known Gaps / Risks
-
-- Formal proofs are incomplete (engine remains implementation-first)
+- Formal theorem proofs incomplete (implementation-first orientation)
 - Automated test coverage not yet established
-- Scaling/performance not addressed (finite focus is intentional)
-- Public API contract not frozen yet
+- Performance scaling not addressed (finite focus intentional)
+- Public API boundaries not frozen (pre-1.0 state)
+- No external validation dataset
 
 ---
 
-## 7. Project Objective
+## 7. Versioning Policy
 
-To construct a mathematically grounded, executable structural engine
-for stabilization, regime restriction, and navigable transitions
+The ENGINE follows semantic versioning principles:
+- v0.x → Algebra under construction, API not frozen
+- v1.0 → Core algebra stable, test suite established, API frozen
+- v1.x → Backward-compatible feature extensions
+- v2.x → Structural architecture changes
+
+Current version (v0.5) indicates:  
+Core algebra stabilized. Robustness layer pending.
+
+---
+
+## 8. Project Objective
+
+To construct a mathematically grounded, executable structural engine  
+for stabilization, regime restriction, and navigable transitions  
 within complex systems.
 
 **Current status:** Core algebra stable.  
-**Next:** Robustness + Regime/Frame layers.
+**Next:** Robustness layer + Regime/Frame operators.
 
 ---
+
 End of Navigator v0.5
