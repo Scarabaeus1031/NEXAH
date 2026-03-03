@@ -18,16 +18,19 @@ It is purely a structural restriction.
 
 from __future__ import annotations
 
-from typing import Callable, Any
+from typing import Callable, Generic, TypeVar
+from collections.abc import Hashable
 
 from ENGINE.core.poset import FinitePoset
 
+T = TypeVar("T", bound=Hashable)
 
-class RegimeOperator:
-    def __init__(self, poset: FinitePoset):
-        self.poset = poset
 
-    def restrict(self, predicate: Callable[[Any], bool]) -> FinitePoset:
+class RegimeOperator(Generic[T]):
+    def __init__(self, poset: FinitePoset[T]) -> None:
+        self.poset: FinitePoset[T] = poset
+
+    def restrict(self, predicate: Callable[[T], bool]) -> FinitePoset[T]:
         """
         Returns induced sub-poset of elements satisfying predicate.
 
@@ -42,7 +45,7 @@ class RegimeOperator:
             raise ValueError("Δ restriction produced empty regime.")
 
         # Induced order
-        def induced_leq(x, y):
+        def induced_leq(x: T, y: T) -> bool:
             return self.poset.is_leq(x, y)
 
         return FinitePoset(new_elements, induced_leq)
