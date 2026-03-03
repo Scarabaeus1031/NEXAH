@@ -1,0 +1,105 @@
+"""
+NEXAH Engine – Core Layer
+Lattice utilities built on top of FinitePoset.
+
+Adds:
+- upper/lower bounds
+- join (least upper bound)
+- meet (greatest lower bound)
+- lattice checks
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Any, Iterable, Optional, Set
+
+from ENGINE.core.poset import FinitePoset
+
+
+@dataclass(frozen=True)
+class LatticeOps:
+    """
+    Utility wrapper: provides lattice operations for a given FinitePoset.
+    """
+
+    poset: FinitePoset
+
+    # -----------------------------
+    # Bounds
+    # -----------------------------
+
+    def upper_bounds(self, subset: Iterable[Any]) -> Set[Any]:
+        S = set(subset)
+        if not S:
+            raise ValueError("upper_bounds() needs a non-empty subset.")
+        return {u for u in self.poset.elements if all(self.poset.is_leq(x, u) for x in S)}
+
+    def lower_bounds(self, subset: Iterable[Any]) -> Set[Any]:
+        S = set(subset)
+        if not S:
+            raise ValueError("lower_bounds() needs a non-empty subset.")
+        return {l for l in self.poset.elements if all(self.poset.is_leq(l, x) for x in S)}
+
+    # -----------------------------
+    # Extremal elements within a subset
+    # -----------------------------
+
+    def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
+        A = set(subset)
+        return {x for x in A if not any(self.poset.is_leq(y, x) and y != x for y in A)}
+
+    def maximal_in(self, subset: Iterable[Any]) -> Set[Any]:
+        A = set(subset)
+        return {x for x in A if not any(self.poset.is_leq(x, y) and y != x for y in A)}
+
+    # -----------------------------
+    # Join / Meet
+    # -----------------------------
+
+    def join(self, a: Any, b: Any) -> Any:
+        """
+        Least upper bound (a ∨ b). Raises ValueError if not unique / doesn't exist.
+        """
+        U = self.upper_bounds({a, b})
+        mins = self.minimal_in(U)
+        if len(mins) != 1:
+            raise ValueError(f"join({a},{b}) not unique / does not exist. Candidates={mins}")
+        return next(iter(mins))
+
+    def meet(self, a: Any, b: Any) -> Any:
+        """
+        Greatest lower bound (a ∧ b). Raises ValueError if not unique / doesn't exist.
+        """
+        L = self.lower_bounds({a, b})
+        maxs = self.maximal_in(L)
+        if len(maxs) != 1:
+            raise ValueError(f"meet({a},{b}) not unique / does not exist. Candidates={maxs}")
+        return next(iter(maxs))
+
+    # -----------------------------
+    # Lattice checks
+    # -----------------------------
+
+    def is_lattice(self) -> bool:
+        """
+        True iff every pair has a unique join and meet.
+        """
+        elems = list(self.poset.elements)
+        for i in range(len(elems)):
+            for j in range(len(elems)):
+                a, b = elems[i], elems[j]
+                try:
+                    _ = self.join(a, b)
+                    _ = self.meet(a, b)
+                except ValueError:
+                    return False
+        return True
+
+    def top(self) -> Optional[Any]:
+        mx = self.poset.maximal_elements()
+        return next(iter(mx)) if len(mx) == 1 else None
+
+    def bottom(self) -> Optional[Any]:
+        mn = self.poset.minimal_elements()
+        return next(iter(mn)) if len(mn) == 1 else None
