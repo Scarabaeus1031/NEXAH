@@ -5,8 +5,13 @@ F is a projection operator.
 
 On posets:
     F(P) = projected poset with induced order:
-        a ≤_F b  iff  ∃ x,y ∈ P:
-            F(x)=a, F(y)=b, and x ≤ y
+
+        a ≤_F b  iff
+            for all x,y with F(x)=a and F(y)=b:
+                x ≤ y
+
+This ensures antisymmetry and produces a valid poset
+(even when F is not injective).
 """
 
 from __future__ import annotations
@@ -40,14 +45,22 @@ class FrameOperator:
         new_elements = self.project_set(poset.elements)
 
         def induced_leq(a, b):
+            found_pair = False
+
             for x in poset.elements:
                 if self.mapping(x) != a:
                     continue
+
                 for y in poset.elements:
                     if self.mapping(y) != b:
                         continue
-                    if poset.is_leq(x, y):
-                        return True
-            return False
+
+                    found_pair = True
+
+                    # If any representative pair violates order → no relation
+                    if not poset.is_leq(x, y):
+                        return False
+
+            return found_pair  # ensures reflexivity when a == b
 
         return FinitePoset(new_elements, induced_leq)
