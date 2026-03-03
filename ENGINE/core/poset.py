@@ -1,81 +1,134 @@
 """
 NEXAH Engine – Core Layer
-Finite Partially Ordered Set (Poset) Implementation
+Lattice utilities built on top of FinitePoset.
+
+Adds:
+- upper/lower bounds
+- join (least upper bound)
+- meet (greatest lower bound)
+- lattice checks
+- distributivity check
 """
 
-from typing import Iterable, Callable, Dict, Set
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Any, Iterable, Optional, Set
+
+from ENGINE.core.poset import FinitePoset
 
 
-class FinitePoset:
+@dataclass(frozen=True)
+class LatticeOps:
     """
-    Represents a finite partially ordered set (Q, <=).
-
-    The order relation is given as a binary predicate.
+    Utility wrapper: provides lattice operations for a given FinitePoset.
     """
 
-    def __init__(self, elements: Iterable, leq: Callable):
-        self.elements: Set = set(elements)
-        self.leq = leq
+    poset: FinitePoset
 
-        self._validate_partial_order()
+    # -----------------------------
+    # Bounds
+    # -----------------------------
 
-    # -----------------------------------------------------
-    # Order Validation
-    # -----------------------------------------------------
+    def upper_bounds(self, subset: Iterable[Any]) -> Set[Any]:
+        S = set(subset)
+        if not S:
+            raise ValueError("upper_bounds() needs a non-empty subset.")
+        return {u for u in self.poset.elements if all(self.poset.is_leq(x, u) for x in S)}
 
-    def _validate_partial_order(self):
-        self._check_reflexive()
-        self._check_antisymmetric()
-        self._check_transitive()
+    def lower_bounds(self, subset: Iterable[Any]) -> Set[Any]:
+        S = set(subset)
+        if not S:
+            raise ValueError("lower_bounds() needs a non-empty subset.")
+        return {l for l in self.poset.elements if all(self.poset.is_leq(l, x) for x in S)}
 
-    def _check_reflexive(self):
-        for x in self.elements:
-            if not self.leq(x, x):
-                raise ValueError("Relation is not reflexive.")
+    # -----------------------------
+    # Extremal elements within a subset
+    # -----------------------------
 
-    def _check_antisymmetric(self):
-        for x in self.elements:
-            for y in self.elements:
-                if self.leq(x, y) and self.leq(y, x) and x != y:
-                    raise ValueError("Relation is not antisymmetric.")
+    def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
+        A = set(subset)
+        return {x for x in A if not any(self.poset.is_leq(y, x) and y != x for y in A)}
 
-    def _check_transitive(self):
-        for x in self.elements:
-            for y in self.elements:
-                for z in self.elements:
-                    if self.leq(x, y) and self.leq(y, z) and not self.leq(x, z):
-                        raise ValueError("Relation is not transitive.")
+    def maximal_in(self, subset: Iterable[Any]) -> Set[Any]:
+        A = set(subset)
+        return {x for x in A if not any(self.poset.is_leq(x, y) and y != x for y in A)}
 
-    # -----------------------------------------------------
-    # Order Queries
-    # -----------------------------------------------------
+    # -----------------------------
+    # Join / Meet
+    # -----------------------------
 
-    def is_leq(self, x, y) -> bool:
-        return self.leq(x, y)
-
-    def minimal_elements(self) -> Set:
-        return {
-            x for x in self.elements
-            if not any(self.leq(y, x) and y != x for y in self.elements)
-        }
-
-    def maximal_elements(self) -> Set:
-        return {
-            x for x in self.elements
-            if not any(self.leq(x, y) and y != x for y in self.elements)
-        }
-
-    # -----------------------------------------------------
-    # Closure Iteration (generic)
-    # -----------------------------------------------------
-
-    def iterate_until_fixpoint(self, f: Callable, start):
+    def join(self, a: Any, b: Any) -> Any:
         """
-        Iteratively applies a monotone function until stabilization.
+        Least upper bound (a ∨ b).
+        Raises ValueError if not unique / doesn't exist.
         """
-        current = start
-        while True:
-            next_val = f(current)
-            if next_val == current:
-                return current
-            current = next_val
+        U = self.upper_bounds({a, b})
+        mins = self.minimal_in(U)
+        if len(mins) != 1:
+            raise ValueError(f"join({a},{b}) not unique / does not exist. Candidates={mins}")
+        return next(iter(mins))
+
+    def meet(self, a: Any, b: Any) -> Any:
+        """
+        Greatest lower bound (a ∧ b).
+        Raises ValueError if not unique / doesn't exist.
+        """
+        L = self.lower_bounds({a, b})
+        maxs = self.maximal_in(L)
+        if len(maxs) != 1:
+            raise ValueError(f"meet({a},{b}) not unique / does not exist. Candidates={maxs}")
+        return next(iter(maxs))
+
+    # -----------------------------
+    # Lattice checks
+    # -----------------------------
+
+    def is_lattice(self) -> bool:
+        """
+        True iff every pair has a unique join and meet.
+        """
+        elems = list(self.poset.elements)
+        for a in elems:
+            for b in elems:
+                try:
+                    _ = self.join(a, b)
+                    _ = self.meet(a, b)
+                except ValueError:
+                    return False
+        return True
+
+    # -----------------------------
+    # Distributivity
+    # -----------------------------
+
+    def is_distributive(self) -> bool:
+        """
+        Checks distributivity:
+        a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
+        for all triples (a, b, c).
+        """
+        elems = list(self.poset.elements)
+        for a in elems:
+            for b in elems:
+                for c in elems:
+                    try:
+                        left = self.meet(a, self.join(b, c))
+                        right = self.join(self.meet(a, b), self.meet(a, c))
+                        if left != right:
+                            return False
+                    except ValueError:
+                        return False
+        return True
+
+    # -----------------------------
+    # Extremal elements
+    # -----------------------------
+
+    def top(self) -> Optional[Any]:
+        mx = self.poset.maximal_elements()
+        return next(iter(mx)) if len(mx) == 1 else None
+
+    def bottom(self) -> Optional[Any]:
+        mn = self.poset.minimal_elements()
+        return next(iter(mn)) if len(mn) == 1 else None
