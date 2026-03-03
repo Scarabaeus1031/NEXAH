@@ -25,7 +25,6 @@ def main() -> None:
     # Wir modellieren hier deshalb: Node 1 hat bereits den Effekt "x := 1"
     # als initial state (Entry-State nach Statement).
     initial = {n: bottom_state for n in nodes}
-    initial[1] = bottom_state.with_update("x", ConstVal.const(1))
 
     def transfer(node: int, state: State) -> State:
         # Node 2: y := x
