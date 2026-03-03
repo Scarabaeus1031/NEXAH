@@ -1,5 +1,3 @@
-# ENGINE/core/poset.py
-
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -12,11 +10,7 @@ T = TypeVar("T", bound=Hashable)
 @dataclass(frozen=True)
 class FinitePoset(Generic[T]):
     """
-    Finite partially ordered set P = (elements, ≤).
-
-    - elements must be finite + hashable (stored as a Python set)
-    - leq must define a partial order on elements:
-        reflexive, antisymmetric, transitive
+    Finite partially ordered set P = (elements, ≤)
     """
 
     elements: Set[T]
@@ -27,12 +21,11 @@ class FinitePoset(Generic[T]):
         object.__setattr__(self, "leq", leq)
         self._validate_partial_order()
 
-    # -------------------------
-    # Core relation API
-    # -------------------------
+    # -------------------------------------------------
+    # Core API
+    # -------------------------------------------------
 
     def is_leq(self, x: T, y: T) -> bool:
-        """Return True iff x ≤ y (only defined for x,y in carrier)."""
         if x not in self.elements or y not in self.elements:
             raise ValueError("is_leq called with element(s) not in carrier.")
         return bool(self.leq(x, y))
@@ -43,13 +36,14 @@ class FinitePoset(Generic[T]):
     def __iter__(self) -> Iterator[T]:
         return iter(self.elements)
 
-    # -------------------------
+    # -------------------------------------------------
     # Validation
-    # -------------------------
+    # -------------------------------------------------
 
     def _validate_partial_order(self) -> None:
+        # Empty poset allowed (degenerate case)
         if not self.elements:
-            raise ValueError("Poset carrier must be non-empty.")
+            return
         self._check_reflexive()
         self._check_antisymmetric()
         self._check_transitive()
@@ -74,12 +68,33 @@ class FinitePoset(Generic[T]):
                     if self.leq(y, z) and not self.leq(x, z):
                         raise ValueError("Relation is not transitive.")
 
-    # -------------------------
+    # -------------------------------------------------
+    # Iteration
+    # -------------------------------------------------
+
+    def iterate_until_fixpoint(self, f: Callable[[T], T], start: T) -> T:
+        """
+        Iterate f until a fixpoint is reached.
+        Raises RuntimeError if cycle detected.
+        """
+        seen: Set[T] = set()
+        current = start
+
+        while True:
+            if current in seen:
+                raise RuntimeError("Iteration did not converge.")
+            seen.add(current)
+
+            nxt = f(current)
+            if nxt == current:
+                return current
+            current = nxt
+
+    # -------------------------------------------------
     # Extremal elements
-    # -------------------------
+    # -------------------------------------------------
 
     def minimal_elements(self) -> Set[T]:
-        """All minimal elements (no strictly smaller element exists)."""
         mins: Set[T] = set()
         for x in self.elements:
             has_smaller = False
@@ -92,7 +107,6 @@ class FinitePoset(Generic[T]):
         return mins
 
     def maximal_elements(self) -> Set[T]:
-        """All maximal elements (no strictly larger element exists)."""
         maxs: Set[T] = set()
         for x in self.elements:
             has_larger = False
@@ -105,55 +119,13 @@ class FinitePoset(Generic[T]):
         return maxs
 
     def bottom(self) -> Optional[T]:
-        """Return a unique bottom element if it exists, else None."""
         mins = self.minimal_elements()
         if len(mins) == 1:
             return next(iter(mins))
         return None
 
     def top(self) -> Optional[T]:
-        """Return a unique top element if it exists, else None."""
         maxs = self.maximal_elements()
         if len(maxs) == 1:
             return next(iter(maxs))
         return None
-
-    # -------------------------
-    # Bounds helpers (often used by lattice ops)
-    # -------------------------
-
-    def lower_bounds(self, subset: Iterable[T]) -> Set[T]:
-        """{ b in P | b ≤ s for all s in subset }"""
-        S = list(subset)
-        for s in S:
-            if s not in self.elements:
-                raise ValueError("lower_bounds: subset contains element not in carrier.")
-
-        lbs: Set[T] = set()
-        for b in self.elements:
-            ok = True
-            for s in S:
-                if not self.leq(b, s):
-                    ok = False
-                    break
-            if ok:
-                lbs.add(b)
-        return lbs
-
-    def upper_bounds(self, subset: Iterable[T]) -> Set[T]:
-        """{ b in P | s ≤ b for all s in subset }"""
-        S = list(subset)
-        for s in S:
-            if s not in self.elements:
-                raise ValueError("upper_bounds: subset contains element not in carrier.")
-
-        ubs: Set[T] = set()
-        for b in self.elements:
-            ok = True
-            for s in S:
-                if not self.leq(s, b):
-                    ok = False
-                    break
-            if ok:
-                ubs.add(b)
-        return ubs
