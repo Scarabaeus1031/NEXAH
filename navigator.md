@@ -1,6 +1,5 @@
-
 # NEXAH Framework Navigator  
-Version 0.5 – Engine Core Stabilized + Fixpoint Structure
+Version 0.6 – Engine Core Stabilized + Worklist Fixpoints + Monotone Layer
 
 This document provides a structural overview of the NEXAH repository.  
 It defines the current implementation state, conceptual architecture, quality status, and development roadmap.
@@ -9,41 +8,41 @@ It defines the current implementation state, conceptual architecture, quality st
 
 ## 0. Executive Summary
 
-- The ENGINE core implements finite order structures and validated closure dynamics.
-- Fixpoints and induced fixpoint structures (poset + lattice checks) are supported.
-- Algebraic stabilization mechanics are operational and property-validated.
-- The system remains finite, explicit, and implementation-first.
-- Next milestones: robustness layer (testing + API stabilization), Regime operator (Δ), Frame operator (F).
+- The ENGINE core implements finite order structures with validated operator dynamics.
+- Closure operators (Γ) and general monotone operators are supported and validated where applicable.
+- Fixpoints are computable via direct iteration and via classic worklist propagation (dataflow-style).
+- Induced fixpoint structures (poset + lattice checks) are available without completeness assumptions.
+- Current state: implementation-first, finite + explicit, test-driven hardening underway.
+- Next milestones: visualization (Hasse), operator duals (interior), and the Dynamic Layer (Δ, F).
 
 ---
 
 ## 1. Repository Map
 
 ### ENGINE
-
-Executable algebraic core (finite, validated order-theory).
+Executable algebraic core (finite, validated order-theory + fixpoints).
 
 Implements:
 - FinitePoset
-- ClosureOperator (Γ)
-- LatticeOps
-- Fixpoint structures
+- LatticeOps (join/meet + lattice/distributivity checks)
+- ClosureOperator (Γ) with axiom validation
+- MonotoneOperator (general monotone maps; closure is a special case)
+- Fixpoint structures (induced poset/lattice)
+- Worklist fixpoint solver (finite propagation)
 
 ---
 
 ### FRAMEWORK
-
 Conceptual layer definitions:
 - META (relational structure)
 - ARCHY (stabilization logic)
 - NEXAH (navigation & transitions)
 
-Contains principles, operators, stack definitions, and structural models.
+Contains principles, operator taxonomy, stack definitions, and structural models.
 
 ---
 
 ### RESEARCH
-
 Worked examples and applied cases:
 - Stability detection
 - Basin partitioning
@@ -54,7 +53,6 @@ Worked examples and applied cases:
 ---
 
 ### NAVIGATOR
-
 Repository-level orientation:
 - Portal-style documentation
 - Visual maps
@@ -71,35 +69,55 @@ Repository-level orientation:
 
 ---
 
-### 2.2 ClosureOperator Γ ✔
-
-Validated automatically:
-- Monotonicity
-- Extensivity
-- Idempotence
-
-Provides:
-- `apply(x)`
-- `fixpoints()`
-- `fixpoint_poset()`
-- `fixpoint_lattice(strict=True)`
-
----
-
-### 2.3 LatticeOps ✔
+### 2.2 LatticeOps ✔
 - Upper / lower bounds
 - Join (least upper bound)
 - Meet (greatest lower bound)
 - Lattice detection
 - Top / Bottom detection
 - Distributivity check
+- Robustness note: lattice operations are intended to be safe under finite carriers and defensive validation.
 
 ---
 
-### 2.4 Fixpoint Structure ✔
+### 2.3 ClosureOperator Γ ✔
+Validated automatically:
+- Extensivity
+- Monotonicity
+- Idempotence
+
+Provides:
+- `apply(x)`
+- `fixpoints()`
+- `stabilize(x)`
+- `fixpoint_lattice(strict=...)`
+
+---
+
+### 2.4 MonotoneOperator ✔
+- Supports monotone maps that are *not* necessarily closure operators (no extensivity/idempotence required).
+- Provides monotone-safe iteration utilities:
+  - `apply(x)`
+  - `fixpoints()`
+  - least/greatest fixpoint extraction (finite setting, via iteration / characterization helpers)
+
+---
+
+### 2.5 Fixpoint Structure ✔
 - Induced fixpoint poset: Fix(Γ) with inherited order ≤
 - Lattice utilities on fixpoints via `LatticeOps`
 - Property validation (no completeness assumptions)
+
+---
+
+### 2.6 Worklist Fixpoint Solver ✔
+Finite worklist propagation over a directed graph:
+- Join-semilattice style update:
+  - for u→v: `new_v = join(old_v, transfer(v, old_u))`
+- Defensive validation:
+  - initial values must be in the lattice carrier
+  - transfer results must be in the lattice carrier (type/representation must match the carrier, e.g. frozenset vs set)
+- Intended use: dataflow / abstract interpretation prototypes.
 
 ---
 
@@ -111,7 +129,7 @@ NEXAH is structured across three conceptual layers:
 Relational structure and order-theoretic grounding.
 
 ### ARCHY
-Stabilization logic via closure dynamics and regime constraints.
+Stabilization logic via operator dynamics (Γ / monotone iteration) and regime constraints.
 
 ### NEXAH
 Navigation and orientation across stabilized structures and transitions.
@@ -120,38 +138,39 @@ The ENGINE implements the executable backbone of these layers in finite algebrai
 
 ---
 
-## 4. Development Roadmap
+## 4. Quality Status
+
+### Testing ✔ (baseline established)
+- pytest suite present
+- core structures and negative cases validated
+- regression behavior stabilized (tests green)
+
+### API Stability (in progress)
+- naming and signatures settling (pre-1.0)
+- strict validation favored over implicit coercion
+
+---
+
+## 5. Development Roadmap
 
 ### Phase A — Algebra Completion (in progress)
 - [x] Closure stabilization + fixpoint extraction
 - [x] Lattice utilities + distributivity checks
 - [x] Induced fixpoint structure (poset + lattice checks)
+- [x] General monotone operator layer
+- [x] Worklist fixpoint propagation (finite)
 - [ ] Hasse diagram generator (posets / lattices)
 - [ ] Rank / height functions
 - [ ] Interior operator (dual of closure)
 
 ---
 
-### Phase B — Engine Robustness (planned)
-
-#### Testing Infrastructure
-- [ ] pytest suite (core structures)
-- [ ] Poset validation tests
-- [ ] Closure property tests (monotone / extensive / idempotent)
-- [ ] Lattice detection tests
-- [ ] Fixpoint-lattice consistency tests
-- [ ] Negative-case validation tests (invalid operators)
-
-#### Structural Hardening
-- [ ] stricter typing (type hints enforcement)
+### Phase B — Engine Robustness (planned / ongoing)
+- [ ] stricter typing (type hints enforcement / linting gate)
 - [ ] API surface stabilization
 - [ ] documentation standardization (docstrings + README alignment)
 - [ ] minimal benchmark profiling (sanity performance checks)
-
-#### Release Governance
-- [ ] versioning policy formalization (semantic versioning)
-- [ ] v0.5 tag creation
-- [ ] criteria definition for v1.0
+- [ ] coverage targets + CI entrypoint
 
 ---
 
@@ -164,27 +183,26 @@ The ENGINE implements the executable backbone of these layers in finite algebrai
 
 ---
 
-## 5. Research Track (parallel)
+## 6. Research Track (parallel)
 
 Ongoing formalization targets:
 - Fixpoint structures and algebraic properties under Γ
-- Operator composition algebra
+- Operator composition algebra (Γ∘Δ∘F etc.)
 - Stability classes and regime behavior
 - Regime-shift modeling (Δ) and frame-dependence (F)
 - Applied case studies (engineering / policy / thresholds)
 
 ---
 
-## 6. Known Gaps / Risks
+## 7. Known Gaps / Risks
 - Formal theorem proofs incomplete (implementation-first orientation)
-- Automated test coverage not yet established
 - Performance scaling not addressed (finite focus intentional)
 - Public API boundaries not frozen (pre-1.0 state)
-- No external validation dataset
+- No external validation dataset (yet)
 
 ---
 
-## 7. Versioning Policy
+## 8. Versioning Policy
 
 The ENGINE follows semantic versioning principles:
 - v0.x → Algebra under construction, API not frozen
@@ -192,20 +210,20 @@ The ENGINE follows semantic versioning principles:
 - v1.x → Backward-compatible feature extensions
 - v2.x → Structural architecture changes
 
-Current version (v0.5) indicates:  
-Core algebra stabilized. Robustness layer pending.
+Current version (v0.6) indicates:  
+Core algebra stabilized + monotone/worklist layer operational. Robustness + dynamic operators next.
 
 ---
 
-## 8. Project Objective
+## 9. Project Objective
 
 To construct a mathematically grounded, executable structural engine  
 for stabilization, regime restriction, and navigable transitions  
 within complex systems.
 
-**Current status:** Core algebra stable.  
-**Next:** Robustness layer + Regime/Frame operators.
+**Current status:** Core algebra stable (finite) + fixpoint propagation operational.  
+**Next:** Visualization + robustness hardening + Δ / F operators.
 
 ---
 
-End of Navigator v0.5
+End of Navigator v0.6
