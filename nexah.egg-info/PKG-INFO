@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: nexah
-Version: 0.5.0
-Summary: NEXAH Engine – Finite Order Structural Stabilization Framework
-Author: Thomas Hofmann
-Requires-Python: >=3.10
-License-File: LICENSE
-License-File: LICENSE-DOCS.md
-Dynamic: license-file
