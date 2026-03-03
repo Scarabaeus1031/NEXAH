@@ -10,7 +10,7 @@ Typical use: abstract interpretation / dataflow analysis.
 
 We assume:
 - finite set of nodes
-- finite lattice carrier
+- finite lattice carrier (FinitePoset.elements must be hashable)
 """
 
 from __future__ import annotations
@@ -20,6 +20,7 @@ from typing import Any, Callable, Dict, Hashable, Iterable, List, Tuple
 
 from ENGINE.core.poset import FinitePoset
 from ENGINE.core.lattice import LatticeOps
+
 
 Node = Hashable
 Value = Any
@@ -31,6 +32,23 @@ class WorklistResult:
     values: Dict[Node, Value]
     iterations: int
     pops: int
+
+
+def _require_in_carrier(value: Any, carrier: set, *, where: str) -> None:
+    """
+    Strict carrier check:
+    - membership in the carrier SET (hash-based)
+    - if value is unhashable -> ValueError
+    This intentionally rejects values that are equal-but-not-the-same-representation,
+    e.g. {'x'} vs frozenset({'x'}) when the carrier uses frozenset.
+    """
+    try:
+        ok = value in carrier
+    except TypeError as e:
+        raise ValueError(f"{where}: value is not hashable: {value!r}") from e
+
+    if not ok:
+        raise ValueError(f"{where}: value not in lattice carrier: {value!r}")
 
 
 def solve_worklist(
@@ -74,6 +92,50 @@ def solve_worklist(
         raise ValueError("value_poset must be a lattice (strict=True).")
 
     # -----------------------------------------------------
+    # Validate initial mapping (strict carrier membership)
+    # -----------------------------------------------------
+    carrier = value_poset.elements
+    for n in node_set:
+        if n not in initial:
+            raise ValueError(f"Missing initial value for node {n!r}.")
+        _require_in_carrier(initial[n], carrier, where=f"initial[{n!r}]")
+
+    values: Dict[Node, Value] = dict(initial)
+
+    # -----------------------------------------------------
+    # Worklist algorithm
+    # -----------------------------------------------------
+    worklist: List[Node] = list(nodes_list)
+    pops = 0
+    iters = 0
+
+    while worklist:
+        pops += 1
+        if pops > max_pops:
+            raise RuntimeError(
+                f"Worklist exceeded max_pops={max_pops}. "
+                "Possible non-termination or exploding state space."
+            )
+
+        u = worklist.pop(0)
+        iters += 1
+
+        u_val = values[u]
+
+        for v in succ[u]:
+            cand = transfer(v, u_val)
+
+            # Validate transfer result BEFORE lattice ops (strict + hash-safe)
+            _require_in_carrier(cand, carrier, where="transfer(...)")
+
+            new_v = lat.join(values[v], cand)
+
+            if new_v != values[v]:
+                values[v] = new_v
+                if v not in worklist:
+                    worklist.append(v)
+
+    return WorklistResult(values=values, iterations=iters, pops=pops)    # -----------------------------------------------------
     # Validate initial mapping (MUST be in carrier set)
     # Use hash-based membership; if unhashable -> error.
     # -----------------------------------------------------
