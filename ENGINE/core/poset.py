@@ -1,78 +1,84 @@
 """
 NEXAH Engine – Core Layer
-Lattice utilities built on top of FinitePoset.
-
-Adds:
-- upper/lower bounds
-- join (least upper bound)
-- meet (greatest lower bound)
-- lattice checks
-- distributivity check
+Finite Partially Ordered Set (Poset) Implementation
 """
 
-from __future__ import annotations
-
-from dataclasses import dataclass
-from typing import Any, Iterable, Optional, Set
-
-from ENGINE.core.poset import FinitePoset
+from typing import Iterable, Callable, Set
 
 
-@dataclass(frozen=True)
-class LatticeOps:
+class FinitePoset:
     """
-    Utility wrapper: provides lattice operations for a given FinitePoset.
+    Represents a finite partially ordered set (Q, <=).
+
+    The order relation is given as a binary predicate.
     """
 
-    poset: FinitePoset
+    def __init__(self, elements: Iterable, leq: Callable):
+        self.elements: Set = set(elements)
+        self.leq = leq
 
-    # -----------------------------
-    # Bounds
-    # -----------------------------
+        self._validate_partial_order()
 
-    def upper_bounds(self, subset: Iterable[Any]) -> Set[Any]:
-        S = set(subset)
-        if not S:
-            raise ValueError("upper_bounds() needs a non-empty subset.")
-        return {u for u in self.poset.elements if all(self.poset.is_leq(x, u) for x in S)}
+    # -----------------------------------------------------
+    # Order Validation
+    # -----------------------------------------------------
 
-    def lower_bounds(self, subset: Iterable[Any]) -> Set[Any]:
-        S = set(subset)
-        if not S:
-            raise ValueError("lower_bounds() needs a non-empty subset.")
-        return {l for l in self.poset.elements if all(self.poset.is_leq(l, x) for x in S)}
+    def _validate_partial_order(self):
+        self._check_reflexive()
+        self._check_antisymmetric()
+        self._check_transitive()
 
-    # -----------------------------
-    # Extremal elements within a subset
-    # -----------------------------
+    def _check_reflexive(self):
+        for x in self.elements:
+            if not self.leq(x, x):
+                raise ValueError("Relation is not reflexive.")
 
-    def minimal_in(self, subset: Iterable[Any]) -> Set[Any]:
-        A = set(subset)
-        return {x for x in A if not any(self.poset.is_leq(y, x) and y != x for y in A)}
+    def _check_antisymmetric(self):
+        for x in self.elements:
+            for y in self.elements:
+                if self.leq(x, y) and self.leq(y, x) and x != y:
+                    raise ValueError("Relation is not antisymmetric.")
 
-    def maximal_in(self, subset: Iterable[Any]) -> Set[Any]:
-        A = set(subset)
-        return {x for x in A if not any(self.poset.is_leq(x, y) and y != x for y in A)}
+    def _check_transitive(self):
+        for x in self.elements:
+            for y in self.elements:
+                for z in self.elements:
+                    if self.leq(x, y) and self.leq(y, z) and not self.leq(x, z):
+                        raise ValueError("Relation is not transitive.")
 
-    # -----------------------------
-    # Join / Meet
-    # -----------------------------
+    # -----------------------------------------------------
+    # Order Queries
+    # -----------------------------------------------------
 
-    def join(self, a: Any, b: Any) -> Any:
+    def is_leq(self, x, y) -> bool:
+        return self.leq(x, y)
+
+    def minimal_elements(self) -> Set:
+        return {
+            x for x in self.elements
+            if not any(self.leq(y, x) and y != x for y in self.elements)
+        }
+
+    def maximal_elements(self) -> Set:
+        return {
+            x for x in self.elements
+            if not any(self.leq(x, y) and y != x for y in self.elements)
+        }
+
+    # -----------------------------------------------------
+    # Closure Iteration (generic)
+    # -----------------------------------------------------
+
+    def iterate_until_fixpoint(self, f: Callable, start):
         """
-        Least upper bound (a ∨ b).
-        Raises ValueError if not unique / doesn't exist.
+        Iteratively applies a monotone function until stabilization.
         """
-        U = self.upper_bounds({a, b})
-        mins = self.minimal_in(U)
-        if len(mins) != 1:
-            raise ValueError(f"join({a},{b}) not unique / does not exist. Candidates={mins}")
-        return next(iter(mins))
-
-    def meet(self, a: Any, b: Any) -> Any:
-        """
-        Greatest lower bound (a ∧ b).
-        Raises ValueError if not unique / doesn't exist.
+        current = start
+        while True:
+            next_val = f(current)
+            if next_val == current:
+                return current
+            current = next_val        Raises ValueError if not unique / doesn't exist.
         """
         L = self.lower_bounds({a, b})
         maxs = self.maximal_in(L)
