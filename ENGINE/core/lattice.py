@@ -97,23 +97,43 @@ class LatticeOps:
         return True
 
     # -----------------------------
-    # Distributivity
+    # Distributivity (FULL check)
     # -----------------------------
 
     def is_distributive(self) -> bool:
+        """
+        Checks full distributivity:
+
+        1) a ∧ (b ∨ c) = (a ∧ b) ∨ (a ∧ c)
+        2) a ∨ (b ∧ c) = (a ∨ b) ∧ (a ∨ c)
+        """
+
         elems = list(self.poset.elements)
 
         for a in elems:
             for b in elems:
                 for c in elems:
                     try:
-                        left = self.meet(a, self.join(b, c))
-                        right = self.join(
+                        # First distributive law
+                        left1 = self.meet(a, self.join(b, c))
+                        right1 = self.join(
                             self.meet(a, b),
                             self.meet(a, c)
                         )
-                        if left != right:
+
+                        if left1 != right1:
                             return False
+
+                        # Second distributive law
+                        left2 = self.join(a, self.meet(b, c))
+                        right2 = self.meet(
+                            self.join(a, b),
+                            self.join(a, c)
+                        )
+
+                        if left2 != right2:
+                            return False
+
                     except ValueError:
                         return False
 
