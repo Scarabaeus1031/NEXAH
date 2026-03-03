@@ -26,7 +26,7 @@ def chain_3():
 def test_monotone_accepts_nonclosure():
     P = chain_3()
 
-    # monotone, NOT extensive (a -> 0)
+    # monotone, NOT extensive
     def f(x):
         return {"0": "0", "a": "0", "1": "1"}[x]
 
@@ -66,13 +66,12 @@ def test_fixpoints_and_least_greatest():
 
 
 # --------------------------------------------------
-# Iteration (monotone, inflationary → no cycles)
+# Iteration stabilizes
 # --------------------------------------------------
 
 def test_iteration_stabilizes():
     P = chain_3()
 
-    # inflationary monotone operator
     def f(x):
         return {"0": "a", "a": "1", "1": "1"}[x]
 
@@ -81,33 +80,13 @@ def test_iteration_stabilizes():
     fx, traj = M.iterate_from("0")
     assert fx == "1"
     assert traj[-1] == "1"
-        # -----------------------------------------------------
-    # Tarski characterization (finite case)
-    # -----------------------------------------------------
 
-    def tarski_least_fixpoint(self) -> Any:
-        """
-        lfp(f) = meet of all prefixed points {x | f(x) ≤ x}
-        Requires the poset to be a lattice.
-        """
-        from ENGINE.core.lattice import LatticeOps
 
-        lat = LatticeOps(self.poset)
+# --------------------------------------------------
+# Tarski characterization
+# --------------------------------------------------
 
-        if not lat.is_lattice():
-            raise ValueError("Poset is not a lattice.")
-
-        pref = list(self.prefixed_points())
-        if not pref:
-            raise ValueError("No prefixed points exist.")
-
-        result = pref[0]
-        for x in pref[1:]:
-            result = lat.meet(result, x)
-
-        return result
-
-    def test_tarski_matches_enumeration():
+def test_tarski_matches_enumeration():
     P = chain_3()
 
     def f(x):
