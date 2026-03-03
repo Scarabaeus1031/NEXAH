@@ -1,1 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "nexah"
+version = "0.5.0"
+description = "NEXAH Engine – Finite Order Structural Stabilization Framework"
+authors = [
+    { name = "Thomas Hofmann" }
+]
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ENGINE*"]
