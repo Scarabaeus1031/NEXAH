@@ -8,7 +8,7 @@ NEXAH framework.
 It operationalizes **finite structural modeling and abstract interpretation**
 based on **order theory and lattice semantics**.
 
-![NEXAH Engine — Execution Architecture](visuals/engine_architecture_execution_layer_dark.png)
+![NEXAH Engine Execution Flow](visuals/engine_execution_flow.png)
 
 For the full architectural report see:
 
