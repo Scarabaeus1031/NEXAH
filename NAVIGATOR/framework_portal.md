@@ -1,127 +1,210 @@
-# NEXAH Framework — Portal
 
-Welcome to the **NEXAH Framework portal**.
+# NEXAH Framework
 
-This section introduces the structural foundations of the NEXAH system — its conceptual layers, modeling principles, and practical applications.
+The official repository for the **NEXAH Framework** —  
+a modular system for **structural modeling, stabilization, and relational navigation**.
 
-NEXAH is designed as a **structural modeling framework for navigating complex systems** through **relational modeling and explicit orientation**.
-
----
-
-## What is the NEXAH Framework?
-
-The **NEXAH Framework** is a modular structural modeling system that describes complex systems using relational structure, stability regimes, and navigable orientations.
-
-Rather than reducing systems to simplified variables, NEXAH focuses on **how elements are structurally related and how systems transition between states**.
-
-The framework is organized into three conceptual layers:
-
-- **META** — relational structure  
-- **ARCHY** — stability regimes  
-- **NEXAH** — orientation and frames  
-
-Together these layers contribute to **organization, stability, and orientation** within complex systems.
+![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
 ---
 
-## Framework Structure
+# Overview
 
-The core architecture of the NEXAH framework is structured across three layers.
+NEXAH is a **mathematically grounded structural framework** for modeling complex systems through:
 
-![Explore Framework](./visuals/Explore_Framework.png)
+- relational order
+- stabilization regimes
+- orientation and transition systems
 
-### META — Framework Structure
+The repository integrates three primary layers:
 
-Defines the **relational order** of the system.
+1. **ENGINE** — executable algebra core  
+2. **FRAMEWORK** — conceptual system architecture  
+3. **RESEARCH & APPLICATIONS** — modeling and real-world system analysis  
 
-META establishes the structural foundation upon which all models are built.
-
-Examples include:
-
-- relational graphs  
-- ordering relations  
-- dependency structures  
+The system is **implementation-first and structurally verified**.
 
 ---
 
-### ARCHY — Stability Regimes
+# 🔎 Quick Navigation
 
-ARCHY models **stability conditions and regime transitions**.
-
-It describes how systems move between states and how structural configurations stabilize.
-
-Examples include:
-
-- threshold behavior  
-- regime transitions  
-- system governance patterns  
+| Section | Description |
+|--------|-------------|
+| 🏗 **ENGINE** | Finite algebra engine and abstract interpretation core |
+| 📐 **FRAMEWORK** | Conceptual stack (META / ARCHY / NEXAH) |
+| 🔬 **RESEARCH** | Theoretical models and structural research |
+| 🚀 **APPLICATIONS** | Dynamical system models and real-world cases |
+| 🧭 **NAVIGATOR** | Visual documentation and system maps |
 
 ---
 
-### NEXAH — Orientation & Frames
+# Explore the Repository
 
-NEXAH provides **explicit orientation within structural systems**.
-
-It enables navigation and interpretation of structural models.
-
-Examples include:
-
-- structural navigation  
-- relational frames  
-- contextual positioning of models  
+| Portal | Link |
+|------|------|
+| Framework Portal | [`NAVIGATOR/framework_portal.md`](./NAVIGATOR/framework_portal.md) |
+| Research Portal | [`NAVIGATOR/research_portal.md`](./NAVIGATOR/research_portal.md) |
+| Applications Portal | [`NAVIGATOR/applications_portal.md`](./NAVIGATOR/applications_portal.md) |
+| Repository Navigator | [`NAVIGATOR/repository_portal.md`](./NAVIGATOR/repository_portal.md) |
 
 ---
 
-## NEXAH in Practice
+# Research Pipeline
 
-The framework is designed not only as a conceptual model but also as a **practical system for analyzing real-world structures**.
+![NEXAH Research Pipeline](./NAVIGATOR/visuals/nexah_research_pipeline.png)
 
-![NEXAH Application](./visuals/Nexah_Application.png)
+The NEXAH ecosystem follows a layered development process:
 
-Examples of applied structural modeling include:
+```
+Axioms
+↓
+Principles
+↓
+Theorems
+↓
+Operators
+↓
+Framework
+↓
+Applications
+```
 
-### Formal Core
-Relational modeling and orientation of complex systems.
-
-### Regime Theory
-Analysis of thresholds and transitions between system states.
-
-### Documented Applications
-Real-world case studies demonstrating NEXAH modeling.
-
-Applications may include fields such as:
-
-- infrastructure systems
-- environmental modeling
-- maritime systems
-- urban structure analysis
-- archaeological alignment studies
+The pipeline illustrates how theoretical ideas are translated into **executable modeling tools** and eventually applied to **complex real-world systems**.
 
 ---
 
-## Purpose of the Framework
+# Dynamical Systems Framework
 
-The goal of NEXAH is to provide a **clear structural language for complex systems**.
+![NEXAH Dynamics Framework](./APPLICATIONS/visuals/nexah_dynamics_framework_overview.png)
 
-Instead of describing systems only through metrics or variables, NEXAH models:
+The applications layer uses a hierarchy of dynamical system models:
 
-- structural relations
-- stability regimes
-- navigable system orientations
+| Model | Description |
+|------|-------------|
+| **Stability Landscape** | Conceptual stability structure |
+| **Gradient Systems** | Dynamics along stability gradients |
+| **Drift Systems** | Gradient dynamics with external forcing |
+| **Regime Systems** | Systems with multiple attractor regimes |
 
-This allows complex domains to be explored through **structured relational models**.
+These models form the basis for structural system analysis within the NEXAH framework.
 
 ---
 
-## Next Steps
+# Repository Structure
 
-From this portal you can continue exploring the NEXAH ecosystem:
+## 🏗 ENGINE
 
-**Research**  
-Explore theoretical foundations and structural principles behind the framework.
+Location: `/ENGINE`
 
-**Applications**  
-Discover documented case studies and real-world structural modeling examples.
+Implements **finite order-theoretic algebra structures** and abstract interpretation tools.
 
-**Repository**  
-Access the NEXAH implementation and computational tools.
+Core components include:
+
+- partially ordered sets
+- lattices
+- closure operators
+- monotone operators
+- fixpoint solvers
+- regime and frame operators
+
+Validated via automated test suite.
+
+---
+
+## 📐 FRAMEWORK
+
+Location: `/FRAMEWORK`
+
+Defines the conceptual architecture of NEXAH:
+
+| Layer | Role |
+|------|------|
+| **META** | relational order structures |
+| **ARCHY** | stabilization regimes |
+| **NEXAH** | orientation and transition modeling |
+
+These conceptual layers structure how complex systems are modeled and analyzed.
+
+---
+
+## 🔬 RESEARCH
+
+Location: `/RESEARCH`
+
+The research layer explores theoretical foundations including:
+
+- stability detection
+- regime transitions
+- relational modeling
+- system orientation
+
+Full documentation available in the **Research Portal**.
+
+---
+
+## 🚀 APPLICATIONS
+
+Location: `/APPLICATIONS`
+
+The applications layer demonstrates how NEXAH models **real-world system dynamics**.
+
+Current modeling examples include:
+
+- gradient systems
+- drift systems
+- regime transitions
+- stability landscapes
+
+These models illustrate how structural analysis can be applied to complex environments.
+
+---
+
+## 🧭 NAVIGATOR
+
+Location: `/NAVIGATOR`
+
+Provides visual documentation of the NEXAH ecosystem:
+
+- framework diagrams
+- repository structure maps
+- conceptual portals
+- research pipeline visualizations
+
+The Navigator acts as the **entry point for exploring the system architecture**.
+
+---
+
+# Implementation Status
+
+Current release: **v1.0.0**
+
+- finite algebra engine stable
+- monotone and fixpoint structures validated
+- worklist fixpoint solver operational
+- constant propagation example implemented
+- ~95% test coverage
+- `mypy --strict` clean
+- API frozen for finite scope
+
+The system is **finite by design and structurally verified**.
+
+---
+
+# Versioning
+
+The ENGINE follows semantic versioning:
+
+- **v1.0** → stable finite core  
+- **v1.x** → backward compatible extensions  
+- **v2.x** → structural changes  
+
+Current version: **v1.0.0**
+
+---
+
+# License
+
+Code: **Apache License 2.0**  
+Documentation & Research: **CC BY 4.0**
+
+© 2026 Thomas K. R. Hofmann
