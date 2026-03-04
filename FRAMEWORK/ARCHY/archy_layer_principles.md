@@ -37,6 +37,38 @@ This section is essential for understanding how the **ARCHY** layer operates wit
 
 ---
 
+## Stability Landscape Model
+
+The ARCHY layer models system stability through a **stability potential landscape**.
+
+Each system state is represented as
+
+x ∈ Ω
+
+where Ω denotes the system state space.
+
+A stability potential function
+
+V(x)
+
+defines the stability structure of the system. Stable regimes correspond to local minima of the potential function.
+
+Stability conditions are defined as:
+
+∇V(x*) = 0  
+∇²V(x*) > 0
+
+where x* denotes a stable attractor.
+
+System dynamics follow a gradient flow:
+
+dx/dt = −∇V(x)
+
+This dynamic drives the system from unstable regions toward stable attractor basins.
+
+The ARCHY layer therefore governs how systems evolve toward stable regimes and how stability landscapes shape system behavior.
+
+
 ## 🚀 Next Steps
 
 - **Explore the System Stack**: Dive deeper into the **META**, **ARCHY**, and **NEXAH** layers to see how they interact.
