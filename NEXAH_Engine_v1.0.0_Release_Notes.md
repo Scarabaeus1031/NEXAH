@@ -8,7 +8,7 @@ Coverage: **95%**
 Tests: **89 Passing**  
 Typing: **mypy --strict clean**
 
----
+--- 
 
 ## Overview
 
