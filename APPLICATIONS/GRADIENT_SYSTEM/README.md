@@ -9,6 +9,18 @@ While the **Stability Landscape Model** defines the general structure of possibl
 In these systems, the direction of change is determined by the **local slope of the stability landscape**.
 
 ---
+![Gradient System Landscape](../visuals/gradient_system_landscape.png)
+
+The diagram illustrates the typical behavior of a gradient system.
+
+A system state moves through the landscape following the gradient of a stability function:
+
+dx/dt = -∇V(x)
+
+Regions with high potential correspond to unstable configurations, while valleys represent stable attractors.
+
+Over time, the system naturally evolves toward these stable regions.
+
 
 # Core Idea
 
