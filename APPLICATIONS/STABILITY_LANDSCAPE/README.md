@@ -24,7 +24,7 @@ Over time, systems tend to move toward these stable configurations.
 
 # Regime Structure
 
-![Regime Map](visuals/NEXAH_Stability_Map.jpeg)
+![Regime Map](APPLICATIONS/visuals/NEXAH_Stability_Map.png)
 
 Many real-world systems contain multiple structural regimes.
 
@@ -41,7 +41,7 @@ Transitions between regimes occur when the system crosses structural thresholds.
 
 # Complex Stability Landscapes
 
-![Complex Landscape](visuals/NEXAH_Stability_Map_ii.jpeg)
+![Complex Landscape](APPLICATIONS/visuals/NEXAH_Stability_Map_ii.png)
 
 In complex systems, multiple attractors and pathways may exist.
 
@@ -52,6 +52,24 @@ NEXAH explores these landscapes to identify:
 - stable attractors
 - regime boundaries
 - transition pathways
+
+---
+
+# State Transitions
+
+![State Transition Graph](APPLICATIONS/visuals/State_Transition_Graph.png)
+
+System dynamics can also be represented as a **state transition graph**.
+
+In this representation:
+
+- nodes represent **system states**
+- edges represent **possible transitions**
+- attractors represent **stable configurations**
+
+Many systems move through several intermediate states before stabilizing.
+
+This perspective connects the **landscape interpretation** with a **structural state-machine view of system dynamics**.
 
 ---
 
