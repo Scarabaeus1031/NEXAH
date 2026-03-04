@@ -1,9 +1,0 @@
-digraph "Chain_0_1_2" {
-  rankdir=BT;
-  node [shape=ellipse];
-  "0";
-  "1";
-  "2";
-  "0" -> "1";
-  "1" -> "2";
-}
