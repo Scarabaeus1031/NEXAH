@@ -2,6 +2,33 @@
 
 This directory contains practical system models and example applications built with the **NEXAH framework**.
 
+---
+
+## Framework Navigation
+
+| Model | Description |
+|------|-------------|
+| **Stability Landscape** | Conceptual foundation of system stability |
+| **Gradient Systems** | Systems evolving along stability gradients |
+| **Drift Systems** | Gradient dynamics with external forces |
+| **Regime Systems** | Systems with multiple attractor regimes |
+
+### Modules
+
+- **Stability Landscape**  
+  `APPLICATIONS/STABILITY_LANDSCAPE`
+
+- **Gradient Systems**  
+  `APPLICATIONS/GRADIENT_SYSTEM`
+
+- **Drift Systems**  
+  `APPLICATIONS/DRIFT_SYSTEM`
+
+- **Regime Systems**  
+  `APPLICATIONS/REGIME_SYSTEM`
+
+---
+
 While the core framework defines the formal operators and structural semantics, the **applications demonstrate how these models can be used to analyze real-world systems.**
 
 In simple terms:
