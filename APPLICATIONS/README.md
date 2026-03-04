@@ -48,7 +48,7 @@ The goal is to show how general system dynamics can be represented, analyzed, an
 
 # Intro Model
 
-<img src="visuals/Introductory NEXAH-Core_System_Classes.png" width="900">
+<img src="visuals/Introductory_NEXAH-Core_System_Classes.png" width="900">
 
 The **intro model** introduces the central idea of NEXAH:
 
