@@ -34,11 +34,9 @@ Formal Core → Structural Semantics → System Models → Applications
 
 <img src="visuals/nexah_dynamics_framework_overview.png" width="900">
 
-The NEXAH applications are built on a hierarchy of dynamical models.
+The NEXAH applications are built on a hierarchy of dynamical models describing how systems evolve in structured state spaces.
 
-The framework describes **how systems evolve in structured state spaces** and how stability emerges through different types of dynamics.
-
-The model hierarchy follows four levels:
+The framework introduces increasing levels of dynamical complexity:
 
 Stability Landscape  
 ↓  
@@ -48,7 +46,49 @@ Drift Systems
 ↓  
 Regime Systems  
 
-Each level introduces additional structural complexity in the system dynamics.
+The following diagram summarizes the full dynamical hierarchy.
+
+<img src="visuals/nexah_dynamics_framework_detailed.png" width="900">
+
+This diagram summarizes the **four core dynamical models** used in the NEXAH applications framework.
+
+### 1. Stability Landscape
+
+Defines the structural stability space of a system using a potential function:
+
+V(x)
+
+This landscape determines attractors, ridges, and stability basins.
+
+### 2. Gradient Systems
+
+Pure stability-driven dynamics:
+
+dx/dt = -∇V(x)
+
+Systems move along the gradient of the stability landscape and converge toward attractors.
+
+### 3. Drift Systems
+
+External forces modify gradient dynamics:
+
+dx/dt = -∇V(x) + F(x,t)
+
+These systems combine stability-driven motion with external forcing.
+
+### 4. Regime Systems
+
+Systems operating across multiple attractor basins:
+
+dx/dt = -∇V(x) + R(x,t)
+
+Regime systems may exhibit:
+
+- transition boundaries  
+- tipping points  
+- regime shifts  
+
+Together these models describe increasing **complexity of system dynamics**.
 
 ---
 
