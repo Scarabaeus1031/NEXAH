@@ -4,6 +4,15 @@ This module introduces **Drift Systems**, a class of dynamical systems in which 
 
 While gradient systems evolve purely along the gradient of a stability function, drift systems include additional influences that can push the system away from the natural gradient flow.
 
+![Drift System Dynamics](../visuals/drift_system_dynamics.png)
+
+The diagram illustrates how a system evolves under the combined influence of two forces:
+
+- the **gradient pull** of the stability landscape
+- an **external force** that introduces directional drift
+
+The resulting trajectory is a combination of **natural stabilization and external forcing**.
+
 ---
 
 # Core Idea
