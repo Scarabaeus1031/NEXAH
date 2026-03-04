@@ -11,17 +11,41 @@ a modular system for structural modeling, stabilization, and relational navigati
 
 NEXAH is a mathematically grounded structural framework for modeling:
 
-- Relational order
-- Stabilization regimes
-- Orientation and transition systems
+- relational order
+- stabilization regimes
+- orientation and transition systems
 
-The framework consists of:
+The framework integrates:
 
 1. A validated **finite executable algebra engine**
 2. A formal **conceptual system stack (META / ARCHY / NEXAH)**
 3. A research and application layer
 
-The system is implementation-first and structurally verified.
+The system is **implementation-first and structurally verified**.
+
+---
+
+## System Pipeline
+
+![NEXAH Research Pipeline](./NAVIGATOR/visuals/nexah_research_pipeline.png)
+
+The NEXAH ecosystem follows a layered development process:
+
+```
+Axioms
+↓
+Principles
+↓
+Theorems
+↓
+Operators
+↓
+Framework
+↓
+Applications
+```
+
+Research concepts are transformed into executable models through the ENGINE and then applied to real-world systems.
 
 ---
 
@@ -31,7 +55,7 @@ The system is implementation-first and structurally verified.
 
 Location: `/ENGINE`
 
-Implements finite order-theoretic structures and abstract interpretation:
+Implements finite order-theoretic structures and abstract interpretation.
 
 ### Structural Algebra
 - `poset.py` — Finite partially ordered sets (validated)
@@ -66,6 +90,81 @@ Defines the three structural layers:
 - **META** — Relational order (formalized in ENGINE)
 - **ARCHY** — Stabilization regimes (formalized in ENGINE)
 - **NEXAH** — Orientation and transition modeling
+
+The ENGINE operationalizes large parts of META and ARCHY.
+
+---
+
+## RESEARCH
+
+Applied cases and exploratory models including:
+
+- stability detection
+- regime shifts
+- transition modeling
+- multi-regime interaction
+- prototype development
+
+---
+
+# 🧪 Implementation Status
+
+Current release: **v1.0.0**
+
+- finite algebra engine stable
+- monotone + fixpoint structures validated
+- IN/OUT worklist solver operational
+- constant propagation application layer implemented
+- **95% test coverage**
+- `mypy --strict` clean
+- API frozen for finite scope
+
+The system is **finite by design and structurally verified**.
+
+---
+
+# 📚 Theoretical Foundations
+
+- [Axioms](./axioms.md)
+- [Theorems](./theorems.md)
+- [Minimal Logic](./minimal_logic.md)
+- [Relational Model](./relational_model.md)
+- [Frame Operator](./frame_operator.md)
+- [Regime Operator](./regime_operator.md)
+
+---
+
+# 🧩 Modules
+
+→ [Modules Overview](./FRAMEWORK/modules.md)
+
+---
+
+# 🧠 Research & Applications
+
+- [Research Papers](./research_papers.md)
+- [Application Cases](./application_cases.md)
+
+---
+
+# 📦 Versioning
+
+The ENGINE follows semantic versioning:
+
+- v1.0 → Finite core stable, API frozen
+- v1.x → Backward-compatible extensions
+- v2.x → Structural changes
+
+Current version: **v1.0.0**
+
+---
+
+# License
+
+Code: Apache License 2.0  
+Documentation & Research: CC BY 4.0  
+
+© 2026 Thomas Hofmann- **NEXAH** — Orientation and transition modeling
 
 The ENGINE operationalizes large parts of META and ARCHY.
 
