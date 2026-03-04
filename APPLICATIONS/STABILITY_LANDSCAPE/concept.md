@@ -11,7 +11,7 @@ NEXAH represents this process using the concept of a **stability landscape**.
 
 # The Stability Landscape Idea
 
-![Stability Landscape](../visuals/Understanding_Stability_Landscapes_with_NEXAH.png)
+![Energy Landscape](../visuals/stability_energy_landscape.png)
 
 A system can be represented as a point moving through a structured landscape.
 
@@ -36,7 +36,7 @@ The system may transition between states depending on internal dynamics or exter
 
 These transitions form **state pathways** through the landscape.
 
-![State Transition Graph](../visuals/State_Transition_Graph.png)
+![State Transition Graph](../visuals/state_transition_graph_ii.png)
 
 Each possible movement represents a structural transition between states.
 
@@ -50,7 +50,7 @@ In many real-world systems, the landscape contains **multiple regimes**.
 
 A regime is a region of the landscape with distinct structural behavior.
 
-![Regime Map](../visuals/NEXAH_Stability_Map.png)
+![Multi Regime Landscape](../visuals/multi_regime_stability_landscape.png)
 
 Examples of regimes include:
 
@@ -66,8 +66,6 @@ Transitions between regimes occur when the system crosses **structural threshold
 # Complex Landscapes
 
 Real-world systems often contain multiple attractors and pathways.
-
-![Complex Landscape](../visuals/NEXAH_Stability_Map_ii.png)
 
 A system may move through several intermediate states before reaching a stable configuration.
 
