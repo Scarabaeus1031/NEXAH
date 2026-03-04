@@ -1,95 +1,113 @@
-# Stability Landscape Model
+# Stability Landscape – Concept
 
-This module introduces the central concept of the **NEXAH framework**.
+The **Stability Landscape Model** introduces the core conceptual idea behind the NEXAH framework.
 
-Many complex systems evolve through a space of possible states and eventually stabilize in specific regions.
+Many real-world systems evolve through a space of possible configurations.  
+Over time, these systems tend to move toward **stable regions** within that space.
 
-NEXAH models these dynamics as **stability landscapes**.
+NEXAH represents this process using the concept of a **stability landscape**.
 
 ---
 
-# The Stability Landscape
+# The Stability Landscape Idea
 
-![Stability Landscape](../visuals/Understanding_Stability_Landscapes_with_NEXAH.png)
+![Energy Landscape](../visuals/stability_energy_landscape.png)
 
 A system can be represented as a point moving through a structured landscape.
 
-- The landscape represents the **space of possible states**
-- Movement represents **system dynamics**
-- Valleys represent **stable attractors**
+In this interpretation:
 
-Over time, systems tend to move toward these stable configurations.
+- the **landscape** represents the *space of possible system states*
+- **movement** represents *system dynamics*
+- **valleys** represent *stable configurations*
+- **ridges or barriers** represent *structural thresholds*
 
----
+Over time, systems tend to move toward lower-energy or more stable regions of the landscape.
 
-# Regime Structure
-
-![Regime Map](../visuals/NEXAH_Stability_Map.png)
-
-Many real-world systems contain multiple structural regimes.
-
-Examples include:
-
-- ecological states
-- traffic flow regimes
-- economic cycles
-- climate systems
-
-Transitions between regimes occur when the system crosses structural thresholds.
+These regions are known as **stable attractors**.
 
 ---
 
-# Complex Stability Landscapes
+# System States and Dynamics
 
-![Complex Landscape](../visuals/NEXAH_Stability_Map_ii.png)
+At any moment, a system occupies a specific **state** within the landscape.
 
-In complex systems, multiple attractors and pathways may exist.
+The system may transition between states depending on internal dynamics or external influences.
 
-The system may move between different regimes before stabilizing.
+These transitions form **state pathways** through the landscape.
 
-NEXAH explores these landscapes to identify:
+![State Transition Graph](../visuals/state_transition_graph_ii.png)
 
-- stable attractors
-- regime boundaries
-- transition pathways
+Each possible movement represents a structural transition between states.
 
----
-
-# State Transitions
-
-![State Transition Graph](../visuals/State_Transition_Graph.png)
-
-System dynamics can also be represented as a **state transition graph**.
-
-In this representation:
-
-- nodes represent **system states**
-- edges represent **possible transitions**
-- attractors represent **stable configurations**
-
-Many systems move through several intermediate states before stabilizing.
-
-This perspective connects the **landscape interpretation** with a **structural state-machine view of system dynamics**.
+The collection of all possible states and transitions forms the **state space** of the system.
 
 ---
 
-# Why this matters
+# Structural Regimes
 
-Understanding stability landscapes allows us to analyze:
+In many real-world systems, the landscape contains **multiple regimes**.
+
+A regime is a region of the landscape with distinct structural behavior.
+
+![Multi Regime Landscape](../visuals/multi_regime_stability_landscape.png)
+
+Examples of regimes include:
+
+- ecological system states
+- economic market regimes
+- traffic flow patterns
+- climate system configurations
+
+Transitions between regimes occur when the system crosses **structural thresholds** in the landscape.
+
+---
+
+# Complex Landscapes
+
+Real-world systems often contain multiple attractors and pathways.
+
+A system may move through several intermediate states before reaching a stable configuration.
+
+Possible outcomes include:
+
+- stabilization in different attractor regions
+- transitions between regimes
+- complex multi-path dynamics
+
+NEXAH focuses on identifying the structural properties of these landscapes.
+
+---
+
+# Key Idea
+
+The central question of the NEXAH framework is:
+
+> **Where does a system stabilize?**
+
+Rather than predicting exact trajectories, the framework analyzes:
+
+- the structure of possible states
+- the transitions between states
+- the stable attractors within the landscape
+
+Understanding this structure allows us to analyze:
 
 - system resilience
 - regime shifts
 - tipping points
 - long-term system evolution
 
-This concept forms the foundation for all other NEXAH models.
-
 ---
 
-# Next Models
+# Relation to NEXAH Models
 
-The following models extend this concept to specific structural system classes:
+The Stability Landscape model provides the conceptual foundation for the application models that follow.
 
-- Gradient Systems
-- Drift Systems
-- Regime Systems
+These models analyze specific classes of structural systems:
+
+- **Gradient Systems**
+- **Drift Systems**
+- **Regime Systems**
+
+Each model applies the stability landscape concept to a different type of system dynamics.
