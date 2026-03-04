@@ -1,60 +1,135 @@
-# NEXAH Framework - Explore Repository
+# NEXAH — Explore the Repository
 
-Welcome to the **NEXAH Repository**! This portal is designed to help you navigate and explore the NEXAH framework and its components. It offers detailed documentation, an overview of the framework, and guidance on how to start applying NEXAH in your own projects.
+Welcome to the **NEXAH Repository**.
 
+This portal provides an overview of the repository structure and helps you navigate the conceptual framework, computational engine, and documented applications of the NEXAH system.
+
+The repository integrates **theoretical foundations, executable structural modeling tools, and applied system models**.
+
+Repository entry point:
+
+→ https://github.com/Scarabaeus1031/NEXAH
+
+---
+
+## Conceptual Architecture
 
 ![Repository Overview](./visuals/Nexah_Entry_Diagram.png)
 
+The NEXAH system combines several conceptual layers that connect theoretical foundations with practical implementation.
 
-## 🔎 Explore the Repository Structure
+### META — Framework Structure
+Defines the relational structure and foundational architecture of the system.
 
-The **NEXAH framework** is organized into distinct layers, each addressing a specific part of system modeling and navigation. Below is a breakdown of the repository structure:
+### AXIOMS — Foundational Rules
+Core assumptions that define the logical basis of the framework.
 
-### **Framework Structure**
-- **META**: Defines the relational structure and framework.
-- **ARCHY**: Deals with stability regimes, managing the transitions between system states.
-- **NEXAH**: Focuses on navigation and orientation within the system.
+### THEOREMS — Formal Derivations
+Derived formal structures that describe system behavior.
 
-### **Core Components**
-The main modules that power NEXAH are organized under the following components:
+### PRINCIPLES — Core Concepts
+Conceptual bridges between theory and real-world modeling.
 
-- **Relational Model**: The base model for relationships within the system.
-- **Regime Operator**: Governs stability transitions.
-- **Frame Operator**: Deals with system orientations.
+### ARCHY — Integration & Regimes
+Describes stability regimes and transitions between system states.
 
-![Explore Repository Overview](./visuals/Explore_Repository.png)
-
----
-
-## 📚 Explore the Repository Components
-
-### **Code Documentation**
-This section provides all the resources you need to browse and understand the NEXAH code, including the `README.md`, `FRAMEWORK/`, and `NAVIGATOR/` directories.
-
-### **Modular Organization**
-NEXAH is built using distinct and reusable modules. The framework is divided into the following categories:
-
-- **FRAMEWORK/**: Core structure and setup.
-- **OPERATORS/**: Includes relational models, regime operators, and frame operators.
-- **APPLICATIONS/**: Practical examples and use cases for NEXAH.
-
-### **Use Cases**
-In this section, we document examples of how NEXAH can be applied across different fields, including:
-
-- **Engineering**
-- **Data Science**
-- **Architecture**
-- **Urban Systems**
+### NEXAH — Tools & Implementation
+The practical modeling layer where systems become analyzable and navigable.
 
 ---
 
-## 🚀 Next Steps:
-- **Explore the Framework**: Dive deeper into the details of the **NEXAH framework** structure.
-- **Start Using the Code**: Explore the repository to see the core components in action.
-- **Contribute**: Fork the repository, suggest improvements, and contribute to the growing NEXAH community.
+## Repository Overview
+
+![Explore Repository](./visuals/Explore_Repository.png)
+
+The repository is organized into several major components.
 
 ---
 
-This repository is your starting point for working with **NEXAH**—a modular and flexible framework designed for system modeling and relational navigation.
+## Framework Structure
 
-For further details, please check the [official documentation](link-to-docs).
+Conceptual documentation and system architecture.
+
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/FRAMEWORK  
+→ https://github.com/Scarabaeus1031/NEXAH/blob/main/README.md  
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/NAVIGATOR
+
+These documents describe the conceptual structure and navigation of the NEXAH framework.
+
+---
+
+## ENGINE — Computational Core
+
+The **ENGINE** implements the executable structural algebra and analysis engine.
+
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/ENGINE
+
+Key capabilities include:
+
+- finite posets and lattice operations
+- closure and interior operators
+- monotone operators
+- fixpoint solvers
+- rank and Hasse structure extraction
+- regime restriction and frame projection
+
+The ENGINE provides the **finite abstract interpretation kernel** used for structural system analysis.
+
+---
+
+## Research Modules
+
+Research documentation and structural studies.
+
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/RESEARCH
+
+This section includes theoretical material and extended system models.
+
+---
+
+## Applications and Case Studies
+
+Applied structural modeling examples.
+
+These may include domains such as:
+
+- infrastructure systems
+- environmental systems
+- maritime drift models
+- urban axis systems
+- archaeological alignment models
+
+These examples demonstrate how NEXAH can be applied to real-world systems.
+
+---
+
+## Tests and Validation
+
+The repository includes a full validation suite.
+
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/tests
+
+Current status:
+
+- ~89 tests passing
+- ~95% code coverage
+- strict type checking (`mypy`)
+- deterministic solver semantics
+
+---
+
+## Explore the System
+
+From here you can continue exploring the NEXAH ecosystem:
+
+**Framework**  
+Explore the conceptual architecture of the system.
+
+**Research**  
+Study the theoretical background and structural modeling principles.
+
+**Applications**  
+Discover applied case studies and modeling examples.
+
+**Repository**  
+Browse the implementation and engine components.
