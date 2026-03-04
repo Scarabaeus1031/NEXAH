@@ -169,3 +169,21 @@ Example application:
 
 Experimental ideas and community-built applications are collected in:
 
+This area is intended for:
+
+- new application ideas
+- prototype system models
+- experimental analyses
+- community contributions
+
+---
+
+# Philosophy
+
+NEXAH focuses on **finite structural systems**.
+
+Instead of predicting outcomes purely through statistical methods, NEXAH analyzes the **structure of possible states** and determines where systems stabilize.
+
+In short:
+
+> **NEXAH explores the stability landscape of complex systems.**
