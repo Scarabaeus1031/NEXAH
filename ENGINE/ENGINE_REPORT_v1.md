@@ -1,222 +1,133 @@
-# NEXAH Framework Navigator
+---
 
-**Version 1.0 -- Candidate Freeze (Finite Abstract Interpretation
-Kernel)**
+## Engine Architecture
 
-------------------------------------------------------------------------
+![NEXAH Engine Execution Flow](ENGINE/visuals/engine_execution_flow.png)
 
-## 0. Executive Summary
+The system follows a clear structural pipeline:
 
-The ENGINE now implements a fully validated finite structural algebra
-core together with an operational static analysis application layer.
+Formal Structure (Research)
+↓
+Structural Algebra Core
+↓
+Executable Analysis Example
+↓
+Structural Output
 
-### Structural Core
+This bridges formal mathematical structures with executable analysis workflows.
 
--   Finite partially ordered sets
--   Lattice operations and structural checks
--   Closure (Γ) and Interior (Ι) operators
--   General monotone operators
--   Fixpoint-induced structures
--   Rank / height analysis
--   Hasse cover extraction
--   Regime restriction (Δ)
--   Frame projection (F)
+---
 
-### Dynamic Core
+## Core Components
 
--   Explicit IN/OUT worklist fixpoint solver
--   Strict carrier validation (type + value)
--   Join-semilattice propagation
--   Deterministic forward dataflow semantics
+### Structural Algebra Core
 
-### Application Layer
+* Finite partially ordered sets
+* Lattice operations (join / meet)
+* Distributivity validation
+* Closure operator Γ
+* Interior operator Ι
+* Fixpoint-induced structures
+* Rank / height analysis
+* Hasse diagram extraction
+* Regime restriction operator Δ
+* Frame projection operator F
 
--   Constant propagation lattice (⊥ / Const(n) / ⊤)
--   Product state lattice
--   Typed Mini IR
--   Linear CFG analysis
--   Branching CFG analysis (conflict → ⊤)
+All structural invariants are validated at construction time.
 
-------------------------------------------------------------------------
+---
 
-## Status
+### Fixpoint & Monotone Layer
 
--   89 tests passing
--   95% code coverage
--   `mypy --strict` clean
--   Positive + negative path validation
--   No implicit coercions
--   Deterministic solver semantics
--   Finite abstract interpretation operational
+* General monotone operators
+* Enumeration-based least / greatest fixpoints
+* Tarski-based fixpoint computation
+* Defensive monotonicity validation
 
-Current version: **v1.0 -- Candidate Freeze**
+---
 
-------------------------------------------------------------------------
+### Dynamic Solver
 
-## 1. Repository Structure
+* Explicit **IN / OUT worklist solver**
+* Deterministic forward dataflow semantics
+* Join-semilattice propagation
+* Strict carrier validation
+* Iteration protection
 
-### ENGINE
-
-Executable finite algebra + analysis core.
-
-#### Core Modules
-
--   `poset.py` --- FinitePoset (validated partial orders)
--   `lattice.py` --- LatticeOps (join/meet, lattice/distributivity
-    checks)
--   `closure_operator.py` --- ClosureOperator Γ
--   `interior_operator.py` --- InteriorOperator Ι
--   `monotone_operator.py` --- Monotone maps + Tarski characterization
--   `fixpoint_lattice.py` --- Fixpoint-induced structures
--   `worklist_fixpoint.py` --- Explicit IN/OUT worklist solver
--   `rank.py` --- RankStructure (height analysis)
--   `hasse.py` --- HasseDiagram (cover extraction)
--   `regime_operator.py` --- Regime restriction Δ
--   `frame_operator.py` --- Frame projection F
-
-#### Application Modules
-
--   `constant_lattice.py` --- Atomic + product lattice for constant
-    propagation
--   `mini_ir.py` --- Minimal typed intermediate representation
--   `mini_ir_demo.py` --- Linear CFG analysis demo
--   `mini_ir_branch_demo.py` --- Branch + conflict demo
-
-------------------------------------------------------------------------
-
-## 2. Algebraic Layer Summary
-
-### Structural Layer
-
--   FinitePoset validation (reflexive / antisymmetric / transitive)
--   Extremal element detection (top / bottom)
--   Hasse cover extraction
--   Rank / height analysis
-
-------------------------------------------------------------------------
-
-### Lattice Layer
-
--   Join / meet
--   Lattice detection
--   Distributivity checks
--   Top / bottom detection
--   Product lattice via state construction
-
-------------------------------------------------------------------------
-
-### Stabilization Layer
-
--   Closure operator Γ (extensive / monotone / idempotent)
--   Interior operator Ι (contractive / monotone / idempotent)
--   Fixpoint extraction
--   Induced fixpoint poset
--   Enumeration-based least/greatest fixpoint
--   Tarski-based least/greatest fixpoint (lattice requirement enforced)
-
-------------------------------------------------------------------------
-
-### Dynamic Layer
-
--   Monotone operators
--   Explicit IN/OUT worklist solver
--   Regime restriction Δ
--   Frame projection F
--   Δ ∘ F structural interaction capability
-
-------------------------------------------------------------------------
+---
 
 ### Application Layer
 
--   Finite constant propagation lattice
--   Product state modeling
--   Typed Mini IR
--   Automatic transfer generation
--   Linear forward dataflow analysis
--   Branch join conflict resolution (→ ⊤)
+* Constant propagation lattice  
+  `(⊥ / Const(n) / ⊤)`
+* Product state lattice construction
+* Typed Mini IR
+* Automatic transfer generation
+* Linear CFG analysis
+* Branch conflict resolution → `⊤`
 
-This establishes NEXAH as a **finite abstract interpretation kernel**.
+---
 
-------------------------------------------------------------------------
+## Quality & Validation
 
-## 3. Quality Status
+* **89 tests passing**
+* **95% coverage**
+* Strict carrier enforcement
+* Deterministic solver semantics
+* Defensive structural validation
+* `mypy --strict` clean
 
--   89 tests passing
--   95% coverage (core modules)
--   Strict carrier enforcement
--   Deterministic fixpoint semantics
--   Defensive validation for:
-    -   Monotonicity
-    -   Lattice requirements
-    -   Carrier membership
-    -   Unique fixpoint guarantees
--   `mypy --strict` clean
--   No dynamic type leaks
+The engine is fully validated **within finite boundaries**.
 
-ENGINE stability: **high (finite, formally validated, operational)**
+---
 
-------------------------------------------------------------------------
+## Intentional Design Constraints
 
-## 4. Intentional Constraints
+Version 1.0 intentionally restricts the system to a **finite analysis domain**.
 
--   Finite structures only
--   No widening/narrowing yet
--   No infinite lattices
--   No probabilistic semantics
--   No performance scaling layer
--   No visualization/export layer
+* Finite structures only
+* No widening / narrowing operators
+* No infinite lattices
+* No probabilistic semantics
+* No performance scaling layer
+* No visualization/export pipeline
 
-These constraints define the current design boundary.
+These constraints define the **v1.0 stability boundary**.
 
-------------------------------------------------------------------------
+---
 
-## 5. Development Roadmap
+## What v1.0.0 Means
 
-### Phase A --- Finite Algebra Core ✔
+* Public API frozen
+* Structural algebra validated
+* Solver semantics stable
+* Application layer operational
+* Suitable for research and finite analysis prototyping
 
-Complete.
+---
 
-------------------------------------------------------------------------
+## Future Evolution
 
-### Phase B --- API Freeze & CI Hardening (Current)
+Planned post-1.0 extensions:
 
--   CI integration (pytest + mypy gate)
--   Coverage threshold enforcement (≥ 90%)
--   Documentation refinement
--   API stability review
--   Version tagging (v1.0)
+* Widening / narrowing operators
+* Guard-sensitive branch refinement
+* Loop analysis extensions
+* Solver trace/debug mode
+* Visualization layer
+* Transition graph export
+* CI enforcement + automated releases
 
-------------------------------------------------------------------------
+---
 
-### Phase C --- Extended Analysis Layer
+## Tag Message
 
--   Widening / narrowing operators
--   Guarded branch refinement
--   Loop analysis examples
--   Transition graph export
--   Visualization layer
--   Trace/debug mode for solver
+v1.0.0 — Stable finite abstract interpretation kernel.
+Structural algebra validated. IN/OUT solver operational. 95% coverage.
 
-------------------------------------------------------------------------
+---
 
-## 6. Versioning Policy
+**NEXAH Engine v1.0.0**
 
--   v0.x → evolving algebra
--   v0.8 → finite algebra stable
--   v0.9 → abstract interpretation operational
--   v1.0 → API frozen + CI stabilized
+Finite. Deterministic. Structurally Verified.
 
-------------------------------------------------------------------------
-
-## 7. Project Objective
-
-To construct a mathematically grounded, executable structural engine\
-for stabilization, regime restriction, projection, and finite abstract
-interpretation\
-within complex systems.
-
-Current state:\
-Finite abstract interpretation kernel validated and operational.
-
-Next step:\
-CI hardening + formal v1.0 release.
