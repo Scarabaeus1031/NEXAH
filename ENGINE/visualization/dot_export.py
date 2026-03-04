@@ -38,7 +38,7 @@ def export_hasse_to_dot(
     lab = node_label or (lambda x: _label(x))
 
     hasse = HasseDiagram(poset)
-    edges: List[Tuple[T, T]] = list(hasse.covers())  # type: ignore[attr-defined]
+    edges: List[Tuple[T, T]] = list(hasse.covers())
 
     lines: List[str] = []
 
