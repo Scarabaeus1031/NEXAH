@@ -1,40 +1,135 @@
-# NEXAH Framework - Research Portal
+# NEXAH — Research Portal
 
-Welcome to the NEXAH Research Portal! This portal provides the necessary resources and documentation to dive deep into the theoretical foundations and research of the NEXAH framework.
+Welcome to the **NEXAH Research Portal**.
 
-![Research Framework](./visuals/Explore_Framework.png)
+This section explores the theoretical foundations behind the NEXAH framework.  
+It provides access to research material, conceptual models, and structural analysis studies that support the development of NEXAH.
 
-## 🔎 Research & Exploration
-
-### Why NEXAH?
-
-NEXAH was created as a **universal model** for complex systems. It aims to provide the tools to understand dynamic changes, regime shifts, and structural orientation in systems of all types.
-
-### Core Areas of NEXAH:
-
-- **META**: Framework structure — defines relational order.
-- **ARCHY**: Stability regimes — governs transitions between system states.
-- **NEXAH**: Orientation and frames — enables navigability within the system.
-
-![Research Overview](./visuals/Nexah_Repository_Research_Application_ii.png)
+The research layer connects **mathematical structure, system modeling theory, and practical applications**.
 
 ---
 
-### **Research Documentation**
+## Structural Research Context
 
-Explore the research papers and documentation related to NEXAH's theoretical principles:
+NEXAH research focuses on understanding complex systems through **relational structures, stability regimes, and explicit system orientation**.
 
-- **Axioms** – Foundational principles of NEXAH.
-- **Principles** – Core structural logic for applying NEXAH.
-- **Theorems** – Formal derivations and applications based on NEXAH.
+Rather than analyzing systems only through numerical metrics, the research approach studies:
 
----
-
-## 🚀 Next Steps:
-- **Dive Deeper**: Explore the full **framework structure** and understand the principles behind NEXAH.
-- **Practical Applications**: Learn how NEXAH can be applied in real-world scenarios.
-- **Contribute**: Contribute to the ongoing research by suggesting improvements or adding new insights.
+- structural relations
+- system regimes and transitions
+- relational modeling frameworks
+- structural navigation of complex environments
 
 ---
 
-This repository serves as the gateway to understanding and contributing to the **NEXAH framework**. The structure is designed to support research and applications that utilize relational modeling and explicit orientation.
+## Research Architecture
+
+The theoretical structure of NEXAH research builds on several conceptual components.
+
+These components include:
+
+### Axioms
+Foundational assumptions that define the structural modeling framework.
+
+### Principles
+Core conceptual rules guiding relational modeling and system orientation.
+
+### Theorems
+Formal derivations that describe how structural systems behave.
+
+### Operators
+Structural operators used for modeling system transitions and transformations.
+
+Examples include:
+
+- relational operators
+- regime restriction operators
+- frame projection operators
+
+---
+
+## Research Areas
+
+NEXAH research explores several thematic domains.
+
+Examples include:
+
+### Structural Modeling
+
+Development of relational system models for complex environments.
+
+---
+
+### Regime and Stability Theory
+
+Analysis of how systems transition between stable configurations.
+
+Topics may include:
+
+- regime shifts
+- threshold behavior
+- stabilization processes
+
+---
+
+### Relational System Navigation
+
+Exploration of methods for navigating large structural systems.
+
+This includes:
+
+- relational graph structures
+- system orientation frameworks
+- structural mapping approaches
+
+---
+
+## Research Documentation
+
+Research material can be found in the repository.
+
+Key locations include:
+
+Framework documentation  
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/FRAMEWORK
+
+Research material  
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/RESEARCH
+
+Navigator documentation  
+→ https://github.com/Scarabaeus1031/NEXAH/tree/main/NAVIGATOR
+
+---
+
+## From Research to Application
+
+The NEXAH ecosystem follows a layered progression:
+
+Research
+↓
+Framework
+↓
+Engine
+↓
+Applications
+
+Research provides the theoretical basis that informs the development of modeling operators and system analysis tools.
+
+---
+
+## Explore Further
+
+From this portal you can continue exploring:
+
+Framework  
+Conceptual structure of the NEXAH modeling system.
+
+Repository  
+Code and implementation of the NEXAH engine.
+
+Applications  
+Real-world modeling examples and system studies.
+
+---
+
+The **Research Portal** serves as the conceptual backbone of the NEXAH ecosystem, connecting theoretical exploration with executable structural modeling.
