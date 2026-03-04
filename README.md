@@ -6,6 +6,30 @@ a modular system for structural modeling, stabilization, and relational navigati
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
 ---
+---
+
+## 🔎 Quick Navigation
+
+| Section | Description |
+|--------|-------------|
+| 🏗 **ENGINE** | Finite algebra engine and abstract interpretation core |
+| 📐 **FRAMEWORK** | Conceptual stack (META / ARCHY / NEXAH) |
+| 🔬 **RESEARCH** | Theoretical models, stability regimes, and experiments |
+| 🚀 **APPLICATIONS** | Real-world system modeling and use cases |
+| 🧭 **NAVIGATOR** | Visual documentation and system maps |
+
+---
+
+### Explore the Repository
+
+| Portal | Link |
+|------|------|
+| Framework Portal | [`NAVIGATOR/framework_portal.md`](./NAVIGATOR/framework_portal.md) |
+| Research Portal | [`NAVIGATOR/research_portal.md`](./NAVIGATOR/research_portal.md) |
+| Repository Navigator | [`NAVIGATOR/navigator.md`](./NAVIGATOR/navigator.md) |
+| Applications Portal | [`NAVIGATOR/applications_portal.md`](./NAVIGATOR/applications_portal.md) |
+
+---
 
 ## Overview
 
