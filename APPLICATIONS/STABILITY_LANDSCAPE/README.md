@@ -10,7 +10,7 @@ NEXAH models these dynamics as **stability landscapes**.
 
 # The Stability Landscape
 
-![Stability Landscape](visuals/Understanding_Stability_Landscapes_with_NEXAH.png)
+![Stability Landscape](..visuals/Understanding_Stability_Landscapes_with_NEXAH.png)
 
 A system can be represented as a point moving through a structured landscape.
 
