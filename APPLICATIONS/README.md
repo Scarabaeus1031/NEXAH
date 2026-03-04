@@ -88,7 +88,7 @@ The goal is to show how general system dynamics can be represented, analyzed, an
 
 ---
 
-# Intro Model
+## Intro Model
 
 <img src="visuals/Introductory_NEXAH-Core_System_Classes.png" width="900">
 
@@ -161,7 +161,7 @@ Examples:
 
 Example application:
 
-### APPLICATIONS/REGIME_SYSTEM
+## APPLICATIONS/REGIME_SYSTEM
 
 ---
 
