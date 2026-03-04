@@ -1,114 +1,40 @@
-# NEXAH — Research Portal
-
-Welcome to the **NEXAH Research Portal**.
-
-This section explores the theoretical foundations behind the NEXAH framework.  
-It connects **formal research**, **structural modeling**, and **practical system applications**.
-
-Research within NEXAH focuses on understanding complex systems through:
-
-- relational structures
-- stability regimes
-- system transitions
-- structural orientation models
+The pipeline illustrates how theoretical concepts are transformed into executable models and eventually applied to complex environments.
 
 ---
 
-![NEXAH Research Architecture](./visuals/nexah_research_architecture_white.png)
+## Application Domains
 
----
-
-## Research Architecture
-
-The research layer of NEXAH builds the conceptual foundation of the framework.
-
-The structure follows a layered development process:
-
-### Axioms
-
-Foundational assumptions defining the relational modeling approach.
-
-These axioms describe how systems can be represented as structured relations.
-
----
-
-### Principles
-
-Core conceptual rules guiding how relational structures behave and interact.
-
-Principles establish the structural logic of the framework.
-
----
-
-### Theorems
-
-Formal derivations and mathematical results describing system behavior.
-
-These theorems support the formal validity of the NEXAH modeling framework.
-
----
-
-### Operators
-
-Structural operators implement the theoretical principles inside the system.
+The research framework supports modeling across several domains.
 
 Examples include:
 
-- relational operators
-- regime restriction operators
-- frame projection operators
+- **Drift–Threshold Engineering**
+- **Urban Axis Systems**
+- **Maritime Drift Systems**
+- **Environmental Gradient Systems**
+- **Laminar Coupling Models**
+- **Archaeological Alignment Models**
 
-These operators form the executable layer of the framework.
-
----
-
-### Framework and Engine
-
-The theoretical concepts are implemented inside the NEXAH framework and the ENGINE modules.
-
-The repository includes:
-
-- formal framework definitions
-- structural operators
-- system modeling tools
-- analysis engines
-
----
-
-### Applications
-
-The final stage of the research pipeline applies the framework to real-world systems.
-
-These applications demonstrate how relational modeling can be used to study complex environments.
-
-Examples include:
-
-- drift-threshold systems
-- urban axis models
-- maritime drift systems
-- environmental gradient systems
-- archaeological alignment models
+These applications demonstrate how relational system modeling can be used to analyze real-world structures.
 
 ---
 
 ## Research Areas
 
-Research within the NEXAH ecosystem explores several key domains.
+The NEXAH research layer currently focuses on three primary domains.
 
 ### Structural System Modeling
 
-Development of relational models to describe complex systems.
+Development of relational models describing complex systems.
 
 ---
 
 ### Stability and Regime Theory
 
-Study of system transitions between stable states.
+Study of transitions between stable system states, including:
 
-Topics include:
-
-- thresholds
 - regime shifts
+- threshold behavior
 - stabilization processes
 
 ---
@@ -125,14 +51,12 @@ This includes:
 
 ---
 
-## Explore the Research Materials
-
-The research documentation can be found in the repository.
+## Repository Resources
 
 Framework documentation  
 https://github.com/Scarabaeus1031/NEXAH/tree/main/FRAMEWORK
 
-Research material  
+Research materials  
 https://github.com/Scarabaeus1031/NEXAH/tree/main/RESEARCH
 
 Navigator documentation  
@@ -140,9 +64,20 @@ https://github.com/Scarabaeus1031/NEXAH/tree/main/NAVIGATOR
 
 ---
 
-## From Research to Application
+## Continue Exploring
 
-The NEXAH ecosystem follows a layered progression:
+Framework Portal  
+`framework_portal.md`
+
+Repository Portal  
+`repository_portal.md`
+
+Applications Portal  
+`applications_portal.md`
+
+---
+
+The **Research Portal** connects theoretical exploration with executable modeling tools and practical system applications within the NEXAH ecosystem.
 
 Research
 ↓
@@ -153,23 +88,83 @@ Engine
 Applications
 
 
-Research provides the theoretical basis that informs the development of modeling operators and system analysis tools.
+The pipeline illustrates how theoretical concepts are transformed into executable models and eventually applied to complex environments.
+
+---
+
+## Application Domains
+
+The research framework supports modeling across several domains.
+
+Examples include:
+
+- **Drift–Threshold Engineering**
+- **Urban Axis Systems**
+- **Maritime Drift Systems**
+- **Environmental Gradient Systems**
+- **Laminar Coupling Models**
+- **Archaeological Alignment Models**
+
+These applications demonstrate how relational system modeling can be used to analyze real-world structures.
+
+---
+
+## Research Areas
+
+The NEXAH research layer currently focuses on three primary domains.
+
+### Structural System Modeling
+
+Development of relational models describing complex systems.
+
+---
+
+### Stability and Regime Theory
+
+Study of transitions between stable system states, including:
+
+- regime shifts
+- threshold behavior
+- stabilization processes
+
+---
+
+### Relational Navigation
+
+Methods for navigating and analyzing large relational structures.
+
+This includes:
+
+- structural graphs
+- relational mapping
+- system orientation frameworks
+
+---
+
+## Repository Resources
+
+Framework documentation  
+https://github.com/Scarabaeus1031/NEXAH/tree/main/FRAMEWORK
+
+Research materials  
+https://github.com/Scarabaeus1031/NEXAH/tree/main/RESEARCH
+
+Navigator documentation  
+https://github.com/Scarabaeus1031/NEXAH/tree/main/NAVIGATOR
 
 ---
 
 ## Continue Exploring
 
-You can continue navigating the NEXAH ecosystem through the following portals:
-
-Framework  
+Framework Portal  
 `framework_portal.md`
 
-Repository  
+Repository Portal  
 `repository_portal.md`
 
-Applications  
+Applications Portal  
 `applications_portal.md`
 
 ---
 
-The **Research Portal** serves as the conceptual backbone of the NEXAH ecosystem, connecting theoretical exploration with executable structural modeling.
+The **Research Portal** connects theoretical exploration with executable modeling tools and practical system applications within the NEXAH ecosystem.
