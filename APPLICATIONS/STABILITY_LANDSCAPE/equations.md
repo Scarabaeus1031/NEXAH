@@ -4,6 +4,17 @@ This document introduces a minimal mathematical formulation of the **Stability L
 
 The goal is not to predict exact trajectories of complex systems, but to describe the **structural properties of their state space**.
 
+![Stability Landscape Equations](../visuals/stability_landscape_equations_diagram.png)
+
+The diagram above summarizes the key elements of the stability landscape formulation:
+
+- the **transition rule** describing how the system evolves
+- the **stability function** defining the structure of the landscape
+- the **attractor conditions** that define stable states
+- the **gradient descent dynamics** describing movement toward stability
+
+The following sections define these elements formally.
+
 ---
 
 # System State
@@ -108,8 +119,8 @@ Instead of predicting exact trajectories, NEXAH focuses on the **structural orga
 
 The following models specialize this framework for different classes of systems:
 
-- Gradient Systems
-- Drift Systems
-- Regime Systems
+- **Gradient Systems**
+- **Drift Systems**
+- **Regime Systems**
 
 Each model defines a different structure for the transition function **f(x)**.
