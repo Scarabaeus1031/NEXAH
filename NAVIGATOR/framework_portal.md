@@ -30,6 +30,8 @@ The core architecture of the NEXAH framework is structured across three layers.
 
 ![Explore Framework](./visuals/Explore_Framework.png)
 
+---
+
 ### META — Framework Structure
 
 Defines the **relational order** of the system.
@@ -81,12 +83,15 @@ The framework is designed not only as a conceptual model but also as a **practic
 Examples of applied structural modeling include:
 
 ### Formal Core
+
 Relational modeling and orientation of complex systems.
 
 ### Regime Theory
+
 Analysis of thresholds and transitions between system states.
 
 ### Documented Applications
+
 Real-world case studies demonstrating NEXAH modeling.
 
 Applications may include fields such as:
@@ -113,15 +118,21 @@ This allows complex domains to be explored through **structured relational model
 
 ---
 
-## Next Steps
+## Continue Exploring
 
-From this portal you can continue exploring the NEXAH ecosystem:
+From this portal you can continue exploring the NEXAH ecosystem.
 
-**Research**  
-Explore theoretical foundations and structural principles behind the framework.
+**Research Portal**  
+[`research_portal.md`](./research_portal.md)
 
-**Applications**  
+Explore the theoretical foundations and structural principles behind the framework.
+
+**Applications Portal**  
+[`applications_portal.md`](./applications_portal.md)
+
 Discover documented case studies and real-world structural modeling examples.
 
-**Repository**  
-Access the NEXAH implementation and computational tools.
+**Repository Navigator**  
+[`repository_portal.md`](./repository_portal.md)
+
+Access the structural map of the NEXAH repository and explore its modules.
