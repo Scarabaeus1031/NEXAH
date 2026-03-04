@@ -3,42 +3,54 @@
 Welcome to the **NEXAH Research Portal**.
 
 This section explores the theoretical foundations behind the NEXAH framework.  
-It provides access to research material, conceptual models, and structural analysis studies that support the development of NEXAH.
+It connects **formal research**, **structural modeling**, and **practical system applications**.
 
-The research layer connects **mathematical structure, system modeling theory, and practical applications**.
+Research within NEXAH focuses on understanding complex systems through:
+
+- relational structures
+- stability regimes
+- system transitions
+- structural orientation models
 
 ---
 
-## Structural Research Context
-
-NEXAH research focuses on understanding complex systems through **relational structures, stability regimes, and explicit system orientation**.
-
-Rather than analyzing systems only through numerical metrics, the research approach studies:
-
-- structural relations
-- system regimes and transitions
-- relational modeling frameworks
-- structural navigation of complex environments
+![NEXAH Research Architecture](./visuals/nexah_research_architecture_white.png)
 
 ---
 
 ## Research Architecture
 
-The theoretical structure of NEXAH research builds on several conceptual components.
+The research layer of NEXAH builds the conceptual foundation of the framework.
 
-These components include:
+The structure follows a layered development process:
 
 ### Axioms
-Foundational assumptions that define the structural modeling framework.
+
+Foundational assumptions defining the relational modeling approach.
+
+These axioms describe how systems can be represented as structured relations.
+
+---
 
 ### Principles
-Core conceptual rules guiding relational modeling and system orientation.
+
+Core conceptual rules guiding how relational structures behave and interact.
+
+Principles establish the structural logic of the framework.
+
+---
 
 ### Theorems
-Formal derivations that describe how structural systems behave.
+
+Formal derivations and mathematical results describing system behavior.
+
+These theorems support the formal validity of the NEXAH modeling framework.
+
+---
 
 ### Operators
-Structural operators used for modeling system transitions and transformations.
+
+Structural operators implement the theoretical principles inside the system.
 
 Examples include:
 
@@ -46,58 +58,85 @@ Examples include:
 - regime restriction operators
 - frame projection operators
 
+These operators form the executable layer of the framework.
+
+---
+
+### Framework and Engine
+
+The theoretical concepts are implemented inside the NEXAH framework and the ENGINE modules.
+
+The repository includes:
+
+- formal framework definitions
+- structural operators
+- system modeling tools
+- analysis engines
+
+---
+
+### Applications
+
+The final stage of the research pipeline applies the framework to real-world systems.
+
+These applications demonstrate how relational modeling can be used to study complex environments.
+
+Examples include:
+
+- drift-threshold systems
+- urban axis models
+- maritime drift systems
+- environmental gradient systems
+- archaeological alignment models
+
 ---
 
 ## Research Areas
 
-NEXAH research explores several thematic domains.
+Research within the NEXAH ecosystem explores several key domains.
 
-Examples include:
+### Structural System Modeling
 
-### Structural Modeling
-
-Development of relational system models for complex environments.
+Development of relational models to describe complex systems.
 
 ---
 
-### Regime and Stability Theory
+### Stability and Regime Theory
 
-Analysis of how systems transition between stable configurations.
+Study of system transitions between stable states.
 
-Topics may include:
+Topics include:
 
+- thresholds
 - regime shifts
-- threshold behavior
 - stabilization processes
 
 ---
 
-### Relational System Navigation
+### Relational Navigation
 
-Exploration of methods for navigating large structural systems.
+Methods for navigating and analyzing large relational structures.
 
 This includes:
 
-- relational graph structures
+- structural graphs
+- relational mapping
 - system orientation frameworks
-- structural mapping approaches
 
 ---
 
-## Research Documentation
+## Explore the Research Materials
 
-Research material can be found in the repository.
-
-Key locations include:
+The research documentation can be found in the repository.
 
 Framework documentation  
-→ https://github.com/Scarabaeus1031/NEXAH/tree/main/FRAMEWORK
+https://github.com/Scarabaeus1031/NEXAH/tree/main/FRAMEWORK
 
 Research material  
-→ https://github.com/Scarabaeus1031/NEXAH/tree/main/RESEARCH
+https://github.com/Scarabaeus1031/NEXAH/tree/main/RESEARCH
 
 Navigator documentation  
-→ https://github.com/Scarabaeus1031/NEXAH/tree/main/NAVIGATOR
+https://github.com/Scarabaeus1031/NEXAH/tree/main/NAVIGATOR
 
 ---
 
@@ -113,22 +152,23 @@ Engine
 ↓
 Applications
 
+
 Research provides the theoretical basis that informs the development of modeling operators and system analysis tools.
 
 ---
 
-## Explore Further
+## Continue Exploring
 
-From this portal you can continue exploring:
+You can continue navigating the NEXAH ecosystem through the following portals:
 
 Framework  
-Conceptual structure of the NEXAH modeling system.
+`framework_portal.md`
 
 Repository  
-Code and implementation of the NEXAH engine.
+`repository_portal.md`
 
 Applications  
-Real-world modeling examples and system studies.
+`applications_portal.md`
 
 ---
 
