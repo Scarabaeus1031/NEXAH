@@ -6,12 +6,12 @@ This directory contains practical system models and example applications built w
 
 ## Framework Navigation
 
-| Model | Description |
-|------|-------------|
-| **Stability Landscape** | Conceptual foundation of system stability |
-| **Gradient Systems** | Systems evolving along stability gradients |
-| **Drift Systems** | Gradient dynamics with external forces |
-| **Regime Systems** | Systems with multiple attractor regimes |
+| Model | Description | Module |
+|------|-------------|--------|
+| **Stability Landscape** | Conceptual foundation of system stability | [STABILITY_LANDSCAPE](./STABILITY_LANDSCAPE) |
+| **Gradient Systems** | Systems evolving along stability gradients | [GRADIENT_SYSTEM](./GRADIENT_SYSTEM) |
+| **Drift Systems** | Gradient dynamics with external forces | [DRIFT_SYSTEM](./DRIFT_SYSTEM) |
+| **Regime Systems** | Systems with multiple attractor regimes | [REGIME_SYSTEM](./REGIME_SYSTEM) |
 
 ### Modules
 
@@ -145,7 +145,7 @@ This model provides the conceptual foundation for the application modules that f
 
 Directory:
 
-APPLICATIONS/STABILITY_LANDSCAPE
+[STABILITY_LANDSCAPE](./STABILITY_LANDSCAPE/README.md)
 
 ---
 
@@ -174,7 +174,7 @@ Typical examples include:
 
 Application module:
 
-APPLICATIONS/GRADIENT_SYSTEM
+[GRADIENT_SYSTEM](./GRADIENT_SYSTEM/README.md)
 
 ---
 
@@ -193,7 +193,7 @@ Examples include:
 
 Application module:
 
-APPLICATIONS/DRIFT_SYSTEM
+[DRIFT_SYSTEM](./DRIFT_SYSTEM/README.md)
 
 ---
 
@@ -212,7 +212,7 @@ Examples include:
 
 Application module:
 
-APPLICATIONS/REGIME_SYSTEM
+[REGIME_SYSTEM](./REGIME_SYSTEM/README.md)
 
 ---
 
