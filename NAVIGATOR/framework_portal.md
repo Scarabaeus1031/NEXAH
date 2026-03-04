@@ -7,7 +7,7 @@ a modular system for **structural modeling, stabilization, and relational naviga
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
 ---
-
+ 
 # Overview
 
 NEXAH is a **mathematically grounded structural framework** for modeling complex systems through:
