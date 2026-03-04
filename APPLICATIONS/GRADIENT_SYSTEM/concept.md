@@ -6,6 +6,13 @@ In these systems, the direction of change is determined by the **local gradient 
 
 Instead of exploring the state space randomly, the system follows deterministic paths that lead toward regions of higher stability.
 
+![Gradient Vector Field](../visuals/gradient_vector_field.png)
+
+The diagram above illustrates the characteristic behavior of a gradient system.
+
+Arrows represent the **gradient field** of the stability function.  
+From every point in the state space, the system moves in the direction of **steepest descent**, eventually converging toward a stable attractor.
+
 ---
 
 # Stability Landscapes
