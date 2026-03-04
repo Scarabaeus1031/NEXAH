@@ -9,6 +9,26 @@ Applications serve as the **implementation and validation layer** of the NEXAH f
 
 ---
 
+## Core Application Models
+
+The repository currently contains several **dynamical system models** that demonstrate how NEXAH can analyze structured system behavior.
+
+| Model | Description |
+|------|-------------|
+| **Stability Landscape** | Conceptual stability structure of system states |
+| **Gradient Systems** | Dynamics along stability gradients |
+| **Drift Systems** | Gradient dynamics influenced by external forces |
+| **Regime Systems** | Systems with multiple attractor regimes and transitions |
+
+Explore the modules:
+
+- [STABILITY_LANDSCAPE](../APPLICATIONS/STABILITY_LANDSCAPE/)
+- [GRADIENT_SYSTEM](../APPLICATIONS/GRADIENT_SYSTEM/)
+- [DRIFT_SYSTEM](../APPLICATIONS/DRIFT_SYSTEM/)
+- [REGIME_SYSTEM](../APPLICATIONS/REGIME_SYSTEM/)
+
+---
+
 ## Practical Applications
 
 ![Applications Overview](./visuals/Nexah_Application.png)
@@ -28,7 +48,7 @@ Applications typically involve:
 
 ## Example Application Domains
 
-Several prototype application domains illustrate how the framework can be used.
+Several prototype domains illustrate where the framework may be applied.
 
 ### Drift–Threshold Engineering
 
@@ -44,7 +64,7 @@ Possible contexts:
 
 ### Maritime Drift Systems
 
-Modeling of maritime movement patterns and environmental influences.
+Modeling maritime movement patterns and environmental influences.
 
 Examples include:
 
@@ -108,8 +128,9 @@ Possible use cases:
 
 The NEXAH repository supports the transition from theoretical structure to applied modeling.
 
-The workflow typically follows this sequence:
+Typical workflow:
 
+```
 Framework
 ↓
 Operators
@@ -117,7 +138,7 @@ Operators
 Modules
 ↓
 Applications
-
+```
 
 This allows models to evolve from conceptual structure to real-world system analysis.
 
@@ -131,7 +152,7 @@ To start working with the framework:
 2. Study the **operators and modules**  
 3. Apply relational modeling to real systems  
 
-Example implementation steps may include:
+Typical steps may include:
 
 - defining system relations
 - constructing structural graphs
@@ -153,18 +174,15 @@ Possible contributions include:
 
 ---
 
-## Next Steps
+## Continue Exploring
 
-Continue exploring the NEXAH ecosystem:
+From here you can continue exploring the NEXAH ecosystem.
 
-**Framework**  
-Understand the conceptual architecture of the system.
+**Framework Portal**  
+`framework_portal.md`
 
-**Repository**  
-Browse the implementation and modeling operators.
+**Research Portal**  
+`research_portal.md`
 
-**Research**  
-Study the theoretical foundations of relational modeling.
-
-**Applications**  
-Explore additional use cases and structural system models.
+**Repository Navigator**  
+`repository_portal.md`
