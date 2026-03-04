@@ -2,7 +2,7 @@
 
 This directory contains practical system models and example applications built with the **NEXAH framework**.
 
-While the core framework provides the structural operators and algorithms, the applications demonstrate how NEXAH can be used to analyze real-world systems.
+While the core framework defines the formal operators and structural semantics, the **applications demonstrate how these models can be used to analyze real-world systems.**
 
 In simple terms:
 
@@ -21,12 +21,34 @@ The NEXAH workflow connects formal structural theory with real-world system anal
 
 The process follows four conceptual layers:
 
-**Formal Core → Structural Semantics → System Models → Applications**
+Formal Core → Structural Semantics → System Models → Applications
 
-- **Formal Core** defines the mathematical and logical operators.
-- **Structural Semantics** introduces regimes, frames, and thresholds.
-- **System Models** represent specific structural dynamics.
-- **Applications** demonstrate how these models analyze real systems.
+- **Formal Core** defines the mathematical and logical operators  
+- **Structural Semantics** introduces regimes, frames, and thresholds  
+- **System Models** represent specific structural dynamics  
+- **Applications** demonstrate how these models analyze real systems  
+
+---
+
+# NEXAH Dynamical Framework
+
+<img src="visuals/nexah_dynamics_framework_overview.png" width="900">
+
+The NEXAH applications are built on a hierarchy of dynamical models.
+
+The framework describes **how systems evolve in structured state spaces** and how stability emerges through different types of dynamics.
+
+The model hierarchy follows four levels:
+
+Stability Landscape  
+↓  
+Gradient Systems  
+↓  
+Drift Systems  
+↓  
+Regime Systems  
+
+Each level introduces additional structural complexity in the system dynamics.
 
 ---
 
@@ -34,155 +56,117 @@ The process follows four conceptual layers:
 
 <img src="visuals/Applications_Navigation_Map.png" width="900">
 
-The applications follow a simple conceptual progression:
+The applications follow a conceptual progression:
 
-Stability Landscape (intro model)
-↓
-Three structural system classes
-↓
-Example applications
+Stability Landscape (intro model)  
+↓  
+Three structural system classes  
+↓  
+Example applications  
 
-The goal is to show how general system dynamics can be represented, analyzed, and applied using NEXAH.
+The goal is to demonstrate how general system dynamics can be represented, analyzed, and applied using the NEXAH framework.
 
 ---
 
-# Intro Model
+# Intro Model – Stability Landscape
 
-<img src="visuals/Introductory_NEXAH-Core_System_Classes.png" width="900">
+The **Stability Landscape** model introduces the central idea of NEXAH.
 
-The **intro model** introduces the central idea of NEXAH:
+Systems evolve through possible states and eventually stabilize within attractor regions of a stability landscape.
 
-Systems evolve through possible states and eventually stabilize.
-
-This is represented as a **stability landscape**, where system states move toward stable attractors.
+This model provides the conceptual foundation for the application modules that follow.
 
 Directory:
 
-# APPLICATIONS/STABILITY_LANDSCAPE
-This model provides the conceptual foundation for the applications that follow.
+APPLICATIONS/STABILITY_LANDSCAPE
 
 ---
 
 # Core System Classes
 
-NEXAH focuses on three fundamental classes of structural systems.
+NEXAH focuses on three fundamental classes of dynamical systems.
 
-Each class represents a different type of system dynamics.
-
----
-
-## Gradient Systems
-
-Systems that evolve along an ordered gradient.
-
-Examples:
-
-- temperature gradients  
-- altitude or pressure systems  
-- energy landscapes  
-- ecological distributions  
-
-Example application:
-
-The goal is to show how general system dynamics can be represented, analyzed, and applied using NEXAH.
-
----
-
-## Intro Model
-
-<img src="visuals/Introductory_NEXAH-Core_System_Classes.png" width="900">
-
-The **intro model** introduces the central idea of NEXAH:
-
-Systems evolve through possible states and eventually stabilize.
-
-This is represented as a **stability landscape**, where system states move toward stable attractors.
-
-Directory:
-
-# APPLICATIONS/STABILITY_LANDSCAPE
-
-This model provides the conceptual foundation for the applications that follow.
-
----
-
-# Core System Classes
-
-NEXAH focuses on three fundamental classes of structural systems.
-
-Each class represents a different type of system dynamics.
+Each class represents a different structural mechanism governing system evolution.
 
 ---
 
 ## Gradient Systems
 
-Systems that evolve along an ordered gradient.
+Gradient systems evolve along the slope of a stability landscape.
 
-Examples:
+System dynamics follow the gradient of a potential function:
+
+dx/dt = -∇V(x)
+
+Typical examples include:
 
 - temperature gradients  
-- altitude or pressure systems  
+- pressure systems  
 - energy landscapes  
 - ecological distributions  
 
-Example application:
+Application module:
 
-# APPLICATIONS/GRADIENT_SYSTEM
+APPLICATIONS/GRADIENT_SYSTEM
 
 ---
 
 ## Drift Systems
 
-Systems that move through a structured space under external forces.
+Drift systems extend gradient dynamics by introducing external forces that influence system motion.
 
-Examples:
+dx/dt = -∇V(x) + F(x,t)
+
+Examples include:
 
 - ocean currents  
-- particle drift  
-- migration flows  
 - atmospheric transport  
+- particle drift in fluids  
+- migration flows  
 
-Example application:
+Application module:
 
-# APPLICATIONS/DRIFT_SYSTEM
+APPLICATIONS/DRIFT_SYSTEM
 
 ---
 
 ## Regime Systems
 
-Systems that transition between different structural regimes.
+Regime systems describe systems with **multiple attractor basins** and possible transitions between them.
 
-Examples:
+dx/dt = -∇V(x) + R(x,t)
+
+Examples include:
 
 - traffic flow vs congestion  
-- market regimes  
+- financial market regimes  
 - ecosystem state transitions  
 - infrastructure thresholds  
 
-Example application:
+Application module:
 
-## APPLICATIONS/REGIME_SYSTEM
+APPLICATIONS/REGIME_SYSTEM
 
 ---
 
 # Builder Hub
 
-Experimental ideas and community-built applications are collected in:
+Experimental ideas and community-built applications can be developed within this framework.
 
-This area is intended for:
+Possible directions include:
 
-- new application ideas
-- prototype system models
-- experimental analyses
-- community contributions
+- new application domains  
+- prototype system models  
+- experimental simulations  
+- collaborative research extensions  
 
 ---
 
 # Philosophy
 
-NEXAH focuses on **finite structural systems**.
+NEXAH focuses on **structural stability in complex systems**.
 
-Instead of predicting outcomes purely through statistical methods, NEXAH analyzes the **structure of possible states** and determines where systems stabilize.
+Instead of predicting outcomes purely through statistical models, NEXAH analyzes the **structure of possible system states** and determines where systems stabilize.
 
 In short:
 
