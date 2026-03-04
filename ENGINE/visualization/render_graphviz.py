@@ -19,11 +19,15 @@ def write_dot(dot: str, path: str | Path) -> Path:
 def render_png(dot_file: str | Path, png_file: str | Path) -> None:
     """
     Call Graphviz to render PNG.
+    If graphviz is not installed, skip rendering.
     """
-    subprocess.run(
-        ["dot", "-Tpng", str(dot_file), "-o", str(png_file)],
-        check=True,
-    )
+    try:
+        subprocess.run(
+            ["dot", "-Tpng", str(dot_file), "-o", str(png_file)],
+            check=True,
+        )
+    except FileNotFoundError:
+        print("Graphviz not installed — skipping PNG rendering.")
 
 
 def render_graph(
