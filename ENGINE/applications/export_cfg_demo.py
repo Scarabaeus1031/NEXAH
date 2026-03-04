@@ -1,19 +1,25 @@
-# ENGINE/applications/export_cfg_demo.py
+from __future__ import annotations
 
-def build_cfg():
+from typing import List, Tuple
+
+from ENGINE.visualization.dot_export import export_cfg_to_dot
+
+
+def build_cfg() -> tuple[List[str], List[Tuple[str, str]]]:
     """
     Simple demo control-flow graph.
     """
-    nodes = [
+
+    nodes: List[str] = [
         "start",
         "cond_x_gt_0",
         "branch_A",
         "branch_B",
         "join",
-        "end"
+        "end",
     ]
 
-    edges = [
+    edges: List[Tuple[str, str]] = [
         ("start", "cond_x_gt_0"),
         ("cond_x_gt_0", "branch_A"),
         ("cond_x_gt_0", "branch_B"),
@@ -25,26 +31,20 @@ def build_cfg():
     return nodes, edges
 
 
-def export_dot(nodes, edges, filename="cfg_demo.dot"):
-    with open(filename, "w") as f:
-        f.write("digraph CFG {\n")
-        f.write("  rankdir=TB;\n")
-        f.write("  node [shape=box];\n\n")
+def export_dot(nodes: List[str], edges: List[Tuple[str, str]], filename: str = "cfg_demo.dot") -> None:
+    """
+    Export CFG graph as DOT file using the engine exporter.
+    """
 
-        for n in nodes:
-            f.write(f'  "{n}";\n')
+    dot = export_cfg_to_dot(nodes, edges)
 
-        f.write("\n")
-
-        for src, dst in edges:
-            f.write(f'  "{src}" -> "{dst}";\n')
-
-        f.write("}\n")
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(dot)
 
     print(f"Wrote {filename}")
 
 
-def main():
+def main() -> None:
     nodes, edges = build_cfg()
     export_dot(nodes, edges)
 
