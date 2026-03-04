@@ -1,0 +1,18 @@
+digraph CFG {
+  rankdir=TB;
+  node [shape=box];
+
+  "start";
+  "cond_x_gt_0";
+  "branch_A";
+  "branch_B";
+  "join";
+  "end";
+
+  "start" -> "cond_x_gt_0";
+  "cond_x_gt_0" -> "branch_A";
+  "cond_x_gt_0" -> "branch_B";
+  "branch_A" -> "join";
+  "branch_B" -> "join";
+  "join" -> "end";
+}
