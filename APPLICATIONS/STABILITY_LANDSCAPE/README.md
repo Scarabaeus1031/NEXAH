@@ -10,7 +10,7 @@ NEXAH models these dynamics as **stability landscapes**.
 
 # The Stability Landscape
 
-![Stability Landscape](APPLICATIONS/visuals/Understanding_Stability_Landscapes_with_NEXAH.png)
+![Stability Landscape](../visuals/Understanding_Stability_Landscapes_with_NEXAH.png)
 
 A system can be represented as a point moving through a structured landscape.
 
@@ -24,7 +24,7 @@ Over time, systems tend to move toward these stable configurations.
 
 # Regime Structure
 
-![Regime Map](APPLICATIONS/visuals/NEXAH_Stability_Map.png)
+![Regime Map](../visuals/NEXAH_Stability_Map.png)
 
 Many real-world systems contain multiple structural regimes.
 
@@ -41,7 +41,7 @@ Transitions between regimes occur when the system crosses structural thresholds.
 
 # Complex Stability Landscapes
 
-![Complex Landscape](APPLICATIONS/visuals/NEXAH_Stability_Map_ii.png)
+![Complex Landscape](../visuals/NEXAH_Stability_Map_ii.png)
 
 In complex systems, multiple attractors and pathways may exist.
 
@@ -57,7 +57,7 @@ NEXAH explores these landscapes to identify:
 
 # State Transitions
 
-![State Transition Graph](APPLICATIONS/visuals/State_Transition_Graph.png)
+![State Transition Graph](../visuals/State_Transition_Graph.png)
 
 System dynamics can also be represented as a **state transition graph**.
 
