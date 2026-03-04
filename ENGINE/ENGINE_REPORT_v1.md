@@ -1,4 +1,26 @@
+# NEXAH Engine v1.0.0 Release Notes
+
+## Stable Finite Abstract Interpretation Kernel
+
+Release Type: **API Freeze Candidate**  
+Stability Level: **High (Finite Scope)**  
+Coverage: **95%**  
+Tests: **89 Passing**  
+Typing: **mypy --strict clean**
+
 ---
+
+## Overview
+
+NEXAH Engine v1.0.0 marks the stabilization of the **finite structural algebra core** and the **operational abstract interpretation layer**.
+
+The engine provides a deterministic and mathematically validated framework for **finite structural analysis and abstract interpretation**.
+
+The public API for the finite core is now considered **frozen**.
+
+For a full architectural description see:
+
+ENGINE/ENGINE_REPORT_v1.md---
 
 ## Engine Architecture
 
