@@ -1,14 +1,12 @@
-digraph CFG {
+digraph "CFG" {
   rankdir=TB;
   node [shape=box];
-
-  "start";
-  "cond_x_gt_0";
   "branch_A";
   "branch_B";
-  "join";
+  "cond_x_gt_0";
   "end";
-
+  "join";
+  "start";
   "start" -> "cond_x_gt_0";
   "cond_x_gt_0" -> "branch_A";
   "cond_x_gt_0" -> "branch_B";
