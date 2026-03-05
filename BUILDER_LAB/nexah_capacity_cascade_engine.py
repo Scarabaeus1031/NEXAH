@@ -48,6 +48,7 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 # ----------------------------------------------------------
 
 def load_network(path: str) -> Dict[str, Any]:
+
     if not os.path.exists(path):
         raise FileNotFoundError(f"Network JSON not found: {path}")
 
@@ -57,15 +58,33 @@ def load_network(path: str) -> Dict[str, Any]:
     if "nodes" not in data or "edges" not in data:
         raise ValueError("Network JSON must contain 'nodes' and 'edges'.")
 
-    # Normalize defaults
+    # ---- HANDLE LIST FORMAT ----
+
+    if isinstance(data["nodes"], list):
+
+        node_dict = {}
+
+        for n in data["nodes"]:
+            node_id = n.get("id")
+
+            if not node_id:
+                raise ValueError("Node missing 'id' field")
+
+            node_dict[node_id] = n
+
+        data["nodes"] = node_dict
+
+    # ---- DEFAULTS ----
+
     for node_id, nd in data["nodes"].items():
+
         nd.setdefault("layer", "GENERIC")
         nd.setdefault("capacity", 100.0)
         nd.setdefault("base_load", 30.0)
         nd.setdefault("shock_load", 0.0)
         nd.setdefault("fail_threshold", 1.0)
         nd.setdefault("fail_prob_above", 0.25)
-        nd.setdefault("recovery_rate", 0.0)  # 0 = no recovery by default
+        nd.setdefault("recovery_rate", 0.0)
 
     for e in data["edges"]:
         e.setdefault("transfer", 0.25)
