@@ -12,13 +12,20 @@ import os
 # Helper
 # ----------------------------------------------------------
 
-def run_script(path, description):
+def run_script(script_path, description):
 
     print("\n--------------------------------------------------")
     print(description)
     print("--------------------------------------------------\n")
 
-    subprocess.run([sys.executable, path])
+    try:
+        subprocess.run(
+            [sys.executable, script_path],
+            check=True
+        )
+    except subprocess.CalledProcessError:
+        print("\nERROR while running:", script_path)
+        sys.exit(1)
 
 
 # ----------------------------------------------------------
@@ -32,9 +39,14 @@ def main():
     print("System Navigation Demo Suite")
     print("==================================================\n")
 
-    base = os.path.dirname(__file__)
+    # absolute path to BUILDER_LAB
+    base = os.path.dirname(os.path.abspath(__file__))
 
     demos = os.path.join(base, "demos")
+    visuals = os.path.join(base, "visuals")
+
+    print("Builder Lab location:", base)
+    print("Visual output folder:", visuals)
 
     # ------------------------------------------------------
     # 1 DEMO SIMULATION
@@ -66,7 +78,7 @@ def main():
     print("\n==================================================")
     print("Builder Lab complete")
     print("Generated visuals can be found in:")
-    print("BUILDER_LAB/visuals/")
+    print(visuals)
     print("==================================================\n")
 
 
