@@ -1,0 +1,27 @@
+{
+  "systems": [
+
+    "climate",
+    "energy",
+    "supply",
+    "food",
+    "water",
+    "finance",
+    "internet",
+    "migration"
+
+  ],
+
+  "couplings": [
+
+    ["climate", "energy"],
+    ["climate", "food"],
+    ["energy", "supply"],
+    ["supply", "finance"],
+    ["finance", "food"],
+    ["water", "food"],
+    ["food", "migration"],
+    ["internet", "finance"]
+
+  ]
+}
