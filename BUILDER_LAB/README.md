@@ -1,5 +1,7 @@
 # NEXAH Builder Lab
 
+![NEXAH System Walk](visuals/nexah_system_walk.gif)
+
 Experimental playground for exploring the **NEXAH system navigation framework**.
 
 The Builder Lab contains **interactive simulations, visualizations, and system exploration tools** that demonstrate how NEXAH models dynamic systems using:
@@ -90,25 +92,6 @@ The tool automatically generates a navigation animation.
 
 ---
 
-# Energy Grid Example
-
-NEXAH can be applied to real-world systems such as power networks.
-
-![Energy Grid Demo](visuals/nexah_energy_grid_simulation.gif)
-
-Example states include:
-
-Normal operation  
-Load increase  
-Frequency drop  
-Generator trip  
-Grid islanding  
-Cascade risk  
-
-This demonstrates how **system stability can degrade and how navigation strategies respond**.
-
----
-
 # Applications Overview
 
 The framework can model many system types.
@@ -163,7 +146,7 @@ BUILDER_LAB
     nexah_state_graph.png
     nexah_system_walk.gif
     nexah_explorer_walk.gif
-    nexah_energy_grid_simulation.gif
+    NEXAH_APPLICATIONS_MAP.png
 ```
 
 ---
@@ -178,5 +161,5 @@ Future work includes:
 
 Interactive system explorer  
 Additional system models  
-Real-time control simulations  
+Real-world infrastructure simulations  
 Integration with autonomous agents
