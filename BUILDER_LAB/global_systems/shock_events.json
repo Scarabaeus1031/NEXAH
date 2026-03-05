@@ -1,0 +1,8 @@
+{
+  "heatwave": "climate",
+  "solar_storm": "internet",
+  "financial_crash": "finance",
+  "cyber_attack": "internet",
+  "drought": "water",
+  "supply_shock": "supply"
+}
