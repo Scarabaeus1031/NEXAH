@@ -8,7 +8,7 @@ import json
 import argparse
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(file))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 
 
@@ -29,7 +29,6 @@ def load_system(name):
 
 # ----------------------------------------------------------
 # COUPLING RULES
-# (source_system, source_state) → (target_system, forced_state)
 # ----------------------------------------------------------
 
 COUPLINGS = {
@@ -50,7 +49,6 @@ def simulate(system_names, steps=10):
     systems = {}
     states = {}
 
-    # track couplings already triggered
     triggered = set()
 
     print("\nLoading systems...")
@@ -105,7 +103,7 @@ def simulate(system_names, steps=10):
 
 
         # --------------------------------------------------
-        # APPLY COUPLINGS (trigger once)
+        # APPLY COUPLINGS
         # --------------------------------------------------
 
         for (src_sys, src_state), (tgt_sys, tgt_state) in COUPLINGS.items():
@@ -149,7 +147,7 @@ def list_systems():
 # CLI ENTRY
 # ----------------------------------------------------------
 
-if name == "main":
+if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="NEXAH Coupled System Engine"
@@ -186,6 +184,3 @@ if name == "main":
         print("\nUsage:")
         print("  python BUILDER_LAB/nexah_coupled_system_engine.py --list")
         print("  python BUILDER_LAB/nexah_coupled_system_engine.py --systems energy_grid climate_model supply_chain")
-
-for f in frame_paths:
-    os.remove(f)
