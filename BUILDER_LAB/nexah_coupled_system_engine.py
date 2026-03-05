@@ -1,26 +1,77 @@
-triggered = set()
+# ==========================================================
+# NEXAH COUPLED SYSTEM ENGINE
+# Multi-system simulation with cross-system influence
+# ==========================================================
 
-for (src_sys, src_state), (tgt_sys, tgt_state) in COUPLINGS.items():
+import os
+import json
+import argparse
 
-    if (src_sys, src_state) in triggered:
-        continue
 
- HEAD
-    if src_sys in states and states[src_sys] == src_state:
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(file))
 SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
- 6f49789 (nexah_coupled_system_engine.py)
 
-        if tgt_sys in new_states:
 
-            print(
-                f"COUPLING: {src_sys}:{src_state} "
-                f"→ forces {tgt_sys}:{tgt_state}"
-            )
+# ----------------------------------------------------------
+# LOAD SYSTEM
+# ----------------------------------------------------------
 
-            new_states[tgt_sys] = tgt_state
+def load_system(name):
 
-            triggered.add((src_sys, src_state))
+    path = os.path.join(SYSTEMS_DIR, f"{name}.json")
+
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"System not found: {name}")
+
+    with open(path) as f:
+        return json.load(f)
+
+
+# ----------------------------------------------------------
+# COUPLING RULES
+# (source_system, source_state) → (target_system, forced_state)
+# ----------------------------------------------------------
+
+COUPLINGS = {
+
+    ("climate_model", "S3_failure"): ("energy_grid", "S5_freq_drop"),
+
+    ("energy_grid", "S11_blackout"): ("supply_chain", "S3_breakdown")
+
+}
+
+
+# ----------------------------------------------------------
+# SIMULATION
+# ----------------------------------------------------------
+
+def simulate(system_names, steps=10):
+
+    systems = {}
+    states = {}
+
+    # track couplings already triggered
+    triggered = set()
+
+    print("\nLoading systems...")
+
+    for name in system_names:
+
+        system = load_system(name)
+
+        systems[name] = system
+
+        states_list = system.get("states", [])
+        transitions = system.get("transitions", {})
+
+        if transitions:
+            states[name] = list(transitions.keys())[0]
+        elif states_list:
+            states[name] = states_list[0]
+        else:
+            print("Skipping invalid system:", name)
+            continue
+
         print("Loaded:", name, "start:", states[name])
 
 
@@ -54,10 +105,13 @@ SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 
 
         # --------------------------------------------------
-        # APPLY COUPLINGS
+        # APPLY COUPLINGS (trigger once)
         # --------------------------------------------------
 
         for (src_sys, src_state), (tgt_sys, tgt_state) in COUPLINGS.items():
+
+            if (src_sys, src_state) in triggered:
+                continue
 
             if src_sys in states and states[src_sys] == src_state:
 
@@ -69,6 +123,8 @@ SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
                     )
 
                     new_states[tgt_sys] = tgt_state
+
+                    triggered.add((src_sys, src_state))
 
 
         states = new_states
@@ -93,7 +149,7 @@ def list_systems():
 # CLI ENTRY
 # ----------------------------------------------------------
 
-if __name__ == "__main__":
+if name == "main":
 
     parser = argparse.ArgumentParser(
         description="NEXAH Coupled System Engine"
