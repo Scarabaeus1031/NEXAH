@@ -11,7 +11,7 @@ import imageio.v2 as imageio
 import argparse
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(file))
 SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 VISUALS_DIR = os.path.join(BASE_DIR, "visuals")
 
@@ -25,7 +25,6 @@ os.makedirs(VISUALS_DIR, exist_ok=True)
 COUPLINGS = {
 
     ("climate_model", "S3_failure"): ("energy_grid", "S5_freq_drop"),
-
     ("energy_grid", "S11_blackout"): ("supply_chain", "S3_breakdown")
 
 }
@@ -60,7 +59,6 @@ def build_graph(system_names):
     for (src_sys, _), (tgt_sys, _) in COUPLINGS.items():
 
         if src_sys in system_names and tgt_sys in system_names:
-
             G.add_edge(src_sys, tgt_sys)
 
     return G
@@ -69,6 +67,171 @@ def build_graph(system_names):
 # ----------------------------------------------------------
 # INITIAL STATES
 # ----------------------------------------------------------
+
+def initialize_states(system_names):
+
+    states = {}
+    systems = {}
+
+    for name in system_names:
+
+        system = load_system(name)
+        systems[name] = system
+
+        transitions = system.get("transitions", {})
+
+        if transitions:
+            states[name] = list(transitions.keys())[0]
+        else:
+            states[name] = system["states"][0]
+
+    return systems, states
+
+
+# ----------------------------------------------------------
+# SIMULATE CASCADE
+# ----------------------------------------------------------
+
+def simulate(system_names, steps=10):
+
+    systems, states = initialize_states(system_names)
+
+    G = build_graph(system_names)
+    pos = nx.spring_layout(G, seed=42)
+
+    frames = []
+
+    for step in range(steps):
+
+        new_states = {}
+
+        # --------------------------------
+        # NORMAL TRANSITIONS
+        # --------------------------------
+        for name in system_names:
+
+            system = systems[name]
+            transitions = system.get("transitions", {})
+
+            state = states[name]
+            next_state = transitions.get(state, state)
+
+            new_states[name] = next_state
+
+
+        # --------------------------------
+        # APPLY COUPLINGS
+        # --------------------------------
+        for (src_sys, src_state), (tgt_sys, tgt_state) in COUPLINGS.items():
+
+            if src_sys in states and states[src_sys] == src_state:
+
+                if tgt_sys in new_states:
+                    new_states[tgt_sys] = tgt_state
+
+
+        states = new_states
+
+
+        # --------------------------------
+        # DRAW GRAPH FRAME
+        # --------------------------------
+
+        plt.figure(figsize=(8,6))
+
+        colors = []
+
+        for node in G.nodes():
+
+            state = states[node]
+
+            if "blackout" in state:
+                colors.append("black")
+
+            elif "failure" in state or "breakdown" in state:
+                colors.append("red")
+
+            elif "stress" in state:
+                colors.append("orange")
+
+            else:
+                colors.append("green")
+
+
+        nx.draw(
+            G,
+            pos,
+            with_labels=True,
+            node_color=colors,
+            node_size=2500,
+            arrows=True
+        )
+
+        plt.title(f"NEXAH Cascade Simulation — step {step}")
+
+        frame_path = os.path.join(VISUALS_DIR, f"cascade_frame{step}.png")
+
+        plt.savefig(frame_path)
+        plt.close()
+
+        frames.append(imageio.imread(frame_path))
+
+
+    # --------------------------------
+    # CREATE GIF
+    # --------------------------------
+
+    gif_path = os.path.join(VISUALS_DIR, "nexah_cascade.gif")
+
+    imageio.mimsave(gif_path, frames, duration=1)
+
+    print("\nCascade animation saved:", gif_path)
+
+
+    # --------------------------------
+    # CLEANUP FRAMES
+    # --------------------------------
+
+    for step in range(steps):
+
+        frame_path = os.path.join(VISUALS_DIR, f"cascade_frame{step}.png")
+
+        if os.path.exists(frame_path):
+            os.remove(frame_path)
+
+
+# ----------------------------------------------------------
+# CLI
+# ----------------------------------------------------------
+
+if name == "main":
+
+    parser = argparse.ArgumentParser(
+        description="NEXAH Cascade Visualizer"
+    )
+
+    parser.add_argument(
+        "--systems",
+        nargs="+",
+        help="Systems to visualize"
+    )
+
+    parser.add_argument(
+        "--steps",
+        type=int,
+        default=10
+    )
+
+    args = parser.parse_args()
+
+    if args.systems:
+
+        simulate(args.systems, args.steps)
+
+    else:
+
+        print("\nUsage:")
+        print("python BUILDER_LAB/nexah_cascade_visualizer.py --systems energy_grid climate_model supply_chain")# ----------------------------------------------------------
 
 def initialize_states(system_names):
 
