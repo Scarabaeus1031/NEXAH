@@ -11,7 +11,7 @@ import imageio.v2 as imageio
 import argparse
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(file))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 VISUALS_DIR = os.path.join(BASE_DIR, "visuals")
 
