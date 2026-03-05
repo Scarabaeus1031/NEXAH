@@ -1,20 +1,17 @@
 {
   "name": "supply_chain",
-
   "states": [
     "S0_normal",
     "S1_delay",
     "S2_shortage",
     "S3_breakdown"
   ],
-
   "regimes": {
     "S0_normal": "STABLE",
     "S1_delay": "STRESS",
     "S2_shortage": "STRESS",
     "S3_breakdown": "FAILURE"
   },
-
   "transitions": {
     "S0_normal": "S1_delay",
     "S1_delay": "S2_shortage",
