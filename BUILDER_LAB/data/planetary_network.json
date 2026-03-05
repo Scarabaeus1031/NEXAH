@@ -62,3 +62,41 @@
     {"src": "WATER_SAS", "tgt": "FOOD_ASIA", "kind": "dep", "layer": "water->food", "weight": 0.6}
   ]
 }
+{
+  "nodes": [
+    {"id":"SAT_GNSS","lat":0,"lon":0},
+
+    {"id":"IXP_NYC","lat":40.7128,"lon":-74.0060},
+    {"id":"IXP_LON","lat":51.5074,"lon":-0.1278},
+    {"id":"IXP_SGP","lat":1.3521,"lon":103.8198},
+
+    {"id":"PORT_RTM","lat":51.95,"lon":4.14},
+    {"id":"PORT_SGP","lat":1.26,"lon":103.84},
+    {"id":"PORT_SHG","lat":31.23,"lon":121.47},
+
+    {"id":"GRID_US_E","lat":39.0,"lon":-77.0},
+    {"id":"GRID_EU","lat":50.0,"lon":10.0},
+    {"id":"GRID_ASIA","lat":35.0,"lon":105.0},
+
+    {"id":"FOOD_US","lat":39.0,"lon":-98.0},
+    {"id":"FOOD_EU","lat":48.0,"lon":8.0},
+    {"id":"FOOD_ASIA","lat":34.0,"lon":100.0},
+
+    {"id":"WATER_MENA","lat":24.0,"lon":45.0},
+    {"id":"WATER_SAS","lat":23.0,"lon":78.0}
+  ],
+
+  "edges": [
+    {"src":"SAT_GNSS","tgt":"PORT_RTM"},
+    {"src":"SAT_GNSS","tgt":"PORT_SGP"},
+    {"src":"SAT_GNSS","tgt":"PORT_SHG"},
+
+    {"src":"PORT_RTM","tgt":"FOOD_EU"},
+    {"src":"PORT_SGP","tgt":"FOOD_ASIA"},
+    {"src":"PORT_SHG","tgt":"FOOD_ASIA"},
+
+    {"src":"IXP_NYC","tgt":"PORT_RTM"},
+    {"src":"IXP_LON","tgt":"PORT_RTM"},
+    {"src":"IXP_SGP","tgt":"PORT_SGP"}
+  ]
+}
