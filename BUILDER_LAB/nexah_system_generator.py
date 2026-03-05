@@ -8,7 +8,7 @@ import json
 import argparse
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(file))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 
 os.makedirs(SYSTEMS_DIR, exist_ok=True)
