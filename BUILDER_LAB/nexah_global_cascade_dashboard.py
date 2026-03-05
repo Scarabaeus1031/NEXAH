@@ -87,9 +87,9 @@ def draw_graph(G, failed):
     for node in G.nodes():
 
         if node in failed:
-            colors.append("red")
+            colors.append("#ff4b4b")
         else:
-            colors.append("lightblue")
+            colors.append("#8fbcd4")
 
     fig, ax = plt.subplots(figsize=(8,6))
 
@@ -143,8 +143,15 @@ if run:
 
     st.subheader("Cascade Simulation")
 
-    for step, failed in enumerate(history):
+    step = st.slider(
+        "Simulation Step",
+        0,
+        len(history) - 1,
+        0
+    )
 
-        st.write(f"Step {step}")
+    failed = history[step]
 
-        draw_graph(G, failed)
+    st.write("Failed systems:", list(failed))
+
+    draw_graph(G, failed)
