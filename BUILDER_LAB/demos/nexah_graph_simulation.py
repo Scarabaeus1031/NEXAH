@@ -1,11 +1,13 @@
 # ==========================================================
 # NEXAH GRAPH SIMULATION
 # Animated system walk through the NEXAH state graph
+# Also saves the animation as a GIF
 # ==========================================================
 
 import networkx as nx
 import matplotlib.pyplot as plt
-import time
+import imageio
+import os
 
 
 # ----------------------------------------------------------
@@ -97,11 +99,19 @@ G = nx.DiGraph()
 for s in states:
     G.add_node(s)
 
-for s,t in delta.items():
-    G.add_edge(s,t)
+for s, t in delta.items():
+    G.add_edge(s, t)
 
 
 pos = nx.spring_layout(G, seed=42)
+
+
+# ----------------------------------------------------------
+# PREPARE GIF STORAGE
+# ----------------------------------------------------------
+
+frames = []
+os.makedirs("frames", exist_ok=True)
 
 
 # ----------------------------------------------------------
@@ -137,6 +147,11 @@ def simulate(start="S1_load_rising", steps=10):
 
         plt.title(f"NEXAH System Walk — step {i} — state {state}")
 
+        # save frame
+        filename = f"frames/frame_{i}.png"
+        plt.savefig(filename)
+        frames.append(imageio.imread(filename))
+
         plt.pause(1.0)
 
         state = delta[state]
@@ -149,5 +164,12 @@ def simulate(start="S1_load_rising", steps=10):
 plt.figure(figsize=(12,6))
 
 simulate("S1_load_rising", 12)
+
+# save GIF
+imageio.mimsave(
+    "nexah_system_walk.gif",
+    frames,
+    duration=1
+)
 
 plt.show()
