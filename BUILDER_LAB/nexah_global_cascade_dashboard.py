@@ -8,6 +8,7 @@ import os
 import json
 import networkx as nx
 import matplotlib.pyplot as plt
+import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MAP_FILE = os.path.join(BASE_DIR, "global_systems", "global_system_map.json")
@@ -50,7 +51,6 @@ def build_graph(data):
 def simulate(G, start):
 
     failed = set([start])
-
     history = []
 
     while True:
@@ -122,6 +122,7 @@ start_system = st.sidebar.selectbox(
 )
 
 run = st.sidebar.button("Run Cascade Simulation")
+play = st.sidebar.button("▶ Play Cascade Animation")
 
 
 # ----------------------------------------------------------
@@ -137,21 +138,40 @@ draw_graph(G, set())
 # RUN SIMULATION
 # ----------------------------------------------------------
 
-if run:
+if run or play:
 
     history = simulate(G, start_system)
 
     st.subheader("Cascade Simulation")
 
-    step = st.slider(
-        "Simulation Step",
-        0,
-        len(history) - 1,
-        0
-    )
+    # manual mode
+    if run:
 
-    failed = history[step]
+        step = st.slider(
+            "Simulation Step",
+            0,
+            len(history) - 1,
+            0
+        )
 
-    st.write("Failed systems:", list(failed))
+        failed = history[step]
 
-    draw_graph(G, failed)
+        st.write("Failed systems:", list(failed))
+
+        draw_graph(G, failed)
+
+    # animation mode
+    if play:
+
+        placeholder = st.empty()
+
+        for step, failed in enumerate(history):
+
+            with placeholder.container():
+
+                st.write(f"Step {step}")
+                st.write("Failed systems:", list(failed))
+
+                draw_graph(G, failed)
+
+            time.sleep(1)
