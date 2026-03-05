@@ -7,13 +7,14 @@ import argparse
 import subprocess
 import sys
 import os
-
+import json
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 
 
 # ----------------------------------------------------------
-# Helpers
+# RUN SCRIPT
 # ----------------------------------------------------------
 
 def run_script(path):
@@ -22,37 +23,75 @@ def run_script(path):
 
 
 # ----------------------------------------------------------
-# COMMANDS
+# DEMOS
 # ----------------------------------------------------------
 
 def run_demo():
-
-    script = os.path.join(BASE_DIR, "demos", "nexah_demo.py")
-    run_script(script)
+    run_script(os.path.join(BASE_DIR, "demos", "nexah_demo.py"))
 
 
 def run_graph():
-
-    script = os.path.join(BASE_DIR, "demos", "nexah_graph_simulation.py")
-    run_script(script)
+    run_script(os.path.join(BASE_DIR, "demos", "nexah_graph_simulation.py"))
 
 
 def run_explorer():
-
-    script = os.path.join(BASE_DIR, "demos", "nexah_explorer.py")
-    run_script(script)
+    run_script(os.path.join(BASE_DIR, "demos", "nexah_explorer.py"))
 
 
-def run_systems():
-
-    script = os.path.join(BASE_DIR, "auto_system_loader.py")
-    run_script(script)
+def run_system_loader():
+    run_script(os.path.join(BASE_DIR, "auto_system_loader.py"))
 
 
 def run_builder():
+    run_script(os.path.join(BASE_DIR, "run_builder_lab.py"))
 
-    script = os.path.join(BASE_DIR, "run_builder_lab.py")
-    run_script(script)
+
+# ----------------------------------------------------------
+# SYSTEM MANAGEMENT
+# ----------------------------------------------------------
+
+def list_systems():
+
+    print("\nAvailable NEXAH systems:\n")
+
+    for f in os.listdir(SYSTEMS_DIR):
+        if f.endswith(".json"):
+            print(" •", f.replace(".json",""))
+
+    print()
+
+
+def simulate_system(name):
+
+    system_file = os.path.join(SYSTEMS_DIR, f"{name}.json")
+
+    if not os.path.exists(system_file):
+        print("System not found:", name)
+        return
+
+    print("\nSimulating system:", name)
+
+    run_script(os.path.join(BASE_DIR, "auto_system_loader.py"))
+
+
+def create_system(name):
+
+    path = os.path.join(SYSTEMS_DIR, f"{name}.json")
+
+    if os.path.exists(path):
+        print("System already exists.")
+        return
+
+    template = {
+        "states": [],
+        "regimes": {},
+        "transitions": {}
+    }
+
+    with open(path,"w") as f:
+        json.dump(template,f,indent=2)
+
+    print("System created:", path)
 
 
 # ----------------------------------------------------------
@@ -67,32 +106,46 @@ def main():
 
     parser.add_argument(
         "command",
-        choices=[
-            "demo",
-            "graph",
-            "explorer",
-            "systems",
-            "builder"
-        ],
         help="Command to run"
+    )
+
+    parser.add_argument(
+        "name",
+        nargs="?",
+        help="Optional system name"
     )
 
     args = parser.parse_args()
 
-    if args.command == "demo":
+    cmd = args.command
+
+
+    if cmd == "demo":
         run_demo()
 
-    elif args.command == "graph":
+    elif cmd == "graph":
         run_graph()
 
-    elif args.command == "explorer":
+    elif cmd == "explorer":
         run_explorer()
 
-    elif args.command == "systems":
-        run_systems()
+    elif cmd == "systems":
+        run_system_loader()
 
-    elif args.command == "builder":
+    elif cmd == "builder":
         run_builder()
+
+    elif cmd == "systems-list":
+        list_systems()
+
+    elif cmd == "simulate":
+        simulate_system(args.name)
+
+    elif cmd == "create-system":
+        create_system(args.name)
+
+    else:
+        print("Unknown command")
 
 
 if __name__ == "__main__":
