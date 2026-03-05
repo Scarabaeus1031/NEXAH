@@ -186,3 +186,6 @@ if name == "main":
         print("\nUsage:")
         print("  python BUILDER_LAB/nexah_coupled_system_engine.py --list")
         print("  python BUILDER_LAB/nexah_coupled_system_engine.py --systems energy_grid climate_model supply_chain")
+
+for f in frame_paths:
+    os.remove(f)
