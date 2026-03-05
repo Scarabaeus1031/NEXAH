@@ -2,7 +2,8 @@ import streamlit as st
 import json
 import os
 import pandas as pd
-import plotly.express as px
+import plotly.graph_objects as go
+import time
 
 BASE = os.path.dirname(__file__)
 
@@ -13,9 +14,9 @@ st.set_page_config(layout="wide")
 
 st.title("🌍 NEXAH Planetary Control Room")
 
-# ---------------------------------------------------
+# -------------------------------------------------
 # LOAD NETWORK
-# ---------------------------------------------------
+# -------------------------------------------------
 
 with open(NETWORK_FILE) as f:
     network = json.load(f)
@@ -23,9 +24,11 @@ with open(NETWORK_FILE) as f:
 nodes = network["nodes"]
 edges = network["edges"]
 
-# ---------------------------------------------------
+node_lookup = {n["id"]: n for n in nodes}
+
+# -------------------------------------------------
 # LOAD TIMELINE
-# ---------------------------------------------------
+# -------------------------------------------------
 
 timeline = None
 
@@ -47,13 +50,25 @@ python BUILDER_LAB/nexah_capacity_cascade_engine.py \
 
     st.stop()
 
-# ---------------------------------------------------
-# STEP SLIDER
-# ---------------------------------------------------
+# -------------------------------------------------
+# STEP CONTROL
+# -------------------------------------------------
 
 max_step = len(timeline)-1
 
-step = st.slider("Simulation Step",0,max_step,0)
+col1,col2 = st.columns([3,1])
+
+with col1:
+    step = st.slider("Simulation Step",0,max_step,0)
+
+with col2:
+    play = st.button("▶ Play Cascade")
+
+if play:
+
+    for s in range(max_step+1):
+        st.session_state.step = s
+        time.sleep(0.5)
 
 state = timeline[step]
 
@@ -61,9 +76,9 @@ failed = state["failed_nodes"]
 
 st.write("Failed systems:",failed)
 
-# ---------------------------------------------------
-# BUILD DATAFRAME
-# ---------------------------------------------------
+# -------------------------------------------------
+# NODE DATAFRAME
+# -------------------------------------------------
 
 rows = []
 
@@ -83,64 +98,87 @@ for n in nodes:
 
 df = pd.DataFrame(rows)
 
-# ---------------------------------------------------
-# COLOR LOGIC
-# ---------------------------------------------------
+# -------------------------------------------------
+# MAP FIGURE
+# -------------------------------------------------
 
-def color_status(row):
+fig = go.Figure()
 
-    if row["status"] == "FAILED":
-        return "red"
+# DRAW EDGES
 
-    if row["criticality"] > 0.9:
-        return "orange"
+for e in edges:
 
-    return "green"
+    src = node_lookup.get(e["src"])
+    tgt = node_lookup.get(e["tgt"])
 
-df["color"] = df.apply(color_status,axis=1)
+    if not src or not tgt:
+        continue
 
-# ---------------------------------------------------
-# WORLD MAP
-# ---------------------------------------------------
+    fig.add_trace(go.Scattergeo(
+        lon=[src["lon"],tgt["lon"]],
+        lat=[src["lat"],tgt["lat"]],
+        mode="lines",
+        line=dict(width=1,color="gray"),
+        opacity=0.4,
+        showlegend=False
+    ))
 
-fig = px.scatter_geo(
-    df,
-    lat="lat",
-    lon="lon",
-    hover_name="label",
-    color="status",
-    size="criticality",
-    projection="natural earth",
-    color_discrete_map={
-        "OK":"green",
-        "FAILED":"red"
-    },
-    height=700
+# DRAW NODES
+
+for _,row in df.iterrows():
+
+    color = "red" if row["status"]=="FAILED" else "green"
+
+    fig.add_trace(go.Scattergeo(
+
+        lon=[row["lon"]],
+        lat=[row["lat"]],
+        text=row["label"],
+        mode="markers",
+
+        marker=dict(
+            size=row["criticality"]*25,
+            color=color
+        ),
+
+        name=row["layer"]
+    ))
+
+fig.update_layout(
+    height=650,
+    geo=dict(
+        projection_type="natural earth",
+        showcountries=True
+    )
 )
 
 st.plotly_chart(fig,use_container_width=True)
 
-# ---------------------------------------------------
-# LAYER VIEW
-# ---------------------------------------------------
+# -------------------------------------------------
+# LAYER STATUS
+# -------------------------------------------------
 
 st.subheader("Infrastructure Layers")
 
 layer_count = df.groupby(["layer","status"]).size().reset_index(name="count")
 
-fig2 = px.bar(
-    layer_count,
-    x="layer",
-    y="count",
-    color="status",
-    barmode="group"
-)
+fig2 = go.Figure()
+
+for status in layer_count["status"].unique():
+
+    subset = layer_count[layer_count["status"]==status]
+
+    fig2.add_bar(
+        x=subset["layer"],
+        y=subset["count"],
+        name=status
+    )
 
 st.plotly_chart(fig2,use_container_width=True)
 
-# ---------------------------------------------------
+# -------------------------------------------------
 # SYSTEM TABLE
-# ---------------------------------------------------
+# -------------------------------------------------
 
 st.subheader("System Status")
 
