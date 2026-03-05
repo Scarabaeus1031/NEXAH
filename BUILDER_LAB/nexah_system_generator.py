@@ -105,7 +105,6 @@ if name == "main":
 
     args = parser.parse_args()
 
-
     if args.list:
         list_systems()
 
@@ -114,5 +113,5 @@ if name == "main":
 
     else:
         print("\nUsage:")
-        print("  python nexah_system_generator.py <system_name>")
-        print("  python nexah_system_generator.py --list")
+        print("  python BUILDER_LAB/nexah_system_generator.py <system_name>")
+        print("  python BUILDER_LAB/nexah_system_generator.py --list")
