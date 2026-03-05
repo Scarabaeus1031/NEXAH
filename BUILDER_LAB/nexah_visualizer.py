@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import imageio.v2 as imageio
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(file))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 VISUALS_DIR = os.path.join(BASE_DIR, "visuals")
 
@@ -127,7 +127,7 @@ def animate_walk(system_name, G, system, pos):
 
     for step in range(10):
 
-        plt.clf()
+        plt.figure(figsize=(12,6))
 
         colors = []
 
@@ -149,9 +149,10 @@ def animate_walk(system_name, G, system, pos):
 
         plt.title(f"NEXAH Walk — step {step} — state {state}")
 
-        frame_path = os.path.join(VISUALS_DIR, f"frame{step}.png")
+        frame_path = os.path.join(VISUALS_DIR, f"frame_{step}.png")
 
         plt.savefig(frame_path)
+        plt.close()
 
         frames.append(imageio.imread(frame_path))
 
@@ -183,7 +184,7 @@ def visualize(system_name):
 # CLI ENTRY
 # ----------------------------------------------------------
 
-if name == "main":
+if __name__ == "__main__":
 
     import argparse
 
