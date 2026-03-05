@@ -8,7 +8,7 @@ import json
 import argparse
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(file))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
 
 
@@ -149,7 +149,7 @@ def list_systems():
 # CLI ENTRY
 # ----------------------------------------------------------
 
-if name == "main":
+if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="NEXAH Coupled System Engine"
