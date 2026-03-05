@@ -11,19 +11,24 @@ import matplotlib.pyplot as plt
 import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 MAP_FILE = os.path.join(BASE_DIR, "global_systems", "global_system_map.json")
+SHOCK_FILE = os.path.join(BASE_DIR, "global_systems", "shock_events.json")
 
 st.set_page_config(page_title="NEXAH Global Cascade", layout="wide")
 
 st.title("NEXAH Global Cascade Simulator")
 
 # ----------------------------------------------------------
-# LOAD GLOBAL MAP
+# LOAD DATA
 # ----------------------------------------------------------
 
 def load_map():
-
     with open(MAP_FILE) as f:
+        return json.load(f)
+
+def load_shocks():
+    with open(SHOCK_FILE) as f:
         return json.load(f)
 
 
@@ -107,22 +112,33 @@ def draw_graph(G, failed):
 
 
 # ----------------------------------------------------------
-# UI
+# LOAD DATA
 # ----------------------------------------------------------
 
 data = load_map()
+shocks = load_shocks()
 
 systems = data["systems"]
-
 G = build_graph(data)
 
-start_system = st.sidebar.selectbox(
-    "Initial Failure",
-    systems
+
+# ----------------------------------------------------------
+# SIDEBAR
+# ----------------------------------------------------------
+
+st.sidebar.header("Shock Engine")
+
+shock_event = st.sidebar.selectbox(
+    "Shock Event",
+    list(shocks.keys())
 )
 
-run = st.sidebar.button("Run Cascade Simulation")
-play = st.sidebar.button("▶ Play Cascade Animation")
+start_system = shocks[shock_event]
+
+st.sidebar.write("Triggered system:", start_system)
+
+run = st.sidebar.button("Run Cascade")
+play = st.sidebar.button("▶ Animate Cascade")
 
 
 # ----------------------------------------------------------
@@ -142,15 +158,14 @@ if run or play:
 
     history = simulate(G, start_system)
 
-    st.subheader("Cascade Simulation")
+    st.subheader(f"Cascade from shock: {shock_event}")
 
-    # manual mode
     if run:
 
         step = st.slider(
             "Simulation Step",
             0,
-            len(history) - 1,
+            len(history)-1,
             0
         )
 
@@ -160,7 +175,6 @@ if run or play:
 
         draw_graph(G, failed)
 
-    # animation mode
     if play:
 
         placeholder = st.empty()
