@@ -1,0 +1,27 @@
+{
+  "nodes": {
+
+    "satellites": [0, 0],
+    "internet_backbone": [20, 10],
+    "financial_markets": [-74, 40],
+    "shipping_routes": [10, 30],
+    "food_distribution": [30, 10],
+    "water_systems": [15, 5],
+    "power_grid": [5, 15],
+    "submarine_cables": [-20, -10]
+
+  },
+
+  "edges": [
+
+    ["satellites", "internet_backbone"],
+    ["internet_backbone", "financial_markets"],
+    ["power_grid", "internet_backbone"],
+    ["power_grid", "water_systems"],
+    ["shipping_routes", "food_distribution"],
+    ["financial_markets", "shipping_routes"],
+    ["water_systems", "food_distribution"],
+    ["submarine_cables", "internet_backbone"]
+
+  ]
+}
