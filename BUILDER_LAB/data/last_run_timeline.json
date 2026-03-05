@@ -1,0 +1,1917 @@
+[
+  {
+    "step": 0,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "SAT_GNSS"
+    ],
+    "newly_failed": [],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 1,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "SAT_GNSS"
+    ],
+    "newly_failed": [],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 22.5,
+        "shock_load": 0.0,
+        "total_load": 52.5,
+        "stress": 0.525,
+        "failed": false
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 22.5,
+        "shock_load": 0.0,
+        "total_load": 52.5,
+        "stress": 0.525,
+        "failed": false
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 2,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "SAT_GNSS"
+    ],
+    "newly_failed": [],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 45.0,
+        "shock_load": 0.0,
+        "total_load": 75.0,
+        "stress": 0.75,
+        "failed": false
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 45.0,
+        "shock_load": 0.0,
+        "total_load": 75.0,
+        "stress": 0.75,
+        "failed": false
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 3,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "SAT_GNSS"
+    ],
+    "newly_failed": [],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 67.5,
+        "shock_load": 0.0,
+        "total_load": 97.5,
+        "stress": 0.975,
+        "failed": false
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 67.5,
+        "shock_load": 0.0,
+        "total_load": 97.5,
+        "stress": 0.975,
+        "failed": false
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 4,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "PORT_RTM",
+      "PORT_SGP",
+      "SAT_GNSS"
+    ],
+    "newly_failed": [
+      "PORT_SGP",
+      "PORT_RTM"
+    ],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 90.0,
+        "shock_load": 0.0,
+        "total_load": 120.0,
+        "stress": 1.2,
+        "failed": false
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 90.0,
+        "shock_load": 0.0,
+        "total_load": 120.0,
+        "stress": 1.2,
+        "failed": false
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 5,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "PORT_RTM",
+      "PORT_SGP",
+      "SAT_GNSS"
+    ],
+    "newly_failed": [],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 142.5,
+        "shock_load": 0.0,
+        "total_load": 172.5,
+        "stress": 1.725,
+        "failed": true
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 30.0,
+        "shock_load": 0.0,
+        "total_load": 60.0,
+        "stress": 0.6,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 112.5,
+        "shock_load": 0.0,
+        "total_load": 142.5,
+        "stress": 1.425,
+        "failed": true
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 30.0,
+        "shock_load": 0.0,
+        "total_load": 60.0,
+        "stress": 0.6,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 30.0,
+        "shock_load": 0.0,
+        "total_load": 60.0,
+        "stress": 0.6,
+        "failed": false
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 6,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "FOOD_ASIA",
+      "PORT_RTM",
+      "PORT_SGP",
+      "SAT_GNSS"
+    ],
+    "newly_failed": [
+      "FOOD_ASIA"
+    ],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 200.625,
+        "shock_load": 0.0,
+        "total_load": 230.625,
+        "stress": 2.30625,
+        "failed": true
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 73.125,
+        "shock_load": 0.0,
+        "total_load": 103.125,
+        "stress": 1.03125,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 135.0,
+        "shock_load": 0.0,
+        "total_load": 165.0,
+        "stress": 1.65,
+        "failed": true
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 65.625,
+        "shock_load": 0.0,
+        "total_load": 95.625,
+        "stress": 0.95625,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 73.125,
+        "shock_load": 0.0,
+        "total_load": 103.125,
+        "stress": 1.03125,
+        "failed": false
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 7,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "FOOD_ASIA",
+      "FOOD_EU",
+      "PORT_RTM",
+      "PORT_SGP",
+      "PORT_SHG",
+      "SAT_GNSS"
+    ],
+    "newly_failed": [
+      "PORT_SHG",
+      "FOOD_EU"
+    ],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 264.375,
+        "shock_load": 0.0,
+        "total_load": 294.375,
+        "stress": 2.94375,
+        "failed": true
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 130.78125,
+        "shock_load": 0.0,
+        "total_load": 160.78125,
+        "stress": 1.6078125,
+        "failed": false
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 157.5,
+        "shock_load": 0.0,
+        "total_load": 187.5,
+        "stress": 1.875,
+        "failed": true
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 106.875,
+        "shock_load": 0.0,
+        "total_load": 136.875,
+        "stress": 1.36875,
+        "failed": false
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 130.78125,
+        "shock_load": 0.0,
+        "total_load": 160.78125,
+        "stress": 1.6078125,
+        "failed": true
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  },
+  {
+    "step": 8,
+    "start": "SAT_GNSS",
+    "failed_nodes": [
+      "FOOD_ASIA",
+      "FOOD_EU",
+      "PORT_RTM",
+      "PORT_SGP",
+      "PORT_SHG",
+      "SAT_GNSS"
+    ],
+    "newly_failed": [],
+    "nodes": {
+      "SAT_GNSS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 60.0,
+        "total_load": 90.0,
+        "stress": 0.9,
+        "failed": true
+      },
+      "SAT_COMMS": {
+        "layer": "space",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_NYC": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_LON": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_FRA": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "IXP_SGP": {
+        "layer": "digital",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_US_E": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_EU_C": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "GRID_ASIA": {
+        "layer": "energy",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "PORT_SGP": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 333.75,
+        "shock_load": 0.0,
+        "total_load": 363.75,
+        "stress": 3.6375,
+        "failed": true
+      },
+      "PORT_SHG": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 204.375,
+        "shock_load": 0.0,
+        "total_load": 234.375,
+        "stress": 2.34375,
+        "failed": true
+      },
+      "PORT_RTM": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 180.0,
+        "shock_load": 0.0,
+        "total_load": 210.0,
+        "stress": 2.1,
+        "failed": true
+      },
+      "PORT_LAX": {
+        "layer": "logistics",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_US": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FOOD_EU": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 153.75,
+        "shock_load": 0.0,
+        "total_load": 183.75,
+        "stress": 1.8375,
+        "failed": true
+      },
+      "FOOD_ASIA": {
+        "layer": "food",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 204.375,
+        "shock_load": 0.0,
+        "total_load": 234.375,
+        "stress": 2.34375,
+        "failed": true
+      },
+      "WATER_MENA": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "WATER_SAS": {
+        "layer": "water",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_NYC": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      },
+      "FIN_LON": {
+        "layer": "finance",
+        "capacity": 100.0,
+        "base_load": 30.0,
+        "propagated_load": 0.0,
+        "shock_load": 0.0,
+        "total_load": 30.0,
+        "stress": 0.3,
+        "failed": false
+      }
+    }
+  }
+]
