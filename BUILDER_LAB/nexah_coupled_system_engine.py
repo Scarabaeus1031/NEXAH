@@ -29,9 +29,8 @@ def load_system(name):
 
 # ----------------------------------------------------------
 # COUPLING RULES
-# ----------------------------------------------------------
-# format:
 # (source_system, source_state) → (target_system, forced_state)
+# ----------------------------------------------------------
 
 COUPLINGS = {
 
@@ -68,6 +67,7 @@ def simulate(system_names, steps=10):
             states[name] = states_list[0]
         else:
             print("Skipping invalid system:", name)
+            continue
 
         print("Loaded:", name, "start:", states[name])
 
@@ -138,7 +138,7 @@ def list_systems():
 
 
 # ----------------------------------------------------------
-# CLI
+# CLI ENTRY
 # ----------------------------------------------------------
 
 if name == "main":
@@ -149,32 +149,32 @@ if name == "main":
 
     parser.add_argument(
         "--list",
-        action="store_true"
+        action="store_true",
+        help="List available systems"
     )
 
     parser.add_argument(
         "--systems",
-        nargs="+"
+        nargs="+",
+        help="Systems to simulate"
     )
 
     parser.add_argument(
         "--steps",
         type=int,
-        default=10
+        default=10,
+        help="Number of simulation steps"
     )
 
     args = parser.parse_args()
 
-
     if args.list:
-
         list_systems()
 
     elif args.systems:
-
         simulate(args.systems, args.steps)
 
     else:
-
         print("\nUsage:")
-        print("python nexah_coupled_system_engine.py --systems energy_grid climate_model supply_chain")
+        print("  python BUILDER_LAB/nexah_coupled_system_engine.py --list")
+        print("  python BUILDER_LAB/nexah_coupled_system_engine.py --systems energy_grid climate_model supply_chain")
