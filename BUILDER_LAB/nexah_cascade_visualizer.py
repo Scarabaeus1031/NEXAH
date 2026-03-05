@@ -204,7 +204,7 @@ def simulate(system_names, steps=10):
 # CLI
 # ----------------------------------------------------------
 
-if name == "main":
+if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="NEXAH Cascade Visualizer"
