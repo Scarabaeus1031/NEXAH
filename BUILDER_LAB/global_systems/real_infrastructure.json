@@ -1,0 +1,26 @@
+{
+  "nodes": [
+
+    "power_grid",
+    "satellites",
+    "submarine_cables",
+    "financial_markets",
+    "shipping_routes",
+    "food_distribution",
+    "water_systems",
+    "internet_backbone"
+
+  ],
+
+  "edges": [
+
+    ["satellites", "internet_backbone"],
+    ["internet_backbone", "financial_markets"],
+    ["power_grid", "internet_backbone"],
+    ["power_grid", "water_systems"],
+    ["shipping_routes", "food_distribution"],
+    ["financial_markets", "shipping_routes"],
+    ["water_systems", "food_distribution"]
+
+  ]
+}
