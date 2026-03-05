@@ -18,6 +18,10 @@ def run_script(script_path, description):
     print(description)
     print("--------------------------------------------------\n")
 
+    if not os.path.exists(script_path):
+        print("ERROR: Script not found:", script_path)
+        sys.exit(1)
+
     try:
         subprocess.run(
             [sys.executable, script_path],
@@ -47,6 +51,9 @@ def main():
 
     print("Builder Lab location:", base)
     print("Visual output folder:", visuals)
+
+    if not os.path.exists(visuals):
+        os.makedirs(visuals)
 
     # ------------------------------------------------------
     # 1 DEMO SIMULATION
