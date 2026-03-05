@@ -1,5 +1,12 @@
 # NEXAH Builder Lab
 
+Status: Stable Prototype
+
+The Builder Lab is an experimental sandbox for the NEXAH framework.
+
+Current version: Builder Lab v1.0  
+Future development will move to separate modules and system integrations.
+
 ![NEXAH Framework](visuals/NEXAH_SYSTEM_NAVIGATION_FRAMEWORK.png)
 
 Experimental playground for exploring the **NEXAH system navigation framework**.
