@@ -1,172 +1,147 @@
-# ==========================================================
-# NEXAH PLANETARY CONTROL ROOM
-# Global infrastructure cascade dashboard
-# ==========================================================
-
 import streamlit as st
 import json
 import os
 import pandas as pd
-import networkx as nx
-import matplotlib.pyplot as plt
+import plotly.express as px
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+BASE = os.path.dirname(__file__)
 
-NETWORK_FILE = os.path.join(DATA_DIR, "planetary_network.json")
-TIMELINE_FILE = os.path.join(DATA_DIR, "last_run_timeline.json")
+NETWORK_FILE = os.path.join(BASE,"data/planetary_network.json")
+TIMELINE_FILE = os.path.join(BASE,"data/last_run_timeline.json")
 
-# ----------------------------------------------------------
-# LOAD NETWORK
-# ----------------------------------------------------------
-
-def load_network():
-
-    with open(NETWORK_FILE) as f:
-        data = json.load(f)
-
-    nodes = data["nodes"]
-
-    if isinstance(nodes, list):
-
-        node_dict = {}
-
-        for n in nodes:
-            node_dict[n["id"]] = n
-
-        nodes = node_dict
-
-    return nodes, data["edges"]
-
-
-# ----------------------------------------------------------
-# LOAD TIMELINE
-# ----------------------------------------------------------
-
-def load_timeline():
-
-    if not os.path.exists(TIMELINE_FILE):
-        return None
-
-    with open(TIMELINE_FILE) as f:
-        return json.load(f)
-
-
-# ----------------------------------------------------------
-# BUILD GRAPH
-# ----------------------------------------------------------
-
-def build_graph(nodes, edges):
-
-    G = nx.DiGraph()
-
-    for n in nodes:
-        G.add_node(n)
-
-    for e in edges:
-        G.add_edge(e["src"], e["tgt"])
-
-    return G
-
-
-# ----------------------------------------------------------
-# DRAW NETWORK
-# ----------------------------------------------------------
-
-def draw_network(G, failed_nodes):
-
-    pos = nx.spring_layout(G, seed=42)
-
-    colors = []
-
-    for node in G.nodes():
-
-        if node in failed_nodes:
-            colors.append("red")
-        else:
-            colors.append("green")
-
-    fig, ax = plt.subplots(figsize=(10,7))
-
-    nx.draw(
-        G,
-        pos,
-        with_labels=True,
-        node_color=colors,
-        node_size=2000,
-        arrows=True,
-        ax=ax
-    )
-
-    return fig
-
-
-# ----------------------------------------------------------
-# STREAMLIT UI
-# ----------------------------------------------------------
+st.set_page_config(layout="wide")
 
 st.title("🌍 NEXAH Planetary Control Room")
 
-nodes, edges = load_network()
-timeline = load_timeline()
+# ---------------------------------------------------
+# LOAD NETWORK
+# ---------------------------------------------------
+
+with open(NETWORK_FILE) as f:
+    network = json.load(f)
+
+nodes = network["nodes"]
+edges = network["edges"]
+
+# ---------------------------------------------------
+# LOAD TIMELINE
+# ---------------------------------------------------
+
+timeline = None
+
+if os.path.exists(TIMELINE_FILE):
+    with open(TIMELINE_FILE) as f:
+        timeline = json.load(f)
 
 if timeline is None:
 
-    st.warning("Run the cascade engine first.")
+    st.warning("Run cascade engine first")
 
     st.code("""
 python BUILDER_LAB/nexah_capacity_cascade_engine.py \
 --network BUILDER_LAB/data/planetary_network.json \
---start SAT_GNSS --steps 8 \
+--start SAT_GNSS \
+--steps 8 \
 --save_timeline BUILDER_LAB/data/last_run_timeline.json
 """)
 
     st.stop()
 
-# ----------------------------------------------------------
+# ---------------------------------------------------
+# STEP SLIDER
+# ---------------------------------------------------
 
-steps = [t["step"] for t in timeline]
+max_step = len(timeline)-1
 
-step = st.slider(
-    "Simulation Step",
-    min_value=min(steps),
-    max_value=max(steps),
-    value=0
-)
+step = st.slider("Simulation Step",0,max_step,0)
 
 state = timeline[step]
 
-failed_nodes = state["failed_nodes"]
+failed = state["failed_nodes"]
 
-st.subheader(f"Step {step}")
+st.write("Failed systems:",failed)
 
-st.write("Failed systems:", failed_nodes)
+# ---------------------------------------------------
+# BUILD DATAFRAME
+# ---------------------------------------------------
 
-# ----------------------------------------------------------
-
-G = build_graph(nodes, edges)
-
-fig = draw_network(G, failed_nodes)
-
-st.pyplot(fig)
-
-# ----------------------------------------------------------
-# NODE TABLE
-# ----------------------------------------------------------
-
-table = []
+rows = []
 
 for n in nodes:
 
-    status = "FAILED" if n in failed_nodes else "OK"
+    status = "FAILED" if n["id"] in failed else "OK"
 
-    table.append({
-        "node": n,
-        "status": status
+    rows.append({
+        "node":n["id"],
+        "label":n.get("label",n["id"]),
+        "layer":n.get("layer","unknown"),
+        "criticality":n.get("criticality",0.5),
+        "lat":n["lat"],
+        "lon":n["lon"],
+        "status":status
     })
 
-df = pd.DataFrame(table)
+df = pd.DataFrame(rows)
+
+# ---------------------------------------------------
+# COLOR LOGIC
+# ---------------------------------------------------
+
+def color_status(row):
+
+    if row["status"] == "FAILED":
+        return "red"
+
+    if row["criticality"] > 0.9:
+        return "orange"
+
+    return "green"
+
+df["color"] = df.apply(color_status,axis=1)
+
+# ---------------------------------------------------
+# WORLD MAP
+# ---------------------------------------------------
+
+fig = px.scatter_geo(
+    df,
+    lat="lat",
+    lon="lon",
+    hover_name="label",
+    color="status",
+    size="criticality",
+    projection="natural earth",
+    color_discrete_map={
+        "OK":"green",
+        "FAILED":"red"
+    },
+    height=700
+)
+
+st.plotly_chart(fig,use_container_width=True)
+
+# ---------------------------------------------------
+# LAYER VIEW
+# ---------------------------------------------------
+
+st.subheader("Infrastructure Layers")
+
+layer_count = df.groupby(["layer","status"]).size().reset_index(name="count")
+
+fig2 = px.bar(
+    layer_count,
+    x="layer",
+    y="count",
+    color="status",
+    barmode="group"
+)
+
+st.plotly_chart(fig2,use_container_width=True)
+
+# ---------------------------------------------------
+# SYSTEM TABLE
+# ---------------------------------------------------
 
 st.subheader("System Status")
 
-st.dataframe(df)
+st.dataframe(df.sort_values("layer"))
