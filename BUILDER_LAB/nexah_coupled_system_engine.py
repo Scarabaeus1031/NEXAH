@@ -29,7 +29,6 @@ def load_system(name):
 
 # ----------------------------------------------------------
 # COUPLING RULES
-# (source_system, source_state) → (target_system, forced_state)
 # ----------------------------------------------------------
 
 COUPLINGS = {
@@ -50,7 +49,6 @@ def simulate(system_names, steps=10):
     systems = {}
     states = {}
 
-    # track couplings already triggered
     triggered = set()
 
     print("\nLoading systems...")
@@ -105,7 +103,7 @@ def simulate(system_names, steps=10):
 
 
         # --------------------------------------------------
-        # APPLY COUPLINGS (trigger once)
+        # APPLY COUPLINGS
         # --------------------------------------------------
 
         for (src_sys, src_state), (tgt_sys, tgt_state) in COUPLINGS.items():
