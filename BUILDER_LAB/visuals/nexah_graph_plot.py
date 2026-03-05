@@ -120,4 +120,7 @@ nx.draw(
 )
 
 plt.title("NEXAH System State Graph")
+
+plt.savefig("nexah_state_graph.png", dpi=300)
+
 plt.show()
