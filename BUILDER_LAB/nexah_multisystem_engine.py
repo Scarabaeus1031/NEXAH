@@ -3,25 +3,30 @@ def simulate_systems(system_names, steps=10):
     systems = {}
     states = {}
 
-    # Load systems
+    print("\nLoading systems...")
+
     for name in system_names:
 
         system = load_system(name)
 
         systems[name] = system
 
+        states_list = system.get("states", [])
         transitions = system.get("transitions", {})
-        state_list = system.get("states", [])
 
         if transitions:
             states[name] = list(transitions.keys())[0]
-
-        elif state_list:
-            states[name] = state_list[0]
-
+        elif states_list:
+            states[name] = states_list[0]
         else:
-            print(f"Skipping system with no states: {name}")
+            print("Skipping invalid system:", name)
             continue
+
+        print("Loaded:", name, "start:", states[name])
+
+    if not states:
+        print("No valid systems found.")
+        return
 
     print("\n========================================")
     print("NEXAH MULTI SYSTEM SIMULATION")
