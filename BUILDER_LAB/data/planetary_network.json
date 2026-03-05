@@ -1,0 +1,64 @@
+{
+  "layers": ["space", "digital", "energy", "logistics", "food", "water", "finance"],
+  "nodes": [
+    {"id": "SAT_GNSS", "label": "GNSS Satellites", "layer": "space", "lat": 0.0, "lon": 0.0, "criticality": 0.95},
+    {"id": "SAT_COMMS", "label": "Comms Satellites", "layer": "space", "lat": 10.0, "lon": 10.0, "criticality": 0.85},
+
+    {"id": "IXP_NYC", "label": "IXP New York", "layer": "digital", "lat": 40.7128, "lon": -74.0060, "criticality": 0.9},
+    {"id": "IXP_LON", "label": "IXP London", "layer": "digital", "lat": 51.5074, "lon": -0.1278, "criticality": 0.9},
+    {"id": "IXP_FRA", "label": "IXP Frankfurt", "layer": "digital", "lat": 50.1109, "lon": 8.6821, "criticality": 0.85},
+    {"id": "IXP_SGP", "label": "IXP Singapore", "layer": "digital", "lat": 1.3521, "lon": 103.8198, "criticality": 0.85},
+
+    {"id": "GRID_US_E", "label": "US East Grid", "layer": "energy", "lat": 39.9526, "lon": -75.1652, "criticality": 0.85},
+    {"id": "GRID_EU_C", "label": "EU Central Grid", "layer": "energy", "lat": 49.0, "lon": 10.0, "criticality": 0.85},
+    {"id": "GRID_ASIA", "label": "Asia Grid Hub", "layer": "energy", "lat": 22.3193, "lon": 114.1694, "criticality": 0.8},
+
+    {"id": "PORT_SGP", "label": "Port Singapore", "layer": "logistics", "lat": 1.2644, "lon": 103.8200, "criticality": 0.9},
+    {"id": "PORT_SHG", "label": "Port Shanghai", "layer": "logistics", "lat": 31.2304, "lon": 121.4737, "criticality": 0.9},
+    {"id": "PORT_RTM", "label": "Port Rotterdam", "layer": "logistics", "lat": 51.9244, "lon": 4.4777, "criticality": 0.85},
+    {"id": "PORT_LAX", "label": "Port Los Angeles", "layer": "logistics", "lat": 33.7405, "lon": -118.2760, "criticality": 0.85},
+
+    {"id": "FOOD_US", "label": "Food US", "layer": "food", "lat": 41.8781, "lon": -87.6298, "criticality": 0.75},
+    {"id": "FOOD_EU", "label": "Food EU", "layer": "food", "lat": 48.8566, "lon": 2.3522, "criticality": 0.75},
+    {"id": "FOOD_ASIA", "label": "Food Asia", "layer": "food", "lat": 35.6762, "lon": 139.6503, "criticality": 0.75},
+
+    {"id": "WATER_MENA", "label": "Water MENA", "layer": "water", "lat": 24.7136, "lon": 46.6753, "criticality": 0.85},
+    {"id": "WATER_SAS", "label": "Water S. Asia", "layer": "water", "lat": 23.8103, "lon": 90.4125, "criticality": 0.85},
+
+    {"id": "FIN_NYC", "label": "Finance NYC", "layer": "finance", "lat": 40.7128, "lon": -74.0060, "criticality": 0.95},
+    {"id": "FIN_LON", "label": "Finance London", "layer": "finance", "lat": 51.5074, "lon": -0.1278, "criticality": 0.95}
+  ],
+  "edges": [
+    {"src": "IXP_NYC", "tgt": "IXP_LON", "kind": "intra", "layer": "digital", "weight": 0.8},
+    {"src": "IXP_LON", "tgt": "IXP_FRA", "kind": "intra", "layer": "digital", "weight": 0.7},
+    {"src": "IXP_FRA", "tgt": "IXP_SGP", "kind": "intra", "layer": "digital", "weight": 0.6},
+
+    {"src": "GRID_US_E", "tgt": "GRID_EU_C", "kind": "intra", "layer": "energy", "weight": 0.3},
+    {"src": "GRID_EU_C", "tgt": "GRID_ASIA", "kind": "intra", "layer": "energy", "weight": 0.3},
+
+    {"src": "PORT_LAX", "tgt": "PORT_SGP", "kind": "intra", "layer": "logistics", "weight": 0.6},
+    {"src": "PORT_RTM", "tgt": "PORT_SGP", "kind": "intra", "layer": "logistics", "weight": 0.7},
+    {"src": "PORT_SGP", "tgt": "PORT_SHG", "kind": "intra", "layer": "logistics", "weight": 0.7},
+
+    {"src": "FIN_NYC", "tgt": "FIN_LON", "kind": "intra", "layer": "finance", "weight": 0.8},
+    {"src": "FIN_LON", "tgt": "FIN_NYC", "kind": "intra", "layer": "finance", "weight": 0.8},
+
+    {"src": "SAT_GNSS", "tgt": "PORT_SGP", "kind": "dep", "layer": "space->logistics", "weight": 0.9},
+    {"src": "SAT_GNSS", "tgt": "PORT_RTM", "kind": "dep", "layer": "space->logistics", "weight": 0.8},
+    {"src": "SAT_COMMS", "tgt": "IXP_SGP", "kind": "dep", "layer": "space->digital", "weight": 0.8},
+
+    {"src": "IXP_NYC", "tgt": "FIN_NYC", "kind": "dep", "layer": "digital->finance", "weight": 0.9},
+    {"src": "IXP_LON", "tgt": "FIN_LON", "kind": "dep", "layer": "digital->finance", "weight": 0.9},
+
+    {"src": "GRID_EU_C", "tgt": "IXP_FRA", "kind": "dep", "layer": "energy->digital", "weight": 0.8},
+    {"src": "GRID_US_E", "tgt": "IXP_NYC", "kind": "dep", "layer": "energy->digital", "weight": 0.8},
+    {"src": "GRID_ASIA", "tgt": "IXP_SGP", "kind": "dep", "layer": "energy->digital", "weight": 0.8},
+
+    {"src": "PORT_SGP", "tgt": "FOOD_ASIA", "kind": "dep", "layer": "logistics->food", "weight": 0.85},
+    {"src": "PORT_RTM", "tgt": "FOOD_EU", "kind": "dep", "layer": "logistics->food", "weight": 0.75},
+    {"src": "PORT_LAX", "tgt": "FOOD_US", "kind": "dep", "layer": "logistics->food", "weight": 0.75},
+
+    {"src": "WATER_MENA", "tgt": "FOOD_EU", "kind": "dep", "layer": "water->food", "weight": 0.4},
+    {"src": "WATER_SAS", "tgt": "FOOD_ASIA", "kind": "dep", "layer": "water->food", "weight": 0.6}
+  ]
+}
