@@ -1,74 +1,96 @@
 # ==========================================================
-# NEXAH GRAPH SIMULATION
-# Animated system walk through the NEXAH state graph
+# NEXAH BUILDER LAB RUNNER
+# Central entry point for all Builder Lab demos
 # ==========================================================
 
-import networkx as nx
-import matplotlib.pyplot as plt
-import imageio.v2 as imageio
-import numpy as np
+import subprocess
+import sys
 import os
 
 
 # ----------------------------------------------------------
-# STATES
+# Helper
 # ----------------------------------------------------------
 
-states = [
-    "S0_normal",
-    "S1_load_rising",
-    "S2_peak_stable",
-    "S3_line_congested",
-    "S4_gen_strained",
-    "S5_freq_drop",
-    "S6_voltage_sag",
-    "S7_line_trip",
-    "S8_gen_trip",
-    "S9_islanding",
-    "S10_cascade_risk",
-    "S11_blackout"
-]
+def run_script(script_path, description):
 
+    print("\n--------------------------------------------------")
+    print(description)
+    print("--------------------------------------------------\n")
 
-# ----------------------------------------------------------
-# REGIMES
-# ----------------------------------------------------------
+    if not os.path.exists(script_path):
+        print("ERROR: Script not found:", script_path)
+        sys.exit(1)
 
-regime = {
-    "S0_normal":"STABLE",
-    "S1_load_rising":"STABLE",
-    "S2_peak_stable":"STABLE",
-    "S3_line_congested":"STRESS",
-    "S4_gen_strained":"STRESS",
-    "S5_freq_drop":"STRESS",
-    "S6_voltage_sag":"STRESS",
-    "S7_line_trip":"FAILURE",
-    "S8_gen_trip":"FAILURE",
-    "S9_islanding":"FAILURE",
-    "S10_cascade_risk":"COLLAPSE",
-    "S11_blackout":"COLLAPSE"
-}
+    try:
+        subprocess.run(
+            [sys.executable, script_path],
+            check=True
+        )
+    except subprocess.CalledProcessError:
+        print("\nERROR while running:", script_path)
+        sys.exit(1)
 
 
 # ----------------------------------------------------------
-# TRANSITIONS
+# MAIN
 # ----------------------------------------------------------
 
-delta = {
-    "S0_normal":"S1_load_rising",
-    "S1_load_rising":"S3_line_congested",
-    "S2_peak_stable":"S3_line_congested",
-    "S3_line_congested":"S5_freq_drop",
-    "S4_gen_strained":"S5_freq_drop",
-    "S5_freq_drop":"S7_line_trip",
-    "S6_voltage_sag":"S7_line_trip",
-    "S7_line_trip":"S9_islanding",
-    "S8_gen_trip":"S9_islanding",
-    "S9_islanding":"S10_cascade_risk",
-    "S10_cascade_risk":"S11_blackout",
-    "S11_blackout":"S11_blackout"
-}
+def main():
 
+    print("\n==================================================")
+    print("NEXAH BUILDER LAB")
+    print("System Navigation Demo Suite")
+    print("==================================================")
+
+    # absolute path to BUILDER_LAB
+    base = os.path.dirname(os.path.abspath(__file__))
+
+    demos = os.path.join(base, "demos")
+    visuals = os.path.join(base, "visuals")
+
+    print("\nBuilder Lab location:", base)
+    print("Visual output folder:", visuals)
+
+    # ensure visuals folder exists
+    os.makedirs(visuals, exist_ok=True)
+
+    # ------------------------------------------------------
+    # 1 DEMO SIMULATION
+    # ------------------------------------------------------
+
+    run_script(
+        os.path.join(demos, "nexah_demo.py"),
+        "Running basic NEXAH system simulation"
+    )
+
+    # ------------------------------------------------------
+    # 2 GRAPH WALK
+    # ------------------------------------------------------
+
+    run_script(
+        os.path.join(demos, "nexah_graph_simulation.py"),
+        "Running animated graph simulation"
+    )
+
+    # ------------------------------------------------------
+    # 3 EXPLORER TOOL
+    # ------------------------------------------------------
+
+    run_script(
+        os.path.join(demos, "nexah_explorer.py"),
+        "Running NEXAH Explorer"
+    )
+
+    print("\n==================================================")
+    print("Builder Lab complete")
+    print("Generated visuals can be found in:")
+    print(visuals)
+    print("==================================================\n")
+
+
+if __name__ == "__main__":
+    main()
 
 # ----------------------------------------------------------
 # COLOR BY REGIME
