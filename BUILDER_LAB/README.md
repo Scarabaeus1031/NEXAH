@@ -1,156 +1,182 @@
-# BUILDER LAB
-## NEXAH System Experiments & Simulation Environment
+# NEXAH Builder Lab
 
-The **Builder Lab** is the experimental workspace of the NEXAH project.
+Experimental playground for exploring the **NEXAH system navigation framework**.
 
-While the main repository contains the theoretical framework and the core engine, the Builder Lab is where systems are **constructed, simulated, and explored**.
+The Builder Lab contains **interactive simulations, visualizations, and system exploration tools** that demonstrate how NEXAH models dynamic systems using:
 
-It provides runnable examples demonstrating how the NEXAH architecture can model and navigate complex systems.
+States → Regimes → Transitions → Navigation
 
----
-
-# The NEXAH Pipeline
-
-All demos in the Builder Lab follow the same structural architecture:
-
-META → ARCHY → MESO → NEXAH → MEVA
-
-These layers represent the core logic of the system:
-
-META  
-Finite system definition.
-
-ARCHY  
-Classification into stability regimes.
-
-MESO  
-Structural risk geometry and navigation space.
-
-NEXAH  
-Navigation strategy and decision policy.
-
-MEVA  
-Agent execution layer acting on the system.
-
-Together these layers allow a system to **detect instability and navigate toward stability.**
+The goal is to explore **how complex systems evolve and how agents can navigate them**.
 
 ---
 
-# Builder Lab Modules
+# Core System Concept
 
-The Builder Lab currently contains the following experimental simulations.
+NEXAH models systems as **state graphs**.
 
----
+A system consists of:
 
-## Server Cluster Demo
+State space  
+↓  
+Regime classification  
+↓  
+Transition dynamics  
+↓  
+Navigation policies  
 
-A simplified distributed server cluster with **12 discrete states**.
+Example regimes used in the demo:
 
-The system models:
-
-- load escalation
-- latency growth
-- error propagation
-- stabilization interventions
-
-It demonstrates how a NEXAH agent reacts to system stress before collapse occurs.
-
----
-
-## Energy Grid Demo
-
-A miniature energy grid model.
-
-The simulation shows:
-
-- congestion in transmission lines
-- generator strain
-- frequency instability
-- cascading failure risk
-- stabilizing agent interventions
-
-This example illustrates how NEXAH can analyze **cascade risk in infrastructure systems.**
+STABLE  
+STRESS  
+FAILURE  
+COLLAPSE  
 
 ---
 
-## Universal NEXAH Simulator
+# System State Graph
 
-A generic simulation engine where users define:
+The NEXAH system can be visualized as a directed graph.
 
-- system states
-- default drift dynamics
-- stability regimes
-- agent actions
-- navigation policy
-- collapse targets
+![System Graph](visuals/nexah_state_graph.png)
 
-From this information the engine computes:
+Nodes represent **system states**.  
+Edges represent **natural transitions (drift)** between states.
 
-- collapse risk geometry
-- stabilization strategies
-- system trajectories
+Color coding:
 
-This allows the architecture to be applied to **many types of systems.**
+Green → Stable system states  
+Orange → Stress conditions  
+Red → Failure conditions  
+Black → System collapse  
 
 ---
 
-# Running the Demos
+# Animated System Navigation
 
-Example:
-python demos/server_cluster_demo.py
+The simulation shows how an **agent moves through the system**.
+
+![System Walk](visuals/nexah_system_walk.gif)
+
+This demonstrates the basic idea:
+
+System state  
+→ Transition  
+→ New regime  
+→ Navigation decision  
+
+---
+
+# Explorer Tool
+
+The **Explorer** allows running simulations from different starting points.
+
+Example animation:
+
+![Explorer Walk](visuals/nexah_explorer_walk.gif)
+
+Run it via CLI:
+
+```
+python BUILDER_LAB/demos/nexah_explorer.py
+```
 
 or
 
-python demos/energy_grid_demo.py
+```
+python BUILDER_LAB/demos/nexah_explorer.py --start S5_freq_drop --steps 20
+```
 
-Each simulation prints a trace of the system evolution including:
-
-- time step
-- current state
-- regime classification
-- risk to collapse
-- agent decision
-- next system state
+The tool automatically generates a navigation animation.
 
 ---
 
-# Purpose of the Builder Lab
+# Energy Grid Example
 
-The Builder Lab serves three main functions.
+NEXAH can be applied to real-world systems such as power networks.
 
-### Demonstration
+![Energy Grid Demo](visuals/nexah_energy_grid_simulation.gif)
 
-Show how the NEXAH architecture operates on real systems.
+Example states include:
 
-### Experimentation
+Normal operation  
+Load increase  
+Frequency drop  
+Generator trip  
+Grid islanding  
+Cascade risk  
 
-Provide a sandbox for exploring new system models.
-
-### Developer Entry Point
-
-Offer runnable examples that make the architecture easier to understand.
-
----
-
-# Planned Experiments
-
-Future Builder Lab simulations may include:
-
-- supply chain stability
-- traffic network dynamics
-- urban resilience systems
-- ecological system transitions
-- distributed computing architectures
+This demonstrates how **system stability can degrade and how navigation strategies respond**.
 
 ---
 
-# Philosophy
+# Applications Overview
 
-The Builder Lab follows a simple principle:
+The framework can model many system types.
 
-Theory becomes meaningful when systems can be built and explored.
+![Applications Map](visuals/NEXAH_APPLICATIONS_MAP.png)
 
-The NEXAH architecture is designed not only as a theoretical framework, but as a **tool for navigating complex systems.**
+Potential domains include:
 
-The Builder Lab is where this navigation becomes visible.
+Energy grids  
+Supply chains  
+AI agent networks  
+Autonomous infrastructure  
+Economic systems  
 
+---
+
+# Running the Builder Lab
+
+From the repository root:
+
+Run terminal simulation
+
+```
+python BUILDER_LAB/demos/nexah_demo.py
+```
+
+Run graph animation
+
+```
+python BUILDER_LAB/demos/nexah_graph_simulation.py
+```
+
+Run the explorer tool
+
+```
+python BUILDER_LAB/demos/nexah_explorer.py
+```
+
+---
+
+# Folder Structure
+
+```
+BUILDER_LAB
+│
+├ demos
+│   nexah_demo.py
+│   nexah_graph_simulation.py
+│   nexah_explorer.py
+│
+└ visuals
+    nexah_state_graph.png
+    nexah_system_walk.gif
+    nexah_explorer_walk.gif
+    nexah_energy_grid_simulation.gif
+```
+
+---
+
+# Purpose
+
+The Builder Lab serves as a **sandbox for developing and demonstrating the NEXAH framework**.
+
+It shows how a system can be modeled as a **dynamic state space with navigable transitions**.
+
+Future work includes:
+
+Interactive system explorer  
+Additional system models  
+Real-time control simulations  
+Integration with autonomous agents
