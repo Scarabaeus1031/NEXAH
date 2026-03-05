@@ -99,9 +99,8 @@ G = nx.DiGraph()
 for s in states:
     G.add_node(s)
 
-for s,t in delta.items():
-    G.add_edge(s,t)
-
+for s, t in delta.items():
+    G.add_edge(s, t)
 
 pos = nx.spring_layout(G, seed=42)
 
@@ -117,7 +116,7 @@ def simulate(start="S1_load_rising", steps=12):
 
     for i in range(steps):
 
-        plt.figure(figsize=(12,6))
+        fig, ax = plt.subplots(figsize=(12,6))
 
         colors = []
 
@@ -134,29 +133,23 @@ def simulate(start="S1_load_rising", steps=12):
             with_labels=True,
             node_color=colors,
             node_size=1500,
-            arrows=True
+            arrows=True,
+            ax=ax
         )
 
-        plt.title(f"NEXAH System Walk — step {i} — state {state}")
+        ax.set_title(f"NEXAH System Walk — step {i} — state {state}")
+
+        fig.canvas.draw()
 
         # --------------------------------------------------
-        # convert plot to numpy image
+        # Get frame buffer (Mac-safe)
         # --------------------------------------------------
 
-        plt.draw()
-
-        frame = np.frombuffer(
-            plt.gcf().canvas.tostring_rgb(),
-            dtype=np.uint8
-        )
-
-        frame = frame.reshape(
-            plt.gcf().canvas.get_width_height()[::-1] + (3,)
-        )
+        frame = np.asarray(fig.canvas.buffer_rgba())
 
         frames.append(frame)
 
-        plt.close()
+        plt.close(fig)
 
         state = delta[state]
 
