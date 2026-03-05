@@ -1,74 +1,22 @@
-# ==========================================================
-# NEXAH COUPLED SYSTEM ENGINE
-# Multi-system simulation with cross-system influence
-# ==========================================================
+triggered = set()
 
-import os
-import json
-import argparse
+for (src_sys, src_state), (tgt_sys, tgt_state) in COUPLINGS.items():
 
+    if (src_sys, src_state) in triggered:
+        continue
 
-BASE_DIR = os.path.dirname(os.path.abspath(file))
-SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
+    if src_sys in states and states[src_sys] == src_state:
 
+        if tgt_sys in new_states:
 
-# ----------------------------------------------------------
-# LOAD SYSTEM
-# ----------------------------------------------------------
+            print(
+                f"COUPLING: {src_sys}:{src_state} "
+                f"→ forces {tgt_sys}:{tgt_state}"
+            )
 
-def load_system(name):
+            new_states[tgt_sys] = tgt_state
 
-    path = os.path.join(SYSTEMS_DIR, f"{name}.json")
-
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"System not found: {name}")
-
-    with open(path) as f:
-        return json.load(f)
-
-
-# ----------------------------------------------------------
-# COUPLING RULES
-# (source_system, source_state) → (target_system, forced_state)
-# ----------------------------------------------------------
-
-COUPLINGS = {
-
-    ("climate_model", "S3_failure"): ("energy_grid", "S5_freq_drop"),
-
-    ("energy_grid", "S11_blackout"): ("supply_chain", "S3_breakdown")
-
-}
-
-
-# ----------------------------------------------------------
-# SIMULATION
-# ----------------------------------------------------------
-
-def simulate(system_names, steps=10):
-
-    systems = {}
-    states = {}
-
-    print("\nLoading systems...")
-
-    for name in system_names:
-
-        system = load_system(name)
-
-        systems[name] = system
-
-        transitions = system.get("transitions", {})
-        states_list = system.get("states", [])
-
-        if transitions:
-            states[name] = list(transitions.keys())[0]
-        elif states_list:
-            states[name] = states_list[0]
-        else:
-            print("Skipping invalid system:", name)
-            continue
-
+            triggered.add((src_sys, src_state))
         print("Loaded:", name, "start:", states[name])
 
 
