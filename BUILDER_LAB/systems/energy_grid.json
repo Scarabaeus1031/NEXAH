@@ -1,0 +1,48 @@
+{
+  "name": "Energy Grid Demo",
+
+  "states": [
+    "S0_normal",
+    "S1_load_rising",
+    "S2_peak_stable",
+    "S3_line_congested",
+    "S4_gen_strained",
+    "S5_freq_drop",
+    "S6_voltage_sag",
+    "S7_line_trip",
+    "S8_gen_trip",
+    "S9_islanding",
+    "S10_cascade_risk",
+    "S11_blackout"
+  ],
+
+  "regimes": {
+    "S0_normal": "STABLE",
+    "S1_load_rising": "STABLE",
+    "S2_peak_stable": "STABLE",
+    "S3_line_congested": "STRESS",
+    "S4_gen_strained": "STRESS",
+    "S5_freq_drop": "STRESS",
+    "S6_voltage_sag": "STRESS",
+    "S7_line_trip": "FAILURE",
+    "S8_gen_trip": "FAILURE",
+    "S9_islanding": "FAILURE",
+    "S10_cascade_risk": "COLLAPSE",
+    "S11_blackout": "COLLAPSE"
+  },
+
+  "transitions": {
+    "S0_normal": "S1_load_rising",
+    "S1_load_rising": "S3_line_congested",
+    "S2_peak_stable": "S3_line_congested",
+    "S3_line_congested": "S5_freq_drop",
+    "S4_gen_strained": "S5_freq_drop",
+    "S5_freq_drop": "S7_line_trip",
+    "S6_voltage_sag": "S7_line_trip",
+    "S7_line_trip": "S9_islanding",
+    "S8_gen_trip": "S9_islanding",
+    "S9_islanding": "S10_cascade_risk",
+    "S10_cascade_risk": "S11_blackout",
+    "S11_blackout": "S11_blackout"
+  }
+}
