@@ -1,93 +1,184 @@
 # ==========================================================
-# NEXAH BUILDER LAB RUNNER
-# Central entry point for all Builder Lab demos
+# NEXAH GRAPH SIMULATION
+# Animated system walk through the NEXAH state graph
 # ==========================================================
 
-import subprocess
-import sys
+import networkx as nx
+import matplotlib.pyplot as plt
+import imageio.v2 as imageio
+import numpy as np
 import os
 
 
 # ----------------------------------------------------------
-# Helper
+# STATES
 # ----------------------------------------------------------
 
-def run_script(script_path, description):
+states = [
+    "S0_normal",
+    "S1_load_rising",
+    "S2_peak_stable",
+    "S3_line_congested",
+    "S4_gen_strained",
+    "S5_freq_drop",
+    "S6_voltage_sag",
+    "S7_line_trip",
+    "S8_gen_trip",
+    "S9_islanding",
+    "S10_cascade_risk",
+    "S11_blackout"
+]
 
-    print("\n--------------------------------------------------")
-    print(description)
-    print("--------------------------------------------------\n")
 
-    if not os.path.exists(script_path):
-        print("ERROR: Script not found:", script_path)
-        sys.exit(1)
+# ----------------------------------------------------------
+# REGIMES
+# ----------------------------------------------------------
 
-    try:
-        subprocess.run(
-            [sys.executable, script_path],
-            check=True
+regime = {
+    "S0_normal":"STABLE",
+    "S1_load_rising":"STABLE",
+    "S2_peak_stable":"STABLE",
+    "S3_line_congested":"STRESS",
+    "S4_gen_strained":"STRESS",
+    "S5_freq_drop":"STRESS",
+    "S6_voltage_sag":"STRESS",
+    "S7_line_trip":"FAILURE",
+    "S8_gen_trip":"FAILURE",
+    "S9_islanding":"FAILURE",
+    "S10_cascade_risk":"COLLAPSE",
+    "S11_blackout":"COLLAPSE"
+}
+
+
+# ----------------------------------------------------------
+# TRANSITIONS
+# ----------------------------------------------------------
+
+delta = {
+    "S0_normal":"S1_load_rising",
+    "S1_load_rising":"S3_line_congested",
+    "S2_peak_stable":"S3_line_congested",
+    "S3_line_congested":"S5_freq_drop",
+    "S4_gen_strained":"S5_freq_drop",
+    "S5_freq_drop":"S7_line_trip",
+    "S6_voltage_sag":"S7_line_trip",
+    "S7_line_trip":"S9_islanding",
+    "S8_gen_trip":"S9_islanding",
+    "S9_islanding":"S10_cascade_risk",
+    "S10_cascade_risk":"S11_blackout",
+    "S11_blackout":"S11_blackout"
+}
+
+
+# ----------------------------------------------------------
+# COLOR BY REGIME
+# ----------------------------------------------------------
+
+def get_color(node):
+
+    r = regime[node]
+
+    if r == "STABLE":
+        return "green"
+
+    if r == "STRESS":
+        return "orange"
+
+    if r == "FAILURE":
+        return "red"
+
+    return "black"
+
+
+# ----------------------------------------------------------
+# BUILD GRAPH
+# ----------------------------------------------------------
+
+G = nx.DiGraph()
+
+for s in states:
+    G.add_node(s)
+
+for s,t in delta.items():
+    G.add_edge(s,t)
+
+
+pos = nx.spring_layout(G, seed=42)
+
+
+# ----------------------------------------------------------
+# SIMULATION
+# ----------------------------------------------------------
+
+def simulate(start="S1_load_rising", steps=12):
+
+    state = start
+    frames = []
+
+    for i in range(steps):
+
+        plt.figure(figsize=(12,6))
+
+        colors = []
+
+        for node in G.nodes():
+
+            if node == state:
+                colors.append("cyan")
+            else:
+                colors.append(get_color(node))
+
+        nx.draw(
+            G,
+            pos,
+            with_labels=True,
+            node_color=colors,
+            node_size=1500,
+            arrows=True
         )
-    except subprocess.CalledProcessError:
-        print("\nERROR while running:", script_path)
-        sys.exit(1)
+
+        plt.title(f"NEXAH System Walk — step {i} — state {state}")
+
+        # --------------------------------------------------
+        # convert plot to numpy image
+        # --------------------------------------------------
+
+        plt.draw()
+
+        frame = np.frombuffer(
+            plt.gcf().canvas.tostring_rgb(),
+            dtype=np.uint8
+        )
+
+        frame = frame.reshape(
+            plt.gcf().canvas.get_width_height()[::-1] + (3,)
+        )
+
+        frames.append(frame)
+
+        plt.close()
+
+        state = delta[state]
+
+    return frames
 
 
 # ----------------------------------------------------------
-# MAIN
+# RUN
 # ----------------------------------------------------------
 
-def main():
+frames = simulate()
 
-    print("\n==================================================")
-    print("NEXAH BUILDER LAB")
-    print("System Navigation Demo Suite")
-    print("==================================================\n")
+output = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "visuals",
+    "nexah_system_walk.gif"
+)
 
-    # absolute path to BUILDER_LAB
-    base = os.path.dirname(os.path.abspath(__file__))
+imageio.mimsave(
+    output,
+    frames,
+    duration=1
+)
 
-    demos = os.path.join(base, "demos")
-    visuals = os.path.join(base, "visuals")
-
-    print("Builder Lab location:", base)
-    print("Visual output folder:", visuals)
-
-    if not os.path.exists(visuals):
-        os.makedirs(visuals)
-
-    # ------------------------------------------------------
-    # 1 DEMO SIMULATION
-    # ------------------------------------------------------
-
-    run_script(
-        os.path.join(demos, "nexah_demo.py"),
-        "Running basic NEXAH system simulation"
-    )
-
-    # ------------------------------------------------------
-    # 2 GRAPH WALK
-    # ------------------------------------------------------
-
-    run_script(
-        os.path.join(demos, "nexah_graph_simulation.py"),
-        "Running animated graph simulation"
-    )
-
-    # ------------------------------------------------------
-    # 3 EXPLORER TOOL
-    # ------------------------------------------------------
-
-    run_script(
-        os.path.join(demos, "nexah_explorer.py"),
-        "Running NEXAH Explorer"
-    )
-
-    print("\n==================================================")
-    print("Builder Lab complete")
-    print("Generated visuals can be found in:")
-    print(visuals)
-    print("==================================================\n")
-
-
-if __name__ == "__main__":
-    main()
+print("\nGIF saved to:", output)
