@@ -5,7 +5,12 @@ for (src_sys, src_state), (tgt_sys, tgt_state) in COUPLINGS.items():
     if (src_sys, src_state) in triggered:
         continue
 
+<<<<<<< HEAD
     if src_sys in states and states[src_sys] == src_state:
+=======
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+SYSTEMS_DIR = os.path.join(BASE_DIR, "systems")
+>>>>>>> 6f49789 (nexah_coupled_system_engine.py)
 
         if tgt_sys in new_states:
 
@@ -89,7 +94,7 @@ def list_systems():
 # CLI ENTRY
 # ----------------------------------------------------------
 
-if name == "main":
+if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="NEXAH Coupled System Engine"
