@@ -1,6 +1,6 @@
 # NEXAH Builder Lab
 
-![NEXAH System Walk](visuals/nexah_system_walk.gif)
+![NEXAH Framework](visuals/NEXAH_SYSTEM_NAVIGATION_FRAMEWORK.png)
 
 Experimental playground for exploring the **NEXAH system navigation framework**.
 
@@ -16,6 +16,43 @@ The lab also includes experimental simulations of:
 - energy grid stability  
 - planetary infrastructure systems  
 - multi-layer global networks  
+
+---
+
+# Energy Grid Simulation Demo
+
+![Energy Grid Simulation](visuals/NEXAH_DEMO_ENERGY_GRID_SIMULATION.png)
+
+Example application of the framework to **power grid stability**.
+
+The simulation models:
+
+- grid load changes  
+- frequency drops  
+- cascading failures  
+- stabilizing control actions  
+
+Example agent actions:
+
+- ramp_generation  
+- start_reserve  
+- shed_load  
+- reconfigure_grid  
+
+---
+
+# Applications Overview
+
+![Applications Map](visuals/NEXAH_APPLICATIONS_MAP.png)
+
+The NEXAH framework can model many domains:
+
+Energy grids  
+Supply chains  
+AI agent networks  
+Autonomous infrastructure  
+Economic systems  
+Planetary infrastructure networks  
 
 ---
 
@@ -102,28 +139,6 @@ System state
 
 ---
 
-# Energy Grid Simulation Demo
-
-![Energy Grid Simulation](visuals/NEXAH_DEMO_ENERGY_GRID_SIMULATION.png)
-
-Example application of the framework to **power grid stability**.
-
-The simulation models:
-
-- grid load changes  
-- frequency drops  
-- cascading failures  
-- stabilizing control actions  
-
-Example agent actions:
-
-- ramp_generation  
-- start_reserve  
-- shed_load  
-- reconfigure_grid  
-
----
-
 # System Explorer
 
 The **Explorer tool** allows running simulations from different starting points.
@@ -158,21 +173,6 @@ These simulations explore disruptions across interconnected systems such as:
 - logistics networks  
 - digital infrastructure  
 - financial systems  
-
----
-
-# Applications Overview
-
-![Applications Map](visuals/NEXAH_APPLICATIONS_MAP.png)
-
-The NEXAH framework can model many domains:
-
-Energy grids  
-Supply chains  
-AI agent networks  
-Autonomous infrastructure  
-Economic systems  
-Planetary infrastructure networks  
 
 ---
 
@@ -254,6 +254,7 @@ visuals/nexah_explorer_walk.gif
 visuals/nexah_cascade.gif
 visuals/nexah_simulation.gif
 
+visuals/NEXAH_SYSTEM_NAVIGATION_FRAMEWORK.png
 visuals/NEXAH_DEMO_SIMULATION.png
 visuals/NEXAH_DEMO_ENERGY_GRID_SIMULATION.png
 visuals/NEXAH_APPLICATIONS_MAP.png
@@ -293,6 +294,7 @@ BUILDER_LAB
 │   nexah_explorer_walk.gif
 │   nexah_cascade.gif
 │   nexah_simulation.gif
+│   NEXAH_SYSTEM_NAVIGATION_FRAMEWORK.png
 │   NEXAH_DEMO_SIMULATION.png
 │   NEXAH_DEMO_ENERGY_GRID_SIMULATION.png
 │   NEXAH_APPLICATIONS_MAP.png
@@ -312,10 +314,10 @@ The Builder Lab serves as a **sandbox for developing and demonstrating the NEXAH
 
 It allows experimentation with:
 
-- system navigation
-- cascade dynamics
-- multi-layer infrastructure models
-- planetary-scale simulations
+- system navigation  
+- cascade dynamics  
+- multi-layer infrastructure models  
+- planetary-scale simulations  
 
 Future work includes:
 
