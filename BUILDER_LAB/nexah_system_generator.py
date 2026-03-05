@@ -85,7 +85,7 @@ def list_systems():
 # MAIN
 # ----------------------------------------------------------
 
-if name == "main":
+if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="NEXAH System Generator"
