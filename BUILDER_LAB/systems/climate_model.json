@@ -1,0 +1,21 @@
+{
+  "name": "climate_model",
+  "states": [
+    "S0_start",
+    "S1_growth",
+    "S2_stress",
+    "S3_failure"
+  ],
+  "regimes": {
+    "S0_start": "STABLE",
+    "S1_growth": "STABLE",
+    "S2_stress": "STRESS",
+    "S3_failure": "FAILURE"
+  },
+  "transitions": {
+    "S0_start": "S1_growth",
+    "S1_growth": "S2_stress",
+    "S2_stress": "S3_failure",
+    "S3_failure": "S3_failure"
+  }
+}
