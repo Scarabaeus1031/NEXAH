@@ -1,5 +1,6 @@
 {
   "name": "supply_chain",
+
   "states": [
     "S0_normal",
     "S1_delay",
