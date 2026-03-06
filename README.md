@@ -27,10 +27,6 @@ This demonstrates the core NEXAH cycle:
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
-Example system evolution:
-
-![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
-
 ---
 
 # Overview
