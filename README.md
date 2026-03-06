@@ -419,6 +419,31 @@ The Navigator acts as the **entry point for exploring the system architecture**.
 
 ---
 
+# Quick Links
+
+Helpful entry points into the NEXAH repository:
+
+| Section | Description | Link |
+|-------|-------------|------|
+| Framework Concepts | Structural architecture of the NEXAH system | [`FRAMEWORK/`](./FRAMEWORK) |
+| Research Foundations | Mathematical and conceptual principles | [`RESEARCH/`](./RESEARCH) |
+| System Applications | Example dynamical system models | [`APPLICATIONS/`](./APPLICATIONS) |
+| Builder Lab | Simulation sandbox and demos | [`BUILDER_LAB/`](./BUILDER_LAB) |
+| Visual Navigator | Repository maps and diagrams | [`NAVIGATOR/`](./NAVIGATOR) |
+
+---
+
+# Further Documentation
+
+| Document | Description | Link |
+|--------|-------------|------|
+| Structural Principles | Formal description of META → ARCHY → NEXAH | [`RESEARCH/nexah_structural_principles.md`](./RESEARCH) |
+| Project Philosophy | Motivation and conceptual direction | [`docs/project_philosophy.md`](./docs/project_philosophy.md) |
+| Scientific Positioning | Relation to abstract interpretation and dynamical systems | [`docs/scientific_positioning.md`](./docs/scientific_positioning.md) |
+
+---
+---
+
 # Implementation Status
 
 Current release: **v1.0.0**
