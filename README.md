@@ -20,6 +20,25 @@ The repository integrates multiple layers that connect **formal system theory wi
 
 ---
 
+# Repository Map
+
+![NEXAH Repository Map](./NAVIGATOR/visuals/NEXAH_REPOSITORY_MAP.png)
+
+The repository map provides a high-level overview of the NEXAH ecosystem and its main structural components.
+
+It illustrates how the system is organized into interconnected layers:
+
+- ENGINE (formal computational core)
+- FRAMEWORK (conceptual system architecture)
+- RESEARCH (theoretical foundations)
+- APPLICATIONS (system modeling)
+- BUILDER LAB (simulation sandbox)
+- NAVIGATOR (visual system documentation)
+
+This map serves as a visual entry point for navigating the repository structure.
+
+---
+
 # Core System Layers
 
 The NEXAH ecosystem is organized into five major components:
