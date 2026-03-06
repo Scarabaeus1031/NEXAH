@@ -1,7 +1,31 @@
+The **NEXAH Framework** models **stability and navigation in finite dynamical systems**.
+
+Systems are represented as **state graphs with regimes and risk geometry**, allowing agents to navigate systems toward stability.
+
+### Example: Energy Grid Stabilization
+
+Run the demo simulation:
+
+    python BUILDER_LAB/demos/nexah_demo.py
+
+Example system evolution:
+
+    freq_drop
+    → start_reserve
+    → congestion
+    → reconfigure_grid
+    → stable
+
+This demonstrates the core NEXAH cycle:
+
+    State → Regime → Risk → Navigation → Action → Next State
+
 # NEXAH Framework
 
-The official repository for the **NEXAH Framework** —  
+The official repository for the **NEXAH Framework** —
 a modular system for **structural modeling, stabilization, and relational navigation**.
+
+Example system evolution:
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
