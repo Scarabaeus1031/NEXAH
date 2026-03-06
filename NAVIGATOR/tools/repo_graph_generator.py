@@ -64,24 +64,65 @@ def node_color(node):
 
 def draw_graph(G):
 
-    plt.figure(figsize=(14, 10))
+    plt.figure(figsize=(14,10), facecolor="#0f172a")
 
     pos = nx.spring_layout(G, k=0.9, seed=42)
 
     colors = [node_color(n) for n in G.nodes()]
 
+    ax = plt.gca()
+    ax.set_facecolor("#0f172a")
+
     nx.draw(
         G,
         pos,
         with_labels=True,
-        node_size=2800,
+        node_size=3200,
         node_color=colors,
         font_size=9,
         font_color="white",
-        edge_color="#a0aec0"
+        edge_color="#94a3b8",
+        linewidths=1.5
     )
 
-    plt.title("NEXAH Repository Architecture", fontsize=18)
+    plt.title(
+        "NEXAH Repository Architecture",
+        fontsize=20,
+        color="white",
+        pad=20
+    )
+
+    # remove axes
+    plt.axis("off")
+
+    output_dir = os.path.abspath("../generated")
+    os.makedirs(output_dir, exist_ok=True)
+
+    from datetime import datetime
+    timestamp = datetime.now().strftime("%Y%m%d")
+
+    main_output = os.path.join(output_dir, "NEXAH_REPOSITORY_GRAPH.png")
+    archive_output = os.path.join(
+        output_dir,
+        f"NEXAH_REPOSITORY_GRAPH_{timestamp}.png"
+    )
+
+    plt.savefig(
+        main_output,
+        bbox_inches="tight",
+        facecolor="#0f172a"
+    )
+
+    plt.savefig(
+        archive_output,
+        bbox_inches="tight",
+        facecolor="#0f172a"
+    )
+
+    plt.close()
+
+    print("Graph updated:", main_output)
+    print("Archive saved:", archive_output)
 
     # ensure generated folder exists
     output_dir = os.path.abspath("../generated")
