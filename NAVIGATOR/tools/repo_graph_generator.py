@@ -3,10 +3,12 @@ from datetime import datetime
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
 # Root of the repository relative to this script
 ROOT_DIR = os.path.abspath("../../")
 
-# Folders that should not appear in the architecture map
+
+# folders that should not appear in the architecture map
 IGNORE = {
     ".git",
     ".github",
@@ -19,14 +21,15 @@ IGNORE = {
     "tests"
 }
 
-# Main architecture layers and their colors
+
+# main architecture layers and their colors
 CORE_LAYERS = {
-    "ENGINE": "#2b6cb0",
-    "FRAMEWORK": "#6b46c1",
-    "RESEARCH": "#2f855a",
-    "APPLICATIONS": "#dd6b20",
-    "BUILDER_LAB": "#d69e2e",
-    "NAVIGATOR": "#4a5568"
+    "ENGINE": "#3b82f6",
+    "FRAMEWORK": "#a855f7",
+    "RESEARCH": "#22c55e",
+    "APPLICATIONS": "#f97316",
+    "BUILDER_LAB": "#eab308",
+    "NAVIGATOR": "#64748b"
 }
 
 
@@ -36,7 +39,7 @@ def build_graph(root):
 
     for dirpath, dirnames, filenames in os.walk(root):
 
-        # remove ignored directories
+        # filter ignored folders
         dirnames[:] = [d for d in dirnames if d not in IGNORE]
 
         parent = os.path.relpath(dirpath, root)
@@ -59,16 +62,82 @@ def node_color(node):
         if layer in parts:
             return CORE_LAYERS[layer]
 
-    return "#718096"
+    return "#94a3b8"
 
 
 def draw_graph(G):
 
-    plt.figure(figsize=(14,10), facecolor="#0f172a")
+    plt.figure(figsize=(14, 10), facecolor="#0f172a")
 
     pos = nx.spring_layout(G, k=0.9, seed=42)
 
     colors = [node_color(n) for n in G.nodes()]
+
+    ax = plt.gca()
+    ax.set_facecolor("#0f172a")
+
+    nx.draw(
+        G,
+        pos,
+        with_labels=True,
+        node_size=3200,
+        node_color=colors,
+        font_size=9,
+        font_color="white",
+        edge_color="#94a3b8",
+        linewidths=1.5
+    )
+
+    plt.title(
+        "NEXAH Repository Architecture",
+        fontsize=20,
+        color="white",
+        pad=20
+    )
+
+    plt.axis("off")
+
+    # ensure generated folder exists
+    output_dir = os.path.abspath("../generated")
+    os.makedirs(output_dir, exist_ok=True)
+
+    # main output file
+    main_output = os.path.join(
+        output_dir,
+        "NEXAH_REPOSITORY_GRAPH.png"
+    )
+
+    # archive version
+    timestamp = datetime.now().strftime("%Y%m%d")
+
+    archive_output = os.path.join(
+        output_dir,
+        f"NEXAH_REPOSITORY_GRAPH_{timestamp}.png"
+    )
+
+    plt.savefig(
+        main_output,
+        bbox_inches="tight",
+        facecolor="#0f172a"
+    )
+
+    plt.savefig(
+        archive_output,
+        bbox_inches="tight",
+        facecolor="#0f172a"
+    )
+
+    plt.close()
+
+    print("Graph updated:", main_output)
+    print("Archive saved:", archive_output)
+
+
+if __name__ == "__main__":
+
+    G = build_graph(ROOT_DIR)
+
+    draw_graph(G)    colors = [node_color(n) for n in G.nodes()]
 
     ax = plt.gca()
     ax.set_facecolor("#0f172a")
