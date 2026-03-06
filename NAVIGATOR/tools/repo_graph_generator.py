@@ -1,30 +1,32 @@
 import os
+from datetime import datetime
 import networkx as nx
 import matplotlib.pyplot as plt
 
-ROOT_DIR = "../../"
+# Root of the repository relative to this script
+ROOT_DIR = os.path.abspath("../../")
 
-# folders that should not appear in the architecture map
+# Folders that should not appear in the architecture map
 IGNORE = {
-".git",
-".github",
-".pytest_cache",
-"__pycache__",
-".mypy_cache",
-"visuals",
-"generated",
-"tools",
-"tests"
+    ".git",
+    ".github",
+    ".pytest_cache",
+    "__pycache__",
+    ".mypy_cache",
+    "visuals",
+    "generated",
+    "tools",
+    "tests"
 }
 
-# main architecture layers
+# Main architecture layers and their colors
 CORE_LAYERS = {
-"ENGINE": "#2b6cb0",
-"FRAMEWORK": "#6b46c1",
-"RESEARCH": "#2f855a",
-"APPLICATIONS": "#dd6b20",
-"BUILDER_LAB": "#d69e2e",
-"NAVIGATOR": "#4a5568"
+    "ENGINE": "#2b6cb0",
+    "FRAMEWORK": "#6b46c1",
+    "RESEARCH": "#2f855a",
+    "APPLICATIONS": "#dd6b20",
+    "BUILDER_LAB": "#d69e2e",
+    "NAVIGATOR": "#4a5568"
 }
 
 
@@ -34,6 +36,7 @@ def build_graph(root):
 
     for dirpath, dirnames, filenames in os.walk(root):
 
+        # remove ignored directories
         dirnames[:] = [d for d in dirnames if d not in IGNORE]
 
         parent = os.path.relpath(dirpath, root)
@@ -61,7 +64,7 @@ def node_color(node):
 
 def draw_graph(G):
 
-    plt.figure(figsize=(14,10))
+    plt.figure(figsize=(14, 10))
 
     pos = nx.spring_layout(G, k=0.9, seed=42)
 
@@ -80,13 +83,27 @@ def draw_graph(G):
 
     plt.title("NEXAH Repository Architecture", fontsize=18)
 
-    os.makedirs("../generated", exist_ok=True)
+    # ensure generated folder exists
+    output_dir = os.path.abspath("../generated")
+    os.makedirs(output_dir, exist_ok=True)
 
-    output = "../generated/NEXAH_REPOSITORY_GRAPH.png"
+    # main output (always overwritten)
+    main_output = os.path.join(output_dir, "NEXAH_REPOSITORY_GRAPH.png")
 
-    plt.savefig(output, bbox_inches="tight")
+    # archive version
+    timestamp = datetime.now().strftime("%Y%m%d")
+    archive_output = os.path.join(
+        output_dir,
+        f"NEXAH_REPOSITORY_GRAPH_{timestamp}.png"
+    )
 
-    print("Graph saved to:", output)
+    plt.savefig(main_output, bbox_inches="tight")
+    plt.savefig(archive_output, bbox_inches="tight")
+
+    plt.close()
+
+    print("Graph updated:", main_output)
+    print("Archive saved:", archive_output)
 
 
 if __name__ == "__main__":
