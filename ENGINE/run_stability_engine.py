@@ -26,8 +26,20 @@ VISUAL_DIR = "ENGINE/visuals"
 os.makedirs(VISUAL_DIR, exist_ok=True)
 
 def save_plot(name):
+
     path = os.path.join(VISUAL_DIR, name)
-    plt.savefig(path, dpi=200, bbox_inches="tight", transparent=True)
+
+    fig = plt.gcf()
+    fig.patch.set_alpha(0)
+
+    plt.savefig(
+        path,
+        dpi=200,
+        bbox_inches="tight",
+        transparent=True,
+        facecolor=fig.get_facecolor()
+    )
+
     print("Saved:", path)
 
 def main():
@@ -154,3 +166,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
