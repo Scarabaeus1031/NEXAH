@@ -35,5 +35,20 @@
     "service_failure"
   ],
 
-  "risk_target": "service_failure"
+  "risk_target": "service_failure",
+
+  "control_actions": {
+    "balance_load": {
+      "from": "high_load",
+      "to": "stable"
+    },
+    "autoscale": {
+      "from": "overload",
+      "to": "high_load"
+    },
+    "restart_cluster": {
+      "from": "service_failure",
+      "to": "stable"
+    }
+  }
 }
