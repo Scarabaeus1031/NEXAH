@@ -1,146 +1,271 @@
+# NEXAH Framework — System Stack
 
-# NEXAH Framework - System Stack
+The **System Stack** of the NEXAH Framework represents its core architecture.  
+It defines how the layers **META**, **ARCHY**, **MESO**, **NEXAH**, and **MEVA** interact to form a cohesive system for navigating complex dynamic structures.
 
-The **System Stack** of the NEXAH Framework represents its core architecture, defining how the layers **META**, **ARCHY**, and **NEXAH** interact and form a cohesive system. This stack enables us to understand the relationships between the components of a complex system and manage how they evolve.
+The stack transforms **system definitions → regime structures → risk landscapes → navigable trajectories**.
 
-## System Stack Architecture
+---
 
-The system stack is composed of three fundamental layers:
+# System Stack Architecture
 
-### 1. **META**: Relational Structure
-The **META** layer establishes the relational order within the system. It provides the foundational framework for understanding how system elements interact with each other.
+The NEXAH architecture is organized into five structural layers:
 
-- **Purpose**: Defines the system’s relational rules.
-- **Key Focus**: Structures relationships, including hierarchy and ordering.
+```
+META → ARCHY → MESO → NEXAH → MEVA
+```
+
+Each layer adds a new capability to the system.
+
+---
+
+# 1. META — Relational Structure
+
+The **META layer** establishes the relational structure of a system.
+
+It defines the **semantic structure** of the system: elements, relationships, and ordering principles.
+
+Purpose:
+- define system entities
+- define relations between entities
+- establish ordering and hierarchy
+
+Key focus:
+
+```
+relational structure
+system semantics
+dependency structure
+```
 
 ![System Stack - META](./visuals/Systemstack_Structure_Meta.png)
 
 ---
 
-### 2. **ARCHY**: Stability Regimes
-The **ARCHY** layer governs system stability by defining and enforcing transitions between different system states. It ensures that the system remains balanced despite any changes within its components.
+# 2. ARCHY — Stability Regimes
 
-- **Purpose**: Maintains stability and governs state transitions.
-- **Key Focus**: Stability regimes, system state changes, and managing system dynamics.
+The **ARCHY layer** transforms relational structures into **regime structures**.
+
+It identifies system states and transitions between them.
+
+Purpose:
+- detect regime structure
+- detect transitions between states
+- detect stability regimes
+
+Key focus:
+
+```
+regime detection
+state transitions
+collapse states
+basin structure
+```
 
 ![System Stack - ARCHY](./visuals/Systemstack_Structure_Archy.png)
 
 ---
 
-### 3. **NEXAH**: Orientation & Frames
-The **NEXAH** layer provides navigability within the system. It defines how elements are oriented and how users can interact with the system by providing reference frames.
+# 3. MESO — Risk Geometry
 
-- **Purpose**: Facilitates system navigation and orientation.
-- **Key Focus**: Defines frames of reference and guides system interactions.
+The **MESO layer** computes the **risk geometry** of the system.
+
+It evaluates how far each state lies from collapse regimes and constructs a risk gradient across the regime graph.
+
+Purpose:
+- quantify system risk
+- compute distance to collapse
+- generate risk gradients
+
+Key focus:
+
+```
+collapse distance
+risk gradients
+basin geometry
+system resilience
+```
+
+![System Stack - MESO](./visuals/Systemstack_Structure_Meso.png)
+
+---
+
+# 4. NEXAH — Navigation & Frames
+
+The **NEXAH layer** enables **navigation through regime landscapes**.
+
+Using the structures produced by META, ARCHY, and MESO, the system can determine safe trajectories through the system state space.
+
+Purpose:
+- compute safe paths
+- guide system evolution
+- support agent navigation
+
+Key focus:
+
+```
+navigation policies
+frame operators
+trajectory planning
+regime-aware decision making
+```
 
 ![System Stack - NEXAH](./visuals/Systemstack_Structure_Nexah.png)
 
 ---
 
-### 4. **MESO**: Risk Geometry
+# 5. MEVA — Execution Layer
 
-The **MESO** layer computes the risk geometry of a system.
+The **MEVA layer** executes navigation decisions.
 
-It evaluates how far each system state lies from collapse regimes
-and constructs a risk gradient across the regime graph.
+It applies actions, overrides drift transitions, and records system trajectories.
 
-- **Purpose**: Quantify system risk.
-- **Key Focus**: Distance to collapse, risk gradients, and basin geometry.
+Purpose:
+- execute system control
+- apply navigation policies
+- simulate trajectories
 
-MESO transforms structural regime graphs into **navigable risk landscapes**.
+Key focus:
 
----
+```
+action execution
+state updates
+trajectory recording
+system simulation
+```
 
-### 5. **MEVA**: Execution Layer
-
-The **MEVA** layer executes navigation decisions within the system.
-
-It applies control actions, overrides drift transitions,
-and records the resulting system trajectory.
-
-- **Purpose**: Execute navigation policies.
-- **Key Focus**: Action application, state updates, trajectory recording.
-
-MEVA connects the theoretical navigation model to **real system simulations**.
+![System Stack - MEVA](./visuals/Systemstack_Structure_Meva.png)
 
 ---
 
-## The Flow of Interaction
+# Flow of Interaction
 
-The layers in the system stack work together in a continuous feedback loop. The interaction between **META**, **ARCHY**, and **NEXAH** ensures that the system remains dynamic and responsive:
+The layers of the NEXAH system form a structured pipeline:
 
-- **META → ARCHY**: Defines the foundational relational structure and stability fields.
-- **ARCHY → NEXAH**: Manages transitions between states and frames for better navigation.
+```
+System Definition
+        ↓
+META
+        ↓
+ARCHY
+        ↓
+MESO
+        ↓
+NEXAH
+        ↓
+MEVA
+```
+
+Which results in:
+
+```
+system semantics
+→ regime structure
+→ risk geometry
+→ navigation policy
+→ execution trajectory
+```
 
 ![Flow of Interaction](./visuals/Flow_of_Interaction.png)
 
-This flow creates a well-structured and flexible framework that ensures system stability, navigability, and clarity in complex environments.
+---
+
+# System Purpose
+
+The NEXAH framework enables navigation through complex system regimes.
+
+Agents can:
+
+• detect unstable regimes  
+• anticipate cascading failures  
+• evaluate risk landscapes  
+• navigate toward stable attractors  
+
+The framework is designed for systems where **state transitions, risk propagation, and navigation decisions must be analyzed together**.
 
 ---
 
-## Conclusion
+# Explore the Framework
 
-The **System Stack** is the backbone of the NEXAH Framework. Understanding how each layer interacts and contributes to the overall system allows users to navigate and apply the framework to solve complex problems. This approach ensures that NEXAH is modular, flexible, and adaptable to a wide range of applications.
+Detailed documentation for each layer:
 
----
-
-## 📚 **Explore the System Stack:**
 - [META Layer](./META/readme.md)
 - [ARCHY Layer](./ARCHY/readme.md)
+- [MESO Layer](./MESO/readme.md)
 - [NEXAH Layer](./NEXAH/readme.md)
+- [MEVA Layer](./MEVA/readme.md)
 
 ---
 
-### Next Steps:
-- **Explore Framework**: Dive deeper into each of the layers (META, ARCHY, and NEXAH) to understand their roles within the system.
-- **Implement in Practice**: Use the system stack for real-world applications, tackling challenges and improving system behaviors.
+# Key Documents
+
+Core theoretical documents explaining the framework:
+
+### Architecture
+
+- **[system_stack.md](./system_stack.md)**  
+Overview of the NEXAH system stack architecture.
+
+- **[stack_structure.md](./stack_structure.md)**  
+Detailed description of layer interactions.
 
 ---
 
-## 📚 **Key Documents:**
-Here’s a breakdown of the essential documents that explain the components of the NEXAH Framework, structured according to the system stack:
+### Theory
 
-1. **[system_stack.md](./system_stack.md)**  
-   - **Purpose**: Overview of the entire system stack architecture.  
-   - **Content**: Provides a detailed breakdown of how META, ARCHY, and NEXAH layers interact.
+- **[axioms.md](./axioms.md)**  
+Foundational principles of the NEXAH framework.
 
-2. **[axioms.md](./axioms.md)**  
-   - **Purpose**: Defines the foundational axioms of NEXAH.  
-   - **Content**: Lists and explains the core principles that guide the framework’s relational structure.
+- **[theorems.md](./theorems.md)**  
+Formal derivations based on the axioms.
 
-3. **[theorems.md](./theorems.md)**  
-   - **Purpose**: Formal derivations based on the axioms and principles.  
-   - **Content**: Provides theoretical proofs and mathematical support for the NEXAH framework.
+---
 
-4. **[stack_structure.md](./stack_structure.md)**  
-   - **Purpose**: Describes how the NEXAH system stack operates at a granular level.  
-   - **Content**: Explains the interrelationship and dependencies of the stack’s components.
+### Operators
 
-5. **[frame_operator.md](./frame_operator.md)**  
-   - **Purpose**: Defines how frames are established and applied in the NEXAH system.  
-   - **Content**: Describes the process and logic behind the operation of frames.
+- **[frame_operator.md](./frame_operator.md)**  
+Definition of frame operations used for navigation.
 
-6. **[minimal_logic.md](./minimal_logic.md)**  
-   - **Purpose**: Explains the minimal logic underpinning the relational model.  
-   - **Content**: Outlines the fundamental logical principles for constructing relationships.
+- **[regime_operator.md](./regime_operator.md)**  
+Logic governing system regime transitions.
 
-7. **[modules.md](./modules.md)**  
-   - **Purpose**: Overview of the different modules within the NEXAH framework.  
-   - **Content**: Lists and categorizes the modules, detailing their respective functions.
+---
 
-8. **[regime_operator.md](./regime_operator.md)**  
-   - **Purpose**: Explains how system regimes are defined and applied.  
-   - **Content**: Details the logic behind managing system state changes.
+### Models
 
-9. **[relational_model.md](./relational_model.md)**  
-   - **Purpose**: Describes the core relational model of the system.  
-   - **Content**: Provides an in-depth view of how system elements are structured based on relational principles.
+- **[relational_model.md](./relational_model.md)**  
+Description of the core relational system model.
 
-10. **[research_papers.md](./research_papers.md)**  
-    - **Purpose**: Collection of foundational and applied research papers.  
-    - **Content**: Links to the theoretical and applied research supporting the NEXAH framework.
+- **[minimal_logic.md](./minimal_logic.md)**  
+Minimal logical structure supporting the framework.
 
-11. **[application_cases.md](./application_cases.md)**  
-    - **Purpose**: Showcases use cases for NEXAH in various domains.  
-    - **Content**: Examples of how NEXAH is applied in architecture, engineering, data science, and urban systems.
+---
 
+### Applications
+
+- **[modules.md](./modules.md)**  
+Overview of system modules.
+
+- **[application_cases.md](./application_cases.md)**  
+Example applications of the framework.
+
+---
+
+### Research
+
+- **[research_papers.md](./research_papers.md)**  
+Collection of theoretical and applied research related to the NEXAH framework.
+
+---
+
+# Summary
+
+The NEXAH Framework provides a **structural navigation architecture for complex systems**.
+
+By combining relational structure, regime analysis, risk geometry, and navigation policies, it enables systematic exploration and control of complex dynamic environments.
+
+The layered architecture ensures that the framework remains:
+
+• modular  
+• extensible  
+• adaptable to many application domains  
