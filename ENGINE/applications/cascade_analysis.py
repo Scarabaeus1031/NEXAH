@@ -1,9 +1,9 @@
 class CascadeAnalysis:
     """
-    Detect potential cascade paths in a StateGraph.
+    Detect cascade paths in a StateGraph.
 
-    A cascade path is a sequence of transitions leading deeper
-    into failure regions or away from stability.
+    Cascades occur when transitions move toward higher risk
+    or deeper failure regimes.
     """
 
     def __init__(self, graph, distance_map):
@@ -20,31 +20,33 @@ class CascadeAnalysis:
         for node in self.graph.nodes:
             for neighbor in self.graph.neighbors(node):
 
-                if self.distance_map.get(neighbor, 0) > self.distance_map.get(node, 0):
+                node_risk = self.distance_map.get(node, 0)
+                neigh_risk = self.distance_map.get(neighbor, 0)
+
+                if neigh_risk > node_risk:
                     sources.append(node)
                     break
 
         return sources
 
-    def cascade_paths(self, start, max_depth=5):
+    def cascade_paths(self, start):
         """
-        Explore possible cascade paths starting from a node.
+        Follow transitions starting from a node.
         """
 
-        paths = []
+        path = [start]
+        current = start
 
-        def dfs(node, path, depth):
+        while True:
 
-            if depth >= max_depth:
-                return
+            neighbors = list(self.graph.neighbors(current))
 
-            for neighbor in self.graph.neighbors(node):
+            if not neighbors:
+                break
 
-                new_path = path + [neighbor]
-                paths.append(new_path)
+            next_node = neighbors[0]
+            path.append(next_node)
 
-                dfs(neighbor, new_path, depth + 1)
+            current = next_node
 
-        dfs(start, [start], 0)
-
-        return paths
+        return path
