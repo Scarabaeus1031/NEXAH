@@ -8,27 +8,14 @@
     "service_failure"
   ],
 
-  "transitions": {
-
-    "stable": {
-      "increase_load": "high_load"
-    },
-
-    "high_load": {
-      "balance_load": "stable",
-      "traffic_spike": "overload"
-    },
-
-    "overload": {
-      "autoscale": "high_load",
-      "cascade_failure": "service_failure"
-    },
-
-    "service_failure": {
-      "restart_cluster": "stable"
-    }
-
-  },
+  "edges": [
+    {"from": "stable", "to": "high_load"},
+    {"from": "high_load", "to": "stable"},
+    {"from": "high_load", "to": "overload"},
+    {"from": "overload", "to": "high_load"},
+    {"from": "overload", "to": "service_failure"},
+    {"from": "service_failure", "to": "stable"}
+  ],
 
   "collapse_states": [
     "service_failure"
