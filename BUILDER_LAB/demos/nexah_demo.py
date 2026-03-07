@@ -5,6 +5,7 @@
 
 from collections import deque
 
+
 # ----------------------------------------------------------
 # SYSTEM DEFINITION
 # ----------------------------------------------------------
@@ -39,7 +40,11 @@ regime = {
     "S11_blackout":"COLLAPSE",
 }
 
-# default drift (Δ)
+
+# ----------------------------------------------------------
+# SYSTEM DRIFT (Δ)
+# ----------------------------------------------------------
+
 delta = {
     "S0_normal":"S1_load_rising",
     "S1_load_rising":"S3_line_congested",
@@ -55,7 +60,11 @@ delta = {
     "S11_blackout":"S11_blackout"
 }
 
-# actions
+
+# ----------------------------------------------------------
+# ACTION SPACE
+# ----------------------------------------------------------
+
 actions = [
     "noop",
     "ramp_generation",
@@ -64,7 +73,11 @@ actions = [
     "reconfigure_grid"
 ]
 
-# action effects
+
+# ----------------------------------------------------------
+# ACTION EFFECTS
+# ----------------------------------------------------------
+
 action_effect = {
 
     ("S3_line_congested","ramp_generation"):"S2_peak_stable",
@@ -80,8 +93,9 @@ action_effect = {
     ("S10_cascade_risk","shed_load"):"S4_gen_strained"
 }
 
+
 # ----------------------------------------------------------
-# GRAPH
+# GRAPH BUILD
 # ----------------------------------------------------------
 
 def build_graph():
@@ -93,11 +107,12 @@ def build_graph():
 
     return graph
 
+
 graph = build_graph()
 
 
 # ----------------------------------------------------------
-# MESO : risk geometry
+# RISK GEOMETRY
 # ----------------------------------------------------------
 
 def distance_to_blackout(start):
@@ -128,7 +143,7 @@ def distance_to_blackout(start):
 
 
 # ----------------------------------------------------------
-# NEXAH policy
+# POLICY ENGINE
 # ----------------------------------------------------------
 
 def choose_action(state):
@@ -166,7 +181,7 @@ def choose_action(state):
 
 
 # ----------------------------------------------------------
-# MEVA execution
+# SYSTEM STEP
 # ----------------------------------------------------------
 
 def step(state):
@@ -174,18 +189,15 @@ def step(state):
     action = choose_action(state)
 
     if (state,action) in action_effect:
-
         new_state = action_effect[(state,action)]
-
     else:
-
         new_state = delta[state]
 
     return action,new_state
 
 
 # ----------------------------------------------------------
-# RUN SIMULATION
+# SIMULATION RUN
 # ----------------------------------------------------------
 
 def run_demo(start="S1_load_rising",steps=12):
@@ -210,6 +222,39 @@ def run_demo(start="S1_load_rising",steps=12):
 
 
 # ----------------------------------------------------------
+# OPTIONAL LANDSCAPE VISUALIZATION
+# ----------------------------------------------------------
+
+def show_landscape():
+
+    try:
+
+        from ENGINE.core.state_graph import StateGraph
+        from ENGINE.visualization.risk_landscape import RiskLandscape
+
+        g = StateGraph()
+
+        for s in states:
+            g.add_transition(s, delta[s])
+
+        dist = {s:distance_to_blackout(s) for s in states}
+
+        regimes = {
+            "stable":[s for s in states if regime[s]=="STABLE"],
+            "stress":[s for s in states if regime[s]=="STRESS"],
+            "failure":[s for s in states if regime[s] in ["FAILURE","COLLAPSE"]],
+        }
+
+        viz = RiskLandscape(g, dist, regimes)
+
+        viz.plot()
+
+    except Exception as e:
+
+        print("\nVisualization skipped:", e)
+
+
+# ----------------------------------------------------------
 # ENTRY POINT
 # ----------------------------------------------------------
 
@@ -228,3 +273,6 @@ if __name__ == "__main__":
 
     print("\nDemo 4: Starting near collapse\n")
     run_demo("S10_cascade_risk")
+
+    print("\nVisualizing system landscape...\n")
+    show_landscape()
