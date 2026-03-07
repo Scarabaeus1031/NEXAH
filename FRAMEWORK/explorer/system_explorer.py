@@ -1,3 +1,5 @@
+from FRAMEWORK.MESO.stability_landscape import compute_stability_landscape
+from FRAMEWORK.MESO.visualize_stability_landscape import visualize_stability_landscape
 from FRAMEWORK.MESO.collapse_basin import compute_collapse_basin
 from FRAMEWORK.MESO.visualize_collapse_basin import visualize_collapse_basin
 from FRAMEWORK.MESO.stability_atlas import compute_stability_atlas
@@ -74,3 +76,17 @@ class SystemExplorer:
 
         print("\nRisk gradient:")
         print(self.risk["risk_gradient"])
+        
+    def show_stability_landscape(self):
+
+    landscape = compute_stability_landscape(
+        self.regime_map,
+        self.risk
+    )
+
+    visualize_stability_landscape(
+        self.regime_map,
+        landscape
+    )
+
+    return landscape
