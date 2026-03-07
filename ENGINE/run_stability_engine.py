@@ -1,4 +1,7 @@
 import os
+import matplotlib
+matplotlib.use("Agg")
+
 import matplotlib.pyplot as plt
 
 from ENGINE.analysis.stability_landscape_generator import StabilityLandscapeGenerator
@@ -12,15 +15,25 @@ from ENGINE.analysis.global_stability_structure import GlobalStabilityStructure
 from ENGINE.analysis.stability_phase_portrait import StabilityPhasePortrait
 from ENGINE.analysis.stability_information_geometry import StabilityInformationGeometry
 from ENGINE.analysis.stability_morse_complex import StabilityMorseComplex
+from ENGINE.analysis.stability_persistence_homology import StabilityPersistenceHomology
+from ENGINE.analysis.stability_eigenmodes import StabilityEigenmodes
+from ENGINE.analysis.stability_koopman_operator import StabilityKoopmanOperator
+from ENGINE.analysis.stability_lyapunov_spectrum import StabilityLyapunovSpectrum
+from ENGINE.analysis.stability_diffusion_map import StabilityDiffusionMap
+from ENGINE.analysis.stability_wasserstein_geometry import StabilityWassersteinGeometry
+from ENGINE.analysis.stability_topological_skeleton import StabilityTopologicalSkeleton
+
 
 VISUAL_DIR = "ENGINE/visuals"
 os.makedirs(VISUAL_DIR, exist_ok=True)
+
 
 def save_plot(name):
     path = os.path.join(VISUAL_DIR, name)
     fig = plt.gcf()
     fig.savefig(path, dpi=200, bbox_inches="tight")
     print("Saved:", path)
+
 
 def main():
 
@@ -30,7 +43,7 @@ def main():
     X, Y, Z = gen.generate(peaks=3)
 
     plt.figure(figsize=(8,6))
-    plt.contourf(X, Y, Z, levels=40, cmap="viridis")
+    plt.contourf(X, Y, Z, 40, cmap="viridis")
     plt.title("Stability Landscape")
     save_plot("01_landscape.png")
     plt.close()
@@ -101,8 +114,72 @@ def main():
     save_plot("11_morse_complex.png")
     plt.close()
 
+    plt.figure()
+    tda = StabilityPersistenceHomology(X, Y, Z)
+    features = tda.compute()
+    tda.plot_persistence_diagram(features)
+    save_plot("12_persistence_diagram.png")
+    plt.close()
+
+    plt.figure()
+    tda.plot_persistence_barcodes(features)
+    save_plot("13_persistence_barcodes.png")
+    plt.close()
+
+    plt.figure()
+    tda.plot_landscape_features(features)
+    save_plot("14_persistent_features.png")
+    plt.close()
+
+    plt.figure()
+    eig = StabilityEigenmodes(X, Y, Z)
+    eigvals, modes = eig.compute()
+    eig.plot(modes)
+    save_plot("15_eigenmodes.png")
+    plt.close()
+
+    plt.figure()
+    koop = StabilityKoopmanOperator(X, Y, Z)
+    koopvals, koopvecs = koop.compute()
+    koop.plot_spectrum(koopvals)
+    save_plot("16_koopman_spectrum.png")
+    plt.close()
+
+    plt.figure()
+    lyap = StabilityLyapunovSpectrum(X, Y, Z)
+    lyapunov = lyap.compute()
+    lyap.plot(lyapunov)
+    save_plot("17_lyapunov_spectrum.png")
+    plt.close()
+
+    plt.figure()
+    diff = StabilityDiffusionMap(X, Y, Z)
+    diffvals, diffvecs = diff.compute()
+    diff.plot(diffvecs)
+    save_plot("18_diffusion_map.png")
+    plt.close()
+
+    plt.figure()
+    X2, Y2, Z2 = gen.generate(peaks=3)
+    wass = StabilityWassersteinGeometry(Z, Z2)
+    distance = wass.compute()
+    print(f"Wasserstein distance between landscapes: {distance:.6f}")
+    wass.plot()
+    save_plot("19_wasserstein_geometry.png")
+    plt.close()
+
+    plt.figure()
+    skel = StabilityTopologicalSkeleton(
+        X, Y, Z, maxima, minima, saddles
+    )
+    paths = skel.compute()
+    skel.plot(paths)
+    save_plot("20_topological_skeleton.png")
+    plt.close()
+
     print("\nENGINE RUN COMPLETE")
     print("Visuals saved in:", VISUAL_DIR)
+
 
 if __name__ == "__main__":
     main()
