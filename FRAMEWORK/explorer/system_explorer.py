@@ -1,3 +1,5 @@
+from FRAMEWORK.MESO.collapse_basin import compute_collapse_basin
+from FRAMEWORK.MESO.visualize_collapse_basin import visualize_collapse_basin
 from FRAMEWORK.core.system_loader import load_system
 from FRAMEWORK.ARCHY.regime_mapper import map_regimes
 from FRAMEWORK.ARCHY.visualize_regimes import visualize_regime_map
@@ -10,6 +12,14 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 
 class SystemExplorer:
+
+    def show_collapse_basin(self):
+
+    basin = compute_collapse_basin(self.regime_map)
+
+    visualize_collapse_basin(self.regime_map, basin)
+
+    return basin
 
     def __init__(self, system_file):
         """
