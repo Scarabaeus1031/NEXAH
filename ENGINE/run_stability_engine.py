@@ -228,20 +228,31 @@ def main():
 if __name__ == "__main__":
     main()
 
-from ENGINE.analysis.stability_topological_skeleton import StabilityTopologicalSkeleton
+    wass.plot()
+    save_plot("19_wasserstein_geometry.png")
+    plt.close()
 
-skel = StabilityTopologicalSkeleton(
-    X,
-    Y,
-    Z,
-    maxima,
-    minima,
-    saddles
-)
+    # --------------------------------------------------
+    # 20 Topological skeleton
+    # --------------------------------------------------
+    skel = StabilityTopologicalSkeleton(
+        X,
+        Y,
+        Z,
+        maxima,
+        minima,
+        saddles
+    )
 
-paths = skel.compute()
+    paths = skel.compute()
 
-skel.plot(paths)
+    skel.plot(paths)
+    save_plot("20_topological_skeleton.png")
+    plt.close()
 
-save_plot("20_topological_skeleton.png")
-plt.close()
+    print("\nENGINE RUN COMPLETE")
+    print("Visuals saved in:", VISUAL_DIR)
+
+
+if __name__ == "__main__":
+    main()
