@@ -1,9 +1,14 @@
 # NEXAH Framework — System Stack
 
-The **System Stack** of the NEXAH Framework represents its core architecture.  
-It defines how the layers **META**, **ARCHY**, **MESO**, **NEXAH**, and **MEVA** interact to form a cohesive system for navigating complex dynamic structures.
+![System Stack Architecture](./visuals/Systemstack_Architecture_Overview.png)
 
-The stack transforms **system definitions → regime structures → risk landscapes → navigable trajectories**.
+The **System Stack** of the NEXAH Framework represents its core architecture. It defines how the layers **META**, **ARCHY**, **MESO**, **NEXAH**, and **MEVA** interact to form a cohesive system for navigating complex dynamic structures.
+
+The stack transforms
+
+system definitions → regime structures → risk landscapes → navigable trajectories
+
+into an executable navigation architecture.
 
 ---
 
@@ -11,9 +16,7 @@ The stack transforms **system definitions → regime structures → risk landsca
 
 The NEXAH architecture is organized into five structural layers:
 
-```
 META → ARCHY → MESO → NEXAH → MEVA
-```
 
 Each layer adds a new capability to the system.
 
@@ -26,17 +29,16 @@ The **META layer** establishes the relational structure of a system.
 It defines the **semantic structure** of the system: elements, relationships, and ordering principles.
 
 Purpose:
-- define system entities
-- define relations between entities
-- establish ordering and hierarchy
+
+- define system entities  
+- define relations between entities  
+- establish ordering and hierarchy  
 
 Key focus:
 
-```
-relational structure
-system semantics
-dependency structure
-```
+relational structure  
+system semantics  
+dependency structure  
 
 ![System Stack - META](./visuals/Systemstack_Structure_Meta.png)
 
@@ -49,18 +51,17 @@ The **ARCHY layer** transforms relational structures into **regime structures**.
 It identifies system states and transitions between them.
 
 Purpose:
-- detect regime structure
-- detect transitions between states
-- detect stability regimes
+
+- detect regime structure  
+- detect transitions between states  
+- detect stability regimes  
 
 Key focus:
 
-```
-regime detection
-state transitions
-collapse states
-basin structure
-```
+regime detection  
+state transitions  
+collapse states  
+basin structure  
 
 ![System Stack - ARCHY](./visuals/Systemstack_Structure_Archy.png)
 
@@ -73,18 +74,17 @@ The **MESO layer** computes the **risk geometry** of the system.
 It evaluates how far each state lies from collapse regimes and constructs a risk gradient across the regime graph.
 
 Purpose:
-- quantify system risk
-- compute distance to collapse
-- generate risk gradients
+
+- quantify system risk  
+- compute distance to collapse  
+- generate risk gradients  
 
 Key focus:
 
-```
-collapse distance
-risk gradients
-basin geometry
-system resilience
-```
+collapse distance  
+risk gradients  
+basin geometry  
+system resilience  
 
 ![System Stack - MESO](./visuals/Systemstack_Structure_Meso.png)
 
@@ -97,18 +97,17 @@ The **NEXAH layer** enables **navigation through regime landscapes**.
 Using the structures produced by META, ARCHY, and MESO, the system can determine safe trajectories through the system state space.
 
 Purpose:
-- compute safe paths
-- guide system evolution
-- support agent navigation
+
+- compute safe paths  
+- guide system evolution  
+- support agent navigation  
 
 Key focus:
 
-```
-navigation policies
-frame operators
-trajectory planning
-regime-aware decision making
-```
+navigation policies  
+frame operators  
+trajectory planning  
+regime-aware decision making  
 
 ![System Stack - NEXAH](./visuals/Systemstack_Structure_Nexah.png)
 
@@ -121,52 +120,39 @@ The **MEVA layer** executes navigation decisions.
 It applies actions, overrides drift transitions, and records system trajectories.
 
 Purpose:
-- execute system control
-- apply navigation policies
-- simulate trajectories
+
+- execute system control  
+- apply navigation policies  
+- simulate trajectories  
 
 Key focus:
 
-```
-action execution
-state updates
-trajectory recording
-system simulation
-```
+action execution  
+state updates  
+trajectory recording  
+system simulation  
 
 ![System Stack - MEVA](./visuals/Systemstack_Structure_Meva.png)
 
 ---
 
-# Flow of Interaction
+# NEXAH Navigation Cycle
 
-The layers of the NEXAH system form a structured pipeline:
+The system stack operates as a **continuous navigation cycle**.
 
-```
-System Definition
-        ↓
-META
-        ↓
-ARCHY
-        ↓
-MESO
-        ↓
-NEXAH
-        ↓
-MEVA
-```
+Each layer transforms system knowledge into the next operational capability.
 
-Which results in:
+META → ARCHY → MESO → NEXAH → MEVA
 
-```
-system semantics
-→ regime structure
-→ risk geometry
-→ navigation policy
-→ execution trajectory
-```
+This cycle allows agents to continuously:
 
-![Flow of Interaction](./visuals/Flow_of_Interaction.png)
+• interpret system structure  
+• detect regime transitions  
+• evaluate risk landscapes  
+• plan safe trajectories  
+• execute system navigation  
+
+![NEXAH Navigation Cycle](./visuals/NEXAH_Navigation_Cycle.png)
 
 ---
 
@@ -189,17 +175,17 @@ The framework is designed for systems where **state transitions, risk propagatio
 
 Detailed documentation for each layer:
 
-- [META Layer](./META/readme.md)
-- [ARCHY Layer](./ARCHY/readme.md)
-- [MESO Layer](./MESO/readme.md)
-- [NEXAH Layer](./NEXAH/readme.md)
-- [MEVA Layer](./MEVA/readme.md)
+- [META Layer](./META/readme.md)  
+- [ARCHY Layer](./ARCHY/readme.md)  
+- [MESO Layer](./MESO/readme.md)  
+- [NEXAH Layer](./NEXAH/readme.md)  
+- [MEVA Layer](./MEVA/readme.md)  
 
 ---
 
 # Key Documents
 
-Core theoretical documents explaining the framework:
+Core theoretical documents explaining the framework.
 
 ### Architecture
 
@@ -268,4 +254,4 @@ The layered architecture ensures that the framework remains:
 
 • modular  
 • extensible  
-• adaptable to many application domains  
+• adaptable to many application domains
