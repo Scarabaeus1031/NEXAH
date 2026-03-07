@@ -7,7 +7,7 @@ def compute_stability_landscape(regime_map, risk):
 
     landscape = {}
 
-    # regime_map ist ein dict → nodes stehen hier
+    # regime_map ist ein dict
     nodes = regime_map["nodes"]
 
     for state in nodes:
