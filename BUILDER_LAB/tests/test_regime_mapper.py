@@ -18,6 +18,10 @@ def test_regime_mapper():
     print("Risk distance:", risk["risk_distance"])
     print("Risk gradient:", risk["risk_gradient"])
 
+    safe_path = compute_safe_path("stable", regime_map, risk)
+
+    print("Safe navigation path:", safe_path)
+
 
 if __name__ == "__main__":
     test_regime_mapper()
