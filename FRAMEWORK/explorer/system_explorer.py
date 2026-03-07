@@ -5,6 +5,7 @@ from FRAMEWORK.MESO.risk_geometry import compute_risk_geometry
 from FRAMEWORK.MESO.visualize_risk_landscape import visualize_risk_landscape
 from FRAMEWORK.MESO.visualize_risk_labels import visualize_risk_labels
 from FRAMEWORK.NEXAH.navigation_policy import compute_safe_path
+from FRAMEWORK.NEXAH.visualize_navigation_path import visualize_navigation_path
 from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 
@@ -51,6 +52,17 @@ class SystemExplorer:
         """
         visualize_risk_labels(self.regime_map, self.risk)
 
+    def show_navigation(self, start_state):
+        """
+        Visualize navigation path from a given start state.
+        """
+
+        path = compute_safe_path(start_state, self.regime_map, self.risk)
+
+        visualize_navigation_path(self.regime_map, path)
+
+        return path
+
     def run_navigation(self, start_state):
         """
         Run the NEXAH navigation policy starting from a given state.
@@ -76,11 +88,6 @@ class SystemExplorer:
         Print MESO risk geometry.
         """
 
-        print("\nRisk distance:")
-        print(self.risk["risk_distance"])
-
-        print("\nRisk gradient:")
-        print(self.risk["risk_gradient"])
         print("\nRisk distance:")
         print(self.risk["risk_distance"])
 
