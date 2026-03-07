@@ -1,6 +1,7 @@
 from FRAMEWORK.core.system_loader import load_system
 from FRAMEWORK.ARCHY.regime_mapper import map_regimes
 from FRAMEWORK.ARCHY.visualize_regimes import visualize_regime_map
+from FRAMEWORK.MESO.risk_geometry import compute_risk_geometry
 
 
 def test_regime_mapper():
