@@ -1,5 +1,62 @@
 # NEXAH Framework
 
+## Structural Navigation for Complex Systems
+
+**NEXAH** is a computational framework for **structural analysis, stabilization, and navigation of complex dynamical systems**.
+
+It provides tools to:
+
+• model systems as finite regime graphs  
+• analyze stability landscapes and cascade risks  
+• compute navigation strategies toward stable attractors  
+
+NEXAH combines ideas from:
+
+- dynamical systems theory
+- control theory
+- abstract interpretation
+- topology and geometry
+- policy optimization
+
+Rather than only simulating system evolution, **NEXAH focuses on navigating systems through regime landscapes toward stability.**
+
+---
+
+## Example Stability Dynamics
+
+![NEXAH Stability Dynamics](./ENGINE/visuals/nexah_stability.gif)
+
+The **NEXAH Stability Engine** extracts multiple structural layers from dynamical systems:
+
+• stability landscapes  
+• gradient dynamics  
+• attractor basins  
+• metastable regions  
+• spectral operators  
+• topological invariants  
+
+Full visual documentation:
+
+ENGINE/docs/VISUAL_GALLERY.md
+
+---
+
+## Repository Orientation
+
+Recommended entry points for exploring the framework:
+
+1. Framework overview  
+   NAVIGATOR/framework_portal.md
+
+2. Stability Engine visual gallery  
+   ENGINE/docs/VISUAL_GALLERY.md
+
+3. Example system simulation  
+   python BUILDER_LAB/demos/nexah_demo.py
+
+4. Research foundations  
+   RESEARCH/
+
 The official repository for the **NEXAH Framework** —  
 a modular system for **structural modeling, stabilization, and navigation of complex systems**.
 
