@@ -1,130 +1,191 @@
 # NEXAH Engine
 
-**Version 1.0 — Finite Abstract Interpretation Kernel**
+**Version 1.1 --- Structural Stability & Abstract Interpretation
+Engine**
 
-The NEXAH Engine is the **executable algebraic and analysis layer** of the
+The **NEXAH Engine** is the executable structural analysis layer of the
 NEXAH framework.
 
-It operationalizes **finite structural modeling and abstract interpretation**
-based on **order theory and lattice semantics**.
+It combines:
+
+• finite abstract interpretation\
+• order-theoretic computation\
+• stability landscape analysis\
+• dynamical systems exploration\
+• structural policy navigation
+
+The engine provides a **structurally verified computational framework**
+for modeling stability landscapes, fixpoint structures, and regime
+transitions in finite systems.
 
 ![NEXAH Engine Execution Flow](visuals/engine_execution_flow.png)
 
-For the full architectural report see:
+Full architectural documentation:
 
 `ENGINE_REPORT_v1.md`
 
----
+------------------------------------------------------------------------
 
 # 1. Architectural Position
 
 The NEXAH architecture consists of three conceptual layers:
 
-RESEARCH (formal structure)
-↓
-ENGINE (structural execution)
-↓
-STRUCTURAL OUTPUT
-
+RESEARCH (formal structure) ↓ ENGINE (structural execution) ↓ STRUCTURAL
+OUTPUT / ANALYSIS
 
 The Engine translates formal structural theory into executable algebraic
-models and finite abstract interpretation systems.
+models, stability landscapes, and finite abstract interpretation
+systems.
 
----
+------------------------------------------------------------------------
 
-# 2. Core Operator Stack
+# 2. Core Algebraic Kernel
 
 The conceptual operator stack implemented by the engine:
 
-FinitePoset
-↓
-LatticeOps
-↓
-Closure Operator Γ
-↓
-Interior Operator Ι
-↓
-Monotone Operators
-↓
-Regime Operator Δ
-↓
-Frame Projection F
-↓
-Fixpoint Structures
-↓
-Worklist Fixpoint Solver
+FinitePoset ↓ LatticeOps ↓ Closure Operator Γ ↓ Interior Operator Ι ↓
+Monotone Operators ↓ Regime Operator Δ ↓ Frame Projection F ↓ Fixpoint
+Structures ↓ Worklist Fixpoint Solver
 
 ### Implementation Status
 
-✔ FinitePoset  
-✔ LatticeOps (join/meet, distributivity, top/bottom)  
-✔ Closure Operator (Γ)  
-✔ Interior Operator (Ι)  
-✔ Monotone Operators  
-✔ Fixpoint-induced structures  
-✔ Rank / height analysis  
-✔ Hasse cover extraction  
-✔ Regime Operator (Δ)  
-✔ Frame Projection (F)  
-✔ IN/OUT Worklist Fixpoint Solver  
+✔ FinitePoset\
+✔ LatticeOps (join/meet, distributivity, top/bottom)\
+✔ Closure Operator (Γ)\
+✔ Interior Operator (Ι)\
+✔ Monotone Operators\
+✔ Fixpoint-induced structures\
+✔ Rank / height analysis\
+✔ Hasse cover extraction\
+✔ Regime Operator (Δ)\
+✔ Frame Projection (F)\
+✔ IN/OUT Worklist Fixpoint Solver\
 ✔ Application Layer (Mini IR + constant propagation)
 
-The finite algebra core is complete and operational.
+The finite algebra core acts as a **verified abstract interpretation
+kernel**.
 
----
+------------------------------------------------------------------------
 
-# 3. What the Engine Demonstrates
+# 3. Stability Landscape Engine
 
-## Structural Layer
+Beyond the algebraic kernel, the engine includes a full **stability
+landscape analysis framework**.
 
-• Finite partially ordered sets (validated)  
-• Lattice construction and distributivity checks  
-• Extremal element detection  
-• Rank / height computation  
-• Hasse cover extraction  
+This subsystem models systems as **energy or stability landscapes** and
+extracts their dynamical structure.
 
-## Stabilization Layer
+Implemented components include:
 
-• Closure operators (extensive / monotone / idempotent)  
-• Interior operators (contractive / monotone / idempotent)  
-• Fixpoint extraction  
-• Fixpoint-induced lattices  
+### Landscape Construction
 
-## Dynamic Layer
+• Stability landscape generator\
+• Gradient field computation\
+• Hessian field analysis\
+• Critical point detection
 
-• Monotone operators with iteration  
-• Explicit IN/OUT worklist fixpoint solver  
-• Regime restriction (Δ)  
-• Frame projection (F)
+### Basin Structure
 
-## Application Layer
+• Basin segmentation\
+• Basin transition graph\
+• Metastability mapping
 
-• Finite constant propagation lattice  
-• Product state lattice construction  
-• Typed Mini IR  
-• Linear CFG analysis  
-• Branching CFG analysis with join conflict → ⊤
+### Dynamical Systems Analysis
 
-The engine therefore acts as a **finite abstract interpretation kernel**.
+• Phase portraits\
+• Lyapunov spectrum estimation\
+• Koopman operator approximation\
+• Diffusion maps
 
----
+### Topological Structure
 
-# 4. Repository Structure
+• Morse complex construction\
+• Persistent homology (TDA)\
+• Topological skeleton extraction
 
-ENGINE/
-├ core/
-├ applications/
-├ examples/
-├ visualization/
-├ visuals/
-├ ENGINE_REPORT_v1.md
-└ readme.md
+### Spectral Analysis
 
----
+• Eigenmode decomposition\
+• Diffusion geometry\
+• Wasserstein landscape geometry
 
-# 5. Running the Examples
+The result is a **complete structural analysis pipeline for dynamical
+stability systems**.
 
-From repository root:
+------------------------------------------------------------------------
+
+# 4. Simulation Layer
+
+The engine also supports explicit **landscape dynamics simulations**.
+
+Modules include:
+
+• Gradient flow dynamics\
+• Attractor network extraction\
+• Landscape evolution models
+
+These modules allow exploration of:
+
+• trajectory convergence\
+• attractor basins\
+• transition paths\
+• metastable regimes
+
+------------------------------------------------------------------------
+
+# 5. Policy and Control Layer
+
+The framework contains experimental modules for **decision and policy
+analysis on stability landscapes**.
+
+Implemented systems include:
+
+• policy evaluation surfaces\
+• risk-aware navigation\
+• stability-maximizing policies\
+• reinforcement learning environments
+
+This layer enables **structural decision-making on dynamic landscapes**.
+
+------------------------------------------------------------------------
+
+# 6. Repository Structure
+
+ENGINE │ ├ core \# algebraic kernel (posets, lattices, fixpoints) ├
+analysis \# stability and topology analysis ├ simulation \# dynamic
+system simulation ├ visualization \# rendering and visual analysis ├ rl
+\# reinforcement learning agents ├ navigation \# stability navigation
+strategies ├ applications \# example engines and policy models ├
+examples \# demonstration scripts ├ visuals \# generated analysis
+outputs │ ├ run_stability_engine.py └ ENGINE_REPORT_v1.md
+
+------------------------------------------------------------------------
+
+# 7. Running the Stability Engine
+
+From the repository root:
+
+python ENGINE/run_stability_engine.py
+
+The engine will generate a complete stability analysis pipeline,
+producing visual outputs in:
+
+ENGINE/visuals/
+
+Example outputs include:
+
+• stability landscapes\
+• basin segmentation maps\
+• metastability diagrams\
+• persistence diagrams\
+• eigenmode decompositions\
+• Koopman spectra\
+• Lyapunov spectra\
+• diffusion embeddings
+
+------------------------------------------------------------------------
+
+# 8. Example Abstract Interpretation Programs
 
 ### Linear Mini IR
 
@@ -134,76 +195,66 @@ python -m ENGINE.applications.mini_ir_demo
 
 python -m ENGINE.applications.mini_ir_branch_demo
 
+### Stabilization Example
+
 python -m ENGINE.examples.example_stabilization
 
----
+------------------------------------------------------------------------
 
-# 6. Quality Status
+# 9. Quality Status
 
-• 89 tests passing  
-• ~95% coverage  
-• Strict carrier enforcement  
-• Deterministic IN/OUT semantics  
-• `mypy --strict` clean  
-• Finite scope intentionally enforced  
+• 205 files\
+• modular architecture\
+• deterministic computation\
+• strict algebraic operators\
+• type-safe operator definitions
 
----
+The system is designed for **research-grade structural analysis**.
 
-# 7. Design Philosophy
+------------------------------------------------------------------------
+
+# 10. Design Philosophy
 
 The NEXAH Engine is designed to be:
 
-• Finite  
-• Deterministic  
-• Algebraically validated  
-• Explicit in structure  
-• Type-safe  
-• Extension-oriented  
+• finite and structurally validated\
+• algebraically explicit\
+• deterministic in computation\
+• modular and extensible\
+• mathematically interpretable
 
-It is **not a simulation engine**.
+The framework bridges:
 
-It is a **structural execution and finite abstract interpretation layer**.
+order theory\
+abstract interpretation\
+dynamical systems\
+topology\
+control theory
 
----
+------------------------------------------------------------------------
 
-# 8. Intentional Constraints
+# 11. Development Roadmap
 
-Version 1.0 intentionally restricts the system to finite domains:
+### Phase A --- Algebraic Core ✔
 
-• Finite structures only  
-• No widening/narrowing operators yet  
-• No infinite lattices  
-• No probabilistic semantics  
-• No performance scaling layer  
-• No visualization export pipeline  
+Finite abstract interpretation kernel.
 
-These constraints define the **v1.0 stability boundary**.
+### Phase B --- Stability Engine ✔
 
----
+Landscape analysis and dynamical systems.
 
-# 9. Development Path
+### Phase C --- Structural Control
 
-### Phase A — Finite Algebra Core ✔
+Planned additions:
 
-Completed.
+• bifurcation analysis\
+• stochastic dynamics\
+• rare-event transition sampling\
+• hierarchical landscape analysis
 
-### Phase B — Stabilization (v1.0)
+------------------------------------------------------------------------
 
-• CI integration (pytest + mypy)  
-• Coverage threshold enforcement  
-• API freeze candidate review  
+# NEXAH Engine
 
-### Phase C — Extended Analysis
-
-• Widening / narrowing operators  
-• Guard-sensitive branch modeling  
-• Loop analysis extensions  
-• Transition graph export  
-• Visualization layer  
-
----
-
-**NEXAH Engine v1.0**
-
-Finite. Deterministic. Structurally Verified.
-
+**Structural computation for stability, dynamics, and abstract
+systems.**
