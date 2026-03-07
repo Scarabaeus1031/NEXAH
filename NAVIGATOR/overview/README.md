@@ -4,15 +4,47 @@ This directory contains the **architectural overview of the NEXAH framework**.
 
 It provides a structured entry point for understanding the system architecture, development status, capabilities, and engine design.
 
-The NEXAH framework is a structural navigation system for complex dynamic environments.
+The NEXAH framework is a structural navigation system for **complex dynamic environments**.
 
-Its architecture follows the layered model:
+---
+
+# NEXAH System Stack
+
+![NEXAH System Stack](../visuals/Systemstack_Architecture_Overview.png)
+
+The architecture follows a layered model:
 
 META → ARCHY → MESO → NEXAH → MEVA
 
 These layers transform:
 
-system definitions → regime structures → risk landscapes → navigable trajectories
+**system definitions → regime structures → risk landscapes → navigable trajectories**
+
+| Layer | Function |
+|------|------|
+| META | relational system definition |
+| ARCHY | regime structure detection |
+| MESO | risk geometry computation |
+| NEXAH | navigation strategies |
+| MEVA | execution and simulation |
+
+---
+
+# Engine Execution Flow
+
+![Engine Execution Flow](../../ENGINE/visuals/engine_execution_flow.png)
+
+The NEXAH engine bridges formal mathematical structures with executable analysis.
+
+Pipeline:
+
+Formal Structure (Research)  
+↓  
+Structural Algebra Core  
+↓  
+Executable Analysis  
+↓  
+Structural Output  
 
 ---
 
@@ -20,7 +52,7 @@ system definitions → regime structures → risk landscapes → navigable traje
 
 ## Architecture Status
 
-**NEXAH_ARCHITECTURE_COMPLETION_MAP.md**
+[NEXAH_ARCHITECTURE_COMPLETION_MAP.md](./NEXAH_ARCHITECTURE_COMPLETION_MAP.md)
 
 Tracks the architectural implementation status of the framework.
 
@@ -37,7 +69,7 @@ This document serves as the **development progress map** of the system.
 
 ## Architecture Milestone
 
-**ARCHITECTURE_MILESTONE.md**
+[ARCHITECTURE_MILESTONE.md](./ARCHITECTURE_MILESTONE.md)
 
 Records the milestone where the **core NEXAH architecture became operational**.
 
@@ -53,11 +85,11 @@ This document captures a **major stage in the evolution of the NEXAH system**.
 
 ## System Capabilities
 
-**SYSTEM_CAPABILITIES.md**
+[SYSTEM_CAPABILITIES.md](./SYSTEM_CAPABILITIES.md)
 
-Describes what the framework can currently do.
+Describes the current functional capabilities of the framework.
 
-Includes capabilities across all system layers:
+Includes:
 
 - structural system modeling
 - regime analysis
@@ -73,7 +105,7 @@ This document functions as the **capabilities reference** for the framework.
 
 ## Engine Release Notes
 
-**NEXAH_Engine_v1.0.0_Release_Notes.md**
+[NEXAH_Engine_v1.0.0_Release_Notes.md](./NEXAH_Engine_v1.0.0_Release_Notes.md)
 
 Technical documentation for the first stable release of the **NEXAH Engine**.
 
@@ -84,7 +116,7 @@ Highlights:
 - deterministic dataflow solver
 - validated finite abstract interpretation kernel
 
-This document explains the **mathematical and computational foundation of the engine**.
+This document explains the **computational foundation of the engine**.
 
 ---
 
@@ -103,13 +135,13 @@ Together they provide a complete overview of the **NEXAH architecture and curren
 
 # Related Directories
 
-Other important components of the repository include:
-
-- `ENGINE/` — structural algebra and analysis engine  
-- `FRAMEWORK/` — system stack implementation  
-- `NAVIGATOR/` — system exploration and visualization layer  
-- `APPLICATIONS/` — example system models  
-- `RESEARCH/` — theoretical background and research materials  
+| Directory | Role |
+|------|------|
+| ENGINE | structural algebra and analysis engine |
+| FRAMEWORK | system stack implementation |
+| NAVIGATOR | system exploration and visualization layer |
+| APPLICATIONS | example system models |
+| RESEARCH | theoretical background |
 
 ---
 
@@ -123,4 +155,4 @@ risk geometry
 navigation strategies  
 execution control  
 
-into a unified architecture for exploring and navigating complex systems.
+into a unified architecture for exploring and navigating **complex dynamic systems**.
