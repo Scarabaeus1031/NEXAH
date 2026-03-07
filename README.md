@@ -3,7 +3,7 @@
 
 ## Structural Navigation for Complex Systems
 
-**NEXAH** is a structural navigation framework for **sstabilizing complex dynamical systems.**
+**NEXAH** is a structural navigation framework for **analyzing, stabilizing, and navigating complex dynamical systems.**
 
 It provides tools to:
 
