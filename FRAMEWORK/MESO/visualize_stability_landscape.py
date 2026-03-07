@@ -4,30 +4,31 @@ import networkx as nx
 
 def visualize_stability_landscape(regime_map, landscape):
     """
-    Visualize system stability landscape.
+    Visualize stability landscape.
     """
 
-    pos = nx.spring_layout(regime_map, seed=42)
+    # regime_map enthält bereits den Graphen
+    G = regime_map["graph"]
 
-    potentials = [landscape[n]["potential"] for n in regime_map.nodes()]
+    pos = nx.spring_layout(G, seed=42)
 
-    cmap = plt.cm.viridis
+    potentials = [landscape[n]["potential"] for n in G.nodes()]
 
     nx.draw(
-        regime_map,
+        G,
         pos,
         with_labels=True,
         node_size=1800,
         node_color=potentials,
-        cmap=cmap
+        cmap=plt.cm.viridis
     )
 
     labels = {
         n: f"{n}\nU={landscape[n]['potential']:.2f}"
-        for n in regime_map.nodes()
+        for n in G.nodes()
     }
 
-    nx.draw_networkx_labels(regime_map, pos, labels)
+    nx.draw_networkx_labels(G, pos, labels)
 
     plt.title("Stability Landscape")
     plt.show()
