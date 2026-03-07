@@ -21,7 +21,6 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 class SystemExplorer:
     def __init__(self, system_file):
-        """Initialize the NEXAH pipeline."""
 
         self.system = load_system(system_file)
         self.regime_map = map_regimes(self.system)
@@ -58,6 +57,7 @@ class SystemExplorer:
         return attractors
 
     def run_navigation(self, start_state):
+
         self.engine.set_initial_state(start_state)
 
         def policy(state):
@@ -71,5 +71,6 @@ class SystemExplorer:
     def print_risk(self):
         print("\nRisk distance:")
         print(self.risk["risk_distance"])
+
         print("\nRisk gradient:")
         print(self.risk["risk_gradient"])
