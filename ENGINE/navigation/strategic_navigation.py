@@ -2,7 +2,7 @@ class StrategicNavigator:
     """
     Computes multi-step stabilization strategies.
 
-    Explores future state trajectories and selects the path
+    Explores possible future trajectories and selects the path
     that maximizes stability (distance from collapse).
     """
 
@@ -16,7 +16,7 @@ class StrategicNavigator:
 
     def next_state(self, state, action):
         """
-        Compute next state given an action.
+        Determine next state under action.
         """
 
         if (state, action) in self.action_effect:
@@ -25,50 +25,36 @@ class StrategicNavigator:
         return self.delta.get(state, state)
 
 
-    def explore(self, state, depth, path, visited):
+    def explore(self, state, depth):
         """
-        Recursively explore possible trajectories.
+        Explore future trajectories.
         """
 
         if depth == 0:
-            return [(path, self.evaluate_path(path))]
+            return [[state]]
 
-        results = []
+        paths = []
 
         for action in self.actions:
 
             next_state = self.next_state(state, action)
 
-            if next_state in visited:
-                continue
+            subpaths = self.explore(next_state, depth - 1)
 
-            new_path = path + [(action, next_state)]
+            for sp in subpaths:
+                paths.append([state] + sp)
 
-            visited.add(next_state)
-
-            results.extend(
-                self.explore(
-                    next_state,
-                    depth - 1,
-                    new_path,
-                    visited
-                )
-            )
-
-            visited.remove(next_state)
-
-        return results
+        return paths
 
 
     def evaluate_path(self, path):
         """
-        Score path based on stability values.
+        Compute stability score for a path.
         """
 
         score = 0
 
-        for action, state in path:
-
+        for state in path:
             score += self.risk_map.get(state, 0)
 
         return score
@@ -76,23 +62,20 @@ class StrategicNavigator:
 
     def best_strategy(self, start_state):
         """
-        Compute best stabilization strategy.
+        Compute best stabilization trajectory.
         """
 
-        explored = self.explore(
-            start_state,
-            self.max_depth,
-            [],
-            {start_state}
-        )
+        paths = self.explore(start_state, self.max_depth)
 
         best_path = None
         best_score = -float("inf")
 
-        for path, score in explored:
+        for p in paths:
+
+            score = self.evaluate_path(p)
 
             if score > best_score:
                 best_score = score
-                best_path = path
+                best_path = p
 
         return best_path, best_score
