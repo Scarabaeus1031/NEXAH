@@ -253,6 +253,7 @@ if __name__ == "__main__":
     print("\nENGINE RUN COMPLETE")
     print("Visuals saved in:", VISUAL_DIR)
 
-
 if __name__ == "__main__":
     main()
+    print("\nENGINE RUN COMPLETE")
+    print("Visuals saved in:", VISUAL_DIR)
