@@ -2,13 +2,17 @@
 
 ## Connecting External Systems to NEXAH
 
-The NEXAH framework operates on **finite state graphs representing system regimes**.
+The NEXAH framework operates on **finite state graphs representing
+system regimes**.
 
-External simulators and system models must therefore be translated into a **state graph representation** before they can be analyzed and navigated by NEXAH.
+External simulators and system models must therefore be translated into
+a **state graph representation** before they can be analyzed and
+navigated by NEXAH.
 
-This document defines the **adapter interface** used to connect external systems to the NEXAH navigation engine.
+This document defines the **adapter interface** used to connect external
+systems to the NEXAH navigation engine.
 
----
+------------------------------------------------------------------------
 
 # Conceptual Architecture
 
@@ -18,220 +22,129 @@ NEXAH operates on **abstract structural models** of these systems.
 
 The adapter performs the translation.
 
-External System / Simulator
-↓
-NEXAH Adapter
-↓
-State Graph
-↓
-NEXAH
-↓
-Policy
-↓
-Actions
+External System / Simulator ↓ NEXAH Adapter ↓ State Graph ↓ NEXAH ↓
+Policy ↓ Actions
 
 Examples of external systems include:
 
-- power grid simulators (MATPOWER, pandapower, PyPSA)
-- infrastructure simulations
-- supply chain models
-- robotics simulations
-- economic models
-- distributed computing systems
+-   power grid simulators (MATPOWER, pandapower, PyPSA)
+-   infrastructure simulations
+-   supply chain models
+-   robotics simulations
+-   economic models
+-   distributed computing systems
 
 NEXAH does not depend on a specific simulator.
 
-Instead, systems are connected through **adapters that expose a structural state graph.**
+Instead, systems are connected through **adapters that expose a
+structural state graph.**
 
----
+------------------------------------------------------------------------
 
 # Core Requirement
 
-An adapter must expose a **finite state graph representation** of the system.
+An adapter must expose a **finite state graph representation** of the
+system.
 
 The graph consists of:
 
-- **states**
-- **transitions**
-- **optional regime annotations**
+-   states
+-   transitions
+-   optional regime annotations
 
 This representation forms the basis for all NEXAH operations.
 
----
+------------------------------------------------------------------------
 
 # Minimal Adapter Interface
 
 A minimal adapter should implement the following methods.
 
-```python
 class NexahAdapter:
 
     def states(self):
-        """
-        Return the set of system states.
-        """
+        """Return the set of system states"""
         raise NotImplementedError
 
     def transitions(self):
-        """
-        Return system transitions.
-
-        Expected format:
-        {
-            state: [next_state_1, next_state_2]
-        }
-        """
+        """Return system transitions in the form {state: [next_states]}"""
         raise NotImplementedError
 
     def regimes(self):
-        """
-        Optional.
-
-        Return regime classification for each state.
-        Example:
-        {
-            "stable": "STABLE",
-            "stress": "STRESS",
-            "failure": "FAILURE"
-        }
-        """
+        """Optional regime labels for states"""
         return None
-```
-Optional Adapter Extensions
 
-Adapters may also expose additional information used by NEXAH.
+------------------------------------------------------------------------
 
-Risk Targets
+# Optional Adapter Extensions
 
-States that represent dangerous or unstable system conditions.
+Adapters may expose additional information.
 
+### Risk Targets
 
-Example:
-
-collapse
-blackout
-system_failure
-
-
-Interface example:
-
-def risk_targets(self):
-    return ["collapse"]
-
-
-Shock Events
-
-External disturbances affecting system dynamics.
+States representing dangerous system conditions.
 
 Example:
 
-generator_failure
-network_partition
-traffic_spike
+collapse blackout system_failure
 
-
-Control Actions
+### Control Actions
 
 Actions that may modify system behavior.
 
 Example:
 
-start_reserve
-shed_load
-reroute_traffic
-restart_service
+shed_load start_reserve reroute_traffic restart_service
 
+------------------------------------------------------------------------
 
-Interface example:
+# Example Graph Output
 
-def actions(self):
-    return [
-        "shed_load",
-        "start_reserve",
-        "reconfigure_grid"
-    ]
+states = \["stable", "stress", "failure"\]
 
-Adapter Output Example
+transitions = { "stable": \["stress"\], "stress": \["failure",
+"stable"\], "failure": \["collapse"\] }
 
-An adapter might produce the following graph:
+regimes = { "stable": "STABLE", "stress": "STRESS", "failure":
+"FAILURE", "collapse": "COLLAPSE" }
 
-states = ["stable", "stress", "failure"]
+This structure becomes the input for the **NEXAH navigation engine**.
 
-transitions = {
-    "stable": ["stress"],
-    "stress": ["failure", "stable"],
-    "failure": ["collapse"]
-}
+------------------------------------------------------------------------
 
-regimes = {
-    "stable": "STABLE",
-    "stress": "STRESS",
-    "failure": "FAILURE",
-    "collapse": "COLLAPSE"
-}
+# Adapter Role
 
-This representation becomes the structural input for the NEXAH navigation engine.
+The adapter performs three tasks:
 
-⸻
+1.  State extraction from simulator outputs
+2.  Transition mapping between system states
+3.  Regime classification of states
 
-Role of the Adapter
+Once provided, NEXAH can perform:
 
-The adapter performs three key tasks:
-	1.	State Extraction
+-   regime detection
+-   cascade modeling
+-   risk geometry analysis
+-   stabilization navigation
 
-Convert simulator states into discrete system states.
-	2.	Transition Mapping
+------------------------------------------------------------------------
 
-Identify possible state transitions.
-	3.	Regime Annotation
+# Repository Location
 
-Label system states with stability classifications.
+Adapters should live in:
 
-Once this structure is available, the NEXAH engine can perform:
-	•	regime detection
-	•	risk geometry analysis
-	•	cascade modeling
-	•	stabilization strategy planning
-	•	policy-guided system navigation
-
-⸻
-
-Design Philosophy
-
-Adapters allow NEXAH to remain system-agnostic.
-
-Instead of hard-coding integrations for each simulator, the framework defines a generic structural interface.
-
-Any system that can expose:
-
-states
-transitions
-regimes
-
-can be analyzed by NEXAH.
-
-⸻
-
-Example Adapter Locations
-
-Adapters are expected to live in:
 APPLICATIONS/adapters/
 
-Example structure:
-APPLICATIONS/
-    adapters/
-        nexah_adapter_spec.md
-        base_adapter.py
-        examples/
-            energy_grid_adapter.py
+Example:
 
+APPLICATIONS/ adapters/ nexah_adapter_spec.md base_adapter.py examples/
+energy_grid_adapter.py
 
-Summary
+------------------------------------------------------------------------
 
-The NEXAH adapter interface connects external systems to the NEXAH framework by exposing a finite structural representation of system dynamics.
+# Summary
 
 System → Adapter → State Graph → NEXAH → Policy → Actions
 
-This design enables NEXAH to function as a navigation layer for complex dynamical systems.
-
-
+Adapters make NEXAH **system‑agnostic** and allow integration with many
+kinds of dynamical systems.
