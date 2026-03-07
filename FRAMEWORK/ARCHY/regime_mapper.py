@@ -1,52 +1,20 @@
-import networkx as nx
+from FRAMEWORK.core.system_loader import load_system
+from FRAMEWORK.ARCHY.regime_mapper import map_regimes
+from FRAMEWORK.ARCHY.visualize_regimes import visualize_regime_map
 
 
-def build_state_graph(system):
+def test_regime_mapper():
 
-    G = nx.DiGraph()
+    system = load_system("APPLICATIONS/examples/energy_grid.json")
 
-    for node in system.nodes:
-        G.add_node(node)
+    regime_map = map_regimes(system)
 
-    for edge in system.edges:
-        source, target = edge
-        G.add_edge(source, target)
+    print("Collapse states:", regime_map["collapse_states"])
+    print("Basins:", regime_map["basins"])
+    print("Graph nodes:", regime_map["graph"].nodes())
 
-    return G
-
-
-def detect_collapse_states(system):
-
-    return {system.risk_target}
+    visualize_regime_map(regime_map)
 
 
-def compute_basins(graph, collapse_states):
-
-    basins = {}
-
-    reversed_graph = graph.reverse()
-
-    for collapse in collapse_states:
-
-        basin_nodes = nx.descendants(reversed_graph, collapse)
-        basin_nodes.add(collapse)
-
-        basins[collapse] = basin_nodes
-
-    return basins
-
-
-def map_regimes(system):
-
-    graph = build_state_graph(system)
-
-    collapse_states = detect_collapse_states(system)
-
-    basins = compute_basins(graph, collapse_states)
-
-    return {
-        "graph": graph,
-        "collapse_states": collapse_states,
-        "basins": basins,
-        "regimes": system.regimes,
-    }
+if __name__ == "__main__":
+    test_regime_mapper()
