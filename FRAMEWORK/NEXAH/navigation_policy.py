@@ -1,6 +1,3 @@
-import networkx as nx
-
-
 def get_available_transitions(graph, state):
     """
     Return all possible next states from the current state.
@@ -37,22 +34,22 @@ def select_safest_transition(state, regime_map, risk_geometry):
     return best_state
 
 
-def compute_safe_path(start_state, regime_map, risk_geometry):
+def compute_safe_path(start_state, regime_map, risk_geometry, max_steps=20):
     """
     Compute a navigation path that maximizes safety
     (moves away from collapse states).
     """
 
     graph = regime_map["graph"]
-    gradient = risk_geometry["risk_gradient"]
 
     path = [start_state]
 
     current = start_state
-
     visited = set()
 
-    while True:
+    steps = 0
+
+    while steps < max_steps:
 
         visited.add(current)
 
@@ -72,5 +69,6 @@ def compute_safe_path(start_state, regime_map, risk_geometry):
         path.append(best)
 
         current = best
+        steps += 1
 
     return path
