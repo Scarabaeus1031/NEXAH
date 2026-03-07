@@ -227,3 +227,21 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+from ENGINE.analysis.stability_topological_skeleton import StabilityTopologicalSkeleton
+
+skel = StabilityTopologicalSkeleton(
+    X,
+    Y,
+    Z,
+    maxima,
+    minima,
+    saddles
+)
+
+paths = skel.compute()
+
+skel.plot(paths)
+
+save_plot("20_topological_skeleton.png")
+plt.close()
