@@ -127,13 +127,4 @@ class SystemExplorer:
         print(self.risk["risk_distance"])
 
         print("\nRisk gradient:")
-        print(self.risk["risk_gradient"])                return path[1]
-            return None
-
-        return self.engine.run(policy)
-
-    def print_risk(self):
-        print("\nRisk distance:")
-        print(self.risk["risk_distance"])
-        print("\nRisk gradient:")
         print(self.risk["risk_gradient"])
