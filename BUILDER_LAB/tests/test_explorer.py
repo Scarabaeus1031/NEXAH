@@ -1,4 +1,5 @@
 from FRAMEWORK.explorer.system_explorer import SystemExplorer
+from FRAMEWORK.MESO.risk_geometry import compute_risk_geometry
 
 
 def test_explorer():
