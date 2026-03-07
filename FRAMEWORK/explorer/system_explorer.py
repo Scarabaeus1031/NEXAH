@@ -2,6 +2,7 @@ from FRAMEWORK.core.system_loader import load_system
 from FRAMEWORK.ARCHY.regime_mapper import map_regimes
 from FRAMEWORK.ARCHY.visualize_regimes import visualize_regime_map
 from FRAMEWORK.MESO.risk_geometry import compute_risk_geometry
+from FRAMEWORK.MESO.visualize_risk_landscape import visualize_risk_landscape
 from FRAMEWORK.NEXAH.navigation_policy import compute_safe_path
 from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
@@ -35,8 +36,13 @@ class SystemExplorer:
         """
         Visualize the regime graph.
         """
-
         visualize_regime_map(self.regime_map)
+
+    def show_risk_landscape(self):
+        """
+        Visualize the MESO risk landscape.
+        """
+        visualize_risk_landscape(self.regime_map, self.risk)
 
     def run_navigation(self, start_state):
         """
