@@ -1,0 +1,36 @@
+{
+  "name": "server_cluster",
+
+  "states": [
+    "stable",
+    "high_load",
+    "overload",
+    "service_failure"
+  ],
+
+  "transitions": {
+
+    "stable": {
+      "increase_load": "high_load"
+    },
+
+    "high_load": {
+      "balance_load": "stable",
+      "traffic_spike": "overload"
+    },
+
+    "overload": {
+      "autoscale": "high_load",
+      "cascade_failure": "service_failure"
+    },
+
+    "service_failure": {
+      "restart_cluster": "stable"
+    }
+
+  },
+
+  "collapse_states": [
+    "service_failure"
+  ]
+}
