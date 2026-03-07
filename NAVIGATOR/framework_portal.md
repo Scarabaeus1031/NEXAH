@@ -161,7 +161,7 @@ From this portal you can continue exploring the NEXAH ecosystem.
 
 ## Research Portal
 
-`research_portal.md`
+[research_portal.md](./research_portal.md)
 
 Explore the theoretical foundations and structural principles behind the framework.
 
@@ -169,7 +169,7 @@ Explore the theoretical foundations and structural principles behind the framewo
 
 ## Applications Portal
 
-`applications_portal.md`
+[applications_portal.md](./applications_portal.md)
 
 Discover documented case studies and real-world structural modeling examples.
 
@@ -177,6 +177,6 @@ Discover documented case studies and real-world structural modeling examples.
 
 ## Repository Navigator
 
-`repository_portal.md`
+[repository_portal.md](./repository_portal.md)
 
 Access the structural map of the NEXAH repository and explore its modules.
