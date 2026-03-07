@@ -1,20 +1,43 @@
-def compute_stability_landscape(regime_map, risk):
+import matplotlib.pyplot as plt
+import networkx as nx
+
+
+def visualize_stability_landscape(regime_map, landscape):
     """
-    Compute stability potential landscape.
+    Visualize stability landscape.
     """
 
-    gradient = risk["risk_gradient"]
+    # build graph from regime_map dict
+    G = nx.DiGraph()
 
-    landscape = {}
+    for state, transitions in regime_map.items():
 
-    # iterate over actual system states
-    for state in gradient:
+        # skip helper keys like "graph"
+        if state == "graph":
+            continue
 
-        stability = 1 - gradient[state]
+        for target in transitions:
+            G.add_edge(state, target)
 
-        landscape[state] = {
-            "potential": stability,
-            "risk_gradient": gradient[state]
-        }
+    pos = nx.spring_layout(G, seed=42)
 
-    return landscape
+    potentials = [landscape[n]["potential"] for n in G.nodes()]
+
+    nx.draw(
+        G,
+        pos,
+        with_labels=True,
+        node_size=1800,
+        node_color=potentials,
+        cmap=plt.cm.viridis
+    )
+
+    labels = {
+        n: f"{n}\nU={landscape[n]['potential']:.2f}"
+        for n in G.nodes()
+    }
+
+    nx.draw_networkx_labels(G, pos, labels)
+
+    plt.title("Stability Landscape")
+    plt.show()
