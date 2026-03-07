@@ -1,7 +1,7 @@
 class StabilityMaximizingPolicy:
     """
     Chooses actions that maximize distance from collapse
-    (i.e. maximize risk distance).
+    (i.e. maximize stability / risk distance).
     """
 
     def __init__(self, delta, action_effect, risk_map, actions):
@@ -10,15 +10,17 @@ class StabilityMaximizingPolicy:
         self.risk_map = risk_map
         self.actions = actions
 
+
     def evaluate_action(self, state, action):
         """
-        Determine resulting state after applying action.
+        Determine resulting state after applying an action.
         """
 
         if (state, action) in self.action_effect:
             return self.action_effect[(state, action)]
 
         return self.delta.get(state, state)
+
 
     def choose(self, state):
         """
