@@ -37,6 +37,34 @@ The **NEXAH** layer provides navigability within the system. It defines how elem
 
 ---
 
+### 4. **MESO**: Risk Geometry
+
+The **MESO** layer computes the risk geometry of a system.
+
+It evaluates how far each system state lies from collapse regimes
+and constructs a risk gradient across the regime graph.
+
+- **Purpose**: Quantify system risk.
+- **Key Focus**: Distance to collapse, risk gradients, and basin geometry.
+
+MESO transforms structural regime graphs into **navigable risk landscapes**.
+
+---
+
+### 5. **MEVA**: Execution Layer
+
+The **MEVA** layer executes navigation decisions within the system.
+
+It applies control actions, overrides drift transitions,
+and records the resulting system trajectory.
+
+- **Purpose**: Execute navigation policies.
+- **Key Focus**: Action application, state updates, trajectory recording.
+
+MEVA connects the theoretical navigation model to **real system simulations**.
+
+---
+
 ## The Flow of Interaction
 
 The layers in the system stack work together in a continuous feedback loop. The interaction between **META**, **ARCHY**, and **NEXAH** ensures that the system remains dynamic and responsive:
@@ -115,3 +143,4 @@ Here’s a breakdown of the essential documents that explain the components of t
 11. **[application_cases.md](./application_cases.md)**  
     - **Purpose**: Showcases use cases for NEXAH in various domains.  
     - **Content**: Examples of how NEXAH is applied in architecture, engineering, data science, and urban systems.
+
