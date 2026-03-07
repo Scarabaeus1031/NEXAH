@@ -5,8 +5,8 @@ class GlobalStabilityAtlas:
     """
     Computes the global stability atlas of the system.
 
-    For every possible start state, it follows the learned policy
-    and determines where the system converges.
+    For every start state, follow the learned RL policy
+    and determine where the system converges.
     """
 
     def __init__(self, env, agent, max_steps=20):
@@ -20,24 +20,29 @@ class GlobalStabilityAtlas:
 
         for state in self.env.states:
 
-            trajectory = [state]
-
             self.env.reset(state)
 
             current = state
+            trajectory = [current]
 
             for _ in range(self.max_steps):
 
-                action = self.agent.select_action(current)
+                actions = self.env.actions
+
+                # greedy action from Q-table
+                action = max(
+                    actions,
+                    key=lambda a: self.agent.q[current][a]
+                )
 
                 next_state, reward, done, info = self.env.step(action)
 
                 trajectory.append(next_state)
 
+                current = next_state
+
                 if done:
                     break
-
-                current = next_state
 
             atlas[state] = trajectory
 
@@ -56,26 +61,21 @@ class GlobalStabilityAtlas:
 
     def plot(self, atlas):
 
-        fig, ax = plt.subplots(figsize=(10, 6))
+        fig, ax = plt.subplots(figsize=(10,6))
 
-        starts = []
-        ends = []
-
-        for start, traj in atlas.items():
-
-            starts.append(start)
-            ends.append(traj[-1])
+        starts = list(atlas.keys())
+        ends = [atlas[s][-1] for s in starts]
 
         ax.scatter(range(len(starts)), [0]*len(starts), s=150)
 
         for i, s in enumerate(starts):
 
-            ax.text(i, 0, s, fontsize=9)
+            ax.text(i,0,s)
 
             ax.annotate(
                 ends[i],
-                (i, 0),
-                (i, 0.3),
+                (i,0),
+                (i,0.3),
                 arrowprops=dict(arrowstyle="->")
             )
 
