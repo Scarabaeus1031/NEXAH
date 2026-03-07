@@ -1,52 +1,38 @@
 {
-  "nodes": [
-    "stable",
-    "freq_drop",
-    "congestion",
-    "blackout"
-  ],
+  "nodes": ["stable", "freq_drop", "congestion", "blackout"],
 
   "edges": [
-    ["stable", "freq_drop"],
-    ["freq_drop", "congestion"],
-    ["congestion", "blackout"]
+    ["stable","freq_drop"],
+    ["freq_drop","congestion"],
+    ["congestion","blackout"]
   ],
 
   "regimes": {
-    "stable": "normal",
-    "freq_drop": "unstable",
-    "congestion": "critical",
-    "blackout": "collapse"
+    "stable":"normal",
+    "freq_drop":"unstable",
+    "congestion":"critical",
+    "blackout":"collapse"
   },
 
   "transitions": {
-    "stable": "freq_drop",
-    "freq_drop": "congestion",
-    "congestion": "blackout"
+    "stable":"freq_drop",
+    "freq_drop":"congestion",
+    "congestion":"blackout"
   },
 
   "control_actions": {
     "start_reserve": {
-      "from": "freq_drop",
-      "to": "stable"
+      "from":"freq_drop",
+      "to":"stable"
     }
   },
 
   "shock_events": {
     "line_failure": {
-      "from": "stable",
-      "to": "congestion"
+      "from":"stable",
+      "to":"congestion"
     }
   },
 
   "risk_target": "blackout"
 }
-CTRL + O
-ENTER
-CTRL + X
-
-°X
-^X
-
-
-
