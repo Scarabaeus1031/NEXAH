@@ -13,7 +13,11 @@ def test_explorer():
     print("\n--- RISK ---")
     explorer.print_risk()
 
+    print("\n--- RISK LANDSCAPE ---")
+    explorer.show_risk_landscape()
+
     print("\n--- NAVIGATION ---")
+
     trajectory = explorer.run_navigation("stable")
 
     print("Trajectory:", trajectory)
