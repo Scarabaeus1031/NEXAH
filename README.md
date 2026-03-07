@@ -3,13 +3,21 @@
 
 ## Structural Navigation for Complex Systems
 
-**NEXAH** is a computational framework for **structural analysis, stabilization, and navigation of complex dynamical systems**.
+**NEXAH** is a structural navigation framework for **sstabilizing complex dynamical systems.**
 
 It provides tools to:
 
 • model systems as finite regime graphs  
 • analyze stability landscapes and cascade risks  
 • compute navigation strategies toward stable attractors  
+
+Typical use cases include:
+
+• power grid stability analysis  
+• cascading failure prediction  
+• infrastructure resilience modeling  
+• supply chain system navigation  
+• climate and environmental regime analysis  
 
 NEXAH combines ideas from:
 
