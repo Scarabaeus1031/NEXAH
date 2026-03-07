@@ -77,16 +77,16 @@ class SystemExplorer:
         print("\nRisk gradient:")
         print(self.risk["risk_gradient"])
         
-    def show_stability_landscape(self):
+     def show_stability_landscape(self):
 
-    landscape = compute_stability_landscape(
-        self.regime_map,
-        self.risk
-    )
+        landscape = compute_stability_landscape(
+            self.regime_map,
+            self.risk
+        )
 
-    visualize_stability_landscape(
-        self.regime_map,
-        landscape
-    )
+        visualize_stability_landscape(
+            self.regime_map,
+            landscape
+        )
 
-    return landscape
+        return landscape
