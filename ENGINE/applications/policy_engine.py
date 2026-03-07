@@ -1,11 +1,26 @@
 class PolicyEngine:
+    """
+    Basic rule-based policy engine for NEXAH.
 
-    def decide(self, state, regimes):
+    Maps system states and regime classifications
+    to stabilization actions.
+    """
 
-        if state in regimes["failure"]:
-            return "isolate_system"
+    def __init__(self, regimes):
+        self.regimes = regimes
 
-        if state in regimes["stress"]:
-            return "redispatch_resources"
+    def decide(self, state):
+        """
+        Decide which action to apply based on regime class.
+        """
 
-        return "maintain"
+        if state in self.regimes.get("failure", []):
+            return "start_reserve"
+
+        if state in self.regimes.get("stress", []):
+            return "reconfigure_grid"
+
+        if state in self.regimes.get("stable", []):
+            return "maintain"
+
+        return "monitor"
