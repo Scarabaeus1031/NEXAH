@@ -10,7 +10,7 @@ The NEXAH framework is a structural navigation system for **complex dynamic envi
 
 # NEXAH System Stack
 
-![NEXAH System Stack](../visuals/Systemstack_Architecture_Overview.png)
+![NEXAH System Stack](./visuals/Systemstack_Architecture_Overview.png)
 
 The architecture follows a layered model:
 
