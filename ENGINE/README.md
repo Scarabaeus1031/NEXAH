@@ -30,15 +30,6 @@ Below are examples of visual outputs produced by the engine.
 
 ![Stability Landscape](visuals/01_landscape.png)
 
-### Global Stability Structure
-
-![Global Structure](visuals/08_global_structure.png)
-
-A full gallery of generated visuals can be found here:
-
-➡ **Visual Gallery**\
-`docs/VISUAL_GALLERY.md`
-
 ------------------------------------------------------------------------
 
 # Documentation
