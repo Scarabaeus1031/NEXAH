@@ -1,45 +1,65 @@
+import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+from mpl_toolkits.mplot3d import Axes3D
 
 
-class StabilityLandscape3D:
+class StabilitySurface3D:
     """
-    Simple 3D stability landscape for NEXAH.
-
-    States are placed along one axis, and their stability / risk value
-    is represented as height.
-    Higher values = more stable
-    Lower values = closer to collapse
+    Creates a smooth 3D stability landscape surface
+    based on discrete risk_map states.
     """
 
     def __init__(self, risk_map):
         self.risk_map = risk_map
 
-    def plot(self, title="NEXAH Stability Landscape 3D"):
-        """
-        Render a simple 3D landscape from the risk map.
-        """
+    def plot(self, title="NEXAH Stability Surface"):
 
         states = list(self.risk_map.keys())
-        values = [self.risk_map[s] for s in states]
+        values = np.array([self.risk_map[s] for s in states])
 
-        x = list(range(len(states)))
-        y = [0 for _ in states]
-        z = values
+        n = len(states)
 
-        fig = plt.figure(figsize=(12, 7))
+        # create surface grid
+        x = np.linspace(0, n-1, 100)
+        y = np.linspace(-1, 1, 100)
+
+        X, Y = np.meshgrid(x, y)
+
+        # interpolate stability values
+        Z = np.interp(X, np.arange(n), values)
+
+        # add smooth valley curvature
+        Z = Z - (Y**2 * 2)
+
+        fig = plt.figure(figsize=(13, 8))
         ax = fig.add_subplot(111, projection="3d")
 
-        ax.scatter(x, y, z, s=200)
+        surf = ax.plot_surface(
+            X, Y, Z,
+            cmap="viridis",
+            linewidth=0,
+            antialiased=True,
+            alpha=0.85
+        )
+
+        # plot actual system states
+        ax.scatter(
+            np.arange(n),
+            np.zeros(n),
+            values,
+            color="red",
+            s=80
+        )
 
         for i, state in enumerate(states):
-            ax.text(x[i], y[i], z[i], state, fontsize=9)
-
-        ax.plot(x, y, z, linewidth=2)
+            ax.text(i, 0, values[i], state)
 
         ax.set_xlabel("State Index")
-        ax.set_ylabel("Landscape Axis")
-        ax.set_zlabel("Stability Score")
+        ax.set_ylabel("System Axis")
+        ax.set_zlabel("Stability")
+
         ax.set_title(title)
+
+        fig.colorbar(surf, shrink=0.5, aspect=10)
 
         plt.show()
