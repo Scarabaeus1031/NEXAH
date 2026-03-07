@@ -22,6 +22,7 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 
 class SystemExplorer:
+
     def __init__(self, system_file):
 
         self.system = load_system(system_file)
@@ -58,6 +59,11 @@ class SystemExplorer:
         visualize_attractors(self.regime_map)
         return attractors
 
+    def show_stability_landscape(self):
+        landscape = compute_stability_landscape(self.regime_map, self.risk)
+        visualize_stability_landscape(self.regime_map, landscape)
+        return landscape
+
     def run_navigation(self, start_state):
 
         self.engine.set_initial_state(start_state)
@@ -76,17 +82,3 @@ class SystemExplorer:
 
         print("\nRisk gradient:")
         print(self.risk["risk_gradient"])
-        
-     def show_stability_landscape(self):
-
-        landscape = compute_stability_landscape(
-            self.regime_map,
-            self.risk
-        )
-
-        visualize_stability_landscape(
-            self.regime_map,
-            landscape
-        )
-
-        return landscape
