@@ -1,3 +1,4 @@
+
 # NEXAH Framework
 
 ## Structural Navigation for Complex Systems
@@ -19,6 +20,27 @@ NEXAH combines ideas from:
 - policy optimization
 
 Rather than only simulating system evolution, **NEXAH focuses on navigating systems through regime landscapes toward stability.**
+
+---
+
+## NEXAH System Architecture
+
+![NEXAH Applications Architecture](./NAVIGATOR/visuals/nexah_applications_architecture.png)
+
+The NEXAH framework follows a layered pipeline connecting formal theory with real-world system analysis.
+
+The architecture progresses through several stages:
+
+**Research → Operators → Engine → Application Models → System Integration → Real Systems**
+
+- **Research** establishes the formal foundations of the framework (axioms, principles, theorems).
+- **Operators** define the algebraic structures used to analyze system stability.
+- **Engine** implements these operators as executable structural analysis tools.
+- **Application Models** represent classes of dynamical systems.
+- **System Integration** connects the framework to external simulators and infrastructure models.
+- **Real Systems** represent practical domains such as infrastructure networks, environmental systems, and urban systems.
+
+This pipeline allows NEXAH to bridge **formal structural theory and real-world system navigation**.
 
 ---
 
@@ -70,38 +92,28 @@ The framework models **finite dynamical systems as state graphs with regimes and
 
 Clone the repository:
 
-```
-git clone https://github.com/Scarabaeus1033/NEXAH.git
+git clone https://github.com/Scarabaeus1033/NEXAH.git  
 cd NEXAH
-```
 
 Install dependencies:
 
-```
 pip install -e .
-```
 
 Run the demo simulation:
 
-```
 python BUILDER_LAB/demos/nexah_demo.py
-```
 
 Example system evolution:
 
-```
-freq_drop
-→ start_reserve
-→ congestion
-→ reconfigure_grid
+freq_drop  
+→ start_reserve  
+→ congestion  
+→ reconfigure_grid  
 → stable
-```
 
 This demonstrates the core **NEXAH stabilization cycle**:
 
-```
 State → Regime → Risk → Navigation → Action → Next State
-```
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
@@ -149,9 +161,7 @@ NEXAH analyzes **how systems can be navigated**.
 
 Conceptually:
 
-```
 Simulator → State Graph → NEXAH → Policy → Actions
-```
 
 Simulators describe system dynamics.
 
@@ -167,17 +177,15 @@ NEXAH acts as a **navigation layer between simulators and control policies**.
 
 Conceptual flow:
 
-```
-Simulators
-↓
-State Graph
-↓
-NEXAH Navigation
-↓
-Policy
-↓
-Actions
-```
+Simulators  
+↓  
+State Graph  
+↓  
+NEXAH Navigation  
+↓  
+Policy  
+↓  
+Actions  
 
 Simulators describe the system.
 
@@ -191,9 +199,7 @@ Simulators describe the system.
 
 The framework follows a layered architecture:
 
-```
 META → ARCHY → NEXAH → POLICY → ACTION → STATE
-```
 
 ### META — Semantic Layer
 
@@ -242,9 +248,7 @@ Adapters translate simulator outputs into **NEXAH state graphs**.
 
 Location:
 
-```
 APPLICATIONS/adapters
-```
 
 Examples include adapters for:
 
@@ -255,9 +259,7 @@ Examples include adapters for:
 
 Adapter interface specification:
 
-```
 APPLICATIONS/adapters/nexah_adapter_spec.md
-```
 
 This allows NEXAH to analyze real systems while remaining **simulation-agnostic**.
 
@@ -282,19 +284,17 @@ This allows NEXAH to analyze real systems while remaining **simulation-agnostic*
 
 ![NEXAH Research Pipeline](./NAVIGATOR/visuals/nexah_research_pipeline.png)
 
-```
-Axioms
-↓
-Principles
-↓
-Theorems
-↓
-Operators
-↓
-Framework
-↓
-Applications
-```
+Axioms  
+↓  
+Principles  
+↓  
+Theorems  
+↓  
+Operators  
+↓  
+Framework  
+↓  
+Applications  
 
 ---
 
@@ -315,9 +315,7 @@ Applications
 
 Location:
 
-```
 /BUILDER_LAB
-```
 
 Provides a sandbox for experimentation:
 
@@ -328,9 +326,7 @@ Provides a sandbox for experimentation:
 
 Example:
 
-```
 python BUILDER_LAB/demos/nexah_demo.py
-```
 
 ---
 
@@ -360,11 +356,9 @@ Current release: **v1.0.0**
 
 # Versioning
 
-```
-v1.0 → stable finite core
-v1.x → backward compatible extensions
-v2.x → structural changes
-```
+v1.0 → stable finite core  
+v1.x → backward compatible extensions  
+v2.x → structural changes  
 
 Current version: **v1.0.0**
 
