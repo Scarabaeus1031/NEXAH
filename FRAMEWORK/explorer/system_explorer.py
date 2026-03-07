@@ -13,14 +13,6 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 class SystemExplorer:
 
-    def show_collapse_basin(self):
-
-    basin = compute_collapse_basin(self.regime_map)
-
-    visualize_collapse_basin(self.regime_map, basin)
-
-    return basin
-
     def __init__(self, system_file):
         """
         Initialize the full NEXAH pipeline.
@@ -72,6 +64,17 @@ class SystemExplorer:
         visualize_navigation_path(self.regime_map, path)
 
         return path
+
+    def show_collapse_basin(self):
+        """
+        Visualize the collapse basin of the system.
+        """
+
+        basin = compute_collapse_basin(self.regime_map)
+
+        visualize_collapse_basin(self.regime_map, basin)
+
+        return basin
 
     def run_navigation(self, start_state):
         """
