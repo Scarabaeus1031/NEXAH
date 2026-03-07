@@ -17,7 +17,16 @@
     {"from": "service_failure", "to": "stable"}
   ],
 
+  "regimes": {
+    "stable": "normal",
+    "high_load": "unstable",
+    "overload": "critical",
+    "service_failure": "collapse"
+  },
+
   "collapse_states": [
     "service_failure"
-  ]
+  ],
+
+  "risk_target": "service_failure"
 }
