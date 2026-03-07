@@ -15,6 +15,37 @@ Within the repository, applications typically demonstrate:
 
 Applications therefore connect **theoretical framework components** with **practical system analysis**.
 
+
+## Applications Architecture
+
+![NEXAH Applications Architecture](./visuals/nexah_applications_architecture.png)
+
+Applications form the bridge between **theoretical structure and real-world systems**.
+
+The NEXAH ecosystem follows a layered progression:
+
+Research  
+↓  
+Operators  
+↓  
+Engine  
+↓  
+Application Models  
+↓  
+System Integration  
+↓  
+Real Systems  
+
+The **NEXAH Stability Engine** provides structural analysis tools that application models use to extract:
+
+- stability landscapes  
+- attractor basins  
+- regime transitions  
+- spectral structures  
+- topological invariants  
+
+Application modules therefore serve as **experimental environments where theoretical operators become system analysis tools**.
+
 ---
 
 # Application Layers in NEXAH
