@@ -4,107 +4,141 @@ Welcome to the **NEXAH Framework portal**.
 
 This section introduces the structural foundations of the NEXAH system — its conceptual layers, modeling principles, and practical applications.
 
-NEXAH is designed as a **structural modeling framework for navigating complex systems** through **relational modeling and explicit orientation**.
+NEXAH is designed as a **structural modeling framework for navigating complex systems** through **relational modeling, regime analysis, and explicit system orientation**.
 
 ---
 
-## What is the NEXAH Framework?
+# What is the NEXAH Framework?
 
-The **NEXAH Framework** is a modular structural modeling system that describes complex systems using relational structure, stability regimes, and navigable orientations.
+The **NEXAH Framework** is a modular structural modeling system for analyzing and navigating complex systems.
 
-Rather than reducing systems to simplified variables, NEXAH focuses on **how elements are structurally related and how systems transition between states**.
+Instead of reducing systems to simplified variables, NEXAH focuses on:
 
-The framework is organized into three conceptual layers:
+- structural relations between elements
+- regime transitions within systems
+- navigable orientations across system states
 
-- **META** — relational structure  
-- **ARCHY** — stability regimes  
-- **NEXAH** — orientation and frames  
-
-Together these layers contribute to **organization, stability, and orientation** within complex systems.
+The framework allows complex systems to be explored through **explicit structural models and navigation strategies**.
 
 ---
 
-## Framework Structure
+# Framework Structure
 
-The core architecture of the NEXAH framework is structured across three layers.
+The NEXAH framework is organized as a **five-layer system stack**.
+
+META → ARCHY → MESO → NEXAH → MEVA
+
+Each layer contributes a new capability for understanding and navigating complex systems.
 
 ![Explore Framework](./visuals/Explore_Framework.png)
 
 ---
 
-### META — Framework Structure
+# META — Relational Structure
 
-Defines the **relational order** of the system.
+The **META layer** defines the structural foundation of a system.
 
-META establishes the structural foundation upon which all models are built.
-
-Examples include:
-
-- relational graphs  
-- ordering relations  
-- dependency structures  
-
----
-
-### ARCHY — Stability Regimes
-
-ARCHY models **stability conditions and regime transitions**.
-
-It describes how systems move between states and how structural configurations stabilize.
+It describes how system elements are related and how dependencies are organized.
 
 Examples include:
 
-- threshold behavior  
-- regime transitions  
-- system governance patterns  
+- relational graphs
+- ordering relations
+- dependency structures
+- system semantics
+
+META establishes the **structural language of the system**.
 
 ---
 
-### NEXAH — Orientation & Frames
+# ARCHY — Stability Regimes
 
-NEXAH provides **explicit orientation within structural systems**.
+The **ARCHY layer** analyzes system stability and regime transitions.
 
-It enables navigation and interpretation of structural models.
+It identifies states, transitions between states, and structural stability regions.
 
 Examples include:
 
-- structural navigation  
-- relational frames  
-- contextual positioning of models  
+- regime transitions
+- collapse states
+- basin structures
+- system thresholds
+
+ARCHY reveals **how systems move between structural configurations**.
 
 ---
 
-## NEXAH in Practice
+# MESO — Risk Geometry
+
+The **MESO layer** evaluates the **risk landscape** of the system.
+
+It computes how far states lie from collapse regimes and generates risk gradients across the system.
+
+Examples include:
+
+- collapse distance
+- risk gradients
+- basin geometry
+- resilience analysis
+
+MESO allows systems to be analyzed in terms of **risk topology**.
+
+---
+
+# NEXAH — Orientation & Navigation
+
+The **NEXAH layer** enables navigation through the regime landscape.
+
+Using structures discovered in META, ARCHY, and MESO, it computes safe trajectories through the system state space.
+
+Examples include:
+
+- navigation policies
+- trajectory planning
+- regime-aware decision making
+- orientation frames
+
+NEXAH transforms system analysis into **navigable structural models**.
+
+---
+
+# MEVA — Execution Layer
+
+The **MEVA layer** executes navigation decisions.
+
+It applies actions, updates system states, and records system trajectories.
+
+Examples include:
+
+- state updates
+- action execution
+- trajectory simulation
+- system control
+
+MEVA turns navigation policies into **operational system behavior**.
+
+---
+
+# NEXAH in Practice
 
 The framework is designed not only as a conceptual model but also as a **practical system for analyzing real-world structures**.
 
 ![NEXAH Application](./visuals/Nexah_Application.png)
 
-Examples of applied structural modeling include:
-
-### Formal Core
-
-Relational modeling and orientation of complex systems.
-
-### Regime Theory
-
-Analysis of thresholds and transitions between system states.
-
-### Documented Applications
-
-Real-world case studies demonstrating NEXAH modeling.
-
-Applications may include fields such as:
+Applications may include domains such as:
 
 - infrastructure systems
 - environmental modeling
 - maritime systems
-- urban structure analysis
+- urban structural analysis
 - archaeological alignment studies
+- complex network governance
+
+These applications demonstrate how relational modeling and regime analysis can reveal hidden structural dynamics.
 
 ---
 
-## Purpose of the Framework
+# Purpose of the Framework
 
 The goal of NEXAH is to provide a **clear structural language for complex systems**.
 
@@ -112,27 +146,37 @@ Instead of describing systems only through metrics or variables, NEXAH models:
 
 - structural relations
 - stability regimes
+- system risk geometry
 - navigable system orientations
 
-This allows complex domains to be explored through **structured relational models**.
+This enables complex domains to be explored through **structured relational models and explicit navigation strategies**.
 
 ---
 
-## Continue Exploring
+# Continue Exploring
 
 From this portal you can continue exploring the NEXAH ecosystem.
 
-**Research Portal**  
-[`research_portal.md`](./research_portal.md)
+---
+
+## Research Portal
+
+`research_portal.md`
 
 Explore the theoretical foundations and structural principles behind the framework.
 
-**Applications Portal**  
-[`applications_portal.md`](./applications_portal.md)
+---
+
+## Applications Portal
+
+`applications_portal.md`
 
 Discover documented case studies and real-world structural modeling examples.
 
-**Repository Navigator**  
-[`repository_portal.md`](./repository_portal.md)
+---
+
+## Repository Navigator
+
+`repository_portal.md`
 
 Access the structural map of the NEXAH repository and explore its modules.
