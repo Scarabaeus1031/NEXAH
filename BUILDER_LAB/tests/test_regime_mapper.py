@@ -10,11 +10,12 @@ def test_regime_mapper():
 
     regime_map = map_regimes(system)
 
-    print("Collapse states:", regime_map["collapse_states"])
-    print("Basins:", regime_map["basins"])
-    print("Graph nodes:", regime_map["graph"].nodes())
-
     visualize_regime_map(regime_map)
+
+    risk = compute_risk_geometry(regime_map)
+
+    print("Risk distance:", risk["risk_distance"])
+    print("Risk gradient:", risk["risk_gradient"])
 
 
 if __name__ == "__main__":
