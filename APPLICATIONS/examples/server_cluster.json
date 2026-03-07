@@ -1,7 +1,7 @@
 {
   "name": "server_cluster",
 
-  "states": [
+  "nodes": [
     "stable",
     "high_load",
     "overload",
