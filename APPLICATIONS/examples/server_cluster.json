@@ -17,6 +17,13 @@
     {"from": "service_failure", "to": "stable"}
   ],
 
+  "transitions": {
+    "stable": ["high_load"],
+    "high_load": ["stable", "overload"],
+    "overload": ["high_load", "service_failure"],
+    "service_failure": ["stable"]
+  },
+
   "regimes": {
     "stable": "normal",
     "high_load": "unstable",
