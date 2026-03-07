@@ -1,8 +1,8 @@
 # NEXAH Framework
 
-The official repository for the **NEXAH Framework** ---\
-a modular system for **structural modeling, stabilization, and
-navigation of complex systems**.
+The official repository for the **NEXAH Framework** --- a modular system
+for **structural modeling, stabilization, and navigation of complex
+systems**.
 
 The **NEXAH Framework** models **stability and navigation in finite
 dynamical systems**.
@@ -16,19 +16,15 @@ geometry**, allowing agents to navigate systems toward stability.
 
 Run the demo simulation:
 
-    python BUILDER_LAB/demos/nexah_demo.py
+python BUILDER_LAB/demos/nexah_demo.py
 
 Example system evolution:
 
-    freq_drop
-    → start_reserve
-    → congestion
-    → reconfigure_grid
-    → stable
+freq_drop → start_reserve → congestion → reconfigure_grid → stable
 
 This demonstrates the core NEXAH cycle:
 
-    State → Regime → Risk → Navigation → Action → Next State
+State → Regime → Risk → Navigation → Action → Next State
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
@@ -38,9 +34,9 @@ This demonstrates the core NEXAH cycle:
 
 Many complex systems share similar structural problems:
 
--   cascading failures\
--   unstable regime transitions\
--   limited system observability\
+-   cascading failures
+-   unstable regime transitions
+-   limited system observability
 -   difficult stabilization strategies
 
 Traditional simulators can **simulate system dynamics**, but they rarely
@@ -48,13 +44,52 @@ provide tools to **navigate regime landscapes**.
 
 NEXAH adds a structural layer that enables:
 
--   regime detection\
--   risk geometry analysis\
--   cascade prediction\
+-   regime detection
+-   risk geometry analysis
+-   cascade prediction
 -   policy-guided stabilization
 
 This allows agents to **steer systems toward stable attractors and away
 from collapse states**.
+
+------------------------------------------------------------------------
+
+# Where NEXAH Fits
+
+NEXAH does not replace system simulators. Instead, it operates **on top
+of existing models** as a structural navigation layer.
+
+Many scientific and engineering fields already provide powerful
+simulation tools such as:
+
+-   power grid simulators
+-   traffic simulators
+-   cyber‑physical system models
+-   infrastructure simulations
+-   supply chain models
+
+These systems simulate **how complex systems evolve over time**.
+
+However, simulation alone does not provide tools to analyze the
+**structural regime landscape** of those systems or determine how to
+**navigate them toward stable states**.
+
+NEXAH introduces a complementary capability: **navigation through the
+regime structure of complex dynamical systems**.
+
+Conceptually the architecture can be summarized as:
+
+Simulator → State Graph → NEXAH → Policy → Actions
+
+Simulators describe **system dynamics**.
+
+NEXAH extracts a structural **state graph representation**, analyzes
+**regime geometry and cascade risks**, and enables **policy‑guided
+navigation through system states**.
+
+In this sense, NEXAH functions as a **navigation framework for complex
+systems**, allowing agents to reason about stability, risk, and control
+strategies within finite dynamical system landscapes.
 
 ------------------------------------------------------------------------
 
@@ -88,36 +123,40 @@ Stack](./NAVIGATOR/visuals/Plate_10_The_NEXAH_Control_Stack.png)
 
 The NEXAH framework is organized as a layered control architecture.
 
-META → Meaning ARCHY → Structure NEXAH → Navigation POLICY → Decision
-ACTION → Intervention STATE → System Dynamics
+META → Meaning\
+ARCHY → Structure\
+NEXAH → Navigation\
+POLICY → Decision\
+ACTION → Intervention\
+STATE → System Dynamics
 
 ### META --- Semantic Layer
 
 Defines the system ontology:
 
--   nodes\
--   edges\
--   regimes\
--   transitions\
--   control actions\
+-   nodes
+-   edges
+-   regimes
+-   transitions
+-   control actions
 -   risk targets
 
 ### ARCHY --- Structural Layer
 
 Transforms the semantic model into structural geometry:
 
--   state graphs\
--   regime partitions\
--   stability basins\
+-   state graphs
+-   regime partitions
+-   stability basins
 -   transition structures
 
 ### NEXAH --- Navigation Layer
 
 Analyzes the structural system model to determine:
 
--   regime transitions\
--   cascade risks\
--   stabilization strategies\
+-   regime transitions
+-   cascade risks
+-   stabilization strategies
 -   navigation trajectories
 
 ### POLICY --- Decision Layer
@@ -208,12 +247,12 @@ python BUILDER_LAB/demos/nexah_demo.py
 
 Current release: **v1.0.0**
 
--   finite algebra engine stable\
--   monotone and fixpoint structures validated\
--   worklist fixpoint solver operational\
--   constant propagation example implemented\
--   \~95% test coverage\
--   mypy --strict clean\
+-   finite algebra engine stable
+-   monotone and fixpoint structures validated
+-   worklist fixpoint solver operational
+-   constant propagation example implemented
+-   \~95% test coverage
+-   mypy --strict clean
 -   API frozen for finite scope
 
 ------------------------------------------------------------------------
@@ -234,4 +273,3 @@ Code: **Apache License 2.0**\
 Documentation & Research: **CC BY 4.0**
 
 © 2026 Thomas K. R. Hofmann
-
