@@ -9,22 +9,39 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 class SystemExplorer:
 
     def __init__(self, system_file):
+        """
+        Initialize the full NEXAH pipeline.
 
+        META   → system_loader
+        ARCHY  → regime_mapper
+        MESO   → risk_geometry
+        NEXAH  → navigation_policy
+        MEVA   → execution_engine
+        """
+
+        # META
         self.system = load_system(system_file)
 
+        # ARCHY
         self.regime_map = map_regimes(self.system)
 
+        # MESO
         self.risk = compute_risk_geometry(self.regime_map)
 
+        # MEVA
         self.engine = ExecutionEngine(self.regime_map, self.risk)
 
-
     def show_graph(self):
+        """
+        Visualize the regime graph.
+        """
 
         visualize_regime_map(self.regime_map)
 
-
     def run_navigation(self, start_state):
+        """
+        Run the NEXAH navigation policy starting from a given state.
+        """
 
         self.engine.set_initial_state(start_state)
 
@@ -41,8 +58,13 @@ class SystemExplorer:
 
         return trajectory
 
-
     def print_risk(self):
+        """
+        Print MESO risk geometry.
+        """
 
-        print("Risk distance:", self.risk["risk_distance"])
-        print("Risk gradient:", self.risk["risk_gradient"])
+        print("\nRisk distance:")
+        print(self.risk["risk_distance"])
+
+        print("\nRisk gradient:")
+        print(self.risk["risk_gradient"])
