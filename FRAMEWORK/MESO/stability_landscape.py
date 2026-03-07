@@ -7,8 +7,8 @@ def compute_stability_landscape(regime_map, risk):
 
     landscape = {}
 
-    # regime_map ist ein dict → keys sind die states
-    for state in regime_map.keys():
+    # iterate over actual system states
+    for state in gradient:
 
         stability = 1 - gradient[state]
 
