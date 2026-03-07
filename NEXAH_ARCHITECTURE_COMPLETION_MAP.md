@@ -18,21 +18,21 @@ NEXAH is a structural navigation framework for complex systems.
 
 The architecture consists of five layers:
 
-META → ARCHY → NEXAH → MEVA → MESO
+META → ARCHY → MESO → NEXAH → MEVA
 
 These layers transform raw system definitions into navigable regime landscapes.
 
 META — System Definition Layer  
 ARCHY — Structural Organization  
+MESO — Risk Geometry Layer  
 NEXAH — Navigation Layer  
 MEVA — Execution Layer  
-MESO — Risk Geometry Layer  
 
 ---
 
 # NEXAH CONCEPTUAL TRIAD
 
-The system can be understood through three conceptual layers.
+The system can also be understood through three conceptual layers.
 
 META → semantic space  
 ARCHY → structural geometry  
@@ -79,7 +79,7 @@ Tasks:
 
 ### 2. NEXAH System Definition Schema
 
-Status: **[~] partial**
+Status: **[✓] implemented**
 
 Tasks:
 
@@ -113,9 +113,9 @@ Responsibilities:
 
 ---
 
-### 4. Regime Mapper
+### 4. Regime Mapper (ARCHY Layer)
 
-Status: **[ ] open**
+Status: **[✓] implemented**
 
 Outputs:
 
@@ -125,7 +125,7 @@ Outputs:
 - regime boundary detection
 - attractor detection
 
-This is the primary structural analysis module of ARCHY.
+This is the primary structural analysis module of the **ARCHY layer**.
 
 ---
 
@@ -194,11 +194,11 @@ risk gradient over system states.
 
 ### 9. Agent Policy Layer (NEXAH Layer)
 
-Status: **[~] partial**
+Status: **[✓] implemented**
 
 Capabilities:
 
-- action selection
+- safe path computation
 - regime-aware decisions
 - risk-aware control
 
@@ -332,12 +332,12 @@ The following components yield a fully operational NEXAH system:
 1. System Definition Schema  
 2. Engine ↔ System Bridge  
 3. Simulation Kernel  
-4. Risk Geometry (MESO)  
-5. Control Console  
-6. Regime Mapper  
-7. Agent Navigation Layer  
-8. Execution Layer  
+4. Regime Mapper  
+5. Risk Geometry (MESO)  
+6. Agent Navigation Layer  
+7. Execution Layer  
+8. Visualization Layer  
 9. Reference Demo Systems  
-10. Visualization Layer  
+10. Control Console  
 
 Completing these steps results in a fully functional **NEXAH navigation framework**.
