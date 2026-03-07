@@ -50,5 +50,7 @@
       "from": "service_failure",
       "to": "stable"
     }
-  }
+  },
+
+  "shock_events": []
 }
