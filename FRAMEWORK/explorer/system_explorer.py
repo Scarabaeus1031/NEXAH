@@ -18,164 +18,120 @@ from FRAMEWORK.NEXAH.visualize_navigation_path import visualize_navigation_path
 
 from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
-
 class SystemExplorer:
 
-    def __init__(self, system_file):
-        """
-        Initialize the full NEXAH pipeline.
+def __init__(self, system_file):
+    """
+    Initialize the full NEXAH pipeline.
 
-        META   → system_loader
-        ARCHY  → regime_mapper
-        MESO   → risk_geometry
-        NEXAH  → navigation_policy
-        MEVA   → execution_engine
-        """
+    META   → system_loader
+    ARCHY  → regime_mapper
+    MESO   → risk_geometry
+    NEXAH  → navigation_policy
+    MEVA   → execution_engine
+    """
 
-        # META
-        self.system = load_system(system_file)
+    # META
+    self.system = load_system(system_file)
 
-        # ARCHY
-        self.regime_map = map_regimes(self.system)
+    # ARCHY
+    self.regime_map = map_regimes(self.system)
 
-        # MESO
-        self.risk = compute_risk_geometry(self.regime_map)
+    # MESO
+    self.risk = compute_risk_geometry(self.regime_map)
 
-        # MEVA
-        self.engine = ExecutionEngine(self.regime_map, self.risk)
+    # MEVA
+    self.engine = ExecutionEngine(self.regime_map, self.risk)
 
-    def show_graph(self):
-        """
-        Visualize the regime graph.
-        """
-        visualize_regime_map(self.regime_map)
+def show_graph(self):
+    """
+    Visualize the regime graph.
+    """
+    visualize_regime_map(self.regime_map)
 
-    def show_risk_landscape(self):
-        """
-        Visualize the MESO risk landscape.
-        """
-        visualize_risk_landscape(self.regime_map, self.risk)
+def show_risk_landscape(self):
+    """
+    Visualize the MESO risk landscape.
+    """
+    visualize_risk_landscape(self.regime_map, self.risk)
 
-    def show_risk_labels(self):
-        """
-        Visualize regime graph with risk-distance labels.
-        """
-        visualize_risk_labels(self.regime_map, self.risk)
+def show_risk_labels(self):
+    """
+    Visualize regime graph with risk-distance labels.
+    """
+    visualize_risk_labels(self.regime_map, self.risk)
 
-    def show_navigation(self, start_state):
-        """
-        Visualize navigation path from a given start state.
-        """
+def show_navigation(self, start_state):
+    """
+    Visualize navigation path from a given start state.
+    """
+    path = compute_safe_path(start_state, self.regime_map, self.risk)
 
-        path = compute_safe_path(start_state, self.regime_map, self.risk)
+    visualize_navigation_path(self.regime_map, path)
 
-        visualize_navigation_path(self.regime_map, path)
+    return path
 
-        return path
+def show_collapse_basin(self):
+    """
+    Visualize the collapse basin of the system.
+    """
+    basin = compute_collapse_basin(self.regime_map)
 
-    def show_collapse_basin(self):
-        """
-        Visualize the collapse basin of the system.
-        """
+    visualize_collapse_basin(self.regime_map, basin)
 
-        basin = compute_collapse_basin(self.regime_map)
+    return basin
 
-        visualize_collapse_basin(self.regime_map, basin)
+def show_stability_atlas(self):
+    """
+    Compute and visualize the stability atlas.
+    """
+    atlas = compute_stability_atlas(
+        self.regime_map,
+        self.risk
+    )
 
-        return basin
+    visualize_stability_atlas(
+        self.regime_map,
+        atlas
+    )
 
-    def show_stability_atlas(self):
-        """
-        Compute and visualize the stability atlas.
-        """
+    return atlas
 
-        atlas = compute_stability_atlas(
-            self.regime_map,
-            self.risk
-        )
+def show_attractors(self):
+    """
+    Detect and visualize system attractors.
+    """
+    attractors = detect_attractors(self.regime_map)
 
-        visualize_stability_atlas(
-            self.regime_map,
-            atlas
-        )
+    visualize_attractors(self.regime_map)
 
-        return atlas
+    return attractors
 
-    def show_attractors(self):
-        """
-        Detect and visualize system attractors.
-        """
+def run_navigation(self, start_state):
+    """
+    Run the NEXAH navigation policy starting from a given state.
+    """
+    self.engine.set_initial_state(start_state)
 
-        attractors = detect_attractors(self.regime_map)
+    def policy(state):
 
-        visualize_attractors(self.regime_map)
+        path = compute_safe_path(state, self.regime_map, self.risk)
 
-        return attractors
+        if len(path) > 1:
+            return path[1]
 
-    def run_navigation(self, start_state):
-        """
-        Run the NEXAH navigation policy starting from a given state.
-        """
+        return None
 
-        self.engine.set_initial_state(start_state)
+    trajectory = self.engine.run(policy)
 
-        def policy(state):
+    return trajectory
 
-            path = compute_safe_path(state, self.regime_map, self.risk)
+def print_risk(self):
+    """
+    Print MESO risk geometry.
+    """
+    print("\nRisk distance:")
+    print(self.risk["risk_distance"])
 
-            if len(path) > 1:
-                return path[1]
-
-            return None
-
-        trajectory = self.engine.run(policy)
-
-        return trajectory
-
-    def print_risk(self):
-        """
-        Print MESO risk geometry.
-        """
-
-        print("\nRisk distance:")
-        print(self.risk["risk_distance"])
-
-        print("\nRisk gradient:")
-        print(self.risk["risk_gradient"])        """
-
-        basin = compute_collapse_basin(self.regime_map)
-
-        visualize_collapse_basin(self.regime_map, basin)
-
-        return basin
-
-    def run_navigation(self, start_state):
-        """
-        Run the NEXAH navigation policy starting from a given state.
-        """
-
-        self.engine.set_initial_state(start_state)
-
-        def policy(state):
-
-            path = compute_safe_path(state, self.regime_map, self.risk)
-
-            if len(path) > 1:
-                return path[1]
-
-            return None
-
-        trajectory = self.engine.run(policy)
-
-        return trajectory
-
-    def print_risk(self):
-        """
-        Print MESO risk geometry.
-        """
-
-        print("\nRisk distance:")
-        print(self.risk["risk_distance"])
-
-        print("\nRisk gradient:")
-        print(self.risk["risk_gradient"])
+    print("\nRisk gradient:")
+    print(self.risk["risk_gradient"])
