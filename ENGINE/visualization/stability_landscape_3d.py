@@ -6,7 +6,10 @@ from mpl_toolkits.mplot3d import Axes3D
 class StabilitySurface3D:
     """
     Creates a smooth 3D stability landscape surface
-    based on discrete risk_map states.
+    based on discrete system states.
+
+    Higher values = more stable
+    Lower values = closer to collapse
     """
 
     def __init__(self, risk_map):
@@ -20,39 +23,41 @@ class StabilitySurface3D:
         n = len(states)
 
         # create surface grid
-        x = np.linspace(0, n-1, 100)
+        x = np.linspace(0, n - 1, 100)
         y = np.linspace(-1, 1, 100)
 
         X, Y = np.meshgrid(x, y)
 
-        # interpolate stability values
+        # interpolate stability values across surface
         Z = np.interp(X, np.arange(n), values)
 
-        # add smooth valley curvature
-        Z = Z - (Y**2 * 2)
+        # create curved valley effect
+        Z = Z - (Y ** 2 * 2)
 
         fig = plt.figure(figsize=(13, 8))
         ax = fig.add_subplot(111, projection="3d")
 
         surf = ax.plot_surface(
-            X, Y, Z,
+            X,
+            Y,
+            Z,
             cmap="viridis",
             linewidth=0,
             antialiased=True,
-            alpha=0.85
+            alpha=0.9
         )
 
-        # plot actual system states
+        # plot real system states
         ax.scatter(
             np.arange(n),
             np.zeros(n),
             values,
             color="red",
-            s=80
+            s=100
         )
 
         for i, state in enumerate(states):
-            ax.text(i, 0, values[i], state)
+            ax.text(i, 0, values[i], state, fontsize=9)
 
         ax.set_xlabel("State Index")
         ax.set_ylabel("System Axis")
