@@ -1,275 +1,321 @@
 # NEXAH Framework
 
-The official repository for the **NEXAH Framework** --- a modular system
-for **structural modeling, stabilization, and navigation of complex
-systems**.
+The official repository for the **NEXAH Framework** —  
+a modular system for **structural modeling, stabilization, and navigation of complex systems**.
 
-The **NEXAH Framework** models **stability and navigation in finite
-dynamical systems**.
+> **NEXAH is a framework for navigating stability and risk landscapes in complex dynamical systems.**
 
-Systems are represented as **state graphs with regimes and risk
-geometry**, allowing agents to navigate systems toward stability.
+The framework models **finite dynamical systems as state graphs with regimes and risk geometry**, enabling agents to navigate systems toward stability.
 
-------------------------------------------------------------------------
+---
 
-# Example: Energy Grid Stabilization
+# Quick Start
+
+Clone the repository:
+
+```
+git clone https://github.com/Scarabaeus1033/NEXAH.git
+cd NEXAH
+```
+
+Install dependencies:
+
+```
+pip install -e .
+```
 
 Run the demo simulation:
 
+```
 python BUILDER_LAB/demos/nexah_demo.py
+```
 
 Example system evolution:
 
-freq_drop → start_reserve → congestion → reconfigure_grid → stable
+```
+freq_drop
+→ start_reserve
+→ congestion
+→ reconfigure_grid
+→ stable
+```
 
-This demonstrates the core NEXAH cycle:
+This demonstrates the core **NEXAH stabilization cycle**:
 
+```
 State → Regime → Risk → Navigation → Action → Next State
+```
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
 
-------------------------------------------------------------------------
+---
 
 # Why NEXAH
 
-Many complex systems share similar structural problems:
+Many complex systems share structural challenges:
 
--   cascading failures
--   unstable regime transitions
--   limited system observability
--   difficult stabilization strategies
+- cascading failures  
+- unstable regime transitions  
+- limited system observability  
+- difficult stabilization strategies  
 
-Traditional simulators can **simulate system dynamics**, but they rarely
-provide tools to **navigate regime landscapes**.
+Traditional simulators can **simulate system dynamics**, but they rarely provide tools to **navigate regime landscapes**.
 
-NEXAH adds a structural layer that enables:
+NEXAH introduces a structural layer enabling:
 
--   regime detection
--   risk geometry analysis
--   cascade prediction
--   policy-guided stabilization
+- regime detection  
+- risk geometry analysis  
+- cascade prediction  
+- policy-guided stabilization  
 
-This allows agents to **steer systems toward stable attractors and away
-from collapse states**.
+This allows agents to **steer systems toward stable attractors and away from collapse states**.
 
-------------------------------------------------------------------------
+---
 
 # Where NEXAH Fits
 
-NEXAH does not replace system simulators. Instead, it operates **on top
-of existing models** as a structural navigation layer.
+NEXAH does **not replace system simulators**.
 
-Many scientific and engineering fields already provide powerful
-simulation tools such as:
+Instead, it operates **on top of existing models** as a **navigation layer for complex systems**.
 
--   power grid simulators
--   traffic simulators
--   cyber‑physical system models
--   infrastructure simulations
--   supply chain models
+Existing simulation ecosystems include:
 
-These systems simulate **how complex systems evolve over time**.
+- power grid simulators (MATPOWER, pandapower, PyPSA)  
+- traffic simulation systems  
+- cyber-physical infrastructure models  
+- supply chain simulators  
+- large-scale system dynamics models  
 
-However, simulation alone does not provide tools to analyze the
-**structural regime landscape** of those systems or determine how to
-**navigate them toward stable states**.
+These tools simulate **how systems evolve**.
 
-NEXAH introduces a complementary capability: **navigation through the
-regime structure of complex dynamical systems**.
-
-Conceptually the architecture can be summarized as:
-
-Simulator → State Graph → NEXAH → Policy → Actions
-
-Simulators describe **system dynamics**.
-
-NEXAH extracts a structural **state graph representation**, analyzes
-**regime geometry and cascade risks**, and enables **policy‑guided
-navigation through system states**.
-
-In this sense, NEXAH functions as a **navigation framework for complex
-systems**, allowing agents to reason about stability, risk, and control
-strategies within finite dynamical system landscapes.
-
-------------------------------------------------------------------------
-
-# NEXAH Navigator Architecture
-
-![NEXAH Navigator
-Architecture](./NAVIGATOR/visuals/nexah_plate_09_nexah_navigator_architecture.png)
-
-NEXAH acts as a **navigation layer between system simulators and control
-policies**.
-
-Existing simulators describe system dynamics.
-
-NEXAH extracts a **state graph representation** and enables structural
-analysis.
+NEXAH analyzes **how systems can be navigated**.
 
 Conceptually:
 
-Simulators ↓ State Graph ↓ NEXAH Navigation ↓ Policy ↓ Actions
+```
+Simulator → State Graph → NEXAH → Policy → Actions
+```
+
+Simulators describe system dynamics.
+
+NEXAH extracts a **state graph representation**, analyzes **regime geometry and cascade risks**, and enables **policy-guided system navigation**.
+
+---
+
+# NEXAH Navigator Architecture
+
+![NEXAH Navigator Architecture](./NAVIGATOR/visuals/nexah_plate_09_nexah_navigator_architecture.png)
+
+NEXAH acts as a **navigation layer between simulators and control policies**.
+
+Conceptual flow:
+
+```
+Simulators
+↓
+State Graph
+↓
+NEXAH Navigation
+↓
+Policy
+↓
+Actions
+```
 
 Simulators describe the system.
 
 **NEXAH enables navigation through regime landscapes.**
 
-------------------------------------------------------------------------
+---
 
 # The NEXAH Control Stack
 
-![NEXAH Control
-Stack](./NAVIGATOR/visuals/Plate_10_The_NEXAH_Control_Stack.png)
+![NEXAH Control Stack](./NAVIGATOR/visuals/Plate_10_The_NEXAH_Control_Stack.png)
 
-The NEXAH framework is organized as a layered control architecture.
+The framework follows a layered architecture:
 
-META → Meaning\
-ARCHY → Structure\
-NEXAH → Navigation\
-POLICY → Decision\
-ACTION → Intervention\
-STATE → System Dynamics
+```
+META → ARCHY → NEXAH → POLICY → ACTION → STATE
+```
 
-### META --- Semantic Layer
+### META — Semantic Layer
 
 Defines the system ontology:
 
--   nodes
--   edges
--   regimes
--   transitions
--   control actions
--   risk targets
+- nodes
+- edges
+- regimes
+- transitions
+- control actions
+- risk targets
 
-### ARCHY --- Structural Layer
+### ARCHY — Structural Layer
 
-Transforms the semantic model into structural geometry:
+Transforms semantic models into structural geometry:
 
--   state graphs
--   regime partitions
--   stability basins
--   transition structures
+- state graphs
+- regime partitions
+- stability basins
+- transition structures
 
-### NEXAH --- Navigation Layer
+### NEXAH — Navigation Layer
 
-Analyzes the structural system model to determine:
+Determines:
 
--   regime transitions
--   cascade risks
--   stabilization strategies
--   navigation trajectories
+- regime transitions
+- cascade risks
+- stabilization strategies
+- navigation trajectories
 
-### POLICY --- Decision Layer
+### POLICY — Decision Layer
 
-Determines which actions agents should apply.
+Defines decision strategies for agents.
 
-### ACTION --- Intervention Layer
+### ACTION — Intervention Layer
 
 Applies control actions that modify system states.
 
-STATE → ARCHY → NEXAH → POLICY → ACTION → STATE
+---
 
-------------------------------------------------------------------------
+# External System Adapters
+
+NEXAH can connect to **external simulation environments** via adapters.
+
+Adapters translate simulator outputs into **NEXAH state graphs**.
+
+Location:
+
+```
+APPLICATIONS/adapters
+```
+
+Examples include adapters for:
+
+- power grid simulators  
+- infrastructure models  
+- traffic systems  
+- supply chain simulations  
+
+Adapter interface specification:
+
+```
+APPLICATIONS/adapters/nexah_adapter_spec.md
+```
+
+This allows NEXAH to analyze real systems while remaining **simulation-agnostic**.
+
+---
 
 # Repository Map
 
 ![NEXAH Repository Map](./NAVIGATOR/visuals/NEXAH_REPOSITORY_MAP.png)
 
-  Layer          Description
-  -------------- ------------------------------------------------
-  ENGINE         Finite algebra core and structural operators
-  FRAMEWORK      Conceptual architecture (META / ARCHY / NEXAH)
-  RESEARCH       Mathematical foundations
-  APPLICATIONS   Dynamical system models
-  BUILDER LAB    Simulation sandbox
-  NAVIGATOR      Visual system documentation
+| Layer | Description |
+|------|-------------|
+| ENGINE | Finite algebra core and structural operators |
+| FRAMEWORK | Conceptual architecture (META / ARCHY / NEXAH) |
+| RESEARCH | Mathematical foundations |
+| APPLICATIONS | Dynamical system models |
+| BUILDER LAB | Simulation sandbox |
+| NAVIGATOR | Visual documentation |
 
-------------------------------------------------------------------------
+---
 
 # Research Pipeline
 
-![NEXAH Research
-Pipeline](./NAVIGATOR/visuals/nexah_research_pipeline.png)
+![NEXAH Research Pipeline](./NAVIGATOR/visuals/nexah_research_pipeline.png)
 
-Axioms ↓ Principles ↓ Theorems ↓ Operators ↓ Framework ↓ Applications
+```
+Axioms
+↓
+Principles
+↓
+Theorems
+↓
+Operators
+↓
+Framework
+↓
+Applications
+```
 
-------------------------------------------------------------------------
+---
 
 # Dynamical Systems Framework
 
-![NEXAH Dynamics
-Framework](./APPLICATIONS/visuals/nexah_dynamics_framework_overview.png)
+![NEXAH Dynamics Framework](./APPLICATIONS/visuals/nexah_dynamics_framework_overview.png)
 
-  Model                 Description
-  --------------------- -----------------------------------------
-  Stability Landscape   conceptual stability structure
-  Gradient Systems      dynamics along stability gradients
-  Drift Systems         gradient dynamics with external forcing
-  Regime Systems        systems with multiple attractor regimes
+| Model | Description |
+|------|-------------|
+| Stability Landscape | conceptual stability structure |
+| Gradient Systems | dynamics along stability gradients |
+| Drift Systems | gradient dynamics with external forcing |
+| Regime Systems | multi-attractor regime systems |
 
-------------------------------------------------------------------------
+---
 
 # Builder Lab
 
-Location: `/BUILDER_LAB`
+Location:
 
-Run example simulations:
+```
+/BUILDER_LAB
+```
 
+Provides a sandbox for experimentation:
+
+- cascade dynamics
+- infrastructure simulations
+- system navigation experiments
+- visualization tools
+
+Example:
+
+```
 python BUILDER_LAB/demos/nexah_demo.py
+```
 
-------------------------------------------------------------------------
-
-# Quick Navigation
-
-  Section        Description
-  -------------- ----------------------------
-  ENGINE         algebraic computation core
-  FRAMEWORK      conceptual architecture
-  RESEARCH       theoretical foundations
-  APPLICATIONS   system modeling examples
-  BUILDER LAB    simulation sandbox
-  NAVIGATOR      visual architecture maps
-
-------------------------------------------------------------------------
+---
 
 # Explore the Repository
 
-  Portal                 Link
-  ---------------------- ----------------------------------
-  Framework Portal       NAVIGATOR/framework_portal.md
-  Research Portal        NAVIGATOR/research_portal.md
-  Applications Portal    NAVIGATOR/applications_portal.md
-  Repository Navigator   NAVIGATOR/repository_portal.md
+| Portal | Link |
+|------|------|
+| Framework Portal | NAVIGATOR/framework_portal.md |
+| Research Portal | NAVIGATOR/research_portal.md |
+| Applications Portal | NAVIGATOR/applications_portal.md |
+| Repository Navigator | NAVIGATOR/repository_portal.md |
 
-------------------------------------------------------------------------
+---
 
 # Implementation Status
 
 Current release: **v1.0.0**
 
--   finite algebra engine stable
--   monotone and fixpoint structures validated
--   worklist fixpoint solver operational
--   constant propagation example implemented
--   \~95% test coverage
--   mypy --strict clean
--   API frozen for finite scope
+- finite algebra engine stable
+- monotone and fixpoint structures validated
+- worklist fixpoint solver operational
+- constant propagation example implemented
+- ~95% test coverage
+- `mypy --strict` clean
 
-------------------------------------------------------------------------
+---
 
 # Versioning
 
-v1.0 → stable finite core\
-v1.x → backward compatible extensions\
+```
+v1.0 → stable finite core
+v1.x → backward compatible extensions
 v2.x → structural changes
+```
 
 Current version: **v1.0.0**
 
-------------------------------------------------------------------------
+---
 
 # License
 
-Code: **Apache License 2.0**\
-Documentation & Research: **CC BY 4.0**
+Code: **Apache License 2.0**  
+Documentation: **CC BY 4.0**
 
 © 2026 Thomas K. R. Hofmann
