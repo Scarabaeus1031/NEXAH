@@ -30,9 +30,9 @@ Below are examples of visual outputs produced by the engine.
 
 ![Stability Landscape](visuals/01_landscape.png)
 
-### Topological Skeleton
+### Global Stability Structure
 
-![Topological Skeleton](visuals/20_topological_skeleton.png)
+![Global Structure](visuals/08_global_structure.png)
 
 A full gallery of generated visuals can be found here:
 
