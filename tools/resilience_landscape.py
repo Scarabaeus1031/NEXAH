@@ -115,26 +115,29 @@ def remove_random_edge(data):
     return rebuild_edges(data)
 
 
+# -----------------------------
+# SAFE density adjustment
+# -----------------------------
+
 def apply_density(data, target_density):
 
     data = copy.deepcopy(data)
 
-    current_edges = len(data["edges"])
     nodes = len(data["nodes"])
-
     max_edges = nodes * nodes
 
-    current_density = current_edges / max_edges
+    for _ in range(200):  # prevents infinite loop
 
-    while current_density < target_density:
-        data = add_random_edge(data)
         current_edges = len(data["edges"])
         current_density = current_edges / max_edges
 
-    while current_density > target_density and current_edges > 1:
-        data = remove_random_edge(data)
-        current_edges = len(data["edges"])
-        current_density = current_edges / max_edges
+        if abs(current_density - target_density) < 0.02:
+            break
+
+        if current_density < target_density:
+            data = add_random_edge(data)
+        else:
+            data = remove_random_edge(data)
 
     return data
 
@@ -156,6 +159,8 @@ def compute_landscape(system_path):
 
     for i, noise in enumerate(noise_levels):
 
+        print(f"\nNoise layer: {noise:.2f}")
+
         for j, density in enumerate(densities):
 
             candidate = apply_density(base, density)
@@ -163,7 +168,7 @@ def compute_landscape(system_path):
             try:
                 score = score_system(candidate)
 
-                # noise degrades stability slightly
+                # noise degrades stability
                 score = score * (1 - noise * 0.4)
 
             except Exception:
