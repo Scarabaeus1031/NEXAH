@@ -18,6 +18,7 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 SYSTEM_PATH = "APPLICATIONS/examples/energy_grid_control.json"
 
+
 def simulate(system_path):
 
     system = load_system(system_path)
@@ -58,11 +59,29 @@ def simulate(system_path):
 
     return system, regime_map, risk_geometry, safe_traj, naive_traj, start_state
 
-def visualize(system, regime_map, safe_traj, naive_traj):
+
+def visualize(system, regime_map, risk_geometry, safe_traj, naive_traj):
 
     graph = regime_map["graph"]
 
     pos = nx.spring_layout(graph, seed=42)
+
+    risk_gradient = risk_geometry["risk_gradient"]
+
+    node_colors = []
+
+    for node in graph.nodes():
+
+        r = risk_gradient.get(node, 0)
+
+        if r > 0.66:
+            node_colors.append("green")
+
+        elif r > 0.33:
+            node_colors.append("gold")
+
+        else:
+            node_colors.append("red")
 
     plt.figure(figsize=(11, 8))
 
@@ -70,7 +89,7 @@ def visualize(system, regime_map, safe_traj, naive_traj):
         graph,
         pos,
         with_labels=True,
-        node_color="lightgray",
+        node_color=node_colors,
         node_size=2200,
         font_size=10
     )
@@ -96,9 +115,10 @@ def visualize(system, regime_map, safe_traj, naive_traj):
         style="dashed"
     )
 
-    plt.title("NEXAH System Navigation — Blue: Stabilizing Policy | Red: Collapse Path")
+    plt.title("NEXAH Navigation in Risk Field — Blue: Stabilizing Policy | Red: Collapse Path")
 
     plt.show()
+
 
 if __name__ == "__main__":
 
@@ -108,4 +128,4 @@ if __name__ == "__main__":
     print("Safe trajectory:", safe_traj)
     print("Naive trajectory:", naive_traj)
 
-    visualize(system, regime_map, safe_traj, naive_traj)
+    visualize(system, regime_map, risk_geometry, safe_traj, naive_traj)
