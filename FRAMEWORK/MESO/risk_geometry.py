@@ -15,12 +15,18 @@ def compute_risk_distance(graph, collapse_state):
 
 def compute_risk_gradient(distances):
 
+    gradient = {}
+
     if not distances:
-        return {}
+        return gradient
 
     max_distance = max(distances.values())
 
-    gradient = {}
+    # avoid division by zero
+    if max_distance == 0:
+        for node in distances:
+            gradient[node] = 0
+        return gradient
 
     for node, distance in distances.items():
 
