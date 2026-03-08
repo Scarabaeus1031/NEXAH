@@ -1,0 +1,59 @@
+{
+  "name": "Energy Grid Control Demo",
+  "nodes": [
+    "stable",
+    "freq_drop",
+    "recovery",
+    "congestion",
+    "blackout"
+  ],
+  "edges": [
+    [
+      "stable",
+      "freq_drop"
+    ],
+    [
+      "freq_drop",
+      "recovery"
+    ],
+    [
+      "recovery",
+      "stable"
+    ],
+    [
+      "congestion",
+      "recovery"
+    ],
+    [
+      "blackout",
+      "congestion"
+    ]
+  ],
+  "regimes": {
+    "stable": "STABLE",
+    "freq_drop": "STRESS",
+    "recovery": "STABLE",
+    "congestion": "FAILURE",
+    "blackout": "COLLAPSE"
+  },
+  "transitions": {
+    "stable": [
+      "freq_drop"
+    ],
+    "freq_drop": [
+      "recovery"
+    ],
+    "recovery": [
+      "stable"
+    ],
+    "congestion": [
+      "recovery"
+    ],
+    "blackout": [
+      "congestion"
+    ]
+  },
+  "control_actions": {},
+  "shock_events": {},
+  "risk_target": "blackout"
+}
