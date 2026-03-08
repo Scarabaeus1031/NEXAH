@@ -31,6 +31,16 @@ def simulate_from_state(start_state, graph, regime_map, risk_geometry, collapse_
             risk_geometry
         )
 
+        # fallback if policy fails
+        if next_state is None:
+
+            successors = list(graph.successors(state))
+
+            if not successors:
+                return "stable"
+
+            next_state = successors[0]
+
         state = next_state
 
         if state in collapse_states:
