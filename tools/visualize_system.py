@@ -10,6 +10,7 @@ if PROJECT_ROOT not in sys.path:
 
 import networkx as nx
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
 
 from FRAMEWORK.core.system_loader import load_system
 from ENGINE.runtime.system_runner import build_regime_map
@@ -49,27 +50,32 @@ def simulate(system_path, start_state):
     return system, regime_map, risk_geometry, trajectory, start_state
 
 
-def get_node_colors(system, regime_map):
+def compute_positions(system, risk_geometry):
+
+    distances = risk_geometry["risk_distance"]
+
+    pos = {}
+
+    for i, node in enumerate(system.nodes):
+
+        y = distances.get(node, 0)
+
+        pos[node] = (i, y)
+
+    return pos
+
+
+def compute_node_colors(system, risk_geometry):
+
+    gradient = risk_geometry["risk_gradient"]
 
     colors = []
 
-    collapse_states = regime_map["collapse_states"]
-
     for node in system.nodes:
 
-        regime = system.regimes.get(node, "").lower()
+        g = gradient.get(node, 0)
 
-        if node in collapse_states:
-            colors.append("red")
-
-        elif regime in ["stress", "critical", "unstable"]:
-            colors.append("orange")
-
-        elif regime in ["stable", "normal"]:
-            colors.append("green")
-
-        else:
-            colors.append("lightblue")
+        colors.append(cm.RdYlGn(g))
 
     return colors
 
@@ -78,9 +84,9 @@ def visualize(system, regime_map, risk_geometry, trajectory):
 
     graph = regime_map["graph"]
 
-    pos = nx.spring_layout(graph, seed=42)
+    pos = compute_positions(system, risk_geometry)
 
-    node_colors = get_node_colors(system, regime_map)
+    node_colors = compute_node_colors(system, risk_geometry)
 
     plt.figure(figsize=(10, 7))
 
@@ -104,18 +110,8 @@ def visualize(system, regime_map, risk_geometry, trajectory):
         width=3
     )
 
-    # highlight collapse nodes
-    collapse_nodes = regime_map["collapse_states"]
+    plt.title("NEXAH Risk Gradient Landscape")
 
-    nx.draw_networkx_nodes(
-        graph,
-        pos,
-        nodelist=list(collapse_nodes),
-        node_color="red",
-        node_size=2200
-    )
-
-    plt.title("NEXAH Stability Landscape")
     plt.show()
 
 
