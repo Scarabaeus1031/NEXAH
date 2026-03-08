@@ -26,7 +26,6 @@ def simulate(system_path, start_state):
 
     system = load_system(system_path)
 
-    # ensure start state exists
     if start_state not in system.nodes:
         start_state = system.nodes[0]
 
@@ -50,11 +49,38 @@ def simulate(system_path, start_state):
     return system, regime_map, risk_geometry, trajectory, start_state
 
 
-def visualize(system, regime_map, trajectory):
+def get_node_colors(system, regime_map):
+
+    colors = []
+
+    collapse_states = regime_map["collapse_states"]
+
+    for node in system.nodes:
+
+        regime = system.regimes.get(node, "").lower()
+
+        if node in collapse_states:
+            colors.append("red")
+
+        elif regime in ["stress", "critical", "unstable"]:
+            colors.append("orange")
+
+        elif regime in ["stable", "normal"]:
+            colors.append("green")
+
+        else:
+            colors.append("lightblue")
+
+    return colors
+
+
+def visualize(system, regime_map, risk_geometry, trajectory):
 
     graph = regime_map["graph"]
 
     pos = nx.spring_layout(graph, seed=42)
+
+    node_colors = get_node_colors(system, regime_map)
 
     plt.figure(figsize=(10, 7))
 
@@ -62,23 +88,34 @@ def visualize(system, regime_map, trajectory):
         graph,
         pos,
         with_labels=True,
-        node_color="lightblue",
+        node_color=node_colors,
         node_size=2000,
         font_size=9
     )
 
-    # draw trajectory edges
+    # highlight trajectory
     edges = list(zip(trajectory, trajectory[1:]))
 
     nx.draw_networkx_edges(
         graph,
         pos,
         edgelist=edges,
-        edge_color="red",
+        edge_color="blue",
         width=3
     )
 
-    plt.title("NEXAH System Simulation")
+    # highlight collapse nodes
+    collapse_nodes = regime_map["collapse_states"]
+
+    nx.draw_networkx_nodes(
+        graph,
+        pos,
+        nodelist=list(collapse_nodes),
+        node_color="red",
+        node_size=2200
+    )
+
+    plt.title("NEXAH Stability Landscape")
     plt.show()
 
 
@@ -92,4 +129,4 @@ if __name__ == "__main__":
     print("Start state:", start_state)
     print("Trajectory:", trajectory)
 
-    visualize(system, regime_map, trajectory)
+    visualize(system, regime_map, risk_geometry, trajectory)
