@@ -4,9 +4,6 @@ import networkx as nx
 def compute_risk_distance(graph, risk_target):
     """
     Compute distance of every node to the collapse state.
-
-    This produces the MESO risk geometry:
-    distance_to_collapse
     """
 
     reversed_graph = graph.reverse()
@@ -21,10 +18,8 @@ def compute_risk_distance(graph, risk_target):
 
 def compute_risk_gradient(distances):
     """
-    Convert risk distance into normalized gradient.
-
-    Higher value = safer state
-    Lower value = higher collapse risk
+    Normalize distance into safety gradient.
+    Higher value = safer
     """
 
     if not distances:
@@ -36,20 +31,32 @@ def compute_risk_gradient(distances):
 
     for node, distance in distances.items():
 
-        gradient[node] = distance / max_distance
+        if max_distance == 0:
+            gradient[node] = 0
+        else:
+            gradient[node] = distance / max_distance
 
     return gradient
 
 
 def compute_risk_geometry(regime_map):
     """
-    Full MESO pipeline.
-
-    Produces risk distance and gradient over the regime graph.
+    Full MESO risk geometry pipeline.
     """
 
     graph = regime_map["graph"]
     collapse_states = regime_map["collapse_states"]
+
+    # -----------------------------
+    # SAFETY CHECK
+    # -----------------------------
+
+    if not collapse_states:
+
+        raise ValueError(
+            "No collapse states defined in regime_map. "
+            "Check system.regimes for COLLAPSE states."
+        )
 
     collapse = list(collapse_states)[0]
 
