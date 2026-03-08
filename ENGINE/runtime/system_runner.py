@@ -13,7 +13,7 @@ def build_regime_map(system):
     graph = nx.DiGraph()
 
     # -------------------------------------------------
-    # ADD NODES FIRST (important)
+    # ADD NODES
     # -------------------------------------------------
 
     for node in system.nodes:
@@ -25,7 +25,6 @@ def build_regime_map(system):
 
     for s, t in system.transitions.items():
 
-        # allow list or single transition
         if isinstance(t, list):
 
             for target in t:
@@ -66,12 +65,6 @@ def run_system(system_path, start_state, steps=20):
         return select_safest_transition(
             state,
             regime_map,
-            risk_geometry
-        )
-
-    trajectory = engine.run(policy, max_steps=steps)
-
-    return trajectory            regime_map,
             risk_geometry
         )
 
