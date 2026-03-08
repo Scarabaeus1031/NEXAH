@@ -16,9 +16,17 @@ def build_regime_map(system):
     for node in system.nodes:
         graph.add_node(node)
 
-    # add transitions
-    for s, t in system.transitions.items():
-        graph.add_edge(s, t)
+    # add transitions (supports single or multiple targets)
+    for s, targets in system.transitions.items():
+
+        if isinstance(targets, list):
+
+            for t in targets:
+                graph.add_edge(s, t)
+
+        else:
+
+            graph.add_edge(s, targets)
 
     # detect collapse states robustly
     collapse_states = set()
