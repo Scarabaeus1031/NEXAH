@@ -12,28 +12,36 @@ def build_regime_map(system):
 
     graph = nx.DiGraph()
 
-    for s, targets in system.transitions.items():
+    # -------------------------------------------------
+    # ADD NODES FIRST (important)
+    # -------------------------------------------------
 
-        if isinstance(targets, list):
+    for node in system.nodes:
+        graph.add_node(node)
 
-            for t in targets:
-                graph.add_edge(s, t)
+    # -------------------------------------------------
+    # ADD TRANSITIONS
+    # -------------------------------------------------
+
+    for s, t in system.transitions.items():
+
+        # allow list or single transition
+        if isinstance(t, list):
+
+            for target in t:
+                graph.add_edge(s, target)
 
         else:
-            graph.add_edge(s, targets)
+            graph.add_edge(s, t)
+
+    # -------------------------------------------------
+    # COLLAPSE STATES
+    # -------------------------------------------------
 
     collapse_states = {
         s for s, r in system.regimes.items()
-        if r.lower() in ["collapse", "failure", "blackout"]
+        if r in ["COLLAPSE", "FAILURE"]
     }
-
-    if not collapse_states and system.risk_target:
-        collapse_states = {system.risk_target}
-
-    if not collapse_states:
-        raise ValueError(
-            f"No collapse states detected in regimes: {system.regimes}"
-        )
 
     return {
         "graph": graph,
@@ -41,22 +49,11 @@ def build_regime_map(system):
     }
 
 
-def run_system(system_path, start_state=None, steps=20):
+def run_system(system_path, start_state, steps=20):
 
     system = load_system(system_path)
 
     regime_map = build_regime_map(system)
-
-    graph = regime_map["graph"]
-
-    if start_state is None:
-        start_state = list(graph.nodes)[0]
-
-    if start_state not in graph:
-        raise ValueError(
-            f"Start state '{start_state}' not found.\n"
-            f"Available states: {list(graph.nodes)}"
-        )
 
     risk_geometry = compute_risk_geometry(regime_map)
 
@@ -69,6 +66,12 @@ def run_system(system_path, start_state=None, steps=20):
         return select_safest_transition(
             state,
             regime_map,
+            risk_geometry
+        )
+
+    trajectory = engine.run(policy, max_steps=steps)
+
+    return trajectory            regime_map,
             risk_geometry
         )
 
