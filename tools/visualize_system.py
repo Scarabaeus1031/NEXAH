@@ -19,12 +19,18 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 
 SYSTEM_PATH = "APPLICATIONS/examples/energy_grid.json"
+
+# Optional default start state (will be auto-corrected if not present)
 START_STATE = "S0_normal"
 
 
 def simulate(system_path, start_state):
 
     system = load_system(system_path)
+
+    # Auto-fix start state if it does not exist
+    if start_state not in system.nodes:
+        start_state = system.nodes[0]
 
     regime_map = build_regime_map(system)
 
@@ -43,7 +49,7 @@ def simulate(system_path, start_state):
 
     trajectory = engine.run(policy, max_steps=20)
 
-    return system, regime_map, risk_geometry, trajectory
+    return system, regime_map, risk_geometry, trajectory, start_state
 
 
 def visualize(system, regime_map, risk_geometry, trajectory):
@@ -70,6 +76,25 @@ def visualize(system, regime_map, risk_geometry, trajectory):
         pos,
         edgelist=edges,
         edge_color="red",
+        width=3
+    )
+
+    plt.title("NEXAH System Simulation")
+    plt.show()
+
+
+if __name__ == "__main__":
+
+    system, regime_map, risk_geometry, trajectory, start_state = simulate(
+        SYSTEM_PATH,
+        START_STATE
+    )
+
+    print("Start state:", start_state)
+    print("Trajectory:")
+    print(trajectory)
+
+    visualize(system, regime_map, risk_geometry, trajectory)        edge_color="red",
         width=3
     )
 
