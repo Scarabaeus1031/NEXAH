@@ -19,7 +19,7 @@ from FRAMEWORK.NEXAH.navigation_policy import select_safest_transition
 SYSTEM_PATH = "APPLICATIONS/examples/energy_grid_control.json"
 
 
-def random_walk(graph, start_state, collapse_states, steps=20):
+def random_walk(system, graph, start_state, collapse_states, steps=20):
 
     state = start_state
 
@@ -30,7 +30,15 @@ def random_walk(graph, start_state, collapse_states, steps=20):
         if not successors:
             return state
 
-        state = random.choice(successors)
+        # check for stochastic probabilities
+        probs = None
+        if hasattr(system, "probabilities"):
+            probs = system.probabilities.get(state)
+
+        if probs:
+            state = random.choices(successors, probs)[0]
+        else:
+            state = random.choice(successors)
 
         if state in collapse_states:
             return state
@@ -68,6 +76,74 @@ def run_experiment(num_agents=500):
 
     graph = regime_map["graph"]
 
+    collapse_states = regime_map["collapse_states"]
+
+    start_state = system.nodes[0]
+
+    collapse_random = 0
+    collapse_policy = 0
+
+    for _ in range(num_agents):
+
+        end_state = random_walk(
+            system,
+            graph,
+            start_state,
+            collapse_states
+        )
+
+        if end_state in collapse_states:
+            collapse_random += 1
+
+    for _ in range(num_agents):
+
+        end_state = policy_walk(
+            graph,
+            regime_map,
+            risk_geometry,
+            start_state,
+            collapse_states
+        )
+
+        if end_state in collapse_states:
+            collapse_policy += 1
+
+    return collapse_random, collapse_policy, num_agents
+
+
+def visualize(random_collapse, policy_collapse, total):
+
+    labels = ["Random Navigation", "NEXAH Policy"]
+
+    collapse_rates = [
+        random_collapse / total,
+        policy_collapse / total
+    ]
+
+    plt.figure(figsize=(6,5))
+
+    plt.bar(labels, collapse_rates)
+
+    plt.ylabel("Collapse Probability")
+
+    plt.title("Monte Carlo Collapse Simulation")
+
+    plt.ylim(0,1)
+
+    for i, v in enumerate(collapse_rates):
+        plt.text(i, v + 0.02, f"{v:.2f}", ha="center")
+
+    plt.show()
+
+
+if __name__ == "__main__":
+
+    random_collapse, policy_collapse, total = run_experiment(1000)
+
+    print("Random collapse:", random_collapse / total)
+    print("Policy collapse:", policy_collapse / total)
+
+    visualize(random_collapse, policy_collapse, total)
     collapse_states = regime_map["collapse_states"]
 
     start_state = system.nodes[0]
