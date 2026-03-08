@@ -10,115 +10,19 @@
   "edges": [
     [
       "stable",
-      "f"
-    ],
-    [
-      "stable",
-      "r"
-    ],
-    [
-      "stable",
-      "e"
-    ],
-    [
-      "stable",
-      "q"
-    ],
-    [
-      "stable",
-      "_"
-    ],
-    [
-      "stable",
-      "d"
-    ],
-    [
-      "stable",
-      "o"
-    ],
-    [
-      "stable",
-      "p"
+      "freq_drop"
     ],
     [
       "freq_drop",
-      "r"
-    ],
-    [
-      "freq_drop",
-      "e"
-    ],
-    [
-      "freq_drop",
-      "c"
-    ],
-    [
-      "freq_drop",
-      "o"
-    ],
-    [
-      "freq_drop",
-      "v"
-    ],
-    [
-      "freq_drop",
-      "y"
+      "recovery"
     ],
     [
       "recovery",
-      "s"
-    ],
-    [
-      "recovery",
-      "t"
-    ],
-    [
-      "recovery",
-      "a"
-    ],
-    [
-      "recovery",
-      "b"
-    ],
-    [
-      "recovery",
-      "l"
-    ],
-    [
-      "recovery",
-      "e"
+      "stable"
     ],
     [
       "congestion",
-      "b"
-    ],
-    [
-      "congestion",
-      "l"
-    ],
-    [
-      "congestion",
-      "a"
-    ],
-    [
-      "congestion",
-      "c"
-    ],
-    [
-      "congestion",
-      "k"
-    ],
-    [
-      "congestion",
-      "o"
-    ],
-    [
-      "congestion",
-      "u"
-    ],
-    [
-      "congestion",
-      "t"
+      "blackout"
     ]
   ],
   "regimes": {
@@ -129,10 +33,18 @@
     "blackout": "COLLAPSE"
   },
   "transitions": {
-    "stable": "freq_drop",
-    "freq_drop": "recovery",
-    "recovery": "stable",
-    "congestion": "blackout"
+    "stable": [
+      "freq_drop"
+    ],
+    "freq_drop": [
+      "recovery"
+    ],
+    "recovery": [
+      "stable"
+    ],
+    "congestion": [
+      "blackout"
+    ]
   },
   "control_actions": {},
   "shock_events": {},
