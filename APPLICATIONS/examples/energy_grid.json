@@ -9,6 +9,14 @@
     "blackout"
   ],
 
+  "edges": [
+    ["stable", "freq_drop"],
+    ["freq_drop", "congestion"],
+    ["freq_drop", "recovery"],
+    ["recovery", "stable"],
+    ["congestion", "blackout"]
+  ],
+
   "regimes": {
     "stable": "STABLE",
     "freq_drop": "STRESS",
@@ -22,5 +30,11 @@
     "freq_drop": "congestion",
     "recovery": "stable",
     "congestion": "blackout"
-  }
+  },
+
+  "control_actions": {},
+
+  "shock_events": {},
+
+  "risk_target": "blackout"
 }
