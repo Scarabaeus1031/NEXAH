@@ -161,23 +161,27 @@ def animate(system, regime_map, risk_geometry, safe_traj, naive_traj):
             naive_risk = 0
 
 
-        ax.text(
-            0.02,
-            0.95,
-            f"Safe Agent Risk: {safe_risk:.2f}",
-            transform=ax.transAxes,
-            fontsize=12,
-            color="blue"
+        # Risk display box (stable, always visible)
+
+        risk_text = (
+            f"Safe Agent Risk:  {safe_risk:.2f}\n"
+            f"Naive Agent Risk: {naive_risk:.2f}"
         )
 
         ax.text(
             0.02,
-            0.90,
-            f"Naive Agent Risk: {naive_risk:.2f}",
+            0.98,
+            risk_text,
             transform=ax.transAxes,
             fontsize=12,
-            color="red"
+            verticalalignment="top",
+            bbox=dict(
+                boxstyle="round",
+                facecolor="white",
+                alpha=0.8
+            )
         )
+
 
     frames = max(len(safe_traj), len(naive_traj))
 
