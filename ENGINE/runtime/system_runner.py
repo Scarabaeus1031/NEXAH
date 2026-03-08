@@ -12,37 +12,18 @@ def build_regime_map(system):
 
     graph = nx.DiGraph()
 
-    # -------------------------------------------------
-    # ADD NODES
-    # -------------------------------------------------
-
+    # add all system nodes first
     for node in system.nodes:
         graph.add_node(node)
 
-    # -------------------------------------------------
-    # ADD TRANSITIONS
-    # -------------------------------------------------
-
+    # add transitions
     for s, t in system.transitions.items():
+        graph.add_edge(s, t)
 
-        if isinstance(t, list):
-            for target in t:
-                graph.add_edge(s, target)
-        else:
-            graph.add_edge(s, t)
-
-    # -------------------------------------------------
-    # DETECT COLLAPSE STATES
-    # -------------------------------------------------
-
-    collapse_states = set()
-
-    for state, regime in system.regimes.items():
-
-        r = str(regime).lower()
-
-        if r in ["collapse", "critical", "failure", "blackout"]:
-            collapse_states.add(state)
+    collapse_states = {
+        s for s, r in system.regimes.items()
+        if r in ["COLLAPSE", "FAILURE"]
+    }
 
     return {
         "graph": graph,
