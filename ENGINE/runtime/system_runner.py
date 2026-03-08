@@ -26,22 +26,20 @@ def build_regime_map(system):
     for s, t in system.transitions.items():
 
         if isinstance(t, list):
-
             for target in t:
                 graph.add_edge(s, target)
-
         else:
             graph.add_edge(s, t)
 
     # -------------------------------------------------
-    # DETECT COLLAPSE STATES (robust)
+    # DETECT COLLAPSE STATES
     # -------------------------------------------------
 
     collapse_states = set()
 
     for state, regime in system.regimes.items():
 
-        r = regime.lower()
+        r = str(regime).lower()
 
         if r in ["collapse", "critical", "failure", "blackout"]:
             collapse_states.add(state)
@@ -73,7 +71,5 @@ def run_system(system_path, start_state, steps=20):
         )
 
     trajectory = engine.run(policy, max_steps=steps)
-
-    return trajectory    trajectory = engine.run(policy, max_steps=steps)
 
     return trajectory
