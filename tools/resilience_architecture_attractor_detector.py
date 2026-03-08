@@ -15,7 +15,6 @@ if PROJECT_ROOT not in sys.path:
 
 from tools.resilience_analyzer import analyze_system
 
-
 BASE_SYSTEM = "APPLICATIONS/examples/energy_grid_control.json"
 
 
@@ -24,18 +23,14 @@ BASE_SYSTEM = "APPLICATIONS/examples/energy_grid_control.json"
 # --------------------------------------------------
 
 def load_json(path):
-    with open(path,"r") as f:
+    with open(path, "r") as f:
         return json.load(f)
 
 
 def write_temp(data):
-
-    tmp=tempfile.NamedTemporaryFile(mode="w",suffix=".json",delete=False)
-
-    json.dump(data,tmp,indent=2)
-
+    tmp = tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False)
+    json.dump(data, tmp, indent=2)
     tmp.close()
-
     return tmp.name
 
 
@@ -45,16 +40,13 @@ def write_temp(data):
 
 def score_system(data):
 
-    temp=write_temp(data)
+    temp = write_temp(data)
 
     try:
-
-        report=analyze_system(temp)
-
+        report = analyze_system(temp)
         return report["resilience_score"]
 
     finally:
-
         os.remove(temp)
 
 
@@ -64,38 +56,38 @@ def score_system(data):
 
 def rebuild_edges(data):
 
-    edges=[]
+    edges = []
 
-    for s,targets in data["transitions"].items():
+    for s, targets in data["transitions"].items():
 
-        if isinstance(targets,list):
+        if isinstance(targets, list):
 
             for t in targets:
-                edges.append([s,t])
+                edges.append([s, t])
 
         else:
 
-            edges.append([s,targets])
+            edges.append([s, targets])
 
-    data["edges"]=edges
+    data["edges"] = edges
 
     return data
 
 
 def build_graph(data):
 
-    G=nx.DiGraph()
+    G = nx.DiGraph()
 
-    for s,targets in data["transitions"].items():
+    for s, targets in data["transitions"].items():
 
-        if isinstance(targets,list):
+        if isinstance(targets, list):
 
             for t in targets:
-                G.add_edge(s,t)
+                G.add_edge(s, t)
 
         else:
 
-            G.add_edge(s,targets)
+            G.add_edge(s, targets)
 
     return G
 
@@ -106,28 +98,31 @@ def build_graph(data):
 
 def edge_density(data):
 
-    nodes=len(data["nodes"])
-    edges=len(data["edges"])
+    nodes = len(data["nodes"])
+    edges = len(data["edges"])
 
-    return edges/(nodes*nodes)
+    if nodes == 0:
+        return 0
+
+    return edges / (nodes * nodes)
 
 
 def cycle_ratio(data):
 
-    G=build_graph(data)
+    G = build_graph(data)
 
-    cycles=list(nx.simple_cycles(G))
+    cycles = list(nx.simple_cycles(G))
 
-    nodes_in_cycles=set()
+    nodes_in_cycles = set()
 
     for c in cycles:
         for n in c:
             nodes_in_cycles.add(n)
 
-    if len(G.nodes())==0:
+    if len(G.nodes()) == 0:
         return 0
 
-    return len(nodes_in_cycles)/len(G.nodes())
+    return len(nodes_in_cycles) / len(G.nodes())
 
 
 # --------------------------------------------------
@@ -136,19 +131,19 @@ def cycle_ratio(data):
 
 def random_architecture(base):
 
-    nodes=base["nodes"]
+    nodes = base["nodes"]
 
-    data=copy.deepcopy(base)
+    data = copy.deepcopy(base)
 
-    data["transitions"]={}
+    data["transitions"] = {}
 
     for n in nodes:
 
-        k=random.randint(1,len(nodes))
+        k = random.randint(1, len(nodes))
 
-        targets=random.sample(nodes,k)
+        targets = random.sample(nodes, k)
 
-        data["transitions"][n]=targets
+        data["transitions"][n] = targets
 
     return rebuild_edges(data)
 
@@ -157,69 +152,68 @@ def random_architecture(base):
 # attractor detection
 # --------------------------------------------------
 
-def detect_attractors(system_path,samples=1000):
+def detect_attractors(system_path, samples=1000):
 
-    base=load_json(system_path)
+    base = load_json(system_path)
 
-    regions={}
+    regions = {}
 
     for i in range(samples):
 
-        candidate=random_architecture(base)
+        candidate = random_architecture(base)
 
         try:
-
-            score=score_system(candidate)
-
+            score = score_system(candidate)
         except:
+            score = 0
 
-            score=0
+        d = edge_density(candidate)
+        c = cycle_ratio(candidate)
 
-        d=edge_density(candidate)
-        c=cycle_ratio(candidate)
-
-        key=(round(d,1),round(c,1))
+        key = (round(d, 1), round(c, 1))
 
         if key not in regions:
-
-            regions[key]=[]
+            regions[key] = []
 
         regions[key].append(score)
 
-        if i%50==0:
-
-            print("sample",i,"score",score)
+        if i % 50 == 0:
+            print("sample", i, "score", score)
 
     print("\nArchitecture Attractors")
     print("-------------------------")
 
-    summary=[]
+    summary = []
 
-    for k,v in regions.items():
+    for k, v in regions.items():
 
-        avg=np.mean(v)
+        avg = np.mean(v)
 
-        summary.append((avg,k,len(v)))
+        summary.append((avg, k, len(v)))
 
     summary.sort(reverse=True)
 
     print("\nTop Stability Islands\n")
 
-    for s,(d,c),count in summary[:10]:
+    for s, (d, c), count in summary[:10]:
 
-        print(f"density={d} cycle={c} avg_score={s:.3f} samples={count}")
+        print(
+            f"density={d} cycle={c} avg_score={s:.3f} samples={count}"
+        )
 
     print("\nCollapse Basins\n")
 
-    for s,(d,c),count in summary[-10:]:
+    for s, (d, c), count in summary[-10:]:
 
-        print(f"density={d} cycle={c} avg_score={s:.3f} samples={count}")
+        print(
+            f"density={d} cycle={c} avg_score={s:.3f} samples={count}"
+        )
 
 
 # --------------------------------------------------
 # main
 # --------------------------------------------------
 
-if __name__=="__main__":
+if __name__ == "__main__":
 
-    detect_attractors(BASE_SYSTEM,samples=1200)
+    detect_attractors(BASE_SYSTEM, samples=1200)
