@@ -2,120 +2,189 @@
 
 import sys
 import os
+import json
+import random
+import tempfile
+import copy
 import numpy as np
+import networkx as nx
 import matplotlib.pyplot as plt
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
 
-from tools.resilience_landscape import compute_landscape, SYSTEM_PATH
+from tools.resilience_analyzer import analyze_system
 
 
-# -----------------------------
-# phase transition detection
-# -----------------------------
-
-def detect_transitions(densities, noise_levels, landscape):
-
-    transitions = []
-
-    for i in range(len(noise_levels)):
-
-        row = landscape[i]
-
-        gradient = np.gradient(row)
-
-        for j in range(1, len(gradient)):
-
-            if abs(gradient[j] - gradient[j-1]) > 0.08:
-
-                transitions.append({
-                    "noise": noise_levels[i],
-                    "density": densities[j],
-                    "score": row[j]
-                })
-
-    return transitions
+BASE_SYSTEM = "APPLICATIONS/examples/energy_grid_control.json"
 
 
-# -----------------------------
-# optimal region detection
-# -----------------------------
+# --------------------------------------------------
+# IO
+# --------------------------------------------------
 
-def find_optimal_region(densities, noise_levels, landscape):
-
-    idx = np.unravel_index(np.argmax(landscape), landscape.shape)
-
-    return {
-        "noise": noise_levels[idx[0]],
-        "density": densities[idx[1]],
-        "score": landscape[idx]
-    }
+def load_json(path):
+    with open(path, "r") as f:
+        return json.load(f)
 
 
-# -----------------------------
-# visualization
-# -----------------------------
+def write_temp(data):
+    tmp = tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False)
+    json.dump(data, tmp, indent=2)
+    tmp.close()
+    return tmp.name
 
-def visualize_transitions(densities, noise_levels, landscape, transitions):
 
-    plt.figure(figsize=(8,6))
+# --------------------------------------------------
+# scoring
+# --------------------------------------------------
 
-    plt.imshow(
-        landscape,
-        origin="lower",
-        aspect="auto",
-        extent=[
-            densities[0],
-            densities[-1],
-            noise_levels[0],
-            noise_levels[-1]
-        ]
+def score_system(data):
+    temp = write_temp(data)
+
+    try:
+        report = analyze_system(temp)
+        return report["resilience_score"]
+    finally:
+        os.remove(temp)
+
+
+# --------------------------------------------------
+# graph helpers
+# --------------------------------------------------
+
+def rebuild_edges(data):
+
+    edges = []
+
+    for s, targets in data["transitions"].items():
+
+        if isinstance(targets, list):
+
+            for t in targets:
+                edges.append([s, t])
+
+        else:
+            edges.append([s, targets])
+
+    data["edges"] = edges
+
+    return data
+
+
+# --------------------------------------------------
+# architecture generator
+# --------------------------------------------------
+
+def generate_architecture(base, density):
+
+    nodes = base["nodes"]
+
+    data = copy.deepcopy(base)
+
+    data["transitions"] = {}
+
+    k = max(1, int(len(nodes) * density))
+
+    for n in nodes:
+
+        targets = random.sample(nodes, min(k, len(nodes)))
+
+        data["transitions"][n] = targets
+
+    return rebuild_edges(data)
+
+
+# --------------------------------------------------
+# phase scan
+# --------------------------------------------------
+
+def scan_phase_space(samples_per_density=30):
+
+    base = load_json(BASE_SYSTEM)
+
+    densities = np.linspace(0.05, 0.95, 20)
+
+    avg_scores = []
+
+    for d in densities:
+
+        scores = []
+
+        for _ in range(samples_per_density):
+
+            candidate = generate_architecture(base, d)
+
+            try:
+                s = score_system(candidate)
+            except:
+                s = 0
+
+            scores.append(s)
+
+        avg = np.mean(scores)
+
+        print("density", round(d,3), "avg_resilience", round(avg,3))
+
+        avg_scores.append(avg)
+
+    return densities, avg_scores
+
+
+# --------------------------------------------------
+# critical point detection
+# --------------------------------------------------
+
+def detect_critical_point(densities, scores):
+
+    gradients = np.gradient(scores)
+
+    idx = np.argmin(gradients)
+
+    critical_density = densities[idx]
+
+    return critical_density, gradients
+
+
+# --------------------------------------------------
+# plot
+# --------------------------------------------------
+
+def plot_transition(densities, scores, critical_density):
+
+    plt.figure(figsize=(8,5))
+
+    plt.plot(densities, scores, marker="o")
+
+    plt.axvline(
+        critical_density,
+        linestyle="--"
     )
 
-    plt.colorbar(label="Resilience Score")
+    plt.xlabel("Network Density")
+    plt.ylabel("Resilience")
 
-    for t in transitions:
+    plt.title("Resilience Phase Transition")
 
-        plt.scatter(
-            t["density"],
-            t["noise"],
-            color="red",
-            s=30
-        )
-
-    plt.xlabel("Edge Density")
-    plt.ylabel("Noise Level")
-
-    plt.title("Phase Transitions in Resilience Landscape")
+    plt.grid(True)
 
     plt.show()
 
 
-# -----------------------------
+# --------------------------------------------------
 # main
-# -----------------------------
+# --------------------------------------------------
 
 if __name__ == "__main__":
 
-    densities, noise_levels, landscape = compute_landscape(SYSTEM_PATH)
+    densities, scores = scan_phase_space()
 
-    transitions = detect_transitions(densities, noise_levels, landscape)
+    critical_density, gradients = detect_critical_point(densities, scores)
 
-    optimal = find_optimal_region(densities, noise_levels, landscape)
+    print("\nCritical Phase Transition")
+    print("----------------------------")
 
-    print("\nDetected Phase Transitions:\n")
+    print("critical density ≈", critical_density)
 
-    for t in transitions:
-        print(
-            f"noise={t['noise']:.2f} density={t['density']:.2f} score={t['score']:.3f}"
-        )
-
-    print("\nOptimal Architecture:\n")
-
-    print(
-        f"density={optimal['density']:.2f} noise={optimal['noise']:.2f} score={optimal['score']:.3f}"
-    )
-
-    visualize_transitions(densities, noise_levels, landscape, transitions)
+    plot_transition(densities, scores, critical_density)
