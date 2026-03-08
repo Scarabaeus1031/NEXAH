@@ -66,7 +66,6 @@ def rebuild_edges(data):
                 edges.append([s, t])
 
         else:
-
             edges.append([s, targets])
 
     data["edges"] = edges
@@ -86,7 +85,6 @@ def build_graph(data):
                 G.add_edge(s, t)
 
         else:
-
             G.add_edge(s, targets)
 
     return G
@@ -101,23 +99,23 @@ def edge_density(data):
     nodes = len(data["nodes"])
     edges = len(data["edges"])
 
-    if nodes == 0:
+    if nodes <= 1:
         return 0
 
-    return edges / (nodes * nodes)
+    return edges / (nodes * (nodes - 1))
 
 
 def cycle_ratio(data):
 
     G = build_graph(data)
 
-    cycles = list(nx.simple_cycles(G))
+    scc = list(nx.strongly_connected_components(G))
 
     nodes_in_cycles = set()
 
-    for c in cycles:
-        for n in c:
-            nodes_in_cycles.add(n)
+    for comp in scc:
+        if len(comp) > 1:
+            nodes_in_cycles.update(comp)
 
     if len(G.nodes()) == 0:
         return 0
@@ -139,7 +137,7 @@ def random_architecture(base):
 
     for n in nodes:
 
-        k = random.randint(1, len(nodes))
+        k = random.randint(1, min(4, len(nodes)))
 
         targets = random.sample(nodes, k)
 
@@ -197,17 +195,13 @@ def detect_attractors(system_path, samples=1000):
 
     for s, (d, c), count in summary[:10]:
 
-        print(
-            f"density={d} cycle={c} avg_score={s:.3f} samples={count}"
-        )
+        print(f"density={d} cycle={c} avg_score={s:.3f} samples={count}")
 
     print("\nCollapse Basins\n")
 
     for s, (d, c), count in summary[-10:]:
 
-        print(
-            f"density={d} cycle={c} avg_score={s:.3f} samples={count}"
-        )
+        print(f"density={d} cycle={c} avg_score={s:.3f} samples={count}")
 
 
 # --------------------------------------------------
