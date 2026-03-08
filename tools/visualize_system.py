@@ -1,5 +1,13 @@
 # tools/visualize_system.py
 
+import sys
+import os
+
+# Ensure the repository root is on the Python path
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.append(PROJECT_ROOT)
+
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -11,7 +19,7 @@ from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
 
 SYSTEM_PATH = "APPLICATIONS/examples/energy_grid.json"
-START_STATE = "stable"
+START_STATE = "S0_normal"
 
 
 def simulate(system_path, start_state):
@@ -27,7 +35,6 @@ def simulate(system_path, start_state):
     engine.set_initial_state(start_state)
 
     def policy(state):
-
         return select_safest_transition(
             state,
             regime_map,
@@ -45,31 +52,42 @@ def visualize(system, regime_map, risk_geometry, trajectory):
 
     pos = nx.spring_layout(graph, seed=42)
 
-    collapse_states = regime_map["collapse_states"]
-
-    risk_gradient = risk_geometry["risk_gradient"]
-
-    node_colors = []
-
-    for node in graph.nodes():
-
-        if node in collapse_states:
-            node_colors.append("red")
-
-        else:
-
-            score = risk_gradient.get(node, 0)
-
-            if score > 0.7:
-                node_colors.append("green")
-
-            elif score > 0.4:
-                node_colors.append("orange")
-
-            else:
-                node_colors.append("yellow")
-
     plt.figure(figsize=(10, 7))
+
+    nx.draw(
+        graph,
+        pos,
+        with_labels=True,
+        node_color="lightblue",
+        node_size=2000,
+        font_size=9
+    )
+
+    edges = list(zip(trajectory, trajectory[1:]))
+
+    nx.draw_networkx_edges(
+        graph,
+        pos,
+        edgelist=edges,
+        edge_color="red",
+        width=3
+    )
+
+    plt.title("NEXAH System Simulation")
+    plt.show()
+
+
+if __name__ == "__main__":
+
+    system, regime_map, risk_geometry, trajectory = simulate(
+        SYSTEM_PATH,
+        START_STATE
+    )
+
+    print("Trajectory:")
+    print(trajectory)
+
+    visualize(system, regime_map, risk_geometry, trajectory)    plt.figure(figsize=(10, 7))
 
     nx.draw_networkx_nodes(
         graph,
