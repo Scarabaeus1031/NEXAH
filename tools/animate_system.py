@@ -30,7 +30,6 @@ def simulate(system_path):
     graph = regime_map["graph"]
     start_state = system.nodes[0]
 
-    # SAFE POLICY
     engine_safe = ExecutionEngine(regime_map, risk_geometry)
     engine_safe.set_initial_state(start_state)
 
@@ -43,7 +42,6 @@ def simulate(system_path):
 
     safe_traj = engine_safe.run(safe_policy, max_steps=20)
 
-    # NAIVE POLICY
     engine_naive = ExecutionEngine(regime_map, risk_geometry)
     engine_naive.set_initial_state(start_state)
 
@@ -68,24 +66,24 @@ def animate(system, regime_map, risk_geometry, safe_traj, naive_traj):
 
     risk_gradient = risk_geometry["risk_gradient"]
 
-    node_colors = []
-
-    for node in graph.nodes():
-
-        r = risk_gradient.get(node, 0)
-
-        if r > 0.66:
-            node_colors.append("green")
-        elif r > 0.33:
-            node_colors.append("gold")
-        else:
-            node_colors.append("red")
-
     fig, ax = plt.subplots(figsize=(11, 8))
 
     def draw_base():
 
         ax.clear()
+
+        node_colors = []
+
+        for node in graph.nodes():
+
+            r = risk_gradient.get(node, 0)
+
+            if r > 0.66:
+                node_colors.append("green")
+            elif r > 0.33:
+                node_colors.append("gold")
+            else:
+                node_colors.append("red")
 
         nx.draw(
             graph,
@@ -103,8 +101,8 @@ def animate(system, regime_map, risk_geometry, safe_traj, naive_traj):
 
         draw_base()
 
-        # SAFE trajectory
         safe_edges = list(zip(safe_traj[:frame], safe_traj[1:frame+1]))
+        naive_edges = list(zip(naive_traj[:frame], naive_traj[1:frame+1]))
 
         nx.draw_networkx_edges(
             graph,
@@ -114,9 +112,6 @@ def animate(system, regime_map, risk_geometry, safe_traj, naive_traj):
             edge_color="blue",
             width=4
         )
-
-        # NAIVE trajectory
-        naive_edges = list(zip(naive_traj[:frame], naive_traj[1:frame+1]))
 
         nx.draw_networkx_edges(
             graph,
@@ -128,28 +123,61 @@ def animate(system, regime_map, risk_geometry, safe_traj, naive_traj):
             style="dashed"
         )
 
-        # current positions
         if frame < len(safe_traj):
+
+            safe_state = safe_traj[frame]
 
             nx.draw_networkx_nodes(
                 graph,
                 pos,
                 ax=ax,
-                nodelist=[safe_traj[frame]],
+                nodelist=[safe_state],
                 node_color="cyan",
                 node_size=2600
             )
 
+            safe_risk = risk_gradient.get(safe_state, 0)
+
+        else:
+            safe_risk = 0
+
+
         if frame < len(naive_traj):
+
+            naive_state = naive_traj[frame]
 
             nx.draw_networkx_nodes(
                 graph,
                 pos,
                 ax=ax,
-                nodelist=[naive_traj[frame]],
+                nodelist=[naive_state],
                 node_color="magenta",
                 node_size=2600
             )
+
+            naive_risk = risk_gradient.get(naive_state, 0)
+
+        else:
+            naive_risk = 0
+
+
+        ax.text(
+            0.02,
+            0.95,
+            f"Safe Agent Risk: {safe_risk:.2f}",
+            transform=ax.transAxes,
+            fontsize=12,
+            color="blue"
+        )
+
+        ax.text(
+            0.02,
+            0.90,
+            f"Naive Agent Risk: {naive_risk:.2f}",
+            transform=ax.transAxes,
+            fontsize=12,
+            color="red"
+        )
 
     frames = max(len(safe_traj), len(naive_traj))
 
