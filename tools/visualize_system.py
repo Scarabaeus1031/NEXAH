@@ -9,7 +9,6 @@ if PROJECT_ROOT not in sys.path:
 
 import networkx as nx
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 
 from FRAMEWORK.core.system_loader import load_system
 from ENGINE.runtime.system_runner import build_regime_map
@@ -17,123 +16,96 @@ from FRAMEWORK.MESO.risk_geometry import compute_risk_geometry
 from FRAMEWORK.NEXAH.navigation_policy import select_safest_transition
 from FRAMEWORK.MEVA.execution_engine import ExecutionEngine
 
+SYSTEM_PATH = "APPLICATIONS/examples/energy_grid_control.json"
 
-SYSTEM_PATH = "APPLICATIONS/examples/energy_grid.json"
-START_STATE = "S0_normal"
-
-
-def simulate(system_path, start_state):
+def simulate(system_path):
 
     system = load_system(system_path)
-
-    if start_state not in system.nodes:
-        start_state = system.nodes[0]
 
     regime_map = build_regime_map(system)
 
     risk_geometry = compute_risk_geometry(regime_map)
 
-    engine = ExecutionEngine(regime_map, risk_geometry)
+    graph = regime_map["graph"]
 
-    engine.set_initial_state(start_state)
+    start_state = system.nodes[0]
 
-    def policy(state):
+    engine_safe = ExecutionEngine(regime_map, risk_geometry)
+    engine_safe.set_initial_state(start_state)
+
+    def safe_policy(state):
         return select_safest_transition(
             state,
             regime_map,
             risk_geometry
         )
 
-    trajectory = engine.run(policy, max_steps=20)
+    safe_traj = engine_safe.run(safe_policy, max_steps=20)
 
-    return system, regime_map, risk_geometry, trajectory, start_state
+    engine_naive = ExecutionEngine(regime_map, risk_geometry)
+    engine_naive.set_initial_state(start_state)
 
+    def naive_policy(state):
 
-def compute_positions(system, risk_geometry):
+        successors = list(graph.successors(state))
 
-    distances = risk_geometry["risk_distance"]
+        if not successors:
+            return state
 
-    pos = {}
+        return successors[0]
 
-    for i, node in enumerate(system.nodes):
+    naive_traj = engine_naive.run(naive_policy, max_steps=20)
 
-        y = distances.get(node, 0)
+    return system, regime_map, risk_geometry, safe_traj, naive_traj, start_state
 
-        pos[node] = (i, y)
-
-    return pos
-
-
-def compute_node_colors(system, risk_geometry):
-
-    gradient = risk_geometry["risk_gradient"]
-
-    colors = []
-
-    for node in system.nodes:
-
-        g = gradient.get(node, 0)
-
-        colors.append(cm.RdYlGn(g))
-
-    return colors
-
-
-def visualize(system, regime_map, risk_geometry, trajectory):
+def visualize(system, regime_map, safe_traj, naive_traj):
 
     graph = regime_map["graph"]
 
-    pos = compute_positions(system, risk_geometry)
+    pos = nx.spring_layout(graph, seed=42)
 
-    node_colors = compute_node_colors(system, risk_geometry)
-
-    basin = risk_geometry["collapse_basin"]
-
-    plt.figure(figsize=(10, 7))
+    plt.figure(figsize=(11, 8))
 
     nx.draw(
         graph,
         pos,
         with_labels=True,
-        node_color=node_colors,
-        node_size=2000,
-        font_size=9
+        node_color="lightgray",
+        node_size=2200,
+        font_size=10
     )
 
-    edges = list(zip(trajectory, trajectory[1:]))
+    safe_edges = list(zip(safe_traj, safe_traj[1:]))
 
     nx.draw_networkx_edges(
         graph,
         pos,
-        edgelist=edges,
+        edgelist=safe_edges,
         edge_color="blue",
-        width=3
+        width=4
     )
 
-    collapse_nodes = regime_map["collapse_states"]
+    naive_edges = list(zip(naive_traj, naive_traj[1:]))
 
-    nx.draw_networkx_nodes(
+    nx.draw_networkx_edges(
         graph,
         pos,
-        nodelist=list(collapse_nodes),
-        node_color="red",
-        node_size=2400
+        edgelist=naive_edges,
+        edge_color="red",
+        width=3,
+        style="dashed"
     )
 
-    plt.title("NEXAH Risk Gradient + Collapse Basin")
+    plt.title("NEXAH System Navigation — Blue: Stabilizing Policy | Red: Collapse Path")
 
     plt.show()
 
-
 if __name__ == "__main__":
 
-    system, regime_map, risk_geometry, trajectory, start_state = simulate(
-        SYSTEM_PATH,
-        START_STATE
-    )
+    system, regime_map, risk_geometry, safe_traj, naive_traj, start_state = simulate(SYSTEM_PATH)
 
     print("Start state:", start_state)
-    print("Trajectory:", trajectory)
-    print("Collapse basin:", risk_geometry["collapse_basin"])
+    print("Safe trajectory:", safe_traj)
+    print("Naive trajectory:", naive_traj)
 
-    visualize(system, regime_map, risk_geometry, trajectory)
+    visualize(system, regime_map, safe_traj, naive_traj)
