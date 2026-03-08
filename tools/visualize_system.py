@@ -3,7 +3,6 @@
 import sys
 import os
 
-# Add repository root to Python path
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
@@ -88,6 +87,8 @@ def visualize(system, regime_map, risk_geometry, trajectory):
 
     node_colors = compute_node_colors(system, risk_geometry)
 
+    basin = risk_geometry["collapse_basin"]
+
     plt.figure(figsize=(10, 7))
 
     nx.draw(
@@ -99,7 +100,6 @@ def visualize(system, regime_map, risk_geometry, trajectory):
         font_size=9
     )
 
-    # highlight trajectory
     edges = list(zip(trajectory, trajectory[1:]))
 
     nx.draw_networkx_edges(
@@ -110,7 +110,17 @@ def visualize(system, regime_map, risk_geometry, trajectory):
         width=3
     )
 
-    plt.title("NEXAH Risk Gradient Landscape")
+    collapse_nodes = regime_map["collapse_states"]
+
+    nx.draw_networkx_nodes(
+        graph,
+        pos,
+        nodelist=list(collapse_nodes),
+        node_color="red",
+        node_size=2400
+    )
+
+    plt.title("NEXAH Risk Gradient + Collapse Basin")
 
     plt.show()
 
@@ -124,5 +134,6 @@ if __name__ == "__main__":
 
     print("Start state:", start_state)
     print("Trajectory:", trajectory)
+    print("Collapse basin:", risk_geometry["collapse_basin"])
 
     visualize(system, regime_map, risk_geometry, trajectory)
