@@ -42,27 +42,11 @@
     ],
     [
       "freq_drop",
-      "congestion"
+      "stable"
     ],
     [
       "freq_drop",
       "recovery"
-    ],
-    [
-      "freq_drop",
-      "stable"
-    ],
-    [
-      "recovery",
-      "s"
-    ],
-    [
-      "recovery",
-      "t"
-    ],
-    [
-      "recovery",
-      "a"
     ],
     [
       "recovery",
@@ -74,7 +58,31 @@
     ],
     [
       "recovery",
-      "e"
+      "a"
+    ],
+    [
+      "recovery",
+      "c"
+    ],
+    [
+      "recovery",
+      "k"
+    ],
+    [
+      "recovery",
+      "o"
+    ],
+    [
+      "recovery",
+      "u"
+    ],
+    [
+      "recovery",
+      "t"
+    ],
+    [
+      "congestion",
+      "f"
     ],
     [
       "congestion",
@@ -86,7 +94,15 @@
     ],
     [
       "congestion",
-      "c"
+      "q"
+    ],
+    [
+      "congestion",
+      "_"
+    ],
+    [
+      "congestion",
+      "d"
     ],
     [
       "congestion",
@@ -94,11 +110,7 @@
     ],
     [
       "congestion",
-      "v"
-    ],
-    [
-      "congestion",
-      "y"
+      "p"
     ],
     [
       "blackout",
@@ -135,12 +147,11 @@
   "transitions": {
     "stable": "freq_drop",
     "freq_drop": [
-      "congestion",
-      "recovery",
-      "stable"
+      "stable",
+      "recovery"
     ],
-    "recovery": "stable",
-    "congestion": "recovery",
+    "recovery": "blackout",
+    "congestion": "freq_drop",
     "blackout": "stable"
   },
   "control_actions": {},
