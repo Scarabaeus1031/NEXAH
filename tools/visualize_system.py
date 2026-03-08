@@ -3,7 +3,7 @@
 import sys
 import os
 
-# Ensure the repository root is on the Python path
+# Add repository root to Python path
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
@@ -87,65 +87,4 @@ if __name__ == "__main__":
     print("Trajectory:")
     print(trajectory)
 
-    visualize(system, regime_map, risk_geometry, trajectory)    plt.figure(figsize=(10, 7))
-
-    nx.draw_networkx_nodes(
-        graph,
-        pos,
-        node_color=node_colors,
-        node_size=900
-    )
-
-    nx.draw_networkx_edges(
-        graph,
-        pos,
-        arrows=True
-    )
-
-    nx.draw_networkx_labels(
-        graph,
-        pos,
-        font_size=10
-    )
-
-    # draw trajectory path
-
-    path_edges = []
-
-    for i in range(len(trajectory) - 1):
-        path_edges.append((trajectory[i], trajectory[i + 1]))
-
-    nx.draw_networkx_edges(
-        graph,
-        pos,
-        edgelist=path_edges,
-        width=3,
-        edge_color="blue"
-    )
-
-    plt.title("NEXAH System Visualization")
-    plt.axis("off")
-    plt.show()
-
-
-def main():
-
-    system, regime_map, risk_geometry, trajectory = simulate(
-        SYSTEM_PATH,
-        START_STATE
-    )
-
-    print("\nTrajectory:")
-    print(trajectory)
-
-    visualize(
-        system,
-        regime_map,
-        risk_geometry,
-        trajectory
-    )
-
-
-if __name__ == "__main__":
-
-    main()
+    visualize(system, regime_map, risk_geometry, trajectory)
