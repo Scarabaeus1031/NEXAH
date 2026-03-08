@@ -1,9 +1,8 @@
 def get_available_transitions(graph, state):
-    """
-    Return all possible next states from the current state.
-    """
 
-    return list(graph.successors(state))
+    successors = list(graph.successors(state))
+
+    return successors
 
 
 def select_safest_transition(state, regime_map, risk_geometry):
