@@ -1,14 +1,16 @@
 # NEXAH Framework — Architecture Overview
 
-This directory contains the **architectural overview of the NEXAH framework**.
+This directory provides the **architectural overview of the NEXAH framework**.
 
-It provides a structured entry point for understanding the system architecture, development status, capabilities, and engine design.
+It serves as a structured entry point for understanding the system architecture, development status, capabilities, and engine design.
 
 The NEXAH framework is a structural navigation system for **complex dynamic environments**.
 
 ---
 
-# NEXAH System Stack
+# Architecture Overview
+
+## NEXAH System Stack
 
 ![NEXAH System Stack](./visuals/Systemstack_Architecture_Overview.png)
 
@@ -30,11 +32,29 @@ These layers transform:
 
 ---
 
+## Repository Architecture
+
+![Repository Architecture](./visuals/Repository_Architecture_Overview.png)
+
+The NEXAH repository is organized into several major components.
+
+| Directory | Role |
+|------|------|
+| ENGINE | structural algebra and analysis engine |
+| FRAMEWORK | system stack implementation |
+| NAVIGATOR | system exploration and visualization |
+| APPLICATIONS | example system models |
+| RESEARCH | theoretical foundation |
+
+This structure separates **mathematical core systems, framework logic, navigation tools, and applied models**.
+
+---
+
 # Engine Execution Flow
 
 ![Engine Execution Flow](../../ENGINE/visuals/engine_execution_flow.png)
 
-The NEXAH engine bridges formal mathematical structures with executable analysis.
+The NEXAH engine bridges **formal mathematical structures** with **executable system analysis**.
 
 Pipeline:
 
@@ -122,26 +142,16 @@ This document explains the **computational foundation of the engine**.
 
 # How These Documents Fit Together
 
-The documents in this directory describe the NEXAH system from different perspectives:
+The documents in this directory describe the NEXAH system from complementary perspectives.
 
-Architecture completion → project progress  
-Architecture milestone → structural breakthrough  
-System capabilities → operational functionality  
-Engine release notes → computational core
+| Document | Role |
+|------|------|
+| Architecture Completion Map | development progress |
+| Architecture Milestone | system breakthrough |
+| System Capabilities | operational functionality |
+| Engine Release Notes | computational foundation |
 
 Together they provide a complete overview of the **NEXAH architecture and current system state**.
-
----
-
-# Related Directories
-
-| Directory | Role |
-|------|------|
-| ENGINE | structural algebra and analysis engine |
-| FRAMEWORK | system stack implementation |
-| NAVIGATOR | system exploration and visualization layer |
-| APPLICATIONS | example system models |
-| RESEARCH | theoretical background |
 
 ---
 
@@ -149,10 +159,10 @@ Together they provide a complete overview of the **NEXAH architecture and curren
 
 The NEXAH framework combines:
 
-structural modeling  
-regime analysis  
-risk geometry  
-navigation strategies  
-execution control  
+- structural modeling  
+- regime analysis  
+- risk geometry  
+- navigation strategies  
+- execution control  
 
 into a unified architecture for exploring and navigating **complex dynamic systems**.
