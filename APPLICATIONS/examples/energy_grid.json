@@ -26,11 +26,11 @@
   },
 
   "transitions": {
-    "stable": "freq_drop",
-    "freq_drop": "congestion",
-    "recovery": "stable",
-    "congestion": "blackout"
-  },
+  "stable": ["freq_drop"],
+  "freq_drop": ["congestion", "recovery"],
+  "recovery": ["stable"],
+  "congestion": ["blackout"]
+}
 
   "control_actions": {},
 
