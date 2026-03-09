@@ -188,3 +188,30 @@ if __name__ == "__main__":
     print("critical density ≈", critical_density)
 
     plot_transition(densities, scores, critical_density)
+
+# ------------------------------------------------
+# NEXAH ENGINE INTERFACE
+# ------------------------------------------------
+
+def detect_transitions(landscape):
+    """
+    Adapter for the NEXAH engine.
+
+    The engine passes a landscape object. This adapter extracts
+    transition candidates from it.
+    """
+
+    transitions = []
+
+    # minimal heuristic for now
+    if isinstance(landscape, dict):
+
+        nodes = landscape.get("nodes", [])
+
+        if len(nodes) > 1:
+            transitions.append({
+                "type": "potential_transition",
+                "states": nodes[:2]
+            })
+
+    return transitions
