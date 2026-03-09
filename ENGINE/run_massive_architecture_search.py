@@ -1,10 +1,12 @@
 """
 NEXAH Massive Architecture Search
 
-Runs large-scale architecture exploration using the NEXAH discovery engine.
+Runs large-scale architecture exploration using the NEXAH discovery engine
+and stores results for later discovery analysis.
 """
 
 from ENGINE.nexah_engine import NexahEngine
+from ENGINE.results_store import store_result
 
 
 class MassiveArchitectureSearch:
@@ -27,6 +29,9 @@ class MassiveArchitectureSearch:
             print(f"\n--- Experiment {i+1}/{self.runs} ---")
 
             result = self.engine.run()
+
+            # store experiment result
+            store_result(result, i + 1)
 
             results.append(result)
 
