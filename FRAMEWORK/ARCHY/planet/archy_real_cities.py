@@ -43,7 +43,7 @@ CITIES = [
 
 def classify_climate(lat: float) -> str:
     """
-    Simple latitude-based climate classifier.
+    Map latitude to ARCHY environments.
     """
 
     lat = abs(lat)
@@ -52,12 +52,12 @@ def classify_climate(lat: float) -> str:
         return "tropical"
 
     if lat < 35:
-        return "warm"
+        return "coastal"
 
     if lat < 55:
-        return "temperate"
+        return "urban_heat"
 
-    return "cold"
+    return "coastal""cold"
 
 
 # -----------------------------------------
