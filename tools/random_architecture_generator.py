@@ -39,7 +39,10 @@ def generate_random_architecture():
         G = nx.gnp_random_graph(n, 0.2, directed=True)
 
     architecture = {
-        "graph": G
+        "graph": G,
+        "topology": topology,
+        "nodes": G.number_of_nodes(),
+        "edges": G.number_of_edges()
     }
 
     return architecture
