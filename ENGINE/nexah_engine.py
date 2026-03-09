@@ -27,7 +27,7 @@ from ENGINE.nexah_kernel.navigation import NavigationEngine
 # ------------------------------------------------
 
 from tools.system_designer import generate_architecture
-from tools.resilience_analyzer import analyze_resilience
+from tools.resilience_analyzer_v2 import analyze_resilience
 from tools.resilience_landscape import compute_landscape
 from tools.resilience_phase_transition_detector import detect_transitions
 
@@ -46,6 +46,7 @@ class NexahEngine:
         # ------------------------------------------------
 
         architecture = generate_architecture()
+
         print("Architecture generated")
 
         # ------------------------------------------------
@@ -53,6 +54,7 @@ class NexahEngine:
         # ------------------------------------------------
 
         graph = build_structural_graph(architecture)
+
         print("Structural graph built")
 
         # ------------------------------------------------
@@ -60,6 +62,7 @@ class NexahEngine:
         # ------------------------------------------------
 
         resilience_metrics = analyze_resilience(graph)
+
         print("Resilience analysis complete")
 
         # ------------------------------------------------
@@ -67,9 +70,67 @@ class NexahEngine:
         # ------------------------------------------------
 
         try:
+
             landscape = compute_landscape(graph)
+
         except Exception:
+
             landscape = {
+                "nodes": list(graph.nodes()),
+                "edges": list(graph.edges()),
+                "landscape_type": "graph_fallback"
+            }
+
+        regime_landscape = build_regime_landscape(landscape)
+
+        print("Regime landscape constructed")
+
+        # ------------------------------------------------
+        # 5 Phase Transitions
+        # ------------------------------------------------
+
+        transitions = detect_transitions(landscape)
+
+        print("Phase transitions detected")
+
+        # ------------------------------------------------
+        # 6 Navigation
+        # ------------------------------------------------
+
+        navigator = NavigationEngine(graph, regime_landscape)
+
+        navigation_results = navigator.evaluate_paths()
+
+        print("Navigation analysis complete\n")
+
+        return {
+            "architecture": architecture,
+            "graph": graph,
+            "resilience": resilience_metrics,
+            "landscape": regime_landscape,
+            "transitions": transitions,
+            "navigation": navigation_results,
+        }
+
+
+# ------------------------------------------------
+# Runner
+# ------------------------------------------------
+
+def run_engine():
+
+    engine = NexahEngine()
+
+    results = engine.run()
+
+    print("NEXAH Engine finished\n")
+
+    return results
+
+
+if __name__ == "__main__":
+
+    run_engine()            landscape = {
                 "nodes": list(graph.nodes()),
                 "edges": list(graph.edges()),
                 "landscape_type": "graph_fallback"
