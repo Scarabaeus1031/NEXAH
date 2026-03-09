@@ -1,89 +1,51 @@
 """
 NEXAH Massive Architecture Search
 
-Runs large-scale architecture exploration using the NEXAH engine.
+Runs large-scale architecture exploration using the NEXAH discovery engine.
 """
 
-from nexah_engine import NexahEngine
-from architecture_mutation_engine import ArchitectureMutationEngine
-
-from tools.system_designer import generate_architecture
+from ENGINE.nexah_engine import NexahEngine
 
 
 class MassiveArchitectureSearch:
 
-    def __init__(self,
-                 population_size=50,
-                 generations=10):
-
-        self.population_size = population_size
-        self.generations = generations
-
+    def __init__(self, runs=100):
+        """
+        runs : number of architecture experiments
+        """
+        self.runs = runs
         self.engine = NexahEngine()
-        self.mutator = ArchitectureMutationEngine()
 
-    # --------------------------------------------------
+    def run(self):
 
-    def initialize_population(self):
-
-        population = []
-
-        for _ in range(self.population_size):
-
-            arch = generate_architecture()
-
-            population.append(arch)
-
-        return population
-
-    # --------------------------------------------------
-
-    def evolve_population(self, population):
-
-        return self.mutator.evolve_population(
-            population,
-            generations=self.generations
-        )
-
-    # --------------------------------------------------
-
-    def evaluate_population(self, population):
+        print("\nStarting Massive Architecture Search\n")
 
         results = []
 
-        for architecture in population:
+        for i in range(self.runs):
+
+            print(f"\n--- Experiment {i+1}/{self.runs} ---")
 
             result = self.engine.run()
 
             results.append(result)
 
-        return results
-
-    # --------------------------------------------------
-
-    def run(self):
-
-        print("Starting massive architecture search")
-
-        population = self.initialize_population()
-
-        population = self.evolve_population(population)
-
-        results = self.evaluate_population(population)
-
-        print("Search finished")
+        print("\nMassive Architecture Search finished\n")
 
         return results
 
+
+# ------------------------------------------------
+# Runner
+# ------------------------------------------------
 
 def run_search():
 
-    search = MassiveArchitectureSearch(
-        population_size=50,
-        generations=20
-    )
+    search = MassiveArchitectureSearch(runs=20)
 
     results = search.run()
+
+    print("\nExperiments completed:", len(results))
 
     return results
 
