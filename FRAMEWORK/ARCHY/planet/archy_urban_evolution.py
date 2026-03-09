@@ -6,42 +6,50 @@ import matplotlib.animation as animation
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 
-from FRAMEWORK.ARCHY.planet.archy_real_cities import (
-    simulate_city_stability,
-    CITIES
-)
+from FRAMEWORK.ARCHY.planet.archy_real_cities import simulate_city_stability
+from FRAMEWORK.ARCHY.planet.archy_climate_model import climate_stress
 
 
-# -----------------------------
-# URBAN EVOLUTION MODEL
-# -----------------------------
+# ---------------------------------------------------
+# CITY STABILITY EVOLUTION
+# ---------------------------------------------------
 
-def evolve_stability(stability, climate):
+def evolve_stability(stability, climate, lat, year):
 
-    noise = np.random.normal(0, 0.003)
+    noise = np.random.normal(0, 0.002)
+
+    stress = climate_stress(lat, year)
 
     if climate == "urban_heat":
-        trend = 0.002
+        trend = 0.002 - stress
 
     elif climate == "coastal":
-        trend = 0.001
+        trend = 0.001 - stress
 
     elif climate == "tropical":
-        trend = -0.001
+        trend = -0.001 - stress
 
     else:
-        trend = 0
+        trend = -stress
 
-    return max(0.25, min(0.45, stability + trend + noise))
+    new_value = stability + trend + noise
+
+    return max(0.25, min(0.45, new_value))
 
 
-# -----------------------------
-# ANIMATION
-# -----------------------------
+# ---------------------------------------------------
+# RUN GLOBAL SIMULATION
+# ---------------------------------------------------
 
 def run_simulation():
 
     cities = simulate_city_stability()
+
+    names = [c[0] for c in cities]
+    lats = [c[1] for c in cities]
+    lons = [c[2] for c in cities]
+    stability = [c[3] for c in cities]
+    climates = [c[4] for c in cities]
 
     fig = plt.figure(figsize=(12,6))
 
@@ -51,12 +59,6 @@ def run_simulation():
     ax.add_feature(cfeature.BORDERS)
     ax.add_feature(cfeature.LAND)
     ax.add_feature(cfeature.OCEAN)
-
-    lats = [c[1] for c in cities]
-    lons = [c[2] for c in cities]
-
-    stability = [c[3] for c in cities]
-    climates = [c[4] for c in cities]
 
     sc = ax.scatter(
         lons,
@@ -69,6 +71,15 @@ def run_simulation():
         vmax=0.40
     )
 
+    for name, lat, lon in zip(names, lats, lons):
+
+        ax.text(
+            lon + 1,
+            lat + 1,
+            name,
+            fontsize=8
+        )
+
     plt.colorbar(sc, label="City Stability")
 
     year = 2025
@@ -80,38 +91,30 @@ def run_simulation():
         year += 10
 
         stability = [
-            evolve_stability(s, climates[i])
-            for i, s in enumerate(stability)
+            evolve_stability(stability[i], climates[i], lats[i], year)
+            for i in range(len(stability))
         ]
 
         sc.set_array(np.array(stability))
 
         ax.set_title(f"ARCHY Urban Evolution — {year}")
 
-        print(year)
+        print(f"Year {year}")
 
     ani = animation.FuncAnimation(
         fig,
         update,
-        frames=8,
+        frames=10,
         interval=1500
     )
 
     plt.show()
 
 
-# -----------------------------------------
+# ---------------------------------------------------
 # MAIN
-# -----------------------------------------
+# ---------------------------------------------------
 
 if __name__ == "__main__":
 
-    cities = simulate_city_stability()
-
-    for name, lat, lon, stability, climate in cities:
-
-        print(
-            f"{name:12} | climate={climate:10} | stability={stability:.3f}"
-        )
-
-    plot_world(cities)
+    run_simulation()
