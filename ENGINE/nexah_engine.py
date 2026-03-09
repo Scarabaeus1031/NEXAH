@@ -1,86 +1,123 @@
-def __init__(self, config=None):
-    self.config = config or {}
+"""
+NEXAH Discovery Engine Runner
 
-def run(self):
+Orchestrates the NEXAH discovery pipeline.
 
-    print("\nStarting NEXAH Discovery Engine\n")
+Architecture Generation
+→ Evolution
+→ Resilience Analysis
+→ Landscape Mapping
+→ Phase Transition Detection
+→ Law Discovery
+→ Validation
+→ Navigation
+"""
 
-    # ------------------------------------------------
-    # 1 Architecture Generation
-    # ------------------------------------------------
+# ------------------------------------------------
+# Kernel Layers
+# ------------------------------------------------
 
-    architecture = generate_architecture()
-    print("Architecture generated")
+from ENGINE.nexah_kernel.orientation import ObservationFrame
+from ENGINE.nexah_kernel.archy import build_structural_graph
+from ENGINE.nexah_kernel.meso import build_regime_landscape
+from ENGINE.nexah_kernel.navigation import NavigationEngine
 
-    # ------------------------------------------------
-    # 2 Structural Graph
-    # ------------------------------------------------
+# ------------------------------------------------
+# Tools
+# ------------------------------------------------
 
-    graph = build_structural_graph(architecture)
-    print("Structural graph built")
+from tools.system_designer import generate_architecture
+from tools.resilience_analyzer_v2 import analyze_resilience
+from tools.resilience_landscape import compute_landscape
+from tools.resilience_phase_transition_detector import detect_transitions
 
-    # ------------------------------------------------
-    # 3 Resilience Analysis
-    # ------------------------------------------------
 
-    resilience_metrics = analyze_resilience(graph)
-    print("Resilience analysis complete")
+class NexahEngine:
 
-    # ------------------------------------------------
-    # 4 Landscape Mapping
-    # ------------------------------------------------
+    def __init__(self, config=None):
+        self.config = config or {}
 
-    try:
+    def run(self):
 
-        landscape = compute_landscape(graph)
+        print("\nStarting NEXAH Discovery Engine\n")
 
-    except Exception:
+        # ------------------------------------------------
+        # 1 Architecture Generation
+        # ------------------------------------------------
 
-        landscape = {
-            "nodes": list(graph.nodes()),
-            "edges": list(graph.edges()),
-            "landscape_type": "graph_fallback"
+        architecture = generate_architecture()
+        print("Architecture generated")
+
+        # ------------------------------------------------
+        # 2 Structural Graph
+        # ------------------------------------------------
+
+        graph = build_structural_graph(architecture)
+        print("Structural graph built")
+
+        # ------------------------------------------------
+        # 3 Resilience Analysis
+        # ------------------------------------------------
+
+        resilience_metrics = analyze_resilience(graph)
+        print("Resilience analysis complete")
+
+        # ------------------------------------------------
+        # 4 Landscape Mapping
+        # ------------------------------------------------
+
+        try:
+            landscape = compute_landscape(graph)
+
+        except Exception:
+            landscape = {
+                "nodes": list(graph.nodes()),
+                "edges": list(graph.edges()),
+                "landscape_type": "graph_fallback"
+            }
+
+        regime_landscape = build_regime_landscape(landscape)
+        print("Regime landscape constructed")
+
+        # ------------------------------------------------
+        # 5 Phase Transitions
+        # ------------------------------------------------
+
+        transitions = detect_transitions(landscape)
+        print("Phase transitions detected")
+
+        # ------------------------------------------------
+        # 6 Navigation
+        # ------------------------------------------------
+
+        navigator = NavigationEngine(graph, regime_landscape)
+        navigation_results = navigator.evaluate_paths()
+
+        print("Navigation analysis complete\n")
+
+        return {
+            "architecture": architecture,
+            "graph": graph,
+            "resilience": resilience_metrics,
+            "landscape": regime_landscape,
+            "transitions": transitions,
+            "navigation": navigation_results,
         }
 
-    regime_landscape = build_regime_landscape(landscape)
-    print("Regime landscape constructed")
 
-    # ------------------------------------------------
-    # 5 Phase Transitions
-    # ------------------------------------------------
+# ------------------------------------------------
+# Runner
+# ------------------------------------------------
 
-    transitions = detect_transitions(landscape)
-    print("Phase transitions detected")
+def run_engine():
 
-    # ------------------------------------------------
-    # 6 Navigation
-    # ------------------------------------------------
+    engine = NexahEngine()
+    results = engine.run()
 
-    navigator = NavigationEngine(graph, regime_landscape)
-    navigation_results = navigator.evaluate_paths()
+    print("NEXAH Engine finished\n")
 
-    print("Navigation analysis complete\n")
+    return results
 
-    return {
-        "architecture": architecture,
-        "graph": graph,
-        "resilience": resilience_metrics,
-        "landscape": regime_landscape,
-        "transitions": transitions,
-        "navigation": navigation_results,
-    }
 
- # ------------------------------------------------
-    # 7 Runner
-    # ------------------------------------------------
-
-engine = NexahEngine()
-
-results = engine.run()
-
-print("NEXAH Engine finished\n")
-
-return results
-
-if name == “main”:
+if __name__ == "__main__":
     run_engine()
