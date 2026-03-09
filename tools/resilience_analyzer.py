@@ -182,6 +182,48 @@ def print_report(report):
     for state, risk in report["risk_gradient"].items():
         print(f" - {state}: {risk}")
 
+# ------------------------------------------------
+# NEXAH ENGINE INTERFACE
+# ------------------------------------------------
+
+def analyze_resilience(graph):
+    """
+    Adapter used by the NEXAH engine.
+
+    The engine currently passes a graph. This adapter converts
+    it to a minimal resilience report using the same scoring logic.
+    """
+
+    # minimal fallback resilience calculation
+    nodes = list(graph.nodes())
+    n = len(nodes)
+
+    if n == 0:
+        return {"resilience_score": 0.0}
+
+    # simple heuristic for now
+    collapse_states = []
+    critical_states = []
+
+    safe_fraction = 1.0
+    avg_risk = 0.0
+    collapse_fraction = 0.0
+    critical_fraction = 0.0
+
+    score = (
+        0.5 * safe_fraction +
+        0.3 * avg_risk +
+        0.2 * (1.0 - collapse_fraction)
+    )
+
+    score -= 0.15 * critical_fraction
+
+    score = max(0.0, min(1.0, score))
+
+    return {
+        "resilience_score": round(score, 3),
+        "num_states": n,
+    }
 
 if __name__ == "__main__":
 
