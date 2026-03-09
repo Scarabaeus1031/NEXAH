@@ -6,7 +6,7 @@ The **ARCHY** layer ensures that the system remains stable, no matter the change
 
 ---
 
-![ARCHY Simulation Framework](./visuals/archy_simulation_framework.png)
+![ARCHY Simulation Framework](./archy_simulation_framework.png)
 
 *ARCHY simulation environment exploring regime transitions and systemic stability.*
 
