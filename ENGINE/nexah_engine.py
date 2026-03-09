@@ -69,7 +69,71 @@ class NexahEngine:
         # 4 Landscape Mapping
         # ------------------------------------------------
 
-        # Adapter logic:
+        # Some landscape tools expect JSON path instead of graph.
+        # If that fails, build a minimal landscape directly from graph.
+
+        try:
+            landscape = compute_landscape(graph)
+
+        except Exception:
+
+            # fallback landscape
+            landscape = {
+                "nodes": list(graph.nodes()),
+                "edges": list(graph.edges()),
+                "landscape_type": "graph_fallback"
+            }
+
+        regime_landscape = build_regime_landscape(landscape)
+
+        print("Regime landscape constructed")
+
+        # ------------------------------------------------
+        # 5 Phase Transitions
+        # ------------------------------------------------
+
+        transitions = detect_transitions(landscape)
+
+        print("Phase transitions detected")
+
+        # ------------------------------------------------
+        # 6 Navigation
+        # ------------------------------------------------
+
+        navigator = NavigationEngine(graph, regime_landscape)
+
+        navigation_results = navigator.evaluate_paths()
+
+        print("Navigation analysis complete\n")
+
+        return {
+            "architecture": architecture,
+            "graph": graph,
+            "resilience": resilience_metrics,
+            "landscape": regime_landscape,
+            "transitions": transitions,
+            "navigation": navigation_results,
+        }
+
+
+# ------------------------------------------------
+# Runner
+# ------------------------------------------------
+
+def run_engine():
+
+    engine = NexahEngine()
+
+    results = engine.run()
+
+    print("NEXAH Engine finished\n")
+
+    return results
+
+
+if __name__ == "__main__":
+
+    run_engine()        # Adapter logic:
         # some landscape tools expect system_path instead of graph
 
         try:
