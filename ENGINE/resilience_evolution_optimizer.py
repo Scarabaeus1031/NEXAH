@@ -18,7 +18,6 @@ MUTATION_RATE = 0.3
 
 def random_graph():
 
-    # smaller graphs -> avoids networkx slowdowns
     n = random.randint(5, 15)
 
     topology = random.choice([
@@ -34,13 +33,25 @@ def random_graph():
 
     elif topology == "scale_free":
 
-        m = random.randint(1, 4)
+        m = random.randint(1, min(4, n-1))
         G = nx.barabasi_albert_graph(n, m).to_directed()
 
     else:
 
-        k = random.randint(2, 6)
+        # safe Watts–Strogatz parameters
+        k = random.randint(2, min(6, n-1))
+
+        if k % 2 != 0:
+            k += 1
+
+        if k >= n:
+            k = n - 1
+
+        if k % 2 != 0:
+            k -= 1
+
         p = random.uniform(0.1, 0.3)
+
         G = nx.watts_strogatz_graph(n, k, p).to_directed()
 
     return G
@@ -52,7 +63,6 @@ def mutate_graph(G):
 
     nodes = list(G.nodes())
 
-    # add edge
     if random.random() < 0.5 and len(nodes) > 2:
 
         u = random.choice(nodes)
@@ -61,7 +71,6 @@ def mutate_graph(G):
         if u != v:
             G.add_edge(u, v)
 
-    # remove edge
     if random.random() < 0.5 and G.number_of_edges() > 1:
 
         edge = random.choice(list(G.edges()))
@@ -125,7 +134,7 @@ def run_evolution():
 
         print(
             f"\nGeneration {generation+1}"
-            f" | best resilience: {round(best['score'], 3)}"
+            f" | best resilience: {round(best['score'],3)}"
             f" | nodes: {best['graph'].number_of_nodes()}"
             f" | edges: {best['graph'].number_of_edges()}"
         )
@@ -136,7 +145,7 @@ def run_evolution():
         population = next_generation(scored)
 
     print("\nBest architecture discovered")
-    print("Resilience:", round(best_overall["score"], 3))
+    print("Resilience:", round(best_overall["score"],3))
     print("Nodes:", best_overall["graph"].number_of_nodes())
     print("Edges:", best_overall["graph"].number_of_edges())
 
