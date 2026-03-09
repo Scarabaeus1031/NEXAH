@@ -18,6 +18,37 @@ from ENGINE.runtime.system_runner import build_regime_map
 SYSTEM_PATH = "APPLICATIONS/examples/energy_grid_control.json"
 
 
+# ------------------------------------------------
+# NEXAH ENGINE INTERFACE
+# ------------------------------------------------
+
+def generate_architecture():
+    """
+    Generate an architecture for the NEXAH engine.
+
+    For now this loads the reference system.
+    Later this can generate architectures automatically.
+    """
+
+    system = load_system(SYSTEM_PATH)
+
+    regime_map = build_regime_map(system)
+
+    graph = regime_map["graph"]
+
+    architecture = {
+        "system": system,
+        "graph": graph,
+        "regime_map": regime_map
+    }
+
+    return architecture
+
+
+# ------------------------------------------------
+# DESIGN IMPROVEMENT LOGIC
+# ------------------------------------------------
+
 def suggest_improvements():
 
     system = load_system(SYSTEM_PATH)
@@ -65,6 +96,10 @@ def print_suggestions():
     for s in suggestions:
         print("-", s)
 
+
+# ------------------------------------------------
+# CLI ENTRYPOINT
+# ------------------------------------------------
 
 if __name__ == "__main__":
 
