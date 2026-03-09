@@ -5,7 +5,6 @@ import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 
 from FRAMEWORK.ARCHY.urban.archy_city_fields import simulate_city
-from FRAMEWORK.ARCHY.urban.archy_city_profiles import apply_city_profile
 
 
 # -----------------------------------------
@@ -43,9 +42,6 @@ CITIES = [
 # -----------------------------------------
 
 def classify_climate(lat: float) -> str:
-    """
-    Map latitude to ARCHY environments.
-    """
 
     lat = abs(lat)
 
@@ -81,9 +77,6 @@ def simulate_city_stability():
 
         stability = modified.mean()
 
-        # Apply density / morphology profile
-        stability = apply_city_profile(name, stability)
-
         results.append(
             (name, lat, lon, stability, climate)
         )
@@ -119,91 +112,12 @@ def plot_world(cities):
         transform=ccrs.PlateCarree()
     )
 
-    # label cities
     for name, lat, lon, _, climate in cities:
+
         ax.text(
             lon + 1,
             lat + 1,
-            f"{name}",
-            fontsize=8
-        )
-
-    plt.colorbar(sc, label="City Stability")
-
-    plt.title("ARCHY Global Stability Map — Climate + Urban Density")
-
-    plt.show()
-
-
-# -----------------------------------------
-# MAIN
-# -----------------------------------------
-
-if __name__ == "__main__":
-
-    cities = simulate_city_stability()
-
-    for name, lat, lon, stability, climate in cities:
-
-        print(
-            f"{name:12} | climate={climate:10} | stability={stability:.3f}"
-        )
-
-    plot_world(cities)    results = []
-
-    for name, lat, lon in CITIES:
-
-        climate = classify_climate(lat)
-
-        city, field, modified = simulate_city(
-            climate,
-            20,
-            10
-        )
-
-        stability = modified.mean()
-
-        results.append(
-            (name, lat, lon, stability, climate)
-        )
-
-    return results
-
-
-# -----------------------------------------
-# PLOT WORLD MAP
-# -----------------------------------------
-
-def plot_world(cities):
-
-    fig = plt.figure(figsize=(12,6))
-
-    ax = plt.axes(projection=ccrs.PlateCarree())
-
-    ax.add_feature(cfeature.COASTLINE)
-    ax.add_feature(cfeature.BORDERS)
-    ax.add_feature(cfeature.LAND)
-    ax.add_feature(cfeature.OCEAN)
-
-    lats = [c[1] for c in cities]
-    lons = [c[2] for c in cities]
-    stability = [c[3] for c in cities]
-
-    sc = ax.scatter(
-        lons,
-        lats,
-        c=stability,
-        cmap="viridis",
-        s=200,
-        transform=ccrs.PlateCarree()
-    )
-
-    # label cities
-    for name, lat, lon, _, climate in cities:
-        ax.text(
-            lon + 1,
-            lat + 1,
-            f"{name}",
+            name,
             fontsize=8
         )
 
