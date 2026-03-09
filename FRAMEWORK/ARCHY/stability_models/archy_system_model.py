@@ -94,7 +94,7 @@ def compute_coupling_factor_from_elements(
 ) -> float:
     """
     Estimate coupling factor C from ARCHY element activation.
-
+    """
        active_elements = normalize_element_weights(active_elements)
 
     total = sum(active_elements.values())
