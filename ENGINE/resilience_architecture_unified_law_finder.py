@@ -40,8 +40,9 @@ def load_results():
 
             data = json.load(file)
 
-            nodes = data["graph"]["nodes"]
-            edges = data["graph"]["edges"]
+            # nodes and edges stored as lists
+            nodes = len(data["graph"]["nodes"])
+            edges = len(data["graph"]["edges"])
 
             resilience = data["resilience"]["resilience_score"]
 
