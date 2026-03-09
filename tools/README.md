@@ -1,4 +1,12 @@
-# NEXAH Tools
+# NEXAH Resilience Architecture Engine
+
+![Resilience Landscape](visuals/nexah_resilience_landscape_hero.png)
+
+NEXAH explores the stability landscape of complex architectures.
+
+Systems evolve across regimes of stability, collapse, and transition.
+The NEXAH engine maps this landscape and discovers universal laws
+governing resilient system design.# NEXAH Tools
 
 ## Overview
 
