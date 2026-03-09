@@ -1,12 +1,20 @@
-# NEXAH Resilience Architecture Engine
+# NEXAH — Resilience Architecture Engine
 
-![Resilience Landscape](visuals/nexah_resilience_landscape_hero.png)
+![Resilience Landscape](tools/visuals/NEXAH_Resilience_Analysis_Toolkit.png)
 
-NEXAH explores the stability landscape of complex architectures.
+NEXAH is a research framework for exploring the stability and resilience of complex systems.
 
-Systems evolve across regimes of stability, collapse, and transition.  
-The NEXAH engine maps this landscape and discovers universal laws
-governing resilient system design.
+It provides computational tools for:
+
+• architecture generation  
+• resilience analysis  
+• phase transition detection  
+• structural law discovery  
+• theory validation  
+
+The framework enables large-scale exploration of architecture spaces and the discovery of structural principles governing resilient systems.
+
+NEXAH combines simulation, topology analysis, and symbolic discovery to investigate how **system structure influences stability across complex networks**.
 
 ---
 
@@ -14,7 +22,7 @@ governing resilient system design.
 
 ## Overview
 
-The `tools/` directory contains the computational infrastructure used by the **NEXAH Simulation Environment**.
+The `tools/` directory contains the computational infrastructure of the **NEXAH Simulation Environment**.
 
 These tools form the experimental engine of the NEXAH project and support:
 
@@ -27,11 +35,15 @@ These tools form the experimental engine of the NEXAH project and support:
 
 Together they implement a **simulation laboratory for resilient architectures**.
 
-The goal of this framework is to explore how **system topology influences resilience** and to discover structural patterns that lead to stable systems.
+The central research question of the framework is:
+
+> How does system topology influence stability, resilience, and phase transitions in complex systems?
+
+By exploring large architecture spaces, NEXAH aims to discover **structural patterns and universal principles** underlying stable system design.
 
 ---
 
-# NEXAH Simulation Engine
+# NEXAH Discovery Engine
 
 ![NEXAH Simulation Engine](visuals/nexah_engine_pipeline_visual.png)
 
@@ -43,17 +55,17 @@ System Evolution
 ↓  
 Resilience Analysis  
 ↓  
-Landscape Mapping  
+Resilience Landscape Mapping  
 ↓  
 Phase Transition Detection  
 ↓  
-Law Discovery  
+Structural Law Discovery  
 ↓  
-Universal Validation  
+Theory Validation  
 ↓  
 Research Transition  
 
-This pipeline allows automated exploration of thousands of architectures and the discovery of **emergent resilience laws**.
+This pipeline allows automated exploration of thousands of architectures and supports the discovery of **emergent resilience laws**.
 
 ---
 
@@ -61,7 +73,7 @@ This pipeline allows automated exploration of thousands of architectures and the
 
 ![NEXAH Tool Architecture](visuals/nexah_tool_architecture_map_v3.png)
 
-The tool ecosystem is organized into several functional clusters.
+The NEXAH tool ecosystem is organized into functional clusters that together implement the discovery pipeline.
 
 ---
 
@@ -78,7 +90,7 @@ Examples:
 - `catastrophe_detector.py`
 - `risk_landscape.py`
 
-Functions:
+Core functions:
 
 - resilience scoring  
 - failure propagation analysis  
@@ -130,7 +142,7 @@ Outputs include:
 
 ## 4. Phase Transition Detection
 
-These tools search for **critical transitions** in architecture topology.
+These tools detect **critical structural transitions** in architecture topology.
 
 Examples:
 
@@ -140,7 +152,7 @@ Examples:
 - `resilience_critical_point_finder.py`
 - `resilience_ridge_detector.py`
 
-They detect structural thresholds where systems shift from:
+These tools identify structural thresholds where systems shift between regimes:
 
 fragile → stable  
 stable → unstable  
@@ -149,7 +161,7 @@ stable → unstable
 
 ## 5. Law Discovery Engine
 
-These tools attempt to discover **universal laws of resilience**.
+These tools search for **universal laws of resilience**.
 
 Examples:
 
@@ -160,7 +172,7 @@ Examples:
 - `resilience_law_discovery.py`
 - `resilience_symbolic_law_finder.py`
 
-Capabilities:
+Capabilities include:
 
 - symbolic regression  
 - scaling law detection  
@@ -186,7 +198,7 @@ Examples:
 
 ## 7. Visualization Tools
 
-These tools visualize system structures and simulation results.
+These tools visualize architectures and simulation results.
 
 Examples:
 
@@ -199,15 +211,15 @@ Examples:
 - `architecture_diff.py`
 - `resilience_architecture_evolver_plot.py`
 
-These tools help interpret architecture dynamics and simulation outcomes.
+Visualization tools support interpretation of architecture dynamics and simulation outcomes.
 
 ---
 
 # Discovery Pipeline (Simulation Phase)
 
-During the recent development session, a complete **resilience law discovery pipeline** was constructed.
+A complete **resilience law discovery pipeline** has been constructed during the simulation phase.
 
-Key components include:
+Core components include:
 
 resilience_phase_diagram.py  
 resilience_ridge_detector.py  
@@ -219,7 +231,7 @@ resilience_field_equation_discovery.py
 resilience_symbolic_equation_search.py  
 resilience_universal_law_validator.py  
 
-This pipeline enables automated exploration of architecture space and identification of **emergent structural principles**.
+Together these components enable automated exploration of architecture space and identification of **emergent structural principles**.
 
 ---
 
