@@ -69,7 +69,21 @@ class NexahEngine:
         # 4 Landscape Mapping
         # ------------------------------------------------
 
-        landscape = compute_landscape(graph)
+        # Adapter logic:
+        # some landscape tools expect system_path instead of graph
+
+        try:
+            landscape = compute_landscape(graph)
+        except TypeError:
+            if isinstance(architecture, dict) and "system" in architecture:
+                system = architecture["system"]
+
+                if hasattr(system, "metadata") and "source_path" in system.metadata:
+                    landscape = compute_landscape(system.metadata["source_path"])
+                else:
+                    raise
+            else:
+                raise
 
         regime_landscape = build_regime_landscape(landscape)
 
