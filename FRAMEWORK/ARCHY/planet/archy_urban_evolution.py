@@ -100,10 +100,18 @@ def run_simulation():
     plt.show()
 
 
-# -----------------------------
+# -----------------------------------------
 # MAIN
-# -----------------------------
+# -----------------------------------------
 
 if __name__ == "__main__":
 
-    run_simulation()
+    cities = simulate_city_stability()
+
+    for name, lat, lon, stability, climate in cities:
+
+        print(
+            f"{name:12} | climate={climate:10} | stability={stability:.3f}"
+        )
+
+    plot_world(cities)
