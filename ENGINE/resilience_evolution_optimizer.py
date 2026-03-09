@@ -11,14 +11,15 @@ import networkx as nx
 from tools.resilience_analyzer_v2 import analyze_resilience
 
 
-POPULATION_SIZE = 12
-GENERATIONS = 8
+POPULATION_SIZE = 8
+GENERATIONS = 6
 MUTATION_RATE = 0.3
 
 
 def random_graph():
 
-    n = random.randint(5, 30)
+    # smaller graphs -> avoids networkx slowdowns
+    n = random.randint(5, 15)
 
     topology = random.choice([
         "erdos",
@@ -51,6 +52,7 @@ def mutate_graph(G):
 
     nodes = list(G.nodes())
 
+    # add edge
     if random.random() < 0.5 and len(nodes) > 2:
 
         u = random.choice(nodes)
@@ -59,6 +61,7 @@ def mutate_graph(G):
         if u != v:
             G.add_edge(u, v)
 
+    # remove edge
     if random.random() < 0.5 and G.number_of_edges() > 1:
 
         edge = random.choice(list(G.edges()))
@@ -121,10 +124,10 @@ def run_evolution():
         best = scored[0]
 
         print(
-            f"\nGeneration {generation+1} "
-            f"| best resilience: {best['score']} "
-            f"| nodes: {best['graph'].number_of_nodes()} "
-            f"| edges: {best['graph'].number_of_edges()}"
+            f"\nGeneration {generation+1}"
+            f" | best resilience: {round(best['score'], 3)}"
+            f" | nodes: {best['graph'].number_of_nodes()}"
+            f" | edges: {best['graph'].number_of_edges()}"
         )
 
         if best_overall is None or best["score"] > best_overall["score"]:
@@ -133,7 +136,7 @@ def run_evolution():
         population = next_generation(scored)
 
     print("\nBest architecture discovered")
-    print("Resilience:", best_overall["score"])
+    print("Resilience:", round(best_overall["score"], 3))
     print("Nodes:", best_overall["graph"].number_of_nodes())
     print("Edges:", best_overall["graph"].number_of_edges())
 
