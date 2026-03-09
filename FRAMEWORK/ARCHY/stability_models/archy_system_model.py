@@ -221,7 +221,7 @@ def analyze_archy_system(input_model: ArchySystemInput) -> ArchySystemResult:
 def example_cave_system() -> ArchySystemResult:
     """
     Example analysis: cave-like stabilization system.
-    """
+   """
 
     input_model = ArchySystemInput(
         name="cave_system",
