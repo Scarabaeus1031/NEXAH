@@ -1,6 +1,6 @@
 # NEXAH — Resilience Architecture Engine
 
-![Resilience Landscape](tools/visuals/nexah_resilience_analysis_toolkit.png)
+![Resilience Landscape](visuals/nexah_resilience_analysis_toolkit.png)
 
 NEXAH is a research framework for exploring the stability and resilience of complex systems.
 
