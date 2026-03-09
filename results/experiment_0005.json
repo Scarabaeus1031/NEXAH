@@ -1,0 +1,157 @@
+{
+  "architecture": {
+    "graph": {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          0
+        ]
+      ]
+    },
+    "topology": "small_world",
+    "nodes": 6,
+    "edges": 12
+  },
+  "graph": {
+    "nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        0
+      ]
+    ]
+  },
+  "resilience": {
+    "resilience_score": 0.458,
+    "nodes": 6,
+    "edges": 12
+  },
+  "landscape": {
+    "attractors": [],
+    "basins": {},
+    "thresholds": []
+  },
+  "transitions": [
+    {
+      "type": "potential_transition",
+      "states": [
+        0,
+        1
+      ]
+    }
+  ],
+  "navigation": {
+    "trajectories": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "leverage_points": []
+  }
+}
