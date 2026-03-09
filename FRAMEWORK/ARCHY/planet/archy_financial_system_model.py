@@ -18,7 +18,7 @@ def build_financial_network(cities):
 
         G.add_node(
             c["name"],
-            debt=np.random.uniform(0.6,1.2),
+            debt=np.random.uniform(0.7,1.1),
             stability=np.random.uniform(0.4,0.7)
         )
 
@@ -28,10 +28,9 @@ def build_financial_network(cities):
 
         for j in range(i+1,len(nodes)):
 
-            # financial exposure probability
-            if np.random.random() < 0.04:
+            if np.random.random() < 0.03:
 
-                exposure = np.random.uniform(0.2,1.0)
+                exposure = np.random.uniform(0.1,0.6)
 
                 G.add_edge(nodes[i],nodes[j],exposure=exposure)
 
@@ -39,36 +38,82 @@ def build_financial_network(cities):
 
 
 # ---------------------------------------------------
-# GLOBAL DRIFT
+# FINANCIAL DRIFT
 # ---------------------------------------------------
 
-def financial_drift(G, year):
-
-    # system fragility grows slowly over time
-    fragility = (year - 2025) * 0.002
+def financial_drift(G):
 
     for node in G.nodes:
 
-        # rising debt
-        G.nodes[node]["debt"] += np.random.normal(0.01 + fragility, 0.02)
+        # slow increase of debt
+        G.nodes[node]["debt"] += np.random.normal(0.01,0.02)
 
-        # partial recovery
-        G.nodes[node]["debt"] *= np.random.uniform(0.97, 1.01)
+        # slight recovery mechanism
+        G.nodes[node]["debt"] *= np.random.uniform(0.98,1.01)
 
-        # clamp values
-        G.nodes[node]["debt"] = max(0.3, G.nodes[node]["debt"])
+        # clamp
+        G.nodes[node]["debt"] = max(0.3,G.nodes[node]["debt"])
 
 
 # ---------------------------------------------------
-# CLIMATE SHOCK
+# CONTAGION
 # ---------------------------------------------------
 
-def climate_financial_shock(G):
+def propagate_financial_shock(G):
 
-    shock_nodes = []
+    cascades = []
 
     for node in G.nodes:
 
+        debt = G.nodes[node]["debt"]
+
+        # higher threshold
+        if debt > 1.4 and np.random.random() < 0.1:
+
+            cascades.append(node)
+
+            for n in G.neighbors(node):
+
+                exposure = G.edges[node,n]["exposure"]
+
+                # reduced contagion strength
+                G.nodes[n]["debt"] += exposure * 0.05
+
+    return cascades
+
+
+# ---------------------------------------------------
+# SIMULATION
+# ---------------------------------------------------
+
+def run():
+
+    cities = generate_global_city_dataset()
+
+    G = build_financial_network(cities)
+
+    year = 2025
+
+    for step in range(40):
+
+        year += 5
+
+        financial_drift(G)
+
+        cascades = propagate_financial_shock(G)
+
+        print(
+            "Year:",year,
+            "Financial cascade events:",len(cascades)
+        )
+
+
+# ---------------------------------------------------
+# MAIN
+# ---------------------------------------------------
+
+if __name__ == "__main__":
+    run()
         if np.random.random() < 0.02:
 
             G.nodes[node]["debt"] += np.random.uniform(0.3,0.7)
