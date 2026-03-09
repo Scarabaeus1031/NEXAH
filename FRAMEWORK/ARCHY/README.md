@@ -19,6 +19,34 @@ Frames are used to define reference points within the system, ensuring that chan
 
 ---
 
+## Simulation Environment
+
+Beyond regime theory, the ARCHY layer also contains a large experimental simulation environment for exploring complex system dynamics.
+
+These simulations model interactions between multiple planetary subsystems, including:
+
+• climate dynamics  
+• water stress  
+• food production systems  
+• global energy networks  
+• infrastructure systems  
+• supply chains  
+• migration dynamics  
+• geopolitical escalation  
+• cascading collapse scenarios  
+
+The purpose of these simulations is to explore how regime transitions emerge from real-world interacting subsystems.
+
+These models allow researchers to study:
+
+• cascading failures  
+• tipping points  
+• resilience structures  
+• collapse propagation  
+• regime stabilization mechanisms
+
+---
+
 ## 🛠️ How to Use This Layer
 
 - **Stability Regimes**: Begin by exploring the stability regimes to understand how the system transitions between different states while maintaining stability.
@@ -38,3 +66,20 @@ This section is essential for those seeking to understand how the system maintai
 ---
 
 This document serves as the entry point into the **ARCHY** layer of the NEXAH framework. All further development within NEXAH builds upon the principles of stability and system transitions defined in this layer.
+
+## Module Structure
+
+ARCHY currently contains over 100 modules organized into several domains:
+
+• planetary system simulations  
+• urban system simulations  
+• infrastructure network models  
+• stability analysis models  
+• experimental optimization environments  
+• visualization tools  
+
+See:
+
+ARCHY_MODULE_INDEX.md
+
+for a full list of simulation modules.
