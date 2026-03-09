@@ -27,15 +27,26 @@ def load_results():
 
         path = os.path.join(RESULT_DIR, f)
 
-        with open(path) as file:
+        try:
+            with open(path) as file:
+                r = json.load(file)
 
-            r = json.load(file)
+            # skip files that do not contain required fields
+            if (
+                "nodes" not in r
+                or "edges" not in r
+                or "resilience_score" not in r
+            ):
+                continue
 
             nodes = r["nodes"]
             edges = r["edges"]
             resilience = r["resilience_score"]
 
-            degree = edges / nodes if nodes else 0
+            if nodes == 0:
+                continue
+
+            degree = edges / nodes
 
             data.append({
                 "nodes": nodes,
@@ -46,6 +57,10 @@ def load_results():
                 "log_edges": math.log(edges) if edges > 0 else 0,
                 "resilience": resilience
             })
+
+        except Exception:
+            # ignore malformed JSON files
+            continue
 
     return data
 
@@ -112,7 +127,7 @@ def run_evolution():
 
     print("\nTop Candidate Laws\n")
 
-    for i in range(10):
+    for i in range(min(10, len(scored))):
 
         score, eq = scored[i]
 
