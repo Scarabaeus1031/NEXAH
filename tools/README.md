@@ -4,9 +4,13 @@
 
 NEXAH explores the stability landscape of complex architectures.
 
-Systems evolve across regimes of stability, collapse, and transition.
+Systems evolve across regimes of stability, collapse, and transition.  
 The NEXAH engine maps this landscape and discovers universal laws
-governing resilient system design.# NEXAH Tools
+governing resilient system design.
+
+---
+
+# NEXAH Tools
 
 ## Overview
 
@@ -29,25 +33,25 @@ The goal of this framework is to explore how **system topology influences resili
 
 # NEXAH Simulation Engine
 
-![NEXAH Simulation Engine](nexah_simulation_engine_workflow.png)
+![NEXAH Simulation Engine](visuals/nexah_engine_pipeline_visual.png)
 
 The NEXAH tools follow a structured discovery pipeline:
 
-Architecture Generation
-↓
-System Evolution
-↓
-Resilience Analysis
-↓
-Landscape Mapping
-↓
-Phase Transition Detection
-↓
-Law Discovery
-↓
-Universal Validation
-↓
-Research Transition
+Architecture Generation  
+↓  
+System Evolution  
+↓  
+Resilience Analysis  
+↓  
+Landscape Mapping  
+↓  
+Phase Transition Detection  
+↓  
+Law Discovery  
+↓  
+Universal Validation  
+↓  
+Research Transition  
 
 This pipeline allows automated exploration of thousands of architectures and the discovery of **emergent resilience laws**.
 
@@ -55,7 +59,7 @@ This pipeline allows automated exploration of thousands of architectures and the
 
 # Tool Architecture Map
 
-![NEXAH Tool Map](nexah_tools_relationship_map.png)
+![NEXAH Tool Architecture](visuals/nexah_tool_architecture_map_v3.png)
 
 The tool ecosystem is organized into several functional clusters.
 
@@ -138,8 +142,8 @@ Examples:
 
 They detect structural thresholds where systems shift from:
 
-fragile → stable
-stable → unstable
+fragile → stable  
+stable → unstable  
 
 ---
 
@@ -205,15 +209,15 @@ During the recent development session, a complete **resilience law discovery pip
 
 Key components include:
 
-resilience_phase_diagram.py
-resilience_ridge_detector.py
-resilience_universal_architecture_law.py
-resilience_topology_phase_transition_detector.py
-resilience_renormalization_detector.py
-resilience_universal_constant_search.py
-resilience_field_equation_discovery.py
-resilience_symbolic_equation_search.py
-resilience_universal_law_validator.py
+resilience_phase_diagram.py  
+resilience_ridge_detector.py  
+resilience_universal_architecture_law.py  
+resilience_topology_phase_transition_detector.py  
+resilience_renormalization_detector.py  
+resilience_universal_constant_search.py  
+resilience_field_equation_discovery.py  
+resilience_symbolic_equation_search.py  
+resilience_universal_law_validator.py  
 
 This pipeline enables automated exploration of architecture space and identification of **emergent structural principles**.
 
@@ -223,8 +227,8 @@ This pipeline enables automated exploration of architecture space and identifica
 
 Current project phase:
 
-Simulation Phase: COMPLETE
-Research Phase: PLANNED
+Simulation Phase: COMPLETE  
+Research Phase: PLANNED  
 
 The next stage will transition from simulation experiments to **empirical validation on real-world networks**, including:
 
@@ -248,4 +252,3 @@ It enables:
 - validation of emergent theories  
 
 This infrastructure forms the bridge between **simulation-driven discovery and scientific research**.
-
