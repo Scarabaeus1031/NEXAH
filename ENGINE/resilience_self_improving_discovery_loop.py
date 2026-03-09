@@ -32,6 +32,9 @@ def generate_architecture():
 
     edges = int(n * degree)
 
+    # safety: directed graph max edges = n*n
+    edges = min(edges, n * n - 1)
+
     G = nx.gnm_random_graph(n, edges, directed=True)
 
     return G
@@ -50,7 +53,7 @@ def evaluate_population(graphs):
         nodes = G.number_of_nodes()
         edges = G.number_of_edges()
 
-        degree = edges / nodes
+        degree = edges / max(nodes, 1)
 
         results.append({
             "graph": G,
@@ -65,10 +68,14 @@ def evaluate_population(graphs):
 
 def discover_degree_law(results):
 
-    degrees = [r["degree"] for r in results]
-    resilience = [r["resilience"] for r in results]
+    if not results:
+        return 3.0
 
-    best = sorted(results, key=lambda r: r["resilience"], reverse=True)[:3]
+    best = sorted(
+        results,
+        key=lambda r: r["resilience"],
+        reverse=True
+    )[:3]
 
     best_degree = statistics.mean([r["degree"] for r in best])
 
@@ -79,7 +86,10 @@ def update_search_window(best_degree):
 
     width = 1.0
 
-    return best_degree - width/2, best_degree + width/2
+    new_min = max(0.5, best_degree - width / 2)
+    new_max = best_degree + width / 2
+
+    return new_min, new_max
 
 
 def run_loop():
@@ -92,10 +102,13 @@ def run_loop():
 
     for gen in range(GENERATIONS):
 
-        print(f"\nGeneration {gen+1}")
+        print(f"\nGeneration {gen + 1}")
         print("------------------")
 
-        graphs = [generate_architecture() for _ in range(ARCHITECTURES_PER_GEN)]
+        graphs = [
+            generate_architecture()
+            for _ in range(ARCHITECTURES_PER_GEN)
+        ]
 
         results = evaluate_population(graphs)
 
@@ -110,7 +123,7 @@ def run_loop():
             f"| degree={round(best['degree'],2)}"
         )
 
-        print("Average resilience:", round(avg_res,3))
+        print("Average resilience:", round(avg_res, 3))
 
         best_degree = discover_degree_law(results)
 
@@ -118,12 +131,18 @@ def run_loop():
 
         print(
             "Updated search window:",
-            round(TARGET_DEGREE_MIN,2),
+            round(TARGET_DEGREE_MIN, 2),
             "–",
-            round(TARGET_DEGREE_MAX,2)
+            round(TARGET_DEGREE_MAX, 2)
         )
 
 
 if __name__ == "__main__":
 
-    run_loop()
+    try:
+        run_loop()
+
+    except KeyboardInterrupt:
+
+        print("\n\nLoop interrupted by user.")
+        print("Current search window preserved.")
