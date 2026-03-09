@@ -69,6 +69,28 @@ This pipeline allows automated exploration of thousands of architectures and sup
 
 ---
 
+# Tool Capabilities
+
+The full capability overview of the NEXAH simulation framework is documented here:
+
+→ **[Tool Capabilities](TOOL_CAPABILITIES.md)**
+
+This document provides a detailed breakdown of the implemented tool ecosystem, including:
+
+• architecture exploration engines  
+• resilience analysis tools  
+• landscape mapping systems  
+• phase transition detectors  
+• structural law discovery engines  
+• theory validation frameworks  
+• navigation layers  
+• visualization systems  
+
+Together these tools implement the **complete discovery pipeline for resilient architectures**.
+
+---
+---
+
 # Tool Architecture Map
 
 ![NEXAH Tool Architecture](visuals/nexah_tool_architecture_map_v3.png)
