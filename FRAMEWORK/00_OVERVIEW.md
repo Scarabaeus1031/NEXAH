@@ -115,3 +115,31 @@ Here’s a breakdown of the essential documents that explain the components of t
 11. **[application_cases.md](./application_cases.md)**  
     - **Purpose**: Showcases use cases for NEXAH in various domains.  
     - **Content**: Examples of how NEXAH is applied in architecture, engineering, data science, and urban systems.
+
+## Framework Status (2026)
+
+The NEXAH framework has recently expanded significantly.
+
+Current size:
+
+33 directories  
+154 files  
+
+Major development has occurred in the **ARCHY layer**, which now
+contains over 100 modules modeling planetary-scale systems.
+
+New capabilities include:
+
+• planetary climate and water stress simulation  
+• financial contagion modeling  
+• global supply chain networks  
+• migration dynamics  
+• geopolitical escalation modeling  
+• Monte Carlo civilization collapse simulation  
+
+ARCHY now functions as an **experimental planetary system simulation
+sandbox**.
+
+For a detailed description see:
+
+ARCHY_UPDATE_v1.md
