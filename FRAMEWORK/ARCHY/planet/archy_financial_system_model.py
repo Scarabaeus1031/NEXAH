@@ -18,7 +18,7 @@ def build_financial_network(cities):
 
         G.add_node(
             c["name"],
-            debt=np.random.uniform(0.7, 1.1),
+            debt=np.random.uniform(0.6, 1.0),
             stability=np.random.uniform(0.4, 0.7)
         )
 
@@ -27,9 +27,9 @@ def build_financial_network(cities):
     for i in range(len(nodes)):
         for j in range(i + 1, len(nodes)):
 
-            if np.random.random() < 0.03:
+            if np.random.random() < 0.04:
 
-                exposure = np.random.uniform(0.1, 0.6)
+                exposure = np.random.uniform(0.1, 0.7)
 
                 G.add_edge(nodes[i], nodes[j], exposure=exposure)
 
@@ -44,11 +44,11 @@ def financial_drift(G):
 
     for node in G.nodes:
 
-        # slow increase of debt
-        G.nodes[node]["debt"] += np.random.normal(0.01, 0.02)
+        # debt slowly grows
+        G.nodes[node]["debt"] += np.random.normal(0.02, 0.03)
 
         # partial recovery
-        G.nodes[node]["debt"] *= np.random.uniform(0.98, 1.01)
+        G.nodes[node]["debt"] *= np.random.uniform(0.98, 1.02)
 
         # clamp minimum
         G.nodes[node]["debt"] = max(0.3, G.nodes[node]["debt"])
@@ -66,7 +66,7 @@ def propagate_financial_shock(G):
 
         debt = G.nodes[node]["debt"]
 
-        if debt > 1.4 and np.random.random() < 0.1:
+        if debt > 1.3 and np.random.random() < 0.2:
 
             cascades.append(node)
 
@@ -74,7 +74,7 @@ def propagate_financial_shock(G):
 
                 exposure = G.edges[node, n]["exposure"]
 
-                G.nodes[n]["debt"] += exposure * 0.05
+                G.nodes[n]["debt"] += exposure * 0.08
 
     return cascades
 
