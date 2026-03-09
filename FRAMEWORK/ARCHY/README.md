@@ -1,8 +1,14 @@
 # NEXAH Framework - ARCHY Layer
 
-Welcome to the **ARCHY Layer** of the NEXAH Framework. This section defines the stability regimes, which govern the transitions and maintain the stability of the system. 
+Welcome to the **ARCHY Layer** of the NEXAH Framework. This section defines the stability regimes, which govern the transitions and maintain the stability of the system.
 
 The **ARCHY** layer ensures that the system remains stable, no matter the changes that occur in its elements or interactions.
+
+---
+
+![ARCHY Simulation Framework](./visuals/archy_simulation_framework.png)
+
+*ARCHY simulation environment exploring regime transitions and systemic stability.*
 
 ---
 
