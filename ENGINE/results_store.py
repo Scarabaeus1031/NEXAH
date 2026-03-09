@@ -13,15 +13,13 @@ RESULT_DIR = "results"
 
 
 def ensure_results_dir():
-
     if not os.path.exists(RESULT_DIR):
         os.makedirs(RESULT_DIR)
 
 
 def _serialize(obj):
-
     """
-    Convert non-JSON objects to serializable structures.
+    Convert objects into JSON serializable structures.
     """
 
     try:
@@ -29,22 +27,23 @@ def _serialize(obj):
     except ImportError:
         nx = None
 
+    # networkx graphs
     if nx and isinstance(obj, (nx.Graph, nx.DiGraph)):
         return {
             "nodes": list(obj.nodes()),
             "edges": list(obj.edges())
         }
 
+    # sets
     if isinstance(obj, set):
         return list(obj)
 
-    if isinstance(obj, dict):
-        return {k: _serialize(v) for k, v in obj.items()}
+    # objects with __dict__
+    if hasattr(obj, "__dict__"):
+        return obj.__dict__
 
-    if isinstance(obj, list):
-        return [_serialize(v) for v in obj]
-
-    return obj
+    # fallback
+    return str(obj)
 
 
 def store_result(result, experiment_id=None):
@@ -59,10 +58,8 @@ def store_result(result, experiment_id=None):
 
     path = os.path.join(RESULT_DIR, filename)
 
-    result_serialized = _serialize(result)
-
     with open(path, "w") as f:
-        json.dump(result_serialized, f, indent=2)
+        json.dump(result, f, indent=2, default=_serialize)
 
     print(f"Result stored: {path}")
 
