@@ -13,12 +13,19 @@ Architecture Generation
 → Navigation
 """
 
-from nexah_kernel.orientation import ObservationFrame
-from nexah_kernel.archy import build_structural_graph
-from nexah_kernel.meso import build_regime_landscape
-from nexah_kernel.navigation import NavigationEngine
+# ------------------------------------------------
+# Kernel Layers
+# ------------------------------------------------
 
-# tools
+from ENGINE.nexah_kernel.orientation import ObservationFrame
+from ENGINE.nexah_kernel.archy import build_structural_graph
+from ENGINE.nexah_kernel.meso import build_regime_landscape
+from ENGINE.nexah_kernel.navigation import NavigationEngine
+
+# ------------------------------------------------
+# Tools
+# ------------------------------------------------
+
 from tools.system_designer import generate_architecture
 from tools.resilience_analyzer import analyze_resilience
 from tools.resilience_landscape import compute_landscape
@@ -32,7 +39,7 @@ class NexahEngine:
 
     def run(self):
 
-        print("Starting NEXAH Discovery Engine")
+        print("\nStarting NEXAH Discovery Engine\n")
 
         # ------------------------------------------------
         # 1 Architecture Generation
@@ -84,7 +91,7 @@ class NexahEngine:
 
         navigation_results = navigator.evaluate_paths()
 
-        print("Navigation analysis complete")
+        print("Navigation analysis complete\n")
 
         return {
             "architecture": architecture,
@@ -96,13 +103,17 @@ class NexahEngine:
         }
 
 
+# ------------------------------------------------
+# Runner
+# ------------------------------------------------
+
 def run_engine():
 
     engine = NexahEngine()
 
     results = engine.run()
 
-    print("NEXAH Engine finished")
+    print("NEXAH Engine finished\n")
 
     return results
 
