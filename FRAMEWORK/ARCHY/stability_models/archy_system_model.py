@@ -7,7 +7,7 @@ from .delta_operator import DeltaResult, compute_delta_orientation
 from .hybrid_coherence import HybridCoherenceResult, compute_hybrid_coherence
 from .stability_index import StabilityIndexResult, compute_archy_si_from_dict
 
- 
+
 DEFAULT_ELEMENT_KEYS = (
     "mass",
     "medium",
@@ -32,7 +32,6 @@ class ArchySystemInput:
     outside: Dict[str, float]
     inside: Dict[str, float]
     domain_weights: Optional[Dict[str, float]] = None
-
     active_elements: Optional[Dict[str, float]] = None
 
     base_orientation: float = 0.0
@@ -73,12 +72,9 @@ def normalize_element_weights(
     active_elements: Optional[Dict[str, float]] = None,
 ) -> Dict[str, float]:
     """
-    Normalize ARCHY element activations to [0, 1].
-
-    Missing keys are filled with 0.0.
-    Values above 1.0 are clipped to 1.0.
-    Values below 0.0 are clipped to 0.0.
+    Normalize ARCHY element activations to [0,1].
     """
+
     active_elements = active_elements or {}
     normalized: Dict[str, float] = {}
 
@@ -95,7 +91,8 @@ def compute_coupling_factor_from_elements(
     """
     Estimate coupling factor C from ARCHY element activation.
     """
-       active_elements = normalize_element_weights(active_elements)
+
+    active_elements = normalize_element_weights(active_elements)
 
     total = sum(active_elements.values())
     max_total = len(DEFAULT_ELEMENT_KEYS)
@@ -110,14 +107,6 @@ def compute_archy_score(
 ) -> float:
     """
     Combine SI, HCF and Δ into a single ARCHY system score.
-
-    Δ acts as a penalty term (misalignment).
-
-    ARCHY score model:
-
-        score = (SI * 0.5 + HCF * 0.5) * (1 - drift_penalty)
-
-    where drift_penalty = min(delta, 1.0)
     """
 
     drift_penalty = min(delta, 1.0)
@@ -154,8 +143,6 @@ def analyze_archy_system(input_model: ArchySystemInput) -> ArchySystemResult:
 
     notes: List[str] = []
 
-    # ---------- Stability Index ----------
-
     stability = compute_archy_si_from_dict(
         outside=input_model.outside,
         inside=input_model.inside,
@@ -164,8 +151,6 @@ def analyze_archy_system(input_model: ArchySystemInput) -> ArchySystemResult:
     )
 
     si_total = stability.weighted_score
-
-    # ---------- Coupling Factor ----------
 
     coupling = compute_coupling_factor_from_elements(
         input_model.active_elements
@@ -176,18 +161,13 @@ def analyze_archy_system(input_model: ArchySystemInput) -> ArchySystemResult:
         coupling_factor=coupling,
     )
 
-    # ---------- Orientation Drift ----------
-
     delta = compute_delta_orientation(
         base_orientation=input_model.base_orientation,
         architectural_delta=input_model.architectural_delta,
         environmental_delta=input_model.environmental_delta,
     )
 
-    # normalize orientation
     delta.total_orientation = delta.total_orientation % 360
-
-    # ---------- Final ARCHY Score ----------
 
     archy_score = compute_archy_score(
         si=si_total,
@@ -196,8 +176,6 @@ def analyze_archy_system(input_model: ArchySystemInput) -> ArchySystemResult:
     )
 
     regime = classify_regime(archy_score)
-
-    # ---------- Notes ----------
 
     if delta.drift_magnitude > 0.3:
         notes.append("orientation drift detected")
@@ -218,10 +196,11 @@ def analyze_archy_system(input_model: ArchySystemInput) -> ArchySystemResult:
         notes=notes,
     )
 
+
 def example_cave_system() -> ArchySystemResult:
     """
     Example analysis: cave-like stabilization system.
-   """
+    """
 
     input_model = ArchySystemInput(
         name="cave_system",
@@ -274,24 +253,20 @@ def pretty_print(result: ArchySystemResult) -> str:
     lines.append(f"REGIME      : {result.regime_label}")
 
     lines.append("")
-
     lines.append("STABILITY INDEX")
     lines.append(f"  weighted SI : {result.stability.weighted_score:.3f}")
 
     lines.append("")
-
     lines.append("HYBRID COHERENCE")
     lines.append(f"  HCF : {result.coherence.hybrid_coherence:.3f}")
 
     lines.append("")
-
     lines.append("ORIENTATION")
     lines.append(f"  drift : {result.delta.drift_magnitude:.3f}")
 
     if result.notes:
         lines.append("")
         lines.append("NOTES")
-
         for n in result.notes:
             lines.append(f"  - {n}")
 
