@@ -1,87 +1,72 @@
 from __future__ import annotations
 
-import random
-
-from FRAMEWORK.ARCHY.stability_models.archy_system_model import (
-    ArchySystemInput,
-    analyze_archy_system,
-)
-
-from FRAMEWORK.ARCHY.environments.archy_environments import get_environment
+from dataclasses import dataclass
+from typing import Dict
 
 
-def random_architecture(environment):
-
-    inside = {
-        "thermal": random.uniform(0, 10),
-        "pressure": random.uniform(0.1, 0.5),
-        "acoustic": random.uniform(0.1, 2),
-        "humidity": random.uniform(0.3, 1),
-    }
-
-    active_elements = {
-        "mass": random.random(),
-        "medium": random.random(),
-        "geometry": random.random(),
-        "location": random.random(),
-        "layering": random.random(),
-        "orientation": random.random(),
-        "urban_form": random.random(),
-    }
-
-    return ArchySystemInput(
-        name="candidate",
-        outside=environment.outside,
-        inside=inside,
-        active_elements=active_elements,
-        base_orientation=random.uniform(0, 30),
-        architectural_delta=random.uniform(0, 0.1),
-        environmental_delta=random.uniform(0, 0.1),
-    )
+@dataclass
+class ArchyEnvironment:
+    name: str
+    outside: Dict[str, float]
 
 
-def search_best(environment_name, iterations=5000):
+ENVIRONMENTS = {
 
-    env = get_environment(environment_name)
+    "desert": ArchyEnvironment(
+        name="desert",
+        outside={
+            "thermal": 40,
+            "pressure": 1,
+            "acoustic": 1,
+            "humidity": 0.1,
+        }
+    ),
 
-    best_result = None
+    "arctic": ArchyEnvironment(
+        name="arctic",
+        outside={
+            "thermal": -20,
+            "pressure": 1,
+            "acoustic": 1,
+            "humidity": 0.4,
+        }
+    ),
 
-    for i in range(iterations):
+    "coastal": ArchyEnvironment(
+        name="coastal",
+        outside={
+            "thermal": 25,
+            "pressure": 1,
+            "acoustic": 2,
+            "humidity": 1.5,
+        }
+    ),
 
-        candidate = random_architecture(env)
+    "tropical": ArchyEnvironment(
+        name="tropical",
+        outside={
+            "thermal": 32,
+            "pressure": 1,
+            "acoustic": 1,
+            "humidity": 2.0,
+        }
+    ),
 
-        result = analyze_archy_system(candidate)
-
-        if best_result is None:
-            best_result = result
-
-        if result.archy_score > best_result.archy_score:
-            best_result = result
-
-    return best_result
-
-
-def print_result(result):
-
-    print("")
-    print("BEST ARCHITECTURE")
-    print("=" * 40)
-
-    print("ARCHY SCORE:", round(result.archy_score, 3))
-    print("REGIME:", result.regime_label)
-
-    print("")
-    print("STABILITY:", round(result.stability.weighted_score, 3))
-    print("COHERENCE:", round(result.coherence.hybrid_coherence, 3))
-    print("DRIFT:", round(result.delta.drift_magnitude, 3))
+    "urban_heat": ArchyEnvironment(
+        name="urban_heat",
+        outside={
+            "thermal": 38,
+            "pressure": 1,
+            "acoustic": 3,
+            "humidity": 1.2,
+        }
+    ),
+}
 
 
-if __name__ == "__main__":
+def get_environment(name: str) -> ArchyEnvironment:
 
-    environment = "desert"
+    if name not in ENVIRONMENTS:
+        raise ValueError(f"Unknown environment: {name}")
 
-    result = search_best(environment)
-
-    print("Environment:", environment)
-
-    print_result(result)
+    return ENVIRONMENTS[name]
