@@ -69,3 +69,18 @@ def run(self):
         "transitions": transitions,
         "navigation": navigation_results,
     }
+
+ # ------------------------------------------------
+    # 7 Runner
+    # ------------------------------------------------
+
+engine = NexahEngine()
+
+results = engine.run()
+
+print("NEXAH Engine finished\n")
+
+return results
+
+if name == “main”:
+    run_engine()
