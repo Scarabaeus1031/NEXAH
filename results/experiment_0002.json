@@ -121,10 +121,11 @@
         ]
       },
       "collapse_states": [
-        "congestion",
-        "blackout"
+        "blackout",
+        "congestion"
       ]
-    }
+    },
+    "type": "reference_system"
   },
   "graph": {
     "nodes": [

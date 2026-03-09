@@ -1,165 +1,129 @@
 {
   "architecture": {
-    "system": {
-      "nodes": [
-        "stable",
-        "freq_drop",
-        "recovery",
-        "congestion",
-        "blackout"
-      ],
-      "edges": [
-        [
-          "stable",
-          "freq_drop"
-        ],
-        [
-          "freq_drop",
-          "congestion"
-        ],
-        [
-          "freq_drop",
-          "recovery"
-        ],
-        [
-          "recovery",
-          "stable"
-        ],
-        [
-          "congestion",
-          "blackout"
-        ]
-      ],
-      "regimes": {
-        "stable": "STABLE",
-        "freq_drop": "STRESS",
-        "recovery": "STABLE",
-        "congestion": "FAILURE",
-        "blackout": "COLLAPSE"
-      },
-      "transitions": {
-        "stable": [
-          "freq_drop"
-        ],
-        "freq_drop": [
-          "congestion",
-          "recovery"
-        ],
-        "recovery": [
-          "stable"
-        ],
-        "congestion": [
-          "blackout"
-        ]
-      },
-      "control_actions": {},
-      "shock_events": {},
-      "risk_target": "blackout",
-      "metadata": null
-    },
     "graph": {
       "nodes": [
-        "stable",
-        "freq_drop",
-        "recovery",
-        "congestion",
-        "blackout"
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
       ],
       "edges": [
         [
-          "stable",
-          "freq_drop"
+          0,
+          3
         ],
         [
-          "freq_drop",
-          "congestion"
+          1,
+          9
         ],
         [
-          "freq_drop",
-          "recovery"
+          2,
+          3
         ],
         [
-          "recovery",
-          "stable"
+          3,
+          7
         ],
         [
-          "congestion",
-          "blackout"
+          4,
+          0
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          9,
+          4
         ]
-      ]
-    },
-    "regime_map": {
-      "graph": {
-        "nodes": [
-          "stable",
-          "freq_drop",
-          "recovery",
-          "congestion",
-          "blackout"
-        ],
-        "edges": [
-          [
-            "stable",
-            "freq_drop"
-          ],
-          [
-            "freq_drop",
-            "congestion"
-          ],
-          [
-            "freq_drop",
-            "recovery"
-          ],
-          [
-            "recovery",
-            "stable"
-          ],
-          [
-            "congestion",
-            "blackout"
-          ]
-        ]
-      },
-      "collapse_states": [
-        "blackout",
-        "congestion"
       ]
     }
   },
   "graph": {
     "nodes": [
-      "stable",
-      "freq_drop",
-      "recovery",
-      "congestion",
-      "blackout"
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ],
     "edges": [
       [
-        "stable",
-        "freq_drop"
+        0,
+        3
       ],
       [
-        "freq_drop",
-        "congestion"
+        1,
+        9
       ],
       [
-        "freq_drop",
-        "recovery"
+        2,
+        3
       ],
       [
-        "recovery",
-        "stable"
+        3,
+        7
       ],
       [
-        "congestion",
-        "blackout"
+        4,
+        0
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        0
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        4
       ]
     ]
   },
   "resilience": {
     "resilience_score": 0.7,
-    "num_states": 5
+    "num_states": 10
   },
   "landscape": {
     "attractors": [],
@@ -170,18 +134,23 @@
     {
       "type": "potential_transition",
       "states": [
-        "stable",
-        "freq_drop"
+        0,
+        1
       ]
     }
   ],
   "navigation": {
     "trajectories": [
-      "stable",
-      "freq_drop",
-      "recovery",
-      "congestion",
-      "blackout"
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ],
     "leverage_points": []
   }

@@ -124,7 +124,8 @@
         "blackout",
         "congestion"
       ]
-    }
+    },
+    "type": "reference_system"
   },
   "graph": {
     "nodes": [
