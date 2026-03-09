@@ -14,7 +14,6 @@ import os
 import glob
 
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 RESULTS_DIR = "results"
@@ -28,21 +27,40 @@ def load_results():
 
     for f in files:
 
-        with open(f) as file:
+        try:
 
-            r = json.load(file)
+            with open(f) as file:
+
+                r = json.load(file)
 
             graph = r.get("graph", {})
 
-            nodes = graph.get("num_nodes", None)
-            edges = graph.get("num_edges", None)
+            nodes = None
+            edges = None
 
-            resilience = r.get("resilience", {}).get("resilience_score", None)
+            # variant 1
+            if "num_nodes" in graph:
+                nodes = graph["num_nodes"]
+
+            if "num_edges" in graph:
+                edges = graph["num_edges"]
+
+            # variant 2
+            if nodes is None and "nodes" in graph:
+                nodes = len(graph["nodes"])
+
+            if edges is None and "edges" in graph:
+                edges = len(graph["edges"])
+
+            resilience = r.get("resilience", {}).get("resilience_score")
 
             if nodes is None or edges is None or resilience is None:
                 continue
 
             data.append((nodes, edges, resilience))
+
+        except Exception:
+            continue
 
     return data
 
@@ -54,7 +72,6 @@ def plot_landscape(data):
     resilience = [d[2] for d in data]
 
     fig = plt.figure(figsize=(10, 7))
-
     ax = fig.add_subplot(111, projection="3d")
 
     sc = ax.scatter(
@@ -84,6 +101,8 @@ def run():
     if not data:
         print("No experiment results found.")
         return
+
+    print(f"Loaded {len(data)} experiments")
 
     plot_landscape(data)
 
