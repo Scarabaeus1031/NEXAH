@@ -13,8 +13,15 @@ from FRAMEWORK.ARCHY.planet.archy_global_city_dataset import generate_global_cit
 # ---------------------------------------------------
 
 BASE_YEAR = 2025
-TEMP_TREND = 0.02
-TIPPING_POINT_YEAR = 2080
+
+# warming progression speed
+CLIMATE_RATE = 0.015
+
+# midpoint of climate acceleration
+CLIMATE_MIDPOINT = 2080
+
+# maximum climate stress index
+MAX_STRESS = 5
 
 
 # ---------------------------------------------------
@@ -23,32 +30,26 @@ TIPPING_POINT_YEAR = 2080
 
 def compute_climate_stress(lat, lon, year):
 
-    years = year - BASE_YEAR
+    t = year - BASE_YEAR
 
-    # base warming
-    warming = TEMP_TREND * years
+    # logistic warming curve
+    warming = MAX_STRESS / (1 + np.exp(-CLIMATE_RATE * (year - CLIMATE_MIDPOINT)))
 
-    # nonlinear acceleration
-    if year > TIPPING_POINT_YEAR:
-        warming *= 1.4
-
-    # latitude amplification
-    lat_factor = 1 + (abs(lat) / 90) * 0.6
+    # polar amplification
+    lat_factor = 1 + (abs(lat) / 90) * 0.5
 
     # subtropical drought belt
-    drought_belt = np.exp(-((abs(lat) - 25) ** 2) / 150)
+    drought = np.exp(-((abs(lat) - 25) ** 2) / 200)
 
     # extreme weather probability
-    extreme_event = np.random.rand()
-
-    extreme_multiplier = 0
-    if extreme_event > 0.97:
-        extreme_multiplier = np.random.uniform(0.2, 0.5)
+    extreme = 0
+    if np.random.rand() > 0.97:
+        extreme = np.random.uniform(0.2, 0.6)
 
     # regional noise
-    regional_noise = np.random.normal(0, 0.05)
+    noise = np.random.normal(0, 0.05)
 
-    stress = warming * lat_factor + drought_belt * 0.3 + extreme_multiplier + regional_noise
+    stress = warming * lat_factor * 0.5 + drought + extreme + noise
 
     return max(0, stress)
 
@@ -69,6 +70,56 @@ def run():
     for step in range(30):
 
         year += 10
+
+        ax.clear()
+
+        ax.add_feature(cfeature.COASTLINE)
+        ax.add_feature(cfeature.BORDERS)
+        ax.add_feature(cfeature.LAND)
+        ax.add_feature(cfeature.OCEAN)
+
+        lats = []
+        lons = []
+        stress = []
+
+        for city in cities:
+
+            s = compute_climate_stress(city["lat"], city["lon"], year)
+
+            lats.append(city["lat"])
+            lons.append(city["lon"])
+            stress.append(s)
+
+        ax.scatter(
+            lons,
+            lats,
+            c=stress,
+            s=40,
+            cmap="Reds",
+            transform=ccrs.PlateCarree(),
+            vmin=0,
+            vmax=5
+        )
+
+        ax.set_title(f"ARCHY Climate Stress — {year}")
+
+        print(
+            "Year:", year,
+            "Avg stress:", round(np.mean(stress),3),
+            "Max stress:", round(max(stress),3)
+        )
+
+        plt.pause(0.6)
+
+    plt.show()
+
+
+# ---------------------------------------------------
+# MAIN
+# ---------------------------------------------------
+
+if __name__ == "__main__":
+    run()        year += 10
 
         ax.clear()
 
