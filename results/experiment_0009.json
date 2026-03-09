@@ -121,8 +121,8 @@
         ]
       },
       "collapse_states": [
-        "congestion",
-        "blackout"
+        "blackout",
+        "congestion"
       ]
     }
   },
