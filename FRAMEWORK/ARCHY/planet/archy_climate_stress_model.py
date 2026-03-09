@@ -119,6 +119,57 @@ def run():
 # ---------------------------------------------------
 
 if __name__ == "__main__":
+    run()
+        year += 10
+
+        ax.clear()
+
+        ax.add_feature(cfeature.COASTLINE)
+        ax.add_feature(cfeature.BORDERS)
+        ax.add_feature(cfeature.LAND)
+        ax.add_feature(cfeature.OCEAN)
+
+        lats = []
+        lons = []
+        stress = []
+
+        for city in cities:
+
+            s = compute_climate_stress(city["lat"], city["lon"], year)
+
+            lats.append(city["lat"])
+            lons.append(city["lon"])
+            stress.append(s)
+
+        ax.scatter(
+            lons,
+            lats,
+            c=stress,
+            s=40,
+            cmap="Reds",
+            transform=ccrs.PlateCarree(),
+            vmin=0,
+            vmax=5
+        )
+
+        ax.set_title(f"ARCHY Climate Stress — {year}")
+
+        print(
+            "Year:", year,
+            "Avg stress:", round(np.mean(stress),3),
+            "Max stress:", round(max(stress),3)
+        )
+
+        plt.pause(0.6)
+
+    plt.show()
+
+
+# ---------------------------------------------------
+# MAIN
+# ---------------------------------------------------
+
+if __name__ == "__main__":
     run()        year += 10
 
         ax.clear()
