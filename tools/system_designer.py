@@ -2,17 +2,24 @@
 
 import sys
 import os
+import random
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 if PROJECT_ROOT not in sys.path:
     sys.path.append(PROJECT_ROOT)
 
 import networkx as nx
-import copy
 
 from tools.resilience_analyzer import analyze_system
 from FRAMEWORK.core.system_loader import load_system
 from ENGINE.runtime.system_runner import build_regime_map
+
+# optional random generator
+try:
+    from tools.random_architecture_generator import generate_random_architecture
+    RANDOM_GENERATOR_AVAILABLE = True
+except ImportError:
+    RANDOM_GENERATOR_AVAILABLE = False
 
 
 SYSTEM_PATH = "APPLICATIONS/examples/energy_grid_control.json"
@@ -22,12 +29,36 @@ SYSTEM_PATH = "APPLICATIONS/examples/energy_grid_control.json"
 # NEXAH ENGINE INTERFACE
 # ------------------------------------------------
 
-def generate_architecture():
+def generate_architecture(mode="auto"):
     """
     Generate an architecture for the NEXAH engine.
 
-    For now this loads the reference system.
-    Later this can generate architectures automatically.
+    Modes:
+        "reference" → load reference system
+        "random" → generate random topology
+        "auto" → randomly choose
+    """
+
+    if mode == "reference":
+        return generate_reference_architecture()
+
+    if mode == "random" and RANDOM_GENERATOR_AVAILABLE:
+        return generate_random_architecture()
+
+    if mode == "auto":
+
+        if RANDOM_GENERATOR_AVAILABLE and random.random() < 0.7:
+            return generate_random_architecture()
+
+        return generate_reference_architecture()
+
+    # fallback
+    return generate_reference_architecture()
+
+
+def generate_reference_architecture():
+    """
+    Load the reference energy grid example.
     """
 
     system = load_system(SYSTEM_PATH)
@@ -39,7 +70,8 @@ def generate_architecture():
     architecture = {
         "system": system,
         "graph": graph,
-        "regime_map": regime_map
+        "regime_map": regime_map,
+        "type": "reference_system"
     }
 
     return architecture
