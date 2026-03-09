@@ -120,14 +120,4 @@ def run():
 # ---------------------------------------------------
 
 if __name__ == "__main__":
-    run()        )
-
-        ax.set_title(f"ARCHY Climate Stress — {year}")
-
-        plt.pause(0.6)
-
-    plt.show()
-
-
-if __name__ == "__main__":
     run()
