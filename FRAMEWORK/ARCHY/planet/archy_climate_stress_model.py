@@ -13,11 +13,7 @@ from FRAMEWORK.ARCHY.planet.archy_global_city_dataset import generate_global_cit
 # ---------------------------------------------------
 
 BASE_YEAR = 2025
-
-# global warming trend per year
 TEMP_TREND = 0.02
-
-# amplification after tipping zones
 TIPPING_POINT_YEAR = 2080
 
 
@@ -36,7 +32,7 @@ def compute_climate_stress(lat, lon, year):
     if year > TIPPING_POINT_YEAR:
         warming *= 1.4
 
-    # latitude amplification (polar amplification)
+    # latitude amplification
     lat_factor = 1 + (abs(lat) / 90) * 0.6
 
     # subtropical drought belt
@@ -49,7 +45,7 @@ def compute_climate_stress(lat, lon, year):
     if extreme_event > 0.97:
         extreme_multiplier = np.random.uniform(0.2, 0.5)
 
-    # regional variability
+    # regional noise
     regional_noise = np.random.normal(0, 0.05)
 
     stress = warming * lat_factor + drought_belt * 0.3 + extreme_multiplier + regional_noise
@@ -81,9 +77,9 @@ def run():
         ax.add_feature(cfeature.LAND)
         ax.add_feature(cfeature.OCEAN)
 
-        lats=[]
-        lons=[]
-        stress=[]
+        lats = []
+        lons = []
+        stress = []
 
         for city in cities:
 
@@ -106,8 +102,8 @@ def run():
 
         print(
             "Year:", year,
-            "Avg stress:", round(np.mean(stress),3),
-            "Max stress:", round(max(stress),3)
+            "Avg stress:", round(np.mean(stress), 3),
+            "Max stress:", round(max(stress), 3)
         )
 
         plt.pause(0.6)
