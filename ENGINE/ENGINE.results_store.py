@@ -21,7 +21,7 @@ def ensure_results_dir():
 def _serialize(obj):
 
     """
-    Convert non-JSON objects to serializable structures.
+    Convert objects into JSON serializable structures.
     """
 
     try:
@@ -29,22 +29,31 @@ def _serialize(obj):
     except ImportError:
         nx = None
 
+    # Graphs
     if nx and isinstance(obj, (nx.Graph, nx.DiGraph)):
         return {
             "nodes": list(obj.nodes()),
             "edges": list(obj.edges())
         }
 
+    # Sets
     if isinstance(obj, set):
         return list(obj)
 
+    # Dict
     if isinstance(obj, dict):
         return {k: _serialize(v) for k, v in obj.items()}
 
+    # List
     if isinstance(obj, list):
         return [_serialize(v) for v in obj]
 
-    return obj
+    # Primitive JSON types
+    if isinstance(obj, (str, int, float, bool)) or obj is None:
+        return obj
+
+    # Fallback for custom objects (like NexahSystem)
+    return str(obj)
 
 
 def store_result(result, experiment_id=None):
@@ -69,6 +78,23 @@ def store_result(result, experiment_id=None):
     return path
 
 
+def load_all_results():
+
+    ensure_results_dir()
+
+    results = []
+
+    for file in sorted(os.listdir(RESULT_DIR)):
+
+        if not file.endswith(".json"):
+            continue
+
+        path = os.path.join(RESULT_DIR, file)
+
+        with open(path, "r") as f:
+            results.append(json.load(f))
+
+    return results
 def load_all_results():
 
     ensure_results_dir()
