@@ -1,64 +1,57 @@
 from __future__ import annotations
 
 import numpy as np
-import networkx as nx
 
 from FRAMEWORK.ARCHY.planet.archy_global_city_dataset import generate_global_city_dataset
 
 
 # ---------------------------------------------------
-# GEOPOLITICAL NETWORK
+# STRESS MODELS
 # ---------------------------------------------------
 
-def build_geopolitical_network(cities):
+def climate_pressure(year):
 
-    G = nx.Graph()
+    base = (year - 2025) * 0.01
 
-    for c in cities:
+    noise = np.random.normal(0,0.02)
 
-        G.add_node(
-            c["name"],
-            tension=np.random.uniform(0,0.2)
-        )
+    return max(0, base + noise)
 
-    nodes = list(G.nodes)
 
-    for i in range(len(nodes)):
+def water_pressure(lat):
 
-        for j in range(i+1,len(nodes)):
+    belt = np.exp(-((abs(lat) - 25) ** 2) / 200)
 
-            if np.random.random() < 0.05:
+    noise = np.random.normal(0,0.03)
 
-                G.add_edge(nodes[i],nodes[j])
+    return max(0, belt + noise)
 
-    return G
+
+def food_pressure(lat):
+
+    tropics = max(0, 1 - abs(lat)/40)
+
+    noise = np.random.normal(0,0.02)
+
+    return max(0, tropics + noise)
+
+
+def financial_pressure():
+
+    return np.random.uniform(0,0.3)
 
 
 # ---------------------------------------------------
-# ESCALATION
+# CONFLICT PROBABILITY
 # ---------------------------------------------------
 
-def escalate_conflicts(G):
+def conflict_probability(climate, water, food, finance):
 
-    conflicts = []
+    stress = climate*0.3 + water*0.3 + food*0.2 + finance*0.2
 
-    for node in G.nodes:
+    probability = min(1.0, stress)
 
-        tension = G.nodes[node]["tension"]
-
-        tension += np.random.normal(0,0.01)
-
-        if tension > 0.4:
-
-            conflicts.append(node)
-
-            for n in G.neighbors(node):
-
-                G.nodes[n]["tension"] += 0.05
-
-        G.nodes[node]["tension"] = max(0,tension)
-
-    return conflicts
+    return probability
 
 
 # ---------------------------------------------------
@@ -69,18 +62,36 @@ def run():
 
     cities = generate_global_city_dataset()
 
-    G = build_geopolitical_network(cities)
-
     year = 2025
 
     for step in range(40):
 
         year += 5
 
-        conflicts = escalate_conflicts(G)
+        conflicts = 0
 
-        print("Year:",year,"Conflicts:",len(conflicts))
+        for city in cities:
 
+            climate = climate_pressure(year)
+
+            water = water_pressure(city["lat"])
+
+            food = food_pressure(city["lat"])
+
+            finance = financial_pressure()
+
+            p = conflict_probability(climate,water,food,finance)
+
+            if np.random.random() < p*0.05:
+
+                conflicts += 1
+
+        print("Year:",year,"Conflicts:",conflicts)
+
+
+# ---------------------------------------------------
+# MAIN
+# ---------------------------------------------------
 
 if __name__ == "__main__":
     run()
