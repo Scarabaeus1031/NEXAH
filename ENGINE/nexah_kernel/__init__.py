@@ -19,6 +19,9 @@ Models
 MESO
     Regime landscape construction.
 
+State Dynamics
+    Defines how system states evolve over time inside an observation frame.
+
 Navigation
     Trajectory and path evaluation.
 
@@ -40,6 +43,12 @@ from .models import (
 # Landscape construction
 from .meso import build_regime_landscape
 
+# State dynamics
+from .state_dynamics import (
+    ObservationFrame,
+    StateDynamics,
+)
+
 # Navigation and intervention engines
 from .navigation import NavigationEngine
 from .meva import ActionEngine
@@ -57,6 +66,10 @@ __all__ = [
 
     # Landscape construction
     "build_regime_landscape",
+
+    # State dynamics
+    "ObservationFrame",
+    "StateDynamics",
 
     # Engines
     "NavigationEngine",
