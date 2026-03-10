@@ -4,6 +4,39 @@
 
 ## Structural Navigation for Complex Systems
 
+---
+
+## 10-Second Orientation
+
+**What is NEXAH?**
+
+A structural modeling framework for analyzing and navigating **complex dynamical systems**.
+
+**What does it do?**
+
+NEXAH extracts **state graphs, regimes, and cascade risks** from system models and allows agents to compute **stabilization and navigation strategies**.
+
+**Typical domains**
+
+- energy grids
+- infrastructure networks
+- supply chains
+- ecosystems
+- economic systems
+- planetary-scale systems
+
+**Quick start**
+
+Run the demo simulation:
+
+python BUILDER_LAB/demos/nexah_demo.py
+
+This demonstrates the **NEXAH stabilization cycle**:
+
+State → Regime → Risk → Navigation → Action
+
+---
+
 **NEXAH** is a structural navigation framework for **analyzing, stabilizing, and navigating complex dynamical systems.**
 
 It enables agents to understand **regime transitions, cascade risks, and stability landscapes**, allowing systems to be steered toward stable attractors.
