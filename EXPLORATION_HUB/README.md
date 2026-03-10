@@ -12,6 +12,8 @@ This space translates **observation and knowledge structures into navigable syst
 
 # From Library to Instrument
 
+![From Library to Instrument](visuals/From_Library_to_Instrument_ii.png)
+
 The Exploration Hub connects two parts of the broader project:
 
 SCARABÆUS1033 → The Library  
@@ -39,6 +41,24 @@ NEXAH transforms these insights into:
 - navigation frameworks
 
 The **Exploration Hub** is where these models are built and tested.
+
+---
+
+# NEXAH Framework
+
+![NEXAH Framework](visuals/NEXAH_FRAMEWORK.png)
+
+The NEXAH framework connects multiple domains of knowledge and data layers.
+
+These include:
+
+- astronomical observation systems  
+- ecological networks  
+- knowledge resilience systems  
+- anomaly and regime detection  
+- bio-inspired navigation strategies  
+
+At its core, the framework explores how complex systems can be **modeled, simulated, and navigated**.
 
 ---
 
@@ -267,6 +287,22 @@ It is a design problem.
 ```
 
 This hub exists to explore how systems can be **understood, modeled, and navigated.**
+
+---
+
+# Scarabæus1033
+
+The **SCARABÆUS1033 Codex** represents the symbolic and structural research foundation behind the NEXAH framework.
+
+It maps patterns across:
+
+- nature
+- civilization
+- geometry
+- cosmology
+- knowledge systems
+
+The SCARABÆUS1033 research archive is currently **frozen**, while the NEXAH framework and Exploration Hub continue to evolve as open builder environments.
 
 ---
 
