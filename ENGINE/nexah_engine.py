@@ -17,7 +17,7 @@ Architecture Generation
 # Kernel Layers
 # ------------------------------------------------
 
-from ENGINE.nexah_kernel.orientation import ObservationFrame
+from ENGINE.nexah_kernel import ObservationFrame
 from ENGINE.nexah_kernel.archy import build_structural_graph
 from ENGINE.nexah_kernel.meso import build_regime_landscape
 from ENGINE.nexah_kernel.navigation import NavigationEngine
