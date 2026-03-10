@@ -2,60 +2,76 @@
 
 ![Research Architecture](./visuals/Research_Architecture_Opener.png)
 
-This section consolidates the formal and structural foundations of the NEXAH framework.
+This section contains the **formal and structural foundations** of the NEXAH framework.
 
-NEXAH is positioned as a structural modeling system grounded in finite order theory and operator-based transformations. The research layer does not introduce a new mathematical ontology. It reorganizes known order-theoretic principles into an operative framework designed for application.
+The research layer defines the **minimal theoretical structure** required for modeling complex systems using order-theoretic operators and stabilization mechanisms.
 
----
-
-## 1. Scope of the Research Layer
-
-The current formal basis operates under the following constraints:
-
-- Finite partially ordered sets (Q, ⪯)
-- Monotone self-maps on Q
-- Closure operators and stabilization mechanisms
-- No metric, topology, geometry, or time parameterization
-- No external algebraic or ontological extension
-
-All results remain strictly within discrete order theory.
+NEXAH does not introduce a new mathematical ontology.  
+Instead, it reorganizes known principles from **finite order theory and monotone operator systems** into a framework suitable for structural system modeling.
 
 ---
 
-## 2. Formal Core
+# Scope of the Research Layer
 
-The formal core establishes:
+The current formal basis operates under strict structural constraints.
 
-- Minimal assumptions (A0–A4)
-- Closure structure (Γ)
-- Regime transition operator (Δ)
-- Stabilization projection (Ω)
-- Frame compatibility conditions
-- Fixpoint geometry and basin partition
+The framework assumes:
 
-The internal consistency of Phase I–II has been reviewed and validated under finite-order constraints.
+- finite partially ordered sets (Q, ⪯)
+- monotone self-maps on Q
+- closure operators and stabilization mechanisms
+- discrete structural transitions
+- no metric or geometric structure
+
+The framework explicitly excludes:
+
+- metric geometry
+- topology
+- continuous time dynamics
+- physical interpretation
+
+All results remain strictly within **finite discrete order theory**.
 
 ---
 
-## 3. Model Boundary
+# Formal Core
 
-The current framework guarantees:
+The research layer establishes the structural operator system underlying NEXAH.
 
-- Stabilization under extensivity + finiteness
-- Existence of fixpoints
-- Operator compatibility hierarchy
-- Filtration structure
-- Non-redundant operator chain
+Key elements include:
 
-The framework does not claim:
+- minimal assumptions (A0–A4)
+- closure structure Γ
+- regime transition operator Δ
+- stabilization projection Ω
+- frame compatibility conditions
+- fixpoint geometry and basin partitions
 
-- Continuous structure
-- Metric geometry
-- Topological embedding
-- Dynamic time evolution
-- Physical interpretation
+These operators define the **structural dynamics of finite system models**.
 
-Any transition beyond finite discrete order requires additional assumptions.
+Phase I–II of the formal system have been consolidated and internally validated under finite-order constraints.
+
+---
+
+# Model Boundary
+
+The current framework guarantees the following properties:
+
+- stabilization under extensivity + finiteness
+- existence of fixpoints
+- operator compatibility hierarchy
+- filtration structure
+- non-redundant operator chain
+
+The framework does **not claim**:
+
+- continuous structure
+- metric geometry
+- topological embedding
+- physical dynamics
+- temporal evolution models
+
+Any extension beyond finite order systems requires additional assumptions.
 
 ---
 
@@ -63,45 +79,77 @@ Any transition beyond finite discrete order requires additional assumptions.
 
 ---
 
-## 4. Validation Strategy
+# Validation Strategy
 
-NEXAH research is not an end in itself.
+The research layer provides the **formal structural foundation** of the framework.
 
-The framework must demonstrate:
+Validation must occur through **applied system modeling**.
 
-- Structural clarity
-- Operator non-redundancy
-- Applicability to real system models
-- Interpretability under explicit frame selection
+Evaluation criteria include:
 
-Validation will proceed through:
+- structural clarity
+- operator minimality
+- non-redundant operator chains
+- applicability to system models
+- interpretability under explicit frames
 
-1. Minimal worked examples  
-2. Applied structural case studies  
-3. Operator implementation prototypes  
+Validation proceeds through:
 
-Applications serve as proof-of-concept.
+1. minimal worked examples  
+2. structural case studies  
+3. operator implementations in the engine  
 
 ---
 
-## 5. Research-to-Application Transition
+# Research to Application Transition
+
+The NEXAH architecture separates formal theory from application layers.
 
 The research layer provides:
 
-- Formal consistency
-- Structural minimality
-- Defined operator semantics
+- operator definitions
+- structural semantics
+- stabilization guarantees
+- frame compatibility
 
-The application layer will provide:
+The application layers provide:
 
-- Executable models
-- Use-case implementations
-- Domain-specific mappings
-- Empirical validation scenarios
+- executable system models
+- domain mappings
+- empirical test cases
+- simulation environments
 
-NEXAH becomes meaningful only when structurally instantiated.
+Applications are implemented in:
+
+```
+APPLICATIONS/
+```
+
+Experimental simulations and system exploration occur in:
+
+```
+BUILDER_LAB/
+EXPLORATION_HUB/
+```
+
+The research layer therefore defines the **structural core**, while the surrounding layers demonstrate its applicability.
 
 ---
 
-**Status:** Phase I–II formally consolidated.  
-**Next stage:** Applied validation.
+# Research Status
+
+Current status:
+
+Phase I–II formally consolidated.
+
+The operator system and minimal structural framework are defined and internally consistent under finite-order constraints.
+
+Next stage:
+
+Applied validation through system models and simulation environments.
+
+---
+
+**NEXAH Research Layer**
+
+Formal structural foundations for system navigation in finite dynamical frameworks.
