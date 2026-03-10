@@ -1,26 +1,25 @@
 # NEXAH Kernel
 
-A minimal navigation kernel for exploring and intervening in complex systems.
-
 ## NEXAH in 20 Seconds
 
 NEXAH is a minimal kernel for navigating complex systems.
 
-Instead of treating systems purely as simulations, NEXAH transforms system structure into a regime landscape:
+Instead of treating systems purely as simulation environments, NEXAH transforms system structure into **navigable regime landscapes**:
 
+```
 system → regimes → navigation → intervention
+```
 
 This allows agents to:
+
 - identify stability zones
 - detect regime transitions
 - evaluate navigation trajectories
 - test structural interventions
 
-The result is risk-aware system navigation rather than purely reward-driven optimization.
+The result is **risk-aware system navigation** rather than purely reward-driven optimization.
 
 ---
-
-**NEXAH reduces complex system dynamics to navigable regime structures.**
 
 A minimal navigation kernel for exploring and intervening in complex systems.
 
@@ -45,14 +44,42 @@ The NEXAH kernel exposes a minimal API for structural system analysis.
 | Object | Purpose |
 |------|------|
 | `StructuralGraph` | Representation of the system structure |
-| `NexahKernel` | Main interface for analysis and intervention |
+| `NexahKernel` | Main interface for system analysis and intervention |
 
 ### Core Operations
 
 | Method | Description |
 |------|------|
-| `analyze_system()` | Analyze navigation trajectories within the regime landscape |
-| `simulate_action(action)` | Apply structural modifications to the system |
+| `analyze_system()` | Analyze navigation trajectories across the regime landscape |
+| `simulate_action(action)` | Apply structural interventions to the system |
+
+### Example
+
+```python
+from ENGINE.nexah_kernel import StructuralGraph
+from ENGINE.nexah_kernel import NexahKernel
+
+graph = StructuralGraph(
+    nodes={"A": {}, "B": {}, "C": {}},
+    edges=[("A","B"),("B","C")],
+    weights={}
+)
+
+landscape = {
+    "attractors": ["C"],
+    "basins": {"stable": ["B","C"], "unstable": ["A"]},
+    "thresholds": ["B"]
+}
+
+kernel = NexahKernel(graph, landscape)
+
+analysis = kernel.analyze_system()
+
+result = kernel.simulate_action({
+    "type": "add_edge",
+    "edge": ("A","C")
+})
+```
 
 ---
 
@@ -117,33 +144,6 @@ The NEXAH kernel consists of a small set of modular layers:
 | `nexah_kernel.py` | Kernel interface |
 
 Each layer transforms system structure into **navigable regime information**.
-
----
-
-# Minimal Example
-
-```python
-from ENGINE.nexah_kernel import StructuralGraph
-from ENGINE.nexah_kernel import NexahKernel
-
-graph = StructuralGraph(
-    nodes={"A": {}, "B": {}, "C": {}},
-    edges=[("A","B"),("B","C")],
-    weights={}
-)
-
-landscape = {
-    "attractors": ["C"],
-    "basins": {"stable": ["B","C"], "unstable": ["A"]},
-    "thresholds": ["B"]
-}
-
-kernel = NexahKernel(graph, landscape)
-
-analysis = kernel.analyze_system()
-
-print(analysis.trajectories)
-```
 
 ---
 
