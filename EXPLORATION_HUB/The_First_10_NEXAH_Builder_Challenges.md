@@ -100,7 +100,7 @@ Possible datasets:
 # Challenge 03  
 # Ecosystem Stability Navigator
 
-![Ecosystem Stability Navigator](visuals/Ecosystem_Stability_Navigator.png)
+![Ecosystem Stability Navigator](visuals/Ecosysem_Stability_Navigator.png)
 
 Ecosystems are dynamic networks of species interactions.
 
@@ -166,7 +166,7 @@ Possible builder tasks:
 # Challenge 06  
 # Knowledge Fragility Simulation
 
-![Knowledge Fragility Simulation](visuals/Knowledge_Fragility_Simulation.png)
+![Knowledge Fragility Simulation](visuals/Knowledge_Fragility_Simuliation.png)
 
 Knowledge systems evolve through time but are vulnerable to collapse.
 
