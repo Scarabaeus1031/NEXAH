@@ -108,7 +108,7 @@ def spiral_step(x, y):
     r = math.sqrt(x*x + y*y)
     angle = math.atan2(y, x)
 
-    # spiral inward
+    # inward spiral
     r *= 0.85
     angle += 0.4
 
@@ -128,14 +128,15 @@ def pentagon_transition(state):
     y = state["y"]
     domain = state["domain"]
 
-    # spatial update
+    # spatial dynamics
     x, y = spiral_step(x, y)
 
-    # structural update
+    # structural dynamics
     if domain != attractor:
 
         idx = domains.index(domain)
 
+        # stochastic jump toward attractor
         if random.random() < 0.12:
             domain = attractor
         else:
@@ -192,7 +193,7 @@ for t, s in enumerate(trajectory):
 
 
 # --------------------------------------------------
-# Optional trajectory visualization
+# Optional visualization
 # --------------------------------------------------
 
 try:
@@ -200,9 +201,12 @@ try:
     import matplotlib.pyplot as plt
 
     plt.figure(figsize=(5,5))
+
     plt.plot(xs, ys, marker="o")
 
+    # attractor
     plt.scatter([0],[0], marker="*", s=200)
+
     plt.title("NEXAH Spiral Navigation Trajectory")
     plt.xlabel("x")
     plt.ylabel("y")
@@ -212,4 +216,5 @@ try:
     plt.show()
 
 except Exception:
-    pass
+
+    print("\n(Matplotlib not available — skipping plot)\n")
