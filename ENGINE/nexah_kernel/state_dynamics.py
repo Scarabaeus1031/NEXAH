@@ -76,3 +76,33 @@ class StateDynamics:
             trajectory.append(state)
 
         return trajectory
+
+    def simulate(self, initial_state: Any, steps: int):
+        """
+        Alias for trajectory simulation.
+
+        Useful for navigation experiments and regime exploration.
+        """
+
+        return self.trajectory(initial_state, steps)
+
+    def simulate_until(self, initial_state: Any, condition: Callable[[Any], bool], max_steps: int = 100):
+        """
+        Simulate the system until a condition is met.
+
+        Example:
+            stop when system enters a stable regime.
+        """
+
+        state = initial_state
+        trajectory = [state]
+
+        for _ in range(max_steps):
+
+            if condition(state):
+                break
+
+            state = self.step(state)
+            trajectory.append(state)
+
+        return trajectory
