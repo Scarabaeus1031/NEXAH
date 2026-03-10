@@ -70,7 +70,9 @@ freq_drop
 
 ---
 
----
+# Framework Architecture
+
+![NEXAH Framework](./EXPLORATION_HUB/visuals/NEXAH_FRAMEWORK.png)
 
 **NEXAH** is a structural navigation framework for **analyzing, stabilizing, and navigating complex dynamical systems.**
 
@@ -85,10 +87,6 @@ Typical applications include:
 - climate and environmental regime analysis  
 
 ---
-
-# Framework Architecture
-
-![NEXAH Framework](./EXPLORATION_HUB/visuals/NEXAH_FRAMEWORK.png)
 
 NEXAH connects multiple domains of complex system analysis.
 
