@@ -1,5 +1,3 @@
-![NEXAH System Overview](./NAVIGATOR/visuals/NEXAH_SYSTEM_OVERVIEW.png)
-
 # NEXAH Framework
 
 ## Structural navigation for complex dynamical systems.
@@ -7,6 +5,10 @@
 ---
 
 ![NEXAH Entry Diagram](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
+
+> A framework for navigating stability and risk in complex dynamical systems.
+
+![NEXAH System Overview](./NAVIGATOR/visuals/NEXAH_SYSTEM_OVERVIEW.png)
 
 ---
 
