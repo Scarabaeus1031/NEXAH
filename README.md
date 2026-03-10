@@ -25,20 +25,50 @@ NEXAH extracts **state graphs, regimes, and cascade risks** from system models a
 - economic systems
 - planetary-scale systems
 
-**Quick start**
+---
+
+# Quick Start
+
+Clone the repository:
+
+```
+git clone https://github.com/Scarabaeus1033/NEXAH.git
+cd NEXAH
+```
+
+Install the framework:
+
+```
+pip install -e .
+```
 
 Run the demo simulation:
-
-Demo script:  
-[BUILDER_LAB/demos/nexah_demo.py](BUILDER_LAB/demos/nexah_demo.py)
 
 ```
 python BUILDER_LAB/demos/nexah_demo.py
 ```
 
-This demonstrates the **NEXAH stabilization cycle**:
+Demo script:
 
-State → Regime → Risk → Navigation → Action
+[BUILDER_LAB/demos/nexah_demo.py](BUILDER_LAB/demos/nexah_demo.py)
+
+The demo demonstrates the **NEXAH stabilization cycle**:
+
+```
+State → Regime → Risk → Navigation → Action → Next State
+```
+
+Example system evolution:
+
+```
+freq_drop
+→ start_reserve
+→ congestion
+→ reconfigure_grid
+→ stable
+```
+
+---
 
 ---
 
