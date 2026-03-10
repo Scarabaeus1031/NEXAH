@@ -8,7 +8,9 @@ The NEXAH kernel provides a lightweight framework for analyzing structural syste
 
 It is designed as a **modular system navigation engine** that can operate on graphs representing infrastructures, ecosystems, networks, or other complex systems.
 
-Rather than treating systems purely as simulation environments, NEXAH models them as **navigable structural landscapes**.
+Rather than treating systems purely as simulation environments, NEXAH models systems as **navigable structural landscapes**.
+
+The goal is not control, but navigation.
 
 ---
 
@@ -68,6 +70,7 @@ The NEXAH kernel consists of a small set of modular layers:
 | `archy.py` | Architecture representation |
 | `meso.py` | Regime landscape construction |
 | `navigation.py` | Navigation analysis |
+| `mutation_engine.py` | Structural mutation operators |
 | `meva.py` | Structural action simulation |
 | `nexah_kernel.py` | Kernel interface |
 
@@ -104,51 +107,63 @@ print(analysis.trajectories)
 
 # Example Demos
 
-Several small demonstrations illustrate how the kernel can be used.
+Several runnable demonstrations illustrate how the kernel can be used to analyze and intervene in system structures.
 
-### Minimal navigation example
-
-```
-python -m ENGINE.nexah_kernel.demo_navigation
-```
-
-### Maze navigation demo
+### Risk Navigation Demo
 
 ```
+python -m ENGINE.nexah_kernel.demos.risk_navigation_demo
+```
+
+Demonstrates navigation across a system landscape containing risk regions and safer alternative paths.
+
+---
+
+### Cascade Failure Demo
+
+```
+python -m ENGINE.nexah_kernel.demos.cascade_failure_demo
+```
+
+Shows how local failures can propagate through a network and how structural intervention can stabilize the system.
+
+---
+
+### Regime Shift Demo
+
+```
+python -m ENGINE.nexah_kernel.demos.regime_shift_demo
+```
+
+Illustrates how structural thresholds can trigger regime changes and how new connections restore stability.
+
+---
+
+### Additional Examples
+
+```
+python -m ENGINE.nexah_kernel.demos.demo_navigation
 python -m ENGINE.nexah_kernel.demos.maze_navigation_demo
-```
-
-Shows how the kernel analyzes navigation paths through a simple maze.
-
-### Grid resilience demo
-
-```
 python -m ENGINE.nexah_kernel.demos.grid_resilience_demo
 ```
 
-Demonstrates structural resilience analysis and intervention in a network-like system.
+These smaller examples demonstrate basic navigation, structural paths, and redundancy patterns.
 
 ---
 
 # Testing
 
-A minimal kernel test is included:
+A minimal kernel test suite is included.
 
 ```
-ENGINE/nexah_kernel/test_kernel.py
-```
-
-Run with:
-
-```
-python -m ENGINE.nexah_kernel.test_kernel
+python -m ENGINE.nexah_kernel.tests.test_kernel
 ```
 
 ---
 
 # Design Principles
 
-The NEXAH kernel follows three principles.
+The NEXAH kernel follows three design principles.
 
 ### Minimal Core
 
@@ -156,11 +171,11 @@ The kernel is intentionally small and modular.
 
 ### System-Oriented
 
-Focus on **system structure, regimes, and navigation**, rather than data pipelines.
+Focus on **system structure, regimes, and navigation**, rather than data pipelines or large simulation environments.
 
 ### Composable
 
-The kernel can be embedded into larger simulations, infrastructure models, or decision-support systems.
+The kernel can be embedded into larger simulations, infrastructure models, agent systems, or decision-support frameworks.
 
 ---
 
