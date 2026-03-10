@@ -7,8 +7,8 @@ and compute possible navigation trajectories.
 The example system is a simple structural graph.
 """
 
-from models import StructuralGraph
-from nexah_kernel import NexahKernel
+from .models import StructuralGraph
+from .nexah_kernel import NexahKernel
 
 
 # --------------------------------------------------
