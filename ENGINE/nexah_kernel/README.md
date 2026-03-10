@@ -1,7 +1,5 @@
 # NEXAH Kernel
 
-# NEXAH Kernel
-
 A minimal navigation kernel for exploring and intervening in complex systems.
 
 ## NEXAH in 20 Seconds
