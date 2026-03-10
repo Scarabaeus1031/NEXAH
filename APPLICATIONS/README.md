@@ -2,7 +2,7 @@
 
 # NEXAH Applications
 
-![NEXAH Exploration Hub](../EXPLORATION_HUB/visuals/NEXAH_EXPLORATION_MAP.png)
+![NEXAH Exploration Hub](../EXPLORATION_HUB/visuals/NEXAH_Exploration_Map.png)
 
 This directory contains **system models and practical applications** built with the **NEXAH framework**.
 
