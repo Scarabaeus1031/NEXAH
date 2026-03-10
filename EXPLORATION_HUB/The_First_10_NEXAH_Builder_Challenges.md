@@ -72,7 +72,7 @@ Possible data sources:
 # Challenge 02  
 # Financial Contagion Network
 
-![Financial Systems](visuals/Financial_markets_currencies.png)
+![Financial Systems](visuals/Finanicial_markets_currencies.png)
 
 Global financial systems behave like **interconnected networks**.
 
