@@ -2,7 +2,7 @@
 
 # NEXAH Framework
 
-## Structural Navigation for Complex Systems
+## SStructural navigation for complex dynamical systems.
 
 ---
 
