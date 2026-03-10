@@ -1,5 +1,9 @@
 # NEXAH Applications
 
+# NEXAH Applications
+
+![NEXAH Exploration Hub](../EXPLORATION_HUB/visuals/NEXAH_EXPLORATION_MAP.png)
+
 This directory contains **system models and practical applications** built with the **NEXAH framework**.
 
 The goal of this layer is to demonstrate how structural models developed in the framework can be applied to **real-world dynamical systems**.
