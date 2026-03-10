@@ -1,56 +1,54 @@
 """
-Rotation Drift Coupled Animation
-================================
+Symmetry Morphing Animation
+===========================
 
-Animates a rotational system where angular drift slowly changes.
+Morphs between different rotational symmetries.
 
-Shows transition:
-
-polygon → rosette → spiral flower → ring interference
+triangle → square → pentagon → ... → 20-fold
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
+
 # --------------------------------------------------
 # Parameters
 # --------------------------------------------------
 
-n = 5
 radius = 5
-iterations = 3000
+iterations = 2500
 
-drift_max = 6.0
+n_min = 3
+n_max = 20
 
 fig, ax = plt.subplots(figsize=(7,7))
 
-line, = ax.plot([], [], lw=1.1)
+line, = ax.plot([],[],lw=1.2)
 
 ax.set_xlim(-6,6)
 ax.set_ylim(-6,6)
 ax.set_aspect("equal")
 
-ax.set_title("Rotation Drift Coupled System")
+ax.set_title("Symmetry Morphing Explorer")
 
 
 # guide circle
 t = np.linspace(0,2*np.pi,400)
-ax.plot(radius*np.cos(t), radius*np.sin(t), alpha=0.1)
+ax.plot(radius*np.cos(t), radius*np.sin(t), alpha=0.12)
 
 
 # --------------------------------------------------
 # Pattern generator
 # --------------------------------------------------
 
-def generate_pattern(drift_deg):
+def generate_pattern(n):
 
     base_angle = 2*np.pi/n
-    drift = np.deg2rad(drift_deg)
 
     k = np.arange(iterations)
 
-    theta = k*(base_angle + drift)
+    theta = k*base_angle
 
     r = radius*(0.7 + 0.3*np.cos(k*0.02))
 
@@ -66,13 +64,13 @@ def generate_pattern(drift_deg):
 
 def update(frame):
 
-    drift = frame * drift_max / 180
+    n = n_min + frame % (n_max-n_min)
 
-    x,y = generate_pattern(drift)
+    x,y = generate_pattern(n)
 
     line.set_data(x,y)
 
-    ax.set_title(f"Rotation Drift Coupled | drift={drift:.2f}°")
+    ax.set_title(f"Symmetry Morphing | n = {n}")
 
     return line,
 
@@ -80,8 +78,12 @@ def update(frame):
 ani = FuncAnimation(
     fig,
     update,
-    frames=180,
-    interval=40,
+    frames=300,
+    interval=50,
+    blit=True
+)
+
+plt.show()    interval=40,
     blit=True
 )
 
