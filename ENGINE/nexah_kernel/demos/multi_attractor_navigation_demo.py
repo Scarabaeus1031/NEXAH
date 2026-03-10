@@ -1,5 +1,6 @@
 """
 Multi-Attractor Navigation Demo
+===============================
 
 This example illustrates how a system can navigate a landscape
 containing multiple attractors.
@@ -17,14 +18,28 @@ Q3°
 Each step moves the system toward the nearest attractor while
 still allowing exploration of the landscape.
 
-This illustrates how NEXAH can analyze systems with multiple
-stable regimes.
+Kernel principle:
+
+    state_(t+1) = F(state_t | G, L, {Q_i})
+
+This illustrates how NEXAH can analyze systems with
+multiple stable regimes.
 """
 
 import math
 import random
 
 from ..state_dynamics import ObservationFrame, StateDynamics
+
+
+# --------------------------------------------------
+# Parameters
+# --------------------------------------------------
+
+STEP_SIZE = 0.2
+NOISE = 0.05
+ATTRACTOR_RADIUS = 0.08
+MAX_STEPS = 30
 
 
 # --------------------------------------------------
@@ -56,13 +71,18 @@ for name, pos in attractors.items():
 
 
 # --------------------------------------------------
-# Transition rule
+# Distance function
 # --------------------------------------------------
 
 def distance(a, b):
+    dx = a[0] - b[0]
+    dy = a[1] - b[1]
+    return math.sqrt(dx*dx + dy*dy)
 
-    return math.sqrt((a[0]-b[0])**2 + (a[1]-b[1])**2)
 
+# --------------------------------------------------
+# Transition rule
+# --------------------------------------------------
 
 def multi_attractor_transition(state):
     """
@@ -71,7 +91,6 @@ def multi_attractor_transition(state):
 
     x, y = state
 
-    # find nearest attractor
     nearest = None
     nearest_dist = float("inf")
 
@@ -83,17 +102,13 @@ def multi_attractor_transition(state):
             nearest = pos
             nearest_dist = d
 
-    # move toward attractor
     ax, ay = nearest
 
-    step = 0.2
+    new_x = x + STEP_SIZE * (ax - x)
+    new_y = y + STEP_SIZE * (ay - y)
 
-    new_x = x + step * (ax - x)
-    new_y = y + step * (ay - y)
-
-    # small noise to keep exploration
-    new_x += random.uniform(-0.05, 0.05)
-    new_y += random.uniform(-0.05, 0.05)
+    new_x += random.uniform(-NOISE, NOISE)
+    new_y += random.uniform(-NOISE, NOISE)
 
     return (new_x, new_y)
 
@@ -118,9 +133,7 @@ print(initial_state)
 # Simulate trajectory
 # --------------------------------------------------
 
-steps = 30
-
-trajectory = dynamics.trajectory(initial_state, steps)
+trajectory = dynamics.trajectory(initial_state, MAX_STEPS)
 
 print("\nMulti-Attractor Navigation\n")
 
@@ -128,7 +141,6 @@ for t, state in enumerate(trajectory):
 
     x, y = state
 
-    # determine closest attractor
     closest = None
     best_dist = float("inf")
 
@@ -146,3 +158,8 @@ for t, state in enumerate(trajectory):
         f"y={y:.3f}  "
         f"closest_attractor={closest}"
     )
+
+    if best_dist < ATTRACTOR_RADIUS:
+
+        print(f"\nSystem entered attractor basin {closest}\n")
+        break
