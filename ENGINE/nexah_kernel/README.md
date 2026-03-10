@@ -21,13 +21,11 @@ The result is **risk-aware system navigation** rather than purely reward-driven 
 
 ---
 
-A minimal navigation kernel for exploring and intervening in complex systems.
-
 **NEXAH reduces complex system dynamics to navigable regime structures.**
 
 The NEXAH kernel provides a lightweight framework for analyzing structural systems, identifying regime landscapes, and testing structural interventions.
 
-It is designed as a **modular system navigation engine** that can operate on graphs representing infrastructures, ecosystems, networks, or other complex systems.
+It is designed as a **modular system navigation engine** that operates on graphs representing infrastructures, ecosystems, networks, or other complex systems.
 
 Rather than treating systems purely as simulation environments, NEXAH models systems as **navigable structural landscapes**.
 
@@ -51,7 +49,7 @@ The NEXAH kernel exposes a minimal API for structural system analysis.
 | Method | Description |
 |------|------|
 | `analyze_system()` | Analyze navigation trajectories across the regime landscape |
-| `simulate_action(action)` | Apply structural interventions to the system |
+| `simulate_action(action)` | Apply structural interventions to the system graph |
 
 ### Example
 
@@ -88,7 +86,7 @@ result = kernel.simulate_action({
 NEXAH models systems as **structural graphs embedded in regime landscapes**.
 
 A regime landscape represents regions of stability, instability, and transition within a system.  
-The kernel analyzes possible trajectories across this landscape and allows simulation of structural modifications to explore system resilience.
+The kernel analyzes **navigation trajectories** across this landscape and allows simulation of structural modifications to explore system resilience.
 
 Pipeline:
 
