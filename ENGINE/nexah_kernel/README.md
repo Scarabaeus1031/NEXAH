@@ -195,7 +195,7 @@ python -m ENGINE.nexah_kernel.tests.test_kernel
 
 # Design Principles
 
-The NEXAH kernel follows three design principles.
+The NEXAH kernel follows four design principles.
 
 ### Minimal Core
 
@@ -208,6 +208,14 @@ Focus on **system structure, regimes, and navigation**, rather than data pipelin
 ### Composable
 
 The kernel can be embedded into larger simulations, infrastructure models, agent systems, or decision-support frameworks.
+
+### Small Kernel
+
+The NEXAH kernel is intentionally compact.
+
+The core navigation logic fits in only a few hundred lines of code, reflecting the design goal of maintaining a **clear, transparent, and extensible system navigation core**.
+
+Higher-level capabilities, simulations, and integrations are designed to grow **around the kernel**, rather than expanding the kernel itself.
 
 ---
 
