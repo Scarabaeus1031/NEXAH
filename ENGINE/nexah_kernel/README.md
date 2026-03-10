@@ -1,18 +1,24 @@
 # NEXAH Kernel
 
-Minimal navigation kernel for exploring and intervening in complex systems.
+A minimal kernel for analyzing, navigating, and intervening in complex systems.
 
-The NEXAH kernel provides a lightweight framework for analyzing structural systems, identifying regime landscapes, and testing structural interventions.
+The NEXAH kernel provides a lightweight framework for representing systems as structural graphs embedded in **regime landscapes**.  
+It enables agents to analyze system stability, evaluate navigation trajectories, and simulate structural interventions.
 
-It is designed as a **modular system navigation engine** that can operate on graphs representing infrastructures, ecosystems, networks, or other complex systems.
+Rather than treating systems purely as simulation environments, NEXAH models them as **navigable structural landscapes**.
+
+The goal is not control, but navigation.
 
 ---
 
 # Core Idea
 
-NEXAH models systems as **structural graphs embedded in regime landscapes**.
+NEXAH represents complex systems as **structural graphs embedded in regime landscapes**.
 
-The kernel analyzes possible trajectories through the system and allows simulation of structural modifications to explore system resilience.
+A regime landscape maps system states into regions of stability, instability, and transition.  
+Stable regions form attractors, while thresholds define boundaries where system behavior may change.
+
+The kernel analyzes possible trajectories through this landscape and allows simulation of structural modifications to explore system resilience.
 
 Pipeline:
 
@@ -48,7 +54,7 @@ Action Engine (MEVA)
 Structural Intervention
 ```
 
-This allows complex systems to be **analyzed, navigated, and structurally modified**.
+This architecture allows complex systems to be **analyzed, navigated, and structurally modified**.
 
 ---
 
@@ -65,6 +71,8 @@ The NEXAH kernel consists of a small set of modular layers:
 | `navigation.py` | Navigation analysis |
 | `meva.py` | Structural action simulation |
 | `nexah_kernel.py` | Kernel interface |
+
+Each layer performs a distinct step in transforming raw system structure into **navigable regime information**.
 
 ---
 
@@ -141,19 +149,20 @@ python -m ENGINE.nexah_kernel.test_kernel
 
 # Design Principles
 
-The NEXAH kernel follows three principles.
+The NEXAH kernel follows three design principles.
 
 ### Minimal Core
 
-The kernel is intentionally small and modular.
+The kernel is intentionally small and modular.  
+Its purpose is to provide a minimal navigation layer rather than a full simulation environment.
 
 ### System-Oriented
 
-Focus on **system structure, regimes, and navigation**, rather than data pipelines.
+The framework focuses on **system structure, regimes, and transitions** rather than data pipelines or model training.
 
 ### Composable
 
-The kernel can be embedded into larger simulations, infrastructure models, or decision-support systems.
+The kernel can be embedded into larger simulations, infrastructure models, agent systems, or decision-support tools.
 
 ---
 
@@ -167,4 +176,4 @@ The API may evolve as the framework expands.
 
 # NEXAH
 
-NEXAH is part of the broader **SCARABÆUS1033 research framework** exploring navigation and structural resilience in complex systems.
+NEXAH is part of the broader **SCARABÆUS1033 research framework**, which explores structural navigation and resilience in complex systems.
