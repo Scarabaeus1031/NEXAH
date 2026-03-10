@@ -102,9 +102,9 @@ def spiral_step(x, y):
     r = math.sqrt(x*x + y*y)
     angle = math.atan2(y, x)
 
-    # spiral inward
-    r *= 0.85
-    angle += 0.4
+    # inward spiral
+    r *= 0.87
+    angle += 0.45
 
     new_x = r * math.cos(angle)
     new_y = r * math.sin(angle)
@@ -125,12 +125,15 @@ def pentagon_transition(state):
     # spatial update
     x, y = spiral_step(x, y)
 
+    radius = math.sqrt(x*x + y*y)
+
     # structural update
     if domain != attractor:
 
         idx = domains.index(domain)
 
-        if random.random() < 0.12:
+        # allow attractor only near the center
+        if radius < 1.2 and random.random() < 0.35:
             domain = attractor
         else:
             domain = domains[(idx + 1) % len(domains)]
@@ -152,7 +155,7 @@ dynamics = StateDynamics(
 # Simulation
 # --------------------------------------------------
 
-steps = 30
+steps = 40
 
 trajectory = dynamics.trajectory(state, steps)
 
@@ -173,7 +176,7 @@ for t, s in enumerate(trajectory):
         f"domain={domain}"
     )
 
-    if r < 0.8 or domain == attractor:
+    if r < 0.7 or domain == attractor:
 
         print("\nSystem reached attractor region Q°\n")
         break
