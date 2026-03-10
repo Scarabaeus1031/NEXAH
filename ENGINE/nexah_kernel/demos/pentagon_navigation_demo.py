@@ -29,6 +29,23 @@ from ..state_dynamics import ObservationFrame, StateDynamics
 
 
 # --------------------------------------------------
+# ASCII Pentagon Structure
+# --------------------------------------------------
+
+print("""
+NEXAH Pentagon Navigation Structure
+
+            Analysis
+         /             \\
+   Simulation       Applications
+        \\             /
+         Navigation — Discovery
+                 |
+                Q°
+""")
+
+
+# --------------------------------------------------
 # Observation Frame (Q° reference frame)
 # --------------------------------------------------
 
@@ -70,9 +87,6 @@ print("-", attractor)
 def pentagon_transition(state):
     """
     Move around the pentagon or converge to the attractor.
-
-    The system typically moves to the next domain in the
-    pentagon structure but occasionally jumps to Q°.
     """
 
     if state == attractor:
@@ -80,11 +94,11 @@ def pentagon_transition(state):
 
     idx = domains.index(state)
 
-    # lower probability to jump to attractor
+    # probability to jump toward attractor
     if random.random() < 0.15:
         return attractor
 
-    # otherwise move to next domain in pentagon
+    # otherwise move to next domain
     next_idx = (idx + 1) % len(domains)
 
     return domains[next_idx]
