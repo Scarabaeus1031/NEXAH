@@ -19,15 +19,36 @@ of structural modifications to explore system resilience.
 
 Pipeline:
 
-```
 System Graph
-    ↓
+↓
 Regime Landscape
-    ↓
+↓
 Navigation Analysis
-    ↓
+↓
 Structural Intervention
-```
+
+---
+
+# Kernel Architecture
+
+The NEXAH kernel follows a simple layered structure:
+
+
+System Graph
+│
+▼
+Regime Landscape (MESO)
+│
+▼
+Navigation Engine
+│
+▼
+Action Engine (MEVA)
+│
+▼
+Structural Intervention
+
+This allows complex systems to be **analyzed, navigated, and structurally modified**.
 
 ---
 
@@ -70,70 +91,4 @@ kernel = NexahKernel(graph, landscape)
 analysis = kernel.analyze_system()
 
 print(analysis.trajectories)
-```
 
----
-
-# Demo
-
-A minimal runnable demo is included:
-
-```
-ENGINE/nexah_kernel/demo_navigation.py
-```
-
-Run from repository root:
-
-```
-python -m ENGINE.nexah_kernel.demo_navigation
-```
-
----
-
-# Testing
-
-A minimal kernel test is included:
-
-```
-ENGINE/nexah_kernel/test_kernel.py
-```
-
-Run with:
-
-```
-python -m ENGINE.nexah_kernel.test_kernel
-```
-
----
-
-# Design Principles
-
-The NEXAH kernel follows three principles:
-
-**Minimal Core**
-
-The kernel is intentionally small and modular.
-
-**System-Oriented**
-
-Focus on system structure, regimes, and navigation rather than data pipelines.
-
-**Composable**
-
-The kernel can be embedded into larger simulations, infrastructure models,
-or decision-support systems.
-
----
-
-# Status
-
-Current status: **experimental kernel**
-
-The API may evolve as the framework expands.
-
----
-
-# NEXAH
-
-NEXAH is part of the broader SCARABÆUS1033 research framework exploring
-navigation and structural resilience in complex systems.
