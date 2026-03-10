@@ -25,6 +25,22 @@ from ..state_dynamics import ObservationFrame, StateDynamics
 
 
 # --------------------------------------------------
+# Kernel description
+# --------------------------------------------------
+
+print("""
+NEXAH Monte Carlo Navigation
+
+Kernel equation
+
+state_(t+1) = F(state_t | G, L, Q°)
+
+Monte Carlo experiment:
+many trajectories → statistical attractor convergence
+""")
+
+
+# --------------------------------------------------
 # Observation Frame
 # --------------------------------------------------
 
@@ -53,7 +69,7 @@ attractor = "Q°"
 
 
 # --------------------------------------------------
-# Spiral dynamics (same as previous demo)
+# Spiral dynamics
 # --------------------------------------------------
 
 def spiral_step(x, y):
@@ -71,7 +87,7 @@ def spiral_step(x, y):
 
 
 # --------------------------------------------------
-# Pentagon transition (same dynamics)
+# Pentagon transition
 # --------------------------------------------------
 
 def pentagon_transition(state):
@@ -86,6 +102,7 @@ def pentagon_transition(state):
 
         idx = domains.index(domain)
 
+        # stochastic jump toward attractor
         if random.random() < 0.12:
             domain = attractor
         else:
@@ -113,7 +130,6 @@ max_steps = 40
 
 steps_to_attractor = []
 final_positions = []
-
 
 for run in range(runs):
 
@@ -143,11 +159,19 @@ for run in range(runs):
 # Statistics
 # --------------------------------------------------
 
-mean_steps = sum(steps_to_attractor) / len(steps_to_attractor)
-
 print("\nMonte Carlo Results\n")
-print("runs:", runs)
-print("mean steps to attractor:", round(mean_steps, 2))
+
+if len(steps_to_attractor) > 0:
+
+    mean_steps = sum(steps_to_attractor) / len(steps_to_attractor)
+
+    print("runs:", runs)
+    print("successful convergences:", len(steps_to_attractor))
+    print("mean steps to attractor:", round(mean_steps, 2))
+
+else:
+
+    print("No trajectories reached attractor")
 
 
 # --------------------------------------------------
@@ -157,7 +181,14 @@ print("mean steps to attractor:", round(mean_steps, 2))
 xs = [p[0] for p in final_positions]
 ys = [p[1] for p in final_positions]
 
-plt.figure(figsize=(6,6))
+plt.figure(figsize=(12,5))
+
+
+# --------------------------------------------------
+# Spatial convergence
+# --------------------------------------------------
+
+plt.subplot(1,2,1)
 
 plt.scatter(xs, ys, alpha=0.6)
 
@@ -169,4 +200,19 @@ plt.ylabel("y")
 
 plt.gca().set_aspect("equal")
 
+
+# --------------------------------------------------
+# Convergence time distribution
+# --------------------------------------------------
+
+plt.subplot(1,2,2)
+
+plt.hist(steps_to_attractor, bins=15)
+
+plt.title("Steps to Attractor Distribution")
+plt.xlabel("steps")
+plt.ylabel("count")
+
+
+plt.tight_layout()
 plt.show()
