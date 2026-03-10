@@ -1,5 +1,29 @@
 # NEXAH Kernel
 
+# NEXAH Kernel
+
+A minimal navigation kernel for exploring and intervening in complex systems.
+
+## NEXAH in 20 Seconds
+
+NEXAH is a minimal kernel for navigating complex systems.
+
+Instead of treating systems purely as simulations, NEXAH transforms system structure into a regime landscape:
+
+system → regimes → navigation → intervention
+
+This allows agents to:
+- identify stability zones
+- detect regime transitions
+- evaluate navigation trajectories
+- test structural interventions
+
+The result is risk-aware system navigation rather than purely reward-driven optimization.
+
+---
+
+**NEXAH reduces complex system dynamics to navigable regime structures.**
+
 A minimal navigation kernel for exploring and intervening in complex systems.
 
 **NEXAH reduces complex system dynamics to navigable regime structures.**
