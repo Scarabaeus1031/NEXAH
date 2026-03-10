@@ -43,6 +43,12 @@ NEXAH Pentagon + Spiral Navigation
 Spatial dynamics: spiral convergence toward Q°
 """)
 
+print("""
+Kernel equation
+
+state_(t+1) = F(state_t | G, L, Q°)
+""")
+
 
 # --------------------------------------------------
 # Observation Frame
@@ -102,9 +108,9 @@ def spiral_step(x, y):
     r = math.sqrt(x*x + y*y)
     angle = math.atan2(y, x)
 
-    # inward spiral
-    r *= 0.87
-    angle += 0.45
+    # spiral inward
+    r *= 0.85
+    angle += 0.4
 
     new_x = r * math.cos(angle)
     new_y = r * math.sin(angle)
@@ -125,15 +131,12 @@ def pentagon_transition(state):
     # spatial update
     x, y = spiral_step(x, y)
 
-    radius = math.sqrt(x*x + y*y)
-
     # structural update
     if domain != attractor:
 
         idx = domains.index(domain)
 
-        # allow attractor only near the center
-        if radius < 1.2 and random.random() < 0.35:
+        if random.random() < 0.12:
             domain = attractor
         else:
             domain = domains[(idx + 1) % len(domains)]
@@ -155,17 +158,23 @@ dynamics = StateDynamics(
 # Simulation
 # --------------------------------------------------
 
-steps = 40
+steps = 30
 
 trajectory = dynamics.trajectory(state, steps)
 
 print("\nPentagon + Spiral Navigation\n")
+
+xs = []
+ys = []
 
 for t, s in enumerate(trajectory):
 
     x = s["x"]
     y = s["y"]
     domain = s["domain"]
+
+    xs.append(x)
+    ys.append(y)
 
     r = math.sqrt(x*x + y*y)
 
@@ -176,7 +185,31 @@ for t, s in enumerate(trajectory):
         f"domain={domain}"
     )
 
-    if r < 0.7 or domain == attractor:
+    if r < 0.8 or domain == attractor:
 
         print("\nSystem reached attractor region Q°\n")
         break
+
+
+# --------------------------------------------------
+# Optional trajectory visualization
+# --------------------------------------------------
+
+try:
+
+    import matplotlib.pyplot as plt
+
+    plt.figure(figsize=(5,5))
+    plt.plot(xs, ys, marker="o")
+
+    plt.scatter([0],[0], marker="*", s=200)
+    plt.title("NEXAH Spiral Navigation Trajectory")
+    plt.xlabel("x")
+    plt.ylabel("y")
+
+    plt.gca().set_aspect("equal")
+
+    plt.show()
+
+except Exception:
+    pass
