@@ -1,14 +1,22 @@
 """
 Pentagon Navigation Demo
+========================
 
 This example illustrates navigation across five structural domains
 arranged as a pentagon around a central attractor Q°.
 
-Each step moves the system along the pentagon structure until the
-system converges toward the central attractor.
+The system moves across structural domains until it converges
+toward the attractor.
 
-The demo illustrates how trajectories can move across structural
-domains before stabilizing at the attractor.
+This demonstrates the NEXAH kernel navigation principle:
+
+    state_(t+1) = F(state_t | G, L, Q°)
+
+where
+
+G   = structural graph
+L   = regime landscape
+Q°  = attractor / reference frame
 
 Domains:
 
@@ -17,10 +25,6 @@ Applications
 Discovery
 Navigation
 Simulation
-
-Center:
-
-Q° (reference frame / attractor)
 """
 
 import random
@@ -29,7 +33,7 @@ from ..state_dynamics import ObservationFrame, StateDynamics
 
 
 # --------------------------------------------------
-# ASCII Pentagon Structure
+# Structural Diagram
 # --------------------------------------------------
 
 print("""
@@ -45,8 +49,19 @@ NEXAH Pentagon Navigation Structure
 """)
 
 
+print("""
+Kernel Dynamics
+
+state_(t+1) = F(state_t | G, L, Q°)
+
+G  : structural graph
+L  : regime landscape
+Q° : attractor / reference frame
+""")
+
+
 # --------------------------------------------------
-# Observation Frame (Q° reference frame)
+# Observation Frame
 # --------------------------------------------------
 
 frame = ObservationFrame(
@@ -59,7 +74,7 @@ print(frame.describe())
 
 
 # --------------------------------------------------
-# Define pentagon domains
+# Pentagon Domains
 # --------------------------------------------------
 
 domains = [
@@ -81,7 +96,7 @@ print("-", attractor)
 
 
 # --------------------------------------------------
-# Transition rule
+# Transition Rule
 # --------------------------------------------------
 
 def pentagon_transition(state):
@@ -98,7 +113,7 @@ def pentagon_transition(state):
     if random.random() < 0.15:
         return attractor
 
-    # otherwise move to next domain
+    # otherwise move along the pentagon
     next_idx = (idx + 1) % len(domains)
 
     return domains[next_idx]
@@ -111,7 +126,7 @@ dynamics = StateDynamics(
 
 
 # --------------------------------------------------
-# Initial state
+# Initial State
 # --------------------------------------------------
 
 initial_state = random.choice(domains)
@@ -121,7 +136,7 @@ print(initial_state)
 
 
 # --------------------------------------------------
-# Simulate trajectory
+# Simulate Navigation
 # --------------------------------------------------
 
 steps = 20
