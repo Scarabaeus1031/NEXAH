@@ -14,6 +14,26 @@ The goal is not control, but navigation.
 
 ---
 
+# Kernel API
+
+The NEXAH kernel exposes a minimal API for structural system analysis.
+
+### Core Objects
+
+| Object | Purpose |
+|------|------|
+| `StructuralGraph` | Representation of the system structure |
+| `NexahKernel` | Main interface for analysis and intervention |
+
+### Core Operations
+
+| Method | Description |
+|------|------|
+| `analyze_system()` | Analyze navigation trajectories within the regime landscape |
+| `simulate_action(action)` | Apply structural modifications to the system |
+
+---
+
 # Core Idea
 
 NEXAH models systems as **structural graphs embedded in regime landscapes**.
@@ -117,8 +137,6 @@ python -m ENGINE.nexah_kernel.demos.risk_navigation_demo
 
 Demonstrates navigation across a system landscape containing risk regions and safer alternative paths.
 
----
-
 ### Cascade Failure Demo
 
 ```
@@ -126,8 +144,6 @@ python -m ENGINE.nexah_kernel.demos.cascade_failure_demo
 ```
 
 Shows how local failures can propagate through a network and how structural intervention can stabilize the system.
-
----
 
 ### Regime Shift Demo
 
@@ -137,8 +153,6 @@ python -m ENGINE.nexah_kernel.demos.regime_shift_demo
 
 Illustrates how structural thresholds can trigger regime changes and how new connections restore stability.
 
----
-
 ### Additional Examples
 
 ```
@@ -146,8 +160,6 @@ python -m ENGINE.nexah_kernel.demos.demo_navigation
 python -m ENGINE.nexah_kernel.demos.maze_navigation_demo
 python -m ENGINE.nexah_kernel.demos.grid_resilience_demo
 ```
-
-These smaller examples demonstrate basic navigation, structural paths, and redundancy patterns.
 
 ---
 
