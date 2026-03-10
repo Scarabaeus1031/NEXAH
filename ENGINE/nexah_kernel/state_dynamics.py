@@ -8,13 +8,31 @@ The kernel treats systems as evolving state spaces:
 
     state_t → state_(t+1)
 
+Local dynamics are defined by a transition function:
+
+    state_(t+1) = F(state_t)
+
+Within the NEXAH kernel this evolution occurs relative to a
+structural and observational context:
+
+    state_(t+1) = F(state_t | G, L, Q°)
+
+Where:
+
+    G   = StructuralGraph (system structure)
+    L   = RegimeLandscape (stability regions and thresholds)
+    Q°  = ObservationFrame (reference frame for interpretation)
+    F   = StateDynamics transition rule
+
 This module introduces two fundamental structures:
 
 ObservationFrame
-    Defines how system states are interpreted (reference frame Q°).
+    Defines the coordinate frame in which system states are
+    interpreted and compared.
 
 StateDynamics
-    Defines the transition rule describing how states evolve over time.
+    Defines the transition rule describing how states evolve
+    over time and provides utilities for generating trajectories.
 """
 
 from dataclasses import dataclass
