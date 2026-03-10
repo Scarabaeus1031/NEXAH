@@ -29,7 +29,12 @@ NEXAH extracts **state graphs, regimes, and cascade risks** from system models a
 
 Run the demo simulation:
 
+Demo script:  
+[BUILDER_LAB/demos/nexah_demo.py](BUILDER_LAB/demos/nexah_demo.py)
+
+```
 python BUILDER_LAB/demos/nexah_demo.py
+```
 
 This demonstrates the **NEXAH stabilization cycle**:
 
