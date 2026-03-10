@@ -1,52 +1,237 @@
-
 # NEXAH Framework
 
 ## Structural Navigation for Complex Systems
 
 **NEXAH** is a structural navigation framework for **analyzing, stabilizing, and navigating complex dynamical systems.**
 
-It provides tools to:
+It enables agents to understand **regime transitions, cascade risks, and stability landscapes**, allowing systems to be steered toward stable attractors.
 
-• model systems as finite regime graphs  
-• analyze stability landscapes and cascade risks  
-• compute navigation strategies toward stable attractors  
+Typical applications include:
 
-Typical use cases include:
-
-• power grid stability analysis  
-• cascading failure prediction  
-• infrastructure resilience modeling  
-• supply chain system navigation  
-• climate and environmental regime analysis  
-
-NEXAH combines ideas from:
-
-- dynamical systems theory
-- control theory
-- abstract interpretation
-- topology and geometry
-- policy optimization
-
-Rather than only simulating system evolution, **NEXAH focuses on navigating systems through regime landscapes toward stability.**
+- power grid stability analysis  
+- cascading failure prediction  
+- infrastructure resilience modeling  
+- supply chain system navigation  
+- climate and environmental regime analysis  
 
 ---
 
-## NEXAH System Architecture
+# Project Structure
 
-![NEXAH Applications Architecture](./NAVIGATOR/visuals/nexah_applications_architecture.png)
+![From Library to Instrument](./EXPLORATION_HUB/visuals/From_Library_to_Instrument_ii.png)
 
-The NEXAH framework follows a layered pipeline connecting formal theory with real-world system analysis.
+The broader project connects three layers:
 
-The architecture progresses through several stages:
+```
+SCARABÆUS1033
+Structural knowledge library
 
-**Research → Operators → Engine → Application Models → System Integration → Real Systems**
+↓
 
-- **Research** establishes the formal foundations of the framework (axioms, principles, theorems).
-- **Operators** define the algebraic structures used to analyze system stability.
-- **Engine** implements these operators as executable structural analysis tools.
-- **Application Models** represent classes of dynamical systems.
-- **System Integration** connects the framework to external simulators and infrastructure models.
-- **Real Systems** represent practical domains such as infrastructure networks, environmental systems, and urban systems.
+NEXAH Framework
+System modeling and navigation engine
+
+↓
+
+Exploration Hub
+Open builder environment
+```
+
+- **SCARABÆUS1033** maps structural knowledge patterns across nature and civilization  
+- **NEXAH** implements system navigation tools  
+- **Exploration Hub** invites builders to model real-world systems
+
+---
+
+# Quick Navigation
+
+| Section | Description |
+|------|-------------|
+| Framework Architecture | Conceptual model of NEXAH |
+| Stability Engine | Core computational engine |
+| Builder Lab | Simulation sandbox |
+| Exploration Hub | Open system modeling environment |
+| Research | Mathematical foundations |
+
+---
+
+# NEXAH Framework Architecture
+
+![NEXAH Framework](./EXPLORATION_HUB/visuals/NEXAH_FRAMEWORK.png)
+
+NEXAH connects multiple domains of complex system analysis.
+
+Core components include:
+
+- regime detection  
+- anomaly detection  
+- bio-inspired navigation operators  
+- system stability analysis  
+- multi-layer data integration  
+
+The framework combines ideas from:
+
+- dynamical systems theory  
+- control theory  
+- topology and geometry  
+- abstract interpretation  
+- policy optimization  
+
+---
+
+# Core Concept
+
+NEXAH models **finite dynamical systems as state graphs**.
+
+```
+State → Regime → Risk → Navigation → Action → Next State
+```
+
+Key structural layers:
+
+State Space  
+↓  
+Regime Classification  
+↓  
+Transition Geometry  
+↓  
+Navigation Policies  
+
+This enables agents to **navigate complex systems rather than only simulate them.**
+
+---
+
+# Builder Lab
+
+Location:
+
+```
+/BUILDER_LAB
+```
+
+The Builder Lab provides a sandbox for experimentation:
+
+- cascade dynamics
+- infrastructure simulations
+- system navigation experiments
+- visualization tools
+
+Example demo:
+
+```
+python BUILDER_LAB/demos/nexah_demo.py
+```
+
+---
+
+# Exploration Hub
+
+![Exploration Framework](./EXPLORATION_HUB/visuals/NEXAH_FRAMEWORK.png)
+
+The **Exploration Hub** extends the framework into an open builder environment.
+
+Location:
+
+```
+EXPLORATION_HUB/
+```
+
+Documentation:
+
+```
+EXPLORATION_HUB/README.md
+```
+
+The hub invites builders to explore complex systems such as:
+
+- planetary infrastructure
+- ecosystems
+- financial systems
+- cities and logistics networks
+- astronomical observation data
+
+It includes open **builder challenges** for modeling and navigating complex systems.
+
+---
+
+# Quick Start
+
+Clone the repository:
+
+```
+git clone https://github.com/Scarabaeus1033/NEXAH.git
+cd NEXAH
+```
+
+Install dependencies:
+
+```
+pip install -e .
+```
+
+Run the demo simulation:
+
+```
+python BUILDER_LAB/demos/nexah_demo.py
+```
+
+Example stabilization cycle:
+
+```
+freq_drop
+→ start_reserve
+→ congestion
+→ reconfigure_grid
+→ stable
+```
+
+This demonstrates the **NEXAH stabilization cycle**:
+
+```
+State → Regime → Risk → Navigation → Action
+```
+
+---
+
+# Why NEXAH
+
+Many complex systems share structural challenges:
+
+- cascading failures  
+- unstable regime transitions  
+- limited system observability  
+- difficult stabilization strategies  
+
+Traditional simulators can **simulate system evolution**, but they rarely provide tools to **navigate regime landscapes**.
+
+NEXAH introduces a structural layer enabling:
+
+- regime detection  
+- risk geometry analysis  
+- cascade prediction  
+- policy-guided stabilization  
+
+---
+
+# Repository Map
+
+| Layer | Description |
+|------|-------------|
+| ENGINE | Finite algebra core |
+| FRAMEWORK | Conceptual architecture |
+| RESEARCH | Mathematical foundations |
+| APPLICATIONS | Dynamical system models |
+| BUILDER LAB | Simulation sandbox |
+| EXPLORATION HUB | Open builder environment |
+
+---
+
+# License
+
+Code: **Apache License 2.0**  
+Documentation: **CC BY 4.0**
+
+© 2026 Thomas K. R. Hofmann- **Real Systems** represent practical domains such as infrastructure networks, environmental systems, and urban systems.
 
 This pipeline allows NEXAH to bridge **formal structural theory and real-world system navigation**.
 
