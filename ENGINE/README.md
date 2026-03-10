@@ -1,22 +1,76 @@
 # NEXAH Engine
 
-**Version 1.2 — Structural Stability & Architecture Discovery Engine**
+**Computational framework for stability landscapes, regime analysis, and resilient architectures.**
 
-The **NEXAH Engine** is the executable structural analysis layer of the
-NEXAH framework.
+The **NEXAH Engine** is the executable computational layer of the NEXAH framework.
 
-It combines:
+It provides algorithms for exploring **stability landscapes, structural regimes, and resilient architectures in complex systems**.
 
-• finite abstract interpretation  
-• order-theoretic computation  
+The engine combines methods from:
+
+• order theory  
+• abstract interpretation  
+• dynamical systems  
+• topology  
+• spectral graph theory  
 • stability landscape analysis  
-• dynamical systems exploration  
-• topology and spectral graph analysis  
-• architecture discovery algorithms  
 
-The engine provides a **structurally verified computational framework**
-for modeling stability landscapes, fixpoint structures, and regime
-transitions in finite systems.
+to produce **structurally interpretable models of complex systems**.
+
+---
+
+# Core Architecture
+
+The NEXAH framework is organized into three conceptual layers:
+
+```
+RESEARCH LAYER
+(formal theory & structural models)
+
+        ↓
+
+ENGINE
+(computational execution)
+
+        ↓
+
+STRUCTURAL OUTPUT
+(stability landscapes, regime analysis, architecture discovery)
+```
+
+The **Engine** translates formal structural theory into executable models,
+allowing exploration of stability regimes and architecture spaces.
+
+---
+
+# NEXAH Kernel
+
+At the core of the engine lies a minimal navigation kernel.
+
+```
+ENGINE/nexah_kernel/
+```
+
+The kernel provides the **core navigation logic** for analyzing regime
+landscapes in complex systems.
+
+It implements:
+
+• regime landscape construction  
+• navigation trajectory analysis  
+• structural intervention simulation  
+
+The kernel is intentionally compact, consisting of only a few hundred
+lines of code.
+
+Additional functionality in the Engine builds **around this kernel**
+rather than expanding it.
+
+See:
+
+```
+ENGINE/nexah_kernel/README.md
+```
 
 ---
 
@@ -65,18 +119,20 @@ Empirical result:
 Resilience ≈ 0.355 + 0.401 · (λ₂ / λmax)
 ```
 
-This suggests that **stable architectures maximize spectral
-connectivity**.
+This suggests that **stable architectures maximize spectral connectivity**.
 
 ---
 
-# Visual Example
+# Visual Examples
 
 ![NEXAH Engine Execution Flow](visuals/engine_execution_flow.png)
 
 ### Stability Landscape Example
 
 ![Stability Landscape](visuals/01_landscape.png)
+
+These visualizations illustrate how the engine reconstructs **stability
+landscapes and regime structures** from structural system models.
 
 ---
 
@@ -98,24 +154,6 @@ Detailed documentation for the engine architecture and research context:
 
 • Research Context  
 `docs/RESEARCH_CONTEXT.md`
-
----
-
-# Architectural Position
-
-The NEXAH architecture consists of three conceptual layers:
-
-```
-RESEARCH (formal structure)
-            ↓
-ENGINE (structural execution)
-            ↓
-STRUCTURAL OUTPUT / ANALYSIS
-```
-
-The Engine translates formal structural theory into executable algebraic
-models, stability landscapes, and finite abstract interpretation
-systems.
 
 ---
 
@@ -157,34 +195,34 @@ Implemented components include:
 
 ### Landscape Construction
 
-• Stability landscape generator  
-• Gradient field computation  
+• stability landscape generator  
+• gradient field computation  
 • Hessian field analysis  
-• Critical point detection  
+• critical point detection  
 
 ### Basin Structure
 
-• Basin segmentation  
-• Basin transition graph  
-• Metastability mapping  
+• basin segmentation  
+• basin transition graph  
+• metastability mapping  
 
 ### Dynamical Systems Analysis
 
-• Phase portraits  
+• phase portraits  
 • Lyapunov spectrum estimation  
 • Koopman operator approximation  
-• Diffusion maps  
+• diffusion maps  
 
 ### Topological Structure
 
 • Morse complex construction  
-• Persistent homology  
-• Topological skeleton extraction  
+• persistent homology  
+• topological skeleton extraction  
 
 ### Spectral Analysis
 
-• Eigenmode decomposition  
-• Diffusion geometry  
+• eigenmode decomposition  
+• diffusion geometry  
 • Wasserstein landscape geometry  
 
 ---
@@ -195,9 +233,9 @@ The engine also supports explicit **landscape dynamics simulations**.
 
 Modules include:
 
-• Gradient flow dynamics  
-• Attractor network extraction  
-• Landscape evolution models  
+• gradient flow dynamics  
+• attractor network extraction  
+• landscape evolution models  
 
 These modules allow exploration of:
 
@@ -227,15 +265,16 @@ Implemented systems include:
 ```
 ENGINE
 │
-├ core           algebraic kernel
-├ analysis       stability & topology analysis
-├ simulation     dynamical system simulation
-├ visualization  visual rendering
-├ rl             reinforcement learning agents
-├ navigation     navigation strategies
-├ applications   example models
-├ examples       demonstration scripts
-├ visuals        generated outputs
+├ nexah_kernel    minimal navigation kernel
+├ core            algebraic kernel
+├ analysis        stability & topology analysis
+├ simulation      dynamical system simulation
+├ visualization   visual rendering
+├ rl              reinforcement learning agents
+├ navigation      navigation strategies
+├ applications    example models
+├ examples        demonstration scripts
+├ visuals         generated outputs
 ```
 
 ---
@@ -265,28 +304,6 @@ Example outputs include:
 
 ---
 
-# Example Abstract Interpretation Programs
-
-### Linear Mini IR
-
-```
-python -m ENGINE.applications.mini_ir_demo
-```
-
-### Branching Mini IR
-
-```
-python -m ENGINE.applications.mini_ir_branch_demo
-```
-
-### Stabilization Example
-
-```
-python -m ENGINE.examples.example_stabilization
-```
-
----
-
 # System Status
 
 Current system size:
@@ -312,11 +329,11 @@ The NEXAH Engine is designed to be:
 
 The framework bridges:
 
-order theory  
-abstract interpretation  
-dynamical systems  
-topology  
-control theory  
+• order theory  
+• abstract interpretation  
+• dynamical systems  
+• topology  
+• control theory  
 
 ---
 
