@@ -11,6 +11,22 @@ Builders are encouraged to develop their own models, simulations, visualizations
 
 ---
 
+# Exploration Map
+
+![NEXAH Exploration Map](visuals/NEXAH_Exploration_Map.png)
+
+The Exploration Hub connects multiple system domains where complex dynamics emerge.
+
+Builders are encouraged to explore interactions between:
+
+- infrastructure
+- ecosystems
+- financial networks
+- planetary systems
+- knowledge systems
+
+---
+
 # Challenge Philosophy
 
 Most complex systems share similar structural behavior:
@@ -56,6 +72,8 @@ Possible data sources:
 # Challenge 02  
 # Financial Contagion Network
 
+![Financial Systems](visuals/Financial_markets_currencies.png)
+
 Global financial systems behave like **interconnected networks**.
 
 Failures propagate through:
@@ -71,20 +89,18 @@ Tasks may include:
 - systemic risk detection
 - stability regime classification
 
-Relevant datasets:
+Possible datasets:
 
 - central bank balance sheets
 - global financial network studies
 - market correlation matrices
 
-Visual inspiration:
-
-Financial Markets / Currency Systems
-
 ---
 
 # Challenge 03  
 # Ecosystem Stability Navigator
+
+![Ecosystem Stability Navigator](visuals/Ecosystem_Stability_Navigator.png)
 
 Ecosystems are dynamic networks of species interactions.
 
@@ -100,10 +116,6 @@ Builders can explore:
 - ecosystem collapse modeling
 - biodiversity stability indicators
 - network resilience simulations
-
-Visual inspiration:
-
-Ecosystem Stability Navigation
 
 ---
 
@@ -154,6 +166,8 @@ Possible builder tasks:
 # Challenge 06  
 # Knowledge Fragility Simulation
 
+![Knowledge Fragility Simulation](visuals/Knowledge_Fragility_Simulation.png)
+
 Knowledge systems evolve through time but are vulnerable to collapse.
 
 Historical examples include:
@@ -167,10 +181,6 @@ Builders may explore:
 - knowledge network growth models
 - fragility of information systems
 - cultural knowledge propagation
-
-Visual inspiration:
-
-Knowledge Fragility Simulation
 
 ---
 
@@ -228,10 +238,6 @@ Builders may explore:
 - stability of monetary regimes
 - cross-currency system interactions
 
-Visual inspiration:
-
-Financial Markets / Currency Systems
-
 ---
 
 # Challenge 10  
@@ -247,9 +253,7 @@ They interact across layers:
 - infrastructure
 - information systems
 
-The goal of this challenge is to explore **multi-layer system navigation.**
-
-Builders may attempt to model:
+Example exploration structure:
 
 ```
 energy system
@@ -284,18 +288,6 @@ Projects may be implemented using:
 
 ---
 
-# Exploration Tools
-
-Useful approaches include:
-
-- graph models
-- agent-based simulation
-- network resilience analysis
-- system state classification
-- visualization dashboards
-
----
-
 # Philosophy
 
 The NEXAH framework is based on a simple idea:
@@ -325,5 +317,3 @@ Library
 Orientation is not belief.
 It is a design problem.
 ```
-
----
