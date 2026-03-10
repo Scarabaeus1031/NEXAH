@@ -1,31 +1,56 @@
+"""
+Rotation Drift Coupled Animation
+================================
+
+Animates a rotational system where angular drift slowly changes.
+
+Shows transition:
+
+polygon → rosette → spiral flower → ring interference
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
+# --------------------------------------------------
+# Parameters
+# --------------------------------------------------
 
 n = 5
 radius = 5
-iterations = 2500
+iterations = 3000
+
+drift_max = 6.0
 
 fig, ax = plt.subplots(figsize=(7,7))
 
-line, = ax.plot([],[],lw=1.2)
+line, = ax.plot([], [], lw=1.1)
 
 ax.set_xlim(-6,6)
 ax.set_ylim(-6,6)
 ax.set_aspect("equal")
 
-ax.set_title("Coupled Rotation Drift System")
+ax.set_title("Rotation Drift Coupled System")
 
 
-def generate(drift_deg):
+# guide circle
+t = np.linspace(0,2*np.pi,400)
+ax.plot(radius*np.cos(t), radius*np.sin(t), alpha=0.1)
 
-    base = 2*np.pi/n
+
+# --------------------------------------------------
+# Pattern generator
+# --------------------------------------------------
+
+def generate_pattern(drift_deg):
+
+    base_angle = 2*np.pi/n
     drift = np.deg2rad(drift_deg)
 
     k = np.arange(iterations)
 
-    theta = k*(base + drift)
+    theta = k*(base_angle + drift)
 
     r = radius*(0.7 + 0.3*np.cos(k*0.02))
 
@@ -35,13 +60,19 @@ def generate(drift_deg):
     return x,y
 
 
+# --------------------------------------------------
+# Animation
+# --------------------------------------------------
+
 def update(frame):
 
-    drift = frame*0.05
+    drift = frame * drift_max / 180
 
-    x,y = generate(drift)
+    x,y = generate_pattern(drift)
 
     line.set_data(x,y)
+
+    ax.set_title(f"Rotation Drift Coupled | drift={drift:.2f}°")
 
     return line,
 
@@ -49,8 +80,9 @@ def update(frame):
 ani = FuncAnimation(
     fig,
     update,
-    frames=120,
-    interval=40
+    frames=180,
+    interval=40,
+    blit=True
 )
 
 plt.show()
