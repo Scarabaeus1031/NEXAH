@@ -2,7 +2,7 @@
 
 ## NEXAH in 20 Seconds
 
-NEXAH is a minimal kernel for navigating complex systems.
+NEXAH is a minimal kernel for navigating regime landscapes in complex systems.
 
 Instead of treating systems purely as simulation environments, NEXAH transforms system structure into **navigable regime landscapes**:
 
