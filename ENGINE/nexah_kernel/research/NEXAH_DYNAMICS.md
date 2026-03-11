@@ -17,7 +17,42 @@ These structures emerge naturally from the interaction between **system topology
 
 ---
 
-# 1 Parameter Space
+# 1 Regime Dynamics
+
+In the NEXAH framework, system evolution follows the Navigation Equation introduced in `NEXAH_THEORY.md`:
+
+x_(t+1) = F(x_t | G, L, Q°, A)
+
+Where
+
+G = system structure  
+L = regime landscape  
+Q° = observation frame  
+A = structural intervention  
+
+This formulation connects **graph topology**, **dynamical evolution**, and **regime navigation**.
+
+---
+
+# 2 Regime Potential
+
+A regime landscape can be interpreted as a **potential surface** over the system state space.
+
+Define a regime potential:
+
+V(x) = Φ(G, L, x)
+
+The system then evolves along the gradient of this potential:
+
+ẋ = −∇V(x)
+
+This interpretation explains why system trajectories tend to move toward **stable attractors**.
+
+Attractors correspond to **local minima of the regime potential**, while unstable regions correspond to saddle structures.
+
+---
+
+# 3 Parameter Space
 
 Many NEXAH experiments explore a parameter space of the form:
 
@@ -34,7 +69,7 @@ Scanning this space produces a **regime map** where different dynamical behavior
 
 ---
 
-# 2 Rotation Numbers
+# 4 Rotation Numbers
 
 One of the primary diagnostics is the **rotation number**.
 
@@ -54,7 +89,7 @@ Mapping rotation numbers across parameter space produces structures such as the 
 
 ---
 
-# 3 Arnold Tongues
+# 5 Arnold Tongues
 
 When a system is periodically forced, regions of frequency locking appear.
 
@@ -66,29 +101,11 @@ system frequency = rational multiple of forcing frequency
 
 These structures appear naturally in NEXAH resonance scans and can be detected using:
 
-```
 nexah_arnold_tongue_map.py
-```
 
 ---
 
-# 4 Devil’s Staircase
-
-The Devil’s staircase describes how rotation numbers change across parameter space.
-
-Instead of varying smoothly, the rotation number often forms **plateaus** corresponding to stable frequency locking.
-
-These plateaus correspond to Arnold tongues.
-
-The staircase structure can be generated using:
-
-```
-nexah_devils_staircase.py
-```
-
----
-
-# 5 KAM Tori
+# 7 KAM Tori
 
 According to the Kolmogorov–Arnold–Moser (KAM) theorem, quasi-periodic motion can persist under small perturbations.
 
@@ -101,19 +118,15 @@ In parameter maps they appear as:
 
 These regions can be approximated in NEXAH using:
 
-```
 nexah_kam_torus_detector.py
-```
 
 and visualized with:
 
-```
 nexah_kam_surface_plot.py
-```
 
 ---
 
-# 6 Chaos and Lyapunov Maps
+# 8 Chaos and Lyapunov Maps
 
 The stability of trajectories can be measured using the **Lyapunov exponent**.
 
@@ -127,13 +140,11 @@ Lyapunov maps reveal chaotic regions in the regime landscape.
 
 Tool:
 
-```
 nexah_lyapunov_map.py
-```
 
 ---
 
-# 7 Fractal Parameter Boundaries
+# 9 Fractal Parameter Boundaries
 
 Transitions between dynamical regimes often produce fractal boundaries.
 
@@ -145,19 +156,11 @@ Examples include:
 
 These can be visualized using:
 
-```
-nexah_parameter_fractal_map.py
-```
-
-and analyzed using:
-
-```
 nexah_fractal_dimension.py
-```
 
 ---
 
-# 8 Universality and Feigenbaum Scaling
+# 10 Universality and Feigenbaum Scaling
 
 Some dynamical transitions exhibit **universal scaling laws**.
 
@@ -169,16 +172,14 @@ This cascade follows the scaling relation:
 
 Detecting such cascades is part of the NEXAH universality exploration:
 
-```
 nexah_feigenbaum_analysis.py
 nexah_universality_detector.py
-```
 
 These tools search for period-doubling structures in regime landscapes.
 
 ---
 
-# 9 Why These Structures Appear in NEXAH
+# 11 Why These Structures Appear in NEXAH
 
 The frequent appearance of classical dynamical structures in NEXAH experiments is not accidental.
 
@@ -200,16 +201,18 @@ NEXAH therefore acts as a **structural generator of dynamical systems**.
 
 ---
 
-# 10 Research Direction
+# 12 Dynamics and Navigation
 
-Understanding why these structures appear may help answer deeper questions:
+The purpose of dynamical analysis in NEXAH is not merely classification.
 
-- How does graph topology influence dynamical regimes?
-- Can resonance landscapes be predicted from structural symmetry?
-- Do certain graph classes generate universal dynamical structures?
-- Can regime navigation stabilize chaotic systems?
+Instead, it supports **navigation within regime landscapes**.
 
-These questions form the ongoing research direction of the NEXAH framework.
+Key questions include:
+
+- Which regions are dynamically stable?
+- Where do regime transitions occur?
+- Which trajectories avoid chaotic regions?
+- How can structural interventions reshape the landscape?
 
 ---
 
