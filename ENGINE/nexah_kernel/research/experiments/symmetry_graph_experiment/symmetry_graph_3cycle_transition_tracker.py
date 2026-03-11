@@ -1,4 +1,4 @@
-also das habe ich gesaved... """
+"""
 NEXAH Symmetry Graph – 3 Cycle Transition Tracker
 -------------------------------------------------
 
