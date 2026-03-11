@@ -1,5 +1,7 @@
 # NEXAH Theory
 
+![NEXAH Theory Diagram](../../visuals/diagrams/NEXAH_THEORY.png)
+
 ## Structural Navigation in Dynamical Regime Landscapes
 
 NEXAH proposes a shift in how complex systems are analyzed.
