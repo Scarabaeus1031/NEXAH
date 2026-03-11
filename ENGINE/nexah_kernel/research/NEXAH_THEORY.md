@@ -1,6 +1,6 @@
 # NEXAH Theory
 
-![NEXAH Theory Diagram](../../visuals/diagrams/NEXAH_THEORY.png)
+![NEXAH Theory Diagram](/ENGINE/visuals/diagrams/NEXAH_Theory.png)
 
 *Figure 1 — Conceptual structure of the NEXAH framework.  
 Structural graphs generate regime landscapes that can be navigated via system dynamics and structural interventions.*
