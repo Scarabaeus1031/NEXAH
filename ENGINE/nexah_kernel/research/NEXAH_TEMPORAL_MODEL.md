@@ -2,6 +2,14 @@
 
 ## Time Structures in Regime Navigation Systems
 
+The NEXAH framework suggests that system behavior emerges from the interaction of several fundamental fields.
+
+These include structural topology, dynamical evolution, temporal structure, and navigation strategies.
+
+![NEXAH Four Field Model](/ENGINE/visuals/diagrams/NEXAH_FOUR_FIELD_MODEL.png)
+
+*Figure — The four-field architecture of the NEXAH framework. Complex system behavior emerges from the interaction between structure (graph topology), dynamics (system evolution), temporal structure (iteration, event, and phase time), and navigation strategies.*
+
 The current NEXAH kernel models system evolution using classical discrete-time dynamical systems:
 
 state_{t+1} = F(state_t | G, L, Q°, A)
