@@ -193,6 +193,13 @@ The NEXAH framework explores questions such as:
 - What navigation strategies stabilize complex systems?
 - Do resonance structures reveal hidden system symmetries?
 
+
+# Conceptual Model
+
+![NEXAH Stability Triangle](/ENGINE/visuals/diagrams/NEXAH_STABILITY_TRIANGLE.png)
+
+*Figure — The NEXAH Stability Triangle. Complex system stability emerges from the interaction between structural topology, system dynamics, and navigation strategies.*
+
 ---
 
 # NEXAH
