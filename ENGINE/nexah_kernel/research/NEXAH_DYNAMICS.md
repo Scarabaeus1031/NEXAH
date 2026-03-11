@@ -54,6 +54,10 @@ The system then evolves along the gradient of this potential:
 
 ẋ = −∇V(x)
 
+![NEXAH Regime Potential](/ENGINE/visuals/diagrams/Regime_Potential.png)
+
+*Figure 4 — Regime potential landscape induced by system structure. Attractors correspond to local minima of the potential surface, while unstable regions correspond to saddle structures. System trajectories follow the gradient flow of the regime potential.*
+
 This interpretation explains why system trajectories tend to move toward **stable attractors**.
 
 Attractors correspond to **local minima of the regime potential**, while unstable regions correspond to saddle structures.
