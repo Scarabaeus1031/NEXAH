@@ -54,26 +54,51 @@ This landscape describes the **dynamical topology of the system**.
 
 ---
 
-# 3 State Dynamics
+# 3 Core Equation — NEXAH Navigation Equation
 
-System evolution is modeled as:
+The evolution of a system within the NEXAH framework is described by the **Navigation Equation**:
 
-state_(t+1) = F(state_t | G, L, Q°)
+state_(t+1) = F(state_t | G, L, Q°, A)
 
 Where
 
-G = system structure  
+G = system structure (StructuralGraph)  
 L = regime landscape  
 Q° = observation frame  
+A = structural intervention  
 F = state dynamics operator  
 
-This formulation separates:
+This equation describes how system states evolve within a **regime landscape shaped by system structure**.
 
-structure → dynamics → observation
+The formulation separates four fundamental components of complex systems:
+
+structure → landscape → observation → dynamics
+
+The inclusion of **structural intervention A** allows the system landscape itself to be modified.
+
+This transforms the problem from trajectory control into **landscape navigation**.
 
 ---
 
-# 4 Navigation
+# 4 State Dynamics
+
+System evolution follows the dynamics operator:
+
+state_(t+1) = F(state_t)
+
+However, in the NEXAH formulation the dynamics operator depends on the structural and observational context:
+
+F = F(G, L, Q°)
+
+This allows the kernel to analyze how:
+
+- system topology influences dynamics
+- observation frames affect interpretation
+- regime landscapes constrain trajectories
+
+---
+
+# 5 Navigation
 
 Instead of controlling the system directly, an agent **navigates the regime landscape**.
 
@@ -89,7 +114,7 @@ optimize(reward).
 
 ---
 
-# 5 Structural Intervention
+# 6 Structural Intervention
 
 NEXAH allows structural modifications to the system graph.
 
@@ -112,7 +137,7 @@ The goal is to **reshape the landscape** rather than control individual states.
 
 ---
 
-# 6 Dynamical Structure
+# 7 Dynamical Structure
 
 The regime landscapes produced by NEXAH often exhibit classical dynamical phenomena:
 
@@ -134,7 +159,7 @@ These structures emerge naturally from the interaction between system topology a
 
 ---
 
-# 7 Navigation vs Control
+# 8 Navigation vs Control
 
 Traditional system engineering focuses on:
 
@@ -148,7 +173,7 @@ The emphasis shifts from controlling system trajectories to **understanding the 
 
 ---
 
-# 8 Research Direction
+# 9 Research Direction
 
 The NEXAH framework explores questions such as:
 
