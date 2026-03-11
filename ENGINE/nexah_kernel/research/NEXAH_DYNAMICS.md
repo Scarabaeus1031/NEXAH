@@ -34,6 +34,10 @@ L = regime landscape
 Q° = observation frame  
 A = structural intervention  
 
+![NEXAH Navigation Equation](/ENGINE/visuals/diagrams/NEXAH_NAVIGATION_EQUATION.png)
+
+*Figure 3 — The NEXAH Navigation Equation. System evolution is interpreted as navigation through a regime landscape shaped by structural topology, observation frame, and structural interventions.*
+
 This formulation connects **graph topology**, **dynamical evolution**, and **regime navigation**.
 
 ---
