@@ -10,7 +10,7 @@ within the NEXAH kernel framework.
 """
 
 import networkx as nx
-from symmetry_graph_3cycle import build_graph
+from .symmetry_graph_3cycle import build_graph
 
 
 # -------------------------
