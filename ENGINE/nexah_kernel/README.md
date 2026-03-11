@@ -74,29 +74,31 @@ This formulation allows the kernel to analyze trajectories across regime landsca
 
 # Example
 
-from ENGINE.nexah_kernel import StructuralGraph  
-from ENGINE.nexah_kernel import NexahKernel  
+```python
+from ENGINE.nexah_kernel import StructuralGraph
+from ENGINE.nexah_kernel import NexahKernel
 
-graph = StructuralGraph(  
-    nodes={"A": {}, "B": {}, "C": {}},  
-    edges=[("A","B"),("B","C")],  
-    weights={}  
-)  
+graph = StructuralGraph(
+    nodes={"A": {}, "B": {}, "C": {}},
+    edges=[("A","B"),("B","C")],
+    weights={}
+)
 
-landscape = {  
-    "attractors": ["C"],  
-    "basins": {"stable": ["B","C"], "unstable": ["A"]},  
-    "thresholds": ["B"]  
-}  
+landscape = {
+    "attractors": ["C"],
+    "basins": {"stable": ["B","C"], "unstable": ["A"]},
+    "thresholds": ["B"]
+}
 
-kernel = NexahKernel(graph, landscape)  
+kernel = NexahKernel(graph, landscape)
 
-analysis = kernel.analyze_system()  
+analysis = kernel.analyze_system()
 
-result = kernel.simulate_action({  
-    "type": "add_edge",  
-    "edge": ("A","C")  
-})  
+result = kernel.simulate_action({
+    "type": "add_edge",
+    "edge": ("A","C")
+})
+```
 
 ---
 
@@ -166,33 +168,122 @@ Each layer transforms system structure into navigable regime information.
 
 ---
 
-# Example Demos
+# Dynamical Systems Analysis Toolbox
 
-Several runnable demonstrations illustrate how the kernel can be used to analyze and intervene in system structures.
+The NEXAH kernel includes an optional analysis toolbox for exploring the dynamical properties of system regimes.
 
-### Risk Navigation Demo
+These tools are located in:
 
+```
+ENGINE/nexah_kernel/tools
+```
+
+They allow investigation of resonance structures, attractor landscapes, quasiperiodic dynamics, and structural transitions within regime landscapes.
+
+The toolbox includes analysis modules such as:
+
+| Tool | Purpose |
+|-----|------|
+| resonance_ridge_detector | Detect resonance ridges in parameter space |
+| resonance_harmonic_analyzer | Analyze harmonic structure of resonance zones |
+| nexah_rotation_number_analysis | Compute rotation numbers across parameter space |
+| nexah_arnold_tongue_map | Detect frequency locking regions |
+| nexah_devils_staircase | Visualize rotation number locking |
+| nexah_lyapunov_map | Detect chaotic vs stable dynamics |
+| nexah_kam_torus_detector | Identify KAM-like quasi-periodic regions |
+| nexah_parameter_fractal_map | Explore fractal structure in parameter space |
+| nexah_fractal_dimension | Estimate geometric complexity |
+| nexah_universality_detector | Search for period-doubling cascades |
+
+Example:
+
+```
+python -m ENGINE.nexah_kernel.tools.nexah_lyapunov_map
+```
+
+The resulting visualizations are stored in:
+
+```
+ENGINE/nexah_kernel/demos/visuals
+```
+
+These tools allow the NEXAH kernel to act not only as a system navigation engine but also as a dynamical systems exploration environment.
+
+---
+
+# Visual Exploration Layer
+
+The kernel includes a large collection of exploratory demonstrations.
+
+These are located in:
+
+```
+ENGINE/nexah_kernel/demos
+```
+
+The demos explore structural dynamics such as:
+
+- attractor basins
+- resonance fields
+- symmetry landscapes
+- multi-attractor navigation
+- regime shifts
+- cascading failures
+- structural resilience
+- symmetry interference fields
+- spiral and resonance dynamics
+
+Example demos:
+
+```
 python -m ENGINE.nexah_kernel.demos.risk_navigation_demo
-
-Demonstrates navigation across a system landscape containing risk regions and safer alternative paths.
-
-### Cascade Failure Demo
-
 python -m ENGINE.nexah_kernel.demos.cascade_failure_demo
-
-Shows how local failures can propagate through a network and how structural intervention can stabilize the system.
-
-### Regime Shift Demo
-
 python -m ENGINE.nexah_kernel.demos.regime_shift_demo
+python -m ENGINE.nexah_kernel.demos.demo_navigation
+python -m ENGINE.nexah_kernel.demos.maze_navigation_demo
+python -m ENGINE.nexah_kernel.demos.grid_resilience_demo
+```
 
-Illustrates how structural thresholds can trigger regime changes and how new connections restore stability.
+Generated visual outputs are stored in:
 
-### Additional Examples
+```
+ENGINE/nexah_kernel/demos/visuals
+```
 
-python -m ENGINE.nexah_kernel.demos.demo_navigation  
-python -m ENGINE.nexah_kernel.demos.maze_navigation_demo  
-python -m ENGINE.nexah_kernel.demos.grid_resilience_demo  
+These visual datasets form a growing atlas of resonance structures and regime landscapes.
+
+---
+
+# Project Structure
+
+The kernel repository is organized into four conceptual layers.
+
+```
+nexah_kernel
+│
+├─ core kernel
+│    nexah_kernel.py
+│    models.py
+│    state_dynamics.py
+│
+├─ structural layers
+│    archy.py
+│    meso.py
+│    meva.py
+│
+├─ navigation & pattern layer
+│    navigation.py
+│    pattern_engine.py
+│    pattern_classifier.py
+│
+├─ analysis toolbox
+│    tools/
+│
+└─ experimental exploration
+     demos/
+```
+
+The core kernel remains intentionally compact, while analysis tools and exploratory demos expand around it.
 
 ---
 
@@ -200,7 +291,9 @@ python -m ENGINE.nexah_kernel.demos.grid_resilience_demo
 
 A minimal kernel test suite is included.
 
+```
 python -m ENGINE.nexah_kernel.tests.test_kernel
+```
 
 ---
 
@@ -214,7 +307,7 @@ The kernel is intentionally small and modular.
 
 ### System-Oriented
 
-Focus on system structure, regimes, and navigation, rather than data pipelines or large simulation environments.
+Focus on system structure, regimes, and navigation rather than large simulation environments.
 
 ### Composable
 
@@ -222,11 +315,9 @@ The kernel can be embedded into larger simulations, infrastructure models, agent
 
 ### Small Kernel
 
-The NEXAH kernel is intentionally compact.
+The core navigation logic fits in only a few hundred lines of code.
 
-The core navigation logic fits in only a few hundred lines of code, reflecting the design goal of maintaining a clear, transparent, and extensible system navigation core.
-
-Higher-level capabilities, simulations, and integrations are designed to grow around the kernel, rather than expanding the kernel itself.
+Higher-level capabilities, simulations, and analysis tools grow around the kernel rather than expanding the kernel itself.
 
 ---
 
@@ -240,4 +331,4 @@ The API may evolve as the framework expands.
 
 # NEXAH
 
-NEXAH is part of the broader SCARABÆUS1033 research framework, exploring navigation and structural resilience in complex systems.
+NEXAH is part of the broader **SCARABÆUS1033 research framework**, exploring navigation and structural resilience in complex systems.
