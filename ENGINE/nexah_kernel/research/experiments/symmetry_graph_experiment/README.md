@@ -1,57 +1,177 @@
-# NEXAH Symmetry Graph Experiments
+# Symmetry Graph Experiment
 
-This module explores resonance dynamics on symmetry graphs and toroidal phase spaces.
+Experimental research environment for studying resonant symmetry networks, phase transitions, and toroidal dynamics in coupled oscillator systems.
 
-Research focus:
+This module explores how topology, resonance, and energy landscapes interact inside structured oscillator networks such as symmetry graphs.
 
-• phase synchronization
-• resonance structures
-• Arnold tongues
-• torus dynamics
-• symmetry-driven phase transitions
-
-The experiments investigate how graph symmetry induces stable resonance structures and chaotic webs.
+The framework emerged during the development of the NEXAH Kernel research engine.
 
 ---
 
-Experiment classes:
+# Concept
 
-## Graph Dynamics
+The symmetry graph represents a network of coupled oscillators arranged in a geometric topology.
 
-symmetry_graph_3cycle.py  
-symmetry_graph_geometric_layout.py  
-symmetry_graph_vector_field.py  
+Each node evolves according to coupled phase dynamics similar to:
 
----
+Kuramoto-type models  
+Gyroscopic coupling  
+Resonant flow dynamics  
 
-## Resonance Systems
+The system allows exploration of:
 
-symmetry_graph_resonance_modes.py  
-symmetry_graph_resonance_landscape.py  
-symmetry_graph_resonance_flow.py  
-
----
-
-## Stability & Phase Transitions
-
-symmetry_graph_phase_transition_scan.py  
-symmetry_graph_regime_map.py  
-symmetry_graph_resilience_heatmap.py  
+• phase synchronization  
+• resonance webs  
+• Arnold tongues  
+• basin transitions  
+• torus dynamics  
+• energy landscapes  
 
 ---
 
-## Torus Dynamics
+# Experimental Modules
 
-symmetry_graph_torus_resonance.py  
-symmetry_graph_torus_nodes.py  
-symmetry_graph_torus_arnold_web.py  
-symmetry_graph_torus_chaos.py  
+The experiment folder is organized by physical interpretation.
+
+symmetry_graph_experiment
+
+core  
+central visualizers and kernel bridges
+
+dynamics  
+Kuramoto and oscillator dynamics
+
+resonance  
+resonance network flows
+
+topology  
+torus structures and Arnold webs
+
+energy_landscapes  
+stability and resonance potentials
+
+transitions  
+phase transitions and separatrix detection
+
+phiC  
+φ-resonance structures and Lissajous flows
+
+phase_space  
+vector fields and system domains
+
+experiments_misc  
+additional experimental tests
+
+visuals  
+generated experiment figures
 
 ---
 
-Generated visual phenomena:
+# Key Experiments
 
-• Arnold resonance webs  
-• toroidal phase attractors  
-• resonance basins  
-• symmetry induced chaos transitions
+## Kuramoto Dynamics
+
+dynamics/symmetry_graph_full_kuramoto.py
+
+Simulates phase synchronization on symmetry graphs.
+
+---
+
+## Resonance Web
+
+resonance/symmetry_graph_resonance_flow.py  
+resonance/symmetry_graph_resonance_web_lines.py  
+
+Visualizes resonance channels inside the oscillator network.
+
+---
+
+## Energy Landscape
+
+energy_landscapes/symmetry_graph_energy_landscape.py  
+energy_landscapes/symmetry_graph_stability_landscape.py  
+
+Computes stability basins and attractor structures.
+
+---
+
+## Phase Transition Detection
+
+transitions/symmetry_graph_phase_transition_detector.py  
+transitions/symmetry_graph_separatrix_tracer.py  
+
+Detects boundaries between dynamical regimes.
+
+---
+
+## Toroidal Dynamics
+
+topology/symmetry_graph_torus_nodes.py  
+topology/symmetry_graph_torus_resonance.py  
+topology/symmetry_graph_torus_arnold_web.py  
+
+Explores torus embeddings and Arnold resonance webs.
+
+---
+
+# Visual Outputs
+
+Generated experiment figures are stored in
+
+visuals/
+
+Examples include:
+
+• symmetry_graph.png  
+• symmetry_graph_regime_map.png  
+• symmetry_graph_3cycle.png  
+
+These illustrate structural modes of the oscillator network.
+
+---
+
+# Research Goals
+
+The symmetry graph experiments investigate whether structured oscillator networks produce:
+
+• universal resonance structures  
+• emergent phase transitions  
+• toroidal stability regimes  
+• Arnold-web-like resonance networks  
+
+The experiments serve as test environments for the NEXAH resonance framework.
+
+---
+
+# Relation to NEXAH
+
+This module belongs to the research layer of the NEXAH Kernel.
+
+It provides experimental infrastructure for studying:
+
+resonance  
+topology  
+phase transitions  
+nonlinear oscillator networks  
+
+inside the NEXAH system.
+
+---
+
+# Running Experiments
+
+Example:
+
+python ENGINE/nexah_kernel/research/experiments/symmetry_graph_experiment/topology/symmetry_graph_torus_nodes.py
+
+or
+
+python ENGINE/nexah_kernel/research/experiments/symmetry_graph_experiment/dynamics/symmetry_graph_full_kuramoto.py
+
+---
+
+# Status
+
+Active research environment.
+
+The module continues to evolve as new resonance and topology experiments are added.
