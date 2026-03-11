@@ -135,3 +135,45 @@ class TimeFlowContext:
     t_iter: int
     t_event: float
     phase: float
+```
+
+Such a structure could support:
+	•	adaptive time steps
+	•	event-driven simulation
+	•	phase locking detection
+	•	resonance tracking
+
+⸻
+
+# 6 Relation to NEXAH Dynamics
+
+The temporal model interacts closely with the regime landscape concept.
+
+System evolution can be interpreted as:
+
+ẋ = −∇V(x | G, L)
+
+where the trajectory unfolds over a temporal structure.
+
+Understanding how time interacts with regime geometry may be essential for:
+	•	predicting regime persistence
+	•	detecting resonance collapse
+	•	identifying stable navigation trajectories
+
+⸻
+
+# 7 Research Direction
+
+Key research questions include:
+	•	How do structural graphs influence temporal dynamics?
+	•	Can regime transitions be predicted using event time?
+	•	Do resonance structures correspond to phase time locking?
+	•	Can adaptive time improve navigation stability?
+
+These questions represent an ongoing research direction within the NEXAH framework.
+
+⸻
+
+# NEXAH
+
+Part of the SCARABÆUS1033 research framework, exploring structural navigation in complex dynamical systems.
