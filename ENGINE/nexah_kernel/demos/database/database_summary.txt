@@ -1,0 +1,15 @@
+NEXAH VISUAL DATABASE SUMMARY
+=============================
+
+Total visual patterns: 324
+
+Atlas collections:
+
+- symmetry_resonance_atlas
+  patterns: 324
+  top resonances:
+    n=7  drift=0.00  score=0.4010
+    n=18  drift=1.41  score=0.4010
+    n=9  drift=2.82  score=0.4010
+    n=11  drift=5.29  score=0.4010
+    n=6  drift=4.24  score=0.4010

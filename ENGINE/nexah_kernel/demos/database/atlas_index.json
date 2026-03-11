@@ -1,0 +1,38 @@
+{
+  "symmetry_resonance_atlas": {
+    "csv_files": [
+      "resonance_metrics.csv"
+    ],
+    "json_files": [
+      "top_resonances.json"
+    ],
+    "num_patterns": 324,
+    "top_patterns": [
+      {
+        "n": 7,
+        "drift": 0.0,
+        "score": 0.4010383722590794
+      },
+      {
+        "n": 18,
+        "drift": 1.411764705882353,
+        "score": 0.4010306253575407
+      },
+      {
+        "n": 9,
+        "drift": 2.823529411764706,
+        "score": 0.4010073887459506
+      },
+      {
+        "n": 11,
+        "drift": 5.294117647058824,
+        "score": 0.4010059646629377
+      },
+      {
+        "n": 6,
+        "drift": 4.235294117647059,
+        "score": 0.4009686746964339
+      }
+    ]
+  }
+}
