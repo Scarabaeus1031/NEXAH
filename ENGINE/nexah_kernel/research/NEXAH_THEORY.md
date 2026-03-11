@@ -2,6 +2,9 @@
 
 ![NEXAH Theory Diagram](../../visuals/diagrams/NEXAH_THEORY.png)
 
+*Figure 1 — Conceptual structure of the NEXAH framework.  
+Structural graphs generate regime landscapes that can be navigated via system dynamics and structural interventions.*
+
 ## Structural Navigation in Dynamical Regime Landscapes
 
 NEXAH proposes a shift in how complex systems are analyzed.
