@@ -28,6 +28,9 @@ Navigation
 MEVA
     Structural intervention simulation.
 
+Stability
+    Spectral stability operators for architecture analysis.
+
 NexahKernel
     Main kernel interface combining the system analysis pipeline.
 """
@@ -53,11 +56,19 @@ from .state_dynamics import (
 from .navigation import NavigationEngine
 from .meva import ActionEngine
 
+# Stability operators
+from .stability.spectral_stability import (
+    spectral_stability_score,
+    resilience_estimate,
+    graph_metrics,
+)
+
 # Kernel interface
 from .nexah_kernel import NexahKernel
 
 
 __all__ = [
+
     # Data structures
     "SystemArchitecture",
     "StructuralGraph",
@@ -74,6 +85,11 @@ __all__ = [
     # Engines
     "NavigationEngine",
     "ActionEngine",
+
+    # Stability operators
+    "spectral_stability_score",
+    "resilience_estimate",
+    "graph_metrics",
 
     # Kernel interface
     "NexahKernel",
