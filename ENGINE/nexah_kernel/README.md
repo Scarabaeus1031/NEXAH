@@ -1,31 +1,19 @@
-# NEXAH Kernel
-
 ## NEXAH in 20 Seconds
 
-NEXAH is a minimal kernel for navigating regime landscapes in complex systems.
+> A kernel for navigating regime landscapes in complex dynamical systems.
 
-Instead of treating systems purely as simulation environments, NEXAH transforms system dynamics into navigable regime maps:
+Instead of treating systems purely as simulation environments, NEXAH converts system dynamics into navigable regime maps:
 
 system → regimes → navigation → intervention
 
-This allows agents to:
+This enables agents to:
 
 - identify stability zones
 - detect regime transitions
 - evaluate navigation trajectories
 - test structural interventions
 
-The result is risk-aware system navigation rather than purely reward-driven optimization.
-
-NEXAH reduces complex system dynamics to navigable regime structures.
-
-The NEXAH kernel provides a lightweight framework for analyzing structural systems, identifying regime landscapes, and testing structural interventions.
-
-It is designed as a modular system navigation engine that operates on graphs representing infrastructures, ecosystems, networks, or other complex systems.
-
-Rather than treating systems purely as simulation environments, NEXAH models systems as navigable structural landscapes.
-
-The goal is not control, but navigation.
+The goal is not control — but **navigation through dynamical regimes**.
 
 
 ![NEXAH System Map](docs/visuals/NEXAH_SYSTEM_MAP.png)
@@ -64,7 +52,7 @@ The NEXAH kernel exposes a minimal API for structural system analysis.
 
 The kernel models system evolution as a dynamical process:
 
-state_(t+1) = F(state_t | G, L, Q°)
+x_{t+1} = F(x_t | G, L, Q)
 
 Where
 
