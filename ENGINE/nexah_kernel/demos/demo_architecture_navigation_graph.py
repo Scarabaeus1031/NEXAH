@@ -1,6 +1,5 @@
 """
 NEXAH Architecture Navigation Graph
-===================================
 
 Builds a navigation graph across the architecture stability landscape.
 
@@ -260,3 +259,5 @@ def run():
 
 if __name__ == "__main__":
     run()
+
+"""
