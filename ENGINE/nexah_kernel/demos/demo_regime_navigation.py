@@ -1,3 +1,25 @@
+"""
+NEXAH Demo — Regime Navigation
+
+This demo illustrates the core idea of the NEXAH kernel:
+
+    system → regimes → navigation → intervention
+
+A simple stochastic dynamical system is simulated.
+The system time series is analyzed to detect its regime.
+Possible regime transitions are identified and the NEXAH
+navigation layer computes reachable regimes and possible
+interventions.
+
+This demo serves as a minimal integration example for:
+
+- regime detection
+- transition detection
+- regime graph construction
+- navigation analysis
+- intervention planning
+"""
+
 import numpy as np
 
 from ENGINE.nexah_kernel.regime.regime_detector import RegimeDetector
