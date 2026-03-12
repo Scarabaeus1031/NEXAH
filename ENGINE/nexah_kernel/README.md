@@ -27,6 +27,13 @@ Rather than treating systems purely as simulation environments, NEXAH models sys
 
 The goal is not control, but navigation.
 
+
+![NEXAH System Map](docs/visuals/NEXAH_SYSTEM_MAP.png)
+
+**NEXAH** is a navigation kernel for complex dynamical systems.
+
+Instead of controlling systems directly, NEXAH analyzes **regime landscapes**
+and enables navigation through stability regions, transitions, and attractors.
 ---
 
 # Kernel API
@@ -78,6 +85,17 @@ A regime landscape represents regions of stability, instability, and transition 
 
 The kernel analyzes navigation trajectories across this landscape and allows simulation of structural modifications to explore system resilience.
 
+![NEXAH Theory](docs/visuals/NEXAH_Theory.png)
+
+NEXAH treats complex systems as **navigable regime landscapes** rather than
+purely controllable dynamical systems.
+
+System dynamics emerge from the interaction between:
+
+- structural graphs
+- regime landscapes
+- state dynamics
+- navigation strategies
 ---
 
 # Regime Navigation Pipeline
@@ -129,7 +147,10 @@ Action Engine (MEVA)
 ▼
 Structural Intervention
 ```
+![NEXAH Kernel Layers](docs/visuals/From_Library_to_Instrument_NEXAH-KERNEL.png)
 
+The NEXAH kernel follows a layered architecture connecting structural models,
+dynamical systems analysis, and regime navigation.
 ---
 
 # Kernel Components
