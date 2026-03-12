@@ -28,21 +28,47 @@ Many demos produce visual datasets that reveal hidden structure in system dynami
 
 ---
 
+# Demo Pipeline
+
+The demonstrations follow the typical exploration pipeline used in the NEXAH framework:
+
+xperiment
+↓
+demo
+↓
+visual exploration
+↓
+analysis tools
+↓
+kernel integration
+
+Experiments explore dynamical behavior.  
+Demos visualize the resulting regime landscapes.  
+Tools generalize useful algorithms.
+
+---
+
 # Running Demos
 
 All demos can be executed using Python modules.
 
 Example:
 
-```
-python -m ENGINE.nexah_kernel.demos.risk_navigation_demo
-```
+python -m ENGINE.nexah_kernel.demos.demo_regime_navigation
+
+
+| Demo | Description |
+|-----|-------------|
+| demo_regime_navigation.py | Basic regime detection and navigation pipeline |
+| demo_double_well_navigation.py | Navigation across attractor basins in a double-well system |
+| demo_regime_map_visualization.py | Visualizes trajectories within an energy landscape |
+| demo_regime_phase_map.py | Generates regime maps across parameter space |
+
+These demonstrations illustrate how systems can be interpreted as **navigable regime landscapes**.
 
 ---
 
-# Example Demonstrations
-
-## Navigation & Regime Analysis
+# Navigation & Regime Analysis
 
 | Demo | Description |
 |-----|-------------|
@@ -54,7 +80,7 @@ python -m ENGINE.nexah_kernel.demos.risk_navigation_demo
 
 ---
 
-## System Stability & Failures
+# System Stability & Failures
 
 | Demo | Description |
 |-----|-------------|
@@ -64,7 +90,7 @@ python -m ENGINE.nexah_kernel.demos.risk_navigation_demo
 
 ---
 
-## Resonance & Symmetry Exploration
+# Resonance & Symmetry Exploration
 
 | Demo | Description |
 |-----|-------------|
@@ -77,7 +103,7 @@ These tools generate datasets showing how system dynamics depend on structural s
 
 ---
 
-## Multi-Attractor Systems
+# Multi-Attractor Systems
 
 | Demo | Description |
 |-----|-------------|
@@ -87,7 +113,7 @@ These tools generate datasets showing how system dynamics depend on structural s
 
 ---
 
-## Resonance Field Experiments
+# Resonance Field Experiments
 
 | Demo | Description |
 |-----|-------------|
@@ -105,53 +131,20 @@ Many demos generate datasets for later analysis.
 
 These are stored in:
 
-```
-ENGINE/nexah_kernel/demos/data
-```
-
-Example datasets include:
-
-- resonance scans
-- rotation numbers
-- KAM torus candidates
-- resonance ridge maps
-- universality analysis outputs
-
----
-
-# Generated Visuals
-
-Visual outputs are written to:
-
-```
 ENGINE/nexah_kernel/demos/visuals
-```
 
 The visual archive currently includes:
 
-- resonance landscapes
-- Arnold tongue maps
+- regime phase maps
+- attractor landscapes
+- resonance maps
+- chaos maps
 - Lyapunov maps
 - KAM stability surfaces
-- attractor maps
 - fractal parameter maps
 - symmetry resonance atlases
-- animated mode evolutions
 
 These images form a growing **visual atlas of dynamical system structures**.
-
----
-
-# Visual Atlas Tools
-
-Two utilities help explore the generated visuals:
-
-```
-build_nexah_visual_database.py
-build_nexah_visual_browser.py
-```
-
-These tools create a simple visual browser for exploring generated resonance landscapes.
 
 ---
 
@@ -163,15 +156,11 @@ Instead they act as **exploratory laboratories** built on top of the kernel.
 
 Kernel:
 
-```
 system → regimes → navigation
-```
 
 Demos:
 
-```
 regime landscapes → visual exploration
-```
 
 ---
 
@@ -186,3 +175,4 @@ Many scripts are experimental and intended for interactive exploration rather th
 # NEXAH
 
 Part of the **SCARABÆUS1033 research framework**, exploring structural navigation and resonance dynamics in complex systems.
+
