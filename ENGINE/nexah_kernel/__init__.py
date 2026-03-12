@@ -31,6 +31,9 @@ MEVA
 Stability
     Spectral stability operators for architecture analysis.
 
+Architecture
+    Stability landscape construction and architecture navigation tools.
+
 NexahKernel
     Main kernel interface combining the system analysis pipeline.
 """
@@ -63,6 +66,20 @@ from .stability.spectral_stability import (
     graph_metrics,
 )
 
+# Architecture stability landscape
+from .stability.architecture_landscape import (
+    build_architecture_landscape,
+)
+
+# Architecture navigation tools
+from .navigation.architecture_navigation import (
+    find_local_maxima,
+    stability_gradient,
+    build_navigation_graph,
+    best_architecture,
+    gradient_ascent_architecture_search,
+)
+
 # Kernel interface
 from .nexah_kernel import NexahKernel
 
@@ -90,6 +107,16 @@ __all__ = [
     "spectral_stability_score",
     "resilience_estimate",
     "graph_metrics",
+
+    # Architecture stability
+    "build_architecture_landscape",
+
+    # Architecture navigation
+    "find_local_maxima",
+    "stability_gradient",
+    "build_navigation_graph",
+    "best_architecture",
+    "gradient_ascent_architecture_search",
 
     # Kernel interface
     "NexahKernel",
