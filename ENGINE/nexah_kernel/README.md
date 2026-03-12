@@ -208,6 +208,156 @@ https://github.com/Scarabaeus1033/NEXAH-CODEX/tree/main/ENGINE/nexah_kernel/demo
 
 ---
 
+---
+
+# Architecture Stability Analysis
+
+The NEXAH kernel includes a structural stability analysis layer for
+exploring **network architecture stability landscapes**.
+
+These tools extend the kernel with **spectral stability operators**
+that evaluate how resilient a network architecture is based on its
+connectivity structure.
+
+The core metric used is:
+
+λ₂ / λmax
+
+Where
+
+λ₂ = algebraic connectivity  
+λmax = largest Laplacian eigenvalue  
+
+This ratio measures how well connected the architecture is while
+avoiding excessive centralization.
+
+Empirical experiments indicate a strong correlation between this ratio
+and structural resilience.
+
+Resilience estimate:
+
+Resilience ≈ 0.355 + 0.401 · (λ₂ / λmax)
+
+---
+
+## Architecture Stability Pipeline
+
+Architecture analysis in NEXAH follows the pipeline:
+
+Graph Architecture
+↓
+Spectral Stability Analysis
+↓
+Architecture Stability Landscape
+↓
+Topology Detection
+↓
+Architecture Navigation
+↓
+Architecture Optimization
+
+This allows the kernel to treat **architecture design as navigation
+within a stability landscape**.
+
+---
+
+## Kernel Modules
+
+Architecture stability is implemented through the following kernel modules.
+
+| Module | Purpose |
+|------|------|
+| stability/spectral_stability.py | Spectral stability metric λ₂ / λmax |
+| stability/architecture_landscape.py | Generates architecture stability landscapes |
+| navigation/architecture_navigation.py | Navigation and search within architecture space |
+
+These modules allow the kernel to analyze architecture stability
+topology and search for resilient system structures.
+
+---
+
+## Core Operations
+
+The kernel exposes several architecture stability operators.
+
+| Function | Purpose |
+|------|------|
+| spectral_stability_score(G) | Compute λ₂ / λmax |
+| resilience_estimate(G) | Estimate structural resilience |
+| graph_metrics(G) | Compute architecture statistics |
+| build_architecture_landscape() | Generate stability landscapes |
+| find_local_maxima() | Detect stable architecture regions |
+| build_navigation_graph() | Connect stable architectures |
+| gradient_ascent_architecture_search() | Search for stable architectures |
+
+Example usage:
+
+```python
+from ENGINE.nexah_kernel import build_architecture_landscape
+from ENGINE.nexah_kernel import gradient_ascent_architecture_search
+
+landscape = build_architecture_landscape()
+
+result = gradient_ascent_architecture_search(
+    landscape["node_values"],
+    landscape["p_values"],
+    landscape["stability_field"]
+```
+
+Architecture Stability Landscapes
+
+Architecture stability forms a structured landscape across architecture
+parameters.
+
+Typical axes used in the experiments:
+
+x = edge probability (network density)
+y = number of nodes
+z = spectral stability score
+
+These landscapes reveal:
+	•	stable architecture basins
+	•	ridge structures
+	•	phase transitions between architectures
+	•	gradient flow trajectories toward stable regimes
+
+The architecture stability experiments revealed distinct stability
+regions and transition boundaries within architecture space.
+
+⸻
+
+Relationship to the Kernel
+
+Architecture stability analysis integrates with the NEXAH navigation framework.
+
+Architecture Graph
+↓
+Spectral Stability
+↓
+Architecture Landscape
+↓
+Navigation Graph
+↓
+Gradient Navigation
+
+This allows the kernel to explore architecture design as a navigable
+structural landscape, consistent with the broader NEXAH philosophy:
+
+system → regimes → navigation
+
+In this case:
+
+architecture → stability landscape → architecture navigation
+
+---
+
+# Kleiner Tipp (wird dein Repo massiv verbessern)
+
+Ganz oben im README könntest du noch eine **Kernel Capability Box** einbauen:
+
+
+---
+
 # Visual Exploration Layer
 
 The kernel includes exploratory demonstrations of regime navigation.
