@@ -372,7 +372,7 @@ architecture stability landscape.
 
 | Stability Landscape | Morse Topology |
 |---|---|
-| ![Architecture Landscape](ENGINE/nexah_kernel/demos/visuals/architecture_landscape_3D.png) | ![Morse Complex](ENGINE/nexah_kernel/demos/visuals/architecture_morse_complex.png) |
+| ![Architecture Landscape](demos/visuals/architecture_landscape_3D.png) | ![Morse Complex](demos/visuals/architecture_morse_complex.png) |
 
 The stability landscape visualizes how spectral stability evolves
 across architecture parameters.  
@@ -385,7 +385,7 @@ minima, and saddle regions.
 
 | Navigation Graph | Gradient Flow Density |
 |---|---|
-| ![Architecture Navigation Graph](ENGINE/nexah_kernel/demos/visuals/architecture_navigation_graph.png) | ![Architecture Flow Density](ENGINE/nexah_kernel/demos/visuals/architecture_flow_density.png) |
+| ![Architecture Navigation Graph](demos/visuals/architecture_navigation_graph.png) | ![Architecture Flow Density](demos/visuals/architecture_flow_density.png) |
 
 The navigation graph connects stable architecture attractors.  
 Flow density maps show where gradient trajectories concentrate across
@@ -397,7 +397,7 @@ the architecture stability landscape.
 
 | Flow Rivers (3D) | Morse-Smale Basin Map |
 |---|---|
-| ![Architecture Flow Rivers](ENGINE/nexah_kernel/demos/visuals/architecture_flow_rivers_3D.png) | ![Architecture Morse Smale](ENGINE/nexah_kernel/demos/visuals/architecture_morse_smale_map.png) |
+| ![Architecture Flow Rivers](demos/visuals/architecture_flow_rivers_3D.png) | ![Architecture Morse Smale](demos/visuals/architecture_morse_smale_map.png) |
 
 Flow rivers illustrate gradient ascent trajectories across the
 architecture landscape.  
