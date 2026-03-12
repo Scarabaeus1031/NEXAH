@@ -14,9 +14,9 @@ The symmetry graph represents a network of coupled oscillators arranged in a geo
 
 Each node evolves according to coupled phase dynamics similar to:
 
-Kuramoto-type models  
-Gyroscopic coupling  
-Resonant flow dynamics  
+• Kuramoto-type oscillator models  
+• gyroscopic coupling  
+• resonant flow dynamics  
 
 The system allows exploration of:
 
@@ -26,6 +26,7 @@ The system allows exploration of:
 • basin transitions  
 • torus dynamics  
 • energy landscapes  
+• vortex formation in phase fields  
 
 ---
 
@@ -114,30 +115,118 @@ Explores torus embeddings and Arnold resonance webs.
 
 ---
 
+# New Experiments
+
+Recent experiments explore how network size and shell geometry affect synchronization stability.
+
+## Symmetry Graph 3-Cycle Model
+
+symmetry_graph_3cycle.py  
+symmetry_graph_3cycle_vortex_analysis.py  
+symmetry_graph_3cycle_transition_tracker.py  
+
+These experiments implement a structured symmetry graph with
+
+center node  
+17 spokes  
+
+cycle layers
+
+C5 + C6 + C6
+
+Partition
+
+5 + 6 + 6 = 17
+
+The model studies
+
+• vortex formation  
+• cycle windings  
+• Kuramoto phase locking  
+• phase transition regimes  
+
+---
+
+## Prime Shell Synchronization Scan
+
+prime_shell_scan.py
+
+This experiment scans hub-shell networks of size
+
+N = 8 … 40
+
+Each network is structured as
+
+center node  
++  
+N ring oscillators
+
+The experiment measures
+
+• synchronization time  
+• global order parameter R  
+• stability regimes  
+
+Initial results indicate that certain shell sizes produce strong synchronization instability or delayed locking, suggesting resonance or frustration regimes in the oscillator network.
+
+---
+
 # Visual Outputs
 
 Generated experiment figures are stored in
 
 visuals/
 
-Examples include:
+Examples include
 
 • symmetry_graph.png  
 • symmetry_graph_regime_map.png  
 • symmetry_graph_3cycle.png  
+• symmetry_graph_cycle_vortex_analysis.png  
+• prime_shell_synchronization_scan.png  
 
 These illustrate structural modes of the oscillator network.
 
 ---
 
+# Research Findings (Preliminary)
+
+Early experiments suggest that oscillator synchronization depends strongly on network topology.
+
+Observed phenomena include
+
+• rapid synchronization in balanced symmetry graphs  
+• vortex formation along cycle layers  
+• metastable phase clustering  
+• synchronization failure for certain shell sizes  
+
+Example structured topology
+
+C5 + C6 + C6 = 17
+
+This geometry shows particularly stable synchronization in several test runs.
+
+The experiments also explore shell sizes such as
+
+17  
+19  
+29  
+
+which may correspond to resonance or frustration regimes in the phase dynamics.
+
+Further investigation is ongoing.
+
+---
+
 # Research Goals
 
-The symmetry graph experiments investigate whether structured oscillator networks produce:
+The symmetry graph experiments investigate whether structured oscillator networks produce
 
 • universal resonance structures  
 • emergent phase transitions  
 • toroidal stability regimes  
 • Arnold-web-like resonance networks  
+• vortex structures in phase space  
 
 The experiments serve as test environments for the NEXAH resonance framework.
 
@@ -147,7 +236,7 @@ The experiments serve as test environments for the NEXAH resonance framework.
 
 This module belongs to the research layer of the NEXAH Kernel.
 
-It provides experimental infrastructure for studying:
+It provides experimental infrastructure for studying
 
 resonance  
 topology  
@@ -160,13 +249,17 @@ inside the NEXAH system.
 
 # Running Experiments
 
-Example:
+Example
 
 python ENGINE/nexah_kernel/research/experiments/symmetry_graph_experiment/topology/symmetry_graph_torus_nodes.py
 
 or
 
 python ENGINE/nexah_kernel/research/experiments/symmetry_graph_experiment/dynamics/symmetry_graph_full_kuramoto.py
+
+or
+
+python ENGINE/nexah_kernel/research/experiments/symmetry_graph_experiment/prime_shell_scan.py
 
 ---
 
