@@ -195,35 +195,50 @@ They reveal how network structures organize into:
 
 ---
 
-### Stability Landscape & Morse Structure
+### Stability Landscape
 
-| Stability Landscape | Morse Topology |
-|---|---|
-| ￼ | ￼ |
+![Architecture Landscape](visuals/architecture_landscape_3D.png)
 
-The stability landscape shows how spectral stability evolves across the architecture parameter space.  
-The Morse complex highlights critical points and topology transitions in this landscape.
+The stability landscape shows how spectral stability evolves across the architecture parameter space.
 
 ---
 
-### Architecture Navigation
+### Morse Topology
 
-| Navigation Graph | Gradient Flow Density |
-|---|---|
-| ￼ | ￼ |
+![Morse Complex](visuals/architecture_morse_complex.png)
 
-The navigation graph reveals stable architecture attractors and their connectivity.  
+The Morse complex highlights critical points and topology transitions in the stability landscape.
+
+---
+
+### Architecture Navigation Graph
+
+![Architecture Navigation Graph](visuals/architecture_navigation_graph.png)
+
+The navigation graph reveals stable architecture attractors and their connectivity.
+
+---
+
+### Gradient Flow Density
+
+![Architecture Flow Density](visuals/architecture_flow_density.png)
+
 Flow density maps show where gradient trajectories concentrate in architecture space.
 
 ---
 
-### Flow Dynamics & Basin Structure
+### Flow Rivers (3D)
 
-| Flow Rivers (3D) | Morse-Smale Basin Map |
-|---|---|
-| ￼ | ￼ |
+![Architecture Flow Rivers](visuals/architecture_flow_rivers_3D.png)
 
-Flow rivers visualize gradient ascent dynamics across the stability landscape.  
+Flow rivers visualize gradient ascent dynamics across the stability landscape.
+
+---
+
+### Morse-Smale Basin Map
+
+![Architecture Morse Smale](visuals/architecture_morse_smale_map.png)
+
 The Morse-Smale map decomposes the parameter space into basins of architectural stability.
 
 ---
