@@ -1,11 +1,11 @@
 import numpy as np
 
-from nexah_kernel.regime.regime_detector import RegimeDetector
-from nexah_kernel.regime.regime_graph import RegimeGraph
-from nexah_kernel.regime.transition_detector import TransitionDetector
+from ENGINE.nexah_kernel.regime.regime_detector import RegimeDetector
+from ENGINE.nexah_kernel.regime.regime_graph import RegimeGraph
+from ENGINE.nexah_kernel.regime.transition_detector import TransitionDetector
 
-from nexah_kernel.navigation.navigator import Navigator
-from nexah_kernel.navigation.intervention_planner import InterventionPlanner
+from ENGINE.nexah_kernel.navigation.navigator import Navigator
+from ENGINE.nexah_kernel.navigation.intervention_planner import InterventionPlanner
 
 
 # ---------------------------------------------------------
