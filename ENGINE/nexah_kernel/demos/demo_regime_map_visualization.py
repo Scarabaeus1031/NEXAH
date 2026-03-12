@@ -111,7 +111,18 @@ plt.ylabel("Potential Energy")
 plt.legend()
 plt.tight_layout()
 
+import os
+
+# output directory
+output_dir = "ENGINE/nexah_kernel/demos/visuals"
+os.makedirs(output_dir, exist_ok=True)
+
+output_file = os.path.join(output_dir, "double_well_regime_map.png")
+
+plt.savefig(output_file, dpi=150)
 plt.show()
+
+print("\nSaved visualization to:", output_file)
 
 
 # ---------------------------------------------------------
