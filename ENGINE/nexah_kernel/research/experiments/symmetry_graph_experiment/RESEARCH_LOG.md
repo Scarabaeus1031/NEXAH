@@ -150,6 +150,80 @@ First topology scan completed.
 Further runs needed for statistical confirmation.
 
 ---
+5"}
+---
+
+## Experiment 05 — Cycle Balance Synchronization Test
+
+File
+
+symmetry_graph_cycle_balance_test.py
+
+Goal
+
+Determine whether the fast synchronization observed in the symmetry graph
+
+C5 + C6 + C6
+
+is specific to this partition or arises from the general hub-cycle topology.
+
+Tested partitions
+
+5 + 6 + 6  
+4 + 6 + 7  
+3 + 7 + 7  
+5 + 5 + 7  
+
+Method
+
+Kuramoto oscillator simulation with
+
+K = 1.5  
+dt = 0.05  
+50 runs per topology  
+
+Measured quantity
+
+Synchronization time to reach global order parameter
+
+R > 0.95
+
+Observations
+
+All tested cycle partitions synchronized extremely rapidly.
+
+Typical synchronization times
+
+≈ 1.2 – 1.35
+
+Standard deviations
+
+≈ 0.3 – 0.6
+
+No configuration showed a statistically significant advantage.
+
+Interpretation
+
+The synchronization efficiency appears to be caused primarily by the
+
+hub + cycle topology
+
+rather than the specific cycle partition.
+
+This supports the hypothesis that hybrid networks combining
+
+• global coupling (hub)  
+• local cycle stabilization  
+
+produce efficient synchronization dynamics.
+
+
+# Status
+
+Experiment completed.
+
+Result integrated into the symmetry graph result summa
+
 
 # Structural Hypothesis
 
