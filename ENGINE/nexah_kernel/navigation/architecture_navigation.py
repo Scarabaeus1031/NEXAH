@@ -14,6 +14,7 @@ this module provides methods for
 - finding local stability maxima
 - constructing navigation graphs
 - exploring transitions between architecture regimes
+- gradient-ascent architecture search
 
 These tools allow the NEXAH kernel to treat architecture search
 as navigation within a stability landscape.
@@ -122,3 +123,92 @@ def best_architecture(stability_field):
     idx = np.argmax(stability_field)
 
     return np.unravel_index(idx, stability_field.shape)
+
+
+def gradient_ascent_architecture_search(
+    node_values,
+    p_values,
+    stability_field,
+    start=None,
+    max_steps=50
+):
+    """
+    Perform gradient ascent in the architecture stability landscape.
+
+    Starting from an initial architecture configuration,
+    the algorithm moves toward neighboring configurations
+    with higher stability.
+
+    Parameters
+    ----------
+    node_values : list
+        Node counts corresponding to stability_field rows.
+    p_values : list
+        Edge probabilities corresponding to stability_field columns.
+    stability_field : ndarray
+        Stability landscape.
+    start : tuple or None
+        Starting index (i, j). If None, a random start is used.
+    max_steps : int
+        Maximum number of ascent steps.
+
+    Returns
+    -------
+    dict
+        Search result containing
+
+        - path
+        - final_position
+        - final_nodes
+        - final_p
+        - final_stability
+    """
+
+    rows, cols = stability_field.shape
+
+    if start is None:
+        i = np.random.randint(0, rows)
+        j = np.random.randint(0, cols)
+    else:
+        i, j = start
+
+    path = [(i, j)]
+
+    for _ in range(max_steps):
+
+        current = stability_field[i, j]
+
+        neighbors = []
+
+        for di, dj in [(-1,0),(1,0),(0,-1),(0,1)]:
+
+            ni = i + di
+            nj = j + dj
+
+            if 0 <= ni < rows and 0 <= nj < cols:
+                neighbors.append((ni, nj))
+
+        best_neighbor = None
+        best_value = current
+
+        for ni, nj in neighbors:
+
+            value = stability_field[ni, nj]
+
+            if value > best_value:
+                best_value = value
+                best_neighbor = (ni, nj)
+
+        if best_neighbor is None:
+            break
+
+        i, j = best_neighbor
+        path.append((i, j))
+
+    return {
+        "path": path,
+        "final_position": (i, j),
+        "final_nodes": node_values[i],
+        "final_p": p_values[j],
+        "final_stability": stability_field[i, j],
+    }
