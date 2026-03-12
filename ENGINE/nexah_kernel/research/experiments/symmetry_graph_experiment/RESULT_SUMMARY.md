@@ -141,6 +141,68 @@ Possible causes include
 • metastable vortex structures
 
 ---
+}
+---
+
+# Additional Result — Cycle Balance Synchronization Test
+
+A comparison experiment was conducted to determine whether the fast synchronization behavior observed in the symmetry graph
+
+C5 + C6 + C6
+
+is unique to this partition or arises more generally from hub-cycle network structures.
+
+Tested partitions of the 17-node shell:
+
+5 + 6 + 6  
+4 + 6 + 7  
+3 + 7 + 7  
+5 + 5 + 7  
+
+Simulation parameters
+
+Kuramoto coupling K = 1.5  
+time step dt = 0.05  
+runs per topology = 50  
+synchronization threshold R > 0.95  
+
+Measured quantity
+
+Synchronization time to reach global phase coherence.
+
+Observed mean synchronization times across repeated runs:
+
+5 + 6 + 6 → ≈ 1.24–1.29  
+4 + 6 + 7 → ≈ 1.21–1.31  
+3 + 7 + 7 → ≈ 1.24–1.39  
+5 + 5 + 7 → ≈ 1.21–1.40  
+
+Standard deviations ranged roughly between
+
+0.31 and 0.59.
+
+Interpretation
+
+The results indicate that the rapid synchronization behavior is not specific to the 5+6+6 configuration.
+
+Instead, the dominant factor appears to be the hub-cycle topology itself:
+
+center node  
++ radial spokes  
++ local cycle connections
+
+This structure provides
+
+• global phase propagation through the hub  
+• local stabilization through cycle loops  
+
+Together these mechanisms enable extremely rapid phase synchronization.
+
+Conclusion
+
+Balanced multi-cycle hub networks appear to form a robust synchronization topology in Kuramoto oscillator systems.
+
+The specific cycle partition does not strongly affect synchronization speed as long as the hub-cycle structure is preserved
 
 # Current Hypotheses
 
