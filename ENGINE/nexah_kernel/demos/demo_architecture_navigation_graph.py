@@ -28,17 +28,22 @@ from ENGINE.nexah_kernel.tools.nexah_spectral_stability_score import spectral_st
 
 def compute_stability_field():
 
+    # reproducible Monte-Carlo runs
+    np.random.seed(42)
+
     node_values = np.arange(4, 15)
     prob_values = np.linspace(0.05, 0.9, 17)
 
     stability = np.zeros((len(node_values), len(prob_values)))
+
+    samples = 50
 
     for i, n in enumerate(node_values):
         for j, p in enumerate(prob_values):
 
             scores = []
 
-            for _ in range(25):
+            for _ in range(samples):
 
                 G = nx.erdos_renyi_graph(int(n), float(p))
 
@@ -215,14 +220,14 @@ def plot_navigation_graph(node_values,prob_values,stability,maxima,G):
             label="Stable architectures"
         )
 
+        plt.legend()
+
     plt.title("Architecture Stability Navigation Graph")
 
     plt.xlabel("Edge Probability")
     plt.ylabel("Number of Nodes")
 
     plt.colorbar(label="λ₂ / λmax")
-
-    plt.legend()
 
     plt.tight_layout()
 
