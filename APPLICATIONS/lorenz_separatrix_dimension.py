@@ -1,6 +1,25 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
+from scipy.ndimage import sobel
+
+
+img = Image.open(
+    "APPLICATIONS/outputs/lorenz_separatrix/separatrix_zoom.png"
+)
+
+img = img.convert("L")
+
+data = np.array(img)
+
+
+# Edge detection
+dx = sobel(data, axis=0)
+dy = sobel(data, axis=1)
+
+edges = np.hypot(dx, dy)
+
+edges = edges > np.percentile(edges, 95)
 
 
 def boxcount(Z, k):
@@ -8,38 +27,35 @@ def boxcount(Z, k):
     S = np.add.reduceat(
         np.add.reduceat(Z, np.arange(0, Z.shape[0], k), axis=0),
         np.arange(0, Z.shape[1], k),
-        axis=1
+        axis=1,
     )
 
-    return len(np.where((S > 0) & (S < k*k))[0])
+    return len(np.where(S > 0)[0])
 
 
-def fractal_dimension(Z):
+sizes = 2 ** np.arange(1, 7)
 
-    Z = Z < 255
+counts = []
 
-    sizes = 2**np.arange(2, 8)
-
-    counts = []
-
-    for size in sizes:
-        counts.append(boxcount(Z, size))
-
-    coeffs = np.polyfit(np.log(sizes), np.log(counts), 1)
-
-    return -coeffs[0], sizes, counts
+for size in sizes:
+    counts.append(boxcount(edges, size))
 
 
-img = Image.open("APPLICATIONS/outputs/lorenz_separatrix/separatrix_zoom.png").convert("L")
+coeffs = np.polyfit(np.log(sizes), np.log(counts), 1)
 
-data = np.array(img)
+D = -coeffs[0]
 
-D, sizes, counts = fractal_dimension(data)
+print("Fractal dimension (boundary):", D)
 
-print("Estimated fractal dimension:", D)
 
+plt.figure(figsize=(6, 6))
+plt.imshow(edges, cmap="gray")
+plt.title("Extracted Basin Boundary")
+plt.axis("off")
+
+plt.figure()
 plt.plot(np.log(sizes), np.log(counts), "o-")
 plt.xlabel("log(box size)")
 plt.ylabel("log(box count)")
-plt.title(f"Box counting dimension ≈ {D:.3f}")
+plt.title(f"Fractal dimension ≈ {D:.3f}")
 plt.show()
