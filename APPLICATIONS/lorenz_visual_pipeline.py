@@ -7,9 +7,11 @@ This script runs the Lorenz adapter and produces:
 2. regime timeline visualization
 3. raw trajectory CSV
 
-All artifacts are stored in:
+Artifacts are stored in:
 
 APPLICATIONS/outputs/lorenz/
+
+Plots are both displayed and saved.
 """
 
 import os
@@ -26,7 +28,6 @@ from APPLICATIONS.adapters.examples.lorenz_adapter import LorenzAdapter
 # ---------------------------------------------------
 
 OUTPUT_DIR = "APPLICATIONS/outputs/lorenz"
-
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
@@ -77,16 +78,21 @@ def plot_attractor(traj):
     fig = plt.figure()
     ax = fig.add_subplot(projection="3d")
 
-    ax.plot(traj[:,0], traj[:,1], traj[:,2], lw=0.5)
+    ax.plot(traj[:,0], traj[:,1], traj[:,2], lw=0.6)
 
     ax.set_title("Lorenz Attractor")
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
+    ax.set_zlabel("Z")
 
     path = os.path.join(OUTPUT_DIR, "lorenz_attractor.png")
 
     plt.savefig(path, dpi=200)
-    plt.close()
 
     print("Saved:", path)
+
+    plt.show()
+    plt.close()
 
 
 # ---------------------------------------------------
@@ -98,8 +104,6 @@ def plot_regime_timeline(adapter):
     regimes = adapter.regimes()
     states = adapter.states()
 
-    values = []
-
     mapping = {
         "LEFT_ATTRACTOR": 0,
         "TRANSITION": 1,
@@ -107,11 +111,10 @@ def plot_regime_timeline(adapter):
         "ESCAPE": 3
     }
 
-    for s in states:
-        values.append(mapping[regimes[s]])
+    values = [mapping[regimes[s]] for s in states]
 
-    plt.figure(figsize=(10,3))
-    plt.plot(values)
+    plt.figure(figsize=(12,3))
+    plt.plot(values, linewidth=2)
 
     plt.yticks(
         [0,1,2,3],
@@ -119,13 +122,17 @@ def plot_regime_timeline(adapter):
     )
 
     plt.title("Lorenz Regime Timeline")
+    plt.xlabel("Sample Step")
+    plt.ylabel("Regime")
 
     path = os.path.join(OUTPUT_DIR, "lorenz_regime_timeline.png")
 
     plt.savefig(path, dpi=200)
-    plt.close()
 
     print("Saved:", path)
+
+    plt.show()
+    plt.close()
 
 
 # ---------------------------------------------------
