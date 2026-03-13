@@ -18,6 +18,7 @@ NEXAH separates system analysis into three conceptual layers:
 This separation allows the kernel to analyze systems in terms of stability regions, transitions, and navigable trajectories.
 
 ---
+## NEXAH System Architecture
 
 ![NEXAH System Architecture](../../visuals/diagrams/NEXAH_SYSTEM_ARCHITECTURE.png)
 
