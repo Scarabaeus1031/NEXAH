@@ -1,0 +1,54 @@
+.
+├── __init__.py
+├── analysis
+│   ├── lorenz_flow_vector_field.py
+│   ├── lorenz_ftle_filament_graph.py
+│   ├── lorenz_ftle_lcs_map.py
+│   ├── lorenz_ftle_nebula_3d.py
+│   ├── lorenz_ftle_surface_5d_projection.py
+│   ├── lorenz_ftle_surface_reconstruction.py
+│   ├── lorenz_lyapunov_field.py
+│   ├── lorenz_lyapunov_map.py
+│   └── lorenz_rotation_stretch_field.py
+├── APPLICATIONS
+│   └── outputs
+│       └── lorenz_navigation
+│           └── lorenz_ftle_nebula_3d_20260313_215206.png
+├── attractor
+│   ├── lorenz_chaos_filament_map.py
+│   ├── lorenz_density_map.py
+│   ├── lorenz_density_nebula_true.py
+│   ├── lorenz_density_nebula.py
+│   └── lorenz_filament_3d.py
+├── core
+├── landscapes
+│   ├── lorenz_chaos_topography.py
+│   ├── lorenz_chaos_topographyii.py
+│   └── lorenz_potential_landscape.py
+├── navigation
+│   ├── lorenz_chaos_navigator.py
+│   ├── lorenz_gradient_controller.py
+│   ├── lorenz_gradient_navigation.py
+│   ├── lorenz_navigation_analysis.py
+│   ├── lorenz_navigator_agent.py
+│   └── lorenz_trajectory_on_landscape.py
+├── pipeline
+│   └── lorenz_visual_pipeline.py
+├── regimes
+│   ├── dev_separatrix_zoom.py
+│   ├── lorenz_basin_boundary.py
+│   ├── lorenz_basin_fractal.py
+│   ├── lorenz_basin_zoom.py
+│   ├── lorenz_regime_map.py
+│   ├── lorenz_regime_network.py
+│   ├── lorenz_resilience_map.py
+│   ├── lorenz_separatrix_map.py
+│   ├── lorenz_separatrix_on_landscape.py
+│   ├── lorenz_separatrix_zoom.py
+│   ├── lorenz_switch_heatmap.py
+│   └── lorenz_transition_channel.py
+├── repo_tree.txt
+└── visualization
+    └── lorenz_5d_polar_projection.py
+
+12 directories, 40 files
