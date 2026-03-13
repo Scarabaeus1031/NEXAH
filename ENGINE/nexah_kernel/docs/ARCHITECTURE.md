@@ -19,8 +19,7 @@ This separation allows the kernel to analyze systems in terms of stability regio
 
 ---
 
-
-![NEXAH System Architecture](../visuals/diagrams/NEXAH_SYSTEM_ARCHITECTURE.png)
+![NEXAH System Architecture](../../visuals/diagrams/NEXAH_SYSTEM_ARCHITECTURE.png)
 
 # Core System Model
 
