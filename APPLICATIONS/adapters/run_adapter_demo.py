@@ -7,11 +7,15 @@ to the NEXAH framework.
 It loads several example adapters and prints their structural state graphs.
 """
 
-from examples.lorenz_adapter import LorenzAdapter
-from examples.kuramoto_adapter import KuramotoAdapter
-from examples.powergrid_adapter import PowerGridAdapter
-from examples.supply_chain_adapter import SupplyChainAdapter
-from examples.traffic_adapter import TrafficAdapter
+"""
+NEXAH Adapter Demo Runner
+"""
+
+from .examples.lorenz_adapter import LorenzAdapter
+from .examples.kuramoto_adapter import KuramotoAdapter
+from .examples.powergrid_adapter import PowerGridAdapter
+from .examples.supply_chain_adapter import SupplyChainAdapter
+from .examples.traffic_adapter import TrafficAdapter
 
 
 def run_adapter(adapter):
