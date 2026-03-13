@@ -6,7 +6,11 @@ The kernel is designed as a minimal structural navigation engine for complex sys
 Instead of simulating systems purely as dynamical processes, NEXAH interprets systems as **navigable regime landscapes**.
 
 ---
+## NEXAH System Architecture
 
+![NEXAH System Architecture](../../visuals/diagrams/nexah_system_architecture.png)
+
+---
 # Architectural Philosophy
 
 NEXAH separates system analysis into three conceptual layers:
@@ -17,10 +21,6 @@ NEXAH separates system analysis into three conceptual layers:
 
 This separation allows the kernel to analyze systems in terms of stability regions, transitions, and navigable trajectories.
 
----
-## NEXAH System Architecture
-
-![NEXAH System Architecture](../../visuals/diagrams/nexah_system_architecture.png)
 
 # Core System Model
 
