@@ -1,65 +1,174 @@
+"""
+NEXAH Lorenz Resilience Map
+
+For each initial condition (x,z) we measure:
+
+tau = time until first lobe switch
+
+This indicates how resilient a state is.
+
+Large tau  -> stable region
+Small tau  -> near separatrix
+
+Outputs:
+
+APPLICATIONS/outputs/lorenz_resilience/
+
+Files:
+- lorenz_resilience_map.png
+- lorenz_resilience_map.csv
+"""
+
+import os
+import csv
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 
-def lorenz(state, t, sigma=10, rho=28, beta=8/3):
-    x,y,z = state
+# ---------------------------------------------------
+# Output folder
+# ---------------------------------------------------
+
+OUTPUT_DIR = "APPLICATIONS/outputs/lorenz_resilience"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+
+# ---------------------------------------------------
+# Lorenz system
+# ---------------------------------------------------
+
+def lorenz(state, t, sigma=10.0, rho=28.0, beta=8/3):
+
+    x, y, z = state
+
     return [
-        sigma*(y-x),
-        x*(rho-z)-y,
-        x*y-beta*z
+        sigma * (y - x),
+        x * (rho - z) - y,
+        x * y - beta * z
     ]
 
+
+# ---------------------------------------------------
+# time until lobe switch
+# ---------------------------------------------------
 
 def first_switch(traj):
 
     x = traj[:,0]
 
-    state = np.sign(x[0])
+    start = np.sign(x[0])
 
     for i,v in enumerate(x):
 
-        if np.sign(v) != state:
+        if np.sign(v) != start:
             return i
 
     return len(x)
 
 
-res = 200
+# ---------------------------------------------------
+# compute resilience map
+# ---------------------------------------------------
 
-xs = np.linspace(-4,4,res)
-zs = np.linspace(15,35,res)
+def compute_map(resolution=160):
 
-t = np.linspace(0,50,5000)
+    xs = np.linspace(-4,4,resolution)
+    zs = np.linspace(15,35,resolution)
 
-tau = np.zeros((res,res))
+    t = np.linspace(0,50,4000)
+
+    tau = np.zeros((resolution,resolution))
+
+    for i,z in enumerate(zs):
+
+        print("row",i+1,"/",resolution)
+
+        for j,x in enumerate(xs):
+
+            init = [x,0,z]
+
+            traj = odeint(lorenz,init,t)
+
+            tau[i,j] = first_switch(traj)
+
+    return tau,xs,zs
 
 
-for i,z in enumerate(zs):
+# ---------------------------------------------------
+# save csv
+# ---------------------------------------------------
 
-    print(i,res)
+def save_csv(grid):
 
-    for j,x in enumerate(xs):
+    path = os.path.join(
+        OUTPUT_DIR,
+        "lorenz_resilience_map.csv"
+    )
 
-        traj = odeint(lorenz,[x,0,z],t)
+    with open(path,"w",newline="") as f:
 
-        tau[i,j] = first_switch(traj)
+        writer = csv.writer(f)
+
+        for row in grid:
+            writer.writerow(row.tolist())
+
+    print("Saved:",path)
 
 
-plt.figure(figsize=(8,8))
+# ---------------------------------------------------
+# plot
+# ---------------------------------------------------
 
-plt.imshow(
-    tau,
-    extent=[xs[0],xs[-1],zs[0],zs[-1]],
-    origin="lower",
-    cmap="inferno"
-)
+def plot_map(grid,xs,zs):
 
-plt.colorbar(label="time until lobe switch")
+    plt.figure(figsize=(8,8))
 
-plt.xlabel("X")
-plt.ylabel("Z")
-plt.title("Lorenz Resilience Map")
+    plt.imshow(
+        grid,
+        extent=[xs[0],xs[-1],zs[0],zs[-1]],
+        origin="lower",
+        cmap="inferno",
+        aspect="auto"
+    )
 
-plt.show()
+    plt.colorbar(label="time until lobe switch")
+
+    plt.xlabel("X")
+    plt.ylabel("Z")
+
+    plt.title("Lorenz Resilience Map")
+
+    path = os.path.join(
+        OUTPUT_DIR,
+        "lorenz_resilience_map.png"
+    )
+
+    plt.savefig(path,dpi=300)
+
+    print("Saved:",path)
+
+    plt.show()
+
+    plt.close()
+
+
+# ---------------------------------------------------
+# main
+# ---------------------------------------------------
+
+def main():
+
+    print("\nRunning Lorenz resilience test...\n")
+
+    grid,xs,zs = compute_map()
+
+    save_csv(grid)
+
+    plot_map(grid,xs,zs)
+
+    print("\nResilience test finished.\n")
+
+
+if __name__ == "__main__":
+    main()
