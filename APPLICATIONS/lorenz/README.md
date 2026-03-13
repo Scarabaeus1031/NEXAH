@@ -263,7 +263,81 @@ It demonstrates how NEXAH can analyze complex systems by reconstructing:
 The Lorenz module therefore serves as a **benchmark system for chaos exploration within the NEXAH framework**.
 
 
+# Visual Gallery
 
+The following figures illustrate different structural layers of the Lorenz system reconstructed by the analysis pipeline.
+
+---
+
+## Lorenz Attractor Density
+
+Dense trajectory sampling reveals the filament structure of the strange attractor.
+
+![Lorenz Density Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_density_map.png)
+
+---
+
+## Chaos Filament Structure
+
+Chaotic trajectories form filamentary structures across the attractor.
+
+![Lorenz Filament Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_filament_map.png)
+
+---
+
+## Flow Vector Field
+
+The instantaneous velocity field of the Lorenz system.
+
+![Lorenz Flow Field](APPLICATIONS/outputs/lorenz_navigation/lorenz_flow_field.png)
+
+---
+
+## Lyapunov Instability Field
+
+Local instability of trajectories measured through Lyapunov exponents.
+
+![Lorenz Lyapunov Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_lyapunov_map.png)
+
+---
+
+## Rotation and Stretch Field
+
+Chaos arises from repeated stretching and folding of trajectories.
+
+![Lorenz Stretch Field](APPLICATIONS/outputs/lorenz_navigation/lorenz_rotation_stretch.png)
+
+---
+
+## FTLE Coherent Structures
+
+Finite-Time Lyapunov Exponent (FTLE) ridges reveal transport barriers and chaotic transport structures.
+
+![Lorenz FTLE Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_map.png)
+
+---
+
+## Chaos Density Nebula
+
+A 3D density reconstruction of chaotic transport structures.
+
+![Lorenz FTLE Nebula](APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_nebula_3d_20260313_215206.png)
+
+---
+
+## Chaos Topography
+
+The chaotic system can be interpreted as a landscape with ridges and valleys.
+
+![Lorenz Chaos Topography](APPLICATIONS/outputs/lorenz_navigation/lorenz_chaos_topography.png)
+
+---
+
+## 5D Polar Projection
+
+A higher-dimensional projection of the attractor revealing hidden geometric symmetries.
+
+![Lorenz 5D Projection](APPLICATIONS/outputs/lorenz_navigation/lorenz_5d_projection.png)
 
 
 
