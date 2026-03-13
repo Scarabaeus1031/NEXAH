@@ -5,7 +5,8 @@ This script runs the Lorenz adapter and produces:
 
 1. 3D Lorenz attractor visualization
 2. regime timeline visualization
-3. raw trajectory CSV
+3. regime-colored attractor map
+4. raw trajectory CSV
 
 Artifacts are stored in:
 
@@ -88,7 +89,6 @@ def plot_attractor(traj):
     path = os.path.join(OUTPUT_DIR, "lorenz_attractor.png")
 
     plt.savefig(path, dpi=200)
-
     print("Saved:", path)
 
     plt.show()
@@ -128,7 +128,57 @@ def plot_regime_timeline(adapter):
     path = os.path.join(OUTPUT_DIR, "lorenz_regime_timeline.png")
 
     plt.savefig(path, dpi=200)
+    print("Saved:", path)
 
+    plt.show()
+    plt.close()
+
+
+# ---------------------------------------------------
+# Regime colored attractor
+# ---------------------------------------------------
+
+def plot_regime_attractor(traj, adapter):
+
+    regimes = adapter.regimes()
+    states = adapter.states()
+
+    colors = {
+        "LEFT_ATTRACTOR": "blue",
+        "RIGHT_ATTRACTOR": "red",
+        "TRANSITION": "gold",
+        "ESCAPE": "black"
+    }
+
+    fig = plt.figure()
+    ax = fig.add_subplot(projection="3d")
+
+    index = 0
+
+    for i in range(0, len(traj), adapter.sample_step):
+
+        state = states[index]
+        regime = regimes[state]
+
+        x, y, z = traj[i]
+
+        ax.scatter(
+            x, y, z,
+            color=colors[regime],
+            s=6
+        )
+
+        index += 1
+
+    ax.set_title("Lorenz Attractor – Regime Map")
+
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
+    ax.set_zlabel("Z")
+
+    path = os.path.join(OUTPUT_DIR, "lorenz_regime_attractor.png")
+
+    plt.savefig(path, dpi=200)
     print("Saved:", path)
 
     plt.show()
@@ -152,6 +202,8 @@ def main():
     plot_attractor(traj)
 
     plot_regime_timeline(adapter)
+
+    plot_regime_attractor(traj, adapter)
 
     print("\nPipeline finished.\n")
 
