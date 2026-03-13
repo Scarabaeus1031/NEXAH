@@ -179,11 +179,87 @@ kernel**.
 
 ------------------------------------------------------------------------
 
-# Generated Data
+---
 
-Visual outputs are stored in:
+# Visual Atlas
 
-ENGINE/nexah_kernel/demos/visuals
+The NEXAH demos generate a large collection of structural visualizations.
+
+These images illustrate the **geometry of regime landscapes, stability
+fields, and navigation structures** discovered by the kernel.
+
+All images are generated automatically by the demo suite.
+
+---
+
+## Architecture Landscape
+
+| | |
+|---|---|
+| ![](visuals/architecture_landscape_3D.png) | ![](visuals/architecture_flow_density.png) |
+| ![](visuals/architecture_flow_field.png) | ![](visuals/architecture_flow_rivers_3D.png) |
+
+---
+
+## Morse Topology
+
+| | |
+|---|---|
+| ![](visuals/architecture_morse_complex.png) | ![](visuals/architecture_morse_smale_map.png) |
+
+These visualizations reveal the **topological structure of architecture
+stability landscapes**.
+
+---
+
+## Architecture Stability
+
+| | |
+|---|---|
+| ![](visuals/architecture_stability_landscape.png) | ![](visuals/architecture_stability_phase_diagram.png) |
+| ![](visuals/architecture_transition_map.png) | ![](visuals/architecture_optimizer_progress.png) |
+
+---
+
+## Structural Navigation
+
+| | |
+|---|---|
+| ![](visuals/architecture_navigation_graph.png) | ![](visuals/architecture_ridge_detector.png) |
+| ![](visuals/architecture_regime_map.png) | ![](visuals/double_well_regime_map.png) |
+
+---
+
+## Symmetry & Resonance Fields
+
+| | |
+|---|---|
+| ![](visuals/symmetry_resonance_atlas) | ![](visuals/resonance_landscape) |
+
+These visualizations explore **structural symmetries and resonance
+patterns in dynamical systems**.
+
+---
+
+# Generating Visuals
+
+The images in this gallery can be generated automatically by running:
+
+```bash
+python -m ENGINE.nexah_kernel.demos.run_architecture_suite
+```
+Additional demos generate further datasets and structural visualizations.
+
+⸻
+
+# Dataset Output
+
+Generated visual datasets are stored in:
+
+ENGINE/nexah_kernel/demos/visuals/
+
+These visual datasets form the basis of structural regime analysis and
+architecture exploration in NEXAH.
 
 ------------------------------------------------------------------------
 
