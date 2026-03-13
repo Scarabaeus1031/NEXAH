@@ -7,6 +7,7 @@ This script runs the Lorenz adapter and produces:
 2. regime timeline visualization
 3. regime-colored attractor map
 4. raw trajectory CSV
+5. attractor switching events CSV
 
 Artifacts are stored in:
 
@@ -68,6 +69,50 @@ def save_csv(traj):
             writer.writerow(row)
 
     print("Saved:", path)
+
+
+# ---------------------------------------------------
+# Detect attractor switch events
+# ---------------------------------------------------
+
+def detect_switch_events(adapter):
+
+    regimes = adapter.regimes()
+    states = adapter.states()
+
+    path = os.path.join(OUTPUT_DIR, "lorenz_switch_events.csv")
+
+    events = []
+
+    prev_regime = regimes[states[0]]
+
+    for s in states[1:]:
+
+        current_regime = regimes[s]
+
+        if (
+            prev_regime in ["LEFT_ATTRACTOR", "RIGHT_ATTRACTOR"]
+            and current_regime in ["LEFT_ATTRACTOR", "RIGHT_ATTRACTOR"]
+            and prev_regime != current_regime
+        ):
+            events.append((s, prev_regime, current_regime))
+
+        prev_regime = current_regime
+
+    with open(path, "w", newline="") as f:
+
+        writer = csv.writer(f)
+        writer.writerow(["state", "from", "to"])
+
+        for e in events:
+            writer.writerow(e)
+
+    print("Saved:", path)
+
+    print("\nDetected Attractor Switch Events:")
+
+    for e in events:
+        print(f"{e[1]} → {e[2]} at {e[0]}")
 
 
 # ---------------------------------------------------
@@ -198,6 +243,8 @@ def main():
     adapter = LorenzAdapter()
 
     save_csv(traj)
+
+    detect_switch_events(adapter)
 
     plot_attractor(traj)
 
