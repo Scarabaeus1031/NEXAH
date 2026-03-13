@@ -274,7 +274,7 @@ The following figures illustrate different structural layers of the Lorenz syste
 
 A 3D density reconstruction of chaotic transport structures.
 
-![Lorenz FTLE Nebula](./APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_nebula_3d_20260313_215206.png)
+![Lorenz Density Nebula](../outputs/lorenz_navigation/lorenz_density_nebula_20260313_210336.png)
 
 ---
 
@@ -282,7 +282,7 @@ A 3D density reconstruction of chaotic transport structures.
 
 Topographic representation of the chaotic phase space landscape.
 
-![Lorenz Chaos Topography](./APPLICATIONS/outputs/lorenz_navigation/lorenz_chaos_topography_20260313_202116.png)
+![Lorenz Chaos Topography](../outputs/lorenz_navigation/lorenz_chaos_topography_20260313_202116.png)
 
 ---
 
@@ -290,7 +290,7 @@ Topographic representation of the chaotic phase space landscape.
 
 Finite-Time Lyapunov Exponent (FTLE) ridges reveal transport barriers and chaotic transport structures.
 
-![Lorenz FTLE Map](./APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_lcs_map.png)
+![Lorenz FTLE Map](../outputs/lorenz_navigation/lorenz_ftle_lcs_20260313_213948.png)
 
 ---
 
@@ -298,7 +298,7 @@ Finite-Time Lyapunov Exponent (FTLE) ridges reveal transport barriers and chaoti
 
 Chaotic transport skeleton reconstructed from FTLE ridges.
 
-![Lorenz Filament Graph](./APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_filament_graph.png)
+![Lorenz Filament Graph](../outputs/lorenz_navigation/lorenz_ftle_filament_graph_20260313_220705.png)
 
 ---
 
@@ -306,7 +306,7 @@ Chaotic transport skeleton reconstructed from FTLE ridges.
 
 Filamentary trajectory structures within the attractor.
 
-![Lorenz Filament 3D](./APPLICATIONS/outputs/lorenz_navigation/lorenz_filament_3d.png)
+![Lorenz Filament 3D](../outputs/lorenz_navigation/lorenz_filament_3d_20260313_204724.png)
 
 ---
 
@@ -314,4 +314,52 @@ Filamentary trajectory structures within the attractor.
 
 Higher-dimensional projection of the Lorenz attractor.
 
-![Lorenz 5D Projection](./APPLICATIONS/outputs/lorenz_navigation/lorenz_5d_polar_projection.png)
+![Lorenz 5D Projection](../outputs/lorenz_navigation/lorenz_5d_polar_projection_20260313_222559.png)
+
+---
+
+## Flow Vector Field
+
+Local velocity field of the Lorenz dynamics.
+
+![Lorenz Flow Field](../outputs/lorenz_navigation/lorenz_flow_field_20260313_211152.png)
+
+---
+
+## Chaos Filament Map
+
+Large-scale chaotic filament structure of the attractor.
+
+![Lorenz Chaos Filament Map](../outputs/lorenz_navigation/lorenz_chaos_filament_map_20260313_220628.png)
+
+---
+
+## Lyapunov Stability Map
+
+Lyapunov field highlighting chaotic stretching regions.
+
+![Lorenz Lyapunov Map](../outputs/lorenz_navigation/lorenz_lyapunov_map_20260313_212407.png)
+
+---
+
+## Separatrix Structure
+
+Fractal regime boundary separating attractor lobes.
+
+![Lorenz Separatrix Map](../outputs/lorenz_navigation/lorenz_separatrix_map_20260313_195544.png)
+
+---
+
+## Regime Switching Heatmap
+
+Visualization of lobe-switching frequency across the attractor.
+
+![Lorenz Switch Heatmap](../outputs/lorenz_navigation/lorenz_switch_heatmap_20260313_194556.png)
+
+---
+
+## Navigation Map
+
+Structural navigation pathways across the Lorenz regime landscape.
+
+![Lorenz Navigation Map](../outputs/lorenz_navigation/lorenz_navigation_map.png)
