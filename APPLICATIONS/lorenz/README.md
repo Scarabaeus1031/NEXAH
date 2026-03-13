@@ -262,6 +262,7 @@ It demonstrates how NEXAH can analyze complex systems by reconstructing:
 
 The Lorenz module therefore serves as a **benchmark system for chaos exploration within the NEXAH framework**.
 
+---
 
 # Visual Gallery
 
