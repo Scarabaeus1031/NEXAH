@@ -250,22 +250,24 @@ Module:
 
 # Lorenz Demonstrator
 
-The Lorenz system serves as the **first complete reference application** of the NEXAH framework.
+The **Lorenz system** serves as the first complete reference application of the NEXAH framework.
 
-This demonstrator reconstructs the **structural geometry of a chaotic dynamical system** and shows how NEXAH can analyze and navigate regime transitions.
+This demonstrator reconstructs the **structural geometry of a chaotic dynamical system** and shows how NEXAH can analyze regime transitions through stability landscape reconstruction.
 
-The analysis pipeline reveals how chaotic motion can be interpreted as movement across a **stability landscape**.
+The Lorenz module implements a full structural analysis pipeline including:
 
----
+- attractor reconstruction
+- basin boundary detection
+- regime mapping
+- resilience analysis
+- potential landscape reconstruction
+- gradient field navigation
+- separatrix and fractal boundary analysis
+- FTLE and filament structures
 
-# Lorenz Analysis Pipeline
+Conceptual pipeline:
 
-The Lorenz application reconstructs the regime structure of the system step by step.
-
-```
 Lorenz System
-↓
-Basin Boundary Detection
 ↓
 Regime Mapping
 ↓
@@ -273,194 +275,34 @@ Resilience Analysis
 ↓
 Potential Landscape Reconstruction
 ↓
-Gradient Field Analysis
+Gradient Field Navigation
 ↓
-Trajectory Navigation
-↓
-Fractal Separatrix Analysis
-```
+Separatrix Structure
 
-Each stage adds structural information about the dynamical system.
+This analysis reveals how chaotic dynamics can be interpreted as **navigation across a structured stability landscape**.
 
----
+Full documentation and analysis pipeline:
 
-# Core Structural Maps
+APPLICATIONS/lorenz/README.md
 
-The Lorenz demonstrator produces several structural maps.
+The Lorenz module contains the complete research demonstrator including:
+	•	FTLE surface reconstruction
+	•	curvature fields
+	•	chaos energy landscapes
+	•	filament graphs
+	•	navigation agents
+	•	high-dimensional projections
 
-### Basin Boundary
+and serves as the primary benchmark system for the NEXAH dynamical analysis framework.
 
-Identifies regions of state space that converge to different attractor lobes.
+⸻
 
-Script:
-
-```
-lorenz_basin_boundary.py
-```
-
----
-
-### Regime Map
-
-Shows the global regime structure of the Lorenz attractor.
-
-Script:
-
-```
-lorenz_regime_map.py
-```
-
----
-
-### Resilience Map
-
-Measures how stable each state is with respect to regime switching.
-
-States with fast lobe switching correspond to **low resilience**.
-
-Script:
-
-```
-lorenz_resilience_map.py
-```
-
----
-
-### Potential Landscape
-
-Transforms the resilience map into a **quasi-potential field**.
-
-```
-V(x,z) = 1 / τ(x,z)
-```
-
-This potential field reveals the **stability valleys and transition ridge** of the system.
-
-Script:
-
-```
-lorenz_potential_landscape.py
-```
-
----
-
-### Gradient Field
-
-Computes the stability gradient of the landscape.
-
-```
-∇V(x)
-```
-
-This field indicates the directions of increasing system stability.
-
-Script:
-
-```
-lorenz_gradient_navigation.py
-```
-
----
-
-### Trajectory Navigation
-
-The Lorenz trajectory can be projected onto the potential landscape.
-
-This shows how the chaotic dynamics move across the stability structure.
-
-Script:
-
-```
-lorenz_trajectory_on_landscape.py
-```
-
----
-
-### Fractal Separatrix
-
-The boundary between attractor regimes has a **fractal structure**.
-
-Zoom analysis reveals the fine structure of the transition region.
-
-Scripts:
-
-```
-lorenz_separatrix_zoom.py
-lorenz_separatrix_on_landscape.py
-```
-
----
-
-# Result
-
-The Lorenz system can be interpreted as motion across a **structured stability landscape**.
-
-The dynamics approximately follow the gradient structure of the potential:
-
-```
-dx/dt ≈ −∇V(x)
-```
-
-This interpretation transforms chaotic dynamics into a **regime navigation problem**.
-
----
-
-# Demonstration Script
+Demonstration Script
 
 The full Lorenz exploration pipeline can be executed via:
 
-```
 python -m APPLICATIONS.run_navigation_demo
-```
 
-This script generates the full set of structural maps used in the Lorenz demonstrator.
-
----
-
-# Position within the NEXAH Architecture
-
-The Lorenz demonstrator illustrates two layers of the NEXAH application stack.
-
-### Category A — Benchmark Systems
-
-Lorenz serves as a reference system for testing structural operators.
-
-### Category C — Scientific Exploration
-
-The system also demonstrates how NEXAH can act as a **research tool for dynamical systems**.
-
-The next development stage will extend these methods to **real-world infrastructure systems**.
-
-Examples include:
-
-- power grids
-- transportation systems
-- supply chains
-- cyber-physical systems
-
-These applications correspond to **Category B — Infrastructure Systems**.
-
----
-
-# Interpretation
-
-The Lorenz analysis reveals that chaotic dynamics can be decomposed into three structural components:
-
-```
-Potential Landscape
-+
-Gradient Navigation
-+
-Fractal Regime Boundaries
-```
-
-This structure forms the basis of the **NEXAH regime navigation approach**.
-
-Instead of predicting trajectories directly, NEXAH analyzes the **geometry of stability and regime transitions**.
-
----
-
----
 
 # Connection to the Exploration Hub
 
