@@ -1,4 +1,5 @@
 # NEXAH Theory
+NEXAH is a framework for analyzing complex systems as navigable regime landscapes induced by structural system graphs.
 
 ![NEXAH Theory Diagram](/ENGINE/visuals/diagrams/NEXAH_Theory.png)
 
@@ -55,6 +56,8 @@ Formally:
 
 L = RegimeLandscape(G)
 
+where L partitions the state space into dynamical regimes.
+
 This landscape describes the **dynamical topology of the system**.
 
 ---
@@ -69,7 +72,7 @@ This landscape describes the **dynamical topology of the system**.
 
 The evolution of a system within the NEXAH framework is described by the **Navigation Equation**:
 
-state_(t+1) = F(state_t | G, L, Q°, A)
+state(t+1) = F(state(t) | G, L, Q°, A)
 
 Where
 
@@ -95,7 +98,7 @@ This transforms the problem from trajectory control into **landscape navigation*
 
 System evolution follows the dynamics operator:
 
-state_(t+1) = F(state_t)
+state(t+1) = F(state(t))
 
 However, in the NEXAH formulation the dynamics operator depends on the structural and observational context:
 
@@ -118,6 +121,7 @@ Navigation seeks trajectories that avoid unstable regimes while maintaining syst
 The objective becomes:
 
 navigate(state_t → state_safe)
+subject to regime stability constraints
 
 rather than
 
