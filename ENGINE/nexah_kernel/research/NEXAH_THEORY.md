@@ -1,6 +1,6 @@
 # NEXAH Theory
 
-NEXAH is a framework for analyzing complex systems as navigable regime landscapes induced by structural system graphs.
+>NEXAH is a framework for analyzing complex systems as navigable regime landscapes induced by structural system graphs.
 
 
 ![NEXAH Theory Diagram](/ENGINE/visuals/diagrams/NEXAH_Theory.png)
