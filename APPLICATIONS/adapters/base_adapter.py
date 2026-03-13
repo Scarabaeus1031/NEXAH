@@ -20,6 +20,15 @@ Architecture:
             Policy
               ↓
             Actions
+
+This adapter supports two modes:
+
+1) Graph Mode
+   Systems already defined as discrete state graphs.
+
+2) Dynamic Mode (optional extension)
+   Continuous dynamical systems that are projected into
+   a state graph representation.
 """
 
 
@@ -32,7 +41,7 @@ class NexahAdapter:
     """
 
     # -----------------------------------------------------------
-    # REQUIRED METHODS
+    # REQUIRED METHODS (GRAPH STRUCTURE)
     # -----------------------------------------------------------
 
     def states(self):
@@ -57,7 +66,7 @@ class NexahAdapter:
         raise NotImplementedError("transitions() must be implemented by the adapter.")
 
     # -----------------------------------------------------------
-    # OPTIONAL METHODS
+    # OPTIONAL GRAPH METHODS
     # -----------------------------------------------------------
 
     def regimes(self):
@@ -124,6 +133,37 @@ class NexahAdapter:
         }
         """
         return {}
+
+    # -----------------------------------------------------------
+    # OPTIONAL DYNAMIC SYSTEM INTERFACE
+    # -----------------------------------------------------------
+
+    def reset(self):
+        """
+        Optional method for dynamic systems.
+
+        Reset simulation state.
+        """
+        return None
+
+    def step(self, action=None):
+        """
+        Optional simulation step.
+
+        Advance system dynamics by one time step.
+        """
+        return None
+
+    def observe(self):
+        """
+        Optional observation for dynamic systems.
+
+        Return current system state.
+
+        Example:
+            {"x": 1.2, "y": 0.4, "z": 2.1}
+        """
+        return None
 
     # -----------------------------------------------------------
     # GRAPH EXPORT
