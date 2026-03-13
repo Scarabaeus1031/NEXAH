@@ -269,75 +269,48 @@ The following figures illustrate different structural layers of the Lorenz syste
 
 ---
 
-## Lorenz Attractor Density
-
-Dense trajectory sampling reveals the filament structure of the strange attractor.
-
-![Lorenz Density Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_density_map.png)
-
----
-
-## Chaos Filament Structure
-
-Chaotic trajectories form filamentary structures across the attractor.
-
-![Lorenz Filament Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_filament_map.png)
-
----
-
-## Flow Vector Field
-
-The instantaneous velocity field of the Lorenz system.
-
-![Lorenz Flow Field](APPLICATIONS/outputs/lorenz_navigation/lorenz_flow_field.png)
-
----
-
-## Lyapunov Instability Field
-
-Local instability of trajectories measured through Lyapunov exponents.
-
-![Lorenz Lyapunov Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_lyapunov_map.png)
-
----
-
-## Rotation and Stretch Field
-
-Chaos arises from repeated stretching and folding of trajectories.
-
-![Lorenz Stretch Field](APPLICATIONS/outputs/lorenz_navigation/lorenz_rotation_stretch.png)
-
----
-
-## FTLE Coherent Structures
-
-Finite-Time Lyapunov Exponent (FTLE) ridges reveal transport barriers and chaotic transport structures.
-
-![Lorenz FTLE Map](APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_map.png)
-
----
-
 ## Chaos Density Nebula
 
 A 3D density reconstruction of chaotic transport structures.
 
-![Lorenz FTLE Nebula](APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_nebula_3d_20260313_215206.png)
+![Lorenz FTLE Nebula](./APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_nebula_3d_20260313_215206.png)
 
 ---
 
 ## Chaos Topography
 
-The chaotic system can be interpreted as a landscape with ridges and valleys.
+Topographic representation of the chaotic phase space landscape.
 
-![Lorenz Chaos Topography](APPLICATIONS/outputs/lorenz_navigation/lorenz_chaos_topography.png)
+![Lorenz Chaos Topography](./APPLICATIONS/outputs/lorenz_navigation/lorenz_chaos_topography_20260313_202116.png)
+
+---
+
+## FTLE Transport Structures
+
+Finite-Time Lyapunov Exponent (FTLE) ridges reveal transport barriers and chaotic transport structures.
+
+![Lorenz FTLE Map](./APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_lcs_map.png)
+
+---
+
+## Filament Graph
+
+Chaotic transport skeleton reconstructed from FTLE ridges.
+
+![Lorenz Filament Graph](./APPLICATIONS/outputs/lorenz_navigation/lorenz_ftle_filament_graph.png)
+
+---
+
+## 3D Chaos Filament Structure
+
+Filamentary trajectory structures within the attractor.
+
+![Lorenz Filament 3D](./APPLICATIONS/outputs/lorenz_navigation/lorenz_filament_3d.png)
 
 ---
 
 ## 5D Polar Projection
 
-A higher-dimensional projection of the attractor revealing hidden geometric symmetries.
+Higher-dimensional projection of the Lorenz attractor.
 
-![Lorenz 5D Projection](APPLICATIONS/outputs/lorenz_navigation/lorenz_5d_projection.png)
-
-
-
+![Lorenz 5D Projection](./APPLICATIONS/outputs/lorenz_navigation/lorenz_5d_polar_projection.png)
