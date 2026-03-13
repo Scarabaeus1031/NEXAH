@@ -19,6 +19,8 @@ This separation allows the kernel to analyze systems in terms of stability regio
 
 ---
 
+![NEXAH System Architecture](ENGINE/visuals/diagrams/NEXAH_SYSTEM_ARCHITECTURE.png)
+
 # Core System Model
 
 System evolution is modeled as:
