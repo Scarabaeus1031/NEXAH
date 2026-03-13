@@ -13,7 +13,6 @@ NEXAH Adapter Demo Runner
 
 import numpy as np
 from scipy.integrate import odeint
-from ..base_adapter import NexahAdapter
 
 
 def lorenz(state, t, sigma=10.0, rho=28.0, beta=8/3):
