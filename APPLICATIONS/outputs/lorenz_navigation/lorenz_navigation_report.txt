@@ -1,0 +1,7 @@
+NEXAH Lorenz Chaos Navigator
+Start state: s0
+Start regime: TRANSITION
+Target regime: RIGHT_ATTRACTOR
+
+Step 1: s0 (TRANSITION) -> s20 (ESCAPE)
+Escape state encountered at s20. Stopping.
