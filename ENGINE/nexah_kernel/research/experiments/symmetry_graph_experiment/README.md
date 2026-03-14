@@ -6,7 +6,7 @@ This module explores how topology, resonance, and energy landscapes interact ins
 
 The framework emerged during the development of the NEXAH Kernel research engine.
 
----
+--- 
 
 # Concept
 
