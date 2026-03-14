@@ -107,6 +107,26 @@ def metadata(self):
 
 ------------------------------------------------------------------------
 
+### LorenzAdapter
+
+Category-A benchmark adapter for chaotic dynamical systems.
+
+The LorenzAdapter samples a continuous Lorenz trajectory and converts it
+into a discrete regime graph used by the NEXAH navigation engine.
+
+Regimes detected:
+
+LEFT_ATTRACTOR
+RIGHT_ATTRACTOR
+TRANSITION
+ESCAPE
+
+Example usage:
+
+python -m APPLICATIONS.adapters.examples.lorenz_adapter
+
+------------------------------------------------------------------------
+
 # Implemented Example Adapters
 
 Adapters included in the repository:
