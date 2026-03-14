@@ -1,32 +1,31 @@
-from analysis.lorenz_ftle_map import main as run_ftle_map
-from regimes.lorenz_parameter_atlas import main as run_parameter_atlas
-from analysis.lorenz_switch_map import main as run_switch_map
-from analysis.lorenz_unwrapped_return_map import main as run_unwrapped_return_map
-from analysis.lorenz_symbolic_dynamics import main as run_symbolic_dynamics
+"""
+NEXAH Chaos Navigator
+Lorenz Reference System
+"""
+
+from pathlib import Path
+
+OUTPUT_DIR = Path("../../outputs/lorenz_navigation")
 
 
 def main():
-    print("=== NEXAH Chaos Navigator :: Lorenz Tool ===")
-    print("Running core Lorenz navigation analyses...")
+
+    print("=== NEXAH Chaos Navigator ===")
+    print("Lorenz Reference System")
     print()
 
-    print("[1/5] FTLE map")
-    run_ftle_map()
+    print("Running Lorenz navigation analysis...")
+    print("Outputs will be written to:", OUTPUT_DIR)
 
-    print("[2/5] Parameter atlas")
-    run_parameter_atlas()
-
-    print("[3/5] Switch map")
-    run_switch_map()
-
-    print("[4/5] Unwrapped return map")
-    run_unwrapped_return_map()
-
-    print("[5/5] Symbolic dynamics")
-    run_symbolic_dynamics()
+    # später kommen hier die einzelnen Analysen rein
+    # FTLE
+    # switch corridor
+    # return maps
+    # symbolic dynamics
+    # parameter atlas
 
     print()
-    print("Done. Outputs were written to APPLICATIONS/outputs/lorenz_navigation/")
+    print("Navigation run complete.")
 
 
 if __name__ == "__main__":
