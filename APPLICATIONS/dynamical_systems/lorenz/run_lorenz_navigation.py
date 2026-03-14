@@ -9,64 +9,81 @@ from pathlib import Path
 
 
 BASE_DIR = Path(__file__).parent
-OUTPUT_DIR = Path("../../outputs/lorenz_navigation")
 
 
-def run_script(script_path):
-    print("Running:", script_path)
-    subprocess.run(["python", str(script_path)], check=True)
+PIPELINE = [
+
+    "analysis/lorenz_ftle_map.py",
+    "analysis/lorenz_switch_map.py",
+    "analysis/lorenz_symbolic_dynamics.py",
+    "regimes/lorenz_regime_map.py",
+]
+
+
+def run_script(script):
+
+    path = BASE_DIR / script
+
+    print("Running:", script)
+    subprocess.run(["python", str(path)], check=True)
 
 
 def run_all():
 
-    print("Running full Lorenz navigation pipeline...")
-    print("Outputs:", OUTPUT_DIR)
+    print("Running full Lorenz navigation pipeline...\n")
+
+    for step in PIPELINE:
+        run_script(step)
+
+    print("\nPipeline complete.")
+
+
+def run_single(name):
+
+    for step in PIPELINE:
+        if name in step:
+            run_script(step)
+            return
+
+    print("Module not found:", name)
+
+
+def list_modules():
+
+    print("\nAvailable modules:\n")
+
+    for step in PIPELINE:
+        print(" ", Path(step).stem)
+
     print()
-
-    run_script(BASE_DIR / "analysis/lorenz_ftle_map.py")
-    run_script(BASE_DIR / "regimes/lorenz_regime_map.py")
-
-
-def run_ftle():
-
-    run_script(BASE_DIR / "analysis/lorenz_ftle_map.py")
-
-
-def run_regime():
-
-    run_script(BASE_DIR / "regimes/lorenz_regime_map.py")
 
 
 def main():
 
     parser = argparse.ArgumentParser(
-        description="NEXAH Chaos Navigator (Lorenz)"
+        description="NEXAH Chaos Navigator"
     )
 
-    parser.add_argument(
-        "--mode",
-        choices=["all", "ftle", "regime"],
-        default="all"
-    )
+    parser.add_argument("--mode", choices=["all", "run", "list"], default="all")
+    parser.add_argument("--module", help="module name")
 
     args = parser.parse_args()
 
-    print()
-    print("=== NEXAH Chaos Navigator ===")
-    print("Lorenz Reference System")
-    print()
+    print("\n=== NEXAH Chaos Navigator ===")
+    print("Lorenz Reference System\n")
 
     if args.mode == "all":
         run_all()
 
-    elif args.mode == "ftle":
-        run_ftle()
+    elif args.mode == "list":
+        list_modules()
 
-    elif args.mode == "regime":
-        run_regime()
+    elif args.mode == "run":
 
-    print()
-    print("Done.")
+        if args.module is None:
+            print("Please specify --module")
+        else:
+            run_single(args.module)
 
 
 if __name__ == "__main__":
