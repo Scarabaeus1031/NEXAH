@@ -207,6 +207,30 @@ This layer demonstrates how chaotic systems can be interpreted as **navigation p
 
 ---
 
+# Chaos Navigation
+
+Once the structural layers of the Lorenz system are reconstructed, the state space can be interpreted as a navigation landscape.
+
+Instead of predicting trajectories directly, the system can be explored through:
+	•	stability valleys
+	•	instability ridges
+	•	transport channels
+	•	regime boundaries
+
+Navigation algorithms can then be applied to move through this landscape.
+
+Possible navigation strategies include:
+	•	gradient descent toward stable regions
+	•	controlled regime switching
+	•	trajectory steering along transport channels
+	•	avoidance of instability barriers
+
+This transforms chaotic dynamics into a state-space navigation problem.
+
+The Lorenz module therefore demonstrates how chaotic systems can be treated as structured dynamical terrains rather than unpredictable motion.
+
+---
+
 # 5D Phase-Space Projection
 
 Higher-dimensional projections reveal additional geometric structure.
