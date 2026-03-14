@@ -4,14 +4,18 @@ Lorenz Reference System
 """
 
 import argparse
+import subprocess
 from pathlib import Path
 
-# real analysis modules
-from analysis.lorenz_ftle_map import main as run_ftle
-from regimes.lorenz_regime_map import main as run_regime
 
-
+BASE_DIR = Path(__file__).parent
 OUTPUT_DIR = Path("../../outputs/lorenz_navigation")
+
+
+def run_script(script_path):
+
+    print("Running:", script_path)
+    subprocess.run(["python", str(script_path)], check=True)
 
 
 def run_all():
@@ -20,24 +24,18 @@ def run_all():
     print("Outputs:", OUTPUT_DIR)
     print()
 
-    print("[1/2] FTLE chaos structure")
-    run_ftle()
-
-    print()
-    print("[2/2] Regime structure map")
-    run_regime()
+    run_script(BASE_DIR / "analysis/lorenz_ftle_map.py")
+    run_script(BASE_DIR / "regimes/lorenz_regime_map.py")
 
 
-def run_ftle_only():
+def run_ftle():
 
-    print("Running FTLE chaos structure analysis")
-    run_ftle()
+    run_script(BASE_DIR / "analysis/lorenz_ftle_map.py")
 
 
-def run_regime_only():
+def run_regime():
 
-    print("Running regime structure analysis")
-    run_regime()
+    run_script(BASE_DIR / "regimes/lorenz_regime_map.py")
 
 
 def main():
@@ -63,27 +61,13 @@ def main():
         run_all()
 
     elif args.mode == "ftle":
-        run_ftle_only()
+        run_ftle()
 
     elif args.mode == "regime":
-        run_regime_only()
+        run_regime()
 
     print()
     print("Done.")
-
-
-if name == "main":
-    main()
-
-def main():
-    """
-    Entry point for the NEXAH Chaos Navigator
-    """
-    print("Running Lorenz FTLE Map")
-
-    # falls dein Script schon alles beim Import ausführt
-    # reicht diese Funktion als Wrapper
-    pass
 
 
 if __name__ == "__main__":
