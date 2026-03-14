@@ -1,16 +1,16 @@
 import sys
 from pathlib import Path
 
-# --- make project root importable ---
-ROOT = Path(__file__).resolve().parents[3]
-sys.path.append(str(ROOT))
+# --- ensure local lorenz modules are importable ---
+BASE_DIR = Path(__file__).resolve().parents[1]
+sys.path.append(str(BASE_DIR))
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-from APPLICATIONS.dynamical_systems.lorenz.analysis.lorenz_ftle_map import ftle_field
-from APPLICATIONS.dynamical_systems.lorenz.regimes.lorenz_switch_heatmap import compute_switch_points
-from APPLICATIONS.dynamical_systems.lorenz.attractor.lorenz_density_map import generate_trajectory
+from analysis.lorenz_ftle_map import ftle_field
+from regimes.lorenz_switch_heatmap import compute_switch_points
+from attractor.lorenz_density_map import generate_trajectory
 
 
 def chaos_navigation_map():
@@ -56,11 +56,14 @@ def chaos_navigation_map():
 
     plt.tight_layout()
 
-    # save image
-    out = ROOT / "APPLICATIONS/outputs/lorenz_navigation/chaos_navigation_map.png"
-    plt.savefig(out, dpi=300)
+    # save output
+    out_dir = BASE_DIR / "../outputs/lorenz_navigation"
+    out_dir.mkdir(parents=True, exist_ok=True)
 
-    print("Saved:", out)
+    out_file = out_dir / "chaos_navigation_map.png"
+    plt.savefig(out_file, dpi=300)
+
+    print("Saved:", out_file)
 
     plt.show()
 
