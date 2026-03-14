@@ -75,3 +75,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def main():
+    """
+    Entry point for NEXAH Chaos Navigator
+    """
+    generate_ftle_map()
+
+
+if __name__ == "__main__":
+    main()
