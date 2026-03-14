@@ -240,6 +240,27 @@ Insights discovered here may later inform:
 - navigation strategies
 - stability landscape analysis
 
+
+---
+# Initial Experiment Set
+
+The following initial experiments are planned in this module:
+
+Experiment 01 — Hub–Ring Shell Scan  
+Investigates synchronization time as a function of ring size.
+
+Experiment 02 — Vortex Density Mapping  
+Maps phase vortex density across structured oscillator networks.
+
+Experiment 03 — Frustration Shell Detection  
+Searches for network sizes producing metastable synchronization states.
+
+Experiment 04 — Layered Cycle Networks  
+Studies synchronization in layered symmetry graphs such as C5 + C6 + C6.
+
+Experiment 05 — Resonance Web Detection  
+Detects resonance structures and phase-locking corridors in oscillator graphs.
+
 ---
 
 # Status
