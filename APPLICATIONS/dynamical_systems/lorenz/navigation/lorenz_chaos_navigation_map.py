@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from analysis.lorenz_ftle_map import ftle_field
-from regimes.lorenz_switch_heatmap import compute_switch_points
-from attractor.lorenz_density_map import generate_trajectory
+from APPLICATIONS.dynamical_systems.lorenz.analysis.lorenz_ftle_map import ftle_field
+from APPLICATIONS.dynamical_systems.lorenz.regimes.lorenz_switch_heatmap import compute_switch_points
+from APPLICATIONS.dynamical_systems.lorenz.attractor.lorenz_density_map import generate_trajectory
 
 
 def chaos_navigation_map():
