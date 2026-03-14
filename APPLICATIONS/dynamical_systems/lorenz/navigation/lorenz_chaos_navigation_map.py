@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+# --- make project root importable ---
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.append(str(ROOT))
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -8,7 +15,9 @@ from APPLICATIONS.dynamical_systems.lorenz.attractor.lorenz_density_map import g
 
 def chaos_navigation_map():
 
-    xs,zs,ftle = ftle_field()
+    print("Generating Chaos Navigation Map...")
+
+    xs, zs, ftle = ftle_field()
 
     traj = generate_trajectory(20000)
     switch = compute_switch_points(traj)
@@ -18,7 +27,7 @@ def chaos_navigation_map():
     # FTLE skeleton
     plt.imshow(
         ftle.T,
-        extent=[xs.min(),xs.max(),zs.min(),zs.max()],
+        extent=[xs.min(), xs.max(), zs.min(), zs.max()],
         origin="lower",
         cmap="inferno",
         alpha=0.6
@@ -46,6 +55,13 @@ def chaos_navigation_map():
     plt.ylabel("z")
 
     plt.tight_layout()
+
+    # save image
+    out = ROOT / "APPLICATIONS/outputs/lorenz_navigation/chaos_navigation_map.png"
+    plt.savefig(out, dpi=300)
+
+    print("Saved:", out)
+
     plt.show()
 
 
