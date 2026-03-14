@@ -13,7 +13,6 @@ OUTPUT_DIR = Path("../../outputs/lorenz_navigation")
 
 
 def run_script(script_path):
-
     print("Running:", script_path)
     subprocess.run(["python", str(script_path)], check=True)
 
