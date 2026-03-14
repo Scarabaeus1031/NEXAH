@@ -6,6 +6,10 @@ Lorenz Reference System
 import argparse
 from pathlib import Path
 
+# real analysis modules
+from analysis.lorenz_ftle_map import main as run_ftle
+from regimes.lorenz_regime_map import main as run_regime
+
 
 OUTPUT_DIR = Path("../../outputs/lorenz_navigation")
 
@@ -14,23 +18,26 @@ def run_all():
 
     print("Running full Lorenz navigation pipeline...")
     print("Outputs:", OUTPUT_DIR)
+    print()
 
-    # später werden hier echte Analysen aufgerufen
-    print("FTLE analysis")
-    print("Switch corridor detection")
-    print("Return map reconstruction")
-    print("Symbolic dynamics")
-    print("Parameter atlas")
+    print("[1/2] FTLE chaos structure")
+    run_ftle()
 
-
-def run_ftle():
-
-    print("Running FTLE map generation")
+    print()
+    print("[2/2] Regime structure map")
+    run_regime()
 
 
-def run_switch():
+def run_ftle_only():
 
-    print("Running switch corridor detection")
+    print("Running FTLE chaos structure analysis")
+    run_ftle()
+
+
+def run_regime_only():
+
+    print("Running regime structure analysis")
+    run_regime()
 
 
 def main():
@@ -41,7 +48,7 @@ def main():
 
     parser.add_argument(
         "--mode",
-        choices=["all", "ftle", "switch"],
+        choices=["all", "ftle", "regime"],
         default="all"
     )
 
@@ -56,14 +63,14 @@ def main():
         run_all()
 
     elif args.mode == "ftle":
-        run_ftle()
+        run_ftle_only()
 
-    elif args.mode == "switch":
-        run_switch()
+    elif args.mode == "regime":
+        run_regime_only()
 
     print()
     print("Done.")
 
 
-if __name__ == "__main__":
+if name == "main":
     main()
