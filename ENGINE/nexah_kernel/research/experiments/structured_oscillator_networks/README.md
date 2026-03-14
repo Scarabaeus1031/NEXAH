@@ -1,8 +1,15 @@
 # Structured Oscillator Networks
 
-This experiment series investigates **structured oscillator networks** within the NEXAH research framework.
+This experiment series investigates how **structured network topology**
+influences synchronization dynamics, vortex formation, and phase transitions
+in coupled oscillator systems.
 
-The goal is to explore how **network topology influences synchronization dynamics, vortex structures, and phase transitions** in coupled oscillator systems.
+Using Kuramoto-type models on intentionally designed graph topologies,
+the experiments explore how **hub–cycle structures, ring shells, and layered
+symmetry graphs** shape emergent dynamical behavior.
+
+The goal is to identify **topology-driven synchronization regimes and
+vortex structures** that may appear in engineered oscillator networks.
 
 The experiments are based primarily on **Kuramoto-type oscillator models** implemented on structured graphs.
 
