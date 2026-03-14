@@ -74,3 +74,17 @@ def main():
 
 if name == "main":
     main()
+
+def main():
+    """
+    Entry point for the NEXAH Chaos Navigator
+    """
+    print("Running Lorenz FTLE Map")
+
+    # falls dein Script schon alles beim Import ausführt
+    # reicht diese Funktion als Wrapper
+    pass
+
+
+if __name__ == "__main__":
+    main()
