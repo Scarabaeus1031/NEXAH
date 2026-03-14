@@ -351,6 +351,30 @@ https://github.com/Scarabaeus1033/NEXAH-CODEX/tree/main/ENGINE/nexah_kernel/demo
 
 ---
 
+## Reference Dynamical System: Lorenz Chaos Navigator
+
+The repository includes a reference dynamical system used to demonstrate the **regime navigation capabilities of the NEXAH framework**.
+
+Location:  
+APPLICATIONS/dynamical_systems/lorenz
+
+Documentation:  
+APPLICATIONS/dynamical_systems/lorenz/README.md
+
+The **NEXAH Chaos Navigator** analyzes the classical Lorenz system as a **navigable regime landscape** and reconstructs the structural geometry of chaos through multiple analysis layers including attractor geometry, Lyapunov instability fields, FTLE transport structures, regime boundaries, and navigation pathways.
+
+Pipeline execution:
+
+python APPLICATIONS/dynamical_systems/lorenz/run_lorenz_navigation.py
+
+Conceptual pipeline:
+
+Lorenz System → Chaos Geometry → Regime Structure → Transition Corridors → Navigation Analysis
+
+The Lorenz module acts as a **reference benchmark for regime navigation algorithms** before applying the NEXAH framework to real-world systems such as infrastructure networks, energy grids, ecosystem dynamics, and complex system resilience models.
+
+---
+
 # Architecture Stability Analysis
 
 The NEXAH kernel includes a structural stability analysis layer for
@@ -489,12 +513,6 @@ system → regimes → navigation
 In this case:
 
 architecture → stability landscape → architecture navigation
-
----
-
-# Kleiner Tipp (wird dein Repo massiv verbessern)
-
-Ganz oben im README könntest du noch eine **Kernel Capability Box** einbauen:
 
 ---
 
