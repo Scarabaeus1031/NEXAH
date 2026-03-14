@@ -67,7 +67,9 @@ These experiments revealed:
 
 Example result:
 
-symmetry_graph_experiment/kuramoto_vortex_result.png
+Example result:
+
+![Kuramoto vortex result](../symmetry_graph_experiment/kuramoto_vortex_result.png)
 
 The current experiment series expands this investigation to **larger classes of oscillator topologies**.
 
