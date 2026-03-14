@@ -16,7 +16,7 @@ def run_script(script_path):
 
     print("Running:", script_path)
     subprocess.run(
-        ["python", script_path],
+        ["python", str(script_path)],
         check=True
     )
 
@@ -71,16 +71,6 @@ def main():
 
     print()
     print("Done.")
-
-
-if __name__ == "__main__":
-    main()
-
-def main():
-    """
-    Entry point for NEXAH Chaos Navigator
-    """
-    generate_ftle_map()
 
 
 if __name__ == "__main__":
