@@ -1,0 +1,9 @@
+Chimera State Report
+====================
+
+nodes: 64
+timesteps: 9600
+
+fraction of chimera states: 0.9760
+
+Chimera behaviour detected
