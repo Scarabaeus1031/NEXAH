@@ -297,23 +297,6 @@ def plot_snapshot(history, inner_nodes, middle_nodes, outer_nodes, t_index=None)
 # ------------------------------------------------
 # Summary
 # ------------------------------------------------
-# Save defect arrays for further analysis
-import numpy as np
-
-np.save("output/inner_shell_defects.npy", results["defect_inner"])
-np.save("output/middle_shell_defects.npy", results["defect_middle"])
-np.save("output/outer_shell_defects.npy", results["defect_outer"])
-
-plot_snapshot(
-    results["history"],
-    results["inner_nodes"],
-    results["middle_nodes"],
-    results["outer_nodes"],
-    t_index=results["params"]["steps"] - 1,
-)
-
-# Save phase history for vortex analysis
-np.save("output/phase_history.npy", results["history"])
 
 print("Saved defect arrays and phase history.")
 
@@ -379,13 +362,23 @@ def main():
         results["defect_outer"],
     )
 
-    plot_snapshot(
-        results["history"],
-        results["inner_nodes"],
-        results["middle_nodes"],
-        results["outer_nodes"],
-        t_index=results["params"]["steps"] - 1,
-    )
+  plot_snapshot(
+    results["history"],
+    results["inner_nodes"],
+    results["middle_nodes"],
+    results["outer_nodes"],
+    t_index=results["params"]["steps"] - 1,
+)
+
+# Save arrays for analysis tools
+np.save("output/inner_shell_defects.npy", results["defect_inner"])
+np.save("output/middle_shell_defects.npy", results["defect_middle"])
+np.save("output/outer_shell_defects.npy", results["defect_outer"])
+np.save("output/phase_history.npy", results["history"])
+
+print("Saved defect arrays and phase history.")
+
+save_summary(results)
 
     # 🔵 HIER EINFÜGEN
     np.save("output/inner_shell_defects.npy", results["defect_inner"])
