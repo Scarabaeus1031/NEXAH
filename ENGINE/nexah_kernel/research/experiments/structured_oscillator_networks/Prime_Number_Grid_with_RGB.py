@@ -30,10 +30,10 @@ fig, ax = plt.subplots(figsize=(12, 6))
 for i, prime in enumerate(prime_numbers):
     ax.scatter(prime, y_axis[i], color=colors[i], s=100)  # Adjust point size as needed
 
-# Add color bar
+# Add color bar and associate with the axis
 sm = plt.cm.ScalarMappable(cmap="viridis", norm=plt.Normalize(vmin=min(prime_numbers), vmax=max(prime_numbers)))
 sm.set_array([])  # Empty array to make color bar work
-plt.colorbar(sm, label="Prime Color Map")
+cbar = plt.colorbar(sm, ax=ax, label="Prime Color Map")  # Added `ax=ax` argument
 
 # Add labels and title
 ax.set_xlabel("Prime Numbers")
