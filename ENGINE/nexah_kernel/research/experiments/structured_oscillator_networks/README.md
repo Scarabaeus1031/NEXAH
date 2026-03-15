@@ -147,12 +147,8 @@ python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/e
 python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/experiment_03/frustration_shell_detection.py
 ```
 
-Status
-
+Status:
 Active exploratory research. Further results will be integrated into the NEXAH Kernel as new findings emerge.
 
-⸻
 
-Key Takeaways
 
-This experiment series explores complex oscillator network behaviors using topologically structured systems. By integrating these findings into the NEXAH Kernel, we aim to enhance dynamic resonance detection, improve phase transition modeling, and contribute to the understanding of synchronization phenomena in complex systems.
