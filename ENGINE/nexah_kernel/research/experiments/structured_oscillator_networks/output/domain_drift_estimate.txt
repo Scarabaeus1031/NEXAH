@@ -1,0 +1,1 @@
+Estimated middle-domain drift per step: 0.00019320194338425412
