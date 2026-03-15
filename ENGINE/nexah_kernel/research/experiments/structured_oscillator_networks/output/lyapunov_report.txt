@@ -1,0 +1,10 @@
+Lyapunov Test Report
+--------------------
+
+Estimated exponent λ ≈ -0.01170893
+Initial distance     = 1.249300649181e-07
+Final distance       = 8.688218500293e-08
+dt                   = 0.02
+fit window           = [100, 2000) steps
+
+Interpretation: negative exponent -> stable / contracting behavior.
