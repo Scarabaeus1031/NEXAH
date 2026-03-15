@@ -42,31 +42,3 @@ ax.set_title("Prime Number Grid with RGB Colors (First 1000 Primes)")
 
 # Show the plot
 plt.show()
-# Add colorbar
-fig.colorbar(sm, label="Prime Color Map")
-
-# Show the plot
-plt.tight_layout()
-plt.show()        elif constant == 13:
-            return 'blue'  # Blue for +13
-    return 'gray'  # Default color for non-matching primes
-
-# Set up the plot for the prime number grid visualization
-plt.figure(figsize=(10, 6))
-for idx, prime in enumerate(prime_numbers):
-    color = get_prime_color(prime, 41)  # Choose +41 for simplicity (can be switched to others)
-    plt.scatter(x_vals[idx], y_vals[idx], color=color, s=100)  # Plot prime point
-
-# Title and labels
-plt.title("Prime Number Grid with RGB Colors (First 1000 Primes)")
-plt.xlabel("Prime Numbers")
-plt.ylabel("y axis (Fixed for Simplicity)")
-
-# Create a custom color map
-sm = plt.cm.ScalarMappable(cmap='rainbow', norm=norm)
-sm.set_array([])
-
-# Add colorbar
-plt.colorbar(sm, label="Prime Color Map")
-
-plt.show()
