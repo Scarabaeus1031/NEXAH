@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import os
 
 WINDOW = 50
 
@@ -31,9 +31,21 @@ def detect_events(defect_matrix):
 
 def load_defects():
 
-    inner = np.load("output/inner_shell_defects.npy")
-    middle = np.load("output/middle_shell_defects.npy")
-    outer = np.load("output/outer_shell_defects.npy")
+    required = [
+        "output/inner_shell_defects.npy",
+        "output/middle_shell_defects.npy",
+        "output/outer_shell_defects.npy",
+    ]
+
+    for f in required:
+        if not os.path.exists(f):
+            raise RuntimeError(
+                f"Missing {f}\nRun three_layer_counterrotation_longrun.py first."
+            )
+
+    inner = np.load(required[0])
+    middle = np.load(required[1])
+    outer = np.load(required[2])
 
     return inner, middle, outer
 
@@ -69,10 +81,11 @@ def plot_event_hist(correlations):
         _, t1, t2 = c
         deltas.append(t2 - t1)
 
+    plt.figure()
     plt.hist(deltas, bins=50)
-    plt.xlabel("time offset")
+    plt.xlabel("time offset (t₂ − t₁)")
     plt.ylabel("count")
-    plt.title("Cross layer defect propagation")
+    plt.title("Cross-layer defect propagation")
     plt.show()
 
 
@@ -80,11 +93,11 @@ def main():
 
     inner, middle, outer = load_defects()
 
-    corr = cross_layer_correlations(inner, middle, outer)
+    correlations = cross_layer_correlations(inner, middle, outer)
 
-    print("Correlated events:", len(corr))
+    print("Total correlated events:", len(correlations))
 
-    plot_event_hist(corr)
+    plot_event_hist(correlations)
 
 
 if __name__ == "__main__":
