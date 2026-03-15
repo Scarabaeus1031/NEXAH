@@ -32,6 +32,11 @@ cd ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks
 python triadic_closure_detector.py
 """
 
+"""
+NEXAH Experiment Tool
+Triadic Closure Detector
+"""
+
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -69,7 +74,7 @@ def build_hub_ring(N):
 
 
 # -----------------------------
-# Simulation with history
+# Simulation
 # -----------------------------
 def simulate_history(N, steps=1200, dt=0.02, K=1.0):
 
@@ -91,7 +96,7 @@ def simulate_history(N, steps=1200, dt=0.02, K=1.0):
 
 
 # -----------------------------
-# Wrapped phase difference
+# Angle wrap
 # -----------------------------
 def wrap_angle(x):
 
@@ -99,15 +104,13 @@ def wrap_angle(x):
 
 
 # -----------------------------
-# Local triadic closure
+# Triadic closure
 # -----------------------------
 def triadic_closure_scores(theta_ring):
 
     N = len(theta_ring)
 
     scores = []
-    left_diffs = []
-    right_diffs = []
 
     for i in range(N):
 
@@ -117,56 +120,47 @@ def triadic_closure_scores(theta_ring):
         d_left = wrap_angle(theta_ring[i] - theta_ring[im1])
         d_right = wrap_angle(theta_ring[ip1] - theta_ring[i])
 
-        # closure score high if adjacent phase increments are similar
         mismatch = abs(d_left - d_right)
-        mismatch = min(mismatch, 2 * np.pi - mismatch)
+        mismatch = min(mismatch, 2*np.pi - mismatch)
 
         score = 1.0 - mismatch / np.pi
         score = max(0.0, score)
 
         scores.append(score)
-        left_diffs.append(d_left)
-        right_diffs.append(d_right)
 
-    return np.array(scores), np.array(left_diffs), np.array(right_diffs)
+    return np.array(scores)
 
 
 # -----------------------------
-# Triadic closure mask
+# Detection
 # -----------------------------
-def detect_triadic_closure(theta_ring, threshold=0.80):
+def detect_triadic_closure(theta_ring, threshold=0.8):
 
-    scores, left_diffs, right_diffs = triadic_closure_scores(theta_ring)
+    scores = triadic_closure_scores(theta_ring)
 
     mask = scores > threshold
 
-    return mask, scores, left_diffs, right_diffs
+    return mask, scores
 
 
 # -----------------------------
-# Scan over time
+# Scan simulation
 # -----------------------------
-def compute_closure_history(history, threshold=0.80):
+def compute_closure_history(history, threshold=0.8):
 
-    ring_history = history[:, 1:]  # remove hub
+    ring_history = history[:,1:]
 
     closure_map = []
-    closure_scores = []
     closure_counts = []
 
-    for theta_ring in ring_history:
+    for theta in ring_history:
 
-        mask, scores, _, _ = detect_triadic_closure(theta_ring, threshold=threshold)
+        mask, scores = detect_triadic_closure(theta, threshold)
 
         closure_map.append(mask.astype(float))
-        closure_scores.append(scores)
         closure_counts.append(np.sum(mask))
 
-    return (
-        np.array(closure_map),
-        np.array(closure_scores),
-        np.array(closure_counts)
-    )
+    return np.array(closure_map), np.array(closure_counts)
 
 
 # -----------------------------
@@ -176,7 +170,7 @@ def plot_closure_map(closure_map):
 
     Path("output").mkdir(exist_ok=True)
 
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(10,5))
 
     plt.imshow(
         closure_map.T,
@@ -188,6 +182,7 @@ def plot_closure_map(closure_map):
     plt.xlabel("time step")
     plt.ylabel("ring index")
     plt.title("Triadic closure map")
+
     plt.colorbar(label="closure")
 
     plt.savefig("output/triadic_closure_map.png", dpi=300)
@@ -196,55 +191,20 @@ def plot_closure_map(closure_map):
 
 
 # -----------------------------
-# Plot closure counts
+# Plot counts
 # -----------------------------
 def plot_closure_counts(closure_counts):
 
-    plt.figure(figsize=(10, 4))
+    plt.figure(figsize=(10,4))
 
     plt.plot(closure_counts)
 
     plt.xlabel("time step")
     plt.ylabel("triadic closure count")
+
     plt.title("Number of triadic closures over time")
 
     plt.savefig("output/triadic_closure_count_vs_time.png", dpi=300)
-
-    plt.show()
-
-
-# -----------------------------
-# Plot snapshot
-# -----------------------------
-def plot_snapshot(theta_ring, mask, scores, t_index):
-
-    N = len(theta_ring)
-
-    angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
-
-    x = np.cos(angles)
-    y = np.sin(angles)
-
-    plt.figure(figsize=(7, 7))
-
-    # base ring colors = phase
-    plt.scatter(x, y, c=theta_ring, cmap="hsv", s=90)
-
-    # overlay triadic closure nodes
-    if np.any(mask):
-        plt.scatter(
-            x[mask],
-            y[mask],
-            c="black",
-            s=170,
-            label="triadic closure"
-        )
-
-    plt.title(f"Triadic closure snapshot t={t_index}")
-    plt.axis("equal")
-    plt.axis("off")
-
-    plt.savefig("output/triadic_closure_snapshot.png", dpi=300)
 
     plt.show()
 
@@ -256,28 +216,20 @@ def main():
 
     N = 60
     steps = 1200
-    threshold = 0.80
 
-    history = simulate_history(N=N, steps=steps)
+    history = simulate_history(N, steps)
 
-    closure_map, closure_scores, closure_counts = compute_closure_history(
-        history,
-        threshold=threshold
-    )
+    closure_map, closure_counts = compute_closure_history(history)
+
+    Path("output").mkdir(exist_ok=True)
+
+    np.save("output/triadic_closure_map.npy", closure_map)
 
     plot_closure_map(closure_map)
     plot_closure_counts(closure_counts)
 
-    # choose example snapshot at strongest closure
-    t_index = int(np.argmax(closure_counts))
-    theta_ring = history[t_index, 1:]
-    mask, scores, _, _ = detect_triadic_closure(theta_ring, threshold=threshold)
-
-    plot_snapshot(theta_ring, mask, scores, t_index)
-
     print("Triadic closure detection completed.")
-    print("Maximum closure count:", int(np.max(closure_counts)))
-    print("Time step of strongest closure:", t_index)
+    print("Saved: output/triadic_closure_map.npy")
 
 
 if __name__ == "__main__":
