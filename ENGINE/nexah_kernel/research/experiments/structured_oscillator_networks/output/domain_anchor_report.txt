@@ -1,0 +1,23 @@
+Phase Domain Anchor Report
+--------------------------
+
+Inner shell
+  max anchor count      = 3796.0
+  mean anchor count     = 1868.000
+  num active anchors    = 16
+  mean lifetime         = 524.351
+  max lifetime          = 2125
+
+Middle shell
+  max anchor count      = 8448.0
+  mean anchor count     = 2713.781
+  num active anchors    = 29
+  mean lifetime         = 1520.691
+  max lifetime          = 8128
+
+Outer shell
+  max anchor count      = 6337.0
+  mean anchor count     = 2316.000
+  num active anchors    = 16
+  mean lifetime         = 741.120
+  max lifetime          = 2008
