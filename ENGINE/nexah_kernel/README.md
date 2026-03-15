@@ -84,10 +84,10 @@ Pattern Demos
 Research Layer
 NEXAH Codex Integration
 
-This layered structure allows NEXAH to connect **system structure, dynamical regimes, navigation strategies, and structural interventions** within a single framework.
+** This layered structure allows NEXAH to connect **system structure, dynamical regimes, navigation strategies, and structural interventions** within a single framework.
 ---
 
-Instead of controlling systems directly, NEXAH analyzes **regime landscapes**
+** Instead of controlling systems directly, NEXAH analyzes **regime landscapes**
 and enables navigation through stability regions, transitions, and attractors.
 ---
 
