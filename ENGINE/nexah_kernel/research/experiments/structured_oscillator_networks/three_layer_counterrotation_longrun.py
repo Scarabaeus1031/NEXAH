@@ -312,14 +312,6 @@ plot_snapshot(
     t_index=results["params"]["steps"] - 1,
 )
 
-# NEW
-np.save("output/inner_shell_defects.npy", results["defect_inner"])
-np.save("output/middle_shell_defects.npy", results["defect_middle"])
-np.save("output/outer_shell_defects.npy", results["defect_outer"])
-np.save("output/phase_history.npy", results["history"])
-
-save_summary(results)
-
 # Save phase history for vortex analysis
 np.save("output/phase_history.npy", results["history"])
 
@@ -381,7 +373,12 @@ def main():
 
     plot_global_order(results["global_R"])
     plot_layer_orders(results["inner_R"], results["middle_R"], results["outer_R"])
-    plot_defect_maps(results["defect_inner"], results["defect_middle"], results["defect_outer"])
+    plot_defect_maps(
+        results["defect_inner"],
+        results["defect_middle"],
+        results["defect_outer"],
+    )
+
     plot_snapshot(
         results["history"],
         results["inner_nodes"],
@@ -389,16 +386,15 @@ def main():
         results["outer_nodes"],
         t_index=results["params"]["steps"] - 1,
     )
+
+    # 🔵 HIER EINFÜGEN
+    np.save("output/inner_shell_defects.npy", results["defect_inner"])
+    np.save("output/middle_shell_defects.npy", results["defect_middle"])
+    np.save("output/outer_shell_defects.npy", results["defect_outer"])
+    np.save("output/phase_history.npy", results["history"])
+
+    print("Saved defect arrays and phase history.")
+
     save_summary(results)
 
     print("Three-layer counterrotation long run completed.")
-    print("Saved:")
-    print("  output/three_layer_global_order.png")
-    print("  output/three_layer_layer_orders.png")
-    print("  output/three_layer_defect_maps.png")
-    print("  output/three_layer_snapshot.png")
-    print("  output/three_layer_summary.txt")
-
-
-if __name__ == "__main__":
-    main()
