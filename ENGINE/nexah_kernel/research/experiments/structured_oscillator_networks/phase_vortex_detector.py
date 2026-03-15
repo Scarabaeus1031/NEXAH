@@ -26,6 +26,11 @@ cd ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks
 python phase_vortex_detector.py
 """
 
+"""
+NEXAH Experiment Tool
+Phase Vortex Detector
+"""
+
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -53,11 +58,9 @@ def build_hub_ring(N):
     G = nx.Graph()
     center = 0
 
-    # hub connections
     for i in range(1, N + 1):
         G.add_edge(center, i)
 
-    # ring connections
     for i in range(1, N + 1):
         G.add_edge(i, 1 + (i % N))
 
@@ -92,8 +95,6 @@ def simulate_history(N, steps=1200, dt=0.02, K=1.0):
 def phase_diff_ring(theta_ring):
 
     diffs = np.roll(theta_ring, -1) - theta_ring
-
-    # wrap to [-pi,pi]
     diffs = (diffs + np.pi) % (2*np.pi) - np.pi
 
     return diffs
@@ -112,7 +113,7 @@ def detect_vortex_defects(theta_ring, threshold=2.2):
 
 
 # -----------------------------
-# Scan full simulation
+# Scan simulation
 # -----------------------------
 def vortex_scan(history, threshold=2.2):
 
@@ -130,7 +131,6 @@ def vortex_scan(history, threshold=2.2):
         row[defects] = 1
 
         defect_map.append(row)
-
         defect_counts.append(len(defects))
 
     return np.array(defect_map), np.array(defect_counts)
@@ -159,7 +159,6 @@ def plot_defect_map(defect_map):
     plt.colorbar(label="defect")
 
     plt.savefig("output/vortex_defect_map.png", dpi=300)
-
     plt.show()
 
 
@@ -177,12 +176,11 @@ def plot_vortex_counts(defect_counts):
     plt.title("Number of vortex defects over time")
 
     plt.savefig("output/vortex_count_vs_time.png", dpi=300)
-
     plt.show()
 
 
 # -----------------------------
-# Snapshot plot
+# Snapshot
 # -----------------------------
 def plot_example_snapshot(history, threshold=2.2, t_index=600):
 
@@ -210,7 +208,6 @@ def plot_example_snapshot(history, threshold=2.2, t_index=600):
     plt.axis("off")
 
     plt.savefig("output/vortex_example_snapshot.png", dpi=300)
-
     plt.show()
 
 
@@ -226,13 +223,16 @@ def main():
 
     defect_map, defect_counts = vortex_scan(history)
 
+    Path("output").mkdir(exist_ok=True)
+
+    np.save("output/defect_map.npy", defect_map)
+
     plot_defect_map(defect_map)
-
     plot_vortex_counts(defect_counts)
-
     plot_example_snapshot(history)
 
     print("Phase vortex analysis completed.")
+    print("Saved: output/defect_map.npy")
 
 
 if __name__ == "__main__":
