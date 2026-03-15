@@ -1,284 +1,158 @@
-# Structured Oscillator Networks
+# Structured Oscillator Networks Experiment
 
-This experiment series investigates how **structured network topology**
-influences synchronization dynamics, vortex formation, and phase transitions
-in coupled oscillator systems.
+This experiment series investigates **structured network topology** and its effects on synchronization dynamics, vortex formation, and phase transitions in coupled oscillator systems. The experiment utilizes **Kuramoto-type models** on customized graph topologies to explore complex phenomena like **hub-cycle structures**, **ring shells**, and **layered symmetry graphs**.
 
-Using Kuramoto-type models on intentionally designed graph topologies,
-the experiments explore how **hub–cycle structures, ring shells, and layered
-symmetry graphs** shape emergent dynamical behavior.
+These networks are designed to test how **topology-driven synchronization regimes and vortex structures** emerge within oscillator networks. The research is focused on navigating **resonance networks, phase transitions**, and **chaotic dynamics**, providing valuable insights into high-dimensional dynamical systems.
 
-The goal is to identify **topology-driven synchronization regimes and
-vortex structures** that may appear in engineered oscillator networks.
+## Research Motivation
 
-The experiments are based primarily on **Kuramoto-type oscillator models** implemented on structured graphs.
+Coupled oscillator systems, particularly Kuramoto-type models, have widespread applications across various fields, including:
 
-These graphs combine:
+- Power grids
+- Neural networks
+- Biological rhythms
+- Chemical oscillators
+- Synchronization in complex networks
 
-- hub coupling
-- ring structures
-- cycle layers
-- structured symmetry patterns
+While most research deals with **random or regular networks**, this study focuses on **intentional, structured topologies** to understand the effects of network structure on synchronization dynamics.
 
-This allows the study of **topology-driven dynamical phenomena**.
+> **Core Research Question:** How does network topology shape synchronization dynamics and vortex structures in oscillator systems?
 
 ---
 
-# Research Motivation
+## Experiment Framework
 
-Coupled oscillator systems are fundamental models in nonlinear dynamics.
+The **Structured Oscillator Networks** experiments are divided into key research themes:
 
-They appear in many domains including:
+### 1. **Synchronization Dynamics**
+   - **Objective:** Study the synchronization behavior of different network topologies.
+   - **Quantities Measured:**
+     - Global order parameter \( R \)
+     - Synchronization time
+     - Cluster persistence
+   
+### 2. **Vortex Formation in Phase Space**
+   - **Objective:** Investigate vortex structures within oscillator phase fields.
+   - **Metrics:**
+     - Vortex persistence
+     - Cycle-phase analysis
+     - Topological defects detection
 
-- power grids
-- neural networks
-- biological rhythms
-- chemical oscillators
-- synchronization in complex networks
+### 3. **Topology-Driven Frustration**
+   - **Objective:** Examine network sizes and topologies that create **frustration** leading to delayed synchronization or metastable clusters.
+   - **Indicators of Frustration:**
+     - Synchronization delay
+     - Incomplete phase locking
+     - Metastable clusters
 
-While many studies focus on **random or regular networks**, this research explores **intentionally structured topologies**.
-
-The central research question is:
-
-> How does network topology shape synchronization dynamics and vortex structures in oscillator systems?
-
----
-
-# Relation to Previous Experiments
-
-This experiment series extends the earlier:
-
-symmetry_graph_experiment
-
-which introduced structured symmetry graphs such as:
-
-center node
-	•	17 spokes
-	•	cycle layers
-
-C5 + C6 + C6
-
-These experiments revealed:
-
-- rapid synchronization in hub–cycle networks
-- vortex structures in oscillator phase fields
-- metastable synchronization states
-- shell sizes producing delayed synchronization
-
-Example result:
-
-Example result:
-
-![Kuramoto vortex result](../symmetry_graph_experiment/kuramoto_vortex_result.png)
-
-The current experiment series expands this investigation to **larger classes of oscillator topologies**.
+### 4. **Resonance Structures**
+   - **Objective:** Explore resonance patterns within structured graphs, such as:
+     - Phase locking channels
+     - Resonance webs
+     - Synchronization bands
 
 ---
 
-# Research Themes
+## Key Experiments
 
-The structured oscillator network experiments focus on several key dynamical phenomena.
+### **Experiment 01: Hub-Ring Shell Scan**
+- **Objective:** Investigate synchronization time as a function of shell size in hub-ring networks.
+- **Results:** Measure synchronization time and observe metastability for certain ring sizes.
 
----
+### **Experiment 02: Vortex Density Mapping**
+- **Objective:** Track the formation of phase vortices across different oscillator topologies.
+- **Results:** Identify regions where vortex formation coincides with synchronization transitions.
 
-## 1 — Synchronization Dynamics
+### **Experiment 03: Frustration Shell Detection**
+- **Objective:** Detect frustrated networks that fail to synchronize in a timely manner.
+- **Results:** Identify network sizes (e.g., N = 29, 34) where synchronization is delayed due to frustration effects.
 
-How quickly do structured networks synchronize?
+### **Experiment 04: Layered Cycle Networks**
+- **Objective:** Study synchronization dynamics in layered symmetry graphs like C5 + C6 + C6.
+- **Results:** Layered topologies enhance synchronization stability under certain conditions.
 
-Measured quantities include:
-
-- global order parameter R
-- synchronization time
-- cluster persistence
-
----
-
-## 2 — Phase Vortex Structures
-
-Phase fields may contain **topological defects** (vortices).
-
-These are detected via:
-
-- phase winding numbers
-- cycle phase analysis
-- vortex persistence tracking
-
-Vortex structures often appear during intermediate synchronization states.
+### **Experiment 05: Resonance Web Detection**
+- **Objective:** Detect resonance channels and phase-locking corridors within oscillator networks.
+- **Results:** Visualize resonance structures across phase space and detect hidden synchronization patterns.
 
 ---
 
-## 3 — Topology-Driven Frustration
+## Visual Outputs
 
-Certain network sizes or connectivity patterns may create **frustration**.
+The experiment generates several types of visual outputs that are essential for understanding the system's dynamics:
 
-Observed indicators include:
+- **Synchronization Time vs Shell Size Plots**
+- **Vortex Density Maps**
+- **Phase Field Visualizations**
+- **Network State Diagrams**
+- **Resonance Field Maps**
 
-- delayed synchronization
-- metastable clusters
-- persistent vortices
-- incomplete phase locking
+### Example Visuals
 
-These effects are often linked to **ring size or symmetry mismatches**.
+- **Chimera State Overlap:**
+  ![Chimera State](output/chimera_state_overlap.png)
+  *Fraction of coherent vs incoherent states across time.*
 
----
+- **Resonance Lattice (3D Resonance Grid):**
+  ![Resonance Lattice](output/resonance_lattice_3d.png)
+  *3D visualization of resonance structures in oscillator networks.*
 
-## 4 — Resonance Structures
+- **Vortex Field Flow:**
+  ![Vortex Flow](output/vortex_field_flow.png)
+  *Vortex dynamics in a 3D oscillator field.*
 
-Structured graphs may support resonance patterns such as:
-
-- phase locking channels
-- resonance webs
-- synchronization bands
-
-Understanding these structures may reveal hidden dynamical regimes.
-
----
-
-# Core Network Types
-
-Several network families are studied in this module.
+- **4D Phase Shift Projection:**
+  ![4D Phase Projection](output/4d_phase_shift_projection.png)
+  *4D phase shift projections showing resonance dynamics.*
 
 ---
 
-## Hub–Ring Networks
+## Research Findings
 
-Basic topology:
+Early results suggest a strong relationship between network topology and synchronization behavior. Observed phenomena include:
 
-center node
-+
-N ring oscillators
+- **Rapid synchronization** in balanced symmetry graphs like C5 + C6 + C6.
+- **Vortex formation** along cycle boundaries, visible during intermediate synchronization states.
+- **Frustration** observed in networks where shell sizes (e.g., N = 29, 34) produce delayed synchronization.
+- **Resonance patterns** identified in phase space, linking certain network topologies to stable synchronization zones.
 
-These systems are used to explore **shell-size synchronization behavior**.
+### Example Result: Chimera State Detection
 
-Example investigation:
-
-N = 8 … 200
-
-Measured properties include:
-
-- synchronization time
-- vortex density
-- cluster formation
+In several experiments, chimera states were detected using local coherence boundaries, revealing the presence of both coherent and incoherent regions within the same system. This aligns with the experimental goal of exploring how different topologies affect synchronization.
 
 ---
 
-## Hub–Cycle Networks
+## Next Steps
 
-Topology:
-
-center node
-+
-ring nodes
-+
-cycle edges
-
-Cycle edges provide **local stabilization loops** while the hub provides **global coupling**.
-
-This hybrid topology often produces extremely fast synchronization.
+- **Larger Shell-Size Scans:** Continue to explore the effects of larger network sizes on synchronization time and frustration.
+- **Vortex Density Mapping:** Further analyze the relationship between vortex density and synchronization transitions.
+- **Topology-Synchronization Phase Diagrams:** Develop phase diagrams that connect network topologies to their synchronization behaviors.
+- **Multi-Layer Oscillator Networks:** Investigate the effects of multi-layer networks on phase transitions and resonance structures.
 
 ---
 
-## Layered Symmetry Graphs
+## Relation to NEXAH Kernel
 
-These extend the symmetry graph experiments with layered cycle structures such as:
-
-C5 + C6 + C6
-
-Layered graphs may produce:
-
-- vortex corridors
-- phase domain structures
-- toroidal phase dynamics
+These experiments are part of the **NEXAH Kernel research framework**, which integrates structured oscillator networks, resonance systems, and nonlinear dynamics within the NEXAH system. The insights gained will inform the **resonance detection**, **phase transition modeling**, and **dynamic navigation** capabilities of the NEXAH Kernel.
 
 ---
 
-# Experimental Workflow
+## Running the Experiments
 
-Typical experiment pipeline:
+To run a specific experiment, execute the relevant script:
 
-1. Construct oscillator network topology  
-2. Simulate Kuramoto dynamics  
-3. Measure synchronization metrics  
-4. detect vortex structures  
-5. map stability and transition regimes  
-6. visualize phase fields and network states  
+```bash
+python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/experiment_01/experiment_01_shell_frustration_scan.py
+python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/experiment_02/vortex_density_mapping.py
+python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/experiment_03/frustration_shell_detection.py
+```
 
----
+Status
 
-# Output Data
+Active exploratory research. Further results will be integrated into the NEXAH Kernel as new findings emerge.
 
-Experiments typically generate:
+⸻
 
-results/
-visuals/
+Key Takeaways
 
-Common outputs include:
-
-- synchronization time statistics
-- vortex density maps
-- phase field visualizations
-- network state diagrams
-- regime transition plots
-
----
-
-# Relation to the NEXAH Kernel
-
-These experiments operate **above the kernel layer**.
-
-The kernel provides:
-
-system → regime landscape → navigation
-
-The structured oscillator experiments explore:
-
-topology → dynamical structure → synchronization regimes
-
-Insights discovered here may later inform:
-
-- kernel models
-- navigation strategies
-- stability landscape analysis
-
-
----
-# Initial Experiment Set
-
-The following initial experiments are planned in this module:
-
-Experiment 01 — Hub–Ring Shell Scan  
-Investigates synchronization time as a function of ring size.
-
-Experiment 02 — Vortex Density Mapping  
-Maps phase vortex density across structured oscillator networks.
-
-Experiment 03 — Frustration Shell Detection  
-Searches for network sizes producing metastable synchronization states.
-
-Experiment 04 — Layered Cycle Networks  
-Studies synchronization in layered symmetry graphs such as C5 + C6 + C6.
-
-Experiment 05 — Resonance Web Detection  
-Detects resonance structures and phase-locking corridors in oscillator graphs.
-
----
-
-# Status
-
-Active exploratory research.
-
-The experiments aim to reveal how **structured network topology shapes nonlinear oscillator dynamics**.
-
-Future work includes:
-
-- large shell-size scans
-- vortex density mapping
-- topology–synchronization phase diagrams
-- resonance web detection
-- multi-layer oscillator networks
-
----
-
-# NEXAH
-
-Part of the **SCARABÆUS1033 research framework**, exploring structural navigation and dynamical resonance in complex systems.
+This experiment series explores complex oscillator network behaviors using topologically structured systems. By integrating these findings into the NEXAH Kernel, we aim to enhance dynamic resonance detection, improve phase transition modeling, and contribute to the understanding of synchronization phenomena in complex systems.
