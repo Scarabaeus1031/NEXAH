@@ -1,0 +1,17 @@
+
+Braid Entropy Estimate
+----------------------
+
+Total crossings: 2173
+Simulation length: 1200
+
+Estimated braid entropy:
+
+h_braid ≈ 0.006404
+
+Interpretation:
+
+h ≈ 0       → laminar structure
+h small     → weakly chaotic
+h moderate  → braid turbulence
+h large     → strong mixing
