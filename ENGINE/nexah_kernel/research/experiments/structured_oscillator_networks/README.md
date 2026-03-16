@@ -25,6 +25,26 @@ While most research deals with **random or regular networks**, this study focuse
 - **Prime-Number-Lattices** als neuartige Resonanz-Strukturen: Vermeidung periodischer Artefakte, Förderung natürlicher Resonanzkanäle durch Irregularität
 - Direkte Relevanz für NEXAH: Topologie als **relationale Ordnung** (META-Layer) → prägt Regime-Landschaft, Frustration als Risiko-Indikator, Resonance als Navigationskanäle
 
+## Kernel Bridge Beispiele
+
+Die Bridge exportiert Metriken aus den Experimenten – nutzbar für NEXAH.
+
+```python
+
+from ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
+```
+
+# Beispiel: Vortex aus echter History
+history = np.load('output/phase_history.npy')
+phase_ring = history[-1]
+print("Vortex Metrics:", get_vortex_metrics(phase_ring=phase_ring, history=history))
+
+# Chimera aus Snapshot
+print("Chimera Status:", get_chimera_status(phase_ring=phase_ring))
+
+# Frustration für Shell-Größe N=50
+print("Frustration Score:", get_frustration_score(N=50))
+
 ## Experiment Pipeline
 
 1. **Topology- & Shell-Scans** → Sync-Zeit, Frustration & Metastabilität messen  
