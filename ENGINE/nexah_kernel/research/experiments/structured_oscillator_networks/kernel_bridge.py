@@ -42,7 +42,7 @@ def get_chimera_status(phase_ring, radius=2):
     """
     try:
         local_R = local_order_on_ring(phase_ring, radius=radius)
-        fraction, classification = classify_chimera_fraction(local_R)  # Rückgabe anpassen, falls anders
+        fraction, classification = classify_chimera_fraction(local_R)
         return {
             "chimera_detected": classification == "chimera",
             "coherence_fraction": fraction
@@ -56,7 +56,7 @@ def get_frustration_score(N, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
     """
     try:
         # Realer Aufruf – läuft langsam, später cachen/optimieren
-        # history, sync_time, ... = run_simulation(N, K, steps, dt)  # anpassen an echte Rückgabe
+        # history, sync_time, ... = run_simulation(N, K, steps, dt)  # anpassen
         sync_time = 15.0  # Platzhalter
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
@@ -68,10 +68,6 @@ def get_frustration_score(N, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
     except Exception as e:
         return {"error": str(e)}
 
-# Weitere Metriken – erweitern nach Bedarf
-# def get_global_order(theta):
-#     return order_parameter(theta)
-
 __all__ = [
     "get_vortex_metrics",
     "get_chimera_status",
@@ -80,7 +76,6 @@ __all__ = [
 
 if __name__ == "__main__":
     print("Kernel Bridge läuft als Skript!")
-    print("Beispiel-Aufruf (Dummy-Daten):")
-    dummy_ring = np.random.rand(100) * 2 * np.pi  # Phase-Ring-Beispiel (0-2pi)
+    dummy_ring = np.random.rand(100) * 2 * np.pi  # Phase-Ring (0-2pi)
     print("Vortex Metrics (dummy):", get_vortex_metrics(phase_ring=dummy_ring))
     print("\nFür echte Daten: get_vortex_metrics(phase_ring=deine_phase, history=deine_history)")
