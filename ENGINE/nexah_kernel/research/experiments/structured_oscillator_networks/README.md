@@ -43,7 +43,7 @@ The **Structured Oscillator Networks** experiments are divided into key research
      - Global order parameter \( R \)
      - Synchronization time
      - Cluster persistence
-
+   
 ### 2. **Vortex Formation in Phase Space**
    - **Objective:** Investigate vortex structures within oscillator phase fields.
    - **Metrics:**
@@ -123,6 +123,14 @@ The experiment generates several types of visual outputs that are essential for 
 
 ### Example Visuals
 
+- **Resonance Lattice 3D**  
+  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
+  *Visual representation of resonance structures within the prime number grid.*
+
+- **4D Phase Shift Projection**  
+  ![4D Phase Projection](output/4D_phase_shift_projection.png)  
+  *4D phase shift projections showing resonance dynamics.*
+
 - **Chimera State Overlap**  
   ![Chimera State](output/Chimera_State_Overlap.png)  
   *Fraction of coherent vs incoherent states across time.*
@@ -131,11 +139,11 @@ The experiment generates several types of visual outputs that are essential for 
   ![Vortex Flow](output/Vortex_Field_Flow.png)  
   *Vortex dynamics in a 3D oscillator field.*
 
-- **4D Phase Shift Projection**  
-  ![4D Phase Projection](output/4d_phase_shift_projection.png)  
-  *4D phase shift projections showing resonance dynamics.*
+- **Vortex Density vs Shell**  
+  ![Vortex Density](output/vortex_density_vs_shell.png)  
+  *Vortex density as a function of shell size – zeigt Topologie-Einfluss auf Defekte.*
 
-Weitere Visuals und Galerien → siehe `Visual-gallery-outputs.md`
+Weitere Visuals und vollständige Galerie → siehe `Visual-gallery-outputs.md`
 
 ## Research Findings
 
@@ -189,7 +197,7 @@ python -m resonance.resonance_lattice_3D
 
 # Via Kernel-Bridge (zukünftig)
 from .kernel_bridge import extract_regime_metrics
-
+```
 ## Status:
 
 Active exploratory research. Further results will be integrated into the NEXAH Kernel as new findings emerge.
