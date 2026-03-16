@@ -42,10 +42,11 @@ def get_chimera_status(phase_ring, radius=2):
     """
     try:
         local_R = local_order_on_ring(phase_ring, radius=radius)
-        result = classify_chimera_fraction(local_R)  # flexibel – keine feste unpack-Annahme
+        result = classify_chimera_fraction(local_R)
+        # Flexibel unpacken
         if isinstance(result, tuple) and len(result) >= 2:
             fraction = result[0]
-            classification = result[1] if len(result) > 1 else "unknown"
+            classification = result[1]
         else:
             fraction = result
             classification = "unknown"
@@ -55,18 +56,19 @@ def get_chimera_status(phase_ring, radius=2):
             "classification": classification
         }
     except Exception as e:
-        return {"error": f"Chimera-Status fehlgeschlagen: {str(e)}"}
+        return {"error": str(e)}
 
 def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
     """
     Frustration-Score basierend auf Sync-Delay – Proxy für Cascade-Risiko.
     """
     try:
-        # Echter Aufruf – passe Rückgabe an (was gibt run_simulation zurück?)
-        history = run_simulation(N, K=K, steps=steps, dt=dt)  # anpassen!
-        theta = history[-1]
+        # Echter Aufruf – passe Rückgabe an (was gibt run_simulation wirklich zurück?)
+        history = run_simulation(N, K=K, steps=steps, dt=dt)
+        theta = history[-1]  # letzter Snapshot
         R = order_parameter(theta)
-        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5  # einfache Logik
+        # Sync-Time-Schätzung (anpassen!)
+        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
             "frustration_score": score,
