@@ -18,12 +18,12 @@ def get_vortex_metrics(phase_ring=None, history=None, threshold=2.2):
     Vortex-Count und Dichte – Indikator für Instabilität.
     """
     try:
-        if history is not None:
+        if history is not None and phase_ring is not None:
             defect_map = vortex_scan(history, threshold=threshold)
             vortex_counts = [len(v) for v in defect_map]
             return {
                 "vortex_count_avg": sum(vortex_counts) / len(vortex_counts) if vortex_counts else 0,
-                "vortex_density": sum(vortex_counts) / (len(phase_ring) * len(history)) if history and phase_ring is not None else 0
+                "vortex_density": sum(vortex_counts) / (len(phase_ring) * len(history)) if len(phase_ring) > 0 and len(history) > 0 else 0
             }
         elif phase_ring is not None:
             defects = detect_vortex_defects(phase_ring, threshold=threshold)
@@ -56,11 +56,11 @@ def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
     """
     try:
         # Realer Aufruf – läuft langsam, später cachen/optimieren
-        history = run_simulation(N, K=K, steps=steps, dt=dt)  # anpassen an echte Rückgabe
-        theta = history[-1]  # letzter Snapshot
+        # history = run_simulation(N, K=K, steps=steps, dt=dt)  # anpassen an Rückgabe
+        history = np.random.rand(steps, N)  # Dummy für Test – später echt
+        theta = history[-1]
         R = order_parameter(theta)
-        # Einfache Sync-Time-Schätzung (anpassen!)
-        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5
+        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5  # einfache Logik
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
             "frustration_score": score,
@@ -81,16 +81,13 @@ __all__ = [
 if __name__ == "__main__":
     print("Kernel Bridge läuft als Skript!")
     
-    # Echter Test mit phase_history.npy
     try:
         history = np.load('output/phase_history.npy')
         print("Phase-History geladen, Shape:", history.shape)
         
-        # Beispiel: letzter Snapshot als phase_ring
         phase_ring = history[-1] if history.ndim == 2 else history
         print("Vortex Metrics (echte Daten):", get_vortex_metrics(phase_ring=phase_ring, history=history))
         
-        # Frustration-Beispiel
         print("Frustration Score (N=50):", get_frustration_score(N=50))
     except Exception as e:
         print("Fehler beim Laden echter Daten:", e)
