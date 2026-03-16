@@ -1,5 +1,16 @@
 # NEXAH Framework
 
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+![Status](https://img.shields.io/badge/status-research%20framework-purple)
+
+**Structural navigation for complex dynamical systems.**
+
+NEXAH is a framework for analyzing and navigating **regime landscapes in complex dynamical systems**.
+
+Instead of only simulating system dynamics, NEXAH extracts **state graphs, regimes, and cascade risks**, enabling agents to compute **navigation and stabilization strategies**.
+
 **Structural navigation for complex dynamical systems.**
 
 NEXAH is a framework for analyzing and navigating **regime landscapes in complex dynamical systems**.
