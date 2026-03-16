@@ -175,13 +175,6 @@ The experiment generates several types of visual outputs that are essential for 
   ![Vortex Density v2](topology/vortex_density_vs_shell_v2.png)  
   *Verbesserte Variante mit mehr Auflösung.*
 
-- **Prime Number Lattice with Symmetry**  
-  ![Prime Lattice Symmetry](Prime_Number_Lattice_with_Symmetry.png)  
-  *3D-Resonanz-Lattice auf Prime-Strukturen – natürliche Resonanzkanäle.*
-
-- **Resonance Lattice 3D**  
-  ![Resonance Lattice 3D](resonance/Resonance_Lattice_3D.png)  
-  *3D-Darstellung von Resonanzstrukturen im Prime-Grid.*
 
 **Vollständige Galerie:** Alle Dateien in `output/`, `topology/`, Root usw. – siehe `find . -name "*.png" | sort` für genaue Anzahl (~100+).
 
