@@ -92,6 +92,28 @@ The kernel provides the **core navigation logic of the NEXAH framework**.
 
 ---
 
+# NEXAH Engine
+
+The **NEXAH Engine** implements the structural operators and stability analysis systems used by the kernel.
+
+Location:
+
+```
+ENGINE/
+```
+
+The engine includes:
+
+- finite abstract interpretation  
+- fixpoint solvers  
+- spectral graph analysis  
+- stability landscape computation  
+- cascade analysis tools  
+
+It acts as the **computational backbone** of the framework.
+
+---
+
 # Framework Architecture
 
 ![NEXAH System Overview](./NAVIGATOR/visuals/NEXAH_SYSTEM_OVERVIEW.png)
@@ -108,13 +130,13 @@ ENGINE
 APPLICATIONS
     Reference system models
 
-BUILDER LAB
+BUILDER_LAB
     Simulation sandbox
 
-EXPLORATION HUB
+EXPLORATION_HUB
     Open modeling environment
 
-REAL SYSTEMS
+REAL_SYSTEMS
     Infrastructure, ecosystems, planetary systems
 ```
 
@@ -147,28 +169,6 @@ STATE
 ```
 
 This stack separates **meaning, structure, navigation, and control**.
-
----
-
-# NEXAH Engine
-
-The **NEXAH Engine** implements the structural operators and stability analysis systems used by the kernel.
-
-Location:
-
-```
-ENGINE/
-```
-
-The engine includes:
-
-- finite abstract interpretation  
-- fixpoint solvers  
-- spectral graph analysis  
-- stability landscape computation  
-- cascade analysis tools  
-
-It acts as the **computational backbone** of the framework.
 
 ---
 
@@ -227,9 +227,9 @@ EXPLORATION_HUB/README.md
 | ENGINE | Kernel and structural computation |
 | RESEARCH | Formal mathematical foundations |
 | APPLICATIONS | System models and case studies |
-| BUILDER LAB | Simulation sandbox |
+| BUILDER_LAB | Simulation sandbox |
 | NAVIGATOR | Visual documentation |
-| EXPLORATION HUB | Open modeling environment |
+| EXPLORATION_HUB | Open modeling environment |
 
 ---
 
@@ -277,7 +277,7 @@ git clone https://github.com/Scarabaeus1033/NEXAH.git
 cd NEXAH
 ```
 
-Install the framework:
+Install the framework in development mode:
 
 ```
 pip install -e .
@@ -287,6 +287,12 @@ Run the demo simulation:
 
 ```
 python BUILDER_LAB/demos/nexah_demo.py
+```
+
+Run the test suite:
+
+```
+pytest
 ```
 
 ---
