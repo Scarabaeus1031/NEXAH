@@ -167,7 +167,7 @@ The experiment generates several types of visual outputs that are essential for 
   Winding-Zahlen vs. Shell-Größe.
 
 - **Braid Crossings**
-  ![Braid Crossings](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/braid_crossings.png)
+  ![Braid Crossings](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/braid-crossings.png)
   *Visualizes braid crossings, which are indicative of topological defects in the network.*
 
 - **Prime Number Grid with Symmetry**
