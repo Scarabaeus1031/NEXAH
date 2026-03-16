@@ -111,4 +111,55 @@ Next steps include:
 - **Topology-Synchronization Phase Diagrams:** Develop phase diagrams connecting network topologies with synchronization behavior.
 - **Multi-Layer Oscillator Networks:** Investigate the effects of multi-layer networks on phase transitions and resonance structures.
 
+These visuals will be crucial for informing the development of future models and experiments within the NEXAH Kernel framework.  *A visual representation of the prime number grid within the oscillator network, highlighting symmetrical structures that contribute to the resonance behavior.*
+
+- **Resonance Lattice 3D**
+  ![Resonance Lattice 3D](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/Resonance_Lattice_3D.png)
+  *A 3D visualization of resonance structures in the oscillator network, providing a deeper understanding of how oscillators lock together in complex patterns.*
+
+- **Chimera State Overlap**
+  ![Chimera State Overlap](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/chimera_state_overlap.png)
+  *This image illustrates the fraction of coherent versus incoherent states in a network over time, revealing the chimera state phenomenon.*
+
+- **Vortex Flow**
+  ![Vortex Flow](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/vortex_field_flow.png)
+  *Visualizes vortex dynamics in a 3D oscillator field.*
+
+- **Phase Shift Projection (4D)**
+  ![Phase Shift Projection](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/4d_phase_shift_projection.png)
+  *4D phase shift projections showing resonance dynamics.*
+
+---
+
+### **Other Key Visuals**
+
+- **Chirality Flip Events**
+  ![Chirality Flip Events](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/chirality_flip_events.png)
+  *Visualizes chirality flip events occurring in oscillator networks.*
+
+- **Chirality vs Time**
+  ![Chirality vs Time](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/chirality_vs_time.png)
+  *Illustrates how chirality evolves over time in different oscillator configurations.*
+
+- **Braid Entropy Estimate**
+  ![Braid Entropy Estimate](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/braid_entropy_estimate.png)
+  *Shows entropy estimates related to the braid structures within the network.*
+
+- **Lyapunov Distance vs Time**
+  ![Lyapunov Distance vs Time](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/lyapunov_distance_vs_time.png)
+  *Tracks the Lyapunov distance as a measure of chaos over time within oscillator networks.*
+
+---
+
+### Summary and Next Steps
+
+These visuals represent key findings from the **Structured Oscillator Networks** experiments, showing the dynamics of synchronization, vortex formation, resonance, and defects in oscillator networks. These visuals will help in further analyzing the relationship between network structure and synchronization behavior.
+
+Next steps include:
+
+- **Larger Shell-Size Scans:** Continue exploring the effects of larger network sizes on synchronization time and frustration.
+- **Vortex Density Mapping:** Further analyze the relationship between vortex density and synchronization transitions.
+- **Topology-Synchronization Phase Diagrams:** Develop phase diagrams connecting network topologies with synchronization behavior.
+- **Multi-Layer Oscillator Networks:** Investigate the effects of multi-layer networks on phase transitions and resonance structures.
+
 These visuals will be crucial for informing the development of future models and experiments within the NEXAH Kernel framework.
