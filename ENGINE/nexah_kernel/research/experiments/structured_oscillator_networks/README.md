@@ -18,7 +18,20 @@ While most research deals with **random or regular networks**, this study focuse
 
 > **Core Research Question:** How does network topology shape synchronization dynamics and vortex structures in oscillator systems?
 
----
+## Neuheit & Origineller Beitrag
+
+- **Absichtlich gestaltete Topologien** (Hub-Ring-Shells, symmetrische Layered Cycles C5+C6+C6, Prime-Number-Lattices) statt reiner Zufalls- oder Gitter-Netze
+- Erste systematische Analyse von **Frustration bei spezifischen Shell-Größen** (z. B. N=29, 34 → stark verzögerte Sync, metastabile Cluster)
+- **Prime-Number-Lattices** als neuartige Resonanz-Strukturen: Vermeidung periodischer Artefakte, Förderung natürlicher Resonanzkanäle durch Irregularität
+- Direkte Relevanz für NEXAH: Topologie als **relationale Ordnung** (META-Layer) → prägt Regime-Landschaft, Frustration als Risiko-Indikator, Resonance als Navigationskanäle
+
+## Experiment Pipeline
+
+1. **Topology- & Shell-Scans** → Sync-Zeit, Frustration & Metastabilität messen  
+2. **Vortex / Chimera / Defect Detektion** → Phase-Space-Partitioning & Topological Defects  
+3. **Resonance & Prime-Grid Exploration** → Resonanz-Webs, Locking-Bänder, Phase-Locking-Korridore  
+4. **Visualisierung & Metrik-Extraktion** → Plots, PCA, Gradient-Maps, Reports  
+5. **Kernel-Integration** → Export von Metriken & Funktionen in nexah_kernel (via kernel_bridge.py)
 
 ## Experiment Framework
 
@@ -30,7 +43,7 @@ The **Structured Oscillator Networks** experiments are divided into key research
      - Global order parameter \( R \)
      - Synchronization time
      - Cluster persistence
-   
+
 ### 2. **Vortex Formation in Phase Space**
    - **Objective:** Investigate vortex structures within oscillator phase fields.
    - **Metrics:**
@@ -50,8 +63,6 @@ The **Structured Oscillator Networks** experiments are divided into key research
      - Phase locking channels
      - Resonance webs
      - Synchronization bands
-
----
 
 ## Key Experiments
 
@@ -75,8 +86,6 @@ The **Structured Oscillator Networks** experiments are divided into key research
 - **Objective:** Detect resonance channels and phase-locking corridors within oscillator networks.
 - **Results:** Visualize resonance structures across phase space and detect hidden synchronization patterns.
 
----
-
 ## Prime Number Grids Experiments
 
 In addition to the above experiments, the **Prime Number Grid** experiments investigate how **Prime Number Lattices** impact the dynamics of oscillator networks. These experiments focus on resonance patterns within **prime-based grids**, and their potential to influence synchronization and chaotic transitions.
@@ -90,21 +99,17 @@ In addition to the above experiments, the **Prime Number Grid** experiments inve
 
 ### **Prime Number Grid Visuals**
 
-Here are some key visuals from the Prime Number Grids experiments:
+- **Prime Number Lattice with Symmetry**  
+  ![Prime Lattice Symmetry](output/Prime_Number_Lattice_with_Symmetry.png)  
+  *3D resonance lattice based on prime number structures – zeigt natürliche Resonanzkanäle durch Irregularität.*
 
-- **Prime Number Lattice with Symmetry:**
-  ![Prime Lattice Symmetry](output/Prime_Number_Lattice_with_Symmetry.png)
-  *This image shows a 3D resonance lattice based on prime number structures.*
-
-- **Resonance Lattice 3D:**
-  ![Resonance Lattice](output/Resonance_Lattice_3D.png)
+- **Resonance Lattice 3D**  
+  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
   *Visual representation of resonance structures within the prime number grid.*
 
-- **Prime Number Grid Visualization:**
-  ![Prime Number Grid](output/grid_prime_visualization_1000.png)
-  *Visualization of the prime number grid with a fixed Y-axis.*
-
----
+- **Prime Number Grid Visualization (fixed Y-axis)**  
+  ![Prime Grid](output/grid_prime_visualization_1000.png)  
+  *Prime-based grid with fixed Y-axis – illustriert Symmetrie und Phase-Verteilung.*
 
 ## Visual Outputs
 
@@ -118,23 +123,19 @@ The experiment generates several types of visual outputs that are essential for 
 
 ### Example Visuals
 
-- **Chimera State Overlap:**
-  ![Chimera State](output/chimera_state_overlap.png)
+- **Chimera State Overlap**  
+  ![Chimera State](output/Chimera_State_Overlap.png)  
   *Fraction of coherent vs incoherent states across time.*
 
-- **Resonance Lattice (3D Resonance Grid):**
-  ![Resonance Lattice](output/resonance_lattice_3d.png)
-  *3D visualization of resonance structures in oscillator networks.*
-
-- **Vortex Field Flow:**
-  ![Vortex Flow](output/vortex_field_flow.png)
+- **Vortex Field Flow (3D Vortex Fields)**  
+  ![Vortex Flow](output/Vortex_Field_Flow.png)  
   *Vortex dynamics in a 3D oscillator field.*
 
-- **4D Phase Shift Projection:**
-  ![4D Phase Projection](output/4d_phase_shift_projection.png)
+- **4D Phase Shift Projection**  
+  ![4D Phase Projection](output/4d_phase_shift_projection.png)  
   *4D phase shift projections showing resonance dynamics.*
 
----
+Weitere Visuals und Galerien → siehe `Visual-gallery-outputs.md`
 
 ## Research Findings
 
@@ -149,32 +150,45 @@ Early results suggest a strong relationship between network topology and synchro
 
 In several experiments, chimera states were detected using local coherence boundaries, revealing the presence of both coherent and incoherent regions within the same system. This aligns with the experimental goal of exploring how different topologies affect synchronization.
 
----
-
-## Next Steps
-
-- **Larger Shell-Size Scans:** Continue to explore the effects of larger network sizes on synchronization time and frustration.
-- **Vortex Density Mapping:** Further analyze the relationship between vortex density and synchronization transitions.
-- **Topology-Synchronization Phase Diagrams:** Develop phase diagrams that connect network topologies to their synchronization behaviors.
-- **Multi-Layer Oscillator Networks:** Investigate the effects of multi-layer networks on phase transitions and resonance structures.
-
----
-
 ## Relation to NEXAH Kernel
 
-These experiments are part of the **NEXAH Kernel research framework**, which integrates structured oscillator networks, resonance systems, and nonlinear dynamics within the NEXAH system. The insights gained will inform the **resonance detection**, **phase transition modeling**, and **dynamic navigation** capabilities of the NEXAH Kernel.
+These experiments serve as a **core testbed** for the NEXAH Kernel (ENGINE/nexah_kernel). They validate and extend key concepts:
 
----
+- **Resonance Detection & Operators** (Ω-Projektion): Prime-Grids & Resonance-Webs liefern Metriken für Resonanzkanäle & Locking-Bänder
+- **Regime Partitioning & Tipping Points**: Vortex- & Chimera-Detektion (core/) als Basis für Basin-Boundaries & Instabilitäts-Indikatoren
+- **Frustration & Risk Geometry**: Shell-Frustration-Scans (topology/) als Proxy für Cascade-Risiken & Delayed Transitions
+- **Topology as Relational Order** (META → ARCHY): Strukturierte Topologien testen, wie relationale Ordnung Regime-Landschaften formt
+- **Export & Integration**: Alle relevanten Metriken (Vortex-Dichte, Sync-Time, Resonance-Score, Frustration-Level) werden über `kernel_bridge.py` exportiert und in Navigation-Layer (NEXAH) integriert
+
+→ Die Experimente sind **kein isoliertes Toy-Modell**, sondern direkte Vorarbeit für finite, navigierbare Regime-Analyse in komplexen Systemen.
+
+## Current Ordner-Struktur (Stand März 2026)
+
+- **core/**              Detektoren (vortex_detector, chimera_state_detector, braid_entropy_estimator, phase_vortex_detector usw.)
+- **resonance/**         Prime-Grids, Resonance-Lattices, Mode-Spektren, Band-Tracker
+- **topology/**          Shell-Scans, Frustration, Layered Networks, Root-Family
+- **vortex_chimera/**    Vortex, Chimera, Defects, Triads, Worldlines
+- **analysis/**          Parameter-Scans, Drift/Lyapunov/Frequency-Analysen
+- **visualization/**     Plot-Skripte (phase_attractor_*, phase_surface_*, vortex_topology_map.py usw.)
+- **output/**            Generierte Ergebnisse (Plots, .npy, Reports – sehr groß!)
+- **dynamics/**          Simulations-Code (aktuell leer)
 
 ## Running the Experiments
 
-To run a specific experiment, execute the relevant script:
+Die Skripte sind modular organisiert. Beispiele:
 
 ```bash
-python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/experiment_01/experiment_01_shell_frustration_scan.py
-python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/experiment_02/vortex_density_mapping.py
-python ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/experiment_03/frustration_shell_detection.py
-```
+# Shell-Frustration-Scan starten
+python -m topology.shell_frustration_scan
+
+# Vortex-Dichte visualisieren
+python -m visualization.vortex_topology_map
+
+# Resonance-Lattice berechnen & plotten
+python -m resonance.resonance_lattice_3D
+
+# Via Kernel-Bridge (zukünftig)
+from .kernel_bridge import extract_regime_metrics
 
 ## Status:
 
