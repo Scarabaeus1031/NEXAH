@@ -165,16 +165,6 @@ The experiment generates several types of visual outputs that are essential for 
   ![Winding vs Shell](output/winding_vs_shell.png)  
   *Winding-Zahlen vs. Shell-Größe.*
 
-### Ergänzende / korrigierte Visuals
-
-- **Vortex Density vs Shell**  
-  ![Vortex Density](topology/vortex_density_vs_shell.png)  
-  *Vortex-Dichte als Funktion der Shell-Größe – zeigt Topologie-Einfluss auf Defekte.*
-
-- **Vortex Density vs Shell (v2)**  
-  ![Vortex Density v2](topology/vortex_density_vs_shell_v2.png)  
-  *Verbesserte Variante mit mehr Auflösung.*
-
 
 **Vollständige Galerie:** Alle Dateien in `output/`, `topology/`, Root usw. – siehe `find . -name "*.png" | sort` für genaue Anzahl (~100+).
 
