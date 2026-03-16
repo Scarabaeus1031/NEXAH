@@ -50,20 +50,24 @@ def get_chimera_status(phase_ring, radius=2):
     except Exception as e:
         return {"error": str(e)}
 
-def get_frustration_score(N, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
+def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
     """
     Frustration-Score basierend auf Sync-Delay – Proxy für Cascade-Risiko.
     """
     try:
         # Realer Aufruf – läuft langsam, später cachen/optimieren
-        # history, sync_time, ... = run_simulation(N, K, steps, dt)  # anpassen
-        sync_time = 15.0  # Platzhalter
+        history = run_simulation(N, K=K, steps=steps, dt=dt)  # anpassen an echte Rückgabe
+        theta = history[-1]  # letzter Snapshot
+        R = order_parameter(theta)
+        # Einfache Sync-Time-Schätzung (anpassen!)
+        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
             "frustration_score": score,
             "high_risk": score > 1.5,
             "shell_size": N,
-            "sync_time": sync_time
+            "sync_time": sync_time,
+            "order_parameter": R
         }
     except Exception as e:
         return {"error": str(e)}
@@ -76,6 +80,17 @@ __all__ = [
 
 if __name__ == "__main__":
     print("Kernel Bridge läuft als Skript!")
-    dummy_ring = np.random.rand(100) * 2 * np.pi  # Phase-Ring (0-2pi)
-    print("Vortex Metrics (dummy):", get_vortex_metrics(phase_ring=dummy_ring))
-    print("\nFür echte Daten: get_vortex_metrics(phase_ring=deine_phase, history=deine_history)")
+    
+    # Echter Test mit phase_history.npy
+    try:
+        history = np.load('output/phase_history.npy')
+        print("Phase-History geladen, Shape:", history.shape)
+        
+        # Beispiel: letzter Snapshot als phase_ring
+        phase_ring = history[-1] if history.ndim == 2 else history
+        print("Vortex Metrics (echte Daten):", get_vortex_metrics(phase_ring=phase_ring, history=history))
+        
+        # Frustration-Beispiel
+        print("Frustration Score (N=50):", get_frustration_score(N=50))
+    except Exception as e:
+        print("Fehler beim Laden echter Daten:", e)
