@@ -565,6 +565,101 @@ structural stability.
 
 ---
 
+### Structured Oscillator Networks Kernel Bridge
+
+# Overview
+
+The Kernel Bridge serves as the interface between the Structured Oscillator Networks experiments and the NEXAH Kernel. It exports key metrics such as vortex metrics, chimera status, and frustration scores, which provide insights into the synchronization dynamics, topological defects, and resonance behaviors of the oscillator networks.
+
+This bridge is a critical component that integrates the experimental data with the NEXAH system, making it possible to utilize these findings for further analysis, including structural navigation, dynamic trajectory analysis, and phase transition modeling within the broader NEXAH Kernel framework.
+
+# Results from the Kernel Bridge
+
+The Kernel Bridge functions as a powerful tool for extracting the following key metrics from the Structured Oscillator Networks experiments:
+
+1.	Vortex Metrics
+The vortex count and density are calculated based on the phase ring data, providing crucial information on instability and the spatial distribution of vortices in the network. These metrics serve as indicators for instability and structural resilience within the oscillator networks.
+
+Example output:
+
+```bash
+Vortex Metrics (real data): {'vortex_count_avg': 1000.0, 'vortex_density': 0.02}
+```
+
+2.	Chimera Status
+The chimera state is detected using local coherence boundaries. This metric helps identify regions of partial synchronization, where the system exhibits both coherent and incoherent states simultaneously.
+
+Example output:
+
+```bash
+Chimera Status (latest snapshot): {'chimera_detected': False, 'coherence_fraction': 1.0, 'classification': 0.0}
+```
+
+.	Frustration Score
+The frustration score is calculated for specific shell sizes, providing a proxy for cascade risks and delayed synchronization in the network. High frustration scores indicate the likelihood of synchronization failure in certain topologies.
+Example output:
+
+```bash
+Frustration Score (N=50): {'frustration_score': 39.0, 'high_risk': True, 'shell_size': 50, 'sync_time': 4000, 'order_parameter': 4.947529504498804e-16}
+```
+
+How to Use the Kernel Bridge
+
+The Kernel Bridge can be directly integrated into your workflow by using the provided functions to retrieve key metrics from the Structured Oscillator Networks experiments:
+
+from ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
+
+# Example usage:
+```bash
+history = np.load('output/phase_history.npy')
+phase_ring = history[-1] if history.ndim == 2 else history
+```
+
+# Get vortex metrics
+```bash
+vortex_metrics = get_vortex_metrics(phase_ring=phase_ring, history=history)
+
+```
+# Get chimera status
+
+```bash
+chimera_status = get_chimera_status(phase_ring=phase_ring)
+```
+# Get frustration score for N=50
+
+```bash
+frustration_score = get_frustration_score(N=50)
+
+print(vortex_metrics)
+print(chimera_status)
+print(frustration_score)
+```
+These functions allow you to analyze the data directly from the experiment results, making it easier to integrate the findings into the NEXAH Kernel framework for further navigation analysis, stability analysis, and modeling.
+
+⸻
+
+# Incorporation into NEXAH
+
+The Kernel Bridge is part of the larger NEXAH Kernel system and facilitates the integration of oscillator network data into the NEXAH framework. By utilizing the bridge to export key metrics, you can:
+	•	Analyze system dynamics: Utilize the extracted metrics for regime navigation and stability modeling.
+	•	Enhance resilience analysis: Investigate the impact of topological defects, vortex dynamics, and synchronization on system stability.
+	•	Generate phase transition models: Use the frustration score and chimera states to analyze delayed synchronization and metastable states within the system.
+
+⸻
+
+# Next Steps for Kernel Bridge Integration
+	1.	Extend the functionality of the Kernel Bridge to include additional metrics and data from other experiments.
+	2.	Create visualization tools to interpret the extracted metrics, providing better insights into system behavior and stability.
+	3.	Integrate the Kernel Bridge with the NEXAH navigation and intervention pipeline to enable real-time analysis and system adjustments.
+
+⸻
+
+# Conclusion
+
+The Kernel Bridge is an essential tool for integrating Structured Oscillator Networks experiments with the NEXAH Kernel, enabling deeper analysis and navigation of complex dynamical systems. The results from the bridge offer valuable insights into synchronization dynamics, resonance patterns, and system instability, laying the groundwork for further exploration and intervention within the NEXAH framework.
+
+
+
 # Visual Exploration Layer
 
 The kernel includes exploratory demonstrations of regime navigation.
@@ -574,6 +669,8 @@ Location:
 https://github.com/Scarabaeus1033/NEXAH-CODEX/tree/main/ENGINE/nexah_kernel/demos
 
 These demos explore structural dynamics such as:
+Vortex Metrics (real data): {'vortex_count_avg': 1000.0, 'vortex_density': 0.02}
+
 
 - attractor basins
 - resonance fields
