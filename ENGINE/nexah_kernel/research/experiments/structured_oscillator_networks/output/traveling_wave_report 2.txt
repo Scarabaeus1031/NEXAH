@@ -1,0 +1,13 @@
+Traveling Wave Report
+=====================
+
+nodes: 64
+timesteps: 9600
+
+mean wave speed: 0.001482
+max speed: 2.1231
+min speed: -2.9877
+
+Interpretation
+----------------
+Standing wave / symmetric drift
