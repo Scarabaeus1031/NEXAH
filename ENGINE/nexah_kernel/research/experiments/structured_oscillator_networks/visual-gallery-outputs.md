@@ -1,55 +1,109 @@
-## Visual Gallery
+# Visual Gallery – Structured Oscillator Networks
 
-### **1. Synchronization Dynamics**
+Hier eine kuratierte Übersicht der wichtigsten generierten Visuals aus den Experimenten.  
+Gruppierung folgt den Hauptthemen aus dem README. Alle Pfade relativ zum Ordner `structured_oscillator_networks/`.
 
-This section illustrates the synchronization dynamics across different shell sizes in the network. The synchronization time and cluster persistence are key metrics to understand how fast and stable networks synchronize based on their structural topology.
+**Hinweis:** Vollständige Liste aller Outputs in `output/` und Unterordnern (über 100 Dateien). Hier nur die Highlights.
 
-- **Synchronization Time vs Shell Size (Version 1)**
-  ![Synchronization Time vs Shell Size](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/sync_time_vs_shell.png)
-  *This visualization shows the synchronization time as a function of shell size, exploring the impact of network shell sizes on synchronization time.*
+## Prime Number Grids
 
-- **Synchronization Time vs Shell Size (Version 2)**
-  ![Synchronization Time vs Shell Size (Version 2)](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/sync_time_vs_shell_v2.png)
-  *An extended version of this visualization, offering additional data on synchronization dynamics across more complex shell structures.*
+- **Prime Number Lattice with Symmetry**  
+  ![Prime Lattice Symmetry](output/Prime_Number_Lattice_with_Symmetry.png)  
+  3D-Resonanz-Lattice basierend auf Prime-Strukturen – zeigt natürliche Resonanzkanäle durch Irregularität.
 
----
+- **Resonance Lattice 3D**  
+  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
+  Visualisierung von Resonanzstrukturen im Prime-Number-Grid.
 
-### **2. Vortex Formation in Phase Space**
+- **Prime Number Grid Visualization (fixed Y-axis, 1000)**  
+  ![Prime Grid 1000](output/grid_prime_visualization_1000.png)  
+  Prime-basiertes Grid mit fester Y-Achse – illustriert Symmetrie und Phasenverteilung.
 
-This section focuses on vortex formation in phase space within oscillator networks. The following visuals track the development of these vortex structures, offering insights into synchronization transitions and chaotic behavior.
+## Resonance Structures
 
-- **Vortex Density Mapping (Version 1)**
-  ![Vortex Density Mapping](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/vortex_density_vs_shell.png)
-  *This mapping visualizes the vortex density in phase space across different shell sizes, highlighting the regions where vortex formation and synchronization transitions coincide.*
+- **Resonance Lattice 3D (wiederholt für Kontext)**  
+  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
+  3D-Darstellung von Resonanzmustern in strukturierten Graphen.
 
-- **Vortex Density Mapping (Version 2)**
-  ![Vortex Density Mapping (Version 2)](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/vortex_density_vs_shell_v2.png)
-  *The second version of this visualization extends the analysis to additional shell sizes, providing further insight into vortex distribution and its correlation with synchronization states.*
+## Vortex & Chimera
 
----
+- **Vortex Density vs Shell**  
+  ![Vortex Density](topology/vortex_density_vs_shell.png)  
+  Vortex-Dichte als Funktion der Shell-Größe – zeigt Topologie-Einfluss auf Defekte.
 
-### **3. Resonance Structures**
+- **Vortex Density vs Shell (v2)**  
+  ![Vortex Density v2](topology/vortex_density_vs_shell_v2.png)  
+  Verbesserte Variante mit mehr Datenpunkten.
 
-This section delves into resonance patterns within the structured oscillator networks. It focuses on how phase-locking channels, resonance webs, and synchronization bands emerge within these complex networks.
+- **Vortex Activity Map**  
+  ![Vortex Activity](output/vortex_activity_map.png)  
+  Aktivitätskarte von Vortex-Strukturen im Phasenfeld.
 
-- **Resonance Field Map**
-  ![Resonance Field Map](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/resonance_field_map.png)
-  *This visualization displays the resonance fields within the network, showing regions where oscillators exhibit synchronized behavior in phase space.*
+- **Vortex Winding Map**  
+  ![Vortex Winding](output/vortex_winding_map.png)  
+  Winding-Zahlen und topologische Vortex-Informationen.
 
-- **Resonance Field Strength**
-  ![Resonance Field Strength](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/resonance_field_strength.png)
-  *Shows the strength of the resonance fields, giving insights into how the resonance structures evolve across different network configurations.*
+- **Chimera State Overlap**  
+  ![Chimera Overlap](output/Chimera_State_Overlap.png)  
+  Anteil kohärenter vs. inkohärenter Regionen über die Zeit.
 
----
+- **Chimera Local Coherence**  
+  ![Chimera Coherence](output/chimera_local_coherence.png)  
+  Lokale Kohärenz-Karte – zeigt Chimera-Regionen klar.
 
-### **4. Defects and Braid Statistics**
+## Synchronization & Frustration (vs Shell)
 
-This section investigates defects and their impact on the network's structure, particularly focusing on braid (entangled) structures and topological defects. These defects give important insights into the stability and synchronization behavior of the network.
+- **Synchronization Time vs Shell**  
+  ![Sync Time](output/sync_time_vs_shell.png)  
+  Synchronisationszeit als Funktion der Shell-Größe – Frustrationseffekte sichtbar.
 
-- **Defect Lifetime Histogram**
-  ![Defect Lifetime Histogram](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/defect_lifetime_histogram.png)
-  *This histogram shows the lifetime of defects in the structure, illustrating how long defects persist before being resolved during synchronization.*
+- **Synchronization Time vs Shell (v2)**  
+  ![Sync Time v2](output/sync_time_vs_shell_v2.png)  
+  Erweiterte Variante mit mehr Shell-Größen.
 
+## Phase Attractors & High-Dimensional Projections
+
+- **Phase Attractor 3D**  
+  ![Phase Attractor 3D](output/phase_attractor_3d.png)  
+  3D-Phasenattraktor-Darstellung.
+
+- **Phase Attractor 4D Rotation**  
+  ![4D Rotation](output/phase_attractor_4d_rotation.png)  
+  4D-Rotationsprojektion des Phasenattraktors.
+
+- **Phase Attractor 7D Projection**  
+  ![7D Projection](output/phase_attractor_7D_projection.png)  
+  Reduzierte Projektion in 7 Dimensionen.
+
+- **4D Phase Shift Projection**  
+  ![4D Phase Shift](output/4D_phase_shift_projection.png)  
+  4D-Phasenverschiebungsprojektion – zeigt Resonanzdynamik.
+
+- **Phase Surface 3D**  
+  ![Phase Surface](output/phase_surface_3d.png)  
+  3D-Phasenoberfläche aus den Oszillator-Dynamiken.
+
+## Weitere Highlights
+
+- **Triad Defect Distance Histogram**  
+  ![Triad Defect Distance](output/triad_defect_distance_hist.png)  
+  Abstandsverteilung triadischer Defekte.
+
+- **Vortex Count vs Time**  
+  ![Vortex Count](output/vortex_count_vs_time.png)  
+  Anzahl aktiver Vortex-Strukturen über die Zeit.
+
+- **Wave Coherence**  
+  ![Wave Coherence](output/wave_coherence.png)  
+  Kohärenz der Wellenpropagation.
+
+- **Winding vs Shell**  
+  ![Winding vs Shell](output/winding_vs_shell.png)  
+  Winding-Zahlen vs. Shell-Größe.
+
+**Vollständige Galerie:** Alle Dateien in `output/`, `topology/`, `visualization/` usw. – siehe `ls output/*.png | wc -l` für genaue Anzahl (~100+).
+
+Weitere Ergänzungen / Updates folgen bei neuen Runs.
 - **Braid Crossings**
   ![Braid Crossings](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/braid_crossings.png)
   *Visualizes braid crossings, which are indicative of topological defects in the network.*
