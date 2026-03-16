@@ -1,84 +1,139 @@
 # Visual Gallery – Structured Oscillator Networks
 
-Hier eine kuratierte Übersicht der wichtigsten generierten Visuals aus den Experimenten.  
-Gruppierung folgt den Hauptthemen aus dem README. Alle Pfade relativ zum Ordner `structured_oscillator_networks/`.
+**Stand: März 2026**  
+Hier eine kuratierte und vollständige Übersicht der wichtigsten generierten Visuals aus dem gesamten Ordner.  
+Alle Bilder sind gruppiert nach den Hauptthemen des READMEs. Pfade sind relativ zum Ordner `structured_oscillator_networks/`.
 
-**Hinweis:** Vollständige Liste aller Outputs in `output/` und Unterordnern (über 100 Dateien). Hier nur die Highlights.
+**Gesamtzahl:** ~100+ .png-Dateien (hauptsächlich in `output/`, einige in `topology/`).  
+**Nur Highlights** hier – volle Liste via `find . -name "*.png"`.
 
 ## Prime Number Grids
 
 - **Prime Number Lattice with Symmetry**  
   ![Prime Lattice Symmetry](output/Prime_Number_Lattice_with_Symmetry.png)  
-  3D-Resonanz-Lattice basierend auf Prime-Strukturen – zeigt natürliche Resonanzkanäle durch Irregularität.
+  3D-Resonanz-Lattice auf Prime-Strukturen – zeigt natürliche Resonanzkanäle.
 
 - **Resonance Lattice 3D**  
-  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
-  Visualisierung von Resonanzstrukturen im Prime-Number-Grid.
+  ![Resonance Lattice 3D](output/Resonance_Lattice_3D.png)  
+  3D-Darstellung von Resonanzstrukturen im Prime-Grid.
 
 - **Prime Number Grid Visualization (fixed Y-axis, 1000)**  
   ![Prime Grid 1000](output/grid_prime_visualization_1000.png)  
-  Prime-basiertes Grid mit fester Y-Achse – illustriert Symmetrie und Phasenverteilung.
+  Prime-basiertes Grid mit fester Y-Achse – Symmetrie & Phasenverteilung.
 
 ## Resonance Structures
 
-- **Resonance Lattice 3D (wiederholt für Kontext)**  
-  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
-  3D-Darstellung von Resonanzmustern in strukturierten Graphen.
+- **Resonance Field Map**  
+  ![Resonance Field Map](output/resonance_field_map.png)  
+  Resonanzfeld-Stärke über Phase-Space.
+
+- **Resonance Field Strength**  
+  ![Resonance Strength](output/resonance_field_strength.png)  
+  Intensitätsverteilung von Resonanzmustern.
 
 ## Vortex & Chimera
 
 - **Vortex Density vs Shell**  
   ![Vortex Density](topology/vortex_density_vs_shell.png)  
-  Vortex-Dichte als Funktion der Shell-Größe – zeigt Topologie-Einfluss auf Defekte.
+  Vortex-Dichte als Funktion der Shell-Größe.
 
 - **Vortex Density vs Shell (v2)**  
   ![Vortex Density v2](topology/vortex_density_vs_shell_v2.png)  
-  Verbesserte Variante mit mehr Datenpunkten.
+  Erweiterte Variante mit mehr Auflösung.
 
 - **Vortex Activity Map**  
   ![Vortex Activity](output/vortex_activity_map.png)  
-  Aktivitätskarte von Vortex-Strukturen im Phasenfeld.
+  Aktivitätsverteilung von Vortex-Strukturen.
 
 - **Vortex Winding Map**  
   ![Vortex Winding](output/vortex_winding_map.png)  
-  Winding-Zahlen und topologische Vortex-Informationen.
+  Winding-Zahlen & topologische Vortex-Info.
+
+- **Vortex Count vs Time**  
+  ![Vortex Count](output/vortex_count_vs_time.png)  
+  Anzahl aktiver Vortex über die Zeit.
+
+- **Vortex Defect Map**  
+  ![Vortex Defect Map](output/vortex_defect_map.png)  
+  Defekt-Karte mit Vortex-Überlagerung.
 
 - **Chimera State Overlap**  
   ![Chimera Overlap](output/Chimera_State_Overlap.png)  
-  Anteil kohärenter vs. inkohärenter Regionen über die Zeit.
+  Anteil kohärent vs. inkohärent über Zeit.
 
 - **Chimera Local Coherence**  
   ![Chimera Coherence](output/chimera_local_coherence.png)  
-  Lokale Kohärenz-Karte – zeigt Chimera-Regionen klar.
+  Lokale Kohärenz – Chimera-Regionen klar erkennbar.
 
-## Synchronization & Frustration (vs Shell)
+- **Chimera Domain Count**  
+  ![Chimera Domain Count](output/chimera_domain_count.png)  
+  Anzahl Chimera-Domänen über Zeit.
+
+## Synchronization & Frustration (Shell-Analyse)
 
 - **Synchronization Time vs Shell**  
   ![Sync Time](output/sync_time_vs_shell.png)  
-  Synchronisationszeit als Funktion der Shell-Größe – Frustrationseffekte sichtbar.
+  Synchronisationszeit vs. Shell-Größe – Frustration sichtbar.
 
 - **Synchronization Time vs Shell (v2)**  
   ![Sync Time v2](output/sync_time_vs_shell_v2.png)  
-  Erweiterte Variante mit mehr Shell-Größen.
+  Erweiterte Scan-Variante.
+
+- **Shell Structure**  
+  ![Shell Structure](output/shell_structure.png)  
+  Visualisierung der Shell-Topologie.
 
 ## Phase Attractors & High-Dimensional Projections
 
 - **Phase Attractor 3D**  
   ![Phase Attractor 3D](output/phase_attractor_3d.png)  
-  3D-Phasenattraktor-Darstellung.
+  3D-Phasenattraktor.
 
 - **Phase Attractor 4D Rotation**  
   ![4D Rotation](output/phase_attractor_4d_rotation.png)  
-  4D-Rotationsprojektion des Phasenattraktors.
+  4D-Rotation des Attraktors.
 
 - **Phase Attractor 7D Projection**  
   ![7D Projection](output/phase_attractor_7D_projection.png)  
-  Reduzierte Projektion in 7 Dimensionen.
+  Projektion in 7 Dimensionen.
 
 - **4D Phase Shift Projection**  
   ![4D Phase Shift](output/4D_phase_shift_projection.png)  
-  4D-Phasenverschiebungsprojektion – zeigt Resonanzdynamik.
+  4D-Phasenverschiebung – Resonanzdynamik.
 
+- **Phase Surface 3D**  
+  ![Phase Surface 3D](output/phase_surface_3d.png)  
+  3D-Phasenoberfläche.
+
+## Defects, Triads & Andere
+
+- **Triad Defect Distance Histogram**  
+  ![Triad Distance Hist](output/triad_defect_distance_hist.png)  
+  Abstandsverteilung triadischer Defekte.
+
+- **Triad Defect Overlay**  
+  ![Triad Overlay](output/triad_defect_overlay.png)  
+  Überlagerung triadischer Defekte.
+
+- **Triad Defect Time Series**  
+  ![Triad Time Series](output/triad_defect_time_series.png)  
+  Zeitliche Entwicklung triadischer Defekte.
+
+- **Triadic Closure Count vs Time**  
+  ![Triadic Closure Count](output/triadic_closure_count_vs_time.png)  
+  Triadische Closure über Zeit.
+
+- **Wave Coherence**  
+  ![Wave Coherence](output/wave_coherence.png)  
+  Kohärenz der Wellenpropagation.
+
+- **Wave Velocity Map**  
+  ![Wave Velocity](output/wave_velocity_map.png)  
+  Geschwindigkeitskarte der Wellen.
+
+**Vollständige Liste aller Bilder:**  
+```bash
+find . -name "*.png" | sort | wc -l   # ergibt ~100+
 - **Phase Surface 3D**  
   ![Phase Surface](output/phase_surface_3d.png)  
   3D-Phasenoberfläche aus den Oszillator-Dynamiken.
