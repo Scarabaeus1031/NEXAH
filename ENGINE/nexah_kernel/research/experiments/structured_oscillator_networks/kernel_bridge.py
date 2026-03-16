@@ -63,12 +63,17 @@ def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
     Frustration-Score basierend auf Sync-Delay – Proxy für Cascade-Risiko.
     """
     try:
-        # Echter Aufruf – passe Rückgabe an (was gibt run_simulation zurück?)
-        history = run_simulation(N, K=K, steps=steps, dt=dt)  # anpassen an echte Rückgabe
-        theta = history[-1]  # letzter Snapshot
+        # Echter Aufruf – run_simulation gibt Tuple zurück (z. B. history, sync_time, ...)
+        result = run_simulation(N, K=K, steps=steps, dt=dt)
+        if isinstance(result, tuple):
+            history = result[0] if len(result) > 0 else None
+            # Annahme: sync_time ist zweiter Wert (anpassen!)
+            sync_time = result[1] if len(result) > 1 else steps * dt
+        else:
+            history = result
+            sync_time = steps * dt
+        theta = history[-1]
         R = order_parameter(theta)
-        # Echte Sync-Time-Schätzung (anpassen!)
-        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
             "frustration_score": score,
