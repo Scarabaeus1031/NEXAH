@@ -34,22 +34,16 @@ The **Structured Oscillator Networks** experiments are divided into key research
 ### 2. **Vortex Formation in Phase Space**
    - **Objective:** Investigate vortex structures within oscillator phase fields.
    - **Metrics:**
-     - **Vortex persistence:** The stability of vortex formations across time.
-     - **Cycle-phase analysis:** Examining the phase relationships between oscillators within the vortex structure.
-     - **Topological defects detection:** Identifying areas in the network where synchronization fails or exhibits irregularities (e.g., chimera states, phase slips).
-   
-   - **Additional Insight**:
-     The vortex structures form as oscillators exhibit dynamic synchronization behavior, transitioning between coherent (synchronized) and incoherent (asynchronized) regions. These vortices often appear near boundary regions in phase space and are associated with **intermittent synchronization**. Our analysis of **vortex persistence** and **cycle-phase analysis** uncovers a direct relationship between network topology and the formation of stable or metastable vortices.
+     - Vortex persistence
+     - Cycle-phase analysis
+     - Topological defects detection
 
 ### 3. **Topology-Driven Frustration**
    - **Objective:** Examine network sizes and topologies that create **frustration** leading to delayed synchronization or metastable clusters.
    - **Indicators of Frustration:**
-     - **Synchronization delay:** Delayed or incomplete synchronization due to topological features such as bottlenecks, isolated oscillators, or uneven connectivity.
-     - **Incomplete phase locking:** Partial phase locking where only a subset of oscillators synchronize while the rest remain asynchronous.
-     - **Metastable clusters:** Small, locally synchronized clusters that do not reach global synchronization due to the inherent frustration caused by the network structure.
-   
-   - **Detailed Experimentation**:
-     In this experiment, we examined how **network sizes** like N = 29 and N = 34 produced **frustration effects**, resulting in **delayed synchronization**. The frustration occurs when the network topology inhibits global phase locking, resulting in partial synchronization, or complete metastability. This phenomenon is more prominent in **small-world networks** or networks with **non-uniform connectivity**. As we tested larger networks, the frustration decreased, and global synchronization emerged more readily.
+     - Synchronization delay
+     - Incomplete phase locking
+     - Metastable clusters
 
 ### 4. **Resonance Structures**
    - **Objective:** Explore resonance patterns within structured graphs, such as:
@@ -63,33 +57,52 @@ The **Structured Oscillator Networks** experiments are divided into key research
 
 ### **Experiment 01: Hub-Ring Shell Scan**
 - **Objective:** Investigate synchronization time as a function of shell size in hub-ring networks.
-- **Results:** Measure synchronization time and observe metastability for certain ring sizes. The study showed that **hub-ring topologies** with larger ring sizes often exhibited delayed synchronization, especially when the number of oscillators exceeded a certain threshold.
+- **Results:** Measure synchronization time and observe metastability for certain ring sizes.
 
 ### **Experiment 02: Vortex Density Mapping**
 - **Objective:** Track the formation of phase vortices across different oscillator topologies.
-- **Results:**
-   - **Phase Vortices** were observed forming near boundaries in oscillatory networks, with **larger topologies** showing a greater number of vortices and stronger persistence.
-   - The study found a **correlation between vortex density and synchronization transitions**, highlighting the fact that **higher vortex densities** were often observed in states of partial synchronization or when the network was on the brink of transitioning into global synchronization.
-
-   - In particular, **small-world topologies** (with high clustering and few long-range connections) exhibited **dense vortex formation**, which inhibited synchronization across the network. These networks required longer synchronization times compared to **lattice-like topologies**, where vortices formed more sparsely, resulting in faster synchronization.
+- **Results:** Identify regions where vortex formation coincides with synchronization transitions.
 
 ### **Experiment 03: Frustration Shell Detection**
 - **Objective:** Detect frustrated networks that fail to synchronize in a timely manner.
-- **Results:**
-   - **Frustration Effects** were most significant in networks with certain shell sizes, particularly **N = 29 and N = 34**. These networks failed to synchronize efficiently due to bottlenecks in the network's connectivity structure, causing synchronization delays.
-   - **Partial synchronization** was observed in these frustrated networks, where only certain clusters of oscillators synchronized, while others remained asynchronous for long periods.
+- **Results:** Identify network sizes (e.g., N = 29, 34) where synchronization is delayed due to frustration effects.
 
 ### **Experiment 04: Layered Cycle Networks**
 - **Objective:** Study synchronization dynamics in layered symmetry graphs like C5 + C6 + C6.
-- **Results:**
-   - Layered topologies showed **enhanced synchronization stability** compared to single-layer topologies. The addition of multiple layers allowed oscillators to interact across different levels, smoothing the synchronization process.
-   - **Layered symmetry graphs** like **C5 + C6 + C6** exhibited **faster synchronization** and **higher global order** compared to single-layer graphs, especially when the layers were connected in specific patterns to allow for phase coupling across layers.
+- **Results:** Layered topologies enhance synchronization stability under certain conditions.
 
 ### **Experiment 05: Resonance Web Detection**
 - **Objective:** Detect resonance channels and phase-locking corridors within oscillator networks.
-- **Results:**
-   - The experiment successfully **visualized resonance structures** across the phase space of different networks. In **networks with higher dimensionality**, **resonance corridors** were identified where oscillators locked into phase synchrony, creating stable regions within the phase space.
-   - **Phase-locking corridors** were particularly noticeable in **small-world networks**, where phase synchronization occurred in localized regions, while the rest of the network remained asynchronous or in a chimera state.
+- **Results:** Visualize resonance structures across phase space and detect hidden synchronization patterns.
+
+---
+
+## Prime Number Grids Experiments
+
+In addition to the above experiments, the **Prime Number Grid** experiments investigate how **Prime Number Lattices** impact the dynamics of oscillator networks. These experiments focus on resonance patterns within **prime-based grids**, and their potential to influence synchronization and chaotic transitions.
+
+### **Prime Number Grid Experiment Overview**
+   - **Objective:** Study the effects of **Prime Number Lattices** on synchronization in oscillator networks.
+   - **Key Variables:**
+     - Prime lattice structure
+     - Resonance patterns
+     - Phase transition dynamics
+
+### **Prime Number Grid Visuals**
+
+Here are some key visuals from the Prime Number Grids experiments:
+
+- **Prime Number Lattice with Symmetry:**
+  ![Prime Lattice Symmetry](output/Prime_Number_Lattice_with_Symmetry.png)
+  *This image shows a 3D resonance lattice based on prime number structures.*
+
+- **Resonance Lattice 3D:**
+  ![Resonance Lattice](output/Resonance_Lattice_3D.png)
+  *Visual representation of resonance structures within the prime number grid.*
+
+- **Prime Number Grid Visualization:**
+  ![Prime Number Grid](output/grid_prime_visualization_1000.png)
+  *Visualization of the prime number grid with a fixed Y-axis.*
 
 ---
 
