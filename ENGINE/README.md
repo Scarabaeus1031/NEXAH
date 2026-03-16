@@ -146,6 +146,19 @@ Implemented capabilities include:
 
 ---
 
+## NEXAH Kernel Bridge - Extension for Structured Oscillator Networks
+
+The **Kernel Bridge** for **Structured Oscillator Networks** expands the **NEXAH Kernel** with capabilities to analyze dynamic instabilities and synchronization effects in complex systems.
+
+### New Features:
+- **Vortex Metrics**: The bridge analyzes vortex density and frequency as indicators of unstable phases in network dynamics.
+- **Chimera Phenomena**: Detects partial synchronization (chimera states) within networks, investigating system resilience and synchronization ability.
+- **Frustration Score**: A metric based on synchronization delays, indicating the risk of cascade events in a system.
+
+These enhancements allow detailed exploration of network dynamics and stability across different **regime landscapes** within the NEXAH framework.
+
+---
+
 ## Simulation Layer
 
 Explicit dynamical system simulations are implemented in
