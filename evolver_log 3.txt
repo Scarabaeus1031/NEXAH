@@ -1,0 +1,130 @@
+
+Resilience Architecture Evolver
+--------------------------------
+Base score: 0.410
+generation=1 new_best=0.450
+generation=1 population_best=0.450 global_best=0.450
+generation=2 new_best=0.470
+generation=2 population_best=0.470 global_best=0.470
+generation=3 population_best=0.470 global_best=0.470
+generation=4 population_best=0.470 global_best=0.470
+generation=5 population_best=0.470 global_best=0.470
+generation=6 population_best=0.470 global_best=0.470
+generation=7 population_best=0.470 global_best=0.470
+generation=8 population_best=0.470 global_best=0.470
+generation=9 population_best=0.470 global_best=0.470
+generation=10 population_best=0.470 global_best=0.470
+generation=11 population_best=0.470 global_best=0.470
+generation=12 population_best=0.470 global_best=0.470
+generation=13 population_best=0.470 global_best=0.470
+generation=14 population_best=0.470 global_best=0.470
+generation=15 population_best=0.470 global_best=0.470
+generation=16 population_best=0.470 global_best=0.470
+generation=17 population_best=0.470 global_best=0.470
+generation=18 population_best=0.470 global_best=0.470
+generation=19 population_best=0.470 global_best=0.470
+generation=20 population_best=0.470 global_best=0.470
+generation=21 population_best=0.470 global_best=0.470
+generation=22 population_best=0.470 global_best=0.470
+generation=23 population_best=0.470 global_best=0.470
+generation=24 population_best=0.470 global_best=0.470
+generation=25 population_best=0.470 global_best=0.470
+generation=26 population_best=0.470 global_best=0.470
+generation=27 population_best=0.470 global_best=0.470
+generation=28 population_best=0.470 global_best=0.470
+generation=29 population_best=0.470 global_best=0.470
+generation=30 population_best=0.470 global_best=0.470
+generation=31 population_best=0.470 global_best=0.470
+generation=32 population_best=0.470 global_best=0.470
+generation=33 population_best=0.470 global_best=0.470
+generation=34 population_best=0.470 global_best=0.470
+generation=35 population_best=0.470 global_best=0.470
+generation=36 population_best=0.470 global_best=0.470
+generation=37 population_best=0.470 global_best=0.470
+generation=38 population_best=0.470 global_best=0.470
+generation=39 population_best=0.470 global_best=0.470
+generation=40 population_best=0.470 global_best=0.470
+generation=41 population_best=0.470 global_best=0.470
+generation=42 population_best=0.470 global_best=0.470
+generation=43 population_best=0.470 global_best=0.470
+generation=44 population_best=0.470 global_best=0.470
+generation=45 population_best=0.470 global_best=0.470
+generation=46 population_best=0.470 global_best=0.470
+generation=47 population_best=0.470 global_best=0.470
+generation=48 population_best=0.470 global_best=0.470
+generation=49 population_best=0.470 global_best=0.470
+generation=50 population_best=0.470 global_best=0.470
+
+Evolution Summary
+-----------------
+Base score: 0.410
+Best score: 0.470
+Improvement: 0.060
+Best origin: generation 2
+
+Best safe states:
+ - freq_drop
+ - stable
+
+Best critical states:
+ - recovery
+
+Best collapse states:
+ - blackout
+ - congestion
+
+History:
+ generation=0 best_score=0.410
+ generation=1 best_score=0.450
+ generation=2 best_score=0.470
+ generation=3 best_score=0.470
+ generation=4 best_score=0.470
+ generation=5 best_score=0.470
+ generation=6 best_score=0.470
+ generation=7 best_score=0.470
+ generation=8 best_score=0.470
+ generation=9 best_score=0.470
+ generation=10 best_score=0.470
+ generation=11 best_score=0.470
+ generation=12 best_score=0.470
+ generation=13 best_score=0.470
+ generation=14 best_score=0.470
+ generation=15 best_score=0.470
+ generation=16 best_score=0.470
+ generation=17 best_score=0.470
+ generation=18 best_score=0.470
+ generation=19 best_score=0.470
+ generation=20 best_score=0.470
+ generation=21 best_score=0.470
+ generation=22 best_score=0.470
+ generation=23 best_score=0.470
+ generation=24 best_score=0.470
+ generation=25 best_score=0.470
+ generation=26 best_score=0.470
+ generation=27 best_score=0.470
+ generation=28 best_score=0.470
+ generation=29 best_score=0.470
+ generation=30 best_score=0.470
+ generation=31 best_score=0.470
+ generation=32 best_score=0.470
+ generation=33 best_score=0.470
+ generation=34 best_score=0.470
+ generation=35 best_score=0.470
+ generation=36 best_score=0.470
+ generation=37 best_score=0.470
+ generation=38 best_score=0.470
+ generation=39 best_score=0.470
+ generation=40 best_score=0.470
+ generation=41 best_score=0.470
+ generation=42 best_score=0.470
+ generation=43 best_score=0.470
+ generation=44 best_score=0.470
+ generation=45 best_score=0.470
+ generation=46 best_score=0.470
+ generation=47 best_score=0.470
+ generation=48 best_score=0.470
+ generation=49 best_score=0.470
+ generation=50 best_score=0.470
+
+Saved evolved architecture to:
+APPLICATIONS/examples/energy_grid_architecture_evolved.json
