@@ -15,12 +15,12 @@ except ImportError as e:
 
 def get_vortex_metrics(phase_ring=None, history=None, threshold=2.2):
     """
-    Vortex-Count und Dichte – Indikator für Instabilität.
+    Vortex-Count und Dichte – Indikator für Instabilität in Regime-Landschaften.
     """
     try:
         if history is not None and phase_ring is not None:
             defect_map = vortex_scan(history, threshold=threshold)
-            vortex_counts = [len(v) for v in defect_map]
+            vortex_counts = [len(v) for v in defect_map if v is not None]
             return {
                 "vortex_count_avg": sum(vortex_counts) / len(vortex_counts) if vortex_counts else 0,
                 "vortex_density": sum(vortex_counts) / (len(phase_ring) * len(history)) if len(phase_ring) > 0 and len(history) > 0 else 0
@@ -34,33 +34,36 @@ def get_vortex_metrics(phase_ring=None, history=None, threshold=2.2):
         else:
             return {"error": "Weder phase_ring noch history angegeben"}
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": f"Vortex-Metriken fehlgeschlagen: {str(e)}"}
 
 def get_chimera_status(phase_ring, radius=2):
     """
-    Chimera-Status – Indikator für partielle Synchronisation.
+    Chimera-Status – Indikator für partielle Synchronisation & mögliche Tipping-Points.
     """
     try:
         local_R = local_order_on_ring(phase_ring, radius=radius)
         fraction, classification = classify_chimera_fraction(local_R)
         return {
             "chimera_detected": classification == "chimera",
-            "coherence_fraction": fraction
+            "coherence_fraction": float(fraction) if fraction is not None else None
         }
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": f"Chimera-Status fehlgeschlagen: {str(e)}"}
 
 def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
     """
     Frustration-Score basierend auf Sync-Delay – Proxy für Cascade-Risiko.
     """
     try:
-        # Realer Aufruf – läuft langsam, später cachen/optimieren
-        # history = run_simulation(N, K=K, steps=steps, dt=dt)  # anpassen an Rückgabe
-        history = np.random.rand(steps, N)  # Dummy für Test – später echt
-        theta = history[-1]
+        # Echter Aufruf – läuft langsam, später cachen/optimieren
+        # Annahme: run_simulation gibt history zurück (passe an echte Rückgabe an!)
+        history = run_simulation(N, K=K, steps=steps, dt=dt)
+        theta = history[-1]  # letzter Snapshot
         R = order_parameter(theta)
-        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5  # einfache Logik
+        
+        # Einfache Sync-Time-Schätzung (anpassen!)
+        # Besser: echte Sync-Time aus Simulation berechnen
+        sync_time = steps * dt if R > 0.9 else steps * dt * 1.5
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
             "frustration_score": score,
@@ -70,7 +73,7 @@ def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
             "order_parameter": R
         }
     except Exception as e:
-        return {"error": str(e)}
+        return {"error": f"Frustration-Score fehlgeschlagen: {str(e)}"}
 
 __all__ = [
     "get_vortex_metrics",
@@ -87,6 +90,8 @@ if __name__ == "__main__":
         
         phase_ring = history[-1] if history.ndim == 2 else history
         print("Vortex Metrics (echte Daten):", get_vortex_metrics(phase_ring=phase_ring, history=history))
+        
+        print("Chimera Status (letzter Snapshot):", get_chimera_status(phase_ring=phase_ring))
         
         print("Frustration Score (N=50):", get_frustration_score(N=50))
     except Exception as e:
