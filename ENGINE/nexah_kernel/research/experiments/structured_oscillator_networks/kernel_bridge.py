@@ -57,37 +57,25 @@ def get_chimera_status(phase_ring, radius=2):
     except Exception as e:
         return {"error": str(e)}
 
-def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=10.0):
+def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=100.0):
     """
     Frustration-Score basierend auf Sync-Delay – Proxy für Cascade-Risiko.
     """
     try:
-        # Echter Aufruf – run_simulation gibt Tuple zurück (z. B. (sync_time, R, history, ...))
         result = run_simulation(N, K=K, steps=steps, dt=dt)
-        
-        # Flexibel unpacken – anpassen an deine echte Rückgabe!
         if isinstance(result, tuple):
-            if len(result) >= 3:
-                sync_time = result[0]  # Annahme: sync_time zuerst
-                R = result[1]
-                history = result[2]
-            elif len(result) == 2:
-                sync_time = result[0]
-                R = result[1]
-                history = None
-            else:
-                sync_time = steps * dt
-                R = 0.0
-                history = None
+            history = result[0] if len(result) > 0 else np.array([])
+            sync_time = result[1] if len(result) > 1 else steps * dt
+            R = result[2] if len(result) > 2 else order_parameter(history[-1])
         else:
+            history = result
             sync_time = steps * dt
-            R = 0.0
-            history = None
+            R = order_parameter(history[-1])
         
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
             "frustration_score": score,
-            "high_risk": score > 1.5,
+            "high_risk": score > 1.0,
             "shell_size": N,
             "sync_time": sync_time,
             "order_parameter": R
