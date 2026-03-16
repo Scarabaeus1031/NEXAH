@@ -37,28 +37,28 @@ While most research deals with **random or regular networks**, this study focuse
 
 The **Structured Oscillator Networks** experiments are divided into key research themes:
 
-### 1. **Synchronization Dynamics**
+### 1. Synchronization Dynamics
    - **Objective:** Study the synchronization behavior of different network topologies.
    - **Quantities Measured:**
      - Global order parameter \( R \)
      - Synchronization time
      - Cluster persistence
-   
-### 2. **Vortex Formation in Phase Space**
+
+### 2. Vortex Formation in Phase Space
    - **Objective:** Investigate vortex structures within oscillator phase fields.
    - **Metrics:**
      - Vortex persistence
      - Cycle-phase analysis
      - Topological defects detection
 
-### 3. **Topology-Driven Frustration**
+### 3. Topology-Driven Frustration
    - **Objective:** Examine network sizes and topologies that create **frustration** leading to delayed synchronization or metastable clusters.
    - **Indicators of Frustration:**
      - Synchronization delay
      - Incomplete phase locking
      - Metastable clusters
 
-### 4. **Resonance Structures**
+### 4. Resonance Structures
    - **Objective:** Explore resonance patterns within structured graphs, such as:
      - Phase locking channels
      - Resonance webs
@@ -66,23 +66,23 @@ The **Structured Oscillator Networks** experiments are divided into key research
 
 ## Key Experiments
 
-### **Experiment 01: Hub-Ring Shell Scan**
+### Experiment 01: Hub-Ring Shell Scan
 - **Objective:** Investigate synchronization time as a function of shell size in hub-ring networks.
 - **Results:** Measure synchronization time and observe metastability for certain ring sizes.
 
-### **Experiment 02: Vortex Density Mapping**
+### Experiment 02: Vortex Density Mapping
 - **Objective:** Track the formation of phase vortices across different oscillator topologies.
 - **Results:** Identify regions where vortex formation coincides with synchronization transitions.
 
-### **Experiment 03: Frustration Shell Detection**
+### Experiment 03: Frustration Shell Detection
 - **Objective:** Detect frustrated networks that fail to synchronize in a timely manner.
 - **Results:** Identify network sizes (e.g., N = 29, 34) where synchronization is delayed due to frustration effects.
 
-### **Experiment 04: Layered Cycle Networks**
+### Experiment 04: Layered Cycle Networks
 - **Objective:** Study synchronization dynamics in layered symmetry graphs like C5 + C6 + C6.
 - **Results:** Layered topologies enhance synchronization stability under certain conditions.
 
-### **Experiment 05: Resonance Web Detection**
+### Experiment 05: Resonance Web Detection
 - **Objective:** Detect resonance channels and phase-locking corridors within oscillator networks.
 - **Results:** Visualize resonance structures across phase space and detect hidden synchronization patterns.
 
@@ -90,21 +90,21 @@ The **Structured Oscillator Networks** experiments are divided into key research
 
 In addition to the above experiments, the **Prime Number Grid** experiments investigate how **Prime Number Lattices** impact the dynamics of oscillator networks. These experiments focus on resonance patterns within **prime-based grids**, and their potential to influence synchronization and chaotic transitions.
 
-### **Prime Number Grid Experiment Overview**
+### Prime Number Grid Experiment Overview
    - **Objective:** Study the effects of **Prime Number Lattices** on synchronization in oscillator networks.
    - **Key Variables:**
      - Prime lattice structure
      - Resonance patterns
      - Phase transition dynamics
 
-### **Prime Number Grid Visuals**
+### Prime Number Grid Visuals
 
 - **Prime Number Lattice with Symmetry**  
-  ![Prime Lattice Symmetry](output/Prime_Number_Lattice_with_Symmetry.png)  
+  ![Prime Lattice Symmetry](Prime_Number_Lattice_with_Symmetry.png)  
   *3D resonance lattice based on prime number structures – zeigt natürliche Resonanzkanäle durch Irregularität.*
 
 - **Resonance Lattice 3D**  
-  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
+  ![Resonance Lattice 3D](resonance/Resonance_Lattice_3D.png)  
   *Visual representation of resonance structures within the prime number grid.*
 
 - **Prime Number Grid Visualization (fixed Y-axis)**  
@@ -115,21 +115,20 @@ In addition to the above experiments, the **Prime Number Grid** experiments inve
 
 The experiment generates several types of visual outputs that are essential for understanding the system's dynamics:
 
-- **Synchronization Time vs Shell Size Plots**
-- **Vortex Density Maps**
-- **Phase Field Visualizations**
-- **Network State Diagrams**
-- **Resonance Field Maps**
+- Synchronization Time vs Shell Size Plots
+- Vortex Density Maps
+- Phase Field Visualizations
+- Network State Diagrams
+- Resonance Field Maps
 
 ### Example Visuals
-
 
 - **4D Phase Shift Projection**  
   ![4D Phase Projection](output/4D_phase_shift_projection.png)  
   *4D phase shift projections showing resonance dynamics.*
 
 - **Chimera State Overlap**  
-  ![Chimera State](output/Chimera_State_Overlap.png)  
+  ![Chimera State Overlap](output/Chimera_State_Overlap.png)  
   *Fraction of coherent vs incoherent states across time.*
 
 - **Vortex Field Flow (3D Vortex Fields)**  
@@ -145,30 +144,28 @@ The experiment generates several types of visual outputs that are essential for 
   *Verbesserte Vortex-Dichte vs. Shell-Größe – Vergleich zu v1.*
 
 - **Phase Surface 3D**  
-  ![Phase Surface](output/phase_surface_3d.png)  
-  3D-Phasenoberfläche aus den Oszillator-Dynamiken.
+  ![Phase Surface 3D](output/phase_surface_3d.png)  
+  *3D-Phasenoberfläche aus den Oszillator-Dynamiken.*
 
 ## Weitere Highlights
 
 - **Triad Defect Distance Histogram**  
   ![Triad Defect Distance](output/triad_defect_distance_hist.png)  
-  Abstandsverteilung triadischer Defekte.
+  *Abstandsverteilung triadischer Defekte.*
 
 - **Vortex Count vs Time**  
   ![Vortex Count](output/vortex_count_vs_time.png)  
-  Anzahl aktiver Vortex-Strukturen über die Zeit.
+  *Anzahl aktiver Vortex-Strukturen über die Zeit.*
 
 - **Wave Coherence**  
   ![Wave Coherence](output/wave_coherence.png)  
-  Kohärenz der Wellenpropagation.
+  *Kohärenz der Wellenpropagation.*
 
 - **Winding vs Shell**  
   ![Winding vs Shell](output/winding_vs_shell.png)  
-  Winding-Zahlen vs. Shell-Größe.
+  *Winding-Zahlen vs. Shell-Größe.*
 
----
-
-**Vollständige Galerie:** Alle Dateien in `output/`, `topology/`, `visualization/` usw. – siehe `ls output/*.png | wc -l` für genaue Anzahl (~100+).
+**Vollständige Galerie:** Alle Dateien in `output/`, `topology/`, Root usw. – siehe `find . -name "*.png" | sort` für genaue Anzahl (~100+).
 
 ## Research Findings
 
@@ -223,6 +220,9 @@ python -m resonance.resonance_lattice_3D
 # Via Kernel-Bridge (zukünftig)
 from .kernel_bridge import extract_regime_metrics
 ```
-## Status:
+
+## Status
 
 Active exploratory research. Further results will be integrated into the NEXAH Kernel as new findings emerge.
+
+
