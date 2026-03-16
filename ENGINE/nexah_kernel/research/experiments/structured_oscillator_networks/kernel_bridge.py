@@ -63,14 +63,18 @@ def get_frustration_score(N=50, K=1.0, steps=4000, dt=0.01, base_delay=100.0):
     """
     try:
         result = run_simulation(N, K=K, steps=steps, dt=dt)
+        
+        # Flexibel unpacken – anpassen an deine echte Rückgabe!
         if isinstance(result, tuple):
-            history = result[0] if len(result) > 0 else np.array([])
-            sync_time = result[1] if len(result) > 1 else steps * dt
-            R = result[2] if len(result) > 2 else order_parameter(history[-1])
+            # Annahme: erstes Element ist sync_time (int/float), zweites R, drittes history
+            sync_time = result[0] if len(result) > 0 else steps * dt
+            R = result[1] if len(result) > 1 else 0.0
+            history = result[2] if len(result) > 2 else None
         else:
-            history = result
-            sync_time = steps * dt
-            R = order_parameter(history[-1])
+            # Wenn kein Tuple: Annahme sync_time direkt
+            sync_time = result if isinstance(result, (int, float)) else steps * dt
+            R = 0.0
+            history = None
         
         score = max(0, (sync_time - base_delay) / base_delay)
         return {
