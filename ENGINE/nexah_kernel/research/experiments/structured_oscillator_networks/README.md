@@ -166,30 +166,6 @@ The experiment generates several types of visual outputs that are essential for 
   ![Winding vs Shell](output/winding_vs_shell.png)  
   Winding-Zahlen vs. Shell-Größe.
 
-- **Braid Crossings**
-  ![Braid Crossings](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/braid-crossings.png)
-  *Visualizes braid crossings, which are indicative of topological defects in the network.*
-
-- **Prime Number Grid with Symmetry**
-  ![Prime Number Grid with Symmetry](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/Prime_Number_Lattice_with_Symmetry.png)
-  *A visual representation of the prime number grid within the oscillator network, highlighting symmetrical structures that contribute to the resonance behavior.*
-
-- **Resonance Lattice 3D**
-  ![Resonance Lattice 3D](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/Resonance_Lattice_3D.png)
-  *A 3D visualization of resonance structures in the oscillator network, providing a deeper understanding of how oscillators lock together in complex patterns.*
-
-- **Chimera State Overlap**
-  ![Chimera State Overlap](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/chimera_state_overlap.png)
-  *This image illustrates the fraction of coherent versus incoherent states in a network over time, revealing the chimera state phenomenon.*
-
-- **Vortex Flow**
-  ![Vortex Flow](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/vortex_field_flow.png)
-  *Visualizes vortex dynamics in a 3D oscillator field.*
-
-- **Phase Shift Projection (4D)**
-  ![Phase Shift Projection](ENGINE/nexah_kernel/research/experiments/structured_oscillator_networks/output/4d_phase_shift_projection.png)
-  *4D phase shift projections showing resonance dynamics.*
-
 ---
 
 **Vollständige Galerie:** Alle Dateien in `output/`, `topology/`, `visualization/` usw. – siehe `ls output/*.png | wc -l` für genaue Anzahl (~100+).
