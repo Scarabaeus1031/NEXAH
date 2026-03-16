@@ -1,0 +1,17 @@
+Phase Gradient Report
+=====================
+
+nodes: 64
+timesteps: 9600
+
+Mean gradient magnitude
+
+inner: 1.0199
+middle: 0.8995
+outer: 0.8974
+
+Max gradient magnitude
+
+inner: 3.1415
+middle: 3.1416
+outer: 3.1416

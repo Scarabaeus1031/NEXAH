@@ -1,0 +1,4 @@
+Number of worldlines: 45
+Mean length: 353.27
+Max length: 1200
+Crossings detected: 2173
