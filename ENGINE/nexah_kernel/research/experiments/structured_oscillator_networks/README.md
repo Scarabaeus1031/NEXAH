@@ -137,8 +137,12 @@ The experiment generates several types of visual outputs that are essential for 
   *Vortex dynamics in a 3D oscillator field.*
 
 - **Vortex Density vs Shell**  
-  ![Vortex Density](output/vortex_density_vs_shell.png)  
+  ![Vortex Density](topology/vortex_density_vs_shell.png)  
   *Vortex density as a function of shell size – zeigt Topologie-Einfluss auf Defekte.*
+
+- **Vortex Density vs Shell (v2)**  
+  ![Vortex Density v2](topology/vortex_density_vs_shell_v2.png)  
+  *Verbesserte Vortex-Dichte vs. Shell-Größe – Vergleich zu v1.*
 
 Weitere Visuals und vollständige Galerie → siehe `Visual-gallery-outputs.md`
 
