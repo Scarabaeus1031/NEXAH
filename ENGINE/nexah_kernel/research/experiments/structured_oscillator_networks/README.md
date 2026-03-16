@@ -100,7 +100,7 @@ In addition to the above experiments, the **Prime Number Grid** experiments inve
 ### Prime Number Grid Visuals
 
 - **Prime Number Lattice with Symmetry**  
-  ![Prime Lattice Symmetry](Prime_Number_Lattice_with_Symmetry.png)  
+  ![Prime Lattice Symmetry](Prime_number_lattice_with_symmetry.png)  
   *3D resonance lattice based on prime number structures – zeigt natürliche Resonanzkanäle durch Irregularität.*
 
 - **Resonance Lattice 3D**  
