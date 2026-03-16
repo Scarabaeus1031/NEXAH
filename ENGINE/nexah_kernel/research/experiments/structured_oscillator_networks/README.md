@@ -123,9 +123,6 @@ The experiment generates several types of visual outputs that are essential for 
 
 ### Example Visuals
 
-- **Resonance Lattice 3D**  
-  ![Resonance Lattice](output/Resonance_Lattice_3D.png)  
-  *Visual representation of resonance structures within the prime number grid.*
 
 - **4D Phase Shift Projection**  
   ![4D Phase Projection](output/4D_phase_shift_projection.png)  
