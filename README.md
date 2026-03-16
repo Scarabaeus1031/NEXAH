@@ -1,10 +1,28 @@
 # NEXAH Framework
 
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+![Status](https://img.shields.io/badge/status-research%20framework-purple)
+
 **Structural navigation for complex dynamical systems.**
 
-NEXAH is a framework for analyzing and navigating **regime landscapes in complex dynamical systems**.
+NEXAH is a research framework that converts **dynamical system simulations into navigable regime landscapes**.
 
-Instead of only simulating system dynamics, NEXAH extracts **state graphs, regimes, and cascade risks**, enabling agents to compute **navigation and stabilization strategies**.
+Instead of only simulating how systems evolve, NEXAH enables agents to:
+
+- detect **regimes and stability basins**
+- estimate **cascade risks**
+- compute **navigation paths toward stable states**
+- simulate **structural interventions**
+
+Typical applications include:
+
+- power grid stability
+- cascading infrastructure failures
+- ecological systems
+- supply chain networks
+- climate regime analysis
 
 ---
 
@@ -92,6 +110,28 @@ The kernel provides the **core navigation logic of the NEXAH framework**.
 
 ---
 
+# NEXAH Engine
+
+The **NEXAH Engine** implements the structural operators and stability analysis systems used by the kernel.
+
+Location:
+
+```
+ENGINE/
+```
+
+The engine includes:
+
+- finite abstract interpretation  
+- fixpoint solvers  
+- spectral graph analysis  
+- stability landscape computation  
+- cascade analysis tools  
+
+It acts as the **computational backbone** of the framework.
+
+---
+
 # Framework Architecture
 
 ![NEXAH System Overview](./NAVIGATOR/visuals/NEXAH_SYSTEM_OVERVIEW.png)
@@ -108,13 +148,13 @@ ENGINE
 APPLICATIONS
     Reference system models
 
-BUILDER LAB
+BUILDER_LAB
     Simulation sandbox
 
-EXPLORATION HUB
+EXPLORATION_HUB
     Open modeling environment
 
-REAL SYSTEMS
+REAL_SYSTEMS
     Infrastructure, ecosystems, planetary systems
 ```
 
@@ -147,28 +187,6 @@ STATE
 ```
 
 This stack separates **meaning, structure, navigation, and control**.
-
----
-
-# NEXAH Engine
-
-The **NEXAH Engine** implements the structural operators and stability analysis systems used by the kernel.
-
-Location:
-
-```
-ENGINE/
-```
-
-The engine includes:
-
-- finite abstract interpretation  
-- fixpoint solvers  
-- spectral graph analysis  
-- stability landscape computation  
-- cascade analysis tools  
-
-It acts as the **computational backbone** of the framework.
 
 ---
 
@@ -227,9 +245,9 @@ EXPLORATION_HUB/README.md
 | ENGINE | Kernel and structural computation |
 | RESEARCH | Formal mathematical foundations |
 | APPLICATIONS | System models and case studies |
-| BUILDER LAB | Simulation sandbox |
+| BUILDER_LAB | Simulation sandbox |
 | NAVIGATOR | Visual documentation |
-| EXPLORATION HUB | Open modeling environment |
+| EXPLORATION_HUB | Open modeling environment |
 
 ---
 
@@ -277,7 +295,7 @@ git clone https://github.com/Scarabaeus1033/NEXAH.git
 cd NEXAH
 ```
 
-Install the framework:
+Install the framework in development mode:
 
 ```
 pip install -e .
@@ -287,6 +305,12 @@ Run the demo simulation:
 
 ```
 python BUILDER_LAB/demos/nexah_demo.py
+```
+
+Run the test suite:
+
+```
+pytest
 ```
 
 ---
