@@ -5,6 +5,17 @@
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 ![Status](https://img.shields.io/badge/status-research%20framework-purple)
 
+---
+## Why NEXAH Exists
+
+Modern complex systems — from power grids to ecosystems — can enter unstable regimes where small disturbances trigger cascading failures.
+
+Most tools help us **simulate system evolution**, but few help us **navigate toward stability**.
+
+NEXAH was created to explore a different question:
+
+**How can agents navigate complex dynamical systems toward stable regimes?**
+___
 ## Research Context
 
 NEXAH is a research framework for studying **navigation in complex dynamical systems**.
