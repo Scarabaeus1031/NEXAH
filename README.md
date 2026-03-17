@@ -26,6 +26,12 @@ Typical applications include:
 
 ---
 
+## Concept in One Sentence
+
+NEXAH converts **dynamical system simulations into navigable regime landscapes**, enabling agents to compute **paths toward stable system states** instead of only observing system evolution.
+
+---
+
 ## Quick Example
 
 The NEXAH framework can be used directly through its high-level engine interface.
@@ -58,6 +64,27 @@ For more complex examples see:
 ```
 BUILDER_LAB/demos/
 ```
+## Core Idea
+
+Traditional simulation frameworks focus on **forward system evolution**.
+
+NEXAH instead extracts a **structural regime landscape** from a system model.
+
+```
+System Simulation
+      ↓
+State Graph
+      ↓
+Regime Landscape
+      ↓
+Navigation Strategy
+      ↓
+Stabilization Action
+```
+
+This enables **navigation and intervention in complex dynamical systems**.
+
+---
 
 # What NEXAH Does
 
