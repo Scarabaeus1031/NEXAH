@@ -21,7 +21,7 @@ NEXAH was created to explore a different question:
 ___
 ## Research Context
 
-## NEXAH is a research framework that converts dynamical system simulations...
+NEXAH studies how dynamical system simulations can be transformed into navigable regime landscapes.
 
 While most simulation frameworks focus on **predicting system evolution**, NEXAH focuses on **structural regime navigation**:
 
@@ -121,18 +121,15 @@ This enables **navigation and intervention in complex dynamical systems**.
 
 ## What NEXAH Does
 
-NEXAH converts dynamical system simulations into navigable regime landscapes.
-
 Traditional simulators answer:
 
-```
 What happens if the system evolves?
-```
 
 NEXAH answers:
 
-```
 How can we navigate the system toward stable regimes?
+
+NEXAH converts dynamical system simulations into navigable regime landscapes.
 ```
 
 NEXAH transforms system models into **navigable regime landscapes**:
@@ -166,10 +163,6 @@ metrics = get_vortex_metrics(phase_ring=phase_ring, history=history)
 print(metrics)  # {'vortex_count_avg': 1000.0, 'vortex_density': 0.02}
 ```
 This is the direct channel from experiments to NEXAH applications.
-
-
-### 2. Ergänzung: „Prototype Catalog“  
-**Platzierung:** Am besten nach „# Typical Application Domains“ oder ganz am Ende vor „# Quick Start“ – als Brücke zu APPLICATIONS.
 
 ```markdown
 ## Prototype Catalog
