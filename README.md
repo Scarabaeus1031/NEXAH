@@ -117,6 +117,45 @@ Stabilization Action
 
 This enables **navigation and intervention in complex dynamical systems**.
 
+## Kernel Bridge – Exporting Metrics
+
+The kernel bridge exports concrete metrics from the experiments (vortex density, chimera status, frustration score) directly into the NEXAH kernel.
+
+Example usage:
+
+```python
+from ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.kernel_bridge import get_vortex_metrics
+
+history = np.load('output/phase_history.npy')
+phase_ring = history[-1]
+metrics = get_vortex_metrics(phase_ring=phase_ring, history=history)
+print(metrics)  # {'vortex_count_avg': 1000.0, 'vortex_density': 0.02}
+```
+This is the direct channel from experiments to NEXAH applications.
+
+
+### 2. Ergänzung: „Prototype Catalog“  
+**Platzierung:** Am besten nach „# Typical Application Domains“ oder ganz am Ende vor „# Quick Start“ – als Brücke zu APPLICATIONS.
+
+```markdown
+## Prototype Catalog
+
+The first concrete applications ("houses") are collected here:  
+[APPLICATIONS/prototypes/README.md](./APPLICATIONS/prototypes/README.md)
+
+Current prototypes:
+- Lorenz Navigation Demo
+- Power-Grid Blackout Risk (in planning)
+- Ecosystem Tipping Point (in planning)
+- Financial Market Crash Indicator (in planning)
+
+More ideas: supply chain cascades, climate tipping points, neural network collapse.
+```
+
+
+
+
+
 ---
 
 # What NEXAH Does
