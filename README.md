@@ -5,6 +5,29 @@
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 ![Status](https://img.shields.io/badge/status-research%20framework-purple)
 
+## Research Context
+
+NEXAH is a research framework for studying **navigation in complex dynamical systems**.
+
+While most simulation frameworks focus on **predicting system evolution**, NEXAH focuses on **structural regime navigation**:
+
+- identifying stability basins
+- detecting regime transitions
+- estimating cascade risks
+- computing paths toward stable configurations
+
+The framework builds on ideas from:
+
+- dynamical systems theory
+- lattice and order structures
+- structural stability analysis
+- regime transition modeling
+- complex systems research
+
+NEXAH is designed as an **experimental research platform** for exploring structural control and navigation in large-scale systems such as infrastructure networks, ecosystems, and planetary-scale systems.
+
+---
+
 **Structural navigation for complex dynamical systems.**
 
 NEXAH is a research framework that converts **dynamical system simulations into navigable regime landscapes**.
