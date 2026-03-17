@@ -27,7 +27,7 @@ from ENGINE.core.regime_operator import RegimeOperator
 from ENGINE.core.fixpoint_lattice import FixpointSolver
 
 
-# Public API export list
+# --- Public API export list ---
 
 __all__ = [
     "Poset",
