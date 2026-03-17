@@ -1,5 +1,5 @@
 # NEXAH Framework
-**Structural navigation for complex dynamical systems.**
+**NEXAH is a research framework for studying **navigation in complex dynamical systems**
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
@@ -18,8 +18,6 @@ NEXAH was created to explore a different question:
 **How can agents navigate complex dynamical systems toward stable regimes?**
 ___
 ## Research Context
-
-NEXAH is a research framework for studying **navigation in complex dynamical systems**.
 
 While most simulation frameworks focus on **predicting system evolution**, NEXAH focuses on **structural regime navigation**:
 
