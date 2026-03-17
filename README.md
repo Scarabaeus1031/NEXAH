@@ -7,6 +7,7 @@
 
 **Structural navigation for complex dynamical systems.**
 
+
 NEXAH is a research framework that converts **dynamical system simulations into navigable regime landscapes**.
 
 Instead of only simulating how systems evolve, NEXAH enables agents to:
