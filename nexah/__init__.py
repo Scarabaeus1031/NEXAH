@@ -22,11 +22,6 @@ from ENGINE.core.monotone_operator import MonotoneOperator
 from ENGINE.core.frame_operator import FrameOperator
 from ENGINE.core.regime_operator import RegimeOperator
 
-# --- Fixpoint systems ---
-
-from ENGINE.core.fixpoint_lattice import FixpointSolver
-
-
 # --- Public API export list ---
 
 __all__ = [
@@ -37,5 +32,4 @@ __all__ = [
     "MonotoneOperator",
     "FrameOperator",
     "RegimeOperator",
-    "FixpointSolver",
 ]
