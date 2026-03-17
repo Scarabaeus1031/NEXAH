@@ -26,6 +26,39 @@ Typical applications include:
 
 ---
 
+## Quick Example
+
+The NEXAH framework can be used directly through its high-level engine interface.
+
+```python
+import nexah
+
+# create framework interface
+engine = nexah.Engine()
+
+# simple example system
+elements = {"a", "b", "c"}
+order = {("a","b"), ("b","c")}
+
+# create a structural model
+poset = engine.create_poset(elements, order)
+
+print(poset)
+```
+
+This interface exposes the core algebraic structures used by the NEXAH engine:
+
+- Posets
+- Lattices
+- Structural operators
+- Regime navigation primitives
+
+For more complex examples see:
+
+```
+BUILDER_LAB/demos/
+```
+
 # What NEXAH Does
 
 Traditional simulators answer:
