@@ -409,7 +409,16 @@ Current release: **v1.0**
 - modular architecture established  
 
 ---
+## Citation
 
+If you use NEXAH in research or academic work, please cite the project:
+
+```
+Hofmann, T. (2026).
+NEXAH: Structural Navigation in Complex Dynamical Systems.
+GitHub: https://github.com/Scarabaeus1033/NEXAH
+```
+---
 # License
 
 Code: **Apache License 2.0**  
