@@ -14,6 +14,7 @@ Example:
 from ENGINE.core.poset import FinitePoset as Poset
 from ENGINE.core.lattice import LatticeOps as Lattice
 
+
 # --- Operators ---
 
 from ENGINE.core.closure_operator import ClosureOperator
