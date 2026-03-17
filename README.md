@@ -1,5 +1,5 @@
 # NEXAH Framework
-**NEXAH is a research framework for studying **navigation in complex dynamical systems**
+Structural navigation for complex dynamical systems.
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
@@ -18,6 +18,8 @@ NEXAH was created to explore a different question:
 **How can agents navigate complex dynamical systems toward stable regimes?**
 ___
 ## Research Context
+
+## NEXAH is a research framework that converts dynamical system simulations...
 
 While most simulation frameworks focus on **predicting system evolution**, NEXAH focuses on **structural regime navigation**:
 
@@ -115,7 +117,39 @@ Stabilization Action
 
 This enables **navigation and intervention in complex dynamical systems**.
 
-## Kernel Bridge – Exporting Metrics
+## What NEXAH Does
+
+NEXAH converts dynamical system simulations into navigable regime landscapes.
+
+Traditional simulators answer:
+
+```
+What happens if the system evolves?
+```
+
+NEXAH answers:
+
+```
+How can we navigate the system toward stable regimes?
+```
+
+NEXAH transforms system models into **navigable regime landscapes**:
+
+```
+Simulators
+    ↓
+State Graph
+    ↓
+Regime Landscape
+    ↓
+Navigation
+    ↓
+Policy
+    ↓
+Action
+```
+---
+## Kernel Bridge: Exporting Experimental Metrics
 
 The kernel bridge exports concrete metrics from the experiments (vortex density, chimera status, frustration score) directly into the NEXAH kernel.
 
@@ -149,45 +183,7 @@ Current prototypes:
 
 More ideas: supply chain cascades, climate tipping points, neural network collapse.
 ```
-
-
-
-
-
 ---
-
-# What NEXAH Does
-
-Traditional simulators answer:
-
-```
-What happens if the system evolves?
-```
-
-NEXAH answers:
-
-```
-How can we navigate the system toward stable regimes?
-```
-
-NEXAH transforms system models into **navigable regime landscapes**:
-
-```
-Simulators
-    ↓
-State Graph
-    ↓
-Regime Landscape
-    ↓
-Navigation
-    ↓
-Policy
-    ↓
-Action
-```
-
----
-
 # NEXAH Navigation Layer
 
 ![NEXAH Navigator Architecture](./NAVIGATOR/visuals/nexah_plate_09_nexah_navigator_architecture.png)
