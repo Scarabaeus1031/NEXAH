@@ -15,6 +15,7 @@ Key Features:
 - Gradient-based navigation (local)
 - Escape from local minima via randomness
 - Visualization of agent trajectories
+- Cluster detection of attractors
 
 Interpretation:
 ---------------
@@ -105,15 +106,48 @@ def run_agent(landscape, steps=30, exploration_rate=0.2):
 
 
 # --------------------------------------------------
+# Clustering (attractor detection)
+# --------------------------------------------------
+
+def cluster_endpoints(points, threshold=3):
+    clusters = []
+
+    for p in points:
+        added = False
+
+        for cluster in clusters:
+            cx, cy = cluster["center"]
+
+            if np.linalg.norm(np.array(p) - np.array((cx, cy))) < threshold:
+                cluster["points"].append(p)
+
+                xs = [pt[0] for pt in cluster["points"]]
+                ys = [pt[1] for pt in cluster["points"]]
+                cluster["center"] = (int(np.mean(xs)), int(np.mean(ys)))
+
+                added = True
+                break
+
+        if not added:
+            clusters.append({
+                "center": p,
+                "points": [p]
+            })
+
+    return clusters
+
+
+# --------------------------------------------------
 # Visualization
 # --------------------------------------------------
 
-def visualize_agents(landscape, paths):
+def visualize_agents(landscape, paths, clusters=None):
     plt.figure(figsize=(8, 6))
 
     plt.imshow(landscape, cmap="viridis", origin="lower")
     plt.colorbar(label="Stability")
 
+    # paths
     for path in paths:
         xs = [p[0] for p in path]
         ys = [p[1] for p in path]
@@ -121,7 +155,13 @@ def visualize_agents(landscape, paths):
         plt.plot(xs, ys, linewidth=1)
         plt.scatter(xs[-1], ys[-1], s=40)
 
-    plt.title("NEXAH Multi-Agent Navigation")
+    # cluster centers
+    if clusters:
+        for c in clusters:
+            cx, cy = c["center"]
+            plt.scatter(cx, cy, s=120, marker="X")
+
+    plt.title("NEXAH Multi-Agent Navigation + Clusters")
     plt.xlabel("X")
     plt.ylabel("Y")
 
@@ -161,10 +201,22 @@ def main():
     print(f"Mean stability: {np.mean(values):.3f}")
     print(f"Unique end points: {len(set([p for p,_ in final_positions]))}")
 
+    # --------------------------------------------
+    # CLUSTER ANALYSIS
+    # --------------------------------------------
+
+    endpoints = [p for p, _ in final_positions]
+    clusters = cluster_endpoints(endpoints)
+
+    print("\n--- Cluster Analysis ---")
+
+    for i, c in enumerate(clusters):
+        print(f"Cluster {i}: center={c['center']} | size={len(c['points'])}")
+
     print("\nAgent finished.")
 
     # Visualization
-    visualize_agents(landscape, paths)
+    visualize_agents(landscape, paths, clusters)
 
 
 # --------------------------------------------------
