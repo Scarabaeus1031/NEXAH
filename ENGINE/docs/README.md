@@ -38,10 +38,6 @@ Visual Documentation:
 - VISUALS_INDEX.md → overview of generated visuals
 - VISUAL_GALLERY.md → curated visual outputs
 
-Context:
-
-- RESEARCH_CONTEXT.md → theoretical background and research direction
-
 ---
 
 ## Conceptual Role
@@ -68,6 +64,12 @@ If you are new:
 4. Then investigate:
    - NONLINEAR_NAVIGATION
    - MULTI-AGENT SYSTEMS
+
+---
+
+## Research Context
+
+The **Research Context** section offers the theoretical background and direction behind the NEXAH framework. It includes insights into the stability systems and how they drive autonomous exploration and decision-making. For a more detailed background, refer to the **RESEARCH_CONTEXT.md** document.
 
 ---
 
