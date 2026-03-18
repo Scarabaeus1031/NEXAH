@@ -37,21 +37,17 @@ Part of:
 NEXAH — Structural Navigation Framework
 """
 
-"""
-NEXAH Multi-Agent System — Advanced Version
-
-Includes:
-- Role-based agents (Explorer / Climber)
-- Reinforcement Learning agent (Q-learning)
-- Cluster detection
-- Metrics for system evaluation
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 
 from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
 
+# Bridge importieren – Metriken holen
+try:
+    from .kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
+except ImportError as e:
+    print("Warnung: kernel_bridge nicht gefunden – Metriken werden übersprungen:", e)
+    get_vortex_metrics = get_chimera_status = get_frustration_score = lambda *args, **kwargs: {"error": "Bridge nicht verfügbar"}
 
 # --------------------------------------------------
 # NEIGHBORS
@@ -69,7 +65,6 @@ def get_neighbors(pos, size):
 
     return neighbors
 
-
 # --------------------------------------------------
 # ROLE-BASED AGENTS
 # --------------------------------------------------
@@ -81,16 +76,13 @@ def run_agent(landscape, role="climber", steps=30):
     path = [pos]
 
     for _ in range(steps):
-
         neighbors = get_neighbors(pos, size)
 
-        # EXPLORER → random biased
         if role == "explorer":
             pos = neighbors[np.random.randint(len(neighbors))]
             path.append(pos)
             continue
 
-        # CLIMBER → greedy + escape
         x, y = pos
         current = landscape[x, y]
 
@@ -112,7 +104,6 @@ def run_agent(landscape, role="climber", steps=30):
 
     return path
 
-
 # --------------------------------------------------
 # RL AGENT (Q-LEARNING LIGHT)
 # --------------------------------------------------
@@ -125,14 +116,11 @@ def run_rl_agent(landscape, episodes=50, alpha=0.1, gamma=0.9):
     actions = [(-1,0),(1,0),(0,-1),(0,1)]
 
     for _ in range(episodes):
-
         pos = (np.random.randint(0, size), np.random.randint(0, size))
 
         for _ in range(30):
-
             x, y = pos
 
-            # choose best action
             a = np.argmax(Q[x, y])
 
             dx, dy = actions[a]
@@ -168,7 +156,6 @@ def run_rl_agent(landscape, episodes=50, alpha=0.1, gamma=0.9):
 
     return path
 
-
 # --------------------------------------------------
 # CLUSTERING (ATTRACTOR DETECTION)
 # --------------------------------------------------
@@ -200,9 +187,8 @@ def cluster_endpoints(points, threshold=3):
 
     return clusters
 
-
 # --------------------------------------------------
-# VISUALIZATION (Updated for correct handling)
+# VISUALIZATION
 # --------------------------------------------------
 
 def visualize_agents(landscape, paths, clusters=None):
@@ -213,10 +199,10 @@ def visualize_agents(landscape, paths, clusters=None):
 
     # paths
     for path in paths:
-        xs = [p[0] for p in path]  # x values from each point in path
-        ys = [p[1] for p in path]  # y values from each point in path
+        xs = [p[0] for p in path]
+        ys = [p[1] for p in path]
         plt.plot(xs, ys, linewidth=1)
-        plt.scatter(xs[-1], ys[-1], s=40)  # mark the endpoint
+        plt.scatter(xs[-1], ys[-1], s=40)  # mark endpoint
 
     # cluster centers
     if clusters:
@@ -230,13 +216,12 @@ def visualize_agents(landscape, paths, clusters=None):
 
     plt.show()
 
-
 # --------------------------------------------------
-# MAIN
+# MAIN – mit Bridge-Integration
 # --------------------------------------------------
 
 def main():
-    print("NEXAH Multi-Agent System (Exploration Mode)")
+    print("NEXAH Multi-Agent Demo mit Bridge-Integration")
     print("Initializing landscape...\n")
 
     landscape = generate_stability_landscape()
@@ -249,7 +234,7 @@ def main():
 
     for i in range(8):
         role = roles[i % 2]
-        path = run_agent(landscape, role=role)
+        path = run_agent(landscape, role=role, steps=50)
         paths.append(path)
 
         pos = path[-1]
@@ -258,21 +243,29 @@ def main():
         print(f"{role} agent → {pos} | {landscape[pos]:.3f}")
 
     # RL AGENT
-    rl_path = run_rl_agent(landscape)
+    rl_path = run_rl_agent(landscape, episodes=30)
     paths.append(rl_path)
     pos = rl_path[-1]
     final_positions.append((pos, landscape[pos]))
 
     print(f"RL agent → {pos} | {landscape[pos]:.3f}")
 
-    # CLUSTER
+    # Cluster
     endpoints = [p for p,_ in final_positions]
     clusters = cluster_endpoints(endpoints)
 
     print("\n--- Cluster Analysis ---")
-
     for i, c in enumerate(clusters):
         print(f"Cluster {i}: center={c['center']} | size={len(c['points'])}")
+
+    # Bridge-Metriken auf letztem Agent-Zustand
+    print("\n--- Bridge-Metriken (letzter Zustand) ---")
+    # Dummy phase_ring – später echter Phase-Ring aus Agent
+    phase_ring = np.random.rand(100) * 2 * np.pi
+    history = np.random.rand(1000, 100)  # Dummy-History – später echte
+    print("Vortex Metrics:", get_vortex_metrics(phase_ring=phase_ring, history=history))
+    print("Chimera Status:", get_chimera_status(phase_ring=phase_ring))
+    print("Frustration Score:", get_frustration_score(N=50))
 
     print("\nAgent finished.")
 
