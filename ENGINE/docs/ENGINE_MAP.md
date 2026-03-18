@@ -1,357 +1,278 @@
 # NEXAH Engine Architecture Map
 
-This document describes the structural architecture of the **NEXAH Stability & Resilience Engine**.
+This document describes the structural architecture of the **NEXAH Engine**.
 
-The system currently contains:
-
-26 directories  
-347 files  
-
-The engine is organized into several functional layers.
+The system is organized as a **modular computational framework** for analyzing stability, structure, and dynamics in complex systems.
 
 ---
 
-# 1. CORE MATHEMATICAL LAYER
+# Core Principle
 
-Location
+The engine is not file-driven, but **layer-driven**.
+
+It transforms structural models into computational outputs through a pipeline of interacting subsystems.
+
+---
+
+# Architecture Overview
+
+The NEXAH Engine is structured into the following layers:
+
+Mathematical Core  
+↓  
+Simulation & Dynamics  
+↓  
+Analysis & Geometry  
+↓  
+Navigation & Control  
+↓  
+Applications  
+↓  
+Output & Visualization  
+
+---
+
+# 1. Algebraic Core
+
+Location:
 
 ENGINE/core/
 
-This layer implements the **mathematical foundation of the engine**.
+This layer provides the **mathematical foundation** of the engine.
 
-It defines the algebraic and order-theoretic structures used across the system.
+It defines:
 
-Key concepts
+- finite partially ordered sets  
+- lattice structures  
+- closure and interior operators  
+- monotone operators  
+- fixpoint computation  
 
-- lattices
-- posets
-- monotone operators
-- closure operators
-- fixpoint computation
-
-Main modules
-
-closure_operator.py  
-interior_operator.py  
-fixpoint_lattice.py  
-monotone_operator.py  
-poset.py  
-lattice.py  
-frame_operator.py  
-rank.py  
-regime_operator.py  
-state_graph.py  
-worklist_fixpoint.py  
-
-This layer provides the **formal stability computation backbone**.
+This is the **formal stability backbone** of the system.
 
 ---
 
-# 2. SIMULATION LAYER
+# 2. Kernel Layer
 
-Location
+Location:
+
+ENGINE/kernel/
+
+The kernel implements the **minimal structural navigation logic**.
+
+Responsibilities:
+
+- regime landscape construction  
+- structural transitions  
+- navigation dynamics  
+
+The kernel is intentionally compact and acts as the **core execution primitive**.
+
+---
+
+# 3. Simulation Layer
+
+Location:
 
 ENGINE/simulation/
 
-This layer simulates **dynamical stability systems**.
+Simulates dynamical systems and structural evolution.
 
-Key modules
+Capabilities:
 
-stability_flow_dynamics.py  
-stability_landscape_dynamics.py  
-stability_attractor_network.py  
-
-Purpose
-
-- simulate system flows
-- detect attractors
-- generate stability landscapes
+- system flow simulation  
+- attractor detection  
+- trajectory evolution  
+- landscape dynamics  
 
 ---
 
-# 3. RESILIENCE DISCOVERY ENGINE
+# 4. Analysis Layer
 
-Location
-
-ENGINE/
-
-This is the **main discovery layer** where most resilience modules live.
-
-Core functions
-
-- architecture discovery
-- topology analysis
-- spectral analysis
-- phase detection
-- universal law discovery
-
-Key modules
-
-Architecture exploration
-
-resilience_architecture_generator_ai.py  
-resilience_graph_evolution_engine.py  
-resilience_architecture_dna_extractor.py  
-
-Topology analysis
-
-resilience_graph_topology_analyzer.py  
-resilience_graph_motif_detector.py  
-resilience_topology_detector.py  
-resilience_topology_miner.py  
-
-Spectral analysis
-
-resilience_spectral_analyzer.py  
-resilience_spectral_law_detector.py  
-resilience_spectral_phase_map.py  
-resilience_spectral_landscape.py  
-
-Stability landscape
-
-resilience_gradient_field.py  
-resilience_architecture_basin_detector.py  
-resilience_phase_transition_detector.py  
-resilience_phase_boundary_detector.py  
-
-Universal laws
-
-resilience_universal_scaling_law.py  
-resilience_universal_equation_solver.py  
-resilience_universal_architecture_generator.py  
-resilience_universal_field_equation_solver.py  
-
-Discovery automation
-
-resilience_meta_law_discovery.py  
-resilience_self_improving_discovery_loop.py  
-resilience_hypothesis_generator.py  
-
----
-
-# 4. ANALYSIS LAYER
-
-Location
+Location:
 
 ENGINE/analysis/
 
-This layer performs **deep mathematical analysis of stability landscapes**.
+Extracts deep structure from system dynamics.
 
-Capabilities include
+Includes:
 
-- Morse theory
-- persistence homology
-- Lyapunov spectra
-- diffusion geometry
-- Wasserstein geometry
-- Koopman operators
+- stability landscape reconstruction  
+- basin detection  
+- Lyapunov spectrum  
+- diffusion maps  
+- Morse complexes  
+- persistent homology  
 
-Key modules
-
-stability_landscape_generator.py  
-stability_gradient_field.py  
-stability_hessian_field.py  
-stability_morse_complex.py  
-stability_persistence_homology.py  
-stability_lyapunov_spectrum.py  
-stability_diffusion_map.py  
-stability_wasserstein_geometry.py  
-stability_topological_skeleton.py  
-
-This layer extracts **deep geometric structure of stability landscapes**.
+This layer reveals the **geometry of stability**.
 
 ---
 
-# 5. REINFORCEMENT LEARNING LAYER
+# 5. Agent & Control Layer
 
-Location
+Location:
 
-ENGINE/rl/
+ENGINE/agent/
 
-Implements **learning agents interacting with stability landscapes**.
+Implements decision-making and orchestration.
 
-Modules
+Responsibilities:
 
-landscape_rl_env.py  
-q_learning_agent.py  
-landscape_q_agent.py  
-multi_agent_stability.py  
-policy_surface_learning.py  
+- workflow execution  
+- system navigation  
+- integration of kernel, simulation, and analysis  
+- policy and strategy control  
 
-Purpose
-
-- learn stability maximizing policies
-- navigate landscapes
-- train agents to reach attractors
+This replaces the earlier "RL layer" concept with a broader **agent-based architecture**.
 
 ---
 
-# 6. APPLICATION LAYER
+# 6. Research Layer
 
-Location
+Location:
+
+ENGINE/research/
+
+Contains:
+
+- formal theoretical models  
+- experimental systems  
+- oscillator networks  
+- symmetry graph experiments  
+
+This layer is the **source of new structural insights**.
+
+---
+
+# 7. Services Layer
+
+Location:
+
+ENGINE/services/
+
+Provides internal system logic:
+
+- discovery engines  
+- law detection modules  
+- result storage  
+- meta-analysis  
+
+This layer implements **higher-level system intelligence**.
+
+---
+
+# 8. Applications Layer
+
+Location:
 
 ENGINE/applications/
 
-This layer demonstrates **real system applications**.
+Contains applied system models and use cases.
 
-Examples
+Examples:
 
-navigation_engine.py  
-policy_engine.py  
-risk_geometry.py  
-risk_aware_navigation.py  
-stability_basin.py  
-
-Also includes example datasets such as
-
-examples/energy_grid.json
+- navigation systems  
+- risk models  
+- stability applications  
 
 ---
 
-# 7. VISUALIZATION LAYER
+# 9. Visualization Layer
 
-Location
+Location:
 
 ENGINE/visualization/
 
-This layer produces visual outputs of the stability system.
+Generates visual representations of system structure.
 
-Capabilities
+Includes:
 
-- 3D stability landscapes
-- animated system trajectories
-- risk landscapes
-- graph visualizations
-
-Key modules
-
-stability_surface_3d.py  
-stability_landscape_3d.py  
-stability_phase_diagram.py  
-trajectory_on_surface.py  
-animated_trajectory_surface.py  
+- stability landscapes  
+- trajectory plots  
+- phase diagrams  
+- graph visualizations  
 
 ---
 
-# 8. NAVIGATION SYSTEM
+# 10. Runtime & Execution
 
-Location
+Location:
 
-ENGINE/navigation/
+ENGINE/runtime/  
+ENGINE/scripts/
 
-Implements decision agents navigating stability landscapes.
+Handles execution of large-scale computations.
 
-Modules
+Includes:
 
-navigation_agent.py  
-strategic_navigation.py  
-
----
-
-# 9. RUNTIME SYSTEM
-
-Location
-
-ENGINE/runtime/
-
-Responsible for **running large simulations**.
-
-Modules
-
-simulation_engine.py  
-system_runner.py  
+- simulation runners  
+- experiment pipelines  
+- batch processing  
 
 ---
 
-# 10. META ENGINE
+# 11. Output Layer
 
-High-level orchestration of the full discovery system.
-
-Main files
-
-nexah_engine.py  
-nexah_autonomous_science_loop.py  
-nexah_meta_discovery_engine.py  
-nexah_architecture_evolution_engine.py  
-
-These coordinate
-
-- discovery
-- simulation
-- law extraction
-- architecture evolution
-
----
-
-# 11. VISUAL DATA
-
-Location
+Location:
 
 ENGINE/visuals/
 
-Contains generated stability visualizations such as
+Stores generated outputs such as:
 
-landscape.png  
-gradient_field.png  
-critical_points.png  
-persistence_diagram.png  
-koopman_spectrum.png  
-lyapunov_spectrum.png  
-
-These visualize the **geometry of stability landscapes**.
+- stability landscapes  
+- persistence diagrams  
+- spectral plots  
+- attractor visualizations  
 
 ---
 
-# Global Engine Structure
+# Global Flow
 
-The NEXAH Engine can be summarized as:
+The engine operates as a structured pipeline:
 
-Mathematics Layer
-↓
-Simulation Layer
-↓
-Architecture Discovery
-↓
-Topology & Spectral Analysis
-↓
-Stability Landscape Geometry
-↓
-Universal Law Discovery
-↓
-Reinforcement Learning Navigation
-↓
-Applications
-
+Research  
+↓  
+Algebraic Core  
+↓  
+Kernel  
+↓  
+Simulation  
+↓  
+Analysis  
+↓  
+Agent Control  
+↓  
+Applications  
+↓  
+Visualization & Output  
 
 ---
 
 # Interpretation
 
-The engine implements a **computational discovery framework for stability in complex systems**.
+The NEXAH Engine is a **computational system for structural discovery**.
 
-It combines
+It combines:
 
-- spectral graph theory
-- topology
-- dynamical systems
-- machine learning
-- reinforcement learning
+- algebraic structure  
+- dynamical systems  
+- topology  
+- spectral analysis  
+- agent-based navigation  
 
-to discover **stable architectures and universal resilience laws**.
+to explore **stability, resilience, and structure in complex systems**.
 
 ---
 
 # Status
 
-Current size
+The system is under active development and continuously evolving.
 
-26 directories  
-347 files  
-
-The system represents a **large-scale autonomous scientific discovery engine**.
+The architecture is designed to remain stable even as modules expand.
 
 ---
 
 # NEXAH
 
-The engine forms the computational discovery layer of the **NEXAH Codex architecture system**.
+The engine forms the **computational core of the NEXAH framework**,  
+bridging formal theory and executable system analysis.
