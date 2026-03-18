@@ -260,12 +260,14 @@ def main():
 
     # Bridge-Metriken auf letztem Agent-Zustand
     print("\n--- Bridge-Metriken (letzter Zustand) ---")
-    # Dummy phase_ring – später echter Phase-Ring aus Agent
-    phase_ring = np.random.rand(100) * 2 * np.pi
-    history = np.random.rand(1000, 100)  # Dummy-History – später echte
-    print("Vortex Metrics:", get_vortex_metrics(phase_ring=phase_ring, history=history))
-    print("Chimera Status:", get_chimera_status(phase_ring=phase_ring))
-    print("Frustration Score:", get_frustration_score(N=50))
+    try:
+        history = np.load('output/phase_history.npy')
+        phase_ring = history[-1] if history.ndim == 2 else history
+        print("Vortex Metrics:", get_vortex_metrics(phase_ring=phase_ring, history=history))
+        print("Chimera Status:", get_chimera_status(phase_ring=phase_ring))
+        print("Frustration Score:", get_frustration_score(N=50))
+    except Exception as e:
+        print("Bridge-Metriken fehlgeschlagen:", e)
 
     print("\nAgent finished.")
 
