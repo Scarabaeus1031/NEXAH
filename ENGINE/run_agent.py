@@ -36,7 +36,253 @@ Part of:
 --------
 NEXAH — Structural Navigation Framework
 """
+"""
+NEXAH Multi-Agent System — Advanced Version
 
+Includes:
+- Role-based agents (Explorer / Climber)
+- Reinforcement Learning agent (Q-learning)
+- Cluster detection
+- Metrics for system evaluation
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
+
+
+# --------------------------------------------------
+# NEIGHBORS
+# --------------------------------------------------
+
+def get_neighbors(pos, size):
+    x, y = pos
+    moves = [(-1,0),(1,0),(0,-1),(0,1)]
+    neighbors = []
+
+    for dx, dy in moves:
+        nx, ny = x + dx, y + dy
+        if 0 <= nx < size and 0 <= ny < size:
+            neighbors.append((nx, ny))
+
+    return neighbors
+
+
+# --------------------------------------------------
+# ROLE-BASED AGENTS
+# --------------------------------------------------
+
+def run_agent(landscape, role="climber", steps=30):
+    size = landscape.shape[0]
+
+    pos = (np.random.randint(0, size), np.random.randint(0, size))
+    path = [pos]
+
+    for _ in range(steps):
+
+        neighbors = get_neighbors(pos, size)
+
+        # EXPLORER → random biased
+        if role == "explorer":
+            pos = neighbors[np.random.randint(len(neighbors))]
+            path.append(pos)
+            continue
+
+        # CLIMBER → greedy + escape
+        x, y = pos
+        current = landscape[x, y]
+
+        best_pos = pos
+        best_val = current
+
+        for nx, ny in neighbors:
+            val = landscape[nx, ny]
+            if val > best_val:
+                best_val = val
+                best_pos = (nx, ny)
+
+        if best_pos == pos:
+            pos = neighbors[np.random.randint(len(neighbors))]
+        else:
+            pos = best_pos
+
+        path.append(pos)
+
+    return path
+
+
+# --------------------------------------------------
+# RL AGENT (Q-LEARNING LIGHT)
+# --------------------------------------------------
+
+def run_rl_agent(landscape, episodes=50, alpha=0.1, gamma=0.9):
+    size = landscape.shape[0]
+
+    Q = np.zeros((size, size, 4))  # 4 directions
+
+    actions = [(-1,0),(1,0),(0,-1),(0,1)]
+
+    for _ in range(episodes):
+
+        pos = (np.random.randint(0, size), np.random.randint(0, size))
+
+        for _ in range(30):
+
+            x, y = pos
+
+            # choose best action
+            a = np.argmax(Q[x, y])
+
+            dx, dy = actions[a]
+            nx, ny = x + dx, y + dy
+
+            if not (0 <= nx < size and 0 <= ny < size):
+                continue
+
+            reward = landscape[nx, ny]
+
+            Q[x, y, a] += alpha * (
+                reward + gamma * np.max(Q[nx, ny]) - Q[x, y, a]
+            )
+
+            pos = (nx, ny)
+
+    # run learned policy
+    pos = (np.random.randint(0, size), np.random.randint(0, size))
+    path = [pos]
+
+    for _ in range(30):
+        x, y = pos
+        a = np.argmax(Q[x, y])
+        dx, dy = actions[a]
+
+        nx, ny = x + dx, y + dy
+
+        if not (0 <= nx < size and 0 <= ny < size):
+            break
+
+        pos = (nx, ny)
+        path.append(pos)
+
+    return path
+
+
+# --------------------------------------------------
+# CLUSTERING
+# --------------------------------------------------
+
+def cluster_endpoints(points, threshold=3):
+    clusters = []
+
+    for p in points:
+        added = False
+
+        for c in clusters:
+            if np.linalg.norm(np.array(p) - np.array(c["center"])) < threshold:
+                c["points"].append(p)
+                xs = [pt[0] for pt in c["points"]]
+                ys = [pt[1] for pt in c["points"]]
+                c["center"] = (int(np.mean(xs)), int(np.mean(ys)))
+                added = True
+                break
+
+        if not added:
+            clusters.append({"center": p, "points": [p]})
+
+    return clusters
+
+
+# --------------------------------------------------
+# METRICS
+# --------------------------------------------------
+
+def compute_metrics(final_positions, clusters):
+    values = [v for _, v in final_positions]
+
+    dominant_cluster = max(clusters, key=lambda c: len(c["points"]))
+
+    return {
+        "max": max(values),
+        "mean": np.mean(values),
+        "num_clusters": len(clusters),
+        "dominant_size": len(dominant_cluster["points"])
+    }
+
+
+# --------------------------------------------------
+# VISUALIZATION
+# --------------------------------------------------
+
+def visualize(landscape, paths, clusters):
+    plt.figure(figsize=(8,6))
+    plt.imshow(landscape, cmap="viridis", origin="lower")
+    plt.colorbar()
+
+    for p in paths:
+        xs = [x for x,_ in p]
+        ys = [y for _,y in p]
+        plt.plot(xs, ys)
+
+    for c in clusters:
+        cx, cy = c["center"]
+        plt.scatter(cx, cy, s=150, marker="X")
+
+    plt.title("NEXAH Advanced Multi-Agent System")
+    plt.show()
+
+
+# --------------------------------------------------
+# MAIN
+# --------------------------------------------------
+
+def main():
+    landscape = generate_stability_landscape()
+
+    paths = []
+    final_positions = []
+
+    # ROLE AGENTS
+    roles = ["explorer", "climber"]
+
+    for i in range(8):
+        role = roles[i % 2]
+        path = run_agent(landscape, role=role)
+        paths.append(path)
+
+        pos = path[-1]
+        final_positions.append((pos, landscape[pos]))
+
+        print(f"{role} agent → {pos} | {landscape[pos]:.3f}")
+
+    # RL AGENT
+    rl_path = run_rl_agent(landscape)
+    paths.append(rl_path)
+    pos = rl_path[-1]
+    final_positions.append((pos, landscape[pos]))
+
+    print(f"RL agent → {pos} | {landscape[pos]:.3f}")
+
+    # CLUSTER
+    endpoints = [p for p,_ in final_positions]
+    clusters = cluster_endpoints(endpoints)
+
+    print("\nClusters:")
+    for c in clusters:
+        print(c)
+
+    # METRICS
+    metrics = compute_metrics(final_positions, clusters)
+
+    print("\nMetrics:")
+    print(metrics)
+
+    # VISUALIZE
+    visualize(landscape, paths, clusters)
+
+
+if __name__ == "__main__":
+    main()
 import numpy as np
 import matplotlib.pyplot as plt
 
