@@ -13,7 +13,7 @@ We began with trajectory data and clustering.
 
 ## DBSCAN Clustering
 
-![DBSCAN](../visuals/DB_SCAN_Cluster.png)
+![DBSCAN](./visuals/DB_SCAN_Cluster.png)
 
 Observation:
 
@@ -26,7 +26,7 @@ Observation:
 
 # 2. Trajectory Behavior
 
-![Trajectory](../visuals/Trajectory_passing_clusters.png)
+![Trajectory](./visuals/Trajectory_passing_clusters.png)
 
 Observation:
 
@@ -39,7 +39,7 @@ Observation:
 
 # 3. Regime Boundary (Separatrix)
 
-![Separatrix](../visuals/Separatrix_Regime_Boundary.png)
+![Separatrix](./visuals/Separatrix_Regime_Boundary.png)
 
 Observation:
 
@@ -52,7 +52,7 @@ Observation:
 
 # 4. Membrane Interpretation
 
-![Membrane](../visuals/navigation_on_membrane.png)
+![Membrane](./visuals/navigation_on_membrane.png)
 
 Observation:
 
@@ -65,7 +65,7 @@ Observation:
 
 # 5. Distance-Based Structure
 
-![Distance](../visuals/distance_comparisons.png)
+![Distance](./visuals/distance_comparisons.png)
 
 Observation:
 
@@ -78,7 +78,7 @@ Observation:
 
 # 6. Regime Coloring
 
-![Regimes](../visuals/Regime_Coloring_Distance-Based.png)
+![Regimes](./visuals/Regime_Coloring_Distance-Based.png)
 
 Observation:
 
