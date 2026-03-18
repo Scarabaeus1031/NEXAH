@@ -95,6 +95,41 @@ python ENGINE/run_agent.py
 ```
 
 ---
+## NEXAH Multi-Agent Exploration System
+
+The **Multi-Agent Exploration System** demonstrates the ability to navigate and explore **stability landscapes**. Agents attempt to move toward higher stability regions while exploring different regions of the landscape.
+
+Key Features:
+-------------
+- Multi-agent simulation with **exploration** vs **exploitation**
+- Gradient-based navigation with local decision making
+- Escape from local minima using randomness
+- Cluster detection for attractor regions
+- Visualizations of agent trajectories and clusters
+
+The agents explore, discover stable regimes, and identify key attractor regions within the landscape.
+
+Example visualization:
+![Multi-Agent Navigation with Clusters](./visuals/nexah_multi-agent_navigation+Clusters.png)
+
+---
+
+### Concept
+
+This is not just optimization.
+
+This is:
+→ **Navigation in a dynamical stability field**
+
+Agents do not "solve a task".  
+They **explore and discover stable regimes**.
+
+This forms the basis for:
+- Reinforcement learning on landscapes
+- Stability-driven decision systems
+- Autonomous scientific exploration
+
+---
 
 ### NEXAH Kernel
 
