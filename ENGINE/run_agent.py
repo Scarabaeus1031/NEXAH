@@ -202,7 +202,7 @@ def cluster_endpoints(points, threshold=3):
 
 
 # --------------------------------------------------
-# VISUALIZATION
+# VISUALIZATION (Updated for correct handling)
 # --------------------------------------------------
 
 def visualize_agents(landscape, paths, clusters=None):
@@ -213,10 +213,10 @@ def visualize_agents(landscape, paths, clusters=None):
 
     # paths
     for path in paths:
-        xs = [p[0] for p in path]
-        ys = [p[1] for _,p in path]
+        xs = [p[0] for p in path]  # x values from each point in path
+        ys = [p[1] for p in path]  # y values from each point in path
         plt.plot(xs, ys, linewidth=1)
-        plt.scatter(xs[-1], ys[-1], s=40)
+        plt.scatter(xs[-1], ys[-1], s=40)  # mark the endpoint
 
     # cluster centers
     if clusters:
