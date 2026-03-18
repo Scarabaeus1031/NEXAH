@@ -81,3 +81,19 @@ class StabilityLandscapeGenerator:
         plt.ylabel("Axis Y")
 
         plt.show()
+
+        # --- NEXAH Agent Entry Point ---
+
+def generate_stability_landscape(size: int = 50):
+    """
+    Standard entry point for the NEXAH Agent.
+
+    Uses the StabilityLandscapeGenerator internally
+    and returns only the Z landscape for downstream processing.
+    """
+
+    generator = StabilityLandscapeGenerator(size=size)
+
+    X, Y, Z = generator.generate(peaks=3, noise=0.15)
+
+    return Z
