@@ -225,7 +225,7 @@ def visualize_agents(landscape, paths, clusters=None):
 
     plt.show()
 
-![Multi-Agent Navigation with Clusters](./visuals/nexah_multi-agent_navigation+Clusters.png)
+![Multi-Agent Navigation with Clusters](../visuals/nexah_multi-agent_navigation+Clusters.png)
 
 # --------------------------------------------------
 # MAIN
