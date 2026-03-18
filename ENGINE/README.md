@@ -2,234 +2,241 @@
 
 **Computational framework for stability landscapes, regime analysis, and resilient architectures.**
 
-The **NEXAH Engine** is the executable computational layer of the NEXAH framework.
+---
 
-It provides algorithms for exploring **stability landscapes, structural regimes, and resilient architectures in complex systems**.
+## Overview
 
-The engine combines methods from
+The **NEXAH Engine** is the executable layer of the NEXAH framework.
 
-• order theory  
-• abstract interpretation  
-• dynamical systems  
-• topology  
-• spectral graph theory  
-• stability landscape analysis  
+It transforms formal structural models into computational analysis of:
+
+- stability landscapes  
+- regime structures  
+- resilient architectures  
+
+The engine combines methods from:
+
+- order theory  
+- abstract interpretation  
+- dynamical systems  
+- topology  
+- spectral graph theory  
 
 to produce **structurally interpretable models of complex systems**.
 
 ---
 
-![NEXAH System Architecture](visuals/diagrams/NEXAH_SYSTEM_MAP.png)
-
-The engine connects formal structural theory with executable system analysis.
-
-At its core, NEXAH reconstructs **stability landscapes and regime structures**
-from structural models of complex systems.
+![NEXAH System Architecture](./visuals/diagrams/NEXAH_SYSTEM_MAP.png)
 
 ---
 
-# Core Architecture
+## Architecture
 
-The NEXAH framework is organized into three conceptual layers.
+The NEXAH framework is organized into three conceptual layers:
 
 ```
-RESEARCH LAYER
-(formal theory & structural models)
+RESEARCH
+(formal theory & experiments)
 
         ↓
 
 ENGINE
-(computational execution of structural models)
+(computational execution)
 
         ↓
 
-STRUCTURAL OUTPUT
+OUTPUT
 (stability landscapes, regime maps, architecture discovery)
 ```
 
-The **Engine** translates formal structural theory into executable models,
-allowing exploration of stability regimes and architecture spaces.
+The **Engine** translates structural theory into executable system models.
 
 ---
 
-# Engine Components
+## Repository Structure
 
-The NEXAH Engine is composed of several modular subsystems which together
-form a computational environment for structural system analysis.
+```
+ENGINE/
+
+├ agent/           orchestration & control (NEXAH Agent)
+├ kernel/          minimal navigation kernel
+├ core/            algebraic structures (posets, lattices, operators)
+├ analysis/        stability & topology analysis
+├ simulation/      dynamical system models
+├ visualization/   rendering & plots
+├ research/        theory & experiments
+├ applications/    example systems
+├ services/        internal utilities & discovery modules
+├ scripts/         executable pipelines
+├ docs/            extended documentation
+├ visuals/         generated outputs
+
+├ nexah_engine.py  core engine entry
+├ run_agent.py     main execution entry point
+```
 
 ---
 
-## NEXAH Kernel
+## Core Components
 
-The core navigation logic of the framework is implemented in the **NEXAH Kernel**.
+### NEXAH Agent
+
+The **Agent** orchestrates the system:
+
+- executes workflows  
+- connects kernel and analysis  
+- runs simulations and experiments  
+- processes results  
+
+Run:
+
+```
+python ENGINE/run_agent.py
+```
+
+---
+
+### NEXAH Kernel
+
+The **Kernel** implements the minimal structural navigation logic.
 
 Location:
 
-[ENGINE/nexah_kernel](ENGINE/nexah_kernel)
-
-The kernel provides the fundamental navigation mechanisms for regime landscapes.
-
-It implements:
-
-• regime landscape construction  
-• navigation trajectory analysis  
-• structural intervention simulation  
-
-The kernel is intentionally compact, consisting of only a few hundred lines of code.
-
-Additional functionality in the engine builds **around this kernel**
-rather than expanding it.
-
-Detailed kernel documentation:
-
-[ENGINE/nexah_kernel/README.md](ENGINE/nexah_kernel/README.md)
-
----
-
-## Algebraic Core
-
-The algebraic backbone of the system is implemented in
-
-[ENGINE/core](ENGINE/core)
-
-This module provides the **finite algebraic structures** used by the engine,
-including posets, lattices, closure operators and fixpoint computations.
-
-The conceptual operator stack implemented by the engine is:
-
 ```
-FinitePoset
-    ↓
-LatticeOps
-    ↓
-Closure Operator Γ
-    ↓
-Interior Operator Ι
-    ↓
-Monotone Operators
-    ↓
-Regime Operator Δ
-    ↓
-Frame Projection F
-    ↓
-Fixpoint Structures
-    ↓
-Worklist Fixpoint Solver
+ENGINE/kernel/
 ```
 
-The algebraic core acts as a **verified abstract interpretation kernel**
-for structural system analysis.
+Capabilities:
+
+- regime landscape construction  
+- navigation trajectories  
+- structural transitions  
 
 ---
 
-## Stability Analysis Layer
+### Algebraic Core
 
-Advanced stability analysis modules are located in
+Location:
 
-[ENGINE/analysis](ENGINE/analysis)
+```
+ENGINE/core/
+```
 
-These components reconstruct stability landscapes and structural regime
-geometry from system dynamics.
+Implements:
 
-Implemented capabilities include:
-
-• stability landscape generation  
-• gradient and Hessian field computation  
-• basin segmentation  
-• metastability mapping  
-• Lyapunov spectrum estimation  
-• Koopman operator approximation  
-• diffusion maps  
-• Morse complex construction  
-• persistent homology  
-• eigenmode decomposition  
+- finite posets  
+- lattices  
+- closure operators Γ  
+- interior operators Ι  
+- monotone operators  
+- fixpoint computation  
 
 ---
 
-## NEXAH Kernel Bridge - Extension for Structured Oscillator Networks
+### Analysis Layer
 
-The **Kernel Bridge** for **Structured Oscillator Networks** expands the **NEXAH Kernel** with capabilities to analyze dynamic instabilities and synchronization effects in complex systems.
+Location:
 
-### New Features:
-- **Vortex Metrics**: The bridge analyzes vortex density and frequency as indicators of unstable phases in network dynamics.
-- **Chimera Phenomena**: Detects partial synchronization (chimera states) within networks, investigating system resilience and synchronization ability.
-- **Frustration Score**: A metric based on synchronization delays, indicating the risk of cascade events in a system.
+```
+ENGINE/analysis/
+```
 
-These enhancements allow detailed exploration of network dynamics and stability across different **regime landscapes** within the NEXAH framework.
+Capabilities:
 
----
-
-## Simulation Layer
-
-Explicit dynamical system simulations are implemented in
-
-[ENGINE/simulation](ENGINE/simulation)
-
-These modules simulate the evolution of stability landscapes and system
-trajectories.
-
-Implemented components include:
-
-• gradient flow dynamics  
-• attractor network extraction  
-• landscape evolution models  
-
-These simulations allow exploration of
-
-• trajectory convergence  
-• attractor basins  
-• transition paths  
-• metastable regimes  
+- stability landscape generation  
+- basin detection  
+- Lyapunov spectrum  
+- diffusion maps  
+- Morse complexes  
+- persistent homology  
 
 ---
 
-## Policy and Control Layer
+### Simulation Layer
 
-Experimental modules for decision and policy analysis are implemented in
+Location:
 
-[ENGINE/rl](ENGINE/rl)
+```
+ENGINE/simulation/
+```
 
-These modules explore how agents can navigate stability landscapes.
+Provides:
 
-Implemented systems include:
-
-• policy evaluation surfaces  
-• risk-aware navigation  
-• stability-maximizing policies  
-• reinforcement learning environments  
-
----
-
-# Example Engine Output
-
-The engine reconstructs stability landscapes and regime structures from
-structural system models.
-
-Example animation generated by the stability landscape engine:
-
-![NEXAH Stability Landscape](visuals/nexah_stability.gif)
-
-Example landscape visualization:
-
-![Stability Landscape](visuals/01_landscape.png)
-
-These visualizations illustrate how the engine extracts
-
-• stability basins  
-• regime transitions  
-• attractor structures  
-• metastable regions  
-
-from structural system representations.
+- dynamical system simulation  
+- attractor detection  
+- trajectory evolution  
 
 ---
 
-# Key Discovery
+### Research Layer
 
-Recent experiments with the architecture exploration modules revealed a
-recurring structural attractor in architecture space.
+Location:
 
-Typical stable architecture:
+```
+ENGINE/research/
+```
+
+Contains:
+
+- formal theory (finite order systems)  
+- experimental modules  
+- oscillator networks  
+- symmetry graph experiments  
+
+---
+
+### Services Layer
+
+Location:
+
+```
+ENGINE/services/
+```
+
+Includes:
+
+- discovery engines  
+- law detection modules  
+- result storage  
+- internal computation utilities  
+
+---
+
+### Scripts
+
+Location:
+
+```
+ENGINE/scripts/
+```
+
+Examples:
+
+```
+python ENGINE/scripts/run_stability_engine.py
+python ENGINE/scripts/run_massive_architecture_search.py
+```
+
+---
+
+## Example Output
+
+The engine reconstructs stability landscapes and regime structures.
+
+![Stability Landscape](./visuals/01_landscape.png)
+
+Generated outputs include:
+
+- stability basins  
+- regime transitions  
+- attractor structures  
+- metastable regions  
+
+---
+
+## Key Discovery (Example)
+
+Experiments reveal stable architecture patterns:
 
 ```
 nodes ≈ 5
@@ -239,29 +246,11 @@ clustering ≈ 1
 resilience ≈ 0.85 – 0.91
 ```
 
-These structures form a **stability attractor** in the explored network
-architecture space.
-
-The discovery suggests that **dense balanced connectivity structures**
-maximize resilience.
+These form **attractors in architecture space**.
 
 ---
 
-# Spectral Stability Law
-
-Experiments with the spectral analysis modules indicate a strong
-relationship between resilience and spectral connectivity.
-
-```
-Resilience ≈ a + b · (λ₂ / λmax)
-```
-
-Where
-
-```
-λ₂     = algebraic connectivity
-λmax   = largest Laplacian eigenvalue
-```
+## Spectral Stability Law
 
 Empirical result:
 
@@ -269,120 +258,44 @@ Empirical result:
 Resilience ≈ 0.355 + 0.401 · (λ₂ / λmax)
 ```
 
-This suggests that **stable architectures maximize spectral connectivity**.
+Where:
+
+- λ₂ = algebraic connectivity  
+- λmax = largest Laplacian eigenvalue  
+
+→ Stable systems maximize **spectral connectivity**
 
 ---
 
-# Documentation
+## Documentation
 
-Additional documentation is available in
+See:
 
-[ENGINE/docs](ENGINE/docs)
-
-Key documents include:
-
-• [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)  
-• [docs/ENGINE_MAP.md](docs/ENGINE_MAP.md)  
-• [docs/STABILITY_ENGINE.md](docs/STABILITY_ENGINE.md)  
-• [docs/VISUALS_INDEX.md](docs/VISUALS_INDEX.md)  
-• [docs/RESEARCH_CONTEXT.md](docs/RESEARCH_CONTEXT.md)
+- `docs/ARCHITECTURE.md`  
+- `docs/ENGINE_MAP.md`  
+- `docs/ENGINE_REPORT_v1.md`  
+- `docs/RESULTS_SUMMARY.md`  
 
 ---
 
-# Repository Structure
+## Design Philosophy
 
-```
-ENGINE
-│
-├ nexah_kernel    minimal navigation kernel
-├ core            algebraic kernel
-├ analysis        stability & topology analysis
-├ simulation      dynamical system simulation
-├ visualization   visual rendering
-├ rl              reinforcement learning agents
-├ navigation      navigation strategies
-├ applications    example models
-├ examples        demonstration scripts
-├ runtime         simulation execution layer
-├ docs            architecture documentation
-├ visuals         generated outputs
-```
+The NEXAH Engine is designed to be:
+
+- finite and structurally validated  
+- modular and extensible  
+- mathematically interpretable  
+- deterministic in computation  
 
 ---
 
-# Running the Stability Engine
+## Status
 
-From the repository root:
-
-```
-python ENGINE/run_stability_engine.py
-```
-
-Outputs will be generated in
-
-```
-ENGINE/visuals/
-```
-
-Example outputs include
-
-• stability landscapes  
-• basin segmentation maps  
-• persistence diagrams  
-• eigenmode decompositions  
-• Koopman spectra  
-• Lyapunov spectra  
+The system represents a **modular computational framework for structural system analysis and discovery**.
 
 ---
 
-# Design Philosophy
+## NEXAH
 
-The NEXAH Engine is designed to be
-
-• finite and structurally validated  
-• algebraically explicit  
-• deterministic in computation  
-• modular and extensible  
-• mathematically interpretable  
-
-The framework bridges
-
-• order theory  
-• abstract interpretation  
-• dynamical systems  
-• topology  
-• control theory  
-
----
-
-# NEXAH Engine
-
-**Structural computation for stability, dynamics, and abstract systems.**
-------------------------------------------------------------------------
-
-## Navigation
-
-  ----------------------------------------------------------------------------------------------------
-  Section                             Link
-  ----------------------------------- ----------------------------------------------------------------
-  NEXAH Kernel                        [ENGINE/nexah_kernel](ENGINE/nexah_kernel)
-
-  Kernel Documentation                [ENGINE/nexah_kernel/README.md](ENGINE/nexah_kernel/README.md)
-
-  Algebraic Core                      [ENGINE/core](ENGINE/core)
-
-  Stability Analysis                  [ENGINE/analysis](ENGINE/analysis)
-
-  Simulation                          [ENGINE/simulation](ENGINE/simulation)
-
-  Visualization                       [ENGINE/visualization](ENGINE/visualization)
-
-  Reinforcement Learning              [ENGINE/rl](ENGINE/rl)
-
-  Applications                        [ENGINE/applications](ENGINE/applications)
-
-  Documentation                       [ENGINE/docs](ENGINE/docs)
-
-  Generated Visuals                   [ENGINE/visuals](ENGINE/visuals)
-  ----------------------------------------------------------------------------------------------------
-
+The engine forms the **computational layer of the NEXAH framework**,  
+bridging formal structural theory and executable system modeling.
