@@ -1,33 +1,60 @@
 # ENGINE/run_agent.py
 
-from analysis.stability_landscape_generator import generate_stability_landscape
+import numpy as np
+from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
+
+
+def get_neighbors(pos, size):
+    x, y = pos
+    moves = [(-1,0),(1,0),(0,-1),(0,1)]
+    neighbors = []
+
+    for dx, dy in moves:
+        nx, ny = x + dx, y + dy
+        if 0 <= nx < size and 0 <= ny < size:
+            neighbors.append((nx, ny))
+
+    return neighbors
 
 
 def main():
     print("NEXAH Agent started")
     print("Initializing system...")
 
-    for step in range(3):
+    landscape = generate_stability_landscape()
+    size = landscape.shape[0]
+
+    # 🔹 start random
+    pos = (np.random.randint(0, size), np.random.randint(0, size))
+
+    print(f"Starting position: {pos}")
+
+    for step in range(10):
+
+        x, y = pos
+        current_value = landscape[x, y]
+
         print(f"\nStep {step}")
-        print("Calling analysis layer...")
+        print(f"Position: {pos} | Stability: {current_value:.3f}")
 
-        # 🔥 echter Call
-        landscape = generate_stability_landscape()
+        neighbors = get_neighbors(pos, size)
 
-        # minimal interpretieren
-        summary = {
-            "min": float(landscape.min()),
-            "max": float(landscape.max()),
-            "mean": float(landscape.mean())
-        }
+        # best move
+        best_pos = pos
+        best_value = current_value
 
-        print("Landscape summary:", summary)
+        for nx, ny in neighbors:
+            val = landscape[nx, ny]
+            if val > best_value:
+                best_value = val
+                best_pos = (nx, ny)
 
-        # einfache Entscheidung
-        if summary["max"] > 0.8:
-            print("→ High stability region detected")
+        if best_pos == pos:
+            print("→ Local maximum reached")
+            break
         else:
-            print("→ Exploring further...")
+            print(f"→ Moving to {best_pos} (↑ stability)")
+            pos = best_pos
 
     print("\nAgent finished.")
 
