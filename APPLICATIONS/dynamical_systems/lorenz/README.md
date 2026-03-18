@@ -287,7 +287,11 @@ It demonstrates how NEXAH can analyze complex systems by reconstructing:
 The Lorenz module therefore serves as a **benchmark system for chaos exploration within the NEXAH framework**.
 
 ---
+# Connection to Nonlinear Navigation
 
+See:
+
+ENGINE/docs/NONLINEAR_NAVIGATION.md
 # Visual Gallery
 
 The following figures illustrate different structural layers of the Lorenz system reconstructed by the analysis pipeline.
