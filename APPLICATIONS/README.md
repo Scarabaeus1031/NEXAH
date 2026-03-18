@@ -64,6 +64,28 @@ Extends gradient systems with external forces and dynamic perturbations.
 Models systems that contain multiple attractors and regime transitions.
 
 ---
+## NEXAH Multi-Agent Exploration System
+
+The **NEXAH Multi-Agent Exploration System** demonstrates structural navigation across **stability landscapes** using multiple agents. It is designed to explore **regimes and basins of stability** in complex dynamical systems.
+
+### Key Features:
+- **Multi-agent simulation**: Simulate and observe how multiple agents navigate a dynamic stability field.
+- **Role-based agents**: Differentiated roles such as **Explorer** (randomized navigation) and **Climber** (greedy ascent toward higher stability).
+- **Reinforcement learning agents**: Navigate stability landscapes based on learned policies.
+- **Cluster detection**: Automatically detect and visualize clusters of attractor states based on agent positions.
+
+### The Goal:
+NEXAH's multi-agent system provides an advanced method of **structural exploration**, allowing agents to:
+- Explore stability landscapes and **discover stable regions**.
+- Transition between regimes and **estimate cascade risks**.
+- Identify attractors and metastable regions.
+
+This is not merely **optimization**, but rather **navigation through a dynamic, evolving stability field**.
+
+For full exploration functionality, run:
+```bash
+python ENGINE/run_agent.py
+```
 
 # External System Integration
 
