@@ -1,8 +1,82 @@
+# =========================
+# SYSTEM (macOS)
+# =========================
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+# PYTHON
+# =========================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.py,cover
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging
 *.egg-info/
 dist/
 build/
+
+# =========================
+# JUPYTER / NOTEBOOKS
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# TESTING / COVERAGE
+# =========================
 .coverage
+.coverage.*
 htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# =========================
+# LOGS / TEMP FILES
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# EDITOR / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# ACCIDENTAL DUPLICATES (WICHTIG bei dir)
+# =========================
+* 2.*
+* 3.*
+* copy.*
+* Kopie.*
+
+# =========================
+# GENERATED OUTPUTS (ANPASSBAR!)
+# =========================
+outputs/
+output/
+generated/
+results/
+tmp/
+
+# =========================
+# LARGE / OPTIONAL DATA
+# =========================
+*.csv~
+*.xlsx~
+*.dat~
+
+# =========================
+# OPTIONAL: CACHE / RENDER
+# =========================
+.cache/
