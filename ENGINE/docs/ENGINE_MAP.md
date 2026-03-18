@@ -1,368 +1,357 @@
-# NEXAH Engine — Repository Map
+# NEXAH Engine Architecture Map
 
-This document provides a structured overview of the **NEXAH Engine repository**.
+This document describes the structural architecture of the **NEXAH Stability & Resilience Engine**.
 
-The engine is organized into modular subsystems that together implement:
+The system currently contains:
 
-- algebraic computation
-- stability landscape analysis
-- dynamical system simulation
-- reinforcement learning agents
-- navigation strategies
-- visualization pipelines
+26 directories  
+347 files  
 
-The repository currently contains approximately:
-
-20 directories  
-205 files
+The engine is organized into several functional layers.
 
 ---
 
-# Repository Overview
+# 1. CORE MATHEMATICAL LAYER
 
-ENGINE
+Location
 
-core/  
-analysis/  
-simulation/  
-rl/  
-navigation/  
-applications/  
-examples/  
-visualization/  
-visuals/  
+ENGINE/core/
 
-run_stability_engine.py  
-ENGINE_REPORT_v1.md  
+This layer implements the **mathematical foundation of the engine**.
 
-Each directory represents a functional subsystem.
+It defines the algebraic and order-theoretic structures used across the system.
 
----
+Key concepts
 
-# 1 Core Algebra Layer
+- lattices
+- posets
+- monotone operators
+- closure operators
+- fixpoint computation
 
-Directory
+Main modules
 
-ENGINE/core
-
-This layer provides the **mathematical foundation** of the engine.
-
-It implements finite algebraic structures used throughout the system.
-
-Key concepts:
-
-posets  
-lattices  
-closure operators  
-interior operators  
-fixpoint computation
-
-Primary modules
-
-poset.py  
-lattice.py  
 closure_operator.py  
 interior_operator.py  
-monotone_operator.py  
 fixpoint_lattice.py  
-hasse.py  
+monotone_operator.py  
+poset.py  
+lattice.py  
+frame_operator.py  
 rank.py  
 regime_operator.py  
 state_graph.py  
-worklist_fixpoint.py
+worklist_fixpoint.py  
 
-This subsystem forms the **abstract interpretation kernel** of the engine.
+This layer provides the **formal stability computation backbone**.
 
 ---
 
-# 2 Stability Analysis Layer
+# 2. SIMULATION LAYER
 
-Directory
+Location
 
-ENGINE/analysis
+ENGINE/simulation/
 
-This is the largest subsystem and implements the **stability landscape analysis framework**.
+This layer simulates **dynamical stability systems**.
 
-The analysis layer extracts structural information from a scalar field:
+Key modules
 
-Z = f(x,y)
+stability_flow_dynamics.py  
+stability_landscape_dynamics.py  
+stability_attractor_network.py  
 
-Major analysis components include:
+Purpose
 
-Landscape construction  
-Gradient analysis  
-Hessian curvature  
-Critical point detection  
-Basin structure  
-Metastability analysis  
-Topological structure  
+- simulate system flows
+- detect attractors
+- generate stability landscapes
+
+---
+
+# 3. RESILIENCE DISCOVERY ENGINE
+
+Location
+
+ENGINE/
+
+This is the **main discovery layer** where most resilience modules live.
+
+Core functions
+
+- architecture discovery
+- topology analysis
+- spectral analysis
+- phase detection
+- universal law discovery
+
+Key modules
+
+Architecture exploration
+
+resilience_architecture_generator_ai.py  
+resilience_graph_evolution_engine.py  
+resilience_architecture_dna_extractor.py  
+
+Topology analysis
+
+resilience_graph_topology_analyzer.py  
+resilience_graph_motif_detector.py  
+resilience_topology_detector.py  
+resilience_topology_miner.py  
+
 Spectral analysis
+
+resilience_spectral_analyzer.py  
+resilience_spectral_law_detector.py  
+resilience_spectral_phase_map.py  
+resilience_spectral_landscape.py  
+
+Stability landscape
+
+resilience_gradient_field.py  
+resilience_architecture_basin_detector.py  
+resilience_phase_transition_detector.py  
+resilience_phase_boundary_detector.py  
+
+Universal laws
+
+resilience_universal_scaling_law.py  
+resilience_universal_equation_solver.py  
+resilience_universal_architecture_generator.py  
+resilience_universal_field_equation_solver.py  
+
+Discovery automation
+
+resilience_meta_law_discovery.py  
+resilience_self_improving_discovery_loop.py  
+resilience_hypothesis_generator.py  
+
+---
+
+# 4. ANALYSIS LAYER
+
+Location
+
+ENGINE/analysis/
+
+This layer performs **deep mathematical analysis of stability landscapes**.
+
+Capabilities include
+
+- Morse theory
+- persistence homology
+- Lyapunov spectra
+- diffusion geometry
+- Wasserstein geometry
+- Koopman operators
 
 Key modules
 
 stability_landscape_generator.py  
 stability_gradient_field.py  
 stability_hessian_field.py  
-stability_critical_points.py  
-stability_basin_map.py  
-stability_basin_segmentation.py  
-basin_transition_graph.py  
-metastability_map.py  
-global_stability_structure.py  
 stability_morse_complex.py  
 stability_persistence_homology.py  
-stability_topological_skeleton.py  
-stability_transition_paths.py  
-stability_eigenmodes.py  
-stability_koopman_operator.py  
 stability_lyapunov_spectrum.py  
 stability_diffusion_map.py  
 stability_wasserstein_geometry.py  
-stability_escape_rates.py  
-stability_flow_field.py  
-stability_information_geometry.py
+stability_topological_skeleton.py  
 
-These modules compute the **geometric, dynamical, and topological structure** of stability landscapes.
+This layer extracts **deep geometric structure of stability landscapes**.
 
 ---
 
-# 3 Simulation Layer
+# 5. REINFORCEMENT LEARNING LAYER
 
-Directory
+Location
 
-ENGINE/simulation
+ENGINE/rl/
 
-This subsystem simulates dynamic evolution within stability landscapes.
-
-Implemented simulations include:
-
-gradient flow dynamics  
-attractor formation  
-trajectory evolution  
-landscape dynamics
-
-Modules
-
-stability_flow_dynamics.py  
-stability_landscape_dynamics.py  
-stability_attractor_network.py
-
-These simulations allow exploration of **system trajectories and attractor structures**.
-
----
-
-# 4 Reinforcement Learning Layer
-
-Directory
-
-ENGINE/rl
-
-This subsystem enables agents to **learn policies on stability landscapes**.
-
-Agents attempt to discover strategies that lead toward stable or desirable regions.
+Implements **learning agents interacting with stability landscapes**.
 
 Modules
 
 landscape_rl_env.py  
+q_learning_agent.py  
 landscape_q_agent.py  
 multi_agent_stability.py  
 policy_surface_learning.py  
-q_learning_agent.py  
-random_agent.py  
-nexah_env.py
 
-Capabilities include:
+Purpose
 
-Q-learning  
-policy optimization  
-multi-agent stability exploration
+- learn stability maximizing policies
+- navigate landscapes
+- train agents to reach attractors
 
 ---
 
-# 5 Navigation Layer
+# 6. APPLICATION LAYER
 
-Directory
+Location
 
-ENGINE/navigation
+ENGINE/applications/
 
-This subsystem implements higher-level navigation strategies.
+This layer demonstrates **real system applications**.
+
+Examples
+
+navigation_engine.py  
+policy_engine.py  
+risk_geometry.py  
+risk_aware_navigation.py  
+stability_basin.py  
+
+Also includes example datasets such as
+
+examples/energy_grid.json
+
+---
+
+# 7. VISUALIZATION LAYER
+
+Location
+
+ENGINE/visualization/
+
+This layer produces visual outputs of the stability system.
+
+Capabilities
+
+- 3D stability landscapes
+- animated system trajectories
+- risk landscapes
+- graph visualizations
+
+Key modules
+
+stability_surface_3d.py  
+stability_landscape_3d.py  
+stability_phase_diagram.py  
+trajectory_on_surface.py  
+animated_trajectory_surface.py  
+
+---
+
+# 8. NAVIGATION SYSTEM
+
+Location
+
+ENGINE/navigation/
+
+Implements decision agents navigating stability landscapes.
 
 Modules
 
 navigation_agent.py  
-strategic_navigation.py
-
-Navigation systems allow agents to:
-
-seek attractors  
-avoid unstable regions  
-follow stability gradients
+strategic_navigation.py  
 
 ---
 
-# 6 Application Layer
+# 9. RUNTIME SYSTEM
 
-Directory
+Location
 
-ENGINE/applications
+ENGINE/runtime/
 
-This directory contains example systems demonstrating the engine.
+Responsible for **running large simulations**.
 
-Example categories include:
+Modules
 
-program analysis  
-policy evaluation  
-risk navigation  
-system optimization
-
-Representative modules
-
-mini_ir.py  
-mini_ir_demo.py  
-mini_ir_branch_demo.py  
-constant_lattice.py  
-constant_propagation_demo.py  
-policy_engine.py  
-risk_aware_navigation.py  
-risk_geometry.py  
-risk_minimizing_policy.py  
-stability_maximizing_policy.py  
-regime_detection.py
-
-These applications demonstrate how the engine can be used in **practical computational settings**.
+simulation_engine.py  
+system_runner.py  
 
 ---
 
-# 7 Example Systems
+# 10. META ENGINE
 
-Directory
+High-level orchestration of the full discovery system.
 
-ENGINE/examples
+Main files
 
-Contains small demonstration scripts.
+nexah_engine.py  
+nexah_autonomous_science_loop.py  
+nexah_meta_discovery_engine.py  
+nexah_architecture_evolution_engine.py  
 
-Example
+These coordinate
 
-example_stabilization.py
-
-Used for validating stability analysis functionality.
-
----
-
-# 8 Visualization Layer
-
-Directory
-
-ENGINE/visualization
-
-This subsystem renders visual representations of stability systems.
-
-Modules include
-
-stability_landscape_3d.py  
-stability_surface_3d.py  
-trajectory_on_surface.py  
-stability_animation_field.py  
-dynamic_risk_landscape.py  
-risk_landscape.py  
-stability_phase_diagram.py  
-animated_trajectory_surface.py  
-dot_export.py  
-render_graphviz.py
-
-Visualization types include:
-
-3D surfaces  
-trajectory animations  
-phase diagrams  
-graph visualizations
+- discovery
+- simulation
+- law extraction
+- architecture evolution
 
 ---
 
-# 9 Generated Visual Output
+# 11. VISUAL DATA
 
-Directory
+Location
 
-ENGINE/visuals
+ENGINE/visuals/
 
-This directory stores images generated by the stability engine pipeline.
+Contains generated stability visualizations such as
 
-Examples
+landscape.png  
+gradient_field.png  
+critical_points.png  
+persistence_diagram.png  
+koopman_spectrum.png  
+lyapunov_spectrum.png  
 
-01_landscape.png  
-02_gradient_field.png  
-03_hessian_field.png  
-04_critical_points.png  
-05_basin_segmentation.png  
-06_basin_transition_graph.png  
-07_metastability_map.png  
-08_global_structure.png  
-09_phase_portrait.png  
-10_information_geometry.png  
-11_morse_complex.png  
-12_persistence_diagram.png  
-13_persistence_barcodes.png  
-14_persistent_features.png  
-15_eigenmodes.png  
-16_koopman_spectrum.png  
-17_lyapunov_spectrum.png  
-18_diffusion_map.png  
-19_wasserstein_geometry.png  
-20_topological_skeleton.png
-
-Additional assets include
-
-engine_execution_flow.png  
-engine_architecture_execution_layer_dark.png  
-nexah_stability.gif
-
-These images represent the **visual outputs of the stability analysis pipeline**.
+These visualize the **geometry of stability landscapes**.
 
 ---
 
-# 10 Execution Script
+# Global Engine Structure
 
-Main pipeline
+The NEXAH Engine can be summarized as:
 
-ENGINE/run_stability_engine.py
+Mathematics Layer
+↓
+Simulation Layer
+↓
+Architecture Discovery
+↓
+Topology & Spectral Analysis
+↓
+Stability Landscape Geometry
+↓
+Universal Law Discovery
+↓
+Reinforcement Learning Navigation
+↓
+Applications
 
-This script executes the complete analysis sequence.
-
-Pipeline stages include
-
-landscape generation  
-gradient computation  
-Hessian analysis  
-critical point detection  
-basin segmentation  
-transition graph construction  
-metastability mapping  
-Morse complex computation  
-persistent homology analysis  
-spectral decomposition  
-diffusion embedding  
-Wasserstein geometry  
-topological skeleton extraction
-
-The script produces the visual outputs stored in ENGINE/visuals.
 
 ---
 
-# 11 System Architecture Summary
+# Interpretation
 
-The NEXAH Engine integrates multiple computational paradigms:
+The engine implements a **computational discovery framework for stability in complex systems**.
 
-order theory  
-abstract interpretation  
-dynamical systems  
-topological data analysis  
-reinforcement learning  
-optimal transport geometry
+It combines
 
-These components together form a **structural computation framework for stability analysis**.
+- spectral graph theory
+- topology
+- dynamical systems
+- machine learning
+- reinforcement learning
+
+to discover **stable architectures and universal resilience laws**.
 
 ---
 
-# NEXAH Engine
+# Status
 
-A modular research framework for analyzing the geometry, topology, and dynamics of stability landscapes.
+Current size
+
+26 directories  
+347 files  
+
+The system represents a **large-scale autonomous scientific discovery engine**.
+
+---
+
+# NEXAH
+
+The engine forms the computational discovery layer of the **NEXAH Codex architecture system**.
