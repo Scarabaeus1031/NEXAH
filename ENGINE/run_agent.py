@@ -86,3 +86,27 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+import matplotlib.pyplot as plt
+
+
+def visualize_agents(landscape, paths):
+    plt.figure(figsize=(8, 6))
+
+    plt.imshow(landscape, cmap="viridis", origin="lower")
+    plt.colorbar(label="Stability")
+
+    for path in paths:
+        xs = [p[0] for p in path]
+        ys = [p[1] for p in path]
+
+        plt.plot(xs, ys, linewidth=1)
+
+        # mark end point
+        plt.scatter(xs[-1], ys[-1], s=40)
+
+    plt.title("NEXAH Multi-Agent Navigation")
+    plt.xlabel("X")
+    plt.ylabel("Y")
+
+    plt.show()
