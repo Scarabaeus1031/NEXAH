@@ -25,39 +25,43 @@ NEXAH studies how dynamical system simulations can be transformed into navigable
 
 While most simulation frameworks focus on **predicting system evolution**, NEXAH focuses on **structural regime navigation**:
 
-- identifying stability basins
-- detecting regime transitions
-- estimating cascade risks
-- computing paths toward stable configurations
+- Identifying stability basins
+- Detecting regime transitions
+- Estimating cascade risks
+- Computing paths toward stable configurations
+- Supporting **multi-agent navigation** and exploration
 
 The framework builds on ideas from:
 
-- dynamical systems theory
-- lattice and order structures
-- structural stability analysis
-- regime transition modeling
-- complex systems research
+- Dynamical systems theory
+- Lattice and order structures
+- Structural stability analysis
+- Regime transition modeling
+- Complex systems research
+- **Reinforcement learning** for landscape navigation
+- **Multi-agent systems** for exploration
 
 NEXAH is designed as an **experimental research platform** for exploring structural control and navigation in large-scale systems such as infrastructure networks, ecosystems, and planetary-scale systems.
 
----
-
-NEXAH is a research framework that converts **dynamical system simulations into navigable regime landscapes**.
+NEXAH is a research framework that **converts dynamical system simulations into navigable regime landscapes**.
 
 Instead of only simulating how systems evolve, NEXAH enables agents to:
 
-- detect **regimes and stability basins**
-- estimate **cascade risks**
-- compute **navigation paths toward stable states**
-- simulate **structural interventions**
+- Detect regimes and stability basins
+- Estimate cascade risks
+- Compute navigation paths toward stable states
+- Simulate structural interventions
+- Perform **multi-agent exploration** to discover stable regimes
 
 Typical applications include:
 
-- power grid stability
-- cascading infrastructure failures
-- ecological systems
-- supply chain networks
-- climate regime analysis
+- Power grid stability
+- Cascading infrastructure failures
+- Ecological systems
+- Supply chain networks
+- Climate regime analysis
+- **Autonomous scientific exploration**
+- **Reinforcement learning environments** for stability and control
 
 ---
 
