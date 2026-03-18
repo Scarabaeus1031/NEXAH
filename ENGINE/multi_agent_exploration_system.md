@@ -44,7 +44,7 @@ Includes:
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
-
+```
 from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
 
 
@@ -225,6 +225,7 @@ def visualize_agents(landscape, paths, clusters=None):
 
     plt.show()
 
+![Multi-Agent Navigation with Clusters](./visuals/nexah_multi-agent_navigation+Clusters.png)
 
 # --------------------------------------------------
 # MAIN
