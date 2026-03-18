@@ -65,7 +65,7 @@ Observation:
 
 # 5. Distance-Based Structure
 
-![Distance](./visuals/distance_comparisons.png)
+![Distance](./visuals/distance_comparissons.png)
 
 Observation:
 
