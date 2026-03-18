@@ -49,7 +49,7 @@ Includes:
 import numpy as np
 import matplotlib.pyplot as plt
 
-from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
+ffrom ENGINE.analysis.temporal_landscape import TemporalLandscape
 
 
 # --------------------------------------------------
