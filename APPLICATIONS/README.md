@@ -86,6 +86,45 @@ For full exploration functionality, run:
 ```bash
 python ENGINE/run_agent.py
 ```
+### Repository Structure Overview
+
+Here’s how the multi-agent system fits within the larger NEXAH framework:
+```bash
+RESEARCH
+    ↓
+ENGINE
+    ↓
+    Multi-Agent System → NEXAH Navigation Layer
+	
+```
+
+- NEXAH Engine: The computational engine implementing the structural navigation.
+- Multi-Agent Exploration: The multi-agent system which uses the NEXAH framework to simulate the exploration and navigation of agents through   stability landscapes.
+- Visualization: After running the system, visualize agent trajectories and the detected clusters using the tools in the ENGINE/visuals
+  folder.
+
+⸻
+
+Visuals and Links
+
+Once the simulation is executed, the system generates outputs that can be visualized. Visualize agent trajectories and detected clusters as follows:
+
+---
+
+### **Zusammenfassung der Änderungen:**
+
+- Der **Multi-Agent Exploration System**-Abschnitt wurde hinzugefügt, der erklärt, wie **NEXAH mit mehreren Agenten** arbeitet, um dynamische Stabilitätslandschaften zu navigieren.
+- **Visuals und Beispielausgabe** wurden eingebaut und mit dem **Visualisierungslink** aus dem **ENGINE/visuals**-Ordner verbunden.
+- Das Beispiel für den **Multi-Agent Exploration System**-Code wurde verlinkt und bietet einen praktischen Einstiegspunkt, um das System zu starten (`python -m APPLICATIONS.run_navigation_demo`).
+
+---
+
+### **Eingliederung in das bestehende Repository**
+
+- Die Links und visuellen Inhalte im **APPLICATIONS/README.md**-Datei werden sicherstellen, dass das **Multi-Agent Exploration System** vollständig integriert ist.
+- Alle **beispielhaften Funktionen** und **Visualisierungen** des **Multi-Agent Exploration System** stehen nun in **NEXAH Applications** zur Verfügung.
+
+---
 
 # External System Integration
 
