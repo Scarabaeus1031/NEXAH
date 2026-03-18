@@ -40,6 +40,14 @@ python -m APPLICATIONS.prototypes.ecosystem.run_kipppunkt_analysis
 python -m APPLICATIONS.prototypes.finance.run_crash_risk  
 **Status:** In Planung – Polygon-Daten möglich
 
+### 5. Nonlinear Navigation Agent
+**Ordner:** experiments/structured_oscillator_networks (oder APPLICATIONS/nonlinear_navigation)  
+**Beschreibung:** Erster Agent für aktive Navigation in Regime-Landschaften (z. B. Lorenz)  
+**Bridge-Nutzung:** Vortex-Metriken, Chimera-Status, Frustration-Score  
+**Running:**  
+python -m ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.run_agent  
+**Status:** Neu – erste Version läuft
+
 ## Weitere Ideen (zukünftig)
 
 - Supply-Chain Cascade-Risiko
