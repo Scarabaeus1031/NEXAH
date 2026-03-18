@@ -39,7 +39,7 @@ Observation:
 
 # 3. Regime Boundary (Separatrix)
 
-![Separatrix](./visuals/Separatrix_Regime20%Boundary.png)
+![Separatrix](./visuals/Separatrix_Regime_Boundary.png)
 
 Observation:
 
