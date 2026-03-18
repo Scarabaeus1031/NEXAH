@@ -1,0 +1,33 @@
+# =========================
+# DEFAULT HANDLING
+# =========================
+* text=auto
+
+# =========================
+# TEXT FILES (LF erzwingen)
+# =========================
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.csv text eol=lf
+*.toml text eol=lf
+
+# =========================
+# BINARY FILES (wichtig für dich!)
+# =========================
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.pdf binary
+*.zip binary
+*.mp4 binary
+
+# =========================
+# NOTEBOOKS (optional binär behandeln)
+# =========================
+*.ipynb binary
