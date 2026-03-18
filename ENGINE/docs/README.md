@@ -218,7 +218,6 @@ complex adaptive systems
 
 ---
 
-
 # 6 Research Direction
 
 Future research directions include:
