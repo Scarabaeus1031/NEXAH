@@ -53,7 +53,7 @@ htmlcov/
 .idea/
 
 # =========================
-# ACCIDENTAL DUPLICATES (WICHTIG bei dir)
+# ACCIDENTAL DUPLICATES
 # =========================
 * 2.*
 * 3.*
@@ -61,13 +61,38 @@ htmlcov/
 * Kopie.*
 
 # =========================
-# GENERATED OUTPUTS (ANPASSBAR!)
+# 🔥 NEXAH ENGINE OUTPUTS (WICHTIG!)
 # =========================
-outputs/
-output/
-generated/
-results/
-tmp/
+
+# Alle Output-Ordner egal wo
+**/outputs/
+**/output/
+**/generated/
+**/results/
+**/tmp/
+
+# Frames / Simulation Dumps
+**/frames/
+**/cache/
+
+# =========================
+# VISUAL MASS OUTPUT (vorsichtig!)
+# =========================
+
+# Nur generierte Visuals blocken
+**/*.gif
+
+# Optional (nur wenn du zu viele Bilder hast)
+# **/*.png
+# **/*.jpg
+
+# =========================
+# DATA (Simulation Dumps)
+# =========================
+
+**/*.csv
+**/*.npy
+**/*.npz
 
 # =========================
 # LARGE / OPTIONAL DATA
@@ -77,6 +102,6 @@ tmp/
 *.dat~
 
 # =========================
-# OPTIONAL: CACHE / RENDER
+# CACHE / RENDER
 # =========================
 .cache/
