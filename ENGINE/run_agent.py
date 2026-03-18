@@ -17,29 +17,20 @@ def get_neighbors(pos, size):
     return neighbors
 
 
-def main():
-    print("NEXAH Agent started")
-    print("Initializing system...")
-
-    landscape = generate_stability_landscape()
+def run_agent(landscape, steps=20):
     size = landscape.shape[0]
 
-    # 🔹 start random
     pos = (np.random.randint(0, size), np.random.randint(0, size))
 
-    print(f"Starting position: {pos}")
+    path = [pos]
 
-    for step in range(10):
+    for _ in range(steps):
 
         x, y = pos
         current_value = landscape[x, y]
 
-        print(f"\nStep {step}")
-        print(f"Position: {pos} | Stability: {current_value:.3f}")
-
         neighbors = get_neighbors(pos, size)
 
-        # best move
         best_pos = pos
         best_value = current_value
 
@@ -50,11 +41,41 @@ def main():
                 best_pos = (nx, ny)
 
         if best_pos == pos:
-            print("→ Local maximum reached")
             break
-        else:
-            print(f"→ Moving to {best_pos} (↑ stability)")
-            pos = best_pos
+
+        pos = best_pos
+        path.append(pos)
+
+    return path
+
+
+def main():
+    print("NEXAH Multi-Agent System")
+    print("Initializing landscape...")
+
+    landscape = generate_stability_landscape()
+    size = landscape.shape[0]
+
+    num_agents = 10
+
+    final_positions = []
+
+    for i in range(num_agents):
+        path = run_agent(landscape)
+        final_pos = path[-1]
+        final_value = landscape[final_pos]
+
+        final_positions.append((final_pos, final_value))
+
+        print(f"Agent {i}: final position {final_pos} | stability {final_value:.3f}")
+
+    print("\n--- Summary ---")
+
+    values = [v for _, v in final_positions]
+
+    print(f"Max stability found: {max(values):.3f}")
+    print(f"Mean stability: {np.mean(values):.3f}")
+    print(f"Unique end points: {len(set([p for p,_ in final_positions]))}")
 
     print("\nAgent finished.")
 
