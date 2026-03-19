@@ -41,9 +41,9 @@ python -m nexah demo kuramoto
 
 ### Where to go next
 
-- [Builder Lab Demos](./BUILDER_LAB/demos/) – ready-to-run examples  
-- [Adapter Examples](./ENGINE/adapters/examples/) – connect your own system  
-- [NEXAH AI Chat](./ENGINE/research/nexah_ai/) – ask questions about the framework
+- **[Builder Lab Demos](./BUILDER_LAB/demos/)** – ready-to-run examples you can try immediately  
+- **[Live Multi-Agent Demo](./ENGINE/research/experiments/nexah_stability_driven_multi_agent_system/)** – multiple agents navigating live in a regime landscape  
+- **[Adapter Examples](./ENGINE/adapters/examples/)** – connect your own simulator in minutes
 
 ---
 
