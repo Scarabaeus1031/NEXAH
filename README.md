@@ -68,6 +68,11 @@ Current release: **v1.0**
 - modular architecture established  
 
 ---
+### Want to go deeper?
+
+→ [Extended Documentation & Full Research Details](./README_extended.md)
+
+---
 
 ## Citation
 
