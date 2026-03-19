@@ -31,7 +31,6 @@ python nexah_graph_simulation.py  # Graph + multi-agent navigation
 ## Want to create your own demo?
 
 Just add a new Python file in this folder and register it in the demo runner. The adapter layer makes it easy to connect any system.
-
 ___
 
 ### Visual Gallery
