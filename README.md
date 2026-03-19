@@ -11,7 +11,7 @@ Turn any complex system into a navigable landscape — so AI agents can actively
 
 ---
 
-### Why NEXAH ?
+### Why NEXAH?
 
 Most simulators only tell you **what will happen**.  
 NEXAH shows agents **how to steer** the system toward stability.
@@ -56,7 +56,7 @@ To better understand how **NEXAH** operates across different dynamics and system
 
 ![Navigating Dynamic Systems with NEXAH](./NAVIGATOR/visuals/Navigating_Dynamic_Systems_with_NEXAH.png)
 
-This visual provides insight into the different layers of **NEXAH**, from **Phase Surface Dynamics** to **Stability Potential**, and shows the **core pathways** and **critical points** that NEXAH systems navigate.
+This visual illustrates how **NEXAH** transforms dynamical systems into navigable stability landscapes, highlighting critical points, transition zones, and agent navigation pathways.
 
 ---
 
