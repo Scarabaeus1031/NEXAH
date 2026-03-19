@@ -43,6 +43,21 @@ Das System bietet eine Vielzahl von Simulationsmodulen, die auf den unterschiedl
 
 Die Struktur des Systems ist modular aufgebaut, um eine erweiterbare Plattform für die Forschung und Simulation von Agenteninteraktionen zu bieten. Jede Simulationseinheit ist in einem eigenen Modul gekapselt, sodass unterschiedliche Agenten und Modelle miteinander interagieren können.
 
+## NEXAH Stability-Driven Multi-Agent System - Visual Overview
+
+Das folgende Diagramm veranschaulicht die Hauptmodule des NEXAH Stability-Driven Multi-Agent Systems. Es zeigt, wie die verschiedenen Agenten (Kuramoto, Lorenz, Johnson) in verschiedenen stabilitätsgesteuerten Systemen interagieren, um neue Wissensräume zu erkunden und dynamische Systemverhalten zu analysieren.
+
+Das Diagramm umfasst die folgenden Module:
+	1.	Hub-Ring Shell Scan: Synchronisation und Metastabilität in Hub-Ring Netzwerken.
+	2.	Vortex Density Mapping: Bildung von Wirbelstrukturen durch Kuramoto- und Lorenz-Agenten.
+	3.	Layered Cycle Networks: Symmetrische, geschichtete Graphen und Synchronisationsstudien mit verschiedenen Agenten.
+	4.	Frustration Shell Detection: Langsame Synchronisation und Identifikation frustrierter Netzwerke.
+	5.	Resonance Web Detection: Erkennung von Resonanzkanälen und Phasen-Sperrkoridoren.
+
+Das Visual ist ein essentieller Bestandteil, um die Interaktionen zwischen den Agenten und den dynamischen Systemen zu verstehen.
+
+![NEXAH Stability-Driven Multi-Agent System](./visuals/NEXAH_Stability-Driven_Multi-Agent_System.png)
+
 ### Modulübersicht:
 - **agenten/**: Agentenmodelle (Kuramoto, Lorenz, Johnson)
 - **stabilitätslandschaften/**: Landschaftsgenerierung und Attractor-/Chaos-Detektion
