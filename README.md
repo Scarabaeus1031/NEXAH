@@ -1,7 +1,6 @@
 # NEXAH
 
 **From simulation to navigation.**
-A research framework for navigating stability regimes in complex dynamical systems.
 
 Turn any complex system into a navigable landscape — so AI agents can actively find and maintain stable states instead of just predicting what happens.
 
