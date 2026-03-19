@@ -90,6 +90,9 @@ __all__ = [
     "get_vortex_metrics",
     "get_chimera_status",
     "get_frustration_score",
+    "detect_vortex_defects", "vortex_scan",
+    "local_order_on_ring", "classify_chimera_fraction",
+    "run_simulation", "order_parameter", "vortex_count"
 ]
 
 if __name__ == "__main__":
