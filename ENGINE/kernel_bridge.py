@@ -5,11 +5,11 @@ Schnittstelle für nexah_kernel: Exportiert Schlüssel-Metriken aus structured_o
 
 import numpy as np
 
-# Relative Imports
+# Absolute Imports (geändert für die Skriptausführung)
 try:
     from core.phase_vortex_detector import detect_vortex_defects, vortex_scan
-from core.chimera_state_detector import local_order_on_ring, classify_chimera_fraction
-from topology.shell_frustration_scan import run_simulation, order_parameter, vortex_count
+    from core.chimera_state_detector import local_order_on_ring, classify_chimera_fraction
+    from topology.shell_frustration_scan import run_simulation, order_parameter, vortex_count
 except ImportError as e:
     print(f"Warnung: Einige Imports fehlen – Fehler: {e}")
 
@@ -90,9 +90,9 @@ __all__ = [
     "get_vortex_metrics",
     "get_chimera_status",
     "get_frustration_score",
-    "detect_vortex_defects", "vortex_scan",   # für Vortex
-    "local_order_on_ring", "classify_chimera_fraction",  # für Chimera
-    "run_simulation", "order_parameter", "vortex_count"  # für Frustration
+    "detect_vortex_defects", "vortex_scan",
+    "local_order_on_ring", "classify_chimera_fraction",
+    "run_simulation", "order_parameter", "vortex_count"
 ]
 
 if __name__ == "__main__":
