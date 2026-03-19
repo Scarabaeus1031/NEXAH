@@ -58,6 +58,7 @@ Das Visual ist ein essentieller Bestandteil, um die Interaktionen zwischen den A
 
 ![NEXAH Stability-Driven Multi-Agent System](./visuals/NEXAH_Stability-Driven_Multi-Agent_System.png)
 
+
 ### Modulübersicht:
 - **agenten/**: Agentenmodelle (Kuramoto, Lorenz, Johnson)
 - **stabilitätslandschaften/**: Landschaftsgenerierung und Attractor-/Chaos-Detektion
