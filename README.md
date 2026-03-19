@@ -70,7 +70,7 @@ Current release: **v1.0**
 ---
 ### Want to go deeper?
 
-→ [Extended Documentation & Full Research Details](./README_extended.md)
+→ [Extended Documentation & Full Research Details](./README_nexah_framework_extended.md)
 
 ---
 
