@@ -47,6 +47,14 @@ python -m nexah demo kuramoto
 
 ---
 
+### NEXAH Visual Overview
+
+To better understand how **NEXAH** operates across different dynamics and systems, here is an **overview visual** that shows the key components of the framework and how it interacts with different simulation systems.
+
+![Navigating Dynamic Systems with NEXAH](./NAVIGATOR/visuals/Navigating_Dynamic_Systems_with_NEXAH.png)
+
+This visual provides insight into the different layers of **NEXAH**, from **Phase Surface Dynamics** to **Stability Potential**, and shows the **core pathways** and **critical points** that NEXAH systems navigate.
+
 ---
 
 ## Implementation Status
