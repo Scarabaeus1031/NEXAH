@@ -43,10 +43,7 @@ import matplotlib.pyplot as plt
 from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
 
 # Bridge importieren – Metriken holen
-try:
-    from kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
-    print("Warnung: kernel_bridge nicht gefunden – Metriken werden übersprungen:", e)
-    get_vortex_metrics = get_chimera_status = get_frustration_score = lambda *args, **kwargs: {"error": "Bridge nicht verfügbar"}
+from kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
 
 # --------------------------------------------------
 # NEIGHBORS
