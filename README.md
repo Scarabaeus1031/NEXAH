@@ -47,6 +47,33 @@ python -m nexah demo kuramoto
 
 ---
 
-**License**  
-Apache 2.0 (Code) · CC BY 4.0 (Documentation)  
+---
+
+## Implementation Status
+
+Current release: **v1.0**
+
+- kernel navigation engine implemented  
+- structural graph models operational  
+- fixpoint solver validated  
+- stability analysis modules functional  
+- modular architecture established  
+
+---
+
+## Citation
+
+If you use NEXAH in research or academic work, please cite:
+
+Hofmann, T. (2026).  
+**NEXAH: Structural Navigation in Complex Dynamical Systems**  
+GitHub: https://github.com/Scarabaeus1033/NEXAH
+
+---
+
+## License
+
+Code: **Apache License 2.0**  
+Documentation: **CC BY 4.0**
+
 © 2026 Thomas K. R. Hofmann
