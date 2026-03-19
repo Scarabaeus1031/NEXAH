@@ -32,21 +32,23 @@ python nexah_graph_simulation.py  # Graph + multi-agent navigation
 
 Just add a new Python file in this folder and register it in the demo runner. The adapter layer makes it easy to connect any system.
 ___
-
 ### Visual Gallery
 
 Here are some highlights from the demos — see NEXAH in action:
 
-| ![Cascade](visuals/nexah_cascade.gif) | **Cascade Simulation** – Real-time cascading failures in infrastructure networks |
-| ![Explorer](visuals/nexah_explorer_walk.gif) | **Explorer** – Interactive navigation through regime landscapes |
-| ![System Walk](visuals/nexah_system_walk.gif) | **System Navigation** – Agent moving through a dynamic system state space |
-| ![Energy Grid](visuals/energy_grid_walk.gif) | **Energy Grid** – Stabilizing a power grid under stress |
-| ![Simulation](visuals/nexah_simulation.gif) | **General Simulation** – Overview of NEXAH dynamics and regime transitions |
-| ![Climate](visuals/climate_model_walk.gif) | **Climate Model** – Planetary-scale system evolution |
+| Preview | Description |
+|--------|-------------|
+| ![Cascade](../visuals/nexah_cascade.gif) | **Cascade Simulation** – Real-time cascading failures in infrastructure networks |
+| ![Explorer](../visuals/nexah_explorer_walk.gif) | **Explorer** – Interactive navigation through regime landscapes |
+| ![System Walk](../visuals/nexah_system_walk.gif) | **System Navigation** – Agent moving through a dynamic system state space |
+| ![Energy Grid](../visuals/energy_grid_walk.gif) | **Energy Grid** – Stabilizing a power grid under stress |
+| ![Simulation](../visuals/nexah_simulation.gif) | **General Simulation** – Overview of NEXAH dynamics and regime transitions |
+| ![Climate](../visuals/climate_model_walk.gif) | **Climate Model** – Planetary-scale system evolution |
 
 ---
 
-More visualizations can be found in the `visuals/` folder.
+More visualizations can be found in the `../visuals/` folder.
+
 ---
 
 License
