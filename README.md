@@ -1,6 +1,7 @@
 # NEXAH
 
 **From simulation to navigation.**
+A research framework for navigating stability regimes in complex dynamical systems.
 
 Turn any complex system into a navigable landscape — so AI agents can actively find and maintain stable states instead of just predicting what happens.
 
@@ -50,6 +51,12 @@ python -m nexah demo kuramoto
 
 ---
 
+### Want to go deeper?
+
+→ [Extended Documentation & Full Research Details](./README_nexah_framework_extended.md)
+
+---
+
 ### NEXAH Visual Overview
 
 To better understand how **NEXAH** operates across different dynamics and systems, here is an **overview visual** that shows the key components of the framework and how it interacts with different simulation systems.
@@ -69,11 +76,6 @@ Current release: **v1.0**
 - fixpoint solver validated  
 - stability analysis modules functional  
 - modular architecture established  
-
----
-### Want to go deeper?
-
-→ [Extended Documentation & Full Research Details](./README_nexah_framework_extended.md)
 
 ---
 
