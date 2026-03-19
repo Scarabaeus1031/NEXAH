@@ -32,8 +32,9 @@ python nexah_graph_simulation.py  # Graph + multi-agent navigation
 
 Just add a new Python file in this folder and register it in the demo runner. The adapter layer makes it easy to connect any system.
 ___
-### Visual Gallery
 
+### Visual Gallery
+```
 Here are some highlights from the demos — see NEXAH in action:
 
 | Preview | Description |
@@ -46,7 +47,7 @@ Here are some highlights from the demos — see NEXAH in action:
 | ![Climate](../visuals/climate_model_walk.gif) | **Climate Model** – Planetary-scale system evolution |
 
 ---
-
+```
 More visualizations can be found in the `../visuals/` folder.
 
 ---
