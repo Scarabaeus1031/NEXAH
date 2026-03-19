@@ -18,11 +18,16 @@ python -m nexah demo <name>
 ```
 ### Available Demos
 
-| Demo                        | Description                                      | Command |
-|-----------------------------|--------------------------------------------------|---------|
-| **Basic Demo**              | Simple regime landscape navigation                | `python nexah_demo.py` |
-| **Explorer**                | Interactive regime landscape explorer             | `python nexah_explorer.py` |
-| **Graph Simulation**        | Dynamic state graph + multi-agent navigation      | `python nexah_graph_simulation.py` ||
+| Demo                          | Description                                              | File |
+|-------------------------------|----------------------------------------------------------|------|
+| **Basic Demo**                | Simple regime landscape navigation                       | `nexah_demo.py` |
+| **Explorer**                  | Interactive regime landscape explorer                    | `nexah_explorer.py` |
+| **Graph Simulation**          | Dynamic state graph + multi-agent navigation             | `nexah_graph_simulation.py` |
+| **Control Room**              | Dashboard-style overview of system stability             | `nexah_control_room.py` |
+| **Cascade Visualizer**        | Real-time cascade failure simulation                     | `nexah_cascade_visualizer.py` |
+| **Global System Map**         | Planetary-scale system visualization                     | `nexah_global_system_map.py` |
+
+**Tipp:** Alle Demos können direkt aus dem BUILDER_LAB-Ordner gestartet werden.
 
 ---
 
