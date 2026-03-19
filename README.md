@@ -65,7 +65,7 @@ Current release: **v1.0**
 
 If you use NEXAH in research or academic work, please cite:
 
-Hofmann, T. (2026).  
+Hofmann, T.K.R. (2026).  
 **NEXAH: Structural Navigation in Complex Dynamical Systems**  
 GitHub: https://github.com/Scarabaeus1033/NEXAH
 
