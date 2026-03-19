@@ -11,7 +11,7 @@ Turn any complex system into a navigable landscape — so AI agents can actively
 
 ---
 
-### Why NEXAH?
+### Why NEXAH ?
 
 Most simulators only tell you **what will happen**.  
 NEXAH shows agents **how to steer** the system toward stability.
