@@ -4,6 +4,8 @@ Schnittstelle für nexah_kernel: Exportiert Schlüssel-Metriken aus structured_o
 """
 
 import numpy as np
+import sys
+import os
 
 # Absolute Imports (geändert für die Skriptausführung)
 try:
@@ -12,6 +14,15 @@ try:
     from topology.shell_frustration_scan import run_simulation, order_parameter, vortex_count
 except ImportError as e:
     print(f"Warnung: Einige Imports fehlen – Fehler: {e}")
+    sys.path.append(os.path.join(os.path.dirname(__file__), 'topology'))  # Füge 'topology' zum Pfad hinzu
+    sys.path.append(os.path.join(os.path.dirname(__file__), 'core'))  # Füge 'core' zum Pfad hinzu
+    try:
+        from core.phase_vortex_detector import detect_vortex_defects, vortex_scan
+        from core.chimera_state_detector import local_order_on_ring, classify_chimera_fraction
+        from topology.shell_frustration_scan import run_simulation, order_parameter, vortex_count
+    except ImportError as e:
+        print(f"Fehler beim Importieren nach dem Hinzufügen zum Pfad: {e}")
+        raise
 
 def get_vortex_metrics(phase_ring=None, history=None, threshold=2.2):
     """
