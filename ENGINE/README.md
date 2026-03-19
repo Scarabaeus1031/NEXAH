@@ -250,3 +250,40 @@ The engine acts as the **computational realization of structural models**.
 # NEXAH Engine
 
 A computational framework for exploring the geometry, topology, and dynamics of stability systems.
+
+---
+
+# Structured Oscillator Networks Experiment
+
+This experiment series investigates **structured network topology** and its effects on synchronization dynamics, vortex formation, and phase transitions in coupled oscillator systems. The experiment utilizes **Kuramoto-type models** on customized graph topologies to explore complex phenomena like **hub-cycle structures**, **ring shells**, and **layered symmetry graphs**.
+
+These networks are designed to test how **topology-driven synchronization regimes and vortex structures** emerge within oscillator networks. The research is focused on navigating **resonance networks, phase transitions**, and **chaotic dynamics**, providing valuable insights into high-dimensional dynamical systems.
+
+## Research Motivation
+
+Coupled oscillator systems, particularly Kuramoto-type models, have widespread applications across various fields, including:
+
+- Power grids
+- Neural networks
+- Biological rhythms
+- Chemical oscillators
+- Synchronization in complex networks
+
+While most research deals with **random or regular networks**, this study focuses on **intentional, structured topologies** to understand the effects of network structure on synchronization dynamics.
+
+> **Core Research Question:** How does network topology shape synchronization dynamics and vortex structures in oscillator systems?
+
+## Neuheit & Origineller Beitrag
+
+- **Absichtlich gestaltete Topologien** (Hub-Ring-Shells, symmetrische Layered Cycles C5+C6+C6, Prime-Number-Lattices) statt reiner Zufalls- oder Gitter-Netze
+- Erste systematische Analyse von **Frustration bei spezifischen Shell-Größen** (z. B. N=29, 34 → stark verzögerte Sync, metastabile Cluster)
+- **Prime-Number-Lattices** als neuartige Resonanz-Strukturen: Vermeidung periodischer Artefakte, Förderung natürlicher Resonanzkanäle durch Irregularität
+- Direkte Relevanz für NEXAH: Topologie als **relationale Ordnung** (META-Layer) → prägt Regime-Landschaft, Frustration als Risiko-Indikator, Resonance als Navigationskanäle
+
+## Kernel Bridge Beispiele
+
+Die Bridge exportiert Metriken aus den Experimenten – nutzbar für NEXAH.
+
+```python
+
+from ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
