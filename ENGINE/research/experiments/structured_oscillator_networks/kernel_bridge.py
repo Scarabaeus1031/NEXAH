@@ -12,6 +12,7 @@ try:
     from topology.shell_frustration_scan import run_simulation, order_parameter, vortex_count
 except ImportError as e:
     print(f"Warnung: Einige Imports fehlen – Fehler: {e}")
+    print(f"Warnung: Einige Imports fehlen – Fehler: {e}")
 
 def get_vortex_metrics(phase_ring=None, history=None, threshold=2.2):
     """
