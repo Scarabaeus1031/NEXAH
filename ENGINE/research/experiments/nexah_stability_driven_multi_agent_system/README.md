@@ -1,19 +1,18 @@
+# NEXAH Stability-Driven Multi-Agent System
 
-NEXAH Stability-Driven Multi-Agent System
-
-Überblick
+## Überblick
 
 Das NEXAH Stability-Driven Multi-Agent System ist ein hochdynamisches System, das Multi-Agenten verwendet, um in Stabilitätslandschaften zu navigieren. Jeder Agent verfolgt unterschiedliche Modelle der chaotischen Dynamik und nichtlinearen Übergänge, wie das Kuramoto-Modell für Synchronisation, das Lorenz-Modell für chaotische Dynamiken und das Johnson-Modell für nichtlineare Systeme.
 
 Das System ist darauf ausgelegt, den Prozess der Wissensgenerierung und Entscheidungsfindung durch agentenbasierte Simulation zu erforschen, wobei das dynamische Wechselspiel zwischen Stabilität und Instabilität untersucht wird.
 
-Ziel und Konzept
+## Ziel und Konzept
 	•	Multi-Agenten-Simulationen zur Erforschung von Stabilitätslandschaften.
 	•	Verbindung von chaotischen und nichtlinearen Modellen zur Darstellung komplexer Interaktionen.
 	•	Lern- und Wissensspeicherung durch agentenbasierte Entscheidungen und Feedbackprozesse.
 	•	Integration von neurobiologischen und kognitiven Modellen zur Simulation des menschlichen Entscheidungsprozesses.
 
-Hauptkomponenten:
+## Hauptkomponenten:
 	1.	Agentenmodelle:
 	•	Kuramoto-Agent: Synchronisation in einem Netzwerk von Oszillatoren.
 	•	Lorenz-Agent: Chaotische Dynamik und fraktale Strukturen.
@@ -30,18 +29,19 @@ Hauptkomponenten:
 	•	Emotionale Zustände und deren Einfluss auf Entscheidungen.
 	•	Wissensgenerierung durch Feedback-Mechanismen.
 
-Experimentelle Module und Simulationen
+## Experimentelle Module und Simulationen
 
 Das System bietet eine Vielzahl von Simulationsmodulen, die auf den unterschiedlichen Agentenmodellen basieren:
 	1.	Multi-Agenten-Simulation: Erforschung von Synchronisation und chaotischen Dynamiken.
 	2.	Stabilitätsanalyse: Untersuchung von Übergängen zwischen stabilen und instabilen Zuständen.
 	3.	Phasenübergänge: Analyse von attractor-basierten und chaotischen Übergängen.
 
-Struktur
+
+# Struktur
 
 Die Struktur des Systems ist modular aufgebaut, um eine erweiterbare Plattform für die Forschung und Simulation von Agenteninteraktionen zu bieten. Jede Simulationseinheit ist in einem eigenen Modul gekapselt, sodass unterschiedliche Agenten und Modelle miteinander interagieren können.
 
-Modulübersicht:
+## Modulübersicht:
 	•	agenten/: Agentenmodelle (Kuramoto, Lorenz, Johnson)
 	•	stabilitätslandschaften/: Landschaftsgenerierung und Attractor-/Chaos-Detektion
 	•	wissensspeicherung/: Neuronale Netzwerke, Feedback und Lernprozesse
@@ -51,7 +51,7 @@ Modulübersicht:
 
 ⸻
 
-Nächste Schritte
+## Nächste Schritte
 	1.	Integration von neuronalen und kognitiven Modellen für eine tiefere Simulation von menschlichem Lernen und Entscheidungsprozessen.
 	2.	Erweiterung der Wissensspeicherung und Lernprozesse, um das Langzeitgedächtnis der Agenten zu integrieren.
 	3.	Erstellung spezifischer Experimente zur Untersuchung von Phasenübergängen und Stabilitätszonen in dynamischen Systemen.
