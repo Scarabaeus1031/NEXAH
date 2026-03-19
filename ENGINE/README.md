@@ -1,3 +1,4 @@
+
 # NEXAH Engine — Research Context
 
 This document provides the theoretical and research context for the **NEXAH Engine**.
@@ -287,3 +288,111 @@ Die Bridge exportiert Metriken aus den Experimenten – nutzbar für NEXAH.
 ```python
 
 from ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
+```
+
+## Beispiel: Vortex aus echter History
+```bash
+history = np.load(‘output/phase_history.npy’)
+phase_ring = history[-1]
+print(“Vortex Metrics:”, get_vortex_metrics(phase_ring=phase_ring, history=history))
+```
+## Chimera aus Snapshot
+```bash
+print(“Chimera Status:”, get_chimera_status(phase_ring=phase_ring))
+```
+Frustration für Shell-Größe N=50
+
+print(“Frustration Score:”, get_frustration_score(N=50))
+
+## Experiment Pipeline
+	1.	Topology- & Shell-Scans → Sync-Zeit, Frustration & Metastabilität messen
+	2.	Vortex / Chimera / Defect Detektion → Phase-Space-Partitioning & Topological Defects
+	3.	Resonance & Prime-Grid Exploration → Resonanz-Webs, Locking-Bänder, Phase-Locking-Korridore
+	4.	Visualisierung & Metrik-Extraktion → Plots, PCA, Gradient-Maps, Reports
+	5.	Kernel-Integration → Export von Metriken & Funktionen in nexah_kernel (via kernel_bridge.py)
+
+## Experiment Framework
+
+The Structured Oscillator Networks experiments are divided into key research themes:
+
+## 1. Synchronization Dynamics
+	•	Objective: Study the synchronization behavior of different network topologies.
+	•	Quantities Measured:
+	•	Global order parameter ( R )
+	•	Synchronization time
+	•	Cluster persistence
+
+## 2. Vortex Formation in Phase Space
+	•	Objective: Investigate vortex structures within oscillator phase fields.
+	•	Metrics:
+	•	Vortex persistence
+	•	Cycle-phase analysis
+	•	Topological defects detection
+
+## 3. Topology-Driven Frustration
+	•	Objective: Examine network sizes and topologies that create frustration leading to delayed synchronization or metastable clusters.
+	•	Indicators of Frustration:
+	•	Synchronization delay
+	•	Incomplete phase locking
+	•	Metastable clusters
+
+## 4. Resonance Structures
+	•	Objective: Explore resonance patterns within structured graphs, such as:
+	•	Phase locking channels
+	•	Resonance webs
+	•	Synchronization bands
+
+
+###Key Experiments
+
+Experiment 01: Hub-Ring Shell Scan
+	•	Objective: Investigate synchronization time as a function of shell size in hub-ring networks.
+	•	Results: Measure synchronization time and observe metastability for certain ring sizes.
+
+Experiment 02: Vortex Density Mapping
+	•	Objective: Track the formation of phase vortices across different oscillator topologies.
+	•	Results: Identify regions where vortex formation coincides with synchronization transitions.
+
+Experiment 03: Frustration Shell Detection
+	•	Objective: Detect frustrated networks that fail to synchronize in a timely manner.
+	•	Results: Identify network sizes (e.g., N = 29, 34) where synchronization is delayed due to frustration effects.
+
+Experiment 04: Layered Cycle Networks
+	•	Objective: Study synchronization dynamics in layered symmetry graphs like C5 + C6 + C6.
+	•	Results: Layered topologies enhance synchronization stability under certain conditions.
+
+Experiment 05: Resonance Web Detection
+	•	Objective: Detect resonance channels and phase-locking corridors within oscillator networks.
+	•	Results: Visualize resonance structures across phase space and detect hidden synchronization patterns.
+
+### Prime Number Grids Experiments
+
+In addition to the above experiments, the Prime Number Grid experiments investigate how Prime Number Lattices impact the dynamics of oscillator networks. These experiments focus on resonance patterns within prime-based grids, and their potential to influence synchronization and chaotic transitions.
+
+## Prime Number Grid Experiment Overview
+	•	Objective: Study the effects of Prime Number Lattices on synchronization in oscillator networks.
+	•	Key Variables:
+	•	Prime lattice structure
+	•	Resonance patterns
+	•	Phase transition dynamics
+
+## Prime Number Grid Visuals
+	•	Prime Number Lattice with Symmetry
+
+> Prime-based grid with fixed Y-axis – illustriert Symmetrie und Phase-Verteilung.
+
+## Visual Outputs
+
+The experiment generates several types of visual outputs that are essential for understanding the system’s dynamics:
+	•	Synchronization Time vs Shell Size Plots
+	•	Vortex Density Maps
+	•	Phase Field Visualizations
+	•	Network State Diagrams
+	•	Resonance Field Maps
+
+## Example Visuals
+•	4D Phase Shift Projection
+  ```bash
+>4D phase shift projections showing resonance dynamics.
+```
+
