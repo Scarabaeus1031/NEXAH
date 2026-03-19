@@ -20,10 +20,9 @@ python -m nexah demo <name>
 
 | Demo                        | Description                                      | Command |
 |-----------------------------|--------------------------------------------------|---------|
-| **Kuramoto**                | Multiple agents synchronizing oscillators         | `python -m nexah demo kuramoto` |
-| **Power Grid**              | Preventing cascading blackouts                    | `python -m nexah demo powergrid` |
-| **Lorenz**                  | Navigating chaotic attractors                     | `python -m nexah demo lorenz` |
-| **Basic Stability**         | Simple regime landscape navigation                | `python -m nexah demo basic` |
+| **Basic Demo**              | Simple regime landscape navigation                | `python nexah_demo.py` |
+| **Explorer**                | Interactive regime landscape explorer             | `python nexah_explorer.py` |
+| **Graph Simulation**        | Dynamic state graph + multi-agent navigation      | `python nexah_graph_simulation.py` ||
 
 ---
 
