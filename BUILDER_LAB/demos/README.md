@@ -1,21 +1,18 @@
 # Builder Lab Demos
 
-Ready-to-run examples that show what NEXAH can do.
+Ready-to-run examples that show what NEXAH can do in practice.
 
-This folder contains practical demos that let you instantly see NEXAH in action — from simple oscillator synchronization to complex system stabilization.
+This folder contains interactive demos — from simple regime exploration to complex multi-agent stabilization and cascade visualization.
 
 ### Quick Start
 
-Make sure NEXAH is installed:
-
 ```bash
-pip install -e .
+cd BUILDER_LAB/demos
+python nexah_demo.py              # Basic demo
+python nexah_explorer.py          # Interactive explorer
+python nexah_graph_simulation.py  # Graph + multi-agent navigation
 ```
 
-Then run any demo with:
-```bash
-python -m nexah demo <name>
-```
 ### Available Demos
 
 | Demo                          | Description                                              | File |
@@ -27,7 +24,7 @@ python -m nexah demo <name>
 | **Cascade Visualizer**        | Real-time cascade failure simulation                     | `nexah_cascade_visualizer.py` |
 | **Global System Map**         | Planetary-scale system visualization                     | `nexah_global_system_map.py` |
 
-**Tipp:** Alle Demos können direkt aus dem BUILDER_LAB-Ordner gestartet werden.
+**Tipp:** Alle Demos can be launced from BUILDER_LAB-Folder.
 
 ---
 
@@ -35,4 +32,8 @@ python -m nexah demo <name>
 
 Just add a new Python file in this folder and register it in the demo runner. The adapter layer makes it easy to connect any system.
 
+---
+
+License
+Apache 2.0
 
