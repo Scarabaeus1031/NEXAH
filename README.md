@@ -39,6 +39,8 @@ python -m nexah demo kuramoto
 | Multi-Agent Navigation     | Multiple agents explore the same landscape together       | Coordinated stabilization                  |
 | Visual Regime Landscapes   | See stability basins and agent paths live                 | Real-time understanding                    |
 
+---
+
 ### Where to go next
 
 - **[Builder Lab Demos](./BUILDER_LAB/demos/)** – ready-to-run examples you can try immediately  
