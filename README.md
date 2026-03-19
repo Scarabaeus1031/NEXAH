@@ -1,0 +1,52 @@
+# NEXAH
+
+**From simulation to navigation.**
+
+Turn any complex system into a navigable landscape — so AI agents can actively find and maintain stable states instead of just predicting what happens.
+
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+![Status](https://img.shields.io/badge/status-research%20framework-purple)
+
+---
+
+### Why NEXAH
+
+Most simulators only tell you **what will happen**.  
+NEXAH shows agents **how to steer** the system toward stability.
+
+It works with **any** simulator through a simple adapter layer.
+
+### Quick Start (2 minutes)
+
+```bash
+git clone https://github.com/Scarabaeus1033/NEXAH.git
+cd NEXAH
+pip install -e .
+```
+-----
+Run your first demo:
+```bash
+python -m nexah demo kuramoto
+```
+### Core Features
+
+| Feature                    | What it does                                              | Example use cases                          |
+|----------------------------|-----------------------------------------------------------|--------------------------------------------|
+| SVWIS Operators            | Knot Proximity, Phase Detection, Decision Anchor, Return Flow | Precise local navigation                   |
+| Adapter Layer              | Connect any simulator in minutes                          | PowerGrid, Kuramoto, Supply Chain, Cell Biology |
+| Multi-Agent Navigation     | Multiple agents explore the same landscape together       | Coordinated stabilization                  |
+| Visual Regime Landscapes   | See stability basins and agent paths live                 | Real-time understanding                    |
+
+### Where to go next
+
+- [Builder Lab Demos](./BUILDER_LAB/demos/) – ready-to-run examples  
+- [Adapter Examples](./ENGINE/adapters/examples/) – connect your own system  
+- [NEXAH AI Chat](./ENGINE/research/nexah_ai/) – ask questions about the framework
+
+---
+
+**License**  
+Apache 2.0 (Code) · CC BY 4.0 (Documentation)  
+© 2026 Thomas K. R. Hofmann
