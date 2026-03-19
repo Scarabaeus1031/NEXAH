@@ -1,7 +1,8 @@
 """
 NEXAH Multi-Agent Exploration System
 
-This module demonstrates structural navigation on a stability landscape.
+T°Xx^^xx^^X
+his module demonstrates structural navigation on a stability landscape.
 
 Concept:
 --------
@@ -43,7 +44,7 @@ import matplotlib.pyplot as plt
 from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
 
 # Bridge importieren – Metriken holen
-from kernel-bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
+from kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
 
 # --------------------------------------------------
 # NEIGHBORS
@@ -214,7 +215,7 @@ def visualize_agents(landscape, paths, clusters=None):
 
 # --------------------------------------------------
 # MAIN – mit Bridge-Integration
-# --------------------------------------------------
+# --------------------------------------------------^X
 
 def main():
     print("NEXAH Multi-Agent Demo mit Bridge-Integration")
