@@ -1,6 +1,6 @@
 # NEXAH Framework
 **Structural navigation for complex dynamical systems.**
-
+ 
 A research framework for navigating stability regimes in complex dynamical systems.
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
