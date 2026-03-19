@@ -7,9 +7,9 @@ import numpy as np
 
 # Relative Imports
 try:
-    from .core.phase_vortex_detector import detect_vortex_defects, vortex_scan
-    from .core.chimera_state_detector import local_order_on_ring, classify_chimera_fraction
-    from .topology.shell_frustration_scan import run_simulation, order_parameter, vortex_count
+    from core.phase_vortex_detector import detect_vortex_defects, vortex_scan
+from core.chimera_state_detector import local_order_on_ring, classify_chimera_fraction
+from topology.shell_frustration_scan import run_simulation, order_parameter, vortex_count
 except ImportError as e:
     print(f"Warnung: Einige Imports fehlen – Fehler: {e}")
 
