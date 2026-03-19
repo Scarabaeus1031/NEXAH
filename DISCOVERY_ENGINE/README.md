@@ -21,6 +21,7 @@ python resilience_architecture_evolver.py
 python resilience_landscape.py
 python visualize_system.py
 ```
-Want to go deeper?→ Full Tool Capabilities & Pipeline (./TOOL_CAPABILITIES.md) (extended documentation)
 
+### Want to go deeper?
 
+→ **[Tool Capabilities & Pipeline](./TOOL_CAPABILITIES.md)**
