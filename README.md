@@ -27,8 +27,8 @@ git clone https://github.com/Scarabaeus1033/NEXAH.git
 cd NEXAH
 pip install -e .
 ```
------
-Run your first demo:
+
+### Run your first demo:
 ```bash
 python -m nexah demo kuramoto
 ```
