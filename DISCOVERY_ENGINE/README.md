@@ -2,8 +2,6 @@
 
 Tools for architecture exploration, resilience analysis and structural law discovery.
 
-![NEXAH Discovery Pipeline](visuals/nexah_engine_pipeline_visual.png)
-
 This folder contains the computational laboratory of NEXAH — a set of research tools that generate, evolve and analyze system architectures.
 
 ### What you can do here
@@ -41,6 +39,21 @@ The NEXAH Discovery Engine currently supports:
 (60+ tools, complete discovery pipeline and status overview)
 
 → **[Extended Documentation](./README_extended.md)**
+
+___
+
+![NEXAH Discovery Engine](visuals/nexah_kernel_architecture_map.png)
+
+This visual shows the **core architecture of the NEXAH Discovery Engine**.
+
+It illustrates how raw system simulations are transformed into **structured, navigable stability landscapes** through layered processing:
+
+- **META** – relational system structure  
+- **ARCHY** – local dynamics modeling  
+- **MESO** – stability and risk landscape computation  
+- **MEVA** – intervention and control strategies  
+
+Together, these layers form the **navigation pipeline** that allows agents to move from observation to action in complex dynamical systems.
 
 ---
 
