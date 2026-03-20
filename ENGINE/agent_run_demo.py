@@ -5,7 +5,7 @@ import sys
 import os
 
 # --------------------------------------------------
-# IMPORTS + Ordner sicherstellen
+# IMPORTS
 # --------------------------------------------------
 try:
     from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
@@ -21,11 +21,10 @@ try:
 except:
     BRIDGE_AVAILABLE = False
 
-# Ordner für Visuals sicherstellen
 os.makedirs("BUILDER_LAB/visuals", exist_ok=True)
 
 # --------------------------------------------------
-# NEIGHBORS
+# NEIGHBORS + AGENTS + RL + CLUSTERING
 # --------------------------------------------------
 def get_neighbors(pos, size):
     x, y = pos
@@ -37,9 +36,6 @@ def get_neighbors(pos, size):
             neighbors.append((nx, ny))
     return neighbors
 
-# --------------------------------------------------
-# AGENTS
-# --------------------------------------------------
 def run_agent(landscape, role="climber", steps=50):
     size = landscape.shape[0]
     pos = (np.random.randint(0, size), np.random.randint(0, size))
@@ -65,9 +61,6 @@ def run_agent(landscape, role="climber", steps=50):
         path.append(pos)
     return path
 
-# --------------------------------------------------
-# RL AGENT
-# --------------------------------------------------
 def run_rl_agent(landscape, episodes=30):
     size = landscape.shape[0]
     Q = np.zeros((size, size, 4))
@@ -97,9 +90,6 @@ def run_rl_agent(landscape, episodes=30):
         path.append(pos)
     return path
 
-# --------------------------------------------------
-# CLUSTERING
-# --------------------------------------------------
 def cluster_endpoints(points, threshold=3):
     clusters = []
     for p in points:
@@ -118,12 +108,12 @@ def cluster_endpoints(points, threshold=3):
     return clusters
 
 # --------------------------------------------------
-# ANIMATION (GIF) → mit "test_" Prefix
+# GIF (neutraler Titel + test_ Prefix)
 # --------------------------------------------------
-def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/test_nexah_multi_agent.gif"):
+def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/test_multi_agent_navigation.gif"):
     fig, ax = plt.subplots(figsize=(8,6))
     ax.imshow(landscape, cmap="viridis", origin="lower")
-    ax.set_title("NEXAH Multi-Agent Navigation")
+    ax.set_title("Multi-Agent Navigation")          # ← KEIN NEXAH mehr
     lines = []
     points = []
     for _ in paths:
@@ -149,19 +139,18 @@ def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/te
     print(f"✅ TEST-GIF gespeichert → {save_path}")
 
 # --------------------------------------------------
-# TEMPORAL OVERLAY (GitHub-Desktop-Effekt) → mit "test_" Prefix
+# STATIC OVERLAY (bleibt als test_ Version)
 # --------------------------------------------------
-def save_multi_frame_overlay(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/test_nexah_all_paths_overlay.png"):
+def save_multi_frame_overlay(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/test_multi_agent_overlay.png"):
     fig, ax = plt.subplots(figsize=(9, 7))
     ax.imshow(landscape, cmap="viridis", origin="lower")
-    ax.set_title("NEXAH — Temporal Path Overlay (GitHub Desktop Style)")
+    ax.set_title("Multi-Agent Navigation Overlay")
     
     colors = ['red', 'magenta', 'cyan', 'lime', 'orange', 'purple', 'yellow', 'white']
     
     for i, path in enumerate(paths):
         color = colors[i % len(colors)]
         length = len(path)
-        # 3 Zeitpunkte übereinanderlegen
         for stage, alpha in [(0, 0.25), (length//2, 0.55), (length-1, 0.95)]:
             xs = [p[0] for p in path[:stage+1]]
             ys = [p[1] for p in path[:stage+1]]
@@ -169,7 +158,6 @@ def save_multi_frame_overlay(landscape, paths, clusters, save_path="BUILDER_LAB/
             if stage > 0:
                 ax.scatter(xs[-1], ys[-1], s=45, color=color, alpha=alpha, edgecolor='white')
     
-    # Cluster
     for c in clusters:
         cx, cy = c["center"]
         ax.scatter(cx, cy, s=220, marker="X", color="white", edgecolor="black", linewidth=3, zorder=10)
@@ -183,7 +171,7 @@ def save_multi_frame_overlay(landscape, paths, clusters, save_path="BUILDER_LAB/
 # MAIN
 # --------------------------------------------------
 def main():
-    print("\n🚀 NEXAH Multi-Agent Demo gestartet (TEST-Version)\n")
+    print("\n🚀 Multi-Agent Navigation Demo gestartet\n")
     landscape = generate_stability_landscape()
     
     paths = []
@@ -211,10 +199,7 @@ def main():
     for i, c in enumerate(clusters):
         print(f"  {i}: {c['center']} ({len(c['points'])} Agenten)")
     
-    # GIF (neuer Name)
     animate_agents(landscape, paths, clusters)
-    
-    # Temporal Overlay (neuer Name)
     save_multi_frame_overlay(landscape, paths, clusters)
 
 if __name__ == "__main__":
