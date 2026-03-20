@@ -35,6 +35,8 @@ No predefined objective.
 Agents do not optimize —  
 they **discover stability**.
 
+This is not reinforcement learning. This is navigation.
+
 It works with **any** simulator through a simple adapter layer.
 
 ### Quick Start (2 minutes)
@@ -53,7 +55,7 @@ python -m nexah demo kuramoto
 
 | Feature                    | What it does                                              | Example use cases                          |
 |----------------------------|-----------------------------------------------------------|--------------------------------------------|
-| SVWIS Operators            | Knot Proximity, Phase Detection, Decision Anchor, Return Flow | Precise local navigation                   |
+| SVWIS Operators            | Local structural rules for detecting and navigating stability | Precise local navigation                   |
 | Adapter Layer              | Connect any simulator in minutes                          | PowerGrid, Kuramoto, Supply Chain, Cell Biology |
 | Multi-Agent Navigation     | Multiple agents explore the same landscape together       | Coordinated stabilization                  |
 | Visual Regime Landscapes   | See stability basins and agent paths live                 | Real-time understanding                    |
