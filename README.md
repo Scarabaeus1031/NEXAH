@@ -55,7 +55,7 @@ python -m nexah demo kuramoto
 
 - **[Builder Lab Demos](./BUILDER_LAB/demos/)** – ready-to-run examples you can try immediately  
 - **[Live Multi-Agent Demo](./ENGINE/research/experiments/nexah_stability_driven_multi_agent_system/)** – multiple agents navigating live in a regime landscape  
-- **[Adapter Examples](./APPLICATIONS/adapters/examples/)** – connect your own simulator in minutes  
+- **[Adapter Examples](./APPLICATIONS/adapters/README.md)** – connect your own simulator in minutes  
 - **[Discovery Engine](./DISCOVERY_ENGINE/)** – architecture exploration, resilience analysis & structural law discovery tools  
 ---
 ### Automated Tests & Validation
