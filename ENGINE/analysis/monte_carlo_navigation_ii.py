@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import os
 
 from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
+from ENGINE.analysis.pattern_analysis import analyze_field, compare_with_random
 
 # --------------------------------------------------
 # CONFIG
@@ -115,3 +116,30 @@ def plot_and_save(landscape, visit_map, endpoint_map):
 if __name__ == "__main__":
     landscape, visit_map, endpoint_map = run_monte_carlo()
     plot_and_save(landscape, visit_map, endpoint_map)
+
+    # --------------------------------------------------
+    # PATTERN ANALYSIS
+    # --------------------------------------------------
+
+    print("\n--- PATTERN ANALYSIS ---")
+
+    results = analyze_field(visit_map)
+
+    for k, v in results.items():
+        print(k, ":", v)
+
+    # --------------------------------------------------
+    # RANDOM COMPARISON
+    # --------------------------------------------------
+
+    print("\n--- COMPARISON WITH RANDOM ---")
+
+    comparison = compare_with_random(visit_map)
+
+    print("\nREAL:")
+    for k, v in comparison["real"].items():
+        print(k, ":", v)
+
+    print("\nRANDOM:")
+    for k, v in comparison["random"].items():
+        print(k, ":", v)
