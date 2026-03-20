@@ -2,11 +2,6 @@
 
 **From simulation to navigation.**
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
-![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
-![License](https://img.shields.io/badge/license-Apache%202.0-blue)
-![Status](https://img.shields.io/badge/status-research%20framework-purple)
-
 ![NEXAH Multi-Agent Navigation – Agents exploring a stability landscape and converging toward stable regimes](BUILDER_LAB/visuals/nexah_multi_agent.gif)
 *Agents exploring a stability landscape and converging toward stable regimes (no reward function, no predefined goal)*
 
@@ -17,6 +12,10 @@
 - navigating chaotic systems  
 - autonomous scientific discovery  
 
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue)
+![Status](https://img.shields.io/badge/status-research%20framework-purple)
 ---
 
 ### Why NEXAH?
