@@ -27,6 +27,14 @@ Agents converge to stability anyway.*
 Most simulators only tell you **what will happen**.  
 NEXAH shows agents **how to steer** the system toward stability.
 
+### What makes this different?
+
+No reward function.  
+No predefined objective.  
+
+Agents do not optimize —  
+they **discover stability**.
+
 It works with **any** simulator through a simple adapter layer.
 
 ### Quick Start (2 minutes)
