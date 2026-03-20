@@ -5,10 +5,13 @@
 ### What if AI didn’t just simulate chaos — but learned how to navigate it?
 
 ![NEXAH Multi-Agent Navigation – Agents exploring a stability landscape and converging toward stable regimes](BUILDER_LAB/visuals/nexah_multi_agent.gif)
+
 *Agents exploring a stability landscape and converging toward stable regimes (no reward function, no predefined goal)*
 
+---
+
 **Use cases:**
-- stabilizing power grids
+- stabilizing power grids  
 - navigating chaotic systems  
 - autonomous scientific discovery  
 
