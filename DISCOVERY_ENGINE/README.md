@@ -22,7 +22,6 @@ python resilience_landscape.py
 python visualize_system.py
 ```
 
-
 → **[Tool Capabilities & Pipeline](./TOOL_CAPABILITIES.md)**
 
 ### Tool Capabilities Highlights
