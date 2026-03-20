@@ -3,8 +3,14 @@
 **From simulation to navigation.**
 
 ![NEXAH Multi-Agent Navigation – Agents exploring a stability landscape and converging toward stable regimes](BUILDER_LAB/visuals/nexah_multi_agent.gif)
+*Agents exploring a stability landscape and converging toward stable regimes (no reward function, no predefined goal)*
 
-Turn any complex system into a navigable landscape — so AI agents can actively find and maintain stable states instead of just predicting what happens.
+*What if AI didn’t just simulate chaos — but learned how to navigate it?
+
+**Use cases:**
+- stabilizing power grids  
+- navigating chaotic systems  
+- autonomous scientific discovery  
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
