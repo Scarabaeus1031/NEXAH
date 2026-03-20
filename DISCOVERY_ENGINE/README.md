@@ -22,6 +22,31 @@ python resilience_landscape.py
 python visualize_system.py
 ```
 
-### Want to go deeper?
 
 → **[Tool Capabilities & Pipeline](./TOOL_CAPABILITIES.md)**
+
+### Tool Capabilities Highlights
+
+The NEXAH Discovery Engine currently supports:
+- **Architecture Exploration** – generate and evolve thousands of system designs
+- **Resilience Analysis** – evaluate stability and failure propagation
+- **Landscape Mapping** – create 3D resilience landscapes and phase diagrams
+- **Law Discovery** – search for universal structural principles
+- **Navigation Layer** – steer agents through architecture space
+
+### Want to go deeper?
+
+→ **[Full Tool Capabilities & Pipeline](./TOOL_CAPABILITIES.md)**  
+(60+ tools, complete discovery pipeline and status overview)
+
+→ **[Extended Documentation](./README_extended.md)**
+
+---
+
+**License**  
+Apache 2.0
+
+---
+**License**
+Apache 2.0
+
