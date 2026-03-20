@@ -4,9 +4,18 @@ import matplotlib.animation as animation
 import sys
 import os
 
+# --------------------------------------------------
+# WICHTIGER IMPORT (das war der Fehler!)
+# --------------------------------------------------
+try:
+    from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
+except ImportError:
+    print("⚠️  generate_stability_landscape konnte nicht importiert werden!")
+    sys.exit(1)
+
 # Optional Bridge zu deinem ENGINE-Modul
 try:
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'ENGINE')))
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
     from kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
     BRIDGE_AVAILABLE = True
 except:
@@ -137,7 +146,7 @@ def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/ne
     print(f"✅ GIF gespeichert → {save_path}")
 
 # --------------------------------------------------
-# STATIC OVERLAY (alle Pfade + Cluster gleichzeitig – genau der GitHub-Desktop-Effekt)
+# STATIC OVERLAY (alle Pfade gleichzeitig – genau der GitHub-Desktop-Effekt)
 # --------------------------------------------------
 def save_static_overlay(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/nexah_all_paths_overlay.png"):
     fig, ax = plt.subplots(figsize=(9, 7))
@@ -195,7 +204,7 @@ def main():
     # GIF Animation
     animate_agents(landscape, paths, clusters)
     
-    # Statische Overlay-Version (genau der coole Effekt aus GitHub Desktop)
+    # Statische Overlay-Version
     save_static_overlay(landscape, paths, clusters)
 
 if __name__ == "__main__":
