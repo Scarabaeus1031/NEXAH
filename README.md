@@ -2,10 +2,10 @@
 
 **From simulation to navigation.**
 
+### What if AI didn’t just simulate chaos — but learned how to navigate it?
+
 ![NEXAH Multi-Agent Navigation – Agents exploring a stability landscape and converging toward stable regimes](BUILDER_LAB/visuals/nexah_multi_agent.gif)
 *Agents exploring a stability landscape and converging toward stable regimes (no reward function, no predefined goal)*
-
-### What if AI didn’t just simulate chaos — but learned how to navigate it?
 
 **Use cases:**
 - stabilizing power grids  
