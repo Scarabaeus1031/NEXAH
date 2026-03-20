@@ -6,7 +6,8 @@
 
 ![NEXAH Multi-Agent Navigation – Agents exploring a stability landscape and converging toward stable regimes](BUILDER_LAB/visuals/nexah_multi_agent.gif)
 
-*Agents exploring a stability landscape and converging toward stable regimes (no reward function, no predefined goal)*
+*Agents exploring a stability landscape and converging toward stable regimes *No reward. No goal.  
+Agents converge to stability anyway.*
 
 ---
 
