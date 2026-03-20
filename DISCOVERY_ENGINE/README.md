@@ -2,6 +2,8 @@
 
 Tools for architecture exploration, resilience analysis and structural law discovery.
 
+![NEXAH Discovery Pipeline](visuals/nexah_engine_pipeline_visual.png)
+
 This folder contains the computational laboratory of NEXAH — a set of research tools that generate, evolve and analyze system architectures.
 
 ### What you can do here
