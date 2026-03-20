@@ -5,7 +5,7 @@ import sys
 import os
 
 # --------------------------------------------------
-# WICHTIGER IMPORT (das war der Fehler!)
+# IMPORTS + Ordner sicherstellen
 # --------------------------------------------------
 try:
     from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
@@ -13,13 +13,16 @@ except ImportError:
     print("⚠️  generate_stability_landscape konnte nicht importiert werden!")
     sys.exit(1)
 
-# Optional Bridge zu deinem ENGINE-Modul
+# Optional Bridge
 try:
     sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
     from kernel_bridge import get_vortex_metrics, get_chimera_status, get_frustration_score
     BRIDGE_AVAILABLE = True
 except:
     BRIDGE_AVAILABLE = False
+
+# Ordner für Visuals sicherstellen
+os.makedirs("BUILDER_LAB/visuals", exist_ok=True)
 
 # --------------------------------------------------
 # NEIGHBORS
@@ -115,9 +118,9 @@ def cluster_endpoints(points, threshold=3):
     return clusters
 
 # --------------------------------------------------
-# ANIMATION (GIF)
+# ANIMATION (GIF) → mit "test_" Prefix
 # --------------------------------------------------
-def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/nexah_multi_agent.gif"):
+def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/test_nexah_multi_agent.gif"):
     fig, ax = plt.subplots(figsize=(8,6))
     ax.imshow(landscape, cmap="viridis", origin="lower")
     ax.set_title("NEXAH Multi-Agent Navigation")
@@ -143,37 +146,44 @@ def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/ne
         return lines + points
     ani = animation.FuncAnimation(fig, update, frames=max_steps, interval=120, blit=True)
     ani.save(save_path, writer="pillow")
-    print(f"✅ GIF gespeichert → {save_path}")
+    print(f"✅ TEST-GIF gespeichert → {save_path}")
 
 # --------------------------------------------------
-# STATIC OVERLAY (alle Pfade gleichzeitig – genau der GitHub-Desktop-Effekt)
+# TEMPORAL OVERLAY (GitHub-Desktop-Effekt) → mit "test_" Prefix
 # --------------------------------------------------
-def save_static_overlay(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/nexah_all_paths_overlay.png"):
+def save_multi_frame_overlay(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/test_nexah_all_paths_overlay.png"):
     fig, ax = plt.subplots(figsize=(9, 7))
     ax.imshow(landscape, cmap="viridis", origin="lower")
-    ax.set_title("NEXAH — All Agent Paths + Final Clusters")
+    ax.set_title("NEXAH — Temporal Path Overlay (GitHub Desktop Style)")
     
-    colors = ['red', 'magenta', 'cyan', 'lime', 'orange', 'purple', 'white', 'yellow']
+    colors = ['red', 'magenta', 'cyan', 'lime', 'orange', 'purple', 'yellow', 'white']
+    
     for i, path in enumerate(paths):
-        xs = [p[0] for p in path]
-        ys = [p[1] for p in path]
-        ax.plot(xs, ys, color=colors[i % len(colors)], linewidth=1.8, alpha=0.85)
-        ax.scatter(xs[-1], ys[-1], s=60, color=colors[i % len(colors)], edgecolor='white', zorder=5)
+        color = colors[i % len(colors)]
+        length = len(path)
+        # 3 Zeitpunkte übereinanderlegen
+        for stage, alpha in [(0, 0.25), (length//2, 0.55), (length-1, 0.95)]:
+            xs = [p[0] for p in path[:stage+1]]
+            ys = [p[1] for p in path[:stage+1]]
+            ax.plot(xs, ys, color=color, linewidth=2.8, alpha=alpha)
+            if stage > 0:
+                ax.scatter(xs[-1], ys[-1], s=45, color=color, alpha=alpha, edgecolor='white')
     
+    # Cluster
     for c in clusters:
         cx, cy = c["center"]
-        ax.scatter(cx, cy, s=180, marker="X", color="white", edgecolor="black", linewidth=2, zorder=10)
-        ax.text(cx+1, cy-1, f"{len(c['points'])}", color="black", fontsize=9, ha='center', va='center', fontweight='bold')
+        ax.scatter(cx, cy, s=220, marker="X", color="white", edgecolor="black", linewidth=3, zorder=10)
+        ax.text(cx+0.8, cy-0.8, f"{len(c['points'])}", color="black", fontsize=11, ha='center', va='center', fontweight='bold')
     
     plt.tight_layout()
-    plt.savefig(save_path, dpi=200, bbox_inches='tight')
-    print(f"✅ Statische Overlay-PNG gespeichert → {save_path}")
+    plt.savefig(save_path, dpi=250, bbox_inches='tight')
+    print(f"✅ TEST-Overlay-PNG gespeichert → {save_path}")
 
 # --------------------------------------------------
 # MAIN
 # --------------------------------------------------
 def main():
-    print("\n🚀 NEXAH Multi-Agent Demo gestartet\n")
+    print("\n🚀 NEXAH Multi-Agent Demo gestartet (TEST-Version)\n")
     landscape = generate_stability_landscape()
     
     paths = []
@@ -201,11 +211,11 @@ def main():
     for i, c in enumerate(clusters):
         print(f"  {i}: {c['center']} ({len(c['points'])} Agenten)")
     
-    # GIF Animation
+    # GIF (neuer Name)
     animate_agents(landscape, paths, clusters)
     
-    # Statische Overlay-Version
-    save_static_overlay(landscape, paths, clusters)
+    # Temporal Overlay (neuer Name)
+    save_multi_frame_overlay(landscape, paths, clusters)
 
 if __name__ == "__main__":
     main()
