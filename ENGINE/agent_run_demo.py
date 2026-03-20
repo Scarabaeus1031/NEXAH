@@ -113,7 +113,7 @@ def cluster_endpoints(points, threshold=3):
 def animate_agents(landscape, paths, clusters, save_path="BUILDER_LAB/visuals/test_multi_agent_navigation.gif"):
     fig, ax = plt.subplots(figsize=(8,6))
     ax.imshow(landscape, cmap="viridis", origin="lower")
-    ax.set_title("Multi-Agent Navigation")          # ← KEIN NEXAH mehr
+  # ax.set_title(...)
     lines = []
     points = []
     for _ in paths:
