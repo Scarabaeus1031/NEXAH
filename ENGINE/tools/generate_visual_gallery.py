@@ -95,4 +95,4 @@ os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 with open(OUTPUT_FILE, "w") as f:
     f.writelines("\n".join(lines))
 
-print("Visual gallery generated:", OUTPUT_FILE)
+print("Visual gallery generated:", OUTPUT_FILE="DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md")
