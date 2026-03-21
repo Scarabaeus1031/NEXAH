@@ -18,59 +18,103 @@ LEVELS = {
     24: "Multi-Shell Resonance",
     25: "Shell Coupling",
     26: "Geometry Collapse",
-    27: "Autonomous Field"
+    27: "Autonomous Field",
+    35: "Resonance Alignment",
+    36: "Resonance Dynamics",
+    37: "Phi Attractor Mapping",
+    38: "Phi Basin Locking",
+    38.5: "Phi Soft Lock",
+    39: "Phi Orbit Spiral Lock",
+    40: "Phase Transition Detection"
 }
 
 DESCRIPTIONS = {
-    20: "dense overlapping trajectories • high coherence • uniform motion",
-    21: "phase fragmentation • increased diversity • structured instability",
-    22: "radial density formation • central clustering • early shell geometry",
-    23: "stable cyclic trajectories • ring formation • orbit dynamics",
-    24: "multiple shells • resonance patterns • layered structures",
-    25: "cross-shell interaction • asymmetric density • coupling zones",
-    26: "smooth circular geometry • strong alignment • minimal noise",
-    27: "self-sustained structures • internal coordinates • emerging grids"
+    35: "local alignment structures • directional coherence",
+    36: "temporal resonance patterns • oscillatory motion",
+    37: "phi attractor regions • clustered resonance zones",
+    38: "hard basin locking • strong stability regions",
+    38.5: "soft locking • sparse stable regions",
+    39: "orbit + spiral structures • dynamic locking",
+    40: "rare transition points • regime switching events"
 }
 
 # --------------------------------------------------
-# HELPER
+# FIND LATEST RUN PER LEVEL
 # --------------------------------------------------
 
-def get_latest_image(folder):
-    if not os.path.exists(folder):
-        print("Missing folder:", folder)
+def extract_level(folder_name):
+    try:
+        if "level" in folder_name:
+            part = folder_name.split("level")[1]
+            num = part.split("_")[0]
+            return float(num.replace("b", ".5"))
+    except:
         return None
-    images = glob(os.path.join(folder, "*.png"))
-    if not images:
-        print("No images in:", folder)
+    return None
+
+
+def get_latest_run_folders():
+    folders = glob(os.path.join(VISUALS_ROOT, "level*"))
+    level_map = {}
+
+    for f in folders:
+        name = os.path.basename(f)
+        lvl = extract_level(name)
+
+        if lvl is None:
+            continue
+
+        if lvl not in level_map:
+            level_map[lvl] = []
+
+        level_map[lvl].append(f)
+
+    # pick latest per level
+    latest = {}
+    for lvl, flist in level_map.items():
+        latest[lvl] = max(flist, key=os.path.getctime)
+
+    return latest
+
+
+def get_image(folder):
+    imgs = glob(os.path.join(folder, "*.png"))
+    if not imgs:
         return None
-    return max(images, key=os.path.getctime)
+    return max(imgs, key=os.path.getctime)
 
 # --------------------------------------------------
 # BUILD GALLERY
 # --------------------------------------------------
 
-lines = []
+latest_runs = get_latest_run_folders()
 
+lines = []
 lines.append("# NEXAH Dynamics Engine — Visual Gallery\n")
 lines.append("Auto-generated from simulation outputs.\n\n---\n")
 
-for level, title in LEVELS.items():
+for lvl in sorted(LEVELS.keys()):
 
-    folder = os.path.join(VISUALS_ROOT, f"navigation_level{level}")
-    img = get_latest_image(folder)
+    title = LEVELS[lvl]
+    lines.append(f"\n# LEVEL {lvl} — {title}\n")
 
-    lines.append(f"\n# LEVEL {level} — {title}\n")
+    folder = latest_runs.get(lvl)
 
-    if img:
-        rel_path = os.path.relpath(img, start=os.path.dirname(OUTPUT_FILE))
-        rel_path = rel_path.replace("\\", "/")  # GitHub fix
-        lines.append(f"\n![Level {level}]({rel_path})\n")
+    if folder:
+        img = get_image(folder)
+
+        if img:
+            rel_path = os.path.relpath(img, start=os.path.dirname(OUTPUT_FILE))
+            rel_path = rel_path.replace("\\", "/")
+            lines.append(f"\n![Level {lvl}]({rel_path})\n")
+        else:
+            lines.append("\n*(no image found in latest run)*\n")
     else:
-        lines.append("\n*(no image found)*\n")
+        lines.append("\n*(no run found)*\n")
 
-    desc = DESCRIPTIONS.get(level, "")
-    lines.append(f"\n• {desc}\n")
+    desc = DESCRIPTIONS.get(lvl, "")
+    if desc:
+        lines.append(f"\n• {desc}\n")
 
     lines.append("\n---\n")
 
