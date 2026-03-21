@@ -8,10 +8,7 @@ Auto-generated from simulation outputs.
 # LEVEL 20 — Phase Synchronization
 
 
-![Level 20](../../ENGINE/visuals/navigation_level20/navigation_level20_20260321_054300.png)
-
-
-• dense overlapping trajectories • high coherence • uniform motion
+*(no run found)*
 
 
 ---
@@ -20,10 +17,7 @@ Auto-generated from simulation outputs.
 # LEVEL 21 — Controlled Desync
 
 
-![Level 21](../../ENGINE/visuals/navigation_level21/level21_20260321_114215.png)
-
-
-• phase fragmentation • increased diversity • structured instability
+*(no run found)*
 
 
 ---
@@ -32,10 +26,7 @@ Auto-generated from simulation outputs.
 # LEVEL 22 — Crown / Shell
 
 
-![Level 22](../../ENGINE/visuals/navigation_level22/level22_20260321_115358.png)
-
-
-• radial density formation • central clustering • early shell geometry
+*(no run found)*
 
 
 ---
@@ -44,10 +35,7 @@ Auto-generated from simulation outputs.
 # LEVEL 23 — Orbit Stabilization
 
 
-![Level 23](../../ENGINE/visuals/navigation_level23/level23_20260321_120705.png)
-
-
-• stable cyclic trajectories • ring formation • orbit dynamics
+*(no run found)*
 
 
 ---
@@ -56,10 +44,7 @@ Auto-generated from simulation outputs.
 # LEVEL 24 — Multi-Shell Resonance
 
 
-![Level 24](../../ENGINE/visuals/navigation_level24/level24_20260321_121945.png)
-
-
-• multiple shells • resonance patterns • layered structures
+*(no run found)*
 
 
 ---
@@ -68,10 +53,7 @@ Auto-generated from simulation outputs.
 # LEVEL 25 — Shell Coupling
 
 
-![Level 25](../../ENGINE/visuals/navigation_level25/level25_20260321_124923.png)
-
-
-• cross-shell interaction • asymmetric density • coupling zones
+*(no run found)*
 
 
 ---
@@ -80,10 +62,7 @@ Auto-generated from simulation outputs.
 # LEVEL 26 — Geometry Collapse
 
 
-![Level 26](../../ENGINE/visuals/navigation_level26/level26_20260321_125755.png)
-
-
-• smooth circular geometry • strong alignment • minimal noise
+*(no run found)*
 
 
 ---
@@ -92,10 +71,91 @@ Auto-generated from simulation outputs.
 # LEVEL 27 — Autonomous Field
 
 
-![Level 27](../../ENGINE/visuals/navigation_level27/level27_20260321_131815.png)
+*(no run found)*
 
 
-• self-sustained structures • internal coordinates • emerging grids
+---
+
+
+# LEVEL 35 — Resonance Alignment
+
+
+*(no run found)*
+
+
+• local alignment structures • directional coherence
+
+
+---
+
+
+# LEVEL 36 — Resonance Dynamics
+
+
+*(no run found)*
+
+
+• temporal resonance patterns • oscillatory motion
+
+
+---
+
+
+# LEVEL 37 — Phi Attractor Mapping
+
+
+*(no run found)*
+
+
+• phi attractor regions • clustered resonance zones
+
+
+---
+
+
+# LEVEL 38 — Phi Basin Locking
+
+
+*(no run found)*
+
+
+• hard basin locking • strong stability regions
+
+
+---
+
+
+# LEVEL 38.5 — Phi Soft Lock
+
+
+![Level 38.5](../../ENGINE/visuals/level38b_20260321_201752/plot.png)
+
+
+• soft locking • sparse stable regions
+
+
+---
+
+
+# LEVEL 39 — Phi Orbit Spiral Lock
+
+
+![Level 39](../../ENGINE/visuals/level39_20260321_202908/plot copy.png)
+
+
+• orbit + spiral structures • dynamic locking
+
+
+---
+
+
+# LEVEL 40 — Phase Transition Detection
+
+
+![Level 40](../../ENGINE/visuals/level40_20260321_204235/plot.png)
+
+
+• rare transition points • regime switching events
 
 
 ---
