@@ -1,16 +1,12 @@
 import os
-import shutil
 from glob import glob
 
 # --------------------------------------------------
 # CONFIG
 # --------------------------------------------------
 
-VISUALS_ROOT = "ENGINE/visuals"
+VISUALS_ROOT = "DISCOVERY_ENGINE/visuals"
 OUTPUT_FILE = "DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md"
-CURATED_DIR = "DISCOVERY_ENGINE/visuals/dynamics"
-
-os.makedirs(CURATED_DIR, exist_ok=True)
 
 LEVELS = {
     20: "Phase Synchronization",
@@ -50,13 +46,8 @@ for level, title in LEVELS.items():
     lines.append(f"\n# LEVEL {level} — {title}\n")
 
     if img:
-        # copy to curated folder
-        target_path = os.path.join(CURATED_DIR, f"level{level}.png")
-        shutil.copy(img, target_path)
-
-        rel_path = os.path.relpath(target_path, start=".")
+        rel_path = os.path.relpath(img, start=".")
         lines.append(f"\n![Level {level}]({rel_path})\n")
-
     else:
         lines.append("\n*(no image found)*\n")
 
@@ -71,4 +62,4 @@ os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 with open(OUTPUT_FILE, "w") as f:
     f.write("\n".join(lines))
 
-print("Gallery + curated visuals updated")
+print("Visual gallery updated:", OUTPUT_FILE)
