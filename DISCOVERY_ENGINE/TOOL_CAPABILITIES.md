@@ -13,6 +13,7 @@ The framework supports:
 • structural law discovery  
 • theory validation  
 • architecture navigation  
+• **dynamic system evolution and phase-space navigation (NEW)**  
 
 Together they implement a **complete research pipeline for discovering structural principles of resilient systems.**
 
@@ -173,7 +174,7 @@ Candidate laws can now be **tested and validated across large architecture popul
 
 # 7. Navigation Layer
 
-Status: **Implemented**
+Status: **Extended**
 
 Tools:
 
@@ -187,9 +188,28 @@ Capabilities:
 • trajectory exploration  
 • regime-aware system design  
 
+---
+
+## Advanced Dynamic Navigation Engine (NEW)
+
+Tools:
+
+- `dynamics_engine/`
+
+Capabilities:
+
+• multi-agent field navigation  
+• memory-driven trajectory formation  
+• feedback-based system evolution  
+• time asymmetry detection  
+• recurrence pattern analysis  
+• phase-space symmetry exploration  
+• attractor and orbit formation  
+
 Outcome:
 
-This layer transforms the framework from a **passive analyzer into a navigation engine for resilient architectures**.
+The system evolves from static navigation to  
+**self-organizing dynamic navigation in phase space**.
 
 ---
 
@@ -214,44 +234,54 @@ Capabilities:
 • architecture maps  
 • system evolution visualization  
 • simulation dashboards  
+• **dynamic trajectory and phase-space visualization (NEW)**  
 
 Outcome:
 
-Researchers can **interpret architecture dynamics and discovery results visually**.
+Researchers can **interpret both structure and dynamic system behavior visually**.
 
 ---
 
 # 9. Discovery Pipeline
 
-Status: **Fully Implemented**
+Status: **Extended**
 
 The complete discovery pipeline:
 
-Architecture Generation
-↓
-System Evolution
-↓
-Resilience Analysis
-↓
-Resilience Landscape Mapping
-↓
-Phase Transition Detection
-↓
-Structural Law Discovery
-↓
-Theory Validation
-↓
-Architecture Navigation
-↓
-Visualization
+Architecture Generation  
+↓  
+System Evolution  
+↓  
+Resilience Analysis  
+↓  
+Resilience Landscape Mapping  
+↓  
+Phase Transition Detection  
+↓  
+Structural Law Discovery  
+↓  
+Theory Validation  
+↓  
+Architecture Navigation  
+↓  
+**Dynamic System Evolution (NEW)**  
+↓  
+Visualization  
 
-This pipeline enables **automated exploration of architecture space and discovery of structural resilience principles**.
+---
+
+This pipeline now enables:
+
+• static structure discovery  
+• dynamic trajectory analysis  
+• emergence of time, memory, and symmetry  
+• navigation through stability regimes  
 
 ---
 
 # 10. Next Phase
 
-The next stage transitions from simulation experiments to **empirical validation**.
+The next stage transitions from simulation experiments to **empirical validation and dynamic system control**.
 
 Planned directions:
 
@@ -259,14 +289,15 @@ Planned directions:
 • cross-domain architecture comparison  
 • resilience constant detection  
 • architecture scaling law analysis  
+• **dynamic system steering and control strategies (NEW)**  
 
 Target systems:
 
-- internet topology
-- brain connectomes
-- power grid networks
-- biological interaction networks
-- financial networks
+- internet topology  
+- brain connectomes  
+- power grid networks  
+- biological interaction networks  
+- financial networks  
 
 ---
 
@@ -281,8 +312,20 @@ Key achievements:
 • resilience landscape mapping functional  
 • symbolic law discovery engine operational  
 • navigation layer implemented  
+• **dynamic system evolution engine integrated (NEW)**  
 
-The system is now ready to transition from **simulation-driven discovery to empirical research validation**.
+---
 
+The system has evolved from:
 
+→ static architecture analysis  
+→ to  
+→ **dynamic navigation and evolution of complex systems**
 
+---
+
+NEXAH is now capable of modeling not only:
+
+• how systems are structured  
+but also  
+• **how systems move, evolve, and stabilize over time**
