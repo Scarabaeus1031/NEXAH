@@ -8,7 +8,7 @@ Auto-generated from simulation outputs.
 # LEVEL 20 — Phase Synchronization
 
 
-![Level 20](DISCOVERY_ENGINE/visuals/dynamics/level20.png)
+![Level 20](ENGINE/visuals/dynamics/level20.png)
 
 
 ---
