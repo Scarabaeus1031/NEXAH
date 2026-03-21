@@ -8,10 +8,7 @@ Auto-generated from simulation outputs.
 # LEVEL 20 — Phase Synchronization
 
 
-![Level 20](ENGINE/visuals/navigation_level20/navigation_level20_20260321_054300.png)
-
-
-• dense overlapping trajectories • high coherence • uniform motion
+![Level 20](DISCOVERY_ENGINE/visuals/dynamics/level20.png)
 
 
 ---
@@ -20,10 +17,7 @@ Auto-generated from simulation outputs.
 # LEVEL 21 — Controlled Desync
 
 
-![Level 21](ENGINE/visuals/navigation_level21/level21_20260321_114215.png)
-
-
-• phase fragmentation • increased diversity • structured instability
+![Level 21](DISCOVERY_ENGINE/visuals/dynamics/level21.png)
 
 
 ---
@@ -32,10 +26,7 @@ Auto-generated from simulation outputs.
 # LEVEL 22 — Crown / Shell
 
 
-![Level 22](ENGINE/visuals/navigation_level22/level22_20260321_115358.png)
-
-
-• radial density formation • central clustering • early shell geometry
+![Level 22](DISCOVERY_ENGINE/visuals/dynamics/level22.png)
 
 
 ---
@@ -44,10 +35,7 @@ Auto-generated from simulation outputs.
 # LEVEL 23 — Orbit Stabilization
 
 
-![Level 23](ENGINE/visuals/navigation_level23/level23_20260321_120705.png)
-
-
-• stable cyclic trajectories • ring formation • orbit dynamics
+![Level 23](DISCOVERY_ENGINE/visuals/dynamics/level23.png)
 
 
 ---
@@ -56,10 +44,7 @@ Auto-generated from simulation outputs.
 # LEVEL 24 — Multi-Shell Resonance
 
 
-![Level 24](ENGINE/visuals/navigation_level24/level24_20260321_121945.png)
-
-
-• multiple shells • resonance patterns • layered structures
+![Level 24](DISCOVERY_ENGINE/visuals/dynamics/level24.png)
 
 
 ---
@@ -68,10 +53,7 @@ Auto-generated from simulation outputs.
 # LEVEL 25 — Shell Coupling
 
 
-![Level 25](ENGINE/visuals/navigation_level25/level25_20260321_124923.png)
-
-
-• cross-shell interaction • asymmetric density • coupling zones
+![Level 25](DISCOVERY_ENGINE/visuals/dynamics/level25.png)
 
 
 ---
@@ -80,10 +62,7 @@ Auto-generated from simulation outputs.
 # LEVEL 26 — Geometry Collapse
 
 
-![Level 26](ENGINE/visuals/navigation_level26/level26_20260321_125755.png)
-
-
-• smooth circular geometry • strong alignment • minimal noise
+![Level 26](DISCOVERY_ENGINE/visuals/dynamics/level26.png)
 
 
 ---
@@ -92,23 +71,7 @@ Auto-generated from simulation outputs.
 # LEVEL 27 — Autonomous Field
 
 
-![Level 27](ENGINE/visuals/navigation_level27/level27_20260321_131815.png)
+![Level 27](DISCOVERY_ENGINE/visuals/dynamics/level27.png)
 
-
-• self-sustained structures • internal coordinates • emerging grids
-
-
----
-
-
-# KEY OBSERVATION
-
-> Geometry is not imposed — it is **accumulated memory**.
-
----
-
-# SUMMARY
-
-noise → structure → pattern → geometry → autonomy
 
 ---
