@@ -1,0 +1,9 @@
+{
+  "run_id": "20260321_175458",
+  "metrics": {
+    "semantic_groups": 6,
+    "components": 4,
+    "avg_component_size": 1.5,
+    "max_component_size": 2
+  }
+}
