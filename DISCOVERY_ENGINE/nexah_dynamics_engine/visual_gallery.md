@@ -8,7 +8,7 @@ Auto-generated from simulation outputs.
 # LEVEL 20 — Phase Synchronization
 
 
-![Level 20](ENGINE/visuals/dynamics/level20.png)
+*(no run found)*
 
 
 ---
@@ -17,7 +17,7 @@ Auto-generated from simulation outputs.
 # LEVEL 21 — Controlled Desync
 
 
-![Level 21](DISCOVERY_ENGINE/visuals/dynamics/level21.png)
+*(no run found)*
 
 
 ---
@@ -26,7 +26,7 @@ Auto-generated from simulation outputs.
 # LEVEL 22 — Crown / Shell
 
 
-![Level 22](DISCOVERY_ENGINE/visuals/dynamics/level22.png)
+*(no run found)*
 
 
 ---
@@ -35,7 +35,7 @@ Auto-generated from simulation outputs.
 # LEVEL 23 — Orbit Stabilization
 
 
-![Level 23](DISCOVERY_ENGINE/visuals/dynamics/level23.png)
+*(no run found)*
 
 
 ---
@@ -44,7 +44,7 @@ Auto-generated from simulation outputs.
 # LEVEL 24 — Multi-Shell Resonance
 
 
-![Level 24](DISCOVERY_ENGINE/visuals/dynamics/level24.png)
+*(no run found)*
 
 
 ---
@@ -53,7 +53,7 @@ Auto-generated from simulation outputs.
 # LEVEL 25 — Shell Coupling
 
 
-![Level 25](DISCOVERY_ENGINE/visuals/dynamics/level25.png)
+*(no run found)*
 
 
 ---
@@ -62,7 +62,7 @@ Auto-generated from simulation outputs.
 # LEVEL 26 — Geometry Collapse
 
 
-![Level 26](DISCOVERY_ENGINE/visuals/dynamics/level26.png)
+*(no run found)*
 
 
 ---
@@ -71,7 +71,91 @@ Auto-generated from simulation outputs.
 # LEVEL 27 — Autonomous Field
 
 
-![Level 27](DISCOVERY_ENGINE/visuals/dynamics/level27.png)
+*(no run found)*
+
+
+---
+
+
+# LEVEL 35 — Resonance Alignment
+
+
+*(no run found)*
+
+
+• local alignment structures • directional coherence
+
+
+---
+
+
+# LEVEL 36 — Resonance Dynamics
+
+
+*(no run found)*
+
+
+• temporal resonance patterns • oscillatory motion
+
+
+---
+
+
+# LEVEL 37 — Phi Attractor Mapping
+
+
+*(no run found)*
+
+
+• phi attractor regions • clustered resonance zones
+
+
+---
+
+
+# LEVEL 38 — Phi Basin Locking
+
+
+*(no run found)*
+
+
+• hard basin locking • strong stability regions
+
+
+---
+
+
+# LEVEL 38.5 — Phi Soft Lock
+
+
+![Level 38.5](../../ENGINE/visuals/level38b_20260321_201752/plot.png)
+
+
+• soft locking • sparse stable regions
+
+
+---
+
+
+# LEVEL 39 — Phi Orbit Spiral Lock
+
+
+![Level 39](../../ENGINE/visuals/level39_20260321_202908/plot copy.png)
+
+
+• orbit + spiral structures • dynamic locking
+
+
+---
+
+
+# LEVEL 40 — Phase Transition Detection
+
+
+![Level 40](../../ENGINE/visuals/level40_20260321_204235/plot.png)
+
+
+• rare transition points • regime switching events
 
 
 ---
