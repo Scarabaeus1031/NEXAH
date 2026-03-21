@@ -161,6 +161,8 @@ plt.savefig(plot_path, dpi=150)
 
 print("Saved plot:", plot_path)
 
+plt.show()
+
 plt.close()
 
 # --------------------------------------------------
