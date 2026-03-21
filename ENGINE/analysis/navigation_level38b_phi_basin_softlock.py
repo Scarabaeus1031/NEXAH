@@ -116,7 +116,7 @@ mean_ratio = float(np.mean(all_ratios))
 run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 base_dir = os.getcwd()
-out_dir = os.path.join(base_dir, "output", f"level38b_{run_id}")
+out_dir = os.path.join(base_dir, "ENGINE", "visuals", f"level38b_{run_id}")
 
 os.makedirs(out_dir, exist_ok=True)
 
