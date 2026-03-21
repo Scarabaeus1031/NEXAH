@@ -2,11 +2,13 @@ import os
 from glob import glob
 
 # --------------------------------------------------
-# CONFIG
+# CONFIG (FIXED PATHS)
 # --------------------------------------------------
 
-VISUALS_ROOT = "DISCOVERY_ENGINE/visuals"
-OUTPUT_FILE = "DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md"
+BASE_DIR = os.path.dirname(__file__)
+
+VISUALS_ROOT = os.path.abspath(os.path.join(BASE_DIR, "../../DISCOVERY_ENGINE/visuals"))
+OUTPUT_FILE = os.path.abspath(os.path.join(BASE_DIR, "../../DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md"))
 
 LEVELS = {
     20: "Phase Synchronization",
@@ -19,11 +21,24 @@ LEVELS = {
     27: "Autonomous Field"
 }
 
+DESCRIPTIONS = {
+    20: "dense overlapping trajectories • high coherence • uniform motion",
+    21: "phase fragmentation • increased diversity • structured instability",
+    22: "radial density formation • central clustering • early shell geometry",
+    23: "stable cyclic trajectories • ring formation • orbit dynamics",
+    24: "multiple shells • resonance patterns • layered structures",
+    25: "cross-shell interaction • asymmetric density • coupling zones",
+    26: "smooth circular geometry • strong alignment • minimal noise",
+    27: "self-sustained structures • internal coordinates • emerging grids"
+}
+
 # --------------------------------------------------
 # HELPER
 # --------------------------------------------------
 
 def get_latest_image(folder):
+    if not os.path.exists(folder):
+        return None
     images = glob(os.path.join(folder, "*.png"))
     if not images:
         return None
@@ -46,10 +61,13 @@ for level, title in LEVELS.items():
     lines.append(f"\n# LEVEL {level} — {title}\n")
 
     if img:
-        rel_path = os.path.relpath(img, start=".")
+        rel_path = os.path.relpath(img, start=os.path.dirname(OUTPUT_FILE))
         lines.append(f"\n![Level {level}]({rel_path})\n")
     else:
         lines.append("\n*(no image found)*\n")
+
+    desc = DESCRIPTIONS.get(level, "")
+    lines.append(f"\n• {desc}\n")
 
     lines.append("\n---\n")
 
