@@ -8,15 +8,15 @@ from ENGINE.analysis.stability_landscape_generator import generate_stability_lan
 # CONFIG
 # --------------------------------------------------
 
-SIZE = 60
+SIZE = 50
 N_AGENTS = 200
 STEPS = 140
 
 CONTROL_STRENGTH = 0.3
 NOISE = 0.15
 
-FEEDBACK_STRENGTH = 0.25   # wie stark Pfade Feld verändern
-DECAY = 0.98              # Feld-Gedächtnis
+FEEDBACK_STRENGTH = 0.25
+DECAY = 0.98
 
 SAVE_DIR = "ENGINE/visuals/navigation_feedback"
 os.makedirs(SAVE_DIR, exist_ok=True)
@@ -36,6 +36,16 @@ def get_neighbors(pos):
         ny = (y + dy) % SIZE
         neighbors.append((nx, ny))
     return neighbors
+
+# --------------------------------------------------
+# TORUS DELTA (WICHTIG!)
+# --------------------------------------------------
+
+def torus_delta(a, b):
+    d = b - a
+    if abs(d) > SIZE // 2:
+        d -= np.sign(d) * SIZE
+    return d
 
 # --------------------------------------------------
 # FIND ATTRACTORS
@@ -70,16 +80,20 @@ def run_agent(field, target):
 
         vals = np.array([field[nx, ny] for nx, ny in neighbors])
 
-        # Richtung zum Ziel
+        # torus-aware direction
         tx, ty = target
         dir_vecs = np.array([
-            [(nx - pos[0]), (ny - pos[1])] for nx, ny in neighbors
+            [torus_delta(pos[0], nx), torus_delta(pos[1], ny)]
+            for nx, ny in neighbors
         ])
 
         norms = np.linalg.norm(dir_vecs, axis=1) + 1e-6
         dir_vecs = dir_vecs / norms[:, None]
 
-        target_vec = np.array([tx - pos[0], ty - pos[1]])
+        target_vec = np.array([
+            torus_delta(pos[0], tx),
+            torus_delta(pos[1], ty)
+        ])
         target_vec = target_vec / (np.linalg.norm(target_vec) + 1e-6)
 
         alignment = dir_vecs @ target_vec
@@ -106,9 +120,7 @@ def compute_response(paths):
         for x, y in path:
             response[x, y] += 1
 
-    # normalize
     response = response / (np.max(response) + 1e-6)
-
     return response
 
 # --------------------------------------------------
@@ -126,19 +138,21 @@ def run_simulation(iterations=5):
     for it in range(iterations):
 
         attractors = find_attractors(field, n=3)
-        target = attractors[0]
 
         paths = []
 
         for _ in range(N_AGENTS):
+            target = attractors[np.random.randint(len(attractors))]
             p = run_agent(field, target)
             paths.append(p)
 
-        # FIELD RESPONSE
         response = compute_response(paths)
 
-        # UPDATE FIELD
+        # update field
         field = DECAY * field + FEEDBACK_STRENGTH * response
+
+        # normalize (wichtig!)
+        field = field / (np.max(field) + 1e-6)
 
         history_fields.append(field.copy())
         all_paths_total.append(paths)
@@ -153,7 +167,6 @@ def run_simulation(iterations=5):
 
 def plot_results(base, history, paths_all, attractors):
 
-    # FINAL FIELD
     final_field = history[-1]
     final_paths = paths_all[-1]
 
@@ -168,11 +181,10 @@ def plot_results(base, history, paths_all, attractors):
     plt.title("Learned Navigation Field")
     plt.imshow(final_field, origin="lower")
 
-    # overlay paths
     for path in final_paths[:60]:
         xs = [p[0] for p in path]
         ys = [p[1] for p in path]
-        plt.plot(xs, ys, alpha=0.15)
+        plt.plot(xs, ys, alpha=0.12)
 
     for i,(x,y) in enumerate(attractors):
         plt.scatter(x,y,s=120,label=f"A{i}")
