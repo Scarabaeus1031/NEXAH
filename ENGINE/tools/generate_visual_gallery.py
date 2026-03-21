@@ -1,4 +1,5 @@
 import os
+import shutil
 from glob import glob
 
 # --------------------------------------------------
@@ -7,6 +8,9 @@ from glob import glob
 
 VISUALS_ROOT = "ENGINE/visuals"
 OUTPUT_FILE = "DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md"
+CURATED_DIR = "DISCOVERY_ENGINE/visuals/dynamics"
+
+os.makedirs(CURATED_DIR, exist_ok=True)
 
 LEVELS = {
     20: "Phase Synchronization",
@@ -17,17 +21,6 @@ LEVELS = {
     25: "Shell Coupling",
     26: "Geometry Collapse",
     27: "Autonomous Field"
-}
-
-DESCRIPTIONS = {
-    20: "dense overlapping trajectories • high coherence • uniform motion",
-    21: "phase fragmentation • increased diversity • structured instability",
-    22: "radial density formation • central clustering • early shell geometry",
-    23: "stable cyclic trajectories • ring formation • orbit dynamics",
-    24: "multiple shells • resonance patterns • layered structures",
-    25: "cross-shell interaction • asymmetric density • coupling zones",
-    26: "smooth circular geometry • strong alignment • minimal noise",
-    27: "self-sustained structures • internal coordinates • emerging grids"
 }
 
 # --------------------------------------------------
@@ -57,33 +50,17 @@ for level, title in LEVELS.items():
     lines.append(f"\n# LEVEL {level} — {title}\n")
 
     if img:
-        rel_path = os.path.relpath(img, start=".")
+        # copy to curated folder
+        target_path = os.path.join(CURATED_DIR, f"level{level}.png")
+        shutil.copy(img, target_path)
+
+        rel_path = os.path.relpath(target_path, start=".")
         lines.append(f"\n![Level {level}]({rel_path})\n")
+
     else:
         lines.append("\n*(no image found)*\n")
 
-    desc = DESCRIPTIONS.get(level, "")
-    lines.append(f"\n• {desc}\n")
-
     lines.append("\n---\n")
-
-# --------------------------------------------------
-# FOOTER
-# --------------------------------------------------
-
-lines.append("""
-# KEY OBSERVATION
-
-> Geometry is not imposed — it is **accumulated memory**.
-
----
-
-# SUMMARY
-
-noise → structure → pattern → geometry → autonomy
-
----
-""")
 
 # --------------------------------------------------
 # WRITE FILE
@@ -94,4 +71,4 @@ os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 with open(OUTPUT_FILE, "w") as f:
     f.write("\n".join(lines))
 
-print("Visual gallery generated:", OUTPUT_FILE)
+print("Gallery + curated visuals updated")
