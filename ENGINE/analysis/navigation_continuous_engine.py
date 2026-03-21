@@ -8,8 +8,6 @@ from ENGINE.analysis.stability_landscape_generator import generate_stability_lan
 # CONFIG
 # --------------------------------------------------
 
-SIZE = None  # wird dynamisch gesetzt
-
 N_AGENTS = 120
 STEPS = 220
 
@@ -25,12 +23,14 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 # --------------------------------------------------
 
 def sample_field(field, x, y):
-    """Bilinear interpolation"""
+    """Bilinear interpolation with correct dimensions"""
 
-    x0 = int(np.floor(x)) % SIZE
-    y0 = int(np.floor(y)) % SIZE
-    x1 = (x0 + 1) % SIZE
-    y1 = (y0 + 1) % SIZE
+    H, W = field.shape  # 🔥 wichtig!
+
+    x0 = int(np.floor(x)) % H
+    y0 = int(np.floor(y)) % W
+    x1 = (x0 + 1) % H
+    y1 = (y0 + 1) % W
 
     dx = x - np.floor(x)
     dy = y - np.floor(y)
@@ -45,7 +45,7 @@ def sample_field(field, x, y):
     return val
 
 # --------------------------------------------------
-# GRADIENT (CONTINUOUS)
+# GRADIENT
 # --------------------------------------------------
 
 def compute_gradient(field, x, y):
@@ -62,14 +62,16 @@ def compute_gradient(field, x, y):
     return np.array([gx, gy])
 
 # --------------------------------------------------
-# AGENT (CONTINUOUS)
+# AGENT
 # --------------------------------------------------
 
 def run_agent(field):
 
+    H, W = field.shape
+
     pos = np.array([
-        np.random.uniform(0, SIZE),
-        np.random.uniform(0, SIZE)
+        np.random.uniform(0, H),
+        np.random.uniform(0, W)
     ])
 
     vel = np.zeros(2)
@@ -86,7 +88,10 @@ def run_agent(field):
         vel += NOISE * np.random.randn(2)
 
         pos = pos + vel
-        pos = pos % SIZE  # torus
+
+        # torus wrap (korrekt für beide Achsen)
+        pos[0] = pos[0] % H
+        pos[1] = pos[1] % W
 
         path.append(pos.copy())
 
@@ -96,14 +101,15 @@ def run_agent(field):
 # FIELD RESPONSE
 # --------------------------------------------------
 
-def compute_response(paths):
+def compute_response(paths, field_shape):
 
-    response = np.zeros((SIZE, SIZE))
+    H, W = field_shape
+    response = np.zeros((H, W))
 
     for path in paths:
         for p in path:
-            x = int(p[0]) % SIZE
-            y = int(p[1]) % SIZE
+            x = int(p[0]) % H
+            y = int(p[1]) % W
             response[x, y] += 1
 
     response = response / (np.max(response) + 1e-6)
@@ -115,11 +121,7 @@ def compute_response(paths):
 
 def run_simulation(iterations=4):
 
-    global SIZE  # 🔥 wichtig!
-
     base_field = generate_stability_landscape()
-    SIZE = base_field.shape[0]
-
     field = base_field.copy()
 
     history = []
@@ -133,9 +135,8 @@ def run_simulation(iterations=4):
             p = run_agent(field)
             paths.append(p)
 
-        response = compute_response(paths)
+        response = compute_response(paths, field.shape)
 
-        # update field
         field = 0.97 * field + 0.3 * response
         field = field / (np.max(field) + 1e-6)
 
