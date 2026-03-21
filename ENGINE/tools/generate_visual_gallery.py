@@ -6,7 +6,7 @@ from glob import glob
 # --------------------------------------------------
 
 VISUALS_ROOT = "ENGINE/visuals"
-OUTPUT_FILE = "dynamics_engine/visual_gallery.md"
+OUTPUT_FILE = "DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md"
 
 LEVELS = {
     20: "Phase Synchronization",
@@ -57,7 +57,6 @@ for level, title in LEVELS.items():
     lines.append(f"\n# LEVEL {level} — {title}\n")
 
     if img:
-        # make path relative for GitHub
         rel_path = os.path.relpath(img, start=".")
         lines.append(f"\n![Level {level}]({rel_path})\n")
     else:
@@ -93,6 +92,6 @@ noise → structure → pattern → geometry → autonomy
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
 with open(OUTPUT_FILE, "w") as f:
-    f.writelines("\n".join(lines))
+    f.write("\n".join(lines))
 
-print("Visual gallery generated:", OUTPUT_FILE="DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md")
+print("Visual gallery generated:", OUTPUT_FILE)
