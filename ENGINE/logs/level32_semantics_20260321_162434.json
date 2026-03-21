@@ -3,6 +3,7 @@
   "metrics": {
     "entropy": 5.696362352145998,
     "recurrence": 0.05,
+    "cycles_detected": 43,
     "unique_cycles": 15,
     "semantic_groups": 5,
     "semantic_sizes": [
