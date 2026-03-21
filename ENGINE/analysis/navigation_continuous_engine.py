@@ -8,7 +8,8 @@ from ENGINE.analysis.stability_landscape_generator import generate_stability_lan
 # CONFIG
 # --------------------------------------------------
 
-SIZE = 60
+SIZE = None  # wird dynamisch gesetzt
+
 N_AGENTS = 120
 STEPS = 220
 
@@ -25,6 +26,7 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 
 def sample_field(field, x, y):
     """Bilinear interpolation"""
+
     x0 = int(np.floor(x)) % SIZE
     y0 = int(np.floor(y)) % SIZE
     x1 = (x0 + 1) % SIZE
@@ -71,28 +73,20 @@ def run_agent(field):
     ])
 
     vel = np.zeros(2)
-
     path = [pos.copy()]
 
     for _ in range(STEPS):
 
         grad = compute_gradient(field, pos[0], pos[1])
 
-        # normalize gradient
         norm = np.linalg.norm(grad) + 1e-6
         grad = grad / norm
 
-        # update velocity
         vel = DAMPING * vel + STEP_SIZE * grad
-
-        # noise
         vel += NOISE * np.random.randn(2)
 
-        # move
         pos = pos + vel
-
-        # torus wrap
-        pos = pos % SIZE
+        pos = pos % SIZE  # torus
 
         path.append(pos.copy())
 
@@ -121,7 +115,11 @@ def compute_response(paths):
 
 def run_simulation(iterations=4):
 
+    global SIZE  # 🔥 wichtig!
+
     base_field = generate_stability_landscape()
+    SIZE = base_field.shape[0]
+
     field = base_field.copy()
 
     history = []
