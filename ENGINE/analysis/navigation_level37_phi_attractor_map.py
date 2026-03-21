@@ -63,7 +63,7 @@ for step in range(STEPS):
         fx = FIELD_BLEND * gx + MEMORY_BLEND * mx
         fy = FIELD_BLEND * gy + MEMORY_BLEND * my
 
-        # --- store previous velocity ---
+        # Store previous velocity
         prev_velocity = velocities[i].copy()
 
         # Update velocity
@@ -74,31 +74,25 @@ for step in range(STEPS):
         new_pos = positions[i] + velocities[i]
         new_pos = np.clip(new_pos, 0, SIZE - 1)
 
-        # --- CORRECT φ MEASURE ---
+        # --- φ MEASURE (FIXED) ---
         d_now = np.linalg.norm(velocities[i])
         d_prev = np.linalg.norm(prev_velocity)
 
-        if d_prev > 1e-4:   # nur stabile Bewegungen
-        ratio = d_now / d_prev
-        all_ratios.append(ratio)
+        if d_prev > 1e-4:
+            ratio = d_now / d_prev
+            all_ratios.append(ratio)
 
-        if abs(ratio - PHI) < PHI_TOL:
-        ix2 = int(new_pos[0])
-        iy2 = int(new_pos[1])
-        phi_hits_map[ix2, iy2] += 1
-        all_ratios.append(ratio)
-
-        if abs(ratio - PHI) < PHI_TOL:
-        ix2 = int(new_pos[0])
-        iy2 = int(new_pos[1])
-        phi_hits_map[ix2, iy2] += 1
+            if abs(ratio - PHI) < PHI_TOL:
+                ix2 = int(new_pos[0])
+                iy2 = int(new_pos[1])
+                phi_hits_map[ix2, iy2] += 1
 
         # Update memory
         memory[ix, iy] += 1.0
 
         positions[i] = new_pos
 
-    # --- APPLY DECAY OUTSIDE LOOP ---
+    # Apply decay OUTSIDE agent loop
     memory *= MEMORY_DECAY
 
 # --------------------------------------------------
@@ -114,10 +108,10 @@ if phi_hits_map.max() > 0:
 
 phi_hits = int(np.sum(phi_hits_map > 0))
 phi_density = phi_hits / (SIZE * SIZE)
-mean_phi = float(np.mean(all_ratios))
+mean_phi = float(np.mean(all_ratios)) if len(all_ratios) > 0 else 0.0
 
 # --------------------------------------------------
-# SAVE
+# SAVE (SAFE FIRST)
 # --------------------------------------------------
 
 run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -134,27 +128,31 @@ with open(os.path.join(out_dir, "metrics.json"), "w") as f:
     json.dump(metrics, f, indent=2)
 
 # --------------------------------------------------
-# PLOTS
+# PLOT (SAFE)
 # --------------------------------------------------
 
-fig, axs = plt.subplots(2, 2, figsize=(10, 10))
+try:
+    fig, axs = plt.subplots(2, 2, figsize=(10, 10))
 
-axs[0, 0].imshow(field, cmap="viridis")
-axs[0, 0].set_title("Field")
+    axs[0, 0].imshow(field, cmap="viridis")
+    axs[0, 0].set_title("Field")
 
-axs[0, 1].imshow(memory, cmap="inferno")
-axs[0, 1].set_title("Memory")
+    axs[0, 1].imshow(memory, cmap="inferno")
+    axs[0, 1].set_title("Memory")
 
-axs[1, 0].imshow(phi_hits_map, cmap="plasma")
-axs[1, 0].set_title("Phi Attractor Map")
+    axs[1, 0].imshow(phi_hits_map, cmap="plasma")
+    axs[1, 0].set_title("Phi Attractor Map")
 
-axs[1, 1].hist(all_ratios, bins=50)
-axs[1, 1].axvline(PHI, linestyle="--", color="red")
-axs[1, 1].set_title("Ratio Distribution")
+    axs[1, 1].hist(all_ratios, bins=50)
+    axs[1, 1].axvline(PHI, linestyle="--", color="red")
+    axs[1, 1].set_title("Ratio Distribution")
 
-plt.tight_layout()
-plt.savefig(os.path.join(out_dir, "plot.png"))
-plt.close()
+    plt.tight_layout()
+    plt.savefig(os.path.join(out_dir, "plot.png"))
+    plt.close()
+
+except Exception as e:
+    print("Plot failed:", e)
 
 # --------------------------------------------------
 # OUTPUT
