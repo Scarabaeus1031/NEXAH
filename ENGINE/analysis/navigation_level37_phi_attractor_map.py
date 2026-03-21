@@ -23,7 +23,7 @@ FIELD_BLEND = 0.75
 MEMORY_BLEND = 0.25
 
 PHI = (1 + np.sqrt(5)) / 2
-PHI_TOL = 0.015  # etwas großzügiger für stabile Hits
+PHI_TOL = 0.015
 
 # --------------------------------------------------
 # INIT
@@ -59,9 +59,12 @@ for step in range(STEPS):
         mx = memory[ix + 1, iy] - memory[ix - 1, iy]
         my = memory[ix, iy + 1] - memory[ix, iy - 1]
 
-        # Combine
+        # Combine forces
         fx = FIELD_BLEND * gx + MEMORY_BLEND * mx
         fy = FIELD_BLEND * gy + MEMORY_BLEND * my
+
+        # --- store previous velocity ---
+        prev_velocity = velocities[i].copy()
 
         # Update velocity
         velocities[i] = DAMPING * velocities[i] + STEP_SIZE * np.array([fx, fy])
@@ -69,30 +72,30 @@ for step in range(STEPS):
 
         # Move
         new_pos = positions[i] + velocities[i]
-
-        # Boundary clamp
         new_pos = np.clip(new_pos, 0, SIZE - 1)
 
-        # --- Phi check ---
-        dist = np.linalg.norm(new_pos - positions[i])
-        prev_dist = np.linalg.norm(velocities[i]) + 1e-6
+        # --- CORRECT φ MEASURE ---
+        d_now = np.linalg.norm(velocities[i])
+        d_prev = np.linalg.norm(prev_velocity) + 1e-6
 
-        ratio = dist / prev_dist
+        ratio = d_now / d_prev
         all_ratios.append(ratio)
 
         if abs(ratio - PHI) < PHI_TOL:
-            phi_hits_map[int(new_pos[0]), int(new_pos[1])] += 1
+            ix2 = int(new_pos[0])
+            iy2 = int(new_pos[1])
+            phi_hits_map[ix2, iy2] += 1
 
         # Update memory
         memory[ix, iy] += 1.0
 
-        # Apply decay
-        memory *= MEMORY_DECAY
-
         positions[i] = new_pos
 
+    # --- APPLY DECAY OUTSIDE LOOP ---
+    memory *= MEMORY_DECAY
+
 # --------------------------------------------------
-# NORMALIZE MAP
+# NORMALIZE
 # --------------------------------------------------
 
 if phi_hits_map.max() > 0:
@@ -102,9 +105,9 @@ if phi_hits_map.max() > 0:
 # ANALYSIS
 # --------------------------------------------------
 
-phi_hits = np.sum(phi_hits_map > 0)
+phi_hits = int(np.sum(phi_hits_map > 0))
 phi_density = phi_hits / (SIZE * SIZE)
-mean_phi = np.mean(all_ratios)
+mean_phi = float(np.mean(all_ratios))
 
 # --------------------------------------------------
 # SAVE
@@ -115,9 +118,9 @@ out_dir = f"output/level37_{run_id}"
 os.makedirs(out_dir, exist_ok=True)
 
 metrics = {
-    "phi_hits": int(phi_hits),
-    "phi_density": float(phi_density),
-    "mean_phi": float(mean_phi)
+    "phi_hits": phi_hits,
+    "phi_density": phi_density,
+    "mean_phi": mean_phi
 }
 
 with open(os.path.join(out_dir, "metrics.json"), "w") as f:
@@ -139,7 +142,7 @@ axs[1, 0].imshow(phi_hits_map, cmap="plasma")
 axs[1, 0].set_title("Phi Attractor Map")
 
 axs[1, 1].hist(all_ratios, bins=50)
-axs[1, 1].axvline(PHI, linestyle="--")
+axs[1, 1].axvline(PHI, linestyle="--", color="red")
 axs[1, 1].set_title("Ratio Distribution")
 
 plt.tight_layout()
