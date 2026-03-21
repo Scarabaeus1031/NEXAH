@@ -2,7 +2,11 @@
 
 This document summarizes the functional capabilities of the **NEXAH Simulation Environment**.
 
-The tools contained in the `tools/` directory together form a **computational discovery engine for resilient architectures**.
+The tools contained in the `tools/` directory together form a **computational discovery engine for resilient architectures and dynamic systems**.
+
+---
+
+# Core Scope
 
 The framework supports:
 
@@ -13,403 +17,286 @@ The framework supports:
 • structural law discovery  
 • theory validation  
 • architecture navigation  
-• **dynamic system evolution and phase-space navigation (NEW)**  
+• dynamic system evolution  
+• resonance-driven phase-space navigation (NEW)  
 
-Together they implement a **complete research pipeline for discovering structural principles of resilient systems.**
+---
+
+Together, these components implement a **complete discovery pipeline for structural and dynamic principles of complex systems**.
 
 ---
 
 # 1. Architecture Exploration
 
-Status: **Completed**
+Status: Completed
 
 Tools implemented:
 
-- `system_designer.py`
-- `system_evolver.py`
-- `system_evolver_population.py`
-- `resilience_architecture_evolver.py`
-- `resilience_architecture_optimizer.py`
-- `auto_stabilizer.py`
+- system_designer.py
+- system_evolver.py
+- system_evolver_population.py
+- resilience_architecture_evolver.py
+- resilience_architecture_optimizer.py
+- auto_stabilizer.py
 
-Capabilities achieved:
+Capabilities:
 
 • architecture generation  
 • evolutionary exploration  
-• architecture mutation  
+• mutation and variation  
 • automated stabilization  
 
 Outcome:
 
-The system can generate and evolve **large populations of architectures** for resilience exploration.
+→ generation and evolution of large architecture populations
 
 ---
 
 # 2. System Analysis
 
-Status: **Completed**
+Status: Completed
 
-Tools implemented:
+Tools:
 
-- `resilience_analyzer.py`
-- `system_stress_test.py`
-- `catastrophe_detector.py`
-- `risk_landscape.py`
+- resilience_analyzer.py
+- system_stress_test.py
+- catastrophe_detector.py
+- risk_landscape.py
 
-Capabilities achieved:
+Capabilities:
 
 • resilience scoring  
 • failure propagation analysis  
 • perturbation experiments  
-• structural vulnerability detection  
+• vulnerability detection  
 
 Outcome:
 
-The framework can **evaluate stability properties of generated architectures**.
+→ quantitative evaluation of system stability
 
 ---
 
 # 3. Landscape Mapping
 
-Status: **Completed**
+Status: Completed
 
-Tools implemented:
+Tools:
 
-- `resilience_landscape.py`
-- `resilience_3d_landscape.py`
-- `phase_space_map.py`
-- `resilience_phase_space_explorer.py`
-- `global_resilience_map.py`
-- `global_resilience_scan.py`
+- resilience_landscape.py
+- resilience_3d_landscape.py
+- phase_space_map.py
+- resilience_phase_space_explorer.py
+- global_resilience_map.py
+- global_resilience_scan.py
 
-Capabilities achieved:
+Capabilities:
 
-• resilience landscape reconstruction  
-• phase space exploration  
+• landscape reconstruction  
 • attractor mapping  
 • stability region detection  
+• phase-space exploration  
 
 Outcome:
 
-The system can now **map resilience landscapes across architecture space**.
+→ full mapping of stability landscapes
 
 ---
 
 # 4. Phase Transition Detection
 
-Status: **Completed**
+Status: Completed
 
-Tools implemented:
+Tools:
 
-- `resilience_phase_diagram.py`
-- `resilience_phase_transition_detector.py`
-- `resilience_topology_phase_transition_detector.py`
-- `resilience_critical_point_finder.py`
-- `resilience_ridge_detector.py`
+- resilience_phase_diagram.py
+- resilience_phase_transition_detector.py
+- resilience_topology_phase_transition_detector.py
+- resilience_critical_point_finder.py
+- resilience_ridge_detector.py
 
-Capabilities achieved:
+Capabilities:
 
 • regime boundary detection  
 • tipping point identification  
-• structural instability detection  
+• instability detection  
 
 Outcome:
 
-NEXAH can now **identify structural phase transitions in system architectures**.
+→ identification of structural phase transitions
 
 ---
 
 # 5. Structural Law Discovery
 
-Status: **Completed**
+Status: Completed
 
-Tools implemented:
+Tools:
 
-- `resilience_symbolic_equation_search.py`
-- `resilience_field_equation_discovery.py`
-- `resilience_universal_architecture_law.py`
-- `resilience_universal_scaling_law_detector.py`
-- `resilience_law_discovery.py`
-- `resilience_symbolic_law_finder.py`
+- resilience_symbolic_equation_search.py
+- resilience_field_equation_discovery.py
+- resilience_universal_architecture_law.py
+- resilience_universal_scaling_law_detector.py
+- resilience_law_discovery.py
+- resilience_symbolic_law_finder.py
 
-Capabilities achieved:
+Capabilities:
 
 • symbolic regression  
-• scaling law discovery  
-• structural equation search  
-• architecture law extraction  
+• scaling law detection  
+• equation discovery  
+• structural law extraction  
 
 Outcome:
 
-The engine can **search for universal resilience laws in architecture space**.
+→ discovery of universal system laws
 
 ---
 
 # 6. Theory Validation
 
-Status: **Completed**
+Status: Completed
 
-Tools implemented:
+Tools:
 
-- `resilience_universal_law_validator.py`
-- `resilience_constant_validator.py`
-- `resilience_universal_constant_search.py`
-- `resilience_universal_constant_finder.py`
-- `resilience_meta_learning_engine.py`
-- `resilience_unified_theory_builder.py`
-- `resilience_theory_builder.py`
+- resilience_universal_law_validator.py
+- resilience_constant_validator.py
+- resilience_universal_constant_search.py
+- resilience_universal_constant_finder.py
+- resilience_meta_learning_engine.py
+- resilience_unified_theory_builder.py
+- resilience_theory_builder.py
 
-Capabilities achieved:
+Capabilities:
 
-• validation of discovered laws  
+• validation of laws  
 • constant detection  
-• meta-learning across architecture datasets  
+• cross-system learning  
 • theory consolidation  
 
 Outcome:
 
-Candidate laws can now be **tested and validated across large architecture populations**.
+→ validation across large system populations
 
 ---
 
 # 7. Navigation Layer
 
-Status: **Extended**
+Status: Extended
 
 Tools:
 
-- `agent_navigator.py`
-- `phase_space_explorer.py`
-- `trajectory_selector.py`
+- agent_navigator.py
+- phase_space_explorer.py
+- trajectory_selector.py
 
 Capabilities:
 
-• navigation through architecture space  
+• navigation through phase space  
 • trajectory exploration  
 • regime-aware system design  
 
 ---
 
-## Advanced Dynamic Navigation Engine (NEW)
+# Advanced Dynamic Navigation Engine
 
 Tools:
 
-- `dynamics_engine/`
+- dynamics_engine/
 
 Capabilities:
 
 • multi-agent field navigation  
-• memory-driven trajectory formation  
-• feedback-based system evolution  
+• memory-driven trajectories  
+• feedback-based evolution  
 • time asymmetry detection  
 • recurrence pattern analysis  
-• phase-space symmetry exploration  
 • attractor and orbit formation  
 
 Outcome:
 
-The system evolves from static navigation to  
-**self-organizing dynamic navigation in phase space**.
-
+→ self-organizing dynamic systems
 
 ---
 
-## Advanced Geometry & Autonomous Field Regimes (NEW)
+# Advanced Geometry & Autonomous Field Regimes
 
-The NEXAH Dynamics Engine has progressed beyond trajectory-based dynamics into **geometry-generating regimes**.
-
-These regimes emerge from strong coupling between:
-
-- field dynamics  
-- memory accumulation  
-- feedback loops  
-- agent interaction  
-
----
-
-### Capabilities:
-
-• shell and radial structure formation  
-• orbit stabilization and cyclic dynamics  
-• multi-layer (multi-shell) system organization  
-• resonance coupling between structural layers  
-• emergence of coherent geometric fields  
-• field–memory alignment and collapse  
-• autonomous field formation (self-sustaining dynamics)  
-• transition from continuous fields to discrete structures  
-• emergence of internal coordinate systems and grids  
-
----
-
-### Observed Regimes:
-
-**Shell Formation**  
-→ agents organize into radial layers (rings)
-
-**Orbit Dynamics**  
-→ stable cyclic trajectories replace static attractors  
-
-**Multi-Shell Resonance**  
-→ multiple stable layers interact  
-
-**Shell Coupling**  
-→ information and energy transfer across layers  
-
-**Field Collapse / Geometry Emergence**  
-→ memory and field converge into coherent structures  
-
-**Autonomous Field Regime**  
-→ system becomes partially self-driven  
-→ memory dominates evolution  
-
-**Discrete Geometry Mode**  
-→ emergence of nodes, grids, and local geometric primitives  
-
----
-
-### Key Insight:
-
-> Dynamic systems do not only evolve — they **generate geometry**.
-
-Dynamics → Orbit → Shell → Resonance → Geometry → Autonomous Field → Discrete Structure
-
----
-
-### Outcome:
-
-The NEXAH system is no longer limited to:
-
-• analyzing structures  
-• navigating phase space  
-
-It now enables:
-
-→ **generation of geometry from dynamics**  
-→ **formation of self-organizing spatial structures**  
-→ **transition between continuous and discrete system representations**
-
----
-
----
-
-### System Evolution Extension:
-
-The discovery pipeline now includes an additional layer:
----
-
-# 8. Visualization Layer
-
-Status: **Implemented**
-
-Tools implemented:
-
-- `visualize_system.py`
-- `animate_system.py`
-- `evolution_visualizer.py`
-- `resilience_graph_visualizer.py`
-- `resilience_dashboard.py`
-- `architecture_map.py`
-- `architecture_diff.py`
-- `resilience_architecture_evolver_plot.py`
+The system now generates geometry directly from dynamics.
 
 Capabilities:
 
-• resilience landscapes  
-• architecture maps  
-• system evolution visualization  
-• simulation dashboards  
-• **dynamic trajectory and phase-space visualization (NEW)**  
-
-Outcome:
-
-Researchers can **interpret both structure and dynamic system behavior visually**.
+• shell formation  
+• orbit stabilization  
+• multi-layer resonance  
+• shell coupling  
+• field-memory alignment  
+• autonomous field formation  
+• emergence of discrete geometry  
 
 ---
 
-# 9. Discovery Pipeline
+Key Insight:
 
-Status: **Extended**
+Geometry is not imposed — it emerges.
 
-The complete discovery pipeline:
+Dynamics → Orbit → Shell → Resonance → Geometry → Discrete Structure
+
+---
+
+# Advanced Resonance & Phi-Structured Dynamics (NEW)
+
+The system has entered a new regime:
+
+Frequency-selective dynamics based on φ-related ratios
+
+Core Discovery:
+
+Agents prefer specific ratio states:
+
+• φ ≈ 1.618  
+• φ³ / π² ≈ 0.429  
+• secondary bands (~0.456, ~0.487)
+
+Capabilities:
+
+• φ-attractor mapping  
+• basin locking  
+• orbit–spiral dynamics  
+• resonance-based selection  
+
+Observed Levels:
+
+Level 37 → Phi Attractors  
+Level 38 → Basin Locking  
+Level 38b → Soft Lock  
+Level 39 → Orbit–Spiral Lock  
+Level 40 → Phase Transitions  
+
+Key Insight:
+
+Stability is frequency-dependent.
+
+---
+
+# Discovery Pipeline
 
 Architecture Generation  
-↓  
-System Evolution  
-↓  
-Resilience Analysis  
-↓  
-Resilience Landscape Mapping  
-↓  
-Phase Transition Detection  
-↓  
-Structural Law Discovery  
-↓  
-Theory Validation  
-↓  
-Architecture Navigation  
-↓  
-**Dynamic System Evolution (NEW)**  
-↓  
-Visualization  
-
----
-
-This pipeline now enables:
-
-• static structure discovery  
-• dynamic trajectory analysis  
-• emergence of time, memory, and symmetry  
-• navigation through stability regimes  
-
----
-
-# 10. Next Phase
-
-The next stage transitions from simulation experiments to **empirical validation and dynamic system control**.
-
-Planned directions:
-
-• real-world network validation  
-• cross-domain architecture comparison  
-• resilience constant detection  
-• architecture scaling law analysis  
-• **dynamic system steering and control strategies (NEW)**  
-
-Target systems:
-
-- internet topology  
-- brain connectomes  
-- power grid networks  
-- biological interaction networks  
-- financial networks  
+→ System Evolution  
+→ Analysis  
+→ Landscape Mapping  
+→ Phase Detection  
+→ Law Discovery  
+→ Validation  
+→ Navigation  
+→ Dynamic Evolution  
+→ Resonance Selection  
+→ Visualization  
 
 ---
 
 # Final Assessment
 
-The NEXAH project has successfully implemented a **complete simulation-based discovery engine for resilient architectures**.
+NEXAH is now a unified system for:
 
-Key achievements:
-
-• 60+ research tools implemented  
-• full architecture discovery pipeline operational  
-• resilience landscape mapping functional  
-• symbolic law discovery engine operational  
-• navigation layer implemented  
-• **dynamic system evolution engine integrated (NEW)**  
-
----
-
-The system has evolved from:
-
-→ static architecture analysis  
-→ to  
-→ **dynamic navigation and evolution of complex systems**
-
----
-
-NEXAH is now capable of modeling not only:
-
-• how systems are structured  
-but also  
-• **how systems move, evolve, and stabilize over time**
+• structure  
+• dynamics  
+• resonance  
