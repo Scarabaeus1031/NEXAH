@@ -211,6 +211,71 @@ Outcome:
 The system evolves from static navigation to  
 **self-organizing dynamic navigation in phase space**.
 
+
+---
+
+## Advanced Geometry & Autonomous Field Regimes (NEW)
+
+The NEXAH Dynamics Engine has progressed beyond trajectory-based dynamics into **geometry-generating regimes**.
+
+These regimes emerge from strong coupling between:
+
+- field dynamics  
+- memory accumulation  
+- feedback loops  
+- agent interaction  
+
+---
+
+### Capabilities:
+
+• shell and radial structure formation  
+• orbit stabilization and cyclic dynamics  
+• multi-layer (multi-shell) system organization  
+• resonance coupling between structural layers  
+• emergence of coherent geometric fields  
+• field–memory alignment and collapse  
+• autonomous field formation (self-sustaining dynamics)  
+• transition from continuous fields to discrete structures  
+• emergence of internal coordinate systems and grids  
+
+---
+
+### Observed Regimes:
+
+**Shell Formation**  
+→ agents organize into radial layers (rings)
+
+**Orbit Dynamics**  
+→ stable cyclic trajectories replace static attractors  
+
+**Multi-Shell Resonance**  
+→ multiple stable layers interact  
+
+**Shell Coupling**  
+→ information and energy transfer across layers  
+
+**Field Collapse / Geometry Emergence**  
+→ memory and field converge into coherent structures  
+
+**Autonomous Field Regime**  
+→ system becomes partially self-driven  
+→ memory dominates evolution  
+
+**Discrete Geometry Mode**  
+→ emergence of nodes, grids, and local geometric primitives  
+
+---
+
+### Key Insight:
+
+> Dynamic systems do not only evolve — they **generate geometry**.
+
+---
+
+### System Evolution Extension:
+
+The discovery pipeline now includes an additional layer:
 ---
 
 # 8. Visualization Layer
