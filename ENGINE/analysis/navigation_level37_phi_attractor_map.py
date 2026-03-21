@@ -76,15 +76,22 @@ for step in range(STEPS):
 
         # --- CORRECT φ MEASURE ---
         d_now = np.linalg.norm(velocities[i])
-        d_prev = np.linalg.norm(prev_velocity) + 1e-6
+        d_prev = np.linalg.norm(prev_velocity)
 
+        if d_prev > 1e-4:   # nur stabile Bewegungen
         ratio = d_now / d_prev
         all_ratios.append(ratio)
 
         if abs(ratio - PHI) < PHI_TOL:
-            ix2 = int(new_pos[0])
-            iy2 = int(new_pos[1])
-            phi_hits_map[ix2, iy2] += 1
+        ix2 = int(new_pos[0])
+        iy2 = int(new_pos[1])
+        phi_hits_map[ix2, iy2] += 1
+        all_ratios.append(ratio)
+
+        if abs(ratio - PHI) < PHI_TOL:
+        ix2 = int(new_pos[0])
+        iy2 = int(new_pos[1])
+        phi_hits_map[ix2, iy2] += 1
 
         # Update memory
         memory[ix, iy] += 1.0
