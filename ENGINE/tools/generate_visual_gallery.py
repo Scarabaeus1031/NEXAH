@@ -2,12 +2,12 @@ import os
 from glob import glob
 
 # --------------------------------------------------
-# CONFIG (FIXED PATHS)
+# CONFIG
 # --------------------------------------------------
 
 BASE_DIR = os.path.dirname(__file__)
 
-VISUALS_ROOT = os.path.abspath(os.path.join(BASE_DIR, "../../DISCOVERY_ENGINE/visuals"))
+VISUALS_ROOT = os.path.abspath(os.path.join(BASE_DIR, "../visuals"))
 OUTPUT_FILE = os.path.abspath(os.path.join(BASE_DIR, "../../DISCOVERY_ENGINE/nexah_dynamics_engine/visual_gallery.md"))
 
 LEVELS = {
@@ -38,9 +38,11 @@ DESCRIPTIONS = {
 
 def get_latest_image(folder):
     if not os.path.exists(folder):
+        print("Missing folder:", folder)
         return None
     images = glob(os.path.join(folder, "*.png"))
     if not images:
+        print("No images in:", folder)
         return None
     return max(images, key=os.path.getctime)
 
@@ -62,6 +64,7 @@ for level, title in LEVELS.items():
 
     if img:
         rel_path = os.path.relpath(img, start=os.path.dirname(OUTPUT_FILE))
+        rel_path = rel_path.replace("\\", "/")  # GitHub fix
         lines.append(f"\n![Level {level}]({rel_path})\n")
     else:
         lines.append("\n*(no image found)*\n")
