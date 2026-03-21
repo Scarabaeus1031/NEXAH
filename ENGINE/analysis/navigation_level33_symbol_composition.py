@@ -51,8 +51,6 @@ velocities = np.zeros_like(positions)
 
 memory = np.zeros((SIZE, SIZE))
 
-trajectories = []
-
 # --------------------------------------------------
 # SIMULATION
 # --------------------------------------------------
@@ -66,6 +64,142 @@ for step in range(STEPS):
         xi, yi = int(x), int(y)
 
         gx = grads[1][yi % SIZE, xi % SIZE]
+        gy = grads[0][yi % SIZE, xi % SIZE]
+
+        force = np.array([gx, gy])
+
+        velocities[i] += STEP_SIZE * force
+        velocities[i] += NOISE * np.random.randn(2)
+        velocities[i] *= DAMPING
+
+        positions[i] += velocities[i]
+        positions[i] = np.clip(positions[i], 0, SIZE - 1)
+
+        px, py = int(positions[i][0]), int(positions[i][1])
+        memory[py, px] += 1.0
+
+    memory *= MEMORY_DECAY
+
+# --------------------------------------------------
+# SYMBOL DETECTION
+# --------------------------------------------------
+
+mem_norm = memory / (memory.max() + 1e-8)
+symbol_mask = mem_norm > SYMBOL_THRESHOLD
+
+labeled, num_features = label(symbol_mask)
+centroids = center_of_mass(symbol_mask, labeled, range(1, num_features + 1))
+
+centroids = np.array(centroids) if len(centroids) > 0 else np.zeros((0, 2))
+
+# --------------------------------------------------
+# COMPOSITION GRAPH
+# --------------------------------------------------
+
+edges = []
+
+if len(centroids) > 1:
+    dist_matrix = cdist(centroids, centroids)
+
+    for i in range(len(centroids)):
+        nearest = np.argsort(dist_matrix[i])[1:MAX_CONNECTIONS+1]
+
+        for j in nearest:
+            if dist_matrix[i][j] < GROUP_DISTANCE:
+                edges.append((i, j))
+
+# --------------------------------------------------
+# CONNECTED COMPONENTS (SYNTAX STRUCTURE)
+# --------------------------------------------------
+
+graph = {i: set() for i in range(len(centroids))}
+
+for i, j in edges:
+    graph[i].add(j)
+    graph[j].add(i)
+
+visited = set()
+components = []
+
+for node in graph:
+    if node not in visited:
+        stack = [node]
+        comp = []
+
+        while stack:
+            n = stack.pop()
+            if n not in visited:
+                visited.add(n)
+                comp.append(n)
+                stack.extend(graph[n])
+
+        components.append(comp)
+
+# --------------------------------------------------
+# METRICS
+# --------------------------------------------------
+
+component_sizes = [len(c) for c in components]
+
+metrics = {
+    "components": int(len(components)),
+    "avg_component_size": float(np.mean(component_sizes) if component_sizes else 0),
+    "max_component_size": int(max(component_sizes) if component_sizes else 0)
+}
+
+# --------------------------------------------------
+# VISUALIZATION
+# --------------------------------------------------
+
+fig, axs = plt.subplots(2, 2, figsize=(10, 10))
+
+# FIELD
+axs[0, 0].imshow(field, cmap='viridis')
+axs[0, 0].set_title("Field")
+
+# MEMORY
+axs[0, 1].imshow(memory, cmap='magma')
+axs[0, 1].set_title("Symbol Memory")
+
+# GRAPH
+axs[1, 0].imshow(symbol_mask, cmap='gray')
+axs[1, 0].set_title("Symbol Composition Graph")
+
+for i, j in edges:
+    y1, x1 = centroids[i]
+    y2, x2 = centroids[j]
+    axs[1, 0].plot([x1, x2], [y1, y2], color='cyan', linewidth=1)
+
+axs[1, 0].scatter(centroids[:, 1], centroids[:, 0], c='red', s=10)
+
+# COMPONENTS VISUAL
+component_map = np.zeros((SIZE, SIZE))
+
+for idx, comp in enumerate(components):
+    for node in comp:
+        y, x = centroids[node]
+        component_map[int(y), int(x)] = idx + 1
+
+axs[1, 1].imshow(component_map, cmap='tab20')
+axs[1, 1].set_title("Composition Components")
+
+# --------------------------------------------------
+# SAVE
+# --------------------------------------------------
+
+img_path = os.path.join(OUTPUT_DIR, f"level33_{run_id}.png")
+plt.tight_layout()
+plt.savefig(img_path, dpi=200)
+plt.close()
+
+json_path = os.path.join(OUTPUT_DIR, f"level33_{run_id}.json")
+with open(json_path, "w") as f:
+    json.dump({
+        "run_id": run_id,
+        "metrics": metrics
+    }, f, indent=2)
+
+print("Run complete:", run_id)        gx = grads[1][yi % SIZE, xi % SIZE]
         gy = grads[0][yi % SIZE, xi % SIZE]
 
         force = np.array([gx, gy])
