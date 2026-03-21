@@ -11,6 +11,9 @@ Auto-generated from simulation outputs.
 *(no image found)*
 
 
+• dense overlapping trajectories • high coherence • uniform motion
+
+
 ---
 
 
@@ -18,6 +21,9 @@ Auto-generated from simulation outputs.
 
 
 *(no image found)*
+
+
+• phase fragmentation • increased diversity • structured instability
 
 
 ---
@@ -29,6 +35,9 @@ Auto-generated from simulation outputs.
 *(no image found)*
 
 
+• radial density formation • central clustering • early shell geometry
+
+
 ---
 
 
@@ -36,6 +45,9 @@ Auto-generated from simulation outputs.
 
 
 *(no image found)*
+
+
+• stable cyclic trajectories • ring formation • orbit dynamics
 
 
 ---
@@ -47,6 +59,9 @@ Auto-generated from simulation outputs.
 *(no image found)*
 
 
+• multiple shells • resonance patterns • layered structures
+
+
 ---
 
 
@@ -54,6 +69,9 @@ Auto-generated from simulation outputs.
 
 
 *(no image found)*
+
+
+• cross-shell interaction • asymmetric density • coupling zones
 
 
 ---
@@ -65,6 +83,9 @@ Auto-generated from simulation outputs.
 *(no image found)*
 
 
+• smooth circular geometry • strong alignment • minimal noise
+
+
 ---
 
 
@@ -72,6 +93,9 @@ Auto-generated from simulation outputs.
 
 
 *(no image found)*
+
+
+• self-sustained structures • internal coordinates • emerging grids
 
 
 ---
