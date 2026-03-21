@@ -233,6 +233,150 @@ It provides:
 - a framework for studying emergent time and dynamics  
 
 ---
+## 🔷 NEW SECTION: Advanced Dynamic Regimes (Levels 20–27)
+
+⸻
+
+From Dynamics to Geometry
+
+Beyond the initial 7-phase model, the NEXAH Dynamics Engine reveals a second layer of system behavior:
+
+Dynamic systems do not only move — they organize into geometric structures.
+
+This regime emerges when memory, feedback, and flow reach critical coupling thresholds.
+
+⸻
+
+Phase Extension: Levels 20+
+
+⸻
+
+### 8. Phase Synchronization Collapse
+
+Agents synchronize into a dominant phase regime
+
+→ global coherence emerges
+→ system loses diversity of motion
+
+⸻
+
+### 9. Controlled Desynchronization
+
+System deliberately breaks phase lock
+
+→ restores exploration
+→ prevents collapse into trivial attractors
+
+⸻
+
+### 10. Crown / Shell Formation
+
+Radial structures emerge
+
+→ agents organize into circular shells
+→ memory accumulates in ring-like structures
+
+⸻
+
+### 11. Orbit Stabilization
+
+Closed trajectories stabilize into persistent orbits
+
+→ dynamic loops replace static attractors
+→ systems begin to “cycle” instead of converge
+
+⸻
+
+### 12. Multi-Shell Resonance
+
+Multiple orbital layers coexist
+
+→ hierarchical structure emerges
+→ resonance between shells
+
+⸻
+
+### 13. Shell Coupling
+
+Interaction between shells
+
+→ energy and information transfer across layers
+→ emergence of complex multi-layer systems
+
+⸻
+
+### 14. Geometry Emergence (Field Collapse)
+
+Memory and field align
+
+→ system collapses into a coherent geometric structure
+→ ring / torus-like forms appear
+
+Field ≈ Memory (alignment → 1.0)
+
+⸻
+
+### 15. Autonomous Field Formation
+
+System becomes partially self-sustaining
+
+→ memory begins to dominate field evolution
+→ system develops internal structure
+
+⸻
+
+### 16. Geometry Fragmentation (Discrete Mode)
+
+Global structure breaks into local geometries
+
+→ triangles, grids, and node clusters emerge
+→ transition from continuous fields to discrete structures
+
+⸻
+
+## 🧠 Key Discovery
+
+Geometry is not imposed — it emerges from memory-driven dynamics.
+
+The system naturally transitions through:
+
+Noise → Flow → Memory → Feedback → Orbit → Shell → Geometry → Discrete Structure
+
+## 🧬 Dual Regime Insight
+
+The engine now reveals two fundamental modes:
+
+Continuous Mode
+	•	smooth fields
+	•	rings / shells
+	•	attractors / orbits
+
+Discrete Mode
+	•	nodes
+	•	grids
+	•	geometric primitives
+	•	local coordinate systems
+
+⸻
+
+### These modes are not separate — they are phases of the same system.
+
+⸻
+
+## 🧭 Implication for NEXAH
+
+The Dynamics Engine now supports:
+	•	emergence of geometry from dynamics
+	•	transition between continuous and discrete structures
+	•	formation of self-sustaining fields
+	•	internal coordinate system generation
+	•	multi-layer system organization
+
+
+
+
+
+
 
 # License
 
