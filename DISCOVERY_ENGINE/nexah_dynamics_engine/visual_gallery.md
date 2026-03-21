@@ -1,103 +1,105 @@
 # NEXAH Dynamics Engine — Visual Gallery
 
-This gallery documents the visual evolution of the NEXAH Dynamics Engine.
-
-Each image corresponds to a distinct dynamic regime.
+Auto-generated from simulation outputs.
 
 ---
+
 
 # LEVEL 20 — Phase Synchronization
 
-• dense overlapping trajectories  
-• high coherence  
-• uniform motion patterns  
 
-→ collective behavior
+![Level 20](ENGINE/visuals/navigation_level20/navigation_level20_20260321_054300.png)
+
+
+• dense overlapping trajectories • high coherence • uniform motion
+
 
 ---
+
 
 # LEVEL 21 — Controlled Desync
 
-• increased trajectory diversity  
-• phase fragmentation  
-• memory phase shift  
 
-→ structured instability
+![Level 21](ENGINE/visuals/navigation_level21/level21_20260321_114215.png)
+
+
+• phase fragmentation • increased diversity • structured instability
+
 
 ---
+
 
 # LEVEL 22 — Crown / Shell
 
-• radial density formation  
-• central clustering  
-• early shell structures  
 
-→ geometry emerges
+![Level 22](ENGINE/visuals/navigation_level22/level22_20260321_115358.png)
+
+
+• radial density formation • central clustering • early shell geometry
+
 
 ---
+
 
 # LEVEL 23 — Orbit Stabilization
 
-• clear ring formation  
-• cyclic trajectories  
-• stable orbit-like motion  
 
-→ attractors become loops
+![Level 23](ENGINE/visuals/navigation_level23/level23_20260321_120705.png)
+
+
+• stable cyclic trajectories • ring formation • orbit dynamics
+
 
 ---
+
 
 # LEVEL 24 — Multi-Shell Resonance
 
-• multiple concentric layers  
-• interference patterns  
-• resonance across shells  
 
-→ layered geometry
+![Level 24](ENGINE/visuals/navigation_level24/level24_20260321_121945.png)
+
+
+• multiple shells • resonance patterns • layered structures
+
 
 ---
+
 
 # LEVEL 25 — Shell Coupling
 
-• cross-shell trajectories  
-• asymmetric density patterns  
-• interaction zones  
 
-→ internal system connectivity
+![Level 25](ENGINE/visuals/navigation_level25/level25_20260321_124923.png)
+
+
+• cross-shell interaction • asymmetric density • coupling zones
+
 
 ---
+
 
 # LEVEL 26 — Geometry Collapse
 
-• smooth circular structures  
-• strong field-memory alignment  
-• minimal noise  
 
-→ stable geometry
+![Level 26](ENGINE/visuals/navigation_level26/level26_20260321_125755.png)
+
+
+• smooth circular geometry • strong alignment • minimal noise
+
 
 ---
+
 
 # LEVEL 27 — Autonomous Field
 
-• sparse but persistent memory  
-• self-sustained structures  
-• emergence of internal coordinate systems  
 
-→ system autonomy
+![Level 27](ENGINE/visuals/navigation_level27/level27_20260321_131815.png)
 
----
 
-# VISUAL PATTERNS
+• self-sustained structures • internal coordinates • emerging grids
 
-Across all levels, recurring motifs appear:
-
-• rings  
-• spirals  
-• shells  
-• grids  
-• nodes  
-• symmetry breaks  
 
 ---
+
 
 # KEY OBSERVATION
 
@@ -105,27 +107,8 @@ Across all levels, recurring motifs appear:
 
 ---
 
-# INTERPRETATION LAYERS
-
-The visuals can be read as:
-
-• physical systems (fields, flows)  
-• biological systems (growth, networks)  
-• cognitive systems (memory, perception)  
-• symbolic systems (geometry, topology)  
-
----
-
 # SUMMARY
 
-The visual evolution shows:
-
 noise → structure → pattern → geometry → autonomy
-
----
-
-This confirms:
-
-> **Dynamic interaction alone is sufficient to generate structured space.**
 
 ---
