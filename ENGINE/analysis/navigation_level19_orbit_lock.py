@@ -203,6 +203,7 @@ plt.imshow(visit_norm)
 
 plt.tight_layout()
 plt.savefig(f"{SAVE_DIR}/navigation_level19_{run_id}.png", dpi=200)
+plt.show()
 plt.close()
 
 print("Run complete:", run_id)
