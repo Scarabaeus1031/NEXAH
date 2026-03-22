@@ -1,6 +1,6 @@
-# NEXAH — Resilience Architecture Engine
+# NEXAH — Discovery & Dynamics Engine
 
-NEXAH is a research framework for exploring the stability and resilience of complex systems.
+NEXAH is a research framework for exploring the stability, evolution, and organization of complex systems.
 
 It provides computational tools for:
 
@@ -9,12 +9,23 @@ It provides computational tools for:
 • phase transition detection  
 • structural law discovery  
 • theory validation  
+• dynamic system simulation  
+• topology extraction  
 
-The framework enables large-scale exploration of architecture spaces and the discovery of structural principles governing resilient systems.
+The framework enables large-scale exploration of architecture spaces and the discovery of structural principles governing **how systems evolve, stabilize, and organize into connected structures**.
 
-NEXAH combines simulation, topology analysis, and symbolic discovery to investigate how **system structure influences stability across complex networks**.
+---
 
-![Resilience Landscape](visuals/nexah_resilience_analysis_toolkit.png)
+# 🆕 Dynamic & Topological Systems
+
+NEXAH has evolved beyond static architecture analysis.
+
+It now supports:
+
+• dynamic system simulation  
+• flow-based structure formation  
+• emergence of loops, channels, and networks  
+• extraction of structure from trajectories  
 
 ---
 
@@ -33,21 +44,19 @@ These tools form the experimental engine of the NEXAH project and support:
 - symbolic law discovery  
 - system visualization  
 
-Together they implement a **simulation laboratory for resilient architectures**.
-
-The central research question of the framework is:
-
-> How does system topology influence stability, resilience, and phase transitions in complex systems?
-
-By exploring large architecture spaces, NEXAH aims to discover **structural patterns and universal principles** underlying stable system design.
+Together they implement a **simulation laboratory for complex systems**.
 
 ---
 
-# NEXAH Discovery Engine
+# 🧭 Central Research Question
 
-![NEXAH Simulation Engine](visuals/nexah_engine_pipeline_visual.png)
+> How do systems evolve, stabilize, and organize into structured, connected states?
 
-The NEXAH tools follow a structured discovery pipeline:
+---
+
+# 🔁 Discovery Pipeline (Extended)
+
+NEXAH follows a structured discovery pipeline:
 
 Architecture Generation  
 ↓  
@@ -55,7 +64,7 @@ System Evolution
 ↓  
 Resilience Analysis  
 ↓  
-Resilience Landscape Mapping  
+Landscape Mapping  
 ↓  
 Phase Transition Detection  
 ↓  
@@ -63,19 +72,53 @@ Structural Law Discovery
 ↓  
 Theory Validation  
 ↓  
-Research Transition  
-
-This pipeline allows automated exploration of thousands of architectures and supports the discovery of **emergent resilience laws**.
+Dynamics Simulation  
+↓  
+Resonance Formation  
+↓  
+Flow Structuring  
+↓  
+Topology Formation  
+↓  
+Topology Extraction  
 
 ---
 
-# Tool Capabilities
+# 🔬 Key Capabilities
 
-The full capability overview of the NEXAH simulation framework is documented here:
+The system enables:
+
+• exploration of large architecture spaces  
+• detection of stability regions and transitions  
+• discovery of structural laws  
+• simulation of dynamic multi-agent systems  
+• emergence of persistent flow structures  
+• formation of loops, channels, and networks  
+• extraction of topology from dynamic data  
+
+---
+
+# 🧠 Key Observations
+
+Across simulations, the system demonstrates:
+
+• geometry emerging from dynamics  
+• resonance-driven selection of states  
+• φ as an emergent transition ratio (observed, not imposed)  
+• flow organizing into persistent trajectories  
+• separation of density and structural topology  
+• formation of loop–channel networks  
+• existence of transition nodes between regimes  
+
+---
+
+# 🔧 Tool Capabilities
+
+A full capability overview is documented here:
 
 → **[Tool Capabilities](TOOL_CAPABILITIES.md)**
 
-This document provides a detailed breakdown of the implemented tool ecosystem, including:
+This includes:
 
 • architecture exploration engines  
 • resilience analysis tools  
@@ -85,204 +128,180 @@ This document provides a detailed breakdown of the implemented tool ecosystem, i
 • theory validation frameworks  
 • navigation layers  
 • visualization systems  
-
-Together these tools implement the **complete discovery pipeline for resilient architectures**.
-
----
----
-
-# Tool Architecture Map
-
-![NEXAH Tool Architecture](visuals/nexah_tool_architecture_map_v3.png)
-
-The NEXAH tool ecosystem is organized into functional clusters that together implement the discovery pipeline.
+• dynamic simulation engines  
+• topology extraction tools  
 
 ---
 
-# Main Tool Categories
+# 🧰 Main Tool Categories
 
 ## 1. System Analysis
 
-Tools that analyze system architectures and compute resilience metrics.
+Tools for evaluating stability and system behavior.
 
 Examples:
 
-- `resilience_analyzer.py`
-- `system_stress_test.py`
-- `catastrophe_detector.py`
-- `risk_landscape.py`
-
-Core functions:
-
-- resilience scoring  
-- failure propagation analysis  
-- system perturbation testing  
+- `resilience_analyzer.py`  
+- `system_stress_test.py`  
+- `catastrophe_detector.py`  
+- `risk_landscape.py`  
 
 ---
 
 ## 2. Architecture Exploration
 
-Tools that generate and evolve system architectures.
+Tools for generating and evolving system structures.
 
 Examples:
 
-- `system_designer.py`
-- `system_evolver.py`
-- `system_evolver_population.py`
-- `resilience_architecture_evolver.py`
-- `resilience_architecture_optimizer.py`
-- `auto_stabilizer.py`
-
-Capabilities:
-
-- architecture mutation  
-- evolutionary search  
-- automatic stabilization  
+- `system_designer.py`  
+- `system_evolver.py`  
+- `resilience_architecture_evolver.py`  
+- `resilience_architecture_optimizer.py`  
 
 ---
 
 ## 3. Landscape Mapping
 
-These tools map the **resilience landscape** across architecture space.
+Tools for reconstructing stability landscapes.
 
 Examples:
 
-- `resilience_landscape.py`
-- `resilience_3d_landscape.py`
-- `phase_space_map.py`
-- `resilience_phase_space_explorer.py`
-- `global_resilience_map.py`
-- `global_resilience_scan.py`
-
-Outputs include:
-
-- phase diagrams  
-- attractor landscapes  
-- resilience heatmaps  
+- `resilience_landscape.py`  
+- `resilience_3d_landscape.py`  
+- `phase_space_map.py`  
 
 ---
 
 ## 4. Phase Transition Detection
 
-These tools detect **critical structural transitions** in architecture topology.
+Tools for identifying regime changes.
 
 Examples:
 
-- `resilience_phase_diagram.py`
-- `resilience_phase_transition_detector.py`
-- `resilience_topology_phase_transition_detector.py`
-- `resilience_critical_point_finder.py`
-- `resilience_ridge_detector.py`
-
-These tools identify structural thresholds where systems shift between regimes:
-
-fragile → stable  
-stable → unstable  
+- `resilience_phase_transition_detector.py`  
+- `resilience_critical_point_finder.py`  
 
 ---
 
 ## 5. Law Discovery Engine
 
-These tools search for **universal laws of resilience**.
+Tools for discovering structural relationships.
 
 Examples:
 
-- `resilience_symbolic_equation_search.py`
-- `resilience_field_equation_discovery.py`
-- `resilience_universal_architecture_law.py`
-- `resilience_universal_scaling_law_detector.py`
-- `resilience_law_discovery.py`
-- `resilience_symbolic_law_finder.py`
-
-Capabilities include:
-
-- symbolic regression  
-- scaling law detection  
-- structural equation discovery  
+- `resilience_symbolic_equation_search.py`  
+- `resilience_law_discovery.py`  
 
 ---
 
-## 6. Validation and Theory Construction
+## 6. Validation & Theory Construction
 
-These tools test candidate theories and validate discovered laws.
+Tools for validating discovered laws.
 
 Examples:
 
-- `resilience_universal_law_validator.py`
-- `resilience_constant_validator.py`
-- `resilience_universal_constant_search.py`
-- `resilience_universal_constant_finder.py`
-- `resilience_meta_learning_engine.py`
-- `resilience_unified_theory_builder.py`
-- `resilience_theory_builder.py`
+- `resilience_universal_law_validator.py`  
+- `resilience_theory_builder.py`  
 
 ---
 
 ## 7. Visualization Tools
 
-These tools visualize architectures and simulation results.
+Tools for visualizing system behavior.
 
 Examples:
 
-- `visualize_system.py`
-- `animate_system.py`
-- `evolution_visualizer.py`
-- `resilience_graph_visualizer.py`
-- `resilience_dashboard.py`
-- `architecture_map.py`
-- `architecture_diff.py`
-- `resilience_architecture_evolver_plot.py`
-
-Visualization tools support interpretation of architecture dynamics and simulation outcomes.
+- `visualize_system.py`  
+- `resilience_dashboard.py`  
 
 ---
 
-# Discovery Pipeline (Simulation Phase)
+## 8. Dynamics & Topology Engine (NEW)
 
-A complete **resilience law discovery pipeline** has been constructed during the simulation phase.
+Tools for simulating and extracting dynamic structure.
 
-Core components include:
+Examples:
 
-resilience_phase_diagram.py  
-resilience_ridge_detector.py  
-resilience_universal_architecture_law.py  
-resilience_topology_phase_transition_detector.py  
-resilience_renormalization_detector.py  
-resilience_universal_constant_search.py  
-resilience_field_equation_discovery.py  
-resilience_symbolic_equation_search.py  
-resilience_universal_law_validator.py  
+- `navigation_levelXX_*.py`  
+- `loop_detector.py`  
+- `channel_extractor.py`  
+- `transition_node_finder.py`  
 
-Together these components enable automated exploration of architecture space and identification of **emergent structural principles**.
+Capabilities:
+
+• multi-agent dynamic simulation  
+• flow structuring  
+• loop detection  
+• channel extraction  
+• transition node detection  
+• topology reconstruction  
 
 ---
 
-# Simulation Status
+# 🧩 Interpretation
 
-Current project phase:
+NEXAH is no longer only a system analysis framework.
+
+It is:
+
+> a system that **generates, evolves, and extracts structure from dynamics**
+
+---
+
+# 🖼️ System Architecture
+
+![NEXAH Tool Architecture](visuals/nexah_tool_architecture_map_v3.png)
+
+The NEXAH tool ecosystem is organized into functional layers:
+
+- META — relational structure  
+- ARCHY — local dynamics  
+- MESO — stability landscapes  
+- MEVA — intervention strategies  
+
+Extended layers:
+
+- DYNAMICS — flow evolution  
+- TOPOLOGY — loop/channel networks  
+
+---
+
+# 📊 Project Status
 
 Simulation Phase: COMPLETE  
+Dynamics & Topology Phase: ACTIVE  
 Research Phase: PLANNED  
-
-The next stage will transition from simulation experiments to **empirical validation on real-world networks**, including:
-
-- internet topology  
-- brain connectomes  
-- power grid networks  
-- biological interaction networks  
-- financial networks  
 
 ---
 
-# Summary
+# 🚀 Next Stage
 
-The `tools/` directory represents the **computational laboratory of the NEXAH project**.
+• topology validation across runs  
+• loop and channel detection algorithms  
+• transition node identification  
+• real-world network testing  
 
-It enables:
+---
 
-- large-scale architecture exploration  
-- resilience landscape mapping  
-- discovery of structural laws  
-- validation of emergent theories  
+# 🧠 Summary
 
-This infrastructure forms the bridge between **simulation-driven discovery and scientific research**.
+The NEXAH system enables:
+
+• architecture exploration  
+• stability analysis  
+• law discovery  
+• dynamic simulation  
+• topology formation and extraction  
+
+It forms a bridge between:
+
+→ simulation  
+→ structure discovery  
+→ scientific modeling  
+
+---
+
+# License
+
+Apache 2.0
