@@ -33,6 +33,8 @@ MEMORY_DECAY = 0.996
 SMOOTH_SIGMA = 1.2
 DENSITY_SMOOTH = 1.2
 
+OUTPUT_DIR = "ENGINE/visuals"
+
 
 # --------------------------------------------------
 # FIELD
@@ -46,7 +48,6 @@ def build_field():
         y = np.linspace(0, SIZE - 1, SIZE)
         X, Y = np.meshgrid(x, y)
 
-        # zwei Gauss-Hügel → wie deine bisherigen Felder
         g1 = np.exp(-((X - 25)**2 + (Y - 30)**2) / 200)
         g2 = np.exp(-((X - 55)**2 + (Y - 60)**2) / 220)
 
@@ -76,93 +77,60 @@ def simulate(field):
     gx, gy = compute_gradient(field)
 
     particles = np.random.rand(N_PARTICLES, 2) * SIZE
-    velocities = np.zeros_like(particles)
 
-    # 🔥 MEMORY FIELD
     memory = np.zeros((SIZE, SIZE))
-
     density = np.zeros((SIZE, SIZE))
 
     for step in range(STEPS):
 
         new_particles = []
 
-        for i, (x, y) in enumerate(particles):
+        for (x, y) in particles:
 
             ix = int(np.clip(x, 0, SIZE - 1))
             iy = int(np.clip(y, 0, SIZE - 1))
 
-            # ------------------------------------------
-            # FIELD FORCE
-            # ------------------------------------------
             fx = gx[iy, ix]
             fy = gy[iy, ix]
 
-            # ------------------------------------------
-            # ROTATION (orthogonal)
-            # ------------------------------------------
+            # Rotation
             rx = -fy
             ry = fx
 
-            # ------------------------------------------
-            # DRIFT (global bias)
-            # ------------------------------------------
+            # Drift
             dx = DRIFT_STRENGTH
             dy = DRIFT_STRENGTH * 0.5
 
-            # ------------------------------------------
-            # RETURN FIELD (Memory Attraction)
-            # ------------------------------------------
-            mx = 0.0
-            my = 0.0
+            # Memory Return
+            m = memory[iy, ix]
 
-            if memory.sum() > 0:
-                mx = memory[iy, ix]
-                my = memory[iy, ix]
-
-            # ------------------------------------------
-            # COMBINE FORCES
-            # ------------------------------------------
             vx = (
                 STEP_SIZE * fx
                 + ROTATION_STRENGTH * rx
                 + dx
-                + RETURN_STRENGTH * mx
+                + RETURN_STRENGTH * m
             )
 
             vy = (
                 STEP_SIZE * fy
                 + ROTATION_STRENGTH * ry
                 + dy
-                + RETURN_STRENGTH * my
+                + RETURN_STRENGTH * m
             )
 
-            # ------------------------------------------
-            # UPDATE POSITION
-            # ------------------------------------------
             nx = (x + vx) % SIZE
             ny = (y + vy) % SIZE
 
             new_particles.append((nx, ny))
 
-            # ------------------------------------------
-            # WRITE TO DENSITY
-            # ------------------------------------------
             ix2 = int(nx)
             iy2 = int(ny)
 
             density[iy2, ix2] += 1.0
-
-            # ------------------------------------------
-            # UPDATE MEMORY
-            # ------------------------------------------
             memory[iy2, ix2] += 1.0
 
         particles = np.array(new_particles)
 
-        # ------------------------------------------
-        # DECAY MEMORY
-        # ------------------------------------------
         memory *= MEMORY_DECAY
 
     density = gaussian_filter(density, sigma=DENSITY_SMOOTH)
@@ -179,7 +147,8 @@ def save_output(field, density):
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    os.makedirs("ENGINE/output", exist_ok=True)
+    # 🔥 WICHTIG: richtiger Ordner
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # IMAGE
     fig, axs = plt.subplots(1, 2, figsize=(10, 5))
@@ -193,7 +162,7 @@ def save_output(field, density):
     for ax in axs:
         ax.axis("off")
 
-    img_path = f"ENGINE/output/level50_{timestamp}.png"
+    img_path = os.path.join(OUTPUT_DIR, f"level50_{timestamp}.png")
     plt.savefig(img_path, dpi=150)
     plt.close()
 
@@ -210,7 +179,7 @@ def save_output(field, density):
         }
     }
 
-    json_path = f"ENGINE/output/level50_{timestamp}.json"
+    json_path = os.path.join(OUTPUT_DIR, f"level50_{timestamp}.json")
 
     with open(json_path, "w") as f:
         json.dump(data, f, indent=2)
