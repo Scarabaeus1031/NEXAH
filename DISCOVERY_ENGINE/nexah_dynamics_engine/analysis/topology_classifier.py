@@ -4,59 +4,79 @@ import numpy as np
 
 
 # --------------------------------------------------
-# CLASSIFICATION RULES
+# CLASSIFICATION RULES (IMPROVED)
 # --------------------------------------------------
 
 def classify_topology(signature):
     """
-    Classify topology based on signature patterns
+    Improved topology classification based on signature patterns
     """
 
-    deg = signature["degree_dist"]
-    angles = signature["angle_profile"]
+    deg = signature.get("degree_dist", {})
+    angles = signature.get("angle_profile", {})
 
-    avg_loop = signature["avg_loop"]
-    avg_channel = signature["avg_channel"]
+    avg_loop = signature.get("avg_loop", 0.0)
+    avg_channel = signature.get("avg_channel", 0.0)
+
+    # --------------------------------------------------
+    # BASIC FEATURES
+    # --------------------------------------------------
 
     num_hubs = sum(1 for k, v in deg.items() if k >= 5 and v > 0)
+    degree_variation = len(deg)
+
+    loop_strength = avg_loop
+    channel_strength = avg_channel
+
+    angle_120 = angles.get(120, 0)
+    angle_phi = angles.get(137.5, 0)
+    angle_72 = angles.get(72, 0)
 
     # --------------------------------------------------
-    # RULE SET
+    # PRIORITY RULES (IMPORTANT ORDER!)
     # --------------------------------------------------
 
-    # 1. LOOP DOMINANT (Shell / Spiral Systems)
-    if avg_loop > avg_channel and angles.get(120, 0) > 0.2:
-        return "Loop-Dominant (Shell / Orbital System)"
+    # 1. 🔵 STRONG LOOP SYSTEM
+    if loop_strength > 0.05 and channel_strength < 0.02:
+        return "Loop System"
 
-    # 2. SPIRAL SYSTEM (asymmetric + φ / golden angle hint)
-    if angles.get(137.5, 0) > 0.15:
-        return "Spiral / Phi-Driven System"
+    # 2. 🟢 STRONG CHANNEL SYSTEM
+    if channel_strength > 0.05 and loop_strength < 0.02:
+        return "Channel System"
 
-    # 3. NETWORK SYSTEM (many hubs)
-    if num_hubs >= 2:
-        return "Network System (Hub-Based Topology)"
+    # 3. 🟣 HYBRID SYSTEM (both active)
+    if loop_strength > 0.02 and channel_strength > 0.02:
+        return "Hybrid System"
 
-    # 4. CHANNEL DOMINANT (transport structure)
-    if avg_channel > avg_loop * 1.2:
-        return "Channel-Dominant System (Transport Topology)"
-
-    # 5. TRIANGULAR / HEXAGONAL STRUCTURE
-    if angles.get(120, 0) > 0.25:
+    # 4. 🔺 TRIANGULAR / HEX STRUCTURE
+    if angle_120 > 0.25:
         return "Triangular / Hexagonal Structure"
 
-    # 6. PENTAGONAL STRUCTURE
-    if angles.get(72, 0) > 0.2:
+    # 5. ⭐ PHI / SPIRAL SYSTEM
+    if angle_phi > 0.15:
+        return "Spiral / Phi-Driven System"
+
+    # 6. 🔶 PENTAGONAL STRUCTURE
+    if angle_72 > 0.2:
         return "Pentagonal Structure"
 
-    # 7. CHAOTIC SYSTEM
-    if len(deg) > 6 and max(deg.values()) < 0.3:
+    # 7. 🟡 STRUCTURED NETWORK (ONLY if above didn't trigger!)
+    if num_hubs >= 2 and degree_variation > 30:
+        return "Structured Network"
+
+    # 8. ⚫ CHAOTIC / DIFFUSE
+    if degree_variation > 50 and max(deg.values(), default=0) < 0.3:
         return "Chaotic / Diffuse System"
 
-    return "Hybrid / Unclassified"
+    # --------------------------------------------------
+    # FALLBACK
+    # --------------------------------------------------
+
+    return "Weak / Transitional System"
 
 
 # --------------------------------------------------
-# CONFIDENCE ESTIMATION
+# CONFIDENCE ESTIMATION (IMPROVED)
 # --------------------------------------------------
 
 def classification_confidence(signature):
@@ -64,16 +84,22 @@ def classification_confidence(signature):
     Estimate how strong the structure is
     """
 
-    deg = signature["degree_dist"]
-    angles = signature["angle_profile"]
+    deg = signature.get("degree_dist", {})
+    angles = signature.get("angle_profile", {})
 
-    # concentration of structure
+    if len(deg) == 0:
+        return 0.0
+
+    # entropy (structure randomness)
     deg_entropy = -sum(v * np.log(v + 1e-8) for v in deg.values())
+
+    # angle concentration
     angle_strength = sum(angles.values())
 
-    confidence = np.exp(-deg_entropy) * angle_strength
+    # normalize
+    confidence = np.exp(-deg_entropy) * (1 + angle_strength)
 
-    return confidence
+    return float(confidence)
 
 
 # --------------------------------------------------
