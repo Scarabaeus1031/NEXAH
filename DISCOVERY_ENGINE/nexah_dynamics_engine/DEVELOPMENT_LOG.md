@@ -860,5 +860,173 @@ Let structures repeat.
 Then extract them.
 
 ---
+# 🔷 ADDENDUM — Topology Phase Map (Helix Grid Scan)
+
+---
+
+## 🎯 Ziel
+
+Systematische Analyse der Topologie im Parameterraum:
+
+orbit = fix  
+helix ∈ [0.0 → 0.5]
+
+---
+
+## ✅ Ergebnis — Systemverhalten
+
+### Klassifikation
+
+Alle getesteten Punkte:
+
+→ Network System (Hub-Based Topology)
+
+Wichtig:
+- kein Chaos
+- kein Zufallsverhalten
+- stabile Netzwerkstruktur
+
+---
+
+## 🌊 Phase Map
+
+Beobachtung:
+
+- nahezu konstante Klassifikation (~1.0)
+- visuell homogenes Feld
+
+Interpretation:
+
+→ globale Phase ist stabil  
+→ keine makroskopischen Phasenübergänge
+
+---
+
+## 🧬 Verborgene Dynamik
+
+Trotz stabiler Phase:
+
+→ Degree Distribution zeigt:
+
+- starke Peaks
+- Clusterbildung
+- nichtlineare Verschiebungen
+
+Beispiele:
+
+- dominante Degree-Bereiche ~30–50+
+- lokale Peaks (z. B. 42, 47 etc.)
+
+---
+
+## 🔥 Zentrale Erkenntnis
+
+kein sichtbarer Phasenwechsel  
+→ aber interne Strukturveränderung
+
+→ Hidden Phase Structure
+
+---
+
+## 🧵 Morphologie — Braids / Zöpfe
+
+Beobachtet:
+
+- filamentartige Muster
+- verschränkte Strukturen
+- rotierende Cluster
+
+Interpretation:
+
+trajectory overlap  
++ topologische Constraints  
+→ braidartige Muster
+
+---
+
+## 🌪️ Dynamikmodell
+
+System verhält sich wie:
+
+- Strömungsfeld
+- Jetstreams
+- Wirbelsystem
+
+Eigenschaften:
+
+- lokale Zentren (Hubs)
+- Gegenrotationen
+- stabile Umlaufbahnen
+
+---
+
+## 🔁 Parameter-Effekt (Helix)
+
+Beobachtung:
+
+keine lineare Veränderung  
+sondern:
+
+→ Reorganisationssprünge
+
+| Helix | Verhalten |
+|------|----------|
+| hoch (~0.4) | starke Hub-Konzentration |
+| mittel | breite Verteilung |
+| niedrig (~0.1) | neue Clusterbildung |
+
+---
+
+## 🧠 Meta-Erkenntnis
+
+System zeigt:
+
+- stabile globale Phase
+- dynamische lokale Struktur
+- resonanzbasierte Organisation
+
+---
+
+## 🔬 Status
+
+- Pipeline stabil ✔️  
+- Grid Scan erfolgreich ✔️  
+- JSON Outputs erzeugt ✔️  
+- Visuals generiert ✔️  
+
+---
+
+## 🚀 Next Steps
+
+Kurzfristig:
+
+- Bulge Detection (Degree Peaks)
+- Parameter Drift Analyse
+- Rotation / Flow Detection
+
+Mittelfristig:
+
+- Loop Extraction
+- Basin Mapping
+- Transition Nodes
+
+Langfristig:
+
+- Netzwerk-Rekonstruktion
+- Kanalstrukturen
+- Grid Emergence
+
+---
+
+## 🔒 Checkpoint
+
+Aktueller Zustand:
+
+resonance → flow → topology → structure extraction
+
+System ist jetzt im:
+
+→ Mapping-Modus (nicht mehr Exploration)
+
 
 End of Log
