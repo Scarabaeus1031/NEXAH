@@ -2,7 +2,6 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.spatial.distance import cdist
 from sklearn.cluster import DBSCAN
 
 
@@ -15,6 +14,8 @@ MIN_TIME_SEPARATION = 20   # avoid trivial neighbors
 CLUSTER_EPS = 2.0
 CLUSTER_MIN_SAMPLES = 5
 
+MAX_SAMPLES = 1500         # safety limit (prevents O(N^2) explosion)
+
 
 # --------------------------------------------------
 # LOOP DETECTION CORE
@@ -22,7 +23,7 @@ CLUSTER_MIN_SAMPLES = 5
 
 def detect_recurrences(trajectory):
     """
-    Detect recurrence pairs in trajectory.
+    Efficient recurrence detection (no full distance matrix)
 
     trajectory: (N, D) array
     returns: list of (i, j) index pairs
@@ -30,12 +31,11 @@ def detect_recurrences(trajectory):
     N = len(trajectory)
     recurrences = []
 
-    # pairwise distances
-    dist_matrix = cdist(trajectory, trajectory)
-
     for i in range(N):
         for j in range(i + MIN_TIME_SEPARATION, N):
-            if dist_matrix[i, j] < DIST_THRESHOLD:
+            dist = np.linalg.norm(trajectory[i] - trajectory[j])
+
+            if dist < DIST_THRESHOLD:
                 recurrences.append((i, j))
 
     return recurrences
@@ -51,6 +51,9 @@ def recurrence_points(trajectory, recurrences):
         midpoint = (trajectory[i] + trajectory[j]) / 2.0
         points.append(midpoint)
 
+    if len(points) == 0:
+        return None
+
     return np.array(points)
 
 
@@ -62,7 +65,7 @@ def cluster_loops(points):
     """
     Cluster recurrence points into loop structures
     """
-    if len(points) == 0:
+    if points is None or len(points) == 0:
         return None, None
 
     clustering = DBSCAN(eps=CLUSTER_EPS, min_samples=CLUSTER_MIN_SAMPLES)
@@ -107,10 +110,15 @@ def detect_loops(trajectory):
     """
     Full loop detection pipeline
     """
+
+    # safety downsampling
+    if len(trajectory) > MAX_SAMPLES:
+        trajectory = trajectory[:MAX_SAMPLES]
+
     recurrences = detect_recurrences(trajectory)
     points = recurrence_points(trajectory, recurrences)
 
-    if len(points) == 0:
+    if points is None:
         return None, None, None
 
     labels, clustering = cluster_loops(points)
