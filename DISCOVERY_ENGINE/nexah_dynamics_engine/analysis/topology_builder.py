@@ -62,7 +62,7 @@ def detect_nodes(points, graph):
 
 
 # --------------------------------------------------
-# 🔥 PIPELINE ADAPTER (WICHTIG)
+# 🔥 PIPELINE ADAPTER (FIXED)
 # --------------------------------------------------
 
 def build_topology_from_components(loops, channels, nodes):
@@ -76,20 +76,24 @@ def build_topology_from_components(loops, channels, nodes):
     if loops is not None:
         _, loop_points, _ = loops
         if loop_points is not None:
-            all_points.extend(loop_points)
+            for p in loop_points:
+                all_points.append(p)
 
-    # channels
+    # channels (FIX: flatten properly)
     if channels is not None:
         for ch in channels:
-            all_points.extend(ch)
+            for p in ch:
+                all_points.append(p)
 
     # nodes
     if nodes is not None:
-        all_points.extend(nodes)
+        for p in nodes:
+            all_points.append(p)
 
     if len(all_points) == 0:
         return {}
 
+    # now safe conversion
     all_points = np.array(all_points)
 
     return build_topology(all_points)
