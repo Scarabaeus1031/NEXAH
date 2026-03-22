@@ -141,7 +141,7 @@ def run_pipeline(params, run_id="run_001", visualize=True):
         "params": params,
         "classification": classification,
         "signature": signature,
-        "metrics": metrics
+        "metrics": metrics,
         "angle_data": angle_data
     }
 
