@@ -38,41 +38,44 @@ CHANNEL_STRENGTH = 0.22
 MEMORY_DECAY = 0.995
 FIELD_DECAY = 0.988
 
-SAVE_DIR = “ENGINE/visuals/navigation_level56”
-LOG_DIR = “ENGINE/logs”
+SAVE_DIR = "ENGINE/visuals/navigation_level56"
+LOG_DIR = "ENGINE/logs"
 
 os.makedirs(SAVE_DIR, exist_ok=True)
 os.makedirs(LOG_DIR, exist_ok=True)
 
-–––––––––––––––––––––––––
 
-FIELD GENERATION
-
-–––––––––––––––––––––––––
+# --------------------------------------------------
+# FIELD GENERATION
+# --------------------------------------------------
 
 def generate_field(size=80):
-x = np.linspace(0, size - 1, size)
-y = np.linspace(0, size - 1, size)
-X, Y = np.meshgrid(x, y)
+    x = np.linspace(0, size - 1, size)
+    y = np.linspace(0, size - 1, size)
+    X, Y = np.meshgrid(x, y)
 
-c1 = np.array([size * 0.3, size * 0.3])
-c2 = np.array([size * 0.7, size * 0.7])
+    c1 = np.array([size * 0.3, size * 0.3])
+    c2 = np.array([size * 0.7, size * 0.7])
 
-d1 = np.exp(-((X - c1[0])**2 + (Y - c1[1])**2) / (2 * 8**2))
-d2 = np.exp(-((X - c2[0])**2 + (Y - c2[1])**2) / (2 * 8**2))
+    d1 = np.exp(-((X - c1[0])**2 + (Y - c1[1])**2) / (2 * 8**2))
+    d2 = np.exp(-((X - c2[0])**2 + (Y - c2[1])**2) / (2 * 8**2))
 
-return d1 + d2
+    return d1 + d2
+
 
 def sample(field, x, y):
-xi = int(x) % SIZE
-yi = int(y) % SIZE
-return field[xi, yi]
+    xi = int(x) % SIZE
+    yi = int(y) % SIZE
+    return field[xi, yi]
 
-–––––––––––––––––––––––––
 
-INIT
+def normalize(v):
+    return v / (np.linalg.norm(v) + 1e-8)
 
-–––––––––––––––––––––––––
+
+# --------------------------------------------------
+# INIT
+# --------------------------------------------------
 
 field = generate_field(SIZE)
 memory = np.zeros_like(field)
@@ -81,146 +84,139 @@ particles = np.random.rand(N_PARTICLES, 2) * SIZE
 vel = np.zeros_like(particles)
 
 visit = np.zeros_like(field)
-trajectories = [[] for _ in range(N_PARTICLES)]
 
-–––––––––––––––––––––––––
 
-SIMULATION
-
-–––––––––––––––––––––––––
+# --------------------------------------------------
+# SIMULATION
+# --------------------------------------------------
 
 for step in range(STEPS):
 
-grad_y, grad_x = np.gradient(field)
+    grad_y, grad_x = np.gradient(field)
+    phase = step * PHASE_DRIFT
 
-phase = step * PHASE_DRIFT
+    for i in range(N_PARTICLES):
 
-for i in range(N_PARTICLES):
+        x, y = particles[i]
 
-    x, y = particles[i]
+        gx = sample(grad_x, x, y)
+        gy = sample(grad_y, x, y)
 
-    gx = sample(grad_x, x, y)
-    gy = sample(grad_y, x, y)
+        flow = np.array([gx, gy])
+        swirl = np.array([-gy, gx])
 
-    flow = np.array([gx, gy])
-    swirl = np.array([-gy, gx])
+        center = np.array([SIZE / 2, SIZE / 2])
 
-    # Orbit lock
-    center = np.array([SIZE/2, SIZE/2])
-    r_vec = particles[i] - center
-    r = np.linalg.norm(r_vec) + 1e-8
-    orbit_force = (R_TARGET - r) * (r_vec / r)
+        r_vec = particles[i] - center
+        r = np.linalg.norm(r_vec) + 1e-8
 
-    # Helix modulation
-    helix = np.array([
-        np.cos(phase + x * 0.05),
-        np.sin(phase + y * 0.05)
-    ])
+        orbit_dir = np.array([-r_vec[1], r_vec[0]])
+        orbit = normalize(orbit_dir) * ORBIT_STRENGTH
 
-    # Phase coupling
-    phase_vec = np.array([
-        np.sin(phase + x * 0.03),
-        np.cos(phase + y * 0.03)
-    ])
+        radial_correction = normalize(r_vec) * (R_TARGET - r) * 0.05
 
-    # Cross coupling (orthogonal interference)
-    cross = np.array([
-        np.sin(x * 0.08) * np.cos(y * 0.08),
-        np.cos(x * 0.08) * np.sin(y * 0.08)
-    ])
+        helix = np.array([
+            np.cos(phase + x * 0.05),
+            np.sin(phase + y * 0.05)
+        ])
 
-    # Memory attraction
-    mem = sample(memory, x, y)
-    mem_force = flow * mem
+        phase_vec = np.array([
+            np.sin(phase + x * 0.03),
+            np.cos(phase + y * 0.03)
+        ])
 
-    # Channel force (NEW)
-    direction = flow + swirl + helix
-    norm = np.linalg.norm(direction) + 1e-8
-    channel_dir = direction / norm
+        cross = np.array([
+            np.sin(x * 0.08) * np.cos(y * 0.08),
+            np.cos(x * 0.08) * np.sin(y * 0.08)
+        ])
 
-    # Knot lock (stabilizes intersections)
-    knot = (flow + swirl + cross)
-    knot_norm = np.linalg.norm(knot) + 1e-8
-    knot_dir = knot / knot_norm
+        mem = sample(memory, x, y)
+        mem_force = flow * mem
 
-    # Combine
-    force = (
-        flow +
-        ROTATION * swirl +
-        RETURN * (-flow) +
-        REJOIN * mem_force +
-        ORBIT_STRENGTH * orbit_force +
-        HELIX_STRENGTH * helix +
-        PHASE_COUPLING * phase_vec +
-        CROSS_COUPLING * cross +
-        KNOT_LOCK * knot_dir +
-        CHANNEL_STRENGTH * channel_dir
-    )
+        direction = flow + swirl + helix
+        channel_dir = normalize(direction)
 
-    vel[i] = vel[i] * 0.90 + force * STEP_SIZE
-    particles[i] += vel[i]
+        knot = flow + swirl + cross
+        knot_dir = normalize(knot)
 
-    particles[i] %= SIZE
+        force = (
+            flow
+            + ROTATION * swirl
+            - RETURN * flow
+            + REJOIN * mem_force
+            + ORBIT_STRENGTH * orbit
+            + radial_correction
+            + HELIX_STRENGTH * helix
+            + PHASE_COUPLING * phase_vec
+            + CROSS_COUPLING * cross
+            + KNOT_LOCK * knot_dir
+            + CHANNEL_STRENGTH * channel_dir
+        )
 
-    xi, yi = int(particles[i][0]), int(particles[i][1])
-    visit[xi, yi] += 1
-    memory[xi, yi] += 1
+        vel[i] = vel[i] * 0.90 + force * STEP_SIZE
+        particles[i] += vel[i]
+        particles[i] %= SIZE
 
-    trajectories[i].append(particles[i].copy())
+        xi = int(particles[i][0])
+        yi = int(particles[i][1])
+
+        visit[xi, yi] += 1
+        memory[xi, yi] += 1
 
     memory *= MEMORY_DECAY
     field *= FIELD_DECAY
 
-    –––––––––––––––––––––––––
 
-METRICS
-
-–––––––––––––––––––––––––
+# --------------------------------------------------
+# METRICS
+# --------------------------------------------------
 
 visit_norm = visit / (visit.sum() + 1e-8)
+
 entropy = -np.sum(visit_norm * np.log(visit_norm + 1e-12))
 
-–––––––––––––––––––––––––
 
-SAVE LOG
+# --------------------------------------------------
+# SAVE LOG
+# --------------------------------------------------
 
-–––––––––––––––––––––––––
-
-run_id = datetime.now().strftime(”%Y%m%d_%H%M%S”)
+run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 log_data = {
-“run_id”: run_id,
-“entropy”: float(entropy),
-“config”: {
-“orbit”: ORBIT_STRENGTH,
-“helix”: HELIX_STRENGTH,
-“knot”: KNOT_LOCK,
-“channel”: CHANNEL_STRENGTH
+    "run_id": run_id,
+    "entropy": float(entropy),
+    "config": {
+        "orbit": ORBIT_STRENGTH,
+        "helix": HELIX_STRENGTH,
+        "knot": KNOT_LOCK,
+        "channel": CHANNEL_STRENGTH
+    }
 }
-}
 
-with open(f”{LOG_DIR}/log_level56_{run_id}.json”, “w”) as f:
-json.dump(log_data, f, indent=2)
+with open(f"{LOG_DIR}/log_level56_{run_id}.json", "w") as f:
+    json.dump(log_data, f, indent=2)
 
-–––––––––––––––––––––––––
 
-VISUALIZATION
-
-–––––––––––––––––––––––––
+# --------------------------------------------------
+# VISUALIZATION
+# --------------------------------------------------
 
 plt.figure(figsize=(10, 5))
 
 plt.subplot(1, 2, 1)
-plt.title(“Field”)
+plt.title("Field")
 plt.imshow(field)
 
 plt.subplot(1, 2, 2)
-plt.title(“Knot Channel Engine (Level 56)”)
+plt.title("Knot Channel Engine (Level 56)")
 plt.imshow(gaussian_filter(visit_norm, sigma=1.2))
 
 plt.tight_layout()
-plt.savefig(f”{SAVE_DIR}/level56_{run_id}.png”, dpi=200)
+
+img_path = f"{SAVE_DIR}/level56_{run_id}.png"
+plt.savefig(img_path, dpi=200)
+
 plt.show()
 plt.close()
 
-print(“Level 56 complete:”, run_id)
+print("Saved:", img_path)
