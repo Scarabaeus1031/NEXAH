@@ -23,23 +23,24 @@ MAX_SAMPLES = 1500         # safety limit (prevents O(N^2) explosion)
 
 def detect_recurrences(trajectory):
     """
-    Efficient recurrence detection (no full distance matrix)
-
-    trajectory: (N, D) array
-    returns: list of (i, j) index pairs
+    Faster recurrence detection using local window
     """
     N = len(trajectory)
     recurrences = []
 
+    WINDOW = 120  # limit search range
+
     for i in range(N):
-        for j in range(i + MIN_TIME_SEPARATION, N):
+        j_start = i + MIN_TIME_SEPARATION
+        j_end = min(i + WINDOW, N)
+
+        for j in range(j_start, j_end):
             dist = np.linalg.norm(trajectory[i] - trajectory[j])
 
             if dist < DIST_THRESHOLD:
                 recurrences.append((i, j))
 
     return recurrences
-
 
 def recurrence_points(trajectory, recurrences):
     """
