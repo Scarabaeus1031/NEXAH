@@ -11,6 +11,9 @@ from analysis.topology_diversity import compute_diversity
 # 🔥 FLOW FIELD
 from analysis.flow_field import compute_flow_field, normalize_flow
 
+# 🔥 TRANSITION OVERLAY
+from analysis.transition_overlay import compute_transition_overlay
+
 
 # --------------------------------------------------
 # PARAM GRID
@@ -127,182 +130,9 @@ flow_x, flow_y = normalize_flow(flow_x, flow_y)
 
 
 # --------------------------------------------------
-# PLOT 1: TOPOLOGY PHASE MAP
+# TRANSITION OVERLAY
 # --------------------------------------------------
 
-plt.figure(figsize=(8, 6))
-plt.imshow(phase_grid, origin="lower", aspect="auto")
-
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Topology Phase Map")
-
-plt.colorbar(label="Topology Class")
-
-
-# --------------------------------------------------
-# PLOT 2: ROTATION FIELD
-# --------------------------------------------------
-
-plt.figure(figsize=(8, 6))
-plt.imshow(rotation_grid, origin="lower", aspect="auto")
-
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Rotation Field (CCW=+1, CW=-1)")
-
-plt.colorbar(label="Rotation")
-
-
-# --------------------------------------------------
-# PLOT 3: ROTATION STRENGTH
-# --------------------------------------------------
-
-plt.figure(figsize=(8, 6))
-plt.imshow(strength_grid, origin="lower", aspect="auto")
-
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Rotation Strength")
-
-plt.colorbar(label="Strength")
-
-
-# --------------------------------------------------
-# PLOT 4: PHASE GRADIENT
-# --------------------------------------------------
-
-plt.figure(figsize=(8, 6))
-plt.imshow(gradient, origin="lower", aspect="auto")
-
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Phase Gradient Map")
-
-plt.colorbar(label="Gradient Strength")
-
-
-# --------------------------------------------------
-# PLOT 5: TOPOLOGY DIVERSITY
-# --------------------------------------------------
-
-plt.figure(figsize=(8, 6))
-plt.imshow(diversity, origin="lower", aspect="auto")
-
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Topology Diversity Map")
-
-plt.colorbar(label="Signature Spread")
-
-
-# --------------------------------------------------
-# PLOT 6: ANGLE FIELD
-# --------------------------------------------------
-
-plt.figure(figsize=(8, 6))
-plt.imshow(angle_grid, origin="lower", aspect="auto")
-
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Dominant Angle Field (Degrees)")
-
-plt.colorbar(label="Angle (°)")
-
-
-# --------------------------------------------------
-# 🔥 PLOT 7: FLOW FIELD
-# --------------------------------------------------
-
-plt.figure(figsize=(8, 6))
-
-X, Y = np.meshgrid(
-    np.arange(len(helix_values)),
-    np.arange(len(orbit_values))
-)
-
-plt.quiver(X, Y, flow_x, flow_y, scale=20)
-
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Flow Field (Phase Space Directions)")
-
-
-plt.show()        # ROTATION MAP
-        # --------------------------------------------------
-
-        rot = res.get("rotation", "NONE")
-        strength = res.get("rotation_strength", 0.0)
-
-        if rot == "CCW":
-            rot_row.append(1)
-        elif rot == "CW":
-            rot_row.append(-1)
-        else:
-            rot_row.append(0)
-
-        strength_row.append(float(strength))
-
-        # --------------------------------------------------
-        # ANGLE MAP
-        # --------------------------------------------------
-
-        angle_data = res.get("angle_data", {})
-        dominant_angle = angle_data.get("dominant_angle", 0.0)
-
-        angle_row.append(float(dominant_angle))
-
-    phase_grid.append(row)
-    rotation_grid.append(rot_row)
-    strength_grid.append(strength_row)
-    angle_grid.append(angle_row)
-
-
-# --------------------------------------------------
-# TO NUMPY
-# --------------------------------------------------
-
-phase_grid = np.array(phase_grid)
-rotation_grid = np.array(rotation_grid)
-strength_grid = np.array(strength_grid)
-angle_grid = np.array(angle_grid)
-
-
-# --------------------------------------------------
-# META ANALYSIS
-# --------------------------------------------------
-
-print("\n==============================")
-print("PHASE TRANSITION ANALYSIS")
-print("==============================")
-
-transitions = analyze_phase_space(results)
-
-gradient = compute_phase_gradient(phase_grid)
-diversity = compute_diversity(results, phase_grid.shape)
-
-# 🔥 TRANSITION OVERLAY
 transition_overlay = compute_transition_overlay(
     phase_grid,
     rotation_grid,
@@ -395,7 +225,28 @@ plt.colorbar(label="Angle (°)")
 
 
 # --------------------------------------------------
-# 🔥 PLOT 7: TRANSITION OVERLAY (DAS DING!)
+# PLOT 7: FLOW FIELD
+# --------------------------------------------------
+
+plt.figure(figsize=(8, 6))
+
+X, Y = np.meshgrid(
+    np.arange(len(helix_values)),
+    np.arange(len(orbit_values))
+)
+
+plt.quiver(X, Y, flow_x, flow_y, scale=20)
+
+plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
+plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
+
+plt.xlabel("helix")
+plt.ylabel("orbit")
+plt.title("Flow Field (Phase Space Directions)")
+
+
+# --------------------------------------------------
+# PLOT 8: TRANSITION OVERLAY
 # --------------------------------------------------
 
 plt.figure(figsize=(8, 6))
