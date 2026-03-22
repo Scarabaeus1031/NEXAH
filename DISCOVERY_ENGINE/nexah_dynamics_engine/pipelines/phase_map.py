@@ -7,6 +7,7 @@ from pipelines.real_pipeline import run_pipeline
 from analysis.phase_transition_detector import analyze_phase_space
 from analysis.phase_gradient import compute_phase_gradient
 from analysis.topology_diversity import compute_diversity
+from analysis.transition_overlay import compute_transition_overlay  # 🔥 NEW
 
 
 # --------------------------------------------------
@@ -26,14 +27,14 @@ phase_grid = []
 
 rotation_grid = []
 strength_grid = []
-angle_grid = []   # 🔥 NEW
+angle_grid = []
 
 for i, orbit in enumerate(orbit_values):
 
     row = []
     rot_row = []
     strength_row = []
-    angle_row = []   # 🔥 NEW
+    angle_row = []
 
     for j, helix in enumerate(helix_values):
 
@@ -77,7 +78,7 @@ for i, orbit in enumerate(orbit_values):
         strength_row.append(float(strength))
 
         # --------------------------------------------------
-        # 🔥 ANGLE MAP
+        # ANGLE MAP
         # --------------------------------------------------
 
         angle_data = res.get("angle_data", {})
@@ -88,7 +89,7 @@ for i, orbit in enumerate(orbit_values):
     phase_grid.append(row)
     rotation_grid.append(rot_row)
     strength_grid.append(strength_row)
-    angle_grid.append(angle_row)   # 🔥 NEW
+    angle_grid.append(angle_row)
 
 
 # --------------------------------------------------
@@ -98,11 +99,11 @@ for i, orbit in enumerate(orbit_values):
 phase_grid = np.array(phase_grid)
 rotation_grid = np.array(rotation_grid)
 strength_grid = np.array(strength_grid)
-angle_grid = np.array(angle_grid)   # 🔥 NEW
+angle_grid = np.array(angle_grid)
 
 
 # --------------------------------------------------
-# 🔥 META ANALYSIS
+# META ANALYSIS
 # --------------------------------------------------
 
 print("\n==============================")
@@ -114,6 +115,13 @@ transitions = analyze_phase_space(results)
 gradient = compute_phase_gradient(phase_grid)
 diversity = compute_diversity(results, phase_grid.shape)
 
+# 🔥 TRANSITION OVERLAY
+transition_overlay = compute_transition_overlay(
+    phase_grid,
+    rotation_grid,
+    angle_grid
+)
+
 
 # --------------------------------------------------
 # PLOT 1: TOPOLOGY PHASE MAP
@@ -121,14 +129,11 @@ diversity = compute_diversity(results, phase_grid.shape)
 
 plt.figure(figsize=(8, 6))
 plt.imshow(phase_grid, origin="lower", aspect="auto")
-
 plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
 plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
 plt.xlabel("helix")
 plt.ylabel("orbit")
 plt.title("Topology Phase Map")
-
 plt.colorbar(label="Topology Class")
 
 
@@ -138,14 +143,11 @@ plt.colorbar(label="Topology Class")
 
 plt.figure(figsize=(8, 6))
 plt.imshow(rotation_grid, origin="lower", aspect="auto")
-
 plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
 plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
 plt.xlabel("helix")
 plt.ylabel("orbit")
 plt.title("Rotation Field (CCW=+1, CW=-1)")
-
 plt.colorbar(label="Rotation")
 
 
@@ -155,14 +157,11 @@ plt.colorbar(label="Rotation")
 
 plt.figure(figsize=(8, 6))
 plt.imshow(strength_grid, origin="lower", aspect="auto")
-
 plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
 plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
 plt.xlabel("helix")
 plt.ylabel("orbit")
 plt.title("Rotation Strength")
-
 plt.colorbar(label="Strength")
 
 
@@ -172,14 +171,11 @@ plt.colorbar(label="Strength")
 
 plt.figure(figsize=(8, 6))
 plt.imshow(gradient, origin="lower", aspect="auto")
-
 plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
 plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
 plt.xlabel("helix")
 plt.ylabel("orbit")
 plt.title("Phase Gradient Map")
-
 plt.colorbar(label="Gradient Strength")
 
 
@@ -189,32 +185,40 @@ plt.colorbar(label="Gradient Strength")
 
 plt.figure(figsize=(8, 6))
 plt.imshow(diversity, origin="lower", aspect="auto")
-
 plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
 plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
 plt.xlabel("helix")
 plt.ylabel("orbit")
 plt.title("Topology Diversity Map")
-
 plt.colorbar(label="Signature Spread")
 
 
 # --------------------------------------------------
-# 🔥 PLOT 6: ANGLE FIELD
+# PLOT 6: ANGLE FIELD
 # --------------------------------------------------
 
 plt.figure(figsize=(8, 6))
 plt.imshow(angle_grid, origin="lower", aspect="auto")
-
 plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
 plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
 plt.xlabel("helix")
 plt.ylabel("orbit")
 plt.title("Dominant Angle Field (Degrees)")
-
 plt.colorbar(label="Angle (°)")
+
+
+# --------------------------------------------------
+# 🔥 PLOT 7: TRANSITION OVERLAY (DAS DING!)
+# --------------------------------------------------
+
+plt.figure(figsize=(8, 6))
+plt.imshow(transition_overlay, origin="lower", aspect="auto")
+plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
+plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
+plt.xlabel("helix")
+plt.ylabel("orbit")
+plt.title("Transition Intensity Map")
+plt.colorbar(label="Transition Strength")
 
 
 plt.show()
