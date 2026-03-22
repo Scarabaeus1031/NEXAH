@@ -29,31 +29,26 @@ os.makedirs(JSON_DIR, exist_ok=True)
 
 
 # --------------------------------------------------
-# JSON SAFETY FIX 🔥
+# JSON SAFETY
 # --------------------------------------------------
 
 def make_json_safe(obj):
     if isinstance(obj, dict):
         return {str(k): make_json_safe(v) for k, v in obj.items()}
-
     elif isinstance(obj, list):
         return [make_json_safe(v) for v in obj]
-
     elif isinstance(obj, np.ndarray):
         return obj.tolist()
-
     elif isinstance(obj, (np.integer,)):
         return int(obj)
-
     elif isinstance(obj, (np.floating,)):
         return float(obj)
-
     else:
         return obj
 
 
 # --------------------------------------------------
-# TRAJECTORY GENERATOR
+# 🔥 TRAJECTORY (UPGRADED)
 # --------------------------------------------------
 
 def generate_trajectory(params):
@@ -62,12 +57,44 @@ def generate_trajectory(params):
     orbit = params.get("orbit", 0.2)
     helix = params.get("helix", 0.2)
 
-    x = np.cos(t) * (1 + orbit * t)
-    y = np.sin(t) * (1 + orbit * t)
+    # Basis Spiral
+    r = 1 + orbit * t
+    x = r * np.cos(t)
+    y = r * np.sin(t)
 
+    # Helix Modulation (jet-like)
+    x += helix * np.cos(3 * t)
     y += helix * np.sin(2 * t)
 
     return np.stack([x, y], axis=1)
+
+
+# --------------------------------------------------
+# 🔥 ROTATION DETECTION
+# --------------------------------------------------
+
+def compute_rotation(trajectory):
+    """
+    Estimate global rotation direction and strength
+    """
+
+    dx = np.diff(trajectory[:, 0])
+    dy = np.diff(trajectory[:, 1])
+
+    cross = trajectory[:-1, 0] * dy - trajectory[:-1, 1] * dx
+
+    rotation_value = np.mean(cross)
+
+    if rotation_value > 0:
+        rotation = "CCW"
+    elif rotation_value < 0:
+        rotation = "CW"
+    else:
+        rotation = "NONE"
+
+    strength = float(np.abs(rotation_value))
+
+    return rotation, strength
 
 
 # --------------------------------------------------
@@ -111,8 +138,13 @@ def run_pipeline(params, run_id="run_001", visualize=True):
 
     trajectory = generate_trajectory(params)
 
+    # 🔥 ANGLE ANALYSIS
     angle_data = analyze_angle_distribution(trajectory)
 
+    # 🔥 ROTATION
+    rotation, rotation_strength = compute_rotation(trajectory)
+
+    # 🔥 TOPOLOGY
     loops = detect_loops(trajectory)
 
     if loops is not None:
@@ -123,7 +155,6 @@ def run_pipeline(params, run_id="run_001", visualize=True):
 
     nodes = find_transition_nodes(trajectory)
 
-    # 🔥 zentrale Fix-Verbindung
     graph = build_topology_from_components(loops, channels, nodes)
 
     metrics = compute_topology_metrics(graph)
@@ -132,7 +163,7 @@ def run_pipeline(params, run_id="run_001", visualize=True):
 
     print("\n--- RESULT ---")
     print("Classification:", classification)
-    print("Signature:", signature)
+    print("Rotation:", rotation, "| Strength:", round(rotation_strength, 6))
 
     json_path = os.path.join(JSON_DIR, f"{run_id}.json")
     visual_path = os.path.join(VISUAL_DIR, f"{run_id}.png")
@@ -142,10 +173,11 @@ def run_pipeline(params, run_id="run_001", visualize=True):
         "classification": classification,
         "signature": signature,
         "metrics": metrics,
-        "angle_data": angle_data
+        "angle_data": angle_data,
+        "rotation": rotation,
+        "rotation_strength": rotation_strength
     }
 
-    # ✅ HIER IST DER FIX
     safe_result = make_json_safe(result)
 
     with open(json_path, "w") as f:
