@@ -1,0 +1,19 @@
+Vortex Topology Report
+----------------------
+
+Inner shell
+  winding states = -1:3093, 0:3206, 1:2684, 2:617
+  nonzero count  = 6394
+
+Middle shell
+  winding states = -1:150, 0:1911, 1:1795, 2:5744
+  nonzero count  = 7689
+
+Outer shell
+  winding states = -2:93, -1:2507, 0:5005, 1:1995
+  nonzero count  = 4595
+
+Mean total wrapped phase sum
+  inner  = 0.539961
+  middle = 8.595528
+  outer  = -0.456840

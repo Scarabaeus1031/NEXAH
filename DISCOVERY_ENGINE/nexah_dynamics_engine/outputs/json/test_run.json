@@ -1,0 +1,9 @@
+{
+    "params": {
+        "orbit": 0.3,
+        "helix": 0.2
+    },
+    "classification": "Network System (Hub-Based Topology)",
+    "signature": {
+        "degree_dist": {
+            
