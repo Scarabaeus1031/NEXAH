@@ -105,7 +105,9 @@ def run_pipeline(params, run_id="run_001", visualize=True):
     nodes = find_transition_nodes(trajectory)
 
     # 5. build topology graph
-    graph = build_topology(loops, channels, nodes)
+    from analysis.topology_builder import build_topology_from_components
+
+    graph = build_topology_from_components(loops, channels, nodes)graph = build_topology(loops, channels, nodes)
 
     # 6. metrics
     metrics = compute_topology_metrics(graph)
