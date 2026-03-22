@@ -13,6 +13,7 @@ from analysis.topology_builder import build_topology_from_components
 from analysis.topology_metrics import compute_topology_metrics
 from analysis.topology_signature import compute_topology_signature
 from analysis.topology_classifier import classify_topology
+from analysis.angle_field import analyze_angle_distribution
 
 
 # --------------------------------------------------
@@ -110,6 +111,8 @@ def run_pipeline(params, run_id="run_001", visualize=True):
 
     trajectory = generate_trajectory(params)
 
+    angle_data = analyze_angle_distribution(trajectory)
+
     loops = detect_loops(trajectory)
 
     if loops is not None:
@@ -139,6 +142,7 @@ def run_pipeline(params, run_id="run_001", visualize=True):
         "classification": classification,
         "signature": signature,
         "metrics": metrics
+        "angle_data": angle_data
     }
 
     # ✅ HIER IST DER FIX
