@@ -28,6 +28,30 @@ os.makedirs(JSON_DIR, exist_ok=True)
 
 
 # --------------------------------------------------
+# JSON SAFETY FIX 🔥
+# --------------------------------------------------
+
+def make_json_safe(obj):
+    if isinstance(obj, dict):
+        return {str(k): make_json_safe(v) for k, v in obj.items()}
+
+    elif isinstance(obj, list):
+        return [make_json_safe(v) for v in obj]
+
+    elif isinstance(obj, np.ndarray):
+        return obj.tolist()
+
+    elif isinstance(obj, (np.integer,)):
+        return int(obj)
+
+    elif isinstance(obj, (np.floating,)):
+        return float(obj)
+
+    else:
+        return obj
+
+
+# --------------------------------------------------
 # TRAJECTORY GENERATOR
 # --------------------------------------------------
 
@@ -96,7 +120,7 @@ def run_pipeline(params, run_id="run_001", visualize=True):
 
     nodes = find_transition_nodes(trajectory)
 
-    # ✅ FIXED (nur diese eine Zeile!)
+    # 🔥 zentrale Fix-Verbindung
     graph = build_topology_from_components(loops, channels, nodes)
 
     metrics = compute_topology_metrics(graph)
@@ -117,8 +141,11 @@ def run_pipeline(params, run_id="run_001", visualize=True):
         "metrics": metrics
     }
 
+    # ✅ HIER IST DER FIX
+    safe_result = make_json_safe(result)
+
     with open(json_path, "w") as f:
-        json.dump(result, f, indent=4)
+        json.dump(safe_result, f, indent=4)
 
     if visualize:
         plot_topology(trajectory, loops, channels, nodes, save_path=visual_path)
@@ -134,7 +161,7 @@ def run_pipeline(params, run_id="run_001", visualize=True):
 # MAIN
 # --------------------------------------------------
 
-if __name__ == "__main__":
+if name == "main":
 
     params = {
         "orbit": 0.3,
