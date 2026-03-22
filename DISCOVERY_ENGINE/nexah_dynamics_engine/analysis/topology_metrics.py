@@ -142,7 +142,7 @@ def summarize_topology(graph, loops=None, channels=None):
 # --------------------------------------------------
 
 if __name__ == "__main__":
-    print("Topology Metrics Module Ready")    """
+    print("Topology Metrics Module Ready")
     Compute angles between consecutive segments
     """
     angles = []
