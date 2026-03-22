@@ -1,0 +1,12 @@
+{
+  "particles": 160,
+  "steps": 1400,
+  "config": {
+    "rotation": 0.34,
+    "return": 0.1,
+    "orbit_strength": 0.26,
+    "helix_strength": 0.32,
+    "cross_coupling": 0.22,
+    "knot_lock": 0.28
+  }
+}
