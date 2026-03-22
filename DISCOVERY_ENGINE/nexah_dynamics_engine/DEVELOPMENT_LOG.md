@@ -404,6 +404,226 @@ Resonance → Flow → Topology
 ---
 
 # --------------------------------------------------
+# 🧰 Phase 11 — Topology Extraction Tools (Level 62+)
+# --------------------------------------------------
+
+## Transition
+
+From:
+
+observing topology  
+
+To:
+
+> **extracting topology explicitly from data**
+
+---
+
+## Motivation
+
+Up to Level 61, the system demonstrates:
+
+• loops  
+• channels  
+• knots  
+• transition nodes  
+• network structures  
+
+However:
+
+→ these structures are **implicit** in density / trajectories  
+
+---
+
+## New Objective
+
+Make structure:
+
+• detectable  
+• measurable  
+• reproducible  
+• exportable  
+
+---
+
+## Introduced Tool Class
+
+### Topology Extraction Tools
+
+---
+
+### 1. Loop Detector
+
+Purpose:
+
+• identify closed trajectory structures  
+• detect cyclic attractors  
+
+Capabilities:
+
+• loop segmentation  
+• cycle detection in flow fields  
+• persistence filtering  
+
+Output:
+
+• loop masks  
+• loop centers  
+• loop strength metrics  
+
+---
+
+### 2. Channel Extractor
+
+Purpose:
+
+• identify transport pathways between regions  
+
+Capabilities:
+
+• ridge detection in flow density  
+• skeletonization of flow  
+• path extraction  
+
+Output:
+
+• channel maps  
+• connectivity paths  
+• transport graph edges  
+
+---
+
+### 3. Transition Node Finder
+
+Purpose:
+
+• detect unstable switching points  
+
+Capabilities:
+
+• low-density / high-flow divergence detection  
+• saddle-point identification  
+• separatrix estimation  
+
+Output:
+
+• transition node coordinates  
+• switching likelihood  
+• regime boundary markers  
+
+---
+
+## Result
+
+The system is now capable of:
+
+→ converting dynamic behavior into explicit structure  
+
+---
+
+# 🧠 Insight
+
+> Structure must be **extracted**, not inferred from visuals.
+
+---
+
+## Functional Shift
+
+Before:
+
+• observe patterns  
+
+Now:
+
+• detect and measure structures  
+
+---
+
+## New Capability Layer
+
+The system now supports:
+
+• loop extraction  
+• channel mapping  
+• node detection  
+• topology reconstruction  
+
+---
+
+## Emerging Representation
+
+The system can now be represented as:
+
+• graph (nodes + edges)  
+• loop sets  
+• transition networks  
+
+---
+
+# 🔥 Key Structural Insight
+
+> Dynamics generate topology —  
+> tools reveal it.
+
+---
+
+# 🧭 Next Step
+
+Following extraction:
+
+→ validate structures across runs  
+→ compare topology across parameter sets  
+→ build graph-level models  
+
+---
+
+# 📌 Open Questions (Updated)
+
+• Are extracted loops stable across runs?  
+• Do channels form minimal paths?  
+• Are transition nodes predictable or chaotic?  
+• Does topology converge under parameter variation?  
+
+---
+
+# 🧬 Method Update
+
+• apply tools to Level 49–61 outputs  
+• compare extracted structures  
+• validate persistence  
+• store topology alongside visuals  
+
+---
+
+# 🧭 Updated Reset Instruction
+
+To resume work:
+
+1. Load Level 49–61 outputs  
+2. run loop detector  
+3. run channel extractor  
+4. run transition node finder  
+5. compare results  
+
+---
+
+# 🧠 Final Note
+
+This marks a transition from:
+
+→ visual discovery  
+
+to:
+
+> **structural extraction and formalization**
+
+---
+
+End of Extension
+
+---
+
+# --------------------------------------------------
 # 🔬 Observed Structural Laws (Emerging)
 # --------------------------------------------------
 
