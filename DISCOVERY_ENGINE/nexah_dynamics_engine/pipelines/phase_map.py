@@ -14,6 +14,12 @@ from analysis.flow_field import compute_flow_field, normalize_flow
 # 🔥 TRANSITION OVERLAY
 from analysis.transition_overlay import compute_transition_overlay
 
+# 🔥 BASIN DETECTOR
+from analysis.basin_detector import detect_basins, compute_basin_strength
+
+# 🔥 META FIELD
+from analysis.meta_field import compute_meta_field, extract_meta_zones
+
 
 # --------------------------------------------------
 # PARAM GRID
@@ -49,13 +55,13 @@ for i, orbit in enumerate(orbit_values):
         }
 
         print(f"\n--- GRID {i},{j} ---")
-        res = run_pipeline(params, run_id=f"grid_{i}_{j}", visualize=False)
+        res = run_pipeline(params, run_id=f"grid_v2_{i}_{j}", visualize=False)
 
         results.append(res)
 
-        # --------------------------------------------------
-        # CLASSIFICATION MAP
-        # --------------------------------------------------
+        # -----------------------------
+        # CLASSIFICATION
+        # -----------------------------
 
         label = res["classification"]
 
@@ -66,9 +72,9 @@ for i, orbit in enumerate(orbit_values):
         else:
             row.append(2)
 
-        # --------------------------------------------------
-        # ROTATION MAP
-        # --------------------------------------------------
+        # -----------------------------
+        # ROTATION
+        # -----------------------------
 
         rot = res.get("rotation", "NONE")
         strength = res.get("rotation_strength", 0.0)
@@ -82,9 +88,9 @@ for i, orbit in enumerate(orbit_values):
 
         strength_row.append(float(strength))
 
-        # --------------------------------------------------
-        # ANGLE MAP
-        # --------------------------------------------------
+        # -----------------------------
+        # ANGLE
+        # -----------------------------
 
         angle_data = res.get("angle_data", {})
         dominant_angle = angle_data.get("dominant_angle", 0.0)
@@ -130,6 +136,14 @@ flow_x, flow_y = normalize_flow(flow_x, flow_y)
 
 
 # --------------------------------------------------
+# BASINS
+# --------------------------------------------------
+
+basins = detect_basins(flow_x, flow_y)
+basin_strength = compute_basin_strength(flow_x, flow_y)
+
+
+# --------------------------------------------------
 # TRANSITION OVERLAY
 # --------------------------------------------------
 
@@ -141,122 +155,103 @@ transition_overlay = compute_transition_overlay(
 
 
 # --------------------------------------------------
-# PLOT 1: TOPOLOGY PHASE MAP
+# META FIELD (MASTER)
 # --------------------------------------------------
 
+meta_field = compute_meta_field(
+    gradient,
+    transition_overlay,
+    basin_strength,
+    flow_x,
+    flow_y,
+    rotation_grid
+)
+
+hot_zones, stable_zones = extract_meta_zones(meta_field)
+
+
+# --------------------------------------------------
+# PLOTS
+# --------------------------------------------------
+
+def setup_axes(title):
+    plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
+    plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
+    plt.xlabel("helix")
+    plt.ylabel("orbit")
+    plt.title(title)
+
+
+# 1 Phase Map
 plt.figure(figsize=(8, 6))
 plt.imshow(phase_grid, origin="lower", aspect="auto")
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Topology Phase Map")
-plt.colorbar(label="Topology Class")
+setup_axes("Topology Phase Map")
+plt.colorbar()
 
-
-# --------------------------------------------------
-# PLOT 2: ROTATION FIELD
-# --------------------------------------------------
-
+# 2 Rotation
 plt.figure(figsize=(8, 6))
 plt.imshow(rotation_grid, origin="lower", aspect="auto")
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Rotation Field (CCW=+1, CW=-1)")
-plt.colorbar(label="Rotation")
+setup_axes("Rotation Field")
+plt.colorbar()
 
-
-# --------------------------------------------------
-# PLOT 3: ROTATION STRENGTH
-# --------------------------------------------------
-
+# 3 Strength
 plt.figure(figsize=(8, 6))
 plt.imshow(strength_grid, origin="lower", aspect="auto")
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Rotation Strength")
-plt.colorbar(label="Strength")
+setup_axes("Rotation Strength")
+plt.colorbar()
 
-
-# --------------------------------------------------
-# PLOT 4: PHASE GRADIENT
-# --------------------------------------------------
-
+# 4 Gradient
 plt.figure(figsize=(8, 6))
 plt.imshow(gradient, origin="lower", aspect="auto")
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Phase Gradient Map")
-plt.colorbar(label="Gradient Strength")
+setup_axes("Phase Gradient")
+plt.colorbar()
 
-
-# --------------------------------------------------
-# PLOT 5: TOPOLOGY DIVERSITY
-# --------------------------------------------------
-
+# 5 Diversity
 plt.figure(figsize=(8, 6))
 plt.imshow(diversity, origin="lower", aspect="auto")
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Topology Diversity Map")
-plt.colorbar(label="Signature Spread")
+setup_axes("Topology Diversity")
+plt.colorbar()
 
-
-# --------------------------------------------------
-# PLOT 6: ANGLE FIELD
-# --------------------------------------------------
-
+# 6 Angle
 plt.figure(figsize=(8, 6))
 plt.imshow(angle_grid, origin="lower", aspect="auto")
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Dominant Angle Field (Degrees)")
-plt.colorbar(label="Angle (°)")
+setup_axes("Dominant Angle")
+plt.colorbar()
 
-
-# --------------------------------------------------
-# PLOT 7: FLOW FIELD
-# --------------------------------------------------
-
+# 7 Flow
 plt.figure(figsize=(8, 6))
-
 X, Y = np.meshgrid(
     np.arange(len(helix_values)),
     np.arange(len(orbit_values))
 )
-
 plt.quiver(X, Y, flow_x, flow_y, scale=20)
+setup_axes("Flow Field")
 
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Flow Field (Phase Space Directions)")
-
-
-# --------------------------------------------------
-# PLOT 8: TRANSITION OVERLAY
-# --------------------------------------------------
-
+# 8 Transition
 plt.figure(figsize=(8, 6))
 plt.imshow(transition_overlay, origin="lower", aspect="auto")
-plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
-plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
-plt.xlabel("helix")
-plt.ylabel("orbit")
-plt.title("Transition Intensity Map")
-plt.colorbar(label="Transition Strength")
+setup_axes("Transition Map")
+plt.colorbar()
 
+# 9 Basins
+plt.figure(figsize=(8, 6))
+plt.imshow(basins, origin="lower", aspect="auto")
+setup_axes("Basins (Eye of Storm)")
+
+# 10 Meta Field
+plt.figure(figsize=(8, 6))
+plt.imshow(meta_field, origin="lower", aspect="auto")
+setup_axes("META FIELD")
+plt.colorbar()
+
+# 11 Hot Zones
+plt.figure(figsize=(8, 6))
+plt.imshow(hot_zones, origin="lower", aspect="auto")
+setup_axes("HOT ZONES")
+
+# 12 Stable Zones
+plt.figure(figsize=(8, 6))
+plt.imshow(stable_zones, origin="lower", aspect="auto")
+setup_axes("STABLE ZONES")
 
 plt.show()
