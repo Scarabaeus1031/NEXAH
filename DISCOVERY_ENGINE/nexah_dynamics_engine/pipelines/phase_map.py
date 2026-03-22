@@ -3,6 +3,11 @@ import matplotlib.pyplot as plt
 
 from pipelines.real_pipeline import run_pipeline
 
+# 🔥 META ANALYSIS IMPORTS
+from analysis.phase_transition_detector import analyze_phase_space
+from analysis.phase_gradient import compute_phase_gradient
+from analysis.topology_diversity import compute_diversity
+
 
 # --------------------------------------------------
 # PARAM GRID
@@ -19,7 +24,6 @@ helix_values = np.linspace(0.0, 0.5, 8)
 results = []
 phase_grid = []
 
-# NEW
 rotation_grid = []
 strength_grid = []
 
@@ -55,7 +59,7 @@ for i, orbit in enumerate(orbit_values):
             row.append(2)
 
         # --------------------------------------------------
-        # ROTATION MAP (SAFE ACCESS)
+        # ROTATION MAP
         # --------------------------------------------------
 
         rot = res.get("rotation", "NONE")
@@ -78,6 +82,20 @@ for i, orbit in enumerate(orbit_values):
 phase_grid = np.array(phase_grid)
 rotation_grid = np.array(rotation_grid)
 strength_grid = np.array(strength_grid)
+
+
+# --------------------------------------------------
+# 🔥 META ANALYSIS
+# --------------------------------------------------
+
+print("\n==============================")
+print("PHASE TRANSITION ANALYSIS")
+print("==============================")
+
+transitions = analyze_phase_space(results)
+
+gradient = compute_phase_gradient(phase_grid)
+diversity = compute_diversity(results, phase_grid.shape)
 
 
 # --------------------------------------------------
@@ -129,6 +147,40 @@ plt.ylabel("orbit")
 plt.title("Rotation Strength")
 
 plt.colorbar(label="Strength")
+
+
+# --------------------------------------------------
+# PLOT 4: PHASE GRADIENT
+# --------------------------------------------------
+
+plt.figure(figsize=(8, 6))
+plt.imshow(gradient, origin="lower", aspect="auto")
+
+plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
+plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
+
+plt.xlabel("helix")
+plt.ylabel("orbit")
+plt.title("Phase Gradient Map")
+
+plt.colorbar(label="Gradient Strength")
+
+
+# --------------------------------------------------
+# PLOT 5: TOPOLOGY DIVERSITY
+# --------------------------------------------------
+
+plt.figure(figsize=(8, 6))
+plt.imshow(diversity, origin="lower", aspect="auto")
+
+plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
+plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
+
+plt.xlabel("helix")
+plt.ylabel("orbit")
+plt.title("Topology Diversity Map")
+
+plt.colorbar(label="Signature Spread")
 
 
 plt.show()
