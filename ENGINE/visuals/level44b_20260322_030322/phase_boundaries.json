@@ -1,0 +1,23 @@
+{
+  "num_boundary_points": 35,
+  "num_central_boundary_points": 35,
+  "num_anchor_regions": 4,
+  "anchors": [
+    [
+      30.0,
+      35.0
+    ],
+    [
+      47.04545454545455,
+      36.27272727272727
+    ],
+    [
+      35.0,
+      41.25
+    ],
+    [
+      45.5,
+      40.5
+    ]
+  ]
+}
