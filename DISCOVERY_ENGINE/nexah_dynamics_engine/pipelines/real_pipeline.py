@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from analysis.loop_detector import detect_loops
 from analysis.channel_extractor import extract_channels
 from analysis.transition_node_finder import find_transition_nodes
-from analysis.topology_builder import build_topology_graph
+from analysis.topology_builder import build_topology
 from analysis.topology_metrics import compute_topology_metrics
 from analysis.topology_signature import compute_topology_signature
 from analysis.topology_classifier import classify_topology
@@ -101,7 +101,7 @@ def run_pipeline(params, run_id="run_001", visualize=True):
     nodes = find_transition_nodes(trajectory)
 
     # 5. build topology graph
-    graph = build_topology_graph(loops, channels, nodes)
+    graph = build_topology(loops, channels, nodes)
 
     # 6. metrics
     metrics = compute_topology_metrics(graph)
