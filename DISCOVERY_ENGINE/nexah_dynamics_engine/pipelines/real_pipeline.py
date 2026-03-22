@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from analysis.loop_detector import detect_loops
 from analysis.channel_extractor import extract_channels
 from analysis.transition_node_finder import find_transition_nodes
-from analysis.topology_builder import build_topology
+from analysis.topology_builder import build_topology_from_components
 from analysis.topology_metrics import compute_topology_metrics
 from analysis.topology_signature import compute_topology_signature
 from analysis.topology_classifier import classify_topology
@@ -28,7 +28,7 @@ os.makedirs(JSON_DIR, exist_ok=True)
 
 
 # --------------------------------------------------
-# TRAJECTORY GENERATOR (TEST / später ersetzen)
+# TRAJECTORY GENERATOR
 # --------------------------------------------------
 
 def generate_trajectory(params):
@@ -40,7 +40,6 @@ def generate_trajectory(params):
     x = np.cos(t) * (1 + orbit * t)
     y = np.sin(t) * (1 + orbit * t)
 
-    # asymmetry / drift
     y += helix * np.sin(2 * t)
 
     return np.stack([x, y], axis=1)
@@ -53,10 +52,8 @@ def generate_trajectory(params):
 def plot_topology(trajectory, loops, channels, nodes, save_path=None):
     plt.figure(figsize=(8, 8))
 
-    # trajectory
     plt.plot(trajectory[:, 0], trajectory[:, 1], alpha=0.2)
 
-    # loops
     if loops is not None:
         _, points, labels = loops
         if points is not None and labels is not None:
@@ -66,7 +63,6 @@ def plot_topology(trajectory, loops, channels, nodes, save_path=None):
                 cluster = points[labels == label]
                 plt.scatter(cluster[:, 0], cluster[:, 1], s=20)
 
-    # nodes
     if nodes is not None:
         plt.scatter(nodes[:, 0], nodes[:, 1], c='red', s=50)
 
@@ -88,43 +84,28 @@ def run_pipeline(params, run_id="run_001", visualize=True):
     print("\n--- RUNNING PIPELINE ---")
     print("Params:", params)
 
-    # 1. generate trajectory
     trajectory = generate_trajectory(params)
 
-    # 2. detect loops
     loops = detect_loops(trajectory)
 
-    # 3. extract channels (FIXED)
     if loops is not None:
         recurrences, loop_points, loop_labels = loops
         channels = extract_channels(trajectory, loop_points, loop_labels)
     else:
         channels = []
 
-    # 4. detect transition nodes
     nodes = find_transition_nodes(trajectory)
 
-    # 5. build topology graph
-    from analysis.topology_builder import build_topology_from_components
+    # ✅ FIXED (nur diese eine Zeile!)
+    graph = build_topology_from_components(loops, channels, nodes)
 
-    graph = build_topology_from_components(loops, channels, nodes)graph = build_topology(loops, channels, nodes)
-
-    # 6. metrics
     metrics = compute_topology_metrics(graph)
-
-    # 7. signature
     signature = compute_topology_signature(metrics)
-
-    # 8. classification
     classification = classify_topology(signature)
 
     print("\n--- RESULT ---")
     print("Classification:", classification)
     print("Signature:", signature)
-
-    # --------------------------------------------------
-    # SAVE OUTPUT
-    # --------------------------------------------------
 
     json_path = os.path.join(JSON_DIR, f"{run_id}.json")
     visual_path = os.path.join(VISUAL_DIR, f"{run_id}.png")
