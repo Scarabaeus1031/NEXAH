@@ -61,45 +61,30 @@ htmlcov/
 * Kopie.*
 
 # =========================
-# 🔥 NEXAH ENGINE OUTPUTS (WICHTIG!)
+# 🔥 NEXAH ENGINE OUTPUTS
 # =========================
 
-# Alle Output-Ordner egal wo
-**/outputs/
-**/output/
-**/generated/
-**/results/
-**/tmp/
+# Alles ignorieren...
+**/outputs/*
 
-# Frames / Simulation Dumps
-**/frames/
-**/cache/
+# ...ABER diese erlauben:
+!**/outputs/json/
+!**/outputs/json/*.json
+
+!**/outputs/visuals/
+!**/outputs/visuals/**/*.png
 
 # =========================
-# VISUAL MASS OUTPUT (vorsichtig!)
+# VISUAL MASS OUTPUT
 # =========================
-
-# Nur generierte Visuals blocken
 **/*.gif
-
-# Optional (nur wenn du zu viele Bilder hast)
-# **/*.png
-# **/*.jpg
 
 # =========================
 # DATA (Simulation Dumps)
 # =========================
-
 **/*.csv
 **/*.npy
 **/*.npz
-
-# =========================
-# LARGE / OPTIONAL DATA
-# =========================
-*.csv~
-*.xlsx~
-*.dat~
 
 # =========================
 # CACHE / RENDER
