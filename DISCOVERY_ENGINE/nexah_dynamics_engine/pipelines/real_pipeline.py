@@ -161,7 +161,7 @@ def run_pipeline(params, run_id="run_001", visualize=True):
 # MAIN
 # --------------------------------------------------
 
-if name == "main":
+if name == "__main__":
 
     params = {
         "orbit": 0.3,
