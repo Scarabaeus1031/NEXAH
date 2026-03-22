@@ -44,31 +44,25 @@ def build_topology(points):
 
 
 # --------------------------------------------------
-# NODE DETECTION
+# SAFE POINT FLATTENER (🔥 KEY FIX)
 # --------------------------------------------------
 
-def detect_nodes(points, graph):
+def safe_add_point(container, p):
+    """
+    Ensures point is always shape (2,)
+    """
 
-    nodes = []
+    p = np.array(p).reshape(-1)
 
-    for i, neighbors in graph.items():
-        if len(neighbors) >= MIN_NODE_CONNECTIONS:
-            nodes.append(points[i])
-
-    if len(nodes) == 0:
-        return None
-
-    return np.array(nodes)
+    if len(p) >= 2:
+        container.append(p[:2])
 
 
 # --------------------------------------------------
-# 🔥 PIPELINE ADAPTER (FIXED)
+# PIPELINE ADAPTER (FINAL FIX)
 # --------------------------------------------------
 
 def build_topology_from_components(loops, channels, nodes):
-    """
-    Convert loops + channels + nodes → unified point cloud
-    """
 
     all_points = []
 
@@ -77,23 +71,23 @@ def build_topology_from_components(loops, channels, nodes):
         _, loop_points, _ = loops
         if loop_points is not None:
             for p in loop_points:
-                all_points.append(p)
+                safe_add_point(all_points, p)
 
-    # channels (FIX: flatten properly)
+    # channels
     if channels is not None:
         for ch in channels:
             for p in ch:
-                all_points.append(p)
+                safe_add_point(all_points, p)
 
     # nodes
     if nodes is not None:
         for p in nodes:
-            all_points.append(p)
+            safe_add_point(all_points, p)
 
     if len(all_points) == 0:
         return {}
 
-    # now safe conversion
+    # 🔥 NOW GUARANTEED SAFE
     all_points = np.array(all_points)
 
     return build_topology(all_points)
