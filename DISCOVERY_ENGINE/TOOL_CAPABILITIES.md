@@ -277,6 +277,158 @@ Stability is frequency-dependent.
 
 ---
 
+---
+
+# Advanced Flow, Topology & Network Dynamics (NEW)
+
+The system has progressed beyond resonance-driven dynamics into:
+
+> **flow-structured, topologically organized systems**
+
+---
+
+## Core Capabilities (New)
+
+The engine now supports:
+
+• persistent flow formation  
+• channel detection and stabilization  
+• knot (intersection) formation  
+• loop (cyclic attractor) emergence  
+• flow quantization (discrete directional states)  
+• multi-loop coupling  
+• transition node detection (unstable switching points)  
+• network formation from dynamic flow  
+
+---
+
+## Topological System Model
+
+The system organizes into:
+
+### 1. Loops (Attractors)
+Stable cyclic motion  
+→ persistent dynamic states  
+
+### 2. Channels (Transitions)
+Paths connecting loops  
+→ structured regime switching  
+
+### 3. Knots (Intersections)
+Stable crossing points of flow  
+→ localized complexity  
+
+### 4. Transition Nodes
+Unstable points between regimes  
+
+→ enable:
+- escape  
+- switching  
+- reconfiguration  
+
+### 5. Networks
+Coupled systems of loops and channels  
+
+→ global structure emerges  
+
+---
+
+## Observed Phenomena
+
+Across Level 49–61:
+
+• collapse of trajectories into flow skeletons  
+• emergence of discrete directional motion  
+• formation of Möbius-like loops  
+• appearance of horseshoe / folding dynamics  
+• separation of density vs structural topology  
+• stabilization of multi-loop systems  
+• emergence of transport-like behavior  
+
+---
+
+## Key Insight (Extended)
+
+> Structure is not defined by position —  
+> but by **flow connectivity and transition pathways**
+
+---
+
+## Phi (φ) as Emergent Transition Property (Refined)
+
+The system demonstrates:
+
+• spontaneous emergence of φ-like ratios  
+• clustering in velocity transitions  
+• role in spiral/orbit coupling  
+• association with basin locking  
+
+Important:
+
+• φ is not explicitly encoded  
+• it emerges from system dynamics  
+
+→ indicates:
+
+> φ may represent an **optimal transition ratio in dynamic systems**
+
+---
+
+## System Evolution (Extended)
+
+Dynamics  
+→ Resonance  
+→ Flow Structuring  
+→ Channel Formation  
+→ Network Coupling  
+→ Flow Quantization  
+→ Topological Organization  
+
+---
+
+## Functional Outcome
+
+The system now operates as:
+
+• a dynamic simulation engine  
+• a geometry generator  
+• a resonance detector  
+• a transition analyzer  
+• a topological mapper  
+• a network formation system  
+
+---
+
+## New Capability Class
+
+The NEXAH system can now:
+
+> **extract and generate topological structure from purely dynamic processes**
+
+---
+
+## Research Implications
+
+New research directions include:
+
+• attractor–channel graph reconstruction  
+• transition node detection algorithms  
+• topology-based navigation strategies  
+• flow-based system optimization  
+• emergence of symbolic structures from topology  
+
+---
+
+## Final Insight (Extended)
+
+NEXAH now demonstrates:
+
+> Systems do not simply evolve or resonate —  
+> they **self-organize into topological flow networks  
+> and navigate through them via structured transitions**
+
+---
+
 # Discovery Pipeline
 
 Architecture Generation  
