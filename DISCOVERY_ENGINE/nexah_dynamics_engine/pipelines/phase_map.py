@@ -26,12 +26,14 @@ phase_grid = []
 
 rotation_grid = []
 strength_grid = []
+angle_grid = []   # 🔥 NEW
 
 for i, orbit in enumerate(orbit_values):
 
     row = []
     rot_row = []
     strength_row = []
+    angle_row = []   # 🔥 NEW
 
     for j, helix in enumerate(helix_values):
 
@@ -74,14 +76,29 @@ for i, orbit in enumerate(orbit_values):
 
         strength_row.append(float(strength))
 
+        # --------------------------------------------------
+        # 🔥 ANGLE MAP
+        # --------------------------------------------------
+
+        angle_data = res.get("angle_data", {})
+        dominant_angle = angle_data.get("dominant_angle", 0.0)
+
+        angle_row.append(float(dominant_angle))
+
     phase_grid.append(row)
     rotation_grid.append(rot_row)
     strength_grid.append(strength_row)
+    angle_grid.append(angle_row)   # 🔥 NEW
 
+
+# --------------------------------------------------
+# TO NUMPY
+# --------------------------------------------------
 
 phase_grid = np.array(phase_grid)
 rotation_grid = np.array(rotation_grid)
 strength_grid = np.array(strength_grid)
+angle_grid = np.array(angle_grid)   # 🔥 NEW
 
 
 # --------------------------------------------------
@@ -181,6 +198,23 @@ plt.ylabel("orbit")
 plt.title("Topology Diversity Map")
 
 plt.colorbar(label="Signature Spread")
+
+
+# --------------------------------------------------
+# 🔥 PLOT 6: ANGLE FIELD
+# --------------------------------------------------
+
+plt.figure(figsize=(8, 6))
+plt.imshow(angle_grid, origin="lower", aspect="auto")
+
+plt.xticks(range(len(helix_values)), [round(v, 2) for v in helix_values])
+plt.yticks(range(len(orbit_values)), [round(v, 2) for v in orbit_values])
+
+plt.xlabel("helix")
+plt.ylabel("orbit")
+plt.title("Dominant Angle Field (Degrees)")
+
+plt.colorbar(label="Angle (°)")
 
 
 plt.show()
