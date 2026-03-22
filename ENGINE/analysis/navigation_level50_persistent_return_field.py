@@ -147,8 +147,9 @@ def save_output(field, density):
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    # 🔥 WICHTIG: richtiger Ordner
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    # 👉 richtiger Zielordner wie bei deinen anderen Levels
+    run_dir = os.path.join(OUTPUT_DIR, f"level50_{timestamp}")
+    os.makedirs(run_dir, exist_ok=True)
 
     # IMAGE
     fig, axs = plt.subplots(1, 2, figsize=(10, 5))
@@ -162,7 +163,7 @@ def save_output(field, density):
     for ax in axs:
         ax.axis("off")
 
-    img_path = os.path.join(OUTPUT_DIR, f"level50_{timestamp}.png")
+    img_path = os.path.join(run_dir, "persistent_return_field.png")
     plt.savefig(img_path, dpi=150)
     plt.close()
 
@@ -179,14 +180,13 @@ def save_output(field, density):
         }
     }
 
-    json_path = os.path.join(OUTPUT_DIR, f"level50_{timestamp}.json")
+    json_path = os.path.join(run_dir, "persistent_return_field.json")
 
     with open(json_path, "w") as f:
         json.dump(data, f, indent=2)
 
     print("Saved:", img_path)
     print("Saved:", json_path)
-
 
 # --------------------------------------------------
 # MAIN
