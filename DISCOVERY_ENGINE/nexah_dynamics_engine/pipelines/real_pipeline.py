@@ -94,8 +94,12 @@ def run_pipeline(params, run_id="run_001", visualize=True):
     # 2. detect loops
     loops = detect_loops(trajectory)
 
-    # 3. extract channels
-    channels = extract_channels(trajectory)
+    # 3. extract channels (FIXED)
+    if loops is not None:
+        recurrences, loop_points, loop_labels = loops
+        channels = extract_channels(trajectory, loop_points, loop_labels)
+    else:
+        channels = []
 
     # 4. detect transition nodes
     nodes = find_transition_nodes(trajectory)
