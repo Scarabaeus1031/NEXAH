@@ -90,3 +90,4 @@ htmlcov/
 # CACHE / RENDER
 # =========================
 .cache/
+*.json
