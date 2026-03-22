@@ -1,7 +1,6 @@
 # DISCOVERY_ENGINE/nexah_dynamics_engine/analysis/topology_builder.py
 
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.spatial import cKDTree
 
 
@@ -11,30 +10,26 @@ from scipy.spatial import cKDTree
 
 NEIGHBOR_RADIUS = 2.5
 MIN_NODE_CONNECTIONS = 3
-MAX_POINTS = 1200  # safety
+MAX_POINTS = 1200
 
 
 # --------------------------------------------------
-# CORE
+# CORE GRAPH FROM POINT CLOUD
 # --------------------------------------------------
 
 def build_topology(points):
-    """
-    Build graph from spatial proximity
-    """
 
     if points is None or len(points) == 0:
-        return None, None
+        return {}
 
-    # downsample (important!)
+    # downsample
     if len(points) > MAX_POINTS:
         idx = np.random.choice(len(points), MAX_POINTS, replace=False)
         points = points[idx]
 
     tree = cKDTree(points)
 
-    edges = []
-    node_degree = np.zeros(len(points))
+    graph = {i: [] for i in range(len(points))}
 
     for i, p in enumerate(points):
         neighbors = tree.query_ball_point(p, NEIGHBOR_RADIUS)
@@ -43,24 +38,21 @@ def build_topology(points):
             if i == j:
                 continue
 
-            edges.append((i, j))
-            node_degree[i] += 1
+            graph[i].append(j)
 
-    return edges, node_degree
+    return graph
 
 
 # --------------------------------------------------
 # NODE DETECTION
 # --------------------------------------------------
 
-def detect_nodes(points, node_degree):
-    """
-    Nodes = high connectivity points
-    """
+def detect_nodes(points, graph):
+
     nodes = []
 
-    for i, deg in enumerate(node_degree):
-        if deg >= MIN_NODE_CONNECTIONS:
+    for i, neighbors in graph.items():
+        if len(neighbors) >= MIN_NODE_CONNECTIONS:
             nodes.append(points[i])
 
     if len(nodes) == 0:
@@ -70,56 +62,42 @@ def detect_nodes(points, node_degree):
 
 
 # --------------------------------------------------
-# VISUALIZATION
+# 🔥 PIPELINE ADAPTER (WICHTIG)
 # --------------------------------------------------
 
-def plot_topology(points, edges, nodes):
-    plt.figure(figsize=(8, 8))
+def build_topology_from_components(loops, channels, nodes):
+    """
+    Convert loops + channels + nodes → unified point cloud
+    """
 
-    # edges
-    if edges is not None:
-        for i, j in edges:
-            x = [points[i][0], points[j][0]]
-            y = [points[i][1], points[j][1]]
-            plt.plot(x, y, alpha=0.1)
+    all_points = []
+
+    # loops
+    if loops is not None:
+        _, loop_points, _ = loops
+        if loop_points is not None:
+            all_points.extend(loop_points)
+
+    # channels
+    if channels is not None:
+        for ch in channels:
+            all_points.extend(ch)
 
     # nodes
     if nodes is not None:
-        plt.scatter(nodes[:, 0], nodes[:, 1], c="red", s=50)
+        all_points.extend(nodes)
 
-    plt.title("Topology Graph (Loops + Channels + Nodes)")
-    plt.axis("equal")
-    plt.show()
+    if len(all_points) == 0:
+        return {}
 
+    all_points = np.array(all_points)
 
-# --------------------------------------------------
-# FULL PIPELINE
-# --------------------------------------------------
-
-def build_topology_pipeline(points):
-    edges, node_degree = build_topology(points)
-
-    if edges is None:
-        return None, None, None
-
-    nodes = detect_nodes(points, node_degree)
-
-    return edges, node_degree, nodes
+    return build_topology(all_points)
 
 
 # --------------------------------------------------
-# TEST RUN
+# TEST
 # --------------------------------------------------
 
 if __name__ == "__main__":
-
-    # synthetic example (spiral)
-    t = np.linspace(0, 20, 1500)
-    x = np.cos(t) * (1 + 0.1 * t)
-    y = np.sin(t) * (1 + 0.1 * t)
-
-    points = np.stack([x, y], axis=1)
-
-    edges, node_degree, nodes = build_topology_pipeline(points)
-
-    plot_topology(points, edges, nodes)
+    print("Topology Builder Ready")
