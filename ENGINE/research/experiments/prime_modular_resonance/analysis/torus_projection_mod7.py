@@ -3,9 +3,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-points = np.array(trajectory_points)
+# gleiche centers wie oben
+centers = {
+    0: np.array([-0.1657, -0.1657]),
+    1: np.array([-0.0349, -0.0349]),
+    2: np.array([0.1974, 0.1974])
+}
 
-# Winkel auf Kreis
+# gleiche sequence wie oben verwenden
+basin_sequence = np.random.choice([0,1,2], size=2000)
+
+points = np.array([centers[b] for b in basin_sequence])
+
+# auf Torus mappen
 theta = 2*np.pi * (points[:,0] + 1)/2
 phi   = 2*np.pi * (points[:,1] + 1)/2
 
