@@ -20,9 +20,7 @@ The system has progressed through multiple structural layers and currently resid
 
 ## Phase Overview
 
-```
-Dynamics → Resonance → Flow → Topology → Extraction → Meta Field → Adapter
-```
+### Dynamics → Resonance → Flow → Topology → Extraction → Meta Field → Adapter
 
 ---
 
@@ -66,7 +64,7 @@ Level 40 — Phase Transitions
 Current system state shows:
 
 • phase transitions are extremely rare  
-• system collapses into stable regime  
+• system collapses into stable regimes  
 
 → earlier interpretation of "rich transitions" was **overestimated**
 
@@ -140,7 +138,7 @@ Level 61
 
 ## Observed Reality
 
-• classification is almost constant  
+• classification is nearly constant  
 • system remains "Structured Network"  
 • no sharp phase transitions  
 
@@ -176,14 +174,12 @@ Observed:
 
 ## Construction
 
-```
-META FIELD =
-    gradient
-  + transition_overlay
-  + basin_strength
-  + flow_field
-  + rotation
-```
+### META FIELD =
+gradient
+	•	transition_overlay
+	•	basin_strength
+	•	flow_field
+	•	rotation
 
 ---
 
@@ -207,9 +203,7 @@ META FIELD =
 
 ## Pipeline
 
-```
-Simulation → Phase Map → Meta Field → Adapter → State Graph
-```
+### Simulation → Phase Map → Meta Field → Adapter → State Graph
 
 ---
 
@@ -217,10 +211,11 @@ Simulation → Phase Map → Meta Field → Adapter → State Graph
 
 • adapter runs  
 • graph structure builds  
-• but:
 
-⚠️ states are often empty  
-⚠️ transitions minimal  
+but:
+
+⚠️ states are sparse or weakly differentiated  
+⚠️ transitions remain minimal  
 
 ---
 
@@ -248,9 +243,9 @@ The system demonstrates:
 
 # 🔷 What is NOT Yet Proven
 
-• real phase transitions  
-• regime switching at macro level  
-• stable graph representation  
+• strong macro-level phase transitions  
+• robust regime switching  
+• stable, expressive graph representations  
 • real-world predictive power  
 
 ---
@@ -261,9 +256,9 @@ The system demonstrates:
 
 This explains:
 
-• no transitions detected  
+• lack of visible transitions  
 • uniform classification  
-• weak adapter output  
+• weak adapter differentiation  
 
 ---
 
@@ -271,7 +266,7 @@ This explains:
 
 The engine lacks:
 
-→ **instability / chaos injection**
+→ **instability / diversity injection**
 
 ---
 
@@ -281,12 +276,12 @@ The engine lacks:
 
 ## Level 63 (Critical)
 
-Introduce instability:
+Introduce controlled instability:
 
 • nonlinear perturbations  
-• noise injection  
+• stochastic noise injection  
 • asymmetric forcing  
-• parameter expansion  
+• expanded parameter space  
 
 ---
 
@@ -294,7 +289,7 @@ Introduce instability:
 
 Create:
 
-• real phase transitions  
+• observable phase transitions  
 • regime boundaries  
 • structural diversity  
 
@@ -307,35 +302,35 @@ Create:
 ## Short Term
 
 • break system symmetry  
-• generate transitions  
-• activate transition detector  
-• improve classifier sensitivity  
+• induce transitions  
+• activate transition detection  
+• refine classifier sensitivity  
 
 ---
 
 ## Mid Term
 
-• extract meaningful graphs  
-• detect stable vs unstable zones  
-• map real navigation paths  
+• extract meaningful graph structures  
+• distinguish stable vs unstable zones  
+• map navigation pathways  
 
 ---
 
 ## Long Term
 
-• connect to real systems  
-• validate predictions  
-• use for control and optimization  
+• connect to real-world systems  
+• validate predictive behavior  
+• enable control and intervention  
 
 ---
 
 # 📌 Updated Open Questions
 
-• How to induce real phase transitions?  
-• What parameters control instability?  
-• Are basins reproducible across runs?  
-• Can meta-field guide optimal navigation?  
-• When does graph structure become stable?  
+• How can real phase transitions be induced?  
+• Which parameters control instability?  
+• Are basin structures reproducible across runs?  
+• Can the meta-field guide optimal navigation?  
+• When does the graph representation stabilize?  
 
 ---
 
@@ -377,8 +372,8 @@ If you return later:
 
 1. Run phase_map.py  
 2. Inspect meta_field  
-3. Check for transitions (likely none yet)  
-4. Focus on instability injection  
+3. Check for transitions (likely minimal)  
+4. focus on instability injection  
 
 ---
 
