@@ -255,3 +255,7 @@ plt.imshow(stable_zones, origin="lower", aspect="auto")
 setup_axes("STABLE ZONES")
 
 plt.show()
+
+# 🔥 EXPORT RESULTS
+def get_results():
+    return results
