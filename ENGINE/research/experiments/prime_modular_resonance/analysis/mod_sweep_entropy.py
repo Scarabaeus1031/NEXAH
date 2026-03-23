@@ -9,23 +9,28 @@ import matplotlib.pyplot as plt
 # -------------------------
 
 def compute_transition(seq, mod):
-    matrix = np.zeros((mod, mod))
+    matrix = np.zeros((mod, mod), dtype=float)
 
     for i in range(len(seq) - 1):
         matrix[seq[i], seq[i+1]] += 1
 
-    # row normalization (Markov)
+    # Row normalization (Markov)
     row_sums = matrix.sum(axis=1, keepdims=True)
-    matrix = np.divide(matrix, row_sums, where=row_sums != 0)
 
-    matrix[np.isnan(matrix)] = 0
+    matrix = np.divide(
+        matrix,
+        row_sums,
+        out=np.zeros_like(matrix),
+        where=row_sums != 0
+    )
+
     return matrix
 
 
 def entropy(matrix):
     p = matrix.flatten()
     p = p[p > 0]
-    return -np.sum(p * np.log(p))
+    return -np.sum(p * np.log(p + 1e-12))  # numerically stable
 
 
 def random_odd_sequence(n, mod):
@@ -34,13 +39,14 @@ def random_odd_sequence(n, mod):
 
 
 def prime_like_sequence(n, mod):
-    # exclude residues divisible by small primes (2,3,5,7 heuristic)
     exclude = set()
+
     for i in range(mod):
         if i % 2 == 0 or i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
             exclude.add(i)
 
     choices = [i for i in range(mod) if i not in exclude]
+
     if len(choices) == 0:
         choices = list(range(mod))  # fallback
 
@@ -63,15 +69,15 @@ for mod in mods:
 
     seq = [p % mod for p in primes]
 
-    # prime entropy
+    # Prime entropy
     prime_matrix = compute_transition(seq, mod)
     prime_entropy = entropy(prime_matrix)
 
-    # random baselines
     rand_entropies = []
     prime_like_entropies = []
 
     for _ in range(200):
+
         rseq = random_odd_sequence(len(seq), mod)
         rmat = compute_transition(rseq, mod)
         rand_entropies.append(entropy(rmat))
@@ -86,8 +92,8 @@ for mod in mods:
     pl_mean = np.mean(prime_like_entropies)
     pl_std = np.std(prime_like_entropies)
 
-    z_rand = (prime_entropy - rand_mean) / rand_std
-    z_pl = (prime_entropy - pl_mean) / pl_std
+    z_rand = (prime_entropy - rand_mean) / (rand_std + 1e-12)
+    z_pl = (prime_entropy - pl_mean) / (pl_std + 1e-12)
 
     print(f"Prime entropy: {prime_entropy:.4f}")
     print(f"Random mean:   {rand_mean:.4f} | Z: {z_rand:.2f}")
@@ -116,7 +122,7 @@ plt.plot(mods_plot, prime_vals, marker='o', label="Prime")
 plt.plot(mods_plot, rand_vals, marker='o', label="Random")
 plt.plot(mods_plot, pl_vals, marker='o', label="Prime-like")
 
-plt.title("Entropy vs Modulus")
+plt.title("Entropy vs Modulus (corrected)")
 plt.xlabel("Modulus")
 plt.ylabel("Entropy")
 plt.legend()
