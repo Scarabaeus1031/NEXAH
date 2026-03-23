@@ -8,8 +8,10 @@ from numpy.linalg import eig
 
 N_PRIMES = 2000
 WINDOW = 5              # local window for stability
-ANGLE_THRESHOLD = 1.5   # strong rotation
-RADIUS_STABILITY = 0.05 # low radial change
+
+# relaxed thresholds (wichtig!)
+ANGLE_THRESHOLD = 0.8
+RADIUS_STABILITY = 0.15
 
 # ============================================================
 # PRIME GENERATOR
@@ -73,7 +75,7 @@ def project_flow(residues, coords):
     return x, y, theta, r, dtheta, dr
 
 # ============================================================
-# VORTEX DETECTION
+# VORTEX DETECTION (improved!)
 # ============================================================
 
 def detect_vortices(dtheta, dr):
@@ -83,14 +85,19 @@ def detect_vortices(dtheta, dr):
         local_dtheta = dtheta[i-WINDOW:i+WINDOW]
         local_dr = dr[i-WINDOW:i+WINDOW]
 
-        # conditions for vortex
-        strong_rotation = np.mean(np.abs(local_dtheta)) > ANGLE_THRESHOLD
-        stable_radius = np.std(local_dr) < RADIUS_STABILITY
+        mean_rot = np.mean(np.abs(local_dtheta))
+        std_rot = np.std(local_dtheta)
+        std_r = np.std(local_dr)
 
-        if strong_rotation and stable_radius:
+        # relaxed + real-system conditions
+        if (
+            mean_rot > ANGLE_THRESHOLD and
+            std_rot > 0.5 and
+            std_r < RADIUS_STABILITY
+        ):
             vortices.append(i)
 
-    return np.array(vortices)
+    return np.array(vortices, dtype=int)  # FIX!
 
 # ============================================================
 # CLUSTER VORTICES
@@ -149,9 +156,10 @@ def main():
     plt.figure(figsize=(8,8))
     plt.scatter(x, y, s=2, alpha=0.3, label="trajectory")
 
-    # plot vortices
-    plt.scatter(x[vortex_idx], y[vortex_idx],
-                color='red', s=30, label="vortex points")
+    # plot vortices (SAFE)
+    if len(vortex_idx) > 0:
+        plt.scatter(x[vortex_idx], y[vortex_idx],
+                    color='red', s=30, label="vortex points")
 
     # cluster centers
     for c in clusters:
@@ -167,12 +175,15 @@ def main():
     plt.show()
 
     # ========================================================
-    # OPTIONAL: TIME MARKERS
+    # TIME / ROTATION VIEW
     # ========================================================
 
     plt.figure(figsize=(10,4))
     plt.plot(dtheta, label="dθ")
-    plt.scatter(vortex_idx, dtheta[vortex_idx], color='red')
+
+    if len(vortex_idx) > 0:
+        plt.scatter(vortex_idx, dtheta[vortex_idx], color='red')
+
     plt.title("Angular velocity with vortex markers")
     plt.legend()
     plt.show()
