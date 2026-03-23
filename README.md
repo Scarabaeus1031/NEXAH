@@ -1,47 +1,155 @@
 # NEXAH
 
-**From simulation to navigation.**
+**From simulation → structure → navigation.**
 
-*NEXAH lets agents navigate complex systems by discovering stability instead of optimizing rewards.*
-
-### What if AI didn’t just simulate chaos — but learned how to navigate it?
-
-![NEXAH Multi-Agent Navigation – Agents exploring a stability landscape and converging toward stable regimes](BUILDER_LAB/visuals/nexah_multi_agent.gif)
-
-*No reward. No goal.  
-Agents converge to stability anyway.*
+*A framework for discovering, mapping and navigating stability in complex dynamical systems.*
 
 ---
 
-**Use cases:**
+### What if we didn’t just simulate systems —  
+### but extracted their structure and learned how to move through it?
+
+![NEXAH Multi-Agent Navigation](BUILDER_LAB/visuals/nexah_multi_agent.gif)
+
+*No reward. No predefined goal.  
+Systems organize. Structure emerges.  
+Navigation becomes possible.*
+
+---
+
+## 🧠 What NEXAH actually is
+
+NEXAH is **not just a navigation engine**.
+
+It is a **multi-layer framework** that:
+
+1. **simulates systems**  
+2. **extracts structural dynamics**  
+3. **builds state graphs**  
+4. **enables navigation across stability regimes**
+
+---
+
+## 🧱 The NEXAH Stack
+
+```
+Real Systems / Simulations (ARCHY)
+        ↓
+Discovery Engine (structure extraction)
+        ↓
+State Graph (Adapter Layer)
+        ↓
+NEXAH Kernel (navigation)
+        ↓
+Agents / Policy
+```
+
+---
+
+## 🔬 Core Capabilities
+
+### 1. Discovery Engine (Structural Extraction)
+
+NEXAH can extract structure directly from dynamic systems:
+
+- phase maps & parameter scans  
+- flow fields & directional dynamics  
+- basin detection (stability regions)  
+- transition overlays (regime boundaries)  
+- meta-fields (combined structural signals)  
+- topology extraction:
+  - loops (attractors)
+  - channels (transitions)
+  - nodes (instabilities)
+  - networks (global structure)
+
+👉 This turns:
+
+```
+simulation → structure → topology
+```
+
+---
+
+### 2. Dynamic System Simulation (ARCHY Layer)
+
+Real-world style simulations:
+
+- earth system stress models  
+- migration dynamics  
+- food production landscapes  
+- Monte Carlo risk scenarios  
+- collapse trajectories  
+
+Example outputs include:
+
+- global stress maps  
+- instability curves  
+- conflict dynamics  
+- system-wide risk projections  
+
+---
+
+### 3. Adapter Layer (System-Agnostic Integration)
+
+Connect any system:
+
+- power grids (MATPOWER, pandapower, PyPSA)  
+- dynamical systems (Lorenz, Kuramoto)  
+- supply chains  
+- traffic systems  
+- biological networks  
+
+Adapters convert:
+
+```
+simulator → finite state graph
+```
+
+---
+
+### 4. Navigation Engine (NEXAH Kernel)
+
+Agents operate on extracted structure:
+
+- no reward function  
+- no predefined objective  
+- navigation based on **structural stability**
+
+Core idea:
+
+> Agents do not optimize —  
+> they **discover and move within stable regimes**
+
+---
+
+## ⚠️ Important Note (Current Status)
+
+The framework is **fully functional for structure discovery and mapping**.
+
+The **navigation layer is operational**, but:
+
+- strong regime transitions are still emerging  
+- navigation becomes more powerful as structure becomes richer  
+
+👉 NEXAH is currently strongest as a:
+
+> **structure discovery + analysis system with emerging navigation capabilities**
+
+---
+
+## 🚀 Use Cases
+
 - stabilizing power grids  
-- navigating chaotic systems  
-- autonomous scientific discovery  
+- analyzing cascading failures  
+- mapping climate / ecosystem risk  
+- understanding chaotic systems  
+- discovering hidden structure in simulations  
+- autonomous scientific exploration  
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
-![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
-![License](https://img.shields.io/badge/license-Apache%202.0-blue)
-![Status](https://img.shields.io/badge/status-research%20framework-purple)
 ---
 
-### Why NEXAH?
-
-Most simulators only tell you **what will happen**.  
-NEXAH shows agents **how to steer** the system toward stability.
-
-### What makes this different?
-
-No reward function.  
-No predefined objective.  
-
-Agents do not optimize —  
-they **discover stability**.
-
-This is not reinforcement learning. This is navigation.
-
-It works with **any** simulator through a simple adapter layer.
-
-### Quick Start (2 minutes)
+## ⚡ Quick Start
 
 ```bash
 git clone https://github.com/Scarabaeus1033/NEXAH.git
@@ -49,75 +157,111 @@ cd NEXAH
 pip install -e .
 ```
 
-### Run your first demo:
+Run demo:
+
 ```bash
 python -m nexah demo kuramoto
 ```
-### Core Features
-
-| Feature                    | What it does                                              | Example use cases                          |
-|----------------------------|-----------------------------------------------------------|--------------------------------------------|
-| SVWIS Operators            | Local structural rules for detecting and navigating stability | Precise local navigation                   |
-| Adapter Layer              | Connect any simulator in minutes                          | PowerGrid, Kuramoto, Supply Chain, Cell Biology |
-| Multi-Agent Navigation     | Multiple agents explore the same landscape together       | Coordinated stabilization                  |
-| Visual Regime Landscapes   | See stability basins and agent paths live                 | Real-time understanding                    |
 
 ---
 
-### Where to go next
+## 🧪 What makes this different?
 
-- **[Builder Lab Demos](./BUILDER_LAB/demos/)** – ready-to-run examples you can try immediately  
-- **[Live Multi-Agent Demo](./ENGINE/research/experiments/nexah_stability_driven_multi_agent_system/)** – multiple agents navigating live in a regime landscape  
-- **[Adapter Examples](./APPLICATIONS/adapters/README.md)** – connect your own simulator in minutes  
-- **[Discovery Engine](./DISCOVERY_ENGINE/)** – architecture exploration, resilience analysis & structural law discovery tools  
----
-### Automated Tests & Validation
+Most systems:
 
-- **[Core Test Suite](./tests/)** – 88+ automated tests validating the entire mathematical kernel
+→ simulate behavior  
 
----
+NEXAH:
 
-### Want to go deeper?
-
-→ [Extended Documentation & Full Research Details](./README_nexah_framework_extended.md)
+→ **extracts structure from behavior**  
+→ **maps stability landscapes**  
+→ **enables navigation through them**
 
 ---
 
-### NEXAH Visual Overview
+## 📂 Key Entry Points
 
-To better understand how **NEXAH** operates across different dynamics and systems, here is an **overview visual** that shows the key components of the framework and how it interacts with different simulation systems.
+- **[Discovery Engine](./DISCOVERY_ENGINE/)**  
+  → structural extraction, topology, phase maps  
 
-![Navigating Dynamic Systems with NEXAH](./NAVIGATOR/visuals/Navigating_Dynamic_Systems_with_NEXAH.png)
+- **[Applications](./APPLICATIONS/)**  
+  → real system models & simulations  
 
-This visual illustrates how **NEXAH** transforms dynamical systems into navigable stability landscapes, highlighting critical points, transition zones, and agent navigation pathways.
+- **[Adapters](./APPLICATIONS/adapters/README.md)**  
+  → connect external systems  
+
+- **[Builder Lab](./BUILDER_LAB/demos/)**  
+  → runnable demos  
 
 ---
 
-## Implementation Status
+## 🧭 Conceptual Pipeline
+
+```
+Simulation
+    ↓
+Dynamics
+    ↓
+Flow
+    ↓
+Topology
+    ↓
+State Graph
+    ↓
+Navigation
+```
+
+---
+
+## 📊 Core Features
+
+| Feature | Description |
+|--------|------------|
+| Discovery Engine | Extracts structure from dynamic systems |
+| Phase Mapping | Reveals hidden system regimes |
+| Flow & Topology | Identifies loops, channels, networks |
+| Adapter Layer | Connects any simulator |
+| Multi-Agent System | Explores stability landscapes |
+| Navigation Kernel | Enables structural system navigation |
+
+---
+
+## 🧠 Key Insight
+
+> Systems do not just evolve —  
+> they **organize into structures**  
+> that can be **mapped and navigated**
+
+---
+
+## 📈 Implementation Status
 
 Current release: **v1.0**
 
-- kernel navigation engine implemented  
-- structural graph models operational  
-- fixpoint solver validated  
-- stability analysis modules functional  
-- modular architecture established  
+- discovery engine: ✅ strong  
+- simulation layer (ARCHY): ✅ active  
+- adapter system: ✅ working  
+- navigation engine: ⚠️ emerging  
 
 ---
 
-## Citation
+## 📚 Documentation
 
-If you use NEXAH in research or academic work, please cite:
+→ [Extended Framework Documentation](./README_nexah_framework_extended.md)
 
-Hofmann, T.K.R. (2026).  
-**NEXAH: Structural Navigation in Complex Dynamical Systems**  
-GitHub: https://github.com/Scarabaeus1031/NEXAH
+---
+
+## 📜 Citation
+
+Hofmann, T.K.R. (2026)  
+**NEXAH: Structural Discovery and Navigation in Complex Systems**  
+https://github.com/Scarabaeus1033/NEXAH  
 
 ---
 
 ## License
 
-Code: **Apache License 2.0**  
-Documentation: **CC BY 4.0**
+Code: **Apache 2.0**  
+Docs: **CC BY 4.0**
 
 © 2026 Thomas K. R. Hofmann

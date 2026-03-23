@@ -1,7 +1,7 @@
 # NEXAH Framework
 **Structural navigation for complex dynamical systems.**
- 
-A research framework for navigating stability regimes in complex dynamical systems.
+
+A research framework for discovering, mapping, and navigating stability regimes in complex systems.
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![Tests](https://img.shields.io/badge/tests-88%20passed-brightgreen)
@@ -9,105 +9,53 @@ A research framework for navigating stability regimes in complex dynamical syste
 ![Status](https://img.shields.io/badge/status-research%20framework-purple)
 
 ---
+
 ## Why NEXAH Exists
 
 Modern complex systems — from power grids to ecosystems — can enter unstable regimes where small disturbances trigger cascading failures.
 
-Most tools help us **simulate system evolution**, but few help us **navigate toward stability**.
+Most tools simulate system evolution.
 
-NEXAH was created to explore a different question:
+Few provide a way to **navigate toward stability**.
 
-**How can agents navigate complex dynamical systems toward stable regimes?**
-___
+NEXAH addresses this gap:
+
+> **How can agents move through complex dynamical systems toward stable regimes?**
+
+---
+
 ## Research Context
 
-NEXAH studies how dynamical system simulations can be transformed into navigable regime landscapes.
+NEXAH studies how simulations can be transformed into **navigable regime landscapes**.
 
-While most simulation frameworks focus on **predicting system evolution**, NEXAH focuses on **structural regime navigation**:
+Instead of predicting trajectories, it focuses on:
 
-- Identifying stability basins
-- Detecting regime transitions
-- Estimating cascade risks
-- Computing paths toward stable configurations
-- Supporting **multi-agent navigation** and exploration
+- identifying stability basins  
+- detecting regime transitions  
+- estimating cascade risks  
+- computing paths toward stable configurations  
+- enabling multi-agent exploration  
 
-The framework builds on ideas from:
+The framework draws from:
 
-- Dynamical systems theory
-- Lattice and order structures
-- Structural stability analysis
-- Regime transition modeling
-- Complex systems research
-- **Reinforcement learning** for landscape navigation
-- **Multi-agent systems** for exploration
-
-NEXAH is designed as an **experimental research platform** for exploring structural control and navigation in large-scale systems such as infrastructure networks, ecosystems, and planetary-scale systems.
-
-NEXAH is a research framework that **converts dynamical system simulations into navigable regime landscapes**.
-
-Instead of only simulating how systems evolve, NEXAH enables agents to:
-
-- Detect regimes and stability basins
-- Estimate cascade risks
-- Compute navigation paths toward stable states
-- Simulate structural interventions
-- Perform **multi-agent exploration** to discover stable regimes
-
-Typical applications include:
-
-- Power grid stability
-- Cascading infrastructure failures
-- Ecological systems
-- Supply chain networks
-- Climate regime analysis
-- **Autonomous scientific exploration**
-- **Reinforcement learning environments** for stability and control
+- dynamical systems theory  
+- structural stability analysis  
+- lattice and order theory  
+- regime transition modeling  
+- complex systems research  
+- multi-agent systems  
 
 ---
 
-## Concept in One Sentence
+## Core Concept
 
-NEXAH converts **dynamical system simulations into navigable regime landscapes**, enabling agents to compute **paths toward stable system states** instead of only observing system evolution.
-
----
-
-## Quick Example
-
-The NEXAH framework can be used directly through its high-level engine interface.
-
-```python
-import nexah
-
-# create framework interface
-engine = nexah.Engine()
-
-# simple example system
-elements = {"a", "b", "c"}
-order = {("a","b"), ("b","c")}
-
-# create a structural model
-poset = engine.create_poset(elements, order)
-
-print(poset)
-```
-
-This interface exposes the core algebraic structures used by the NEXAH engine:
-
-- Posets
-- Lattices
-- Structural operators
-- Regime navigation primitives
-
-For more complex examples see:
+NEXAH converts:
 
 ```
-BUILDER_LAB/demos/
+Simulation → Structure → Navigation
 ```
-## Core Idea
 
-Traditional simulation frameworks focus on **forward system evolution**.
-
-NEXAH instead extracts a **structural regime landscape** from a system model.
+More precisely:
 
 ```
 System Simulation
@@ -116,93 +64,101 @@ State Graph
       ↓
 Regime Landscape
       ↓
-Navigation Strategy
-      ↓
-Stabilization Action
-```
-
-This enables **navigation and intervention in complex dynamical systems**.
-
-## What NEXAH Does
-
-Traditional simulators answer:
-
-What happens if the system evolves?
-
-NEXAH answers:
-
-How can we navigate the system toward stable regimes?
-
-NEXAH converts dynamical system simulations into navigable regime landscapes.
-```
-
-NEXAH transforms system models into **navigable regime landscapes**:
-
-```
-Simulators
-    ↓
-State Graph
-    ↓
-Regime Landscape
-    ↓
 Navigation
-    ↓
-Policy
-    ↓
+      ↓
 Action
 ```
+
+This enables **intervention, not just observation**.
+
 ---
-## Kernel Bridge: Exporting Experimental Metrics
 
-The kernel bridge exports concrete metrics from the experiments (vortex density, chimera status, frustration score) directly into the NEXAH kernel.
+## One-Sentence Summary
 
-Example usage:
+> NEXAH transforms dynamical system simulations into navigable regime landscapes, enabling agents to move toward stable system states.
+
+---
+
+## Quick Example
+
+```python
+import nexah
+
+engine = nexah.Engine()
+
+elements = {"a", "b", "c"}
+order = {("a","b"), ("b","c")}
+
+poset = engine.create_poset(elements, order)
+print(poset)
+```
+
+Core structures:
+
+- posets  
+- lattices  
+- structural operators  
+- navigation primitives  
+
+More examples:
+
+```
+BUILDER_LAB/demos/
+```
+
+---
+
+## Kernel Bridge (Experiments → Framework)
+
+Experimental metrics can be injected directly into the NEXAH kernel.
 
 ```python
 from ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.kernel_bridge import get_vortex_metrics
 
 history = np.load('output/phase_history.npy')
 phase_ring = history[-1]
-metrics = get_vortex_metrics(phase_ring=phase_ring, history=history)
-print(metrics)  # {'vortex_count_avg': 1000.0, 'vortex_density': 0.02}
-```
-This is the direct channel from experiments to NEXAH applications.
 
-```markdown
+metrics = get_vortex_metrics(phase_ring=phase_ring, history=history)
+print(metrics)
+```
+
+This provides a direct bridge from **simulation data → structural analysis → navigation**.
+
+---
+
 ## Prototype Catalog
 
-The first concrete applications ("houses") are collected here:  
-[APPLICATIONS/prototypes/README.md](./APPLICATIONS/prototypes/README.md)
+Available prototypes:
 
-Current prototypes:
-- Lorenz Navigation Demo
-- Power-Grid Blackout Risk (in planning)
-- Ecosystem Tipping Point (in planning)
-- Financial Market Crash Indicator (in planning)
+- Lorenz Navigation Demo  
+- Power-Grid Blackout Risk (planned)  
+- Ecosystem Tipping Point (planned)  
+- Financial Crash Indicator (planned)  
 
-More ideas: supply chain cascades, climate tipping points, neural network collapse.
+See:
+
 ```
+APPLICATIONS/prototypes/
+```
+
 ---
-# NEXAH Navigation Layer
+
+## NEXAH Navigation Layer
 
 ![NEXAH Navigator Architecture](./NAVIGATOR/visuals/nexah_plate_09_nexah_navigator_architecture.png)
 
-Simulators describe system dynamics.
+Simulators describe dynamics.
 
-**NEXAH enables navigation through the regime landscape of those systems.**
+NEXAH extracts structure and enables:
 
-The navigation layer identifies:
-
-- regime transitions
-- cascade risks
-- stability basins
-- stabilization strategies
+- regime detection  
+- cascade analysis  
+- stability mapping  
+- navigation strategies  
 
 ---
 
-# Core Kernel
-
-The **NEXAH Kernel** is the minimal structural navigation engine.
+## Core Kernel
 
 Location:
 
@@ -210,9 +166,7 @@ Location:
 ENGINE/nexah_kernel/
 ```
 
-The kernel converts system graphs into **navigable regime landscapes** and enables structural interventions.
-
-Core workflow:
+Workflow:
 
 ```
 System Graph
@@ -224,20 +178,16 @@ Navigation Analysis
 Structural Intervention
 ```
 
-Kernel operations include:
+Capabilities:
 
 - regime detection  
-- navigation trajectory analysis  
+- trajectory analysis  
 - cascade risk estimation  
-- structural intervention simulation  
-
-The kernel provides the **core navigation logic of the NEXAH framework**.
+- intervention modeling  
 
 ---
 
-# NEXAH Engine
-
-The **NEXAH Engine** implements the structural operators and stability analysis systems used by the kernel.
+## NEXAH Engine
 
 Location:
 
@@ -245,92 +195,71 @@ Location:
 ENGINE/
 ```
 
-The engine includes:
+Implements:
 
-- finite abstract interpretation  
 - fixpoint solvers  
-- spectral graph analysis  
-- stability landscape computation  
-- cascade analysis tools  
+- spectral graph methods  
+- structural operators  
+- stability computation  
 
-It acts as the **computational backbone** of the framework.
+This is the **computational backbone**.
 
 ---
 
-# Framework Architecture
+## Framework Architecture
 
 ![NEXAH System Overview](./NAVIGATOR/visuals/NEXAH_SYSTEM_OVERVIEW.png)
 
-The NEXAH architecture consists of several layers.
-
 ```
 RESEARCH
-    Formal structural foundations
+    formal foundations
 
 ENGINE
-    Kernel and structural computation layer
+    structural computation
 
 APPLICATIONS
-    Reference system models
+    system models
 
 BUILDER_LAB
-    Simulation sandbox
+    simulation sandbox
 
 EXPLORATION_HUB
-    Open modeling environment
+    open modeling
 
 REAL_SYSTEMS
-    Infrastructure, ecosystems, planetary systems
+    real-world domains
 ```
 
 ---
 
-# The NEXAH Control Stack
+## Control Stack
 
 ![NEXAH Control Stack](./NAVIGATOR/visuals/Plate_10_The_NEXAH_Control_Stack.png)
 
-NEXAH follows a layered control architecture.
-
 ```
-META
-    semantic system description
-
-ARCHY
-    structural system modeling
-
-NEXAH
-    navigation across regime landscapes
-
-POLICY
-    decision strategies
-
-ACTION
-    system interventions
-
-STATE
-    resulting system dynamics
+META      → meaning
+ARCHY     → structure
+NEXAH     → navigation
+POLICY    → decisions
+ACTION    → intervention
+STATE     → system evolution
 ```
-
-This stack separates **meaning, structure, navigation, and control**.
 
 ---
 
-# Builder Lab
-
-Location:
+## Builder Lab
 
 ```
 BUILDER_LAB/
 ```
 
-The Builder Lab provides a sandbox for experiments with:
+Used for:
 
-- infrastructure simulations  
-- cascade failure modeling  
-- navigation strategies  
-- system stabilization experiments  
+- simulations  
+- experiments  
+- navigation testing  
 
-Example demo:
+Run:
 
 ```
 python BUILDER_LAB/demos/nexah_demo.py
@@ -338,49 +267,37 @@ python BUILDER_LAB/demos/nexah_demo.py
 
 ---
 
-# Exploration Hub
-
-Location:
+## Exploration Hub
 
 ```
 EXPLORATION_HUB/
 ```
 
-The Exploration Hub provides an **open modeling environment** for exploring complex systems such as:
+Open environment for:
 
-- planetary infrastructure  
+- infrastructure systems  
 - ecosystems  
-- financial systems  
-- cities and logistics networks  
-
-Documentation:
-
-```
-EXPLORATION_HUB/README.md
-```
+- financial models  
+- planetary-scale systems  
 
 ---
 
-# Repository Map
-
-![NEXAH Repository Map](./NAVIGATOR/visuals/NEXAH_REPOSITORY_MAP.png)
+## Repository Map
 
 | Layer | Description |
 |------|-------------|
-| ENGINE | Kernel and structural computation |
-| RESEARCH | Formal mathematical foundations |
-| APPLICATIONS | System models and case studies |
-| BUILDER_LAB | Simulation sandbox |
-| NAVIGATOR | Visual documentation |
-| EXPLORATION_HUB | Open modeling environment |
+| ENGINE | core computation |
+| RESEARCH | theoretical foundation |
+| APPLICATIONS | system models |
+| BUILDER_LAB | experiments |
+| NAVIGATOR | visuals |
+| EXPLORATION_HUB | open modeling |
 
 ---
 
-# Research Pipeline
+## Research Pipeline
 
 ![NEXAH Research Pipeline](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
-
-The framework evolves through a structured research pipeline.
 
 ```
 Axioms
@@ -398,72 +315,63 @@ Applications
 
 ---
 
-# Typical Application Domains
+## Application Domains
 
-NEXAH can be applied to many complex systems:
-
-- power grid stability  
-- cascading infrastructure failures  
-- supply chain networks  
-- ecological systems  
-- climate regime analysis  
-- large-scale technological systems  
+- power grids  
+- infrastructure systems  
+- supply chains  
+- ecosystems  
+- climate systems  
+- large-scale technical systems  
 
 ---
 
-# Quick Start
+## Quick Start
 
-Clone the repository:
-
-```
+```bash
 git clone https://github.com/Scarabaeus1033/NEXAH.git
 cd NEXAH
-```
-
-Install the framework in development mode:
-
-```
 pip install -e .
 ```
 
-Run the demo simulation:
+Run demo:
 
-```
+```bash
 python BUILDER_LAB/demos/nexah_demo.py
 ```
 
-Run the test suite:
+Run tests:
 
-```
+```bash
 pytest
 ```
 
 ---
 
-# Implementation Status
+## Implementation Status
 
-Current release: **v1.0**
+**v1.0**
 
-- kernel navigation engine implemented  
-- structural graph models operational  
-- fixpoint solver validated  
-- stability analysis modules functional  
-- modular architecture established  
+- kernel: implemented  
+- structural models: operational  
+- solvers: validated  
+- architecture: modular  
 
 ---
+
 ## Citation
 
-If you use NEXAH in research or academic work, please cite the project:
+```
+Hofmann, T. (2026)
+NEXAH: Structural Navigation in Complex Dynamical Systems
+https://github.com/Scarabaeus1033/NEXAH
+```
 
-```
-Hofmann, T. (2026).
-NEXAH: Structural Navigation in Complex Dynamical Systems.
-GitHub: https://github.com/Scarabaeus1033/NEXAH
-```
 ---
-# License
 
-Code: **Apache License 2.0**  
-Documentation: **CC BY 4.0**
+## License
+
+Code: Apache 2.0  
+Docs: CC BY 4.0  
 
 © 2026 Thomas K. R. Hofmann

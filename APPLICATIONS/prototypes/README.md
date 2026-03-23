@@ -1,67 +1,227 @@
-# NEXAH Prototypen – Katalog (in construction)
+# NEXAH Prototypes (Early Application Catalog)
 
-Dieser Ordner enthält die **ersten konkreten Mini-Anwendungen** (Prototypen), die mit NEXAH gebaut werden.
+This directory contains the first **concrete application prototypes** built with the NEXAH framework.
 
-Alle Prototypen nutzen die **kernel_bridge.py** aus structured_oscillator_networks (Vortex-Metriken, Chimera-Status, Frustration-Score usw.).
+The goal is to transform:
 
-Ziel: Aus abstrakter Theorie & Experimenten werden **echte, nutzbare Beispiele** („Häuser“).
+> **theory → experiments → usable systems**
 
-## Übersicht der Prototypen
+Each prototype demonstrates how NEXAH can be applied to a real or simulated domain.
+
+---
+
+## Core Concept
+
+All prototypes follow the same pipeline:
+
+```
+Simulation → Phase Data → Kernel Bridge → Metrics → Navigation / Risk Analysis
+```
+
+They use the shared:
+
+```
+ENGINE/.../kernel_bridge.py
+```
+
+which extracts structural metrics such as:
+
+- vortex density  
+- chimera states  
+- frustration score  
+- resonance behavior  
+
+---
+
+## Prototype Overview
 
 ### 1. Lorenz Navigation Demo
-**Ordner:** prototypes/lorenz  
-**Beschreibung:** Chaos als navigierbare Regime-Landschaft (Attractor-Reconstruction, Basin-Boundaries, Resilience)  
-**Bridge-Nutzung:** Vortex-Metriken, Chimera-Status, Frustration-Score  
-**Running:**  
-python -m APPLICATIONS.prototypes.lorenz.run_navigation_demo  
-**Status:** Bereits vorhanden – wird erweitert
 
-### 2. Power-Grid Blackout-Risiko
-**Ordner:** prototypes/power_grid (neu)  
-**Beschreibung:** Blackout-Risiko durch Frustration & Vortex in Phase-Sync von Stromnetzen  
-**Bridge-Nutzung:** Frustration-Score, Vortex-Metriken  
-**Running:**  
-python -m APPLICATIONS.prototypes.power_grid.run_blackout_risk  
-**Status:** In Planung – PyPSA/MATPOWER-Adapter vorhanden
+**Path:**
+```
+APPLICATIONS/prototypes/lorenz/
+```
 
-### 3. Ökosystem Kipppunkt
-**Ordner:** prototypes/ecosystem (neu)  
-**Beschreibung:** Partielle Collapse (Chimera) & Resonanz in Predator-Prey / Ökosystemen  
-**Bridge-Nutzung:** Chimera-Status, Resonance-Score, Frustration  
-**Running:**  
-python -m APPLICATIONS.prototypes.ecosystem.run_kipppunkt_analysis  
-**Status:** In Planung – einfaches Modell
+**Description:**
+Chaotic dynamics transformed into a navigable regime landscape.
 
-### 4. Finanz-Markt Crash-Indikator
-**Ordner:** prototypes/finance (neu)  
-**Beschreibung:** Crash-Vorhersage durch Delayed Sync & Defekte in Markt-Phasen  
-**Bridge-Nutzung:** Frustration-Score, Vortex-Metriken  
-**Running:**  
-python -m APPLICATIONS.prototypes.finance.run_crash_risk  
-**Status:** In Planung – Polygon-Daten möglich
+Includes:
+- attractor reconstruction  
+- basin boundary detection  
+- resilience analysis  
+
+**Run:**
+```bash
+python -m APPLICATIONS.prototypes.lorenz.run_navigation_demo
+```
+
+**Status:** Active (baseline prototype)
+
+---
+
+### 2. Power Grid Blackout Risk
+
+**Path:**
+```
+APPLICATIONS/prototypes/power_grid/
+```
+
+**Description:**
+Detection of instability and blackout risk in power grids via phase synchronization analysis.
+
+Metrics:
+- frustration score  
+- vortex formation  
+
+Potential integrations:
+- PyPSA  
+- MATPOWER  
+
+**Run:**
+```bash
+python -m APPLICATIONS.prototypes.power_grid.run_blackout_risk
+```
+
+**Status:** In development
+
+---
+
+### 3. Ecosystem Tipping Point
+
+**Path:**
+```
+APPLICATIONS/prototypes/ecosystem/
+```
+
+**Description:**
+Detection of tipping points in ecological systems (e.g. predator–prey models).
+
+Metrics:
+- chimera states  
+- resonance patterns  
+- instability indicators  
+
+**Run:**
+```bash
+python -m APPLICATIONS.prototypes.ecosystem.run_kipppoint_analysis
+```
+
+**Status:** Planned
+
+---
+
+### 4. Financial Market Instability
+
+**Path:**
+```
+APPLICATIONS/prototypes/finance/
+```
+
+**Description:**
+Early detection of market instability using synchronization breakdown and phase defects.
+
+Metrics:
+- frustration score  
+- vortex dynamics  
+
+Possible data sources:
+- Polygon  
+- historical market data  
+
+**Run:**
+```bash
+python -m APPLICATIONS.prototypes.finance.run_crash_risk
+```
+
+**Status:** Planned
+
+---
 
 ### 5. Nonlinear Navigation Agent
-**Ordner:** experiments/structured_oscillator_networks (oder APPLICATIONS/nonlinear_navigation)  
-**Beschreibung:** Erster Agent für aktive Navigation in Regime-Landschaften (z. B. Lorenz)  
-**Bridge-Nutzung:** Vortex-Metriken, Chimera-Status, Frustration-Score  
-**Running:**  
-python -m ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.run_agent  
-**Status:** Neu – erste Version läuft
 
-## Weitere Ideen (zukünftig)
+**Path:**
+```
+ENGINE/.../structured_oscillator_networks/
+```
 
-- Supply-Chain Cascade-Risiko
-- Klimakipppunkte (AMOC, Permafrost)
-- Neuronales Netz-Kollaps (AI-Instabilität)
-- Cyber-Physical Systems (IoT-Netze)
+(or future location:
+```
+APPLICATIONS/prototypes/navigation_agent/
+```
+)
 
-Jeder Prototyp folgt dem gleichen Muster:
-1. System-Simulation (PyPSA, Lotka-Volterra, Polygon usw.)
-2. Phase-History extrahieren
-3. Bridge für Metriken nutzen
-4. Risiko & Navigation auswerten
+**Description:**
+First active agent navigating regime landscapes.
 
-Nächste Schritte:
-- Einen Prototypen auswählen und ausbauen
-- Bridge-Beispiele in die Haupt-README packen
-- Tests für Bridge schreiben
+Capabilities:
+- trajectory selection  
+- stability seeking behavior  
+- regime transitions  
+
+**Run:**
+```bash
+python -m ENGINE.nexah_kernel.research.experiments.structured_oscillator_networks.run_agent
+```
+
+**Status:** Experimental (working)
+
+---
+
+## Design Pattern (Important)
+
+All prototypes follow the same structure:
+
+1. simulate system  
+2. extract phase history  
+3. compute structural metrics (kernel bridge)  
+4. analyze:
+   - stability  
+   - transitions  
+   - risk  
+5. optionally:
+   - run navigation agents  
+
+---
+
+## Future Prototypes
+
+Planned extensions:
+
+- supply chain cascade risk  
+- climate tipping systems (AMOC, permafrost)  
+- neural network instability  
+- cyber-physical systems (IoT networks)  
+
+---
+
+## Next Steps
+
+Short-term:
+
+- finalize **one full prototype** (end-to-end)
+- standardize prototype structure  
+- add example outputs (plots / graphs)
+
+Mid-term:
+
+- integrate adapters (real systems)  
+- unify metrics API  
+- add test coverage  
+
+Long-term:
+
+- build a **prototype library of real-world systems**
+- connect to live data sources  
+- integrate into NEXAH navigation workflows  
+
+---
+
+## Summary
+
+The prototypes represent the transition from:
+
+> abstract framework → real-world application
+
+They are the first step toward making NEXAH:
+
+> a **practical navigation system for complex dynamical systems**

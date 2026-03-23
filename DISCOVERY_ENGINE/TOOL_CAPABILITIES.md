@@ -1,8 +1,8 @@
 # NEXAH Tool Capabilities
 
-This document summarizes the functional capabilities of the **NEXAH Simulation Environment**.
+This document summarizes the functional capabilities of the **NEXAH Discovery Engine**.
 
-The tools contained in the `tools/` directory together form a **computational discovery engine for resilient architectures and dynamic systems**.
+The system has evolved from a resilience analysis toolkit into a **multi-layer structural discovery, simulation, and navigation framework**.
 
 ---
 
@@ -18,11 +18,16 @@ The framework supports:
 • theory validation  
 • architecture navigation  
 • dynamic system evolution  
-• resonance-driven phase-space navigation (NEW)  
+• resonance-driven phase-space navigation  
+• topology extraction from flow (**NEW**)  
+• meta-field construction (**NEW**)  
+• graph-based system navigation (**NEW**)  
 
 ---
 
-Together, these components implement a **complete discovery pipeline for structural and dynamic principles of complex systems**.
+Together, these components form a:
+
+> **complete discovery and navigation pipeline for complex systems**
 
 ---
 
@@ -30,14 +35,14 @@ Together, these components implement a **complete discovery pipeline for structu
 
 Status: Completed
 
-Tools implemented:
+Tools:
 
-- system_designer.py
-- system_evolver.py
-- system_evolver_population.py
-- resilience_architecture_evolver.py
-- resilience_architecture_optimizer.py
-- auto_stabilizer.py
+- system_designer.py  
+- system_evolver.py  
+- system_evolver_population.py  
+- resilience_architecture_evolver.py  
+- resilience_architecture_optimizer.py  
+- auto_stabilizer.py  
 
 Capabilities:
 
@@ -48,7 +53,7 @@ Capabilities:
 
 Outcome:
 
-→ generation and evolution of large architecture populations
+→ generation and evolution of large architecture populations  
 
 ---
 
@@ -58,10 +63,10 @@ Status: Completed
 
 Tools:
 
-- resilience_analyzer.py
-- system_stress_test.py
-- catastrophe_detector.py
-- risk_landscape.py
+- resilience_analyzer.py  
+- system_stress_test.py  
+- catastrophe_detector.py  
+- risk_landscape.py  
 
 Capabilities:
 
@@ -72,7 +77,7 @@ Capabilities:
 
 Outcome:
 
-→ quantitative evaluation of system stability
+→ quantitative evaluation of system stability  
 
 ---
 
@@ -82,12 +87,12 @@ Status: Completed
 
 Tools:
 
-- resilience_landscape.py
-- resilience_3d_landscape.py
-- phase_space_map.py
-- resilience_phase_space_explorer.py
-- global_resilience_map.py
-- global_resilience_scan.py
+- resilience_landscape.py  
+- resilience_3d_landscape.py  
+- phase_space_map.py  
+- resilience_phase_space_explorer.py  
+- global_resilience_map.py  
+- global_resilience_scan.py  
 
 Capabilities:
 
@@ -98,21 +103,21 @@ Capabilities:
 
 Outcome:
 
-→ full mapping of stability landscapes
+→ full mapping of stability landscapes  
 
 ---
 
 # 4. Phase Transition Detection
 
-Status: Completed
+Status: Completed (but needs richer dynamics)
 
 Tools:
 
-- resilience_phase_diagram.py
-- resilience_phase_transition_detector.py
-- resilience_topology_phase_transition_detector.py
-- resilience_critical_point_finder.py
-- resilience_ridge_detector.py
+- resilience_phase_diagram.py  
+- resilience_phase_transition_detector.py  
+- resilience_topology_phase_transition_detector.py  
+- resilience_critical_point_finder.py  
+- resilience_ridge_detector.py  
 
 Capabilities:
 
@@ -122,7 +127,7 @@ Capabilities:
 
 Outcome:
 
-→ identification of structural phase transitions
+→ identification of structural phase transitions  
 
 ---
 
@@ -132,12 +137,12 @@ Status: Completed
 
 Tools:
 
-- resilience_symbolic_equation_search.py
-- resilience_field_equation_discovery.py
-- resilience_universal_architecture_law.py
-- resilience_universal_scaling_law_detector.py
-- resilience_law_discovery.py
-- resilience_symbolic_law_finder.py
+- resilience_symbolic_equation_search.py  
+- resilience_field_equation_discovery.py  
+- resilience_universal_architecture_law.py  
+- resilience_universal_scaling_law_detector.py  
+- resilience_law_discovery.py  
+- resilience_symbolic_law_finder.py  
 
 Capabilities:
 
@@ -148,7 +153,7 @@ Capabilities:
 
 Outcome:
 
-→ discovery of universal system laws
+→ discovery of universal system laws  
 
 ---
 
@@ -158,13 +163,13 @@ Status: Completed
 
 Tools:
 
-- resilience_universal_law_validator.py
-- resilience_constant_validator.py
-- resilience_universal_constant_search.py
-- resilience_universal_constant_finder.py
-- resilience_meta_learning_engine.py
-- resilience_unified_theory_builder.py
-- resilience_theory_builder.py
+- resilience_universal_law_validator.py  
+- resilience_constant_validator.py  
+- resilience_universal_constant_search.py  
+- resilience_universal_constant_finder.py  
+- resilience_meta_learning_engine.py  
+- resilience_unified_theory_builder.py  
+- resilience_theory_builder.py  
 
 Capabilities:
 
@@ -175,7 +180,7 @@ Capabilities:
 
 Outcome:
 
-→ validation across large system populations
+→ validation across large system populations  
 
 ---
 
@@ -185,9 +190,9 @@ Status: Extended
 
 Tools:
 
-- agent_navigator.py
-- phase_space_explorer.py
-- trajectory_selector.py
+- agent_navigator.py  
+- phase_space_explorer.py  
+- trajectory_selector.py  
 
 Capabilities:
 
@@ -201,247 +206,270 @@ Capabilities:
 
 Tools:
 
-- dynamics_engine/
+- dynamics_engine/  
 
 Capabilities:
 
-• multi-agent field navigation  
+• multi-agent field evolution  
 • memory-driven trajectories  
-• feedback-based evolution  
-• time asymmetry detection  
-• recurrence pattern analysis  
-• attractor and orbit formation  
+• feedback-based adaptation  
+• recurrence detection  
+• attractor formation  
 
 Outcome:
 
-→ self-organizing dynamic systems
+→ self-organizing dynamic systems  
 
 ---
 
 # Advanced Geometry & Autonomous Field Regimes
-
-The system now generates geometry directly from dynamics.
 
 Capabilities:
 
 • shell formation  
 • orbit stabilization  
 • multi-layer resonance  
-• shell coupling  
 • field-memory alignment  
-• autonomous field formation  
 • emergence of discrete geometry  
 
 ---
 
-Key Insight:
+## Key Insight
 
-Geometry is not imposed — it emerges.
+> Geometry is not imposed — it emerges from dynamics  
 
-Dynamics → Orbit → Shell → Resonance → Geometry → Discrete Structure
+```
+Dynamics → Orbit → Shell → Resonance → Geometry
+```
 
 ---
 
-# Advanced Resonance & Phi-Structured Dynamics (NEW)
-
-The system has entered a new regime:
-
-Frequency-selective dynamics based on φ-related ratios
-
-Core Discovery:
-
-Agents prefer specific ratio states:
-
-• φ ≈ 1.618  
-• φ³ / π² ≈ 0.429  
-• secondary bands (~0.456, ~0.487)
+# Advanced Resonance & Phi Dynamics
 
 Capabilities:
 
-• φ-attractor mapping  
+• φ-attractor formation  
 • basin locking  
-• orbit–spiral dynamics  
-• resonance-based selection  
+• orbit–spiral coupling  
+• frequency-selective stabilization  
 
-Observed Levels:
+Observed Ratios:
 
-Level 37 → Phi Attractors  
-Level 38 → Basin Locking  
-Level 38b → Soft Lock  
-Level 39 → Orbit–Spiral Lock  
-Level 40 → Phase Transitions  
-
-Key Insight:
-
-Stability is frequency-dependent.
+• φ ≈ 1.618  
+• φ³ / π² ≈ 0.429  
 
 ---
 
----
+## Key Insight
 
-# Advanced Flow, Topology & Network Dynamics (NEW)
-
-The system has progressed beyond resonance-driven dynamics into:
-
-> **flow-structured, topologically organized systems**
+> Stability is frequency-dependent  
 
 ---
 
-## Core Capabilities (New)
+# 🔷 NEW: Phase Space Mapping System
 
-The engine now supports:
+Tools:
 
-• persistent flow formation  
-• channel detection and stabilization  
-• knot (intersection) formation  
-• loop (cyclic attractor) emergence  
-• flow quantization (discrete directional states)  
-• multi-loop coupling  
-• transition node detection (unstable switching points)  
-• network formation from dynamic flow  
+- pipelines/phase_map.py  
 
----
+Capabilities:
 
-## Topological System Model
-
-The system organizes into:
-
-### 1. Loops (Attractors)
-Stable cyclic motion  
-→ persistent dynamic states  
-
-### 2. Channels (Transitions)
-Paths connecting loops  
-→ structured regime switching  
-
-### 3. Knots (Intersections)
-Stable crossing points of flow  
-→ localized complexity  
-
-### 4. Transition Nodes
-Unstable points between regimes  
-
-→ enable:
-- escape  
-- switching  
-- reconfiguration  
-
-### 5. Networks
-Coupled systems of loops and channels  
-
-→ global structure emerges  
+• parameter grid scanning (orbit, helix, …)  
+• topology classification per region  
+• rotation field detection  
+• angle field extraction  
+• phase landscape visualization  
 
 ---
 
-## Observed Phenomena
+## Output Layers
 
-Across Level 49–61:
-
-• collapse of trajectories into flow skeletons  
-• emergence of discrete directional motion  
-• formation of Möbius-like loops  
-• appearance of horseshoe / folding dynamics  
-• separation of density vs structural topology  
-• stabilization of multi-loop systems  
-• emergence of transport-like behavior  
+• topology phase map  
+• rotation direction field  
+• rotation strength field  
+• angle field  
 
 ---
 
-## Key Insight (Extended)
+## Limitation (Current)
 
-> Structure is not defined by position —  
-> but by **flow connectivity and transition pathways**
+• system currently too stable  
+• almost all regions = "Structured Network"  
 
----
-
-## Phi (φ) as Emergent Transition Property (Refined)
-
-The system demonstrates:
-
-• spontaneous emergence of φ-like ratios  
-• clustering in velocity transitions  
-• role in spiral/orbit coupling  
-• association with basin locking  
-
-Important:
-
-• φ is not explicitly encoded  
-• it emerges from system dynamics  
-
-→ indicates:
-
-> φ may represent an **optimal transition ratio in dynamic systems**
+→ **no real phase transitions yet**
 
 ---
 
-## System Evolution (Extended)
+# 🔷 NEW: Flow Field Analysis
 
-Dynamics  
-→ Resonance  
-→ Flow Structuring  
-→ Channel Formation  
-→ Network Coupling  
-→ Flow Quantization  
-→ Topological Organization  
+Tools:
 
----
+- flow_field.py  
 
-## Functional Outcome
+Capabilities:
 
-The system now operates as:
-
-• a dynamic simulation engine  
-• a geometry generator  
-• a resonance detector  
-• a transition analyzer  
-• a topological mapper  
-• a network formation system  
+• directional phase-space flow detection  
+• vector field generation  
+• system trajectory tendencies  
 
 ---
 
-## New Capability Class
+## Output
 
-The NEXAH system can now:
-
-> **extract and generate topological structure from purely dynamic processes**
-
----
-
-## Research Implications
-
-New research directions include:
-
-• attractor–channel graph reconstruction  
-• transition node detection algorithms  
-• topology-based navigation strategies  
-• flow-based system optimization  
-• emergence of symbolic structures from topology  
+• flow vectors across phase space  
+• directional structure of dynamics  
 
 ---
 
-## Final Insight (Extended)
+# 🔷 NEW: Basin Detection
 
-NEXAH now demonstrates:
+Tools:
 
-> Systems do not simply evolve or resonate —  
-> they **self-organize into topological flow networks  
-> and navigate through them via structured transitions**
+- basin_detector.py  
+
+Capabilities:
+
+• low-movement region detection  
+• attractor / equilibrium identification  
+• basin strength estimation  
 
 ---
 
-# Discovery Pipeline
+## Output
 
-Architecture Generation  
-→ System Evolution  
+• basin map  
+• stability centers  
+• "eye of the storm" regions  
+
+---
+
+# 🔷 NEW: Transition Overlay
+
+Tools:
+
+- transition_overlay.py  
+
+Capabilities:
+
+• detection of structural change zones  
+• combination of phase + rotation + angle  
+• transition intensity mapping  
+
+---
+
+## Output
+
+• instability regions  
+• regime boundary candidates  
+
+---
+
+# 🔷 NEW: META FIELD (Major Breakthrough)
+
+Tools:
+
+- meta_field.py  
+
+Capabilities:
+
+• combines ALL layers into one unified field:
+
+```
+gradient
++ transition_overlay
++ basin_strength
++ flow_field
++ rotation
+```
+
+---
+
+## Output
+
+• unified structural intensity field  
+• HOT ZONES (instability / change)  
+• STABLE ZONES (robust attractors)  
+
+---
+
+## Key Insight
+
+> The system now produces a **navigation field over phase space**
+
+---
+
+# 🔷 NEW: Topology Extraction Layer
+
+Tools:
+
+- loop_detector.py  
+- channel_extractor.py  
+- transition_node_finder.py  
+- topology_builder.py  
+- topology_signature.py  
+- topology_classifier.py  
+
+Capabilities:
+
+• loop detection (attractors)  
+• channel extraction (transitions)  
+• node detection (instabilities)  
+• graph reconstruction  
+
+---
+
+## Output
+
+• explicit structural topology  
+• loop-channel networks  
+• system skeleton  
+
+---
+
+# 🔷 NEW: Adapter Layer Integration
+
+Tools:
+
+- PhaseSpaceAdapter  
+- APPLICATIONS/adapters/  
+
+---
+
+## Capabilities
+
+• converts phase space into state graphs  
+• enables system navigation  
+• bridges simulation → decision  
+
+---
+
+## Pipeline
+
+```
+Simulation → Phase Map → Meta Field → Graph → Navigation
+```
+
+---
+
+# Discovery Pipeline (FULL)
+
+```
+Architecture  
+→ Evolution  
 → Analysis  
 → Landscape Mapping  
 → Phase Detection  
 → Law Discovery  
 → Validation  
-→ Navigation  
-→ Dynamic Evolution  
-→ Resonance Selection  
-→ Visualization  
+→ Dynamics  
+→ Resonance  
+→ Flow  
+→ Topology  
+→ Extraction  
+→ Meta Field  
+→ Graph  
+→ Navigation
+```
 
 ---
 
@@ -452,3 +480,68 @@ NEXAH is now a unified system for:
 • structure  
 • dynamics  
 • resonance  
+• flow  
+• topology  
+• meta-fields  
+• navigation  
+
+---
+
+# 🚧 Current Limitations
+
+• phase space lacks instability  
+• classification too uniform  
+• transitions not yet meaningful  
+• adapter graph still simplistic  
+
+---
+
+# 🚀 Next Steps
+
+## 1. Introduce Real Phase Transitions
+
+• add chaos / noise  
+• break symmetry  
+• introduce nonlinear coupling  
+• expand parameter space  
+
+---
+
+## 2. Improve Topology Diversity
+
+• enhance classifier sensitivity  
+• introduce structural thresholds  
+• detect mixed regimes  
+
+---
+
+## 3. Upgrade Graph Layer
+
+• spatial adjacency-based transitions  
+• weighted edges  
+• basin nodes as attractors  
+
+---
+
+## 4. Meta Field → Control System
+
+• use meta_field for navigation decisions  
+• define optimal paths  
+• detect safe vs dangerous regions  
+
+---
+
+## 5. Real-World Integration
+
+• power grids  
+• logistics networks  
+• traffic systems  
+• distributed compute systems  
+
+---
+
+## Final Insight
+
+> Systems are not static structures —  
+> they are **navigable dynamic fields  
+> that organize into topology and can be steered**
