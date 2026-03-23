@@ -8,7 +8,7 @@ from scipy.stats import entropy
 # -------------------------
 N = 10000
 mod = 7
-num_trials = 50  # wie oft random vergleichen
+num_trials = 50
 
 # -------------------------
 # PRIME SEQUENCE
@@ -17,7 +17,7 @@ primes = list(primerange(2, N))
 prime_seq = [p % mod for p in primes]
 
 # -------------------------
-# FUNCTION: TRANSITION MATRIX
+# HELPER: BUILD MATRIX
 # -------------------------
 def build_transition_matrix(seq, mod):
     matrix = np.zeros((mod, mod))
@@ -25,57 +25,76 @@ def build_transition_matrix(seq, mod):
     for i in range(len(seq) - 1):
         matrix[seq[i], seq[i + 1]] += 1
 
-    # normalize rows
     row_sums = matrix.sum(axis=1, keepdims=True)
     matrix = np.divide(matrix, row_sums, where=row_sums != 0)
 
     return matrix
 
 # -------------------------
-# ENTROPY FUNCTION
+# HELPER: ENTROPY
 # -------------------------
 def matrix_entropy(matrix):
     return np.mean([entropy(row + 1e-12) for row in matrix])
 
 # -------------------------
-# PRIME MATRIX
+# CONTROL SETS
+# -------------------------
+
+# 1. ODD RANDOM (nur ungerade Zahlen)
+odd_numbers = [x for x in range(3, N, 2)]
+
+# 2. PRIME-LIKE RANDOM (keine Vielfachen von 2,3,5,7)
+def is_prime_like(x):
+    return (x % 2 != 0 and x % 3 != 0 and x % 5 != 0 and x % 7 != 0)
+
+prime_like_numbers = [x for x in range(11, N) if is_prime_like(x)]
+
+# -------------------------
+# PRIME BASELINE
 # -------------------------
 prime_matrix = build_transition_matrix(prime_seq, mod)
 prime_entropy = matrix_entropy(prime_matrix)
 
-# -------------------------
-# RANDOM BASELINE
-# -------------------------
-random_entropies = []
-
-for _ in range(num_trials):
-    random_numbers = np.random.randint(2, N, size=len(primes))
-    random_seq = [r % mod for r in random_numbers]
-
-    random_matrix = build_transition_matrix(random_seq, mod)
-    random_entropies.append(matrix_entropy(random_matrix))
-
-random_mean = np.mean(random_entropies)
-random_std = np.std(random_entropies)
-
-# -------------------------
-# Z-SCORE
-# -------------------------
-z_score = (prime_entropy - random_mean) / (random_std + 1e-12)
-
-# -------------------------
-# OUTPUT
-# -------------------------
 print("Prime entropy:", prime_entropy)
-print("Random mean entropy:", random_mean)
-print("Random std:", random_std)
-print("Z-score:", z_score)
 
 # -------------------------
-# PLOT DISTRIBUTION
+# RANDOM TESTS
 # -------------------------
-plt.hist(random_entropies, bins=15, alpha=0.7, label="Random")
-plt.axvline(prime_entropy, linestyle="--", label="Prime")
-plt.title("Entropy Comparison (mod 7)")
+def run_trials(source_numbers, label):
+    entropies = []
+
+    for _ in range(num_trials):
+        sample = np.random.choice(source_numbers, size=len(primes))
+        seq = [x % mod for x in sample]
+
+        matrix = build_transition_matrix(seq, mod)
+        entropies.append(matrix_entropy(matrix))
+
+    mean = np.mean(entropies)
+    std = np.std(entropies)
+    z = (prime_entropy - mean) / (std + 1e-12)
+
+    print(f"\n[{label}]")
+    print("Mean entropy:", mean)
+    print("Std:", std)
+    print("Z-score:", z)
+
+    return entropies, mean
+
+# -------------------------
+# RUN
+# -------------------------
+odd_entropies, odd_mean = run_trials(odd_numbers, "Odd Random")
+prime_like_entropies, pl_mean = run_trials(prime_like_numbers, "Prime-like Random")
+
+# -------------------------
+# PLOT
+# -------------------------
+plt.hist(odd_entropies, bins=15, alpha=0.5, label="Odd Random")
+plt.hist(prime_like_entropies, bins=15, alpha=0.5, label="Prime-like Random")
+
+plt.axvline(prime_entropy, linestyle="--", label="Prime", linewidth=2)
+
+plt.title("Entropy Comparison (mod 7, corrected baseline)")
 plt.legend()
 plt.show()
