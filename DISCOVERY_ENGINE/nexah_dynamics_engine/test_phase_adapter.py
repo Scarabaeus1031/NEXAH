@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+
 from pipelines.phase_map import get_results
 from APPLICATIONS.adapters.phase_space_adapter import PhaseSpaceAdapter
 
