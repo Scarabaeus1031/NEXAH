@@ -1,5 +1,5 @@
-from ieee_loader import load_ieee14
-from stability_scan import run_stability_scan
+from .ieee_loader import load_ieee14
+from .stability_scan import run_stability_scan
 
 def main():
     net = load_ieee14()
