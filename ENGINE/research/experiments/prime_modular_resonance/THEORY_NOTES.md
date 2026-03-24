@@ -51,6 +51,21 @@ This maps the discrete residue sequence into a continuous geometric representati
 
 ---
 
+### 🖼 Visual I — Discrete System → Transition Structure
+
+![Title Visual I](output/plots/title_visual_mod7.png)
+
+**Interpretation**
+
+- outer ring → discrete state space (mod 7)
+- edges → transition probabilities
+- inner structure → first emergence of flow
+
+This visual shows the **construction layer**:
+> how discrete residues are connected through non-uniform transitions.
+
+---
+
 ## 🔷 2. EMPIRICAL OBSERVATIONS
 
 Across multiple runs and sample sizes, the following patterns are consistently observed:
@@ -78,6 +93,22 @@ Across multiple runs and sample sizes, the following patterns are consistently o
   - locally stable flow regions
 
 These features are **not reproduced** by matched random control sequences.
+
+---
+
+### 🖼 Visual II — Flow Emergence
+
+![Title Visual II](output/plots/title_visual_ii_mod7.png)
+
+**Interpretation**
+
+- colored points → residue identity
+- trajectory → embedded prime sequence
+- flow patterns → continuous structure emerging from discrete transitions
+
+This visual demonstrates:
+
+> discrete modular transitions generate coherent geometric flow.
 
 ---
 
@@ -216,6 +247,21 @@ In particular:
 
 - angular periodicity → \( S^1 \)
 - repeated traversal → toroidal interpretation (under extended mapping)
+
+### 🖼 Visual III — Basin Structure & Cyclic Dynamics
+
+![Title Visual III](output/plots/title_visual_iii_mod7.png)
+
+**Interpretation**
+
+- yellow nodes → basin centers (attractor regions)
+- background glow → density / energy distribution
+- highlighted cycle → dominant 3-cycle
+- arrows → directed cyclic motion
+
+This visual reveals the **structural layer**:
+
+> the system organizes into basins and stable cyclic pathways.
 
 ---
 
