@@ -86,10 +86,10 @@ def load_ieee14():
 ```
 
 # 📄 stability_scan.py
+```python
+	import pandapower as pp
 
-import pandapower as pp
-
-def run_stability_scan(net, min_factor=1.0, max_factor=2.0, steps=20):
+	def run_stability_scan(net, min_factor=1.0, max_factor=2.0, steps=20):
     results = []
 
     for i in range(steps + 1):
@@ -108,9 +108,9 @@ def run_stability_scan(net, min_factor=1.0, max_factor=2.0, steps=20):
 
     return results
 ---
-
+```
 # 📄 run_scan.py
-
+```python
 from ieee_loader import load_ieee14
 from stability_scan import run_stability_scan
 
@@ -126,8 +126,8 @@ def main():
         
         if __name__ == "__main__":
         main()
-
+```
 # ⚡ Installation (nicht vergessen)
-```bash
+```python
 
 pip install pandapower
