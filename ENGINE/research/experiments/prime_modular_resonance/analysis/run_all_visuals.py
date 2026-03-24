@@ -1,6 +1,7 @@
 import subprocess
 from pathlib import Path
 from datetime import datetime
+import shutil
 
 # ============================================================
 # CONFIG
@@ -62,6 +63,11 @@ SCRIPTS = [
     "unified_flow_torus_map.py",
 ]
 
+# 🔥 NEW SETTINGS
+EXPORT_TO_VISUALS = True
+COPY_LIMIT = 50  # max files copied to visuals/
+
+
 # ============================================================
 # RUNNER
 # ============================================================
@@ -69,11 +75,22 @@ SCRIPTS = [
 def main():
     base = Path(__file__).parent
 
-    log_dir = base / "output" / "logs"
-    log_dir.mkdir(parents=True, exist_ok=True)
+    # --- output structure ---
+    output_dir = base / "output"
+    plots_dir = output_dir / "plots"
+    gifs_dir = output_dir / "gifs"
+    logs_dir = output_dir / "logs"
+
+    plots_dir.mkdir(parents=True, exist_ok=True)
+    gifs_dir.mkdir(parents=True, exist_ok=True)
+    logs_dir.mkdir(parents=True, exist_ok=True)
+
+    # --- visuals (one level above) ---
+    visuals_dir = base.parent / "visuals"
+    visuals_dir.mkdir(exist_ok=True)
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_file = log_dir / f"pipeline_run_{timestamp}.log"
+    log_file = logs_dir / f"pipeline_run_{timestamp}.log"
 
     print("\n🚀 RUNNING FULL VISUAL PIPELINE\n")
 
@@ -116,7 +133,30 @@ def main():
                 f.write(msg)
 
     print(f"\n📄 Log saved to: {log_file}")
-    print("✅ PIPELINE COMPLETE\n")
+
+    # ============================================================
+    # EXPORT VISUALS
+    # ============================================================
+
+    if EXPORT_TO_VISUALS:
+        print("\n📦 EXPORTING VISUALS → /visuals\n")
+
+        files = list(plots_dir.glob("*.png")) + list(gifs_dir.glob("*.gif"))
+
+        # newest first
+        files = sorted(files, key=lambda x: x.stat().st_mtime, reverse=True)
+
+        copied = 0
+        for f in files:
+            if copied >= COPY_LIMIT:
+                break
+
+            target = visuals_dir / f.name
+            shutil.copy(f, target)
+            print(f"→ {f.name}")
+            copied += 1
+
+    print("\n✅ PIPELINE COMPLETE\n")
 
 
 if __name__ == "__main__":
