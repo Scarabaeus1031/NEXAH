@@ -1,60 +1,45 @@
 # IEEE Test Systems in NEXAH
 
-**Anwendung: Struktur-Extraktion und Navigation in realen Stromnetzen**
+Application: Stability Analysis of Real Power Grid Benchmarks
 
-Dieser Ordner enthält die Integration der klassischen **IEEE Test Systems** (DER-Standard in der Power-Systems-Forschung) in das NEXAH-Framework.
+This module introduces IEEE test systems as a first real-world application of the NEXAH framework.
 
-### Warum IEEE Test Systems?
+---
 
-Die IEEE-Testnetze (14-bus, 30-bus, 57-bus, 118-bus etc.) sind weltweit der anerkannte Benchmark in der Energieforschung. Sie werden verwendet für:
-- Stabilitätsanalysen
-- Spannungskollaps-Studien
-- Resilienz und Lastfluss-Berechnungen
-- KI-gestützte Netzsteuerung
+## What this module does
 
-NEXAH nutzt diese etablierten Systeme, um zu zeigen:
-- Wie aus realen physikalischen Netzen **Struktur extrahiert** werden kann
-- Wie **Stabilitätslandschaften** entstehen
-- Wie Agents ohne klassische Reward-Funktion in diesen Landschaften navigieren können
+We use standard IEEE power grid models (starting with the 14-bus system) and perform a simple experiment:
 
-### Ziele dieses Use-Cases
+Gradually increase system load and observe when the grid becomes unstable.
 
-1. IEEE-Netze als Graphen laden und in das NEXAH-Format bringen
-2. Stabilitätslandschaften aus Last-/Erzeugungsvariationen erzeugen
-3. Struktur (kritische Knoten, stabile Regionen, Übergänge) extrahieren
-4. Multi-Agent-Navigation auf der Stabilitätslandschaft testen
-5. Zeigen, dass NEXAH auf echten technischen Systemen funktioniert
+At each step:
+- power flow is computed
+- system stability is evaluated (convergence vs collapse)
 
-### Aktueller Stand (März 2026)
+---
 
-- [ ] IEEE 14-bus Adapter + erste Stabilitätslandschaft
-- [ ] IEEE 30-bus (folgt)
-- [ ] IEEE 57-bus & 118-bus (geplant)
-- [ ] Vergleich mit klassischen Power-Flow-Methoden
+## Why IEEE test systems?
 
-### Schnellstart
+IEEE test systems (14, 30, 57, 118 bus) are widely used benchmarks in power systems research.
+
+They provide:
+- realistic network topology
+- well-defined load and generation profiles
+- a standard reference for stability analysis
+
+---
+
+## First goal (Phase 1)
+
+Detect the stability boundary of the IEEE 14-bus system.
+
+Result:
+- below threshold → system stable
+- above threshold → collapse (no convergence)
+
+---
+
+## Run the demo
 
 ```bash
-cd APPLICATIONS/power_systems/ieee_test_cases
-
-# Einfache Demo starten (IEEE 14-bus)
-python run_ieee_demo.py --system 14
-```
-
-### Weitere Optionen:
-
-python run_ieee_demo.py --system 14 --plot
-python run_ieee_demo.py --system 30
-
-
-Nächste Schritte (Roadmap)
-
-Grundlegender IEEE-Adapter (ieee_adapter.py)
-Stabilitätslandschaft-Generator für Power Systems
-Erste Multi-Agent-Navigation auf IEEE 14-bus
-Erweiterung auf größere Netze (30-, 57-, 118-bus)
-Vergleich mit klassischen Stabilitätsindizes (z. B. Voltage Stability Index)
-
-
-Ziel dieses Anwendungsfalls:
-NEXAH nicht nur auf abstrakte oder künstliche Systeme anzuwenden, sondern auf real anerkannte technische Benchmarks – und damit zu zeigen, dass die strukturelle Navigation auch in der Praxis relevant ist.
+cd APPLICATIONS/p
