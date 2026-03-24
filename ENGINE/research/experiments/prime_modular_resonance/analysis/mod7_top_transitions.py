@@ -42,3 +42,26 @@ weights = [G[u][v]['weight']*50 for u,v in G.edges()]
 nx.draw(G, pos, with_labels=True, width=weights)
 plt.title("Top Prime Transitions (mod 7)")
 plt.show()
+
+
+# ================= AUTO SAVE HOOK =================
+import os
+import matplotlib.pyplot as plt
+
+if os.environ.get("AUTO_SAVE") == "1":
+
+    figs = list(map(plt.figure, plt.get_fignums()))
+
+    if not figs:
+        print("[WARN] No figures to save.")
+
+    for i, fig in enumerate(figs):
+        filename = __file__.split("/")[-1].replace(".py", f"_{i}.png")
+        fig.savefig(f"output/plots/{filename}", dpi=150, bbox_inches="tight")
+
+    plt.close("all")
+
+else:
+    plt.show()
+
+# =================================================

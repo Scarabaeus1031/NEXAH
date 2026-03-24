@@ -163,3 +163,26 @@ for s in specials:
         f"mod7={s % 7:<2} "
         f"mod17={s % 17:<2}"
     )
+
+
+# ================= AUTO SAVE HOOK =================
+import os
+import matplotlib.pyplot as plt
+
+if os.environ.get("AUTO_SAVE") == "1":
+
+    figs = list(map(plt.figure, plt.get_fignums()))
+
+    if not figs:
+        print("[WARN] No figures to save.")
+
+    for i, fig in enumerate(figs):
+        filename = __file__.split("/")[-1].replace(".py", f"_{i}.png")
+        fig.savefig(f"output/plots/{filename}", dpi=150, bbox_inches="tight")
+
+    plt.close("all")
+
+else:
+    plt.show()
+
+# =================================================

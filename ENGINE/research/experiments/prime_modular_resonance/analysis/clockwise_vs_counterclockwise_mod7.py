@@ -220,3 +220,26 @@ print(f"CCW fraction: {ccw_frac:.4f}")
 print(f"CW fraction:  {cw_frac:.4f}")
 print(f"Mean dθ:      {np.mean(dtheta):.6f}")
 print(f"Std dθ:       {np.std(dtheta):.6f}")
+
+
+# ================= AUTO SAVE HOOK =================
+import os
+import matplotlib.pyplot as plt
+
+if os.environ.get("AUTO_SAVE") == "1":
+
+    figs = list(map(plt.figure, plt.get_fignums()))
+
+    if not figs:
+        print("[WARN] No figures to save.")
+
+    for i, fig in enumerate(figs):
+        filename = __file__.split("/")[-1].replace(".py", f"_{i}.png")
+        fig.savefig(f"output/plots/{filename}", dpi=150, bbox_inches="tight")
+
+    plt.close("all")
+
+else:
+    plt.show()
+
+# =================================================
