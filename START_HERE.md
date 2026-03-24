@@ -36,6 +36,8 @@ All of this comes from:
 👉 prime numbers mod 7
 
 ---
+![Prime Modular Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/title_visual_ii_mod7.png)
+---
 
 ## 🤯 Why this matters
 
