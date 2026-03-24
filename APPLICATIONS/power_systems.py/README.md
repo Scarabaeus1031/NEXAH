@@ -42,4 +42,92 @@ Result:
 ## Run the demo
 
 ```bash
-cd APPLICATIONS/p
+cd APPLICATIONS/power_grid/ieee
+python run_scan.py
+```
+
+## Output (example)
+```bash
+Load factor: 1.00 → Stable
+Load factor: 1.30 → Stable
+Load factor: 1.60 → Stable
+Load factor: 1.75 → Unstable
+```
+## Why this matters
+
+This is the first step toward constructing a stability landscape for real infrastructure systems.
+
+⸻
+
+## Roadmap
+
+	•	IEEE 14-bus loading and simulation
+	•	stability scan (collapse detection)
+	•	stability landscape (2D parameter space)
+	•	structural extraction
+	•	navigation layer
+
+⸻
+
+## Goal of this module
+
+To demonstrate that NEXAH can operate on real-world benchmark systems, not just abstract models.
+---
+
+# 🧠 **Code – Phase 1 (läuft wirklich)**
+
+## 📄 ieee_loader.py
+
+```python
+import pandapower.networks as pn
+
+def load_ieee14():
+    return pn.case14()
+```
+
+# 📄 stability_scan.py
+
+import pandapower as pp
+
+def run_stability_scan(net, min_factor=1.0, max_factor=2.0, steps=20):
+    results = []
+
+    for i in range(steps + 1):
+        factor = min_factor + (max_factor - min_factor) * i / steps
+
+        net_copy = net.deepcopy()
+        net_copy.load["p_mw"] *= factor
+
+        try:
+            pp.runpp(net_copy)
+            stable = True
+        except:
+            stable = False
+
+        results.append((factor, stable))
+
+    return results
+---
+
+# 📄 run_scan.py
+
+from ieee_loader import load_ieee14
+from stability_scan import run_stability_scan
+
+def main():
+
+    net = load_ieee14()
+
+    results = run_stability_scan(net)
+
+    for factor, stable in results:
+        status = "Stable" if stable else "Unstable"
+        print(f"Load factor: {factor:.2f} → {status}")
+        
+        if __name__ == "__main__":
+        main()
+
+# ⚡ Installation (nicht vergessen)
+```bash
+
+pip install pandapower
