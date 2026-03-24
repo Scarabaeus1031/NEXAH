@@ -160,3 +160,6 @@ DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_7.json
 !ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/
 !*.png
 !*.gif
+
+!**/output/curated/
+!**/output/curated/*.gif
