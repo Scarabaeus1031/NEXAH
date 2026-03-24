@@ -30,4 +30,4 @@ for file in BASE.glob("*.py"):
     print(f"🔧 PATCHING: {file.name}")
     file.write_text(content.strip() + "\n" + HOOK)
 
-print("\n✅ DONE: All scripts patched."
+print("\n  DONE: All scripts patched.")
