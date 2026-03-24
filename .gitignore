@@ -161,5 +161,6 @@ DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_7.json
 !*.png
 !*.gif
 
+# allow curated gifs
 !**/output/curated/
 !**/output/curated/*.gif
