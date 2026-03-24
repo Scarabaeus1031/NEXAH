@@ -1,5 +1,27 @@
 # 🧠 PRIME MODULAR RESONANCE  
-### Discrete Prime Dynamics → Emergent Geometric Structure
+### Discrete Prime Dynamics → Emergent Structure & Flow
+
+---
+
+## 🔥 START HERE (2 min)
+
+Run this:
+
+```bash
+cd analysis
+python run_all_visuals.py
+```
+
+👉 You will see:
+
+- flow fields  
+- loops  
+- basins  
+- transition structures  
+
+All generated from:
+
+> prime numbers mod 7
 
 ---
 
@@ -7,9 +29,9 @@
 
 This project investigates whether **prime number sequences**, when projected into modular spaces (e.g. mod 7), produce **non-random geometric, spectral, and dynamical patterns**.
 
-The core idea:
+Core idea:
 
-> Discrete modular arithmetic can generate structured, continuous-like flow fields when embedded into geometric space.
+> Discrete arithmetic → structured dynamics → emergent geometry
 
 ---
 
@@ -17,19 +39,19 @@ The core idea:
 
 We define:
 
-\[
-r_n = p_n \bmod 7
-\]
+$begin:math:display$
+r\_n \= p\_n \\bmod 7
+$end:math:display$
 
-\[
-\theta_n = \frac{2\pi}{7} r_n
-\]
+$begin:math:display$
+\\theta\_n \= \\frac\{2\\pi\}\{7\} r\_n
+$end:math:display$
 
-\[
-x_n = \cos(\theta_n), \quad y_n = \sin(\theta_n)
-\]
+$begin:math:display$
+x\_n \= \\cos\(\\theta\_n\)\, \\quad y\_n \= \\sin\(\\theta\_n\)
+$end:math:display$
 
-This maps discrete prime residues into a continuous phase space.
+→ Discrete residues embedded into continuous phase space
 
 ---
 
@@ -40,7 +62,6 @@ This maps discrete prime residues into a continuous phase space.
 ![Visual I](analysis/output/plots/title_visual_mod7.png)
 
 - discrete states form a **non-uniform transition network**
-- structure is not random
 
 ---
 
@@ -48,8 +69,8 @@ This maps discrete prime residues into a continuous phase space.
 
 ![Visual II](analysis/output/plots/title_visual_ii_mod7.png)
 
-- discrete transitions produce **continuous trajectories**
-- rotational flow patterns emerge
+- transitions generate **continuous trajectories**
+- rotational structure appears
 
 ---
 
@@ -57,9 +78,38 @@ This maps discrete prime residues into a continuous phase space.
 
 ![Visual III](analysis/output/plots/title_visual_iii_mod7.png)
 
-- system forms **basins (attractors)**
-- dominant **3-cycles**
-- structured recurrence
+- clustering into basins  
+- dominant 3-cycles  
+- structured recurrence  
+
+---
+
+## 🔥 Dynamic Layer (New)
+
+### Particle Flow
+
+![Particle Flow](analysis/output/curated/mod7_particle_flow.gif)
+
+### Particle Flow (Trails)
+
+![Particle Trails](analysis/output/curated/mod7_particle_flow_trails.gif)
+
+### Transition Flow
+
+![Transition Flow](analysis/output/curated/mod7_transition_flow.gif)
+
+---
+
+### What changes here?
+
+The system is no longer static.
+
+- particles move along transition probabilities  
+- drift emerges  
+- flow channels form  
+- motion becomes pulse-like  
+
+→ **a transport layer appears**
 
 ---
 
@@ -71,9 +121,10 @@ Across experiments:
 - persistent short cycles  
 - coherent flow fields  
 - basin-like clustering  
-- vortex-like local structures  
+- vortex-like structures  
+- directed transport behavior  
 
-These effects are **not reproduced by random controls**.
+Not reproduced by random controls.
 
 ---
 
@@ -81,48 +132,37 @@ These effects are **not reproduced by random controls**.
 
 The system can be described as:
 
-- state space: discrete residues  
-- dynamics: transition matrix  
-- embedding: phase mapping  
-- output: geometric trajectory  
+- state space → residues  
+- dynamics → transition matrix  
+- embedding → phase mapping  
+- behavior → trajectory + flow  
 
-→ A **discrete Markov-like system** that exhibits **continuous dynamical structure**
+→ A **discrete Markov-like system** generating  
+→ **continuous dynamical structure**
 
 ---
 
-## 🔷 Project Structure
+## 🔷 System Layers
 
-```text
-prime_modular_resonance/
-├── analysis/                 # all scripts
-├── output/
-│   ├── plots/               # generated visuals
-│   ├── gifs/
-│   └── logs/
-├── THEORY_NOTES.md          # full theoretical description
-├── VISUAL_MAP.md            # complete visual catalog
 ```
----
-
-## 🔷 Visual System
-
-The system unfolds in layers:
-
 DISCRETE STATES
     ↓
-TRANSITION STRUCTURE
+TRANSITIONS
     ↓
 FLOW FIELD
     ↓
 LOOPS / CYCLES
     ↓
 BASINS / TOPOLOGY
+    ↓
+TRANSPORT
+```
 
 ---
 
 ## 🔷 Key Insight
 
-> Prime modular residue systems exhibit structured transition behavior that becomes visible as coherent geometry under embedding.
+> Structure is not imposed — it emerges from transitions.
 
 ---
 
@@ -138,20 +178,24 @@ All results are:
 
 ---
 
-## 🔷 Next Steps
+## 🔷 Project Structure
 
-- statistical validation  
-- multi-mod coupling (7 × 11 × 13)  
-- spectral analysis (FFT)  
-- higher-dimensional embeddings  
-- topology metrics  
+```text
+prime_modular_resonance/
+├── analysis/                  
+├── analysis/output/
+│   ├── plots/                
+│   ├── curated/              
+├── RESULT_SUMMARY_MOD_7.md
+├── NEUTRINO_FLOW_FIELD_DISCOVERY.md
+```
 
 ---
 
 ## 🔗 Further Reading
 
-- 📄 [Theory Notes](THEORY_NOTES.md)  
-- 🖼 [Visual Map](VISUAL_MAP.md)  
+- 📄 RESULT_SUMMARY_MOD_7.md  
+- ⚛️ NEUTRINO_FLOW_FIELD_DISCOVERY.md  
 
 ---
 
@@ -159,8 +203,9 @@ All results are:
 
 ✔ reproducible  
 ✔ visualized  
-✔ structured  
-✔ ready for expansion  
+✔ structurally consistent  
+✔ dynamically extended  
+✔ ready for exploration  
 
 ---
 
