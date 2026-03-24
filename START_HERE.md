@@ -36,14 +36,16 @@ All of this comes from:
 👉 prime numbers mod 7
 
 ---
+
 ![Prime Modular Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/title_visual_ii_mod7.png)
+
 ---
 
 ## 🤯 Why this matters
 
 We start with something completely discrete:
 
-```bash
+```text
 0,1,2,3,4,5,6
 ```
 
@@ -136,59 +138,4 @@ we extract their structure.
 
 ---
 
-Scarabæus1033 · NEXAH
-	1.	runs systems
-	2.	extracts structure
-	3.	builds state graphs
-	4.	enables navigation
-
-⸻
-
-## 👥 Want to contribute?
-
-Start simple.
-
-Ideas:
-	•	add a new modulus (mod 11, 13, 17)
-	•	compare primes vs random
-	•	build new visualizations
-	•	detect new structures
-
-⸻
-
-## ⚠️ Important
-
-This is not a physics claim.
-
-This is:
-	•	computational
-	•	reproducible
-	•	exploratory
-
-⸻
-
-## 🔗 Next steps
-	•	📄 Theory → ENGINE/research/experiments/
-	•	🖼 Visual Map → visual_map.md
-	•	🧠 Core Framework → README.md
-
-⸻
-
-## 🔮 Status
-
-✔ running
-✔ visual
-✔ structured
-✔ open for exploration
-
-⸻
-
-## 🧠 One sentence
-
-We don’t simulate systems —
-we extract their structure.
-
-⸻
-
-Scarabæus1033 · NEXAH
-
+**Scarabæus1033 · NEXAH**
