@@ -133,6 +133,27 @@ x_n = \rho_n \cos(\theta_n), \qquad y_n = \rho_n \sin(\theta_n)
 Matched random odd integers or random numbers in the same numeric range.
 
 ---
+### 🖼 Visual I — Discrete Transition Structure
+
+![Title Visual I](analysis/output/plots/title_visual_mod7.png)
+
+**Interpretation**
+
+- nodes → modular states  
+- edges → transition probabilities  
+- first emergence of structure  
+
+### 🖼 Visual II — Flow Emergence
+
+![Title Visual II](analysis/output/plots/title_visual_ii_mod7.png)
+
+**Interpretation**
+
+- discrete residues → continuous trajectory  
+- flow patterns emerge from transition bias  
+- rotational structure becomes visible
+  
+---
 
 ## Experiment 02 — 7→17 Modular Bridge
 
@@ -374,6 +395,17 @@ Run the same experiment at multiple scales to test persistence.
 
 ## Outputs
 
+### 🖼 Visual III — Basin & Cycle Structure
+
+![Title Visual III](analysis/output/plots/title_visual_iii_mod7.png)
+
+**Interpretation**
+
+- basin centers → clustering  
+- density → concentration  
+- triangle → dominant cycle  
+- arrows → directed loop dynamics  
+
 ### Plots
 
 - residue heatmaps
@@ -511,6 +543,58 @@ That distinction is crucial.
 ### Careful version
 
 > Prime-derived modular trajectories showed candidate structural deviations from controls; further validation is required across larger samples and stricter null models.
+
+---
+## Extended Structural Layer
+
+This section integrates additional exploratory structures identified during analysis.
+
+### Base 7 ↔ Base 17 Coupling
+
+\[
+c_n = (7 a_n + \delta) \bmod 17
+\]
+
+- mod 7 → local structure  
+- mod 17 → stabilizing layer  
+
+---
+
+### Mod 60 Anchor System
+
+```text
+[43, 37, 23, 17]
+```
+`
+	•	defines structured residue corridors
+	•	acts as angular partition system
+
+# Mirror Chains
+
+Examples:
+```text
+73 ↔ 37  
+137 ↔ 731  
+```
+
+  •	possible structural shortcuts in graph space
+
+# Spectral Layer
+	•	FFT
+	•	autocorrelation
+	•	spiral projections
+
+→ used to detect periodic structure
+
+
+⸻
+
+Spectral Layer
+	•	FFT
+	•	autocorrelation
+	•	spiral projections
+
+→ used to detect periodic structure
 
 ---
 
