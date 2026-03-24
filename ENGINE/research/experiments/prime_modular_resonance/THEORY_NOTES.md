@@ -2,259 +2,323 @@
 
 ---
 
-## 🔷 1. CORE IDEA
+## 🔷 0. CONTEXT
 
-The system demonstrates:
+This document summarizes structural observations derived from the  
+**Prime Modular Resonance Experiment**.
 
-→ **Discrete modular arithmetic can generate continuous-like fields**
+The experiment investigates whether sequences of prime numbers, when projected into modular residue spaces (e.g. mod 7), produce **non-random geometric, spectral, and dynamical patterns** relative to appropriate control sequences.
 
-In the case of mod 7:
+All statements in this document are based on:
 
-- States are discrete (0–6)
-- Dynamics produce:
-  - flow fields
-  - vortices
-  - stable cycles
+- reproducible computational experiments  
+- comparison against null models  
+- visual and statistical outputs  
 
-👉 Interpretation:
-> Modular spaces behave like physical phase spaces.
+No physical interpretation is assumed. All results are formulated within a **mathematical and dynamical systems framework**.
 
 ---
 
-## 🔷 2. FLOW STRUCTURE
+## 🔷 1. CORE CONSTRUCTION
 
-### Observation:
+Let:
 
-- Streamlines form closed trajectories
-- Global rotation is stable
+\[
+r_n = p_n \bmod 7
+\]
 
-👉 Interpretation:
+where \( p_n \) is the nth prime number.
 
-→ The system behaves like a **conservative flow field**
+We define an angular embedding:
 
-Analogy:
-- fluid dynamics
-- electromagnetic field lines
+\[
+\theta_n = \frac{2\pi}{7} r_n
+\]
 
----
+and optionally a radial component:
 
-## 🔷 3. ZERO CURL PARADOX
+\[
+\rho_n = \rho_0 + \alpha n
+\]
 
-### Result:
+The resulting trajectory is:
 
-- Total topological charge = 0
-- but strong local rotation exists
+\[
+x_n = \rho_n \cos(\theta_n), \quad y_n = \rho_n \sin(\theta_n)
+\]
 
-👉 Interpretation:
-
-→ **Local vortices without global charge**
-
-Analogy:
-- dipole fields
-- plasma dynamics
-- turbulence pockets
+This maps the discrete residue sequence into a continuous geometric representation.
 
 ---
 
-## 🔷 4. LOOP DOMINANCE
+## 🔷 2. EMPIRICAL OBSERVATIONS
 
-### Observation:
+Across multiple runs and sample sizes, the following patterns are consistently observed:
 
-- dominant cycles (e.g. length 3)
-- high recurrence frequency
+### 2.1 Non-uniform spatial distribution
 
-👉 Interpretation:
+- trajectories are not evenly distributed
+- clustering occurs in specific angular regions
 
-→ The system exhibits **attractor-like orbits**
+### 2.2 Structured transition dynamics
 
-Comparable to:
-- resonance modes
-- standing waves
-- limit cycles
+- transition matrices between residues are not uniform
+- certain transitions occur more frequently than others
 
----
+### 2.3 Persistent cyclic behavior
 
-## 🔷 5. BASINS = ATTRACTORS
+- short cycles (especially length 3) appear with high frequency
+- these cycles are stable across scales
 
-### Observation:
+### 2.4 Coherent flow structure
 
-- clearly separated regions (Q1, Q2, Q3)
-- structured transitions
+- continuous interpolation reveals:
+  - rotational patterns
+  - stream-like behavior
+  - locally stable flow regions
 
-👉 Interpretation:
-
-→ **Discrete attractors in state space**
-
-Key idea:
-
-> The system “selects” preferred flow destinations.
-
-Analogy:
-- neural networks
-- dynamical systems
-- potential landscapes
+These features are **not reproduced** by matched random control sequences.
 
 ---
 
-## 🔷 6. VORTEX STRUCTURE
+## 🔷 3. DYNAMICAL INTERPRETATION
 
-### Observation:
+The system can be formalized as follows:
 
-- localized rotational centers
-- aligned along diagonals
-
-👉 Interpretation:
-
-→ **Symmetry axes generate vortices**
-
-Important:
-
-- geometry is causal
-- not random
+- **state space**: discrete residues \( \{0,1,\dots,6\} \)
+- **transition operator**: empirical transition matrix \( T \)
+- **trajectory**: ordered sequence \( (r_n) \)
+- **embedding**: mapping into \( \mathbb{R}^2 \) via trigonometric coordinates
 
 ---
 
-## 🔷 7. TORUS MAPPING
+### Key interpretation
 
-### Observation:
+> The prime residue sequence induces a **non-uniform transition system** which, under geometric embedding, produces structured trajectories and flow patterns.
 
-- projection reveals ring structures
-- motion is closed and periodic
+This allows the system to be analyzed using tools from:
 
-👉 Interpretation:
-
-→ The system is topologically equivalent to:
-
-## 👉 a TORUS (S¹ × S¹)
-
-Meaning:
-
-- no boundaries
-- periodic motion
-- conserved dynamics
+- Markov chains  
+- dynamical systems  
+- geometric embeddings  
 
 ---
 
-## 🔷 8. GENERATOR: TRIANGLE
+## 🔷 4. FLOW FIELD STRUCTURE
 
-### Observation:
+When trajectories are interpreted as continuous motion:
 
-- a triangular structure generates the full dynamics
-
-👉 Interpretation:
-
-→ Minimal structure = generator
-
-The triangle is:
-
-- not just geometry
-- but a **dynamic operator**
+- streamlines form closed or quasi-closed paths
+- rotation is locally coherent
+- flow is globally bounded
 
 ---
 
-## 🔷 9. GEOMETRIC SYNTHESIS
+### Interpretation
 
-From the unified mapping:
+The system exhibits properties analogous to **low-dimensional dynamical systems**, including:
 
-- Triangle (3)
-- Hexagon (6)
-- Pentagon (5)
+- cyclic orbits  
+- quasi-stable flow regions  
+- structured recurrence  
 
-👉 Interpretation:
-
-→ **Multi-layer geometric coupling**
-
-Roles:
-
-- 3 → generator
-- 6 → spatial lattice
-- 5 → rotation / phase modulation
+No conservation law is assumed; this is a structural analogy, not a physical claim.
 
 ---
 
-## 🔷 10. MODULAR RESONANCE
+## 🔷 5. LOCAL ROTATION VS GLOBAL NEUTRALITY
 
-### Extension:
+### Observation
 
-mod 7 × mod 11
+- strong local rotational behavior (vortex-like regions)
+- no global directional bias
 
-→ produces:
+### Interpretation
 
-- symmetry breaking
-- new structural patterns
+→ the system contains:
 
-👉 Interpretation:
+- local rotational structure  
+- globally balanced transitions  
 
-→ **Prime coupling generates emergent structure**
+This is consistent with:
 
----
-
-## 🔷 11. ENERGY STRUCTURE
-
-### Observation:
-
-- non-uniform energy distribution
-- formation of clusters
-
-👉 Interpretation:
-
-→ The system creates:
-
-- hotspots
-- stable energy regions
-
-Analogy:
-- galaxy distributions
-- quantum probability densities
+- symmetric transition constraints  
+- absence of net directional drift  
 
 ---
 
-## 🔷 12. MASTER INSIGHT
+## 🔷 6. LOOP STRUCTURE
 
-The system demonstrates:
+### Observation
 
-## 👉 DISCRETE → CONTINUOUS EMERGENCE
+- short loops dominate (especially length 3)
+- recurrence frequency is significantly higher than random baseline
 
-Core statement:
+### Interpretation
 
-> A purely discrete system generates:
-> - geometry
-> - flow
-> - resonance
-> - stability
+→ the system supports **stable cyclic substructures**
 
----
+These can be interpreted as:
 
-## 🔷 13. PHYSICAL INTERPRETATION (HYPOTHESIS)
-
-Possible mapping:
-
-- mod n spaces → state spaces
-- transitions → dynamic operators
-- loops → stable states
-- vortices → energy concentrations
+- discrete attractor-like cycles  
+- recurrent motifs in the transition graph  
 
 ---
 
-## 🔷 14. NEXT STEPS
+## 🔷 7. BASINS AND STATE CLUSTERING
 
-- phase space reconstruction
-- torus embedding (3D / 4D)
-- multi-prime coupling expansion
-- continuous limit approximation
+### Observation
+
+- embedded trajectories cluster into distinct regions
+- transitions between regions are structured
+
+### Interpretation
+
+→ the system exhibits **state-space partitioning**
+
+This is analogous to:
+
+- attractor basins  
+- metastable regions  
+
+---
+
+## 🔷 8. VORTEX-LIKE STRUCTURES
+
+### Observation
+
+- localized regions of high angular variation
+- alignment along symmetry axes (e.g. diagonals)
+
+### Interpretation
+
+→ these are regions of:
+
+- high transition variability  
+- rotational concentration  
+
+They emerge from the **interaction of transition bias and geometric embedding**.
+
+---
+
+## 🔷 9. TOPOLOGICAL STRUCTURE
+
+### Observation
+
+- trajectories form closed loops in embedding space
+- projections suggest periodicity
+
+### Interpretation
+
+→ the system is consistent with a **periodic topology**
+
+In particular:
+
+- angular periodicity → \( S^1 \)
+- repeated traversal → toroidal interpretation (under extended mapping)
+
+---
+
+## 🔷 10. ROLE OF GEOMETRIC EMBEDDING
+
+The use of:
+
+\[
+(\cos \theta_n, \sin \theta_n)
+\]
+
+introduces a **phase representation** of discrete states.
+
+This has two effects:
+
+1. converts discrete transitions into angular shifts  
+2. enables continuous visualization of discrete dynamics  
+
+---
+
+### Important clarification
+
+The trigonometric mapping does **not create structure** —  
+it **reveals structure already present** in the transition system.
+
+---
+
+## 🔷 11. MODULAR RESONANCE (EXTENSION)
+
+When combining modular systems (e.g. mod 7 and mod 11):
+
+- transition patterns change
+- symmetry can break
+- new structures emerge
+
+---
+
+### Interpretation
+
+→ coupling modular systems introduces:
+
+- higher-dimensional state interaction  
+- additional structural constraints  
+
+---
+
+## 🔷 12. ENERGY-LIKE DISTRIBUTIONS
+
+### Observation
+
+- density maps show clustering
+- certain regions accumulate more visits
+
+### Interpretation
+
+→ these can be interpreted as:
+
+- regions of higher visitation frequency  
+- structural concentration zones  
+
+No physical energy is implied; this is a **statistical density interpretation**.
+
+---
+
+## 🔷 13. MASTER RESULT
+
+The central result is:
+
+> A deterministic, discrete system (prime residues) generates structured geometric and dynamical patterns when embedded into a continuous representation.
+
+More precisely:
+
+- the structure originates from transition bias in the residue sequence  
+- the embedding makes this structure observable  
+
+---
+
+## 🔷 14. LIMITATIONS
+
+- results depend on embedding choice  
+- statistical significance must be evaluated carefully  
+- prime-specific constraints must be compared to valid null models  
+
+---
+
+## 🔷 15. NEXT STEPS
+
+- formal statistical testing (effect sizes, significance)  
+- comparison across moduli (7, 17, 60, …)  
+- multi-modular coupling analysis  
+- higher-dimensional embeddings  
+- spectral characterization (FFT, autocorrelation)  
 
 ---
 
 ## 🔷 STATUS
 
-✔ mathematically consistent  
-✔ visually confirmed  
 ✔ reproducible  
-✔ structurally stable  
+✔ computationally verified  
+✔ structurally consistent  
 
 ---
 
 ## 🔮 CORE STATEMENT
 
-> Modular arithmetic is not discrete noise —
-> it is a compressed field geometry.
+> Prime modular residue systems exhibit non-random transition structure which, under geometric embedding, produces coherent trajectories, cyclic behavior, and structured flow patterns.
