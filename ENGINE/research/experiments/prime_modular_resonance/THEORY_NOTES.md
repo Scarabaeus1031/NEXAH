@@ -53,7 +53,7 @@ This maps the discrete residue sequence into a continuous geometric representati
 
 ### 🖼 Visual I — Discrete System → Transition Structure
 
-![Title Visual I](output/plots/title_visual_mod7.png)
+![Title Visual I](analysis/output/plots/title_visual_mod7.png)
 
 **Interpretation**
 
@@ -98,7 +98,7 @@ These features are **not reproduced** by matched random control sequences.
 
 ### 🖼 Visual II — Flow Emergence
 
-![Title Visual II](output/plots/title_visual_ii_mod7.png)
+![Title Visual II](analysis/output/plots/title_visual_ii_mod7.png)
 
 **Interpretation**
 
@@ -250,7 +250,7 @@ In particular:
 
 ### 🖼 Visual III — Basin Structure & Cyclic Dynamics
 
-![Title Visual III](output/plots/title_visual_iii_mod7.png)
+![Title Visual III](analysis/output/plots/title_visual_iii_mod7.png)
 
 **Interpretation**
 
