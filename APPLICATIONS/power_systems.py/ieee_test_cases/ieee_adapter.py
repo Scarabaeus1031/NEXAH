@@ -5,10 +5,17 @@ to the NEXAH framework.
 Uses pandapower for loading and simulation.
 """
 
-import pandapower as pp
+import pandapower.networks as pn
 import networkx as nx
-from APPLICATIONS.adapters.base_adapter import NexahAdapter
 from typing import Dict, Any, List
+
+# Optional import (failsafe if adapter not present yet)
+try:
+    from APPLICATIONS.adapters.base_adapter import NexahAdapter
+except ImportError:
+    class NexahAdapter:
+        def __init__(self, config=None):
+            self.config = config or {}
 
 class IEEEAdapter(NexahAdapter):
     """
@@ -22,33 +29,52 @@ class IEEEAdapter(NexahAdapter):
         self.net = self._load_ieee_system()
         self.graph = self._build_initial_graph()
 
+    # ===================================================================
+    # LOAD IEEE SYSTEM
+    # ===================================================================
+
     def _load_ieee_system(self):
         """Load standard IEEE test case via pandapower"""
         if self.system == "14":
-            return pp.networks.case14()
+            return pn.case14()
         elif self.system == "30":
-            return pp.networks.case30()
+            return pn.case30()
         elif self.system == "57":
-            return pp.networks.case57()
+            return pn.case57()
         elif self.system == "118":
-            return pp.networks.case118()
+            return pn.case118()
         else:
             raise ValueError(f"Unsupported IEEE system: {self.system}")
+
+    # ===================================================================
+    # GRAPH CONVERSION
+    # ===================================================================
 
     def _build_initial_graph(self):
         """Convert pandapower network to NetworkX graph"""
         G = nx.Graph()
+
+        # Generator buses
+        gen_buses = set(self.net.gen["bus"].values) if len(self.net.gen) > 0 else set()
+
         # Add buses as nodes
         for idx, bus in self.net.bus.iterrows():
-            G.add_node(int(bus.name), 
-                       type="bus",
-                       vn_kv=bus.vn_kv,
-                       is_gen=idx in self.net.gen.bus.values)
+            G.add_node(
+                int(idx),
+                type="bus",
+                vn_kv=bus.vn_kv,
+                is_gen=int(idx) in gen_buses
+            )
+
         # Add lines as edges
         for _, line in self.net.line.iterrows():
-            G.add_edge(int(line.from_bus), int(line.to_bus),
-                       type="line",
-                       length_km=line.length_km)
+            G.add_edge(
+                int(line.from_bus),
+                int(line.to_bus),
+                type="line",
+                length_km=line.length_km
+            )
+
         return G
 
     # ===================================================================
@@ -56,11 +82,11 @@ class IEEEAdapter(NexahAdapter):
     # ===================================================================
 
     def states(self) -> List[str]:
-        """Return discrete states (we use a simple stability classification)"""
+        """Return discrete stability states"""
         return ["stable", "stressed", "critical", "unstable"]
 
     def transitions(self) -> Dict[str, List[str]]:
-        """Define possible transitions between stability regimes"""
+        """Define transitions between regimes"""
         return {
             "stable": ["stressed"],
             "stressed": ["stable", "critical"],
@@ -69,7 +95,7 @@ class IEEEAdapter(NexahAdapter):
         }
 
     def regimes(self) -> Dict[str, str]:
-        """Map internal states to regime labels"""
+        """Map states to regime labels"""
         return {
             "stable": "STABLE",
             "stressed": "STRESS",
@@ -103,20 +129,24 @@ class IEEEAdapter(NexahAdapter):
             "risk_targets": self.risk_targets(),
             "actions": ["increase_load", "decrease_load", "shed_load"],
             "metadata": self.metadata(),
-            "graph": self.graph  # NetworkX graph for advanced use
+            "graph": self.graph
         }
 
-    # Optional dynamic methods (for future step-by-step simulation)
+    # ===================================================================
+    # OPTIONAL (FUTURE DYNAMICS)
+    # ===================================================================
+
     def reset(self):
         return self.get_observation()
 
     def step(self, action=None):
-        # Placeholder for dynamic load / generation changes
+        # Placeholder for dynamic simulation
         return self.get_observation()
 
     def get_observation(self):
         return {
             "system": f"IEEE_{self.system}_bus",
             "num_buses": len(self.net.bus),
+            "num_lines": len(self.net.line),
             "graph": self.graph
         }
