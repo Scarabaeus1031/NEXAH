@@ -179,6 +179,75 @@ NEXAH:
 
 ---
 
+---
+
+## 🔬 Experimental Validation — Prime Modular Resonance
+
+As a minimal test case, NEXAH was applied to a purely discrete system:
+
+→ prime number sequences projected into modular spaces (mod 7)
+
+The system:
+
+- has no geometry  
+- no physical dynamics  
+- no continuous structure  
+
+---
+
+### 🖼 Discrete → Structure
+
+![Title Visual I](ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/title_visual_mod7.png)
+
+- nodes → modular states  
+- edges → transition probabilities  
+
+---
+
+### 🖼 Structure → Flow
+
+![Title Visual II](ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/title_visual_ii_mod7.png)
+
+- discrete transitions produce continuous trajectories  
+- rotational structure emerges  
+
+---
+
+### 🖼 Flow → Topology
+
+![Title Visual III](ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/title_visual_iii_mod7.png)
+
+- basin formation  
+- dominant cycles  
+- loop dynamics  
+
+---
+
+### Result
+
+Even in a fully discrete number system:
+
+→ non-random transition structure  
+→ geometric patterns  
+→ flow-like behavior  
+→ stable cycles  
+
+emerge purely from structure.
+
+---
+
+### Interpretation
+
+> Structure is not imposed —  
+> it is **extracted from dynamics**.
+
+---
+
+📄 Full experiment:  
+[Prime Modular Resonance](ENGINE/research/experiments/prime_modular_resonance/)
+
+---
+
 ## 📂 Key Entry Points
 
 - **[Discovery Engine](./DISCOVERY_ENGINE/)**  
