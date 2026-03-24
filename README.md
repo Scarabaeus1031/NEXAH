@@ -242,6 +242,45 @@ emerge purely from structure.
 > it is **extracted from dynamics**.
 
 ---
+---
+
+### 🔥 Structure → Flow (Dynamic Layer)
+
+The same system, when simulated dynamically:
+
+### Particle Flow
+
+![Particle Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/curated/mod7_particle_flow.gif)
+
+### Particle Flow (Trails)
+
+![Particle Trails](ENGINE/research/experiments/prime_modular_resonance/analysis/output/curated/mod7_particle_flow_trails.gif)
+
+### Transition Flow
+
+![Transition Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/curated/mod7_transition_flow.gif)
+
+---
+
+### What changes here?
+
+The system is no longer just structure.
+
+- particles move along transition probabilities  
+- drift emerges  
+- flow channels form  
+- motion becomes pulse-like  
+
+→ a **transport layer emerges from purely discrete structure**
+
+---
+
+### Key Insight
+
+> Even without geometry or physics,  
+> structured transitions generate flow-like dynamics.
+
+---
 
 📄 Full experiment:  
 [Prime Modular Resonance](ENGINE/research/experiments/prime_modular_resonance/)

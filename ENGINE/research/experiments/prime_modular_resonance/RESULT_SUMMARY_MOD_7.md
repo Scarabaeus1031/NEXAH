@@ -67,7 +67,7 @@ All results were compared against appropriate **null models**.
 
 ---
 
-### 4. Flow Field Formation
+### 4a. Flow Field Formation
 
 - continuous interpolation reveals:
 
@@ -77,6 +77,41 @@ All results were compared against appropriate **null models**.
 
 → system behaves like a low-dimensional dynamical flow  
 
+---
+
+### 4b. Emergent Transport Dynamics (Particle Simulation)
+
+- particle-based simulations driven by transition probabilities reveal:
+
+  - directed drift  
+  - localized flow channels  
+  - pulse-like clustering of trajectories  
+
+- motion is:
+
+  - non-uniform  
+  - history-dependent  
+  - structured by transition density  
+
+→ indicates the presence of an emergent transport layer
+
+---
+
+### 4c. Discrete-to-Continuous Transition
+
+- although the system is fully discrete:
+
+  - primes → residues → transitions  
+
+- the resulting motion exhibits:
+
+  - smooth trajectories  
+  - quasi-continuous flow  
+  - coherent directionality  
+
+→ discrete transition systems can generate continuous-like transport behavior
+
+---
 ---
 
 ### 5. Basin Formation
@@ -143,7 +178,7 @@ This places it within:
 - Markov systems  
 - dynamical systems  
 - graph-based processes  
-
+- stochastic transport processes  
 ---
 
 ## 🔷 Important Clarification
