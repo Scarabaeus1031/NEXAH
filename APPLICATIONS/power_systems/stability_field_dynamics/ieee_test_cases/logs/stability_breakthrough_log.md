@@ -718,3 +718,177 @@ The framework now supports detection of:
 >  
 > But only when resonance couples,  
 > does structure become a system.
+
+## Entry 19 — Coupling Metric / Memory Emergence Criterion
+
+### Observation
+Previous entries established a key distinction:
+
+- some systems exhibit structure only (IEEE 9)
+- others exhibit structure + dynamics + topology (IEEE 14)
+
+The missing element is:
+
+→ quantification of coupling
+
+### Goal
+Define a metric that detects when:
+
+- degrees of freedom begin to interact
+- flow becomes persistent
+- structure transitions into a system
+
+---
+
+## Components of Coupling
+
+We identify three measurable ingredients:
+
+### 1. Flow Persistence (P)
+
+Measure of directional stability over time:
+
+- compare vector field alignment across steps
+- or measure trajectory smoothness
+
+Interpretation:
+- low P → random / diffusive
+- high P → coherent flow
+
+---
+
+### 2. Recurrence Concentration (R)
+
+From recurrence map M(x,y):
+
+- compute variance or entropy
+
+Example:
+- uniform → low R
+- clustered → high R
+
+Interpretation:
+- high R → memory formation
+
+---
+
+### 3. Loop Density (L)
+
+From trajectory analysis:
+
+- number of detected loops
+- normalized by particle count
+
+Interpretation:
+- L = 0 → no closure
+- L > 0 → closed dynamics
+
+---
+
+## Coupling Metric Definition
+
+We define:
+
+C = P * R * L
+
+Where:
+
+- P in [0,1]  (flow persistence)
+- R in [0,1]  (recurrence concentration)
+- L >= 0      (loop density, normalized)
+
+---
+
+## Interpretation
+
+### Case 1 — Diffuse Field (IEEE 9)
+
+- P ≈ low
+- R ≈ low
+- L = 0
+
+→
+
+C ≈ 0
+
+Interpretation:
+→ no coupling  
+→ latent dimensions only  
+
+---
+
+### Case 2 — Coupled Field (IEEE 14)
+
+- P > 0
+- R > 0
+- L > 0
+
+→
+
+C > 0
+
+Interpretation:
+→ active coupling  
+→ system formation  
+
+---
+
+## Threshold Hypothesis
+
+We propose:
+
+C > C_crit  → system emerges  
+C ≤ C_crit  → diffuse regime  
+
+Where:
+
+- C_crit ≈ small positive value (empirical)
+
+---
+
+## Physical Meaning
+
+The coupling metric captures:
+
+- persistence (time coherence)
+- memory (spatial concentration)
+- closure (topological loops)
+
+Together:
+
+Coupling = coherence × memory × closure
+
+---
+
+## Key Insight
+
+A field becomes a system when:
+
+- motion is not only present
+- but remembered
+- and closed
+
+---
+
+## Conclusion
+
+We now have a first formal criterion for system emergence:
+
+A dynamical system is defined not by its structure,  
+but by the coupling of its degrees of freedom.
+
+---
+
+## Next Direction
+
+### Entry 20 — Coupling Field Visualization
+
+- map C(x,y) locally
+- detect where coupling emerges
+- identify “birth zones” of structure
+
+### Entry 21 — Phase Transition Analysis
+
+- track C across parameter changes
+- detect onset of coupling
+- locate critical thresholds
