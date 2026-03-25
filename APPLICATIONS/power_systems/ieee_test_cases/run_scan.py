@@ -43,7 +43,6 @@ def plot_landscape(factors, landscape):
         cmap="viridis"
     )
 
-    # Boundary anzeigen nur wenn sinnvoll
     if np.unique(landscape).size > 1:
         plt.contour(
             landscape,
@@ -54,8 +53,8 @@ def plot_landscape(factors, landscape):
         )
         plt.colorbar(label="Stability (1=stable, 0=unstable)")
 
-    plt.xlabel("Load factor (Bus A)")
-    plt.ylabel("Load factor (Bus B)")
+    plt.xlabel("Load factor (Load Bus)")
+    plt.ylabel("Generation factor")
     plt.title("IEEE 14-bus Stability Landscape")
     plt.show()
 
@@ -86,16 +85,18 @@ def main():
     print("\n--- 2D Stability Landscape ---")
 
     load_buses = net.load["bus"].values
-    bus_a = int(load_buses[2])
-    bus_b = int(load_buses[4])
+
+    # 🔥 DEFINIERT (das hat dir gefehlt)
+    load_bus = int(load_buses[2])
+    gen_idx = 0
 
     factors, landscape = run_2d_stability_scan(
-    net,
-    load_bus=load_bus,
-    gen_idx=gen_idx,
-    base_load=3.8,
-    steps=50
-)
+        net,
+        load_bus=load_bus,
+        gen_idx=gen_idx,
+        base_load=3.8,
+        steps=50
+    )
 
     plot_landscape(factors, landscape)
 
