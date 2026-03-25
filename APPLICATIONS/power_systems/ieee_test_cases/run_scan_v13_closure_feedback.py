@@ -1,141 +1,147 @@
-import numpy as np
-import matplotlib.pyplot as plt
-
-from APPLICATIONS.power_systems.ieee_test_cases.core.field_builder import build_field
-from APPLICATIONS.power_systems.ieee_test_cases.core.boundary_detection import detect_boundary
-from APPLICATIONS.power_systems.ieee_test_cases.core.current_field_v8 import compute_current_field
-from APPLICATIONS.power_systems.ieee_test_cases.core.time_dynamics_v9 import (
+from .ieee_loader import load_ieee14
+from .stability_landscape_v2 import run_2d_stability_scan_v2
+from .boundary_dynamics_v2 import (
+    compute_gradient_field,
+    extract_dynamic_boundary
+)
+from .time_dynamics_v9 import (
     seed_particles_from_boundary,
-    advect_particles,
+    advect_particles
 )
-from APPLICATIONS.power_systems.ieee_test_cases.core.recurrence_analysis_v10 import (
-    compute_recurrence_map,
+from .recurrence_analysis_v10 import (
+    detect_loops,
+    compute_recurrence_map
 )
-from APPLICATIONS.power_systems.ieee_test_cases.core.markov_transition_v10 import (
-    compute_transition_matrix,
+from .state_clustering_v11 import extract_states_from_recurrence
+from .state_graph_v11b import (
+    build_weighted_transition_graph,
+    compute_state_entropy
 )
-from APPLICATIONS.power_systems.ieee_test_cases.core.closure_feedback_v13 import (
-    apply_closure_feedback,
-)
+from .dynamic_flow_v12 import compute_dynamic_flow
+from .closure_feedback_v13 import apply_closure_feedback
+
+import matplotlib.pyplot as plt
+import numpy as np
 
 
+# =========================
+# BIPOLAR SEEDING
+# =========================
+def seed_bipolar(boundary, n_particles=80):
+    p1 = seed_particles_from_boundary(boundary, n_particles=n_particles)
+
+    if len(p1) == 0:
+        return p1
+
+    h, w = boundary.shape
+    p2 = p1.copy()
+    p2[:, 0] = (w - 1) - p2[:, 0]
+
+    return np.vstack([p1, p2])
+
+
+# =========================
+# PLOTS
+# =========================
+def plot_flow(landscape, Fx, Fy):
+    plt.figure(figsize=(8, 6))
+    plt.imshow(landscape, cmap="viridis", origin="lower", alpha=0.75)
+
+    X, Y = np.meshgrid(np.arange(landscape.shape[1]), np.arange(landscape.shape[0]))
+    plt.quiver(
+        X[::3, ::3], Y[::3, ::3],
+        Fx[::3, ::3], Fy[::3, ::3],
+        color="white", alpha=0.8
+    )
+
+    plt.title("Closure Feedback Flow Field")
+    plt.show()
+
+
+def plot_states(M, states):
+    plt.figure(figsize=(8, 6))
+    plt.imshow(M, cmap="inferno", origin="lower")
+
+    for s in states:
+        cy, cx = s["center"]
+        plt.scatter(cx, cy, c="cyan", s=60)
+
+    plt.title("Detected States (Closure Feedback)")
+    plt.show()
+
+
+def plot_loops(loops):
+    plt.figure(figsize=(8, 6))
+    for loop in loops:
+        loop = np.array(loop)
+        if len(loop) > 1:
+            plt.plot(loop[:, 0], loop[:, 1], alpha=0.7)
+
+    plt.title("Detected Loops")
+    plt.show()
+
+
+# =========================
+# MAIN
+# =========================
 def main():
     print("\n--- V13 Closure Feedback / Resonance Lock ---")
 
-    # --------------------------------------------------
-    # 1. FIELD + BOUNDARY
-    # --------------------------------------------------
-    gx, gy, field = build_field(size=80)
-    boundary = detect_boundary(field)
+    net = load_ieee14()
+    load_bus = int(net.load["bus"].values[2])
 
-    # --------------------------------------------------
-    # 2. CURRENT FIELD (FLOW)
-    # --------------------------------------------------
-    Ix, Iy, mag = compute_current_field(gx, gy, boundary)
+    # ===== FIELD =====
+    fx, fy, landscape = run_2d_stability_scan_v2(
+        net,
+        load_bus=load_bus,
+        base_load=3.8,
+        steps=60
+    )
 
-    # --------------------------------------------------
-    # 3. PARTICLE SEED + TRAJECTORIES
-    # --------------------------------------------------
-    particles = seed_particles_from_boundary(boundary, n_particles=120)
+    boundary = extract_dynamic_boundary(landscape, threshold=0.7)
+
+    # ===== BASE FLOW =====
+    gx, gy, _ = compute_gradient_field(landscape)
+
+    Fx, Fy = compute_dynamic_flow(
+        gx, gy,
+        strength=0.6,
+        rotation=0.5,
+        noise=0.02
+    )
+
+    # 🔥 FIX: positional args (kein keyword!)
+    Fx, Fy = apply_closure_feedback(
+        landscape,
+        Fx,
+        Fy
+    )
+
+    # ===== PARTICLES =====
+    particles = seed_bipolar(boundary, n_particles=80)
 
     trajectories = advect_particles(
-        Ix, Iy,
+        Fx, Fy,
         particles,
         dt=0.6,
-        steps=140
+        steps=180,
+        damping=0.97
     )
 
-    # --------------------------------------------------
-    # 4. RECURRENCE + MARKOV
-    # --------------------------------------------------
-    recurrence = compute_recurrence_map(trajectories, grid_size=80)
+    # ===== ANALYSIS =====
+    M = compute_recurrence_map(trajectories, landscape.shape)
 
-    transition_matrix = compute_transition_matrix(
-        trajectories,
-        grid_size=80,
-        normalize=True
-    )
+    states, labeled = extract_states_from_recurrence(M, threshold=0.15)
 
-    # --------------------------------------------------
-    # 5. APPLY CLOSURE FEEDBACK (FIXED!)
-    # --------------------------------------------------
-    Fx, Fy = apply_closure_feedback(
-        field,   # <<< FIX: KEIN keyword mehr!
-        Ix,
-        Iy,
-        feedback_strength=0.35,
-        memory_strength=0.20,
-        phase_lock_strength=0.15
-    )
+    loops = detect_loops(trajectories, eps=1.5, min_length=12)
 
-    # --------------------------------------------------
-    # 6. STATES (ATTRACTORS)
-    # --------------------------------------------------
-    threshold = np.percentile(recurrence, 99)
-
-    states = np.zeros_like(recurrence)
-    states[recurrence > threshold] = 1
-
-    n_states = int(states.sum())
-
-    # --------------------------------------------------
-    # 7. LOOP DETECTION (simple)
-    # --------------------------------------------------
-    loops = []
-
-    for traj in trajectories:
-        if len(traj) < 10:
-            continue
-
-        start = traj[0]
-        end = traj[-1]
-
-        if np.linalg.norm(start - end) < 2.0:
-            loops.append(traj)
-
-    print(f"States: {n_states}")
+    print(f"States: {len(states)}")
     print(f"Loops: {len(loops)}")
 
-    # --------------------------------------------------
-    # 8. PLOTS
-    # --------------------------------------------------
-    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-
-    # --- Dynamic Flow Field ---
-    ax = axes[0, 0]
-    ax.set_title("Dynamic Flow Field (Closure Feedback)")
-    ax.imshow(field, cmap="viridis")
-
-    step = 4
-    ax.quiver(
-        gx[::step, ::step],
-        gy[::step, ::step],
-        Fx[::step, ::step],
-        Fy[::step, ::step],
-        color="white",
-        scale=30
-    )
-
-    # --- States ---
-    ax = axes[0, 1]
-    ax.set_title("Detected States (Closure)")
-    ax.imshow(states, cmap="inferno")
-
-    # --- Loops ---
-    ax = axes[1, 0]
-    ax.set_title("Detected Loops")
-
-    for traj in loops:
-        traj = np.array(traj)
-        ax.plot(traj[:, 0], traj[:, 1], linewidth=1)
-
-    # --- Recurrence ---
-    ax = axes[1, 1]
-    ax.set_title("Recurrence Map")
-    ax.imshow(recurrence, cmap="magma")
-
-    plt.tight_layout()
-    plt.show()
+    # ===== PLOTS =====
+    plot_flow(landscape, Fx, Fy)
+    plot_states(M, states)
+    plot_loops(loops)
 
 
 if __name__ == "__main__":
