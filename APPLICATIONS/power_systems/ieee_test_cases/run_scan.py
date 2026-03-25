@@ -14,6 +14,8 @@ def plot_results(results):
     plt.ylabel("Stability (1=stable, 0=unstable)")
     plt.title("IEEE 14-bus Stability Scan")
     plt.grid()
+    plt.axvline(x=4.2, linestyle="--", label="Collapse boundary")
+    plt.legend()
     plt.show()
 
 
