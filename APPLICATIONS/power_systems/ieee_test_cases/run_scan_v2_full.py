@@ -67,24 +67,37 @@ def plot_landscape(load_factors, gen_factors, landscape):
 # =========================
 # MAIN
 # =========================
-def main():
-    net = load_ieee14()
+def run_2d_stability_scan_v2(
+    net,
+    min_load=3.5,
+    max_load=4.5,
+    min_gen=0.5,
+    max_gen=1.0,
+    steps=40
+):
+    load_factors = np.linspace(min_load, max_load, steps)
+    gen_factors = np.linspace(min_gen, max_gen, steps)
 
-    # ===== 1D SCAN =====
-    print("\n--- 1D Stability Scan ---")
+    landscape = np.zeros((steps, steps))
 
-    results = run_stability_scan(
-        net,
-        min_factor=3.8,
-        max_factor=4.4,
-        steps=40
-    )
+    for i, lf in enumerate(load_factors):
+        for j, gf in enumerate(gen_factors):
 
-    for factor, stable in results:
-        status = "Stable" if stable else "Unstable"
-        print(f"Load factor: {factor:.2f} → {status}")
+            net_copy = copy.deepcopy(net)
 
-    plot_results(results)
+            # 🔥 Load hoch
+            net_copy.load["p_mw"] *= lf
+
+            # 🔥 Generation runter (IMBALANCE!)
+            net_copy.gen["p_mw"] *= gf
+
+            try:
+                pp.runpp(net_copy)
+                landscape[i, j] = 1
+            except:
+                landscape[i, j] = 0
+
+    return load_factors, gen_factors, landscape
 
     # ===== 2D LANDSCAPE (NEW) =====
     print("\n--- 2D Stability Landscape (Load vs Generation) ---")
