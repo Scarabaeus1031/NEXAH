@@ -1,9 +1,6 @@
 from .ieee_loader import load_ieee14
 from .stability_landscape_v2 import run_2d_stability_scan_v2
-from .boundary_dynamics_v2 import (
-    compute_gradient_field,
-    extract_dynamic_boundary
-)
+from .boundary_dynamics_v2 import extract_dynamic_boundary
 from .current_field_v8 import compute_current_field
 from .time_dynamics_v9 import (
     seed_particles_from_boundary,
@@ -33,7 +30,7 @@ def plot_v10(field, trajectories, recurrence, entropy, loops):
 
     # ===== FIELD =====
     plt.subplot(2, 2, 1)
-    plt.imshow(field, cmap="viridis")
+    plt.imshow(field, cmap="viridis", origin="lower")
     plt.title("Field")
 
     # ===== TRAJECTORIES =====
@@ -41,17 +38,17 @@ def plot_v10(field, trajectories, recurrence, entropy, loops):
     for traj in trajectories:
         traj = np.array(traj)
         if len(traj) > 1:
-            plt.plot(traj[:, 0], traj[:, 1], alpha=0.2)
+            plt.plot(traj[:, 0], traj[:, 1], alpha=0.15)
     plt.title("Trajectories")
 
     # ===== RECURRENCE =====
     plt.subplot(2, 2, 3)
-    plt.imshow(recurrence, cmap="inferno")
+    plt.imshow(recurrence, cmap="inferno", origin="lower")
     plt.title("Recurrence Map")
 
     # ===== ENTROPY =====
     plt.subplot(2, 2, 4)
-    plt.imshow(entropy, cmap="plasma")
+    plt.imshow(entropy, cmap="plasma", origin="lower")
     plt.title("Transition Entropy")
 
     plt.tight_layout()
@@ -76,7 +73,7 @@ def main():
 
     print("\n--- V10 Recurrence + Markov ---")
 
-    # ===== 2D FIELD =====
+    # ===== FIELD =====
     load_bus = int(net.load["bus"].values[2])
 
     fx, fy, landscape = run_2d_stability_scan_v2(
@@ -86,14 +83,11 @@ def main():
         steps=60
     )
 
-    # ===== GRADIENT =====
-    gx, gy, grad_mag = compute_gradient_field(landscape)
-
     # ===== BOUNDARY =====
     boundary = extract_dynamic_boundary(landscape, threshold=0.7)
 
-    # ===== CURRENT FIELD =====
-    Ix, Iy, mag = compute_current_field(gx, gy, boundary)
+    # ===== CURRENT FIELD (FIXED) =====
+    Ix, Iy, mag = compute_current_field(landscape)
 
     # ===== PARTICLES =====
     particles = seed_particles_from_boundary(boundary, n_particles=120)
