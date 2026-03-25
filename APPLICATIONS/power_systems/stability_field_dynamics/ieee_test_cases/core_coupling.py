@@ -1,0 +1,1 @@
+from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.run_scan_v22_phase_boundary_finder import run_single_coupling
