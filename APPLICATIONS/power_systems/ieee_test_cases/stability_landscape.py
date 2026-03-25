@@ -8,7 +8,8 @@ def run_2d_stability_scan(
     load_bus,
     gen_idx,
     base_load=3.8,
-    steps=40
+    steps=40,
+    outage_line=0  # 🔥 NEU
 ):
     factors = np.linspace(0.8, 1.3, steps)
     landscape = np.zeros((steps, steps))
@@ -18,20 +19,23 @@ def run_2d_stability_scan(
 
             net_copy = copy.deepcopy(net)
 
+            # ===== REMOVE LINE (CRITICAL) =====
+            net_copy.line.drop(outage_line, inplace=True)
+
             # ===== GLOBAL LOAD =====
             net_copy.load["p_mw"] *= base_load
 
-            # ===== LOCAL LOAD VARIATION =====
+            # ===== LOCAL LOAD =====
             mask = net_copy.load["bus"] == load_bus
             net_copy.load.loc[mask, "p_mw"] *= lf
 
-            # ===== GENERATOR VARIATION =====
+            # ===== GENERATOR =====
             net_copy.gen.loc[gen_idx, "p_mw"] *= gf
 
             try:
                 pp.runpp(net_copy)
                 landscape[i, j] = 1
-            except Exception:
+            except:
                 landscape[i, j] = 0
 
     return factors, landscape
