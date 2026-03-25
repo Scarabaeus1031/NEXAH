@@ -2,13 +2,16 @@ import pandapower as pp
 import copy
 import numpy as np
 
+if np.unique(landscape).size > 1:
+    plt.colorbar(label="Stability (1=stable, 0=unstable)")
+
 def run_2d_stability_scan(
     net,
     bus_a,
     bus_b,
-    min_factor=3.8,
+    min_factor=3.9,
     max_factor=4.3,
-    steps=40
+    steps=50
 ):
     factors = np.linspace(min_factor, max_factor, steps)
     landscape = np.zeros((steps, steps))
@@ -26,7 +29,7 @@ def run_2d_stability_scan(
             mask_b = net_copy.load["bus"] == bus_b
 
             net_copy.load.loc[mask_a, "p_mw"] *= fa / 3.5
-            net_copy.load.loc[mask_b, "p_mw"] *= fb / 3.5
+            net_copy.load.loc[mask_b, "p_mw"] *= fb / 4.0
 
             try:
                 pp.runpp(net_copy)
