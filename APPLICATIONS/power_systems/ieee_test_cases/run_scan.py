@@ -1,11 +1,15 @@
 from .ieee_loader import load_ieee14
 from .stability_scan import run_stability_scan
 from .stability_landscape import run_2d_stability_scan
+from .sensitivity_analysis import run_sensitivity_analysis
 
 import matplotlib.pyplot as plt
 import numpy as np
 
 
+# =========================
+# 1D PLOT
+# =========================
 def plot_results(results):
     factors = [f for f, s in results]
     stability = [1 if s else 0 for f, s in results]
@@ -25,6 +29,9 @@ def plot_results(results):
     plt.show()
 
 
+# =========================
+# 2D LANDSCAPE PLOT
+# =========================
 def plot_landscape(factors, landscape):
     plt.figure()
 
@@ -36,7 +43,7 @@ def plot_landscape(factors, landscape):
         cmap="viridis"
     )
 
-    # Boundary anzeigen
+    # Boundary anzeigen nur wenn sinnvoll
     if np.unique(landscape).size > 1:
         plt.contour(
             landscape,
@@ -53,10 +60,15 @@ def plot_landscape(factors, landscape):
     plt.show()
 
 
+# =========================
+# MAIN
+# =========================
 def main():
     net = load_ieee14()
 
+    # ===== 1D SCAN =====
     print("\n--- 1D Stability Scan ---")
+
     results = run_stability_scan(
         net,
         min_factor=3.8,
@@ -70,6 +82,7 @@ def main():
 
     plot_results(results)
 
+    # ===== 2D LANDSCAPE =====
     print("\n--- 2D Stability Landscape ---")
 
     load_buses = net.load["bus"].values
@@ -86,6 +99,14 @@ def main():
     )
 
     plot_landscape(factors, landscape)
+
+    # ===== SENSITIVITY =====
+    print("\n--- Sensitivity Analysis ---")
+
+    sensitivity = run_sensitivity_analysis(net)
+
+    for bus, collapse in sensitivity.items():
+        print(f"Bus {bus} → collapse at {collapse:.2f}")
 
 
 if __name__ == "__main__":
