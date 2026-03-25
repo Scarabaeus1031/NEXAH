@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.run_single_coupling import run_single_coupling
+from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.core_coupling import run_single_coupling
 
 print("\n--- V23 Critical Activation Map ---\n")
 
