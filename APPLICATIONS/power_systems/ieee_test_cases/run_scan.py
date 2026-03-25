@@ -3,7 +3,7 @@ from .stability_scan import run_stability_scan
 
 def main():
     net = load_ieee14()
-    results = run_stability_scan(net)
+    results = run_stability_scan(net, max_factor=6.0)
 
     for factor, stable in results:
         status = "Stable" if stable else "Unstable"
