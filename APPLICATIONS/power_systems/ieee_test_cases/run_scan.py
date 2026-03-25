@@ -18,8 +18,13 @@ def plot_results(results):
     plt.ylabel("Stability (1=stable, 0=unstable)")
     plt.title("IEEE 14-bus Stability Scan")
     plt.grid()
-    plt.axvline(x=4.2, linestyle="--", label="Collapse boundary")
-    plt.legend()
+
+    # automatische Collapse-Grenze (erste 0)
+    collapse = next((f for f, s in results if not s), None)
+    if collapse:
+        plt.axvline(x=collapse, linestyle="--", label=f"Collapse ~ {collapse:.2f}")
+        plt.legend()
+
     plt.show()
 
 
@@ -28,11 +33,22 @@ def plot_results(results):
 # =========================
 def plot_landscape(factors, landscape):
     plt.figure()
+
     plt.imshow(
         landscape,
         origin="lower",
         extent=[factors[0], factors[-1], factors[0], factors[-1]],
-        aspect="auto"
+        aspect="auto",
+        cmap="viridis"
+    )
+
+    # 🔥 Boundary sichtbar machen
+    plt.contour(
+        landscape,
+        levels=[0.5],
+        colors="red",
+        linewidths=1,
+        extent=[factors[0], factors[-1], factors[0], factors[-1]]
     )
 
     plt.xlabel("Load factor (Bus A)")
@@ -66,6 +82,26 @@ def main():
 
     # ===== 2D LANDSCAPE =====
     print("\n--- 2D Stability Landscape ---")
+
+    # 🔥 automatisch echte Load-Busse wählen
+    load_buses = net.load["bus"].values
+    bus_a = int(load_buses[0])
+    bus_b = int(load_buses[1])
+
+    factors, landscape = run_2d_stability_scan(
+        net,
+        bus_a=bus_a,
+        bus_b=bus_b,
+        min_factor=3.5,
+        max_factor=4.5,
+        steps=40
+    )
+
+    plot_landscape(factors, landscape)
+
+
+if __name__ == "__main__":
+    main()    print("\n--- 2D Stability Landscape ---")
 
     factors, landscape = run_2d_stability_scan(
         net,
