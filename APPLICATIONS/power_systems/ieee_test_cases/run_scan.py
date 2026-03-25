@@ -90,12 +90,12 @@ def main():
     bus_b = int(load_buses[4])
 
     factors, landscape = run_2d_stability_scan(
-        net,
-        bus_a=bus_a,
-        bus_b=bus_b,
-        min_factor=3.9,
-        max_factor=4.3,
-        steps=50
+    net,
+    bus_a=bus_a,
+    bus_b=bus_b,
+    base_load=3.8,   # 🔥 NEU
+    variation=0.3,   # 🔥 NEU
+    steps=50
     )
 
     plot_landscape(factors, landscape)
