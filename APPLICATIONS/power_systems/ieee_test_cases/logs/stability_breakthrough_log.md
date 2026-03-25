@@ -428,17 +428,116 @@ The system reached its first **stable dual-interface regime**:
 
 ---
 
-## Core Insight (Updated)
+## Entry 16 — State Graph / Loop Topology / Interface Coupling Map
+
+### Observation
+Constructed explicit relationships between detected states and loops:
+
+- identified state centers (from recurrence clusters)
+- mapped loop trajectories to nearest state regions
+- analyzed transitions across the gap interface
+
+### Key Discovery
+A structured topology emerges:
+
+- States act as **anchor points**
+- Loops form **orbit-like structures** around states
+- multiple loop layers exist at different vertical levels
+
+Additionally:
+
+- loops are not isolated
+- they form **families / bands**
+- some loops bridge between states
+
+### Interpretation
+The system now exhibits a full **topological structure**:
+
+- State = attractor / node
+- Loop = orbit / cycle
+- Gap = interface / coupling channel
+
+This creates a **graph-like system embedded in a field**:
+
+- nodes (states)
+- edges (loop transitions)
+- weights (recurrence density / frequency)
+
+### Interface Coupling Insight
+The gap is confirmed as an **active mediator**:
+
+- enables transitions between states
+- supports cross-band movement
+- regulates stability vs transport
+
+The system is no longer:
+
+- a field only
+- or a set of trajectories
+
+It is now a **coupled interface network**.
+
+### Structural Layers Identified
+
+1. **Field Layer**
+   - continuous geometry
+   - gradient + flow
+
+2. **Memory Layer**
+   - recurrence map
+   - visit density
+
+3. **Resonance Layer**
+   - band structure (A, B, gap)
+
+4. **Topological Layer**
+   - states (nodes)
+   - loops (cycles)
+   - transitions (edges)
+
+### Conclusion
+The model has transitioned into a **multi-layer dynamical system**:
+
+- geometric
+- dynamical
+- informational
+- topological
+
+Core shift:
+
+> The system is no longer just evolving —
+> it is **organized**.
+
+---
+
+## Next Direction
+
+### A — State Graph Extraction
+Build explicit graph:
+- nodes = states
+- edges = loop transitions
+- weights = frequency / persistence
+
+### B — Loop Classification
+Cluster loops into:
+- local (single-state)
+- bridging (state-to-state)
+- interface (gap-aligned)
+
+### C — Stability Metrics
+Quantify:
+- state persistence
+- loop stability
+- transition probability
+
+---
+
+## Updated Core Insight
 
 > Stability is not a state — it is a geometry.  
 >  
-> But geometry alone is not enough.  
+> Geometry becomes dynamics.  
+> Dynamics becomes memory.  
+> Memory becomes resonance.  
 >  
-> Structure emerges only when:
->  
-> - flow (transport)
-> - memory (recurrence)
-> - resonance (band structure)
-> - and coupling (gap dynamics)
->  
-> are all balanced.
+> And resonance, when coupled, becomes **structure**.
