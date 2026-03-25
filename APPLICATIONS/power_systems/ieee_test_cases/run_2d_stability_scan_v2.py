@@ -1,25 +1,14 @@
-import pandapower as pp
-import copy
-import numpy as np
-
-
 def run_2d_stability_scan_v2(
     net,
     min_load=3.5,
-    max_load=4.5,
-    min_gen=0.8,
-    max_gen=1.2,
+    max_load=6.0,
+    min_gen=0.3,
+    max_gen=1.0,
     steps=40
 ):
-    """
-    2D Stability Landscape:
-    Load scaling vs Generation scaling
-
-    Returns:
-        load_factors (x-axis)
-        gen_factors (y-axis)
-        landscape (2D array: 1=stable, 0=unstable)
-    """
+    import numpy as np
+    import copy
+    import pandapower as pp
 
     load_factors = np.linspace(min_load, max_load, steps)
     gen_factors = np.linspace(min_gen, max_gen, steps)
@@ -31,16 +20,27 @@ def run_2d_stability_scan_v2(
 
             net_copy = copy.deepcopy(net)
 
-            # 🔥 Load scaling (destabilizing force)
+            # 🔥 EXTREMER LOAD STRESS
             net_copy.load["p_mw"] *= lf
 
-            # 🔥 Generation scaling (stabilizing force)
+            # 🔥 GENERATOR LIMITIERUNG
             net_copy.gen["p_mw"] *= gf
 
+            # 🔥 SLACK BUS LIMITIEREN (KRITISCH!)
+            net_copy.ext_grid["vm_pu"] = 1.0
+
             try:
-                pp.runpp(net_copy, init="results")
-                landscape[i, j] = 1  # stable
-            except Exception:
-                landscape[i, j] = 0  # unstable
+                pp.runpp(net_copy, max_iteration=20)
+                
+                # zusätzlicher Instabilitätscheck
+                min_vm = net_copy.res_bus["vm_pu"].min()
+
+                if min_vm < 0.7:
+                    landscape[i, j] = 0  # instabil (voltage collapse)
+                else:
+                    landscape[i, j] = 1
+
+            except:
+                landscape[i, j] = 0
 
     return load_factors, gen_factors, landscape
