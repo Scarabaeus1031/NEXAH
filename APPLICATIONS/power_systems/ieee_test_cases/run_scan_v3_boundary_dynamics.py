@@ -6,6 +6,7 @@ from .boundary_dynamics_v2 import (
     extract_dynamic_boundary,
     compute_boundary_strength
 )
+from .field_mirror_v1 import mirror_field, combine_fields
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -96,6 +97,32 @@ def plot_boundary(boundary, strength):
 
 
 # =========================
+# MIRROR + INTERACTION
+# =========================
+def plot_mirror_and_interaction(landscape):
+    mirrored = mirror_field(landscape)
+    combined = combine_fields(landscape, mirrored, mode="difference")
+
+    plt.figure(figsize=(12, 4))
+
+    plt.subplot(1, 3, 1)
+    plt.imshow(landscape, cmap="viridis")
+    plt.title("Original Field")
+
+    plt.subplot(1, 3, 2)
+    plt.imshow(mirrored, cmap="viridis")
+    plt.title("Mirrored Field")
+
+    plt.subplot(1, 3, 3)
+    plt.imshow(combined, cmap="coolwarm")
+    plt.title("Interaction (Difference)")
+    plt.colorbar()
+
+    plt.tight_layout()
+    plt.show()
+
+
+# =========================
 # MAIN
 # =========================
 def main():
@@ -129,14 +156,15 @@ def main():
 
     # ===== FLOW =====
     gx, gy, grad_mag = compute_gradient_field(landscape)
-
     plot_flow_field(fx, fy, gx, gy)
 
     # ===== BOUNDARY =====
     boundary = extract_dynamic_boundary(landscape, threshold=0.7)
     strength = compute_boundary_strength(grad_mag, boundary)
-
     plot_boundary(boundary, strength)
+
+    # ===== MIRROR SYSTEM =====
+    plot_mirror_and_interaction(landscape)
 
 
 if __name__ == "__main__":
