@@ -1,10 +1,9 @@
 from .ieee_loader import load_ieee14
 from .stability_scan import run_stability_scan
+from .run_2d_stability_scan_continuous import run_2d_stability_scan_continuous
 
-import pandapower as pp
-import copy
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 # =========================
@@ -31,74 +30,36 @@ def plot_results(results):
 
 
 # =========================
-# 2D LANDSCAPE (FIXED)
+# 2D CONTINUOUS LANDSCAPE PLOT
 # =========================
-def run_2d_stability_scan_v2(
-    net,
-    min_load=3.5,
-    max_load=4.5,
-    min_gen=0.5,
-    max_gen=1.0,
-    steps=40
-):
-    load_factors = np.linspace(min_load, max_load, steps)
-    gen_factors = np.linspace(min_gen, max_gen, steps)
-
-    landscape = np.zeros((steps, steps))
-
-    for i, lf in enumerate(load_factors):
-        for j, gf in enumerate(gen_factors):
-
-            net_copy = copy.deepcopy(net)
-
-            # 🔥 DESTABILISIERUNG
-            net_copy.load["p_mw"] *= lf
-
-            # 🔥 IMBALANCE (wichtiger Fix!)
-            net_copy.gen["p_mw"] *= gf
-
-            try:
-                pp.runpp(net_copy)
-                landscape[i, j] = 1
-            except Exception:
-                landscape[i, j] = 0
-
-    return load_factors, gen_factors, landscape
-
-
-# =========================
-# 2D PLOT (ROBUST)
-# =========================
-def plot_landscape(load_factors, gen_factors, landscape):
+def plot_landscape(load_factors, q_factors, landscape):
     plt.figure()
 
-    plt.imshow(
+    im = plt.imshow(
         landscape,
         origin="lower",
         extent=[load_factors[0], load_factors[-1],
-                gen_factors[0], gen_factors[-1]],
+                q_factors[0], q_factors[-1]],
         aspect="auto",
         cmap="viridis"
     )
 
-    unique_vals = np.unique(landscape)
+    # 🔥 Jetzt immer Colorbar, weil continuous
+    plt.colorbar(im, label="Min Voltage (pu)")
 
-    if unique_vals.size > 1:
-        plt.contour(
-            load_factors,
-            gen_factors,
-            landscape,
-            levels=[0.5],
-            colors="red",
-            linewidths=1
-        )
-        plt.colorbar(label="Stability (1=stable, 0=unstable)")
-    else:
-        print("⚠️ Landscape has no variation (all stable or all unstable)")
+    # 🔥 Critical contour (Voltage collapse region)
+    plt.contour(
+        load_factors,
+        q_factors,
+        landscape,
+        levels=[0.7],  # typische collapse zone
+        colors="red",
+        linewidths=1
+    )
 
-    plt.xlabel("Load Scaling (destabilizing)")
-    plt.ylabel("Generation Scaling (stabilizing ↓)")
-    plt.title("IEEE 14-bus Stability Landscape (Load vs Generation Imbalance)")
+    plt.xlabel("Load Scaling (P)")
+    plt.ylabel("Reactive Scaling (Q)")
+    plt.title("IEEE 14-bus Stability Landscape (Continuous Voltage Field)")
 
     plt.show()
 
@@ -125,19 +86,19 @@ def main():
 
     plot_results(results)
 
-    # ===== 2D =====
-    print("\n--- 2D Stability Landscape (IMBALANCE) ---")
+    # ===== 2D CONTINUOUS =====
+    print("\n--- 2D Stability Landscape (Continuous) ---")
 
-    load_factors, gen_factors, landscape = run_2d_stability_scan_v2(
+    load_factors, q_factors, landscape = run_2d_stability_scan_continuous(
         net,
         min_load=3.5,
         max_load=4.5,
-        min_gen=0.5,   # 🔥 wichtig
-        max_gen=1.0,
+        min_q=0.5,
+        max_q=1.5,
         steps=50
     )
 
-    plot_landscape(load_factors, gen_factors, landscape)
+    plot_landscape(load_factors, q_factors, landscape)
 
 
 if __name__ == "__main__":
