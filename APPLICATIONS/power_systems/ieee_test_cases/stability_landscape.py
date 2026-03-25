@@ -2,10 +2,15 @@ import pandapower as pp
 import copy
 import numpy as np
 
-def run_2d_stability_scan(net, bus_a=3, bus_b=9,
-                         min_factor=1.0, max_factor=4.5,
-                         steps=30):
 
+def run_2d_stability_scan(
+    net,
+    bus_a,
+    bus_b,
+    min_factor=1.0,
+    max_factor=4.5,
+    steps=30
+):
     factors = np.linspace(min_factor, max_factor, steps)
     landscape = np.zeros((steps, steps))
 
@@ -14,17 +19,18 @@ def run_2d_stability_scan(net, bus_a=3, bus_b=9,
 
             net_copy = copy.deepcopy(net)
 
-            # Apply scaling to two buses
+            # Masken für Load-Busse
             mask_a = net_copy.load["bus"] == bus_a
             mask_b = net_copy.load["bus"] == bus_b
 
+            # Load skalieren
             net_copy.load.loc[mask_a, "p_mw"] *= fa
             net_copy.load.loc[mask_b, "p_mw"] *= fb
 
             try:
                 pp.runpp(net_copy)
                 landscape[i, j] = 1  # stable
-            except:
+            except Exception:
                 landscape[i, j] = 0  # unstable
 
     return factors, landscape
