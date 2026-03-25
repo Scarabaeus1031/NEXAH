@@ -41,31 +41,404 @@ This enables:
 
 ---
 
-## Next Steps
+## Entry 02 — Boundary Dynamics
 
-### A — Boundary Extraction
-Extract explicit critical boundary from voltage field.
+### Observation
+Computed gradient field, extracted boundary mask, and measured boundary strength.
 
-### B — Boundary Agent
-Introduce agents moving along stability boundary.
+### Key Discovery
+The critical layer is not only geometric, but dynamic:
 
-### C — 3D Extension
-Extend system to 3D:
+- the boundary has directionality
+- the strongest gradients cluster along a narrow oblique strip
+- boundary strength is highly localized
 
-- X = Load (P)
-- Y = Reactive Power (Q)
-- Z = Voltage (stability measure)
+### Interpretation
+The collapse threshold is not just a line, but a **dynamic interface**.
+
+- gradient = flow tendency
+- boundary = nonlinear switching front
+- strength = sharpness of transition
+
+### Conclusion
+The system transitioned from static geometry to **boundary dynamics**.
 
 ---
 
-## Notes
+## Entry 03 — Signed Boundary / Bipolar Field
 
-This marks the transition from:
+### Observation
+Constructed signed distance-like fields and mirrored the boundary structure.
 
-**Binary Stability → Continuous Stability Field**
+### Key Discovery
+The field can be interpreted as bipolar:
 
-Core insight:
+- one side positive / stable
+- one side negative / unstable
+- mirrored structure reveals a dual-interface logic
 
-> Stability is not a state — it is a geometry.
->
-> 
+### Interpretation
+This introduced the first clear **two-sided field architecture**.
+
+- not only transition
+- but relation between two opposing domains
+
+### Conclusion
+The system now supports **bipolar representation** and field symmetry analysis.
+
+---
+
+## Entry 04 — Fold / Layer Dynamics
+
+### Observation
+Generated layered versions of the boundary field and stacked them into folded energy views.
+
+### Key Discovery
+The transition zone can be decomposed into layered slices:
+
+- multiple nested bands
+- fold-like structure
+- stratified energy geometry
+
+### Interpretation
+The boundary behaves like a **compressed layered manifold**, not a single front.
+
+### Conclusion
+This introduced the idea of **field folding** and multi-layer transition logic.
+
+---
+
+## Entry 05 — Eigenmodes / Boundary Axes
+
+### Observation
+Extracted principal axes and eigenmode directions from the boundary point cloud.
+
+### Key Discovery
+The boundary has a dominant orientation and a weaker transverse mode.
+
+### Interpretation
+The collapse interface behaves like a structured object with:
+
+- main transport axis
+- secondary modulation axis
+
+### Conclusion
+The system gained a first **modal reading** of the stability interface.
+
+---
+
+## Entry 06 — Mode Interaction / Turn Field
+
+### Observation
+Constructed interaction fields between dominant and transverse modes.
+
+### Key Discovery
+A turn / reversal structure emerges near the oblique interface.
+
+### Interpretation
+The interface is not merely linear drift, but supports **mode interaction** and local reversal behavior.
+
+### Conclusion
+This established the first explicit **turn geometry** in the system.
+
+---
+
+## Entry 07 — Current Field
+
+### Observation
+Derived current-like vector fields from gradient and boundary interaction.
+
+### Key Discovery
+Flow is strongest near the transition corridor and aligns with the interface geometry.
+
+### Interpretation
+The field behaves like a transport system with a preferred channel.
+
+### Conclusion
+The model now supports **current-field interpretation**.
+
+---
+
+## Entry 08 — Time Evolution / Particle Dynamics
+
+### Observation
+Seeded particles near the boundary and advected them through the field.
+
+### Key Discovery
+Particles do not fill the plane uniformly; they concentrate along preferred pathways.
+
+### Interpretation
+The boundary acts as a **generator of trajectories**, not just a separator.
+
+### Conclusion
+This introduced **time evolution** and agent-like dynamics.
+
+---
+
+## Entry 09 — Recurrence / Memory Field
+
+### Observation
+Counted repeated visits of particles across the grid.
+
+### Key Discovery
+A recurrence map emerged, showing non-uniform revisit density.
+
+### Interpretation
+The system develops **memory**:
+
+- some regions are revisited often
+- others remain transient
+
+### Conclusion
+The field now has an empirical memory layer:
+**M(x,y) = number of visits**
+
+---
+
+## Entry 10 — Markov / Transition Entropy
+
+### Observation
+Built transition counts and local transition entropy from trajectories.
+
+### Key Discovery
+The system can be described by:
+
+- recurrence density
+- local transition uncertainty
+- path persistence
+
+### Interpretation
+The field is now readable as a **state-transition process**.
+
+### Conclusion
+The model crossed from geometry into **informational dynamics**.
+
+---
+
+## Entry 11 — State Detection
+
+### Observation
+Attempted clustering of recurrence into states / attractors.
+
+### Key Discovery
+Initial state extraction often returned zero stable states.
+
+### Interpretation
+This showed that the system can remain in a **pure transport regime** with no trapped attractors.
+
+### Conclusion
+Absence of states became itself a meaningful diagnostic.
+
+---
+
+## Entry 11b — Weighted State Graph
+
+### Observation
+Introduced bipolar seeding and weighted transitions between extracted regions.
+
+### Key Discovery
+Transitions could exist even where robust states were still weak or absent.
+
+### Interpretation
+The system supports a distinction between:
+
+- transport
+- proto-state
+- stabilized state
+
+### Conclusion
+The graph perspective became possible, even before full attractor formation.
+
+---
+
+## Entry 12 — Dynamic States / Regime Switching
+
+### Observation
+Added rotational and stochastic components to the flow field.
+
+### Key Discovery
+Previously absent structures re-emerged:
+
+- loops detected again (up to ~80+ in early runs)
+- weak state concentrations appeared
+- dynamic switching between regions observed
+
+### Interpretation
+The system can transition between:
+
+- pure transport regime (no states)
+- metastable regime (loops + transient states)
+
+Noise and rotation act as **activation mechanisms**.
+
+### Conclusion
+The field is not fixed — it supports **regime switching** depending on dynamics.
+
+---
+
+## Entry 13 — Closure Feedback / Resonance Lock
+
+### Observation
+Introduced closure feedback into the flow field.
+
+### Key Discovery
+Flow alignment increased significantly:
+
+- vectors became more coherent
+- trajectories aligned with dominant direction
+- system began to "lock" into directional flow
+
+### Interpretation
+Closure acts as a **global constraint**:
+
+- reduces chaos
+- increases coherence
+- but may suppress local structure
+
+### Conclusion
+The system gained a **closure mechanism**, enabling global alignment at the cost of local diversity.
+
+---
+
+## Entry 13b — Neon Rotation (Local Activation Layer)
+
+### Observation
+Injected localized rotational perturbations ("neon layer") into the closed flow.
+
+### Key Discovery
+Local activation zones emerged:
+
+- increased activity along boundary
+- reappearance of state clusters near interface
+- stronger local differentiation
+
+### Interpretation
+Neon acts as a **local excitation field**:
+
+- reintroduces variability into a locked system
+- creates localized resonance pockets
+
+### Conclusion
+The system now supports **global closure + local activation** simultaneously.
+
+---
+
+## Entry 13c — LANIF Band (Resonance Quantization)
+
+### Observation
+Introduced a radial band filter (LANIF band) to isolate a preferred flow radius.
+
+### Key Discovery
+A narrow resonance band appears:
+
+- only a specific radius range remains active
+- outside regions damped
+- states concentrate near boundary-aligned band
+
+### Interpretation
+The system exhibits **quantized resonance behavior**:
+
+- not continuous activation
+- but band-limited dynamics
+
+### Conclusion
+Transition from continuous field → **band-structured resonance system**.
+
+---
+
+## Entry 14 — Auto Resonance Detection
+
+### Observation
+Automatically detected dominant radius peaks from flow distribution.
+
+### Key Discovery
+Two clear peaks identified:
+
+- ~0.008 (inner band)
+- ~0.84 (outer band)
+
+Gap:
+- ~0.832
+
+### Interpretation
+The system organizes into a **dual-band structure**:
+
+- inner weak resonance
+- outer dominant resonance
+- gap acts as separating interface
+
+### Conclusion
+Resonance is not imposed — it **emerges from the flow itself**.
+
+---
+
+## Entry 15 — Dual Resonance / Interface Coupling
+
+### Observation
+Separated the system into:
+
+- Band A (inner)
+- Band B (outer)
+- Gap region between them
+
+### Key Discovery
+Despite clear band structure:
+
+- no stable states formed
+- no loops persisted
+
+### Interpretation
+The system was over-constrained:
+
+- too rigid separation
+- insufficient interaction between bands
+
+### Conclusion
+Dual resonance exists, but requires **stabilized coupling** to produce structure.
+
+---
+
+## Entry 15b — Gap Stabilization / Loop Recovery
+
+### Observation
+Introduced soft stabilization of the gap region.
+
+### Key Discovery
+Structure re-emerged:
+
+- States: 2
+- Loops: 6
+
+- stable attractor-like regions detected
+- multi-level loop structures formed
+
+### Interpretation
+The gap is not empty — it is an **active mediator**:
+
+- too weak → chaos
+- too strong → dead system
+- balanced → structure emerges
+
+### Conclusion
+The system reached its first **stable dual-interface regime**:
+
+- two states
+- multiple loops
+- active coupling across the gap
+
+---
+
+## Core Insight (Updated)
+
+> Stability is not a state — it is a geometry.  
+>  
+> But geometry alone is not enough.  
+>  
+> Structure emerges only when:
+>  
+> - flow (transport)
+> - memory (recurrence)
+> - resonance (band structure)
+> - and coupling (gap dynamics)
+>  
+> are all balanced.
