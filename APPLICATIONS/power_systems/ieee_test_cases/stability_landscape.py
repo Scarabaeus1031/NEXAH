@@ -5,29 +5,28 @@ import numpy as np
 
 def run_2d_stability_scan(
     net,
-    bus_a,
-    bus_b,
-    base_load=3.8,     # 🔥 global stress (nahe collapse ~4.16)
-    variation=0.3,     # 🔥 lokale Variation ±30%
+    load_bus,
+    gen_idx,
+    base_load=3.8,
     steps=40
 ):
-    factors = np.linspace(1 - variation, 1 + variation, steps)
+    factors = np.linspace(0.8, 1.3, steps)
     landscape = np.zeros((steps, steps))
 
-    for i, fa in enumerate(factors):
-        for j, fb in enumerate(factors):
+    for i, lf in enumerate(factors):
+        for j, gf in enumerate(factors):
 
             net_copy = copy.deepcopy(net)
 
             # ===== GLOBAL LOAD =====
             net_copy.load["p_mw"] *= base_load
 
-            # ===== LOCAL VARIATION =====
-            mask_a = net_copy.load["bus"] == bus_a
-            mask_b = net_copy.load["bus"] == bus_b
+            # ===== LOCAL LOAD VARIATION =====
+            mask = net_copy.load["bus"] == load_bus
+            net_copy.load.loc[mask, "p_mw"] *= lf
 
-            net_copy.load.loc[mask_a, "p_mw"] *= fa
-            net_copy.load.loc[mask_b, "p_mw"] *= fb
+            # ===== GENERATOR VARIATION =====
+            net_copy.gen.loc[gen_idx, "p_mw"] *= gf
 
             try:
                 pp.runpp(net_copy)
