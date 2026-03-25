@@ -1209,3 +1209,194 @@ This is a critical distinction:
 >  
 > Structure does not only emerge —  
 > it persists within a domain of parameters.
+
+## Entry 22 — Load Invariance / Structural Attractor
+
+### Observation
+
+Extended phase boundary scan across a wide load range:
+
+base_load ∈ [0.6, 6.0]
+
+For each configuration, measured:
+
+- Coupling metric C
+- Flow persistence P
+- Recurrence concentration R
+- Loop density L
+- number of states
+- number of loops
+- resonance peaks and gap
+
+---
+
+### Key Result
+
+All quantities remained **strictly invariant across the entire range**:
+
+- C ≈ 0.003577
+- P ≈ 0.4712
+- R ≈ 0.2682
+- L ≈ 0.0283
+- States = 2
+- Loops = 6
+- Gap ≈ 0.832
+
+No deviation detected — even under large parameter variation.
+
+---
+
+### Interpretation
+
+The system exhibits **complete load invariance**.
+
+This implies:
+
+- coupling is not driven by external load scaling
+- system structure is governed by internal dynamics
+
+The model no longer behaves as a parameter-sensitive system.
+
+Instead, it behaves as a:
+
+→ **structurally dominated system**
+
+---
+
+### Structural Attractor Hypothesis
+
+The pipeline:
+
+- gradient field
+- dynamic flow
+- closure feedback
+- local activation (neon)
+- band quantization (LANIF)
+- resonance detection
+- coupling formation
+
+acts as a transformation:
+
+Input (load-dependent field)  
+→ nonlinear transformation  
+→ projection onto stable structure  
+
+Result:
+
+→ all inputs converge to the same dynamical configuration
+
+---
+
+### Attractor Interpretation
+
+The system behaves as if it contains a:
+
+→ **global structural attractor**
+
+Properties:
+
+- independent of load magnitude
+- robust under scaling
+- preserves:
+  - topology (states + loops)
+  - resonance structure
+  - coupling strength
+
+---
+
+### Phase Structure (Refined)
+
+We extend the previous classification:
+
+1. **Diffuse Phase**
+   - no coupling
+   - no structure
+
+2. **Transition Phase**
+   - unstable / partial structure
+
+3. **Coupled Phase**
+   - stable structure
+   - loops + states
+
+4. **Attractor Phase (NEW)**
+   - invariant under parameter variation
+   - topology locked
+   - coupling constant
+
+Observed system:
+
+→ resides in **Attractor Phase**
+
+---
+
+### Key Insight
+
+The system does not respond continuously to load.
+
+Instead:
+
+> It reorganizes into a fixed structure  
+> and remains there.
+
+---
+
+### Physical Interpretation
+
+This suggests:
+
+- the system is not controlled by external forcing
+- but by **internal constraints and feedback**
+
+Coupling emerges from:
+
+- alignment (closure)
+- excitation (neon)
+- resonance selection (LANIF)
+
+Once formed:
+
+→ it stabilizes into a persistent configuration
+
+---
+
+### Implication
+
+Load is not a control parameter for structure.
+
+Instead:
+
+- load affects initial conditions
+- but not final system organization
+
+This shifts the model from:
+
+→ parameter-driven dynamics  
+
+to:
+
+→ **structure-driven dynamics**
+
+---
+
+### Conclusion
+
+We identify a new regime:
+
+→ **Load-Invariant Coupled System**
+
+This is characterized by:
+
+- persistent topology
+- stable coupling
+- independence from external scaling
+
+---
+
+## Updated Core Insight
+
+> Stability is not controlled by external parameters alone.  
+>  
+> When internal dynamics dominate,  
+> the system converges to structure —  
+> and structure persists.
