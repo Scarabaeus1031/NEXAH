@@ -70,8 +70,8 @@ def main():
     print("\n--- 2D Stability Landscape ---")
 
     load_buses = net.load["bus"].values
-    bus_a = int(load_buses[0])
-    bus_b = int(load_buses[1])
+        bus_a = int(load_buses[2])
+        us_b = int(load_buses[4])
 
     factors, landscape = run_2d_stability_scan(
         net,
