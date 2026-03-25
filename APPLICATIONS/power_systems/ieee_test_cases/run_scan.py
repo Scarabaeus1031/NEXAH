@@ -95,8 +95,9 @@ def main():
         load_bus=load_bus,
         gen_idx=gen_idx,
         base_load=3.8,
-        steps=50
-    )
+        steps=50,
+        outage_line=0  # 🔥 wichtig
+)
 
     plot_landscape(factors, landscape)
 
