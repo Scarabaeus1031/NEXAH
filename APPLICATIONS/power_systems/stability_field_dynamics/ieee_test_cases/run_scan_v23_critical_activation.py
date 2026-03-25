@@ -14,26 +14,42 @@ delta_loops_map = np.zeros_like(activation_map)
 delta_states_map = np.zeros_like(activation_map)
 delta_C_map = np.zeros_like(activation_map)
 
-# Baseline (no noise)
+# --- SAFE CALL WRAPPER ---
+def safe_run(load, noise):
+    try:
+        return run_single_coupling(base_load=load, noise_strength=noise)
+    except TypeError:
+        # fallback if noise not supported yet
+        return run_single_coupling(base_load=load)
+
+# --- Baseline (no noise) ---
 baseline = {}
 for i, load in enumerate(load_values):
-    res = run_single_coupling(base_load=load, noise_strength=0.0)
+    res = safe_run(load, 0.0)
     baseline[load] = res
 
-# Scan
+# --- Scan ---
 for i, load in enumerate(load_values):
     for j, noise in enumerate(noise_values):
 
         print(f"Load={load:.2f}, Noise={noise:.3f}")
 
         try:
-            res = run_single_coupling(base_load=load, noise_strength=noise)
+            res = safe_run(load, noise)
             base = baseline[load]
 
-            # Differences
-            d_loops = res["loops"] - base["loops"]
-            d_states = res["states"] - base["states"]
-            d_C = res["C"] - base["C"]
+            # Differences (safe access)
+            loops = res.get("loops", 0)
+            states = res.get("states", 0)
+            C = res.get("C", 0)
+
+            base_loops = base.get("loops", 0)
+            base_states = base.get("states", 0)
+            base_C = base.get("C", 0)
+
+            d_loops = loops - base_loops
+            d_states = states - base_states
+            d_C = C - base_C
 
             delta_loops_map[i, j] = d_loops
             delta_states_map[i, j] = d_states
@@ -43,7 +59,7 @@ for i, load in enumerate(load_values):
             activation = (
                 abs(d_loops)
                 + abs(d_states)
-                + abs(d_C) * 100  # scaled
+                + abs(d_C) * 100
             )
 
             activation_map[i, j] = activation
@@ -52,7 +68,7 @@ for i, load in enumerate(load_values):
             print("failed:", e)
             activation_map[i, j] = np.nan
 
-# --- Plot ---
+# --- Plot: Activation ---
 plt.figure()
 plt.imshow(
     activation_map,
@@ -66,24 +82,44 @@ plt.ylabel("Base Load")
 plt.title("Critical Activation Map")
 plt.show()
 
-# --- Extra diagnostics ---
+# --- Plot: Δ Loops ---
 plt.figure()
-plt.imshow(delta_loops_map, aspect="auto", origin="lower",
-           extent=[noise_values[0], noise_values[-1], load_values[0], load_values[-1]])
+plt.imshow(
+    delta_loops_map,
+    aspect="auto",
+    origin="lower",
+    extent=[noise_values[0], noise_values[-1], load_values[0], load_values[-1]],
+)
 plt.colorbar(label="Δ Loops")
 plt.title("Loop Activation Map")
+plt.xlabel("Noise Strength")
+plt.ylabel("Base Load")
 plt.show()
 
+# --- Plot: Δ States ---
 plt.figure()
-plt.imshow(delta_states_map, aspect="auto", origin="lower",
-           extent=[noise_values[0], noise_values[-1], load_values[0], load_values[-1]])
+plt.imshow(
+    delta_states_map,
+    aspect="auto",
+    origin="lower",
+    extent=[noise_values[0], noise_values[-1], load_values[0], load_values[-1]],
+)
 plt.colorbar(label="Δ States")
 plt.title("State Activation Map")
+plt.xlabel("Noise Strength")
+plt.ylabel("Base Load")
 plt.show()
 
+# --- Plot: Δ Coupling ---
 plt.figure()
-plt.imshow(delta_C_map, aspect="auto", origin="lower",
-           extent=[noise_values[0], noise_values[-1], load_values[0], load_values[-1]])
+plt.imshow(
+    delta_C_map,
+    aspect="auto",
+    origin="lower",
+    extent=[noise_values[0], noise_values[-1], load_values[0], load_values[-1]],
+)
 plt.colorbar(label="Δ Coupling C")
 plt.title("Coupling Shift Map")
+plt.xlabel("Noise Strength")
+plt.ylabel("Base Load")
 plt.show()
