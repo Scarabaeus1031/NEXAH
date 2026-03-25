@@ -84,7 +84,7 @@ This introduced the first clear **two-sided field architecture**.
 - but relation between two opposing domains
 
 ### Conclusion
-The system now supports **bipolar representation** and field symmetry analysis.
+The system now supports **bipolar representation** and field symmetry analysis. 
 
 ---
 
