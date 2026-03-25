@@ -1,6 +1,6 @@
 from .ieee_loader import load_ieee14
 from .stability_scan import run_stability_scan
-from .run_2d_stability_scan_v2 import run_2d_stability_scan_v2
+from .run_2d_stability_scan_v3 import run_2d_stability_scan_v3
 from .boundary_dynamics import (
     compute_gradient_field,
     extract_dynamic_boundary,
@@ -126,14 +126,14 @@ def main():
     # ===== 2D =====
     print("\n--- 2D Stability Landscape ---")
 
-    load_factors, gen_factors, landscape = run_2d_stability_scan_v2(
+    load_factors, gen_factors, landscape = run_2d_stability_scan_v3(
         net,
         min_load=3.5,
         max_load=4.5,
         min_gen=0.5,
-        max_gen=1.0,
+        max_gen=1.2,
         steps=50
-    )
+)
 
     plot_landscape(load_factors, gen_factors, landscape)
 
