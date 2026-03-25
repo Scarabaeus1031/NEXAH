@@ -7,11 +7,11 @@ def run_2d_stability_scan(
     net,
     bus_a,
     bus_b,
-    min_factor=3.9,
-    max_factor=4.3,
-    steps=50
+    base_load=3.8,     # 🔥 global stress (nahe collapse ~4.16)
+    variation=0.3,     # 🔥 lokale Variation ±30%
+    steps=40
 ):
-    factors = np.linspace(min_factor, max_factor, steps)
+    factors = np.linspace(1 - variation, 1 + variation, steps)
     landscape = np.zeros((steps, steps))
 
     for i, fa in enumerate(factors):
@@ -19,15 +19,15 @@ def run_2d_stability_scan(
 
             net_copy = copy.deepcopy(net)
 
-            # global stress
-            net_copy.load["p_mw"] *= 4.0
+            # ===== GLOBAL LOAD =====
+            net_copy.load["p_mw"] *= base_load
 
-            # local variation
+            # ===== LOCAL VARIATION =====
             mask_a = net_copy.load["bus"] == bus_a
             mask_b = net_copy.load["bus"] == bus_b
 
-            net_copy.load.loc[mask_a, "p_mw"] *= fa / 4.0
-            net_copy.load.loc[mask_b, "p_mw"] *= fb / 4.0
+            net_copy.load.loc[mask_a, "p_mw"] *= fa
+            net_copy.load.loc[mask_b, "p_mw"] *= fb
 
             try:
                 pp.runpp(net_copy)
