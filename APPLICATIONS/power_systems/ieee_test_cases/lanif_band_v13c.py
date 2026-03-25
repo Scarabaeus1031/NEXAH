@@ -1,39 +1,50 @@
-radius(Fx, Fy)
+# APPLICATIONS/power_systems/ieee_test_cases/lanif_band_v13c.py
+
+import numpy as np
+
+
+def apply_lanif_band(
+    Fx,
+    Fy,
+    target_radius=0.26,
+    band_width=0.05,
+    in_band_boost=1.8,
+    out_band_damp=0.6
+):
+    """
+    V13c — LANIF Band
+
+    Idea:
+    Quantize the flow field onto a preferred radius band.
+
+    - radius = flow magnitude
+    - particles in band → amplified (resonance channel)
+    - outside → damped (decay / shadow region)
+
+    Returns:
+        Fx_new, Fy_new, mask, radius
+    """
+
+    # ===== RADIUS =====
+    radius = np.sqrt(Fx**2 + Fy**2) + 1e-8  # avoid division by zero
+
+    # ===== BAND MASK =====
     mask = np.abs(radius - target_radius) < band_width
 
-    Fx2[mask] *= in_band_boost
-    Fy2[mask] *= in_band_boost
+    # ===== NORMALIZE FLOW DIRECTION =====
+    Fx_norm = Fx / radius
+    Fy_norm = Fy / radius
 
-    Fx2[~mask] *= out_band_damp
-    Fy2[~mask] *= out_band_damp
+    # ===== NEW FIELD =====
+    Fx_new = Fx.copy()
+    Fy_new = Fy.copy()
 
-    return Fx2, Fy2, mask, radius
+    # in-band → amplify + align to target radius
+    Fx_new[mask] = Fx_norm[mask] * target_radius * in_band_boost
+    Fy_new[mask] = Fy_norm[mask] * target_radius * in_band_boost
 
+    # out-of-band → damp
+    Fx_new[~mask] *= out_band_damp
+    Fy_new[~mask] *= out_band_damp
 
-def apply_multi_lanif_bands(Fx, Fy, bands=None, band_width=0.04,
-                            in_band_boost=1.6, out_band_damp=0.75):
-    """
-    Optional multi-band version if you later want several discrete levels.
-
-    bands default:
-        [0.26, 0.48, 0.96]
-    """
-    if bands is None:
-        bands = [0.26, 0.48, 0.96]
-
-    Fx2 = Fx.copy()
-    Fy2 = Fy.copy()
-
-    radius = compute_flow_radius(Fx, Fy)
-
-    mask = np.zeros_like(radius, dtype=bool)
-    for b in bands:
-        mask |= np.abs(radius - b) < band_width
-
-    Fx2[mask] *= in_band_boost
-    Fy2[mask] *= in_band_boost
-
-    Fx2[~mask] *= out_band_damp
-    Fy2[~mask] *= out_band_damp
-
-    return Fx2, Fy2, mask, radius
+    return Fx_new, Fy_new, mask, radius
