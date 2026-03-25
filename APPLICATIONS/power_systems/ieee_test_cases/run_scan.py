@@ -1,4 +1,8 @@
+from .ieee_loader import load_ieee14
+from .stability_scan import run_stability_scan
+
 import matplotlib.pyplot as plt
+
 
 def plot_results(results):
     factors = [f for f, s in results]
@@ -10,9 +14,8 @@ def plot_results(results):
     plt.ylabel("Stability (1=stable, 0=unstable)")
     plt.title("IEEE 14-bus Stability Scan")
     plt.grid()
-    plt.show()from .ieee_loader import load_ieee14
+    plt.show()
 
-from .stability_scan import run_stability_scan
 
 def main():
     net = load_ieee14()
@@ -22,7 +25,8 @@ def main():
         status = "Stable" if stable else "Unstable"
         print(f"Load factor: {factor:.2f} → {status}")
 
+    plot_results(results)
+
+
 if __name__ == "__main__":
     main()
-
-    plot_results(results)
