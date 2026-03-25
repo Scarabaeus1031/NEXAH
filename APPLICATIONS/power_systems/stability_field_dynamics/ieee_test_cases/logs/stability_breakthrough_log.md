@@ -541,3 +541,180 @@ Quantify:
 > Memory becomes resonance.  
 >  
 > And resonance, when coupled, becomes **structure**.
+
+## Entry 17 — Cross-System Validation / Latent Dimensions vs Coupled Dynamics
+
+### Observation
+Validated the full pipeline on IEEE 9-bus system using identical analysis steps:
+
+- flow field generation
+- recurrence mapping
+- resonance peak detection
+- band separation (A, B, gap)
+- state + loop extraction
+
+Results:
+
+IEEE 9:
+- Peaks: ~0.007, ~0.012
+- Gap: ~0.004
+- States: 0
+- Loops: 0
+
+IEEE 14 (reference):
+- Peaks: ~0.008, ~0.84
+- Gap: ~0.832
+- States: 2
+- Loops: 6
+
+### Key Discovery
+Both systems exhibit a **multi-component structure**:
+
+- global field (flow radius)
+- two dominant bands (A, B)
+- gap region
+
+→ a consistent **3+1 decomposition** appears in both systems.
+
+However:
+
+- IEEE 9: no loops, no persistent states
+- IEEE 14: stable loops and state formation
+
+### Interpretation
+The presence of bands does not imply dynamical structure.
+
+We distinguish:
+
+#### IEEE 9
+- bands exist
+- gap exists
+- but:
+  - no persistent trajectories
+  - no recurrence concentration
+  - no state formation
+
+→ system contains **latent structural degrees of freedom**
+
+#### IEEE 14
+- same band structure
+- but:
+  - trajectories persist
+  - loops form
+  - states stabilize
+
+→ system exhibits **coupled dynamics**
+
+### Dimension Insight
+The 3+1 structure can be interpreted as:
+
+- Band A → degree of freedom 1
+- Band B → degree of freedom 2
+- Gap → transition degree
+- Flow radius → global envelope
+
+Key distinction:
+
+- IEEE 9:
+  → dimensions exist but are **decoupled**
+
+- IEEE 14:
+  → dimensions become **dynamically coupled**
+
+### Flow Memory Insight
+Visual comparison:
+
+- IEEE 9:
+  → isolated activations (“white dots”)
+  → no consistent direction over time
+
+- IEEE 14:
+  → persistent vector fields
+  → coherent trajectories
+  → loop formation
+
+Definition:
+
+**Flow Memory = temporal coherence of directional field evolution**
+
+### Gap Role (Refined)
+The gap behaves differently across systems:
+
+- IEEE 9:
+  → passive separation
+  → no transport across bands
+
+- IEEE 14:
+  → active interface
+  → enables cross-band transitions
+  → stabilizes loops
+
+### Conclusion
+The critical distinction is not structural presence, but **dynamic coupling**.
+
+New classification:
+
+- Diffuse Field:
+  → structure without interaction (IEEE 9)
+
+- Coupled Field:
+  → structure + interaction → emergent topology (IEEE 14)
+
+### Core Insight Extension
+
+> Not every structured field becomes a system.  
+>  
+> A system emerges when its degrees of freedom begin to interact.
+
+---
+
+## Entry 18 — Emergence Criterion (Preliminary)
+
+### Observation
+Across systems:
+
+- presence of peaks is universal
+- presence of gap is common
+- but:
+  - loops and states only appear under specific conditions
+
+### Key Hypothesis
+System formation depends on a **coupling threshold** between bands.
+
+### Interpretation
+A field transitions into a structured system when:
+
+- directional persistence exceeds noise
+- cross-band interaction becomes stable
+- recurrence density concentrates
+
+### Proposed Criterion
+
+A system is considered **dynamically active** if:
+
+- loops > 0
+- states > 0
+- recurrence is non-uniform
+
+Otherwise:
+
+- field remains in passive / diffuse regime
+
+### Conclusion
+The framework now supports detection of:
+
+- latent structure
+- active structure
+- transition between both
+
+---
+
+## Updated Core Insight
+
+> Stability is not a state — it is a geometry.  
+> Geometry becomes dynamics.  
+> Dynamics becomes memory.  
+> Memory becomes resonance.  
+>  
+> But only when resonance couples,  
+> does structure become a system.
