@@ -2,8 +2,6 @@ import pandapower as pp
 import copy
 import numpy as np
 
-if np.unique(landscape).size > 1:
-    plt.colorbar(label="Stability (1=stable, 0=unstable)")
 
 def run_2d_stability_scan(
     net,
@@ -21,14 +19,14 @@ def run_2d_stability_scan(
 
             net_copy = copy.deepcopy(net)
 
-            # 🔥 WICHTIG: globales Stress-Level
-            net_copy.load["p_mw"] *= 3.5
+            # global stress
+            net_copy.load["p_mw"] *= 4.0
 
-            # 🔥 lokale Variation
+            # local variation
             mask_a = net_copy.load["bus"] == bus_a
             mask_b = net_copy.load["bus"] == bus_b
 
-            net_copy.load.loc[mask_a, "p_mw"] *= fa / 3.5
+            net_copy.load.loc[mask_a, "p_mw"] *= fa / 4.0
             net_copy.load.loc[mask_b, "p_mw"] *= fb / 4.0
 
             try:
