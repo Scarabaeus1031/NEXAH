@@ -19,7 +19,7 @@ def plot_results(results):
 
 def main():
     net = load_ieee14()
-    results = run_stability_scan(net, max_factor=6.0)
+    results = run_stability_scan(net, min_factor=3.8, max_factor=4.4, steps=40)
 
     for factor, stable in results:
         status = "Stable" if stable else "Unstable"
