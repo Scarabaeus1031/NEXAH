@@ -3,6 +3,7 @@ from .stability_scan import run_stability_scan
 from .stability_landscape import run_2d_stability_scan
 
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def plot_results(results):
@@ -35,18 +36,20 @@ def plot_landscape(factors, landscape):
         cmap="viridis"
     )
 
-    plt.contour(
-        landscape,
-        levels=[0.5],
-        colors="red",
-        linewidths=1,
-        extent=[factors[0], factors[-1], factors[0], factors[-1]]
-    )
+    # Boundary anzeigen
+    if np.unique(landscape).size > 1:
+        plt.contour(
+            landscape,
+            levels=[0.5],
+            colors="red",
+            linewidths=1,
+            extent=[factors[0], factors[-1], factors[0], factors[-1]]
+        )
+        plt.colorbar(label="Stability (1=stable, 0=unstable)")
 
     plt.xlabel("Load factor (Bus A)")
     plt.ylabel("Load factor (Bus B)")
     plt.title("IEEE 14-bus Stability Landscape")
-    plt.colorbar(label="Stability (1=stable, 0=unstable)")
     plt.show()
 
 
@@ -70,16 +73,16 @@ def main():
     print("\n--- 2D Stability Landscape ---")
 
     load_buses = net.load["bus"].values
-        bus_a = int(load_buses[2])
-        us_b = int(load_buses[4])
+    bus_a = int(load_buses[2])
+    bus_b = int(load_buses[4])
 
     factors, landscape = run_2d_stability_scan(
         net,
         bus_a=bus_a,
         bus_b=bus_b,
-        min_factor=3.5,
-        max_factor=4.5,
-        steps=40
+        min_factor=3.9,
+        max_factor=4.3,
+        steps=50
     )
 
     plot_landscape(factors, landscape)
