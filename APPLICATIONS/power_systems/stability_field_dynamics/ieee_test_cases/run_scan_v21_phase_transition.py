@@ -1,7 +1,4 @@
 def run_single_coupling(
-
-    import numpy as np
-    
     base_load,
     steps=24,
     n_particles=40,
@@ -14,7 +11,9 @@ def run_single_coupling(
     damping=0.975,
     boundary_threshold=0.7,
 ):
-    # 🔥 ALLE IMPORTS LOKAL → garantiert kein Scope-Problem
+    # 🔥 ALLE IMPORTS HIER REIN (nicht im Kopf!)
+    import numpy as np
+
     from .ieee_loader import load_ieee14
     from .stability_landscape_v2 import run_2d_stability_scan_v2
     from .boundary_dynamics_v2 import compute_gradient_field, extract_dynamic_boundary
@@ -27,7 +26,9 @@ def run_single_coupling(
     from .dual_resonance_v15b import apply_dual_resonance_stabilized
     from .coupling_metric_v17 import compute_coupling_metric
 
-    # (optional, falls seed_bipolar gebraucht wird)
+    # ---------------------------------
+    # HELPER
+    # ---------------------------------
     def seed_bipolar(boundary, n_particles=120):
         p1 = seed_particles_from_boundary(boundary, n_particles=n_particles)
         if len(p1) == 0:
@@ -36,6 +37,7 @@ def run_single_coupling(
         p2 = p1.copy()
         p2[:, 0] = (w - 1) - p2[:, 0]
         return np.vstack([p1, p2])
+
     # ---------------------------------
     # LOAD NETWORK
     # ---------------------------------
@@ -87,7 +89,7 @@ def run_single_coupling(
     Fx, Fy = inject_neon_rotation(Fx, Fy, strength=neon_strength)
 
     # ---------------------------------
-    # RESONANCE (JETZT AUCH GESTÖRT)
+    # RESONANCE
     # ---------------------------------
     Fx, Fy, masks, radius, peaks, gap = apply_dual_resonance_stabilized(
         Fx,
@@ -103,12 +105,8 @@ def run_single_coupling(
     # ---------------------------------
     # PARTICLES
     # ---------------------------------
-    particles = seed_bipolar(
-        boundary,
-        n_particles=n_particles
-    )
+    particles = seed_bipolar(boundary, n_particles=n_particles)
 
-    # Sicherheitscheck
     if len(particles) == 0:
         return {
             "base_load": float(base_load),
@@ -167,9 +165,6 @@ def run_single_coupling(
         len(particles)
     )
 
-    # ---------------------------------
-    # OUTPUT
-    # ---------------------------------
     return {
         "base_load": float(base_load),
         "C": float(metric.get("C", 0.0)),
