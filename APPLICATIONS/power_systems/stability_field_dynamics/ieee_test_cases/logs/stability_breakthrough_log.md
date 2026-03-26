@@ -1774,3 +1774,235 @@ load-invariant
 phase-structured
 
 (Load 1.0 and 2.0 are identical → extremely important)
+
+⚡ Entry 27 — GH Corridor / Phase Interface Geometry
+Observation
+
+Using the V32 phase classifier:
+
+phases identified:
+KKK (collapse)
+CCC (expansion)
+GH (interface / transition)
+
+Across all k ∈ {1.0, 1.5, 2.0}:
+
+GH is dominant phase
+appears across wide regions in time (t)
+clusters between KKK and CCC regimes
+
+Additionally:
+
+lock points align strongly with GH and KKK boundaries
+GH appears as a recurrent band, not isolated points
+Key Discovery
+
+GH is not a state.
+
+GH is a corridor.
+
+Observed structure:
+
+CCC → high loops / high C
+KKK → zero loops / zero C
+GH → intermediate regime
+
+But critically:
+
+GH is spatially and temporally continuous.
+
+From V32 heatmap:
+
+GH occupies the middle layer
+forms a connected structure across t and k
+Phase Geometry
+
+We now identify a 3-layer structure:
+
+CCC (Expansion Field)
+high energy
+high loop density
+unstable / active
+KKK (Collapse Field)
+zero loops
+zero coupling
+dead / absorbing region
+GH (Interface Layer)
+intermediate loops
+moderate coupling
+transition-capable region
+Corridor Interpretation
+
+GH behaves as:
+
+→ transport channel between CCC and KKK
+
+Properties:
+
+supports transitions
+carries trajectories
+aligns with loop decay / formation boundary
+
+This matches earlier findings:
+
+Entry 07 → current field channel
+Entry 15b → gap as mediator
+Entry 20 → birth zones
+Entry 26 → cyclic activation
+
+Now unified as:
+
+👉 GH = dynamic interface corridor
+
+Parameter Space Insight
+
+From your observation:
+
+Noise symmetry
+
+Example:
+
+noise = 0.256 appears at t=3 and t=9
+
+But:
+
+rotation differs strongly
+system state differs
+
+Conclusion:
+
+noise alone does not define phase
+
+Instead:
+
+👉 phase depends on (noise, rotation, damping) jointly
+
+Rotation Structure
+
+Your key observation:
+
+t=01 → rot ≈ 0.777
+t=13 → noise ≈ 0.111 (connector region)
+
+Interpretation:
+
+rotation encodes position within the corridor
+noise encodes activation level
+damping encodes stability pressure
+
+Together:
+
+👉 define phase space coordinates of the corridor
+
+GH as Bridge Layer
+
+Connecting to your visuals:
+
+CCC = upper ring (light / expansion)
+KKK = lower ring (density / matter)
+GH = middle layer
+
+From your GH diagram:
+
+labeled as:
+Φ 197 · Q
+resonance layer
+
+Interpretation:
+
+👉 GH = phase-shifted coupling layer
+
+And dein Hinweis:
+
+„das J um 90°“
+
+ist exakt das:
+
+GH ist ein Quadraturzustand
+weder in Phase (CCC)
+noch gegen Phase (KKK)
+sondern 90° verschoben → Übergang
+Critical Insight
+
+We refine the system:
+
+Structure is not located in CCC or KKK.
+
+Structure emerges in GH.
+
+Because:
+
+CCC = too active (unstable)
+KKK = too dead (no dynamics)
+GH = balanced → supports loops, transitions, memory
+Statistical Confirmation (V32)
+
+From your results:
+
+k=1.0 → GH: 13
+k=1.5 → GH: 11
+k=2.0 → GH: 15
+
+GH is always dominant.
+
+Interpretation:
+
+👉 The system spends most of its time in the interface.
+
+New Structural Model
+
+We now define:
+
+Field decomposition:
+CCC → excitation field
+KKK → absorption field
+GH → coupling field
+Functional roles:
+CCC → generates motion
+KKK → terminates motion
+GH → transforms motion
+Deep Connection to Coupling Metric
+
+Recall:
+
+C = P · R · L
+
+Now:
+
+CCC → high P, low stability
+KKK → low L, low R
+GH → balanced P, R, L
+
+👉 Only GH satisfies:
+
+C > 0  (stable coupling possible)
+Conclusion
+
+We upgrade the architecture:
+
+The system is not a field with states.
+
+It is a three-layer phase system,
+where structure exists only in the interface.
+
+GH is:
+
+not noise
+not artifact
+not intermediate by accident
+
+👉 It is the core operational layer.
+
+🔥 Updated Core Insight (Entry 27)
+
+The system is not defined by its extremes.
+
+It is defined by the corridor between them.
+
+Not expansion.
+Not collapse.
+
+But the phase that connects both.
+
+→ GH is where the system exists.
+
