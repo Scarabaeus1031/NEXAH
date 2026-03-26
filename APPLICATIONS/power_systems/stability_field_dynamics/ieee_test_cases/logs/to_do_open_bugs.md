@@ -1,7 +1,10 @@
+}
 # 🧾 NEXAH – Stability Field Experiments
-## 📍 Status Snapshot (Stand jetzt)
+## 📍 Status Snapshot
 
-### ✔ Was funktioniert
+---
+
+## ✔ Was funktioniert
 - IEEE-Testintegration läuft
 - Core Pipeline stabil (V16–V22)
 - Metriken konsistent:
@@ -16,27 +19,27 @@
 
 ---
 
-### ⚠️ Beobachtung (zentral!)
-- Alle Maps sind komplett flach
-- Keine Änderung durch:
+## ⚠️ Zentrale Beobachtung
+
+- Alle Maps sind flach
+- Keine Reaktion auf:
   - Load
   - Noise
   - Gap Injection
 
-👉 Interpretation:
-System befindet sich in einem stabilen Fixpunkt / Attractor-Regime
+👉 Interpretation:  
+System befindet sich in einem stabilen Attraktor-Regime ohne Bifurkation
 
 ---
 
-# 🐞 Offene Bugs / technische Probleme
+# 🐞 Technische Probleme
 
 ## 1. API-Inkonsistenz
-- run_single_coupling akzeptiert NICHT:
-  - noise_strength
-  - noise_mode
+run_single_coupling akzeptiert NICHT:
+- noise_strength
+- noise_mode
 
-→ führt zu:
-unexpected keyword argument
+→ Fehler: unexpected keyword argument
 
 ---
 
@@ -50,99 +53,95 @@ unexpected keyword argument
 
 ---
 
-## 3. Noise wirkt nicht
-- aktuell:
-  - nur Post-Processing
-- NICHT:
-  - in der Dynamik selbst
+## 3. Noise ohne Wirkung
+- aktuell nur Post-Processing
+- keine Integration in die Dynamik
 
 ---
 
-## 4. Imports / Struktur teilweise fragil
-- nach Verschiebung (mv):
-  - einige Module nicht gefunden
-  - Pfade inkonsistent
+## 4. Strukturprobleme
+- Imports fragil
+- Pfade inkonsistent nach mv
 
 ---
 
-# 🧠 Erkenntnisse (wichtig!)
+# 🧠 Erkenntnisse
 
-## 1. System ist extrem stabil
-- invariant gegenüber:
-  - Load
-  - Noise
-  - Parameter-Variation
+## 1. Extrem stabile Dynamik
+System ist invariant gegenüber:
+- Load
+- Noise
+- Parameter-Variation
 
-## 2. Gap ist aktuell nur Messgröße
-- keine steuernde Variable
+---
 
-## 3. Kein dynamisches Verhalten sichtbar
+## 2. Gap ist passiv
+- nur Messgröße
+- keine Rückkopplung ins System
+
+---
+
+## 3. Keine Dynamik sichtbar
 - keine Phase Transitions
 - keine Loop Birth Events
 
 ---
 
-# 🚀 Next Steps (priorisiert)
+# 🚀 Next Steps
 
 ## 🔴 HIGH PRIORITY
 
-### 1. Einheitliche Schnittstelle bauen
-Zentrale Datei:
-run_single_coupling.py
-
-mit:
-def run_single_coupling(base_load, noise_strength=0.0, noise_mode=None)
+### 1. Einheitliche API
+run_single_coupling(base_load, noise_strength=0.0, noise_mode=None)
 
 ---
 
-### 2. Noise in die Dynamik integrieren
-NICHT:
+### 2. Noise in Dynamik integrieren
+nicht:
 C *= (1 + noise)
 
-SONDERN:
+sondern in:
 - Feld
 - Transition Matrix
-- Phase / Flow
+- Phase
 
 ---
 
 ### 3. V25 – True Perturbation
 Ziel:
-- System „aufbrechen“
+- Attraktor verlassen
 - Sensitivität erzeugen
 
 ---
 
 ## 🟡 MEDIUM PRIORITY
 
-### 4. V23 / V23b korrigieren
-- nach API-Fix erneut laufen lassen
-- Unterschiede validieren
+### 4. V23 / V23b validieren
+nach API-Fix erneut ausführen
 
 ---
 
 ### 5. V24 Loop Birth reparieren
-- gleiche Ursache (API)
-- danach prüfen:
-  - entstehen neue Loops?
+prüfen:
+- entstehen neue Loops?
 
 ---
 
 ## 🟢 LOW PRIORITY
 
-### 6. Struktur aufräumen
-- Imports vereinheitlichen
-- doppelte Scripts reduzieren
-- Naming konsistent machen
+### 6. Struktur bereinigen
+- Imports
+- Naming
+- doppelte Scripts entfernen
 
 ---
 
 # 🎯 Zielbild
 
-Input: Load + Noise
-↓
-System reagiert dynamisch
-↓
+Input: Load + Noise  
+↓  
+System reagiert nichtlinear  
+↓  
 Output:
 - neue States
 - neue Loops
@@ -150,7 +149,7 @@ Output:
 
 ---
 
-# 🧭 Kurzfazit
+# 🧭 Fazit
 
 Aktuell:
 → stabiles Analyse-System
@@ -160,6 +159,7 @@ Ziel:
 
 ---
 
-# 🧠 Wichtigster Satz
+# 🧠 Key Insight
 
-Du hast Stabilität bewiesen – jetzt musst du Instabilität ermöglichen.
+Du hast Stabilität bewiesen –  
+jetzt musst du Instabilität ermögliche
