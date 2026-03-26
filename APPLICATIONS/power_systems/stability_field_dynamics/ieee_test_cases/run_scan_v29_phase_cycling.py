@@ -17,7 +17,7 @@ print("\n--- V29 Phase Cycling ---\n")
 
 ```
 loads = [1.0, 2.0]
-timesteps = 12   # ein kompletter Zyklus
+timesteps = 12
 
 results = []
 
@@ -28,12 +28,9 @@ for load in loads:
 
         phase = 2 * np.pi * t / timesteps
 
-        # ---------------------------------
-        # 🔥 PHASE CYCLING (DAO LOGIC)
-        # ---------------------------------
+        # 🔥 DAO / PHASE CYCLING
         noise = 0.1 + 0.2 * np.sin(phase)
-        rotation = 0.5 + 0.3 * np.cos(phase)   # gegenphasig
-
+        rotation = 0.5 + 0.3 * np.cos(phase)
         damping = max(0.90, 0.975 - 0.1 * abs(np.sin(phase)))
 
         print(
