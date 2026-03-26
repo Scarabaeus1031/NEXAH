@@ -1,65 +1,83 @@
+# --------------------------------------------------
+# V26 Phase Transition Map (FAST DEBUG VERSION)
+# --------------------------------------------------
+
 import sys
 import os
+import time
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# FIXED PATH
 sys.path.append(
     os.path.abspath(
         os.path.join(os.path.dirname(__file__), "../../../..")
     )
 )
 
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-
+from joblib import Parallel, delayed
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.core_coupling import run_single_coupling
 
 
 # --------------------------------------------------
-# CONFIG (FAST MODE 🚀)
+# CONFIG (SUPER FAST TEST)
 # --------------------------------------------------
 
-loads = np.linspace(1.0, 6.0, 12)        # ↓ reduziert
-noise_levels = np.linspace(0.0, 0.2, 8)  # ↓ reduziert
+loads = np.linspace(1.0, 3.0, 4)        # ↓ stark reduziert
+noise_levels = np.linspace(0.0, 0.2, 3) # ↓ stark reduziert
 
-results = []
-
-print("\n--- V26 Phase Transition Map (FAST) ---\n")
+print("\n--- V26 Phase Transition Map (FAST DEBUG) ---\n")
 
 
 # --------------------------------------------------
-# MAIN LOOP
+# SINGLE RUN WRAPPER (TIMING)
 # --------------------------------------------------
 
-total = len(loads) * len(noise_levels)
-counter = 0
+def run_point(load, noise):
+    start = time.time()
 
-for load in loads:
-    for noise in noise_levels:
+    try:
+        metrics = run_single_coupling(
+            base_load=load,
+            noise_strength=noise
+        )
+    except Exception as e:
+        print(f"ERROR @ Load={load}, Noise={noise}:", e)
+        metrics = {
+            "C": np.nan,
+            "states": np.nan,
+            "loops": np.nan,
+            "gap": np.nan,
+        }
 
-        counter += 1
-        print(f"{counter}/{total} | Load={load:.2f} | Noise={noise:.3f}")
+    duration = time.time() - start
 
-        try:
-            metrics = run_single_coupling(
-                base_load=load,
-                noise_strength=noise
-            )
-        except Exception as e:
-            print("Coupling failed:", e)
-            metrics = {
-                "C": np.nan,
-                "states": np.nan,
-                "loops": np.nan,
-                "gap": np.nan,
-            }
+    print(
+        f"Load={load:.2f}, Noise={noise:.3f} | "
+        f"Time={duration:.2f}s | "
+        f"States={metrics.get('states')}, Loops={metrics.get('loops')}"
+    )
 
-        results.append({
-            "load": load,
-            "noise": noise,
-            "C": metrics.get("C", np.nan),
-            "states": metrics.get("states", np.nan),
-            "loops": metrics.get("loops", np.nan),
-            "gap": metrics.get("gap", np.nan),
-        })
+    return {
+        "load": load,
+        "noise": noise,
+        "time": duration,
+        "C": metrics.get("C", np.nan),
+        "states": metrics.get("states", np.nan),
+        "loops": metrics.get("loops", np.nan),
+        "gap": metrics.get("gap", np.nan),
+    }
+
+
+# --------------------------------------------------
+# PARALLEL EXECUTION 🚀
+# --------------------------------------------------
+
+results = Parallel(n_jobs=-1)(
+    delayed(run_point)(l, n)
+    for l in loads for n in noise_levels
+)
 
 
 # --------------------------------------------------
@@ -67,80 +85,69 @@ for load in loads:
 # --------------------------------------------------
 
 df = pd.DataFrame(results)
-df.to_csv("v26_phase_transition_map_fast.csv", index=False)
+df.to_csv("v26_phase_transition_map_debug.csv", index=False)
 
-print("\nSaved results to v26_phase_transition_map_fast.csv")
-
-
-# --------------------------------------------------
-# PIVOT MAPS
-# --------------------------------------------------
-
-pivot_states = df.pivot(index="load", columns="noise", values="states")
-pivot_loops = df.pivot(index="load", columns="noise", values="loops")
-
-delta_states = pivot_states.diff().abs()
-delta_loops = pivot_loops.diff().abs()
+print("\nSaved results to v26_phase_transition_map_debug.csv")
 
 
 # --------------------------------------------------
-# QUICK CHECK (🔥 WICHTIG)
+# VARIANCE CHECK
 # --------------------------------------------------
 
 print("\n--- VARIANCE CHECK ---")
 print("States variance:", df["states"].var())
 print("Loops variance:", df["loops"].var())
 print("C variance:", df["C"].var())
+print("Avg runtime per run:", df["time"].mean())
+
+
+# --------------------------------------------------
+# PIVOT
+# --------------------------------------------------
+
+pivot_states = df.pivot(index="load", columns="noise", values="states")
+pivot_loops = df.pivot(index="load", columns="noise", values="loops")
+
+
+# --------------------------------------------------
+# GRADIENT (BESSER ALS DIFF 🔥)
+# --------------------------------------------------
+
+grad_states = np.gradient(pivot_states.values)
+grad_loops = np.gradient(pivot_loops.values)
+
+mag_states = np.sqrt(grad_states[0]**2 + grad_states[1]**2)
+mag_loops = np.sqrt(grad_loops[0]**2 + grad_loops[1]**2)
 
 
 # --------------------------------------------------
 # PLOTS
 # --------------------------------------------------
 
-plt.figure(figsize=(14, 10))
+plt.figure(figsize=(12, 8))
 
 plt.subplot(2, 2, 1)
 plt.imshow(pivot_states, aspect='auto', origin='lower')
-plt.title("States Map")
+plt.title("States")
 plt.colorbar()
 
 plt.subplot(2, 2, 2)
 plt.imshow(pivot_loops, aspect='auto', origin='lower')
-plt.title("Loops Map")
+plt.title("Loops")
 plt.colorbar()
 
 plt.subplot(2, 2, 3)
-plt.imshow(delta_states, aspect='auto', origin='lower')
-plt.title("Δ States")
+plt.imshow(mag_states, aspect='auto', origin='lower')
+plt.title("∇ States (Phase Activity)")
 plt.colorbar()
 
 plt.subplot(2, 2, 4)
-plt.imshow(delta_loops, aspect='auto', origin='lower')
-plt.title("Δ Loops")
+plt.imshow(mag_loops, aspect='auto', origin='lower')
+plt.title("∇ Loops (Phase Activity)")
 plt.colorbar()
 
 plt.tight_layout()
-plt.savefig("v26_phase_transition_maps_fast.png", dpi=200)
+plt.savefig("v26_phase_transition_maps_debug.png", dpi=200)
 plt.show()
 
-print("\nSaved plots to v26_phase_transition_maps_fast.png")
-
-
-# --------------------------------------------------
-# CRITICAL POINTS
-# --------------------------------------------------
-
-print("\n--- Critical Points ---")
-
-for i in range(len(pivot_states.index)):
-    for j in range(len(pivot_states.columns)):
-
-        ds = delta_states.iloc[i, j]
-        dl = delta_loops.iloc[i, j]
-
-        if (ds > 0) or (dl > 0):
-            print(
-                f"Load={pivot_states.index[i]:.2f}, "
-                f"Noise={pivot_states.columns[j]:.3f}, "
-                f"ΔStates={ds}, ΔLoops={dl}"
-            )
+print("\nSaved plots to v26_phase_transition_maps_debug.png")
