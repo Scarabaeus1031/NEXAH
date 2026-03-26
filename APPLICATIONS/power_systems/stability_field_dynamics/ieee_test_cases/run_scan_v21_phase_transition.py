@@ -11,11 +11,28 @@ def run_single_coupling(
     damping=0.975,
     boundary_threshold=0.7,
 ):
-    # 🔥 SAFE IMPORT (fix für dein Problem)
+    # 🔥 ALLE IMPORTS LOKAL → garantiert kein Scope-Problem
     from .ieee_loader import load_ieee14
+    from .stability_landscape_v2 import run_2d_stability_scan_v2
+    from .boundary_dynamics_v2 import compute_gradient_field, extract_dynamic_boundary
+    from .time_dynamics_v9 import seed_particles_from_boundary, advect_particles
+    from .recurrence_analysis_v10 import detect_loops, compute_recurrence_map
+    from .state_clustering_v11 import extract_states_from_recurrence
+    from .dynamic_flow_v12 import compute_dynamic_flow
+    from .closure_feedback_v13 import apply_closure_feedback
+    from .neon_rotation_v13b import inject_neon_rotation
+    from .dual_resonance_v15b import apply_dual_resonance_stabilized
+    from .coupling_metric_v17 import compute_coupling_metric
 
-    net = load_ieee14()
-    load_bus = int(net.load["bus"].values[2])
+    # (optional, falls seed_bipolar gebraucht wird)
+    def seed_bipolar(boundary, n_particles=120):
+        p1 = seed_particles_from_boundary(boundary, n_particles=n_particles)
+        if len(p1) == 0:
+            return p1
+        h, w = boundary.shape
+        p2 = p1.copy()
+        p2[:, 0] = (w - 1) - p2[:, 0]
+        return np.vstack([p1, p2])
     # ---------------------------------
     # LOAD NETWORK
     # ---------------------------------
