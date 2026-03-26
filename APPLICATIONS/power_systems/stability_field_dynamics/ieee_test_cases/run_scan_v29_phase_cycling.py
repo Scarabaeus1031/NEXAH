@@ -5,9 +5,9 @@ import numpy as np
 import pandas as pd
 
 sys.path.append(
-    os.path.abspath(
-        os.path.join(os.path.dirname(__file__), "../../../..")
-    )
+os.path.abspath(
+os.path.join(os.path.dirname(**file**), "../../../..")
+)
 )
 
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.core_coupling import run_single_coupling
@@ -28,7 +28,7 @@ for load in loads:
 
         phase = 2 * np.pi * t / timesteps
 
-        # 🔥 DAO / PHASE CYCLING
+        # Phase Cycling (DAO)
         noise = 0.1 + 0.2 * np.sin(phase)
         rotation = 0.5 + 0.3 * np.cos(phase)
         damping = max(0.90, 0.975 - 0.1 * abs(np.sin(phase)))
