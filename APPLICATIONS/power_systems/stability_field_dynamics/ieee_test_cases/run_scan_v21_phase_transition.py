@@ -1,4 +1,7 @@
 def run_single_coupling(
+
+    import numpy as np
+    
     base_load,
     steps=24,
     n_particles=40,
