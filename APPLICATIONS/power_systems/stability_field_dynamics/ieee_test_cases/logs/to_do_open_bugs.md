@@ -163,3 +163,19 @@ Ziel:
 
 Du hast Stabilität bewiesen –  
 jetzt musst du Instabilität ermögliche
+
+---
+
+# Addendum — Relevance Test Outcome
+
+## New Critical Finding
+- Classical collapse curve reacts to load
+- NEXAH metrics do not react
+
+→ current model is structurally stable, but physically decoupled
+
+## Refined High Priority
+1. Verify whether `base_load` actually enters the dynamic core
+2. Identify where load information is lost in the pipeline
+3. Inject perturbation into the field dynamics itself, not only into post-processing metrics
+4. Re-run relevance test after true dynamic coupling is implemented
