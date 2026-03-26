@@ -5,9 +5,9 @@ import numpy as np
 import pandas as pd
 
 sys.path.append(
-os.path.abspath(
-os.path.join(os.path.dirname(**file**), "../../../..")
-)
+    os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "../../../..")
+    )
 )
 
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.core_coupling import run_single_coupling
