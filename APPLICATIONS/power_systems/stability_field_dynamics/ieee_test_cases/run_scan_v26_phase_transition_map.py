@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../..")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(file), "../../../..")))
 
 import numpy as np
 import pandas as pd
@@ -10,25 +10,29 @@ from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.core_co
 
 
 # --------------------------------------------------
-# CONFIG
+# CONFIG (FAST MODE 🚀)
 # --------------------------------------------------
 
-loads = np.linspace(1.0, 6.0, 25)
-noise_levels = np.linspace(0.0, 0.2, 15)
+loads = np.linspace(1.0, 6.0, 12)        # ↓ reduziert
+noise_levels = np.linspace(0.0, 0.2, 8)  # ↓ reduziert
 
 results = []
 
-print("\n--- V26 Phase Transition Map ---\n")
+print("\n--- V26 Phase Transition Map (FAST) ---\n")
 
 
 # --------------------------------------------------
 # MAIN LOOP
 # --------------------------------------------------
 
+total = len(loads) * len(noise_levels)
+counter = 0
+
 for load in loads:
     for noise in noise_levels:
 
-        print(f"Load={load:.2f} | Noise={noise:.3f}")
+        counter += 1
+        print(f"{counter}/{total} | Load={load:.2f} | Noise={noise:.3f}")
 
         try:
             metrics = run_single_coupling(
@@ -59,9 +63,9 @@ for load in loads:
 # --------------------------------------------------
 
 df = pd.DataFrame(results)
-df.to_csv("v26_phase_transition_map.csv", index=False)
+df.to_csv("v26_phase_transition_map_fast.csv", index=False)
 
-print("\nSaved results to v26_phase_transition_map.csv")
+print("\nSaved results to v26_phase_transition_map_fast.csv")
 
 
 # --------------------------------------------------
@@ -71,16 +75,25 @@ print("\nSaved results to v26_phase_transition_map.csv")
 pivot_states = df.pivot(index="load", columns="noise", values="states")
 pivot_loops = df.pivot(index="load", columns="noise", values="loops")
 
-# Δ Maps
 delta_states = pivot_states.diff().abs()
 delta_loops = pivot_loops.diff().abs()
+
+
+# --------------------------------------------------
+# QUICK CHECK (🔥 WICHTIG)
+# --------------------------------------------------
+
+print("\n--- VARIANCE CHECK ---")
+print("States variance:", df["states"].var())
+print("Loops variance:", df["loops"].var())
+print("C variance:", df["C"].var())
 
 
 # --------------------------------------------------
 # PLOTS
 # --------------------------------------------------
 
-plt.figure(figsize=(16, 12))
+plt.figure(figsize=(14, 10))
 
 plt.subplot(2, 2, 1)
 plt.imshow(pivot_states, aspect='auto', origin='lower')
@@ -103,10 +116,10 @@ plt.title("Δ Loops")
 plt.colorbar()
 
 plt.tight_layout()
-plt.savefig("v26_phase_transition_maps.png", dpi=200)
+plt.savefig("v26_phase_transition_maps_fast.png", dpi=200)
 plt.show()
 
-print("\nSaved plots to v26_phase_transition_maps.png")
+print("\nSaved plots to v26_phase_transition_maps_fast.png")
 
 
 # --------------------------------------------------
