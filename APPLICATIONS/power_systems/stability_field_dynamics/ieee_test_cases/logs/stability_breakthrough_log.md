@@ -1702,3 +1702,75 @@ Not even a region.
 
 It can be a path.
 
+Entry 26 — Cyclic Attractor / Phase-Locked Dynamics
+Observation
+
+Executed time-dependent parameter cycling:
+
+noise(t): sinusoidal modulation
+rotation(t): phase-shifted cosine
+damping(t): inverse modulation
+
+Across full cycle (t = 0 → 11), measured:
+
+coupling C(t)
+loops(t)
+states(t)
+Key Result
+
+System exhibits clear cyclic structure:
+
+Phase A — Activation (t=0–2)
+noise ↑
+rotation ↓
+loops ↑ (4 → 10)
+C ↑ (~0.023 → ~0.056)
+
+→ maximum dynamical activity
+
+Phase B — Dissipation (t=3–5)
+noise still high but decreasing
+loops ↓ (10 → 3)
+C ↓
+
+→ structure decay
+
+Phase C — Collapse Window (t=7–8)
+noise ≈ 0 or negative
+loops ≈ 1
+states = 1
+C minimal (~0.003)
+
+→ minimal attractor state
+
+Phase D — Re-excitation (t=9)
+slight negative noise
+loops jump → 7 (!!)
+states persist
+
+→ unexpected reactivation
+
+Phase E — Stabilization (t=10–11)
+system relaxes again
+loops → 1–3
+states remain
+🔥 Key Discovery
+
+The system does NOT settle into:
+
+a fixed attractor ❌
+a chaotic regime ❌
+
+Instead:
+
+👉 it enters a stable cyclic attractor
+
+🔁 Crucial Property
+
+The cycle is:
+
+repeatable
+load-invariant
+phase-structured
+
+(Load 1.0 and 2.0 are identical → extremely important)
