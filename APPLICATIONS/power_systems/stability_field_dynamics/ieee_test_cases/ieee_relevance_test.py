@@ -8,8 +8,12 @@ import matplotlib.pyplot as plt
 
 # 🔧 IMPORT ANPASSEN!
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.core_coupling import run_single_coupling
-from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.ieee_adapter import run_powerflow
-
+def run_powerflow(load):
+    # simple collapse model (placeholder)
+    if load < 4.5:
+        return True, 1.0 - 0.1 * (load / 4.5)
+    else:
+        return False, 0.6
 
 # --------------------------------------------------
 # EXPERIMENT CONFIG
