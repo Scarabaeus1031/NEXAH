@@ -1509,3 +1509,196 @@ This is the key limitation of the current version.
 > the structural field must respond to the same variables  
 > that drive the real system toward collapse.
 
+Entry 24 — Attractor Breakdown via Noise Injection
+Observation
+
+Introduced explicit noise coupling into the core dynamics:
+
+noise_strength directly affects:
+flow noise
+neon activation strength
+resonance perturbation
+
+Performed parameter sweep across:
+
+base_load ∈ {1.0, 2.0, 3.0}
+noise_strength ∈ {0.0, 0.1, 0.25, 0.5}
+Key Result
+
+The previously invariant system breaks immediately under noise:
+
+Noise	C	States	Loops
+0.00	0.000000	0	0
+0.10	~0.0137	1	3
+0.25	~0.0406	0	8
+0.50	~0.0270	0	4
+
+Additionally:
+
+gap collapses from ~0.83 → ~0.01–0.13
+behavior is independent of load
+Key Discovery
+
+The system is not inherently stable.
+
+Instead:
+
+→ it is a noise-sensitive attractor
+
+More precisely:
+
+without noise → system collapses to zero-structure state
+with moderate noise → structure emerges
+with high noise → structure destabilizes again
+Interpretation
+
+We identify a non-monotonic activation curve:
+
+Underdrive (Noise ≈ 0)
+no loops
+no states
+no coupling
+→ dead system
+Activation Window (Noise ≈ 0.1–0.25)
+loops emerge
+partial state formation
+coupling increases
+→ active regime
+Overdrive (Noise ≈ 0.5)
+loops degrade
+states disappear again
+→ chaotic regime
+Structural Insight
+
+Noise acts as a field activator, not just perturbation.
+
+It plays the role of:
+
+symmetry breaker
+coupling trigger
+resonance destabilizer (at high levels)
+Conclusion
+
+The system transitions from:
+
+→ structure-invariant attractor (V21–V26)
+to
+→ noise-activated dynamical system (V28)
+
+Updated Core Insight
+
+Structure does not emerge from order alone.
+
+It requires excitation —
+but too much destroys it.
+
+Entry 25 — Phase Cycling / Tao–Dao Dynamics
+Observation
+
+Introduced time-dependent parameter cycling:
+
+noise(t) = sinusoidal modulation
+rotation(t) = cosine modulation
+damping(t) = inverse modulation
+
+System is no longer static:
+
+→ parameters evolve over time
+
+Key Idea
+
+Instead of scanning parameters independently:
+
+→ the system is forced through a cyclic trajectory in parameter space
+
+Conceptual Mapping
+
+We reinterpret system components:
+
+Noise → Yang (activation / expansion)
+Damping → Yin (stabilization / contraction)
+Rotation → coupling phase (interaction between both)
+Hypothesis
+
+Structure may not exist at fixed parameters.
+
+Instead:
+
+→ it may exist only as a dynamic trajectory
+
+Tao–Dao Interpretation
+
+We define:
+
+Tao = underlying field (geometry + potential)
+Dao = path through parameter space
+
+The system is not defined by:
+
+→ a single point in parameter space
+
+but by:
+
+→ a closed trajectory (cycle)
+
+Expected Behavior
+
+Phase cycling should produce:
+
+periodic creation and destruction of loops
+oscillation between:
+diffuse
+coupled
+chaotic regimes
+potential resonant synchronization
+Deeper Insight
+
+This introduces a fundamentally new concept:
+
+Stability is not static — it can be time-dependent and cyclic.
+
+Structural Implication
+
+We move from:
+
+static attractor
+→ dynamic attractor
+→ cyclic attractor
+Mathematical Interpretation
+
+Instead of:
+
+C = f(load, noise)
+
+we now have:
+
+C(t) = f(load, noise(t), rotation(t), damping(t))
+
+→ system becomes a non-autonomous dynamical system
+
+Possible Outcome Regimes
+Stable Cycle
+repeating structure pattern
+periodic loops
+Resonant Lock
+system locks into stable orbit
+Drift / Chaos
+no periodicity
+unstable transitions
+Conclusion
+
+The system evolves from:
+
+→ parameter-driven structure
+
+to:
+
+→ trajectory-driven structure
+
+Updated Core Insight
+
+Stability is not a point.
+Not even a region.
+
+It can be a path.
+
