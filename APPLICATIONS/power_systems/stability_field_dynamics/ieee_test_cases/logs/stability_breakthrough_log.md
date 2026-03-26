@@ -1400,3 +1400,112 @@ This is characterized by:
 > When internal dynamics dominate,  
 > the system converges to structure —  
 > and structure persists.
+
+
+## Entry 23 — Relevance Test / Decoupling from Classical Collapse
+
+### Observation
+
+Performed a direct comparison between:
+
+- classical voltage-collapse proxy
+- NEXAH structural metrics
+
+Test setup:
+
+- load sweep from 1.0 to 6.0
+- classical baseline:
+  - min_voltage decreases with load
+  - collapse threshold crossed near ~4.5
+- NEXAH metrics tracked simultaneously:
+  - C
+  - loops
+  - states
+  - gap
+
+---
+
+### Key Result
+
+The classical system responds clearly to load:
+
+- min_voltage decreases continuously
+- collapse threshold is crossed
+- post-threshold regime becomes unstable / collapsed
+
+However, all NEXAH metrics remain invariant:
+
+- C ≈ constant
+- loops = 6
+- states = 2
+- gap ≈ constant
+
+No structural response is observed.
+
+---
+
+### Interpretation
+
+This is a stronger result than simple load invariance.
+
+The NEXAH pipeline is currently **decoupled from the physical collapse variable**.
+
+This means:
+
+- the classical system sees a transition
+- the NEXAH system does not
+
+So the present NEXAH representation is not yet reacting to the same control parameter that drives the voltage collapse.
+
+---
+
+### Structural Meaning
+
+At the current stage, the model behaves like:
+
+→ a structure-preserving attractor map
+
+rather than:
+
+→ a physically responsive stability detector
+
+The pipeline appears to project different load conditions onto the same internal topology.
+
+---
+
+### Consequence
+
+The framework currently demonstrates:
+
+- stable internal structure
+- reproducible coupling geometry
+- persistent topology
+
+but not yet:
+
+- physical sensitivity to collapse progression
+- structural deformation under load
+- predictive response to instability onset
+
+---
+
+### Conclusion
+
+The relevance test shows that the current NEXAH system is:
+
+- internally coherent
+- structurally robust
+- but not yet physically coupled to the classical collapse trajectory
+
+This is the key limitation of the current version.
+
+---
+
+## Updated Core Insight
+
+> A stable internal structure is not sufficient for physical relevance.  
+>  
+> To become relevant for application,  
+> the structural field must respond to the same variables  
+> that drive the real system toward collapse.
+
