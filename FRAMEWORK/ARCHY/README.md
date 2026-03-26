@@ -1,4 +1,4 @@
-### NEXAH Framework - ARCHY Layer
+# NEXAH Framework - ARCHY Layer
 
 The **ARCHY Layer** is the second core layer of NEXAH and serves as the **dynamic stability regime engine**.
 
