@@ -11,9 +11,15 @@ def run_single_coupling(
     damping=0.975,
     boundary_threshold=0.7,
 ):
+    # ---------------------------------
+    # LOAD NETWORK
+    # ---------------------------------
     net = load_ieee14()
     load_bus = int(net.load["bus"].values[2])
 
+    # ---------------------------------
+    # STABILITY LANDSCAPE
+    # ---------------------------------
     fx, fy, landscape = run_2d_stability_scan_v2(
         net,
         load_bus=load_bus,
@@ -21,25 +27,46 @@ def run_single_coupling(
         steps=steps
     )
 
-    boundary = extract_dynamic_boundary(landscape, threshold=boundary_threshold)
+    # ---------------------------------
+    # BOUNDARY + GRADIENT
+    # ---------------------------------
+    boundary = extract_dynamic_boundary(
+        landscape,
+        threshold=boundary_threshold
+    )
+
     gx, gy, _ = compute_gradient_field(landscape)
 
+    # ---------------------------------
+    # NOISE → JETZT ECHTER PARAMETER 🔥
+    # ---------------------------------
     flow_noise = flow_noise_base + noise_strength
     neon_strength = neon_strength_base * (1.0 + 1.5 * noise_strength)
     resonance_noise = resonance_noise_base + 1.5 * noise_strength
 
+    # ---------------------------------
+    # FLOW
+    # ---------------------------------
     Fx, Fy = compute_dynamic_flow(
-        gx, gy,
+        gx,
+        gy,
         strength=0.6,
         rotation=flow_rotation,
         noise=flow_noise
     )
 
+    # ---------------------------------
+    # FEEDBACK + ACTIVATION
+    # ---------------------------------
     Fx, Fy = apply_closure_feedback(landscape, Fx, Fy)
     Fx, Fy = inject_neon_rotation(Fx, Fy, strength=neon_strength)
 
+    # ---------------------------------
+    # RESONANCE (JETZT AUCH GESTÖRT)
+    # ---------------------------------
     Fx, Fy, masks, radius, peaks, gap = apply_dual_resonance_stabilized(
-        Fx, Fy,
+        Fx,
+        Fy,
         band_width=0.05,
         in_band_boost=1.5,
         out_band_damp=0.82,
@@ -48,18 +75,51 @@ def run_single_coupling(
         top_k=2
     )
 
-    particles = seed_bipolar(boundary, n_particles=n_particles)
+    # ---------------------------------
+    # PARTICLES
+    # ---------------------------------
+    particles = seed_bipolar(
+        boundary,
+        n_particles=n_particles
+    )
 
+    # Sicherheitscheck
+    if len(particles) == 0:
+        return {
+            "base_load": float(base_load),
+            "C": 0.0,
+            "P": 0.0,
+            "R": 0.0,
+            "L": 0.0,
+            "loops": 0,
+            "states": 0,
+            "peaks": [],
+            "gap": 0.0,
+        }
+
+    # ---------------------------------
+    # TRAJECTORIES
+    # ---------------------------------
     trajectories = advect_particles(
-        Fx, Fy,
+        Fx,
+        Fy,
         particles,
         dt=0.6,
         steps=advect_steps,
         damping=damping
     )
 
-    M = compute_recurrence_map(trajectories, landscape.shape)
+    # ---------------------------------
+    # RECURRENCE
+    # ---------------------------------
+    M = compute_recurrence_map(
+        trajectories,
+        landscape.shape
+    )
 
+    # ---------------------------------
+    # LOOPS + STATES
+    # ---------------------------------
     loops = detect_loops(
         trajectories,
         eps=2.0,
@@ -71,18 +131,28 @@ def run_single_coupling(
         threshold=0.08
     )
 
+    # ---------------------------------
+    # COUPLING METRIC
+    # ---------------------------------
     metric = compute_coupling_metric(
-        Fx, Fy, M, loops, len(particles)
+        Fx,
+        Fy,
+        M,
+        loops,
+        len(particles)
     )
 
+    # ---------------------------------
+    # OUTPUT
+    # ---------------------------------
     return {
         "base_load": float(base_load),
-        "C": float(metric["C"]),
-        "P": float(metric["P"]),
-        "R": float(metric["R"]),
-        "L": float(metric["L"]),
+        "C": float(metric.get("C", 0.0)),
+        "P": float(metric.get("P", 0.0)),
+        "R": float(metric.get("R", 0.0)),
+        "L": float(metric.get("L", 0.0)),
         "loops": int(len(loops)),
         "states": int(len(states)),
-        "peaks": peaks,
-        "gap": float(gap),
+        "peaks": peaks if peaks is not None else [],
+        "gap": float(gap) if gap is not None else 0.0,
     }
