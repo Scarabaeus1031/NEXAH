@@ -11,6 +11,11 @@ def run_single_coupling(
     damping=0.975,
     boundary_threshold=0.7,
 ):
+    # 🔥 SAFE IMPORT (fix für dein Problem)
+    from .ieee_loader import load_ieee14
+
+    net = load_ieee14()
+    load_bus = int(net.load["bus"].values[2])
     # ---------------------------------
     # LOAD NETWORK
     # ---------------------------------
