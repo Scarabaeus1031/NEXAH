@@ -2242,3 +2242,210 @@ where motion is allowed, constrained, and sustained.
 Structure does not live in extremes —
 it lives in the interface between them.
 
+## Entry 33 — Structural Coupling Activation (θ–C–Loops)
+
+### Observation
+
+Introduced explicit structure coupling into the phase pipeline:
+
+- θ scaled with load
+- loops coupled to θ variance
+- C coupled to θ variance
+
+θ → θ_std → loops → C
+
+### Key Discovery
+
+Unlike previous versions:
+
+- C is no longer constant  
+- C responds dynamically to θ  
+- system exhibits monotonic structural growth under load  
+
+Measured:
+
+- θ_std ↑  
+- c_std ↑  
+- regime_separation ↑  
+- c_struct ↑  
+
+### Interpretation
+
+The system transitions from:
+
+→ parameter-invariant attractor  
+
+to:
+
+→ structure-coupled dynamical field  
+
+This introduces:
+
+- real feedback between degrees of freedom  
+- non-trivial scaling behavior  
+
+### Conclusion
+
+The model now supports:
+
+→ true internal coupling  
+
+
+---
+
+## Entry 34 — Regime Separation as Interface Metric
+
+### Observation
+
+Defined:
+
+regime_separation = θ_std * c_std
+
+Measured:
+
+- monotonic increase across load  
+- smooth but non-linear growth  
+
+### Key Discovery
+
+`regime_separation` behaves as:
+
+→ quantitative interface strength  
+
+Properties:
+
+- low → weak separation of regimes  
+- high → strong transition boundary  
+
+### Interpretation
+
+This is the first explicit metric of:
+
+→ CCC ↔ GH ↔ KKK separation  
+
+It captures:
+
+- width of transition zone  
+- sharpness of structural distinction  
+
+### Conclusion
+
+The system now has a measurable:
+
+→ interface intensity parameter  
+
+
+---
+
+## Entry 35 — Emergent Structural Order Parameter (c_struct)
+
+### Observation
+
+Defined:
+
+c_struct = regime_separation * loops_mean  
+
+and normalized variant:
+
+c_struct_norm = f(θ_std, c_std, loops)
+
+### Key Discovery
+
+`c_struct` behaves analogously to an order parameter:
+
+- increases with structural complexity  
+- integrates multiple layers:  
+  - dynamics (θ)  
+  - geometry (C)  
+  - topology (loops)  
+
+### Interpretation
+
+This is the first candidate for:
+
+→ generalized Kuramoto-like order parameter  
+
+But extended:
+
+- not only phase coherence  
+- but interface-coupled structure  
+
+### Conclusion
+
+The system now supports:
+
+→ field-level structural quantification  
+
+
+---
+
+## Entry 36 — Transition Cartography / Knick Field Geometry
+
+### Observation
+
+Constructed geometric overlay:
+
+- PCA axis (dominant drift)  
+- circular boundary (stability zone)  
+- nested pentagons (quantization layers)  
+- GH corridor points (highlighted)  
+
+### Key Discovery
+
+The phase-space structure aligns with:
+
+- a dominant axis (drift direction)  
+- a central transition node (Knick)  
+- nested geometric constraints  
+
+Observed:
+
+- GH points cluster along axis  
+- structure aligns with PCA direction  
+- pentagon layers discretize radial structure  
+
+### Interpretation
+
+This confirms:
+
+→ the system has an intrinsic transition geometry  
+
+Mapping:
+
+| Concept | Meaning |
+|--------|--------|
+| Axis A | concave / reference domain |
+| Axis B | convex / projection domain |
+| Knick | transition node |
+| Circle | stability boundary |
+| Pentagon | structural quantization |
+
+### Conclusion
+
+The system is no longer:
+
+- just a field  
+- just dynamics  
+
+It is now:
+
+→ a geometric transition system  
+
+
+---
+
+## Updated Core Insight (V14)
+
+> Stability is not located in a state.  
+> Not even in a region.  
+>  
+> It is encoded in the geometry of transition.  
+>  
+> Structure emerges when:
+> - degrees of freedom couple  
+> - interfaces sharpen  
+> - and motion aligns along a corridor  
+>  
+> The system does not live in CCC or KKK.  
+>  
+> It lives in the geometry of the Knick —  
