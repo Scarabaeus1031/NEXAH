@@ -66,30 +66,3 @@ for t in range(steps):
     loops = np.clip(loops + dloops, 0, 10)
 
 # ----------------------------
-# PLOTS
-# ----------------------------
-
-plt.figure(figsize=(12, 5))
-
-plt.subplot(1, 2, 1, projection="polar")
-for i in range(num_particles):
-    plt.plot(theta_traj[i], c_traj[i], alpha=0.3)
-plt.title("GH Corridor Flow (Polar)")
-
-plt.subplot(1, 2, 2)
-for i in range(num_particles):
-    plt.plot(c_traj[i], theta_traj[i], alpha=0.3)
-plt.xlabel("C")
-plt.ylabel("theta")
-plt.title("Phase Trajectories")
-
-plt.tight_layout()
-plt.show()
-
-# ----------------------------
-# METRICS
-# ----------------------------
-
-print("\n--- FLOW METRICS ---")
-print(f"Final theta spread: {np.std(theta_traj[:, -1]):.3f}")
-print(f"Final C spread    : {np.std(c_traj[:, -1]):.3f}")
