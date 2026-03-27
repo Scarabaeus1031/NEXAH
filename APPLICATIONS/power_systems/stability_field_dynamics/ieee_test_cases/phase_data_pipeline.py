@@ -12,9 +12,6 @@ SEED = 42
 # CORE DATA GENERATOR
 # ============================================================
 
-def get_phase_data():
-    return theta_values, c_values, loop_values, gh_mask
-
 def generate_phase_data(N=DEFAULT_N, seed=SEED):
     """
     Central data generator for all phase-based analysis.
@@ -30,11 +27,6 @@ def generate_phase_data(N=DEFAULT_N, seed=SEED):
     theta = np.linspace(0, 2*np.pi, N)
 
     # --- CORE STRUCTURE ---
-    # Diese Struktur ist bewusst so gewählt, dass:
-    # - mehrere Frequenzen überlagert werden
-    # - GH-Korridor entsteht
-    # - HEX / 60° sichtbar bleibt
-
     c = (
         0.02
         + 0.008 * np.sin(2 * theta)     # global mode
@@ -72,10 +64,10 @@ def compute_metrics(theta, c, loops):
     c_norm = normalize(c)
     l_norm = normalize(loops)
 
-    # Flow persistence proxy (smoothness)
+    # Flow persistence proxy
     P = 1 - np.mean(np.abs(np.diff(c_norm)))
 
-    # Recurrence proxy (variance)
+    # Recurrence proxy
     R = np.var(c_norm)
 
     # Loop density
@@ -125,14 +117,15 @@ def detect_gh_corridor(theta, c, loops, percentile=75):
 # LOAD FUNCTION (ENTRY POINT)
 # ============================================================
 
-def load_phase_data(N=DEFAULT_N):
+def get_phase_data(N=DEFAULT_N):
     """
     Standard interface for ALL modules
     """
 
     theta, c, loops = generate_phase_data(N=N)
+    gh = detect_gh_corridor(theta, c, loops)
 
-    return theta, c, loops
+    return theta, c, loops, gh["mask"]
 
 
 # ============================================================
@@ -141,12 +134,11 @@ def load_phase_data(N=DEFAULT_N):
 
 if __name__ == "__main__":
 
-    theta, c, loops = load_phase_data()
+    theta, c, loops, gh_mask = get_phase_data()
 
     metrics = compute_metrics(theta, c, loops)
-    gh = detect_gh_corridor(theta, c, loops)
 
     print("\n--- PIPELINE TEST ---")
     print(f"C (coupling): {metrics['C']:.6f}")
     print(f"P: {metrics['P']:.4f}, R: {metrics['R']:.4f}, L: {metrics['L']:.4f}")
-    print(f"GH points: {len(gh['theta_corridor'])}")
+    print(f"GH points: {np.sum(gh_mask)}")
