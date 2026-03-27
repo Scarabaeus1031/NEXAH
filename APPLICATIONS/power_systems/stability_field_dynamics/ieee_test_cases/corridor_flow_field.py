@@ -5,12 +5,8 @@ import matplotlib.pyplot as plt
 # LOAD DATA
 # ----------------------------
 try:
-    from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.phase_data_pipeline import (
-        theta_values,
-        c_values,
-        loop_values,
-        gh_mask
-    )
+    from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.phase_data_pipeline import get_phase_data
+    theta_values, c_values, loop_values, gh_mask = get_phase_data()
     print("Loaded pipeline data")
 
 except Exception:
@@ -34,7 +30,7 @@ def flow(theta, c, loops):
     return dtheta, dc, dloops
 
 # ----------------------------
-# INIT PARTICLES
+# INIT PARTICLES (GH CORRIDOR)
 # ----------------------------
 
 theta = theta_values[gh_mask].copy()
@@ -42,6 +38,10 @@ c = c_values[gh_mask].copy()
 loops = loop_values[gh_mask].copy()
 
 num_particles = len(theta)
+
+if num_particles == 0:
+    print("⚠️ No GH corridor points found!")
+    exit()
 
 # ----------------------------
 # STORAGE
@@ -66,3 +66,34 @@ for t in range(steps):
     loops = np.clip(loops + dloops, 0, 10)
 
 # ----------------------------
+# PLOTS
+# ----------------------------
+
+plt.figure(figsize=(12, 5))
+
+# Polar Plot
+plt.subplot(1, 2, 1, projection="polar")
+for i in range(num_particles):
+    plt.plot(theta_traj[i], c_traj[i], alpha=0.3)
+plt.title("GH Corridor Flow (Polar)")
+
+# Phase Plot
+plt.subplot(1, 2, 2)
+for i in range(num_particles):
+    plt.plot(c_traj[i], theta_traj[i], alpha=0.3)
+
+plt.xlabel("C")
+plt.ylabel("theta")
+plt.title("Phase Trajectories")
+
+plt.tight_layout()
+plt.show()
+
+# ----------------------------
+# METRICS
+# ----------------------------
+
+print("\n--- FLOW METRICS ---")
+print(f"Particles: {num_particles}")
+print(f"Final theta spread: {np.std(theta_traj[:, -1]):.3f}")
+print(f"Final C spread    : {np.std(c_traj[:, -1]):.6f}")
