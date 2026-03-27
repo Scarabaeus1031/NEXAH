@@ -2006,3 +2006,239 @@ But the phase that connects both.
 
 → GH is where the system exists.
 
+
+
+⚡ Stability Field Log — IEEE 14 Bus (Extension)
+Entry 28 — GH Corridor as Dynamic Flow Structure
+Observation
+
+Using the GH corridor detection together with the corridor-based flow field:
+
+particles were initialized inside the GH band
+trajectories were evolved under the modified flow dynamics
+
+Key results:
+
+no collapse into a single attractor
+no uniform diffusion
+trajectories remain confined within a radial band
+Key Discovery
+
+The GH region behaves as a dynamic attractor band, not a point:
+
+trajectories remain bounded in C
+angular drift persists
+radial structure is preserved
+
+In contrast to earlier models:
+
+no convergence to single value (c = const)
+no degeneration into uniform ring
+Interpretation
+
+The system exhibits a band attractor geometry:
+
+not:
+point attractor (collapse)
+global attractor (uniform field)
+but:
+constrained flow within a corridor
+
+This validates:
+
+GH is not a value — it is a region of allowed dynamics.
+
+Structural Meaning
+
+The GH corridor acts as:
+
+a phase-space channel
+a transport layer
+a stability-preserving constraint
+
+Particles:
+
+move freely in θ (angular dimension)
+remain bounded in C (radial dimension)
+Conclusion
+
+The system now supports:
+
+corridor-constrained flow dynamics
+stable motion without collapse
+bounded but non-trivial trajectories
+Entry 29 — Attractor Collapse vs Band Stability
+Observation
+
+Comparison between two flow formulations:
+
+Case A — Point Attractor
+dc = -k (c - c₀)
+
+Result:
+
+all trajectories collapse to c₀
+C spread → 0
+system degenerates
+Case B — Band Attractor (current model)
+dc = -k (c - c_center(θ)) + modulation + noise
+
+Result:
+
+trajectories remain distributed
+C spread > 0
+structure persists
+Key Discovery
+
+System behavior depends critically on attractor geometry:
+
+point attractor → collapse
+band attractor → structure
+Interpretation
+
+We identify a new principle:
+
+Stability requires spatial extent in state space.
+
+A system cannot sustain dynamics if:
+
+all degrees of freedom collapse to a single value
+
+Instead:
+
+stability emerges from constrained variability
+Conclusion
+
+We refine the attractor concept:
+
+classical attractor → point
+NEXAH attractor → manifold / band
+Entry 30 — Corridor Flow Field (First Implementation)
+Observation
+
+Simulated particle flow within GH corridor using:
+
+angular drift
+band attraction
+loop coupling
+stochastic perturbation
+
+Measured:
+
+theta spread
+C spread
+Key Result
+Particles: ~30–50
+Final theta spread: ~1.8
+Final C spread: ~2e-5 (non-zero)
+Interpretation
+
+The system exhibits:
+
+strong angular dispersion
+weak but non-zero radial dispersion
+
+This indicates:
+
+stable confinement (no explosion)
+but not full mixing (no chaos)
+Structural Insight
+
+The GH corridor behaves like:
+
+a quasi-1D manifold embedded in 2D space
+
+Properties:
+
+free motion along corridor (θ)
+constrained motion across corridor (C)
+Conclusion
+
+The system now supports:
+
+anisotropic dynamics
+free direction
+constrained direction
+
+This is a hallmark of structured systems.
+
+Entry 31 — Noise as Structural Activator (Refined)
+Observation
+
+Increasing stochastic component in dc:
+
+dc += noise_strength * ξ
+
+Result:
+
+C spread increases
+trajectories diversify
+corridor becomes visibly structured
+Key Discovery
+
+Noise does not only perturb:
+
+→ it activates structure within the corridor
+
+Interpretation
+
+We refine the role of noise:
+
+low noise → rigid band → low diversity
+moderate noise → structured variability → optimal regime
+high noise → corridor breakdown
+Conclusion
+
+Noise acts as:
+
+symmetry breaker
+diversity generator
+structure activator
+Entry 32 — GH Corridor as Operational Layer
+Observation
+
+Combining:
+
+GH detection
+flow simulation
+phase classification (CCC / GH / KKK)
+Key Discovery
+
+All meaningful dynamics occur inside GH:
+
+CCC → too unstable
+KKK → no dynamics
+GH → structured flow
+Interpretation
+
+We confirm:
+
+GH is not a transition artifact.
+GH is the operational layer of the system.
+
+Functional Roles (Final Form)
+Phase	Role
+CCC	excitation / expansion
+KKK	collapse / absorption
+GH	coupling / transport / structure
+Conclusion
+
+The system is not defined by states, but by interfaces.
+
+GH is:
+
+the only region where:
+flow persists
+memory forms
+loops emerge
+🔥 Updated Core Insight (Extended)
+
+Stability is not a point.
+Not even just a region.
+
+It is a structured corridor in phase space,
+where motion is allowed, constrained, and sustained.
+
+Structure does not live in extremes —
+it lives in the interface between them.
+
