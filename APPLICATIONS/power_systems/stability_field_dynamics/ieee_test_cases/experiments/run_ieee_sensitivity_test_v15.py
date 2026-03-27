@@ -51,8 +51,11 @@ def fit_axis(x: np.ndarray, y: np.ndarray):
 
 for load in LOADS:
 
-    # 🔥 PHYSICAL INPUT
-    theta, c, loops = ieee_to_nexah("ieee14", load_scale=load)
+    # 🔥 PHYSICAL INPUT + CONVERGENCE FLAG
+    theta, c, loops, converged = ieee_to_nexah("ieee14", load_scale=load)
+
+    if not converged:
+        print(f"[!] Load {load:.2f} -> NOT CONVERGED (collapse fallback active)")
 
     theta_std = np.std(theta)
     c_std = np.std(c)
@@ -65,7 +68,7 @@ for load in LOADS:
     gh_width_c = np.ptp(gh["c_corridor"]) if gh_points > 0 else 0.0
 
     # --------------------------------------------------------
-    # STRUCTURAL METRICS (NOW PHYSICAL)
+    # STRUCTURAL METRICS (PHYSICAL)
     # --------------------------------------------------------
 
     regime_separation = theta_std * c_std
@@ -81,6 +84,7 @@ for load in LOADS:
 
     row = {
         "load": load,
+        "converged": converged,
         "theta_std": theta_std,
         "c_std": c_std,
         "loops_mean": loops_mean,
@@ -139,20 +143,20 @@ if focus_data is not None:
         y_gh = np.sin(gh["theta_corridor"]) * (1 + gh["c_corridor"])
         ax.scatter(x_gh, y_gh, s=40, color="gold", label="GH Corridor")
 
-    # White circle (stability boundary)
+    # White circle
     circle = Circle((0, 0), radius=2.0, fill=False, linestyle="--", linewidth=1.5)
     ax.add_patch(circle)
 
-    # Cross (coordinate system)
+    # Cross
     ax.axhline(0, linewidth=1)
     ax.axvline(0, linewidth=1)
 
-    # PCA axis (dominant drift)
+    # PCA axis
     angle, vec = fit_axis(x, y)
     t = np.linspace(-3, 3, 100)
     ax.plot(t * vec[0], t * vec[1], linewidth=2, label="PCA Axis")
 
-    # Nested pentagons (quantization layers)
+    # Pentagons
     for r in [0.5, 1.0, 1.5]:
         pent = RegularPolygon(
             (0, 0),
