@@ -1,69 +1,65 @@
-### Connection to ARCHY Layer
+# NEXAH Research Vision
 
-The ARCHY layer is being developed as the **regime dynamics engine** that unifies these observations into a common framework for stability, transitions, and resilience.
-
----
-
-# NEXAH Research Vision – The 3+1 Strands
-
-NEXAH explores a central open question:
-
-> Do complex systems from very different domains share similar **structural signatures of intrinsic stability** when navigated through reward-free, orientation-based dynamics?
+NEXAH is an orientation-based framework that investigates whether **intrinsic stability** in complex systems can emerge primarily through local structural navigation and coupling — without rewards, global objectives, or centralized control.
 
 ---
 
-### The 3+1 Experimental Strands
+## Core Hypothesis
+
+Complex systems from very different domains exhibit similar **structural signatures of intrinsic stability** — particularly resonance gaps, interface regions (corridors), and anisotropic motion — when navigated through reward-free, orientation-based dynamics.
+
+---
+
+## The 3+1 Experimental Strands
 
 | Strand | Domain                        | Input Type                  | Observed Patterns                          | Common Signature |
 |--------|-------------------------------|-----------------------------|--------------------------------------------|------------------|
-| 1      | Discrete Mathematics          | Prime numbers mod 7         | 3-cycles, flow-like trajectories, gaps     | Resonance Gap + Corridor |
-| 2      | Technical Systems             | IEEE Power Grids (14-bus)   | Dual resonance bands, GH-Corridor, local coupling | Resonance Gap + Interface Dynamics |
+| 1      | Discrete Mathematics          | Prime numbers mod 7         | 3-cycles, flow, gaps, corridors            | Resonance Gap + Corridor |
+| 2      | Technical Systems             | IEEE Power Grids (14-bus)   | Dual resonance bands, GH-Corridor, coupling| Resonance Gap + Interface Dynamics |
 | 3      | Chaotic Dynamics              | Lorenz Attractor            | Separatrix, basins, persistent loops       | Corridor-like Interface Behavior |
-| 4      | Multi-Agent Systems           | 160+ independent agents     | Collective structure formation via local orientation | Local navigation → global coherence |
+| 4      | Multi-Agent Systems           | 160+ independent agents     | Collective coherence via local orientation | Local navigation → global structure |
 
 ---
 
-### Core Observation
+## Core Observation
 
-Across these radically different substrates — discrete sequences, engineered networks, chaotic flows, and autonomous agents — NEXAH repeatedly extracts **comparable structural features**:
+Across discrete sequences, engineered grids, chaotic flows, and autonomous agents, NEXAH consistently extracts comparable structural features:
 
-- Pronounced gaps / interfaces between dynamical regimes  
-- Corridor-like regions with anisotropic motion (constrained in one dimension, freer in another)  
-- Local coupling that leads to emergent global coherence  
-- Preference for stability in the **interface zone** rather than in extremes  
+- resonance gaps (interfaces between regimes)  
+- corridor-like regions with anisotropic motion  
+- local coupling leading to global coherence  
+- preference for stability in the **interface zone**, not in extremes  
 
-Particularly notable is the parallel between the **IEEE power grid** and the **multi-agent experiments**: the grid often behaves as if it consisted of many local “agents” whose collective orientation produces coherent dynamics in the GH-like corridor.
-
----
-
-### What is NEXAH?
-
-NEXAH is an orientation-based framework that investigates whether **intrinsic stabilization** can emerge primarily through local structural navigation and coupling in the interface region — rather than through global optimization, rewards, or centralized control.
-
-It currently combines four experimental lines that appear to point toward a **more generic mechanism** of stability formation.
+A particularly notable parallel exists between the IEEE power grid and multi-agent experiments:  
+the grid frequently behaves as if composed of many local agents whose collective orientation produces coherent dynamics in the interface region.
 
 ---
 
-### Open Research Questions
+## Current Status (Short Summary)
 
-- Are the observed structural signatures (resonance gaps, corridors, interface preference) universal across scales and domains?  
-- Can multi-agent orientation explain emergent stability phenomena in technical systems such as power grids?  
-- What is the precise mathematical relationship between the discrete case (primes) and the continuous/technical case (power systems)?  
-- How does this interface-based view relate to classical concepts in chaos theory (strange attractors, separatrices) and Active Inference?  
+- **Prime strand** → most mature and reproducible  
+- **IEEE strand** → first real-system application, not yet physically coupled  
+- **Multi-Agent strand** → strongest conceptual bridge, still early  
+- **Chaos strand** → reference system, mostly qualitative  
 
----
-
-### Relation to the ARCHY Layer
-
-The ARCHY layer is being developed as the **regime dynamics engine** that aims to unify these observations into a common framework for describing transitions, resilience, and intrinsic stabilization.
-
-This document serves as a living research vision. It reflects current patterns and hypotheses rather than final conclusions.
+The central limitation is the **lack of coupling between internal structural observations and external physical variables**.
 
 ---
 
-## Research Structure Overview
+## Research Direction
+
+NEXAH currently functions as a **structural exploration framework** for identifying recurring patterns across domains.
+
+The central open question is:
+
+> Are these structural signatures merely descriptive —  
+> or do they reflect a general mechanism of intrinsic stabilization?
 
 ---
+
+# --------------------------------------------------------------------
+# Detailed Research Status (Internal / Technical Layer)
+# --------------------------------------------------------------------
 
 ## Research Status — Current State Across Strands
 
@@ -71,26 +67,26 @@ This document serves as a living research vision. It reflects current patterns a
 
 **Status:** Advanced experimental stage  
 
-The Prime Modular Resonance experiment (mod 7) is currently the most mature and reproducible strand. It demonstrates the emergence of:
+The Prime Modular Resonance experiment (mod 7) is currently the most mature and reproducible strand.
 
-- 3-cycles  
+**Observed:**
+
+- stable 3-cycle structures  
 - flow-like trajectories  
-- resonance gaps  
-- corridor-like structures  
-
-from a purely discrete input.
+- persistent resonance gaps  
+- corridor-like regions  
 
 **Strengths:**
 
-- High reproducibility  
-- Clean control experiments (shuffled primes, random sequences)  
-- Clear structural patterns (cycles, gaps, corridors)  
+- high reproducibility  
+- clean control experiments  
+- strong structural clarity  
 
 **Open Points:**
 
-- No formal mathematical explanation yet  
-- Deeper number-theoretic grounding required  
-- No formal bridge to continuous systems (IEEE, Lorenz)  
+- no formal mathematical explanation yet  
+- unclear why mod 7 produces this structure  
+- no formal link to continuous systems  
 
 ---
 
@@ -98,23 +94,30 @@ from a purely discrete input.
 
 **Status:** Early–intermediate stage  
 
-The IEEE strand demonstrates that similar structural patterns appear in a real technical system:
+First application of NEXAH to a real technical system.
+
+**Observed:**
 
 - dual resonance bands  
 - gap (interface region)  
-- GH-like corridor behavior  
+- GH-like corridor  
+- non-zero coupling in corridor  
 
 **Strengths:**
 
-- First application to a real-world system  
-- Reproducible internal structure (corridor, coupling, loops)  
-- Strong conceptual alignment with multi-agent interpretation  
+- real-world system  
+- reproducible internal structure  
+- strong similarity to other strands  
 
 **Limitations:**
 
-- Not yet physically coupled  
-- Structure does not respond to load or voltage collapse  
-- No predictive capability at this stage  
+- not yet physically coupled  
+- no response to load or voltage collapse  
+- no predictive capability  
+
+**Critical Issue:**
+
+> current model operates on an internal representation, not physical variables  
 
 ---
 
@@ -122,23 +125,24 @@ The IEEE strand demonstrates that similar structural patterns appear in a real t
 
 **Status:** Intermediate exploratory stage  
 
-The Lorenz system is used as a classical chaotic reference to test whether orientation-based navigation produces:
+Used as reference for classical chaos.
 
-- interface-like behavior  
-- corridor structures  
-- separatrix-aligned dynamics  
+**Observed:**
+
+- corridor-like behavior  
+- alignment with separatrix regions  
+- structured trajectories  
 
 **Strengths:**
 
-- Works in continuous, sensitive systems  
-- Visual alignment with known structures  
-- Demonstrates compatibility with classical dynamical systems  
+- compatible with continuous chaotic systems  
+- visually consistent with known attractor structure  
 
 **Open Points:**
 
-- No quantitative comparison yet  
-- Relationship to classical attractor theory remains descriptive  
-- Cross-domain connection still qualitative  
+- no quantitative comparison (Lyapunov, fractal dimension)  
+- relationship to classical attractor theory remains descriptive  
+- no formal cross-domain mapping  
 
 ---
 
@@ -146,43 +150,47 @@ The Lorenz system is used as a classical chaotic reference to test whether orien
 
 **Status:** Early exploratory stage  
 
-Multi-agent experiments investigate whether global structure can emerge from:
+Investigates emergence of structure from purely local orientation.
 
-- purely local orientation  
-- no reward  
-- no central control  
+**Observed:**
+
+- collective coherence  
+- structure formation without reward  
+- flow-like global behavior  
 
 **Strengths:**
 
-- Strong conceptual bridge between domains  
-- Suggests interpretation of technical systems as local-agent ensembles  
-- Demonstrates emergence from simple local rules  
+- strongest conceptual bridge across domains  
+- suggests systems behave as local-agent ensembles  
 
 **Open Points:**
 
-- No systematic scaling experiments yet  
-- Metrics for coherence and emergence not yet formalized  
-- No direct mapping to IEEE topology implemented  
+- no systematic scaling studies  
+- no formal metrics for coherence  
+- no direct mapping to IEEE topology  
 
 ---
 
 ## Cross-Strand Assessment
 
-Across all four strands, the same structural motifs appear:
+Across all four strands, consistent structural motifs appear:
 
-- gaps / interfaces between regimes  
+- gaps / interfaces  
 - corridor-like regions  
 - anisotropic motion  
-- emergence of structure through local interaction  
+- local interaction → global structure  
 
 However:
 
-- Only the **Prime strand is structurally clean and reproducible**  
-- Only the **IEEE strand connects to real systems**, but lacks physical coupling  
-- The **Multi-Agent strand provides the strongest conceptual bridge**, but is least developed  
-- The **Chaos strand provides validation context**, but remains mostly qualitative  
+- Prime → structurally strongest  
+- IEEE → physically relevant but not coupled  
+- Multi-Agent → conceptually strongest, least formalized  
+- Chaos → validation context, mostly qualitative  
 
-This suggests that local interaction mechanisms may be a unifying explanation across domains, but this hypothesis is not yet formally tested.
+**Key Interpretation:**
+
+Local interaction may be a unifying mechanism across domains,  
+but this is not yet formally established.
 
 ---
 
@@ -194,26 +202,26 @@ The central limitation is:
 
 Specifically:
 
-- IEEE dynamics do not respond to load or voltage collapse  
-- Corridor structures are currently model-driven, not physically driven  
+- IEEE system does not respond to physical parameters  
+- corridor structures are model-driven  
 
 ---
 
 ## Research Priorities
 
-1. **Physical coupling (IEEE systems)**  
-   - map voltage, phase angle, imbalance → (C, θ, loops)  
-   - test structural response to real instability  
+1. **Physical coupling (IEEE)**  
+   - map voltage, phase, imbalance → (C, θ, loops)  
+   - test structural response  
 
 2. **Multi-agent formalization**  
-   - define metrics for coherence  
-   - test mapping to grid-like systems  
+   - define coherence metrics  
+   - connect to grid-like systems  
 
-3. **Mathematical grounding (Prime strand)**  
-   - explain origin of 3-cycles and gaps  
+3. **Mathematical grounding (Prime)**  
+   - explain origin of cycles and gaps  
 
-4. **Quantitative chaos comparison**  
-   - align with classical dynamical systems metrics  
+4. **Chaos quantification**  
+   - connect to classical metrics  
 
 ---
 
@@ -221,20 +229,20 @@ Specifically:
 
 At the current stage:
 
-- the framework is **structurally consistent across domains**  
-- it provides a **novel orientation-based perspective**  
-- it is **not yet validated against physical system behavior**  
+- structurally consistent across domains  
+- novel orientation-based perspective  
+- not yet validated against physical system behavior  
 
 ---
 
 ## Working Interpretation
 
-NEXAH currently functions as:
+NEXAH currently operates as:
 
 > a structural exploration framework  
 > for identifying recurring patterns in complex systems  
 
-The central open question remains:
+The central question remains:
 
-> Are these patterns descriptive artifacts —  
-> or do they correspond to real mechanisms of stability?
+> Do these patterns reflect real mechanisms —  
+> or are they artifacts of representation?
