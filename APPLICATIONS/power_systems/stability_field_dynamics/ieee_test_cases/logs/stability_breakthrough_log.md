@@ -2449,3 +2449,8 @@ It is now:
 > The system does not live in CCC or KKK.  
 >  
 > It lives in the geometry of the Knick —  
+> The system does not live in CCC or KKK.  
+>  
+> It lives in the geometry of the Knick —  
+>  
+> the transition between them.
