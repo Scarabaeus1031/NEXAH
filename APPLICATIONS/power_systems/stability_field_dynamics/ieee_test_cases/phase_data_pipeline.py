@@ -12,6 +12,9 @@ SEED = 42
 # CORE DATA GENERATOR
 # ============================================================
 
+def get_phase_data():
+    return theta_values, c_values, loop_values, gh_mask
+
 def generate_phase_data(N=DEFAULT_N, seed=SEED):
     """
     Central data generator for all phase-based analysis.
