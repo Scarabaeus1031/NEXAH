@@ -125,7 +125,7 @@ C(x,y) = P(x,y) × R(x,y) × L(x,y)
 
 ---
 
-## GH Corridor (NEW)
+## GH Corridor
 
 GH is not a discrete phase.
 
@@ -140,7 +140,7 @@ Properties:
 
 ---
 
-## Corridor Flow Field (NEW)
+## Corridor Flow Field
 
 Particles initialized in GH show:
 
@@ -151,25 +151,23 @@ Particles initialized in GH show:
 
 ### Result
 
-→ GH behaves as a **band attractor**
+→ GH behaves as a **band-like attractor structure**
 
 ---
 
-## Attractor Redefined
+## Attractor Interpretation
 
-### Classical View
+Classical:
+- attractor = point / set  
 
-- attractor = point  
-
-### Observed System
-
-- attractor = **manifold / corridor**
+Observed:
+- attractor = **extended manifold (corridor)**  
 
 ---
 
 ## Structural Dynamics
 
-System exhibits **anisotropic behavior**:
+System exhibits anisotropic behavior:
 
 | Dimension | Behavior |
 |----------|--------|
@@ -186,7 +184,7 @@ System exhibits **anisotropic behavior**:
 | medium | structure emerges |
 | high | structure breaks |
 
-→ Noise is a **structural activator**, not disturbance
+→ Noise acts as an **activation parameter**
 
 ---
 
@@ -204,7 +202,7 @@ System exhibits:
 - regime switching  
 - repeatable dynamics  
 
-→ **stability becomes time-dependent**
+→ stability becomes **time-dependent**
 
 ---
 
@@ -235,7 +233,7 @@ System exhibits:
 3. Coupled Field  
 4. Cyclic Field  
 5. Phase-Coupled System  
-6. **Corridor System (NEW)**  
+6. Corridor-Dominated System  
 
 ---
 
@@ -248,52 +246,20 @@ System exhibits:
 5. Topological Layer  
 6. Coupling Layer  
 7. Phase Layer  
-8. **Corridor Layer (NEW)**  
+8. Corridor Layer  
 
 ---
 
-## Interpretation
+## Repository Structure
 
-The system is no longer:
-
-- a static stability model  
-- nor purely dynamic  
-
-It is a:
-
-> **phase-coupled, corridor-structured dynamical system**
-
----
-
-## Next Step — Validation
-
-- IEEE 9 / 30 comparison  
-- physical coupling to collapse variables  
-- sensitivity analysis  
-
-Key question:
-
-> Does the structure respond to real instability —  
-> or only internal dynamics?
-
----
-
-## Status
-
-⚠️ Experimental  
-⚠️ Internal structure validated  
-⚠️ Physical coupling in progress  
-
----
-
-## Final Core Insight
-
-> Stability is not a point.  
->  
-> It is not even a region.  
->  
-> It is a **structured corridor in phase space**,  
-> where motion is allowed, constrained, and sustained.  
->  
-> Structure does not exist in extremes —  
-> it exists in the interface between them.
+```text
+APPLICATIONS/power_systems/stability_field_dynamics/
+│
+├── ieee_test_cases/
+│   ├── core/         # coupling, metrics, fundamental operators
+│   ├── pipeline/     # phase data, corridor detection, flow initialization
+│   ├── experiments/  # run_scan_* scripts (v1–v36)
+│   ├── analysis/     # analysis tools (knick, Fourier, fitting, etc.)
+│   ├── outputs/      # plots, CSVs, JSON results
+│   ├── logs/         # stability logs and notes
+│   └── README.md
