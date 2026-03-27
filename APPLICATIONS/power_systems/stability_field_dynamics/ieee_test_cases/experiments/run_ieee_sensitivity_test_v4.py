@@ -1,4 +1,3 @@
-```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -143,4 +142,3 @@ plt.title("Adapter Loops vs Load")
 
 plt.tight_layout()
 plt.show()
-```
