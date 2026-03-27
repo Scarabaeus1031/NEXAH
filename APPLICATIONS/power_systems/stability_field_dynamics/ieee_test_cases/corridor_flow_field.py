@@ -20,13 +20,32 @@ except Exception:
     gh_mask = (c_values > 0.015) & (c_values < 0.03) & (loop_values > 1) & (loop_values < 4)
 
 # ----------------------------
-# FLOW FIELD
+# FLOW FIELD (GH CORRIDOR MODEL)
 # ----------------------------
 
 def flow(theta, c, loops):
+
+    # --- angular drift
     dtheta = 0.4 + 0.2 * np.sin(theta)
-    dc = -0.1 * (c - 0.02)
+
+    # --- dynamic GH center (entscheidend!)
+    c_center = 0.02 + 0.003 * np.sin(2 * theta)
+
+    # --- band attraction (NICHT zu stark)
+    dc = -0.03 * (c - c_center)
+
+    # --- coupling zu loops
+    dc += 0.002 * (loops - 3)
+
+    # --- hex modulation (optional aber sehr stark)
+    dc += 0.001 * np.sin(6 * theta)
+
+    # --- kleine noise → verhindert Collapse
+    dc += 0.0005 * np.random.randn(len(c))
+
+    # --- loop relaxation
     dloops = -0.05 * (loops - 3)
+
     return dtheta, dc, dloops
 
 # ----------------------------
@@ -47,7 +66,7 @@ if num_particles == 0:
 # STORAGE
 # ----------------------------
 
-steps = 50
+steps = 60
 theta_traj = np.zeros((num_particles, steps))
 c_traj = np.zeros((num_particles, steps))
 
@@ -71,13 +90,13 @@ for t in range(steps):
 
 plt.figure(figsize=(12, 5))
 
-# Polar Plot
+# --- Polar (Kern-Visual)
 plt.subplot(1, 2, 1, projection="polar")
 for i in range(num_particles):
     plt.plot(theta_traj[i], c_traj[i], alpha=0.3)
 plt.title("GH Corridor Flow (Polar)")
 
-# Phase Plot
+# --- Phase Space
 plt.subplot(1, 2, 2)
 for i in range(num_particles):
     plt.plot(c_traj[i], theta_traj[i], alpha=0.3)
