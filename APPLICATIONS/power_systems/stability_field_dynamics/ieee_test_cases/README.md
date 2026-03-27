@@ -44,10 +44,9 @@ Extended into:
 | V21–V23 | Stable coupling regime + attractor phase |
 | V24 | Noise activation → attractor breakdown |
 | V25–V26 | Phase cycling → cyclic attractor |
-| V29 | Phase cycling scan (activation/dissipation regimes) |
-| V30 | Phase lock detection (frequency alignment) |
-| V31 | Resonance lock (multi-k stability analysis) |
+| V29–V31 | Phase dynamics + resonance lock |
 | V32 | Phase classifier (KKK / GH / CCC system) |
+| V33 (NEW) | GH Corridor + Flow Field |
 
 ---
 
@@ -63,13 +62,12 @@ Extended into:
 - Emergent structure:
   - States: 2  
   - Loops: 6  
-  - Interface-coupled dynamics  
 
 - Coupling metric:
   - C ≈ 0.0036  
-  - P ≈ 0.47 (flow persistence)  
-  - R ≈ 0.27 (recurrence concentration)  
-  - L ≈ 0.028 (loop density)  
+  - P ≈ 0.47  
+  - R ≈ 0.27  
+  - L ≈ 0.028  
 
 ---
 
@@ -89,7 +87,7 @@ Extended into:
 
 ## Fundamental Discovery
 
-Both systems share the same structural decomposition:
+Both systems share a common decomposition:
 
 → **3 + 1 structure**
 
@@ -109,9 +107,7 @@ BUT:
 
 ## Coupling Metric
 
-We define:
-
-C = P × R × L
+C = P × R × L  
 
 Where:
 
@@ -128,84 +124,15 @@ Interpretation:
 
 ## Coupling Field
 
-Coupling is spatially localized:
-
 C(x,y) = P(x,y) × R(x,y) × L(x,y)
 
-Result:
+→ Structure emerges only in **localized regions**
 
-- structure emerges only in **localized regions**
-
-→ **Birth Zones of Structure**
+### → Birth Zones of Structure
 
 ---
 
-## Phase Behavior — Static (IEEE 14)
-
-Parameter scan (base load):
-
-- system remains invariant  
-- coupling metric constant  
-- topology unchanged  
-
-Interpretation:
-
-→ **stable coupling regime (phase plateau)**
-
----
-
-## Phase Behavior — Dynamic (NEW)
-
-### Noise Activation (V24)
-
-System behavior is non-monotonic:
-
-| Noise | Behavior |
-|------|----------|
-| 0.0 | no structure (dead system) |
-| 0.1–0.25 | loops + states emerge |
-| 0.5 | structure destabilizes |
-
-→ Noise acts as **activation mechanism**, not perturbation
-
----
-
-### Phase Cycling (V29–V30)
-
-Time-dependent parameters:
-
-- noise(t)
-- rotation(t)
-- damping(t)
-
-Result:
-
-- cyclic emergence and decay of structure  
-- repeatable regime transitions  
-
-→ system becomes a **cyclic attractor**
-
----
-
-### Resonance Lock (V31)
-
-Multi-scale parameter scan (k):
-
-- k = 1.0, 1.5, 2.0
-
-Observations:
-
-- stable transition regions appear
-- loop collapse zones align across k
-- rotation/noise symmetry emerges
-
-→ existence of **resonance-locked trajectories**
-
----
-
-## Phase System (V32) — Core Breakthrough
-
-We identify three fundamental phases:
+## Phase System (V32)
 
 | Phase | Meaning | Behavior |
 |------|--------|----------|
@@ -215,7 +142,7 @@ We identify three fundamental phases:
 
 ---
 
-### Key Insight
+## Core Insight — Phase System
 
 > The system does not live in CCC or KKK.  
 >  
@@ -223,353 +150,382 @@ We identify three fundamental phases:
 
 ---
 
-### GH Properties
+## GH Corridor (NEW)
 
-- dominant phase across all k
-- forms continuous bands (not isolated points)
-- aligns with lock points
-- supports:
-  - loop formation
-  - transitions
-  - memory persistence
+### Discovery
 
----
+GH is not a set of points.
 
-### Phase Statistics (V32)
+→ It forms a **continuous corridor in phase space**
 
-| k | GH | KKK | CCC |
-|---|----|-----|-----|
-| 1.0 | 13 | 6 | 5 |
-| 1.5 | 11 | 7 | 6 |
-| 2.0 | 15 | 5 | 4 |
+Properties:
 
-→ GH is the **primary operational regime**
+- spatially extended  
+- continuous in θ  
+- bounded in C  
+- supports persistent dynamics  
 
 ---
 
-### Interpretation
+## Corridor Flow Field (NEW)
 
-We define:
+Particles initialized in GH show:
 
-- CCC → excitation field  
-- KKK → absorption field  
-- GH → **coupling corridor**
+- bounded radial motion (C)  
+- free angular motion (θ)  
+- no collapse to single value  
+- no uniform diffusion  
 
-GH acts as:
+### Result
 
-→ **transport layer between expansion and collapse**
-
----
-
-### Phase Geometry
-
-System becomes a **three-layer structure**:
-
-1. CCC (outer / active)
-2. GH (middle / interface)
-3. KKK (inner / absorbing)
+→ trajectories remain inside a **dynamic band**
 
 ---
 
-## Updated System Classification
+## Attractor Redefined
 
-### 1. Diffuse Field
-- no loops  
-- no states  
-- C ≈ 0  
+### Classical View
 
-### 2. Activated Field
-- noise-driven  
-- transient structure  
+- attractor = point  
 
-### 3. Coupled Field
-- loops + states  
-- persistent dynamics  
+### Observed System
 
-### 4. Cyclic Field
-- time-dependent attractor  
-- periodic structure  
+- attractor = **band / manifold**
 
-### 5. Phase-Coupled System (NEW)
-- CCC / GH / KKK structure  
-- interface-dominated dynamics  
-- GH corridor governs behavior  
+---
+
+## Structural Insight
+
+System dynamics are:
+
+- anisotropic  
+
+| Direction | Behavior |
+|----------|--------|
+| θ (angular) | free motion |
+| C (radial) | constrained motion |
+
+---
+
+## Noise as Activator
+
+| Noise Level | Behavior |
+|------------|----------|
+| low | rigid band |
+| medium | structured dynamics |
+| high | corridor breakdown |
+
+→ Noise enables structure but can also destroy it.
+
+---
+
+## System Classification
+
+1. Diffuse Field  
+2. Activated Field  
+3. Coupled Field  
+4. Cyclic Field  
+5. Phase-Coupled System  
+6. **Corridor System (NEW)**  
 
 ---
 
 ## Architecture Layers
 
-1. **Field Layer**
-   - continuous geometry  
-
-2. **Dynamic Layer**
-   - trajectories / flow  
-
-3. **Memory Layer**
-   - recurrence  
-
-4. **Resonance Layer**
-   - band structure  
-
-5. **Topological Layer**
-   - states + loops  
-
-6. **Coupling Layer**
-   - interaction zones  
-
-7. **Phase Layer (NEW)**
-   - CCC / GH / KKK  
-   - defines operational regime  
+1. Field Layer  
+2. Dynamic Layer  
+3. Memory Layer  
+4. Resonance Layer  
+5. Topological Layer  
+6. Coupling Layer  
+7. Phase Layer  
+8. **Corridor Layer (NEW)**  
 
 ---
 
-## Core Insight (Updated)
+## Final Core Insight
 
-> Stability is not a state.  
+> Stability is not a point.  
 >  
-> It is not even a region.  
+> It is not even just a region.  
 >  
-> It is a structure that exists  
-> in the interaction between phases.  
+> It is a **structured corridor in phase space**,  
+> where motion is allowed, constrained, and sustained.  
 >  
-> Not in expansion.  
-> Not in collapse.  
->  
-> But in the corridor between them.
+> Structure does not live in extremes —  
+> it lives in the interface between them.
 
 ---
 
 ## Repository Structure
-Band A ≈ 0.008
-Band B ≈ 0.84
-Gap:
-≈ 0.832 (active interface)
-Emergent structure:
-States: 2
-Loops: 6
-Interface-coupled dynamics
-Coupling metric:
-C ≈ 0.0036
-P ≈ 0.47 (flow persistence)
-R ≈ 0.27 (recurrence concentration)
-L ≈ 0.028 (loop density)
-Key Results — IEEE 9 (Diffuse System)
-Dual resonance peaks:
-≈ 0.007, ≈ 0.012
-Gap:
-≈ 0.004
-Structure:
-States: 0
-Loops: 0
-Fundamental Discovery
+# ⚡ Stability Field Dynamics — IEEE Systems
 
-Both systems share the same structural decomposition:
+## Overview
 
-→ 3 + 1 structure
+This module transforms classical power system stability analysis into a:
 
-Band A
-Band B
-Gap
-Global flow field
+- continuous field representation  
+- dynamic flow system  
+- memory-based recurrence model  
+- resonance-driven structure formation  
+- topological state graph  
+
+Standard IEEE test systems (starting with 14-bus) are used as real-world benchmarks.
+
+---
+
+## Core Idea
+
+> Stability is not a binary state — it is a geometry.  
+
+Extended into:
+
+- Geometry → field representation  
+- Field → flow dynamics  
+- Dynamics → memory (recurrence)  
+- Memory → resonance structure  
+- Resonance → coupled system  
+
+---
+
+## Development Levels
+
+| Level | Description |
+|------|-------------|
+| V1–V3 | Stability field + boundary detection |
+| V4–V7 | Bipolar field, folds, eigenmodes |
+| V8–V10 | Current field, time evolution, recurrence |
+| V11–V13 | State detection, closure, activation |
+| V14–V15 | Resonance detection, dual-band structure |
+| V15b | Gap stabilization → first loops + states |
+| V16 | State graph + loop topology |
+| V17 | Coupling metric (P × R × L) |
+| V17b | Coupling heatmap (birth zones) |
+| V21–V23 | Stable coupling regime + attractor phase |
+| V24 | Noise activation → attractor breakdown |
+| V25–V26 | Phase cycling → cyclic attractor |
+| V29–V31 | Phase dynamics + resonance lock |
+| V32 | Phase classifier (KKK / GH / CCC system) |
+| V33 (NEW) | GH Corridor + Flow Field |
+
+---
+
+## Key Results — IEEE 14 (Coupled System)
+
+- Dual resonance peaks:
+  - Band A ≈ 0.008  
+  - Band B ≈ 0.84  
+
+- Gap:
+  - ≈ 0.832 (active interface)
+
+- Emergent structure:
+  - States: 2  
+  - Loops: 6  
+
+- Coupling metric:
+  - C ≈ 0.0036  
+  - P ≈ 0.47  
+  - R ≈ 0.27  
+  - L ≈ 0.028  
+
+---
+
+## Key Results — IEEE 9 (Diffuse System)
+
+- Dual resonance peaks:
+  - ≈ 0.007, ≈ 0.012  
+
+- Gap:
+  - ≈ 0.004  
+
+- Structure:
+  - States: 0  
+  - Loops: 0  
+
+---
+
+## Fundamental Discovery
+
+Both systems share a common decomposition:
+
+→ **3 + 1 structure**
+
+- Band A  
+- Band B  
+- Gap  
+- Global flow field  
 
 BUT:
 
-System	Behavior
-IEEE 9	latent structure (decoupled)
-IEEE 14	coupled system (active dynamics)
-Coupling Metric
+| System | Behavior |
+|--------|----------|
+| IEEE 9 | latent structure (decoupled) |
+| IEEE 14 | coupled system (active dynamics) |
 
-We define:
+---
 
-C = P × R × L
+## Coupling Metric
+
+C = P × R × L  
 
 Where:
 
-P → flow persistence
-R → recurrence concentration
-L → loop density
+- P → flow persistence  
+- R → recurrence concentration  
+- L → loop density  
 
 Interpretation:
 
-C ≈ 0 → diffuse field
-C > 0 → system formation
-Coupling Field
+- C ≈ 0 → diffuse field  
+- C > 0 → system formation  
 
-Coupling is spatially localized:
+---
+
+## Coupling Field
 
 C(x,y) = P(x,y) × R(x,y) × L(x,y)
 
-Result:
+→ Structure emerges only in **localized regions**
 
-structure emerges only in localized regions
+### → Birth Zones of Structure
 
-→ Birth Zones of Structure
+---
 
-Phase Behavior — Static (IEEE 14)
+## Phase System (V32)
 
-Parameter scan (base load):
+| Phase | Meaning | Behavior |
+|------|--------|----------|
+| CCC | expansion field | high loops, high activity |
+| KKK | collapse field | zero loops, absorbing |
+| GH  | interface field | transition / coupling |
 
-system remains invariant
-coupling metric constant
-topology unchanged
+---
 
-Interpretation:
+## Core Insight — Phase System
 
-→ stable coupling regime (phase plateau)
+> The system does not live in CCC or KKK.  
+>  
+> It lives in GH.
 
-Phase Behavior — Dynamic (NEW)
-Noise Activation (V24)
+---
 
-System behavior is non-monotonic:
+## GH Corridor (NEW)
 
-Noise	Behavior
-0.0	no structure (dead system)
-0.1–0.25	loops + states emerge
-0.5	structure destabilizes
+### Discovery
 
-→ Noise acts as activation mechanism, not perturbation
+GH is not a set of points.
 
-Phase Cycling (V29–V30)
+→ It forms a **continuous corridor in phase space**
 
-Time-dependent parameters:
+Properties:
 
-noise(t)
-rotation(t)
-damping(t)
+- spatially extended  
+- continuous in θ  
+- bounded in C  
+- supports persistent dynamics  
 
-Result:
+---
 
-cyclic emergence and decay of structure
-repeatable regime transitions
+## Corridor Flow Field (NEW)
 
-→ system becomes a cyclic attractor
+Particles initialized in GH show:
 
-Resonance Lock (V31)
+- bounded radial motion (C)  
+- free angular motion (θ)  
+- no collapse to single value  
+- no uniform diffusion  
 
-Multi-scale parameter scan (k):
+### Result
 
-k = 1.0, 1.5, 2.0
+→ trajectories remain inside a **dynamic band**
 
-Observations:
+---
 
-stable transition regions appear
-loop collapse zones align across k
-rotation/noise symmetry emerges
+## Attractor Redefined
 
-→ existence of resonance-locked trajectories
+### Classical View
 
-Phase System (V32) — Core Breakthrough
+- attractor = point  
 
-We identify three fundamental phases:
+### Observed System
 
-Phase	Meaning	Behavior
-CCC	expansion field	high loops, high activity
-KKK	collapse field	zero loops, absorbing
-GH	interface field	transition / coupling
-Key Insight
+- attractor = **band / manifold**
 
-The system does not live in CCC or KKK.
+---
 
-It lives in GH.
+## Structural Insight
 
-GH Properties
-dominant phase across all k
-forms continuous bands (not isolated points)
-aligns with lock points
-supports:
-loop formation
-transitions
-memory persistence
-Phase Statistics (V32)
-k	GH	KKK	CCC
-1.0	13	6	5
-1.5	11	7	6
-2.0	15	5	4
+System dynamics are:
 
-→ GH is the primary operational regime
+- anisotropic  
 
-Interpretation
+| Direction | Behavior |
+|----------|--------|
+| θ (angular) | free motion |
+| C (radial) | constrained motion |
 
-We define:
+---
 
-CCC → excitation field
-KKK → absorption field
-GH → coupling corridor
+## Noise as Activator
 
-GH acts as:
+| Noise Level | Behavior |
+|------------|----------|
+| low | rigid band |
+| medium | structured dynamics |
+| high | corridor breakdown |
 
-→ transport layer between expansion and collapse
+→ Noise enables structure but can also destroy it.
 
-Phase Geometry
+---
 
-System becomes a three-layer structure:
+## System Classification
 
-CCC (outer / active)
-GH (middle / interface)
-KKK (inner / absorbing)
+1. Diffuse Field  
+2. Activated Field  
+3. Coupled Field  
+4. Cyclic Field  
+5. Phase-Coupled System  
+6. **Corridor System (NEW)**  
 
-This matches:
+---
 
-resonance bands (A/B)
-gap interface
-loop birth zones
-Updated System Classification
-1. Diffuse Field
-no loops
-no states
-C ≈ 0
-2. Activated Field
-noise-driven
-transient structure
-3. Coupled Field
-loops + states
-persistent dynamics
-4. Cyclic Field
-time-dependent attractor
-periodic structure
-5. Phase-Coupled System (NEW)
-CCC / GH / KKK structure
-interface-dominated dynamics
-GH corridor governs behavior
-Architecture Layers
-Field Layer
-continuous geometry
-Dynamic Layer
-trajectories / flow
-Memory Layer
-recurrence
-Resonance Layer
-band structure
-Topological Layer
-states + loops
-Coupling Layer
-interaction zones
-Phase Layer (NEW)
-CCC / GH / KKK
-defines operational regime
-Core Insight (Updated)
+## Architecture Layers
 
-Stability is not a state.
+1. Field Layer  
+2. Dynamic Layer  
+3. Memory Layer  
+4. Resonance Layer  
+5. Topological Layer  
+6. Coupling Layer  
+7. Phase Layer  
+8. **Corridor Layer (NEW)**  
 
-It is not even a region.
+---
 
-It is a structure that exists
-in the interaction between phases.
+## Final Core Insight
 
-Not in expansion.
-Not in collapse.
+> Stability is not a point.  
+>  
+> It is not even just a region.  
+>  
+> It is a **structured corridor in phase space**,  
+> where motion is allowed, constrained, and sustained.  
+>  
+> Structure does not live in extremes —  
+> it lives in the interface between them.
 
-But in the corridor between them.
+---
 
-Repository Structure
+## Repository Structure
+
 APPLICATIONS/power_systems/stability_field_dynamics/
 │
 ├── ieee_test_cases/
-│   ├── run_scan_v*.py
-│   ├── *_dynamics_v*.py
-│   ├── state_graph_v*.py
-│   ├── coupling_metric_v17.py
-│   ├── validate_ieee9.py
-│
-├── logs/
-│   └── stability_field_log.md
+│   ├── phase_data_pipeline.py
+│   ├── hex_corridor_detector.py
+│   ├──corridor_flow_field.py 
+├── coupling_metric_v17.py 
+├── validate_ieee9.py 
+├── logs/ 
+└── stability_field_log.md
