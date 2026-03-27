@@ -1,4 +1,4 @@
-# ieee_physical_adapter.py
+# ieee_physical_adapter_v1.py
 
 import numpy as np
 
@@ -23,6 +23,7 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
         theta (np.ndarray): phase angles
         C (np.ndarray): field intensity (voltage deviation)
         loops (np.ndarray): proxy for structural dynamics
+        converged (bool): whether power flow converged
     """
 
     net = _load_case(case)
@@ -36,13 +37,29 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
     # --------------------------------------------------------
     # RUN POWER FLOW
     # --------------------------------------------------------
-    pp.runpp(net)
+    try:
+        pp.runpp(net)
+        converged = True
+    except Exception:
+        converged = False
+
+    # --------------------------------------------------------
+    # FALLBACK FOR NON-CONVERGENCE
+    # --------------------------------------------------------
+    if not converged:
+        n = len(net.bus)
+
+        theta = np.zeros(n)
+        C = np.ones(n) * 0.5
+        loops = np.zeros(n)
+
+        return theta, C, loops, False
 
     # --------------------------------------------------------
     # EXTRACT PHYSICAL VARIABLES
     # --------------------------------------------------------
-    V = net.res_bus["vm_pu"].values          # voltage magnitude
-    theta = net.res_bus["va_degree"].values  # phase angle (degrees)
+    V = net.res_bus["vm_pu"].values
+    theta = net.res_bus["va_degree"].values
 
     # convert to radians
     theta = np.deg2rad(theta)
@@ -50,14 +67,10 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
     # --------------------------------------------------------
     # NEXAH MAPPING
     # --------------------------------------------------------
-
-    # C = deviation from nominal voltage
     C = 1.0 - V
-
-    # loops proxy (simple but meaningful)
     loops = _compute_loops(theta, net)
 
-    return theta, C, loops
+    return theta, C, loops, True
 
 
 # ------------------------------------------------------------
@@ -85,11 +98,8 @@ def _compute_loops(theta, net):
     to_bus = net.line["to_bus"].values
 
     theta_diff = theta[from_bus] - theta[to_bus]
-
-    # power flow magnitude as weighting
     p_flow = net.res_line["p_from_mw"].values
 
-    # accumulate per node
     loop_signal = np.zeros_like(theta)
 
     for i in range(len(from_bus)):
@@ -101,7 +111,6 @@ def _compute_loops(theta, net):
         loop_signal[f] += val
         loop_signal[t] += val
 
-    # normalize
     if np.max(loop_signal) > 0:
         loop_signal = loop_signal / np.max(loop_signal)
 
@@ -113,9 +122,10 @@ def _compute_loops(theta, net):
 # ------------------------------------------------------------
 
 if __name__ == "__main__":
-    theta, C, loops = ieee_to_nexah("ieee14", load_scale=1.5)
+    theta, C, loops, converged = ieee_to_nexah("ieee14", load_scale=1.5)
 
     print("\n--- IEEE → NEXAH ---")
+    print("converged:", converged)
     print("theta:", theta[:5])
     print("C:", C[:5])
     print("loops:", loops[:5])
