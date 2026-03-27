@@ -1,4 +1,4 @@
-# ⚡ Power Systems — Stability Field Dynamics
+# ⚡ Stability Field Dynamics — IEEE Power Systems
 
 ## Overview
 
@@ -6,9 +6,13 @@ This module extends classical power system stability analysis into a **dynamic f
 
 Instead of treating stability as a binary outcome (stable vs collapse), we model it as:
 
-- a continuous field
-- a dynamic flow system
-- a resonance-based structure
+- a continuous field  
+- a dynamic flow system  
+- a memory-based recurrence structure  
+- a resonance-driven topology  
+- a phase-coupled dynamical system  
+
+Standard IEEE test systems (starting with 14-bus) serve as real-world benchmarks.
 
 ---
 
@@ -18,67 +22,63 @@ Instead of treating stability as a binary outcome (stable vs collapse), we model
 
 This geometry evolves into:
 
-- flow (vector fields)
-- trajectories (particle dynamics)
-- memory (recurrence)
-- resonance (band structures)
-- structure (states, loops, transitions)
+- Geometry → field representation  
+- Field → flow dynamics  
+- Flow → trajectories  
+- Trajectories → memory (recurrence)  
+- Memory → resonance structure  
+- Resonance → coupling  
+- Coupling → system  
 
 ---
 
-## Current System
+## Fundamental Discovery
 
-### stability_field_dynamics/
+All systems decompose into:
 
-Primary experimental framework:
+→ **3 + 1 structure**
 
-- continuous stability landscape (IEEE 14)
-- boundary extraction
-- dynamic flow modeling
-- particle-based time evolution
-- recurrence and memory fields
-- state detection (attractors)
-- loop dynamics
-- resonance structure (dual-band + gap)
-- state graph topology
+- Band A  
+- Band B  
+- Gap (interface)  
+- Global flow  
+
+BUT:
+
+| System | Behavior |
+|--------|----------|
+| IEEE 9 | latent structure (decoupled) |
+| IEEE 14 | coupled system (active dynamics) |
+
+> Structure alone is not sufficient —  
+> **interaction is required for system formation.**
 
 ---
 
-## Key Results (IEEE 14)
+## Key Results — IEEE 14
 
 - Dual resonance peaks:
-  - inner band ~0.008
-  - outer band ~0.84
+  - Band A ≈ 0.008  
+  - Band B ≈ 0.84  
 
-- Active gap region:
-  - ~0.832
+- Gap:
+  - ≈ 0.832 (active interface)
 
 - Emergent structure:
-  - 2 states (attractors)
-  - 6 loops (all interface-based)
-  - bidirectional coupling
+  - States: 2  
+  - Loops: 6  
+
+- Coupling:
+  - C ≈ 0.0036  
+  - P ≈ 0.47  
+  - R ≈ 0.27  
+  - L ≈ 0.028  
 
 ---
 
-## Interpretation
+## Coupling Principle
 
-The IEEE 14 system behaves as a:
-
-> **coupled dual-state dynamical system with an active interface layer**
-
-Where:
-
-- states = structural anchors  
-- gap = coupling channel  
-- loops = dynamic circulation  
-
----
-
-## Extended Findings (NEW)
-
-### 1. Coupling Principle
-
-We define system formation as:
+We define:
 
 C = P × R × L
 
@@ -93,177 +93,207 @@ Interpretation:
 - C ≈ 0 → diffuse field  
 - C > 0 → system emerges  
 
-👉 A system is not defined by structure alone,  
-but by the **coupling of its dynamics**.
+---
+
+## Local Emergence — Birth Zones
+
+Coupling is not global.
+
+C(x,y) = P(x,y) × R(x,y) × L(x,y)
+
+→ Structure emerges only in localized regions
+
+### → Birth Zones of Structure
 
 ---
 
-### 2. Local Emergence (Birth Zones)
+## Phase System (CCC / GH / KKK)
 
-Structure does not emerge globally.
-
-Instead:
-
-- coupling is spatially localized  
-- loops and states appear only in specific regions  
-
-→ **Birth Zones of Structure**
+| Phase | Meaning | Behavior |
+|------|--------|----------|
+| CCC | expansion | high activity |
+| KKK | collapse | absorbing |
+| GH  | interface | transition / coupling |
 
 ---
 
-### 3. Noise as Activation Mechanism
+## Core Phase Insight
 
-System behavior depends critically on noise:
-
-| Noise Level | Behavior |
-|------------|----------|
-| 0.0 | no structure (dead system) |
-| moderate | loops + states emerge |
-| high | structure destabilizes |
-
-👉 Noise is not disturbance — it is **activation**.
+> The system does not exist in expansion or collapse.  
+>  
+> It exists in the **interface (GH)**.
 
 ---
 
-### 4. Dynamic Stability (Phase Cycling)
+## GH Corridor (NEW)
+
+GH is not a discrete phase.
+
+→ It forms a **continuous corridor in phase space**
+
+Properties:
+
+- extended in θ  
+- bounded in C  
+- dynamically active  
+- supports transitions  
+
+---
+
+## Corridor Flow Field (NEW)
+
+Particles initialized in GH show:
+
+- bounded radial motion (C)  
+- free angular motion (θ)  
+- persistent trajectories  
+- no collapse to a point  
+
+### Result
+
+→ GH behaves as a **band attractor**
+
+---
+
+## Attractor Redefined
+
+### Classical View
+
+- attractor = point  
+
+### Observed System
+
+- attractor = **manifold / corridor**
+
+---
+
+## Structural Dynamics
+
+System exhibits **anisotropic behavior**:
+
+| Dimension | Behavior |
+|----------|--------|
+| θ (angular) | free motion |
+| C (radial) | constrained motion |
+
+---
+
+## Noise as Activation
+
+| Noise | Effect |
+|------|--------|
+| low | no structure |
+| medium | structure emerges |
+| high | structure breaks |
+
+→ Noise is a **structural activator**, not disturbance
+
+---
+
+## Dynamic Stability
 
 Under time-dependent parameters:
 
-- noise(t)
-- rotation(t)
-- damping(t)
+- noise(t)  
+- rotation(t)  
+- damping(t)  
 
-the system exhibits:
+System exhibits:
 
-- cyclic creation/destruction of structure  
+- cyclic structure formation  
+- regime switching  
 - repeatable dynamics  
 
-→ stability becomes a **time-dependent phenomenon**
+→ **stability becomes time-dependent**
 
 ---
 
-### 5. Phase Structure (CCC / GH / KKK)
-
-We identify three fundamental regimes:
-
-| Phase | Meaning |
-|------|--------|
-| CCC | expansion (high activity) |
-| KKK | collapse (absorbing state) |
-| GH  | interface / transition |
-
-Key insight:
-
-> The system does not exist in expansion or collapse —  
-> it exists in the **interface (GH)**.
-
----
-
-### 6. GH Corridor
-
-- dominant regime across all experiments  
-- aligns with loop formation  
-- enables transitions between states  
-
-👉 GH acts as a **coupling corridor** between phases
-
----
-
-## Fundamental Discovery
-
-Both IEEE systems (9 and 14) share the same structure:
-
-→ **3 + 1 decomposition**
-
-- Band A  
-- Band B  
-- Gap  
-- Global flow  
-
-BUT:
-
-| System | Behavior |
-|--------|----------|
-| IEEE 9 | structure exists but is inactive |
-| IEEE 14 | structure becomes dynamically coupled |
-
-👉 Structure alone is not enough —  
-interaction is required.
-
----
-
-## Development Evolution
+## System Evolution
 
 | Phase | Description |
 |------|-------------|
-| Phase 1 | Classical stability scan (binary) |
-| Phase 2 | Continuous stability field |
-| Phase 3 | Boundary dynamics |
-| Phase 4 | Flow + particle dynamics |
-| Phase 5 | Recurrence + memory |
-| Phase 6 | State detection |
-| Phase 7 | Resonance + gap structure |
-| Phase 8 | Topology (state graph) |
-| Phase 9 | Coupling metric + birth zones |
-| Phase 10 | Noise activation + attractor breakdown |
-| Phase 11 | Phase cycling (time dynamics) |
-| Phase 12 | Phase classification (CCC / GH / KKK) |
+| 1 | Classical stability |
+| 2 | Continuous field |
+| 3 | Boundary dynamics |
+| 4 | Flow + particles |
+| 5 | Memory / recurrence |
+| 6 | State detection |
+| 7 | Resonance + gap |
+| 8 | Topology (graph) |
+| 9 | Coupling metric |
+| 10 | Noise activation |
+| 11 | Phase cycling |
+| 12 | Phase system |
+| 13 | GH Corridor + Flow |
 
 ---
 
-## System Interpretation
+## System Classification
 
-The model evolves from:
+1. Diffuse Field  
+2. Activated Field  
+3. Coupled Field  
+4. Cyclic Field  
+5. Phase-Coupled System  
+6. **Corridor System (NEW)**  
 
-- static stability analysis  
-→ dynamic field representation  
-→ memory-based system  
-→ resonance structure  
-→ coupled topology  
-→ **phase-coupled dynamical system**
+---
+
+## Architecture Layers
+
+1. Field Layer  
+2. Dynamic Layer  
+3. Memory Layer  
+4. Resonance Layer  
+5. Topological Layer  
+6. Coupling Layer  
+7. Phase Layer  
+8. **Corridor Layer (NEW)**  
+
+---
+
+## Interpretation
+
+The system is no longer:
+
+- a static stability model  
+- nor purely dynamic  
+
+It is a:
+
+> **phase-coupled, corridor-structured dynamical system**
 
 ---
 
 ## Next Step — Validation
 
-Test system invariance and physical relevance:
-
-- IEEE 9-bus
-- IEEE 30-bus
-- sensitivity to real collapse variables
+- IEEE 9 / 30 comparison  
+- physical coupling to collapse variables  
+- sensitivity analysis  
 
 Key question:
 
-> Can the structure respond to physical instability —  
-> not only reproduce internal dynamics?
-
----
-
-## Why this matters
-
-This approach enables:
-
-- structural understanding of instability  
-- identification of transition zones  
-- detection of coupling emergence  
-- analysis beyond solver convergence  
+> Does the structure respond to real instability —  
+> or only internal dynamics?
 
 ---
 
 ## Status
 
-⚠️ Experimental / research stage  
-⚠️ Internal dynamics validated  
-⚠️ Physical coupling still under investigation  
+⚠️ Experimental  
+⚠️ Internal structure validated  
+⚠️ Physical coupling in progress  
 
 ---
 
-## Core Insight (Updated)
+## Final Core Insight
 
-> Stability is not a state.  
+> Stability is not a point.  
 >  
-> It is a structure that emerges  
-> where flow, memory, and closure intersect —  
+> It is not even a region.  
 >  
-> and it exists only in the transition  
-> between expansion and collapse.
+> It is a **structured corridor in phase space**,  
+> where motion is allowed, constrained, and sustained.  
+>  
+> Structure does not exist in extremes —  
+> it exists in the interface between them.
