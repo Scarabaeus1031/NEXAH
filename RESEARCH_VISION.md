@@ -61,6 +61,103 @@ The central open question is:
 # Detailed Research Status (Internal / Technical Layer)
 # --------------------------------------------------------------------
 
+## The Connecting Thread of NEXAH (Working Hypothesis)
+
+Across all modules and experimental strands, a recurring structural pattern has been observed:
+
+> Stable and coherent structure tends to appear in **interface regions** (gaps / corridors),  
+> where local interactions are possible but globally unconstrained.
+
+This observation currently functions as a **working hypothesis**, not a confirmed universal principle.
+
+---
+
+## Interpretation Across Modules
+
+| Module / Layer | Role in Framework | Observed Pattern | Current Interpretation |
+|----------------|------------------|------------------|------------------------|
+| META | Relational structure | Defines possible states and transitions | Provides abstract space where interfaces can exist |
+| ARCHY | Regime dynamics | Stability regimes and transitions | Describes landscape of possible system states |
+| NEXAH Kernel | Local navigation | Orientation-based movement (SVWIS, phase coupling) | Candidate mechanism for local structure formation |
+| Discovery Engine | Pattern extraction | Detection of loops, basins, gaps, corridors | Identifies recurring structural motifs |
+| Prime (mod 7) | Discrete system | 3-cycles, gaps, corridor-like transitions | Cleanest reproducible structure, but not yet explained |
+| IEEE Systems | Technical system | GH-like corridor, dual bands, local coupling | Structurally consistent, but not yet physically coupled |
+| Lorenz | Chaotic system | Separatrix, basin boundaries, transition regions | Qualitative similarity to interface behavior |
+| Multi-Agent | Collective system | Coherence from local interaction | Strong conceptual link, but still exploratory |
+
+---
+
+## Cross-Domain Observation
+
+Across all strands, the following features repeatedly appear:
+
+- separation between regimes (gaps / interfaces)
+- regions of constrained but persistent motion (corridors)
+- emergence of structure through local interaction
+- reduced stability in extreme regions compared to intermediate zones
+
+---
+
+## Critical Limitation
+
+At present, these similarities are:
+
+- **structural and observational**
+- **not yet mechanistically unified**
+- **not yet quantitatively linked across domains**
+
+In particular:
+
+- the IEEE strand is not yet coupled to physical system variables  
+- the Prime strand lacks mathematical grounding  
+- the Multi-Agent strand lacks formal metrics  
+- the Chaos strand lacks quantitative comparison  
+
+---
+
+## Working Hypothesis (Precise Formulation)
+
+NEXAH investigates whether:
+
+> interface regions in complex systems provide conditions  
+> for stable structure formation through local interaction,  
+> without requiring global optimization or centralized control.
+
+---
+
+## Research Status
+
+This hypothesis is currently:
+
+- supported by **consistent structural observations**
+- **not yet validated as a general principle**
+- **not yet confirmed in physically grounded systems**
+
+---
+
+## Research Direction
+
+To evaluate this hypothesis, the following steps are required:
+
+1. Establish **physical coupling** (IEEE systems)
+2. Define **quantitative metrics** (multi-agent coherence, corridor stability)
+3. Provide **mathematical grounding** (discrete case)
+4. Perform **cross-domain comparison using shared measures**
+
+---
+
+## Position
+
+At its current stage, NEXAH should be understood as:
+
+> a structured exploratory framework  
+> for identifying recurring patterns in complex systems  
+
+The central open question remains:
+
+> Do these patterns reflect a real, domain-independent mechanism of stability —  
+> or are they artifacts of representation and analysis?
+
 ## Research Status — Current State Across Strands
 
 ### Strand 1 — Discrete Mathematics (Prime Modular Resonance)
