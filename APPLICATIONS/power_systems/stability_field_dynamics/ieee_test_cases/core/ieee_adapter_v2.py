@@ -1,4 +1,4 @@
-# ieee_adapter.py (V2)
+# ieee_adapter_v2.py
 
 import numpy as np
 
