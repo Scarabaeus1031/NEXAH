@@ -32,11 +32,11 @@ def poly_model(X, a, b, c0):
 def fit_models(df, case_name):
     # Filter valid region (avoid collapse artifacts)
     df = df.copy()
-    df = df[df["c_struct"] > 0]
+    df = df[df["c"] > 0]
     df = df.dropna()
 
     # Normalize
-    c = df["c_struct"].values
+    c = df["c"].values
     dc = np.gradient(c, df["load"].values)
     d2c = np.gradient(dc, df["load"].values)
 
