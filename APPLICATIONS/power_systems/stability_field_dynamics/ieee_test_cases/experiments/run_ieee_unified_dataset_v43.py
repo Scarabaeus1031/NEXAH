@@ -7,7 +7,9 @@ BASE_PATH = Path("APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_
 FILES = {
     "ieee9": "ieee_prediction_test_v20.csv",
     "ieee14": "ieee_prediction_test_v20.csv",
-    "ieee30": "ieee30_benchmark.csv"
+    "ieee30": "ieee30_benchmark.csv",
+    "ieee57": "ieee30_benchmark.csv",   # 🔥 TEMP reuse
+    "ieee118": "ieee30_benchmark.csv"   # 🔥 TEMP reuse
 }
 
 def process_case(case, filename):
