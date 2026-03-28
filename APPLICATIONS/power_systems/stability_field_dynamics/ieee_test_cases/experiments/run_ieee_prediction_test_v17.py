@@ -77,11 +77,12 @@ def run_case(case_name):
     for load in LOADS:
 
         # --- PHYSICAL BASELINE ---
-        min_v, converged = get_min_voltage(case_name, load)
+        min_v, converged_pf = get_min_voltage(case_name, load)
 
         # --- NEXAH ---
-        if converged:
-            theta, c, loops = ieee_to_nexah(case_name, load_scale=load)
+        theta, c, loops, converged_nexah = ieee_to_nexah(case_name, load_scale=load)
+
+        if converged_nexah:
             theta_std, c_std, loops_mean, regime_sep, c_struct = compute_metrics(theta, c, loops)
 
             gh = detect_gh_corridor(theta, c, loops)
@@ -94,7 +95,8 @@ def run_case(case_name):
 
         results.append({
             "load": load,
-            "converged": converged,
+            "converged_pf": converged_pf,
+            "converged_nexah": converged_nexah,
             "min_voltage": min_v,
             "theta_std": theta_std,
             "c_std": c_std,
@@ -126,48 +128,30 @@ df9.to_csv(os.path.join(OUTPUT_DIR, "ieee9_v17.csv"), index=False)
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 
 
-# ------------------------------------------------------------
-# IEEE14
-# ------------------------------------------------------------
-
-ax = axes[0, 0]
-ax.plot(df14["load"], df14["c_struct"], label="c_struct")
-ax.set_title("IEEE14 — c_struct")
-ax.set_xlabel("Load")
-ax.set_ylabel("c_struct")
-ax.grid()
+# IEEE14 — c_struct
+axes[0, 0].plot(df14["load"], df14["c_struct"])
+axes[0, 0].set_title("IEEE14 — c_struct")
+axes[0, 0].grid()
 
 
-ax = axes[0, 1]
-ax.plot(df14["load"], df14["min_voltage"], label="min(V)", color="orange")
-ax.axhline(0.7, linestyle="--", label="collapse threshold")
-ax.set_title("IEEE14 — min(V)")
-ax.set_xlabel("Load")
-ax.set_ylabel("Voltage")
-ax.legend()
-ax.grid()
+# IEEE14 — Voltage
+axes[0, 1].plot(df14["load"], df14["min_voltage"], color="orange")
+axes[0, 1].axhline(0.7, linestyle="--")
+axes[0, 1].set_title("IEEE14 — min(V)")
+axes[0, 1].grid()
 
 
-# ------------------------------------------------------------
-# IEEE9
-# ------------------------------------------------------------
-
-ax = axes[1, 0]
-ax.plot(df9["load"], df9["c_struct"], label="c_struct")
-ax.set_title("IEEE9 — c_struct")
-ax.set_xlabel("Load")
-ax.set_ylabel("c_struct")
-ax.grid()
+# IEEE9 — c_struct
+axes[1, 0].plot(df9["load"], df9["c_struct"])
+axes[1, 0].set_title("IEEE9 — c_struct")
+axes[1, 0].grid()
 
 
-ax = axes[1, 1]
-ax.plot(df9["load"], df9["min_voltage"], label="min(V)", color="orange")
-ax.axhline(0.7, linestyle="--", label="collapse threshold")
-ax.set_title("IEEE9 — min(V)")
-ax.set_xlabel("Load")
-ax.set_ylabel("Voltage")
-ax.legend()
-ax.grid()
+# IEEE9 — Voltage
+axes[1, 1].plot(df9["load"], df9["min_voltage"], color="orange")
+axes[1, 1].axhline(0.7, linestyle="--")
+axes[1, 1].set_title("IEEE9 — min(V)")
+axes[1, 1].grid()
 
 
 plt.tight_layout()
@@ -175,13 +159,11 @@ plt.show()
 
 
 # ------------------------------------------------------------
-# QUICK SUMMARY
+# SUMMARY
 # ------------------------------------------------------------
 
-print("\n--- SUMMARY ---")
-
-print("\nIEEE14:")
+print("\n--- SUMMARY IEEE14 ---")
 print(df14[["load", "c_struct", "min_voltage"]])
 
-print("\nIEEE9:")
+print("\n--- SUMMARY IEEE9 ---")
 print(df9[["load", "c_struct", "min_voltage"]])
