@@ -24,37 +24,14 @@ def power_model(c, dc, a, p, q):
     return a * (c ** p) * (dc ** q)
 
 # --------------------------------------------------
-# SAFE COLUMN EXTRACTOR
+# NORMALIZATION (robust)
 # --------------------------------------------------
 
-def extract_columns(df, case):
-    cols = df.columns.tolist()
-
-    # --- c ---
-    if "c_norm" in cols:
-        c_norm = df["c_norm"].values
-    elif "c_struct" in cols:
-        c = df["c_struct"].values
-        c_norm = c / np.max(c)
-    elif "c" in cols:
-        c = df["c"].values
-        c_norm = c / np.max(c)
-    else:
-        raise ValueError(f"{case}: No valid c column found. Columns: {cols}")
-
-    # --- dc ---
-    if "dc_norm" in cols:
-        dc_norm = df["dc_norm"].values
-    else:
-        raise ValueError(f"{case}: Missing dc_norm")
-
-    # --- d2c ---
-    if "d2c_norm" in cols:
-        d2c_norm = df["d2c_norm"].values
-    else:
-        raise ValueError(f"{case}: Missing d2c_norm")
-
-    return c_norm, dc_norm, d2c_norm
+def normalize_safe(x):
+    max_val = np.max(np.abs(x))
+    if max_val == 0:
+        return x
+    return x / max_val
 
 # --------------------------------------------------
 # MAIN ANALYSIS
@@ -71,15 +48,23 @@ def process_case(case):
         return None
 
     df = pd.read_csv(data_path)
-
-    # DEBUG (optional)
     print("Columns:", df.columns.tolist())
 
     # --------------------------------------------------
-    # Extract normalized data
+    # Extract raw data
     # --------------------------------------------------
 
-    c_norm, dc_norm, d2c_norm = extract_columns(df, case)
+    c = df["c"].values
+    dc = df["dc"].values
+    d2c = df["d2c"].values
+
+    # --------------------------------------------------
+    # Normalize
+    # --------------------------------------------------
+
+    c_norm = normalize_safe(c)
+    dc_norm = normalize_safe(dc)
+    d2c_norm = normalize_safe(d2c)
 
     # --------------------------------------------------
     # Get model params
@@ -96,7 +81,7 @@ def process_case(case):
     residual = d2c_norm - d2c_model
 
     # --------------------------------------------------
-    # Residual Vector Field
+    # Residual Flow Field
     # --------------------------------------------------
 
     plt.figure(figsize=(8, 6))
@@ -104,7 +89,7 @@ def process_case(case):
     sc = plt.scatter(c_norm, dc_norm, c=residual, cmap="coolwarm", s=40)
     plt.colorbar(sc, label="Residual (true - model)")
 
-    # arrows (residual direction)
+    # residual arrows
     for i in range(1, len(c_norm)):
         plt.arrow(
             c_norm[i-1],
