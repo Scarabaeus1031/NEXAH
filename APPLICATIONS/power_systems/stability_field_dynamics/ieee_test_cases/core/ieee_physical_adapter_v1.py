@@ -96,15 +96,16 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
 # ------------------------------------------------------------
 
 def _load_case(case: str):
-    if case == "ieee14":
-        return pn.case14()
-    elif case == "ieee9":
+    if case == "ieee9":
         return pn.case9()
+    elif case == "ieee14":
+        return pn.case14()
     elif case == "ieee30":
-        return pn.case30()   # ✅ NEW
+        return pn.case30()
+    elif case == "ieee57":
+        return pn.case57()   # 🔥 NEW
     else:
         raise ValueError(f"Unknown case: {case}")
-
 
 def _compute_loops(theta, net):
     """
