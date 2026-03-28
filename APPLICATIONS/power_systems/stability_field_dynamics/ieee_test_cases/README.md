@@ -237,6 +237,113 @@ Implication:
 
 ---
 
+---
+
+## 🌐 Universal Structure (V53–V55)
+
+A key result of this framework is:
+
+> Collapse dynamics are **structurally identical across systems**.
+
+Extended validation on:
+
+- IEEE 30  
+- IEEE 57  
+- IEEE 118  
+
+reveals:
+
+### 1. Scaling Law (V53)
+
+The manifold equation:
+
+d²c ≈ a · c^p · (dc)^q  
+
+has **stable exponents across system size**:
+
+| System | p (state) | q (drift) |
+|--------|----------|----------|
+| IEEE9 / 14 | ~0.44 | ~0.97 |
+| IEEE30 / 57 / 118 | ~0.31 | ~0.89 |
+
+→ **Parameters converge — not diverge**
+
+---
+
+### 2. Geometry Overlap (V54)
+
+Projection into:
+
+(distance, residual)
+
+shows:
+
+→ identical geometric structure across systems  
+→ same collapse regions  
+→ same deformation patterns  
+
+![Geometry Comparison](outputs/ieee_v54_geometry_comparison.png)
+
+---
+
+### 3. Cluster Structure (V55)
+
+Clustering in (distance, residual) reveals:
+
+| Cluster | Meaning |
+|--------|--------|
+| Core cluster | stable regime |
+| Secondary cluster | pre-collapse |
+| Noise points | transition / collapse boundary |
+
+Observed:
+
+- same number of clusters  
+- same cluster centers  
+- same cluster sizes  
+
+across IEEE30 / IEEE57 / IEEE118.
+
+![Cluster Structure](outputs/ieee_v55_cluster_structure.png)
+
+---
+
+## 🔥 Key Result
+
+> Collapse is governed by a **universal low-dimensional structure**  
+> independent of system size.
+
+---
+
+## 🧠 Interpretation
+
+Power systems of different sizes:
+
+→ do not create new collapse behaviors  
+→ they follow the **same structural blueprint**
+
+---
+
+## ⚡ Implication
+
+This reduces:
+
+- high-dimensional grid dynamics  
+→ to  
+- a small number of structural states  
+
+---
+
+## 🧭 Final Insight (Extended)
+
+> Systems do not collapse differently at scale.  
+>  
+> They collapse the same way —  
+>  
+> just with more nodes.  
+
+---
+
 ## Structural Transition Sequence
 
 1. coherence (aligned manifold)  
