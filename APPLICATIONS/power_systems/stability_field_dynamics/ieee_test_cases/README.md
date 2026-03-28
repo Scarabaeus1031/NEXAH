@@ -271,6 +271,182 @@ Collapse is governed by:
 > and finally leaves the structure that sustains it.  
 
 ---
+---
+
+## Visual Evidence — Collapse Geometry (V43–V52)
+
+The following visualizations illustrate the transition from:
+
+→ prediction  
+→ to geometric understanding  
+→ to topological collapse structure  
+
+---
+
+### 1. Collapse Manifold (Phase Space)
+
+Trajectory in (c, dc, d²c):
+
+![IEEE14 Phase Space](outputs/ieee14_v40_phase_space.png)
+
+Key observation:
+
+→ all systems converge toward a common pre-collapse state  
+
+---
+
+### 2. Manifold Fit (V43)
+
+Empirical relationship:
+
+d²c ≈ a · c^p · (dc)^q
+
+![IEEE14 Manifold Fit](outputs/ieee14_v43_fit.png)
+
+Key observation:
+
+→ acceleration is governed by state–drift interaction  
+
+---
+
+### 3. Residual Structure (V44)
+
+Deviation between model and system:
+
+![IEEE14 Residual](outputs/ieee14_v44_residuals.png)
+
+Key observation:
+
+→ structured residual patterns (not noise)  
+
+---
+
+### 4. Extended Manifold (V45)
+
+Improved model capturing nonlinear structure:
+
+![IEEE14 Extended Fit](outputs/ieee14_v45_extended_fit.png)
+
+Key observation:
+
+→ manifold is slightly curved / folded  
+
+---
+
+### 5. Vector Field (V47)
+
+Flow behavior in (c, dc):
+
+![IEEE14 Vector Field](outputs/ieee14_v47_vector_field.png)
+
+Key observation:
+
+→ trajectories follow structured flow paths  
+
+---
+
+### 6. Flow Topology (V48)
+
+Streamline and curl structure:
+
+![IEEE14 Streamlines](outputs/ieee14_v48_streamlines.png)
+
+Key observation:
+
+→ rotational flow + directional transitions  
+
+---
+
+### 7. Residual Flow Field (V49)
+
+Residual-driven dynamics:
+
+![IEEE14 Residual Flow](outputs/ieee14_v49_residual_flow.png)
+
+Key observation:
+
+→ instability propagates along structured directions  
+
+---
+
+### 8. Rift — Collapse Boundary (V51)
+
+Zero-residual boundary:
+
+![IEEE14 Rift](outputs/ieee14_v51_rift.png)
+
+Key observation:
+
+→ collapse occurs along a continuous boundary (rift)  
+
+---
+
+### 9. Stability Distance (V52)
+
+Distance to rift:
+
+![IEEE14 Distance](outputs/ieee14_v52_stability_distance_map.png)
+
+Key observation:
+
+→ stability is proportional to proximity to the rift  
+
+---
+
+### 10. Collapse Strength (V52)
+
+Residual × progression:
+
+![IEEE14 Strength](outputs/ieee14_v52_collapse_strength_map.png)
+
+Key observation:
+
+→ instability concentrates locally before collapse  
+
+---
+
+### 11. Residual–Distance Space (Critical Insight)
+
+Projection:
+
+(distance, residual)
+
+![IEEE14 Residual vs Distance](outputs/ieee14_v52_residual_vs_distance.png)
+
+Key observation:
+
+→ discrete clusters emerge (triangle, polygon, collapse points)  
+
+---
+
+## Visual Summary
+
+The system evolves through:
+
+1. smooth trajectory  
+2. curvature increase  
+3. structured residual patterns  
+4. flow organization  
+5. rift alignment  
+6. distance expansion  
+7. topological branching  
+8. collapse  
+
+---
+
+## Visual Core Insight
+
+> Collapse is not only measurable —  
+>  
+> it is **visible**.  
+>  
+>  
+> The system reveals its failure in geometry,  
+> in flow,  
+> and in structure —  
+>  
+> long before it happens.
+---
 
 ## Repository Structure
 
