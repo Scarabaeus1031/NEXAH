@@ -11,6 +11,7 @@ This module transforms classical power system stability analysis into a:
 - topological state graph  
 - physically coupled predictive framework  
 - multi-system validated collapse predictor  
+- geometric + dynamical + topological collapse model  
 
 Standard IEEE test systems (IEEE 9, IEEE 14, IEEE 30) are used as real-world benchmarks.
 
@@ -29,7 +30,11 @@ Extended into:
 - Resonance → coupled system  
 - Coupling → physical system embedding  
 - Embedding → predictive collapse detection  
-- Prediction → cross-system universality  
+- Prediction → universality  
+- Universality → manifold  
+- Manifold → rift  
+- Rift → distance  
+- Distance → topology  
 
 ---
 
@@ -51,67 +56,140 @@ Extended into:
 | V20 | Curvature-based early warning (d²C/dλ²) |
 | V21 | Unified collapse predictor |
 | V22 | Fragmentation-aware scoring |
-| V30 | Multi-system benchmark (IEEE30 added) |
-| V31 | Cross-system validation (lead-time consistency) |
-| V32 | Robustness (dense + stochastic sampling) |
-| V33 | Structural vs classical comparison |
-| V34 | Divergence detection engine |
-| V35 | Robust divergence validation |
-| V36 | Unified predictor (curvature + fragmentation) |
+| V30 | Multi-system benchmark |
+| V31 | Cross-system validation |
+| V32 | Robustness validation |
+| V33–V35 | Divergence detection |
+| V36 | Unified predictor |
+| V40–V42 | Collapse manifold (phase-space attractor) |
+| V43 | Manifold equation (power-law coupling) |
+| V47–V50 | Flow fields, residual dynamics |
+| V51 | Rift extraction (collapse boundary) |
+| V52 | Stability distance + collapse geometry |
 
 ---
 
-## Key Results — IEEE 14 (Physically Coupled)
+## Collapse Manifold
 
-- Collapse load: ≈ 4.03  
-- First WARNING: ≈ 3.66  
-- First CRITICAL: ≈ 3.96  
-- First ACCEL (curvature): ≈ 3.81  
+All systems converge toward:
 
-Lead times:
+(c, dc, d²c) → (1, 1, α)
 
-- WARNING lead ≈ 0.37  
-- CRITICAL lead ≈ 0.07  
-- ACCEL lead ≈ 0.22  
+This defines a:
 
----
+→ **low-dimensional attractor manifold**
 
-## Key Results — IEEE 9
+Properties:
 
-- Collapse load: ≈ 2.31  
-- Faster transition dynamics  
-- Shorter warning phase  
-- Reduced structural complexity  
+- stable under perturbations  
+- invariant across systems  
+- independent of topology (first-order)  
 
 ---
 
-## Key Results — IEEE 30
+## Manifold Equation
 
-- Collapse load: ≈ 3.73  
-- Strong curvature amplification before collapse  
-- Clear fragmentation growth  
-- Consistent divergence behavior  
+Empirical law:
+
+d²c ≈ a · c^p · (dc)^q  
+
+Key insight:
+
+- dc (drift) dominates  
+- c (state) modulates  
+- d²c (acceleration) emerges from interaction  
 
 ---
 
-## Fundamental Discovery
+## Rift — Collapse Boundary
 
-Across all systems:
+The rift is defined as:
 
-→ **Collapse is preceded by structural amplification and instability**
+→ residual ≈ 0  
 
-Before collapse:
+It represents:
 
-- c_struct ↑  
-- dc/dload ↑  
-- d²c/dload² ↑ (strongest early signal)  
-- fragmentation ↑  
+- alignment between system and manifold  
+- geometric collapse corridor  
 
-After collapse:
+Properties:
 
-- convergence fails  
-- structure disappears  
-- system enters absorbing state  
+- continuous structure in (c, dc) space  
+- spans full system trajectory  
+- acts as structural backbone  
+
+---
+
+## Stability Distance
+
+Defined as:
+
+distance = min || (c, dc) − rift ||
+
+Interpretation:
+
+- small → stable (aligned)  
+- large → unstable (deviating)  
+
+Key behavior:
+
+- near zero in SAFE/WARNING  
+- increases sharply near collapse  
+
+---
+
+## Collapse Strength
+
+Defined as:
+
+collapse_strength ≈ |residual| × τ  
+
+Interpretation:
+
+- measures instability intensity  
+- grows rapidly near collapse  
+
+---
+
+## Collapse Geometry (V52)
+
+Projection into:
+
+(distance, residual)
+
+reveals structured regions:
+
+| Region | Description |
+|--------|------------|
+| Core | stable cluster near (0,0) |
+| Triangle | early deformation |
+| Polygon | multi-state branching |
+| Extremes | collapse points |
+
+---
+
+## Branching Topology
+
+Collapse is not continuous.
+
+Observed:
+
+→ discrete state clusters  
+
+This implies:
+
+- multi-valued system states  
+- non-unique mapping from load → structure  
+
+---
+
+## Structural Transition Sequence
+
+1. coherence (aligned manifold)  
+2. fragmentation (spread)  
+3. branching (multiple states)  
+4. instability amplification  
+5. collapse  
 
 ---
 
@@ -119,25 +197,12 @@ After collapse:
 
 Across IEEE 9 / 14 / 30:
 
-- curvature peak occurs before collapse  
-- lead time ≈ constant (~0.04–0.15 depending on resolution)  
-
-→ indicates a **scale-invariant instability precursor**
-
----
-
-## GH Corridor
-
-GH is not a set of points.
-
-→ It forms a **continuous corridor in phase space**
-
-Properties:
-
-- extended in θ  
-- bounded in C  
-- dynamically active  
-- supports transitions  
+- curvature peak before collapse  
+- divergence spike  
+- fragmentation growth  
+- manifold convergence  
+- rift alignment  
+- distance expansion  
 
 ---
 
@@ -145,123 +210,65 @@ Properties:
 
 | Phase | Meaning | Behavior |
 |------|--------|----------|
-| SAFE | stable field | coherent structure |
-| WARNING | fragmentation onset | coherence loss |
-| CRITICAL | instability peak | curvature dominance |
-| COLLAPSED | no solution | structure disappears |
+| SAFE | coherent | stable alignment |
+| WARNING | fragmentation | coherence loss |
+| CRITICAL | acceleration | instability growth |
+| PRE-COLLAPSE | manifold convergence | high alignment |
+| COLLAPSED | divergence | system breakdown |
 
 ---
 
-## New Layer — Physical Coupling
+## New Layer — Structural Topology
 
-Direct mapping from IEEE system:
+The system is now described by:
 
-- C = 1 − V  
-- θ = phase angle (rad)  
-- loops = flow-weighted interaction  
-
-This embeds:
-
-→ real electrical dynamics into structural representation  
+1. Geometry → manifold  
+2. Dynamics → equation  
+3. Boundary → rift  
+4. Metric → distance  
+5. Topology → branching  
 
 ---
 
-## New Layer — Predictive Metrics
+## Fundamental Discovery
 
-Key indicators:
+Collapse is governed by:
 
-- c_struct → structural intensity  
-- dc/dload → drift  
-- d²c/dload² → acceleration (primary early warning)  
-- fragmentation → coherence loss  
-- divergence → mismatch with classical indicators  
-
----
-
-## Divergence Principle
-
-Collapse is preceded by:
-
-→ **decoupling between physical and structural descriptions**
-
-This manifests as:
-
-- growing divergence between:
-  - voltage-based indicators  
-  - structural metrics  
+- a geometric manifold  
+- a dynamical equation  
+- a boundary (rift)  
+- a distance field  
+- a topological transition  
 
 ---
 
-## Unified Collapse Predictor (V36)
+## Theoretical Insight
 
-A combined metric:
-
-- curvature (d²c)  
-- fragmentation  
-
-produces:
-
-→ a single predictive signal across all systems  
-
----
-
-## Structural Behavior
-
-| Stage | Behavior |
-|------|--------|
-| Early | smooth structural growth |
-| Mid | fragmentation begins |
-| Pre-collapse | curvature spike |
-| Collapse | discontinuity |
-| Post | zero structure |
-
----
-
-## System Classification
-
-1. Diffuse Field  
-2. Activated Field  
-3. Coupled Field  
-4. Cyclic Field  
-5. Phase-Coupled System  
-6. Corridor System  
-7. Predictive Physical System  
-8. Universal Collapse System  
-
----
-
-## Architecture Layers
-
-1. Field Layer  
-2. Dynamic Layer  
-3. Memory Layer  
-4. Resonance Layer  
-5. Topological Layer  
-6. Coupling Layer  
-7. Phase Layer  
-8. Corridor Layer  
-9. Physical Layer  
-10. Predictive Layer  
-11. Validation Layer  
+> Stability is equivalent to alignment with structure.  
+>  
+> Collapse begins when the system drifts away from that structure.  
+>  
+>  
+> Failure is not caused by magnitude —  
+>  
+> but by loss of alignment and uniqueness.  
 
 ---
 
 ## Final Core Insight
 
-> Stability is not a point.  
+> Collapse is not a point.  
 >  
-> It is not even just a region.  
+> It is not even just a process.  
 >  
-> It is a structured corridor in phase space,  
-> where motion is allowed, constrained, and sustained.  
->  
-> Collapse is not a sudden event —  
-> it is a geometric transition revealed in advance.  
+> It is a geometric + dynamical + topological transition.  
 >  
 >  
-> Systems do not fail when they are weak.  
+> The system does not fail suddenly —  
 >  
-> They fail when their structure loses coherence.  
+> it loses coherence, splits into multiple states,  
+>  
+> and finally leaves the structure that sustains it.  
 
 ---
 
