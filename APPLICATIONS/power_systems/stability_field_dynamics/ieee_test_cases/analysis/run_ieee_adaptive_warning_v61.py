@@ -122,7 +122,8 @@ def simulate(case):
     # DETECTION
     # --------------------------------------------------
 
-    warning, slope, accel, events = detect_events(probs)
+    warning = compute_warning(probs)
+    warning, slope, accel, events = detect_events(warning)
 
     print("⚠️ EVENTS:", events)
 
