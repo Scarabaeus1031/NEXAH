@@ -103,7 +103,9 @@ def _load_case(case: str):
     elif case == "ieee30":
         return pn.case30()
     elif case == "ieee57":
-        return pn.case57()   # 🔥 NEW
+        return pn.case57()
+    elif case == "ieee118":
+        return pn.case118()   # 🔥 NEW LEVEL
     else:
         raise ValueError(f"Unknown case: {case}")
 
