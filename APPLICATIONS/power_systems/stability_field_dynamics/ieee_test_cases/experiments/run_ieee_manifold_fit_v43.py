@@ -11,7 +11,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 
 BASE_PATH = Path("APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs")
 
-CASES = ["ieee9", "ieee14", "ieee30"]
+CASES = ["ieee9", "ieee14", "ieee30", "ieee57", "ieee118"]
 
 # --------------------------------------------------
 # MODEL DEFINITIONS
