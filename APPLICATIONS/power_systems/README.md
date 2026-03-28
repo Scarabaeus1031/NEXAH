@@ -2,17 +2,18 @@
 
 ## Overview
 
-This module extends classical power system stability analysis into a **dynamic field-based framework**.
+This module extends classical power system stability analysis into a **dynamic field-based and predictive framework**.
 
-Instead of treating stability as a binary outcome (stable vs collapse), we represent system behavior as:
+Instead of treating stability as a binary outcome (stable vs collapse), system behavior is represented as:
 
-* a continuous field
-* a dynamic flow system
-* a recurrence-based memory structure
-* a resonance-driven organization
-* a phase-structured dynamical system
+* a continuous field  
+* a dynamic flow system  
+* a recurrence-based memory structure  
+* a resonance-driven organization  
+* a phase-structured dynamical system  
+* a physically coupled predictive model  
 
-Standard IEEE test systems (starting with 14-bus) are used as benchmarks.
+Standard IEEE test systems (IEEE 14, IEEE 9) are used as benchmarks.
 
 ---
 
@@ -20,28 +21,30 @@ Standard IEEE test systems (starting with 14-bus) are used as benchmarks.
 
 > Stability is not a state — it is a geometry.
 
-This geometry is explored through successive transformations:
+This geometry evolves through successive transformations:
 
-* Geometry → field representation
-* Field → flow dynamics
-* Flow → trajectories
-* Trajectories → recurrence (memory)
-* Memory → resonance structure
-* Resonance → coupling
-* Coupling → system-level organization
+* Geometry → field representation  
+* Field → flow dynamics  
+* Flow → trajectories  
+* Trajectories → recurrence (memory)  
+* Memory → resonance structure  
+* Resonance → coupling  
+* Coupling → system-level organization  
+* Organization → **physical embedding**  
+* Physical embedding → **predictive collapse detection**
 
 ---
 
 ## Fundamental Observation
 
-Across experiments, the system consistently decomposes into:
+Across all experiments, the system consistently decomposes into:
 
 → **3 + 1 structure**
 
-* Band A
-* Band B
-* Gap (interface region)
-* Global flow field
+* Band A  
+* Band B  
+* Gap (interface region)  
+* Global flow field  
 
 However:
 
@@ -50,84 +53,104 @@ However:
 | IEEE 9  | structure present but dynamically inactive |
 | IEEE 14 | structure becomes dynamically coupled      |
 
-> Structure alone is not sufficient —
+> Structure alone is not sufficient —  
 > interaction determines whether a system forms.
+
+---
+
+## Physical Coupling (NEW)
+
+The framework is now directly coupled to real IEEE systems via:
+
+* voltage magnitude (V)  
+* phase angle (θ)  
+* power flow (loop proxy)
+
+Mapping:
+
+* C = 1 − V  
+* θ = phase angle (rad)  
+* loops = flow-weighted phase interaction  
+
+This enables:
+
+→ direct response to load scaling  
+→ detection of physical collapse (non-convergence)
 
 ---
 
 ## Key Results — IEEE 14
 
-* Dual resonance bands:
+* Collapse load: ≈ 4.03  
 
-  * Band A ≈ 0.008
-  * Band B ≈ 0.84
+Pre-collapse behavior:
 
-* Gap:
+* WARNING: ≈ 3.6–3.7  
+* CRITICAL: ≈ 3.9  
+* ACCELERATION (curvature): ≈ 3.8  
 
-  * ≈ 0.832 (interface region)
+Lead times:
 
-* Emergent structures:
+* WARNING ≈ 0.33–0.37  
+* CRITICAL ≈ 0.07–0.11  
 
-  * States: 2
-  * Loops: 6
+Observation:
 
-* Coupling metric:
-
-  * C ≈ 0.0036
-  * P ≈ 0.47
-  * R ≈ 0.27
-  * L ≈ 0.028
-
-These results are internally consistent across runs.
+* smooth structural growth  
+* nonlinear amplification  
+* sharp curvature increase before collapse  
+* complete structural disappearance after collapse  
 
 ---
 
-## Coupling Principle
+## Key Results — IEEE 9
 
-We define:
-
-C = P × R × L
-
-Where:
-
-* P → flow persistence
-* R → recurrence concentration
-* L → loop density
-
-Interpretation:
-
-* C ≈ 0 → diffuse regime
-* C > 0 → dynamically coupled regime
+* Collapse load: ≈ 2.31  
+* Faster transition to collapse  
+* Reduced GH corridor structure  
+* Shorter warning phase  
 
 ---
 
-## Local Emergence
+## Collapse Mechanism (NEW)
 
-Coupling is spatially localized:
+The collapse process follows a structured sequence:
 
-C(x,y) = P(x,y) × R(x,y) × L(x,y)
+1. **Coherence (SAFE)**  
+2. **Fragmentation (WARNING)**  
+3. **Acceleration (CRITICAL)**  
+4. **Breakdown (COLLAPSED)**  
 
-→ Structure appears only in specific regions of the field
+Key insight:
 
-### → “Birth zones” of structure
-
----
-
-## Phase Structure (CCC / GH / KKK)
-
-| Phase | Meaning   | Behavior              |
-| ----- | --------- | --------------------- |
-| CCC   | expansion | high activity         |
-| KKK   | collapse  | absorbing             |
-| GH    | interface | transition / coupling |
+> Collapse does not begin at failure —  
+> it begins with loss of coherence.
 
 ---
 
-## Phase Insight
+## Predictive Metrics
 
-> The system is not dominated by expansion or collapse.
->
-> Most persistent structure appears in the **interface region (GH)**.
+The system is now described by four coupled quantities:
+
+1. **Structural intensity**
+   → c_struct  
+
+2. **Growth rate**
+   → dc/dload  
+
+3. **Acceleration**
+   → d²c/dload²  
+
+4. **Fragmentation (coherence loss)**
+   → std(θ) × std(loops)  
+
+---
+
+## Unified Insight
+
+> Collapse is not triggered by maximum stress.  
+>  
+> It is triggered when the system loses internal alignment.  
 
 ---
 
@@ -139,10 +162,10 @@ GH does not appear as isolated points.
 
 Properties:
 
-* extended in θ
-* bounded in C
-* supports trajectories
-* associated with non-zero coupling
+* extended in θ  
+* bounded in C  
+* dynamically active  
+* supports transitions  
 
 ---
 
@@ -150,28 +173,14 @@ Properties:
 
 Particles initialized in GH show:
 
-* constrained radial motion (C)
-* less constrained angular motion (θ)
-* persistent trajectories
+* constrained radial motion (C)  
+* less constrained angular motion (θ)  
+* persistent trajectories  
 
 ### Interpretation
 
-→ GH behaves like a **band-like dynamical region**,
+→ GH behaves as a **band-like dynamical region**,  
 not a point attractor.
-
----
-
-## Attractor Interpretation
-
-Classical view:
-
-* attractor = point / set
-
-Observed behavior:
-
-* attractor ≈ **extended region (manifold-like)**
-
-This is a descriptive observation, not yet a formal result.
 
 ---
 
@@ -191,7 +200,7 @@ The system shows anisotropic behavior:
 | Noise  | Effect                 |
 | ------ | ---------------------- |
 | low    | no structure           |
-| medium | structure appears      |
+| medium | structure emerges      |
 | high   | structure destabilizes |
 
 → Noise acts as an **activation parameter**
@@ -202,85 +211,78 @@ The system shows anisotropic behavior:
 
 Under time-varying parameters:
 
-* noise(t)
-* rotation(t)
-* damping(t)
+* noise(t)  
+* rotation(t)  
+* damping(t)  
 
 the system exhibits:
 
-* cyclic structure formation
-* regime switching
+* cyclic structure formation  
+* regime switching  
 
-This suggests:
-
-→ stability may be **time-dependent**, not static
+→ Stability can be **time-dependent**
 
 ---
 
 ## Development Stages
 
-| Phase | Description          |
-| ----- | -------------------- |
-| 1     | Classical stability  |
-| 2     | Continuous field     |
-| 3     | Boundary dynamics    |
-| 4     | Flow + particles     |
-| 5     | Recurrence / memory  |
-| 6     | State detection      |
-| 7     | Resonance structure  |
-| 8     | Topology             |
-| 9     | Coupling metric      |
-| 10    | Noise activation     |
-| 11    | Phase cycling        |
-| 12    | Phase classification |
-| 13    | Corridor dynamics    |
+| Phase | Description |
+| ----- | ----------- |
+| 1–13  | Field → flow → resonance → topology |
+| 14–16 | Structural coupling |
+| 17–23 | Coupling metrics + attractor phase |
+| 24–32 | Noise, cycling, GH corridor |
+| 33–36 | Structural coupling + geometry |
+| 37     | Physical IEEE coupling |
+| 38–40  | Predictive framework |
+| 41–42  | Early warning + curvature detection |
+| 43+    | Fragmentation-aware prediction |
 
 ---
 
 ## System Classification
 
-1. Diffuse regime
-2. Activated regime
-3. Coupled regime
-4. Cyclic regime
-5. Phase-structured regime
-6. Corridor-dominated regime
+1. Diffuse regime  
+2. Activated regime  
+3. Coupled regime  
+4. Cyclic regime  
+5. Phase-structured regime  
+6. Corridor-dominated regime  
+7. **Predictive physical system (NEW)**  
 
 ---
 
 ## Architecture Layers
 
-1. Field layer
-2. Dynamic layer
-3. Memory layer
-4. Resonance layer
-5. Topological layer
-6. Coupling layer
-7. Phase layer
-8. Corridor layer
+1. Field layer  
+2. Dynamic layer  
+3. Memory layer  
+4. Resonance layer  
+5. Topological layer  
+6. Coupling layer  
+7. Phase layer  
+8. Corridor layer  
+9. Physical layer  
+10. Predictive layer  
 
 ---
 
-## Current Limitation
+## Current State
 
-The current implementation is:
+The framework is now:
 
-* internally consistent
-* structurally reproducible
-
-but:
-
-* not yet coupled to physical IEEE variables
-* not responsive to load or voltage collapse
-* not predictive
+* physically grounded  
+* structurally consistent  
+* dynamically interpretable  
+* **predictive of collapse**
 
 ---
 
-## Next Steps
+## Open Questions
 
-* map physical variables → (C, θ, loops)
-* test response under load variation
-* evaluate correlation with known stability indicators
+* How general is this behavior across arbitrary networks?  
+* Can spatial localization of collapse be extracted?  
+* How does the framework behave under time-domain disturbances?  
 
 ---
 
@@ -290,26 +292,10 @@ but:
 APPLICATIONS/power_systems/stability_field_dynamics/
 │
 ├── ieee_test_cases/
-│   ├── core/         # coupling, metrics, fundamental operators
-│   ├── pipeline/     # phase data, corridor detection, flow initialization
-│   ├── experiments/  # run_scan_* scripts (v1–v36)
-│   ├── analysis/     # analysis tools (knick, Fourier, fitting, etc.)
-│   ├── outputs/      # plots, CSVs, JSON results
-│   ├── logs/         # stability logs and notes
+│   ├── core/         # coupling, metrics, physical adapter
+│   ├── pipeline/     # phase detection, corridor logic
+│   ├── experiments/  # run_ieee_* scripts (v1–v22+)
+│   ├── analysis/     # geometry, fitting, transforms
+│   ├── outputs/      # plots, CSVs
+│   ├── logs/         # stability logs
 │   └── README.md
-```
-
----
-
-## Working Interpretation
-
-At this stage, the framework should be understood as:
-
-> a structured exploration of dynamical patterns
-> in power systems
-
-The key open question remains:
-
-> Do these observed structures correspond to
-> physically meaningful stability mechanisms —
-> or are they artifacts of the representation?
