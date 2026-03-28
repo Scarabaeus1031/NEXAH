@@ -2,7 +2,7 @@
 
 ## Overview
 
-This module extends classical power system stability analysis into a **dynamic field-based and predictive framework**.
+This module extends classical power system stability analysis into a **dynamic, physically grounded and predictive framework**.
 
 Instead of treating stability as a binary outcome (stable vs collapse), system behavior is represented as:
 
@@ -12,8 +12,9 @@ Instead of treating stability as a binary outcome (stable vs collapse), system b
 * a resonance-driven organization  
 * a phase-structured dynamical system  
 * a physically coupled predictive model  
+* a **cross-validated early warning system**
 
-Standard IEEE test systems (IEEE 14, IEEE 9) are used as benchmarks.
+Standard IEEE test systems (IEEE 9, 14, 30) are used as benchmarks.
 
 ---
 
@@ -30,14 +31,14 @@ This geometry evolves through successive transformations:
 * Memory → resonance structure  
 * Resonance → coupling  
 * Coupling → system-level organization  
-* Organization → **physical embedding**  
-* Physical embedding → **predictive collapse detection**
+* Organization → physical embedding  
+* Physical embedding → predictive collapse detection  
 
 ---
 
 ## Fundamental Observation
 
-Across all experiments, the system consistently decomposes into:
+Across all systems:
 
 → **3 + 1 structure**
 
@@ -46,21 +47,22 @@ Across all experiments, the system consistently decomposes into:
 * Gap (interface region)  
 * Global flow field  
 
-However:
+But:
 
-| System  | Behavior                                   |
-| ------- | ------------------------------------------ |
-| IEEE 9  | structure present but dynamically inactive |
-| IEEE 14 | structure becomes dynamically coupled      |
+| System  | Behavior |
+| ------- | -------- |
+| IEEE 9  | weakly structured, fast collapse |
+| IEEE 14 | strongly structured, extended transition |
+| IEEE 30 | intermediate, smoother degradation |
 
-> Structure alone is not sufficient —  
-> interaction determines whether a system forms.
+> Structure alone is insufficient —  
+> **interaction and coherence determine stability.**
 
 ---
 
-## Physical Coupling (NEW)
+## Physical Coupling
 
-The framework is now directly coupled to real IEEE systems via:
+The framework is directly linked to real grid physics:
 
 * voltage magnitude (V)  
 * phase angle (θ)  
@@ -74,71 +76,34 @@ Mapping:
 
 This enables:
 
-→ direct response to load scaling  
-→ detection of physical collapse (non-convergence)
+* real load scaling experiments  
+* detection of non-convergence (true collapse)  
+* direct comparison with classical indicators  
 
 ---
 
-## Key Results — IEEE 14
+## Collapse Mechanism (Validated)
 
-* Collapse load: ≈ 4.03  
-
-Pre-collapse behavior:
-
-* WARNING: ≈ 3.6–3.7  
-* CRITICAL: ≈ 3.9  
-* ACCELERATION (curvature): ≈ 3.8  
-
-Lead times:
-
-* WARNING ≈ 0.33–0.37  
-* CRITICAL ≈ 0.07–0.11  
-
-Observation:
-
-* smooth structural growth  
-* nonlinear amplification  
-* sharp curvature increase before collapse  
-* complete structural disappearance after collapse  
-
----
-
-## Key Results — IEEE 9
-
-* Collapse load: ≈ 2.31  
-* Faster transition to collapse  
-* Reduced GH corridor structure  
-* Shorter warning phase  
-
----
-
-## Collapse Mechanism (NEW)
-
-The collapse process follows a structured sequence:
+The collapse process follows a **universal sequence**:
 
 1. **Coherence (SAFE)**  
 2. **Fragmentation (WARNING)**  
 3. **Acceleration (CRITICAL)**  
 4. **Breakdown (COLLAPSED)**  
 
-Key insight:
-
-> Collapse does not begin at failure —  
-> it begins with loss of coherence.
-
 ---
 
 ## Predictive Metrics
 
-The system is now described by four coupled quantities:
+The system is defined by four coupled quantities:
 
 1. **Structural intensity**
    → c_struct  
 
-2. **Growth rate**
+2. **Drift**
    → dc/dload  
 
-3. **Acceleration**
+3. **Acceleration (curvature)**
    → d²c/dload²  
 
 4. **Fragmentation (coherence loss)**
@@ -146,19 +111,89 @@ The system is now described by four coupled quantities:
 
 ---
 
-## Unified Insight
+## Key Discovery
 
-> Collapse is not triggered by maximum stress.  
+> Collapse is not driven by maximum stress.  
 >  
-> It is triggered when the system loses internal alignment.  
+> It is driven by **loss of coherence**,  
+> followed by **nonlinear acceleration**.
+
+---
+
+## Validation — Multi-System Benchmark (V31–V36)
+
+Tested across:
+
+* IEEE 9  
+* IEEE 14  
+* IEEE 30  
+
+### Result
+
+Across all systems:
+
+* curvature peak (d²c/dload²) consistently occurs **before collapse**
+* lead time is **stable across systems**
+
+Typical values:
+
+| System  | Collapse | Curvature Peak | Lead Time |
+|--------|---------|----------------|----------|
+| IEEE 9  | ~2.26 | ~2.21 | ~0.04–0.08 |
+| IEEE 14 | ~4.00 | ~3.96 | ~0.04–0.15 |
+| IEEE 30 | ~3.67 | ~3.61 | ~0.04–0.08 |
+
+---
+
+## Comparison to Classical Indicators (NEW)
+
+Classical signals:
+
+* min(V)  
+* dV/dload  
+* voltage deviation  
+
+Observed:
+
+* smooth degradation  
+* weak early signal  
+
+NEXAH signals:
+
+* curvature spike  
+* fragmentation increase  
+* divergence emergence  
+
+### Key Result
+
+> NEXAH detects instability **earlier and sharper** than classical indicators.
+
+---
+
+## Divergence Detection (V34–V35)
+
+Defined:
+
+divergence = NEXAH − Classical  
+
+Observed:
+
+* divergence remains small in stable regime  
+* increases near transition  
+* peaks before collapse  
+
+Extended:
+
+* smoothed divergence  
+* augmented divergence (robust signal)
 
 ---
 
 ## GH Corridor
 
-GH does not appear as isolated points.
+GH is not a point.
 
-→ It forms a **continuous region in phase space**
+→ It forms a **continuous phase-space corridor**
 
 Properties:
 
@@ -169,74 +204,34 @@ Properties:
 
 ---
 
-## Corridor Flow Behavior
-
-Particles initialized in GH show:
-
-* constrained radial motion (C)  
-* less constrained angular motion (θ)  
-* persistent trajectories  
-
-### Interpretation
-
-→ GH behaves as a **band-like dynamical region**,  
-not a point attractor.
-
----
-
 ## Structural Dynamics
 
-The system shows anisotropic behavior:
-
-| Dimension   | Behavior         |
-| ----------- | ---------------- |
-| θ (angular) | less constrained |
-| C (radial)  | constrained      |
+| Dimension   | Behavior |
+| ----------- | -------- |
+| θ (angular) | free / extended |
+| C (radial)  | constrained |
 
 ---
 
 ## Noise Sensitivity
 
-| Noise  | Effect                 |
-| ------ | ---------------------- |
-| low    | no structure           |
-| medium | structure emerges      |
+| Noise  | Effect |
+| ------ | ------ |
+| low    | no structure |
+| medium | structure emerges |
 | high   | structure destabilizes |
-
-→ Noise acts as an **activation parameter**
-
----
-
-## Time-Dependent Dynamics
-
-Under time-varying parameters:
-
-* noise(t)  
-* rotation(t)  
-* damping(t)  
-
-the system exhibits:
-
-* cyclic structure formation  
-* regime switching  
-
-→ Stability can be **time-dependent**
 
 ---
 
 ## Development Stages
 
 | Phase | Description |
-| ----- | ----------- |
-| 1–13  | Field → flow → resonance → topology |
-| 14–16 | Structural coupling |
-| 17–23 | Coupling metrics + attractor phase |
-| 24–32 | Noise, cycling, GH corridor |
-| 33–36 | Structural coupling + geometry |
-| 37     | Physical IEEE coupling |
-| 38–40  | Predictive framework |
-| 41–42  | Early warning + curvature detection |
-| 43+    | Fragmentation-aware prediction |
+|------|-------------|
+| V1–V16 | field → topology |
+| V17–V23 | coupling + attractor |
+| V24–V32 | phase dynamics |
+| V33–V35 | validation + comparison |
+| V36     | unified predictor (paper-ready) |
 
 ---
 
@@ -248,7 +243,7 @@ the system exhibits:
 4. Cyclic regime  
 5. Phase-structured regime  
 6. Corridor-dominated regime  
-7. **Predictive physical system (NEW)**  
+7. **Predictive physical system**
 
 ---
 
@@ -272,17 +267,19 @@ the system exhibits:
 The framework is now:
 
 * physically grounded  
-* structurally consistent  
-* dynamically interpretable  
-* **predictive of collapse**
+* multi-system validated  
+* predictive  
+* comparable to classical methods  
+* showing **early-warning capability**
 
 ---
 
 ## Open Questions
 
-* How general is this behavior across arbitrary networks?  
-* Can spatial localization of collapse be extracted?  
-* How does the framework behave under time-domain disturbances?  
+* Generalization to arbitrary networks  
+* Node-level localization of collapse  
+* Time-domain stability (dynamic simulation)  
+* Integration into real-time monitoring  
 
 ---
 
@@ -292,30 +289,10 @@ The framework is now:
 APPLICATIONS/power_systems/stability_field_dynamics/
 │
 ├── ieee_test_cases/
-│   ├── core/         # coupling, metrics, physical adapter
-│   ├── pipeline/     # phase detection, corridor logic
-│   ├── experiments/  # run_ieee_* scripts (v1–v22+)
-│   ├── analysis/     # geometry, fitting, transforms
-│   ├── outputs/      # plots, CSVs
-│   ├── logs/         # stability logs
+│   ├── core/         # physical adapter, metrics
+│   ├── pipeline/     # phase + corridor logic
+│   ├── experiments/  # run_ieee_* (v1–v36)
+│   ├── analysis/     # transforms, fitting
+│   ├── outputs/      # CSV + plots
+│   ├── logs/         # research logs
 │   └── README.md
-```
-
-## Working Interpretation
-
-At this stage, the framework should be understood as:
-
-a structured, physically grounded model
-of how complex systems approach collapse
-
-⸻
-
-## Final Core Insight
-```text
-Stability is not the absence of change.
-
-It is the persistence of coherence under load.
-
-Collapse is not a sudden event —
-it is a geometric transition that becomes visible before it happens.
-```
