@@ -17,6 +17,12 @@ Standard IEEE test systems (IEEE 9, IEEE 14, IEEE 30) are used as real-world ben
 
 ---
 
+## 🚀 New here?
+
+👉 Start with: [START_HERE.md](START_HERE.md)
+
+---
+
 ## Core Idea
 
 > Stability is not a binary state — it is a geometry.  
