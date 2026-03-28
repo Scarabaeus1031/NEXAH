@@ -10,8 +10,9 @@ This module transforms classical power system stability analysis into a:
 - resonance-driven structure formation  
 - topological state graph  
 - physically coupled predictive framework  
+- multi-system validated collapse predictor  
 
-Standard IEEE test systems (IEEE 14, IEEE 9) are used as real-world benchmarks.
+Standard IEEE test systems (IEEE 9, IEEE 14, IEEE 30) are used as real-world benchmarks.
 
 ---
 
@@ -28,6 +29,7 @@ Extended into:
 - Resonance → coupled system  
 - Coupling → physical system embedding  
 - Embedding → predictive collapse detection  
+- Prediction → cross-system universality  
 
 ---
 
@@ -49,6 +51,13 @@ Extended into:
 | V20 | Curvature-based early warning (d²C/dλ²) |
 | V21 | Unified collapse predictor |
 | V22 | Fragmentation-aware scoring |
+| V30 | Multi-system benchmark (IEEE30 added) |
+| V31 | Cross-system validation (lead-time consistency) |
+| V32 | Robustness (dense + stochastic sampling) |
+| V33 | Structural vs classical comparison |
+| V34 | Divergence detection engine |
+| V35 | Robust divergence validation |
+| V36 | Unified predictor (curvature + fragmentation) |
 
 ---
 
@@ -65,40 +74,55 @@ Lead times:
 - CRITICAL lead ≈ 0.07  
 - ACCEL lead ≈ 0.22  
 
-Observation:
-
-- smooth structural growth  
-- strong curvature increase before collapse  
-- complete structural breakdown after non-convergence  
-
 ---
 
 ## Key Results — IEEE 9
 
 - Collapse load: ≈ 2.31  
-- Earlier instability onset than IEEE14  
-- Less structured GH behavior  
-- Faster transition into collapse  
+- Faster transition dynamics  
+- Shorter warning phase  
+- Reduced structural complexity  
+
+---
+
+## Key Results — IEEE 30
+
+- Collapse load: ≈ 3.73  
+- Strong curvature amplification before collapse  
+- Clear fragmentation growth  
+- Consistent divergence behavior  
 
 ---
 
 ## Fundamental Discovery
 
-Both systems exhibit:
+Across all systems:
 
-→ **Pre-collapse structural amplification**
+→ **Collapse is preceded by structural amplification and instability**
 
 Before collapse:
 
 - c_struct ↑  
 - dc/dload ↑  
-- d²c/dload² ↑ (strongest signal)  
+- d²c/dload² ↑ (strongest early signal)  
+- fragmentation ↑  
 
 After collapse:
 
 - convergence fails  
 - structure disappears  
 - system enters absorbing state  
+
+---
+
+## Universal Collapse Signature
+
+Across IEEE 9 / 14 / 30:
+
+- curvature peak occurs before collapse  
+- lead time ≈ constant (~0.04–0.15 depending on resolution)  
+
+→ indicates a **scale-invariant instability precursor**
 
 ---
 
@@ -121,26 +145,24 @@ Properties:
 
 | Phase | Meaning | Behavior |
 |------|--------|----------|
-| SAFE | stable field | low structure |
-| WARNING | transition onset | growing instability |
-| CRITICAL | near collapse | peak structure |
-| COLLAPSED | no solution | zero structure |
+| SAFE | stable field | coherent structure |
+| WARNING | fragmentation onset | coherence loss |
+| CRITICAL | instability peak | curvature dominance |
+| COLLAPSED | no solution | structure disappears |
 
 ---
 
 ## New Layer — Physical Coupling
 
-The system is now directly linked to:
-
-- voltage magnitude (V)  
-- phase angle (θ)  
-- power flow (loops proxy)  
-
-Mapping:
+Direct mapping from IEEE system:
 
 - C = 1 − V  
 - θ = phase angle (rad)  
-- loops = flow-weighted phase interaction  
+- loops = flow-weighted interaction  
+
+This embeds:
+
+→ real electrical dynamics into structural representation  
 
 ---
 
@@ -149,16 +171,37 @@ Mapping:
 Key indicators:
 
 - c_struct → structural intensity  
-- dc/dload → growth rate  
-- d²c/dload² → acceleration (early warning)  
+- dc/dload → drift  
+- d²c/dload² → acceleration (primary early warning)  
+- fragmentation → coherence loss  
+- divergence → mismatch with classical indicators  
 
 ---
 
-## Unified Collapse Insight
+## Divergence Principle
 
-> Collapse is not detected at failure.  
->  
-> It is revealed by acceleration.  
+Collapse is preceded by:
+
+→ **decoupling between physical and structural descriptions**
+
+This manifests as:
+
+- growing divergence between:
+  - voltage-based indicators  
+  - structural metrics  
+
+---
+
+## Unified Collapse Predictor (V36)
+
+A combined metric:
+
+- curvature (d²c)  
+- fragmentation  
+
+produces:
+
+→ a single predictive signal across all systems  
 
 ---
 
@@ -166,8 +209,8 @@ Key indicators:
 
 | Stage | Behavior |
 |------|--------|
-| Early | smooth growth |
-| Mid | nonlinear amplification |
+| Early | smooth structural growth |
+| Mid | fragmentation begins |
 | Pre-collapse | curvature spike |
 | Collapse | discontinuity |
 | Post | zero structure |
@@ -183,6 +226,7 @@ Key indicators:
 5. Phase-Coupled System  
 6. Corridor System  
 7. Predictive Physical System  
+8. Universal Collapse System  
 
 ---
 
@@ -198,6 +242,7 @@ Key indicators:
 8. Corridor Layer  
 9. Physical Layer  
 10. Predictive Layer  
+11. Validation Layer  
 
 ---
 
@@ -212,6 +257,11 @@ Key indicators:
 >  
 > Collapse is not a sudden event —  
 > it is a geometric transition revealed in advance.  
+>  
+>  
+> Systems do not fail when they are weak.  
+>  
+> They fail when their structure loses coherence.  
 
 ---
 
@@ -220,6 +270,7 @@ Key indicators:
 APPLICATIONS/power_systems/stability_field_dynamics/
 │
 ├── ieee_test_cases/
+│   ├── core/
 │   ├── pipeline/
 │   ├── experiments/
 │   ├── analysis/
