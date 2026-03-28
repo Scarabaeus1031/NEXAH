@@ -1,4 +1,4 @@
-# run_ieee_transition_probabilities_v57.py
+# run_ieee_transition_probability_v57.py
 
 import numpy as np
 import pandas as pd
@@ -12,10 +12,10 @@ from pathlib import Path
 BASE_PATH = Path("APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs")
 CASES = ["ieee30", "ieee57", "ieee118"]
 
-# fixed cluster order for comparable matrices
 STATE_ORDER = [-1, 0, 1]
+
 STATE_LABELS = {
-    -1: "noise/transition",
+    -1: "noise",
      0: "core",
      1: "secondary"
 }
@@ -24,85 +24,68 @@ STATE_LABELS = {
 # HELPERS
 # --------------------------------------------------
 
-def load_transitions(case: str):
-    file_path = BASE_PATH / f"{case}_v56_transitions.csv"
-    if not file_path.exists():
-        print(f"Missing file: {file_path}")
+def load_transitions(case):
+    path = BASE_PATH / f"{case}_v56_transitions.csv"
+
+    if not path.exists():
+        print(f"Missing file: {path}")
         return None
 
-    df = pd.read_csv(file_path).dropna()
-
-    required = {"from_cluster", "to_cluster"}
-    if not required.issubset(df.columns):
-        print(f"[{case}] Missing required columns: {required - set(df.columns)}")
-        return None
-
-    return df
+    return pd.read_csv(path)
 
 
-def build_transition_count_matrix(df: pd.DataFrame):
-    mat = pd.DataFrame(
-        0,
-        index=STATE_ORDER,
-        columns=STATE_ORDER,
-        dtype=int
-    )
+def build_matrix(df):
+    mat = pd.DataFrame(0, index=STATE_ORDER, columns=STATE_ORDER)
 
     for _, row in df.iterrows():
         f = int(row["from_cluster"])
         t = int(row["to_cluster"])
 
-        if f in mat.index and t in mat.columns:
+        if f in STATE_ORDER and t in STATE_ORDER:
             mat.loc[f, t] += 1
 
     return mat
 
 
-def normalize_rows(mat: pd.DataFrame):
-    prob = mat.astype(float).copy()
+def normalize(mat):
+    prob = mat.copy().astype(float)
 
-    for idx in prob.index:
-        row_sum = prob.loc[idx].sum()
-        if row_sum > 0:
-            prob.loc[idx] = prob.loc[idx] / row_sum
+    for i in prob.index:
+        s = prob.loc[i].sum()
+        if s > 0:
+            prob.loc[i] /= s
 
     return prob
 
 
-def relabel_matrix(mat: pd.DataFrame):
-    out = mat.copy()
-    out.index = [STATE_LABELS[i] for i in out.index]
-    out.columns = [STATE_LABELS[i] for i in out.columns]
-    return out
+def label(mat):
+    m = mat.copy()
+    m.index = [STATE_LABELS[i] for i in m.index]
+    m.columns = [STATE_LABELS[i] for i in m.columns]
+    return m
 
 
-def plot_heatmap(prob_mat: pd.DataFrame, case: str):
-    fig, ax = plt.subplots(figsize=(6, 5))
+def plot_heatmap(prob, case):
+    plt.figure(figsize=(6,5))
+    arr = prob.values
 
-    arr = prob_mat.values
-    im = ax.imshow(arr)
+    plt.imshow(arr)
 
-    ax.set_xticks(range(len(prob_mat.columns)))
-    ax.set_yticks(range(len(prob_mat.index)))
-    ax.set_xticklabels(prob_mat.columns, rotation=30, ha="right")
-    ax.set_yticklabels(prob_mat.index)
-
-    ax.set_title(f"{case.upper()} — Transition Probabilities (V57)")
-    ax.set_xlabel("to state")
-    ax.set_ylabel("from state")
+    plt.xticks(range(len(prob.columns)), prob.columns, rotation=30)
+    plt.yticks(range(len(prob.index)), prob.index)
 
     for i in range(arr.shape[0]):
         for j in range(arr.shape[1]):
-            ax.text(j, i, f"{arr[i, j]:.2f}", ha="center", va="center")
+            plt.text(j, i, f"{arr[i,j]:.2f}", ha="center", va="center")
 
-    fig.colorbar(im, ax=ax, label="Probability")
-    fig.tight_layout()
+    plt.title(f"{case.upper()} — Transition Probabilities (V57)")
+    plt.colorbar()
 
-    out_path = BASE_PATH / f"{case}_v57_transition_probabilities.png"
-    plt.savefig(out_path, dpi=150)
+    out = BASE_PATH / f"{case}_v57_heatmap.png"
+    plt.savefig(out, dpi=150)
     plt.close()
 
-    return out_path
+    print(f"Saved: {out}")
 
 
 # --------------------------------------------------
@@ -112,8 +95,6 @@ def plot_heatmap(prob_mat: pd.DataFrame, case: str):
 def main():
     print("RUNNING V57 — TRANSITION PROBABILITY MODEL")
 
-    overview_rows = []
-
     for case in CASES:
         print(f"\n--- {case.upper()} ---")
 
@@ -121,24 +102,31 @@ def main():
         if df is None:
             continue
 
-        count_mat = build_transition_count_matrix(df)
-        prob_mat = normalize_rows(count_mat)
+        counts = build_matrix(df)
+        probs = normalize(counts)
 
-        count_labeled = relabel_matrix(count_mat)
-        prob_labeled = relabel_matrix(prob_mat)
+        counts_l = label(counts)
+        probs_l = label(probs)
 
-        count_path = BASE_PATH / f"{case}_v57_transition_counts.csv"
-        prob_path = BASE_PATH / f"{case}_v57_transition_probabilities.csv"
+        counts_path = BASE_PATH / f"{case}_v57_counts.csv"
+        probs_path = BASE_PATH / f"{case}_v57_probs.csv"
 
-        count_labeled.to_csv(count_path)
-        prob_labeled.to_csv(prob_path)
+        counts_l.to_csv(counts_path)
+        probs_l.to_csv(probs_path)
 
-        fig_path = plot_heatmap(prob_labeled, case)
+        print("\nCounts:")
+        print(counts_l)
 
-        print("\nTransition counts:")
-        print(count_labeled)
-        print("\nTransition probabilities:")
-        print(prob_labeled)
+        print("\nProbabilities:")
+        print(probs_l.round(3))
 
-        print(f"\nSaved: {count_path}")
-       
+        print(f"\nSaved: {counts_path}")
+        print(f"Saved: {probs_path}")
+
+        plot_heatmap(probs_l, case)
+
+
+# --------------------------------------------------
+
+if __name__ == "__main__":
+    main()
