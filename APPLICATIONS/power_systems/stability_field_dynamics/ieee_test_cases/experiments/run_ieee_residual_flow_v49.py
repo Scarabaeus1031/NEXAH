@@ -21,7 +21,7 @@ fit_df = pd.read_csv(BASE_PATH / "ieee_v43_manifold_fit.csv")
 # --------------------------------------------------
 
 def power_model(c, dc, a, p, q):
-    return a * (c ** p) * (dc ** q)
+    return a * (c ** p) * (np.sign(dc) * (np.abs(dc) ** q))
 
 # --------------------------------------------------
 # NORMALIZATION (robust)
