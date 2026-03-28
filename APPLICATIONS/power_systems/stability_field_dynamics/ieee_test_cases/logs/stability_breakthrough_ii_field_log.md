@@ -1385,3 +1385,412 @@ describable by:
 >  
 > The system does not fail randomly —  
 > it evolves along a structured manifold toward collapse.
+
+## Entry 46 — Stability Distance & Collapse Geometry (V52)
+
+### Observation
+
+Extended the collapse manifold framework (V43–V51) by introducing:
+
+- distance to rift (stability distance)  
+- collapse strength (|residual| weighted by τ)  
+- projection into residual–distance space  
+
+Evaluated across:
+
+- IEEE 9  
+- IEEE 14  
+- IEEE 30  
+
+---
+
+### Key Result
+
+The collapse manifold exhibits internal geometric structure.
+
+Observed in residual–distance space:
+
+1. dense cluster near origin  
+2. triangular low-distance structure  
+3. polygonal mid-region (multi-state zone)  
+4. extreme outliers (collapse states)  
+
+---
+
+### Stability Distance
+
+Defined as:
+
+distance = min || (c, dc) − rift ||
+
+Interpretation:
+
+- small → system aligned with collapse manifold  
+- large → system deviating structurally  
+
+Observed:
+
+- most states lie close to rift  
+- distance increases sharply near collapse  
+
+---
+
+### Collapse Strength
+
+Defined as:
+
+collapse_strength ≈ |residual| × τ
+
+Interpretation:
+
+- low → model and system aligned  
+- high → structural mismatch / instability  
+
+Observed:
+
+- near-zero in SAFE and WARNING  
+- rises sharply in CRITICAL  
+- peaks at collapse  
+
+---
+
+### Residual–Distance Structure
+
+Projection into:
+
+(distance to rift, residual)
+
+reveals discrete regions:
+
+#### Region A — Stable Cluster
+
+- near (0, 0)  
+- dense, continuous  
+
+→ stable manifold adherence  
+
+---
+
+#### Region B — Triangular Region
+
+- small distance  
+- moderate residual spread  
+
+→ early structural deformation  
+
+---
+
+#### Region C — Polygonal Cluster
+
+- intermediate distance  
+- discrete grouping  
+
+→ multi-valued structural states  
+
+---
+
+#### Region D — Collapse Points
+
+- large distance  
+- large residual  
+
+→ system failure  
+
+---
+
+### Key Discovery
+
+Collapse progression is not fully continuous.
+
+Instead:
+
+→ system passes through **discrete structural states**
+
+This indicates:
+
+- multi-valued dynamics near instability  
+- branching behavior before collapse  
+
+---
+
+### Interpretation
+
+The rift acts as:
+
+→ structural backbone of system evolution  
+
+Distance to rift measures:
+
+→ geometric stability  
+
+Residual measures:
+
+→ dynamical inconsistency  
+
+Together they define:
+
+→ a **2D stability phase space**
+
+---
+
+### Structural Mechanism (Refined)
+
+1. coherence (aligned with rift)  
+2. fragmentation (triangular spread)  
+3. branching (polygonal region)  
+4. instability growth (residual increase)  
+5. collapse (extreme deviation)  
+
+---
+
+### Relation to Previous Entries
+
+- Entry 44 → attractor manifold  
+- Entry 45 → manifold equation  
+- Entry 51 → rift extraction  
+
+This entry adds:
+
+→ **distance-based stability geometry**
+
+---
+
+### Theoretical Implication
+
+Stability is not binary.
+
+It is governed by:
+
+- proximity to a structural manifold  
+- deviation from its governing equation  
+
+---
+
+### Conclusion
+
+The NEXAH framework now provides:
+
+- geometric collapse boundary (rift)  
+- functional law (power model)  
+- distance metric (stability)  
+- strength metric (collapse intensity)  
+
+Together forming:
+
+→ a **complete structural description of collapse dynamics**
+
+---
+
+## Updated Core Insight
+
+> Collapse is not defined by a threshold.  
+>  
+> It is defined by distance from structure.  
+>  
+>  
+> The system remains stable as long as it stays aligned  
+> with its governing manifold.  
+>  
+>  
+> Failure begins when it drifts away —  
+> and accelerates as that distance grows.
+
+## Entry 47 — Discrete State Transitions & Branching Topology (V52)
+
+### Observation
+
+Analysis of residual–distance space (V52) reveals that system states do not form a continuous distribution.
+
+Instead, they organize into:
+
+→ discrete geometric clusters  
+
+Observed structures:
+
+- dense core cluster near (0,0)  
+- triangular deformation region  
+- polygonal (pentagon-like) cluster  
+- extreme outlier points  
+
+This pattern appears consistently across:
+
+- IEEE 9  
+- IEEE 14  
+- IEEE 30  
+
+---
+
+### Key Result
+
+The system does not evolve along a single continuous trajectory.
+
+Instead:
+
+→ it transitions between **discrete structural states**
+
+These states form a:
+
+→ **branching topology in phase space**
+
+---
+
+### Structural Regions
+
+#### State 1 — Core Stability
+
+- near (distance ≈ 0, residual ≈ 0)  
+- dense, continuous cluster  
+
+→ fully coherent regime  
+
+---
+
+#### State 2 — Deformation (Triangle)
+
+- small distance  
+- increasing residual spread  
+
+→ onset of structural distortion  
+
+---
+
+#### State 3 — Branching (Polygon)
+
+- intermediate distance  
+- discrete grouping (pentagon-like structure)  
+
+→ multiple coexisting system configurations  
+
+---
+
+#### State 4 — Collapse States
+
+- large distance  
+- large residual  
+
+→ system leaves manifold  
+
+---
+
+### Key Discovery
+
+The polygonal cluster indicates:
+
+→ **multi-valued structural behavior**
+
+This means:
+
+- same load level can map to multiple structural states  
+- system loses uniqueness of representation  
+
+---
+
+### Interpretation
+
+Near instability, the system undergoes:
+
+→ **branching transitions**
+
+Instead of:
+
+continuous evolution  
+
+the system exhibits:
+
+→ jumps between discrete configurations  
+
+---
+
+### Topological Meaning
+
+The collapse manifold is not a smooth surface.
+
+It contains:
+
+- folds  
+- splits  
+- branching regions  
+
+This creates:
+
+→ a **non-trivial topology in state space**
+
+---
+
+### Mechanism
+
+The observed transition sequence:
+
+1. alignment (single state)  
+2. deformation (continuous spread)  
+3. branching (multiple discrete states)  
+4. divergence (collapse)  
+
+---
+
+### Relation to Previous Entries
+
+- Entry 44 → attractor manifold  
+- Entry 45 → manifold equation  
+- Entry 51 → rift (collapse boundary)  
+- Entry 52 → distance & strength  
+
+This entry adds:
+
+→ **topology of state transitions**
+
+---
+
+### Theoretical Implication
+
+Collapse is not only:
+
+- geometric (manifold)  
+- dynamical (equation)  
+
+but also:
+
+→ **topological**
+
+This implies:
+
+> instability corresponds to a change in state-space topology  
+
+---
+
+### Deeper Insight
+
+The system does not fail because variables diverge.
+
+It fails because:
+
+→ the mapping between load and structure becomes non-unique  
+
+---
+
+### Conclusion
+
+The NEXAH framework now captures three layers:
+
+1. Geometry → manifold + rift  
+2. Dynamics → power-law equation  
+3. Topology → branching states  
+
+Together they define:
+
+→ a **complete description of collapse**
+
+---
+
+## Updated Core Insight
+
+> Collapse is not a smooth transition.  
+>  
+> It is a topological event.  
+>  
+>  
+> The system does not simply drift into failure —  
+>  
+> it splits into multiple possible states,  
+>  
+> and stability is lost when no unique path remains.
