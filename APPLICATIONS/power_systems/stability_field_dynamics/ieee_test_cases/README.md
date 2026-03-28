@@ -321,15 +321,15 @@ Key observation:
 
 ---
 
-### 4. Extended Manifold (V45)
+### 4. Extended Manifold (V50)
 
 Improved model capturing nonlinear structure:
 
-![IEEE14 Extended Fit](outputs/ieee14_v45_extended_fit.png)
+![IEEE14 Extended Fit](outputs/ieee14_v50_heatmaps.png)
 
 Key observation:
 
-→ manifold is slightly curved / folded  
+→ manifold is slightly curved / folded
 
 ---
 
@@ -349,7 +349,7 @@ Key observation:
 
 Streamline and curl structure:
 
-![IEEE14 Streamlines](outputs/ieee14_v48_streamlines.png)
+![IEEE14 Phase Space](outputs/ieee14_v48_streamlines.png)
 
 Key observation:
 
