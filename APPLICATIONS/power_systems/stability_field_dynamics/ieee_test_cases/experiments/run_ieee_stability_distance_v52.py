@@ -12,7 +12,7 @@ from scipy.spatial import cKDTree
 # --------------------------------------------------
 
 BASE_PATH = Path("APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs")
-CASES = ["ieee9", "ieee14", "ieee30"]
+CASES = ["ieee9", "ieee14", "ieee30", "ieee57", "ieee118"]
 
 GRID_RES = 140
 EPS = 0.03  # residual≈0 tolerance for rift extraction
