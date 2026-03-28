@@ -24,6 +24,39 @@ def power_model(c, dc, a, p, q):
     return a * (c ** p) * (dc ** q)
 
 # --------------------------------------------------
+# SAFE COLUMN EXTRACTOR
+# --------------------------------------------------
+
+def extract_columns(df, case):
+    cols = df.columns.tolist()
+
+    # --- c ---
+    if "c_norm" in cols:
+        c_norm = df["c_norm"].values
+    elif "c_struct" in cols:
+        c = df["c_struct"].values
+        c_norm = c / np.max(c)
+    elif "c" in cols:
+        c = df["c"].values
+        c_norm = c / np.max(c)
+    else:
+        raise ValueError(f"{case}: No valid c column found. Columns: {cols}")
+
+    # --- dc ---
+    if "dc_norm" in cols:
+        dc_norm = df["dc_norm"].values
+    else:
+        raise ValueError(f"{case}: Missing dc_norm")
+
+    # --- d2c ---
+    if "d2c_norm" in cols:
+        d2c_norm = df["d2c_norm"].values
+    else:
+        raise ValueError(f"{case}: Missing d2c_norm")
+
+    return c_norm, dc_norm, d2c_norm
+
+# --------------------------------------------------
 # MAIN ANALYSIS
 # --------------------------------------------------
 
@@ -39,26 +72,20 @@ def process_case(case):
 
     df = pd.read_csv(data_path)
 
+    # DEBUG (optional)
+    print("Columns:", df.columns.tolist())
+
     # --------------------------------------------------
-    # Extract + normalize
+    # Extract normalized data
     # --------------------------------------------------
 
-    c = df["c_struct"].values
-    load = df["load"].values
-
-    dc = np.gradient(c, load)
-    d2c = np.gradient(dc, load)
-
-    c_norm = c / np.max(c)
-    dc_norm = dc / np.max(dc) if np.max(dc) != 0 else dc
-    d2c_norm = d2c / np.max(d2c) if np.max(d2c) != 0 else d2c
+    c_norm, dc_norm, d2c_norm = extract_columns(df, case)
 
     # --------------------------------------------------
     # Get model params
     # --------------------------------------------------
 
     params = fit_df[fit_df["case"] == case].iloc[0]
-
     a, p, q = params["power_a"], params["power_p"], params["power_q"]
 
     # --------------------------------------------------
@@ -74,11 +101,10 @@ def process_case(case):
 
     plt.figure(figsize=(8, 6))
 
-    # main trajectory
-    plt.scatter(c_norm, dc_norm, c=residual, cmap="coolwarm", s=40)
-    plt.colorbar(label="Residual (true - model)")
+    sc = plt.scatter(c_norm, dc_norm, c=residual, cmap="coolwarm", s=40)
+    plt.colorbar(sc, label="Residual (true - model)")
 
-    # arrows (residual flow direction)
+    # arrows (residual direction)
     for i in range(1, len(c_norm)):
         plt.arrow(
             c_norm[i-1],
@@ -99,12 +125,12 @@ def process_case(case):
     plt.close()
 
     # --------------------------------------------------
-    # Residual vs c (structure)
+    # Residual vs c
     # --------------------------------------------------
 
     plt.figure(figsize=(8, 5))
 
-    plt.scatter(c_norm, residual, c=residual, cmap="coolwarm")
+    sc = plt.scatter(c_norm, residual, c=residual, cmap="coolwarm")
     plt.axhline(0, linestyle="--")
 
     plt.xlabel("c (norm)")
@@ -116,17 +142,16 @@ def process_case(case):
     plt.close()
 
     # --------------------------------------------------
-    # Hotspot detection
+    # Hotspots
     # --------------------------------------------------
 
     threshold = np.std(residual)
-
     hotspots = np.abs(residual) > threshold
 
     return {
         "case": case,
-        "mean_residual": np.mean(residual),
-        "std_residual": np.std(residual),
+        "mean_residual": float(np.mean(residual)),
+        "std_residual": float(np.std(residual)),
         "num_hotspots": int(np.sum(hotspots))
     }
 
@@ -141,9 +166,12 @@ def main():
     results = []
 
     for case in CASES:
-        res = process_case(case)
-        if res:
-            results.append(res)
+        try:
+            res = process_case(case)
+            if res:
+                results.append(res)
+        except Exception as e:
+            print(f"[{case}] ERROR:", e)
 
     df_out = pd.DataFrame(results)
 
