@@ -1,4 +1,4 @@
-# ieee_physical_adapter_v1.py
+# ieee_physical_adapter_v2.py
 
 import numpy as np
 
@@ -20,7 +20,7 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
     Convert IEEE power system state → NEXAH variables
 
     Returns:
-        theta (np.ndarray): phase angles (rad)
+        theta (np.ndarray): phase angles (rad, centered)
         C (np.ndarray): field intensity (voltage deviation)
         loops (np.ndarray): proxy for structural dynamics
         converged (bool): whether power flow converged
@@ -29,7 +29,7 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
     net = _load_case(case)
 
     # --------------------------------------------------------
-    # APPLY LOAD SCALING (REAL PHYSICAL INPUT)
+    # APPLY LOAD SCALING
     # --------------------------------------------------------
     net.load["p_mw"] *= load_scale
     net.load["q_mvar"] *= load_scale
@@ -51,14 +51,13 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
         converged = False
 
     # --------------------------------------------------------
-    # FALLBACK FOR NON-CONVERGENCE (COLLAPSE REGIME)
+    # FALLBACK (COLLAPSE REGIME)
     # --------------------------------------------------------
     if not converged:
         n = len(net.bus)
 
-        # ⚠️ important: not zeros → indicates collapse
         theta = np.zeros(n)
-        C = np.ones(n) * 1.0   # strong deviation
+        C = np.ones(n) * 1.0   # strong deviation = collapse signature
         loops = np.zeros(n)
 
         return theta, C, loops, False
@@ -73,13 +72,18 @@ def ieee_to_nexah(case: str = "ieee14", load_scale: float = 1.0):
     theta = np.deg2rad(theta)
 
     # --------------------------------------------------------
+    # NORMALIZE PHASE (important for geometry)
+    # --------------------------------------------------------
+    theta = theta - np.mean(theta)
+
+    # --------------------------------------------------------
     # NEXAH MAPPING
     # --------------------------------------------------------
 
-    # deviation from nominal voltage
+    # voltage deviation
     C = 1.0 - V
 
-    # stabilize (avoid negative / tiny noise artifacts)
+    # clip for stability
     C = np.clip(C, -1.0, 1.0)
 
     loops = _compute_loops(theta, net)
@@ -96,6 +100,8 @@ def _load_case(case: str):
         return pn.case14()
     elif case == "ieee9":
         return pn.case9()
+    elif case == "ieee30":
+        return pn.case30()   # ✅ NEW
     else:
         raise ValueError(f"Unknown case: {case}")
 
@@ -112,8 +118,6 @@ def _compute_loops(theta, net):
     to_bus = net.line["to_bus"].values
 
     theta_diff = theta[from_bus] - theta[to_bus]
-
-    # power flow magnitude
     p_flow = net.res_line["p_from_mw"].values
 
     loop_signal = np.zeros_like(theta)
@@ -122,12 +126,12 @@ def _compute_loops(theta, net):
         f = from_bus[i]
         t = to_bus[i]
 
-        val = abs(theta_diff[i]) * abs(p_flow[i])
+        # slightly stabilized signal
+        val = np.sqrt(abs(theta_diff[i])) * abs(p_flow[i])
 
         loop_signal[f] += val
         loop_signal[t] += val
 
-    # normalize safely
     max_val = np.max(loop_signal)
     if max_val > 0:
         loop_signal = loop_signal / max_val
@@ -140,7 +144,7 @@ def _compute_loops(theta, net):
 # ------------------------------------------------------------
 
 if __name__ == "__main__":
-    theta, C, loops, converged = ieee_to_nexah("ieee14", load_scale=1.5)
+    theta, C, loops, converged = ieee_to_nexah("ieee30", load_scale=1.5)
 
     print("\n--- IEEE → NEXAH ---")
     print("converged:", converged)
