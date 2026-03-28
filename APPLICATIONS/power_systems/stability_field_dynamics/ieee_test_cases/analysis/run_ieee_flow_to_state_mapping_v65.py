@@ -70,7 +70,16 @@ def build_flow_points(df):
 # MAP FLOW → STATES
 # --------------------------------------------------
 
-def map_flow_to_states(flow_points, model):
+def map_flow_to_states(df, model):
+    # echte Features verwenden!
+    distance = df["c"].values   # besser als proxy, aber wir erweitern gleich
+    residual = df["d2c"].values  # besser als dc
+
+    X = np.column_stack([distance, residual])
+
+    pred = model.predict(X)
+    return pred
+
     # fake residual/distance approximation
     # (since flow points are in (c,dc), we approximate)
     distance = flow_points[:, 0]  # proxy
@@ -134,7 +143,8 @@ def main():
         model = train_classifier(df_states)
 
         flow_points = build_flow_points(df)
-        states = map_flow_to_states(flow_points, model)
+        states = map_flow_to_states(df, model)
+        flow_points = np.column_stack([df["c"].values, df["dc"].values])
 
         plot_mapping(flow_points, states, case)
 
