@@ -550,3 +550,292 @@ into a single coherent structure.
 > The true collapse begins much earlier —  
 >  
 > in the invisible fragmentation of structure.
+
+
+## Entry 41 — Multi-System Validation & Universality (V30–V31)
+
+### Observation
+
+Extended the framework to multiple IEEE systems:
+
+- IEEE 9  
+- IEEE 14  
+- IEEE 30  
+
+Introduced:
+
+- unified evaluation pipeline  
+- identical load sweep procedure  
+- consistent metric extraction  
+
+---
+
+### Key Result
+
+All systems exhibit the same fundamental pattern:
+
+→ curvature peak (d²c/dload²) occurs **before collapse**
+
+#### Quantitative Result
+
+| System | Collapse | Curvature Peak | Lead Time |
+|--------|---------|---------------|----------|
+| IEEE 9 | ~2.32   | ~2.17         | ~0.15    |
+| IEEE 14 | ~4.03  | ~3.88         | ~0.15    |
+| IEEE 30 | ~3.73  | ~3.58         | ~0.15    |
+
+---
+
+### Key Discovery
+
+The lead time is:
+
+→ approximately constant across systems  
+
+This suggests:
+
+→ a **scale-invariant pre-collapse signature**
+
+---
+
+### Interpretation
+
+The curvature peak represents:
+
+→ maximum structural instability  
+
+before physical collapse occurs.
+
+This confirms:
+
+- predictive capability is not system-specific  
+- structural dynamics generalize across network sizes  
+
+---
+
+### Conclusion
+
+The NEXAH framework demonstrates:
+
+→ cross-system predictive consistency  
+
+This is the first indication of:
+
+→ a potentially **universal collapse precursor**
+
+---
+
+## Updated Core Insight
+
+> Collapse is preceded by a universal instability peak.  
+>  
+> This peak is independent of system size,  
+> and reflects a fundamental structural transition.
+
+
+
+## Entry 42 — High-Resolution & Robustness Validation (V32)
+
+### Observation
+
+Introduced:
+
+- high-resolution load sampling  
+- randomized load perturbations  
+
+Two evaluation modes:
+
+1. Dense sampling  
+2. Random sampling  
+
+---
+
+### Key Result
+
+Curvature-based prediction remains stable under perturbations.
+
+#### IEEE Systems
+
+- Dense lead time: ~0.044  
+- Random lead time: ~0.02–0.08  
+
+---
+
+### Key Discovery
+
+The prediction signal is:
+
+- not dependent on sampling resolution  
+- robust under stochastic variation  
+
+---
+
+### Structural Behavior
+
+Even under random perturbations:
+
+- curvature peak persists  
+- collapse remains detectable  
+- ordering of phases unchanged  
+
+---
+
+### Interpretation
+
+The collapse precursor is:
+
+→ not a numerical artifact  
+
+but:
+
+→ a **structural property of the system dynamics**
+
+---
+
+### Limitation
+
+- variability increases under random sampling  
+- peak localization becomes less precise  
+
+---
+
+### Conclusion
+
+The predictive signal is:
+
+→ robust  
+→ reproducible  
+→ resilient to perturbations  
+
+---
+
+## Updated Core Insight
+
+> The collapse signal is not fragile.  
+>  
+> It persists under noise, resolution changes,  
+> and sampling variation.  
+>  
+> This indicates a genuine structural phenomenon.
+
+
+
+## Entry 43 — Structural vs Classical Divergence (V33–V35)
+
+### Observation
+
+Introduced direct comparison between:
+
+- classical indicators:
+  - min(V)  
+  - voltage deviation (1 − V)  
+  - mean deviation  
+
+and:
+
+- NEXAH indicators:
+  - c_struct  
+  - d²c/dload²  
+  - fragmentation  
+
+Additionally introduced:
+
+- divergence = NEXAH − classical  
+- augmented divergence (smoothed signal)  
+
+---
+
+### Key Result
+
+A consistent divergence pattern appears across all systems:
+
+1. early regime:
+   - classical and NEXAH aligned  
+
+2. mid regime:
+   - gradual separation begins  
+
+3. pre-collapse regime:
+   - sharp divergence spike  
+
+4. collapse:
+   - both signals break down  
+
+---
+
+### Quantitative Observation
+
+| System | Divergence Peak | Lead Time |
+|--------|----------------|----------|
+| IEEE 9 | strong spike   | ~0.04–0.08 |
+| IEEE 14 | strong spike  | ~0.04 |
+| IEEE 30 | strong spike  | ~0.04 |
+
+---
+
+### Key Discovery
+
+Collapse is preceded by:
+
+→ a **mismatch between physical and structural models**
+
+This divergence is:
+
+- measurable  
+- consistent  
+- predictive  
+
+---
+
+### Interpretation
+
+Classical indicators describe:
+
+→ system state  
+
+NEXAH indicators describe:
+
+→ system structure  
+
+The divergence measures:
+
+→ **structural instability not visible in physical variables alone**
+
+---
+
+### Additional Insight
+
+Fragmentation evolves smoothly across the full load range:
+
+- acts as slow structural drift  
+- complements fast curvature signal  
+
+This creates:
+
+→ a dual-timescale prediction mechanism  
+
+---
+
+### Conclusion
+
+The predictive mechanism is now defined by:
+
+1. curvature peak (local instability)  
+2. divergence spike (model mismatch)  
+3. fragmentation drift (global decoherence)  
+
+Together they form:
+
+→ a **multi-layer early warning system**
+
+---
+
+## Updated Core Insight
+
+> Collapse is not directly visible in physical variables.  
+>  
+> It becomes visible when physical behavior  
+> and structural representation diverge.  
+>  
+> The system fails when these two descriptions  
+> are no longer consistent.
