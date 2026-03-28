@@ -287,7 +287,7 @@ The following visualizations illustrate the transition from:
 
 Trajectory in (c, dc, d²c):
 
-![IEEE14 Phase Space](outputs/ieee14_v40_phase_space.png)
+![IEEE14 Phase Space](outputs/ieee14_v50_field_separation.png)
 
 Key observation:
 
@@ -313,7 +313,7 @@ Key observation:
 
 Deviation between model and system:
 
-![IEEE14 Residual](outputs/ieee14_v44_residuals.png)
+![IEEE14 Residual](outputs/ieee14_v49_residual_vs_c.png)
 
 Key observation:
 
@@ -373,11 +373,15 @@ Key observation:
 
 Zero-residual boundary:
 
-![IEEE14 Rift](outputs/ieee14_v51_rift.png)
+![IEEE14 Rift](outputs/ieee14_v51_rift_boundary.png)
+
+Extracted collapse geometry:
+
+![IEEE14 Boundary Geometry](outputs/ieee14_v51_boundary_geometry.png)
 
 Key observation:
 
-→ collapse occurs along a continuous boundary (rift)  
+→ collapse occurs along a continuous boundary (rift)
 
 ---
 
