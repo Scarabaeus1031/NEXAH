@@ -311,11 +311,11 @@ of how complex systems approach collapse
 ⸻
 
 ## Final Core Insight
-
+```text
 Stability is not the absence of change.
 
 It is the persistence of coherence under load.
 
 Collapse is not a sudden event —
 it is a geometric transition that becomes visible before it happens.
-
+```
