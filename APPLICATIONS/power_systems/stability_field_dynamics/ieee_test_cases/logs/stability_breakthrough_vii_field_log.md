@@ -839,3 +839,204 @@ Together they form:
 >  
 > The system fails when these two descriptions  
 > are no longer consistent.
+
+## Entry 44 — Collapse Attractor & Manifold Emergence (V40–V42)
+
+### Observation
+
+Extended analysis into phase space representation and cross-system alignment:
+
+Introduced:
+
+- 3D phase space: (c_struct, dc/dload, d²c/dload²)  
+- trajectory tracking across load progression  
+- collapse-time normalization (τ = load / collapse_load)  
+- multi-system overlay (IEEE 9, 14, 30)  
+- perturbation-based manifold stability test  
+
+---
+
+### Key Result
+
+All systems exhibit convergence toward a common pre-collapse state:
+
+(c, dc, d²c) → (1, 1, α)
+
+with:
+
+- c_struct_norm → 1  
+- dc_norm → 1  
+- d²c_norm → system-dependent constant  
+
+---
+
+### Quantitative Result
+
+#### Pre-collapse state (τ ≈ 1)
+
+| System | c_norm | dc_norm | d²c_norm |
+|--------|--------|--------|----------|
+| IEEE 9 | 1.0    | 1.0    | ~0.89    |
+| IEEE 14 | 1.0   | 1.0    | ~0.90    |
+| IEEE 30 | 1.0   | 1.0    | ~0.90    |
+
+---
+
+### Manifold Stability (Perturbation Test)
+
+Applied load perturbations:
+
+Δload ∈ [−0.02, +0.02]
+
+Observed:
+
+- c_end ≈ constant (≈ 1.0)  
+- dc_end ≈ constant (≈ 1.0)  
+- d²c_end remains bounded  
+
+#### Standard deviation:
+
+- c_end → ~1e−9  
+- dc_end → ~1e−9  
+- d²c_end → small (system-dependent)
+
+---
+
+### Key Discovery
+
+The pre-collapse region is not a point.
+
+It forms a:
+
+→ **low-dimensional attractor manifold**
+
+Properties:
+
+- stable under perturbations  
+- invariant across systems  
+- independent of network topology (first-order)  
+
+---
+
+### Phase Space Behavior
+
+System trajectories show:
+
+1. initial growth (intensity increase)  
+2. curvature inversion / loop formation  
+3. monotonic approach toward attractor manifold  
+
+In multiple systems:
+
+- early trajectory loops appear (IEEE 9, IEEE 30)  
+- smoother approach in higher-complexity systems (IEEE 14)  
+
+---
+
+### Cross-System Alignment
+
+After normalization:
+
+- trajectories align in late-stage evolution  
+- collapse occurs near identical normalized state  
+
+This suggests:
+
+→ a **shared geometric structure of collapse**
+
+---
+
+### Interpretation
+
+Collapse is not defined by:
+
+→ a threshold crossing  
+
+but by:
+
+→ convergence toward a geometric state in phase space  
+
+This state represents:
+
+- maximal structural intensity  
+- maximal drift  
+- bounded acceleration  
+
+---
+
+### Structural Mechanism
+
+The collapse process follows:
+
+1. coherence  
+2. fragmentation  
+3. nonlinear acceleration  
+4. convergence to attractor manifold  
+5. physical breakdown  
+
+---
+
+### Theoretical Implication
+
+The system dynamics suggest:
+
+> Collapse corresponds to a stable manifold in structural phase space.
+
+This reframes collapse as:
+
+→ a **dynamical convergence phenomenon**  
+rather than a discrete failure event  
+
+---
+
+### Limitation
+
+- limited to steady-state load scaling  
+- manifold dimensionality not yet formally derived  
+- functional form of manifold not yet identified  
+
+---
+
+### Next Direction
+
+1. Fit functional form of manifold:
+
+   d²c = f(c, dc)
+
+2. Analyze curvature flow along manifold  
+
+3. Test invariance under:
+
+   - topology changes  
+   - stochastic disturbances  
+   - dynamic simulations  
+
+---
+
+### Conclusion
+
+The NEXAH framework now reveals:
+
+→ a universal attractor structure governing collapse  
+
+This extends predictive capability from:
+
+- early warning  
+
+to:
+
+→ **geometric understanding of collapse dynamics**
+
+---
+
+## Updated Core Insight
+
+> Collapse is not where the system fails.  
+>  
+> It is where all trajectories converge.  
+>  
+>  
+> The system does not break at collapse —  
+>  
+> it reaches a state from which no stable continuation exists.
+>
