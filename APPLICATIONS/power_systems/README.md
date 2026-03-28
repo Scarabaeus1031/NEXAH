@@ -299,3 +299,23 @@ APPLICATIONS/power_systems/stability_field_dynamics/
 │   ├── outputs/      # plots, CSVs
 │   ├── logs/         # stability logs
 │   └── README.md
+```
+
+## Working Interpretation
+
+At this stage, the framework should be understood as:
+
+a structured, physically grounded model
+of how complex systems approach collapse
+
+⸻
+
+## Final Core Insight
+
+Stability is not the absence of change.
+
+It is the persistence of coherence under load.
+
+Collapse is not a sudden event —
+it is a geometric transition that becomes visible before it happens.
+
