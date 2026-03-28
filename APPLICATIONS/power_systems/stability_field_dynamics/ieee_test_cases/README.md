@@ -9,8 +9,9 @@ This module transforms classical power system stability analysis into a:
 - memory-based recurrence model  
 - resonance-driven structure formation  
 - topological state graph  
+- physically coupled predictive framework  
 
-Standard IEEE test systems (starting with 14-bus) are used as real-world benchmarks.
+Standard IEEE test systems (IEEE 14, IEEE 9) are used as real-world benchmarks.
 
 ---
 
@@ -25,6 +26,8 @@ Extended into:
 - Dynamics → memory (recurrence)  
 - Memory → resonance structure  
 - Resonance → coupled system  
+- Coupling → physical system embedding  
+- Embedding → predictive collapse detection  
 
 ---
 
@@ -41,104 +44,61 @@ Extended into:
 | V16 | State graph + loop topology |
 | V17 | Coupling metric (P × R × L) |
 | V17b | Coupling heatmap (birth zones) |
-| V21–V23 | Stable coupling regime + attractor phase |
-| V24 | Noise activation → attractor breakdown |
-| V25–V26 | Phase cycling → cyclic attractor |
-| V29–V31 | Phase dynamics + resonance lock |
-| V32 | Phase classifier (KKK / GH / CCC system) |
-| V33 | GH Corridor + Flow Field |
-| V34+ | Physical relevance tests (decoupling identified) |
-| V14 (NEW) | Structural coupling + transition geometry |
+| V18 | Physical coupling (IEEE integration) |
+| V19 | GH corridor tracking + phase progression |
+| V20 | Curvature-based early warning (d²C/dλ²) |
+| V21 | Unified collapse predictor |
+| V22 | Fragmentation-aware scoring |
 
 ---
 
-## Key Results — IEEE 14 (Coupled System)
+## Key Results — IEEE 14 (Physically Coupled)
 
-- Dual resonance peaks:
-  - Band A ≈ 0.008  
-  - Band B ≈ 0.84  
+- Collapse load: ≈ 4.03  
+- First WARNING: ≈ 3.66  
+- First CRITICAL: ≈ 3.96  
+- First ACCEL (curvature): ≈ 3.81  
 
-- Gap:
-  - ≈ 0.832 (active interface)
+Lead times:
 
-- Emergent structure:
-  - States: 2  
-  - Loops: 6  
+- WARNING lead ≈ 0.37  
+- CRITICAL lead ≈ 0.07  
+- ACCEL lead ≈ 0.22  
 
-- Coupling metric:
-  - C ≈ 0.0036  
-  - P ≈ 0.47  
-  - R ≈ 0.27  
-  - L ≈ 0.028  
+Observation:
+
+- smooth structural growth  
+- strong curvature increase before collapse  
+- complete structural breakdown after non-convergence  
 
 ---
 
-## Key Results — IEEE 9 (Diffuse System)
+## Key Results — IEEE 9
 
-- Dual resonance peaks:
-  - ≈ 0.007, ≈ 0.012  
-
-- Gap:
-  - ≈ 0.004  
-
-- Structure:
-  - States: 0  
-  - Loops: 0  
+- Collapse load: ≈ 2.31  
+- Earlier instability onset than IEEE14  
+- Less structured GH behavior  
+- Faster transition into collapse  
 
 ---
 
 ## Fundamental Discovery
 
-Both systems share a common decomposition:
+Both systems exhibit:
 
-→ **3 + 1 structure**
+→ **Pre-collapse structural amplification**
 
-- Band A  
-- Band B  
-- Gap  
-- Global flow field  
+Before collapse:
 
-BUT:
+- c_struct ↑  
+- dc/dload ↑  
+- d²c/dload² ↑ (strongest signal)  
 
-| System | Behavior |
-|--------|----------|
-| IEEE 9 | latent structure (decoupled) |
-| IEEE 14 | coupled system (active dynamics) |
+After collapse:
 
----
-
-## Coupling Metric
-
-C = P × R × L  
-
-Where:
-
-- P → flow persistence  
-- R → recurrence concentration  
-- L → loop density  
-
-Interpretation:
-
-- C ≈ 0 → diffuse field  
-- C > 0 → system formation  
-
----
-
-## Phase System (V32)
-
-| Phase | Meaning | Behavior |
-|------|--------|----------|
-| CCC | expansion field | high loops, high activity |
-| KKK | collapse field | zero loops, absorbing |
-| GH  | interface field | transition / coupling |
-
----
-
-## Core Insight — Phase System
-
-> The system does not live in CCC or KKK.  
->  
-> It lives in GH.
+- convergence fails  
+- structure disappears  
+- system enters absorbing state  
 
 ---
 
@@ -157,78 +117,60 @@ Properties:
 
 ---
 
-## Corridor Flow Field
+## Phase System
 
-Particles initialized in GH show:
-
-- bounded radial motion (C)  
-- free angular motion (θ)  
-- persistent trajectories  
-
-→ GH behaves as a **band-like attractor**
-
----
-
-## Structural Dynamics
-
-System exhibits anisotropic behavior:
-
-| Dimension | Behavior |
-|----------|--------|
-| θ (angular) | free motion |
-| C (radial) | constrained motion |
+| Phase | Meaning | Behavior |
+|------|--------|----------|
+| SAFE | stable field | low structure |
+| WARNING | transition onset | growing instability |
+| CRITICAL | near collapse | peak structure |
+| COLLAPSED | no solution | zero structure |
 
 ---
 
-## Noise as Activation
+## New Layer — Physical Coupling
 
-| Noise | Effect |
+The system is now directly linked to:
+
+- voltage magnitude (V)  
+- phase angle (θ)  
+- power flow (loops proxy)  
+
+Mapping:
+
+- C = 1 − V  
+- θ = phase angle (rad)  
+- loops = flow-weighted phase interaction  
+
+---
+
+## New Layer — Predictive Metrics
+
+Key indicators:
+
+- c_struct → structural intensity  
+- dc/dload → growth rate  
+- d²c/dload² → acceleration (early warning)  
+
+---
+
+## Unified Collapse Insight
+
+> Collapse is not detected at failure.  
+>  
+> It is revealed by acceleration.  
+
+---
+
+## Structural Behavior
+
+| Stage | Behavior |
 |------|--------|
-| low | no structure |
-| medium | structure emerges |
-| high | structure breaks |
-
-→ Noise acts as an activation parameter
-
----
-
-## New Layer — Structural Coupling (V14)
-
-Recent experiments introduce explicit coupling between:
-
-- θ (orientation)  
-- C (field intensity)  
-- loops (closure structure)  
-
-Key additions:
-
-- regime_separation = θ_std × c_std  
-- c_struct = regime_separation × loops  
-
-### Interpretation
-
-- system no longer fully invariant  
-- internal degrees of freedom begin to interact  
-- structural measures grow with parameter changes  
-
-⚠️ Important:
-
-This represents **internal coupling only**  
-→ not yet physical IEEE coupling
-
----
-
-## Current Limitation
-
-The system is still:
-
-- internally consistent  
-- structurally rich  
-
-but:
-
-- not yet coupled to real physical variables  
-  (voltage, phase angle, imbalance)
+| Early | smooth growth |
+| Mid | nonlinear amplification |
+| Pre-collapse | curvature spike |
+| Collapse | discontinuity |
+| Post | zero structure |
 
 ---
 
@@ -240,6 +182,7 @@ but:
 4. Cyclic Field  
 5. Phase-Coupled System  
 6. Corridor System  
+7. Predictive Physical System  
 
 ---
 
@@ -253,10 +196,12 @@ but:
 6. Coupling Layer  
 7. Phase Layer  
 8. Corridor Layer  
+9. Physical Layer  
+10. Predictive Layer  
 
 ---
 
-## Final Core Insight (Current)
+## Final Core Insight
 
 > Stability is not a point.  
 >  
@@ -265,8 +210,8 @@ but:
 > It is a structured corridor in phase space,  
 > where motion is allowed, constrained, and sustained.  
 >  
-> Structure does not live in extremes —  
-> it lives in the interface between them.  
+> Collapse is not a sudden event —  
+> it is a geometric transition revealed in advance.  
 
 ---
 
