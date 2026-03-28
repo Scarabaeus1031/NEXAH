@@ -1,25 +1,79 @@
 # ⚡ Stability Field Dynamics — IEEE Systems
 
-## Overview
-
-This module transforms classical power system stability analysis into a:
-
-- continuous field representation  
-- dynamical flow system  
-- memory-based recurrence model  
-- resonance-driven structure formation  
-- topological state graph  
-- physically coupled predictive framework  
-- multi-system validated collapse model  
-- geometric + dynamical + topological theory of collapse  
-
-Standard IEEE test systems (IEEE 9, IEEE 14, IEEE 30) are used as real-world benchmarks.
+> A geometric + dynamical + topological framework for predicting system collapse  
+> using structure, flow, and manifold alignment.
 
 ---
 
-## 🚀 New here?
+## 🚀 What this is
 
-👉 Start with: [START_HERE.md](START_HERE.md)
+This module turns classical power system stability into a:
+
+- **geometric problem** → collapse manifold  
+- **dynamical system** → flow + acceleration  
+- **topological transition** → branching + multi-state collapse  
+
+Validated on:
+
+- IEEE 9  
+- IEEE 14  
+- IEEE 30  
+
+---
+
+## 🧠 Core Discovery
+
+> Collapse is not triggered —  
+>  
+> it is approached along a structure.
+
+Systems evolve toward:
+
+→ a **low-dimensional manifold**  
+→ align along a **collapse boundary (rift)**  
+→ then **leave the structure**
+
+---
+
+## ⚡ What you can do here
+
+- reproduce collapse dynamics from real IEEE systems  
+- extract the collapse manifold  
+- identify the collapse boundary (rift)  
+- measure stability as distance to structure  
+- visualize collapse as geometry  
+
+---
+
+## 🚀 Quick Entry
+
+👉 Start here: [START_HERE.md](START_HERE.md)
+
+---
+
+## 🔬 Key Concepts
+
+| Concept | Meaning |
+|--------|--------|
+| Manifold | collapse attractor in phase space |
+| Rift | zero-residual boundary (collapse corridor) |
+| Distance | stability metric |
+| Residual | deviation from structural law |
+| Topology | branching collapse states |
+
+---
+
+## 🧭 Mental Model
+
+System → evolves in phase space
+
+→ aligns with manifold
+→ moves along rift
+→ deviates (distance ↑)
+→ branches
+→ collapses
+
+![Collapse Geometry](outputs/ieee14_v52_residual_vs_distance.png)
 
 ---
 
