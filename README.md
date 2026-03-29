@@ -74,13 +74,13 @@ Recent extension:
 
 ---
 
-## ⚡ Quick Start
+## 🚀 First Experience (2 min)
 
-```bash
-git clone https://github.com/Scarabaeus1033/NEXAH.git
-cd NEXAH
-pip install -e .
-```
+👉 [START HERE](./START_HERE.md)
+
+Run your first experiment and see structure emerge.
+
+---
 
 ## 🧪 What makes this different?
 
@@ -126,18 +126,16 @@ Even in a fully discrete system:
 
 ## 🧭 Conceptual Pipeline
 
-Simulation
-↓
-Dynamics
-↓
-Flow
-↓
-Topology
-↓
-State Graph
-↓
-Navigation
+Simulation → Dynamics → Flow → Topology → State Graph → Navigation
 
+## 🧱 The NEXAH Stack
+
+- **ARCHY** → simulation layer  
+- **Discovery Engine** → structure extraction  
+- **Field Layer (NEW)** → flow + geometry  
+- **State Graph** → system abstraction  
+- **NEXAH Kernel** → navigation
+  
 ---
 
 ## 🧠 Key Insight
