@@ -4,14 +4,14 @@ Welcome.
 
 This is not a typical repository.
 
-NEXAH is a system for **discovering structure inside dynamics** —  
+NEXAH is a system for **revealing structure inside dynamics** —  
 and learning how to **navigate it**.
 
 ---
 
-## 🧠 What you can do here (in 2 minutes)
+## ⚡ What you can do (in 2 minutes)
 
-You don’t need to understand everything.
+You don’t need theory.
 
 Just run this:
 
@@ -24,16 +24,18 @@ python run_all_visuals.py
 
 ## 👀 What you will see
 
-A set of generated visuals showing:
+From a simple discrete system:
+
+```text
+0,1,2,3,4,5,6
+```
+
+NEXAH generates:
 
 - flow fields  
 - loops  
 - basins  
 - transition structures  
-
-All of this comes from:
-
-👉 prime numbers mod 7
 
 ---
 
@@ -41,32 +43,33 @@ All of this comes from:
 
 ---
 
-## 🤯 Why this matters
+## 🤯 What just happened?
 
-We start with something completely discrete:
+You started with:
 
-```text
-0,1,2,3,4,5,6
-```
+→ **prime numbers mod 7**  
+→ no geometry  
+→ no physics  
 
-And get:
+And got:
 
 - rotation  
 - structure  
 - cycles  
-- geometry  
+- flow-like behavior  
 
 ---
 
-## 🔥 Key idea
+## 🔥 Key insight
 
-**Structure is not imposed — it emerges from transitions.**
+> Structure is not imposed —  
+> it emerges from transitions.
 
 ---
 
 ## 🧪 Try this (seriously)
 
-Change something:
+Change the system:
 
 - mod 7 → mod 11  
 - primes → random numbers  
@@ -74,67 +77,71 @@ Change something:
 
 Run again.
 
-👉 Watch what changes.
+👉 Watch structure appear — or disappear.
 
 ---
 
-## 🧭 What NEXAH is really about
+## 🌐 Step 2 — Real Systems (Optional)
 
-NEXAH is a framework that:
+Now jump to a real-world system:
+
+```bash
+cd APPLICATIONS/power_systems
+```
+
+There you will see:
+
+- real electrical grid models  
+- collapse dynamics  
+- stability structures  
+- field-based system behavior  
+
+👉 Same idea — just real physics.
+
+---
+
+## 🧭 What NEXAH actually does
+
+NEXAH turns systems into:
+
+```
+Dynamics → Structure → Field → Navigation
+```
+
+It:
 
 1. runs systems  
 2. extracts structure  
 3. builds state graphs  
-4. enables navigation  
-
----
-
-## 👥 Want to contribute?
-
-Start simple.
-
-Ideas:
-
-- add a new modulus (mod 11, 13, 17)  
-- compare primes vs random  
-- build new visualizations  
-- detect new structures  
+4. reveals flow (NEW)  
+5. enables navigation  
 
 ---
 
 ## ⚠️ Important
 
-This is not a physics claim.
+This is not a claim about physics.
 
 This is:
 
 - computational  
 - reproducible  
-- exploratory  
+- structural  
 
 ---
 
-## 🔗 Next steps
+## 🔗 Where to go next
 
-- 📄 Theory → ENGINE/research/experiments/  
-- 🖼 Visual Map → visual_map.md  
-- 🧠 Core Framework → README.md  
-
----
-
-## 🔮 Status
-
-✔ running  
-✔ visual  
-✔ structured  
-✔ open for exploration  
+- 📂 Applications → `APPLICATIONS/`  
+- 🧠 Core System → `README.md`  
+- 🔬 Experiments → `ENGINE/research/experiments/`  
 
 ---
 
 ## 🧠 One sentence
 
 We don’t simulate systems —  
-we extract their structure.
+we reveal the structure that governs them.
 
 ---
 
