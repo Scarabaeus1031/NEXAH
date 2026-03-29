@@ -36,8 +36,6 @@ This geometry evolves through successive transformations:
 
 ---
 
----
-
 ## 🌐 Field Layer & Flow Dynamics (V64–V69)
 
 A major extension of the framework introduces:
@@ -100,6 +98,79 @@ To:
 This reveals:
 
 → **how the system moves in state space**
+
+---
+
+### Key Discovery
+
+> The system does not evolve randomly.  
+>  
+> It follows structured paths inside a field.
+
+Observed:
+
+- consistent directional flow  
+- local branching structures  
+- smooth global alignment  
+
+---
+
+### Interpretation
+
+The dynamics follow:
+
+→ **geodesics in the field**
+
+Meaning:
+
+- minimal-energy paths  
+- natural evolution trajectories  
+- fastest approach toward collapse  
+
+---
+
+### Connection to Previous Results
+
+| Previous Concept | Field Interpretation |
+|----------------|---------------------|
+| Manifold | valley / surface in field |
+| Rift | flow-aligned corridor |
+| Distance | deviation from flow alignment |
+| Branching | local flow divergence |
+| Collapse | exit from structured flow |
+
+---
+
+### Visual — Off-Manifold Flow (V69)
+
+![Off-Manifold Flow](outputs/ieee118_v69_off_manifold_flow.png)
+
+→ trajectories follow structured directions  
+→ local deviations reveal branching  
+→ collapse paths are embedded in the field  
+
+---
+
+### Visual — Stream Field (V69)
+
+![Stream Field](outputs/ieee118_v69_stream_field.png)
+
+→ global flow structure becomes visible  
+→ smooth directional alignment across phase space  
+
+---
+
+### Fundamental Insight (Extended)
+
+> The system is not defined by states.  
+>  
+> It is defined by the field that connects them.  
+>  
+>  
+> Collapse is not a point,  
+> not only a process,  
+>  
+> but a **trajectory inside a geometric flow field**.
 
 ---
 
