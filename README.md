@@ -1,4 +1,37 @@
+# NEXAH
+
+**From simulation → structure → field → navigation.**
+
+*A framework for discovering, mapping and navigating stability in complex dynamical systems.*
+
 ---
+
+### What if we didn’t just simulate systems —  
+### but extracted their structure and learned how to move through it?
+
+![NEXAH Multi-Agent Navigation](BUILDER_LAB/visuals/nexah_multi_agent.gif)
+
+*No reward. No predefined goal.  
+Systems organize. Structure emerges.  
+Navigation becomes possible.*
+
+---
+
+## 🧠 What NEXAH actually is
+
+NEXAH is **not just a navigation engine**.
+
+It is a **multi-layer framework** that:
+
+1. **simulates systems**  
+2. **extracts structural dynamics**  
+3. **reveals the underlying field geometry (NEW)**  
+4. **identifies motion paths (flow / geodesics)**  
+5. **enables navigation across stability regimes**
+
+---
+
+## 🧱 The NEXAH Stack
 
 ### 5. Navigation Engine (NEXAH Kernel)
 
