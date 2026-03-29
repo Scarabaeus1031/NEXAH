@@ -145,7 +145,7 @@ Meaning:
 
 ### Visual — Off-Manifold Flow (V69)
 
-![Off-Manifold Flow](outputs/ieee118_v69_off_manifold_flow.png)
+![Off-Manifold Flow](../outputs/ieee118_v69_off_manifold_flow.png)
 
 → trajectories follow structured directions  
 → local deviations reveal branching  
@@ -155,7 +155,7 @@ Meaning:
 
 ### Visual — Stream Field (V69)
 
-![Stream Field](outputs/ieee118_v69_stream_field.png)
+![Stream Field](./outputs/ieee118_v69_stream_field.png)
 
 → global flow structure becomes visible  
 → smooth directional alignment across phase space  
