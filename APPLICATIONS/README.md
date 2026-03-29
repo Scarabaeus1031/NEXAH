@@ -2,398 +2,208 @@
 
 ![NEXAH Exploration Hub](../EXPLORATION_HUB/visuals/NEXAH_Exploration_Map.png)
 
-This directory contains **system models and practical applications** built with the **NEXAH framework**.
+This directory contains **real-world system models and applications** built with the NEXAH framework.
 
-The goal of this layer is to demonstrate how structural models developed in the framework can be applied to **real-world dynamical systems**.
-
-Applications translate the theoretical operators of NEXAH into **concrete system models and simulations.**
+> NEXAH does not just simulate systems —  
+> it reveals their **structure, flow, and stability landscape**.
 
 ---
 
-# From Framework to Applications
+## ⚡ Real-World Application: Power Grid Stability (IEEE)
 
-The NEXAH repository follows a layered structure:
+NEXAH has been successfully applied to **electrical power systems** using IEEE benchmark networks:
+
+- IEEE 9  
+- IEEE 14  
+- IEEE 30  
+- IEEE 118  
+
+### What NEXAH reveals
+
+- early instability signals (before collapse)  
+- structural failure paths  
+- branching collapse behavior  
+- system evolution inside a field  
+
+---
+
+### 🔬 Example — Field-Based Collapse Dynamics (V69)
+
+![IEEE Field Flow](power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+
+- trajectories follow structured directions  
+- collapse emerges along flow paths  
+- branching and divergence become visible  
+
+---
+
+### Why this matters
+
+Classical methods:
+
+→ detect collapse **late**  
+
+NEXAH:
+
+→ detects **structural instability early**  
+→ reveals **how collapse develops**  
+→ enables **navigation instead of observation**
+
+---
+
+## 🧭 From Framework to Applications
+
+NEXAH follows a layered pipeline:
 
 Framework  
 ↓  
-Structural Operators  
+Structure Extraction  
 ↓  
 System Models  
 ↓  
 Applications  
 ↓  
-Exploration Hub  
+Exploration  
 
-- The **framework** defines the structural modeling architecture.
-- The **applications** demonstrate how these ideas can be used to analyze real systems.
-- The **Exploration Hub** allows builders to extend these models into new domains.
+- **Framework** → defines structural operators  
+- **Applications** → apply them to real systems  
+- **Exploration Hub** → expands into new domains  
 
 ---
 
-# Framework Navigation
+## 🔬 Core Application Models
 
 | Model | Description | Module |
 |------|-------------|--------|
-| **Stability Landscape** | Conceptual foundation of system stability | [STABILITY_LANDSCAPE](./STABILITY_LANDSCAPE) |
-| **Gradient Systems** | Systems evolving along stability gradients | [GRADIENT_SYSTEM](./GRADIENT_SYSTEM) |
-| **Drift Systems** | Gradient dynamics with external forces | [DRIFT_SYSTEM](./DRIFT_SYSTEM) |
-| **Regime Systems** | Systems with multiple attractor regimes | [REGIME_SYSTEM](./REGIME_SYSTEM) |
+| **Stability Landscape** | Attractor basins and system stability | [STABILITY_LANDSCAPE](./dynamical_systems/STABILITY_LANDSCAPE) |
+| **Gradient Systems** | Motion along potential gradients | [GRADIENT_SYSTEM](./dynamical_systems/GRADIENT_SYSTEM) |
+| **Drift Systems** | Gradient + external forcing | [DRIFT_SYSTEM](./dynamical_systems/DRIFT_SYSTEM) |
+| **Regime Systems** | Multi-attractor transitions | [REGIME_SYSTEM](./dynamical_systems/REGIME_SYSTEM) |
 
 ---
 
-# Application Modules
+## 🤖 Structural Navigation (Multi-Agent System)
 
-### Stability Landscape  
-`APPLICATIONS/STABILITY_LANDSCAPE`
+NEXAH enables agents to navigate **stability landscapes without reward functions**.
 
-Introduces the fundamental concept of stability landscapes and attractor basins.
+Agents:
 
-### Gradient Systems  
-`APPLICATIONS/GRADIENT_SYSTEM`
+- explore system structure  
+- detect stable regions  
+- follow structural gradients  
+- move along field-aligned paths  
 
-Models systems that evolve along the gradient of a potential field.
+Core idea:
 
-### Drift Systems  
-`APPLICATIONS/DRIFT_SYSTEM`
+> Agents do not optimize —  
+> they follow **stable directions in the field**
 
-Extends gradient systems with external forces and dynamic perturbations.
+Run demo:
 
-### Regime Systems  
-`APPLICATIONS/REGIME_SYSTEM`
-
-Models systems that contain multiple attractors and regime transitions.
-
----
-## NEXAH Multi-Agent Exploration System
-
-The **NEXAH Multi-Agent Exploration System** demonstrates structural navigation across **stability landscapes** using multiple agents. It is designed to explore **regimes and basins of stability** in complex dynamical systems.
-
-### Key Features:
-- **Multi-agent simulation**: Simulate and observe how multiple agents navigate a dynamic stability field.
-- **Role-based agents**: Differentiated roles such as **Explorer** (randomized navigation) and **Climber** (greedy ascent toward higher stability).
-- **Reinforcement learning agents**: Navigate stability landscapes based on learned policies.
-- **Cluster detection**: Automatically detect and visualize clusters of attractor states based on agent positions.
-
-### The Goal:
-NEXAH's multi-agent system provides an advanced method of **structural exploration**, allowing agents to:
-- Explore stability landscapes and **discover stable regions**.
-- Transition between regimes and **estimate cascade risks**.
-- Identify attractors and metastable regions.
-
-This is not merely **optimization**, but rather **navigation through a dynamic, evolving stability field**.
-
-For full exploration functionality, run:
 ```bash
 python ENGINE/run_agent.py
 ```
-### Repository Structure Overview
 
-Here’s how the multi-agent system fits within the larger NEXAH framework:
+---
+
+## 🌪 Lorenz System — Reference Demonstrator
+
+The Lorenz system serves as a **complete structural test case**.
+
+NEXAH reconstructs:
+
+- attractor geometry  
+- basin boundaries  
+- separatrix structures  
+- regime transitions  
+- stability landscapes  
+
+---
+
+### What this demonstrates
+
+- chaotic systems contain hidden structure  
+- transitions are not random  
+- instability follows geometric patterns  
+
+> Chaos is not randomness —  
+> it is **structured and navigable**
+
+Run demo:
+
 ```bash
-RESEARCH
-    ↓
-ENGINE
-    ↓
-    Multi-Agent System → NEXAH Navigation Layer
-	
+python -m APPLICATIONS.run_navigation_demo
 ```
-
-- NEXAH Engine: The computational engine implementing the structural navigation.
-- Multi-Agent Exploration: The multi-agent system which uses the NEXAH framework to simulate the exploration and navigation of agents through   stability landscapes.
-- Visualization: After running the system, visualize agent trajectories and the detected clusters using the tools in the ENGINE/visuals
-  folder.
-
-⸻
-
-Visuals and Links
-
-Once the simulation is executed, the system generates outputs that can be visualized. Visualize agent trajectories and detected clusters as follows:
 
 ---
 
-### **Zusammenfassung der Änderungen:**
+## 🔌 External System Integration
 
-- Der **Multi-Agent Exploration System**-Abschnitt wurde hinzugefügt, der erklärt, wie **NEXAH mit mehreren Agenten** arbeitet, um dynamische Stabilitätslandschaften zu navigieren.
-- **Visuals und Beispielausgabe** wurden eingebaut und mit dem **Visualisierungslink** aus dem **ENGINE/visuals**-Ordner verbunden.
-- Das Beispiel für den **Multi-Agent Exploration System**-Code wurde verlinkt und bietet einen praktischen Einstiegspunkt, um das System zu starten (`python -m APPLICATIONS.run_navigation_demo`).
+NEXAH connects to existing simulators via an adapter layer:
 
----
+Simulator  
+↓  
+Adapter  
+↓  
+State Graph  
+↓  
+NEXAH Analysis  
+↓  
+Navigation  
 
-### **Eingliederung in das bestehende Repository**
+Supported systems include:
 
-- Die Links und visuellen Inhalte im **APPLICATIONS/README.md**-Datei werden sicherstellen, dass das **Multi-Agent Exploration System** vollständig integriert ist.
-- Alle **beispielhaften Funktionen** und **Visualisierungen** des **Multi-Agent Exploration System** stehen nun in **NEXAH Applications** zur Verfügung.
+- MATPOWER  
+- pandapower  
+- PyPSA  
+- traffic simulations  
+- supply chains  
+- infrastructure systems  
 
----
+Adapter location:
 
-# External System Integration
-
-NEXAH can connect to **existing simulators and system models** through an adapter layer.
-
-Rather than replacing simulation software, NEXAH operates as a **navigation layer above simulators**.
-
-```
-Simulator
-    ↓
-Adapter
-    ↓
-State Graph
-    ↓
-NEXAH Navigator
-    ↓
-Policy
-    ↓
-Actions
-```
-
-External simulators describe **system dynamics**, while NEXAH analyzes the **regime structure and navigation possibilities**.
-
-Examples of compatible systems include:
-
-- MATPOWER
-- pandapower
-- PyPSA
-- traffic simulations
-- cyber-physical systems
-- supply chain simulators
-- infrastructure models
-
-Adapters translate simulator output into **finite state graphs** that NEXAH can analyze.
-
-Adapter implementations live in:
-
-```
-APPLICATIONS/adapters
-```
-
-Structure:
-
-```
-adapters/
-   README.md
-   nexah_adapter_spec.md
-   base_adapter.py
-   examples/
-      energy_grid_adapter.py
-```
-
-This architecture allows NEXAH to remain **system-agnostic** while integrating with existing simulation ecosystems.
+APPLICATIONS/adapters/
 
 ---
 
-# From Structure to Application
+## 🌐 From Structure to Application
 
 <img src="visuals/From_Stucture_to_Application.png" width="900">
 
-The NEXAH workflow connects formal structural theory with real-world system analysis.
+NEXAH bridges:
 
-The process follows four conceptual layers:
-
-```
-Formal Core → Structural Semantics → System Models → Applications
-```
-
-- **Formal Core** defines mathematical operators
-- **Structural Semantics** introduces regimes and thresholds
-- **System Models** represent system dynamics
-- **Applications** analyze real-world systems
+Formal Theory → Structure → System Models → Real Applications  
 
 ---
 
-# NEXAH Dynamical Framework
+## 🧠 Core Idea
 
-<img src="visuals/nexah_dynamics_framework_overview.png" width="900">
+Everything in this directory follows one principle:
 
-The NEXAH applications are built on a hierarchy of dynamical models describing how systems evolve in structured state spaces.
-
-The framework introduces increasing levels of dynamical complexity:
-
-```
-Stability Landscape
-↓
-Gradient Systems
-↓
-Drift Systems
-↓
-Regime Systems
-```
+> Structure is not imposed —  
+> it is extracted from dynamics.
 
 ---
 
-<img src="visuals/nexah_dynamics_framework_detailed.png" width="900">
+## 🚀 What you can do here
 
-This diagram summarizes the **four core dynamical models** used in the NEXAH applications framework.
-
----
-
-# Application Navigation Map
-
-<img src="visuals/Applications_Navigation_Map.png" width="900">
-
-The applications follow a conceptual progression:
-
-```
-Stability Landscape (intro model)
-↓
-Structural System Classes
-↓
-Example Applications
-```
-
-This structure demonstrates how general dynamical systems can be represented and analyzed using the NEXAH framework.
+- analyze real systems (power grids, Lorenz, networks)  
+- detect instability early  
+- visualize system structure and flow  
+- explore stability landscapes  
+- build new system models  
 
 ---
 
-# Example System Classes
+## 🔮 Outlook
 
-## Gradient Systems
+The APPLICATIONS layer is evolving toward:
 
-Gradient systems evolve along the slope of a stability landscape.
-
-```
-dx/dt = -∇V(x)
-```
-
-Examples include:
-
-- temperature gradients  
-- pressure systems  
-- energy landscapes  
-- ecological distributions  
-
-Module:
-
-[GRADIENT_SYSTEM](./GRADIENT_SYSTEM/README.md)
+- real-world system integration  
+- predictive stability control  
+- autonomous navigation in complex systems  
+- cross-domain structural analysis  
 
 ---
 
-## Drift Systems
-
-Drift systems extend gradient dynamics with external forces.
-
-```
-dx/dt = -∇V(x) + F(x,t)
-```
-
-Examples include:
-
-- ocean currents  
-- atmospheric transport  
-- particle drift  
-- migration flows  
-
-Module:
-
-[DRIFT_SYSTEM](./DRIFT_SYSTEM/README.md)
-
----
-
-## Regime Systems
-
-Regime systems contain **multiple attractor basins** with possible transitions between them.
-
-```
-dx/dt = -∇V(x) + R(x,t)
-```
-
-Examples include:
-
-- traffic flow vs congestion  
-- financial market regimes  
-- ecosystem transitions  
-- infrastructure thresholds  
-
-Module:
-
-[REGIME_SYSTEM](./REGIME_SYSTEM/README.md)
-
----
-
-# Lorenz Demonstrator
-
-The **Lorenz system** serves as the first complete reference application of the NEXAH framework.
-
-This demonstrator reconstructs the **structural geometry of a chaotic dynamical system** and shows how NEXAH can analyze regime transitions through stability landscape reconstruction.
-
-The Lorenz module implements a full structural analysis pipeline including:
-
-- attractor reconstruction
-- basin boundary detection
-- regime mapping
-- resilience analysis
-- potential landscape reconstruction
-- gradient field navigation
-- separatrix and fractal boundary analysis
-- FTLE and filament structures
-
-Conceptual pipeline:
-
-Lorenz System
-↓
-Regime Mapping
-↓
-Resilience Analysis
-↓
-Potential Landscape Reconstruction
-↓
-Gradient Field Navigation
-↓
-Separatrix Structure
-
-This analysis reveals how chaotic dynamics can be interpreted as **navigation across a structured stability landscape**.
-
-Full documentation and analysis pipeline:
-
-APPLICATIONS/lorenz/README.md
-
-The Lorenz module contains the complete research demonstrator including:
-	•	FTLE surface reconstruction
-	•	curvature fields
-	•	chaos energy landscapes
-	•	filament graphs
-	•	navigation agents
-	•	high-dimensional projections
-
-and serves as the primary benchmark system for the NEXAH dynamical analysis framework.
-
-⸻
-
-Demonstration Script
-
-The full Lorenz exploration pipeline can be executed via:
-
-python -m APPLICATIONS.run_navigation_demo
-
-
-# Connection to the Exploration Hub
-
-While the application modules demonstrate **reference models**, the **Exploration Hub** extends these ideas into open system exploration.
-
-Location:
-
-```
-EXPLORATION_HUB/
-```
-
-The hub invites builders to create new applications for domains such as:
-
-- planetary infrastructure
-- ecosystems
-- cities
-- financial systems
-- supply chains
-- astronomical data
-
-Applications developed in the Exploration Hub can eventually evolve into **formal modules within the APPLICATIONS layer**.
-
----
-
-# Philosophy
-
-NEXAH focuses on **structural stability in complex systems**.
-
-Instead of predicting outcomes purely through statistical models, NEXAH analyzes the **structure of possible system states** and determines where systems stabilize.
-
-In short:
-
-> **NEXAH explores the stability landscape of complex systems.**
+Scarabæus1033 · NEXAH
