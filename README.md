@@ -159,6 +159,16 @@ Current release: **v1.1 (Field Extension)**
 
 ---
 
+## 📚 Deep Dive
+
+To understand the full framework and architecture:
+
+👉 [NEXAH Framework (Extended)](./README_nexah_framework_extended.md)
+
+👉 (or later: ./FRAMEWORK/README.md)
+
+---
+
 ## 📜 Citation
 
 Hofmann, T.K.R. (2026)  
