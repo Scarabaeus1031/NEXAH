@@ -1,288 +1,186 @@
-import sys
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.decomposition import PCA
-from scipy.interpolate import griddata
+from scipy.spatial import cKDTree
 
-# =========================================================
-# PATHS
-# =========================================================
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../../"))
-sys.path.append(ROOT)
+# ==================================================
+# CONFIG
+# ==================================================
 
-IEEE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-sys.path.append(IEEE_DIR)
+BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases"
+INPUT_DIR = os.path.join(BASE_DIR, "outputs/analysis_export")
+OUTPUT_DIR = os.path.join(INPUT_DIR, "likelihood_map")
 
-ANALYSIS_DIR = os.path.join(IEEE_DIR, "analysis")
-sys.path.append(ANALYSIS_DIR)
-
-OUTPUT_DIR = os.path.join(IEEE_DIR, "outputs", "collapse_likelihood")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# =========================================================
-# IMPORTS
-# =========================================================
 
-from nexah.field_layer import Field
-from corridor_detection import (
-    compute_flow_magnitude,
-    detect_corridors,
-    detect_spaces
-)
+# ==================================================
+# LOAD DATA
+# ==================================================
 
-# =========================================================
-# DUMMY PIPELINE (replace later)
-# =========================================================
+def load_data():
+    trajectory = np.load(os.path.join(INPUT_DIR, "states.npy"))
 
-def run_powerflow(lam):
-    n = 10
-    V = 1.0 - 0.3 * lam + 0.01 * np.random.randn(n)
-    theta = 0.1 * lam + 0.01 * np.random.randn(n)
-    return V, theta
+    print("✅ trajectory loaded:", trajectory.shape)
 
-# =========================================================
-# DATA
-# =========================================================
+    return trajectory
 
-lambda_values = np.linspace(0.5, 1.5, 120)
 
-states = []
-for lam in lambda_values:
-    V, theta = run_powerflow(lam)
-    states.append(np.concatenate([V, theta]))
+# ==================================================
+# PCA PROJECTION (2D FIELD)
+# ==================================================
 
-states = np.array(states)
+def compute_pca_projection(data):
+    mean = np.mean(data, axis=0)
+    centered = data - mean
 
-# =========================================================
-# FIELD
-# =========================================================
+    U, S, Vt = np.linalg.svd(centered, full_matrices=False)
 
-field = Field(states)
-vectors = field.get_vector_field()
+    PC = Vt[:2]
+    projected = centered @ PC.T
 
-# =========================================================
-# PCA 2D
-# =========================================================
+    print("✅ PCA projection computed")
 
-pca = PCA(n_components=2)
-states_2d = pca.fit_transform(states)
-vectors_2d = pca.transform(states + vectors) - states_2d
+    return projected
 
-x = states_2d[:, 0]
-y = states_2d[:, 1]
 
-u = vectors_2d[:, 0]
-v = vectors_2d[:, 1]
+# ==================================================
+# BUILD GRID
+# ==================================================
 
-# =========================================================
-# GRID FIELD
-# =========================================================
+def build_grid(projected, resolution=150):
 
-xi = np.linspace(x.min(), x.max(), 180)
-yi = np.linspace(y.min(), y.max(), 180)
-grid_x, grid_y = np.meshgrid(xi, yi)
+    x = projected[:, 0]
+    y = projected[:, 1]
 
-grid_u = griddata((x, y), u, (grid_x, grid_y), method="cubic")
-grid_v = griddata((x, y), v, (grid_x, grid_y), method="cubic")
+    x_min, x_max = x.min(), x.max()
+    y_min, y_max = y.min(), y.max()
 
-grid_u = np.nan_to_num(grid_u)
-grid_v = np.nan_to_num(grid_v)
+    xi = np.linspace(x_min, x_max, resolution)
+    yi = np.linspace(y_min, y_max, resolution)
 
-# =========================================================
-# TOPOLOGY METRICS
-# =========================================================
+    PC1_grid, PC2_grid = np.meshgrid(xi, yi)
 
-dx = xi[1] - xi[0]
-dy = yi[1] - yi[0]
+    print("✅ grid built:", PC1_grid.shape)
 
-du_dx = np.gradient(grid_u, dx, axis=1)
-du_dy = np.gradient(grid_u, dy, axis=0)
+    return PC1_grid, PC2_grid
 
-dv_dx = np.gradient(grid_v, dx, axis=1)
-dv_dy = np.gradient(grid_v, dy, axis=0)
 
-divergence = du_dx + dv_dy
-curl = dv_dx - du_dy
-criticality = np.abs(divergence) * np.abs(curl)
+# ==================================================
+# DISTANCE FIELD (TO TRAJECTORY CLOUD)
+# ==================================================
 
-# =========================================================
-# COLLAPSE BOUNDARY EXTRACTION
-# =========================================================
+def compute_distance_field(projected, PC1_grid, PC2_grid):
 
-collapse_mask = divergence < np.quantile(divergence, 0.05)
+    points = np.vstack([PC1_grid.ravel(), PC2_grid.ravel()]).T
 
-candidate_points = np.column_stack([
-    grid_x[collapse_mask],
-    grid_y[collapse_mask]
-])
+    tree = cKDTree(projected)
 
-num_bins = 60
-bins = np.linspace(x.min(), x.max(), num_bins + 1)
+    dist, _ = tree.query(points, k=1)
 
-fit_x = []
-fit_y = []
+    distance_field = dist.reshape(PC1_grid.shape)
 
-if len(candidate_points) > 0:
-    cx = candidate_points[:, 0]
-    cy = candidate_points[:, 1]
+    print("✅ distance field computed")
 
-    for i in range(num_bins):
-        mask = (cx >= bins[i]) & (cx < bins[i + 1])
-        if np.any(mask):
-            fit_x.append(np.mean(cx[mask]))
-            fit_y.append(np.min(cy[mask]))
+    return distance_field
 
-fit_x = np.array(fit_x)
-fit_y = np.array(fit_y)
 
-if len(fit_x) >= 6:
-    poly_coeff = np.polyfit(fit_x, fit_y, deg=3)
-    poly = np.poly1d(poly_coeff)
-
-    fit_x_dense = np.linspace(fit_x.min(), fit_x.max(), 300)
-    fit_y_dense = poly(fit_x_dense)
-else:
-    fit_x_dense = fit_x
-    fit_y_dense = fit_y
-
-# =========================================================
-# DISTANCE TO FITTED BOUNDARY (FOR EVERY GRID POINT)
-# =========================================================
-
-def point_to_curve_distance(px, py, curve_x, curve_y):
-    if len(curve_x) == 0:
-        return np.nan
-    d = np.sqrt((curve_x - px) ** 2 + (curve_y - py) ** 2)
-    return np.min(d)
-
-distance_map = np.zeros_like(grid_x, dtype=float)
-
-for i in range(grid_x.shape[0]):
-    for j in range(grid_x.shape[1]):
-        distance_map[i, j] = point_to_curve_distance(
-            grid_x[i, j],
-            grid_y[i, j],
-            fit_x_dense,
-            fit_y_dense
-        )
-
-# =========================================================
+# ==================================================
 # COLLAPSE LIKELIHOOD
-# =========================================================
+# ==================================================
 
-alpha = 25.0  # decay strength
+def compute_likelihood(distance_field, scale=50.0):
 
-criticality_norm = criticality / (np.max(criticality) + 1e-12)
-distance_weight = np.exp(-alpha * distance_map)
+    # exponential decay → high likelihood near trajectory manifold
+    likelihood = np.exp(-distance_field * scale)
 
-likelihood = criticality_norm * distance_weight
-likelihood = likelihood / (np.max(likelihood) + 1e-12)
+    print("✅ likelihood computed")
 
-# =========================================================
-# TRAJECTORY DISTANCE & LIKELIHOOD
-# =========================================================
+    return likelihood
 
-traj_distances = np.array([
-    point_to_curve_distance(px, py, fit_x_dense, fit_y_dense)
-    for px, py in zip(x, y)
-])
 
-def sample_grid_value(px, py, gx, gy, values):
-    ix = np.argmin(np.abs(xi - px))
-    iy = np.argmin(np.abs(yi - py))
-    return values[iy, ix]
+# ==================================================
+# PLOT
+# ==================================================
 
-traj_likelihood = np.array([
-    sample_grid_value(px, py, grid_x, grid_y, likelihood)
-    for px, py in zip(x, y)
-])
+def plot_likelihood(likelihood, PC1_grid, PC2_grid, projected):
 
-# =========================================================
-# PLOT 1 — LIKELIHOOD MAP
-# =========================================================
+    plt.figure(figsize=(10, 6))
 
-plt.figure(figsize=(11, 8))
-
-im = plt.imshow(
-    likelihood,
-    extent=[xi.min(), xi.max(), yi.min(), yi.max()],
-    origin="lower",
-    cmap="inferno",
-    aspect="auto",
-    alpha=0.95
-)
-
-plt.streamplot(
-    grid_x,
-    grid_y,
-    grid_u,
-    grid_v,
-    color="white",
-    density=1.2,
-    linewidth=0.7,
-    arrowsize=0.8
-)
-
-if len(fit_x_dense) > 0:
-    plt.plot(
-        fit_x_dense,
-        fit_y_dense,
-        color="cyan",
-        linewidth=2.2,
-        label="fitted collapse boundary"
+    plt.imshow(
+        likelihood,
+        origin="lower",
+        extent=[
+            PC1_grid.min(), PC1_grid.max(),
+            PC2_grid.min(), PC2_grid.max()
+        ],
+        aspect="auto"
     )
 
-plt.plot(x, y, color="lime", linewidth=1.5, alpha=0.9, label="trajectory")
-plt.scatter(x[-1], y[-1], color="yellow", edgecolor="black", s=45, label="collapse", zorder=6)
+    plt.colorbar(label="Collapse likelihood")
 
-plt.title("NEXAH FIELD — Collapse Likelihood Map")
-plt.xlabel("PC1")
-plt.ylabel("PC2")
-plt.colorbar(im, label="Collapse likelihood")
-plt.legend()
-plt.tight_layout()
-plt.savefig(os.path.join(OUTPUT_DIR, "collapse_likelihood_map.png"), dpi=220)
-plt.show()
+    # trajectory overlay
+    plt.plot(
+        projected[:, 0],
+        projected[:, 1],
+        color="lime",
+        linewidth=1,
+        alpha=0.5,
+        label="trajectory"
+    )
 
-# =========================================================
-# PLOT 2 — TRAJECTORY LIKELIHOOD OVER TIME
-# =========================================================
+    plt.xlabel("PC1")
+    plt.ylabel("PC2")
+    plt.title("NEXAH FIELD — Collapse Likelihood Map")
+    plt.legend()
 
-plt.figure(figsize=(10, 4))
-plt.plot(np.arange(len(traj_likelihood)), traj_likelihood, linewidth=2)
-plt.scatter(len(traj_likelihood) - 1, traj_likelihood[-1], color="red", label="collapse point")
+    plt.tight_layout()
 
-plt.title("Trajectory Collapse Likelihood Over Time")
-plt.xlabel("Trajectory step")
-plt.ylabel("Likelihood")
-plt.legend()
-plt.tight_layout()
-plt.savefig(os.path.join(OUTPUT_DIR, "trajectory_likelihood.png"), dpi=220)
-plt.show()
+    out_path = os.path.join(OUTPUT_DIR, "collapse_likelihood.png")
+    plt.savefig(out_path, dpi=200)
 
-# =========================================================
-# PLOT 3 — DISTANCE VS LIKELIHOOD
-# =========================================================
+    print(f"💾 Plot saved → {out_path}")
 
-plt.figure(figsize=(6, 5))
-plt.scatter(traj_distances, traj_likelihood, c=np.arange(len(traj_likelihood)), cmap="viridis", s=30)
-plt.xlabel("Distance to boundary")
-plt.ylabel("Collapse likelihood")
-plt.title("Distance vs Collapse Likelihood")
-plt.colorbar(label="Trajectory step")
-plt.tight_layout()
-plt.savefig(os.path.join(OUTPUT_DIR, "distance_vs_likelihood.png"), dpi=220)
-plt.show()
+    plt.show()
 
-# =========================================================
-# SAVE RAW
-# =========================================================
 
-np.save(os.path.join(OUTPUT_DIR, "likelihood.npy"), likelihood)
-np.save(os.path.join(OUTPUT_DIR, "distance_map.npy"), distance_map)
-np.save(os.path.join(OUTPUT_DIR, "trajectory_likelihood.npy"), traj_likelihood)
-np.save(os.path.join(OUTPUT_DIR, "trajectory_distances.npy"), traj_distances)
+# ==================================================
+# SAVE
+# ==================================================
 
-print("✅ Collapse likelihood outputs saved to:", OUTPUT_DIR)
+def save_all(likelihood, PC1_grid, PC2_grid, projected):
+
+    np.save(os.path.join(INPUT_DIR, "collapse_likelihood.npy"), likelihood)
+    np.save(os.path.join(INPUT_DIR, "PC1_grid.npy"), PC1_grid)
+    np.save(os.path.join(INPUT_DIR, "PC2_grid.npy"), PC2_grid)
+    np.save(os.path.join(INPUT_DIR, "trajectory_pca.npy"), projected)
+
+    print("💾 All arrays saved → analysis_export/")
+
+
+# ==================================================
+# MAIN
+# ==================================================
+
+def main():
+
+    trajectory = load_data()
+
+    projected = compute_pca_projection(trajectory)
+
+    PC1_grid, PC2_grid = build_grid(projected)
+
+    distance_field = compute_distance_field(projected, PC1_grid, PC2_grid)
+
+    likelihood = compute_likelihood(distance_field)
+
+    plot_likelihood(likelihood, PC1_grid, PC2_grid, projected)
+
+    save_all(likelihood, PC1_grid, PC2_grid, projected)
+
+    print("🚀 Likelihood pipeline complete")
+
+
+if __name__ == "__main__":
+    main()
