@@ -418,6 +418,126 @@ Collapse is governed by:
 
 ---
 
+---
+
+## 🌊 Field Perspective (V68–V69)
+
+A fundamental shift emerges in the latest stage of the framework.
+
+The system is no longer described only by:
+
+- state (c)  
+- drift (dc)  
+- acceleration (d²c)  
+
+Instead:
+
+→ it is directly observable as a **vector field in phase space**
+
+---
+
+### Field Representation
+
+Each point (c, dc) carries:
+
+→ a direction of evolution  
+
+F(c, dc) → local flow vector  
+
+---
+
+### Visual — Field Structure (V69)
+
+![Field Vector Map](outputs/ieee30_v69_field_vectors.png)
+
+→ trajectories are not arbitrary  
+→ they follow structured directions in the field  
+
+---
+
+### Key Discovery
+
+The previously defined quantities are not fundamental:
+
+- dc → projection of flow direction  
+- d²c → change of flow direction  
+- curvature → local bending of the field  
+- manifold → preferred paths in the field  
+
+---
+
+### Geometric Interpretation
+
+The system follows:
+
+→ **geodesic-like paths in the field**
+
+Meaning:
+
+- minimal-energy trajectories  
+- natural evolution directions  
+- preferred collapse paths  
+
+---
+
+### Visual — Collapse Geometry (V52)
+
+![Residual vs Distance](outputs/ieee14_v52_residual_vs_distance.png)
+
+→ structured regions emerge  
+→ these correspond to different flow behaviors in the field  
+
+---
+
+### Collapse (Reinterpreted)
+
+Collapse is not triggered by:
+
+- thresholds  
+- scalar values  
+
+Instead:
+
+→ trajectories enter regions where the field directs them irreversibly  
+
+---
+
+### GH Corridor (Field View)
+
+GH is not a phase classification.
+
+It is:
+
+→ **a coherent flow corridor**
+
+Properties:
+
+- aligned vector directions  
+- stable trajectory propagation  
+- low directional divergence  
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ trajectory-based modeling  
+
+To:
+
+→ field-based dynamics  
+
+---
+
+### Core Insight (Extended)
+
+> The equations describe what happens.  
+>  
+> The field determines that it happens.  
+
+---
+
 ## Final Core Insight
 
 > Collapse is not a point.  
