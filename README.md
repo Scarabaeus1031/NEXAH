@@ -95,6 +95,14 @@ NEXAH:
 → **identifies natural motion paths**  
 → **enables navigation through stability landscapes**
 
+## 🌐 Field Structure (V69)
+
+![Field Vector Map](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee30_v69_field_vectors.png)
+
+→ trajectories are not arbitrary  
+→ they follow structured directions in the field  
+→ collapse follows embedded flow paths  
+
 ---
 
 ## 🔬 Experimental Validation — Prime Modular Resonance
