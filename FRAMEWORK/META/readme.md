@@ -1,40 +1,136 @@
-# NEXAH Framework - META Layer
+# NEXAH Framework — META Layer
 
-Welcome to the **META Layer** of the NEXAH Framework. This section defines the foundational principles, axioms, and theorems that form the core of the NEXAH system. 
+The **META Layer** defines the **formal foundation** of the NEXAH Framework.
 
-The **META** layer sets the **relational order** for the entire framework and provides the theoretical structure that supports the implementation of NEXAH.
+It establishes the minimal concepts required to describe systems **before any simulation, risk analysis, or navigation is performed**.
 
 ---
- 
-## 📚 Key Areas
+
+## 🧠 Role of META
+
+The META layer answers the fundamental question:
+
+> What is a system?
+
+It provides:
+
+- a formal definition of systems  
+- a consistent vocabulary for states and transitions  
+- the structural basis for all higher layers  
+
+All subsequent layers (ARCHY, MESO, NEXAH, MEVA) operate on top of these definitions.
+
+---
+
+## 📚 Core Components
+
+### **Definitions**
+Formal definitions of the core objects:
+
+- system  
+- state  
+- transition  
+- regime  
+- collapse  
+- risk  
+- navigation  
+
+These definitions ensure a **consistent and unambiguous description of systems**.
+
+---
 
 ### **Axioms**
-The fundamental principles that define NEXAH and its relational modeling structure. These axioms serve as the starting point for building complex system models and understanding system behavior.
+Minimal assumptions about systems:
+
+- systems are relational  
+- transitions exist  
+- structure emerges from dynamics  
+- regimes form from consistent behavior  
+- navigation becomes possible once structure is known  
+
+The axioms define the **logical foundation** of the framework.
+
+---
 
 ### **Principles**
-Core structural rules that guide the application of NEXAH. These principles outline how NEXAH should be used to model and navigate complex systems.
+Operational guidelines for applying the framework:
 
-### **Theorems**
-Formal derivations and applications based on the axioms and principles. These theorems demonstrate how NEXAH can be applied to solve real-world problems and create usable models.
+- relational primacy  
+- systemic integrity  
+- dynamic evolution  
+- relational adaptability  
+- contextual consistency  
+
+These principles guide how systems are modeled and interpreted.
+
+---
+
+### **Minimal Model**
+A minimal working system demonstrating:
+
+- transition structure  
+- regime formation  
+- risk emergence  
+- navigation  
+
+This model proves that the NEXAH framework operates on the smallest possible system.
 
 ---
 
 ## 🛠️ How to Use This Layer
 
-- **Axioms**: Begin by exploring the foundational axioms to understand the relational structure of the framework.
-- **Principles**: Apply the principles to structure and navigate systems.
-- **Theorems**: Use the theorems as formal guidelines for creating and applying models.
+1. **Start with Definitions**  
+   Understand the formal objects of the framework.
 
-This section is critical for those looking to understand the **theoretical basis** of the NEXAH framework and for researchers building on these foundational elements.
+2. **Review Axioms**  
+   Establish the minimal assumptions about system behavior.
+
+3. **Apply Principles**  
+   Use the principles to structure real-world systems.
+
+4. **Run the Minimal Model**  
+   Verify how structure, risk, and navigation emerge.
+
+---
+
+## 🔄 Position in the System Stack
+
+META is the first layer of the NEXAH architecture:
+
+META → ARCHY → MESO → NEXAH → MEVA
+
+It defines the structure that enables:
+
+- regime detection (ARCHY)  
+- risk geometry (MESO)  
+- navigation (NEXAH)  
+- execution (MEVA)  
+
+---
+
+## 🔑 Key Insight
+
+> Systems are not defined by components alone,  
+> but by relational structure that induces transitions.
 
 ---
 
 ## 🚀 Next Steps
 
-- **Explore the Framework**: Dive deeper into how the **META**, **ARCHY**, and **NEXAH** layers work together.
-- **Apply the Principles**: Begin experimenting with NEXAH using the foundational principles and axioms.
-- **Contribute**: If you have theoretical insights or new applications, contribute to the framework.
+- Explore **ARCHY** for regime structure and system dynamics  
+- Explore **MESO** for stability and risk geometry  
+- Explore **NEXAH** for navigation strategies  
 
 ---
 
-This document serves as the entry point into the **META** layer of the NEXAH framework. All further development of NEXAH is based on these foundational elements.
+## Summary
+
+The META layer provides the **minimal formal foundation** of the NEXAH Framework.
+
+It ensures that:
+
+- systems are consistently defined  
+- structure can be extracted from dynamics  
+- navigation becomes a well-defined problem  
+
+All higher-level capabilities of NEXAH depend on this layer.
