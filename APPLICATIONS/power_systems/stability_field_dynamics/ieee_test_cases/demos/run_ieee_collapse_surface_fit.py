@@ -246,7 +246,9 @@ plt.show()
 # =========================================================
 # SAVE RAW
 # =========================================================
-
+np.save(os.path.join(OUTPUT_DIR, "collapse_likelihood.npy"), collapse_likelihood)
+np.save(os.path.join(OUTPUT_DIR, "PC1_grid.npy"), PC1_grid)
+np.save(os.path.join(OUTPUT_DIR, "PC2_grid.npy"), PC2_grid)
 np.save(os.path.join(OUTPUT_DIR, "divergence.npy"), divergence)
 np.save(os.path.join(OUTPUT_DIR, "collapse_candidates.npy"), candidate_points)
 np.save(os.path.join(OUTPUT_DIR, "fit_x.npy"), fit_x_dense)
