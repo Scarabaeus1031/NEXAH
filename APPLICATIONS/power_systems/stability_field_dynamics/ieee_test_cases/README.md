@@ -446,12 +446,13 @@ F(c, dc) → local flow vector
 
 ---
 
-### Visual — Field Structure (V69)
+### Visual — Off-Manifold Flow Field (V69)
 
-![Field Vector Map](outputs/ieee30_v69_field_vectors.png)
+![Off-Manifold Flow](outputs/ieee118_v69_off_manifold_flow.png)
 
 → trajectories are not arbitrary  
 → they follow structured directions in the field  
+→ local deviations reveal branching dynamics  
 
 ---
 
