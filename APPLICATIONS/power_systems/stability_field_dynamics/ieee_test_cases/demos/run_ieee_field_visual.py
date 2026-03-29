@@ -9,18 +9,14 @@ from scipy.interpolate import griddata
 # PATH FIX (robust)
 # =========================================================
 
-# repo root
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../../"))
 sys.path.append(ROOT)
 
-# ieee_test_cases
 IEEE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(IEEE_DIR)
 
-# analysis folder direkt
 ANALYSIS_DIR = os.path.join(IEEE_DIR, "analysis")
 sys.path.append(ANALYSIS_DIR)
-
 
 # =========================================================
 # IMPORTS
@@ -28,13 +24,11 @@ sys.path.append(ANALYSIS_DIR)
 
 from nexah.field_layer import Field
 
-# 🔥 DIREKT importieren (kein package stress)
 from corridor_detection import (
     compute_flow_magnitude,
     detect_corridors,
     detect_spaces
 )
-
 
 # =========================================================
 # ⚠️ REPLACE WITH YOUR REAL IEEE PIPELINE
@@ -65,14 +59,12 @@ for lam in lambda_values:
 states = np.array(states)
 lambdas = np.array(lambdas)
 
-
 # =========================================================
 # FIELD
 # =========================================================
 
 field = Field(states)
 vectors = field.get_vector_field()
-
 
 # =========================================================
 # PCA
@@ -82,7 +74,6 @@ pca = PCA(n_components=2)
 states_2d = pca.fit_transform(states)
 
 vectors_2d = pca.transform(states + vectors) - states_2d
-
 
 # =========================================================
 # GRID
@@ -104,16 +95,17 @@ grid_v = griddata((x, y), v, (grid_x, grid_y), method='cubic')
 grid_u = np.nan_to_num(grid_u)
 grid_v = np.nan_to_num(grid_v)
 
-
 # =========================================================
 # STRUCTURE
 # =========================================================
 
 flow_mag = compute_flow_magnitude(grid_u, grid_v)
 
+# 🔥 FIX: avoid colorbar crash
+flow_mag = flow_mag + 1e-6
+
 corridors = detect_corridors(flow_mag)
 spaces = detect_spaces(flow_mag)
-
 
 # =========================================================
 # PLOT
@@ -122,7 +114,7 @@ spaces = detect_spaces(flow_mag)
 plt.figure(figsize=(10, 8))
 
 # FIELD
-plt.streamplot(
+stream = plt.streamplot(
     grid_x,
     grid_y,
     grid_u,
@@ -165,10 +157,12 @@ plt.title("NEXAH FIELD — Corridors & Spaces")
 plt.xlabel("PC1")
 plt.ylabel("PC2")
 
-plt.colorbar(label="Flow magnitude")
-plt.legend()
+# safe colorbar
+plt.colorbar(stream.lines, label="Flow magnitude")
 
+plt.legend()
 plt.grid(alpha=0.2)
 plt.tight_layout()
 
 plt.show()
+
