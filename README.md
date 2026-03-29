@@ -103,11 +103,6 @@ NEXAH:
 → local deviations reveal branching dynamics  
 → collapse paths are embedded in the field geometry
 
-![Stream Field (V69)](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_stream_field.png)
-
-→ global flow structure becomes visible  
-→ smooth alignment across the state space
-
 ---
 
 ## 🔬 Experimental Validation — Prime Modular Resonance
