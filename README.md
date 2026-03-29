@@ -31,23 +31,6 @@ It is a **multi-layer framework** that:
 
 ---
 
-## 🧱 The NEXAH Stack
-
-### 5. Navigation Engine (NEXAH Kernel)
-
-Agents operate on extracted structure and field geometry:
-
-- no reward function  
-- no predefined objective  
-- navigation based on **structural stability**
-
-Core idea:
-
-> Agents do not optimize —  
-> they **discover and move within stable regions of the field**
-
----
-
 ## ⚠️ Important Note (Current Status)
 
 The framework is **fully functional for structure discovery and mapping**.
@@ -94,6 +77,8 @@ NEXAH:
 → **reveals the field behind the system**  
 → **identifies natural motion paths**  
 → **enables navigation through stability landscapes**
+
+---
 
 ## 🌐 Field Structure (V69)
 
