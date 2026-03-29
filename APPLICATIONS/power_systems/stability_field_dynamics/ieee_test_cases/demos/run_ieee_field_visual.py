@@ -5,14 +5,31 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from scipy.interpolate import griddata
 
-# --- ensure repo root is in path ---
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../../")))
+# =========================================================
+# PATH FIX (robust)
+# =========================================================
+
+# repo root
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../../"))
+sys.path.append(ROOT)
+
+# ieee_test_cases
+IEEE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(IEEE_DIR)
+
+# analysis folder direkt
+ANALYSIS_DIR = os.path.join(IEEE_DIR, "analysis")
+sys.path.append(ANALYSIS_DIR)
+
+
+# =========================================================
+# IMPORTS
+# =========================================================
 
 from nexah.field_layer import Field
 
-# --- import corridor detection ---
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from analysis.corridor_detection import (
+# 🔥 DIREKT importieren (kein package stress)
+from corridor_detection import (
     compute_flow_magnitude,
     detect_corridors,
     detect_spaces
@@ -58,7 +75,7 @@ vectors = field.get_vector_field()
 
 
 # =========================================================
-# DIMENSION REDUCTION (PCA)
+# PCA
 # =========================================================
 
 pca = PCA(n_components=2)
@@ -68,7 +85,7 @@ vectors_2d = pca.transform(states + vectors) - states_2d
 
 
 # =========================================================
-# INTERPOLATED FIELD (REAL FIELD STRUCTURE)
+# GRID
 # =========================================================
 
 x = states_2d[:, 0]
@@ -77,22 +94,19 @@ y = states_2d[:, 1]
 u = vectors_2d[:, 0]
 v = vectors_2d[:, 1]
 
-# --- grid ---
 xi = np.linspace(x.min(), x.max(), 120)
 yi = np.linspace(y.min(), y.max(), 120)
 grid_x, grid_y = np.meshgrid(xi, yi)
 
-# --- interpolation ---
 grid_u = griddata((x, y), u, (grid_x, grid_y), method='cubic')
 grid_v = griddata((x, y), v, (grid_x, grid_y), method='cubic')
 
-# --- fix NaNs ---
 grid_u = np.nan_to_num(grid_u)
 grid_v = np.nan_to_num(grid_v)
 
 
 # =========================================================
-# FLOW + STRUCTURE DETECTION
+# STRUCTURE
 # =========================================================
 
 flow_mag = compute_flow_magnitude(grid_u, grid_v)
@@ -107,7 +121,7 @@ spaces = detect_spaces(flow_mag)
 
 plt.figure(figsize=(10, 8))
 
-# --- FIELD ---
+# FIELD
 plt.streamplot(
     grid_x,
     grid_y,
@@ -119,13 +133,13 @@ plt.streamplot(
     linewidth=1
 )
 
-# --- trajectory ---
+# trajectory
 plt.plot(x, y, color='white', linewidth=2, alpha=0.7, label="trajectory")
 
-# --- collapse ---
+# collapse
 plt.scatter(x[-1], y[-1], color='red', label='collapse', zorder=5)
 
-# --- CORRIDORS (red contour) ---
+# corridors
 plt.contour(
     grid_x,
     grid_y,
@@ -136,7 +150,7 @@ plt.contour(
     alpha=0.8
 )
 
-# --- SPACES (blue contour) ---
+# spaces
 plt.contour(
     grid_x,
     grid_y,
@@ -158,4 +172,3 @@ plt.grid(alpha=0.2)
 plt.tight_layout()
 
 plt.show()
-
