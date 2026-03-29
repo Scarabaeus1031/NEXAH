@@ -75,12 +75,13 @@ yi = np.linspace(y.min(), y.max(), 100)
 
 grid_x, grid_y = np.meshgrid(xi, yi)
 
+# interpolate field
 grid_u = griddata((x, y), u, (grid_x, grid_y), method='cubic')
 grid_v = griddata((x, y), v, (grid_x, grid_y), method='cubic')
 
+# remove NaNs (important!)
 grid_u = np.nan_to_num(grid_u)
-grid_v = np.nan_to_num(grid_v)'cubic')
-
+grid_v = np.nan_to_num(grid_v)
 
 # =========================================================
 # PLOT
