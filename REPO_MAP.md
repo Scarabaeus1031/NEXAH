@@ -1,29 +1,38 @@
-# 🧭 NEXAH — REPOSITORY MAP
+# 🧭 NEXAH — REPOSITORY MAP (V2)
 
-This map helps you understand **where you are** and **where to go next**.
+NEXAH is not a collection of folders.
 
-NEXAH is not a linear project —  
-it is a **layered system**.
+It is a **multi-layer system for discovering structure in complex dynamics**.
 
 ---
 
-## 🚀 1. ENTRY POINT
+## 🚀 ENTRY POINT
 
 Start here:
 
 👉 `START_HERE.md`
 
-What you get:
-
-- one experiment  
-- immediate visuals  
-- zero theory required  
-
-This is your first contact with NEXAH.
+- run one experiment  
+- see immediate structure  
+- no theory required  
 
 ---
 
-## 🔬 2. EXPERIMENT LAYER
+## 🌐 SYSTEM OVERVIEW
+
+NEXAH operates across **five fundamental layers**:
+
+| Layer | Function |
+|------|--------|
+| Geometry | structure in state space |
+| Dynamics | motion through structure |
+| Memory | recurrence + persistence |
+| Topology | states, loops, transitions |
+| Field (NEW) | continuous flow + movement law |
+
+---
+
+## 🔬 DISCOVERY LAYER
 
 Location:
 
@@ -31,40 +40,54 @@ Location:
 ENGINE/research/experiments/
 ```
 
-This is the **playground**.
+This is where structure is discovered.
 
-Here you will find:
+Includes:
 
-- Prime Modular Resonance  
-- modular systems  
-- discrete experiments  
-- test environments  
-
-👉 This is where structure is discovered.
+- prime modular systems  
+- discrete dynamics  
+- parameter explorations  
 
 ---
 
-## 🖼 3. VISUAL LAYER
+## 🖼 VISUAL LAYER
 
-Location (example):
+Location:
 
 ```
 analysis/output/plots/
 visual_map.md
 ```
 
-This layer shows:
+This is where structure becomes visible:
 
 - flow fields  
 - loops  
 - basins  
-- spectral structures  
-
-👉 This is where structure becomes visible.
+- collapse geometry  
 
 ---
 
-## 🧠 4. THEORY LAYER
+## 🌐 FIELD LAYER (NEW — V64+)
+
+Emerges from:
+
+```
+APPLICATIONS/.../analysis/
+```
+
+This layer reveals:
+
+- vector fields  
+- streamlines  
+- off-manifold structure  
+- branching flows  
+
+👉 This is where **motion becomes visible**
+
+---
+
+## 🧠 THEORY LAYER
 
 Location:
 
@@ -74,34 +97,16 @@ ENGINE/research/
 
 Contains:
 
-- experiment descriptions  
-- theory notes  
-- result summaries  
+- interpretations  
+- structural laws  
+- collapse framework  
+- cross-domain mappings  
 
-👉 This explains what you are seeing.
-
----
-
-## ⚙️ 5. CORE FRAMEWORK
-
-Entry:
-
-👉 `README.md`
-
-This is the **full NEXAH system**.
-
-Includes:
-
-- discovery engine  
-- navigation system  
-- agent framework  
-- architecture  
-
-👉 This is where everything connects.
+👉 This explains what the system is doing
 
 ---
 
-## 🧱 6. DISCOVERY ENGINE
+## 🧱 DISCOVERY ENGINE
 
 Location:
 
@@ -116,11 +121,11 @@ Core capabilities:
 - flow analysis  
 - phase transitions  
 
-👉 This is the heart of structure extraction.
+👉 extracts structure from raw dynamics  
 
 ---
 
-## 🧪 7. APPLICATION LAYER
+## 🧪 APPLICATION LAYER
 
 Location:
 
@@ -130,131 +135,129 @@ APPLICATIONS/
 
 Examples:
 
-- power grids  
-- supply chains  
+- power grids (IEEE)  
 - dynamical systems  
 - simulations  
 
-👉 This is where NEXAH is applied to real systems.
+👉 this is where NEXAH meets reality  
 
 ---
 
-## 🛠 8. BUILDER LAB
+## 🤖 MULTI-AGENT LAYER
 
-Location:
+Emerging layer (V63+):
+
+- local orientation agents  
+- no reward / no global objective  
+- structure emerges from interaction  
+
+👉 shows that the field can be **enacted, not only computed**
+
+---
+
+## 🔢 DISCRETE FIELD LAYER (PRIMES)
+
+Located in:
 
 ```
-BUILDER_LAB/
+ENGINE/research/experiments/
 ```
 
-Contains:
+- modular systems  
+- prime resonance  
+- gap structures  
 
-- demos  
-- experimental setups  
-- prototypes  
-
-👉 This is where new ideas are tested.
+👉 discrete systems exhibit the **same structure as continuous fields**
 
 ---
 
-## 🤝 9. CONTRIBUTION SYSTEM
+## 🔄 HOW EVERYTHING CONNECTS
 
-Start here:
-
-- `CONTRIBUTING.md`
-- `FIRST_ISSUES.md`
-
-You can:
-
-- modify experiments  
-- build new visuals  
-- compare systems  
-- discover new structures  
+```
+Experiments
+    ↓
+Structure
+    ↓
+Visualization
+    ↓
+Field
+    ↓
+Theory
+    ↓
+Applications
+```
 
 ---
 
-## 🧭 HOW TO NAVIGATE THIS REPO
+## 🧭 NAVIGATION PATHS
 
-### Path 1 — Explorer
+### Explorer
 
 ```
 START_HERE
     ↓
 run experiment
     ↓
-change parameters
-    ↓
 observe structure
 ```
 
 ---
 
-### Path 2 — Builder
+### Builder
 
 ```
-START_HERE
+Experiments
     ↓
-EXPERIMENTS
+modify system
     ↓
-new scripts
-    ↓
-new visuals
+generate new visuals
 ```
 
 ---
 
-### Path 3 — Researcher
+### Researcher
 
 ```
-START_HERE
+Theory
     ↓
-THEORY
+compare systems
     ↓
-RESULT_SUMMARY
-    ↓
-comparative analysis
+derive principles
 ```
 
 ---
 
-### Path 4 — System Architect
+### System Architect
 
 ```
-README.md
+Field Layer
     ↓
-DISCOVERY_ENGINE
+Cross-domain mapping
     ↓
-APPLICATIONS
-    ↓
-full system understanding
+unified model
 ```
 
 ---
 
-## 🔥 CORE IDEA
+## 🔥 CORE PRINCIPLE
 
-Everything in this repository follows one principle:
-
-> Structure is not imposed —  
-> it is extracted from dynamics.
-
----
-
-## 🔮 CURRENT STATE
-
-- experiments: active  
-- visuals: strong  
-- theory: evolving  
-- framework: operational  
-- navigation: emerging  
+> Structure is not imposed.  
+>  
+> It is extracted from dynamics.  
+>  
+>  
+> And dynamics are not arbitrary —  
+>  
+> they follow paths inside a field.
 
 ---
 
 ## 🧠 ONE SENTENCE
 
-This is not a collection of tools.
+This repository is not a toolset.
 
-👉 It is a system for discovering how structure emerges.
+👉 It is a system for discovering  
+**how structure, motion, and collapse emerge in complex systems.**
 
 ---
 
