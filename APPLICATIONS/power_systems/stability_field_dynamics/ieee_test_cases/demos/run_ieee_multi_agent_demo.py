@@ -1,4 +1,3 @@
-```python id="q8d9i7"
 import sys
 import os
 import numpy as np
@@ -223,4 +222,4 @@ plt.grid(alpha=0.2)
 plt.tight_layout()
 
 plt.show()
-```
+
