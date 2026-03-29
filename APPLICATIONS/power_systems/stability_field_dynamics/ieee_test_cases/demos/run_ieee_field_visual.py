@@ -94,7 +94,7 @@ plt.grid(alpha=0.3)
 
 plt.tight_layout()
 plt.show()
-```
+
 plt.scatter(states_2d[-1, 0], states_2d[-1, 1], color='red', label='collapse')
 
 plt.title("NEXAH FIELD — Flow Geometry (IEEE Projection)")
