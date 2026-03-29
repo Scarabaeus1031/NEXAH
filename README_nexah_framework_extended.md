@@ -49,6 +49,8 @@ The framework draws from:
 
 ## Core Concept
 
+
+
 NEXAH converts:
 
 ```
@@ -76,6 +78,32 @@ This enables **intervention, not just observation**.
 ## One-Sentence Summary
 
 > NEXAH transforms dynamical system simulations into navigable regime landscapes, enabling agents to move toward stable system states.
+
+---
+
+## 🌐 Field Extension (V64–V69)
+
+The framework now extends beyond structure and topology:
+
+→ systems are represented as **continuous vector fields**
+
+This introduces:
+
+- explicit flow representation  
+- off-manifold exploration  
+- branching dynamics  
+- natural motion paths (geodesics)
+
+### Key Insight
+
+> Systems do not move randomly.  
+> They follow structured paths inside a field.
+
+This connects:
+
+- structure → topology  
+- topology → flow  
+- flow → navigation  
 
 ---
 
