@@ -1,3 +1,4 @@
+```python
 import sys
 import os
 import numpy as np
@@ -69,19 +70,27 @@ y = states_2d[:, 1]
 u = vectors_2d[:, 0]
 v = vectors_2d[:, 1]
 
-# create regular grid (SAFE VERSION)
-xi = np.linspace(x.min(), x.max(), 100)
-yi = np.linspace(y.min(), y.max(), 100)
+# --- stable grid ---
+xi = np.linspace(x.min(), x.max(), 120)
+yi = np.linspace(y.min(), y.max(), 120)
 
 grid_x, grid_y = np.meshgrid(xi, yi)
 
-# interpolate field
+# --- interpolation ---
 grid_u = griddata((x, y), u, (grid_x, grid_y), method='cubic')
 grid_v = griddata((x, y), v, (grid_x, grid_y), method='cubic')
 
-# remove NaNs (important!)
+# --- fallback for NaNs ---
 grid_u = np.nan_to_num(grid_u)
 grid_v = np.nan_to_num(grid_v)
+
+
+# =========================================================
+# FLOW MAGNITUDE (for visualization)
+# =========================================================
+
+flow_mag = np.sqrt(grid_u**2 + grid_v**2)
+
 
 # =========================================================
 # PLOT
@@ -95,25 +104,27 @@ plt.streamplot(
     grid_y,
     grid_u,
     grid_v,
-    color=np.sqrt(grid_u**2 + grid_v**2),
+    color=flow_mag,
     cmap='viridis',
-    density=2
+    density=2,
+    linewidth=1
 )
 
 # --- trajectory ---
-plt.plot(x, y, color='white', linewidth=2, label="trajectory")
+plt.plot(x, y, color='white', linewidth=2, alpha=0.7, label="trajectory")
 
 # --- collapse point ---
-plt.scatter(x[-1], y[-1], color='red', label='collapse')
+plt.scatter(x[-1], y[-1], color='red', label='collapse', zorder=5)
 
 plt.title("NEXAH FIELD — Continuous Flow Geometry")
 plt.xlabel("PC1")
 plt.ylabel("PC2")
-plt.colorbar(label="Flow magnitude")
 
+plt.colorbar(label="Flow magnitude")
 plt.legend()
+
 plt.grid(alpha=0.2)
 plt.tight_layout()
 
 plt.show()
-
+```
