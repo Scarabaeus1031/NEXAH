@@ -69,13 +69,17 @@ y = states_2d[:, 1]
 u = vectors_2d[:, 0]
 v = vectors_2d[:, 1]
 
-grid_x, grid_y = np.mgrid[
-    x.min():x.max():100j,
-    y.min():y.max():100j
-]
+# create regular grid (SAFE VERSION)
+xi = np.linspace(x.min(), x.max(), 100)
+yi = np.linspace(y.min(), y.max(), 100)
+
+grid_x, grid_y = np.meshgrid(xi, yi)
 
 grid_u = griddata((x, y), u, (grid_x, grid_y), method='cubic')
 grid_v = griddata((x, y), v, (grid_x, grid_y), method='cubic')
+
+grid_u = np.nan_to_num(grid_u)
+grid_v = np.nan_to_num(grid_v)'cubic')
 
 
 # =========================================================
