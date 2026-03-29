@@ -1,4 +1,5 @@
-import sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../../")))
+```python
+import sys
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,7 +7,7 @@ from scipy.ndimage import gaussian_filter1d
 from sklearn.decomposition import PCA
 
 # --- ensure repo root is in path ---
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../../")))
 
 from nexah.field_layer import Field
 
@@ -83,6 +84,18 @@ plt.quiver(
 )
 
 # highlight collapse region (end of trajectory)
+plt.scatter(states_2d[-1, 0], states_2d[-1, 1], color='red', label='collapse')
+
+plt.title("NEXAH FIELD — Flow Geometry (IEEE Projection)")
+plt.xlabel("PC1")
+plt.ylabel("PC2")
+plt.colorbar(label="Load λ")
+plt.legend()
+plt.grid(alpha=0.3)
+
+plt.tight_layout()
+plt.show()
+```
 plt.scatter(states_2d[-1, 0], states_2d[-1, 1], color='red', label='collapse')
 
 plt.title("NEXAH FIELD — Flow Geometry (IEEE Projection)")
