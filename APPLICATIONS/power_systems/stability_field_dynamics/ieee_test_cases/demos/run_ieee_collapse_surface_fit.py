@@ -1,4 +1,3 @@
-```python id="y60yuh"
 import sys
 import os
 import numpy as np
@@ -255,4 +254,4 @@ np.save(os.path.join(OUTPUT_DIR, "fit_y.npy"), fit_y_dense)
 np.save(os.path.join(OUTPUT_DIR, "trajectory_distances.npy"), traj_distances)
 
 print("✅ Collapse surface fit saved to:", OUTPUT_DIR)
-```
+
