@@ -2,8 +2,8 @@ import sys
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.ndimage import gaussian_filter1d
 from sklearn.decomposition import PCA
+from scipy.interpolate import griddata
 
 # --- ensure repo root is in path ---
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../../")))
@@ -60,49 +60,55 @@ vectors_2d = pca.transform(states + vectors) - states_2d
 
 
 # =========================================================
-# PLOT FIELD FLOW
+# INTERPOLATED FIELD (REAL FIELD STRUCTURE)
+# =========================================================
+
+x = states_2d[:, 0]
+y = states_2d[:, 1]
+
+u = vectors_2d[:, 0]
+v = vectors_2d[:, 1]
+
+grid_x, grid_y = np.mgrid[
+    x.min():x.max():100j,
+    y.min():y.max():100j
+]
+
+grid_u = griddata((x, y), u, (grid_x, grid_y), method='cubic')
+grid_v = griddata((x, y), v, (grid_x, grid_y), method='cubic')
+
+
+# =========================================================
+# PLOT
 # =========================================================
 
 plt.figure(figsize=(10, 8))
 
-# trajectory
-plt.plot(states_2d[:, 0], states_2d[:, 1], alpha=0.3, label="trajectory")
-
-# flow vectors
-plt.quiver(
-    states_2d[:, 0],
-    states_2d[:, 1],
-    vectors_2d[:, 0],
-    vectors_2d[:, 1],
-    lambdas,
-    angles='xy',
-    scale_units='xy',
-    scale=1,
+# --- continuous flow field ---
+plt.streamplot(
+    grid_x,
+    grid_y,
+    grid_u,
+    grid_v,
+    color=np.sqrt(grid_u**2 + grid_v**2),
     cmap='viridis',
-    width=0.003
+    density=2
 )
 
-# highlight collapse region (end of trajectory)
-plt.scatter(states_2d[-1, 0], states_2d[-1, 1], color='red', label='collapse')
+# --- trajectory ---
+plt.plot(x, y, color='white', linewidth=2, label="trajectory")
 
-plt.title("NEXAH FIELD — Flow Geometry (IEEE Projection)")
+# --- collapse point ---
+plt.scatter(x[-1], y[-1], color='red', label='collapse')
+
+plt.title("NEXAH FIELD — Continuous Flow Geometry")
 plt.xlabel("PC1")
 plt.ylabel("PC2")
-plt.colorbar(label="Load λ")
-plt.legend()
-plt.grid(alpha=0.3)
+plt.colorbar(label="Flow magnitude")
 
+plt.legend()
+plt.grid(alpha=0.2)
 plt.tight_layout()
+
 plt.show()
 
-plt.scatter(states_2d[-1, 0], states_2d[-1, 1], color='red', label='collapse')
-
-plt.title("NEXAH FIELD — Flow Geometry (IEEE Projection)")
-plt.xlabel("PC1")
-plt.ylabel("PC2")
-plt.colorbar(label="Load λ")
-plt.legend()
-plt.grid(alpha=0.3)
-
-plt.tight_layout()
-plt.show()
