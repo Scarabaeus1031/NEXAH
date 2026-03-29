@@ -10,6 +10,14 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.
 
 from nexah.field_layer import Field
 
+# --- import corridor detection ---
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from analysis.corridor_detection import (
+    compute_flow_magnitude,
+    detect_corridors,
+    detect_spaces
+)
+
 
 # =========================================================
 # ⚠️ REPLACE WITH YOUR REAL IEEE PIPELINE
@@ -69,26 +77,28 @@ y = states_2d[:, 1]
 u = vectors_2d[:, 0]
 v = vectors_2d[:, 1]
 
-# --- stable grid ---
+# --- grid ---
 xi = np.linspace(x.min(), x.max(), 120)
 yi = np.linspace(y.min(), y.max(), 120)
-
 grid_x, grid_y = np.meshgrid(xi, yi)
 
 # --- interpolation ---
 grid_u = griddata((x, y), u, (grid_x, grid_y), method='cubic')
 grid_v = griddata((x, y), v, (grid_x, grid_y), method='cubic')
 
-# --- fallback for NaNs ---
+# --- fix NaNs ---
 grid_u = np.nan_to_num(grid_u)
 grid_v = np.nan_to_num(grid_v)
 
 
 # =========================================================
-# FLOW MAGNITUDE (for visualization)
+# FLOW + STRUCTURE DETECTION
 # =========================================================
 
-flow_mag = np.sqrt(grid_u**2 + grid_v**2)
+flow_mag = compute_flow_magnitude(grid_u, grid_v)
+
+corridors = detect_corridors(flow_mag)
+spaces = detect_spaces(flow_mag)
 
 
 # =========================================================
@@ -97,7 +107,7 @@ flow_mag = np.sqrt(grid_u**2 + grid_v**2)
 
 plt.figure(figsize=(10, 8))
 
-# --- continuous flow field ---
+# --- FIELD ---
 plt.streamplot(
     grid_x,
     grid_y,
@@ -112,10 +122,32 @@ plt.streamplot(
 # --- trajectory ---
 plt.plot(x, y, color='white', linewidth=2, alpha=0.7, label="trajectory")
 
-# --- collapse point ---
+# --- collapse ---
 plt.scatter(x[-1], y[-1], color='red', label='collapse', zorder=5)
 
-plt.title("NEXAH FIELD — Continuous Flow Geometry")
+# --- CORRIDORS (red contour) ---
+plt.contour(
+    grid_x,
+    grid_y,
+    corridors,
+    levels=[0.5],
+    colors='red',
+    linewidths=1.5,
+    alpha=0.8
+)
+
+# --- SPACES (blue contour) ---
+plt.contour(
+    grid_x,
+    grid_y,
+    spaces,
+    levels=[0.5],
+    colors='blue',
+    linewidths=1,
+    alpha=0.5
+)
+
+plt.title("NEXAH FIELD — Corridors & Spaces")
 plt.xlabel("PC1")
 plt.ylabel("PC2")
 
