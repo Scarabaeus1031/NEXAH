@@ -89,6 +89,59 @@ To:
 
 ---
 
+## 🌐 Field Layer & Flow Dynamics (V64–V69)
+
+A major extension of the framework introduces:
+
+→ the **explicit field representation of dynamics**
+
+Previously:
+
+- structure was inferred from metrics  
+- collapse was detected via trajectories  
+
+Now:
+
+→ the system is represented as a **continuous vector field**
+
+---
+
+### Key Transition
+
+From:
+
+→ structure + dynamics  
+
+To:
+
+→ **structure + dynamics + field geometry**
+
+---
+
+### What is new
+
+#### V64–V67 — State Field Expansion
+
+- system states expanded into continuous phase-space  
+- curvature structure becomes visible as a field  
+- GH corridor appears as embedded region  
+
+---
+
+#### V68 — Off-Manifold Field
+
+- local neighborhoods sampled around trajectory  
+- reveals full surrounding field structure  
+- identifies:
+
+  - core region  
+  - transition band  
+  - expansion domain  
+
+→ confirms that trajectory is only a **spine inside a larger field**
+
+---
+
 #### V69 — Flow Field (Critical Step)
 
 - full vector field constructed  
@@ -143,7 +196,7 @@ Meaning:
 
 ### Visual — Off-Manifold Flow (V69)
 
-![Off-Manifold Flow](outputs/ieee118_v69_off_manifold_flow.png)
+![Off-Manifold Flow](stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
 → trajectories follow structured directions  
 → local deviations reveal branching  
@@ -153,7 +206,7 @@ Meaning:
 
 ### Visual — Stream Field (V69)
 
-![Stream Field](outputs/ieee118_v69_stream_field.png)
+![Stream Field](stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_stream_field.png)
 
 → global flow structure becomes visible  
 → smooth directional alignment across phase space  
