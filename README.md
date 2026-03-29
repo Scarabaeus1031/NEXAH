@@ -97,11 +97,16 @@ NEXAH:
 
 ## 🌐 Field Structure (V69)
 
-![Field Vector Map](APPLICATIONS/power_systems/.../ieee30_v69_field_vectors.png)
+![Off-Manifold Flow (V69)](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-→ trajectories are not arbitrary  
-→ they follow structured directions in the field  
-→ collapse follows embedded flow paths  
+→ trajectories follow structured flow inside the field  
+→ local deviations reveal branching dynamics  
+→ collapse paths are embedded in the field geometry
+
+![Stream Field (V69)](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_stream_field.png)
+
+→ global flow structure becomes visible  
+→ smooth alignment across the state space
 
 ---
 
