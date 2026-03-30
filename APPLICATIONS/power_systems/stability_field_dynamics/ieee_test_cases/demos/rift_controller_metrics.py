@@ -1,4 +1,4 @@
-# rift_controller_metrics.py
+# rift_controller_metrics.py (FIXED + ROBUST)
 
 import numpy as np
 import os
@@ -6,9 +6,28 @@ import matplotlib.pyplot as plt
 
 BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export"
 
+
+def safe_load(filename_options):
+    for fname in filename_options:
+        path = os.path.join(BASE_DIR, fname)
+        if os.path.exists(path):
+            print(f"✅ Loaded: {fname}")
+            return np.load(path)
+    raise FileNotFoundError(f"❌ None of these files found: {filename_options}")
+
+
 def load_data():
-    trajectory = np.load(os.path.join(BASE_DIR, "states.npy"))
-    rift = np.load(os.path.join(BASE_DIR, "rift_curve.npy"))
+    trajectory = safe_load([
+        "states.npy",
+        "trajectory.npy"
+    ])
+
+    rift = safe_load([
+        "rift_curve.npy",
+        "rift_curve_smoothed.npy",
+        "rift_extraction/rift_curve.npy"
+    ])
+
     return trajectory, rift
 
 
@@ -56,11 +75,15 @@ def plot_metrics(orig_dist, ctrl_dist):
 def main():
     trajectory, rift = load_data()
 
-    # 👉 hier kannst du später verschiedene Controller laden
-    # aktuell: wir nehmen die letzten Punkte als "controlled"
-    # → oder du ersetzt das durch echte controller outputs
+    # 🔥 IMPORTANT: hier richtigen Controller laden!
+    # Wenn du V7 gespeichert hast → hier eintragen
 
-    controlled = np.load(".../final_controller_v7.npy")
+    try:
+        controlled = np.load(os.path.join(BASE_DIR, "rift_extraction/final_controller_v7.npy"))
+        print("✅ Loaded controlled trajectory (V7)")
+    except:
+        print("⚠️ No saved controlled trajectory found → using original (placeholder)")
+        controlled = trajectory.copy()
 
     metrics, orig_dist, ctrl_dist = compute_metrics(trajectory, controlled, rift)
 
