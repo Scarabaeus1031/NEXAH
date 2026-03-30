@@ -1758,3 +1758,156 @@ The NEXAH system now includes:
 > The system is not a path.  
 >  
 > It is a folded state-space.
+
+
+
+## Entry 81 — Phase Tracking & State Separation (V81)
+
+### Observation
+
+Phase space folding (Entry 80) revealed that:
+
+- identical positions can correspond to different system states  
+- trajectory crossings are not true intersections  
+- state identity depends on hidden variables  
+
+---
+
+### Key Discovery
+
+The system requires:
+
+→ **explicit phase tracking**
+
+to distinguish states.
+
+Without phase:
+
+- states appear identical  
+- dynamics seem inconsistent  
+- control fails locally  
+
+---
+
+### Phase Definition
+
+Phase is derived from:
+
+- dominant frequency (Entry 76)  
+- temporal position within oscillation cycle  
+
+Thus:
+
+→ each state has a **phase coordinate φ ∈ [0, 2π]**
+
+---
+
+### State Separation Principle
+
+A full system state is:
+
+→ (x, y, φ)
+
+Not:
+
+→ (x, y)
+
+---
+
+### Consequence
+
+Two points with same (x, y):
+
+- but different φ  
+- represent different states  
+
+---
+
+### Loop Indexing
+
+Each loop corresponds to:
+
+→ a phase interval  
+
+Thus:
+
+- loop = phase cycle  
+- position alone is insufficient  
+
+---
+
+### State Identity
+
+State is uniquely defined by:
+
+| Component | Meaning |
+|----------|--------|
+| Position | spatial projection |
+| Phase | temporal identity |
+| Direction | flow orientation |
+
+---
+
+### Relation to Entry 80
+
+Folding is resolved by:
+
+→ adding phase dimension  
+
+This “unfolds” the system  
+
+---
+
+### Control Implication
+
+Control must operate in:
+
+→ (x, y, φ) space  
+
+Otherwise:
+
+- ambiguity remains  
+- drift occurs  
+- loops are misinterpreted  
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ position-based modeling  
+
+To:
+
+→ **state-based modeling**
+
+---
+
+### Core Insight
+
+> The same position  
+>  
+> can represent multiple states.  
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. spatial structure  
+2. temporal modes  
+3. loop topology  
+4. phase space folding  
+5. explicit phase tracking (NEW)  
+6. state separation (NEW)  
+
+---
+
+## Updated Core Insight
+
+> Position is not identity.  
+>  
+> Phase defines the state.
+
