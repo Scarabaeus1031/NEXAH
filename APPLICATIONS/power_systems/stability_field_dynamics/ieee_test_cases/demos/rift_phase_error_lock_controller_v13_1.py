@@ -223,11 +223,11 @@ def phase_error_lock_controller_v13_1(trajectory, rift):
     return controlled, phi, ref_phi, target_phi, drive, phase_error_ref, phase_error_target, base_layer, upper_layer, lower_layer, f0
 
 
-# --------------------------------------------------
-# PLOT (V13.1)
+    # --------------------------------------------------
+    # PLOT (V13.1)
 # --------------------------------------------------
 
-def plot_result(original, controlled, rift,
+    def plot_result(original, controlled, rift,
                 phi, ref_phi, target_phi,
                 phase_error_ref, phase_error_target,
                 base_layer, upper_layer, lower_layer):
@@ -290,11 +290,7 @@ def plot_result(original, controlled, rift,
     print(f"💾 Saved → {path}")
     plt.close()
 
-# --------------------------------------------------
-# MAIN
-# --------------------------------------------------
-
-def main():
+    def main():
     trajectory, rift = load_data()
 
     results = phase_error_lock_controller_v13_1(trajectory, rift)
@@ -304,9 +300,20 @@ def main():
      base_layer, upper_layer, lower_layer, f0) = results
 
     np.save(os.path.join(RIFT_DIR, "phase_error_lock_v13_1.npy"), controlled)
+    print("💾 Saved controlled trajectory → phase_error_lock_v13_1.npy")
+
+    plot_result(
+        trajectory,
+        controlled,
+        rift,
+        phi,
+        ref_phi,
+        target_phi,
+        pe_ref,
+        pe_target,
+        base_layer,
+        upper_layer,
+        lower_layer
+    )
 
     print("🚀 Phase Error Lock Controller V13.1 complete")
-
-
-if __name__ == "__main__":
-    main()
