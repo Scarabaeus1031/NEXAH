@@ -1,20 +1,38 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.spatial.distance import cdist
 
-# ==============================
-# CONFIG
-# ==============================
 BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export"
 RIFT_DIR = os.path.join(BASE_DIR, "rift_extraction")
 
 # ==============================
-# LOAD
+# LOAD (ROBUST)
 # ==============================
 def load_data():
+
     trajectory = np.load(os.path.join(BASE_DIR, "trajectory_pca.npy"))
-    rift_curve = np.load(os.path.join(RIFT_DIR, "rift_curve.npy"))
+
+    # ---- try multiple filenames ----
+    candidates = [
+        "rift_curve.npy",
+        "rift.npy",
+        "rift_points.npy"
+    ]
+
+    rift_curve = None
+
+    for name in candidates:
+        path = os.path.join(RIFT_DIR, name)
+        if os.path.exists(path):
+            print(f"✅ Found rift file: {name}")
+            rift_curve = np.load(path)
+            break
+
+    if rift_curve is None:
+        raise FileNotFoundError(
+            f"❌ No rift file found in {RIFT_DIR}\n"
+            f"Tried: {candidates}"
+        )
 
     print("✅ Data loaded")
     return trajectory, rift_curve
@@ -27,21 +45,22 @@ def project_to_rift(trajectory, rift_curve):
 
     for p in trajectory:
         dists = np.linalg.norm(rift_curve - p, axis=1)
-        closest_idx = np.argmin(dists)
-        projected.append(rift_curve[closest_idx])
+        idx = np.argmin(dists)
+        projected.append(rift_curve[idx])
 
     return np.array(projected)
 
 # ==============================
-# SMOOTH TRAJECTORY
+# BLEND
 # ==============================
-def blend_trajectory(original, projected, alpha=0.5):
+def blend_trajectory(original, projected, alpha=0.4):
     return (1 - alpha) * original + alpha * projected
 
 # ==============================
 # PLOT
 # ==============================
 def plot_control(original, projected, blended):
+
     plt.figure(figsize=(6, 6))
 
     plt.plot(original[:,0], original[:,1], color='green', label='original')
@@ -59,13 +78,18 @@ def plot_control(original, projected, blended):
 # MAIN
 # ==============================
 def main():
+
     trajectory, rift_curve = load_data()
 
+    print(f"Trajectory shape: {trajectory.shape}")
+    print(f"Rift shape: {rift_curve.shape}")
+
     projected = project_to_rift(trajectory, rift_curve)
-    controlled = blend_trajectory(trajectory, projected, alpha=0.4)
+    controlled = blend_trajectory(trajectory, projected)
 
     plot_control(trajectory, projected, controlled)
 
+    # save
     np.save(os.path.join(RIFT_DIR, "trajectory_projected.npy"), projected)
     np.save(os.path.join(RIFT_DIR, "trajectory_controlled.npy"), controlled)
 
