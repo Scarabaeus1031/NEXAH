@@ -1070,3 +1070,221 @@ The NEXAH system now includes:
 > Stability is not static.  
 >  
 > It is the dynamic equilibrium of opposing flows.
+
+
+## Entry 78 — Closed Loop Detection & Cycle Topology (V78)
+
+### Observation
+
+Flow field analysis reveals repeated local trajectory patterns:
+
+- small loop-like structures ("8"-shapes)  
+- directional reversals  
+- localized circular or semi-circular motion  
+
+These patterns are:
+
+- not random  
+- not isolated  
+- but recurring across the trajectory  
+
+---
+
+### Key Discovery
+
+The system does not evolve purely along open trajectories.
+
+Instead:
+
+→ it contains **embedded closed-loop structures**
+
+These loops act as:
+
+- local attractors  
+- energy redistribution zones  
+- directional reset mechanisms  
+
+---
+
+### Loop Characteristics
+
+Observed loops exhibit:
+
+| Property | Description |
+|--------|------------|
+| Shape | figure-8, circular, L-shaped |
+| Scale | local (micro-scale relative to trajectory) |
+| Duration | short-lived but recurring |
+| Position | aligned with grid nodes / transition zones |
+
+---
+
+### Cycle Topology
+
+The trajectory can be decomposed into:
+
+→ a sequence of **local cycles**
+
+Each cycle:
+
+1. diverges (expansion phase)  
+2. curves (directional shift)  
+3. re-converges (contraction phase)  
+
+This forms:
+
+→ a **closed dynamical loop**
+
+---
+
+### Loop Detection Principle
+
+Closed loops are identified by:
+
+- sign changes in velocity direction  
+- repeated proximity in phase space  
+- curvature peaks (local maxima in acceleration)  
+
+---
+
+### Topological Interpretation
+
+The system is not:
+
+→ a simple path  
+
+But:
+
+→ a **chain of interconnected cycles**
+
+This implies:
+
+- local recurrence  
+- non-trivial topology  
+- cyclic micro-structure  
+
+---
+
+### Relation to Flow Dynamics (Entry 77)
+
+Entry 77 showed:
+
+→ balanced expansion and contraction  
+
+Now refined:
+
+→ this balance is realized through **closed loops**
+
+Meaning:
+
+- expansion occurs within loop opening  
+- contraction occurs during loop closure  
+
+---
+
+### Relation to Grid Structure (Entry 74)
+
+Loops tend to form:
+
+→ near grid intersections  
+
+Thus:
+
+- nodes act as loop anchors  
+- channels guide loop orientation  
+
+---
+
+### Relation to Spectral Modes (Entry 76)
+
+Loops correspond to:
+
+→ temporal oscillation cycles  
+
+This suggests:
+
+- each frequency mode produces a spatial loop  
+- harmonic structure maps to geometric repetition  
+
+---
+
+### Geometric Insight
+
+The system behaves as:
+
+→ a **loop-generating field**
+
+Instead of:
+
+- linear propagation  
+- or chaotic scattering  
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ trajectory as a path  
+
+To:
+
+→ **trajectory as a sequence of cycles**
+
+---
+
+### System Behavior
+
+The global trajectory emerges from:
+
+- local loops  
+- connected through directional flow  
+
+This creates:
+
+→ a **cycle-driven evolution**
+
+---
+
+### Core Insight
+
+> The system does not move forward continuously.  
+>  
+> It advances through cycles.  
+
+---
+
+### Implication
+
+Prediction must consider:
+
+- loop structure  
+- cycle timing  
+- transition between loops  
+
+Not only:
+
+- position or direction  
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. field dynamics  
+2. grid structure  
+3. layer constraints  
+4. temporal modes  
+5. balanced oscillation  
+6. closed-loop topology (NEW)
+
+---
+
+## Updated Core Insight
+
+> Motion is not linear progression.  
+>  
+> It is the traversal of connected cycles.
+
+
