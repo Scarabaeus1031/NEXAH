@@ -224,6 +224,73 @@ def phase_error_lock_controller_v13_1(trajectory, rift):
 
 
 # --------------------------------------------------
+# PLOT (V13.1)
+# --------------------------------------------------
+
+def plot_result(original, controlled, rift,
+                phi, ref_phi, target_phi,
+                phase_error_ref, phase_error_target,
+                base_layer, upper_layer, lower_layer):
+
+    # -----------------------------
+    # 1. TRAJECTORY
+    # -----------------------------
+    plt.figure(figsize=(10, 6))
+
+    plt.plot(original[:, 0], original[:, 1], label="original", color="green")
+    plt.plot(rift[:, 0], rift[:, 1], label="rift", color="cyan")
+    plt.plot(controlled[:, 0], controlled[:, 1], label="v13.1", color="gold")
+
+    plt.axhline(base_layer, linestyle="--", color="magenta", label="base layer")
+    plt.axhline(upper_layer, linestyle="--", color="orange", label="upper layer")
+    plt.axhline(lower_layer, linestyle="--", color="purple", label="lower layer")
+
+    plt.legend()
+    plt.grid(True)
+
+    path = os.path.join(RIFT_DIR, "v13_1_trajectory.png")
+    plt.savefig(path, dpi=150)
+    print(f"💾 Saved → {path}")
+    plt.close()
+
+    # -----------------------------
+    # 2. PHASE
+    # -----------------------------
+    plt.figure(figsize=(10, 4))
+
+    plt.plot(phi, label="feedback φ", color="purple")
+    plt.plot(ref_phi, label="ref φ", color="blue")
+    plt.plot(target_phi, label="target φ", color="red", linestyle="--")
+
+    plt.legend()
+    plt.grid(True)
+    plt.title("Phase Tracking (v13.1)")
+
+    path = os.path.join(RIFT_DIR, "v13_1_phase.png")
+    plt.savefig(path, dpi=150)
+    print(f"💾 Saved → {path}")
+    plt.close()
+
+    # -----------------------------
+    # 3. ERRORS
+    # -----------------------------
+    plt.figure(figsize=(10, 3))
+
+    plt.plot(phase_error_ref, label="error_ref", color="blue")
+    plt.plot(phase_error_target, label="error_target", color="red")
+
+    plt.axhline(0.0, linestyle="--", color="gray")
+
+    plt.legend()
+    plt.grid(True)
+    plt.title("Phase Errors (v13.1)")
+
+    path = os.path.join(RIFT_DIR, "v13_1_errors.png")
+    plt.savefig(path, dpi=150)
+    print(f"💾 Saved → {path}")
+    plt.close()
+
+# --------------------------------------------------
 # MAIN
 # --------------------------------------------------
 
