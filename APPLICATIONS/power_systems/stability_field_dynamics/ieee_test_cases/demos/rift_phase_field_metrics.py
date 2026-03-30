@@ -56,7 +56,7 @@ def compute_phase_metrics(traj):
 
     expansion = np.diff(speed)
 
-    phase_dir = np.sin(phase[:-1])
+    phase_dir = np.sin(phase[1:-1])
     alignment = np.sign(expansion) * np.sign(phase_dir)
 
     phase_coherence = np.mean(alignment)
