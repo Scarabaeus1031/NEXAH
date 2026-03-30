@@ -1911,3 +1911,853 @@ The NEXAH system now includes:
 >  
 > Phase defines the state.
 
+## Entry 82 — Phase-Driven Control & Layer-Regime Switching (V82)
+
+### Observation
+
+With the introduction of explicit phase control,  
+the system no longer reacts only to geometry.
+
+Instead:
+
+→ the controller switches behavior according to phase intervals.
+
+Observed:
+
+- stable motion between lower, base, and upper layers  
+- phase-dependent transitions between these layers  
+- structured zig-zag motion aligned with temporal regime changes  
+
+---
+
+### Key Discovery
+
+The system is not controlled by position alone.
+
+Instead:
+
+→ it is governed by **phase-conditioned layer switching**
+
+This means:
+
+- different phases activate different target layers  
+- spatial motion is modulated by temporal state  
+- layer transitions are no longer arbitrary  
+
+---
+
+### Phase Regimes
+
+The control law decomposes the cycle into four sectors:
+
+| Phase interval | Dominant behavior |
+|---------------|-------------------|
+| 0 → π/2 | expansion toward upper layer |
+| π/2 → π | upper transition / turning |
+| π → 3π/2 | contraction toward lower or base layer |
+| 3π/2 → 2π | reset / relock |
+
+---
+
+### Interpretation
+
+The trajectory is not simply corrected.
+
+Instead:
+
+→ it is **routed through phase-specific regimes**
+
+Thus:
+
+- time determines which geometry is active  
+- geometry determines how phase manifests spatially  
+
+---
+
+### Layered Dynamics
+
+The three observed layers now acquire operational meaning:
+
+| Layer | Role |
+|------|------|
+| Lower layer | contraction / recovery zone |
+| Base layer | equilibrium / relock zone |
+| Upper layer | expansion / activation zone |
+
+---
+
+### Geometric Consequence
+
+The controller does not aim for a single attractor.
+
+Instead:
+
+→ it navigates between a **stack of phase-activated attractors**
+
+This creates:
+
+- bounded motion  
+- structured oscillation  
+- controllable transitions  
+
+---
+
+### Relation to Entry 75
+
+Entry 75 introduced:
+
+→ static layer lock
+
+Now refined:
+
+→ layer lock is not fixed  
+→ it is **phase-dependent**
+
+---
+
+### Relation to Entry 76
+
+Entry 76 showed:
+
+→ temporal frequency modes
+
+Now implemented:
+
+→ those modes actively select spatial regimes
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ geometry-constrained control  
+
+To:
+
+→ **phase-governed geometric control**
+
+---
+
+### Core Insight
+
+> The system does not occupy one layer.  
+>  
+> It cycles through layers according to phase.  
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. spatial field structure  
+2. grid geometry  
+3. layer structure  
+4. temporal phase modes  
+5. phase-driven layer switching (NEW)
+
+---
+
+## Updated Core Insight
+
+> Geometry is not static.  
+>  
+> It is activated by phase.
+
+
+
+## Entry 83 — Multi-Frequency Drive & Triadic Regime Structure (V83)
+
+### Observation
+
+Single-frequency phase control was extended by adding harmonics:
+
+- f
+- 2f
+- 3f
+
+This produces a composite drive rather than a simple sinusoidal oscillator.
+
+Observed:
+
+- three-layer stabilization persists  
+- drive signal develops asymmetric peaks and valleys  
+- trajectory follows a more structured internal rhythm  
+
+---
+
+### Key Discovery
+
+The system is not driven by one oscillation.
+
+Instead:
+
+→ it is governed by a **multi-frequency composite mode**
+
+This means:
+
+- the controller responds to a superposition of harmonics  
+- one cycle contains internal substructure  
+- phase is no longer uniform in effect  
+
+---
+
+### Composite Drive Principle
+
+The temporal drive takes the form:
+
+drive(t) = a1·sin(φ) + a2·sin(2φ) + a3·sin(3φ)
+
+with:
+
+- a1 dominant
+- a2 secondary
+- a3 tertiary
+
+Thus:
+
+→ the cycle contains nested sub-cycles.
+
+---
+
+### Triadic Regime Structure
+
+The multi-frequency drive naturally organizes the system into three operational zones:
+
+| Regime | Behavior |
+|-------|----------|
+| High positive drive | upper activation / expansion |
+| Near-zero drive | relock / equilibrium |
+| Negative drive | contraction / return |
+
+---
+
+### Interpretation
+
+The system is no longer merely periodic.
+
+Instead:
+
+→ it exhibits **harmonic regime stratification**
+
+This means:
+
+- the same global cycle contains internal switching structure  
+- one “breath” contains several sub-motions  
+- the trajectory becomes a layered temporal object  
+
+---
+
+### Geometric Consequence
+
+The resulting trajectory appears as:
+
+- zig-zag modulation inside a stable band  
+- phase-conditioned fine structure  
+- a spatial trace of harmonic interference  
+
+---
+
+### Relation to Entry 79
+
+Entry 79 identified:
+
+→ mode-locked cycles
+
+Now refined:
+
+→ mode-locking is not monolithic  
+→ it contains **harmonic hierarchy**
+
+---
+
+### Relation to Entry 82
+
+Entry 82 showed:
+
+→ phase determines layer switching
+
+Now extended:
+
+→ multiple harmonics determine **how strongly** each regime is entered
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ single-phase control  
+
+To:
+
+→ **multi-mode resonant control**
+
+---
+
+### Core Insight
+
+> One frequency defines the cycle.  
+>  
+> Multiple frequencies define its internal architecture.  
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. phase-driven geometry  
+2. multi-frequency drive  
+3. triadic regime structure (NEW)  
+4. harmonic sub-cycling (NEW)
+
+---
+
+## Updated Core Insight
+
+> The system does not oscillate in one tone.  
+>  
+> It is structured by harmonics.
+
+
+
+## Entry 84 — Phase Feedback & Regime Reset (V84)
+
+### Observation
+
+When phase is no longer treated as an external clock,  
+but updated through the system state itself, a new behavior appears:
+
+- phase drifts away from linearity  
+- then re-enters a low-phase region  
+- the drive reorganizes after this reset
+
+Observed:
+
+- a clear regime split before and after reset  
+- phase progression is bent by motion, speed, and turning  
+- the controller no longer runs open-loop  
+
+---
+
+### Key Discovery
+
+The system does not simply follow phase.
+
+Instead:
+
+→ it **modifies phase through feedback**
+
+This means:
+
+- trajectory influences phase increment  
+- phase is endogenous rather than purely imposed  
+- temporal structure becomes state-dependent  
+
+---
+
+### Feedback Variables
+
+Phase update is influenced by:
+
+| Variable | Role |
+|---------|------|
+| Layer deviation | vertical displacement effect |
+| Speed | dynamical intensity |
+| Turning / curvature | local directional change |
+
+Together these define:
+
+→ a **feedback-modulated phase increment**
+
+---
+
+### Reset Interpretation
+
+The observed return of phase to a low value is not a failure.
+
+Instead:
+
+→ it marks a **regime reset**
+
+Meaning:
+
+- the previous phase branch is exited  
+- the system re-enters a stable phase corridor  
+- the drive is re-initialized on a corrected branch  
+
+---
+
+### Dynamical Meaning
+
+The system now exhibits:
+
+→ **piecewise phase evolution**
+
+This implies:
+
+- phase is smooth within a regime  
+- but may jump between regimes  
+- temporal continuity exists at a higher structural level, not necessarily as a single monotone curve  
+
+---
+
+### Relation to Entry 82
+
+Entry 82 introduced:
+
+→ phase-conditioned switching
+
+Now refined:
+
+→ switching is not only controlled by phase  
+→ phase itself is also altered by system state
+
+---
+
+### Relation to Entry 83
+
+Entry 83 introduced:
+
+→ multi-frequency structure
+
+Now extended:
+
+→ those harmonics evolve under feedback, not just predefinition
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ phase as controller input  
+
+To:
+
+→ **phase as dynamic state variable**
+
+---
+
+### Core Insight
+
+> The system does not merely obey phase.  
+>  
+> It bends phase.  
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. phase-driven geometry  
+2. multi-frequency modulation  
+3. feedback-modulated phase (NEW)  
+4. regime reset behavior (NEW)
+
+---
+
+## Updated Core Insight
+
+> Time is not only imposed on the system.  
+>  
+> The system reshapes its own timing.
+
+
+
+## Entry 85 — Phase Error Lock & Closed Feedback Alignment (V85)
+
+### Observation
+
+Introducing an explicit reference phase alongside a feedback phase reveals:
+
+- measurable phase error over time  
+- gradual reduction of this error  
+- controlled crossing through zero rather than explosive divergence  
+
+Observed:
+
+- error starts positive  
+- decays toward zero  
+- crosses the reference line  
+- continues into a symmetric negative deviation  
+
+---
+
+### Key Discovery
+
+The system does not simply minimize phase error to zero and stay there.
+
+Instead:
+
+→ it performs a **guided phase balancing process**
+
+This means:
+
+- phase error is dynamically regulated  
+- the system is not pinned to a rigid phase  
+- it is steered through a controlled correction corridor  
+
+---
+
+### Error-Lock Structure
+
+The controller now contains three phase objects:
+
+| Component | Meaning |
+|----------|---------|
+| Reference phase | ideal background oscillator |
+| Feedback phase | state-corrected oscillator |
+| Phase error | difference between the two |
+
+This yields:
+
+→ an explicit **phase-locked regulation loop**
+
+---
+
+### Interpretation
+
+The observed error evolution is not random drift.
+
+Instead:
+
+→ it reflects **closed-loop phase alignment**
+
+The system:
+
+1. detects phase lead / lag  
+2. adjusts phase increment  
+3. modulates geometric control accordingly  
+
+---
+
+### Geometric Consequence
+
+Because layer gains increase when phase error grows, the system exhibits:
+
+- stronger re-anchoring during desynchronization  
+- weaker correction near lock  
+- stable motion even while error changes sign  
+
+Thus:
+
+→ phase correction and spatial stabilization are directly coupled
+
+---
+
+### Relation to Entry 84
+
+Entry 84 introduced:
+
+→ feedback-modulated phase
+
+Now refined:
+
+→ phase feedback is measured explicitly against a reference and corrected through error locking
+
+---
+
+### Relation to Entry 83
+
+Entry 83 showed:
+
+→ multi-frequency internal structure
+
+Now extended:
+
+→ this harmonic drive is phase-locked to a regulated timing backbone
+
+---
+
+### Closed-Loop Interpretation
+
+The three resulting visualizations correspond to one dynamical chain:
+
+1. **Phase error** → diagnostic state mismatch  
+2. **Phase + drive** → internal regulation mechanism  
+3. **Trajectory** → geometric manifestation  
+
+Thus:
+
+→ the three plots are not separate analyses  
+→ they are **three projections of the same closed-loop system**
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ controlling motion through phase  
+
+To:
+
+→ **controlling phase in order to generate motion**
+
+---
+
+### Core Insight
+
+> Geometry is not corrected directly.  
+>  
+> It emerges from phase regulation.  
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. reference timing backbone  
+2. feedback phase dynamics  
+3. explicit phase error measurement  
+4. phase error locking (NEW)  
+5. closed-loop alignment between timing and geometry (NEW)
+
+---
+
+## Updated Core Insight
+
+> Motion is no longer the primary controlled variable.  
+>  
+> Phase is.
+
+
+## Entry 86 — Diagnostic Triptych & Closed-Loop Visibility (V86)
+
+### Observation
+
+The three visual outputs of V13 form a coherent sequence:
+
+1. Phase Error (temporal mismatch)  
+2. Phase + Drive (internal regulation)  
+3. Controlled Trajectory (spatial result)  
+
+When aligned side-by-side:
+
+→ they behave as a **single diagnostic system**
+
+---
+
+### Key Discovery
+
+The system is no longer observed through one projection.
+
+Instead:
+
+→ it is visible as a **triptych of coupled representations**
+
+Each plot is not independent.
+
+They are:
+
+→ **different projections of the same closed-loop process**
+
+---
+
+### Triptych Structure
+
+| Panel | Domain | Meaning |
+|------|--------|--------|
+| Left | Error space | deviation from reference |
+| Center | Phase space | internal correction dynamics |
+| Right | Geometry | resulting trajectory |
+
+---
+
+### Interpretation
+
+The system unfolds in three layers simultaneously:
+
+1. **Detection** (error)  
+2. **Correction** (phase + drive)  
+3. **Manifestation** (trajectory)  
+
+This defines a full control cycle:
+
+```text
+error → correction → motion
+```
+
+### Phase Error Panel
+
+The error plot reveals:
+- initial phase mismatch
+- gradual convergence toward zero
+- controlled crossing into negative regime
+
+This shows:
+
+→ the system does not clamp phase  
+→ it balances around the reference  
+
+---
+
+### Phase + Drive Panel
+
+This panel shows:
+- reference phase (linear backbone)
+- feedback phase (state-adjusted)
+- drive (multi-frequency + feedback)
+
+Key behavior:
+- phase bends toward reference
+- drive reacts to deviation
+- correction strength varies over time
+
+Thus:
+
+→ this is the internal control engine  
+
+---
+
+### Trajectory Panel
+
+The spatial result shows:
+- stable motion within layers
+- zig-zag micro-structure (loops)
+- no divergence despite phase adjustments
+
+Thus:
+
+→ geometry is a projection of phase regulation  
+
+---
+
+### Core Insight
+
+The three plots are not outputs.  
+
+They are a decomposition of one process.  
+
+---
+
+### Closed-Loop Visibility
+
+Previously:
+
+→ control loop was implicit  
+
+Now:
+
+→ it is fully observable  
+
+We can see:
+1. where the system deviates  
+2. how it corrects  
+3. what motion results  
+
+---
+
+### Diagnostic Power
+
+This triptych allows:
+- debugging of instability sources  
+- identification of phase lag/lead  
+- tuning of control parameters  
+
+Thus:
+
+→ the system becomes inspectable  
+
+---
+
+### Relation to Entry 85
+
+Entry 85 introduced:
+
+→ phase error locking  
+
+Now extended:
+
+→ the entire locking process is visually decomposed  
+
+---
+
+### Relation to Entry 80 (Folding)
+
+The triptych resolves ambiguity:
+- same (x, y) → different phase  
+- now phase is explicitly visible  
+
+Thus:
+
+→ folding becomes observable instead of hidden  
+
+---
+
+### Geometric Insight
+
+The trajectory is no longer primary.  
+
+It is:
+
+→ the shadow of a regulated phase system  
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ observing motion  
+
+To:
+
+→ observing the mechanism generating motion  
+
+---
+
+### System Interpretation
+
+The system is now:
+
+→ a transparent closed-loop dynamical system  
+
+Where:
+- timing drives structure  
+- structure feeds back into timing  
+- both are observable simultaneously  
+
+---
+
+### Core Insight
+
+What you see as motion  
+
+is the shadow of phase correction.  
+
+---
+
+### Implication
+
+Future control development should operate on:
+- phase error dynamics  
+- feedback shaping  
+- regime transitions  
+
+Not directly on:
+- position alone  
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+1. phase error measurement  
+2. feedback phase control  
+3. spatial manifestation  
+4. diagnostic triptych (NEW)  
+5. full closed-loop visibility (NEW)  
+
+---
+
+### Updated Core Insight
+
+The system is no longer hidden.  
+
+It can be read.
