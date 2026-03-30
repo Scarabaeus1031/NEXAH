@@ -107,7 +107,7 @@ def main():
     trajectory, rift = load_data()
 
     # 🔥 kleiner machen → stabil
-    trajectory = trajectory[::2]
+    trajectory = trajectory[::2, :2]
 
     controlled = predictive_control(
         trajectory,
