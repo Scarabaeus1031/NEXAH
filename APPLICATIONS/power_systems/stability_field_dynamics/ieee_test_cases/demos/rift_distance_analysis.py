@@ -1,7 +1,7 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.spatial.distance import cdist
+from scipy.spatial import cKDTree
 
 # ==============================
 # CONFIG
@@ -10,69 +10,79 @@ BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/
 RIFT_DIR = os.path.join(BASE_DIR, "rift_extraction")
 
 # ==============================
-# LOAD DATA
+# LOAD DATA (ROBUST)
 # ==============================
 def load_data():
+
     trajectory = np.load(os.path.join(BASE_DIR, "trajectory_pca.npy"))
-    rift_curve = np.load(os.path.join(RIFT_DIR, "rift_curve.npy"))
-    collapse_likelihood = np.load(os.path.join(BASE_DIR, "collapse_likelihood.npy"))
-    PC1_grid = np.load(os.path.join(BASE_DIR, "PC1_grid.npy"))
-    PC2_grid = np.load(os.path.join(BASE_DIR, "PC2_grid.npy"))
 
-    print("✅ Data loaded")
-    return trajectory, rift_curve, collapse_likelihood, PC1_grid, PC2_grid
+    # ---- flexible rift loading ----
+    candidates = ["rift_curve.npy", "rift.npy", "rift_points.npy"]
 
-# ==============================
-# DISTANCE TO RIFT
-# ==============================
-def compute_distance_to_rift(trajectory, rift_curve):
-    # pairwise distances
-    dists = cdist(trajectory, rift_curve)
-    min_dist = np.min(dists, axis=1)
-    return min_dist
+    rift_curve = None
+    for f in candidates:
+        path = os.path.join(RIFT_DIR, f)
+        if os.path.exists(path):
+            rift_curve = np.load(path)
+            print(f"✅ Loaded rift file: {f}")
+            break
 
-# ==============================
-# SAMPLE LIKELIHOOD ALONG TRAJECTORY
-# ==============================
-def sample_likelihood(trajectory, collapse_likelihood, PC1_grid, PC2_grid):
-    likelihood_vals = []
+    if rift_curve is None:
+        raise FileNotFoundError(
+            f"❌ No rift file found in {RIFT_DIR}\nTried: {candidates}"
+        )
 
-    for p in trajectory:
-        idx = np.argmin((PC1_grid - p[0])**2 + (PC2_grid - p[1])**2)
-        likelihood_vals.append(collapse_likelihood.flatten()[idx])
+    print("✅ Trajectory loaded:", trajectory.shape)
+    print("✅ Rift curve loaded:", rift_curve.shape)
 
-    return np.array(likelihood_vals)
+    return trajectory, rift_curve
 
 # ==============================
-# HOTSPOT DETECTION
+# DISTANCE COMPUTATION
 # ==============================
-def detect_hotspots(distance, likelihood, threshold=0.7):
-    mask = likelihood > threshold
-    return np.where(mask)[0]
+def compute_distances(trajectory, rift_curve):
+
+    # KDTree = fast nearest neighbor
+    tree = cKDTree(rift_curve)
+
+    distances, _ = tree.query(trajectory)
+
+    print("✅ Distance computed")
+    return distances
 
 # ==============================
-# PLOTS
+# PLOT
 # ==============================
-def plot_results(distance, likelihood, hotspots):
+def plot_distances(distances):
 
-    # ---- Distance vs Likelihood ----
-    plt.figure(figsize=(6, 5))
-    plt.scatter(distance, likelihood, c=np.arange(len(distance)), cmap='viridis')
-    plt.xlabel("Distance to Rift")
-    plt.ylabel("Collapse likelihood")
-    plt.title("Distance vs Rift Likelihood")
-    plt.colorbar(label="trajectory step")
+    plt.figure(figsize=(8, 4))
+
+    plt.plot(distances, linewidth=2)
+    plt.scatter(len(distances)-1, distances[-1], color="red", label="collapse point")
+
+    plt.title("Distance of Trajectory to Rift Curve")
+    plt.xlabel("Trajectory step")
+    plt.ylabel("Distance")
+
+    plt.legend()
     plt.tight_layout()
     plt.show()
 
-    # ---- Time evolution ----
-    plt.figure(figsize=(8, 4))
-    plt.plot(distance, label="distance to rift")
-    plt.plot(likelihood, label="likelihood")
-    plt.scatter(hotspots, likelihood[hotspots], color="red", label="hotspots")
-    plt.legend()
-    plt.title("Rift proximity vs likelihood over time")
-    plt.xlabel("trajectory step")
+# ==============================
+# SCATTER (INSIGHT)
+# ==============================
+def plot_scatter(distances):
+
+    steps = np.arange(len(distances))
+
+    plt.figure(figsize=(6, 5))
+    sc = plt.scatter(distances, steps, c=steps, cmap="viridis")
+
+    plt.xlabel("Distance to rift")
+    plt.ylabel("Trajectory step")
+    plt.title("Distance vs Time")
+
+    plt.colorbar(sc, label="step")
     plt.tight_layout()
     plt.show()
 
@@ -80,22 +90,20 @@ def plot_results(distance, likelihood, hotspots):
 # MAIN
 # ==============================
 def main():
-    trajectory, rift_curve, collapse_likelihood, PC1_grid, PC2_grid = load_data()
 
-    distance = compute_distance_to_rift(trajectory, rift_curve)
-    likelihood = sample_likelihood(trajectory, collapse_likelihood, PC1_grid, PC2_grid)
+    trajectory, rift_curve = load_data()
 
-    hotspots = detect_hotspots(distance, likelihood)
+    distances = compute_distances(trajectory, rift_curve)
 
-    print(f"🔥 Hotspots detected: {len(hotspots)}")
+    # ---- SAVE ----
+    np.save(os.path.join(RIFT_DIR, "rift_distances.npy"), distances)
+    print(f"💾 Saved → {RIFT_DIR}/rift_distances.npy")
 
-    plot_results(distance, likelihood, hotspots)
+    plot_distances(distances)
+    plot_scatter(distances)
 
-    # save
-    np.save(os.path.join(RIFT_DIR, "distance_to_rift.npy"), distance)
-    np.save(os.path.join(RIFT_DIR, "likelihood_along_trajectory.npy"), likelihood)
+    print("🚀 Rift distance analysis complete")
 
-    print("💾 Saved analysis results")
-
+# ==============================
 if __name__ == "__main__":
     main()
