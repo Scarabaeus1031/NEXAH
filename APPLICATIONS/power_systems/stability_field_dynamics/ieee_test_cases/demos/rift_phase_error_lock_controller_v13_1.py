@@ -290,6 +290,9 @@ def phase_error_lock_controller_v13_1(trajectory, rift):
     print(f"💾 Saved → {path}")
     plt.close()
 
+    # -----------------------------
+    # 4. MAIN
+    # -----------------------------
     def main():
     trajectory, rift = load_data()
 
@@ -302,6 +305,7 @@ def phase_error_lock_controller_v13_1(trajectory, rift):
     np.save(os.path.join(RIFT_DIR, "phase_error_lock_v13_1.npy"), controlled)
     print("💾 Saved controlled trajectory → phase_error_lock_v13_1.npy")
 
+    # 👉 DAS hat gefehlt
     plot_result(
         trajectory,
         controlled,
