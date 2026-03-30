@@ -38,7 +38,11 @@ def load_data():
     ])
 
     controlled = safe_load([
-        "rift_extraction/final_controller_v7.npy"
+    "rift_extraction/final_controller_v9_1.npy",
+    "rift_extraction/final_controller_v9.npy",
+    "rift_extraction/final_controller_v8_1.npy",
+    "rift_extraction/final_controller_v8.npy",
+    "rift_extraction/final_controller_v7.npy"
     ])
 
     # 🔥 CRITICAL FIX → ALLES in 2D
