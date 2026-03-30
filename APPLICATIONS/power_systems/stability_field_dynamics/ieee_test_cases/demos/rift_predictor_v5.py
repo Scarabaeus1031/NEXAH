@@ -99,4 +99,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()rift_predictor_v
+    main()
