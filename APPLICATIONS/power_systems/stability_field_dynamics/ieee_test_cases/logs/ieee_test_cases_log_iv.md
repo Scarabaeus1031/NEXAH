@@ -461,3 +461,170 @@ The NEXAH system now includes:
 > Not every path is valid everywhere.  
 >  
 > Structure is local.
+
+
+## Entry 74 — Grid Extraction / Channel Detection (V74)
+
+### Observation
+
+The layer-aware navigator revealed that the phase space is not continuously homogeneous.
+
+Instead, trajectories appear to stabilize around:
+
+- preferred horizontal bands
+- preferred vertical transition columns
+
+This suggests:
+
+→ the field contains a latent grid structure
+
+---
+
+### Key Discovery
+
+The system can be decomposed into:
+
+- **layers** (stable horizontal bands in PC2)
+- **channels** (preferred transition columns in PC1)
+
+Thus:
+
+→ navigation does not occur in a smooth plane  
+→ but within a **structured lattice-like phase geometry**
+
+---
+
+### Grid Components
+
+| Structure | Interpretation |
+|----------|----------------|
+| Layer | stable state band |
+| Channel | preferred transition axis |
+| Node | intersection of layer and channel |
+| Region | local navigation cell |
+
+---
+
+### Extraction Principle
+
+The grid is identified by clustering coordinates from:
+
+- original trajectory
+- rift curve
+- controlled trajectory
+
+along both axes independently:
+
+- x-axis clustering → channel centers
+- y-axis clustering → layer centers
+
+---
+
+### Field Interpretation
+
+The phase space is therefore not:
+
+→ a purely continuous manifold
+
+But:
+
+→ a **discrete-continuous hybrid space**
+
+This means:
+
+- motion is continuous locally
+- but constrained globally by preferred structural axes
+
+---
+
+### Geometric Insight
+
+The observed “double grid” is not an artifact.
+
+It reflects:
+
+1. a layer system in the vertical direction  
+2. a channel system in the horizontal direction  
+
+Together they form:
+
+→ a **navigation grid embedded in the field**
+
+---
+
+### Relation to Previous Entries
+
+#### Entry 49 — Degenerate Manifold
+
+Showed that the manifold collapses under projection.
+
+Now extended:
+
+→ projection still preserves preferred axes
+
+---
+
+#### Entry 50 — Field-Level Navigation
+
+Introduced attractors and channels.
+
+Now refined:
+
+→ channels are not arbitrary  
+→ they occur at preferred coordinate centers
+
+---
+
+#### Entry 73 — Layer-Aware Navigator
+
+Showed that not all paths are valid everywhere.
+
+Now clarified:
+
+→ valid paths are constrained by grid position
+
+---
+
+### Structural Consequence
+
+Navigation is now interpreted as:
+
+→ movement between nodes of the grid  
+→ along structurally preferred channels  
+→ within valid layers
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ flow on a manifold  
+
+To:
+
+→ **navigation on a structured phase grid**
+
+---
+
+### Conclusion
+
+The NEXAH system now contains:
+
+1. field structure  
+2. attractor structure  
+3. layer separation  
+4. grid geometry (NEW)
+
+---
+
+## Updated Core Insight
+
+> The field is not smooth everywhere.  
+>  
+> It is structured by preferred layers and channels.  
+>  
+> Navigation unfolds on that hidden grid.
+
+
+
