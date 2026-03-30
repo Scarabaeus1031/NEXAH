@@ -233,3 +233,105 @@ The system now reveals:
 > The trajectory follows the manifold.  
 >  
 > But the field exists beyond the projection.
+
+
+## Entry 50 — Field-Level Navigation (Attractors & Channels) (V71)
+
+### Observation
+
+Following the limitations identified in Entry 49,  
+the system behavior cannot be fully explained by:
+
+→ manifold-following alone  
+
+Instead, the observed dynamics indicate:
+
+- trajectories are influenced beyond the rift curve  
+- motion exhibits directional preference in regions  
+- certain areas act as sinks or guides  
+
+---
+
+### Key Discovery
+
+The system is not governed by a single manifold.
+
+Instead:
+
+→ it is structured as a **field with embedded attractors and channels**
+
+This introduces:
+
+- regions of convergence (attractors)  
+- regions of guided flow (channels)  
+- regions of instability (divergence zones)  
+
+---
+
+### Field Decomposition
+
+The phase space can now be interpreted as:
+
+| Structure | Description |
+|----------|------------|
+| Attractor | region where trajectories converge |
+| Channel | path of coherent motion |
+| Basin | area feeding into attractor |
+| Boundary | transition between regimes |
+
+---
+
+### Attractors
+
+Observed behavior:
+
+- trajectory endpoints cluster in specific regions  
+- motion slows and stabilizes near these points  
+
+Thus:
+
+→ attractors are not imposed  
+→ they emerge from field geometry  
+
+---
+
+### Channels
+
+The previously identified GH corridor is now reinterpreted as:
+
+→ a **flow channel in the field**
+
+Properties:
+
+- aligned vector directions  
+- low divergence  
+- stable propagation  
+
+This explains:
+
+- why trajectories follow similar paths  
+- why predictive control tends to align partially  
+
+---
+
+### Control Interpretation
+
+Previous approach:
+
+→ follow nearest point on manifold  
+
+New interpretation:
+
+→ navigate within the field  
+
+This changes the objective:
+
+```text
+not:
+    minimize distance to curve
+
+but:
+    align with field flow
+   ```
+
+
