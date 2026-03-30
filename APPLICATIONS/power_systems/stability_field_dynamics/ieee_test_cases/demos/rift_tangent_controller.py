@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
 
 # =============================
 # CONFIG
@@ -9,17 +10,38 @@ import matplotlib.pyplot as plt
 BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export"
 RIFT_DIR = os.path.join(BASE_DIR, "rift_extraction")
 
-ALPHA = 0.15   # pull toward rift (normal)
-BETA = 0.7     # original dynamics
-GAMMA = 0.25   # tangent flow strength
+ALPHA = 0.15
+BETA = 0.7
+GAMMA = 0.25
 
 # =============================
-# LOAD DATA
+# LOAD DATA (ROBUST)
 # =============================
 
 def load_data():
-    trajectory = np.load(os.path.join(BASE_DIR, "trajectory.npy"))
+    trajectory = None
 
+    # Try direct trajectory
+    traj_path = os.path.join(BASE_DIR, "trajectory.npy")
+    if os.path.exists(traj_path):
+        trajectory = np.load(traj_path)
+        print("✅ Loaded trajectory.npy")
+
+    # Fallback: states.npy → PCA
+    else:
+        states_path = os.path.join(BASE_DIR, "states.npy")
+        if not os.path.exists(states_path):
+            raise FileNotFoundError("❌ No trajectory or states.npy found")
+
+        states = np.load(states_path)
+        print(f"✅ Loaded states.npy: {states.shape}")
+
+        # PCA → 2D
+        pca = PCA(n_components=2)
+        trajectory = pca.fit_transform(states)
+        print("✅ PCA projection applied")
+
+    # --- Load rift ---
     possible_names = ["rift_curve.npy", "rift.npy", "rift_points.npy"]
     rift_curve = None
 
@@ -33,8 +55,8 @@ def load_data():
     if rift_curve is None:
         raise FileNotFoundError("❌ No rift file found")
 
-    print(f"✅ Trajectory loaded: {trajectory.shape}")
-    print(f"✅ Rift curve loaded: {rift_curve.shape}")
+    print(f"✅ Trajectory shape: {trajectory.shape}")
+    print(f"✅ Rift shape: {rift_curve.shape}")
 
     return trajectory, rift_curve
 
@@ -59,16 +81,16 @@ def compute_tangent(rift_curve, idx):
 
     norm = np.linalg.norm(tangent)
     if norm > 0:
-        tangent = tangent / norm
+        tangent /= norm
 
     return tangent
 
 
 # =============================
-# CONTROL WITH TANGENT FLOW
+# CONTROL
 # =============================
 
-def apply_rift_tangent_control(trajectory, rift_curve):
+def apply_control(trajectory, rift_curve):
     controlled = [trajectory[0]]
 
     for i in range(1, len(trajectory)):
@@ -77,30 +99,25 @@ def apply_rift_tangent_control(trajectory, rift_curve):
 
         nearest, idx = find_nearest_rift_point(current, rift_curve)
 
-        # Normal (toward rift)
         normal_vec = nearest - current
-
-        # Tangent (along rift)
         tangent_vec = compute_tangent(rift_curve, idx)
 
-        # Combine
         new_step = (
             BETA * original_step
             + ALPHA * normal_vec
             + GAMMA * tangent_vec
         )
 
-        new_point = current + new_step
-        controlled.append(new_point)
+        controlled.append(current + new_step)
 
     return np.array(controlled)
 
 
 # =============================
-# VISUALIZATION
+# PLOT
 # =============================
 
-def plot_results(trajectory, rift_curve, controlled):
+def plot_all(trajectory, rift_curve, controlled):
     plt.figure(figsize=(10, 6))
 
     plt.plot(trajectory[:, 0], trajectory[:, 1], color="green", label="original")
@@ -110,41 +127,11 @@ def plot_results(trajectory, rift_curve, controlled):
     plt.scatter(trajectory[-1, 0], trajectory[-1, 1], color="red", label="original end")
     plt.scatter(controlled[-1, 0], controlled[-1, 1], color="orange", label="controlled end")
 
-    plt.title("Rift Tangent Control")
-    plt.xlabel("PC1")
-    plt.ylabel("PC2")
     plt.legend()
+    plt.title("Rift Tangent Control (Robust Load)")
     plt.grid(True)
 
     save_path = os.path.join(RIFT_DIR, "rift_tangent_control.png")
-    plt.savefig(save_path)
-    print(f"💾 Saved → {save_path}")
-
-    plt.show()
-
-
-def plot_distance_comparison(trajectory, controlled, rift_curve):
-    def compute_distance(traj):
-        dists = []
-        for p in traj:
-            d = np.min(np.linalg.norm(rift_curve - p, axis=1))
-            dists.append(d)
-        return np.array(dists)
-
-    d_orig = compute_distance(trajectory)
-    d_ctrl = compute_distance(controlled)
-
-    plt.figure(figsize=(10, 4))
-    plt.plot(d_orig, label="original")
-    plt.plot(d_ctrl, label="controlled")
-
-    plt.title("Distance to Rift: Original vs Tangent-Controlled")
-    plt.xlabel("step")
-    plt.ylabel("distance")
-    plt.legend()
-    plt.grid(True)
-
-    save_path = os.path.join(RIFT_DIR, "rift_tangent_distance.png")
     plt.savefig(save_path)
     print(f"💾 Saved → {save_path}")
 
@@ -158,15 +145,14 @@ def plot_distance_comparison(trajectory, controlled, rift_curve):
 def main():
     trajectory, rift_curve = load_data()
 
-    controlled = apply_rift_tangent_control(trajectory, rift_curve)
+    controlled = apply_control(trajectory, rift_curve)
 
-    plot_results(trajectory, rift_curve, controlled)
-    plot_distance_comparison(trajectory, controlled, rift_curve)
+    plot_all(trajectory, rift_curve, controlled)
 
     np.save(os.path.join(RIFT_DIR, "trajectory_controlled_tangent.npy"), controlled)
-    print("💾 Controlled trajectory saved")
+    print("💾 Saved controlled trajectory")
 
-    print("🚀 Tangent control complete")
+    print("🚀 DONE")
 
 
 if __name__ == "__main__":
