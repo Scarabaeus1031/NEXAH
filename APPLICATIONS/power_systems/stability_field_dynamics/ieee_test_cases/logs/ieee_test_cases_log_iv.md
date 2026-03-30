@@ -1287,4 +1287,219 @@ The NEXAH system now includes:
 >  
 > It is the traversal of connected cycles.
 
+## Entry 79 — Mode-Locked Cycles & Resonant Loop Structure (V79)
 
+### Observation
+
+Previous analysis revealed two independent structures:
+
+1. Temporal modes (Entry 76):
+   - dominant frequency ~0.0083  
+   - harmonic structure (2×, 3×, 4×)
+
+2. Spatial loops (Entry 78):
+   - repeated local cycles  
+   - figure-8 patterns  
+   - directional reversals  
+
+New observation:
+
+→ these two are not independent  
+
+---
+
+### Key Discovery
+
+The system exhibits:
+
+→ **mode-locked cycles**
+
+Meaning:
+
+- each spatial loop corresponds to a temporal phase  
+- loop repetition aligns with dominant frequency  
+- motion is synchronized in space and time  
+
+---
+
+### Mode-Locking Principle
+
+The system satisfies:
+
+→ spatial cycle ↔ temporal frequency coupling  
+
+This implies:
+
+| Domain | Structure |
+|------|----------|
+| Time | oscillation frequency |
+| Space | loop geometry |
+| Coupling | phase alignment |
+
+---
+
+### Cycle Timing
+
+Observed:
+
+- instability events occur periodically  
+- loop transitions align with frequency peaks  
+- repetition intervals match harmonic structure  
+
+Thus:
+
+→ loops are **phase-triggered**
+
+---
+
+### Loop–Frequency Mapping
+
+Each loop corresponds to:
+
+→ a phase interval of the dominant frequency  
+
+Example:
+
+| Phase | Behavior |
+|------|--------|
+| 0 → π/2 | expansion |
+| π/2 → π | curvature |
+| π → 3π/2 | contraction |
+| 3π/2 → 2π | reset |
+
+This forms:
+
+→ a **full oscillation cycle**
+
+---
+
+### Harmonic Structure
+
+Higher frequencies correspond to:
+
+→ sub-loops inside main loops  
+
+Thus:
+
+- base frequency → global loop structure  
+- harmonics → internal modulation  
+
+---
+
+### Geometric Interpretation
+
+The trajectory is not:
+
+→ a continuous curve  
+
+But:
+
+→ a **phase-driven loop sequence**
+
+Each loop is:
+
+- initiated by phase  
+- shaped by field geometry  
+- terminated by contraction  
+
+---
+
+### Relation to Entry 77 (Balanced Flow)
+
+Balanced expansion/contraction is not random.
+
+It is:
+
+→ **phase-controlled**
+
+Thus:
+
+- expansion peaks at specific phases  
+- contraction follows deterministically  
+
+---
+
+### Relation to Entry 78 (Loop Topology)
+
+Closed loops are not arbitrary.
+
+They are:
+
+→ **resonant structures**
+
+Defined by:
+
+- frequency  
+- phase  
+- local field geometry  
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ loops as geometric artifacts  
+
+To:
+
+→ **loops as resonant dynamical modes**
+
+---
+
+### System Interpretation
+
+The system behaves as:
+
+→ a **mode-locked oscillatory field**
+
+Properties:
+
+- bounded  
+- cyclic  
+- phase-synchronized  
+- self-regulating  
+
+---
+
+### Core Insight
+
+> The system does not just oscillate.  
+>  
+> It resonates.  
+
+---
+
+### Implication
+
+Prediction must include:
+
+- phase tracking  
+- frequency locking  
+- loop timing  
+
+Control must align with:
+
+→ **resonant modes**
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. spatial field structure  
+2. grid geometry  
+3. layer dynamics  
+4. temporal frequency modes  
+5. balanced oscillation  
+6. loop topology  
+7. mode-locked resonance (NEW)
+
+---
+
+## Updated Core Insight
+
+> Motion is not only cyclic.  
+>  
+> It is phase-locked to the system’s intrinsic frequency.
