@@ -2,73 +2,70 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# ==============================
+# CONFIG
+# ==============================
 BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export"
 RIFT_DIR = os.path.join(BASE_DIR, "rift_extraction")
 
 # ==============================
-# LOAD (ROBUST)
+# LOAD DATA
 # ==============================
 def load_data():
-
+    collapse_likelihood = np.load(os.path.join(BASE_DIR, "collapse_likelihood.npy"))
+    PC1_grid = np.load(os.path.join(BASE_DIR, "PC1_grid.npy"))
+    PC2_grid = np.load(os.path.join(BASE_DIR, "PC2_grid.npy"))
     trajectory = np.load(os.path.join(BASE_DIR, "trajectory_pca.npy"))
 
-    # ---- try multiple filenames ----
-    candidates = [
-        "rift_curve.npy",
-        "rift.npy",
-        "rift_points.npy"
-    ]
-
-    rift_curve = None
-
-    for name in candidates:
-        path = os.path.join(RIFT_DIR, name)
-        if os.path.exists(path):
-            print(f"✅ Found rift file: {name}")
-            rift_curve = np.load(path)
-            break
-
-    if rift_curve is None:
-        raise FileNotFoundError(
-            f"❌ No rift file found in {RIFT_DIR}\n"
-            f"Tried: {candidates}"
-        )
-
     print("✅ Data loaded")
-    return trajectory, rift_curve
+    return collapse_likelihood, PC1_grid, PC2_grid, trajectory
 
 # ==============================
-# PROJECT TO RIFT
+# EXTRACT RIFT CURVE
 # ==============================
-def project_to_rift(trajectory, rift_curve):
-    projected = []
+def extract_rift(collapse_likelihood, PC1_grid, PC2_grid):
 
-    for p in trajectory:
-        dists = np.linalg.norm(rift_curve - p, axis=1)
-        idx = np.argmin(dists)
-        projected.append(rift_curve[idx])
+    rift_points = []
 
-    return np.array(projected)
+    # iterate over PC1 axis (columns)
+    for i in range(PC1_grid.shape[1]):
+        col = collapse_likelihood[:, i]
 
-# ==============================
-# BLEND
-# ==============================
-def blend_trajectory(original, projected, alpha=0.4):
-    return (1 - alpha) * original + alpha * projected
+        idx = np.argmax(col)
+
+        x = PC1_grid[idx, i]
+        y = PC2_grid[idx, i]
+
+        rift_points.append([x, y])
+
+    rift_curve = np.array(rift_points)
+
+    print("✅ Rift extracted")
+    return rift_curve
 
 # ==============================
 # PLOT
 # ==============================
-def plot_control(original, projected, blended):
+def plot_rift(collapse_likelihood, PC1_grid, PC2_grid, trajectory, rift_curve):
 
-    plt.figure(figsize=(6, 6))
+    plt.figure(figsize=(8, 5))
 
-    plt.plot(original[:,0], original[:,1], color='green', label='original')
-    plt.plot(projected[:,0], projected[:,1], color='cyan', label='rift projection')
-    plt.plot(blended[:,0], blended[:,1], color='yellow', label='controlled')
+    plt.imshow(
+        collapse_likelihood,
+        extent=[
+            PC1_grid.min(), PC1_grid.max(),
+            PC2_grid.min(), PC2_grid.max()
+        ],
+        origin="lower",
+        aspect="auto",
+        cmap="viridis"
+    )
+
+    plt.plot(trajectory[:,0], trajectory[:,1], color="lime", label="trajectory")
+    plt.plot(rift_curve[:,0], rift_curve[:,1], color="cyan", linewidth=2, label="rift curve")
 
     plt.legend()
-    plt.title("Rift-guided trajectory control")
+    plt.title("NEXAH FIELD — Extracted Rift Curve")
     plt.xlabel("PC1")
     plt.ylabel("PC2")
     plt.tight_layout()
@@ -79,21 +76,24 @@ def plot_control(original, projected, blended):
 # ==============================
 def main():
 
-    trajectory, rift_curve = load_data()
+    collapse_likelihood, PC1_grid, PC2_grid, trajectory = load_data()
 
-    print(f"Trajectory shape: {trajectory.shape}")
-    print(f"Rift shape: {rift_curve.shape}")
+    rift_curve = extract_rift(collapse_likelihood, PC1_grid, PC2_grid)
 
-    projected = project_to_rift(trajectory, rift_curve)
-    controlled = blend_trajectory(trajectory, projected)
+    # ---- SAVE (CRITICAL FIX) ----
+    os.makedirs(RIFT_DIR, exist_ok=True)
 
-    plot_control(trajectory, projected, controlled)
+    np.save(os.path.join(RIFT_DIR, "rift_curve.npy"), rift_curve)
 
-    # save
-    np.save(os.path.join(RIFT_DIR, "trajectory_projected.npy"), projected)
-    np.save(os.path.join(RIFT_DIR, "trajectory_controlled.npy"), controlled)
+    print(f"💾 Rift curve saved → {RIFT_DIR}/rift_curve.npy")
 
-    print("💾 Control trajectories saved")
+    # ---- OPTIONAL DEBUG SAVE ----
+    np.save(os.path.join(RIFT_DIR, "rift_curve_debug.npy"), rift_curve)
 
+    plot_rift(collapse_likelihood, PC1_grid, PC2_grid, trajectory, rift_curve)
+
+    print("🚀 Rift extraction complete")
+
+# ==============================
 if __name__ == "__main__":
     main()
