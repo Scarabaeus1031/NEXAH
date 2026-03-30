@@ -335,3 +335,129 @@ but:
    ```
 
 
+## Entry 73 — Layer-Aware Navigation (V73)
+
+### Observation
+
+The field navigator (V72) revealed a critical issue:
+
+→ trajectories were pulled into regions that do not belong to their original layer  
+
+This resulted in:
+
+- vertical drift  
+- loss of structural coherence  
+- incorrect convergence behavior  
+
+---
+
+### Key Discovery
+
+The system is not a single manifold.
+
+It consists of:
+
+→ **multiple layers / subspaces**
+
+Each layer has:
+
+- its own dynamics  
+- its own valid trajectories  
+- its own attractors  
+
+---
+
+### Core Problem
+
+The Rift is not globally valid.
+
+It is:
+
+→ **layer-dependent**
+
+---
+
+### Solution
+
+Introduce:
+
+→ **layer-aware control**
+
+---
+
+### Layer Metric
+
+Define:
+
+layer_gap = |y_trajectory - y_rift|
+
+---
+
+### Control Logic
+
+| Condition | Behavior |
+|----------|--------|
+| layer_gap small | follow rift |
+| layer_gap large | ignore rift |
+
+---
+
+### Navigator Equation
+
+x_next = x + α·F_attractor + β·F_channel + γ·F_local  
+
+But:
+
+- γ → only active inside valid layer  
+
+---
+
+### Behavioral Change
+
+Compared to V72:
+
+- no vertical collapse  
+- preserved structure  
+- stable convergence  
+
+---
+
+### Geometric Insight
+
+The system is not:
+
+→ a surface  
+
+But:
+
+→ a **stack of manifolds**
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ global field navigation  
+
+To:
+
+→ **context-aware navigation**
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. Field dynamics  
+2. Flow navigation  
+3. Layer separation (NEW)  
+
+---
+
+## Updated Core Insight
+
+> Not every path is valid everywhere.  
+>  
+> Structure is local.
