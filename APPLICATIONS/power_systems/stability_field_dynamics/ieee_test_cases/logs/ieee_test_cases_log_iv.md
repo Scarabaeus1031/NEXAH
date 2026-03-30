@@ -721,3 +721,130 @@ The NEXAH system now includes:
 >  
 > It is reached by aligning with the correct layer.
 
+## Entry 76 — Spectral Signature & Temporal Modes (V76)
+
+### Observation
+
+FFT analysis reveals a clear dominant frequency pattern:
+
+- PC1 dominant frequency: ~0.0083  
+- PC2 dominant frequency: ~0.0083  
+
+Additional harmonics:
+
+- 0.0167 (2×)
+- 0.0250 (3×)
+- 0.0333 (4×)
+
+---
+
+### Key Discovery
+
+The system is not random in time.
+
+Instead:
+
+→ it exhibits a **harmonic temporal structure**
+
+This means:
+
+- motion is periodic  
+- instability is rhythmically distributed  
+- control must respect timing  
+
+---
+
+### Interpretation
+
+The trajectory follows:
+
+→ a **temporal wave embedded in phase space**
+
+Thus:
+
+- spatial structure (manifold / grid)
+- temporal structure (frequency)
+
+are coupled.
+
+---
+
+### Temporal Structure
+
+| Component | Role |
+|----------|------|
+| Base frequency (~0.0083) | fundamental oscillation |
+| Harmonics | higher-order modulation |
+| Events | phase transitions |
+
+---
+
+### Relation to Instability
+
+Instability events are not random.
+
+They occur:
+
+→ at specific phases of the dominant frequency  
+
+Observed:
+
+- clustered event timing  
+- repeated intervals  
+- synchronization across PC1 and PC2  
+
+---
+
+### Geometric Interpretation
+
+The system is not only spatial.
+
+It is:
+
+→ **spatio-temporal**
+
+Meaning:
+
+- position evolves along the field  
+- timing determines when transitions occur  
+
+---
+
+### Control Implication
+
+Effective control must include:
+
+1. spatial alignment (rift / layer / grid)  
+2. temporal alignment (frequency phase)
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ static control  
+
+To:
+
+→ **phase-aware control**
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. spatial field structure  
+2. grid geometry  
+3. layer locking  
+4. temporal frequency modes (NEW)
+
+---
+
+## Updated Core Insight
+
+> The system is not only where.  
+>  
+> It is also when.
+
