@@ -626,5 +626,98 @@ The NEXAH system now contains:
 >  
 > Navigation unfolds on that hidden grid.
 
+## Entry 75 — Layer Lock Control (V75)
 
+### Observation
+
+Grid extraction revealed a stable layer in PC2:
+
+→ approximately 0.75–0.80  
+
+This layer acts as the dominant attractor region of the system.
+
+---
+
+### Key Discovery
+
+The Rift is not the correct control target.
+
+Instead:
+
+→ trajectories stabilize within a specific layer  
+
+---
+
+### Control Principle
+
+Introduce:
+
+→ **layer-lock force**
+
+F_layer = (0, y_target - y)
+
+---
+
+### Controller Structure
+
+x_next = x + α·F_attractor + β·F_channel + γ·F_layer  
+
+Where:
+
+- F_layer dominates vertical dynamics  
+- F_channel controls horizontal flow  
+- F_attractor ensures global direction  
+
+---
+
+### Behavior
+
+Compared to previous controllers:
+
+- no collapse toward rift  
+- stable vertical alignment  
+- coherent trajectory evolution  
+
+---
+
+### Geometric Insight
+
+The system is governed by:
+
+→ layer-constrained motion  
+
+Not:
+
+→ free 2D movement  
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ navigating toward structures  
+
+To:
+
+→ **locking onto structural layers**
+
+---
+
+### Conclusion
+
+The NEXAH system now includes:
+
+1. field navigation  
+2. layer awareness  
+3. grid structure  
+4. layer locking (NEW)
+
+---
+
+## Updated Core Insight
+
+> Stability is not reached by moving toward a point.  
+>  
+> It is reached by aligning with the correct layer.
 
