@@ -47,27 +47,19 @@ def compute_phase(n, freq):
 def compute_phase_metrics(traj):
 
     pc1 = traj[:, 0]
-    pc2 = traj[:, 1]
 
     f = dominant_freq(pc1)
     phase = compute_phase(len(traj), f)
 
-    # velocity
     velocity = np.diff(traj, axis=0)
     speed = np.linalg.norm(velocity, axis=1)
 
-    # expansion / contraction (signed)
     expansion = np.diff(speed)
 
-    # phase alignment (are we moving WITH phase?)
     phase_dir = np.sin(phase[:-1])
     alignment = np.sign(expansion) * np.sign(phase_dir)
 
-    # coherence
     phase_coherence = np.mean(alignment)
-
-    # smoothness
-    smoothness = np.std(expansion)
 
     return {
         "phase_coherence": phase_coherence,
@@ -84,47 +76,6 @@ def compute_phase_metrics(traj):
 def plot_phase_metrics(phase, expansion):
 
     plt.figure(figsize=(10, 4))
-    plt.plot(phase[:-1], label="phase")
-    plt.plot(expansion, label="expansion", alpha=0.7)
-
-    plt.legend()
-    plt.grid(True)
-    plt.title("Phase vs Expansion")
-
-    save_path = os.path.join(RIFT_DIR, "phase_field_metrics.png")
-    plt.savefig(save_path)
-    print(f"💾 Saved → {save_path}")
-
-    plt.close()
-
-
-# --------------------------------------------------
-# MAIN
-# --------------------------------------------------
-
-def main():
-
-    original, controlled = load_data()
-
-    print("\n📊 ORIGINAL")
-    m_orig, phase_orig, exp_orig = compute_phase_metrics(original)
-
-    for k, v in m_orig.items():
-        print(f"{k}: {v:.6f}")
-
-    print("\n📊 CONTROLLED (PHASE)")
-    m_ctrl, phase_ctrl, exp_ctrl = compute_phase_metrics(controlled)
-
-    for k, v in m_ctrl.items():
-        print(f"{k}: {v:.6f}")
-
-    plot_phase_metrics(phase_ctrl, exp_ctrl)
-
-    print("\n🚀 Phase field metrics complete")
-
-
-if __name__ == "__main__":
-    main()    plt.figure(figsize=(10, 4))
     plt.plot(phase[:-1], label="phase")
     plt.plot(expansion, label="expansion", alpha=0.7)
 
