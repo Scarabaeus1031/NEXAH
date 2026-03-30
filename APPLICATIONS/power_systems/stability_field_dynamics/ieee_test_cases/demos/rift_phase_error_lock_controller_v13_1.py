@@ -36,7 +36,7 @@ def load_data():
 
 
 # --------------------------------------------------
-# SIGNAL / GEOMETRY HELPERS
+# HELPERS
 # --------------------------------------------------
 
 def fft_spectrum(signal):
@@ -70,7 +70,7 @@ def wrap_angle(x):
 
 
 # --------------------------------------------------
-# V13.1 CONTROLLER
+# CONTROLLER (V13.1)
 # --------------------------------------------------
 
 def phase_error_lock_controller_v13_1(trajectory, rift):
@@ -88,8 +88,6 @@ def phase_error_lock_controller_v13_1(trajectory, rift):
     lower_layer = base_layer - 0.65 * spread
 
     print(f"🔊 Base frequency: {f0:.4f}")
-    print(f"🎯 Upper Layer: {upper_layer:.4f}")
-    print(f"🎯 Lower Layer: {lower_layer:.4f}")
 
     phi = np.zeros(len(controlled))
     ref_phi = np.zeros(len(controlled))
@@ -101,35 +99,16 @@ def phase_error_lock_controller_v13_1(trajectory, rift):
 
     momentum = np.zeros_like(controlled)
 
-    phi[0] = 0.0
-    ref_phi[0] = 0.0
     target_phi[0] = np.pi
 
-    k_layer = 1.2
-    k_speed = 1.5
-    k_turn = 0.9
     k_lock = 0.55
     k_target = 0.25
-    k_relax = 0.08
-
-    dt = 1.0
 
     for t in range(len(controlled)):
 
         ref_phi[t] = (2 * np.pi * f0 * t) % (2 * np.pi)
 
         if t > 1:
-            vel = controlled[t - 1] - controlled[t - 2]
-            speed = np.linalg.norm(vel)
-
-            if t > 2:
-                prev_vel = controlled[t - 2] - controlled[t - 3]
-            else:
-                prev_vel = vel
-
-            turn = np.linalg.norm(vel - prev_vel)
-            layer_dev = (controlled[t - 1, 1] - base_layer) / (spread + 1e-8)
-
             y = controlled[t - 1, 1]
 
             if y > base_layer + 0.3 * spread:
@@ -147,84 +126,25 @@ def phase_error_lock_controller_v13_1(trajectory, rift):
 
             dphi = (
                 2 * np.pi * f0
-                + k_layer * layer_dev * 0.025
-                + k_speed * speed * 0.018
-                + k_turn * turn * 0.015
                 - k_lock * pe_ref
                 - k_target * pe_target
-                - k_relax * np.sin(pe_ref)
             )
 
-            phi[t] = (phi[t - 1] + dphi * dt) % (2 * np.pi)
+            phi[t] = (phi[t - 1] + dphi) % (2 * np.pi)
 
         elif t > 0:
             phi[t] = (phi[t - 1] + 2 * np.pi * f0) % (2 * np.pi)
-            phase_error_ref[t] = wrap_angle(phi[t] - ref_phi[t])
-            phase_error_target[t] = wrap_angle(phi[t] - target_phi[t])
 
-        drive[t] = (
-            np.sin(phi[t])
-            + 0.5 * np.sin(2 * phi[t])
-            + 0.3 * np.sin(3 * phi[t])
-        )
+        drive[t] = np.sin(phi[t])
 
-        d = drive[t]
-        current = controlled[t]
-        rift_target = nearest_rift_point(current, rift)
-
-        pe_abs = abs(phase_error_ref[t])
-
-        if d > 0.35:
-            target_layer = upper_layer
-            target_dx = 0.028
-            gain_layer = 0.40
-            gain_x = 0.15
-            gain_rift = 0.03
-        elif d > 0.0:
-            target_layer = 0.5 * (base_layer + upper_layer)
-            target_dx = 0.018
-            gain_layer = 0.30
-            gain_x = 0.10
-            gain_rift = 0.03
-        elif d >= -0.35:
-            target_layer = base_layer
-            target_dx = 0.010
-            gain_layer = 0.28
-            gain_x = 0.06
-            gain_rift = 0.02
-        else:
-            target_layer = lower_layer
-            target_dx = 0.004
-            gain_layer = 0.38
-            gain_x = 0.03
-            gain_rift = 0.02
-
-        lock_boost = 1.0 + min(pe_abs / np.pi, 1.0) * 0.8
-        gain_layer *= lock_boost
-
-        layer_target = np.array([current[0], target_layer])
-        layer_corr = gain_layer * (layer_target - current)
-
-        x_target = np.array([current[0] + target_dx, current[1]])
-        x_corr = gain_x * (x_target - current)
-
-        rift_corr = gain_rift * (rift_target - current)
-
-        correction = layer_corr + x_corr + rift_corr
-
-        if t > 0:
-            momentum[t] = 0.82 * momentum[t - 1] + 0.18 * correction
-        else:
-            momentum[t] = correction
-
-        correction = np.tanh(momentum[t]) * 0.05
+        correction = np.array([0.01, 0.02 * drive[t]])
         controlled[t] += correction
 
-    return controlled, phi, ref_phi, target_phi, drive, phase_error_ref, phase_error_target, base_layer, upper_layer, lower_layer, f0
+    return controlled, phi, ref_phi, target_phi, phase_error_ref, phase_error_target, base_layer, upper_layer, lower_layer
 
 
 # --------------------------------------------------
-# PLOT (V13.1)
+# PLOT
 # --------------------------------------------------
 
 def plot_result(original, controlled, rift,
@@ -232,60 +152,64 @@ def plot_result(original, controlled, rift,
                 phase_error_ref, phase_error_target,
                 base_layer, upper_layer, lower_layer):
 
-    # -----------------------------
-    # 1. TRAJECTORY
-    # -----------------------------
     plt.figure(figsize=(10, 6))
-
-    plt.plot(original[:, 0], original[:, 1], label="original", color="green")
-    plt.plot(rift[:, 0], rift[:, 1], label="rift", color="cyan")
-    plt.plot(controlled[:, 0], controlled[:, 1], label="v13.1", color="gold")
-
-    plt.axhline(base_layer, linestyle="--", color="magenta", label="base layer")
-    plt.axhline(upper_layer, linestyle="--", color="orange", label="upper layer")
-    plt.axhline(lower_layer, linestyle="--", color="purple", label="lower layer")
-
+    plt.plot(original[:, 0], original[:, 1], label="original")
+    plt.plot(controlled[:, 0], controlled[:, 1], label="v13.1")
+    plt.axhline(base_layer, linestyle="--")
+    plt.axhline(upper_layer, linestyle="--")
+    plt.axhline(lower_layer, linestyle="--")
     plt.legend()
-    plt.grid(True)
-
-    path = os.path.join(RIFT_DIR, "v13_1_trajectory.png")
-    plt.savefig(path, dpi=150)
-    print(f"💾 Saved → {path}")
+    plt.grid()
+    plt.savefig(os.path.join(RIFT_DIR, "v13_1_trajectory.png"))
     plt.close()
 
-    # -----------------------------
-    # 2. PHASE
-    # -----------------------------
     plt.figure(figsize=(10, 4))
-
-    plt.plot(phi, label="feedback φ", color="purple")
-    plt.plot(ref_phi, label="ref φ", color="blue")
-    plt.plot(target_phi, label="target φ", color="red", linestyle="--")
-
+    plt.plot(phi, label="φ")
+    plt.plot(ref_phi, label="ref")
+    plt.plot(target_phi, label="target")
     plt.legend()
-    plt.grid(True)
-    plt.title("Phase Tracking (v13.1)")
-
-    path = os.path.join(RIFT_DIR, "v13_1_phase.png")
-    plt.savefig(path, dpi=150)
-    print(f"💾 Saved → {path}")
+    plt.grid()
+    plt.savefig(os.path.join(RIFT_DIR, "v13_1_phase.png"))
     plt.close()
 
-    # -----------------------------
-    # 3. ERRORS
-    # -----------------------------
     plt.figure(figsize=(10, 3))
-
-    plt.plot(phase_error_ref, label="error_ref", color="blue")
-    plt.plot(phase_error_target, label="error_target", color="red")
-
-    plt.axhline(0.0, linestyle="--", color="gray")
-
+    plt.plot(phase_error_ref, label="ref error")
+    plt.plot(phase_error_target, label="target error")
     plt.legend()
-    plt.grid(True)
-    plt.title("Phase Errors (v13.1)")
-
-    path = os.path.join(RIFT_DIR, "v13_1_errors.png")
-    plt.savefig(path, dpi=150)
-    print(f"💾 Saved → {path}")
+    plt.grid()
+    plt.savefig(os.path.join(RIFT_DIR, "v13_1_errors.png"))
     plt.close()
+
+
+# --------------------------------------------------
+# MAIN
+# --------------------------------------------------
+
+def main():
+    trajectory, rift = load_data()
+
+    results = phase_error_lock_controller_v13_1(trajectory, rift)
+
+    (controlled, phi, ref_phi, target_phi,
+     pe_ref, pe_target,
+     base_layer, upper_layer, lower_layer) = results
+
+    plot_result(
+        trajectory,
+        controlled,
+        rift,
+        phi,
+        ref_phi,
+        target_phi,
+        pe_ref,
+        pe_target,
+        base_layer,
+        upper_layer,
+        lower_layer
+    )
+
+    print("🚀 V13.1 DONE")
+
+
+if __name__ == "__main__":
+    main()
