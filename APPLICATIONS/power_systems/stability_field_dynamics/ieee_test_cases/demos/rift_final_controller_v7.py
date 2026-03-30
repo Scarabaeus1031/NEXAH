@@ -171,10 +171,16 @@ def main():
 
     controlled, layer_center = final_controller(trajectory, rift)
 
+    # 🔥 HIER EINFÜGEN
+    np.save(
+        os.path.join(RIFT_DIR, "final_controller_v7.npy"),
+        controlled
+    )
+    print("💾 Saved controlled trajectory → final_controller_v7.npy")
+
     plot_result(trajectory, controlled, rift, layer_center)
 
     print("🚀 FINAL CONTROLLER V7 complete")
-
 
 if __name__ == "__main__":
     main()
