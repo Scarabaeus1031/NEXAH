@@ -1,45 +1,78 @@
-# rift_controller_metrics.py (FIXED + ROBUST)
+# rift_controller_metrics.py (FINAL CLEAN FIX)
 
 import numpy as np
 import os
 import matplotlib.pyplot as plt
 
 BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export"
+RIFT_DIR = os.path.join(BASE_DIR, "rift_extraction")
 
 
-def safe_load(filename_options):
-    for fname in filename_options:
-        path = os.path.join(BASE_DIR, fname)
+# --------------------------------------------------
+# SAFE LOAD
+# --------------------------------------------------
+
+def safe_load(options):
+    for f in options:
+        path = os.path.join(BASE_DIR, f)
         if os.path.exists(path):
-            print(f"✅ Loaded: {fname}")
+            print(f"✅ Loaded: {f}")
             return np.load(path)
-    raise FileNotFoundError(f"❌ None of these files found: {filename_options}")
+    raise FileNotFoundError(f"❌ Missing files: {options}")
 
+
+# --------------------------------------------------
+# LOAD DATA
+# --------------------------------------------------
 
 def load_data():
+
     trajectory = safe_load([
         "states.npy",
         "trajectory.npy"
     ])
 
     rift = safe_load([
-        "rift_curve.npy",
-        "rift_curve_smoothed.npy",
-        "rift_extraction/rift_curve.npy"
+        "rift_extraction/rift_curve.npy",
+        "rift_curve.npy"
     ])
 
-    return trajectory, rift
+    controlled = safe_load([
+        "rift_extraction/final_controller_v7.npy"
+    ])
 
+    # 🔥 CRITICAL FIX → ALLES in 2D
+    trajectory = trajectory[:, :2]
+    controlled = controlled[:, :2]
+
+    print("📐 Shapes:")
+    print("trajectory:", trajectory.shape)
+    print("controlled:", controlled.shape)
+    print("rift:", rift.shape)
+
+    return trajectory, controlled, rift
+
+
+# --------------------------------------------------
+# DISTANCE
+# --------------------------------------------------
 
 def nearest_rift_distance(points, rift):
     dists = []
+
     for p in points:
-        dist = np.min(np.linalg.norm(rift - p, axis=1))
-        dists.append(dist)
+        d = np.linalg.norm(rift - p, axis=1)
+        dists.append(np.min(d))
+
     return np.array(dists)
 
 
+# --------------------------------------------------
+# METRICS
+# --------------------------------------------------
+
 def compute_metrics(original, controlled, rift):
+
     orig_dist = nearest_rift_distance(original, rift)
     ctrl_dist = nearest_rift_distance(controlled, rift)
 
@@ -54,40 +87,48 @@ def compute_metrics(original, controlled, rift):
     return metrics, orig_dist, ctrl_dist
 
 
+# --------------------------------------------------
+# PLOT
+# --------------------------------------------------
+
 def plot_metrics(orig_dist, ctrl_dist):
+
     plt.figure(figsize=(10, 4))
-    plt.plot(orig_dist, label="original distance")
-    plt.plot(ctrl_dist, label="controlled distance")
+
+    plt.plot(orig_dist, label="original")
+    plt.plot(ctrl_dist, label="controlled")
+
     plt.xlabel("time step")
     plt.ylabel("distance to rift")
-    plt.legend()
-    plt.title("Controller Performance")
-    plt.grid(True)
-    plt.tight_layout()
 
-    save_path = os.path.join(BASE_DIR, "rift_extraction/controller_metrics.png")
-    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    plt.legend()
+    plt.grid(True)
+
+    save_path = os.path.join(RIFT_DIR, "controller_metrics.png")
+    os.makedirs(RIFT_DIR, exist_ok=True)
+
     plt.savefig(save_path)
     print(f"💾 Saved → {save_path}")
+
     plt.close()
 
 
+# --------------------------------------------------
+# MAIN
+# --------------------------------------------------
+
 def main():
-    trajectory, rift = load_data()
 
-    # 🔥 IMPORTANT: hier richtigen Controller laden!
-    # Wenn du V7 gespeichert hast → hier eintragen
+    trajectory, controlled, rift = load_data()
 
-    try:
-        controlled = np.load(os.path.join(BASE_DIR, "rift_extraction/final_controller_v7.npy"))
-        print("✅ Loaded controlled trajectory (V7)")
-    except:
-        print("⚠️ No saved controlled trajectory found → using original (placeholder)")
-        controlled = trajectory.copy()
-
-    metrics, orig_dist, ctrl_dist = compute_metrics(trajectory, controlled, rift)
+    metrics, orig_dist, ctrl_dist = compute_metrics(
+        trajectory,
+        controlled,
+        rift
+    )
 
     print("\n📊 CONTROLLER METRICS\n")
+
     for k, v in metrics.items():
         print(f"{k}: {v:.6f}")
 
