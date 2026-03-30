@@ -60,7 +60,7 @@ def main():
     # aktuell: wir nehmen die letzten Punkte als "controlled"
     # → oder du ersetzt das durch echte controller outputs
 
-    controlled = trajectory.copy()  # placeholder (ersetzen!)
+    controlled = np.load(".../final_controller_v7.npy")
 
     metrics, orig_dist, ctrl_dist = compute_metrics(trajectory, controlled, rift)
 
