@@ -1,224 +1,154 @@
-# 🧭 IEEE Test Case Demos — Rift / Field Navigation Experiments
+# 🧭 IEEE Test Case Demos — Rift / Field Navigation Experiments (UPDATED)
 
 ## Overview
 
-This folder contains experimental scripts exploring **field-based dynamics, rift extraction, and control strategies**  
-on IEEE-style test systems.
+This folder contains a rapidly evolving set of experiments exploring:
 
-The goal is to move from:
+- field-based dynamics  
+- rift extraction  
+- multi-layer control  
+- phase-driven navigation  
 
-- trajectory-based analysis  
-→ toward  
-- **field-consistent navigation and control**
+on IEEE-style dynamical systems.
+
+The work has transitioned from:
+
+trajectory → manifold → field → phase-regulated control
 
 ---
 
 ## 🧠 Core Idea
 
-The system is not governed by a single curve or manifold.
+The system is not governed by:
 
-Instead, it exhibits:
+- a single trajectory  
+- nor a fixed manifold  
 
-- field structure (flow)
+Instead, it is structured as a:
+
+### 👉 **spatio-temporal field**
+
+with:
+
 - layers (stable bands)
-- channels (preferred transitions)
-- temporal modes (frequency)
+- channels (preferred directions)
+- loops (local cycles)
+- temporal modes (frequency + phase)
 
-This leads to a new paradigm:
+---
 
-> Navigation is not about reaching a point  
+## 🔁 New Paradigm
+
+> Navigation is not reaching a point  
 >  
-> but aligning with structure in space and time.
+> It is aligning with structure in space, time, and phase.
 
 ---
 
-## ⚙️ Pipeline (Current)
+# ⚙️ Pipeline (FULL)
 
-### 1. Field Generation & Export
-- `run_ieee_field_analysis_export.py`
-- `run_ieee_field_visual.py`
-- `run_ieee_field_topology_map.py`
+## 1. Field Generation & Export
 
-→ generates state trajectories and field structure
-
----
-
-### 2. Rift Extraction
-- `extract_rift_curve.py`
-- `rift_distance_analysis.py`
-
-→ identifies collapse-aligned structures (rift)
+- run_ieee_field_analysis_export.py
+- run_ieee_field_visual.py
+- run_ieee_field_topology_map.py
+- run_ieee_field_rotation_animation.py
 
 ---
 
-### 3. Instability & Temporal Analysis
-- `rift_instability_detector.py`
-- `rift_fft_analysis.py`
-- `rift_modal_map.py`
+## 2. Rift Extraction
 
-→ detects:
-- instability events
-- dominant frequencies
-- temporal structure
+- extract_rift_curve.py
+- rift_distance_analysis.py
+
+⚠️ Rift ≠ true attractor
 
 ---
 
-### 4. Navigation & Control
+## 3. Instability & Temporal Analysis
 
-#### Early Controllers
-- `rift_projection_control.py`
-- `rift_tangent_controller.py`
-
-#### Adaptive Controllers
-- `rift_adaptive_controller.py`
-- `rift_adaptive_controller_v2.py`
-
-#### Predictive Controllers
-- `rift_predictor_v2.py`
-- `rift_predictor_v3.py`
-- `rift_predictor_v4.py`
-- `rift_predictor_v5.py`
-
-#### Layer / Field Controllers
-- `rift_layer_aware_navigator.py`
-- `rift_layer_lock_controller.py`
-- `rift_adaptive_corridor_v6.py`
-
-#### Final Controller
-- `rift_final_controller_v7.py`
-
-→ combines:
-- rift attraction
-- frequency synchronization
-- event response
-- layer locking
+- rift_instability_detector.py
+- rift_fft_analysis.py
+- rift_modal_map.py
 
 ---
 
-### 5. Evaluation
-- `rift_controller_metrics.py`
+## 4. Flow & Field Analysis
 
-→ measures:
-- distance to rift
-- stability
-- improvement
+- rift_force_field.py
+- rift_flow_field_analysis.py
+- rift_field_metrics.py
 
 ---
 
-## 📊 Current Status
+## 5. Navigation & Control Evolution
 
-### Achieved
-
-- ✅ Stable trajectory control (no divergence)
-- ✅ Detectable frequency structure (~0.0083)
-- ✅ Layer identification (~0.69–0.80)
-- ✅ Event-based instability detection
-- ✅ Combined controller (V7)
-
-### Performance (V7)
-
-- ~7% improvement vs original trajectory
-- stable behavior
-- reduced drift
+Early → Adaptive → Predictive → Layer → Hybrid → Phase
 
 ---
 
-## 🔍 Key Insights
+## 🔬 Phase-Based Controllers
 
-### 1. Rift is not the true target
-The system stabilizes in **layers**, not on the rift.
-
----
-
-### 2. Field is structured
-The phase space contains:
-
-- layers (horizontal bands)
-- channels (vertical transitions)
-- grid-like geometry
+- rift_phase_controller.py
+- rift_phase_dominant_controller_v10.py
+- rift_multi_frequency_controller_v11.py
+- rift_phase_feedback_controller_v12.py
+- rift_phase_error_lock_controller_v13.py
 
 ---
 
-### 3. Time matters
-The system has a **dominant frequency**:
+## 📊 Evaluation
 
-→ ~0.0083 (≈ 1 / 120)
-
-Instabilities occur at specific phases.
-
----
-
-### 4. Control must be multi-component
-
-Effective control requires:
-
-- spatial alignment (rift / grid)
-- layer alignment (stability)
-- temporal alignment (frequency)
-- event response (instability)
+- rift_controller_metrics.py
+- rift_field_metrics.py
+- rift_phase_field_metrics.py
 
 ---
 
-## 🚧 Open Problems
+# 📊 Current Status
 
-### 1. Stronger Convergence
-Current improvement (~7%) is moderate.
-
-→ goal: >15–25%
-
----
-
-### 2. Global vs Local Control
-Current controllers are mostly local.
-
-→ need:
-- long-range planning
-- field-consistent trajectories
+- stable trajectories  
+- phase-locked dynamics  
+- multi-layer structure  
+- oscillatory field behavior  
 
 ---
 
-### 3. Generalization
-Test on:
+# 🔍 Key Insights
 
-- other datasets
-- higher dimensions
-- non-IEEE systems
-
----
-
-### 4. Field Representation
-
-Current work is in **projected 2D space**.
-
-→ next step:
-- lift control back to higher dimensions
+- Rift is projection artifact  
+- System is field-based  
+- Stability = balance  
+- Motion = cycles  
+- Phase is fundamental  
+- State = (x, y, φ)  
+- Control = phase-driven  
 
 ---
 
-## 🚀 Next Steps
+# 🚧 Open Problems
 
-Potential directions:
-
-- V8: adaptive gain / stronger control
-- frequency-phase locking controllers
-- grid-based navigation
-- API / real-time control system
+- phase targeting  
+- higher-dimensional control  
+- real-time systems  
 
 ---
 
-## 🧭 Summary
+# 🚀 Next Steps
 
-The system has evolved from:
+- V14 Phase Target Controller  
+- field navigation  
+- attractor mapping  
 
-- trajectory observation  
-→ manifold interpretation  
-→ field modeling  
-→ **controlled navigation**
+---
+
+# 🧭 Summary
+
+Trajectory → Manifold → Field → Phase → Closed Loop
 
 ---
 
 ## Core Insight
 
-> The system is not defined by states.  
->  
-> It is defined by its field structure, layers, and temporal modes.
+The system is not defined by states.  
+It is defined by its field, its phase, and the feedback between them.
