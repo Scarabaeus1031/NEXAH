@@ -1,5 +1,7 @@
 # CORE GEOMETRY — Transition Structure of NEXAH
 
+---
+
 ## 🧠 Overview
 
 CORE_GEOMETRY defines the **geometric foundation of regime transitions** in the NEXAH framework.
@@ -55,151 +57,133 @@ Thus:
 
 > A regime transition is a **structured manifold in state space**.
 
-This manifold defines:
-
-- where transitions occur  
-- how they unfold  
-- which futures become accessible  
-
 ---
 
 ## 🧩 Fundamental Elements
 
-Every transition can be decomposed into four coupled structures:
-
 | Element | Meaning |
 |--------|--------|
 | Manifold | continuous transition region |
-| Cut | instability threshold (topological boundary) |
-| Branch | multi-path expansion of future states |
-| Field | continuous motion governing evolution |
+| Cut | instability threshold |
+| Branch | multi-path expansion |
+| Field | continuous motion |
 
 ---
 
 ## 🧠 Transition Triptych
 
-Transitions are expressed across three inseparable layers:
-
 | Layer | Interpretation |
 |------|----------------|
 | Error | deviation from stability |
-| Phase | internal correction / timing |
+| Phase | internal correction |
 | Geometry | spatial manifestation |
 
-Thus:
-
-**error → phase → geometry**
-
-These are not sequential.
-
-They are:
-
-> **three projections of the same dynamical process**
+→ **error → phase → geometry**
 
 ---
 
 ## 🌀 Geometric Interpretation
 
-CORE_GEOMETRY introduces a structured view of transition space:
+CORE_GEOMETRY introduces:
 
-- **oval manifolds** → transition regions  
-- **cuts** → threshold crossings  
-- **branches** → multiple futures  
-- **shells** → containment layers  
-- **rings** → directional manifolds  
-- **loops** → cyclic stability structures  
-
-This implies:
-
-> system evolution is constrained by geometry, not just dynamics
+- oval manifolds  
+- cuts (thresholds)  
+- branches (multi-future structure)  
+- shells (containment layers)  
+- rings (directional structure)  
+- loops (cyclic stability)  
 
 ---
 
 ## 🔁 Transition Dynamics
 
-A transition unfolds as:
-
-1. approach of instability (error increase)  
-2. entry into transition manifold  
-3. interaction with cut structure  
-4. branching into multiple trajectories  
-5. reorganization into new stable geometry  
-
-Thus:
-
-> transitions are continuous, structured, and path-dependent
+1. instability emerges  
+2. manifold entry  
+3. interaction with cut  
+4. branching  
+5. reorganization  
 
 ---
 
 ## 🔗 Relation to Field Dynamics
 
-The field defines:
+```
+Field → Geometry → Operator
+```
 
-- direction of motion  
-- flow alignment  
-- attractor structure  
-
-CORE_GEOMETRY defines:
-
-- transition regions  
-- instability boundaries  
-- branching structure  
-
-Together:
-
-> Field = motion  
-> Geometry = transition  
-> Operator = decision  
+- Field = motion  
+- Geometry = transition  
+- Operator = decision  
 
 ---
 
 ## ⚙️ Operators (Formal Role)
 
-CORE_GEOMETRY enables a set of operators acting on transition space:
-
-- **Transition Manifold Operator (TMO)**  
-  → detects transition regions  
-
-- **Branch Selection Operator (BSO)**  
-  → selects continuation paths  
-
-- **Multi-Branch Expansion Operator (MBEO)**  
-  → expands possible futures  
-
-- **Compass Field Operator (CFO)**  
-  → defines directional structure  
-
-- **Navigation Policies (TNP / FANP)**  
-  → extend control across space and time  
-
-These operators transform geometry into:
-
-> **computable and navigable structures**
+- **TMO** → transition detection  
+- **BSO** → path selection  
+- **MBEO** → expansion of futures  
+- **CFO** → directional structure  
+- **TNP / FANP** → navigation policies  
 
 ---
 
 ## 🧭 Conceptual Pipeline
 
-CORE_GEOMETRY extends the NEXAH pipeline:
-
-**Simulation → Field → Transition Geometry → Operator → Navigation → Execution**
-
+```
+Simulation → Field → Geometry → Operator → Navigation → Execution
+```
 
 ---
 
-## 🌐 Physical Interpretation
+# 🎨 Visual System (NEW)
 
-The system behaves analogously to:
+## 🧭 Visual Atlas
+
+The geometric structure described above is fully expressed in the visual system:
+
+👉 **[CORE GEOMETRY VISUAL ATLAS](./CORE_GEOMETRY_VISUALS.md)**
+
+---
+
+## 🔍 What the Visuals Show
+
+The atlas reveals:
+
+- field structure (vector flow)  
+- compression into transition corridors  
+- emergence of geometric manifolds  
+- operator trajectories inside constraints  
+- branching and exit dynamics  
+
+---
+
+## 🧩 Key Visual Layers
+
+| Layer | Visual Meaning |
+|------|--------------|
+| Field | possibility space |
+| Compression | structure formation |
+| Geometry | transition manifold |
+| Operator | controlled trajectory |
+
+---
+
+## 🔥 Core Visual Insight
+
+> trajectories do not define the system  
+>  
+> geometry defines the trajectories  
+
+---
+
+# 🌐 Physical Interpretation
+
+The system behaves like:
 
 - flow in a vector field  
-- particle motion in a potential landscape  
-- phase-driven advection  
-- constrained drift on a manifold  
-
-Thus:
-
-> transitions are physical processes  
-> not abstract state changes  
+- motion in a potential landscape  
+- phase-driven drift  
+- constrained manifold dynamics  
 
 ---
 
@@ -213,31 +197,25 @@ Thus:
 
 ## 🚀 What CORE_GEOMETRY Enables
 
-- early detection of transition regions  
-- identification of branching structures  
-- modeling of multi-future dynamics  
-- navigation inside continuous transition fields  
-- avoidance of collapse trajectories  
-- coordination of multi-agent systems  
+- early transition detection  
+- branching analysis  
+- multi-future modeling  
+- field-aware navigation  
+- collapse avoidance  
+- multi-agent coordination  
 
 ---
 
 ## 🔬 Relation to Observations
 
-Observed phenomena explained:
+Explains:
 
 - oval phase distributions  
-- clustering near instability  
-- multi-branch splitting  
-- loop and spiral formation  
-- ring and shell structures  
-- phase-dependent transitions  
-
-These are not artifacts.
-
-They are:
-
-> the geometry of transitions.
+- clustering near thresholds  
+- branching structures  
+- loops and spirals  
+- shell and ring systems  
+- phase-driven transitions  
 
 ---
 
@@ -246,7 +224,6 @@ They are:
 CORE_GEOMETRY introduces the missing layer between:
 
 → discrete structure  
-and  
 → continuous dynamics  
 
 It transforms NEXAH into:
@@ -263,3 +240,11 @@ It is about:
 
 > **moving correctly within the geometry that connects them**
 
+---
+
+## 🧠 Ultimate Insight
+
+You are not controlling the system.
+
+You are shaping the geometry  
+that makes outcomes possible.
