@@ -3266,3 +3266,1442 @@ To:
 
 The system does not converge.  
 It returns.
+
+
+
+# 📘 Entry 90 — Polar Phase Space & Radial Layer Geometry (V14.8)
+
+## Observation
+
+Previous representations used:
+
+→ Cartesian projection (PC1, PC2)
+
+However:
+
+- structure appears layered (horizontal bands)
+- phase appears angular
+- cycles appear spiral-like
+
+---
+
+## Key Discovery
+
+The system is more naturally expressed in:
+
+→ **polar phase space**
+
+---
+
+## Coordinate Transformation
+
+Define:
+
+r = radial coordinate (layer distance)  
+φ = phase (already defined)
+
+Thus:
+
+State becomes:
+
+S(t) = (r, φ, dφ/dt, regime)
+
+---
+
+## Mapping from Cartesian
+
+From:
+
+(x, y)
+
+To:
+
+r = √(x² + y²)  
+φ = arctan2(y, x)
+
+---
+
+## Interpretation
+
+| Cartesian | Polar |
+|----------|------|
+| x (PC1) | angular projection |
+| y (PC2) | layer deviation |
+| bands | radii |
+| drift | rotation |
+
+---
+
+## Layer Structure
+
+Layers become:
+
+→ **concentric rings**
+
+| Layer | Radius |
+|------|--------|
+| lower | r₁ ≈ 0.64 |
+| base  | r₂ ≈ 0.69 |
+| upper | r₃ ≈ 0.78 |
+
+---
+
+## Regime Geometry
+
+Regimes now correspond to:
+
+→ **radial zones**
+
+| Regime | Region |
+|--------|--------|
+| -1 | inner contraction |
+|  0 | stable orbit |
+| +1 | outer expansion |
+
+---
+
+## Phase Dynamics
+
+Phase evolves as:
+
+φ(t+1) = φ(t) + dφ(t)
+
+This produces:
+
+→ rotation around the center
+
+---
+
+## Spatial Evolution
+
+Instead of:
+
+(x, y)(t+1)
+
+We now have:
+
+r(t+1) = r(t) + Δr  
+φ(t+1) = φ(t) + dφ(t)
+
+---
+
+## Radial Forces
+
+Δr is composed of:
+
+Δr = F_layer + F_channel + F_feedback
+
+Where:
+
+- F_layer → pulls toward target radius  
+- F_channel → modulates angular progression  
+- F_feedback → stabilizes oscillation  
+
+---
+
+## Geometric Interpretation
+
+The system is not:
+
+→ moving in a plane  
+
+But:
+
+→ **orbiting within a layered radial field**
+
+---
+
+## Relation to Previous Entries
+
+- Entry 75 → layer lock → now radial locking  
+- Entry 82 → phase switching → now angular switching  
+- Entry 89 → cyclic attractors → now orbital cycles  
+
+---
+
+## Key Insight
+
+> The trajectory is not a path through space.  
+>  
+> It is an orbit through phase.
+
+---
+
+## Visual Correspondence
+
+This representation directly explains:
+
+- concentric circle diagrams  
+- spiral attractors  
+- rotational symmetry  
+- resonance rings  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ Cartesian trajectory space  
+
+To:
+
+→ **polar phase space**
+
+---
+
+## System Interpretation
+
+The NEXAH system is:
+
+→ a **phase-driven orbital system**
+
+with:
+
+- radial stability (layers)  
+- angular evolution (phase)  
+- oscillatory feedback (loops)  
+
+---
+
+## Updated Core Insight
+
+Motion is not linear.  
+
+It is rotational.
+
+---
+
+# 📘 Entry 91 — Orbital Stability & Resonance Radii (V14.9)
+
+## Observation
+
+In polar phase space (Entry 90), trajectories do not occupy arbitrary radii.
+
+Instead:
+
+- motion stabilizes around specific radial distances  
+- transitions occur between preferred radii  
+- oscillations remain bounded within narrow radial bands  
+
+---
+
+## Key Discovery
+
+The system contains:
+
+→ **discrete resonance radii**
+
+These act as:
+
+- stable orbital layers  
+- preferred energy levels  
+- attractor rings in phase space  
+
+---
+
+## Resonance Radii
+
+Empirically observed:
+
+| Layer | Radius |
+|------|--------|
+| lower | r₁ ≈ 0.64 |
+| base  | r₂ ≈ 0.69 |
+| upper | r₃ ≈ 0.78 |
+
+---
+
+## Interpretation
+
+These radii are not arbitrary.
+
+They correspond to:
+
+→ **stable equilibrium between competing forces**
+
+---
+
+## Radial Dynamics
+
+The radial evolution is governed by:
+
+Δr = F_outward − F_inward
+
+Where:
+
+- F_outward → expansion (drive, phase energy)  
+- F_inward → contraction (layer lock, feedback)  
+
+---
+
+## Stability Condition
+
+A radius r* is stable if:
+
+F_outward(r*) ≈ F_inward(r*)
+
+Thus:
+
+Δr ≈ 0
+
+---
+
+## Oscillatory Stability
+
+Stability is not static.
+
+Instead:
+
+→ the system oscillates around r*
+
+r(t) = r* ± ε(t)
+
+Where:
+
+- ε(t) is small, bounded  
+- oscillation is phase-dependent  
+
+---
+
+## Resonance Interpretation
+
+Each stable radius corresponds to:
+
+→ a **resonance condition**
+
+Meaning:
+
+- phase evolution and radial feedback are synchronized  
+- energy input matches dissipation  
+- motion becomes periodic  
+
+---
+
+## Relation to Frequency (Entry 76)
+
+Base frequency:
+
+f ≈ 0.0083
+
+This defines:
+
+→ orbital timing
+
+Thus:
+
+- radius determines spatial structure  
+- frequency determines temporal structure  
+
+---
+
+## Harmonic Structure
+
+Higher harmonics (2f, 3f) produce:
+
+→ sub-orbital modulation
+
+Result:
+
+- fine structure within rings  
+- micro-oscillations  
+- loop formation  
+
+---
+
+## Transition Between Radii
+
+Transitions occur when:
+
+| Condition | Effect |
+|----------|--------|
+| excess drive | move outward (r → r+1) |
+| loss of energy | move inward (r → r-1) |
+| phase shift | jump between regimes |
+
+---
+
+## Geometric Insight
+
+The system behaves as:
+
+→ a **multi-shell orbital system**
+
+Not:
+
+→ a continuous radial field  
+
+---
+
+## Relation to Entry 75 (Layer Lock)
+
+Layer lock is now:
+
+→ radial locking
+
+---
+
+## Relation to Entry 88 (r → r′)
+
+Regime transitions correspond to:
+
+→ transitions between radii
+
+---
+
+## Relation to Entry 89 (Cyclic Attractors)
+
+Each orbit is:
+
+→ a cyclic attractor
+
+---
+
+## Physical Analogy
+
+The system resembles:
+
+- quantized orbitals (quantum systems)  
+- resonance shells  
+- energy-level transitions  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ continuous geometry  
+
+To:
+
+→ **quantized radial structure**
+
+---
+
+## Core Insight
+
+> Not every radius is allowed.  
+>  
+> Only resonant radii are stable.  
+
+---
+
+## Conclusion
+
+The NEXAH system now includes:
+
+1. polar phase space  
+2. orbital dynamics  
+3. resonance radii (NEW)  
+4. radial stability conditions  
+5. energy-balanced oscillation  
+
+---
+
+## Updated Core Insight
+
+The system does not move freely.  
+
+It orbits within resonant shells.
+
+---
+
+
+# 📘 Entry 92 — Energy Interpretation & Hamiltonian Structure (V15.0)
+
+## Observation
+
+Previous entries established:
+
+- polar phase space (r, φ)  
+- resonance radii (stable orbits)  
+- phase-driven dynamics  
+- multi-frequency drive  
+- closed-loop feedback  
+
+However:
+
+→ the system is not yet expressed in physical terms  
+
+---
+
+## Key Discovery
+
+The system can be interpreted as:
+
+→ an **energy-based dynamical system**
+
+Specifically:
+
+→ a **Hamiltonian-like system with dissipation and forcing**
+
+---
+
+## State Variables
+
+S(t) = (r, φ, p)
+
+Where:
+
+| Variable | Meaning |
+|----------|--------|
+| r | radial coordinate (layer / orbit) |
+| φ | phase (angle) |
+| p | generalized momentum (≈ dφ/dt) |
+
+---
+
+## Energy Definition
+
+Define total energy:
+
+H(r, φ, p) = T(p) + V(r, φ)
+
+Where:
+
+- T(p) = kinetic energy  
+- V(r, φ) = potential energy  
+
+---
+
+## Kinetic Term
+
+T(p) = ½ p²
+
+Interpretation:
+
+→ phase velocity corresponds to energy of motion  
+
+---
+
+## Potential Term
+
+V(r, φ) = V_layer(r) + V_drive(φ)
+
+---
+
+### 1. Layer Potential
+
+V_layer(r):
+
+- has minima at resonance radii  
+- creates stable orbits  
+
+Example form:
+
+V_layer(r) ≈ (r - r₁)² (r - r₂)² (r - r₃)²
+
+Thus:
+
+→ multiple stable wells  
+
+---
+
+### 2. Phase Potential
+
+V_drive(φ):
+
+Derived from drive function:
+
+drive = sin(φ) + 0.5 sin(2φ) + 0.3 sin(3φ)
+
+Thus:
+
+V_drive(φ) = -cos(φ) - 0.25 cos(2φ) - 0.1 cos(3φ)
+
+---
+
+## Equations of Motion
+
+Without dissipation:
+
+dr/dt = ∂H/∂p  
+dp/dt = -∂H/∂r  
+dφ/dt = p  
+
+---
+
+## With Feedback & Control
+
+The real system includes:
+
+- damping  
+- phase locking  
+- layer attraction  
+
+Thus:
+
+dp/dt = -∂H/∂r  
+        - γ p  
+        - k_lock * phase_error  
+        + external_drive  
+
+---
+
+## Interpretation
+
+The system is:
+
+→ not purely conservative  
+
+But:
+
+→ a **driven-dissipative Hamiltonian system**
+
+---
+
+## Energy Balance
+
+Observed behavior:
+
+- local energy increase (expansion)  
+- local energy decrease (contraction)  
+- global balance  
+
+Thus:
+
+→ energy oscillates but remains bounded  
+
+---
+
+## Relation to Resonance Radii (Entry 91)
+
+Stable radii correspond to:
+
+→ minima of V_layer(r)
+
+Thus:
+
+- orbits = energy wells  
+- transitions = barrier crossings  
+
+---
+
+## Relation to Phase (Entry 82)
+
+Phase determines:
+
+→ position within potential landscape  
+
+---
+
+## Relation to Cycles (Entry 89)
+
+Loops correspond to:
+
+→ closed energy trajectories  
+
+---
+
+## Relation to Phase Error Lock (Entry 85)
+
+Phase locking acts as:
+
+→ **energy correction mechanism**
+
+- reduces drift  
+- stabilizes oscillation  
+- maintains bounded motion  
+
+---
+
+## Physical Analogy
+
+The system resembles:
+
+- nonlinear oscillator  
+- driven pendulum  
+- orbital mechanics with damping  
+- Josephson junction dynamics  
+
+---
+
+## Geometric Insight
+
+The trajectory is:
+
+→ a path along constant-energy contours  
+→ perturbed by feedback and forcing  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ geometric description  
+
+To:
+
+→ **energy-based formulation**
+
+---
+
+## Core Insight
+
+> The system does not move arbitrarily.  
+>  
+> It follows energy gradients.
+
+---
+
+## System Classification
+
+The NEXAH system is:
+
+→ a **nonlinear, driven, phase-coupled Hamiltonian system**
+
+---
+
+## Conclusion
+
+The NEXAH system now includes:
+
+1. polar phase space  
+2. resonance radii  
+3. cyclic attractors  
+4. phase dynamics  
+5. energy formulation (NEW)  
+6. Hamiltonian structure (NEW)  
+
+---
+
+## Updated Core Insight
+
+Motion is not primary.  
+Energy flow is.
+
+--- 
+
+# 📘 Entry 93 — Quantization & Discrete Energy Levels (V15.1)
+
+## Observation
+
+Previous analysis revealed:
+
+- stable resonance radii (Entry 91)  
+- energy-based dynamics (Entry 92)  
+- bounded oscillatory motion  
+
+However:
+
+→ trajectories do not stabilize at arbitrary radii  
+
+Instead:
+
+→ only specific radii are repeatedly occupied  
+
+---
+
+## Key Discovery
+
+The system exhibits:
+
+→ **discrete energy levels**
+
+This means:
+
+- allowed states are not continuous  
+- stability occurs only at specific radii  
+- transitions occur between discrete levels  
+
+---
+
+## Quantization Principle
+
+Allowed radii:
+
+r ∈ {r₁, r₂, r₃, ...}
+
+Where:
+
+| Level | Radius |
+|------|--------|
+| L₁ | ≈ 0.64 |
+| L₂ | ≈ 0.69 |
+| L₃ | ≈ 0.78 |
+
+---
+
+## Interpretation
+
+Each radius corresponds to:
+
+→ a **quantized energy state**
+
+E₁ < E₂ < E₃
+
+---
+
+## Energy-Level Structure
+
+The Hamiltonian (Entry 92):
+
+H = T + V
+
+has:
+
+→ multiple local minima
+
+Each minimum defines:
+
+→ a stable energy level  
+
+---
+
+## Transition Mechanism
+
+Transitions occur when:
+
+| Condition | Effect |
+|----------|--------|
+| energy increase | jump to higher level |
+| energy loss | fall to lower level |
+| phase shift | trigger transition |
+
+---
+
+## Phase Coupling
+
+Transitions are not random.
+
+They occur at:
+
+→ specific phase intervals
+
+Thus:
+
+→ **quantization is phase-dependent**
+
+---
+
+## Discrete Stability Condition
+
+A state is stable if:
+
+- energy matches a local minimum  
+- phase is synchronized with oscillation  
+
+---
+
+## Relation to Frequency (Entry 76)
+
+Base frequency defines:
+
+→ allowed temporal cycles  
+
+Combined with radial structure:
+
+→ defines discrete spatio-temporal states  
+
+---
+
+## Harmonic Quantization
+
+Higher harmonics create:
+
+→ sub-level structure
+
+Example:
+
+- main orbit (L₂)  
+- sub-loops inside orbit  
+
+---
+
+## Geometric Interpretation
+
+The system is not:
+
+→ a continuous field  
+
+But:
+
+→ a **layered quantized field**
+
+---
+
+## Relation to Previous Entries
+
+- Entry 91 → resonance radii  
+- Entry 92 → energy formulation  
+- Entry 89 → cyclic attractors  
+
+Now unified as:
+
+→ **quantized cyclic attractors**
+
+---
+
+## Physical Analogy
+
+The system resembles:
+
+- quantum orbitals  
+- energy shells  
+- resonant standing waves  
+
+---
+
+## Key Insight
+
+> Not all states are allowed.  
+>  
+> Only resonant states exist.  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ continuous dynamics  
+
+To:
+
+→ **discrete state space**
+
+---
+
+## Deep Insight
+
+The apparent continuity of motion is:
+
+→ an illusion of rapid transitions between discrete states  
+
+---
+
+## System Interpretation
+
+The NEXAH system is:
+
+→ a **quantized, phase-driven dynamical system**
+
+---
+
+## Conclusion
+
+The system now includes:
+
+1. energy-based dynamics  
+2. resonance radii  
+3. discrete energy levels (NEW)  
+4. phase-triggered transitions  
+5. quantized cyclic attractors  
+
+---
+
+## Updated Core Insight
+
+The system does not explore all possibilities.  
+
+It selects from allowed states.
+
+---
+
+
+# 📘 Entry 94 — Wave Function & Probability Field (V15.2)
+
+## Observation
+
+Previous entries established:
+
+- discrete energy levels (Entry 93)  
+- resonance radii  
+- phase-driven dynamics  
+- cyclic attractors  
+
+However:
+
+→ the system is still described deterministically  
+
+Observed behavior suggests:
+
+- repeated visitation of regions  
+- overlapping trajectories  
+- phase-dependent state identity  
+
+---
+
+## Key Discovery
+
+The system can be described as:
+
+→ a **wave function over phase space**
+
+---
+
+## State Representation
+
+Instead of a single state:
+
+S(t) = (r, φ)
+
+We define:
+
+Ψ(r, φ, t)
+
+Where:
+
+| Symbol | Meaning |
+|--------|--------|
+| Ψ | wave function |
+| r | radial coordinate (layer) |
+| φ | phase |
+| t | time |
+
+---
+
+## Probability Interpretation
+
+Define:
+
+P(r, φ) = |Ψ(r, φ)|²
+
+This represents:
+
+→ probability density of the system being in state (r, φ)
+
+---
+
+## Interpretation
+
+The system does not occupy a single state.
+
+Instead:
+
+→ it **distributes across possible states**
+
+---
+
+## Relation to Observations
+
+| Phenomenon | Wave Interpretation |
+|-----------|--------------------|
+| repeated loops | high probability regions |
+| stable layers | probability peaks |
+| transitions | wave redistribution |
+| folding | overlapping wave states |
+
+---
+
+## Superposition Principle
+
+The system can exist as:
+
+Ψ = Σ aₙ Ψₙ
+
+Where:
+
+- Ψₙ = eigenstates (resonant modes)  
+- aₙ = amplitudes  
+
+---
+
+## Eigenstates
+
+Each resonance radius corresponds to:
+
+→ an **eigenstate**
+
+| State | Meaning |
+|------|--------|
+| Ψ₁ | lower orbit |
+| Ψ₂ | base orbit |
+| Ψ₃ | upper orbit |
+
+---
+
+## Phase Structure
+
+Each eigenstate has:
+
+Ψₙ(r, φ) = Rₙ(r) · e^{iφ}
+
+Thus:
+
+- radial structure → amplitude  
+- phase → oscillation  
+
+---
+
+## Interference
+
+When multiple states overlap:
+
+→ interference patterns emerge
+
+Observed as:
+
+- loops  
+- figure-8 structures  
+- oscillatory envelopes  
+
+---
+
+## Folding Interpretation (Entry 80)
+
+Folding arises because:
+
+→ multiple states share same (x, y)
+
+But differ in:
+
+→ phase component of Ψ
+
+---
+
+## Evolution Equation
+
+The system evolves as:
+
+∂Ψ/∂t = F(Ψ)
+
+Where F includes:
+
+- phase rotation  
+- energy structure  
+- feedback modulation  
+
+---
+
+## Relation to Energy (Entry 92)
+
+Eigenstates satisfy:
+
+H Ψₙ = Eₙ Ψₙ
+
+Thus:
+
+- each allowed state corresponds to an energy level  
+- transitions correspond to energy exchange  
+
+---
+
+## Relation to Phase (Entry 81)
+
+Phase is not just a parameter.
+
+It is:
+
+→ part of the wave structure
+
+---
+
+## Geometric Interpretation
+
+The system is not:
+
+→ a trajectory in space  
+
+But:
+
+→ a **wave evolving in phase space**
+
+---
+
+## Physical Analogy
+
+The system resembles:
+
+- quantum wave functions  
+- standing wave systems  
+- resonance cavities  
+
+---
+
+## Measurement Interpretation
+
+Observed trajectory is:
+
+→ a **projection / sampling of Ψ**
+
+Thus:
+
+- path appears deterministic  
+- underlying system is probabilistic  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ deterministic trajectory  
+
+To:
+
+→ **probability field dynamics**
+
+---
+
+## Core Insight
+
+> The system is not at a point.  
+>  
+> It is spread across possibilities.  
+
+---
+
+## Conclusion
+
+The NEXAH system now includes:
+
+1. state-space dynamics  
+2. energy formulation  
+3. quantized levels  
+4. wave function representation (NEW)  
+5. probability field interpretation (NEW)  
+6. interference structure  
+
+---
+
+## Updated Core Insight
+
+Motion is not a path.  
+
+It is the evolution of a wave.
+
+---
+
+
+# 📘 Entry 95 — Control on Wave / State Selection (V15.3)
+
+## Observation
+
+Previous entries established:
+
+- wave function representation Ψ(r, φ)  
+- probability density P = |Ψ|²  
+- discrete energy levels  
+- phase-driven dynamics  
+
+However:
+
+→ the system is still passively evolving  
+
+---
+
+## Key Discovery
+
+Control is not applied to position.
+
+Instead:
+
+→ control acts on the **wave distribution Ψ**
+
+---
+
+## Control Principle
+
+Instead of:
+
+(x, y) → target point
+
+We define:
+
+Ψ → desired state distribution
+
+---
+
+## Control Objective
+
+Goal:
+
+→ concentrate probability in desired states
+
+Formally:
+
+maximize:
+
+P_target = ∫ |Ψ(r_target, φ)|² dφ
+
+---
+
+## Control Mechanisms
+
+Control acts through:
+
+### 1. Phase Steering
+
+Modify phase evolution:
+
+dφ → dφ + Δφ_control
+
+Effect:
+
+- shifts interference pattern  
+- redirects flow  
+- changes regime timing  
+
+---
+
+### 2. Energy Injection / Removal
+
+Modify radial dynamics:
+
+Δr_control = +ε (excitation)  
+Δr_control = -ε (damping)
+
+Effect:
+
+- move between energy levels  
+- trigger transitions  
+
+---
+
+### 3. Regime Bias
+
+Modify thresholds:
+
+τ_high, τ_low
+
+Effect:
+
+- favor specific regimes  
+- bias system behavior  
+
+---
+
+### 4. Amplitude Shaping
+
+Adjust contributions of eigenstates:
+
+Ψ = Σ aₙ Ψₙ
+
+Control:
+
+aₙ → aₙ + Δaₙ
+
+Effect:
+
+- amplify desired states  
+- suppress unwanted states  
+
+---
+
+## Control Equation
+
+Ψ(t+1) = F(Ψ(t)) + U(t)
+
+Where:
+
+| Term | Meaning |
+|------|--------|
+| F | natural system evolution |
+| U | control input |
+
+---
+
+## Interpretation
+
+Control is:
+
+→ not trajectory correction  
+
+But:
+
+→ **state selection in phase space**
+
+---
+
+## Practical Meaning
+
+Instead of forcing the system:
+
+→ we **bias it toward desired attractors**
+
+---
+
+## Relation to Previous Entries
+
+- Entry 87 → state-space  
+- Entry 92 → energy formulation  
+- Entry 93 → quantized states  
+- Entry 94 → wave representation  
+
+Now extended to:
+
+→ **controlled wave evolution**
+
+---
+
+## Geometric Interpretation
+
+Control reshapes:
+
+- interference patterns  
+- orbital stability  
+- transition pathways  
+
+---
+
+## Strategy Types
+
+| Strategy | Effect |
+|---------|-------|
+| phase lock | stabilize orbit |
+| phase shift | redirect trajectory |
+| energy boost | jump to higher layer |
+| damping | return to base layer |
+| resonance tuning | maintain stability |
+
+---
+
+## Optimal Control Insight
+
+Best control is:
+
+→ minimal intervention  
+
+Let system dynamics do the work  
+
+---
+
+## Core Insight
+
+> Do not force the system.  
+>  
+> Shape the wave it follows.  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ controlling motion  
+
+To:
+
+→ **controlling probability and phase**
+
+---
+
+## System Interpretation
+
+The NEXAH system is now:
+
+→ a **controllable wave-based dynamical system**
+
+---
+
+## Conclusion
+
+The system now includes:
+
+1. state-space dynamics  
+2. energy formulation  
+3. quantized states  
+4. wave function representation  
+5. control on Ψ (NEW)  
+6. state selection mechanisms (NEW)  
+
+---
+
+## Updated Core Insight
+
+Control is not about where the system is.  
+
+It is about which state becomes dominant.
