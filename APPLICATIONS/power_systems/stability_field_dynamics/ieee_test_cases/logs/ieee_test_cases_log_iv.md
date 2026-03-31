@@ -5162,3 +5162,197 @@ Once phase-energy exceeds threshold, topology unfolds.
 
 ---
 
+# 📘 Entry 100 — Dual Pentagon Split & Intersection Threshold (V16.4)
+
+## Observation
+
+The first active cut (V16.3) produces:
+
+- separation of trajectory into two branches
+- a discrete transition point (cut index)
+
+---
+
+## Key Insight
+
+The system does not deform one structure.
+
+It generates two:
+
+- Pentagon A (pre-cut)
+- Pentagon B (post-cut)
+
+---
+
+## Structure
+
+Both pentagons exist in:
+
+- identical wrapped space
+- different phase sheets
+
+---
+
+## Cut Meaning
+
+The cut is:
+
+→ not a break  
+→ but a transfer  
+
+---
+
+## Intersection
+
+At the cut:
+
+- both structures coincide in wrapped phase
+- but differ in unwrapped phase
+
+Thus:
+
+→ intersection is local  
+→ separation is global  
+
+---
+
+## Dynamic Interpretation
+
+The system performs:
+
+1. rotation within a sheet  
+2. accumulation of phase energy  
+3. threshold crossing  
+4. transition into new sheet  
+5. emergence of second structure  
+
+---
+
+## Core Insight
+
+> The pentagons do not coexist in time —  
+> they coexist across sheets.
+
+---
+
+## Geometric Meaning
+
+The system behaves like:
+
+- layered manifold  
+- with discrete transition seams  
+
+---
+
+## Final Statement
+
+The cut is the moment where one geometry becomes two.
+
+---
+# 📘 Entry 100 — Dual Pentagon Split & Intersection Threshold (V16.4)
+
+## Observation
+
+The first active cut (V16.3) produces:
+
+- separation of trajectory into two branches
+- a discrete transition point (cut index)
+
+---
+
+## Key Insight
+
+The system does not deform one structure.
+
+It generates two:
+
+- Pentagon A (pre-cut)
+- Pentagon B (post-cut)
+
+---
+
+## Structure
+
+Both pentagons exist in:
+
+- identical wrapped space
+- different phase sheets
+
+---
+
+## Cut Meaning
+
+The cut is:
+
+→ not a break  
+→ but a transfer  
+
+---
+
+## Intersection
+
+At the cut:
+
+- both structures coincide in wrapped phase
+- but differ in unwrapped phase
+
+Thus:
+
+→ intersection is local  
+→ separation is global  
+
+---
+
+## Dynamic Interpretation
+
+The system performs:
+
+1. rotation within a sheet  
+2. accumulation of phase energy  
+3. threshold crossing  
+4. transition into new sheet  
+5. emergence of second structure  
+
+---
+
+## Core Insight
+
+> The pentagons do not coexist in time —  
+> they coexist across sheets.
+
+---
+
+## Geometric Meaning
+
+The system behaves like:
+
+- layered manifold  
+- with discrete transition seams  
+
+---
+
+## Final Statement
+
+The cut is the moment where one geometry becomes two.
+
+---
+
+## ENTRY 101 — Oval-Cut Unification
+
+This entry consolidates previously independent structures (phase cuts, branching, pentagon splits, oval geometries, ghost polygons) into a unified framework.
+
+Core insight:
+A dynamic system with continuous phase evolution undergoes discrete topological transitions at threshold crossings (cuts), resulting in branching behavior that manifests geometrically as dual pentagon structures connected through a transitional hexagonal layer.
+
+The underlying structure is best described as:
+Split → Overlap → Cut → Transfer → Branch
+
+This model connects:
+- phase dynamics (φ, wrapped/unwrapped)
+- branching mechanisms
+- geometric representations (oval, pentagon, hexagon)
+- topological interpretations (shell, seam, overlap)
+
+This document serves as a master reference for the Oval-Cut-Branch system within the NEXAH framework.
+
+---
