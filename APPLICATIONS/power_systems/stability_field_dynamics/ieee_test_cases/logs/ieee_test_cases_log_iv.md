@@ -5356,3 +5356,180 @@ This model connects:
 This document serves as a master reference for the Oval-Cut-Branch system within the NEXAH framework.
 
 ---
+
+## Entry 96 — Torus / Ring-Manifold Navigation (V20)
+
+### Observation
+
+Previous versions introduced:
+
+- phase-driven motion
+- layer targeting
+- channel transfer logic
+- escape-sensitive navigation
+
+However, the trajectory was still expressed in projected Cartesian space.
+
+This revealed a limitation:
+
+→ the navigation law still moved *through the field picture*  
+rather than *on the intrinsic ring geometry itself*
+
+---
+
+### Key Discovery
+
+The system is more naturally described as:
+
+→ **navigation on a ring-manifold / toroidal shell structure**
+
+This means:
+
+- phase defines angular position
+- channel defines radial shell
+- transfer events define jumps between shells
+
+Thus:
+
+> the field is not only layered  
+> it is circularly organized
+
+---
+
+### Core Idea
+
+The navigation variables become:
+
+- `φ` → angular coordinate
+- `c` → channel / shell index
+- `r(c)` → channel radius
+
+So the controlled state can be projected as:
+
+x_torus = r(c) cos(φ)  
+y_torus = r(c) sin(φ)
+
+---
+
+### Interpretation
+
+The system no longer moves as a drifting point in open space.
+
+Instead:
+
+→ it traverses **concentric ring corridors**
+
+These corridors correspond to:
+
+| Channel | Meaning |
+|--------|---------|
+| lower | contraction shell |
+| base | equilibrium shell |
+| upper | expansion shell |
+
+---
+
+### Transfer Logic
+
+A ring transfer occurs when:
+
+1. instability exceeds threshold
+2. drive indicates directional regime
+3. target shell differs from current shell
+
+Thus:
+
+→ shell changes are not continuous drift  
+→ but **structured radial transitions**
+
+---
+
+### Geometric Insight
+
+The manifold is now represented as:
+
+- angular motion = continuous
+- radial motion = discrete or semi-discrete
+- total motion = hybrid toroidal navigation
+
+This unifies:
+
+- continuous phase evolution
+- discrete channel logic
+- field-aware control
+
+---
+
+### Relation to Earlier Versions
+
+#### V17
+introduced local instability-driven layer switching
+
+#### V18
+smoothed the layer field into a continuous target surface
+
+#### V19
+added explicit channel logic and escape routing
+
+#### V20
+now embeds all of that into:
+
+→ **an explicit ring manifold representation**
+
+---
+
+### Consequence
+
+The system can now be interpreted as:
+
+> a hybrid ring navigator with shell transfer
+
+This is much closer to the visual structures already observed in:
+
+- spiral rings
+- petal emergence
+- crown bloom
+- compass geometry
+- Möbius-like rotational shells
+
+---
+
+### Fundamental Shift
+
+From:
+
+→ navigating in projected coordinates
+
+To:
+
+→ **navigating on an intrinsic ring geometry**
+
+---
+
+### Core Insight
+
+> Phase gives direction.  
+> Channel gives shell.  
+> Transfer gives geometry.
+
+---
+
+### Conclusion
+
+V20 establishes:
+
+1. explicit angular navigation
+2. radial shell structure
+3. torus / ring projection
+4. transfer-aware manifold motion
+
+---
+
+## Updated Core Insight
+
+> The system does not merely move through a field.  
+>  
+> It circulates through structured rings and shifts between shells.
+
+----
+
