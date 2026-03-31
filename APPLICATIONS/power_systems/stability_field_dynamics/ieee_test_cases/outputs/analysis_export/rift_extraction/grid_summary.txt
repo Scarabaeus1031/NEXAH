@@ -1,0 +1,9 @@
+NEXAH GRID EXTRACTION SUMMARY
+============================
+
+X-channel centers (PC1):
+  0.397791
+
+Y-layer centers (PC2):
+  0.002851
+  0.701357
