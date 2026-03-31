@@ -8,10 +8,6 @@ BASE_DIR = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/
 RIFT_DIR = os.path.join(BASE_DIR, "rift_extraction")
 
 
-# --------------------------------------------------
-# LOAD
-# --------------------------------------------------
-
 def load_data():
     trajectory = None
 
@@ -19,25 +15,21 @@ def load_data():
         path = os.path.join(BASE_DIR, name)
         if os.path.exists(path):
             trajectory = np.load(path)
-            print(f"✅ Loaded trajectory: {name}")
+            print(f"Loaded trajectory: {name}")
             break
 
     if trajectory is None:
-        raise FileNotFoundError("❌ No trajectory file found")
+        raise FileNotFoundError("No trajectory file found")
 
     rift_path = os.path.join(RIFT_DIR, "rift_curve.npy")
     if not os.path.exists(rift_path):
-        raise FileNotFoundError("❌ No rift_curve.npy found")
+        raise FileNotFoundError("No rift_curve.npy found")
 
     rift = np.load(rift_path)
-    print("✅ Loaded rift")
+    print("Loaded rift")
 
     return trajectory[:, :2], rift
 
-
-# --------------------------------------------------
-# HELPERS
-# --------------------------------------------------
 
 def wrap_angle(x):
     return (x + np.pi) % (2 * np.pi) - np.pi
@@ -55,13 +47,9 @@ def estimate_layer(traj):
     pc2 = traj[:, 1]
     center = np.median(pc2)
     spread = np.std(pc2)
-    print(f"🎯 Base Layer: {center:.4f} ± {spread:.4f}")
+    print(f"Base Layer: {center:.4f} ± {spread:.4f}")
     return center, spread
 
-
-# --------------------------------------------------
-# V14.4 NONLINEAR CONTROLLER
-# --------------------------------------------------
 
 def run_controller(trajectory):
 
@@ -83,9 +71,6 @@ def run_controller(trajectory):
 
         y = trajectory[t - 1, 1]
 
-        # -----------------------------
-        # REGIME DETECTION
-        # -----------------------------
         if y > base_layer + 0.3 * spread:
             target_phi[t] = 0.35 * np.pi
             regime[t] = 1
@@ -96,17 +81,10 @@ def run_controller(trajectory):
             target_phi[t] = np.pi
             regime[t] = 0
 
-        # -----------------------------
-        # PHASE ERROR
-        # -----------------------------
         pe_target = wrap_angle(phi[t - 1] - target_phi[t])
 
-        # -----------------------------
-        # 🔥 NONLINEAR TERMS
-        # -----------------------------
         nonlinear_term = 0.6 * np.sin(phi[t - 1])
         harmonic_term = 0.25 * np.sin(2 * phi[t - 1])
-
         coupling = -0.45 * pe_target
 
         dphi[t] = (
@@ -121,10 +99,6 @@ def run_controller(trajectory):
     return phi, dphi, regime
 
 
-# --------------------------------------------------
-# PHASE PORTRAIT
-# --------------------------------------------------
-
 def plot_phase_portrait(phi, dphi, regime):
 
     plt.figure(figsize=(8, 8))
@@ -137,17 +111,20 @@ def plot_phase_portrait(phi, dphi, regime):
 
     for r in [-1, 0, 1]:
         mask = regime == r
-        plt.scatter(phi[mask], dphi[mask],
-                    s=12,
-                    color=colors[r],
-                    label=f"regime {r}",
-                    alpha=0.7)
+        plt.scatter(
+            phi[mask],
+            dphi[mask],
+            s=12,
+            color=colors[r],
+            label=f"regime {r}",
+            alpha=0.7
+        )
 
     plt.axhline(0, linestyle="--", color="gray")
     plt.axvline(0, linestyle="--", color="gray")
 
-    plt.xlabel("φ (phase)")
-    plt.ylabel("dφ/dt")
+    plt.xlabel("phi")
+    plt.ylabel("dphi/dt")
     plt.title("V14.4 Nonlinear Phase Portrait")
 
     plt.legend()
@@ -155,13 +132,9 @@ def plot_phase_portrait(phi, dphi, regime):
 
     path = os.path.join(RIFT_DIR, "v14_4_phase_portrait.png")
     plt.savefig(path, dpi=150)
-    print(f"💾 Saved → {path}")
+    print(f"Saved -> {path}")
     plt.close()
 
-
-# --------------------------------------------------
-# MAIN
-# --------------------------------------------------
 
 def main():
 
@@ -171,43 +144,8 @@ def main():
 
     plot_phase_portrait(phi, dphi, regime)
 
-    print("🚀 V14.4 Nonlinear Phase Portrait DONE")
+    print("V14.4 DONE")
 
 
 if __name__ == "__main__":
-    main()plt.axhline(0, linestyle="--", color="gray")
-plt.axvline(0, linestyle="--", color="gray")
-
-plt.xlabel("φ (phase)")
-plt.ylabel("dφ/dt")
-plt.title("V14.4 Nonlinear Phase Portrait")
-
-plt.legend()
-plt.grid(True)
-
-path = os.path.join(RIFT_DIR, "v14_4_phase_portrait.png")
-plt.savefig(path, dpi=150)
-print(f"💾 Saved → {path}")
-plt.close()
-```
-
-# --------------------------------------------------
-
-# MAIN
-
-# --------------------------------------------------
-
-def main():
-
-```
-trajectory, _ = load_data()
-
-phi, dphi, regime = run_controller(trajectory)
-
-plot_phase_portrait(phi, dphi, regime)
-
-print("🚀 V14.4 Nonlinear Phase Portrait DONE")
-```
-
-if **name** == "**main**":
-main()
+    main()
