@@ -166,3 +166,7 @@ DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_7.json
 !**/output/curated/*.gif
 
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/rift_extraction/
+
+# Allow demo results (NEXAH application layer)
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/*
