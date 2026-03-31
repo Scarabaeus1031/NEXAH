@@ -1,89 +1,268 @@
-# 🧭 IEEE Test Case Demos — Rift / Field Navigation Experiments (UPDATED)
-
-## Overview
-
-This folder contains a rapidly evolving set of experiments exploring:
-
-- field-based dynamics  
-- rift extraction  
-- multi-layer control  
-- phase-driven navigation  
-
-on IEEE-style dynamical systems.
-
-The work has transitioned from:
-
-trajectory → manifold → field → phase-regulated control
+# 🧭 NEXAH — Rift Field Navigation System  
+### Stability Field Dynamics · IEEE Test Cases
 
 ---
 
-## 🧠 Core Idea
+## 🧠 Overview
 
-The system is not governed by:
+This module implements a progressively developed control system for navigating a nonlinear stability field (“rift field”) derived from IEEE test case dynamics.
 
-- a single trajectory  
-- nor a fixed manifold  
+The system evolved through multiple conceptual layers:
 
-Instead, it is structured as a:
-
-### 👉 **spatio-temporal field**
-
-with:
-
-- layers (stable bands)
-- channels (preferred directions)
-- loops (local cycles)
-- temporal modes (frequency + phase)
+- geometric field interpretation  
+- phase-driven dynamics  
+- state-space modeling  
+- wave / energy representation  
+- operator-based control  
 
 ---
 
-## 🔁 New Paradigm
+## 📚 Log Structure
 
-> Navigation is not reaching a point  
->  
-> It is aligning with structure in space, time, and phase.
+The development is documented across multiple logs:
 
----
-
-# ⚙️ Pipeline (FULL)
-
-## 1. Field Generation & Export
-
-- run_ieee_field_analysis_export.py
-- run_ieee_field_visual.py
-- run_ieee_field_topology_map.py
-- run_ieee_field_rotation_animation.py
+| Log | Focus |
+|-----|------|
+| LOG I–II | early field discovery, manifold structure |
+| LOG III | phase dynamics and oscillatory behavior |
+| LOG IV | wave, energy, quantization, topology |
+| LOG V | active control, operators, policy |
 
 ---
 
-## 2. Rift Extraction
+## 🔥 Core Evolution
 
-- extract_rift_curve.py
-- rift_distance_analysis.py
+The system transitioned through the following stages:
 
-⚠️ Rift ≠ true attractor
+trajectory → field → phase → state → wave → operator
 
 ---
 
-## 3. Instability & Temporal Analysis
+## 🧩 System Layers
 
-- rift_instability_detector.py
-- rift_fft_analysis.py
+### 1. Field Layer
+
+Focus:
+
+- attractors
+- channels
+- basins
+- flow fields
+
+Representative scripts:
+
+- rift_flow_field_analysis.py
+- rift_force_field.py
 - rift_modal_map.py
 
 ---
 
-## 4. Flow & Field Analysis
+### 2. Phase Layer
 
-- rift_force_field.py
-- rift_flow_field_analysis.py
-- rift_field_metrics.py
+Focus:
+
+- phase tracking
+- frequency modes
+- phase locking
+- multi-frequency control
+
+Representative scripts:
+
+- phase_tracker.py
+- rift_phase_controller.py
+- rift_phase_feedback_controller_v12.py
+- rift_phase_multifrequency_controller_v11.py
 
 ---
 
-## 5. Navigation & Control Evolution
+### 3. State-Space Layer
 
-Early → Adaptive → Predictive → Layer → Hybrid → Phase
+Focus:
+
+- state formalization
+- regime switching
+- phase-space transitions
+- cut / branch dynamics
+
+Representative scripts:
+
+- rift_phase_state_space_v14_5.py
+- rift_phase_state_space_v16_2.py
+- rift_phase_state_space_v16_3.py
+- rift_phase_state_space_v16_4.py
+
+---
+
+### 4. Control Layer (Pre-Operator)
+
+Focus:
+
+- layer lock
+- predictive control
+- tangent / projection control
+
+Representative scripts:
+
+- rift_layer_lock_controller.py
+- rift_predictive_controller.py
+- rift_tangent_controller.py
+- rift_projection_control.py
+
+---
+
+### 5. Operator Layer
+
+Focus:
+
+- engage / lock / release / nexit
+- transition logic
+- control policy
+- active geometry
+
+Representative scripts:
+
+- rift_field_navigation_controller_v24.py
+- rift_field_navigation_controller_v25.py
+- rift_field_navigation_controller_v26.py
+- rift_field_navigation_controller_v27_triple_rhythm.py
+- rift_field_navigation_controller_v28.py
+
+---
+
+## 🔄 Version Evolution
+
+| Version Range | Main Concept |
+|--------------|--------------|
+| V17–V20 | field navigation and layer logic |
+| V21–V23 | ring geometry, portal structure, operator pre-form |
+| V24–V26 | OKO kernel, NEXIT gateway, ANU field |
+| V27 | triple rhythm / 3×3 closure |
+| V28 | active operator control |
+
+---
+
+## 🧭 Key Concepts
+
+### Field
+
+The system is not a path but a structured flow field.
+
+### Phase
+
+Phase defines timing and governs regime switching.
+
+### State
+
+S(t) = (x, y, φ, r, state)
+
+### Wave
+
+The system can be interpreted as a probability distribution over states.
+
+### Operator
+
+Control is executed through the operator cycle:
+
+engage → lock → release → nexit
+
+---
+
+## 🔁 Control Loop
+
+state → operator → action → new state
+
+---
+
+## 🌐 Geometry
+
+The system is best understood as:
+
+- polar phase space  
+- ring / torus structure  
+- layered radial shells  
+- cyclic attractors  
+- gateway transitions  
+
+---
+
+## ⚙️ Outputs
+
+Typical outputs include:
+
+- trajectory data (.npy)
+- phase evolution plots
+- control signals
+- transition matrices
+- operator geometry plots
+- gateway / ring visualizations
+
+---
+
+## 📊 Analysis Tools
+
+Useful support scripts include:
+
+- rift_fft_analysis.py
+- rift_instability_detector.py
+- rift_distance_analysis.py
+- rift_field_metrics.py
+- rift_controller_metrics.py
+
+---
+
+## 🚀 Entry Points
+
+Run demos with:
+
+python run_ieee_field_demo.py  
+python run_ieee_field_navigator.py  
+python run_ieee_multi_agent_demo.py  
+
+---
+
+## 🔥 Current State
+
+The system is now:
+
+→ a policy-controlled dynamical system
+
+with:
+
+- explicit operator states  
+- transition matrices  
+- structured control flow  
+- active ring geometry  
+
+---
+
+## 🧠 Core Insight
+
+The field defines possibilities.  
+The operator selects reality.
+
+---
+
+## 🧭 Next Direction
+
+Planned extensions include:
+
+- adaptive operator policies  
+- reinforcement learning integration  
+- multi-agent coordination  
+- real-time control systems  
+
+---
+
+## 🧬 NEXAH Principle
+
+The system is not defined by motion alone.
+
+It is defined by:
+
+- structure  
+- phase  
+- state  
+- decision
 
 ---
 
