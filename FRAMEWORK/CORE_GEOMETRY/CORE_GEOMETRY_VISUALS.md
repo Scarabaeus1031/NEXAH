@@ -160,7 +160,8 @@ field compression → corridor → trajectory
 
 ## 🌊 Off-Manifold Flow (V69)
 
-![Field](../ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+![Field](visuals/ieee57_v69_off_manifold_flow.png)
+
 
 ### Interpretation
 
