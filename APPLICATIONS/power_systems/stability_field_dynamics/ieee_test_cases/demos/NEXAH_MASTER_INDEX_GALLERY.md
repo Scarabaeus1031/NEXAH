@@ -69,20 +69,23 @@ trajectory → field → phase → state → wave → operator → topology
 ## 🌀 Field Structure
 
 ### True Field
-![Field](../outputs/ieee30_v66_true_state_field.png)
+![Field](../demos/visuals/field/ieee30_v66_true_state_field.png)
 
 ### 3D Field
-![3D Field](../outputs/ieee30_v67_3d_field.png)
+![3D Field](../demos/visuals/field/ieee30_v67_3d_field.png)
+
+### Flow Mapping
+![Flow](../demos/visuals/field/ieee30_v65_flow_state_mapping.png)
 
 ---
 
 ## 🔥 Transition Geometry
 
 ### Rift Boundary
-![Rift](../outputs/ieee30_v51_rift_boundary.png)
+![Rift](../demos/visuals/transitions/ieee30_v51_rift_boundary.png)
 
 ### Transition Geometry
-![Transition](../outputs/ieee30_v56_transition_geometry.png)
+![Transition](../demos/visuals/transitions/ieee30_v56_transition_geometry.png)
 
 ---
 
@@ -91,47 +94,44 @@ trajectory → field → phase → state → wave → operator → topology
 ### Stream Field
 ![Stream](../outputs/ieee30_v69_stream_field.png)
 
-### Flow Mapping
-![Flow](../outputs/ieee30_v65_flow_state_mapping.png)
-
 ---
 
 ## ⚡ Collapse / Stability
 
 ### Collapse Probability
-![Collapse](../outputs/ieee30_v58_collapse_probability.png)
+![Collapse](../demos/visuals/stability/ieee30_v58_collapse_probability.png)
 
 ### Stability Map
-![Stability](../outputs/ieee30_v52_stability_distance_map.png)
+![Stability](../demos/visuals/stability/ieee30_v52_stability_distance_map.png)
 
 ---
 
 ## 🧬 Advanced Geometry
 
 ### Curvature Structure
-![Curvature](../outputs/ieee30_v67_curvature_structure.png)
+![Curvature](../demos/visuals/geometry/ieee30_v67_curvature_structure.png)
 
 ### Field Expansion
-![Expansion](../outputs/ieee30_v67_field_expansion.png)
+![Expansion](../demos/visuals/geometry/ieee30_v67_field_expansion.png)
 
 ---
 
 ## 🧭 Operator Visuals (V24–V28)
 
 ### OKO Ring
-![OKO](../outputs/analysis_export/rift_extraction/v24_oko_ring.png)
+![OKO](../demos/visuals/operator/v24_oko_ring.png)
 
 ### Operator Timeline
-![Timeline](../outputs/analysis_export/rift_extraction/v25_operator_timeline.png)
+![Timeline](../demos/visuals/operator/v25_operator_timeline.png)
 
 ### ANU / NEXIT Geometry
-![ANU](../outputs/analysis_export/rift_extraction/v26_ring_anu_nexit.png)
+![ANU](../demos/visuals/operator/v26_ring_anu_nexit.png)
 
 ### Triple Rhythm
-![Rhythm](../outputs/analysis_export/rift_extraction/v27_triple_rhythm_timeline.png)
+![Rhythm](../demos/visuals/operator/v27_triple_rhythm_timeline.png)
 
 ### Active Operator Geometry
-![V28](../outputs/analysis_export/rift_extraction/v28_active_operator_geometry.png)
+![V28](../demos/visuals/operator/v28_active_operator_geometry.png)
 
 ---
 
@@ -272,7 +272,7 @@ It is:
 
 → a structured navigation system  
 → a phase-controlled dynamical field  
-→ a geometry-aware operator framework  
+→ a geometry-aware operator framework
 
 ---
 
@@ -281,3 +281,4 @@ It is:
 You are not controlling the system directly.  
 
 You are shaping the phase that generates the system.
+
