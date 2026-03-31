@@ -2761,3 +2761,508 @@ The NEXAH system now includes:
 The system is no longer hidden.  
 
 It can be read.
+
+
+# 📘 Entry 87 — State-Space Formalization & Transition Dynamics (V14.5)
+
+## Observation
+
+Previous entries established:
+
+- phase as primary control variable  
+- layer-regime switching  
+- closed-loop dynamics  
+- multi-frequency drive  
+
+However:
+
+→ the system is still described implicitly through code and plots  
+
+---
+
+## Key Discovery
+
+The system can be expressed explicitly as:
+
+→ a **state-space dynamical system**
+
+---
+
+## State Definition
+
+The full system state is:
+
+S(t) = (x, y, φ, dφ/dt, r)
+
+Where:
+
+| Variable | Meaning |
+|----------|--------|
+| x | PC1 coordinate |
+| y | PC2 coordinate |
+| φ | phase |
+| dφ/dt | phase velocity |
+| r | regime ∈ {-1, 0, +1} |
+
+---
+
+## Regime Definition
+
+Regime is determined by drive:
+
+r = +1  if drive > τ_high  
+r =  0  if τ_low ≤ drive ≤ τ_high  
+r = -1  if drive < τ_low  
+
+---
+
+## State Evolution
+
+The system evolves as:
+
+S(t+1) = F(S(t))
+
+Decomposed into:
+
+---
+
+### 1. Phase Update
+
+φ(t+1) = φ(t) + dφ(t)
+
+with:
+
+dφ(t) = base_freq  
+       + f_layer(y)  
+       + f_speed(||v||)  
+       + f_turn(curvature)  
+       - k_lock * phase_error  
+
+---
+
+### 2. Drive Function
+
+drive = sin(φ) + 0.5 sin(2φ) + 0.3 sin(3φ)
+
+---
+
+### 3. Regime Selection
+
+r(t) = regime(drive)
+
+---
+
+### 4. Spatial Update
+
+(x, y)(t+1) =  
+    (x, y)(t)  
+    + F_layer(r)  
+    + F_channel(r)  
+    + F_rift  
+
+---
+
+## Interpretation
+
+The system is not:
+
+→ trajectory-based  
+
+But:
+
+→ **state-transition based**
+
+---
+
+## Core Insight
+
+The system evolves by updating its internal state,  
+not by following a path.  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ motion-driven modeling  
+
+To:
+
+→ **state-driven dynamics**
+
+---
+
+## Conclusion
+
+The NEXAH system is now formally defined as:
+
+- State-space system  
+- Phase-driven evolution  
+- Regime-based switching  
+- Closed-loop feedback  
+
+---
+
+## Updated Core Insight
+
+Motion is not fundamental.  
+
+State transition is.
+
+# 📘 Entry 87 — State-Space Formalization & Transition Dynamics (V14.5)
+
+## Observation
+
+Previous entries established:
+
+- phase as primary control variable  
+- layer-regime switching  
+- closed-loop dynamics  
+- multi-frequency drive  
+
+However:
+
+→ the system is still described implicitly through code and plots  
+
+---
+
+## Key Discovery
+
+The system can be expressed explicitly as:
+
+→ a **state-space dynamical system**
+
+---
+
+## State Definition
+
+The full system state is:
+
+S(t) = (x, y, φ, dφ/dt, r)
+
+Where:
+
+| Variable | Meaning |
+|----------|--------|
+| x | PC1 coordinate |
+| y | PC2 coordinate |
+| φ | phase |
+| dφ/dt | phase velocity |
+| r | regime ∈ {-1, 0, +1} |
+
+---
+
+## Regime Definition
+
+Regime is determined by drive:
+
+r = +1  if drive > τ_high  
+r =  0  if τ_low ≤ drive ≤ τ_high  
+r = -1  if drive < τ_low  
+
+---
+
+## State Evolution
+
+The system evolves as:
+
+S(t+1) = F(S(t))
+
+Decomposed into:
+
+### 1. Phase Update
+
+φ(t+1) = φ(t) + dφ(t)
+
+with:
+
+dφ(t) = base_freq  
+       + f_layer(y)  
+       + f_speed(||v||)  
+       + f_turn(curvature)  
+       - k_lock * phase_error  
+
+---
+
+### 2. Drive Function
+
+drive = sin(φ) + 0.5 sin(2φ) + 0.3 sin(3φ)
+
+---
+
+### 3. Regime Selection
+
+r(t) = regime(drive)
+
+---
+
+### 4. Spatial Update
+
+(x, y)(t+1) =  
+    (x, y)(t)  
+    + F_layer(r)  
+    + F_channel(r)  
+    + F_rift  
+
+---
+
+## Interpretation
+
+The system is not:
+
+→ trajectory-based  
+
+But:
+
+→ **state-transition based**
+
+---
+
+## Core Insight
+
+The system evolves by updating its internal state,  
+not by following a path.  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ motion-driven modeling  
+
+To:
+
+→ **state-driven dynamics**
+
+---
+
+## Conclusion
+
+The NEXAH system is now formally defined as:
+
+- State-space system  
+- Phase-driven evolution  
+- Regime-based switching  
+- Closed-loop feedback  
+
+---
+
+## Updated Core Insight
+
+Motion is not fundamental.  
+State transition is.  
+
+
+
+# 📘 Entry 88 — Regime Transition Graph & r → r′ Mapping (V14.6)
+
+## Observation
+
+Regime behavior shows:
+
+- transitions between states  
+- no persistent fixed regime  
+- cyclic switching patterns  
+
+---
+
+## Key Discovery
+
+The system does not map:
+
+→ r → r  
+
+Instead:
+
+→ **r → r′ (transformed regime)**
+
+---
+
+## Regime Space
+
+R = {-1, 0, +1}
+
+---
+
+## Transition Structure
+
+| From | To | Meaning |
+|------|----|--------|
+| -1 → 0 | contraction → relock |
+| 0 → +1 | activation |
+| +1 → 0 | saturation → stabilization |
+| 0 → -1 | release |
+
+---
+
+## Formalization
+
+r(t+1) = G(r(t), φ(t))
+
+---
+
+## Interpretation
+
+- regime depends on phase  
+- regime evolves dynamically  
+- no regime is self-stable  
+
+---
+
+## Key Insight
+
+> The system does not preserve regime identity.  
+>  
+> It transforms regimes cyclically.  
+
+---
+
+## Geometric Meaning
+
+This produces:
+
+- loops  
+- oscillatory switching  
+- directional reversals  
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ static regime classification  
+
+To:
+
+→ **dynamic regime transformation**
+
+---
+
+## Core Insight
+
+r is not a state.  
+It is a phase-dependent mode.  
+
+
+
+# 📘 Entry 89 — Fixed Points vs Cyclic Attractors (V14.7)
+
+## Observation
+
+The system does not converge to a single point.
+
+Instead:
+
+- trajectories repeat patterns  
+- loops reappear  
+- motion remains bounded  
+
+---
+
+## Key Discovery
+
+The system is not governed by fixed points.
+
+Instead:
+
+→ it exhibits **cyclic attractors**
+
+---
+
+## Fixed Point Definition
+
+x* such that:
+
+F(x*) = x*
+
+Not observed.
+
+---
+
+## Cyclic Attractor Definition
+
+A sequence:
+
+x₁ → x₂ → ... → xₙ → x₁
+
+---
+
+## Observed Behavior
+
+- loop-like structures  
+- repeated spatial regions  
+- phase-aligned recurrence  
+
+---
+
+## Interpretation
+
+The system stabilizes through:
+
+→ **cycles, not points**
+
+---
+
+## Phase Coupling
+
+Each cycle corresponds to:
+
+- a phase interval  
+- a regime sequence  
+- a loop in space  
+
+---
+
+## Attractor Structure
+
+| Type | Behavior |
+|------|----------|
+| Fixed point | static convergence |
+| Cyclic attractor | dynamic stability |
+
+---
+
+## Key Insight
+
+> Stability is not stillness.  
+>  
+> It is repetition.  
+
+---
+
+## Relation to Previous Entries
+
+- Entry 76 → temporal modes  
+- Entry 78 → loop topology  
+- Entry 82 → phase-driven switching  
+- Entry 88 → regime transitions  
+
+---
+
+## System Interpretation
+
+The system behaves as:
+
+→ a **phase-locked cyclic attractor field**
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ equilibrium-based systems  
+
+To:
+
+→ **cycle-based systems**
+
+---
+
+## Updated Core Insight
+
+The system does not converge.  
+It returns.
