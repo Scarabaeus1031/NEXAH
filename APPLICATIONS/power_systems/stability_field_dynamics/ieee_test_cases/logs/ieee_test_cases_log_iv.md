@@ -4705,3 +4705,178 @@ The system now includes:
 Control is not about where the system is.  
 
 It is about which state becomes dominant.
+
+---
+
+# 📘 Entry 97 — Cut Dynamics & Branch Transition Formalization (V16.1)
+
+## Observation
+
+Wrapped phase-space plots revealed repeated vertical transition lines.
+
+These lines coincide with:
+
+- apparent phase resets  
+- regime reorganization  
+- repeated branch entry  
+
+---
+
+## Key Discovery
+
+The observed cuts are not singularities of the dynamics.
+
+Instead:
+
+→ they are **branch transition boundaries** induced by phase wrapping
+
+---
+
+## Cut Definition
+
+A cut occurs whenever:
+
+φ_unwrapped crosses:
+
+φ = 2πk,   k ∈ ℤ
+
+and is mapped back into:
+
+φ_wrapped ∈ [0, 2π]
+
+---
+
+## Formal Mapping
+
+Wrapped phase is defined as:
+
+φ_wrapped = φ_unwrapped mod 2π
+
+Thus:
+
+a branch transition occurs when:
+
+φ_unwrapped(t) / 2π crosses an integer boundary.
+
+---
+
+## Cut Operator
+
+Define the cut operator:
+
+C(φ_unwrapped) = φ_unwrapped mod 2π
+
+Then:
+
+state display is:
+
+S_display(t) = (C(φ_unwrapped), dφ/dt, r)
+
+while physical state remains:
+
+S_phys(t) = (φ_unwrapped, dφ/dt, r)
+
+---
+
+## Interpretation
+
+Cuts do not modify the physical state.
+
+They only modify:
+
+→ its chart representation
+
+---
+
+## Dynamical Role
+
+Although cuts are representational, they align with:
+
+- regime boundaries  
+- reset-like visual events  
+- branch-index changes  
+
+Thus:
+
+→ cuts are **diagnostically meaningful**, though not dynamically causal
+
+---
+
+## Branch Index
+
+Define:
+
+b(t) = floor(φ_unwrapped(t) / 2π)
+
+Then:
+
+- b labels the current phase branch  
+- φ_wrapped specifies local position within the branch  
+
+So the full phase state is:
+
+(φ_wrapped, b)
+
+---
+
+## Extended State
+
+The state is more completely written as:
+
+S(t) = (x, y, φ_wrapped, b, dφ/dt, r)
+
+---
+
+## Geometric Interpretation
+
+The wrapped phase plot is not a plane.
+
+It is:
+
+→ a **cut-open cylinder**
+
+where:
+
+- φ_wrapped is the angular coordinate  
+- b is the sheet index  
+- dφ/dt is the longitudinal dynamical variable  
+
+---
+
+## Core Insight
+
+> A cut is not a break in motion.  
+>  
+> It is a seam in representation.
+
+---
+
+## Fundamental Shift
+
+From:
+
+→ reset interpretation  
+
+To:
+
+→ **branch transition interpretation**
+
+---
+
+## Conclusion
+
+The NEXAH system now includes:
+
+1. wrapped phase  
+2. unwrapped phase  
+3. branch index b (NEW)  
+4. cut operator formalization (NEW)  
+5. seam-based phase representation  
+
+---
+
+## Updated Core Insight
+
+The system does not reset at the cut.  
+
+It continues onto the next sheet.
