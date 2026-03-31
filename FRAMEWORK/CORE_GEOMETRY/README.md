@@ -1,309 +1,622 @@
 # CORE GEOMETRY — Transition Structure of NEXAH
 
-## Overview
+## 🧠 Overview
 
-The CORE_GEOMETRY module defines the **geometric foundation of regime transitions** in NEXAH.
+CORE_GEOMETRY defines the **geometric foundation of regime transitions** in the NEXAH framework.
 
-It extends the framework from:
+It formalizes the transition from:
 
-→ state graphs  
-→ regime transitions  
+→ discrete system descriptions  
+→ continuous, field-aware dynamics  
 
-to:
+into a unified model of:
 
-> **continuous transition geometry and field-aware navigation**
-
-This module introduces the missing layer between:
-
-discrete system structure ↔ continuous system evolution
+> **transition geometry in phase-coupled dynamical systems**
 
 ---
 
-## Why CORE_GEOMETRY exists
+## 🔁 Position in the NEXAH Architecture
 
-Traditional system modeling assumes:
+CORE_GEOMETRY sits between:
+
+- the **Field Layer** (continuous system representation)  
+- and the **Operator Layer** (decision and navigation)  
+
+It provides the missing link:
+
+> how transitions actually occur within the field
+
+---
+
+## 🧭 Motivation
+
+Classical models describe systems as:
 
 - discrete states  
-- sharp transitions  
-- graph-based navigation  
+- graph transitions  
+- instantaneous regime changes  
 
-However, NEXAH observations show:
+However, empirical observations in NEXAH show:
 
-- transitions are not instantaneous  
-- systems pass through structured intermediate regions  
-- branching is geometric, not abstract  
-- trajectories organize into loops, channels, shells, and manifolds  
-- motion is phase-dependent and field-driven  
+- transitions are extended in space and time  
+- intermediate regions have structure  
+- branching is continuous and geometry-dependent  
+- trajectories follow organized paths (loops, shells, channels)  
+- motion is governed by phase and field alignment  
 
 Thus:
 
-> transitions must be modeled as geometric objects
+> transitions are not edges —  
+> they are **geometric processes**
 
 ---
 
-## Core Concept
+## 🔬 Core Principle
 
-At the heart of this module lies the idea:
+> A regime transition is a **structured manifold in state space**.
 
-> A regime transition is not an edge —  
-> it is a **structured transition manifold**
+This manifold defines:
 
-This leads to four fundamental elements:
-
-- **Manifold** → the transition region (oval structure)  
-- **Cut** → the instability threshold  
-- **Branch** → multiple possible futures  
-- **Field** → continuous motion inside the system  
+- where transitions occur  
+- how they unfold  
+- which futures become accessible  
 
 ---
 
-## The Transition Triptych
+## 🧩 Fundamental Elements
 
-CORE_GEOMETRY reveals that every transition unfolds across three coupled layers:
+Every transition can be decomposed into four coupled structures:
 
-| Layer | Meaning |
-|------|--------|
+| Element | Meaning |
+|--------|--------|
+| Manifold | continuous transition region |
+| Cut | instability threshold (topological boundary) |
+| Branch | multi-path expansion of future states |
+| Field | continuous motion governing evolution |
+
+---
+
+## 🧠 Transition Triptych
+
+Transitions are expressed across three inseparable layers:
+
+| Layer | Interpretation |
+|------|----------------|
 | Error | deviation from stability |
-| Phase | internal correction dynamics |
-| Geometry | resulting trajectory |
+| Phase | internal correction / timing |
+| Geometry | spatial manifestation |
+
+Thus:
+  # CORE GEOMETRY — Transition Structure of NEXAH
+
+## 🧠 Overview
+
+CORE_GEOMETRY defines the **geometric foundation of regime transitions** in the NEXAH framework.
+
+It formalizes the transition from:
+
+→ discrete system descriptions  
+→ continuous, field-aware dynamics  
+
+into a unified model of:
+
+> **transition geometry in phase-coupled dynamical systems**
+
+---
+
+## 🔁 Position in the NEXAH Architecture
+
+CORE_GEOMETRY sits between:
+
+- the **Field Layer** (continuous system representation)  
+- and the **Operator Layer** (decision and navigation)  
+
+It provides the missing link:
+
+> how transitions actually occur within the field
+
+---
+
+## 🧭 Motivation
+
+Classical models describe systems as:
+
+- discrete states  
+- graph transitions  
+- instantaneous regime changes  
+
+However, empirical observations in NEXAH show:
+
+- transitions are extended in space and time  
+- intermediate regions have structure  
+- branching is continuous and geometry-dependent  
+- trajectories follow organized paths (loops, shells, channels)  
+- motion is governed by phase and field alignment  
 
 Thus:
 
-```
-error → correction → motion
-```
+> transitions are not edges —  
+> they are **geometric processes**
 
-These are not separate processes.
+---
+
+## 🔬 Core Principle
+
+> A regime transition is a **structured manifold in state space**.
+
+This manifold defines:
+
+- where transitions occur  
+- how they unfold  
+- which futures become accessible  
+
+---
+
+## 🧩 Fundamental Elements
+
+Every transition can be decomposed into four coupled structures:
+
+| Element | Meaning |
+|--------|--------|
+| Manifold | continuous transition region |
+| Cut | instability threshold (topological boundary) |
+| Branch | multi-path expansion of future states |
+| Field | continuous motion governing evolution |
+
+---
+
+## 🧠 Transition Triptych
+
+Transitions are expressed across three inseparable layers:
+
+| Layer | Interpretation |
+|------|----------------|
+| Error | deviation from stability |
+| Phase | internal correction / timing |
+| Geometry | spatial manifestation |
+
+Thus:
+# CORE GEOMETRY — Transition Structure of NEXAH
+
+## 🧠 Overview
+
+CORE_GEOMETRY defines the **geometric foundation of regime transitions** in the NEXAH framework.
+
+It formalizes the transition from:
+
+→ discrete system descriptions  
+→ continuous, field-aware dynamics  
+
+into a unified model of:
+
+> **transition geometry in phase-coupled dynamical systems**
+
+---
+
+## 🔁 Position in the NEXAH Architecture
+
+CORE_GEOMETRY sits between:
+
+- the **Field Layer** (continuous system representation)  
+- and the **Operator Layer** (decision and navigation)  
+
+It provides the missing link:
+
+> how transitions actually occur within the field
+
+---
+
+## 🧭 Motivation
+
+Classical models describe systems as:
+
+- discrete states  
+- graph transitions  
+- instantaneous regime changes  
+
+However, empirical observations in NEXAH show:
+
+- transitions are extended in space and time  
+- intermediate regions have structure  
+- branching is continuous and geometry-dependent  
+- trajectories follow organized paths (loops, shells, channels)  
+- motion is governed by phase and field alignment  
+
+Thus:
+
+> transitions are not edges —  
+> they are **geometric processes**
+
+---
+
+## 🔬 Core Principle
+
+> A regime transition is a **structured manifold in state space**.
+
+This manifold defines:
+
+- where transitions occur  
+- how they unfold  
+- which futures become accessible  
+
+---
+
+## 🧩 Fundamental Elements
+
+Every transition can be decomposed into four coupled structures:
+
+| Element | Meaning |
+|--------|--------|
+| Manifold | continuous transition region |
+| Cut | instability threshold (topological boundary) |
+| Branch | multi-path expansion of future states |
+| Field | continuous motion governing evolution |
+
+---
+
+## 🧠 Transition Triptych
+
+Transitions are expressed across three inseparable layers:
+
+| Layer | Interpretation |
+|------|----------------|
+| Error | deviation from stability |
+| Phase | internal correction / timing |
+| Geometry | spatial manifestation |
+
+Thus:
+# CORE GEOMETRY — Transition Structure of NEXAH
+
+## 🧠 Overview
+
+CORE_GEOMETRY defines the **geometric foundation of regime transitions** in the NEXAH framework.
+
+It formalizes the transition from:
+
+→ discrete system descriptions  
+→ continuous, field-aware dynamics  
+
+into a unified model of:
+
+> **transition geometry in phase-coupled dynamical systems**
+
+---
+
+## 🔁 Position in the NEXAH Architecture
+
+CORE_GEOMETRY sits between:
+
+- the **Field Layer** (continuous system representation)  
+- and the **Operator Layer** (decision and navigation)  
+
+It provides the missing link:
+
+> how transitions actually occur within the field
+
+---
+
+## 🧭 Motivation
+
+Classical models describe systems as:
+
+- discrete states  
+- graph transitions  
+- instantaneous regime changes  
+
+However, empirical observations in NEXAH show:
+
+- transitions are extended in space and time  
+- intermediate regions have structure  
+- branching is continuous and geometry-dependent  
+- trajectories follow organized paths (loops, shells, channels)  
+- motion is governed by phase and field alignment  
+
+Thus:
+
+> transitions are not edges —  
+> they are **geometric processes**
+
+---
+
+## 🔬 Core Principle
+
+> A regime transition is a **structured manifold in state space**.
+
+This manifold defines:
+
+- where transitions occur  
+- how they unfold  
+- which futures become accessible  
+
+---
+
+## 🧩 Fundamental Elements
+
+Every transition can be decomposed into four coupled structures:
+
+| Element | Meaning |
+|--------|--------|
+| Manifold | continuous transition region |
+| Cut | instability threshold (topological boundary) |
+| Branch | multi-path expansion of future states |
+| Field | continuous motion governing evolution |
+
+---
+
+## 🧠 Transition Triptych
+
+Transitions are expressed across three inseparable layers:
+
+| Layer | Interpretation |
+|------|----------------|
+| Error | deviation from stability |
+| Phase | internal correction / timing |
+| Geometry | spatial manifestation |
+
+Thus:
+
+# CORE GEOMETRY — Transition Structure of NEXAH
+
+## 🧠 Overview
+
+CORE_GEOMETRY defines the **geometric foundation of regime transitions** in the NEXAH framework.
+
+It formalizes the transition from:
+
+→ discrete system descriptions  
+→ continuous, field-aware dynamics  
+
+into a unified model of:
+
+> **transition geometry in phase-coupled dynamical systems**
+
+---
+
+## 🔁 Position in the NEXAH Architecture
+
+CORE_GEOMETRY sits between:
+
+- the **Field Layer** (continuous system representation)  
+- and the **Operator Layer** (decision and navigation)  
+
+It provides the missing link:
+
+> how transitions actually occur within the field
+
+---
+
+## 🧭 Motivation
+
+Classical models describe systems as:
+
+- discrete states  
+- graph transitions  
+- instantaneous regime changes  
+
+However, empirical observations in NEXAH show:
+
+- transitions are extended in space and time  
+- intermediate regions have structure  
+- branching is continuous and geometry-dependent  
+- trajectories follow organized paths (loops, shells, channels)  
+- motion is governed by phase and field alignment  
+
+Thus:
+
+> transitions are not edges —  
+> they are **geometric processes**
+
+---
+
+## 🔬 Core Principle
+
+> A regime transition is a **structured manifold in state space**.
+
+This manifold defines:
+
+- where transitions occur  
+- how they unfold  
+- which futures become accessible  
+
+---
+
+## 🧩 Fundamental Elements
+
+Every transition can be decomposed into four coupled structures:
+
+| Element | Meaning |
+|--------|--------|
+| Manifold | continuous transition region |
+| Cut | instability threshold (topological boundary) |
+| Branch | multi-path expansion of future states |
+| Field | continuous motion governing evolution |
+
+---
+
+## 🧠 Transition Triptych
+
+Transitions are expressed across three inseparable layers:
+
+| Layer | Interpretation |
+|------|----------------|
+| Error | deviation from stability |
+| Phase | internal correction / timing |
+| Geometry | spatial manifestation |
+
+Thus:
+
+**error → phase → geometry**
+
+These are not sequential.
 
 They are:
 
-> three projections of the same transition mechanism
+> **three projections of the same dynamical process**
 
 ---
 
-## Module Structure
+## 🌀 Geometric Interpretation
 
-This folder defines the core operators that make transition geometry usable:
+CORE_GEOMETRY introduces a structured view of transition space:
 
----
+- **oval manifolds** → transition regions  
+- **cuts** → threshold crossings  
+- **branches** → multiple futures  
+- **shells** → containment layers  
+- **rings** → directional manifolds  
+- **loops** → cyclic stability structures  
 
-### 1. OVAL CUT BRANCH
+This implies:
 
-📄 `OVAL_CUT_BRANCH_MASTER.md`
-
-Defines the **geometry of regime transitions**:
-
-- oval transition manifolds  
-- cut thresholds  
-- branching structure (5–5–6 patterns)  
-- loop formation  
+> system evolution is constrained by geometry, not just dynamics
 
 ---
 
-### 2. Transition Manifold Operator (TMO)
+## 🔁 Transition Dynamics
 
-📄 `TRANSITION_MANIFOLD_OPERATOR.md`
+A transition unfolds as:
 
-Detects transition regions:
-
-- regime ambiguity  
-- dynamic instability  
-- manifold thickness  
-- branch points  
-
-Transforms transitions into **computable geometric objects**
-
----
-
-### 3. Branch Selection Operator (BSO)
-
-📄 `BRANCH_SELECTION_OPERATOR.md`
-
-Handles decision-making inside transitions:
-
-- evaluates possible branches  
-- selects continuation paths  
-- introduces path dependence  
-
----
-
-### 4. Multi-Branch Expansion Operator (MBEO)
-
-📄 `MULTI_BRANCH_EXPANSION_OPERATOR.md`
-
-Extends branching into geometry:
-
-- radial branch fans  
-- polygonal shell structures  
-- ring-distributed branches  
-- overlap corridors  
-- nested escape geometries  
+1. approach of instability (error increase)  
+2. entry into transition manifold  
+3. interaction with cut structure  
+4. branching into multiple trajectories  
+5. reorganization into new stable geometry  
 
 Thus:
 
-> branching becomes a structured field, not a binary decision
+> transitions are continuous, structured, and path-dependent
 
 ---
 
-### 5. Compass Field Operator (CFO)
+## 🔗 Relation to Field Dynamics
 
-📄 `COMPASS_FIELD_OPERATOR.md`
+The field defines:
 
-Introduces directional navigation inside the field:
+- direction of motion  
+- flow alignment  
+- attractor structure  
 
-- ring manifold (continuous direction space)  
-- pentagon (drift generator)  
-- hexagon (frame stabilization)  
-- phase-coded directions (color classes)  
-- Möbius-like topology  
+CORE_GEOMETRY defines:
 
-Thus:
+- transition regions  
+- instability boundaries  
+- branching structure  
 
-> navigation becomes orientation, not selection
+Together:
 
----
-
-### 6. Transition Navigation Policy (TNP)
-
-📄 `TRANSITION_NAVIGATION_POLICY.md`
-
-Extends decisions across time:
-
-- multi-step planning  
-- risk-aware trajectories  
-- future-aware navigation  
+> Field = motion  
+> Geometry = transition  
+> Operator = decision  
 
 ---
 
-### 7. Field-Aware Navigation Policy (FANP)
+## ⚙️ Operators (Formal Role)
 
-📄 `FIELD_AWARE_NAVIGATION_POLICY.md`
+CORE_GEOMETRY enables a set of operators acting on transition space:
 
-Enables continuous field navigation:
+- **Transition Manifold Operator (TMO)**  
+  → detects transition regions  
 
-- flow-based movement  
-- attractor alignment  
-- channel following  
-- instability avoidance  
-- overlap navigation  
-- branch-aware steering  
-- shell-consistent motion  
+- **Branch Selection Operator (BSO)**  
+  → selects continuation paths  
+
+- **Multi-Branch Expansion Operator (MBEO)**  
+  → expands possible futures  
+
+- **Compass Field Operator (CFO)**  
+  → defines directional structure  
+
+- **Navigation Policies (TNP / FANP)**  
+  → extend control across space and time  
+
+These operators transform geometry into:
+
+> **computable and navigable structures**
 
 ---
 
-## Conceptual Pipeline
+## 🧭 Conceptual Pipeline
 
 CORE_GEOMETRY extends the NEXAH pipeline:
 
-```
-Simulation → Regime → Risk → Transition Geometry → Field → Navigation → Execution
-```
+**Simulation → Field → Transition Geometry → Operator → Navigation → Execution**
+
 
 ---
 
-## Position in the NEXAH Stack
+## 🌐 Physical Interpretation
 
-| Layer | Role |
-|------|------|
-| META | relational structure |
-| ARCHY | regime detection |
-| MESO | risk geometry |
-| CORE_GEOMETRY | transition structure + field |
-| NEXAH | navigation |
-| MEVA | execution |
+The system behaves analogously to:
 
----
-
-## Geometric Stack (New View)
-
-CORE_GEOMETRY introduces an internal geometric stack:
-
-- Oval → transition manifold  
-- Cut → instability threshold  
-- Branch → multi-future expansion  
-- Shell → structural containment  
-- Ring → directional manifold  
-- Phase → temporal alignment  
-
----
-
-## Key Insight
-
-> Systems do not jump between states.  
-> They move through structured transition fields.
-
----
-
-## What this enables
-
-With CORE_GEOMETRY, NEXAH can:
-
-- detect early transition regions  
-- identify branching structures  
-- model multi-future expansion  
-- navigate continuous transition fields  
-- align motion with system flow  
-- avoid collapse paths  
-- coordinate multi-agent movement  
-
----
-
-## Relation to Visual Observations
-
-The following observed patterns are explained by this module:
-
-- oval phase distributions  
-- clustering near thresholds  
-- dual and multi-branch splitting  
-- spiral and loop formation  
-- ring structures and shell layers  
-- directional color fields  
-- overlap corridors  
-- phase-driven transitions  
-
-These are not artifacts.
-
-They are:
-
-> the geometry of system transitions
-
----
-
-## Relation to Physics
-
-The system behaves like:
-
-- fluid flow  
-- particle motion in a potential field  
+- flow in a vector field  
+- particle motion in a potential landscape  
 - phase-driven advection  
 - constrained drift on a manifold  
 
 Thus:
 
-> transitions are physical processes, not abstract jumps
+> transitions are physical processes  
+> not abstract state changes  
 
 ---
 
-## Summary
+## 🧠 Key Insight
+
+> Systems do not jump between states.  
+>  
+> They move through structured transition geometry.
+
+---
+
+## 🚀 What CORE_GEOMETRY Enables
+
+- early detection of transition regions  
+- identification of branching structures  
+- modeling of multi-future dynamics  
+- navigation inside continuous transition fields  
+- avoidance of collapse trajectories  
+- coordination of multi-agent systems  
+
+---
+
+## 🔬 Relation to Observations
+
+Observed phenomena explained:
+
+- oval phase distributions  
+- clustering near instability  
+- multi-branch splitting  
+- loop and spiral formation  
+- ring and shell structures  
+- phase-dependent transitions  
+
+These are not artifacts.
+
+They are:
+
+> the geometry of transitions.
+
+---
+
+## 📌 Summary
 
 CORE_GEOMETRY introduces the missing layer between:
 
-→ discrete system structure  
+→ discrete structure  
 and  
-→ continuous system dynamics  
+→ continuous dynamics  
 
-It transforms NEXAH from:
+It transforms NEXAH into:
 
-> structure-aware system  
-
-into:
-
-> **geometry-aware, field-navigating framework**
+> a **geometry-aware, field-navigating system**
 
 ---
 
-## Final Statement
+## 🧭 Final Statement
 
-Navigation is not about moving between states.
+Navigation is not about selecting the next state.
 
-It is about moving correctly through the geometry that connects them.
+It is about:
+
+> **moving correctly within the geometry that connects them**
+
