@@ -32,7 +32,8 @@ However, NEXAH observations show:
 - transitions are not instantaneous  
 - systems pass through structured intermediate regions  
 - branching is geometric, not abstract  
-- trajectories organize into loops, channels, and manifolds  
+- trajectories organize into loops, channels, shells, and manifolds  
+- motion is phase-dependent and field-driven  
 
 Thus:
 
@@ -56,9 +57,35 @@ This leads to four fundamental elements:
 
 ---
 
+## The Transition Triptych
+
+CORE_GEOMETRY reveals that every transition unfolds across three coupled layers:
+
+| Layer | Meaning |
+|------|--------|
+| Error | deviation from stability |
+| Phase | internal correction dynamics |
+| Geometry | resulting trajectory |
+
+Thus:
+
+```
+error → correction → motion
+```
+
+These are not separate processes.
+
+They are:
+
+> three projections of the same transition mechanism
+
+---
+
 ## Module Structure
 
 This folder defines the core operators that make transition geometry usable:
+
+---
 
 ### 1. OVAL CUT BRANCH
 
@@ -84,7 +111,7 @@ Detects transition regions:
 - manifold thickness  
 - branch points  
 
-Transforms transitions into **computable objects**
+Transforms transitions into **computable geometric objects**
 
 ---
 
@@ -100,7 +127,43 @@ Handles decision-making inside transitions:
 
 ---
 
-### 4. Transition Navigation Policy (TNP)
+### 4. Multi-Branch Expansion Operator (MBEO)
+
+📄 `MULTI_BRANCH_EXPANSION_OPERATOR.md`
+
+Extends branching into geometry:
+
+- radial branch fans  
+- polygonal shell structures  
+- ring-distributed branches  
+- overlap corridors  
+- nested escape geometries  
+
+Thus:
+
+> branching becomes a structured field, not a binary decision
+
+---
+
+### 5. Compass Field Operator (CFO)
+
+📄 `COMPASS_FIELD_OPERATOR.md`
+
+Introduces directional navigation inside the field:
+
+- ring manifold (continuous direction space)  
+- pentagon (drift generator)  
+- hexagon (frame stabilization)  
+- phase-coded directions (color classes)  
+- Möbius-like topology  
+
+Thus:
+
+> navigation becomes orientation, not selection
+
+---
+
+### 6. Transition Navigation Policy (TNP)
 
 📄 `TRANSITION_NAVIGATION_POLICY.md`
 
@@ -112,16 +175,19 @@ Extends decisions across time:
 
 ---
 
-### 5. Field-Aware Navigation Policy (FANP)
+### 7. Field-Aware Navigation Policy (FANP)
 
 📄 `FIELD_AWARE_NAVIGATION_POLICY.md`
 
-Enables continuous navigation:
+Enables continuous field navigation:
 
 - flow-based movement  
 - attractor alignment  
 - channel following  
 - instability avoidance  
+- overlap navigation  
+- branch-aware steering  
+- shell-consistent motion  
 
 ---
 
@@ -129,7 +195,9 @@ Enables continuous navigation:
 
 CORE_GEOMETRY extends the NEXAH pipeline:
 
-Simulation → Regime → Risk → Transition Geometry → Navigation → Execution
+```
+Simulation → Regime → Risk → Transition Geometry → Field → Navigation → Execution
+```
 
 ---
 
@@ -140,9 +208,22 @@ Simulation → Regime → Risk → Transition Geometry → Navigation → Execut
 | META | relational structure |
 | ARCHY | regime detection |
 | MESO | risk geometry |
-| CORE_GEOMETRY | transition structure |
+| CORE_GEOMETRY | transition structure + field |
 | NEXAH | navigation |
 | MEVA | execution |
+
+---
+
+## Geometric Stack (New View)
+
+CORE_GEOMETRY introduces an internal geometric stack:
+
+- Oval → transition manifold  
+- Cut → instability threshold  
+- Branch → multi-future expansion  
+- Shell → structural containment  
+- Ring → directional manifold  
+- Phase → temporal alignment  
 
 ---
 
@@ -159,9 +240,11 @@ With CORE_GEOMETRY, NEXAH can:
 
 - detect early transition regions  
 - identify branching structures  
-- navigate through unstable regimes  
+- model multi-future expansion  
+- navigate continuous transition fields  
+- align motion with system flow  
 - avoid collapse paths  
-- follow natural system flow  
+- coordinate multi-agent movement  
 
 ---
 
@@ -171,15 +254,33 @@ The following observed patterns are explained by this module:
 
 - oval phase distributions  
 - clustering near thresholds  
-- dual branch splitting  
+- dual and multi-branch splitting  
 - spiral and loop formation  
-- flow channels inside fields  
+- ring structures and shell layers  
+- directional color fields  
+- overlap corridors  
+- phase-driven transitions  
 
 These are not artifacts.
 
 They are:
 
 > the geometry of system transitions
+
+---
+
+## Relation to Physics
+
+The system behaves like:
+
+- fluid flow  
+- particle motion in a potential field  
+- phase-driven advection  
+- constrained drift on a manifold  
+
+Thus:
+
+> transitions are physical processes, not abstract jumps
 
 ---
 
@@ -193,11 +294,11 @@ and
 
 It transforms NEXAH from:
 
-> structure-aware system
+> structure-aware system  
 
 into:
 
-> **geometry-aware navigation framework**
+> **geometry-aware, field-navigating framework**
 
 ---
 
