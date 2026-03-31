@@ -106,6 +106,32 @@ Even in a fully discrete system:
 - **[Discovery Engine](./DISCOVERY_ENGINE/)**  
 - **[Applications](./APPLICATIONS/)**  
 - **[Builder Lab](./BUILDER_LAB/demos/)**  
+## ⚡ Stability Field Dynamics (IEEE Systems)
+
+A core application of NEXAH is the analysis of power system stability using IEEE test cases.
+
+This module demonstrates:
+
+- field-based stability modeling  
+- collapse prediction via structure  
+- phase-driven dynamics  
+- operator-based navigation (V24–V28)  
+
+### 🧭 Entry Points
+
+👉 [📘 IEEE Stability Module](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/README.md)
+
+👉 [🧭 MASTER INDEX & VISUAL GALLERY](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/demos/NEXAH_MASTER_INDEX_GALLERY.md)
+
+👉 [🚀 MASTER INDEX V2 (recommended)](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/demos/NEXAH_MASTER_INDEX_GALLERY_V2.md)
+
+---
+
+This module is the most advanced realization of:
+
+→ field discovery  
+→ phase control  
+→ operator-driven navigation  
 
 ---
 
