@@ -27,7 +27,7 @@ Field → Geometry → Operator
 
 ## 🌊 Off-Manifold Flow (V69)
 
-![Field](../ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+![Field](visuals/ieee57_v69_off_manifold_flow.png)
 
 ### Interpretation
 
@@ -59,7 +59,7 @@ Field → Geometry → Operator
 
 - oval = transition region  
 - cut = instability boundary  
-- branches = future paths  
+- branches = possible futures  
 
 ---
 
@@ -71,11 +71,9 @@ Field → Geometry → Operator
 
 ### Interpretation
 
-This is the **core transformation step**:
-
 - field compresses  
-- structure emerges  
-- corridor forms  
+- curvature stabilizes  
+- corridor emerges  
 
 ---
 
@@ -85,66 +83,33 @@ This is the **core transformation step**:
 
 ![Master](visuals/NEXAH_MASTER_V28_Field_Geometry_Operator.png)
 
-### Interpretation
-
-- trajectory follows structured arc  
-- system is constrained by geometry  
-- movement is not free  
-
 ---
 
-## 🧭 MASTER V28 PRO — Refined Path
+## 🧭 MASTER V28 PRO — Refined Geometry
 
 ![Master PRO](visuals/NEXAH_MASTER_V28PRO_Field_Geometry_Operator.png)
-
-### Interpretation
-
-- emphasizes corridor stability  
-- shows controlled navigation  
 
 ---
 
 # 🔲 5. FULL SYSTEM INTEGRATION
 
-## 🧭 MASTER V28 FINAL — Field · Geometry · Operator
+## 🧭 MASTER V28 FINAL — Transition Dynamics
 
 ![Master Final](visuals/NEXAH_MASTER_V28_Field_Geometry_Operator_Transition.png)
 
-### Interpretation
-
-- integrates flow + geometry + control  
-- shows transition behavior  
-- highlights exit dynamics  
-
 ---
 
-## 🧭 MASTER V28 PRO FINAL — Complete Model
+## 🧭 MASTER V28 PRO FINAL — Complete System
 
 ![Master PRO Final](visuals/MASTER_V28_PRO_FINAL.png)
 
-### Interpretation
-
-This is the **final unified system**:
-
-- field structure  
-- transformation logic  
-- operator trajectory  
-
 ---
 
-# 🔲 6. TRIPTYCH (Conceptual Summary)
+# 🔲 6. TRIPTYCH SYSTEM
 
 ## 🧩 Full Triptych
 
 ![Triptych](visuals/MASTER_V28_TRIPTYCH-Field-Compression-Operator.png)
-
-### Interpretation
-
-| Panel | Meaning |
-|------|--------|
-| LEFT | Field |
-| CENTER | Compression |
-| RIGHT | Operator |
 
 ---
 
