@@ -4880,3 +4880,142 @@ The NEXAH system now includes:
 The system does not reset at the cut.  
 
 It continues onto the next sheet.
+
+
+---
+
+
+📘 Entry 98 — Cylindrical Phase Manifold & Cut Activation (V16.2)
+
+Observation
+
+Previous system (V16):
+
+- stable phase evolution
+- no wrapping transitions
+- no branch switching
+- no true cuts
+
+System remained:
+
+→ single-sheet phase space
+
+Key Discovery
+
+Phase is not linear.
+
+→ Phase lives on a cylinder:
+
+φ ∈ S¹  
+branch ∈ ℤ  
+
+Thus:
+
+Full phase state becomes:
+
+Φ(t) = (φ_wrapped, n)
+
+Where:
+
+φ_wrapped ∈ [0, 2π)  
+n = branch index (integer sheet)
+
+State Extension
+
+Original state:
+
+S(t) = (x, y, φ, dφ/dt, r)
+
+Extended state:
+
+S*(t) = (x, y, φ_wrapped, φ_unwrapped, dφ/dt, r, n)
+
+Cut Definition
+
+A cut occurs when:
+
+φ_unwrapped crosses k·2π
+
+Formally:
+
+cut(t) = floor(φ_unwrapped(t) / 2π) ≠ floor(φ_unwrapped(t-1) / 2π)
+
+Branch Update
+
+n(t) = floor(φ_unwrapped(t) / 2π)
+
+Phase Mapping
+
+φ_wrapped(t) = φ_unwrapped(t) mod 2π
+
+Dynamics Update
+
+φ_unwrapped(t+1) = φ_unwrapped(t) + dφ(t)
+
+dφ(t) =
+    base_freq
+    + f_layer(y)
+    + f_speed(||v||)
+    + f_turn(curvature)
+    - k_lock * phase_error
+
+Critical Transition
+
+When cuts activate:
+
+→ system becomes multi-sheet
+
+Meaning:
+
+- trajectories jump between sheets
+- wrapped phase remains continuous
+- unwrapped phase encodes global structure
+
+Geometric Interpretation
+
+The system evolves on:
+
+→ a cylindrical manifold
+
+Where:
+
+- φ_wrapped = angular coordinate
+- n = vertical layer (sheet index)
+
+Thus:
+
+→ dynamics = spiral on cylinder
+
+Core Insight
+
+Cuts are not discontinuities.
+
+→ They are transitions between sheets.
+
+Fundamental Shift
+
+From:
+
+→ bounded phase dynamics
+
+To:
+
+→ topological phase evolution
+
+Conclusion
+
+The NEXAH system is now:
+
+- multi-sheet
+- cylindrical
+- cut-driven
+- topologically structured
+
+Updated Core Insight
+
+Continuity is local.
+
+Structure is global.
+
+---
+
