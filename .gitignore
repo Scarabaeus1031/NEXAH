@@ -164,3 +164,5 @@ DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_7.json
 # allow curated gifs
 !**/output/curated/
 !**/output/curated/*.gif
+
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/rift_extraction/
