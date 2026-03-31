@@ -1,43 +1,66 @@
-# FIELD-AWARE NAVIGATION POLICY
+# FIELD-AWARE NAVIGATION POLICY (FANP)
 
-## Core Idea
+## Overview
 
-Previous policies operate on:
+Earlier NEXAH policies operated primarily on:
 
 - states
 - transitions
 - branches
-- graphs
+- graph structures
 
-However:
+This remains useful at the macro level.
 
-> the system fundamentally evolves inside a continuous field.
+However, the deeper system behavior shows:
 
-Thus, NEXAH introduces:
+- continuous motion inside a field
+- phase-conditioned direction changes
+- shell-based geometry
+- overlap corridors
+- distributed branch manifolds
 
-> Field-Aware Navigation Policy (FANP)
+Thus, NEXAH refines navigation into:
 
-This policy navigates directly using:
+> **Field-Aware Navigation Policy (FANP)**
 
-→ field geometry  
-→ flow structure  
-→ attractors and channels  
+This policy does not merely choose a branch.
+
+It navigates through:
+
+- field geometry
+- flow structure
+- attractor gradients
+- channel manifolds
+- phase-coded directional fields
+
+---
+
+## Core Insight
+
+> The system does not choose a path.  
+> It aligns with a field and moves within it.
 
 ---
 
 ## 1. Motivation
 
-Graph-based navigation:
+Graph-based navigation is:
 
-- discrete  
-- step-based  
-- loses geometric continuity  
+- discrete
+- step-based
+- structurally useful
+- but locally incomplete
 
-But real systems:
+Real systems evolve as:
 
-- evolve continuously  
-- follow flow fields  
-- are shaped by gradients and attractors  
+- continuous flows
+- directional fields
+- phase-conditioned motions
+- geometry-shaped transitions
+
+Thus:
+
+> navigation must operate inside the field itself
 
 ---
 
@@ -54,15 +77,35 @@ FANP : (x, F(x), O) → u(x)
 
 Where:
 
-- x = state  
-- F(x) = field representation  
-- u(x) = control direction  
+- x = current state
+- F(x) = field representation
+- O = navigation objective
+- u(x) = control vector
 
 ---
 
-## 3. Field Representation
+## 3. Extended Definition
 
-The field includes:
+Because NEXAH now includes phase and branch geometry, the policy becomes:
+
+FANP : (x, F(x), Φ(x), G(x), O) → u(x)
+
+Where:
+
+- Φ(x) = phase / directional state
+- G(x) = local geometry (shell, branch field, overlap zone)
+- O = objective / target condition
+
+Thus:
+
+> control depends not only on position,  
+> but also on phase and geometric context
+
+---
+
+## 4. Field Representation
+
+The field may include:
 
 F(x) = {
     flow_vector,
@@ -70,221 +113,482 @@ F(x) = {
     divergence,
     attractor_field,
     channel_field,
-    instability_field
+    instability_field,
+    overlap_field,
+    branch_field,
+    shell_field
 }
 
 ---
 
-## 4. Core Components
+## 5. Core Components
 
 ### A. Flow Vector
 
-v(x) → natural system direction  
+v(x) = natural local direction of motion
+
+Represents:
+
+- local system tendency
+- intrinsic evolution
+- continuous drift direction
 
 ---
 
 ### B. Gradient Field
 
-∇S(x) → stability / energy gradient  
+∇S(x) = local stability / energy gradient
+
+Represents:
+
+- stability slope
+- energy descent / ascent
+- structural preference
 
 ---
 
 ### C. Attractor Field
 
-A(x) → pull toward stable regions  
+A(x) = pull toward coherent regions
+
+Represents:
+
+- stable basins
+- target regions
+- convergence zones
 
 ---
 
 ### D. Channel Field
 
-C(x) → preferred flow corridors  
+C(x) = preferred local corridor
+
+Represents:
+
+- admissible motion lanes
+- low-resistance paths
+- structured transit routes
 
 ---
 
 ### E. Instability Field
 
-I(x) → regions of divergence  
+I(x) = divergence / collapse tendency
+
+Represents:
+
+- fragile areas
+- repulsive dynamics
+- break zones
 
 ---
 
-## 5. Navigation Law
+### F. Overlap Field
 
-The control vector is:
+W(x) = region of shared influence between futures
 
-u(x) = α * v(x)
-     + β * A(x)
-     + γ * C(x)
-     - δ * I(x)
+Represents:
+
+- transfer corridor
+- ambiguity zone
+- delayed selection region
 
 ---
 
-## 6. Interpretation
+### G. Branch Field
+
+B(x) = local multi-branch expansion geometry
+
+Represents:
+
+- admissible future fan
+- branch classes
+- radial / shell-based futures
+
+---
+
+### H. Shell Field
+
+H(x) = geometric shell structure
+
+Represents:
+
+- ring logic
+- nested layers
+- outer / inner field organization
+
+---
+
+## 6. Navigation Law
+
+The control vector is constructed as:
+
+u(x) = α · v(x)
+     + β · A(x)
+     + γ · C(x)
+     - δ · I(x)
+     + ε · W(x)
+     + ζ · B(x)
+     + η · H(x)
+
+Where:
+
+- α = flow alignment weight
+- β = attractor bias
+- γ = channel lock strength
+- δ = instability avoidance
+- ε = overlap handling
+- ζ = branch expansion coupling
+- η = shell consistency
+
+---
+
+## 7. Interpretation
 
 The system moves by:
 
-- aligning with flow  
-- drifting toward attractors  
-- staying inside channels  
-- avoiding instability  
+- aligning with local flow
+- drifting toward attractors
+- staying inside channels
+- avoiding instability
+- resolving overlap regions
+- respecting branch geometry
+- remaining shell-consistent
+
+Thus:
+
+> navigation becomes geometry-aware and field-conditioned
 
 ---
 
-## 7. Continuous Motion
+## 8. Continuous Motion
 
-Unlike branch selection:
+Unlike discrete branch policies:
 
-- no discrete jumps  
-- no switching edges  
+- no forced step jumps
+- no edge-only transitions
+- no graph-only decision logic
 
 Instead:
 
-→ continuous trajectory shaping  
+→ continuous trajectory shaping inside a structured field
 
 ---
 
-## 8. Geometric Meaning
+## 9. Geometric Meaning
 
-Navigation becomes:
+Navigation is:
 
-→ movement along field lines  
+> motion along field lines inside a geometric manifold
+
+This manifold may contain:
+
+- channels
+- shells
+- ring structures
+- branch fans
+- overlap corridors
 
 ---
 
-## 9. Flow Alignment
+## 10. Flow Alignment Principle
 
-Key principle:
-
-maximize alignment:
+A key objective is local alignment:
 
 cos(θ) = dot(u, v) / (||u|| ||v||)
 
+This measures:
+
+- whether control supports natural field motion
+- whether navigation fights or uses the field
+
+Goal:
+
+- maximize useful alignment
+- minimize destructive opposition
+
 ---
 
-## 10. Attractor Bias
+## 11. Attractor Bias
 
 Strong attractors:
 
-- stabilize motion  
-- reduce divergence  
+- stabilize motion
+- reduce branching uncertainty
+- create recoverable trajectories
+
+Thus:
+
+- β increases near stable basins
+- β decreases in exploratory states
 
 ---
 
-## 11. Channel Lock
+## 12. Channel Lock
 
 Channels:
 
-- reduce search space  
-- guide trajectories  
-
----
-
-## 12. Instability Avoidance
-
-Instability regions:
-
-- high divergence  
-- unpredictable behavior  
+- reduce search space
+- guide trajectories
+- preserve structural continuity
 
 Thus:
 
-→ repulsive force  
+- γ increases when entering coherent corridors
+- channel adherence is preferred over free drift
 
 ---
 
-## 13. Adaptive Weights
+## 13. Instability Avoidance
 
-Weights depend on context:
+Instability regions show:
 
-| Situation | Behavior |
-|----------|--------|
+- high divergence
+- collapse tendency
+- branch explosion
+- unreliable continuation
+
+Thus:
+
+- I(x) acts as a repulsive component
+- δ rises when collapse probability increases
+
+---
+
+## 14. Overlap Navigation
+
+Overlap zones are not errors.
+
+They are:
+
+- branch-sharing regions
+- transition corridors
+- multi-future compatibility zones
+
+Policy behavior inside overlap:
+
+- slow directional commitment
+- maintain reversible motion
+- preserve optionality
+
+Thus:
+
+> overlap requires softer control, not hard branching
+
+---
+
+## 15. Branch-Aware Navigation
+
+When branch fields are active:
+
+- motion is not single-valued
+- multiple admissible futures coexist
+
+Thus:
+
+- B(x) does not force one choice
+- it shapes the fan of permitted directions
+
+Meaning:
+
+> the policy moves inside branch space before selecting a committed trajectory
+
+---
+
+## 16. Shell Consistency
+
+The system often evolves in shells:
+
+- inner source shell
+- middle guidance shell
+- outer distribution shell
+
+Therefore:
+
+- navigation must preserve shell logic
+- motion that violates shell topology becomes unstable
+
+Thus:
+
+> shell coherence is part of control
+
+---
+
+## 17. Phase Coupling
+
+The field evolves together with phase:
+
+Φ(x, t)
+
+Thus the control becomes:
+
+u(x, t) = u(F(x, t), Φ(x, t), G(x, t))
+
+Meaning:
+
+- same position may imply different controls
+- phase determines directional activation
+- color / orientation classes matter
+
+---
+
+## 18. Context-Adaptive Weights
+
+Weights are dynamic.
+
+| Situation | Policy change |
+|----------|---------------|
 | unstable region | increase δ |
 | near attractor | increase β |
 | inside channel | increase γ |
+| inside overlap | increase ε |
+| strong branch fan | increase ζ |
+| shell-sensitive zone | increase η |
 | exploration mode | increase α |
-
----
-
-## 14. Temporal Coupling
-
-Field evolves over time:
-
-F(x, t)
 
 Thus:
 
-u(x, t)
+> control is not fixed  
+> it adapts to field context
 
 ---
 
-## 15. Relation to Previous Operators
+## 19. Relation to Other Operators
 
-TMO → detects transition region  
-BSO → selects discrete branch  
-TNP → plans sequence  
+- TMO → detects transition manifolds
+- BSO → selects a discrete branch
+- MBEO → defines branch expansion geometry
+- CFO → defines continuous field orientation
+- FANP → decides how to move inside that field
 
-FANP → moves continuously inside field  
+Thus:
+
+> MBEO defines possibilities  
+> CFO defines directions  
+> FANP defines policy
 
 ---
 
-## 16. Hybrid Mode
+## 20. Hybrid Mode
 
 NEXAH can combine:
 
-- graph navigation (macro)
-- field navigation (micro)
+### Macro level
+- graph navigation
+- regime transitions
+- branch abstractions
+
+### Micro level
+- field navigation
+- channel tracking
+- local directional control
+
+Thus:
+
+> graph navigation for structure  
+> field navigation for motion
 
 ---
 
-## 17. Control Interpretation
+## 21. Control Interpretation
 
 Control is no longer:
 
-→ selecting a path  
+→ selecting a path
 
-But:
+Control becomes:
 
-→ shaping a vector field trajectory  
+→ shaping a trajectory inside a structured field
 
 ---
 
-## 18. Example Pseudocode
+## 22. Example Pseudocode
 
-def field_navigation(state, field):
+```python
+def field_navigation(state, field, phase, geometry, objective):
     v = field.flow(state)
     A = field.attractor(state)
     C = field.channel(state)
     I = field.instability(state)
+    W = field.overlap(state)
+    B = geometry.branch_field(state)
+    H = geometry.shell_field(state)
 
     u = (
-        0.4 * v
-        + 0.3 * A
-        + 0.2 * C
-        - 0.3 * I
+        0.30 * v
+        + 0.25 * A
+        + 0.20 * C
+        - 0.25 * I
+        + 0.10 * W
+        + 0.08 * B
+        + 0.07 * H
     )
 
     return u
 
----
+```
 
-## 19. Relation to Physics
+## 23. Relation to Physics
 
-The system behaves like:
+The resulting behavior resembles:
 
 - fluid flow  
-- particle in potential field  
-- gradient descent with perturbation  
+- particle motion in a potential field  
+- phase-driven advection  
+- constrained drift on a manifold  
+
+Thus:
+
+> the policy acts like a field-coupled control law  
 
 ---
 
-## 20. Core Insight
+## 24. Relation to Core Geometry
 
-The system does not choose a path.
+FANP is directly compatible with CORE_GEOMETRY:
 
-It follows the field.
+- pentagon → source asymmetry / drift  
+- hexagon → frame stabilization  
+- octagon → distribution shell  
+- heptagon → escape / reroute geometry  
+- ring manifold → directional continuity  
+- overlap zones → transfer corridors  
+
+Thus:
+
+> field-aware policy is geometry-aware policy  
 
 ---
 
-## 21. Fundamental Shift
+## 25. NEXAH Interpretation
+
+In NEXAH terms:
+
+- systems organize into fields  
+- fields generate channels  
+- channels constrain motion  
+- motion becomes navigable through policy  
+
+Thus:
+
+> navigation is the operational reading of field structure  
+
+---
+
+## 26. Practical Meaning
+
+FANP enables:
+
+- smooth regime navigation  
+- continuous control  
+- multi-agent coordination  
+- phase-aware motion  
+- geometry-respecting adaptation  
+- branch-sensitive steering  
+
+---
+
+## 27. Fundamental Shift
 
 From:
 
@@ -292,30 +596,25 @@ From:
 
 To:
 
-→ navigation inside a field  
+→ navigation inside a structured field  
 
 ---
 
-## 22. Connection to NEXAH Vision
+## 28. Conclusion
 
-This realizes:
-
-→ "systems organize into navigable flow fields"
-
----
-
-## 23. Conclusion
-
-Field-Aware Navigation enables:
+Field-Aware Navigation Policy enables:
 
 - smooth trajectories  
 - adaptive motion  
-- geometry-aware control  
+- continuous steering  
+- branch-aware control  
+- shell-aware geometry alignment  
+- phase-conditioned navigation  
 
 ---
 
 ## Final Statement
 
-The path is not selected.
+The path is not selected.  
 
-It emerges from the field.
+It emerges from alignment with the field.
