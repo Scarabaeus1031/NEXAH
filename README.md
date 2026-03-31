@@ -149,6 +149,40 @@ Simulation → Dynamics → Flow → Topology → State Graph → Navigation
   
 ---
 
+## 🧩 CORE GEOMETRY — Transition Structure
+
+Beyond field dynamics and operator control, NEXAH introduces a deeper layer:
+
+→ **transition geometry**
+
+This layer explains:
+
+- how systems move between regimes  
+- why branching occurs  
+- how trajectories organize into loops, shells, and manifolds  
+- how navigation becomes geometry-aware  
+
+### 🧠 Core Idea
+
+> A transition is not a discrete jump.  
+>  
+> It is a **structured geometric process**.
+
+### 🔗 Explore Module
+
+👉 [CORE GEOMETRY — Transition Structure](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/core_geometry/README.md)
+
+---
+
+This module provides:
+
+- oval transition manifolds  
+- cut & branch topology  
+- multi-path expansion  
+- field-aware navigation policies  
+
+---
+
 ## 🧠 Key Insight
 
 > Systems do not just evolve —  
