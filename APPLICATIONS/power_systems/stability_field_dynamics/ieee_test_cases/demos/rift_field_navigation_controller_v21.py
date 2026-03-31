@@ -2,27 +2,37 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # -------------------------------------------------
-# LOAD DATA (FIXED PATH)
+# LOAD DATA (FIXED PATH - ROBUST)
 # -------------------------------------------------
 import os
 
-BASE_PATH = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/"
+BASE_PATH = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export"
 
-states = np.load(os.path.join(BASE_PATH, "states.npy"))
-
-# rift optional (falls vorhanden)
+states_path = os.path.join(BASE_PATH, "states.npy")
 rift_path = os.path.join(BASE_PATH, "rift.npy")
+
+# --- states (required)
+if not os.path.exists(states_path):
+    raise FileNotFoundError(f"states.npy not found at: {states_path}")
+
+states = np.load(states_path)
+print("Loaded states.npy")
+
+# --- rift (optional)
 if os.path.exists(rift_path):
     rift = np.load(rift_path)
+    print("Loaded rift.npy")
 else:
     print("rift.npy not found → using zeros")
     rift = np.zeros(len(states))
 
+# -------------------------------------------------
+# EXTRACT VARIABLES
+# -------------------------------------------------
 phi = states[:, 0]
 instability = states[:, 1]
 
 t = np.arange(len(phi))
-
 # -------------------------------------------------
 # BASE PARAMETERS (from V20)
 # -------------------------------------------------
