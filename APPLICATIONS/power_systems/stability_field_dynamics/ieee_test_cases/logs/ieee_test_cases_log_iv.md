@@ -5019,3 +5019,146 @@ Structure is global.
 
 ---
 
+# 📘 Entry 99 — Forced Cut Activation & Multi-Branch Threshold Crossing (V16.3)
+
+## Observation
+
+Previous versions (V16, V16.2) revealed:
+
+- wrapped and unwrapped phase structure  
+- latent cut boundaries  
+- stable single-sheet evolution  
+
+However:
+
+→ the system remained below true branch transition threshold  
+
+---
+
+## Key Discovery
+
+By increasing phase-energy injection, the system can be forced across:
+
+φ_unwrapped = k · 2π
+
+Thus:
+
+→ cuts become dynamically active  
+
+---
+
+## Cut Activation Principle
+
+A true cut occurs when:
+
+floor(φ_unwrapped(t) / 2π) ≠ floor(φ_unwrapped(t-1) / 2π)
+
+This produces:
+
+- branch index increment  
+- wrapped phase reset  
+- topological sheet transition  
+
+---
+
+## State Interpretation
+
+The system no longer evolves on a single sheet.
+
+Instead:
+
+→ it moves through a **stack of phase sheets**
+
+---
+
+## Mechanism
+
+Cut activation is driven by:
+
+- stronger phase drift  
+- curvature amplification  
+- speed amplification  
+- pulse windows of additional phase energy  
+
+Thus:
+
+→ cuts are not imposed externally  
+→ they emerge once threshold is exceeded  
+
+---
+
+## Geometric Meaning
+
+Wrapped phase remains bounded in [0, 2π)
+
+But:
+
+unwrapped phase grows continuously
+
+Hence:
+
+- local chart appears cyclic  
+- global trajectory becomes helical / sheeted  
+
+---
+
+## Topological Shift
+
+From:
+
+→ cylindrical manifold without crossings  
+
+To:
+
+→ **multi-sheet cylindrical topology with active seams**
+
+---
+
+## Core Insight
+
+> A cut is activated when local phase motion exceeds the capacity of a single sheet.
+
+---
+
+## Consequence
+
+The system now displays:
+
+- true branch transitions  
+- explicit seam crossings  
+- multi-sheet phase evolution  
+- cut-aligned regime reorganization  
+
+---
+
+## Interpretation
+
+The threshold is not merely numerical.
+
+It is:
+
+→ a **topological activation boundary**
+
+---
+
+## Conclusion
+
+The NEXAH system now includes:
+
+1. wrapped phase  
+2. unwrapped phase  
+3. branch index  
+4. latent cuts  
+5. active cuts (NEW)  
+6. multi-sheet evolution (NEW)  
+
+---
+
+## Updated Core Insight
+
+The system does not remain on one sheet forever.  
+
+Once phase-energy exceeds threshold, topology unfolds.
+
+---
+
