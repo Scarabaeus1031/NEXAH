@@ -2,10 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # -------------------------------------------------
-# LOAD DATA
+# LOAD DATA (FIXED PATH)
 # -------------------------------------------------
-states = np.load("states.npy")
-rift = np.load("rift.npy")
+import os
+
+BASE_PATH = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/"
+
+states = np.load(os.path.join(BASE_PATH, "states.npy"))
+
+# rift optional (falls vorhanden)
+rift_path = os.path.join(BASE_PATH, "rift.npy")
+if os.path.exists(rift_path):
+    rift = np.load(rift_path)
+else:
+    print("rift.npy not found → using zeros")
+    rift = np.zeros(len(states))
 
 phi = states[:, 0]
 instability = states[:, 1]
