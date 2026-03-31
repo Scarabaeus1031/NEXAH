@@ -1,4 +1,4 @@
-# MULTI-BRANCH EXPANSION OPERATOR
+# MULTI-BRANCH EXPANSION OPERATOR (MBEO)
 
 ## Overview
 
@@ -15,7 +15,9 @@ However, observed transition geometry shows:
 - radial branch fans
 - nested polygonal shells
 - multiple valid future channels
-- internal escape routes through embedded sub-structures
+- internal escape routes
+- ring-distributed branch structures
+- phase-coded branch classes
 
 Thus:
 
@@ -30,307 +32,348 @@ The MBEO transforms a local transition event into a structured branch field.
 
 Instead of:
 
-state -> left or right
+state → left or right
 
 the system becomes:
 
-state -> fan of admissible future branches
+state → structured field of admissible future branches
 
-This fan is not arbitrary.
-
-It is organized by:
+This field is organized by:
 
 - angular separation
 - shell structure
-- nested polygon geometry
-- escape corridors
+- polygonal geometry
+- phase alignment
+- ring coupling
 
 ---
 
 ## Fundamental Insight
 
 > Branching is not binary.  
-> It is radial, layered, and geometrically constrained.
+> It is radial, layered, distributed, and phase-structured.
 
 ---
 
 ## 1. Transition Core
 
-At the center of the operator lies a transition core:
+At the center lies a transition core:
 
 - local instability point
 - overlap zone
 - branch emission center
 
-This core acts as:
+Acts as:
 
 - decision origin
 - cut generator
-- branch expansion seed
+- expansion seed
 
 ---
 
 ## 2. Branch Fan Structure
 
-From the transition core, multiple branches can emerge.
-
-These branches form:
-
-- a radial spread
-- an angular partition
-- a future possibility fan
-
-Formally:
+Branches emerge as a radial fan:
 
 B(x) = {b1, b2, ..., bn}
 
 Where:
 
 - x = transition core
-- bi = admissible branch direction
+- bi = admissible branch directions
 
 ---
 
 ## 3. Angular Decomposition
 
-Each branch occupies an angular sector around the transition center.
+Branch space is decomposed into angular sectors:
 
-Thus branch space can be decomposed as:
+Θ = ⋃ θᵢ
 
-Theta = union of theta_i
+Each θᵢ defines:
 
-Where each theta_i defines:
-
-- a branch direction
-- a local future corridor
-- a possible expansion path
+- direction
+- local future corridor
+- expansion path
 
 ---
 
-## 4. The Octagon Layer
+## 4. Pentagon-Origin Geometry
 
-The octagon appears as an outer organization shell.
-
-It functions as:
-
-- distribution geometry
-- field partition layer
-- information spread container
-- branch sector organizer
-
-Interpretation:
-
-> The pentagon defines local generative structure.  
-> The octagon distributes branch potential across the surrounding field.
-
----
-
-## 5. Pentagon-Origin Geometry
-
-The pentagon remains the primary local source form.
-
-It encodes:
+The pentagon defines:
 
 - local curvature
-- branch seed asymmetry
-- directional preference
+- asymmetry
+- drift injection
 
 Thus:
 
 - pentagon = source geometry
+
+---
+
+## 5. The Octagon Layer
+
+The octagon functions as:
+
+- distribution shell
+- field partition layer
+- angular organizer
+
+Thus:
+
 - octagon = expansion medium
 
 ---
 
-## 6. Nested Structure
+## 6. Heptagon Escape Structure
 
-Observed geometry suggests nesting:
+Inside the pentagon:
 
-- polygon inside polygon
-- shell inside shell
+- hidden heptagonal geometry
+
+Represents:
+
+- escape route
+- delayed release
+- non-central transition
+
+---
+
+## 7. Nested Structure
+
+Branch fields are nested:
+
+- polygon within polygon
+- shell within shell
 
 Meaning:
 
-> one branch field may contain another internal decision field
+> one transition may contain internal transitions
 
 ---
 
-## 7. Heptagon in Pentagon
-
-Special case:
-
-- pentagon contains
-- internal heptagonal escape geometry
-
-This represents:
-
-- internal rerouting
-- delayed release
-- hidden branch
-
----
-
-## 8. Escape Route Geometry
-
-The embedded heptagon defines:
-
-- non-central route
-- asymmetric release path
-
-Thus:
-
-> escape is encoded inside the branching source
-
----
-
-## 9. Root Shrinking
+## 8. Root Shrinking
 
 Observed effect:
 
-- outer field expands
+- outer expansion increases
 - inner root contracts
 
 Meaning:
 
-- macro possibilities increase
-- micro origin sharpens
+- macro possibilities expand
+- origin sharpens
 
 ---
 
-## 10. Shell Logic
+## 9. Shell Logic
 
 MBEO operates through shells:
 
-Inner shell:
-- transition core
-
-Middle shell:
-- pentagonal source
-
-Outer shell:
-- octagonal distribution
-
-Nested shell:
-- heptagonal escape
+- core → transition origin  
+- pentagon → generation  
+- octagon → distribution  
+- heptagon → escape  
 
 ---
 
-## 11. Operator Definition
+# --- NEW EXTENSION ---
 
-MBEO : (x, C, G) -> {b1, ..., bn}
+## 10. Ring-Distributed Expansion
+
+Branching is not only radial.
+
+Branches may be distributed along a ring:
+
+- perimeter-based expansion
+- shell-coupled nodes
+- distributed transition anchors
+
+Thus:
+
+> expansion may occur along a circular manifold  
+> not only from a central emission
+
+---
+
+## 11. Color / Phase Branch Classes
+
+Branches can carry phase identity:
+
+- color encodes direction class
+- phase shift encodes dynamic behavior
+- resonance class determines evolution
+
+Thus:
+
+> branching is phase-coded, not only geometric
+
+---
+
+## 12. Overlap Corridors
+
+Between branches:
+
+- overlap zones emerge
+
+These represent:
+
+- shared futures
+- transfer regions
+- delayed decision zones
+
+Thus:
+
+> branches are not isolated  
+> they can reconnect
+
+---
+
+## 13. Distributed Multi-Core Geometry
+
+The system may contain:
+
+- multiple local centers
+- coupled expansion zones
+- distributed decision structures
+
+Thus:
+
+> MBEO generalizes from single-core to multi-core branching systems
+
+---
+
+## 14. Operator Definition
+
+MBEO : (x, C, G) → {b₁, ..., bₙ}
 
 Where:
 
 - x = transition state
 - C = cut configuration
 - G = geometry
-- bi = branches
+- bᵢ = branches
 
 ---
 
-## 12. Extended Definition
+## 15. Extended Definition
 
-MBEO : (x, C, G_outer, G_inner) -> {b1, ..., bn, e1, ..., em}
+MBEO : (x, C, G_outer, G_inner, Φ) → {b₁, ..., bₙ, e₁, ..., eₘ}
 
 Where:
 
-- G_outer = octagon
-- G_inner = pentagon/heptagon
+- G_outer = octagon / ring structure
+- G_inner = pentagon / heptagon
+- Φ = phase field
 - e = escape branches
 
 ---
 
-## 13. Branch Classes
+## 16. Branch Classes
 
-Primary:
-- main futures
-
-Secondary:
-- derived paths
-
-Escape:
-- hidden internal exits
+- primary → main futures  
+- secondary → derived paths  
+- escape → hidden exits  
+- phase-shifted → delayed / rotating futures  
 
 ---
 
-## 14. Geometric Consequence
+## 17. Geometric Consequence
 
 The future is not a line.
 
 It is:
 
-> a layered branching volume
+> a distributed, layered branching volume
 
 ---
 
-## 15. Relation to Other Operators
+## 18. Relation to Other Operators
 
-TMO → detects transition  
-BSO → selects branch  
-TNP → navigates  
-MBEO → defines all possible branches
-
----
-
-## 16. Visual Summary
-
-- center (transition)
-- pentagon (source)
-- octagon (distribution)
-- heptagon (escape)
+- TMO → detects transition  
+- BSO → selects branch  
+- TNP → navigates  
+- MBEO → defines all possible futures  
 
 ---
 
-## 17. Dynamic Meaning
+## 19. Visual Summary
+
+![Multi-Branch Expansion Ring](./moebius_coil_navigation_diagram.png)
+
+- center → transition core  
+- pentagon → generator  
+- octagon → distribution  
+- ring → synchronization  
+- colors → phase classes  
+
+---
+
+## 20. Phase Transition Visualization
+
+![Multi-Branch Phase Expansion](./moebius_coil_transition.png)
+
+Shows:
+
+- phase drift
+- branch deformation
+- shell interaction
+- transition instability
+
+---
+
+## 21. Dynamic Meaning
 
 Occurs when:
 
 - stability breaks
 - multiple futures emerge
-- internal geometry alters outcomes
+- phase shifts occur
+- shell coupling activates
 
 ---
 
-## 18. NEXAH Interpretation
+## 22. NEXAH Interpretation
 
-- transitions are fields
-- futures are structured
-- geometry defines possibility
-
----
-
-## 19. Core Insight
-
-> The system unfolds into structured futures
+- transitions are fields  
+- futures are structured  
+- geometry defines possibility  
+- phase defines evolution  
 
 ---
 
-## 20. Strong Form
+## 23. Strong Form
 
-> The octagon distributes  
 > The pentagon generates  
-> The heptagon escapes
+> The octagon distributes  
+> The heptagon escapes  
+> The ring synchronizes  
+> The phase field differentiates  
 
 ---
 
-## 21. Practical Meaning
+## 24. Practical Meaning
 
 Enables:
 
-- multi-branch modeling
-- hidden path detection
-- nested transition analysis
+- multi-agent branching  
+- distributed decision systems  
+- hidden path detection  
+- phase-aware navigation  
+- shell-based system modeling  
 
 ---
 
-## 22. Conclusion
+## 25. Conclusion
 
 The MBEO defines transition as:
 
-- radial
-- layered
-- nested
-- geometry-driven
+- radial  
+- layered  
+- nested  
+- distributed  
+- phase-coded  
 
 ---
 
@@ -338,4 +381,4 @@ The MBEO defines transition as:
 
 Branching is not a fork.
 
-It is an expanding geometry.
+It is a distributed, phase-structured expansion geometry.
