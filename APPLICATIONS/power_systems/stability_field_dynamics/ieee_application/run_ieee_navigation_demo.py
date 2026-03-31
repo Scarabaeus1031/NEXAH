@@ -3,6 +3,7 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # --------------------------------------------------
 # 1. Synthetic IEEE-like system (lightweight demo)
@@ -32,7 +33,7 @@ def compute_field(c, dc):
 
 def detect_rift(c, dc):
     residual = dc - (0.8 * c)
-    idx = np.argsort(np.abs(residual))[:10]  # closest to zero
+    idx = np.argsort(np.abs(residual))[:10]
     return idx, residual
 
 
@@ -59,10 +60,7 @@ def compute_stability(c, dc, rift_idx):
 
 def apply_intervention(c, dc, critical_idx):
     dc_new = dc.copy()
-
-    # pull critical point toward rift
     dc_new[critical_idx] = 0.8 * c[critical_idx]
-
     return dc_new
 
 
@@ -90,6 +88,8 @@ def run_demo():
     # --- compute stability AFTER
     stability_after, _ = compute_stability(c, dc_new, rift_idx)
 
+    improvement = stability_after - stability_before
+
     # --------------------------------------------------
     # OUTPUT (Mic Drop)
     # --------------------------------------------------
@@ -97,8 +97,13 @@ def run_demo():
     print("\n⚡ NEXAH FIELD NAVIGATION RESULT\n")
     print(f"Before Stability: {stability_before:.3f}")
     print(f"After Stability:  {stability_after:.3f}")
-    print(f"\nCritical Point Index: {critical_idx}")
-    print(f"Intervention applied at c = {c[critical_idx]:.3f}")
+    print(f"Improvement:      {improvement:+.3f}")
+
+    print("\nCritical Point:")
+    print(f"  index = {critical_idx}")
+    print(f"  c = {c[critical_idx]:.3f}")
+    print(f"  dc_before = {dc[critical_idx]:.3f}")
+    print(f"  dc_after  = {dc_new[critical_idx]:.3f}")
 
     # --------------------------------------------------
     # Visualization
@@ -106,22 +111,11 @@ def run_demo():
 
     plt.figure(figsize=(8, 6))
 
-    # original system
     plt.scatter(c, dc, s=20, alpha=0.5, label="system")
+    plt.scatter(c[rift_idx], dc[rift_idx], color='green', s=50, label="rift")
+    plt.scatter(c[critical_idx], dc[critical_idx], color='red', s=80, label="critical")
+    plt.scatter(c[critical_idx], dc_new[critical_idx], color='blue', s=80, label="after")
 
-    # rift
-    plt.scatter(c[rift_idx], dc[rift_idx],
-                color='green', s=50, label="rift")
-
-    # critical point
-    plt.scatter(c[critical_idx], dc[critical_idx],
-                color='red', s=80, label="critical")
-
-    # corrected point
-    plt.scatter(c[critical_idx], dc_new[critical_idx],
-                color='blue', s=80, label="after")
-
-    # arrow (intervention)
     plt.arrow(
         c[critical_idx],
         dc[critical_idx],
@@ -137,6 +131,19 @@ def run_demo():
     plt.title("NEXAH Field Navigation — Rift & Intervention")
     plt.legend()
     plt.grid()
+
+    # --------------------------------------------------
+    # SAVE OUTPUT (🔥 important)
+    # --------------------------------------------------
+
+    output_dir = "APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results"
+    os.makedirs(output_dir, exist_ok=True)
+
+    output_path = os.path.join(output_dir, "demo_plot.png")
+
+    plt.savefig(output_path, dpi=200, bbox_inches="tight")
+
+    print(f"\n📊 Plot saved to:\n{output_path}\n")
 
     plt.show()
 
