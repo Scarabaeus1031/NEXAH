@@ -15,212 +15,240 @@ The system evolved through multiple conceptual layers:
 - wave / energy representation  
 - operator-based control  
 
+It combines:
+
+→ **theoretical structure + executable system + visual validation**
+
 ---
 
-## 📚 Log Structure
+# 📚 Log Structure
 
 The development is documented across multiple logs:
 
 | Log | Focus |
 |-----|------|
-| LOG I–II | early field discovery, manifold structure |
-| LOG III | phase dynamics and oscillatory behavior |
+| LOG I–II | field discovery, manifold structure |
+| LOG III | phase dynamics, oscillatory behavior |
 | LOG IV | wave, energy, quantization, topology |
-| LOG V | active control, operators, policy |
+| LOG V | operator system, control policy |
 
 ---
 
-## 🔥 Core Evolution
+# 🔥 Core Evolution
 
-The system transitioned through the following stages:
-
-trajectory → field → phase → state → wave → operator
+trajectory → field → phase → state → wave → operator → topology
 
 ---
 
-## 🧩 System Layers
+# 🧩 System Layers
 
-### 1. Field Layer
+## 1. Field Layer
 
-Focus:
+- attractors  
+- channels  
+- basins  
+- flow fields  
 
-- attractors
-- channels
-- basins
-- flow fields
-
-Representative scripts:
-
-- rift_flow_field_analysis.py
-- rift_force_field.py
-- rift_modal_map.py
+Scripts:
+- rift_flow_field_analysis.py  
+- rift_force_field.py  
+- rift_modal_map.py  
 
 ---
 
-### 2. Phase Layer
+## 2. Phase Layer
 
-Focus:
+- phase tracking  
+- frequency modes  
+- phase locking  
+- multi-frequency dynamics  
 
-- phase tracking
-- frequency modes
-- phase locking
-- multi-frequency control
-
-Representative scripts:
-
-- phase_tracker.py
-- rift_phase_controller.py
-- rift_phase_feedback_controller_v12.py
-- rift_phase_multifrequency_controller_v11.py
+Scripts:
+- phase_tracker.py  
+- rift_phase_controller.py  
+- rift_phase_multifrequency_controller_v11.py  
 
 ---
 
-### 3. State-Space Layer
+## 3. State-Space Layer
 
-Focus:
+- state formalization  
+- regime switching  
+- phase transitions  
+- cut / branch dynamics  
 
-- state formalization
-- regime switching
-- phase-space transitions
-- cut / branch dynamics
-
-Representative scripts:
-
-- rift_phase_state_space_v14_5.py
-- rift_phase_state_space_v16_2.py
-- rift_phase_state_space_v16_3.py
-- rift_phase_state_space_v16_4.py
+Scripts:
+- rift_phase_state_space_v14_5.py  
+- rift_phase_state_space_v16_4.py  
 
 ---
 
-### 4. Control Layer (Pre-Operator)
+## 4. Control Layer
 
-Focus:
+- layer lock  
+- predictive control  
+- projection / tangent dynamics  
 
-- layer lock
-- predictive control
-- tangent / projection control
-
-Representative scripts:
-
-- rift_layer_lock_controller.py
-- rift_predictive_controller.py
-- rift_tangent_controller.py
-- rift_projection_control.py
+Scripts:
+- rift_layer_lock_controller.py  
+- rift_predictive_controller.py  
 
 ---
 
-### 5. Operator Layer
+## 5. Operator Layer
 
-Focus:
+- engage / lock / release / nexit  
+- transition logic  
+- active geometry  
 
-- engage / lock / release / nexit
-- transition logic
-- control policy
-- active geometry
-
-Representative scripts:
-
-- rift_field_navigation_controller_v24.py
-- rift_field_navigation_controller_v25.py
-- rift_field_navigation_controller_v26.py
-- rift_field_navigation_controller_v27_triple_rhythm.py
-- rift_field_navigation_controller_v28.py
+Scripts:
+- rift_field_navigation_controller_v24.py  
+- rift_field_navigation_controller_v25.py  
+- rift_field_navigation_controller_v26.py  
+- rift_field_navigation_controller_v27_triple_rhythm.py  
+- rift_field_navigation_controller_v28.py  
 
 ---
 
-## 🔄 Version Evolution
+# 🔄 Version Evolution
 
-| Version Range | Main Concept |
-|--------------|--------------|
-| V17–V20 | field navigation and layer logic |
-| V21–V23 | ring geometry, portal structure, operator pre-form |
-| V24–V26 | OKO kernel, NEXIT gateway, ANU field |
-| V27 | triple rhythm / 3×3 closure |
-| V28 | active operator control |
-
----
-
-## 🧭 Key Concepts
-
-### Field
-
-The system is not a path but a structured flow field.
-
-### Phase
-
-Phase defines timing and governs regime switching.
-
-### State
-
-S(t) = (x, y, φ, r, state)
-
-### Wave
-
-The system can be interpreted as a probability distribution over states.
-
-### Operator
-
-Control is executed through the operator cycle:
-
-engage → lock → release → nexit
+| Version | Concept |
+|--------|--------|
+| V20 | Torus / Ring Geometry |
+| V22 | Open vs Closed |
+| V24 | OKO Core |
+| V25 | Stable Lock |
+| V26 | ANU / NEXIT |
+| V27 | Triple Rhythm |
+| V28 | Active Operator |
 
 ---
 
-## 🔁 Control Loop
+# 🎨 VISUAL GALLERY (V2)
 
-state → operator → action → new state
+## 🌍 Cross-System Validation
 
----
+### IEEE30 (Reference)
 
-## 🌐 Geometry
-
-The system is best understood as:
-
-- polar phase space  
-- ring / torus structure  
-- layered radial shells  
-- cyclic attractors  
-- gateway transitions  
+![Field](demos/visuals/field/ieee30_v66_true_state_field.png)  
+![Flow](demos/visuals/field/ieee30_v65_flow_state_mapping.png)
 
 ---
 
-## ⚙️ Outputs
+### IEEE9
 
-Typical outputs include:
-
-- trajectory data (.npy)
-- phase evolution plots
-- control signals
-- transition matrices
-- operator geometry plots
-- gateway / ring visualizations
+![ieee9](outputs/ieee9_v47_vector_field.png)
 
 ---
 
-## 📊 Analysis Tools
+### IEEE14
 
-Useful support scripts include:
-
-- rift_fft_analysis.py
-- rift_instability_detector.py
-- rift_distance_analysis.py
-- rift_field_metrics.py
-- rift_controller_metrics.py
+![ieee14](outputs/ieee14_v47_vector_field.png)
 
 ---
 
-## 🚀 Entry Points
+### IEEE57 / IEEE118
 
-Run demos with:
-
-python run_ieee_field_demo.py  
-python run_ieee_field_navigator.py  
-python run_ieee_multi_agent_demo.py  
+![ieee57](outputs/ieee57_v65_flow_state_mapping.png)  
+![ieee118](outputs/ieee118_v65_flow_state_mapping.png)
 
 ---
 
-## 🔥 Current State
+## ⚡ Field Dynamics
+
+![Stream](outputs/ieee30_v69_stream_field.png)
+
+![Collapse](demos/visuals/stability/ieee30_v58_collapse_probability.png)  
+![Stability](demos/visuals/stability/ieee30_v52_stability_distance_map.png)
+
+---
+
+## 🔥 Transition Geometry
+
+![Rift](demos/visuals/transitions/ieee30_v51_rift_boundary.png)  
+![Transition](demos/visuals/transitions/ieee30_v56_transition_geometry.png)
+
+---
+
+## 🧬 Geometry
+
+![Curvature](demos/visuals/geometry/ieee30_v67_curvature_structure.png)  
+![Expansion](demos/visuals/geometry/ieee30_v67_field_expansion.png)
+
+---
+
+## 🧭 Operator Field
+
+![OKO](demos/visuals/operator/v24_oko_ring.png)  
+![Timeline](demos/visuals/operator/v25_operator_timeline.png)  
+![ANU](demos/visuals/operator/v26_ring_anu_nexit.png)  
+![Rhythm](demos/visuals/operator/v27_triple_rhythm_timeline.png)  
+![V28](demos/visuals/operator/v28_active_operator_geometry.png)
+
+---
+
+# 🧠 Interpretation Layer
+
+## Triptych Principle
+
+Every result consists of:
+
+| Layer | Role |
+|------|------|
+| Phase | timing / internal dynamics |
+| Operator | decision / switching |
+| Geometry | observable structure |
+
+---
+
+## Operator Cycle
+
+ENGAGE → LOCK → RELEASE → NEXIT
+
+---
+
+## System Nature
+
+The system is:
+
+- not a trajectory  
+- not a static model  
+
+It is:
+
+→ a **phase-driven, operator-controlled dynamical system**
+
+---
+
+# ⚙️ Outputs
+
+- trajectories (.npy)  
+- phase plots  
+- transition matrices  
+- stability maps  
+- operator geometry  
+
+---
+
+# 📊 Analysis Tools
+
+- rift_fft_analysis.py  
+- rift_instability_detector.py  
+- rift_distance_analysis.py  
+- rift_field_metrics.py  
+- rift_controller_metrics.py  
+
+---
+
+# 🚀 Entry Points
+
+```bash
+python run_ieee_field_demo.py
+python run_ieee_field_navigator.py
+python run_ieee_multi_agent_demo.py
+```
+
+# 🔥 Current State
 
 The system is now:
 
@@ -228,106 +256,78 @@ The system is now:
 
 with:
 
-- explicit operator states  
-- transition matrices  
-- structured control flow  
-- active ring geometry  
+- operator states  
+- transition logic  
+- phase feedback  
+- structured geometry  
 
 ---
 
-## 🧠 Core Insight
+# 🧠 Core Insight
 
 The field defines possibilities.  
 The operator selects reality.
 
 ---
 
-## 🧭 Next Direction
+# 🧭 Final Statement
 
-Planned extensions include:
+This module is not a collection of scripts.
 
-- adaptive operator policies  
-- reinforcement learning integration  
-- multi-agent coordination  
-- real-time control systems  
+It is:
+
+→ a structured navigation system  
+→ a phase-controlled dynamical field  
+→ a geometry-aware operator framework  
 
 ---
 
-## 🧬 NEXAH Principle
+# 🧠 Ultimate Insight
 
-The system is not defined by motion alone.
+You are not controlling the system directly.  
 
-It is defined by:
+You are shaping the phase that generates the system.
 
-- structure  
+---
+
+## Deep Interpretation
+
+Control does not act on position.  
+
+Control acts on:
+
 - phase  
-- state  
-- decision
+- timing  
+- transition conditions  
 
 ---
 
-## 🔬 Phase-Based Controllers
+## What This Means
 
-- rift_phase_controller.py
-- rift_phase_dominant_controller_v10.py
-- rift_multi_frequency_controller_v11.py
-- rift_phase_feedback_controller_v12.py
-- rift_phase_error_lock_controller_v13.py
+The system evolves by:
 
----
+state → phase → operator → geometry
 
-## 📊 Evaluation
+Thus:
 
-- rift_controller_metrics.py
-- rift_field_metrics.py
-- rift_phase_field_metrics.py
+- geometry is not primary  
+- motion is not fundamental  
+- trajectories are not the source  
 
 ---
 
-# 📊 Current Status
+## Final Reduction
 
-- stable trajectories  
-- phase-locked dynamics  
-- multi-layer structure  
-- oscillatory field behavior  
+Everything reduces to:
 
----
-
-# 🔍 Key Insights
-
-- Rift is projection artifact  
-- System is field-based  
-- Stability = balance  
-- Motion = cycles  
-- Phase is fundamental  
-- State = (x, y, φ)  
-- Control = phase-driven  
+→ phase  
+→ decision  
+→ transition  
 
 ---
 
-# 🚧 Open Problems
+## Closing Statement
 
-- phase targeting  
-- higher-dimensional control  
-- real-time systems  
-
----
-
-# 🚀 Next Steps
-
-- V14 Phase Target Controller  
-- field navigation  
-- attractor mapping  
-
----
-
-# 🧭 Summary
-
-Trajectory → Manifold → Field → Phase → Closed Loop
-
----
-
-## Core Insight
-
-The system is not defined by states.  
-It is defined by its field, its phase, and the feedback between them.
+> The system is not driven by where it is.  
+>  
+> It is driven by how it changes.
