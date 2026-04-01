@@ -1,19 +1,20 @@
 # NEXAH / power_systems / stability_field_dynamics / iee_core_geometry
 
-**Mathematische und geometrische Grundlagen des Instruments**
+**Mathematical and Geometrical Foundations of the Instrument**
 
-Hier liegen die neuen Core-Strukturen:
+This folder contains the new core structures that form the mathematical backbone of NEXAH:
+
 - Phi–π–√2 Resonance
-- 5-Phi-Zustände + 5-Modi Drive
-- Core Geometry als Vessel / Regime-ODE
+- 5-Phi States + 5-Mode Drive
+- Core Geometry as Vessel / Regime ODE
 - Root Resonance Maps
 
-Diese Foundations werden direkt in den Field-Layer und die Navigation eingebaut.
+These foundations are directly integrated into the Field Layer and the navigation system.
 
-### Ordnerstruktur
+### Folder Structure
 
 - `phi_geometry/`      → Resonance Maps, Spirals, 3×3 Interference
-- `core_odes/`         → Regime-Navigationsgleichungen (ODEs)
+- `core_odes/`         → Regime Navigation Equations (ODEs)
 - `resonance_maps/`    → Root2025_Final_Resonance_Map, Phi-Pi-Sphere etc.
 
-Dieser Ordner ist das **mathematische Herz** des NEXAH-Instruments.
+This folder is the **mathematical heart** of the NEXAH Instrument.
