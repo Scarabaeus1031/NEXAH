@@ -1,6 +1,6 @@
 import sys
 import os
-from nexah_loader
+from nexah_loader.py
 
 import numpy as np
 import matplotlib.pyplot as plt
