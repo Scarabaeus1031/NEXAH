@@ -9,7 +9,6 @@ from APPLICATIONS.power_systems.stability_field_dynamics.ieee_application.script
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-from APPLICATIONS.power_systems.stability_field_dynamics.ieee_application.scripts.ieee_loader_v118 import load_ieee118  # Importiere den neuen Loader
 
 # --------------------------------------------------
 # 1. IEEE System laden
