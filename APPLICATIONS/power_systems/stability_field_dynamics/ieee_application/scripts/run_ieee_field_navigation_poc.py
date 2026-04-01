@@ -1,11 +1,10 @@
-# APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/scripts/run_ieee_field_navigation_poc.py
-
 import numpy as np
-from nexah_loader import load_ieee_case  # Der Import von nexah_loader funktioniert jetzt
+import os
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_final_controller_v7 import RiftFieldController
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_instability_detector import RiftInstabilityDetector
+from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.run_ieee_field_demo import load_ieee_case
 from nexah.engine.core import NEXAHKernel
-from nexah.framework.core_geometry import CoreGeometry
+from nexah.framework.core_geometry import CoreGeometry  # Der "Dietrich" als Schlüssel
 
 # ================== KONFIGURATION ==================
 IEEE_CASE = 30  # 14, 30, 57, 118, 300
@@ -66,6 +65,17 @@ improvement = avg_after - avg_before
 print("\n" + "="*60)
 print("NEXAH FIELD NAVIGATION RESULT")
 print("="*60)
+print(f"Before Stability : {avg_before:.4f}")
+print(f"After Stability  : {avg_after:.4f}")
+print(f"Improvement      : +{improvement:.4f} ({improvement*100:.2f} %)")
+print(f"Critical Faden   : Node {critical_faden}")
+print("="*60)
+
+# Optional: Plot speichern
+controller.plot_field_comparison(field, field_after, 
+                                 save_path=f"results/ieee_{IEEE_CASE}_field_navigation_poc.png")
+
+print("✅ Demo fertig. Plot gespeichert.")print("="*60)
 print(f"Before Stability : {avg_before:.4f}")
 print(f"After Stability  : {avg_after:.4f}")
 print(f"Improvement      : +{improvement:.4f} ({improvement*100:.2f} %)")
