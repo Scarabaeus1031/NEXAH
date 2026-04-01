@@ -1,9 +1,11 @@
+# APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/scripts/run_ieee_field_navigation_poc.py
+
 import numpy as np
-from nexah_loader import load_ieee_case  # Importiere den neuen Loader
+from nexah_loader import load_ieee_case  # Der Import von nexah_loader funktioniert jetzt
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_final_controller_v7 import RiftFieldController
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_instability_detector import RiftInstabilityDetector
 from nexah.engine.core import NEXAHKernel
-from nexah.framework.core_geometry import CoreGeometry  # Der "Dietrich" als Schlüssel
+from nexah.framework.core_geometry import CoreGeometry
 
 # ================== KONFIGURATION ==================
 IEEE_CASE = 30  # 14, 30, 57, 118, 300
