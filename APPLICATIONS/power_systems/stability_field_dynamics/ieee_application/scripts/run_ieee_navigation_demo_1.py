@@ -4,7 +4,7 @@ import os
 # Füge den Wurzelordner zu sys.path hinzu
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
 
-# Jetzt sollte der Import korrekt funktionieren
+# Nun den Import durchführen
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_application.scripts.ieee_loader_v118 import load_ieee118
 
 import numpy as np
