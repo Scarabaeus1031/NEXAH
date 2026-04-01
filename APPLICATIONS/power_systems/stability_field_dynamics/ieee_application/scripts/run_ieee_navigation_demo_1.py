@@ -1,11 +1,10 @@
 import sys
 import os
 
-# Füge den absoluten Pfad zum Projekt-Root (NEXAH) dynamisch hinzu
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+# Füge das Verzeichnis zum sys.path hinzu
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))  # Das aktuelle Verzeichnis hinzufügen
 
-# Nun den Import durchführen
-from APPLICATIONS.power_systems.stability_field_dynamics.ieee_application.scripts.ieee_loader_v118 import load_ieee118
+from ieee_loader_v118 import load_ieee118  # Importiere den Loader direkt aus dem aktuellen Verzeichnis
 
 import numpy as np
 import matplotlib.pyplot as plt
