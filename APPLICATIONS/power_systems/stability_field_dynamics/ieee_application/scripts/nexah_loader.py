@@ -32,6 +32,20 @@ def load_gridlabd_case(file_path):
     # Hier könnte man das GridLab-D Interface verwenden
     pass
 
+# Dynamisches Laden der IEEE-Netzwerke basierend auf der Case-ID
+def load_ieee_case(case_id):
+    """Lädt das IEEE Netzwerk basierend auf der Case-ID."""
+    if case_id == 14:
+        return load_ieee14()
+    elif case_id == 30:
+        return load_ieee30()
+    elif case_id == 57:
+        return load_ieee57()
+    elif case_id == 118:
+        return load_ieee118()
+    else:
+        raise ValueError(f"Unsupported IEEE case {case_id}")
+
 # Extrahiert nützliche Daten aus einem Pandapower-Netzwerk
 def get_network_data(net):
     """Extrahiert nützliche Daten aus einem Netzwerk."""
