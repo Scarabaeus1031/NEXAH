@@ -1,7 +1,8 @@
-# NEXAH Core Equations
+# NEXAH Core Equations – iee_core_geometry
 
-**Mathematical Foundations of the Regime Navigation System**  
-iee_core_geometry / core_ode_equations.md
+**Mathematical Foundations of the Regime Navigation System**
+
+This document summarizes the core mathematical structures developed through the 2D and 3D phases (v13–v3.8 + 3D Polar Grid).
 
 ### 1. State Vector
 \[
@@ -13,7 +14,7 @@ dc \\
 \]
 - \( c \): field coordinate (state variable)
 - \( dc \): time derivative of \( c \) (drift)
-- \( \phi_{\text{idx}} \): discrete Phi regulator state (\( 0 \dots 4 \))
+- \( \phi_{\text{idx}} \): discrete Phi regulator state (0–4)
 
 ### 2. Core Regime ODE
 \[
@@ -58,12 +59,12 @@ f_{\text{vdp}} = \beta \, dc\,(1 - c^2)
 f_{\text{compass}} = \gamma \, \sin(\omega t + \phi \cdot \delta) \cdot \cos(\omega t + \phi \cdot \delta \cdot 1.618)
 \]
 
-**Phi–π–√2 Resonance**
+**Phi–π–√2 Resonance (third dimension in 3D grid)**
 \[
 \text{resonance} = \sin(\phi \cdot \pi \cdot \sqrt{2}) \cdot \eta
 \]
 
-**Inversion (Bass-Schlüssel)**
+**Inversion**
 \[
 I(\phi) = 
 \begin{cases}
@@ -86,10 +87,8 @@ p_{\text{ramp}}(t) = \lambda \cdot t, \quad \dot{dc} \leftarrow \dot{dc} + \kapp
 \[
 V_{\text{classic}}(t) = \frac{1}{1 + \mu \cdot (\lambda t)^2}
 \]
-- \( \lambda \): load ramp rate (positive scalar)
-- \( \mu \): scaling factor that controls the steepness of the nose curve
 
-**Current parameter set (v3.8 final 2D)**  
-Q ≈ 1.62, λ ≈ 0.13, strong discrete pulse term active.
+**Current parameter set (v3.8 / 3D Polar Grid)**  
+Q ≈ 1.62, λ ≈ 0.185 (118-Bus), strong discrete pulse and resonance term.
 
-These equations form the **mathematical heart** of the NEXAH instrument and serve as the basis for all higher-dimensional extensions (3D polar grid, etc.).
+This set of equations forms the **mathematical heart** of the NEXAH instrument and is the basis for all higher-dimensional extensions (3D polar grid with Phi–π–√2 as third dimension).
