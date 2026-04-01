@@ -1,3 +1,11 @@
+import sys
+import os
+
+# Füge den Wurzelordner zu sys.path hinzu
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
+
+from APPLICATIONS.power_systems.stability_field_dynamics.ieee_application.scripts.ieee_loader_v118 import load_ieee118  # Importiere den neuen Loader
+
 import numpy as np
 import matplotlib.pyplot as plt
 import os
