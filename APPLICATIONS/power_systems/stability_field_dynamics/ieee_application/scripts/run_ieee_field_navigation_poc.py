@@ -1,5 +1,11 @@
-import numpy as np
+import sys
 import os
+
+# Füge den Wurzelordner zu sys.path hinzu (von dort aus)
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..'))
+sys.path.append(root_dir)  # Jetzt wird NEXAH korrekt aufgelöst
+
+# Nun den Import durchführen
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_final_controller_v7 import RiftFieldController
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_instability_detector import RiftInstabilityDetector
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.run_ieee_field_demo import load_ieee_case
