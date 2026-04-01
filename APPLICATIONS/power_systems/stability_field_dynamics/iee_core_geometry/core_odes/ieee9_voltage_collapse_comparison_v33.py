@@ -1,6 +1,6 @@
 """
 NEXAH vs. Classical Voltage Collapse — Version 3.3
-Stärkster Drive + aggressiver Phase-Error-Lock (Ziel: Phi-Split)
+Stärkster Drive + aggressiver Phase-Error-Lock (Ziel: Phi-Split + V28-Style)
 """
 
 import numpy as np
@@ -39,7 +39,7 @@ def nexah_regime_ode(t, x, params):
     return [d_c, d_dc, d_phi]
 
 def ieee9_load_ramp(t):
-    return 0.085 * t   # sehr stark
+    return 0.085 * t
 
 def ieee9_regime_ode(t, x, params):
     dx = nexah_regime_ode(t, x, params)
