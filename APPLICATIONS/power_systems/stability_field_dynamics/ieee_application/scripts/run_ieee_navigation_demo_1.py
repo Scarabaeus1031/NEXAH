@@ -1,8 +1,8 @@
 import sys
 import os
 
-# Füge den Wurzelordner zum sys.path hinzu (Gehe vier Ebenen nach oben, um zum Root-Verzeichnis zu gelangen)
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../../..')))
+# Füge den absoluten Pfad zum Root-Verzeichnis des Projekts zu sys.path hinzu
+sys.path.append('/Users/tho2020/Documents/GitHub/NEXAH')  # Dein absoluter Pfad zum Projekt-Root
 
 # Nun den Import durchführen
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_application.scripts.ieee_loader_v118 import load_ieee118
