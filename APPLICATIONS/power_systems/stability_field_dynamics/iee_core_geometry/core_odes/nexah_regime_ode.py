@@ -1,8 +1,6 @@
 """
 NEXAH Regime Navigation ODE
-Core Geometry Vessel — Version 1.0
-
-This is the central mathematical engine of the NEXAH Instrument.
+Core Geometry Vessel — Version 1.1 (Fast)
 """
 
 import numpy as np
@@ -23,18 +21,13 @@ def nexah_regime_ode(t, x, params):
     c, dc, phi_idx = x
     phi = float(phi_idx)
 
-    # Field Flow (V69 style)
     field_force = -0.3 * c * (c**2 - 1.0) + 0.8 * dc
-
-    # P-Drive
     p_drive = P_MODES[int(phi)]
 
-    # Kuramoto + Q feedback
     q_feedback = params.get('Q', 1.0)
     coupling = K_BASE * (1.0 + Q_SCALE * q_feedback)
     kuramoto = coupling * np.sin(2 * np.pi * (phi / PHI_STATES))
 
-    # Operator (simple oscillation for now)
     operator = 0.15 * np.sin(2 * np.pi * t / 5.0)
 
     d_c  = dc
@@ -43,21 +36,22 @@ def nexah_regime_ode(t, x, params):
 
     return [d_c, d_dc, d_phi]
 
-# ====================== SIMULATION + PLOT ======================
+# ====================== SIMULATION ======================
 if __name__ == "__main__":
-    print("🚀 NEXAH Regime ODE initialized.")
+    print("🚀 NEXAH Regime ODE (fast version)")
     print("5-Phi States + 5-Mode Drive + Q-feedback active.\n")
 
     params = {'Q': 1.2}
-    x0 = [0.1, 0.0, 0.0]          # start in Neutral state
+    x0 = [0.1, 0.0, 0.0]
 
     sol = solve_ivp(
         fun=lambda t, x: nexah_regime_ode(t, x, params),
-        t_span=(0, 80),
+        t_span=(0, 40),           # kürzer → schneller
         y0=x0,
         method='RK45',
-        rtol=1e-6,
-        atol=1e-8
+        rtol=1e-5,
+        atol=1e-8,
+        max_step=0.2              # schneller rechnen
     )
 
     t = sol.t
@@ -65,45 +59,31 @@ if __name__ == "__main__":
     dc = sol.y[1]
     phi_idx = sol.y[2]
 
-    print(f"✅ Simulation finished — {len(t)} steps computed.")
+    print(f"✅ Simulation fertig — {len(t)} Schritte")
 
-    # ------------------- Plot -------------------
+    # ====================== PLOT ======================
     fig, axs = plt.subplots(2, 2, figsize=(12, 8))
-    fig.suptitle("NEXAH Regime Navigation — Core ODE Simulation", fontsize=16)
+    fig.suptitle("NEXAH Regime Navigation — Core ODE Test", fontsize=14)
 
-    # 1. c over time
     axs[0,0].plot(t, c, color='blue')
     axs[0,0].set_title("State c(t)")
-    axs[0,0].set_xlabel("Time")
     axs[0,0].grid(True)
 
-    # 2. Phase portrait (c vs dc)
     axs[0,1].plot(c, dc, color='darkred')
     axs[0,1].set_title("Phase Portrait (c vs dc)")
-    axs[0,1].set_xlabel("c")
-    axs[0,1].set_ylabel("dc")
     axs[0,1].grid(True)
 
-    # 3. Phi state over time
     axs[1,0].plot(t, phi_idx, color='green', drawstyle='steps-post')
-    axs[1,0].set_title("Phi State (0–4)")
-    axs[1,0].set_xlabel("Time")
+    axs[1,0].set_title("Phi State")
     axs[1,0].set_yticks(range(5))
     axs[1,0].set_yticklabels(PHI_NAMES)
     axs[1,0].grid(True)
 
-    # 4. Text info
     axs[1,1].axis('off')
-    info = f"""
-NEXAH Core ODE Test
-Q feedback = {params['Q']}
-Start Phi   = {PHI_NAMES[0]}
-Final Phi   = {PHI_NAMES[int(phi_idx[-1])]}
-Steps       = {len(t)}
-    """
-    axs[1,1].text(0.05, 0.5, info, fontsize=11, va='center', ha='left')
+    info = f"Q = {params['Q']}\nStart Phi = {PHI_NAMES[0]}\nEnd Phi = {PHI_NAMES[int(phi_idx[-1])]}"
+    axs[1,1].text(0.05, 0.5, info, fontsize=11, va='center')
 
     plt.tight_layout()
+    plt.savefig("core_odes/nexah_regime_test.png", dpi=150, bbox_inches='tight')
+    print("📸 Plot gespeichert als: core_odes/nexah_regime_test.png")
     plt.show()
-
-    print("Plot angezeigt.")
