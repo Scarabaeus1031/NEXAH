@@ -1,23 +1,23 @@
 import sys
 import os
-from nexah_loader.py
+import nexah_loader  # Der richtige Import des Loader-Moduls
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-# --- 1. Laden des Systems ---
-def load_system(network_type='ieee118'):
-    """Lädt das gewünschte Netzwerk basierend auf dem angegebenen Typ."""
-    if network_type == 'ieee118':
-        net = load_ieee118()
-    elif network_type == 'ieee30':
-        net = load_ieee30()
-    else:
-        raise ValueError(f"Unsupported network type: {network_type}")
-    
+# --------------------------------------------------
+# 1. IEEE System laden
+# --------------------------------------------------
+
+def load_system():
+    # Wählen Sie das IEEE 118-Netzwerk aus dem Loader
+    net = nexah_loader.load_ieee118()  # Verwenden des neuen Loaders
     return net
 
-# --- 2. Synthetic IEEE-like system (lightweight demo) ---
+# --------------------------------------------------
+# 2. Synthetic IEEE-like system (lightweight demo)
+# --------------------------------------------------
+
 def generate_system(n=200):
     np.random.seed(42)
     c = np.linspace(0.2, 1.2, n)
@@ -26,13 +26,27 @@ def generate_system(n=200):
     dc = dc + noise
     return c, dc
 
-# --- 3. Rift detection (zero residual region) ---
+# --------------------------------------------------
+# 3. Field (vector field approximation)
+# --------------------------------------------------
+
+def compute_field(c, dc):
+    ddc = np.gradient(dc)
+    return ddc
+
+# --------------------------------------------------
+# 4. Rift detection (zero residual region)
+# --------------------------------------------------
+
 def detect_rift(c, dc):
     residual = dc - (0.8 * c)
     idx = np.argsort(np.abs(residual))[:10]
     return idx, residual
 
-# --- 4. Stability metric ---
+# --------------------------------------------------
+# 5. Stability metric
+# --------------------------------------------------
+
 def compute_stability(c, dc, rift_idx):
     rift_c = c[rift_idx]
     rift_dc = dc[rift_idx]
@@ -45,16 +59,23 @@ def compute_stability(c, dc, rift_idx):
     stability = 1.0 - np.mean(distances)
     return stability, np.array(distances)
 
-# --- 5. Intervention (simple correction) ---
+# --------------------------------------------------
+# 6. Intervention (simple correction)
+# --------------------------------------------------
+
 def apply_intervention(c, dc, critical_idx):
     dc_new = dc.copy()
     dc_new[critical_idx] = 0.8 * c[critical_idx]
     return dc_new
 
-# --- 6. Main demo ---
-def run_demo(network_type='ieee118'):
+# --------------------------------------------------
+# 7. Main demo
+# --------------------------------------------------
+
+def run_demo():
+
     # --- load the system
-    net = load_system(network_type)
+    net = load_system()  # Laden des IEEE 118-Netzwerks
 
     # --- generate synthetic system
     c, dc = generate_system()
@@ -79,6 +100,7 @@ def run_demo(network_type='ieee118'):
     # --------------------------------------------------
     # OUTPUT (Mic Drop)
     # --------------------------------------------------
+
     print("\n⚡ NEXAH FIELD NAVIGATION RESULT\n")
     print(f"Before Stability: {stability_before:.3f}")
     print(f"After Stability:  {stability_after:.3f}")
@@ -138,4 +160,4 @@ def run_demo(network_type='ieee118'):
 # --------------------------------------------------
 
 if __name__ == "__main__":
-    run_demo(network_type='ieee118')
+    run_demo()
