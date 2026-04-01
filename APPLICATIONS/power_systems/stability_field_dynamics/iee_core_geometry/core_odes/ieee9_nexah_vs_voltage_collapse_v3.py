@@ -1,0 +1,109 @@
+"""
+NEXAH vs. Classical Voltage Collapse — Version 3.0
+Mit phase-error-lock aus v13 + starker Load Ramp
+"""
+
+import numpy as np
+from scipy.integrate import solve_ivp
+import matplotlib.pyplot as plt
+
+PHI_NAMES = ["Neutral", "Forward1", "Forward2", "Reverse1", "Reverse2"]
+
+# ====================== NEXAH CORE + PHASE-ERROR-LOCK (v13 Style) ======================
+def nexah_regime_ode(t, x, params):
+    c, dc, phi_idx = x
+    phi = int(phi_idx)
+
+    field_force = -0.35 * c * (c**2 - 1.0) + 0.92 * dc
+    p_drive = [0.0, 0.85, 1.48, -1.0, -1.7][phi]
+
+    q = params.get('Q', 1.4)
+    coupling = 1.0 + 0.98 * q
+    kuramoto = 0.0
+    for i in range(5):
+        delta = (phi - i) / 5.0
+        kuramoto += coupling * np.sin(2 * np.pi * delta)
+
+    vdp_force = 0.65 * dc * (1.0 - c**2)
+
+    # Phase-Error-Lock aus v13
+    angle = 2 * np.pi * t / 4.2 + phi * 1.0
+    compass_op = 0.52 * np.sin(angle) * np.cos(angle * 1.618)
+
+    inversion = 1.0
+    if phi >= 3:
+        inversion = 0.4 + 0.6 * np.tanh((phi - 2.4) * 3.2)
+
+    d_c  = dc
+    d_dc = (field_force + p_drive + kuramoto + vdp_force + compass_op) * inversion
+    d_phi = 0.0
+
+    return [d_c, d_dc, d_phi]
+
+def ieee9_load_ramp(t):
+    return 0.055 * t   # stark, damit Phi springt
+
+def ieee9_regime_ode(t, x, params):
+    dx = nexah_regime_ode(t, x, params)
+    p_ramp = ieee9_load_ramp(t)
+    dx[1] += p_ramp * 1.2
+    return dx
+
+def classical_voltage(load_factor):
+    return 1.0 / (1.0 + 0.62 * load_factor**2)   # deutlichere Nose-Curve
+
+# ====================== SIMULATION ======================
+if __name__ == "__main__":
+    print("🚀 NEXAH vs. Classical Voltage Collapse — v3.0 (mit phase-error-lock)")
+
+    params = {'Q': 1.4, 'use_vdp': True}
+    x0 = [0.05, 0.0, 0]
+
+    sol = solve_ivp(
+        fun=lambda t, x: ieee9_regime_ode(t, x, params),
+        t_span=(0, 80),
+        y0=x0,
+        method='RK45',
+        rtol=1e-6,
+        max_step=0.04
+    )
+
+    t = sol.t
+    c = sol.y[0]
+    dc = sol.y[1]
+    phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
+
+    load_factor = ieee9_load_ramp(t)
+    classical_voltage_curve = classical_voltage(load_factor)
+
+    print(f"✅ Fertig — End Phi = {PHI_NAMES[phi_idx[-1]]}")
+
+    fig, axs = plt.subplots(3, 1, figsize=(14, 10))
+    fig.suptitle("NEXAH vs. Classical Voltage Collapse — IEEE 9-Bus (v3.0 mit phase-error-lock)", fontsize=16)
+
+    axs[0].plot(t, c, color='blue', linewidth=1.8)
+    axs[0].set_title("NEXAH State c(t)")
+    axs[0].grid(True, alpha=0.5)
+
+    axs[1].plot(t, phi_idx, color='green', drawstyle='steps-post', linewidth=2.5)
+    axs[1].set_title("NEXAH Phi State (Regulator)")
+    axs[1].set_yticks(range(5))
+    axs[1].set_yticklabels(PHI_NAMES)
+    axs[1].grid(True, alpha=0.5)
+
+    axs[2].plot(t, classical_voltage_curve, color='red', linewidth=2, label="Klassische Voltage Magnitude")
+    axs[2].set_title("Klassische Voltage Magnitude (kritischster Bus)")
+    axs[2].set_xlabel("Time / Load Ramp")
+    axs[2].grid(True, alpha=0.5)
+
+    # Markierung des ersten Phi-Wechsels
+    if np.any(phi_idx > 0):
+        switch_idx = np.where(phi_idx > 0)[0][0]
+        switch_time = t[switch_idx]
+        for ax in axs:
+            ax.axvline(x=switch_time, color='purple', linestyle='--', alpha=0.8, linewidth=1.5, label=f'Phi-Split bei t={switch_time:.1f}')
+
+    plt.tight_layout()
+    plt.savefig("ieee9_nexah_vs_voltage_collapse_v3.png", dpi=240, bbox_inches='tight')
+    print("📸 Vergleich v3 gespeichert als: ieee9_nexah_vs_voltage_collapse_v3.png")
+    plt.show()
