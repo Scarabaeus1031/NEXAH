@@ -129,6 +129,60 @@ Systems do not fail randomly.
 They move along
 ---
 
+# NEXAH: Field-Based Navigation System
+
+NEXAH is a field-based navigation framework designed for navigating complex dynamical systems. The framework leverages structural coherence and instability detection to provide predictive control and stability optimization across various applications.
+
+## Key Features
+- **Field-based system modeling**
+- **Instability detection**: Identifying rifts (critical instability corridors)
+- **Minimal intervention**: Applying targeted interventions to stabilize systems
+- **Applications**: Power grids, oscillatory systems, data centers, distributed systems
+
+## Modules
+- **IEEE Power Systems**: Load and control power grids.
+- **Multi-Agent Systems**: Local agent interaction for system coherence.
+- **Core Geometry**: Utilizing geometric constraints to improve navigation accuracy.
+
+## Getting Started
+1. Clone the repository
+2. Install dependencies
+3. Run the demo
+
+For detailed usage, see [START_HERE.md](./START_HERE.md)
+
+## Why NEXAH?
+- NEXAH moves beyond static analysis by actively navigating complex systems.
+- It finds critical instabilities before they lead to collapse and applies minimal interventions to optimize system stability.
+
+---
+
+
+NEXAH/
+├── ieee_application/                  # Hauptordner für IEEE-Anwendungen
+│   ├── README.md                      # Leistungsübersicht, Anwendung, Schritte
+│   ├── START_HERE.md                  # Einstiegspunkt für neue Nutzer
+│   ├── run_ieee_navigation_demo.py    # Haupt-Demo für das Navigieren von IEEE-Netzen
+│   ├── results/                       # Hier werden Ergebnisse gespeichert
+│   │   └── demo_plot.png              # Visualisierungen und Diagramme
+│   └── modules/                       # Hier sind die Hauptmodule gespeichert
+│       ├── field_navigation/          # Modelle und Algorithmen für Field Navigation
+│       ├── core_geometry/             # Core Geometry Logik
+│       ├── multiagent_systems/        # Multi-Agenten Koordination
+│       └── rift_detection/            # Module zur Rift-Detektion und Stabilitätsmessung
+├── demos/                            # Demos und Beispielanwendungen
+│   ├── run_ieee_field_demo.py         # Minimal demo zur Visualisierung und Test von IEEE
+│   ├── run_lorenz_attractor_demo.py   # Alternativdemo für Chaos-Systeme
+│   └── run_multiagent_demo.py         # Demo für Multi-Agenten-Interaktion
+├── docs/                             # Dokumentationen zu NEXAH, Forschung, etc.
+│   ├── NEXAH_Research_Vision.md       # Forschungsvision und Weiterentwicklung
+│   ├── NEXAH_Field_Modeling_Guide.md  # Detaillierter Leitfaden für das Modellieren von Feldern
+│   └── NEXAH_Tutorial.md              # Schritt-für-Schritt-Anleitung zur Anwendung von NEXAH
+└── results/                          # Ergebnisse von Demos und Tests
+    └── ieee_field_navigation_results.csv
+
+
+
 ### Nächste Schritte
 
 1. **NEXAH** ist nun nicht nur ein Analysetool, sondern ein **Navigationsframework** für komplexe Systeme, das in realen Szenarien wie Stromnetzen aktiv **Interventionen** durchführt.
