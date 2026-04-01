@@ -1,6 +1,6 @@
 import sys
 import os
-from nexah_loader import load_ieee118, load_ieee30, load_matpower_case  # Der erweiterte Loader
+from nexah_loader
 
 import numpy as np
 import matplotlib.pyplot as plt
