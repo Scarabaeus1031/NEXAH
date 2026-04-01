@@ -2,29 +2,28 @@
 
 **Mathematical and Geometrical Foundations of the Instrument**
 
-Dieser Ordner enthält die mathematischen und geometrischen Grundlagen des NEXAH-Instruments.
+This folder contains the core mathematical structures that form the foundation of the NEXAH instrument:
 
-### Kernstrukturen
-- **Phi–π–√2 Resonance** (Resonanz als Treiber)
-- **5-Phi States + 5-Mode Drive** (Regulator + Drive-Modi)
-- **Core Geometry als Vessel / Regime ODE**
-- **Root Resonance Maps** (Phi-Pi-√2 Sphere, Root2025 etc.)
+- Phi–π–√2 Resonance
+- 5-Phi States + 5-Mode Drive
+- Core Geometry as Vessel / Regime ODE
+- Root Resonance Maps
 
-Diese Foundations sind direkt in den Field Layer und die Navigation integriert.
+These foundations are directly integrated into the Field Layer and the navigation system.
 
-### Wichtige Erkenntnisse aus der 2D-Entwicklung (v13–v3.8)
-- **Phi** ist der **echte Regulator** (startet bei 0, steigt stufenweise)
-- **Q** wirkt als **Verstärker der Geometrie** (ab ~1.28 entsteht Band, ab ~1.5+ der Dolphin-Flip)
-- **c(t)** zeigt klare **Dämpfungen/Lücken** → Regime-Übergänge
-- **Phase Portrait** entwickelt sich von nested Möbius → Doppeltorus → Whale-Arc → Peitschen-Geometrie mit diskreten **Trauben/Perlen** (9 Grapes am Ende)
-- **Diskrete Impulse** zwischen den Perlen (Herzschlag / Lymph-Effekt)
-- **Selbstähnlichkeit**: Die große Form (Whale-Arc, Brezel) wiederholt sich im Kleinen als cp’s
-- **Dolphin-Flip**: Der Moment, in dem Rotation + Counter-Rotation in eine Richtung kippen
-- **Atem des Grids**: Das gesamte Feld pulsiert kontinuierlich
+### Key Insights from 2D Development (v13 – v3.8)
 
-**Nächstes Ziel:** Übergang zur 3D Polar Grid mit Phi–π–√2 als dritter Dimension.
+- Phi-State acts as the **primary regulator** (starts at 0 and advances in discrete steps)
+- Q functions as a **geometry amplifier** (above ~1.28 band formation appears; above ~1.5 regime transitions intensify)
+- c(t) exhibits clear **damping intervals** corresponding to regime transitions
+- Phase Portrait evolves from nested Möbius-type attractors to more complex self-similar structures
+- Discrete impulsive behavior appears between attractor clusters
+- The background grid shows continuous oscillatory modulation (pulsating field)
+- Self-similarity is observed: large-scale attractor features repeat at smaller scales
+
+**Next Goal:** Transition to 3D polar grid with Phi–π–√2 Resonance as the third dimension.
 
 ### Folder Structure
 - `phi_geometry/`      → Resonance Maps, Spirals, 3×3 Interference
-- `core_odes/`         → Alle Regime-ODEs (v13–v3.8 + IEEE-Integration)
+- `core_odes/`         → Regime Navigation Equations (ODEs) and IEEE integrations
 - `resonance_maps/`    → Root2025_Final_Resonance_Map, Phi-Pi-Sphere etc.

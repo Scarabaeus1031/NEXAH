@@ -1,31 +1,30 @@
 # NEXAH Visual Gallery – Core ODE Evolution
 
-**Stand:** April 2026 | iee_core_geometry/core_odes/
+**Status:** April 2026 | iee_core_geometry/core_odes/
 
-### Wichtige Versionen & Erkenntnisse
+### Important Versions & Insights
 
 **v1.9 – v2.0**  
-Starke nested Schlaufen + 3 Lücken → Final nested Möbius + klares Band
+Strong nested loops + 3 damping intervals → final nested Möbius attractor with clear band formation
 
-**v3.0 – v3.7**  
-IEEE 9-Bus Integration + Dolphin-Flip + Phi–π–√2 Resonance
+**v3.0 – v3.8 (2D Final)**  
+IEEE 9-Bus integration, regime transitions and Phi–π–√2 Resonance
 
 **v3.8 (2D Final)**  
-- 9 klare Grapes / Trauben am Ende  
-- Atmendes Grid (kontinuierliches Pulsieren)  
-- Peitschen-Impuls zwischen den Perlen (Herzschlag / Lymph-Effekt)  
-- Selbstähnlichkeit: große Form (Whale-Arc, Brezel) wiederholt sich im Kleinen  
-- Schlange mit 2 Augen + Pupillen, L/W/M-Formen, Hook  
-- Counter-intuitive Energie: kleine Vibrationen speisen den großen Release
+- 9 distinct clusters visible at the end of the attractor  
+- Continuous oscillatory modulation of the background grid  
+- Discrete impulsive behavior between attractor clusters  
+- Self-similarity: large-scale attractor features repeat at smaller scales  
+- Clear regime transition (inversion point) visible in state space
 
-### Wichtige Beobachtungen
-- Phi-State ist der **Regulator** (kommt aus 0, steigt stufenweise)
-- Q wirkt als **Verstärker der Geometrie**
-- Phase Portrait zeigt den Übergang: nested Möbius → Doppeltorus → Whale-Arc → Peitschen-Geometrie
-- Diskrete Impulse zwischen den Perlen = „Lymphfluss“
-- Das Grid **atmet** kontinuierlich
-- Die großen Strukturen erscheinen als cp’s im Kleinen (Selbstähnlichkeit)
+### Key Observations
+- Phi-State functions as the **regulator** (starts at 0 and advances stepwise)
+- Q acts as **geometry amplifier**
+- c(t) shows periodic damping intervals (regime transitions)
+- Phase Portrait reveals progressive development from nested loops to complex self-similar structures
+- Discrete pulses appear between attractor clusters
+- The grid exhibits continuous pulsation
 
-**Nächstes Ziel:** 3D Polar Grid mit Phi–π–√2 als dritter Dimension (begehbarer Raum).
+**Next Goal:** Move to 3D polar grid with Phi–π–√2 Resonance as the third dimension.
 
-Die Plots liegen in `core_odes/ieee9_nexah_vs_voltage_collapse_v*.png`
+Plots are located in `core_odes/ieee9_nexah_vs_voltage_collapse_v*.png`
