@@ -75,15 +75,4 @@ print("="*60)
 controller.plot_field_comparison(field, field_after, 
                                  save_path=f"results/ieee_{IEEE_CASE}_field_navigation_poc.png")
 
-print("✅ Demo fertig. Plot gespeichert.")print("="*60)
-print(f"Before Stability : {avg_before:.4f}")
-print(f"After Stability  : {avg_after:.4f}")
-print(f"Improvement      : +{improvement:.4f} ({improvement*100:.2f} %)")
-print(f"Critical Faden   : Node {critical_faden}")
-print("="*60)
-
-# Optional: Plot speichern
-controller.plot_field_comparison(field, field_after, 
-                                 save_path=f"results/ieee_{IEEE_CASE}_field_navigation_poc.png")
-
 print("✅ Demo fertig. Plot gespeichert.")
