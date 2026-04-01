@@ -1,7 +1,7 @@
 import numpy as np
+from nexah_loader import load_ieee_case  # Importiere den neuen Loader
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_final_controller_v7 import RiftFieldController
 from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.rift_instability_detector import RiftInstabilityDetector
-from APPLICATIONS.power_systems.stability_field_dynamics.ieee_test_cases.demos.run_ieee_field_demo import load_ieee_case
 from nexah.engine.core import NEXAHKernel
 from nexah.framework.core_geometry import CoreGeometry  # Der "Dietrich" als Schlüssel
 
