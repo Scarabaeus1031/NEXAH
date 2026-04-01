@@ -1,7 +1,8 @@
 import pandapower as pp
 import numpy as np
-import matpower as mp
+import matpower as mp  # Dieser Import könnte später verwendet werden
 
+# IEEE Netzwerke laden
 def load_ieee14():
     """Lädt das IEEE 14-Bus Netzwerk von Pandapower."""
     return pp.networks.case14()
@@ -18,17 +19,20 @@ def load_ieee118():
     """Lädt das IEEE 118-Bus Netzwerk von Pandapower."""
     return pp.networks.case118()
 
+# Matpower Unterstützung - noch nicht implementiert
 def load_matpower_case(file_path):
     """Lädt ein Matpower Netzwerk."""
     # Hier könnte man das Matpower Python Interface verwenden
     # Beispiel: mp.loadcase(file_path)
     pass
 
+# GridLab-D Unterstützung - noch nicht implementiert
 def load_gridlabd_case(file_path):
     """Lädt ein GridLab-D Netzwerk."""
     # Hier könnte man das GridLab-D Interface verwenden
     pass
 
+# Extrahiert nützliche Daten aus einem Pandapower-Netzwerk
 def get_network_data(net):
     """Extrahiert nützliche Daten aus einem Netzwerk."""
     return {
@@ -37,6 +41,7 @@ def get_network_data(net):
         "load": net.load
     }
 
+# Speichert den Zustand eines Netzwerks als CSV (oder ein anderes Format)
 def save_network_state(state, path):
     """Speichert den Zustand des Netzwerks (z.B. als .json oder .csv)."""
     np.savetxt(path, state)
