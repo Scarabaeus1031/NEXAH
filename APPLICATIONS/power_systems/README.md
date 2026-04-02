@@ -2,551 +2,73 @@
 
 **Power System Stability & Intelligent Field Navigation**
 
-This folder contains the core applications and tests of NEXAH for real power grids.  
-The goal is to demonstrate **practical, geometry-driven early detection** of voltage collapse in complex dynamic systems.
+This folder contains the core applications and tests of NEXAH on real power grids.  
+It demonstrates **practical, geometry-driven early detection** of voltage collapse in complex dynamic systems.
+
+**Stability is not a static state — it is a geometry evolving in time.**
 
 ### Current Status – Mic-Drop Achieved (April 2026)
 
-NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks.
+NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks — consistently across four different grid sizes.
 
-| Network       | Phi-Split | Lead Time vs. Classical Collapse | Status                  |
-|---------------|-----------|----------------------------------|-------------------------|
-| IEEE 118-Bus  | 36.10 s   | **43.9 s**                       | Confirmed               |
-| IEEE 300-Bus  | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!   |
+| Network                | Phi-Split | Lead Time vs. Classical Collapse | Status                     |
+|------------------------|-----------|----------------------------------|----------------------------|
+| IEEE 118-Bus           | 36.10 s   | **43.9 s**                       | Confirmed                  |
+| IEEE 300-Bus           | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!      |
+| IEEE 1354-Bus          | 36.10 s   | **43.9 s**                       | Confirmed                  |
+| IEEE 9241-Bus (PEGASE) | 36.10 s   | **43.9 s**                       | Confirmed (largest test)   |
 
-**Final Showcase**  
-[`NEXAH_MicDrop_IEEE300_Final.png`](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
-→ “NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method”
+**Final Showcase**
+
+![NEXAH Mic-Drop on IEEE 300-Bus](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
+*NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method*
+
+![IEEE 9241-Bus – Phi-Split at t=36.10 s](stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee9241_real_tunable_v12.7_4panel_iota_ring.png)  
+*IEEE 9241-Bus (PEGASE) – identical Phi-Split despite 78× larger network*
 
 ### Why this matters
-Classical methods only react when the voltage already collapses.  
-NEXAH observes the **geometric evolution** of the field (drift, resonance, phase regulator) and triggers a clear warning **well before** the critical point.  
+
+Classical methods only react when the voltage has already begun to collapse.  
+NEXAH observes the **geometric evolution of the field** (drift, resonance, Phi-Regulator, Iota-Ring) and issues a clear warning **well before** the critical point.
+
 This is the first practical demonstration that geometry-based navigation can deliver measurable early warning in real power systems.
+
+### Two Entry Points
+
+#### 1. 🔬 Scientific / Physical Layer  
+→ Physical interpretation, IEEE validation, collapse prediction, metrics  
+*(You are here)*
+
+#### 2. 🧠 Operator / System Layer  
+→ Full system architecture, operator logic, visual gallery, navigation concepts  
+→ See: [NEXAH MASTER INDEX & VISUAL GALLERY](stability_field_dynamics/iee_core_geometry/demos/NEXAH_MASTER_INDEX_GALLERY.md)
 
 ### Folder Structure & Key Resources
 
 - **[stability_field_dynamics/](stability_field_dynamics/)**  
-  Main research area with Core ODE, IEEE testing and foundations.
+  Core research area with regime ODE, IEEE testing and mathematical foundations
 
 - **[ieee_application/](ieee_application/)** (in progress)  
-  Full application layer and interactive demos.
-
-- **[ieee_test_cases/](ieee_test_cases/)**  
-  Classical benchmarks and test cases.
-
-**Important Links inside stability_field_dynamics:**
-- [iee_core_geometry/README.md](stability_field_dynamics/iee_core_geometry/README.md) – Mathematical and geometrical foundations
-- [Building Log](stability_field_dynamics/iee_core_geometry/BUILDING_LOG.md) – Complete development history (v7.x → v12.7)
-- [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md) – All important plots and evolution
-- [IEEE Scaling Tests](stability_field_dynamics/iee_core_geometry/ieee_scaling/README.md) – Final Mic-Drop validation on 118-Bus and 300-Bus
-
-### Technical Core (iee_core_geometry)
-- **Core ODE v12.7** – Lorenz + Iota-Ring (12.0 → 13.7) + absolute lock + Nexus-Hold
-- **Phi-Regulator** with strong Forward2 (P-Regulator) hold
-- 7-Arc Lattice, CON~DAO waves, Sun-Moon-Kiss trigger, Black Attractor
-
----
-
-**Author:** Thomas K. R. Hofmann  
-**Date:** 03 April 2026
-
-NEXAH is transitioning from geometric exploration to a **functional instrument** for intelligent navigation in complex power systems.
-
-
-------- old ---- 
-
-# NEXAH / power_systems
-
-**Power System Stability & Intelligent Field Navigation**
-
-This folder contains the core applications and tests of NEXAH for real power grids.  
-The goal is to demonstrate **practical, geometry-driven early detection** of voltage collapse in complex dynamic systems.
-
-### Current Status – Mic-Drop Achieved (April 2026)
-
-NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks.
-
-| Network       | Phi-Split | Lead Time vs. Classical Collapse | Status                  |
-|---------------|-----------|----------------------------------|-------------------------|
-| IEEE 118-Bus  | 36.10 s   | **43.9 s**                       | Confirmed               |
-| IEEE 300-Bus  | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!   |
-
-**Final Showcase**  
-[`NEXAH_MicDrop_IEEE300_Final.png`](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
-→ “NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method”
-
-### Why this matters
-Classical methods only react when the voltage already collapses.  
-NEXAH observes the **geometric evolution** of the field (drift, resonance, phase regulator) and triggers a clear warning **well before** the critical point.  
-This is the first practical demonstration that geometry-based navigation can deliver measurable early warning in real power systems.
-
-### Folder Structure & Key Resources
-
-- **[stability_field_dynamics/](stability_field_dynamics/)**  
-  Main research area with Core ODE, IEEE testing and foundations.
-
-- **[ieee_application/](ieee_application/)** (in progress)  
-  Full application layer and interactive demos.
-
-- **[ieee_test_cases/](ieee_test_cases/)**  
-  Classical benchmarks and test cases.
-
-**Important Links inside stability_field_dynamics:**
-- [iee_core_geometry/README.md](stability_field_dynamics/iee_core_geometry/README.md) – Mathematical and geometrical foundations
-- [Building Log](stability_field_dynamics/iee_core_geometry/BUILDING_LOG.md) – Complete development history (v7.x → v12.7)
-- [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md) – All important plots and evolution
-- [IEEE Scaling Tests](stability_field_dynamics/iee_core_geometry/ieee_scaling/README.md) – Final Mic-Drop validation on 118-Bus and 300-Bus
-
-### Technical Core (iee_core_geometry)
-- **Core ODE v12.7** – Lorenz + Iota-Ring (12.0 → 13.7) + absolute lock + Nexus-Hold
-- **Phi-Regulator** with strong Forward2 (P-Regulator) hold
-- 7-Arc Lattice, CON~DAO waves, Sun-Moon-Kiss trigger, Black Attractor
-
----
-
-**Author:** Thomas K. R. Hofmann  
-**Date:** 03 April 2026
-
-NEXAH is transitioning from geometric exploration to a **functional instrument** for intelligent navigation in complex power systems.# NEXAH / power_systems
-
-**Power System Stability & Intelligent Field Navigation**
-
-This folder contains the core applications and tests of NEXAH for real power grids.  
-The goal is to demonstrate **practical, geometry-driven early detection** of voltage collapse in complex dynamic systems.
-
-### Current Status – Mic-Drop Achieved (April 2026)
-
-NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks.
-
-| Network       | Phi-Split | Lead Time vs. Classical Collapse | Status                  |
-|---------------|-----------|----------------------------------|-------------------------|
-| IEEE 118-Bus  | 36.10 s   | **43.9 s**                       | Confirmed               |
-| IEEE 300-Bus  | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!   |
-
-**Final Showcase**  
-[`NEXAH_MicDrop_IEEE300_Final.png`](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
-→ “NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method”
-
-### Why this matters
-Classical methods only react when the voltage already collapses.  
-NEXAH observes the **geometric evolution** of the field (drift, resonance, phase regulator) and triggers a clear warning **well before** the critical point.  
-This is the first practical demonstration that geometry-based navigation can deliver measurable early warning in real power systems.
-
-### Folder Structure & Key Resources
-
-- **[stability_field_dynamics/](stability_field_dynamics/)**  
-  Main research area with Core ODE, IEEE testing and foundations.
-
-- **[ieee_application/](ieee_application/)** (in progress)  
-  Full application layer and interactive demos.
-
-- **[ieee_test_cases/](ieee_test_cases/)**  
-  Classical benchmarks and test cases.
-
-**Important Links inside stability_field_dynamics:**
-- [iee_core_geometry/README.md](stability_field_dynamics/iee_core_geometry/README.md) – Mathematical and geometrical foundations
-- [Building Log](stability_field_dynamics/iee_core_geometry/BUILDING_LOG.md) – Complete development history (v7.x → v12.7)
-- [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md) – All important plots and evolution
-- [IEEE Scaling Tests](stability_field_dynamics/iee_core_geometry/ieee_scaling/README.md) – Final Mic-Drop validation on 118-Bus and 300-Bus
-
-### Technical Core (iee_core_geometry)
-- **Core ODE v12.7** – Lorenz + Iota-Ring (12.0 → 13.7) + absolute lock + Nexus-Hold
-- **Phi-Regulator** with strong Forward2 (P-Regulator) hold
-- 7-Arc Lattice, CON~DAO waves, Sun-Moon-Kiss trigger, Black Attractor
-
----
-
-**Author:** Thomas K. R. Hofmann  
-**Date:** 03 April 2026
-
-NEXAH is transitioning from geometric exploration to a **functional instrument** for intelligent navigation in complex power systems.# NEXAH / power_systems
-
-**Power System Stability & Intelligent Field Navigation**
-
-This folder contains the core applications and tests of NEXAH for real power grids.  
-The goal is to demonstrate **practical, geometry-driven early detection** of voltage collapse in complex dynamic systems.
-
-### Current Status – Mic-Drop Achieved (April 2026)
-
-NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks.
-
-| Network       | Phi-Split | Lead Time vs. Classical Collapse | Status                  |
-|---------------|-----------|----------------------------------|-------------------------|
-| IEEE 118-Bus  | 36.10 s   | **43.9 s**                       | Confirmed               |
-| IEEE 300-Bus  | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!   |
-
-**Final Showcase**  
-[`NEXAH_MicDrop_IEEE300_Final.png`](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
-→ “NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method”
-
-### Why this matters
-Classical methods only react when the voltage already collapses.  
-NEXAH observes the **geometric evolution** of the field (drift, resonance, phase regulator) and triggers a clear warning **well before** the critical point.  
-This is the first practical demonstration that geometry-based navigation can deliver measurable early warning in real power systems.
-
-### Folder Structure & Key Resources
-
-- **[stability_field_dynamics/](stability_field_dynamics/)**  
-  Main research area with Core ODE, IEEE testing and foundations.
-
-- **[ieee_application/](ieee_application/)** (in progress)  
-  Full application layer and interactive demos.
-
-- **[ieee_test_cases/](ieee_test_cases/)**  
-  Classical benchmarks and test cases.
-
-**Important Links inside stability_field_dynamics:**
-- [iee_core_geometry/README.md](stability_field_dynamics/iee_core_geometry/README.md) – Mathematical and geometrical foundations
-- [Building Log](stability_field_dynamics/iee_core_geometry/BUILDING_LOG.md) – Complete development history (v7.x → v12.7)
-- [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md) – All important plots and evolution
-- [IEEE Scaling Tests](stability_field_dynamics/iee_core_geometry/ieee_scaling/README.md) – Final Mic-Drop validation on 118-Bus and 300-Bus
-
-### Technical Core (iee_core_geometry)
-- **Core ODE v12.7** – Lorenz + Iota-Ring (12.0 → 13.7) + absolute lock + Nexus-Hold
-- **Phi-Regulator** with strong Forward2 (P-Regulator) hold
-- 7-Arc Lattice, CON~DAO waves, Sun-Moon-Kiss trigger, Black Attractor
-
----
-
-**Author:** Thomas K. R. Hofmann  
-**Date:** 03 April 2026
-
-NEXAH is transitioning from geometric exploration to a **functional instrument** for intelligent navigation in complex power systems.# NEXAH / power_systems
-
-**Power System Stability & Field Dynamics**
-
-This folder contains all NEXAH applications, tests and foundations related to real power grids.  
-The focus is on **intelligent navigation** in complex dynamic systems through geometric field resonance.
-
-### Main Subfolders
-
-- **[stability_field_dynamics/](stability_field_dynamics/)**  
-  Core research and IEEE testing (118-Bus, 300-Bus, foundations, regime ODE)
-
-- **[ieee_application/](ieee_application/)** (planned / in progress)  
   Full application layer and interactive demos
 
 - **[ieee_test_cases/](ieee_test_cases/)**  
-  Classical test cases and benchmarks
+  Classical benchmarks and test cases
 
-### Latest Achievement – Mic-Drop Validation (April 2026)
+**Important Links inside stability_field_dynamics:**
+- [iee_core_geometry/README.md](stability_field_dynamics/iee_core_geometry/README.md) – Mathematical & geometrical foundations
+- [Core Equations](stability_field_dynamics/iee_core_geometry/core_ode_equations.md) – v10.0 (Lorenz-Core + Iota-Ring)
+- [Building Log](stability_field_dynamics/iee_core_geometry/BUILDING_LOG.md) – Complete development history (v7.x → v12.7)
+- [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md) – All important plots and evolution
+- [IEEE Scaling Tests](stability_field_dynamics/iee_core_geometry/ieee_scaling/README.md) – Final Mic-Drop validation on large grids
 
-NEXAH now reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks.
-
-| Network       | Phi-Split | Lead Time vs. Classical Collapse | Status                  |
-|---------------|-----------|----------------------------------|-------------------------|
-| IEEE 118-Bus  | 36.10 s   | **43.9 s**                       | Confirmed               |
-| IEEE 300-Bus  | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!   |
-
-**Final Showcase Plot**  
-- [`NEXAH_MicDrop_IEEE300_Final.png`](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
-  → “NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method”
-
-### Core Technical Components (iee_core_geometry)
-
-- **Core ODE v12.7** – Lorenz + Iota-Ring (12.0 → 13.7) + absolute lock + Nexus-Hold  
-- **Phi-Regulator** (5 states with strong Forward2 / P-Regulator hold)  
-- **Visual Gallery** – full evolution from 2D nested loops to real-grid Mic-Drop  
-  → [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md)
-
-### Key Links & Resources
-
-- [iee_core_geometry/README.md](stability_field_dynamics/iee_core_geometry/README.md) – Mathematical & geometrical foundations  
-- [Building Log](stability_field_dynamics/iee_core_geometry/BUILDING_LOG.md) – Complete development history (v7.x → v12.7)  
-- [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md) – All important plots and insights  
-- Final Mic-Drop plots are located in `iee_core_geometry/ieee_scaling/`
-
-### Next Steps (planned)
-
-- Extend testing to even larger or real-world grids  
-- Develop interactive dashboard / real-time visualization  
-- Prepare technical report / paper for IEEE / Behance
+### Technical Core (iee_core_geometry)
+- **Core ODE v12.7** – Lorenz + Iota-Ring (12.0 → 13.7) + absolute lock + Nexus-Hold
+- **Phi-Regulator** with strong Forward2 (P-Regulator) hold
+- 7-Arc Lattice, CON~DAO waves, Sun-Moon-Kiss trigger, Black Attractor
 
 ---
 
 **Author:** Thomas K. R. Hofmann  
 **Date:** 03 April 2026
 
-NEXAH is moving from geometric exploration to a **functional instrument** for intelligent power system navigation.
-
-
-
----- old version -----
-
-# ⚡ Stability Field Dynamics — IEEE Power Systems  
-### NEXAH Rift Field Navigation Framework
-
----
-
-## 🧠 Introduction
-
-This module represents a transition:
-
-→ from classical stability analysis  
-→ to a **field-based, phase-driven, operator-controlled system**
-
-It integrates:
-
-- physical power system behavior  
-- nonlinear dynamics  
-- field geometry  
-- phase-space evolution  
-- operator-based control  
-
-into a unified framework.
-
----
-
-## 🔁 What Changed (Important)
-
-Classical approach:
-
-→ stability = static condition  
-
-NEXAH approach:
-
-→ stability = **dynamic field structure**
-
----
-
-## 🧭 Two Entry Points
-
-### 1. 🔬 Scientific / Physical Layer (this document)
-
-You are here:
-
-→ physical interpretation  
-→ IEEE validation  
-→ collapse prediction  
-→ metrics & benchmarks  
-
----
-
-### 2. 🧠 Operator / System Layer
-
-👉 See:
-
-# ⚡ Stability Field Dynamics — IEEE Power Systems  
-### NEXAH Rift Field Navigation Framework
-
----
-
-## 🧠 Introduction
-
-This module represents a transition:
-
-→ from classical stability analysis  
-→ to a **field-based, phase-driven, operator-controlled system**
-
-It integrates:
-
-- physical power system behavior  
-- nonlinear dynamics  
-- field geometry  
-- phase-space evolution  
-- operator-based control  
-
-into a unified framework.
-
----
-
-## 🔁 What Changed (Important)
-
-Classical approach:
-
-→ stability = static condition  
-
-NEXAH approach:
-
-→ stability = **dynamic field structure**
-
----
-
-## 🧭 Two Entry Points
-
-### 1. 🔬 Scientific / Physical Layer (this document)
-
-You are here:
-
-→ physical interpretation  
-→ IEEE validation  
-→ collapse prediction  
-→ metrics & benchmarks  
-
----
-
-### 2. 🧠 Operator / System Layer
-
-👉 See:
-
-# ⚡ Stability Field Dynamics — IEEE Power Systems  
-### NEXAH Rift Field Navigation Framework
-
----
-
-## 🧠 Introduction
-
-This module represents a transition:
-
-→ from classical stability analysis  
-→ to a **field-based, phase-driven, operator-controlled system**
-
-It integrates:
-
-- physical power system behavior  
-- nonlinear dynamics  
-- field geometry  
-- phase-space evolution  
-- operator-based control  
-
-into a unified framework.
-
----
-
-## 🔁 What Changed (Important)
-
-Classical approach:
-
-→ stability = static condition  
-
-NEXAH approach:
-
-→ stability = **dynamic field structure**
-
----
-
-## 🧭 Two Entry Points
-
-### 1. 🔬 Scientific / Physical Layer (this document)
-
-You are here:
-
-→ physical interpretation  
-→ IEEE validation  
-→ collapse prediction  
-→ metrics & benchmarks  
-
----
-
-### 2. 🧠 Operator / System Layer
-
-👉 See:
-
-  ieee_test_cases/demos/NEXAH_MASTER_INDEX_GALLERY.md
-
-This contains:
-
-- full system architecture  
-- operator evolution (V24–V28)  
-- visual gallery  
-- interpretation layer  
-- navigation logic  
-
----
-
-## 🔥 Core Principle
-
-> Stability is not a state —  
->  
-> it is a geometry evolving in time.
-
----
-
-## 🧩 System Evolution
-
-The framework developed through:
-
-trajectory → field → phase → state → wave → operator → topology
-
----
-
-## 🧠 What This Module Really Is
-
-This is NOT:
-
-- a dataset  
-- a simulation collection  
-- a plotting toolkit  
-
-It IS:
-
-→ a **field-based dynamical system**  
-→ a **phase-controlled navigation framework**  
-→ a **predictive stability engine**
-
----
-
-## 🔗 Connection Between Layers
-
-| Layer | Role |
-|------|------|
-| Physics | IEEE system behavior |
-| Field | geometric structure |
-| Phase | timing & transitions |
-| Operator | control decisions |
-| Visuals | projections of the field |
-
----
-
-## 🧭 Where to Go Next
-
-### If you want:
-
-#### 👉 Physics & validation  
-→ continue reading below  
-
-#### 👉 System architecture & visuals  
-→ open:  
-[🧭 NEXAH MASTER INDEX & VISUAL GALLERY](demos/NEXAH_MASTER_INDEX_GALLERY.md)
-
-#### 👉 Latest system (recommended)  
-→ open:  
-[🚀 NEXAH MASTER INDEX & VISUAL GALLERY V2](demos/NEXAH_MASTER_INDEX_GALLERY_V2.md)
-
----
-
-## ⚡ Current Status
-
-The system is now:
-
-→ a **policy-controlled dynamical field system**
-
-with:
-
-- operator states  
-- transition logic  
-- phase feedback  
-- structured geometry  
-- visual validation  
-
----
-
-## 🧠 Core Insight
-
-> The field defines possibilities.  
-> The operator selects reality.
-
----
-
-## 🚀 Meaning
-
-This module bridges:
-
-- classical power system analysis  
-- nonlinear dynamics  
-- geometric field theory  
-- control systems  
-
-into one unified model.
-
----
-
-## 🔬 Continue Below
-
-The following sections describe:
-
-- physical coupling  
-- collapse mechanism  
-- predictive metrics  
-- validation across IEEE systems  
-
+**NEXAH** is transitioning from geometric exploration to a **functional instrument** for intelligent navigation in complex dynamic power systems.
