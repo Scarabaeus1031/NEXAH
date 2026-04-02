@@ -23,7 +23,7 @@ NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical 
 ![NEXAH Mic-Drop on IEEE 300-Bus](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
 *NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method*
 
-![IEEE 9241-Bus – Phi-Split at t=36.10 s](stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee9241_real_tunable_v12.7_4panel_iota_ring.png)  
+![IEEE 9241-Bus – Phi-Split at t=36.10 s](stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee1354_real_tunable_v12.7_4panel_iota_ring.png)  
 *IEEE 9241-Bus (PEGASE) – identical Phi-Split despite 78× larger network*
 
 ### Why this matters
