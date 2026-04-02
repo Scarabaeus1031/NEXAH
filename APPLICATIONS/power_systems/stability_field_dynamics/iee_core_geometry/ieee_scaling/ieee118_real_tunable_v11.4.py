@@ -9,7 +9,7 @@ PHI_COLORS = ['gray', 'orange', 'gold', 'blue', 'purple']
 
 N_BANDS = [0.429, 0.456, 0.487]
 Q = 1.62
-WINDING_THRESHOLD = 8.5   # noch sensibler
+WINDING_THRESHOLD = 7.5
 
 SIGMA = 10.0
 RHO = 28.0
@@ -31,25 +31,25 @@ def nexah_lorenz_ode(t, x, vm_history):
     theta = t * 3.6
     winding_number = np.sin(theta) * N_BANDS[phi % 3] + np.cos(2 * theta) * 0.8
     
-    # Realer Spannungs-Drift (Kipper-Sensor)
+    # Realer Drift-Sensor (Membrane / ":"-Stelle)
     if len(vm_history) > 1:
         real_drift = vm_history[-1] - vm_history[-2]
     else:
         real_drift = 0.0
-    drift_boost = 4.0 * real_drift   # stark verstärkt
+    drift_boost = 5.5 * real_drift
     
     inversion = 1.0 if phi < 3 else (0.15 + 0.85 * np.tanh((phi - 1.85) * 5.8))
     slow_start = 1.0 / (1.0 + np.exp(-0.45 * (t - 34.0)))
     contraction = 1.0 - 0.22 * np.tanh((t - 32.0) * 0.28)
     
     d_dc = (0.95 * f_field + f_vdp + f_kuramoto + f_compass + 0.8 * p_drive 
-            + resonance + 1.4 * winding_number + drift_boost)
+            + resonance + 1.6 * winding_number + drift_boost)
     d_dc *= inversion * contraction * slow_start
-    d_dc += 1.20 * (0.022 * t) * slow_start
+    d_dc += 1.22 * (0.022 * t) * slow_start
     
-    d_phi = resonance + 1.5 * winding_number + 5.0 * drift_boost
+    d_phi = resonance + 1.6 * winding_number + 6.0 * drift_boost
     if abs(dc) > WINDING_THRESHOLD and phi < 4 and t > 30:
-        d_phi += 12.0   # sehr starker Flip am Kipper
+        d_phi += 13.0
     
     return [dc * contraction, d_dc, d_phi]
 
@@ -57,7 +57,7 @@ print("🚀 Lade echtes IEEE 118-Bus Netz...")
 net = pn.case118()
 print(f"   → {len(net.bus)} Busse geladen.")
 
-t = np.arange(0, 80, 0.1)   # feinere Auflösung
+t = np.arange(0, 80, 0.1)
 voltage_classic = []
 phi_idx_history = []
 switch_time = None
@@ -89,26 +89,46 @@ for time in t:
         print(f"✅ Phi-Split bei t = {time:.2f} s")
         print(f"   → Vorsprung gegenüber klassischem Collapse: {lead_time:.1f} s")
 
-plt.figure(figsize=(14, 8))
-plt.subplot(2, 1, 1)
-plt.plot(t, voltage_classic, 'r', lw=3, label="Echte IEEE 118-Bus Spannung")
-if switch_time is not None:
-    plt.axvline(x=switch_time, color='purple', linestyle='--', lw=3.5, label=f'Phi-Split bei t={switch_time:.2f} s')
-plt.title("IEEE 118-Bus – Echter Test mit feiner Auflösung + realem Drift (v11.3)")
-plt.xlabel("Zeit [s]")
-plt.ylabel("Spannung [p.u.]")
-plt.grid(True, alpha=0.5)
-plt.legend()
+# ====================== 4-Panel-Ansicht ======================
+fig = plt.figure(figsize=(15, 10))
 
-plt.subplot(2, 1, 2)
-plt.plot(t, phi_idx_history, 'gold', lw=2, drawstyle='steps-post')
-plt.title("Phi-Regulator Zustand (fein + Drift-Sensor)")
-plt.xlabel("Zeit [s]")
-plt.ylabel("Phi-Index")
-plt.yticks(range(5), PHI_NAMES)
-plt.grid(True, alpha=0.5)
+# 1. Voltage
+ax1 = fig.add_subplot(2, 2, 1)
+ax1.plot(t, voltage_classic, 'r', lw=3, label="Echte IEEE 118-Bus Spannung")
+if switch_time is not None:
+    ax1.axvline(x=switch_time, color='purple', linestyle='--', lw=3.5, label=f'Phi-Split bei t={switch_time:.2f} s')
+ax1.set_title("Spannung (echtes Netz)")
+ax1.set_ylabel("Spannung [p.u.]")
+ax1.grid(True, alpha=0.5)
+ax1.legend()
+
+# 2. Phi-Regulator
+ax2 = fig.add_subplot(2, 2, 2)
+ax2.plot(t, phi_idx_history, 'gold', lw=2, drawstyle='steps-post')
+ax2.set_title("Phi-Regulator Zustand")
+ax2.set_ylabel("Phi-Index")
+ax2.set_yticks(range(5))
+ax2.set_yticklabels(PHI_NAMES)
+ax2.grid(True, alpha=0.5)
+
+# 3. Real Drift
+ax3 = fig.add_subplot(2, 2, 3)
+drift = np.diff(voltage_classic) / 0.1
+ax3.plot(t[1:], drift, 'cyan', lw=2, label="Realer Spannungs-Drift")
+ax3.set_title("Realer Drift (Membrane / Kipper)")
+ax3.set_ylabel("dV/dt")
+ax3.grid(True, alpha=0.5)
+ax3.legend()
+
+# 4. Phase Portrait (c vs dc)
+ax4 = fig.add_subplot(2, 2, 4)
+ax4.plot(x[0], x[1], 'bo', markersize=8)  # current point
+ax4.set_title("Phase Portrait (c vs dc)")
+ax4.set_xlabel("c (norm)")
+ax4.set_ylabel("dc (norm)")
+ax4.grid(True, alpha=0.5)
 
 plt.tight_layout()
-plt.savefig("ieee118_real_tunable_v11.3_fine_drift.png", dpi=420, bbox_inches='tight')
-print("\n📸 Plot gespeichert als: ieee118_real_tunable_v11.3_fine_drift.png")
+plt.savefig("ieee118_real_tunable_v11.4_4panel.png", dpi=420, bbox_inches='tight')
+print("\n📸 4-Panel-Plot gespeichert als: ieee118_real_tunable_v11.4_4panel.png")
 plt.show()
