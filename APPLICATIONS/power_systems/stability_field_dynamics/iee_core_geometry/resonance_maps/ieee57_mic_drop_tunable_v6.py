@@ -1,18 +1,16 @@
 """
 NEXAH IEEE 57-Bus — TUNABLE v6
-Ändere drift_threshold, bis der lila Split genau da sitzt, wo die rote Kurve knickt
+drift_threshold = 5.0  (weiter nach rechts schieben)
 """
 
 import numpy as np
 from scipy.integrate import solve_ivp
 import matplotlib.pyplot as plt
 
-drift_threshold = 4.8        # <--- HIER TUNEN (z. B. 4.0, 4.5, 5.0, 5.5)
+drift_threshold = 5.0        # <--- jetzt 5.0
 
 PHI_NAMES = ["Neutral", "Forward1", "Forward2", "Reverse1", "Reverse2"]
 PHI_COLORS = ['#8B4513', '#1f77b4', '#FFCC00', '#d62728', '#9467bd']
-
-# (der Rest der ODE-Funktion ist identisch mit vorher – unverändert)
 
 def nexah_regime_ode(t, x, params):
     c, dc, phi_idx = x
@@ -43,7 +41,7 @@ def nexah_regime_ode(t, x, params):
 
     drift = abs(dc)
     d_phi = resonance * 2.1
-    if drift > drift_threshold and phi < 4:      # <--- hier wird getuned
+    if drift > drift_threshold and phi < 4:
         d_phi += 6.0
 
     d_c  = dc
@@ -94,7 +92,6 @@ if __name__ == "__main__":
     else:
         print("❌ Kein Phi-Split – Threshold zu hoch")
 
-    # Plot
     fig = plt.figure(figsize=(18, 9))
     ax3d = fig.add_subplot(121, projection='3d')
     theta = t * 0.52
