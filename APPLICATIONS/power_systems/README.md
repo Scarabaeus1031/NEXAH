@@ -1,3 +1,65 @@
+# NEXAH / power_systems
+
+**Power System Stability & Field Dynamics**
+
+This folder contains all NEXAH applications, tests and foundations related to real power grids.  
+The focus is on **intelligent navigation** in complex dynamic systems through geometric field resonance.
+
+### Main Subfolders
+
+- **[stability_field_dynamics/](stability_field_dynamics/)**  
+  Core research and IEEE testing (118-Bus, 300-Bus, foundations, regime ODE)
+
+- **[ieee_application/](ieee_application/)** (planned / in progress)  
+  Full application layer and interactive demos
+
+- **[ieee_test_cases/](ieee_test_cases/)**  
+  Classical test cases and benchmarks
+
+### Latest Achievement – Mic-Drop Validation (April 2026)
+
+NEXAH now reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks.
+
+| Network       | Phi-Split | Lead Time vs. Classical Collapse | Status                  |
+|---------------|-----------|----------------------------------|-------------------------|
+| IEEE 118-Bus  | 36.10 s   | **43.9 s**                       | Confirmed               |
+| IEEE 300-Bus  | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!   |
+
+**Final Showcase Plot**  
+- [`NEXAH_MicDrop_IEEE300_Final.png`](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
+  → “NEXAH Mic-Drop on IEEE 300-Bus – 43.9 Seconds Earlier Detection than Classical Method”
+
+### Core Technical Components (iee_core_geometry)
+
+- **Core ODE v12.7** – Lorenz + Iota-Ring (12.0 → 13.7) + absolute lock + Nexus-Hold  
+- **Phi-Regulator** (5 states with strong Forward2 / P-Regulator hold)  
+- **Visual Gallery** – full evolution from 2D nested loops to real-grid Mic-Drop  
+  → [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md)
+
+### Key Links & Resources
+
+- [iee_core_geometry/README.md](stability_field_dynamics/iee_core_geometry/README.md) – Mathematical & geometrical foundations  
+- [Building Log](stability_field_dynamics/iee_core_geometry/BUILDING_LOG.md) – Complete development history (v7.x → v12.7)  
+- [Visual Gallery](stability_field_dynamics/iee_core_geometry/Visual_Gallery.md) – All important plots and insights  
+- Final Mic-Drop plots are located in `iee_core_geometry/ieee_scaling/`
+
+### Next Steps (planned)
+
+- Extend testing to even larger or real-world grids  
+- Develop interactive dashboard / real-time visualization  
+- Prepare technical report / paper for IEEE / Behance
+
+---
+
+**Author:** Thomas K. R. Hofmann  
+**Date:** 03 April 2026
+
+NEXAH is moving from geometric exploration to a **functional instrument** for intelligent power system navigation.
+
+
+
+---- old version -----
+
 # ⚡ Stability Field Dynamics — IEEE Power Systems  
 ### NEXAH Rift Field Navigation Framework
 
