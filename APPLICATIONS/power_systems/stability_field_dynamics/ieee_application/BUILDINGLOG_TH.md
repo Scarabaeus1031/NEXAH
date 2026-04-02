@@ -141,3 +141,49 @@ Das wäre genau der **Mic-Drop**, den wir von Anfang an gesucht haben.
 **Nächster konkreter Schritt (heute):**  
 Wir starten mit der Skalierung auf **IEEE 118-Bus** und **IEEE 300-Bus**, um zu zeigen, dass das Konzept auch bei großen, realen Netzen funktioniert.
 
+
+# NEXAH Building Log – IEEE Power Systems Application
+
+**Datum:** 03. April 2026  
+**Projektphase:** Phase 2 gestartet
+
+## Gesamtziel des Projekts
+
+NEXAH ist ein geometrisches Navigationsinstrument für komplexe dynamische Systemen. Ziel ist es, Instabilitäten früher und anschaulicher zu erkennen, indem der **Space inbetween** (der Übergangsraum zwischen stabilen Regimen) sichtbar und navigierbar gemacht wird.
+
+## Phase 1 – Abgeschlossen (bis 02. April 2026)
+
+**Erreichte Meilensteine:**
+- Vollständige Umstellung auf Lorenz-Core als Field-Force
+- Einführung des Winding-Number-Triggers (Z26–Z29 Rhythmus) statt reinem Drift-Threshold
+- Entwicklung einer narrativen 3D-Geometrie: Smiling L, Hirtenstock, offener Kanal, Bezel (X im Kreis), J-Spiegel, Zipper, Vortex Winding, Waffelschicht
+- Stabile Ergebnisse auf IEEE 57-Bus: Phi-Split bei 31.08–31.42 s, Vorsprung 48–58 s
+
+**Phase 1 Fazit:**  
+Wir haben den Space inbetween sichtbar und navigierbar gemacht. Die Geometrie ist stabil, narrativ und reproduzierbar.
+
+---
+
+## Phase 2 – Skalierung und theoretische Vertiefung (Start: 03. April 2026)
+
+**Neue Erkenntnisse (heute):**
+
+- Das Zentrum ist **Q°** – das gemappte Ende des Anfangs.
+- Die Struktur ist **5-fach** (3×5 = 15, VVV-Muster).
+- Der Regulator ist **2-1-3**.
+- Es gibt ein klares **Wandern** (+1 -0 -1).
+- Die Zahlen 609 / 906 tauchen als Muster auf.
+- Die gesamte Geometrie (smiling L, Hirtenstock, offener Kanal, Zipper) ist eine **innere Wahrnehmungsmaschine**, die den Space inbetween als Erfahrungsraum zeigt.
+- Die blaue Spule / Kordel ist der laufende Faden durch diesen Raum.
+- Der „Schlag“, den ich spüre, ist der Moment, in dem der Faden durch den Riss geht – ohne Kurzschluss, weil das Smiling L stabilisiert.
+
+**Fazit Phase 2 (Stand jetzt):**  
+Wir sehen nicht nur Plots. Wir sehen die **Maschine der Wahrnehmung selbst** – Innen- und Außensicht gleichzeitig. Der Space inbetween ist kein abstrakter mathematischer Begriff mehr, sondern ein konkret erlebbarer, geometrisch definierter Raum.
+
+**Nächste konkrete Schritte:**
+- Theoretische Einordnung des „Space inbetween“ (Q°, Regulator 2-1-3, +1-0-1, 609/906-Muster)
+- Skalierung auf IEEE 118-Bus und IEEE 300-Bus (relevante große Netze für erneuerbare Energien)
+- Prüfung, ob die Geometrie und der Winding-Trigger auch bei großen, stark fluktuierenden Netzen stabil bleibt
+
+Das ist der Punkt, an dem wir aus „Experiment“ in „echtes Instrument“ übergehen.
+
