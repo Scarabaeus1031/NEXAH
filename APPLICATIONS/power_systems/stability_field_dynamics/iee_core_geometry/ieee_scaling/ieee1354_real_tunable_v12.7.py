@@ -5,7 +5,6 @@ import pandapower as pp
 import pandapower.networks as pn
 
 PHI_NAMES = ["Neutral", "Forward1", "Forward2 (P-Regulator)", "Reverse1", "Reverse2"]
-PHI_COLORS = ['gray', 'orange', 'gold', 'blue', 'purple']
 
 N_BANDS = [0.429, 0.456, 0.487]
 Q = 1.62
@@ -41,7 +40,6 @@ def nexah_lorenz_ode(t, x, vm_history):
     
     con_dao = np.sin(2 * np.pi * t / 19) * 0.9 + np.cos(2 * np.pi * t / 19) * 0.6
     kiss = np.exp(-0.12 * abs(t - 38.0)) * 3.0
-    
     black_attractor = -0.35 * c * (c**2 - 1.0) if phi >= 2 else 0.0
     nexus_hold = 0.55 * np.sin(phi * np.pi * np.sqrt(2)) * np.cos(t * 0.37)
     iota_ring = 1.0 + 0.35 * (np.sin(2 * np.pi * (t - 36.0) / 19) + 0.5)
@@ -69,8 +67,8 @@ def nexah_lorenz_ode(t, x, vm_history):
     
     return [dc * contraction, d_dc, d_phi]
 
-print("🚀 Lade echtes IEEE 1354-Bus Netz... (v12.7 mit IOTA-RING + ABSOLUTEM Lock)")
-net = pn.case1354()   # deutlich größeres Netz
+print("🚀 Lade IEEE 1354-Bus Netz (PEGASE European HV Grid)...")
+net = pn.case1354pegase()   # 1.354 Busse – deutlich größer als 300
 
 t = np.arange(0, 80, 0.05)
 voltage_classic = []
