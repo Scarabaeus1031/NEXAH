@@ -9,7 +9,7 @@ PHI_COLORS = ['gray', 'orange', 'gold', 'blue', 'purple']
 
 N_BANDS = [0.429, 0.456, 0.487]
 Q = 1.62
-WINDING_THRESHOLD = 6.5
+WINDING_THRESHOLD = 6.0
 
 SIGMA = 10.0
 RHO = 28.0
@@ -31,32 +31,32 @@ def nexah_lorenz_ode(t, x, vm_history):
     theta = t * 3.6
     winding_number = np.sin(theta) * N_BANDS[phi % 3] + np.cos(2 * theta) * 0.8
     
-    # Verstärkter realer Drift-Sensor (Kipper)
-    if len(vm_history) > 1:
-        real_drift = vm_history[-1] - vm_history[-2]
+    # Verstärkter Sensor auf den Doppelknick / Membrane
+    if len(vm_history) > 2:
+        real_drift = (vm_history[-1] - vm_history[-2]) + 0.5 * (vm_history[-2] - vm_history[-3])
     else:
         real_drift = 0.0
-    drift_boost = 7.5 * real_drift   # sehr stark am Kipper
+    drift_boost = 9.0 * real_drift   # sehr stark am flachen Knick
     
     inversion = 1.0 if phi < 3 else (0.15 + 0.85 * np.tanh((phi - 1.85) * 5.8))
     slow_start = 1.0 / (1.0 + np.exp(-0.45 * (t - 34.0)))
     contraction = 1.0 - 0.22 * np.tanh((t - 32.0) * 0.28)
     
     d_dc = (0.95 * f_field + f_vdp + f_kuramoto + f_compass + 0.8 * p_drive 
-            + resonance + 1.8 * winding_number + drift_boost)
+            + resonance + 2.0 * winding_number + drift_boost)
     d_dc *= inversion * contraction * slow_start
-    d_dc += 1.25 * (0.022 * t) * slow_start
+    d_dc += 1.28 * (0.022 * t) * slow_start
     
-    d_phi = resonance + 1.8 * winding_number + 8.0 * drift_boost
+    d_phi = resonance + 2.0 * winding_number + 9.0 * drift_boost
     if abs(dc) > WINDING_THRESHOLD and phi < 4 and t > 30:
-        d_phi += 14.0   # starker Sprung
+        d_phi += 15.0
     
     return [dc * contraction, d_dc, d_phi]
 
 print("🚀 Lade echtes IEEE 118-Bus Netz...")
 net = pn.case118()
 
-t = np.arange(0, 80, 0.08)   # noch feiner
+t = np.arange(0, 80, 0.05)   # noch feiner
 voltage_classic = []
 phi_idx_history = []
 switch_time = None
@@ -76,7 +76,7 @@ for time in t:
     voltage_classic.append(vm_min)
     vm_history.append(vm_min)
     
-    sol = solve_ivp(nexah_lorenz_ode, (time, time + 0.08), x, method='RK45', rtol=1e-5, max_step=0.04, args=(vm_history,))
+    sol = solve_ivp(nexah_lorenz_ode, (time, time + 0.05), x, method='RK45', rtol=1e-5, max_step=0.03, args=(vm_history,))
     x = sol.y[:, -1]
     
     phi_idx = int(round(x[2]))
@@ -108,7 +108,7 @@ ax2.set_yticklabels(PHI_NAMES)
 ax2.grid(True, alpha=0.5)
 
 ax3 = fig.add_subplot(2, 2, 3)
-drift = np.diff(voltage_classic) / 0.08
+drift = np.diff(voltage_classic) / 0.05
 ax3.plot(t[1:], drift, 'cyan', lw=2, label="Realer Spannungs-Drift")
 ax3.set_title("Realer Drift (Membrane / Kipper)")
 ax3.set_ylabel("dV/dt")
@@ -123,6 +123,6 @@ ax4.set_ylabel("dc")
 ax4.grid(True, alpha=0.5)
 
 plt.tight_layout()
-plt.savefig("ieee118_real_tunable_v11.4_4panel.png", dpi=420, bbox_inches='tight')
+plt.savefig("ieee118_real_tunable_v11.5_4panel.png", dpi=420, bbox_inches='tight')
 print("\n📸 4-Panel-Plot gespeichert!")
 plt.show()
