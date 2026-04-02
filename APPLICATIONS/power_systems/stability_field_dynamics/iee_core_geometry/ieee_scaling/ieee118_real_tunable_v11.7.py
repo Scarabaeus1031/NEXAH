@@ -48,11 +48,11 @@ def nexah_lorenz_ode(t, x, vm_history):
     
     d_phi = resonance + 2.0 * winding_number + 9.0 * drift_boost
     
-    # Starker Bügel am Kipper (hält Forward2 länger)
+    # Starker, längerer Bügel (Daumen bleibt draußen)
     if abs(dc) > WINDING_THRESHOLD and phi < 4 and t > 35:
-        d_phi += 16.0
-        if phi == 1:   # extra Holding in Forward2
-            d_phi += 4.0
+        d_phi += 18.0
+        if phi == 1:   # extra Holding in Forward2 (Bügel bleibt länger)
+            d_phi += 6.0
     
     return [dc * contraction, d_dc, d_phi]
 
@@ -104,7 +104,7 @@ ax1.legend()
 
 ax2 = fig.add_subplot(2, 2, 2)
 ax2.plot(t, phi_idx_history, 'gold', lw=2, drawstyle='steps-post')
-ax2.set_title("Phi-Regulator Zustand (mit Bügel)")
+ax2.set_title("Phi-Regulator Zustand (mit starkem Bügel)")
 ax2.set_ylabel("Phi-Index")
 ax2.set_yticks(range(5))
 ax2.set_yticklabels(PHI_NAMES)
@@ -126,6 +126,6 @@ ax4.set_ylabel("dc")
 ax4.grid(True, alpha=0.5)
 
 plt.tight_layout()
-plt.savefig("ieee118_real_tunable_v11.6_4panel_buegel.png", dpi=420, bbox_inches='tight')
-print("\n📸 4-Panel-Plot mit Bügel gespeichert!")
+plt.savefig("ieee118_real_tunable_v11.7_4panel_starker_buegel.png", dpi=420, bbox_inches='tight')
+print("\n📸 4-Panel-Plot mit starkem Bügel gespeichert!")
 plt.show()
