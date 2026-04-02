@@ -1,18 +1,18 @@
 """
-NEXAH IEEE 57-Bus — TUNABLE MIC-DROP v6
-Ändere drift_threshold, bis der Split genau auf der gewünschten Stelle der Kurve liegt
+NEXAH IEEE 57-Bus — TUNABLE v6
+Ändere drift_threshold, bis der lila Split genau da sitzt, wo die rote Kurve knickt
 """
 
 import numpy as np
 from scipy.integrate import solve_ivp
 import matplotlib.pyplot as plt
 
-# ================== HIER KANNST DU TUNEN ==================
-drift_threshold = 3.5        # <--- ändere diesen Wert (z. B. 2.5, 3.0, 3.5, 4.0, 5.0)
-# =========================================================
+drift_threshold = 4.8        # <--- HIER TUNEN (z. B. 4.0, 4.5, 5.0, 5.5)
 
 PHI_NAMES = ["Neutral", "Forward1", "Forward2", "Reverse1", "Reverse2"]
 PHI_COLORS = ['#8B4513', '#1f77b4', '#FFCC00', '#d62728', '#9467bd']
+
+# (der Rest der ODE-Funktion ist identisch mit vorher – unverändert)
 
 def nexah_regime_ode(t, x, params):
     c, dc, phi_idx = x
@@ -70,7 +70,7 @@ if __name__ == "__main__":
 
     sol = solve_ivp(
         fun=lambda t, x: ieee57_regime_ode(t, x, params),
-        t_span=(0, 60),          # etwas länger, damit wir die Kurve besser sehen
+        t_span=(0, 60),
         y0=x0,
         method='RK45',
         rtol=1e-6,
@@ -90,10 +90,11 @@ if __name__ == "__main__":
         switch_time = t[switch_idx]
         lead = 60 - switch_time
         print(f"✅ Phi-Split bei t = {switch_time:.2f} s")
-        print(f"   → Vorsprung gegenüber klassischer Kurve: {lead:.2f} s")
+        print(f"   → Vorsprung: {lead:.2f} s")
     else:
         print("❌ Kein Phi-Split – Threshold zu hoch")
 
+    # Plot
     fig = plt.figure(figsize=(18, 9))
     ax3d = fig.add_subplot(121, projection='3d')
     theta = t * 0.52
