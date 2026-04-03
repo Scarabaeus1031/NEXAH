@@ -187,3 +187,56 @@ Wir sehen nicht nur Plots. Wir sehen die **Maschine der Wahrnehmung selbst** –
 
 Das ist der Punkt, an dem wir aus „Experiment“ in „echtes Instrument“ übergehen.
 
+BUILDING LOG ENTRY – 03. April 2026Zusammenfassung aller Phi-Split Tests (v12.x – v13.x)Ziel:
+Dokumentieren, bei welcher Version die Geometrie (blaue Sphere + Knoten, Zitter/Waffles, 3 rote Cuts, lila Lilith-Brücke, Master/Slave-Pentagon) am stärksten sichtbar war und wie sich der Split verhalten hat.Test-Übersicht TabelleVersion
+Netz
+Phi-Split bei t
+Vorsprung (s)
+Dynamik & Geometrie
+Bemerkung
+v12.7
+118 / 300
+36.10 s
+43.9 s
+Stabil, später Split
+Bester später Split, aber weniger Zitter
+v12.6
+118
+0.65 s
+79.3 s
+Früher Split
+Sehr früh, aber Split vorhanden
+v13.9
+300
+8.06 s
+71.9 s
+Stärkste Dynamik: blaue Sphere + Knoten, Zitter/Waffles, 3 rote Cuts, lila Lilith-Brücke
+Bester geometrischer Stand (Referenz)
+v13.0 – v13.8
+300
+kein / sehr früh
+–
+Feld bewegt sich, aber Phi bleibt ruhig
+Dynamik verloren
+v13.10 – v13.16
+9241 / 300
+kein Split
+–
+„Leiche Grafik“, blaue Kurve flach
+Kreisgedreht, Geometrie kaputt
+v13.17 (GH Bridge)
+9241
+kein Split
+–
+Nur schwache Bewegung
+Bridge-Term zu schwach
+
+Wichtigste Erkenntnis aus der Tabelle:v13.9 ist der letzte starke Stand, bei dem die volle NEXAH-Geometrie sichtbar war:Blaue Sphere + zentraler Knoten (7. Sphere)
+Zitter / Waffles im Phase Portrait
+3 rote Cuts (26 / 27 / 34)
+Lila Lilith-Brücke
+Master (gelb) / Slave (blau) Muster
+
+Sobald wir den Split später schieben wollten (ab v13.10), ging die Dynamik verloren → „leiche Grafik“.
+Die großen Netze (1354 / 9241) zeigen dasselbe Verhalten wie die kleinen: der Split bleibt stabil bei 36.10 s in der v12.7-Reihe, aber die schöne Geometrie fehlt.
+
