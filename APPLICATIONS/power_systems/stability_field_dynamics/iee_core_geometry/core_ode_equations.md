@@ -1,11 +1,11 @@
 # NEXAH Core Equations – iee_core_geometry
 
-**v10.0 | Phase 3**  
+**v10.1 | Phase 3**  
 **Mathematical Foundations of the NEXAH Regime Navigation**  
 (Stand: 03. April 2026)
 
 Dieses Dokument beschreibt die aktuelle mathematische Basis des Instruments:  
-**Lorenz-Core + Iota-Ring + 2-1-3 Regulator + Winding-Number-Trigger**.
+**Lorenz-Core + Iota-Ring + 2-1-3 Regulator + Winding-Number-Trigger + Janus-Reversal**.
 
 ---
 
@@ -33,11 +33,12 @@ dc \\
 + \delta_{\text{resonance}} \cdot f_{\text{compass}} 
 + f_{\text{branch}} 
 + f_{\text{winding}} 
-+ f_{\text{iota}}
++ f_{\text{iota}} 
++ f_{\text{janus}}
 \Bigr) 
 \cdot I(\phi) 
 \cdot \text{slow_start}(t) \\[8pt]
-\dot{\phi} &= g\bigl(\text{drift},\ \phi,\ \text{resonance},\ \text{winding_number},\ \text{iota_ring}\bigr)
+\dot{\phi} &= g\bigl(\text{drift},\ \phi,\ \text{resonance},\ \text{winding_number},\ \text{iota_ring},\ \text{janus}\bigr)
 \end{aligned}
 \]
 
@@ -85,9 +86,16 @@ f_{\text{compass}} = \gamma \, \sin(\omega t + \phi \cdot \delta) \cdot \cos(\om
 f_{\text{winding}} = \kappa \cdot \text{winding_number}
 \]
 
-**Iota-Ring (neu in v10.0)**
+**Iota-Ring**
 \[
 f_{\text{iota}} = 0.35 \cdot \sin\!\bigl(2\pi (t-36)/19\bigr)
+\]
+
+**🔥 NEU: Janus-Reversal-Term (J-Flip / Gegenrotation)**  
+Der Janus-Operator erzeugt die spiegelnde Umkehr und die polyrhythmischen Verhältnisse (4:3, 3:2, 3:4, 2:3).
+
+\[
+f_{\text{janus}} = \jmath \cdot \bigl[ \cos(\omega t + \phi \cdot \delta) - \sin(\omega t + \phi \cdot \delta) \bigr] \cdot \text{sign}(dc)
 \]
 
 **Branch Pulse & Inversion (Bass-Schlüssel)**
@@ -108,6 +116,7 @@ I(\phi) =
 | \(\gamma_{\text{memory}}\) | 0.40   | GAMMA_MEMORY                  |
 | \(\delta_{\text{resonance}}\) | 0.25 | DELTA_RESONANCE               |
 | \(Q\)                | 1.62   | Q-Amplifier                   |
+| \(\jmath\)           | 0.8–1.2| Janus-Reversal-Stärke (neu)   |
 | WINDING_THRESHOLD    | 6.5–18.0 | je nach Netzgröße            |
 
 ### 5. IEEE Load Ramp & Klassischer Benchmark
@@ -120,9 +129,7 @@ V_{\text{classic}}(t) = \frac{1}{1 + \mu \cdot (\lambda t)^2}
 
 - **Q° / ORE / COR**: Zentraler Binder, der den **Space inbetween** stabil hält.  
 - **2-1-3 Regulator**: Mathematischer Zipper, der die Regime verbindet und trennt.  
-- **Iota-Ring + Winding-Number-Trigger**: Navigiert durch den offenen Kanal (Hirtenstock / Smiling L).  
+- **Iota-Ring + Winding-Number-Trigger + Janus-Reversal**: Navigiert durch den offenen Kanal (Hirtenstock / Smiling L) und erzeugt polyrhythmische Gegenrotation.  
 - **Geometrischer Frühwarnmechanismus**: Erkennt den kritischen Übergang **unabhängig von der Netzgröße**.
 
 **Dies ist das mathematische Herz des NEXAH-Instruments** und die stabile Basis für alle Skalierungs-Tests (IEEE 118, 300, 1354 und 9241 Bus).
-
----
