@@ -1,11 +1,11 @@
 # NEXAH Core Equations – iee_core_geometry
 
-**v10.0 | Phase 3**  
+**v10.2 | Phase 3**  
 **Mathematical Foundations of the NEXAH Regime Navigation**  
 (Stand: 03. April 2026)
 
 Dieses Dokument beschreibt die aktuelle mathematische Basis des Instruments:  
-**Lorenz-Core + Iota-Ring + 2-1-3 Regulator + Winding-Number-Trigger**.
+**Lorenz-Core + Iota-Ring + 2-1-3 Regulator + Winding-Number-Trigger + Janus-Reversal + Lyapunov Rhythmus**.
 
 ---
 
@@ -18,7 +18,7 @@ dc \\
 \end{bmatrix}
 \]
 
-- \( c \): Feld-Koordinate (state variable)  
+- \( c \): Feld-Koordinate  
 - \( dc \): Drift (Geschwindigkeit des Feldes)  
 - \( \phi_{\text{idx}} \): diskreter Phi-Regulator-Zustand (0–4)
 
@@ -33,11 +33,12 @@ dc \\
 + \delta_{\text{resonance}} \cdot f_{\text{compass}} 
 + f_{\text{branch}} 
 + f_{\text{winding}} 
-+ f_{\text{iota}}
++ f_{\text{iota}} 
++ f_{\text{janus}}
 \Bigr) 
 \cdot I(\phi) 
 \cdot \text{slow_start}(t) \\[8pt]
-\dot{\phi} &= g\bigl(\text{drift},\ \phi,\ \text{resonance},\ \text{winding_number},\ \text{iota_ring}\bigr)
+\dot{\phi} &= g\bigl(\text{drift},\ \phi,\ \text{resonance},\ \text{winding_number},\ \text{iota_ring},\ \text{janus},\ \text{lyapunov}\bigr)
 \end{aligned}
 \]
 
@@ -85,9 +86,27 @@ f_{\text{compass}} = \gamma \, \sin(\omega t + \phi \cdot \delta) \cdot \cos(\om
 f_{\text{winding}} = \kappa \cdot \text{winding_number}
 \]
 
-**Iota-Ring (neu in v10.0)**
+**Iota-Ring**
 \[
 f_{\text{iota}} = 0.35 \cdot \sin\!\bigl(2\pi (t-36)/19\bigr)
+\]
+
+**🔥 Janus-Reversal-Term (J-Flip / Gegenrotation)**  
+Erzeugt die spiegelnde Umkehr und polyrhythmische Gegenbewegung.
+
+\[
+f_{\text{janus}} = \jmath \cdot \bigl[ \cos(\omega t + \phi \cdot \delta) - \sin(\omega t + \phi \cdot \delta) \bigr] \cdot \text{sign}(dc)
+\]
+
+**🔥 NEU: Lyapunov-Rhythmus-Term**  
+Lokaler Lyapunov-Exponent \( L(t) \) misst Divergenz/Stabilität und moduliert den Takt (4:3, 3:2, 3:4, 2:3).
+
+\[
+f_{\text{lyapunov}} = L(t) \cdot \Bigl[ \sin\!\bigl(2\pi \cdot \tfrac{4}{3} t\bigr) + \sin\!\bigl(2\pi \cdot \tfrac{3}{2} t\bigr) \Bigr]
+\]
+
+\[
+L(t) \approx \kappa_L \cdot |dc| \quad \text{(lokale Approximation)}
 \]
 
 **Branch Pulse & Inversion (Bass-Schlüssel)**
@@ -101,14 +120,16 @@ I(\phi) =
 
 ### 4. Tunable Koeffizienten
 
-| Parameter            | Wert   | Beschreibung                  |
-|----------------------|--------|-------------------------------|
-| \(\alpha_{\text{flow}}\)   | 0.95   | ALPHA_FLOW                    |
-| \(\beta_{\text{swirl}}\)   | 0.65   | BETA_SWIRL                    |
-| \(\gamma_{\text{memory}}\) | 0.40   | GAMMA_MEMORY                  |
-| \(\delta_{\text{resonance}}\) | 0.25 | DELTA_RESONANCE               |
-| \(Q\)                | 1.62   | Q-Amplifier                   |
-| WINDING_THRESHOLD    | 6.5–18.0 | je nach Netzgröße            |
+| Parameter            | Wert     | Beschreibung                          |
+|----------------------|----------|---------------------------------------|
+| \(\alpha_{\text{flow}}\)   | 0.95     | ALPHA_FLOW                            |
+| \(\beta_{\text{swirl}}\)   | 0.65     | BETA_SWIRL                            |
+| \(\gamma_{\text{memory}}\) | 0.40     | GAMMA_MEMORY                          |
+| \(\delta_{\text{resonance}}\) | 0.25  | DELTA_RESONANCE                       |
+| \(Q\)                | 1.62     | Q-Amplifier                           |
+| \(\jmath\)           | 0.8–1.2  | Janus-Reversal-Stärke                 |
+| \(\kappa_L\)         | 0.4–0.8  | Lyapunov-Skalierung (neu)             |
+| WINDING_THRESHOLD    | 6.5–18.0 | je nach Netzgröße                     |
 
 ### 5. IEEE Load Ramp & Klassischer Benchmark
 \[
@@ -118,11 +139,11 @@ V_{\text{classic}}(t) = \frac{1}{1 + \mu \cdot (\lambda t)^2}
 
 ### 6. Theoretischer Kern
 
-- **Q° / ORE / COR**: Zentraler Binder, der den **Space inbetween** stabil hält.  
-- **2-1-3 Regulator**: Mathematischer Zipper, der die Regime verbindet und trennt.  
-- **Iota-Ring + Winding-Number-Trigger**: Navigiert durch den offenen Kanal (Hirtenstock / Smiling L).  
+- **Q° / ORE / COR**: Zentraler Binder für den **Space inbetween**.  
+- **2-1-3 Regulator**: Mathematischer Zipper.  
+- **Iota-Ring + Janus-Reversal + Lyapunov-Rhythmus**: Erzeugen polyrhythmische Navigation (4:3, 3:2, 3:4, 2:3) und Gegenrotation.  
 - **Geometrischer Frühwarnmechanismus**: Erkennt den kritischen Übergang **unabhängig von der Netzgröße**.
 
-**Dies ist das mathematische Herz des NEXAH-Instruments** und die stabile Basis für alle Skalierungs-Tests (IEEE 118, 300, 1354 und 9241 Bus).
+**Dies ist das mathematische Herz des NEXAH-Instruments** und die stabile Basis für alle Skalierungs-Tests.
 
 ---
