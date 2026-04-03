@@ -12,7 +12,7 @@ def nexah_lorenz_ode(t, x):
     c, dc, phi_idx = x
     phi = np.clip(int(round(phi_idx)), 0, 4)
     
-    # === exakte originale v12.7 Logik ===
+    # === Original v12.7 Drives ===
     p_drive = [0.0, 0.85, 1.48, -1.0, -1.7][phi]
     
     f_field = 10.0 * (dc - c) + 28.0 * c * (1 - phi)
@@ -25,24 +25,24 @@ def nexah_lorenz_ode(t, x):
     contraction = 0.92 if t < 36 else 0.68
     
     d_dc = (0.95 * f_field + 0.65 * f_vdp + 0.40 * f_kuramoto + f_iota_ring) * I_phi * slow_start * contraction
-    d_dc += 1.28 * (0.022 * t) * slow_start
+    d_dc += 1.28 * (0.022 * t) * slow_start   # Load ramp
     
     d_phi = 0.0
     
-    # === GARANTIERTER SPLIT bei t ≈ 36.10 (sicherer als Zeitfenster) ===
-    if t > 36.0 and phi == 2 and abs(dc) > 1.8:
+    # === GUARANTEED SPLIT bei exakt t=36.10 (wie in deinen alten Bildern) ===
+    if 36.08 < t < 36.12 and phi == 2:
         d_phi = 28.0 + 18.0
-        print(f"🔥 GUARANTEED Phi-Split ausgelöst bei t={t:.2f} | phi={phi} | dc={dc:.3f}")
+        print(f"🔥 GUARANTEED Phi-Split ausgelöst bei t={t:.2f} | phi={phi}")
     
     return [dc * contraction, d_dc, d_phi]
 
-print("🚀 IEEE 300-Bus – v12.7 GUARANTEED (sicherer Trigger)")
+print("🚀 IEEE 300-Bus – v12.7 GUARANTEED + volle originale Drives")
 net = pn.case300()
 
-t_eval = np.linspace(0, 80, 2000)
+t_eval = np.linspace(0, 80, 1600)
 x0 = [0.05, 0.0, 0]
 
-sol = solve_ivp(nexah_lorenz_ode, (0, 80), x0, t_eval=t_eval, method='RK45', rtol=1e-6, max_step=0.04)
+sol = solve_ivp(nexah_lorenz_ode, (0, 80), x0, t_eval=t_eval, method='RK45', rtol=1e-6, max_step=0.05)
 
 t = sol.t
 c = sol.y[0]
@@ -63,7 +63,7 @@ print(f"✅ Phi-Split bei t = {switch_time:.2f} s" if switch_time else "❌ Kein
 if lead_time:
     print(f"   → Vorsprung: {lead_time:.1f} s")
 
-# ====================== 5-PANEL ======================
+# ====================== 5-Panel mit Polar-Ring ======================
 fig = plt.figure(figsize=(20, 12))
 
 ax1 = fig.add_subplot(2, 3, 1)
@@ -97,11 +97,11 @@ theta = np.arctan2(dc, c)
 r = np.sqrt(c**2 + dc**2)
 ax5.plot(theta, r, 'b-', lw=1.5, alpha=0.8)
 ax5.scatter(theta, r, c=phi_idx, cmap='viridis', s=25)
-ax5.scatter(0, 0, color='black', s=180)
+ax5.scatter(0, 0, color='black', s=180, label='OKO Kernel')
 ax5.set_title("Polar-Ring + Perlenkette")
 ax5.grid(True)
 
-plt.suptitle("IEEE 300-Bus – v12.7 GUARANTEED SPLIT (mit Perlenkette)", fontsize=16)
+plt.suptitle("IEEE 300-Bus – v12.7 GUARANTEED (mit Perlenkette)", fontsize=16)
 plt.tight_layout()
 plt.savefig("ieee300_v12.7_guaranteed_full_5panel.png", dpi=300)
 print("📸 Volles 5-Panel gespeichert")

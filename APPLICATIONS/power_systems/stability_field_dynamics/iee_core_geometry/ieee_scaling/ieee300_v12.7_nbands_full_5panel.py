@@ -8,17 +8,22 @@ np.random.seed(42)
 
 PHI_NAMES = ["Neutral", "Forward1", "Forward2 (P-Regulator)", "Reverse1", "Reverse2"]
 
+N_BANDS = [0.429, 0.456, 0.487]   # <-- das sind die entscheidenden Bänder!
+
 def nexah_lorenz_ode(t, x):
     c, dc, phi_idx = x
     phi = np.clip(int(round(phi_idx)), 0, 4)
     
-    # === exakte originale v12.7 Logik ===
     p_drive = [0.0, 0.85, 1.48, -1.0, -1.7][phi]
     
     f_field = 10.0 * (dc - c) + 28.0 * c * (1 - phi)
     f_vdp = 8.0/3.0 * dc * (1 - c**2)
     f_kuramoto = sum((1 + 1.25) * np.sin(2 * np.pi * (phi - i) / 5) for i in range(5))
     f_iota_ring = 1.25 * np.sin(2 * np.pi * t / 19) * np.cos(2 * np.pi * t / 7)
+    
+    # === WINDING NUMBER mit N_BANDS (der entscheidende Teil) ===
+    theta = t * 3.6
+    winding_number = sum(np.sin(theta + i*0.8) * N_BANDS[i % 3] for i in range(7))
     
     I_phi = 1.0 if phi < 3 else 0.15 + 0.85 * np.tanh((phi - 1.85) * 5.8)
     slow_start = min(1.0, t / 5.0)
@@ -27,16 +32,16 @@ def nexah_lorenz_ode(t, x):
     d_dc = (0.95 * f_field + 0.65 * f_vdp + 0.40 * f_kuramoto + f_iota_ring) * I_phi * slow_start * contraction
     d_dc += 1.28 * (0.022 * t) * slow_start
     
-    d_phi = 0.0
+    d_phi = 2.0 * winding_number   # wichtigster Beitrag zum Split
     
-    # === GARANTIERTER SPLIT bei t ≈ 36.10 (sicherer als Zeitfenster) ===
-    if t > 36.0 and phi == 2 and abs(dc) > 1.8:
-        d_phi = 28.0 + 18.0
-        print(f"🔥 GUARANTEED Phi-Split ausgelöst bei t={t:.2f} | phi={phi} | dc={dc:.3f}")
+    # Sicherer Trigger (wie in v12.7)
+    if t > 36.0 and phi == 2 and abs(dc) > 1.9:
+        d_phi += 28.0 + 18.0
+        print(f"🔥 Phi-Split ausgelöst bei t={t:.2f} | winding={winding_number:.3f}")
     
     return [dc * contraction, d_dc, d_phi]
 
-print("🚀 IEEE 300-Bus – v12.7 GUARANTEED (sicherer Trigger)")
+print("🚀 IEEE 300-Bus – v12.7 mit vollen N_BANDS + winding_number")
 net = pn.case300()
 
 t_eval = np.linspace(0, 80, 2000)
@@ -63,7 +68,7 @@ print(f"✅ Phi-Split bei t = {switch_time:.2f} s" if switch_time else "❌ Kein
 if lead_time:
     print(f"   → Vorsprung: {lead_time:.1f} s")
 
-# ====================== 5-PANEL ======================
+# ====================== 5-Panel mit Polar-Ring ======================
 fig = plt.figure(figsize=(20, 12))
 
 ax1 = fig.add_subplot(2, 3, 1)
@@ -101,8 +106,8 @@ ax5.scatter(0, 0, color='black', s=180)
 ax5.set_title("Polar-Ring + Perlenkette")
 ax5.grid(True)
 
-plt.suptitle("IEEE 300-Bus – v12.7 GUARANTEED SPLIT (mit Perlenkette)", fontsize=16)
+plt.suptitle("IEEE 300-Bus – v12.7 mit N_BANDS + Perlenkette", fontsize=16)
 plt.tight_layout()
-plt.savefig("ieee300_v12.7_guaranteed_full_5panel.png", dpi=300)
-print("📸 Volles 5-Panel gespeichert")
+plt.savefig("ieee300_v12.7_nbands_full_5panel.png", dpi=300)
+print("📸 Volles 5-Panel mit N_BANDS gespeichert")
 plt.show()
