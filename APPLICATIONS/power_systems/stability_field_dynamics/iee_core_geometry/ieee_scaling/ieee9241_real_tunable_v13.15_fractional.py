@@ -6,7 +6,6 @@ import pandapower.networks as pn
 
 PHI_NAMES = ["Neutral", "Forward1", "Forward2 (P-Regulator)", "Reverse1", "Reverse2"]
 
-# Fractional Tuning (deine Idee)
 ALPHA_FLOW = 0.95
 BETA_SWIRL = 0.65
 GAMMA_MEMORY = 0.40
@@ -17,7 +16,7 @@ JANU_STRENGTH = 1.45
 KAPPA_L = 1.05
 IOTA_YUGO_STRENGTH = 1.5
 
-# Fractional Modulation (64/64 Style)
+# Fractional Tuning (deine Idee)
 PHI_FRACTION = 64/64
 ALPHA_FRACTION = 63/64
 BETA_FRACTION = 1/64
@@ -57,12 +56,12 @@ def nexah_lorenz_ode(t, x):
     
     d_phi = 0.0
     if t > 26.0 and abs(dc) > 2.0 and abs(c) > 1.3:
-        d_phi = 26.0 + 16.0 * (phi == 2) * BETA_FRACTION   # fractional Boost
+        d_phi = 26.0 + 16.0 * (phi == 2) * BETA_FRACTION
     
     return [dc * contraction * PHI_FRACTION, d_dc, d_phi]
 
 print("🚀 Lade IEEE 9241-Bus Netz (PEGASE)... (v13.15 Fractional + Iota-Yugo)")
-net = pn.case9241_pegase()
+net = pn.case9241pegase()   # korrigiert: ohne Unterstrich
 
 t_eval = np.linspace(0, 80, 1600)
 x0 = [0.05, 0.0, 0]
