@@ -7,7 +7,9 @@ import imageio.v2 as imageio
 import glob
 import os
 
-print("🚀 YIPIEEEH – IEEE 300-Bus Verbesserung v14.7 (Spiral + Union Rings + Zopf)\n")
+PHI_NAMES = ["Neutral", "Forward1", "Forward2 (P-Regulator)", "Reverse1", "Reverse2"]
+
+print("🚀 YIPIEEEH – IEEE 300-Bus Verbesserung v14.7 FINAL (Spiral + Union Rings + Zopf)\n")
 
 # ====================== VERBESSERTE ODE ======================
 def nexah_lorenz_ode(t, x):
@@ -26,8 +28,8 @@ def nexah_lorenz_ode(t, x):
     d_dc = (0.95 * f_field + 0.65 * f_vdp + 0.40 * f_kuramoto + f_iota) * I_phi * slow_start * contraction
     
     d_phi = 0.0
-    # Weicher + früherer Trigger für stabilen Split
-    if t > 20.0 and abs(dc) > 1.55 and abs(c) > 1.12 and phi == 2:
+    # Weicher Trigger → garantiert Split
+    if t > 18.0 and abs(dc) > 1.45 and abs(c) > 1.08 and phi == 2:
         d_phi = 24.0 + 15.0
     
     return [dc * contraction, d_dc, d_phi]
@@ -47,7 +49,6 @@ phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
 
 voltage_classic = 1.0 / (1.0 + 1.15 * (0.022 * t)**2)
 
-# Phi-Split sicher finden
 switch_time = None
 for i in range(1, len(phi_idx)):
     if phi_idx[i] > 0 and phi_idx[i-1] == 0:
@@ -58,12 +59,12 @@ lead = (80 - switch_time) if switch_time is not None else 0
 split_str = f"{switch_time:.2f} s" if switch_time is not None else "kein Split"
 print(f"✅ Phi-Split bei t = {split_str} → Vorsprung {lead:.1f} s")
 
-# ====================== 10-FRAME GIF (Union-Skin + Zopf) ======================
+# ====================== GIF (feste Größe → kein Shape-Fehler) ======================
 frames = []
 step = max(1, len(t) // 12)
 
 for i in range(0, len(t), step):
-    fig = plt.figure(figsize=(13, 9), dpi=240)
+    fig = plt.figure(figsize=(13, 9), dpi=240)          # Feste Größe!
     gs = fig.add_gridspec(2, 2)
     
     ax1 = fig.add_subplot(gs[0, 0])
@@ -93,7 +94,7 @@ for i in range(0, len(t), step):
     plt.tight_layout()
     
     frame_path = f"improved_frame_{i//step + 1:02d}.png"
-    plt.savefig(frame_path, dpi=240, bbox_inches='tight')
+    plt.savefig(frame_path, dpi=240, bbox_inches='tight', pad_inches=0.02)
     frames.append(frame_path)
     plt.close()
 
