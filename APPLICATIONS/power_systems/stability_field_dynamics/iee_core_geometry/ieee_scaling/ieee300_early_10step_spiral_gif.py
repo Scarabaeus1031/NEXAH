@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 import pandapower as pp
 import pandapower.networks as pn
-import imageio
+import imageio.v2 as imageio   # v2 für stabile GIF-Erzeugung
 import glob
 import os
 
@@ -11,7 +11,7 @@ PHI_NAMES = ["Neutral", "Forward1", "Forward2 (P-Regulator)", "Reverse1", "Rever
 
 print("🚀 Erstelle 10er-GIF der frühen Phase im Spiral-Stil (IEEE 300-Bus)\n")
 
-# ====================== ODE (v12.7 Basis) ======================
+# ====================== ODE ======================
 def nexah_lorenz_ode(t, x):
     c, dc, phi_idx = x
     phi = np.clip(int(round(phi_idx)), 0, 4)
@@ -23,13 +23,13 @@ def nexah_lorenz_ode(t, x):
     
     I_phi = 1.0 if phi < 3 else 0.15 + 0.85 * np.tanh((phi - 1.85) * 5.8)
     slow_start = min(1.0, t / 5.0)
-    contraction = 0.92   # frühe Phase → fast keine Kontraktion
+    contraction = 0.92
     
     d_dc = (0.95 * f_field + 0.65 * f_vdp + 0.40 * f_kuramoto + f_iota) * I_phi * slow_start * contraction
     
     d_phi = 0.0
     if t > 8.0 and abs(dc) > 1.6 and abs(c) > 1.1 and phi == 2:
-        d_phi = 18.0 + 12.0   # früher, aber kontrollierter Start
+        d_phi = 18.0 + 12.0
     
     return [dc * contraction, d_dc, d_phi]
 
@@ -49,12 +49,12 @@ phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
 
 voltage_classic = 1.0 / (1.0 + 1.15 * (0.022 * t)**2)
 
-# ====================== 10er GIF ======================
+# ====================== 10er GIF (feste Größe) ======================
 frames = []
-step = max(1, len(t) // 10)   # genau ~10 Frames
+step = max(1, len(t) // 10)
 
 for i in range(0, len(t), step):
-    fig = plt.figure(figsize=(12, 8))
+    fig = plt.figure(figsize=(12, 8.5), dpi=220)   # feste Größe + hohe Auflösung
     gs = fig.add_gridspec(2, 2)
     
     # Spannung
@@ -72,12 +72,12 @@ for i in range(0, len(t), step):
     ax2.set_yticklabels(PHI_NAMES)
     ax2.grid(True, alpha=0.5)
     
-    # Polar Perlenkette (Spiral-Stil)
+    # Polar Perlenkette – Spiral-Stil
     ax3 = fig.add_subplot(gs[1, :], projection='polar')
     theta = np.arctan2(dc[:i+1], c[:i+1])
     r = np.sqrt(c[:i+1]**2 + dc[:i+1]**2)
     ax3.plot(theta, r, 'b-', lw=1.8, alpha=0.85)
-    ax3.scatter(theta, r, c=t[:i+1], cmap='plasma', s=38, alpha=0.95)   # Zeit-Farbverlauf
+    ax3.scatter(theta, r, c=t[:i+1], cmap='plasma', s=38, alpha=0.95)  # Zeit-Farbverlauf
     ax3.scatter(0, 0, color='black', s=240, zorder=10)
     ax3.set_title("Perlenkette Evolution (Spiral-Stil)")
     ax3.grid(True)
@@ -86,13 +86,13 @@ for i in range(0, len(t), step):
     plt.tight_layout()
     
     frame_path = f"early_frame_{i//step + 1:02d}.png"
-    plt.savefig(frame_path, dpi=280, bbox_inches='tight')
+    plt.savefig(frame_path, dpi=220, bbox_inches='tight', pad_inches=0.05)
     frames.append(frame_path)
     plt.close()
 
 # GIF erzeugen
-imageio.mimsave("ieee300_early_10step_spiral.gif", [imageio.imread(f) for f in frames], duration=0.6)
+imageio.mimsave("ieee300_early_10step_spiral.gif", [imageio.imread(f) for f in frames], duration=0.6, loop=0)
 
 print("🎥 10er-GIF gespeichert als: ieee300_early_10step_spiral.gif")
 print("   (Zeit-Farbverlauf + Helix-Modulation + 90°-Struktur)")
-print("\nFertig! Schau dir die GIF an und sag mir, was dir auffällt.")
+print("\n✅ Fertig! Schau dir die GIF an und sag mir, was dir auffällt.")
