@@ -20,14 +20,15 @@ def nexah_lorenz_ode(t, x):
     f_iota = 1.15 * np.sin(2 * np.pi * t / 19) * np.cos(2 * np.pi * t / 7)
     
     I_phi = 1.0 if phi < 3 else 0.15 + 0.85 * np.tanh((phi - 1.85) * 5.8)
-    slow_start = min(1.0, t / 4.5)          # früherer, weicherer Start
-    contraction = 0.92 if t < 12 else 0.68  # Zopf-Phase ab t~12
+    slow_start = min(1.0, t / 4.5)
+    contraction = 0.92 if t < 12 else 0.68
     
     d_dc = (0.95 * f_field + 0.65 * f_vdp + 0.40 * f_kuramoto + f_iota) * I_phi * slow_start * contraction
     
     d_phi = 0.0
-    if t > 22.0 and abs(dc) > 1.65 and abs(c) > 1.15 and phi == 2:
-        d_phi = 24.0 + 15.0   # stabiler, früherer Split
+    # Weicher + früherer Trigger für stabilen Split
+    if t > 20.0 and abs(dc) > 1.55 and abs(c) > 1.12 and phi == 2:
+        d_phi = 24.0 + 15.0
     
     return [dc * contraction, d_dc, d_phi]
 
@@ -46,6 +47,7 @@ phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
 
 voltage_classic = 1.0 / (1.0 + 1.15 * (0.022 * t)**2)
 
+# Phi-Split sicher finden
 switch_time = None
 for i in range(1, len(phi_idx)):
     if phi_idx[i] > 0 and phi_idx[i-1] == 0:
@@ -53,9 +55,10 @@ for i in range(1, len(phi_idx)):
         break
 
 lead = (80 - switch_time) if switch_time is not None else 0
-print(f"✅ Phi-Split bei t = {switch_time:.2f} s → Vorsprung {lead:.1f} s")
+split_str = f"{switch_time:.2f} s" if switch_time is not None else "kein Split"
+print(f"✅ Phi-Split bei t = {split_str} → Vorsprung {lead:.1f} s")
 
-# ====================== 10-FRAME GIF (Union-Skin Stil) ======================
+# ====================== 10-FRAME GIF (Union-Skin + Zopf) ======================
 frames = []
 step = max(1, len(t) // 12)
 
