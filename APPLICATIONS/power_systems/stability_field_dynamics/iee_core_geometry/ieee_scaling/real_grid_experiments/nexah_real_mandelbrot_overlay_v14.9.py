@@ -8,23 +8,21 @@ import os
 
 PHI_NAMES = ["Neutral", "Forward1", "Forward2 (P-Regulator)", "Reverse1", "Reverse2"]
 
-print("🚀 NEXAH Real Data Loader v14.8 – FIX (mit echten Daten + GIF)\n")
+print("🚀 NEXAH Real Data + Mandelbrot Overlay v14.9\n")
 
-# ====================== ECHTE DATEN LADEN ======================
+# ====================== ECHTE DATEN ======================
 data_file = "deutsche_netzdaten_beispiel.csv"
-
 df = pd.read_csv(data_file)
 t_real = df['timestamp'].values.astype(float)
 voltage_real = df['voltage_pu'].values.astype(float)
 
-print(f"✅ {len(df)} Messpunkte geladen (t = {t_real[-1]} s)")
+print(f"✅ {len(df)} Messpunkte geladen")
 
 # ====================== ODE ======================
 def nexah_real_ode(t, x):
     c, dc, phi_idx = x
     phi = np.clip(int(round(phi_idx)), 0, 4)
     
-    # Interpoliere echte Spannung
     v_meas = np.interp(t, t_real, voltage_real)
     v_error = v_meas - (1.0 + c)
     
@@ -53,24 +51,24 @@ c = sol.y[0]
 dc = sol.y[1]
 phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
 
-print("✅ Simulation mit realen Daten abgeschlossen")
-
-# ====================== GIF ======================
-print("🎥 Erstelle GIF...")
+# ====================== GIF mit Mandelbrot-Overlay ======================
+print("🎥 Erstelle Mandelbrot-Overlay GIF...")
 
 frames = []
 step = max(1, len(t) // 12)
 
 for i in range(0, len(t), step):
-    fig = plt.figure(figsize=(13, 9), dpi=240)
+    fig = plt.figure(figsize=(13, 9), dpi=260)
     gs = fig.add_gridspec(2, 2)
     
+    # Spannung
     ax1 = fig.add_subplot(gs[0, 0])
     ax1.plot(t[:i+1], np.interp(t[:i+1], t_real, voltage_real), 'r', lw=3, label="Echte Spannung")
     ax1.set_title(f"Reale Spannung t = {t[i]:.1f} s")
     ax1.grid(True, alpha=0.5)
     ax1.legend()
     
+    # Phi-Regulator
     ax2 = fig.add_subplot(gs[0, 1])
     ax2.plot(t[:i+1], phi_idx[:i+1], 'gold', lw=2, drawstyle='steps-post')
     ax2.set_title("Phi-Regulator")
@@ -78,24 +76,35 @@ for i in range(0, len(t), step):
     ax2.set_yticklabels(PHI_NAMES)
     ax2.grid(True, alpha=0.5)
     
+    # Polar Perlenkette mit Overlay
     ax3 = fig.add_subplot(gs[1, :], projection='polar')
     theta = np.arctan2(dc[:i+1], c[:i+1])
     r = np.sqrt(c[:i+1]**2 + dc[:i+1]**2)
-    ax3.plot(theta, r, 'b-', lw=2)
-    ax3.scatter(theta, r, c=t[:i+1], cmap='plasma', s=45, alpha=0.95)
-    ax3.scatter(0, 0, color='black', s=280, zorder=10)
-    ax3.set_title("Perlenkette – Real Data (zwei Ösen)")
+    ax3.plot(theta, r, 'b-', lw=2.2, alpha=0.9)
+    ax3.scatter(theta, r, c=t[:i+1], cmap='plasma', s=48, alpha=0.95)
+    
+    # Master / Slave Markierung
+    ax3.scatter(0, 0, color='black', s=320, zorder=10, label="Master (Kern)")
+    ax3.scatter(theta[-1], r[-1], color='blue', s=180, zorder=11, label="Slave (äußere Öse)")
+    
+    ax3.set_title("Perlenkette – Mandelbrot-Overlay (Master / Slave / Bulbs)")
     ax3.grid(True)
     
-    plt.suptitle(f"NEXAH Real Data – Schritt {i//step + 1}/12", fontsize=15)
+    # Text-Annotationen
+    ax3.text(0.1, 0.95, "Master (schwarzer Kern)", transform=ax3.transAxes, color='black', fontsize=11)
+    ax3.text(0.1, 0.88, "Slave (blauer Bulb)", transform=ax3.transAxes, color='blue', fontsize=11)
+    ax3.text(0.1, 0.81, "Collapse Edge ~0.64i", transform=ax3.transAxes, color='red', fontsize=11)
+    
+    plt.suptitle(f"NEXAH Real Data + Mandelbrot Overlay – Schritt {i//step + 1}/12", fontsize=15)
     plt.tight_layout()
     
-    frame = f"real_frame_{i//step + 1:02d}.png"
-    plt.savefig(frame, dpi=240, bbox_inches='tight')
+    frame = f"mandelbrot_frame_{i//step + 1:02d}.png"
+    plt.savefig(frame, dpi=260, bbox_inches='tight')
     frames.append(frame)
     plt.close()
 
-imageio.mimsave("nexah_real_data_test.gif", [imageio.imread(f) for f in frames], duration=0.6, loop=0)
+imageio.mimsave("nexah_real_mandelbrot_overlay.gif", [imageio.imread(f) for f in frames], duration=0.65, loop=0)
 
-print("\n🎥 GIF gespeichert als: nexah_real_data_test.gif")
-print("Fertig! Schau dir die GIF an – jetzt mit den beiden Ösen sichtbar.")
+print("\n🎥 GIF gespeichert als: nexah_real_mandelbrot_overlay.gif")
+print("   → Master/Slave, Bulbs und Collapse Edge sind markiert")
+print("Fertig! Schau dir die GIF an und sag mir, ob die beiden Ösen und die Progression der Ecken jetzt klarer sind.")
