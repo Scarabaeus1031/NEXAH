@@ -33,13 +33,14 @@ def nexah_lorenz_ode(t, x, Q, winding_thresh, iota_yugo, contraction):
     d_dc = (0.95 * f_field + 0.65 * f_vdp + 0.40 * f_kuramoto + f_iota) * I_phi * slow_start * contraction
     
     d_phi = 0.0
-    if t > 26.0 and abs(dc) > 2.1 and abs(c) > 1.25 and phi == 2:
-        d_phi = 28.0 + 18.0
+    # Weicher Trigger für Scanner
+    if t > 25.0 and abs(dc) > 1.8 and abs(c) > 1.2 and phi == 2:
+        d_phi = 26.0 + 16.0
     
     return [dc * contraction, d_dc, d_phi]
 
 # ====================== SCANNER ======================
-print("🚀 Starte NEXAH Field Scanner v14.0 (IEEE 300-Bus)\n")
+print("🚀 Starte NEXAH Field Scanner v14.1 (weicher Trigger)\n")
 
 results = []
 net = pn.case300()
@@ -60,7 +61,6 @@ for Q, thresh, iota, contr in product(Q_VALUES, WINDING_THRESH, IOTA_YUGO, CONTR
     
     t = sol.t
     phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
-    voltage_classic = 1.0 / (1.0 + 1.15 * (0.022 * t)**2)
     
     switch_time = None
     for i in range(1, len(phi_idx)):
@@ -87,13 +87,13 @@ df = df.sort_values("Lead_s", ascending=False)
 print("\n" + "="*90)
 print("🏆 BESTE KONFIGURATIONEN")
 print("="*90)
-print(df.head(12).to_string(index=False))
+print(df.head(15).to_string(index=False))
 
 print(f"\n🔥 Bester Vorsprung: {best_lead:.1f} Sekunden mit:")
 print(best_config)
 
-df.to_csv("ieee300_scanner_results_v14.0.csv", index=False)
-print("\n📊 Tabelle gespeichert als: ieee300_scanner_results_v14.0.csv")
+df.to_csv("ieee300_scanner_results_v14.1.csv", index=False)
+print("\n📊 Tabelle gespeichert als: ieee300_scanner_results_v14.1.csv")
 
-print("\nScanner fertig. Schick mir bitte die Ausgabe (die Tabelle + beste Konfiguration).")
+print("\nScanner fertig. Schick mir die Ausgabe (die Tabelle + beste Konfiguration).")
 print("Dann machen wir direkt die Heatmap-GIF.")
