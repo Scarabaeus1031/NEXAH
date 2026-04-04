@@ -49,6 +49,7 @@ phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
 
 voltage_classic = 1.0 / (1.0 + 1.15 * (0.022 * t)**2)
 
+# Phi-Split finden
 switch_time = None
 for i in range(1, len(phi_idx)):
     if phi_idx[i] > 0 and phi_idx[i-1] == 0:
@@ -56,7 +57,8 @@ for i in range(1, len(phi_idx)):
         break
 
 lead = (80 - switch_time) if switch_time is not None else 0
-print(f"✅ Phi-Split bei t = {switch_time:.2f} s → Vorsprung {lead:.1f} s")
+split_str = f"{switch_time:.2f} s" if switch_time is not None else "kein Split"
+print(f"✅ Phi-Split bei t = {split_str} → Vorsprung {lead:.1f} s")
 
 # ====================== 5-PANEL PLOT ======================
 fig = plt.figure(figsize=(15, 10))
@@ -108,11 +110,11 @@ plt.tight_layout()
 plt.savefig("ieee300_v12.7_5panel_final.png", dpi=420, bbox_inches='tight')
 print("📸 5-Panel gespeichert als: ieee300_v12.7_5panel_final.png")
 
-# ====================== GIF ANIMATION (optimiert) ======================
-print("🎥 Erstelle optimierte GIF (ca. 320 Frames)...")
+# ====================== GIF (optimiert, ca. 320 Frames) ======================
+print("🎥 Erstelle optimierte GIF...")
 
 frames = []
-step = 25   # jede 25. Messung → ca. 320 Frames, schöne Länge
+step = 25
 
 for i in range(0, len(t), step):
     fig_anim = plt.figure(figsize=(12, 8))
