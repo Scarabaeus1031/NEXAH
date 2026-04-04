@@ -4,10 +4,12 @@ from scipy.integrate import solve_ivp
 import pandapower as pp
 import pandapower.networks as pn
 import imageio
+import glob
+import os
 
 PHI_NAMES = ["Neutral", "Forward1", "Forward2 (P-Regulator)", "Reverse1", "Reverse2"]
 
-print("🚀 Starte v12.7 Basis + 5-Panel + GIF (IEEE 300-Bus)\n")
+print("🚀 Starte v12.7 Basis + 5-Panel + optimierte GIF (IEEE 300-Bus)\n")
 
 # ====================== ODE (exakt v12.7) ======================
 def nexah_lorenz_ode(t, x):
@@ -31,6 +33,11 @@ def nexah_lorenz_ode(t, x):
     
     return [dc * contraction, d_dc, d_phi]
 
+# ====================== Alte Frames löschen ======================
+for f in glob.glob("frame_*.png"):
+    os.remove(f)
+print("🧹 Alte Frame-Dateien gelöscht.")
+
 # ====================== SIMULATION ======================
 x0 = [0.05, 0.0, 0]
 sol = solve_ivp(nexah_lorenz_ode, (0, 80), x0, method='RK45', rtol=1e-6, max_step=0.04)
@@ -42,7 +49,6 @@ phi_idx = np.round(sol.y[2]).astype(int).clip(0, 4)
 
 voltage_classic = 1.0 / (1.0 + 1.15 * (0.022 * t)**2)
 
-# Phi-Split finden
 switch_time = None
 for i in range(1, len(phi_idx)):
     if phi_idx[i] > 0 and phi_idx[i-1] == 0:
@@ -50,8 +56,7 @@ for i in range(1, len(phi_idx)):
         break
 
 lead = (80 - switch_time) if switch_time is not None else 0
-split_str = f"{switch_time:.2f} s" if switch_time is not None else "kein Split"
-print(f"✅ Phi-Split bei t = {split_str} → Vorsprung {lead:.1f} s")
+print(f"✅ Phi-Split bei t = {switch_time:.2f} s → Vorsprung {lead:.1f} s")
 
 # ====================== 5-PANEL PLOT ======================
 fig = plt.figure(figsize=(15, 10))
@@ -103,11 +108,13 @@ plt.tight_layout()
 plt.savefig("ieee300_v12.7_5panel_final.png", dpi=420, bbox_inches='tight')
 print("📸 5-Panel gespeichert als: ieee300_v12.7_5panel_final.png")
 
-# ====================== GIF ANIMATION ======================
-print("🎥 Erstelle Heatmap-GIF (Perlenkette + Split)...")
+# ====================== GIF ANIMATION (optimiert) ======================
+print("🎥 Erstelle optimierte GIF (ca. 320 Frames)...")
 
 frames = []
-for i in range(0, len(t), 8):
+step = 25   # jede 25. Messung → ca. 320 Frames, schöne Länge
+
+for i in range(0, len(t), step):
     fig_anim = plt.figure(figsize=(12, 8))
     gs = fig_anim.add_gridspec(2, 2)
     
@@ -141,9 +148,9 @@ for i in range(0, len(t), 8):
     frames.append(frame_path)
     plt.close()
 
-imageio.mimsave("ieee300_v12.7_field_evolution.gif", [imageio.imread(f) for f in frames], duration=0.15)
+imageio.mimsave("ieee300_v12.7_field_evolution.gif", [imageio.imread(f) for f in frames], duration=0.12)
 print("🎥 GIF gespeichert als: ieee300_v12.7_field_evolution.gif")
 
-print("\n✅ Fertig! Schau dir an:")
+print("\n✅ Fertig!")
 print("   • ieee300_v12.7_5panel_final.png")
 print("   • ieee300_v12.7_field_evolution.gif")
