@@ -175,4 +175,6 @@ Stability emerges from coherence within a geometric field.
 
 Collapse occurs when coherence is lost
 and the system leaves its structured trajectory.
+
+Navigation becomes possible by maintaining alignment with the field.
 ```
