@@ -1,4 +1,3 @@
-```python
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -79,4 +78,3 @@ plt.savefig(output_path, dpi=300)
 plt.show()
 
 print(f"\nSaved to: {output_path}\n")
-```
