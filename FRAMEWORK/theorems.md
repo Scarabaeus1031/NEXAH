@@ -1,180 +1,306 @@
-# Theorems of NEXAH
+# NEXAH Research Vision (v2 — Field & Coherence Update)
 
-The **Theorems** of the NEXAH Framework are formal derivations based on the axioms and principles. These theorems provide mathematical and theoretical support for the application of NEXAH in various systems. They extend the axioms and principles into practical and testable theories.
-
-## Key Theorems
-
-### **Theorem 1 — Relational Structure Theorem**
-This theorem formalizes the relationship between the elements of the system based on the principle of **Relational Primacy**. It states that the relational structure is the core foundation upon which system behavior is defined.
-
-- **Purpose**: To formalize the relational structure of the system.
-- **Key Focus**: Establishing how relationships govern system components.
-
-### **Theorem 2 — Regime Transition Theorem**
-Building on **Regime Restriction**, this theorem defines the mathematical model for system state transitions. It asserts that stability regimes are governed by specific transitions, and the system remains stable through well-defined paths.
-
-- **Purpose**: To formalize how the system transitions between states.
-- **Key Focus**: Transition mechanisms between stability regimes.
-
-### **Theorem 3 — Frame Preservation Theorem**
-This theorem defines how frames interact with the system. It asserts that an admissible frame, as defined in **Frame Admissibility**, must preserve the relational order and constraints of the system when applied.
-
-- **Purpose**: To formalize the preservation of frames within the system.
-- **Key Focus**: Frame interaction with system components.
+NEXAH is an orientation-based framework that investigates whether **intrinsic stability in complex systems emerges through local structural coherence**, rather than through global optimization, rewards, or centralized control.
 
 ---
 
-## How to Use These Theorems
+## Core Hypothesis
 
-The theorems provide a deeper understanding of the system’s structure and behavior:
+Complex systems across domains exhibit a **shared collapse mechanism**:
 
-1. **Relational Structure Theorem**: Use this theorem to validate the relationships between system elements.
-2. **Regime Transition Theorem**: Apply this theorem to manage state transitions and ensure stability in your system.
-3. **Frame Preservation Theorem**: Use this theorem to define frames and maintain relational integrity within the system.
+> Stability is maintained through coherence in interface regions —  
+> and collapse begins when this coherence is lost.
 
-These theorems act as formal guidelines for applying the NEXAH framework to real-world systems, ensuring consistency and stability in complex systems modeling.
+This process appears to follow a universal sequence:
 
-
-## Geometric Stability Theorems (NEW — v2)
-
-The following theorems extend the original NEXAH framework into a **geometric theory of complex systems**.
-
-They are derived from the NEXAH axioms and supported by cross-domain observations (IEEE systems, chaotic dynamics, discrete systems, and multi-agent simulations).
+→ coherence → fragmentation → acceleration → collapse  
 
 ---
 
-### **Theorem 4 — Coherence Stability Theorem**
+## The 3+1 Experimental Strands
 
-A system remains stable as long as its local dynamics remain aligned with the underlying field structure.
-
-> Stability is equivalent to persistent coherence within the flow field.
-
-- **Implication**: Stability is not defined by static equilibrium, but by dynamic alignment.
-- **Testable via**: coherence metrics, alignment measures, phase synchronization
-
----
-
-### **Theorem 5 — Coherence Loss → Collapse Theorem**
-
-Collapse begins when local coherence drops below a critical threshold, causing the system to exit its structured flow.
-
-> Collapse is a geometric divergence from the field.
-
-- **Implication**: Collapse is detectable before classical failure signals.
-- **Observed in**: IEEE grid collapse, fragmentation metrics, curvature spikes
+| Strand | Domain | Input Type | Observed Patterns | Current Status |
+|--------|--------|------------|------------------|----------------|
+| 1 | Discrete Mathematics | Prime numbers (mod systems) | cycles, gaps, corridors | structurally strongest |
+| 2 | Technical Systems | IEEE Power Grids (9, 14, 30) | early warning, collapse prediction | **physically validated** |
+| 3 | Chaotic Dynamics | Lorenz Attractor | separatrix, basin interfaces | qualitative alignment |
+| 4 | Multi-Agent Systems | local orientation agents | coherence without reward | **active unification layer** |
 
 ---
 
-### **Theorem 6 — Interface Criticality Theorem**
+## Core Discovery (UPDATED)
 
-The most critical system behavior occurs at interfaces between competing dynamical forces.
+Across all domains, NEXAH consistently identifies:
 
-> The boundary between stability and instability is a dynamically maintained interface.
+- **interface regions (gaps / corridors)**
+- **anisotropic motion (free vs constrained directions)**
+- **local interaction → global coherence**
+- **collapse preceded by coherence loss**
+- **structured flow in state space**
+- **field-aligned trajectories (NEW)**
 
-- **Implication**: edge-of-chaos behavior emerges naturally
-- **Observed as**: corridors, gaps, Phi-Split regions, separatrix structures
-
----
-
-### **Theorem 7 — Structured Flow Theorem**
-
-System trajectories follow constrained paths (corridors) within the field, rather than evolving arbitrarily.
-
-> Motion is restricted by the geometry of the field.
-
-- **Implication**: system evolution is predictable in structure (if not in exact state)
-- **Observed as**: spiral paths, basin structures, flow-aligned trajectories
+→ systems do not only exhibit structure  
+→ they evolve along **preferred paths inside a field**
 
 ---
 
-### **Theorem 8 — Universal Collapse Sequence Theorem**
+# 🌐 Field Layer & Geometric Flow (V64–V69)
 
-All complex systems exhibit a universal transition sequence:
+A critical extension of the framework introduces:
 
-coherence → fragmentation → acceleration → collapse
+→ the **explicit field representation of system dynamics**
 
-- **Implication**: collapse is a process, not an event
-- **Observed across**:
-  - IEEE systems
-  - chaotic attractors
-  - discrete prime systems
-  - agent-based simulations
+Previously:
 
----
+- structure was inferred from trajectories  
+- collapse was detected via derived metrics  
 
-### **Theorem 9 — Scale Invariance Theorem**
+Now:
 
-The geometric structure of system dynamics is invariant across scales.
-
-> Structural patterns persist across system sizes and domains.
-
-- **Implication**: results generalize from small to large systems
-- **Validated in**: IEEE 118 → 9241 Bus scaling tests
+→ the system is represented as a **continuous flow field**
 
 ---
 
-### **Theorem 10 — Navigation Theorem**
+## Key Discovery
 
-If the field structure is known, system trajectories can be guided by maintaining coherence within stable corridors.
+> The system does not evolve arbitrarily.  
+>  
+> It follows structured paths inside a field.
 
-> Navigation is possible through alignment with the field.
+Observed:
 
-- **Implication**: complex systems are not only observable, but navigable
-- **Current status**:
-  - partially validated (early detection)
-  - under active investigation (controlled intervention)
+- consistent directional flow  
+- local branching structures  
+- smooth global alignment  
 
 ---
 
 ## Interpretation
 
-These theorems define a unified view:
+The dynamics follow:
 
-> Complex systems are governed by geometric flow structures,  
-> and their stability depends on coherence within these structures.
+→ **geodesics in the field**
 
----
+Meaning:
 
-## Relation to Original Theorems
-
-The original NEXAH theorems define:
-
-- relational structure (META)
-- regime transitions (ARCHY)
-- frame constraints (NEXAH layer)
-
-The geometric theorems extend this by defining:
-
-- the underlying field structure
-- the stability mechanism
-- the collapse dynamics
-- the navigation principle
+- minimal-energy paths  
+- natural evolution trajectories  
+- fastest approach toward collapse  
 
 ---
 
-## Status
+## Structural Mapping
 
-These theorems are:
-
-- empirically supported (IEEE validation)
-- structurally consistent across domains
-- partially formalized
-
-Further work:
-
-- define quantitative coherence metrics  
-- derive formal proofs  
-- test intervention strategies  
+| Concept | Field Interpretation |
+|--------|---------------------|
+| Manifold | valley / surface in field |
+| Rift | flow-aligned corridor |
+| Distance | deviation from flow alignment |
+| Branching | local flow divergence |
+| Collapse | exit from structured flow |
 
 ---
 
-## Core Statement
+## 🧠 NEW — Coherence as Field Structure
+
+A key refinement of the framework:
+
+> Coherence is not only a stability metric.  
+>  
+> It defines the **structure of the field itself**.
+
+---
+
+## Coherence Definition
+
+\[
+C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
+\]
+
+---
+
+## 🔥 Field Split Discovery (NEW)
+
+Empirical results (CORE_GEOMETRY v5–v6):
+
+> The field splits into two opposing directional flows.
+
+---
+
+### Field Decomposition
 
 ```text
-Stability emerges from coherence within a geometric field.
+Forward Flow   → motion aligned with field (C > 0)
+Interface      → transition layer (C ≈ 0)
+Backward Flow  → motion opposing field (C < 0)
+```
 
-Collapse occurs when coherence is lost
-and the system leaves its structured trajectory.
+---
 
-Navigation becomes possible by maintaining alignment with the field.
+## 🔴 Core Insight
+
+```text
+Coherence defines the interface between two opposing flows.
+```
+
+---
+
+## 🧠 Interpretation
+
+- systems are not moving in one direction  
+- they oscillate between **forward and backward flow regimes**  
+- stability emerges when:
+
+→ the system remains aligned with the forward field  
+→ or transitions smoothly through the interface  
+
+---
+
+## 🔁 Temporal Interpretation
+
+The field implicitly encodes:
+
+- forward flow → future-directed evolution  
+- backward flow → return / memory dynamics  
+- interface → present transition layer  
+
+---
+
+## 🌀 Topological Implication
+
+The forward/backward split produces:
+
+- loop structures  
+- nested trajectories  
+- asymmetry in phase space  
+- Möbius-like orientation changes  
+
+---
+
+## Updated Collapse Mechanism
+
+1. **Coherence (SAFE)**  
+2. **Interface instability (TRANSITION)**  
+3. **Backward drift / fragmentation (WARNING)**  
+4. **Acceleration (CRITICAL)**  
+5. **Collapse (FAILURE)**  
+
+---
+
+## Revised Structural Principle
+
+> Stability is not defined by low stress.  
+>  
+> It is defined by **persistent coherence across directional flow transitions**.
+
+---
+
+## Cross-Domain Interpretation (Updated)
+
+| Feature | Interpretation |
+|--------|---------------|
+| Gap / Interface | coherence transition layer |
+| Corridor | stable forward flow region |
+| Fragmentation | backward drift onset |
+| Acceleration | divergence from field |
+| Collapse | loss of forward alignment |
+
+---
+
+## Strand Updates
+
+### Strand 1 — Prime Systems
+
+- behave as **discrete projections of a field**
+- show:
+
+  - directional modular flow  
+  - corridor transitions  
+  - implicit coherence structure  
+
+---
+
+### Strand 2 — IEEE Systems
+
+- physical validation achieved  
+- coherence drop precedes collapse  
+- field split behavior observable  
+
+→ strongest validation layer  
+
+---
+
+### Strand 3 — Chaos (Lorenz)
+
+- separatrix ≈ interface layer  
+- trajectory switching ≈ flow transition  
+- strong geometric analogy  
+
+---
+
+### Strand 4 — Multi-Agent Systems
+
+- coherence emerges without reward  
+- agents align locally with field  
+- reproduce:
+
+  - corridors  
+  - branching  
+  - collapse  
+
+---
+
+## Central Insight (UPDATED)
+
+> Systems do not collapse because they reach a limit.  
+>  
+> They collapse because they lose coherence —  
+>  
+> and transition into opposing flow regimes  
+> that lead them away from structured trajectories.
+
+---
+
+## Research Direction
+
+### 1. Generalization
+- apply to biological / financial systems  
+
+### 2. Localization
+- detect interface zones  
+
+### 3. Time Dynamics
+- transient coherence tracking  
+
+### 4. Theory
+- formalize field split mathematically  
+
+### 5. Topology
+- analyze loop / Möbius structures  
+
+---
+
+## Current Position
+
+NEXAH is now:
+
+- structurally consistent across domains  
+- physically validated  
+- predictive of collapse  
+- **field-aware and geometry-aware**  
+- **directional-flow-aware (NEW)**  
+
+---
+
+## Final Core Insight
+
+```text
+Stability is not maintained by resisting change.
+
+It is maintained by preserving coherence
+while moving through the field.
+
+Collapse begins when the system
+crosses the interface
+and fails to return.
 ```
