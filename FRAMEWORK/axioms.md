@@ -33,3 +33,135 @@ These axioms serve as the foundation for the NEXAH framework. To apply these axi
 3. **Define Frames**: Use admissible frames to guide interaction within the system (Axiom 3).
 
 These axioms should be applied as the starting point for building complex models and navigating through the system.
+
+# NEXAH Axioms v1 — Geometric Theory of Stability
+
+This document defines the foundational axioms of the NEXAH framework.
+
+NEXAH proposes that complex systems are governed by **geometric flow structures**,  
+and that stability emerges from **coherence within these structures**.
+
+---
+
+## Axiom 1 — Field Existence
+
+Every complex system can be represented as a **state space with an underlying flow field**.
+
+> System evolution is not arbitrary — it is constrained by a geometric structure.
+
+---
+
+## Axiom 2 — Structured Flow
+
+System trajectories follow **preferred paths** within the field.
+
+> These paths form corridors, manifolds, and attractor-like structures.
+
+---
+
+## Axiom 3 — Local Coherence
+
+Stability arises from **local alignment of system dynamics with the field**.
+
+> Coherence = alignment of local motion with the underlying flow geometry.
+
+---
+
+## Axiom 4 — Interface Regions
+
+The most critical system behavior occurs at **interfaces between competing dynamics**.
+
+> These interfaces form the boundary between stability and instability.
+
+---
+
+## Axiom 5 — Collapse Mechanism
+
+Collapse occurs when a system **loses coherence** and exits its structured flow.
+
+> Collapse is not a sudden event — it is a geometric divergence.
+
+---
+
+## Axiom 6 — Universal Sequence
+
+All complex systems exhibit a shared transition sequence:
+
+coherence → fragmentation → acceleration → collapse
+
+> This sequence is independent of domain and scale.
+
+---
+
+## Axiom 7 — Navigability
+
+If the field structure is known, system trajectories can be **guided along stable paths**.
+
+> Navigation = maintaining coherence within the field.
+
+---
+
+## Axiom 8 — Scale Invariance
+
+The geometric structure of the field is **scale-invariant**.
+
+> The same structural patterns appear across system sizes and domains.
+
+---
+
+## Axiom 9 — Dual Dynamics
+
+System behavior emerges from the interaction of **competing dynamical tendencies**:
+
+- stabilizing vs destabilizing  
+- coupling vs decoupling  
+- expansion vs contraction  
+
+> Coherence exists at the interface of these opposing flows.
+
+---
+
+## Axiom 10 — Field Independence
+
+The underlying structural principles are **not system-specific**.
+
+> The same geometric logic appears in:
+- discrete systems (primes)
+- physical systems (power grids)
+- chaotic systems (Lorenz)
+- agent-based systems
+
+---
+
+## Interpretation
+
+NEXAH describes complex systems as:
+
+> dynamical entities evolving within a structured geometric field,  
+> where stability depends on coherence and collapse corresponds to loss of alignment.
+
+---
+
+## Status
+
+These axioms are currently:
+
+- empirically supported (IEEE systems)
+- structurally consistent across domains
+- partially formalized
+
+Further work is required to:
+
+- define measurable coherence metrics  
+- derive formal theorems  
+- establish falsifiability conditions  
+
+---
+
+## Core Statement
+
+```text
+Stability is the persistence of coherence within a dynamic field.
+
+Collapse occurs when coherence is lost
+and the system leaves its structured path.
