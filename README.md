@@ -25,20 +25,29 @@ It is a **multi-layer framework** that:
 
 1. **simulates systems**  
 2. **extracts structural dynamics**  
-3. **reveals the underlying field geometry (NEW)**  
+3. **reveals the underlying field geometry**  
 4. **identifies motion paths (flow / geodesics)**  
 5. **enables navigation across stability regimes**
 
 ---
 
-## ⚠️ Important Note (Current Status)
+## ⚠️ Current Position
 
-The framework is **fully functional for structure discovery and mapping**.
+The framework is already strong in:
 
-Recent extension:
+- **structure discovery**
+- **field discovery**
+- **transition geometry**
+- **early collapse indication**
 
-→ field representation (V64–V69)  
-→ motion law identification  
+Navigation is now emerging on top of this structure.
+
+Recent extensions include:
+
+- explicit field representation (**V64–V69**)  
+- motion-law identification  
+- coherence-based transition analysis  
+- field split and interface structure  
 
 👉 NEXAH is currently strongest as a:
 
@@ -84,29 +93,29 @@ NEXAH:
 
 ![Off-Manifold Flow (V69)](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-→ trajectories follow structured flow inside the field  
-→ local deviations reveal branching dynamics  
-→ collapse paths are embedded in the field geometry
+The V69 field layer is currently the clearest expression of NEXAH’s transition from:
+
+```text
+structure extraction → explicit field representation
+```
+
+It shows that:
+
+- trajectories follow structured flow inside the field  
+- local deviations reveal branching dynamics  
+- collapse paths are embedded in field geometry  
+- system motion can be read as field-dependent rather than purely state-dependent  
+
+This makes V69 an important bridge between:
+
+- simulation output
+- structural discovery
+- geometric flow interpretation
+- navigation-ready field models  
 
 ---
 
-## 🔬 Experimental Validation — Prime Modular Resonance
-
-Even in a fully discrete system:
-
-→ non-random transition structure  
-→ geometric patterns  
-→ flow-like behavior  
-→ stable cycles  
-
----
-
-## 📂 Key Entry Points
-
-- **[Discovery Engine](./DISCOVERY_ENGINE/)**  
-- **[Applications](./APPLICATIONS/)**  
-- **[Builder Lab](./BUILDER_LAB/demos/)**  
-## ⚡ Stability Field Dynamics (IEEE Systems)
+## ⚡ Flagship Application — Stability Field Dynamics (IEEE Systems)
 
 A core application of NEXAH is the analysis of power system stability using IEEE test cases.
 
@@ -115,7 +124,8 @@ This module demonstrates:
 - field-based stability modeling  
 - collapse prediction via structure  
 - phase-driven dynamics  
-- operator-based navigation (V24–V28)  
+- operator-based navigation  
+- early-warning capability in real benchmark systems  
 
 ### 🧭 Entry Points
 
@@ -125,28 +135,12 @@ This module demonstrates:
 
 👉 [🚀 MASTER INDEX V2 (recommended)](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/demos/NEXAH_MASTER_INDEX_GALLERY_V2.md)
 
----
+This is currently the most advanced operational realization of:
 
-This module is the most advanced realization of:
+- field discovery  
+- phase control  
+- operator-driven navigation  
 
-→ field discovery  
-→ phase control  
-→ operator-driven navigation  
-
----
-
-## 🧭 Conceptual Pipeline
-
-Simulation → Dynamics → Flow → Topology → State Graph → Navigation
-
-## 🧱 The NEXAH Stack
-
-- **ARCHY** → simulation layer  
-- **Discovery Engine** → structure extraction  
-- **Field Layer (NEW)** → flow + geometry  
-- **State Graph** → system abstraction  
-- **NEXAH Kernel** → navigation
-  
 ---
 
 ## 🧩 CORE GEOMETRY — Transition Structure
@@ -170,16 +164,90 @@ This layer explains:
 
 ### 🔗 Explore Module
 
-👉 [CORE GEOMETRY — Transition Structure](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/core_geometry/README.md)
+👉 [FRAMEWORK / CORE_GEOMETRY](./FRAMEWORK/CORE_GEOMETRY/README.md)
+
+This layer includes:
+
+- coherence as alignment metric  
+- field split (forward / backward / interface)  
+- oval / cut / branch structures  
+- transition manifolds  
+- geometry-aware navigation logic  
 
 ---
 
-This module provides:
+## 🧪 Proto Models (Emerging Concepts)
 
-- oval transition manifolds  
-- cut & branch topology  
-- multi-path expansion  
-- field-aware navigation policies  
+Beyond the current formal framework, NEXAH now includes a small set of exploratory proto-models.
+
+These are not yet part of the formal framework, but they capture emerging structural ideas that may later extend `CORE_GEOMETRY`.
+
+Current proto-models:
+
+- [TIME_KNOT_FIELD](./BUILDER_LAB/proto_models/time_knot_field/README.md)
+- [OVAL_MEMBRANE_FIELD](./BUILDER_LAB/proto_models/oval_membrane_field/README.md)
+- [Proto Models Overview](./BUILDER_LAB/proto_models/README.md)
+
+These modules currently explore:
+
+- local temporal emergence  
+- observer crossings  
+- dual-loop temporal structure  
+- layered membrane geometry  
+- stretched transition space  
+- root shrinking and exchange channels  
+
+---
+
+## 🧭 Conceptual Pipeline
+
+```text
+simulation → structure → field → geometry → navigation
+```
+
+A more detailed reading of the current NEXAH logic is:
+
+```text
+simulation → dynamics → structure → field → transition geometry → navigation
+```
+
+---
+
+## 🧱 The NEXAH Stack
+
+- **META** → relational system structure  
+- **ARCHY** → simulation and regime dynamics  
+- **MESO** → risk geometry and collapse structure  
+- **NEXAH** → navigation through structured fields  
+- **MEVA** → execution and trajectory realization  
+
+The full stack is documented in:
+
+👉 [FRAMEWORK / README](./FRAMEWORK/README.md)
+
+---
+
+## 🔬 Experimental Validation — Prime Modular Resonance
+
+Even in fully discrete systems, NEXAH reveals:
+
+- non-random transition structure  
+- geometric patterns  
+- flow-like behavior  
+- stable cycles  
+- corridor-like movement  
+
+This supports the broader hypothesis that structural field logic may appear in both continuous and discrete domains.
+
+---
+
+## 📂 Key Entry Points
+
+- **[START HERE](./START_HERE.md)**  
+- **[FRAMEWORK](./FRAMEWORK/README.md)**  
+- **[Applications](./APPLICATIONS/)**  
+- **[Builder Lab](./BUILDER_LAB/demos/)**  
+- **[Proto Models](./BUILDER_LAB/proto_models/README.md)**  
 
 ---
 
@@ -187,7 +255,7 @@ This module provides:
 
 > Systems do not just evolve —  
 > they organize into structures  
-> that can be mapped and navigated
+> that can be mapped and navigated.
 
 ---
 
@@ -198,7 +266,9 @@ Current release: **v1.1 (Field Extension)**
 - discovery engine: ✅ strong  
 - field layer (V69): ✅ implemented  
 - adapter system: ✅ working  
+- transition geometry: ✅ active  
 - navigation engine: ⚠️ emerging  
+- proto-model layer: ✅ exploratory  
 
 ---
 
@@ -208,7 +278,7 @@ To understand the full framework and architecture:
 
 👉 [NEXAH Framework (Extended)](./README_nexah_framework_extended.md)
 
-👉 (or later: ./FRAMEWORK/README.md)
+👉 [FRAMEWORK / README](./FRAMEWORK/README.md)
 
 ---
 
@@ -226,4 +296,3 @@ Code: Apache 2.0
 Docs: CC BY 4.0  
 
 © 2026 Thomas K. R. Hofmann
-
