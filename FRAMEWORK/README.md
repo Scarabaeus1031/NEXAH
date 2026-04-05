@@ -1,5 +1,35 @@
 # NEXAH Framework — System Stack
 
+---
+
+# 🌐 Core Principle (NEW)
+
+The NEXAH framework is based on a fundamental shift:
+
+> Systems do not evolve through discrete state transitions.  
+>  
+> They move through a **continuous geometric field**,  
+> and stability emerges from **coherence with that field**.
+
+---
+
+## 🧠 From Stack to Field
+
+The system stack (META → MEVA) does not operate on abstract states alone.
+
+It operates on:
+
+→ **field-aligned trajectories**  
+→ **transition geometry (CORE_GEOMETRY)**  
+→ **coherence as stability metric**
+
+This introduces a new paradigm:
+
+```text
+state-based systems → geometry-based systems → field-based navigation
+```
+
+
 ![System Stack Architecture](./visuals/Systemstack_Architecture_Overview.png)
 
 The **System Stack** of the NEXAH Framework represents its core architecture. It defines how the layers **META**, **ARCHY**, **MESO**, **NEXAH**, and **MEVA** interact to form a cohesive system for navigating complex dynamic structures.
@@ -9,6 +39,89 @@ The stack transforms
 system definitions → regime structures → risk landscapes → navigable trajectories
 
 into an executable navigation architecture.
+
+---
+
+# 🔬 CORE_GEOMETRY & Coherence Layer (NEW)
+
+A key extension of the framework introduces the missing layer between:
+
+→ discrete system structure  
+→ continuous system dynamics  
+
+This layer is defined in:
+
+- [CORE_GEOMETRY](./CORE_GEOMETRY/)
+- [Coherence Definition](./CORE_GEOMETRY/COHERENCE.md)
+- [Field Split](./CORE_GEOMETRY/field_split.md)
+
+---
+
+## 🧠 Key Insight
+
+> Transitions are not edges in a graph.  
+>  
+> They are **geometric processes inside a field**.
+
+---
+
+## 🔁 Field Structure
+
+The system evolves inside a structured field:
+
+- forward flow (aligned motion)  
+- backward flow (opposing motion)  
+- interface (transition layer)  
+
+\[
+F = F^{+} \cup F^{0} \cup F^{-}
+\]
+
+---
+
+## 🔥 Coherence as Stability
+
+Stability is defined by alignment:
+
+\[
+C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
+\]
+
+---
+
+## 📊 Interpretation
+
+| Coherence | Meaning |
+|----------|--------|
+| C ≈ 1 | stable trajectory |
+| C ≈ 0 | transition zone |
+| C < 0 | collapse trajectory |
+
+---
+
+## 🧭 Role in the Stack
+
+| Layer | Role |
+|------|------|
+| CORE_GEOMETRY | defines transition structure |
+| MESO | evaluates risk in geometry |
+| NEXAH | navigates within geometry |
+
+---
+
+## 🔥 Visual Evidence
+
+The field structure is directly observable in:
+
+- coherence flow plots  
+- radial split diagrams  
+- phase portraits  
+- IEEE system experiments  
+
+See:
+
+- `CORE_GEOMETRY/visuals/`
+
 
 ---
 
@@ -405,14 +518,26 @@ Core theoretical documents explaining the framework.
 
 ---
 
-# Summary
+# 🧠 Final Summary (Updated)
 
-The NEXAH Framework provides a **structural navigation architecture for complex systems**.
+The NEXAH framework is not only a system stack.
 
-By combining relational structure, regime analysis, risk geometry, and navigation policies, it enables systematic exploration and control of complex dynamic environments.
+It is a **geometry-aware, field-navigating architecture**.
 
-The layered architecture ensures that the framework remains:
+---
 
-• modular  
-• extensible  
-• adaptable to many application domains
+## Core Transformation
+
+```text
+states → regimes → geometry → field → navigation
+```
+
+## Ultimate Insight
+
+Systems do not fail randomly.
+
+```text
+They lose coherence,
+leave the structured field,
+and collapse.
+````
