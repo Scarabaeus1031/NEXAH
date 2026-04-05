@@ -1,27 +1,19 @@
 # -----------------------------
-# COHERENCE MAGNITUDE
+# PHASE (einfach für jetzt)
 # -----------------------------
-C_abs = np.abs(C)
-
-# -----------------------------
-# ENVELOPE (sehr wichtig!)
-# -----------------------------
-def moving_average(x, window=100):
-    kernel = np.ones(window) / window
-    return np.convolve(x, kernel, mode='same')
-
-C_env = moving_average(C_abs)
+t = np.arange(len(C))
+theta = 2 * np.pi * t / len(C)   # Kreis
 
 # -----------------------------
-# PLOT v3
+# POLAR PLOT
 # -----------------------------
-plt.figure(figsize=(12,6))
+plt.figure(figsize=(6,6))
+ax = plt.subplot(111, projection='polar')
 
-plt.plot(C_abs, alpha=0.1, label="|Coherence| raw")
-plt.plot(C_env, linewidth=2, label="Coherence Envelope")
+# Radius = Coherence Envelope
+ax.plot(theta, C_env, linewidth=2)
 
-plt.title("NEXAH Coherence Envelope")
-plt.legend()
+ax.set_title("NEXAH Coherence — Polar View")
 
-plt.savefig("FRAMEWORK/CORE_GEOMETRY/visuals/coherence_v3.png", dpi=300)
+plt.savefig("FRAMEWORK/CORE_GEOMETRY/visuals/coherence_polar.png", dpi=300)
 plt.show()
