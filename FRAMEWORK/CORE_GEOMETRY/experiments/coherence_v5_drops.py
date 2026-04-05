@@ -1,4 +1,3 @@
-```python
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -67,5 +66,3 @@ ax.quiver(
 ax.set_title("NEXAH Coherence Flow (v5)", pad=20)
 
 plt.savefig("../visuals/coherence_flow_v5.png", dpi=300)
-plt.show()
-```
