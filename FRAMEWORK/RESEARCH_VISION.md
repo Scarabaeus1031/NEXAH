@@ -1,19 +1,17 @@
-# NEXAH Research Vision — Theory Update (v2)
+# NEXAH Research Vision (v2 — Field & Coherence Update)
 
-NEXAH is a geometric framework for analyzing and navigating complex systems.  
-It proposes that **stability is not governed by global optimization or control**,  
-but emerges from **local coherence within a dynamic flow field**.
+NEXAH is an orientation-based framework that investigates whether **intrinsic stability in complex systems emerges through local structural coherence**, rather than through global optimization, rewards, or centralized control.
 
 ---
 
 ## Core Hypothesis
 
-Complex systems across domains exhibit a shared structural principle:
+Complex systems across domains exhibit a **shared collapse mechanism**:
 
-> Stability is maintained through **coherence at interface regions**,  
+> Stability is maintained through coherence in interface regions —  
 > and collapse begins when this coherence is lost.
 
-This process follows a universal sequence:
+This process appears to follow a universal sequence:
 
 → coherence → fragmentation → acceleration → collapse  
 
@@ -21,201 +19,276 @@ This process follows a universal sequence:
 
 ## The 3+1 Experimental Strands
 
-| Strand | Domain | Input Type | Observed Patterns | Status |
-|--------|--------|------------|------------------|--------|
-| 1 | Discrete Mathematics | Prime systems (modular) | cycles, gaps, corridors | structurally strongest |
-| 2 | Technical Systems | IEEE Power Grids | early warning, collapse prediction | **physically validated** |
-| 3 | Chaotic Dynamics | Lorenz-type systems | separatrix, basin interfaces | qualitative alignment |
-| 4 | Multi-Agent Systems | local orientation agents | coherence without reward | **unification layer** |
+| Strand | Domain | Input Type | Observed Patterns | Current Status |
+|--------|--------|------------|------------------|----------------|
+| 1 | Discrete Mathematics | Prime numbers (mod systems) | cycles, gaps, corridors | structurally strongest |
+| 2 | Technical Systems | IEEE Power Grids (9, 14, 30) | early warning, collapse prediction | **physically validated** |
+| 3 | Chaotic Dynamics | Lorenz Attractor | separatrix, basin interfaces | qualitative alignment |
+| 4 | Multi-Agent Systems | local orientation agents | coherence without reward | **active unification layer** |
 
 ---
 
-## Core Discovery
+## Core Discovery (UPDATED)
 
 Across all domains, NEXAH consistently identifies:
 
 - **interface regions (gaps / corridors)**
-- **anisotropic motion (preferred directions)**
+- **anisotropic motion (free vs constrained directions)**
 - **local interaction → global coherence**
 - **collapse preceded by coherence loss**
 - **structured flow in state space**
+- **field-aligned trajectories (NEW)**
 
-→ systems do not evolve arbitrarily  
-→ they follow **preferred paths inside a field**
+→ systems do not only exhibit structure  
+→ they evolve along **preferred paths inside a field**
 
 ---
 
-## Field Layer & Geometric Flow
+# 🌐 Field Layer & Geometric Flow (V64–V69)
 
-NEXAH introduces an explicit **field representation of system dynamics**.
+A critical extension of the framework introduces:
+
+→ the **explicit field representation of system dynamics**
 
 Previously:
-- structure inferred from trajectories  
-- collapse detected via metrics  
+
+- structure was inferred from trajectories  
+- collapse was detected via derived metrics  
 
 Now:
-- system represented as a **continuous flow field**
+
+→ the system is represented as a **continuous flow field**
 
 ---
 
-### Key Observation
+## Key Discovery
 
-> The system evolves along structured paths in a field.
+> The system does not evolve arbitrarily.  
+>  
+> It follows structured paths inside a field.
 
-Observed properties:
-- directional flow  
-- local branching  
-- global alignment  
+Observed:
+
+- consistent directional flow  
+- local branching structures  
+- smooth global alignment  
 
 ---
 
-### Interpretation
+## Interpretation
 
-Dynamics follow:
+The dynamics follow:
 
 → **geodesics in the field**
 
 Meaning:
-- natural trajectories  
-- minimal-deviation paths  
-- fastest approach toward instability  
+
+- minimal-energy paths  
+- natural evolution trajectories  
+- fastest approach toward collapse  
 
 ---
 
-### Structural Mapping
+## Structural Mapping
 
 | Concept | Field Interpretation |
 |--------|---------------------|
-| Manifold | stability surface |
-| Corridor | flow-aligned region |
-| Interface | boundary between regimes |
-| Branching | local divergence |
+| Manifold | valley / surface in field |
+| Rift | flow-aligned corridor |
+| Distance | deviation from flow alignment |
+| Branching | local flow divergence |
 | Collapse | exit from structured flow |
 
 ---
 
-## Universal Structural Principle (NEW)
+## 🧠 NEW — Coherence as Field Structure
 
-> Stability emerges from **alignment of local dynamics with the underlying field geometry**.
+A key refinement of the framework:
 
-Equivalent formulation:
-
-> **Coherence = local alignment within the field**  
-> **Collapse = loss of alignment and exit from structured flow**
-
----
-
-## Interface Principle (Edge of Stability)
-
-Complex systems operate near the boundary between:
-
-- stabilizing dynamics  
-- destabilizing dynamics  
-
-NEXAH identifies:
-
-> **Coherence as the dynamically maintained interface between opposing flows**
-
-This explains:
-
-- edge-of-chaos behavior  
-- criticality  
-- persistent adaptability  
+> Coherence is not only a stability metric.  
+>  
+> It defines the **structure of the field itself**.
 
 ---
 
-## Major Breakthrough — IEEE Validation
+## Coherence Definition
 
-NEXAH has been validated on real power grid systems:
-
-- IEEE 118 → 9241 Bus networks  
-- consistent early detection (~43.9 s lead time)  
-- scale-invariant behavior  
-
-### Key Findings
-
-- structural signals precede classical voltage collapse  
-- curvature and fragmentation increase early  
-- collapse is detectable via field geometry  
+\[
+C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
+\]
 
 ---
 
-## Unified Collapse Mechanism
+## 🔥 Field Split Discovery (NEW)
 
-Observed across all domains:
+Empirical results (CORE_GEOMETRY v5–v6):
 
-1. **Coherence (stable alignment)**  
-2. **Fragmentation (loss of alignment)**  
-3. **Acceleration (nonlinear instability)**  
-4. **Collapse (loss of solvability / structure)**  
+> The field splits into two opposing directional flows.
 
 ---
 
-## Structural Principle
+### Field Decomposition
+
+```text
+Forward Flow   → motion aligned with field (C > 0)
+Interface      → transition layer (C ≈ 0)
+Backward Flow  → motion opposing field (C < 0)
+```
+
+---
+
+## 🔴 Core Insight
+
+```text
+Coherence defines the interface between two opposing flows.
+```
+
+---
+
+## 🧠 Interpretation
+
+- systems are not moving in one direction  
+- they oscillate between **forward and backward flow regimes**  
+- stability emerges when:
+
+→ the system remains aligned with the forward field  
+→ or transitions smoothly through the interface  
+
+---
+
+## 🔁 Temporal Interpretation
+
+The field implicitly encodes:
+
+- forward flow → future-directed evolution  
+- backward flow → return / memory dynamics  
+- interface → present transition layer  
+
+---
+
+## 🌀 Topological Implication
+
+The forward/backward split produces:
+
+- loop structures  
+- nested trajectories  
+- asymmetry in phase space  
+- Möbius-like orientation changes  
+
+---
+
+## Updated Collapse Mechanism
+
+1. **Coherence (SAFE)**  
+2. **Interface instability (TRANSITION)**  
+3. **Backward drift / fragmentation (WARNING)**  
+4. **Acceleration (CRITICAL)**  
+5. **Collapse (FAILURE)**  
+
+---
+
+## Revised Structural Principle
 
 > Stability is not defined by low stress.  
 >  
-> It is defined by **persistent coherence under transformation**.
+> It is defined by **persistent coherence across directional flow transitions**.
 
 ---
 
-## Cross-Domain Interpretation
+## Cross-Domain Interpretation (Updated)
 
 | Feature | Interpretation |
 |--------|---------------|
-| Gap / Interface | transition region |
-| Corridor | constrained stable motion |
-| Fragmentation | loss of alignment |
-| Acceleration | instability onset |
-| Collapse | breakdown of structure |
+| Gap / Interface | coherence transition layer |
+| Corridor | stable forward flow region |
+| Fragmentation | backward drift onset |
+| Acceleration | divergence from field |
+| Collapse | loss of forward alignment |
 
 ---
 
-## Navigation Hypothesis (NEW)
+## Strand Updates
 
-Traditional view:
-- systems can be observed or controlled locally  
+### Strand 1 — Prime Systems
 
-NEXAH proposes:
+- behave as **discrete projections of a field**
+- show:
 
-> Systems can be **navigated** by following their underlying field geometry.
+  - directional modular flow  
+  - corridor transitions  
+  - implicit coherence structure  
 
-Meaning:
-- identify corridors  
-- remain aligned with flow  
-- avoid unstable exits  
+---
+
+### Strand 2 — IEEE Systems
+
+- physical validation achieved  
+- coherence drop precedes collapse  
+- field split behavior observable  
+
+→ strongest validation layer  
+
+---
+
+### Strand 3 — Chaos (Lorenz)
+
+- separatrix ≈ interface layer  
+- trajectory switching ≈ flow transition  
+- strong geometric analogy  
+
+---
+
+### Strand 4 — Multi-Agent Systems
+
+- coherence emerges without reward  
+- agents align locally with field  
+- reproduce:
+
+  - corridors  
+  - branching  
+  - collapse  
+
+---
+
+## Central Insight (UPDATED)
+
+> Systems do not collapse because they reach a limit.  
+>  
+> They collapse because they lose coherence —  
+>  
+> and transition into opposing flow regimes  
+> that lead them away from structured trajectories.
+
+---
+
+## Research Direction
+
+### 1. Generalization
+- apply to biological / financial systems  
+
+### 2. Localization
+- detect interface zones  
+
+### 3. Time Dynamics
+- transient coherence tracking  
+
+### 4. Theory
+- formalize field split mathematically  
+
+### 5. Topology
+- analyze loop / Möbius structures  
 
 ---
 
 ## Current Position
 
-NEXAH is currently:
+NEXAH is now:
 
 - structurally consistent across domains  
-- physically validated (IEEE systems)  
+- physically validated  
 - predictive of collapse  
-- partially capable of intervention  
-
----
-
-## Open Theoretical Work
-
-To evolve into a full theory, NEXAH requires:
-
-1. Formal definition of **coherence**  
-2. Quantification of **field alignment**  
-3. Mathematical description of **corridors and interfaces**  
-4. Proof of generality across domains  
-5. Falsifiability criteria  
-
----
-
-## Working Interpretation
-
-NEXAH can currently be understood as:
-
-> a **geometric and dynamical theory of collapse**  
-> based on field structure, coherence, and flow alignment  
+- **field-aware and geometry-aware**  
+- **directional-flow-aware (NEW)**  
 
 ---
 
@@ -224,7 +297,10 @@ NEXAH can currently be understood as:
 ```text
 Stability is not maintained by resisting change.
 
-It is maintained by preserving coherence while change occurs.
+It is maintained by preserving coherence
+while moving through the field.
 
-Collapse begins when coherence is lost
-and the system leaves its structured path in the field.
+Collapse begins when the system
+crosses the interface
+and fails to return.
+```
