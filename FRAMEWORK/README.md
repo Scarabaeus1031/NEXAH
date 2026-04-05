@@ -518,14 +518,26 @@ Core theoretical documents explaining the framework.
 
 ---
 
-# Summary
+# 🧠 Final Summary (Updated)
 
-The NEXAH Framework provides a **structural navigation architecture for complex systems**.
+The NEXAH framework is not only a system stack.
 
-By combining relational structure, regime analysis, risk geometry, and navigation policies, it enables systematic exploration and control of complex dynamic environments.
+It is a **geometry-aware, field-navigating architecture**.
 
-The layered architecture ensures that the framework remains:
+---
 
-• modular  
-• extensible  
-• adaptable to many application domains
+## Core Transformation
+
+```text
+states → regimes → geometry → field → navigation
+```
+
+## Ultimate Insight
+
+Systems do not fail randomly.
+
+```text
+They lose coherence,
+leave the structured field,
+and collapse.
+````
