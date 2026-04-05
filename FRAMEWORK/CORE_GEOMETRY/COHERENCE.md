@@ -137,66 +137,118 @@ Coherence also encodes **directional time structure**:
 
 ---
 
-## 🌀 Topological Interpretation
+## 🌀 Temporal Knot Structure (NEW)
 
-The forward/backward split combined with cyclic motion produces:
+The previous interpretation of time as directional flow (forward = future, backward = past) is incomplete.
 
-- loop structures  
-- nested trajectories  
-- Möbius-like orientation changes  
+> Time does not exist as a global parameter.  
+>  
+> It emerges **locally at the interface between opposing flows**.
+
+---
+
+### 🧠 Core Principle
+
+Time is generated when two trajectories become comparable.
+
+This requires:
+
+- an **inner trajectory** (system evolution)  
+- an **outer trajectory** (reference or counter-flow)  
+
+Only at their intersection:
+
+→ a **temporal relation** can be defined
+
+---
+
+### 🔁 Dual-Loop Structure
+
+The field contains two coupled loops:
+
+```text
+Inner Loop  → system trajectory  
+Outer Loop  → counter-flow / reference trajectory  
+```
+
+These loops:
+
+- run in opposite directions  
+- continuously interact  
+- never fully close into a single cycle  
+
+---
+
+## ⚡ Time as Interface Event
+
+Time exists only at:
+
+\[
+C(x) \approx 0
+\]
+
+i.e.:
+
+→ at the coherence interface  
+
+---
+
+## 🔴 Interpretation
+
+- no interface → no time  
+- pure forward flow → no measurable time  
+- pure backward flow → no measurable time  
 
 Thus:
 
-> coherence generates **twisted flow geometry**
+> Time is not flow.  
+>  
+> Time is the difference between flows.
 
 ---
 
-## 🚀 Operational Meaning
+## 🧩 Geometric Meaning
 
-Coherence enables:
+The interface acts as a knot:
 
-- early collapse detection  
-- corridor identification  
-- transition localization  
-- navigation control  
-- flow direction analysis  
+- where direction flips  
+- where comparison becomes possible  
+- where measurement emerges  
 
----
+This creates:
 
-## 🔬 Extensions (future work)
-
-- phase coherence (Kuramoto term)  
-- Lyapunov-weighted coherence  
-- multi-agent coherence fields  
-- probabilistic coherence decay  
-- field-split stability metrics  
+→ a **temporal knot field**
 
 ---
 
-## 🧠 Core Insight
+## 🔄 Continuous Generation
+
+Because the system continuously crosses the interface:
+
+→ time is generated continuously  
 
 ```text
-Coherence is not order.
-
-It is alignment with the geometry that allows motion to remain stable.
-
-And it defines the boundary where direction itself changes.
+24/7 → not as duration  
+but as constant interface re-creation
 ```
 
 ---
 
-## 🔗 Integration
+## 🧠 Implication for NEXAH
 
-### In axioms.md
-
-See: CORE_GEOMETRY/coherence.md for formal definition.
+- time is not a system parameter  
+- time is a byproduct of coherence structure  
+- navigation operates on field geometry, not time evolution  
 
 ---
 
-### In theorems.md
+## 🔥 Core Insight (Extended)
 
-All stability-related theorems are based on coherence as defined in CORE_GEOMETRY.
+```text
+Time is not fundamental.
 
-Additionally:
+It appears only when two directional flows intersect
+and become comparable.
 
-→ field-splitting behavior emerges from coherence structure.
+The present is the knot.
+```
