@@ -1,4 +1,4 @@
-# Theorems of NEXAH (v2)
+# Theorems of NEXAH
 
 ---
 
