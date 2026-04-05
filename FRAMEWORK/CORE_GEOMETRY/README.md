@@ -30,6 +30,21 @@ It provides the missing link:
 
 ---
 
+## 🌐 From Geometry to Field (NEW)
+
+CORE_GEOMETRY extends the framework beyond structure:
+
+> Systems do not move between states.  
+> They move within a **structured field**.
+
+This introduces:
+
+- geometric transition manifolds  
+- field-aligned trajectories  
+- coherence-based stability  
+
+---
+
 ## 🧭 Motivation
 
 Classical models describe systems as:
@@ -117,7 +132,82 @@ Field → Geometry → Operator
 
 ---
 
-## ⚙️ Operators (Formal Role)
+# 🔬 Coherence & Field Structure (NEW)
+
+## 🧠 Coherence Definition
+
+Coherence measures the alignment between system motion and field direction.
+
+\[
+C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
+\]
+
+---
+
+## 📊 Interpretation
+
+| Value | Meaning |
+|------|--------|
+| C ≈ 1 | stable (aligned motion) |
+| C ≈ 0 | transition interface |
+| C < 0 | opposing flow (collapse tendency) |
+
+---
+
+## 🔥 Core Insight
+
+> Stability is not equilibrium.  
+>  
+> It is **alignment with the field geometry**.
+
+---
+
+## 🔁 Field Split (v5–v6 Discovery)
+
+Empirical results show:
+
+> The field splits into two opposing directional flows.
+
+---
+
+### Field Decomposition
+
+```text
+Forward Flow   → C > 0
+Interface      → C ≈ 0
+Backward Flow  → C < 0
+```
+
+---
+
+## 🧠 Interpretation
+
+- forward flow → stable evolution  
+- backward flow → fragmentation / drift  
+- interface → transition zone  
+
+---
+
+## 🔥 Key Insight
+
+> The interface is not a boundary.  
+>  
+> It is a **region of reorganization**.
+
+---
+
+## 🧭 Relation to Transition Geometry
+
+| Geometry Element | Coherence Role |
+|------------------|---------------|
+| Oval | varying coherence field |
+| Cut | critical coherence threshold |
+| Branch | divergence after coherence loss |
+| Loop | coherence recovery |
+
+---
+
+# ⚙️ Operators (Formal Role)
 
 - **TMO** → transition detection  
 - **BSO** → path selection  
@@ -135,11 +225,9 @@ Simulation → Field → Geometry → Operator → Navigation → Execution
 
 ---
 
-# 🎨 Visual System (NEW)
+# 🎨 Visual System
 
 ## 🧭 Visual Atlas
-
-The geometric structure described above is fully expressed in the visual system:
 
 👉 **[CORE GEOMETRY VISUAL ATLAS](./CORE_GEOMETRY_VISUALS.md)**
 
@@ -165,6 +253,24 @@ The atlas reveals:
 | Compression | structure formation |
 | Geometry | transition manifold |
 | Operator | controlled trajectory |
+
+---
+
+## 🔬 New Visual Evidence (v5–v6)
+
+Recent experiments reveal:
+
+- radial flow oscillations  
+- forward/backward flow separation  
+- interface clustering  
+- nested loop structures  
+- spiral / Möbius-like transitions  
+
+These are visible in:
+
+- `coherence_flow_v5.png`  
+- `coherence_field_split_v6.png`  
+- `coherence_radial_flow_v6.png`  
 
 ---
 
@@ -216,6 +322,7 @@ Explains:
 - loops and spirals  
 - shell and ring systems  
 - phase-driven transitions  
+- directional flow splitting (NEW)  
 
 ---
 
@@ -244,7 +351,9 @@ It is about:
 
 ## 🧠 Ultimate Insight
 
+```text
 You are not controlling the system.
 
 You are shaping the geometry  
 that makes outcomes possible.
+```
