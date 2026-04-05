@@ -1,5 +1,7 @@
+```python
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # -----------------------------
 # Coherence Funktion
@@ -13,22 +15,21 @@ def compute_coherence(x, window=20):
     return C
 
 # -----------------------------
-# Testsignal (IEEE-like)
+# Envelope (Glättung)
 # -----------------------------
-t = np.linspace(0, 80, 2000)
-
-# Drift + kleine Oszillation
-x = 1 - 0.002 * t + 0.01 * np.sin(0.4 * t)
-
-# -----------------------------
-# Compute Coherence
-# -----------------------------
-C = compute_coherence(x)
-
-# Envelope (optional)
 def moving_avg(a, w=50):
     return np.convolve(np.abs(a), np.ones(w)/w, mode='same')
 
+# -----------------------------
+# Testsignal (ersetzen durch IEEE!)
+# -----------------------------
+t = np.linspace(0, 80, 2000)
+x = 1 - 0.002 * t + 0.01 * np.sin(0.4 * t)
+
+# -----------------------------
+# Compute
+# -----------------------------
+C = compute_coherence(x)
 C_env = moving_avg(C)
 
 # -----------------------------
@@ -38,7 +39,7 @@ theta = np.linspace(0, 2*np.pi, len(C_env))
 r = C_env
 
 # -----------------------------
-# Richtungsvektoren
+# Richtungsvektoren (Flow!)
 # -----------------------------
 dtheta = np.gradient(theta)
 dr = np.gradient(r)
@@ -52,7 +53,7 @@ ax = plt.subplot(111, projection='polar')
 # Hauptkurve
 ax.plot(theta, r, linewidth=2)
 
-# Flow-Vektoren (dünn halten!)
+# Flow-Vektoren
 step = 20
 ax.quiver(
     theta[::step],
@@ -65,4 +66,17 @@ ax.quiver(
 
 ax.set_title("NEXAH Coherence Flow (v5)", pad=20)
 
-plt.savefig("../visuals/coherence_flow_v5.png", dpi=300)
+# -----------------------------
+# SAVE (robust!)
+# -----------------------------
+current_dir = os.path.dirname(os.path.abspath(__file__))
+output_dir = os.path.join(current_dir, "..", "visuals")
+os.makedirs(output_dir, exist_ok=True)
+
+output_path = os.path.join(output_dir, "coherence_flow_v5.png")
+
+plt.savefig(output_path, dpi=300)
+plt.show()
+
+print(f"\nSaved to: {output_path}\n")
+```
