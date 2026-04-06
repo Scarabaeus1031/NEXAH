@@ -167,7 +167,7 @@ This image therefore functions as a conceptual horizon image.
 ---
 ## 8. RATH Phi-Lambda Resonance Bridge — v3.3
 
-![RATH Phi-Lambda Resonance Bridge v3.3](./visuals/RATH_Phi-Lambda_v3.3a_NeonGlow.png)
+![RATH Phi-Lambda Resonance Bridge v3.3](./visuals/Rath_Bridge_3Layer_432-440-444.png)
 
 This visual introduces the **RATH Phi-Lambda Resonance Bridge** as a central geometric construction.
 
@@ -200,7 +200,7 @@ This image serves as the technical reference for the precise definition of the b
 
 ## 10. OLGO-JANUS Six-Sector Gate
 
-![OLGO-JANUS Six-Sector Gate](./visuals/Poster_13_OLGO_1931_Six_Sector_Gate_Codex_A2_TRANSPARENT.png)
+![OLGO-JANUS Six-Sector Gate](./visuals/OLGO_JANUS_Six_Sector_Gate_v_bands_background.png)
 
 This visual introduces the **OLGO-JANUS Six-Sector Gate** — a six-sector extension of the previous gate logic.
 
