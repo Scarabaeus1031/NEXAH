@@ -565,29 +565,83 @@ This area should be developed further as part of the navigation grammar.
 
 ---
 
-## 9. Current status of navigation in NEXAH
+## 9. New Navigation Constructs (April 2026)
 
-At present, NEXAH already has much of the **navigation space**:
+### 9.1 RATH Phi-Lambda Resonance Bridge
+The RATH Bridge extends the navigation primitives with a precise angular resonance structure. It includes:
 
-- planes
-- rings
-- connectors
-- mirror relations
-- cores
-- branch motifs
-- corridor-like structures
-- real benchmark signals
+- Thoth Spindle (vertical axis)
+- Scarab Wing (lemniscate component)
+- n-bands at 24.58°, 26.14° and 27.92°
+- 51° Gate as major passage threshold
+- Nidda Axis (West Ω ↔ East Ω)
 
-What is still missing is the fully explicit rule system that turns these into a complete operational navigation layer.
+The bridge treats these angles as resonant corridors through which the red drift thread can move in a continuous “one above – one below” pattern.
 
-So the current state can be summarized as:
+### 9.2 OLGO-JANUS Six-Sector Gate
+This six-sector symmetric framework embeds the RATH Bridge and provides a higher-resolution sectoral navigation space. It introduces:
 
-> the navigation space is largely visible,  
-> but the navigation grammar is still being formalized.
+- V-Axis (528 + 432 = 960)
+- φ ≈ ±0.017 rad offset
+- Integration of v-bands as background dynamics
+
+The Six-Sector Gate allows navigation to operate with sectoral symmetry while maintaining the breathing character of the field.
+
+### 9.3 v-bands (Breathing Wave + Blinking Pulse)
+The v-bands form the dynamic, oscillatory background layer:
+
+- **Breathing Wave**: slow, smooth oscillation that creates the characteristic “Zittern” / floating sensation between sectors 13-14 ↔ 16-17 and 1-2 ↔ 4-5.
+- **Blinking Pulse**: sharp, rectangular on/off pulses synchronized to the same sectors.
+
+The v-bands are not noise — they are the living substrate (“Schweben im Beben”) on which the n-bands and gates operate.
 
 ---
 
-## 10. Immediate development goal
+## 10. Integration of New Constructs
+
+The new constructs connect to the existing primitives as follows:
+
+- **RATH Bridge** extends **Gate**, **Corridor** and **Interface** with angular precision.
+- **OLGO-JANUS Six-Sector Gate** extends **Plane** and **Ring** into a sectoral resonance framework.
+- **v-bands** add a temporal, breathing dimension to all transitions (especially Interface Crossing and Mirror Crossing).
+
+This creates a layered navigation system:
+
+- Structural layer (cores, rings, planes, splits)
+- Geometric layer (RATH Bridge, n-bands)
+- Dynamic layer (v-bands as breathing background)
+- Sectoral layer (OLGO-JANUS Gate)
+
+---
+
+## 11. Updated Development Goal
+
+The immediate task is to connect the full chain:
+
+visual navigation syntax → structural primitives → new resonance constructs (RATH, OLGO-JANUS, v-bands) → measurable signals → benchmark system mapping → operative navigation.
+
+This includes making the interaction between n-bands and v-bands explicit and executable.
+
+---
+
+## Final Statement (Updated)
+
+NEXAH navigation is not yet a finished controller, but it is no longer only a metaphor.
+
+With the addition of the RATH Bridge, OLGO-JANUS Six-Sector Gate and v-bands, the structural language has become richer and more dynamic.
+
+What remains is to make this language fully explicit, measurable, and executable — turning coherence-guided movement through structured dynamical geometry into a practical navigation capability.
+
+---
+
+**NEXAH Navigation**  
+Not shortest-path control.  
+Not blind optimization.  
+But coherence-guided movement through structured dynamical geometry with resonant breathing background.
+
+---
+
+## 12. Immediate development goal
 
 The next important task is to connect:
 
