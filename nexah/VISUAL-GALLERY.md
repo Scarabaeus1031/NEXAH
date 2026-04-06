@@ -21,7 +21,7 @@ It highlights images that reflect the current conceptual and operational center 
 
 ## 1. Inside Out — Finally Inside the Passage
 
-![Inside Out — Finally Inside the Passage](./Inside%20the%20passage%27s%20cosmic%20diagram.png)
+![Inside Out — Finally Inside the Passage](./visuals/Inside%20the%20passage%27s%20cosmic%20diagram.png)
 
 This visual represents one of the strongest recent insights in NEXAH:
 
