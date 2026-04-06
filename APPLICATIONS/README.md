@@ -2,28 +2,30 @@
 
 ![NEXAH Exploration Hub](../EXPLORATION_HUB/visuals/NEXAH_Exploration_Map.png)
 
-This directory contains **real-world system models and applications** built with the NEXAH framework.
+# NEXAH Applications
+
+This directory contains **applied system modules, benchmark analyses, and reference demonstrations** built with the NEXAH framework.
 
 > NEXAH does not just simulate systems —  
 > it reveals their **structure, flow, and stability landscape**.
 
 ---
 
-## ⚡ Real-World Application: Power Grid Stability (IEEE)
+## ⚡ Flagship Application — Power Grid Stability (IEEE)
 
-NEXAH has been successfully applied to **electrical power systems** using IEEE benchmark networks:
+NEXAH has been applied to **electrical power systems** using IEEE benchmark networks, including:
 
-- IEEE 9  
-- IEEE 14  
-- IEEE 30  
-- IEEE 118  
+- IEEE 9
+- IEEE 14
+- IEEE 30
+- IEEE 118
 
 ### What NEXAH reveals
 
-- early instability signals (before collapse)  
-- structural failure paths  
-- branching collapse behavior  
-- system evolution inside a field  
+- early instability signals before collapse
+- structural failure paths
+- branching collapse behavior
+- system evolution inside a field representation
 
 ---
 
@@ -31,43 +33,46 @@ NEXAH has been successfully applied to **electrical power systems** using IEEE b
 
 ![IEEE Field Flow](power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-- trajectories follow structured directions  
-- collapse emerges along flow paths  
-- branching and divergence become visible  
+This field representation makes visible that:
+
+- trajectories follow structured directions
+- collapse emerges along flow paths
+- branching and divergence become observable
+- instability is embedded in field geometry
 
 ---
 
 ### Why this matters
 
-Classical methods:
+Classical methods often detect collapse late.
 
-→ detect collapse **late**  
+NEXAH aims to:
 
-NEXAH:
-
-→ detects **structural instability early**  
-→ reveals **how collapse develops**  
-→ enables **navigation instead of observation**
+- detect structural instability early
+- reveal how collapse develops
+- support navigation instead of passive observation
 
 ---
 
 ## 🧭 From Framework to Applications
 
-NEXAH follows a layered pipeline:
+NEXAH follows a layered transition:
 
-Framework  
-↓  
-Structure Extraction  
-↓  
-System Models  
-↓  
-Applications  
-↓  
-Exploration  
+```text
+Framework
+    ↓
+Structure Extraction
+    ↓
+System Models
+    ↓
+Applications
+    ↓
+Domain Integration
+```
 
-- **Framework** → defines structural operators  
-- **Applications** → apply them to real systems  
-- **Exploration Hub** → expands into new domains  
+- **Framework** → defines structural operators and system logic
+- **Applications** → apply these ideas to benchmark systems and domain models
+- **Adapters / integrations** → connect NEXAH to concrete environments
 
 ---
 
@@ -77,26 +82,28 @@ Exploration
 |------|-------------|--------|
 | **Stability Landscape** | Attractor basins and system stability | [STABILITY_LANDSCAPE](./dynamical_systems/STABILITY_LANDSCAPE) |
 | **Gradient Systems** | Motion along potential gradients | [GRADIENT_SYSTEM](./dynamical_systems/GRADIENT_SYSTEM) |
-| **Drift Systems** | Gradient + external forcing | [DRIFT_SYSTEM](./dynamical_systems/DRIFT_SYSTEM) |
+| **Drift Systems** | Gradient plus external forcing | [DRIFT_SYSTEM](./dynamical_systems/DRIFT_SYSTEM) |
 | **Regime Systems** | Multi-attractor transitions | [REGIME_SYSTEM](./dynamical_systems/REGIME_SYSTEM) |
+
+These modules provide canonical system classes for testing NEXAH operators, geometry extraction, and navigation behavior.
 
 ---
 
-## 🤖 Structural Navigation (Multi-Agent System)
+## 🤖 Multi-Agent Navigation Demonstrator
 
 NEXAH enables agents to navigate **stability landscapes without reward functions**.
 
 Agents:
 
-- explore system structure  
-- detect stable regions  
-- follow structural gradients  
-- move along field-aligned paths  
+- explore system structure
+- detect stable regions
+- follow structural gradients
+- move along field-aligned paths
 
 Core idea:
 
 > Agents do not optimize —  
-> they follow **stable directions in the field**
+> they follow **stable directions in the field**.
 
 Run demo:
 
@@ -108,26 +115,24 @@ python ENGINE/run_agent.py
 
 ## 🌪 Lorenz System — Reference Demonstrator
 
-The Lorenz system serves as a **complete structural test case**.
+The Lorenz system serves as a **canonical nonlinear reference case**.
 
-NEXAH reconstructs:
+NEXAH can be used to reconstruct:
 
-- attractor geometry  
-- basin boundaries  
-- separatrix structures  
-- regime transitions  
-- stability landscapes  
-
----
+- attractor geometry
+- basin boundaries
+- separatrix structures
+- regime transitions
+- stability landscapes
 
 ### What this demonstrates
 
-- chaotic systems contain hidden structure  
-- transitions are not random  
-- instability follows geometric patterns  
+- chaotic systems contain hidden structure
+- transitions are not random
+- instability follows geometric patterns
 
 > Chaos is not randomness —  
-> it is **structured and navigable**
+> it is **structured and potentially navigable**.
 
 Run demo:
 
@@ -139,30 +144,34 @@ python -m APPLICATIONS.run_navigation_demo
 
 ## 🔌 External System Integration
 
-NEXAH connects to existing simulators via an adapter layer:
+NEXAH can connect to existing simulators via an adapter layer:
 
-Simulator  
-↓  
-Adapter  
-↓  
-State Graph  
-↓  
-NEXAH Analysis  
-↓  
-Navigation  
+```text
+Simulator
+    ↓
+Adapter
+    ↓
+State Graph
+    ↓
+NEXAH Analysis
+    ↓
+Navigation
+```
 
-Supported systems include:
+Supported or target system environments include:
 
-- MATPOWER  
-- pandapower  
-- PyPSA  
-- traffic simulations  
-- supply chains  
-- infrastructure systems  
+- MATPOWER
+- pandapower
+- PyPSA
+- traffic simulations
+- supply chains
+- infrastructure systems
 
 Adapter location:
 
+```text
 APPLICATIONS/adapters/
+```
 
 ---
 
@@ -172,7 +181,9 @@ APPLICATIONS/adapters/
 
 NEXAH bridges:
 
-Formal Theory → Structure → System Models → Real Applications  
+```text
+Formal Theory → Structure → System Models → Applications
+```
 
 ---
 
@@ -187,22 +198,23 @@ Everything in this directory follows one principle:
 
 ## 🚀 What you can do here
 
-- analyze real systems (power grids, Lorenz, networks)  
-- detect instability early  
-- visualize system structure and flow  
-- explore stability landscapes  
-- build new system models  
+- analyze benchmark systems and applied models
+- detect instability early
+- visualize system structure and flow
+- explore stability landscapes
+- build new system modules
+- connect domain simulators through adapters
 
 ---
 
 ## 🔮 Outlook
 
-The APPLICATIONS layer is evolving toward:
+The `APPLICATIONS` layer is evolving toward:
 
-- real-world system integration  
-- predictive stability control  
-- autonomous navigation in complex systems  
-- cross-domain structural analysis  
+- stronger real-world system integration
+- predictive stability control
+- autonomous navigation in complex systems
+- cross-domain structural analysis
 
 ---
 
