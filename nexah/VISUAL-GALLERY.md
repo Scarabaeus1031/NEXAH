@@ -167,7 +167,7 @@ This image therefore functions as a conceptual horizon image.
 ---
 ## 8. RATH Phi-Lambda Resonance Bridge — v3.3
 
-![RATH Phi-Lambda Resonance Bridge v3.3](./visuals/Rath_Bridge_3Layer_432-440-444.png)
+![RATH Phi-Lambda Resonance Bridge v3.3](./visuals/v_bands_Breathing_Wave_Blinking_Pulse_neben_n_bands.png)
 
 This visual introduces the **RATH Phi-Lambda Resonance Bridge** as a central geometric construction.
 
