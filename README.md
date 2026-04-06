@@ -287,7 +287,7 @@ To understand the full framework and architecture:
 
 Hofmann, T.K.R. (2026)  
 **NEXAH: Structural Discovery and Navigation in Complex Systems**  
-https://github.com/Scarabaeus1033/NEXAH  
+https://github.com/Scarabaeus1031/NEXAH  
 
 ---
 
