@@ -1,9 +1,5 @@
 # NEXAH Applications
 
-![NEXAH Exploration Hub](../EXPLORATION_HUB/visuals/NEXAH_Exploration_Map.png)
-
-# NEXAH Applications
-
 This directory contains **applied system modules, benchmark analyses, and reference demonstrations** built with the NEXAH framework.
 
 > NEXAH does not just simulate systems —  
