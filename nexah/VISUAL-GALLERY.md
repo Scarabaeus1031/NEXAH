@@ -4,7 +4,7 @@ This gallery collects a first set of featured visuals from the `nexah/visuals/` 
 
 These images are not included as decoration only.
 
-They serve as visual anchors for the emerging NEXAH language of:
+They serve as visual anchors for the emerging NEXAH language of: 
 
 - field structure
 - transition geometry
