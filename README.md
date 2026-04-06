@@ -237,15 +237,16 @@ Even in fully discrete systems, NEXAH reveals:
 - stable cycles  
 - corridor-like movement  
 
-This supports the broader hypothesis that structural field logic may appear in both continuous and discrete domains.
+This supports the broader hypothesis that structural field-like logic may appear in both continuous and discrete domains.
 
 ---
 
 ## 📂 Key Entry Points
 
 - **[START HERE](./START_HERE.md)**  
+- **[Navigator](./NAVIGATOR/README.md)**  
 - **[FRAMEWORK](./FRAMEWORK/README.md)**  
-- **[Applications](./APPLICATIONS/)**  
+- **[Applications](./APPLICATIONS/README.md)**  
 - **[Builder Lab](./BUILDER_LAB/demos/)**  
 - **[Proto Models](./BUILDER_LAB/proto_models/README.md)**  
 
@@ -276,7 +277,7 @@ Current release: **v1.1 (Field Extension)**
 
 To understand the full framework and architecture:
 
-👉 [NEXAH Framework (Extended)](./README_nexah_framework_extended.md)
+👉 [NEXAH Framework (Extended)](./NAVIGATOR/NEXAH_FRAMEWORK_EXTENDED.md)
 
 👉 [FRAMEWORK / README](./FRAMEWORK/README.md)
 
