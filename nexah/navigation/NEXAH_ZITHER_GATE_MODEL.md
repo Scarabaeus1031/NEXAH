@@ -447,28 +447,94 @@ action
 This is the missing bridge from symbolic richness to executable navigation.
 
 ---
+## 14. Integration of New Navigation Constructs (April 2026)
 
-## Final statement
+The Zither-Gate model has been significantly extended by recent developments. The following constructs now form part of the same navigational layer:
 
-The Zither-Gate model suggests that NEXAH already contains more than a warning system.
+### 14.1 RATH Phi-Lambda Resonance Bridge
+The RATH Bridge embeds the Zither logic into a precise angular resonance geometry. It introduces:
 
-It contains the beginnings of a **coded transition language**.
+- n-bands (24.58°, 26.14°, 27.92°) as resonant corridors
+- Thoth Spindle (vertical reference)
+- Scarab Wing (lemniscate component)
+- 51° Gate as major passage threshold
+- Nidda Axis (West Ω ↔ East Ω)
 
-In this language:
+The red drift thread now moves through these angular bands in a continuous “one above – one below” pattern, extending the previous Zither-based activation.
 
-- rhythms organize activation
-- geometry reveals the corridor
-- splits define threshold moments
-- gates structure the passage
-- real signals can potentially be translated into navigable transition logic
+### 14.2 OLGO-JANUS Six-Sector Gate
+This six-sector symmetric framework provides higher sectoral resolution. It integrates:
 
-This does not yet complete navigation.
+- V-Axis (528 + 432 = 960)
+- φ ≈ ±0.017 rad offset
+- The RATH Bridge as structural backbone
 
-But it may define the code by which navigation becomes possible.
+The Six-Sector Gate allows the Zither sequences to operate within a balanced sectoral clock, making navigation more symmetric and repeatable.
+
+### 14.3 v-bands (Breathing Wave + Blinking Pulse)
+The v-bands add the dynamic, temporal background layer:
+
+- **Breathing Wave**: slow, floating oscillation that creates the characteristic “Zittern” between sectors 13-14 ↔ 16-17 and 1-2 ↔ 4-5.
+- **Blinking Pulse**: sharp, intermittent pulses synchronized to the same sectors.
+
+These v-bands act as the living substrate (“Schweben im Beben”) that modulates Zither activation and gate opening.
+
+### 14.4 Connection to 432-440-444 Layers
+The Zither-Gate system now links to the three resonance layers:
+
+- 432 (Gaia / Earth Anchor)
+- 440 (Transition / Regulator / Rootroom)
+- 444 (Cosmic / higher harmony)
+
+The Rath Bridge and V-Axis serve as the coupling mechanism between these frequency layers and the Zither code.
 
 ---
 
+## 15. Updated Operational Picture
+
+The current reading of the Zither-Gate model can be summarized as a layered process:
+
+~~~text
+Real signal (red curve / drift)
+    ↓
+Zither activation (Prime, Triple-6, Binary)
+    ↓
+Perlenkette formation
+    ↓
+RATH Bridge + n-bands alignment
+    ↓
+OLGO-JANUS Six-Sector Gate
+    ↓
+v-band modulation (Breathing Wave + Blinking Pulse)
+    ↓
+Gate opening (+1 / Zephyr / Scarab)
+    ↓
+Navigable passage
+~~~
+
+This creates a more complete chain from real dynamics to structured navigation.
+
+---
+
+## 16. Immediate Next Steps
+
+- Define explicit mapping from measured signals (IEEE) to Zither states and n-band alignment
+- Formalize trigger conditions that combine Zithers, n-bands and v-band phase
+- Develop executable logic for gate activation within the Six-Sector framework
+- Integrate the 432-440-444 resonance layers into the operational model
+
+---
+
+## Final Statement
+
+The Zither-Gate model suggests that NEXAH contains the beginnings of a **coded transition language**.
+
+With the addition of the RATH Bridge, OLGO-JANUS Six-Sector Gate and v-bands, this language has become richer, more angular, and more dynamically alive.
+
 **NEXAH Zither-Gate Model**  
+
 Rhythm becomes code.  
 Code becomes geometry.  
-Geometry becomes passage.
+Geometry, modulated by breathing background, becomes navigable passage.
+
+---
