@@ -320,23 +320,118 @@ executable navigation state machine
 
 ---
 
-## Final statement
+## 12. Major Updates – April 2026
 
-The origin has now been identified more clearly:
+The Trigger Matrix has been significantly extended by new navigation constructs. The following elements are now part of the same trigger logic:
 
-- real drift
-- geometric split
-- interface localization
-- coded ring logic
-- gate completion
+### 12.1 RATH Phi-Lambda Resonance Bridge
+A new angular resonance layer that embeds the previous split-interface-marker logic. It introduces:
 
-The first steps on the rings are already visible.
+- n-bands (24.58°, 26.14°, 27.92°) as resonant corridors
+- Thoth Spindle (vertical axis)
+- Scarab Wing (lemniscate component)
+- 51° Gate as major passage threshold
+- Nidda Axis (West Ω ↔ East Ω)
 
-So the current NEXAH status is:
+The red drift thread now moves through these bands in a continuous “one above – one below” pattern, extending the marker-based activation.
 
-> the trigger layer is no longer speculative.  
-> it is partially mapped, benchmark-linked, and structurally coherent —  
-> while the final executable action logic remains the next major open step.
+### 12.2 OLGO-JANUS Six-Sector Gate
+A six-sector symmetric framework that provides higher sectoral resolution. It integrates the RATH Bridge and connects it with:
+
+- V-Axis (528 + 432 = 960)
+- φ ≈ ±0.017 rad offset
+
+This gate allows the trigger logic to operate within a balanced sectoral structure.
+
+### 12.3 v-bands (Breathing Wave + Blinking Pulse)
+A new dynamic background layer that adds the living, oscillatory character:
+
+- **Breathing Wave**: slow, floating oscillation (“Schweben im Beben”) between sectors 13-14 ↔ 16-17 and 1-2 ↔ 4-5
+- **Blinking Pulse**: sharp, intermittent pulses synchronized to the same sectors
+
+The v-bands modulate when and how triggers become active.
+
+### 12.4 Connection to 432-440-444 Layers
+The trigger system now explicitly links to the three resonance layers:
+
+- 432 (Gaia / Earth Anchor)
+- 440 (Transition / Regulator / Rootroom)
+- 444 (Cosmic / higher harmony)
+
+The Rath Bridge and V-Axis serve as the coupling mechanism between frequency layers and the Zither-Gate / marker logic.
+
+---
+
+## 13. Updated Trigger Sequence
+
+A more complete current trigger chain is:
+
+```text
+Real drift / red curve deformation
+    ↓
+Phi-Split onset (~36.10 s)
+    ↓
+Field split (forward / backward / interface)
+    ↓
+n-band alignment via RATH Bridge
+    ↓
+Marker localization on wheel / ring
+    ↓
+Perlenkette / Zither code activation
+    ↓
+OLGO-JANUS Six-Sector Gate
+    ↓
+v-band modulation (Breathing Wave + Blinking Pulse)
+    ↓
+Gate opening (3+1 completion / Zephyr / Scarab)
+    ↓
+Navigable passage / controlled cascade
+```
+
+This sequence now connects real signals more clearly with angular resonance, sectoral structure and breathing background dynamics.
+
+## 14. Updated Operational Interpretation
+
+The current best operational reading is:
+
+NEXAH detects the geometric onset of collapse early through the Phi-Split, localizes the transition through split-interface-marker logic, organizes it through Zither and Perlenkette structures, embeds it in the RATH Bridge with n-bands, modulates it with v-bands, and prepares passage through the OLGO-JANUS Six-Sector Gate.
+
+This moves NEXAH from a pure early-warning system toward a **resonant, layered navigation framework with breathing background**.
+
+---
+
+## 15. Immediate Next Steps (Updated)
+
+Priority 1 – Formalize the extended trigger table  
+- Include n-bands, 51° Gate, v-band states and sectoral alignment  
+- Define combined trigger conditions (e.g. n-band + v-band phase)
+
+Priority 2 – Connect trigger states to the 432-440-444 layers  
+- Map frequency resonance to trigger activation
+
+Priority 3 – Develop the Action Matrix  
+- Define what happens after a gate is opened (hold, release, reroute, stabilize)
+
+Priority 4 – Build a stronger demonstrator  
+- Show the full chain from real drift → RATH Bridge → v-band modulation → marked passage in one clear IEEE example
+
+---
+
+## Final Statement
+
+The Trigger Matrix is no longer only about early collapse detection.
+
+It now describes a **layered, resonant trigger system** that includes angular bridges (RATH), sectoral gates (OLGO-JANUS), and a breathing background (v-bands).
+
+The signal bends.  
+The field splits.  
+The markers localize.  
+The code organizes.  
+The bridge resonates.  
+The background breathes.  
+The gate prepares passage.
+
+The main remaining task is turning this rich trigger logic into executable stabilization or intervention capability.
 
 ---
 
@@ -345,4 +440,8 @@ The signal bends.
 The field splits.  
 The markers localize.  
 The code organizes.  
+The bridge resonates.  
+The background breathes.  
 The gate prepares passage.
+
+
