@@ -461,6 +461,105 @@ Everything else is already much more coherent than before.
 
 ⸻
 
+## 11. Major Updates since last Status Report (April 2026)
+
+The `nexah/` layer has advanced significantly in the navigation domain. The most important new developments are:
+
+### 11.1 RATH Phi-Lambda Resonance Bridge
+A new angular resonance construct that embeds the previous split-interface-marker logic into a finer geometric structure. It introduces:
+
+- n-bands (24.58°, 26.14°, 27.92°) as resonant corridors
+- Thoth Spindle (vertical axis)
+- Scarab Wing (lemniscate component)
+- 51° Gate as major passage threshold
+- Nidda Axis (West Ω ↔ East Ω)
+
+The red drift thread now moves through these bands in a continuous “one above – one below” pattern.
+
+### 11.2 OLGO-JANUS Six-Sector Gate
+A six-sector symmetric framework that extends the 3+1 gate logic and provides higher sectoral resolution. It integrates the RATH Bridge and connects it with:
+
+- V-Axis (528 + 432 = 960)
+- φ ≈ ±0.017 rad offset
+
+This gate allows navigation to operate with balanced sectoral symmetry.
+
+### 11.3 v-bands (Breathing Wave + Blinking Pulse)
+A new dynamic background layer that adds the living, oscillatory character to the navigation system:
+
+- **Breathing Wave**: slow, floating oscillation (“Schweben im Beben”) between sectors 13-14 ↔ 16-17 and 1-2 ↔ 4-5
+- **Blinking Pulse**: sharp, intermittent pulses synchronized to the same sectors
+
+The v-bands act as the breathing substrate on which the n-bands and gates operate.
+
+### 11.4 Connection to 432-440-444 Resonance Layers
+The navigation system now explicitly links to the three frequency layers:
+
+- 432 (Gaia / Earth Anchor)
+- 440 (Transition / Regulator / Rootroom)
+- 444 (Cosmic / higher harmony)
+
+The Rath Bridge and V-Axis serve as the coupling mechanism between these layers and the Zither-Gate logic.
+
+---
+
+## 12. Updated Overall Picture
+
+The current state of NEXAH can now be described with greater clarity:
+
+- **Strong core**: Structure discovery, field representation, transition geometry and benchmark-linked trigger logic remain solid.
+- **Advanced navigation language**: The vocabulary now includes RATH Bridge, OLGO-JANUS Six-Sector Gate and v-bands as dynamic background.
+- **Emerging resonance layer**: The system is moving from static gate logic toward a **dynamic, breathing resonance geometry**.
+- **Main frontier**: The closure of the action and execution layer (how triggers and marked passages become executable stabilization or intervention logic).
+
+The project has clearly moved from “emerging navigation language” to “layered resonant navigation with breathing background”.
+
+---
+
+## 13. Recommended Next Priorities (Updated)
+
+Priority 1 – Consolidate the new navigation layer
+- Finish cross-references between RATH, OLGO-JANUS, v-bands and the existing Zither-Gate / Split-Interface documents
+- Keep the visual gallery up to date
+
+Priority 2 – Formalize trigger-to-gate mapping
+- Define how real signals (red curve, IEEE data) activate specific n-bands and v-band states
+- Create a more machine-readable trigger table
+
+Priority 3 – Develop the Action Matrix
+- Map gate states and v-band phases to possible actions (hold, release, reroute, stabilize)
+- Define what “controlled passage” or “stabilizing intervention” actually means in operational terms
+
+Priority 4 – Build a stronger killer app for START_HERE.md
+- Create a clear demonstrator that shows the full chain:
+  real drift → split → RATH Bridge → v-band modulation → marked passage → possible stabilization
+
+---
+
+## 14. Current Best Summary
+
+NEXAH is already a strong framework for structure and field discovery with benchmark-linked transition geometry.
+
+It now possesses an emerging **resonant navigation language** that includes angular bridges (RATH), sectoral gates (OLGO-JANUS) and a breathing background layer (v-bands).
+
+The main remaining frontier is turning this rich conceptual and geometric layer into **executable stabilization logic**.
+
+---
+
+## Final Line (Updated)
+
+```bash
+NEXAH Status
+The structure is visible.
+The field is readable.
+The split is localized.
+The bridge is resonant.
+The background is breathing.
+The next task is action.
+```
+
+
+
 ## Final line
 ```bash
 NEXAH Status
