@@ -2,77 +2,92 @@
 
 **Welcome.**
 
-This is not a typical repository.
-
-NEXAH is a framework for **extracting hidden structure from complex dynamics** — and learning how to **navigate through it**.
+NEXAH is a framework for **extracting hidden geometric structure from complex dynamics** — and learning how to **navigate through it**.
 
 ---
 
-## What NEXAH actually does (current state, April 2026)
+## Quick First Experience (2 minutes)
 
-NEXAH turns raw system behavior into something readable and potentially navigable:
-
-1. **Simulation** → raw dynamics  
-2. **Structure Discovery** → regimes, basins, transitions  
-3. **Field Representation** → directional flow, drift, coherence  
-4. **Transition Geometry** → split, interface, markers, n-bands  
-5. **Navigation Layer** → gates, resonant bridges, breathing background
-
-It is especially strong at:
-
-- Early detection of instability (Phi-Split + lead-time advantage in IEEE systems)
-- Revealing geometric structure inside collapse processes
-- Building a resonant navigation language (RATH Bridge, OLGO-JANUS Six-Sector Gate, v-bands)
-- Connecting real signals (red curve / drift) to geometric passage logic
-
----
-
-## First Experience – 2 Minutes
-
-Run this to see structure emerge from a simple discrete system:
+Run this to see structure emerge from a very simple system:
 
 ```bash
 cd ENGINE/research/experiments/prime_modular_resonance/analysis
 python run_all_visuals.py
 ```
 
-You will see:flow-like behavior
-loops and basins
-transition structures
-geometric patterns that were not obvious in the raw numbers
+You will get dozens of plots showing loops, basins, flow fields, entropy differences between primes and random sequences, and more.
 
-Change the modulus (7 → 11) or the input (primes → random) and watch how structure appears or disappears.
+This is a **warm-up**. It shows the core idea of NEXAH in its simplest form:
+
+> Structure is not imposed — it emerges from dynamics.
 
 ---
 
-## Next Level – Real Systems
+## The Real Story: From Dynamics to Navigable Geometry
 
-Go to the power system application:
+What NEXAH actually does is more powerful.
 
-```bash
-cd APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases
-```
+It takes raw system behavior — for example voltage trajectories in power grids — and reveals **hidden geometric structures**:
 
-## Here NEXAH works on real IEEE benchmark models and shows:field-based stability analysis
-- early geometric warning of collapse (Phi-Split)
-- split / interface / marker logic
-- resonant bridge structures (RATH Phi-Lambda Bridge)
-- sectoral navigation (OLGO-JANUS Six-Sector Gate)
-- breathing background dynamics (v-bands)
+- Field splits (forward / backward / interface zones)
+- Marked transition points
+- Resonant corridors (n-bands)
+- Breathing background dynamics (v-bands)
+- Angular resonance bridges (RATH Phi-Lambda Bridge)
+- Sectoral navigation frameworks (OLGO-JANUS Six-Sector Gate)
 
-This is currently one of the strongest practical demonstrations of NEXAH.You will see how raw voltage trajectories are transformed into:
+This moves NEXAH beyond pure simulation or early warning.  
+It builds a **geometric language for navigation** inside complex systems.
 
-- visible field geometry
-- marked transition points
-- resonant corridors
-- potential navigable passages
+The red drift thread — our never-closing driver — tracks the boundary in a way that feels surprisingly similar to the infinite complexity of the Mandelbrot set boundary: rich, detailed, and never fully closing, yet potentially navigable.
 
-Key InsightStructure is not imposed on the system.
-It emerges from the dynamics — and once visible, it can be navigated.
-NEXAH does not just simulate or warn.
-It tries to make the hidden geometry readable and eventually passable.
+---
 
+## Current State (April 2026)
 
+**What is already strong:**
+- Structure and Field Discovery
+- Early geometric detection of instability (Phi-Split with measurable lead time in IEEE systems)
+- Transition Geometry (split, interface, markers, Perlenkette)
+- Emerging resonant navigation layer (RATH Bridge, OLGO-JANUS, v-bands)
 
+**What is still emerging:**
+- Full executable navigation and action layer
+- A polished, one-click demonstrator for the power system use-case
 
+---
 
+## Next Steps
+
+The IEEE power system examples (real grid stability analysis with field geometry and resonant navigation) are currently being strengthened.
+
+**Coming soon:** A clean, visual-rich demonstrator that shows the full chain from real voltage drift → geometric split → resonant bridge → potential passage.
+
+In the meantime, feel free to explore the existing visuals and documentation in the `nexah/` layer.
+
+---
+
+## Where to go from here
+
+- **[NEXAH Layer](./nexah/README.md)** — conceptual core and current navigation language
+- **[Navigation Primitives](./navigation/NEXAH_NAVIGATION_PRIMITIVES.md)**
+- **[Trigger Matrix](./NEXAH_TRIGGER_MATRIX.md)** — what triggers what
+- **[Visual Gallery](./visuals/VISUAL-GALLERY.md)** — best current visuals
+- **[Zither Gate Model](./navigation/NEXAH_ZITHER_GATE_MODEL.md)** — coded transitions
+
+---
+
+## One Sentence Summary
+
+NEXAH extracts geometric structure from complex dynamics and is developing the language and tools to navigate it — turning hidden geometry into potential passage.
+
+---
+
+**Ready to dive in?**
+
+Run the 2-minute prime experiment above, then explore the `nexah/` folder.
+
+We are actively working on making the power-system story as smooth and visual as the prime warm-up.
+
+**Scarabæus1031 · NEXAH**  
+April 2026
