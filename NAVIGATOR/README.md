@@ -52,7 +52,7 @@ This structure separates **mathematical core systems, framework logic, navigatio
 
 # Engine Execution Flow
 
-![Engine Execution Flow](../../ENGINE/visuals/engine_execution_flow.png)
+![Engine Execution Flow](../ENGINE/visuals/engine_execution_flow.png)
 
 The NEXAH engine bridges **formal mathematical structures** with **executable system analysis**.
 
