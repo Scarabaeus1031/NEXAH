@@ -4,7 +4,7 @@ This gallery collects a first set of featured visuals from the `nexah/visuals/` 
 
 These images are not included as decoration only.
 
-They serve as visual anchors for the emerging NEXAH language of:
+They serve as visual anchors for the emerging NEXAH language of: 
 
 - field structure
 - transition geometry
@@ -165,8 +165,84 @@ While more atmospheric than strictly technical, it still belongs in the gallery 
 This image therefore functions as a conceptual horizon image.
 
 ---
+## 8. RATH Phi-Lambda Resonance Bridge — v3.3
 
-## Reading guide
+![RATH Phi-Lambda Resonance Bridge v3.3](./visuals/phi-lambda_resonance_bridge.png)
+
+This visual introduces the **RATH Phi-Lambda Resonance Bridge** as a central geometric construction.
+
+It combines:
+
+- Thoth Spindle (vertical axis)
+- Scarab Wing as lemniscate form
+- Three n-bands (24.58°, 26.14°, 27.92°)
+- The 51° Gate
+- West-Ω ↔ East-Ω axis (Nidda Axis)
+
+The core idea is that the bridge is not a simple transition, but a resonant system of multiple angular bands that enables precise passage between different phases and frequencies.
+
+---
+
+## 9. RATH Phi-Lambda Bridge — Annotated
+
+![RATH Phi-Lambda Bridge Annotated](./visuals/RATH_phi_lambda_bridge_annotated_neon.png)
+
+The annotated version makes the mathematical relationships explicit:
+
+- Decompositions of the n-band angles (e.g. 24 + 7/12, 26 + 0/3/7, 27 + 11/12)
+- Connection to φ³/π² ≈ 0.429 · 0.456 · 0.487
+- Central 1/12 point
+- Nidda Axis (West-East)
+
+This image serves as the technical reference for the precise definition of the bridge.
+
+---
+
+## 10. OLGO-JANUS Six-Sector Gate
+
+![OLGO-JANUS Six-Sector Gate](./visuals/OLGO_JANUS_Six_Sector_Gate_v_bands_background.png)
+
+This visual introduces the **OLGO-JANUS Six-Sector Gate** — a six-sector extension of the previous gate logic.
+
+It shows:
+
+- Six symmetric sectors
+- LAT-Φ-RATH Counter-Phase
+- V-Axis (528 + 432 = 960)
+- φ ≈ ±0.017 rad
+
+The Six-Sector Gate forms the operational framework in which the v-bands act as dynamic background oscillation.
+
+---
+
+## 11. v-bands – Breathing Wave + Blinking Pulse
+
+![v-bands Breathing Wave + Blinking Pulse](./visuals/v_bands_Breathing_Wave_Blinking_Pulse_neben_n_bands.png)
+
+This image visualizes the **v-bands** as a living, oscillating background to the n-band structure:
+
+- Cyan **Breathing Wave** — the slow, floating tremor between sectors 13-14 ↔ 16-17 and 1-2 ↔ 4-5
+- Red **Blinking Pulse** — the sharp rectangular pulses on the same sectors
+
+The v-bands represent the “floating in the trembling” and form the breathing substrate on which the precise n-bands operate.
+
+---
+
+## 12. Breathing Axis Overlay – 432/487 Horizon
+
+![Breathing Axis Overlay](./visuals/breathing_axis_overlay_v2.png)
+
+This visual shows the vertical **Breathing Axis** between 432 and 487 with the corrected n-bands:
+
+- Zeta-Line ≈ 0.429
+- Mid-Band ≈ 0.456
+- Top n-band ≈ 0.487
+
+It directly connects the numerical layer (432-440-444) with the dynamic oscillation of the v-bands.
+
+---
+
+### Updated Reading Guide
 
 A useful way to read the gallery is:
 
@@ -182,6 +258,15 @@ A useful way to read the gallery is:
 - NEXAH Visual V — Markers
 - Split Interface Markers — Visual V
 - Inside Out — Finally Inside the Passage
+
+### Layer 4 — RATH / OLGO-JANUS & v-bands (April 2026)
+- RATH Phi-Lambda Resonance Bridge
+- OLGO-JANUS Six-Sector Gate
+- v-bands Breathing Wave + Blinking Pulse
+- Breathing Axis Overlay
+
+This new layer expands navigation from static gate and split logic toward a **dynamic, breathing resonance geometry** with v-bands as background oscillation.
+
 
 This sequence reflects the current internal movement of NEXAH:
 

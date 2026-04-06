@@ -39,8 +39,10 @@ The framework is already strong in:
 - **field discovery**
 - **transition geometry**
 - **early collapse indication**
+- **split / interface / marker logic**
 
-Navigation is now emerging on top of this structure.
+Navigation is no longer only a distant goal.  
+It is beginning to emerge as a **trigger-aware geometric layer** built on top of structure and field representation.
 
 Recent extensions include:
 
@@ -48,10 +50,12 @@ Recent extensions include:
 - motion-law identification  
 - coherence-based transition analysis  
 - field split and interface structure  
+- trigger-aware transition logic  
+- gate and passage models  
 
 👉 NEXAH is currently strongest as a:
 
-> **structure + field discovery system with emerging navigation capabilities**
+> **structure + field discovery system with an emerging navigation language**
 
 ---
 
@@ -122,10 +126,12 @@ A core application of NEXAH is the analysis of power system stability using IEEE
 This module demonstrates:
 
 - field-based stability modeling  
+- early geometric instability detection  
 - collapse prediction via structure  
 - phase-driven dynamics  
+- split / interface / marker logic  
 - operator-based navigation  
-- early-warning capability in real benchmark systems  
+- benchmark-linked transition analysis in real power-grid systems  
 
 ### 🧭 Entry Points
 
@@ -139,7 +145,8 @@ This is currently the most advanced operational realization of:
 
 - field discovery  
 - phase control  
-- operator-driven navigation  
+- trigger-aware transition detection  
+- operator-driven navigation logic  
 
 ---
 
@@ -247,6 +254,7 @@ This supports the broader hypothesis that structural field-like logic may appear
 - **[Navigator](./NAVIGATOR/README.md)**  
 - **[FRAMEWORK](./FRAMEWORK/README.md)**  
 - **[Applications](./APPLICATIONS/README.md)**  
+- **[NEXAH Layer](./nexah/README.md)**  
 - **[Builder Lab](./BUILDER_LAB/demos/)**  
 - **[Proto Models](./BUILDER_LAB/proto_models/README.md)**  
 
@@ -268,7 +276,8 @@ Current release: **v1.1 (Field Extension)**
 - field layer (V69): ✅ implemented  
 - adapter system: ✅ working  
 - transition geometry: ✅ active  
-- navigation engine: ⚠️ emerging  
+- navigation language: ✅ active  
+- executable intervention layer: ⚠️ emerging  
 - proto-model layer: ✅ exploratory  
 
 ---
@@ -280,6 +289,8 @@ To understand the full framework and architecture:
 👉 [NEXAH Framework (Extended)](./NAVIGATOR/NEXAH_FRAMEWORK_EXTENDED.md)
 
 👉 [FRAMEWORK / README](./FRAMEWORK/README.md)
+
+👉 [NEXAH Layer](./nexah/README.md)
 
 ---
 

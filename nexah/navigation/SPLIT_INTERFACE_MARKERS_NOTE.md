@@ -251,7 +251,87 @@ Or more compactly:
 
 ---
 
-## Final line
+## 12. Integration of New Constructs (April 2026)
+
+The Split-Interface-Markers logic has been extended by recent developments. The following constructs now belong to the same navigational layer:
+
+### 12.1 RATH Phi-Lambda Resonance Bridge
+The RATH Bridge embeds the split-interface logic into a precise angular resonance structure. It adds:
+
+- n-bands (24.58°, 26.14°, 27.92°) as resonant corridors
+- Thoth Spindle (vertical reference)
+- Scarab Wing (lemniscate component)
+- 51° Gate as prominent passage threshold
+- Nidda Axis (West Ω ↔ East Ω)
+
+The red drift line now threads through these angular bands in a continuous “one above – one below” pattern, extending the previous marker-based activation.
+
+### 12.2 OLGO-JANUS Six-Sector Gate
+This six-sector symmetric framework provides higher sectoral resolution. It integrates the split-interface logic into a balanced sectoral clock and connects it with:
+
+- V-Axis (528 + 432 = 960)
+- The RATH Bridge as structural backbone
+
+### 12.3 v-bands (Breathing Wave + Blinking Pulse)
+The v-bands add the dynamic background layer to the split-interface model:
+
+- **Breathing Wave**: slow, floating oscillation that creates the characteristic “Zittern” between sectors 13-14 ↔ 16-17 and 1-2 ↔ 4-5.
+- **Blinking Pulse**: sharp, intermittent pulses synchronized to the same sectors.
+
+These v-bands modulate when and how the interface becomes passable.
+
+### 12.4 Connection to 432-440-444 Layers
+The split-interface system now links to the three resonance layers (432 → 440 → 444). The Rath Bridge and V-Axis serve as the coupling mechanism between frequency layers and the marked interface cuts.
+
+---
+
+## 13. Updated Operational Picture
+
+The current reading of the split-interface-markers logic can be summarized as a layered process:
+
+~~~text
+Red curve (real drift / driving signal)
+    ↓
+Field split (blue forward + orange backward)
+    ↓
+Green interface zone
+    ↓
+RATH Bridge with n-bands and 51° Gate
+    ↓
+OLGO-JANUS Six-Sector Gate
+    ↓
+v-band modulation (Breathing Wave + Blinking Pulse)
+    ↓
+Marked interface crossings (red markers)
+    ↓
+Navigable passage
+~~~
+
+This creates a more complete chain from real dynamical input to structured, addressable transition.
+
+---
+
+## 14. Immediate Next Steps
+
+- Define explicit criteria for when a marker becomes activated in relation to n-bands and v-band phase
+- Map the interaction between the red curve, split condition, and v-band states
+- Integrate the 432-440-444 resonance layers into the marker logic
+- Develop executable rules for passage through marked interface crossings
+
+---
+
+## Final Statement
+
+The Split-Interface-Markers model suggests that NEXAH does not only detect splits and interfaces — it also begins to identify **addressable transition points** within a resonant, breathing geometry.
+
+With the addition of the RATH Bridge, OLGO-JANUS Six-Sector Gate and v-bands, the system gains a layered, dynamic character:
+
+The drift drives the field.  
+The split separates direction.  
+The interface holds the crossing.  
+The markers, modulated by breathing background and angular resonance, make the passage addressable.
+
+---
 
 **Split Interface Markers**  
 The drift drives the field.  
