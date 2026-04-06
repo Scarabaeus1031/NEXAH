@@ -195,7 +195,7 @@ APPLICATIONS/prototypes/
 
 ## NEXAH Navigation Layer
 
-![NEXAH Navigator Architecture](./NAVIGATOR/visuals/nexah_plate_09_nexah_navigator_architecture.png)
+![NEXAH Navigator Architecture](./visuals/nexah_plate_09_nexah_navigator_architecture.png)
 
 Simulators describe dynamics.
 
@@ -258,7 +258,7 @@ This is the **computational backbone**.
 
 ## Framework Architecture
 
-![NEXAH System Overview](./NAVIGATOR/visuals/NEXAH_SYSTEM_OVERVIEW.png)
+![NEXAH System Overview](./visuals/NEXAH_SYSTEM_OVERVIEW.png)
 
 ```
 RESEARCH
@@ -284,7 +284,7 @@ REAL_SYSTEMS
 
 ## Control Stack
 
-![NEXAH Control Stack](./NAVIGATOR/visuals/Plate_10_The_NEXAH_Control_Stack.png)
+![NEXAH Control Stack](./visuals/Plate_10_The_NEXAH_Control_Stack.png)
 
 ```
 META      → meaning
@@ -347,7 +347,7 @@ Open environment for:
 
 ## Research Pipeline
 
-![NEXAH Research Pipeline](./NAVIGATOR/visuals/Nexah_Entry_Diagram.png)
+![NEXAH Research Pipeline](./visuals/Nexah_Entry_Diagram.png)
 
 ```
 Axioms
