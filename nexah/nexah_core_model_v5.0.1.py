@@ -1,4 +1,3 @@
-```python
 import numpy as np
 
 
@@ -124,4 +123,3 @@ if __name__ == "__main__":
 
     for case in cases:
         evaluate(case)
-```
