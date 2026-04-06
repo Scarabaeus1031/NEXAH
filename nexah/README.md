@@ -161,7 +161,18 @@ Current documents:
 
 ---
 
-### 5. `visuals/`
+### 5. RATH / OLGO-JANUS Layer (neu 2026)
+
+Die jüngste Erweiterung der Navigation-Sprache bildet die **RATH Phi-Lambda Resonance Bridge** mit OLGO-JANUS Six-Sector Gate, v-bands (Breathing Wave + Blinking Pulse) und der 432-440-444 Layer-Verwebung.
+
+Siehe:
+- `navigation/RATH_PHI_LAMBDA_RESONANCE_BRIDGE.md`
+- `navigation/OLGO_JANUS_SIX_SECTOR_GATE.md`
+- `navigation/V_BANDS_BREATHING_WAVE_BLINKING_PULSE.md`
+
+---
+
+### 6. `visuals/`
 
 This folder contains the featured visual layer associated with the current NEXAH concepts.
 
