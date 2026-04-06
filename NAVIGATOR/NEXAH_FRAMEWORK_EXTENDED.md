@@ -1,3 +1,25 @@
+# NEXAH Framework — Extended Overview
+
+This document provides a longer-form architectural and conceptual overview of NEXAH.
+
+It preserves a broader description of the framework, its computational layers, and its historical development across multiple repository stages.
+
+For the current main repository entry point, see:
+
+👉 [../README.md](../README.md)
+
+For the current navigator documents, see:
+
+- [README.md](./README.md)
+- [REPOSITORY_MAP.md](./REPOSITORY_MAP.md)
+- [SYSTEM_CAPABILITIES.md](./SYSTEM_CAPABILITIES.md)
+- [NEXAH_ARCHITECTURE_COMPLETION_MAP.md](./NEXAH_ARCHITECTURE_COMPLETION_MAP.md)
+
+Important:
+
+Some parts of this document reflect earlier repository organization and earlier framework vocabulary.
+It is best read as an extended background overview rather than as the single source of current repository structure.
+
 # NEXAH Framework
 **Structural navigation for complex dynamical systems.**
 
