@@ -53,19 +53,24 @@ Go to the power system application:
 cd APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases
 ```
 
-Here NEXAH works on real IEEE benchmark models and shows:field-based stability analysis
-** early geometric warning of collapse (Phi-Split)
-** split / interface / marker logic
-** resonant bridge structures (RATH Phi-Lambda Bridge)
-** sectoral navigation (OLGO-JANUS Six-Sector Gate)
-** breathing background dynamics (v-bands)
+## Here NEXAH works on real IEEE benchmark models and shows:field-based stability analysis
+- early geometric warning of collapse (Phi-Split)
+- split / interface / marker logic
+- resonant bridge structures (RATH Phi-Lambda Bridge)
+- sectoral navigation (OLGO-JANUS Six-Sector Gate)
+- breathing background dynamics (v-bands)
 
 This is currently one of the strongest practical demonstrations of NEXAH.You will see how raw voltage trajectories are transformed into:
 
-** visible field geometry
-** marked transition points
-** resonant corridors
-** potential navigable passages
+- visible field geometry
+- marked transition points
+- resonant corridors
+- potential navigable passages
+
+Key InsightStructure is not imposed on the system.
+It emerges from the dynamics — and once visible, it can be navigated.
+NEXAH does not just simulate or warn.
+It tries to make the hidden geometry readable and eventually passable.
 
 
 
