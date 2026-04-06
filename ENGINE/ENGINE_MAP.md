@@ -2,277 +2,350 @@
 
 This document describes the structural architecture of the **NEXAH Engine**.
 
-The system is organized as a **modular computational framework** for analyzing stability, structure, and dynamics in complex systems.
+The engine is organized as a **modular computational framework** for structural discovery, simulation support, dynamical analysis, and research execution inside NEXAH.
+
+It is not merely a collection of folders, but a layered system for transforming formal ideas into executable structural outputs.
 
 ---
 
-# Core Principle
+## Core Principle
 
 The engine is not file-driven, but **layer-driven**.
 
-It transforms structural models into computational outputs through a pipeline of interacting subsystems.
+It transforms structural models into computational outputs through interacting subsystems that support:
+
+- formal structural computation
+- simulation and dynamics
+- analysis and geometry extraction
+- agent-based orchestration
+- application support
+- visualization and output generation
+
+In short:
+
+> formal ideas → executable analysis → structural outputs
 
 ---
 
-# Architecture Overview
+## Position inside NEXAH
 
-The NEXAH Engine is structured into the following layers:
+Within the broader NEXAH architecture:
 
-Mathematical Core  
-↓  
-Simulation & Dynamics  
-↓  
-Analysis & Geometry  
-↓  
-Navigation & Control  
-↓  
-Applications  
-↓  
-Output & Visualization  
+~~~text
+Research / Framework
+        ↓
+      ENGINE
+        ↓
+analysis / experiments / outputs
+        ↓
+applications / navigation
+~~~
 
----
-
-# 1. Algebraic Core
-
-Location:
-
-ENGINE/core/
-
-This layer provides the **mathematical foundation** of the engine.
-
-It defines:
-
-- finite partially ordered sets  
-- lattice structures  
-- closure and interior operators  
-- monotone operators  
-- fixpoint computation  
-
-This is the **formal stability backbone** of the system.
+The engine therefore acts as the **execution layer for structural discovery**.
 
 ---
 
-# 2. Kernel Layer
+## Architecture Overview
 
-Location:
+The NEXAH Engine can be understood as the following layered system:
 
-ENGINE/kernel/
+~~~text
+Mathematical Core
+        ↓
+Kernel Logic
+        ↓
+Simulation & Dynamics
+        ↓
+Analysis & Geometry
+        ↓
+Agent & Control
+        ↓
+Applications
+        ↓
+Visualization & Output
+~~~
+
+These layers are modular, but designed to work together as a computational pipeline.
+
+---
+
+## 1. Algebraic Core
+
+**Location:** `ENGINE/core/`
+
+This layer provides the **formal mathematical backbone** of the engine.
+
+It defines structures such as:
+
+- finite partially ordered sets
+- lattice structures
+- closure and interior operators
+- monotone operators
+- fixpoint computation
+
+This is the validated structural base from which more complex engine behavior is built.
+
+---
+
+## 2. Kernel Layer
+
+**Location:** `ENGINE/kernel/`
 
 The kernel implements the **minimal structural navigation logic**.
 
-Responsibilities:
+Responsibilities include:
 
-- regime landscape construction  
-- structural transitions  
-- navigation dynamics  
+- regime landscape construction
+- structural transitions
+- navigation primitives
+- core execution logic
 
-The kernel is intentionally compact and acts as the **core execution primitive**.
-
----
-
-# 3. Simulation Layer
-
-Location:
-
-ENGINE/simulation/
-
-Simulates dynamical systems and structural evolution.
-
-Capabilities:
-
-- system flow simulation  
-- attractor detection  
-- trajectory evolution  
-- landscape dynamics  
+The kernel is intentionally compact and acts as the central execution bridge between structural models and system behavior.
 
 ---
 
-# 4. Analysis Layer
+## 3. Simulation Layer
 
-Location:
+**Location:** `ENGINE/simulation/`
 
-ENGINE/analysis/
+This layer supports the simulation of dynamical systems and structural evolution.
 
-Extracts deep structure from system dynamics.
+Capabilities include:
 
-Includes:
+- system flow simulation
+- attractor detection
+- trajectory evolution
+- landscape dynamics
 
-- stability landscape reconstruction  
-- basin detection  
-- Lyapunov spectrum  
-- diffusion maps  
-- Morse complexes  
-- persistent homology  
-
-This layer reveals the **geometry of stability**.
+This is where behavior unfolds in time or iteration and becomes available for structural analysis.
 
 ---
 
-# 5. Agent & Control Layer
+## 4. Analysis Layer
 
-Location:
+**Location:** `ENGINE/analysis/`
 
-ENGINE/agent/
+This layer extracts deeper structure from system dynamics.
 
-Implements decision-making and orchestration.
+It may include methods such as:
 
-Responsibilities:
+- stability landscape reconstruction
+- basin detection
+- Lyapunov analysis
+- diffusion maps
+- Morse-inspired structure extraction
+- persistent homology
 
-- workflow execution  
-- system navigation  
-- integration of kernel, simulation, and analysis  
-- policy and strategy control  
-
-This replaces the earlier "RL layer" concept with a broader **agent-based architecture**.
-
----
-
-# 6. Research Layer
-
-Location:
-
-ENGINE/research/
-
-Contains:
-
-- formal theoretical models  
-- experimental systems  
-- oscillator networks  
-- symmetry graph experiments  
-
-This layer is the **source of new structural insights**.
+This layer reveals the **geometry and topology of stability**.
 
 ---
 
-# 7. Services Layer
+## 5. Agent & Control Layer
 
-Location:
+**Location:** `ENGINE/agent/`
 
-ENGINE/services/
+This layer implements orchestration, navigation, and agent-facing execution.
 
-Provides internal system logic:
+Responsibilities include:
 
-- discovery engines  
-- law detection modules  
-- result storage  
-- meta-analysis  
+- workflow execution
+- system navigation
+- integration of kernel, simulation, and analysis
+- policy and strategy control
 
-This layer implements **higher-level system intelligence**.
-
----
-
-# 8. Applications Layer
-
-Location:
-
-ENGINE/applications/
-
-Contains applied system models and use cases.
-
-Examples:
-
-- navigation systems  
-- risk models  
-- stability applications  
+This replaces the older narrow “RL layer” view with a broader **agent-based execution architecture**.
 
 ---
 
-# 9. Visualization Layer
+## 6. Research Layer
 
-Location:
+**Location:** `ENGINE/research/`
 
-ENGINE/visualization/
+This layer contains the active research environments of the engine.
 
-Generates visual representations of system structure.
+It includes, among other things:
 
-Includes:
+- formal theoretical models
+- experiment families
+- oscillator networks
+- symmetry graph experiments
+- prime modular resonance
+- structural discovery modules
 
-- stability landscapes  
-- trajectory plots  
-- phase diagrams  
-- graph visualizations  
-
----
-
-# 10. Runtime & Execution
-
-Location:
-
-ENGINE/runtime/  
-ENGINE/scripts/
-
-Handles execution of large-scale computations.
-
-Includes:
-
-- simulation runners  
-- experiment pipelines  
-- batch processing  
+This layer is the **source of new structural insights** and a major driver of NEXAH’s ongoing development.
 
 ---
 
-# 11. Output Layer
+## 7. Services Layer
 
-Location:
+**Location:** `ENGINE/services/`
 
-ENGINE/visuals/
+The services layer provides higher-level internal logic such as:
 
-Stores generated outputs such as:
+- discovery engines
+- law detection modules
+- result storage
+- meta-analysis
+- orchestration helpers
 
-- stability landscapes  
-- persistence diagrams  
-- spectral plots  
-- attractor visualizations  
-
----
-
-# Global Flow
-
-The engine operates as a structured pipeline:
-
-Research  
-↓  
-Algebraic Core  
-↓  
-Kernel  
-↓  
-Simulation  
-↓  
-Analysis  
-↓  
-Agent Control  
-↓  
-Applications  
-↓  
-Visualization & Output  
+This layer supports reusable system intelligence across modules.
 
 ---
 
-# Interpretation
+## 8. Applications Layer
+
+**Location:** `ENGINE/applications/`
+
+This layer contains engine-side application support and concrete computational use cases.
+
+Examples may include:
+
+- navigation systems
+- risk models
+- stability applications
+- domain-specific execution support
+
+This is where engine computation begins to connect directly to applied modules.
+
+---
+
+## 9. Visualization Layer
+
+**Location:** `ENGINE/visualization/`
+
+This layer generates visual representations of system structure.
+
+It may include:
+
+- stability landscapes
+- trajectory plots
+- phase diagrams
+- graph visualizations
+- flow and field representations
+
+Visualization is treated as part of structural interpretation, not merely as presentation.
+
+---
+
+## 10. Runtime & Execution
+
+**Locations:** `ENGINE/runtime/`, `ENGINE/scripts/`
+
+This layer handles execution of larger computational workflows.
+
+Typical responsibilities include:
+
+- simulation runners
+- experiment pipelines
+- batch processing
+- scripted execution support
+
+This is the operational shell around the engine’s computational layers.
+
+---
+
+## 11. Output Layer
+
+**Locations:** `ENGINE/visuals/`, `ENGINE/output/`, `ENGINE/logs/`
+
+This layer stores generated outputs such as:
+
+- stability landscapes
+- persistence diagrams
+- spectral plots
+- attractor visualizations
+- experiment logs
+- generated result files
+
+These outputs form the inspectable trace of engine computation.
+
+---
+
+## Directory Overview
+
+| Folder | Role |
+|------|------|
+| `core/` | core structural and computational components |
+| `kernel/` | kernel-level logic and integration |
+| `research/` | research modules and experiment families |
+| `simulation/` | simulation logic |
+| `analysis/` | analysis scripts and post-processing |
+| `visualization/` | plotting and visual output logic |
+| `agent/` | agent-related execution and experiments |
+| `applications/` | engine-side application support |
+| `examples/` | runnable examples and demonstrations |
+| `tools/` | utility scripts and helper functions |
+| `runtime/` / `scripts/` | execution support |
+| `logs/` / `output/` / `visuals/` | generated logs and outputs |
+
+Additional folders such as `resonance/`, `vortex_chimera/`, and `services/` reflect specialized development branches inside the engine.
+
+---
+
+## Global Flow
+
+The engine operates as a structured computational pipeline:
+
+~~~text
+Research
+    ↓
+Algebraic Core
+    ↓
+Kernel
+    ↓
+Simulation
+    ↓
+Analysis
+    ↓
+Agent Control
+    ↓
+Applications
+    ↓
+Visualization & Output
+~~~
+
+This flow is not always strictly linear, but it captures the main architectural logic of the engine.
+
+---
+
+## Interpretation
 
 The NEXAH Engine is a **computational system for structural discovery**.
 
 It combines:
 
-- algebraic structure  
-- dynamical systems  
-- topology  
-- spectral analysis  
-- agent-based navigation  
+- algebraic structure
+- dynamical systems
+- topology and geometry
+- spectral analysis
+- agent-based execution
+- research experimentation
 
-to explore **stability, resilience, and structure in complex systems**.
-
----
-
-# Status
-
-The system is under active development and continuously evolving.
-
-The architecture is designed to remain stable even as modules expand.
+to explore **stability, resilience, flow, and hidden structure in complex systems**.
 
 ---
 
-# NEXAH
+## Related Documents
 
-The engine forms the **computational core of the NEXAH framework**,  
-bridging formal theory and executable system analysis.
+For closely related engine documents, see:
+
+- [README.md](./README.md)
+- [NEXAH_Engine_v1.0.0_Release_Notes.md](./NEXAH_Engine_v1.0.0_Release_Notes.md)
+
+The README gives the compact engine overview.  
+This document gives the layer-by-layer architecture map.  
+The release notes document the validated finite-core engine boundary.
+
+---
+
+## Status
+
+The engine is under active development and continues to evolve.
+
+Its architecture is intended to remain stable even as individual modules expand, split, or become more specialized.
+
+---
+
+## NEXAH
+
+The engine forms the **computational core of the NEXAH framework**, bridging formal theory and executable system analysis.
