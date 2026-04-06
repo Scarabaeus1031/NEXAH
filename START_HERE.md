@@ -1,148 +1,73 @@
 # 🚀 START HERE — NEXAH
 
-Welcome.
+**Welcome.**
 
 This is not a typical repository.
 
-NEXAH is a system for **revealing structure inside dynamics** —  
-and learning how to **navigate it**.
+NEXAH is a framework for **extracting hidden structure from complex dynamics** — and learning how to **navigate through it**.
 
 ---
 
-## ⚡ What you can do (in 2 minutes)
+## What NEXAH actually does (current state, April 2026)
 
-You don’t need theory.
+NEXAH turns raw system behavior into something readable and potentially navigable:
 
-Just run this:
+1. **Simulation** → raw dynamics  
+2. **Structure Discovery** → regimes, basins, transitions  
+3. **Field Representation** → directional flow, drift, coherence  
+4. **Transition Geometry** → split, interface, markers, n-bands  
+5. **Navigation Layer** → gates, resonant bridges, breathing background
+
+It is especially strong at:
+
+- Early detection of instability (Phi-Split + lead-time advantage in IEEE systems)
+- Revealing geometric structure inside collapse processes
+- Building a resonant navigation language (RATH Bridge, OLGO-JANUS Six-Sector Gate, v-bands)
+- Connecting real signals (red curve / drift) to geometric passage logic
+
+---
+
+## First Experience – 2 Minutes
+
+Run this to see structure emerge from a simple discrete system:
 
 ```bash
 cd ENGINE/research/experiments/prime_modular_resonance/analysis
 python run_all_visuals.py
 ```
 
----
+You will see:flow-like behavior
+loops and basins
+transition structures
+geometric patterns that were not obvious in the raw numbers
 
-## 👀 What you will see
-
-From a simple discrete system:
-
-```text
-0,1,2,3,4,5,6
-```
-
-NEXAH generates:
-
-- flow fields  
-- loops  
-- basins  
-- transition structures  
+Change the modulus (7 → 11) or the input (primes → random) and watch how structure appears or disappears.
 
 ---
 
-![Prime Modular Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/title_visual_ii_mod7.png)
+## Next Level – Real Systems
 
----
-
-## 🤯 What just happened?
-
-You started with:
-
-→ **prime numbers mod 7**  
-→ no geometry  
-→ no physics  
-
-And got:
-
-- rotation  
-- structure  
-- cycles  
-- flow-like behavior  
-
----
-
-## 🔥 Key insight
-
-> Structure is not imposed —  
-> it emerges from transitions.
-
----
-
-## 🧪 Try this (seriously)
-
-Change the system:
-
-- mod 7 → mod 11  
-- primes → random numbers  
-- fewer primes → more primes  
-
-Run again.
-
-👉 Watch structure appear — or disappear.
-
----
-
-## 🌐 Step 2 — Real Systems (Optional)
-
-Now jump to a real-world system:
+Go to the power system application:
 
 ```bash
-cd APPLICATIONS/power_systems
+cd APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases
 ```
 
-There you will see:
+Here NEXAH works on real IEEE benchmark models and shows:field-based stability analysis
+** early geometric warning of collapse (Phi-Split)
+** split / interface / marker logic
+** resonant bridge structures (RATH Phi-Lambda Bridge)
+** sectoral navigation (OLGO-JANUS Six-Sector Gate)
+** breathing background dynamics (v-bands)
 
-- real electrical grid models  
-- collapse dynamics  
-- stability structures  
-- field-based system behavior  
+This is currently one of the strongest practical demonstrations of NEXAH.You will see how raw voltage trajectories are transformed into:
 
-👉 Same idea — just real physics.
+** visible field geometry
+** marked transition points
+** resonant corridors
+** potential navigable passages
 
----
 
-## 🧭 What NEXAH actually does
 
-NEXAH turns systems into:
 
-```
-Dynamics → Structure → Field → Navigation
-```
 
-It:
-
-1. runs systems  
-2. extracts structure  
-3. builds state graphs  
-4. reveals flow (NEW)  
-5. enables navigation  
-
----
-
-## ⚠️ Important
-
-This is not a claim about physics.
-
-This is:
-
-- computational  
-- reproducible  
-- structural  
-
----
-
-## 🔗 Where to go next
-
-- 📂 Applications → `APPLICATIONS/`  
-- 🧠 Core System → `README.md`  
-- 🔬 Experiments → `ENGINE/research/experiments/`  
-
----
-
-## 🧠 One sentence
-
-We don’t simulate systems —  
-we reveal the structure that governs them.
-
----
-
-**Scarabæus1033 · NEXAH**
