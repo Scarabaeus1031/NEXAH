@@ -329,4 +329,144 @@ gate state
 action state
 ```
 
+This would be the transition from NEXAH as a rich conceptual system to NEXAH as an executable stabilizing framework.
 
+⸻
+
+## 6. The biggest open practical task
+
+**START_HERE.md** still needs a killer app
+
+This is probably the most important practical next step.
+
+At the moment, the project has many strong components, but the easiest entry point still needs a truly compelling demonstrator.
+
+The ideal killer app should do at least four things:
+	1.	show a real or benchmark system
+	2.	reveal the split / field / geometry clearly
+	3.	show why NEXAH is earlier or better than a classical method
+	4.	make the transition from warning to navigable structure obvious
+
+A strong candidate is likely:
+	•	the IEEE benchmark path
+	•	with one especially clear visual / timing / trigger sequence
+	•	plus a simple narrative of:
+	•	drift
+	•	split
+	•	marker
+	•	gate
+	•	possible stabilization logic
+
+This should become the default re-entry experience for new readers.
+
+⸻
+
+## 7. The best current re-entry path
+
+If returning to the project later, the best path is likely:
+	1.	nexah/README.md
+	2.	identity/NEXAH_IDENTITY.md
+	3.	navigation/NEXAH_NAVIGATION_PRIMITIVES.md
+	4.	navigation/NEXAH_ZITHER_GATE_MODEL.md
+	5.	navigation/NEXUS_3_PLUS_1_GATE_NOTE.md
+	6.	navigation/SPLIT_INTERFACE_MARKERS_NOTE.md
+	7.	NEXAH_TRIGGER_MATRIX.md
+	8.	STACK_TO_TRIGGER_BRIDGE.md
+
+This path reconstructs the current logic in the correct order:
+```bash
+    identity
+        ↓
+      field
+        ↓
+navigation language
+        ↓
+    gate logic
+        ↓
+split/interface passage
+        ↓
+  trigger bridge
+```
+
+## 8. Recommended next steps
+
+The next steps should probably be taken in this order.
+
+Priority 1 — consolidate the nexah/ layer
+	•	finish nexah/README.md
+	•	keep links consistent
+	•	keep visuals curated
+	•	make sure all new docs live in the right place
+
+⸻
+
+Priority 2 — define the Trigger Matrix more explicitly
+	•	refine trigger names
+	•	define threshold placeholders
+	•	identify measurable input variables
+	•	create a more formal trigger table
+
+⸻
+
+Priority 3 — create the Action Matrix
+	•	define possible interventions
+	•	map trigger states to action candidates
+	•	distinguish warning from executable passage
+
+⸻
+
+Priority 4 — build the killer app for START_HERE.md
+	•	choose the clearest benchmark story
+	•	simplify the onboarding path
+	•	make one demonstrator decisive
+
+⸻
+
+Priority 5 — translate navigation into execution
+	•	begin a real state-machine sketch
+	•	formalize gate passability
+	•	define stabilization logic
+
+⸻
+
+## 9. Current best summary
+
+The current state of NEXAH can be summarized as follows:
+
+NEXAH is already strong as a structure, field, and transition-geometry framework.
+It now also possesses an emerging navigation language that is benchmark-linked through trigger logic.
+The main remaining step is the closure of the action and execution layer.
+
+That means:
+	•	the project is no longer at the stage of vague exploration
+	•	but it is also not yet at the fully closed intervention stage
+
+It is in a highly productive middle phase where:
+	•	the language exists
+	•	the geometry exists
+	•	the benchmark anchor exists
+	•	the trigger bridge exists
+	•	the execution logic is the main remaining frontier
+
+⸻
+
+## 10. Return note
+
+If work pauses and later resumes, the key memory should be:
+
+the core missing piece is no longer “what is NEXAH?”
+it is “how do trigger, gate, and passage become executable stabilization logic?”
+
+Everything else is already much more coherent than before.
+
+⸻
+
+## Final line
+```bash
+NEXAH Status
+The structure is visible.
+The field is readable.
+The split is localized.
+The passage is emerging.
+The next task is action.
+```
