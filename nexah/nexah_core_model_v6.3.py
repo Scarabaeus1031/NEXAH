@@ -1,21 +1,20 @@
 # ============================================================
-# NEXAH v6.3 — Mode Fiber Separation
+# NEXAH v6.3 — Mode Fiber Separation (WORKING VERSION)
 # ============================================================
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 # ------------------------------------------------------------
-# Hopf Projection (unchanged)
+# Hopf Projection
 # ------------------------------------------------------------
 def hopf_projection(v, dv, mode, energy):
     
     v_n = (v - 0.7) / 0.4
     dv_n = dv / 0.05
     
-    mode_phase = mode * np.pi / 2.0
+    mode_phase = float(mode) * np.pi / 2.0   # <-- wichtig (float!)
     
     x1 = v_n
     x2 = dv_n
@@ -43,27 +42,27 @@ def plot_hopf_modes(traj):
     
     mode_data = {0: [], 1: [], 2: [], 3: []}
     
-    # --- split trajectory by mode ---
-    for v, dv, mode, energy in traj:
+    for entry in traj:
+        # robust unpack (wichtig!)
+        v, dv, mode, energy = entry
+        
+        mode = int(mode) % 4   # <-- wichtig (safety)
+        
         X, Y, Z = hopf_projection(v, dv, mode, energy)
         mode_data[mode].append((X, Y, Z))
     
-    colors = {
-        0: "blue",
-        1: "red",
-        2: "green",
-        3: "orange"
-    }
+    colors = ["blue", "red", "green", "orange"]
     
     fig = plt.figure(figsize=(9,7))
     ax = fig.add_subplot(111, projection='3d')
     
-    # --- plot each mode separately ---
-    for mode in mode_data:
-        if len(mode_data[mode]) == 0:
+    for mode in range(4):
+        data = mode_data[mode]
+        
+        if len(data) == 0:
             continue
         
-        data = np.array(mode_data[mode])
+        data = np.array(data)
         
         ax.plot(
             data[:,0],
@@ -74,46 +73,25 @@ def plot_hopf_modes(traj):
             linewidth=2
         )
     
-    ax.set_title("NEXAH v6.3 — Mode Fibers (Hopf Space)")
-    ax.set_xlabel("X")
-    ax.set_ylabel("Y")
-    ax.set_zlabel("Z")
-    
+    ax.set_title("NEXAH v6.3 — Mode Fibers")
     ax.legend()
-    plt.tight_layout()
+    
     plt.show()
 
 
 # ------------------------------------------------------------
-# Optional: highlight transitions (Mode jumps)
+# 🔥 TEST RUN (damit du siehst ob es funktioniert)
 # ------------------------------------------------------------
-def plot_mode_transitions(traj):
+if __name__ == "__main__":
     
-    transitions = []
+    traj = []
     
-    for i in range(1, len(traj)):
-        if traj[i][2] != traj[i-1][2]:
-            v, dv, mode, energy = traj[i]
-            X, Y, Z = hopf_projection(v, dv, mode, energy)
-            transitions.append((X, Y, Z))
+    for t in np.linspace(0, 20, 500):
+        v = 0.7 + 0.2*np.sin(t)
+        dv = 0.05*np.cos(t)
+        mode = int((t // 3) % 4)
+        energy = np.exp(-0.1*t)
+        
+        traj.append((v, dv, mode, energy))
     
-    if len(transitions) == 0:
-        return
-    
-    transitions = np.array(transitions)
-    
-    fig = plt.figure(figsize=(7,6))
-    ax = fig.add_subplot(111, projection='3d')
-    
-    ax.scatter(
-        transitions[:,0],
-        transitions[:,1],
-        transitions[:,2],
-        color="black",
-        s=40,
-        label="mode switches"
-    )
-    
-    ax.set_title("Mode Transition Points (Switch Geometry)")
-    ax.legend()
-    plt.show()
+    plot_hopf_modes(traj)
