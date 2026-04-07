@@ -47,7 +47,7 @@ It serves as a visual summary of the shift from:
 
 ## 2. Cosmic Visualization of the 3 Plus 1 Gate
 
-![Cosmic Visualization of 3 Plus 1 Gate](./visuals/Cosmic%20visualization%20of%203%20Plus%201%20Gate.png)
+![Cosmic Visualization of 3 Plus 1 Gate](../visuals/Cosmic%20visualization%20of%203%20Plus%201%20Gate.png)
 
 This image presents the **3 plus 1 gate model** as an operational architecture.
 
@@ -72,7 +72,7 @@ It should be read together with:
 
 ## 3. NEXAH Visual V — Markers
 
-![NEXAH Visual V Markers](./visuals/NEXAH-VISUAL%20V%20markers.png)
+![NEXAH Visual V Markers](../visuals/NEXAH-VISUAL%20V%20markers.png)
 
 This image marks an important step in the formalization of the split logic.
 
@@ -94,7 +94,7 @@ This image is one of the clearest expressions of the current NEXAH navigation la
 
 ## 4. Split Interface Markers — Visual V
 
-![Split Interface Markers — Visual V](./visuals/Split_interfece_markers-visual_V.png)
+![Split Interface Markers — Visual V](../visuals/Split_interfece_markers-visual_V.png)
 
 This visual focuses more explicitly on the structural relation between:
 
@@ -120,7 +120,7 @@ It corresponds directly to:
 
 ## 5. Exploring the NEXAH Framework
 
-![Exploring the NEXAH Framework](./visuals/Exploring%20the%20NEXAH%20framework.png)
+![Exploring the NEXAH Framework](../visuals/Exploring%20the%20NEXAH%20framework.png)
 
 This visual acts as a broader framework teaser.
 
@@ -137,7 +137,7 @@ This image is useful as a featured entry visual for the conceptual layer.
 
 ## 6. Navigating the NEXAH System
 
-![Navigating the NEXAH System](./visuals/Navigating%20the%20NEXAH%20system.png)
+![Navigating the NEXAH System](../visuals/Navigating%20the%20NEXAH%20system.png)
 
 This image emphasizes the navigational reading of the framework.
 
@@ -153,7 +153,7 @@ It is especially useful for presenting NEXAH not merely as analysis, but as an o
 
 ## 7. Exploring NEXAH’s Digital Universe
 
-![Exploring NEXAH’s Digital Universe](./visuals/Exploring%20NEXAH%27s%20digital%20universe.png)
+![Exploring NEXAH’s Digital Universe](../visuals/Exploring%20NEXAH%27s%20digital%20universe.png)
 
 This visual captures the broader imaginative horizon of the project.
 
@@ -167,7 +167,7 @@ This image therefore functions as a conceptual horizon image.
 ---
 ## 8. RATH Phi-Lambda Resonance Bridge — v3.3
 
-![RATH Phi-Lambda Resonance Bridge v3.3](./visuals/phi-lambda_resonance_bridge.png)
+![RATH Phi-Lambda Resonance Bridge v3.3](../visuals/phi-lambda_resonance_bridge.png)
 
 This visual introduces the **RATH Phi-Lambda Resonance Bridge** as a central geometric construction.
 
@@ -185,7 +185,7 @@ The core idea is that the bridge is not a simple transition, but a resonant syst
 
 ## 9. RATH Phi-Lambda Bridge — Annotated
 
-![RATH Phi-Lambda Bridge Annotated](./visuals/RATH_phi_lambda_bridge_annotated_neon.png)
+![RATH Phi-Lambda Bridge Annotated](../visuals/RATH_phi_lambda_bridge_annotated_neon.png)
 
 The annotated version makes the mathematical relationships explicit:
 
@@ -200,7 +200,7 @@ This image serves as the technical reference for the precise definition of the b
 
 ## 10. OLGO-JANUS Six-Sector Gate
 
-![OLGO-JANUS Six-Sector Gate](./visuals/OLGO_JANUS_Six_Sector_Gate_v_bands_background.png)
+![OLGO-JANUS Six-Sector Gate](../visuals/OLGO_JANUS_Six_Sector_Gate_v_bands_background.png)
 
 This visual introduces the **OLGO-JANUS Six-Sector Gate** — a six-sector extension of the previous gate logic.
 
@@ -217,7 +217,7 @@ The Six-Sector Gate forms the operational framework in which the v-bands act as 
 
 ## 11. v-bands – Breathing Wave + Blinking Pulse
 
-![v-bands Breathing Wave + Blinking Pulse](./visuals/v_bands_Breathing_Wave_Blinking_Pulse_neben_n_bands.png)
+![v-bands Breathing Wave + Blinking Pulse](../visuals/v_bands_Breathing_Wave_Blinking_Pulse_neben_n_bands.png)
 
 This image visualizes the **v-bands** as a living, oscillating background to the n-band structure:
 
@@ -230,7 +230,7 @@ The v-bands represent the “floating in the trembling” and form the breathing
 
 ## 12. Breathing Axis Overlay – 432/487 Horizon
 
-![Breathing Axis Overlay](./visuals/breathing_axis_overlay_v2.png)
+![Breathing Axis Overlay](../visuals/breathing_axis_overlay_v2.png)
 
 This visual shows the vertical **Breathing Axis** between 432 and 487 with the corrected n-bands:
 
