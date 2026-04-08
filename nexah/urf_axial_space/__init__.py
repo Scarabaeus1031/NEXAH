@@ -1,37 +1,52 @@
 """
-URF Axial Space – Public API
+NEXAH Public API
 
-Provides 3D coordinate mapping for Matroschka structures,
-Spiral Coupling and Switch Layer dynamics.
+This module exposes the core structural components and the new URF Axial Space layer.
 """
 
-# Korrigierter Import – Dateiname ist urf_axial_space_kernel.py
-from .urf_axial_space_kernel import URFAxialSpaceKernel
-from .switch_grid_mapper import SwitchGridMapper
+# --- Core algebraic structures ---
+from ENGINE.core.poset import FinitePoset as Poset
+from ENGINE.core.lattice import LatticeOps as Lattice
 
-__all__ = ["URFAxialSpaceKernel", "SwitchGridMapper"]
+# --- Operators ---
+from ENGINE.core.closure_operator import ClosureOperator
+from ENGINE.core.interior_operator import InteriorOperator
+from ENGINE.core.monotone_operator import MonotoneOperator
+from ENGINE.core.frame_operator import FrameOperator
+from ENGINE.core.regime_operator import RegimeOperator
 
-__version__ = "0.1"
+# --- High-level Engine Interface ---
+class Engine:
+    def __init__(self):
+        self.Poset = Poset
+        self.Lattice = Lattice
 
-# ====================== URF Axial Space (v9.1) ======================
-# 3D coordinate system + Matroschka mapping + Switch Grid integration
+    def create_poset(self, elements, order):
+        return self.Poset(elements, order)
 
-from .urf_axial_space.urf_axial_space_kernel import URFAxialSpaceKernel
-from .urf_axial_space.switch_grid_mapper import SwitchGridMapper
+    def create_lattice(self, elements, order):
+        return self.Lattice(elements, order)
 
-# Add to public API
-__all__.extend([
-    "URFAxialSpaceKernel",
-    "SwitchGridMapper",
-])
+
 # ====================== URF Axial Space Layer (v9.1) ======================
 # 3D coordinate system for Matroschka, Spiral Coupling and Switch Grid
 
 from .urf_axial_space.urf_axial_space_kernel import URFAxialSpaceKernel
 from .urf_axial_space.switch_grid_mapper import SwitchGridMapper
 
-# Add to public API
-__all__.extend([
+
+# --- Public API export list ---
+__all__ = [
+    "Poset",
+    "Lattice",
+    "ClosureOperator",
+    "InteriorOperator",
+    "MonotoneOperator",
+    "FrameOperator",
+    "RegimeOperator",
+    "Engine",
     "URFAxialSpaceKernel",
     "SwitchGridMapper",
-])
+]
+
+__version__ = "1.1"
