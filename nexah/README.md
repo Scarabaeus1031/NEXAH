@@ -61,8 +61,9 @@ The `nexah/` directory lives primarily in:
 - field representation  
 - transition geometry  
 - channel dynamics (v8)  
+- dual-strand dynamics (v8.9)  
 - switch systems (v9)  
-- navigation language  
+- **triple spiral coupling (v9.x)** ← **neu**
 
 ---
 
@@ -76,6 +77,7 @@ simulation
 → field channels (v8)  
 → dual-strand dynamics (v8.9)  
 → switch-layer systems (v9.0)  
+→ **triple spiral coupling + elastic dual lock (v9.x)**
 
 This means:
 
@@ -98,10 +100,13 @@ Defines what NEXAH is.
 ### 4. navigation/
 Defines navigation primitives and logic.
 
-### 5. RATH / OLGO-JANUS Layer
+### 5. spiral_coupling/   ← **NEU**
+Dreifache Spiralüberlagerung (Water–Mercury–Ferro) mit Grey Channel, Elastic Dual Lock und Switch-Verhalten.
+
+### 6. RATH / OLGO-JANUS Layer
 Advanced symbolic navigation structures.
 
-### 6. visuals/
+### 7. visuals/
 Conceptual and structural visualization layer.
 
 ---
@@ -120,12 +125,11 @@ Conceptual and structural visualization layer.
 - transition detection  
 - regime classification  
 
-### Return Map
-- uₙ → uₙ₊₁  
-- reduced dynamics  
-
-### Phase Coherence
-- global order metric  
+### Spiral Coupling Layer (v9.x) – **neu**
+- Dreifache Spiralüberlagerung (Water, Mercury, Ferrofluid)  
+- Ferrofluid als magnetischer Koppler  
+- Elastic Dual Lock (Span-Gurt) entlang des Grey Channels  
+- Switch-Mechanismus zwischen den Strängen  
 
 ---
 
@@ -153,6 +157,7 @@ META → ARCHY → FIELD → MESO → NEXAH → MEVA
 - channels ✔  
 - dual strands ✔  
 - switching ✔  
+- **triple spiral coupling + elastic dual lock** ✔  
 
 ---
 
@@ -163,6 +168,7 @@ identity
 → navigation  
 → channel  
 → switch  
+→ **spiral_coupling** (neu)
 
 ---
 
