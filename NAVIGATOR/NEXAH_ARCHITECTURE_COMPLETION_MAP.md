@@ -25,7 +25,7 @@ These layers transform raw system definitions into navigable regime landscapes.
 | META  | system definition layer |
 | ARCHY | structural organization |
 | MESO  | risk geometry layer |
-| NEXAH | navigation layer (incl. triple spiral coupling) |
+| NEXAH | navigation layer (incl. triple spiral coupling + URF Axial Space + Root Bridge) |
 | MEVA  | execution layer |
 
 ---
@@ -55,13 +55,15 @@ recent work also extends the framework toward:
 - field-aware system representation
 - transition geometry
 - coherence-based stability analysis
-- **triple spiral coupling** (v9.x)
+- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
+- **URF Axial Space + Root Bridge (v9.1)** – 3D coordinate system, Matroschka mapping, Root Cube, Elastic Axis, Restricted Axis (√∫) and 3x3/2x2 Switch Grid in 3D space
 
 These extensions are currently developed more explicitly in:
 
 - `FRAMEWORK/CORE_GEOMETRY/`
 - `BUILDER_LAB/proto_models/`
 - `nexah/spiral_coupling/`
+- `nexah/urf_axial_space/` ← **neu**
 - selected research and application modules
 
 ---
@@ -76,6 +78,7 @@ Agents can:
 - anticipate cascading failures
 - evaluate risk landscapes
 - navigate toward stable attractors
+- perform coherence-guided movement in 3D geometry via the Root Bridge
 
 ---
 
@@ -87,99 +90,25 @@ Agents can:
 
 Status: **[~] partial**
 
-Tasks:
-
-- connect system models to ENGINE operators
-- map system states to poset / lattice structures
-- express transitions as monotone operators
-- integrate fixpoint computation into simulation loops
-- expose engine APIs for simulations
-- detect regime stability
-- detect fixpoints and attractors
-
----
-
 ### 2. NEXAH System Definition Schema
 
 Status: **[✓] implemented**
-
-Tasks:
-
-- JSON schema definition
-- schema validator
-- system loader
-- JSON → NexahSystem conversion
-- system preset loading
-- example demo systems
-
-Goal:
-
-> Any system → standardized NEXAH model
-
----
 
 ### 3. Simulation Kernel
 
 Status: **[~] partial**
 
-Responsibilities:
-
-- state updates
-- transition execution
-- shock propagation
-- cascade dynamics
-- regime tracking
-- agent action execution
-- simulation step loop
-- trace logging
-
----
-
 ### 4. Regime Mapper (ARCHY Layer)
 
 Status: **[✓] implemented**
-
-Outputs:
-
-- regime clusters
-- transition graph
-- stability basins
-- regime boundary detection
-- attractor detection
-
-This is the primary structural analysis module of the **ARCHY layer**.
-
----
 
 ### 5. Cascade Engine Integration
 
 Status: **[✓] implemented**
 
-Capabilities:
-
-- cascading failure modeling
-- cascade path simulation
-- collapse basin identification
-- cascade probability estimation
-- cascade trajectory simulation
-
----
-
 ### 6. Stabilization Projection (Ω Operator)
 
 Status: **[~] partial**
-
-Purpose:
-
-Compute terminal states of uncontrolled drift.
-
-Outputs:
-
-- stabilization endpoint
-- collapse endpoint
-- basin membership
-
----
 
 ## Priority 1 — System Functionality
 
@@ -187,54 +116,13 @@ Outputs:
 
 Status: **[✓] implemented (CLI prototype)**
 
-Capabilities:
-
-- state graph visualization
-- regime classification display
-- risk geometry display
-- cascade visualization
-- stability landscape display
-- tipping point visualization
-- fragility and energy maps
-
-Future:
-
-- unified dashboard interface
-
----
-
 ### 8. Risk Geometry (MESO Layer)
 
 Status: **[✓] implemented**
 
-Core modules implemented:
-
-- risk gradient computation
-- collapse basin detection
-- stability landscape
-- stability atlas
-- tipping point detection
-- early warning signals
-- cascade dynamics simulation
-- cascade probability estimation
-- resilience score computation
-- system fragility map
-- system phase space model
-- system energy landscape
-
-Outputs:
-
-- risk gradients
-- stability landscapes
-- collapse basins
-- cascade dynamics
-- system energy topology
-
----
-
 ### 9. Agent Policy Layer (NEXAH Layer)
 
-Status: **[✓] implemented**
+Status: **[✓] implemented + extended**
 
 Capabilities:
 
@@ -245,24 +133,14 @@ Capabilities:
 - **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
 - coherence-guided movement along Dual-Strand Grey Channel
 - switch-mechanism between strands
+- **URF Axial Space + Root Bridge (v9.1)** – 3D geometric reference frame with Root Cube, Elastic Axis, Restricted Axis (√∫) and Matroschka mapping
+- mapping of 3x3 / 2x2 switch grid into 3D space
 
 This layer is the core of NEXAH as a navigation framework.
-
----
 
 ### 10. Execution Layer (MEVA)
 
 Status: **[✓] implemented**
-
-Responsibilities:
-
-- apply control actions
-- override drift transitions
-- update system state
-- record trajectory
-- run policy-driven simulation
-
----
 
 ## Priority 2 — Tooling and Exploration
 
@@ -270,135 +148,51 @@ Responsibilities:
 
 Status: **[✓] implemented**
 
-Available visualizations:
-
-- regime graph
-- risk landscape
-- collapse basin
-- stability atlas
-- tipping points
-- early warning signals
-- cascade paths
-- fragility maps
-- energy landscapes
-- Layer Energy over Time, Pair Coupling Distances, Dual-Strand Grey Channel visuals
-
----
+Available visualizations include all existing 2D graphs as well as the new 3D Root Cube, White Cube, Black Cube and Triple Spiral + Root Bridge interaction visuals.
 
 ### 12. System Explorer (Web Version)
 
 Status: **[ ] open**
 
-Planned:
-
-- interactive browser-based explorer
-
----
-
 ### 13. Example System Library
 
 Status: **[~] partial**
-
-Example systems:
-
-- energy grid (implemented)
-- server cluster (planned)
-- supply chain (planned)
-- infrastructure network (planned)
-
----
 
 ### 14. Reference Demo Systems
 
 Status: **[~] partial**
 
-Tasks:
-
-- convert hardcoded demos into JSON systems
-
----
-
 ### 15. Policy Modules
 
 Status: **[ ] open**
-
-Reusable policy modules for:
-
-- stabilization
-- collapse avoidance
-- adaptive navigation
-
----
 
 ### 16. Simulation Trace Logging
 
 Status: **[~] partial**
 
-Outputs:
-
-- state transitions
-- actions
-- regime transitions
-
----
-
 ### 17. System Dataset Expansion
 
 Status: **[ ] open**
-
-Additional datasets:
-
-- infrastructure networks
-- financial systems
-- planetary infrastructure models
-
----
 
 ### 18. Real-World Integration Interfaces
 
 Status: **[ ] open**
 
-Possible integrations:
-
-- DevOps monitoring
-- power grid telemetry
-- supply chain event streams
-
-Goal:
-
-> NEXAH as a real-world system navigation layer
-
----
-
 ### 19. Multi-Metric Risk Geometry
 
 Status: **[~] partial**
-
-Implemented metrics:
-
-- collapse distance
-- cascade probability
-- resilience score
-- system energy landscape
-
-Future metrics:
-
-- time-to-collapse
-- control cost
-- recovery cost
-- system entropy
 
 ---
 
 # Current Milestone
 
-The NEXAH framework has reached a **functional core architecture milestone**.
+The NEXAH framework has reached a **functional core architecture milestone** with the addition of the **URF Axial Space + Root Bridge (v9.1)**.
 
 The system stack
 
 META → ARCHY → MESO → NEXAH → MEVA
 
-is now operational, including the new **Spiral Coupling Layer (v9.x)**.
+is now operational, including triple spiral coupling and 3D geometric navigation.
 
 The framework can:
 
@@ -411,8 +205,9 @@ The framework can:
 - model system phase space and energy landscapes
 - compute safe navigation trajectories
 - perform coherence-guided triple spiral coupling with Elastic Dual Lock
+- map all structures into a unified 3D Root Cube reference frame with Root Bridge
 
-This establishes NEXAH as a **functional structural navigation framework with an operational core architecture** for complex dynamic systems.
+This establishes NEXAH as a **functional structural navigation framework with an operational 3D core architecture** for complex dynamic systems.
 
 ---
 
@@ -425,7 +220,7 @@ The following components yield a more fully integrated NEXAH system:
 3. Simulation Kernel
 4. Regime Mapper
 5. Risk Geometry (MESO)
-6. Agent Navigation Layer (incl. spiral coupling)
+6. Agent Navigation Layer (incl. spiral coupling + URF Axial Space + Root Bridge)
 7. Execution Layer
 8. Visualization Layer
 9. Reference Demo Systems
