@@ -246,3 +246,190 @@ NEXAH has demonstrated:
 > It reveals the structure that governs them.
 
 ---
+
+
+---
+
+## 🚀 Extended Capabilities (v7 → v9.0)
+
+---
+
+### 11. Channel Extraction (v8)
+
+- identifies a **central transport channel** (grey)
+- based on:
+  - distance to elastic axis
+  - spatial filtering
+- separates flow from bulk dynamics
+
+---
+
+### 12. Dual-Strand Decomposition (v8.9)
+
+- grey channel splits into:
+  - upper strand
+  - lower strand
+- strands encode:
+  - direction
+  - phase relation
+
+👉 Result:
+> system exhibits **structured bidirectional transport**
+
+---
+
+### 13. Phase Coherence Measurement
+
+- computes global coherence metric
+- stable mean ≈ 0.8+
+- detects:
+  - transition dips
+  - regime boundaries
+
+👉 Result:
+> first **quantitative order parameter**
+
+---
+
+### 14. Switch Layer Detection (v9.0)
+
+- defines transition window around axis
+- classifies regimes:
+  - contracting
+  - expanding
+- tracks switching behavior over time
+
+👉 Result:
+> system supports **state machine representation**
+
+---
+
+### 15. Reduced Return Map Dynamics
+
+- extracts 1D map:
+  u_n → u_{n+1}
+- reveals:
+  - piecewise structure
+  - non-random transitions
+
+Similar to:
+- Lorenz return map
+- doubling map
+
+👉 Result:
+> high-dimensional system reduces to:
+> **low-dimensional iterative dynamics**
+
+---
+
+### 16. Dual-Strand Signal Extraction
+
+- converts grey channel into:
+  - signed oscillatory signal
+- stable amplitude range
+- structured oscillation
+
+👉 Result:
+> system behaves like a **controlled oscillator**
+
+---
+
+### 17. Transport Axis as Control Manifold
+
+- projection onto elastic axis simplifies dynamics
+- most transitions occur near axis
+
+👉 Result:
+> system collapses onto:
+> **effective 1D control geometry**
+
+---
+
+### 18. Regime Separation
+
+Observed:
+
+- blue → contraction basin  
+- red → expansion basin  
+- green → transition field  
+- grey → transport layer  
+
+👉 Result:
+> full system = **multi-regime dynamical field**
+
+---
+
+## 📊 Updated Empirical Observations
+
+Across v7–v9:
+
+- emergence of central transport channel  
+- stable dual-strand separation  
+- reproducible switch dynamics  
+- consistent return map structure  
+- measurable coherence behavior  
+
+---
+
+## 🧠 Updated Key Insight
+
+The system is not only structured —  
+it is:
+
+> **dynamically organized around a transport channel**
+
+---
+
+## ⚙️ New Capabilities
+
+NEXAH can now:
+
+### 1. Extract Control Channels
+- identify where dynamics concentrate
+- isolate transport structures
+
+---
+
+### 2. Detect Regime Switching
+- identify transitions between system states
+- track switching over time
+
+---
+
+### 3. Reduce System Dimensionality
+- map complex dynamics → 1D return map
+- enable simplified analysis
+
+---
+
+### 4. Measure System Order
+- coherence as global stability indicator
+- detect instability zones
+
+---
+
+### 5. Represent Dynamics as State Machine
+- contracting ↔ expanding regimes
+- explicit transition tracking
+
+---
+
+## 🚀 Strategic Significance
+
+NEXAH now operates on three layers:
+
+1. Geometry (v6)  
+2. Channel Dynamics (v8)  
+3. Switch / Control Logic (v9)  
+
+---
+
+## 🧬 Final Insight (v9.0)
+
+> Complex systems are not controlled globally.  
+> They are governed by **low-dimensional transport structures**  
+> along which transitions occur.
+
+---
+
+
