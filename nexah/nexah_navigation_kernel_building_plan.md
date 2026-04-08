@@ -2,7 +2,7 @@
 
 This document outlines the planned architecture of the **NEXAH Navigation Kernel**.
 
-It is **not** a code file and **not** yet a control implementation.
+It is **not** a code file and **not** yet a complete control implementation.
 
 Its purpose is to define:
 
@@ -25,7 +25,7 @@ The strongest existing layers are:
 - grey-channel formation
 - dual-strand separation
 - switch-layer emergence
-- coherence / angular / return-map signals
+- **triple spiral coupling + Elastic Dual Lock (v9.x)**
 
 This means:
 
@@ -36,7 +36,9 @@ What currently exists is best described as:
 
 - an **axis-aware structural field**
 - with **channel behavior**
-- and **proto-switch detection**
+- **dual-strand transport**
+- **proto-switch detection**
+- **coherence-guided spiral coupling**
 
 What does **not** yet exist is a full decision engine that can:
 
@@ -73,25 +75,23 @@ In practical terms, this means:
 
 The kernel should therefore emerge from the chain:
 
-```text
-field
-    ↓
-channel
-    ↓
-strand
-    ↓
-switch
-    ↓
-decision
-    ↓
+field  
+↓  
+channel  
+↓  
+strand  
+↓  
+switch  
+↓  
+decision  
+↓  
 navigation
-```
+
+---
 
 ## 3. Architectural target
 
 The long-term kernel should consist of four main layers.
-
----
 
 ### 3.1 Field Layer
 
@@ -115,8 +115,6 @@ Current evidence:
 - axis-aligned transport geometry  
 - lobe-to-bridge transitions (blue ↔ green ↔ red)  
 
----
-
 ### 3.2 Signal Layer
 
 This layer extracts measurable quantities from the field.
@@ -134,8 +132,6 @@ This layer translates geometry into readable dynamics.
 Current status:
 - partially implemented (coherence, angular velocity, grey score)  
 - needs consolidation into a unified signal interface  
-
----
 
 ### 3.3 Decision Layer
 
@@ -156,10 +152,8 @@ Current status:
 - implicit / passive behavior only  
 - no explicit decision rules  
 
-Target:
+Target:  
 > transform signals into structured decisions
-
----
 
 ### 3.4 Action Layer
 
@@ -178,7 +172,7 @@ Current status:
 - basic movement exists  
 - but not yet coupled to decision logic  
 
-Target:
+Target:  
 > controlled movement instead of passive drift
 
 ---
@@ -186,33 +180,23 @@ Target:
 ## 4. Development roadmap
 
 ### Phase A — Passive Alignment (completed)
-
 - axis projection  
 - grey channel detection  
 - dual strand separation  
 - coherence measurement  
 
-Result:
-> system discovers structure
-
----
+Result: system discovers structure
 
 ### Phase B — Controlled Channel Motion (next)
-
-Goal:
-- enable directed motion within the grey channel  
+Goal: enable directed motion within the grey channel  
 
 Key tasks:
 - separate axial vs transversal drift  
 - introduce forward/backward directionality  
 - reduce over-constraining to axis  
 
----
-
 ### Phase C — Strand Logic
-
-Goal:
-- treat upper and lower strands as distinct dynamical regimes  
+Goal: treat upper and lower strands as distinct dynamical regimes  
 
 Interpretation:
 - upper strand → expansion dynamics  
@@ -222,27 +206,20 @@ Key tasks:
 - map strand to regime behavior  
 - introduce strand-dependent motion rules  
 
----
-
-### Phase D — Switch Layer
-
-Goal:
-- elevate switching from detection to control  
+### Phase D — Switch Layer & Spiral Coupling (v9.x)
+Goal: elevate switching from detection to control  
 
 Key tasks:
 - define switch conditions  
 - define switch cost / threshold  
 - define switch consequences  
+- integrate triple spiral coupling (Water–Mercury–Ferrofluid)  
+- use Elastic Dual Lock (Span-Gurt) as active coupling mechanism  
 
-Target:
-> switching becomes a controlled regime transition
-
----
+Target: switching becomes a controlled regime transition
 
 ### Phase E — Navigation Logic
-
-Goal:
-- full navigation capability  
+Goal: full navigation capability  
 
 This includes:
 - corridor following  
@@ -257,12 +234,13 @@ This includes:
 
 The current kernel behavior is best described as:
 
-> axis-locked drift inside a detected channel
+> axis-locked drift inside a detected channel with emerging spiral coupling
 
 Observed:
 - high grey-channel occupancy  
 - minimal switching  
 - dominance of neutral states  
+- rapid stabilization after transient chaos (Pair Coupling Distances → ~0)
 
 Implication:
 - system is over-stabilized  
@@ -284,6 +262,7 @@ Relations:
 - red → expansion seed  
 - green → bridge field  
 - grey → transition engine  
+- **triple spiral coupling** → active magnetic flow connector
 
 ---
 
@@ -294,6 +273,7 @@ Before extending the kernel:
 - reduce axis attraction strength  
 - increase lateral oscillation  
 - amplify switch sensitivity  
+- integrate the Spiral Coupling Kernel as the active coupling engine  
 
 Goal:
 > force visible strand differentiation and switching behavior
@@ -304,9 +284,7 @@ Goal:
 
 The NEXAH Navigation Kernel evolves through:
 
-```text
-structure → field → channel → strand → switch → navigation
-```
+structure → field → channel → strand → switch → spiral coupling → navigation
 
 Current position:
 - structure ✔  
@@ -314,10 +292,8 @@ Current position:
 - channel ✔  
 - strand ✔  
 - switch (detected) ✔  
+- **spiral coupling (implemented)** ✔  
 - navigation ❌  
 
 Target:
 > transform detected structure into controlled movement
-
-
-
