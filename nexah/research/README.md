@@ -227,3 +227,189 @@ It is about:
 > finding the structure that makes prediction possible
 
 ---
+
+---
+
+## 🚀 v7 – v9: Field Dynamics → Channel Geometry → Switch Systems
+
+After v6.5 (fiber / Hopf breakthrough), the system evolves from:
+
+→ geometric structure  
+→ into **active transport dynamics**
+
+---
+
+### v7: Transition to Field Channels
+
+#### v7.0 – v7.4
+- emergence of directional flow fields
+- increasing alignment along preferred axes
+- first appearance of **channel-like behavior**
+
+👉 Insight:
+The system is no longer just structured —  
+it begins to **organize flow along paths**
+
+---
+
+#### v7.5 – v7.9
+- refinement of transition regions
+- clustering along central bands
+- increasing density near axis-like structures
+
+👉 Insight:
+A **proto-channel** emerges:
+- trajectories compress into a central transport region
+
+---
+
+## v8: Elastic Axis & Grey Channel (SECOND BREAKTHROUGH)
+
+---
+
+### v8.0 – v8.4
+- introduction of affine / elastic axis
+- projection of trajectories onto axis
+- distance-based filtering
+
+👉 Insight:
+The system reveals a **latent 1D transport geometry**
+
+---
+
+### v8.5 – v8.7
+- definition of **grey channel**
+- separation from blue / green / red regions
+- first statistical analysis of angular distribution
+
+Example:
+- grey collapses from ~14% → ~0.6% → ~17%
+
+👉 Insight:
+Grey is not noise —  
+it is a **selective transport layer**
+
+---
+
+### v8.8 – Dual Core Grid (2x2 + 3x3)
+
+- introduction of:
+  - 3x3 anchor grid
+  - 2x2 core nodes
+- alignment of channel with discrete anchor points
+
+👉 Insight:
+Continuous field aligns with **discrete geometric lattice**
+
+---
+
+### v8.9 – Dual-Strand Grey Channel
+
+- grey channel splits into:
+  - upper strand
+  - lower strand
+- phase-based separation
+- coherence measurement introduced
+
+Metrics:
+- coherence mean ≈ 0.82
+- stable oscillatory structure
+
+👉 Insight:
+Grey is not a line —  
+it is a **dual transport structure**
+
+---
+
+## v9.0: Switch Layer & State Machine (THIRD BREAKTHROUGH)
+
+---
+
+### Core Additions
+
+- dual-strand signal extraction
+- switch window around axis
+- regime detection (contract / expand)
+- state transitions tracked over time
+
+---
+
+### Key Observations
+
+#### 1. Return Map Structure
+- non-random distribution
+- piecewise structure
+- resembles:
+  - Lorenz return map
+  - doubling map
+
+👉 Insight:
+The system contains a **reduced discrete dynamics**
+
+---
+
+#### 2. Phase Coherence
+- measurable global order
+- dip at transition region
+- recovery after switch
+
+👉 Insight:
+Coherence acts as an **order parameter**
+
+---
+
+#### 3. Dual-Strand Oscillation
+- stable alternating signal
+- bounded amplitude
+- persistent structure
+
+👉 Insight:
+Grey channel behaves like a **controlled oscillatory system**
+
+---
+
+#### 4. Axis as Transport Spine
+- all transitions occur near axis
+- projection simplifies dynamics
+
+👉 Insight:
+High-dimensional system collapses onto:
+→ **1D transport manifold**
+
+---
+
+## 🧠 New Conceptual Layer
+
+With v9.0, NEXAH evolves into:
+
+> a system that not only reveals geometry  
+> but extracts **navigable dynamics**
+
+---
+
+## 🔗 Updated Pipeline
+
+Simulation  
+→ Field  
+→ Geometry  
+→ Fiber Structure  
+→ Channel Extraction  
+→ Dual-Strand Dynamics  
+→ Switch System  
+→ Navigation
+
+---
+
+## 🧬 Updated Core Insight
+
+The system is:
+
+- not chaotic in a random sense  
+- not purely geometric  
+- not purely discrete  
+
+It is:
+
+> **a structured dynamical system with a low-dimensional control channel**
+
+---
