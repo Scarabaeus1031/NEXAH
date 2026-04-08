@@ -131,7 +131,7 @@ High-contrast variant.
 
 ### From Graphs to Root Cube
 
-![From Graphs to Root Cube](.//visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
+![From Graphs to Root Cube](./visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
 
 Direct bridge from 2D time-domain graphs to the 3D Root Cube.
 
