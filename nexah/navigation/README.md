@@ -29,7 +29,7 @@ Current center of gravity:
 |----------|--------|--------|
 | **[NEXAH_NAVIGATION_PRIMITIVES.md](./NEXAH_NAVIGATION_PRIMITIVES.md)** | Core vocabulary & navigation chain | ✅ latest |
 | **[NEXAH_ZITHER_GATE_MODEL.md](./NEXAH_ZITHER_GATE_MODEL.md)** | Zither code system, gates, Perlenkette, Phi-Split | ✅ latest |
-| **[NEXUS_3_PLUS_1_GATE_NOTE.md](./NEXUS_3_PLUS_1_GATE_NOTE.md)** | 3+1 Gate architecture | — |
+| **[NEXUS_3_PLUS_1_GATE_NOTE.md](./NEXUS_3_PLUS_1_GATE_NOTE.md)** | 3+1 Gate architecture | ✅ latest |
 | **[OLGO_JANUS_SIX_SECTOR_GATE.md](./OLGO_JANUS_SIX_SECTOR_GATE.md)** | Six-sector symmetric navigation | — |
 | **[RATH_PHI_LAMBDA_RESONANCE_BRIDGE.md](./RATH_PHI_LAMBDA_RESONANCE_BRIDGE.md)** | Angular resonance bridge & n-bands | — |
 | **[SPLIT_INTERFACE_MARKERS_NOTE.md](./SPLIT_INTERFACE_MARKERS_NOTE.md)** | Split, interface & marker logic | — |
@@ -59,7 +59,6 @@ Zither-Gate Code System
 **URF Axial Space + Root Bridge (v9.1)** ← 3D reference frame
     ↓
 Controlled Navigation
-
 ```
 
 ## Visual Gallery
@@ -77,8 +76,9 @@ See the dedicated **[Visual Gallery](./VISUAL_GALLERY.md)** (or integrate it her
 
 1. **NEXAH_NAVIGATION_PRIMITIVES.md** – start here  
 2. **NEXAH_ZITHER_GATE_MODEL.md** – the operational code system  
-3. RATH, OLGO-JANUS, v-bands (the resonance extensions)  
-4. **URF Axial Space + Root Bridge** (the 3D geometric foundation)
+3. **NEXUS_3_PLUS_1_GATE_NOTE.md** – the 3+1 completion  
+4. RATH, OLGO-JANUS, v-bands (the resonance extensions)  
+5. **URF Axial Space + Root Bridge** (the 3D geometric foundation)
 
 ---
 
@@ -86,4 +86,3 @@ See the dedicated **[Visual Gallery](./VISUAL_GALLERY.md)** (or integrate it her
 From structure to controlled 3D movement.  
 The language is now complete.  
 The geometry is now navigable.
-
