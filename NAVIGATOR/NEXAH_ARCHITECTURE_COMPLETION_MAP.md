@@ -16,19 +16,17 @@ NEXAH is a structural navigation framework for complex systems.
 
 The architecture consists of five primary layers:
 
-```text
 META → ARCHY → MESO → NEXAH → MEVA
-```
 
 These layers transform raw system definitions into navigable regime landscapes.
 
 | Layer | Role |
-|------|------|
-| META | system definition layer |
+|-------|------|
+| META  | system definition layer |
 | ARCHY | structural organization |
-| MESO | risk geometry layer |
-| NEXAH | navigation layer |
-| MEVA | execution layer |
+| MESO  | risk geometry layer |
+| NEXAH | navigation layer (incl. triple spiral coupling) |
+| MEVA  | execution layer |
 
 ---
 
@@ -36,11 +34,9 @@ These layers transform raw system definitions into navigable regime landscapes.
 
 The system can also be understood through three conceptual layers:
 
-```text
-META → semantic space
-ARCHY → structural geometry
+META → semantic space  
+ARCHY → structural geometry  
 NEXAH → dynamic navigation
-```
 
 META defines meaning.  
 ARCHY defines structure.  
@@ -52,20 +48,20 @@ NEXAH defines motion.
 
 While the core implementation stack is:
 
-```text
 META → ARCHY → MESO → NEXAH → MEVA
-```
 
 recent work also extends the framework toward:
 
 - field-aware system representation
 - transition geometry
 - coherence-based stability analysis
+- **triple spiral coupling** (v9.x)
 
 These extensions are currently developed more explicitly in:
 
 - `FRAMEWORK/CORE_GEOMETRY/`
 - `BUILDER_LAB/proto_models/`
+- `nexah/spiral_coupling/`
 - selected research and application modules
 
 ---
@@ -246,6 +242,11 @@ Capabilities:
 - regime-aware decisions
 - risk-aware control
 - collapse avoidance navigation
+- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
+- coherence-guided movement along Dual-Strand Grey Channel
+- switch-mechanism between strands
+
+This layer is the core of NEXAH as a navigation framework.
 
 ---
 
@@ -280,6 +281,7 @@ Available visualizations:
 - cascade paths
 - fragility maps
 - energy landscapes
+- Layer Energy over Time, Pair Coupling Distances, Dual-Strand Grey Channel visuals
 
 ---
 
@@ -394,11 +396,9 @@ The NEXAH framework has reached a **functional core architecture milestone**.
 
 The system stack
 
-```text
 META → ARCHY → MESO → NEXAH → MEVA
-```
 
-is now operational.
+is now operational, including the new **Spiral Coupling Layer (v9.x)**.
 
 The framework can:
 
@@ -410,6 +410,7 @@ The framework can:
 - compute resilience and fragility metrics
 - model system phase space and energy landscapes
 - compute safe navigation trajectories
+- perform coherence-guided triple spiral coupling with Elastic Dual Lock
 
 This establishes NEXAH as a **functional structural navigation framework with an operational core architecture** for complex dynamic systems.
 
@@ -424,7 +425,7 @@ The following components yield a more fully integrated NEXAH system:
 3. Simulation Kernel
 4. Regime Mapper
 5. Risk Geometry (MESO)
-6. Agent Navigation Layer
+6. Agent Navigation Layer (incl. spiral coupling)
 7. Execution Layer
 8. Visualization Layer
 9. Reference Demo Systems
