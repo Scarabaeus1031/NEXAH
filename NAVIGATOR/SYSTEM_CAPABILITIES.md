@@ -4,9 +4,7 @@ This document summarizes the **current operational capabilities** of the NEXAH f
 
 It describes what the system can presently do across the architectural stack:
 
-```text
 META → ARCHY → MESO → NEXAH → MEVA
-```
 
 ---
 
@@ -23,6 +21,7 @@ Its current capabilities are centered on:
 - navigation through structured system landscapes
 - execution of policy-guided trajectories
 - visual exploration of system behavior
+- **triple spiral coupling with Elastic Dual Lock** (neu v9.x)
 
 ---
 
@@ -104,6 +103,9 @@ Capabilities:
 - collapse avoidance strategies
 - regime-aware decision support
 - path selection through structured stability landscapes
+- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
+- coherence-guided movement along Dual-Strand Grey Channel
+- switch-mechanism between strands
 
 This layer is the core of NEXAH as a navigation framework.
 
@@ -138,6 +140,7 @@ Capabilities:
 - fragility maps
 - energy landscape diagrams
 - phase-space-like representations
+- Layer Energy over Time, Pair Coupling Distances, Dual-Strand Grey Channel visuals
 
 These tools make the discovered structure visible and interpretable.
 
@@ -153,6 +156,7 @@ At its current stage, NEXAH is strongest in:
 - early instability indication
 - cascade analysis
 - navigation-ready system interpretation
+- **triple spiral coupling with Elastic Dual Lock**
 
 Navigation and execution are already operational, but continue to evolve on top of the stronger discovery and geometry layers.
 
@@ -177,17 +181,15 @@ Current and intended application areas include:
 
 The framework currently supports the following progression:
 
-```text
 system modeling
     ↓
 regime analysis
     ↓
 risk geometry
     ↓
-navigation
+navigation (incl. spiral coupling)
     ↓
 execution
-```
 
 This makes NEXAH a unified system for exploring and acting within complex dynamic environments.
 
@@ -200,17 +202,17 @@ NEXAH can model system structure,
 extract regimes,
 compute risk geometry,
 simulate collapse,
-and navigate toward stability.
+and navigate toward stability
+with triple spiral coupling and Elastic Dual Lock.
 ```
-
----
 
 ## Status
 
 Current status:
+    - operational
+    - modular
+    - extensible
+    - research-driven
+    - still evolving toward broader integration and application
 
-- operational
-- modular
-- extensible
-- research-driven
-- still evolving toward broader integration and application
+
