@@ -1,5 +1,5 @@
 # NEXAH
-*A framework for discovering, mapping and beginning to navigate stability in complex dynamical systems.*
+*A framework for discovering, mapping and navigating stability in complex dynamical systems.*
 
 ## ⚡ Key Result — IEEE Power Systems
 
