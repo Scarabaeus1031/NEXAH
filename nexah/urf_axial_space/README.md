@@ -27,7 +27,7 @@ Center point: **α (Potential)**
 
 ![URF Axial Space – White Cube](visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1.png)
 
-![URF Axial Space – Black Cube](visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v2.png)
+![URF Axial Space – Black Cube](visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v.2.png)
 
 ---
 
