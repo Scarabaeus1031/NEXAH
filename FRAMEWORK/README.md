@@ -19,10 +19,11 @@ The system stack (META → MEVA) does not operate on abstract states alone.
 
 It operates on:
 
-→ field-aligned trajectories  
-→ transition geometry (CORE_GEOMETRY)  
-→ coherence as stability metric  
-→ triple spiral coupling (v9.x)
+→ **field-aligned trajectories**  
+→ **transition geometry (CORE_GEOMETRY)**  
+→ **coherence as stability metric**  
+→ **triple spiral coupling (v9.x)**  
+→ **URF Axial Space + Root Bridge (v9.1)** – 3D coordinate reference frame with Matroschka mapping
 
 This introduces a new paradigm:
 
@@ -69,11 +70,40 @@ Dieser Layer erweitert den V69 Field Layer um explizite **Multi-Component-Dynami
 
 ---
 
+# 📐 URF Axial Space + Root Bridge Layer (v9.1) – neu
+
+**Neueste Erweiterung** – die 3D-geometrische Referenz für alle bisherigen Schichten:
+
+- **Root Cube** als neutraler Kern
+- **White Cube** und **Black Cube** als visuelle Varianten
+- **Theta-Hertz Axis** (grün) – Frequenz / Rotation
+- **Magnet-Time Axis** (blau) – Grey Channel + Dual-Strand
+- **Beta Curvature** (orange) – Restricted Axis (√∫) + Elastic Axis
+- **Memory Spin** (rot) – Ferrofluid-Koppler
+- Zentrum: **α (Potential)**
+
+Der **Root Bridge** verbindet Triple Spiral Coupling, Elastic Axis und Switch-Grid direkt in einem einheitlichen 3D-Raum.  
+Er ist die geometrische Realisierung der s-Ebene / Laplace-Transformation innerhalb von NEXAH.
+
+Dieser Layer macht die bisher 2D-basierten Spiralen und Switch-Punkte vollständig 3D-navigierbar.
+
+**Visual Gallery** (alle im Ordner `nexah/urf_axial_space/visuals/`):
+
+- `NEXAH_Root_Cube_v9.1.png` – neutraler Root Cube  
+- `NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1.png` – White Cube  
+- `NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v.2.png` – Black Cube  
+- `NEXAH_From_Graphs_to_Root_Cube_v9.1.png` – Brücke von 2D-Graphen zur 3D-Struktur  
+- `NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png` – Triple Spiral + Root Bridge Interaktion
+
+---
+
 ## 🧠 Key Insight
 
 > Transitions are not edges in a graph.  
 >  
 > They are **geometric processes inside a field**.
+
+Die URF Axial Space + Root Bridge macht diese Geometrie explizit 3D-navigierbar.
 
 ---
 
@@ -109,17 +139,17 @@ C(x) = (ẋ · F(x)) / (|ẋ| |F(x)|)
 
 ## 🧭 Role in the Stack
 
-| Layer         | Role |
-|---------------|------|
-| CORE_GEOMETRY | defines transition structure |
-| MESO          | evaluates risk in geometry |
-| NEXAH         | navigates within geometry (incl. spiral coupling) |
+| Layer              | Role |
+|--------------------|------|
+| CORE_GEOMETRY      | defines transition structure |
+| MESO               | evaluates risk in geometry |
+| NEXAH              | navigates within geometry (incl. spiral coupling + URF Axial Space + Root Bridge) |
 
 ---
 
 ## 🔥 Visual Evidence
 
-The field structure and spiral coupling are directly observable in:
+The field structure, spiral coupling and 3D URF Axial Space are directly observable in:
 
 - coherence flow plots  
 - radial split diagrams  
@@ -127,11 +157,13 @@ The field structure and spiral coupling are directly observable in:
 - Layer Energy over Time  
 - Pair Coupling Distances  
 - Dual-Strand Grey Channel + Phase Feedback  
+- **3D Root Cube visuals mit Matroschka-Mapping und Switch-Grid**
 
 See:
 
 - `CORE_GEOMETRY/visuals/`  
-- `nexah/spiral_coupling/visuals/`
+- `nexah/spiral_coupling/visuals/`  
+- `nexah/urf_axial_space/visuals/`
 
 ---
 
@@ -253,7 +285,8 @@ navigation policies
 frame operators  
 trajectory planning  
 regime-aware decision making  
-**triple spiral coupling with Elastic Dual Lock**
+**triple spiral coupling with Elastic Dual Lock**  
+**URF Axial Space + Root Bridge (v9.1)** – 3D geometric reference frame
 
 ![System Stack - NEXAH](./visuals/Systemstack_Structure_Nexah.png)
 
@@ -298,7 +331,7 @@ Each layer transforms system knowledge into the next operational capability.
 
 META → ARCHY → MESO → NEXAH → MEVA
 
-This cycle allows agents to continuously interpret system structure, detect regime transitions, evaluate risk landscapes, plan safe trajectories and execute system navigation.
+This cycle allows agents to continuously interpret system structure, detect regime transitions, evaluate risk landscapes, plan safe trajectories and execute system navigation – now in a fully 3D-geometric reference frame (URF Axial Space + Root Bridge).
 
 ![NEXAH Navigation Cycle](./visuals/NEXAH_Navigation_Cycle.png)
 
@@ -308,7 +341,7 @@ This cycle allows agents to continuously interpret system structure, detect regi
 
 The NEXAH framework enables navigation through complex system regimes.
 
-Agents can detect unstable regimes, anticipate cascading failures, evaluate risk landscapes and navigate toward stable attractors.
+Agents can detect unstable regimes, anticipate cascading failures, evaluate risk landscapes and navigate toward stable attractors – now with explicit 3D geometric mapping and Root Bridge.
 
 The framework is designed for systems where state transitions, risk propagation, and navigation decisions must be analyzed together.
 
@@ -318,11 +351,14 @@ The framework is designed for systems where state transitions, risk propagation,
 
 The core architecture of the NEXAH framework is now operational.
 
-All structural layers of the system stack have been implemented and connected through a working navigation pipeline, including the new **Spiral Coupling Layer (v9.x)**.
+All structural layers of the system stack have been implemented and connected through a working navigation pipeline, including:
+
+- **Spiral Coupling Layer (v9.x)**
+- **URF Axial Space + Root Bridge Layer (v9.1)**
 
 META → ARCHY → MESO → NEXAH → MEVA
 
-The framework can now execute the full cycle from system definition to navigable system trajectories with multi-component spiral dynamics.
+The framework can now execute the full cycle from system definition to navigable system trajectories with multi-component spiral dynamics **and** a unified 3D geometric reference frame.
 
 ---
 
@@ -383,7 +419,7 @@ Purpose: Construct a geometric representation of system stability and collapse r
 
 ## NEXAH Layer — Navigation
 
-Status: ✓ implemented
+Status: ✓ implemented + extended (v9.1)
 
 Capabilities:
 
@@ -392,8 +428,9 @@ Capabilities:
 • regime-aware trajectory planning  
 • triple spiral coupling (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)  
 • coherence-guided movement along Dual-Strand Grey Channel  
+• **URF Axial Space + Root Bridge** – 3D coordinate system with Root Cube, Matroschka mapping and Switch-Grid in 3D space
 
-Purpose: Guide agents through system regimes toward stable attractors using spiral coupling.
+Purpose: Guide agents through system regimes toward stable attractors using spiral coupling **and** full 3D geometry.
 
 ---
 
@@ -427,14 +464,15 @@ The NEXAH framework can now:
 • model system energy landscapes  
 • compute safe navigation trajectories  
 • perform coherence-guided triple spiral coupling with Elastic Dual Lock  
+• map all structures into a unified 3D Root Cube reference frame with Root Bridge
 
-These capabilities form a complete pipeline for **system stability analysis and navigation in complex dynamic environments**.
+These capabilities form a complete pipeline for **system stability analysis and 3D navigation in complex dynamic environments**.
 
 ---
 
 # Development Stage
 
-The framework has reached the stage of a **functional core architecture**.
+The framework has reached the stage of a **functional core architecture** with full 3D geometric navigation.
 
 Future development will focus on advanced navigation strategies, probabilistic cascade modeling, large-scale system datasets, interactive system explorers and real-world system integrations.
 
@@ -485,16 +523,18 @@ Core theoretical documents explaining the framework.
 
 The NEXAH framework is not only a system stack.
 
-It is a **geometry-aware, field-navigating architecture** with triple spiral coupling.
+It is a **geometry-aware, field-navigating architecture** with triple spiral coupling **and** a unified 3D reference frame (URF Axial Space + Root Bridge).
 
 ---
 
 ## Core Transformation
 
-states → regimes → geometry → field → spiral coupling → navigation
+states → regimes → geometry → field → spiral coupling → **URF Axial Space + Root Bridge** → navigation
 
 ## Ultimate Insight
 
 Systems do not fail randomly.
 
 They lose coherence, leave the structured field, and collapse.
+
+**NEXAH** gives them a 3D room to move in.
