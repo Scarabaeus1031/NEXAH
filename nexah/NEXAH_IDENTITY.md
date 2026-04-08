@@ -110,9 +110,9 @@ In current models, this is visible as:
 
 ---
 
-### Switch Dynamics (v9)
+### Switch Dynamics & Spiral Coupling (v9)
 
-NEXAH now begins to identify **switching behavior** inside these channels.
+NEXAH now begins to identify **switching behavior** inside these channels and has introduced the **Spiral Coupling Layer**.
 
 This includes:
 
@@ -120,6 +120,7 @@ This includes:
 - dual-strand structure (upper / lower channel)
 - oscillatory transport behavior
 - return-map-like reduced dynamics
+- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
 
 This marks the transition from:
 
@@ -179,6 +180,7 @@ Examples include:
 - dual-strand transport structures
 - switch-layer detection and state representation
 - reduced return-map dynamics
+- **triple spiral coupling + Elastic Dual Lock (v9.x)**
 
 These are increasingly coherent and form the **bridge toward navigation and control**.
 
@@ -254,7 +256,7 @@ If summarized in one sentence:
 
 And its current maturity:
 
-> NEXAH is already strong as a structure and field discovery system, while channel dynamics and switch-based navigation are emerging layers built on top of that foundation.
+> NEXAH is already strong as a structure and field discovery system, while channel dynamics, switch-based navigation and triple spiral coupling are emerging layers built on top of that foundation.
 
 ---
 
@@ -277,7 +279,7 @@ And the deeper insight now emerging:
 Going forward, NEXAH should maintain clear separation between:
 
 - **Core** → strongest validated framework
-- **Extensions** → active, stabilizing developments (channels, switches)
+- **Extensions** → active, stabilizing developments (channels, switches, spiral coupling)
 - **Proto** → exploratory structures
 - **Vision** → long-term navigation and control systems
 
@@ -296,11 +298,12 @@ Its purpose is to recover the hidden organization of dynamics as:
 - transition geometries
 - transport channels
 - switching structures
+- **triple spiral coupling with Elastic Dual Lock**
 - navigable stability landscapes
 
 It is already a strong engine for structure discovery.
 
-It is becoming a field, channel, and transition-geometry framework.
+It is becoming a field, channel, switch and spiral-coupling framework.
 
 Its long-term horizon is:
 
