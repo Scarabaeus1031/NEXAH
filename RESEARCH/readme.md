@@ -34,28 +34,34 @@ All results remain strictly within **finite discrete order theory**.
 
 ---
 
-# 🔗 Relation to CORE_GEOMETRY (NEW)
+# 🔗 Relation to CORE_GEOMETRY & Spiral Coupling (NEW)
 
-While the research layer is strictly discrete, the NEXAH framework includes an extended layer:
+While the research layer is strictly discrete, the NEXAH framework includes extended layers:
 
-→ **CORE_GEOMETRY**
+→ **CORE_GEOMETRY**  
+→ **Spiral Coupling Layer (v9.x)**
 
 CORE_GEOMETRY introduces:
+- continuous field representations
+- geometric transition structures
+- coherence-based stability metrics
 
-- continuous field representations  
-- geometric transition structures  
-- coherence-based stability metrics  
-- flow-aligned system dynamics  
+The **Spiral Coupling Layer** adds:
+- triple spiral coupling (Water–Mercury–Ferrofluid)
+- Dual-Strand Grey Channel
+- Elastic Dual Lock (Span-Gurt)
+- Switch-Mechanismus
 
 Thus:
 
 RESEARCH → discrete structural foundation  
-CORE_GEOMETRY → continuous geometric extension
+CORE_GEOMETRY → continuous geometric extension  
+SPIRAL_COUPLING → multi-component dynamic navigation layer
 
 Important:
 
-The research layer does not depend on CORE_GEOMETRY.  
-CORE_GEOMETRY builds on top of the research layer.
+The research layer does not depend on CORE_GEOMETRY or Spiral Coupling.  
+Both build on top of the research layer.
 
 ---
 
@@ -81,7 +87,8 @@ Phase I–II formally consolidated.
 Next stage:
 
 → Applied validation through system models  
-→ Integration with geometric field extensions (CORE_GEOMETRY)
+→ Integration with geometric field extensions (CORE_GEOMETRY)  
+→ Integration with dynamic coupling extensions (Spiral Coupling Layer v9.x)
 
 ---
 
