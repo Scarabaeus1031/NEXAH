@@ -19,20 +19,18 @@ The system stack (META → MEVA) does not operate on abstract states alone.
 
 It operates on:
 
-→ **field-aligned trajectories**  
-→ **transition geometry (CORE_GEOMETRY)**  
-→ **coherence as stability metric**
+→ field-aligned trajectories  
+→ transition geometry (CORE_GEOMETRY)  
+→ coherence as stability metric  
+→ triple spiral coupling (v9.x)
 
 This introduces a new paradigm:
 
-```text
 state-based systems → geometry-based systems → field-based navigation
-```
-
 
 ![System Stack Architecture](./visuals/Systemstack_Architecture_Overview.png)
 
-The **System Stack** of the NEXAH Framework represents its core architecture. It defines how the layers **META**, **ARCHY**, **MESO**, **NEXAH**, and **MEVA** interact to form a cohesive system for navigating complex dynamic structures.
+The **System Stack** of the NEXAH Framework represents its core architecture. It defines how the layers META, ARCHY, MESO, NEXAH, and MEVA interact to form a cohesive system for navigating complex dynamic structures.
 
 The stack transforms
 
@@ -57,6 +55,20 @@ This layer is defined in:
 
 ---
 
+# 🌀 Spiral Coupling Layer (v9.x) – neu
+
+The most recent development is the **Spiral Coupling Layer**:
+
+- Dreifache Spiralüberlagerung (Water ~42 Hz, Mercury ~63 Hz, Ferrofluid ~77 Hz)
+- Dual-Strand Grey Channel
+- Elastic Dual Lock (Span-Gurt) als aktive Kopplungslinie
+- Ferrofluid als magnetischer Koppler
+- Switch-Mechanismus zwischen den Strängen
+
+Dieser Layer erweitert den V69 Field Layer um explizite **Multi-Component-Dynamik** und liefert eine neue Form der **coherence-guided Navigation**.
+
+---
+
 ## 🧠 Key Insight
 
 > Transitions are not edges in a graph.  
@@ -73,9 +85,7 @@ The system evolves inside a structured field:
 - backward flow (opposing motion)  
 - interface (transition layer)  
 
-\[
-F = F^{+} \cup F^{0} \cup F^{-}
-\]
+F = F⁺ ∪ F⁰ ∪ F⁻
 
 ---
 
@@ -83,45 +93,45 @@ F = F^{+} \cup F^{0} \cup F^{-}
 
 Stability is defined by alignment:
 
-\[
-C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
-\]
+C(x) = (ẋ · F(x)) / (|ẋ| |F(x)|)
 
 ---
 
 ## 📊 Interpretation
 
 | Coherence | Meaning |
-|----------|--------|
-| C ≈ 1 | stable trajectory |
-| C ≈ 0 | transition zone |
-| C < 0 | collapse trajectory |
+|-----------|---------|
+| C ≈ 1     | stable trajectory |
+| C ≈ 0     | transition zone |
+| C < 0     | collapse trajectory |
 
 ---
 
 ## 🧭 Role in the Stack
 
-| Layer | Role |
-|------|------|
+| Layer         | Role |
+|---------------|------|
 | CORE_GEOMETRY | defines transition structure |
-| MESO | evaluates risk in geometry |
-| NEXAH | navigates within geometry |
+| MESO          | evaluates risk in geometry |
+| NEXAH         | navigates within geometry (incl. spiral coupling) |
 
 ---
 
 ## 🔥 Visual Evidence
 
-The field structure is directly observable in:
+The field structure and spiral coupling are directly observable in:
 
 - coherence flow plots  
 - radial split diagrams  
 - phase portraits  
-- IEEE system experiments  
+- Layer Energy over Time  
+- Pair Coupling Distances  
+- Dual-Strand Grey Channel + Phase Feedback  
 
 See:
 
-- `CORE_GEOMETRY/visuals/`
-
+- `CORE_GEOMETRY/visuals/`  
+- `nexah/spiral_coupling/visuals/`
 
 ---
 
@@ -182,19 +192,9 @@ collapse states
 basin structure  
 planetary system simulation  
 
-ARCHY now includes a large collection of experimental simulation models exploring interactions between:
+ARCHY now includes a large collection of experimental simulation models exploring interactions between climate systems, water stress, food production, global energy networks, infrastructure, supply chains, migration, geopolitical escalation and cascading collapse scenarios.
 
-• climate systems  
-• water stress  
-• food production systems  
-• global energy networks  
-• infrastructure systems  
-• global supply chains  
-• migration dynamics  
-• geopolitical escalation  
-• cascading collapse scenarios  
-
-These simulations allow exploration of **tipping points, cascading failures, and resilience mechanisms** in complex planetary systems.
+These simulations allow exploration of tipping points, cascading failures, and resilience mechanisms in complex planetary systems.
 
 ![System Stack - ARCHY](./visuals/Systemstack_Structure_Archy.png)
 
@@ -253,6 +253,7 @@ navigation policies
 frame operators  
 trajectory planning  
 regime-aware decision making  
+**triple spiral coupling with Elastic Dual Lock**
 
 ![System Stack - NEXAH](./visuals/Systemstack_Structure_Nexah.png)
 
@@ -297,13 +298,7 @@ Each layer transforms system knowledge into the next operational capability.
 
 META → ARCHY → MESO → NEXAH → MEVA
 
-This cycle allows agents to continuously:
-
-• interpret system structure  
-• detect regime transitions  
-• evaluate risk landscapes  
-• plan safe trajectories  
-• execute system navigation  
+This cycle allows agents to continuously interpret system structure, detect regime transitions, evaluate risk landscapes, plan safe trajectories and execute system navigation.
 
 ![NEXAH Navigation Cycle](./visuals/NEXAH_Navigation_Cycle.png)
 
@@ -313,14 +308,9 @@ This cycle allows agents to continuously:
 
 The NEXAH framework enables navigation through complex system regimes.
 
-Agents can:
+Agents can detect unstable regimes, anticipate cascading failures, evaluate risk landscapes and navigate toward stable attractors.
 
-• detect unstable regimes  
-• anticipate cascading failures  
-• evaluate risk landscapes  
-• navigate toward stable attractors  
-
-The framework is designed for systems where **state transitions, risk propagation, and navigation decisions must be analyzed together**.
+The framework is designed for systems where state transitions, risk propagation, and navigation decisions must be analyzed together.
 
 ---
 
@@ -328,11 +318,11 @@ The framework is designed for systems where **state transitions, risk propagatio
 
 The core architecture of the NEXAH framework is now operational.
 
-All structural layers of the system stack have been implemented and connected through a working navigation pipeline.
+All structural layers of the system stack have been implemented and connected through a working navigation pipeline, including the new **Spiral Coupling Layer (v9.x)**.
 
 META → ARCHY → MESO → NEXAH → MEVA
 
-The framework can now execute the full cycle from system definition to navigable system trajectories.
+The framework can now execute the full cycle from system definition to navigable system trajectories with multi-component spiral dynamics.
 
 ---
 
@@ -347,9 +337,7 @@ Capabilities:
 • relational system definition  
 • standardized NEXAH system model  
 
-Purpose:
-
-Transform real systems into structured relational models.
+Purpose: Transform real systems into structured relational models.
 
 ---
 
@@ -366,9 +354,7 @@ Capabilities:
 • planetary system simulation models  
 • cascade simulation environments  
 
-Purpose:
-
-Convert system definitions into regime graphs describing the structural behavior of the system and provide simulation environments for testing regime transitions.
+Purpose: Convert system definitions into regime graphs and provide simulation environments for testing regime transitions.
 
 ---
 
@@ -383,16 +369,15 @@ Capabilities:
 • stability landscape  
 • stability atlas  
 • tipping point detection  
-• early warning signal detection  
+• early warning signals  
 • cascade simulation  
 • cascade probability estimation  
+• resilience score computation  
 • system fragility analysis  
 • phase space representation  
 • system energy landscape  
 
-Purpose:
-
-Construct a geometric representation of system stability and collapse risk.
+Purpose: Construct a geometric representation of system stability and collapse risk.
 
 ---
 
@@ -405,10 +390,10 @@ Capabilities:
 • safe path computation  
 • risk-aware navigation policies  
 • regime-aware trajectory planning  
+• triple spiral coupling (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)  
+• coherence-guided movement along Dual-Strand Grey Channel  
 
-Purpose:
-
-Guide agents through system regimes toward stable attractors.
+Purpose: Guide agents through system regimes toward stable attractors using spiral coupling.
 
 ---
 
@@ -416,16 +401,15 @@ Guide agents through system regimes toward stable attractors.
 
 Status: ✓ implemented
 
-Capabilities:
+Responsibilities:
 
-• state update execution  
-• navigation policy execution  
-• trajectory recording  
-• simulation engine  
+• apply control actions  
+• override drift transitions  
+• update system state  
+• record trajectory  
+• run policy-driven simulation  
 
-Purpose:
-
-Execute navigation decisions and simulate system evolution.
+Purpose: Execute navigation decisions and simulate system evolution.
 
 ---
 
@@ -442,6 +426,7 @@ The NEXAH framework can now:
 • compute system resilience  
 • model system energy landscapes  
 • compute safe navigation trajectories  
+• perform coherence-guided triple spiral coupling with Elastic Dual Lock  
 
 These capabilities form a complete pipeline for **system stability analysis and navigation in complex dynamic environments**.
 
@@ -451,13 +436,7 @@ These capabilities form a complete pipeline for **system stability analysis and 
 
 The framework has reached the stage of a **functional core architecture**.
 
-Future development will focus on:
-
-• advanced navigation strategies  
-• probabilistic cascade modeling  
-• large-scale system datasets  
-• interactive system explorers  
-• real-world system integrations
+Future development will focus on advanced navigation strategies, probabilistic cascade modeling, large-scale system datasets, interactive system explorers and real-world system integrations.
 
 ---
 
@@ -478,42 +457,26 @@ Detailed documentation for each layer:
 Core theoretical documents explaining the framework.
 
 ### Architecture
-
 - [System Stack](./system_stack.md)  
 - [Stack Structure](./stack_structure.md)
 
----
-
 ### Theory
-
 - [Axioms](./axioms.md)  
 - [Theorems](./theorems.md)
 
----
-
 ### Operators
-
 - [Frame Operator](./frame_operator.md)  
 - [Regime Operator](./regime_operator.md)
 
----
-
 ### Models
-
 - [Relational Model](./relational_model.md)  
 - [Minimal Logic](./minimal_logic.md)
 
----
-
 ### Applications
-
 - [Modules Overview](./modules.md)  
 - [Application Cases](./application_cases.md)
 
----
-
 ### Research
-
 - [Research Papers](./research_papers.md)
 
 ---
@@ -522,22 +485,16 @@ Core theoretical documents explaining the framework.
 
 The NEXAH framework is not only a system stack.
 
-It is a **geometry-aware, field-navigating architecture**.
+It is a **geometry-aware, field-navigating architecture** with triple spiral coupling.
 
 ---
 
 ## Core Transformation
 
-```text
-states → regimes → geometry → field → navigation
-```
+states → regimes → geometry → field → spiral coupling → navigation
 
 ## Ultimate Insight
 
 Systems do not fail randomly.
 
-```text
-They lose coherence,
-leave the structured field,
-and collapse.
-````
+They lose coherence, leave the structured field, and collapse.
