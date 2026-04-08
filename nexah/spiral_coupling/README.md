@@ -1,51 +1,27 @@
-# spiral_coupling – Dreifache Spiralüberlagerung
+# Spiral Coupling Layer – Dreifache Spiralüberlagerung
 
-Neuer Layer in NEXAH (v7.3+)
+**Neuer Layer in NEXAH (April 2026)**
 
-**Beschreibung**  
-Drei interagierende Schichten:
-- **Water** (blau)   – stabile, träge Komponente  
-- **Mercury** (rot)  – reaktive, schnelle Komponente  
-- **Ferro** (grün)   – magnetischer Flow (aktiver Koppler)
+Dieser Layer modelliert die **gleichzeitige Überlagerung und Kopplung von drei unterschiedlichen Komponenten**:
 
-Der Ferro-Layer macht den bisher unsichtbaren magnetischen Flow sichtbar und koppelt die drei Schichten zu einer stabilen dreifachen Spirale.
+- **Water** (blau)      – träge, stabile Flüssigkeitskomponente (~42 Hz Eigenfrequenz)  
+- **Mercury** (rot)     – reaktive, schnelle Komponente (~63 Hz Eigenfrequenz)  
+- **Ferrofluid** (grün) – magnetisch aktive Komponente (~77 Hz Eigenfrequenz)
 
-**Warum wichtig?**  
-- Zeigt, wie Magnetismus als **Koppler** wirkt  
-- Erweitert den V69 Field Layer um eine explizite Multi-Component-Dynamik  
-- Liefert eine neue Form der coherence-guided Navigation
+Der **Ferrofluid-Layer** wirkt als primärer Koppler und macht den magnetischen Flow sichtbar.
 
-**Nutzung**
-```python
-from nexah.spiral_coupling import SpiralCouplingKernel
+### Wichtige Eigenschaften
 
-kernel = SpiralCouplingKernel()
-result = kernel.step(current_state)
-print(result["coherence"], result["stability"])
-```
-## Spiral Coupling Layer – Dreifache Spiralüberlagerung (v0.1)
+- Nach einem kurzen transienten Chaos-Bereich koppeln die drei Schichten sehr schnell und stabil.  
+- Pair Coupling Distances gehen nahezu auf Null und bleiben stabil.  
+- Die Komponenten bilden eine gemeinsame **spiralförmige Trajektorie**.  
+- Der Ferrofluid-Layer stabilisiert das Gesamtsystem durch magnetische Kopplung.
 
-**Neuer Layer seit April 2026**
+### Warum dieser Layer wichtig ist
 
-Dieser Layer modelliert die **gleichzeitige Überlagerung von drei gekoppelten Komponenten**:
-
-- **Water** (blau)     – träge, stabile Flüssigkeitskomponente  
-- **Mercury** (rot)    – reaktive, schnelle Komponente  
-- **Ferrofluid** (grün)– magnetisch aktive Komponente (macht den Flow sichtbar und wirkt als primärer Koppler)
-
-### Beobachtete Eigenschaften
-
-- Die drei Komponenten zeigen **deutliche Eigenfrequenzen**:
-  - Water:     ~42 Hz  
-  - Mercury:   ~63 Hz  
-  - Ferrofluid: ~77 Hz
-
-- Nach einem kurzen transienten Chaos-Bereich koppeln sie extrem schnell.
-- Pair Coupling Distances gehen nahezu auf Null und bleiben stabil.
-- Die drei Schichten bilden eine **gemeinsame spiralförmige Trajektorie**.
-- Der Ferrofluid-Layer wirkt als **aktiver Koppler** und stabilisiert das Gesamtsystem.
-
-Dieser Layer erweitert den bestehenden Field-Layer (V69) um eine explizite **Multi-Component-Dynamik** und liefert eine neue Form der coherence-guided Navigation.
+- Erweitert den bestehenden V69 Field Layer um eine explizite **Multi-Component-Dynamik**.  
+- Zeigt, wie Magnetismus als **aktiver Koppler** zwischen unterschiedlichen Schichten wirkt.  
+- Liefert eine neue Form der **coherence-guided Navigation** innerhalb komplexer Felder.
 
 ### Verwendung
 
@@ -57,6 +33,4 @@ result = kernel.step(current_state)
 
 print("Coherence:", result["coherence"])
 print("Stability:", result["stability"])
-```
-
-
+print("Avg Coupling Distance:", result["layer_state"]["avg_coupling_dist"])
