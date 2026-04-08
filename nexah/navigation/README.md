@@ -59,3 +59,31 @@ Zither-Gate Code System
 **URF Axial Space + Root Bridge (v9.1)** ← 3D reference frame
     ↓
 Controlled Navigation
+
+```
+
+## Visual Gallery
+
+All key visuals for the navigation layer are collected in:
+
+- `nexah/visuals/`
+- `nexah/urf_axial_space/visuals/` (Root Cube, White/Black Cube, From-Graphs-to-Root-Cube, Triple-Spiral-Root-Bridge)
+
+See the dedicated **[Visual Gallery](./VISUAL_GALLERY.md)** (or integrate it here if you prefer).
+
+---
+
+## Reading Order (recommended)
+
+1. **NEXAH_NAVIGATION_PRIMITIVES.md** – start here  
+2. **NEXAH_ZITHER_GATE_MODEL.md** – the operational code system  
+3. RATH, OLGO-JANUS, v-bands (the resonance extensions)  
+4. **URF Axial Space + Root Bridge** (the 3D geometric foundation)
+
+---
+
+**NEXAH Navigation Layer**  
+From structure to controlled 3D movement.  
+The language is now complete.  
+The geometry is now navigable.
+
