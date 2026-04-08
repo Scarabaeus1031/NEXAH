@@ -2,203 +2,215 @@
 
 This document outlines the planned architecture of the **NEXAH Navigation Kernel**.
 
-It is **not** a code file and **not** yet a complete control implementation.
+It is not a code file and not yet a complete control implementation.
 
 Its purpose is to define:
 
-- what the kernel should do
-- which layers it should contain
-- what already exists
-- what is still missing
-- how the development should proceed without losing the structural insights of the current NEXAH field series
+- what the kernel should do  
+- which layers it should contain  
+- what already exists  
+- what is still missing  
+- how development proceeds toward an operational navigation system  
 
 ---
 
 ## 1. Current status
 
-At the present stage, NEXAH has already produced the necessary precursors for a navigation kernel.
+NEXAH has already produced the structural prerequisites for a navigation kernel.
 
-The strongest existing layers are:
+The strongest existing components are:
 
-- field extraction
-- transition geometry
-- grey-channel formation
-- dual-strand separation
-- switch-layer emergence
-- **triple spiral coupling + Elastic Dual Lock (v9.x)**
-- **URF Axial Space + Root Bridge (v9.1)** ← **neu**
+- field extraction  
+- transition geometry  
+- grey-channel formation  
+- dual-strand separation  
+- switch-layer emergence  
+
+Recent extensions include:
+
+- triple spiral coupling + Elastic Dual Lock (v9.x)  
+- URF Axial Space + Root Bridge (v9.1)  
 
 This means:
 
-> the structural prerequisites for navigation already exist,  
-> but the navigation kernel itself is not yet finished.
+> the system already detects structure, channels, and transition zones —  
+> but does not yet perform controlled navigation.
 
-What currently exists is best described as:
+What exists:
 
-- an **axis-aware structural field**
-- with **channel behavior**
-- **dual-strand transport**
-- **proto-switch detection**
-- **coherence-guided spiral coupling**
-- **3D geometric reference frame (Root Cube + Root Bridge)**
+- an axis-aware structural field  
+- channel behavior (grey channel)  
+- dual-strand transport  
+- switch detection  
+- early coherence signals  
 
-What does **not** yet exist is a full decision engine that can:
+What is missing:
 
-- choose motion policies
-- switch strands intentionally
-- maintain goals
-- avoid collapse by rule
-- steer movement through the field in a controlled way
+- decision-making  
+- controlled movement  
+- goal-directed navigation  
+- active collapse avoidance  
 
 ---
 
 ## 2. Guiding idea
 
-The navigation kernel should not be understood as a generic controller.
+The navigation kernel is not a generic controller.
 
-It should implement:
+It implements:
 
-> coherence-guided movement through structured transition geometry
+> movement through a system based on its structural dynamics
 
-In practical terms, this means:
+Key principles:
 
-- the field is primary
-- the geometry is not decoration
-- the channel is not a plotting artifact
-- the switch layer is not just classification
-- motion must stay legible in relation to structure
-- the **Root Bridge** provides the stable 3D reference frame
+- the field representation is primary  
+- channels represent valid motion regions  
+- switches represent regime transitions  
+- motion must remain aligned with structure  
+- navigation must remain interpretable  
 
-The kernel should therefore emerge from the chain:
+The kernel emerges from:
 
-field  
-↓  
-channel  
-↓  
-strand  
-↓  
-switch  
-↓  
-**URF Axial Space + Root Bridge**  
-↓  
-decision  
-↓  
-navigation
+```text
+field → channel → strand → switch → decision → navigation
+```
 
 ---
 
 ## 3. Architectural target
 
-The long-term kernel consists of **five main layers**:
+The navigation kernel consists of five layers:
 
 ### 3.1 Field Layer
-- attractor structure  
-- directional organization  
+Provides the geometric structure:
+
+- attractors and basins  
+- directional flow  
 - coherence gradients  
-- axis relations  
 - region separation  
 - channel formation  
-- lobe and bridge geometry  
 
 ### 3.2 Signal Layer
-- coherence signals  
-- drift vectors (along / across axis)  
-- strand identification (upper / lower)  
-- distance-to-axis metrics  
+Extracts interpretable signals from the field:
+
+- coherence  
+- drift direction  
+- distance to channel  
+- strand classification (upper / lower)  
 - switch indicators  
-- regime proximity signals  
+- regime proximity  
 
 ### 3.3 Decision Layer
-- remain / exit channel  
-- switch strands  
-- stabilize vs explore  
+Defines navigation logic:
+
+- stay in channel vs exit  
+- strand switching  
+- stability vs exploration  
 - collapse avoidance  
 
 ### 3.4 Action Layer
+Executes motion:
+
 - step direction  
-- controlled oscillation  
 - correction toward channel  
-- strand switching execution  
+- oscillatory stabilization  
+- controlled strand switching  
 
-### 3.5 URF Axial Space + Root Bridge (neu)
-- 3D coordinate reference (Root Cube)  
-- Elastic Axis, Restricted Axis (√∫), Memory Spin  
-- Matroschka mapping  
-- 3x3 / 2x2 switch grid in 3D space  
+### 3.5 Geometric Reference Layer (Experimental)
 
-This layer is the **geometric bridge** between structure and controlled navigation.
+Includes:
+
+- URF Axial Space  
+- Root Cube  
+- Root Bridge  
+
+Purpose:
+
+- provide a stable coordinate reference  
+- embed structure in a consistent geometry  
+- support future 3D navigation  
+
+This layer is experimental and not yet part of the validated core system.
 
 ---
 
 ## 4. Development roadmap
 
-### Phase A — Passive Alignment (completed)
-- axis projection, grey channel, dual strands, coherence
+### Phase A — Structure & Field (completed)
+- structure extraction  
+- field representation  
+- coherence detection  
 
-### Phase B — Controlled Channel Motion (ongoing)
-- directed motion within the grey channel
+### Phase B — Channel Formation (completed)
+- grey channel  
+- axis alignment  
+- dual strands  
 
-### Phase C — Strand Logic
-- upper / lower strand as distinct regimes
+### Phase C — Switch Detection (completed)
+- regime boundaries  
+- transition points  
 
-### Phase D — Switch Layer & Spiral Coupling (v9.x)
-- triple spiral coupling + Elastic Dual Lock
+### Phase D — Controlled Motion (ongoing)
+- movement within channel  
+- drift stabilization  
 
-### Phase E — URF Axial Space + Root Bridge (v9.1) ← **neu**
-Goal: embed everything in a stable 3D reference frame
-
-Key tasks:
-- integrate Root Cube as neutral core
-- map 3x3 / 2x2 switch grid into 3D space
-- define Restricted Axis (√∫)
-- connect Triple Spiral to Root Bridge
-
-### Phase F — Navigation Logic
+### Phase E — Navigation Logic (next)
 - corridor following  
 - collapse avoidance  
 - branch selection  
 - return paths  
-- stability optimization  
+
+### Phase F — Extended Geometry (experimental)
+- integration of URF Axial Space  
+- Root Bridge embedding  
+- higher-dimensional structure mapping  
 
 ---
 
 ## 5. Current system interpretation
 
-The current kernel behavior is best described as:
+The system currently behaves as:
 
-> axis-locked drift inside a detected channel with emerging spiral coupling inside the new 3D Root Bridge
+> a structure-aware field with stable channel formation and detectable transition points
 
 Observed:
-- high grey-channel occupancy  
-- rapid stabilization after transient chaos  
-- switch points now mappable in 3D
 
-Implication:
-- system is over-stabilized in 2D  
-- the Root Bridge now gives the necessary 3D freedom for controlled movement
+- high channel stability  
+- clear separation of strands  
+- consistent switch detection  
+
+Limitation:
+
+- no active steering  
+- no explicit navigation decisions  
 
 ---
 
 ## 6. Key insight
 
-The grey channel is not just a passive region.
+The grey channel is not just a visualization artifact.
 
-It is:
+It represents:
 
-> an active transformation layer between regimes
+> a structurally valid region of motion within the system
 
-The **Root Bridge** is the stable 3D structure that makes this transformation navigable.
+Switch points represent:
+
+> transitions between stability regimes
+
+This provides the basis for navigation.
 
 ---
 
 ## 7. Immediate next step
 
-- Integrate the URF Axial Space Kernel into the Switch Layer
-- Map the existing 3x3 / 2x2 grid onto the Root Cube
-- Reduce axis attraction and increase lateral freedom within the 3D frame
+- connect signal layer to decision logic  
+- implement simple motion policies  
+- validate navigation behavior on IEEE systems  
 
-Goal:  
-> force visible strand differentiation and controlled switching in 3D
+Goal:
+
+> transform structural detection into controlled movement
 
 ---
 
@@ -206,17 +218,19 @@ Goal:
 
 The NEXAH Navigation Kernel evolves through:
 
-structure → field → channel → strand → switch → **triple spiral coupling** → **URF Axial Space + Root Bridge** → navigation
+```text
+structure → field → channel → strand → switch → navigation
+```
 
 Current position:
+
 - structure ✔  
 - field ✔  
 - channel ✔  
 - strand ✔  
-- switch (detected) ✔  
-- triple spiral coupling ✔  
-- **URF Axial Space + Root Bridge** ✔  
+- switch ✔  
 - navigation ❌  
 
-Target:  
-> transform detected structure into controlled 3D movement
+Target:
+
+> transform detected structure into controlled movement
