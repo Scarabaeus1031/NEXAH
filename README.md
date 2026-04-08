@@ -1,6 +1,11 @@
 # NEXAH
+*A framework for discovering, mapping and beginning to navigate stability in complex dynamical systems.*
 
-**From simulation → structure → field → navigation.**
+## 🧭 Conceptual Pipeline
+
+```text
+simulation → structure → field → geometry → channel → switch → navigation**
+```
 
 *A framework for discovering, mapping and navigating stability in complex dynamical systems.*
 
@@ -90,6 +95,36 @@ NEXAH:
 → **reveals the field behind the system**  
 → **identifies natural motion paths**  
 → **enables navigation through stability landscapes**
+
+---
+
+## 🧭 Navigation Kernel (Emerging)
+
+Recent experiments introduce the first form of a **NEXAH Navigation Kernel**.
+
+This is not yet a full control system, but a new layer that:
+
+- detects navigable channels (grey axis)
+- distinguishes structural strands (upper / lower)
+- identifies switch regions between regimes
+- begins to propose motion inside the field
+
+Current status:
+
+- channel detection: ✔  
+- strand structure: ✔  
+- switch detection: ✔  
+- active navigation: ⚠️ emerging  
+
+👉 This marks the transition from:
+
+> observing structure → **moving within structure**
+
+The kernel is currently in an early experimental phase and will evolve into:
+
+- coherence-guided motion  
+- regime-aware switching  
+- collapse-avoidant navigation  
 
 ---
 
@@ -204,6 +239,19 @@ These modules currently explore:
 - stretched transition space  
 - root shrinking and exchange channels  
 
+Recent experimental extensions (v8–v9) have introduced:
+
+- grey-channel transport structures  
+- dual-strand field organization  
+- switch-layer emergence (upper / lower regimes)  
+- coherence-based channel binding  
+- first navigation kernel prototypes  
+
+👉 This marks the transition from:
+
+structure + field discovery  
+→ **toward active navigation inside structured fields**
+
 ---
 
 ## 🧭 Conceptual Pipeline
@@ -265,6 +313,11 @@ This supports the broader hypothesis that structural field-like logic may appear
 > Systems do not just evolve —  
 > they organize into structures  
 > that can be mapped and navigated.
+
+And more recently:
+
+> these structures are not only observable —  
+> they can begin to be **used for controlled movement**
 
 ---
 
