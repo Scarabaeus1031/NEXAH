@@ -24,3 +24,14 @@ __all__.extend([
     "URFAxialSpaceKernel",
     "SwitchGridMapper",
 ])
+# ====================== URF Axial Space Layer (v9.1) ======================
+# 3D coordinate system for Matroschka, Spiral Coupling and Switch Grid
+
+from .urf_axial_space.urf_axial_space_kernel import URFAxialSpaceKernel
+from .urf_axial_space.switch_grid_mapper import SwitchGridMapper
+
+# Add to public API
+__all__.extend([
+    "URFAxialSpaceKernel",
+    "SwitchGridMapper",
+])
