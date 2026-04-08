@@ -2,7 +2,7 @@
 NEXAH Public API
 """
 
-# --- Core (alte Teile, die du schon hattest) ---
+# === Core Engine Components ===
 from ENGINE.core.poset import FinitePoset as Poset
 from ENGINE.core.lattice import LatticeOps as Lattice
 
@@ -26,11 +26,13 @@ class Engine:
 
 
 # ====================== URF Axial Space Layer (v9.1) ======================
+# 3D coordinate system for Matroschka, Spiral Coupling and Switch Grid
+
 from .urf_axial_space.urf_axial_space_kernel import URFAxialSpaceKernel
 from .urf_axial_space.switch_grid_mapper import SwitchGridMapper
 
 
-# --- Public exports ---
+# ====================== Public API ======================
 __all__ = [
     "Poset",
     "Lattice",
