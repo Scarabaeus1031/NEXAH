@@ -1,319 +1,159 @@
-# NEXAH Identity
+# NEXAH Layer
 
-This document defines the current identity of **NEXAH**.
+This directory is the **conceptual and lightweight package layer** of the NEXAH framework.
 
-It is not a technical manual and not a full theory document.
+It does not replace the full `ENGINE/` or `FRAMEWORK/` directories.
 
-Its purpose is simpler:
+Instead, it serves as the focused layer where the central NEXAH ideas become directly readable and actionable as:
 
-> to state clearly what NEXAH is, what it is becoming, and how its different layers should be understood.
+- package entry points
+- field abstractions
+- identity documents
+- navigation primitives
+- channel and transport structures (v8)
+- switch and control dynamics (v9)
+- resonance constructs (RATH, OLGO-JANUS, v-bands)
+- **3D geometric reference frame (URF Axial Space + Root Bridge v9.1)**
+- operational transition notes
+- featured visuals
 
----
-
-## 1. What NEXAH is
-
-NEXAH is a framework for **extracting structure from complex system dynamics**.
-
-It begins with systems that evolve, drift, oscillate, destabilize, or collapse.
-
-Instead of treating those dynamics as opaque outputs, NEXAH tries to recover the hidden structure inside them.
-
-This structure may appear as:
-
-- regime organization
-- stability basins
-- transition corridors
-- flow fields
-- branching geometries
-- coherence boundaries
-- navigable paths
-
-In its strongest current form, NEXAH is a system for:
-
-~~~text
-simulation → structure → field → transition geometry → channel → switch → navigation
-~~~
+In that sense, `nexah/` is the place where the framework becomes **NEXAH itself** — readable, geometric, and navigable in 3D.
 
 ---
 
-## 2. What NEXAH is not
+## What this directory is
 
-NEXAH is **not** currently:
+The `nexah/` layer acts as a bridge between:
 
-- a finished universal navigation engine
-- a complete physical theory
-- a single closed mathematical formalism
-- a solved control architecture for all complex systems
-- a claim that all exploratory models are already validated
+```text
+ENGINE
+    → computational core
 
-It is also not just a visualization toolkit.
+FRAMEWORK
+    → architecture and stack logic
 
-The visual layer matters, but only because it helps reveal structural relations that would otherwise remain hidden.
+NEXAH
+    → conceptual, operational, geometric and navigational layer
+```
 
----
-
-## 3. The current center of gravity
-
-At present, NEXAH is strongest in **five areas**:
-
-### Structure Discovery
-
-NEXAH can detect that system behavior contains nontrivial organization.
-
-This includes:
-
-- regimes
-- basins
-- transitions
-- attractor-related structure
-- instability patterns
+This directory has a double role:
+1. It provides a lightweight public-facing package surface
+2. It gathers the emerging conceptual, geometric, dynamical and 3D-navigable language of NEXAH
 
 ---
 
-### Field Discovery
+## Position in the repository
 
-NEXAH increasingly represents dynamics as **field structure** rather than only as state transitions.
+A useful reading of the full stack is:
 
-This is one of the most important foundational developments.
+```text
+simulation
+    ↓
+structure extraction
+    ↓
+field representation
+    ↓
+transition geometry
+    ↓
+channel formation (v8)
+    ↓
+switch dynamics (v9)
+    ↓
+resonance constructs (RATH / OLGO-JANUS / v-bands)
+    ↓
+3D geometric reference (URF Axial Space + Root Bridge v9.1)
+    ↓
+navigation language
+```
 
----
-
-### Transition Geometry
-
-NEXAH now treats transitions less as discrete jumps and more as **structured geometric processes**.
-
-This includes:
-
-- interface regions
-- branching flows
-- cut structures
-- manifold-like transitions
-- coherence boundaries
-
----
-
-### Channel Extraction (v8)
-
-A key recent development is the emergence of **transport channels**.
-
-These appear as:
-
-- compressed regions of flow
-- alignment along latent axes
-- separation from bulk dynamics
-
-In current models, this is visible as:
-
-- a central axis
-- a filtered grey channel
-- concentration of transitions along this region
+This directory has a double role:
+1. It provides a lightweight public-facing package surface
+2. It gathers the emerging conceptual, geometric, dynamical and 3D-navigable language of NEXAH
 
 ---
 
-### Switch Dynamics & Spiral Coupling (v9)
-
-NEXAH now begins to identify **switching behavior** inside these channels and has introduced the **Spiral Coupling Layer**.
-
-This includes:
-
-- regime transitions (contraction ↔ expansion)
-- dual-strand structure (upper / lower channel)
-- oscillatory transport behavior
-- return-map-like reduced dynamics
-- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
-
-This marks the transition from:
-
-> structure discovery  
-→ to **dynamic organization and control logic**
+The `nexah/` directory lives primarily in the last five layers and is where the framework becomes **3D-navigable**.
 
 ---
 
-## 4. The main architectural layers
+## Internal structure
 
-NEXAH currently operates through the following stack:
+### 1. `engine.py`
+Minimal high-level access to core structural functionality (posets, lattices, operators).
 
-- **META** → relational system structure
-- **ARCHY** → simulation and regime dynamics
-- **FIELD** → flow geometry
-- **MESO** → risk geometry and transition structure
-- **NEXAH** → navigation and emerging control layer
-- **MEVA** → execution and trajectory realization
+### 2. `field_layer/`
+The geometric core. Translates evolving system states into continuous field representations, curvature, flow and fragmentation metrics.
 
-This stack is best understood not as a rigid doctrine, but as the current operating architecture of the framework.
+### 3. `identity/`
+Self-definition of NEXAH: what it is, what it is not, and where its current center of gravity lies.
+
+### 4. `navigation/`
+The operational navigation language:
+- navigation primitives
+- Zither-Gate model
+- 3+1 Gate completion
+- split-interface-marker logic
+- RATH Phi-Lambda Resonance Bridge
+- OLGO-JANUS Six-Sector Gate
+- v-bands (Breathing Wave + Blinking Pulse)
+
+### 5. RATH / OLGO-JANUS Layer (neu 2026)
+Resonance constructs with angular bridges, six-sector symmetry and breathing background dynamics.
+
+### 6. `visuals/` + `urf_axial_space/visuals/`
+Featured visuals including:
+- Root Cube (neutral core)
+- URF Axial Space (White / Black Cube)
+- From Graphs to Root Cube
+- Triple Spiral Coupling inside Root Cube
+- Zeta-Line Breathing Axis (0.429 – 0.456 – 0.487)
+- Major / Minor Mode Integration
+- Overall Navigation Overview v9.1
+
+These visuals are not decorative — they are the geometric language of NEXAH.
 
 ---
 
-## 5. The three levels of NEXAH
+## Core idea of this directory
 
-To keep the project clear, NEXAH should be read on **three distinct levels**.
+If `ENGINE/` computes and `FRAMEWORK/` describes the architecture,
+
+then `nexah/` is where NEXAH becomes:
+- readable
+- nameable
+- geometric
+- 3D-navigable
+- dynamically controllable
+
+Its main purpose is to gather the layer in which:
+
+structure becomes field  
+field becomes geometry  
+geometry becomes channel  
+channel becomes switchable  
+switch becomes resonance  
+resonance becomes **3D-controlled movement** via the Root Bridge
 
 ---
 
-### A. Core
+## Summary
 
-This is the strongest and most defensible layer.
+The `nexah/` directory is the place where the NEXAH framework becomes its own conceptual, operational and **3D-navigable** layer.
 
-It includes:
-
-- structural extraction
-- regime and basin analysis
+It connects:
+- lightweight package access
 - field representation
-- transition geometry in its clearer forms
-- early channel formation
-- benchmark-facing applications such as IEEE stability systems
+- identity clarification
+- navigation grammar
+- channel & switch dynamics
+- resonance constructs
+- 3D geometric reference (URF Axial Space + Root Bridge v9.1)
 
-This is the part that anchors the identity of the project.
+In short:
 
----
-
-### B. Emerging Extensions
-
-These are developments that already connect strongly to the core, but are still being stabilized.
-
-Examples include:
-
-- coherence-based field logic
-- forward / backward / interface field split
-- geometry-aware navigation
-- channel extraction and filtering
-- dual-strand transport structures
-- switch-layer detection and state representation
-- reduced return-map dynamics
-- **triple spiral coupling + Elastic Dual Lock (v9.x)**
-
-These are increasingly coherent and form the **bridge toward navigation and control**.
-
----
-
-### C. Proto Models
-
-These are exploratory conceptual models that may later extend the formal framework, but are not yet part of the validated core.
-
-Examples include:
-
-- time knot field
-- oval membrane field
-- stretched transition space
-- dual-loop temporal models
-- membrane exchange and root shrinking concepts
-
-These should be preserved and developed — but clearly marked as:
-
-> proto / exploratory / pre-formal
-
-They are part of NEXAH’s creative frontier.
-
----
-
-## 6. What is most important right now
-
-The most important task for NEXAH is **not** to claim everything at once.
-
-It is to strengthen the chain:
-
-~~~text
-dynamics → structure → field → geometry → channel → switch → navigation
-~~~
-
-That means:
-
-- making the strongest evidence paths clearer
-- separating validated core from exploratory extensions
-- keeping the repository readable
-- connecting computation to interpretable structure
-- stabilizing channel and switch representations
-- building from benchmark systems outward
-
-The goal is not maximal breadth, but increasing coherence.
-
----
-
-## 7. Why NEXAH matters
-
-Many tools simulate complex systems.
-
-Far fewer help answer:
-
-- Where is structure forming?
-- Where is instability emerging?
-- How does collapse develop?
-- What corridors remain stable?
-- Where are transitions concentrated?
-- How can system movement become navigable?
-
-NEXAH matters because it treats systems not only as objects of observation, but as:
-
-> structured landscapes with extractable transport and transition logic
-
----
-
-## 8. Current best reading of NEXAH
-
-If summarized in one sentence:
-
-> NEXAH is a framework for extracting structure, field geometry, and transition logic from complex system dynamics, with the long-term goal of enabling navigation and control through stability landscapes.
-
-And its current maturity:
-
-> NEXAH is already strong as a structure and field discovery system, while channel dynamics, switch-based navigation and triple spiral coupling are emerging layers built on top of that foundation.
-
----
-
-## 9. Guiding principle
-
-The core principle of NEXAH is:
-
-> Structure is not imposed.  
-> It is extracted from dynamics.
-
-And the deeper insight now emerging:
-
-> Dynamics are not merely sequences of states.  
-> They organize along hidden geometric and transport structures.
-
----
-
-## 10. Orientation going forward
-
-Going forward, NEXAH should maintain clear separation between:
-
-- **Core** → strongest validated framework
-- **Extensions** → active, stabilizing developments (channels, switches, spiral coupling)
-- **Proto** → exploratory structures
-- **Vision** → long-term navigation and control systems
-
-This separation strengthens clarity, credibility, and scalability.
-
----
-
-## Final Identity Statement
-
-NEXAH is a structural discovery framework for complex dynamical systems.
-
-Its purpose is to recover the hidden organization of dynamics as:
-
-- regimes
-- fields
-- transition geometries
-- transport channels
-- switching structures
-- **triple spiral coupling with Elastic Dual Lock**
-- navigable stability landscapes
-
-It is already a strong engine for structure discovery.
-
-It is becoming a field, channel, switch and spiral-coupling framework.
-
-Its long-term horizon is:
-
-> navigation and control of complex systems through extracted structure.
-
----
+`nexah/` is where NEXAH begins to speak, move, and decide in its own 3D language.
 
 **NEXAH**  
-
-Structure extracted from dynamics.  
-Geometry revealed through motion.  
-Channels guiding transition.  
-Navigation emerging from coherence.
+Structure becomes visible.  
+Geometry becomes navigable.  
+The Root Bridge makes it 3D.
