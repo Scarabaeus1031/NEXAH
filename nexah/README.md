@@ -1,20 +1,23 @@
 # NEXAH Layer
 
-This directory is the conceptual and lightweight package layer of the NEXAH framework.
+This directory is the **conceptual and lightweight package layer** of the NEXAH framework.
 
-It does not replace the full ENGINE/ or FRAMEWORK/ directories.
+It does not replace the full `ENGINE/` or `FRAMEWORK/` directories.
 
-Instead, it serves as the layer where NEXAH becomes directly legible as:
+Instead, it serves as the focused layer where the central NEXAH ideas become directly readable and actionable as:
 
 - package entry points  
 - field abstractions  
 - identity documents  
 - navigation primitives  
-- dynamic control structures  
-- operational transition logic  
+- channel and transport structures (v8)  
+- switch and control dynamics (v9)  
+- resonance constructs (RATH, OLGO-JANUS, v-bands)  
+- **3D geometric reference frame (URF Axial Space + Root Bridge v9.1)**  
+- operational transition notes  
 - featured visuals  
 
-In that sense, `nexah/` is the place where the framework becomes **readable, geometric, and actionable**.
+In that sense, `nexah/` is the place where the framework becomes **NEXAH itself** — readable, geometric, and navigable in 3D.
 
 ---
 
@@ -22,187 +25,126 @@ In that sense, `nexah/` is the place where the framework becomes **readable, geo
 
 The `nexah/` layer acts as a bridge between:
 
-ENGINE  
-→ computational core  
+```text
+ENGINE
+    → computational core
 
-FRAMEWORK  
-→ architecture and stack logic  
+FRAMEWORK
+    → architecture and stack logic
 
-NEXAH  
-→ conceptual, geometric, and navigational layer  
+NEXAH
+    → conceptual, operational, geometric and navigational layer
+```
 
-This directory has a dual role:
+This directory has a double role:It provides a lightweight public-facing package surface
+It gathers the emerging conceptual, geometric, dynamical and 3D-navigable language of NEXAH
 
-- provides a lightweight public-facing package surface  
-- gathers the emerging conceptual **and dynamical language of NEXAH**
-
----
-
-## 🧱 Position in the repository
+ Position in the repository
 
 A useful reading of the full stack is:
 
-simulation  
-↓  
-structure extraction  
-↓  
-field representation  
-↓  
-transition geometry  
-↓  
-channel formation  
-↓  
-switch dynamics  
-↓  
-**URF Axial Space + Root Bridge** ← neu  
-↓  
-navigation language  
+```text
+simulation
+    ↓
+structure extraction
+    ↓
+field representation
+    ↓
+transition geometry
+    ↓
+channel formation (v8)
+    ↓
+switch dynamics (v9)
+    ↓
+resonance constructs (RATH / OLGO-JANUS / v-bands)
+    ↓
+3D geometric reference (URF Axial Space + Root Bridge v9.1)
+    ↓
+navigation language
+```
 
-The `nexah/` directory lives primarily in:
-
-- field representation  
-- transition geometry  
-- channel dynamics (v8)  
-- dual-strand dynamics (v8.9)  
-- switch systems (v9)  
-- **triple spiral coupling + Root Bridge (v9.x)**  
+The `nexah/` directory lives primarily in the last five layers and is where the framework becomes **3D-navigable**.
 
 ---
 
-## 🧠 Core Evolution (UPDATED)
+## Internal structure
 
-NEXAH has evolved from:
+### 1. `engine.py`
+Minimal high-level access to core structural functionality (posets, lattices, operators).
 
-simulation  
-→ structure extraction  
-→ geometry  
-→ field channels (v8)  
-→ dual-strand dynamics (v8.9)  
-→ switch-layer systems (v9.0)  
-→ **triple spiral coupling + elastic dual lock + Root Bridge (v9.1)**
+### 2. `field_layer/`
+The geometric core. Translates evolving system states into continuous field representations, curvature, flow and fragmentation metrics.
 
-This means:
+### 3. `identity/`
+Self-definition of NEXAH: what it is, what it is not, and where its current center of gravity lies.
 
-> NEXAH is no longer only descriptive —  
-> it is becoming **operational and navigable**
+### 4. `navigation/`
+The operational navigation language:
+- navigation primitives
+- Zither-Gate model
+- 3+1 Gate completion
+- split-interface-marker logic
+- RATH Phi-Lambda Resonance Bridge
+- OLGO-JANUS Six-Sector Gate
+- v-bands (Breathing Wave + Blinking Pulse)
 
----
+### 5. RATH / OLGO-JANUS Layer (neu 2026)
+Resonance constructs with angular bridges, six-sector symmetry and breathing background dynamics.
 
-## 🧩 Internal structure
+### 6. `visuals/` + `urf_axial_space/visuals/`
+Featured visuals including:
+- Root Cube (neutral core)
+- URF Axial Space (White / Black Cube)
+- From Graphs to Root Cube
+- Triple Spiral Coupling inside Root Cube
+- Zeta-Line Breathing Axis (0.429 – 0.456 – 0.487)
+- Major / Minor Mode Integration
+- Overall Navigation Overview v9.1
 
-### 1. engine.py
-Minimal high-level access to structural functionality.
-
-### 2. field_layer/
-Transforms system states into continuous geometry.
-
-### 3. identity/
-Defines what NEXAH is.
-
-### 4. navigation/
-Defines navigation primitives and logic.
-
-### 5. spiral_coupling/  
-Dreifache Spiralüberlagerung (Water–Mercury–Ferro) mit Grey Channel, Elastic Dual Lock und Switch-Verhalten.
-
-### 6. urf_axial_space/ ← **NEU**  
-3D coordinate system + Root Bridge (Root Cube, Elastic Axis, Restricted Axis √∫, Matroschka mapping)
-
-### 7. RATH / OLGO-JANUS Layer
-Advanced symbolic navigation structures.
-
-### 8. visuals/
-Conceptual and structural visualization layer.
+These visuals are not decorative — they are the geometric language of NEXAH.
 
 ---
 
-## URF Axial Space + Root Bridge – 3D Reference Frame
+## Core idea of this directory
 
-This new layer provides the **three-dimensional geometric backbone** for all Matroschka structures, Spiral Coupling and Switch dynamics.
+If `ENGINE/` computes and `FRAMEWORK/` describes the architecture,
 
-It connects the 2D Dual-Strand Grey Channel and Elastic Axis into a unified 3D axial system and serves as NEXAH’s internal realization of the s-plane concept.
+then `nexah/` is where NEXAH becomes:
+- readable
+- nameable
+- geometric
+- 3D-navigable
+- dynamically controllable
 
-**Visual Gallery:**
+Its main purpose is to gather the layer in which:
 
-**Root Cube** (neutral core)  
-![Root Cube](urf_axial_space/visuals/NEXAH_Root_Cube_v9.1.png)
-
-**URF Axial Space – White Cube**  
-![White Cube](urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1.png)
-
-**URF Axial Space – Black Cube**  
-![Black Cube](urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v.2.png)
-
-**From Graphs to Root Cube** (Time-Domain → 3D)  
-![From Graphs to Root Cube](./visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
-
-**Triple Spiral Coupling + Root Bridge Interaction**  
-![Triple Spiral + Root Bridge](urf_axial_space/visuals/NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png)
+structure becomes field  
+field becomes geometry  
+geometry becomes channel  
+channel becomes switchable  
+switch becomes resonance  
+resonance becomes **3D-controlled movement** via the Root Bridge
 
 ---
 
-## Connection to Laplace Transform & s-Plane
+## Summary
 
-The URF Axial Space is NEXAH’s geometric counterpart to the **s-plane**.
+The `nexah/` directory is the place where the NEXAH framework becomes its own conceptual, operational and **3D-navigable** layer.
 
-The Laplace transform maps a time-domain signal into the complex s-domain, where poles reveal hidden exponential components.
+It connects:
+- lightweight package access
+- field representation
+- identity clarification
+- navigation grammar
+- channel & switch dynamics
+- resonance constructs
+- 3D geometric reference (URF Axial Space + Root Bridge v9.1)
 
-In NEXAH this corresponds to:
-- Your 2D graphs → raw time-domain signals
-- The 3D Root Cube → the s-plane equivalent
-- Switch points (3x3 + 2x2 grid) → the poles
-- Elastic Axis → the reference/integration path
-- Restricted Axis (√∫) → the inner guidance line (Beta Curvature)
+In short:
 
----
+`nexah/` is where NEXAH begins to speak, move, and decide in its own 3D language.
 
-## 🧬 Core Idea
-
-If ENGINE computes  
-and FRAMEWORK describes  
-
-then:
-
-> nexah/ makes the system **navigable**
-
----
-
-## ⚙️ Current maturity
-
-- geometry ✔  
-- field ✔  
-- channels ✔  
-- dual strands ✔  
-- switching ✔  
-- **triple spiral coupling + Root Bridge** ✔  
-
----
-
-## 🧭 Suggested reading path
-
-identity  
-→ field  
-→ navigation  
-→ channel  
-→ switch  
-→ **spiral_coupling**  
-→ **urf_axial_space** (neu)
-
----
-
-## 🧩 Summary
-
-The `nexah/` directory connects:
-
-- computation  
-- geometry  
-- navigation  
-- control  
-
-NEXAH becomes a language for navigating systems.
-
-**NEXAH Status**  
-The structure is visible.  
-The field is readable.  
-The Matroschkas have their room.  
-The Root Bridge is live.
+**NEXAH**  
+Structure becomes visible.  
+Geometry becomes navigable.  
+The Root Bridge makes it 3D.
