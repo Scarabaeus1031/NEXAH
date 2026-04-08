@@ -31,7 +31,7 @@ This structure may appear as:
 In its strongest current form, NEXAH is a system for:
 
 ~~~text
-simulation → structure → field → transition geometry → navigation
+simulation → structure → field → transition geometry → channel → switch → navigation
 ~~~
 
 ---
@@ -54,7 +54,7 @@ The visual layer matters, but only because it helps reveal structural relations 
 
 ## 3. The current center of gravity
 
-At present, NEXAH is strongest in four areas:
+At present, NEXAH is strongest in **five areas**:
 
 ### Structure Discovery
 
@@ -68,17 +68,21 @@ This includes:
 - attractor-related structure
 - instability patterns
 
+---
+
 ### Field Discovery
 
-NEXAH increasingly represents dynamics as **field structure** rather than only as state transition.
+NEXAH increasingly represents dynamics as **field structure** rather than only as state transitions.
 
-This is one of the most important recent developments.
+This is one of the most important foundational developments.
+
+---
 
 ### Transition Geometry
 
 NEXAH now treats transitions less as discrete jumps and more as **structured geometric processes**.
 
-This includes ideas such as:
+This includes:
 
 - interface regions
 - branching flows
@@ -86,11 +90,41 @@ This includes ideas such as:
 - manifold-like transitions
 - coherence boundaries
 
-### Early Collapse Indication
+---
 
-A major practical strength of NEXAH is that instability often becomes visible **before final collapse**.
+### Channel Extraction (v8)
 
-This is especially important in benchmark systems such as power grids.
+A key recent development is the emergence of **transport channels**.
+
+These appear as:
+
+- compressed regions of flow
+- alignment along latent axes
+- separation from bulk dynamics
+
+In current models, this is visible as:
+
+- a central axis
+- a filtered grey channel
+- concentration of transitions along this region
+
+---
+
+### Switch Dynamics (v9)
+
+NEXAH now begins to identify **switching behavior** inside these channels.
+
+This includes:
+
+- regime transitions (contraction ↔ expansion)
+- dual-strand structure (upper / lower channel)
+- oscillatory transport behavior
+- return-map-like reduced dynamics
+
+This marks the transition from:
+
+> structure discovery  
+→ to **dynamic organization and control logic**
 
 ---
 
@@ -100,8 +134,9 @@ NEXAH currently operates through the following stack:
 
 - **META** → relational system structure
 - **ARCHY** → simulation and regime dynamics
-- **MESO** → risk geometry and collapse structure
-- **NEXAH** → navigation through structured fields
+- **FIELD** → flow geometry
+- **MESO** → risk geometry and transition structure
+- **NEXAH** → navigation and emerging control layer
 - **MEVA** → execution and trajectory realization
 
 This stack is best understood not as a rigid doctrine, but as the current operating architecture of the framework.
@@ -111,6 +146,8 @@ This stack is best understood not as a rigid doctrine, but as the current operat
 ## 5. The three levels of NEXAH
 
 To keep the project clear, NEXAH should be read on **three distinct levels**.
+
+---
 
 ### A. Core
 
@@ -122,9 +159,10 @@ It includes:
 - regime and basin analysis
 - field representation
 - transition geometry in its clearer forms
+- early channel formation
 - benchmark-facing applications such as IEEE stability systems
 
-This is the part that should anchor the identity of the project.
+This is the part that anchors the identity of the project.
 
 ---
 
@@ -136,11 +174,13 @@ Examples include:
 
 - coherence-based field logic
 - forward / backward / interface field split
-- motion-law identification
 - geometry-aware navigation
-- more explicit flow-based system interpretation
+- channel extraction and filtering
+- dual-strand transport structures
+- switch-layer detection and state representation
+- reduced return-map dynamics
 
-These are promising and increasingly coherent, but still evolving.
+These are increasingly coherent and form the **bridge toward navigation and control**.
 
 ---
 
@@ -156,30 +196,32 @@ Examples include:
 - dual-loop temporal models
 - membrane exchange and root shrinking concepts
 
-These should be preserved, developed, and taken seriously — but clearly marked as **proto / exploratory / pre-formal**.
+These should be preserved and developed — but clearly marked as:
 
-They are part of NEXAH’s creative frontier, not yet its settled core.
+> proto / exploratory / pre-formal
+
+They are part of NEXAH’s creative frontier.
 
 ---
 
 ## 6. What is most important right now
 
-The most important task for NEXAH is **not** to
-claim everything at once.
+The most important task for NEXAH is **not** to claim everything at once.
 
 It is to strengthen the chain:
 
 ~~~text
-dynamics → structure → field → geometry → navigation
+dynamics → structure → field → geometry → channel → switch → navigation
 ~~~
 
 That means:
 
 - making the strongest evidence paths clearer
 - separating validated core from exploratory extensions
-- keeping the repo readable
-- continuing to connect computation to interpretable structure
-- building from benchmark and demonstrator systems outward
+- keeping the repository readable
+- connecting computation to interpretable structure
+- stabilizing channel and switch representations
+- building from benchmark systems outward
 
 The goal is not maximal breadth, but increasing coherence.
 
@@ -189,27 +231,30 @@ The goal is not maximal breadth, but increasing coherence.
 
 Many tools simulate complex systems.
 
-Far fewer help answer questions like:
+Far fewer help answer:
 
 - Where is structure forming?
 - Where is instability emerging?
 - How does collapse develop?
 - What corridors remain stable?
-- How can movement through the system become navigable?
+- Where are transitions concentrated?
+- How can system movement become navigable?
 
-NEXAH matters because it treats complex systems not only as things to observe, but as landscapes whose hidden organization can be extracted and eventually navigated.
+NEXAH matters because it treats systems not only as objects of observation, but as:
+
+> structured landscapes with extractable transport and transition logic
 
 ---
 
 ## 8. Current best reading of NEXAH
 
-If one had to summarize the current project in one sentence:
+If summarized in one sentence:
 
-> NEXAH is a framework for extracting structure, field geometry, and transition logic from complex system dynamics, with the long-term goal of enabling navigation through stability landscapes.
+> NEXAH is a framework for extracting structure, field geometry, and transition logic from complex system dynamics, with the long-term goal of enabling navigation and control through stability landscapes.
 
-And if one had to summarize its present maturity honestly:
+And its current maturity:
 
-> NEXAH is already strong as a structure and field discovery framework, while full navigation remains an emerging layer built on top of that foundation.
+> NEXAH is already strong as a structure and field discovery system, while channel dynamics and switch-based navigation are emerging layers built on top of that foundation.
 
 ---
 
@@ -220,25 +265,23 @@ The core principle of NEXAH is:
 > Structure is not imposed.  
 > It is extracted from dynamics.
 
-And the deeper implication now becoming visible is:
+And the deeper insight now emerging:
 
 > Dynamics are not merely sequences of states.  
-> They unfold through hidden geometry.
+> They organize along hidden geometric and transport structures.
 
 ---
 
 ## 10. Orientation going forward
 
-Going forward, NEXAH should be developed with clear separation between:
+Going forward, NEXAH should maintain clear separation between:
 
-- **Core** → strongest current framework
-- **Extensions** → active, increasingly coherent developments
-- **Proto** → exploratory future structures
-- **Vision** → long-range horizon
+- **Core** → strongest validated framework
+- **Extensions** → active, stabilizing developments (channels, switches)
+- **Proto** → exploratory structures
+- **Vision** → long-term navigation and control systems
 
-This does not weaken the project.
-
-It makes it stronger, more readable, and more trustworthy.
+This separation strengthens clarity, credibility, and scalability.
 
 ---
 
@@ -251,13 +294,17 @@ Its purpose is to recover the hidden organization of dynamics as:
 - regimes
 - fields
 - transition geometries
-- navigable stability structure
+- transport channels
+- switching structures
+- navigable stability landscapes
 
 It is already a strong engine for structure discovery.
 
-It is becoming a field and transition-geometry framework.
+It is becoming a field, channel, and transition-geometry framework.
 
-Its long-term horizon is navigation.
+Its long-term horizon is:
+
+> navigation and control of complex systems through extracted structure.
 
 ---
 
@@ -265,4 +312,5 @@ Its long-term horizon is navigation.
 
 Structure extracted from dynamics.  
 Geometry revealed through motion.  
+Channels guiding transition.  
 Navigation emerging from coherence.
