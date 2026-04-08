@@ -1,306 +1,568 @@
-# Stack to Trigger Bridge
+# NEXAH Status Report
 
-This note clarifies how the classical NEXAH stack connects to the emerging **trigger logic**.
+This document summarizes the current state of the `nexah/` layer.
 
-Its purpose is simple:
+It is meant as a practical re-entry point:
 
-> to show that the Trigger Matrix is not an isolated add-on, but the operational bridge that begins to connect the NEXAH stack from architecture to action.
+- what already exists
+- what is already strong
+- what is still emerging
+- what is still missing
+- what the next decisive steps should be
 
----
+In other words:
 
-## 1. Why this bridge matters
-
-For a long time, the NEXAH stack could be described conceptually as:
-
-```text
-META → ARCHY → MESO → NEXAH → MEVA
-```
-
-This was already meaningful as an architecture.
-
-But now, through the IEEE work, the field layer, the split/interface logic, and the new navigation documents, the stack is no longer only conceptual.
-
-It is beginning to become **operational**.
-
-The Trigger Matrix is one of the clearest places where this change becomes visible.
+> this is the point of return when work on NEXAH resumes.
 
 ---
 
-## 2. The classical stack
+## 1. What the `nexah/` layer is now
 
-A compact reading of the stack is:
+The `nexah/` directory has become the **conceptual and operational layer** of the NEXAH framework.
 
-### META
-relational structure, symbols, operators, codes
+It now connects:
 
-### ARCHY
-structural organization, shells, rings, braids, regime form
+- lightweight package access
+- field representation
+- identity clarification
+- navigation primitives
+- gate and split logic
+- **triple spiral coupling (v9.x)**
+- featured visual language
 
-### MESO
-risk geometry, drift, split, instability, collapse proximity
+This means `nexah/` is no longer a nearly empty placeholder.
 
-### NEXAH
-navigation logic, passage, gates, corridor interpretation
-
-### MEVA
-execution, intervention, release, stabilization action
-
-This structure is still valid.
-
-What has changed is that each layer is now becoming more concretely populated.
+It is becoming the place where NEXAH starts to speak in its own language.
 
 ---
 
-## 3. What belongs to META now
+## 2. What is already in place
 
-The META layer contains the **language of the system**.
+### Identity layer
+The project now has an explicit self-description.
+
+Current document:
+
+- `identity/NEXAH_IDENTITY.md`
+
+This clarifies:
+
+- what NEXAH is
+- what it is not
+- where its current center of gravity lies
+- how to distinguish core / extensions / proto structures
+
+---
+
+### Navigation layer
+The emerging navigation language has now been written down in multiple documents.
+
+Current documents:
+
+- `navigation/NEXAH_NAVIGATION_PRIMITIVES.md`
+- `navigation/NEXAH_ZITHER_GATE_MODEL.md`
+- `navigation/NEXUS_3_PLUS_1_GATE_NOTE.md`
+- `navigation/SPLIT_INTERFACE_MARKERS_NOTE.md`
+
+Together these establish:
+
+- a first navigation vocabulary
+- gate logic
+- split / interface / marker logic
+- 3 plus 1 completion logic
+- a passage-oriented reading of transition geometry
+
+---
+
+### Trigger layer
+A bridge now exists between benchmark behavior and navigation logic.
+
+Current documents:
+
+- `NEXAH_TRIGGER_MATRIX.md`
+- `STACK_TO_TRIGGER_BRIDGE.md`
+
+These documents matter because they begin to connect:
+
+- IEEE benchmark behavior
+- risk geometry
+- split onset
+- code activation
+- gate opening
+- possible passage and later action
+
+This is one of the most important recent advances.
+
+---
+
+### Field layer
+The `field_layer/` is still relatively compact in code, but conceptually very important.
+
+It already contains:
+
+- basic field construction
+- vector approximation from state sequences
+- curvature metric
+- fragmentation metric
+- flow strength metric
+
+It serves as the geometric bridge between:
+
+- system evolution
+- field representation
+- navigation
+
+---
+
+### Spiral Coupling Layer (neu – v9.x)
+Dreifache Spiralüberlagerung (Water–Mercury–Ferrofluid) mit:
+- Dual-Strand Grey Channel
+- Elastic Dual Lock (Span-Gurt) als zentrale Kopplungslinie
+- Switch-Mechanismus zwischen den Strängen
+- Ferrofluid als aktiver magnetischer Koppler
+
+Bereits als eigenständiges Package `nexah/spiral_coupling/` implementiert mit Metriken (coherence, stability, pair coupling distances) und Visuals (Layer Energy over Time, Pair Coupling Distances, Dual-Strand Grey Channel + Phase Feedback).
+
+---
+
+### Visual layer
+A curated visual layer now exists in `nexah/visuals/`, together with a first gallery.
+
+These visuals are not only illustrative.
+
+They already function as:
+
+- conceptual anchors
+- split / interface references
+- gate references
+- inside-out passage images
+- framework teasers
+
+This is important because much of NEXAH currently stabilizes through the interaction of:
+
+- computation
+- geometry
+- language
+- visual form
+
+---
+
+## 3. What is now strong
+
+At this point, NEXAH is especially strong in the following areas.
+
+### A. Structure discovery
+The project is clearly strong at extracting structural organization from evolving systems.
 
 This includes:
 
-- Zithers
-- gates
+- regimes
+- basins
+- transitions
+- recurrence structure
+- collapse-related geometry
+
+---
+
+### B. Field discovery
+The move from discrete transition description toward field representation is now clearly established.
+
+The project now has a meaningful field layer in both:
+
+- conceptual documents
+- early code
+- benchmark interpretation
+
+---
+
+### C. Transition geometry
+The transition is no longer treated merely as a jump.
+
+It is increasingly treated as a structured geometric process involving:
+
 - split
 - interface
 - markers
+- shells
 - rings
-- wheel logic
-- inside / outside distinction
-- completion logic
-- 3 plus 1 pattern
-- 2–1–3 grammar
+- braided sequences
+- passage zones
 
-META defines what kinds of structural entities are even available.
-
-It answers:
-
-> what exists in the system as a meaningful relation?
+This is one of the strongest conceptual shifts in the project.
 
 ---
 
-## 4. What belongs to ARCHY now
+### D. Benchmark-linked trigger logic
+The IEEE work now provides a benchmark anchor for the NEXAH navigation language.
 
-The ARCHY layer contains the **visible organization of the system**.
+Especially important:
 
-This includes:
+- Phi-Split timing
+- lead-time advantage
+- field split / interface localization
+- marker logic
+- transition-to-gate interpretation
 
-- Perlenkette
-- Union Rings
-- Zopf
-- core-shell structures
-- wheel geometry
-- arc formation
-- trident-like distribution
-- split as structured form
-- braid and recurrence logic
+This means NEXAH is no longer only symbolic or post-hoc visual.
 
-ARCHY is where abstract entities become geometric organization.
-
-It answers:
-
-> how does the system organize itself structurally?
+It is now partially benchmark-linked.
 
 ---
 
-## 5. What belongs to MESO now
-
-The MESO layer contains the **risk and instability geometry**.
-
-This includes:
-
-- red drift curve
-- kipper point
-- drift minimum
-- Phi-Split
-- early curvature change
-- forward / backward / interface decomposition
-- proximity to collapse
-- lead time before classical collapse detection
-
-MESO is where the system becomes readable as danger, tension, and instability structure.
-
-It answers:
-
-> where is the system becoming critical, and how is this visible geometrically?
-
----
-
-## 6. What belongs to NEXAH now
-
-The NEXAH layer contains the **navigation reading** of the system.
+### E. Navigation language
+While full executable navigation is not yet complete, the language of navigation is now much more developed.
 
 This includes:
 
-- navigation primitives
-- corridor logic
-- gate logic
-- split-interface-marker logic
-- Zither-Gate model
+- primitives
+- gates
+- Zithers
+- split / interface logic
 - 3 plus 1 completion
-- passage instead of warning only
-- controlled cascade as a possible reading
+- passage reading
+- trigger sequencing
+- **triple spiral coupling + elastic dual lock**
 
-NEXAH is where geometry becomes passage and orientation.
-
-It answers:
-
-> given the structure and the risk geometry, how can movement through the system be understood?
+This is a major milestone.
 
 ---
 
-## 7. What belongs to MEVA now
+## 4. What is still emerging
 
-The MEVA layer is the **least finished layer** in the current NEXAH work.
+Several layers are already visible, but not yet fully closed.
 
-This is the execution layer.
+### A. Signal-to-geometry mapping
+It is increasingly plausible how real system signals become:
 
-It would include:
+- split
+- interface
+- marker
+- ring
+- gate structures
 
-- intervention selection
-- controlled release
-- rerouting
-- stabilization actions
-- active field-guided correction
-- real execution of passage logic
-
-MEVA answers:
-
-> what do we actually do once a passage or gate condition has been identified?
-
-This is the main remaining open step.
+But the mapping is not yet fully formalized.
 
 ---
 
-## 8. Where the Trigger Matrix sits
+### B. Signal-to-gate mapping
+It is not yet fully explicit:
 
-The Trigger Matrix does not belong to only one layer.
+- which signal activates which code
+- which threshold activates which gate
+- when passage becomes truly available
 
-It is a **bridge document**.
+This is a central next step.
 
-More precisely, it sits across:
+---
+
+### C. Passage logic
+The project is now beyond warning-only logic.
+
+It is beginning to talk about:
+
+- passage
+- controlled cascade
+- navigable transition
+- entry into structured release
+
+But this still needs clearer operational rules.
+
+---
+
+### D. Action / intervention logic
+This is the least finished major layer.
+
+This is where:
+
+- gate
+- passage
+- corridor
+- release
+- stabilization
+
+must eventually become executable decision logic.
+
+This is the main frontier between current NEXAH and a full stabilizing system.
+
+---
+
+## 5. What is still missing
+
+The following pieces remain major open tasks.
+
+### A. Trigger threshold formalization
+Still needed:
+
+- exact numeric split thresholds
+- interface passability criteria
+- marker activation criteria
+- 3 plus 1 completion condition
+
+---
+
+### B. Machine-readable trigger table
+The Trigger Matrix currently exists mainly as a high-level research document.
+
+It still needs a machine-readable form such as:
+
+- trigger name
+- signal source
+- threshold
+- geometry state
+- gate state
+- interpretation
+- recommended action
+
+---
+
+### C. Action Matrix
+After the Trigger Matrix, the next major step is an explicit action layer.
+
+A future `NEXAH_ACTION_MATRIX.md` should define:
+
+- what action belongs to which trigger configuration
+- which passage is stabilizing
+- which gate implies release, rerouting, or hold
+- which intervention corresponds to which field condition
+
+---
+
+### D. Executable navigation state machine
+Eventually the documents need to be translated into something like:
 
 ```text
-MESO → NEXAH → MEVA
+signal
+    ↓
+trigger state
+    ↓
+geometry state
+    ↓
+gate state
+    ↓
+action state
+```
+This would be the transition from NEXAH as a rich conceptual system to NEXAH as an executable stabilizing framework.
+
+## 6. The biggest open practical task
+
+START_HERE.md still needs a killer appThis is probably the most important practical next step.At the moment, the project has many strong components, but the easiest entry point still needs a truly compelling demonstrator.
+
+The ideal killer app should do at least four things:
+    1.	show a real or benchmark system
+    2.	reveal the split / field / geometry clearly
+    3.	show why NEXAH is earlier or better than a classical method
+    4.	make the transition from warning to navigable structure obviousA strong 
+``
+    candidate is likely:
+    •	the IEEE benchmark path
+    •	with one especially clear visual / timing / trigger sequence
+    •	plus a simple narrative of:
+    •	drift
+    •	split
+    •	marker
+    •	gate
+    •	possible stabilization logic
+    
+This should become the default re-entry experience for new readers.
+
+## 7. The best current re-entry pathIf returning to the project later, the best path is likely:
+`
+    1.	nexah/README.md
+    2.	identity/NEXAH_IDENTITY.md
+    3.	navigation/NEXAH_NAVIGATION_PRIMITIVES.md
+    4.	navigation/NEXAH_ZITHER_GATE_MODEL.md
+    5.	navigation/NEXUS_3_PLUS_1_GATE_NOTE.md
+    6.	navigation/SPLIT_INTERFACE_MARKERS_NOTE.md
+    7.	NEXAH_TRIGGER_MATRIX.md
+    8.	STACK_TO_TRIGGER_BRIDGE.md
+    
+This path reconstructs the current logic in the correct order:
+```
+    identity
+        ↓
+      field
+        ↓
+navigation language
+        ↓
+    gate logic
+        ↓
+split/interface passage
+        ↓
+  trigger bridge
 ```
 
-because it connects:
+## 8. Recommended next steps
 
-- measured drift
-- split onset
-- marker localization
-- code activation
-- gate opening
-- possible action
+The next steps should probably be taken in this order.
 
-It therefore translates the stack from static architecture into process logic.
+**Priority 1 — consolidate the nexah/ layer**
+- finish nexah/README.md
+- keep links consistent
+- keep visuals curated
+- make sure all new docs live in the right place
 
----
+**Priority 2 — define the Trigger Matrix more explicitly**
+- refine trigger names
+- define threshold placeholders
+- identify measurable input variables
+- create a more formal trigger table
 
-## 9. The bridge in words
+**Priority 3 — create the Action Matrix**
+- define possible interventions
+- map trigger states to action candidates
+- distinguish warning from executable passage
 
-A useful way to read the bridge is:
+**Priority 4 — build the killer app for START_HERE.md**
+- choose the clearest benchmark story
+- simplify the onboarding path
+- make one demonstrator decisive
 
-### META
-defines the symbolic and structural vocabulary
-
-### ARCHY
-shows the geometric organization of that vocabulary
-
-### MESO
-shows where the organization becomes critical
-
-### Trigger Matrix
-maps critical geometry into possible transition logic
-
-### NEXAH
-reads that logic as passage and navigation
-
-### MEVA
-will eventually convert that passage into concrete action
-
-So the Trigger Matrix is the first real hinge where:
-
-> risk geometry begins to turn into navigable decision structure.
+**Priority 5 — translate navigation into execution**
+- begin a real state-machine sketch
+- formalize gate passability
+- define stabilization logic
 
 ---
 
-## 10. The current bridge chain
+## 9. Current best summary
 
-At the present stage, the most useful chain is:
+The current state of NEXAH can be summarized as follows:
 
-```text
-META
-    ↓
-codes / symbols / structural roles
+NEXAH is already strong as a structure, field, and transition-geometry framework.  
+It now also possesses an emerging navigation language that is benchmark-linked through trigger logic.  
+The main remaining step is the closure of the action and execution layer.
 
-ARCHY
-    ↓
-rings / shells / braids / wheel / arc
+That means:
+- the project is no longer at the stage of vague exploration
+- but it is also not yet at the fully closed intervention stage
 
-MESO
-    ↓
-drift / Phi-Split / interface / marker / collapse proximity
-
-TRIGGER MATRIX
-    ↓
-signal → geometry → code → gate
-
-NEXAH
-    ↓
-passage / corridor / navigation logic
-
-MEVA
-    ↓
-intervention / stabilization / execution
-```
-
-This is the point where the stack stops being only descriptive and starts becoming operational.
+It is in a highly productive middle phase where:
+- the language exists
+- the geometry exists
+- the benchmark anchor exists
+- the trigger bridge exists
+- the execution logic is the main remaining frontier
 
 ---
 
-## 11. Why this is important for the IEEE problem
+## 10. Return note
 
-In the IEEE context, this bridge matters because the project is no longer only asking:
+If work pauses and later resumes, the key memory should be:
 
-- can we detect collapse early?
-- can we visualize the onset?
-- can we see the split before the classical method?
+the core missing piece is no longer “what is NEXAH?”  
+it is “how do trigger, gate, and passage become executable stabilization logic?”
 
-It is now also asking:
-
-- what does the split trigger?
-- what geometry becomes active?
-- what passage opens?
-- what should the system do next?
-
-That is exactly why the Trigger Matrix matters.
-
-It is the point where:
-
-> early detection begins to become navigable stabilization logic.
+Everything else is already much more coherent than before.
 
 ---
 
-## 12. Final statement
+## 11. Major Updates since last Status Report (April 2026)
 
-The NEXAH stack remains valid.
+The `nexah/` layer has advanced significantly in the navigation domain. The most important new developments are:
 
-But it now needs to be read dynamically:
+### 11.1 RATH Phi-Lambda Resonance Bridge
+A new angular resonance construct that embeds the previous split-interface-marker logic into a finer geometric structure. It introduces:
 
-- META gives the vocabulary
-- ARCHY gives the organization
-- MESO gives the risk geometry
-- the Trigger Matrix bridges risk into transition logic
-- NEXAH reads transition as passage
-- MEVA must still close the loop through action
+- n-bands (24.58°, 26.14°, 27.92°) as resonant corridors
+- Thoth Spindle (vertical axis)
+- Scarab Wing (lemniscate component)
+- 51° Gate as major passage threshold
+- Nidda Axis (West Ω ↔ East Ω)
 
-This is the real meaning of the current phase:
+The red drift thread now moves through these bands in a continuous “one above – one below” pattern.
 
-> the stack is no longer only architecture.  
-> it is beginning to function as an operational sequence.
+### 11.2 OLGO-JANUS Six-Sector Gate
+A six-sector symmetric framework that extends the 3+1 gate logic and provides higher sectoral resolution. It integrates the RATH Bridge and connects it with:
+
+- V-Axis (528 + 432 = 960)
+- φ ≈ ±0.017 rad offset
+
+This gate allows navigation to operate with balanced sectoral symmetry.
+
+### 11.3 v-bands (Breathing Wave + Blinking Pulse)
+A new dynamic background layer that adds the living, oscillatory character to the navigation system:
+
+- **Breathing Wave**: slow, floating oscillation (“Schweben im Beben”) between sectors 13-14 ↔ 16-17 and 1-2 ↔ 4-5
+- **Blinking Pulse**: sharp, intermittent pulses synchronized to the same sectors
+
+The v-bands act as the breathing substrate on which the n-bands and gates operate.
+
+### 11.4 Connection to 432-440-444 Resonance Layers
+The navigation system now explicitly links to the three frequency layers:
+
+- 432 (Gaia / Earth Anchor)
+- 440 (Transition / Regulator / Rootroom)
+- 444 (Cosmic / higher harmony)
+
+The Rath Bridge and V-Axis serve as the coupling mechanism between these layers and the Zither-Gate logic.
+
+### 11.5 Spiral Coupling Layer (v9.x) – neu
+Dreifache Spiralüberlagerung mit drei gekoppelten Komponenten:
+- Water (blau, ~42 Hz)
+- Mercury (rot, ~63 Hz)
+- Ferrofluid (grün, ~77 Hz)
+
+Zentrale Merkmale:
+- Dual-Strand Grey Channel mit Elastic Dual Lock (Span-Gurt)
+- Schneller Übergang von transientem Chaos → stabile Kopplung (Pair Coupling Distances → ~0)
+- Ferrofluid als aktiver magnetischer Koppler
+- Neue Visuals: Layer Energy over Time, Pair Coupling Distances, Dual-Strand Grey Channel + Phase Feedback
+
+Dieser Layer erweitert den V69 Field Layer um explizite Multi-Component-Dynamik und coherence-guided Navigation.
 
 ---
 
-**Stack to Trigger Bridge**  
-The stack defines the layers.  
-The trigger matrix connects them.  
-And through that connection, geometry begins to act.
+## 12. Updated Overall Picture
+
+The current state of NEXAH can now be described with greater clarity:
+
+- **Strong core**: Structure discovery, field representation, transition geometry and benchmark-linked trigger logic remain solid.
+- **Advanced navigation language**: The vocabulary now includes RATH Bridge, OLGO-JANUS Six-Sector Gate, v-bands **and** the new triple spiral coupling with Elastic Dual Lock.
+- **Emerging resonance & coupling layer**: The system is moving from static gate logic toward a **dynamic, multi-component spiral navigation**.
+- **Main frontier**: The closure of the action and execution layer (how triggers and marked passages become executable stabilization or intervention logic).
+
+The project has clearly moved from “emerging navigation language” to “layered resonant navigation with breathing background and spiral coupling”.
+
+---
+
+## 13. Recommended Next Priorities (Updated)
+
+**Priority 1 – Consolidate the new navigation layer**  
+- Finish cross-references between RATH, OLGO-JANUS, v-bands and the new Spiral Coupling Layer  
+- Keep the visual gallery up to date
+
+**Priority 2 – Formalize trigger-to-gate mapping**  
+- Define how real signals (red curve, IEEE data) activate specific n-bands and v-band states  
+- Create a more machine-readable trigger table
+
+**Priority 3 – Develop the Action Matrix**  
+- Map gate states and v-band phases to possible actions (hold, release, reroute, stabilize)  
+- Define what “controlled passage” or “stabilizing intervention” actually means in operational terms
+
+**Priority 4 – Build a stronger killer app for START_HERE.md**  
+- Create a clear demonstrator that shows the full chain:  
+  real drift → split → RATH Bridge → v-band modulation → marked passage → possible stabilization
+
+---
+
+## 14. Current Best Summary
+
+NEXAH is already a strong framework for structure and field discovery with benchmark-linked transition geometry.
+
+It now possesses an emerging **resonant navigation language** that includes angular bridges (RATH), sectoral gates (OLGO-JANUS), breathing background (v-bands) **and** triple spiral coupling with Elastic Dual Lock.
+
+The main remaining frontier is turning this rich conceptual and geometric layer into **executable stabilization logic**.
+
+---
+
+## Final Line
+
+```bash
+NEXAH Status
+The structure is visible.
+The field is readable.
+The split is localized.
+The bridge is resonant.
+The background is breathing.
+The coupling is spiraling.
+The next task is action.
