@@ -1,9 +1,3 @@
-
----
-
-### 2. `nexah/urf_axial_space/__init__.py`
-
-```python
 """
 URF Axial Space – Public API
 
@@ -15,5 +9,4 @@ from .urf_axial_space_kernel import URFAxialSpaceKernel
 
 __all__ = ["URFAxialSpaceKernel"]
 
-# Simple high-level access
 __version__ = "0.1"
