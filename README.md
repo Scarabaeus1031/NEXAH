@@ -4,10 +4,8 @@
 ## 🧭 Conceptual Pipeline
 
 ```text
-simulation → structure → field → geometry → channel → switch → navigation**
+simulation → structure → field → geometry → channel → switch → navigation
 ```
-
-*A framework for discovering, mapping and navigating stability in complex dynamical systems.*
 
 ---
 
@@ -104,10 +102,10 @@ Recent experiments introduce the first form of a **NEXAH Navigation Kernel**.
 
 This is not yet a full control system, but a new layer that:
 
-- detects navigable channels (grey axis)
+- detects navigable channels (grey-channel axis)
 - distinguishes structural strands (upper / lower)
 - identifies switch regions between regimes
-- begins to propose motion inside the field
+- begins to propose motion within the field geometry
 
 Current status:
 
@@ -257,7 +255,7 @@ structure + field discovery
 ## 🧭 Conceptual Pipeline
 
 ```text
-simulation → structure → field → geometry → navigation
+simulation → structure → field → geometry → channel → switch → navigation
 ```
 
 A more detailed reading of the current NEXAH logic is:
@@ -316,8 +314,8 @@ This supports the broader hypothesis that structural field-like logic may appear
 
 And more recently:
 
-> these structures are not only observable —  
-> they can begin to be **used for controlled movement**
+these structures are not only observable —  
+they can begin to be **used for controlled movement within the field**
 
 ---
 
@@ -330,8 +328,11 @@ Current release: **v1.1 (Field Extension)**
 - adapter system: ✅ working  
 - transition geometry: ✅ active  
 - navigation language: ✅ active  
+- navigation language: ✅ active  
+- channel layer (v8): ✅ discovered  
+- switch layer (v9): ✅ detected  
+- navigation kernel: ⚠️ emerging  
 - executable intervention layer: ⚠️ emerging  
-- proto-model layer: ✅ exploratory  
 
 ---
 
