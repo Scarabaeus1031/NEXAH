@@ -2,8 +2,9 @@
 
 **Power System Stability & Intelligent Field Navigation**
 
-This folder contains the core applications and tests of NEXAH on real power grids.  
-It demonstrates **practical, geometry-driven early detection** of voltage collapse in complex dynamic systems.
+NEXAH detects instability significantly before classical voltage-based methods by analyzing structural transitions in the system dynamics.
+
+Instead of waiting for voltage thresholds to be violated, NEXAH identifies the onset of instability directly in the evolving system structure.
 
 **Stability is not a static state — it is a geometry evolving in time.**
 
