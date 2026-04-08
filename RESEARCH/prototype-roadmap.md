@@ -57,7 +57,7 @@ Goal: Detect structural instability patterns.
 
 ---
 
-## Stage 5 – Domain Binding
+## Stage 5 – Domain Binding & Spiral Coupling
 
 Bind abstract structure to:
 
@@ -65,8 +65,9 @@ Bind abstract structure to:
 - Engineering constraint system
 - Decision tree model
 - Policy simulation environment
+- **Triple Spiral Coupling Layer (Water–Mercury–Ferrofluid)** with Elastic Dual Lock
 
-Goal: Empirical validation.
+Goal: Empirical validation and dynamic navigation.
 
 ---
 
@@ -77,12 +78,10 @@ Goal: Empirical validation.
 - Julia (operator-heavy prototyping)
 - Pure discrete algebra engine
 
-The prototype remains finite and discrete.
-
-No continuous simulation required.
+The prototype remains finite and discrete at the core, with geometric extensions (CORE_GEOMETRY + Spiral Coupling) added on top.
 
 ---
 
 End Goal:
 
-Executable structural modeling engine for regime detection and frame comparison.
+Executable structural modeling engine for regime detection, frame comparison and **coherence-guided spiral navigation**.
