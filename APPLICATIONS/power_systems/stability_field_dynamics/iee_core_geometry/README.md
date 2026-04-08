@@ -19,7 +19,7 @@ NEXAH detects voltage collapse **43.9 seconds earlier** than the classical metho
 
 ### Final Plots
 
-![NEXAH Mic-Drop on IEEE 300-Bus](NEXAH_MicDrop_IEEE300_Final.png)  
+![NEXAH Mic-Drop on IEEE 300-Bus](ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
 *IEEE 300-Bus – 43.9 Sekunden früher erkannt als klassische Methode*
 
 ![IEEE 9241-Bus – Phi-Split at t=36.10 s](ieee9241_real_tunable_v12.7_4panel_iota_ring.png)  
