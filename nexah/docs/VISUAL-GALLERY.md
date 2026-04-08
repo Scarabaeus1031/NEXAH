@@ -13,6 +13,14 @@ These images are visual anchors for the emerging NEXAH language of:
 
 ---
 
+## Master Overview
+
+![NEXAH Navigation Layer v9.1](../visuals/NEXAH_Overall_Navigation_Overview_v9.1.png)
+
+**NEXAH Navigation Layer v9.1 – From Structure to 3D Controlled Movement**
+
+---
+
 ## 1. Inside Out — Finally Inside the Passage
 
 ![Inside Out — Finally Inside the Passage](../visuals/Inside%20the%20passage%27s%20cosmic%20diagram.png)
@@ -87,25 +95,25 @@ These images are visual anchors for the emerging NEXAH language of:
 
 ## 13. New 3D Geometric Reference Layer (v9.1)
 
-### Root Cube (neutral core)
+### Root Cube – Labeled Axes
 
-![NEXAH Root Cube v9.1](../urf_axial_space/visuals/NEXAH_Root_Cube_v9.1.png)
+![NEXAH Root Cube Labeled Axes](../visuals/NEXAH_Root_Cube_Labeled_Axes_v9.1.png)
 
-### URF Axial Space – White Cube
+### Triple Spiral Coupling inside Root Cube
 
-![URF Axial Space White Cube](../urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1.png)
+![Triple Spiral in Root Cube](../visuals/NEXAH_Triple_Spiral_in_Root_Cube_v9.1.png)
 
-### URF Axial Space – Black Cube
+### Zeta-Line Breathing Axis
 
-![URF Axial Space Black Cube](../urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v.2.png)
+![Zeta-Line Breathing Axis](../visuals/NEXAH_Zeta_Line_Breathing_Axis_v9.1.png)
+
+### Major / Minor Mode Integration into Root Cube
+
+![Major Minor Mode Integration](../visuals/NEXAH_Major_Minor_Mode_Integration_v9.1.png)
 
 ### From Graphs to Root Cube (v9.1)
 
 ![From Graphs to Root Cube](../visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
-
-### Triple Spiral + Root Bridge Interaction
-
-![Triple Spiral Root Cube Interaction](../urf_axial_space/visuals/NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png)
 
 ---
 
@@ -113,105 +121,3 @@ These images are visual anchors for the emerging NEXAH language of:
 Structure becomes visible.  
 Geometry becomes navigable.  
 The Root Bridge makes it 3D.
----
-
-## 9. RATH Phi-Lambda Bridge — Annotated
-
-![RATH Phi-Lambda Bridge Annotated](../visuals/RATH_phi_lambda_bridge_annotated_neon.png)
-
-Mathematical relationships (Zeta-Line ≈ 0.429, Mid-Band ≈ 0.456, Top n-band ≈ 0.487).
-
----
-
-## 10. OLGO-JANUS Six-Sector Gate
-
-![OLGO-JANUS Six-Sector Gate](../visuals/OLGO_JANUS_Six_Sector_Gate_v_bands_background.png)
-
-Six-sector symmetry with v-bands background.
-
----
-
-## 11. v-bands – Breathing Wave + Blinking Pulse
-
-![v-bands Breathing Wave + Blinking Pulse](../visuals/v_bands_Breathing_Wave_Blinking_Pulse_neben_n_bands.png)
-
-The living, oscillating background of the navigation layer.
-
----
-
-## 12. Breathing Axis Overlay – 432/487 Horizon
-
-![Breathing Axis Overlay](../visuals/breathing_axis_overlay_v2.png)
-
-Vertical Breathing Axis with Zeta-Line ≈ 0.429, Mid-Band ≈ 0.456, Top n-band ≈ 0.487.
-
----
-
-## 13. New 3D Geometric Reference Layer (v9.1) ← neu
-
-### Root Cube (neutral core)
-
-![NEXAH Root Cube v9.1](../urf_axial_space/visuals/NEXAH_Root_Cube_v9.1.png)
-
-The stable 3D reference core (Zeta-Line / Root Cube).
-
-### URF Axial Space – White Cube
-
-![URF Axial Space White Cube](../urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1.png)
-
-Full 3D view with Matroschka nesting and Switch Grid.
-
-### URF Axial Space – Black Cube
-
-![URF Axial Space Black Cube](../urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v.2.png)
-
-High-contrast variant.
-
-
-## From Graphs to Root Cube (v9.1)
-
-![From Graphs to Root Cube](../visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
-
-This visual shows the direct bridge from the old 2D time-domain graphs (R/T Field Dynamics, Wave Signals, mod 7/17 residues) to the new 3D Root Cube.
-
-It is the central connection between the previous 2D navigation layer and the new URF Axial Space + Root Bridge.
-
-### Triple Spiral + Root Bridge Interaction
-
-![Triple Spiral Root Cube Interaction](../urf_axial_space/visuals/NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png)
-
-The complete 3D integration of Triple Spiral Coupling inside the Root Bridge.
-
----
-
-### Updated Reading Guide
-
-**Layer 1 – Framework identity**  
-Exploring the NEXAH Framework, Navigating the NEXAH System, Exploring NEXAH’s Digital Universe
-
-**Layer 2 – Gate & activation logic**  
-3 Plus 1 Gate, Zither-Gate visuals
-
-**Layer 3 – Split, interface & passage**  
-Markers, Split Interface, Inside Out
-
-**Layer 4 – Resonance constructs**  
-RATH Bridge, OLGO-JANUS, v-bands, Breathing Axis Overlay
-
-**Layer 5 – 3D Geometric Reference (v9.1)**  
-Root Cube, URF Axial Space, From-Graphs-to-Root-Cube, Triple-Spiral-Root-Bridge
-
-This sequence shows the current evolution of NEXAH:
-
-```text
-framework identity → gate logic → split & passage → resonance → 3D navigable geometry
-```
-
-## NEXAH Visual Gallery
-```text
-
-Structure becomes visible.
-Geometry becomes navigable.
-The Root Bridge makes it 3D.
-```
-
