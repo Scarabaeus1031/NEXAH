@@ -12,3 +12,15 @@ from .switch_grid_mapper import SwitchGridMapper
 __all__ = ["URFAxialSpaceKernel", "SwitchGridMapper"]
 
 __version__ = "0.1"
+
+# ====================== URF Axial Space (v9.1) ======================
+# 3D coordinate system + Matroschka mapping + Switch Grid integration
+
+from .urf_axial_space.urf_axial_space_kernel import URFAxialSpaceKernel
+from .urf_axial_space.switch_grid_mapper import SwitchGridMapper
+
+# Add to public API
+__all__.extend([
+    "URFAxialSpaceKernel",
+    "SwitchGridMapper",
+])
