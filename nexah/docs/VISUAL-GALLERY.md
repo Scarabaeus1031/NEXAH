@@ -2,7 +2,7 @@
 
 This gallery collects the most important featured visuals from the `nexah/visuals/` and `nexah/urf_axial_space/visuals/` layers.
 
-These images are not decoration — they are **visual anchors** for the emerging NEXAH language of:
+These images are visual anchors for the emerging NEXAH language of:
 - field structure
 - transition geometry
 - split logic
@@ -17,15 +17,11 @@ These images are not decoration — they are **visual anchors** for the emerging
 
 ![Inside Out — Finally Inside the Passage](../visuals/Inside%20the%20passage%27s%20cosmic%20diagram.png)
 
-The transition is not only a line or a marker — it has an interior.
-
 ---
 
 ## 2. Cosmic Visualization of the 3 Plus 1 Gate
 
 ![Cosmic Visualization of 3 Plus 1 Gate](../visuals/Cosmic%20visualization%20of%203%20Plus%201%20Gate.png)
-
-Three carrier layers + one activating term (3 + 1).
 
 ---
 
@@ -33,15 +29,11 @@ Three carrier layers + one activating term (3 + 1).
 
 ![NEXAH Visual V Markers](../visuals/NEXAH-VISUAL%20V%20markers.png)
 
-The system becomes navigable when the split is marked.
-
 ---
 
 ## 4. Split Interface Markers — Visual V
 
 ![Split Interface Markers — Visual V](../visuals/Split_interfece_markers-visual_V.png)
-
-Drift drives, split separates, markers make the passage addressable.
 
 ---
 
@@ -49,15 +41,11 @@ Drift drives, split separates, markers make the passage addressable.
 
 ![Exploring the NEXAH Framework](../visuals/Exploring%20the%20NEXAH%20framework.png)
 
-Broader framework identity.
-
 ---
 
 ## 6. Navigating the NEXAH System
 
 ![Navigating the NEXAH System](../visuals/Navigating%20the%20NEXAH%20system.png)
-
-Emphasis on navigation instead of pure analysis.
 
 ---
 
@@ -65,16 +53,66 @@ Emphasis on navigation instead of pure analysis.
 
 ![Exploring NEXAH’s Digital Universe](../visuals/Exploring%20NEXAH%27s%20digital%20universe.png)
 
-Conceptual horizon image.
-
 ---
 
 ## 8. RATH Phi-Lambda Resonance Bridge — v3.3
 
 ![RATH Phi-Lambda Resonance Bridge v3.3](../visuals/phi-lambda_resonance_bridge.png)
 
-Angular resonance corridors and 51° Gate.
+---
 
+## 9. RATH Phi-Lambda Bridge — Annotated
+
+![RATH Phi-Lambda Bridge Annotated](../visuals/RATH_phi_lambda_bridge_annotated_neon.png)
+
+---
+
+## 10. OLGO-JANUS Six-Sector Gate
+
+![OLGO-JANUS Six-Sector Gate](../visuals/OLGO_JANUS_Six_Sector_Gate_v_bands_background.png)
+
+---
+
+## 11. v-bands – Breathing Wave + Blinking Pulse
+
+![v-bands Breathing Wave + Blinking Pulse](../visuals/v_bands_Breathing_Wave_Blinking_Pulse_neben_n_bands.png)
+
+---
+
+## 12. Breathing Axis Overlay – 432/487 Horizon
+
+![Breathing Axis Overlay](../visuals/breathing_axis_overlay_v2.png)
+
+---
+
+## 13. New 3D Geometric Reference Layer (v9.1)
+
+### Root Cube (neutral core)
+
+![NEXAH Root Cube v9.1](../urf_axial_space/visuals/NEXAH_Root_Cube_v9.1.png)
+
+### URF Axial Space – White Cube
+
+![URF Axial Space White Cube](../urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1.png)
+
+### URF Axial Space – Black Cube
+
+![URF Axial Space Black Cube](../urf_axial_space/visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v.2.png)
+
+### From Graphs to Root Cube (v9.1)
+
+![From Graphs to Root Cube](../visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
+
+### Triple Spiral + Root Bridge Interaction
+
+![Triple Spiral Root Cube Interaction](../urf_axial_space/visuals/NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png)
+
+---
+
+**NEXAH Visual Gallery**  
+Structure becomes visible.  
+Geometry becomes navigable.  
+The Root Bridge makes it 3D.
 ---
 
 ## 9. RATH Phi-Lambda Bridge — Annotated
