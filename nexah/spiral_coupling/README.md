@@ -8,20 +8,24 @@ Dieser Layer modelliert die **gleichzeitige Überlagerung und Kopplung von drei 
 - **Mercury** (rot)     – reaktive, schnelle Komponente (~63 Hz Eigenfrequenz)  
 - **Ferrofluid** (grün) – magnetisch aktive Komponente (~77 Hz Eigenfrequenz)
 
-Der **Ferrofluid-Layer** wirkt als primärer Koppler und macht den magnetischen Flow sichtbar.
+Der **Ferrofluid-Layer** wirkt als primärer Koppler und macht den magnetischen Flow sichtbar.  
+Zusätzlich wird der Grey Channel als zentrale **Dual-Strand-Struktur** mit elastischer Achse (Span-Gurt) modelliert, über die die drei Komponenten switchen und phasen-gekoppelt interagieren.
+
+![Triple Spiral Coupling Overview](visuals/triple_spiral_coupling_overview.png)
 
 ### Wichtige Eigenschaften
 
-- Nach einem kurzen transienten Chaos-Bereich koppeln die drei Schichten sehr schnell und stabil.  
+- Nach kurzem transienten Chaos koppeln die drei Schichten sehr schnell und stabil.  
 - Pair Coupling Distances gehen nahezu auf Null und bleiben stabil.  
 - Die Komponenten bilden eine gemeinsame **spiralförmige Trajektorie**.  
-- Der Ferrofluid-Layer stabilisiert das Gesamtsystem durch magnetische Kopplung.
+- Der Ferrofluid-Layer stabilisiert das Gesamtsystem durch magnetische Kopplung.  
+- Der Grey Channel dient als Switch- und Interface-Zone zwischen den Strängen.
 
 ### Warum dieser Layer wichtig ist
 
-- Erweitert den bestehenden V69 Field Layer um eine explizite **Multi-Component-Dynamik**.  
+- Erweitert den V69 Field Layer um eine explizite **Multi-Component-Dynamik mit Switch-Verhalten**.  
 - Zeigt, wie Magnetismus als **aktiver Koppler** zwischen unterschiedlichen Schichten wirkt.  
-- Liefert eine neue Form der **coherence-guided Navigation** innerhalb komplexer Felder.
+- Liefert eine neue Form der **coherence-guided Navigation** mit elastischer Dual-Lock-Struktur.
 
 ### Verwendung
 
