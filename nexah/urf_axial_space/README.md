@@ -23,6 +23,14 @@ Center point: **α (Potential)**
 
 ---
 
+## Visuals
+
+![URF Axial Space – White Cube](visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1.png)
+
+![URF Axial Space – Black Cube](visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v2.png)
+
+---
+
 ## 📐 Connection to Existing NEXAH Elements
 
 - The **Switch Layer v9.0** (Dual-Strand Grey Channel) is the **2D projection** of this 3D space.
@@ -42,7 +50,6 @@ Center point: **α (Potential)**
 
 ## 📍 Position in the NEXAH Stack
 
-```text
 Field Layer (V69)
     ↓
 Spiral Coupling Layer (v9.0)
@@ -50,3 +57,7 @@ Spiral Coupling Layer (v9.0)
 URF Axial Space (v9.1) ← new
     ↓
 Switch & Navigation Kernel
+
+---
+
+**Status:** Concept defined • Documentation complete • Kernel & Grid Mapper ready
