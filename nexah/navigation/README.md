@@ -68,7 +68,7 @@ All key visuals for the navigation layer are collected in:
 - `nexah/visuals/`
 - `nexah/urf_axial_space/visuals/` (Root Cube, White/Black Cube, From-Graphs-to-Root-Cube, Triple-Spiral-Root-Bridge)
 
-See the dedicated **[Visual Gallery](./docs/VISUAL_GALLERY.md)** (or integrate it here if you prefer).
+See the dedicated **[Visual Gallery](docs/VISUAL_GALLERY.md)** (or integrate it here if you prefer).
 
 ---
 
