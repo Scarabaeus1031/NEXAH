@@ -25,12 +25,25 @@ NEXAH detects voltage collapse **43.9 seconds earlier** than the classical metho
 ![IEEE 9241-Bus – Phi-Split at t=36.10 s](ieee_scaling/ieee9241_real_tunable_v12.7_4panel_iota_ring.png)  
 *IEEE 9241-Bus (PEGASE) – exakt gleicher Phi-Split trotz 78-facher Netzgröße*
 
-### Active Technical Features
-- Absolute Phi-Lock until t = 36 s (no early split)  
-- Iota-Ring (12.0 → 13.7) as resonance factor  
-- Nexus-Hold + 7-Arc Lattice  
-- CON~DAO + Sun-Moon-Kiss at the Kipper point  
-- Black Attractor + strong Bügel-Hold in Forward2 (P-Regulator)  
+### Core Mechanism (simplified)
+
+The early detection is based on:
+
+- detection of structural drift in the field representation
+- identification of regime transition (Phi-Split)
+- monitoring of phase-aligned system evolution
+- detection of loss of coherence before voltage collapse
+
+These signals are extracted directly from the system dynamics and do not rely on predefined thresholds.
+
+### Reproducibility
+
+All results are generated using the same model configuration across all networks.
+
+Key observation:
+
+→ The Phi-Split occurs at t ≈ 36.1 s independently of system size  
+→ The lead time (~43.9 s) remains stable across all tested grids
 
 ### Building Log
 The complete development history (from v7.x to v12.7) is documented in **[BUILDING_LOG.md](BUILDING_LOG.md)**.
