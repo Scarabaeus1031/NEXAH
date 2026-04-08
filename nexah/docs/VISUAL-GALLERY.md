@@ -129,11 +129,14 @@ Full 3D view with Matroschka nesting and Switch Grid.
 
 High-contrast variant.
 
-### From Graphs to Root Cube
 
-![From Graphs to Root Cube](./visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
+## From Graphs to Root Cube (v9.1)
 
-Direct bridge from 2D time-domain graphs to the 3D Root Cube.
+![From Graphs to Root Cube](../visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
+
+This visual shows the direct bridge from the old 2D time-domain graphs (R/T Field Dynamics, Wave Signals, mod 7/17 residues) to the new 3D Root Cube.
+
+It is the central connection between the previous 2D navigation layer and the new URF Axial Space + Root Bridge.
 
 ### Triple Spiral + Root Bridge Interaction
 
