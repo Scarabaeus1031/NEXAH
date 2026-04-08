@@ -137,7 +137,7 @@ It connects the 2D Dual-Strand Grey Channel and Elastic Axis into a unified 3D a
 ![From Graphs to Root Cube](./visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
 
 **Triple Spiral Coupling + Root Bridge Interaction**  
-![Triple Spiral + Root Bridge](rf_axial_space/visuals/NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png)
+![Triple Spiral + Root Bridge](urf_axial_space/visuals/NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png)
 
 ---
 
