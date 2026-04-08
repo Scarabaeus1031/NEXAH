@@ -22,21 +22,19 @@ The NEXAH framework is a structural navigation system for **complex dynamic envi
 
 The architecture follows a layered model:
 
-```text
 META → ARCHY → MESO → NEXAH → MEVA
-```
 
 These layers transform:
 
-**system definitions → regime structures → risk landscapes → navigable trajectories**
+system definitions → regime structures → risk landscapes → navigable trajectories
 
 | Layer | Function |
-|------|------|
-| META | relational system definition |
+|-------|----------|
+| META  | relational system definition |
 | ARCHY | regime structure detection and structural simulation logic |
-| MESO | risk geometry computation |
+| MESO  | risk geometry computation |
 | NEXAH | navigation strategies |
-| MEVA | execution and simulation |
+| MEVA  | execution and simulation |
 
 ---
 
@@ -46,22 +44,14 @@ These layers transform:
 
 The NEXAH repository is organized into several major components.
 
-| Directory | Role |
-|------|------|
-| ENGINE | structural algebra, analysis engine, research infrastructure |
-| FRAMEWORK | architectural system stack and integrated framework documents |
-| NAVIGATOR | repository orientation, architecture status, and overview documents |
-| APPLICATIONS | example systems and applied realizations |
-| BUILDER_LAB | demos, proto-models, and fast exploratory construction |
-| DISCOVERY_ENGINE | structure extraction and discovery logic |
-
-This structure separates:
-
-- mathematical and computational core systems
-- framework and architecture documents
-- exploratory research layers
-- application modules
-- orientation and navigation aids
+| Directory          | Role |
+|--------------------|------|
+| ENGINE             | structural algebra, analysis engine, research infrastructure |
+| FRAMEWORK          | architectural system stack and integrated framework documents |
+| NAVIGATOR          | repository orientation, architecture status, and overview documents |
+| APPLICATIONS       | example systems and applied realizations |
+| BUILDER_LAB        | demos, proto-models, and fast exploratory construction |
+| DISCOVERY_ENGINE   | structure extraction and discovery logic |
 
 ---
 
@@ -69,11 +59,10 @@ This structure separates:
 
 ![Engine Execution Flow](../ENGINE/visuals/engine_execution_flow.png)
 
-The NEXAH engine bridges **formal structural research** with **executable system analysis**.
+The NEXAH engine bridges formal structural research with executable system analysis.
 
 Pipeline:
 
-```text
 Formal Structure (Research)
     ↓
 Structural Algebra Core
@@ -81,14 +70,6 @@ Structural Algebra Core
 Executable Analysis
     ↓
 Structural Output
-```
-
-This is one of the key bridges inside the repository:
-
-- research ideas become formal operators
-- operators become executable analysis
-- analysis becomes visible structure
-- structure becomes navigable
 
 ---
 
@@ -112,111 +93,41 @@ It is the place to look when you want to understand the system **from above**.
 # Documents in this Directory
 
 ## Repository Map
-
 [REPOSITORY_MAP.md](./REPOSITORY_MAP.md)
 
-A high-level map of the repository.
-
-Use this document to understand:
-
-- the major areas of the repo
-- how research, framework, applications, and builder spaces connect
-- where to start depending on your goal
-
-Best for:
-- first orientation
-- repository navigation
-- understanding NEXAH as a system rather than a flat directory tree
-
----
-
 ## Architecture Completion Map
-
 [NEXAH_ARCHITECTURE_COMPLETION_MAP.md](./NEXAH_ARCHITECTURE_COMPLETION_MAP.md)
 
-Tracks the architectural implementation status of the framework.
-
-Includes:
-
-- completed system components
-- partial implementations
-- remaining development tasks
-- minimal completion path
-- current system milestone
-
-This document serves as the **development and implementation map** of NEXAH.
-
----
-
 ## System Capabilities
-
 [SYSTEM_CAPABILITIES.md](./SYSTEM_CAPABILITIES.md)
 
-Describes the current functional capabilities of the framework.
-
-Includes:
-
-- structural modeling
-- regime analysis
-- risk geometry
-- cascade modeling
-- navigation
-- execution
-- visualization
-
-This document functions as the **capabilities reference** for the current system.
-
----
-
 ## Architecture Milestone
-
 [ARCHITECTURE_MILESTONE.md](./ARCHITECTURE_MILESTONE.md)
-
-Records the milestone where the core NEXAH architecture became operational.
-
-Describes:
-
-- the system stack
-- achieved architectural capabilities
-- the significance of the current stage
-
-This document captures a major transition in the evolution of the NEXAH system.
 
 ---
 
 # How These Documents Fit Together
 
-The documents in this directory describe NEXAH from complementary angles.
-
-| Document | Role |
-|------|------|
-| Repository Map | repository structure and entry paths |
-| Architecture Completion Map | implementation status and open work |
-| System Capabilities | current operational functionality |
-| Architecture Milestone | historical and strategic breakthrough marker |
-
-Together they provide a compact orientation layer for the repository.
+| Document                        | Role |
+|---------------------------------|------|
+| Repository Map                  | repository structure and entry paths |
+| Architecture Completion Map     | implementation status and open work |
+| System Capabilities             | current operational functionality |
+| Architecture Milestone          | historical and strategic breakthrough marker |
 
 ---
 
 # Recommended Reading Order
 
-## Quick orientation
-
+**Quick orientation**
 1. [REPOSITORY_MAP.md](./REPOSITORY_MAP.md)
 2. [SYSTEM_CAPABILITIES.md](./SYSTEM_CAPABILITIES.md)
 
----
-
-## Architecture and status
-
+**Architecture and status**
 1. [NEXAH_ARCHITECTURE_COMPLETION_MAP.md](./NEXAH_ARCHITECTURE_COMPLETION_MAP.md)
 2. [ARCHITECTURE_MILESTONE.md](./ARCHITECTURE_MILESTONE.md)
 
----
-
-## Full system entry
-
+**Full system entry**
 1. [../README.md](../README.md)
 2. [REPOSITORY_MAP.md](./REPOSITORY_MAP.md)
 3. [../FRAMEWORK/README.md](../FRAMEWORK/README.md)
@@ -226,34 +137,16 @@ Together they provide a compact orientation layer for the repository.
 
 # Related Areas
 
-## Framework
-
-The more integrated architectural and conceptual framework lives in:
-
+**Framework**  
 [../FRAMEWORK/README.md](../FRAMEWORK/README.md)
 
----
-
-## Research
-
-The research layer, including theory documents and experiments, lives in:
-
+**Research**  
 [../ENGINE/research/README.md](../ENGINE/research/README.md)
 
----
-
-## Builder Lab
-
-Proto-models, demos, and exploratory constructions live in:
-
+**Builder Lab**  
 [../BUILDER_LAB/](../BUILDER_LAB/)
 
----
-
-## Applications
-
-Applied modules and real-world realizations live in:
-
+**Applications**  
 [../APPLICATIONS/](../APPLICATIONS/)
 
 ---
@@ -266,18 +159,9 @@ It does not replace the framework, research, or applications.
 
 Instead, it helps connect them.
 
-NEXAH combines:
-
-- structural modeling
-- regime analysis
-- risk geometry
-- navigation strategies
-- execution logic
-
-into a unified system for exploring and navigating **complex dynamic systems**.
+NEXAH combines structural modeling, regime analysis, risk geometry, navigation strategies and execution logic into a unified system for exploring and navigating complex dynamic systems.
 
 ---
 
-## NEXAH
-
-Navigator layer for repository orientation, architecture status, and capability overview.
+**NEXAH Navigator**  
+Orientation layer for repository, architecture status, and capability overview.
