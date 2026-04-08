@@ -1,6 +1,25 @@
 # NEXAH
 *A framework for discovering, mapping and beginning to navigate stability in complex dynamical systems.*
 
+## ⚡ Key Result — IEEE Power Systems
+
+NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical methods across IEEE power systems (118 → 9241 buses).
+
+This result is consistent across system sizes and shows that instability can be detected through **structural dynamics** before voltage collapse becomes visible.
+
+| Network                | Phi-Split | Lead Time vs. Classical Collapse | Status                     |
+|------------------------|-----------|----------------------------------|----------------------------|
+| IEEE 118-Bus           | 36.10 s   | **43.9 s**                       | Confirmed                  |
+| IEEE 300-Bus           | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop       |
+| IEEE 1354-Bus          | 36.10 s   | **43.9 s**                       | Confirmed                  |
+| IEEE 9241-Bus (PEGASE) | 36.10 s   | **43.9 s**                       | Confirmed                  |
+
+👉 Full results: [Power Systems Application](./APPLICATIONS/power_systems/README.md)
+
+![NEXAH Mic-Drop IEEE 300-Bus](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+*Early detection based on structural field dynamics — not voltage thresholds.*
+
 ## 🧭 Conceptual Pipeline
 
 ```text
