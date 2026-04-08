@@ -33,7 +33,7 @@ system definitions → regime structures → risk landscapes → navigable traje
 | META  | relational system definition |
 | ARCHY | regime structure detection and structural simulation logic |
 | MESO  | risk geometry computation |
-| NEXAH | navigation strategies |
+| NEXAH | navigation strategies (incl. triple spiral coupling + URF Axial Space) |
 | MEVA  | execution and simulation |
 
 ---
@@ -52,6 +52,7 @@ The NEXAH repository is organized into several major components.
 | APPLICATIONS       | example systems and applied realizations |
 | BUILDER_LAB        | demos, proto-models, and fast exploratory construction |
 | DISCOVERY_ENGINE   | structure extraction and discovery logic |
+| **urf_axial_space** | **3D coordinate system + Root Bridge + Matroschka mapping** ← **neu** |
 
 ---
 
@@ -63,12 +64,12 @@ The NEXAH engine bridges formal structural research with executable system analy
 
 Pipeline:
 
-Formal Structure (Research)
-    ↓
-Structural Algebra Core
-    ↓
-Executable Analysis
-    ↓
+Formal Structure (Research)  
+↓  
+Structural Algebra Core  
+↓  
+Executable Analysis  
+↓  
 Structural Output
 
 ---
@@ -149,6 +150,9 @@ It is the place to look when you want to understand the system **from above**.
 **Applications**  
 [../APPLICATIONS/](../APPLICATIONS/)
 
+**URF Axial Space** (new 3D layer)  
+[../urf_axial_space/README.md](../urf_axial_space/README.md)
+
 ---
 
 # Summary
@@ -159,7 +163,7 @@ It does not replace the framework, research, or applications.
 
 Instead, it helps connect them.
 
-NEXAH combines structural modeling, regime analysis, risk geometry, navigation strategies and execution logic into a unified system for exploring and navigating complex dynamic systems.
+NEXAH combines structural modeling, regime analysis, risk geometry, navigation strategies and execution logic into a unified system for exploring and navigating **complex dynamic systems**.
 
 ---
 
