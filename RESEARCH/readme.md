@@ -34,34 +34,44 @@ All results remain strictly within **finite discrete order theory**.
 
 ---
 
-# 🔗 Relation to CORE_GEOMETRY & Spiral Coupling (NEW)
+# 🔗 Relation to CORE_GEOMETRY, Spiral Coupling & URF Axial Space (NEW)
 
-While the research layer is strictly discrete, the NEXAH framework includes extended layers:
+While the research layer is strictly discrete, the NEXAH framework includes extended layers that build directly on top of it:
 
 → **CORE_GEOMETRY**  
-→ **Spiral Coupling Layer (v9.x)**
+→ **Spiral Coupling Layer (v9.x)**  
+→ **URF Axial Space + Root Bridge Layer (v9.1)** ← **neu**
 
-CORE_GEOMETRY introduces:
+**CORE_GEOMETRY** introduces:
 - continuous field representations
 - geometric transition structures
 - coherence-based stability metrics
 
-The **Spiral Coupling Layer** adds:
-- triple spiral coupling (Water–Mercury–Ferrofluid)
+**Spiral Coupling Layer** adds:
+- Dreifache Spiralüberlagerung (Water ~42 Hz, Mercury ~63 Hz, Ferrofluid ~77 Hz)
 - Dual-Strand Grey Channel
 - Elastic Dual Lock (Span-Gurt)
-- Switch-Mechanismus
+- Ferrofluid als magnetischer Koppler
+- Switch-Mechanismus zwischen den Strängen
+
+**URF Axial Space + Root Bridge (v9.1)** provides the 3D geometric reference frame:
+- Root Cube (neutral core)
+- White Cube / Black Cube variants
+- Theta-Hertz Axis, Magnet-Time Axis, Beta Curvature (Restricted Axis √∫), Memory Spin
+- Matroschka mapping of nested layers
+- Direct mapping of the 3x3 / 2x2 Switch Grid into 3D space
+- Root Bridge as unified connection between spirals, Elastic Axis and Switch points
 
 Thus:
 
 RESEARCH → discrete structural foundation  
 CORE_GEOMETRY → continuous geometric extension  
-SPIRAL_COUPLING → multi-component dynamic navigation layer
+SPIRAL_COUPLING → multi-component dynamic navigation layer  
+**URF AXIAL SPACE + ROOT BRIDGE** → 3D coordinate system and navigable reference frame
 
-Important:
-
-The research layer does not depend on CORE_GEOMETRY or Spiral Coupling.  
-Both build on top of the research layer.
+**Important:**  
+The research layer does not depend on any of the geometric or dynamic extensions.  
+All extensions (CORE_GEOMETRY, Spiral Coupling, URF Axial Space) build cleanly on top of the discrete foundation.
 
 ---
 
@@ -82,16 +92,19 @@ Key elements include:
 
 # Research Status
 
-Phase I–II formally consolidated.
+**Phase I–II** formally consolidated.
 
-Next stage:
+**Next stage:**
 
 → Applied validation through system models  
 → Integration with geometric field extensions (CORE_GEOMETRY)  
-→ Integration with dynamic coupling extensions (Spiral Coupling Layer v9.x)
+→ Integration with dynamic coupling extensions (Spiral Coupling Layer v9.x)  
+→ Integration with 3D reference frame (URF Axial Space + Root Bridge v9.1)
 
 ---
 
 **NEXAH Research Layer**
 
 Formal structural foundations for system navigation in finite dynamical frameworks.
+
+The entire framework — from discrete order theory to continuous field navigation and 3D geometric reference (Root Cube, Matroschka mapping, Root Bridge) — rests on this minimal, rigorous base.
