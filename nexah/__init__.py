@@ -3,13 +3,6 @@ NEXAH Public API
 
 This module exposes the core structural components of the NEXAH Engine
 for external users.
-
-Example:
-
-    import nexah
-
-    engine = nexah.Engine()
-    poset = engine.create_poset(elements, order)
 """
 
 # --- Core algebraic structures ---
@@ -27,28 +20,30 @@ from ENGINE.core.regime_operator import RegimeOperator
 class Engine:
     """
     High-level interface for the NEXAH framework.
-
-    Provides simplified access to the core structural
-    components of the NEXAH Engine.
     """
-
     def __init__(self):
         self.Poset = Poset
         self.Lattice = Lattice
 
     def create_poset(self, elements, order):
-        """Create a finite poset structure."""
         return self.Poset(elements, order)
 
     def create_lattice(self, elements, order):
-        """Create a lattice structure."""
         return self.Lattice(elements, order)
 
 
 # ================================================================
-# === NEUER LAYER: Dreifache Spiralüberlagerung (Water-Mercury-Ferro) ===
+# === Spiral Coupling Layer (v9.0) ===
 # ================================================================
 from .spiral_coupling import SpiralCouplingLayer, SpiralCouplingKernel
+
+
+# ================================================================
+# === URF Axial Space Layer (v9.1) ===
+# === 3D coordinate system for Matroschka + Switch Grid ===
+# ================================================================
+from .urf_axial_space.urf_axial_space_kernel import URFAxialSpaceKernel
+from .urf_axial_space.switch_grid_mapper import SwitchGridMapper
 
 
 # --- Public API export list ---
@@ -61,7 +56,12 @@ __all__ = [
     "FrameOperator",
     "RegimeOperator",
     "Engine",
-    # Neue dreifache Spiral-Kopplung
+    # Spiral Coupling
     "SpiralCouplingLayer",
     "SpiralCouplingKernel",
+    # URF Axial Space
+    "URFAxialSpaceKernel",
+    "SwitchGridMapper",
 ]
+
+__version__ = "1.1"
