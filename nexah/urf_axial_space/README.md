@@ -35,7 +35,7 @@ Center: **α (Potential)**
 ![Black Cube](visuals/NEXAH_URF_Axial_Space_with_Matroschka_Switch_Grid_v9.1_v.2.png)
 
 **Triple Spiral Coupling + Elastic Axis** (reference)
-![Triple Spiral Coupling](visuals/triple_spiral_coupling_overview.png)
+![Triple Spiral Coupling](visuals/NEXAH_Triple_Spiral_Root_Cube_Interaction_v9.1.png)
 
 ---
 
