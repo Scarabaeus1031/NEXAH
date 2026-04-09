@@ -1,0 +1,18 @@
+
+===== NEXAH NAVIGATION POLICY REPORT =====
+
+Detected classical events: [83, 117, 223]
+
+Escape region count: 3
+
+Mean radial distance: 0.030571
+Max radial distance: 0.151473
+
+Stability center:
+  coherence = 0.989379
+  switch    = 0.001211
+
+Interpretation:
+- escape region concentrated in lower sector (~270°–315°)
+- policy applies counter-radial force
+- system shows orbit-like stability with localized escape vectors
