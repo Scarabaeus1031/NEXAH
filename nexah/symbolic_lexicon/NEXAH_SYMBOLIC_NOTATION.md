@@ -20,6 +20,20 @@ DKH = Dynamics – Knick/Coupling – Housing
 
 ---
 
+## Frame of Reference
+
+**Schumann Resonance 7.83 Hz**  
+→ fundamental reference frequency anchored at the **7-axis**  
+→ serves as the physical and dynamical **Frame of Reference** for the entire system  
+→ connects the 7-axis directly to the Riemann Critical Line (Elastic Axis)  
+→ 7.83 Hz acts as the “heartbeat” that stabilises the resonant hovering drift and the 12-fold Operator
+
+**10 as X**  
+→ symbolic and geometric cross-point (axis intersection)  
+→ Roman numeral X represents the orthogonal crossing of axes and the structural architecture of the geometry
+
+---
+
 ## Structural Numbers
 
 **292**  
@@ -62,8 +76,7 @@ The Riemann Critical Line (Re(s) = 1/2) is geometrically realized as the **Elast
 - The 12-fold Operator with self-folding and 3-directional flow provides the rotational symmetry around this axis.
 - Ramanujan summation (-1/12) corresponds to the fundamental Draft / Leerstelle.
 - The iterative mirror patterns and resonant hovering drift describe the dynamic behaviour along and around the Critical Line.
-
-This forms a coherent, navigable 3D model that links number-theoretic structures directly to operational control (292 NCS Switch) and real-system applications (IEEE power grids).
+- The Schumann Resonance 7.83 Hz at the 7-axis serves as the physical frame of reference that anchors the entire resonant structure.
 
 ---
 
