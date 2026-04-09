@@ -1,0 +1,30 @@
+===== NEXAH ADAPTIVE PHASE LOCK REPORT =====
+
+Baseline mean radius: 0.009398
+Controlled mean radius: 0.020429
+
+Baseline max radius: 0.018073
+Controlled max radius: 0.049054
+
+Baseline mean coherence: 0.917134
+Controlled mean coherence: 0.916491
+
+Baseline first classical event: 64
+Controlled first classical event: 61
+Collapse shift (controlled - baseline): -3
+
+Baseline escape count: 25
+Controlled escape count: 75
+Control activation count: 254
+
+Learned theta_target: 0.231793 rad (13.28 deg)
+Target radius (median): 0.008938
+Phase tolerance: 0.220000 rad (12.61 deg)
+
+Mean control signal: 0.005333
+Max |control signal|: 0.080000
+
+Interpretation:
+- adaptive phase lock did not improve mean coherence.
+- adaptive phase lock did not reduce maximum orbit excursion.
+- adaptive phase lock increased escape-like phase deviations.
