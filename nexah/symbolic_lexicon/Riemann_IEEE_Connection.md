@@ -1,6 +1,6 @@
 # Riemann Connection and IEEE Power Systems Application
 
-**Version:** v9.8 (April 2026)  
+**Version:** v9.9 (April 2026)  
 **Status:** Observed structural connection with direct practical application
 
 ## Core Geometric Translation
