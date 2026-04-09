@@ -1,0 +1,27 @@
+NEXAH v10 Closed-Loop Control Report
+====================================
+
+Time steps: 300
+Seed: 42
+Control strength: 0.1
+
+Baseline first classical event: 64
+Controlled first classical event: 64
+Collapse shift (controlled - baseline): 0
+
+Baseline mean radius: 0.008692
+Controlled mean radius: 0.009583
+Baseline max radius: 0.016401
+Controlled max radius: 0.030013
+
+Baseline escape count: 4
+Controlled escape count: 15
+Control activation count: 16
+
+Baseline stability center: (0.912376, 0.000000)
+Controlled stability center: (0.912376, 0.000000)
+
+Interpretation:
+- Controlled and baseline runs reached the first classical collapse at the same step.
+- Controlled run increased the number of escape-prone states.
+- Controlled trajectory drifted farther from the basin center on average.
