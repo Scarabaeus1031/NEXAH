@@ -1,0 +1,15 @@
+
+===== NEXAH PHASE CONTROL REPORT =====
+
+Baseline mean radius: 0.917141
+Controlled mean radius: 0.917141
+
+Baseline max radius: 0.928105
+Controlled max radius: 0.928105
+
+Mean control signal: 0.000001
+Max control signal: 0.005548
+
+Interpretation:
+- phase-based control stabilizes angular drift
+- should reduce chaotic escape amplification
