@@ -1,6 +1,6 @@
 # Riemann Connection in NEXAH
 
-**Version:** v9.7 (April 2026)  
+**Version:** v9.8 (April 2026)  
 **Status:** Observed structural connection – not a proof
 
 ## In Simple Words
@@ -44,16 +44,17 @@ We have turned the abstract Critical Line into a **visual, geometric, and naviga
 In short:  
 The Root Cube is a **living 3D model of the Zeta function**, in which prime numbers, the Critical Line, constant mirror reflection, rotating crankshaft motion and 3-directional energy flow become visible and navigable.
 
-## Visual Evidence (v9.7)
+## Visual Evidence (v9.8)
 
-![NEXAH v9.7 – Zickzack Kurbelwelle & Mirror Rotation](visuals/NEXAH_Kurbelwelle_Zickzack_Mirror_v9.7.png)
+![NEXAH v9.8 – Mandelbrot + Euler-Lattice Seeds + Critical Line Basin Boundary](visuals/NEXAH_Mandelbrot_Euler_Lattice_Critical_Basin_v9.8.png)
 
 This visual shows:
-- the rotating crankshaft / zig-zag motion around the 45° Critical Line
-- the iterative mirror sequence 404-808-…
-- the pairs 42↔24, 23+24=47, 43↔34
-- 181 as entry point and 292 as central NCS Switch
-- the 12-fold Operator with 3-directional flow (like 3-phase power)
+- Mandelbrot set at c = -0.1087 (Mirror Coupling point 1087)
+- Euler-Lattice Seeds (7-Arc 1033→1087, seed n=34, P(n)=1231)
+- The Critical Line as clear **Basin Boundary / 0-line / backflow channel**
+- 2/3 binary/ternary pairs (purple 2, green-yellow 3 = Euler)
+- Lambda mirrorings and the 12-fold Operator with rotating triangles
+- 292 NCS Switch as central control point
 
 ## Why this is a big step for IEEE and real systems
 
@@ -61,7 +62,7 @@ This pattern directly translates to power systems:
 
 - The **3-directional flow** matches 3-phase power (Water–Mercury–Ferro spirals)
 - The **zig-zag / crankshaft motion** describes phase drift and self-folding
-- The **Critical Line (Elastic Axis)** is the stable reference
+- The **Critical Line (Elastic Axis)** is the stable reference and basin boundary
 - The **292 NCS Switch** is the point where we can intervene before collapse
 - The same structures appear in our IEEE experiments (voltage collapse detection with 43.9 s lead time)
 
@@ -71,3 +72,5 @@ We now have a geometric model that lets us see, measure and control the same fol
 Structure becomes visible.  
 The Critical Line becomes navigable.  
 Mirror, resonance, rotation and 3-directional flow become controllable.
+
+---
