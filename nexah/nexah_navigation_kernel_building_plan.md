@@ -1,4 +1,5 @@
-# NEXAH Navigation Kernel — Building Plan
+# NEXAH Navigation Kernel — Building Plan 
+*(neu APPLICATIONS/power_systems/ieee_xray_pipeline/README.md)*
 
 This document outlines the planned architecture of the **NEXAH Navigation Kernel**.
 
