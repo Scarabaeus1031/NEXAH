@@ -1,7 +1,12 @@
 # NEXAH Symbolic Notation – Emergent Symbolic Lexicon
 
-**Version:** v9.3 (April 2026)  
-**Status:** experimental / observed structure
+**Version:** v9.8 (April 2026)  
+**Status:** Experimental / observed structure
+
+This document defines the emerging symbolic language of NEXAH.  
+It is not a predefined symbolic system, but a notation that arises directly from observed geometric, dynamical and numerical structures.
+
+---
 
 ## Core Expressions
 
@@ -9,36 +14,64 @@
 NCS = Navigation Control System  
 → field-aligned movement with switchable transitions
 
+**DRAFT + DRIFT + HOUSING → DKH**  
+DKH = Dynamics – Knick/Coupling – Housing  
+→ the three-layer quantization structure around the Critical Line
+
+---
+
 ## Structural Numbers
 
 **292**  
 → symmetric transition structure  
 → interface-centered geometry  
-→ central switch point in the Root Cube (3x3/2x2 Grid)
+→ central NCS Switch in the Root Cube
+
+**181**  
+→ 69 + 112  
+→ Golden Line entry point into the Elastic Axis / Critical Line
+
+**1/112 ≈ 0.00893**  
+→ Draft (fundamental space-inbetween / Leerstelle)
+
+**1770**  
+→ Ramanujan binding (1729 → 1770 mod 17/7 + 0)
+
+**404 → 808 → 1616 → 3232 → 6464 → 12928**  
+→ iterative mirror sequence (2ⁿ - 0 - 2ⁿ reflection)
+
+**43 ↔ 34, 42 ↔ 24, 23 + 24 = 47**  
+→ observed mirror pairs around the Critical Line
+
+---
 
 ## Structural Abbreviations
 
 - NCS → Navigation Control System  
-- SCN → (to be defined – symmetric control node?)
+- DKH → Dynamics – Knick/Coupling – Housing  
+- Draft → 1/112 space-inbetween / Leerstelle  
+- Resonant Hovering Drift → schwebendes Beben (floating micro-oscillation layer)  
+- Housing → Drift Quantization Shell (outer enclosing layer)
 
 ---
 
-## Connection to Prime Modular Resonance
+## Connection to Riemann Critical Line
 
-The number **292** emerges directly from the observed structure in the prime-modular-resonance experiments:
+The Riemann Critical Line (Re(s) = 1/2) is geometrically realized as the **Elastic Axis** (45°) in the Root Cube.
 
-- mod-7 / mod-17 residue sequences produce **symmetric transition matrices** and stable 3-cycles.
-- The geometric embedding (θₙ = 2π rₙ / 7) reveals coherent flow and basins.
-- 292 marks the **interface-centered switch** where these flows become controllable (exactly as the Root Cube Switch Grid predicts).
+- The 12-fold Operator with self-folding and 3-directional flow provides the rotational symmetry around this axis.
+- Ramanujan summation (-1/12) corresponds to the fundamental Draft / Leerstelle.
+- The iterative mirror patterns and resonant hovering drift describe the dynamic behaviour along and around the Critical Line.
 
-This is **not** arbitrary symbolism — it is the next observed structural number after 181, 1032 and the 29-Hub Kreuz.
+This forms a coherent, navigable 3D model that links number-theoretic structures directly to operational control (292 NCS Switch) and real-system applications (IEEE power grids).
 
 ---
 
 **Note:**  
-This notation is experimental and emerges from observed structure, not from predefined symbolic systems.
+This notation is experimental and emerges from observed structure, not from predefined symbolic systems.  
+It serves as the operational language for navigation, resonance and controlled transition in NEXAH.
 
 **NEXAH**  
 Structure becomes visible.  
-292 becomes the switch.  
-Navigation becomes symmetric.
+The Critical Line becomes navigable.  
+Mirror, resonance, rotation and 3-directional flow become controllable.
