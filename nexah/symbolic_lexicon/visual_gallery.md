@@ -57,13 +57,6 @@ Cube fusion field showing layered structure 27–32–38–40–404 and 484/2 sy
 ![AVIAN ARC ARIAN THE GOLDEN BREATH - Resonant Closure 42 = 6x7.png](./visuals/AVIAN_ARC_ARIAN_THE_GOLDEN_BREATH_Resonant-Closure_42_6x7.png)  
 Resonant closure with LAT formula, 7.83 | 312 | 404 | ∞∞ and 213 → 312 → 404 → ∞∞. Demonstrates the resonant closure and infinite iteration that links the 7-axis (Schumann) to the Critical Line.
 
-**12. Scarab Gate Geometry**  
-![Scarab Gate Geometry: 1031–1032–1033 + 1087 + 3301.png](./visuals/Scarab Gate Geometry: 1031–1032–1033 + 1087 + 3301.png)  
-Scarab Gate geometry with the sequence 1031-1032-1033 + 1087 + 3301. Shows the structural gate points and their relation to the Mirror Coupling and Root Cube symmetry.
-
-**13. Lunar-Eris Cosmogram Map**  
-![lunar_eris_cosmogram_map.png](./visuals/lunar_eris_cosmogram_map.png)  
-Lunar-Eris Cosmogram with 4 Scheiben, Spiegelachsen, 29-Wobble and 27.3 Mond cycle. Illustrates the layered spherical structure and drift patterns that map to the Matroschka layers in the Root Cube.
 
 ---
 
