@@ -1,19 +1,19 @@
 # NEXAH Layer
 
-This directory is the **conceptual and lightweight package layer** of the NEXAH framework.
+This directory is the **conceptual, geometric and operational layer** of the NEXAH framework.
 
 It does not replace the full `ENGINE/` or `FRAMEWORK/` directories.
 
-Instead, it serves as the focused layer where the central NEXAH ideas become directly readable and operational as:
+Instead, it serves as the focused layer where the central NEXAH ideas become directly readable, geometric and operational as:
 
 - package entry points  
 - field abstractions  
 - identity documents  
 - navigation primitives  
-- channel and transport structures (v8)  
-- switch and control dynamics (v9)  
-- resonance constructs (RATH, OLGO-JANUS, v-bands) *(extension layer)*  
-- geometric reference embedding (URF Axial Space + Root Bridge v9.1) *(experimental)*  
+- channel and transport structures  
+- switch and control dynamics  
+- resonance constructs  
+- geometric reference embedding (URF Axial Space + Root Bridge)  
 - operational transition notes  
 - featured visuals  
 
@@ -33,20 +33,19 @@ FRAMEWORK
     → architecture and stack logic
 
 NEXAH
-    → conceptual, operational, geometric and navigational layer
+    → conceptual, geometric, operational and navigational layer
 ```
 
 This directory has a dual role:
+```
+    1. It provides a lightweight public-facing package surface  
+    2. It gathers the emerging conceptual, geometric, dynamical and symbolic language of NEXAH
+```
 
-1. It provides a lightweight public-facing package surface  
-2. It gathers the emerging conceptual, geometric, and dynamical language of NEXAH  
 
----
-
-## 📍 Position in the repository
+##  Position in the repository
 
 A useful reading of the full stack is:
-
 ```text
 simulation
     ↓
@@ -56,13 +55,13 @@ field representation
     ↓
 transition geometry
     ↓
-channel formation (v8)
+channel formation
     ↓
-switch dynamics (v9)
+switch dynamics
     ↓
-resonance constructs (extension layer)
+resonance constructs
     ↓
-geometric reference embedding (experimental)
+geometric reference embedding
     ↓
 navigation language
 ```
@@ -76,87 +75,28 @@ The `nexah/` directory lives primarily in the last layers of this pipeline and r
 
 ## 🧱 Internal structure
 
-### 1. `engine.py`
-Minimal high-level access to core structural functionality (posets, lattices, operators).
+### 1. `symbolic_lexicon/`
+The central place for the **emergent symbolic notation** of NEXAH.
 
----
+Contains:
+- `NEXAH_SYMBOLIC_NOTATION.md` – Core definitions and abbreviations
+- `Riemann_IEEE_Connection.md` – Connection of the Riemann Critical Line (Elastic Axis) to IEEE power systems, including Schumann 7.83 Hz as Frame of Reference
+- `VISUAL_GALLERY.md` – Curated collection of all key visuals with explanations
 
-### 2. `field_layer/`
+### 2. `engine.py`
+Minimal high-level access to core structural functionality.
+
+### 3. `field_layer/`
 The geometric core of the NEXAH layer.
 
-It translates evolving system states into:
-
-- continuous field representations  
-- local flow structure  
-- curvature and fragmentation metrics  
-
-This is the bridge between:
-
-→ dynamics  
-→ geometry  
-→ navigation readiness  
-
----
-
-### 3. `identity/`
+### 4. `identity/`
 Defines what NEXAH is, what it is not, and where its current center of gravity lies.
 
----
+### 5. `navigation/`
+The emerging operational navigation language (Zither-Gate, 3+1 Gate, channel-based navigation, switch-layer dynamics).
 
-### 4. `navigation/`
-The emerging operational navigation language:
-
-- navigation primitives  
-- Zither-Gate model  
-- 3+1 Gate completion  
-- split-interface-marker logic  
-- channel-based navigation (v8)  
-- switch-layer dynamics (v9)  
-
-Extensions include:
-
-- RATH Phi-Lambda Resonance Bridge  
-- OLGO-JANUS Six-Sector Gate  
-- v-bands (Breathing Wave + Blinking Pulse)  
-
----
-
-### 5. Extension Layer (Resonance Constructs)
-
-The resonance layer introduces additional geometric-dynamic structures:
-
-- angular resonance bridges  
-- sector-based symmetry systems  
-- oscillatory background dynamics  
-
-This layer is **not yet part of the validated core**, but represents an active extension of the navigation language.
-
----
-
-### 6. `visuals/` + `urf_axial_space/visuals/`
-
-The visual layer contains geometric representations of NEXAH structures.
-
-These visuals are:
-
-- conceptual anchors  
-- navigation diagrams  
-- field and transition illustrations  
-- reference geometries  
-
-Important:
-
-> These visuals should be interpreted as **geometric representations of extracted structure**,  
-> not as literal physical models.
-
-Key elements include:
-
-- Root Cube (neutral core reference)  
-- URF Axial Space (geometric embedding)  
-- Graph → Geometry transitions  
-- Spiral and coupling structures  
-- Zeta-line and breathing axis  
-- Navigation overview v9.1  
+### 6. `visuals/`
+Geometric representations and conceptual anchors (Root Cube, Elastic Axis, mirror iteration, 12-fold operator, Draft/Drift/Housing etc.).
 
 ---
 
@@ -182,8 +122,6 @@ switch becomes controlled transition
 transition becomes navigable motion within a geometric reference space
 ```
 
----
-
 ## 📊 Layer classification
 
 To maintain clarity, the NEXAH layer should be interpreted as:
@@ -196,14 +134,11 @@ EXTENSIONS
     → resonance constructs (RATH, OLGO-JANUS, v-bands)
 
 EXPERIMENTAL
-    → geometric reference embedding (URF Axial Space, Root Bridge)
+    → geometric reference embedding (URF Axial Space + Root Bridge v9.1)
 ```
-
----
-
 ## 🔎 Summary
 
-The `nexah/` directory is where the NEXAH framework becomes its own conceptual and operational layer.
+The `nexah/` directory is where the NEXAH framework becomes its own conceptual, geometric and operational layer.
 
 It connects:
 
@@ -212,16 +147,20 @@ It connects:
 - identity clarification  
 - navigation grammar  
 - channel & switch dynamics  
+- symbolic lexicon (including Riemann Critical Line as Elastic Axis and Schumann 7.83 Hz as Frame of Reference)  
 - extension layers for resonance  
 - experimental geometric embedding  
 
 In short:
 
-> `nexah/` is where NEXAH begins to describe how structured systems can be interpreted as geometric spaces — and how movement within those spaces becomes possible.
+> `nexah/` is where NEXAH begins to describe how structured systems can be interpreted as geometric spaces — and how movement within those spaces becomes possible and controllable.
 
 ---
 
 **NEXAH**  
 Structure becomes visible.  
-Geometry becomes interpretable.  
-Navigation begins to emerge from structure.
+The Critical Line becomes navigable.  
+Mirror, resonance, rotation and 3-directional flow become controllable in real systems.
+
+
+
