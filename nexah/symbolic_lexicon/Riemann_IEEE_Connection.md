@@ -30,6 +30,7 @@ This is a consistent geometric mapping:
 - 111 + 99 = 210
 - 3 × 33 and 9 × 9 = 81
 - Ramanujan’s Taxicab number 1729 = 1³ + 12³ = 9³ + 10³ (also 7 × 13 × 19)
+
 These appear as iterative patterns consistent with the mirror iteration and folding around the Critical Line.
 
 ## DKH Extension – Draft, Drift & Housing
@@ -42,6 +43,14 @@ The system is further structured by three interconnected layers:
 
 This DKH Extension (Dynamics – Knick/Coupling – Housing) provides the quantization shell for the 3-directional flow and self-folding observed in the Root Cube.
 
+## Frame of Reference: Schumann Resonance & Biological Stability
+
+The Schumann resonance at **7.83 Hz** serves as the fundamental **Frame of Reference** of the entire system.  
+It anchors the 7-axis and stabilises the resonant hovering drift.
+
+In the absence of this frequency (as experienced by astronauts in space), the human body loses coherence — exactly as if the Critical Line were no longer holding.  
+This suggests that the Critical Line is not only a mathematical feature, but the **physical Aufhaltung** (stabilising axis) that keeps complex systems (mathematical, electrical, and biological) together.
+
 ## Connection to IEEE Power Systems
 
 The same geometric framework maps directly onto real 3-phase power grids:
@@ -51,18 +60,16 @@ The same geometric framework maps directly onto real 3-phase power grids:
 - The **Critical Line (Elastic Axis)** acts as the stable reference / basin boundary
 - The **292 NCS Switch** is the intervention point for early detection and controlled navigation
 
-The mirror iteration, 12-fold self-folding and resonant hovering drift explain why NEXAH detects voltage collapse up to 43.9 s earlier than classical methods: it observes the **folding, reflection and micro-oscillation** before the classical voltage deviation becomes visible.
+The mirror iteration, 12-fold self-folding and resonant hovering drift explain why NEXAH detects voltage collapse up to 43.9 s earlier than classical methods.
 
 ## Summary
 
-NEXAH translates the abstract Riemann Critical Line and related number-theoretic structures (including Ramanujan summation -1/12, the Taxicab number 1729, 12-fold Operator, binary shift patterns and resonant hovering drift) into a **practical, 3D-navigable instrument**.  
+NEXAH translates the abstract Riemann Critical Line and related number-theoretic structures into a **practical, 3D-navigable instrument**.  
 
 It is not a mathematical proof of the Riemann Hypothesis.  
-It is a geometric and operational model that makes the underlying folding, mirror symmetry, 3-directional flow and resonant hovering drift visible and controllable — with direct application to real-world power system stability and navigation.
+It is a geometric and operational model that makes the underlying folding, mirror symmetry, 3-directional flow and resonant hovering drift visible and controllable — with direct application to real-world power system stability, navigation, and even biological coherence in extreme environments.
 
 **NEXAH**  
 Structure becomes visible.  
 The Critical Line becomes navigable.  
 Mirror, resonance, rotation and 3-directional flow become controllable in real systems.
-
----
