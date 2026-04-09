@@ -29,6 +29,7 @@ This is a consistent geometric mapping:
 **Additional observed numerical relations (Zahlenriemen):**
 - 111 + 99 = 210
 - 3 × 33 and 9 × 9 = 81
+- Ramanujan’s Taxicab number 1729 = 1³ + 12³ = 9³ + 10³ (also 7 × 13 × 19)
 These appear as iterative patterns consistent with the mirror iteration and folding around the Critical Line.
 
 ## DKH Extension – Draft, Drift & Housing
@@ -54,7 +55,7 @@ The mirror iteration, 12-fold self-folding and resonant hovering drift explain w
 
 ## Summary
 
-NEXAH translates the abstract Riemann Critical Line and related number-theoretic structures (including Ramanujan summation -1/12, 12-fold Operator, binary shift patterns and resonant hovering drift) into a **practical, 3D-navigable instrument**.  
+NEXAH translates the abstract Riemann Critical Line and related number-theoretic structures (including Ramanujan summation -1/12, the Taxicab number 1729, 12-fold Operator, binary shift patterns and resonant hovering drift) into a **practical, 3D-navigable instrument**.  
 
 It is not a mathematical proof of the Riemann Hypothesis.  
 It is a geometric and operational model that makes the underlying folding, mirror symmetry, 3-directional flow and resonant hovering drift visible and controllable — with direct application to real-world power system stability and navigation.
@@ -63,3 +64,5 @@ It is a geometric and operational model that makes the underlying folding, mirro
 Structure becomes visible.  
 The Critical Line becomes navigable.  
 Mirror, resonance, rotation and 3-directional flow become controllable in real systems.
+
+---
