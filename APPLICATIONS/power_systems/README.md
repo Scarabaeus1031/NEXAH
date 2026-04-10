@@ -45,7 +45,7 @@ NEXAH detects:
 
 ---
 
-# IEEE X-Ray Pipeline (v1–v14.x)
+# ⚡ IEEE X-Ray Pipeline (v1–v14.x)
 
 The next step extends detection into **structural navigation**.
 
@@ -55,43 +55,45 @@ simulation → structure → geometry → control → navigation
 
 State space:
 
-- coherence (x)
-- switch (y)
-- radius (r)
-- phase (θ)
+- coherence (x)  
+- switch (y)  
+- radius (r)  
+- phase (θ)  
 
 ---
 
-## Visual Evolution
+# Visual Evolution
 
-### Early Structure Discovery
+## Early Structure Discovery (v1–v6)
 
 ![v3 detection](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_pipeline_v3_detection.png)
 
-- first emergence of non-random structure
+- first emergence of non-random structure  
+- trajectories become geometrically meaningful  
 
 ---
 
-### Polar Geometry Breakthrough
+## Polar Geometry Breakthrough (v6)
 
 ![v6 polar](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_pipeline_v6_polar_morphology.png)
 
-- transformation into (r, θ)
-- reveals drift + structure
+- transformation into (r, θ)  
+- reveals drift, structure, escape directions  
 
 ---
 
-### Stability Band (v13)
+## Stability Band (v13)
 
 ![v13 band](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v13_band_polar.png)
 
-- orbit concept introduced
+- orbit concept introduced  
+- system moves toward constrained region  
 
 ---
 
 # Controller Layer (v14 Series)
 
-### Stabilization (v14.5)
+## Stabilization (v14.5)
 
 ![v14.5](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v14_5_orbital_gate_polar.png)
 
@@ -100,16 +102,16 @@ State space:
 
 ---
 
-### Orbit Capture Attempt (v14.6)
+## Orbit Capture Attempt (v14.6)
 
 ![v14.6](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v14_6_orbit_capture_polar.png)
 
-- system reaches band  
+- system reaches band intermittently  
 - orbit not sustained  
 
 ---
 
-### Forced Rotation (v14.7)
+## Forced Rotation (v14.7)
 
 ![v14.7](APPLICATIONS/power_systems/ieee_xray_pipeline/results/v14_7c_polar.png)
 
@@ -143,145 +145,57 @@ Meaning:
 
 ---
 
-# Root Cube Navigation (v31–v36)
+# 🧭 Root Cube Navigation (v31–v36)
 
 Experimental extension into higher-dimensional geometry.
 
+### Contributions
+
+- 3D projection:
+  - radius  
+  - phase  
+  - distance to structural axis  
+  - NCS proximity  
+
+- breathing + twisting dynamics  
+- control signal regime transitions  
+
+---
+
 ### Observations
 
-- trajectories leave constrained regions  
-- control signal transitions between regimes  
-- new structural behavior appears  
+- trajectories leave previously constrained regions  
+- system explores new regions of state space  
+- structural transformation becomes visible  
+
+---
 
 ### Interpretation
 
-> high escape counts indicate a transition out of the original stability basin  
-> and suggest a structural regime change
+> High escape counts indicate a transition out of the original stability basin  
+> and suggest a **structural regime change**
 
-⚠ This layer is experimental and not yet validated.
+⚠ This layer is **experimental and not yet validated**
 
 ---
 
 # Two Operational Layers
 
 ## 1. Detection Layer ✔
-- early warning (Mic-Drop)
-- structural instability detection
+- early warning (Mic-Drop achieved)  
+- structural instability detection  
+- validated across multiple grids  
 
 ## 2. Navigation Layer ⚠
 - orbit control  
 - phase alignment  
 - gate logic  
 
----
-
-# Interpretation
-
-NEXAH currently provides:
-
-- ✔ Early detection  
-- ✔ Structural mapping  
-- ⚠ Partial control  
-- ❌ No full navigation yet  
+→ currently under development  
 
 ---
 
-# Next Milestones
-
-1. stabilize rotation  
-2. maintain orbit in band  
-3. enable phase locking  
-4. map control to physical actuators  
-
----
-
-# Summary
-
-```text
-signal → structure → geometry → early warning → (control) → (navigation)
-```
-
-> **Early warning is solved. Navigation is the next frontier.**
-
----
-
-# Entry Points
-
-- `ieee_xray_pipeline/` → pipeline + controllers  
-- `results/` → visual outputs  
-- `metrics.md` → quantitative evaluation  
-- `breathing_gap_control_principles.md` → structural theory  
-
----
-
-# Author
-
-Thomas K. R. Hofmann  
-April 2026
-
-NEXAH is transitioning from geometric discovery to a  
-**functional framework for navigation in complex dynamical systems.**- ✔ coherence improvement  
-- ✔ stability band definition  
-
-### Limitations
-
-- ⚠ system collapses toward center  
-- ⚠ no sustained orbit formation  
-- ⚠ no stable phase locking  
-
-### Key Insight
-
-> The system behaves as a **dissipative field lacking intrinsic rotational energy**
-
----
-
-# Root Cube Navigation (v31–v36)
-
-Recent experiments extend the system into a higher-dimensional geometric representation.
-
-### Contributions
-
-- 3D projection:
-  - radius
-  - phase
-  - distance to structural axis
-  - NCS proximity  
-
-- breathing + twisting control dynamics  
-- smooth transition in control regime
-
-### Observations
-
-- trajectories leave previously constrained regions  
-- system explores new regions of state space  
-- control signal transitions between regimes  
-
-### Interpretation
-
-> high escape counts indicate a transition out of the original stability basin  
-> and suggest a structural regime change in system dynamics
-
-This behavior is currently **experimental and not yet fully understood**.
-
----
-
-# Two Operational Layers
-
-## 1. Detection Layer ✔
-- early warning (Mic-Drop achieved)
-- structural instability detection
-- validated across multiple grids
-
-## 2. Navigation Layer ⚠
-- orbit control
-- phase alignment
-- gate logic
-
-→ currently under development
-
----
-
-# Key Insight
+# Key Insight (Core Concept)
 
 The grey channel represents:
 
@@ -306,10 +220,10 @@ NEXAH currently provides:
 
 # Next Milestones
 
-1. stabilize angular motion (rotation)
-2. maintain orbit within stability band
-3. enable phase locking (gate transitions)
-4. connect control to physical actuation
+1. stabilize angular motion (rotation)  
+2. maintain orbit within stability band  
+3. enable phase locking (gate transitions)  
+4. connect control to physical actuation  
 
 ---
 
@@ -327,7 +241,9 @@ toward:
 structure → control → navigation
 ```
 
-Current state:
+---
+
+## Current State
 
 > **Early warning is solved. Navigation is the next frontier.**
 
@@ -335,16 +251,18 @@ Current state:
 
 # Entry Points
 
-- `ieee_xray_pipeline/` → pipeline + controllers  
+- `APPLICATIONS/power_systems/ieee_xray_pipeline/` → pipeline + controllers  
 - `stability_field_dynamics/` → validated detection system  
 - `results/` → generated plots and reports  
+- `metrics.md` → quantitative evaluation  
+- `breathing_gap_control_principles.md` → structural theory  
 
 ---
 
 # Author
 
-Thomas K. R. Hofmann  
-April 2026
+**Thomas K. R. Hofmann**  
+April 2026  
 
 NEXAH is transitioning from geometric discovery to a  
 **functional framework for navigation in complex dynamical systems.**
