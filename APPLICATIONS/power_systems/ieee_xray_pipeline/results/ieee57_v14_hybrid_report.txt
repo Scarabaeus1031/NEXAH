@@ -1,0 +1,32 @@
+===== NEXAH V14 HYBRID CONTROLLER REPORT =====
+
+Band target radius: 0.587000
+Band interval: [0.552000, 0.622000]
+Theta reference: -1.570796 rad
+Phase tolerance: 0.220000 rad
+Omega reference: 0.000000
+Omega tolerance: 0.060000
+
+Baseline mean radius: 0.227862
+Controlled mean radius: 0.295201
+
+Baseline max radius: 0.571906
+Controlled max radius: 0.868469
+
+Baseline mean coherence: 0.917144
+Controlled mean coherence: 0.916170
+
+Baseline first classical event: 0
+Controlled first classical event: 0
+
+Baseline escape count: 299
+Controlled escape count: 288
+
+Control activation count: 296
+Mean control signal: 0.007160
+Max |control signal|: 0.080000
+
+Mean coherence did not improve.
+Maximum orbit excursion did not improve.
+Escape count reduced.
+→ Hybrid controller is informative, but needs further tuning.
