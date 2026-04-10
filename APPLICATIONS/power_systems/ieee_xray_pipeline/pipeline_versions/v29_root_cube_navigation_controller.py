@@ -3,7 +3,6 @@ v29_root_cube_navigation_controller.py
 =======================================
 
 NEXAH v29 – 5×17 Prime Trigger + Full Möbius Rotation
-Reagiert auf 85 (5×17) und die weißen enclosed Parts
 """
 
 from pathlib import Path
@@ -46,7 +45,7 @@ NCS_SWITCH_THETA   = np.pi / 4.0
 K_FLOW          = 0.265
 FLOW_PHASE      = np.pi / 2 + 0.3
 K_LIFT          = 0.36
-K_AXIS_PULL     = 0.34      # maximaler Pull
+K_AXIS_PULL     = 0.34
 K_R_HOLD        = 0.13
 K_SNAP          = 0.20
 K_PULSE         = 0.18
@@ -55,17 +54,15 @@ BREATH_FREQ     = 0.112
 BREATH_AMP      = 0.038
 BREATH_TWIST    = 0.021
 
-PRIME_NUDGE_AMP = 0.032     # stärker
+PRIME_NUDGE_AMP = 0.032
 PRIME_BREAK     = 64
-FIVE_SEVENTEEN_TRIGGER = 0.0085  # dein 85-Signal
+FIVE_SEVENTEEN_TRIGGER = 0.0085
 
 NCS_LOCKS_DEG = [97.0, 277.0, 292.0]
 NCS_LOCKS     = np.deg2rad(NCS_LOCKS_DEG)
 SNAP_TOL      = np.deg2rad(3.0)
 
 U_MAX = 0.15
-
-MODE_COLORS = {"core_escape":"#d62728", "capture":"#ff7f0e", "band_hold":"#2ca02c", "gate_lock":"#9467bd", "outer_return":"#1f77b4"}
 
 
 def state_to_polar(x, y, cx=CENTER_X, cy=CENTER_Y):
@@ -111,6 +108,42 @@ def choose_mode(r, theta, prev_mode, ncs_prox, escape_count, u_history, u_mean):
     return "capture"
 
 
+def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
+    np.random.seed(seed)
+    net = pp.networks.case57()
+    base_p = net.load["p_mw"].copy()
+    base_q = net.load.get("q_mvar", None)
+    load_factor = 1.0 + 0.25 * np.sin(np.linspace(0, 6*np.pi, time_steps))
+    noise = np.random.normal(0.0, 0.02, time_steps)
+
+    voltage_mean, coherence, switch = [], [], []
+    classical_event = None
+
+    for t in range(time_steps):
+        scale = max(0.50, load_factor[t] + noise[t])
+        net.load["p_mw"] = base_p * scale
+        if base_q is not None:
+            net.load["q_mvar"] = base_q * scale
+        try:
+            pp.runpp(net, enforce_q_lims=True)
+            voltages = net.res_bus.vm_pu.values
+        except:
+            voltages = np.ones(len(net.bus)) * 0.95
+
+        v_mean = float(np.mean(voltages))
+        coh = 1.0 - float(np.std(voltages))
+        sw = float(np.gradient([*voltage_mean, v_mean])[-1]) if len(voltage_mean) > 1 else 0.0
+
+        voltage_mean.append(v_mean)
+        coherence.append(coh)
+        switch.append(sw)
+
+        if classical_event is None and v_mean < CLASSICAL_THRESHOLD:
+            classical_event = t
+
+    return {"voltage_mean": np.array(voltage_mean), "coherence": np.array(coherence), "switch": np.array(switch), "classical_event": classical_event}
+
+
 def simulate_v29(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
     net = pp.networks.case57()
@@ -143,7 +176,7 @@ def simulate_v29(time_steps=TIME_STEPS, seed=SEED):
 
         nudge = PRIME_NUDGE_AMP * np.cos(BREATH_FREQ * t * 1.5)
         if escape_count == PRIME_BREAK or is_enclosed_white_pattern(u_hist) or is_five_seventeen_trigger(u_mean_recent):
-            nudge *= 6.0   # MASSIVER Break-Nudge
+            nudge *= 6.0
 
         u = 0.0
         if mode == "capture":
@@ -217,7 +250,7 @@ controlled = simulate_v29()
 
 print("✅ v29 (5×17 Prime Trigger + Full Möbius Rotation) erfolgreich ausgeführt!")
 
-# Plots + Report (wie immer)
+# Plots + Report
 t = np.arange(TIME_STEPS)
 
 fig, axs = plt.subplots(5, 1, figsize=(14, 18), sharex=True)
