@@ -1,0 +1,7 @@
+NEXAH v15 Root Cube Navigation Report
+========================================
+Escape count: 32
+Mean coherence: nan
+Mean distance to Elastic Axis: nan
+Max NCS proximity: nan
+Mean control signal: nan
