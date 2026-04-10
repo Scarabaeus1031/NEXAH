@@ -1,9 +1,9 @@
 """
-v36_root_cube_navigation_controller.py
+v37_root_cube_navigation_controller.py
 ======================================
 
-NEXAH v36 – Sehr sanfter Golden Scarabaeus Möbius Breathing Pulse
-Stark gedämpft + starker Centering-Term → stabile Rotation
+NEXAH v37 – Ultra-sanfter Golden Scarabaeus Möbius Breathing Pulse
+Stabilste Version bisher + robuster Pfad + Diagnostic-Print
 """
 
 import copy
@@ -14,22 +14,26 @@ import pandapower as pp
 from mpl_toolkits.mplot3d import Axes3D
 
 # ============================================================
-# 0. PATHS
+# 0. ULTRA-ROBUSTER PFAD (Mac-sicher)
 # ============================================================
 SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parents[3]
-OUTDIR = REPO_ROOT / "APPLICATIONS" / "power_systems" / "ieee_xray_pipeline" / "results"
+REPO_ROOT  = SCRIPT_DIR.parents[3]                     # 4 Ebenen hoch → NEXAH Root
+OUTDIR     = REPO_ROOT / "APPLICATIONS" / "power_systems" / "ieee_xray_pipeline" / "results"
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
-TS_PATH    = OUTDIR / "ieee57_v36_root_cube_timeseries.png"
-POLAR_PATH = OUTDIR / "ieee57_v36_root_cube_polar.png"
-CUBE_PATH  = OUTDIR / "ieee57_v36_root_cube_3d_projection.png"
-REPORT_PATH= OUTDIR / "ieee57_v36_root_cube_report.txt"
+TS_PATH    = OUTDIR / "ieee57_v37_root_cube_timeseries.png"
+POLAR_PATH = OUTDIR / "ieee57_v37_root_cube_polar.png"
+CUBE_PATH  = OUTDIR / "ieee57_v37_root_cube_3d_projection.png"
+REPORT_PATH= OUTDIR / "ieee57_v37_root_cube_report.txt"
 
-print(f"📁 Speichere in: {OUTDIR}")
+print(f"📁 **Genauer Speicherort:** {OUTDIR.resolve()}")
+print(f"   → Timeseries: {TS_PATH.name}")
+print(f"   → Polar:      {POLAR_PATH.name}")
+print(f"   → 3D Cube:    {CUBE_PATH.name}")
+print(f"   → Report:     {REPORT_PATH.name}\n")
 
 # ============================================================
-# 1. SETTINGS – sehr sanft
+# 1. SETTINGS – ultra-sanft
 # ============================================================
 TIME_STEPS = 300
 SEED = 42
@@ -47,21 +51,21 @@ R_TARGET         = 0.0325
 ELASTIC_AXIS_ANGLE = np.pi / 4.0
 NCS_LOCKS_DEG      = [97.0, 277.0, 292.0]
 NCS_SWITCH_R       = 0.032
-U_MAX = 0.12                     # kleineres U-Max
+U_MAX = 0.10                     # noch kleiner
 
-K_LIFT          = 0.68
-K_R_HOLD        = 0.95
-K_FLOW          = 0.215
-K_AXIS_PULL     = 0.19           # sehr sanft
-K_SNAP          = 0.15
+K_LIFT          = 0.65
+K_R_HOLD        = 0.92
+K_FLOW          = 0.195
+K_AXIS_PULL     = 0.16           # sehr sanft
+K_SNAP          = 0.13
 BREATH_FREQ     = 0.118
-BREATH_AMP      = 0.014          # sehr sanftes Atmen
-BREATH_TWIST    = 0.006
-NUDGE_AMP       = 0.012
+BREATH_AMP      = 0.011          # extrem sanftes Atmen
+BREATH_TWIST    = 0.005
+NUDGE_AMP       = 0.009
 PRIME_BREAK     = 64
 FIVE_SEVENTEEN_TRIGGER = 0.0100
 
-CENTERING_FACTOR = 0.22          # starker Centering-Term
+CENTERING_FACTOR = 0.28          # starker Centering
 
 # ============================================================
 # 2. HELPER FUNCTIONS (unverändert)
@@ -85,7 +89,7 @@ def is_enclosed_white_pattern(u_history):
     recent = np.array(u_history[-30:])
     transitions = np.sum(np.abs(np.diff(recent)) > 0.08)
     strong_blocks = np.sum(np.abs(recent) > 0.12)
-    return transitions >= 10 and strong_blocks >= 16
+    return transitions >= 10 and strong_blocks >= 14
 
 def is_five_seventeen_trigger(u_mean_recent):
     return abs(u_mean_recent - FIVE_SEVENTEEN_TRIGGER) < 0.0065
@@ -104,7 +108,7 @@ def choose_mode(r, theta, dist_elastic, ncs_prox, escape_count, u_history):
 # ============================================================
 # 3. SIMULATION
 # ============================================================
-def simulate_v36():
+def simulate_v37():
     np.random.seed(SEED)
     net = pp.networks.case57()
     net.load.p_mw *= 0.85
@@ -140,19 +144,18 @@ def simulate_v36():
             u += K_R_HOLD * (R_TARGET + breath - r)
             flow = -K_FLOW * np.exp(-2.0 * dist_elastic) * np.sin(theta - ELASTIC_AXIS_ANGLE + 0.3)
             axis_pull = K_AXIS_PULL * (ELASTIC_AXIS_ANGLE - theta)
-            snap = K_SNAP * ncs_prox if ncs_prox > 0.55 else 0.0
+            snap = K_SNAP * ncs_prox if ncs_prox > 0.5 else 0.0
             if escape_count == PRIME_BREAK or is_enclosed_white_pattern(u_hist) or is_five_seventeen_trigger(np.mean(u_hist[-12:]) if u_hist else 0):
-                nudge *= 3.0
+                nudge *= 2.5
             u += flow + axis_pull + snap + nudge
 
-        # Starker Centering-Term
-        u += CENTERING_FACTOR * (R_TARGET - r)
+        u += CENTERING_FACTOR * (R_TARGET - r)          # starker Centering
 
         u = np.clip(u, -U_MAX, U_MAX)
         controlled["u"].append(u)
         u_hist.append(u)
 
-        load_factor = 1.0 + u * 0.08          # kleinerer Faktor
+        load_factor = 1.0 + u * 0.065                   # sehr kleiner Faktor
         net.load.p_mw = net.load.p_mw * load_factor
         net.load.q_mvar = net.load.q_mvar * load_factor
 
@@ -173,9 +176,9 @@ def simulate_v36():
 # ============================================================
 # 4. RUN & SAVE
 # ============================================================
-baseline, controlled, escape_count = simulate_v36()
+baseline, controlled, escape_count = simulate_v37()
 
-report = f"""NEXAH v36 Root Cube Navigation Report (7-Arc + 5×17 Full Break)
+report = f"""NEXAH v37 Root Cube Navigation Report (7-Arc + 5×17 Full Break)
 ========================================
 Escape count: {escape_count}
 Mean coherence: {np.mean(controlled['coherence']):.4f}
@@ -185,7 +188,7 @@ Mean control signal: {np.mean(controlled['u']):.4f}
 """
 REPORT_PATH.write_text(report, encoding="utf-8")
 
-print(f"✅ v36 erfolgreich ausgeführt!")
+print(f"✅ v37 erfolgreich ausgeführt!")
 print(f"   • {TS_PATH.name}")
 print(f"   • {POLAR_PATH.name}")
 print(f"   • {CUBE_PATH.name}")
