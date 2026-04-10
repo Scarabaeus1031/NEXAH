@@ -24,46 +24,97 @@ This result is consistent across system sizes and shows that instability can be 
 
 ## 🧪 Method & Validation (Summary)
 
-The reported early detection results are based on time-domain simulations of IEEE benchmark systems using standard power system models.
+The reported early detection results are based on deterministic time-domain simulations of standard IEEE benchmark systems.
 
-### Setup
+### Simulation Setup
 
 - Test systems: IEEE 118, 300, 1354, 9241 (PEGASE)
 - Simulation type: time-domain dynamic simulation
-- Input data: voltage magnitude, system state variables
-- No external or learned data used
+- Input variables: voltage magnitude and system state variables
+- No external datasets or machine learning models are used
 
-### Classical Baseline
+All simulations are executed under consistent conditions across systems to allow direct comparison.
 
-The comparison is made against standard voltage-based collapse detection:
+---
 
-- voltage threshold violation  
+### Definition of Collapse (Classical Baseline)
+
+Voltage collapse is defined as the first time step at which the system enters a rapid and sustained voltage decline, operationalized as:
+
+- a voltage magnitude drop below a predefined threshold (e.g. 0.7 p.u.), or  
+- the onset of irreversible voltage decay across the system  
+
+This definition is consistent with standard voltage-based stability monitoring practices.
+
+---
+
+### Classical Detection Reference
+
+The baseline comparison uses conventional voltage-based indicators:
+
+- voltage threshold violations  
 - rapid voltage drop (collapse onset)  
-- conventional monitoring signals  
+- standard monitoring signals derived from system state evolution  
 
-### NEXAH Signals
+No structural or geometric information is used in the baseline.
 
-NEXAH derives structural indicators directly from simulation outputs:
+---
 
-- coherence (aggregate structural alignment metric)  
-- switch signal (derivative-based transition indicator)  
-- trajectory structure in reduced state space  
+### NEXAH Structural Signals
 
-These signals are computed deterministically and require no parameter fitting.
+NEXAH derives structural indicators directly from the simulated system dynamics.
 
-### Measurement of Lead Time
+Key signals include:
 
-- collapse time (classical): defined by voltage breakdown  
-- NEXAH detection time: first consistent structural transition signal  
-- lead time = difference between these two timestamps  
+- **coherence**  
+  → an aggregate structural alignment metric computed from system-wide state variables  
 
-The observed ~43.9 seconds lead time is consistent across tested systems.
+- **switch signal**  
+  → a derivative-based indicator capturing rapid transitions in system behavior  
+
+- **trajectory structure**  
+  → the evolution of system states in a reduced-dimensional representation  
+
+All signals are computed deterministically from simulation outputs without parameter fitting or learned components.
+
+---
+
+### Detection Criterion
+
+- **Classical detection time**:  
+  first occurrence of collapse based on voltage-based criteria  
+
+- **NEXAH detection time**:  
+  first occurrence of a persistent structural transition signal (coherence drop / switch activation)  
+
+- **Lead time**:  
+  difference between NEXAH detection time and classical collapse time  
+
+---
+
+### Observed Results
+
+Across the tested IEEE systems, NEXAH consistently identifies structural transitions prior to classical voltage collapse.
+
+Under the tested conditions, the observed lead time is approximately **43.9 seconds**.
+
+---
 
 ### Reproducibility
 
-- all experiments are based on standard IEEE test cases  
-- full pipeline and outputs are available in the repository  
-- results can be reproduced using the provided scripts  
+- All experiments are based on publicly available IEEE benchmark systems  
+- The full simulation pipeline and generated outputs are included in the repository  
+- Results can be reproduced using the provided scripts and configuration  
+
+---
+
+### Limitations
+
+- Results are currently validated under fixed simulation conditions  
+- Sensitivity to varying load profiles, disturbances, and parameter changes is under investigation  
+- The structural indicators are not yet mapped to physical control actions  
+
+Further validation is ongoing to assess robustness across broader operating scenarios.
 
 ---
 
