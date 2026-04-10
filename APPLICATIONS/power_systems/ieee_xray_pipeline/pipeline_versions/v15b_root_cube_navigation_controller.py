@@ -1,8 +1,8 @@
 """
-v15b_root_cube_navigation_controller.py
+v15_root_cube_navigation_controller.py
 ======================================
 
-NEXAH v15 – Root Cube Navigation Controller (fixed)
+NEXAH v15 – Root Cube Navigation Controller (fixed absolute paths)
 """
 
 import copy
@@ -13,9 +13,13 @@ import pandapower as pp
 from mpl_toolkits.mplot3d import Axes3D
 
 # ============================================================
-# 0. Paths
+# 0. ABSOLUTE Paths (robust)
 # ============================================================
-OUTDIR = Path("APPLICATIONS/power_systems/ieee_xray_pipeline/results")
+# Gehe vom Skript-Ordner aus 4 Ebenen nach oben → Repo-Root
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT  = SCRIPT_DIR.parents[3]   # 4 levels up = NEXAH root
+
+OUTDIR = REPO_ROOT / "APPLICATIONS" / "power_systems" / "ieee_xray_pipeline" / "results"
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 TS_PATH    = OUTDIR / "ieee57_v15_root_cube_timeseries.png"
@@ -23,8 +27,10 @@ POLAR_PATH = OUTDIR / "ieee57_v15_root_cube_polar.png"
 CUBE_PATH  = OUTDIR / "ieee57_v15_root_cube_3d_projection.png"
 REPORT_PATH= OUTDIR / "ieee57_v15_root_cube_report.txt"
 
+print(f"📁 Saving results to: {OUTDIR}")
+
 # ============================================================
-# 1. Settings
+# 1. Settings (unverändert)
 # ============================================================
 TIME_STEPS = 300
 SEED = 42
@@ -66,7 +72,7 @@ MODE_ORDER = ["core_escape", "capture", "band_hold", "gate_lock", "outer_return"
 
 
 # ============================================================
-# Utility Functions
+# 2. Utility Functions
 # ============================================================
 def state_to_polar(x, y, cx=CENTER_X, cy=CENTER_Y):
     dx = x - cx
@@ -79,7 +85,7 @@ def state_to_root_cube(coherence, switch):
     r, theta = state_to_polar(coherence, switch)
     dist_to_elastic = abs(theta - ELASTIC_AXIS_ANGLE)
     if dist_to_elastic > np.pi:
-        dist_to_elastic = 2*np.pi - dist_to_elastic
+        dist_to_elastic = 2 * np.pi - dist_to_elastic
     ncs_prox = float(np.exp(-8.0 * np.hypot(r - NCS_SWITCH_R, theta - NCS_SWITCH_THETA)))
     return {"r": r, "theta": theta, "dist_to_elastic": dist_to_elastic, "ncs_proximity": ncs_prox}
 
@@ -99,7 +105,7 @@ def choose_mode(r, theta, prev_mode, ncs_prox):
 
 
 # ============================================================
-# Baseline
+# 3. Baseline
 # ============================================================
 def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
@@ -140,7 +146,7 @@ def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
 
 
 # ============================================================
-# v15 Controlled Simulation
+# 4. v15 Simulation
 # ============================================================
 def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
@@ -223,15 +229,16 @@ def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
 
 
 # ============================================================
-# Run
+# 5. Run
 # ============================================================
 baseline = simulate_baseline()
 controlled = simulate_v15()
 
-print("✅ v15 erfolgreich ausgeführt!")
+print("✅ v15 Root Cube Navigation Controller erfolgreich ausgeführt!")
+print(f"   Speichere Ergebnisse in: {OUTDIR}")
 
 # ============================================================
-# Plots + Report
+# 6. Plots + Report
 # ============================================================
 t = np.arange(TIME_STEPS)
 
@@ -263,8 +270,43 @@ fig.tight_layout()
 fig.savefig(TS_PATH, dpi=160)
 plt.close(fig)
 
+# Polar
+fig = plt.figure(figsize=(12, 10))
+ax = fig.add_subplot(111, projection='polar')
+ax.plot(controlled["theta"], controlled["radius"], alpha=0.7, label="Controlled trajectory")
+ax.scatter(controlled["theta"], controlled["radius"], c=controlled["gate_score"], cmap="viridis", s=30, label="Gate Score")
+ax.set_title("Polar View – Root Cube Projection")
+ax.legend()
+fig.tight_layout()
+fig.savefig(POLAR_PATH, dpi=160)
+plt.close(fig)
+
+# 3D Root Cube
+fig = plt.figure(figsize=(12, 10))
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(controlled["radius"], controlled["theta"], controlled["dist_elastic"],
+           c=controlled["gate_score"], cmap="plasma", s=40)
+ax.set_xlabel("Radius")
+ax.set_ylabel("Theta")
+ax.set_zlabel("Dist to Elastic Axis")
+ax.set_title("3D Root Cube Projection (v15)")
+fig.tight_layout()
+fig.savefig(CUBE_PATH, dpi=160)
+plt.close(fig)
+
+# Report
+report = f"""NEXAH v15 Root Cube Navigation Report
+========================================
+Escape count: {int(np.sum(controlled['radius'] > 0.055))}
+Mean coherence: {np.mean(controlled['coherence']):.4f}
+Mean distance to Elastic Axis: {np.mean(controlled['dist_elastic']):.4f}
+Max NCS proximity: {np.max(controlled['ncs_proximity']):.4f}
+Mean control signal: {np.mean(controlled['u']):.4f}
+"""
+REPORT_PATH.write_text(report, encoding="utf-8")
+
 print(f"   • {TS_PATH.name}")
 print(f"   • {POLAR_PATH.name}")
-print(f"   • {CUBE_PATH.name}")
+print(f"   • {CUBE_PATH.name}   ← 3D Root Cube View")
 print(f"   • {REPORT_PATH.name}")
 print("Fertig!")
