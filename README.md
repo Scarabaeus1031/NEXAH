@@ -21,9 +21,6 @@ This result is consistent across system sizes and shows that instability can be 
 *Early detection based on structural field dynamics — not voltage thresholds.*
 
 
-### What if we didn’t just simulate systems —  
-### but extracted their structure and learned how to move through it?
-
 ## 🧪 Method & Validation (Summary)
 
 The reported early detection results are based on time-domain simulations of IEEE benchmark systems using standard power system models.
