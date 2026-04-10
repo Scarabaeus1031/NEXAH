@@ -296,3 +296,237 @@ And the repeated motifs indicate a consistent structural system emerging across:
 
 **Status:**
 Motif language established → ready for integration into control logic (v14+)
+
+---
+
+## 11. Rotational Deficit (NEW)
+
+### Definition
+
+Absence of sustained angular motion within the extracted state space.
+
+**Observed as:**
+
+- phase clustering around fixed angles
+- lack of full circular trajectories
+- repeated collapse toward θ-stable regions
+
+**Role:**
+
+- limits orbital dynamics
+- prevents gate traversal
+- blocks continuous phase evolution
+
+**In control:**
+
+- angular forcing produces drift, not rotation
+- system behaves radially, not tangentially
+
+---
+
+## 12. Dissipation Field
+
+### Definition
+
+Underlying tendency of the system to collapse toward equilibrium.
+
+**Observed as:**
+
+- inward pull toward core
+- loss of radius after perturbation
+- damping of oscillatory behavior
+
+**Role:**
+
+- stabilizes system
+- suppresses orbit formation
+
+**In control:**
+
+- requires constant energy injection to maintain distance from core
+- counteracts all tangential motion attempts
+
+---
+
+## 13. Control Dimensionality Collapse
+
+### Definition
+
+Reduction of effective control space despite multiple inputs.
+
+**Observed as:**
+
+- P (active power) → radial effect
+- Q (reactive power) → also radial / coherence effect
+- lack of independent tangential influence
+
+**Role:**
+
+- prevents orthogonal control
+- limits navigation capability
+
+**Interpretation:**
+
+> Multiple control channels map to the same structural axis.
+
+---
+
+## 14. Synthetic Orbit (Field Layer)
+
+### Definition
+
+Artificially constructed rotational dynamics within the extracted state space.
+
+**Observed as:**
+
+- injected tangential vector:
+  (-sin θ, cos θ)
+- controlled angular motion independent of grid dynamics
+
+**Role:**
+
+- enables orbit formation
+- provides missing rotational component
+
+**Interpretation:**
+
+> Orbit is not extracted — it is constructed.
+
+---
+
+## 15. Gap Activation Failure (Refined)
+
+### Extension of "Breathing Gap"
+
+**Observed as:**
+
+- system approaches gap
+- but does not cross into active transition regime
+- pulse & snap rarely triggered
+
+**Reason:**
+
+- insufficient radius (never reaches band center)
+- insufficient phase velocity
+- lack of rotational traversal
+
+**Updated Role:**
+
+- gap is not only threshold
+- it requires:
+  - position (r)
+  - phase (θ)
+  - motion (dθ/dt)
+
+---
+
+## 16. Band Without Orbit
+
+### Definition
+
+System reaches stability region without exhibiting orbital motion.
+
+**Observed as:**
+
+- time in band > 0
+- but no circular traversal
+- local clustering instead of rotation
+
+**Role:**
+
+- indicates partial success
+- reveals missing dynamic component
+
+---
+
+## Updated Structural Synthesis
+
+```
+CORE (lock)
+   ↓
+GAP (transition layer)
+   ↓
+BAND (stability region)
+   ↓
+FIELD (NEW: dynamic construction layer)
+   ↓
+GRID (discrete mapping)
+```
+
+---
+
+## Updated Dynamics
+
+```
+pulse ↔ wave
+   +
+drift
+   +
+trigger (pink)
+   +
+rotation (missing / constructed)
+```
+
+---
+
+## Updated Control Implications
+
+A complete controller must regulate:
+
+1. Radius (distance from core)
+2. Phase (θ)
+3. Phase velocity (dθ/dt)
+4. Gap proximity
+5. Band adherence
+6. **Rotational flow (NEW)**
+
+---
+
+## Critical Insight (Updated)
+
+Previous controllers failed because they:
+
+- controlled position ✔
+- partially controlled phase ✔
+- did NOT control:
+  - sustained angular motion ❌
+  - gap traversal dynamics ❌
+
+---
+
+## New Direction
+
+Controllers must:
+
+- inject rotational dynamics (synthetic or physical)
+- synchronize:
+  - radius
+  - phase
+  - phase velocity
+- activate gap crossing conditions
+
+---
+
+## Extended Summary
+
+The Breathing Gap is not only:
+
+> a transition layer
+
+It is:
+
+> a **dynamically accessible layer**, requiring coordinated motion in:
+> - space (r)
+> - phase (θ)
+> - time (dθ/dt)
+
+---
+
+**Status Update:**
+
+Motif language established ✔  
+Structural mapping validated ✔  
+Rotational deficit identified ✔  
+Field layer introduced ✔  
+
+→ ready for **orbit-capable controller design (v15)**
