@@ -1,0 +1,64 @@
+===== NEXAH V14.6 ORBIT CAPTURE + GATE LOCK REPORT =====
+
+Stability center:
+  coherence = 0.942913
+  switch    = 0.000076
+
+Mode boundaries:
+  R_CORE_MAX      = 0.018000
+  R_CAPTURE_TARGET= 0.032000
+  R_CAPTURE_MIN   = 0.020000
+  R_BAND_MIN      = 0.026000
+  R_BAND_MAX      = 0.040000
+  R_HOLD_EXIT     = 0.023000
+  R_ENVELOPE_MAX  = 0.055000
+
+Ring target center: 0.032500
+Ring half width:    0.007500
+
+Theta reference: -1.570796 rad (-90.00 deg)
+Theta tolerance: 0.220086 rad (12.61 deg)
+Omega reference: 0.000000
+Omega tolerance: 0.060000
+NCS phase locks (deg): [97.0, 277.0, 292.0]
+Phase snap tolerance: 0.139626 rad (8.00 deg)
+
+Baseline mean radius: 0.027780
+Controlled mean radius: 0.025416
+
+Baseline max radius: 0.064473
+Controlled max radius: 0.056622
+
+Baseline mean coherence: 0.915757
+Controlled mean coherence: 0.917995
+
+Baseline first classical event: 0
+Controlled first classical event: 0
+Collapse shift (controlled - baseline): 0
+
+Baseline escape count: 82
+Controlled escape count: 63
+Escape delta (baseline - controlled): 19
+
+Pulse activation count: 0
+Snap activation count: 0
+Lift activation count: 122
+Control activation count: 300
+Mean control signal: 0.019525
+Max |control signal|: 0.048164
+
+Time in band: 68
+Time near gate (score > 0.65): 0
+Reentry count: 4
+Orbit capture time: 2
+
+Mode count [core_escape]: 122
+Mode count [capture]: 62
+Mode count [band_hold]: 113
+Mode count [gate_lock]: 0
+Mode count [outer_return]: 3
+
+Mean coherence improved.
+Maximum orbit excursion improved.
+Escape count reduced.
+Discrete NCS lock engagement did not occur.
