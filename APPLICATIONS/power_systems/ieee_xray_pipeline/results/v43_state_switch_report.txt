@@ -1,0 +1,31 @@
+NEXAH v43 – State Switch Controller
+
+Escape count: 400
+Cross count: 14
+Switch count: 14
+Lock count (prox > 0.3): 3
+
+Mean voltage: 0.9469
+Mean coherence: 0.9540
+Mean radius: 0.5310
+Mean dist to elastic axis: 2.3311
+
+Mean OLGO proximity: 0.0059
+Max OLGO proximity: 0.5322
+
+Mean control signal: -0.0800
+Mean radial term: -0.1045
+Mean theta term: 0.0033
+Mean lock term: -0.0155
+Mean shell reentry term: -0.0362
+Mean switch term: 0.0000
+
+Observed shell occupancy:
+  Core: 0
+  Transition: 0
+  Expansion: 400
+
+Target shell occupancy:
+  Core: 70
+  Transition: 330
+  Expansion: 0
