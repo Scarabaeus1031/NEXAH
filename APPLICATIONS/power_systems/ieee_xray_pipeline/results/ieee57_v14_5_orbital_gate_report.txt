@@ -1,0 +1,52 @@
+===== NEXAH V14.5 ORBITAL + GATE ACTIVATION REPORT =====
+
+Stability center:
+  coherence = 0.942913
+  switch    = 0.000076
+
+Band target radius: 0.587000
+Band interval: [0.552000, 0.622000]
+Theta reference: -1.570796 rad (-90.00 deg)
+Theta tolerance: 0.220086 rad (12.61 deg)
+Omega reference: 0.000000
+Omega tolerance: 0.060000
+NCS phase locks (deg): [97.0, 277.0, 292.0]
+Phase snap tolerance: 0.139626 rad (8.00 deg)
+
+Inner core radius: 0.100000
+Lift gain: 0.090000
+Lift saturation: 0.060000
+Breathing amplitude: 0.065000
+Breathing period: 96
+PULSE_GAIN: 0.045000
+PULSE_SHARPNESS: 18.000000
+U_MAX: 0.090000
+
+Baseline mean radius: 0.027780
+Controlled mean radius: 0.019930
+
+Baseline max radius: 0.064473
+Controlled max radius: 0.046045
+
+Baseline mean coherence: 0.915757
+Controlled mean coherence: 0.923516
+
+Baseline first classical event: 0
+Controlled first classical event: 0
+Collapse shift (controlled - baseline): 0
+
+Baseline escape count: 30
+Controlled escape count: 0
+Escape delta (baseline - controlled): 30
+
+Pulse activation count: 2
+Snap activation count: 0
+Lift activation count: 300
+Control activation count: 300
+Mean control signal: 0.089892
+Max |control signal|: 0.090000
+
+Mean coherence improved.
+Maximum orbit excursion improved.
+Escape count reduced.
+Discrete NCS lock engagement did not occur.
