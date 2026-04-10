@@ -1,4 +1,4 @@
-# Breathing Gap Motif Register
+# Breathing Gap Control Principles
 
 ## Purpose
 
@@ -144,11 +144,6 @@ Discrete coordinate system mapping state structure.
 * address space for dynamics
 * classification of states
 
-**Special rules:**
-
-* "00" remains external
-* boundary values excluded from inner dynamics
-
 ---
 
 ### 7. Beads / Transport Classes
@@ -224,21 +219,103 @@ Stability depends not only on position, but on **how the system moves through it
 
 ---
 
-## Structural Synthesis
+## New Structural Motifs (v14.6–v14.9)
 
-All motifs map into a unified structure:
+### 11. Rotational Deficit
+
+**Definition:**
+Absence of sustained angular motion in the system.
+
+**Observed as:**
+
+* phase clustering
+* lack of circular trajectories
+* repeated inward collapse
+
+**Role:**
+
+* prevents orbit formation
+* blocks gate traversal
+
+**Insight:**
+
+> The system supports position, but not rotation.
+
+---
+
+### 12. Dissipation Field
+
+**Definition:**
+Intrinsic tendency of the system to collapse toward equilibrium.
+
+**Observed as:**
+
+* inward pull to core
+* decay of radius
+* damping of oscillation
+
+**Role:**
+
+* stabilizes system
+* suppresses orbit dynamics
+
+---
+
+### 13. Control Dimensionality Collapse
+
+**Definition:**
+Multiple control inputs mapping to the same structural effect.
+
+**Observed as:**
+
+* P → radial control
+* Q → also radial-like effect
+
+**Role:**
+
+* prevents orthogonal control
+* limits navigation capability
+
+---
+
+### 14. Synthetic Orbit (Field Layer)
+
+**Definition:**
+Artificially constructed rotational dynamics in extracted state space.
+
+**Observed as:**
+
+* injected tangential vector:
+  (-sin θ, cos θ)
+
+**Role:**
+
+* enables orbit formation
+* compensates missing physical rotation
+
+**Insight:**
+
+> Orbit is constructed, not extracted.
+
+---
+
+## Structural Synthesis
 
 ```
 CORE (lock)
    ↓
 GAP (transition)
    ↓
-BAND (orbit)
+BAND (stability region)
+   ↓
+FIELD (synthetic dynamics)
    ↓
 GRID (discrete mapping)
 ```
 
-Dynamics:
+---
+
+## Dynamics
 
 ```
 pulse ↔ wave
@@ -246,34 +323,57 @@ pulse ↔ wave
 drift
    +
 trigger (pink)
+   +
+rotation (missing / constructed)
 ```
 
 ---
 
-## Control Implications
+## Control Principles (Updated)
 
 A complete controller must regulate:
 
 1. Radius (distance from core)
 2. Phase (θ)
 3. Phase velocity (dθ/dt)
-4. Gap proximity (transition threshold)
-5. Band adherence (stability region)
+4. Gap proximity
+5. Band adherence
+6. **Rotational flow (NEW)**
 
-### Missing Piece Identified
+---
 
-Previous controllers failed to fully stabilize because:
+## Critical Insight
 
-* they controlled position
-* but not **phase velocity + gap timing**
+Previous controllers failed because they:
 
-### Next Direction
+* controlled position ✔
+* partially controlled phase ✔
+* did NOT control:
+  * sustained rotation ❌
+  * gap traversal timing ❌
+
+---
+
+## Breathing Gap — Updated Interpretation
+
+The Breathing Gap is not only a threshold.
+
+It is a **dynamical layer** requiring:
+
+* correct position (r)
+* correct phase (θ)
+* correct motion (dθ/dt)
+
+---
+
+## Next Direction
 
 Design controllers that:
 
-* detect entry into Breathing Gap
-* apply impulse (pink-type trigger)
-* regulate phase velocity toward stable traversal
+* detect entry into the Breathing Gap
+* inject trigger impulses (pink-type)
+* regulate phase velocity
+* construct rotational flow when absent
 
 ---
 
@@ -283,16 +383,16 @@ The Breathing Gap is not a void.
 
 It is:
 
-> the minimal operational layer where state transitions occur.
-
-And the repeated motifs indicate a consistent structural system emerging across:
-
-* simulation
-* geometry
-* number fields
-* visual language
+> the minimal operational layer where state transitions occur  
+> and where motion must be correctly aligned in space, phase, and time.
 
 ---
 
 **Status:**
-Motif language established → ready for integration into control logic (v14+)
+
+Motif language established ✔  
+Structural mapping validated ✔  
+Rotational deficit identified ✔  
+Field layer introduced ✔  
+
+→ ready for **orbit-capable controller design (v15)**
