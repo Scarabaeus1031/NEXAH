@@ -88,6 +88,9 @@ NCS_LOCKS = np.deg2rad(NCS_LOCKS_DEG)
 SNAP_TOL = np.deg2rad(8.0)
 
 # Capture / hold / gate gains
+K_FLOW = 0.025
+FLOW_PHASE = np.pi / 2
+
 K_LIFT = 0.080
 K_R_CAPTURE = 0.060
 K_R_HOLD = 0.050
@@ -420,7 +423,16 @@ def simulate_controlled(time_steps: int = TIME_STEPS, seed: int = SEED):
 
         elif mode == "band_hold":
             u += K_R_HOLD * (r_tar - r_est)
-            u += K_THETA_HOLD * theta_err
+
+        # --- NEW: orbital flow (DAO) ---
+            theta_error = wrap_angle(th_est - THETA_REF)
+
+            u_theta_align = -K_THETA_HOLD * theta_error
+            u_theta_flow  = K_FLOW * np.sin(theta_error + FLOW_PHASE)
+
+            u += (u_theta_align + u_theta_flow)
+         # --------------------------------
+
             u += u_omega
             u += 0.8 * u_switch
             u += 0.5 * u_coh
@@ -433,7 +445,14 @@ def simulate_controlled(time_steps: int = TIME_STEPS, seed: int = SEED):
             snap = K_SNAP * wrap_angle(nearest - th_est)
 
             u += K_R_HOLD * (r_tar - r_est)
-            u += 1.2 * K_THETA_HOLD * theta_err
+            # --- NEW: orbital flow (DAO) ---
+            theta_error = wrap_angle(th_est - THETA_REF)
+
+            u_theta_align = -1.2 * K_THETA_HOLD * theta_error
+            u_theta_flow  = K_FLOW * np.sin(theta_error + FLOW_PHASE)
+
+            u += (u_theta_align + u_theta_flow)
+            # --------------------------------
             u += 0.8 * u_omega
             u += 0.8 * u_switch
             u += pulse
