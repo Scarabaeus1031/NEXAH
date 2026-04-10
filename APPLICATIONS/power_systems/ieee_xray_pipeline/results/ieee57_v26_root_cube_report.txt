@@ -1,0 +1,7 @@
+NEXAH v26 Root Cube Navigation Report (Prime-Modulated Möbius Break)
+========================================
+Escape count: 64
+Mean coherence: 0.9152
+Mean distance to Elastic Axis: 2.0967
+Max NCS proximity: 0.0028
+Mean control signal: -0.0014
