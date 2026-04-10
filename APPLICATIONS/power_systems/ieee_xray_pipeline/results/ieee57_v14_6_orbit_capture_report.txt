@@ -24,39 +24,39 @@ NCS phase locks (deg): [97.0, 277.0, 292.0]
 Phase snap tolerance: 0.139626 rad (8.00 deg)
 
 Baseline mean radius: 0.027780
-Controlled mean radius: 0.025416
+Controlled mean radius: 0.025316
 
 Baseline max radius: 0.064473
-Controlled max radius: 0.056622
+Controlled max radius: 0.055646
 
 Baseline mean coherence: 0.915757
-Controlled mean coherence: 0.917995
+Controlled mean coherence: 0.918115
 
 Baseline first classical event: 0
 Controlled first classical event: 0
 Collapse shift (controlled - baseline): 0
 
 Baseline escape count: 82
-Controlled escape count: 63
-Escape delta (baseline - controlled): 19
+Controlled escape count: 60
+Escape delta (baseline - controlled): 22
 
 Pulse activation count: 0
 Snap activation count: 0
 Lift activation count: 122
 Control activation count: 300
-Mean control signal: 0.019525
-Max |control signal|: 0.048164
+Mean control signal: 0.020354
+Max |control signal|: 0.040797
 
-Time in band: 68
+Time in band: 71
 Time near gate (score > 0.65): 0
 Reentry count: 4
 Orbit capture time: 2
 
 Mode count [core_escape]: 122
-Mode count [capture]: 62
-Mode count [band_hold]: 113
+Mode count [capture]: 52
+Mode count [band_hold]: 124
 Mode count [gate_lock]: 0
-Mode count [outer_return]: 3
+Mode count [outer_return]: 2
 
 Mean coherence improved.
 Maximum orbit excursion improved.
