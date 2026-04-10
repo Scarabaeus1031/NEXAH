@@ -1,142 +1,139 @@
 # NEXAH / power_systems
 
-**Power System Stability & Intelligent Field Navigation**
+**Power System Stability & Structural Field Navigation**
 
-NEXAH detects instability significantly before classical voltage-based methods by analyzing structural transitions in the system dynamics.
-
-Instead of waiting for voltage thresholds to be violated, NEXAH identifies the onset of instability directly in the evolving system structure.
+NEXAH detects instability significantly earlier than classical voltage-based methods by analyzing structural transitions in system dynamics.
 
 > **Stability is not a static state — it is a geometry evolving in time.**
 
 ---
 
-## Current Status – Detection ✔ | Navigation ⚠ (April 2026)
+# Current Status — Detection ✔ | Navigation ⚠ (April 2026)
 
-NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical methods on real IEEE networks — consistently across multiple grid sizes.
+NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical methods across multiple IEEE test systems.
 
-| Network                | Phi-Split | Lead Time vs. Classical Collapse | Status                     |
-|------------------------|-----------|----------------------------------|----------------------------|
-| IEEE 118-Bus           | 36.10 s   | **43.9 s**                       | Confirmed                  |
-| IEEE 300-Bus           | 36.10 s   | **43.9 s**                       | Confirmed – Mic-Drop!      |
-| IEEE 1354-Bus          | 36.10 s   | **43.9 s**                       | Confirmed                  |
-| IEEE 9241-Bus (PEGASE) | 36.10 s   | **43.9 s**                       | Confirmed (largest test)   |
-
----
-
-## Final Showcase
-
-![NEXAH Mic-Drop on IEEE 300-Bus](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
-*NEXAH Mic-Drop – 43.9 seconds earlier detection*
-
-![IEEE 9241-Bus – Phi-Split](stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee1354_real_tunable_v12.7_4panel_iota_ring.png)  
-*Scaling behavior remains structurally identical across large grids*
+| Network                | Lead Time vs. Classical Collapse | Status         |
+|------------------------|----------------------------------|----------------|
+| IEEE 118-Bus           | **43.9 s**                       | Confirmed      |
+| IEEE 300-Bus           | **43.9 s**                       | Mic-Drop       |
+| IEEE 1354-Bus          | **43.9 s**                       | Confirmed      |
+| IEEE 9241-Bus (PEGASE) | **43.9 s**                       | Confirmed      |
 
 ---
 
 ## Why this matters
 
-Classical methods react only after voltage collapse begins.
+Classical methods detect collapse only after voltage degradation begins.
 
-NEXAH instead observes:
+NEXAH detects:
 
 - structural drift  
 - coherence breakdown  
 - resonance deformation  
 
-→ and detects instability **before it becomes electrically visible**.
-
-This establishes:
-
-> **geometry-based early warning as a measurable, reproducible capability**
+→ **before collapse becomes electrically visible**
 
 ---
 
-# ⚡ New Layer: IEEE X-Ray Pipeline (v1–v14.x)
+# System Architecture
 
-After solving early detection, the project now enters the next phase:
-
-> **From detection → to navigation and control**
-
-The IEEE X-Ray Pipeline introduces:
-
-- reduced state space (coherence, switch)
-- polar geometry (radius + phase)
-- structural trajectories
-- experimental control systems (v14 series)
-
-### Key idea
+The NEXAH pipeline follows:
 
 ```text
-simulation → structure → geometry → control → navigation
+simulation → structure → field → channel → switch → decision → navigation
 ```
+
+---
+
+# IEEE X-Ray Pipeline (v1–v14.x)
+
+The IEEE X-Ray Pipeline introduces a reduced structural state space:
+
+- coherence (x)
+- switch signal (y)
+- radius (r)
+- phase (θ)
+
+This enables:
+
+- geometric trajectory analysis  
+- stability band detection  
+- experimental control  
 
 ---
 
 ## Controller Status (v14 Series)
 
-Recent work explores **active control inside the geometric state space**.
-
 ### Achieved
 
 - ✔ strong stabilization  
 - ✔ escape elimination (v14.5)  
-- ✔ measurable coherence improvement  
-- ✔ orbit band definition  
+- ✔ coherence improvement  
+- ✔ stability band definition  
 
-### Observed limitation
+### Limitations
 
 - ⚠ system collapses toward center  
 - ⚠ no sustained orbit formation  
-- ⚠ gate locking not achieved  
+- ⚠ no stable phase locking  
 
-### Core insight
+### Key Insight
 
-> The system is **dissipative** and lacks intrinsic rotational energy.
-
-Meaning:
-
-- stabilization works  
-- navigation does not yet work  
+> The system behaves as a **dissipative field lacking intrinsic rotational energy**
 
 ---
 
-## Two Operating Layers
+# Root Cube Navigation (v31–v36)
 
-### 1. 🔬 Scientific / Physical Layer  
-→ IEEE validation, collapse prediction, geometry, metrics  
-→ Mic-Drop result (v12.x)
+Recent experiments extend the system into a higher-dimensional geometric representation.
 
-### 2. 🧭 Structural Navigation Layer (NEW)  
-→ state-space dynamics  
-→ orbit control  
-→ gate logic  
-→ experimental controllers (v14.x)
+### Contributions
 
-→ See:  
-[NEXAH IEEE X-Ray Pipeline](APPLICATIONS/power_systems/ieee_xray_pipeline/)
+- 3D projection:
+  - radius
+  - phase
+  - distance to structural axis
+  - NCS proximity  
+
+- breathing + twisting control dynamics  
+- smooth transition in control regime
+
+### Observations
+
+- trajectories leave previously constrained regions  
+- system explores new regions of state space  
+- control signal transitions between regimes  
+
+### Interpretation
+
+> high escape counts indicate a transition out of the original stability basin  
+> and suggest a structural regime change in system dynamics
+
+This behavior is currently **experimental and not yet fully understood**.
 
 ---
 
-## Folder Structure & Key Resources
+# Two Operational Layers
 
-- **[stability_field_dynamics/](stability_field_dynamics/)**  
-  Core detection system (Mic-Drop validated)
+## 1. Detection Layer ✔
+- early warning (Mic-Drop achieved)
+- structural instability detection
+- validated across multiple grids
 
-- **[ieee_xray_pipeline/](APPLICATIONS/power_systems/ieee_xray_pipeline/)**  
-  Structural state-space + controller experiments (v1–v14.x)
+## 2. Navigation Layer ⚠
+- orbit control
+- phase alignment
+- gate logic
 
-- **[ieee_test_cases/](ieee_test_cases/)**  
-  Classical benchmark systems
+→ currently under development
 
 ---
 
-## Key Insight
+# Key Insight
 
-The grey channel is not a visualization artifact.
+The grey channel represents:
 
-It represents:
-
-> a structurally valid region of motion in the system
+> a structurally valid region of motion
 
 Switch points represent:
 
@@ -144,49 +141,38 @@ Switch points represent:
 
 ---
 
-## Interpretation
+# Interpretation
 
-NEXAH now demonstrates:
+NEXAH currently provides:
 
 ### ✔ Early Detection (Solved)
-- robust across grid sizes
-- measurable lead time
-- reproducible
-
-### ✔ Structural Representation (Solved)
-- field geometry is meaningful
-- trajectories are non-random
-
-### ⚠ Control / Navigation (Open Problem)
-- orbit formation missing
-- rotation not stable
-- gate locking not achieved
+### ✔ Structural Mapping (Solved)
+### ⚠ Control (Partial)
+### ❌ Navigation (Open Problem)
 
 ---
 
-## Next Milestone
+# Next Milestones
 
-To complete the system:
-
-1. introduce sustained rotation (angular stability)
-2. maintain orbit inside stability band
-3. enable real gate transitions
+1. stabilize angular motion (rotation)
+2. maintain orbit within stability band
+3. enable phase locking (gate transitions)
 4. connect control to physical actuation
 
 ---
 
-## Summary
+# Summary
 
-NEXAH has evolved from:
+NEXAH evolves from:
 
 ```text
 signal → structure → geometry → early warning
 ```
 
-to:
+toward:
 
 ```text
-structure → control → navigation (in progress)
+structure → control → navigation
 ```
 
 Current state:
@@ -195,12 +181,18 @@ Current state:
 
 ---
 
-## Author
+# Entry Points
+
+- `ieee_xray_pipeline/` → pipeline + controllers  
+- `stability_field_dynamics/` → validated detection system  
+- `results/` → generated plots and reports  
+
+---
+
+# Author
 
 Thomas K. R. Hofmann  
 April 2026
 
 NEXAH is transitioning from geometric discovery to a  
-**functional instrument for intelligent navigation in complex dynamic systems.****Date:** 03 April 2026
-
-**NEXAH** is transitioning from geometric exploration to a **functional instrument** for intelligent navigation in complex dynamic power systems.
+**functional framework for navigation in complex dynamical systems.**
