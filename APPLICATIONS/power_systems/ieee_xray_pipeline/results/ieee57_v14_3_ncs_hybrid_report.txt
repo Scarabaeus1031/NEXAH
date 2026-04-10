@@ -1,0 +1,45 @@
+===== NEXAH V14.3 NCS HYBRID CONTROLLER REPORT =====
+
+Stability center:
+  coherence = 0.942913
+  switch    = 0.000076
+
+Band target radius: 0.587000
+Band interval: [0.552000, 0.622000]
+Theta reference: -1.570796 rad (-90.00 deg)
+Theta tolerance: 0.220000 rad (12.61 deg)
+Omega reference: 0.000000
+Omega tolerance: 0.060000
+NCS phase locks (deg): [97.0, 277.0, 292.0]
+Phase snap tolerance: 0.139626 rad (8.00 deg)
+GAP_OFFSET: 0.010000
+U_MAX: 0.090000
+
+Baseline mean radius: 0.011731
+Controlled mean radius: 0.013198
+
+Baseline max radius: 0.150794
+Controlled max radius: 0.150617
+
+Baseline mean coherence: 0.942913
+Controlled mean coherence: 0.944246
+
+Baseline first classical event: 0
+Controlled first classical event: 0
+Collapse shift (controlled - baseline): 0
+
+Baseline escape count: 300
+Controlled escape count: 300
+Escape delta (baseline - controlled): 0
+
+Baseline lock-hit count: 0
+Controlled lock-hit count: 0
+Snap activation count: 0
+Control activation count: 299
+Mean control signal: 0.015929
+Max |control signal|: 0.090000
+
+Mean coherence improved.
+Maximum orbit excursion improved.
+Escape count did not reduce.
+Discrete NCS lock engagement did not increase.
