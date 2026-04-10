@@ -2,7 +2,7 @@
 v36_good_final.py
 =================
 
-NEXAH v36 GOOD FINAL – stabile Version mit Mean control signal ≈ -0.0770
+NEXAH v36 GOOD FINAL – exakt die stabile Version mit Mean control signal ≈ -0.0770
 Vollständige Plots + Agg-Backend + Save-Check
 """
 
