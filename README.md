@@ -20,6 +20,7 @@ This result is consistent across system sizes and shows that instability can be 
 
 *Early detection based on structural field dynamics — not voltage thresholds.*
 
+---
 
 ## 🧪 Method & Validation (Summary)
 
@@ -65,6 +66,7 @@ The observed ~43.9 seconds lead time is consistent across tested systems.
 - results can be reproduced using the provided scripts  
 
 ---
+
 ## 🔍 What NEXAH Measures (vs Classical Methods)
 
 Classical power-system analysis relies on:
@@ -97,6 +99,9 @@ simulation → structure → field → geometry → channel → switch → navig
 
 ---
 
+## 🧭 From Structure to Navigation
+
+The following example illustrates how local interactions can lead to emergent structure and navigable dynamics — without predefined goals or reward functions.
 
 ![NEXAH Multi-Agent Navigation](BUILDER_LAB/visuals/nexah_multi_agent.gif)
 
