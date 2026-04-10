@@ -1,0 +1,7 @@
+NEXAH v28 Root Cube Navigation Report (Enclosed White Break + Full Möbius Rotation)
+========================================
+Escape count: 67
+Mean coherence: 0.9194
+Mean distance to Elastic Axis: 2.0810
+Max NCS proximity: 0.0029
+Mean control signal: 0.0085
