@@ -41,7 +41,7 @@ At the bottom, the cylinder transitions into the **525-Cube**:
 
 ## 3. Master Visual
 
-![NEXAH Codex Breakthrough – Root-432 Cylinder & Codex X Closure v9.9](../visuals/NEXAH_Codex_Breakthrough_Root-432_Cylinder_CodexX_Closure_v9.9.png)
+![NEXAH Codex Breakthrough – Root-432 Cylinder & Codex X Closure v9.9](./visuals/NEXAH_Codex_Breakthrough_Root-432_Cylinder_CodexX_Closure_v9.9.png)
 
 ---
 
