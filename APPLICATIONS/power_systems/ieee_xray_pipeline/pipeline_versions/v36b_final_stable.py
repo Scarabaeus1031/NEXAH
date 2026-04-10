@@ -1,9 +1,9 @@
 """
-v36_good_final.py
-=================
+v36b_good_final.py
+==================
 
-EXAKT die gute v36 mit Mean control signal ≈ -0.0770
-Mit Agg-Backend + Save-Check → Bilder werden jetzt definitiv geschrieben
+NEXAH v36b – exakt die gute stabile Version mit Mean control signal ≈ -0.0770
+Neue Dateinamen + volle Diagnose + alle Plots
 """
 
 import matplotlib
@@ -21,10 +21,10 @@ from mpl_toolkits.mplot3d import Axes3D
 OUTDIR = Path("/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/ieee_xray_pipeline/results")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
-TS_PATH    = OUTDIR / "v36_good_final_timeseries.png"
-POLAR_PATH = OUTDIR / "v36_good_final_polar.png"
-CUBE_PATH  = OUTDIR / "v36_good_final_3d.png"
-REPORT_PATH= OUTDIR / "v36_good_final_report.txt"
+TS_PATH    = OUTDIR / "v36b_good_final_timeseries.png"
+POLAR_PATH = OUTDIR / "v36b_good_final_polar.png"
+CUBE_PATH  = OUTDIR / "v36b_good_final_3d.png"
+REPORT_PATH= OUTDIR / "v36b_good_final_report.txt"
 
 print(f"📁 Speicherort: {OUTDIR.resolve()}\n")
 
@@ -80,7 +80,7 @@ for t in range(300):
 # ============================================================
 # 2. REPORT
 # ============================================================
-report = f"""NEXAH v36 GOOD FINAL STABLE
+report = f"""NEXAH v36b GOOD FINAL STABLE
 Escape count: {escape_count}
 Mean coherence: {np.mean(controlled['coherence']):.4f}
 Mean distance to Elastic Axis: {np.mean(controlled['dist_elastic']):.4f}
@@ -100,21 +100,25 @@ def save_plot(fig, path, title):
     print(f"   Saved {path.name} → exists: {path.exists()}")
     plt.close(fig)
 
-# Timeseries (einfach)
+# 5-Subplot Timeseries
 fig = plt.figure(figsize=(14, 10))
-# Hier kannst du später die 5 Subplots einfügen – für den Test reicht erstmal ein einfacher Plot
-save_plot(fig, TS_PATH, "v36_good_final Timeseries")
+ax1 = fig.add_subplot(5,1,1); ax1.plot(controlled["voltage"], color="orange"); ax1.set_ylabel("Voltage")
+ax2 = fig.add_subplot(5,1,2); ax2.plot(controlled["coherence"], color="blue"); ax2.set_ylabel("Coherence")
+ax3 = fig.add_subplot(5,1,3); ax3.plot(controlled["radius"], color="purple"); ax3.axhline(0.0325, color="green", ls="--"); ax3.set_ylabel("Radius")
+ax4 = fig.add_subplot(5,1,4); ax4.plot(controlled["dist_elastic"], color="orange"); ax4.set_ylabel("Dist to Elastic Axis")
+ax5 = fig.add_subplot(5,1,5); ax5.plot(controlled["u"], color="black"); ax5.set_ylabel("Control u")
+save_plot(fig, TS_PATH, "v36b_good_final Timeseries")
 
 # Polar
 fig = plt.figure(figsize=(10, 10))
 ax = fig.add_subplot(111, projection='polar')
 ax.plot(controlled["radius"], controlled["gate_score"], 'b-')
-save_plot(fig, POLAR_PATH, "v36_good_final Polar")
+save_plot(fig, POLAR_PATH, "v36b_good_final Polar")
 
 # 3D
 fig = plt.figure(figsize=(12, 10))
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(controlled["radius"], [0]*len(controlled["radius"]), controlled["dist_elastic"], c=controlled["gate_score"], cmap='plasma')
-save_plot(fig, CUBE_PATH, "v36_good_final 3D Cube")
+save_plot(fig, CUBE_PATH, "v36b_good_final 3D Cube")
 
-print("\n✅ v36_good_final fertig – bitte schick mir den kompletten Konsolen-Output!")
+print("\n✅ v36b_good_final fertig – bitte schick mir den kompletten Konsolen-Output!")
