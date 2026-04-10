@@ -2,7 +2,7 @@
 v15_root_cube_navigation_controller.py
 ======================================
 
-NEXAH v15 – Root Cube Navigation Controller (fixed absolute paths)
+NEXAH v15 – Root Cube Navigation Controller (final fixed paths)
 """
 
 import copy
@@ -15,9 +15,8 @@ from mpl_toolkits.mplot3d import Axes3D
 # ============================================================
 # 0. ABSOLUTE Paths (robust)
 # ============================================================
-# Gehe vom Skript-Ordner aus 4 Ebenen nach oben → Repo-Root
 SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT  = SCRIPT_DIR.parents[3]   # 4 levels up = NEXAH root
+REPO_ROOT  = SCRIPT_DIR.parents[4]          # <--- jetzt parents[4] !!
 
 OUTDIR = REPO_ROOT / "APPLICATIONS" / "power_systems" / "ieee_xray_pipeline" / "results"
 OUTDIR.mkdir(parents=True, exist_ok=True)
@@ -27,10 +26,14 @@ POLAR_PATH = OUTDIR / "ieee57_v15_root_cube_polar.png"
 CUBE_PATH  = OUTDIR / "ieee57_v15_root_cube_3d_projection.png"
 REPORT_PATH= OUTDIR / "ieee57_v15_root_cube_report.txt"
 
-print(f"📁 Saving results to: {OUTDIR}")
+print(f"📁 Saving results to: {OUTDIR.resolve()}")
+print(f"   TS    → {TS_PATH.name}")
+print(f"   Polar → {POLAR_PATH.name}")
+print(f"   3D    → {CUBE_PATH.name}")
+print(f"   Report→ {REPORT_PATH.name}\n")
 
 # ============================================================
-# 1. Settings (unverändert)
+# 1. Settings
 # ============================================================
 TIME_STEPS = 300
 SEED = 42
@@ -235,7 +238,7 @@ baseline = simulate_baseline()
 controlled = simulate_v15()
 
 print("✅ v15 Root Cube Navigation Controller erfolgreich ausgeführt!")
-print(f"   Speichere Ergebnisse in: {OUTDIR}")
+print(f"   Speichere Ergebnisse in: {OUTDIR.resolve()}\n")
 
 # ============================================================
 # 6. Plots + Report
