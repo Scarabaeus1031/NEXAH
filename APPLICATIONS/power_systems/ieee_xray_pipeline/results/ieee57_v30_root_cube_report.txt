@@ -1,0 +1,7 @@
+NEXAH v30 Root Cube Navigation Report (5×17 Prime Ultra-Break + Full Möbius Rotation)
+========================================
+Escape count: 63
+Mean coherence: 0.9192
+Mean distance to Elastic Axis: 2.1087
+Max NCS proximity: 0.0030
+Mean control signal: 0.0104
