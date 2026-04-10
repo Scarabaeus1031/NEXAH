@@ -301,3 +301,252 @@ Current state:
 Next milestone:
 
 > Transition from stabilization → navigation.
+
+# 10. Orbit Capture & Structural Limits (v14.6 – v14.9)
+
+## v14.6 — Orbit Capture + Gate Lock Controller
+
+**File:**
+- `v14.6_orbit_capture_and_gate_lock_controller.py`
+
+### Features
+
+- Mode-based control architecture:
+  - core_escape
+  - capture
+  - band_hold
+  - gate_lock
+  - outer_return
+
+- Dynamic breathing radius
+- Gate score combining:
+  - radial proximity
+  - phase proximity
+  - angular velocity
+
+- Pulse + snap logic
+
+### Result
+
+- Successful trajectory lift from core
+- Entry into capture region
+- Increased time in band
+
+**Limitations:**
+- No sustained orbit
+- Gate lock not triggered
+- Collapse toward center persists
+
+### Insight
+
+> Mode-based control improves structure, but does not create rotation.
+
+---
+
+## v14.7 — Orbital Flow Injection
+
+**File:**
+- `v14.7_orbit_capture_and_gate_lock_controller.py`
+
+### New Elements
+
+- Orbital flow term introduced:
+```python
+u_theta_align + u_theta_flow
+```
+
+- Sinusoidal phase forcing
+- Stronger angular guidance
+
+### Result
+
+- Slight angular drift observed
+- Improved coherence
+
+**Limitations:**
+- No full rotation
+- Phase clustering persists
+
+### Insight
+
+> Angular forcing alone is insufficient to create rotation.
+
+---
+
+## v14.7b / v14.7c — Forced Orbit Attempts
+
+**Files:**
+- `v14.7b_orbit_activation`
+- `v14.7c_forced_orbit_activation`
+
+### New Elements
+
+- Increased flow gain
+- Phase offset tuning
+- Strong tangential forcing
+
+### Result
+
+- Increased stiffness
+- Trajectory compression
+- No circular motion
+
+### Insight
+
+> Stronger forcing increases rigidity, not rotation.
+
+---
+
+## v14.8 — Two-Axis Control (P vs Q)
+
+**File:**
+- `v14.8_two_axis_orbit_controller.py`
+
+### Concept
+
+Split control into:
+
+- radial → active power (`p_mw`)
+- tangential → reactive power (`q_mvar`)
+
+### Goal
+
+Create orthogonal control axes.
+
+### Result
+
+- Radial stabilization works
+- Coherence improves
+
+**Limitations:**
+- Tangential control ineffective
+- No rotation
+- Phase remains clustered
+
+### Critical Insight
+
+> Reactive power does not provide an independent tangential axis.
+
+---
+
+## v14.9 — State-Space Orbit Injection
+
+**File:**
+- `v14.9_state_space_orbit_controller.py`
+
+### New Approach
+
+- Inject rotation directly in NEXAH state space
+- Use tangential vector:
+
+```python
+(-sin(theta), cos(theta))
+```
+
+- Decouple grid dynamics from field dynamics
+
+### Result
+
+- First controlled angular motion observed (prototype)
+- Separation of:
+  - dissipative system (grid)
+  - constructive dynamics (NEXAH field)
+
+### Insight
+
+> Rotation must be constructed at the field level, not extracted.
+
+---
+
+# 11. Fundamental Limitation
+
+## Lack of Natural Rotation
+
+Observed across all versions:
+
+- Radial control works ✔
+- Angular control fails ❌
+
+---
+
+## Control Dimensionality Collapse
+
+Even with two inputs:
+
+- System behaves effectively 1D
+- Inputs are not orthogonal in effect
+
+---
+
+## Dissipative Nature of Grid
+
+IEEE57 is:
+
+- strongly damped
+- stability-seeking
+- non-oscillatory
+
+### Conclusion
+
+> The system collapses trajectories instead of sustaining cycles.
+
+---
+
+# 12. Conceptual Shift
+
+## Before
+
+> Control the grid to create orbits
+
+## After
+
+> Extract structure → build dynamics on top
+
+---
+
+# 13. System Architecture (Updated)
+
+### Layer 1 — Simulation (ARCHY)
+- Physical system (IEEE57)
+
+### Layer 2 — Structure
+- Extracted state space (coherence, switch)
+
+### Layer 3 — Field (NEW)
+- Artificial dynamics
+- Rotational flow
+- Navigation layer
+
+---
+
+# 14. Current Status
+
+## Achieved
+
+- Stable state space ✔
+- Quantitative improvements ✔
+- Escape suppression ✔
+- Structural field extraction ✔
+
+## Not Achieved
+
+- Natural orbit ❌
+- Gate locking ❌
+- Physical phase navigation ❌
+
+---
+
+# 15. Next Milestone (v15)
+
+- Explicit field construction
+- Limit cycle generation
+- Stable orbit formation in NEXAH layer
+
+---
+
+# 16. Final Insight
+
+> Real systems expose stability (potential),  
+> but not necessarily motion (rotation).
+
+NEXAH provides the missing layer.
