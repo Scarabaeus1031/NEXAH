@@ -1,0 +1,7 @@
+NEXAH v31 Root Cube Navigation Report (7-Arc + 5×17 Full Break)
+========================================
+Escape count: 65
+Mean coherence: 0.9192
+Mean distance to Elastic Axis: 2.0868
+Max NCS proximity: 0.0028
+Mean control signal: 0.0163
