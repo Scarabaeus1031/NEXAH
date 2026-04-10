@@ -1,0 +1,32 @@
+===== NEXAH STABILITY BAND CONTROLLER REPORT =====
+
+Baseline mean radius: 0.009398
+Controlled mean radius: 0.009512
+
+Baseline max radius: 0.018073
+Controlled max radius: 0.021210
+
+Baseline mean coherence: 0.917134
+Controlled mean coherence: 0.917154
+
+Baseline first classical event: 64
+Controlled first classical event: 64
+Collapse shift (controlled - baseline): 0
+
+Baseline escape count: 184
+Controlled escape count: 186
+Control activation count: 186
+
+Learned coherence band: [0.908411, 0.925139]
+Learned switch band:    [-0.002827, 0.002827]
+Learned radius band:    [0.004825, 0.014459]
+Empirical center:       (0.910953, -0.000803)
+
+Mean control signal: -0.000057
+Max |control signal|: 0.036969
+
+Interpretation:
+- stability band control improved mean coherence.
+- stability band control did not reduce maximum orbit excursion.
+- stability band control increased escape-like states.
+- controller left first classical collapse timing unchanged.
