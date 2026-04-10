@@ -1,0 +1,7 @@
+NEXAH v29 Root Cube Navigation Report (5×17 Prime Trigger + Full Möbius Rotation)
+========================================
+Escape count: 64
+Mean coherence: 0.9189
+Mean distance to Elastic Axis: 2.0823
+Max NCS proximity: 0.0029
+Mean control signal: 0.0066
