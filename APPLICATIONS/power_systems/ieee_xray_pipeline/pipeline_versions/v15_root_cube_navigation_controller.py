@@ -85,13 +85,20 @@ MODE_ORDER = ["core_escape", "capture", "band_hold", "gate_lock", "outer_return"
 
 
 # ============================================================
-# 2. Root Cube Mapping
+# 2. Utility Functions
 # ============================================================
-def state_to_root_cube(coherence: float, switch: float):
-    dx = coherence - CENTER_X
-    dy = switch - CENTER_Y
+def state_to_polar(x: float, y: float, cx: float, cy: float):
+    """Convert (coherence, switch) to polar coordinates"""
+    dx = x - cx
+    dy = y - cy
     r = float(np.hypot(dx, dy))
     theta = float(np.arctan2(dy, dx))
+    return r, theta, dx, dy
+
+
+def state_to_root_cube(coherence: float, switch: float):
+    """Map extracted state into Root Cube coordinates"""
+    r, theta, _, _ = state_to_polar(coherence, switch, CENTER_X, CENTER_Y)
     
     dist_to_elastic = abs(theta - ELASTIC_AXIS_ANGLE)
     if dist_to_elastic > np.pi:
@@ -136,13 +143,13 @@ def choose_mode(r: float, theta: float, prev_mode: str, ncs_proximity: float):
 
 
 # ============================================================
-# 4. Baseline Simulation (from v14)
+# 4. Baseline Simulation (v14)
 # ============================================================
 def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
     net = pp.networks.case57()
     base_p = net.load["p_mw"].copy()
-    base_q = net.load["q_mvar"].copy() if "q_mvar" in net.load.columns else None
+    base_q = net.load.get("q_mvar", None)
 
     load_factor = 1.0 + 0.25 * np.sin(np.linspace(0, 6*np.pi, time_steps))
     noise = np.random.normal(0.0, 0.02, time_steps)
@@ -171,10 +178,7 @@ def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
         voltage_mean.append(v_mean)
         coherence.append(coh)
 
-        if len(voltage_mean) > 2:
-            sw = float(np.gradient(voltage_mean)[-1])
-        else:
-            sw = 0.0
+        sw = float(np.gradient(voltage_mean)[-1]) if len(voltage_mean) > 2 else 0.0
         switch.append(sw)
 
         if classical_event is None and v_mean < CLASSICAL_THRESHOLD:
@@ -189,13 +193,13 @@ def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
 
 
 # ============================================================
-# 5. Controlled Simulation v15 (Root Cube)
+# 5. v15 Root Cube Controlled Simulation
 # ============================================================
 def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
     net = pp.networks.case57()
     base_p = net.load["p_mw"].copy()
-    base_q = net.load["q_mvar"].copy() if "q_mvar" in net.load.columns else None
+    base_q = net.load.get("q_mvar", None)
 
     load_factor = 1.0 + 0.25 * np.sin(np.linspace(0, 6*np.pi, time_steps))
     noise = np.random.normal(0.0, 0.02, time_steps)
@@ -274,12 +278,10 @@ def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
 
 
 # ============================================================
-# 6. Run both simulations
+# 6. Run
 # ============================================================
 baseline = simulate_baseline()
 controlled = simulate_v15()
 
-print("✅ v15 Root Cube Navigation Controller fertig.")
-print(f"   Ergebnisse gespeichert in: {OUTDIR}")
-
-# (Plots und Report folgen im nächsten Schritt – sag Bescheid, wenn du sie jetzt haben willst)
+print("✅ v15 Root Cube Navigation Controller erfolgreich ausgeführt!")
+print(f"   Alle Ergebnisse liegen in: {OUTDIR}")
