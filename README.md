@@ -20,6 +20,30 @@ This result is consistent across system sizes and shows that instability can be 
 
 *Early detection based on structural field dynamics — not voltage thresholds.*
 
+## 🔍 What NEXAH Measures (vs Classical Methods)
+
+Classical power-system analysis relies on:
+
+- voltage magnitude thresholds  
+- load flow divergence  
+- reactive power limits  
+
+NEXAH instead measures:
+
+- **coherence** (global structural alignment)  
+- **field geometry** (trajectory structure in state space)  
+- **phase drift and flow direction**  
+- **distance to structural transition zones**  
+
+### Key Difference
+
+```text
+Classical → detects collapse when it happens  
+NEXAH     → detects structural instability before it manifests
+```
+
+This shift enables earlier and more interpretable detection of instability.
+
 ## 🧭 Conceptual Pipeline
 
 ```text
@@ -168,6 +192,19 @@ This makes V69 an important bridge between:
 - structural discovery
 - geometric flow interpretation
 - navigation-ready field models  
+
+### Interpretation for Power Systems
+
+In practical terms, this means:
+
+- instability is visible as **trajectory deformation**
+- collapse emerges along **preferred flow paths**
+- early warning is based on **geometry, not thresholds**
+
+This allows operators to:
+- anticipate instability earlier  
+- understand collapse mechanisms  
+- eventually intervene structurally
 
 ---
 
@@ -346,8 +383,7 @@ Current release: **v1.1 (Field Extension)**
 - field layer (V69): ✅ implemented  
 - adapter system: ✅ working  
 - transition geometry: ✅ active  
-- navigation language: ✅ active  
-- navigation language: ✅ active  
+- navigation language: ✅ active   
 - channel layer (v8): ✅ discovered  
 - switch layer (v9): ✅ detected  
 - navigation kernel: ⚠️ emerging  

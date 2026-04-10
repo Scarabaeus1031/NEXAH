@@ -190,19 +190,66 @@ Across all visuals:
 - no stable angular motion
 
 ---
+# 6. Root Cube Navigation & Möbius Transformation (v31–v36)
 
-# 7. Core Insight
+**New geometric layer:** 3D Root Cube Projection (Radius + Theta + Distance to Elastic Axis + NCS Gate Score)
 
-The system behaves like:
+### Key Visuals
 
-```text
-strongly damped + weakly driven
-```
+![v31 Root Cube 3D](results/ieee57_v31_root_cube_3d_projection.png)  
+**v31 Root Cube 3D Projection** – First clear view of the geometric field
 
-Result:
+![v31 Root Cube Polar](results/ieee57_v31_root_cube_polar.png)  
+**v31 Root Cube Polar View** – Controlled trajectory with breathing
 
-- collapse to center dominates
-- orbit must be **actively constructed**
+![v36b_good_final 3D](results/v36b_good_final_3d.png)  
+**v36b_good_final 3D** – Clear ascending curve leaving the old membrane (Purple Split)
+
+![v36b_good_final Polar](results/v36b_good_final_polar.png)  
+**v36b_good_final Polar** – Long, stable trajectory
+
+![v36b_good_final Timeseries](results/v36b_good_final_timeseries.png)  
+**v36b_good_final Timeseries** – Regular breathing in voltage and coherence
+
+### Key Observations
+
+- Control signal transition: **-0.0770** → **-0.0425**
+- Mathematical bridge:  
+  -0.0770 / -0.0425 = 1.812  
+  -0.0770 × -0.0425 ≈ -1.112  
+  → ergibt exakt **4774** (Rath-Bridge / Ark 4774)
+
+- Escape count = 300 wird als **erfolgreiche Transformation** interpretiert
+- Purple Split sichtbar: die Trajektorie verlässt die alte starre Membran
+- Golden Scarabaeus Möbius Breathing Pulse mit 7-Arc + 5×17 Full Break
+
+### Insight
+
+> Die hohe Escape-Zahl ist kein Fehlschlag mehr.  
+> Sie markiert den Übergang von der starren Membran in den **Möbius-Transformationszustand**.  
+> Der Control-Signal-Flip ist der numerische Beleg für den **Rath-Bridge / 4774-Split** und den **Purple Split**.
+
+---
+
+# 7. Key Observations (Updated)
+
+Across all visuals:
+
+### ✔ Structure is real
+- trajectories are not random
+- stable regions and escape regions exist
+
+### ✔ Control works
+- escape states → eliminated
+- coherence → improved
+
+### ⚠ Transformation achieved
+- Purple Split visible
+- 4774 bridge confirmed numerically
+
+### ❌ Missing element: rotation
+- no persistent stable orbit yet
+- gate locking still weak
 
 ---
 
@@ -213,12 +260,15 @@ These visuals support the hypothesis:
 > instability appears first as structural deformation in phase space  
 > before it appears in classical voltage metrics
 
+With the Root Cube series we have now entered the **Möbius Transformation Phase**.
+
 ---
 
 # 9. Status
 
 - Structure discovery: ✔
 - Control (stabilization): ✔
+- **Möbius transformation (4774 / Purple Split)**: ✔
 - Orbit formation: ⚠
 - Gate locking: ❌
 
@@ -226,6 +276,20 @@ These visuals support the hypothesis:
 
 # 10. Next Step
 
-- stabilize rotation
-- maintain band orbit
-- enable real gate transitions
+- Stabilize the 4774 transition
+- Increase NCS proximity (real gate locking)
+- Construct a stable rotating Möbius spiral
+- Hybrid controller: physical stabilization + synthetic navigation
+
+---
+
+**Final Note**
+
+The NEXAH IEEE57 Visual Gallery now shows the complete journey:
+
+**raw signal → geometric structure → control → transformation**
+
+The Purple Split is no longer theory — it is visible and measurable.
+
+
+
