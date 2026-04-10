@@ -1,0 +1,7 @@
+NEXAH v19 Root Cube Navigation Report
+========================================
+Escape count: 58
+Mean coherence: 0.9159
+Mean distance to Elastic Axis: 2.2266
+Max NCS proximity: 0.0024
+Mean control signal: 0.0039
