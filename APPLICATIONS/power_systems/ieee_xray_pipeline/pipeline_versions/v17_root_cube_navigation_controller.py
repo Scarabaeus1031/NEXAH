@@ -2,7 +2,7 @@
 v17_root_cube_navigation_controller.py
 ======================================
 
-NEXAH v17 – Stronger expansion + pull toward Elastic Axis + better NCS gate triggering
+NEXAH v17 – Root Cube Navigation Controller (ultra-simple path)
 """
 
 from pathlib import Path
@@ -12,7 +12,7 @@ import pandapower as pp
 from mpl_toolkits.mplot3d import Axes3D
 
 # ============================================================
-# 0. Paths
+# 0. SUPER SIMPLE PATH – direkt vom Repo-Root
 # ============================================================
 OUTDIR = Path("APPLICATIONS/power_systems/ieee_xray_pipeline/results")
 OUTDIR.mkdir(parents=True, exist_ok=True)
@@ -22,7 +22,8 @@ POLAR_PATH = OUTDIR / "ieee57_v17_root_cube_polar.png"
 CUBE_PATH  = OUTDIR / "ieee57_v17_root_cube_3d_projection.png"
 REPORT_PATH= OUTDIR / "ieee57_v17_root_cube_report.txt"
 
-print(f"📁 Saving to → {OUTDIR.resolve()}\n")
+print(f"📁 Saving to → {OUTDIR.resolve()}")
+print("   (If this path is wrong, run 'pwd' and tell me the output)\n")
 
 # ============================================================
 # 1. Settings
@@ -45,11 +46,9 @@ ELASTIC_AXIS_ANGLE = np.pi / 4.0
 NCS_SWITCH_R       = 0.032
 NCS_SWITCH_THETA   = np.pi / 4.0
 
-# v17 improvements
-K_FLOW      = 0.14          # stärker
+K_FLOW      = 0.14
 FLOW_PHASE  = np.pi / 2 + 0.3
-K_LIFT      = 0.22          # deutlich stärkere Expansion
-K_AXIS_PULL = 0.09          # neuer Pull zur Elastic Axis
+K_LIFT      = 0.22
 K_R_HOLD    = 0.07
 K_THETA_HOLD= 0.038
 K_SNAP      = 0.09
@@ -167,16 +166,12 @@ def simulate_v17(time_steps=TIME_STEPS, seed=SEED):
         mode = choose_mode(r_est, th_est, last_mode, gate_score)
 
         u = 0.0
-
         if mode == "capture":
             u += K_LIFT * max(0.0, (R_CAPTURE_TARGET - r_est))
         elif mode in ["band_hold", "gate_lock"]:
             u += K_R_HOLD * (R_TARGET - r_est)
-            # Stronger flow + pull toward Elastic Axis
-            axis_factor = np.exp(-2.5 * cube["dist_to_elastic"])   # stärkerer Pull
-            flow = K_FLOW * axis_factor * np.sin(th_est - ELASTIC_AXIS_ANGLE + FLOW_PHASE)
+            flow = K_FLOW * np.sin(th_est - ELASTIC_AXIS_ANGLE + FLOW_PHASE)
             u += flow
-            u += K_AXIS_PULL * (np.pi/4 - th_est)   # direkter Pull zur Axis
 
         u = np.clip(u, -U_MAX, U_MAX)
 
@@ -239,10 +234,71 @@ print("✅ v17 erfolgreich ausgeführt!")
 # ============================================================
 t = np.arange(TIME_STEPS)
 
-# Timeseries, Polar, 3D und Report (wie vorher)
-# ... (der Rest des Codes ist identisch mit v16 – Plots und Report)
+# Timeseries
+fig, axs = plt.subplots(5, 1, figsize=(14, 18), sharex=True)
+axs[0].plot(t, baseline["voltage_mean"], alpha=0.4, label="Baseline")
+axs[0].plot(t, controlled["voltage_mean"], label="v17 Controlled")
+axs[0].axhline(CLASSICAL_THRESHOLD, color="gray", ls="--")
+axs[0].set_ylabel("Voltage mean")
+axs[0].legend()
 
-# (Ich habe den Plot-Teil aus Platzgründen weggelassen, er ist identisch mit v16.
-# Wenn du ihn brauchst, sag einfach "Plots dazu" und ich schicke den vollen Code.)
+axs[1].plot(t, controlled["coherence"], label="Coherence")
+axs[1].set_ylabel("Coherence")
 
-print("Fertig! Schau bitte in den results-Ordner.")
+axs[2].plot(t, controlled["radius"], color="purple", label="Radius")
+axs[2].axhline(R_BAND_MIN, color="green", ls="--", alpha=0.6)
+axs[2].axhline(R_BAND_MAX, color="green", ls="--", alpha=0.6)
+axs[2].set_ylabel("Radius")
+
+axs[3].plot(t, controlled["dist_elastic"], color="orange", label="Dist to Elastic Axis")
+axs[3].set_ylabel("Dist to Elastic Axis")
+
+axs[4].plot(t, controlled["u"], color="black", label="Control u")
+axs[4].set_ylabel("Control u")
+axs[4].set_xlabel("Time step")
+
+fig.suptitle("NEXAH v17 – Root Cube Navigation Controller")
+fig.tight_layout()
+fig.savefig(TS_PATH, dpi=160)
+plt.close(fig)
+
+# Polar
+fig = plt.figure(figsize=(12, 10))
+ax = fig.add_subplot(111, projection='polar')
+ax.plot(controlled["theta"], controlled["radius"], alpha=0.7, label="Controlled trajectory")
+ax.scatter(controlled["theta"], controlled["radius"], c=controlled["gate_score"], cmap="viridis", s=30, label="Gate Score")
+ax.set_title("Polar View – Root Cube Projection")
+ax.legend()
+fig.tight_layout()
+fig.savefig(POLAR_PATH, dpi=160)
+plt.close(fig)
+
+# 3D Root Cube
+fig = plt.figure(figsize=(12, 10))
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(controlled["radius"], controlled["theta"], controlled["dist_elastic"],
+           c=controlled["gate_score"], cmap="plasma", s=40)
+ax.set_xlabel("Radius")
+ax.set_ylabel("Theta")
+ax.set_zlabel("Dist to Elastic Axis")
+ax.set_title("3D Root Cube Projection (v17)")
+fig.tight_layout()
+fig.savefig(CUBE_PATH, dpi=160)
+plt.close(fig)
+
+# Report
+report = f"""NEXAH v17 Root Cube Navigation Report
+========================================
+Escape count: {int(np.sum(controlled['radius'] > 0.055))}
+Mean coherence: {np.nanmean(controlled['coherence']):.4f}
+Mean distance to Elastic Axis: {np.nanmean(controlled['dist_elastic']):.4f}
+Max NCS proximity: {np.nanmax(controlled['ncs_proximity']):.4f}
+Mean control signal: {np.nanmean(controlled['u']):.4f}
+"""
+REPORT_PATH.write_text(report, encoding="utf-8")
+
+print(f"   • {TS_PATH.name}")
+print(f"   • {POLAR_PATH.name}")
+print(f"   • {CUBE_PATH.name}   ← 3D Root Cube View")
+print(f"   • {REPORT_PATH.name}")
+print("Fertig!")
