@@ -5,6 +5,25 @@
 
 ## Core Geometric Translation
 
+We represent power system dynamics in a reduced polar state space (r, θ, z), where phase drift, system contraction and coherence are explicitly separated.
+
+An empirically stable reference axis emerges at:
+
+θ = π/4
+
+This axis acts as a phase-stable manifold and basin boundary.
+
+This structure is geometrically analogous to the Riemann critical line (Re(s) = 1/2), but is used here purely as a structural reference, not as a number-theoretic claim.
+
+Observed mappings:
+
+- Stable manifold → θ = π/4
+- Phase crossings → instability precursors
+- Mirror-like divergence → symmetric phase drift
+- Central intervention point → switching controller (NCS node)
+
+## Core Geometric Translation
+
 The Riemann Critical Line (Re(s) = 1/2) appears in NEXAH as the **Elastic Axis / Golden Line** of the Root Cube.
 
 This is a consistent geometric mapping:
