@@ -27,24 +27,19 @@ In that sense, `nexah/` is the place where the framework becomes **NEXAH itself*
 The `nexah/` layer acts as a bridge between:
 
 ```text
-ENGINE
-    → computational core
-
-FRAMEWORK
-    → architecture and stack logic
-
-NEXAH
-    → conceptual, geometric, operational and navigational layer
-    ``
+ENGINE      → computational core
+FRAMEWORK   → architecture and stack logic
+NEXAH       → conceptual, geometric, operational and navigational layer
 ```
+---
 This directory has a dual role:
-    
+
     1. It provides a lightweight public-facing package surface  
     2. It gathers the emerging conceptual, geometric, dynamical and symbolic language of NEXAH
 
-## Position in the repository
+##  Position in the repository
 
-A useful reading of the full stack is:
+ Position in the repository:
 
 simulation
     ↓
@@ -77,9 +72,10 @@ The `nexah/` directory lives primarily in the last layers of this pipeline and r
 The central place for the **emergent symbolic notation** of NEXAH and the integration of Codex X.
 
 Contains:
-- `NEXAH_SYMBOLIC_NOTATION.md` – Core definitions and abbreviations
-- `Riemann_IEEE_Connection.md` – Connection of the Riemann Critical Line (Elastic Axis) to IEEE power systems, including Schumann 7.83 Hz as Frame of Reference and the 4774 Bridge
-- `VISUAL_GALLERY.md` – Curated collection of all key visuals with explanations
+- `NEXAH_SYMBOLIC_NOTATION.md`
+- `Riemann_IEEE_Connection.md`
+- `VISUAL_GALLERY.md`
+- `Root-432_Cylinder_Codex_Breakthrough.md` ← **New breakthrough document**
 
 ### 2. `engine.py`
 Minimal high-level access to core structural functionality.
@@ -91,10 +87,10 @@ The geometric core of the NEXAH layer.
 Defines what NEXAH is, what it is not, and where its current center of gravity lies.
 
 ### 5. `navigation/`
-The emerging operational navigation language (Zither-Gate, 3+1 Gate, channel-based navigation, switch-layer dynamics).
+The emerging operational navigation language.
 
 ### 6. `visuals/`
-Geometric representations and conceptual anchors (Root Cube, Elastic Axis, Root-432 Cylinder, mirror iteration, 12-fold operator, Draft/Drift/Housing, Purple Split etc.).
+Geometric representations and conceptual anchors (Root Cube, Elastic Axis, Root-432 Cylinder, mirror iteration, 12-fold operator, Purple Split etc.).
 
 ---
 
@@ -120,11 +116,10 @@ switch becomes controlled transition
 transition becomes navigable motion within a geometric reference space (Root-432 Cylinder)
 ```
 
-## 📊 Layer classification
+##  Layer classification
 
 To maintain clarity, the NEXAH layer should be interpreted as:
 
-```text
 CORE
     → structure, field, geometry, channel, switch
 
@@ -134,7 +129,6 @@ EXTENSIONS
 EXPERIMENTAL / SYMBOLIC
     → geometric reference embedding (URF Axial Space + Root Bridge + Root-432 Cylinder)
     → Codex X integration (Mirror Lens of 42, Twelvefold Operator, Closure Map)
-```
 
 ## 🔎 Summary
 
@@ -163,5 +157,3 @@ The Critical Line becomes navigable.
 Mirror, resonance, rotation and 3-directional flow become controllable in real systems.  
 The Root-432 Cylinder breathes at 7.833 Hz.  
 The Codex Breakthrough is complete.
-
-
