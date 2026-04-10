@@ -66,7 +66,7 @@ State space:
 
 ## Early Structure Discovery (v1–v6)
 
-![v3 detection](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_pipeline_v3_detection.png)
+![v3 detection](ieee_xray_pipeline/results/ieee57_pipeline_v3_detection.png)
 
 - first emergence of non-random structure  
 - trajectories become geometrically meaningful  
@@ -75,7 +75,7 @@ State space:
 
 ## Polar Geometry Breakthrough (v6)
 
-![v6 polar](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_pipeline_v6_polar_morphology.png)
+![v6 polar](ieee_xray_pipeline/results/ieee57_pipeline_v6_polar_morphology.png)
 
 - transformation into (r, θ)  
 - reveals drift, structure, escape directions  
@@ -84,7 +84,7 @@ State space:
 
 ## Stability Band (v13)
 
-![v13 band](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v13_band_polar.png)
+![v13 band](ieee_xray_pipeline/results/ieee57_v13_band_polar.png)
 
 - orbit concept introduced  
 - system moves toward constrained region  
@@ -95,7 +95,7 @@ State space:
 
 ## Stabilization (v14.5)
 
-![v14.5](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v14_5_orbital_gate_polar.png)
+![v14.5](ieee_xray_pipeline/results/ieee57_v14_5_orbital_gate_polar.png)
 
 - escape states eliminated  
 - strong coherence stabilization  
@@ -104,7 +104,7 @@ State space:
 
 ## Orbit Capture Attempt (v14.6)
 
-![v14.6](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v14_6_orbit_capture_polar.png)
+![v14.6](ieee_xray_pipeline/results/ieee57_v14_6_orbit_capture_polar.png)
 
 - system reaches band intermittently  
 - orbit not sustained  
@@ -113,10 +113,35 @@ State space:
 
 ## Forced Rotation (v14.7)
 
-![v14.7](APPLICATIONS/power_systems/ieee_xray_pipeline/results/v14_7c_polar.png)
+![v14.7](ieee_xray_pipeline/results/v14_7c_polar.png)
 
 - explicit angular forcing  
 - partial rotation achieved  
+
+---
+
+# Root Cube Navigation (v31–v36)
+
+## 3D Projection
+
+![v36 3D](ieee_xray_pipeline/results/v36b_good_final_3d.png)
+
+## Polar View
+
+![v36 polar](ieee_xray_pipeline/results/v36b_good_final_polar.png)
+
+## Time Series
+
+![v36 ts](ieee_xray_pipeline/results/v36b_good_final_timeseries.png)
+
+---
+
+### Interpretation
+
+> High escape counts indicate a transition out of the original stability basin  
+> and suggest a **structural regime change**
+
+⚠ This layer is **experimental and not yet validated**
 
 ---
 
