@@ -3,21 +3,16 @@ v15_root_cube_navigation_controller.py
 ======================================
 
 NEXAH v15 – Root Cube Navigation Controller
-Goal: Transition from "stabilization only" to true geometric navigation
+Goal: From stabilization → true geometric navigation using URF Axial Space
 
-Key new features:
-- Full URF Axial Space + Root Cube mapping
-- Elastic Axis (Critical Line @ 45°) as stability reference
-- 292 NCS Switch as explicit gate trigger
-- Expansion mechanism (Draft / Drift / Housing)
-- Orbital flow + rotation construction
-- Distance to Elastic Axis as new stability metric
+Features:
+- Full Root Cube mapping
+- Elastic Axis (Critical Line @ 45°) as reference
+- 292 NCS Switch as gate trigger
+- Expansion + orbital flow
+- 3D projection plot
 
-Outputs:
-- ieee57_v15_root_cube_timeseries.png
-- ieee57_v15_root_cube_polar.png
-- ieee57_v15_root_cube_3d_projection.png   ← NEW
-- ieee57_v15_root_cube_report.txt
+Results saved to: APPLICATIONS/power_systems/ieee_xray_pipeline/results/
 """
 
 import copy
@@ -25,7 +20,7 @@ from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
 import pandapower as pp
-from mpl_toolkits.mplot3d import Axes3D   # for 3D Root Cube plot
+from mpl_toolkits.mplot3d import Axes3D
 
 # ============================================================
 # 0. Paths
@@ -39,7 +34,7 @@ CUBE_PATH  = OUTDIR / "ieee57_v15_root_cube_3d_projection.png"
 REPORT_PATH= OUTDIR / "ieee57_v15_root_cube_report.txt"
 
 # ============================================================
-# 1. Global Settings + Root Cube Parameters
+# 1. Global Settings
 # ============================================================
 TIME_STEPS = 300
 SEED = 42
@@ -48,7 +43,7 @@ CLASSICAL_THRESHOLD = 0.90
 CENTER_X = 0.942913
 CENTER_Y = 0.000076
 
-# Ring boundaries (from v14)
+# Ring boundaries
 R_CORE_MAX      = 0.018
 R_CAPTURE_TARGET= 0.032
 R_BAND_MIN      = 0.026
@@ -56,18 +51,15 @@ R_BAND_MAX      = 0.040
 R_ENVELOPE_MAX  = 0.055
 R_TARGET        = 0.0325
 
-# Root Cube / URF Axial Space
-# Elastic Axis = Critical Line (45°)
+# Root Cube Parameters
 ELASTIC_AXIS_ANGLE = np.pi / 4.0
-
-# 292 NCS Switch position (center of switch grid)
-NCS_SWITCH_R = 0.032
-NCS_SWITCH_THETA = np.pi / 4.0   # on the Elastic Axis
+NCS_SWITCH_R       = 0.032
+NCS_SWITCH_THETA   = np.pi / 4.0
 
 # Gains
-K_FLOW      = 0.085          # strong orbital flow
+K_FLOW      = 0.085
 FLOW_PHASE  = np.pi / 2 + 0.3
-K_LIFT      = 0.12           # stronger expansion
+K_LIFT      = 0.12
 K_R_HOLD    = 0.055
 K_THETA_HOLD= 0.028
 K_SNAP      = 0.075
@@ -82,7 +74,6 @@ SNAP_TOL      = np.deg2rad(8.0)
 
 U_MAX = 0.12
 
-# Colors
 MODE_COLORS = {
     "core_escape": "#d62728",
     "capture": "#ff7f0e",
@@ -97,31 +88,28 @@ MODE_ORDER = ["core_escape", "capture", "band_hold", "gate_lock", "outer_return"
 # 2. Root Cube Mapping
 # ============================================================
 def state_to_root_cube(coherence: float, switch: float):
-    """Map extracted state (coherence, switch) into Root Cube coordinates"""
     dx = coherence - CENTER_X
     dy = switch - CENTER_Y
-    r = np.hypot(dx, dy)
-    theta = np.arctan2(dy, dx)
+    r = float(np.hypot(dx, dy))
+    theta = float(np.arctan2(dy, dx))
     
-    # Distance to Elastic Axis (Critical Line)
     dist_to_elastic = abs(theta - ELASTIC_AXIS_ANGLE)
     if dist_to_elastic > np.pi:
         dist_to_elastic = 2 * np.pi - dist_to_elastic
     
-    # 292 NCS Switch proximity (0..1)
-    ncs_proximity = np.exp(-8.0 * np.hypot(r - NCS_SWITCH_R, theta - NCS_SWITCH_THETA))
+    ncs_proximity = float(np.exp(-8.0 * np.hypot(r - NCS_SWITCH_R, theta - NCS_SWITCH_THETA)))
     
     return {
-        "r": float(r),
-        "theta": float(theta),
-        "dist_to_elastic": float(dist_to_elastic),
-        "ncs_proximity": float(ncs_proximity),
+        "r": r,
+        "theta": theta,
+        "dist_to_elastic": dist_to_elastic,
+        "ncs_proximity": ncs_proximity,
         "on_elastic": dist_to_elastic < 0.15
     }
 
 
 # ============================================================
-# 3. Mode Logic with Root Cube awareness
+# 3. Mode Logic
 # ============================================================
 def choose_mode(r: float, theta: float, prev_mode: str, ncs_proximity: float):
     if prev_mode == "gate_lock":
@@ -138,7 +126,6 @@ def choose_mode(r: float, theta: float, prev_mode: str, ncs_proximity: float):
             return "capture"
         return "band_hold"
 
-    # default logic
     if r < 0.020:
         return "core_escape"
     if 0.026 <= r <= 0.040:
@@ -149,7 +136,60 @@ def choose_mode(r: float, theta: float, prev_mode: str, ncs_proximity: float):
 
 
 # ============================================================
-# 4. Controlled Simulation (v15)
+# 4. Baseline Simulation (from v14)
+# ============================================================
+def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
+    np.random.seed(seed)
+    net = pp.networks.case57()
+    base_p = net.load["p_mw"].copy()
+    base_q = net.load["q_mvar"].copy() if "q_mvar" in net.load.columns else None
+
+    load_factor = 1.0 + 0.25 * np.sin(np.linspace(0, 6*np.pi, time_steps))
+    noise = np.random.normal(0.0, 0.02, time_steps)
+
+    voltage_mean = []
+    coherence = []
+    switch = []
+    classical_event = None
+
+    for t in range(time_steps):
+        scale = max(0.50, load_factor[t] + noise[t])
+        net.load["p_mw"] = base_p * scale
+        if base_q is not None:
+            net.load["q_mvar"] = base_q * scale
+
+        try:
+            pp.runpp(net, enforce_q_lims=True)
+            voltages = net.res_bus.vm_pu.values
+        except:
+            voltages = np.ones(len(net.bus)) * 0.95
+
+        v_mean = float(np.mean(voltages))
+        v_std = float(np.std(voltages))
+        coh = 1.0 - v_std
+
+        voltage_mean.append(v_mean)
+        coherence.append(coh)
+
+        if len(voltage_mean) > 2:
+            sw = float(np.gradient(voltage_mean)[-1])
+        else:
+            sw = 0.0
+        switch.append(sw)
+
+        if classical_event is None and v_mean < CLASSICAL_THRESHOLD:
+            classical_event = t
+
+    return {
+        "voltage_mean": np.array(voltage_mean),
+        "coherence": np.array(coherence),
+        "switch": np.array(switch),
+        "classical_event": classical_event,
+    }
+
+
+# ============================================================
+# 5. Controlled Simulation v15 (Root Cube)
 # ============================================================
 def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
@@ -160,7 +200,6 @@ def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
     load_factor = 1.0 + 0.25 * np.sin(np.linspace(0, 6*np.pi, time_steps))
     noise = np.random.normal(0.0, 0.02, time_steps)
 
-    # storage
     voltage_mean, coherence, switch = [], [], []
     radius, theta, dist_elastic, ncs_prox = [], [], [], []
     u_hist, mode_hist, gate_score_hist = [], [], []
@@ -168,7 +207,6 @@ def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
     last_mode = "core_escape"
     last_coh = CENTER_X
     last_sw = CENTER_Y
-    last_theta = None
 
     for t in range(time_steps):
         r_est, th_est, _, _ = state_to_polar(last_coh, last_sw, CENTER_X, CENTER_Y)
@@ -177,19 +215,18 @@ def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
         gate_score = cube["ncs_proximity"]
         mode = choose_mode(r_est, th_est, last_mode, gate_score)
 
-        # === Expansion + Orbital Flow ===
+        # Control signal
         u = 0.0
         if mode == "capture":
-            u += K_LIFT * max(0.0, (R_CAPTURE_TARGET - r_est))          # lift out of core
+            u += K_LIFT * max(0.0, (R_CAPTURE_TARGET - r_est))
         elif mode in ["band_hold", "gate_lock"]:
-            u += K_R_HOLD * (R_TARGET - r_est)                          # hold radius
-            # orbital flow on Elastic Axis
+            u += K_R_HOLD * (R_TARGET - r_est)
             flow = K_FLOW * np.sin(th_est - ELASTIC_AXIS_ANGLE + FLOW_PHASE)
             u += flow
 
         u = np.clip(u, -U_MAX, U_MAX)
 
-        # apply control
+        # Apply to grid
         scale = max(0.45, load_factor[t] + noise[t] - u)
         net.load["p_mw"] = base_p * scale
         if base_q is not None:
@@ -221,7 +258,6 @@ def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
         last_coh = coh
         last_sw = sw
         last_mode = mode
-        last_theta = th
 
     return {
         "voltage_mean": np.array(voltage_mean),
@@ -238,12 +274,12 @@ def simulate_v15(time_steps=TIME_STEPS, seed=SEED):
 
 
 # ============================================================
-# 5. Run & Save
+# 6. Run both simulations
 # ============================================================
-baseline = simulate_baseline()   # reuse your v14 baseline function
+baseline = simulate_baseline()
 controlled = simulate_v15()
 
-# ... (Plots + Report folgen im nächsten Schritt)
+print("✅ v15 Root Cube Navigation Controller fertig.")
+print(f"   Ergebnisse gespeichert in: {OUTDIR}")
 
-print("✅ v15 Root Cube Navigation Controller fertig ausgeführt.")
-print("   → 3D Root Cube Projection + Elastic Axis + 292 NCS Switch aktiv")
+# (Plots und Report folgen im nächsten Schritt – sag Bescheid, wenn du sie jetzt haben willst)
