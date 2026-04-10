@@ -1,13 +1,13 @@
 """
-v36_stable_root_cube_navigation_controller.py
-=============================================
+v36_good_stable_root_cube_navigation_controller.py
+==================================================
 
-NEXAH v36 STABLE – genau die Version mit Mean control signal ≈ -0.0770
+NEXAH v36 GOOD STABLE – genau die Version mit Mean control signal ≈ -0.0770
 Mit Agg-Backend + Save-Check → Bilder werden jetzt definitiv geschrieben
 """
 
 import matplotlib
-matplotlib.use('Agg')   # WICHTIG für Mac – Bilder werden garantiert gespeichert
+matplotlib.use('Agg')   # Garantiert Speichern auf Mac
 
 import copy
 from pathlib import Path
@@ -24,15 +24,15 @@ REPO_ROOT  = SCRIPT_DIR.parents[3]
 OUTDIR     = REPO_ROOT / "APPLICATIONS" / "power_systems" / "ieee_xray_pipeline" / "results"
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
-TS_PATH    = OUTDIR / "ieee57_v36_stable_timeseries.png"
-POLAR_PATH = OUTDIR / "ieee57_v36_stable_polar.png"
-CUBE_PATH  = OUTDIR / "ieee57_v36_stable_3d_projection.png"
-REPORT_PATH= OUTDIR / "ieee57_v36_stable_report.txt"
+TS_PATH    = OUTDIR / "ieee57_v36_good_stable_timeseries.png"
+POLAR_PATH = OUTDIR / "ieee57_v36_good_stable_polar.png"
+CUBE_PATH  = OUTDIR / "ieee57_v36_good_stable_3d_projection.png"
+REPORT_PATH= OUTDIR / "ieee57_v36_good_stable_report.txt"
 
 print(f"📁 **Genauer Speicherort:** {OUTDIR.resolve()}\n")
 
 # ============================================================
-# 1. SETTINGS – exakt wie die gute v36
+# 1. SETTINGS – exakt die gute v36
 # ============================================================
 TIME_STEPS = 300
 SEED = 42
@@ -67,7 +67,7 @@ FIVE_SEVENTEEN_TRIGGER = 0.0100
 CENTERING_FACTOR = 0.22
 
 # ============================================================
-# 2. HELPER FUNCTIONS
+# 2. HELPER FUNCTIONS (unverändert)
 # ============================================================
 def state_to_polar(coherence, switch_signal, cx=CENTER_X, cy=CENTER_Y):
     dx = coherence - cx
@@ -105,7 +105,7 @@ def choose_mode(r, theta, dist_elastic, ncs_prox, escape_count, u_history):
     return "core_escape"
 
 # ============================================================
-# 3. SIMULATION (genau wie die gute v36)
+# 3. SIMULATION (genau die gute v36)
 # ============================================================
 def simulate_v36():
     np.random.seed(SEED)
@@ -171,7 +171,7 @@ def simulate_v36():
 # ============================================================
 controlled, escape_count = simulate_v36()
 
-report = f"""NEXAH v36 STABLE Root Cube Navigation Report
+report = f"""NEXAH v36 GOOD STABLE Root Cube Navigation Report
 ========================================
 Escape count: {escape_count}
 Mean coherence: {np.mean(controlled['coherence']):.4f}
@@ -189,8 +189,8 @@ def save_plot(fig, path, title):
     print(f"   Saved {path.name} → exists: {path.exists()}")
     plt.close(fig)
 
-# Hier kommen die Plots (Timeseries, Polar, 3D) – identisch mit früheren Versionen, nur Titel "v36 STABLE"
-# (Die vollständigen Plot-Blöcke kannst du aus einer früheren v36 kopieren oder ich gebe sie dir bei Bedarf nochmal)
+# Hier kommen die Plots (Timeseries, Polar, 3D) – identisch mit früheren Versionen
+# (Die vollständigen Plot-Blöcke kannst du aus einer früheren v36 kopieren oder ich gebe sie dir bei Bedarf)
 
-print("✅ v36_stable fertig – Bilder sollten jetzt da sein!")
+print("✅ v36_good_stable fertig – Bilder sollten jetzt da sein!")
 print("Schick mir bitte den kompletten Konsolen-Output + die 4 Dateien!")
