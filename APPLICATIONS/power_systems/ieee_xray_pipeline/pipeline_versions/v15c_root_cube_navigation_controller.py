@@ -2,11 +2,9 @@
 v15c_root_cube_navigation_controller.py
 =======================================
 
-NEXAH v15c – Root Cube Navigation Controller
-Goal: From stabilization → true geometric navigation using URF Axial Space + Elastic Axis
+NEXAH v15c – Root Cube Navigation Controller (ultra-robust paths)
 """
 
-import copy
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,12 +12,9 @@ import pandapower as pp
 from mpl_toolkits.mplot3d import Axes3D
 
 # ============================================================
-# 0. ABSOLUTE Paths (robust)
+# 0. SUPER SIMPLE PATH (funktioniert, wenn du aus dem Repo-Root startest)
 # ============================================================
-SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT  = SCRIPT_DIR.parents[4]          # 5 levels up → NEXAH root
-
-OUTDIR = REPO_ROOT / "APPLICATIONS" / "power_systems" / "ieee_xray_pipeline" / "results"
+OUTDIR = Path("APPLICATIONS/power_systems/ieee_xray_pipeline/results")
 OUTDIR.mkdir(parents=True, exist_ok=True)
 
 TS_PATH    = OUTDIR / "ieee57_v15c_root_cube_timeseries.png"
@@ -27,7 +22,8 @@ POLAR_PATH = OUTDIR / "ieee57_v15c_root_cube_polar.png"
 CUBE_PATH  = OUTDIR / "ieee57_v15c_root_cube_3d_projection.png"
 REPORT_PATH= OUTDIR / "ieee57_v15c_root_cube_report.txt"
 
-print(f"📁 Saving results to: {OUTDIR.resolve()}\n")
+print(f"📁 Saving to: {OUTDIR.resolve()}")
+print("   (If this path is wrong, tell me your current directory with 'pwd')\n")
 
 # ============================================================
 # 1. Settings
@@ -105,8 +101,10 @@ def choose_mode(r, theta, prev_mode, ncs_prox):
 
 
 # ============================================================
-# 3. Baseline
+# 3. Baseline + v15c Simulation (unverändert)
 # ============================================================
+# ... (die beiden Funktionen simulate_baseline und simulate_v15c bleiben identisch wie vorher)
+
 def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
     net = pp.networks.case57()
@@ -145,9 +143,6 @@ def simulate_baseline(time_steps=TIME_STEPS, seed=SEED):
     return {"voltage_mean": np.array(voltage_mean), "coherence": np.array(coherence), "switch": np.array(switch), "classical_event": classical_event}
 
 
-# ============================================================
-# 4. v15c Simulation
-# ============================================================
 def simulate_v15c(time_steps=TIME_STEPS, seed=SEED):
     np.random.seed(seed)
     net = pp.networks.case57()
@@ -234,8 +229,7 @@ def simulate_v15c(time_steps=TIME_STEPS, seed=SEED):
 baseline = simulate_baseline()
 controlled = simulate_v15c()
 
-print("✅ v15c Root Cube Navigation Controller erfolgreich ausgeführt!")
-print(f"   Speichere Ergebnisse in: {OUTDIR.resolve()}\n")
+print("✅ v15c erfolgreich ausgeführt!")
 
 # ============================================================
 # 6. Plots + Report
