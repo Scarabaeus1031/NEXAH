@@ -20,6 +20,54 @@ This result is consistent across system sizes and shows that instability can be 
 
 *Early detection based on structural field dynamics — not voltage thresholds.*
 
+
+### What if we didn’t just simulate systems —  
+### but extracted their structure and learned how to move through it?
+
+## 🧪 Method & Validation (Summary)
+
+The reported early detection results are based on time-domain simulations of IEEE benchmark systems using standard power system models.
+
+### Setup
+
+- Test systems: IEEE 118, 300, 1354, 9241 (PEGASE)
+- Simulation type: time-domain dynamic simulation
+- Input data: voltage magnitude, system state variables
+- No external or learned data used
+
+### Classical Baseline
+
+The comparison is made against standard voltage-based collapse detection:
+
+- voltage threshold violation  
+- rapid voltage drop (collapse onset)  
+- conventional monitoring signals  
+
+### NEXAH Signals
+
+NEXAH derives structural indicators directly from simulation outputs:
+
+- coherence (aggregate structural alignment metric)  
+- switch signal (derivative-based transition indicator)  
+- trajectory structure in reduced state space  
+
+These signals are computed deterministically and require no parameter fitting.
+
+### Measurement of Lead Time
+
+- collapse time (classical): defined by voltage breakdown  
+- NEXAH detection time: first consistent structural transition signal  
+- lead time = difference between these two timestamps  
+
+The observed ~43.9 seconds lead time is consistent across tested systems.
+
+### Reproducibility
+
+- all experiments are based on standard IEEE test cases  
+- full pipeline and outputs are available in the repository  
+- results can be reproduced using the provided scripts  
+
+---
 ## 🔍 What NEXAH Measures (vs Classical Methods)
 
 Classical power-system analysis relies on:
@@ -52,8 +100,6 @@ simulation → structure → field → geometry → channel → switch → navig
 
 ---
 
-### What if we didn’t just simulate systems —  
-### but extracted their structure and learned how to move through it?
 
 ![NEXAH Multi-Agent Navigation](BUILDER_LAB/visuals/nexah_multi_agent.gif)
 
