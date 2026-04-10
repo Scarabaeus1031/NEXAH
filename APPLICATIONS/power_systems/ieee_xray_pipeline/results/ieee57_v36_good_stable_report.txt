@@ -1,0 +1,7 @@
+NEXAH v36 GOOD STABLE Root Cube Navigation Report
+========================================
+Escape count: 300
+Mean coherence: 0.9541
+Mean distance to Elastic Axis: 2.3317
+Max NCS proximity: 0.0000
+Mean control signal: -0.0770
