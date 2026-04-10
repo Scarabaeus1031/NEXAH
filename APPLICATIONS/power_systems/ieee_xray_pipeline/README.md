@@ -1,314 +1,402 @@
-# NEXAH IEEE X-Ray Pipeline — Building Plan
+# NEXAH IEEE X-Ray Pipeline
 
-This document outlines the planned architecture of the **NEXAH IEEE X-Ray Pipeline**.
+## Overview
 
-Its purpose is to define how NEXAH will be applied systematically to IEEE power systems in order to extract:
+The **NEXAH IEEE X-Ray Pipeline** is a structural analysis and control framework for power-system dynamics.
 
-- classical baseline behavior  
-- structural field dynamics  
-- channel and switch structure  
-- early instability signals  
-- future navigation and intervention logic  
+It transforms classical simulations into a **geometric state space**, where system behavior can be:
 
-It is not yet a complete control system.
+- observed  
+- interpreted  
+- and eventually controlled  
 
-It is the first **full diagnostic pipeline** that moves from:
+The pipeline follows the transformation:
 
 ```text
 IEEE system → structure → field → channel → switch → decision → navigation
 ```
 
----
+This repository contains:
 
-## 1. Current status
-
-NEXAH already provides the structural prerequisites for this pipeline.
-
-The strongest existing components are:
-
-- field extraction  
-- transition geometry  
-- grey-channel formation  
-- dual-strand separation  
-- switch-layer emergence  
-- early coherence signals  
-- IEEE early-warning results  
-
-Recent extensions include:
-
-- triple spiral coupling + Elastic Dual Lock (v9.x)  
-- URF Axial Space + Root Bridge (v9.1, experimental)  
-
-This means:
-
-> the system already detects structure, channels, and transition zones in dynamical systems,  
-> but does not yet provide a full operational navigation pipeline for IEEE grids.
-
-What already exists:
-
-- an axis-aware structural field  
-- channel behavior (grey channel)  
-- dual-strand transport  
-- switch detection  
-- early coherence signals  
-- initial early-warning results on IEEE systems  
-
-What is still missing:
-
-- a unified IEEE analysis pipeline  
-- a clean baseline vs NEXAH comparison  
-- structured decision logic  
-- controlled movement / intervention logic  
-- reproducible reporting across multiple grids  
+- the full diagnostic pipeline (v1–v13)
+- experimental controllers (v14.x)
+- structural motif definitions
+- quantitative evaluation on IEEE test systems
 
 ---
 
-## 2. Guiding idea
+## 1. Current Status
 
-The IEEE X-Ray Pipeline is not a generic simulator wrapper.
+The project has reached a critical transition point:
+
+### ✔ Established
+
+- low-dimensional state space (coherence, switch)
+- field representation of dynamics
+- channel and strand structure
+- switch / transition detection
+- measurable stability improvements (v14.x)
+
+### ⚠ Emerging
+
+- decision logic (state-dependent control)
+- orbit-based stabilization
+- phase-aware dynamics
+
+### ❌ Not yet achieved
+
+- stable orbit formation
+- persistent gate locking
+- physically grounded actuation mapping
+
+---
+
+## 2. Core Idea
+
+The pipeline is not a simulator wrapper.
 
 It implements:
 
-> structural diagnosis of power-system dynamics through field, channel, and switch analysis
+> structural diagnosis and navigation of dynamical systems through geometry
 
 Key principles:
 
-- the classical baseline remains visible  
-- the field representation is primary  
-- channels represent valid motion regions  
-- switches represent regime transitions  
-- the system must remain interpretable  
-- every added layer must improve real diagnostic value  
-
-The pipeline emerges from:
-
-```text
-classical baseline → field → channel → strand → switch → decision → navigation
-```
+- classical signals remain visible
+- structure is primary
+- motion defines stability
+- control must align with geometry
 
 ---
 
-## 3. Architectural target
+## 3. Architecture
 
-The full IEEE X-Ray Pipeline consists of six layers.
+The pipeline consists of six layers:
+
+---
 
 ### 3.1 Classical Baseline Layer
-Provides the reference system behavior:
+
+Reference system behavior:
 
 - voltage magnitude  
-- phase angle  
 - load evolution  
-- branch loading  
-- classical collapse time  
-
-This layer defines what standard methods see and when they see it.
+- collapse timing  
 
 ---
 
 ### 3.2 Field Layer
-Provides the structural geometry:
 
-- attractors and basins  
+Geometric structure:
+
+- attractors  
+- basins  
 - directional flow  
 - coherence gradients  
-- region separation  
-- transition manifolds  
-- channel formation  
-
-This is the first true NEXAH layer.
 
 ---
 
 ### 3.3 Signal Layer
-Extracts interpretable signals from the field:
+
+Extracted features:
 
 - coherence  
 - drift direction  
-- distance to channel  
-- strand classification (upper / lower)  
-- switch indicators  
-- regime proximity  
-- early instability markers  
+- radius (distance from center)  
+- phase (θ)  
+- phase velocity (dθ/dt)  
 
 ---
 
 ### 3.4 Channel & Switch Layer
-Describes valid motion and transition structure:
 
-- grey-channel detection  
-- axis alignment  
-- dual-strand separation  
-- switch region localization  
-- collapse-near transition zones  
+Structural interpretation:
 
-This is where structure becomes operationally meaningful.
+- grey channel detection  
+- strand separation  
+- switch regions  
+- instability precursors  
 
 ---
 
 ### 3.5 Decision Layer
-Defines navigation-ready system logic:
 
-- stay in channel vs exit  
-- stabilize vs monitor  
-- switch strands  
-- alert on collapse proximity  
-- prioritize stability-preserving motion  
+Emerging logic:
 
-This layer begins the shift from diagnosis to action.
+- HOLD / MONITOR / SWITCH / ALERT  
+- band adherence  
+- gate proximity  
+- transition awareness  
 
 ---
 
-### 3.6 Geometric Reference Layer (Experimental)
-Includes:
+### 3.6 Navigation / Control Layer (v14.x)
 
-- URF Axial Space  
-- Root Cube  
-- Root Bridge  
+Experimental controllers:
 
-Purpose:
+- orbit capture logic  
+- band stabilization  
+- phase alignment  
+- pulse / snap mechanisms  
 
-- provide an extended coordinate reference  
-- embed extracted structure in a consistent geometry  
-- support future 3D navigation and intervention concepts  
-
-This layer is experimental and not yet part of the validated core pipeline.
+This layer is under active development.
 
 ---
 
-## 4. Development roadmap
+## 4. Controller Evolution (v14 Series)
 
-### Phase 0 — Setup & Benchmark Lock (immediate)
-- choose primary benchmark system  
-- connect pandapower / IEEE data cleanly  
-- define reproducible baseline  
-- store first reference outputs  
+### v14.5 — Stabilization Breakthrough
 
-Recommended start:
-- IEEE 57-Bus for fast iteration  
-- IEEE 118-Bus for stronger realism  
+- coherence improved  
+- escape states eliminated  
+- strong damping achieved  
+
+Limitation:
+
+- system collapses toward center  
+- no orbit formation  
 
 ---
 
-### Phase 1 — IEEE X-Ray Core (next)
-- baseline extraction  
-- field representation  
-- channel detection  
-- switch detection  
+### v14.6 — Orbit Capture + Gate Logic
+
+- core escape mechanism  
+- target band defined  
+- phase-aware gate scoring  
+
+Result:
+
+- system reaches band intermittently  
+- but fails to sustain orbit  
+
+---
+
+### v14.7 — Forced Rotation
+
+- tangential forcing introduced  
+- synthetic orbital motion attempted  
+
+Result:
+
+- partial rotation visible  
+- unstable / discontinuous orbit  
+
+---
+
+### v14.8 — Two-Axis Control (P/Q split)
+
+- radial control (P)
+- tangential control (Q)
 
 Goal:
 
-> identify where instability begins structurally, before classical collapse is visible
+- decouple radius and phase control
+
+Result:
+
+- improved controllability  
+- but limited by physical coupling in system  
 
 ---
 
-### Phase 2 — Decision Layer
-- connect signal layer to simple decision rules  
-- HOLD / MONITOR / SWITCH / ALERT logic  
-- compare decision timing against classical collapse indicators  
+### v14.9 — Field Injection (Emerging)
 
-Goal:
+- synthetic vector field added
+- explicit rotation constructed in state space
 
-> move from structural observation to operational interpretation
+Insight:
 
----
-
-### Phase 3 — Mic-Drop Visualization
-- clean comparison plots  
-- one-figure summary  
-- reproducible report generation  
-- minimal dashboard or notebook  
-
-Goal:
-
-> show clearly that NEXAH sees instability earlier and structurally
+> orbit must be constructed, not extracted
 
 ---
 
-### Phase 4 — Extended Geometry (experimental)
-- integrate URF Axial Space  
-- Root Bridge embedding  
-- higher-dimensional structural mapping  
-- optional spiral / resonance overlays  
+## 5. Key Findings
 
-Goal:
+### 5.1 Structural Representation Works
 
-> test whether extended geometry improves interpretability or intervention logic
+The mapping:
+
+```text
+simulation → geometry → dynamics
+```
+
+is valid and measurable.
 
 ---
 
-## 5. Current system interpretation
+### 5.2 Control is Effective (Quantitatively)
 
-At the current stage, the system behaves as:
+- coherence ↑  
+- excursions ↓  
+- escape states → 0  
 
-> a structure-aware field diagnostic with stable channel formation and detectable transition points
+---
+
+### 5.3 System is Dissipative
 
 Observed:
 
-- high channel stability  
-- clear separation of strands  
-- consistent switch detection  
-- early instability signals before classical collapse  
+- strong inward pull
+- natural collapse to center
 
-Current limitation:
+Conclusion:
 
-- no full intervention logic  
-- no robust closed-loop control  
-- no final navigation engine yet  
+> the system lacks intrinsic orbital energy
 
 ---
 
-## 6. Key insight
+### 5.4 Missing Rotation
 
-The grey channel is not just a visualization artifact.
+Observed:
 
-It represents:
+- phase clustering  
+- no sustained angular motion  
 
-> a structurally valid region of motion within the system
+Conclusion:
 
-Switch points represent:
-
-> transitions between stability regimes
-
-In IEEE systems, this means:
-
-> instability may become visible first as structural deformation in the field,  
-> before it becomes visible as classical voltage collapse.
-
-This is the central working hypothesis of the pipeline.
+> stability requires rotation, not only position control
 
 ---
 
-## 7. Immediate next step
+### 5.5 Control Dimensionality Problem
 
-- build the first clean IEEE 57 / 118 pipeline  
-- compare classical voltage curve vs NEXAH field signals  
-- implement minimal signal-based decision logic  
-- generate one reproducible mic-drop figure  
+- P and Q both affect voltage magnitude  
+- no clean orthogonal actuation  
 
-Goal:
+Result:
 
-> establish a robust baseline for full IEEE structural diagnosis
+> true 2D control is not physically available in current setup
 
 ---
 
-## 8. Summary
+## 6. Interpretation
 
-The NEXAH IEEE X-Ray Pipeline evolves through:
+The system currently supports:
 
-```text
-baseline → field → channel → strand → switch → decision → navigation
+### ✔ Structural Monitoring
+
+- early instability detection  
+- transition localization  
+
+### ✔ Soft Control
+
+- damping  
+- stabilization  
+
+### ⚠ Partial Navigation
+
+- direction control emerging  
+- orbit not stable  
+
+### ❌ Full Navigation
+
+- no persistent orbit  
+- no reliable gate transitions  
+
+---
+
+## 7. Conceptual Model
+
+The system structure can be summarized as:
+
+```
+CORE → GAP → BAND → FIELD → GRID
 ```
 
-Current position:
+Dynamics:
 
-- baseline ✔  
-- field ✔  
-- channel ✔  
-- strand ✔  
-- switch ✔  
-- decision ⚠️ emerging  
-- navigation ❌  
+```
+drift + pulse + switch + (missing rotation)
+```
 
-Target:
+---
 
-> transform structural detection into interpretable and ultimately controllable movement within complex power-system dynamics
+## 8. Immediate Next Steps
+
+### 1. Rotation Stabilization
+
+- sustain angular motion
+- prevent phase collapse
+
+### 2. Gap Timing
+
+- detect Breathing Gap entry
+- apply trigger impulses
+
+### 3. Control Redesign
+
+- improve orthogonality
+- test alternative actuation mappings
+
+### 4. Validation
+
+- multi-grid testing (IEEE 57, 118, ...)
+- reproducible metrics
+
+---
+
+## 9. Practical Relevance
+
+### Already usable
+
+- anomaly detection  
+- early warning signals  
+- structural diagnostics  
+
+### Not yet proven
+
+- real-time grid control  
+- industrial deployment  
+- actuator mapping  
+
+---
+
+## 10. Summary
+
+The NEXAH IEEE X-Ray Pipeline has evolved from:
+
+```text
+raw simulation → structure → field → controlled dynamics
+```
+
+Current state:
+
+> a quantitatively validated structural control framework  
+> with strong stabilization, but incomplete navigation capability  
+
+Next milestone:
+
+> transition from stabilization → orbit-based navigation
+
+---
+
+## Status
+
+- Pipeline core: ✔ stable  
+- Controller layer: ⚠ experimental  
+- Navigation: ❌ not yet achieved  
+
+---
+
+## Entry Points
+
+- `pipeline_versions/` → evolution of extraction + control  
+- `results/` → generated plots and reports  
+- `metrics.md` → quantitative evaluation  
+- `breathing_gap_control_principles.md` → structural theory  
+
+---
+
+## Final Note
+
+This project explores a fundamental hypothesis:
+
+> instability appears first as structural deformation  
+> before it appears in classical electrical metrics
+
+If validated, this enables:
+
+- earlier detection  
+- better interpretation  
+- new control strategies  
+
+for complex dynamical systems.
