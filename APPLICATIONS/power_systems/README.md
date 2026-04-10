@@ -21,6 +21,16 @@ NEXAH reliably detects voltage collapse **43.9 seconds earlier** than classical 
 
 ---
 
+# Final Showcase (Detection Layer)
+
+![NEXAH Mic-Drop](stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)  
+*NEXAH detects collapse 43.9 seconds earlier than classical voltage methods*
+
+![IEEE Scaling](stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee1354_real_tunable_v12.7_4panel_iota_ring.png)  
+*Structural behavior remains consistent across large-scale grids*
+
+---
+
 ## Why this matters
 
 Classical methods detect collapse only after voltage degradation begins.
@@ -35,40 +45,182 @@ NEXAH detects:
 
 ---
 
-# System Architecture
-
-The NEXAH pipeline follows:
-
-```text
-simulation → structure → field → channel → switch → decision → navigation
-```
-
----
-
 # IEEE X-Ray Pipeline (v1–v14.x)
 
-The IEEE X-Ray Pipeline introduces a reduced structural state space:
+The next step extends detection into **structural navigation**.
+
+```text
+simulation → structure → geometry → control → navigation
+```
+
+State space:
 
 - coherence (x)
-- switch signal (y)
+- switch (y)
 - radius (r)
 - phase (θ)
 
-This enables:
+---
 
-- geometric trajectory analysis  
-- stability band detection  
-- experimental control  
+## Visual Evolution
+
+### Early Structure Discovery
+
+![v3 detection](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_pipeline_v3_detection.png)
+
+- first emergence of non-random structure
 
 ---
 
-## Controller Status (v14 Series)
+### Polar Geometry Breakthrough
 
-### Achieved
+![v6 polar](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_pipeline_v6_polar_morphology.png)
 
-- ✔ strong stabilization  
-- ✔ escape elimination (v14.5)  
-- ✔ coherence improvement  
+- transformation into (r, θ)
+- reveals drift + structure
+
+---
+
+### Stability Band (v13)
+
+![v13 band](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v13_band_polar.png)
+
+- orbit concept introduced
+
+---
+
+# Controller Layer (v14 Series)
+
+### Stabilization (v14.5)
+
+![v14.5](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v14_5_orbital_gate_polar.png)
+
+- escape states eliminated  
+- strong coherence stabilization  
+
+---
+
+### Orbit Capture Attempt (v14.6)
+
+![v14.6](APPLICATIONS/power_systems/ieee_xray_pipeline/results/ieee57_v14_6_orbit_capture_polar.png)
+
+- system reaches band  
+- orbit not sustained  
+
+---
+
+### Forced Rotation (v14.7)
+
+![v14.7](APPLICATIONS/power_systems/ieee_xray_pipeline/results/v14_7c_polar.png)
+
+- explicit angular forcing  
+- partial rotation achieved  
+
+---
+
+## Controller Status
+
+### ✔ Achieved
+- strong stabilization  
+- escape elimination  
+- measurable coherence improvement  
+
+### ⚠ Limitations
+- no sustained orbit  
+- no stable rotation  
+- no gate locking  
+
+---
+
+## Key Insight
+
+> The system behaves as a **dissipative field without intrinsic rotational energy**
+
+Meaning:
+
+- stabilization works  
+- navigation does not yet work  
+
+---
+
+# Root Cube Navigation (v31–v36)
+
+Experimental extension into higher-dimensional geometry.
+
+### Observations
+
+- trajectories leave constrained regions  
+- control signal transitions between regimes  
+- new structural behavior appears  
+
+### Interpretation
+
+> high escape counts indicate a transition out of the original stability basin  
+> and suggest a structural regime change
+
+⚠ This layer is experimental and not yet validated.
+
+---
+
+# Two Operational Layers
+
+## 1. Detection Layer ✔
+- early warning (Mic-Drop)
+- structural instability detection
+
+## 2. Navigation Layer ⚠
+- orbit control  
+- phase alignment  
+- gate logic  
+
+---
+
+# Interpretation
+
+NEXAH currently provides:
+
+- ✔ Early detection  
+- ✔ Structural mapping  
+- ⚠ Partial control  
+- ❌ No full navigation yet  
+
+---
+
+# Next Milestones
+
+1. stabilize rotation  
+2. maintain orbit in band  
+3. enable phase locking  
+4. map control to physical actuators  
+
+---
+
+# Summary
+
+```text
+signal → structure → geometry → early warning → (control) → (navigation)
+```
+
+> **Early warning is solved. Navigation is the next frontier.**
+
+---
+
+# Entry Points
+
+- `ieee_xray_pipeline/` → pipeline + controllers  
+- `results/` → visual outputs  
+- `metrics.md` → quantitative evaluation  
+- `breathing_gap_control_principles.md` → structural theory  
+
+---
+
+# Author
+
+Thomas K. R. Hofmann  
+April 2026
+
+NEXAH is transitioning from geometric discovery to a  
+**functional framework for navigation in complex dynamical systems.**- ✔ coherence improvement  
 - ✔ stability band definition  
 
 ### Limitations
