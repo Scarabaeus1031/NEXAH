@@ -169,14 +169,14 @@ oko_count = 0
     # ============================================================
     # MAIN LOOP
     # ============================================================
-    for t in range(T):
-    ptry:
-    pp.runpp(net, enforce_q_lims=True, max_iteration=20)
+for t in range(T):
+    try:
+        pp.runpp(net, enforce_q_lims=True, max_iteration=20)
     except:
-    print(f"⚠️ PF failed at step {t}, damping...")
-    net.load.p_mw = base_p * 0.98
-    net.load.q_mvar = base_q * 0.98
-    continue
+        print(f"⚠️ PF failed at step {t}, damping...")
+        net.load.p_mw = base_p * 0.98
+        net.load.q_mvar = base_q * 0.98
+        continue
     vm = net.res_bus.vm_pu.values
     v_mean = np.mean(vm)
 
