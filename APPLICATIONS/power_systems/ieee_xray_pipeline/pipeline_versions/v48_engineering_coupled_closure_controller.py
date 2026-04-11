@@ -365,7 +365,7 @@ for t in range(T):
     # --------------------------------------------------------
     # store
     # --------------------------------------------------------
-        controlled["u"].append(u)
+    controlled["u"].append(u)
     controlled["u_ieee"].append(u_ieee)
     controlled["u_field"].append(u_field)
     controlled["u_lock"].append(u_lock)
