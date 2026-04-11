@@ -1,0 +1,41 @@
+NEXAH v47 – Master Slave Closure Controller
+
+Escape count: 400
+Master switch count: 0
+Slave switch count: 2
+Gap count: 24
+Closure count: 0
+Lock count (prox > 0.3): 8
+
+ALGO count: 384
+OLGO count: 16
+OKO count: 0
+
+Mean voltage: 0.9289
+Mean coherence: 0.9423
+Mean radius: 0.7108
+
+Mean OLGO proximity: 0.0175
+Max OLGO proximity: 0.5322
+Mean control signal: -0.0135
+
+Observed shell occupancy:
+  Core: 0
+  Transition: 0
+  Expansion: 400
+
+Master node occupancy:
+  node_0: 0
+  node_1: 0
+  node_2: 0
+  node_3: 0
+  node_4: 400
+  node_5: 0
+
+Slave node occupancy:
+  node_0: 0
+  node_1: 0
+  node_2: 0
+  node_3: 0
+  node_4: 155
+  node_5: 245
