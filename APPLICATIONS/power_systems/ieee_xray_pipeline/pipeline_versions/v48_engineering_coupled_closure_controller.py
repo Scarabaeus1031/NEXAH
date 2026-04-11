@@ -169,7 +169,7 @@ oko_count = 0
 # ============================================================
 # MAIN LOOP
 # ============================================================
-for t in range(T):
+    for t in range(T):
     ptry:
     pp.runpp(net, enforce_q_lims=True, max_iteration=20)
     except:
