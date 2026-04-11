@@ -1,0 +1,34 @@
+NEXAH v55 – Aperture Crossing Engine
+Script: v55_aperture_crossing_engine.py
+
+Mean voltage: 0.9038
+Mean coherence: 0.9286
+Mean radius: 0.9623
+
+Final voltage: 0.9037
+Final coherence: 0.9285
+Final radius: 0.9627
+
+Mean OLGO proximity: 0.7293
+Max OLGO proximity: 0.8023
+
+Mean closure metric: 0.5890
+Max closure metric: 0.6419
+
+Mean control signal: 0.0403
+Mean attractor term: 0.0016
+Mean drift term: -0.0005
+Mean memory term: 0.0006
+Mean aperture term: 0.0599
+Mean explore term: 0.0008
+
+Switch count: 32
+Aperture events: 400
+
+Sector occupancy:
+  sector_0: 0
+  sector_1: 0
+  sector_2: 0
+  sector_3: 0
+  sector_4: 192
+  sector_5: 208
