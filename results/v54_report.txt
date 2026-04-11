@@ -1,0 +1,30 @@
+NEXAH v54 – Multi Attractor Navigation
+
+Mean voltage: 0.9040
+Mean coherence: 0.9288
+Mean radius: 0.9598
+
+Final voltage: 0.9040
+Final coherence: 0.9288
+Final radius: 0.9598
+
+Mean OLGO proximity: 0.8096
+Max OLGO proximity: 0.8558
+
+Mean closure metric: 0.6332
+Max closure metric: 0.6763
+
+Mean control signal: -0.0037
+Mean attractor term: -0.0268
+Mean drift term: 0.0150
+Mean memory term: 0.0264
+
+Switch count: 0
+
+Sector occupancy:
+  sector_0: 0
+  sector_1: 0
+  sector_2: 0
+  sector_3: 0
+  sector_4: 400
+  sector_5: 0
