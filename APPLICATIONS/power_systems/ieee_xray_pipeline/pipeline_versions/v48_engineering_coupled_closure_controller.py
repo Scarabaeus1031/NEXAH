@@ -170,8 +170,13 @@ oko_count = 0
 # MAIN LOOP
 # ============================================================
 for t in range(T):
-    pp.runpp(net, enforce_q_lims=True)
-
+    ptry:
+    pp.runpp(net, enforce_q_lims=True, max_iteration=20)
+    except:
+    print(f"⚠️ PF failed at step {t}, damping...")
+    net.load.p_mw = base_p * 0.98
+    net.load.q_mvar = base_q * 0.98
+    continue
     vm = net.res_bus.vm_pu.values
     v_mean = np.mean(vm)
 
@@ -359,12 +364,12 @@ for t in range(T):
     u = np.clip(u, -u_clip, u_clip)
 
     # --------------------------------------------------------
-    # apply
+    # apply (STABIL FIXED)
     # --------------------------------------------------------
     factor = 1.0 + u * 0.08
-    net.load.p_mw *= factor
-    net.load.q_mvar *= factor
 
+    net.load.p_mw = base_p * factor
+    net.load.q_mvar = base_q * factor
     # --------------------------------------------------------
     # store
     # --------------------------------------------------------
