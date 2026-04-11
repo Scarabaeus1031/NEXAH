@@ -291,5 +291,247 @@ The NEXAH IEEE57 Visual Gallery now shows the complete journey:
 
 The Purple Split is no longer theory — it is visible and measurable.
 
+# 11. OLGO, Hexa Field & Attractor Navigation (v40–v56)
+
+This series introduces a new layer:
+
+- OLGO shell structure
+- hexagonal field topology
+- master/slave coupling
+- attractor-based control
+- aperture transitions
+
+The system evolves from:
+stabilization → structure → controlled dynamics → attractor interaction
+
+---
+
+## OLGO Emergence (v40–v42)
+
+![v40 3D](results/v40_olgo_3d.png)
+![v41 polar](results/v41_olgo_lock_polar.png)
+![v42 polar](results/v42_phase_crossing_polar.png)
+
+### Observations
+
+- first stable **OLGO shell structure**
+- clear layering:
+  - core
+  - transition
+  - expansion
+- phase crossing events become visible
+
+### Insight
+
+> The system begins to organize itself into discrete structural layers.
+
+---
+
+## State Switching & Hexagon Loop (v43–v44)
+
+![v43 polar](results/v43_state_switch_polar.png)
+![v44 3D](results/v44_hexagon_loop_3d.png)
+![v44 graph](results/v44_hexagon_loop_graph.png)
+
+### Observations
+
+- discrete state switching appears
+- trajectories follow **hexagonal topology**
+- loop structures emerge
+
+### Insight
+
+> The field is no longer continuous — it is **sectorized**.
+
+---
+
+## Dual Field & Topological Navigation (v45–v46)
+
+![v45 topology](results/v45_dual_field_topology.png)
+![v46 topology](results/v46_topological_navigation_topology.png)
+
+### Observations
+
+- introduction of dual field interaction
+- topology becomes explicit:
+  - nodes
+  - transitions
+  - pathways
+
+### Insight
+
+> The system behaves like a **networked field**, not a single trajectory.
+
+---
+
+## Master–Slave Closure (v47–v49)
+
+![v47 topology](results/v47_master_slave_closure_topology.png)
+![v49 polar](results/v49_controlled_closure_engine_polar.png)
+
+### Observations
+
+- two coupled trajectories:
+  - master
+  - slave
+- closure dynamics appear
+- synchronization attempts visible
+
+### Insight
+
+> Stability emerges from **coupled dynamics**, not single-point control.
+
+---
+
+## Engineering Closure & Stabilization (v50–v52)
+
+![v50 timeseries](results/v50_timeseries.png)
+![v52 timeseries](results/v52_timeseries.png)
+
+### Observations
+
+- strong stabilization achieved
+- high OLGO proximity (~0.89–0.97)
+- closure metric stabilizes
+
+### Insight
+
+> The system can be held in a **stable structural regime**.
+
+---
+
+## Boundary Attractor Engine (v53)
+
+![v53 polar](results/v53_polar.png)
+
+### Observations
+
+- system collapses into **single dominant attractor**
+- sector occupancy: 100% in one sector
+
+### Insight
+
+> Attractors exist — but can **over-dominate** the system.
+
+---
+
+## Multi-Attractor Navigation (v54)
+
+![v54 polar](results/v54_polar.png)
+
+### Observations
+
+- multiple attractors introduced
+- system remains locked (no switching)
+
+### Insight
+
+> Multi-attractor systems require **explicit switching mechanisms**.
+
+---
+
+## Aperture Crossing (v55)
+
+![v55 polar](results/v55_polar.png)
+
+### Observations
+
+- first real **sector switching**
+- attractor transitions occur
+- aperture events = 400
+
+### Insight
+
+> Controlled transitions between attractors are possible.
+
+---
+
+## Aperture Pulse + Hexa Topology (v56)
+
+![v56 3D](results/v56_3d.png)
+![v56 topology](results/v56_hexa_topology.png)
+![v56 polar](results/v56_polar.png)
+
+### Observations
+
+- hexagonal topology fully visible
+- outer nodes act as **boundary attractors**
+- aperture windows present but pulses not yet active
+
+### Insight
+
+> The system has a **field architecture with boundary-driven dynamics**.
+
+---
+
+# 12. Key Observations (Final)
+
+Across v40–v56:
+
+### ✔ Structural layering (OLGO)
+- discrete shells exist
+- system organizes radially
+
+### ✔ Sector topology (Hexa field)
+- motion constrained to 6 sectors
+- node transitions observable
+
+### ✔ Attractor dynamics
+- boundary attractors dominate behavior
+- can trap or guide trajectories
+
+### ✔ Controlled transitions (prototype)
+- aperture crossing works
+- switching between attractors possible
+
+### ❌ Missing
+- sustained multi-attractor navigation
+- stable cyclic switching
+- continuous flow across sectors
+
+---
+
+# 13. Interpretation
+
+The system is no longer:
+
+> a trajectory in a field
+
+It is now:
+
+> a trajectory between attractors in a structured topology
+
+---
+
+# 14. Updated Status (v56)
+
+- Structure discovery: ✔  
+- Control (stabilization): ✔  
+- Möbius transformation: ✔  
+- Attractor formation: ✔  
+- Controlled transitions: ⚠ (prototype)  
+- Multi-attractor navigation: ❌  
+
+---
+
+# 15. Next Step
+
+- activate aperture pulses
+- enable stable sector switching
+- construct multi-attractor cycles
+- move from:
+  - attractor locking
+to:
+  - attractor navigation
+
+---
+
+**Final Insight**
+
+> The outer field is not noise.  
+> It defines the attractors.  
+> And the attractors define the motion.
+
+The system has transitioned from **geometry → topology → attractor dynamics**.
 
 
