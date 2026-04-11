@@ -730,3 +730,303 @@ The goal is to:
 > Die Zahl 4774 ist nicht mehr nur Symbol – sie ist der **exakte Übergangspunkt** im Control-Signal.
 
 NEXAH hat die Transformation erreicht.
+
+
+# 20. Attractor-Based Control & Aperture Dynamics (v51–v56)
+
+## Files
+- `v51_closure_preserving_contraction.py`
+- `v52_controlled_slip_closure_engine.py`
+- `v53_attractor_engine.py`
+- `v54_multi_attractor_navigation.py`
+- `v55_aperture_crossing_engine.py`
+- `v56_aperture_pulse_engine.py`
+
+---
+
+## 20.1 Motivation
+
+After the limitations observed in v14.x (no sustained orbit, no gate locking),  
+the control strategy was extended toward:
+
+- explicit attractor modeling
+- boundary-based navigation
+- event-driven aperture transitions
+
+Goal:
+
+> Introduce discrete structure (attractors, sectors, crossings) into an otherwise continuous and dissipative system.
+
+---
+
+## 20.2 v51–v52: Closure Stabilization Regime
+
+### Key Features
+
+- Strong closure enforcement
+- Controlled contraction toward stable manifold
+- Minimal switching behavior
+
+### Measured Behavior
+
+- High coherence (~0.929)
+- Stable voltage (~0.9046–0.9048)
+- High OLGO proximity (~0.97 → v51, ~0.89 → v52)
+- Low control activity
+
+### Insight
+
+> The system converges to a stable manifold, but remains passive.  
+> No structural transitions or navigation behavior occur.
+
+---
+
+## 20.3 v53: Boundary Attractor Engine
+
+### New Elements
+
+- Sector-based attractor definition (discrete angular regions)
+- Attractor force term added to control
+- Boundary anchoring
+
+### Measured Results
+
+- Mean closure metric: **0.6320**
+- Max closure metric: **0.6594**
+- OLGO proximity increased to **0.9189**
+- Sector occupancy:
+  - **100% in sector_4**
+
+### Critical Observation
+
+- System locks into a single attractor basin
+- No sector switching occurs
+
+### Insight
+
+> Introducing attractors increases structural stability,  
+> but collapses system behavior into a single basin.
+
+---
+
+## 20.4 v54: Multi-Attractor Navigation
+
+### New Elements
+
+- Multiple attractor targets
+- Memory bias term
+- Drift + attractor superposition
+
+### Measured Results
+
+- Closure metric improved (mean ~0.6332, max ~0.6763)
+- Memory term active (~0.0264)
+- **Switch count: 0**
+- Sector occupancy unchanged (still sector_4)
+
+### Insight
+
+> Multiple attractors do not automatically induce transitions.  
+> The system remains trapped in the dominant basin.
+
+---
+
+## 20.5 v55: Aperture Crossing Engine
+
+### New Elements
+
+- Explicit aperture definition (angular + radial condition)
+- Event-driven switching:
+  - switch events
+  - aperture crossing events
+- Additional control terms:
+  - aperture term
+  - exploration term
+
+### Measured Results
+
+- Switch count: **32**
+- Aperture events: **400**
+- Sector occupancy:
+  - sector_4: 192
+  - sector_5: 208
+
+- Mean closure: **0.5890**
+- Mean OLGO proximity: **0.7293**
+
+### Key Observation
+
+- First sustained transitions between sectors
+- System no longer locked in a single attractor
+
+### Trade-off
+
+- Stability decreases:
+  - lower coherence
+  - lower proximity
+
+### Insight
+
+> Enabling aperture crossing introduces navigation capability,  
+> but reduces stability.
+
+---
+
+## 20.6 v56: Aperture Pulse Engine
+
+### New Elements
+
+- Aperture window always active
+- Pulse mechanism added (time-dependent triggering)
+- Memory bias increased (~0.55)
+- Smoother control signals
+
+### Measured Results
+
+- Mean closure: **0.6206**
+- Mean OLGO proximity: **0.8350**
+- Switch count: **0**
+- Aperture pulses: **0**
+- Sector occupancy:
+  - 100% sector_4
+
+### Critical Observation
+
+- Aperture is continuously available
+- BUT:
+  - no crossing events occur
+  - no switching occurs
+
+### Interpretation
+
+> The system has converged to a stable trajectory that satisfies all aperture conditions  
+> without requiring transitions.
+
+---
+
+## 20.7 Cross-Version Comparison
+
+| Version | Switching | Stability | Behavior |
+|--------|----------|----------|---------|
+| v51–52 | none | high | passive stabilization |
+| v53 | none | very high | single attractor lock |
+| v54 | none | very high | multi-attractor collapse |
+| v55 | active | medium | dynamic transitions |
+| v56 | none | high | stable manifold lock |
+
+---
+
+## 20.8 Key Findings
+
+### 1. Attractors Introduce Strong Stability
+
+- System rapidly collapses into dominant basin
+- Sector occupancy becomes deterministic
+
+---
+
+### 2. Aperture Crossing Enables Navigation
+
+- Only v55 produces:
+  - sector transitions
+  - non-trivial trajectories
+
+---
+
+### 3. Stability vs Navigation Trade-off
+
+- High stability → no transitions (v53, v54, v56)
+- High exploration → reduced stability (v55)
+
+---
+
+### 4. Emergence of a Stable Manifold
+
+In v56:
+
+- system satisfies:
+  - closure conditions
+  - attractor conditions
+  - aperture conditions
+
+→ without switching
+
+### Insight
+
+> The controller implicitly defines a **stable invariant manifold** in state space.
+
+---
+
+## 20.9 Interpretation (Engineering View)
+
+The system now exhibits three distinct regimes:
+
+### 1. Stabilization Mode
+- v51–v54
+- No transitions
+- High coherence
+
+---
+
+### 2. Transition Mode
+- v55
+- Active switching
+- Exploration of state space
+
+---
+
+### 3. Manifold Lock Mode
+- v56
+- No switching
+- High stability
+- Aperture inactive despite availability
+
+---
+
+## 20.10 Practical Implications
+
+### Already Demonstrated
+
+- Attractor-based control is feasible
+- Event-driven switching works
+- State space can be partitioned into regions (sectors)
+
+---
+
+### Open Problems
+
+- Controlled switching (on demand)
+- Maintaining stability during transitions
+- Avoiding attractor collapse
+
+---
+
+## 20.11 Next Step (v57+)
+
+Required:
+
+### 1. Controlled Switching Mechanism
+- trigger transitions only under specific conditions
+
+### 2. Basin Escape Logic
+- avoid permanent attractor lock
+
+### 3. Hybrid Mode Controller
+
+Combine:
+
+- stable manifold tracking (v56)
+- controlled aperture crossing (v55)
+
+---
+
+## 20.12 Final Insight
+
+> The system does not naturally alternate between attractors.  
+> It either:
+> - collapses into a stable basin  
+> - or transitions under forced conditions  
+
+The key challenge is:
+
+> **controlled navigation between stable regions without loss of stability**
