@@ -195,3 +195,265 @@ A quantitatively validated structural control framework with strong stabilizatio
 ## Next milestone
 
 Transition from transformation → stable orbit-based navigation.
+
+
+## v51–v52 (Closure Stabilization Regime)
+
+### v51 — Closure-Preserving Contraction
+
+- Mean voltage: ~0.9046
+- Mean coherence: ~0.9292
+- Mean radius: ~0.9547
+- Mean OLGO proximity: ~0.9780
+- Mean closure metric: ~0.5493
+- Mean control signal: ~-0.0975
+
+### Observations
+
+- Strong contraction toward stable manifold
+- Very high OLGO proximity
+- No switching behavior
+
+### Interpretation
+
+- system converges into a stable geometric configuration
+- behaves as a pure stabilizer
+- no navigation or transition dynamics present
+
+---
+
+### v52 — Controlled Slip Closure Engine
+
+- Mean voltage: ~0.9048
+- Mean coherence: ~0.9293
+- Mean radius: ~0.9525
+- Mean OLGO proximity: ~0.8918
+- Mean closure metric: ~0.5021
+- Mean control signal: ~-0.1365
+
+### Observations
+
+- slightly increased control effort
+- reduced OLGO proximity compared to v51
+- still no switching or structural transitions
+
+### Interpretation
+
+- controlled slip introduces flexibility
+- but system remains within a single stable regime
+
+---
+
+## v53 (Boundary Attractor Engine)
+
+- Mean coherence: ~0.9290
+- Mean closure metric: ~0.6320
+- Mean OLGO proximity: ~0.9189
+- Sector occupancy:
+  - sector_4: 400
+  - all others: 0
+
+### Observations
+
+- complete attractor collapse into one sector
+- no switching events observed
+
+### Interpretation
+
+- attractor-based control strongly stabilizes the system
+- but removes all navigation capability
+- system behaves as a single-basin dynamical system
+
+---
+
+## v54 (Multi-Attractor Navigation)
+
+- Mean coherence: ~0.9288
+- Mean closure metric: ~0.6332
+- Mean OLGO proximity: ~0.8096
+- Mean memory term: ~0.0264
+- Switch count: 0
+- Sector occupancy:
+  - sector_4: 400
+
+### Observations
+
+- multiple attractors introduced
+- memory bias active
+- no transitions between attractors
+
+### Interpretation
+
+- adding attractors does not induce switching
+- system remains trapped in dominant basin
+- confirms attractor dominance over memory bias
+
+---
+
+## v55 (Aperture Crossing Engine)
+
+- Mean coherence: ~0.9286
+- Mean closure metric: ~0.5890
+- Mean OLGO proximity: ~0.7293
+- Switch count: 32
+- Aperture events: 400
+
+### Sector Occupancy
+
+- sector_4: 192
+- sector_5: 208
+
+### Observations
+
+- first sustained switching behavior
+- system transitions between attractor regions
+- clear separation between sectors
+
+### Trade-off
+
+- stability decreases:
+  - lower coherence
+  - lower proximity
+
+### Interpretation
+
+- aperture definition successfully enables navigation
+- event-driven switching introduces exploration dynamics
+- confirms necessity of discrete transition mechanisms
+
+---
+
+## v56 (Aperture Pulse Engine)
+
+- Mean coherence: ~0.9288
+- Mean closure metric: ~0.6206
+- Mean OLGO proximity: ~0.8350
+- Mean memory bias: ~0.55
+- Switch count: 0
+- Aperture pulses: 0
+
+### Sector Occupancy
+
+- sector_4: 400
+
+### Observations
+
+- aperture condition always satisfied
+- no transitions triggered
+- smooth and stable trajectories
+
+### Critical Result
+
+- system stabilizes without using switching or pulses
+
+### Interpretation
+
+- system converges to a stable invariant manifold
+- aperture becomes redundant (always satisfied)
+- transitions are no longer required
+
+---
+
+## Cross-Version Insight (v51–v56)
+
+### Stability vs Navigation
+
+| Regime | Versions | Behavior |
+|--------|--------|----------|
+| Stabilization | v51–v54 | high coherence, no switching |
+| Transition | v55 | active switching, reduced stability |
+| Manifold Lock | v56 | stable trajectory, no switching |
+
+---
+
+### Key Findings
+
+#### 1. Attractor Dominance
+
+- system naturally collapses into a single basin
+- multi-attractor setups do not induce transitions
+
+---
+
+#### 2. Event-Driven Switching is Necessary
+
+- only v55 produces:
+  - sector transitions
+  - non-trivial trajectories
+
+---
+
+#### 3. Stability–Exploration Trade-off
+
+- stable regime → no movement between states
+- exploratory regime → reduced stability
+
+---
+
+#### 4. Emergence of Invariant Manifold
+
+- v56 demonstrates:
+  - stable trajectory
+  - no switching required
+  - all constraints satisfied
+
+### Conclusion
+
+> The system supports stable geometric configurations,  
+> but does not naturally transition between them.
+
+---
+
+## Extended Fundamental Finding
+
+> The IEEE57 system supports:
+- radial stabilization ✔
+- attractor convergence ✔
+
+> but does NOT support:
+- spontaneous transitions ❌
+- sustained navigation ❌
+
+---
+
+## Updated Direction
+
+- controlled switching (not continuous)
+- trigger-based transitions
+- hybrid regime:
+  - stable manifold tracking
+  - conditional aperture crossing
+
+---
+
+## Updated Summary
+
+The NEXAH IEEE57 pipeline has evolved from:
+
+```text
+raw simulation → structure → field → control → transformation → attractor dynamics
+```
+
+## Current state (v56)
+
+A system capable of:
+- strong stabilization
+- attractor-based structuring
+- controlled transitions (prototype)
+
+but not yet capable of:
+- sustained navigation
+- stable multi-basin dynamics
+
+---
+
+## Next milestone
+
+Transition from:
+- attractor lock / forced transitions
+
+to:
+- controlled multi-attractor navigation
+- stable switching dynamics
+
+
