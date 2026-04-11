@@ -1,0 +1,34 @@
+NEXAH v56 – Aperture Pulse Engine
+Script: v56_aperture_pulse_engine.py
+
+Mean voltage: 0.9041
+Mean coherence: 0.9288
+Mean radius: 0.9591
+
+Final voltage: 0.9041
+Final coherence: 0.9288
+Final radius: 0.9590
+
+Mean OLGO proximity: 0.8350
+Max OLGO proximity: 0.8458
+
+Mean closure metric: 0.6206
+Max closure metric: 0.6593
+
+Mean control signal: -0.0192
+Mean attractor term: -0.0185
+Mean drift term: 0.0080
+Mean memory term: 0.0027
+Mean aperture term: 0.0000
+
+Switch count: 0
+Aperture windows: 400
+Aperture pulses: 0
+
+Sector occupancy:
+  sector_0: 0
+  sector_1: 0
+  sector_2: 0
+  sector_3: 0
+  sector_4: 400
+  sector_5: 0
