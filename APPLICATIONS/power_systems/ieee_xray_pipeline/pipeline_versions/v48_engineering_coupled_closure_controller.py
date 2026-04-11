@@ -61,6 +61,9 @@ np.random.seed(42)
 net = pp.networks.case57()
 net.load.p_mw *= 0.85
 net.load.q_mvar *= 0.85
+# --- BASELINE (WICHTIG!) ---
+base_p = net.load.p_mw.copy()
+base_q = net.load.q_mvar.copy()
 
 # ============================================================
 # STORAGE
