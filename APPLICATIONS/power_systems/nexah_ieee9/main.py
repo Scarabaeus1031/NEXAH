@@ -8,8 +8,10 @@ from scipy.ndimage import gaussian_filter1d
 from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
 
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
-from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual import compute_residual
-from APPLICATIONS.power_systems.nexah_ieee9.overlay.distance import compute_distance
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
+    compute_residual,
+    compute_distance,
+)
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.clustering import cluster_overlay
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.gh_filter import gh_filter
 
@@ -51,6 +53,7 @@ def powerflow_solver(lam):
         "theta": theta,
         "converged": converged
     }
+
 
 # =========================================
 # 1. SIMULATION
@@ -152,7 +155,11 @@ print("Manifold params:", params)
 residual = compute_residual(c, dc, d2c, params)
 
 # Define rift region from late but still stable points
-rift_indices = np.where(valid)[0][-15:-5]
+valid_indices = np.where(valid)[0]
+if len(valid_indices) < 15:
+    raise ValueError("Not enough valid points to define rift region")
+
+rift_indices = valid_indices[-15:-5]
 
 rift_points = np.column_stack([
     c[rift_indices],
