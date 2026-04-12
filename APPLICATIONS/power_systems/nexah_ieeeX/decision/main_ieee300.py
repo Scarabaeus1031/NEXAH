@@ -71,8 +71,6 @@ def cluster_overlay_safe(distance, residual, k=3):
 np.random.seed(42)
 
 solver = RealPowerFlowSolverGeneric(case_name="ieee300")
-
-# larger range to force visible structure
 lambdas = np.linspace(0.8, 2.5, 80)
 
 results = []
@@ -102,6 +100,31 @@ for lam in lambdas:
 
 
 # =========================================
+# DEBUG: RAW SIMULATION HEALTH
+# =========================================
+
+converged_flags = np.array([r["converged"] for r in results], dtype=bool)
+num_converged = int(np.sum(converged_flags))
+
+raw_vmin = []
+for r in results:
+    V = r["V"]
+    if r["converged"] and np.all(np.isfinite(V)):
+        raw_vmin.append(np.min(V))
+    else:
+        raw_vmin.append(np.nan)
+
+raw_vmin = np.asarray(raw_vmin, dtype=float)
+
+print("Converged steps:", num_converged, "/", len(results))
+print("Raw Vmin nan count:", int(np.sum(~np.isfinite(raw_vmin))))
+print("Raw Vmin std:", float(np.nanstd(raw_vmin)) if np.any(np.isfinite(raw_vmin)) else np.nan)
+
+if np.any(np.isfinite(raw_vmin)):
+    print("Raw Vmin min/max:", float(np.nanmin(raw_vmin)), float(np.nanmax(raw_vmin)))
+
+
+# =========================================
 # FEATURES (LARGE GRID MODE)
 # =========================================
 
@@ -109,7 +132,6 @@ Vmin, c_list, frag_list = [], [], []
 
 for r in results:
     V = r["V"]
-    theta = r["theta"]
 
     if not r["converged"] or np.any(np.isnan(V)):
         Vmin.append(np.nan)
@@ -118,16 +140,14 @@ for r in results:
         continue
 
     vmin = np.min(V)
+    vmean = np.mean(V)
     vstd = np.std(V)
 
-    # robust large-grid structural proxy
-    centered = V - np.mean(V)
+    centered = V - vmean
     vskew = np.mean(centered**3)
 
-    # composite structural signal
+    # robust large-grid structural signal
     c_val = vmin + 0.5 * vstd + 0.1 * vskew
-
-    # fragmentation proxy
     frag_val = vstd
 
     Vmin.append(vmin)
@@ -138,28 +158,24 @@ Vmin = np.asarray(Vmin, dtype=float)
 c = np.asarray(c_list, dtype=float)
 frag = np.asarray(frag_list, dtype=float)
 
-# -----------------------------------------
-# FINAL SAFETY
-# -----------------------------------------
+print("Raw feature stds:")
+print("Vmin std:", float(np.nanstd(Vmin)) if np.any(np.isfinite(Vmin)) else np.nan)
+print("c std:", float(np.nanstd(c)) if np.any(np.isfinite(c)) else np.nan)
+print("frag std:", float(np.nanstd(frag)) if np.any(np.isfinite(frag)) else np.nan)
 
-if np.nanstd(c) < 1e-8:
+# fallback if raw feature is too flat
+if np.sum(np.isfinite(c)) < 20 or np.nanstd(c) < 1e-8:
     print("⚠️ Structural signal too flat → using Vmin fallback")
     c = Vmin.copy()
 
-if np.nanstd(frag) < 1e-8:
-    print("⚠️ Fragmentation too flat → using local voltage spread fallback")
-    frag_fallback = []
-    for r in results:
-        V = r["V"]
-        if not r["converged"] or np.any(np.isnan(V)):
-            frag_fallback.append(np.nan)
-        else:
-            frag_fallback.append(np.std(V))
-    frag = np.asarray(frag_fallback, dtype=float)
-
-c = safe_fill_nan(c)
-frag = safe_fill_nan(frag)
-Vmin = safe_fill_nan(Vmin)
+if np.sum(np.isfinite(frag)) < 20 or np.nanstd(frag) < 1e-8:
+    print("⚠️ Fragmentation too flat → using rolling Vmin spread fallback")
+    frag_fb = []
+    for i in range(len(Vmin)):
+        lo = max(0, i - 2)
+        hi = min(len(Vmin), i + 3)
+        frag_fb.append(np.nanstd(Vmin[lo:hi]))
+    frag = np.asarray(frag_fb, dtype=float)
 
 
 # =========================================
@@ -172,6 +188,11 @@ def compute_derivatives(x, y):
     dy = np.gradient(y_smooth, x)
     d2y = np.gradient(dy, x)
     return dy, d2y
+
+# only now fill
+c = safe_fill_nan(c)
+frag = safe_fill_nan(frag)
+Vmin = safe_fill_nan(Vmin)
 
 dc, d2c = compute_derivatives(lambdas, c)
 
@@ -187,8 +208,8 @@ print("c std:", float(np.nanstd(c)))
 print("dc std:", float(np.nanstd(dc)))
 print("d2c std:", float(np.nanstd(d2c)))
 
-if np.sum(valid) < 20:
-    print("⚠️ Not enough valid points for manifold → fallback")
+if np.sum(valid) < 20 or np.nanstd(c) < 1e-10:
+    print("⚠️ Not enough structure for manifold → fallback")
     params = np.array([0.0, 0.0, 0.0])
     fit_ok = False
 else:
@@ -254,7 +275,6 @@ except Exception:
     warnings = np.zeros_like(c, dtype=bool)
     ttc = np.full_like(c, np.nan)
 
-# if predictor is numerically dead, fallback to normalized inverse Vmin
 if np.nanstd(risk) < 1e-8:
     print("⚠️ Risk too flat → using Vmin-based fallback risk")
     vmax = np.nanmax(Vmin)
@@ -278,7 +298,7 @@ print("Warning count:", int(np.sum(warnings)))
 
 states = []
 for i in range(len(c)):
-    if not np.isfinite(Vmin[i]):
+    if not np.isfinite(raw_vmin[i]):
         states.append("COLLAPSED")
     elif risk[i] > 0.7:
         states.append("CRITICAL")
