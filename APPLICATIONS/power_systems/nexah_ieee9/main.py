@@ -15,6 +15,7 @@ from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real imp
 solver = RealPowerFlowSolver()
 
 res = solver.step(lam, action=prev_action)
+
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_residual,
