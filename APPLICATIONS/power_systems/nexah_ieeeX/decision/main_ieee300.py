@@ -71,7 +71,7 @@ def cluster_overlay_safe(distance, residual, k=3):
 np.random.seed(42)
 
 solver = RealPowerFlowSolverGeneric(case_name="ieee300")
-lambdas = np.linspace(0.8, 1.3, 80)
+lambdas = np.linspace(0.9, 1.15, 120)
 
 results = []
 prev_action = None
