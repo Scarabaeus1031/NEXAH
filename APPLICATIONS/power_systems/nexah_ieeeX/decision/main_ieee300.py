@@ -17,7 +17,6 @@ from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_residual,
     compute_distance,
 )
-from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
 from APPLICATIONS.power_systems.nexah_ieee9.decision.intervention_policy import run_intervention_policy
 from APPLICATIONS.power_systems.nexah_ieee9.decision.adaptive_policy_v2 import run_adaptive_policy
@@ -73,8 +72,8 @@ np.random.seed(42)
 
 solver = RealPowerFlowSolverGeneric(case_name="ieee300")
 
-# for large systems: tighter lambda range
-lambdas = np.linspace(0.8, 1.6, 60)
+# larger range to force visible structure
+lambdas = np.linspace(0.8, 2.5, 80)
 
 results = []
 prev_action = None
@@ -103,7 +102,7 @@ for lam in lambdas:
 
 
 # =========================================
-# FEATURES (ROBUST FOR LARGE GRIDS)
+# FEATURES (LARGE GRID MODE)
 # =========================================
 
 Vmin, c_list, frag_list = [], [], []
@@ -119,32 +118,36 @@ for r in results:
         continue
 
     vmin = np.min(V)
-    Vmin.append(vmin)
+    vstd = np.std(V)
 
-    try:
-        c_val, R, spread = compute_structural_state(V, theta, r["lambda"])
-        c_list.append(c_val)
-        frag_list.append((1 - R) * spread)
-    except Exception:
-        c_list.append(np.nan)
-        frag_list.append(np.nan)
+    # robust large-grid structural proxy
+    centered = V - np.mean(V)
+    vskew = np.mean(centered**3)
+
+    # composite structural signal
+    c_val = vmin + 0.5 * vstd + 0.1 * vskew
+
+    # fragmentation proxy
+    frag_val = vstd
+
+    Vmin.append(vmin)
+    c_list.append(c_val)
+    frag_list.append(frag_val)
 
 Vmin = np.asarray(Vmin, dtype=float)
 c = np.asarray(c_list, dtype=float)
 frag = np.asarray(frag_list, dtype=float)
 
 # -----------------------------------------
-# FEATURE FALLBACK FOR LARGE SYSTEMS
+# FINAL SAFETY
 # -----------------------------------------
 
-valid_c = np.isfinite(c)
-if np.sum(valid_c) < 20 or np.nanstd(c) < 1e-4:
-    print("⚠️ Structural coherence too flat → using Vmin fallback feature")
+if np.nanstd(c) < 1e-8:
+    print("⚠️ Structural signal too flat → using Vmin fallback")
     c = Vmin.copy()
 
-valid_frag = np.isfinite(frag)
-if np.sum(valid_frag) < 20 or np.nanstd(frag) < 1e-6:
-    print("⚠️ Fragmentation too flat → using voltage spread fallback")
+if np.nanstd(frag) < 1e-8:
+    print("⚠️ Fragmentation too flat → using local voltage spread fallback")
     frag_fallback = []
     for r in results:
         V = r["V"]
@@ -251,11 +254,12 @@ except Exception:
     warnings = np.zeros_like(c, dtype=bool)
     ttc = np.full_like(c, np.nan)
 
-# if predictor is numerically dead, fallback to normalized Vmin inverse
+# if predictor is numerically dead, fallback to normalized inverse Vmin
 if np.nanstd(risk) < 1e-8:
     print("⚠️ Risk too flat → using Vmin-based fallback risk")
     vmax = np.nanmax(Vmin)
     vmin = np.nanmin(Vmin)
+
     if np.isfinite(vmax) and np.isfinite(vmin) and vmax > vmin:
         risk = 1.0 - (Vmin - vmin) / (vmax - vmin)
         risk = np.clip(risk, 0.0, 1.0)
