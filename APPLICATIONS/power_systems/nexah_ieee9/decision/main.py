@@ -5,10 +5,11 @@
 import numpy as np
 from scipy.ndimage import gaussian_filter1d
 import os
+import json
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real import powerflow_solver_real
+from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real import RealPowerFlowSolver
 
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
@@ -16,216 +17,213 @@ from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_distance,
 )
 from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
+
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
-from APPLICATIONS.power_systems.nexah_ieee9.decision.intervention_policy import (
-    run_intervention_policy,
-)
+from APPLICATIONS.power_systems.nexah_ieee9.decision.intervention_policy import run_intervention_policy
 
 from sklearn.cluster import KMeans
 
 
 # =========================================
-# CLUSTERING
+# HELPERS
 # =========================================
+
+def safe_derivatives(x, y):
+    y = np.nan_to_num(y, nan=np.nanmedian(y))
+    y_smooth = gaussian_filter1d(y, sigma=1.0)
+    dy = np.gradient(y_smooth, x)
+    d2y = np.gradient(dy, x)
+    return dy, d2y
+
 
 def cluster_overlay_safe(distance, residual, k=3):
     X = np.column_stack([distance, residual])
     valid = np.isfinite(X).all(axis=1)
 
-    if np.sum(valid) < k:
-        raise ValueError("Not enough valid points for clustering")
-
-    X_valid = X[valid]
-    kmeans = KMeans(n_clusters=k, random_state=0).fit(X_valid)
-
     labels = np.full(len(X), -1)
+
+    if np.sum(valid) < k:
+        print("⚠️ clustering fallback")
+        centers = np.zeros((k, 2))
+        return labels, centers, False
+
+    kmeans = KMeans(n_clusters=k, random_state=0).fit(X[valid])
     labels[valid] = kmeans.labels_
 
-    return labels, kmeans.cluster_centers_
+    return labels, kmeans.cluster_centers_, True
 
 
 # =========================================
-# PLOT
-# =========================================
-
-def plot_all(lambdas, Vmin, c, dc, d2c, frag, distance, residual, states):
-    fig, axes = plt.subplots(4, 1, figsize=(10, 12))
-
-    axes[0].plot(lambdas, Vmin)
-    axes[0].set_title("Voltage Collapse (REAL GRID Closed Loop)")
-
-    axes[1].plot(lambdas, c, label="c")
-    axes[1].plot(lambdas, d2c, label="d2c")
-    axes[1].plot(lambdas, frag, label="frag")
-    axes[1].legend()
-
-    axes[2].scatter(distance, residual, c=distance)
-    axes[2].set_title("Residual vs Distance")
-
-    state_to_y = {"WARNING": 0, "CRITICAL": 1, "SAFE": 2, "COLLAPSED": 3}
-    y = [state_to_y.get(s, -1) for s in states]
-
-    axes[3].scatter(np.arange(len(states)), y, s=30)
-    axes[3].set_yticks([0, 1, 2, 3])
-    axes[3].set_yticklabels(["WARNING", "CRITICAL", "SAFE", "COLLAPSED"])
-
-    return fig
-
-
-# =========================================
-# CLOSED LOOP SIMULATION (REAL GRID)
+# SIMULATION (FULL CLOSED LOOP)
 # =========================================
 
 np.random.seed(42)
 
+solver = RealPowerFlowSolver()
+
 lambdas = np.linspace(0.5, 2.5, 120)
 
 results = []
-applied_actions = []
+actions = []
 
-c_hist, dc_hist, d2c_hist = [], [], []
-prev_action = None
+c_hist = []
+frag_hist = []
+Vmin_hist = []
+
+risk_hist = []
+signal_hist = []
+state_hist = []
+
+prev_action = "STABILIZE"
 
 for i, lam in enumerate(lambdas):
 
-    # -------------------------------------
-    # REAL SOLVER
-    # -------------------------------------
+    # ---------------------------
+    # SOLVER STEP
+    # ---------------------------
+    res = solver.step(lam, action=prev_action)
 
-    res = powerflow_solver_real(lam, action=prev_action)
+    results.append(res)
+    actions.append(prev_action)
 
-    results.append({
-        "lambda": lam,
-        "V": res["V"],
-        "theta": res["theta"],
-        "converged": res["converged"]
-    })
-
-    applied_actions.append(prev_action if prev_action else "INIT")
-
-    # -------------------------------------
-    # FEATURE EXTRACTION
-    # -------------------------------------
-
-    if not res["converged"] or np.any(np.isnan(res["V"])):
+    if not res["converged"]:
         c_hist.append(np.nan)
-        dc_hist.append(np.nan)
-        d2c_hist.append(np.nan)
-        prev_action = "NONE"
+        frag_hist.append(np.nan)
+        Vmin_hist.append(np.nan)
+        state_hist.append("COLLAPSED")
+        prev_action = "EMERGENCY_SHED"
         continue
 
-    c_val, R, spread = compute_structural_state(res["V"], res["theta"], lam)
+    V = res["V"]
+    theta = res["theta"]
+
+    Vmin = np.min(V)
+    c_val, R, spread = compute_structural_state(V, theta, lam)
+
     c_hist.append(c_val)
+    frag_hist.append((1 - R) * spread)
+    Vmin_hist.append(Vmin)
 
-    # derivatives
-    if len(c_hist) > 5:
-        c_arr = np.array(c_hist)
-        x_arr = lambdas[:len(c_arr)]
+    # ---------------------------
+    # DERIVATIVES
+    # ---------------------------
+    x = lambdas[:i+1]
+    c_arr = np.array(c_hist)
 
-        dy = np.gradient(c_arr, x_arr)
-        d2y = np.gradient(dy, x_arr)
+    dc, d2c = safe_derivatives(x, c_arr)
 
-        dc_hist = dy.tolist()
-        d2c_hist = d2y.tolist()
-    else:
-        dc_hist.append(0)
-        d2c_hist.append(0)
+    # ---------------------------
+    # MANIFOLD + OVERLAY
+    # ---------------------------
+    try:
+        params = fit_manifold(c_arr, dc, d2c)
+        residual = compute_residual(c_arr, dc, d2c, params)
+        rift = np.column_stack([c_arr[-10:], dc[-10:]])
+        distance = compute_distance(c_arr, dc, rift)
+    except:
+        residual = np.zeros_like(c_arr)
+        distance = np.zeros_like(c_arr)
 
-    # -------------------------------------
-    # PREDICTION + POLICY
-    # -------------------------------------
+    # ---------------------------
+    # CLUSTERING
+    # ---------------------------
+    labels, centers, cluster_ok = cluster_overlay_safe(distance, residual)
 
-    if len(c_hist) > 10:
+    # ---------------------------
+    # PREDICTOR (ENHANCED)
+    # ---------------------------
+    pred = run_predictor(distance, d2c, labels)
+
+    risk = np.asarray(pred["risk"])
+
+    # 🔥 NEW: curvature boost
+    curvature = np.abs(d2c)
+    scale = np.nanmedian(curvature) + 1e-6
+    risk = risk + 0.3 * np.tanh(curvature / scale)
+
+    warnings = risk > 0.4
+    ttc = pred["time_to_collapse"]
+
+    risk_hist.append(risk[-1] if len(risk) else 0)
+
+    # ---------------------------
+    # STATES
+    # ---------------------------
+    if cluster_ok:
         try:
-            c_arr = np.array(c_hist)
-            dc_arr = np.array(dc_hist)
-            d2c_arr = np.array(d2c_hist)
-
-            valid = np.isfinite(c_arr) & np.isfinite(dc_arr) & np.isfinite(d2c_arr)
-
-            if np.sum(valid) > 10:
-                params = fit_manifold(c_arr[valid], dc_arr[valid], d2c_arr[valid])
-
-                residual = compute_residual(c_arr, dc_arr, d2c_arr, params)
-
-                rift = np.column_stack([c_arr[-10:], dc_arr[-10:]])
-                distance = compute_distance(c_arr, dc_arr, rift)
-
-                labels, _ = cluster_overlay_safe(distance, residual)
-
-                pred = run_predictor(distance, d2c_arr, labels)
-
-                policy = run_intervention_policy(
-                    pred["risk"],
-                    pred["warnings"],
-                    pred["time_to_collapse"],
-                    ["SAFE"] * len(pred["risk"])
-                )
-
-                prev_action = policy["actions"][-1]
-            else:
-                prev_action = "STABILIZE"
-
+            gh = gh_filter(labels, centers)
+            states = classify_states(c_arr, dc, d2c, frag_hist, labels, gh)
         except:
-            prev_action = "STABILIZE"
+            states = ["CRITICAL"] * len(c_arr)
     else:
-        prev_action = "STABILIZE"
+        states = ["CRITICAL"] * len(c_arr)
+
+    current_state = states[-1]
+    state_hist.append(current_state)
+
+    # ---------------------------
+    # POLICY (IMPROVED)
+    # ---------------------------
+    policy = run_intervention_policy(risk, warnings, ttc, states)
+
+    signal = np.asarray(policy["signal"])
+
+    # 🔥 NEW: smooth signal
+    if len(signal) > 5:
+        signal = gaussian_filter1d(signal, sigma=2)
+
+    signal_hist.append(signal[-1] if len(signal) else 0)
+
+    next_action = policy["actions"][-1]
+
+    # 🔥 CRITICAL FIX
+    if current_state == "COLLAPSED":
+        next_action = "EMERGENCY_SHED"
+
+    prev_action = next_action
 
 
 # =========================================
-# POST ANALYSIS
+# FINAL ARRAYS
 # =========================================
 
-Vmin, c_list, frag_list = [], [], []
+c = np.array(c_hist)
+frag = np.array(frag_hist)
+Vmin = np.array(Vmin_hist)
+risk = np.array(risk_hist)
+signal = np.array(signal_hist)
+states = state_hist
 
-for r in results:
-    if not r["converged"] or np.any(np.isnan(r["V"])):
-        Vmin.append(np.nan)
-        c_list.append(np.nan)
-        frag_list.append(np.nan)
-        continue
-
-    Vmin.append(np.min(r["V"]))
-    c_val, R, spread = compute_structural_state(r["V"], r["theta"], r["lambda"])
-    c_list.append(c_val)
-    frag_list.append((1 - R) * spread)
-
-c = np.array(c_list)
-frag = np.array(frag_list)
-Vmin = np.array(Vmin)
-
-dc = np.gradient(c, lambdas)
-d2c = np.gradient(dc, lambdas)
+dc, d2c = safe_derivatives(lambdas, c)
 
 params = fit_manifold(c, dc, d2c)
-
 residual = compute_residual(c, dc, d2c, params)
-rift = np.column_stack([c[-15:-5], dc[-15:-5]])
-distance = compute_distance(c, dc, rift)
-
-labels, centers = cluster_overlay_safe(distance, residual)
-
-pred = run_predictor(distance, d2c, labels)
-risk = pred["risk"]
-warnings = pred["warnings"]
-
-states = classify_states(c, dc, d2c, frag, labels, gh_filter(labels, centers))
-policy = run_intervention_policy(risk, warnings, pred["time_to_collapse"], states)
-
-signal = policy["signal"]
+distance = compute_distance(c, dc, np.column_stack([c[-10:], dc[-10:]]))
 
 
 # =========================================
 # PLOTS
 # =========================================
 
-fig = plot_all(lambdas, Vmin, c, dc, d2c, frag, distance, residual, states)
+fig, axes = plt.subplots(4, 1, figsize=(10, 12))
+
+axes[0].plot(lambdas, Vmin)
+axes[0].set_title("Voltage Collapse (Improved Closed Loop)")
+
+axes[1].plot(lambdas, c)
+axes[1].plot(lambdas, d2c)
+axes[1].plot(lambdas, frag)
+
+axes[2].scatter(distance, residual)
+
+state_map = {"WARNING":0,"CRITICAL":1,"SAFE":2,"COLLAPSED":3}
+y = [state_map.get(s,0) for s in states]
+axes[3].scatter(range(len(states)), y)
 
 fig_risk, ax = plt.subplots()
 ax.plot(lambdas, risk)
-ax.scatter(lambdas[warnings], risk[warnings])
 
 fig_int, ax2 = plt.subplots()
 ax2.plot(lambdas, signal)
@@ -239,13 +237,18 @@ timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 results_dir = f"APPLICATIONS/power_systems/nexah_ieee9/results/run_{timestamp}"
 os.makedirs(results_dir, exist_ok=True)
 
-np.save(os.path.join(results_dir, "c.npy"), c)
 np.save(os.path.join(results_dir, "risk.npy"), risk)
 
 with open(os.path.join(results_dir, "actions.txt"), "w") as f:
-    for a in applied_actions:
+    for a in actions:
         f.write(f"{a}\n")
 
+with open(os.path.join(results_dir, "states.txt"), "w") as f:
+    for s in states:
+        f.write(f"{s}\n")
+
 fig.savefig(os.path.join(results_dir, "plot.png"))
+fig_risk.savefig(os.path.join(results_dir, "risk.png"))
+fig_int.savefig(os.path.join(results_dir, "intervention.png"))
 
 print("Saved to:", results_dir)
