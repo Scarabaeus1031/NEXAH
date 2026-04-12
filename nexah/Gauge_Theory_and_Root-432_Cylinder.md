@@ -147,15 +147,15 @@ The Root-432 Cylinder can be seen as a concrete geometric realization of gauge-t
 
 ### Visual 1 – Serna’s Vector Bundle vs. Root-432 Cylinder
 
-![Serna Vector Bundle vs Root-432 Cylinder](../visuals/serna_root432.png)
+![Serna Vector Bundle vs Root-432 Cylinder](./visuals/serna_root432.png)
 
 ### Visual 2 – Serna Wave Packets vs. NEXAH Lissajous Breathing
 
-![Serna Wave Packets vs NEXAH Lissajous](../visuals/sernawavepacks_root432.png)
+![Serna Wave Packets vs NEXAH Lissajous](./visuals/sernawavepacks_root432.png)
 
 ### Visual 3 – 3-Panel Master: Serna + Root-432 Cylinder + Atmospheric Sprite Analogy
 
-![Serna + Root-432 + Sprite Analogy](../visuals/serna_root432_sprite_analogy.png)
+![Serna + Root-432 + Sprite Analogy](./visuals/serna_root432_sprite_analogy.png)
 
 ---
 
