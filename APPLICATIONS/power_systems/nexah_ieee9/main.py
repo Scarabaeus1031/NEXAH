@@ -21,6 +21,7 @@ from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
+from APPLICATIONS.power_systems.nexah_ieee9.control.intervention import run_intervention
 
 from sklearn.cluster import KMeans
 
@@ -123,6 +124,8 @@ def powerflow_solver(lam):
 # =========================================
 # 1. SIMULATION
 # =========================================
+
+np.random.seed(42)
 
 lambdas = np.linspace(0.5, 2.5, 120)
 results = run_load_sweep(powerflow_solver, lambdas)
@@ -241,6 +244,19 @@ print("Warning count:", np.sum(warnings))
 
 
 # =========================================
+# 6.75 INTERVENTION
+# =========================================
+
+intervention = run_intervention(risk, ttc, warnings)
+
+signal = np.asarray(intervention["signal"])
+actions = intervention["actions"]
+
+print("First 30 actions:")
+print(actions[:30])
+
+
+# =========================================
 # 7. GH FILTER
 # =========================================
 
@@ -280,6 +296,12 @@ ax_risk.legend()
 ax_risk.set_title("Collapse Risk")
 fig_risk.tight_layout()
 
+fig_int, ax_int = plt.subplots(figsize=(10, 4))
+ax_int.plot(lambdas, signal, label="intervention signal")
+ax_int.legend()
+ax_int.set_title("Intervention Field")
+fig_int.tight_layout()
+
 
 # =========================================
 # 10. SAVE RESULTS
@@ -299,11 +321,17 @@ np.save(os.path.join(results_dir, "residual.npy"), residual)
 np.save(os.path.join(results_dir, "risk.npy"), risk)
 np.save(os.path.join(results_dir, "warnings.npy"), warnings)
 np.save(os.path.join(results_dir, "ttc.npy"), ttc)
+np.save(os.path.join(results_dir, "signal.npy"), signal)
 
 # save states
 with open(os.path.join(results_dir, "states.txt"), "w") as f:
     for s in states:
         f.write(f"{s}\n")
+
+# save actions
+with open(os.path.join(results_dir, "actions.txt"), "w") as f:
+    for a in actions:
+        f.write(f"{a}\n")
 
 # save meta
 meta = {
@@ -312,6 +340,7 @@ meta = {
     "gh_clusters": gh_clusters,
     "max_risk": float(np.nanmax(risk)),
     "warning_count": int(np.sum(warnings)),
+    "max_signal": float(np.nanmax(signal)),
 }
 
 with open(os.path.join(results_dir, "meta.json"), "w") as f:
@@ -320,5 +349,6 @@ with open(os.path.join(results_dir, "meta.json"), "w") as f:
 # save plots
 fig.savefig(os.path.join(results_dir, "plot.png"))
 fig_risk.savefig(os.path.join(results_dir, "risk.png"))
+fig_int.savefig(os.path.join(results_dir, "intervention.png"))
 
 print("Saved to:", results_dir)
