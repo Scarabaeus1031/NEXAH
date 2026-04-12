@@ -220,27 +220,12 @@ rift_points = np.column_stack([
 
 distance = compute_distance(c, dc, rift_points)
 
-
 # =========================================
 # 6. CLUSTERING
 # =========================================
 
 labels, centers = cluster_overlay_safe(distance, residual)
 print("Cluster centers:", centers)
-
-
-# =========================================
-# 6.5 PREDICTION
-# =========================================
-
-pred = run_predictor(distance, d2c, labels)
-
-risk = np.asarray(pred["risk"])
-warnings = np.asarray(pred["warnings"], dtype=bool)
-ttc = np.asarray(pred["time_to_collapse"])
-
-print("Max risk:", np.nanmax(risk))
-print("Warning count:", np.sum(warnings))
 
 # =========================================
 # 6.75 INTERVENTION
@@ -270,6 +255,18 @@ print("GH clusters:", gh_clusters)
 states = classify_states(c, dc, d2c, frag, labels, gh_clusters)
 print(states[:30])
 
+# =========================================
+# 8.3 PREDICTION
+# =========================================
+
+pred = run_predictor(distance, d2c, labels)
+
+risk = np.asarray(pred["risk"])
+warnings = np.asarray(pred["warnings"], dtype=bool)
+ttc = np.asarray(pred["time_to_collapse"])
+
+print("Max risk:", np.nanmax(risk))
+print("Warning count:", np.sum(warnings))
 
 # =========================================
 # 8.5 INTERVENTION POLICY
