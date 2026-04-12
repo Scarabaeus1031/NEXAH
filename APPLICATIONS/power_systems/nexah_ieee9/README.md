@@ -26,94 +26,57 @@ NEXAH answers:
 
 Simulation → Features → Manifold → Overlay → Prediction → Policy → Control
 
-### 🔹 Key Components
-
-- Structural State (`c`)
-- Dynamics (`dc`, `d2c`)
-- Fragmentation (`frag`)
-- Residual Field
-- Distance-to-Rift
-- Risk Field
-- Intervention Policy
-
 ---
 
-## ⚡ Closed-Loop Control
+## 📊 System Behavior (Latest Run)
 
-This implementation includes a **lightweight closed-loop solver**:
-
-- Each simulation step reacts to the previous action
-- Control actions modify system dynamics in real-time
-- Collapse is delayed but not eliminated
-
----
-
-## 📊 Results
-
-### 📁 Result Folder
-
-All runs are stored here:
-
-    APPLICATIONS/power_systems/nexah_ieee9/results/
-
-Each run contains:
-
-- `plot.png` → full pipeline visualization  
-- `risk.png` → collapse risk evolution  
-- `intervention.png` → control signal  
-- `states.txt` → NEXAH state timeline  
-- `actions.txt` → applied intervention policy  
-
----
-
-### 🧪 Latest Run
+### 🧪 Run ID
 
     run_20260412_210330
 
-#### 🔹 Observations
+---
 
-- Early instability detected (λ ≈ 0.6–0.8)
-- Risk peaks around ~0.88
-- Intervention reduces risk amplitude
-- Collapse still occurs at high λ
+### ⚡ Voltage Collapse (Closed-Loop)
+
+![Voltage Collapse](results/run_20260412_210330/plot.png)
+
+✔ Baseline collapse behavior preserved  
+✔ Slight stabilization via feedback  
+✔ No artificial suppression of physics  
 
 ---
 
-### 📉 Collapse Risk
+### 📉 Collapse Risk Field
 
-- Smooth but structured risk field  
-- Clear warning zones  
-- Early detection capability  
+![Collapse Risk](results/run_20260412_210330/risk.png)
+
+✔ Early warning detected around λ ≈ 0.6  
+✔ Peak risk ≈ 0.88  
+✔ Structured (non-random) dynamics  
 
 ---
 
 ### 🛠 Intervention Field
 
-- High signal in unstable regions  
-- Adaptive response over time  
-- Decay near collapse (control saturation)  
+![Intervention](results/run_20260412_210330/intervention.png)
 
----
-
-### ⚡ Voltage Behavior
-
-- Baseline collapse curve preserved  
-- Slight delay under control  
-- No artificial stabilization  
+✔ Strong response in unstable regions  
+✔ Adaptive control signal  
+✔ Decay near collapse (control saturation)  
 
 ---
 
 ## 🧠 Interpretation
 
-NEXAH does NOT replace physics.
+NEXAH does NOT replace classical power system physics.
 
-It adds a new layer:
+It introduces:
 
-> **field-based navigation of system stability**
+> **a continuous stability field + navigation layer**
 
 ---
 
-## ⚖️ Comparison to Classical Methods
+## ⚖️ Classical vs NEXAH
 
 | Feature                | Classical IEEE | NEXAH |
 |----------------------|---------------|------|
@@ -125,34 +88,23 @@ It adds a new layer:
 
 ---
 
-## 🚀 How to Run
+## 🚀 Run
 
     PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/main.py
 
 ---
 
-## 📦 Structure
+## 📁 Results Folder
 
-    nexah_ieee9/
-    │
-    ├── simulation/
-    ├── features/
-    ├── overlay/
-    ├── analysis/
-    ├── decision/
-    ├── control/
-    ├── results/
-    └── main.py
+    APPLICATIONS/power_systems/nexah_ieee9/results/
 
----
+Each run contains:
 
-## 🔮 Next Steps
-
-- Integrate real AC solver (pandapower / PYPOWER)
-- Extend to IEEE 14 / 30 / 118
-- Add topology-aware interventions
-- Multi-step predictive control
-- Stability basin navigation
+- `plot.png`
+- `risk.png`
+- `intervention.png`
+- `states.txt`
+- `actions.txt`
 
 ---
 
@@ -169,9 +121,7 @@ It adds a new layer:
 
 ## 🔥 Final Insight
 
-NEXAH shows that:
-
-> **power systems are not just stable or unstable —  
-they exist inside a navigable stability landscape**
+> **Power systems are not binary (stable / unstable)**  
+> → they live inside a **structured stability landscape**
 
 ---
