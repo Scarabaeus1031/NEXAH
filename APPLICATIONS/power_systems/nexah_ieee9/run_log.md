@@ -50,7 +50,7 @@ This log tracks the evolution of the NEXAH closed-loop stability system applied 
 
 ---
 
-## ⚡ Phase 5 — Intervention Policy
+## ⚡ Phase 5 — Intervention Policy (Baseline)
 Signal constructed from:
 - risk
 - slope (drift)
@@ -63,9 +63,9 @@ Actions:
 - EMERGENCY_SHED
 
 **Observed behavior:**
-- Early aggressive correction
-- Adaptive decay of control
-- Control saturation visible
+- Mostly reactive
+- Limited escalation
+- Passive behavior near collapse (NONE / STABILIZE)
 
 ---
 
@@ -80,12 +80,60 @@ Actions:
 
 ---
 
-## 📊 Key Results
-- Max risk ≈ 0.88
-- ~10 early warnings detected
-- Stable clustering into 3 regions
-- Intervention signal peaks near 1.0
-- Collapse region persists under control
+## 🔥 Phase 7 — Adaptive Policy (v2 → v3)
+
+### v2 — Recovery + Memory
+- Enforced recovery during collapse
+- Risk-based overrides
+- Short-term state memory
+
+**Result:**
+- Stronger intervention
+- Reduced passivity
+- Collapse handled more aggressively
+
+---
+
+### 🚀 v3 — Pre-Emptive Field Control
+
+New signals integrated:
+- risk_slope (trajectory dynamics)
+- d2c (curvature / instability acceleration)
+- distance (proximity to structural rift)
+
+**Key shift:**
+- from **state-based control**
+- to **field-based control**
+
+---
+
+### 🧠 Adaptive Behavior (v3)
+
+Policy now reacts to:
+- trajectory (risk slope)
+- structural instability (curvature spikes)
+- proximity to collapse manifold (distance)
+
+**New effects:**
+- early PREEMPTIVE_STABILIZE activation
+- escalation before CRITICAL state
+- EMERGENCY_SHED triggered structurally, not only by state
+
+---
+
+## 📊 Key Results (v3)
+
+- Max risk ≈ 0.76
+- Warning count reduced (~3)
+- Collapse region sharply localized (λ ≈ 2.2)
+- Clean state transitions:
+  SAFE → WARNING → CRITICAL → COLLAPSED
+
+**Control behavior:**
+- Early intervention activation
+- Structured escalation:
+  STABILIZE → PREEMPTIVE → REDUCE_LOAD → EMERGENCY_SHED
+- Strong response in collapse zone
 
 ---
 
@@ -96,44 +144,58 @@ The system now performs:
 1. Structure extraction (manifold)
 2. Instability detection (residual + distance)
 3. Risk prediction (continuous field)
-4. Dynamic intervention (policy)
-5. Closed-loop feedback into system dynamics
+4. Trajectory-aware control (risk slope)
+5. Structural control (curvature + distance)
+6. Adaptive intervention with memory
+7. Closed-loop feedback into system dynamics
 
-This exceeds classical IEEE monitoring approaches.
+---
+
+## ⚡ System Evolution
+
+| Stage | Capability |
+|------|-----------|
+| v1   | Detection |
+| v2   | Reaction |
+| v3   | Pre-emption |
+
+👉 The system is no longer reactive — it is **anticipatory**.
 
 ---
 
 ## ⚠️ Limitation
 
-The system does **not prevent collapse completely**.
+The system still does **not fully prevent collapse**.
 
 Instead:
-- shifts collapse threshold
-- delays instability
-- stabilizes intermediate regimes
+- delays collapse onset
+- reduces instability spread
+- enforces structured recovery
+- improves controllability of transition regimes
 
 ---
 
 ## 🔮 Next Steps
 
-- Add policy memory (hysteresis)
-- Multi-step prediction (lookahead)
-- Structural intervention (topology / flow control)
+- Full closed-loop with real solver feedback (action → physics)
+- Adaptive λ control (not only intervention)
+- Multi-step prediction (lookahead horizon)
+- Stability basin mapping (NEXAH field navigation)
 - Integration with real IEEE solvers (pandapower)
 
 ---
 
 ## 🧭 Status
 
-| Component    | Status |
-|-------------|--------|
-| Baseline    | ✅     |
-| Manifold    | ✅     |
-| Predictor   | ✅     |
-| Policy      | ✅     |
-| Closed Loop | ✅     |
-| Real Grid   | ⏳     |
+| Component           | Status |
+|--------------------|--------|
+| Baseline           | ✅     |
+| Manifold           | ✅     |
+| Predictor          | ✅     |
+| Policy v1          | ✅     |
+| Closed Loop        | ✅     |
+| Adaptive Policy v2 | ✅     |
+| Adaptive Policy v3 | ✅     |
+| Real Grid          | ⏳     |
 
 ---
-
-
