@@ -16,9 +16,9 @@ from APPLICATIONS.power_systems.nexah_ieee9.overlay.clustering import cluster_ov
 from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
 
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
-from APPLICATIONS.power_systems.nexah_ieee9.analysis.classification import classify_states
+from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 
-from APPLICATIONS.power_systems.nexah_ieee9.visualization.plot_all import plot_all
+from APPLICATIONS.power_systems.nexah_ieee9.visualization.plots import plot_all
 
 
 # =========================================
@@ -60,7 +60,6 @@ def powerflow_solver(lam):
 # =========================================
 
 lambdas = np.linspace(0.5, 2.5, 120)
-
 results = run_load_sweep(powerflow_solver, lambdas)
 
 
@@ -76,7 +75,6 @@ for r in results:
     V = r["V"]
     theta = r["theta"]
 
-    # Handle non-converged safely
     if not r["converged"] or np.any(np.isnan(V)):
         Vmin.append(np.nan)
         c_list.append(np.nan)
@@ -90,7 +88,6 @@ for r in results:
 
     fragmentation = (1 - R) * spread
     frag_list.append(fragmentation)
-
 
 c = np.array(c_list)
 frag = np.array(frag_list)
@@ -106,7 +103,6 @@ def compute_derivatives_smooth(x, y):
     dy = np.gradient(y_smooth, x)
     d2y = np.gradient(dy, x)
     return dy, d2y
-
 
 dc, d2c = compute_derivatives_smooth(lambdas, c)
 
@@ -124,16 +120,13 @@ valid = (
 if np.sum(valid) < 10:
     raise ValueError("Not enough valid points for manifold fit")
 
-# Remove extreme spikes
 threshold = np.percentile(np.abs(d2c[valid]), 95)
-
 stable = valid & (np.abs(d2c) < threshold)
 
 c_clean = c[stable]
 dc_clean = dc[stable]
 d2c_clean = d2c[stable]
 
-# Cut last unstable region
 cut = int(len(c_clean) * 0.85)
 
 print("Clean points:", len(c_clean))
@@ -154,7 +147,6 @@ print("Manifold params:", params)
 
 residual = compute_residual(c, dc, d2c, params)
 
-# Define rift region from late but still stable points
 valid_indices = np.where(valid)[0]
 if len(valid_indices) < 15:
     raise ValueError("Not enough valid points to define rift region")
@@ -170,7 +162,7 @@ distance = compute_distance(c, dc, rift_points)
 
 
 # =========================================
-# 6. CLUSTERING (ROBUST)
+# 6. CLUSTERING
 # =========================================
 
 labels, centers = cluster_overlay(distance, residual)
@@ -192,7 +184,9 @@ print("GH clusters:", gh_clusters)
 # =========================================
 
 states = classify_states(
-    c, dc, d2c,
+    c,
+    dc,
+    d2c,
     frag,
     labels,
     gh_clusters
