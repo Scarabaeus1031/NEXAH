@@ -4,6 +4,10 @@
 
 import numpy as np
 from scipy.ndimage import gaussian_filter1d
+import os
+import json
+from datetime import datetime
+import matplotlib.pyplot as plt
 
 from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
 
@@ -12,7 +16,6 @@ from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_residual,
     compute_distance,
 )
-from APPLICATIONS.power_systems.nexah_ieee9.overlay.clustering import cluster_overlay
 from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
 
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
@@ -20,28 +23,43 @@ from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import cla
 
 from APPLICATIONS.power_systems.nexah_ieee9.visualization.plots import plot_all
 
+from sklearn.cluster import KMeans
+
+
+# =========================================
+# ROBUST CLUSTERING (FIXED)
+# =========================================
+
+def cluster_overlay_safe(distance, residual, k=3):
+    X = np.column_stack([distance, residual])
+
+    valid = np.isfinite(X).all(axis=1)
+
+    if np.sum(valid) < k:
+        raise ValueError("Not enough valid points for clustering")
+
+    X_valid = X[valid]
+
+    kmeans = KMeans(n_clusters=k, random_state=0).fit(X_valid)
+
+    labels = np.full(len(X), -1)
+    labels[valid] = kmeans.labels_
+
+    return labels, kmeans.cluster_centers_
+
 
 # =========================================
 # TEMP POWERFLOW SOLVER (DUMMY)
 # =========================================
 
 def powerflow_solver(lam):
-    """
-    Dummy IEEE9-like solver for NEXAH testing
-    """
-
     n = 9
 
-    # Voltage profile (load-dependent)
     V = np.ones(n) * (1.0 - 0.15 * (lam - 1.0))
-
-    # small noise
     V += np.random.normal(0, 0.01, n)
 
-    # phase angles
     theta = np.random.uniform(-0.1, 0.1, n)
 
-    # collapse simulation
     if lam > 2.2:
         V[:] = np.nan
         converged = False
@@ -95,7 +113,7 @@ Vmin = np.array(Vmin)
 
 
 # =========================================
-# 3. DERIVATIVES (SMOOTHED)
+# 3. DERIVATIVES
 # =========================================
 
 def compute_derivatives_smooth(x, y):
@@ -108,17 +126,10 @@ dc, d2c = compute_derivatives_smooth(lambdas, c)
 
 
 # =========================================
-# 4. CLEAN DATA FOR MANIFOLD FIT
+# 4. MANIFOLD FIT
 # =========================================
 
-valid = (
-    np.isfinite(c) &
-    np.isfinite(dc) &
-    np.isfinite(d2c)
-)
-
-if np.sum(valid) < 10:
-    raise ValueError("Not enough valid points for manifold fit")
+valid = np.isfinite(c) & np.isfinite(dc) & np.isfinite(d2c)
 
 threshold = np.percentile(np.abs(d2c[valid]), 95)
 stable = valid & (np.abs(d2c) < threshold)
@@ -148,9 +159,6 @@ print("Manifold params:", params)
 residual = compute_residual(c, dc, d2c, params)
 
 valid_indices = np.where(valid)[0]
-if len(valid_indices) < 15:
-    raise ValueError("Not enough valid points to define rift region")
-
 rift_indices = valid_indices[-15:-5]
 
 rift_points = np.column_stack([
@@ -162,20 +170,19 @@ distance = compute_distance(c, dc, rift_points)
 
 
 # =========================================
-# 6. CLUSTERING
+# 6. CLUSTERING (SAFE)
 # =========================================
 
-labels, centers = cluster_overlay(distance, residual)
+labels, centers = cluster_overlay_safe(distance, residual)
 
 print("Cluster centers:", centers)
 
 
 # =========================================
-# 7. CONTEXT (GH FILTER)
+# 7. GH FILTER
 # =========================================
 
 gh_clusters = gh_filter(labels, centers)
-
 print("GH clusters:", gh_clusters)
 
 
@@ -183,14 +190,7 @@ print("GH clusters:", gh_clusters)
 # 8. DECISION
 # =========================================
 
-states = classify_states(
-    c,
-    dc,
-    d2c,
-    frag,
-    labels,
-    gh_clusters
-)
+states = classify_states(c, dc, d2c, frag, labels, gh_clusters)
 
 print("First 30 states:")
 print(states[:30])
@@ -211,3 +211,41 @@ plot_all(
     residual,
     states
 )
+
+plt.tight_layout()
+
+
+# =========================================
+# 10. SAVE RESULTS
+# =========================================
+
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+results_dir = f"APPLICATIONS/power_systems/nexah_ieee9/results/run_{timestamp}"
+os.makedirs(results_dir, exist_ok=True)
+
+# states
+with open(os.path.join(results_dir, "states.txt"), "w") as f:
+    for s in states:
+        f.write(f"{s}\n")
+
+# arrays
+np.save(os.path.join(results_dir, "c.npy"), c)
+np.save(os.path.join(results_dir, "dc.npy"), dc)
+np.save(os.path.join(results_dir, "d2c.npy"), d2c)
+np.save(os.path.join(results_dir, "frag.npy"), frag)
+
+# meta
+meta = {
+    "manifold_params": params.tolist(),
+    "cluster_centers": centers.tolist(),
+    "gh_clusters": gh_clusters,
+}
+
+with open(os.path.join(results_dir, "meta.json"), "w") as f:
+    json.dump(meta, f, indent=2)
+
+# plot
+plt.savefig(os.path.join(results_dir, "plot.png"))
+
+print(f"Results saved to: {results_dir}")
