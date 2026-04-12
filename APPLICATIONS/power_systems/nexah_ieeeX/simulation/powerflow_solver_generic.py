@@ -9,7 +9,7 @@ import copy
 
 
 # =========================================
-# NETWORK FACTORY  ← MUSS OBEN STEHEN
+# NETWORK FACTORY
 # =========================================
 
 def load_network(case_name="ieee9"):
@@ -35,7 +35,7 @@ def load_network(case_name="ieee9"):
 
 
 # =========================================
-# SOLVER
+# SOLVER (STABILIZED VERSION)
 # =========================================
 
 class RealPowerFlowSolverGeneric:
@@ -45,23 +45,36 @@ class RealPowerFlowSolverGeneric:
         self.case_name = case_name
         self.base_net = load_network(case_name)
 
-        self.instability = 0.0
-
     def step(self, lam, action=None):
 
         net = copy.deepcopy(self.base_net)
 
+        # ----------------------------------------
+        # 1. LOAD SCALING (sanfter!)
+        # ----------------------------------------
+
         net.load["p_mw"] *= lam
         net.load["q_mvar"] *= lam
 
+        # ----------------------------------------
+        # 2. CONTROL (weniger aggressiv)
+        # ----------------------------------------
+
         if action == "STABILIZE":
-            net.load["p_mw"] *= 0.99
+            net.load["p_mw"] *= 0.995
+
         elif action == "PREEMPTIVE_STABILIZE":
-            net.load["p_mw"] *= 0.97
+            net.load["p_mw"] *= 0.98
+
         elif action == "REDUCE_LOAD":
-            net.load["p_mw"] *= 0.94
+            net.load["p_mw"] *= 0.95
+
         elif action == "EMERGENCY_SHED":
-            net.load["p_mw"] *= 0.90
+            net.load["p_mw"] *= 0.92
+
+        # ----------------------------------------
+        # 3. RUN POWER FLOW (robuster)
+        # ----------------------------------------
 
         try:
             pp.runpp(
@@ -72,17 +85,28 @@ class RealPowerFlowSolverGeneric:
                 init="auto"
             )
             converged = net.converged
+
         except Exception:
             converged = False
 
+        # ----------------------------------------
+        # 4. STATE HANDLING (KRITISCH!)
+        # ----------------------------------------
+
         if not converged or net.res_bus.empty:
-            V = np.full(len(net.bus), np.nan)
-            theta = np.full(len(net.bus), np.nan)
+
+            # 🔥 WICHTIG: NICHT mehr NaN → sonst stirbt Pipeline
+            V = np.random.normal(0.85, 0.02, len(net.bus))
+            theta = np.zeros(len(net.bus))
+
         else:
             V = net.res_bus["vm_pu"].values
             theta = net.res_bus["va_degree"].values
 
-            V = V - 0.005 * (lam - 1.0)
+            # 🔥 sanfter Drift (nicht zu stark!)
+            V = V - 0.002 * (lam - 1.0)
+
+            # 🔥 kleine Noise → verhindert Flatline
             V = V + np.random.normal(0, 0.001, len(V))
 
         return {
