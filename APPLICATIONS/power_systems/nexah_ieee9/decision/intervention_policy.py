@@ -11,8 +11,9 @@ def moving_average(x, window=5):
 
     for i in range(len(x)):
         start = max(0, i - window + 1)
-        seg = x[start:i+1]
+        seg = x[start:i + 1]
         finite = np.isfinite(seg)
+
         if np.any(finite):
             out[i] = np.mean(seg[finite])
         else:
@@ -26,7 +27,8 @@ def compute_risk_slope(risk, window=5):
     slope = np.zeros_like(risk)
 
     for i in range(window, len(risk)):
-        seg = risk[i-window:i]
+        seg = risk[i - window:i]
+
         if np.all(np.isfinite(seg)):
             slope[i] = np.polyfit(np.arange(len(seg)), seg, 1)[0]
 
@@ -61,7 +63,6 @@ def compute_policy_signal(risk, warnings, ttc, states):
     - TTC urgency
     - state escalation
     """
-
     risk = np.asarray(risk, dtype=float)
     warnings = np.asarray(warnings, dtype=bool)
     ttc = np.asarray(ttc, dtype=float)
@@ -114,9 +115,8 @@ def apply_persistence_gate(signal, states, persist_window=3):
 
     for i in range(len(signal)):
         start = max(0, i - persist_window + 1)
-        seg = signal[start:i+1]
+        seg = signal[start:i + 1]
 
-        # if short spike but not persistent, damp it
         if np.mean(seg) < 0.55 and signal[i] > 0.8 and states[i] != "CRITICAL":
             gated[i] = 0.65
 
@@ -129,7 +129,8 @@ def apply_persistence_gate(signal, states, persist_window=3):
 def map_signal_to_action(signal, states, ttc):
     """
     Final action mapping.
-    More conservative than before.
+    Conservative escalation:
+    STABILIZE -> PREEMPTIVE_STABILIZE -> REDUCE_LOAD -> EMERGENCY_SHED
     """
     actions = []
 
@@ -141,22 +142,18 @@ def map_signal_to_action(signal, states, ttc):
             actions.append("NONE")
             continue
 
-        # emergency only if truly critical and near collapse
         if state == "CRITICAL" and np.isfinite(t) and t < 5 and s >= 0.8:
             actions.append("EMERGENCY_SHED")
             continue
 
-        # medium-hard intervention
         if s >= 0.65:
             actions.append("REDUCE_LOAD")
             continue
 
-        # early / soft stabilization
         if s >= 0.40:
             actions.append("PREEMPTIVE_STABILIZE")
             continue
 
-        # background stabilizer
         actions.append("STABILIZE")
 
     return actions
@@ -172,7 +169,6 @@ def run_intervention_policy(risk, warnings, ttc, states):
     )
 
     signal = apply_persistence_gate(raw_signal, states, persist_window=3)
-
     actions = map_signal_to_action(signal, states, ttc)
 
     return {
