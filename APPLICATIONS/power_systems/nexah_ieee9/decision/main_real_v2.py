@@ -9,7 +9,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 # 👉 REAL SOLVER
-from APPLICATIONS.power_systems.nexah_ieee9.decision.adaptive_policy_v3 import run_adaptive_policy
+from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real_v2 import RealPowerFlowSolverV2
 
 # NEXAH PIPELINE
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
