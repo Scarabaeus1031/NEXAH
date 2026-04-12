@@ -1,6 +1,15 @@
 # NEXAH
 *A framework for discovering, mapping and navigating stability in complex dynamical systems.*
 
+NEXAH unifies:
+
+→ early detection  
+→ field-based modeling  
+→ adaptive control  
+→ and emergent navigation  
+
+into a single framework for understanding and interacting with complex systems.
+
 ---
 
 ## ⚡ Key Result — IEEE Power Systems
@@ -10,6 +19,28 @@ NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical met
 👉 [Full results](./APPLICATIONS/power_systems/README.md)
 
 ![NEXAH IEEE Result](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+---
+
+### ⚡ Beyond Detection — Adaptive Control (NEW)
+
+Recent results extend NEXAH beyond early detection:
+
+→ from **prediction**  
+→ to **closed-loop, field-based control**
+
+In the IEEE9 system:
+
+- continuous risk field enables real-time interpretation  
+- adaptive policy reacts to trajectory (not just state)  
+- system evolution is actively influenced  
+
+✔ early intervention before critical states  
+✔ structured escalation (STABILIZE → EMERGENCY)  
+✔ first real-grid prototype (pandapower integration)  
+
+👉 NEXAH is no longer only detecting collapse —  
+it begins to **interact with system dynamics**.
 
 ---
 
@@ -132,24 +163,6 @@ structure → field → movement → emergent policy
 > Navigation behavior can emerge directly from system structure  
 > without requiring externally defined rewards.
 
-This suggests that:
-
-- learning can be **structure-driven instead of reward-driven**
-- policies can arise from **geometry and dynamics alone**
-- stability landscapes can act as **implicit learning signals**
-
----
-
-#### Conceptual Role
-
-The multi-agent layer extends NEXAH from:
-
-→ analysis and control  
-
-to:
-
-→ **emergent navigation and policy formation in structured fields**
-
 ---
 
 ### 🌐 Field Structure (V69)
@@ -168,11 +181,6 @@ The vector field reveals:
 - regions of attraction and repulsion  
 - structural pathways toward collapse  
 
-This means:
-
-→ instability is encoded in the field itself  
-→ not inferred from observations  
-
 ---
 
 #### Consequence
@@ -183,9 +191,10 @@ Prediction becomes:
 
 instead of:
 
-→ extrapolating trajectories
+→ extrapolating trajectories  
 
 ---
+
 ### 🔬 Discrete Systems (Prime / Modular Resonance)
 
 NEXAH also reveals structure in fully discrete systems:
@@ -217,12 +226,6 @@ Even in a purely discrete system (prime numbers mod 7), we observe:
 
 > Continuous structure and flow can emerge  
 > from purely discrete arithmetic systems.
-
-This demonstrates that:
-
-- geometry is not imposed — it emerges  
-- flow is not physical — it is structural  
-- dynamics can arise from transitions alone  
 
 ---
 
