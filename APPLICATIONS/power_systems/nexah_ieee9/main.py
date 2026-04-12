@@ -247,10 +247,10 @@ print("Warning count:", np.sum(warnings))
 # 6.75 INTERVENTION
 # =========================================
 
-intervention = run_intervention(risk, ttc, warnings)
+policy = run_intervention_policy(risk, warnings, ttc, states)
 
-signal = np.asarray(intervention["signal"])
-actions = intervention["actions"]
+signal = np.asarray(policy["signal"])
+actions = policy["actions"]
 
 print("First 30 actions:")
 print(actions[:30])
