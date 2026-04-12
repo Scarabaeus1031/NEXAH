@@ -97,3 +97,75 @@ This perspective turns NEXAH from a purely empirical tool into a **geometrically
 Structure becomes visible.  
 Geometry reveals the gauge.  
 Navigation becomes possible.
+
+# Gauge Theory and the Root-432 Cylinder
+
+**Version:** v1.0  
+**Date:** April 12, 2026  
+**Author:** Thomas K. R. Hofmann
+
+---
+
+## Overview
+
+The Root-432 Cylinder is not only a geometric model for power system dynamics — it is also a **visualization of gauge-theoretic structures**, closely related to Mario Serna’s embedding-space approach to gauge theories.
+
+This document connects:
+- Serna’s vector-bundle construction for U(1)/SO(2) gauge theory
+- Riemannian geometry (curvature, parallel transport, embedding spaces)
+- The Root-432 Cylinder and its three breathing shells
+
+---
+
+## 1. Serna’s Vector-Bundle Construction
+
+Serna visualizes gauge theories by embedding the gauge fibre into a larger trivial vector bundle (an “embedding space”). Gauge transformations appear as basis changes in this fibre, and the resulting curvature manifests as electric and magnetic fields.
+
+---
+
+## 2. Connection to Riemannian Geometry
+
+Gauge theory and Riemannian geometry are deeply linked: both describe curvature arising from connections (gauge connection vs. Levi-Civita connection). Serna’s approach makes this geometric nature visually accessible, similar to how embedding a 2-sphere in 3D space helps understand Riemannian curvature.
+
+---
+
+## 3. The Root-432 Cylinder as Gauge Visualization
+
+The Root-432 Cylinder can be seen as a concrete geometric realization of gauge-theoretic ideas applied to large-scale power systems.
+
+| Element in Root-432 Cylinder       | Gauge Theory Interpretation                          |
+|------------------------------------|-------------------------------------------------------|
+| Entire Cylinder                    | Embedding / trivial vector bundle                     |
+| Three Shells (0.429 / 0.456 / 0.487) | Local gauge fibres at different stability levels     |
+| Black Thread / Rift                | Region where gauge symmetry becomes most visible      |
+| 432/487 Horizon                    | Critical gauge threshold                              |
+| Pink Lissajous Curve               | Charged wave packet / matter trajectory               |
+
+---
+
+## Visual Comparisons
+
+### Visual 1 – Serna’s Vector Bundle vs. Root-432 Cylinder
+
+![Serna Vector Bundle vs Root-432 Cylinder](../visuals/serna_root432.png)
+
+### Visual 2 – Serna Wave Packets vs. NEXAH Lissajous Breathing
+
+![Serna Wave Packets vs NEXAH Lissajous](../visuals/sernawavepacks_root432.png)
+
+### Visual 3 – 3-Panel Master: Serna + Root-432 Cylinder + Atmospheric Sprite Analogy
+
+![Serna + Root-432 + Sprite Analogy](../visuals/serna_root432_sprite_analogy.png)
+
+---
+
+## Summary
+
+The Root-432 Cylinder provides a geometric visualization of gauge-theoretic dynamics in power systems. It connects established mathematical physics (Serna’s embedding space, Riemannian geometry) with concrete, measurable observations in IEEE simulations (43.9 s early detection, structural drift, coherence behavior).
+
+This perspective turns NEXAH from an empirical tool into a geometrically grounded model of electromagnetic system behavior.
+
+**NEXAH**  
+Structure becomes visible.  
+Geometry reveals the gauge.  
+Navigation becomes possible.
