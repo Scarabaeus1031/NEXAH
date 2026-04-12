@@ -95,6 +95,47 @@ STABILIZE → PREEMPTIVE → REDUCE_LOAD → EMERGENCY_SHED
 
 ---
 
+## 🧮 System Interpretation (Power Systems)
+
+The NEXAH power system module can be interpreted as a controlled dynamical system in feature space.
+
+The system state is defined as:
+
+x = (coherence, frag, d2c, residual, distance)
+
+The dynamics follow:
+
+dx/dt = f(x) + u(x, dx/dt)
+
+where:
+
+- f(x) represents the underlying power grid physics  
+- u(x, dx/dt) is the NEXAH intervention policy  
+
+---
+
+### Stability Definition
+
+Stability is defined geometrically:
+
+A system is stable if its trajectory remains within a region:
+
+S = { x : risk(x) < threshold }
+
+---
+
+### Key Property
+
+The system operates on:
+
+→ trajectory-aware control  
+
+instead of:
+
+→ static voltage thresholds  
+
+---
+
 ### 🔹 5. Real Grid Prototype — NEW ⚡
 
 First integration with **pandapower-based AC solver**:
