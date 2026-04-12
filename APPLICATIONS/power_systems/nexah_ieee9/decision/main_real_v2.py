@@ -9,7 +9,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 # 👉 REAL SOLVER
-from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real_v2 import RealPowerFlowSolverV2
+from APPLICATIONS.power_systems.nexah_ieee9.decision.adaptive_policy_v3 import run_adaptive_policy
 
 # NEXAH PIPELINE
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
@@ -214,13 +214,23 @@ except:
 print("Max risk:", safe_max(risk))
 print("Warning count:", np.sum(warnings))
 
-
 # =========================================
-# STATES
+# STATES (REAL GRID FIX 🔥)
 # =========================================
 
-if np.all(centers == 0):
-    states = ["COLLAPSED" if not np.isfinite(v) else "SAFE" for v in c]
+if np.all(centers == 0) or len(set(labels)) < 2:
+    print("⚠️ Using risk-based states (real grid fallback)")
+
+    states = []
+    for i in range(len(c)):
+        if not np.isfinite(c[i]):
+            states.append("COLLAPSED")
+        elif risk[i] > 0.7:
+            states.append("CRITICAL")
+        elif risk[i] > 0.4:
+            states.append("WARNING")
+        else:
+            states.append("SAFE")
 else:
     gh_clusters = gh_filter(labels, centers)
     states = classify_states(c, dc, d2c, frag, labels, gh_clusters)
@@ -259,6 +269,73 @@ print(actions[:30])
 
 
 # =========================================
+# PLOTS
+# =========================================
+
+# Main overview plot
+fig, axes = plt.subplots(3, 1, figsize=(10, 10))
+
+# Voltage
+axes[0].plot(lambdas, Vmin)
+axes[0].set_title("Voltage Collapse (Real Grid Closed Loop)")
+axes[0].set_ylabel("Vmin")
+
+# Risk
+axes[1].plot(lambdas, risk)
+axes[1].scatter(lambdas[warnings], risk[warnings])
+axes[1].set_title("Risk Field")
+axes[1].set_ylabel("Risk")
+
+# States
+state_map = {
+    "SAFE": 0,
+    "WARNING": 1,
+    "CRITICAL": 2,
+    "COLLAPSED": 3
+}
+y_states = [state_map[s] for s in states]
+axes[2].scatter(lambdas, y_states, s=20)
+axes[2].set_yticks([0, 1, 2, 3])
+axes[2].set_yticklabels(["SAFE", "WARNING", "CRITICAL", "COLLAPSED"])
+axes[2].set_title("State Timeline")
+axes[2].set_xlabel("Lambda")
+
+fig.tight_layout()
+
+# Risk-only plot
+fig_risk, ax = plt.subplots(figsize=(10, 4))
+ax.plot(lambdas, risk)
+ax.scatter(lambdas[warnings], risk[warnings])
+ax.set_title("Collapse Risk")
+ax.set_xlabel("Lambda")
+ax.set_ylabel("Risk")
+fig_risk.tight_layout()
+
+# Intervention-only plot
+fig_int, ax_int = plt.subplots(figsize=(10, 4))
+action_map = {
+    "STABILIZE": 0,
+    "PREEMPTIVE_STABILIZE": 1,
+    "REDUCE_LOAD": 2,
+    "EMERGENCY_SHED": 3,
+    "NONE": 4
+}
+y_actions = [action_map.get(a, -1) for a in actions]
+ax_int.scatter(lambdas, y_actions, s=20)
+ax_int.set_yticks([0, 1, 2, 3, 4])
+ax_int.set_yticklabels([
+    "STABILIZE",
+    "PREEMPTIVE",
+    "REDUCE_LOAD",
+    "EMERGENCY_SHED",
+    "NONE"
+])
+ax_int.set_title("Adaptive Actions")
+ax_int.set_xlabel("Lambda")
+fig_int.tight_layout()
+
+
+# =========================================
 # SAVE
 # =========================================
 
@@ -267,9 +344,20 @@ results_dir = f"APPLICATIONS/power_systems/nexah_ieee9/results/run_real_{timesta
 os.makedirs(results_dir, exist_ok=True)
 
 np.save(os.path.join(results_dir, "risk.npy"), risk)
+np.save(os.path.join(results_dir, "distance.npy"), distance)
+np.save(os.path.join(results_dir, "residual.npy"), residual)
+np.save(os.path.join(results_dir, "d2c.npy"), d2c)
 
 with open(os.path.join(results_dir, "actions.txt"), "w") as f:
     for a in actions:
         f.write(f"{a}\n")
+
+with open(os.path.join(results_dir, "states.txt"), "w") as f:
+    for s in states:
+        f.write(f"{s}\n")
+
+fig.savefig(os.path.join(results_dir, "plot.png"))
+fig_risk.savefig(os.path.join(results_dir, "risk.png"))
+fig_int.savefig(os.path.join(results_dir, "intervention.png"))
 
 print("Saved to:", results_dir)
