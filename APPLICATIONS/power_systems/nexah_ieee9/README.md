@@ -1,4 +1,4 @@
-# ⚡ NEXAH — IEEE9 Stability Field System
+# ⚡ NEXAH — IEEE9 Stability Field System (v3)
 
 ## 🧭 Overview
 
@@ -6,7 +6,7 @@ This module implements the **NEXAH framework** on a power system test case (IEEE
 
 It transforms classical voltage stability analysis into a:
 
-> **continuous stability field with dynamic intervention capability**
+> **continuous stability field with adaptive, closed-loop control**
 
 ---
 
@@ -24,7 +24,9 @@ NEXAH answers:
 
 ## 🧱 Pipeline Architecture
 
-Simulation → Features → Manifold → Overlay → Prediction → Policy → Control
+```text
+Simulation → Features → Manifold → Overlay → Prediction → Policy → Adaptive Control → System Evolution
+```
 
 ---
 
@@ -32,47 +34,66 @@ Simulation → Features → Manifold → Overlay → Prediction → Policy → C
 
 ### 🧪 Run ID
 
-    run_20260412_210330
+```
+run_20260412_223816
+```
 
 ---
 
-### ⚡ Voltage Collapse (Closed-Loop)
+### ⚡ Voltage Collapse (Adaptive Closed Loop)
 
-![Voltage Collapse](results/run_20260412_210330/plot.png)
+![Voltage Collapse](results/run_20260412_223816/plot.png)
 
-✔ Baseline collapse behavior preserved  
-✔ Slight stabilization via feedback  
-✔ No artificial suppression of physics  
+✔ Collapse dynamics preserved (no artificial suppression)  
+✔ Adaptive stabilization in mid-regime  
+✔ Structural transitions remain visible  
 
 ---
 
 ### 📉 Collapse Risk Field
 
-![Collapse Risk](results/run_20260412_210330/risk.png)
+![Collapse Risk](results/run_20260412_223816/risk.png)
 
-✔ Early warning detected around λ ≈ 0.6  
-✔ Peak risk ≈ 0.88  
-✔ Structured (non-random) dynamics  
+✔ Peak risk ≈ 0.77  
+✔ Fewer warnings (~3 vs ~37 in unstable runs)  
+✔ Cleaner, more stable signal (less noise)  
 
 ---
 
 ### 🛠 Intervention Field
 
-![Intervention](results/run_20260412_210330/intervention.png)
+![Intervention](results/run_20260412_223816/intervention.png)
 
-✔ Strong response in unstable regions  
-✔ Adaptive control signal  
-✔ Decay near collapse (control saturation)  
+✔ Controlled intervention (no overreaction)  
+✔ Smooth transition between regimes  
+✔ Reduced saturation effects  
 
 ---
 
-## 🧠 Interpretation
+## 🧠 Interpretation (v3)
 
-NEXAH does NOT replace classical power system physics.
+The system now behaves as:
 
-It introduces:
+> **adaptive field controller instead of reactive trigger system**
 
-> **a continuous stability field + navigation layer**
+---
+
+### 🔄 Evolution Across Versions
+
+| Version | Behavior |
+|--------|--------|
+| v1 | reactive control |
+| v2 | recovery + memory |
+| v3 | **pre-emptive field control** |
+
+---
+
+### 🔍 What Changed in v3
+
+- Risk becomes **stable and interpretable**
+- Warnings reduced to meaningful events
+- Control avoids oscillation and saturation
+- System reacts to **trajectory**, not just state
 
 ---
 
@@ -85,43 +106,79 @@ It introduces:
 | Early warning         | Limited       | Yes  |
 | Closed-loop control   | No            | Yes  |
 | Structural modeling   | No            | Yes  |
+| Adaptive control      | No            | Yes  |
 
 ---
 
 ## 🚀 Run
 
-    PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/main.py
+```bash
+PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/decision/main_v2.py
+```
 
 ---
 
 ## 📁 Results Folder
 
-    APPLICATIONS/power_systems/nexah_ieee9/results/
+```
+APPLICATIONS/power_systems/nexah_ieee9/results/
+```
 
 Each run contains:
 
-- `plot.png`
-- `risk.png`
-- `intervention.png`
+- `plot.png` → system + states
+- `risk.png` → collapse risk field
+- `intervention.png` → control signal
 - `states.txt`
-- `actions.txt`
+- `actions_base.txt`
+- `actions_adaptive.txt`
+- `meta.json`
 
 ---
 
 ## 🧭 Status
 
-    Baseline      DONE
-    Manifold      DONE
-    Predictor     DONE
-    Policy        DONE
-    Closed Loop   DONE
-    Real Grid     IN PROGRESS
+```
+Baseline      DONE
+Manifold      DONE
+Predictor     DONE
+Policy        DONE
+Closed Loop   DONE
+Adaptive v3   DONE
+Real Grid     IN PROGRESS
+```
+
+---
+
+## ⚠️ Important Note
+
+The current system uses a:
+
+→ **synthetic solver (structural proxy)**
+
+This means:
+
+- physics-inspired, but not AC-accurate
+- control affects abstract system behavior
+- not yet a real power grid simulation
+
+---
+
+## 🔮 Next Step (Critical)
+
+- Integrate **real AC power flow solver** (e.g. pandapower)
+- Map actions to **physical interventions**:
+  - load shedding
+  - generation control
+  - voltage support
 
 ---
 
 ## 🔥 Final Insight
 
 > **Power systems are not binary (stable / unstable)**  
-> → they live inside a **structured stability landscape**
+> → they exist inside a **structured stability landscape**
 
----
+NEXAH turns this landscape into something we can:
+
+→ **measure, interpret, and actively navigate**
