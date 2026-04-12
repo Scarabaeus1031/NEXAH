@@ -21,13 +21,77 @@ NEXAH transforms:
 
 into:
 
-→ **structured field navigation**
+→ **structured field-based system analysis and navigation**
 
 ---
 
 ## 🔁 Core Pipeline
 
 simulation → structure → field → geometry → navigation
+
+---
+
+## 🧮 Mathematical Perspective
+
+NEXAH can be interpreted as a **controlled dynamical system in feature space**.
+
+Let:
+
+x(t) = system state
+
+with features such as:
+
+- coherence  
+- fragmentation  
+- curvature (d²c)  
+- residual  
+- distance to structural manifold  
+
+The system evolves as:
+
+dx/dt = f(x) + u(x, dx/dt)
+
+where:
+
+- f(x) represents intrinsic system dynamics  
+- u(x, dx/dt) represents the NEXAH control policy  
+
+---
+
+### Stability Definition
+
+Instead of voltage thresholds, stability is defined geometrically:
+
+A system is stable if its trajectory remains within a region S:
+
+S = { x : risk(x) < threshold }
+
+---
+
+### Risk Field
+
+NEXAH introduces a continuous risk field:
+
+risk(x) ∈ [0,1]
+
+based on:
+
+- structural deviation (residual)  
+- curvature (instability acceleration)  
+- trajectory dynamics (risk slope)  
+- proximity to collapse manifold  
+
+---
+
+### Key Property
+
+NEXAH operates on:
+
+→ **trajectory-aware control**
+
+instead of:
+
+→ state-based thresholding  
 
 ---
 
@@ -83,9 +147,10 @@ NEXAH also reveals structure in fully discrete systems:
 A system that:
 
 1. extracts structure from dynamics  
-2. reveals the underlying field  
-3. identifies motion paths  
-4. enables navigation across regimes  
+2. constructs a continuous state-space representation  
+3. reveals underlying field geometry  
+4. identifies motion paths  
+5. enables navigation across stability regimes  
 
 ---
 
@@ -101,9 +166,9 @@ A system that:
 
 ## 🧠 Key Insight
 
-> Systems do not just evolve —  
-> they organize into structures  
-> that can be mapped and navigated.
+> Complex systems do not just evolve —  
+> they organize into structured state spaces  
+> that can be mapped, analyzed and navigated.
 
 ---
 
@@ -117,7 +182,7 @@ A system that:
 ## 📜 Citation
 
 Hofmann, T.K.R. (2026)  
-**NEXAH: Structural Discovery and Navigation in Complex Systems**  
+**NEXAH: Structural Discovery and Navigation in Complex Systems**
 
 ---
 
