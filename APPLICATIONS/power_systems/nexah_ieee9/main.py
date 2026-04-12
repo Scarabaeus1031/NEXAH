@@ -6,7 +6,6 @@ import numpy as np
 from scipy.ndimage import gaussian_filter1d
 
 from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
-from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver import powerflow_solver
 
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual import compute_residual
@@ -19,6 +18,39 @@ from APPLICATIONS.power_systems.nexah_ieee9.analysis.classification import class
 
 from APPLICATIONS.power_systems.nexah_ieee9.visualization.plot_all import plot_all
 
+
+# =========================================
+# TEMP POWERFLOW SOLVER (DUMMY)
+# =========================================
+
+def powerflow_solver(lam):
+    """
+    Dummy IEEE9-like solver for NEXAH testing
+    """
+
+    n = 9
+
+    # Voltage profile (load-dependent)
+    V = np.ones(n) * (1.0 - 0.15 * (lam - 1.0))
+
+    # small noise
+    V += np.random.normal(0, 0.01, n)
+
+    # phase angles
+    theta = np.random.uniform(-0.1, 0.1, n)
+
+    # collapse simulation
+    if lam > 2.2:
+        V[:] = np.nan
+        converged = False
+    else:
+        converged = True
+
+    return {
+        "V": V,
+        "theta": theta,
+        "converged": converged
+    }
 
 # =========================================
 # 1. SIMULATION
