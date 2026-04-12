@@ -269,6 +269,10 @@ policy = run_intervention_policy(risk, warnings, ttc, states)
 
 actions = policy["actions"]
 signal = np.asarray(policy["signal"])
+raw_signal = np.asarray(policy["raw_signal"])
+risk_smooth = np.asarray(policy["risk_smooth"])
+risk_slope = np.asarray(policy["slope"])
+ttc_urgency = np.asarray(policy["ttc_urgency"])
 
 print("First 30 actions:")
 print(actions[:30])
@@ -324,6 +328,10 @@ np.save(os.path.join(results_dir, "risk.npy"), risk)
 np.save(os.path.join(results_dir, "warnings.npy"), warnings)
 np.save(os.path.join(results_dir, "ttc.npy"), ttc)
 np.save(os.path.join(results_dir, "signal.npy"), signal)
+np.save(os.path.join(results_dir, "raw_signal.npy"), raw_signal)
+np.save(os.path.join(results_dir, "risk_smooth.npy"), risk_smooth)
+np.save(os.path.join(results_dir, "risk_slope.npy"), risk_slope)
+np.save(os.path.join(results_dir, "ttc_urgency.npy"), ttc_urgency)
 
 # save states
 with open(os.path.join(results_dir, "states.txt"), "w") as f:
@@ -343,6 +351,7 @@ meta = {
     "max_risk": float(np.nanmax(risk)),
     "warning_count": int(np.sum(warnings)),
     "max_signal": float(np.nanmax(signal)),
+    "max_raw_signal": float(np.nanmax(raw_signal)),
 }
 
 with open(os.path.join(results_dir, "meta.json"), "w") as f:
