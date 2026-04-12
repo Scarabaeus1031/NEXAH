@@ -13,7 +13,7 @@ from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_distance,
 )
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.clustering import cluster_overlay
-from APPLICATIONS.power_systems.nexah_ieee9.overlay.gh_filter import gh_filter
+from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
 
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.classification import classify_states
