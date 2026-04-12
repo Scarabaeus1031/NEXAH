@@ -242,7 +242,6 @@ ttc = np.asarray(pred["time_to_collapse"])
 print("Max risk:", np.nanmax(risk))
 print("Warning count:", np.sum(warnings))
 
-
 # =========================================
 # 6.75 INTERVENTION
 # =========================================
@@ -271,6 +270,18 @@ print("GH clusters:", gh_clusters)
 states = classify_states(c, dc, d2c, frag, labels, gh_clusters)
 print(states[:30])
 
+
+# =========================================
+# 8.5 INTERVENTION POLICY
+# =========================================
+
+policy = run_intervention_policy(risk, warnings, ttc, states)
+
+signal = np.asarray(policy["signal"])
+actions = policy["actions"]
+
+print("First 30 actions:")
+print(actions[:30])
 
 # =========================================
 # 9. VISUALIZATION
