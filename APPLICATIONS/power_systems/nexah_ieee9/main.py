@@ -20,6 +20,7 @@ from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
 
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
+from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
 
 from sklearn.cluster import KMeans
 
@@ -47,7 +48,7 @@ def cluster_overlay_safe(distance, residual, k=3):
 
 
 # =========================================
-# FIXED PLOT FUNCTION (CRITICAL FIX)
+# FIXED PLOT FUNCTION
 # =========================================
 
 def plot_all(
@@ -74,11 +75,21 @@ def plot_all(
     axes[1].legend()
 
     # --- Residual vs Distance ---
-    sc = axes[2].scatter(distance, residual, c=distance)
+    axes[2].scatter(distance, residual, c=distance)
     axes[2].set_title("Residual vs Distance")
 
     # --- States ---
-    axes[3].plot(states, "o")
+    state_to_y = {
+        "WARNING": 0,
+        "CRITICAL": 1,
+        "SAFE": 2,
+        "COLLAPSED": 3,
+    }
+
+    y = [state_to_y.get(s, -1) for s in states]
+    axes[3].scatter(np.arange(len(states)), y, s=30)
+    axes[3].set_yticks([0, 1, 2, 3])
+    axes[3].set_yticklabels(["WARNING", "CRITICAL", "SAFE", "COLLAPSED"])
     axes[3].set_title("NEXAH Decision Timeline")
 
     return fig
@@ -166,6 +177,9 @@ dc, d2c = compute_derivatives_smooth(lambdas, c)
 
 valid = np.isfinite(c) & np.isfinite(dc) & np.isfinite(d2c)
 
+if np.sum(valid) < 20:
+    raise ValueError("Not enough valid points for manifold fit")
+
 threshold = np.percentile(np.abs(d2c[valid]), 95)
 stable = valid & (np.abs(d2c) < threshold)
 
@@ -191,6 +205,9 @@ print("Manifold params:", params)
 residual = compute_residual(c, dc, d2c, params)
 
 valid_indices = np.where(valid)[0]
+if len(valid_indices) < 15:
+    raise ValueError("Not enough valid indices to define rift")
+
 rift_indices = valid_indices[-15:-5]
 
 rift_points = np.column_stack([
@@ -210,6 +227,20 @@ print("Cluster centers:", centers)
 
 
 # =========================================
+# 6.5 PREDICTION
+# =========================================
+
+pred = run_predictor(distance, d2c, labels)
+
+risk = np.asarray(pred["risk"])
+warnings = np.asarray(pred["warnings"], dtype=bool)
+ttc = np.asarray(pred["time_to_collapse"])
+
+print("Max risk:", np.nanmax(risk))
+print("Warning count:", np.sum(warnings))
+
+
+# =========================================
 # 7. GH FILTER
 # =========================================
 
@@ -226,7 +257,7 @@ print(states[:30])
 
 
 # =========================================
-# 9. VISUALIZATION + SAVE (FIXED)
+# 9. VISUALIZATION
 # =========================================
 
 fig = plot_all(
@@ -240,8 +271,14 @@ fig = plot_all(
     residual,
     states
 )
-
 fig.tight_layout()
+
+fig_risk, ax_risk = plt.subplots(figsize=(10, 4))
+ax_risk.plot(lambdas, risk, label="risk")
+ax_risk.scatter(lambdas[warnings], risk[warnings], label="warnings")
+ax_risk.legend()
+ax_risk.set_title("Collapse Risk")
+fig_risk.tight_layout()
 
 
 # =========================================
@@ -257,6 +294,11 @@ np.save(os.path.join(results_dir, "c.npy"), c)
 np.save(os.path.join(results_dir, "dc.npy"), dc)
 np.save(os.path.join(results_dir, "d2c.npy"), d2c)
 np.save(os.path.join(results_dir, "frag.npy"), frag)
+np.save(os.path.join(results_dir, "distance.npy"), distance)
+np.save(os.path.join(results_dir, "residual.npy"), residual)
+np.save(os.path.join(results_dir, "risk.npy"), risk)
+np.save(os.path.join(results_dir, "warnings.npy"), warnings)
+np.save(os.path.join(results_dir, "ttc.npy"), ttc)
 
 # save states
 with open(os.path.join(results_dir, "states.txt"), "w") as f:
@@ -268,12 +310,15 @@ meta = {
     "params": params.tolist(),
     "centers": centers.tolist(),
     "gh_clusters": gh_clusters,
+    "max_risk": float(np.nanmax(risk)),
+    "warning_count": int(np.sum(warnings)),
 }
 
 with open(os.path.join(results_dir, "meta.json"), "w") as f:
     json.dump(meta, f, indent=2)
 
-# save plot (FIXED)
+# save plots
 fig.savefig(os.path.join(results_dir, "plot.png"))
+fig_risk.savefig(os.path.join(results_dir, "risk.png"))
 
 print("Saved to:", results_dir)
