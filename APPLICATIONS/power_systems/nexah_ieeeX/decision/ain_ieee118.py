@@ -263,3 +263,35 @@ with open(os.path.join(results_dir, "actions.txt"), "w") as f:
         f.write(f"{a}\n")
 
 print("Saved to:", results_dir)
+
+# =========================================
+# QUICK VISUALS
+# =========================================
+
+fig, axes = plt.subplots(3, 1, figsize=(10, 10))
+
+# Voltage
+axes[0].plot(lambdas, Vmin)
+axes[0].set_title("Voltage Collapse (IEEE118)")
+
+# Risk
+axes[1].plot(lambdas, risk)
+axes[1].scatter(lambdas[warnings], risk[warnings])
+axes[1].set_title("Risk Field")
+
+# Actions (encoded)
+action_map = {
+    "STABILIZE": 0,
+    "PREEMPTIVE_STABILIZE": 1,
+    "REDUCE_LOAD": 2,
+    "EMERGENCY_SHED": 3
+}
+y = [action_map.get(a, -1) for a in actions]
+
+axes[2].scatter(lambdas, y)
+axes[2].set_yticks([0,1,2,3])
+axes[2].set_yticklabels(["STAB","PRE","REDUCE","SHED"])
+axes[2].set_title("Actions")
+
+fig.savefig(os.path.join(results_dir, "overview.png"))
+
