@@ -145,20 +145,25 @@ dc, d2c = compute_derivatives(lambdas, c)
 
 
 # =========================================
-# MANIFOLD
+# MANIFOLD (ROBUST)
 # =========================================
 
 valid = np.isfinite(c) & np.isfinite(dc) & np.isfinite(d2c)
 
-if np.sum(valid) < 20:
+if np.sum(valid) < 30:   # 👈 leicht erhöht für große Netze
+    print("⚠️ Not enough valid points for manifold → fallback")
     params = np.array([0.0, 0.0, 0.0])
     fit_ok = False
 else:
-    params = fit_manifold(c[valid], dc[valid], d2c[valid])
-    fit_ok = True
+    try:
+        params = fit_manifold(c[valid], dc[valid], d2c[valid])
+        fit_ok = True
+    except Exception:
+        print("⚠️ Manifold fit failed → fallback")
+        params = np.array([0.0, 0.0, 0.0])
+        fit_ok = False
 
 print("Manifold params:", params)
-
 
 # =========================================
 # OVERLAY
