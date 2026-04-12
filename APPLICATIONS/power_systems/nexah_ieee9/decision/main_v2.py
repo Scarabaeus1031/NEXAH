@@ -5,7 +5,6 @@
 import numpy as np
 from scipy.ndimage import gaussian_filter1d
 import os
-import json
 from datetime import datetime
 import matplotlib.pyplot as plt
 
@@ -22,8 +21,6 @@ from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import com
 from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
 from APPLICATIONS.power_systems.nexah_ieee9.decision.intervention_policy import run_intervention_policy
-
-# 👉 NEW
 from APPLICATIONS.power_systems.nexah_ieee9.decision.adaptive_policy_v2 import run_adaptive_policy
 
 from sklearn.cluster import KMeans
@@ -42,12 +39,31 @@ def cluster_overlay_safe(distance, residual, k=3):
         return np.full(len(X), -1), np.zeros((k, 2))
 
     X_valid = X[valid]
-    kmeans = KMeans(n_clusters=k, random_state=0).fit(X_valid)
+    kmeans = KMeans(n_clusters=k, random_state=0, n_init=10).fit(X_valid)
 
     labels = np.full(len(X), -1)
     labels[valid] = kmeans.labels_
 
     return labels, kmeans.cluster_centers_
+
+
+# =========================================
+# SAFE HELPERS
+# =========================================
+
+def safe_fill_nan(x, fill_value=0.0):
+    x = np.asarray(x, dtype=float)
+    if np.all(np.isnan(x)):
+        return np.full_like(x, fill_value, dtype=float)
+    med = np.nanmedian(x)
+    return np.nan_to_num(x, nan=med, posinf=med, neginf=med)
+
+
+def safe_max(x, default=0.0):
+    x = np.asarray(x, dtype=float)
+    if np.all(np.isnan(x)):
+        return default
+    return float(np.nanmax(x))
 
 
 # =========================================
@@ -128,9 +144,9 @@ for r in results:
     c_list.append(c_val)
     frag_list.append((1 - R) * spread)
 
-c = np.array(c_list)
-frag = np.array(frag_list)
-Vmin = np.array(Vmin)
+c = np.array(c_list, dtype=float)
+frag = np.array(frag_list, dtype=float)
+Vmin = np.array(Vmin, dtype=float)
 
 
 # =========================================
@@ -138,6 +154,7 @@ Vmin = np.array(Vmin)
 # =========================================
 
 def compute_derivatives_smooth(x, y):
+    y = safe_fill_nan(y, fill_value=0.0)
     y_smooth = gaussian_filter1d(y, sigma=1.0)
     dy = np.gradient(y_smooth, x)
     d2y = np.gradient(dy, x)
@@ -147,23 +164,54 @@ dc, d2c = compute_derivatives_smooth(lambdas, c)
 
 
 # =========================================
-# 4. MANIFOLD
+# 4. MANIFOLD (ROBUST)
 # =========================================
 
 valid = np.isfinite(c) & np.isfinite(dc) & np.isfinite(d2c)
 
-params = fit_manifold(c[valid], dc[valid], d2c[valid])
+if np.sum(valid) < 20:
+    print("⚠️ Not enough valid points for manifold → fallback")
+    params = np.array([0.0, 0.0, 0.0])
+    fit_ok = False
+else:
+    params = fit_manifold(c[valid], dc[valid], d2c[valid])
+    fit_ok = True
+
 print("Manifold params:", params)
 
 
 # =========================================
-# 5. OVERLAY
+# 5. OVERLAY (ROBUST)
 # =========================================
 
-residual = compute_residual(c, dc, d2c, params)
+if not fit_ok:
+    residual = np.zeros_like(c)
+    distance = np.zeros_like(c)
+else:
+    try:
+        residual = compute_residual(c, dc, d2c, params)
+        residual = safe_fill_nan(residual, fill_value=0.0)
+    except Exception:
+        print("⚠️ Residual failed → fallback")
+        residual = np.zeros_like(c)
 
-rift = np.column_stack([c[-15:-5], dc[-15:-5]])
-distance = compute_distance(c, dc, rift)
+    valid_indices = np.where(valid)[0]
+
+    if len(valid_indices) < 15:
+        print("⚠️ Not enough points for rift → fallback")
+        distance = np.zeros_like(c)
+    else:
+        try:
+            rift_indices = valid_indices[-15:-5]
+            rift_points = np.column_stack([
+                c[rift_indices],
+                dc[rift_indices]
+            ])
+            distance = compute_distance(c, dc, rift_points)
+            distance = safe_fill_nan(distance, fill_value=0.0)
+        except Exception:
+            print("⚠️ Distance failed → fallback")
+            distance = np.zeros_like(c)
 
 
 # =========================================
@@ -175,39 +223,68 @@ print("Cluster centers:", centers)
 
 
 # =========================================
-# 6.5 PREDICTION
+# 6.5 PREDICTION (ROBUST)
 # =========================================
 
-pred = run_predictor(distance, d2c, labels)
+try:
+    pred = run_predictor(distance, d2c, labels)
+except Exception:
+    pred = {
+        "risk": np.full_like(c, np.nan),
+        "warnings": np.zeros_like(c, dtype=bool),
+        "time_to_collapse": np.full_like(c, np.nan),
+    }
 
-risk = np.asarray(pred["risk"])
-warnings = np.asarray(pred["warnings"], dtype=bool)
-ttc = np.asarray(pred["time_to_collapse"])
+if np.all(np.isnan(pred["risk"])):
+    print("⚠️ Predictor failed → fallback risk")
+    risk = np.zeros_like(c)
+    warnings = np.zeros_like(c, dtype=bool)
+    ttc = np.full_like(c, np.nan)
+else:
+    risk = np.asarray(pred["risk"], dtype=float)
+    warnings = np.asarray(pred["warnings"], dtype=bool)
+    ttc = np.asarray(pred["time_to_collapse"], dtype=float)
 
-print("Max risk:", np.nanmax(risk))
-print("Warning count:", np.sum(warnings))
+risk = safe_fill_nan(risk, fill_value=0.0)
+
+print("Max risk:", safe_max(risk, default=0.0))
+print("Warning count:", int(np.sum(warnings)))
 
 
 # =========================================
 # 7. DECISION (BASE STATES)
 # =========================================
 
-gh_clusters = gh_filter(labels, centers)
+if np.all(centers == 0):
+    print("⚠️ GH filter skipped → fallback states")
+    states = []
+    for i in range(len(c)):
+        if not np.isfinite(c[i]):
+            states.append("COLLAPSED")
+        elif risk[i] > 0.7:
+            states.append("CRITICAL")
+        elif risk[i] > 0.4:
+            states.append("WARNING")
+        else:
+            states.append("SAFE")
+else:
+    gh_clusters = gh_filter(labels, centers)
+    print("GH clusters:", gh_clusters)
+    states = classify_states(c, dc, d2c, frag, labels, gh_clusters)
 
-states = classify_states(c, dc, d2c, frag, labels, gh_clusters)
 print(states[:30])
 
 
 # =========================================
-# 8. POLICY + ADAPTIVE LAYER 🔥
+# 8. POLICY + ADAPTIVE LAYER
 # =========================================
 
 policy = run_intervention_policy(risk, warnings, ttc, states)
 
 base_actions = policy["actions"]
-signal = np.asarray(policy["signal"])
+signal = np.asarray(policy["signal"], dtype=float)
+signal = safe_fill_nan(signal, fill_value=0.0)
 
-# 👉 adaptive upgrade
 actions = []
 state_history = []
 
@@ -253,6 +330,8 @@ results_dir = f"APPLICATIONS/power_systems/nexah_ieee9/results/run_{timestamp}"
 os.makedirs(results_dir, exist_ok=True)
 
 np.save(os.path.join(results_dir, "risk.npy"), risk)
+np.save(os.path.join(results_dir, "distance.npy"), distance)
+np.save(os.path.join(results_dir, "residual.npy"), residual)
 
 with open(os.path.join(results_dir, "actions_base.txt"), "w") as f:
     for a in base_actions:
@@ -262,6 +341,25 @@ with open(os.path.join(results_dir, "actions_adaptive.txt"), "w") as f:
     for a in actions:
         f.write(f"{a}\n")
 
+with open(os.path.join(results_dir, "states.txt"), "w") as f:
+    for s in states:
+        f.write(f"{s}\n")
+
+meta = {
+    "params": params.tolist(),
+    "centers": centers.tolist(),
+    "max_risk": safe_max(risk, default=0.0),
+    "warning_count": int(np.sum(warnings)),
+    "fit_ok": bool(fit_ok),
+    "cluster_fallback": bool(np.all(centers == 0)),
+}
+
+with open(os.path.join(results_dir, "meta.json"), "w") as f:
+    import json
+    json.dump(meta, f, indent=2)
+
 fig.savefig(os.path.join(results_dir, "plot.png"))
+fig_risk.savefig(os.path.join(results_dir, "risk.png"))
+fig_int.savefig(os.path.join(results_dir, "intervention.png"))
 
 print("Saved to:", results_dir)
