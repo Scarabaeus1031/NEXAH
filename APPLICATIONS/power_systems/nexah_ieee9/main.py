@@ -1,29 +1,23 @@
-from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
+# =========================================
+# IMPORTS
+# =========================================
 
 import numpy as np
-from sklearn.cluster import KMeans
+from scipy.ndimage import gaussian_filter1d
 
-def cluster_overlay(distance, residual, k=3):
+from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
+from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver import powerflow_solver
 
-    # Combine features
-    X = np.column_stack([distance, residual])
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual import compute_residual
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.distance import compute_distance
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.clustering import cluster_overlay
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.gh_filter import gh_filter
 
-    # --- FILTER INVALID VALUES (NaN / inf) ---
-    valid = np.isfinite(X).all(axis=1)
+from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
+from APPLICATIONS.power_systems.nexah_ieee9.analysis.classification import classify_states
 
-    if np.sum(valid) < k:
-        raise ValueError("Not enough valid points for clustering")
-
-    X_valid = X[valid]
-
-    # --- RUN KMEANS ONLY ON VALID DATA ---
-    kmeans = KMeans(n_clusters=k, random_state=0).fit(X_valid)
-
-    # --- REBUILD FULL LABEL ARRAY ---
-    labels = np.full(len(X), -1)  # -1 = invalid / outside field
-    labels[valid] = kmeans.labels_
-
-    return labels, kmeans.cluster_centers_
+from APPLICATIONS.power_systems.nexah_ieee9.visualization.plot_all import plot_all
 
 
 # =========================================
@@ -47,7 +41,7 @@ for r in results:
     V = r["V"]
     theta = r["theta"]
 
-    # handle non-converged safely
+    # Handle non-converged safely
     if not r["converged"] or np.any(np.isnan(V)):
         Vmin.append(np.nan)
         c_list.append(np.nan)
@@ -56,8 +50,8 @@ for r in results:
 
     Vmin.append(np.min(V))
 
-    c, R, spread = compute_structural_state(V, theta, r["lambda"])
-    c_list.append(c)
+    c_val, R, spread = compute_structural_state(V, theta, r["lambda"])
+    c_list.append(c_val)
 
     fragmentation = (1 - R) * spread
     frag_list.append(fragmentation)
@@ -95,7 +89,7 @@ valid = (
 if np.sum(valid) < 10:
     raise ValueError("Not enough valid points for manifold fit")
 
-# remove extreme spikes
+# Remove extreme spikes
 threshold = np.percentile(np.abs(d2c[valid]), 95)
 
 stable = valid & (np.abs(d2c) < threshold)
@@ -104,7 +98,7 @@ c_clean = c[stable]
 dc_clean = dc[stable]
 d2c_clean = d2c[stable]
 
-# cut last unstable region
+# Cut last unstable region
 cut = int(len(c_clean) * 0.85)
 
 print("Clean points:", len(c_clean))
@@ -125,7 +119,7 @@ print("Manifold params:", params)
 
 residual = compute_residual(c, dc, d2c, params)
 
-# define rift region from late but still stable points
+# Define rift region from late but still stable points
 rift_indices = np.where(valid)[0][-15:-5]
 
 rift_points = np.column_stack([
@@ -137,7 +131,7 @@ distance = compute_distance(c, dc, rift_points)
 
 
 # =========================================
-# 6. CLUSTERING
+# 6. CLUSTERING (ROBUST)
 # =========================================
 
 labels, centers = cluster_overlay(distance, residual)
