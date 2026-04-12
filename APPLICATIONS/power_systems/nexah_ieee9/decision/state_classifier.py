@@ -4,7 +4,6 @@ import numpy as np
 def classify_states(c, dc, d2c, frag, labels, gh_clusters):
     states = []
 
-    # --- valid masks ---
     valid = (
         np.isfinite(c) &
         np.isfinite(dc) &
@@ -12,10 +11,10 @@ def classify_states(c, dc, d2c, frag, labels, gh_clusters):
         np.isfinite(frag)
     )
 
-    # --- robust thresholds from data ---
     if np.sum(valid) < 10:
         return ["UNKNOWN"] * len(c)
 
+    # --- adaptive thresholds ---
     frag_valid = frag[valid]
     d2c_valid = np.abs(d2c[valid])
 
@@ -25,29 +24,39 @@ def classify_states(c, dc, d2c, frag, labels, gh_clusters):
     d2c_warn_thr = np.percentile(d2c_valid, 70)
     d2c_crit_thr = np.percentile(d2c_valid, 90)
 
-    # distance / residual are optional if already embedded in labels logic
-    # here we derive a simple regime progression from frag + d2c + GH context
-
     for i in range(len(c)):
 
-        # 1) collapsed / undefined
+        # =========================================
+        # 1. COLLAPSED
+        # =========================================
         if not valid[i]:
             states.append("COLLAPSED")
             continue
 
         label = labels[i]
 
-        in_gh = label in gh_clusters if isinstance(gh_clusters, (list, tuple, np.ndarray)) else (label == gh_clusters)
+        in_gh = (
+            label in gh_clusters
+            if isinstance(gh_clusters, (list, tuple, np.ndarray))
+            else label == gh_clusters
+        )
 
         frag_i = frag[i]
         d2c_i = abs(d2c[i])
 
-        # 2) critical
-        if (d2c_i >= d2c_crit_thr and frag_i >= frag_warn_thr and in_gh):
+        # =========================================
+        # 2. CRITICAL (FIXED)
+        # =========================================
+        if (
+            (d2c_i >= d2c_crit_thr and in_gh)
+            or (frag_i >= frag_crit_thr)
+        ):
             states.append("CRITICAL")
             continue
 
-        # 3) warning
+        # =========================================
+        # 3. WARNING
+        # =========================================
         if (
             (frag_i >= frag_warn_thr and in_gh)
             or (d2c_i >= d2c_warn_thr and frag_i >= frag_warn_thr)
@@ -55,7 +64,9 @@ def classify_states(c, dc, d2c, frag, labels, gh_clusters):
             states.append("WARNING")
             continue
 
-        # 4) safe
+        # =========================================
+        # 4. SAFE
+        # =========================================
         states.append("SAFE")
 
     return states
