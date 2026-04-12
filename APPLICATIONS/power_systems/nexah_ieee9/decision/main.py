@@ -9,15 +9,12 @@ import json
 from datetime import datetime
 import matplotlib.pyplot as plt
 
-from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
-
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_residual,
     compute_distance,
 )
 from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
-
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
@@ -69,7 +66,7 @@ def plot_all(
 
     # --- Voltage ---
     axes[0].plot(lambdas, Vmin)
-    axes[0].set_title("Voltage Collapse (Baseline)")
+    axes[0].set_title("Voltage Collapse (Closed-Loop Light)")
 
     # --- Features ---
     axes[1].plot(lambdas, c, label="c")
@@ -99,18 +96,41 @@ def plot_all(
 
 
 # =========================================
-# TEMP POWERFLOW SOLVER
+# TEMP POWERFLOW SOLVER (CLOSED-LOOP LIGHT)
 # =========================================
 
-def powerflow_solver(lam):
+def powerflow_solver(lam, action=None):
     n = 9
 
-    V = np.ones(n) * (1.0 - 0.15 * (lam - 1.0))
+    # base voltage collapse trend
+    base = 1.0 - 0.15 * (lam - 1.0)
+
+    # feedback effect from previous action
+    control_boost = 0.0
+    if action == "STABILIZE":
+        control_boost = 0.01
+    elif action == "PREEMPTIVE_STABILIZE":
+        control_boost = 0.025
+    elif action == "REDUCE_LOAD":
+        control_boost = 0.05
+    elif action == "EMERGENCY_SHED":
+        control_boost = 0.08
+    elif action == "NONE":
+        control_boost = 0.0
+
+    # controlled voltage
+    V = np.ones(n) * (base + control_boost)
+
+    # small stochastic noise
     V += np.random.normal(0, 0.01, n)
 
+    # random phase angles
     theta = np.random.uniform(-0.1, 0.1, n)
 
-    if lam > 2.2:
+    # collapse threshold shifts slightly with control
+    collapse_threshold = 2.2 + 0.4 * control_boost
+
+    if lam > collapse_threshold:
         V[:] = np.nan
         converged = False
     else:
@@ -124,13 +144,45 @@ def powerflow_solver(lam):
 
 
 # =========================================
-# 1. SIMULATION
+# 1. CLOSED-LOOP SIMULATION
 # =========================================
 
 np.random.seed(42)
 
 lambdas = np.linspace(0.5, 2.5, 120)
-results = run_load_sweep(powerflow_solver, lambdas)
+
+results = []
+applied_actions = []
+
+prev_action = None
+
+for lam in lambdas:
+    # apply previous action to current solver step
+    res = powerflow_solver(lam, action=prev_action)
+
+    results.append({
+        "lambda": lam,
+        "V": res["V"],
+        "theta": res["theta"],
+        "converged": res["converged"]
+    })
+
+    applied_actions.append(prev_action if prev_action is not None else "INIT")
+
+    # provisional simple closed-loop policy for the NEXT solver step
+    if not res["converged"] or np.any(np.isnan(res["V"])):
+        prev_action = "NONE"
+    else:
+        vmin = np.min(res["V"])
+
+        if vmin < 0.82:
+            prev_action = "EMERGENCY_SHED"
+        elif vmin < 0.88:
+            prev_action = "REDUCE_LOAD"
+        elif vmin < 0.94:
+            prev_action = "PREEMPTIVE_STABILIZE"
+        else:
+            prev_action = "STABILIZE"
 
 
 # =========================================
@@ -338,9 +390,14 @@ with open(os.path.join(results_dir, "states.txt"), "w") as f:
     for s in states:
         f.write(f"{s}\n")
 
-# save actions
+# save policy actions
 with open(os.path.join(results_dir, "actions.txt"), "w") as f:
     for a in actions:
+        f.write(f"{a}\n")
+
+# save actually applied closed-loop solver actions
+with open(os.path.join(results_dir, "applied_actions.txt"), "w") as f:
+    for a in applied_actions:
         f.write(f"{a}\n")
 
 # save meta
@@ -352,6 +409,7 @@ meta = {
     "warning_count": int(np.sum(warnings)),
     "max_signal": float(np.nanmax(signal)),
     "max_raw_signal": float(np.nanmax(raw_signal)),
+    "closed_loop": True,
 }
 
 with open(os.path.join(results_dir, "meta.json"), "w") as f:
