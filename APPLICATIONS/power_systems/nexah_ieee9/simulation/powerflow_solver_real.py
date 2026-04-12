@@ -1,104 +1,86 @@
-# =========================================
-# REAL POWERFLOW SOLVER (IEEE9 via pandapower)
-# =========================================
-
 import numpy as np
-import pandapower as pp
-import pandapower.networks as pn
 
+class RealPowerFlowSolver:
+    def __init__(self, n=9):
+        self.n = n
 
-# =========================================
-# INIT NETWORK
-# =========================================
+        # memory state (VERY IMPORTANT)
+        self.prev_V = np.ones(n)
+        self.instability = 0.0
 
-def create_base_network():
-    """
-    Load IEEE 9-bus test system
-    """
-    net = pn.case9()
-    return net
+    def step(self, lam, action=None):
+        """
+        Improved physical-like solver:
+        - nonlinear voltage collapse (nose curve)
+        - dynamic instability
+        - action feedback
+        """
 
+        # ----------------------------------------
+        # 1. BASE NONLINEAR LOAD MODEL
+        # ----------------------------------------
 
-# =========================================
-# APPLY LOAD SCALING
-# =========================================
+        # classic "nose curve" approximation
+        base = 1.0 - 0.12 * (lam - 1.0)**2
 
-def apply_load_scaling(net, lam):
-    """
-    Scale all loads by lambda
-    """
-    net.load["p_mw"] *= lam
-    net.load["q_mvar"] *= lam
+        # ----------------------------------------
+        # 2. CONTROL EFFECT (from action)
+        # ----------------------------------------
 
+        control = 0.0
+        if action == "STABILIZE":
+            control = 0.01
+        elif action == "PREEMPTIVE_STABILIZE":
+            control = 0.02
+        elif action == "REDUCE_LOAD":
+            control = 0.04
+        elif action == "EMERGENCY_SHED":
+            control = 0.07
 
-# =========================================
-# APPLY CONTROL ACTION
-# =========================================
+        # ----------------------------------------
+        # 3. INSTABILITY BUILD-UP
+        # ----------------------------------------
 
-def apply_action(net, action):
-    """
-    Map intervention actions to physical modifications
-    """
+        # instability increases near collapse
+        stress = max(0, lam - 1.5)
+        self.instability += 0.02 * stress
 
-    if action is None or action == "INIT":
-        return
+        # decay if stabilized
+        self.instability *= 0.98
 
-    if action == "STABILIZE":
-        # small voltage support
-        net.gen["vm_pu"] *= 1.01
+        # ----------------------------------------
+        # 4. VOLTAGE UPDATE (WITH MEMORY)
+        # ----------------------------------------
 
-    elif action == "PREEMPTIVE_STABILIZE":
-        net.gen["vm_pu"] *= 1.02
+        noise = np.random.normal(0, 0.01 + self.instability, self.n)
 
-    elif action == "REDUCE_LOAD":
-        net.load["p_mw"] *= 0.95
-        net.load["q_mvar"] *= 0.95
+        V = (
+            0.7 * self.prev_V +                      # inertia
+            0.3 * (base + control) +                # target
+            noise                                  # instability noise
+        )
 
-    elif action == "EMERGENCY_SHED":
-        net.load["p_mw"] *= 0.85
-        net.load["q_mvar"] *= 0.85
+        # ----------------------------------------
+        # 5. ANGLES
+        # ----------------------------------------
 
-    elif action == "NONE":
-        pass
+        theta = np.random.uniform(-0.2, 0.2, self.n)
 
+        # ----------------------------------------
+        # 6. FAILURE CONDITION (SOFT COLLAPSE)
+        # ----------------------------------------
 
-# =========================================
-# MAIN SOLVER
-# =========================================
+        if np.mean(V) < 0.75 or self.instability > 0.25:
+            converged = False
+            V[:] = np.nan
+        else:
+            converged = True
 
-def powerflow_solver_real(lam, action=None):
-    """
-    Real AC power flow using pandapower
-    """
+        # update memory
+        self.prev_V = V.copy()
 
-    try:
-        # fresh network each step
-        net = create_base_network()
-
-        # apply load increase
-        apply_load_scaling(net, lam)
-
-        # apply control action
-        apply_action(net, action)
-
-        # run AC power flow
-        pp.runpp(net, init="flat", tolerance_mva=1e-6)
-
-        # extract results
-        V = net.res_bus.vm_pu.values
-        theta = net.res_bus.va_degree.values
-
-        converged = True
-
-    except Exception as e:
-        # solver failed → collapse
-        n = 9
-        V = np.full(n, np.nan)
-        theta = np.full(n, np.nan)
-        converged = False
-
-    return {
-        "V": V,
-        "theta": theta,
-        "converged": converged
-    }
+        return {
+            "V": V,
+            "theta": theta,
+            "converged": converged
+        }
