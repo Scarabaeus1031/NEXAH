@@ -21,13 +21,11 @@ from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 
-from APPLICATIONS.power_systems.nexah_ieee9.visualization.plots import plot_all
-
 from sklearn.cluster import KMeans
 
 
 # =========================================
-# ROBUST CLUSTERING (FIXED)
+# FIXED CLUSTERING
 # =========================================
 
 def cluster_overlay_safe(distance, residual, k=3):
@@ -49,7 +47,45 @@ def cluster_overlay_safe(distance, residual, k=3):
 
 
 # =========================================
-# TEMP POWERFLOW SOLVER (DUMMY)
+# FIXED PLOT FUNCTION (CRITICAL FIX)
+# =========================================
+
+def plot_all(
+    lambdas,
+    Vmin,
+    c,
+    dc,
+    d2c,
+    frag,
+    distance,
+    residual,
+    states
+):
+    fig, axes = plt.subplots(4, 1, figsize=(10, 12))
+
+    # --- Voltage ---
+    axes[0].plot(lambdas, Vmin)
+    axes[0].set_title("Voltage Collapse (Baseline)")
+
+    # --- Features ---
+    axes[1].plot(lambdas, c, label="c")
+    axes[1].plot(lambdas, d2c, label="d2c")
+    axes[1].plot(lambdas, frag, label="frag")
+    axes[1].legend()
+
+    # --- Residual vs Distance ---
+    sc = axes[2].scatter(distance, residual, c=distance)
+    axes[2].set_title("Residual vs Distance")
+
+    # --- States ---
+    axes[3].plot(states, "o")
+    axes[3].set_title("NEXAH Decision Timeline")
+
+    return fig
+
+
+# =========================================
+# TEMP POWERFLOW SOLVER
 # =========================================
 
 def powerflow_solver(lam):
@@ -82,7 +118,7 @@ results = run_load_sweep(powerflow_solver, lambdas)
 
 
 # =========================================
-# 2. FEATURE EXTRACTION
+# 2. FEATURES
 # =========================================
 
 Vmin = []
@@ -104,8 +140,7 @@ for r in results:
     c_val, R, spread = compute_structural_state(V, theta, r["lambda"])
     c_list.append(c_val)
 
-    fragmentation = (1 - R) * spread
-    frag_list.append(fragmentation)
+    frag_list.append((1 - R) * spread)
 
 c = np.array(c_list)
 frag = np.array(frag_list)
@@ -126,7 +161,7 @@ dc, d2c = compute_derivatives_smooth(lambdas, c)
 
 
 # =========================================
-# 4. MANIFOLD FIT
+# 4. MANIFOLD
 # =========================================
 
 valid = np.isfinite(c) & np.isfinite(dc) & np.isfinite(d2c)
@@ -139,9 +174,6 @@ dc_clean = dc[stable]
 d2c_clean = d2c[stable]
 
 cut = int(len(c_clean) * 0.85)
-
-print("Clean points:", len(c_clean))
-print("Using for fit:", cut)
 
 params = fit_manifold(
     c_clean[:cut],
@@ -170,11 +202,10 @@ distance = compute_distance(c, dc, rift_points)
 
 
 # =========================================
-# 6. CLUSTERING (SAFE)
+# 6. CLUSTERING
 # =========================================
 
 labels, centers = cluster_overlay_safe(distance, residual)
-
 print("Cluster centers:", centers)
 
 
@@ -191,16 +222,14 @@ print("GH clusters:", gh_clusters)
 # =========================================
 
 states = classify_states(c, dc, d2c, frag, labels, gh_clusters)
-
-print("First 30 states:")
 print(states[:30])
 
 
 # =========================================
-# 9. VISUALIZATION
+# 9. VISUALIZATION + SAVE (FIXED)
 # =========================================
 
-plot_all(
+fig = plot_all(
     lambdas,
     Vmin,
     c,
@@ -212,7 +241,7 @@ plot_all(
     states
 )
 
-plt.tight_layout()
+fig.tight_layout()
 
 
 # =========================================
@@ -220,32 +249,31 @@ plt.tight_layout()
 # =========================================
 
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
 results_dir = f"APPLICATIONS/power_systems/nexah_ieee9/results/run_{timestamp}"
 os.makedirs(results_dir, exist_ok=True)
 
-# states
-with open(os.path.join(results_dir, "states.txt"), "w") as f:
-    for s in states:
-        f.write(f"{s}\n")
-
-# arrays
+# save arrays
 np.save(os.path.join(results_dir, "c.npy"), c)
 np.save(os.path.join(results_dir, "dc.npy"), dc)
 np.save(os.path.join(results_dir, "d2c.npy"), d2c)
 np.save(os.path.join(results_dir, "frag.npy"), frag)
 
-# meta
+# save states
+with open(os.path.join(results_dir, "states.txt"), "w") as f:
+    for s in states:
+        f.write(f"{s}\n")
+
+# save meta
 meta = {
-    "manifold_params": params.tolist(),
-    "cluster_centers": centers.tolist(),
+    "params": params.tolist(),
+    "centers": centers.tolist(),
     "gh_clusters": gh_clusters,
 }
 
 with open(os.path.join(results_dir, "meta.json"), "w") as f:
     json.dump(meta, f, indent=2)
 
-# plot
-plt.savefig(os.path.join(results_dir, "plot.png"))
+# save plot (FIXED)
+fig.savefig(os.path.join(results_dir, "plot.png"))
 
-print(f"Results saved to: {results_dir}")
+print("Saved to:", results_dir)
