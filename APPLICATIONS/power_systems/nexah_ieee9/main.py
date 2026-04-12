@@ -10,7 +10,11 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
+from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real import RealPowerFlowSolver
 
+solver = RealPowerFlowSolver()
+
+res = solver.step(lam, action=prev_action)
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_residual,
