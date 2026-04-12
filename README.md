@@ -6,7 +6,7 @@ NEXAH unifies:
 → early detection  
 → field-based modeling  
 → adaptive control  
-→ and emergent navigation  
+→ emergent navigation  
 
 into a single framework for understanding and interacting with complex systems.
 
@@ -62,70 +62,6 @@ simulation → structure → field → geometry → navigation
 
 ---
 
-## 🧮 Mathematical Perspective
-
-NEXAH can be interpreted as a **controlled dynamical system in feature space**.
-
-Let:
-
-x(t) = system state
-
-with features such as:
-
-- coherence  
-- fragmentation  
-- curvature (d²c)  
-- residual  
-- distance to structural manifold  
-
-The system evolves as:
-
-dx/dt = f(x) + u(x, dx/dt)
-
-where:
-
-- f(x) represents intrinsic system dynamics  
-- u(x, dx/dt) represents the NEXAH control policy  
-
----
-
-### Stability Definition
-
-Instead of voltage thresholds, stability is defined geometrically:
-
-A system is stable if its trajectory remains within a region S:
-
-S = { x : risk(x) < threshold }
-
----
-
-### Risk Field
-
-NEXAH introduces a continuous risk field:
-
-risk(x) ∈ [0,1]
-
-based on:
-
-- structural deviation (residual)  
-- curvature (instability acceleration)  
-- trajectory dynamics (risk slope)  
-- proximity to collapse manifold  
-
----
-
-### Key Property
-
-NEXAH operates on:
-
-→ **trajectory-aware control**
-
-instead of:
-
-→ state-based thresholding  
-
----
-
 ## 🔥 Core Insights (Visual)
 
 ### 🧠 Emergent Navigation (Multi-Agent)
@@ -136,12 +72,13 @@ instead of:
 
 #### Interpretation
 
-This experiment demonstrates that agents can learn navigation behavior **without an explicit reward function**.
+Agents can learn navigation behavior **without an explicit reward function**.
 
-Instead of optimizing a predefined objective, agents are exposed to a **structured stability landscape**:
+Instead of optimizing a predefined objective, they operate inside a  
+**structured stability landscape**:
 
 - states correspond to positions in a geometric field  
-- transitions follow underlying system dynamics  
+- transitions follow system dynamics  
 - stability acts as an implicit signal  
 
 ---
@@ -199,9 +136,9 @@ instead of:
 
 NEXAH also reveals structure in fully discrete systems:
 
-- non-random transitions  
+- non-uniform transition dynamics  
 - geometric modular patterns  
-- corridor-like dynamics  
+- corridor-like motion behavior  
 
 👉 structure is not tied to physics alone — it is **systemic**
 
@@ -242,7 +179,7 @@ yet:
 
 ---
 
-👉 This strongly suggests that NEXAH captures a  
+👉 This suggests that NEXAH captures a  
 **general principle of structured dynamics**, not a domain-specific phenomenon.
 
 ---
@@ -292,6 +229,71 @@ A system that:
 
 ---
 
+## 🧮 Mathematical Perspective (Optional)
+
+<details>
+<summary>Click to expand formal interpretation</summary>
+
+NEXAH can be interpreted as a **controlled dynamical system in feature space**.
+
+Let:
+
+x(t) = system state
+
+with features such as:
+
+- coherence  
+- fragmentation  
+- curvature (d²c)  
+- residual  
+- distance to structural manifold  
+
+The system evolves as:
+
+dx/dt = f(x) + u(x, dx/dt)
+
+where:
+
+- f(x) represents intrinsic system dynamics  
+- u(x, dx/dt) represents the NEXAH control policy  
+
+---
+
+### Stability Definition
+
+A system is stable if its trajectory remains within:
+
+S = { x : risk(x) < threshold }
+
+---
+
+### Risk Field
+
+risk(x) ∈ [0,1]
+
+based on:
+
+- structural deviation (residual)  
+- curvature (instability acceleration)  
+- trajectory dynamics (risk slope)  
+- proximity to collapse manifold  
+
+---
+
+### Key Property
+
+NEXAH operates on:
+
+→ **trajectory-aware control**
+
+instead of:
+
+→ state-based thresholding  
+
+</details>
+
+---
+
 ## 📚 Deep Dive
 
 👉 [Framework](./FRAMEWORK/README.md)  
@@ -301,7 +303,7 @@ A system that:
 
 ## 📜 Citation
 
-Hofmann, T.K.R. (2026)  
+Hofmann, Thomas K.R. (2026)  
 **NEXAH: Structural Discovery and Navigation in Complex Systems**
 
 ---
