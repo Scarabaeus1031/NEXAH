@@ -1,23 +1,27 @@
 import numpy as np
+from sklearn.cluster import KMeans
 
-# --- imports ---
-from data.ieee9_case import powerflow_solver
+def cluster_overlay(distance, residual, k=3):
 
-from simulation.load_sweep import run_load_sweep
+    # Combine features
+    X = np.column_stack([distance, residual])
 
-from features.structural_state import compute_structural_state
-from features.derivatives import compute_derivatives
+    # --- FILTER INVALID VALUES (NaN / inf) ---
+    valid = np.isfinite(X).all(axis=1)
 
-from overlay.manifold_fit import fit_manifold
-from overlay.residual_distance import compute_residual, compute_distance
-from overlay.clustering import cluster_overlay
+    if np.sum(valid) < k:
+        raise ValueError("Not enough valid points for clustering")
 
-from context.gh_filter import gh_filter
-from decision.state_classifier import classify_states
+    X_valid = X[valid]
 
-from visualization.plots import plot_all
+    # --- RUN KMEANS ONLY ON VALID DATA ---
+    kmeans = KMeans(n_clusters=k, random_state=0).fit(X_valid)
 
-from scipy.ndimage import gaussian_filter1d
+    # --- REBUILD FULL LABEL ARRAY ---
+    labels = np.full(len(X), -1)  # -1 = invalid / outside field
+    labels[valid] = kmeans.labels_
+
+    return labels, kmeans.cluster_centers_
 
 
 # =========================================
