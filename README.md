@@ -103,6 +103,53 @@ instead of:
 
 *Structure emerges without reward or predefined goal.*
 
+#### Interpretation
+
+This experiment demonstrates that agents can learn navigation behavior **without an explicit reward function**.
+
+Instead of optimizing a predefined objective, agents are exposed to a **structured stability landscape**:
+
+- states correspond to positions in a geometric field  
+- transitions follow underlying system dynamics  
+- stability acts as an implicit signal  
+
+---
+
+#### Key Idea
+
+Classical reinforcement learning:
+
+state → action → reward → policy  
+
+NEXAH multi-agent systems:
+
+structure → field → movement → emergent policy  
+
+---
+
+#### Insight
+
+> Navigation behavior can emerge directly from system structure  
+> without requiring externally defined rewards.
+
+This suggests that:
+
+- learning can be **structure-driven instead of reward-driven**
+- policies can arise from **geometry and dynamics alone**
+- stability landscapes can act as **implicit learning signals**
+
+---
+
+#### Conceptual Role
+
+The multi-agent layer extends NEXAH from:
+
+→ analysis and control  
+
+to:
+
+→ **emergent navigation and policy formation in structured fields**
+
 ---
 
 ### 🌐 Field Structure (V69)
