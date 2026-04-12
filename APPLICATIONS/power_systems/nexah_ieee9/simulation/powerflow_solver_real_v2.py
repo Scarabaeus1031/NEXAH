@@ -52,7 +52,8 @@ class RealPowerFlowSolverV2:
         # ----------------------------------------
         # 1. fresh copy of network (IMPORTANT)
         # ----------------------------------------
-        net = self.base_net.deepcopy()
+        import copy
+        net = copy.deepcopy(self.base_net)
 
         # ----------------------------------------
         # 2. apply load scaling
