@@ -12,10 +12,6 @@ import matplotlib.pyplot as plt
 from APPLICATIONS.power_systems.nexah_ieee9.simulation.load_sweep import run_load_sweep
 from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real import RealPowerFlowSolver
 
-solver = RealPowerFlowSolver()
-
-res = solver.step(lam, action=prev_action)
-
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
 from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_residual,
@@ -26,10 +22,9 @@ from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
 from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
-from APPLICATIONS.power_systems.nexah_ieee9.control.intervention import run_intervention
+from APPLICATIONS.power_systems.nexah_ieee9.decision.intervention_policy import run_intervention_policy
 
 from sklearn.cluster import KMeans
-
 
 # =========================================
 # FIXED CLUSTERING
