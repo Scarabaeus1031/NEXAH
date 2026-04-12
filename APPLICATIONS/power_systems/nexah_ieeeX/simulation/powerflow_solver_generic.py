@@ -74,6 +74,102 @@ class RealPowerFlowSolverGeneric:
         net.load["p_mw"] *= lam
         net.load["q_mvar"] *= lam
 
+        # 🔥 CRITICAL: FORCE PHYSICAL STRESS
+        if len(net.gen) > 0:
+            net.gen["max_q_mvar"] *= 0.7
+
+        if len(net.line) > 0:
+            net.line["max_i_ka"] *= 0.8
+
+        # ----------------------------------------
+        # 3. APPLY CONTROL ACTIONS
+        # ----------------------------------------
+
+        if action == "STABILIZE":
+            net.load["p_mw"] *= 0.98
+
+        elif action == "PREEMPTIVE_STABILIZE":
+            net.load["p_mw"] *= 0.95
+
+        elif action == "REDUCE_LOAD":
+            net.load["p_mw"] *= 0.90
+
+        elif action == "EMERGENCY_SHED":
+            net.load["p_mw"] *= 0.80
+
+        # ----------------------------------------
+        # 4. RUN POWER FLOW
+        # ----------------------------------------
+
+        try:
+            pp.runpp(
+                net,
+                algorithm="nr",
+                max_iteration=50,
+                tolerance_mva=1e-6,
+                init="auto"
+            )
+            converged = net.converged
+
+        except Exception:
+            converged = False
+
+        # ----------------------------------------
+        # 5. EXTRACT STATE
+        # ----------------------------------------
+
+        if not converged or net.res_bus.empty:
+            V = np.full(len(net.bus), np.nan)
+            theta = np.full(len(net.bus), np.nan)
+
+            # stronger instability injection
+            self.instability += 0.05
+
+        else:
+            V = net.res_bus["vm_pu"].values
+            theta = net.res_bus["va_degree"].values
+
+            # ------------------------------------
+            # 🔥 GLOBAL VOLTAGE DRIFT (KEY FIX)
+            # ------------------------------------
+            V = V - 0.05 * (lam - 1.0)
+
+            # ------------------------------------
+            # 🔥 MICRO NOISE (break symmetry)
+            # ------------------------------------
+            V = V + np.random.normal(0, 0.002, len(V))
+
+            # ------------------------------------
+            # 🔥 INSTABILITY MODEL
+            # ------------------------------------
+            vmin = np.min(V)
+
+            stress = max(0, 0.95 - vmin)
+
+            self.instability += 0.05 * stress
+            self.instability *= 0.98
+
+        # ----------------------------------------
+        # 6. FAILURE CONDITION (SOFT)
+        # ----------------------------------------
+
+        if self.instability > 0.3:
+            converged = False
+            V[:] = np.nan
+
+        # ----------------------------------------
+        # OUTPUT
+        # ----------------------------------------
+
+        return {
+            "V": V,
+            "theta": theta,
+            "converged": converged
+        }        # ----------------------------------------
+
+        net.load["p_mw"] *= lam
+        net.load["q_mvar"] *= lam
+
         # ----------------------------------------
         # 3. APPLY CONTROL ACTIONS
         # ----------------------------------------
