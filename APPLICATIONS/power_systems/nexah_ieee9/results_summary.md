@@ -1,20 +1,21 @@
-# 📊 NEXAH IEEE9 — Results Summary
+# 📊 NEXAH IEEE9 — Results Summary (v3)
 
 ## 🧭 Experiment Setup
 
 - System: IEEE 9-bus (synthetic solver)
 - Load sweep: λ ∈ [0.5, 2.5]
 - Closed-loop intervention enabled
-- NEXAH pipeline fully active
+- Adaptive Policy v3 (Pre-Emptive Field Control)
+- Full NEXAH pipeline active
 
 ---
 
 ## ⚡ Key Metrics
 
-- **Max Risk:** ~0.88  
-- **Warnings Detected:** ~10  
+- **Max Risk:** ~0.76  
+- **Warnings Detected:** ~3  
 - **Clusters:** 3 distinct regions  
-- **Max Intervention Signal:** ~1.0  
+- **Policy Version:** v3 (field-driven)  
 
 ---
 
@@ -22,38 +23,53 @@
 
 ### 🔹 Voltage Collapse
 - Smooth degradation of Vmin across λ
-- Collapse still occurs at high λ
-- Intervention delays collapse threshold slightly
+- Collapse still occurs at high λ (≈ 2.1–2.2)
+- Collapse region more localized and structured
+- Intervention modifies trajectory before collapse
 
 ---
 
 ### 🔹 Risk Field
-- Early spikes detected (λ ≈ 0.6–0.8)
-- Risk partially reduced through intervention
-- Residual risk persists (non-zero baseline)
+- Low baseline risk across stable region
+- Sharp, localized spike near collapse boundary
+- Reduced noise compared to earlier versions
+- Risk becomes structurally meaningful
 
 ---
 
-### 🔹 Intervention Behavior
+### 🔹 Intervention Behavior (v3)
 
-Three distinct phases:
+Three refined control phases:
 
-#### 1. Early Phase
-- High intervention signal (~0.8–1.0)
-- Aggressive control:
-  - EMERGENCY_SHED
-  - REDUCE_LOAD
-
-#### 2. Mid Phase
-- Adaptive stabilization
-- Mixed actions:
+#### 1. Early Phase (Stable Region)
+- Low-to-moderate intervention
+- Mostly:
   - STABILIZE
+- Occasional:
   - PREEMPTIVE_STABILIZE
 
-#### 3. Late Phase
-- Signal decays toward zero
-- Control authority exhausted
-- System transitions into collapse
+👉 System remains passive but alert
+
+---
+
+#### 2. Transition Phase (Pre-Collapse)
+- Clear escalation:
+  - PREEMPTIVE_STABILIZE increases
+- Triggered by:
+  - rising risk
+  - positive risk slope
+  - curvature (d2c)
+
+👉 First evidence of **anticipatory control**
+
+---
+
+#### 3. Collapse Phase
+- Strong escalation:
+  - REDUCE_LOAD
+  - EMERGENCY_SHED (dominant)
+
+👉 System reacts structurally, not just by state
 
 ---
 
@@ -63,72 +79,111 @@ Observed sequence:
 
 SAFE → WARNING → CRITICAL → COLLAPSED
 
-- Transition regions clearly separated
-- Collapse phase stable and persistent
+- Clean separation of regimes
+- Collapse region stable and persistent
+- Reduced noise in classification
 
 ---
 
 ## 🧠 Structural Observations
 
-- Manifold fit remains stable across runs
+- Manifold fit stable across runs
 - Residual field separates regimes clearly
-- Distance-to-rift captures collapse boundary effectively
-- Clustering consistently identifies 3 regimes
+- Distance-to-rift sharply identifies collapse boundary
+- Clustering remains consistent (3 regimes)
+- GH filter produces stable grouping
+
+---
+
+## 🔥 Adaptive Policy v3 — Key Innovation
+
+New control inputs:
+
+- risk (magnitude)
+- risk_slope (trajectory)
+- d2c (instability curvature)
+- distance (proximity to structural boundary)
+
+---
+
+### 🔹 Control Paradigm Shift
+
+| v1/v2 | v3 |
+|------|----|
+| state-based | field-based |
+| reactive | anticipatory |
+| discrete logic | continuous dynamics |
+
+---
+
+### 🔹 Behavior Change
+
+System now:
+
+- anticipates instability
+- escalates before CRITICAL state
+- reacts to geometry of instability (not only labels)
 
 ---
 
 ## ⚠️ Critical Insight
 
-The system does NOT eliminate collapse.
+The system still does **NOT eliminate collapse**.
 
-Instead, it:
+However, it now:
 
-- delays instability onset
-- reshapes system trajectory
-- stabilizes intermediate regimes
+- localizes collapse precisely
+- delays onset
+- reduces instability spread
+- introduces structured recovery behavior
+- reacts *before* instability becomes critical
 
 ---
 
 ## 🔬 Interpretation
 
-NEXAH operates as a:
+NEXAH now operates as a:
 
-dynamic stability controller
+**field-driven adaptive control system**
 
-rather than:
+instead of:
 
-static protection system
+a state-triggered intervention system
 
 ---
 
-## 🔥 Key Result
+## ⚡ Key Result
 
-Closed-loop intervention produces:
+Closed-loop adaptive control (v3) produces:
 
-- measurable delay of collapse
-- structured transition zones
-- adaptive control behavior
+- reduced noise in risk detection
+- structured escalation of control actions
+- clear anticipation of collapse dynamics
+- improved interpretability of system behavior
 
 ---
 
 ## ⚖️ Comparison to Classical IEEE Methods
 
-| Feature                | IEEE Classical | NEXAH |
-|----------------------|---------------|------|
-| Static thresholds     | ✅            | ❌   |
-| Dynamic risk field    | ❌            | ✅   |
-| Early warning         | ⚠️ limited    | ✅   |
-| Closed-loop control   | ❌            | ✅   |
-| Structural modeling   | ❌            | ✅   |
+| Feature                | IEEE Classical | NEXAH v3 |
+|----------------------|---------------|----------|
+| Static thresholds     | ✅            | ❌       |
+| Dynamic risk field    | ❌            | ✅       |
+| Early warning         | ⚠️ limited    | ✅       |
+| Closed-loop control   | ❌            | ✅       |
+| Structural modeling   | ❌            | ✅       |
+| Predictive behavior   | ❌            | ✅       |
 
 ---
 
 ## 🔮 Next Steps
 
 - Integrate real AC power flow solver (pandapower)
-- Add topology-aware interventions
-- Implement predictive (multi-step) control
-- Extend to larger IEEE test systems (14, 30, 118)
+- Full physics-based closed-loop (action → system response)
+- Adaptive λ control (trajectory shaping)
+- Multi-step prediction (lookahead horizon)
+- Stability basin navigation (NEXAH field exploration)
+- Extend to IEEE 14 / 30 / 118 systems
 
 ---
 
@@ -136,8 +191,22 @@ Closed-loop intervention produces:
 
 NEXAH demonstrates that:
 
-power system stability can be modeled as a navigable field
+power system stability can be modeled as a **continuous field**
 
-and controlled dynamically through structure-aware feedback.
+and controlled through:
+
+- structure-aware dynamics  
+- trajectory-based prediction  
+- adaptive intervention  
 
 ---
+
+## 🔥 Final Insight
+
+v3 marks the transition from:
+
+reactive control → anticipatory control
+
+and represents a first step toward:
+
+**field navigation of complex dynamical systems**
