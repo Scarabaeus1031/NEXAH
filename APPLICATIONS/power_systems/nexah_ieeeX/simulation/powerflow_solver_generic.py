@@ -1,5 +1,5 @@
 # =========================================
-# GENERIC POWER FLOW SOLVER (NEXAH)
+# GENERIC POWER FLOW SOLVER (NEXAH v2)
 # =========================================
 
 import numpy as np
@@ -44,7 +44,7 @@ def load_network(case_name="ieee9"):
 class RealPowerFlowSolverGeneric:
     """
     Generic pandapower-based solver with NEXAH control interface.
-    Works for small → very large grids.
+    Enhanced for large-grid dynamics.
     """
 
     def __init__(self, case_name="ieee9"):
@@ -115,17 +115,32 @@ class RealPowerFlowSolverGeneric:
             V = np.full(len(net.bus), np.nan)
             theta = np.full(len(net.bus), np.nan)
 
+            # 🔥 stronger instability injection
             self.instability += 0.05
 
         else:
             V = net.res_bus["vm_pu"].values
             theta = net.res_bus["va_degree"].values
 
-            # instability grows near low voltage
-            vmin = np.min(V)
-            stress = max(0, 1.0 - vmin)
+            # ------------------------------------
+            # 🔥 STRUCTURAL PERTURBATION (CRITICAL)
+            # ------------------------------------
+            # large grids are too smooth → inject micro-noise
+            V = V + np.random.normal(0, 0.002, len(V))
 
-            self.instability += 0.02 * stress
+            # ------------------------------------
+            # 🔥 ENHANCED INSTABILITY MODEL
+            # ------------------------------------
+
+            vmin = np.min(V)
+
+            # shift threshold upward → earlier sensitivity
+            stress = max(0, 0.95 - vmin)
+
+            # stronger accumulation
+            self.instability += 0.05 * stress
+
+            # slow decay
             self.instability *= 0.98
 
         # ----------------------------------------
