@@ -17,10 +17,7 @@ from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
     compute_residual,
     compute_distance,
 )
-from APPLICATIONS.power_systems.nexah_ieee9.context.gh_filter import gh_filter
-
 from APPLICATIONS.power_systems.nexah_ieee9.features.structural_state import compute_structural_state
-from APPLICATIONS.power_systems.nexah_ieee9.decision.state_classifier import classify_states
 from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
 from APPLICATIONS.power_systems.nexah_ieee9.decision.intervention_policy import run_intervention_policy
 from APPLICATIONS.power_systems.nexah_ieee9.decision.adaptive_policy_v2 import run_adaptive_policy
@@ -37,7 +34,7 @@ def safe_fill_nan(x, fill_value=0.0):
     if np.all(np.isnan(x)):
         return np.full_like(x, fill_value)
     med = np.nanmedian(x)
-    return np.nan_to_num(x, nan=med)
+    return np.nan_to_num(x, nan=med, posinf=med, neginf=med)
 
 
 def safe_max(x, default=0.0):
@@ -56,6 +53,7 @@ def cluster_overlay_safe(distance, residual, k=3):
     valid = np.isfinite(X).all(axis=1)
 
     if np.sum(valid) < k:
+        print("⚠️ Not enough points for clustering → fallback")
         return np.full(len(X), -1), np.zeros((k, 2))
 
     X_valid = X[valid]
@@ -75,7 +73,7 @@ np.random.seed(42)
 
 solver = RealPowerFlowSolverGeneric(case_name="ieee300")
 
-# 🔥 important: tighter range for large grid
+# for large systems: tighter lambda range
 lambdas = np.linspace(0.8, 1.6, 60)
 
 results = []
@@ -88,10 +86,10 @@ for lam in lambdas:
         "lambda": lam,
         "V": res["V"],
         "theta": res["theta"],
-        "converged": res["converged"]
+        "converged": res["converged"],
     })
 
-    # simple bootstrap control (same as 118)
+    # simple bootstrap control
     if not res["converged"] or np.any(np.isnan(res["V"])):
         prev_action = "EMERGENCY_SHED"
     else:
@@ -105,7 +103,7 @@ for lam in lambdas:
 
 
 # =========================================
-# FEATURES
+# FEATURES (ROBUST FOR LARGE GRIDS)
 # =========================================
 
 Vmin, c_list, frag_list = [], [], []
@@ -120,14 +118,45 @@ for r in results:
         frag_list.append(np.nan)
         continue
 
-    Vmin.append(np.min(V))
-    c_val, R, spread = compute_structural_state(V, theta, r["lambda"])
-    c_list.append(c_val)
-    frag_list.append((1 - R) * spread)
+    vmin = np.min(V)
+    Vmin.append(vmin)
 
-c = safe_fill_nan(c_list)
-frag = safe_fill_nan(frag_list)
-Vmin = np.array(Vmin)
+    try:
+        c_val, R, spread = compute_structural_state(V, theta, r["lambda"])
+        c_list.append(c_val)
+        frag_list.append((1 - R) * spread)
+    except Exception:
+        c_list.append(np.nan)
+        frag_list.append(np.nan)
+
+Vmin = np.asarray(Vmin, dtype=float)
+c = np.asarray(c_list, dtype=float)
+frag = np.asarray(frag_list, dtype=float)
+
+# -----------------------------------------
+# FEATURE FALLBACK FOR LARGE SYSTEMS
+# -----------------------------------------
+
+valid_c = np.isfinite(c)
+if np.sum(valid_c) < 20 or np.nanstd(c) < 1e-4:
+    print("⚠️ Structural coherence too flat → using Vmin fallback feature")
+    c = Vmin.copy()
+
+valid_frag = np.isfinite(frag)
+if np.sum(valid_frag) < 20 or np.nanstd(frag) < 1e-6:
+    print("⚠️ Fragmentation too flat → using voltage spread fallback")
+    frag_fallback = []
+    for r in results:
+        V = r["V"]
+        if not r["converged"] or np.any(np.isnan(V)):
+            frag_fallback.append(np.nan)
+        else:
+            frag_fallback.append(np.std(V))
+    frag = np.asarray(frag_fallback, dtype=float)
+
+c = safe_fill_nan(c)
+frag = safe_fill_nan(frag)
+Vmin = safe_fill_nan(Vmin)
 
 
 # =========================================
@@ -145,12 +174,17 @@ dc, d2c = compute_derivatives(lambdas, c)
 
 
 # =========================================
-# MANIFOLD (ROBUST)
+# MANIFOLD
 # =========================================
 
 valid = np.isfinite(c) & np.isfinite(dc) & np.isfinite(d2c)
 
-if np.sum(valid) < 30:   # 👈 leicht erhöht für große Netze
+print("Valid points for manifold:", int(np.sum(valid)))
+print("c std:", float(np.nanstd(c)))
+print("dc std:", float(np.nanstd(dc)))
+print("d2c std:", float(np.nanstd(d2c)))
+
+if np.sum(valid) < 20:
     print("⚠️ Not enough valid points for manifold → fallback")
     params = np.array([0.0, 0.0, 0.0])
     fit_ok = False
@@ -165,6 +199,7 @@ else:
 
 print("Manifold params:", params)
 
+
 # =========================================
 # OVERLAY
 # =========================================
@@ -173,15 +208,24 @@ if not fit_ok:
     residual = np.zeros_like(c)
     distance = np.zeros_like(c)
 else:
-    residual = safe_fill_nan(compute_residual(c, dc, d2c, params))
+    try:
+        residual = safe_fill_nan(compute_residual(c, dc, d2c, params))
+    except Exception:
+        print("⚠️ Residual failed → fallback")
+        residual = np.zeros_like(c)
 
     valid_idx = np.where(valid)[0]
 
     if len(valid_idx) < 15:
+        print("⚠️ Not enough points for rift → fallback")
         distance = np.zeros_like(c)
     else:
-        rift = np.column_stack([c[valid_idx[-15:-5]], dc[valid_idx[-15:-5]]])
-        distance = safe_fill_nan(compute_distance(c, dc, rift))
+        try:
+            rift = np.column_stack([c[valid_idx[-15:-5]], dc[valid_idx[-15:-5]]])
+            distance = safe_fill_nan(compute_distance(c, dc, rift))
+        except Exception:
+            print("⚠️ Distance failed → fallback")
+            distance = np.zeros_like(c)
 
 
 # =========================================
@@ -189,6 +233,7 @@ else:
 # =========================================
 
 labels, centers = cluster_overlay_safe(distance, residual)
+print("Cluster centers:", centers)
 
 
 # =========================================
@@ -198,15 +243,29 @@ labels, centers = cluster_overlay_safe(distance, residual)
 try:
     pred = run_predictor(distance, d2c, labels)
     risk = safe_fill_nan(pred["risk"])
-    warnings = np.asarray(pred["warnings"])
-    ttc = np.asarray(pred["time_to_collapse"])
-except:
+    warnings = np.asarray(pred["warnings"], dtype=bool)
+    ttc = np.asarray(pred["time_to_collapse"], dtype=float)
+except Exception:
+    print("⚠️ Predictor failed → fallback")
     risk = np.zeros_like(c)
     warnings = np.zeros_like(c, dtype=bool)
     ttc = np.full_like(c, np.nan)
 
+# if predictor is numerically dead, fallback to normalized Vmin inverse
+if np.nanstd(risk) < 1e-8:
+    print("⚠️ Risk too flat → using Vmin-based fallback risk")
+    vmax = np.nanmax(Vmin)
+    vmin = np.nanmin(Vmin)
+    if np.isfinite(vmax) and np.isfinite(vmin) and vmax > vmin:
+        risk = 1.0 - (Vmin - vmin) / (vmax - vmin)
+        risk = np.clip(risk, 0.0, 1.0)
+        warnings = risk > 0.4
+    else:
+        risk = np.zeros_like(c)
+        warnings = np.zeros_like(c, dtype=bool)
+
 print("Max risk:", safe_max(risk))
-print("Warning count:", np.sum(warnings))
+print("Warning count:", int(np.sum(warnings)))
 
 
 # =========================================
@@ -215,7 +274,7 @@ print("Warning count:", np.sum(warnings))
 
 states = []
 for i in range(len(c)):
-    if not np.isfinite(c[i]):
+    if not np.isfinite(Vmin[i]):
         states.append("COLLAPSED")
     elif risk[i] > 0.7:
         states.append("CRITICAL")
@@ -246,7 +305,7 @@ for i in range(len(base_actions)):
         states[i],
         state_history,
         risk[i],
-        risk_slope[i]
+        risk_slope[i],
     )
 
     actions.append(act)
@@ -259,22 +318,35 @@ print(actions[:30])
 # VISUALIZATION
 # =========================================
 
-fig, axes = plt.subplots(3, 1, figsize=(10, 10))
+fig, axes = plt.subplots(4, 1, figsize=(10, 12))
 
 axes[0].plot(lambdas, Vmin)
 axes[0].set_title("Voltage Collapse (IEEE300)")
 
-axes[1].plot(lambdas, risk)
-axes[1].scatter(lambdas[warnings], risk[warnings])
-axes[1].set_title("Risk Field")
+axes[1].plot(lambdas, c, label="c")
+axes[1].plot(lambdas, d2c, label="d2c")
+axes[1].plot(lambdas, frag, label="frag")
+axes[1].legend()
+axes[1].set_title("Structural Features")
 
-y_map = {"STABILIZE": 0, "PREEMPTIVE_STABILIZE": 1, "REDUCE_LOAD": 2, "EMERGENCY_SHED": 3}
+axes[2].plot(lambdas, risk)
+axes[2].scatter(lambdas[warnings], risk[warnings])
+axes[2].set_title("Risk Field")
+
+y_map = {
+    "STABILIZE": 0,
+    "PREEMPTIVE_STABILIZE": 1,
+    "REDUCE_LOAD": 2,
+    "EMERGENCY_SHED": 3,
+}
 y = [y_map.get(a, 0) for a in actions]
 
-axes[2].scatter(lambdas, y)
-axes[2].set_yticks([0, 1, 2, 3])
-axes[2].set_yticklabels(["STAB", "PRE", "REDUCE", "SHED"])
-axes[2].set_title("Actions")
+axes[3].scatter(lambdas, y)
+axes[3].set_yticks([0, 1, 2, 3])
+axes[3].set_yticklabels(["STAB", "PRE", "REDUCE", "SHED"])
+axes[3].set_title("Actions")
+
+fig.tight_layout()
 
 
 # =========================================
@@ -286,10 +358,20 @@ results_dir = f"APPLICATIONS/power_systems/nexah_ieeeX/results/run_ieee300_{time
 os.makedirs(results_dir, exist_ok=True)
 
 np.save(os.path.join(results_dir, "risk.npy"), risk)
+np.save(os.path.join(results_dir, "c.npy"), c)
+np.save(os.path.join(results_dir, "d2c.npy"), d2c)
+np.save(os.path.join(results_dir, "frag.npy"), frag)
+np.save(os.path.join(results_dir, "Vmin.npy"), Vmin)
+np.save(os.path.join(results_dir, "distance.npy"), distance)
+np.save(os.path.join(results_dir, "residual.npy"), residual)
 
 with open(os.path.join(results_dir, "actions.txt"), "w") as f:
     for a in actions:
         f.write(f"{a}\n")
+
+with open(os.path.join(results_dir, "states.txt"), "w") as f:
+    for s in states:
+        f.write(f"{s}\n")
 
 fig.savefig(os.path.join(results_dir, "plot.png"))
 
