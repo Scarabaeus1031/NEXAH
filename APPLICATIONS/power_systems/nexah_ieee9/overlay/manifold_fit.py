@@ -1,15 +1,16 @@
 import numpy as np
-from scipy.optimize import curve_fit
-
 
 def fit_manifold(c, dc, d2c):
     """
-    Robust manifold fit:
-    d2c ≈ a * c^p * dc^q
+    Log-space fit:
+    log(d2c) = log(a) + p log(c) + q log(|dc|)
     """
 
-    # --- CLEAN INPUT ---
+    # filter valid positive values
     mask = (
+        (c > 1e-6) &
+        (np.abs(dc) > 1e-6) &
+        (np.abs(d2c) > 1e-6) &
         np.isfinite(c) &
         np.isfinite(dc) &
         np.isfinite(d2c)
@@ -19,36 +20,17 @@ def fit_manifold(c, dc, d2c):
     dc = dc[mask]
     d2c = d2c[mask]
 
-    # remove near-zero values (log instability)
-    eps = 1e-6
-    mask2 = (np.abs(c) > eps) & (np.abs(dc) > eps)
+    log_c = np.log(c)
+    log_dc = np.log(np.abs(dc))
+    log_d2c = np.log(np.abs(d2c))
 
-    c = c[mask2]
-    dc = dc[mask2]
-    d2c = d2c[mask2]
+    # linear regression
+    X = np.column_stack([np.ones(len(c)), log_c, log_dc])
+    y = log_d2c
 
-    if len(c) < 10:
-        print("⚠️ Not enough data for fit → fallback")
-        return np.array([1.0, 1.0, 1.0])
+    coeffs, *_ = np.linalg.lstsq(X, y, rcond=None)
 
-    # --- MODEL ---
-    def f(X, a, p, q):
-        c, dc = X
-        return a * (np.abs(c) ** p) * (np.abs(dc) ** q)
+    log_a, p, q = coeffs
+    a = np.exp(log_a)
 
-    # --- INITIAL GUESS (CRITICAL FIX) ---
-    p0 = [1.0, 1.0, 1.0]
-
-    try:
-        popt, _ = curve_fit(
-            f,
-            (c, dc),
-            d2c,
-            p0=p0,
-            maxfev=20000
-        )
-        return popt
-
-    except RuntimeError:
-        print("⚠️ Fit failed → using fallback parameters")
-        return np.array([1.0, 1.0, 1.0])
+    return np.array([a, p, q])
