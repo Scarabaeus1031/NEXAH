@@ -186,7 +186,6 @@ instead of:
 → extrapolating trajectories
 
 ---
-
 ### 🔬 Discrete Systems (Prime / Modular Resonance)
 
 NEXAH also reveals structure in fully discrete systems:
@@ -196,6 +195,52 @@ NEXAH also reveals structure in fully discrete systems:
 - corridor-like dynamics  
 
 👉 structure is not tied to physics alone — it is **systemic**
+
+---
+
+### 🧭 Emergent Flow in Discrete Systems
+
+![Prime Modular Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/curated/mod7_particle_flow_trails.gif)
+
+#### Interpretation
+
+Even in a purely discrete system (prime numbers mod 7), we observe:
+
+- coherent flow structures  
+- cyclic trajectories  
+- basin-like clustering  
+- directional transport behavior  
+
+---
+
+#### Key Insight
+
+> Continuous structure and flow can emerge  
+> from purely discrete arithmetic systems.
+
+This demonstrates that:
+
+- geometry is not imposed — it emerges  
+- flow is not physical — it is structural  
+- dynamics can arise from transitions alone  
+
+---
+
+#### Conceptual Role
+
+This module provides a **minimal system** where:
+
+- no physics is present  
+- no differential equations are used  
+
+yet:
+
+→ **NEXAH structure still appears**
+
+---
+
+👉 This strongly suggests that NEXAH captures a  
+**general principle of structured dynamics**, not a domain-specific phenomenon.
 
 ---
 
