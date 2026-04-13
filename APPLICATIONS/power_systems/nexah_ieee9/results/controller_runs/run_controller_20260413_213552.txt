@@ -1,0 +1,129 @@
+[STEP 0] state=NEXIT | risk=0.020 | d=0.750 | action=MONITOR
+[STEP 1] state=NEXIT | risk=0.022 | d=0.743 | action=MONITOR
+[STEP 2] state=NEXIT | risk=0.024 | d=0.736 | action=MONITOR
+[STEP 3] state=NEXIT | risk=0.026 | d=0.729 | action=MONITOR
+[STEP 4] state=NEXIT | risk=0.027 | d=0.722 | action=MONITOR
+[STEP 5] state=NEXIT | risk=0.028 | d=0.715 | action=MONITOR
+[STEP 6] state=NEXIT | risk=0.029 | d=0.708 | action=MONITOR
+[STEP 7] state=NEXIT | risk=0.030 | d=0.701 | action=MONITOR
+[STEP 8] state=NEXIT | risk=0.030 | d=0.694 | action=MONITOR
+[STEP 9] state=NEXIT | risk=0.030 | d=0.687 | action=MONITOR
+[STEP 10] state=NEXIT | risk=0.029 | d=0.680 | action=MONITOR
+[STEP 11] state=NEXIT | risk=0.028 | d=0.673 | action=MONITOR
+[STEP 12] state=NEXIT | risk=0.027 | d=0.666 | action=MONITOR
+[STEP 13] state=NEXIT | risk=0.025 | d=0.659 | action=MONITOR
+[STEP 14] state=NEXIT | risk=0.023 | d=0.652 | action=MONITOR
+[STEP 15] state=NEXIT | risk=0.021 | d=0.645 | action=MONITOR
+[STEP 16] state=NEXIT | risk=0.019 | d=0.638 | action=MONITOR
+[STEP 17] state=NEXIT | risk=0.017 | d=0.631 | action=MONITOR
+[STEP 18] state=NEXIT | risk=0.016 | d=0.624 | action=MONITOR
+[STEP 19] state=NEXIT | risk=0.014 | d=0.617 | action=MONITOR
+[STEP 20] state=NEXIT | risk=0.012 | d=0.610 | action=MONITOR
+[STEP 21] state=NEXIT | risk=0.011 | d=0.603 | action=MONITOR
+[STEP 22] state=NEXIT | risk=0.010 | d=0.596 | action=MONITOR
+[STEP 23] state=NEXIT | risk=0.010 | d=0.589 | action=MONITOR
+[STEP 24] state=NEXIT | risk=0.010 | d=0.582 | action=MONITOR
+[STEP 25] state=NEXIT | risk=0.010 | d=0.575 | action=MONITOR
+[STEP 26] state=NEXIT | risk=0.011 | d=0.568 | action=MONITOR
+[STEP 27] state=NEXIT | risk=0.012 | d=0.561 | action=MONITOR
+[STEP 28] state=NEXIT | risk=0.014 | d=0.554 | action=MONITOR
+[STEP 29] state=NEXIT | risk=0.015 | d=0.547 | action=MONITOR
+[STEP 30] state=NEXIT | risk=0.017 | d=0.540 | action=MONITOR
+[STEP 31] state=NEXIT | risk=0.019 | d=0.533 | action=MONITOR
+[STEP 32] state=NEXIT | risk=0.021 | d=0.526 | action=MONITOR
+[STEP 33] state=NEXIT | risk=0.023 | d=0.519 | action=MONITOR
+[STEP 34] state=NEXIT | risk=0.025 | d=0.512 | action=MONITOR
+[STEP 35] state=NEXIT | risk=0.027 | d=0.505 | action=MONITOR
+[STEP 36] state=NEXIT | risk=0.028 | d=0.498 | action=MONITOR
+[STEP 37] state=NEXIT | risk=0.029 | d=0.491 | action=MONITOR
+[STEP 38] state=NEXIT | risk=0.030 | d=0.484 | action=MONITOR
+[STEP 39] state=NEXIT | risk=0.030 | d=0.477 | action=MONITOR
+[STEP 40] state=NEXIT | risk=0.030 | d=0.470 | action=MONITOR
+[STEP 41] state=NEXIT | risk=0.029 | d=0.463 | action=MONITOR
+[STEP 42] state=NEXIT | risk=0.029 | d=0.456 | action=MONITOR
+[STEP 43] state=NEXIT | risk=0.027 | d=0.449 | action=MONITOR
+[STEP 44] state=NEXIT | risk=0.026 | d=0.442 | action=MONITOR
+[STEP 45] state=NEXIT | risk=0.024 | d=0.435 | action=MONITOR
+[STEP 46] state=NEXIT | risk=0.022 | d=0.428 | action=MONITOR
+[STEP 47] state=NEXIT | risk=0.020 | d=0.421 | action=MONITOR
+[STEP 48] state=NEXIT | risk=0.018 | d=0.414 | action=MONITOR
+[STEP 49] state=NEXIT | risk=0.016 | d=0.407 | action=MONITOR
+[STEP 50] state=NEXIT | risk=0.015 | d=0.400 | action=MONITOR
+[STEP 51] state=NEXIT | risk=0.013 | d=0.393 | action=MONITOR
+[STEP 52] state=NEXIT | risk=0.012 | d=0.386 | action=MONITOR
+[STEP 53] state=NEXIT | risk=0.011 | d=0.379 | action=MONITOR
+[STEP 54] state=NEXIT | risk=0.010 | d=0.372 | action=MONITOR
+[STEP 55] state=NEXIT | risk=0.010 | d=0.365 | action=MONITOR
+[STEP 56] state=NEXIT | risk=0.010 | d=0.358 | action=MONITOR
+[STEP 57] state=NEXIT | risk=0.011 | d=0.351 | action=MONITOR
+[STEP 58] state=NEXIT | risk=0.012 | d=0.344 | action=MONITOR
+[STEP 59] state=NEXIT | risk=0.013 | d=0.337 | action=MONITOR
+[STEP 60] state=NEXIT | risk=0.015 | d=0.330 | action=MONITOR
+[STEP 61] state=NEXIT | risk=0.016 | d=0.323 | action=MONITOR
+[STEP 62] state=NEXIT | risk=0.018 | d=0.316 | action=MONITOR
+[STEP 63] state=NEXIT | risk=0.020 | d=0.309 | action=MONITOR
+[STEP 64] state=NEXIT | risk=0.022 | d=0.302 | action=MONITOR
+[STEP 65] state=NEXIT | risk=0.024 | d=0.295 | action=MONITOR
+[STEP 66] state=NEXIT | risk=0.026 | d=0.288 | action=MONITOR
+[STEP 67] state=NEXIT | risk=0.027 | d=0.281 | action=MONITOR
+[STEP 68] state=NEXIT | risk=0.029 | d=0.274 | action=MONITOR
+[STEP 69] state=NEXIT | risk=0.029 | d=0.267 | action=MONITOR
+[STEP 70] state=NEXIT | risk=0.030 | d=0.260 | action=MONITOR
+[STEP 71] state=NEXIT | risk=0.030 | d=0.253 | action=MONITOR
+[STEP 72] state=NEXIT | risk=0.030 | d=0.246 | action=MONITOR
+[STEP 73] state=NEXIT | risk=0.029 | d=0.239 | action=MONITOR
+[STEP 74] state=NEXIT | risk=0.028 | d=0.232 | action=MONITOR
+[STEP 75] state=NEXIT | risk=0.027 | d=0.225 | action=MONITOR
+[STEP 76] state=NEXIT | risk=0.025 | d=0.218 | action=MONITOR
+[STEP 77] state=NEXIT | risk=0.023 | d=0.211 | action=MONITOR
+[STEP 78] state=NEXIT | risk=0.021 | d=0.204 | action=MONITOR
+[STEP 79] state=NEXIT | risk=0.019 | d=0.197 | action=MONITOR
+[STEP 80] state=NEXIT | risk=0.017 | d=0.190 | action=MONITOR
+[STEP 81] state=NEXIT | risk=0.015 | d=0.183 | action=MONITOR
+[STEP 82] state=NEXIT | risk=0.014 | d=0.176 | action=MONITOR
+[STEP 83] state=NEXIT | risk=0.012 | d=0.169 | action=MONITOR
+[STEP 84] state=NEXIT | risk=0.011 | d=0.162 | action=MONITOR
+[STEP 85] state=NEXIT | risk=0.010 | d=0.155 | action=MONITOR
+[STEP 86] state=NEXIT | risk=0.010 | d=0.148 | action=MONITOR
+[STEP 87] state=NEXIT | risk=0.010 | d=0.141 | action=MONITOR
+[STEP 88] state=NEXIT | risk=0.011 | d=0.134 | action=MONITOR
+[STEP 89] state=NEXIT | risk=0.011 | d=0.127 | action=MONITOR
+[STEP 90] state=NEXIT | risk=0.100 | d=0.100 | action=MONITOR
+[STEP 91] state=NEXIT | risk=0.178 | d=0.091 | action=MONITOR
+[STEP 92] state=ENGAGE | risk=0.256 | d=0.082 | action=PREEMPTIVE_STABILIZE
+[STATE CHANGE] NEXIT → ENGAGE
+[STEP 93] state=ENGAGE | risk=0.333 | d=0.073 | action=PREEMPTIVE_STABILIZE
+[STEP 94] state=ENGAGE | risk=0.411 | d=0.064 | action=PREEMPTIVE_STABILIZE
+[STEP 95] state=LOCK | risk=0.489 | d=0.056 | action=STRONG_INTERVENTION + STEER_OUT
+[STATE CHANGE] ENGAGE → LOCK
+[STEP 96] state=LOCK | risk=0.567 | d=0.047 | action=STRONG_INTERVENTION + STEER_OUT
+[STEP 97] state=LOCK | risk=0.644 | d=0.038 | action=STRONG_INTERVENTION + STEER_OUT
+[STEP 98] state=LOCK | risk=0.722 | d=0.029 | action=STRONG_INTERVENTION + STEER_OUT
+[STEP 99] state=RELEASE | risk=0.800 | d=0.020 | action=DAMPEN + RECOVER
+[STATE CHANGE] LOCK → RELEASE
+[STEP 100] state=RELEASE | risk=0.300 | d=0.200 | action=DAMPEN + RECOVER
+[STEP 101] state=RELEASE | risk=0.285 | d=0.211 | action=DAMPEN + RECOVER
+[STEP 102] state=LOCK | risk=0.269 | d=0.221 | action=STRONG_INTERVENTION + STEER_OUT
+[STATE CHANGE] RELEASE → LOCK
+[STEP 103] state=LOCK | risk=0.254 | d=0.232 | action=STRONG_INTERVENTION + STEER_OUT
+[STEP 104] state=LOCK | risk=0.239 | d=0.242 | action=STRONG_INTERVENTION + STEER_OUT
+[STEP 105] state=RELEASE | risk=0.224 | d=0.253 | action=DAMPEN + RECOVER
+[STATE CHANGE] LOCK → RELEASE
+[STEP 106] state=RELEASE | risk=0.208 | d=0.263 | action=DAMPEN + RECOVER
+[STEP 107] state=RELEASE | risk=0.193 | d=0.274 | action=DAMPEN + RECOVER
+[STEP 108] state=LOCK | risk=0.178 | d=0.284 | action=STRONG_INTERVENTION + STEER_OUT
+[STATE CHANGE] RELEASE → LOCK
+[STEP 109] state=LOCK | risk=0.163 | d=0.295 | action=STRONG_INTERVENTION + STEER_OUT
+[STEP 110] state=LOCK | risk=0.147 | d=0.305 | action=STRONG_INTERVENTION
+[STEP 111] state=RELEASE | risk=0.132 | d=0.316 | action=DAMPEN + RECOVER
+[STATE CHANGE] LOCK → RELEASE
+[STEP 112] state=RELEASE | risk=0.117 | d=0.326 | action=DAMPEN + RECOVER
+[STEP 113] state=RELEASE | risk=0.102 | d=0.337 | action=DAMPEN + RECOVER
+[STEP 114] state=LOCK | risk=0.086 | d=0.347 | action=STRONG_INTERVENTION
+[STATE CHANGE] RELEASE → LOCK
+[STEP 115] state=LOCK | risk=0.071 | d=0.358 | action=STRONG_INTERVENTION
+[STEP 116] state=LOCK | risk=0.056 | d=0.368 | action=STRONG_INTERVENTION
+[STEP 117] state=RELEASE | risk=0.041 | d=0.379 | action=DAMPEN + RECOVER
+[STATE CHANGE] LOCK → RELEASE
+[STEP 118] state=RELEASE | risk=0.025 | d=0.389 | action=DAMPEN + RECOVER
+[STEP 119] state=RELEASE | risk=0.010 | d=0.400 | action=DAMPEN + RECOVER
