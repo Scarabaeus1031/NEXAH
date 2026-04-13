@@ -124,7 +124,7 @@ C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \cdot |F(x)|}
 ---
 
 **Note:**  
-This Extended README is intentionally more detailed and honest than the public main README. It is meant to help you regain overview and create breathing room.
+This Extended README is intentionally more detailed and honest than the public main README. It is meant to help  regain overview and create breathing room.
 
 **Last Updated:** April 14, 2026  
 © Thomas K. R. Hofmann
