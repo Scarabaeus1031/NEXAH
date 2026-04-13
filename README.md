@@ -12,17 +12,39 @@ into a single framework for understanding and interacting with complex systems.
 
 ---
 
+## 🧭 Where to Start
+
+| Goal | Start Here |
+|------|-----------|
+| ⚡ See real-world results | [Power Systems](./APPLICATIONS/power_systems/README.md) |
+| 🧠 Understand the framework | [Framework](./FRAMEWORK/README.md) |
+| 🌀 Explore chaos & geometry | [Lorenz Module](./APPLICATIONS/dynamical_systems/lorenz/README.md) |
+| ⚙️ Run experiments | [Applications](./APPLICATIONS/) |
+
+---
+
 ## ⚡ Key Result — IEEE Power Systems
 
 NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical methods.
 
-👉 [Full results](./APPLICATIONS/power_systems/README.md)
+👉 Results & Scaling:
+- [Full System Overview](./APPLICATIONS/power_systems/README.md)  
+- [Scaling Experiments (IEEE118 → 9241)](./APPLICATIONS/power_systems/nexah_ieeeX/README.md)
 
 ![NEXAH IEEE Result](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
 
 ---
 
-### ⚡ Beyond Detection — Adaptive Control (NEW)
+## 🔁 Core Pipeline
+
+```text
+simulation → structure → field → geometry → navigation
+```
+
+## ⚡ Beyond Detection — Adaptive Control
+
+<details>
+<summary>Click to expand</summary>
 
 Recent results extend NEXAH beyond early detection:
 
@@ -42,23 +64,7 @@ In the IEEE9 system:
 👉 NEXAH is no longer only detecting collapse —  
 it begins to **interact with system dynamics**.
 
----
-
-## 🧭 What NEXAH Does
-
-NEXAH transforms:
-
-→ static monitoring  
-
-into:
-
-→ **structured field-based system analysis and navigation**
-
----
-
-## 🔁 Core Pipeline
-
-simulation → structure → field → geometry → navigation
+</details>
 
 ---
 
@@ -68,9 +74,8 @@ simulation → structure → field → geometry → navigation
 
 ![NEXAH Multi-Agent Navigation](BUILDER_LAB/visuals/nexah_multi_agent.gif)
 
-*Structure emerges without reward or predefined goal.*
-
-#### Interpretation
+<details>
+<summary>Interpretation</summary>
 
 Agents can learn navigation behavior **without an explicit reward function**.
 
@@ -81,24 +86,13 @@ Instead of optimizing a predefined objective, they operate inside a
 - transitions follow system dynamics  
 - stability acts as an implicit signal  
 
----
-
-#### Key Idea
-
-Classical reinforcement learning:
-
+Classical RL:
 state → action → reward → policy  
 
-NEXAH multi-agent systems:
-
+NEXAH:
 structure → field → movement → emergent policy  
 
----
-
-#### Insight
-
-> Navigation behavior can emerge directly from system structure  
-> without requiring externally defined rewards.
+</details>
 
 ---
 
@@ -106,21 +100,12 @@ structure → field → movement → emergent policy
 
 ![V69 Field](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
+<details>
+<summary>Interpretation</summary>
+
 - trajectories follow structured flow  
 - collapse emerges along field paths  
 - instability is geometric, not threshold-based  
-
-#### Interpretation
-
-The vector field reveals:
-
-- preferred directions of evolution  
-- regions of attraction and repulsion  
-- structural pathways toward collapse  
-
----
-
-#### Consequence
 
 Prediction becomes:
 
@@ -130,17 +115,7 @@ instead of:
 
 → extrapolating trajectories  
 
----
-
-### 🔬 Discrete Systems (Prime / Modular Resonance)
-
-NEXAH also reveals structure in fully discrete systems:
-
-- non-uniform transition dynamics  
-- geometric modular patterns  
-- corridor-like motion behavior  
-
-👉 structure is not tied to physics alone — it is **systemic**
+</details>
 
 ---
 
@@ -148,58 +123,26 @@ NEXAH also reveals structure in fully discrete systems:
 
 ![Prime Modular Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/curated/mod7_particle_flow_trails.gif)
 
-#### Interpretation
+<details>
+<summary>Interpretation</summary>
 
-Even in a purely discrete system (prime numbers mod 7), we observe:
+Even in purely discrete systems:
 
 - coherent flow structures  
 - cyclic trajectories  
 - basin-like clustering  
-- directional transport behavior  
+- directional transport  
 
----
+→ structure is **not domain-specific**
 
-#### Key Insight
-
-> Continuous structure and flow can emerge  
-> from purely discrete arithmetic systems.
-
----
-
-#### Conceptual Role
-
-This module provides a **minimal system** where:
-
-- no physics is present  
-- no differential equations are used  
-
-yet:
-
-→ **NEXAH structure still appears**
-
----
-
-👉 This suggests that NEXAH captures a  
-**general principle of structured dynamics**, not a domain-specific phenomenon.
-
----
-
-## 🚀 Quick Start
-
-👉 [START HERE](./START_HERE.md)
-
----
-
-## 📂 Main Entry Points
-
-- 🔌 [Power Systems](./APPLICATIONS/power_systems/README.md)  
-- 🧠 [Framework](./FRAMEWORK/README.md)  
-- 🧪 [Builder Lab](./BUILDER_LAB/)  
-- 🧭 [NEXAH Layer](./nexah/README.md)  
+</details>
 
 ---
 
 ## 🧠 What NEXAH Is
+
+<details>
+<summary>Click to expand</summary>
 
 A system that:
 
@@ -208,6 +151,8 @@ A system that:
 3. reveals underlying field geometry  
 4. identifies motion paths  
 5. enables navigation across stability regimes  
+
+</details>
 
 ---
 
@@ -221,18 +166,10 @@ A system that:
 
 ---
 
-## 🧠 Key Insight
-
-> Complex systems do not just evolve —  
-> they organize into structured state spaces  
-> that can be mapped, analyzed and navigated.
-
----
-
-## 🧮 Mathematical Perspective (Optional)
+## 🧮 Mathematical Perspective
 
 <details>
-<summary>Click to expand formal interpretation</summary>
+<summary>Click to expand</summary>
 
 NEXAH can be interpreted as a **controlled dynamical system in feature space**.
 
@@ -240,32 +177,18 @@ Let:
 
 x(t) = system state
 
-with features such as:
-
-- coherence  
-- fragmentation  
-- curvature (d²c)  
-- residual  
-- distance to structural manifold  
-
 The system evolves as:
 
 dx/dt = f(x) + u(x, dx/dt)
 
 where:
 
-- f(x) represents intrinsic system dynamics  
-- u(x, dx/dt) represents the NEXAH control policy  
+- f(x) = system dynamics  
+- u(x, dx/dt) = NEXAH control  
 
----
-
-### Stability Definition
-
-A system is stable if its trajectory remains within:
+### Stability
 
 S = { x : risk(x) < threshold }
-
----
 
 ### Risk Field
 
@@ -273,22 +196,15 @@ risk(x) ∈ [0,1]
 
 based on:
 
-- structural deviation (residual)  
-- curvature (instability acceleration)  
-- trajectory dynamics (risk slope)  
-- proximity to collapse manifold  
-
----
+- residual  
+- curvature  
+- trajectory dynamics  
+- manifold distance  
 
 ### Key Property
 
-NEXAH operates on:
-
-→ **trajectory-aware control**
-
-instead of:
-
-→ state-based thresholding  
+→ trajectory-aware control  
+(not threshold-based)
 
 </details>
 
@@ -296,8 +212,8 @@ instead of:
 
 ## 📚 Deep Dive
 
-👉 [Framework](./FRAMEWORK/README.md)  
-👉 [Extended Docs](./NAVIGATOR/NEXAH_FRAMEWORK_EXTENDED.md)
+- [Framework](./FRAMEWORK/README.md)  
+- [Extended Docs](./NAVIGATOR/NEXAH_FRAMEWORK_EXTENDED.md)
 
 ---
 
