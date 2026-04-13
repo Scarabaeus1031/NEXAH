@@ -36,7 +36,7 @@ NEXAH applied to real power grids (up to **9241 buses**):
 
 # 🌀 2. Dynamical Systems — Geometry of Chaos
 
-![Lorenz](dynamical_systems/lorenz/../outputs/lorenz_navigation/lorenz_density_nebula_20260313_210336.png)
+![Lorenz](../ENGINE/visuals/level37_20260321_193227/plot.png)
 
 Reference systems for structural understanding:
 
