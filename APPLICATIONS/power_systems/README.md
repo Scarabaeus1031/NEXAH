@@ -16,6 +16,7 @@ This enables:
 - early detection of instability  
 - continuous stability assessment  
 - trajectory-aware intervention  
+- phase-space navigation (v9)
 
 ---
 
@@ -40,12 +41,6 @@ NEXAH:
 
 ![Collapse Geometry](stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
 
-**Observation:**
-
-- collapse is not random  
-- system states organize into structured regions  
-- distinct regimes emerge (core, transition, collapse)
-
 **Interpretation:**
 
 > Stability is equivalent to proximity to a structural boundary (rift)
@@ -56,14 +51,9 @@ NEXAH:
 
 ![Flow Field](stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-**Observation:**
-
-- trajectories follow structured vector fields  
-- deviations are directional, not random  
-
 **Interpretation:**
 
-> The system is governed by a **field**, not discrete transitions  
+> The system is governed by a **continuous field**, not discrete transitions  
 
 ---
 
@@ -71,25 +61,21 @@ NEXAH:
 
 ![Root Cube](ieee_xray_pipeline/results/v36b_good_final_3d.png)
 
-**Observation:**
-
-- high-dimensional system collapses into low-dimensional structure  
-- trajectories become geometrically interpretable  
-
 **Interpretation:**
 
 > Stability becomes a **navigation problem in state space**
 
 ---
 
-## 🔹 Figure 4 — Adaptive Control (Closed-Loop System)
+## 🔹 Figure 4 — Closed-Loop Adaptive Control (IEEE9)
 
-![Control](nexah_ieee9/results/run_20260412_223816/plot.png)
+![Control](nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
 **Observation:**
 
-- control actions adapt continuously  
-- system avoids collapse without suppressing dynamics  
+- smooth intervention dynamics  
+- no oscillatory instability  
+- stable convergence  
 
 **Interpretation:**
 
@@ -97,15 +83,34 @@ NEXAH:
 
 ---
 
-## 🔹 Figure 5 — Real-Scale Validation (9241-Bus PEGASE)
+## 🔹 Figure 5 — Phase Dynamics (NEW v9)
 
-![IEEE9241](nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
+![Phase Lambda Psi](nexah_ieee9/results/controller_v9/output_v9_phase_lambda_psi.png)
 
 **Observation:**
 
-- system remains stable at real-world scale  
-- early risk detection persists  
-- intervention stabilizes trajectory  
+- system evolves in a structured phase space  
+- converges toward a stable attractor  
+
+**Interpretation:**
+
+> Stability emerges as a **dynamical system in phase space (λ, ψ)**  
+
+---
+
+## 🔹 Figure 6 — Risk–Distance Field
+
+![Risk Distance](nexah_ieee9/results/controller_v9/output_v9_phase_risk_distance.png)
+
+**Interpretation:**
+
+> Collapse risk is geometrically encoded in the field structure  
+
+---
+
+## 🔹 Figure 7 — Real-Scale Validation (9241-Bus PEGASE)
+
+![IEEE9241](nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
 
 **Interpretation:**
 
@@ -115,17 +120,9 @@ NEXAH:
 
 # ⚙️ System Pipeline
 
-*Simulation → Features → Manifold → Risk → Policy → Actions*
-
-
-### Components
-
-- AC power flow solver (pandapower)
-- structural feature extraction
-- manifold fitting
-- residual + distance field
-- risk prediction
-- adaptive intervention policy
+```text
+Simulation → Features → Manifold → Field → Risk → Policy → Dynamics → Control
+```
 
 ---
 
@@ -133,27 +130,33 @@ NEXAH:
 
 System state:
 
-*x = (coherence, frag, d²c, residual, distance)*
-
+```
+x = (c, frag, d²c, residual, distance, ψ)
+```
 
 Dynamics:
 
-*dx/dt = f(x) + u(x, dx/dt)*
+```
+dx/dt = f(x) + u(x, dx/dt)
+```
 
+Phase system (v9):
 
-- **f(x)** → physical grid dynamics  
-- **u(x, dx/dt)** → NEXAH control  
+```
+(λ, ψ) → trajectory in phase space
+```
 
 ---
 
-### Stability Definition
+## 🔹 Stability Definition
 
-*S = { x : risk(x) < threshold }*
+```
+S = { x : risk(x) < threshold }
+```
 
+becomes:
 
-Stability becomes:
-
-→ **geometric containment in state space**
+→ **geometric + dynamical containment**
 
 ---
 
@@ -166,10 +169,9 @@ Stability becomes:
 | Early warning         | Limited       | Yes  |
 | Closed-loop control   | No            | Yes  |
 | Structural modeling   | No            | Yes  |
-| Adaptive control      | No            | Yes  |
+| Phase dynamics        | No            | **Yes (v9)** |
 
 ---
-
 
 # 📈 Scaling Results
 
@@ -179,7 +181,6 @@ Stability becomes:
 | IEEE 300 | nonlinear dynamics emerge |
 | IEEE 1354 | distributed stability field |
 | IEEE 9241 | real-scale validation |
-
 
 ---
 
@@ -191,7 +192,7 @@ Stability becomes:
 ## 🔹 Geometric Pipeline
 → [`ieee_xray_pipeline`](ieee_xray_pipeline/README.md)
 
-## 🔹 Control System (Small Scale)
+## 🔹 Control System (IEEE9)
 → [`nexah_ieee9`](nexah_ieee9/README.md)
 
 ## 🔹 Scaling & Real Grid
@@ -203,21 +204,18 @@ Stability becomes:
 
 - full collapse prevention not yet achieved  
 - actuator realism limited  
-- attractor navigation still experimental  
-- requires validation vs classical methods:
-  - PV curves  
-  - eigenvalue analysis  
-  - continuation power flow  
+- attractor navigation still emerging (v9+)  
+- validation vs classical methods ongoing  
 
 ---
 
 # 🔮 Next Steps
 
-- multi-step prediction (lookahead)  
-- adaptive λ control  
+- limit cycle formation (v10)  
+- vector field extraction  
 - stability basin mapping  
-- multi-attractor navigation  
-- real-world data integration  
+- trajectory navigation  
+- real-world deployment  
 
 ---
 
@@ -226,11 +224,12 @@ Stability becomes:
 > Instability is not a threshold event.  
 > It is a **structural transformation in system dynamics**.
 
-NEXAH makes this transformation:
+NEXAH now shows:
 
-→ visible  
-→ measurable  
-→ partially controllable  
+→ structure  
+→ flow  
+→ control  
+→ **dynamics**
 
 ---
 
@@ -239,6 +238,7 @@ NEXAH makes this transformation:
 > From simulation → structure  
 > From structure → navigation  
 > From navigation → stability  
+> From stability → **dynamical systems**
 
 ---
 
