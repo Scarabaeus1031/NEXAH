@@ -24,7 +24,9 @@ NEXAH transforms systems into:
 
 *Voltage collapse detected ~43.9 seconds earlier than classical methods.*
 
-![IEEE Field](power_systems/nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
+![NEXAH Pipeline](power_systems/nexah_ieeeX/results/run_ieee300_20260413_015843/paper_figure.png)
+
+*End-to-end NEXAH pipeline: voltage collapse, structural features, risk field, and adaptive control actions.*
 
 NEXAH applied to real power grids (up to **9241 buses**):
 
@@ -33,9 +35,67 @@ NEXAH applied to real power grids (up to **9241 buses**):
 - adaptive intervention policies  
 - real AC power flow integration (pandapower)  
 
-👉 Entry:  
-[`power_systems/`](power_systems/README.md)
+---
 
+## 🧭 Entry Points
+
+### 🔹 Quick Overview (Results + Scaling)
+👉 [`power_systems/nexah_ieeeX/`](power_systems/nexah_ieeeX/README.md)
+
+- end-to-end pipeline  
+- IEEE118 → 9241 scaling  
+- real grid experiments  
+
+---
+
+### 🔹 Deep Dive (Full System Architecture)
+👉 [`power_systems/`](power_systems/README.md)
+
+- system layers (detection → control)  
+- field interpretation  
+- theoretical framework  
+
+---
+
+### 🔹 Structural Theory (Manifold / Rift / Geometry)
+👉 [`power_systems/stability_field_dynamics`](power_systems/stability_field_dynamics/ieee_test_cases/README.md)
+
+- collapse manifold  
+- stability distance  
+- topology & branching  
+
+---
+
+### 🔹 Experimental Control (Geometry → Navigation)
+👉 [`power_systems/ieee_xray_pipeline`](power_systems/ieee_xray_pipeline/README.md)
+
+- reduced state space  
+- polar geometry  
+- attractor-based control  
+
+---
+
+### 🔹 Minimal System (IEEE9 — Clean Pipeline)
+👉 [`power_systems/nexah_ieee9`](power_systems/nexah_ieee9/README.md)
+
+- simplest full pipeline  
+- easiest to understand  
+- best starting point for code  
+
+---
+
+## ⚡ How to Run
+
+Example:
+
+```bash
+PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieeeX/decision/main_ieee300.py
+```
+
+---
+
+> NEXAH scales from small systems → to real-world grids  
+> while preserving the same underlying structure.
 ---
 
 # 🌀 2. Dynamical Systems — Geometry of Chaos
