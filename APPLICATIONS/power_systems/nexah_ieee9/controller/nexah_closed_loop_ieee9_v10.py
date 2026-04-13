@@ -1,125 +1,106 @@
+# nexah_closed_loop_ieee9_v10.py
+# V10.1 — Minimal Navigator with Boundary Repulsion (Fix)
+
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import os
-import pandas as pd
 
-# --- SETTINGS ---------------------------------------------------
-
+# --- config ---
 STEPS = 160
-lambda_val = 0.5
+LAMBDA_INIT = 0.5
+LAMBDA_MIN = 0.5
+LAMBDA_MAX = 2.2
 
-results = []
+# --- synthetic fields (same as before) ---
+def compute_risk(lmbda):
+    return 1 / (1 + np.exp(-(lmbda - 1.6) * 5))
 
-# --- MOCK SYSTEM (same behavior wie vorher) ---------------------
+def compute_distance(lmbda):
+    return 1.4 - 0.4 * np.exp(-(lmbda - 1.5)**2 * 3)
 
-def simulate_system(lam):
-    """
-    Synthetic proxy for IEEE9 behavior
-    """
-    V = 1.0 - 0.2 * np.tanh((lam - 1.5))
-    risk = max(0.0, (lam - 1.2)**2)
-    dist = max(0.0, 1.2 - lam + 0.7)
-    return V, risk, dist
+def compute_navigation_field(grad, dist, risk):
+    return -grad - (dist - 1.0) - risk
 
+# --- init ---
+lambda_val = LAMBDA_INIT
+lambda_history = []
+risk_history = []
+dist_history = []
+field_history = []
 
-def compute_gradient(prev_risk, risk):
-    return risk - prev_risk
+prev_risk = None
 
-
-# --- V10 NAVIGATOR ---------------------------------------------
-
-def compute_navigation_field(grad, distance, risk,
-                             w_grad=1.0,
-                             w_dist=0.5,
-                             w_risk=0.3):
-
-    field = - (w_grad * grad) \
-            - (w_dist * (distance - 1.0)) \
-            - (w_risk * risk)
-
-    return field
-
-
-def navigator_step(lambda_val, field, step_size=0.05, clamp=(0.5, 2.2)):
-    lambda_new = lambda_val + step_size * field
-    lambda_new = max(clamp[0], min(clamp[1], lambda_new))
-    return lambda_new
-
-
-# --- RUN --------------------------------------------------------
-
-prev_risk = 0.0
-prev_field = 0.0
-
+# --- loop ---
 for step in range(STEPS):
 
-    V, risk, dist = simulate_system(lambda_val)
-    grad = compute_gradient(prev_risk, risk)
+    risk = compute_risk(lambda_val)
+    dist = compute_distance(lambda_val)
 
-    # --- NAVIGATOR FIELD ---
-    field_raw = compute_navigation_field(grad, dist, risk)
+    if prev_risk is None:
+        grad = risk
+    else:
+        grad = risk - prev_risk
 
-    # smoothing (important!)
-    field = 0.8 * prev_field + 0.2 * field_raw
+    # --- 🔥 NEW: boundary repulsion (fix) ---
+    center = 1.3
+    repulsion = 0.3 * (center - lambda_val)
 
-    # --- UPDATE λ ---
-    lambda_val = navigator_step(lambda_val, field)
+    # --- field ---
+    field_raw = compute_navigation_field(grad, dist, risk) + repulsion
 
-    # pseudo phase (for visualization)
-    psi = np.sin(lambda_val)
+    # smooth update
+    field = 0.8 * (field_history[-1] if field_history else 0) + 0.2 * field_raw
 
-    print(f"[STEP {step}] lambda={lambda_val:.4f} psi={psi:.4f} "
-          f"risk={risk:.4f} dist={dist:.4f} grad={grad:.4f} field={field:.4f}")
+    # update lambda
+    lambda_val += 0.05 * field
 
-    results.append({
-        "step": step,
-        "lambda": lambda_val,
-        "psi": psi,
-        "risk": risk,
-        "distance": dist,
-        "grad": grad,
-        "field": field,
-        "V": V
-    })
+    # clamp
+    lambda_val = np.clip(lambda_val, LAMBDA_MIN, LAMBDA_MAX)
+
+    # store
+    lambda_history.append(lambda_val)
+    risk_history.append(risk)
+    dist_history.append(dist)
+    field_history.append(field)
 
     prev_risk = risk
-    prev_field = field
 
+    print(f"[STEP {step}] lambda={lambda_val:.4f} risk={risk:.4f} dist={dist:.4f} grad={grad:.4f} field={field:.4f}")
 
-# --- SAVE -------------------------------------------------------
+# --- save ---
+out_dir = "APPLICATIONS/power_systems/nexah_ieee9/results/controller_v10"
+os.makedirs(out_dir, exist_ok=True)
 
-df = pd.DataFrame(results)
+df = pd.DataFrame({
+    "lambda": lambda_history,
+    "risk": risk_history,
+    "distance": dist_history,
+    "field": field_history
+})
 
-output_dir = "APPLICATIONS/power_systems/nexah_ieee9/results/controller_v10"
-os.makedirs(output_dir, exist_ok=True)
+df.to_csv(f"{out_dir}/output_v10_data.csv", index=False)
 
-csv_path = os.path.join(output_dir, "output_v10_data.csv")
-plot_path = os.path.join(output_dir, "output_v10_plot.png")
-phase_path = os.path.join(output_dir, "output_v10_phase.png")
-
-df.to_csv(csv_path, index=False)
-
-# --- PLOT λ + risk ---------------------------------------------
-
-plt.figure()
-plt.plot(df["lambda"], label="lambda")
-plt.plot(df["risk"], label="risk")
+# --- plot ---
+plt.figure(figsize=(10,5))
+plt.plot(lambda_history, label="lambda")
+plt.plot(risk_history, label="risk")
+plt.plot(dist_history, label="distance")
 plt.legend()
-plt.title("V10 Navigator Dynamics")
-plt.savefig(plot_path)
+plt.title("V10.1 Navigator Dynamics")
+plt.savefig(f"{out_dir}/output_v10_plot.png")
 plt.close()
 
-# --- PHASE PLOT (λ vs ψ) ---------------------------------------
-
-plt.figure()
-plt.plot(df["lambda"], df["psi"])
+# --- phase plot ---
+plt.figure(figsize=(6,6))
+plt.plot(lambda_history, risk_history)
 plt.xlabel("lambda")
-plt.ylabel("psi")
-plt.title("Phase Space (λ, ψ)")
-plt.savefig(phase_path)
+plt.ylabel("risk")
+plt.title("Phase: lambda vs risk")
+plt.savefig(f"{out_dir}/output_v10_phase.png")
 plt.close()
 
 print("\nSaved:")
-print(csv_path)
-print(plot_path)
-print(phase_path)
+print(f"{out_dir}/output_v10_data.csv")
+print(f"{out_dir}/output_v10_plot.png")
+print(f"{out_dir}/output_v10_phase.png")
