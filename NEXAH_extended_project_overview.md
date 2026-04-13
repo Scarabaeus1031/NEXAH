@@ -3,7 +3,7 @@
 **Version:** April 14, 2026  
 **Author:** Thomas K. R. Hofmann  
 **Purpose:** Internal detailed overview to regain clarity and create distance from daily development.  
-This document captures the full scope of the project, including hidden gems and the current pipeline.
+This document captures the full scope of the project, including hidden gems, the growth story and the current pipeline.
 
 ---
 
@@ -18,9 +18,30 @@ NEXAH makes this structure visible, measurable, and navigable.
 
 ---
 
-### 2. The 5-Layer Architecture (The Central Framework Gem)
+### 2. How NEXAH Evolved (The Growth Story)
 
-NEXAH is built on a clear, multi-layered architecture:
+The project did not start with Power Systems or a finished framework. It grew organically in several phases:
+
+- **Phase 1 – Conceptual Foundation** (nexah.de)  
+  Started as an abstract relational modeling framework focused on structure, regimes, fields and explicit orientation (META → ARCHY → NEXAH layers).
+
+- **Phase 2 – Tool Explosion**  
+  To make structure discoverable from raw dynamics, the **DISCOVERY_ENGINE** was built with dozens of specialized analyzers (Resilience Analyzer, Attractor Detector, Law Discovery, Topology Extractor, Phase Space Map, System Evolver, etc.).
+
+- **Phase 3 – Experimental Applications**  
+  **BUILDER_LAB** was created as a prototyping space. Early experiments included Crisis Management, Cascade Failure Simulation, Supply Chain Resilience and Multi-Agent Coordination in complex environments.
+
+- **Phase 4 – Deep Geometric Core**  
+  The project went deeper into geometry: URF Axial Space, Root Bridge, Field-Splits, Triple Spiral Coupling, Coherence metric, Elevator 1.1 and 45° Folding. This became the **NEXAH Kernel / FRAMEWORK**.
+
+- **Phase 5 – Concrete Validation**  
+  Applied the framework to Power Systems, achieving 43.9 s early detection and adaptive closed-loop control on IEEE9 (with pandapower integration).
+
+The result is a rich but sometimes fragmented repository: strong conceptual depth, powerful analysis tools, early application prototypes, and a maturing geometric core.
+
+---
+
+### 3. The 5-Layer Architecture (The Central Framework Gem)
 
 - **META** — Fundamental relational order and axioms  
 - **ARCHY** — Regime theory, stability boundaries and transitions  
@@ -32,6 +53,7 @@ NEXAH is built on a clear, multi-layered architecture:
 ```math
 C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \cdot |F(x)|}
 ```
+
 **Interpretation:**
 
 - \( C(x) \approx 1 \): High coherence → stable regime  
@@ -46,6 +68,8 @@ C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \cdot |F(x)|}
 - **Triple Spiral Coupling**  
 - **Elevator 1.1** and **45° Folding** (Mirror Iteration)
 
+---
+
 ### 3. The Major Hidden Gems
 
 | No. | Gem / Component                                              | Folder / Path                                              | Current Status              | Why It Is a Gem |
@@ -53,55 +77,49 @@ C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \cdot |F(x)|}
 | 1   | **FRAMEWORK Core** (5 Layers + URF Axial Space)             | FRAMEWORK/                                                 | Highly developed           | The actual paradigm and unique language of the project |
 | 2   | **NAVIGATOR** (Repository Map, Architecture Completion Map) | NAVIGATOR/                                                 | Well documented            | The "compass" that makes the whole project navigable |
 | 3   | **DISCOVERY_ENGINE** (Full Computational Lab)               | DISCOVERY_ENGINE/                                          | Very extensive             | Contains Resilience Analyzer, Attractor Detector, Law Discovery, System Evolver, Phase Space Map, etc. |
-| 4   | **IEEE9 Adaptive Control v3** (Risk Field + Trajectory-aware Policy) | APPLICATIONS/power_systems/nexah_ieee9/                    | New & functional           | First real jump from detection to active field-based control (pandapower integration) |
-| 5   | **43.9 Seconds Lead-Time**                                  | APPLICATIONS/power_systems/                                | Reproducible               | Strongest quantitative claim on IEEE 118–9241 |
-| 6   | **Prime Modular Resonance**                                 | ENGINE/research/experiments/prime_modular_resonance/       | Complete                   | Proof that structure emerges even in purely discrete systems |
-| 7   | **Lorenz Chaos Geometry Module**                            | APPLICATIONS/dynamical_systems/lorenz/                     | Complete                   | Strong benchmark for chaotic systems |
-| 8   | **BUILDER_LAB Multi-Agent Emergent Navigation**             | BUILDER_LAB/                                               | Prototype                  | Navigation without any reward function |
-| 9   | **nexah/symbolic_lexicon + Gauge Ideas**                    | nexah/                                                     | Conceptually strong        | Symbolic and formal bridge |
-| 10  | **URF Axial Space Implementation**                          | nexah/urf_axial_space/                                     | In development             | Concrete 3D geometry engine |
+| 4   | **BUILDER_LAB** (Early Application Prototypes)              | BUILDER_LAB/                                               | Prototype                  | Crisis Management, Cascade Failures, Supply Chain Resilience, Multi-Agent Navigation |
+| 5   | **IEEE9 Adaptive Control v3** + **43.9 s Lead-Time**        | APPLICATIONS/power_systems/                                | New & functional           | Concrete validation on real benchmarks |
+| 6   | **Prime Modular Resonance + Lorenz**                        | ENGINE/research/experiments/                               | Complete                   | Proof of universality across discrete and chaotic systems |
+| 7   | **nexah/symbolic_lexicon + URF Axial Space**                | nexah/                                                     | In development             | Symbolic bridge and concrete 3D geometry engine |
+
+---
 
 ### 4. Current Overall Status (Honest Assessment)
 
 **Strong / Well Advanced:**
-- Structure discovery from dynamics
-- Field modeling + Coherence metric
-- Early detection in power systems (43.9 s)
+- Structure discovery (DISCOVERY_ENGINE)
 - Framework architecture (5 layers)
-- DISCOVERY_ENGINE as research instrument
-- Universality proof (Prime module)
+- Early detection in power systems (43.9 s)
+- Coherence metric and geometric constructs
 
 **Good Prototypes:**
-- Adaptive closed-loop control on IEEE9 (v3 with stable Risk Field)
-- pandapower real-grid integration
-- Multi-agent emergence without rewards
-- Geometric navigation (URF Axial Space)
+- Adaptive closed-loop control on IEEE9
+- Multi-agent emergence without rewards (BUILDER_LAB)
+- Early crisis / cascade applications
 
-**Still in the Pipeline / Needs Focused Work:**
-- Scaling adaptive control to IEEE118, IEEE300 and larger systems
-- Quantitative performance comparisons (how much longer is the system stable? how much more load can it handle?)
-- Robust navigation (trajectory shaping, multi-step predictive control)
-- Mathematical formalization of higher operators (Field-Splits, Root Bridge, gauge-like invariances)
-- Better integration between DISCOVERY_ENGINE and NAVIGATOR
-- Clean, reusable API / Minimal Viable NEXAH package
-- Improved documentation of URF Axial Space and 45° folding mechanisms
+**Still in the Pipeline:**
+- Scaling adaptive control to IEEE118+
+- Tighter integration between DISCOVERY_ENGINE, NAVIGATOR and applications
+- Clean mathematical core document
+- Minimal viable demo + API
+
+---
 
 ### 5. Open Strategic Questions (For Gaining Distance)
 
 1. **Focus Direction**  
-   Should the next priority be **Power Systems applications** (practical, measurable, scalable) or deepening the **general framework theory** (URF Axial Space, formal operators)?
+   Should the next priority be deepening Power Systems applications or strengthening the general geometric framework?
 
-2. **Public Presentation**  
-   How strongly should we communicate the full geometric 3D language (URF Axial Space, 45° folding, Elevator 1.1) externally?  
-   Or keep it technically clean and conservative at first?
+2. **Integration**  
+   How can we better connect DISCOVERY_ENGINE outputs with the NEXAH Kernel and NAVIGATOR?
 
-3. **Cleanup vs. Building**  
-   How much of the DISCOVERY_ENGINE should stay in the core versus being moved to “Research Experiments”?
+3. **Public vs. Internal**  
+   How much of the full geometric 3D language should we show externally at this stage?
 
 4. **Next Milestones**
-   - Make adaptive control work on IEEE118
-   - Document quantitative stability gains
-   - Create a clean minimal demo script
+   - Finish `nexah/core/geometric_framework.md`
+   - Adaptive control on IEEE118
+   - Clean minimal demo script
 
 ---
 
