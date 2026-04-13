@@ -1,0 +1,298 @@
+# =========================================
+# IMPORTS
+# =========================================
+
+import numpy as np
+from scipy.ndimage import gaussian_filter1d
+import os
+from datetime import datetime
+import matplotlib.pyplot as plt
+
+# 👉 GENERIC SOLVER
+from APPLICATIONS.power_systems.nexah_ieeeX.simulation.powerflow_solver_generic import RealPowerFlowSolverGeneric
+
+# NEXAH PIPELINE
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.manifold_fit import fit_manifold
+from APPLICATIONS.power_systems.nexah_ieee9.overlay.residual_distance import (
+    compute_residual,
+    compute_distance,
+)
+from APPLICATIONS.power_systems.nexah_ieee9.analysis.predictor import run_predictor
+from APPLICATIONS.power_systems.nexah_ieee9.decision.intervention_policy import run_intervention_policy
+from APPLICATIONS.power_systems.nexah_ieee9.decision.adaptive_policy_v2 import run_adaptive_policy
+
+from sklearn.cluster import KMeans
+
+
+# =========================================
+# HELPERS
+# =========================================
+
+def safe_fill_nan(x, fill_value=0.0):
+    x = np.asarray(x, dtype=float)
+    if np.all(np.isnan(x)):
+        return np.full_like(x, fill_value)
+    med = np.nanmedian(x)
+    return np.nan_to_num(x, nan=med, posinf=med, neginf=med)
+
+
+def safe_max(x, default=0.0):
+    x = np.asarray(x, dtype=float)
+    if np.all(np.isnan(x)):
+        return default
+    return float(np.nanmax(x))
+
+
+# =========================================
+# CLUSTERING
+# =========================================
+
+def cluster_overlay_safe(distance, residual, k=3):
+    X = np.column_stack([distance, residual])
+    valid = np.isfinite(X).all(axis=1)
+
+    if np.sum(valid) < k:
+        print("⚠️ Not enough points for clustering → fallback")
+        return np.full(len(X), -1), np.zeros((k, 2))
+
+    X_valid = X[valid]
+    kmeans = KMeans(n_clusters=k, random_state=0, n_init=10).fit(X_valid)
+
+    labels = np.full(len(X), -1)
+    labels[valid] = kmeans.labels_
+
+    return labels, kmeans.cluster_centers_
+
+
+# =========================================
+# SOLVER INIT
+# =========================================
+
+np.random.seed(42)
+
+solver = RealPowerFlowSolverGeneric(case_name="ieee9241")
+
+# 🔥 VERY IMPORTANT: ultra-tight window
+lambdas = np.linspace(0.97, 1.06, 120)
+
+
+# =========================================
+# SIMULATION
+# =========================================
+
+results = []
+prev_action = None
+
+for lam in lambdas:
+    res = solver.step(lam, action=prev_action)
+
+    results.append({
+        "lambda": lam,
+        "V": res["V"],
+        "theta": res["theta"],
+        "converged": res["converged"],
+    })
+
+    # 🔥 softer control than before (critical for 9241)
+    if not res["converged"] or np.any(np.isnan(res["V"])):
+        prev_action = "EMERGENCY_SHED"
+    else:
+        vmin = np.min(res["V"])
+        if vmin < 0.85:
+            prev_action = "EMERGENCY_SHED"
+        elif vmin < 0.92:
+            prev_action = "REDUCE_LOAD"
+        elif vmin < 0.97:
+            prev_action = "PREEMPTIVE_STABILIZE"
+        else:
+            prev_action = "STABILIZE"
+
+
+# =========================================
+# FEATURES (ULTRA LARGE GRID MODE)
+# =========================================
+
+Vmin, c_list, frag_list = [], [], []
+
+for r in results:
+    V = r["V"]
+
+    if not r["converged"] or np.any(np.isnan(V)):
+        Vmin.append(np.nan)
+        c_list.append(np.nan)
+        frag_list.append(np.nan)
+        continue
+
+    vmin = np.min(V)
+    vstd = np.std(V)
+
+    # 🔥 ultra-stable signal (minimal noise amplification)
+    c_val = vmin + 0.3 * vstd
+    frag_val = vstd
+
+    Vmin.append(vmin)
+    c_list.append(c_val)
+    frag_list.append(frag_val)
+
+Vmin = safe_fill_nan(Vmin)
+c = safe_fill_nan(c_list)
+frag = safe_fill_nan(frag_list)
+
+
+# =========================================
+# DERIVATIVES
+# =========================================
+
+def compute_derivatives(x, y):
+    y_smooth = gaussian_filter1d(y, sigma=1.5)
+    dy = np.gradient(y_smooth, x)
+    d2y = np.gradient(dy, x)
+    return dy, d2y
+
+dc, d2c = compute_derivatives(lambdas, c)
+
+
+# =========================================
+# MANIFOLD
+# =========================================
+
+valid = np.isfinite(c) & np.isfinite(dc) & np.isfinite(d2c)
+
+if np.sum(valid) < 20:
+    print("⚠️ Not enough valid points for manifold → fallback")
+    params = np.array([0.0, 0.0, 0.0])
+    fit_ok = False
+else:
+    try:
+        params = fit_manifold(c[valid], dc[valid], d2c[valid])
+        fit_ok = True
+    except:
+        print("⚠️ Manifold fit failed → fallback")
+        params = np.array([0.0, 0.0, 0.0])
+        fit_ok = False
+
+print("Manifold params:", params)
+
+
+# =========================================
+# OVERLAY
+# =========================================
+
+if not fit_ok:
+    residual = np.zeros_like(c)
+    distance = np.zeros_like(c)
+else:
+    residual = safe_fill_nan(compute_residual(c, dc, d2c, params))
+
+    idx = np.where(valid)[0]
+    if len(idx) > 30:
+        rift = np.column_stack([c[idx[-30:-15]], dc[idx[-30:-15]]])
+        distance = safe_fill_nan(compute_distance(c, dc, rift))
+    else:
+        distance = np.zeros_like(c)
+
+
+# =========================================
+# CLUSTERING
+# =========================================
+
+labels, centers = cluster_overlay_safe(distance, residual)
+print("Cluster centers:", centers)
+
+
+# =========================================
+# PREDICTION
+# =========================================
+
+try:
+    pred = run_predictor(distance, d2c, labels)
+    risk = safe_fill_nan(pred["risk"])
+    warnings = np.asarray(pred["warnings"], dtype=bool)
+    ttc = np.asarray(pred["time_to_collapse"], dtype=float)
+except:
+    print("⚠️ Predictor failed → fallback")
+    risk = np.zeros_like(c)
+    warnings = np.zeros_like(c, dtype=bool)
+    ttc = np.full_like(c, np.nan)
+
+# fallback (important for large grids)
+if np.nanstd(risk) < 1e-8:
+    print("⚠️ Risk too flat → using Vmin fallback")
+    vmax = np.nanmax(Vmin)
+    vmin = np.nanmin(Vmin)
+
+    if vmax > vmin:
+        risk = 1.0 - (Vmin - vmin) / (vmax - vmin)
+        risk = np.clip(risk, 0.0, 1.0)
+        warnings = risk > 0.4
+
+
+print("Max risk:", safe_max(risk))
+print("Warning count:", int(np.sum(warnings)))
+
+
+# =========================================
+# POLICY
+# =========================================
+
+policy = run_intervention_policy(risk, warnings, ttc, ["SAFE"] * len(risk))
+
+actions = []
+state_hist = []
+risk_slope = np.gradient(risk)
+
+for i, a in enumerate(policy["actions"]):
+    state_hist.append("SAFE")
+
+    act = run_adaptive_policy(
+        a,
+        "SAFE",
+        state_hist,
+        risk[i],
+        risk_slope[i],
+    )
+
+    actions.append(act)
+
+
+# =========================================
+# VISUALIZATION
+# =========================================
+
+fig, ax = plt.subplots(3, 1, figsize=(10, 10))
+
+ax[0].plot(lambdas, Vmin)
+ax[0].set_title("IEEE9241 Voltage")
+
+ax[1].plot(lambdas, risk)
+ax[1].scatter(lambdas[warnings], risk[warnings])
+ax[1].set_title("Risk")
+
+y_map = {
+    "STABILIZE": 0,
+    "PREEMPTIVE_STABILIZE": 1,
+    "REDUCE_LOAD": 2,
+    "EMERGENCY_SHED": 3,
+}
+y = [y_map.get(a, 0) for a in actions]
+
+ax[2].scatter(lambdas, y)
+ax[2].set_yticks([0, 1, 2, 3])
+ax[2].set_yticklabels(["STAB", "PRE", "REDUCE", "SHED"])
+ax[2].set_title("Actions")
+
+fig.tight_layout()
+
+
+# =========================================
+# SAVE
+# =========================================
+
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+results_dir = f"APPLICATIONS/power_systems/nexah_ieeeX/results/run_ieee9241_{timestamp}"
+os.makedirs(results_dir, exist_ok=True)
+
+np.save(os.path.join(results_dir, "risk.npy"), risk)
+fig.savefig(os.path.join(results_dir, "plot.png"))
+
+print("Saved to:", results_dir)
