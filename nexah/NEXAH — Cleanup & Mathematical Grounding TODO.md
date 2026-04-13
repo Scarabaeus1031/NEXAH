@@ -3,55 +3,228 @@
 **Date:** April 2026  
 **Goal:** Prepare the project for release and first collaborators — exit solo mode
 
-### Main Goal
+---
 
-Transition NEXAH from **visual/intuitive geometry** toward a **mathematically explicit geometric state-space framework**, while keeping the project attractive and reproducible for potential collaborators.
+## 🧠 Main Goal
+
+Transition NEXAH from **visual / intuitive geometry** toward a  
+**mathematically explicit geometric state-space framework**, while keeping the system:
+
+- readable  
+- reproducible  
+- attractive for collaborators  
 
 ---
 
-### Priority 1 – Mathematical Core (Most Important, 2–3 weeks focus)
+# 🔴 Priority 1 – Mathematical Core (Most Important, 2–3 weeks)
 
-- [ ] Define the reduced state vector explicitly:  
-  `x = (coherence C(x), switch_signal, radius r, phase θ, ...)`
+## 1. State Space Unification
 
-- [ ] Define stability formally as a **region** in state space:  
-  `S = { x | r_min < r < r_max  AND  C(x) > c* }`
+- [ ] Define both state representations explicitly:
 
-- [ ] Write the control equation:  
-  `dx/dt = f(x) + u(x, C(x), geometry)`
+  x_engineering = (c, dc, d²c, residual, distance)  
+  x_geometry    = (C, switch_signal, r, θ)
 
-- [ ] Explicitly link geometry to the IEEE results:  
-  “The trajectory enters the unstable region ~43.9 s before classical voltage collapse”
+- [ ] Define mapping between them:
 
-→ **Deliverable:** Create and complete `nexah/core/geometric_framework.md`
+  Φ : x_engineering → x_geometry
 
----
-
-### Priority 2 – Repository Cleanup & Separation (parallel, 1 week)
-
-- [ ] Create clean engineering core: folder `nexah/core/`
-- [ ] Move strongly symbolic / narrative files (e.g. Root-432_Cylinder_Codex_Breakthrough.md and similar) to  
-  `nexah/symbolic_lexicon/experimental/` and add a clear disclaimer at the top:
-  > Experimental / symbolic layer — not part of the validated engineering framework
-- [ ] Clean main README and engineering documentation:  
-  Replace or tone down ambiguous/symbolic language ("resonance", "breathes at 7.83 Hz", "Codex Breakthrough", etc.) with geometric/state-space terminology where appropriate.
+→ Goal: unify IEEE pipeline + X-Ray geometry into ONE system
 
 ---
 
-### Priority 3 – Release & Collaboration Preparation
+## 2. Explicit Feature Definitions (Reproducibility)
 
-- [ ] Make the adaptive control run on **IEEE118** (even a basic version)
-- [ ] Create one **clean minimal demo script** (`run_nexah_demo.py` or similar) that shows:
-  - 43.9 s early detection
-  - Risk Field + adaptive control on IEEE9
-- [ ] Update the main README and Extended Overview to reflect the **geometric state-space framing**
+- [ ] Write precise definitions:
+
+  - c = min(V)
+  - dc = d/dλ c
+  - d²c = second derivative
+  - residual = deviation from fitted manifold
+  - distance = min distance to rift
+
+→ No ambiguity — must be reproducible without reading code
 
 ---
 
-### Next Concrete Milestones (Next 3–4 Weeks)
+## 3. Manifold Hypothesis
 
-1. Finish `nexah/core/geometric_framework.md` (Priority 1)
-2. Get adaptive control running on IEEE118
+- [ ] Formalize empirical law:
+
+  d²c ≈ a · c^p · (dc)^q
+
+- [ ] Document:
+
+  - parameter stability across systems  
+  - invariance across IEEE sizes  
+  - interpretation as low-dimensional attractor  
+
+---
+
+## 4. Stability Definition (Geometric)
+
+- [ ] Define stability region:
+
+  S = { x | risk(x) < τ }
+
+- [ ] Clarify:
+
+  - stability ≠ voltage threshold  
+  - stability = alignment with structure  
+
+---
+
+## 5. Risk Field
+
+- [ ] Define:
+
+  risk : ℝⁿ → [0,1]
+
+- [ ] Based on:
+
+  - residual  
+  - curvature (d²c)  
+  - trajectory dynamics (risk slope)  
+  - distance to manifold  
+
+---
+
+## 6. Control Equation
+
+- [ ] Write system dynamics:
+
+  dx/dt = f(x) + u(x, dx/dt)
+
+- [ ] Define control:
+
+  u = π(x, dx/dt)
+
+- [ ] Inputs:
+
+  - risk  
+  - risk_slope  
+  - curvature  
+  - state history  
+
+→ trajectory-aware control (NOT threshold-based)
+
+---
+
+## 7. Minimal Mathematical Core (Critical)
+
+- [ ] Create 1-page explanation containing:
+
+  - state definition  
+  - manifold hypothesis  
+  - stability definition  
+  - control equation  
+
+→ must be readable WITHOUT full repo context
+
+---
+
+### 📦 Deliverable
+
+Create:
+
+nexah/core/geometric_framework.md
+
+---
+
+# 🟠 Priority 2 – Repository Cleanup & Separation (1 week, parallel)
+
+- [ ] Create clean engineering core:
+
+  nexah/core/
+
+- [ ] Move symbolic / experimental content:
+
+  → nexah/symbolic_lexicon/experimental/
+
+- [ ] Add disclaimer:
+
+  "Experimental / symbolic layer — not part of validated framework"
+
+- [ ] Clean README language:
+
+  Replace vague terms:
+  - "resonance"
+  - "breathing systems"
+  - "codex breakthrough"
+
+  → with:
+  - geometry  
+  - state-space  
+  - dynamics  
+
+---
+
+# 🔵 Priority 3 – Release & Collaboration Preparation
+
+- [ ] Get adaptive control working on IEEE118
+
+- [ ] Create minimal demo script:
+
+  run_nexah_demo.py
+
+  Must show:
+  - early detection (~43.9 s)
+  - risk field
+  - adaptive control
+
+- [ ] Update root README + APPLICATIONS README:
+
+  → reflect geometric state-space framing
+
+---
+
+# 🚀 Next Concrete Milestones (3–4 Weeks)
+
+1. Finish geometric_framework.md  
+2. Validate adaptive control on IEEE118  
+3. Create minimal demo  
+4. Final README cleanup  
+
+---
+
+# 🧭 Final Target Description
+
+> **NEXAH** is a geometric state-space framework that extracts emergent structure from dynamical systems and enables navigation and adaptive control — without rewards or neural networks.
+
+---
+
+# 🧠 Reality Check
+
+You already have:
+
+- strong geometry and visuals ✅  
+- working IEEE pipeline (118 → 9241) ✅  
+- adaptive control prototype (IEEE9) ✅  
+- consistent scaling behavior ✅  
+
+Missing:
+
+- explicit math layer ❗  
+- clean abstraction ❗  
+- collaborator-friendly entry ❗  
+
+---
+
+# 🔥 Final Insight
+
+You do NOT need:
+
+- perfect math everywhere  
+- full formal proofs  
+
+You DO need:
+
+→ a clear, minimal, mathematically interpretable core  
+
+---
+
+**Last Updated:** April 2026  
+© Thomas K. R. Hofmann2. Get adaptive control running on IEEE118
 3. Create the minimal demo script
 4. Update main README + project presentation
 
