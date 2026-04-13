@@ -37,13 +37,27 @@ NEXAH:
 
 # 📊 System Highlights
 
+The following figures illustrate the transition from:
+
+→ structure  
+→ flow  
+→ control  
+→ dynamics  
+
+---
+
 ## 🔹 Figure 1 — Collapse Geometry (Fundamental Structure)
 
 ![Collapse Geometry](stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
 
+**Observation:**
+
+- system states organize into structured regions  
+- collapse emerges as a boundary (rift)  
+
 **Interpretation:**
 
-> Stability is equivalent to proximity to a structural boundary (rift)
+> Stability is not binary — it is **geometric proximity to a boundary**
 
 ---
 
@@ -51,15 +65,29 @@ NEXAH:
 
 ![Flow Field](stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
+**Builds on Figure 1:**
+
+Once structure is identified, we observe:
+
+- trajectories are not random  
+- motion follows directional flows  
+
 **Interpretation:**
 
-> The system is governed by a **continuous field**, not discrete transitions  
+> The system evolves within a **continuous vector field**
 
 ---
 
 ## 🔹 Figure 3 — Geometric State Space (Navigation Layer)
 
 ![Root Cube](ieee_xray_pipeline/results/v36b_good_final_3d.png)
+
+**Builds on Figure 2:**
+
+The flow field can be embedded into a low-dimensional space:
+
+- complex dynamics collapse into geometric structure  
+- trajectories become navigable  
 
 **Interpretation:**
 
@@ -71,15 +99,16 @@ NEXAH:
 
 ![Control](nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
-**Observation:**
+**Builds on Figure 3:**
 
-- smooth intervention dynamics  
-- no oscillatory instability  
-- stable convergence  
+Navigation enables intervention:
+
+- control modifies trajectory instead of state  
+- system stabilizes without suppressing dynamics  
 
 **Interpretation:**
 
-> Control operates on **trajectory behavior**, not static states  
+> Control acts on **trajectory evolution**, not thresholds  
 
 ---
 
@@ -87,14 +116,16 @@ NEXAH:
 
 ![Phase Lambda Psi](nexah_ieee9/results/controller_v9/output_v9_phase_lambda_psi.png)
 
-**Observation:**
+**Builds on Figure 4:**
 
-- system evolves in a structured phase space  
-- converges toward a stable attractor  
+Control + system interaction forms a dynamical system:
+
+- trajectories evolve in phase space (λ, ψ)  
+- convergence toward attractor  
 
 **Interpretation:**
 
-> Stability emerges as a **dynamical system in phase space (λ, ψ)**  
+> Stability emerges as a **dynamical attractor**
 
 ---
 
@@ -102,9 +133,16 @@ NEXAH:
 
 ![Risk Distance](nexah_ieee9/results/controller_v9/output_v9_phase_risk_distance.png)
 
+**Builds on Figure 5:**
+
+Risk is not arbitrary:
+
+- it is encoded in system geometry  
+- aligned with phase evolution  
+
 **Interpretation:**
 
-> Collapse risk is geometrically encoded in the field structure  
+> Risk is a **projection of field geometry**
 
 ---
 
@@ -112,17 +150,15 @@ NEXAH:
 
 ![IEEE9241](nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
 
+**Final validation:**
+
+- same structure persists at scale  
+- early warning remains intact  
+- control remains effective  
+
 **Interpretation:**
 
-> NEXAH scales from small systems to **real grid size**
-
----
-
-# ⚙️ System Pipeline
-
-```text
-Simulation → Features → Manifold → Field → Risk → Policy → Dynamics → Control
-```
+> NEXAH generalizes from toy systems to **real-world grids**
 
 ---
 
