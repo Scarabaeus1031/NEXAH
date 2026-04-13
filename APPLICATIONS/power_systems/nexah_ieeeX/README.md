@@ -9,9 +9,9 @@ from small benchmark systems to **real-scale power grids (PEGASE 9241-bus)**.
 
 NEXAH transforms power system dynamics into:
 
-- structural fields
-- risk landscapes
-- adaptive intervention strategies
+- structural fields  
+- risk landscapes  
+- adaptive intervention strategies  
 
 Instead of reacting to collapse, the system:
 
@@ -64,17 +64,15 @@ Instead of reacting to collapse, the system:
 
 # ⚙️ Pipeline
 
-The system follows:
-
-Simulation → Features → Manifold → Risk → Policy → Actions
+*Simulation → Features → Manifold → Risk → Policy → Actions*
 
 Core components:
 
-- Generic power flow solver (pandapower)
-- Structural feature extraction
-- Manifold fitting
-- Risk prediction
-- Adaptive intervention policy
+- Generic power flow solver (pandapower)  
+- Structural feature extraction  
+- Manifold fitting  
+- Risk prediction  
+- Adaptive intervention policy  
 
 ---
 
@@ -82,7 +80,22 @@ Core components:
 
 NEXAH successfully scales across:
 
-collapse detection → stability navigation
+*EEE 9 → 118 → 300 → 1354 → 9241*
+
+and transitions from:
+
+*collapse detection → stability navigation*
+
+---
+
+# 📜 Run Log (Condensed)
+
+| System   | Status        | Notes |
+|----------|-------------|------|
+| IEEE118  | ✅ Stable     | Clean collapse curve, baseline validated |
+| IEEE300  | ⚠️ Nonlinear  | Required structural fallback + tuning |
+| IEEE1354 | ✅ Stable     | Distributed field behavior emerges |
+| IEEE9241 | 🚀 Success    | Real-scale system, stable navigation |
 
 ---
 
@@ -90,7 +103,9 @@ collapse detection → stability navigation
 
 - lead-time analysis vs classical methods  
 - robustness across random seeds  
-- integration with real grid data  
+- sensitivity to control strategies  
+- comparison with OPF / contingency methods  
+- real-world data integration  
 
 ---
 
