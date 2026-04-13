@@ -2,109 +2,71 @@
 
 ![Research Architecture](./visuals/Research_Architecture_Opener.png)
 
+
 This section contains the **formal and structural foundations** of the NEXAH framework.
 
-The research layer defines the **minimal theoretical structure** required for modeling complex systems using order-theoretic operators and stabilization mechanisms.
-
-NEXAH does not introduce a new mathematical ontology.  
-Instead, it reorganizes known principles from **finite order theory and monotone operator systems** into a framework suitable for structural system modeling.
+The Research Layer was the actual **starting point** of the entire project. It began as an attempt to define the simplest possible theoretical structure that could describe stability, transitions and organization in complex systems.
 
 ---
 
-# Scope of the Research Layer
+## What This Layer Is
 
-The current formal basis operates under strict structural constraints.
+I am not a mathematician. This layer is the result of trying to build a clean, minimal foundation using basic concepts from **finite order theory**.
 
-The framework assumes:
+It works with:
+- Finite partially ordered sets (Q, ⪯)
+- Monotone operators
+- Closure structures
+- Simple stabilization mechanisms
 
-- finite partially ordered sets (Q, ⪯)
-- monotone self-maps on Q
-- closure operators and stabilization mechanisms
-- discrete structural transitions
-- no metric or geometric structure
-
-The framework explicitly excludes:
-
-- metric geometry
-- topology
-- continuous time dynamics
-- physical interpretation
-
-All results remain strictly within **finite discrete order theory**.
+The layer deliberately stays **very minimal** and discrete. It does **not** use metrics, continuous time, geometry or physical interpretations.
 
 ---
 
-# 🔗 Relation to CORE_GEOMETRY, Spiral Coupling & URF Axial Space (NEW)
+## Core Ideas (A0–A4)
 
-While the research layer is strictly discrete, the NEXAH framework includes extended layers that build directly on top of it:
+The foundation rests on a small set of minimal assumptions (A0–A4). These axioms define how order, closure and stabilization can work in a purely structural way. From these basic rules the key operators emerge:
 
-→ **CORE_GEOMETRY**  
-→ **Spiral Coupling Layer (v9.x)**  
-→ **URF Axial Space + Root Bridge Layer (v9.1)** ← **neu**
+- Γ – Closure structure  
+- Δ – Regime transition operator  
+- Ω – Stabilization projection  
 
-**CORE_GEOMETRY** introduces:
-- continuous field representations
-- geometric transition structures
-- coherence-based stability metrics
+Together they describe how a system can move between different structural regimes and how stabilization can occur without external goals or rewards.
 
-**Spiral Coupling Layer** adds:
-- Dreifache Spiralüberlagerung (Water ~42 Hz, Mercury ~63 Hz, Ferrofluid ~77 Hz)
-- Dual-Strand Grey Channel
-- Elastic Dual Lock (Span-Gurt)
-- Ferrofluid als magnetischer Koppler
-- Switch-Mechanismus zwischen den Strängen
+---
 
-**URF Axial Space + Root Bridge (v9.1)** provides the 3D geometric reference frame:
-- Root Cube (neutral core)
-- White Cube / Black Cube variants
-- Theta-Hertz Axis, Magnet-Time Axis, Beta Curvature (Restricted Axis √∫), Memory Spin
-- Matroschka mapping of nested layers
-- Direct mapping of the 3x3 / 2x2 Switch Grid into 3D space
-- Root Bridge as unified connection between spirals, Elastic Axis and Switch points
+## Relation to the Rest of NEXAH
 
-Thus:
+This Research Layer is the **theoretical root** of the whole project:
 
-RESEARCH → discrete structural foundation  
-CORE_GEOMETRY → continuous geometric extension  
-SPIRAL_COUPLING → multi-component dynamic navigation layer  
-**URF AXIAL SPACE + ROOT BRIDGE** → 3D coordinate system and navigable reference frame
+- From here the **CORE_GEOMETRY** layer adds continuous fields and coherence metrics.
+- Later came **Spiral Coupling** and finally the **URF Axial Space + Root Bridge** as 3D geometric reference system.
 
 **Important:**  
-The research layer does not depend on any of the geometric or dynamic extensions.  
-All extensions (CORE_GEOMETRY, Spiral Coupling, URF Axial Space) build cleanly on top of the discrete foundation.
+The Research Layer does **not** depend on any of the later geometric or dynamic extensions.  
+All higher layers (CORE_GEOMETRY, URF Axial Space, etc.) are built on top of this minimal discrete foundation.
 
 ---
 
-# Formal Core
+## Current Status
 
-The research layer establishes the structural operator system underlying NEXAH.
+**Phase I–II** (defining the basic axioms and operators) is formally consolidated.
 
-Key elements include:
-
-- minimal assumptions (A0–A4)
-- closure structure Γ
-- regime transition operator Δ
-- stabilization projection Ω
-- frame compatibility conditions
-- fixpoint geometry and basin partitions
+**Next steps:**
+- Connect the discrete operators more clearly to the geometric layers
+- Validate the ideas through concrete applications (especially Power Systems)
+- Make the connection between this theoretical base and the practical tools (DISCOVERY_ENGINE, BUILDER_LAB) more visible
 
 ---
 
-# Research Status
+## Summary
 
-**Phase I–II** formally consolidated.
+The NEXAH Research Layer is the **theoretical starting point** of the project — a minimal, discrete structural foundation built on simple order-theoretic ideas (A0–A4).  
 
-**Next stage:**
+Everything else in NEXAH — the geometry, the tools, the Power Systems application and the navigation concepts — grew from this root.
 
-→ Applied validation through system models  
-→ Integration with geometric field extensions (CORE_GEOMETRY)  
-→ Integration with dynamic coupling extensions (Spiral Coupling Layer v9.x)  
-→ Integration with 3D reference frame (URF Axial Space + Root Bridge v9.1)
+**NEXAH Research Layer**  
+Minimal discrete structural foundations for the NEXAH framework.
 
----
-
-**NEXAH Research Layer**
-
-Formal structural foundations for system navigation in finite dynamical frameworks.
-
-The entire framework — from discrete order theory to continuous field navigation and 3D geometric reference (Root Cube, Matroschka mapping, Root Bridge) — rests on this minimal, rigorous base.
+**Last Updated:** April 2026  
+© Thomas K. R. Hofmann
