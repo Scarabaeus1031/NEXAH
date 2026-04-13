@@ -1,4 +1,6 @@
+import math
 import numpy as np
+
 
 # ================================
 # CONFIG
@@ -8,34 +10,51 @@ class Config:
     target_distance = 0.45
 
     # steering gains
-    k_steer = 0.15
-    k_risk = 0.25
-    k_curv = 0.15
+    k_steer = 0.18
+    k_risk = 0.35
+    k_curv = 0.12
+    steer_clip = 0.06
 
-    steer_clip = 0.05
+    # base stress increase
+    lambda_step = 0.015
+
+    # nonlinear risk model
+    collapse_center = 1.95
+    collapse_sharpness = 8.0
 
 
 cfg = Config()
 
-INTERVENTION_SET = [
+INTERVENTION_SET = {
     "PREEMPTIVE_STABILIZE",
     "REDUCE_LOAD + REACTIVE_SUPPORT",
-    "DAMPEN + SMOOTH_RECOVERY"
-]
+    "DAMPEN + SMOOTH_RECOVERY",
+}
 
 
 # ================================
-# FIELD MODEL (placeholder IEEE9)
+# FIELD MODEL
 # ================================
 
-def compute_distance(risk):
-    # simplified separatrix distance model
-    return 1.05 - 0.5 * risk
+def sigmoid(x: float) -> float:
+    return 1.0 / (1.0 + math.exp(-x))
 
 
-def compute_risk(lambda_val):
-    # synthetic risk curve (replace with your real system)
-    return max(0.0, min(1.0, (lambda_val - 1.8) * 0.25))
+def compute_risk(lambda_val: float) -> float:
+    """
+    Nonlinear transition around collapse_center.
+    This fixes the dead-flat risk from the previous v6.
+    """
+    z = (lambda_val - cfg.collapse_center) * cfg.collapse_sharpness
+    return sigmoid(z)
+
+
+def compute_distance(risk: float, lambda_val: float) -> float:
+    """
+    Distance shrinks as risk rises and lambda grows.
+    """
+    d = 1.10 - 0.95 * risk - 0.12 * (lambda_val - 1.0)
+    return max(0.0, d)
 
 
 # ================================
@@ -47,10 +66,7 @@ def compute_derivatives(risk_history):
         return 0.0, 0.0
 
     slope = risk_history[-1] - risk_history[-2]
-    d2c = (risk_history[-1]
-           - 2 * risk_history[-2]
-           + risk_history[-3])
-
+    d2c = risk_history[-1] - 2 * risk_history[-2] + risk_history[-3]
     return slope, d2c
 
 
@@ -58,12 +74,12 @@ def compute_derivatives(risk_history):
 # CONTROLLER STATE MACHINE
 # ================================
 
-def controller_state(risk):
-    if risk < 0.2:
+def controller_state(risk, distance):
+    if risk < 0.18 and distance > 0.60:
         return "NEXIT"
-    elif risk < 0.22:
+    elif risk < 0.30:
         return "ENGAGE"
-    elif risk < 0.28:
+    elif distance < 0.25 or risk < 0.75:
         return "LOCK"
     else:
         return "RELEASE"
@@ -81,27 +97,21 @@ def controller_action(state):
 
 def control_adjustment(action):
     if action == "PREEMPTIVE_STABILIZE":
-        return -0.02
+        return -0.015
     elif action == "REDUCE_LOAD + REACTIVE_SUPPORT":
-        return -0.04
+        return -0.030
     elif action == "DAMPEN + SMOOTH_RECOVERY":
-        return -0.03
+        return -0.020
     return 0.0
 
 
 # ================================
-# 🔥 V6 STEERING
+# V6 STEERING
 # ================================
 
 def compute_steering(distance, risk_slope, d2c, action, cfg):
-
-    # distance-based steering
     steer_d = cfg.k_steer * (distance - cfg.target_distance)
-
-    # oppose risk growth
     steer_r = -cfg.k_risk * risk_slope
-
-    # damp curvature
     steer_c = -cfg.k_curv * d2c
 
     steer = steer_d + steer_r + steer_c
@@ -118,7 +128,6 @@ def compute_steering(distance, risk_slope, d2c, action, cfg):
 # ================================
 
 def run_simulation(steps=120):
-
     lambda_val = 0.5
 
     risk_history = []
@@ -126,12 +135,12 @@ def run_simulation(steps=120):
     lambda_history = []
     state_history = []
     steer_history = []
+    action_history = []
 
     for step in range(steps):
-
         # --- system evaluation ---
         risk = compute_risk(lambda_val)
-        distance = compute_distance(risk)
+        distance = compute_distance(risk, lambda_val)
 
         risk_history.append(risk)
         distance_history.append(distance)
@@ -140,18 +149,16 @@ def run_simulation(steps=120):
         slope, d2c = compute_derivatives(risk_history)
 
         # --- controller ---
-        state = controller_state(risk)
+        state = controller_state(risk, distance)
         action = controller_action(state)
         ctrl = control_adjustment(action)
 
-        # --- 🔥 v6 steering ---
+        # --- v6 steering ---
         steer = compute_steering(distance, slope, d2c, action, cfg)
 
         # --- lambda update ---
         lambda_eff = lambda_val + ctrl + steer
-
-        # --- progression (external stress) ---
-        lambda_val = lambda_eff + 0.015
+        lambda_val = max(0.0, lambda_eff + cfg.lambda_step)
 
         # --- logging ---
         print(
@@ -166,17 +173,18 @@ def run_simulation(steps=120):
             f"action={action}"
         )
 
-        # --- store ---
         lambda_history.append(lambda_val)
         state_history.append(state)
         steer_history.append(steer)
+        action_history.append(action)
 
     return {
         "risk": risk_history,
         "distance": distance_history,
         "lambda": lambda_history,
         "state": state_history,
-        "steer": steer_history
+        "steer": steer_history,
+        "action": action_history,
     }
 
 
