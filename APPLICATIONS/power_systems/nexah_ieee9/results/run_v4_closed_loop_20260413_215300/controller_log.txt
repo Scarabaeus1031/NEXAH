@@ -1,0 +1,122 @@
+[STEP 0] lambda=0.5150 lambda_eff=0.5000 state=NEXIT risk=0.0012 slope=0.0000 d2c=0.0038 res=0.0780 dist=1.0558 action=MONITOR
+[STEP 1] lambda=0.5300 lambda_eff=0.5150 state=NEXIT risk=0.0000 slope=-0.0012 d2c=-0.0013 res=0.0778 dist=1.0521 action=MONITOR
+[STEP 2] lambda=0.5450 lambda_eff=0.5300 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0031 res=0.0830 dist=1.0512 action=MONITOR
+[STEP 3] lambda=0.5600 lambda_eff=0.5450 state=NEXIT risk=0.0003 slope=0.0003 d2c=-0.0034 res=0.0836 dist=1.0564 action=MONITOR
+[STEP 4] lambda=0.5750 lambda_eff=0.5600 state=NEXIT risk=0.0015 slope=0.0012 d2c=-0.0002 res=0.0875 dist=1.0454 action=MONITOR
+[STEP 5] lambda=0.5900 lambda_eff=0.5750 state=NEXIT risk=0.0000 slope=-0.0015 d2c=-0.0006 res=0.0911 dist=1.0438 action=MONITOR
+[STEP 6] lambda=0.6050 lambda_eff=0.5900 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0015 res=0.0906 dist=1.0424 action=MONITOR
+[STEP 7] lambda=0.6200 lambda_eff=0.6050 state=NEXIT risk=0.0017 slope=0.0017 d2c=-0.0016 res=0.0993 dist=1.0428 action=MONITOR
+[STEP 8] lambda=0.6350 lambda_eff=0.6200 state=NEXIT risk=0.0000 slope=-0.0017 d2c=0.0045 res=0.0955 dist=1.0351 action=MONITOR
+[STEP 9] lambda=0.6500 lambda_eff=0.6350 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0026 res=0.0920 dist=1.0323 action=MONITOR
+[STEP 10] lambda=0.6650 lambda_eff=0.6500 state=NEXIT risk=0.0030 slope=0.0030 d2c=0.0010 res=0.0948 dist=1.0352 action=MONITOR
+[STEP 11] lambda=0.6800 lambda_eff=0.6650 state=NEXIT risk=0.0005 slope=-0.0025 d2c=0.0009 res=0.1032 dist=1.0312 action=MONITOR
+[STEP 12] lambda=0.6950 lambda_eff=0.6800 state=NEXIT risk=0.0027 slope=0.0022 d2c=0.0026 res=0.1032 dist=1.0279 action=MONITOR
+[STEP 13] lambda=0.7100 lambda_eff=0.6950 state=NEXIT risk=0.0000 slope=-0.0027 d2c=-0.0025 res=0.1024 dist=1.0236 action=MONITOR
+[STEP 14] lambda=0.7250 lambda_eff=0.7100 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0039 res=0.1031 dist=1.0282 action=MONITOR
+[STEP 15] lambda=0.7400 lambda_eff=0.7250 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0024 res=0.1094 dist=1.0182 action=MONITOR
+[STEP 16] lambda=0.7550 lambda_eff=0.7400 state=NEXIT risk=0.0029 slope=0.0029 d2c=-0.0018 res=0.1096 dist=1.0200 action=MONITOR
+[STEP 17] lambda=0.7700 lambda_eff=0.7550 state=NEXIT risk=0.0034 slope=0.0006 d2c=-0.0045 res=0.1082 dist=1.0133 action=MONITOR
+[STEP 18] lambda=0.7850 lambda_eff=0.7700 state=NEXIT risk=0.0000 slope=-0.0034 d2c=0.0029 res=0.1161 dist=1.0134 action=MONITOR
+[STEP 19] lambda=0.8000 lambda_eff=0.7850 state=NEXIT risk=0.0000 slope=0.0000 d2c=-0.0011 res=0.1203 dist=1.0093 action=MONITOR
+[STEP 20] lambda=0.8150 lambda_eff=0.8000 state=NEXIT risk=0.0018 slope=0.0018 d2c=-0.0014 res=0.1186 dist=1.0033 action=MONITOR
+[STEP 21] lambda=0.8300 lambda_eff=0.8150 state=NEXIT risk=0.0000 slope=-0.0018 d2c=0.0002 res=0.1204 dist=1.0052 action=MONITOR
+[STEP 22] lambda=0.8450 lambda_eff=0.8300 state=NEXIT risk=0.0019 slope=0.0019 d2c=-0.0002 res=0.1272 dist=1.0024 action=MONITOR
+[STEP 23] lambda=0.8600 lambda_eff=0.8450 state=NEXIT risk=0.0000 slope=-0.0019 d2c=-0.0056 res=0.1200 dist=0.9976 action=MONITOR
+[STEP 24] lambda=0.8750 lambda_eff=0.8600 state=NEXIT risk=0.0000 slope=0.0000 d2c=-0.0034 res=0.1307 dist=0.9912 action=MONITOR
+[STEP 25] lambda=0.8900 lambda_eff=0.8750 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0032 res=0.1299 dist=0.9977 action=MONITOR
+[STEP 26] lambda=0.9050 lambda_eff=0.8900 state=NEXIT risk=0.0000 slope=0.0000 d2c=-0.0011 res=0.1298 dist=0.9889 action=MONITOR
+[STEP 27] lambda=0.9200 lambda_eff=0.9050 state=NEXIT risk=0.0034 slope=0.0034 d2c=0.0013 res=0.1376 dist=0.9802 action=MONITOR
+[STEP 28] lambda=0.9350 lambda_eff=0.9200 state=NEXIT risk=0.0000 slope=-0.0034 d2c=-0.0018 res=0.1384 dist=0.9786 action=MONITOR
+[STEP 29] lambda=0.9500 lambda_eff=0.9350 state=NEXIT risk=0.0010 slope=0.0010 d2c=-0.0006 res=0.1468 dist=0.9817 action=MONITOR
+[STEP 30] lambda=0.9650 lambda_eff=0.9500 state=NEXIT risk=0.0000 slope=-0.0010 d2c=0.0059 res=0.1435 dist=0.9797 action=MONITOR
+[STEP 31] lambda=0.9800 lambda_eff=0.9650 state=NEXIT risk=0.0034 slope=0.0034 d2c=-0.0042 res=0.1507 dist=0.9777 action=MONITOR
+[STEP 32] lambda=0.9950 lambda_eff=0.9800 state=NEXIT risk=0.0000 slope=-0.0034 d2c=-0.0049 res=0.1456 dist=0.9698 action=MONITOR
+[STEP 33] lambda=1.0100 lambda_eff=0.9950 state=NEXIT risk=0.0026 slope=0.0026 d2c=-0.0034 res=0.1436 dist=0.9699 action=MONITOR
+[STEP 34] lambda=1.0250 lambda_eff=1.0100 state=NEXIT risk=0.0013 slope=-0.0013 d2c=0.0124 res=0.1597 dist=0.9715 action=MONITOR
+[STEP 35] lambda=1.0400 lambda_eff=1.0250 state=NEXIT risk=0.0018 slope=0.0004 d2c=0.0020 res=0.1455 dist=0.9614 action=MONITOR
+[STEP 36] lambda=1.0550 lambda_eff=1.0400 state=NEXIT risk=0.0000 slope=-0.0018 d2c=0.0005 res=0.1538 dist=0.9610 action=MONITOR
+[STEP 37] lambda=1.0700 lambda_eff=1.0550 state=NEXIT risk=0.0044 slope=0.0044 d2c=-0.0030 res=0.1579 dist=0.9606 action=MONITOR
+[STEP 38] lambda=1.0850 lambda_eff=1.0700 state=NEXIT risk=0.0000 slope=-0.0044 d2c=0.0084 res=0.1607 dist=0.9553 action=MONITOR
+[STEP 39] lambda=1.1000 lambda_eff=1.0850 state=NEXIT risk=0.0007 slope=0.0007 d2c=-0.0032 res=0.1612 dist=0.9585 action=MONITOR
+[STEP 40] lambda=1.1150 lambda_eff=1.1000 state=NEXIT risk=0.0000 slope=-0.0007 d2c=-0.0015 res=0.1740 dist=0.9489 action=MONITOR
+[STEP 41] lambda=1.1300 lambda_eff=1.1150 state=NEXIT risk=0.0036 slope=0.0036 d2c=0.0035 res=0.1715 dist=0.9455 action=MONITOR
+[STEP 42] lambda=1.1450 lambda_eff=1.1300 state=NEXIT risk=0.0000 slope=-0.0036 d2c=0.0041 res=0.1675 dist=0.9462 action=MONITOR
+[STEP 43] lambda=1.1600 lambda_eff=1.1450 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0033 res=0.1674 dist=0.9387 action=MONITOR
+[STEP 44] lambda=1.1750 lambda_eff=1.1600 state=NEXIT risk=0.0066 slope=0.0066 d2c=0.0041 res=0.1744 dist=0.9415 action=MONITOR
+[STEP 45] lambda=1.1900 lambda_eff=1.1750 state=NEXIT risk=0.0056 slope=-0.0010 d2c=0.0078 res=0.1756 dist=0.9390 action=MONITOR
+[STEP 46] lambda=1.2050 lambda_eff=1.1900 state=NEXIT risk=0.0021 slope=-0.0035 d2c=-0.0010 res=0.1803 dist=0.9415 action=MONITOR
+[STEP 47] lambda=1.2200 lambda_eff=1.2050 state=NEXIT risk=0.0000 slope=-0.0021 d2c=0.0038 res=0.1889 dist=0.9392 action=MONITOR
+[STEP 48] lambda=1.2350 lambda_eff=1.2200 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0015 res=0.1800 dist=0.9356 action=MONITOR
+[STEP 49] lambda=1.2500 lambda_eff=1.2350 state=NEXIT risk=0.0032 slope=0.0032 d2c=0.0052 res=0.1869 dist=0.9254 action=MONITOR
+[STEP 50] lambda=1.2650 lambda_eff=1.2500 state=NEXIT risk=0.0021 slope=-0.0011 d2c=0.0093 res=0.1897 dist=0.9298 action=MONITOR
+[STEP 51] lambda=1.2800 lambda_eff=1.2650 state=NEXIT risk=0.0000 slope=-0.0021 d2c=0.0028 res=0.1885 dist=0.9212 action=MONITOR
+[STEP 52] lambda=1.2950 lambda_eff=1.2800 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0035 res=0.1981 dist=0.9172 action=MONITOR
+[STEP 53] lambda=1.3100 lambda_eff=1.2950 state=NEXIT risk=0.0012 slope=0.0012 d2c=0.0140 res=0.1957 dist=0.9138 action=MONITOR
+[STEP 54] lambda=1.3250 lambda_eff=1.3100 state=NEXIT risk=0.0034 slope=0.0022 d2c=0.0087 res=0.1991 dist=0.9182 action=MONITOR
+[STEP 55] lambda=1.3400 lambda_eff=1.3250 state=NEXIT risk=0.0006 slope=-0.0029 d2c=0.0088 res=0.2031 dist=0.9109 action=MONITOR
+[STEP 56] lambda=1.3550 lambda_eff=1.3400 state=NEXIT risk=0.0020 slope=0.0015 d2c=0.0225 res=0.2152 dist=0.9080 action=MONITOR
+[STEP 57] lambda=1.3700 lambda_eff=1.3550 state=NEXIT risk=0.0000 slope=-0.0020 d2c=0.0148 res=0.2022 dist=0.9029 action=MONITOR
+[STEP 58] lambda=1.3850 lambda_eff=1.3700 state=NEXIT risk=0.0035 slope=0.0035 d2c=0.0170 res=0.2080 dist=0.9059 action=MONITOR
+[STEP 59] lambda=1.4000 lambda_eff=1.3850 state=NEXIT risk=0.0000 slope=-0.0035 d2c=0.0203 res=0.2097 dist=0.8974 action=MONITOR
+[STEP 60] lambda=1.4150 lambda_eff=1.4000 state=NEXIT risk=0.0000 slope=0.0000 d2c=0.0198 res=0.2101 dist=0.8946 action=MONITOR
+[STEP 61] lambda=1.4300 lambda_eff=1.4150 state=NEXIT risk=0.0118 slope=0.0118 d2c=0.0366 res=0.2160 dist=0.8867 action=MONITOR
+[STEP 62] lambda=1.4450 lambda_eff=1.4300 state=NEXIT risk=0.0154 slope=0.0036 d2c=0.0348 res=0.2223 dist=0.8840 action=MONITOR
+[STEP 63] lambda=1.4600 lambda_eff=1.4450 state=NEXIT risk=0.0112 slope=-0.0042 d2c=0.0413 res=0.2264 dist=0.8814 action=MONITOR
+[STEP 64] lambda=1.4750 lambda_eff=1.4600 state=NEXIT risk=0.0067 slope=-0.0046 d2c=0.0381 res=0.2306 dist=0.8805 action=MONITOR
+[STEP 65] lambda=1.4900 lambda_eff=1.4750 state=NEXIT risk=0.0047 slope=-0.0020 d2c=0.0475 res=0.2361 dist=0.8775 action=MONITOR
+[STEP 66] lambda=1.5050 lambda_eff=1.4900 state=NEXIT risk=0.0083 slope=0.0036 d2c=0.0582 res=0.2400 dist=0.8791 action=MONITOR
+[STEP 67] lambda=1.5200 lambda_eff=1.5050 state=NEXIT risk=0.0076 slope=-0.0008 d2c=0.0660 res=0.2410 dist=0.8714 action=MONITOR
+[STEP 68] lambda=1.5350 lambda_eff=1.5200 state=NEXIT risk=0.0080 slope=0.0005 d2c=0.0753 res=0.2549 dist=0.8759 action=MONITOR
+[STEP 69] lambda=1.5500 lambda_eff=1.5350 state=NEXIT risk=0.0066 slope=-0.0015 d2c=0.0851 res=0.2586 dist=0.8592 action=MONITOR
+[STEP 70] lambda=1.5650 lambda_eff=1.5500 state=NEXIT risk=0.0129 slope=0.0063 d2c=0.0975 res=0.2630 dist=0.8525 action=MONITOR
+[STEP 71] lambda=1.5800 lambda_eff=1.5650 state=NEXIT risk=0.0081 slope=-0.0048 d2c=0.1090 res=0.2663 dist=0.8532 action=MONITOR
+[STEP 72] lambda=1.5950 lambda_eff=1.5800 state=NEXIT risk=0.0132 slope=0.0051 d2c=0.1242 res=0.2708 dist=0.8501 action=MONITOR
+[STEP 73] lambda=1.6100 lambda_eff=1.5950 state=NEXIT risk=0.0223 slope=0.0091 d2c=0.1410 res=0.2778 dist=0.8354 action=MONITOR
+[STEP 74] lambda=1.6250 lambda_eff=1.6100 state=NEXIT risk=0.0199 slope=-0.0024 d2c=0.1603 res=0.2794 dist=0.8391 action=MONITOR
+[STEP 75] lambda=1.6400 lambda_eff=1.6250 state=NEXIT risk=0.0283 slope=0.0084 d2c=0.1787 res=0.2982 dist=0.8289 action=MONITOR
+[STEP 76] lambda=1.6550 lambda_eff=1.6400 state=NEXIT risk=0.0241 slope=-0.0041 d2c=0.2087 res=0.3024 dist=0.8250 action=MONITOR
+[STEP 77] lambda=1.6700 lambda_eff=1.6550 state=NEXIT risk=0.0301 slope=0.0060 d2c=0.2314 res=0.3183 dist=0.8299 action=MONITOR
+[STEP 78] lambda=1.6850 lambda_eff=1.6700 state=NEXIT risk=0.0387 slope=0.0085 d2c=0.2574 res=0.3277 dist=0.8179 action=MONITOR
+[STEP 79] lambda=1.7000 lambda_eff=1.6850 state=NEXIT risk=0.0364 slope=-0.0023 d2c=0.2858 res=0.3401 dist=0.8060 action=MONITOR
+[STEP 80] lambda=1.7150 lambda_eff=1.7000 state=NEXIT risk=0.0442 slope=0.0079 d2c=0.3285 res=0.3535 dist=0.8001 action=MONITOR
+[STEP 81] lambda=1.7300 lambda_eff=1.7150 state=NEXIT risk=0.0540 slope=0.0098 d2c=0.3633 res=0.3564 dist=0.7951 action=MONITOR
+[STEP 82] lambda=1.7450 lambda_eff=1.7300 state=NEXIT risk=0.0485 slope=-0.0056 d2c=0.4073 res=0.3837 dist=0.7807 action=MONITOR
+[STEP 83] lambda=1.7600 lambda_eff=1.7450 state=NEXIT risk=0.0576 slope=0.0091 d2c=0.4440 res=0.3939 dist=0.7685 action=MONITOR
+[STEP 84] lambda=1.7750 lambda_eff=1.7600 state=NEXIT risk=0.0658 slope=0.0082 d2c=0.4980 res=0.4157 dist=0.7625 action=MONITOR
+[STEP 85] lambda=1.7900 lambda_eff=1.7750 state=NEXIT risk=0.0685 slope=0.0027 d2c=0.5460 res=0.4298 dist=0.7502 action=MONITOR
+[STEP 86] lambda=1.8050 lambda_eff=1.7900 state=NEXIT risk=0.0943 slope=0.0259 d2c=0.5969 res=0.4465 dist=0.7273 action=MONITOR
+[STEP 87] lambda=1.8200 lambda_eff=1.8050 state=NEXIT risk=0.0930 slope=-0.0014 d2c=0.6485 res=0.4708 dist=0.7267 action=MONITOR
+[STEP 88] lambda=1.8350 lambda_eff=1.8200 state=NEXIT risk=0.1098 slope=0.0168 d2c=0.6957 res=0.4947 dist=0.7080 action=MONITOR
+[STEP 89] lambda=1.8500 lambda_eff=1.8350 state=NEXIT risk=0.1271 slope=0.0174 d2c=0.7414 res=0.5085 dist=0.6883 action=MONITOR
+[STEP 90] lambda=1.8650 lambda_eff=1.8500 state=NEXIT risk=0.1412 slope=0.0141 d2c=0.7805 res=0.5377 dist=0.6696 action=MONITOR
+[STEP 91] lambda=1.8800 lambda_eff=1.8650 state=NEXIT risk=0.1586 slope=0.0174 d2c=0.8176 res=0.5523 dist=0.6532 action=MONITOR
+[STEP 92] lambda=1.8950 lambda_eff=1.8800 state=NEXIT risk=0.1788 slope=0.0202 d2c=0.8534 res=0.5762 dist=0.6281 action=MONITOR
+[STATE CHANGE] step=93 NEXIT -> ENGAGE
+[STEP 93] lambda=1.8867 lambda_eff=1.8950 state=ENGAGE risk=0.2020 slope=0.0232 d2c=0.8728 res=0.5982 dist=0.6037 action=PREEMPTIVE_STABILIZE
+[STATE CHANGE] step=94 ENGAGE -> LOCK
+[STEP 94] lambda=1.9017 lambda_eff=1.8717 state=LOCK risk=0.1666 slope=-0.0355 d2c=0.8326 res=0.5712 dist=0.6293 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 95] lambda=1.9167 lambda_eff=1.9017 state=LOCK risk=0.2089 slope=0.0423 d2c=0.8609 res=0.5980 dist=0.5940 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 96] lambda=1.9317 lambda_eff=1.9167 state=LOCK risk=0.2252 slope=0.0163 d2c=0.8619 res=0.6233 dist=0.5586 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 97] lambda=1.9467 lambda_eff=1.9317 state=LOCK risk=0.2576 slope=0.0324 d2c=0.8361 res=0.6272 dist=0.5273 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 98] lambda=1.9617 lambda_eff=1.9467 state=LOCK risk=0.2812 slope=0.0236 d2c=0.7930 res=0.6515 dist=0.5042 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 99] lambda=1.9767 lambda_eff=1.9617 state=LOCK risk=0.3143 slope=0.0331 d2c=0.7255 res=0.6599 dist=0.4710 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 100] lambda=1.9917 lambda_eff=1.9767 state=LOCK risk=0.3402 slope=0.0259 d2c=0.6419 res=0.6671 dist=0.4370 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 101] lambda=2.0067 lambda_eff=1.9917 state=LOCK risk=0.3739 slope=0.0338 d2c=0.5421 res=0.6663 dist=0.4000 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 102] lambda=2.0217 lambda_eff=2.0067 state=LOCK risk=0.3959 slope=0.0220 d2c=0.4071 res=0.6611 dist=0.3595 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 103] lambda=2.0367 lambda_eff=2.0217 state=LOCK risk=0.4341 slope=0.0381 d2c=0.2807 res=0.6639 dist=0.3305 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 104] lambda=2.0517 lambda_eff=2.0367 state=LOCK risk=0.4746 slope=0.0405 d2c=0.1389 res=0.6611 dist=0.2950 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 105] lambda=2.0667 lambda_eff=2.0517 state=LOCK risk=0.5043 slope=0.0297 d2c=-0.0236 res=0.6617 dist=0.2482 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 106] lambda=2.0817 lambda_eff=2.0667 state=LOCK risk=0.5341 slope=0.0298 d2c=-0.1614 res=0.7232 dist=0.2121 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 107] lambda=2.0967 lambda_eff=2.0817 state=LOCK risk=0.5654 slope=0.0314 d2c=-0.3110 res=0.7703 dist=0.1774 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 108] lambda=2.1117 lambda_eff=2.0967 state=LOCK risk=0.6031 slope=0.0377 d2c=-0.4489 res=0.8301 dist=0.1314 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 109] lambda=2.1267 lambda_eff=2.1117 state=LOCK risk=0.6333 slope=0.0302 d2c=-0.5631 res=0.8719 dist=0.0984 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 110] lambda=2.1417 lambda_eff=2.1267 state=LOCK risk=0.6654 slope=0.0320 d2c=-0.6598 res=0.9198 dist=0.0691 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 111] lambda=2.1567 lambda_eff=2.1417 state=LOCK risk=0.6941 slope=0.0287 d2c=-0.7465 res=0.9614 dist=0.0283 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 112] lambda=2.1717 lambda_eff=2.1567 state=LOCK risk=0.7277 slope=0.0336 d2c=-0.8030 res=0.9902 dist=0.0039 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 113] lambda=2.1867 lambda_eff=2.1717 state=LOCK risk=0.7573 slope=0.0295 d2c=-0.8425 res=1.0193 dist=0.0083 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 114] lambda=2.2017 lambda_eff=2.1867 state=LOCK risk=0.7783 slope=0.0210 d2c=-0.8628 res=1.0437 dist=0.0000 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 115] lambda=2.2167 lambda_eff=2.2017 state=LOCK risk=0.7979 slope=0.0197 d2c=-0.8733 res=1.0546 dist=0.0000 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 116] lambda=2.2317 lambda_eff=2.2167 state=LOCK risk=0.8132 slope=0.0153 d2c=-0.8447 res=1.0742 dist=0.0000 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 117] lambda=2.2467 lambda_eff=2.2317 state=LOCK risk=0.8414 slope=0.0282 d2c=-0.8293 res=1.0876 dist=0.0000 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 118] lambda=2.2617 lambda_eff=2.2467 state=LOCK risk=0.8534 slope=0.0120 d2c=-0.7946 res=1.0963 dist=0.0007 action=REDUCE_LOAD + REACTIVE_SUPPORT
+[STEP 119] lambda=2.2767 lambda_eff=2.2617 state=LOCK risk=0.8748 slope=0.0214 d2c=-0.7413 res=1.0990 dist=0.0000 action=REDUCE_LOAD + REACTIVE_SUPPORT
