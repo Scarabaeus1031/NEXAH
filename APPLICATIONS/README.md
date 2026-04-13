@@ -18,7 +18,11 @@ NEXAH transforms systems into:
 
 ---
 
-# ⚡ 1. Power Systems — Real-World Validation (FLAGSHIP)
+# ⚡ 1. Power Systems — Real-World Validation (FLAGSHIP MODULE)
+
+![NEXAH MicDrop](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+*Voltage collapse detected ~43.9 seconds earlier than classical methods.*
 
 ![IEEE Field](power_systems/nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
 
