@@ -1,223 +1,182 @@
-# NEXAH / Power Systems
+# ⚡ NEXAH / Power Systems
 **Structural Field Navigation for Power System Stability**
 
-This module applies NEXAH’s orientation-based approach to power system stability analysis.
+---
 
-The goal is to detect structural precursors of instability earlier than classical voltage-based methods and to explore **geometry-driven control of system dynamics**.
+## 🧭 Overview
+
+This module implements the **NEXAH framework for power systems**:
+
+> A geometry-based approach to detect, interpret, and navigate instability  
+> in complex electrical grids.
+
+Instead of treating collapse as a threshold event, NEXAH models it as:
+
+→ a **structural transformation in system dynamics**
 
 ---
 
-## 🧭 System Scope
+## 🧠 Core Idea
 
-NEXAH transforms power system analysis from:
+Classical approach:
 
-→ static monitoring  
+→ monitor voltage thresholds  
+→ react after instability  
 
-into:
+NEXAH:
 
-→ **dynamic stability field navigation**
-
----
-
-## ⚙️ Current System Layers (April 2026)
-
-### 🔹 1. Detection Layer — Operational
-
-NEXAH detects the onset of voltage collapse **~43.9 seconds earlier** than classical methods.
-
-Based on structural indicators:
-- coherence breakdown  
-- geometric drift  
-- state-space deformation  
-
-| Network                  | Lead Time vs. Classical | Status     |
-|--------------------------|------------------------|------------|
-| IEEE 118-Bus             | ~43.9 s                | Confirmed  |
-| IEEE 300-Bus             | ~43.9 s                | Confirmed  |
-| IEEE 1354-Bus            | ~43.9 s                | Confirmed  |
-| IEEE 9241-Bus (PEGASE)   | ~43.9 s                | Confirmed  |
+→ reconstructs system **geometry + flow structure**  
+→ detects **early structural drift**  
+→ enables **trajectory-aware control**
 
 ---
 
-### 🔹 2. Stability Field Layer — Operational
+## 🧩 Module Architecture
 
-The system constructs a **continuous stability field**:
+This repository is organized into three complementary layers:
 
-- manifold (expected dynamics)
+---
+
+### 🔹 1. Structural Theory & Geometry
+
+📁 `stability_field_dynamics/ieee_test_cases`
+
+- collapse manifold (low-dimensional attractor)
+- rift (collapse boundary)
+- distance (stability metric)
 - residual (structural deviation)
-- distance (collapse proximity)
+- topology (branching states)
 
-This enables:
-
-- early instability detection  
-- interpretable system states  
-- regime separation  
+📌 Deep dive:  
+→ [`ieee_test_cases/README.md`](stability_field_dynamics/ieee_test_cases/README.md)
 
 ---
 
-### 🔹 3. Closed-Loop Control Layer — Functional
+### 🔹 2. Geometric Pipeline & Navigation
 
-NEXAH now includes **closed-loop intervention**:
+📁 `ieee_xray_pipeline`
 
-structure → risk → policy → action → system → structure
+- low-dimensional state space (c, dc, d²c)
+- polar / 3D projections
+- Root Cube navigation
+- attractor + topology experiments
 
-Capabilities:
-
-- continuous risk field ∈ [0,1]  
-- time-to-collapse estimation  
-- dynamic intervention signal  
-
-**Actions:**
-- STABILIZE  
-- PREEMPTIVE_STABILIZE  
-- REDUCE_LOAD  
-- EMERGENCY_SHED  
+📌 Deep dive:  
+→ [`ieee_xray_pipeline/README.md`](ieee_xray_pipeline/README.md)
 
 ---
 
-### 🔹 4. Adaptive Policy Layer (v3) — Experimental
+### 🔹 3. Closed-Loop Control Systems
 
-The system has evolved into **trajectory-aware control**.
+#### Small-scale system (development)
 
-Key signals:
-- risk  
-- risk_slope (trajectory)  
-- curvature (d2c)  
-- distance (rift proximity)  
+📁 `nexah_ieee9`
 
-**Behavior:**
+- full NEXAH pipeline
+- adaptive control (v3)
+- synthetic + real grid prototype
 
-- anticipatory (not reactive)
-- early intervention
-- structured escalation
-
-STABILIZE → PREEMPTIVE → REDUCE_LOAD → EMERGENCY_SHED
+📌 Deep dive:  
+→ [`nexah_ieee9/README.md`](nexah_ieee9/README.md)
 
 ---
 
-## 🧮 System Interpretation (Power Systems)
+#### Large-scale validation (NEW 🚀)
 
-The NEXAH power system module can be interpreted as a controlled dynamical system in feature space.
+📁 `nexah_ieeeX`
 
-The system state is defined as:
+- scaling across IEEE systems
+- pandapower-based AC solver
+- real grid dynamics + intervention
 
-x = (coherence, frag, d2c, residual, distance)
+📌 Deep dive:  
+→ [`nexah_ieeeX/README.md`](nexah_ieeeX/README.md)
 
-The dynamics follow:
+---
 
-dx/dt = f(x) + u(x, dx/dt)
+## 📊 Experimental Results (Scaling)
 
-where:
+### 🔹 IEEE 118 — Baseline
 
-- f(x) represents the underlying power grid physics  
-- u(x, dx/dt) is the NEXAH intervention policy  
+![IEEE118](nexah_ieeeX/results/run_ieee118_20260413_004449/overview.png)
+
+- clean collapse structure  
+- early risk detection  
+- pipeline baseline validated  
+
+---
+
+### 🔹 IEEE 300 — Nonlinear Regime
+
+![IEEE300](nexah_ieeeX/results/run_ieee300_20260413_015843/plot.png)
+
+- nonlinear structural dynamics  
+- manifold + risk activation  
+- adaptive control required  
+
+---
+
+### 🔹 IEEE 1354 — Large Grid
+
+![IEEE1354](nexah_ieeeX/results/run_ieee1354_20260413_020204/plot.png)
+
+- distributed voltage field  
+- stable large-scale behavior  
+- controllable regime  
+
+---
+
+### 🔹 IEEE 9241 (PEGASE) — Real Scale
+
+![IEEE9241](nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
+
+- real-world scale system  
+- early risk spike detection  
+- stable post-intervention regime  
+- no full collapse observed  
+
+---
+
+## ⚙️ System Pipeline
+
+*Simulation → Features → Manifold → Risk → Policy → Actions*
+
+### Core Components
+
+- AC power flow solver (pandapower)
+- structural feature extraction
+- manifold fitting
+- residual + distance field
+- risk prediction
+- adaptive intervention policy
+
+---
+
+## 🧮 Mathematical View
+
+System state:
+
+*x = (coherence, frag, d²c, residual, distance)*
+
+
+Dynamics:
+
+*dx/dt = f(x) + u(x, dx/dt)*
+
+
+- **f(x)** → physical grid dynamics  
+- **u(x, dx/dt)** → NEXAH control  
 
 ---
 
 ### Stability Definition
 
-Stability is defined geometrically:
+*S = { x : risk(x) < threshold }*
 
-A system is stable if its trajectory remains within a region:
 
-S = { x : risk(x) < threshold }
+Stability becomes:
 
----
-
-### Key Property
-
-The system operates on:
-
-→ trajectory-aware control  
-
-instead of:
-
-→ static voltage thresholds  
-
----
-
-### 🔹 5. Real Grid Prototype — NEW ⚡
-
-First integration with **pandapower-based AC solver**:
-
-- real voltage dynamics
-- physical load flow constraints
-- action → system coupling
-
-**Observed:**
-- realistic system response  
-- reduced artificial stability  
-- control becomes physically constrained  
-
-👉 Transition:
-synthetic model → physical system interaction  
-
----
-
-## 🔬 Structural Dynamics Layer (v40–v56)
-
-A higher-level experimental layer introduces:
-
-- OLGO shell structure (radial layering)
-- hexagonal sector topology
-- attractor-based dynamics
-- controlled transitions (prototype)
-
-**Key observations:**
-
-- trajectories organize into **radial shells**
-- motion constrained to **6-sector topology**
-- system influenced by **boundary attractors**
-- first controlled attractor transitions observed
-
-> The system evolves from trajectory tracking  
-> to **topology-driven attractor navigation**
-
----
-
-## 📊 IEEE X-Ray Pipeline
-
-Transforms high-dimensional system state into geometry:
-
-- coherence (x)  
-- switch signal (y)  
-- radius (r)  
-- phase (θ)  
-
----
-
-## 📈 Visual Evolution
-
-### Early Structure Discovery
-
-![v3 detection](ieee_xray_pipeline/results/ieee57_pipeline_v3_detection.png)
-
----
-
-### Polar Geometry
-
-![v6 polar](ieee_xray_pipeline/results/ieee57_pipeline_v6_polar_morphology.png)
-
----
-
-### Stability Band
-
-![v13 band](ieee_xray_pipeline/results/ieee57_v13_band_polar.png)
-
----
-
-### Root Cube Navigation
-
-![v36 3D](ieee_xray_pipeline/results/v36b_good_final_3d.png)  
-![v36 polar](ieee_xray_pipeline/results/v36b_good_final_polar.png)
-
----
-
-### Attractor & Topology Layer
-
-![v44 hexagon](ieee_xray_pipeline/results/v44_hexagon_loop_3d.png)  
-![v53 attractor](ieee_xray_pipeline/results/v53_polar.png)  
-![v56 topology](ieee_xray_pipeline/results/v56_hexa_topology.png)
+→ **geometric containment in state space**
 
 ---
 
@@ -234,13 +193,44 @@ Transforms high-dimensional system state into geometry:
 
 ---
 
+## ⚡ Key Result
+
+NEXAH scales across:
+
+*IEEE 9 → 118 → 300 → 1354 → 9241*
+
+while maintaining:
+
+- structural detection ✔  
+- interpretable geometry ✔  
+- adaptive control ✔  
+
+---
+
+## 🔬 System Behavior
+
+Three regimes emerge:
+
+1. **Stable regime**
+   - high coherence
+   - low risk
+
+2. **Transition regime**
+   - fragmentation
+   - curvature increase
+
+3. **Collapse regime**
+   - divergence
+   - manifold departure
+
+---
+
 ## ⚠️ Current Limitations
 
-- Full prevention of collapse ❌  
-- Limited actuator realism  
-- No sustained orbit / phase locking  
-- Attractor dynamics still experimental  
-- Requires validation vs:
+- full collapse prevention ❌  
+- actuator realism limited  
+- no sustained attractor navigation  
+- requires validation vs:
   - PV curves  
   - eigenvalue analysis  
   - continuation power flow  
@@ -249,39 +239,20 @@ Transforms high-dimensional system state into geometry:
 
 ## 🔮 Next Milestones
 
-1. Strengthen real grid coupling  
-2. Multi-step prediction (lookahead)  
-3. Adaptive λ control  
-4. Stability basin mapping  
-5. Multi-attractor navigation  
-6. Scaling to large grids  
+- multi-step prediction (lookahead)
+- adaptive λ control
+- stability basin mapping
+- multi-attractor navigation
+- real grid data integration
 
 ---
 
-## 🧠 Summary
+## 🧠 Final Insight
 
-NEXAH provides a **geometry-based stability framework**:
-
-- early detection ✔  
-- structured state space ✔  
-- adaptive control ✔  
-- real grid prototype ✔  
-
-but:
-
-- full navigation ❌  
-- full physical validation ❌  
-
-remain open challenges.
-
----
-
-## 🔥 Final Insight
-
-> Instability is not only a voltage problem.  
+> Instability is not a voltage problem.  
 > It is a **structural transformation in system dynamics**.
 
-NEXAH makes this structure:
+NEXAH makes this transformation:
 
 → visible  
 → measurable  
@@ -289,5 +260,14 @@ NEXAH makes this structure:
 
 ---
 
+## 🌀 NEXAH
+
+> From simulation → structure  
+> From structure → navigation  
+> From navigation → stability  
+
+---
+
 **Author:** Thomas K. R. Hofmann  
 April 2026
+
