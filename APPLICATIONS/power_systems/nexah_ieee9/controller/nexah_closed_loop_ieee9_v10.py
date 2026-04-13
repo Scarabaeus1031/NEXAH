@@ -1,5 +1,5 @@
 # nexah_closed_loop_ieee9_v10.py
-# V10.1 — Minimal Navigator with Boundary Repulsion (Fix)
+# V10.2 — Minimal Navigator with Balanced Field (FIXED DYNAMICS)
 
 import numpy as np
 import pandas as pd
@@ -12,15 +12,20 @@ LAMBDA_INIT = 0.5
 LAMBDA_MIN = 0.5
 LAMBDA_MAX = 2.2
 
-# --- synthetic fields (same as before) ---
+# --- synthetic fields ---
 def compute_risk(lmbda):
     return 1 / (1 + np.exp(-(lmbda - 1.6) * 5))
 
 def compute_distance(lmbda):
     return 1.4 - 0.4 * np.exp(-(lmbda - 1.5)**2 * 3)
 
+# --- 🔥 NEW: balanced navigation field ---
 def compute_navigation_field(grad, dist, risk):
-    return -grad - (dist - 1.0) - risk
+    w_grad = 1.0
+    w_dist = 0.3   # ↓ distance less dominant
+    w_risk = 1.2   # ↑ risk more important
+
+    return -w_grad * grad - w_dist * (dist - 1.0) - w_risk * risk
 
 # --- init ---
 lambda_val = LAMBDA_INIT
@@ -42,14 +47,14 @@ for step in range(STEPS):
     else:
         grad = risk - prev_risk
 
-    # --- 🔥 NEW: boundary repulsion (fix) ---
+    # --- 🔥 boundary repulsion (keeps system inside domain) ---
     center = 1.3
     repulsion = 0.3 * (center - lambda_val)
 
     # --- field ---
     field_raw = compute_navigation_field(grad, dist, risk) + repulsion
 
-    # smooth update
+    # smooth dynamics
     field = 0.8 * (field_history[-1] if field_history else 0) + 0.2 * field_raw
 
     # update lambda
@@ -87,7 +92,7 @@ plt.plot(lambda_history, label="lambda")
 plt.plot(risk_history, label="risk")
 plt.plot(dist_history, label="distance")
 plt.legend()
-plt.title("V10.1 Navigator Dynamics")
+plt.title("V10.2 Navigator Dynamics")
 plt.savefig(f"{out_dir}/output_v10_plot.png")
 plt.close()
 
