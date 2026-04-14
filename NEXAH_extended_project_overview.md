@@ -95,7 +95,7 @@ The project did not start with Power Systems or a finished framework. It grew or
 
 ---
 
-### 2.1 Emergent Navigation (Multi-Agent Insight)
+## Conceptual Breakthrough — Emergent Navigation (Multi-Agent Insight)
 
 One of the most important conceptual breakthroughs in NEXAH appears in early multi-agent experiments.
 
@@ -119,7 +119,7 @@ This leads to:
 
 #### Interpretation
 
-Classical control / RL paradigm:
+Classical paradigm:
 
 ```text
 state → action → reward → policy
@@ -149,10 +149,10 @@ It can emerge directly from:
 
 #### Role in the Project
 
-This insight is critical because it:
+This insight:
 
 - connects control theory with dynamical systems  
-- suggests an alternative to reinforcement learning  
+- suggests an alternative perspective to reinforcement learning  
 - generalizes across domains (power systems, discrete systems, multi-agent systems)  
 
 ---
@@ -162,6 +162,11 @@ This insight is critical because it:
 - demonstrated in BUILDER_LAB experiments  
 - conceptually strong  
 - not yet fully formalized or benchmarked  
+
+---
+
+This suggests that navigation may be a fundamental property of structured dynamical systems,
+rather than a behavior requiring explicit optimization.
 
 ---
 
