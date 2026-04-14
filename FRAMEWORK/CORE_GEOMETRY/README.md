@@ -17,6 +17,24 @@ into a unified model of:
 
 ---
 
+## 🔬 Mathematical Foundation
+
+The geometric interpretation of CORE_GEOMETRY is formalized in:
+
+👉 [Geometric State-Space Framework](./GEOMETRIC_FRAMEWORK.md)
+
+This document defines:
+
+- the geometric embedding of system states  
+- the field representation \( \dot{x} = F(x) \)  
+- the coherence measure \( C(x) \)  
+- the risk field \( R(x) \)  
+- the control formulation \( \dot{x} = F(x) + u(x) \)  
+
+It provides the **mathematical backbone** of the NEXAH framework and connects visual intuition with formal system dynamics.
+
+---
+
 ## 🔁 Position in the NEXAH Architecture
 
 CORE_GEOMETRY sits between:
