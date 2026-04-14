@@ -82,5 +82,3 @@ The NAVIGATOR keeps this process coherent.
 
 NEXAH Navigator
 Architecture, direction, and system orientation
-
-
