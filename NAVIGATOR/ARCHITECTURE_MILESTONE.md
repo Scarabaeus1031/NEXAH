@@ -2,92 +2,151 @@
 
 This document records a major development milestone of the **NEXAH Framework**.
 
-The core architecture of the system stack has reached a functional stage where the framework can analyze, simulate, and navigate complex system regimes.
+The core architecture has reached a stage where the system can:
+
+→ analyze  
+→ structure  
+→ simulate  
+→ **navigate**  
+
+complex dynamical regimes.
 
 ---
 
-# Core System Stack
+# 🧭 Core System Stack
 
 The NEXAH framework is organized into five structural layers:
 
+```text
 META → ARCHY → MESO → NEXAH → MEVA
+```
 
-Each layer contributes a specific capability to the architecture.
+Each layer contributes a distinct capability:
 
 | Layer | Function |
 |-------|----------|
 | META  | system definition and relational structure |
 | ARCHY | regime structure and system organization |
-| MESO  | risk geometry and system stability metrics |
-| NEXAH | navigation and decision strategies (incl. triple spiral coupling) |
+| MESO  | risk geometry and stability metrics |
+| NEXAH | navigation and decision strategies |
 | MEVA  | execution and system control |
-
-Together these layers transform:
-
-system definitions → regime structures → risk landscapes → navigable trajectories.
 
 ---
 
-# Milestone Achievement
+## 🔬 System Transformation
+
+Together, these layers transform:
+
+system definitions  
+→ regime structures  
+→ risk landscapes  
+→ navigable trajectories  
+
+---
+
+# 🚀 Milestone Achievement
 
 The following architectural components are now operational:
 
-- System definition schema (JSON-based system modeling)
-- Regime mapping and transition graph detection
-- Risk gradient computation and collapse distance analysis
-- Tipping point and early warning signal detection
-- Cascade simulation and collapse propagation modeling
-- Resilience and fragility metrics
-- System phase space representation
-- Energy landscape modeling
-- Safe navigation path computation
-- Policy-driven execution layer
-- Visualization tools for regime and risk landscapes
-- **Triple Spiral Coupling Layer (v9.x)** with Water–Mercury–Ferrofluid, Dual-Strand Grey Channel and Elastic Dual Lock (Span-Gurt)
+- system definition schema (JSON-based modeling)  
+- regime mapping and transition graph detection  
+- risk gradient computation and collapse distance analysis  
+- tipping point and early warning signal detection  
+- cascade simulation and propagation modeling  
+- resilience and fragility metrics  
+- phase space reconstruction  
+- energy landscape modeling  
+- safe trajectory computation  
+- policy-driven execution layer  
+- visualization tools for structure and risk fields  
 
 ---
 
-# Current System Capability
+## 🌀 New: Spiral Coupling Layer (v9.x)
+
+The architecture now includes:
+
+- Triple Spiral Coupling  
+- Water–Mercury–Ferrofluid interaction model  
+- Dual-Strand Grey Channel  
+- Elastic Dual Lock (Span-Gurt)  
+
+---
+
+### 🧠 Interpretation
+
+This layer enables:
+
+→ coherence-guided motion  
+→ strand switching  
+→ dynamic stabilization across regimes  
+
+Navigation is no longer scalar — it becomes multi-channel and structured.
+
+---
+
+# ⚡ Current System Capability
 
 The framework can now:
 
-- load structured system definitions
-- detect regime transitions
-- compute collapse risk gradients
-- simulate cascading failures
-- identify tipping points and early warning signals
-- compute resilience and fragility metrics
-- construct system phase spaces
-- generate energy landscapes
-- compute safe navigation trajectories
-- perform coherence-guided spiral coupling and strand switching
-
-This establishes the **first complete operational version of the NEXAH navigation architecture** including multi-component spiral dynamics.
+- load structured system definitions  
+- detect regime transitions  
+- compute collapse risk gradients  
+- simulate cascading failures  
+- identify tipping points and early warning signals  
+- compute resilience and fragility metrics  
+- construct system phase spaces  
+- generate energy landscapes  
+- compute safe navigation trajectories  
+- perform spiral coupling and strand-based transitions  
 
 ---
 
-# Next Development Targets
+## 🧭 Key Breakthrough
+
+Transition achieved:
+
+analysis → navigation  
+
+The system no longer only observes instability.
+
+It:
+
+→ detects structure  
+→ predicts transitions  
+→ navigates system trajectories in real time  
+
+---
+
+# 🔮 Next Development Targets
 
 The next milestones focus on:
 
-- expanding system datasets
-- building a web-based system explorer
-- extending policy modules
-- improving simulation trace logging
-- integrating real-world telemetry systems
-- closing the full action/execution loop (MEVA)
-
-These developments will move the framework from a **research architecture** toward a **general system navigation platform**.
-
----
-
-# Milestone Summary
-
-**Status:** Core architecture operational.
-
-The NEXAH framework now functions as a **structural navigation system for complex dynamic environments** with triple spiral coupling and Elastic Dual Lock as active navigation components.
+- expanding system datasets  
+- building a web-based system explorer  
+- extending policy modules  
+- improving simulation trace logging  
+- integrating real-world telemetry systems  
+- closing the full action/execution loop (MEVA)  
+- multi-dimensional navigation  
 
 ---
 
-**NEXAH Architecture Milestone**  
-April 2026 – Introduction of Spiral Coupling Layer
+# 🧠 Milestone Summary
+
+Status: Core architecture operational.
+
+The NEXAH framework now functions as a structural navigation system for complex dynamical environments including:
+
+- field-based dynamics  
+- trajectory-aware control  
+- multi-layer system abstraction  
+- spiral coupling mechanisms  
+
+---
+
+## 🔥 Final Insight
+
+Complex systems are not controlled through thresholds.
+
+They are navigated through structure.
