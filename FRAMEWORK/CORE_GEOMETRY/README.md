@@ -30,121 +30,98 @@ It provides the missing link:
 
 ---
 
-## 🌐 From Geometry to Field (NEW)
-
-CORE_GEOMETRY extends the framework beyond structure:
+## 🌐 From Geometry to Field
 
 > Systems do not move between states.  
 > They move within a **structured field**.
 
-This introduces:
+---
 
-- geometric transition manifolds  
-- field-aligned trajectories  
-- coherence-based stability  
+## 🌊 Field Structure (Empirical Evidence)
+
+![Flow Field](./visuals/IEEE118-OFF-MANIFOLD_STABILITY_OVERLAY_IEEE118.png)
+
+*System trajectories follow structured flow — not randomness.*
+
+- motion is directional  
+- instability follows field structure  
+- stable and unstable regions emerge geometrically  
+
+👉 **Insight:**  
+The system already contains its own navigable structure.
 
 ---
 
-## 🧭 Motivation
+## 🔀 Transition Geometry (Separatrix)
 
-Classical models describe systems as:
+![Separatrix](./visuals/NEXAH-Separatrix_Extraction(Concept_Visual).png)
 
-- discrete states  
-- graph transitions  
-- instantaneous regime changes  
+> A regime transition is not a point —  
+> it is a **geometric boundary in state space**.
 
-However, empirical observations in NEXAH show:
-
-- transitions are extended in space and time  
-- intermediate regions have structure  
-- branching is continuous and geometry-dependent  
-- trajectories follow organized paths (loops, shells, channels)  
-- motion is governed by phase and field alignment  
-
-Thus:
-
-> transitions are not edges —  
-> they are **geometric processes**
+- separatrix = decision boundary  
+- defines stable vs unstable trajectories  
+- enables early detection of collapse  
 
 ---
 
-## 🔬 Core Principle
+## 🎯 Control on the Field
 
-> A regime transition is a **structured manifold in state space**.
+![Controller](./visuals/NEXAH-Controller_on_2D_Navigable_Field.png)
 
----
+> Control is not external.  
+> It operates **within the geometry of the field**.
 
-## 🧩 Fundamental Elements
-
-| Element | Meaning |
-|--------|--------|
-| Manifold | continuous transition region |
-| Cut | instability threshold |
-| Branch | multi-path expansion |
-| Field | continuous motion |
+- trajectories are reshaped  
+- not just corrected  
+- movement is geometry-aware  
 
 ---
 
-## 🧠 Transition Triptych
+## 🧭 Trajectory Steering
 
-| Layer | Interpretation |
-|------|----------------|
-| Error | deviation from stability |
-| Phase | internal correction |
-| Geometry | spatial manifestation |
+![Trajectory](./visuals/NEXAH-Steer_Trajectory_Away_from_Separatrix.png)
 
-→ **error → phase → geometry**
+> Stability is maintained by **steering trajectories away from critical regions**.
 
----
-
-## 🌀 Geometric Interpretation
-
-CORE_GEOMETRY introduces:
-
-- oval manifolds  
-- cuts (thresholds)  
-- branches (multi-future structure)  
-- shells (containment layers)  
-- rings (directional structure)  
-- loops (cyclic stability)  
+- avoids separatrix crossing  
+- maintains safe system operation  
+- enables predictive control  
 
 ---
 
-## 🔁 Transition Dynamics
+## ⚡ Early Collapse Detection
 
-1. instability emerges  
-2. manifold entry  
-3. interaction with cut  
-4. branching  
-5. reorganization  
+![Early Detection](./visuals/NEXAH-FIELDEarly_Collapse_Detection_A1=1000.png)
 
----
+> Collapse is detectable **before it happens**.
 
-## 🔗 Relation to Field Dynamics
-
-```
-Field → Geometry → Operator
-```
-
-- Field = motion  
-- Geometry = transition  
-- Operator = decision  
+- up to **43.9 seconds early**  
+- based on geometric field structure  
+- not threshold-based  
 
 ---
 
-# 🔬 Coherence & Field Structure (NEW)
+## 🧭 Geometric Framework Overview
 
-## 🧠 Coherence Definition
+![Framework](./visuals/NEXAH_structural_navigation_framework.png)
 
-Coherence measures the alignment between system motion and field direction.
+CORE_GEOMETRY integrates:
 
-\[
-C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
-\]
+- field structure  
+- transition manifolds  
+- control trajectories  
+- navigation logic  
 
 ---
 
-## 📊 Interpretation
+## 🔬 Coherence & Field Alignment
+
+Coherence measures alignment between system motion and field direction:
+
+$begin:math:display$
+C\(x\) \= \\frac\{\\dot\{x\} \\cdot F\(x\)\}\{\|\\dot\{x\}\| \\\, \|F\(x\)\|\}
+$end:math:display$
 
 | Value | Meaning |
 |------|--------|
@@ -154,23 +131,7 @@ C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
 
 ---
 
-## 🔥 Core Insight
-
-> Stability is not equilibrium.  
->  
-> It is **alignment with the field geometry**.
-
----
-
-## 🔁 Field Split (v5–v6 Discovery)
-
-Empirical results show:
-
-> The field splits into two opposing directional flows.
-
----
-
-### Field Decomposition
+## 🔁 Field Split (Empirical Observation)
 
 ```text
 Forward Flow   → C > 0
@@ -178,36 +139,13 @@ Interface      → C ≈ 0
 Backward Flow  → C < 0
 ```
 
----
-
-## 🧠 Interpretation
-
-- forward flow → stable evolution  
-- backward flow → fragmentation / drift  
-- interface → transition zone  
+👉 **Insight:**  
+The interface is not a boundary —  
+it is a **region of reorganization**.
 
 ---
 
-## 🔥 Key Insight
-
-> The interface is not a boundary.  
->  
-> It is a **region of reorganization**.
-
----
-
-## 🧭 Relation to Transition Geometry
-
-| Geometry Element | Coherence Role |
-|------------------|---------------|
-| Oval | varying coherence field |
-| Cut | critical coherence threshold |
-| Branch | divergence after coherence loss |
-| Loop | coherence recovery |
-
----
-
-# ⚙️ Operators (Formal Role)
+## ⚙️ Operators (Formal Role)
 
 - **TMO** → transition detection  
 - **BSO** → path selection  
@@ -219,81 +157,25 @@ Backward Flow  → C < 0
 
 ## 🧭 Conceptual Pipeline
 
-```
+```text
 Simulation → Field → Geometry → Operator → Navigation → Execution
 ```
 
 ---
 
-# 🎨 Visual System
-
-## 🧭 Visual Atlas
+## 🎨 Visual Atlas
 
 👉 **[CORE GEOMETRY VISUAL ATLAS](./CORE_GEOMETRY_VISUALS.md)**
 
----
+Contains:
 
-## 🔍 What the Visuals Show
-
-The atlas reveals:
-
-- field structure (vector flow)  
-- compression into transition corridors  
-- emergence of geometric manifolds  
-- operator trajectories inside constraints  
-- branching and exit dynamics  
+- full visual exploration  
+- experimental structures  
+- extended geometry variants  
 
 ---
 
-## 🧩 Key Visual Layers
-
-| Layer | Visual Meaning |
-|------|--------------|
-| Field | possibility space |
-| Compression | structure formation |
-| Geometry | transition manifold |
-| Operator | controlled trajectory |
-
----
-
-## 🔬 New Visual Evidence (v5–v6)
-
-Recent experiments reveal:
-
-- radial flow oscillations  
-- forward/backward flow separation  
-- interface clustering  
-- nested loop structures  
-- spiral / Möbius-like transitions  
-
-These are visible in:
-
-- `coherence_flow_v5.png`  
-- `coherence_field_split_v6.png`  
-- `coherence_radial_flow_v6.png`  
-
----
-
-## 🔥 Core Visual Insight
-
-> trajectories do not define the system  
->  
-> geometry defines the trajectories  
-
----
-
-# 🌐 Physical Interpretation
-
-The system behaves like:
-
-- flow in a vector field  
-- motion in a potential landscape  
-- phase-driven drift  
-- constrained manifold dynamics  
-
----
-
-## 🧠 Key Insight
+## 🧠 Core Insight
 
 > Systems do not jump between states.  
 >  
@@ -308,21 +190,7 @@ The system behaves like:
 - multi-future modeling  
 - field-aware navigation  
 - collapse avoidance  
-- multi-agent coordination  
-
----
-
-## 🔬 Relation to Observations
-
-Explains:
-
-- oval phase distributions  
-- clustering near thresholds  
-- branching structures  
-- loops and spirals  
-- shell and ring systems  
-- phase-driven transitions  
-- directional flow splitting (NEW)  
+- trajectory control  
 
 ---
 
