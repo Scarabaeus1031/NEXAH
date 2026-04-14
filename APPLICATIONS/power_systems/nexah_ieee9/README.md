@@ -59,6 +59,27 @@ Key idea:
 Simulation → Features → Manifold → Field → Risk → Policy → Control → Navigation
 ```
 
+``md
+## 🧭 Version Map (Controller Evolution)
+
+NEXAH evolves through iterative controller and field-model versions.
+
+| Version | Status | Description |
+|--------|--------|------------|
+| v6 | ✅ public | stable closed-loop control (reproducible) |
+| v7 | 🧪 experimental | introduction of dynamic response behavior |
+| v8 | 🧪 experimental | rotational / oscillatory dynamics |
+| v9 | 🧪 experimental | coupled phase system (λ, ψ) |
+| v10 | 🧪 experimental | field surface reconstruction |
+| v11 | 🧪 internal | early navigation behavior (prototype) |
+
+**Interpretation:**
+
+- v6 = current **reference implementation**  
+- v7–v11 = **evolution toward full field navigation**  
+
+👉 This repository contains a **clean, reproducible subset** of the full development process.
+
 ---
 
 ## 🎬 Field Navigation (Prototype)
