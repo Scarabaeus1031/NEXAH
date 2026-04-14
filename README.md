@@ -29,21 +29,6 @@ systems are understood as existing within a:
 
 ---
 
-## 🧭 Explore the Full System
-
-The IEEE results shown here are only one application of NEXAH.
-
-The full system includes:
-
-- 🧭 [NAVIGATOR](NAVIGATOR/README.md) → system orientation & architecture overview  
-- 🏗 [Architecture](NAVIGATOR/ARCHITECTURE.md) → full system design & current state  
-- 📊 [System Capabilities](NAVIGATOR/SYSTEM_CAPABILITIES.md) → what NEXAH can actually do  
-
-👉 This README is a **showcase**.  
-👉 The NAVIGATOR layer reveals the **full framework behind it**.
-
----
-
 ## 🔥 Key Result — Real Power Systems
 
 ![NEXAH IEEE Result](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
