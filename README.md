@@ -39,6 +39,10 @@ NEXAH is a domain-independent framework — power systems are one validated exam
 
 👉 Demonstrated on IEEE benchmark systems up to **9241 buses**
 
+Note:
+The repository contains a cleaned and reproducible subset of the full development history.  
+Some visual results shown below originate from more recent internal iterations.
+
 ---
 
 ## 🔬 Core Idea
@@ -147,8 +151,12 @@ It **reads the structure of the system** and adapts behavior accordingly.
 - reduced oscillation  
 - improved safe utilization (qualitative)  
 
-⚠️ Navigation layer currently under active development
+⚠️ Navigation layer currently under active development  
 
+Note:
+- The visualization above is based on **internal experimental versions (v7–v11)**  
+- The latest **public, reproducible version is v6** (see Run section below)
+  
 ---
 
 # 🧠 System Interpretation
@@ -207,9 +215,14 @@ A complex physical system can be:
 
 # 🚀 Run
 
-### IEEE9 Controller (current stable)
+### IEEE9 Controller (current stable, public version)
 
+```bash
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+```
+Note:
+	•	v6 is the latest clean and reproducible version in this repository
+	•	newer iterations (v7–v11) exist internally and are currently being consolidated
 
 ---
 
