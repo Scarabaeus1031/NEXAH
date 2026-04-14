@@ -164,6 +164,23 @@ where:
 
 ---
 
+## 🧭 Explore the Full System
+
+The IEEE results shown here are only one application of NEXAH.
+
+NEXAH is a general framework for navigating structure in complex systems.
+
+Explore the full system:
+
+- 🧭 [NAVIGATOR](NAVIGATOR/README.md) → system overview & orientation  
+- 🏗 [Architecture](NAVIGATOR/ARCHITECTURE.md) → full system design  
+- 📊 [System Capabilities](NAVIGATOR/SYSTEM_CAPABILITIES.md) → operational scope  
+
+👉 This README is a **showcase**  
+👉 The NAVIGATOR reveals the **actual system behind it**
+
+---
+
 # 🔥 Key Result
 
 A complex physical system can be:
@@ -218,21 +235,6 @@ Includes:
 | Adaptive Control | ⚠️ prototype |
 | Phase Dynamics | ✅ |
 | Field Navigation | 🚧 in development |
-
----
-
-## 🧭 Explore the Full System
-
-The IEEE results shown here are only one application of NEXAH.
-
-The full system includes:
-
-- 🧭 [NAVIGATOR](NAVIGATOR/README.md) → system orientation & architecture overview  
-- 🏗 [Architecture](NAVIGATOR/ARCHITECTURE.md) → full system design & current state  
-- 📊 [System Capabilities](NAVIGATOR/SYSTEM_CAPABILITIES.md) → what NEXAH can actually do  
-
-👉 This README is a **showcase**.  
-👉 The NAVIGATOR layer reveals the **full framework behind it**.
 
 ---
 
