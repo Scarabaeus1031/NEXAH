@@ -39,7 +39,7 @@ Run your first demo in under 2 minutes:
 - early collapse detection  
 - trajectory-aware control  
 
-👉 No rewards. No training. Just structure.
+👉 **No rewards. No training. Just structure.**
 
 ---
 
@@ -69,7 +69,7 @@ Instead of asking:
 
 NEXAH answers:
 
-> "Where are we in the field — and how can we move safely?"
+> **"Where are we in the field — and how can we move safely?"**
 
 ---
 
@@ -130,7 +130,7 @@ but:
 
 The system operates as:
 
-> a trajectory evolving within a structured stability field
+> **a trajectory evolving within a structured stability field**
 
 where:
 
@@ -158,10 +158,10 @@ NEXAH is a general framework for navigating structure in complex systems.
 ## ⚖️ Classical vs NEXAH (Essence)
 
 Classical:
-→ threshold-based, reactive
+→ threshold-based, reactive  
 
 NEXAH:
-→ field-based, trajectory-aware
+→ field-based, trajectory-aware  
 
 ---
 
