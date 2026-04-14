@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
+# ✅ FIXED IMPORT
+from nexah_ieee9.simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
 
 
 def compute_risk(vmin, loading):
@@ -54,7 +55,7 @@ def run_scan():
     plt.plot(df["lambda"], df["loading"] / 100.0, label="loading (scaled)")
     plt.plot(df["lambda"], df["risk"], label="risk")
 
-    plt.axhline(0.95, linestyle="--")  # voltage stability line
+    plt.axhline(0.95, linestyle="--")
 
     plt.xlabel("Lambda (Load Scaling)")
     plt.ylabel("Values")
