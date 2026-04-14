@@ -14,14 +14,15 @@ NEXAH is a structural navigation framework for complex dynamic systems.
 
 Its current capabilities are centered on:
 
-- relational system modeling
-- regime analysis
-- risk geometry
-- collapse and cascade analysis
-- navigation through structured system landscapes
-- execution of policy-guided trajectories
-- visual exploration of system behavior
-- **triple spiral coupling with Elastic Dual Lock** (neu v9.x)
+- relational system modeling  
+- regime analysis  
+- risk geometry  
+- collapse and cascade analysis  
+- navigation through structured system landscapes  
+- execution of policy-guided trajectories  
+- visual exploration of system behavior  
+- **triple spiral coupling with Elastic Dual Lock (v9.x)**  
+- **URF Axial Space + Root Bridge (v9.1, 3D navigation layer)**  
 
 ---
 
@@ -31,10 +32,10 @@ NEXAH can represent systems as structured relational models.
 
 Capabilities:
 
-- define entities and dependencies
-- represent systems as internal graph structures
-- load systems from JSON-based schemas
-- convert system definitions into analyzable models
+- define entities and dependencies  
+- represent systems as internal graph structures  
+- load systems from JSON-based schemas  
+- convert system definitions into analyzable models  
 
 This layer provides the structural input for all higher analysis.
 
@@ -46,11 +47,11 @@ NEXAH can extract and analyze regime structure from system behavior.
 
 Capabilities:
 
-- detect system states and transitions
-- construct regime transition graphs
-- identify attractors and stability basins
-- detect regime boundaries
-- organize structural system behavior into analyzable regimes
+- detect system states and transitions  
+- construct regime transition graphs  
+- identify attractors and stability basins  
+- detect regime boundaries  
+- organize structural system behavior into analyzable regimes  
 
 This layer turns raw system structure into regime-level organization.
 
@@ -62,15 +63,15 @@ NEXAH can compute the geometric structure of risk and instability.
 
 Capabilities:
 
-- compute collapse distance
-- construct risk gradients
-- detect tipping points
-- detect early warning signals
-- generate stability landscapes
-- compute fragility maps
-- compute resilience scores
-- represent system phase spaces
-- construct energy-like landscapes
+- compute collapse distance  
+- construct risk gradients  
+- detect tipping points  
+- detect early warning signals  
+- generate stability landscapes  
+- compute fragility maps  
+- compute resilience scores  
+- represent system phase spaces  
+- construct energy-like landscapes  
 
 This layer transforms regime structure into navigable stability geometry.
 
@@ -82,13 +83,13 @@ NEXAH can simulate cascading failure and instability propagation.
 
 Capabilities:
 
-- simulate cascade paths
-- estimate cascade probability
-- model collapse propagation
-- generate cascade trajectories
-- analyze failure spread across the system
+- simulate cascade paths  
+- estimate cascade probability  
+- model collapse propagation  
+- generate cascade trajectories  
+- analyze failure spread across the system  
 
-This is one of the main bridge layers between static structure and dynamic risk.
+This is a key bridge between static structure and dynamic risk.
 
 ---
 
@@ -98,14 +99,16 @@ NEXAH can compute navigation strategies through system regimes.
 
 Capabilities:
 
-- safe path computation
-- risk-aware trajectory planning
-- collapse avoidance strategies
-- regime-aware decision support
-- path selection through structured stability landscapes
-- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
-- coherence-guided movement along Dual-Strand Grey Channel
-- switch-mechanism between strands
+- safe path computation  
+- risk-aware trajectory planning  
+- collapse avoidance strategies  
+- regime-aware decision support  
+- path selection through structured stability landscapes  
+- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock  
+- coherence-guided movement along Dual-Strand Grey Channel  
+- switch-mechanism between strands  
+- **navigation within URF Axial Space (Root Cube + Root Bridge)**  
+- mapping of trajectories into a **3D geometric reference frame**  
 
 This layer is the core of NEXAH as a navigation framework.
 
@@ -117,13 +120,13 @@ NEXAH can execute navigation policies and simulate their consequences.
 
 Capabilities:
 
-- apply control actions
-- override drift transitions
-- update system state
-- simulate trajectories under policy
-- record system evolution
+- apply control actions  
+- override drift transitions  
+- update system state  
+- simulate trajectories under policy  
+- record system evolution  
 
-This layer turns navigation logic into executable behavior.
+This layer turns navigation logic into executable system behavior.
 
 ---
 
@@ -133,14 +136,18 @@ NEXAH provides multiple ways to inspect system structure visually.
 
 Capabilities:
 
-- regime graphs
-- risk landscapes
-- collapse and cascade visualizations
-- tipping point diagrams
-- fragility maps
-- energy landscape diagrams
-- phase-space-like representations
-- Layer Energy over Time, Pair Coupling Distances, Dual-Strand Grey Channel visuals
+- regime graphs  
+- risk landscapes  
+- collapse and cascade visualizations  
+- tipping point diagrams  
+- fragility maps  
+- energy landscape diagrams  
+- phase-space representations  
+- Layer Energy over Time  
+- Pair Coupling Distances  
+- Dual-Strand Grey Channel visuals  
+- **Root Cube / White Cube / Black Cube (3D geometry)**  
+- **Triple Spiral + Root Bridge interaction visuals**  
 
 These tools make the discovered structure visible and interpretable.
 
@@ -150,15 +157,16 @@ These tools make the discovered structure visible and interpretable.
 
 At its current stage, NEXAH is strongest in:
 
-- structural discovery
-- regime mapping
-- risk geometry
-- early instability indication
-- cascade analysis
-- navigation-ready system interpretation
-- **triple spiral coupling with Elastic Dual Lock**
+- structural discovery  
+- regime mapping  
+- risk geometry  
+- early instability indication  
+- cascade analysis  
+- navigation-ready system interpretation  
+- **coherence-guided navigation via spiral coupling**  
+- **embedding dynamics into stable 3D geometry (URF Axial Space)**  
 
-Navigation and execution are already operational, but continue to evolve on top of the stronger discovery and geometry layers.
+Navigation and execution are operational and now increasingly aligned with geometric field structure.
 
 ---
 
@@ -168,12 +176,13 @@ The framework is designed to be domain-independent.
 
 Current and intended application areas include:
 
-- energy grids
-- infrastructure systems
-- distributed computing systems
-- supply chains
-- complex organizational systems
-- other dynamic networked environments
+- energy grids  
+- infrastructure systems  
+- dynamical systems (chaos / attractors)  
+- distributed computing systems  
+- supply chains  
+- complex organizational systems  
+- other dynamic networked environments  
 
 ---
 
@@ -181,15 +190,17 @@ Current and intended application areas include:
 
 The framework currently supports the following progression:
 
+```text
 system modeling
     ↓
 regime analysis
     ↓
 risk geometry
     ↓
-navigation (incl. spiral coupling)
+navigation (incl. spiral + 3D geometry)
     ↓
 execution
+```
 
 This makes NEXAH a unified system for exploring and acting within complex dynamic environments.
 
@@ -197,22 +208,22 @@ This makes NEXAH a unified system for exploring and acting within complex dynami
 
 ## 🔥 Core Statement
 
-```text
 NEXAH can model system structure,
 extract regimes,
 compute risk geometry,
 simulate collapse,
 and navigate toward stability
-with triple spiral coupling and Elastic Dual Lock.
-```
+within a coherent 3D field
+using spiral coupling and geometric control.
 
-## Status
+---
+
+## 🧭 Status
 
 Current status:
-    - operational
-    - modular
-    - extensible
-    - research-driven
-    - still evolving toward broader integration and application
-
-
+	•	operational
+	•	modular
+	•	extensible
+	•	research-driven
+	•	transitioning into a 3D navigation-capable system architecture
+	•	actively evolving toward real-world integration and deployment
