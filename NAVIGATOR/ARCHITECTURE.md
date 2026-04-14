@@ -223,3 +223,30 @@ They are navigated through structure.
 
 **NEXAH Architecture**  
 Unified system definition and implementation state
+
+
+## 🧩 NEXAH Layer (Conceptual Bridge)
+
+The `nexah/` layer represents the transition from:
+
+```text
+ENGINE → FRAMEWORK → NEXAH
+```
+
+It is where:
+
+- structure becomes field  
+- field becomes geometry  
+- geometry becomes navigable  
+
+It provides:
+
+- lightweight package access  
+- field abstractions  
+- navigation primitives  
+- geometric reference systems  
+- operational transition logic  
+
+In this sense, `nexah/` is the layer where:
+
+> NEXAH becomes directly usable as a navigation system.
