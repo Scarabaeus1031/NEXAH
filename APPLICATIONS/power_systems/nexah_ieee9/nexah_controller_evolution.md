@@ -74,128 +74,154 @@ This layer represents the transition from:
 
 ---
 
-## ⚠️ Critical Limitation
+---
 
-The system still:
+## 🔹 v10 — Field Exploration Mode
 
-- dissipates energy (strong ψ damping)
-- collapses into a stable attractor
-- cannot sustain motion
+### Transition
+
+Shift from phase dynamics to field-based analysis.
+
+### Method
+
+- System is scanned over λ
+- Stability indicators extracted:
+  - vmin (voltage stability)
+  - loading (system stress)
+- Risk function constructed:
+
+\[
+risk(λ) = \max(0, 0.97 - v_{min}) + \max(0, (loading - 80)/100)
+\]
+
+### Behavior
+
+- Continuous stability surface obtained
+- Emergence of nonlinear regions
+- Identification of structural transitions
 
 ---
 
-## 🧠 Core Insight
+## 🔹 v11 — Stability Field & Navigation
+
+### Upgrade
+
+Introduction of explicit field geometry:
+
+- First derivative:  
+  \[
+  \frac{∂risk}{∂λ}
+  \]
+
+- Second derivative:  
+  \[
+  \frac{∂²risk}{∂λ²}
+  \]
+
+---
+
+## 📈 Observed Field Structure
+
+Two distinct regimes identified:
+
+### 🟡 Regime 1 — Structural Transition (~λ ≈ 0.8)
+
+- First curvature appears  
+- Field begins to deform  
+- System remains stable  
+
+---
+
+### 🔴 Regime 2 — Instability Onset (~λ ≈ 1.25+)
+
+- Rapid increase in risk  
+- Nonlinear amplification  
+- System approaches collapse boundary  
+
+---
+
+## ⚠️ Critical Insight
+
+> Instability is not defined by first curvature  
+> but by nonlinear amplification in the risk field.
+
+---
+
+## 🧭 v11_2 — Field-Based Navigation Controller
+
+### Concept
+
+Controller operates on extracted field geometry:
+
+\[
+λ_{target} = λ_{critical} - Δ
+\]
+
+### Behavior
+
+- Smooth convergence toward stability boundary  
+- No oscillation  
+- No collapse  
+- Maximum safe system utilization  
+
+---
+
+## 🔬 Conceptual Breakthrough
 
 Transition achieved:
 
-State Control → Dynamical System
-
-But not yet:
-
-Dynamical System → Navigable Field Flow
-
----
-
-## 🔥 Key Discovery
-
-To achieve true NEXAH behavior:
-
-> Energy balance must shift
-
-Condition:
-
-\[
-rotation > damping
-\]
-
----
-
-## 🔮 Next Step — v10 (Target)
-
-### Goal
-
-Create a **limit cycle**
-
-### Expected Behavior
-
-- Closed loop in phase space (λ vs ψ)
-- Persistent oscillatory motion
-- Self-sustained dynamics
-
----
-
-## ⚙️ Parameter Direction
-
-```python
-psi_damping = 0.05
-psi_rot_amp = 0.12
-lambda_phase_coupling = 0.06
+```text
+Dynamical System → Field-Based Navigation
 ```
 
-## 🧭 Interpretation within NEXAH Framework
+## 🔬 Conceptual Breakthrough
 
-| Version | Role |
-|--------|------|
-| v7 | Stabilization |
-| v8 | Perturbation |
-| v9 | Dynamical coupling |
-| v10 (target) | Self-sustained motion |
+Control is no longer:
 
----
+> reactive (based on state error)
 
-## 🔬 Conceptual Transition
+but:
 
-The controller is no longer:
-
-> a regulator
-
-It is becoming:
-
-> a **field-driven dynamical navigator**
+> predictive (based on field geometry)
 
 ---
 
-## 🧩 System Layer Separation
+## 🧠 NEXAH Interpretation
 
-The project now consists of two interacting layers:
+The system now operates as:
 
-### 1. Application Layer (IEEE System)
-- Risk field  
-- Collapse dynamics  
-- Adaptive policy (v3)
+> a trajectory evolving within a structured stability field
 
-### 2. NEXAH Core Layer
-- Field dynamics  
-- Phase coupling  
-- Trajectory shaping  
+where:
+
+- field = extracted from system physics  
+- geometry = defines safe and unsafe regions  
+- navigation = movement within field  
 
 ---
 
-## 🔥 Final Insight
+## 🔥 Key Result
 
-This stage marks a fundamental shift:
+A complex physical system can be:
 
-> Control is no longer applied to the system  
-
-but emerges from:
-
-> the geometry and dynamics of the field itself  
+- mapped into a stability field  
+- analyzed via geometric properties  
+- navigated safely without direct collapse interaction  
 
 ---
 
-## 🚀 Outlook
+## 🚀 Outlook (Updated)
 
-Next milestones:
+Next directions:
 
-- Establish limit cycles (v10)  
-- Map vector fields (flow structure)  
-- Identify stability basins  
-- Enable trajectory navigation through phase space  
-- Integrate with real power system dynamics  
+- Real-time field estimation (online NEXAH)  
+- Adaptive safety margins  
+- Multi-agent navigation within field  
+- Extension to multi-dimensional state spaces  
+- Integration with real grid data  
 
 ---
 
 **Status:**  
-Transition complete → entering **true dynamical regime exploration**
-
+Field extraction + navigation achieved → entering **true NEXAH operational regime**
 
