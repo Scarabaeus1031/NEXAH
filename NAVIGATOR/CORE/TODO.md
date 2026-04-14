@@ -12,48 +12,67 @@ Transition NEXAH from visual/intuitive geometry toward a
 
 ---
 
-## 🔴 Priority 1 – Mathematical Core (2–3 weeks focus)
+## 🔴 Priority 1 – Mathematical Core (STATUS UPDATE)
 
-- [ ] Define unified state representations and the mapping between them  
-  (engineering features ↔ geometric coordinates: C, switch, r, θ)
+- [x] Define unified state representations and the mapping between them  
+  (engineering features ↔ geometric coordinates: C, r, θ, s)  
+  → DONE in `GEOMETRIC_FRAMEWORK.md`
 
-- [ ] Write precise, reproducible definitions for all core features  
-  (coherence, derivatives, residual, distance, risk, etc.)
+- [~] Write precise, reproducible definitions for all core features  
+  (coherence, derivatives, residual, distance, risk, etc.)  
+  → PARTIAL (coherence + risk done, rest still implicit in code)
 
-- [ ] Formalize stability as a region in state space and define the Risk Field
+- [x] Formalize stability as a region in state space and define the Risk Field  
+  → DONE (`risk_field.md` + framework integration)
 
-- [ ] Write the control equation:  
-  `dx/dt = f(x) + u(x, risk, geometry)`
+- [x] Write the control equation:  
+  `dx/dt = f(x) + u(x, risk, geometry)`  
+  → DONE (framework + IEEE implementation)
 
-- [ ] Create a clean, self-contained document:  
-  `nexah/core/geometric_framework.md` (1–2 pages max)
+- [x] Create a clean, self-contained document:  
+  `FRAMEWORK/CORE_GEOMETRY/GEOMETRIC_FRAMEWORK.md`  
+  → DONE (very strong already)
 
-→ Explicitly link everything to the 43.9 s result.
-
----
-
-## 🟠 Priority 2 – Repository Cleanup (parallel, 1 week)
-
-- [ ] Create `nexah/core/` as the clean engineering core
-- [ ] Move strongly symbolic/experimental files to `nexah/symbolic_lexicon/experimental/` with clear disclaimer
-- [ ] Remove or rephrase symbolic language in main README and engineering documentation
+→ 🔥 Core math layer is now **~80–90% complete**
 
 ---
 
-## 🔵 Priority 3 – Release & Collaboration Preparation
+## 🟠 Priority 2 – Repository Cleanup (STATUS UPDATE)
 
-- [ ] Get adaptive control running on IEEE118 (basic version)
-- [ ] Create one clean minimal demo script (`run_nexah_demo.py`)
-- [ ] Update main README + APPLICATIONS README to reflect the geometric state-space framing
+- [ ] Create `nexah/core/` as the clean engineering core  
+  → NOT DONE (optional but recommended for collaborators)
+
+- [ ] Move strongly symbolic/experimental files to `nexah/symbolic_lexicon/experimental/`  
+  → NOT DONE (low priority unless publishing to academia)
+
+- [~] Remove or rephrase symbolic language in main README  
+  → PARTIAL (main README is now clean, rest of repo still mixed)
+
+→ 🧠 Cleanup is **~40% done (good enough for soft release)**
 
 ---
 
-## 🚀 Next Milestones (Next 3–4 Weeks)
+## 🔵 Priority 3 – Release & Collaboration Preparation (STATUS UPDATE)
 
-1. Finish `nexah/core/geometric_framework.md`
-2. Adaptive control working on IEEE118
-3. Minimal demo script ready
-4. Main README updated
+- [ ] Get adaptive control running on IEEE118 (basic version)  
+  → PARTIAL (IEEE9 strong, IEEE118 field exists, control not unified)
+
+- [~] Create one clean minimal demo script (`run_nexah_demo.py`)  
+  → PARTIAL (START_HERE + Lorenz + IEEE scripts exist, but not unified)
+
+- [x] Update main README + APPLICATIONS README  
+  → DONE (Top-level UX now strong)
+
+→ 🚀 Release layer is **~60% ready**
+
+---
+
+## 🚀 Next Milestones (REALISTIC ORDER)
+
+1. Create `run_nexah_demo.py` (SUPER IMPORTANT)
+2. Light IEEE118 control integration
+3. (Optional) introduce `nexah/core/` structure
+4. Polish START_HERE.md
 
 ---
 
@@ -65,8 +84,61 @@ Transition NEXAH from visual/intuitive geometry toward a
 
 ## 🧠 Reality Check
 
-You already have the geometry, the visuals, the IEEE pipeline and a working prototype.  
-What you need now is **clarity and a clean core** — not perfection.
+You already have:
+
+- ✅ geometry  
+- ✅ visuals  
+- ✅ Lorenz navigation  
+- ✅ IEEE results (strong!)  
+- ✅ working control prototype  
+
+What you need now is:
+
+> **entry points + clarity + reproducibility**
+
+—not more theory.
+
+---
+
+## 🔥 ACTUAL CURRENT STATE
+
+You are no longer building the core.
+
+You are now:
+
+> **productizing a research system**
+
+---
+
+## 🧭 Immediate Next Step (Most Important)
+
+👉 Build:
+
+```
+run_nexah_demo.py
+```
+
+One file that does:
+
+```text
+Lorenz → visualize navigation
+IEEE9 → show control
+(optional) multi-agent demo
+```
+
+→ This is your **"wow in 30 seconds" file**
+
+---
+
+## 🧠 Final Insight
+
+You don’t need more complexity.
+
+You need:
+
+> **one clean path through what already exists**
+
+---
 
 **Last Updated:** April 14, 2026  
 © Thomas K. R. Hofmann
