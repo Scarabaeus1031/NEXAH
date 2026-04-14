@@ -11,6 +11,7 @@ It transforms system dynamics into a continuous structure:
 ```text
 state → structure → field → geometry → navigation
 ```
+
 The goal is not only to detect instability, but to:
 
 > **navigate system trajectories within a structured stability field**
@@ -21,28 +22,32 @@ The goal is not only to detect instability, but to:
 
 Let:
 
-\[
-x \in \mathbb{R}^n
-\]
+$begin:math:display$
+x \\in \\mathbb\{R\}\^n
+$end:math:display$
 
 be the system state.
 
 NEXAH introduces a mapping:
 
-\[
-\Phi(x) \rightarrow (C(x), r(x), \theta(x), s(x))
-\]
+$begin:math:display$
+\\Phi \: \\mathbb\{R\}\^n \\rightarrow \\mathbb\{R\}\^4
+$end:math:display$
+
+$begin:math:display$
+\\Phi\(x\) \= \(C\(x\)\, r\(x\)\, \\theta\(x\)\, s\(x\)\)
+$end:math:display$
 
 where:
 
 | Symbol | Meaning |
 |------|--------|
-| \( C(x) \) | coherence (alignment with field) |
-| \( r(x) \) | distance to instability / collapse |
-| \( \theta(x) \) | directional orientation in state space |
-| \( s(x) \) | regime / switch indicator |
+| $begin:math:text$ C\(x\) $end:math:text$ | coherence (alignment with field) |
+| $begin:math:text$ r\(x\) $end:math:text$ | distance to instability / collapse |
+| $begin:math:text$ \\theta\(x\) $end:math:text$ | directional orientation in state space |
+| $begin:math:text$ s\(x\) $end:math:text$ | regime / switching indicator |
 
-This defines a **geometric embedding of system behavior**.
+This defines a **geometric embedding of system dynamics**.
 
 ---
 
@@ -50,9 +55,11 @@ This defines a **geometric embedding of system behavior**.
 
 System dynamics are represented as a vector field:
 
-\[
-\dot{x} = F(x)
-\]
+$begin:math:display$
+\\dot\{x\} \= F\(x\)
+$end:math:display$
+
+where $begin:math:text$ F \: \\mathbb\{R\}\^n \\rightarrow \\mathbb\{R\}\^n $end:math:text$.
 
 The field encodes:
 
@@ -66,9 +73,9 @@ The field encodes:
 
 Coherence measures alignment between system motion and field direction:
 
-\[
-C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
-\]
+$begin:math:display$
+C\(x\) \= \\frac\{\\dot\{x\} \\cdot F\(x\)\}\{\\\|\\dot\{x\}\\\| \\\, \\\|F\(x\)\\\|\}
+$end:math:display$
 
 ---
 
@@ -76,9 +83,9 @@ C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
 
 | Value | Meaning |
 |------|--------|
-| \( C(x) \approx 1 \) | stable (aligned motion) |
-| \( C(x) \approx 0 \) | transition region |
-| \( C(x) < 0 \) | opposing flow (instability) |
+| $begin:math:text$ C\(x\) \\approx 1 $end:math:text$ | aligned motion (stable regime) |
+| $begin:math:text$ C\(x\) \\approx 0 $end:math:text$ | transition interface |
+| $begin:math:text$ C\(x\) \< 0 $end:math:text$ | opposing flow (instability tendency) |
 
 ---
 
@@ -92,18 +99,22 @@ C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
 
 ## ⚠️ Risk Field
 
-Define a risk function:
+Define a scalar risk function:
 
-\[
-R(x)
-\]
+$begin:math:display$
+R \: \\mathbb\{R\}\^n \\rightarrow \\mathbb\{R\}\_\{\\ge 0\}
+$end:math:display$
+
+$begin:math:display$
+R\(x\)
+$end:math:display$
 
 which measures proximity to instability.
 
 Typical interpretation:
 
-- low \( R(x) \) → stable region  
-- high \( R(x) \) → collapse boundary  
+- low $begin:math:text$ R\(x\) $end:math:text$ → stable region  
+- high $begin:math:text$ R\(x\) $end:math:text$ → collapse boundary  
 
 The system state space becomes a:
 
@@ -113,25 +124,23 @@ The system state space becomes a:
 
 ## 🔁 Transition Structure
 
-Transitions are not discrete jumps between states.
+Transitions occur within regions:
 
-They occur within regions:
+$begin:math:display$
+\\mathcal\{T\} \\subset \\mathbb\{R\}\^n
+$end:math:display$
 
-\[
-\mathcal{T} \subset \mathbb{R}^n
-\]
+called **transition manifolds**, characterized by:
 
-called **transition manifolds**, where:
-
-- \( C(x) \approx 0 \)  
-- \( \nabla R(x) \) is high  
-- trajectories reorganize  
+- $begin:math:text$ C\(x\) \\approx 0 $end:math:text$  
+- $begin:math:text$ \\\|\\nabla R\(x\)\\\| $end:math:text$ large  
+- trajectory reorganization  
 
 ---
 
 ### Interpretation
 
-- transitions are extended in space  
+- transitions are extended in space and time  
 - instability emerges geometrically  
 - system behavior is path-dependent  
 
@@ -141,23 +150,23 @@ called **transition manifolds**, where:
 
 System evolution with control:
 
-\[
-\dot{x} = F(x) + u(x)
-\]
+$begin:math:display$
+\\dot\{x\} \= F\(x\) \+ u\(x\)
+$end:math:display$
 
 where:
 
-\[
-u(x) = u(C(x), R(x), \theta(x))
-\]
+$begin:math:display$
+u\(x\) \= u\(C\(x\)\, R\(x\)\, \\theta\(x\)\)
+$end:math:display$
 
 ---
 
 ### Control Objective
 
-- maximize coherence  
-- minimize risk  
-- maintain trajectory within stable regions  
+- maximize coherence $begin:math:text$ C\(x\) $end:math:text$  
+- minimize risk $begin:math:text$ R\(x\) $end:math:text$  
+- maintain trajectories within stable regions  
 
 ---
 
@@ -184,9 +193,12 @@ state → action → reward
 ```
 
 NEXAH operates as:
+
 ```text
 structure → field → movement → alignment
 ```
+
+---
 
 ## 🔥 Core Result (Power Systems)
 
