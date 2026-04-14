@@ -26,14 +26,28 @@ systems are understood as existing within a:
 
 New to NEXAH?
 
+Run your first demo in under 2 minutes:
+
 👉 [START HERE — Run your first demo](START_HERE.md)
 
 ---
 
-## 📂 Entry Points
+## 🎬 What you will see
 
-- ⚡ [Power Systems](APPLICATIONS/power_systems/README.md)  
-- 🧠 [Framework](FRAMEWORK/README.md)
+- agents navigating a chaotic system  
+- stability emerging as a geometric field  
+- early collapse detection  
+- trajectory-aware control  
+
+👉 No rewards. No training. Just structure.
+
+---
+
+## 🧭 Explore
+
+- 🧠 [Framework](FRAMEWORK/README.md)  
+- ⚡ [Applications](APPLICATIONS/README.md)  
+- 🧭 [Navigator](NAVIGATOR/README.md)
 
 ---
 
