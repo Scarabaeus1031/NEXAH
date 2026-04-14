@@ -1,7 +1,5 @@
 # NEXAH — Project Overview (Reality Map)
 
-**Zweck:** Interne Klarheit über den tatsächlichen Stand des Systems  
-**Status:** Arbeitsdokument (realitätsbasiert, kein Marketing)
 
 ---
 
