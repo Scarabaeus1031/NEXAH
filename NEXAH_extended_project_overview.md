@@ -28,6 +28,80 @@ The project did not start with Power Systems or a finished framework. It grew or
 - **Phase 2 – Tool Explosion**  
   To make structure discoverable from raw dynamics, the **DISCOVERY_ENGINE** was built with dozens of specialized analyzers (Resilience Analyzer, Attractor Detector, Law Discovery, Topology Extractor, Phase Space Map, System Evolver, etc.).
 
+---
+
+### 2.1 Emergent Navigation (Multi-Agent Insight)
+
+One of the most important conceptual breakthroughs in NEXAH appears in early multi-agent experiments.
+
+In these systems:
+
+- agents operate without explicit reward functions  
+- no predefined optimization target is given  
+- no reinforcement learning is used  
+
+Instead:
+
+- agents move inside a **structured stability field**  
+- system dynamics define possible transitions  
+- stability acts as an implicit guidance signal  
+
+This leads to:
+
+> **emergent navigation behavior purely from system structure**
+
+---
+
+#### Interpretation
+
+Classical control / RL paradigm:
+
+```text
+state → action → reward → policy
+```
+
+NEXAH paradigm:
+
+```text
+structure → field → movement → emergent policy
+```
+
+---
+
+#### Key Insight
+
+Navigation does not require:
+
+- rewards  
+- external objectives  
+- optimization targets  
+
+It can emerge directly from:
+
+> **alignment with system structure**
+
+---
+
+#### Role in the Project
+
+This insight is critical because it:
+
+- connects control theory with dynamical systems  
+- suggests an alternative to reinforcement learning  
+- generalizes across domains (power systems, discrete systems, multi-agent systems)  
+
+---
+
+#### Current Status
+
+- demonstrated in BUILDER_LAB experiments  
+- conceptually strong  
+- not yet fully formalized or benchmarked  
+
+---
+
+This component represents one of the **deep theoretical directions** of NEXAH beyond current power system validation.
+
 - **Phase 3 – Experimental Applications**  
   **BUILDER_LAB** was created as a prototyping space. Early experiments included Crisis Management, Cascade Failure Simulation, Supply Chain Resilience and Multi-Agent Coordination in complex environments.
 
