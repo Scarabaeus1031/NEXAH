@@ -1,60 +1,238 @@
-# 🔥 NEXAH — Emergent Structure & Navigation
+# 📘 NEXAH Controller Evolution (v7 → v11_2)
 
-## 🧠 Core Idea
+## 🧭 Purpose
 
-NEXAH reveals that:
+Development of a **closed-loop dynamical controller**  
+based on field dynamics, phase coupling, and geometric navigation.
 
-> complex systems are not random  
-> they evolve within **structured fields**
+This layer represents the transition from:
+
+> state-based control → dynamical systems → field-based navigation
 
 ---
 
-## 🔁 Core Pipeline
+## 🔹 v7 — Field + Drift + Barrier
 
-```text
-simulation → structure → field → geometry → navigation
+### Model
+- 1D system (λ)
+- Gradient descent (field)
+- Constant drift
+- Barrier near collapse region
+
+### Behavior
+- Monotonic convergence
+- No oscillation
+- Stable fixed-point attractor
+
+### Interpretation
+
+> Static stabilization system
+
+---
+
+## 🔹 v8 — + Rotation
+
+### New Component
+- Rotational term added to dynamics
+
+### Behavior
+- Small oscillatory perturbations
+- Still converges to fixed point
+- No sustained motion
+
+### Insight
+
+> Rotation alone is insufficient to create persistent dynamics
+
+---
+
+## 🔹 v9 — True Phase System (λ, ψ)
+
+### Upgrade
+- 2D dynamical system:
+  - λ → system state (load / stress)
+  - ψ → internal phase variable
+
+### Dynamics
+- Coupled evolution of λ and ψ
+- ψ introduces memory / inertia
+- Bidirectional interaction between variables
+
+---
+
+## 📈 Observed Behavior
+
+### Phase Portrait (λ vs ψ)
+
+- Single arc trajectory
+- Convergence to fixed point
+- No closed loop or cycle
+
+### Interpretation
+
+> System behaves as a **dissipative 2D dynamical system**
+
+---
+
+## 🔹 v10 — Field Exploration Mode
+
+### Transition
+
+Shift from phase dynamics to field-based analysis.
+
+### Method
+
+- System is scanned over λ
+- Stability indicators extracted:
+  - vmin (voltage stability)
+  - loading (system stress)
+
+### Risk Function
+
+```
+risk(λ) = max(0, 0.97 - vmin) + max(0, (loading - 80)/100)
+```
+
+### Behavior
+
+- Continuous stability surface obtained
+- Emergence of nonlinear regions
+- Identification of structural transitions
+
+---
+
+## 🔹 v11 — Stability Field & Geometry
+
+### Upgrade
+
+Introduction of explicit field geometry:
+
+- First derivative:
+  
+  ∂risk / ∂λ
+
+- Second derivative:
+  
+  ∂²risk / ∂λ²
+
+---
+
+## 📈 Observed Field Structure
+
+### 🟡 Regime 1 — Structural Transition (~λ ≈ 0.8)
+
+- First curvature appears  
+- Field begins to deform  
+- System remains stable  
+
+---
+
+### 🔴 Regime 2 — Instability Onset (~λ ≈ 1.25+)
+
+- Rapid increase in risk  
+- Nonlinear amplification  
+- Collapse boundary  
+
+---
+
+## ⚠️ Critical Insight
+
+> Instability is not defined by first curvature  
+> but by nonlinear amplification in the risk field.
+
+---
+
+## 🔹 v11_2 — Field-Based Navigation Controller
+
+### Concept
+
+Controller operates on extracted field geometry:
+
+```
+λ_target = λ_critical − Δ
+```
+
+### Behavior
+
+- Smooth convergence toward stability boundary  
+- No oscillation  
+- No collapse  
+- Maximum safe system utilization  
+
+---
+
+## 📈 Navigation Result
+
+Example trajectory:
+
+```
+λ = 0.600 → 0.7717
+```
+
+→ safe boundary tracking without entering collapse
+
+---
+
+## 🔬 Conceptual Breakthrough
+
+```
+Dynamical System → Field-Based Navigation
 ```
 
 ---
 
-# ⚡ Key Result — Power Systems
+## 🧠 Core Insight
 
-![NEXAH IEEE Result](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+Control is no longer:
 
-*NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical methods.*
+> reactive (based on state error)
 
----
+but:
 
-# 🌐 Field Structure (V69)
-
-![V69 Field](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
-
-**Observation:**
-
-- trajectories are not random  
-- collapse follows structured paths  
-- instability is geometric  
+> predictive (based on field geometry)
 
 ---
 
-# 🧭 Emergent Flow in Discrete Systems
+## 🧠 NEXAH Interpretation
 
-![Prime Modular Flow](ENGINE/research/experiments/prime_modular_resonance/analysis/output/curated/mod7_particle_flow_trails.gif)
+The system now operates as:
 
-Even in purely discrete systems:
+> a trajectory evolving within a structured stability field
 
-- coherent flow structures  
-- cyclic trajectories  
-- directional transport  
+where:
 
-👉 structure is **domain-independent**
+- field = extracted from system physics  
+- geometry = defines stability structure  
+- navigation = movement within field  
 
 ---
 
-# 🧠 Emergent Navigation (Multi-Agent)
+## 🔥 Key Result
 
-![NEXAH Multi-Agent Navigation](BUILDER_LAB/visuals/nexah_multi_agent.gif)
+A complex physical system can be:
 
+- mapped into a stability field  
+- analyzed via geometric properties  
+- navigated safely without direct collapse interaction  
+
+---
+
+## 🚀 Outlook
+
+Next directions:
+
+- real-time field estimation  
+- adaptive safety margins  
+- multi-agent navigation  
+- higher-dimensional state spaces  
+- integration with real grid data  
+
+---
+
+## 🧭 Status
+
+Field extraction + navigation achieved →  
+entering **true NEXAH operational regime**
 Agents navigate without:
 
 - reward functions  
