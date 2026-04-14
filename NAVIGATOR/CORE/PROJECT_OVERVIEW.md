@@ -1,161 +1,221 @@
-# NEXAH — Extended Project Overview (Internal)
+# NEXAH — Project Overview (Reality Map)
 
-**Purpose:** Internal orientation, reflection, and strategic clarity  
-**Status:** Working document (not public-facing)
-
----
-
-## 🧭 What This Document Is
-
-This is not:
-
-- a polished README  
-- a formal paper  
-- or a final framework description  
-
-This is:
-
-> a structured snapshot of the project as it actually exists
-
-including:
-
-- working components  
-- partial integrations  
-- conceptual breakthroughs  
-- and open problems  
+**Zweck:** Interne Klarheit über den tatsächlichen Stand des Systems  
+**Status:** Arbeitsdokument (realitätsbasiert, kein Marketing)
 
 ---
 
-## 🧠 What NEXAH Really Is
+## 🧠 Was dieses Dokument ist
 
-NEXAH is a **geometric state-space framework** for complex dynamical systems.
+Dieses Dokument ist:
 
-It:
+> eine ehrliche Bestandsaufnahme des Projekts
 
-- extracts structure from system dynamics  
-- maps it into a continuous field  
-- and enables navigation within that field  
+Es zeigt:
 
-Key properties:
-
-- no reward functions  
-- no neural networks  
-- no predefined optimization targets  
+- was existiert  
+- was funktioniert  
+- was halb fertig ist  
+- was noch fehlt  
 
 ---
 
-## 🔥 Core Insight
+## 🧭 Gesamtstruktur (einfach gedacht)
 
-Stability is not a threshold.
+```text
+FRAMEWORK → erklärt
+ENGINE → berechnet
+APPLICATIONS → zeigt
+BUILDER_LAB → experimentiert
+DISCOVERY_ENGINE → erforscht
+```
+---
 
-It is a:
+# 🔥 AKTUELLER KERN DES SYSTEMS
 
-> geometric property in state space
+## 1. 🧠 FRAMEWORK (Theorie & Geometrie)
 
-Navigation emerges from:
+| Bereich | Status | Bedeutung |
+|--------|--------|----------|
+| CORE_GEOMETRY | ✅ 95% | Geometrische Basis (Separatrix, Feld, Operator) |
+| GEOMETRIC_FRAMEWORK.md | ✅ 85–90% | Mathematische Formulierung |
+| risk_field.md | ✅ | Stabilität als Feld |
+| field_control.md | ✅ | Kontrollidee |
 
-structure → field → movement → alignment
+👉 **Sehr stark. Das ist der eigentliche USP.**
 
 ---
 
-## 🧬 Growth Path (Condensed)
+## 2. ⚙️ ENGINE (Berechnung)
 
-### Phase 1 — Conceptual Foundation  
-Relational structure, regime thinking (META → ARCHY)
+| Bereich | Status | Bemerkung |
+|--------|--------|----------|
+| analysis/ | ✅ 80–90% | FTLE, Lyapunov, Feldstruktur |
+| simulation/ | ⚠️ 70% | vorhanden |
+| navigation/ | ⚠️ 70% | verteilt |
+| nexah_kernel/ | ⚠️ 60% | nicht klar zentralisiert |
+| core/ (posets etc.) | ⚠️ 60% | aktuell kaum genutzt |
 
-### Phase 2 — Discovery Engine  
-Large-scale tool system for extracting structure from dynamics
-
-### Phase 3 — Builder Lab  
-Exploratory simulations (multi-agent, cascades, systems)
-
-### Phase 4 — Geometric Core  
-URF Axial Space, Root Bridge, coherence metric
-
-### Phase 5 — Validation  
-IEEE systems → 43.9 s early detection + control prototype
+👉 **viel vorhanden, aber nicht als klarer „Kern“ gebündelt**
 
 ---
 
-## 💎 Key Breakthrough
+## 3. 🌪 APPLICATIONS (wichtigster Bereich)
 
-### Emergent Navigation (No Rewards)
+### 🔥 Lorenz (Referenzsystem)
 
-Instead of:
+| Feature | Status |
+|--------|--------|
+| Attractor | ✅ |
+| Flow Field | ✅ |
+| Lyapunov | ✅ |
+| FTLE | ✅ |
+| Separatrix | ✅ |
+| Navigation | ✅ |
+| Agent | ⚠️ |
+| Visuals | ✅ |
 
-state → action → reward → policy
-
-NEXAH uses:
-
-structure → field → movement → emergent policy
-
-→ Navigation emerges directly from system structure
-
----
-
-## 🧱 Core Architecture (Condensed)
-
-META → ARCHY → MESO → NEXAH → MEVA  
-
-- META → system definition  
-- ARCHY → structure  
-- MESO → field / risk  
-- NEXAH → navigation  
-- MEVA → execution  
+👉 **Bestes geschlossenes System im Repo**
 
 ---
 
-## ⚖️ Current State (Honest)
+### ⚡ Power Systems (Real-World)
 
-### Strong
-- structure discovery  
-- regime mapping  
-- risk geometry  
-- IEEE validation (43.9 s)  
-- geometric modeling  
+| Feature | Status |
+|--------|--------|
+| Field Reconstruction | ✅ |
+| Risk Field | ✅ |
+| Early Detection (43.9 s) | ✅🔥 |
+| Closed Loop Control | ✅ (v6) |
+| Advanced Versions (v7–v11) | ⚠️ |
+| IEEE118 | ⚠️ |
 
-### Emerging
-- navigation logic (partially operational)  
-- adaptive control (prototype level)  
-- system integration  
-
-### Missing
-- clean mathematical core (single document)  
-- minimal demo entry point  
-- scalable control (IEEE118+)  
+👉 **stärkster Real-World Impact, aber nicht sauber integriert**
 
 ---
 
-## 🧠 Strategic Focus
+### 🔄 Weitere Systeme
 
-Current priority is not:
+| System | Status |
+|-------|--------|
+| Kuramoto | ⚠️ |
+| Supply Chain | ⚠️ |
+| Traffic | ⚠️ |
+| Multi-Agent | ⚠️ |
 
-- more ideas  
-- more modules  
-
-But:
-
-> clarity, integration, and a clean core  
-
----
-
-## 🔮 Next Critical Steps
-
-- finish `nexah/core/geometric_framework.md`  
-- unify navigation + control  
-- create minimal demo  
-- reduce conceptual fragmentation  
+👉 aktuell **nicht zentral, eher Nebenstränge**
 
 ---
 
-## 🧭 Final Note
+## 4. 🔌 ADAPTER LAYER
 
-The repository is currently:
+| Bereich | Status |
+|--------|--------|
+| base_adapter | ✅ |
+| LorenzAdapter | ✅ |
+| weitere Adapter | ⚠️ |
 
-- rich  
-- deep  
-- partially fragmented  
+👉 Idee gut, aber noch nicht Hauptworkflow
 
-The next phase is:
+---
 
-> turning insight into a clean, usable system
+## 5. 🧪 BUILDER LAB
+
+| Bereich | Status |
+|--------|--------|
+| Demos | ✅ |
+| Explorer | ✅ |
+| Multi-Agent | ⚠️ |
+| Visuals | ✅ |
+
+👉 gut für Einstieg, aber nicht mit Core verbunden
+
+---
+
+## 6. 🔍 DISCOVERY ENGINE
+
+| Bereich | Status |
+|--------|--------|
+| Architektur-Suche | ⚠️ |
+| Experimente | ⚠️ |
+
+👉 aktuell **nicht kritisch für Release**
+
+---
+
+# 🧠 WICHTIGSTE ERKENNTNIS
+
+Das Problem ist nicht:
+
+> fehlende Features
+
+Sondern:
+
+> fehlende Integration
+
+---
+
+# 🔥 WAS WIRKLICH FERTIG IST
+
+Du hast bereits:
+
+- Geometrie (sehr stark)  
+- Lorenz (komplettes Demo-System)  
+- IEEE (realer Proof)  
+
+---
+
+# ⚠️ WAS FEHLT
+
+## 1. EIN EINHEITLICHER FLOW
+
+```text
+System → Field → Geometry → Risk → Navigation → Control
+```
+
+👉 aktuell vorhanden, aber nicht sichtbar verbunden
+
+⸻
+
+## 2. EIN DEMO-EINSTIEG
+
+python run_nexah_demo.py
+
+existiert noch nicht
+
+---
+
+## 3. VERBINDUNG LORENZ ↔ IEEE
+
+- Lorenz = visuell stark  
+- IEEE = technisch stark  
+
+👉 fehlt:
+
+ein gemeinsames Verständnis als „gleiches Prinzip“
+
+---
+
+## 🚀 STRATEGISCHER FOKUS
+
+Nicht:
+
+- neue Systeme  
+- neue Ideen  
+- mehr Theorie  
+
+Sondern:
+
+Integration + Klarheit + Einstieg  
+
+---
+
+## 🧭 NÄCHSTE KONKRETE SCHRITTE
+
+1. `run_nexah_demo.py` bauen  
+2. Lorenz + IEEE logisch verbinden  
+3. einen klaren Einstiegspfad schaffen  
+4. Fragmentierung reduzieren  
+
+
+
