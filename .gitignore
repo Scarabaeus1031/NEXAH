@@ -170,3 +170,8 @@ DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_7.json
 # Allow demo results (NEXAH application layer)
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/*
+
+# allow Lorenz curated visuals
+!APPLICATIONS/dynamical_systems/lorenz/visuals/
+!APPLICATIONS/dynamical_systems/lorenz/visuals/*.png
+
