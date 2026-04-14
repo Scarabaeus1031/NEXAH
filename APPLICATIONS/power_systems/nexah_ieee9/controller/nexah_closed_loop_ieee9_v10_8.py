@@ -1,6 +1,5 @@
 import numpy as np
-from simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
-
+from nexah_ieee9.simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
 
 # --------------------------------------------------
 # 🔹 INIT SOLVER
