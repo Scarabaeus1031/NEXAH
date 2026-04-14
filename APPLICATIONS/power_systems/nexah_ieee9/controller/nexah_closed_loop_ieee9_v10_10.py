@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
+from nexah_ieee9.simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
 
 
 def run_scan():
