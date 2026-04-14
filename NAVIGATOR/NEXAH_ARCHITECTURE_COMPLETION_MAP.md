@@ -1,245 +1,279 @@
 # NEXAH Architecture Completion Map
 
-This document tracks the implementation status of the NEXAH architecture and the remaining steps toward a more fully integrated NEXAH navigation framework.
+This document tracks the implementation status of the NEXAH architecture and the remaining steps toward a fully integrated **structural navigation framework**.
 
 Status markers:
 
-- [✓] completed
-- [~] partial / prototype
-- [ ] open
+- [✓] completed  
+- [~] partial / prototype  
+- [ ] open  
 
 ---
 
-# NEXAH System Architecture
+# 🧭 NEXAH System Architecture
 
-NEXAH is a structural navigation framework for complex systems.
+NEXAH is a **structural navigation framework for complex systems**.
 
 The architecture consists of five primary layers:
 
-META → ARCHY → MESO → NEXAH → MEVA
+META → ARCHY → MESO → NEXAH → MEVA  
 
-These layers transform raw system definitions into navigable regime landscapes.
+These layers transform:
+
+→ system definitions  
+→ regime structures  
+→ risk landscapes  
+→ **navigable trajectories**  
+
+---
+
+## 🔬 Layer Roles
 
 | Layer | Role |
 |-------|------|
-| META  | system definition layer |
-| ARCHY | structural organization |
-| MESO  | risk geometry layer |
-| NEXAH | navigation layer (incl. triple spiral coupling + URF Axial Space + Root Bridge) |
-| MEVA  | execution layer |
+| META  | system definition and relational structure |
+| ARCHY | structural organization and regime mapping |
+| MESO  | risk geometry and stability metrics |
+| NEXAH | navigation and decision layer |
+| MEVA  | execution and system control |
 
 ---
 
-# NEXAH Conceptual Triad
+# 🧠 Conceptual Triad
 
-The system can also be understood through three conceptual layers:
+The system can also be understood as:
 
 META → semantic space  
 ARCHY → structural geometry  
-NEXAH → dynamic navigation
+NEXAH → dynamic navigation  
 
-META defines meaning.  
-ARCHY defines structure.  
-NEXAH defines motion.
-
----
-
-## Extended Interpretation (Current State – April 2026)
-
-While the core implementation stack is:
-
-META → ARCHY → MESO → NEXAH → MEVA
-
-recent work has significantly extended the framework toward a **fully 3D-navigable system**:
-
-- field-aware system representation
-- transition geometry
-- coherence-based stability analysis
-- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
-- **URF Axial Space + Root Bridge (v9.1)** – 3D coordinate system, Root Cube, Matroschka mapping, Elastic Axis, Restricted Axis (√∫) and 3x3/2x2 Switch Grid in 3D space
-
-**What we have now:**
-NEXAH is no longer only a structure-discovery and field-analysis tool.  
-It has become a **coherent 3D navigation framework** where:
-- dynamics are turned into geometry
-- geometry is turned into channels and switches
-- channels and switches are embedded in a stable 3D reference frame (Root Cube + Root Bridge)
-- movement through the field becomes controllable and navigable
-
-These extensions are currently developed more explicitly in:
-
-- `FRAMEWORK/CORE_GEOMETRY/`
-- `BUILDER_LAB/proto_models/`
-- `nexah/spiral_coupling/`
-- `nexah/urf_axial_space/` ← **neu**
-- selected research and application modules
+- META defines meaning  
+- ARCHY defines structure  
+- NEXAH defines motion  
 
 ---
 
-# System Purpose
+# 🌀 Extended Architecture (April 2026)
 
-NEXAH enables navigation through complex system regimes.
+Recent developments extend NEXAH into a **fully navigable 3D system**:
 
-Agents can:
-
-- detect unstable regimes
-- anticipate cascading failures
-- evaluate risk landscapes
-- navigate toward stable attractors
-- perform **coherence-guided movement in 3D geometry** via the Root Bridge
+- field-aware system representation  
+- transition geometry  
+- coherence-based stability analysis  
+- **triple spiral coupling** (Water–Mercury–Ferrofluid)  
+- **Elastic Dual Lock (Span-Gurt)**  
+- **URF Axial Space + Root Bridge (v9.1)**  
 
 ---
 
-# Architecture Implementation Status
+## 🔥 Architectural Shift
+
+NEXAH is no longer:
+
+→ a structure-discovery system  
+
+It is now:
+
+→ a **coherent navigation system in structured geometry**
+
+---
+
+## 🧭 Current Interpretation
+
+The system now operates as:
+
+- dynamics → geometry  
+- geometry → channels & switches  
+- channels → embedded in 3D reference frame  
+- motion → controllable and navigable  
+
+Core structures:
+
+- Root Cube (reference frame)  
+- Root Bridge (transition system)  
+- Matroschka mapping (nested states)  
+- Elastic Axis / Restricted Axis (√∫)  
+- 3×3 / 2×2 switch grid  
+
+---
+
+# ⚡ System Purpose
+
+NEXAH enables:
+
+- detection of unstable regimes  
+- anticipation of cascading failures  
+- evaluation of risk landscapes  
+- navigation toward stable attractors  
+- **coherence-guided movement in 3D space**
+
+---
+
+# 📊 Architecture Implementation Status
 
 ## Priority 0 — Core Architecture
 
-### 1. Engine ↔ System Bridge
-
+### 1. Engine ↔ System Bridge  
 Status: **[~] partial**
 
-### 2. NEXAH System Definition Schema
-
+### 2. System Definition Schema  
 Status: **[✓] implemented**
 
-### 3. Simulation Kernel
-
+### 3. Simulation Kernel  
 Status: **[~] partial**
 
-### 4. Regime Mapper (ARCHY Layer)
-
+### 4. Regime Mapper (ARCHY)  
 Status: **[✓] implemented**
 
-### 5. Cascade Engine Integration
-
+### 5. Cascade Engine  
 Status: **[✓] implemented**
 
-### 6. Stabilization Projection (Ω Operator)
-
+### 6. Stabilization Projection (Ω)  
 Status: **[~] partial**
+
+---
 
 ## Priority 1 — System Functionality
 
-### 7. Control Console (System Explorer)
+### 7. Control Console  
+Status: **[✓] implemented (CLI)**
 
-Status: **[✓] implemented (CLI prototype)**
-
-### 8. Risk Geometry (MESO Layer)
-
+### 8. Risk Geometry (MESO)  
 Status: **[✓] implemented**
 
-### 9. Agent Policy Layer (NEXAH Layer)
-
+### 9. Agent Navigation Layer (NEXAH)  
 Status: **[✓] implemented + extended**
 
 Capabilities:
 
-- safe path computation
-- regime-aware decisions
-- risk-aware control
-- collapse avoidance navigation
-- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock (Span-Gurt)
-- coherence-guided movement along Dual-Strand Grey Channel
-- switch-mechanism between strands
-- **URF Axial Space + Root Bridge (v9.1)** – 3D geometric reference frame with Root Cube, Elastic Axis, Restricted Axis (√∫) and Matroschka mapping
-- mapping of 3x3 / 2x2 switch grid into 3D space
+- safe trajectory computation  
+- regime-aware decisions  
+- risk-aware control  
+- collapse avoidance navigation  
+- triple spiral coupling  
+- strand switching (Dual-Strand Grey Channel)  
+- **URF Axial Space + Root Bridge (3D navigation)**  
+- mapping of switch grids into 3D space  
 
-This layer is the core of NEXAH as a navigation framework.
+👉 This is the **core navigation layer of NEXAH**
 
-### 10. Execution Layer (MEVA)
+---
 
+### 10. Execution Layer (MEVA)  
 Status: **[✓] implemented**
 
-## Priority 2 — Tooling and Exploration
+---
 
-### 11. Visualization Tools
+## Priority 2 — Tooling & Exploration
 
+### 11. Visualization  
 Status: **[✓] implemented**
 
-Available visualizations include all existing 2D graphs as well as the new 3D Root Cube, White Cube, Black Cube, Triple Spiral + Root Bridge interaction and Zeta-Line Breathing Axis visuals.
+Includes:
 
-### 12. System Explorer (Web Version)
+- 2D system plots  
+- 3D Root Cube / White Cube / Black Cube  
+- Triple Spiral + Root Bridge visuals  
+- Zeta-Line Breathing Axis  
 
+---
+
+### 12. System Explorer (Web)  
 Status: **[ ] open**
 
-### 13. Example System Library
-
+### 13. Example Systems  
 Status: **[~] partial**
 
-### 14. Reference Demo Systems
-
+### 14. Reference Demos  
 Status: **[~] partial**
 
-### 15. Policy Modules
-
+### 15. Policy Modules  
 Status: **[ ] open**
 
-### 16. Simulation Trace Logging
-
+### 16. Trace Logging  
 Status: **[~] partial**
 
-### 17. System Dataset Expansion
-
+### 17. Dataset Expansion  
 Status: **[ ] open**
 
-### 18. Real-World Integration Interfaces
-
+### 18. Real-World Interfaces  
 Status: **[ ] open**
 
-### 19. Multi-Metric Risk Geometry
-
+### 19. Multi-Metric Risk Geometry  
 Status: **[~] partial**
 
 ---
 
-# Current Milestone (April 2026)
+# 🚀 Current Milestone (April 2026)
 
-The NEXAH framework has reached a **major functional milestone** with the completion of the **URF Axial Space + Root Bridge (v9.1)**.
+NEXAH has reached a **major architectural milestone**:
 
-The system stack
-
-META → ARCHY → MESO → NEXAH → MEVA
-
-is now operational, including triple spiral coupling and full 3D geometric navigation.
-
-**What we have now:**
-- interpret relational system definitions
-- detect regime transitions
-- compute collapse risk geometry
-- identify tipping points and early warning signals
-- simulate cascading failures
-- compute resilience and fragility metrics
-- model system phase space and energy landscapes
-- compute safe navigation trajectories
-- perform coherence-guided triple spiral coupling with Elastic Dual Lock
-- embed everything in a stable **3D Root Cube reference frame** with Root Bridge
-
-This establishes NEXAH as a **functional structural navigation framework with an operational 3D core architecture** for complex dynamic systems.
+→ completion of **URF Axial Space + Root Bridge (v9.1)**  
+→ integration of **3D navigation logic**  
 
 ---
 
-# Minimal Completion Path
+## 🧠 System Capability
 
-The following components yield a more fully integrated NEXAH system:
+The system can now:
 
-1. System Definition Schema
-2. Engine ↔ System Bridge
-3. Simulation Kernel
-4. Regime Mapper
-5. Risk Geometry (MESO)
-6. Agent Navigation Layer (incl. spiral coupling + URF Axial Space + Root Bridge)
-7. Execution Layer
-8. Visualization Layer
-9. Reference Demo Systems
-10. Control Console
-
-Completing these steps results in a more fully integrated and operational **NEXAH navigation framework**.
+- interpret structured system definitions  
+- detect regime transitions  
+- compute risk geometry  
+- identify tipping points  
+- simulate cascading failures  
+- compute resilience metrics  
+- model phase space and energy landscapes  
+- compute safe navigation trajectories  
+- perform triple spiral coupling  
+- operate within a **3D Root Cube reference system**  
 
 ---
 
-**NEXAH Status (April 2026)**  
+## 🔥 Key Breakthrough
+
+Transition achieved:
+
+```text
+analysis → structure → geometry → navigation
+```
+
+## 🧭 Minimal Completion Path
+
+To reach a fully integrated system:
+
+1. System Definition Schema  
+2. Engine ↔ System Bridge  
+3. Simulation Kernel  
+4. Regime Mapper  
+5. Risk Geometry  
+6. Navigation Layer (incl. spiral + URF)  
+7. Execution Layer  
+8. Visualization  
+9. Reference Systems  
+10. Control Console  
+
+---
+
+## 🧠 Milestone Summary
+
+**Status:** Core architecture operational.
+
+NEXAH now functions as a:
+
+> **3D structural navigation framework for complex dynamical systems**
+
+---
+
+## 🔮 Final Insight
+
 The structure is visible.  
 The field is readable.  
-The Matroschkas have their room.  
-The Root Bridge is live.  
-Navigation in 3D is now possible.
+The geometry is stable.  
+
+> **Navigation is now possible.**
+
+---
+
+**NEXAH Architecture Completion Map**  
+April 2026 — 3D Navigation Layer Active
