@@ -1,312 +1,249 @@
-# 🧠 NEXAH IEEE9 — System Architecture (v9)
+# 🧠 NEXAH IEEE9 — System Architecture (v11)
 
 ## 🧭 Overview
 
-The NEXAH system is a **closed-loop stability framework** for power systems.
+The NEXAH system is a **field-driven closed-loop stability framework** for power systems.
 
-It transforms raw system simulation into:
+It transforms system behavior into a navigable structure:
 
 ```text
-structure → risk → intervention → system evolution → phase dynamics
+simulation → field → geometry → navigation → system evolution
 ```
 
-This creates a **dynamic stability navigation system** instead of static monitoring.
+This enables:
+
+> **stability navigation instead of reactive control**
 
 ---
 
 ## ⚙️ Full Pipeline
 
 ```text
-Load Sweep / Solver
+Power Flow Solver
         ↓
 Feature Extraction
         ↓
-Manifold Learning
+Risk Field Construction
         ↓
-Residual + Distance Field
+Field Geometry (∂risk, ∂²risk)
         ↓
-Clustering (Regimes)
+Critical Region Detection
         ↓
-Risk Prediction
+Navigation Target Selection
         ↓
-Intervention Policy
+Navigation Controller (v11_2)
         ↓
-Adaptive Field Control (v3)
-        ↓
-Phase Dynamics Layer (v9)
-        ↓
-Closed Loop Feedback
-        ↓
-Updated System State
+Closed Loop System Evolution
 ```
 
 ---
 
 ## 🔹 1. Simulation Layer
 
-**Modules:**
-- `simulation/nexah_solver_v2.py`
-- `simulation/load_sweep.py`
+**Module:**
+- `simulation/powerflow_solver_real_v3.py`
 
 **Role:**
-- Simulates system response under load λ
-- Applies intervention actions in closed loop
+- Computes system response for given λ
+- Represents physical grid behavior
 
-**Output:**
-- Voltage vector `V`
-- Phase angles `θ`
-- Convergence flag
+**Outputs:**
+- `vmin` → voltage stability indicator  
+- `line_loading` → system stress  
+- `converged` → feasibility  
 
 ---
 
 ## 🔹 2. Feature Layer
 
-**Module:**
-- `features/structural_state.py`
-
-**Extracted Features:**
-- `c` → structural coherence
-- `frag` → fragmentation
-- `dc` → first derivative
-- `d2c` → curvature (instability acceleration)
+**Extracted:**
+- Voltage stability (`vmin`)
+- Line loading (`loading`)
 
 ---
 
-## 🔹 3. Manifold Layer
+## 🔹 3. Risk Field
 
-**Module:**
-- `overlay/manifold_fit.py`
-
-**Model:**
+**Definition:**
 
 ```text
-log(d2c) = log(a) + p log(c) + q log(|dc|)
+risk(λ) = max(0, 0.97 - vmin) + max(0, (loading - 80)/100)
 ```
-
-**Purpose:**
-- Defines expected system behavior
-- Establishes structural baseline
-
----
-
-## 🔹 4. Overlay Field
-
-**Module:**
-- `overlay/residual_distance.py`
-
-**Components:**
-- `residual` → deviation from manifold
-- `distance` → proximity to collapse boundary (rift)
 
 **Interpretation:**
-- Low residual → stable structure
-- High residual → instability
-- Distance encodes geometric collapse proximity
+- Encodes proximity to instability
+- Combines voltage + thermal stress
+- Defines a continuous stability field
 
 ---
 
-## 🔹 5. Clustering Layer
+## 🔹 4. Field Geometry
+
+Derived quantities:
+
+```text
+∂risk/∂λ   → slope (trajectory direction)
+∂²risk/∂λ² → curvature (instability acceleration)
+```
+
+**Meaning:**
+- Slope → how fast instability grows  
+- Curvature → onset of nonlinear behavior  
+
+---
+
+## 🔹 5. Stability Field Structure
+
+Two key regimes emerge:
+
+### 🟡 Structural Transition (~λ ≈ 0.8)
+- First curvature appears  
+- Field begins to deform  
+- System remains stable  
+
+---
+
+### 🔴 Instability Region (~λ ≈ 1.25+)
+- Rapid nonlinear risk growth  
+- Strong amplification  
+- System approaches collapse boundary  
+
+---
+
+## 🔹 6. Critical Region Detection (v11_1)
 
 **Method:**
-- KMeans on `(distance, residual)`
+- Detect first significant curvature increase  
+- Identify transition into nonlinear regime  
 
 **Output:**
-- Stable region
-- Transition region
-- Collapse region
-
----
-
-## 🔹 6. Predictor Layer
-
-**Module:**
-- `analysis/predictor.py`
-
-**Outputs:**
-- `risk ∈ [0,1]`
-- `warnings`
-- `time-to-collapse (ttc)`
-
-**Mechanism:**
-Combines:
-- geometry (distance)
-- dynamics (`d2c`)
-- regime structure
-
----
-
-## 🔹 7. Policy Layer (Base Control)
-
-**Module:**
-- `decision/intervention_policy.py`
-
-**Outputs:**
-- continuous control signal
-- discrete actions:
-  - STABILIZE
-  - PREEMPTIVE_STABILIZE
-  - REDUCE_LOAD
-  - EMERGENCY_SHED
-
----
-
-## 🔹 8. Adaptive Field Control (v3) 🔥
-
-**Module:**
-- `decision/adaptive_policy_v3.py`
-
-**Inputs:**
-- `risk`
-- `risk_slope`
-- `d2c`
-- `distance`
-- `state_history`
-
----
-
-### 🧠 Control Logic
-
-The controller integrates:
-
-1. **Trajectory Awareness**
-   - reacts to direction of risk evolution
-
-2. **Structural Awareness**
-   - detects instability acceleration
-
-3. **Geometric Awareness**
-   - anticipates collapse via distance-to-rift
-
-4. **Memory**
-   - escalation based on persistence
-
----
-
-### 🔄 Policy Evolution
-
-| Version | Behavior |
-|--------|--------|
-| v1 | reactive |
-| v2 | recovery + memory |
-| v3 | **pre-emptive field control** |
-
----
-
-## 🔹 9. Phase Dynamics Layer (v9) 🌀
-
-**New Core Layer**
-
-Introduces a **true dynamical system representation**.
-
-**State Variables:**
-- `λ` → load / stress parameter
-- `ψ` → internal phase state
-
----
-
-### 🧠 Dynamics
-
-The system evolves as:
 
 ```text
-(λ, ψ) → trajectory in phase space
+λ_critical ≈ 0.79
 ```
 
-**Observed Behavior:**
-- Stable attractor formation
-- Convergence to fixed point
-- Phase coupling between control + system
-
 ---
 
-### 🔬 Interpretation
+## 🔹 7. Navigation Target
 
-This layer transforms NEXAH from:
-
-- scalar control system
-
-into:
-
-- **2D dynamical phase system**
-
----
-
-## 🔹 10. Closed Loop Control
+Controller defines a safe operating point:
 
 ```text
-action → solver → new system → new features → new action
+λ_target = λ_critical - Δ
 ```
 
-**Key property:**
-- Control reshapes system trajectory
-- Feedback modifies collapse geometry
+→ ensures operation near, but not inside instability region
 
 ---
 
-## ⚡ System Behavior (v9)
+## 🔹 8. Navigation Controller (v11_2) 🧭
 
-The system now operates as:
+**Core Principle:**
 
-- structure-aware  
-- trajectory-aware  
+```text
+dλ ∝ (λ_target - λ)
+```
+
+**Behavior:**
+- Smooth convergence toward target  
+- Adaptive step size  
+- No oscillation  
+- No overshoot  
+
+---
+
+### 📈 Observed Dynamics
+
+- Stable trajectory  
+- Continuous movement  
+- No collapse interaction  
+
+Example:
+
+```text
+λ=0.600 → 0.7717 (safe boundary approach)
+```
+
+---
+
+## 🔹 9. Closed Loop System
+
+```text
+λ → solver → field → target → controller → λ_next
+```
+
+**Key Property:**
+- System follows field geometry  
+- Control emerges from structure  
+
+---
+
+## ⚡ System Behavior (v11)
+
+The system is now:
+
+- field-aware  
 - geometry-aware  
-- **phase-aware**
-
----
-
-## 🧭 Interpretation within NEXAH Framework
-
-Two coupled systems now exist:
-
-### 1. Application Layer (Power System)
-- Risk field
-- Collapse dynamics
-- Adaptive control
-
-### 2. NEXAH Core Layer
-- Field geometry
-- Phase dynamics (λ, ψ)
-- Trajectory shaping
+- predictive  
+- **navigation-driven**
 
 ---
 
 ## 🔬 Conceptual Transition
 
-The controller is no longer:
+```text
+State Control → Field Navigation
+```
 
-a regulator
+Control is no longer:
 
-It is becoming:
+- reactive (based on state error)
 
-a **field-driven dynamical navigator**
+but:
+
+- predictive (based on field geometry)
 
 ---
 
-## ⚠️ Current Limitations
+## 🧠 System Interpretation
 
-- Solver is still partially synthetic
-- Control not yet fully mapped to physical grid actions
+The system operates as:
+
+> a trajectory evolving within a structured stability field
+
+where:
+
+- field = extracted from system physics  
+- geometry = defines stability structure  
+- navigation = movement along safe trajectories  
+
+---
+
+## 🔥 Key Result
+
+A power system can be:
+
+- mapped into a stability field  
+- structurally analyzed  
+- safely navigated near its limits  
+
+---
+
+## ⚡ Implication
+
+- operation near stability boundary  
+- maximum safe utilization  
+- avoidance of collapse  
 
 ---
 
 ## 🔮 Next Steps
 
-- Integrate real AC power flow (pandapower)
-- Map actions to physical interventions
-- Identify stability basins
-- Extract vector fields
-- Enable trajectory navigation
-- Establish limit cycles (v10)
-
----
-
-## 🔥 Final Insight
-
-Control is no longer applied *to* the system.
-
-It emerges *from*:
-
-**the geometry and dynamics of the field itself**
+- Real-time field estimation (online NEXAH)  
+- Adaptive safety margins  
+- Multi-agent field navigation  
+- Extension to multi-dimensional systems  
+- Integration with real grid data  
 
 ---
 
@@ -314,276 +251,23 @@ It emerges *from*:
 
 NEXAH integrates:
 
-- structure (manifold)
-- dynamics (risk + curvature)
-- geometry (distance field)
-- phase space (λ, ψ)
-- control (adaptive policy)
-
-into a unified system capable of:
-
-→ **navigating stability in complex dynamical systems**## 🔹 3. Manifold Layer
-
-**Module:**
-- `overlay/manifold_fit.py`
-
-**Model:**
-
-```text
-log(d2c) = log(a) + p log(c) + q log(|dc|)
-```
-
-**Purpose:**
-- Define expected system behavior
-- Establish structural baseline
-
----
-
-## 🔹 4. Overlay Field
-
-**Module:**
-- `overlay/residual_distance.py`
-
-**Components:**
-- `residual` → deviation from manifold
-- `distance` → proximity to collapse region (rift)
-
-**Interpretation:**
-- Low residual → stable structure
-- High residual → instability
-- High distance → approach to collapse boundary
-
----
-
-## 🔹 5. Clustering Layer
-
-**Method:**
-- KMeans on `(distance, residual)`
-
-**Output:**
-- Structural regimes:
-  - Stable region
-  - Transition band
-  - Collapse region
-
----
-
-## 🔹 6. Predictor Layer
-
-**Module:**
-- `analysis/predictor.py`
-
-**Outputs:**
-- `risk ∈ [0,1]`
-- `warnings (bool)`
-- `time-to-collapse (ttc)`
-
-**Mechanism:**
-Combines:
-- distance (geometry)
-- curvature (`d2c`)
-- cluster structure
-
----
-
-## 🔹 7. Policy Layer (Base Control)
-
-**Module:**
-- `decision/intervention_policy.py`
-
-**Inputs:**
-- risk
-- slope (drift)
-- TTC urgency
-- system state
-
-**Outputs:**
-- continuous control signal
-- discrete actions:
-  - STABILIZE
-  - PREEMPTIVE_STABILIZE
-  - REDUCE_LOAD
-  - EMERGENCY_SHED
-
----
-
-## 🔹 8. Adaptive Field Control (v3) 🔥
-
-**Module:**
-- `decision/adaptive_policy_v3.py`
-
-**New Inputs:**
-- `risk_slope` → trajectory direction
-- `d2c` → instability curvature
-- `distance` → proximity to collapse manifold
-- `state_history` → memory / persistence
-
----
-
-### 🧠 Control Logic
-
-The system now integrates:
-
-1. **Trajectory Awareness**
-   - reacts to rising risk (not just level)
-
-2. **Structural Awareness**
-   - detects instability acceleration (curvature)
-
-3. **Geometric Awareness**
-   - anticipates collapse via distance-to-rift
-
-4. **Memory-Based Escalation**
-   - persistent instability triggers stronger control
-
----
-
-### 🔄 Control Transition
-
-| Layer | Behavior |
-|------|--------|
-| Policy v1 | reactive |
-| Policy v2 | recovery + memory |
-| Policy v3 | **pre-emptive field control** |
-
----
-
-## 🔹 9. Closed Loop Control
-
-```text
-action → solver → new system → new features → new action
-```
-
-**Key property:**
-- Intervention modifies system trajectory
-- Feedback reshapes collapse dynamics
-
----
-
-## ⚡ System Behavior (v3)
-
-The system now operates as:
-
-- **structure-aware**
-- **trajectory-aware**
-- **anticipatory**
-
-instead of:
-
-- state-triggered
-- reactive
-
----
-
-## 🔬 Interpretation
-
-NEXAH is no longer a monitoring system.
-
-It is a:
-
-**field-driven control architecture for dynamic stability navigation**
-
----
-
-## ⚠️ Current Limitation
-
-- Solver is still synthetic (not physical AC power flow)
-- Control acts on abstract system, not real grid equations
-
----
-
-## 🔮 Next Step (Critical)
-
-- Replace solver with real AC power flow (pandapower)
-- Enable physical intervention (load / generation control)
-
----
-
-## 🧭 Summary
-
-NEXAH integrates:
-
-- structure (manifold)
-- dynamics (risk + slope)
-- geometry (distance field)
-- control (adaptive policy)
+- physics (power flow)
+- field extraction (risk)
+- geometry (curvature + slope)
+- navigation (target-based control)
 
 into a unified system capable of:
 
 → **navigating stability in complex dynamical systems**
-**Purpose:**
-- Define expected system behavior
-- Establish structural baseline
 
+---
 
-## 🔹 4. Overlay Field
+## 📌 Note
 
-**Modules:**
-overlay/residual_distance.py
+Legacy architecture (v7–v9), including:
+- manifold learning  
+- residual fields  
+- clustering  
+- phase dynamics  
 
-**Components:**
-- Residual → deviation from manifold
-- Distance → proximity to collapse region (rift)
-
-**Interpretation:**
-- Low residual → stable structure
-- High residual → instability / deviation
-
-
-## 🔹 5. Clustering Layer
-
-**Method:**
-- KMeans on (distance, residual)
-
-**Output:**
-- System regimes:
-  - Stable region
-  - Transition zone
-  - Collapse region
-
-
-## 🔹 6. Predictor Layer
-
-**Module:**
-analysis/predictor.py
-
-**Outputs:**
-- risk ∈ [0,1]
-- warnings (bool)
-- time-to-collapse (ttc)
-
-**Mechanism:**
-- Combines:
-  - distance
-  - curvature (d2c)
-  - cluster deviation
-
-
-## 🔹 7. Policy Layer
-
-**Module:**
-decision/intervention_policy.py
-
-**Inputs:**
-- risk
-- slope (drift)
-- TTC urgency
-- system state
-
-**Outputs:**
-- continuous control signal
-- discrete actions:
-  - STABILIZE
-  - PREEMPTIVE_STABILIZE
-  - REDUCE_LOAD
-  - EMERGENCY_SHED
-
-
-## 🔹 8. Closed Loop Control
-
-action → solver → new system → new features → new action
-
-**Key property:**
-- Intervention changes system trajectory
-- Feedback modifies collapse dynamics
-
+is documented separately and represents the **development path toward field-based navigation**.
