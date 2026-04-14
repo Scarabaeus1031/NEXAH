@@ -133,15 +133,13 @@ NEXAH is a general framework for navigating structure in complex systems.
 
 ---
 
-# ⚖️ Classical vs NEXAH
+## ⚖️ Classical vs NEXAH (Essence)
 
-| Feature | Classical | NEXAH |
-|--------|----------|------|
-| Static thresholds | Yes | No |
-| Dynamic field | No | Yes |
-| Early warning | Limited | Yes (43.9 s) |
-| Closed-loop control | Reactive | Geometry-aware |
-| Navigation | No | Prototype |
+Classical:
+→ threshold-based, reactive
+
+NEXAH:
+→ field-based, trajectory-aware
 
 ---
 
