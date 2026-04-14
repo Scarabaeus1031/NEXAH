@@ -22,6 +22,14 @@ systems are understood as existing within a:
 
 ---
 
+## 🚀 Start Here
+
+New to NEXAH?
+
+👉 [START HERE — Run your first demo](START_HERE.md)
+
+---
+
 ## 📂 Entry Points
 
 - ⚡ [Power Systems](APPLICATIONS/power_systems/README.md)  
