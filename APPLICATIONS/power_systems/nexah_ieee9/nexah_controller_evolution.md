@@ -8,131 +8,39 @@
 
 ## 🧭 Overview
 
-NEXAH transforms classical system analysis into **field-based navigation**.
+NEXAH transforms classical system analysis into:
 
-Instead of asking:
+> **a continuous stability field with closed-loop control and emerging navigation**
 
-> "Will the system collapse?"
+Instead of binary classification:
 
-NEXAH asks:
+> stable ❌ / unstable ❌  
 
-> "Where are we in the stability field — and how can we move safely within it?"
-
-Systems are no longer treated as binary (stable / unstable), but as evolving inside a:
+systems are understood as evolving inside a:
 
 > **structured stability landscape**
 
 ---
 
-## 🔥 Key Result — Power Systems
-
-NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical threshold-based methods.
-
-✔ demonstrated on IEEE benchmark systems (up to 9241 buses)
+## 🔥 Key Result — Real Power Systems
 
 ![NEXAH IEEE Result](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+*NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical methods.*
+
+✔ demonstrated on IEEE benchmark systems (up to 9241 buses)
 
 ---
 
 ## 🔁 Core Pipeline
 
 ```text
-simulation → structure → field → geometry → navigation
+simulation → structure → field → geometry → control → navigation (in development)
 ```
 
 ---
 
-## 📊 From Collapse to Navigation
-
-### 1. Collapse Geometry
-
-- collapse is not a point  
-- it is a **boundary in a structured field**
-
----
-
-### 2. Flow Field Dynamics
-
-- trajectories follow **structured flow paths**
-- instability emerges along these paths
-
----
-
-### 3. Field-Based Control (Current Prototype)
-
-- risk field constructed from system physics  
-- trajectory-aware adaptive control  
-- early intervention before critical states  
-
----
-
-### 4. Closed-Loop Control (IEEE9)
-
-- controller influences system evolution  
-- actions are based on **field geometry**, not thresholds  
-
----
-
-## ⚖️ Classical vs NEXAH
-
-| Feature | Classical | NEXAH |
-|--------|----------|------|
-| Static thresholds | Yes | No |
-| Dynamic stability field | No | Yes |
-| Early warning | Limited | Yes (43.9 s) |
-| Control behavior | Reactive | Trajectory-aware |
-| Navigation | No | Emerging |
-
----
-
-## 🚀 Quick Start
-
-Run IEEE9 controller:
-
-```bash
-PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
-```
-
----
-
-## 📁 Results
-
-```
-APPLICATIONS/power_systems/nexah_ieee9/results/
-```
-
-Includes:
-
-- risk fields  
-- controller runs  
-- system trajectories  
-- intervention logs  
-
----
-
-## 🧭 Current Status
-
-| Component | Status |
-|----------|--------|
-| Structure Discovery | ✅ |
-| Field Modeling | ✅ |
-| Early Detection | ✅ (43.9 s) |
-| Adaptive Control | ⚙️ Prototype (IEEE9) |
-| Field Navigation | 🚧 In Development |
-| Scaling (118+) | 🚧 In Progress |
-
----
-
-## 🔮 Next Steps
-
-- scale adaptive control to IEEE118+  
-- quantify stability gains (time / load capacity)  
-- real-time field estimation  
-- minimal demo for contributors  
-
----
-
-## 🧠 Core Insight
+## 🔥 Core Insight
 
 Control is no longer:
 
@@ -144,7 +52,141 @@ but:
 
 ---
 
-## 🔥 Final Insight
+# 📊 From Collapse → Field → Control
+
+---
+
+## 🔹 1. Collapse Geometry
+
+![Collapse Geometry](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
+
+*Collapse is not a point — it is a boundary in a structured field.*
+
+- system states organize into regions  
+- collapse emerges as a geometric rift  
+
+---
+
+## 🔹 2. Flow Field Dynamics
+
+![Flow Field](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+
+*System trajectories follow structured flow — not randomness.*
+
+- motion is directional  
+- instability follows field paths  
+
+---
+
+## 🔹 3. Closed-Loop Control (IEEE9 Prototype)
+
+![Control](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_plot.png)
+
+*Control reshapes trajectories instead of reacting to states.*
+
+- early intervention  
+- trajectory-aware behavior  
+- structured escalation  
+
+---
+
+## 🔹 4. Phase Dynamics (v9)
+
+![Phase](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_phase_lambda_psi.png)
+
+*System + controller form a dynamical system.*
+
+- phase space: (λ, ψ)  
+- attractor-based behavior  
+- coupling between system and control  
+
+---
+
+## 🔹 5. Field Navigation (Experimental — in development)
+
+![Navigation](APPLICATIONS/power_systems/nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
+
+*Prototype navigation toward stability boundary.*
+
+- smooth convergence observed  
+- no collapse triggered  
+- navigation logic under active development  
+
+---
+
+# 🧠 System Interpretation
+
+The system operates as:
+
+> a trajectory evolving within a structured stability field
+
+where:
+
+- field = extracted from system physics  
+- geometry = defines stability structure  
+- control = movement shaped by the field  
+
+---
+
+# ⚖️ Classical vs NEXAH
+
+| Feature | Classical | NEXAH |
+|--------|----------|------|
+| Static thresholds | ✅ | ❌ |
+| Dynamic field | ❌ | ✅ |
+| Early warning | ⚠️ | ✅ (43.9 s) |
+| Closed-loop control | ❌ | ✅ (prototype) |
+| Predictive behavior | ❌ | ✅ |
+| Navigation | ❌ | 🚧 emerging |
+
+---
+
+# 🚀 Run
+
+```bash
+PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+```
+
+---
+
+# 📁 Results
+
+```
+APPLICATIONS/power_systems/nexah_ieee9/results/
+```
+
+Includes:
+
+- field scans  
+- controller runs  
+- trajectories  
+- intervention logs  
+
+---
+
+# 🧭 Current Status
+
+| Component | Status |
+|----------|--------|
+| Structure Discovery | ✅ |
+| Field Modeling | ✅ |
+| Early Detection | ✅ (43.9 s) |
+| Adaptive Control | ⚙️ Prototype |
+| Phase Dynamics | ⚙️ Experimental |
+| Field Navigation | 🚧 In Development |
+
+---
+
+# 🔮 Next Steps
+
+- scale adaptive control to IEEE118+  
+- quantify stability gains  
+- refine navigation controller  
+- real-time field estimation  
+
+---
+
+# 🧠 Final Insight
 
 Power systems are not binary.
 
@@ -152,9 +194,9 @@ They exist within a:
 
 > **structured stability landscape**
 
-NEXAH makes this landscape:
+NEXAH makes this:
 
-> **visible, measurable, and navigable**
+> **visible, measurable, and controllable**
 
 ---
 
@@ -163,7 +205,7 @@ NEXAH makes this landscape:
 > From dynamics → structure  
 > From structure → field  
 > From field → geometry  
-> From geometry → navigation  
+> From geometry → control  
 
 ---
 
