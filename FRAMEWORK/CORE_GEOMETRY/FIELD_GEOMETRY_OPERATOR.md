@@ -32,6 +32,42 @@ This document provides:
 Field → Geometry → Operator → Navigation
 ```
 
+## 🔬 Mathematical Layer
+
+Let the system state be:
+
+x ∈ ℝⁿ
+
+The system evolves according to:
+
+dx/dt = F(x)
+
+We define a scalar risk field:
+
+risk : ℝⁿ → ℝ
+
+as described in:
+
+→ ../../docs/risk_field.md
+
+Geometric structures:
+
+- Stability region: Ω = { x | risk(x) < τ }
+- Separatrix: S = { x | risk(x) = τ }
+
+Control acts as a geometric operator:
+
+dx/dt = F(x) + u(x)
+
+where u depends on:
+
+- risk(x)
+- ∇risk(x)
+- geometric structure (distance to S)
+
+This connects the geometric interpretation with the formal framework.
+
+
 # 🔲 1. FIELD LAYER
 
 ## 🌊 Off-Manifold Flow (Empirical Field Structure)
