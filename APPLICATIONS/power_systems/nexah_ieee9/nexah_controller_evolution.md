@@ -2,7 +2,8 @@
 
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Field Model](https://img.shields.io/badge/field-model-blue)
-![Control](https://img.shields.io/badge/control-prototype-orange)
+![Navigation](https://img.shields.io/badge/navigation-enabled-brightgreen)
+![Dynamics](https://img.shields.io/badge/dynamics-v11-orange)
 
 ---
 
@@ -10,13 +11,13 @@
 
 NEXAH transforms classical system analysis into:
 
-> **a continuous stability field with closed-loop control and emerging navigation**
+> **a continuous stability field with closed-loop control and navigation**
 
 Instead of binary classification:
 
 > stable ❌ / unstable ❌  
 
-systems are understood as evolving inside a:
+systems are understood as existing within a:
 
 > **structured stability landscape**
 
@@ -28,14 +29,26 @@ systems are understood as evolving inside a:
 
 *NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical methods.*
 
-✔ demonstrated on IEEE benchmark systems (up to 9241 buses)
+👉 Demonstrated on IEEE benchmark systems up to **9241 buses**
+
+---
+
+## 🔬 Core Idea
+
+Instead of asking:
+
+> "Will the system collapse?"
+
+NEXAH answers:
+
+> "Where are we in the field — and how can we move safely?"
 
 ---
 
 ## 🔁 Core Pipeline
 
 ```text
-simulation → structure → field → geometry → control → navigation (in development)
+simulation → structure → field → geometry → navigation
 ```
 
 ---
@@ -48,11 +61,19 @@ Control is no longer:
 
 but:
 
-→ predictive (based on system geometry)
+→ predictive (based on geometry)
 
 ---
 
-# 📊 From Collapse → Field → Control
+NEXAH does not react to instability.
+
+It **reads the structure of the system** and moves within it.
+
+👉 Stability becomes a **navigation problem**
+
+---
+
+# 📊 From Collapse → Field → Navigation
 
 ---
 
@@ -78,45 +99,45 @@ but:
 
 ---
 
-## 🔹 3. Closed-Loop Control (IEEE9 Prototype)
+## 🔹 3. Field Navigation (v11_2)
+
+![Navigation](APPLICATIONS/power_systems/nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
+
+*NEXAH actively navigates toward the stability boundary without triggering collapse.*
+
+- smooth convergence  
+- no oscillation  
+- maximum safe utilization  
+
+---
+
+## 🔹 4. Closed-Loop Control (IEEE9)
 
 ![Control](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
 *Control reshapes trajectories instead of reacting to states.*
 
 - early intervention  
-- trajectory-aware behavior  
 - structured escalation  
+- trajectory-aware behavior  
 
 ---
 
-## 🔹 4. Phase Dynamics (v9)
+## 🔹 5. Phase Dynamics (v9)
 
 ![Phase](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_phase_lambda_psi.png)
 
 *System + controller form a dynamical system.*
 
 - phase space: (λ, ψ)  
-- attractor-based behavior  
+- attractor-based stability  
 - coupling between system and control  
-
----
-
-## 🔹 5. Field Navigation (Experimental — in development)
-
-![Navigation](APPLICATIONS/power_systems/nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
-
-*Prototype navigation toward stability boundary.*
-
-- smooth convergence observed  
-- no collapse triggered  
-- navigation logic under active development  
 
 ---
 
 # 🧠 System Interpretation
 
-The system operates as:
+The system now operates as:
 
 > a trajectory evolving within a structured stability field
 
@@ -124,7 +145,17 @@ where:
 
 - field = extracted from system physics  
 - geometry = defines stability structure  
-- control = movement shaped by the field  
+- navigation = movement along safe trajectories  
+
+---
+
+# 🔥 Key Result
+
+A complex physical system can be:
+
+- mapped into a field  
+- understood geometrically  
+- navigated safely without entering collapse  
 
 ---
 
@@ -134,17 +165,27 @@ where:
 |--------|----------|------|
 | Static thresholds | ✅ | ❌ |
 | Dynamic field | ❌ | ✅ |
-| Early warning | ⚠️ | ✅ (43.9 s) |
-| Closed-loop control | ❌ | ✅ (prototype) |
+| Early warning | ⚠️ | ✅ |
+| Closed-loop control | ❌ | ✅ |
 | Predictive behavior | ❌ | ✅ |
-| Navigation | ❌ | 🚧 emerging |
+| Navigation | ❌ | ✅ |
 
 ---
 
 # 🚀 Run
 
+### Stability Scan
+
 ```bash
-PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+PYTHONPATH=APPLICATIONS/power_systems \
+python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v11_0.py
+```
+
+### Navigation Controller
+
+```bash
+PYTHONPATH=APPLICATIONS/power_systems \
+python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v11_2.py
 ```
 
 ---
@@ -158,31 +199,32 @@ APPLICATIONS/power_systems/nexah_ieee9/results/
 Includes:
 
 - field scans  
-- controller runs  
-- trajectories  
-- intervention logs  
+- controller evolution (v7 → v11)  
+- navigation runs  
+- replay logs  
+- full system traces  
 
 ---
 
-# 🧭 Current Status
+# 🧭 Status
 
 | Component | Status |
 |----------|--------|
 | Structure Discovery | ✅ |
 | Field Modeling | ✅ |
-| Early Detection | ✅ (43.9 s) |
-| Adaptive Control | ⚙️ Prototype |
-| Phase Dynamics | ⚙️ Experimental |
-| Field Navigation | 🚧 In Development |
+| Adaptive Control | ✅ |
+| Dynamics Layer | ✅ |
+| Field Geometry | ✅ |
+| Navigation | ✅ |
 
 ---
 
 # 🔮 Next Steps
 
-- scale adaptive control to IEEE118+  
-- quantify stability gains  
-- refine navigation controller  
+- multi-agent navigation  
 - real-time field estimation  
+- higher-dimensional systems  
+- real grid integration  
 
 ---
 
@@ -196,16 +238,15 @@ They exist within a:
 
 NEXAH makes this:
 
-> **visible, measurable, and controllable**
+> **visible, measurable, and navigable**
 
 ---
 
-## 🌀 NEXAH
+# 🌀 NEXAH
 
 > From dynamics → structure  
-> From structure → field  
-> From field → geometry  
-> From geometry → control  
+> From structure → geometry  
+> From geometry → navigation  
 
 ---
 
