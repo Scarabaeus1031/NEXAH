@@ -1,12 +1,9 @@
 import numpy as np
 
-# --------------------------------------------------
-# 🔹 IMPORT REAL SOLVER
-# --------------------------------------------------
+# 🔥 REAL SOLVER IMPORT
+from nexah_ieee9.simulation.powerflow_solver_real_v2 import RealPowerFlowSolverV2
 
-from APPLICATIONS.power_systems.nexah_ieee9.simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
-
-solver = RealPowerFlowSolverV3()
+solver = RealPowerFlowSolverV2()
 
 
 # --------------------------------------------------
@@ -53,7 +50,7 @@ def evaluate_field(state, targets):
 def compute_action(field_push, state):
     action = ControlAction()
 
-    # Lambda control
+    # Lambda steering
     action.delta_lambda = 0.8 * field_push
 
     # Voltage support
@@ -74,10 +71,10 @@ def compute_action(field_push, state):
 def apply_action(lambda_val, action):
     lambda_new = lambda_val + action.delta_lambda
 
-    # Load shedding reduces effective lambda
+    # Load shedding wirkt direkt
     lambda_new -= action.load_shed
 
-    # bounds
+    # Clamp
     lambda_new = max(0.6, min(1.5, lambda_new))
 
     return lambda_new
@@ -87,56 +84,33 @@ def apply_action(lambda_val, action):
 # 🔹 REAL IEEE9 SIMULATION
 # --------------------------------------------------
 
-def run_ieee9_simulation(lambda_val, action):
-    """
-    REAL IEEE9 simulation using pandapower
-    """
+def run_ieee9_simulation(lambda_val):
+    res = solver.step(lambda_val)
 
-    # map controller → physical action
-    action_type = None
-
-    if action.load_shed > 0.05:
-        action_type = "EMERGENCY_SHED"
-    elif action.load_shed > 0.01:
-        action_type = "REDUCE_LOAD"
-    elif action.q_support > 0.02:
-        action_type = "PREEMPTIVE_STABILIZE"
-    elif action.q_support > 0.005:
-        action_type = "STABILIZE"
-
-    res = solver.step(lambda_val, action_type)
-
-    # collapse handling
     if not res["converged"]:
         return {
             "risk": 0.1,
             "distance": 0.0,
-            "vmin": 0.0,
-            "line_loading": 200.0
+            "vmin": 0.7,
+            "line_loading": 120.0
         }
 
-    vmin = res["vmin"]
-    line = res["line_loading"]
+    V = res["V"]
 
-    # ----------------------------------------
-    # 🔹 DERIVE RISK
-    # ----------------------------------------
-    risk = max(
-        0.0,
-        (0.97 - vmin) * 2.0 +      # voltage stress
-        (line - 80.0) / 100.0      # line stress
-    )
+    vmin = np.min(V)
+    vmean = np.mean(V)
 
-    # ----------------------------------------
-    # 🔹 DERIVE DISTANCE
-    # ----------------------------------------
-    distance = max(0.0, vmin - 0.85)
+    # 🔥 risk = voltage collapse proximity
+    risk = max(0, 1.0 - vmin)
+
+    # 🔹 distance = deviation from nominal
+    distance = np.mean(np.abs(V - 1.0))
 
     return {
         "risk": risk,
         "distance": distance,
         "vmin": vmin,
-        "line_loading": line
+        "line_loading": 0.0
     }
 
 
@@ -145,11 +119,10 @@ def run_ieee9_simulation(lambda_val, action):
 # --------------------------------------------------
 
 lambda_val = 0.6
-action = ControlAction()
 
 for step in range(180):
 
-    state = run_ieee9_simulation(lambda_val, action)
+    state = run_ieee9_simulation(lambda_val)
 
     field = evaluate_field(state, targets)
 
@@ -160,7 +133,7 @@ for step in range(180):
     print(
         f"[STEP {step}] λ={lambda_val:.4f} → {lambda_new:.4f} | "
         f"risk={state['risk']:.4f} dist={state['distance']:.4f} "
-        f"vmin={state['vmin']:.4f} line={state['line_loading']:.2f} "
+        f"vmin={state['vmin']:.4f} "
         f"dλ={action.delta_lambda:.4f} Q={action.q_support:.2f} shed={action.load_shed:.4f}"
     )
 
