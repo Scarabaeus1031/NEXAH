@@ -10,7 +10,7 @@
 
 NEXAH transforms classical system analysis into:
 
-> **a continuous stability field with closed-loop control and emerging navigation**
+> **a continuous stability field with closed-loop control and early-stage navigation**
 
 Instead of binary classification:
 
@@ -19,6 +19,13 @@ Instead of binary classification:
 systems are understood as existing within a:
 
 > **structured stability landscape**
+
+---
+
+## 📂 Entry Points
+
+- ⚡ [Power Systems](APPLICATIONS/power_systems/README.md)  
+- 🧠 [Framework](FRAMEWORK/README.md)  
 
 ---
 
@@ -47,11 +54,8 @@ NEXAH answers:
 ## 🔁 Core Pipeline
 
 ```text
-simulation → structure → field → geometry → navigation
+simulation → structure → field → geometry → control → navigation
 ```
-
----
-
 ## 🔥 Core Insight
 
 Control is no longer:
@@ -78,6 +82,8 @@ It **reads the structure of the system** and adapts behavior accordingly.
 
 ## 🔹 1. Collapse Geometry
 
+👉 Source: [Stability Field Dynamics](APPLICATIONS/power_systems/stability_field_dynamics/README.md)
+
 ![Collapse Geometry](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
 
 *Collapse is not a point — it is a boundary in a structured field.*
@@ -89,6 +95,8 @@ It **reads the structure of the system** and adapts behavior accordingly.
 
 ## 🔹 2. Flow Field Dynamics
 
+👉 Source: [IEEE Field Analysis](APPLICATIONS/power_systems/stability_field_dynamics/)
+
 ![Flow Field](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
 *System trajectories follow structured flow — not randomness.*
@@ -99,6 +107,8 @@ It **reads the structure of the system** and adapts behavior accordingly.
 ---
 
 ## 🔹 3. Closed-Loop Control (IEEE9)
+
+👉 Source: [IEEE9 Controller](APPLICATIONS/power_systems/nexah_ieee9/)
 
 ![Control](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
@@ -112,6 +122,8 @@ It **reads the structure of the system** and adapts behavior accordingly.
 
 ## 🔹 4. Phase Dynamics (v9)
 
+👉 Source: [Controller Phase Analysis](APPLICATIONS/power_systems/nexah_ieee9/)
+
 ![Phase](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_phase_lambda_psi.png)
 
 *System + controller form a dynamical system.*
@@ -123,6 +135,8 @@ It **reads the structure of the system** and adapts behavior accordingly.
 ---
 
 ## 🔹 5. Field Navigation (Prototype)
+
+👉 Source: [Navigation Prototype](APPLICATIONS/power_systems/nexah_ieee9/)
 
 ![Navigation](APPLICATIONS/power_systems/nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
 
@@ -181,13 +195,9 @@ A complex physical system can be:
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
 ```
 
----
-
 # 📁 Results
 
-```
-APPLICATIONS/power_systems/nexah_ieee9/results/
-```
+📂 [APPLICATIONS/power_systems/nexah_ieee9/results/](APPLICATIONS/power_systems/nexah_ieee9/results/)
 
 Includes:
 
@@ -245,3 +255,5 @@ NEXAH makes this:
 ---
 
 **Thomas K. R. Hofmann · 2026**
+
+
