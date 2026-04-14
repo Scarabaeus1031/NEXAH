@@ -248,3 +248,163 @@ Instead, it:
 | Real Grid          | ⚙️ Prototype |
 
 ---
+---
+
+## 🧭 Phase 9 — Field Extraction & Navigation (v10 → v11)
+
+### 🔹 Transition
+
+System evolution from:
+
+> anticipatory control (v3)
+
+to:
+
+> **field-based navigation**
+
+---
+
+## 🔬 Phase 9.1 — Stability Field Extraction (v10)
+
+- System scanned over λ  
+- Continuous stability surface constructed  
+
+**Signals:**
+- vmin (voltage stability)
+- loading (system stress)
+
+**Risk field defined as:**
+
+\[
+risk(λ) = \max(0, 0.97 - v_{min}) + \max(0, (loading - 80)/100)
+\]
+
+---
+
+### 📈 Result
+
+- Smooth stability surface  
+- Emergence of nonlinear regions  
+- Identification of structural transitions  
+
+---
+
+## 🔬 Phase 9.2 — Field Geometry (v11)
+
+Field analyzed via:
+
+- first derivative → slope  
+- second derivative → curvature  
+
+---
+
+### 📊 Observed Regimes
+
+#### 🟡 Structural Transition (~λ ≈ 0.8)
+- First curvature appears  
+- Field begins to deform  
+- System remains stable  
+
+---
+
+#### 🔴 Instability Onset (~λ ≈ 1.25+)
+- Rapid increase in risk  
+- Nonlinear amplification  
+- True collapse boundary  
+
+---
+
+## ⚠️ Key Insight
+
+> Instability is not defined by threshold crossing  
+> but by entering a nonlinear amplification region  
+
+---
+
+## 🧭 Phase 9.3 — Navigation Controller (v11_2)
+
+### Concept
+
+Instead of reacting to risk:
+
+- system navigates within the field  
+
+\[
+λ_{target} = λ_{critical} - Δ
+\]
+
+---
+
+### Behavior
+
+- smooth convergence to stability boundary  
+- no oscillation  
+- no collapse  
+- maximal safe system utilization  
+
+---
+
+## 🧠 Conceptual Evolution
+
+| Phase | Capability |
+|------|-----------|
+| v1   | Detection |
+| v2   | Reaction  |
+| v3   | Pre-emption |
+| v10  | Field extraction |
+| v11  | Field geometry |
+| v11_2| Navigation |
+
+---
+
+## 🔬 Conceptual Shift
+
+```text
+Reactive → Anticipatory → Navigational
+```
+
+## 🧠 System Interpretation
+
+The system now operates as:
+
+> a trajectory evolving within a structured stability field
+
+where:
+
+- field = extracted from system physics  
+- geometry = defines stability structure  
+- navigation = movement along safe trajectories  
+
+---
+
+## 🔥 Key Result
+
+A power system can be:
+
+- mapped into a stability field  
+- structurally analyzed  
+- safely navigated without collapse interaction  
+
+---
+
+## ⚡ Implication
+
+- operation near stability limits  
+- controlled approach to critical regions  
+- efficient utilization of system capacity  
+
+---
+
+## 🧭 Updated System Status
+
+| Component                | Status |
+|-------------------------|--------|
+| Baseline                | ✅     |
+| Manifold                | ✅     |
+| Predictor               | ✅     |
+| Policy v3               | ✅     |
+| Closed Loop             | ✅     |
+| Field Extraction        | ✅     |
+| Field Geometry          | ✅     |
+| Navigation Controller   | ✅     |
+| Real Grid               | ⚙️ Prototype |
