@@ -2,19 +2,84 @@
 
 **Version:** April 14, 2026  
 **Author:** Thomas K. R. Hofmann  
-**Purpose:** Internal detailed overview to regain clarity and create distance from daily development.  
-This document captures the full scope of the project, including hidden gems, the growth story and the current pipeline.
+**Purpose:** Internal overview for clarity, orientation, and structured reflection on the project.
+
+---
+
+## 🧭 Positioning
+
+NEXAH is an independent research and builder-driven project.
+
+It does not originate from an academic institution or a formal research program.  
+Instead, it emerged from continuous experimentation, system construction, and iterative discovery across multiple domains.
+
+The goal is not to present finished theory, but to:
+
+- explore structure in complex systems  
+- extract consistent patterns from dynamics  
+- build working prototypes  
+- and gradually formalize what proves to be stable  
+
+This document is intentionally:
+
+- more honest than a public README  
+- less polished than a paper  
+- and closer to the actual development process  
 
 ---
 
 ### 1. What NEXAH Really Is
 
 NEXAH is a **geometric structure-based framework** for complex dynamical systems.  
-It extracts emergent structure from raw dynamics, maps it into a continuous **stability field**, and enables **navigation and adaptive control** — all **deterministically**, without rewards, without neural networks, and without predefined goals.
 
-**Core Philosophy:**  
-Stability is not a simple threshold question, but a **geometric and structural property** in high-dimensional state space.  
-NEXAH makes this structure visible, measurable, and navigable.
+It extracts emergent structure from raw dynamics, maps it into a continuous **stability field**, and enables:
+
+- interpretation  
+- adaptive control  
+- and early-stage navigation  
+
+All of this is done:
+
+- without reward functions  
+- without neural networks  
+- without predefined optimization targets  
+
+---
+
+### Core Philosophy
+
+Stability is not a threshold condition.
+
+It is a:
+
+> **geometric and structural property in high-dimensional state space**
+
+NEXAH attempts to:
+
+- make this structure visible  
+- make it measurable  
+- and eventually make it navigable  
+
+---
+
+### What This Document Is (and Is Not)
+
+This is not:
+
+- a formal paper  
+- a finalized framework description  
+- or a polished external presentation  
+
+This is:
+
+> a structured snapshot of the system as it currently exists  
+
+including:
+
+- working components  
+- partial integrations  
+- conceptual breakthroughs  
+- and unresolved questions  
 
 ---
 
