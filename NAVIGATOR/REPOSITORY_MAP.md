@@ -1,4 +1,83 @@
-# NEXAH Repository Map
+# 🧭 NEXAH Repository Map (Quick Orientation)
+
+NEXAH is not a collection of folders.
+
+It is a **multi-layer system for discovering, mapping, and navigating structure in complex dynamics**.
+
+---
+
+## 🧠 Core Idea
+
+NEXAH transforms systems through the following progression:
+
+```text
+simulation → structure → field → geometry → navigation
+```
+
+This means:
+
+- systems are simulated  
+- structure is extracted  
+- dynamics become visible as fields  
+- geometry emerges from transitions  
+- navigation through stability regimes becomes possible  
+
+---
+
+## 🚀 Where to Start
+
+### 🔹 Fastest Entry
+👉 [`START_HERE.md`](../../START_HERE.md)
+
+- run one experiment  
+- see structure immediately  
+- no theory required  
+
+---
+
+### 🔹 Practical Systems (Recommended)
+👉 [`APPLICATIONS/`](../../APPLICATIONS/)
+
+- real-world examples (power systems, dynamics)  
+- full pipeline in action  
+- best entry for understanding behavior  
+
+---
+
+### 🔹 Architecture & Theory
+👉 [`FRAMEWORK/`](../../FRAMEWORK/README.md)
+
+- system stack (META → MEVA)  
+- formal structure of NEXAH  
+- conceptual foundation  
+
+---
+
+### 🔹 Exploration & Prototypes
+👉 [`BUILDER_LAB/`](../../BUILDER_LAB/)
+
+- demos  
+- proto-models  
+- experimental constructions  
+
+---
+
+### 🔹 Full Repository Understanding
+👉 Continue below ↓
+
+---
+
+## ⚡ One-Sentence Summary
+
+NEXAH is a system for discovering how:
+
+> **structure, motion, transition, and collapse emerge — and how they can be navigated**
+
+---
+
+---
+
+# 📘 Full Repository Map (Detailed)
 
 NEXAH is not a collection of folders.
 
