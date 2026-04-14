@@ -3,7 +3,7 @@
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Field Model](https://img.shields.io/badge/field-model-blue)
 ![Navigation](https://img.shields.io/badge/navigation-enabled-brightgreen)
-![Dynamics](https://img.shields.io/badge/dynamics-v11-orange)
+![Dynamics](https://img.shields.io/badge/dynamics-v6_public_|_v11_dev-orange)
 
 ---
 
@@ -59,7 +59,9 @@ Key idea:
 Simulation → Features → Manifold → Field → Risk → Policy → Control → Navigation
 ```
 
-## 🎬 Field Navigation (v11_2)
+---
+
+## 🎬 Field Navigation (Prototype)
 
 This animation shows the controller navigating toward the **stability boundary** without triggering collapse.
 
@@ -73,6 +75,12 @@ This animation shows the controller navigating toward the **stability boundary**
 
 👉 **Insight:**  
 Control follows the **geometry of the field**, not just local state error.
+
+---
+
+**Note:**
+- This visualization is based on **internal experimental versions (v7–v11)**  
+- The latest **public, reproducible version is v6**  
 
 ---
 
@@ -129,7 +137,7 @@ The controller is not external — it is part of the **field dynamics itself**.
 
 ---
 
-# 🌀 Dynamical System Layer (v7 → v9)
+# 🌀 Dynamical System Layer (v7 → v9, experimental progression)
 
 NEXAH evolves from static control to a true dynamical system.
 
@@ -166,7 +174,7 @@ The system becomes a **coupled dynamical process**, not a static controller.
 
 ---
 
-# 🔥 Field Geometry (v10 → v11)
+# 🔥 Field Geometry (v10 → v11, experimental)
 
 The system is now analyzed as a **continuous stability surface**.
 
@@ -232,7 +240,17 @@ where:
 
 - field = extracted from system physics  
 - geometry = defines stability structure  
-- navigation = movement along safe trajectories  
+- navigation = movement along safe trajectories
+
+# 🚀 Run (Public Version)
+
+```bash
+PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+```
+Note:
+	•	v6 is the latest stable and reproducible version in this repository
+	•	newer iterations (v7–v11) are currently being consolidated and cleaned
+
 
 ---
 
