@@ -24,7 +24,7 @@ It transforms system behavior into a **continuous geometric field**, enabling:
 
 The framework is organized into five layers:
 
-```text
+``text
 META → ARCHY → MESO → NEXAH → MEVA
 ``
 	•	META — relational structure
