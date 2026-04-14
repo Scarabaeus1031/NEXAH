@@ -8,35 +8,51 @@ NEXAH turns complex system behavior into something new:
 
 ---
 
-## ⚡ See it in 30 seconds
+## ⚡ Real-World Example (Power Systems)
 
 Run this:
+
+    PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+
+This shows:
+
+- a real power grid system  
+- instability emerging as structure  
+- control acting before collapse  
+
+👉 NEXAH detects instability up to **43.9 seconds early**
+
+---
+
+## 🧠 What is happening?
+
+Instead of:
+
+> stable vs unstable
+
+NEXAH reveals:
+
+- a **field** (system motion)  
+- a **geometry** (where collapse forms)  
+- a **trajectory** (how the system evolves)  
+
+👉 The system becomes **navigable**
+
+---
+
+## 🌪 Simpler Example (Lorenz System)
+
+To understand the idea visually, run:
 
     python APPLICATIONS/dynamical_systems/lorenz/navigation/lorenz_chaos_navigation_map.py
 
 You will see:
 
-- a chaotic system  
-- hidden structure inside the chaos  
-- trajectories moving within that structure  
+- chaotic motion  
+- hidden structure  
+- trajectories moving inside a field  
 
-👉 This is the core idea of NEXAH.
-
----
-
-## 🧠 What just happened?
-
-Instead of treating the system as:
-
-> random motion
-
-NEXAH shows:
-
-- a **field** (how the system moves)  
-- a **geometry** (where transitions happen)  
-- a **landscape** (where it is stable or unstable)  
-
-👉 The system becomes **navigable**
+👉 Same principle — simpler system
 
 ---
 
@@ -78,11 +94,9 @@ NEXAH turns complex dynamics into a **field you can move through**.
 
 ## 🚀 Next Step
 
-Run the Lorenz example above.
+Run the IEEE example above.
 
-Then explore the framework.
-
-Everything else builds from there.
+Then explore Lorenz to understand the structure behind it.
 
 ---
 
