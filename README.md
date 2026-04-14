@@ -51,7 +51,7 @@ Collapse is a **continuous boundary in state space**.
 
 ---
 
-## 🔹 2. Flow Field Dynamics  ← (WICHTIG ZURÜCK!)
+## 🔹 2. Flow Field Dynamics
 
 ![Flow Field](results/controller_runs/controller_replay_20260413_214411/field_overlay.png)
 
