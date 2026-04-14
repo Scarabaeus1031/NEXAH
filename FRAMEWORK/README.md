@@ -26,63 +26,52 @@ The framework is organized into five layers:
 
 ```text
 META → ARCHY → MESO → NEXAH → MEVA
+``
+	•	META — relational structure
+	•	ARCHY — regime detection & simulation
+	•	MESO — risk geometry & stability landscape
+	•	NEXAH — navigation & trajectory control
+	•	MEVA — execution & system evolution
 ```
-
-- **META** — relational structure  
-- **ARCHY** — regime detection & simulation  
-- **MESO** — risk geometry & stability landscape  
-- **NEXAH** — navigation & trajectory control  
-- **MEVA** — execution & system evolution  
-
 ---
 
-## 🔬 Core Geometry
+## 🔬 Field & Geometry
 
-The system is interpreted as a **vector field**:
+The system is interpreted as a vector field with directional structure:
+	•	forward flow (stable)
+	•	interface (transition)
+	•	backward flow (collapse)
 
-- forward flow (stable)  
-- interface (transition)  
-- backward flow (collapse)  
-
-Coherence defines stability:
+Stability is defined through coherence:
 
 C(x) = (ẋ · F(x)) / (|ẋ| |F(x)|)
 
----
 
 ## 📂 Structure
+	•	CORE_GEOMETRY/ — field theory & transition geometry
+	•	ARCHY/ — simulation environments
+	•	MESO/ — risk & stability analysis
+	•	NEXAH/ — navigation layer
+	•	MEVA/ — execution layer
 
-- `system_stack.md` — full architecture description  
-- `CORE_GEOMETRY/` — field & coherence theory  
-- `ARCHY/` — simulation environments  
-- `MESO/` — risk & stability analysis  
-- `NEXAH/` — navigation layer  
-- `MEVA/` — execution layer  
+Additional:
+	•	research/ — theoretical foundation
+	•	models/ — system representations
+	•	applications/ — applied use cases
 
----
+⸻
 
 ## 🧪 Status
+	•	✓ structure discovery
+	•	✓ field construction
+	•	✓ stability analysis
+	•	✓ early navigation capabilities
 
-- ✓ structure discovery  
-- ✓ field construction  
-- ✓ stability analysis  
-- ✓ early navigation capabilities  
-
----
-
-## 📚 Research
-
-See:
-
-- `research/` — theoretical foundation  
-- `models/` — system models  
-- `applications/` — applied use cases  
-
----
+⸻
 
 ## 🧠 Insight
 
-> Stability is not maintained by resisting change.  
->  
-> It is maintained by preserving coherence  
-> while moving through the field.
+Stability is not maintained by resisting change.
+
+It is maintained by preserving coherence
+while moving through the field.
