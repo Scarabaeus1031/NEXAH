@@ -92,7 +92,7 @@ The system already contains its own navigable structure.
 
 ## ⚡ Early Collapse Detection
 
-![Early Detection](./visuals/NEXAH-FIELD_Early_Collapse_Detection_λ1=1000.png)
+![Early Detection](./visuals/NEXAH-FIELDEarly_Collapse_Detection_A1=1000.png)
 
 > Collapse is detectable **before it happens**.
 
