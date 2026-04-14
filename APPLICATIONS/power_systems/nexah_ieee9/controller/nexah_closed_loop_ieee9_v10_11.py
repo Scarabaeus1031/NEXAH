@@ -1,6 +1,7 @@
 import numpy as np
 from nexah_ieee9.simulation.powerflow_solver_real_v3 import RealPowerFlowSolverV3
 
+
 def run_controller():
     solver = RealPowerFlowSolverV3()
 
