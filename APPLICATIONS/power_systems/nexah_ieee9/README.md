@@ -2,8 +2,7 @@
 
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Field Model](https://img.shields.io/badge/field-model-blue)
-![Navigation](https://img.shields.io/badge/navigation-enabled-brightgreen)
-![Dynamics](https://img.shields.io/badge/dynamics-v6_public_|_v11_dev-orange)
+![Control](https://img.shields.io/badge/control-prototype-orange)
 
 ---
 
@@ -18,6 +17,8 @@ Instead of detecting collapse after it occurs, NEXAH:
 - reconstructs the **underlying stability geometry**
 - defines a **continuous risk field**
 - enables **closed-loop control along safe trajectories**
+
+👉 Control becomes **trajectory-aware and geometry-informed**
 
 ---
 
@@ -34,14 +35,11 @@ Simulation → Features → Manifold → Field → Risk → Policy → Control �
 | Version | Status | Description |
 |--------|--------|------------|
 | v6 | ✅ public | stable closed-loop control (reproducible) |
-| v7 | 🧪 experimental | dynamic response behavior |
-| v8 | 🧪 experimental | rotational / oscillatory dynamics |
-| v9 | 🧪 experimental | coupled phase system (λ, ψ) |
-| v10 | 🧪 experimental | field surface reconstruction |
-| v11 | 🧪 internal | early navigation behavior |
+| v7–v9 | 🧪 experimental | dynamical system behavior |
+| v10–v11 | 🧪 internal | field geometry & early navigation |
 
 👉 **v6 is the current reproducible reference**  
-👉 v7–v11 represent ongoing development toward full navigation
+👉 later versions represent ongoing development toward full navigation
 
 ---
 
@@ -51,7 +49,7 @@ Simulation → Features → Manifold → Field → Risk → Policy → Control �
 
 ![Voltage Collapse](results/run_20260412_223816/plot.png)
 
-*Collapse is not abrupt — it follows a continuous trajectory in state space.*
+Collapse is not abrupt — it follows a **continuous trajectory in state space**.
 
 ---
 
@@ -66,16 +64,17 @@ Simulation → Features → Manifold → Field → Risk → Policy → Control �
 
 ---
 
-## 🔹 Flow Field Dynamics
+## 🔹 Flow Field (Core Object)
 
 ![Flow Field](results/controller_runs/controller_replay_20260413_214411/field_overlay.png)
 
-*System trajectories follow structured flow paths.*
+System trajectories follow structured flow paths:
 
 - motion is directional  
 - instability follows field geometry  
+- stable regions form naturally  
 
-👉 This is the **core object of NEXAH**.
+👉 This field is the **central object of NEXAH**
 
 ---
 
@@ -85,7 +84,7 @@ Simulation → Features → Manifold → Field → Risk → Policy → Control �
 
 ![Control](results/run_20260412_223816/intervention.png)
 
-*Control reshapes trajectories instead of reacting to states.*
+Control reshapes trajectories instead of reacting to states:
 
 - early intervention  
 - smooth response  
@@ -97,39 +96,25 @@ Simulation → Features → Manifold → Field → Risk → Policy → Control �
 
 ![Timeseries](results/controller_runs/controller_replay_20260413_214411/timeseries.png)
 
-👉 The controller is part of the **system dynamics**, not external to it.
+👉 The controller becomes part of the **system dynamics**
 
 ---
 
-# 🌀 Dynamical System Layer (v7 → v9)
+# 🌀 Dynamical System Behavior (v7 → v9)
 
-NEXAH evolves from static control to a coupled dynamical system.
+NEXAH evolves from static control to a **coupled dynamical system**.
 
----
-
-### v7 — Static Convergence
-![v7](results/controller_v7_1/output_v7_1_phase.png)
-
----
-
-### v8 — Perturbed Dynamics
-![v8](results/controller_v8/output_v8_phase.png)
-
----
-
-### v9 — Phase System
+### Phase System (v9)
 
 ![λ vs ψ](results/controller_v9/output_v9_phase_lambda_psi.png)
 
 ![Risk vs Distance](results/controller_v9/output_v9_phase_risk_distance.png)
 
-![Timeseries](results/controller_v9/output_v9_plot.png)
-
-👉 System + controller form a **coupled dynamical process**
+👉 System + controller form a **joint phase-space process**
 
 ---
 
-# 🔥 Field Geometry (v10 → v11, experimental)
+# 🔥 Field Geometry (Experimental)
 
 ## 🔹 Stability Surface
 
@@ -137,23 +122,16 @@ NEXAH evolves from static control to a coupled dynamical system.
 
 ## 🔹 Field Structure
 
-![v10_3 Phase](results/controller_v10_3/output_v10_3_phase_lambda_psi.png)
-
-![v10_3 Field](results/controller_v10_3/output_v10_3_phase_risk_distance.png)
+![Field Structure](results/controller_v10_3/output_v10_3_phase_risk_distance.png)
 
 ---
 
 ## 🧠 Emergent Structure
 
-### 🟡 Transition Region (~λ ≈ 0.8)
+Two regimes appear:
 
-- structural deformation  
-- still stable  
-
-### 🔴 Instability Region (~λ ≈ 1.25+)
-
-- nonlinear amplification  
-- collapse dynamics  
+- 🟡 Transition region (~λ ≈ 0.8) → deformation  
+- 🔴 Instability region (~λ ≈ 1.25+) → nonlinear amplification  
 
 ---
 
@@ -168,11 +146,11 @@ NEXAH evolves from static control to a coupled dynamical system.
 
 ![Navigation GIF](results/visuals/nexah_navigation_v11.gif)
 
-*Controller approaches the stability boundary without triggering collapse.*
+Controller behavior:
 
-- smooth convergence  
-- reduced oscillation  
-- near-critical operation  
+- approaches critical boundary  
+- stabilizes before collapse  
+- operates near optimal utilization  
 
 ⚠️ Based on internal experimental versions (v7–v11)
 
@@ -182,7 +160,7 @@ NEXAH evolves from static control to a coupled dynamical system.
 
 λ = 0.600 → 0.7717  
 
-→ operation close to critical boundary without collapse
+→ operation close to critical boundary **without collapse**
 
 ---
 
