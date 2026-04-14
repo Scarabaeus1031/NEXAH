@@ -290,6 +290,120 @@ embedding into stable geometry
 
 ---
 
+# 🧭 GEM 006 — Modular Resonance Structure (mod 7 · mod 17 · Prime Fields)
+
+## Status  
+🧪 Experimental but high potential
+
+## Description
+
+Certain dynamical structures in NEXAH exhibit **unexpected regularity when projected into modular arithmetic spaces**.
+
+Key observations:
+
+- mod 7 and mod 17 reveal **hidden symmetry patterns**
+- prime-based projections expose **resonance-like structures**
+- system trajectories show **non-random clustering in modular space**
+
+---
+
+## Core Idea
+
+System dynamics are not only continuous.
+
+They also contain:
+
+> **discrete resonance structures encoded in number space**
+
+This suggests a dual representation:
+
+```text
+continuous field (geometry)
++
+discrete modular structure (arithmetic)
+```
+## Observed Effects
+
+- periodic clustering in mod-space  
+- symmetry breaking across primes  
+- stable vs unstable patterns aligning with residue classes  
+
+---
+
+## Interpretation
+
+Modular spaces act as:
+
+- a projection layer for hidden structure  
+- a compression of dynamical behavior  
+- a possible resonance detector  
+
+---
+
+## Importance
+
+This could provide:
+
+- a bridge between continuous dynamics and discrete structure  
+- a new method for feature extraction  
+- a way to detect hidden invariants in chaotic systems  
+
+---
+
+## Connection to NEXAH
+
+This GEM connects to:
+
+- FIELD → continuous geometry  
+- GRAPH → discrete structure  
+- MODULAR → hidden resonance layer  
+
+```text
+structure → field → geometry → modular resonance → navigation
+```
+## Risk
+
+⚠️ High risk of drifting into numerology if not grounded  
+
+Must remain:
+
+- empirical  
+- reproducible  
+- connected to system behavior  
+
+---
+
+## Next Step
+
+- test systematically on Lorenz trajectories  
+- test on IEEE systems (feature projection)  
+- check correlation with:
+
+  - risk field  
+  - regime transitions  
+  - separatrix proximity  
+
+---
+
+## Long-Term Role
+
+Potential new layer:
+
+FIELD  
+→ GEOMETRY  
+→ MODULAR STRUCTURE  
+→ NAVIGATION  
+
+This could become:
+
+- a hidden structure detector  
+- a feature compression mechanism  
+- or even a new class of navigation signal  
+
+
+
+---
+
 # 🧭 GEM RULE
 
 If something feels like:
