@@ -1,4 +1,4 @@
-# 🧭 NEXAH — CORE GEOMETRY VISUAL ATLAS  
+# 🧭 NEXAH — CORE GEOMETRY VISUAL GALLERY  
 ### Field · Geometry · Operator · Transition
 
 ---
@@ -11,41 +11,44 @@ It provides:
 
 - a **geometric interpretation layer**
 - a **structural decomposition of system behavior**
-- a **unified visual language**
+- a **unified visual language linking theory and data**
 
 ---
 
 ## 🔑 Core Mapping
 
-```
-Field → Geometry → Operator
+```text
+Field → Geometry → Operator → Navigation
 ```
 
 ---
 
 # 🔲 1. FIELD LAYER
 
-## 🌊 Off-Manifold Flow (V69)
+## 🌊 Off-Manifold Flow (Empirical Field Structure)
 
 ![Field](visuals/ieee57_v69_off_manifold_flow.png)
 
 ### Interpretation
 
-- vector field = full system dynamics  
+- vector field = system dynamics  
 - arrows = local motion directions  
-- trajectory = emergent structure  
+- trajectories follow structured flow  
+
+👉 **Insight:**  
+Dynamics are not random — they are organized by an underlying field.
 
 ---
 
-## 🌊 Data-Based Approximation
+## 🌊 Data-Based Field Approximation
 
 ![Field Approx](visuals/NEXAH_Core_Geometry-data-based_approximation.png)
 
 ### Interpretation
 
-- reveals underlying flow structure  
-- shows spiral / attractor behavior  
-- confirms geometry is intrinsic  
+- reveals intrinsic flow structure  
+- shows attractor-like behavior  
+- validates field-based representation  
 
 ---
 
@@ -59,7 +62,24 @@ Field → Geometry → Operator
 
 - oval = transition region  
 - cut = instability boundary  
-- branches = possible futures  
+- branches = possible future paths  
+
+👉 **Insight:**  
+Transitions are not points — they are geometric regions.
+
+---
+
+## 🧭 Separatrix / Decision Boundary (NEW)
+
+![Separatrix](visuals/NEXAH-Separatrix_Extraction(Concept_Visual).png)
+
+### Interpretation
+
+- separatrix = boundary between stable / unstable trajectories  
+- defines decision structure in the field  
+
+👉 **Insight:**  
+Control operates relative to geometric boundaries, not thresholds.
 
 ---
 
@@ -71,43 +91,86 @@ Field → Geometry → Operator
 
 ### Interpretation
 
-- field compresses  
-- curvature stabilizes  
-- corridor emerges  
+- field compresses under stress  
+- curvature increases  
+- structured transition corridor emerges  
 
 ---
 
 # 🔲 4. OPERATOR LAYER
 
-## 🧭 MASTER V28 — Operator Path
+## 🧭 Operator on Navigable Field
+
+![Operator](visuals/NEXAH-Controller_on_2D_Navigable_Field.png)
+
+### Interpretation
+
+- controller acts within field geometry  
+- reshapes trajectories instead of reacting locally  
+
+---
+
+## 🧭 Trajectory Steering
+
+![Steering](visuals/NEXAH-Steer_Trajectory_Away_from_Separatrix.png)
+
+### Interpretation
+
+- trajectories are guided away from instability  
+- control acts as geometric steering  
+
+👉 **Insight:**  
+Control = trajectory shaping in field space.
+
+---
+
+# 🔲 5. SYSTEM INTEGRATION
+
+## 🧭 Structural Navigation Framework
+
+![Framework](visuals/NEXAH_structural_navigation_framework.png)
+
+### Interpretation
+
+- unifies field, geometry, and control  
+- shows full navigation architecture  
+
+---
+
+## 🧭 Early Collapse Detection
+
+![Early Detection](visuals/NEXAH-FIELDEarly_Collapse_Detection_A1=1000.png)
+
+### Interpretation
+
+- collapse detectable before threshold  
+- risk emerges geometrically  
+
+---
+
+# 🔲 6. MASTER GEOMETRY SYSTEM
+
+## 🧭 MASTER Geometry Operator
 
 ![Master](visuals/NEXAH_MASTER_V28_Field_Geometry_Operator.png)
 
 ---
 
-## 🧭 MASTER V28 PRO — Refined Geometry
+## 🧭 MASTER PRO Geometry
 
 ![Master PRO](visuals/NEXAH_MASTER_V28PRO_Field_Geometry_Operator.png)
 
 ---
 
-# 🔲 5. FULL SYSTEM INTEGRATION
+## 🧭 MASTER FINAL — Full System
 
-## 🧭 MASTER V28 FINAL — Transition Dynamics
-
-![Master Final](visuals/NEXAH_MASTER_V28_Field_Geometry_Operator_Transition.png)
+![Master Final](visuals/MASTER_V28_PRO_FINAL.png)
 
 ---
 
-## 🧭 MASTER V28 PRO FINAL — Complete System
+# 🔲 7. TRIPTYCH SYSTEM
 
-![Master PRO Final](visuals/MASTER_V28_PRO_FINAL.png)
-
----
-
-# 🔲 6. TRIPTYCH SYSTEM
-
-## 🧩 Full Triptych
+## 🧩 Field → Compression → Operator
 
 ![Triptych](visuals/MASTER_V28_TRIPTYCH-Field-Compression-Operator.png)
 
@@ -117,13 +180,13 @@ Field → Geometry → Operator
 
 ## System Flow
 
-```
-Field → Compression → Geometry → Operator
+```text
+Field → Compression → Geometry → Operator → Navigation
 ```
 
 ---
 
-## Key Insight
+## 🔥 Core Insight
 
 > The system is not defined by trajectories.  
 >  
@@ -133,13 +196,13 @@ Field → Compression → Geometry → Operator
 
 # 🧭 Final Statement
 
-This atlas is not a gallery.
+This is not a visual collection.
 
 It is:
 
-→ a structural map  
-→ a geometric theory  
-→ a navigation framework  
+- a structural map  
+- a geometric theory  
+- a navigation framework  
 
 ---
 
