@@ -1,229 +1,114 @@
 # NEXAH System Capabilities
 
-This document summarizes the **current operational capabilities** of the NEXAH framework.
+NEXAH is a structural navigation framework for complex dynamical systems.
 
-It describes what the system can presently do across the architectural stack:
+It enables systems to be:
+
+→ modeled  
+→ structured  
+→ analyzed  
+→ and navigated toward stability  
+
+across the full architecture:
 
 META → ARCHY → MESO → NEXAH → MEVA
 
 ---
 
-## 🧠 Overview
+## ⚡ Core Capabilities
 
-NEXAH is a structural navigation framework for complex dynamic systems.
-
-Its current capabilities are centered on:
-
-- relational system modeling  
-- regime analysis  
-- risk geometry  
-- collapse and cascade analysis  
-- navigation through structured system landscapes  
-- execution of policy-guided trajectories  
-- visual exploration of system behavior  
-- **triple spiral coupling with Elastic Dual Lock (v9.x)**  
-- **URF Axial Space + Root Bridge (v9.1, 3D navigation layer)**  
+### 1. Structural Modeling (META)
+- relational system definition (JSON-based)
+- graph-based system representation
+- entity and dependency modeling
 
 ---
 
-## 1. Structural Modeling (META)
-
-NEXAH can represent systems as structured relational models.
-
-Capabilities:
-
-- define entities and dependencies  
-- represent systems as internal graph structures  
-- load systems from JSON-based schemas  
-- convert system definitions into analyzable models  
-
-This layer provides the structural input for all higher analysis.
+### 2. Regime Analysis (ARCHY)
+- state and transition detection  
+- attractor and basin identification  
+- regime boundary detection  
+- transition graph construction  
 
 ---
 
-## 2. Regime Analysis (ARCHY)
-
-NEXAH can extract and analyze regime structure from system behavior.
-
-Capabilities:
-
-- detect system states and transitions  
-- construct regime transition graphs  
-- identify attractors and stability basins  
-- detect regime boundaries  
-- organize structural system behavior into analyzable regimes  
-
-This layer turns raw system structure into regime-level organization.
+### 3. Risk Geometry (MESO)
+- collapse distance computation  
+- risk gradients and tipping point detection  
+- stability landscape generation  
+- fragility and resilience metrics  
+- phase-space and energy-like representations  
 
 ---
 
-## 3. Risk Geometry (MESO)
-
-NEXAH can compute the geometric structure of risk and instability.
-
-Capabilities:
-
-- compute collapse distance  
-- construct risk gradients  
-- detect tipping points  
-- detect early warning signals  
-- generate stability landscapes  
-- compute fragility maps  
-- compute resilience scores  
-- represent system phase spaces  
-- construct energy-like landscapes  
-
-This layer transforms regime structure into navigable stability geometry.
+### 4. Cascade Modeling
+- simulation of cascading failures  
+- collapse propagation analysis  
+- cascade trajectory generation  
 
 ---
 
-## 4. Cascade Modeling
-
-NEXAH can simulate cascading failure and instability propagation.
-
-Capabilities:
-
-- simulate cascade paths  
-- estimate cascade probability  
-- model collapse propagation  
-- generate cascade trajectories  
-- analyze failure spread across the system  
-
-This is a key bridge between static structure and dynamic risk.
-
----
-
-## 5. Navigation Layer (NEXAH)
-
-NEXAH can compute navigation strategies through system regimes.
-
-Capabilities:
-
-- safe path computation  
-- risk-aware trajectory planning  
+### 5. Navigation (NEXAH)
+- safe trajectory computation  
+- risk-aware path planning  
 - collapse avoidance strategies  
-- regime-aware decision support  
-- path selection through structured stability landscapes  
-- **triple spiral coupling** (Water–Mercury–Ferrofluid) with Elastic Dual Lock  
-- coherence-guided movement along Dual-Strand Grey Channel  
-- switch-mechanism between strands  
-- **navigation within URF Axial Space (Root Cube + Root Bridge)**  
-- mapping of trajectories into a **3D geometric reference frame**  
+- regime-aware decision logic  
 
-This layer is the core of NEXAH as a navigation framework.
+Extended capabilities:
+- triple spiral coupling (v9.x)  
+- Dual-Strand Grey Channel + Elastic Dual Lock  
+- URF Axial Space + Root Bridge (3D navigation)  
 
 ---
 
-## 6. Execution Layer (MEVA)
-
-NEXAH can execute navigation policies and simulate their consequences.
-
-Capabilities:
-
-- apply control actions  
-- override drift transitions  
-- update system state  
-- simulate trajectories under policy  
-- record system evolution  
-
-This layer turns navigation logic into executable system behavior.
+### 6. Execution (MEVA)
+- policy-based control actions  
+- trajectory execution  
+- system state updates  
+- closed-loop simulation  
 
 ---
 
-## 7. Visualization
-
-NEXAH provides multiple ways to inspect system structure visually.
-
-Capabilities:
-
+### 7. Visualization
 - regime graphs  
 - risk landscapes  
-- collapse and cascade visualizations  
-- tipping point diagrams  
-- fragility maps  
-- energy landscape diagrams  
-- phase-space representations  
-- Layer Energy over Time  
-- Pair Coupling Distances  
-- Dual-Strand Grey Channel visuals  
-- **Root Cube / White Cube / Black Cube (3D geometry)**  
-- **Triple Spiral + Root Bridge interaction visuals**  
-
-These tools make the discovered structure visible and interpretable.
+- cascade and collapse visualizations  
+- phase-space and energy diagrams  
+- 3D Root Cube / URF Axial Space representations  
 
 ---
 
-## 8. Current Strengths
+## 🧠 System Strengths
 
-At its current stage, NEXAH is strongest in:
+NEXAH is currently strongest in:
 
-- structural discovery  
+- structure discovery  
 - regime mapping  
 - risk geometry  
-- early instability indication  
+- early instability detection  
 - cascade analysis  
 - navigation-ready system interpretation  
-- **coherence-guided navigation via spiral coupling**  
-- **embedding dynamics into stable 3D geometry (URF Axial Space)**  
-
-Navigation and execution are operational and now increasingly aligned with geometric field structure.
+- coherence-guided navigation in 3D geometry  
 
 ---
 
-## 9. Application Scope
+## 🌐 Application Domains
 
-The framework is designed to be domain-independent.
-
-Current and intended application areas include:
-
-- energy grids  
-- infrastructure systems  
+- power systems  
+- infrastructure networks  
 - dynamical systems (chaos / attractors)  
-- distributed computing systems  
 - supply chains  
+- distributed systems  
 - complex organizational systems  
-- other dynamic networked environments  
-
----
-
-## 10. Capability Summary
-
-The framework currently supports the following progression:
-
-```text
-system modeling
-    ↓
-regime analysis
-    ↓
-risk geometry
-    ↓
-navigation (incl. spiral + 3D geometry)
-    ↓
-execution
-```
-
-This makes NEXAH a unified system for exploring and acting within complex dynamic environments.
 
 ---
 
 ## 🔥 Core Statement
 
-NEXAH can model system structure,
-extract regimes,
-compute risk geometry,
-simulate collapse,
-and navigate toward stability
-within a coherent 3D field
-using spiral coupling and geometric control.
+NEXAH transforms:
 
----
+system → structure → risk → navigation → execution
 
-## 🧭 Status
+It enables systems to be:
 
-Current status:
-	•	operational
-	•	modular
-	•	extensible
-	•	research-driven
-	•	transitioning into a 3D navigation-capable system architecture
-	•	actively evolving toward real-world integration and deployment
+> understood, stabilized, and actively navigated within a geometric state space
