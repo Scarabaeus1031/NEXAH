@@ -20,6 +20,29 @@ It transforms system behavior into a **continuous geometric field**, enabling:
 
 ---
 
+## 🔬 Mathematical Foundation
+
+The geometric interpretation of the framework is formalized in:
+
+👉 [Geometric State-Space Framework](./CORE_GEOMETRY/GEOMETRIC_FRAMEWORK.md)
+
+This document defines:
+
+- the geometric embedding of system states  
+- the field representation \( \dot{x} = F(x) \)  
+- the coherence measure \( C(x) \)  
+- the risk field \( R(x) \)  
+- the control formulation \( \dot{x} = F(x) + u(x) \)  
+
+Additional formal definitions:
+
+👉 [Risk Field Definition](./docs/risk_field.md)  
+👉 [Field-Based Control Model](./docs/field_control.md)
+
+Together, these form the **mathematical backbone of NEXAH**, connecting intuition, geometry, and system dynamics.
+
+---
+
 ## 🧱 Architecture
 
 The framework is organized into five layers:
@@ -48,9 +71,9 @@ The system is interpreted as a structured vector field:
 
 Stability is defined through coherence:
 
-$begin:math:display$
-C\(x\) \= \\frac\{\\dot\{x\} \\cdot F\(x\)\}\{\|\\dot\{x\}\| \\\, \|F\(x\)\|\}
-$end:math:display$
+\[
+C(x) = \frac{\dot{x} \cdot F(x)}{\|\dot{x}\| \, \|F(x)\|}
+\]
 
 👉 Stability = **alignment with the field**, not equilibrium
 
@@ -68,6 +91,7 @@ Core components:
 
 Additional:
 
+- `docs/` → mathematical definitions & formal models  
 - `research/` → theoretical foundation  
 - `models/` → system representations  
 - `applications/` → real-world use cases  
@@ -135,3 +159,5 @@ into an operational system for:
 Complex systems are not controlled through thresholds.
 
 They are navigated through structure.
+
+
