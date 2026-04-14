@@ -48,8 +48,8 @@ risk : ℝⁿ → ℝ
 
 as described in:
 
-→ [Formal Risk Definition](../../docs/risk_field.md)  
-→ [Field-Based Control Paper](../../docs/field_control.md)
+→ [Formal Risk Definition](../docs/risk_field.md)  
+→ [Field-Based Control Paper](../docs/field_control.md)
 
 Geometric structures:
 
