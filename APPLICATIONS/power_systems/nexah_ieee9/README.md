@@ -1,4 +1,4 @@
-# ⚡ NEXAH — IEEE9 Stability Field System (v3 + Dynamics Layer)
+# ⚡ NEXAH — IEEE9 Stability Field System (v3 → v11)
 
 ## 🧭 Overview
 
@@ -6,7 +6,7 @@ This module implements the NEXAH framework on a power system test case (IEEE 9-b
 
 It transforms classical voltage stability analysis into a:
 
-> **continuous stability field with adaptive, closed-loop control**
+> **continuous stability field with adaptive, closed-loop control and navigation**
 
 ---
 
@@ -18,13 +18,13 @@ Instead of asking:
 
 NEXAH answers:
 
-> "Where are we in the stability field — and how can we navigate it?"
+> "Where are we in the stability field — and how can we navigate it safely?"
 
 ---
 
 ## 🧱 Pipeline Architecture
 
-Simulation → Features → Manifold → Overlay → Prediction → Policy → Adaptive Control → System Evolution
+Simulation → Features → Manifold → Overlay → Prediction → Policy → Adaptive Control → Field Navigation
 
 ---
 
@@ -72,9 +72,9 @@ Simulation → Features → Manifold → Overlay → Prediction → Policy → A
 
 ---
 
-# 🧠 NEW: Dynamical Controller Layer (v7 → v9)
+# 🧠 Dynamical Controller Layer (v7 → v9)
 
-NEXAH now includes a **true dynamical system layer**.
+NEXAH evolved from static control into a **true dynamical system**.
 
 ---
 
@@ -91,25 +91,17 @@ NEXAH now includes a **true dynamical system layer**.
 ## 🔁 Phase Space Evolution
 
 ### v7
-
 ![v7 Phase](results/controller_v7_1/output_v7_1_phase.png)
 
----
-
 ### v8
-
 ![v8 Phase](results/controller_v8/output_v8_phase.png)
-
----
 
 ### v9 — TRUE PHASE SYSTEM
 
 #### λ vs ψ (Phase Portrait)
-
 ![v9 Phase Lambda Psi](results/controller_v9/output_v9_phase_lambda_psi.png)
 
 #### Risk vs Distance
-
 ![v9 Phase Risk Distance](results/controller_v9/output_v9_phase_risk_distance.png)
 
 ---
@@ -120,59 +112,109 @@ NEXAH now includes a **true dynamical system layer**.
 
 ---
 
-## 🔬 Interpretation (Dynamics Layer)
+# 🆕 🔥 Field Geometry & Navigation (v10 → v11)
 
-The controller is no longer:
+## 🔹 v10 — Stability Surface
 
-> a regulator
+- Continuous scan over λ
+- Extraction of:
+  - vmin (voltage stability)
+  - loading (system stress)
+  - risk (field function)
 
-It is becoming:
-
-> a **field-driven dynamical navigator**
-
----
-
-## 🧩 System Layer Separation
-
-The project now consists of two interacting layers:
-
-### 1. Application Layer (IEEE System)
-- Risk field  
-- Collapse dynamics  
-- Adaptive policy (v3)
-
-### 2. NEXAH Core Layer
-- Field dynamics  
-- Phase coupling  
-- Trajectory shaping  
+👉 Result:
+> A **continuous stability surface**
 
 ---
 
-## ⚠️ Current Limitation
+## 🔹 v11 — Field Structure Detection
 
-The system is still:
+Two key regions emerge:
 
-- dissipative  
-- converging to fixed points  
-- not yet sustaining motion  
+### 🟡 Structural Transition (~λ ≈ 0.8)
 
----
-
-## 🔥 Next Target — v10
-
-Goal:
-
-> **self-sustained dynamics (limit cycles)**
+- First curvature appears  
+- Field begins to deform  
+- System still stable  
 
 ---
 
-## 🔮 Next Steps
+### 🔴 Instability Onset (~λ ≈ 1.25+)
 
-- Establish limit cycles (v10)  
-- Map vector fields (flow structure)  
-- Identify stability basins  
-- Enable trajectory navigation  
-- Integrate with real AC power flow  
+- Strong nonlinear amplification  
+- Rapid risk growth  
+- Collapse region  
+
+---
+
+## ⚠️ Critical Insight
+
+> Instability is NOT triggered by first curvature  
+> but by **nonlinear amplification of the field**
+
+---
+
+## 🔹 v11_2 — Field Navigation Controller
+
+Controller now operates on geometry:
+
+```text
+λ_target = λ_critical − Δ
+```
+## Behavior
+
+✔ Smooth convergence to boundary  
+✔ No oscillation  
+✔ No collapse  
+✔ Maximum safe utilization  
+
+---
+
+## 📈 Navigation Result
+
+Example trajectory:
+
+λ = 0.600 → 0.7717 (safe boundary tracking)
+
+---
+
+# 🧠 System Interpretation
+
+The system now operates as:
+
+> a trajectory evolving within a structured stability field
+
+where:
+
+- field = extracted from system physics  
+- geometry = defines stability structure  
+- navigation = movement along safe trajectories  
+
+---
+
+# 🔥 Key Result
+
+A complex physical system can be:
+
+- mapped into a stability field  
+- analyzed via geometry  
+- navigated safely without entering collapse  
+
+---
+
+# 🧩 System Layer Separation
+
+## 1. Application Layer (Power System)
+
+- Voltage stability  
+- Load dynamics  
+- Physical constraints  
+
+## 2. NEXAH Core Layer
+
+- Field geometry  
+- Risk dynamics  
+- Navigation logic  
 
 ---
 
@@ -186,19 +228,21 @@ Goal:
 | Closed-loop control | ❌ | ✅ |
 | Structural modeling | ❌ | ✅ |
 | Predictive behavior | ❌ | ✅ |
-| Field navigation | ❌ | 🚧 |
+| Field navigation | ❌ | ✅ |
 
 ---
 
 # 🚀 Run
 
-Synthetic:
-PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/decision/main_v2.py
+### Stability Scan (v11)
 
-Controller (latest):
+PYTHONPATH=APPLICATIONS/power_systems \
+python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v11_0.py
 
-PYTHONPATH=APPLICATIONS/power_systems
-python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v9.py
+### Navigation Controller (v11_2)
+
+PYTHONPATH=APPLICATIONS/power_systems \
+python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v11_2.py
 
 ---
 
@@ -206,15 +250,35 @@ python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9
 
 APPLICATIONS/power_systems/nexah_ieee9/results/
 
+Includes:
+
+- controller evolution (v7 → v11)  
+- field scans  
+- navigation runs  
+- replay logs  
+- full system state traces  
+
 ---
 
 # 🧭 Status
 
-Field Model        ✅  
-Adaptive Control   ✅  
-Closed Loop        ✅  
-Dynamics Layer     ✅ (v9)  
-Navigation         🚧 (v10)  
+| Component | Status |
+|----------|--------|
+| Field Model | ✅ |
+| Adaptive Control | ✅ |
+| Closed Loop | ✅ |
+| Dynamics Layer | ✅ |
+| Field Geometry | ✅ |
+| Navigation | ✅ |
+
+---
+
+# 🔮 Next Steps
+
+- Real-time field estimation  
+- Multi-agent navigation  
+- Higher-dimensional state spaces  
+- Integration with real grid data (pandapower)  
 
 ---
 
@@ -222,10 +286,10 @@ Navigation         🚧 (v10)
 
 Power systems are not binary (stable / unstable)
 
-They exist inside a:
+They exist within a:
 
 > **structured stability landscape**
 
 NEXAH turns this into something we can:
 
-> **measure, interpret, and navigate**
+> **measure, understand, and navigate**
