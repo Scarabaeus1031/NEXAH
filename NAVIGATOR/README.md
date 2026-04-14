@@ -1,38 +1,46 @@
 # 🧭 NEXAH Navigator
 
-This directory helps you **understand and navigate the project**.
+The **NAVIGATOR** is the control layer of the NEXAH repository.
 
-It is meant for:
+It is not part of the core computation or framework itself.
 
-- getting an overview  
-- finding your entry point  
-- and making sense of how the major parts of NEXAH fit together  
+Instead, it provides:
 
-NEXAH is a structural navigation system for **complex dynamic environments**.
+- orientation  
+- system overview  
+- architectural clarity  
+- development control  
+- integration of ideas, fragments, and roadmap  
 
----
+Think of it as:
 
-## ⚡ What NEXAH Actually Does
-
-NEXAH is not only a conceptual framework.
-
-It has already been applied to real systems — most notably:
-
-- ⚡ power grid stability (IEEE benchmark systems)  
-- early collapse detection (**up to 43.9 seconds ahead**)  
-- trajectory-aware control (prototype)  
-
-👉 See: [Applications](../APPLICATIONS/)
+> the **map, memory, and control room** of NEXAH
 
 ---
 
-## 🧠 Core Perspective
+# 🧠 What NEXAH Actually Is
 
-NEXAH does not analyze systems as static objects.
+NEXAH is a system for:
 
-It reconstructs them as:
+> **extracting structure from complex dynamics and navigating it as a field**
 
-> **structured, evolving fields that can be navigated**
+It transforms:
+
+```text
+dynamics → structure → field → geometry → navigation
+```
+
+## ⚡ What Already Works
+
+NEXAH is not theoretical only.
+
+It has already demonstrated:
+
+- ⚡ power grid stability analysis (IEEE systems)  
+- ⏱ early collapse detection (up to 43.9 seconds ahead)  
+- 🧭 trajectory-aware control (prototype stage)  
+
+👉 See: [../APPLICATIONS/](../APPLICATIONS/)
 
 ---
 
@@ -40,16 +48,16 @@ It reconstructs them as:
 
 Depending on your goal:
 
-### 👀 Just understand what this is
+### 👀 Understand the idea
 → [../README.md](../README.md)
 
-### 🧠 Understand the framework
+### 🧱 Understand the architecture
 → [../FRAMEWORK/README.md](../FRAMEWORK/README.md)
 
-### ⚡ See real results
+### ⚡ See real-world results
 → [../APPLICATIONS/](../APPLICATIONS/)
 
-### 🧪 Explore experiments
+### 🧪 Explore experiments & prototypes
 → [../BUILDER_LAB/](../BUILDER_LAB/)
 
 ### 🔬 Dive into theory
@@ -63,7 +71,6 @@ Depending on your goal:
 
 ![NEXAH System Stack](./visuals/Systemstack_Architecture_Overview.png)
 
-The architecture follows a layered model:
 ```text
 META → ARCHY → MESO → NEXAH → MEVA
 ```
@@ -76,10 +83,112 @@ system definitions → regime structures → risk landscapes → navigable traje
 | Layer | Function |
 |-------|----------|
 | META  | relational system definition |
-| ARCHY | regime structure detection and structural simulation logic |
-| MESO  | risk geometry computation |
-| NEXAH | navigation strategies |
-| MEVA  | execution and system control |
+| ARCHY | regime detection & simulation |
+| MESO  | risk geometry |
+| NEXAH | navigation |
+| MEVA  | execution |
+
+---
+
+# 🗺 Repository Structure
+
+![Repository Architecture](./visuals/Repository_Architecture_Overview.png)
+
+| Directory          | Role |
+|--------------------|------|
+| ENGINE             | research & structural analysis core |
+| FRAMEWORK          | system architecture |
+| APPLICATIONS       | real-world validation |
+| BUILDER_LAB        | experiments & prototypes |
+| DISCOVERY_ENGINE   | structure extraction |
+| nexah/             | conceptual & geometric layer |
+| NAVIGATOR          | control & orientation layer |
+
+---
+
+# 🎯 Purpose of NAVIGATOR
+
+The NAVIGATOR is not:
+
+- the main theory  
+- the main codebase  
+- the main experiment layer  
+
+It exists to:
+
+- keep the **big picture intact**  
+- organize **development direction**  
+- connect **ideas, structure, and execution**  
+- hold **unfinished but important insights**  
+
+---
+
+# 🧠 Internal Structure of NAVIGATOR
+
+## 🧠 CORE_CONTROL
+Active development control and roadmap.
+
+- TODOs  
+- kernel plans  
+- next steps  
+
+→ This is where decisions are made.
+
+---
+
+## 🧭 OVERVIEW
+High-level understanding of the project.
+
+- extended overview  
+- framework explanation  
+- identity  
+
+→ This explains what NEXAH is.
+
+---
+
+## 🧩 FRAGMENTS
+Unresolved but important ideas.
+
+- theory fragments  
+- conceptual breakthroughs  
+- raw insights  
+
+→ These are **not discarded** — they are waiting to be integrated.
+
+---
+
+## 🌀 SYMBOLIC_LAYER
+Emerging symbolic and geometric language.
+
+- notation  
+- visual structures  
+- codex connections  
+
+→ This is the **language layer of NEXAH**
+
+---
+
+## 📊 SYSTEM_STATUS
+Current system capabilities and progress.
+
+- capabilities  
+- trigger matrices  
+- status reports  
+
+---
+
+## 🗺 MAPS & GENERATED
+Repository maps and generated system views.
+
+---
+
+## 🎨 visuals
+Visual layer connecting:
+
+- architecture  
+- symbolic structures  
+- applications  
 
 ---
 
@@ -87,149 +196,55 @@ system definitions → regime structures → risk landscapes → navigable traje
 
 ## Quick Orientation
 1. [REPOSITORY_MAP.md](./REPOSITORY_MAP.md)  
-2. [SYSTEM_CAPABILITIES.md](./SYSTEM_CAPABILITIES.md)  
-
-## Architecture & Status
-1. [NEXAH_ARCHITECTURE_COMPLETION_MAP.md](./NEXAH_ARCHITECTURE_COMPLETION_MAP.md)  
-2. [ARCHITECTURE_MILESTONE.md](./ARCHITECTURE_MILESTONE.md)  
-
-## Full System Entry
-1. [../README.md](../README.md)  
-2. [REPOSITORY_MAP.md](./REPOSITORY_MAP.md)  
-3. [../FRAMEWORK/README.md](../FRAMEWORK/README.md)  
-4. [../ENGINE/research/README.md](../ENGINE/research/README.md)  
+2. [SYSTEM_CAPABILITIES.md](./SYSTEM_CAPABILITIES.md)
 
 ---
 
-## 🗺 Repository Architecture
-
-![Repository Architecture](./visuals/Repository_Architecture_Overview.png)
-
-The repository is organized into major functional domains:
-
-| Directory          | Role |
-|--------------------|------|
-| ENGINE             | research engine, structural algebra, analysis core |
-| FRAMEWORK          | system architecture and formal NEXAH structure |
-| NAVIGATOR          | orientation, architecture status, repository maps |
-| APPLICATIONS       | real-world systems and validation modules |
-| BUILDER_LAB        | demos, proto-models, exploratory constructions |
-| DISCOVERY_ENGINE   | structure extraction and discovery logic |
-| urf_axial_space    | 3D geometry layer (Root Cube + Root Bridge) |
+## Development & Status
+1. [CORE_CONTROL/](./CORE_CONTROL/)  
+2. [NEXAH_ARCHITECTURE_COMPLETION_MAP.md](./NEXAH_ARCHITECTURE_COMPLETION_MAP.md)
 
 ---
 
-## ⚙️ Engine Execution Flow
+## Deep Understanding
+1. [NEXAH_extended_project_overview.md](./NEXAH_extended_project_overview.md)  
+2. [../FRAMEWORK/README.md](../FRAMEWORK/README.md)
 
-![Engine Execution Flow](../ENGINE/visuals/engine_execution_flow.png)
+---
 
-The NEXAH engine bridges research and execution:
+## Experimental / Conceptual Layer
+1. [symbolic_layer/](./symbolic_layer/)  
+2. [FRAGMENTS/](./FRAGMENTS/)
+
+---
+
+# 🧠 Key Insight
+
+NEXAH is not built linearly.
+
+It evolves through:
 
 ```text
-Formal Structure (Research)
-        ↓
-Structural Algebra Core
-        ↓
-Executable Analysis
-        ↓
-Structural Output
+exploration → fragments → structure → integration → navigation
 ```
 
-# 🎯 Purpose of the Navigator
-
-The `NAVIGATOR` directory is not:
-
-- the main theory layer  
-- the main experiment layer  
-
-It exists to provide:
-
-- structural overview  
-- architectural status  
-- capability summaries  
-- repository-level navigation  
-
-Think of it as:
-
-> the **map of the system**, not the system itself
+The NAVIGATOR exists to hold this process together.
 
 ---
 
-# 📘 Documents in this Directory
-
-## Repository Map
-[REPOSITORY_MAP.md](./REPOSITORY_MAP.md)
-
-## Architecture Completion Map
-[NEXAH_ARCHITECTURE_COMPLETION_MAP.md](./NEXAH_ARCHITECTURE_COMPLETION_MAP.md)
-
-## System Capabilities
-[SYSTEM_CAPABILITIES.md](./SYSTEM_CAPABILITIES.md)
-
-## Architecture Milestone
-[ARCHITECTURE_MILESTONE.md](./ARCHITECTURE_MILESTONE.md)
-
-## Extended Overview
-[extended_overview.md](./extended_overview.md)
-
----
-
-# 🔗 How These Documents Fit Together
-
-| Document                        | Role |
-|---------------------------------|------|
-| Repository Map                  | repository structure and entry paths |
-| System Capabilities             | what the system can currently do |
-| Architecture Completion Map     | implementation status and open work |
-| Architecture Milestone          | key development breakthrough |
-| Extended Overview               | internal orientation, growth story, hidden gems |
-
----
-
-# 🔍 Related Areas
-
-**Framework**  
-[../FRAMEWORK/README.md](../FRAMEWORK/README.md)
-
-**Research**  
-[../ENGINE/research/README.md](../ENGINE/research/README.md)
-
-**Builder Lab**  
-[../BUILDER_LAB/](../BUILDER_LAB/)
-
-**Applications**  
-[../APPLICATIONS/](../APPLICATIONS/)
-
-**URF Axial Space (3D Layer)**  
-[../urf_axial_space/README.md](../urf_axial_space/README.md)
-
----
-
-# 🧠 Summary
-
-The `NAVIGATOR` directory is the **top-level orientation space** of the NEXAH repository.
-
-It connects:
-
-- theory  
-- structure  
-- applications  
-- system evolution  
-
-into a unified perspective.
-
----
-
-# 🔥 Final Insight
+## 🔥 Final Insight
 
 NEXAH is not a static framework.
 
 It is a system that turns:
 
-> **dynamics → structure → geometry → navigation**
+```text
+dynamics → structure → geometry → navigation
+```
 
----
+## 🧭 NEXAH Navigator
 
-**NEXAH Navigator**  
-Orientation layer for repository, architecture status, and system understanding.
+Control layer for architecture, direction, and system integration
+
+
 
