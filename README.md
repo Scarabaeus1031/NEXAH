@@ -1,4 +1,4 @@
-h# ⚡ NEXAH — Structural Navigation in Complex Systems
+# ⚡ NEXAH — Structural Navigation in Complex Systems
 
 ![Status](https://img.shields.io/badge/status-active-success)
 ![Field Model](https://img.shields.io/badge/field-model-blue)
@@ -19,6 +19,8 @@ Instead of binary classification:
 systems are understood as existing within a:
 
 > **structured stability landscape**
+
+NEXAH is a domain-independent framework — power systems are one validated example.
 
 ---
 
@@ -53,20 +55,19 @@ NEXAH answers:
 
 ## 🔁 Core Pipeline
 
-```text
 simulation → structure → field → geometry → control → navigation
-```
+
+---
+
 ## 🔥 Core Insight
 
 Control is no longer:
 
-→ reactive (based on error)
+→ reactive (error-based)
 
 but:
 
 → **trajectory-aware and geometry-informed**
-
----
 
 NEXAH does not react to instability.
 
@@ -166,22 +167,22 @@ where:
 
 ## 🧭 Explore the Full System
 
-The IEEE results shown here are only one application of NEXAH.
+The IEEE results shown here are one concrete application.
 
-NEXAH is a general framework for navigating structure in complex systems.
+NEXAH itself is a **general framework for navigating structure in complex systems**.
 
 Explore the full system:
 
 - 🧭 [NAVIGATOR](NAVIGATOR/README.md) → system overview & orientation  
 - 🏗 [Architecture](NAVIGATOR/ARCHITECTURE.md) → full system design  
-- 📊 [System Capabilities](NAVIGATOR/SYSTEM_CAPABILITIES.md) → operational scope  
+- 📊 [System Capabilities](NAVIGATOR/SYSTEM_CAPABILITIES.md) → what NEXAH can actually do  
 
 👉 This README is a **showcase**  
-👉 The NAVIGATOR reveals the **actual system behind it**
+👉 The NAVIGATOR reveals the **full system behind it**
 
 ---
 
-# 🔥 Key Result
+# 🧠 What This Means
 
 A complex physical system can be:
 
@@ -208,9 +209,9 @@ A complex physical system can be:
 
 ### IEEE9 Controller (current stable)
 
-```bash
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
-```
+
+---
 
 # 📁 Results
 
@@ -235,6 +236,7 @@ Includes:
 | Adaptive Control | ⚠️ prototype |
 | Phase Dynamics | ✅ |
 | Field Navigation | 🚧 in development |
+| Generalization (multi-domain) | ⚠️ emerging |
 
 ---
 
@@ -272,5 +274,3 @@ NEXAH makes this:
 ---
 
 **Thomas K. R. Hofmann · 2026**
-
-
