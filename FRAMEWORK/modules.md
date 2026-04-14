@@ -1,50 +1,128 @@
+# NEXAH Framework — Modules & Components
 
-# NEXAH Framework - Modules
+The NEXAH framework is not organized as a collection of independent software modules.
 
-The **Modules** section of the NEXAH Framework outlines the individual components that make up the system. These modules provide specialized functionality and are designed to work together to form a flexible and adaptable framework for modeling complex systems.
-
-## Key Concepts of NEXAH Modules
-
-### **Modular Design**
-The NEXAH Framework is built around a **modular design**, where each module serves a specific function or purpose. This modularity allows the framework to be easily extended and adapted to different use cases and applications.
-
-- **Purpose**: To break down the NEXAH framework into manageable components.
-- **Key Focus**: Ensuring each module can function independently, but also interact with other modules.
-
-### **Core Modules**
-The core modules form the backbone of the NEXAH framework. These modules handle the fundamental operations and provide the primary structure of the system.
-
-- **Examples**:
-  - **Relational Model**: Handles the relational structure of the system. **[Principle: Relational Primacy](./META/meta_layer_principles.md)**
-  - **Regime Operator**: Governs the transitions and stability of the system. **[Principle: Regime Restriction](./ARCHY/archy_layer_principles.md)**
-  - **Frame Operator**: Provides the tools for navigating and interacting with the system. **[Principle: Frame Admissibility](./NEXAH/nexah_layer_principles.md)**
-
-### **Specialized Modules**
-In addition to the core modules, NEXAH also includes specialized modules for specific applications or domains. These modules provide additional functionality tailored to particular use cases.
-
-- **Examples**:
-  - **Architectural Systems**: Tailored tools for modeling and analyzing architectural designs.
-  - **Engineering Solutions**: Modules for solving complex engineering problems.
-  - **Urban Systems**: Modules for analyzing urban planning and infrastructure.
+Instead, it is built as a **layered system of interacting components** that together form a **navigable stability field**.
 
 ---
 
-## How to Use the Modules
+## 🧭 From Modules to System Components
 
-1. **Explore Core Modules**: Start by exploring the core modules to understand the fundamental operations of the NEXAH framework.
-2. **Integrate Specialized Modules**: Use specialized modules to extend the framework’s functionality for specific use cases and industries.
-3. **Combine Modules**: Leverage the modular nature of NEXAH to combine different modules in ways that suit your needs.
+Traditional frameworks are modular:
 
-The **Modules** section is essential for users looking to apply NEXAH to specific projects and domains. By understanding how each module contributes to the framework, users can make informed decisions on how to integrate them into their own models.
+```text
+module → function → output
+```
+
+NEXAH operates differently:
+
+```text
+structure → regimes → geometry → field → navigation
+```
+
+Each component contributes to the construction of this field.
 
 ---
 
-## 🚀 Next Steps
+## 🧱 Core Components
 
-- **Explore the Framework**: Dive deeper into the individual modules and their functionality.
-- **Experiment with Applications**: Start combining modules to create your own applications and models.
-- **Contribute**: If you have ideas for new modules or improvements to existing ones, feel free to contribute!
+The framework consists of five tightly coupled layers:
+
+### META — Relational Structure
+Defines system entities and their relationships.
+
+→ transforms real-world systems into structured representations  
 
 ---
 
-This document serves as the entry point into the **Modules** section of the NEXAH framework. By understanding how each module works and how they interact, users can effectively apply the framework to real-world problems.
+### ARCHY — Regime Structure & Simulation
+Identifies system regimes and transition behavior.
+
+→ generates regime graphs and simulation environments  
+
+---
+
+### MESO — Risk Geometry
+Constructs the stability landscape of the system.
+
+→ computes risk gradients, collapse distance and tipping points  
+
+---
+
+### NEXAH — Navigation
+Enables movement through the system field.
+
+→ computes safe trajectories and navigation policies  
+
+---
+
+### MEVA — Execution
+Applies control and simulates system evolution.
+
+→ executes navigation decisions and records trajectories  
+
+---
+
+## 🔬 Supporting Components
+
+In addition to the core layers, several supporting components extend the framework:
+
+### CORE_GEOMETRY
+Defines the mathematical structure of the field.
+
+- coherence metric  
+- field split (F⁺ / F⁰ / F⁻)  
+- transition manifolds  
+
+---
+
+### Simulation Modules (ARCHY)
+
+Domain-specific simulations:
+
+- climate systems  
+- infrastructure networks  
+- economic systems  
+- planetary-scale interactions  
+
+---
+
+### Analysis Modules (MESO)
+
+Quantitative tools:
+
+- stability landscape  
+- tipping point detection  
+- cascade simulation  
+- resilience metrics  
+
+---
+
+## 🧠 Key Insight
+
+> NEXAH is not a modular toolbox.  
+>  
+> It is a **connected system of components** that together  
+> construct and navigate a stability field.
+
+---
+
+## 🚀 Usage
+
+Users typically interact with NEXAH by:
+
+1. defining a system (META)  
+2. simulating regimes (ARCHY)  
+3. computing risk geometry (MESO)  
+4. navigating trajectories (NEXAH)  
+5. executing system evolution (MEVA)  
+
+---
+
+## 🔥 Final Perspective
+
+Modules in NEXAH are not independent units.
+
+They are **structural components of a single dynamic system**.
+
+Understanding their interaction is key to using the framework.
