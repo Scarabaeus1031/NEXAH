@@ -36,6 +36,35 @@ Validated on:
 
 ---
 
+## 🧭 How to Use This Repository
+## 📚 Documentation Index
+
+This module is structured into a set of focused documents:
+
+| File | Purpose |
+|------|--------|
+| `START_HERE.md` | guided entry point (recommended first step) |
+| `results_summary.md` | empirical findings across IEEE systems |
+| `theory_stability_field.md` | conceptual and mathematical framework |
+| `method_pipeline.md` | computational pipeline and implementation logic |
+| `introduction.md` | broader context and motivation |
+| `abstract.md` | condensed research overview |
+| `discussion.md` | interpretation and implications |
+| `limitations.md` | known limitations and open questions |
+| `logs/` | full research and discovery trace |
+
+---
+
+### Suggested Reading Order
+
+1. START_HERE.md  
+2. results_summary.md  
+3. theory_stability_field.md  
+4. method_pipeline.md  
+5. discussion.md
+
+---
+
 ## 🧠 Core Discovery
 
 > Collapse is not triggered —  
