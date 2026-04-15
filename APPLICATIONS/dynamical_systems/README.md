@@ -4,9 +4,9 @@ This module explores **fundamental dynamical systems** using the NEXAH framework
 
 It provides:
 
-- visual understanding of structure
-- geometric interpretation of chaos
-- experimental navigation strategies
+- visual understanding of structure  
+- geometric interpretation of chaos  
+- experimental navigation strategies  
 
 ---
 
@@ -27,7 +27,7 @@ They reveal:
 
 ## 🔬 Systems Included
 
-### 🔹 Lorenz System
+### 🔹 Lorenz System — Core Example
 
 👉 `lorenz/`
 
@@ -42,23 +42,41 @@ Run example:
 python APPLICATIONS/dynamical_systems/lorenz/navigation/lorenz_chaos_navigation_map.py
 ```
 
-### 🔹 Other Systems
+## 🔹 Conceptual System Models
 
 - GRADIENT_SYSTEM  
 - DRIFT_SYSTEM  
 - REGIME_SYSTEM  
 - STABILITY_LANDSCAPE  
 
-👉 experimental / exploratory  
+👉 theoretical foundation of system dynamics  
+
+---
+
+## 🚀 Planned Extensions
+
+The dynamical systems module is designed to expand.
+
+Future systems may include:
+
+- rossler/ → alternative chaotic attractor  
+- double_pendulum/ → sensitive dependence & energy transfer  
+- navier_stokes/ → fluid dynamics & turbulence structure  
+- kuramoto/ → synchronization phenomena  
+- reaction_diffusion/ → pattern formation systems  
+
+These systems will extend NEXAH toward:
+
+- turbulence  
+- multi-scale dynamics  
+- real physical systems  
 
 ---
 
 ## 🧠 Role in NEXAH
 
-```text
-Lorenz = intuition
-IEEE   = validation
-```
+Lorenz = intuition  
+IEEE   = validation  
 
 Dynamical systems provide:
 
@@ -75,6 +93,7 @@ Dynamical systems provide:
 | Lorenz visuals | ✅ |
 | Navigation maps | ✅ |
 | Control experiments | 🧪 |
+| Multi-system expansion | 🚧 |
 | Integration with demos | 🚧 |
 
 ---
@@ -83,14 +102,11 @@ Dynamical systems provide:
 
 Move core experiments into:
 
-```
 APPLICATIONS/demos/lorenz_demo/
-```
 
 ---
 
 ## 🧠 Key Insight
 
-> Chaos is not random.  
-> It is structured — and potentially navigable.
-
+Chaos is not random.  
+It is structured — and potentially navigable.

@@ -16,7 +16,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-OUTPUT_DIR = "APPLICATIONS/outputs/lorenz_navigation"
+OUTPUT_DIR = "APPLICATIONS/demos/lorenz_demo/outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
