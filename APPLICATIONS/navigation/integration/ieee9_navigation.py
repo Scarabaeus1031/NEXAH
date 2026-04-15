@@ -6,15 +6,15 @@ Verbindet das Mod-77 Hierarchical Grid mit einer IEEE9-ähnlichen Trajektorie
 import sys
 import os
 
-# Root des NEXAH-Repos zum Python-Pfad hinzufügen
+# Root des Repos zum Python-Pfad hinzufügen
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
 if repo_root not in sys.path:
     sys.path.insert(0, repo_root)
 
-# Jetzt können wir vom Root aus importieren
-from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
-from APPLICATIONS.navigation.core.drift_quantization import DriftQuantization
-from APPLICATIONS.navigation.core.scaling_exponent import ScalingExponent
+# Direkte Imports vom Root aus
+from navigation.core.mod77_state_space import Mod77StateSpace
+from navigation.core.drift_quantization import DriftQuantization
+from navigation.core.scaling_exponent import ScalingExponent
 
 class IEEE9Navigator:
     def __init__(self, delta: float = 0.17):
