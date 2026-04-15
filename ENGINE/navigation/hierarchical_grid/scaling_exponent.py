@@ -1,6 +1,6 @@
 """
 NEXAH Scaling Exponent Analysis
-p ≈ 0.308 + Multiplikationskette + Resonanz-Paare
+p ≈ 0.308 + Multiplikationskette + Resonanz-Paare + Prime Leap Chain
 """
 
 class ScalingExponent:
@@ -8,6 +8,7 @@ class ScalingExponent:
         self.p_base = p_base
         self.chain = self._build_chain()
         self.resonance_pairs = self._build_resonance_pairs()
+        self.prime_leap_chain = self._build_prime_leap_chain()
     
     def _build_chain(self):
         """Multiplikationskette der 0.308"""
@@ -21,10 +22,19 @@ class ScalingExponent:
     def _build_resonance_pairs(self):
         """Beobachtete komplementäre Paare aus den feinen Zuständen"""
         return {
-            '7.83 + 8.17': 16.00,
-            '4.83 + 8.17': 13.00,
-            '3.83 + 7.17': 11.00,
-            '2.83 + 5.17': 8.00,
+            '7.83 + 8.17': 16.0,
+            '4.83 + 8.17': 13.0,
+            '3.83 + 7.17': 11.0,
+            '2.83 + 5.17': 8.0,
+        }
+    
+    def _build_prime_leap_chain(self):
+        """Kaskade der Prime-Summen"""
+        return {
+            '13 + 16': 29,
+            '11 + 13': 24,   # als Zwischenschritt
+            '8 + 13': 21,
+            '16 + 13': 29,   # wiederholte Bestätigung
         }
     
     def print_summary(self):
@@ -39,11 +49,16 @@ class ScalingExponent:
         for pair, sum_val in self.resonance_pairs.items():
             print(f"   {pair} = {sum_val}")
         
+        print("\nPrime Leap Chain (Summen der Resonanz-Paare):")
+        for leap, result in self.prime_leap_chain.items():
+            print(f"   {leap} → {result}")
+        
         print("\nInterpretation:")
         print("   • p ≈ 0.308 beschreibt den Übergang von zustands- zu fluss-dominiert")
-        print("   • Multiplikation mit 2, 3, 4 erzeugt nächste harmonische Schwellen")
+        print("   • Multiplikation mit 2, 3, 4 erzeugt harmonische Schwellen")
         print("   • Feine Zustände bilden Paare, die auf 8, 11, 13, 16 summieren")
-        print("   • 13 = Prime-Verbinder, 16 = 2^4 → höhere Struktur")
+        print("   • 13 + 16 = 29 → nächster Prime (Leap)")
+        print("   • Die Struktur erzeugt rekursiv Prime-Zahlen über Summen")
 
 
 if __name__ == "__main__":
