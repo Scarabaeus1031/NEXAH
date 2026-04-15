@@ -1,6 +1,6 @@
 """
 NEXAH Hierarchical Resonance Grid - Mod-77 State Space
-FINAL CLEAN VERSION
+Saubere Version mit intuitiven feinen Zuständen
 """
 
 import numpy as np
@@ -33,15 +33,16 @@ class Mod77StateSpace:
         return r7, r11
     
     def get_fine_states(self, r7: int, r11: int) -> List[Tuple[float, float]]:
-        """Gibt die 4 feineren Zustände (±delta) – garantiert im gültigen Bereich."""
+        """Gibt 4 feine Zustände um den Basis-Zustand – sauber und symmetrisch."""
         fine_states = []
         for dr7, dr11 in itertools.product([-self.delta, self.delta], repeat=2):
-            fine_r7 = (r7 + dr7) % 7
-            fine_r11 = (r11 + dr11) % 11
-            if fine_r7 < 0:
-                fine_r7 += 7
-            if fine_r11 < 0:
-                fine_r11 += 11
+            fine_r7 = r7 + dr7
+            fine_r11 = r11 + dr11
+            
+            # Saubere Modulo mit positiven Werten
+            fine_r7 = fine_r7 % 7
+            fine_r11 = fine_r11 % 11
+            
             fine_states.append((round(fine_r7, 4), round(fine_r11, 4)))
         return fine_states
 
