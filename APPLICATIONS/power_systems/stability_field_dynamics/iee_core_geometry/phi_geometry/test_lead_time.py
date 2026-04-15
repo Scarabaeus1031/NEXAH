@@ -1,73 +1,81 @@
 import numpy as np
+import csv
 
 # ----------------------------------------
-# 1. Test-Daten (ersetzen durch echte IEEE Daten!)
+# 1. CSV Laden
 # ----------------------------------------
 
-voltage = np.array([
-    0.98, 0.97, 0.95, 0.92, 0.88,
-    0.84, 0.79, 0.74, 0.71, 0.70,
-    0.68, 0.65
-])
+def load_csv(filepath):
+    time = []
+    voltage = []
 
-time = np.arange(len(voltage))
+    with open(filepath, "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            time.append(float(row["time"]))
+            voltage.append(float(row["voltage"]))
 
-
-# ----------------------------------------
-# 2. Collapse Detection (klassisch)
-# ----------------------------------------
-
-collapse_threshold = 0.7
-collapse_indices = np.where(voltage < collapse_threshold)[0]
-
-if len(collapse_indices) == 0:
-    print("❌ No collapse detected")
-    collapse_idx = None
-else:
-    collapse_idx = collapse_indices[0]
-    t_classical = time[collapse_idx]
+    return np.array(time), np.array(voltage)
 
 
 # ----------------------------------------
-# 3. Phi-Split Detection (einfacher Drift)
+# 2. Drift (besser: relativ)
 # ----------------------------------------
 
 def compute_drift(v):
     dv = np.diff(v)
-    return np.abs(dv)
+    return np.abs(dv / v[:-1])
 
-drift = compute_drift(voltage)
 
-phi_threshold = 0.02  # später anpassen!
+# ----------------------------------------
+# 3. Analyse
+# ----------------------------------------
 
-phi_indices = np.where(drift > phi_threshold)[0]
+def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
 
-if len(phi_indices) == 0:
-    print("❌ No Phi-Split detected")
+    # Collapse
+    collapse_idx = None
+    collapse_indices = np.where(voltage < collapse_threshold)[0]
+    if len(collapse_indices) > 0:
+        collapse_idx = collapse_indices[0]
+
+    # Drift
+    drift = compute_drift(voltage)
+
+    # Phi-Split
     phi_idx = None
-else:
-    phi_idx = phi_indices[0]
-    t_phi = time[phi_idx]
+    phi_indices = np.where(drift > phi_threshold)[0]
+    if len(phi_indices) > 0:
+        phi_idx = phi_indices[0]
+
+    # Output
+    print("\n--- RESULTS ---")
+
+    if collapse_idx is not None:
+        print(f"Collapse at t = {time[collapse_idx]}")
+    else:
+        print("No collapse detected")
+
+    if phi_idx is not None:
+        print(f"Phi-Split at t = {time[phi_idx]}")
+    else:
+        print("No Phi-Split detected")
+
+    if collapse_idx is not None and phi_idx is not None:
+        lead_time = time[collapse_idx] - time[phi_idx]
+        print(f"Lead Time = {lead_time}")
+    else:
+        print("Lead Time not computable")
 
 
 # ----------------------------------------
-# 4. Ergebnis
+# 4. RUN
 # ----------------------------------------
 
-print("\n--- RESULTS ---")
+if __name__ == "__main__":
 
-if collapse_idx is not None:
-    print(f"Collapse at t = {t_classical}")
-else:
-    print("Collapse not detected")
+    filepath = "APPLICATIONS/power_systems/stability_field_dynamics/data/ieee9_voltage.csv"
 
-if phi_idx is not None:
-    print(f"Phi-Split at t = {t_phi}")
-else:
-    print("Phi-Split not detected")
+    time, voltage = load_csv(filepath)
 
-if collapse_idx is not None and phi_idx is not None:
-    lead_time = t_classical - t_phi
-    print(f"Lead Time = {lead_time}")
-else:
-    print("Lead Time not computable")
+    analyze(time, voltage)    print("Lead Time not computable")
