@@ -1,6 +1,6 @@
 """
 NEXAH Hierarchical Resonance Grid - Mod-77 State Space
-Korrigierte & finale Version (Feinere Zustände werden korrekt modulo gerechnet)
+FINAL CLEAN VERSION - Feinere Zustände immer im gültigen Bereich
 """
 
 import numpy as np
@@ -33,12 +33,20 @@ class Mod77StateSpace:
         return r7, r11
     
     def get_fine_states(self, r7: int, r11: int) -> List[Tuple[float, float]]:
-        """Gibt die 4 feineren Zustände (±delta) – WICHTIG: korrekt modulo 7 und 11."""
+        """Gibt die 4 feineren Zustände (±delta) – garantiert im Bereich 0-6.999 und 0-10.999"""
         fine_states = []
         for dr7, dr11 in itertools.product([-self.delta, self.delta], repeat=2):
-            fine_r7 = round((r7 + dr7) % 7, 4)
-            fine_r11 = round((r11 + dr11) % 11, 4)
-            fine_states.append((fine_r7, fine_r11))
+            # Explizite und sichere Modulo-Berechnung
+            fine_r7 = (r7 + dr7) % 7
+            fine_r11 = (r11 + dr11) % 11
+            
+            # Sicherstellen, dass keine negativen Werte bleiben
+            if fine_r7 < 0:
+                fine_r7 += 7
+            if fine_r11 < 0:
+                fine_r11 += 11
+                
+            fine_states.append((round(fine_r7, 4), round(fine_r11, 4)))
         return fine_states
     
     def compute_drift(self, state1: Tuple[int, int], state2: Tuple[int, int]) -> Tuple[float, float]:
@@ -47,10 +55,7 @@ class Mod77StateSpace:
         return round(dr7 / 7.0, 4), round(dr11 / 11.0, 4)
 
 
-# ============================
 # Demo
-# ============================
-
 if __name__ == "__main__":
     grid = Mod77StateSpace(delta=0.17)
     
