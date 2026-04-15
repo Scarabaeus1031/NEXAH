@@ -1,9 +1,12 @@
 """
 NEXAH Drift Quantization & Phi-Split
+Quantisiert Drift und erkennt Phi-Split / Transfer Events
 """
 
 import sys
 import os
+
+# Root des Repos zum Python-Pfad hinzufügen
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
 if repo_root not in sys.path:
     sys.path.insert(0, repo_root)
@@ -19,6 +22,7 @@ class DriftQuantization:
         self.phi_split_threshold = phi_split_threshold
     
     def analyze_drift(self, voltages: List[float]) -> List[Dict]:
+        """Analysiert Drift, Phi-Split und mögliche Transfer Events."""
         mapped = []
         prev_state = None
         
@@ -34,7 +38,10 @@ class DriftQuantization:
                 drift = self.grid.compute_drift(prev_state, current_state)
                 drift_magnitude = max(abs(drift[0]), abs(drift[1]))
                 
+                # Phi-Split Erkennung
                 is_phi_split = drift_magnitude > self.phi_split_threshold
+                
+                # Transfer Event (starker Drift)
                 transfer_event = drift_magnitude > 0.7
             
             result = {
@@ -54,8 +61,10 @@ class DriftQuantization:
         return mapped
 
 
+# Demo
 if __name__ == "__main__":
     example_voltages = [0.98, 0.97, 0.95, 0.92, 0.88, 0.84, 0.79, 0.74, 0.71, 0.70, 0.68, 0.65]
-    dq = DriftQuantization()
+    
+    dq = DriftQuantization(delta=0.17, phi_split_threshold=0.25)
     analysis = dq.analyze_drift(example_voltages)
     print("DriftQuantization Test erfolgreich -", len(analysis), "Einträge")
