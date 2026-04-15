@@ -27,10 +27,10 @@ def compute_acceleration(v, window=5):
     dv = np.diff(v)
     ddv = np.diff(dv)
 
-    # Padding
+    # Padding → gleiche Länge wie v
     ddv = np.concatenate([[0, 0], ddv])
 
-    # Moving average smoothing
+    # Glättung
     kernel = np.ones(window) / window
     ddv_smooth = np.convolve(ddv, kernel, mode='same')
 
@@ -66,15 +66,25 @@ def analyze(time, voltage, collapse_threshold=0.7):
     threshold = max(threshold, 1e-4)
 
     # ----------------------------------------
-    # Phi-Split Detection (FINAL VERSION)
+    # Phi-Split Detection (robust)
     # ----------------------------------------
 
-    # Absolute detection
+    # Minimum gültiger Index (wegen d²)
+    min_idx = 2
+
+    # Absolute Detection
     abs_indices = np.where(acc > threshold)[0]
 
-    # Relative detection (wichtig für schwache Signale)
-    rel_threshold = 0.5 * np.max(acc)
-    rel_indices = np.where(acc > rel_threshold)[0]
+    # Relative Detection nur wenn Signal existiert
+    rel_indices = np.array([])
+
+    if np.max(acc) > 1e-5:
+        rel_threshold = 0.5 * np.max(acc)
+        rel_indices = np.where(acc > rel_threshold)[0]
+
+    # Nur gültige Indizes (keine Artefakte am Anfang)
+    abs_indices = abs_indices[abs_indices >= min_idx]
+    rel_indices = rel_indices[rel_indices >= min_idx]
 
     # Nur vor Collapse berücksichtigen
     if collapse_idx is not None:
@@ -142,4 +152,3 @@ if __name__ == "__main__":
 
         time, voltage = load_csv(filepath)
         analyze(time, voltage)
- 
