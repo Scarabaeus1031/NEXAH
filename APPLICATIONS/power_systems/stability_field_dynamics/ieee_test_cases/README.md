@@ -324,16 +324,18 @@ Collapse occurs when:
 
 APPLICATIONS/power_systems/stability_field_dynamics/
 └── ieee_test_cases/
-    ├── core/         → definitions, field construction
-    ├── pipeline/     → processing + feature extraction
-    ├── experiments/  → V1–V52 experiments
-    ├── analysis/     → evaluation + metrics
-    ├── outputs/      → plots, data, visualizations
-    ├── logs/         → research log (entries)
+    ├── core/                  → definitions, adapters, coupling metrics
+    ├── pipeline/              → feature extraction and field construction
+    ├── experiments/           → main reproducible IEEE pipeline (V31–V52)
+    ├── analysis/              → advanced analysis (V53–V69, scaling, flow, off-manifold)
+    ├── controller_lab/        → active field control, navigation, operator dynamics
+    ├── outputs/               → plots, CSVs, visualizations
+    ├── logs/                  → structured discovery history
     ├── results_summary.md
     ├── theory_stability_field.md
     ├── method_pipeline.md
-    └── README.md
+    ├── README.md
+    └── START_HERE.md
 
 ---
 
