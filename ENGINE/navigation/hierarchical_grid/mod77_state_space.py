@@ -1,6 +1,6 @@
 """
 NEXAH Hierarchical Resonance Grid - Mod-77 State Space
-Korrigierte Version – feine Zustände werden korrekt modulo gerechnet
+Korrigierte & finale Version (Feinere Zustände werden korrekt modulo gerechnet)
 """
 
 import numpy as np
@@ -13,7 +13,7 @@ class Mod77StateSpace:
     def __init__(self, delta: float = 0.17):
         self.delta = delta
         self.num_base_states = 77
-        self.num_fine_states = 308   # 77 * 4
+        self.num_fine_states = 308
     
     def state_to_index(self, r7: int, r11: int) -> int:
         return r7 * 11 + r11
@@ -33,7 +33,7 @@ class Mod77StateSpace:
         return r7, r11
     
     def get_fine_states(self, r7: int, r11: int) -> List[Tuple[float, float]]:
-        """Gibt die 4 feineren Zustände (±delta) – korrekt modulo 7 und 11."""
+        """Gibt die 4 feineren Zustände (±delta) – WICHTIG: korrekt modulo 7 und 11."""
         fine_states = []
         for dr7, dr11 in itertools.product([-self.delta, self.delta], repeat=2):
             fine_r7 = round((r7 + dr7) % 7, 4)
