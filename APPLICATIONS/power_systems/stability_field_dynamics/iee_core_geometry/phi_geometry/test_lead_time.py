@@ -27,7 +27,7 @@ def compute_acceleration(v, window=5):
     dv = np.diff(v)
     ddv = np.diff(dv)
 
-    # Padding für gleiche Länge
+    # Padding
     ddv = np.concatenate([[0, 0], ddv])
 
     # Moving average smoothing
@@ -52,16 +52,26 @@ def analyze(time, voltage, collapse_threshold=0.7):
     # Acceleration
     acc = compute_acceleration(voltage)
 
-    # Adaptive Threshold
-    threshold = np.mean(acc) + 2 * np.std(acc)
+    # Adaptive Threshold (sensitiver)
+    threshold = np.mean(acc) + 1.0 * np.std(acc)
 
-    # Phi-Split Detection
+    # Minimum Threshold Schutz
+    threshold = max(threshold, 1e-4)
+
+    # Phi-Split NUR VOR Collapse
+    if collapse_idx is not None:
+        valid_indices = np.where(acc[:collapse_idx] > threshold)[0]
+    else:
+        valid_indices = np.where(acc > threshold)[0]
+
     phi_idx = None
-    phi_indices = np.where(acc > threshold)[0]
-    if len(phi_indices) > 0:
-        phi_idx = phi_indices[0]
+    if len(valid_indices) > 0:
+        phi_idx = valid_indices[0]
 
+    # ----------------------------------------
     # Output
+    # ----------------------------------------
+
     print("\n--- RESULTS ---")
 
     if collapse_idx is not None:
