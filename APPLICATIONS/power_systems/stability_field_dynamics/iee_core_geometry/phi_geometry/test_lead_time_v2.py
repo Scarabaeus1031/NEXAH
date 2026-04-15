@@ -4,12 +4,11 @@ import os
 import matplotlib.pyplot as plt
 
 # ----------------------------------------
-# 1. CSV Laden
+# CSV
 # ----------------------------------------
 
 def load_csv(filepath):
-    time = []
-    voltage = []
+    time, voltage = [], []
 
     with open(filepath, "r") as f:
         reader = csv.DictReader(f)
@@ -21,126 +20,78 @@ def load_csv(filepath):
 
 
 # ----------------------------------------
-# 2. Acceleration + Smoothing
+# Features
 # ----------------------------------------
 
-def compute_acceleration(v, window=5):
-    dv = np.diff(v)
-    ddv = np.diff(dv)
+def compute_features(v):
 
-    ddv = np.concatenate([[0, 0], ddv])
+    dv = np.diff(v, prepend=v[0])
+    ddv = np.diff(dv, prepend=dv[0])
 
-    kernel = np.ones(window) / window
-    ddv_smooth = np.convolve(ddv, kernel, mode='same')
+    # smoothing
+    kernel = np.ones(5) / 5
+    ddv = np.convolve(ddv, kernel, mode='same')
 
-    return np.abs(ddv_smooth)
+    return np.abs(ddv), np.abs(dv)
 
 
 # ----------------------------------------
-# 3. Hybrid Analyse
+# Detection
 # ----------------------------------------
 
-def analyze(time, voltage, collapse_threshold=0.7):
+def detect_phi_split(time, voltage, collapse_threshold=0.7):
 
-    # Collapse Detection
+    acc, slope = compute_features(voltage)
+
+    # adaptive threshold
+    threshold = np.mean(acc) + 2.0 * np.std(acc)
+
+    # ignore early noise
+    start_idx = int(0.15 * len(time))
+
+    indices = np.where(acc > threshold)[0]
+    indices = indices[indices > start_idx]
+
     collapse_idx = None
     collapse_indices = np.where(voltage < collapse_threshold)[0]
     if len(collapse_indices) > 0:
         collapse_idx = collapse_indices[0]
+        indices = indices[indices < collapse_idx]
 
-    # Features
-    dv = np.diff(voltage, prepend=voltage[0])
-    acc = compute_acceleration(voltage)
+    phi_idx = None
+    if len(indices) > 0:
+        phi_idx = indices[0]
 
-    slope = np.abs(dv)
-    distance = np.maximum(voltage - collapse_threshold, 0)
-
-    # ----------------------------------------
-    # Hybrid Score
-    # ----------------------------------------
-
-    score = (
-        1.0 * acc +
-        0.5 * slope +
-        0.5 * (1.0 / (distance + 1e-3))
-    )
-
-    # Glättung
-    kernel = np.ones(5) / 5
-    score = np.convolve(score, kernel, mode='same')
-
-    # ----------------------------------------
-    # Detection Zone
-    # ----------------------------------------
-
-    min_idx = int(0.1 * len(time))
-    max_idx = int(0.9 * len(time))
-
-    valid = np.arange(len(time))
-    valid = valid[(valid >= min_idx) & (valid <= max_idx)]
-
-    phi_idx = valid[np.argmax(score[valid])]
-
-    # ----------------------------------------
-    # Output
-    # ----------------------------------------
-
-    print("\n--- RESULTS ---")
-
-    if collapse_idx is not None:
-        print(f"Collapse at t = {time[collapse_idx]}")
-    else:
-        print("No collapse detected")
-
-    print(f"Phi-Split (hybrid) at t = {time[phi_idx]}")
-
-    if collapse_idx is not None:
-        lead_time = time[collapse_idx] - time[phi_idx]
-        print(f"Lead Time = {lead_time}")
-    else:
-        print("Lead Time not computable")
-
-    print(f"Max score = {np.max(score):.6f}")
-
-    return phi_idx, collapse_idx, acc, score
+    return phi_idx, collapse_idx, acc, threshold
 
 
 # ----------------------------------------
-# 4. Plot
+# Plot
 # ----------------------------------------
 
-def plot_result(time, voltage, acc, score, collapse_idx, phi_idx, filename):
+def plot(time, voltage, acc, threshold, phi_idx, collapse_idx, filename):
 
-    plt.figure(figsize=(10, 7))
+    plt.figure(figsize=(10,6))
 
-    # Voltage
-    plt.subplot(3, 1, 1)
+    plt.subplot(2,1,1)
     plt.plot(time, voltage, label="Voltage")
 
     if collapse_idx is not None:
         plt.axvline(time[collapse_idx], linestyle="--", label="Collapse")
 
-    plt.axvline(time[phi_idx], linestyle=":", label="Phi-Split")
+    if phi_idx is not None:
+        plt.axvline(time[phi_idx], linestyle=":", label="Phi-Split")
 
-    plt.title("Voltage")
     plt.legend()
     plt.grid()
 
-    # Acceleration
-    plt.subplot(3, 1, 2)
+    plt.subplot(2,1,2)
     plt.plot(time, acc, label="Acceleration")
-    plt.axvline(time[phi_idx], linestyle=":", label="Phi-Split")
+    plt.axhline(threshold, linestyle="--", label="Threshold")
 
-    plt.title("Acceleration")
-    plt.legend()
-    plt.grid()
+    if phi_idx is not None:
+        plt.axvline(time[phi_idx], linestyle=":", label="Phi-Split")
 
-    # Hybrid Score
-    plt.subplot(3, 1, 3)
-    plt.plot(time, score, label="Hybrid Score")
-    plt.axvline(time[phi_idx], linestyle=":", label="Phi-Split")
-
-    plt.title("Hybrid Detection Score")
     plt.legend()
     plt.grid()
 
@@ -150,41 +101,50 @@ def plot_result(time, voltage, acc, score, collapse_idx, phi_idx, filename):
 
 
 # ----------------------------------------
-# 5. RUN
+# RUN
 # ----------------------------------------
 
 if __name__ == "__main__":
 
     base_path = "APPLICATIONS/power_systems/stability_field_dynamics/data/"
-    output_path = "APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/phi_geometry/plots/"
+    out_path = "APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/phi_geometry/plots/"
 
-    os.makedirs(output_path, exist_ok=True)
+    os.makedirs(out_path, exist_ok=True)
 
-    test_files = [
+    files = [
         "ieee_linear.csv",
         "ieee_accelerated.csv",
         "ieee_noisy.csv",
         "ieee_delayed.csv"
     ]
 
-    for file in test_files:
+    for file in files:
 
-        filepath = os.path.join(base_path, file)
+        path = os.path.join(base_path, file)
 
         print("\n==============================")
         print(f"Testing: {file}")
         print("==============================")
 
-        if not os.path.exists(filepath):
-            print("File not found:", filepath)
-            continue
+        time, voltage = load_csv(path)
 
-        time, voltage = load_csv(filepath)
+        phi_idx, collapse_idx, acc, threshold = detect_phi_split(time, voltage)
 
-        phi_idx, collapse_idx, acc, score = analyze(time, voltage)
+        print("\n--- RESULTS ---")
 
-        out_file = os.path.join(output_path, file.replace(".csv", "_hybrid.png"))
+        if collapse_idx is not None:
+            print(f"Collapse at t = {time[collapse_idx]}")
 
-        plot_result(time, voltage, acc, score, collapse_idx, phi_idx, out_file)
+        if phi_idx is not None:
+            print(f"Phi-Split at t = {time[phi_idx]}")
+            print(f"Lead Time = {time[collapse_idx] - time[phi_idx]}")
+        else:
+            print("No Phi-Split detected")
 
-        print("Saved plot to:", out_file)
+        print(f"Threshold = {threshold:.6f}")
+
+        plot_file = os.path.join(out_path, file.replace(".csv", "_final.png"))
+
+        plot(time, voltage, acc, threshold, phi_idx, collapse_idx, plot_file)
+
+        print("Saved:", plot_file)
