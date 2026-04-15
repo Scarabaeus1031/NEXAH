@@ -5,11 +5,12 @@ NEXAH IEEE9 Navigation Prototype
 import sys
 import os
 
-# Root des Repos zum Python-Pfad hinzufügen
+# 1. Root des Repos zum Python-Pfad hinzufügen
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
-sys.path.insert(0, repo_root)
+if repo_root not in sys.path:
+    sys.path.insert(0, repo_root)
 
-# Direkte Imports vom Root aus
+# 2. Direkte Imports vom Root aus
 from navigation.core.mod77_state_space import Mod77StateSpace
 from navigation.core.drift_quantization import DriftQuantization
 from navigation.core.scaling_exponent import ScalingExponent
