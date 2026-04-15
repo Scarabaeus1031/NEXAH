@@ -1,6 +1,6 @@
 """
 NEXAH Hierarchical Resonance Grid - Mod-77 State Space
-FINAL SAUBERE VERSION – symmetrische Fein-Zustände
+FINAL VERSION with compute_drift
 """
 
 import numpy as np
@@ -33,7 +33,7 @@ class Mod77StateSpace:
         return r7, r11
     
     def get_fine_states(self, r7: int, r11: int) -> List[Tuple[float, float]]:
-        """Gibt 4 symmetrische Fein-Zustände – immer schön im Bereich."""
+        """Gibt die 4 feineren Zustände (±delta) – garantiert im gültigen Bereich."""
         fine_states = []
         for dr7, dr11 in itertools.product([-self.delta, self.delta], repeat=2):
             fine_r7 = (r7 + dr7) % 7
@@ -44,6 +44,12 @@ class Mod77StateSpace:
                 fine_r11 += 11
             fine_states.append((round(fine_r7, 4), round(fine_r11, 4)))
         return fine_states
+    
+    def compute_drift(self, state1: Tuple[int, int], state2: Tuple[int, int]) -> Tuple[float, float]:
+        """Berechnet den Drift zwischen zwei Basis-Zuständen."""
+        dr7 = (state2[0] - state1[0]) % 7
+        dr11 = (state2[1] - state1[1]) % 11
+        return round(dr7 / 7.0, 4), round(dr11 / 11.0, 4)
 
 # Demo
 if __name__ == "__main__":
