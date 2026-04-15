@@ -3,7 +3,7 @@ NEXAH Drift Quantization & Phi-Split
 Quantisiert Drift und erkennt Phi-Split / Transfer Events
 """
 
-from mod77_state_space import Mod77StateSpace
+from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
 from scaling_exponent import ScalingExponent
 from typing import List, Dict, Tuple
 

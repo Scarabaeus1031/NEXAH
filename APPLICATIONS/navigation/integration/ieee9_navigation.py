@@ -3,9 +3,9 @@ NEXAH IEEE9 Navigation Prototype
 Verbindet das Mod-77 Hierarchical Grid mit einer IEEE9-ähnlichen Trajektorie
 """
 
-from mod77_state_space import Mod77StateSpace
-from drift_quantization import DriftQuantization
-from scaling_exponent import ScalingExponent
+from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
+from APPLICATIONS.navigation.core.drift_quantization import DriftQuantization
+from APPLICATIONS.navigation.core.scaling_exponent import ScalingExponent
 import numpy as np
 
 class IEEE9Navigator:

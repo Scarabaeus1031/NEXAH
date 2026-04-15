@@ -4,8 +4,8 @@ NEXAH Hierarchical Grid - Improved Visualization
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mod77_state_space import Mod77StateSpace
-from drift_quantization import DriftQuantization
+from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
+from APPLICATIONS.navigation.core.drift_quantization import DriftQuantization
 
 class GridVisualizer:
     def __init__(self, delta: float = 0.17):
