@@ -6,40 +6,63 @@ Dieser Ordner enthält das mathematische Kernmodell für drift-aware und geometr
 
 ## Kernkonzepte
 
-- **Mod-77 Basis-Gitter**: 77 Zustände aus Mod-7 × Mod-11 (teilerfremd)
-- **2²-Erweiterung**: 308 feinere Zustände für lokale Drift-Präzision
-- **Emergenter kritischer Exponent p ≈ 0.308**: Beschreibt den Übergang von zustands-dominiert zu fluss-dominiert
-- **Resonanz-Paare & Prime Leap**: Feine Zustände erzeugen Summen wie 13 und 16 → 13 + 16 = 29 (nächster Prime)
-- **Phi-Split & Transfer Events**: Erkennung von strukturierten Drift-Sprüngen
+### Mod-77 Basis-Gitter
+- 77 Zustände aus Mod-7 × Mod-11 (teilerfremd)
+- Mod-7: zyklische, resonante Komponente
+- Mod-11: asymmetrische, drift-erzeugende Komponente
 
-## Mathematische Grundlage
+### 2²-Erweiterung
+- Jeder Basis-Zustand wird in 4 feinere Zustände (±δ) unterteilt → **308 feinere Zustände**
+- Ermöglicht lokale Drift-Präzision
 
-### Skalierungsexponent p ≈ 0.308
-Aus der Relation:
+### Emergenter kritischer Exponent p ≈ 0.308
+Aus der Skalierungsrelation:
 \[
 d^2 c \approx a \cdot c^p \cdot (dc)^q \quad \text{mit} \quad p \approx 0.308
 \]
 
-Der Wert liegt in der Nähe kritischer Exponenten der Renormalisierungsgruppe (z. B. β ≈ 0.326 im 3D-Ising-Modell). Dies deutet auf skalierendes Verhalten nahe eines kritischen Punktes hin, bei dem große Systeme zunehmend fluss-dominiert werden.
+**Vergleich mit bekannten Exponenten**  
+Der Wert liegt in der Nähe kritischer Exponenten der Renormalisierungsgruppe (z. B. β ≈ 0.326 im 3D-Ising-Modell). Er beschreibt den Übergang von **zustands-dominiert** zu **fluss-dominiert** bei wachsender Systemgröße.
 
-### Phi-Split
-Ein Phi-Split wird erkannt, wenn der normalisierte Drift eine Schwelle (z. B. 0.25) überschreitet. Dies dient als kontrollierter Übergang zwischen Ring-Layern (ähnlich einem geometrischen „Tor“).
+### Phi-Split (mathematische Definition)
 
-### Prime Leap Chain
-Die feinen Zustände bilden komplementäre Paare, deren Summen auf Prime-Zahlen und Potenzen verweisen:
+Der Phi-Split ist der zentrale Mechanismus für kontrollierte Übergänge:
+
+\[
+\text{Drift-Magnitude} = \max\left( \left| \frac{\Delta r_7}{7} \right|, \left| \frac{\Delta r_{11}}{11} \right| \right)
+\]
+
+Ein Phi-Split wird ausgelöst, wenn:
+
+\[
+\text{Drift-Magnitude} > \theta_{\text{Phi}} \quad (\text{typischerweise } \theta_{\text{Phi}} = 0.25)
+\]
+
+**Bedeutung bei IEEE-Anwendungen**  
+- Erkennt strukturierte Sprünge in Spannungstrajektorien (z. B. V20 Local Instability)
+- Dient als Trigger für Ring-Layer-Wechsel oder kontrollierte Navigation
+- Ersetzt reaktive PID/MPC-Regelung durch **geometrisch informierte** Übergänge
+- Ermöglicht frühe Intervention (vor klassischem Voltage Collapse)
+
+### Prime Leap & Resonanz-Paare
+Die feinen Zustände bilden komplementäre Paare, deren Summen auf relevante Zahlen verweisen:
 - 7.83 + 8.17 = 16 (= 2⁴)
 - 4.83 + 8.17 = 13 (6. Prime)
 - 13 + 16 = **29** (nächster Prime)
 
-Dies deutet auf eine rekursive Prime-generierende Struktur innerhalb des Gitters hin.
+Dies deutet auf eine rekursive Prime-generierende Struktur hin.
 
 ## Ziel der Navigation
 
-Statt binärer Stabilitätsbewertung (stabil/instabil) ermöglicht das Gitter eine **geometrisch-resonante Navigation**:
+Statt binärer Stabilitätsbewertung ermöglicht das Gitter eine **geometrisch-resonante Navigation**:
 - Ring-Layer Targeting
 - Quantisierte Drift-Nutzung
 - Phi-Split als kontrollierte Übergänge
 - Hierarchische Skalierung (fein → grob)
+
+## Verbindung zu IEEE-Trajektorien
+
+Kontinuierliche Spannungskurven (z. B. aus V20 oder Closed-Loop-Controllern) werden direkt auf das Mod-77-Gitter abgebildet. Phi-Split und Transfer Events entsprechen realen Instabilitäts-Sprüngen und können für frühe Stabilisierung genutzt werden.
 
 ## Ordnerstruktur
 
@@ -57,7 +80,7 @@ Erste Prototyp-Implementierung mit V20-ähnlichen Trajektorien, Phi-Split-Erkenn
 
 **Nächste Schritte:**
 - Visualisierungen der Trajektorien und Phi-Split-Events
-- Integration mit realen IEEE-Testfällen
+- Integration mit realen IEEE-Testfällen (IEEE9, IEEE118, IEEE300+)
 - Erweiterung der Prime-Leap- und Resonanz-Strukturen
 
 ---
