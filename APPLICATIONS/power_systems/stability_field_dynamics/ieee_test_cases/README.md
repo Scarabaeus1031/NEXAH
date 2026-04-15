@@ -350,7 +350,7 @@ Collapse occurs when:
 # 📂 Repository Structure
 
 ## Module Navigation
-
+```
 APPLICATIONS/power_systems/stability_field_dynamics/
 └── ieee_test_cases/
     ├── core/                  → definitions, adapters, coupling metrics
@@ -365,7 +365,7 @@ APPLICATIONS/power_systems/stability_field_dynamics/
     ├── method_pipeline.md
     ├── README.md
     └── START_HERE.md
-
+```
 ---
 
 # 🔥 Core Insight
