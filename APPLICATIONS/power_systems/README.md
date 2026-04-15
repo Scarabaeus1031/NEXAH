@@ -1,11 +1,11 @@
 # ⚡ NEXAH / Power Systems  
-**Structural Field Navigation for Power System Stability**
+**Structural Field Navigation for Power System Stability and Control**
 
 ---
 
 ## 🧭 Overview
 
-NEXAH introduces a **geometry-based framework** for power system stability.
+NEXAH introduces a **low-dimensional, geometry-based framework** for power system stability.
 
 Instead of modeling instability as a threshold violation, NEXAH interprets it as:
 
@@ -17,7 +17,7 @@ This enables:
 - continuous stability assessment  
 - trajectory-aware intervention  
 - phase-space dynamics (v9)  
-- field-based navigation (v11)  
+- **real-time field-based navigation (v11)**  
 
 ---
 
@@ -25,7 +25,7 @@ This enables:
 
 NEXAH enables:
 
-→ **navigation within stability fields**
+→ **real-time navigation within stability fields**
 
 instead of:
 
@@ -33,8 +33,8 @@ instead of:
 
 ---
 
-✔ no collapse  
-✔ no oscillation  
+✔ no collapse events  
+✔ no sustained oscillations  
 ✔ maximum safe utilization  
 
 ![Navigation](nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
@@ -153,7 +153,7 @@ The following figures illustrate the full transition:
 
 ---
 
-## 🔹 Figure 7 — Field Navigation (NEW v11)
+## 🔹 Figure 7 — Field Navigation (v11 Breakthrough)
 
 ![Navigation](nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
 
@@ -175,6 +175,7 @@ The following figures illustrate the full transition:
 **Observation:**
 - same structure persists at scale  
 - early warning remains intact  
+- **same structural behavior persists across scale**
 
 **Interpretation:**
 
@@ -186,9 +187,7 @@ The following figures illustrate the full transition:
 
 Transition achieved:
 
-```text
 state-based control → field-based navigation
-```
 
 Control is no longer:
 
@@ -220,22 +219,19 @@ System state:
 
 x = (c, frag, d²c, residual, distance, ψ)
 
-
 Dynamics:
 
 dx/dt = f(x) + u(x, dx/dt)
 
+→ intrinsic system flow + control input
 
 Phase system:
 
 (λ, ψ) → trajectory in phase space
 
-
 Navigation (v11):
 
 λ_target = λ_critical − Δ
-
----
 
 ---
 
@@ -267,16 +263,16 @@ Navigation (v11):
 # 🧩 Module Structure
 
 ## 🔹 Structural Theory  
-→ [`stability_field_dynamics`](stability_field_dynamics/ieee_test_cases/README.md)
+→ [stability_field_dynamics](stability_field_dynamics/ieee_test_cases/README.md)
 
 ## 🔹 Geometric Pipeline  
-→ [`ieee_xray_pipeline`](ieee_xray_pipeline/README.md)
+→ [ieee_xray_pipeline](ieee_xray_pipeline/README.md)
 
 ## 🔹 Control & Navigation  
-→ [`nexah_ieee9`](nexah_ieee9/README.md)
+→ [nexah_ieee9](nexah_ieee9/README.md)
 
 ## 🔹 Scaling & Real Grid  
-→ [`nexah_ieeeX`](nexah_ieeeX/README.md)
+→ [nexah_ieeeX](nexah_ieeeX/README.md)
 
 ---
 
