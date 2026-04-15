@@ -86,7 +86,7 @@ def analyze(time, voltage, collapse_threshold=0.7):
 
     phi_idx = None
     if len(combined) > 0:
-    phi_idx = combined[np.argmax(acc[combined])]
+        phi_idx = combined[np.argmax(acc[combined])]
 
     # ----------------------------------------
     # Output
