@@ -10,12 +10,12 @@ repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..
 if repo_root not in sys.path:
     sys.path.insert(0, repo_root)
 
-print("Repo root added:", repo_root)   # Zur Fehlersuche
+print("Repo root added:", repo_root)
 
-# Direkte Imports vom Root aus
-from navigation.core.mod77_state_space import Mod77StateSpace
-from navigation.core.drift_quantization import DriftQuantization
-from navigation.core.scaling_exponent import ScalingExponent
+# RICHTIGER Import-Pfad (von APPLICATIONS aus)
+from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
+from APPLICATIONS.navigation.core.drift_quantization import DriftQuantization
+from APPLICATIONS.navigation.core.scaling_exponent import ScalingExponent
 
 class IEEE9Navigator:
     def __init__(self, delta: float = 0.17):
