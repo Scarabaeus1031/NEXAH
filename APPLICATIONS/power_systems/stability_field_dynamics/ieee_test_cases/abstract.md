@@ -46,12 +46,60 @@ This enables early detection of instability,
 interpretation of collapse mechanisms,  
 and a unified description of stability across systems.
 
-The results suggest that power system collapse is not triggered by thresholds,  
-but is the consequence of a loss of alignment with an underlying geometric structure.
+---
+
+## Universality
+
+Across all tested systems:
+
+- identical manifold structure  
+- identical collapse geometry  
+- identical clustering behavior  
+
+**Implication:**
+
+Collapse dynamics are scale-invariant.
+
+---
+
+## Fundamental Insight
+
+Stability is equivalent to alignment with structure.  
+
+Collapse begins when alignment is lost.
+
+---
+
+## Conceptual Shift
+
+From:
+
+- state-based stability  
+- threshold-triggered collapse  
+
+To:
+
+- structure-based stability  
+- geometry-driven collapse  
+
+---
+
+## Final Statement
+
+The system is best described as:
+
+→ a geometric–dynamical–topological system
+
+where:
+
+- geometry defines possible states  
+- flow defines evolution  
+- topology defines transitions  
 
 ---
 
 ## Core Insight
 
 The equations describe what happens.  
+
 The field determines that it happens.
