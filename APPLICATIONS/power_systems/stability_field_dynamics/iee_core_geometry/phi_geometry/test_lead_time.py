@@ -1,8 +1,9 @@
 import numpy as np
 import csv
+import os
 
 # ----------------------------------------
-# 1. CSV Laden
+# 1. CSV Loader
 # ----------------------------------------
 
 def load_csv(filepath):
@@ -19,7 +20,7 @@ def load_csv(filepath):
 
 
 # ----------------------------------------
-# 2. Drift (besser: relativ)
+# 2. Drift (relative)
 # ----------------------------------------
 
 def compute_drift(v):
@@ -33,7 +34,7 @@ def compute_drift(v):
 
 def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
 
-    # Collapse
+    # Collapse detection
     collapse_idx = None
     collapse_indices = np.where(voltage < collapse_threshold)[0]
     if len(collapse_indices) > 0:
@@ -42,7 +43,7 @@ def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
     # Drift
     drift = compute_drift(voltage)
 
-    # Phi-Split
+    # Phi-Split detection
     phi_idx = None
     phi_indices = np.where(drift > phi_threshold)[0]
     if len(phi_indices) > 0:
@@ -69,13 +70,34 @@ def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
 
 
 # ----------------------------------------
-# 4. RUN
+# 4. RUN (multi-file batch)
 # ----------------------------------------
 
 if __name__ == "__main__":
 
-    filepath = "APPLICATIONS/power_systems/stability_field_dynamics/data/ieee9_voltage.csv"
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-    time, voltage = load_csv(filepath)
+    DATA_DIR = os.path.normpath(
+        os.path.join(BASE_DIR, "../../data")
+    )
 
-    analyze(time, voltage)    print("Lead Time not computable")
+    files = [
+        "ieee_linear.csv",
+        "ieee_accelerated.csv",
+        "ieee_noisy.csv",
+        "ieee_delayed.csv"
+    ]
+
+    for f in files:
+        print(f"\n==============================")
+        print(f"Testing: {f}")
+        print(f"==============================")
+
+        filepath = os.path.join(DATA_DIR, f)
+
+        if not os.path.exists(filepath):
+            print(f"❌ File not found: {filepath}")
+            continue
+
+        time, voltage = load_csv(filepath)
+        analyze(time, voltage)
