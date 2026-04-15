@@ -6,7 +6,7 @@ Verbindet das Mod-77 Hierarchical Grid mit einer IEEE9-ähnlichen Trajektorie
 import sys
 import os
 
-# Root des Repos zum Python-Pfad hinzufügen
+# Root des NEXAH-Repos zum Python-Pfad hinzufügen
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
 if repo_root not in sys.path:
     sys.path.insert(0, repo_root)
