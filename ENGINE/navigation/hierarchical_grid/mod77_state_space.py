@@ -1,6 +1,6 @@
 """
 NEXAH Hierarchical Resonance Grid - Mod-77 State Space
-FINAL CLEAN VERSION
+FINAL CLEAN VERSION - Feinere Zustände immer im gültigen Bereich
 """
 
 import numpy as np
