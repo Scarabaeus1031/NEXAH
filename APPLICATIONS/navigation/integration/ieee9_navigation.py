@@ -1,17 +1,15 @@
 """
 NEXAH IEEE9 Navigation Prototype
-Verbindet das Mod-77 Hierarchical Grid mit einer IEEE9-ähnlichen Trajektorie
 """
 
 import sys
 import os
 
-# Root des NEXAH-Repos zum Python-Pfad hinzufügen
+# 1. Root des Repos zum Python-Pfad hinzufügen
 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
-if repo_root not in sys.path:
-    sys.path.insert(0, repo_root)
+sys.path.insert(0, repo_root)
 
-# Direkte Imports vom Root aus
+# 2. Jetzt die Module importieren
 from navigation.core.mod77_state_space import Mod77StateSpace
 from navigation.core.drift_quantization import DriftQuantization
 from navigation.core.scaling_exponent import ScalingExponent
@@ -23,7 +21,6 @@ class IEEE9Navigator:
         self.scaler = ScalingExponent(p_base=0.308)
     
     def run_example_trajectory(self):
-        """Beispiel-Trajektorie, die einem IEEE9 Voltage-Collapse-Szenario ähnelt."""
         voltages = [0.98, 0.975, 0.96, 0.94, 0.92, 0.89, 0.86, 0.82, 0.78, 0.74, 0.71, 0.68, 0.65]
         
         print("=== NEXAH IEEE9 Navigation Prototype ===")
