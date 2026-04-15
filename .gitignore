@@ -175,3 +175,6 @@ DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_7.json
 !APPLICATIONS/dynamical_systems/lorenz/visuals/
 !APPLICATIONS/dynamical_systems/lorenz/visuals/*.png
 
+# Allow specific NEXAH test data
+!APPLICATIONS/power_systems/stability_field_dynamics/data/
+!APPLICATIONS/power_systems/stability_field_dynamics/data/*.csv
