@@ -7,24 +7,38 @@
 
 ## 🚀 What this is
 
-This module turns classical power system stability into a:
+This module reframes classical power system stability as:
 
-- **geometric problem** → collapse manifold  
-- **dynamical system** → flow + acceleration  
-- **topological transition** → branching + multi-state collapse  
+- **Geometry** → collapse manifold  
+- **Dynamics** → flow + acceleration  
+- **Topology** → branching + multi-state collapse  
 
 Validated on:
 
 - IEEE 9  
 - IEEE 14  
 - IEEE 30  
+- IEEE 57  
+- IEEE 118  
+
+---
+
+## 🚀 Quick Entry
+
+👉 Start here: [START_HERE.md](START_HERE.md)
+
+### Recommended reading path
+
+1. `results_summary.md` → empirical findings  
+2. `theory_stability_field.md` → conceptual model  
+3. `method_pipeline.md` → how everything is computed  
+4. `logs/` → full discovery trace  
 
 ---
 
 ## 🧠 Core Discovery
 
 > Collapse is not triggered —  
->  
 > it is approached along a structure.
 
 Systems evolve toward:
@@ -37,7 +51,7 @@ Systems evolve toward:
 
 ## ⚡ What you can do here
 
-- reproduce collapse dynamics from real IEEE systems  
+- reproduce collapse dynamics from IEEE systems  
 - extract the collapse manifold  
 - identify the collapse boundary (rift)  
 - measure stability as distance to structure  
@@ -45,9 +59,17 @@ Systems evolve toward:
 
 ---
 
-## 🚀 Quick Entry
+## 🧭 Mental Model
 
-👉 Start here: [START_HERE.md](START_HERE.md)
+System evolution:
+
+→ aligns with manifold  
+→ moves along rift  
+→ deviates (distance ↑)  
+→ branches  
+→ collapses  
+
+![Collapse Geometry](outputs/ieee14_v52_residual_vs_distance.png)
 
 ---
 
@@ -56,74 +78,24 @@ Systems evolve toward:
 | Concept | Meaning |
 |--------|--------|
 | Manifold | collapse attractor in phase space |
-| Rift | zero-residual boundary (collapse corridor) |
+| Rift | zero-residual boundary |
 | Distance | stability metric |
-| Residual | deviation from structural law |
+| Residual | deviation from structure |
 | Topology | branching collapse states |
 
 ---
 
-## 🧭 Mental Model
+# 🧱 Core Framework
 
-System → evolves in phase space
+## Geometry → Dynamics → Topology
 
-→ aligns with manifold
-→ moves along rift
-→ deviates (distance ↑)
-→ branches
-→ collapses
-
-![Collapse Geometry](outputs/ieee14_v52_residual_vs_distance.png)
-
----
-
-## Core Idea
-
-> Stability is not a binary state — it is a geometry.  
-
-This framework extends classical analysis into a structural pipeline:
-
-- Geometry → field representation  
+- Geometry → manifold  
 - Field → flow dynamics  
-- Dynamics → memory (recurrence)  
-- Memory → resonance structure  
-- Resonance → coupling  
-- Coupling → physical embedding  
-- Embedding → prediction  
-- Prediction → universality  
-- Universality → manifold  
-- Manifold → rift  
-- Rift → distance  
-- Distance → topology  
-
----
-
-## Development Levels
-
-| Level | Description |
-|------|-------------|
-| V1–V3 | Stability field + boundary detection |
-| V4–V7 | Bipolar field, folds, eigenmodes |
-| V8–V10 | Current field, time evolution, recurrence |
-| V11–V13 | State detection, closure, activation |
-| V14–V15 | Resonance detection, dual-band structure |
-| V15b | Gap stabilization → first loops + states |
-| V16 | State graph + loop topology |
-| V17 | Coupling metric (P × R × L) |
-| V17b | Coupling heatmap (birth zones) |
-| V18 | Physical coupling (IEEE integration) |
-| V19 | GH corridor tracking |
-| V20 | Curvature-based early warning |
-| V21 | Unified collapse predictor |
-| V22 | Fragmentation-aware scoring |
-| V30–V32 | Multi-system + robustness validation |
-| V33–V35 | Structural vs classical divergence |
-| V36 | Unified predictor |
-| V40–V42 | Collapse manifold (phase-space attractor) |
-| V43 | Manifold equation (power-law coupling) |
-| V47–V50 | Flow fields + residual dynamics |
-| V51 | Rift extraction (collapse boundary) |
-| V52 | Stability distance + collapse topology |
+- Dynamics → recurrence  
+- Structure → resonance  
+- Boundary → rift  
+- Metric → distance  
+- Topology → branching  
 
 ---
 
@@ -133,29 +105,25 @@ All systems converge toward:
 
 (c, dc, d²c) → (1, 1, α)
 
-This defines a:
-
 → **low-dimensional attractor manifold**
 
 **Properties:**
 
 - stable under perturbations  
 - invariant across systems  
-- approximately topology-independent  
+- topology-independent  
 
 ---
 
 ## Manifold Equation
 
-Empirical law:
-
 d²c ≈ a · c^p · (dc)^q  
 
 **Interpretation:**
 
-- dc (drift) = dominant driver  
-- c (state) = modulation  
-- d²c (acceleration) = emergent instability  
+- dc → dominant driver  
+- c → modulation  
+- d²c → emergent instability  
 
 ---
 
@@ -163,18 +131,12 @@ d²c ≈ a · c^p · (dc)^q
 
 Defined by:
 
-→ residual ≈ 0  
+residual ≈ 0  
 
 Represents:
 
-- alignment between system and manifold  
-- geometric collapse corridor  
-
-**Key properties:**
-
-- continuous structure in (c, dc)  
-- spans trajectory  
-- acts as structural backbone  
+- structural alignment  
+- collapse corridor  
 
 ---
 
@@ -182,15 +144,8 @@ Represents:
 
 distance = min || (c, dc) − rift ||
 
-**Interpretation:**
-
-- small → stable (aligned)  
-- large → unstable (deviating)  
-
-**Behavior:**
-
-- near zero in SAFE/WARNING  
-- expands near collapse  
+- small → stable  
+- large → unstable  
 
 ---
 
@@ -198,155 +153,63 @@ distance = min || (c, dc) − rift ||
 
 collapse_strength ≈ |residual| × τ  
 
-**Interpretation:**
-
-- local instability intensity  
-- increases sharply near collapse  
+→ local instability intensity  
 
 ---
 
-## Collapse Geometry (V52)
+# 📊 Results Summary
 
-Projection into:
+## Universal Behavior
 
-(distance, residual)
+Across all tested systems:
 
-reveals structured regions:
-
-| Region | Description |
-|--------|------------|
-| Core | stable cluster near (0,0) |
-| Triangle | early deformation |
-| Polygon | branching region |
-| Extremes | collapse points |
+- identical manifold structure  
+- identical collapse geometry  
+- identical clustering behavior  
 
 ---
 
-## Branching Topology
+## Scaling Law
 
-Collapse is not continuous.
-
-Observed:
-
-→ discrete structural clusters  
-
-Implication:
-
-- multi-valued system states  
-- non-unique mapping (load → structure)  
-
----
-
----
-
-## 🌐 Universal Structure (V53–V55)
-
-A key result of this framework is:
-
-> Collapse dynamics are **structurally identical across systems**.
-
-Extended validation on:
-
-- IEEE 30  
-- IEEE 57  
-- IEEE 118  
-
-reveals:
-
-### 1. Scaling Law (V53)
-
-The manifold equation:
-
-d²c ≈ a · c^p · (dc)^q  
-
-has **stable exponents across system size**:
-
-| System | p (state) | q (drift) |
-|--------|----------|----------|
+| System | p | q |
+|--------|---|---|
 | IEEE9 / 14 | ~0.44 | ~0.97 |
 | IEEE30 / 57 / 118 | ~0.31 | ~0.89 |
 
-→ **Parameters converge — not diverge**
+→ parameters converge  
 
 ---
 
-### 2. Geometry Overlap (V54)
+## Collapse Geometry
 
 Projection into:
 
 (distance, residual)
 
-shows:
+reveals:
 
-→ identical geometric structure across systems  
-→ same collapse regions  
-→ same deformation patterns  
-
-![Geometry Comparison](outputs/ieee_v54_geometry_comparison.png)
-
----
-
-### 3. Cluster Structure (V55)
-
-Clustering in (distance, residual) reveals:
-
-| Cluster | Meaning |
+| Region | Meaning |
 |--------|--------|
-| Core cluster | stable regime |
-| Secondary cluster | pre-collapse |
-| Noise points | transition / collapse boundary |
-
-Observed:
-
-- same number of clusters  
-- same cluster centers  
-- same cluster sizes  
-
-across IEEE30 / IEEE57 / IEEE118.
-
-![Cluster Structure](outputs/ieee_v55_cluster_structure.png)
+| Core | stable |
+| Triangle | deformation |
+| Polygon | branching |
+| Extremes | collapse |
 
 ---
 
-## 🔥 Key Result
+## Cluster Structure
 
-> Collapse is governed by a **universal low-dimensional structure**  
-> independent of system size.
+- stable cluster  
+- pre-collapse cluster  
+- transition noise  
 
----
-
-## 🧠 Interpretation
-
-Power systems of different sizes:
-
-→ do not create new collapse behaviors  
-→ they follow the **same structural blueprint**
-
----
-
-## ⚡ Implication
-
-This reduces:
-
-- high-dimensional grid dynamics  
-→ to  
-- a small number of structural states  
-
----
-
-## 🧭 Final Insight (Extended)
-
-> Systems do not collapse differently at scale.  
->  
-> They collapse the same way —  
->  
-> just with more nodes.  
+→ identical across systems  
 
 ---
 
 ## Structural Transition Sequence
 
-1. coherence (aligned manifold)  
+1. coherence  
 2. fragmentation  
 3. branching  
 4. instability amplification  
@@ -356,356 +219,126 @@ This reduces:
 
 ## Universal Collapse Signature
 
-Across IEEE 9 / 14 / 30:
-
-- curvature peak before collapse  
+- curvature peak  
 - divergence spike  
 - fragmentation growth  
-- manifold convergence  
-- rift alignment  
+- manifold alignment  
 - distance expansion  
 
-→ **scale-invariant structural precursor**
+→ scale-invariant precursor  
 
 ---
 
-## Phase System
+# 🌊 Field Perspective (V68–V69)
 
-| Phase | Meaning | Behavior |
-|------|--------|----------|
-| SAFE | coherent | stable alignment |
-| WARNING | fragmentation | coherence loss |
-| CRITICAL | acceleration | instability growth |
-| PRE-COLLAPSE | manifold alignment | high coherence |
-| COLLAPSED | divergence | system breakdown |
+## Vector Field Representation
 
----
-
-## Structural Topology Layer
-
-The system is now defined by:
-
-1. Geometry → manifold  
-2. Dynamics → equation  
-3. Boundary → rift  
-4. Metric → distance  
-5. Topology → branching  
-
----
-
-## Fundamental Discovery
-
-Collapse is governed by:
-
-- geometry (manifold)  
-- dynamics (equation)  
-- boundary (rift)  
-- metric (distance field)  
-- topology (branching states)  
-
----
-
-## Theoretical Insight
-
-> Stability is equivalent to alignment with structure.  
->  
-> Collapse begins when alignment is lost.  
->  
->  
-> Failure is not caused by magnitude —  
->  
-> but by loss of coherence and uniqueness.  
-
----
-
----
-
-## 🌊 Field Perspective (V68–V69)
-
-A fundamental shift emerges in the latest stage of the framework.
-
-The system is no longer described only by:
-
-- state (c)  
-- drift (dc)  
-- acceleration (d²c)  
-
-Instead:
-
-→ it is directly observable as a **vector field in phase space**
-
----
-
-### Field Representation
-
-Each point (c, dc) carries:
-
-→ a direction of evolution  
-
-F(c, dc) → local flow vector  
-
----
-
-### Visual — Off-Manifold Flow Field (V69)
-
-![Off-Manifold Flow](outputs/ieee118_v69_off_manifold_flow.png)
-
-→ trajectories are not arbitrary  
-→ they follow structured directions in the field  
-→ local deviations reveal branching dynamics  
-
----
-
-### Key Discovery
-
-The previously defined quantities are not fundamental:
-
-- dc → projection of flow direction  
-- d²c → change of flow direction  
-- curvature → local bending of the field  
-- manifold → preferred paths in the field  
-
----
-
-### Geometric Interpretation
-
-The system follows:
-
-→ **geodesic-like paths in the field**
-
-Meaning:
-
-- minimal-energy trajectories  
-- natural evolution directions  
-- preferred collapse paths  
-
----
-
-### Visual — Collapse Geometry (V52)
-
-![Residual vs Distance](outputs/ieee14_v52_residual_vs_distance.png)
-
-→ structured regions emerge  
-→ these correspond to different flow behaviors in the field  
-
----
-
-### Collapse (Reinterpreted)
-
-Collapse is not triggered by:
-
-- thresholds  
-- scalar values  
-
-Instead:
-
-→ trajectories enter regions where the field directs them irreversibly  
-
----
-
-### GH Corridor (Field View)
-
-GH is not a phase classification.
-
-It is:
-
-→ **a coherent flow corridor**
-
-Properties:
-
-- aligned vector directions  
-- stable trajectory propagation  
-- low directional divergence  
-
----
-
-### Fundamental Shift
-
-From:
-
-→ trajectory-based modeling  
-
-To:
-
-→ field-based dynamics  
-
----
-
-### Core Insight (Extended)
-
-> The equations describe what happens.  
->  
-> The field determines that it happens.  
-
----
-
-## Final Core Insight
-
-> Collapse is not a point.  
->  
-> It is not only a process.  
->  
-> It is a geometric + dynamical + topological transition.  
->  
->  
-> Systems do not fail suddenly —  
->  
-> they fragment, branch, and leave the structure  
-> that sustains them.  
-
----
-
-# 📊 Visual Evidence — Collapse Geometry (V43–V52)
-
----
-
-### 1. Collapse Manifold (Phase Space)
-
-![IEEE14 Phase Space](outputs/ieee14_v50_field_separation.png)
-
-→ all systems converge toward a common pre-collapse state  
-
----
-
-### 2. Manifold Fit (V43)
-
-![IEEE14 Manifold Fit](outputs/ieee14_v43_fit.png)
-
-→ acceleration governed by state–drift interaction  
-
----
-
-### 3. Residual Structure (V49)
-
-![IEEE14 Residual](outputs/ieee14_v49_residual_vs_c.png)
-
-→ structured residual patterns (not noise)  
-
----
-
-### 4. Extended Manifold (V50)
-
-![IEEE14 Extended Fit](outputs/ieee14_v50_heatmaps.png)
-
-→ manifold is curved / folded  
-
----
-
-### 5. Vector Field (V47)
-
-![IEEE14 Vector Field](outputs/ieee14_v47_vector_field.png)
+F(c, dc) → local flow direction  
 
 → trajectories follow structured flow  
 
 ---
 
-### 6. Flow Topology (V48)
+## Key Insight
 
-![IEEE14 Flow](outputs/ieee14_v48_streamlines.png)
-
-→ rotational + directional structure  
-
----
-
-### 7. Residual Flow (V49)
-
-![IEEE14 Residual Flow](outputs/ieee14_v49_residual_flow.png)
-
-→ instability propagates along flow  
+- dc → projection of flow  
+- d²c → change of flow  
+- manifold → preferred paths  
 
 ---
 
-### 8. Rift — Collapse Boundary (V51)
+## Geodesic Interpretation
 
-![IEEE14 Rift](outputs/ieee14_v51_rift_boundary.png)
+System follows:
 
-![IEEE14 Boundary Geometry](outputs/ieee14_v51_boundary_geometry.png)
-
-→ collapse occurs along a continuous boundary  
+→ minimal-energy paths in field  
 
 ---
 
-### 9. Stability Distance (V52)
+## GH Corridor
 
-![IEEE14 Distance](outputs/ieee14_v52_stability_distance_map.png)
+→ coherent flow channel  
 
-→ stability = proximity to rift  
-
----
-
-### 10. Collapse Strength (V52)
-
-![IEEE14 Strength](outputs/ieee14_v52_collapse_strength_map.png)
-
-→ instability concentrates locally  
+- aligned directions  
+- stable propagation  
 
 ---
 
-### 11. Residual–Distance Space
+## Collapse (Field View)
 
-![IEEE14 Residual vs Distance](outputs/ieee14_v52_residual_vs_distance.png)
+Collapse occurs when:
 
-→ discrete topological regions emerge  
-
----
-
-## Visual Summary
-
-System evolution:
-
-1. smooth growth  
-2. curvature increase  
-3. residual structure  
-4. flow organization  
-5. rift alignment  
-6. distance expansion  
-7. branching  
-8. collapse  
+→ trajectories enter divergence regions  
 
 ---
 
-## Visual Core Insight
+# 📊 Visual Evidence
 
-> Collapse is not only measurable —  
+## Phase Space
+
+![Phase Space](outputs/ieee14_v50_field_separation.png)
+
+## Manifold Fit
+
+![Fit](outputs/ieee14_v43_fit.png)
+
+## Vector Field
+
+![Field](outputs/ieee14_v47_vector_field.png)
+
+## Rift Boundary
+
+![Rift](outputs/ieee14_v51_rift_boundary.png)
+
+## Stability Distance
+
+![Distance](outputs/ieee14_v52_stability_distance_map.png)
+
+---
+
+# 🌐 Fundamental Discovery
+
+> Collapse is governed by a universal low-dimensional structure.
+
+---
+
+## 🧠 Theoretical Insight
+
+> Stability = alignment with structure  
+> Collapse = loss of alignment  
+
+---
+
+# 🧭 Final Insight
+
+> Systems do not fail suddenly.  
 >  
-> it is visible.  
->  
->  
-> The system reveals its failure  
-> in geometry, flow, and structure  
-> long before it occurs.  
+> They fragment, branch, and leave the structure  
+> that sustains them.  
 
 ---
 
-## Repository Structure
+# 📂 Repository Structure
 
 ## Module Navigation
 
-The module is organized into three layers:
+APPLICATIONS/power_systems/stability_field_dynamics/
+└── ieee_test_cases/
+    ├── core/         → definitions, field construction
+    ├── pipeline/     → processing + feature extraction
+    ├── experiments/  → V1–V52 experiments
+    ├── analysis/     → evaluation + metrics
+    ├── outputs/      → plots, data, visualizations
+    ├── logs/         → research log (entries)
+    ├── results_summary.md
+    ├── theory_stability_field.md
+    ├── method_pipeline.md
+    └── README.md
 
-- **core + pipeline** → system construction  
-- **experiments + analysis** → model evolution  
-- **outputs + logs** → results + scientific trace  
+---
 
-- `APPLICATIONS/power_systems/stability_field_dynamics/`
-  - [`ieee_test_cases/`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/)
-    - [`core/`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/core/)
-      → fundamental definitions (field construction, metrics, base operators)
+# 🔥 Core Insight
 
-    - [`pipeline/`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/pipeline/)
-      → data processing pipeline (load sweep, normalization, feature extraction)
+The equations describe what happens.  
 
-    - [`experiments/`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/experiments/)
-      → executable scripts (V1–V52 evolution, all experiments and model variants)
-
-    - [`analysis/`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/analysis/)
-      → post-processing, evaluation, comparisons, derived metrics
-
-    - [`outputs/`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/)
-      → generated datasets, CSVs, and all visualizations (V43–V52 figures)
-
-    - [`logs/`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/logs/)
-      → structured research log (Entries, discoveries, interpretations)
-
-    - [`README.md`](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/README.md)
-      → module documentation (theoretical framework + visual evidence)
+The field determines that it happens.
