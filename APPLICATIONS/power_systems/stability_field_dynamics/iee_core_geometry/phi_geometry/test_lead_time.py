@@ -43,30 +43,50 @@ def compute_acceleration(v, window=5):
 
 def analyze(time, voltage, collapse_threshold=0.7):
 
+    # ----------------------------------------
     # Collapse Detection
+    # ----------------------------------------
+
     collapse_idx = None
     collapse_indices = np.where(voltage < collapse_threshold)[0]
     if len(collapse_indices) > 0:
         collapse_idx = collapse_indices[0]
 
+    # ----------------------------------------
     # Acceleration
+    # ----------------------------------------
+
     acc = compute_acceleration(voltage)
 
-    # Adaptive Threshold (sensitiver)
-    threshold = np.mean(acc) + 1.0 * np.std(acc)
+    # ----------------------------------------
+    # Adaptive Threshold
+    # ----------------------------------------
 
-    # Minimum Threshold Schutz
+    threshold = np.mean(acc) + 1.0 * np.std(acc)
     threshold = max(threshold, 1e-4)
 
-    # Phi-Split NUR VOR Collapse
+    # ----------------------------------------
+    # Phi-Split Detection (FINAL VERSION)
+    # ----------------------------------------
+
+    # Absolute detection
+    abs_indices = np.where(acc > threshold)[0]
+
+    # Relative detection (wichtig für schwache Signale)
+    rel_threshold = 0.5 * np.max(acc)
+    rel_indices = np.where(acc > rel_threshold)[0]
+
+    # Nur vor Collapse berücksichtigen
     if collapse_idx is not None:
-        valid_indices = np.where(acc[:collapse_idx] > threshold)[0]
-    else:
-        valid_indices = np.where(acc > threshold)[0]
+        abs_indices = abs_indices[abs_indices < collapse_idx]
+        rel_indices = rel_indices[rel_indices < collapse_idx]
+
+    # Kombinieren
+    combined = np.unique(np.concatenate([abs_indices, rel_indices]))
 
     phi_idx = None
-    if len(valid_indices) > 0:
-        phi_idx = valid_indices[0]
+    if len(combined) > 0:
+        phi_idx = combined[0]
 
     # ----------------------------------------
     # Output
