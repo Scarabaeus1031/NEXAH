@@ -3,10 +3,15 @@ NEXAH IEEE9 Navigation Prototype
 Verbindet das Mod-77 Hierarchical Grid mit einer IEEE9-ähnlichen Trajektorie
 """
 
+import sys
+import os
+
+# Root des Repos zum Python-Pfad hinzufügen
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..')))
+
 from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
 from APPLICATIONS.navigation.core.drift_quantization import DriftQuantization
 from APPLICATIONS.navigation.core.scaling_exponent import ScalingExponent
-import numpy as np
 
 class IEEE9Navigator:
     def __init__(self, delta: float = 0.17):
@@ -16,7 +21,6 @@ class IEEE9Navigator:
     
     def run_example_trajectory(self):
         """Beispiel-Trajektorie, die einem IEEE9 Voltage-Collapse-Szenario ähnelt."""
-        # Einfache fallende Spannungstrajektorie (kann später durch echte IEEE9-Simulation ersetzt werden)
         voltages = [0.98, 0.975, 0.96, 0.94, 0.92, 0.89, 0.86, 0.82, 0.78, 0.74, 0.71, 0.68, 0.65]
         
         print("=== NEXAH IEEE9 Navigation Prototype ===")
@@ -43,7 +47,6 @@ class IEEE9Navigator:
         print(f"Finaler Zustand          : {analysis[-1]['base_state']}")
         print(f"Predicted p              : {self.scaler.p_base:.4f}")
         
-        # Prime Leap Hinweis
         print("\nPrime Leap Beobachtung:")
         print("   13 + 16 = 29 → rekursive Prime-Struktur erkannt")
 
