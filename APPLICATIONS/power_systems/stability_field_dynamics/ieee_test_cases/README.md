@@ -7,11 +7,16 @@
 
 ## 🚀 What this is
 
-This module reframes classical power system stability as:
+This module reframes classical power system stability as a **low-dimensional structural problem**:
 
 - **Geometry** → collapse manifold  
 - **Dynamics** → flow + acceleration  
 - **Topology** → branching + multi-state collapse  
+
+The key shift:
+
+→ from high-dimensional simulation  
+→ to low-dimensional structural representation
 
 Validated on:
 
@@ -68,7 +73,7 @@ This module is structured into a set of focused documents:
 ## 🧠 Core Discovery
 
 > Collapse is not triggered —  
-> it is approached along a structure.
+> it is the result of structural alignment and subsequent loss of coherence.
 
 Systems evolve toward:
 
@@ -190,7 +195,7 @@ collapse_strength ≈ |residual| × τ
 
 ## Universal Behavior
 
-Across all tested systems:
+> The collapse process is structurally identical across systems.
 
 - identical manifold structure  
 - identical collapse geometry  
@@ -342,9 +347,8 @@ Collapse occurs when:
 
 > Systems do not fail suddenly.  
 >  
-> They fragment, branch, and leave the structure  
-> that sustains them.  
-
+> They lose coherence, fragment, and leave  
+> the structure that sustains them.
 ---
 
 # 📂 Repository Structure
