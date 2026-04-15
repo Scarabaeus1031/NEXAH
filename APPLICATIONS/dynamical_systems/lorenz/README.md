@@ -186,9 +186,119 @@ The Lorenz module serves as a **benchmark system** demonstrating:
 
 ---
 
+# 📂 Module Structure
+
+This module is organized into functional layers:
+
+### 🔬 analysis/
+Core analytical fields and transformations
+
+- flow fields  
+- FTLE (finite-time Lyapunov exponent)  
+- Lyapunov maps  
+- symbolic dynamics  
+- rotation / stretch analysis  
+
+---
+
+### 🌌 attractor/
+Attractor geometry and density structure
+
+- filament structures  
+- density maps  
+- chaotic nebula representations  
+
+---
+
+### 🗺 landscapes/
+Geometric interpretation of phase space
+
+- chaos topography  
+- potential landscapes  
+
+---
+
+### 🧭 navigation/
+Trajectory control and navigation logic
+
+- navigation maps  
+- controllers  
+- trajectory steering  
+- agent-based exploration  
+
+---
+
+### 🧩 regimes/
+Regime detection and boundary structure
+
+- separatrix maps  
+- basin boundaries  
+- transition channels  
+- resilience maps  
+
+---
+
+### ⚙️ pipeline/
+End-to-end reconstruction pipeline
+
+- full system processing  
+- visualization pipeline  
+
+---
+
+### 🧪 prototypes/
+Experimental control strategies
+
+- early controller models  
+- testing ground for navigation ideas  
+
+---
+
+### 🎨 visuals/
+Generated outputs and visual representations
+
+- attractor structure  
+- FTLE fields  
+- navigation maps  
+- regime structures  
+
+---
+
+## 🧠 Interpretation
+
+Each folder represents one layer of the transformation:
+
+```text
+dynamics → structure → geometry → regimes → navigation
+```
+
+---
+
+## 🧭 How to Explore
+
+- Start with → `visuals/` (intuitive overview)  
+- Then → `analysis/` (how structure is computed)  
+- Then → `landscapes/` + `regimes/` (geometry)  
+- Finally → `navigation/` (control & movement)  
+
+---
+
+## 🚀 Connection to Demos
+
+High-level demonstrations are located in:
+
+APPLICATIONS/demos/lorenz_demo/
+
+These provide:
+
+- curated visual outputs  
+- simplified pipelines  
+- entry points for new users
+
+---
+
 # Final Insight
 
 > The system is not defined by trajectories.  
 > It is defined by the geometry that generates them.
-
 
