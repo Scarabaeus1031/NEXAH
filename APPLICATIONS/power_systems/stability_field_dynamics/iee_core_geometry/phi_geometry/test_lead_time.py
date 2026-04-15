@@ -27,7 +27,7 @@ def compute_acceleration(v, window=5):
     dv = np.diff(v)
     ddv = np.diff(dv)
 
-    # Padding → gleiche Länge wie v
+    # Padding
     ddv = np.concatenate([[0, 0], ddv])
 
     # Glättung
@@ -43,50 +43,40 @@ def compute_acceleration(v, window=5):
 
 def analyze(time, voltage, collapse_threshold=0.7):
 
-    # ----------------------------------------
-    # Collapse Detection
-    # ----------------------------------------
-
+    # Collapse
     collapse_idx = None
     collapse_indices = np.where(voltage < collapse_threshold)[0]
     if len(collapse_indices) > 0:
         collapse_idx = collapse_indices[0]
 
-    # ----------------------------------------
     # Acceleration
-    # ----------------------------------------
-
     acc = compute_acceleration(voltage)
 
-    # ----------------------------------------
-    # Adaptive Threshold
-    # ----------------------------------------
-
+    # Adaptive threshold
     threshold = np.mean(acc) + 1.0 * np.std(acc)
     threshold = max(threshold, 1e-4)
 
     # ----------------------------------------
-    # Phi-Split Detection (robust)
+    # Phi-Split Detection (ROBUST FINAL)
     # ----------------------------------------
 
-    # Minimum gültiger Index (wegen d²)
-    min_idx = 2
+    min_idx = 2  # kein Trigger am Anfang
 
-    # Absolute Detection
+    # Absolute detection
     abs_indices = np.where(acc > threshold)[0]
 
-    # Relative Detection nur wenn Signal existiert
+    # Relative detection NUR wenn echtes Signal existiert
     rel_indices = np.array([])
 
-    if np.max(acc) > 1e-5:
+    if np.max(acc) > 1e-6:  # <<< FIX !!!
         rel_threshold = 0.5 * np.max(acc)
         rel_indices = np.where(acc > rel_threshold)[0]
 
-    # Nur gültige Indizes (keine Artefakte am Anfang)
+    # Start-Artefakte entfernen
     abs_indices = abs_indices[abs_indices >= min_idx]
     rel_indices = rel_indices[rel_indices >= min_idx]
 
-    # Nur vor Collapse berücksichtigen
+    # Nur vor Collapse
     if collapse_idx is not None:
         abs_indices = abs_indices[abs_indices < collapse_idx]
         rel_indices = rel_indices[rel_indices < collapse_idx]
