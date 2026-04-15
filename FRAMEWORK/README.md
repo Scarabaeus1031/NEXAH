@@ -28,18 +28,18 @@ The geometric interpretation of the framework is formalized in:
 
 This document defines:
 
-- the geometric embedding of system states  
-- the field representation \( \dot{x} = F(x) \)  
-- the coherence measure \( C(x) \)  
-- the risk field \( R(x) \)  
-- the control formulation \( \dot{x} = F(x) + u(x) \)  
+- geometric embedding of system states  
+- field representation $begin:math:text$ \\dot\{x\} \= F\(x\) $end:math:text$  
+- coherence measure $begin:math:text$ C\(x\) $end:math:text$  
+- risk field $begin:math:text$ R\(x\) $end:math:text$  
+- control formulation $begin:math:text$ \\dot\{x\} \= F\(x\) \+ u\(x\) $end:math:text$  
 
 Additional formal definitions:
 
 👉 [Risk Field Definition](./docs/risk_field.md)  
 👉 [Field-Based Control Model](./docs/field_control.md)
 
-Together, these form the **mathematical backbone of NEXAH**, connecting intuition, geometry, and system dynamics.
+Together, these form the **mathematical backbone of NEXAH**.
 
 ---
 
@@ -61,6 +61,23 @@ META → ARCHY → MESO → NEXAH → MEVA
 
 ---
 
+## 🧠 Dynamical Models
+
+The mathematical foundation of system behavior is defined in:
+
+👉 [`dynamical_models/`](./dynamical_models/README.md)
+
+These models describe how systems evolve within stability landscapes:
+
+- **Stability Landscape** → state space structure & attractors  
+- **Gradient Systems** → baseline stability dynamics  
+- **Drift Systems** → external forcing  
+- **Regime Systems** → multiple attractors & transitions  
+
+> These models provide the **conceptual and mathematical basis** for all higher-level NEXAH components.
+
+---
+
 ## 🔬 Field & Geometry
 
 The system is interpreted as a structured vector field:
@@ -71,9 +88,9 @@ The system is interpreted as a structured vector field:
 
 Stability is defined through coherence:
 
-\[
-C(x) = \frac{\dot{x} \cdot F(x)}{\|\dot{x}\| \, \|F(x)\|}
-\]
+$begin:math:display$
+C\(x\) \= \\frac\{\\dot\{x\} \\cdot F\(x\)\}\{\\\|\\dot\{x\}\\\| \\\, \\\|F\(x\)\\\|\}
+$end:math:display$
 
 👉 Stability = **alignment with the field**, not equilibrium
 
@@ -84,6 +101,7 @@ C(x) = \frac{\dot{x} \cdot F(x)}{\|\dot{x}\| \, \|F(x)\|}
 Core components:
 
 - `CORE_GEOMETRY/` → transition geometry & field structure  
+- `dynamical_models/` → mathematical system models  
 - `ARCHY/` → simulation environments & system modeling  
 - `MESO/` → risk analysis & stability landscapes  
 - `NEXAH/` → navigation layer & trajectory control  
@@ -91,10 +109,13 @@ Core components:
 
 Additional:
 
-- `docs/` → mathematical definitions & formal models  
-- `research/` → theoretical foundation  
+- `docs/` → mathematical definitions  
+- `research/` → theoretical exploration  
 - `models/` → system representations  
-- `applications/` → real-world use cases  
+
+Applications:
+
+- `APPLICATIONS/` → real-world systems and demos  
 
 ---
 
@@ -105,13 +126,13 @@ Depending on your goal:
 ### Understand the system
 → `META/` → `ARCHY/` → `MESO/`
 
-### Understand geometry & theory
-→ `CORE_GEOMETRY/`
+### Understand theory & models
+→ `dynamical_models/` → `CORE_GEOMETRY/`
 
 ### Understand control & navigation
 → `NEXAH/` → `MEVA/`
 
-### See real-world application
+### See real-world applications
 → `APPLICATIONS/`
 
 ---
@@ -159,5 +180,3 @@ into an operational system for:
 Complex systems are not controlled through thresholds.
 
 They are navigated through structure.
-
-
