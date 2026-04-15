@@ -5,14 +5,15 @@ NEXAH IEEE9 Navigation Prototype
 import sys
 import os
 
-# Root des Repos zum Python-Pfad hinzufügen
-repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
+# Korrekter Root: das NEXAH-Verzeichnis
+script_dir = os.path.dirname(__file__)
+repo_root = os.path.abspath(os.path.join(script_dir, '../../..'))
 if repo_root not in sys.path:
     sys.path.insert(0, repo_root)
 
-print("Repo root added:", repo_root)
+print("Repo root (NEXAH) added:", repo_root)
 
-# RICHTIGER Import-Pfad (von APPLICATIONS aus)
+# Vollständiger Import vom NEXAH-Root aus
 from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
 from APPLICATIONS.navigation.core.drift_quantization import DriftQuantization
 from APPLICATIONS.navigation.core.scaling_exponent import ScalingExponent
@@ -26,7 +27,7 @@ class IEEE9Navigator:
     def run_example_trajectory(self):
         voltages = [0.98, 0.975, 0.96, 0.94, 0.92, 0.89, 0.86, 0.82, 0.78, 0.74, 0.71, 0.68, 0.65]
         
-        print("=== NEXAH IEEE9 Navigation Prototype ===")
+        print("\n=== NEXAH IEEE9 Navigation Prototype ===")
         print("Trajektorie wird analysiert...\n")
         
         analysis = self.dq.analyze_drift(voltages)
