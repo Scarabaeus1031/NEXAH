@@ -47,6 +47,29 @@ The engine is therefore the **execution layer for structural discovery**.
 
 ---
 
+## Important New Development (April 2026)
+
+### Hierarchical Resonance Grid
+
+A central new component in the Engine is the **`navigation/hierarchical_grid/`** folder.
+
+This module contains the **discrete hierarchical state space model** for NEXAH navigation:
+
+- Mod-77 base grid (77 + 308 states)
+- Emergent exponent p ≈ 0.308
+- Phi-Split mechanism for controlled transitions
+- Resonance pairs and Prime Leap Chain (13 + 16 = 29)
+- Mapping of real IEEE trajectories with drift and transfer detection
+
+**See:**
+- [`navigation/hierarchical_grid/README.md`](./navigation/hierarchical_grid/README.md)
+- [`navigation/hierarchical_grid/results.md`](./navigation/hierarchical_grid/results.md)
+- [`navigation/hierarchical_grid/equations.md`](./navigation/hierarchical_grid/equations.md)
+
+This module forms the bridge between structural analysis and concrete navigation in applications (e.g., Power Systems).
+
+---
+
 ## Core Responsibilities
 
 The `ENGINE` currently supports work in areas such as:
@@ -58,36 +81,23 @@ The `ENGINE` currently supports work in areas such as:
 - resonance analysis
 - multi-agent experimentation
 - simulation-based structure discovery
-
-Depending on the module, this includes:
-
-- fixpoint computation
-- operator application
-- regime mapping
-- transition analysis
-- spectral analysis
-- vortex / chimera detection
-- experimental metric extraction
+- **hierarchical grid-based navigation** (new)
 
 ---
 
 ## Directory Overview
 
-| Folder | Role |
-|------|------|
-| `core/` | core structural and computational components |
-| `kernel/` | kernel-level logic and integration |
-| `research/` | research modules and experiment families |
-| `simulation/` | simulation logic |
-| `analysis/` | analysis scripts and post-processing |
-| `visualization/` | plotting and visual output logic |
-| `agent/` | agent-related execution and experiments |
-| `applications/` | engine-side application support |
-| `examples/` | runnable examples and demonstrations |
-| `tools/` | utility scripts and helper functions |
-| `logs/` / `output/` | generated logs and outputs |
-
-Additional folders such as `resonance/`, `vortex_chimera/`, `runtime/`, and `services/` reflect specialized development branches inside the engine.
+| Folder                          | Role |
+|---------------------------------|------|
+| `core/`                         | core structural and computational components |
+| `kernel/`                       | kernel-level logic and integration |
+| `research/`                     | research modules and experiment families |
+| `navigation/hierarchical_grid/` | **discrete hierarchical navigation grid** (new) |
+| `simulation/`                   | simulation logic |
+| `analysis/`                     | analysis scripts and post-processing |
+| `visualization/`                | plotting and visual output logic |
+| `applications/`                 | engine-side application support |
+| `examples/`                     | runnable examples |
 
 ---
 
@@ -97,12 +107,7 @@ For more detailed architectural context, see:
 
 - [ENGINE_MAP.md](./ENGINE_MAP.md)
 - [NEXAH_Engine_v1.0.0_Release_Notes.md](./NEXAH_Engine_v1.0.0_Release_Notes.md)
-
-These documents provide:
-
-- a layer-by-layer architecture map of the engine
-- the stabilized finite-core release context
-- the boundary between validated engine components and newer exploratory modules
+- [`navigation/hierarchical_grid/README.md`](./navigation/hierarchical_grid/README.md)
 
 ---
 
@@ -122,9 +127,7 @@ Current experiment families include, among others:
 - structured oscillator networks
 - symmetry graph experiments
 - stability-driven multi-agent systems
-
-These modules are not just examples.  
-They serve as **experimental discovery environments** for extracting structural patterns, testing operators, and connecting computational results back into the NEXAH framework.
+- **hierarchical resonance navigation**
 
 ---
 
@@ -146,9 +149,9 @@ In this sense, the engine is not only a software layer, but also a **research in
 
 - [ENGINE_MAP.md](./ENGINE_MAP.md)
 - [NEXAH_Engine_v1.0.0_Release_Notes.md](./NEXAH_Engine_v1.0.0_Release_Notes.md)
+- [`navigation/hierarchical_grid/README.md`](./navigation/hierarchical_grid/README.md)
 - [research/README.md](./research/README.md)
 - [research/experiments/](./research/experiments/)
-- [examples/](./examples/)
 
 ---
 
@@ -172,3 +175,5 @@ The NEXAH Engine is the part of the repository where:
 - structure becomes usable for navigation
 
 It is the computational heart of NEXAH.
+
+**New addition:** The Hierarchical Resonance Grid as a bridge between analysis and concrete navigation.
