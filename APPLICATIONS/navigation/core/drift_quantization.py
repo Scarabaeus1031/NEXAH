@@ -1,6 +1,5 @@
 """
 NEXAH Drift Quantization & Phi-Split
-Quantisiert Drift und erkennt Phi-Split / Transfer Events
 """
 
 import sys
@@ -11,7 +10,7 @@ if repo_root not in sys.path:
 
 from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
 from APPLICATIONS.navigation.core.scaling_exponent import ScalingExponent
-from typing import List, Dict, Tuple
+from typing import List, Dict
 
 class DriftQuantization:
     def __init__(self, delta: float = 0.17, phi_split_threshold: float = 0.25):
@@ -20,7 +19,6 @@ class DriftQuantization:
         self.phi_split_threshold = phi_split_threshold
     
     def analyze_drift(self, voltages: List[float]) -> List[Dict]:
-        """Analysiert Drift, Phi-Split und mögliche Transfer Events."""
         mapped = []
         prev_state = None
         
@@ -54,30 +52,10 @@ class DriftQuantization:
             prev_state = current_state
         
         return mapped
-    
-    def print_analysis(self, voltages: List[float], max_steps: int = 12):
-        mapped = self.analyze_drift(voltages[:max_steps])
-        
-        print("=== NEXAH Drift Quantization & Phi-Split ===")
-        print(f"Analyse von {len(voltages)} Spannungswerten (zeigt erste {max_steps})\n")
-        
-        for entry in mapped:
-            v = entry['voltage']
-            state = entry['base_state']
-            drift = entry['drift']
-            phi = "✓ Phi-Split" if entry['phi_split'] else ""
-            transfer = "→ Transfer" if entry['transfer_event'] else ""
-            
-            drift_str = f"Drift: {drift}" if drift else "Drift: -"
-            
-            print(f"t={entry['time_step']:2d} | V={v:.4f} | State={state} | {drift_str} | {phi} {transfer}")
-        
-        print("\n→ Phi-Split und Transfer Events erkannt.")
 
 
-# Demo
 if __name__ == "__main__":
     example_voltages = [0.98, 0.97, 0.95, 0.92, 0.88, 0.84, 0.79, 0.74, 0.71, 0.70, 0.68, 0.65]
-    
-    dq = DriftQuantization(delta=0.17, phi_split_threshold=0.25)
-    dq.print_analysis(example_voltages, max_steps=12)
+    dq = DriftQuantization()
+    analysis = dq.analyze_drift(example_voltages)
+    print("DriftQuantization Test erfolgreich -", len(analysis), "Einträge")
