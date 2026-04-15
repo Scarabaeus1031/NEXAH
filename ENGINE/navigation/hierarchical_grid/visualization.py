@@ -62,4 +62,4 @@ if __name__ == "__main__":
     print("=== NEXAH Grid Visualization ===")
     viz.simple_grid_view()
     print("\nErzeuge Trajektorie-Plot mit Phi-Split-Markierungen...")
-    viz.plot_trajectory(example_voltages, title="Beispiel-Trajektorie mit Phi-Split Events"
+    viz.plot_trajectory(example_voltages, title="Beispiel-Trajektorie mit Phi-Split Events")
