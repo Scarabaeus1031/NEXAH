@@ -1,6 +1,9 @@
 # 🌀 Lorenz Demo — Chaos Navigation
 
-This demo shows how NEXAH transforms a chaotic system into a **navigable geometric structure**.
+This demo does not simulate chaos.
+
+It reconstructs the **structure that generates it** —  
+and shows how that structure can be used for **navigation**.
 
 ---
 
@@ -8,11 +11,14 @@ This demo shows how NEXAH transforms a chaotic system into a **navigable geometr
 
     python run_demo.py
 
+⏱ Runtime: ~10–15 minutes depending on your machine  
+Progress is shown step-by-step.
+
 ---
 
 ## 🔬 What this demo generates
 
-The pipeline produces a sequence of structural views of chaos:
+The pipeline produces a sequence of structural layers:
 
 - 3D attractor geometry  
 - Lyapunov instability field  
@@ -20,7 +26,22 @@ The pipeline produces a sequence of structural views of chaos:
 - separatrix (regime boundary)  
 - navigation map  
 
-These layers reconstruct the **hidden structure of the system**.
+Together, these layers reconstruct the **hidden geometry of chaos**.
+
+---
+
+## 🧠 What is different here
+
+Most approaches:
+
+    simulate chaos → plot trajectories
+
+This demo:
+
+    reconstruct structure → reveal geometry → enable navigation
+
+The system is no longer just observed —  
+it becomes **interpretable and actionable**.
 
 ---
 
@@ -45,7 +66,11 @@ All generated visuals are stored in:
 
     outputs/
 
-You can directly inspect the system structure after running the demo.
+You can directly inspect:
+
+- where instability emerges  
+- how trajectories are constrained  
+- where transitions occur  
 
 ---
 
@@ -55,7 +80,19 @@ This is a minimal example of the NEXAH paradigm:
 
     chaos → structure → geometry → navigation
 
-Instead of predicting trajectories, the system becomes **interpretable and controllable**.
+Instead of predicting trajectories, the system becomes:
+
+→ interpretable  
+→ structured  
+→ potentially controllable  
+
+---
+
+## ⚡ Quick Preview
+
+If you do not want to run the full demo:
+
+→ see `visuals/` for pre-generated results
 
 ---
 
