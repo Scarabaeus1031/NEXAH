@@ -3,7 +3,7 @@ import csv
 import os
 
 # ----------------------------------------
-# 1. CSV Loader
+# 1. CSV Laden
 # ----------------------------------------
 
 def load_csv(filepath):
@@ -20,45 +20,48 @@ def load_csv(filepath):
 
 
 # ----------------------------------------
-# 2. Drift = Beschleunigung (d²V)
+# 2. Acceleration + Smoothing
 # ----------------------------------------
 
-def compute_acceleration(v):
+def compute_acceleration(v, window=5):
     dv = np.diff(v)
     ddv = np.diff(dv)
 
-    # gleiche Länge wie voltage herstellen
+    # Padding für gleiche Länge
     ddv = np.concatenate([[0, 0], ddv])
 
-    return np.abs(ddv)
+    # Moving average smoothing
+    kernel = np.ones(window) / window
+    ddv_smooth = np.convolve(ddv, kernel, mode='same')
+
+    return np.abs(ddv_smooth)
 
 
 # ----------------------------------------
 # 3. Analyse
 # ----------------------------------------
 
-def analyze(time, voltage, phi_threshold=0.002, collapse_threshold=0.7):
+def analyze(time, voltage, collapse_threshold=0.7):
 
-    # Collapse detection
+    # Collapse Detection
     collapse_idx = None
     collapse_indices = np.where(voltage < collapse_threshold)[0]
     if len(collapse_indices) > 0:
         collapse_idx = collapse_indices[0]
 
-    # Beschleunigung berechnen
+    # Acceleration
     acc = compute_acceleration(voltage)
 
-    # Phi-Split detection
-    phi_idx = None
-    phi_indices = np.where(acc > phi_threshold)[0]
+    # Adaptive Threshold
+    threshold = np.mean(acc) + 2 * np.std(acc)
 
+    # Phi-Split Detection
+    phi_idx = None
+    phi_indices = np.where(acc > threshold)[0]
     if len(phi_indices) > 0:
         phi_idx = phi_indices[0]
 
-    # ----------------------------------------
     # Output
-    # ----------------------------------------
-
     print("\n--- RESULTS ---")
 
     if collapse_idx is not None:
@@ -67,7 +70,7 @@ def analyze(time, voltage, phi_threshold=0.002, collapse_threshold=0.7):
         print("No collapse detected")
 
     if phi_idx is not None:
-        print(f"Phi-Split (acceleration) at t = {time[phi_idx]}")
+        print(f"Phi-Split at t = {time[phi_idx]}")
     else:
         print("No Phi-Split detected")
 
@@ -77,44 +80,35 @@ def analyze(time, voltage, phi_threshold=0.002, collapse_threshold=0.7):
     else:
         print("Lead Time not computable")
 
-    # Debug (sehr hilfreich!)
+    print(f"Adaptive threshold = {threshold:.6f}")
     print(f"Max acceleration = {np.max(acc):.6f}")
 
 
 # ----------------------------------------
-# 4. RUN (Batch über alle CSVs)
+# 4. RUN ALL FILES
 # ----------------------------------------
 
 if __name__ == "__main__":
 
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    base_path = "APPLICATIONS/power_systems/stability_field_dynamics/data/"
 
-    DATA_DIR = os.path.normpath(
-        os.path.join(BASE_DIR, "../../data")
-    )
-
-    files = [
+    test_files = [
         "ieee_linear.csv",
         "ieee_accelerated.csv",
         "ieee_noisy.csv",
         "ieee_delayed.csv"
     ]
 
-    for f in files:
+    for file in test_files:
+        filepath = os.path.join(base_path, file)
+
         print("\n==============================")
-        print(f"Testing: {f}")
+        print(f"Testing: {file}")
         print("==============================")
 
-        filepath = os.path.join(DATA_DIR, f)
-
         if not os.path.exists(filepath):
-            print(f"❌ File not found: {filepath}")
+            print("File not found:", filepath)
             continue
 
         time, voltage = load_csv(filepath)
-
-        analyze(
-            time,
-            voltage,
-            phi_threshold=0.002  # <- HIER spielen!
-        )
+        analyze(time, voltage)
