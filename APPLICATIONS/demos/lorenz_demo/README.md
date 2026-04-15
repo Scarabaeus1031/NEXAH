@@ -1,26 +1,26 @@
 # 🌀 Lorenz Demo — Chaos Navigation
 
-This demo shows how NEXAH transforms a chaotic system into a **navigable structure**.
+This demo shows how NEXAH transforms a chaotic system into a **navigable geometric structure**.
 
 ---
 
 ## 🚀 Run
 
-```bash
-python run_demo.py
-```
+    python run_demo.py
 
 ---
 
-## 🔬 What you will see
+## 🔬 What this demo generates
 
-The demo generates:
+The pipeline produces a sequence of structural views of chaos:
 
-- 3D attractor structure  
-- Lyapunov instability map  
-- FTLE transport barriers  
+- 3D attractor geometry  
+- Lyapunov instability field  
+- FTLE transport barriers (LCS)  
 - separatrix (regime boundary)  
-- navigation pathways  
+- navigation map  
+
+These layers reconstruct the **hidden structure of the system**.
 
 ---
 
@@ -30,11 +30,12 @@ The Lorenz system is not random.
 
 It contains:
 
-- structure  
-- geometry  
-- transport pathways  
+- geometric structure  
+- directional flow  
+- transport channels  
+- regime boundaries  
 
-NEXAH reveals this structure and enables navigation within it.
+NEXAH extracts these layers and turns them into a **navigation problem**.
 
 ---
 
@@ -42,14 +43,23 @@ NEXAH reveals this structure and enables navigation within it.
 
 All generated visuals are stored in:
 
-```
-outputs/
-```
+    outputs/
+
+You can directly inspect the system structure after running the demo.
 
 ---
 
-## 🧭 Key Insight
+## 🧭 Why this matters
 
-Chaos is not random.
+This is a minimal example of the NEXAH paradigm:
 
-It is structured — and navigable.
+    chaos → structure → geometry → navigation
+
+Instead of predicting trajectories, the system becomes **interpretable and controllable**.
+
+---
+
+## 🧠 Key Insight
+
+> Chaos is not random.  
+> It is structured — and navigable.
