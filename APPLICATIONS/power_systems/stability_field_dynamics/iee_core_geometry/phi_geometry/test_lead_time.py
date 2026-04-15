@@ -142,3 +142,4 @@ if __name__ == "__main__":
 
         time, voltage = load_csv(filepath)
         analyze(time, voltage)
+ 
