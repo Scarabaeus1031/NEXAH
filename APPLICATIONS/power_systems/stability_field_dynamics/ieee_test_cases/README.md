@@ -133,6 +133,41 @@ System evolution:
 
 ---
 
+## 🔗 From Structure to Navigation
+
+The structural analysis in:
+
+→ [stability_field_dynamics](stability_field_dynamics/ieee_test_cases/README.md)
+
+reveals:
+
+- collapse manifold  
+- rift boundary  
+- stability distance  
+- flow field  
+
+These structures define the **geometry of stability**.
+
+---
+
+NEXAH uses this geometry to:
+
+→ construct a **navigable stability field**
+
+→ define **safe trajectories**
+
+→ enable **control as movement within structure**
+
+---
+
+In this sense:
+
+→ structure becomes field  
+→ field becomes navigation  
+→ navigation becomes control
+
+---
+
 ## Collapse Manifold
 
 All systems converge toward:
