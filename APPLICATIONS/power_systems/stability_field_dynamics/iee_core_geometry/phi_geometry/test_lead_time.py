@@ -20,19 +20,24 @@ def load_csv(filepath):
 
 
 # ----------------------------------------
-# 2. Drift (relative)
+# 2. Drift = Beschleunigung (d²V)
 # ----------------------------------------
 
-def compute_drift(v):
+def compute_acceleration(v):
     dv = np.diff(v)
-    return np.abs(dv / v[:-1])
+    ddv = np.diff(dv)
+
+    # gleiche Länge wie voltage herstellen
+    ddv = np.concatenate([[0, 0], ddv])
+
+    return np.abs(ddv)
 
 
 # ----------------------------------------
 # 3. Analyse
 # ----------------------------------------
 
-def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
+def analyze(time, voltage, phi_threshold=0.002, collapse_threshold=0.7):
 
     # Collapse detection
     collapse_idx = None
@@ -40,16 +45,20 @@ def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
     if len(collapse_indices) > 0:
         collapse_idx = collapse_indices[0]
 
-    # Drift
-    drift = compute_drift(voltage)
+    # Beschleunigung berechnen
+    acc = compute_acceleration(voltage)
 
     # Phi-Split detection
     phi_idx = None
-    phi_indices = np.where(drift > phi_threshold)[0]
+    phi_indices = np.where(acc > phi_threshold)[0]
+
     if len(phi_indices) > 0:
         phi_idx = phi_indices[0]
 
+    # ----------------------------------------
     # Output
+    # ----------------------------------------
+
     print("\n--- RESULTS ---")
 
     if collapse_idx is not None:
@@ -58,7 +67,7 @@ def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
         print("No collapse detected")
 
     if phi_idx is not None:
-        print(f"Phi-Split at t = {time[phi_idx]}")
+        print(f"Phi-Split (acceleration) at t = {time[phi_idx]}")
     else:
         print("No Phi-Split detected")
 
@@ -68,9 +77,12 @@ def analyze(time, voltage, phi_threshold=0.04, collapse_threshold=0.7):
     else:
         print("Lead Time not computable")
 
+    # Debug (sehr hilfreich!)
+    print(f"Max acceleration = {np.max(acc):.6f}")
+
 
 # ----------------------------------------
-# 4. RUN (multi-file batch)
+# 4. RUN (Batch über alle CSVs)
 # ----------------------------------------
 
 if __name__ == "__main__":
@@ -89,9 +101,9 @@ if __name__ == "__main__":
     ]
 
     for f in files:
-        print(f"\n==============================")
+        print("\n==============================")
         print(f"Testing: {f}")
-        print(f"==============================")
+        print("==============================")
 
         filepath = os.path.join(DATA_DIR, f)
 
@@ -100,4 +112,9 @@ if __name__ == "__main__":
             continue
 
         time, voltage = load_csv(filepath)
-        analyze(time, voltage)
+
+        analyze(
+            time,
+            voltage,
+            phi_threshold=0.002  # <- HIER spielen!
+        )
