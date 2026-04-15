@@ -3,8 +3,14 @@ NEXAH Drift Quantization & Phi-Split
 Quantisiert Drift und erkennt Phi-Split / Transfer Events
 """
 
+import sys
+import os
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..'))
+if repo_root not in sys.path:
+    sys.path.insert(0, repo_root)
+
 from APPLICATIONS.navigation.core.mod77_state_space import Mod77StateSpace
-from scaling_exponent import ScalingExponent
+from APPLICATIONS.navigation.core.scaling_exponent import ScalingExponent
 from typing import List, Dict, Tuple
 
 class DriftQuantization:
@@ -30,10 +36,7 @@ class DriftQuantization:
                 drift = self.grid.compute_drift(prev_state, current_state)
                 drift_magnitude = max(abs(drift[0]), abs(drift[1]))
                 
-                # Phi-Split Erkennung
                 is_phi_split = drift_magnitude > self.phi_split_threshold
-                
-                # Einfacher Transfer Event (starker Drift)
                 transfer_event = drift_magnitude > 0.7
             
             result = {
