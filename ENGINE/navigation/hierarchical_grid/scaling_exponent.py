@@ -1,8 +1,7 @@
 """
-NEXAH Scaling Exponent - p ≈ 0.308 + Multiplikationskette + Resonanz-Paare
+NEXAH Scaling Exponent Analysis
+p ≈ 0.308 + Multiplikationskette + Resonanz-Paare
 """
-
-import numpy as np
 
 class ScalingExponent:
     def __init__(self, p_base: float = 0.308):
@@ -11,6 +10,7 @@ class ScalingExponent:
         self.resonance_pairs = self._build_resonance_pairs()
     
     def _build_chain(self):
+        """Multiplikationskette der 0.308"""
         return {
             1: round(self.p_base, 6),
             2: round(self.p_base * 2, 6),
@@ -40,21 +40,12 @@ class ScalingExponent:
             print(f"   {pair} = {sum_val}")
         
         print("\nInterpretation:")
-        print("   • p ≈ 0.308 beschreibt Übergang zu fluss-dominiert")
-        print("   • Multiplikation mit 2, 3, 4 erzeugt harmonische Schwellen")
+        print("   • p ≈ 0.308 beschreibt den Übergang von zustands- zu fluss-dominiert")
+        print("   • Multiplikation mit 2, 3, 4 erzeugt nächste harmonische Schwellen")
         print("   • Feine Zustände bilden Paare, die auf 8, 11, 13, 16 summieren")
-        print("   • 13 = Prime-Verbinder, 16 = 2^4 → höhere 2²-Erweiterung")
+        print("   • 13 = Prime-Verbinder, 16 = 2^4 → höhere Struktur")
+
 
 if __name__ == "__main__":
     scaler = ScalingExponent(p_base=0.308)
-    scaler.print_summary()    print(f"Drift-Parameter δ  : {grid.delta}\n")
-    
-    test_voltages = [0.98, 0.92, 0.85, 0.71]
-    
-    print("Beispiel-Abbildung:")
-    for v in test_voltages:
-        state = grid.voltage_to_base_state(v)
-        idx = grid.state_to_index(*state)
-        fine = grid.get_fine_states(*state)
-        print(f"Spannung {v:.3f} p.u. → Zustand {state} (Index {idx})")
-        print(f"   Feinere Zustände: {fine}\n")
+    scaler.print_summary()
