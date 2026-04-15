@@ -110,7 +110,7 @@ with open(summary_path, "w") as f:
                 f.write(os.path.join(root, file) + "\n")
 
 print(f"\n📄 Summary written to: {summary_path}")
-print("\n✅ Demo complete.\n")with open(summary_path, "w") as f:
+print("\n✅ Demo complete.\n")
     f.write("NEXAH Lorenz Demo — Run Summary\n")
     f.write("=" * 40 + "\n\n")
 
