@@ -1,43 +1,34 @@
 # ⚡ NEXAH / Power Systems  
-**Structural Field Navigation for Power System Stability and Control**
+**Structural Field Analysis for Power System Stability and Regime Navigation**
 
 ---
 
 ## 🧭 Overview
 
-NEXAH introduces a **low-dimensional, geometry-based framework** for power system stability.
+NEXAH explores a **geometry-based perspective on power system stability**.
 
-Instead of modeling instability as a threshold violation, NEXAH interprets it as:
+Instead of treating instability purely as a threshold violation, NEXAH interprets it as:
 
 > a **structural transformation in system dynamics**
 
 This enables:
 
-- early detection of instability  
+- regime transition detection  
 - continuous stability assessment  
-- trajectory-aware intervention  
-- phase-space dynamics (v9)  
-- **real-time field-based navigation (v11)**  
+- trajectory-aware analysis  
+- phase-space interpretation of system dynamics  
 
 ---
 
-## 🚀 Key Breakthrough (v11)
+## 🚀 Core Idea
 
-NEXAH enables:
+NEXAH shifts the focus from:
 
-→ **real-time navigation within stability fields**
+→ discrete collapse detection  
 
-instead of:
+to:
 
-→ detection of collapse events
-
----
-
-✔ no collapse events  
-✔ no sustained oscillations  
-✔ maximum safe utilization  
-
-![Navigation](nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
+→ **analysis of evolving system structure and regimes**
 
 ---
 
@@ -51,21 +42,20 @@ Classical methods:
 NEXAH:
 
 → reconstructs **structure + flow + geometry**  
-→ detects instability as **loss of alignment**  
-→ enables **navigation within stability fields**
+→ interprets instability as **regime transition**  
+→ analyzes trajectories within a **stability landscape**
 
 ---
 
 # 📊 System Highlights
 
-The following figures illustrate the full transition:
+The following figures illustrate the transition:
 
 → structure  
 → flow  
 → geometry  
-→ control  
 → dynamics  
-→ **navigation**
+→ regime behavior  
 
 ---
 
@@ -75,25 +65,26 @@ The following figures illustrate the full transition:
 
 **Observation:**
 - system states organize into structured regions  
-- collapse emerges as a boundary (rift)  
+- collapse emerges as a boundary  
 
 **Interpretation:**
 
-> Stability is **geometric proximity to a boundary**
+> Stability can be interpreted as **proximity within a structured state space**
 
 ---
 
-## 🔹 Figure 2 — Flow Field (Dynamics)
+## 🔹 Figure 2 — Flow Field (Dynamics, V69)
 
 ![Flow Field](stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
 **Observation:**
-- trajectories follow structured motion  
-- system evolves along directional flows  
+- trajectories exhibit directional organization  
+- system evolution is structured rather than random  
 
 **Interpretation:**
 
-> The system behaves as a **continuous vector field**
+> The dynamics are **consistent with a flow-like structure**,  
+> suggesting a possible vector-field interpretation.
 
 ---
 
@@ -102,40 +93,39 @@ The following figures illustrate the full transition:
 ![Root Cube](ieee_xray_pipeline/results/v36b_good_final_3d.png)
 
 **Observation:**
-- high-dimensional dynamics collapse into geometry  
-- trajectories become visible and interpretable  
+- high-dimensional system behavior becomes geometrically interpretable  
 
 **Interpretation:**
 
-> Stability becomes a **navigation problem**
+> Stability can be analyzed through a **geometric representation of state space**
 
 ---
 
-## 🔹 Figure 4 — Closed-Loop Control (IEEE9)
+## 🔹 Figure 4 — Control Interaction (IEEE9)
 
 ![Control](nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
 **Observation:**
-- control modifies trajectory (not just state)  
+- control modifies trajectory evolution  
 - system stabilizes without suppressing dynamics  
 
 **Interpretation:**
 
-> Control acts on **trajectory evolution**
+> Control acts on **trajectory evolution**, not only on instantaneous state correction  
 
 ---
 
-## 🔹 Figure 5 — Phase Dynamics (v9)
+## 🔹 Figure 5 — Phase Dynamics (λ, ψ)
 
 ![Phase Lambda Psi](nexah_ieee9/results/controller_v9/output_v9_phase_lambda_psi.png)
 
 **Observation:**
-- system evolves in (λ, ψ) phase space  
-- attractor structure appears  
+- structured trajectories appear in phase space  
+- attractor-like behavior is visible  
 
 **Interpretation:**
 
-> Stability emerges as a **dynamical attractor**
+> Stability emerges as a **dynamical structure in phase space**
 
 ---
 
@@ -144,72 +134,95 @@ The following figures illustrate the full transition:
 ![Risk Distance](nexah_ieee9/results/controller_v9/output_v9_phase_risk_distance.png)
 
 **Observation:**
-- risk aligns with geometry  
-- field encodes instability  
+- risk correlates with geometric structure  
 
 **Interpretation:**
 
-> Risk is a **projection of field geometry**
+> Risk can be interpreted as a **projection of system geometry**
 
 ---
 
-## 🔹 Figure 7 — Field Navigation (v11 Breakthrough)
+## 🔹 Figure 7 — Trajectory-Based Stabilization (v11)
 
 ![Navigation](nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
 
 **Observation:**
-- controller approaches critical boundary  
-- stabilizes before instability  
-- no collapse occurs  
+- controller modifies trajectory near critical regions  
+- collapse is avoided in this scenario  
 
 **Interpretation:**
 
-> The system is **actively navigating the stability field**
+> This suggests a **trajectory-based stabilization approach**,  
+> where system evolution is influenced within a structured stability landscape.
 
 ---
 
-## 🔹 Figure 8 — Real-Scale Validation (9241-Bus)
+## 🔹 Figure 8 — Scaling Behavior (9241-Bus)
 
 ![IEEE9241](nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
 
 **Observation:**
-- same structure persists at scale  
-- early warning remains intact  
-- **same structural behavior persists across scale**
+- structured behavior persists at larger scale  
+- similar qualitative patterns are observed  
 
 **Interpretation:**
 
-> NEXAH generalizes to **real-world systems**
+> Structural patterns appear to **persist across system sizes**,  
+> indicating potential scalability (requires further validation).
 
 ---
 
-# 🧭 Conceptual Breakthrough
+# 🔬 Regime Detection Experiments (Phi Geometry)
 
-Transition achieved:
+Recent experiments introduced a signal-based regime detection layer using:
 
-state-based control → field-based navigation
+- drift (dv/dt)  
+- acceleration (d²v/dt²)  
+- hybrid change score  
+- adaptive thresholds  
 
-Control is no longer:
+---
 
-→ reactive (based on error)
+## Key Observation
 
-but:
+- regime transitions can be detected before collapse  
+- lead time depends strongly on system dynamics  
 
-→ predictive (based on geometry)
+| Case              | Lead Time |
+|------------------|----------|
+| smooth decay     | high (20–35) |
+| accelerated      | moderate |
+| noisy systems    | moderate |
+| sharp collapse   | near zero |
+
+---
+
+## Interpretation
+
+> Instability is better described as a **transition between regimes**,  
+> rather than a single identifiable event.
+
+---
+
+# 🧭 Conceptual Contribution
+
+Transition explored:
+
+state-based monitoring → regime-based analysis
 
 ---
 
 ## 🧠 System Interpretation
 
-The system operates as:
+The system can be viewed as:
 
-> a trajectory evolving within a structured stability field
+> a trajectory evolving within a structured dynamical landscape
 
 where:
 
-- field = extracted from system physics  
-- geometry = defines stability structure  
-- navigation = movement along safe trajectories  
+- structure defines possible regimes  
+- dynamics define transitions  
+- analysis identifies regime changes  
 
 ---
 
@@ -217,21 +230,16 @@ where:
 
 System state:
 
-x = (c, frag, d²c, residual, distance, ψ)
+x = (c, drift, acceleration, residual, distance, ψ)
 
 Dynamics:
 
-dx/dt = f(x) + u(x, dx/dt)
+dx/dt = f(x)
 
-→ intrinsic system flow + control input
+NEXAH focuses on:
 
-Phase system:
-
-(λ, ψ) → trajectory in phase space
-
-Navigation (v11):
-
-λ_target = λ_critical − Δ
+- structural properties of trajectories  
+- regime transitions in time-series behavior  
 
 ---
 
@@ -239,75 +247,41 @@ Navigation (v11):
 
 | Feature                | Classical IEEE | NEXAH |
 |----------------------|---------------|------|
-| Static thresholds     | Yes           | No   |
-| Dynamic risk field    | No            | Yes  |
-| Early warning         | Limited       | Yes  |
-| Closed-loop control   | No            | Yes  |
-| Structural modeling   | No            | Yes  |
-| Phase dynamics        | No            | Yes  |
-| Field navigation      | No            | **Yes (v11)** |
-
----
-
-# 📈 Scaling Results
-
-| System   | Behavior |
-|----------|----------|
-| IEEE 118 | collapse structure |
-| IEEE 300 | nonlinear field |
-| IEEE 1354 | distributed stability |
-| IEEE 9241 | real-scale validation |
-
----
-
-# 🧩 Module Structure
-
-## 🔹 Structural Theory  
-→ [stability_field_dynamics](stability_field_dynamics/ieee_test_cases/README.md)
-
-## 🔹 Geometric Pipeline  
-→ [ieee_xray_pipeline](ieee_xray_pipeline/README.md)
-
-## 🔹 Control & Navigation  
-→ [nexah_ieee9](nexah_ieee9/README.md)
-
-## 🔹 Scaling & Real Grid  
-→ [nexah_ieeeX](nexah_ieeeX/README.md)
+| Static thresholds     | Yes           | Yes |
+| Dynamic analysis      | Limited       | Yes |
+| Regime detection      | No            | Yes |
+| Structural modeling   | No            | Yes |
+| Phase interpretation  | No            | Yes |
+| Predictive capability | Limited       | Case-dependent |
 
 ---
 
 # ⚠️ Limitations
 
-- full collapse prevention not yet achieved  
-- actuator realism limited  
-- navigation still 1D (λ)  
-- multi-dimensional control emerging  
+- no universal early-warning signal identified  
+- lead time is system-dependent  
+- synthetic data still dominates experiments  
+- real IEEE integration limited  
+- no probabilistic confidence model yet  
 
 ---
 
 # 🔮 Next Steps
 
-- multi-dimensional navigation  
-- vector field extraction  
-- stability basin mapping  
-- multi-agent control  
-- real grid integration  
+- integration of real IEEE datasets  
+- regime confidence modeling  
+- comparison with classical stability metrics  
+- extension to multi-dimensional state spaces  
 
 ---
 
 # 🧠 Final Insight
 
-> Instability is not a threshold event.  
-> It is a **structural transformation in system dynamics**.
+> Instability is not reliably captured by a single threshold or event.
 
-NEXAH reveals:
+It is better described as:
 
-→ structure  
-→ flow  
-→ geometry  
-→ control  
-→ dynamics  
-→ **navigation**
+→ a **transition between dynamical regimes**
 
 ---
 
@@ -316,9 +290,8 @@ NEXAH reveals:
 > From simulation → structure  
 > From structure → flow  
 > From flow → geometry  
-> From geometry → control  
-> From control → dynamics  
-> From dynamics → **navigation**
+> From geometry → dynamics  
+> From dynamics → regimes  
 
 ---
 
