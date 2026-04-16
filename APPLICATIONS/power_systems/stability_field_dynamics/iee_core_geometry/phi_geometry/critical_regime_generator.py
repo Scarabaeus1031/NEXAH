@@ -1,94 +1,112 @@
 import numpy as np
+import csv
+import os
 import matplotlib.pyplot as plt
 
-
 # ----------------------------------------
-# 1. Critical System Generator (FIXED)
+# 1. CSV LOAD
 # ----------------------------------------
 
-def generate_critical_voltage(T=100):
+def load_csv(filepath):
+    time = []
+    voltage = []
 
-    t = np.arange(T)
-    voltage = np.zeros(T)
+    with open(filepath, "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            time.append(float(row["time"]))
+            voltage.append(float(row["voltage"]))
 
-    for i in range(T):
-
-        # Phase 1: stabil
-        if i < 30:
-            voltage[i] = 1.0 - 0.0005 * i
-
-        # Phase 2: kritische Phase (JETZT MIT INSTABILITY!)
-        elif i < 70:
-            x = i - 30
-
-            base = 0.985 - 0.002 * x - 0.00015 * x**2
-
-            # 🔥 entscheidend: wachsende Instabilität
-            instability = 0.003 * np.sin(0.5 * x) * (x / 30)
-
-            voltage[i] = base + instability
-
-        # Phase 3: Collapse
-        else:
-            x = i - 70
-            voltage[i] = max(0.5, 0.8 - 0.02 * x - 0.002 * x**2)
-
-    return t, voltage
+    return np.array(time), np.array(voltage)
 
 
 # ----------------------------------------
-# 2. Signals
+# 2. SIGNALS
 # ----------------------------------------
 
-def compute_signals(v):
+def compute_drift(v):
+    dv = np.diff(v)
+    dv = np.concatenate([[0], dv])
+    return dv
 
-    drift = np.gradient(v)
-    drift_abs = np.abs(drift)
 
-    acc = np.abs(np.gradient(drift))
+def compute_acceleration(v):
+    dv = np.diff(v)
+    ddv = np.diff(dv)
+    ddv = np.concatenate([[0, 0], ddv])
+    return ddv
 
-    # 🔥 Hybrid Score
-    score = 0.7 * drift_abs + 0.3 * acc
 
-    return drift, acc, score
+def compute_score(drift, acc):
+    return np.abs(drift) + 0.5 * np.abs(acc)
 
 
 # ----------------------------------------
-# 3. Detection
+# 3. ANALYSIS (KEY PART)
 # ----------------------------------------
 
-def detect_regime(time, voltage):
+def analyze(time, voltage, collapse_threshold=0.7, window=10):
 
-    drift, acc, score = compute_signals(voltage)
+    drift = compute_drift(voltage)
+    acc = compute_acceleration(voltage)
+    score = compute_score(drift, acc)
 
-    # Collapse Detection
+    # ----------------------------------------
+    # Collapse detection
+    # ----------------------------------------
+
     collapse_idx = None
-    collapse = np.where(voltage < 0.7)[0]
-    if len(collapse) > 0:
-        collapse_idx = collapse[0]
+    collapse_indices = np.where(voltage < collapse_threshold)[0]
+    if len(collapse_indices) > 0:
+        collapse_idx = collapse_indices[0]
 
-    # 🔥 robuster Threshold
-    threshold = np.percentile(score, 90)
+    # ----------------------------------------
+    # Adaptive threshold (rolling)
+    # ----------------------------------------
 
-    candidates = np.where(score > threshold)[0]
-
+    threshold_series = np.zeros_like(score)
     regime_idx = None
-    if len(candidates) > 0:
-        regime_idx = candidates[0]
 
-    return drift, acc, score, regime_idx, collapse_idx, threshold
+    for i in range(window, len(score)):
 
+        past = score[i-window:i]
+        threshold = np.mean(past) + 2 * np.std(past)
 
-# ----------------------------------------
-# 4. Plot
-# ----------------------------------------
+        threshold_series[i] = threshold
 
-def plot(time, voltage, drift, acc, score, regime_idx, collapse_idx, threshold):
+        if regime_idx is None and score[i] > threshold:
+            regime_idx = i
 
-    plt.figure(figsize=(10, 9))
+    # ----------------------------------------
+    # OUTPUT
+    # ----------------------------------------
+
+    print("\n--- RESULTS ---")
+
+    if regime_idx is not None:
+        print(f"Regime change at t = {time[regime_idx]}")
+    else:
+        print("No regime change detected")
+
+    if collapse_idx is not None:
+        print(f"Collapse at t = {time[collapse_idx]}")
+    else:
+        print("No collapse detected")
+
+    if regime_idx is not None and collapse_idx is not None:
+        lead_time = time[collapse_idx] - time[regime_idx]
+        print(f"Lead time = {lead_time}")
+    else:
+        print("Lead time not computable")
+
+    # ----------------------------------------
+    # PLOT
+    # ----------------------------------------
+
+    plt.figure(figsize=(10, 8))
 
     # Voltage
-    plt.subplot(4,1,1)
+    plt.subplot(4, 1, 1)
     plt.plot(time, voltage, label="Voltage")
 
     if regime_idx is not None:
@@ -101,55 +119,63 @@ def plot(time, voltage, drift, acc, score, regime_idx, collapse_idx, threshold):
     plt.title("Voltage")
 
     # Drift
-    plt.subplot(4,1,2)
-    plt.plot(time, drift, label="Drift")
+    plt.subplot(4, 1, 2)
+    plt.plot(time, drift, label="Drift dv/dt")
     plt.legend()
-    plt.title("Drift (dv/dt)")
+    plt.title("Drift")
 
     # Acceleration
-    plt.subplot(4,1,3)
-    plt.plot(time, acc, label="Acceleration")
+    plt.subplot(4, 1, 3)
+    plt.plot(time, acc, label="Acceleration d²v/dt²")
     plt.legend()
-    plt.title("Acceleration (d²v/dt²)")
+    plt.title("Acceleration")
 
-    # Score
-    plt.subplot(4,1,4)
-    plt.plot(time, score, label="Hybrid Score")
-    plt.axhline(threshold, linestyle="--", label="Threshold")
+    # Score + Threshold
+    plt.subplot(4, 1, 4)
+    plt.plot(time, score, label="Score")
+    plt.plot(time, threshold_series, linestyle="--", label="Adaptive Threshold")
 
     if regime_idx is not None:
-        plt.axvline(time[regime_idx], linestyle=":")
+        plt.axvline(time[regime_idx], linestyle=":", label="Regime")
 
     plt.legend()
-    plt.title("Hybrid Detection Score")
+    plt.title("Hybrid Detection (Score vs Threshold)")
 
     plt.tight_layout()
-    plt.show()
+
+    return regime_idx, collapse_idx
 
 
 # ----------------------------------------
-# 5. MAIN
+# 4. RUN (IEEE READY)
 # ----------------------------------------
 
 if __name__ == "__main__":
 
-    time, voltage = generate_critical_voltage()
+    base_path = "APPLICATIONS/power_systems/stability_field_dynamics/data/"
 
-    drift, acc, score, regime_idx, collapse_idx, threshold = detect_regime(time, voltage)
+    test_files = [
+        "ieee_linear.csv",
+        "ieee_accelerated.csv",
+        "ieee_noisy.csv",
+        "ieee_delayed.csv",
+        "ieee_realistic.csv"   # ← dein echtes / generator file
+    ]
 
-    print("\n--- CRITICAL SYSTEM TEST (FINAL) ---")
+    for file in test_files:
 
-    if regime_idx is not None:
-        print(f"Regime change at t = {time[regime_idx]}")
-    else:
-        print("No regime detected")
+        filepath = os.path.join(base_path, file)
 
-    if collapse_idx is not None:
-        print(f"Collapse at t = {time[collapse_idx]}")
+        print("\n==============================")
+        print(f"Testing: {file}")
+        print("==============================")
 
-    if regime_idx is not None and collapse_idx is not None:
-        print(f"Lead time = {time[collapse_idx] - time[regime_idx]}")
+        if not os.path.exists(filepath):
+            print("File not found:", filepath)
+            continue
 
-    print(f"Threshold = {threshold:.6f}")
+        time, voltage = load_csv(filepath)
 
-    plot(time, voltage, drift, acc, score, regime_idx, collapse_idx, threshold)
+        analyze(time, voltage)
+
+    plt.show()
