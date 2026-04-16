@@ -1,24 +1,25 @@
 # ⚡ NEXAH — Structural Navigation in Complex Systems
 
-![Status](https://img.shields.io/badge/status-active-success)
-![Field Model](https://img.shields.io/badge/field-model-blue)
+![Status](https://img.shields.io/badge/status-experimental-blue)
+![Field Model](https://img.shields.io/badge/field-analysis-lightblue)
 ![Control](https://img.shields.io/badge/control-prototype-orange)
 
 ---
 
 ## 🧭 Overview
 
-NEXAH transforms classical system analysis into:
+NEXAH explores a structural approach to analyzing complex dynamical systems.
 
-> **a continuous stability field with closed-loop control and early-stage navigation**
+Instead of treating systems as binary (stable / unstable), NEXAH interprets them as evolving within:
 
-Instead of binary classification:
+> **structured dynamical landscapes**
 
-> stable / unstable  
+This allows systems to be analyzed in terms of:
 
-systems are understood as existing within a:
-
-> **structured stability landscape**
+- structure  
+- flow  
+- geometry  
+- regime transitions  
 
 ---
 
@@ -26,7 +27,7 @@ systems are understood as existing within a:
 
 New to NEXAH?
 
-Run your first demo in under 2 minutes:
+Run your first demo:
 
 👉 [START HERE — Run your first demo](START_HERE.md)
 
@@ -34,12 +35,13 @@ Run your first demo in under 2 minutes:
 
 ## 🎬 What you will see
 
-- agents navigating a chaotic system  
-- stability emerging as a geometric field  
-- early collapse detection  
-- trajectory-aware control  
+- structured behavior in chaotic systems  
+- trajectories evolving in phase space  
+- regime transitions before instability  
+- geometry-based interpretation of dynamics  
 
-👉 **No rewards. No training. Just structure.**
+👉 No reward functions. No training loops.  
+👉 Focus: **structure and system behavior**
 
 ---
 
@@ -51,154 +53,178 @@ Run your first demo in under 2 minutes:
 
 ---
 
-## 🔥 Key Result — Real Power Systems
-
-![NEXAH IEEE Result](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
-
-*NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical methods.*
-
-👉 Demonstrated on IEEE benchmark systems up to **9241 buses**
-
----
-
 ## 🔬 Core Idea
 
 Instead of asking:
 
 > "Will the system collapse?"
 
-NEXAH answers:
+NEXAH asks:
 
-> **"Where are we in the field — and how can we move safely?"**
+> **"How is the system evolving — and which regime are we in?"**
 
 ---
 
 ## 🔁 Core Pipeline
 
 ```text
-simulation → structure → field → geometry → control → navigation
+simulation → structure → geometry → dynamics → regimes
 ```
-
----
 
 ## 🔥 Core Insight
 
-Control is no longer:
+Classical control:
 
-→ reactive (error-based)
+→ reacts to deviations  
 
-but:
+NEXAH perspective:
 
-→ **trajectory-aware and geometry-informed**
+→ analyzes trajectory evolution within structured dynamics  
 
-👉 Stability becomes a **navigation problem in state space**
-
----
-
-# 📊 From Field → Control
+👉 Stability becomes a question of **regime and trajectory**,  
+not just thresholds.
 
 ---
 
-## 🔹 Flow Field Dynamics
+# 📊 Example: Power System Dynamics
+
+---
+
+## 🔹 Flow Field (IEEE Systems)
 
 👉 Source: [IEEE Field Analysis](APPLICATIONS/power_systems/stability_field_dynamics/)
 
 ![Flow Field](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-*System trajectories follow structured flow — not randomness.*
+**Observation:**
+- trajectories follow structured patterns  
+- system evolution is directional  
 
-- motion is directional  
-- instability follows field paths  
+**Interpretation:**
+
+> The dynamics are consistent with a **flow-like structure**,  
+> suggesting a low-dimensional representation of system behavior.
 
 ---
 
-## 🔹 Closed-Loop Control (IEEE9)
+## 🔹 Trajectory-Based Control (IEEE9)
 
 👉 Source: [IEEE9 Controller](APPLICATIONS/power_systems/nexah_ieee9/)
 
 ![Control](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
-*Control reshapes trajectories instead of reacting to states.*
+**Observation:**
+- control influences trajectory evolution  
+- system stabilization occurs in certain scenarios  
 
-- early intervention  
-- structured escalation  
-- trajectory-aware behavior  
+**Interpretation:**
+
+> Control can be interpreted as **trajectory shaping**,  
+> rather than purely state correction.
+
+---
+
+## 🔹 Scaling Behavior (Large Systems)
+
+![IEEE Scaling](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+**Observation:**
+- similar structural patterns appear across system sizes  
+- behavior is qualitatively consistent  
+
+**Interpretation:**
+
+> Structural features appear to **persist across scale**,  
+> indicating potential generality (requires further validation).
 
 ---
 
 # 🧠 System Interpretation
 
-The system operates as:
+NEXAH models systems as:
 
-> **a trajectory evolving within a structured stability field**
+> **trajectories evolving within structured dynamical landscapes**
 
 where:
 
-- field = extracted from system physics  
-- geometry = defines stability structure  
-- control = trajectory shaping within the field  
+- structure defines possible regimes  
+- dynamics define transitions  
+- analysis identifies regime changes  
 
 ---
 
 ## 🧭 Explore the Full System
 
-The IEEE results shown here are one application.
+The power system examples are one application.
 
-NEXAH is a general framework for navigating structure in complex systems.
+NEXAH is a general framework for:
+
+- dynamical systems  
+- infrastructure systems  
+- complex adaptive systems  
+
+Explore:
 
 - 🧭 [NAVIGATOR](NAVIGATOR/README.md)  
 - 🏗 [Architecture](NAVIGATOR/ARCHITECTURE.md)  
 - 📊 [System Capabilities](NAVIGATOR/SYSTEM_CAPABILITIES.md)
-
-👉 This README is a **showcase**  
-👉 NAVIGATOR reveals the **full system**
 
 ---
 
 ## ⚖️ Classical vs NEXAH (Essence)
 
 Classical:
-→ threshold-based, reactive  
+→ threshold-based  
+→ event detection  
 
 NEXAH:
-→ field-based, trajectory-aware  
+→ structure-based  
+→ regime analysis  
 
 ---
 
-# 🚀 Run
+# 🚀 Run Example
 
 ```bash
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
 ```
-
----
 
 # 🧭 Status
 
 | Component | Status |
 |----------|--------|
 | Structure Discovery | ✅ |
-| Field Modeling | ✅ |
-| Early Detection | ✅ (43.9 s) |
-| Adaptive Control | ⚠️ prototype |
-| Field Navigation | 🚧 in development |
+| Field Interpretation | ✅ |
+| Regime Detection | ✅ (experimental) |
+| Control | ⚠️ prototype |
+| Navigation | 🚧 in development |
+
+---
+
+# ⚠️ Important Notes
+
+- no universal early-warning signal established  
+- performance depends on system dynamics  
+- experiments are partly synthetic  
+- real-world validation is ongoing  
 
 ---
 
 # 🧠 Final Insight
 
-Power systems are not binary.
+Complex systems are not binary.
 
-They exist within a:
+They evolve within:
 
-> **structured stability landscape**
+> **structured dynamical regimes**
 
 ---
 
 # 🌀 NEXAH
 
-> dynamics → structure → geometry → control → navigation  
+> dynamics → structure → geometry → regimes  
 
 ---
 
 **Thomas K. R. Hofmann · 2026**
+
