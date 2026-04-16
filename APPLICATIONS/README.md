@@ -1,21 +1,5 @@
 # NEXAH Applications  
-**Structural Navigation in Real and Synthetic Systems**
-
----
-
-## 🚀 Key Result
-
-NEXAH enables:
-
-→ **navigation within complex system stability fields**
-
-instead of:
-
-→ detection of collapse events
-
-✔ early instability detection (~43.9s lead time)  
-✔ no collapse (field-based navigation)  
-✔ maximum safe utilization  
+**Structural Analysis and Regime Navigation in Complex Systems**
 
 ---
 
@@ -23,80 +7,112 @@ instead of:
 
 This directory contains **applied system modules** built with the NEXAH framework.
 
-NEXAH transforms systems into:
+NEXAH explores how complex systems can be interpreted through:
 
 → structure  
 → flow  
 → geometry  
-→ navigation  
+→ regime transitions  
 
-> Systems are not simulated — they are **mapped and navigated**
+Instead of focusing purely on event detection (e.g. collapse),  
+NEXAH analyzes how systems evolve within **structured dynamical landscapes**.
 
 ---
 
-# ⚡ 1. Power Systems — Real-World Validation (FLAGSHIP)
+## 🚀 Core Idea
 
-![NEXAH MicDrop](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+NEXAH shifts the focus from:
 
-*Voltage collapse detected ~43.9 seconds earlier than classical methods.*
+→ discrete instability events  
+
+to:
+
+→ **continuous structural and regime-based analysis**
+
+---
+
+## ⚡ 1. Power Systems — Structural Analysis
+
+![NEXAH Overview](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
 
 ![NEXAH Pipeline](power_systems/nexah_ieeeX/results/run_ieee300_20260413_015843/paper_figure.png)
 
-*End-to-end pipeline: structure → risk → control → system evolution.*
+### 🔍 Observations
 
-### 🔥 Highlights
+- system trajectories exhibit **structured behavior**
+- collapse appears as a **transition boundary**
+- dynamics are consistent with **flow-like evolution**
+- similar patterns appear across different system sizes  
 
-- scaling up to **9241-bus systems**  
-- continuous **stability field reconstruction**  
-- **predictive control via geometry**  
-- integration with **real AC power flow (pandapower)**  
+---
+
+### 🧠 Interpretation
+
+> Power system stability can be interpreted as a  
+> **trajectory evolving within a structured dynamical landscape**
+
+---
+
+### ⚙️ Current Capabilities
+
+- structural analysis of IEEE test systems  
+- trajectory-based interpretation of stability  
+- regime transition detection (experimental)  
+- scaling experiments up to **9241-bus systems**  
+
+---
+
+### ⚠️ Important Note
+
+- early detection performance is **case-dependent**  
+- no universal lead-time guarantee  
+- results currently based on **synthetic and limited real scenarios**  
 
 ---
 
 ## 🧭 Entry Points
 
-### 🔹 Quick Results (Start here)
+### 🔹 Quick Results
 👉 [`power_systems/nexah_ieeeX/`](power_systems/nexah_ieeeX/README.md)
 
-- scaling results  
-- real grid experiments  
-- end-to-end pipeline  
+- scaling experiments  
+- pipeline outputs  
+- large-system behavior  
 
 ---
 
-### 🔹 Full System (Architecture)
+### 🔹 Full System Overview
 👉 [`power_systems/`](power_systems/README.md)
 
-- system layers  
+- system architecture  
 - field interpretation  
-- navigation logic  
+- navigation concepts  
 
 ---
 
-### 🔹 Minimal System (Best for Code)
+### 🔹 Minimal Pipeline
 👉 [`power_systems/nexah_ieee9`](power_systems/nexah_ieee9/README.md)
 
-- clean pipeline  
-- easiest to understand  
-- controller evolution (v7 → v11)  
+- clean reference implementation  
+- simplified control experiments  
 
 ---
 
 ### 🔹 Structural Theory
 👉 [`power_systems/stability_field_dynamics`](power_systems/stability_field_dynamics/ieee_test_cases/README.md)
 
-- collapse manifold  
+- collapse geometry  
 - stability distance  
-- topology & branching  
+- manifold structure  
 
 ---
 
-### 🔹 Geometric Control Experiments
+### 🔹 Geometric Analysis
 👉 [`power_systems/ieee_xray_pipeline`](power_systems/ieee_xray_pipeline/README.md)
 
-- reduced state space  
-- attractor geometry  
-- navigation structures  
+- reduced state spaces  
+- geometric embeddings  
+- trajectory visualization  
 
 ---
 
@@ -106,12 +122,7 @@ NEXAH transforms systems into:
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieeeX/decision/main_ieee300.py
 ```
 
-> NEXAH scales from small systems → to real-world grids  
-> while preserving the same underlying structure  
-
----
-
-# 🌀 2. Dynamical Systems — Geometry of Chaos
+# 🌀 2. Dynamical Systems — Reference Models
 
 ![Lorenz](../ENGINE/visuals/level37_20260321_193227/plot.png)
 
@@ -121,7 +132,12 @@ Reference systems:
 - gradient systems  
 - drift systems  
 
-> Chaos is not random — it is **structured and navigable**
+---
+
+## 🧠 Interpretation
+
+Chaotic systems exhibit structured dynamics,  
+which can be analyzed through regime transitions and geometry.
 
 👉 [`dynamical_systems/lorenz`](dynamical_systems/lorenz/README.md)
 
@@ -131,25 +147,31 @@ Reference systems:
 
 ![Collapse Geometry](power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
 
-- manifold (expected dynamics)  
-- rift (collapse boundary)  
+Core concepts:
+
+- manifold (expected system behavior)  
+- boundary (instability transition)  
 - distance (stability metric)  
 
-> Collapse is a **geometric transition**
+---
+
+## 🧠 Interpretation
+
+Collapse is better understood as a  
+**geometric transition within system structure**
 
 ---
 
 # 🔵 4. Adapter Layer — System Integration
-
-```text
-System → Adapter → State Graph → NEXAH → Policy
+```test
+System → Adapter → State Graph → NEXAH → Analysis
 ```
 
 Supports:
 
 - power grids  
 - dynamical systems  
-- synthetic systems  
+- synthetic environments  
 
 👉 [`adapters/`](adapters/README.md)
 
@@ -159,14 +181,14 @@ Supports:
 
 Across all modules:
 
-> Systems evolve along structure.  
-> Instability is a loss of alignment.  
+> Systems evolve along structured trajectories.  
+> Instability emerges as a **regime transition**, not a single event.
 
-NEXAH:
+NEXAH focuses on:
 
-→ detects structure  
-→ predicts transitions  
-→ enables navigation  
+- structural analysis  
+- trajectory interpretation  
+- regime detection  
 
 ---
 
@@ -174,9 +196,9 @@ NEXAH:
 
 | Goal | Start Here |
 |------|-----------|
-| Real-world validation | `power_systems/nexah_ieeeX/` |
-| Understand system | `power_systems/` |
-| Learn by code | `power_systems/nexah_ieee9/` |
+| Large system experiments | `power_systems/nexah_ieeeX/` |
+| System understanding | `power_systems/` |
+| Code entry point | `power_systems/nexah_ieee9/` |
 | Theory | `power_systems/stability_field_dynamics/` |
 
 ---
@@ -184,10 +206,8 @@ NEXAH:
 # 🌀 NEXAH
 
 > From dynamics → structure  
-> From structure → geometry  
-> From geometry → navigation  
+> From structure → regimes  
 
 ---
 
 **Scarabæus1033 · NEXAH**
-
