@@ -6,9 +6,16 @@
 
 ---
 
+## 🧭 NEXAH
+
+> **A structural modeling framework for complex dynamical systems.**  
+> Relational structure. Explicit orientation.
+
+---
+
 ## 🧭 Abstract
 
-NEXAH explores a structural approach to analyzing complex dynamical systems.
+NEXAH is a framework for exploring and analyzing complex dynamical systems through **structure, dynamics, and regimes**.
 
 Instead of treating systems as binary (stable / unstable), NEXAH models them as evolving within:
 
@@ -21,7 +28,7 @@ This enables:
 - trajectory-based system interpretation  
 - exploration of navigation strategies within stability regions  
 
-The framework is applied to power systems and reference dynamical systems, where it reveals consistent structural patterns in system evolution.
+NEXAH is designed as a **modular system framework**, with applications to power systems and reference dynamical systems.
 
 ---
 
@@ -32,7 +39,7 @@ Classical system analysis focuses on:
 → threshold violations  
 → event detection  
 
-NEXAH proposes a complementary perspective:
+NEXAH provides a complementary perspective:
 
 > systems evolve as **trajectories within structured state spaces**
 
@@ -56,8 +63,8 @@ to:
 
 - structured dynamics in chaotic systems  
 - trajectories evolving in reduced state spaces  
-- regime transitions preceding instability  
-- geometry-based interpretations of system behavior  
+- regime transitions in system behavior  
+- geometry-based interpretations of dynamics  
 
 ---
 
@@ -67,7 +74,6 @@ to:
 - ⚡ [Applications](APPLICATIONS/README.md)  
 - 🧭 [Navigator](NAVIGATOR/README.md)
 
-
 ---
 
 ## 🔁 Core Pipeline
@@ -76,21 +82,20 @@ to:
 simulation → structure → geometry → dynamics → regimes
 ```
 
-## 🔥 Core Insight
+🔥 Core Insight
 
 Classical control:
 
-→ reacts to deviations  
+→ reacts to deviations
 
 NEXAH perspective:
 
-→ analyzes trajectory evolution within structure  
+→ analyzes trajectory evolution within structure
 
 👉 Stability becomes a question of:
-
-- regime  
-- trajectory  
-- structural alignment  
+- regime
+- trajectory
+- structural alignment
 
 ---
 
@@ -122,8 +127,6 @@ NEXAH perspective:
 
 ---
 
----
-
 ## ⚠️ Early Experiment — Misinterpreted Signal (“MicDrop”)
 
 ![NEXAH MicDrop](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
@@ -131,8 +134,6 @@ NEXAH perspective:
 **Context:**
 
 This figure was generated during early experiments and initially interpreted as a strong early-warning signal.
-
-The visual suggests a significant lead time between a detected structural event ("Phi-Split") and voltage collapse.
 
 ---
 
@@ -202,6 +203,8 @@ where:
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
 ```
 
+---
+
 ## 🧭 Status
 
 | Component | Status |
@@ -240,4 +243,3 @@ They evolve within:
 ---
 
 **Thomas K. R. Hofmann · 2026**
-
