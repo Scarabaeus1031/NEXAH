@@ -1,136 +1,63 @@
-# NEXAH Framework — META Layer
+# META Layer – The Foundational Layer
 
-The **META Layer** defines the **formal foundation** of the NEXAH Framework.
+The META layer is the **most abstract and foundational** part of the NEXAH framework.
 
-It establishes the minimal concepts required to describe systems **before any simulation, risk analysis, or navigation is performed**.
-
----
-
-## 🧠 Role of META
-
-The META layer answers the fundamental question:
-
-> What is a system?
-
-It provides:
-
-- a formal definition of systems  
-- a consistent vocabulary for states and transitions  
-- the structural basis for all higher layers  
-
-All subsequent layers (ARCHY, MESO, NEXAH, MEVA) operate on top of these definitions.
+It defines the minimal relational principles and assumptions on which all other layers are built.
 
 ---
 
-## 📚 Core Components
+## Purpose
 
-### **Definitions**
-Formal definitions of the core objects:
+META does not deal with concrete algorithms, geometry, or applications.
 
-- system  
-- state  
-- transition  
-- regime  
-- collapse  
-- risk  
-- navigation  
+Instead, it answers the fundamental question:
 
-These definitions ensure a **consistent and unambiguous description of systems**.
+> What is the smallest set of concepts and rules needed to describe structure and change in complex systems?
 
 ---
 
-### **Axioms**
-Minimal assumptions about systems:
+## Core Idea
 
-- systems are relational  
-- transitions exist  
-- structure emerges from dynamics  
-- regimes form from consistent behavior  
-- navigation becomes possible once structure is known  
+NEXAH is built on the idea that complex systems are best understood through **relations** rather than isolated states or variables.
 
-The axioms define the **logical foundation** of the framework.
+The META layer establishes:
+- The basic vocabulary (System, State, Transition, Relation)
+- Minimal assumptions about how systems evolve
+- The relational perspective: Systems are defined by how their parts relate to each other, not just by their individual properties
 
 ---
 
-### **Principles**
-Operational guidelines for applying the framework:
+## What META Provides
 
-- relational primacy  
-- systemic integrity  
-- dynamic evolution  
-- relational adaptability  
-- contextual consistency  
-
-These principles guide how systems are modeled and interpreted.
+- A consistent ontological foundation for the entire framework
+- Minimal assumptions that later layers (ARCHY, MESO, NEXAH, MEVA) build upon
+- A clear separation between abstract principles and concrete implementation
 
 ---
 
-### **Minimal Model**
-A minimal working system demonstrating:
+## Connection to Other Layers
 
-- transition structure  
-- regime formation  
-- risk emergence  
-- navigation  
+- **ARCHY** uses the relational concepts from META to define concrete dynamics and transitions
+- **MESO** translates system behavior into measurable fields and metrics
+- **NEXAH** builds navigation structures on top of these representations
+- **MEVA** enables system-level behavior and execution
 
-This model proves that the NEXAH framework operates on the smallest possible system.
-
----
-
-## 🛠️ How to Use This Layer
-
-1. **Start with Definitions**  
-   Understand the formal objects of the framework.
-
-2. **Review Axioms**  
-   Establish the minimal assumptions about system behavior.
-
-3. **Apply Principles**  
-   Use the principles to structure real-world systems.
-
-4. **Run the Minimal Model**  
-   Verify how structure, risk, and navigation emerge.
+META is intentionally minimal and does not contain implementation details, metrics, or geometry.
 
 ---
 
-## 🔄 Position in the System Stack
+## Current Status
 
-META is the first layer of the NEXAH architecture:
+The META layer is conceptually stable but still evolving.
 
-META → ARCHY → MESO → NEXAH → MEVA
-
-It defines the structure that enables:
-
-- regime detection (ARCHY)  
-- risk geometry (MESO)  
-- navigation (NEXAH)  
-- execution (MEVA)  
-
----
-
-## 🔑 Key Insight
-
-> Systems are not defined by components alone,  
-> but by relational structure that induces transitions.
-
----
-
-## 🚀 Next Steps
-
-- Explore **ARCHY** for regime structure and system dynamics  
-- Explore **MESO** for stability and risk geometry  
-- Explore **NEXAH** for navigation strategies  
+Future work will focus on making the connection between these abstract principles and the concrete system layers more explicit.
 
 ---
 
 ## Summary
 
-The META layer provides the **minimal formal foundation** of the NEXAH Framework.
+META is the **theoretical root** of NEXAH.
 
-It ensures that:
+It provides the minimal relational structure that allows the framework to consistently describe systems and their evolution across domains.
 
-- systems are consistently defined  
-- structure can be extracted from dynamics  
-- navigation becomes a well-defined problem  
-
-All higher-level capabilities of NEXAH depend on this layer.
+**Last updated:** April 2026
