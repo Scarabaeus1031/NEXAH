@@ -64,18 +64,18 @@ Last updated: 2026-04-17
 - FRAMEWORK/system_stack.md         → FRAMEWORK/docs/system_stack.md
 - FRAMEWORK/research/               → RESEARCH/ (top-level)
 
+### ARCHY Internal Cleanup (April 17)
+- FRAMEWORK/ARCHY/regime_mapper.py                  → FRAMEWORK/ARCHY/core/
+- FRAMEWORK/ARCHY/stability_models/                 → FRAMEWORK/ARCHY/core/
+- FRAMEWORK/ARCHY/ARCHY_ARCHITECTURE.md             → FRAMEWORK/ARCHY/docs/
+- FRAMEWORK/ARCHY/archy_layer_principles.md         → FRAMEWORK/ARCHY/docs/
+- FRAMEWORK/ARCHY/ARCHY_SYSTEM_MAP.md               → FRAMEWORK/ARCHY/docs/
+- FRAMEWORK/ARCHY/ARCHY_MODULE_INDEX.md             → FRAMEWORK/ARCHY/docs/
+- FRAMEWORK/ARCHY/ARCHY_SIMULATION_CAPABILITIES.md  → FRAMEWORK/ARCHY/docs/
+- FRAMEWORK/ARCHY/ARCHY_UPDATE_v1.md                → FRAMEWORK/ARCHY/docs/
+
 ### TEMPORARY (not moved yet)
 - FRAMEWORK/visuals/                → stays in FRAMEWORK/ for now (used in READMEs)
-
-## Additional ARCHY Internal Cleanup (April 17)
-- FRAMEWORK/ARCHY/regime_mapper.py          → FRAMEWORK/ARCHY/core/
-- FRAMEWORK/ARCHY/stability_models/         → FRAMEWORK/ARCHY/core/
-- FRAMEWORK/ARCHY/ARCHY_ARCHITECTURE.md     → FRAMEWORK/ARCHY/docs/
-- FRAMEWORK/ARCHY/archy_layer_principles.md → FRAMEWORK/ARCHY/docs/
-- FRAMEWORK/ARCHY/ARCHY_SYSTEM_MAP.md       → FRAMEWORK/ARCHY/docs/
-- FRAMEWORK/ARCHY/ARCHY_MODULE_INDEX.md     → FRAMEWORK/ARCHY/docs/
-- FRAMEWORK/ARCHY/ARCHY_SIMULATION_CAPABILITIES.md → FRAMEWORK/ARCHY/docs/
-- FRAMEWORK/ARCHY/ARCHY_UPDATE_v1.md        → FRAMEWORK/ARCHY/docs/
 
 ## Notes
 - Nothing was deleted.
