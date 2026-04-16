@@ -18,29 +18,29 @@ MESO is responsible for:
 
 ## Core Concepts
 
-- **Coherence**: Measures alignment between system velocity and the underlying field
-- **Risk Field**: Continuous scalar representation of instability risk
-- **Stability Landscape**: Geometric structure of safe and unsafe regions in state space
-- **Field Structure**: Attractors, basins, phase space, tipping points, and collapse boundaries
+- **Coherence**: Measures alignment between the system trajectory and the underlying field dynamics  
+- **Risk Field**: Continuous scalar representation of instability risk  
+- **Stability Landscape**: Geometric structure of safe and unsafe regions in state space  
+- **Field Structure**: Attractors, basins, phase space, and transition boundaries  
 
 ---
 
 ## Current Structure
 
-- `core/` — Fundamental field construction (risk_geometry, stability_landscape)
-- `structure/` — Field structures (attractors, basins, phase space)
-- `transitional/` — Early warning and tipping point logic
-- `visuals/` — Visualization scripts (temporary)
-- `docs/` — Documentation
+- `core/` — Fundamental field construction (risk_geometry, stability_landscape)  
+- `structure/` — Field structures (attractors, basins, phase space)  
+- `transitional/` — Early warning and tipping point logic  
+- `visuals/` — Visualization scripts (temporary)  
+- `docs/` — Documentation  
 
 ---
 
 ## Connection to Other Layers
 
-- **ARCHY** provides discrete regimes and transitions
-- **MESO** converts them into continuous, measurable fields
-- **NEXAH** uses the resulting field geometry for navigation and control
-- **MEVA** applies field dynamics to multi-agent behavior
+- **ARCHY** provides discrete regimes and transitions  
+- **MESO** converts them into continuous, measurable fields  
+- **NEXAH** uses the resulting field geometry for navigation and control  
+- **MEVA** applies field dynamics to multi-agent behavior  
 
 MESO is the **critical translation layer** from discrete structure to continuous geometry.
 
