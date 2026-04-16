@@ -67,24 +67,6 @@ to:
 - ⚡ [Applications](APPLICATIONS/README.md)  
 - 🧭 [Navigator](NAVIGATOR/README.md)
 
----
-
-## 📊 Example: Power System Dynamics
-
-![IEEE Structure](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
-
-**Observation:**
-- system trajectories organize into structured regions  
-- similar geometric patterns appear across system sizes  
-
-**Interpretation:**
-
-> Power system dynamics can be interpreted as evolving within a  
-> **low-dimensional structured landscape**
-
-⚠️ Note:  
-The figure illustrates qualitative structural behavior.  
-Quantitative early-warning performance is currently under investigation.
 
 ---
 
@@ -137,6 +119,55 @@ NEXAH perspective:
 **Interpretation:**
 
 > Control can be interpreted as **trajectory shaping within system dynamics**
+
+---
+
+---
+
+## ⚠️ Early Experiment — Misinterpreted Signal (“MicDrop”)
+
+![NEXAH MicDrop](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+**Context:**
+
+This figure was generated during early experiments and initially interpreted as a strong early-warning signal.
+
+The visual suggests a significant lead time between a detected structural event ("Phi-Split") and voltage collapse.
+
+---
+
+**Re-evaluation:**
+
+Further analysis revealed that:
+
+- the detected signal was **not consistently reproducible**
+- results depended strongly on signal processing choices  
+- similar lead times could not be confirmed across datasets  
+- parts of the signal were artifacts of detection logic  
+
+---
+
+**Interpretation:**
+
+> This result is now understood as an **interesting but misleading signal artifact**,  
+> not as validated early-collapse detection.
+
+---
+
+**Why it is still included:**
+
+- illustrates the **difficulty of early-warning detection**
+- shows how **signal interpretation can be deceptive**
+- motivated the transition toward:
+  → regime detection  
+  → structural analysis  
+  → trajectory-based interpretation  
+
+---
+
+👉 In hindsight:
+
+> “MicDrop” → **MicFlop — but a useful one**
 
 ---
 
