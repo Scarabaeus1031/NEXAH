@@ -6,28 +6,47 @@
 
 ---
 
-## 🧭 Overview
+## 🧭 Abstract
 
 NEXAH explores a structural approach to analyzing complex dynamical systems.
 
-Instead of treating systems as binary (stable / unstable), NEXAH interprets them as evolving within:
+Instead of treating systems as binary (stable / unstable), NEXAH models them as evolving within:
 
 > **structured dynamical landscapes**
 
-This allows systems to be analyzed in terms of:
+This enables:
 
-- structure  
-- flow  
-- geometry  
-- regime transitions  
+- representation of system dynamics as geometric structures  
+- identification of regime transitions  
+- trajectory-based system interpretation  
+- exploration of navigation strategies within stability regions  
+
+The framework is applied to power systems and reference dynamical systems, where it reveals consistent structural patterns in system evolution.
+
+---
+
+## 🧭 Overview
+
+Classical system analysis focuses on:
+
+→ threshold violations  
+→ event detection  
+
+NEXAH proposes a complementary perspective:
+
+> systems evolve as **trajectories within structured state spaces**
+
+This shifts the focus from:
+
+→ "Is the system stable?"  
+
+to:
+
+→ **"How is the system evolving within its structure?"**
 
 ---
 
 ## 🚀 Start Here
-
-New to NEXAH?
-
-Run your first demo:
 
 👉 [START HERE — Run your first demo](START_HERE.md)
 
@@ -35,13 +54,10 @@ Run your first demo:
 
 ## 🎬 What you will see
 
-- structured behavior in chaotic systems  
-- trajectories evolving in phase space  
-- regime transitions before instability  
-- geometry-based interpretation of dynamics  
-
-👉 No reward functions. No training loops.  
-👉 Focus: **structure and system behavior**
+- structured dynamics in chaotic systems  
+- trajectories evolving in reduced state spaces  
+- regime transitions preceding instability  
+- geometry-based interpretations of system behavior  
 
 ---
 
@@ -53,15 +69,22 @@ Run your first demo:
 
 ---
 
-## 🔬 Core Idea
+## 📊 Example: Power System Dynamics
 
-Instead of asking:
+![IEEE Structure](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
 
-> "Will the system collapse?"
+**Observation:**
+- system trajectories organize into structured regions  
+- similar geometric patterns appear across system sizes  
 
-NEXAH asks:
+**Interpretation:**
 
-> **"How is the system evolving — and which regime are we in?"**
+> Power system dynamics can be interpreted as evolving within a  
+> **low-dimensional structured landscape**
+
+⚠️ Note:  
+The figure illustrates qualitative structural behavior.  
+Quantitative early-warning performance is currently under investigation.
 
 ---
 
@@ -79,67 +102,45 @@ Classical control:
 
 NEXAH perspective:
 
-→ analyzes trajectory evolution within structured dynamics  
+→ analyzes trajectory evolution within structure  
 
-👉 Stability becomes a question of **regime and trajectory**,  
-not just thresholds.
+👉 Stability becomes a question of:
+
+- regime  
+- trajectory  
+- structural alignment  
 
 ---
 
-# 📊 Example: Power System Dynamics
+## 📊 From Structure → Dynamics
 
 ---
 
-## 🔹 Flow Field (IEEE Systems)
-
-👉 Source: [IEEE Field Analysis](APPLICATIONS/power_systems/stability_field_dynamics/)
+### 🔹 Flow Field (IEEE Systems)
 
 ![Flow Field](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
 **Observation:**
-- trajectories follow structured patterns  
+- trajectories follow structured flow patterns  
 - system evolution is directional  
-
-**Interpretation:**
-
-> The dynamics are consistent with a **flow-like structure**,  
-> suggesting a low-dimensional representation of system behavior.
 
 ---
 
-## 🔹 Trajectory-Based Control (IEEE9)
-
-👉 Source: [IEEE9 Controller](APPLICATIONS/power_systems/nexah_ieee9/)
+### 🔹 Trajectory-Based Control (Prototype)
 
 ![Control](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
 **Observation:**
 - control influences trajectory evolution  
-- system stabilization occurs in certain scenarios  
+- stabilization occurs in some scenarios  
 
 **Interpretation:**
 
-> Control can be interpreted as **trajectory shaping**,  
-> rather than purely state correction.
+> Control can be interpreted as **trajectory shaping within system dynamics**
 
 ---
 
-## 🔹 Scaling Behavior (Large Systems)
-
-![IEEE Scaling](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
-
-**Observation:**
-- similar structural patterns appear across system sizes  
-- behavior is qualitatively consistent  
-
-**Interpretation:**
-
-> Structural features appear to **persist across scale**,  
-> indicating potential generality (requires further validation).
-
----
-
-# 🧠 System Interpretation
+## 🧠 System Interpretation
 
 NEXAH models systems as:
 
@@ -149,47 +150,28 @@ where:
 
 - structure defines possible regimes  
 - dynamics define transitions  
-- analysis identifies regime changes  
+- analysis detects regime changes  
 
 ---
 
-## 🧭 Explore the Full System
+## ⚖️ Classical vs NEXAH
 
-The power system examples are one application.
-
-NEXAH is a general framework for:
-
-- dynamical systems  
-- infrastructure systems  
-- complex adaptive systems  
-
-Explore:
-
-- 🧭 [NAVIGATOR](NAVIGATOR/README.md)  
-- 🏗 [Architecture](NAVIGATOR/ARCHITECTURE.md)  
-- 📊 [System Capabilities](NAVIGATOR/SYSTEM_CAPABILITIES.md)
+| Classical | NEXAH |
+|----------|------|
+| threshold-based | structure-based |
+| event detection | regime analysis |
+| reactive | trajectory-aware |
+| state-focused | dynamics-focused |
 
 ---
 
-## ⚖️ Classical vs NEXAH (Essence)
-
-Classical:
-→ threshold-based  
-→ event detection  
-
-NEXAH:
-→ structure-based  
-→ regime analysis  
-
----
-
-# 🚀 Run Example
+## 🚀 Run Example
 
 ```bash
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
 ```
 
-# 🧭 Status
+## 🧭 Status
 
 | Component | Status |
 |----------|--------|
@@ -201,16 +183,16 @@ PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_clos
 
 ---
 
-# ⚠️ Important Notes
+## ⚠️ Limitations
 
-- no universal early-warning signal established  
-- performance depends on system dynamics  
-- experiments are partly synthetic  
-- real-world validation is ongoing  
+- no validated universal early-warning metric  
+- sensitivity to system and dataset  
+- limited evaluation on real-world grid dynamics  
+- control layer is experimental  
 
 ---
 
-# 🧠 Final Insight
+## 🧠 Final Insight
 
 Complex systems are not binary.
 
@@ -220,7 +202,7 @@ They evolve within:
 
 ---
 
-# 🌀 NEXAH
+## 🌀 NEXAH
 
 > dynamics → structure → geometry → regimes  
 
