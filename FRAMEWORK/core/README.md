@@ -1,28 +1,28 @@
 # nexah/core — The NEXAH Kernel
 
-This directory contains the **minimal core** of the NEXAH framework.
+This is the **minimal core** of the NEXAH framework.
 
-It defines the central abstractions used by all higher layers:
-
-- System representation (`NexahSystem`)
-- Schema validation
-- Loading of system definitions from JSON
-- Core data structures for nodes, edges, regimes, transitions, risk targets, etc.
-
-## Purpose
-
-This is the **heart** of NEXAH — everything else (geometry, navigation, applications) builds on top of these definitions.
+It defines the central data structures and loading mechanisms used by all higher layers (geometry, navigation, applications).
 
 ## Current Structure
 
 - `system/` — System schema, validation and loader
-- `__init__.py` — Package initialization
+  - `schema.py` — `NexahSystem` dataclass and validation
+  - `loader.py` — JSON loading with schema validation
+
+## Purpose
+
+- Provide a clean, typed representation of a NEXAH system (nodes, edges, regimes, transitions, risk_target, etc.)
+- Ensure schema validation when loading system definitions
+- Serve as the foundation for geometry mapping and control logic
 
 ## Usage Example
 
 ```python
 from nexah.core.system.loader import load_system
 
-system = load_system("path/to/system_definition.json")
+system = load_system("path/to/my_system.json")
+
 print(system.nodes)
 print(system.regimes)
+print(system.risk_target)
