@@ -45,10 +45,10 @@ def lorenz(state, t, sigma=10.0, rho=28.0, beta=8/3):
 # Generate trajectory
 # ---------------------------------------------------
 
-def generate_trajectory(steps=80000):
+def generate_trajectory(steps=60000):  # leicht reduziert für schnellere Demo
     print("→ Generating trajectory...")
 
-    t = np.linspace(0, 80, steps)
+    t = np.linspace(0, 60, steps)
 
     traj = odeint(
         lorenz,
@@ -63,7 +63,7 @@ def generate_trajectory(steps=80000):
 # Density calculation
 # ---------------------------------------------------
 
-def compute_density(traj, bins=400):
+def compute_density(traj, bins=300):  # etwas weniger bins = schneller + cleaner
     print("→ Computing density map...")
 
     x = traj[:, 0]
@@ -75,6 +75,9 @@ def compute_density(traj, bins=400):
         bins=bins
     )
 
+    # kleine Stabilisierung für spätere Field-Nutzung
+    density = density.astype(float)
+
     return density.T, xedges, zedges
 
 
@@ -85,10 +88,7 @@ def compute_density(traj, bins=400):
 def save_density_csv(density):
     path = os.path.join(OUTPUT_DIR, "lorenz_density.csv")
 
-    with open(path, "w", newline="") as f:
-        writer = csv.writer(f)
-        for row in density:
-            writer.writerow(row)
+    np.savetxt(path, density, delimiter=",")
 
     print("Saved:", path)
 
@@ -111,7 +111,8 @@ def plot_density(density, xedges, zedges):
             zedges[-1]
         ],
         origin="lower",
-        cmap="inferno"
+        cmap="inferno",
+        aspect="auto"
     )
 
     plt.colorbar(label="Density")
@@ -132,6 +133,19 @@ def plot_density(density, xedges, zedges):
 
 
 # ---------------------------------------------------
+# OPTIONAL: Minimal Field Layer (Preview)
+# ---------------------------------------------------
+
+def compute_field(density):
+    print("→ Deriving simple field from density...")
+
+    # einfache Normalisierung
+    field = density / (np.max(density) + 1e-9)
+
+    return field
+
+
+# ---------------------------------------------------
 # Main
 # ---------------------------------------------------
 
@@ -145,6 +159,9 @@ def main():
     save_density_csv(density)
 
     plot_density(density, xedges, zedges)
+
+    # optional vorbereiten (noch nicht visualisieren)
+    field = compute_field(density)
 
     print("\n✅ Density map finished.\n")
 
