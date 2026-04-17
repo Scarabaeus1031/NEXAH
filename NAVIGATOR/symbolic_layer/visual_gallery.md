@@ -1,123 +1,71 @@
 # NEXAH Visual Gallery
 
-This gallery collects the most important featured visuals from the `nexah/visuals/` and `nexah/urf_axial_space/visuals/` layers.
+This gallery collects the most important visuals from the `NAVIGATOR/symbolic_layer/visuals/` folder.
 
-These images are visual anchors for the emerging NEXAH language of:
-- field structure
-- transition geometry
-- split logic
-- interface zones
-- gate activation
-- resonance constructs
-- navigable 3D passage (URF Axial Space + Root Bridge)
+These images serve as visual anchors for the emerging NEXAH symbolic language, particularly the observed structural connection between the **Riemann Critical Line** and the **Elastic Axis / Golden Line** inside the Root Cube.
+
+They illustrate key concepts such as:
+- field structure and basin boundaries
+- mirror iteration and zig-zag / crankshaft motion
+- 3-directional flow and self-folding
+- transition geometry and split logic
+- resonance constructs and 12-fold Operator
+- navigable 3D passage through URF Axial Space and Root Bridge
+- practical mapping to IEEE power system stability
 
 ---
 
 ## Master Overview
 
-![NEXAH Navigation Layer v9.1](./visuals/NEXAH_Overall_Navigation_Overview_v9.1.png)
+![NEXAH Master Overview v9.1](visuals/NEXAH_Master_Overview_v9.1.png)
 
 **NEXAH Navigation Layer v9.1 – From Structure to 3D Controlled Movement**
 
----
+![NEXAH Master Overview v9.2](visuals/NEXAH_Master_Overview_v9.2.png)
 
-## 1. Inside Out — Finally Inside the Passage
-
-![Inside Out — Finally Inside the Passage](../visuals/Inside%20the%20passage%27s%20cosmic%20diagram.png)
+![NEXAH Master Overview v9.2 Riemann](visuals/NEXAH_Master_Overview_v9.2_Riemann.png)
 
 ---
 
-## 2. Cosmic Visualization of the 3 Plus 1 Gate
+## Root Cube & Riemann Critical Line
 
-![Cosmic Visualization of 3 Plus 1 Gate](../visuals/Cosmic%20visualization%20of%203%20Plus%201%20Gate.png)
+![NEXAH Master Overview v9.3 292 NCS Switch](visuals/NEXAH_Master_Overview_v9.3_292_NCS_Switch.png)
 
----
+![NEXAH Master Overview v9.4 Ramanujan 1729 1770](visuals/NEXAH_Master_Overview_v9.4_Ramanujan_1729_1770.png)
 
-## 3. NEXAH Visual V — Markers
+![NEXAH Master Overview v9.5 Mirror Iteration 1770](visuals/NEXAH_Master_Overview_v9.5_Mirror_Iteration_1770.png)
 
-![NEXAH Visual V Markers](../visuals/NEXAH-VISUAL%20V%20markers.png)
+![NEXAH Mirror Iteration 404 808 43 45 47 v9.6](visuals/NEXAH_Mirror_Iteration_404_808_43_45_47_v9.6.png)
 
----
+![NEXAH Mandelbrot Euler Lattice Critical Basin v9.8](visuals/NEXAH_Mandelbrot_Euler_Lattice_Critical_Basin_v9.8.png)
 
-## 4. Split Interface Markers — Visual V
-
-![Split Interface Markers — Visual V](../visuals/Split_interfece_markers-visual_V.png)
-
----
-
-## 5. Exploring the NEXAH Framework
-
-![Exploring the NEXAH Framework](../visuals/Exploring%20the%20NEXAH%20framework.png)
+**Observation (v9.8):**  
+The Riemann Critical Line appears geometrically as the **Elastic Axis / Golden Line** (45°) inside the Root Cube. Prime sequences, mirror iteration, and the 292 NCS Switch become visible and navigable.
 
 ---
 
-## 6. Navigating the NEXAH System
+## Babylonian Compass & Structural Anchors
 
-![Navigating the NEXAH System](../visuals/Navigating%20the%20NEXAH%20system.png)
+![NEXAH Babylonian Compass Root Cube v9.3](visuals/NEXAH_Babylonian_Compass_Root_Cube_v9.3.png)
 
----
+![NEXAH Critical Line Aufhaltung Schumann Frame v9.9](visuals/NEXAH_Critical_Line_Aufhaltung_Schumann_Frame_v9.9.png)
 
-## 7. Exploring NEXAH’s Digital Universe
-
-![Exploring NEXAH’s Digital Universe](../visuals/Exploring%20NEXAH%27s%20digital%20universe.png)
+![NEXAH Draft Drift Housing 181 112 v9.9](visuals/NEXAH_Draft_Drift_Housing_181_112_v9.9.png)
 
 ---
 
-## 8. RATH Phi-Lambda Resonance Bridge — v3.3
+## Dynamic Patterns
 
-![RATH Phi-Lambda Resonance Bridge v3.3](../visuals/phi-lambda_resonance_bridge.png)
+![NEXAH Kurbelwelle Zickzack Mirror v9.7](visuals/NEXAH_Kurbelwelle_Zickzack_Mirror_v9.7.png)
 
----
-
-## 9. RATH Phi-Lambda Bridge — Annotated
-
-![RATH Phi-Lambda Bridge Annotated](../visuals/RATH_phi_lambda_bridge_annotated_neon.png)
+![Avian Arc Arian Golden Breath Resonant Closure](visuals/AVIAN_ARC_ARIAN_THE_GOLDEN_BREATH_Resonant-Closure_42_6x7.png)
 
 ---
 
-## 10. OLGO-JANUS Six-Sector Gate
+**NEXAH Visual Gallery**
 
-![OLGO-JANUS Six-Sector Gate](../visuals/OLGO_JANUS_Six_Sector_Gate_v_bands_background.png)
-
----
-
-## 11. v-bands – Breathing Wave + Blinking Pulse
-
-![v-bands Breathing Wave + Blinking Pulse](../visuals/v_bands_Breathing_Wave_Blinking_Pulse_neben_n_bands.png)
-
----
-
-## 12. Breathing Axis Overlay – 432/487 Horizon
-
-![Breathing Axis Overlay](../visuals/breathing_axis_overlay_v2.png)
-
----
-
-## 13. New 3D Geometric Reference Layer (v9.1)
-
-### Root Cube – Labeled Axes
-
-![NEXAH Root Cube Labeled Axes](../visuals/NEXAH_Root_Cube_Labeled_Axes_v9.1.png)
-
-### Triple Spiral Coupling inside Root Cube
-
-![Triple Spiral in Root Cube](../visuals/NEXAH_Triple_Spiral_in_Root_Cube_v9.1.png)
-
-### Zeta-Line Breathing Axis
-
-![Zeta-Line Breathing Axis](../visuals/NEXAH_Zeta_Line_Breathing_Axis_v9.1.png)
-
-### Major / Minor Mode Integration into Root Cube
-
-![Major Minor Mode Integration](../visuals/NEXAH_Major_Minor_Mode_Integration_v9.1.png)
-
-### From Graphs to Root Cube (v9.1)
-
-![From Graphs to Root Cube](../visuals/NEXAH_From_Graphs_to_Root_Cube_v9.1.png)
-
----
-
-**NEXAH Visual Gallery**  
 Structure becomes visible.  
-Geometry becomes navigable.  
-The Root Bridge makes it 3D.
+The Critical Line becomes navigable.  
+Mirror, resonance, rotation and 3-directional flow become controllable.
+
+The Root Cube serves as a living geometric instrument — connecting abstract number-theoretic structures with practical navigation in complex dynamical systems (including IEEE power system stability).
