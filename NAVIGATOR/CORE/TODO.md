@@ -1,4 +1,4 @@
-# NEXAH — Cleanup & Mathematical Grounding TODO (Release Edition)
+# NEXAH — Cleanup & Release TODO (Updated)
 
 **Date:** April 2026  
 **Goal:** Prepare the project for release and first collaborators — exit solo mode
@@ -7,183 +7,215 @@
 
 ## 🧠 Main Goal
 
-Transition NEXAH from visual/intuitive geometry toward a  
-**mathematically explicit, structured state-space framework** — while keeping it readable, reproducible, and usable.
+Make NEXAH:
+
+- runnable  
+- understandable  
+- reproducible  
+
+while keeping the mathematical core **explicit and documented**.
 
 ---
 
-## 🔴 Priority 1 – Mathematical Core (STATUS UPDATE)
+# 🔴 PRIORITY 1 — ENTRY POINT (CRITICAL)
 
-- [x] Define unified state representations and mappings  
-  (engineering features ↔ geometric coordinates: C, r, θ, s)  
-  → DONE (`GEOMETRIC_FRAMEWORK.md`)
+👉 This is the single most important step.
 
-- [x] Define core quantities:
-  - Coherence \( C(x) \)  
-  - Risk Field \( R(x) \)  
-  - Stability Region \( S \)  
-  → DONE (core logic + docs)
+### Goal:
+> Clone → Run → Understand in 1 minute
 
-- [~] Complete explicit definitions for:
-  - derivatives  
-  - residuals  
-  - distances / metrics  
-  → PARTIAL (exists in code, needs clean doc layer)
+### ToDo:
 
-- [x] Formalize control equation  
-  `dx/dt = F(x) + u(x, C, R)`  
-  → DONE (concept + IEEE implementation)
+- [ ] Create `run_nexah_demo.py`
 
-- [~] Create unified core math document  
-  `FRAMEWORK/core_equations.md`  
-  → IN PROGRESS (important for clarity & onboarding)
+Must show:
 
-→ 🔥 Core math layer is now **~85–90% complete**
+- Lorenz dynamics  
+- Field structure  
+- Coherence + Risk  
+- Navigation (V12)  
+
+Optional:
+- IEEE mini demo
 
 ---
 
-## 🟠 Priority 2 – Repository Structure (STATUS UPDATE)
-
-- [ ] (Optional) Introduce clean `nexah/core/` module  
-  → improves external usability (not required immediately)
-
-- [~] Separate experimental / exploratory code
-  - move to `BUILDER_LAB/`
-  → PARTIAL (MESO + scripts still overloaded)
-
-- [x] Clean ARCHY and MESO layer structure  
-  → DONE (much clearer roles)
-
-- [~] Normalize language across repo  
-  → PARTIAL (main README clean, deeper layers mixed)
-
-→ 🧠 Structure is **~70% ready (good for release)**
+- [ ] Runtime < 30 seconds  
+- [ ] Minimal dependencies  
+- [ ] Clean output (plots only, no clutter)
 
 ---
 
-## 🔵 Priority 3 – Demo & Entry Points (CRITICAL)
+# 🔵 PRIORITY 2 — START HERE / ONBOARDING
 
-👉 THIS IS THE MOST IMPORTANT BLOCK
+👉 Without this, nobody can enter the system.
 
-- [ ] Create **single entry demo script**
+### ToDo:
 
->run_nexah_demo.py
+- [ ] Create `START_HERE.md`
 
 Must include:
-- Lorenz (basic dynamics)
-- Field + Coherence visualization
-- IEEE9 control example
-- (optional) multi-agent V12
 
-- [ ] Ensure demo runs in <30 seconds  
-- [ ] Minimal dependencies, clean output  
-
-→ 🎯 Goal:
-
-> **"Clone → Run → Understand in 1 minute"**
+1. Install  
+2. Run demo  
+3. What you see  
+4. Why it matters  
 
 ---
 
-## 🟣 Priority 4 – Visual System Finalization
+# 🟣 PRIORITY 3 — LORENZ (REPRODUCIBLE CORE DEMO)
 
-- [~] Finalize `FRAMEWORK_visual_gallery.md`
-- each visual = 1–2 line explanation  
-- clean ordering (V1 → V12)  
+👉 Your strongest and cleanest system.
 
-- [x] V1–V12 pipeline exists  
-→ DONE (strong asset)
+### ToDo:
 
-- [ ] Highlight 3 key visuals:
-- V6 (Field Structure)
-- V69 (Real System)
-- V12 (Emergent System)
+- [ ] Run multiple simulations (20–50 runs)
+- [ ] Compute metrics:
+  - mean coherence  
+  - min coherence  
+  - mean risk  
+  - time in stable regions  
 
-→ 🎥 Visual layer is **~90% complete**
+- [ ] Compare:
+  - uncontrolled vs NEXAH
 
----
-
-## 🟢 Priority 5 – First Use Case Packaging
-
-👉 Pick ONE strong use case:
-
-### Recommended:
-**IEEE Stability Field Demo**
-
-- [ ] Input → simulation
-- [ ] Field → visualization
-- [ ] Trajectory → overlay
-- [ ] Coherence → plot
-- [ ] Short interpretation
-
-→ 🎯 Output:
-
-> One reproducible example that clearly shows value
+👉 No claims — just data.
 
 ---
 
-## 🚀 Next Milestones (REALISTIC ORDER)
+# 🟢 PRIORITY 4 — IEEE USE CASE (PACKAGED)
 
-1. Build `run_nexah_demo.py` (**critical**)
-2. Finalize visual gallery
-3. Package IEEE demo
-4. (Optional) introduce `nexah/core/`
-5. Polish START_HERE.md
+👉 Shows real-world relevance.
+
+### ToDo:
+
+- [ ] Create `run_ieee_demo.py`
+
+Must output:
+
+- trajectory  
+- coherence curve  
+- short interpretation  
 
 ---
 
-## 🧭 Final Target
+👉 Goal:
 
-> **NEXAH is a structural framework that extracts and navigates stability in dynamical systems through field geometry and trajectory alignment.**
+> one reproducible real-world example
 
 ---
 
-## 🧠 Reality Check
+# 🟡 PRIORITY 5 — VISUAL SYSTEM FINALIZATION
+
+👉 Already strong — just polish.
+
+### ToDo:
+
+- [ ] Finalize `FRAMEWORK_visual_gallery.md`
+- [ ] 1–2 lines per visual
+- [ ] clean ordering (V1 → V12)
+
+- [ ] Highlight:
+  - V6 (Field structure)
+  - V69 (real system)
+  - V12 (emergent navigation)
+
+---
+
+# 🟠 PRIORITY 6 — REPOSITORY STRUCTURE (LIGHT CLEANUP)
+
+👉 Do not over-engineer.
+
+### ToDo:
+
+- [~] Separate experimental code → `BUILDER_LAB/`
+- [~] Normalize language (partial)
+- [ ] (Optional) introduce `nexah/core/` module
+
+---
+
+# 🧠 PRIORITY 7 — MATHEMATICAL CORE (DOCUMENTATION, NOT EXPANSION)
+
+👉 IMPORTANT: Do NOT remove — just clarify.
+
+### Status:
+
+- [x] Coherence \( C(x) \)
+- [x] Risk \( R(x) \)
+- [x] Control equation  
+  `dx/dt = F(x) + u(x, C, R)`
+
+---
+
+### ToDo:
+
+- [~] Clean definitions for:
+  - derivatives  
+  - residuals  
+  - distances  
+
+- [ ] Finalize:
+  `FRAMEWORK/core_equations.md`
+
+---
+
+👉 Goal:
+
+> make the math readable and reproducible — not more complex
+
+---
+
+# 🚀 NEXT MILESTONES (REAL ORDER)
+
+1. `run_nexah_demo.py`
+2. `START_HERE.md`
+3. Lorenz reproducibility
+4. IEEE demo
+5. Visual gallery polish
+6. Math doc cleanup (final layer)
+
+---
+
+# 🧭 FINAL TARGET
+
+> NEXAH is a structural framework that extracts and navigates stability  
+> in dynamical systems through field geometry and trajectory alignment.
+
+---
+
+# 🧠 REALITY CHECK
 
 You already have:
 
-- ✅ Mathematical core (Coherence, Risk, Control)
-- ✅ Visual system (V1–V12)
-- ✅ Structured framework (META → MEVA)
-- ✅ IEEE experiments
-- ✅ Working control prototype
+- ✅ Mathematical core  
+- ✅ Visual system  
+- ✅ Working demos  
+- ✅ IEEE prototype  
+- ✅ Symbolic layer  
+
+---
 
 You do NOT need:
 
 - ❌ more theory  
-- ❌ more modules  
 - ❌ more abstraction  
+- ❌ more modules  
 
 ---
 
-## 🔥 ACTUAL CURRENT STATE
+# 🔥 CURRENT STATE
 
-You are no longer building the core.
+You are no longer building the system.
 
 You are now:
 
-> **productizing a working research system**
+> **making it usable**
 
 ---
 
-## 🧭 Immediate Next Step (Most Important)
+# 🧭 FINAL INSIGHT
 
-👉 Build:
-
-run_nexah_demo.py
-
-One clean script that shows:
-
-```text
-dynamics → field → coherence → control → emergence
-```
-
-→ This is your "wow in 30 seconds" entry point
-
----
-
-## 🧠 Final Insight
-
-You don’t need more complexity.
+You don’t need more depth.
 
 You need:
 
