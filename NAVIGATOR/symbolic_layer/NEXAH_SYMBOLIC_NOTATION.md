@@ -4,19 +4,17 @@
 **Status:** Experimental / observed structure
 
 This document defines the emerging symbolic language of NEXAH.  
-It is not a predefined symbolic system, but a notation that arises directly from observed geometric, dynamical and numerical structures.
+It is not a predefined symbolic system, but a notation that arises directly from observed geometric, dynamical and numerical structures in the Field Layer, Root Cube and URF Axial Space.
 
 ---
 
 ## Core Expressions
 
-**CHANNEL + SWITCH → NCS**  
-NCS = Navigation Control System  
-→ field-aligned movement with switchable transitions
+**NCS** → Navigation Control System  
+→ field-aligned movement with switchable transitions (central element: 292 NCS Switch)
 
-**DRAFT + DRIFT + HOUSING → DKH**  
-DKH = Dynamics – Knick/Coupling – Housing  
-→ the three-layer quantization structure around the Critical Line
+**DKH** → Dynamics – Knick/Coupling – Housing  
+→ three-layer quantization structure (Draft + Drift + Housing) around the Elastic Axis
 
 ---
 
@@ -24,65 +22,58 @@ DKH = Dynamics – Knick/Coupling – Housing
 
 **Schumann Resonance 7.83 Hz**  
 → fundamental reference frequency anchored at the **7-axis**  
-→ serves as the physical and dynamical **Frame of Reference** for the entire system  
-→ connects the 7-axis directly to the Riemann Critical Line (Elastic Axis)  
-→ 7.83 Hz acts as the “heartbeat” that stabilises the resonant hovering drift and the 12-fold Operator
+→ serves as the physical and dynamical “heartbeat” that stabilises resonant hovering drift  
+→ connects the 7-axis directly to the Riemann Critical Line (realized as Elastic Axis / Golden Line)
 
 **10 as X**  
-→ symbolic and geometric cross-point (axis intersection)  
-→ Roman numeral X represents the orthogonal crossing of axes and the structural architecture of the geometry
+→ symbolic cross-point and orthogonal axis intersection
 
 ---
 
-## Structural Numbers
+## Structural Numbers & Patterns
 
 **292**  
-→ symmetric transition structure  
-→ interface-centered geometry  
-→ central NCS Switch in the Root Cube
+→ symmetric transition structure and central NCS Switch in the Root Cube
 
-**181**  
-→ 69 + 112  
+**181 = 69 + 112**  
 → Golden Line entry point into the Elastic Axis / Critical Line
 
 **1/112 ≈ 0.00893**  
-→ Draft (fundamental space-inbetween / Leerstelle)
+→ Draft (fundamental “space-inbetween” / Leerstelle)
 
 **1770**  
-→ Ramanujan binding (1729 → 1770 mod 17/7 + 0)
+→ Ramanujan binding (1729 → 1770 via mod 17/7 + 0)
 
-**404 → 808 → 1616 → 3232 → 6464 → 12928**  
-→ iterative mirror sequence (2ⁿ - 0 - 2ⁿ reflection)
+**404 → 808 → 1616 → 3232 → …**  
+→ iterative mirror sequence (2ⁿ reflection around the axis)
 
-**43 ↔ 34, 42 ↔ 24, 23 + 24 = 47**  
-→ observed mirror pairs around the Critical Line
+**Mirror pairs** (43 ↔ 34, 42 ↔ 24, 23 + 24 = 47)  
+→ observed symmetric relations around the Critical Line
 
 ---
 
-## Structural Abbreviations
+## Key Operators & Dynamics
 
-- NCS → Navigation Control System  
-- DKH → Dynamics – Knick/Coupling – Housing  
-- Draft → 1/112 space-inbetween / Leerstelle  
-- Resonant Hovering Drift → schwebendes Beben (floating micro-oscillation layer)  
-- Housing → Drift Quantization Shell (outer enclosing layer)
+**12-fold Operator**  
+→ observed rotational symmetry with self-folding and 3-directional flow  
+→ provides periodic structure and rotational behaviour around the Elastic Axis (Critical Line)  
+→ manifests in mirror iteration, zig-zag / crankshaft motion and multi-directional folding patterns (consistent with dynamics observed in Lorenz-type systems)
+
+**Resonant Hovering Drift** (“schwebendes Beben”)  
+→ floating micro-oscillation layer between Draft and Housing
 
 ---
 
 ## Connection to Riemann Critical Line
 
-The Riemann Critical Line (Re(s) = 1/2) is geometrically realized as the **Elastic Axis** (45°) in the Root Cube.
+The Riemann Critical Line (Re(s) = 1/2) is geometrically realized as the **Elastic Axis / Golden Line** (45°) inside the Root Cube.
 
-- The 12-fold Operator with self-folding and 3-directional flow provides the rotational symmetry around this axis.
+- The **12-fold Operator** supplies the rotational symmetry and self-folding around this axis.
 - Ramanujan summation (-1/12) corresponds to the fundamental Draft / Leerstelle.
-- The iterative mirror patterns and resonant hovering drift describe the dynamic behaviour along and around the Critical Line.
-- The Schumann Resonance 7.83 Hz at the 7-axis serves as the physical frame of reference that anchors the entire resonant structure.
+- Mirror iteration, 3-directional flow and resonant hovering drift describe the dynamic behaviour along and around the axis.
+- The Schumann 7.83 Hz reference anchors the entire resonant structure.
 
----
-
-**Note:**  
-This notation is experimental and emerges from observed structure, not from predefined symbolic systems.  
-It serves as the operational language for navigation, resonance and controlled transition in NEXAH.
+This notation emerges directly from visual and dynamical observations and serves as operational language for navigation and controlled transitions in NEXAH.
 
 **NEXAH**  
 Structure becomes visible.  
