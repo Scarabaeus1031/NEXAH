@@ -66,7 +66,7 @@ agents = np.array([
 ])
 
 n_agents = len(agents)
-trajectories = [ [] for _ in range(n_agents) ]
+trajectories = [[] for _ in range(n_agents)]
 
 dt = 0.05
 
@@ -74,7 +74,7 @@ dt = 0.05
 # Plot setup
 # ----------------------------
 fig, ax = plt.subplots(figsize=(6, 6))
-im = ax.contourf(X, Y, R, levels=50, cmap="plasma")
+ax.contourf(X, Y, R, levels=50, cmap="plasma")
 
 colors = plt.cm.tab10(np.linspace(0, 1, n_agents))
 lines = [ax.plot([], [], color=colors[i])[0] for i in range(n_agents)]
@@ -104,7 +104,7 @@ def update(frame):
 
         x_next = x + dt * (f + noise + u)
 
-        # clip
+        # Clip (verhindert Explosion)
         if np.linalg.norm(x_next) > 4:
             x_next = x_next / np.linalg.norm(x_next) * 4
 
@@ -113,13 +113,14 @@ def update(frame):
 
     agents = new_agents
 
-    # update visuals
+    # Update visuals
     for i in range(n_agents):
         traj = np.array(trajectories[i])
 
         if len(traj) > 1:
             lines[i].set_data(traj[:, 0], traj[:, 1])
-            points[i].set_data(traj[-1, 0], traj[-1, 1])
+            # ✅ FIX: Punkt braucht Sequenz!
+            points[i].set_data([traj[-1, 0]], [traj[-1, 1]])
 
     return lines + points
 
@@ -129,7 +130,7 @@ def update(frame):
 anim = FuncAnimation(fig, update, frames=160, interval=50)
 
 # ----------------------------
-# Save
+# Save GIF
 # ----------------------------
 output_dir = os.path.join(os.path.dirname(__file__), "../output")
 os.makedirs(output_dir, exist_ok=True)
