@@ -109,8 +109,42 @@ plt.show()
 # 5. Visualization
 # ============================
 
+from mpl_toolkits.mplot3d import Axes3D  # noqa: F401
+
+plt.style.use("dark_background")  # optional, aber besser
+
+fig = plt.figure(figsize=(12, 5))
+
+# --- Trajectory colored by coherence ---
+ax = fig.add_subplot(121, projection='3d')
+
+for i in range(len(trajectory) - 1):
+    color = plt.cm.viridis((coherence[i] + 1) / 2)
+    ax.plot(
+        trajectory[i:i+2, 0],
+        trajectory[i:i+2, 1],
+        trajectory[i:i+2, 2],
+        color=color
+    )
+
+ax.set_title("Lorenz Attractor (colored by Coherence)")
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+
+
+# --- Coherence over time ---
+ax2 = fig.add_subplot(122)
+
+ax2.plot(coherence)
+ax2.set_title("Coherence over Time")
+ax2.set_xlabel("Step")
+ax2.set_ylabel("C(x)")
+
+
+# 👉 WICHTIG: erst layout, dann speichern, dann anzeigen
 plt.tight_layout()
-plt.style.use("dark_background")
+
 plt.savefig("APPLICATIONS/core_demos/lorenz_nexah_coherence.png", dpi=150)
 
 plt.show()
