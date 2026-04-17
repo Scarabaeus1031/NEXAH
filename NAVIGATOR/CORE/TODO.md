@@ -1,3 +1,74 @@
+# NEXAH — Cleanup & Mathematical Grounding TODO (Release Edition)
+
+**Date:** April 2026  
+**Goal:** Prepare the project for release and first collaborators — exit solo mode
+
+---
+
+## 🧠 Main Goal
+
+Transition NEXAH from visual/intuitive geometry toward a  
+**mathematically explicit, structured state-space framework** — while keeping it readable, reproducible, and usable.
+
+---
+
+## 🔴 Priority 1 – Mathematical Core (STATUS UPDATE)
+
+- [x] Define unified state representations and mappings  
+  (engineering features ↔ geometric coordinates: C, r, θ, s)  
+  → DONE (`GEOMETRIC_FRAMEWORK.md`)
+
+- [x] Define core quantities:
+  - Coherence \( C(x) \)  
+  - Risk Field \( R(x) \)  
+  - Stability Region \( S \)  
+  → DONE (core logic + docs)
+
+- [~] Complete explicit definitions for:
+  - derivatives  
+  - residuals  
+  - distances / metrics  
+  → PARTIAL (exists in code, needs clean doc layer)
+
+- [x] Formalize control equation  
+  `dx/dt = F(x) + u(x, C, R)`  
+  → DONE (concept + IEEE implementation)
+
+- [~] Create unified core math document  
+  `FRAMEWORK/core_equations.md`  
+  → IN PROGRESS (important for clarity & onboarding)
+
+→ 🔥 Core math layer is now **~85–90% complete**
+
+---
+
+## 🟠 Priority 2 – Repository Structure (STATUS UPDATE)
+
+- [ ] (Optional) Introduce clean `nexah/core/` module  
+  → improves external usability (not required immediately)
+
+- [~] Separate experimental / exploratory code
+  - move to `BUILDER_LAB/`
+  → PARTIAL (MESO + scripts still overloaded)
+
+- [x] Clean ARCHY and MESO layer structure  
+  → DONE (much clearer roles)
+
+- [~] Normalize language across repo  
+  → PARTIAL (main README clean, deeper layers mixed)
+
+→ 🧠 Structure is **~70% ready (good for release)**
+
+---
+
+## 🔵 Priority 3 – Demo & Entry Points (CRITICAL)
+
+👉 THIS IS THE MOST IMPORTANT BLOCK
+
+- [ ] Create **single entry demo script**
+
+>run_nexah_demo.py
+
 Must include:
 - Lorenz (basic dynamics)
 - Field + Coherence visualization
