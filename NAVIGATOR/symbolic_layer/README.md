@@ -21,13 +21,35 @@ This lexicon serves as the **operational language** that makes NEXAH structures 
 
 ---
 
+## Highlight Experiment
+
+### Euler–Riemann–Ramanujan Trinity Experiment
+
+One of the most developed visual explorations in this layer is the **Euler–Riemann–Ramanujan Trinity Experiment**.
+
+It demonstrates how the Critical Line appears as the **Golden Axis / Elastic Axis** inside the Root Cube, with:
+- Euler, Riemann and Ramanujan forming a geometric triangle around the axis
+- Gauss acting as the stabilizing “handle”
+- The 12-fold Operator providing rotational symmetry
+- The 292 NCS Switch actively moving the 2² points
+- Taxicab 1729 as the Ramanujan jump regulator
+- Hopf vibration as the living background layer (RATH Bridge)
+- A dynamic “Perlenkette” (pearl chain) fountain visualising the flow
+
+**All visuals and animations** are collected here:
+
+→ **[trinity_euler_riemann_ramanujan/README.md](./EXPERIMENTS/trinity_euler_riemann_ramanujan/README.md)**  
+→ **[trinity_euler_riemann_ramanujan/VISUAL_GALLERY.md](./EXPERIMENTS/trinity_euler_riemann_ramanujan/VISUAL_GALLERY.md)**
+
+---
+
 ## Main Documents
 
 | Document                          | Purpose |
 |-----------------------------------|--------|
 | **[NEXAH_SYMBOLIC_NOTATION.md](./NEXAH_SYMBOLIC_NOTATION.md)** | Core definitions of symbols, structural numbers, operators and abbreviations |
 | **[Riemann_IEEE_Connection.md](./Riemann_IEEE_Connection.md)** | Connection between the Riemann Critical Line, Elastic Axis, mirror iteration, 12-fold Operator and practical IEEE power-system applications |
-| **[VISUAL_GALLERY.md](./VISUAL_GALLERY.md)** | Curated collection of key visuals with explanations |
+| **[VISUAL_GALLERY.md](./VISUAL_GALLERY.md)** | Curated collection of key visuals from the symbolic layer |
 
 ---
 
