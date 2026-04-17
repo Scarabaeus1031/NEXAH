@@ -33,9 +33,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # ---------------------------------------------------
 
 def lorenz(state, t, sigma=10.0, rho=28.0, beta=8/3):
-
     x, y, z = state
-
     return [
         sigma * (y - x),
         x * (rho - z) - y,
@@ -48,6 +46,7 @@ def lorenz(state, t, sigma=10.0, rho=28.0, beta=8/3):
 # ---------------------------------------------------
 
 def generate_trajectory(steps=80000):
+    print("→ Generating trajectory...")
 
     t = np.linspace(0, 80, steps)
 
@@ -65,9 +64,10 @@ def generate_trajectory(steps=80000):
 # ---------------------------------------------------
 
 def compute_density(traj, bins=400):
+    print("→ Computing density map...")
 
-    x = traj[:,0]
-    z = traj[:,2]
+    x = traj[:, 0]
+    z = traj[:, 2]
 
     density, xedges, zedges = np.histogram2d(
         x,
@@ -83,13 +83,10 @@ def compute_density(traj, bins=400):
 # ---------------------------------------------------
 
 def save_density_csv(density):
-
     path = os.path.join(OUTPUT_DIR, "lorenz_density.csv")
 
     with open(path, "w", newline="") as f:
-
         writer = csv.writer(f)
-
         for row in density:
             writer.writerow(row)
 
@@ -101,8 +98,9 @@ def save_density_csv(density):
 # ---------------------------------------------------
 
 def plot_density(density, xedges, zedges):
+    print("→ Rendering density map...")
 
-    plt.figure(figsize=(8,8))
+    plt.figure(figsize=(8, 8))
 
     plt.imshow(
         density,
@@ -138,8 +136,7 @@ def plot_density(density, xedges, zedges):
 # ---------------------------------------------------
 
 def main():
-
-    print("\nGenerating Lorenz density map...\n")
+    print("\n🧠 Generating Lorenz Density Map\n")
 
     traj = generate_trajectory()
 
@@ -149,7 +146,7 @@ def main():
 
     plot_density(density, xedges, zedges)
 
-    print("\nDensity map finished.\n")
+    print("\n✅ Density map finished.\n")
 
 
 if __name__ == "__main__":
