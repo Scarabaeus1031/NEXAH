@@ -1,34 +1,3 @@
-# NEXAH — Project Overview (Reality Map)
-
-
----
-
-## 🧠 Was dieses Dokument ist
-
-Dieses Dokument ist:
-
-> eine ehrliche Bestandsaufnahme des Projekts
-
-Es zeigt:
-
-- was existiert  
-- was funktioniert  
-- was halb fertig ist  
-- was noch fehlt  
-
----
-
-## 🧭 Gesamtstruktur (einfach gedacht)
-
-```text
-FRAMEWORK → erklärt
-ENGINE → berechnet
-APPLICATIONS → zeigt
-BUILDER_LAB → experimentiert
-DISCOVERY_ENGINE → erforscht
-```
----
-
 # 🔥 AKTUELLER KERN DES SYSTEMS
 
 ## 1. 🧠 FRAMEWORK (Theorie & Geometrie)
@@ -83,7 +52,7 @@ DISCOVERY_ENGINE → erforscht
 |--------|--------|
 | Field Reconstruction | ✅ |
 | Risk Field | ✅ |
-| Early Detection (43.9 s) | ✅🔥 |
+| Early Detection (~40s observed) | ✅🔥 |
 | Closed Loop Control | ✅ (v6) |
 | Advanced Versions (v7–v11) | ⚠️ |
 | IEEE118 | ⚠️ |
@@ -101,7 +70,7 @@ DISCOVERY_ENGINE → erforscht
 | Traffic | ⚠️ |
 | Multi-Agent | ⚠️ |
 
-👉 aktuell **nicht zentral, eher Nebenstränge**
+👉 aktuell **Nebenstränge / Explorationsfelder**
 
 ---
 
@@ -113,7 +82,7 @@ DISCOVERY_ENGINE → erforscht
 | LorenzAdapter | ✅ |
 | weitere Adapter | ⚠️ |
 
-👉 Idee gut, aber noch nicht Hauptworkflow
+👉 gute Idee, aber noch nicht zentral
 
 ---
 
@@ -126,7 +95,7 @@ DISCOVERY_ENGINE → erforscht
 | Multi-Agent | ⚠️ |
 | Visuals | ✅ |
 
-👉 gut für Einstieg, aber nicht mit Core verbunden
+👉 stark für Entwicklung, aber nicht Produktpfad
 
 ---
 
@@ -160,6 +129,7 @@ Du hast bereits:
 - Geometrie (sehr stark)  
 - Lorenz (komplettes Demo-System)  
 - IEEE (realer Proof)  
+- Visual Pipeline (V1–V12)  
 
 ---
 
@@ -171,49 +141,166 @@ Du hast bereits:
 System → Field → Geometry → Risk → Navigation → Control
 ```
 
-👉 aktuell vorhanden, aber nicht sichtbar verbunden
+👉 vorhanden, aber nicht als **ein durchgehender Pfad sichtbar**
 
-⸻
+---
 
 ## 2. EIN DEMO-EINSTIEG
 
 python run_nexah_demo.py
 
-existiert noch nicht
+👉 existiert noch nicht → **kritisch**
 
 ---
 
 ## 3. VERBINDUNG LORENZ ↔ IEEE
 
-- Lorenz = visuell stark  
-- IEEE = technisch stark  
+- Lorenz = visuell klar  
+- IEEE = technisch relevant  
 
 👉 fehlt:
 
-ein gemeinsames Verständnis als „gleiches Prinzip“
+> ein gemeinsames Narrativ:  
+> **beide sind dasselbe Systemprinzip**
 
 ---
 
-## 🚀 STRATEGISCHER FOKUS
+# 🧭 NEXAH USE-CASE MAP (STRATEGISCH)
+
+## 🟢 1. LOW HANGING FRUITS (JETZT)
+
+### ⚡ Power Grid Stability
+
+- Stability Field statt Thresholds  
+- Trajectory Drift vor Collapse  
+- Coherence als Frühindikator  
+
+👉 **direkt zeigbar (beste Option)**
+
+---
+
+### 🧠 Explain Your System
+
+- Simulation → Field → Interpretation  
+
+👉 NEXAH als:
+
+> **Explainability Layer für Dynamik**
+
+---
+
+### 🔍 Trajectory Debugging
+
+- warum System driftet  
+- wo Stabilität verloren geht  
+
+👉 sehr konkret nutzbar für Engineers
+
+---
+
+## 🟡 2. MID-TERM
+
+### 🤖 ML Stability
+
+- Training als Trajektorie  
+- Loss Landscape als Field  
+
+---
+
+### 🌐 Multi-Agent Systems
+
+- Emergence (V10–V12)  
+- Self-stabilization  
+
+---
+
+### 🌍 Cascading Failures
+
+- Power + Networks + Systems  
+
+---
+
+## 🔴 3. HIGH IMPACT
+
+### 🧠 Unified Stability Framework
+
+```text
+Power + ML + Networks → gleiche Struktur
+```
+
+---
+
+### 🛰 System-of-Systems (optional)
+
+- Infrastruktur  
+- Klima  
+- globale Dynamik  
+
+---
+
+# 🔌 POSITIONIERUNG (WICHTIG!)
+
+NEXAH ist KEIN:
+
+- Simulator  
+- ML Framework  
+- klassisches Control-System  
+
+NEXAH ist:
+
+> **eine strukturelle Übersetzungsschicht für Dynamik**
+
+---
+
+## 🧭 Pipeline
+
+```text
+Simulation → Structure → Field → Regimes → Navigation
+```
+
+---
+
+## 🧠 Vergleich
+
+| Kategorie | Klassisch | NEXAH |
+|----------|----------|------|
+| Analyse | Zustand | Bewegung |
+| Stabilität | Schwellenwerte | Feldstruktur |
+| Kontrolle | Fehlerbasiert | Trajektorienbasiert |
+| Sichtweise | lokal | geometrisch |
+
+---
+
+# 🚀 STRATEGISCHER FOKUS
 
 Nicht:
 
 - neue Systeme  
-- neue Ideen  
-- mehr Theorie  
+- neue Theorie  
+- neue Layer  
 
 Sondern:
 
-Integration + Klarheit + Einstieg  
+> Integration + Klarheit + Einstieg  
 
 ---
 
-## 🧭 NÄCHSTE KONKRETE SCHRITTE
+# 🧭 NÄCHSTE KONKRETE SCHRITTE
 
 1. `run_nexah_demo.py` bauen  
-2. Lorenz + IEEE logisch verbinden  
-3. einen klaren Einstiegspfad schaffen  
-4. Fragmentierung reduzieren  
+2. Lorenz + IEEE verbinden  
+3. Visual Gallery finalisieren  
+4. einen klaren Einstiegspfad schaffen  
 
+---
 
+# 🧠 FINAL INSIGHT
 
+NEXAH analysiert keine Zustände.
+
+> NEXAH beschreibt, wie sich Systeme bewegen.
+
+---
+
+**Last Updated:** April 2026  
+© Thomas K. R. Hofmann
