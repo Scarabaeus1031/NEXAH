@@ -112,3 +112,8 @@ plt.show()
 print("Mean coherence:", np.mean(coherence))
 print("Min coherence:", np.min(coherence))
 print("Max coherence:", np.max(coherence))
+plt.tight_layout()
+
+plt.savefig("APPLICATIONS/core_demos/lorenz_nexah_coherence.png", dpi=150)
+
+plt.show()
