@@ -15,7 +15,7 @@ These images are visual anchors for the emerging NEXAH language of:
 
 ## Master Overview
 
-![NEXAH Navigation Layer v9.1](visuals/NEXAH_Overall_Navigation_Overview_v9.1.png)
+![NEXAH Navigation Layer v9.1](/visuals/NEXAH_Overall_Navigation_Overview_v9.1.png)
 
 **NEXAH Navigation Layer v9.1 – From Structure to 3D Controlled Movement**
 
