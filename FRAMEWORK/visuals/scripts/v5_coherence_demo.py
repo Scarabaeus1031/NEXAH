@@ -34,7 +34,7 @@ for _ in range(steps):
 
     field = F(x[0], x[1])
 
-    # 🔥 WICHTIG: Noise → echte Dynamik
+    # 🔥 Noise → echte Dynamik
     noise = np.random.normal(0, 0.3, size=2)
 
     velocity = field + noise
@@ -62,32 +62,30 @@ os.makedirs(output_dir, exist_ok=True)
 # ----------------------------
 # 5. Trajectory Plot (FARBE!)
 # ----------------------------
-plt.figure()
-
-# Farbe nach Coherence
-colors = coherences
+fig, ax = plt.subplots()
 
 for i in range(len(trajectory) - 1):
-    plt.plot(
+    ax.plot(
         trajectory[i:i+2, 0],
         trajectory[i:i+2, 1],
-        color=plt.cm.viridis(colors[i])
+        color=plt.cm.viridis(coherences[i])
     )
 
 # Startpunkt
-plt.scatter(trajectory[0, 0], trajectory[0, 1], color="red", label="start")
+ax.scatter(trajectory[0, 0], trajectory[0, 1], color="red", label="start")
 
-plt.title("NEXAH V5: Trajectory colored by Coherence")
-plt.xlabel("x")
-plt.ylabel("y")
-plt.gca().set_aspect('equal', adjustable='box')
+ax.set_title("NEXAH V5: Trajectory colored by Coherence")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_aspect('equal', adjustable='box')
 
-# Colorbar
+# 🔥 Colorbar FIX
 sm = plt.cm.ScalarMappable(cmap='viridis')
 sm.set_array(coherences)
-plt.colorbar(sm, label="Coherence")
+cbar = fig.colorbar(sm, ax=ax)
+cbar.set_label("Coherence")
 
-plt.legend()
+ax.legend()
 
 traj_path = os.path.join(output_dir, "v5_colored_trajectory.png")
 plt.savefig(traj_path)
