@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation, PillowWriter
 
 # ----------------------------
 # 1. Vector field (STABLE!)
@@ -26,7 +27,7 @@ for i in range(X.shape[0]):
 # 3. Simulate trajectory
 # ----------------------------
 dt = 0.05
-steps = 200
+steps = 120
 trajectory = []
 
 x = np.array([-2.0, -1.5])  # Startpunkt
@@ -47,26 +48,36 @@ for _ in range(steps):
 trajectory = np.array(trajectory)
 
 # ----------------------------
-# 4. Plot
+# 4. Animation
 # ----------------------------
-plt.figure()
+fig, ax = plt.subplots()
 
 # Field
-plt.streamplot(X, Y, U, V)
+ax.streamplot(X, Y, U, V)
 
-# Trajectory
-plt.plot(trajectory[:,0], trajectory[:,1], label="trajectory")
-
-# Startpunkt
-plt.scatter(trajectory[0,0], trajectory[0,1], label="start")
+# Trajectory line + moving point
+line, = ax.plot([], [], lw=2)
+point, = ax.plot([], [], marker='o')
 
 # Fix axes (WICHTIG!)
-plt.xlim(-3, 3)
-plt.ylim(-3, 3)
+ax.set_xlim(-3, 3)
+ax.set_ylim(-3, 3)
 
-plt.title("NEXAH Mini Simulation: Field + Trajectory")
-plt.xlabel("State Dimension X")
-plt.ylabel("State Dimension Y")
-plt.legend()
+ax.set_title("NEXAH V1: Field + Trajectory")
+ax.set_xlabel("State Dimension X")
+ax.set_ylabel("State Dimension Y")
 
-plt.show()
+def update(frame):
+    line.set_data(trajectory[:frame, 0], trajectory[:frame, 1])
+    point.set_data([trajectory[frame, 0]], [trajectory[frame, 1]])
+    return line, point
+
+anim = FuncAnimation(fig, update, frames=len(trajectory), interval=60)
+
+# ----------------------------
+# 5. Save GIF (WICHTIG!)
+# ----------------------------
+gif_path = "FRAMEWORK/visuals/output/nexah_v1_simulation.gif"
+anim.save(gif_path, writer=PillowWriter(fps=15))
+
+print("Saved:", gif_path)
