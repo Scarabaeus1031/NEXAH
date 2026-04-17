@@ -75,6 +75,30 @@ The Riemann Critical Line (Re(s) = 1/2) is geometrically realized as the **Elast
 
 This notation emerges directly from visual and dynamical observations and serves as operational language for navigation and controlled transitions in NEXAH.
 
+---
+
+## Key Operators & Dynamics
+
+**12-fold Operator**
+
+Observed rotational symmetry arising from the primal pattern **2-1-3**:
+
+- 2 → mirror / doubling (visible in 404 → 808 → 1616 sequence)
+- 1 → regulator on the Elastic Axis (Critical Line)
+- 3 → three-directional flow (Water–Mercury–Ferro / Triple Spiral)
+
+This produces **2 × 2 × 3 = 12** as the fundamental rotational symmetry around the Elastic Axis.
+
+- 6 + 6 → the two symmetric halves on either side of the axis
+- +1 → the central regulator (Gauss as Handle)
+- 69 → symbolic mirror notation of the balanced pairs (6 ↔ 9) around the Critical Line
+
+The 12-fold Operator generates self-folding and predictable periodic behaviour.  
+It connects directly to the next prime **13 (= 12 + 1)** as the structural “step beyond” the rotational symmetry.
+
+This pattern is consistently observed in the Root Cube and aligns with the Euler–Riemann–Ramanujan Trinity configuration.
+
+---
 **NEXAH**  
 Structure becomes visible.  
 The Critical Line becomes navigable.  
