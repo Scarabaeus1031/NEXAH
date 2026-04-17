@@ -1,97 +1,75 @@
 """
-NEXAH Demo Entry Point
+NEXAH Demo — CLEAN VERSION
 
-This script demonstrates the core idea of NEXAH:
+Shows:
+- Lorenz trajectory
+- Regime detection
+- Visual outputs
 
-dynamics → structure → field → navigation
-
-Includes:
-- Lorenz Core Pipeline (full system)
-- Lorenz Visual Demo (quick understanding)
-
-Run:
-python run_nexah_demo.py
+This is the CURRENT working demo of NEXAH.
 """
 
 import subprocess
-import os
 
-print("\n🧠 NEXAH — Demo Starting\n")
+print("\n🧠 NEXAH Demo Starting\n")
 
-# ---------------------------------------------------
-# Helper
-# ---------------------------------------------------
 
-def run_step(name, command):
+def run(title, cmd):
     print(f"\n{'='*50}")
-    print(f"→ {name}")
+    print(f"→ {title}")
     print(f"{'='*50}\n")
 
-    try:
-        subprocess.run(command, shell=True, check=True)
-    except Exception as e:
-        print(f"⚠️ Step failed: {e}")
+    subprocess.run(cmd, shell=True)
 
 
-# ---------------------------------------------------
-# STEP 1 — Lorenz Core (REAL SYSTEM)
-# ---------------------------------------------------
+# -----------------------------------
+# STEP 1 — Lorenz Visual Pipeline
+# -----------------------------------
 
-run_step(
-    "Lorenz Core Pipeline (structure → field → regimes → navigation)",
-    "python -m APPLICATIONS.dynamical_systems.lorenz.pipeline.run_lorenz_core_pipeline"
-)
-
-# ---------------------------------------------------
-# STEP 2 — Lorenz Quick Visual (INTUITION)
-# ---------------------------------------------------
-
-run_step(
-    "Lorenz Visual Demo (quick intuition)",
+run(
+    "Lorenz System (Trajectory + Regimes)",
     "python -m APPLICATIONS.dynamical_systems.lorenz.pipeline.lorenz_visual_pipeline"
 )
 
-# ---------------------------------------------------
+# -----------------------------------
 # OPTIONAL — IEEE (later)
-# ---------------------------------------------------
+# -----------------------------------
 
-# run_step(
-#     "IEEE Power Grid Demo",
+# run(
+#     "IEEE Power Grid Control",
 #     "python APPLICATIONS/power_systems/nexah_ieee9/nexah_closed_loop_ieee9_v6.py"
 # )
 
-# ---------------------------------------------------
-# DONE
-# ---------------------------------------------------
 
-print("\n✅ NEXAH Demo Completed\n")
+# -----------------------------------
+# DONE
+# -----------------------------------
+
+print("\n✅ Demo Complete\n")
 
 print("""
-🧭 What you just saw:
+🧭 What you saw:
 
-1. Lorenz Core Pipeline
-   → Chaos becomes structure
-   → Structure becomes geometry
-   → Geometry becomes navigable
-
-2. Lorenz Visual Demo
-   → Trajectories
-   → Regimes
-   → Field-aware interpretation
+- A chaotic system (Lorenz)
+- Its trajectory structure
+- Regime transitions
+- A first step toward field-based interpretation
 
 ----------------------------------------
 
 🧠 Core Idea:
 
-You are not controlling the system.
+NEXAH does not control systems via targets.
 
-You are navigating the geometry
-that the system unfolds.
+It observes structure,
+detects regimes,
+and prepares navigation within the system.
 
 ----------------------------------------
 
-🚀 Next:
-- Explore APPLICATIONS/
-- Try IEEE demo
-- Dive into nexah/ core modules
+🚀 Next Steps:
+
+- Add IEEE demo (real system)
+- Connect field layer
+- Introduce true navigation
 """)
