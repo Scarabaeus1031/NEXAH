@@ -26,7 +26,10 @@ plt.style.use("dark_background")
 
 print("\n🧠 Loading density field...\n")
 
-density = np.loadtxt("APPLICATIONS/outputs/lorenz_density/lorenz_density.csv")
+density = np.loadtxt(
+    "APPLICATIONS/outputs/lorenz_density/lorenz_density.csv",
+    delimiter=","
+)
 
 # normalize
 field = density / (np.max(density) + 1e-8)
@@ -48,9 +51,9 @@ grad_y, grad_x = np.gradient(field)
 def run_field_navigation():
 
     steps = 3000
-    step_size = 1.0
+    step_size = 0.5   # 👈 stabiler als 1.0
 
-    # start random
+    # random start
     x = np.array([
         np.random.randint(0, field.shape[1]),
         np.random.randint(0, field.shape[0])
@@ -64,16 +67,20 @@ def run_field_navigation():
         ix = int(np.clip(x[0], 0, field.shape[1] - 1))
         iy = int(np.clip(x[1], 0, field.shape[0] - 1))
 
-        # 🔥 risk = low density = bad
+        # risk = low density = bad
         r = 1 - field[iy, ix]
 
-        # 🔥 gradient (move to high density)
+        # gradient
         gx = grad_x[iy, ix]
         gy = grad_y[iy, ix]
 
         g = np.array([gx, gy])
 
-        # navigation rule
+        # 🔥 normalize gradient (wichtig!)
+        norm = np.linalg.norm(g) + 1e-8
+        g = g / norm
+
+        # move
         x = x + step_size * g
 
         traj.append(x.copy())
