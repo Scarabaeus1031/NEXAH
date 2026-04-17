@@ -56,6 +56,32 @@ but a property of **trajectory alignment within structure**.
 
 ---
 
+## 🌊 Field Structure (Concept)
+
+![NEXAH Field Structure](FRAMEWORK/visuals/output/v6_risk_field.png)
+
+This visualization shows the **stability field geometry**:
+
+- valleys → low risk (stable regions)  
+- slopes → transition zones  
+- peaks → instability  
+
+> Systems evolve within this landscape.
+
+---
+
+## ⚡ Real System Example (IEEE Flow Field)
+
+![Flow Field](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+
+**Observation:**
+- trajectories follow structured flow patterns  
+- system evolution is directional  
+
+> Even real-world systems exhibit structured dynamics.
+
+---
+
 ## 🚀 Start Here
 
 👉 [START HERE — Run your first demo](START_HERE.md)
@@ -74,6 +100,8 @@ but a property of **trajectory alignment within structure**.
 ## 🎥 Visual System (Core)
 
 👉 [Full Visual Gallery → FRAMEWORK_visual_gallery.md](FRAMEWORK_visual_gallery.md)
+
+![NEXAH Coherence Dynamics](FRAMEWORK/visuals/output/nexah_v2_coherence.gif)
 
 NEXAH includes a progressive visualization pipeline:
 
@@ -102,3 +130,130 @@ NEXAH includes a progressive visualization pipeline:
 
 ```text
 dynamics → structure → field → regimes → navigation
+```
+
+## 🔥 Core Insight
+
+Classical control:
+
+→ reacts to deviations  
+
+NEXAH perspective:
+
+→ analyzes trajectory evolution within structure  
+
+👉 Stability becomes a question of:
+- regime  
+- trajectory  
+- structural alignment  
+
+---
+
+## 📊 From Structure → Dynamics
+
+---
+### 🔹 Trajectory-Based Control (Prototype)
+
+![Control](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_plot.png)
+
+**Observation:**
+- control influences trajectory evolution  
+- stabilization occurs in some scenarios  
+
+**Interpretation:**
+
+> Control can be interpreted as **trajectory shaping within system dynamics**
+
+---
+
+## ⚠️ Early Experiment — Misinterpreted Signal (“MicDrop”)
+
+![NEXAH MicDrop](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+**Context:**
+
+This figure was generated during early experiments and initially interpreted as a strong early-warning signal.
+
+---
+
+**Re-evaluation:**
+
+Further analysis revealed that:
+
+- the detected signal was **not consistently reproducible**
+- results depended strongly on signal processing choices  
+- similar lead times could not be confirmed across datasets  
+- parts of the signal were artifacts of detection logic  
+
+---
+
+**Interpretation:**
+
+> This result is now understood as an **interesting but misleading signal artifact**,  
+> not as validated early-collapse detection.
+
+---
+
+👉 In hindsight:
+
+> “MicDrop” → **MicFlop — but a useful one**
+
+---
+
+## ⚖️ Classical vs NEXAH
+
+| Classical | NEXAH |
+|----------|------|
+| threshold-based | structure-based |
+| event detection | regime analysis |
+| reactive | trajectory-aware |
+| state-focused | dynamics-focused |
+
+---
+
+## 🚀 Run Example
+
+```bash
+PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+```
+
+## 🧭 Status
+
+| Component | Status |
+|----------|--------|
+| Structure Discovery | ✅ |
+| Field Interpretation | ✅ |
+| Regime Detection | ✅ (experimental) |
+| Control | ⚠️ prototype |
+| Navigation | 🚧 in development |
+
+---
+
+## ⚠️ Limitations
+
+- no validated universal early-warning metric  
+- sensitivity to system and dataset  
+- limited evaluation on real-world grid dynamics  
+- control layer is experimental  
+
+---
+
+## 🧠 Final Insight
+
+Complex systems are not binary.
+
+They evolve within:
+
+> **structured dynamical regimes**
+
+---
+
+## 🌀 NEXAH
+
+> dynamics → structure → field → regimes → navigation  
+
+---
+
+**Thomas K. R. Hofmann · 2026**
+
+
