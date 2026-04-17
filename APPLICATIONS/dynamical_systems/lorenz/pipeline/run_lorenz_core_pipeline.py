@@ -10,6 +10,8 @@ This is the CURRENT working demo of NEXAH.
 """
 
 import subprocess
+import sys
+
 
 print("\n🧠 NEXAH Demo Starting\n")
 
@@ -19,7 +21,13 @@ def run(title, cmd):
     print(f"→ {title}")
     print(f"{'='*50}\n")
 
-    subprocess.run(cmd, shell=True)
+    try:
+        result = subprocess.run(cmd, shell=True)
+        if result.returncode != 0:
+            print(f"\n⚠️ Step failed: {title}\n")
+    except Exception as e:
+        print(f"\n❌ Error running step: {title}")
+        print(e)
 
 
 # -----------------------------------
@@ -38,6 +46,15 @@ run(
 run(
     "Attractor Structure (Density Map)",
     "python APPLICATIONS/dynamical_systems/lorenz/attractor/lorenz_density_map.py"
+)
+
+# -----------------------------------
+# STEP 3 — Field (Gradient from Density)
+# -----------------------------------
+
+run(
+    "Field Approximation (Density Gradient)",
+    "python APPLICATIONS/dynamical_systems/lorenz/attractor/lorenz_field_gradient.py"
 )
 
 # -----------------------------------
@@ -62,7 +79,8 @@ print("""
 - A chaotic system (Lorenz)
 - Its trajectory structure
 - Regime transitions
-- Attractor geometry via density mapping
+- Attractor geometry (density)
+- A first field approximation (gradient)
 
 ----------------------------------------
 
@@ -72,14 +90,14 @@ NEXAH does not control systems via targets.
 
 It observes structure,
 detects regimes,
-and reconstructs geometry —
-preparing navigation within the system.
+reconstructs geometry,
+and derives fields from data.
 
 ----------------------------------------
 
 🚀 Next Steps:
 
 - Add IEEE demo (real system)
-- Introduce field layer (from density)
-- Enable navigation within the field
+- Connect field layer to nexah/
+- Enable true navigation on the field
 """)
