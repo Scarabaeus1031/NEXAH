@@ -1,5 +1,7 @@
 # ⚡ NEXAH — Structural Navigation in Complex Systems
 
+NEXAH is a framework to understand and control systems by how they move within their stability field.
+
 ![Status](https://img.shields.io/badge/status-experimental-blue)
 ![Field Model](https://img.shields.io/badge/field-analysis-lightblue)
 ![Control](https://img.shields.io/badge/control-prototype-orange)
