@@ -200,6 +200,23 @@ Further analysis revealed that:
 
 ---
 
+## 🔥 Emergent System (V12)
+
+![NEXAH Full System](FRAMEWORK/visuals/output/v12_full_system.gif)
+
+This visualization shows the full NEXAH system:
+
+- field dynamics  
+- trajectory evolution  
+- multi-agent interaction  
+- network formation  
+- emergent coordination  
+
+> The system is not controlled centrally —  
+> it stabilizes through **local interaction within the field**.
+
+---
+
 ## ⚖️ Classical vs NEXAH
 
 | Classical | NEXAH |
