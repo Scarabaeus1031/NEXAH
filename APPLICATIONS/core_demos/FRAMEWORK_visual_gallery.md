@@ -146,7 +146,7 @@ V12       → Field-Level Navigation (Final)
 
 ![V12 Animation](ouputs/lorenz_nexah_v12_final.gif)
 
-![V12 Static](/outputs/lorenz_nexah_v12_final.png)
+![V12 Static](outputs/lorenz_nexah_v12_final.png)
 
 **Concept:**
 - no external target  
