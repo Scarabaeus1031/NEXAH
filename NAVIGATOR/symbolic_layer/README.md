@@ -68,6 +68,24 @@ VISUAL_GALLERY.md
 
 ---
 
+## Bridge to the NEXAH-CODEX Library
+
+The symbolic lexicon remains internal to the active NEXAH framework and is derived directly from observed structures in the Field Layer, Spiral Coupling, URF Axial Space and Navigation & Switch Layer.
+
+Several symbolic patterns documented here have conceptual parallels in the frozen **NEXAH-CODEX library** (Scarabaeus1033/NEXAH-CODEX). These parallels primarily relate to:
+
+- critical-line interpretations and number structures  
+- mirror and axial resonance patterns  
+- nested (Matroschka-like) system structures  
+- geometric and field-based representations of dynamics  
+
+These references are **not part of the executable NEXAH core**.  
+They serve only as an external symbolic background for conceptual orientation.
+
+This bridge is purely documentary.  
+It introduces no new symbols and does not modify the NEXAH implementation.
+
+---
 ## Role in the NEXAH Stack
 
 The `symbolic_lexicon` sits at the intersection of:
