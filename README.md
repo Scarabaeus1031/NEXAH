@@ -101,6 +101,47 @@ This visualization illustrates the **geometry of stability**:
 
 ## 🎥 Visual System (Core)
 
+---
+
+## 🎬 Visual System — From Dynamics to Navigation
+
+👉 [Full Lorenz Gallery → APPLICATIONS/core_demos/lorenz/FRAMEWORK_visual_gallery.md](APPLICATIONS/core_demos/lorenz/FRAMEWORK_visual_gallery.md)
+
+![V12](APPLICATIONS/core_demos/lorenz/outputs/lorenz_nexah_v12_final.gif)
+
+This sequence shows the full evolution of NEXAH:
+
+```text
+V1 → V4   → Field & Metrics  
+V5 → V8   → Multi-Agent & Networks  
+V9 → V11  → Navigation & Emergence  
+V12       → Field-Level Navigation  
+```
+**Key idea:**
+
+- systems are not controlled via targets  
+- systems are not optimized via rewards  
+
+Instead:
+
+> they are navigated within their stability field  
+
+---
+
+**What emerges:**
+
+- coherence → alignment with dynamics  
+- risk → deviation from structure  
+- interaction → stabilization  
+- navigation → movement within valid regions  
+
+---
+
+👉 This is the first demonstration of:
+
+> field-based navigation without explicit objectives
+
+
 👉 [Full Visual Gallery → FRAMEWORK_visual_gallery.md](FRAMEWORK_visual_gallery.md)
 
 ![NEXAH Coherence Dynamics](FRAMEWORK/visuals/output/nexah_v2_coherence.gif)
