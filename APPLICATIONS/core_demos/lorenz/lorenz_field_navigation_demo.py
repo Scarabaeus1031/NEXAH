@@ -1,21 +1,17 @@
 """
-NEXAH — Field-Based Navigation Demo
+NEXAH — Field-Based Navigation Demo (Stable Version)
 
-Goal:
-Navigate using the reconstructed field (density),
-NOT the original Lorenz system.
+Fixes:
+- smart start inside attractor
+- gradient stabilization
+- optional smoothing
 
-Pipeline:
-- load density
-- compute field (normalized)
-- compute gradient
-- navigate in field
-
-This is TRUE NEXAH navigation.
+This is the first TRUE field navigation.
 """
 
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.ndimage import gaussian_filter
 
 plt.style.use("dark_background")
 
@@ -34,6 +30,9 @@ density = np.loadtxt(
 # normalize
 field = density / (np.max(density) + 1e-8)
 
+# 🔥 optional smoothing (important!)
+field = gaussian_filter(field, sigma=1.5)
+
 
 # ==================================================
 # 2. COMPUTE GRADIENT FIELD
@@ -45,19 +44,34 @@ grad_y, grad_x = np.gradient(field)
 
 
 # ==================================================
-# 3. NAVIGATION IN FIELD
+# 3. SMART START (ATTRACTOR ENTRY)
+# ==================================================
+
+def get_start_position():
+
+    # find high-density region
+    indices = np.argwhere(field > 0.2)
+
+    if len(indices) > 0:
+        idx = indices[np.random.randint(len(indices))]
+        print("→ Starting inside attractor")
+        return np.array([idx[1], idx[0]], dtype=float)
+
+    # fallback (your "start chord")
+    print("⚠️ fallback start (2,1,3 projection)")
+    return np.array([150.0, 150.0])  # center-ish
+
+
+# ==================================================
+# 4. NAVIGATION
 # ==================================================
 
 def run_field_navigation():
 
-    steps = 3000
-    step_size = 0.5   # 👈 stabiler als 1.0
+    steps = 4000
+    step_size = 0.6
 
-    # random start
-    x = np.array([
-        np.random.randint(0, field.shape[1]),
-        np.random.randint(0, field.shape[0])
-    ], dtype=float)
+    x = get_start_position()
 
     traj = []
     risk = []
@@ -67,20 +81,20 @@ def run_field_navigation():
         ix = int(np.clip(x[0], 0, field.shape[1] - 1))
         iy = int(np.clip(x[1], 0, field.shape[0] - 1))
 
-        # risk = low density = bad
         r = 1 - field[iy, ix]
 
-        # gradient
         gx = grad_x[iy, ix]
         gy = grad_y[iy, ix]
 
         g = np.array([gx, gy])
 
-        # 🔥 normalize gradient (wichtig!)
+        # normalize
         norm = np.linalg.norm(g) + 1e-8
         g = g / norm
 
-        # move
+        # 🔥 boost movement
+        g = g * 2.0
+
         x = x + step_size * g
 
         traj.append(x.copy())
@@ -95,16 +109,12 @@ trajectory, risk = run_field_navigation()
 
 
 # ==================================================
-# 4. VISUALIZATION
+# 5. VISUALIZATION
 # ==================================================
 
 fig = plt.figure(figsize=(12, 6))
 
-
-# ----------------------------------------
-# FIELD + TRAJECTORY
-# ----------------------------------------
-
+# FIELD + PATH
 ax1 = fig.add_subplot(121)
 
 ax1.imshow(field, origin="lower", cmap="inferno")
@@ -116,18 +126,13 @@ ax1.plot(
     linewidth=1
 )
 
-ax1.set_title("Field Navigation (Density Gradient)")
+ax1.set_title("Field Navigation (Stable)")
 
-
-# ----------------------------------------
-# RISK OVER TIME
-# ----------------------------------------
-
+# RISK
 ax2 = fig.add_subplot(122)
 
 ax2.plot(risk, color="red")
-ax2.set_title("Risk over Time (Field-Based)")
-
+ax2.set_title("Risk over Time")
 
 plt.tight_layout()
 
@@ -140,7 +145,7 @@ plt.show()
 
 
 # ==================================================
-# 5. OUTPUT
+# 6. OUTPUT
 # ==================================================
 
 print("\n--- FIELD NAVIGATION ---")
@@ -151,30 +156,26 @@ print("Min risk:", np.min(risk))
 print("""
 🧭 Interpretation:
 
-The agent no longer knows the Lorenz system.
+Agent starts inside structure.
 
-It only sees:
-→ a field
-
-and still:
-→ finds structure
-→ moves toward attractors
+It:
+- detects density
+- follows gradient
+- stabilizes in attractor
 
 ----------------------------------------
 
 🧠 Key Insight:
 
-Structure → Field → Navigation
+Navigation requires:
 
-WITHOUT equations.
+1. field
+2. gradient
+3. correct entry
 
 ----------------------------------------
 
 🚀 Meaning:
 
-This is the bridge to:
-
-- real-world systems
-- unknown dynamics
-- black-box navigation
+This is the first stable NEXAH field navigation.
 """)
