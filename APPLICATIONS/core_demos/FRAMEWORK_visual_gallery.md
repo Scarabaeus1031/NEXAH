@@ -18,7 +18,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V1 — Baseline Dynamics
 
-![V1](APPLICATIONS/core_demos/outputs/lorenz_nexah_coherence.png)
+![V1](outputs/lorenz_nexah_coherence.png)
 
 **Concept:**
 - raw Lorenz dynamics  
