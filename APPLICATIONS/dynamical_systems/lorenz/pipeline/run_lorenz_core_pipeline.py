@@ -1,5 +1,5 @@
 """
-NEXAH Lorenz Core Pipeline - Fixed & Robust Version
+NEXAH Lorenz Core Pipeline - FINAL FIXED VERSION
 Flow → Lyapunov → FTLE → Density → Regimes → Navigation → Visualization
 """
 
@@ -7,12 +7,13 @@ import sys
 import os
 
 # ================================================
-# WICHTIG: Repo-Root zum Python-Path hinzufügen
+# WICHTIG: Korrekter Pfad zum Repository-Root
 # ================================================
-repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))
-sys.path.insert(0, repo_root)
+# Von pipeline/ aus 4 Ebenen hoch → NEXAH/
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../"))
 
-print(f"→ PYTHONPATH includes: {repo_root}\n")
+sys.path.insert(0, repo_root)
+print(f"→ PYTHONPATH includes repository root: {repo_root}\n")
 
 # ---------------------------------------------------
 # Setup
