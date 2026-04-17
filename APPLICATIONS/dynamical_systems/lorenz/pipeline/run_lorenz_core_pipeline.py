@@ -4,7 +4,7 @@ NEXAH Demo — CLEAN VERSION
 Shows:
 - Lorenz trajectory
 - Regime detection
-- Visual outputs
+- Density structure (attractor geometry)
 
 This is the CURRENT working demo of NEXAH.
 """
@@ -32,12 +32,12 @@ run(
 )
 
 # -----------------------------------
-# STEP 2 — Lorenz Field (Density)
+# STEP 2 — Attractor Structure (Density)
 # -----------------------------------
 
 run(
-    "Lorenz Field (Chaos Density / Structure)",
-    "python APPLICATIONS/dynamical_systems/lorenz/landscapes/lorenz_density_map.py"
+    "Attractor Structure (Density Map)",
+    "python APPLICATIONS/dynamical_systems/lorenz/attractor/lorenz_density_map.py"
 )
 
 # -----------------------------------
@@ -62,7 +62,7 @@ print("""
 - A chaotic system (Lorenz)
 - Its trajectory structure
 - Regime transitions
-- A first step toward field-based interpretation
+- Attractor geometry via density mapping
 
 ----------------------------------------
 
@@ -72,13 +72,14 @@ NEXAH does not control systems via targets.
 
 It observes structure,
 detects regimes,
-and prepares navigation within the system.
+and reconstructs geometry —
+preparing navigation within the system.
 
 ----------------------------------------
 
 🚀 Next Steps:
 
 - Add IEEE demo (real system)
-- Connect field layer
-- Introduce true navigation
+- Introduce field layer (from density)
+- Enable navigation within the field
 """)
