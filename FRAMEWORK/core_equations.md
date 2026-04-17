@@ -149,6 +149,21 @@ It acts to maintain or restore coherence.
 
 ---
 
+## Core Dynamics in NEXAH
+
+![Core Dynamics in NEXAH](./visuals/core_dynamics_in_nexah.png)
+
+This diagram summarizes the minimal mathematical intuition behind NEXAH:
+
+- **Coherence \(C(x)\)** measures how well the current system trajectory aligns with the underlying field  
+- **Risk \(R(x)\)** turns this alignment into a continuous instability landscape  
+- **Stability Region \(S\)** defines the safe part of the state space  
+- **Control \(u(x)\)** modifies the trajectory to keep the system inside the safe region  
+
+In this view, stability is not defined as a fixed equilibrium, but as:
+
+> **coherent motion within a structured field**
+
 ## 9. Design Principle
 
 \[
