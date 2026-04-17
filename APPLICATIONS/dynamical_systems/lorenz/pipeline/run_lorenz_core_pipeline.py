@@ -1,42 +1,39 @@
 """
-NEXAH Lorenz Core Pipeline
-
-Full structural pipeline:
-
+NEXAH Lorenz Core Pipeline - Fixed Version
 Flow → Lyapunov → FTLE → Density → Regimes → Navigation → Visualization
-
-This is the REAL core of the Lorenz module (not just a demo).
-
-Outputs are stored in:
-APPLICATIONS/outputs/lorenz_core/
 """
 
+import sys
 import os
+
+# === WICHTIG: Repo-Root zum Python-Path hinzufügen ===
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../"))
+sys.path.insert(0, repo_root)
 
 # ---------------------------------------------------
 # Setup
 # ---------------------------------------------------
-
 OUTPUT_DIR = "APPLICATIONS/outputs/lorenz_core"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 print("\n🧠 Starting NEXAH Lorenz Core Pipeline...\n")
 
 # ---------------------------------------------------
-# Safe import helper (prevents crashes)
+# Safe import helper
 # ---------------------------------------------------
-
 def safe_import(module_path, func_name):
     try:
         module = __import__(module_path, fromlist=[func_name])
-        return getattr(module, func_name)
+        func = getattr(module, func_name)
+        print(f"✓ Imported {func_name} from {module_path}")
+        return func
     except Exception as e:
         print(f"⚠️ Could not import {func_name} from {module_path}: {e}")
         return None
 
 
 # ---------------------------------------------------
-# Load Core Functions (with fallbacks)
+# Load Core Functions
 # ---------------------------------------------------
 
 run_flow_field = safe_import(
@@ -71,75 +68,60 @@ run_navigation = safe_import(
 
 run_visualization = safe_import(
     "APPLICATIONS.dynamical_systems.lorenz.pipeline.lorenz_visual_pipeline",
-    "main"  # fallback: reuse existing visual pipeline
+    "main"   # oder den tatsächlichen Funktionsnamen, falls anders
 )
-
 
 # ---------------------------------------------------
 # Pipeline Execution
 # ---------------------------------------------------
-
 data = {}
 
-# 1. Flow Field
 if run_flow_field:
     print("→ Flow Field")
     data["flow"] = run_flow_field()
 else:
     print("❌ Skipping Flow Field")
 
-# 2. Lyapunov
-if run_lyapunov:
+if run_lyapunov and "flow" in data:
     print("→ Lyapunov Field")
-    data["lyap"] = run_lyapunov(data.get("flow"))
+    data["lyap"] = run_lyapunov(data["flow"])
 else:
     print("❌ Skipping Lyapunov")
 
-# 3. FTLE
-if run_ftle:
+if run_ftle and "lyap" in data:
     print("→ FTLE / Filament Structure")
-    data["ftle"] = run_ftle(data.get("lyap"))
+    data["ftle"] = run_ftle(data["lyap"])
 else:
     print("❌ Skipping FTLE")
 
-# 4. Density / Topography
-if run_density:
+if run_density and "ftle" in data:
     print("→ Density / Topography")
-    data["density"] = run_density(data.get("ftle"))
+    data["density"] = run_density(data["ftle"])
 else:
     print("❌ Skipping Density")
 
-# 5. Regimes
-if run_regimes:
+if run_regimes and "density" in data:
     print("→ Regime Detection")
-    data["regimes"] = run_regimes(data.get("density"))
+    data["regimes"] = run_regimes(data["density"])
 else:
     print("❌ Skipping Regimes")
 
-# 6. Navigation
-if run_navigation:
+if run_navigation and "regimes" in data:
     print("→ Navigation / Control")
-    data["nav"] = run_navigation(data.get("regimes"))
+    data["nav"] = run_navigation(data["regimes"])
 else:
     print("❌ Skipping Navigation")
 
-# 7. Visualization
 if run_visualization:
     print("→ Visualization")
     try:
         run_visualization()
     except Exception as e:
-        print(f"⚠️ Visualization fallback failed: {e}")
+        print(f"⚠️ Visualization failed: {e}")
 else:
     print("❌ No visualization module found")
 
-
-# ---------------------------------------------------
-# Done
-# ---------------------------------------------------
-
 print("\n✅ Pipeline finished.\n")
-
 print("Generated data layers:")
 for k in data.keys():
-    print(f" - {k}")
+    print(f"   • {k}")
