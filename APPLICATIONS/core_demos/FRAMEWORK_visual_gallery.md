@@ -30,7 +30,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V2 — Noise & Real Dynamics
 
-![V2](APPLICATIONS/core_demos/outputs/lorenz_nexah_v2_noisy.png)
+![V2](outputs/lorenz_nexah_v2_noisy.png)
 
 **Concept:**
 - introduces noise  
@@ -42,7 +42,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V3–V4 — Risk & Coherence
 
-![V3V4](APPLICATIONS/core_demos/outputs/lorenz_nexah_v3_v4.png)
+![V3V4](outputs/lorenz_nexah_v3_v4.png)
 
 **Concept:**
 - coherence becomes measurable  
@@ -54,7 +54,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V5 — Multi-Agent System
 
-![V5](APPLICATIONS/core_demos/outputs/lorenz_nexah_v5_multi_agent.png)
+![V5](outputs/lorenz_nexah_v5_multi_agent.png)
 
 **Concept:**
 - multiple trajectories  
@@ -66,7 +66,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V6 — Interaction
 
-![V6](APPLICATIONS/core_demos/outputs/lorenz_nexah_v6_interaction.png)
+![V6](outputs/lorenz_nexah_v6_interaction.png)
 
 **Concept:**
 - local coupling between agents  
@@ -78,7 +78,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V7 — Network Structure
 
-![V7](APPLICATIONS/core_demos/outputs/lorenz_nexah_v7_network.png)
+![V7](outputs/lorenz_nexah_v7_network.png)
 
 **Concept:**
 - dynamic network  
@@ -90,7 +90,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V8 — Dynamic Network
 
-![V8](APPLICATIONS/core_demos/outputs/lorenz_nexah_v8_dynamic_network.png)
+![V8](outputs/lorenz_nexah_v8_dynamic_network.png)
 
 **Concept:**
 - evolving network connectivity  
@@ -102,7 +102,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V9 — Target Navigation
 
-![V9](APPLICATIONS/core_demos/outputs/lorenz_nexah_v9_navigation.png)
+![V9](outputs/lorenz_nexah_v9_navigation.png)
 
 **Concept:**
 - explicit goal introduced  
@@ -117,7 +117,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V10 — Risk-Aware Navigation
 
-![V10](APPLICATIONS/core_demos/outputs/lorenz_nexah_v10_risk_navigation.png)
+![V10](outputs/lorenz_nexah_v10_risk_navigation.png)
 
 **Concept:**
 - navigation via risk minimization  
@@ -129,7 +129,7 @@ V12       → Field-Level Navigation (Final)
 
 # 🔹 V11 — Emergent Goal
 
-![V11](APPLICATIONS/core_demos/outputs/lorenz_nexah_v11_emergent_goal.png)
+![V11](outputs/lorenz_nexah_v11_emergent_goal.png)
 
 **Concept:**
 - goal emerges from system  
@@ -144,28 +144,9 @@ V12       → Field-Level Navigation (Final)
 
 # 🔥 V12 — Field-Level Navigation (Final)
 
-![V12 Animation](APPLICATIONS/core_demos/outputs/lorenz_nexah_v12_final.gif)
+![V12 Animation](ouputs/lorenz_nexah_v12_final.gif)
 
-![V12 Static](APPLICATIONS/core_demos/outputs/lorenz_nexah_v12_final.png)
-
-**Concept:**
-- no external target  
-- no emergent goal  
-- no reward  
-
-Only:
-
-- field structure  
-- local interaction  
-- risk-aware motion  
-
-👉 system navigates **within the field itself**
-
----
-
-# 🔥 V12 — Field-Level Navigation (Final)
-
-![V12](APPLICATIONS/core_demos/outputs/lorenz_nexah_v12_final.gif)
+![V12 Static](/outputs/lorenz_nexah_v12_final.png)
 
 **Concept:**
 - no external target  
@@ -181,6 +162,7 @@ Only:
 👉 system navigates **within the field itself**
 
 ---
+
 
 # 🧠 Key Observations
 
