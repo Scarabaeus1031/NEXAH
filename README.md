@@ -1,6 +1,6 @@
 # ⚡ NEXAH — Structural Navigation in Complex Systems
 
-NEXAH is a framework to understand and control systems by how they move within their stability field.
+> NEXAH is a framework to understand and control complex systems by how they move within their stability field.
 
 ![Status](https://img.shields.io/badge/status-experimental-blue)
 ![Field Model](https://img.shields.io/badge/field-analysis-lightblue)
@@ -10,27 +10,27 @@ NEXAH is a framework to understand and control systems by how they move within t
 
 ## 🧭 NEXAH
 
-> **A structural modeling framework for complex dynamical systems.**  
-> Relational structure. Explicit orientation.
+**A structural modeling framework for complex dynamical systems.**  
+Relational structure. Explicit orientation.
 
 ---
 
 ## 🧭 Abstract
 
-NEXAH is a framework for exploring and analyzing complex dynamical systems through **structure, dynamics, and regimes**.
+NEXAH explores complex dynamical systems through **structure, dynamics, and regimes**.
 
-Instead of treating systems as binary (stable / unstable), NEXAH models them as evolving within:
+Instead of binary classification (stable / unstable), systems are modeled as evolving within:
 
 > **structured dynamical landscapes**
 
 This enables:
 
-- representation of system dynamics as geometric structures  
+- geometric representation of system dynamics  
 - identification of regime transitions  
-- trajectory-based system interpretation  
+- trajectory-based interpretation  
 - exploration of navigation strategies within stability regions  
 
-NEXAH is designed as a **modular system framework**, with applications to power systems and reference dynamical systems.
+NEXAH is designed as a **modular system framework**, with applications to power systems and reference dynamical models.
 
 ---
 
@@ -53,8 +53,8 @@ to:
 
 → **"How does the system move within its stability field?"**
 
-Stability is no longer a static condition,  
-but a property of **trajectory alignment within structure**.
+Stability is not static —  
+it emerges from **trajectory alignment within structure**.
 
 ---
 
@@ -62,7 +62,7 @@ but a property of **trajectory alignment within structure**.
 
 ![NEXAH Field Structure](FRAMEWORK/visuals/output/v6_risk_field.png)
 
-This visualization shows the **stability field geometry**:
+This visualization illustrates the **geometry of stability**:
 
 - valleys → low risk (stable regions)  
 - slopes → transition zones  
@@ -95,7 +95,7 @@ This visualization shows the **stability field geometry**:
 - structured dynamics in chaotic systems  
 - trajectories evolving in reduced state spaces  
 - regime transitions in system behavior  
-- geometry-based interpretations of dynamics  
+- geometric interpretations of dynamics  
 
 ---
 
@@ -105,26 +105,26 @@ This visualization shows the **stability field geometry**:
 
 ![NEXAH Coherence Dynamics](FRAMEWORK/visuals/output/nexah_v2_coherence.gif)
 
-NEXAH includes a progressive visualization pipeline:
+The visualization pipeline includes:
 
-- Field dynamics (V1)
-- Coherence & alignment (V2)
-- Risk landscapes (V3)
-- Control (V4)
-- Geometry & regimes (V6–V9)
-- Multi-agent systems (V10)
-- Swarm dynamics (V11)
-- Communication & emergence (V12)
+- Field dynamics (V1)  
+- Coherence & alignment (V2)  
+- Risk landscapes (V3)  
+- Control (V4)  
+- Geometry & regimes (V6–V9)  
+- Multi-agent systems (V10)  
+- Swarm dynamics (V11)  
+- Communication & emergence (V12)  
 
 > These visuals form the executable core of the framework.
 
 ---
 
-## 🧭 Explore
+## 🧭 Explore the System
 
-- 🧠 [Framework](FRAMEWORK/README.md)  
-- ⚡ [Applications](APPLICATIONS/README.md)  
-- 🧭 [Navigator](NAVIGATOR/README.md)
+- 🧠 [Framework](FRAMEWORK/README.md) — architecture and layers  
+- ⚡ [Applications](APPLICATIONS/README.md) — experiments and use cases  
+- 🧭 [Navigator](NAVIGATOR/README.md) — system overview  
 
 ---
 
@@ -140,7 +140,7 @@ Classical control:
 
 → reacts to deviations  
 
-NEXAH perspective:
+NEXAH:
 
 → analyzes trajectory evolution within structure  
 
@@ -153,7 +153,6 @@ NEXAH perspective:
 
 ## 📊 From Structure → Dynamics
 
----
 ### 🔹 Trajectory-Based Control (Prototype)
 
 ![Control](APPLICATIONS/power_systems/nexah_ieee9/results/controller_v9/output_v9_plot.png)
@@ -164,7 +163,16 @@ NEXAH perspective:
 
 **Interpretation:**
 
-> Control can be interpreted as **trajectory shaping within system dynamics**
+> Control acts as **trajectory shaping within system dynamics**
+
+---
+
+## 📊 Experimental Insights
+
+Early experiments explored collapse detection in power systems.
+
+Initial results suggested strong early-warning signals —  
+but required further validation.
 
 ---
 
@@ -172,29 +180,14 @@ NEXAH perspective:
 
 ![NEXAH MicDrop](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
 
-**Context:**
+**Re-evaluation revealed:**
 
-This figure was generated during early experiments and initially interpreted as a strong early-warning signal.
+- results were not consistently reproducible  
+- sensitivity to signal processing was high  
+- lead times could not be confirmed across datasets  
+- parts of the signal were artifacts  
 
----
-
-**Re-evaluation:**
-
-Further analysis revealed that:
-
-- the detected signal was **not consistently reproducible**
-- results depended strongly on signal processing choices  
-- similar lead times could not be confirmed across datasets  
-- parts of the signal were artifacts of detection logic  
-
----
-
-**Interpretation:**
-
-> This result is now understood as an **interesting but misleading signal artifact**,  
-> not as validated early-collapse detection.
-
----
+> The result is now understood as an **interesting but misleading signal artifact**.
 
 👉 In hindsight:
 
@@ -206,7 +199,7 @@ Further analysis revealed that:
 
 ![NEXAH Full System](FRAMEWORK/visuals/output/v12_full_system.gif)
 
-This visualization shows the full NEXAH system:
+This visualization shows the full system:
 
 - field dynamics  
 - trajectory evolution  
@@ -214,8 +207,8 @@ This visualization shows the full NEXAH system:
 - network formation  
 - emergent coordination  
 
-> The system is not controlled centrally —  
-> it stabilizes through **local interaction within the field**.
+> Stability emerges through **local interaction within the field**,  
+> not centralized control.
 
 ---
 
@@ -232,9 +225,9 @@ This visualization shows the full NEXAH system:
 
 ## 🚀 Run Example
 
-```bash
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
-```
+
+---
 
 ## 🧭 Status
 
@@ -252,8 +245,8 @@ PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_clos
 
 - no validated universal early-warning metric  
 - sensitivity to system and dataset  
-- limited evaluation on real-world grid dynamics  
-- control layer is experimental  
+- limited real-world validation  
+- control layer remains experimental  
 
 ---
 
@@ -274,5 +267,3 @@ They evolve within:
 ---
 
 **Thomas K. R. Hofmann · 2026**
-
-
