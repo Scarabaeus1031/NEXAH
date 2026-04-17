@@ -7,10 +7,10 @@ import sys
 import os
 
 # ================================================
-# WICHTIG: Korrekter Pfad zum Repository-Root
+# KORREKTER Repo-Root (von pipeline/ aus 5 Ebenen hoch)
 # ================================================
-# Von pipeline/ aus 4 Ebenen hoch → NEXAH/
-repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../"))
+current_dir = os.path.dirname(os.path.abspath(__file__))
+repo_root = os.path.abspath(os.path.join(current_dir, "../../../../../"))
 
 sys.path.insert(0, repo_root)
 print(f"→ PYTHONPATH includes repository root: {repo_root}\n")
