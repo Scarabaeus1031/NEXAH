@@ -1,84 +1,68 @@
-# NEXAH — Cleanup & Mathematical Grounding TODO (Release Edition)
+Must include:
+- Lorenz (basic dynamics)
+- Field + Coherence visualization
+- IEEE9 control example
+- (optional) multi-agent V12
 
-**Date:** April 2026  
-**Goal:** Prepare the project for release and first collaborators — exit solo mode
+- [ ] Ensure demo runs in <30 seconds  
+- [ ] Minimal dependencies, clean output  
 
----
+→ 🎯 Goal:
 
-## 🧠 Main Goal
-
-Transition NEXAH from visual/intuitive geometry toward a  
-**mathematically explicit geometric state-space framework** — while keeping it readable, reproducible, and attractive for new contributors.
-
----
-
-## 🔴 Priority 1 – Mathematical Core (STATUS UPDATE)
-
-- [x] Define unified state representations and the mapping between them  
-  (engineering features ↔ geometric coordinates: C, r, θ, s)  
-  → DONE in `GEOMETRIC_FRAMEWORK.md`
-
-- [~] Write precise, reproducible definitions for all core features  
-  (coherence, derivatives, residual, distance, risk, etc.)  
-  → PARTIAL (coherence + risk done, rest still implicit in code)
-
-- [x] Formalize stability as a region in state space and define the Risk Field  
-  → DONE (`risk_field.md` + framework integration)
-
-- [x] Write the control equation:  
-  `dx/dt = f(x) + u(x, risk, geometry)`  
-  → DONE (framework + IEEE implementation)
-
-- [x] Create a clean, self-contained document:  
-  `FRAMEWORK/CORE_GEOMETRY/GEOMETRIC_FRAMEWORK.md`  
-  → DONE (very strong already)
-
-→ 🔥 Core math layer is now **~80–90% complete**
+> **"Clone → Run → Understand in 1 minute"**
 
 ---
 
-## 🟠 Priority 2 – Repository Cleanup (STATUS UPDATE)
+## 🟣 Priority 4 – Visual System Finalization
 
-- [ ] Create `nexah/core/` as the clean engineering core  
-  → NOT DONE (optional but recommended for collaborators)
+- [~] Finalize `FRAMEWORK_visual_gallery.md`
+- each visual = 1–2 line explanation  
+- clean ordering (V1 → V12)  
 
-- [ ] Move strongly symbolic/experimental files to `nexah/symbolic_lexicon/experimental/`  
-  → NOT DONE (low priority unless publishing to academia)
+- [x] V1–V12 pipeline exists  
+→ DONE (strong asset)
 
-- [~] Remove or rephrase symbolic language in main README  
-  → PARTIAL (main README is now clean, rest of repo still mixed)
+- [ ] Highlight 3 key visuals:
+- V6 (Field Structure)
+- V69 (Real System)
+- V12 (Emergent System)
 
-→ 🧠 Cleanup is **~40% done (good enough for soft release)**
+→ 🎥 Visual layer is **~90% complete**
 
 ---
 
-## 🔵 Priority 3 – Release & Collaboration Preparation (STATUS UPDATE)
+## 🟢 Priority 5 – First Use Case Packaging
 
-- [ ] Get adaptive control running on IEEE118 (basic version)  
-  → PARTIAL (IEEE9 strong, IEEE118 field exists, control not unified)
+👉 Pick ONE strong use case:
 
-- [~] Create one clean minimal demo script (`run_nexah_demo.py`)  
-  → PARTIAL (START_HERE + Lorenz + IEEE scripts exist, but not unified)
+### Recommended:
+**IEEE Stability Field Demo**
 
-- [x] Update main README + APPLICATIONS README  
-  → DONE (Top-level UX now strong)
+- [ ] Input → simulation
+- [ ] Field → visualization
+- [ ] Trajectory → overlay
+- [ ] Coherence → plot
+- [ ] Short interpretation
 
-→ 🚀 Release layer is **~60% ready**
+→ 🎯 Output:
+
+> One reproducible example that clearly shows value
 
 ---
 
 ## 🚀 Next Milestones (REALISTIC ORDER)
 
-1. Create `run_nexah_demo.py` (SUPER IMPORTANT)
-2. Light IEEE118 control integration
-3. (Optional) introduce `nexah/core/` structure
-4. Polish START_HERE.md
+1. Build `run_nexah_demo.py` (**critical**)
+2. Finalize visual gallery
+3. Package IEEE demo
+4. (Optional) introduce `nexah/core/`
+5. Polish START_HERE.md
 
 ---
 
 ## 🧭 Final Target
 
-> **NEXAH** is a geometric state-space framework that extracts emergent structure from dynamical systems and enables navigation and adaptive control — without rewards or neural networks.
+> **NEXAH is a structural framework that extracts and navigates stability in dynamical systems through field geometry and trajectory alignment.**
 
 ---
 
@@ -86,17 +70,17 @@ Transition NEXAH from visual/intuitive geometry toward a
 
 You already have:
 
-- ✅ geometry  
-- ✅ visuals  
-- ✅ Lorenz navigation  
-- ✅ IEEE results (strong!)  
-- ✅ working control prototype  
+- ✅ Mathematical core (Coherence, Risk, Control)
+- ✅ Visual system (V1–V12)
+- ✅ Structured framework (META → MEVA)
+- ✅ IEEE experiments
+- ✅ Working control prototype
 
-What you need now is:
+You do NOT need:
 
-> **entry points + clarity + reproducibility**
-
-—not more theory.
+- ❌ more theory  
+- ❌ more modules  
+- ❌ more abstraction  
 
 ---
 
@@ -106,7 +90,7 @@ You are no longer building the core.
 
 You are now:
 
-> **productizing a research system**
+> **productizing a working research system**
 
 ---
 
@@ -114,19 +98,15 @@ You are now:
 
 👉 Build:
 
-```
 run_nexah_demo.py
-```
 
-One file that does:
+One clean script that shows:
 
 ```text
-Lorenz → visualize navigation
-IEEE9 → show control
-(optional) multi-agent demo
+dynamics → field → coherence → control → emergence
 ```
 
-→ This is your **"wow in 30 seconds" file**
+→ This is your "wow in 30 seconds" entry point
 
 ---
 
@@ -136,9 +116,9 @@ You don’t need more complexity.
 
 You need:
 
-> **one clean path through what already exists**
+> one clear path through what already exists
 
 ---
 
-**Last Updated:** April 14, 2026  
+Last Updated: April 2026  
 © Thomas K. R. Hofmann
