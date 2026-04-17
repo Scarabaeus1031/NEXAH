@@ -32,6 +32,15 @@ run(
 )
 
 # -----------------------------------
+# STEP 2 — Lorenz Field (Density)
+# -----------------------------------
+
+run(
+    "Lorenz Field (Chaos Density / Structure)",
+    "python APPLICATIONS/dynamical_systems/lorenz/landscapes/lorenz_density_map.py"
+)
+
+# -----------------------------------
 # OPTIONAL — IEEE (later)
 # -----------------------------------
 
