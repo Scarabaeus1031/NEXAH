@@ -160,6 +160,95 @@ This enables:
 > structured navigation within a chaotic system
 
 ---
+---
+
+# ⚡ System Capabilities
+
+NEXAH currently provides the following capabilities:
+
+---
+
+## Core Capabilities
+
+### Structure Extraction
+- reconstruct system geometry from dynamics  
+- identify attractors and basins  
+- detect regime boundaries  
+
+---
+
+### Signal Computation
+- coherence C(x) as alignment metric  
+- risk R(x) as stability indicator  
+- local trajectory behavior  
+
+---
+
+### Symbolic Representation
+- discretization into system states  
+- transition structure (state graph)  
+- pattern detection  
+
+---
+
+### Prediction
+- short-term state prediction  
+- probabilistic transition modeling  
+
+---
+
+### Control
+- trajectory shaping  
+- anticipatory stabilization  
+- risk-aware intervention  
+
+---
+
+### Meta-Control
+- dynamic strategy selection  
+- adaptive behavior modes  
+- uncertainty-aware control  
+
+---
+
+### Memory
+- state-dependent behavior  
+- sequence-aware decisions  
+- reward-based adaptation  
+
+---
+
+## System Behavior
+
+These components enable:
+
+- structured interpretation of chaotic systems  
+- local predictability  
+- adaptive control behavior  
+- navigation within stability regions  
+
+---
+
+## Application Domains
+
+- dynamical systems (Lorenz, attractors)  
+- power systems  
+- network dynamics  
+- multi-agent systems  
+
+---
+
+## 🔥 Core Statement
+
+NEXAH transforms:
+
+dynamics → structure → states → prediction → control → behavior  
+
+It enables systems to be:
+
+> interpreted, stabilized, and navigated within their intrinsic structure
+
+---
 
 # 🚀 Next Development Targets
 
