@@ -11,6 +11,25 @@ It is the single source for:
 
 ---
 
+## 🔗 Navigation Kernel
+
+The detailed navigation logic and operational architecture are defined in:
+
+👉 [`NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md`](NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md)
+
+This document specifies:
+
+- decision layers  
+- symbolic state representation  
+- prediction and meta-control  
+- memory and sequence behavior  
+
+While this document describes **what NEXAH is**,  
+the Navigation Kernel defines **how it moves and decides**.
+
+---
+
+
 # 🧠 Core Idea
 
 NEXAH is a structural navigation framework for complex dynamical systems.
