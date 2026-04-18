@@ -1,425 +1,189 @@
 # 💎 NEXAH Gems
 
-This document collects **critical insights, breakthroughs, and high-value components** that must not be lost.
+This document collects **critical insights, breakthroughs, and high-value components**.
 
 These are not todos.  
-These are **anchors of the system**.
+They are **anchors of the system**.
 
 ---
 
-# 🧭 GEM 001 — Discrete Navigator (State Graph Navigation Engine)
+# 🟢 CORE GEMS (IMPLEMENTED / VERIFIED)
+
+---
+
+## 🧭 GEM 001 — Discrete Navigator (State Graph Engine)
 
 ## Status
-✅ Implemented (moved from NAVIGATOR → `nexah/navigation/`)
+✅ Implemented
 
 ## Description
 
-A fully working **discrete navigation engine** operating on state graphs.
+A working **navigation engine on state graphs**:
 
-Pipeline:
-```text
-State Graph
-→ Regime Scoring
-→ Risk Distance
-→ Lookahead Evaluation
-→ Navigation Policy
-``
-## Core Idea
-
-Navigation is not random or reward-based.
-
-It is based on:
-```text
-- structural regimes
-- distance to risk
-- forward simulation (lookahead)
-- stability optimization
-```
----
-
-## Key Components
-
-### 1. Regime Scoring
-
-Maps system states to stability values:
-
-```text
-STABLE → high score
-TRANSITION → medium
-CRITICAL / COLLAPSE → negative
-```
-→ encodes system semantics into navigation
-
-⸻
-
-### 2. Risk Distance
-
-Breadth-first search (BFS):
-```text
-distance_to_nearest_risk(state)
-```
-→ gives early warning structure
-
-⸻
-
-### 3. Lookahead Evaluation
-
-Simulates future paths:
-```text
-evaluate_path(state, depth=5)
-```
-
-Score combines:
-- stability
-- distance to risk
-- hard penalty for collapse states
-
-→ this is proto-navigation intelligence
+State Graph  
+→ Regime Scoring  
+→ Risk Distance  
+→ Lookahead  
+→ Decision  
 
 ---
 
-### 4. Navigation Policy
+## Key Insight
 
-```text
-choose_next_state(current_state)
-```
+Navigation is based on:
 
-→ selects best next step based on full evaluation
-
----
-
-## Why this is important
-
-This is the **first real navigation implementation in NEXAH**.
-
-It already contains:
-
-- decision logic  
-- risk awareness  
-- trajectory evaluation  
-
-👉 This is NOT just theory anymore.
-
----
-
-## Connection to NEXAH Vision
-
-This maps directly to:
-
-structure → field → geometry → navigation
-
-This GEM implements:
-
-structure → navigation (discrete layer)
-
----
-
-## Next Step (Critical)
-
-Unify with continuous field navigation:
-
-discrete navigator (state graph)  
-+  
-continuous navigator (field layer)  
-=  
-full NEXAH navigation kernel  
-
----
-
-## Long-Term Role
-
-This will likely become:
-
-nexah/navigation/discrete_navigator.py
-
-And act as:
-
-- fallback navigation layer  
-- interpretable decision engine  
-- benchmark baseline  
-
----
-
----
-
-# 🧭 GEM 002 — IEEE Collapse Prediction (43.9s Lead Time)
-
-## Status
-✅ Validated
-
-## Description
-
-NEXAH detects collapse **before it happens**.
-
-- up to **43.9 seconds early**
-- based on structure + derivatives
-- not based on ML / rewards
-
----
-
-## Core Insight
-
-Collapse is not a sudden event.
-
-It is:
-
-a geometric transition in system dynamics
+- structure  
+- risk distance  
+- forward simulation  
 
 ---
 
 ## Importance
 
-- first real-world validation  
-- anchor for credibility  
-- must be referenced everywhere  
-
----
-
-## Next Step
-
-- integrate with navigation layer  
-- turn prediction into control  
+First **explicit navigation system** in NEXAH.
 
 ---
 
 ---
 
-# 🧭 GEM 003 — Grey Channel & Dual-Strand Structure
+## 🧭 GEM 002 — IEEE Collapse Detection
 
 ## Status
-✅ Observed + partially formalized
+⚠️ Observed, NOT fully validated
 
 ## Description
 
-System forms:
+Early detection signals observed in IEEE systems.
 
-- stable channel  
-- dual strands  
-- switch points  
+---
+
+## IMPORTANT CORRECTION
+
+Previous interpretation overstated reliability.
+
+Current understanding:
+
+- signal exists  
+- but is **not consistently reproducible yet**
+
+---
+
+## Importance
+
+Still critical — but must remain:
+
+> **experimental, not claimed**
+
+---
+
+---
+
+# 🟡 EXTENDED GEMS (STRUCTURAL OBSERVATIONS)
+
+---
+
+## 🧭 GEM 003 — Channel & Dual-Strand Structure
+
+## Status
+⚠️ Observed in Lorenz + visual systems
+
+## Description
+
+Systems exhibit:
+
+- channel-like motion  
+- dual trajectory strands  
+- transition regions  
 
 ---
 
 ## Interpretation
 
-channel = valid motion space  
-strand = directional flow  
-switch = regime transition  
+- channel = valid motion region  
+- strand = directional flow  
+- switch = regime transition  
 
 ---
 
 ## Importance
 
-This is the **geometry of navigation**.
+Strong candidate for:
 
----
-
-## Next Step
-
-- formalize mathematically  
-- connect to control policies  
+> geometric interpretation of navigation
 
 ---
 
 ---
 
-# 🧭 GEM 004 — Spiral Coupling (v9.x)
-
-## Status
-🧪 Experimental but strong
-
-## Description
-
-Triple system coupling:
-
-- Water  
-- Mercury  
-- Ferrofluid  
-
-Produces:
-
-- dual-strand stability  
-- rapid coherence convergence  
-- elastic coupling behavior  
+# 🟠 EXPERIMENTAL GEMS (DO NOT PROMOTE)
 
 ---
 
-## Insight
-
-Navigation may require:
-
-multi-component resonance coupling
-
----
-
-## Risk
-
-⚠️ Can drift into symbolic layer — must stay grounded
-
----
-
----
-
-# 🧭 GEM 005 — URF Axial Space / Root Bridge
+## 🧭 GEM 004 — Spiral Coupling
 
 ## Status
 🧪 Experimental
 
-## Description
-
-3D geometric reference system:
-
-- Root Cube  
-- Axial Space  
-- Bridge structure  
+## Risk
+High — must stay grounded in measurable behavior
 
 ---
 
-## Insight
-
-Navigation may require:
-
-embedding into stable geometry
-
 ---
+
+## 🧭 GEM 005 — Axial Space / Root Geometry
+
+## Status
+🧪 Experimental
 
 ## Rule
 
-⚠️ Do NOT mix into core math yet
+❗ Do NOT mix into core system yet
 
 ---
 
 ---
 
-# 🧭 GEM 006 — Modular Resonance Structure (mod 7 · mod 17 · Prime Fields)
+## 🧭 GEM 006 — Modular Resonance (mod / primes)
 
-## Status  
-🧪 Experimental but high potential
+## Status
+🧪 Experimental
 
-## Description
-
-Certain dynamical structures in NEXAH exhibit **unexpected regularity when projected into modular arithmetic spaces**.
-
-Key observations:
-
-- mod 7 and mod 17 reveal **hidden symmetry patterns**
-- prime-based projections expose **resonance-like structures**
-- system trajectories show **non-random clustering in modular space**
-
----
-
-## Core Idea
-
-System dynamics are not only continuous.
-
-They also contain:
-
-> **discrete resonance structures encoded in number space**
-
-This suggests a dual representation:
-
-```text
-continuous field (geometry)
-+
-discrete modular structure (arithmetic)
-```
-## Observed Effects
-
-- periodic clustering in mod-space  
-- symmetry breaking across primes  
-- stable vs unstable patterns aligning with residue classes  
-
----
-
-## Interpretation
-
-Modular spaces act as:
-
-- a projection layer for hidden structure  
-- a compression of dynamical behavior  
-- a possible resonance detector  
-
----
-
-## Importance
-
-This could provide:
-
-- a bridge between continuous dynamics and discrete structure  
-- a new method for feature extraction  
-- a way to detect hidden invariants in chaotic systems  
-
----
-
-## Connection to NEXAH
-
-This GEM connects to:
-
-- FIELD → continuous geometry  
-- GRAPH → discrete structure  
-- MODULAR → hidden resonance layer  
-
-```text
-structure → field → geometry → modular resonance → navigation
-```
 ## Risk
 
-⚠️ High risk of drifting into numerology if not grounded  
+⚠️ High risk of misinterpretation
 
 Must remain:
 
 - empirical  
-- reproducible  
-- connected to system behavior  
+- testable  
+- connected to dynamics  
 
 ---
-
-## Next Step
-
-- test systematically on Lorenz trajectories  
-- test on IEEE systems (feature projection)  
-- check correlation with:
-
-  - risk field  
-  - regime transitions  
-  - separatrix proximity  
-
----
-
-## Long-Term Role
-
-Potential new layer:
-
-FIELD  
-→ GEOMETRY  
-→ MODULAR STRUCTURE  
-→ NAVIGATION  
-
-This could become:
-
-- a hidden structure detector  
-- a feature compression mechanism  
-- or even a new class of navigation signal  
-
-
 
 ---
 
 # 🧭 GEM RULE
 
-If something feels like:
+Only promote a GEM to CORE if:
 
-- “this is important”  
-- “this explains everything”  
-- “this might be the key”  
+- it is reproducible  
+- it is measurable  
+- it is implemented or testable  
 
-👉 it goes HERE.
+---
 
-Not in random docs. Not in your head.
+# 🧠 FINAL INSIGHT
+
+This document is:
+
+> a **memory system for important ideas**
+
+Not all ideas are equal.
 
 ---
 
 **NEXAH Gems**  
 Structure is discovered.  
 Insights are preserved.  
-Navigation becomes possible.
-
+Only some become system.
