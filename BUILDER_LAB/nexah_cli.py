@@ -39,7 +39,7 @@ def run_explorer():
 
 
 def run_system_loader():
-    run_script(os.path.join(BASE_DIR, "auto_system_loader.py"))
+    run_script(os.path.join(BASE_DIR, "engines", "auto_system_loader.py"))
 
 
 def run_builder():
