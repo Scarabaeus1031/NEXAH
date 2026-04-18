@@ -1,12 +1,10 @@
 """
-NEXAH — Lorenz Meta Control v2 (Adaptive)
+NEXAH — Lorenz Meta Control v2 (Stable Adaptive)
 
-Goal:
-Self-adaptive control system that learns WHEN to intervene.
-
-Key Idea:
-Thresholds are NOT fixed.
-They evolve based on system behavior (risk feedback).
+FIXED VERSION:
+- prevents overflow
+- stabilizes control
+- keeps adaptive behavior
 """
 
 import numpy as np
@@ -31,13 +29,14 @@ def lorenz(x):
 
 
 # ==================================================
-# SIMULATION SETTINGS
+# SETTINGS
 # ==================================================
 
-dt = 0.01
+dt = 0.005   # 🔥 smaller timestep = more stable
 steps = 6000
 
 x = np.array([1.0, 1.0, 1.0])
+
 trajectory = []
 risk_list = []
 confidence_list = []
@@ -50,36 +49,43 @@ mode_list = []
 
 confidence_threshold = 0.9
 entropy_threshold = 0.5
-
-adapt_rate = 0.01
+adapt_rate = 0.005
 
 # ==================================================
-# HELPER FUNCTIONS
+# HELPERS
 # ==================================================
 
 def compute_risk(dx):
     return np.linalg.norm(dx)
 
 def compute_confidence(pred_state):
-    return 1.0 - (pred_state / 5.0)
+    return 1.0 - (pred_state / 6.0)
 
 def compute_entropy(prob_dist):
     p = prob_dist + 1e-8
     return -np.sum(p * np.log(p))
 
+def safe_clip(v, max_val=50):
+    return np.clip(v, -max_val, max_val)
 
 # ==================================================
-# MAIN LOOP
+# LOOP
 # ==================================================
 
 for i in range(steps):
 
     dx = lorenz(x)
 
-    # --- prediction proxy ---
+    # 🔥 CLAMP DERIVATIVE (VERY IMPORTANT)
+    dx = safe_clip(dx, 50)
+
+    # --- safe state extraction ---
+    if np.any(np.isnan(x)):
+        print("⚠️ Reset due to NaN")
+        x = np.array([1.0, 1.0, 1.0])
+
     pred_state = int(abs(x[0]) % 6)
 
-    # --- fake distribution (for entropy demo) ---
     probs = np.random.dirichlet(np.ones(6))
 
     confidence = compute_confidence(pred_state)
@@ -87,50 +93,57 @@ for i in range(steps):
     risk = compute_risk(dx)
 
     # ==================================================
-    # META CONTROL (ADAPTIVE)
+    # META CONTROL (SOFT VERSION)
     # ==================================================
+
+    control_strength = 0.0
+    mode = "none"
 
     if entropy > entropy_threshold:
+        control_strength = 0.6
         mode = "entropy"
-        control = -dx * 1.2
 
     elif confidence < confidence_threshold:
+        control_strength = 0.4
         mode = "uncertainty"
-        control = -dx * 0.8
 
     elif pred_state >= 4:
+        control_strength = 0.3
         mode = "predictive"
-        control = -dx * 0.5
 
     elif entropy > entropy_threshold * 0.6:
+        control_strength = 0.2
         mode = "stabilize"
-        control = -dx * 0.3
 
-    else:
-        mode = "none"
-        control = np.zeros(3)
+    # 🔥 SOFT CONTROL (key fix)
+    control = -dx * control_strength
+
+    # 🔥 CLAMP CONTROL
+    control = safe_clip(control, 20)
 
     # ==================================================
-    # ADAPTATION (KEY PART)
+    # ADAPTATION
     # ==================================================
 
-    if risk > 20:
-        # system unstable → increase control sensitivity
+    if risk > 25:
         confidence_threshold -= adapt_rate
         entropy_threshold -= adapt_rate
 
-    elif risk < 10:
-        # system stable → allow more freedom
+    elif risk < 12:
         confidence_threshold += adapt_rate
         entropy_threshold += adapt_rate
 
-    # clamp thresholds
     confidence_threshold = np.clip(confidence_threshold, 0.6, 0.95)
     entropy_threshold = np.clip(entropy_threshold, 0.2, 1.5)
 
     # ==================================================
+    # UPDATE (SAFE)
+    # ==================================================
 
-    x = x + (dx + control) * dt
+    step_update = (dx + control) * dt
+    step_update = safe_clip(step_update, 5)
+
+    x = x + step_update
 
     trajectory.append(x.copy())
     risk_list.append(risk)
@@ -141,27 +154,23 @@ for i in range(steps):
 trajectory = np.array(trajectory)
 
 # ==================================================
-# PLOTTING
+# PLOTS
 # ==================================================
 
 fig = plt.figure(figsize=(14, 10))
 
-# 3D trajectory
 ax = fig.add_subplot(221, projection='3d')
 ax.plot(trajectory[:,0], trajectory[:,1], trajectory[:,2])
-ax.set_title("Adaptive Meta-Control Trajectory")
+ax.set_title("Adaptive Meta-Control (Stable)")
 
-# XY projection
 ax2 = fig.add_subplot(222)
 ax2.plot(trajectory[:,0], trajectory[:,1])
 ax2.set_title("XY Path")
 
-# Risk
 ax3 = fig.add_subplot(223)
 ax3.plot(risk_list, color="red")
 ax3.set_title("Risk over Time")
 
-# Confidence + Entropy
 ax4 = fig.add_subplot(224)
 ax4.plot(confidence_list, label="Confidence")
 ax4.plot(entropy_list, label="Entropy")
@@ -176,11 +185,7 @@ plt.show()
 # OUTPUT
 # ==================================================
 
-print("\n--- META CONTROL v2 (ADAPTIVE) ---")
+print("\n--- META CONTROL v2 (STABLE) ---")
 print("Mean risk:", np.mean(risk_list))
 print("Max risk:", np.max(risk_list))
 print("Modes used:", set(mode_list))
-
-print("\nFinal thresholds:")
-print("Confidence threshold:", confidence_threshold)
-print("Entropy threshold:", entropy_threshold)
