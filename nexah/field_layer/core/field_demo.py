@@ -5,7 +5,7 @@ from nexah.field_layer.core.field import Field
 from nexah.field_layer.core.metrics import FieldMetrics
 
 
-# --- 1. Generate simple dynamical system (Lorenz-like) ---
+# --- 1. Generate Lorenz system ---
 def generate_lorenz(T=1000, dt=0.01):
     sigma, rho, beta = 10.0, 28.0, 8.0 / 3.0
 
@@ -28,31 +28,43 @@ field = Field(states)
 metrics = FieldMetrics(field)
 
 vectors = field.get_vector_field()
+
 flow_strength = metrics.flow_strength()
 curvature = metrics.curvature()
 variance = metrics.fragmentation()
 
+# --- 3. Simple Risk Model ---
+# minimal but meaningful combination
+risk = curvature * (flow_strength + 1e-6)
 
-# --- 3. Visualization ---
-fig, axs = plt.subplots(2, 2, figsize=(10, 8))
 
-# Trajectory (state space)
+# --- 4. Visualization ---
+fig, axs = plt.subplots(2, 3, figsize=(14, 8))
+
+# Trajectory
 axs[0, 0].plot(states[:, 0], states[:, 1], linewidth=0.8)
 axs[0, 0].set_title("State Trajectory (Lorenz projection)")
 axs[0, 0].set_xlabel("x")
 axs[0, 0].set_ylabel("y")
 
-# Flow strength
+# Flow
 axs[0, 1].plot(flow_strength)
 axs[0, 1].set_title("Flow Strength ||dx/dt||")
 
-# Curvature (acceleration proxy)
-axs[1, 0].plot(curvature)
-axs[1, 0].set_title("Acceleration (Curvature Proxy)")
+# Curvature
+axs[0, 2].plot(curvature)
+axs[0, 2].set_title("Curvature (Acceleration Proxy)")
 
-# Variance (fragmentation proxy)
-axs[1, 1].plot(variance)
-axs[1, 1].set_title("State Variance (Dispersion Proxy)")
+# Variance
+axs[1, 0].plot(variance)
+axs[1, 0].set_title("State Variance (Dispersion Proxy)")
+
+# Risk
+axs[1, 1].plot(risk)
+axs[1, 1].set_title("Risk Signal (Curvature × Flow)")
+
+# Empty (future use)
+axs[1, 2].axis("off")
 
 plt.tight_layout()
 plt.show()
