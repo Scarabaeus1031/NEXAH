@@ -1,5 +1,7 @@
 # 🧪 NEXAH Core Demos — Lorenz System
 
+![NEXAH Lorenz Field](outputs/lorenz_nexah_v12_final.png)
+
 This directory contains the core demonstration pipeline of **NEXAH**  
 using the Lorenz system as a foundational testbed.
 
@@ -13,6 +15,35 @@ It shows how a chaotic system evolves from:
 → meta-control  
 → memory  
 → sequence-aware behavior  
+
+---
+
+# 🧭 Core Pipeline
+```text
+Dynamics
+↓
+Structure
+↓
+States
+↓
+Symbols
+↓
+Sequences
+↓
+Patterns
+↓
+Prediction
+↓
+Control
+↓
+Meta-Control
+↓
+Memory
+↓
+Switching
+↓
+Behavior
+```
 
 ---
 
@@ -42,12 +73,14 @@ State memory → Sequence memory → Switch detection
 
 APPLICATIONS/core_demos/  
 ├── lorenz/  
-│   ├── *.py                → simulation scripts  
+│   ├── core/  
+│   ├── analysis/  
+│   ├── navigation/  
+│   ├── meta/  
+│   ├── legacy/  
+│   ├── docs/  
 │  
 ├── outputs/  
-│   ├── *.png              → generated visuals  
-│   ├── *.gif              → animations  
-│  
 └── README.md  
 
 ---
@@ -60,7 +93,7 @@ python APPLICATIONS/core_demos/lorenz/<script_name>.py
 
 Example:
 
-python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py  
+python APPLICATIONS/core_demos/lorenz/meta/lorenz_meta_control_v6_switch.py  
 
 ---
 
@@ -209,3 +242,4 @@ NEXAH reveals how to move within it.
 ---
 
 *NEXAH Core Demos · 2026*
+
