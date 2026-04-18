@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # =========================
 # 1. Lorenz System
@@ -31,19 +32,12 @@ def simulate(n_steps=5000, dt=0.01):
 # =========================
 
 def compute_metrics(traj, dt):
-    # velocity (dx/dt)
     v = np.gradient(traj, axis=0) / dt
-
-    # acceleration (d2x/dt2)
     a = np.gradient(v, axis=0) / dt
 
-    # flow strength
     flow = np.linalg.norm(v, axis=1)
-
-    # curvature (proxy)
     curvature = np.linalg.norm(a, axis=1)
 
-    # risk signal
     risk = flow * curvature
 
     return flow, curvature, risk
@@ -66,6 +60,12 @@ def detect_peaks(signal, threshold_factor=2.0):
 def main():
     print("Running Discovery Core V2...")
 
+    # create output folder
+    output_dir = "DISCOVERY_ENGINE/outputs"
+    os.makedirs(output_dir, exist_ok=True)
+
+    run_id = "run_001"
+
     traj = simulate()
     flow, curvature, risk = compute_metrics(traj, dt=0.01)
     peaks = detect_peaks(risk)
@@ -82,9 +82,14 @@ def main():
     ax1 = fig.add_subplot(121, projection='3d')
     ax1.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.6)
 
-    # mark transitions
-    ax1.scatter(traj[peaks,0], traj[peaks,1], traj[peaks,2],
-                color='red', s=5, label="Transitions")
+    ax1.scatter(
+        traj[peaks,0],
+        traj[peaks,1],
+        traj[peaks,2],
+        color='red',
+        s=5,
+        label="Transitions"
+    )
 
     ax1.set_title("Lorenz Trajectory + Transitions")
     ax1.legend()
@@ -99,9 +104,18 @@ def main():
     ax2.legend()
 
     plt.tight_layout()
+
+    # =========================
+    # 7. Save outputs
+    # =========================
+
+    plt.savefig(f"{output_dir}/lorenz_{run_id}.png", dpi=200)
+    np.save(f"{output_dir}/risk_{run_id}.npy", risk)
+    np.save(f"{output_dir}/peaks_{run_id}.npy", peaks)
+
+    print(f"Saved outputs to {output_dir}")
+
     plt.show()
-    plt.savefig("DISCOVERY_ENGINE/outputs/lorenz_core_run.png", dpi=200)
-    np.save("DISCOVERY_ENGINE/outputs/risk_signal.npy", risk)
 
 
 if __name__ == "__main__":
