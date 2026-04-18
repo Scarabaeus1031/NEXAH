@@ -69,6 +69,20 @@ State memory → Sequence memory → Switch detection
 
 ---
 
+# 🧠 Internal Structure (Example)
+
+![Meta Control Behavior](outputs/lorenz_meta_control_v6_switch.png)
+
+This visualization shows:
+
+- regime switching behavior  
+
+- adaptive control modes  
+
+- internal decision structure  
+
+---
+
 # 📁 Structure
 ```text
 APPLICATIONS/core_demos/  
