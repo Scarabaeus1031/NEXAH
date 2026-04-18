@@ -103,31 +103,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()    critical_points = find_critical_points(traj)
-
-    # 6. transitions
-    print("Detecting transitions...")
-    transitions = detect_transitions(traj)
-
-    # --- OUTPUT ---
-
-    print("\n--- RESULTS ---\n")
-
-    print(f"Trajectory length: {len(traj)}")
-    print(f"Mean risk: {np.mean(risk):.4f}")
-    print(f"Critical points found: {len(critical_points)}")
-    print(f"Transitions detected: {len(transitions)}")
-
-    # --- VISUALIZATION ---
-
-    fig = plt.figure(figsize=(10, 6))
-    ax = fig.add_subplot(111, projection='3d')
-
-    ax.plot(traj[:, 0], traj[:, 1], traj[:, 2], alpha=0.7)
-    ax.set_title("NEXAH Discovery Core — Trajectory")
-
-    plt.show()
-
-
-if __name__ == "__main__":
-    run()
+    main()
