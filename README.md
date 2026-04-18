@@ -64,6 +64,53 @@ it emerges from **trajectory alignment within structure**.
 
 ---
 
+## ✅ What is actually working (Prototype Status)
+
+NEXAH is not only conceptual — several components are already implemented and tested.
+
+### ✔ Implemented in the Lorenz system
+
+- structure extraction from chaotic dynamics  
+- symbolic state representation  
+- pattern detection and short-term prediction  
+- anticipatory control (trajectory shaping)  
+- adaptive meta-control (mode selection)  
+- memory (state + sequence dependent behavior)  
+- regime / transition detection (switch events)
+
+👉 This forms a **complete local navigation pipeline**:
+
+dynamics → states → prediction → control → adaptive behavior
+
+---
+
+### ✔ Observed behavior
+
+- chaotic trajectories become **partially predictable (locally)**  
+- control can **reduce instability without fixed targets**  
+- the system **adapts strategy based on context**  
+- transitions between regimes can be **detected and reacted to**
+
+---
+
+### ⚠️ Important
+
+- results are currently **prototype-level**  
+- behavior is **locally reliable, not globally predictive**  
+- validation across systems is **ongoing**
+
+---
+
+👉 Interpretation:
+
+> NEXAH demonstrates that chaotic systems can be  
+> **structured, partially predicted, and locally navigated**
+
+👉 See implementation:  
+`APPLICATIONS/core_demos/lorenz/`
+
+---
+
 ## 🌊 Field Structure (Concept)
 
 ![NEXAH Field Structure](FRAMEWORK/visuals/output/v6_risk_field.png)
@@ -148,7 +195,8 @@ Instead:
 
 The Lorenz module is the **primary reference system** for NEXAH.
 
-It demonstrates the full transformation:
+👉 This is not just visualization —  
+it is a working prototype of a navigation system in a chaotic environment.
 
 ---
 
@@ -180,8 +228,6 @@ It demonstrates the full transformation:
 ```text
 dynamics → structure → field → regimes → navigation
 ```
-
----
 
 ## 🔥 Core Insight
 
