@@ -1,325 +1,173 @@
 # DISCOVERY_ENGINE
 
-Tools for architecture exploration, resilience analysis and **dynamic structure discovery**.
-
-This folder contains the computational laboratory of NEXAH — a set of research tools that generate, evolve and analyze system architectures, simulate dynamic behavior, and extract **topological structure from flow**.
-
----
-
-## What you can do here
-
-- Generate and evolve system architectures  
-- Map resilience landscapes  
-- Detect phase transitions  
-- Discover structural laws  
-- Simulate dynamic systems  
-- Extract loops, channels, and networks from flow (**NEW**)  
-- Visualize complex dynamics  
-- Convert dynamic systems into **navigable state graphs (NEW)**  
+Computational laboratory for architecture exploration, resilience analysis,  
+and **dynamic structure discovery** in NEXAH.
 
 ---
 
-## Quick Start
+# 🔥 DISCOVERY CORE (ENTRY POINT)
 
-Most tools can be run directly:
-
-```bash
-python resilience_architecture_evolver.py
-python resilience_landscape.py
-python visualize_system.py
-```
-
-Dynamic navigation examples:
-
-```bash
-python ENGINE/analysis/navigation_level60_persistent_flow.py
-python ENGINE/analysis/navigation_level61_multi_loop_engine.py
-```
-
-Phase-space + topology extraction:
-
-```bash
-python pipelines/phase_map.py
-```
-
-→ **[Tool Capabilities & Pipeline](./TOOL_CAPABILITIES.md)**
+Minimal functional core for understanding how **dynamics generate transitions and structure**.
 
 ---
 
-## Tool Capabilities Highlights
-
-### Core
-
-- **Architecture Exploration** – generate and evolve thousands of system designs  
-- **Resilience Analysis** – evaluate stability and failure propagation  
-- **Landscape Mapping** – create 3D resilience landscapes and phase diagrams  
-- **Law Discovery** – search for universal structural principles  
-
----
-
-### Advanced (NEW)
-
-- **Dynamic System Simulation** – multi-agent field evolution  
-- **Resonance Detection** – φ-based transition behavior  
-- **Flow Structuring** – emergence of persistent trajectories  
-- **Topology Formation** – loops, knots, channels, networks  
-- **Topology Extraction** – explicit detection of structure from dynamics  
-- **Phase Space Mapping** – parameter-space exploration via grid sampling  
-- **Meta-Field Analysis** – unified structural intensity mapping  
-- **State Graph Conversion (NEW)** – transformation into navigable graphs  
-
----
-
-## Core Idea (Updated)
+## 🧠 Core Idea
 
 Traditional systems analysis asks:
 
 > Where are systems stable?
 
-NEXAH now asks:
+DISCOVERY asks:
 
-> **How do systems move, stabilize, and organize into connected structures?**
+> **Where and how do systems transition?**
 
 ---
 
-## System Evolution
-
-The framework has evolved into a multi-layer discovery engine:
+## 🔁 Core Pipeline
 
 ```
-Dynamics  
-→ Geometry  
-→ Resonance  
-→ Flow  
-→ Topology  
-→ Extraction  
-→ Navigation
+Dynamics
+→ Phase Space
+→ Risk Field
+→ Critical Points
+→ Transitions
+→ Structure
 ```
 
 ---
 
-## Key Discoveries
+## 📦 Core Modules
 
-The system demonstrates:
+### Phase Space
+- `phase/phase_space_map.py`
 
-- geometry emerging from dynamics  
-- resonance-driven state selection  
-- φ as an emergent transition operator  
-- flow organizing into persistent structures  
-- topology emerging from motion  
-- separation of density vs structural skeleton  
-- formation of loop–channel networks  
-- emergence of navigable phase-space structures  
+### Field Construction
+- `landscape/risk_landscape.py`
+- `landscape/resilience_landscape.py`
 
----
+### Core Analysis
+- `core_analysis/resilience_analyzer.py`
+- `core_analysis/resilience_critical_point_finder.py`
 
-## New Capability
+### Transitions
+- `phase/resilience_phase_transition_detector.py`
 
-The system can now:
+### Structural Extensions
+- `landscape/collapse_basin_map.py`
+- `landscape/global_resilience_map.py`
 
-> **extract and convert dynamic processes into navigable structural graphs**
-
-This includes:
-
-- loop detection  
-- channel extraction  
-- transition node identification  
-- network reconstruction  
-- phase-space mapping  
-- meta-field construction  
-- graph generation via adapters  
+### Law Discovery (Experimental)
+- `law_discovery/resilience_law_discovery.py`
+- `law_discovery/resilience_symbolic_law_finder.py`
 
 ---
 
-## New Tool Layer (Topology Extraction)
+## 🎯 Purpose
 
-Core modules:
-
-- `loop_detector.py`  
-- `channel_extractor.py`  
-- `transition_node_finder.py`  
-- `topology_builder.py`  
-- `topology_signature.py`  
-- `topology_classifier.py`  
-
-These tools transform:
-
-> simulation output → explicit structural representation  
+> **Do real transitions emerge from system dynamics?**
 
 ---
 
-## New Tool Layer (Phase & Meta Analysis)
+## ⚠️ Current Status
 
-- `phase_map.py`  
-- `phase_gradient.py`  
-- `phase_transition_detector.py`  
-- `topology_diversity.py`  
-- `flow_field.py`  
-- `basin_detector.py`  
-- `transition_overlay.py`  
-- `meta_field.py`  
-
-These tools enable:
-
-- phase space exploration  
-- detection of transition zones  
-- flow direction analysis  
-- basin / attractor identification  
-- unified meta-field construction  
+- ✔ Field construction works  
+- ✔ Structure emerges  
+- ❌ Transitions are weak or missing  
 
 ---
 
-## 🔷 NEW: Adapter Integration Layer
+## 🚧 Core Limitation
 
-The Discovery Engine now connects directly to the **NEXAH Adapter Layer**.
+The system is currently:
 
-This allows:
+> **too stable**
 
-> simulation → structure → graph → navigation
-
----
-
-### PhaseSpaceAdapter
-
-- converts phase-map outputs into state graphs  
-- each grid point becomes a state  
-- transitions derived from structural similarity and adjacency  
+→ no regime switching  
+→ weak transition signals  
+→ no meaningful navigation
 
 ---
 
-### Result
+## 🚀 Next Step
 
-> The Discovery Engine is no longer only analytical —  
-> it becomes a **generator of navigable systems**
+Introduce instability:
+
+- noise injection  
+- nonlinear coupling  
+- parameter expansion  
+
+→ to force real transitions
 
 ---
 
-## Navigation Pipeline (Extended)
+## 🧠 Core Insight
+
+Without transitions:
+
+> no structure change  
+> no decision  
+> no navigation  
+
+---
+
+# 🧪 FULL DISCOVERY ENGINE
+
+Beyond the core, this folder contains:
+
+- architecture generation  
+- resilience analysis  
+- phase-space exploration  
+- topology extraction  
+- law discovery  
+- visualization tools  
+
+---
+
+## Capabilities
+
+- Generate and evolve architectures  
+- Map resilience landscapes  
+- Detect phase transitions  
+- Discover structural laws  
+- Simulate dynamic systems  
+- Extract topology from flow  
+- Convert systems into navigable graphs  
+
+---
+
+## Pipeline
 
 ```
 Architecture  
-↓  
-Evolution  
-↓  
-Analysis  
-↓  
-Landscape Mapping  
-↓  
-Phase Detection  
-↓  
-Law Discovery  
-↓  
-Validation  
-↓  
-Dynamics Simulation  
-↓  
-Resonance Formation  
-↓  
-Flow Structuring  
-↓  
-Topology Formation  
-↓  
-Topology Extraction  
-↓  
-Graph Construction  
-↓  
-Navigation
+→ Evolution  
+→ Analysis  
+→ Landscape  
+→ Phase Detection  
+→ Law Discovery  
+→ Validation  
+→ Dynamics  
+→ Flow  
+→ Topology  
+→ Graph  
+→ Navigation
 ```
 
 ---
 
 ## Interpretation
 
-The system is no longer only analyzing structures.
+The system is not only analyzing structures.
 
 It is:
 
-> **generating, evolving, extracting, and converting structure into navigable systems**
+> **generating, extracting, and transforming structure into navigable systems**
 
 ---
 
-## System Architecture
+## 🔬 Key Insight
 
-![NEXAH Discovery Engine](visuals/nexah_kernel_architecture_map.png)
-
-This visual shows the **core architecture of the NEXAH Discovery Engine**.
-
-### Core Layers
-
-- **META** – relational system structure  
-- **ARCHY** – local dynamics modeling  
-- **MESO** – stability and risk landscapes  
-- **MEVA** – intervention strategies  
-
-### Extended Layers
-
-- **DYNAMICS** – multi-agent flow evolution  
-- **TOPOLOGY** – loop/channel network emergence  
-- **PHASE SPACE** – parameter exploration  
-- **META FIELD** – unified structural field  
-- **GRAPH LAYER** – navigation-ready representation  
-
----
-
-## 🔥 Key Insight (Updated)
-
-> Systems are not static objects —  
-> they are **flows that organize into structure  
-> and can be navigated through transitions**
-
----
-
-## 🚧 TO DO / NEXT STEPS
-
-### 🔴 Phase System
-
-- introduce instability / chaos into phase_map  
-- generate real phase transitions  
-- expand parameter space (beyond orbit + helix)  
-- break "uniform Structured Network" regime  
-
----
-
-### 🟠 Topology & Graph
-
-- replace linear graph connections with spatial adjacency  
-- introduce weighted transitions  
-- integrate flow direction into graph edges  
-- represent basins as attractor nodes  
-
----
-
-### 🔵 Meta Layer
-
-- refine meta_field weighting  
-- validate basin detection robustness  
-- identify stable vs unstable regions  
-- link meta-field to navigation decisions  
-
----
-
-### 🟢 Adapter & Navigation
-
-- improve PhaseSpaceAdapter (true phase transitions)  
-- connect real-world systems (power grid, traffic, compute)  
-- build policy layer for system control  
-- enable intervention strategies  
-
----
-
-### 🟣 Control Layer (Next Major Milestone)
-
-- action selection system  
-- transition steering  
-- stability optimization  
-- collapse prevention  
-
----
-
-## Want to go deeper?
-
-→ **[Tool Capabilities & Pipeline](./TOOL_CAPABILITIES.md)**  
-→ **[Extended Documentation](./README_extended.md)**  
+> Systems are flows that organize into structure  
+> and can be navigated through transitions
 
 ---
 
