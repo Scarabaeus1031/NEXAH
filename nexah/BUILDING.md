@@ -1,292 +1,249 @@
-# NEXAH Navigation Kernel — Building Plan (Updated)
+# 🧱 NEXAH — Building Plan
 
-This document outlines the architecture and development path of the  
-**NEXAH Navigation Kernel**.
+This document defines the current state and development path of the  
+**NEXAH Core System**.
 
-It defines:
+It answers:
 
-- what the kernel does  
-- which layers it consists of  
-- what already exists  
-- what is missing  
-- how to transition toward an operational navigation system  
-
----
-
-## 1. Current Status
-
-NEXAH already provides a **functional navigation pipeline** in the Lorenz system.
-
-Strong existing components:
-
-- field extraction  
-- coherence metric C(x)  
-- risk field R(x)  
-- trajectory dynamics  
-- regime structure (basins, transitions)  
-- symbolic state representation  
-- pattern detection and prediction  
-- control and meta-control  
-- memory and sequence awareness  
-
-This means:
-
-> the system does not only detect structure —  
-> it can already perform **local navigation and decision-making**
+- what currently exists  
+- what has been observed  
+- what is still unclear  
+- what the next steps are  
 
 ---
 
-### What exists
+## 1. Current Position
 
-- structured vector field F(x)  
-- coherence as alignment signal  
-- risk as stability metric  
-- implicit basins and transition zones  
-- symbolic state space  
-- transition structure (state graph)  
-- local prediction capability  
-- control (trajectory shaping)  
-- meta-control (mode selection)  
-- memory (state + sequence)  
+NEXAH currently provides a **prototype pipeline** demonstrated in the Lorenz system.
 
----
-
-### What is missing
-
-- unified kernel abstraction  
-- clean separation of layers (field / signal / decision / action)  
-- standardized interface (API-like usage)  
-- reproducibility layer (metrics across runs)  
-- explicit connection to real-world systems (IEEE integration)  
-
----
-
-## 2. Guiding Idea
-
-The navigation kernel is not a classical controller.
-
-It implements:
-
-> movement through a system based on its **structure, states, and trajectory alignment**
-
-Core principles:
-
-- the field defines geometry  
-- states define discrete structure  
-- coherence defines alignment  
-- risk defines instability  
-- transitions define behavior  
-- control shapes motion within structure  
-- navigation remains interpretable  
-
----
-
-## 3. Conceptual Pipeline (UPDATED)
+This pipeline connects:
 
 ```text
-dynamics → structure → states → patterns → prediction → control → meta-control → behavior
+dynamics → field → metrics → signal → behavior
 ```
-
-## 4. Architectural Target
-
-The Navigation Kernel consists of four core layers:
-
----
-
-### 4.1 Field Layer
-
-Provides the geometric structure:
-
-- vector field F(x)  
-- attractors and basins  
-- flow directions  
-- separatrix / regime boundaries  
-
----
-
-### 4.2 Signal Layer
-
-Extracts interpretable quantities:
-
-- coherence C(x)  
-- risk R(x)  
-- trajectory curvature  
-- drift direction  
-- distance to stability region  
-
----
-
-### 4.3 Decision Layer
-
-Defines navigation logic:
-
-- symbolic states  
-- transition probabilities  
-- pattern recognition  
-- prediction of next state  
-- meta-control (mode selection)  
-- memory (state / sequence dependent behavior)  
-
----
-
-### 4.4 Action Layer
-
-Executes movement:
-
-- control input u(x)  
-- trajectory correction  
-- stabilization  
-- directional steering  
-
----
-
-## 5. Development Roadmap
-
-### Phase A — Field & Structure ✔
-
-- vector field extraction  
-- stability landscape  
-- regime geometry  
-
----
-
-### Phase B — Signal Definition ✔
-
-- coherence  
-- risk  
-- trajectory metrics  
-
----
-
-### Phase C — Control Prototype ✔
-
-- basic trajectory shaping  
-- local stabilization  
-
----
-
-### Phase D — Symbolic Layer ✔ (NEW)
-
-- state discretization  
-- transition structure  
-- pattern detection  
-
----
-
-### Phase E — Decision & Meta-Control ✔ (NEW)
-
-- prediction  
-- policy selection  
-- adaptive mode switching  
-- memory (state + sequence)  
-
----
-
-### Phase F — Kernel Integration (CURRENT)
-
-- unify all layers  
-- define reusable kernel abstraction  
-- connect to minimal demo interface  
-
----
-
-### Phase G — Reproducibility & Validation (NEXT)
-
-- multiple runs  
-- metric comparison  
-- baseline vs NEXAH  
-
----
-
-### Phase H — Real System Integration (LATER)
-
-- connect Lorenz ↔ IEEE  
-- test under noise / partial observability  
-- validate robustness  
-
----
-
-## 6. Current System Interpretation
-
-NEXAH currently behaves as:
-
-> a structure-aware system capable of local prediction, decision-making, and adaptive control
 
 Observed:
 
-- structured state transitions  
-- local predictability  
-- risk-aware behavior  
-- adaptive control modes  
-- memory-dependent decisions  
+* local structure can be extracted from chaotic dynamics
+* simple field-based metrics produce interpretable signals
+* signals correlate with trajectory transitions
+* basic trajectory shaping (control) is possible
 
-Limitation:
+👉 Important:
 
-- no unified kernel interface  
-- no standardized evaluation  
-- limited validation across systems  
+This is experimental validation, not a generalized solution.
 
 ---
 
-## 7. Key Insight
+## 2. What Actually Exists (Implemented)
 
-Coherence and Risk define navigation space:
+### Field Layer
 
-- high coherence → aligned motion  
-- high risk → instability  
-- transitions → regime boundaries  
+* time series → vector field (dx/dt)
+* local flow representation
 
-States and patterns extend this:
+### Metrics
 
-- states define discrete structure  
-- patterns define temporal behavior  
-- prediction enables anticipation  
-- meta-control enables adaptation  
+* flow strength (‖dx/dt‖)
+* acceleration (second derivative proxy)
+* simple structural indicators
 
-This enables:
+### Signal (Prototype)
 
-> navigation as structured, state-aware movement within a dynamical system
+* combined signal:
 
----
+```text
+risk ≈ curvature × flow_strength
+```
 
-## 8. Immediate Next Step
+### Behavior (Lorenz Demo)
 
-- unify layers into a minimal kernel  
-- define simple interface:
-
-state → signals → decision → action
-
-- integrate into:
-
-run_nexah_demo.py
-
-- add minimal metrics (risk, stability)
+* local predictability (short horizon)
+* regime-like transitions
+* observable response to control input
 
 ---
 
-## 9. Summary
+## 3. Observed Behavior
 
-The Navigation Kernel evolves through:
+Across experiments (Lorenz):
 
-dynamics → structure → states → patterns → prediction → control → behavior
+* signals produce sparse high-intensity peaks  
+* peaks align with:
+  * rapid trajectory changes  
+  * transitions between regions  
+  * deformation of local flow  
 
-Current position:
+👉 Interpretation:
 
-- structure ✔  
-- field ✔  
-- states ✔  
-- patterns ✔  
-- prediction ✔  
-- control ✔  
-- meta-control ✔  
-- memory ✔  
-- navigation ✔ (local, emergent)  
-- kernel abstraction ❌  
+local flow changes contain information about structural transitions  
+
+---
+
+## 4. What is NOT yet proven
+
+* robustness across systems  
+* stability under noise  
+* general validity of the risk signal  
+* consistency across parameter changes  
+* transfer to real-world systems  
+
+👉 Therefore:
+
+NEXAH is currently a validated prototype in a controlled system  
+
+---
+
+## 5. Guiding Idea
+
+NEXAH explores:
+
+**whether system dynamics can be interpreted as a navigable field**
+
+Core hypothesis:
+
+* systems evolve as trajectories in structured spaces  
+* local dynamics encode transition information  
+* movement can be guided using structural signals  
+
+---
+
+## 6. Minimal System View (IMPORTANT)
+
+At its core, NEXAH is:
+
+```text
+state → field → signal → (optional) action
+```
+
+Not:
+
+* a full controller  
+* not a complete framework  
+* not a general solution  
+
+👉 Just a minimal working loop  
+
+---
+
+## 7. Development Strategy
+
+### Phase 1 — Signal Validation (CURRENT FOCUS)
+
+Goal:
+
+determine whether the observed signal is real and robust  
+
+Steps:
+
+* vary Lorenz parameters  
+* introduce noise  
+* repeat runs  
+* compare signal behavior  
+
+---
+
+### Phase 2 — Cross-System Testing
+
+Goal:
+
+test if behavior generalizes  
+
+Systems:
+
+* Lorenz (baseline)  
+* second dynamical system (e.g. Van der Pol / Rössler)  
+
+---
+
+### Phase 3 — Minimal Control
+
+Goal:
+
+test whether the signal enables intervention  
+
+Example:
+
+```python
+if risk > threshold:
+    adjust trajectory slightly
+```
+
+Observation:
+
+* does stability improve?  
+* does behavior change meaningfully?  
+
+---
+
+### Phase 4 — Integration (LATER)
+
+Only after validation:
+
+* connect field → signal → navigation  
+* define reusable interfaces  
+* extract core modules  
+
+---
+
+## 8. What is NOT the focus (yet)
+
+* full architecture  
+* API design  
+* packaging  
+* large abstractions  
+* production readiness  
+
+👉 These come after validation  
+
+---
+
+## 9. Role of `nexah/`
+
+The `nexah/` package currently represents:
+
+* minimal reusable components  
+* field construction  
+* basic navigation logic  
+
+It is not yet a complete system, but:
+
+a collection of building blocks for the core loop  
+
+---
+
+## 10. Immediate Next Step
+
+Focus exclusively on:
+
+```text
+FIELD → SIGNAL → VALIDATION
+```
+
+Concrete:
+
+* test robustness of the risk signal  
+* document behavior  
+* compare across runs  
 
 ---
 
 ## 🧠 Final Insight
 
-The system already knows how to move.
+The key question is not:
 
-> The kernel will make this movement explicit, reusable, and testable.
+“Does NEXAH work?”
+
+but:
+
+“Is the observed signal a real structural property of dynamics?”
+
+---
+
+## 🌀 Working Principle
+
+You are not building a framework.
+
+You are testing whether:
+
+dynamics can be navigated through their own structure
