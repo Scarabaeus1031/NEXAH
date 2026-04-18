@@ -1,69 +1,109 @@
-"""
-NEXAH — Discovery Core Runner
-
-Minimal executable pipeline to test:
-
-Dynamics → Phase → Risk → Structure → Transitions
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 
-# --- IMPORTS FROM CORE ---
+# =========================
+# 1. Lorenz System
+# =========================
 
-from phase.phase_space_map import generate_phase_space
-from landscape.risk_landscape import compute_risk_field
-from core_analysis.resilience_analyzer import analyze_system
-from core_analysis.resilience_critical_point_finder import find_critical_points
-from phase.resilience_phase_transition_detector import detect_transitions
-
-
-# --- SIMPLE TEST SYSTEM (Lorenz-like) ---
-
-def lorenz_step(x, sigma=10, rho=28, beta=8/3):
-    dx = sigma * (x[1] - x[0])
-    dy = x[0] * (rho - x[2]) - x[1]
-    dz = x[0] * x[1] - beta * x[2]
+def lorenz(x, y, z, sigma=10, rho=28, beta=8/3):
+    dx = sigma * (y - x)
+    dy = x * (rho - z) - y
+    dz = x * y - beta * z
     return np.array([dx, dy, dz])
 
 
-def simulate(system_fn, steps=2000, dt=0.01):
-    x = np.array([1.0, 1.0, 1.0])
-    traj = []
+# =========================
+# 2. Simulation
+# =========================
 
-    for _ in range(steps):
-        dx = system_fn(x)
-        x = x + dt * dx
-        traj.append(x.copy())
+def simulate(n_steps=5000, dt=0.01):
+    traj = np.zeros((n_steps, 3))
+    traj[0] = np.array([1.0, 1.0, 1.0])
 
-    return np.array(traj)
+    for i in range(n_steps - 1):
+        traj[i+1] = traj[i] + dt * lorenz(*traj[i])
+
+    return traj
 
 
-# --- PIPELINE ---
+# =========================
+# 3. Field + Signal
+# =========================
 
-def run():
+def compute_metrics(traj, dt):
+    # velocity (dx/dt)
+    v = np.gradient(traj, axis=0) / dt
 
-    print("\n--- NEXAH DISCOVERY CORE ---\n")
+    # acceleration (d2x/dt2)
+    a = np.gradient(v, axis=0) / dt
 
-    # 1. simulate dynamics
-    print("Simulating system...")
-    traj = simulate(lorenz_step)
+    # flow strength
+    flow = np.linalg.norm(v, axis=1)
 
-    # 2. phase space
-    print("Generating phase space...")
-    phase = generate_phase_space(traj)
+    # curvature (proxy)
+    curvature = np.linalg.norm(a, axis=1)
 
-    # 3. risk field
-    print("Computing risk field...")
-    risk = compute_risk_field(traj)
+    # risk signal
+    risk = flow * curvature
 
-    # 4. analysis
-    print("Running analysis...")
-    analysis = analyze_system(traj)
+    return flow, curvature, risk
 
-    # 5. critical points
-    print("Detecting critical points...")
-    critical_points = find_critical_points(traj)
+
+# =========================
+# 4. Transition Detection
+# =========================
+
+def detect_peaks(signal, threshold_factor=2.0):
+    threshold = np.mean(signal) * threshold_factor
+    peaks = np.where(signal > threshold)[0]
+    return peaks
+
+
+# =========================
+# 5. Main Runner
+# =========================
+
+def main():
+    print("Running Discovery Core V2...")
+
+    traj = simulate()
+    flow, curvature, risk = compute_metrics(traj, dt=0.01)
+    peaks = detect_peaks(risk)
+
+    print(f"Detected {len(peaks)} high-risk transition points")
+
+    # =========================
+    # 6. Visualization
+    # =========================
+
+    fig = plt.figure(figsize=(12, 6))
+
+    # Trajectory
+    ax1 = fig.add_subplot(121, projection='3d')
+    ax1.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.6)
+
+    # mark transitions
+    ax1.scatter(traj[peaks,0], traj[peaks,1], traj[peaks,2],
+                color='red', s=5, label="Transitions")
+
+    ax1.set_title("Lorenz Trajectory + Transitions")
+    ax1.legend()
+
+    # Risk signal
+    ax2 = fig.add_subplot(122)
+    ax2.plot(risk, label="Risk Signal")
+
+    ax2.scatter(peaks, risk[peaks], color='red', s=10)
+
+    ax2.set_title("Risk Signal (flow × curvature)")
+    ax2.legend()
+
+    plt.tight_layout()
+    plt.show()
+
+
+if __name__ == "__main__":
+    main()    critical_points = find_critical_points(traj)
 
     # 6. transitions
     print("Detecting transitions...")
