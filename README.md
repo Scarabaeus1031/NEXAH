@@ -119,7 +119,7 @@ The visualization pipeline includes:
 > The V1–V12 sequence documents the progressive emergence of navigation behavior.
 
 ---
-
+  
 ## 🎬 Visual System — From Dynamics to Navigation
 
 👉 [Full Lorenz Gallery → APPLICATIONS/core_demos/lorenz/FRAMEWORK_visual_gallery.md](APPLICATIONS/core_demos/lorenz/FRAMEWORK_visual_gallery.md)
@@ -139,6 +139,16 @@ V12       → Field-Level Navigation
 Instead:
 
 > they are navigated within their stability field  
+
+---
+
+## 🧪 Core Demonstration — Lorenz System (NEXAH Engine)
+
+![Lorenz Meta-Control](APPLICATIONS/core_demos/lorenz/outputs/lorenz_meta_control_v6_switch.png)
+
+The Lorenz module is the **primary reference system** for NEXAH.
+
+It demonstrates the full transformation:
 
 ---
 
