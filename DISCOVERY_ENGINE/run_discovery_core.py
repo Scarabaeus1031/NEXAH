@@ -44,13 +44,29 @@ def compute_metrics(traj, dt):
 
 
 # =========================
-# 4. Transition Detection
+# 4. EVENT DETECTION (NEW)
 # =========================
 
-def detect_peaks(signal, threshold_factor=2.0):
+def detect_events(signal, threshold_factor=2.0):
     threshold = np.mean(signal) * threshold_factor
-    peaks = np.where(signal > threshold)[0]
-    return peaks
+
+    above = signal > threshold
+
+    events = []
+    current = []
+
+    for i, val in enumerate(above):
+        if val:
+            current.append(i)
+        else:
+            if current:
+                events.append(current)
+                current = []
+
+    if current:
+        events.append(current)
+
+    return events
 
 
 # =========================
@@ -58,9 +74,9 @@ def detect_peaks(signal, threshold_factor=2.0):
 # =========================
 
 def main():
-    print("Running Discovery Core V2...")
+    print("Running Discovery Core V3...")
 
-    # create output folder
+    # ensure output folder exists
     output_dir = "DISCOVERY_ENGINE/outputs"
     os.makedirs(output_dir, exist_ok=True)
 
@@ -68,9 +84,13 @@ def main():
 
     traj = simulate()
     flow, curvature, risk = compute_metrics(traj, dt=0.01)
-    peaks = detect_peaks(risk)
 
-    print(f"Detected {len(peaks)} high-risk transition points")
+    events = detect_events(risk)
+
+    # event centers (for plotting)
+    centers = [int(np.mean(e)) for e in events]
+
+    print(f"Detected {len(events)} transition events")
 
     # =========================
     # 6. Visualization
@@ -83,22 +103,22 @@ def main():
     ax1.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.6)
 
     ax1.scatter(
-        traj[peaks,0],
-        traj[peaks,1],
-        traj[peaks,2],
+        traj[centers,0],
+        traj[centers,1],
+        traj[centers,2],
         color='red',
-        s=5,
-        label="Transitions"
+        s=20,
+        label="Events"
     )
 
-    ax1.set_title("Lorenz Trajectory + Transitions")
+    ax1.set_title("Lorenz Trajectory + Events")
     ax1.legend()
 
     # Risk signal
     ax2 = fig.add_subplot(122)
     ax2.plot(risk, label="Risk Signal")
 
-    ax2.scatter(peaks, risk[peaks], color='red', s=10)
+    ax2.scatter(centers, risk[centers], color='red', s=20)
 
     ax2.set_title("Risk Signal (flow × curvature)")
     ax2.legend()
@@ -111,7 +131,7 @@ def main():
 
     plt.savefig(f"{output_dir}/lorenz_{run_id}.png", dpi=200)
     np.save(f"{output_dir}/risk_{run_id}.npy", risk)
-    np.save(f"{output_dir}/peaks_{run_id}.npy", peaks)
+    np.save(f"{output_dir}/events_{run_id}.npy", centers)
 
     print(f"Saved outputs to {output_dir}")
 
