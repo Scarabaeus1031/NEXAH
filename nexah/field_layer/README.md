@@ -187,6 +187,63 @@ Core components:
 
 ---
 
+## 🔬 Empirical Observation (Minimal Validation)
+
+A simple FIELD-based experiment (Lorenz system) shows that basic structural metrics already reveal meaningful dynamics.
+
+Using:
+
+- flow strength (‖dx/dt‖)  
+- acceleration (finite-difference curvature proxy)  
+
+a simple combined signal can be constructed:
+
+```text
+risk ∼ curvature × flow_strength
+```
+
+### Observed behavior
+
+- the signal produces sparse, high-intensity peaks  
+- peaks occur only at specific moments in time  
+- these moments correspond to:
+  - rapid trajectory changes  
+  - transitions between dynamical regions  
+  - strong local deformation of system flow  
+
+---
+
+### Interpretation
+
+This suggests:
+
+> even simple FIELD-based metrics can highlight  
+> structurally significant events in system dynamics  
+
+Importantly:
+
+- the signal is not continuous noise  
+- it does not require thresholds or labels  
+- it emerges directly from local flow geometry  
+
+---
+
+### Limitations
+
+- this is a first-order indicator, not a validated risk model  
+- behavior is currently observed on simple systems (e.g. Lorenz)  
+- further validation across real-world systems is required  
+
+---
+
+👉 This experiment demonstrates that:
+
+> structural changes in dynamics can be detected directly from the field representation
+
+
+
+
+---
 ## Status
 
 Current state:
