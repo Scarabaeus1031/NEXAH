@@ -5,7 +5,7 @@ This document outlines the architecture and development path of the
 
 It defines:
 
-- what the kernel should do  
+- what the kernel does  
 - which layers it consists of  
 - what already exists  
 - what is missing  
@@ -15,42 +15,49 @@ It defines:
 
 ## 1. Current Status
 
-NEXAH already provides the structural foundation required for navigation.
+NEXAH already provides a **functional navigation pipeline** in the Lorenz system.
 
 Strong existing components:
 
 - field extraction  
-- coherence metric $begin:math:text$ C\(x\) $end:math:text$  
-- risk field $begin:math:text$ R\(x\) $end:math:text$  
+- coherence metric C(x)  
+- risk field R(x)  
 - trajectory dynamics  
 - regime structure (basins, transitions)  
-- multi-agent emergence (V10–V12)
+- symbolic state representation  
+- pattern detection and prediction  
+- control and meta-control  
+- memory and sequence awareness  
 
 This means:
 
-> the system already detects structure, alignment, and instability —  
-> but does not yet perform explicit navigation.
+> the system does not only detect structure —  
+> it can already perform **local navigation and decision-making**
 
 ---
 
 ### What exists
 
-- structured vector field $begin:math:text$ F\(x\) $end:math:text$  
+- structured vector field F(x)  
 - coherence as alignment signal  
 - risk as stability metric  
 - implicit basins and transition zones  
-- trajectory evolution  
-- early-stage control (prototype)
+- symbolic state space  
+- transition structure (state graph)  
+- local prediction capability  
+- control (trajectory shaping)  
+- meta-control (mode selection)  
+- memory (state + sequence)  
 
 ---
 
 ### What is missing
 
-- explicit decision-making  
-- navigation policies  
-- goal-directed movement  
-- robust collapse avoidance  
 - unified kernel abstraction  
+- clean separation of layers (field / signal / decision / action)  
+- standardized interface (API-like usage)  
+- reproducibility layer (metrics across runs)  
+- explicit connection to real-world systems (IEEE integration)  
 
 ---
 
@@ -60,26 +67,25 @@ The navigation kernel is not a classical controller.
 
 It implements:
 
-> movement through a system based on its **field geometry and trajectory alignment**
+> movement through a system based on its **structure, states, and trajectory alignment**
 
 Core principles:
 
-- the field is primary  
+- the field defines geometry  
+- states define discrete structure  
 - coherence defines alignment  
 - risk defines instability  
-- trajectories define behavior  
+- transitions define behavior  
 - control shapes motion within structure  
-- navigation must remain interpretable  
+- navigation remains interpretable  
 
 ---
 
-## 3. Conceptual Pipeline
+## 3. Conceptual Pipeline (UPDATED)
 
 ```text
-dynamics → field → coherence → risk → trajectory → control → navigation
+dynamics → structure → states → patterns → prediction → control → meta-control → behavior
 ```
-
----
 
 ## 4. Architectural Target
 
@@ -91,7 +97,7 @@ The Navigation Kernel consists of four core layers:
 
 Provides the geometric structure:
 
-- vector field $begin:math:text$ F\(x\) $end:math:text$  
+- vector field F(x)  
 - attractors and basins  
 - flow directions  
 - separatrix / regime boundaries  
@@ -102,8 +108,8 @@ Provides the geometric structure:
 
 Extracts interpretable quantities:
 
-- coherence $begin:math:text$ C\(x\) $end:math:text$  
-- risk $begin:math:text$ R\(x\) $end:math:text$  
+- coherence C(x)  
+- risk R(x)  
 - trajectory curvature  
 - drift direction  
 - distance to stability region  
@@ -114,11 +120,12 @@ Extracts interpretable quantities:
 
 Defines navigation logic:
 
-- remain in stable region vs exit  
-- reduce risk  
-- maintain coherence  
-- detect transitions  
-- select movement direction  
+- symbolic states  
+- transition probabilities  
+- pattern recognition  
+- prediction of next state  
+- meta-control (mode selection)  
+- memory (state / sequence dependent behavior)  
 
 ---
 
@@ -126,7 +133,7 @@ Defines navigation logic:
 
 Executes movement:
 
-- control input $begin:math:text$ u\(x\) $end:math:text$  
+- control input u(x)  
 - trajectory correction  
 - stabilization  
 - directional steering  
@@ -158,27 +165,44 @@ Executes movement:
 
 ---
 
-### Phase D — Navigation Logic (CURRENT)
+### Phase D — Symbolic Layer ✔ (NEW)
 
-- coherence-driven steering  
-- risk-aware movement  
-- basic policies  
-
----
-
-### Phase E — Kernel Integration (NEXT)
-
-- unify field + signals + control  
-- define reusable kernel interface  
-- connect to demo system  
+- state discretization  
+- transition structure  
+- pattern detection  
 
 ---
 
-### Phase F — Advanced Navigation (LATER)
+### Phase E — Decision & Meta-Control ✔ (NEW)
 
-- multi-agent coordination  
-- adaptive policies  
-- higher-dimensional extensions  
+- prediction  
+- policy selection  
+- adaptive mode switching  
+- memory (state + sequence)  
+
+---
+
+### Phase F — Kernel Integration (CURRENT)
+
+- unify all layers  
+- define reusable kernel abstraction  
+- connect to minimal demo interface  
+
+---
+
+### Phase G — Reproducibility & Validation (NEXT)
+
+- multiple runs  
+- metric comparison  
+- baseline vs NEXAH  
+
+---
+
+### Phase H — Real System Integration (LATER)
+
+- connect Lorenz ↔ IEEE  
+- test under noise / partial observability  
+- validate robustness  
 
 ---
 
@@ -186,19 +210,21 @@ Executes movement:
 
 NEXAH currently behaves as:
 
-> a structure-aware dynamical system with interpretable stability signals
+> a structure-aware system capable of local prediction, decision-making, and adaptive control
 
 Observed:
 
-- high coherence in stable regions  
-- clear risk gradients  
-- structured trajectory behavior  
-- emergent coordination (multi-agent)
+- structured state transitions  
+- local predictability  
+- risk-aware behavior  
+- adaptive control modes  
+- memory-dependent decisions  
 
 Limitation:
 
-- no explicit navigation objective  
-- no unified decision layer  
+- no unified kernel interface  
+- no standardized evaluation  
+- limited validation across systems  
 
 ---
 
@@ -208,28 +234,33 @@ Coherence and Risk define navigation space:
 
 - high coherence → aligned motion  
 - high risk → instability  
-- transitions → geometry boundaries  
+- transitions → regime boundaries  
+
+States and patterns extend this:
+
+- states define discrete structure  
+- patterns define temporal behavior  
+- prediction enables anticipation  
+- meta-control enables adaptation  
 
 This enables:
 
-> navigation as movement within a structured stability field
+> navigation as structured, state-aware movement within a dynamical system
 
 ---
 
 ## 8. Immediate Next Step
 
-- connect coherence + risk to decision rules  
-- implement simple policies:
+- unify layers into a minimal kernel  
+- define simple interface:
 
-  - stay in low-risk region  
-  - increase coherence  
-  - avoid transition zones  
+state → signals → decision → action
 
 - integrate into:
 
-```text
 run_nexah_demo.py
-```
+
+- add minimal metrics (risk, stability)
 
 ---
 
@@ -237,23 +268,25 @@ run_nexah_demo.py
 
 The Navigation Kernel evolves through:
 
-```text
-structure → field → coherence → risk → trajectory → control → navigation
-```
+dynamics → structure → states → patterns → prediction → control → behavior
 
 Current position:
 
 - structure ✔  
 - field ✔  
-- coherence ✔  
-- risk ✔  
-- control ✔ (prototype)  
-- navigation ❌  
+- states ✔  
+- patterns ✔  
+- prediction ✔  
+- control ✔  
+- meta-control ✔  
+- memory ✔  
+- navigation ✔ (local, emergent)  
+- kernel abstraction ❌  
 
 ---
 
 ## 🧠 Final Insight
 
-The system already understands how to move.
+The system already knows how to move.
 
-> The kernel will define **where and why it moves next**.
+> The kernel will make this movement explicit, reusable, and testable.
