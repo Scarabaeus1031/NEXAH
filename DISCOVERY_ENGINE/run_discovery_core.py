@@ -28,7 +28,7 @@ def simulate(n_steps=5000, dt=0.01):
 
 
 # =========================
-# 3. Field + Signal
+# 3. Metrics
 # =========================
 
 def compute_metrics(traj, dt):
@@ -44,7 +44,7 @@ def compute_metrics(traj, dt):
 
 
 # =========================
-# 4. Transition Detection (Peak-based)
+# 4. Event Detection
 # =========================
 
 def detect_peaks(signal, threshold_factor=2.0, min_distance=50):
@@ -52,7 +52,6 @@ def detect_peaks(signal, threshold_factor=2.0, min_distance=50):
 
     candidates = np.where(signal > threshold)[0]
 
-    # simple peak thinning (distance filter)
     peaks = []
     last = -min_distance
 
@@ -65,11 +64,26 @@ def detect_peaks(signal, threshold_factor=2.0, min_distance=50):
 
 
 # =========================
-# 5. Main Runner
+# 5. PCA Axis (Key Step)
+# =========================
+
+def compute_axis(traj):
+    mean = np.mean(traj, axis=0)
+    centered = traj - mean
+
+    cov = np.cov(centered.T)
+    eigvals, eigvecs = np.linalg.eig(cov)
+
+    axis = eigvecs[:, np.argmax(eigvals)]
+    return axis, mean
+
+
+# =========================
+# 6. Main
 # =========================
 
 def main():
-    print("Running Discovery Core V4...")
+    print("Running Discovery Core V5...")
 
     output_dir = "DISCOVERY_ENGINE/outputs"
     os.makedirs(output_dir, exist_ok=True)
@@ -81,145 +95,70 @@ def main():
     print(f"Detected {len(peaks)} transition events")
 
     # =========================
-    # Split EVEN / ODD
+    # Axis Projection
     # =========================
 
-    even_idx = peaks[::2]
-    odd_idx = peaks[1::2]
+    axis, mean = compute_axis(traj)
 
-    # =========================
-    # Normalize for size scaling
-    # =========================
+    centered = traj - mean
+    projection = centered @ axis
 
+    # Lobe classification
+    left = projection < 0
+    right = projection >= 0
+
+    # Event classification
+    left_events = peaks[projection[peaks] < 0]
+    right_events = peaks[projection[peaks] >= 0]
+
+    # Normalize size
     norm_risk = (risk - np.min(risk)) / (np.max(risk) - np.min(risk) + 1e-9)
-
-    sizes_even = 20 + 100 * norm_risk[even_idx]
-    sizes_odd = 20 + 100 * norm_risk[odd_idx]
+    sizes = 20 + 100 * norm_risk[peaks]
 
     # =========================
     # Visualization
     # =========================
 
-    fig = plt.figure(figsize=(12, 6))
+    fig = plt.figure(figsize=(14, 6))
 
-    # 3D Trajectory
+    # --- 3D Plot ---
     ax1 = fig.add_subplot(121, projection='3d')
-    ax1.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.5)
+    ax1.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.4)
 
-    # EVEN events
     ax1.scatter(
-        traj[even_idx,0],
-        traj[even_idx,1],
-        traj[even_idx,2],
-        s=sizes_even,
-        label="Even Events"
+        traj[left_events,0],
+        traj[left_events,1],
+        traj[left_events,2],
+        s=sizes[:len(left_events)],
+        label="Left Lobe"
     )
 
-    # ODD events
     ax1.scatter(
-        traj[odd_idx,0],
-        traj[odd_idx,1],
-        traj[odd_idx,2],
-        s=sizes_odd,
-        label="Odd Events"
+        traj[right_events,0],
+        traj[right_events,1],
+        traj[right_events,2],
+        s=sizes[len(left_events):],
+        label="Right Lobe"
     )
 
-    ax1.set_title("Lorenz Trajectory + Structured Events")
+    ax1.set_title("Lobe-based Event Classification")
     ax1.legend()
 
-    # Risk signal
+    # --- Projection Plot ---
     ax2 = fig.add_subplot(122)
-    ax2.plot(risk, label="Risk Signal")
+    ax2.plot(projection, alpha=0.6, label="Projection")
 
-    ax2.scatter(even_idx, risk[even_idx], s=sizes_even)
-    ax2.scatter(odd_idx, risk[odd_idx], s=sizes_odd)
+    ax2.scatter(left_events, projection[left_events], label="Left Events")
+    ax2.scatter(right_events, projection[right_events], label="Right Events")
 
-    ax2.set_title("Risk Signal (flow × curvature)")
+    ax2.set_title("Axis Projection (Structure View)")
     ax2.legend()
 
     plt.tight_layout()
-
-    # SAVE FIRST (wichtig!)
-    plt.savefig(f"{output_dir}/lorenz_core_v4.png", dpi=200)
-
-    # THEN SHOW
+    plt.savefig(f"{output_dir}/lorenz_core_v5.png", dpi=200)
     plt.show()
 
-    np.save(f"{output_dir}/risk_signal_v4.npy", risk)
-
     print(f"Saved outputs to {output_dir}")
-
-
-if __name__ == "__main__":
-    main()
-
-# =========================
-# 5. Main Runner
-# =========================
-
-def main():
-    print("Running Discovery Core V3...")
-
-    # ensure output folder exists
-    output_dir = "DISCOVERY_ENGINE/outputs"
-    os.makedirs(output_dir, exist_ok=True)
-
-    run_id = "run_001"
-
-    traj = simulate()
-    flow, curvature, risk = compute_metrics(traj, dt=0.01)
-
-    events = detect_events(risk)
-
-    # event centers (for plotting)
-    centers = [int(np.mean(e)) for e in events]
-
-    print(f"Detected {len(events)} transition events")
-
-    # =========================
-    # 6. Visualization
-    # =========================
-
-    fig = plt.figure(figsize=(12, 6))
-
-    # Trajectory
-    ax1 = fig.add_subplot(121, projection='3d')
-    ax1.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.6)
-
-    ax1.scatter(
-        traj[centers,0],
-        traj[centers,1],
-        traj[centers,2],
-        color='red',
-        s=20,
-        label="Events"
-    )
-
-    ax1.set_title("Lorenz Trajectory + Events")
-    ax1.legend()
-
-    # Risk signal
-    ax2 = fig.add_subplot(122)
-    ax2.plot(risk, label="Risk Signal")
-
-    ax2.scatter(centers, risk[centers], color='red', s=20)
-
-    ax2.set_title("Risk Signal (flow × curvature)")
-    ax2.legend()
-
-    plt.tight_layout()
-
-    # =========================
-    # 7. Save outputs
-    # =========================
-
-    plt.savefig(f"{output_dir}/lorenz_{run_id}.png", dpi=200)
-    np.save(f"{output_dir}/risk_{run_id}.npy", risk)
-    np.save(f"{output_dir}/events_{run_id}.npy", centers)
-
-    print(f"Saved outputs to {output_dir}")
-
-    plt.show()
 
 
 if __name__ == "__main__":
