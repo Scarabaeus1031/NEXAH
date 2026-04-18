@@ -25,11 +25,46 @@ It provides:
 
 ## 📦 Components
 
-- `core/` — system representation and state structure  
 - `field_layer/` — continuous field construction and metrics  
 - `navigation/` — navigation primitives and policies  
-- `urf_axial_space/` — geometric embedding (3D reference space)  
 
+---
+
+## 🧭 Navigation Layer (Discrete Prototype)
+
+The `navigation/` module provides a **discrete navigation engine** operating on state graphs.
+
+It implements:
+
+- regime-based scoring  
+- risk distance computation (graph-based)  
+- lookahead evaluation  
+- policy-based next-state selection  
+
+👉 Conceptual pipeline:
+
+```text
+state graph → scoring → lookahead → decision → next state
+```
+
+## Status
+
+* functional prototype
+* operates on symbolic state representations
+* requires adapter (state graph input)
+* not yet fully integrated with FIELD layer
+
+## Role
+
+This module represents the decision layer of NEXAH:
+
+FIELD → extracts structure
+NAVIGATION → selects movement within that structure
+
+👉 See:
+```text
+nexah/navigation/navigator.py
+```
 ---
 
 ## 🧭 Role in the System
