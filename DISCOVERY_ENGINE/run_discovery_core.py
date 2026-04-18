@@ -100,6 +100,8 @@ def main():
 
     plt.tight_layout()
     plt.show()
+    plt.savefig("DISCOVERY_ENGINE/outputs/lorenz_core_run.png", dpi=200)
+    np.save("DISCOVERY_ENGINE/outputs/risk_signal.npy", risk)
 
 
 if __name__ == "__main__":
