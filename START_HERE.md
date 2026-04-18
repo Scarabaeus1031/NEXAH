@@ -14,90 +14,106 @@ NEXAH answers:
 
 ---
 
-## ⚡ Real-World Example (Power Systems)
+## ⚡ Step 1 — Run the Core Demo (Lorenz System)
 
-Try this:
+This is the fastest way to understand NEXAH.
 
-    PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+Run:
 
-This shows:
+```bash
+python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
+```
 
-- a real power grid system  
-- instability emerging as structure  
-- a controller acting before collapse  
+You will see:
 
-👉 NEXAH detects voltage collapse up to **43.9 seconds earlier** than classical methods.
+- chaotic dynamics (Lorenz attractor)  
+- structured trajectories  
+- adaptive control behavior  
+- regime transitions ("switches")  
 
 ---
 
 ## 🧠 What is happening?
 
-Instead of a binary view:
+The system:
 
-> stable vs unstable
+- extracts structure from chaos  
+- builds symbolic states  
+- detects patterns and transitions  
+- applies adaptive control strategies  
+- reacts to regime changes  
 
-NEXAH reveals structure:
-
-- a **field** → how the system moves  
-- a **geometry** → where collapse forms  
-- a **trajectory** → how the system evolves  
-
-👉 The system becomes **navigable**
+👉 This creates a **local navigation system inside a chaotic environment**
 
 ---
 
-## 🌪 Simpler Example (Lorenz System)
+## 🔍 What to look for
 
-To understand this visually:
-
-    python APPLICATIONS/dynamical_systems/lorenz/navigation/lorenz_chaos_navigation_map.py
-
-You will see:
-
-- chaotic motion  
-- hidden structure  
-- trajectories moving inside a field  
-
-👉 Same principle — simpler system
+- trajectories stabilizing without fixed targets  
+- switching between control modes  
+- repeated patterns in chaotic motion  
+- structured regions in phase space  
 
 ---
 
-## 🔥 Core Insight
+## 🌊 Key Idea
 
-> Systems are not random.  
->  
-> They are structured — and that structure can be used.
+Instead of:
+
+> controlling toward a fixed goal  
+
+NEXAH:
+
+> moves **within the structure of the system itself**
+
+---
+
+## ⚡ Step 2 — Real System (Power Grid)
+
+Once you understand the Lorenz system, try:
+
+```bash
+PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
+```
+
+This shows:
+
+- a real dynamical system (power grid)  
+- structure-based interpretation of stability  
+- trajectory-based control behavior  
+
+---
+
+## ⚠️ Important
+
+- NEXAH is currently a **prototype system**  
+- behavior is **locally reliable, not globally predictive**  
+- real-world validation is **ongoing**  
+
+---
+
+## 🧠 In one sentence
+
+NEXAH turns complex dynamics into a **structure you can move within**
 
 ---
 
 ## 🧭 Explore Next
 
 - 🧠 Framework → FRAMEWORK/README.md  
-- 🌪 Lorenz → APPLICATIONS/dynamical_systems/lorenz/README.md  
-- ⚡ Power Systems → APPLICATIONS/power_systems/README.md  
+- ⚡ Applications → APPLICATIONS/README.md  
+- 🧭 Navigation → NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md  
 
 ---
 
-## 🎯 What NEXAH enables
+## 🚀 What NEXAH enables
 
-- detect instability early  
-- understand system structure  
-- navigate instead of react  
-- shape trajectories  
-
----
-
-## 🧠 In one sentence
-
-NEXAH turns complex dynamics into a **field you can move through**.
-
----
-
-## 🚀 Next Step
-
-Start with the IEEE example above.  
-Then run the Lorenz script to understand the structure behind it.
+- understand structure in chaotic systems  
+- detect regime transitions  
+- apply adaptive control strategies  
+- explore navigation within system dynamics  
 
 ---
 
 **NEXAH · Thomas K. R. Hofmann · 2026**
+
