@@ -1,80 +1,211 @@
 # 🧪 NEXAH Core Demos — Lorenz System
 
-This directory contains the core demonstration pipeline of NEXAH  
-using the Lorenz system.
+This directory contains the core demonstration pipeline of **NEXAH**  
+using the Lorenz system as a foundational testbed.
 
-It shows how dynamics evolve from simple trajectories  
-to field-level navigation.
+It shows how a chaotic system evolves from:
+
+→ raw dynamics  
+→ symbolic structure  
+→ pattern recognition  
+→ prediction  
+→ control  
+→ meta-control  
+→ memory  
+→ sequence-aware behavior  
 
 ---
 
-## 🧭 Overview
+# 🧭 Overview
 
 The demos follow a structured progression:
 
-V1 → V4   → Field & Metrics  
-V5 → V8   → Multi-Agent & Networks  
-V9 → V11  → Navigation & Emergence  
-V12       → Field-Level Navigation (Final)  
+## Phase 1 — Structure Discovery
+- V1 → V2 → V3 → V4  
+Dynamics → States → Patterns → Prediction  
 
-👉 Full visual documentation:
+## Phase 2 — Control Emergence
+- V5 → V6  
+Prediction → Control → Anticipatory Behavior  
 
-➡️ Visual Gallery
+## Phase 3 — Meta-Control
+- V7 → V8 → V9  
+Mode switching → Adaptive strategies → Uncertainty awareness  
 
----
-
-## 📁 Structure
-
-core_demos/  
-├── scripts/   → all simulation code  
-├── outputs/   → generated visuals (PNG, GIF)  
-├── README.md  
+## Phase 4 — Memory & Intelligence
+- V10 → V11 → V12  
+State memory → Sequence memory → Switch detection  
 
 ---
 
-## ▶️ Run Demos
+# 📁 Structure
+
+APPLICATIONS/core_demos/  
+├── lorenz/  
+│   ├── *.py                → simulation scripts  
+│  
+├── outputs/  
+│   ├── *.png              → generated visuals  
+│   ├── *.gif              → animations  
+│  
+└── README.md  
+
+---
+
+# ▶️ Run Demos
 
 From repo root:
 
-python APPLICATIONS/core_demos/scripts/lorenz_nexah_v12_final_field_navigation.py
+python APPLICATIONS/core_demos/lorenz/<script_name>.py  
+
+Example:
+
+python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py  
 
 ---
 
-## 🎬 Key Demo (Final)
+# 🎬 Key Stages
 
-python APPLICATIONS/core_demos/scripts/lorenz_nexah_v12_final_gif.py
+## 1. Pattern Detection
 
-Output:
+lorenz_pattern_detection_demo.py  
 
-APPLICATIONS/core_demos/outputs/lorenz_nexah_v12_final.gif
+→ extracts recurring symbolic motifs  
+→ reveals non-random structure inside chaos  
 
 ---
 
-## 🧠 What This Demonstrates
+## 2. Prediction
+
+lorenz_pattern_prediction_demo.py  
+
+→ short-term predictability  
+→ probabilistic next-state estimation  
+
+---
+
+## 3. Control
+
+lorenz_prediction_control_demo.py  
+
+→ anticipatory control  
+→ intervention before instability  
+
+---
+
+## 4. Meta-Control
+
+lorenz_meta_control_layer.py  
+
+→ system chooses control strategy dynamically  
+
+Modes:
+- predictive  
+- uncertainty  
+- entropy  
+- stabilize  
+- none  
+
+---
+
+## 5. Memory Layer
+
+lorenz_meta_control_v4_memory.py  
+
+→ learning from experience  
+→ state-dependent behavior  
+
+---
+
+## 6. Sequence Memory
+
+lorenz_meta_control_v5_sequence.py  
+
+→ decisions based on short symbolic history  
+
+(S_t-2, S_t-1, S_t)
+
+→ context-aware control  
+
+---
+
+## 7. Switch Detection (Latest)
+
+lorenz_meta_control_v6_switch.py  
+
+→ detects transitions between regimes  
+
+Introduces:
+- switch strength  
+- event-based structure  
+- regime transitions  
+
+---
+
+# 🧠 What This Demonstrates
 
 Across the demos:
 
-- chaos appears as loss of alignment  
-- interaction stabilizes dynamics  
-- explicit goals distort systems  
-- emergent goals can over-stabilize systems  
-- field-aware navigation produces balanced behavior
+- chaos is structured, not random  
+- trajectories contain symbolic patterns  
+- short-term prediction is possible  
+- control can be anticipatory  
+- strategies can be adaptive  
+- memory improves decision quality  
+- sequences encode system behavior  
+- transitions (switches) are real events  
 
 ---
 
-## 🔥 Core Idea
+# 🔥 Core Idea
 
-dynamics → structure → field → regimes → navigation
-
----
-
-## 🧭 Final Insight
-
-These demos show that:
-
-> systems can be guided without targets  
-> by moving within their stability field
+Dynamics → States → Patterns → Prediction → Control → Meta-Control → Memory → Sequences → Switches  
 
 ---
 
-*NEXAH Core Demos · 2026
+# 🧭 Interpretation
+
+The system evolves from:
+
+chaotic system  
+→ structured system  
+→ navigable system  
+
+---
+
+# ⚠️ Important
+
+NEXAH does NOT attempt to:
+
+- eliminate chaos  
+- fully predict long-term behavior  
+
+Instead it:
+
+→ extracts structure  
+→ enables navigation within it  
+
+---
+
+# 🔮 Key Insight
+
+Control is no longer reactive.  
+It becomes anticipatory, adaptive, and memory-driven.  
+
+---
+
+# 🚀 Final Insight
+
+Systems can be guided without fixed targets  
+by moving within their intrinsic structure  
+
+---
+
+# 🧠 NEXAH Summary
+
+Dynamics describe what happens.  
+NEXAH reveals how to move within it.  
+
+---
+
+*NEXAH Core Demos · 2026*
