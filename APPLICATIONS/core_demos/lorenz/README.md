@@ -70,7 +70,7 @@ State memory → Sequence memory → Switch detection
 ---
 
 # 📁 Structure
-
+```text
 APPLICATIONS/core_demos/  
 ├── lorenz/  
 │   ├── core/  
@@ -82,7 +82,7 @@ APPLICATIONS/core_demos/
 │  
 ├── outputs/  
 └── README.md  
-
+```
 ---
 
 # ▶️ Run Demos
