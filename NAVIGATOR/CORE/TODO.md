@@ -33,7 +33,7 @@ Must show:
 - Lorenz dynamics  
 - Field structure  
 - Coherence + Risk  
-- Navigation (V12 / Meta-Control)  
+- Navigation (Meta-Control layer)  
 
 Optional:
 - IEEE mini demo
@@ -65,26 +65,56 @@ Must include:
 
 # 🟣 PRIORITY 3 — LORENZ (REPRODUCIBLE CORE DEMO)
 
-👉 Your strongest and cleanest system.
+👉 Your strongest and most advanced system.
 
 ### Status:
 - [x] Full pipeline implemented (core → analysis → navigation → meta)
 - [x] Meta-control up to v6 (switch layer)
 - [x] Symbolic + pattern + prediction layers
+- [x] Sequence + memory layers
+
+---
 
 ### ToDo:
 
 - [ ] Run multiple simulations (20–50 runs)
+
 - [ ] Compute metrics:
-  - mean coherence  
-  - min coherence  
   - mean risk  
+  - min risk  
+  - mean coherence  
   - time in stable regions  
+  - switch frequency  
 
 - [ ] Compare:
-  - uncontrolled vs NEXAH
+  - uncontrolled vs NEXAH  
 
-👉 No claims — just data.
+---
+
+### 🔥 NEW — Evidence Block (CRITICAL)
+
+👉 This is what makes the repo instantly “real”.
+
+- [ ] Add a **RESULTS block** (README or demo output):
+
+Example:
+
+— RESULTS —
+
+Runs: 20
+
+Without NEXAH:
+Mean risk: 72.3
+
+With NEXAH:
+Mean risk: 43.8
+
+Prediction accuracy: 0.38
+
+Observation:
+Consistent risk reduction and stabilization across runs.
+
+👉 No hype. Only numbers.
 
 ---
 
@@ -117,7 +147,9 @@ Must output:
 ### Status:
 - [x] Visual system (V1–V12) implemented
 - [x] Visual gallery created
-- [x] Integrated into README (root + applications + lorenz)
+- [x] Integrated into README
+
+---
 
 ### ToDo:
 
@@ -137,34 +169,28 @@ Must output:
 👉 Do not over-engineer.
 
 ### Status:
-- [x] Core demos restructured into:
-  - `core/`
-  - `analysis/`
-  - `navigation/`
-  - `meta/`
-  - `legacy/`
-  - `docs/`
-- [x] Documentation separated
-- [x] Lorenz module structured as layered system
+- [x] Core demos modularized (core / analysis / navigation / meta / docs)
+- [x] Lorenz system structured as layered pipeline
+
+---
 
 ### ToDo:
 
 - [~] Normalize naming consistency (minor)
-- [ ] (Optional) introduce `nexah/core/` module later
+- [ ] Align output paths (`APPLICATIONS/outputs` vs local outputs)
 
 ---
 
-# 🧠 PRIORITY 7 — MATHEMATICAL CORE (DOCUMENTATION, NOT EXPANSION)
+# 🧠 PRIORITY 7 — MATHEMATICAL CORE (CLARITY, NOT EXPANSION)
 
-👉 IMPORTANT: Do NOT remove — just clarify.
+👉 IMPORTANT: Do NOT expand — clarify.
 
 ### Status:
 
-- [x] Coherence \( C(x) \)
-- [x] Risk \( R(x) \)
-- [x] Control equation  
-  `dx/dt = F(x) + u(x, C, R)`
-- [x] Implicit implementation across all demos
+- [x] Coherence C(x)  
+- [x] Risk R(x)  
+- [x] Control equation implemented  
+- [x] Implicit across demos  
 
 ---
 
@@ -188,12 +214,13 @@ Must output:
 
 # 🚀 NEXT MILESTONES (REAL ORDER)
 
-1. `run_nexah_demo.py`
-2. `START_HERE.md`
-3. Lorenz reproducibility (metrics)
-4. IEEE demo (packaged)
-5. Visual gallery polish
-6. Math doc cleanup (final layer)
+1. run_nexah_demo.py  
+2. START_HERE.md  
+3. Evidence Block (Lorenz metrics)  
+4. Lorenz reproducibility  
+5. IEEE demo  
+6. Visual polish  
+7. Math clarity  
 
 ---
 
@@ -211,7 +238,7 @@ You already have:
 - ✅ Mathematical core  
 - ✅ Visual system  
 - ✅ Working demos  
-- ✅ Lorenz full pipeline (deep system)  
+- ✅ Full Lorenz pipeline (deep system)  
 - ✅ IEEE prototype  
 - ✅ Symbolic + prediction + control layers  
 - ✅ Meta-control + memory + switching  
@@ -232,7 +259,7 @@ You are no longer building the system.
 
 You are now:
 
-> **making it usable**
+> **making it usable and verifiable**
 
 ---
 
@@ -242,9 +269,12 @@ You don’t need more depth.
 
 You need:
 
-> one clear path through what already exists
+> one clear path  
+> one runnable demo  
+> one measurable result  
 
 ---
 
 Last Updated: April 2026  
 © Thomas K. R. Hofmann
+
