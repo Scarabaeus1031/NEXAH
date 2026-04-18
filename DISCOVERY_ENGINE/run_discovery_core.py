@@ -1,17 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-
-# =========================
-# Setup
-# =========================
+from sklearn.decomposition import PCA
 
 OUTPUT_DIR = "DISCOVERY_ENGINE/outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
 # =========================
-# 1. Lorenz System
+# Lorenz System
 # =========================
 
 def lorenz(x, y, z, sigma=10, rho=28, beta=8/3):
@@ -20,10 +17,6 @@ def lorenz(x, y, z, sigma=10, rho=28, beta=8/3):
     dz = x * y - beta * z
     return np.array([dx, dy, dz])
 
-
-# =========================
-# 2. Simulation
-# =========================
 
 def simulate(n_steps=5000, dt=0.01):
     traj = np.zeros((n_steps, 3))
@@ -36,7 +29,7 @@ def simulate(n_steps=5000, dt=0.01):
 
 
 # =========================
-# 3. Metrics
+# Metrics
 # =========================
 
 def compute_metrics(traj, dt):
@@ -48,16 +41,15 @@ def compute_metrics(traj, dt):
 
     risk = flow * curvature
 
-    return flow, curvature, risk
+    return risk
 
 
 # =========================
-# 4. Event Detection (clean peaks)
+# Event Detection
 # =========================
 
 def detect_events(signal, threshold_factor=2.5, min_distance=50):
     threshold = np.mean(signal) * threshold_factor
-
     peaks = np.where(signal > threshold)[0]
 
     filtered = []
@@ -72,84 +64,94 @@ def detect_events(signal, threshold_factor=2.5, min_distance=50):
 
 
 # =========================
-# 5. Directional Transitions
+# Directional Transitions
 # =========================
 
-def detect_directional_transitions(traj):
+def detect_transitions(traj):
     x = traj[:, 0]
 
-    transitions_LR = []
-    transitions_RL = []
+    transitions = []
 
     for i in range(len(x) - 1):
-        if x[i] < 0 and x[i+1] > 0:
-            transitions_LR.append(i)
+        if (x[i] < 0 and x[i+1] > 0) or (x[i] > 0 and x[i+1] < 0):
+            transitions.append(i)
 
-        if x[i] > 0 and x[i+1] < 0:
-            transitions_RL.append(i)
-
-    return np.array(transitions_LR), np.array(transitions_RL)
+    return np.array(transitions)
 
 
 # =========================
-# 6. Main
+# V7: Manifold Extraction
+# =========================
+
+def extract_manifold(traj, transition_indices):
+    points = traj[transition_indices]
+
+    pca = PCA(n_components=1)
+    pca.fit(points)
+
+    direction = pca.components_[0]
+    center = np.mean(points, axis=0)
+
+    # Linie erzeugen
+    t = np.linspace(-20, 20, 100)
+    line = center + np.outer(t, direction)
+
+    return points, line, center, direction
+
+
+# =========================
+# MAIN
 # =========================
 
 def main():
-    print("Running Discovery Core V6...")
+    print("Running Discovery Core V7...")
 
     traj = simulate()
-    flow, curvature, risk = compute_metrics(traj, dt=0.01)
+    risk = compute_metrics(traj, dt=0.01)
 
     events = detect_events(risk)
-    trans_LR, trans_RL = detect_directional_transitions(traj)
+    transitions = detect_transitions(traj)
 
-    print(f"Detected {len(events)} high-risk events")
-    print(f"L → R transitions: {len(trans_LR)}")
-    print(f"R → L transitions: {len(trans_RL)}")
+    print(f"Events: {len(events)}")
+    print(f"Transitions: {len(transitions)}")
+
+    # Manifold
+    points, line, center, direction = extract_manifold(traj, transitions)
 
     # =========================
-    # Visualization
+    # Plot
     # =========================
 
     fig = plt.figure(figsize=(14, 6))
 
-    # --- 3D Trajectory ---
-    ax1 = fig.add_subplot(121, projection='3d')
-    ax1.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.5)
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Trajectory
+    ax.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.3)
 
     # Events
-    ax1.scatter(traj[events,0], traj[events,1], traj[events,2],
-                color='red', s=20, label="Events")
+    ax.scatter(traj[events,0], traj[events,1], traj[events,2],
+               color='red', s=20, label="Events")
 
-    # Transitions L → R
-    ax1.scatter(traj[trans_LR,0], traj[trans_LR,1], traj[trans_LR,2],
-                color='green', s=40, label="L → R")
+    # Transition points
+    ax.scatter(points[:,0], points[:,1], points[:,2],
+               color='green', s=40, label="Transitions")
 
-    # Transitions R → L
-    ax1.scatter(traj[trans_RL,0], traj[trans_RL,1], traj[trans_RL,2],
-                color='purple', s=40, label="R → L")
+    # Manifold line
+    ax.plot(line[:,0], line[:,1], line[:,2],
+            color='black', linewidth=3, label="Manifold")
 
-    ax1.set_title("Lorenz Trajectory + Directional Transitions")
-    ax1.legend()
+    # Center point
+    ax.scatter(center[0], center[1], center[2],
+               color='yellow', s=80, label="Center")
 
-    # --- Risk Signal ---
-    ax2 = fig.add_subplot(122)
-    ax2.plot(risk, label="Risk")
-
-    ax2.scatter(events, risk[events], color='red', s=20)
-
-    ax2.scatter(trans_LR, risk[trans_LR], color='green', label="L→R")
-    ax2.scatter(trans_RL, risk[trans_RL], color='purple', label="R→L")
-
-    ax2.set_title("Risk + Transition Directions")
-    ax2.legend()
+    ax.set_title("V7: Transition Manifold Extraction")
+    ax.legend()
 
     plt.tight_layout()
 
     # Save
-    plt.savefig(f"{OUTPUT_DIR}/lorenz_v6_transitions.png", dpi=200)
-    np.save(f"{OUTPUT_DIR}/risk_v6.npy", risk)
+    plt.savefig(f"{OUTPUT_DIR}/lorenz_v7_manifold.png", dpi=200)
 
     plt.show()
 
