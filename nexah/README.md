@@ -28,7 +28,6 @@ It provides:
 - `core/` — system representation and state structure  
 - `field_layer/` — continuous field construction and metrics  
 - `navigation/` — navigation primitives and policies  
-- `spiral_coupling/` — experimental multi-component dynamics  
 - `urf_axial_space/` — geometric embedding (3D reference space)  
 
 ---
@@ -43,7 +42,7 @@ NEXAH       → navigation layer
 
 The `nexah/` package is where:
 
-> system structure becomes **directly usable for navigation**
+> system structure becomes directly usable for navigation
 
 ---
 
@@ -52,6 +51,7 @@ The `nexah/` package is where:
 ```python
 import nexah
 ```
+
 (Currently used internally by demo systems — direct API is evolving)
 
 ---
@@ -67,6 +67,59 @@ APPLICATIONS/core_demos/lorenz/
 - meta-control  
 - navigation logic  
 - adaptive behavior  
+
+---
+
+## 🔬 Minimal Working Example (FIELD Layer)
+
+The FIELD layer is not only conceptual — it produces observable structural signals.
+
+A simple experiment (Lorenz system) using:
+
+- flow strength (‖dx/dt‖)  
+- acceleration (curvature proxy)  
+
+yields a combined signal:
+
+```text
+risk ∼ curvature × flow_strength
+```
+
+### Observed behavior
+
+- the signal produces sparse, high-intensity peaks  
+- peaks occur only at specific moments in time  
+- these moments correspond to:
+  - rapid trajectory changes  
+  - transitions between dynamical regions  
+  - strong local deformation of system flow  
+
+---
+
+### Interpretation
+
+even simple FIELD-based metrics can highlight  
+structurally significant events in system dynamics  
+
+---
+
+### Important
+
+- no thresholds required  
+- no labels required  
+- signal emerges directly from local dynamics  
+
+---
+
+### Status
+
+- prototype-level validation  
+- demonstrated on Lorenz system  
+- extension to real systems in progress  
+
+👉 See:
+
+`nexah/field_layer/core/field_demo.py`
 
 ---
 
@@ -91,7 +144,7 @@ It is the layer where:
 
 > structure is not only described  
 >  
-> but **actively used to guide system behavior**
+> but actively used to guide system behavior  
 
 ---
 
@@ -102,8 +155,5 @@ You are not controlling the system.
 
 You are navigating the geometry  
 that the system unfolds.
-```
-
-
 
 
