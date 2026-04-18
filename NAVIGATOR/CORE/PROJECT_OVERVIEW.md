@@ -1,4 +1,4 @@
-# 🔥 AKTUELLER KERN DES SYSTEMS
+# 🔥 AKTUELLER KERN DES SYSTEMS (UPDATED)
 
 ## 1. 🧠 FRAMEWORK (Theorie & Geometrie)
 
@@ -9,7 +9,8 @@
 | risk_field.md | ✅ | Stabilität als Feld |
 | field_control.md | ✅ | Kontrollidee |
 
-👉 **Sehr stark. Das ist der eigentliche USP.**
+👉 **Sehr stark. Das ist weiterhin der eigentliche USP.**  
+👉 Aber: noch zu wenig explizit messbar formuliert → nächste Phase: Klarheit + Definitionen
 
 ---
 
@@ -23,26 +24,38 @@
 | nexah_kernel/ | ⚠️ 60% | nicht klar zentralisiert |
 | core/ (posets etc.) | ⚠️ 60% | aktuell kaum genutzt |
 
-👉 **viel vorhanden, aber nicht als klarer „Kern“ gebündelt**
+👉 **Technisch stark, aber nicht als „klarer Kern“ sichtbar**  
+👉 Problem ist NICHT Funktion → sondern **fehlende Bündelung**
 
 ---
 
 ## 3. 🌪 APPLICATIONS (wichtigster Bereich)
 
-### 🔥 Lorenz (Referenzsystem)
+### 🔥 Lorenz (Referenzsystem — MASSIV ERWEITERT)
 
 | Feature | Status |
 |--------|--------|
 | Attractor | ✅ |
 | Flow Field | ✅ |
-| Lyapunov | ✅ |
-| FTLE | ✅ |
+| Lyapunov / FTLE | ✅ |
 | Separatrix | ✅ |
-| Navigation | ✅ |
-| Agent | ⚠️ |
-| Visuals | ✅ |
+| Navigation (Field-based) | ✅ |
+| Symbolic States | ✅ |
+| Pattern Detection | ✅ |
+| Prediction | ✅ |
+| Control (anticipatory) | ✅ |
+| Meta-Control (mode switching) | ✅ |
+| Memory (state-based) | ✅ |
+| Sequence Memory | ✅ |
+| Switch Detection | ✅ |
+| Visual Pipeline | ✅ |
 
-👉 **Bestes geschlossenes System im Repo**
+👉 **Das ist jetzt kein Demo mehr — das ist ein vollständiges System**
+
+👉 Neue Qualität:
+Dynamics → States → Patterns → Prediction → Control → Meta-Control → Memory → Switching
+
+👉 **Größter Fortschritt insgesamt**
 
 ---
 
@@ -52,12 +65,16 @@
 |--------|--------|
 | Field Reconstruction | ✅ |
 | Risk Field | ✅ |
-| Early Detection (~40s observed) | ✅🔥 |
+| Early Detection (~40s observed) | ⚠️ (nicht robust) |
 | Closed Loop Control | ✅ (v6) |
 | Advanced Versions (v7–v11) | ⚠️ |
 | IEEE118 | ⚠️ |
 
-👉 **stärkster Real-World Impact, aber nicht sauber integriert**
+👉 **stärkster Real-World Impact**
+
+👉 aber:
+- noch nicht sauber reproduzierbar  
+- nicht sauber mit Lorenz verknüpft  
 
 ---
 
@@ -70,7 +87,7 @@
 | Traffic | ⚠️ |
 | Multi-Agent | ⚠️ |
 
-👉 aktuell **Nebenstränge / Explorationsfelder**
+👉 aktuell **Exploration / nicht relevant für Release**
 
 ---
 
@@ -82,7 +99,7 @@
 | LorenzAdapter | ✅ |
 | weitere Adapter | ⚠️ |
 
-👉 gute Idee, aber noch nicht zentral
+👉 gute Idee, aber aktuell **nicht zentral für MVP**
 
 ---
 
@@ -95,7 +112,8 @@
 | Multi-Agent | ⚠️ |
 | Visuals | ✅ |
 
-👉 stark für Entwicklung, aber nicht Produktpfad
+👉 wichtig für Entwicklung  
+👉 **nicht Teil des Release-Kerns**
 
 ---
 
@@ -106,139 +124,110 @@
 | Architektur-Suche | ⚠️ |
 | Experimente | ⚠️ |
 
-👉 aktuell **nicht kritisch für Release**
+👉 aktuell **irrelevant für Release**
 
 ---
 
-# 🧠 WICHTIGSTE ERKENNTNIS
+# 🧠 WICHTIGSTE ERKENNTNIS (UPDATED)
 
-Das Problem ist nicht:
+Das Problem ist NICHT:
 
 > fehlende Features
 
 Sondern:
 
-> fehlende Integration
+> fehlende Klarheit + fehlender Einstieg
 
 ---
 
-# 🔥 WAS WIRKLICH FERTIG IST
+# 🔥 WAS WIRKLICH FERTIG IST (REAL)
 
-Du hast bereits:
+Du hast:
 
-- Geometrie (sehr stark)  
-- Lorenz (komplettes Demo-System)  
-- IEEE (realer Proof)  
-- Visual Pipeline (V1–V12)  
+- ✅ Geometrisches Framework  
+- ✅ Vollständiges Lorenz-System (inkl. Decision Layer)  
+- ✅ IEEE als Real-World-Direction  
+- ✅ Visual Pipeline (V1–V12 + Meta Layer)
 
----
-
-# ⚠️ WAS FEHLT
-
-## 1. EIN EINHEITLICHER FLOW
-
-```text
-System → Field → Geometry → Risk → Navigation → Control
-```
-
-👉 vorhanden, aber nicht als **ein durchgehender Pfad sichtbar**
+👉 Das ist **mehr als genug für ein erstes Release**
 
 ---
 
-## 2. EIN DEMO-EINSTIEG
+# ⚠️ WAS FEHLT (JETZT KLAR DEFINIERT)
+
+## 1. EIN EINHEITLICHER FLOW (DARSTELLUNG)
+
+System → Structure → States → Patterns → Prediction → Control → Behavior
+
+👉 existiert im Code  
+👉 aber nicht als **klarer Einstieg sichtbar**
+
+---
+
+## 2. EIN DEMO-EINSTIEG (KRITISCH)
 
 python run_nexah_demo.py
 
-👉 existiert noch nicht → **kritisch**
+👉 fehlt komplett  
+👉 **größter Blocker aktuell**
 
 ---
 
-## 3. VERBINDUNG LORENZ ↔ IEEE
+## 3. SAUBERE WISSENSCHAFTLICHE DARSTELLUNG
 
-- Lorenz = visuell klar  
-- IEEE = technisch relevant  
+Fehlt aktuell:
+
+- klare Definitionen (State, Risk, etc.)
+- Metriken im Vordergrund
+- Vergleich (mit vs ohne NEXAH)
+
+👉 deshalb wirkt es teilweise „interpretativ“
+
+---
+
+## 4. LORENZ ↔ IEEE VERBINDUNG
+
+👉 aktuell:
+
+- Lorenz = verständlich  
+- IEEE = relevant  
 
 👉 fehlt:
 
-> ein gemeinsames Narrativ:  
-> **beide sind dasselbe Systemprinzip**
+> beide folgen demselben Prinzip
 
 ---
 
-# 🧭 NEXAH USE-CASE MAP (STRATEGISCH)
+# 🧭 NEXAH USE-CASE MAP
 
-## 🟢 1. LOW HANGING FRUITS (JETZT)
+## 🟢 LOW HANGING FRUITS
 
-### ⚡ Power Grid Stability
+### ⚡ Power Grid Stability  
+👉 bestes reales Beispiel  
 
-- Stability Field statt Thresholds  
-- Trajectory Drift vor Collapse  
-- Coherence als Frühindikator  
+### 🧠 Explainability for Dynamics  
+👉 sehr starkes Feature  
 
-👉 **direkt zeigbar (beste Option)**
-
----
-
-### 🧠 Explain Your System
-
-- Simulation → Field → Interpretation  
-
-👉 NEXAH als:
-
-> **Explainability Layer für Dynamik**
+### 🔍 Trajectory Debugging  
+👉 direkt nutzbar  
 
 ---
 
-### 🔍 Trajectory Debugging
+## 🟡 MID-TERM
 
-- warum System driftet  
-- wo Stabilität verloren geht  
-
-👉 sehr konkret nutzbar für Engineers
-
----
-
-## 🟡 2. MID-TERM
-
-### 🤖 ML Stability
-
-- Training als Trajektorie  
-- Loss Landscape als Field  
+- ML Stability  
+- Multi-Agent Systems  
+- Cascading Failures  
 
 ---
 
-### 🌐 Multi-Agent Systems
+## 🔴 HIGH IMPACT
 
-- Emergence (V10–V12)  
-- Self-stabilization  
-
----
-
-### 🌍 Cascading Failures
-
-- Power + Networks + Systems  
+- Unified Stability Framework  
 
 ---
 
-## 🔴 3. HIGH IMPACT
-
-### 🧠 Unified Stability Framework
-
-```text
-Power + ML + Networks → gleiche Struktur
-```
-
----
-
-### 🛰 System-of-Systems (optional)
-
-- Infrastruktur  
-- Klima  
-- globale Dynamik  
-
----
-
-# 🔌 POSITIONIERUNG (WICHTIG!)
+# 🔌 POSITIONIERUNG
 
 NEXAH ist KEIN:
 
@@ -248,26 +237,13 @@ NEXAH ist KEIN:
 
 NEXAH ist:
 
-> **eine strukturelle Übersetzungsschicht für Dynamik**
+> eine Struktur- und Navigationsschicht für dynamische Systeme
 
 ---
 
 ## 🧭 Pipeline
 
-```text
-Simulation → Structure → Field → Regimes → Navigation
-```
-
----
-
-## 🧠 Vergleich
-
-| Kategorie | Klassisch | NEXAH |
-|----------|----------|------|
-| Analyse | Zustand | Bewegung |
-| Stabilität | Schwellenwerte | Feldstruktur |
-| Kontrolle | Fehlerbasiert | Trajektorienbasiert |
-| Sichtweise | lokal | geometrisch |
+Dynamics → Structure → States → Patterns → Prediction → Control → Behavior
 
 ---
 
@@ -281,26 +257,27 @@ Nicht:
 
 Sondern:
 
-> Integration + Klarheit + Einstieg  
+> Zugänglichkeit + Klarheit + Demonstration
 
 ---
 
-# 🧭 NÄCHSTE KONKRETE SCHRITTE
+# 🧭 NÄCHSTE SCHRITTE
 
-1. `run_nexah_demo.py` bauen  
-2. Lorenz + IEEE verbinden  
-3. Visual Gallery finalisieren  
-4. einen klaren Einstiegspfad schaffen  
+1. run_nexah_demo.py  
+2. START_HERE.md  
+3. Lorenz reproduzierbar machen  
+4. IEEE minimal integrieren  
+5. Visual System finalisieren  
 
 ---
 
 # 🧠 FINAL INSIGHT
 
-NEXAH analysiert keine Zustände.
+NEXAH analysiert nicht nur Dynamik.
 
-> NEXAH beschreibt, wie sich Systeme bewegen.
+> NEXAH macht Dynamik strukturiert, vorhersagbar und navigierbar.
 
 ---
 
-**Last Updated:** April 2026  
+Last Updated: April 2026  
 © Thomas K. R. Hofmann
