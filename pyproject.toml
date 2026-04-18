@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "nexah"
 version = "0.5.0"
-description = "NEXAH Engine – Finite Order Structural Stabilization Framework"
+description = "NEXAH Engine – Structural Navigation Framework"
 authors = [
     { name = "Thomas Hofmann" }
 ]
@@ -17,7 +17,8 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["ENGINE*"]
+include = ["nexah*", "ENGINE*"]
+exclude = ["tests*"]
 
 [tool.mypy]
 python_version = "3.12"
