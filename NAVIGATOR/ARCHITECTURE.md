@@ -17,123 +17,81 @@ NEXAH is a structural navigation framework for complex dynamical systems.
 
 It transforms:
 
-```text
-dynamics → structure → geometry → navigation
-```
+dynamics → structure → states → patterns → prediction → control → navigation
 
 The goal is not only to analyze systems, but to:
 
-> **navigate them toward stability**
-
----
-
-## 🧩 NEXAH Layer (Conceptual Bridge)
-
-The `nexah/` layer represents the transition from:
-
-```text
-ENGINE → FRAMEWORK → NEXAH
-```
-
-It is where:
-
-- structure becomes field  
-- field becomes geometry  
-- geometry becomes navigable  
-
-It provides:
-
-- lightweight package access  
-- field abstractions  
-- navigation primitives  
-- geometric reference systems  
-- operational transition logic  
-
-In this sense, `nexah/` is the layer where:
-
-> NEXAH becomes directly usable as a navigation system.
+> **enable structured navigation within dynamical systems**
 
 ---
 
 # 🏗 System Architecture
 
-## Core Stack
+## Core Stack (Simplified)
 
 ```text
-META → ARCHY → MESO → NEXAH → MEVA
+System → Structure → Signals → Decision → Action
 ```
 
 | Layer | Function |
-|-------|----------|
-| META  | system definition and relational structure |
-| ARCHY | regime detection and structural organization |
-| MESO  | risk geometry and stability metrics |
-| NEXAH | navigation and decision strategies |
-| MEVA  | execution and system control |
+|------|---------|
+| Structure | Extracts system geometry and dynamics |
+| Signals | Computes coherence, risk, and metrics |
+| Decision | Selects behavior (policies, meta-control) |
+| Action | Applies control to system |
 
 ---
 
-## System Transformation
+# 🔧 Core Components
 
-The stack enables:
+## 1. Structure Layer
 
-```text
-system definitions
-    ↓
-regime structures
-    ↓
-risk landscapes
-    ↓
-navigable trajectories
-```
+- vector field F(x)  
+- attractors and basins  
+- regime boundaries  
+- trajectory evolution  
+
+---
+
+## 2. Signal Layer
+
+- coherence C(x)  
+- risk R(x)  
+- transition indicators  
+- local stability metrics  
+
+---
+
+## 3. Decision Layer
+
+- symbolic state representation  
+- transition probabilities  
+- pattern detection  
+- prediction  
+- meta-control (mode selection)  
+- memory (state + sequence)  
+
+---
+
+## 4. Action Layer
+
+- control input u(x)  
+- trajectory shaping  
+- stabilization  
+- directional steering  
 
 ---
 
 # 🚀 Current Capability
 
-NEXAH is no longer only analytical.
+NEXAH currently supports:
 
-It can:
-
-- detect regime transitions  
-- compute collapse risk gradients  
-- identify tipping points  
-- simulate cascading failures  
-- compute resilience and fragility  
-- reconstruct phase spaces  
-- generate energy landscapes  
-- compute safe trajectories  
-- perform navigation over system structure  
-
----
-
-# 🌀 Extended Navigation Layer (v9.x)
-
-The system now includes:
-
-- **Triple Spiral Coupling** (Water–Mercury–Ferrofluid)  
-- **Dual-Strand Grey Channel**  
-- **Elastic Dual Lock (Span-Gurt)**  
-- **URF Axial Space + Root Bridge (v9.1)**  
-
----
-
-## Interpretation
-
-Navigation is no longer scalar.
-
-It becomes:
-
-```text
-field → channel → strand → switch → navigation
-```
-
-This enables:
-
-- coherence-guided movement  
-- strand switching  
-- dynamic stabilization  
-- structured transitions across regimes  
+- structure extraction from dynamics  
+- symbolic representation of system states  
+- pattern detection and prediction  
+- anticipatory control  
+- adaptive meta-control  
+- memory-based decision behavior  
 
 ---
 
@@ -143,44 +101,16 @@ This enables:
 
 | Component | Status |
 |----------|--------|
-| System Definition Schema | ✓ implemented |
-| Regime Mapper (ARCHY) | ✓ implemented |
-| Cascade Engine | ✓ implemented |
-| Risk Geometry (MESO) | ✓ implemented |
-| Navigation Layer (NEXAH) | ✓ implemented |
-| Execution Layer (MEVA) | ✓ implemented |
-| Simulation Kernel | ~ partial |
-| Engine ↔ System Bridge | ~ partial |
-
----
-
-## Navigation Layer (Key System)
-
-The navigation layer already includes:
-
-- safe trajectory computation  
-- regime-aware decisions  
-- risk-aware control  
-- collapse avoidance  
-- strand-based navigation  
-- spiral coupling  
-- 3D reference embedding (URF + Root Bridge)  
-
-👉 This is the **core of NEXAH**
-
----
-
-## Tooling & Exploration
-
-| Component | Status |
-|----------|--------|
-| Visualization | ✓ implemented |
-| Example Systems | ~ partial |
-| Reference Demos | ~ partial |
-| Policy Modules | ☐ open |
-| Trace Logging | ~ partial |
-| Dataset Expansion | ☐ open |
-| Real-world Interfaces | ☐ open |
+| Structure Extraction | ✓ implemented |
+| Signal Computation (C, R) | ✓ implemented |
+| Symbolic State Layer | ✓ implemented |
+| Pattern Detection | ✓ implemented |
+| Prediction | ✓ implemented |
+| Control | ✓ implemented |
+| Meta-Control | ✓ implemented |
+| Memory (state + sequence) | ✓ implemented |
+| Unified Kernel | ☐ missing |
+| Reproducibility Layer | ☐ missing |
 
 ---
 
@@ -188,15 +118,11 @@ The navigation layer already includes:
 
 NEXAH has transitioned from:
 
-```text
-analysis → structure discovery
-```
+analysis → structure discovery  
 
 to:
 
-```text
-structure → geometry → navigation
-```
+structure → states → prediction → control → navigation  
 
 ---
 
@@ -204,18 +130,15 @@ structure → geometry → navigation
 
 The system operates as:
 
-- dynamics → geometry  
-- geometry → channels & switches  
-- channels → embedded in 3D reference space  
-- motion → controllable  
+- continuous dynamics → discrete states  
+- states → patterns  
+- patterns → prediction  
+- prediction → control  
+- control → adaptive behavior  
 
-Core structures:
+This enables:
 
-- Root Cube (reference frame)  
-- Root Bridge (transition system)  
-- Elastic Axis  
-- switch grids  
-- nested state structures  
+> structured navigation within a chaotic system
 
 ---
 
@@ -223,33 +146,32 @@ Core structures:
 
 The current frontier is:
 
-- decision logic refinement  
-- controlled navigation policies  
-- execution feedback loops  
-- real-world system integration  
-- adaptive control systems  
+- unify navigation kernel  
+- define reusable interface  
+- implement reproducibility metrics  
+- connect Lorenz ↔ real-world systems (IEEE)  
 
 ---
 
 # 🧠 Milestone Summary
 
-Status: **Core architecture operational**
+Status: **Functional navigation pipeline (prototype)**
 
 NEXAH now functions as:
 
-> **a structural navigation system for complex dynamical environments**
+> a structure-aware system capable of prediction, control, and adaptive behavior
 
 ---
 
 # 🔥 Final Insight
 
-Complex systems are not controlled through thresholds.
+Complex systems are not controlled through isolated events.
 
-They are navigated through structure.
+They can be:
+
+> **understood and navigated through their structure**
 
 ---
 
 **NEXAH Architecture**  
-Unified system definition and implementation state
-
-
+Current system definition and implementation state
