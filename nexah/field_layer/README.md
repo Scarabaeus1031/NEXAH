@@ -4,11 +4,11 @@
 
 The **FIELD layer** is the geometric core of the NEXAH framework.
 
-It transforms system dynamics into a **continuous structural field representation**, enabling the analysis of flow, geometry, and structural transitions within complex systems.
+It transforms system dynamics into a **continuous field representation**, enabling the analysis of flow, geometry, and structural changes within complex systems.
 
-While earlier layers (META, ARCHY) define structure and dynamics, the FIELD layer reveals:
+While earlier layers (META, ARCHY) define structure and dynamics, the FIELD layer focuses on:
 
-> **how systems move through their own structure**
+> **how systems move through their state space**
 
 ---
 
@@ -18,7 +18,7 @@ META → ARCHY → **FIELD** → MESO → NEXAH → MEVA
 
 - META: relational structure  
 - ARCHY: dynamic regimes  
-- FIELD: geometric flow representation  
+- FIELD: flow representation  
 - MESO: risk geometry  
 - NEXAH: navigation  
 - MEVA: execution  
@@ -34,9 +34,9 @@ Traditional approaches analyze:
 
 The FIELD layer instead constructs:
 
-> a **continuous representation of system evolution**
+> a **continuous approximation of system evolution**
 
-This allows the system to be interpreted as a **flow through a structured space**, rather than a sequence of discrete transitions.
+This allows the system to be interpreted as a **flow in state space**, rather than a sequence of discrete transitions.
 
 ---
 
@@ -44,11 +44,13 @@ This allows the system to be interpreted as a **flow through a structured space*
 
 The FIELD layer:
 
-- constructs **vector fields** from system dynamics  
-- identifies **flow structures** (streamlines, geodesics)  
-- detects **structural transitions** before observable collapse  
-- reveals **latent organization** within the system  
-- enables **continuous navigation** in system space  
+- approximates **vector fields** from time series data  
+- provides **local flow information** (direction and magnitude)  
+- enables detection of **changes in system dynamics**  
+- supports **continuous interpretation of trajectories**  
+
+⚠️ Note:  
+Current implementation uses **finite differences** (via gradients) as an approximation of local system flow.
 
 ---
 
@@ -56,67 +58,75 @@ The FIELD layer:
 
 ### 1. State Representation
 
-A system state is embedded as:
-
-x(λ) = [V₁,...,Vₙ, θ₁,...,θₙ]
-
-or more generally:
+A system state is represented as:
 
 x ∈ ℝⁿ
+
+(e.g. voltages, angles, or other system variables)
 
 ---
 
 ### 2. Field Construction
 
-From a sequence of system states, the FIELD layer builds:
+Given a time series of states:
 
-F(x) → vector field describing local system motion
+x(t)
 
-This transforms discrete evolution into a continuous flow representation.
+the FIELD layer approximates:
 
----
+F(x) ≈ dx/dt
 
-### 3. Structural Metrics
+using finite differences:
 
-The FIELD layer introduces geometric indicators:
-
-- **Curvature (κ)**  
-  Detects acceleration in structural change  
-  κ(λ) ∼ || d²c / dλ² ||
-
-- **Fragmentation**  
-  Measures breakdown of structural coherence  
-  (cluster separation, connectivity loss)
-
-- **Flow Coherence**  
-  Stability of local directional fields  
-
-- **Stability Distance**  
-  Distance to stable manifold or attractor region  
+- local flow vectors are computed via gradients  
+- this yields a discrete approximation of a continuous vector field  
 
 ---
 
-### 4. Flow Structures
+### 3. Structural Metrics (Current Implementation)
 
-The FIELD layer identifies:
+The FIELD layer provides basic structural indicators:
 
-- streamlines  
-- geodesics  
-- corridors (stable paths)  
-- rifts (instability regions)  
+- **Acceleration (Curvature Proxy)**  
+  Approximation of second derivative:  
+  indicates changes in system dynamics  
+  (not exact geometric curvature)
 
-These define the **geometry of system evolution**.
+- **State Variance (Fragmentation Proxy)**  
+  Measures dispersion across state dimensions  
+  (proxy for structural spread, not true fragmentation)
+
+- **Flow Strength**  
+  Magnitude of local velocity:  
+  ||dx/dt||
+
+These metrics provide **simple, interpretable signals** about system behavior.
+
+---
+
+### 4. Flow Interpretation
+
+Using the field representation, we can analyze:
+
+- direction of system movement  
+- speed of evolution  
+- changes in trajectory behavior  
+- regions of higher instability (via metric spikes)  
 
 ---
 
 ## Interpretation
 
-The FIELD layer reveals that:
+The FIELD layer highlights that:
 
-> systems do not simply degrade —  
-> they **reorganize structurally before collapse**
+> system behavior is not only about states, but about **movement patterns**
 
-This structural reorganization is often invisible to classical metrics.
+In many systems:
+
+- instability is preceded by changes in flow behavior  
+- trajectories exhibit measurable structural changes  
+
+These effects can be observed through simple field-based metrics.
 
 ---
 
@@ -124,25 +134,25 @@ This structural reorganization is often invisible to classical metrics.
 
 The MESO layer builds on FIELD:
 
-- FIELD → provides geometry  
-- MESO → computes risk on that geometry  
+- FIELD → provides flow representation  
+- MESO → computes risk-related quantities  
 
-Without FIELD, MESO operates only on discrete structures.  
-With FIELD, MESO gains access to continuous risk landscapes.
+Without FIELD, MESO operates on discrete states.  
+With FIELD, MESO gains access to **continuous dynamics information**.
 
 ---
 
 ## Relationship to NEXAH Navigation
 
-Navigation in NEXAH is not performed on states alone, but within the FIELD:
+Navigation in NEXAH operates on the FIELD:
 
-> trajectories are guided along the geometry of the field
+> trajectories are interpreted and guided based on flow structure
 
 This enables:
 
-- smoother navigation  
-- early avoidance of unstable regions  
-- geodesic-based path planning  
+- trajectory-aware control  
+- smoother adjustments  
+- early reaction to dynamic changes  
 
 ---
 
@@ -150,10 +160,14 @@ This enables:
 
 In power systems:
 
-- classical metrics show gradual voltage degradation  
-- FIELD reveals curvature spikes and fragmentation before collapse  
+- classical metrics show gradual degradation  
+- FIELD-based metrics can show:
 
-→ early detection of instability  
+  - increasing acceleration  
+  - rising variance  
+  - changing flow behavior  
+
+→ indicating **structural changes before failure**
 
 ---
 
@@ -161,14 +175,15 @@ In power systems:
 
 The FIELD layer is implemented in:
 
+```
 nexah/field_layer/
+```
 
 Core components:
 
-- field construction  
-- structural metrics  
-- flow extraction  
-- adapters for system types  
+- field construction (gradient-based)  
+- basic structural metrics  
+- lightweight flow representation  
 
 ---
 
@@ -177,28 +192,34 @@ Core components:
 Current state:
 
 - concept: defined  
-- implementation: emerging (V64–V69)  
-- integration with navigator: in progress  
+- implementation: minimal but functional  
+- metrics: simple proxies  
+- integration with navigation: in progress  
 
 ---
 
 ## Key Insight
 
 > Classical methods observe values.  
-> The FIELD layer observes structure.
+> The FIELD layer observes **how those values evolve**.
 
-This enables earlier detection, deeper understanding, and ultimately:
+This provides a different perspective:
 
-> navigation within complex systems.
+- not just *what the system is*  
+- but *how the system moves*
 
 ---
 
 ## Summary
 
-The FIELD layer is the bridge between:
+The FIELD layer connects:
 
 - dynamics (ARCHY)  
 and  
-- geometry (MESO + NEXAH)
+- navigation (NEXAH)
 
-It transforms system evolution into a navigable field.
+by approximating system evolution as a **continuous flow field**.
+
+This enables:
+
+> interpretation of system behavior as movement within a structured space
