@@ -164,8 +164,6 @@ or
 python BUILDER_LAB/demos/nexah_explorer.py --start S5_freq_drop --steps 20
 ```
 
-The tool generates animated navigation runs through the system.
-
 ---
 
 # Cascade Simulation
@@ -174,54 +172,23 @@ The Builder Lab also models **cascading failures**.
 
 ![Cascade Simulation](visuals/nexah_cascade.gif)
 
-These simulations explore disruptions across interconnected systems such as:
-
-- power grids  
-- logistics networks  
-- digital infrastructure  
-- financial systems  
-
 ---
 
 # Running the Builder Lab
 
-From the repository root.
-
-Run terminal demo
+From the repository root:
 
 ```
 python BUILDER_LAB/demos/nexah_demo.py
-```
-
-Run graph animation
-
-```
 python BUILDER_LAB/demos/nexah_graph_simulation.py
-```
-
-Run system explorer
-
-```
 python BUILDER_LAB/demos/nexah_explorer.py
-```
-
-Run cascade simulation
-
-```
-python BUILDER_LAB/nexah_capacity_cascade_engine.py
-```
-
-Run planetary dashboard
-
-```
-streamlit run BUILDER_LAB/nexah_control_room.py
+python BUILDER_LAB/engines/nexah_capacity_cascade_engine.py
+streamlit run BUILDER_LAB/dashboards/nexah_control_room.py
 ```
 
 ---
 
 # Example System Models
-
-The Builder Lab includes multiple system definitions.
 
 ```
 systems/
@@ -239,20 +206,9 @@ real_infrastructure.json
 shock_events.json
 ```
 
-These files define:
-
-- system topology  
-- dependencies  
-- shock events  
-- cascading interactions  
-
 ---
 
 # Visualizations
-
-The `visuals` directory contains generated graphs and animations.
-
-Examples:
 
 ```
 visuals/nexah_state_graph.png
@@ -275,42 +231,18 @@ visuals/NEXAH_BUILDER_LAB_MAP.png
 ```
 BUILDER_LAB
 │
-├ demos
-│   nexah_demo.py
-│   nexah_graph_simulation.py
-│   nexah_explorer.py
-│
-├ systems
-│   climate_model.json
-│   energy_grid.json
-│   supply_chain.json
-│
-├ global_systems
-│   global_system_map.json
-│   real_infrastructure.json
-│   infrastructure_geo.json
-│   shock_events.json
-│
-├ data
-│   planetary_network.json
-│   last_run_timeline.json
-│
-├ visuals
-│   nexah_state_graph.png
-│   nexah_system_walk.gif
-│   nexah_explorer_walk.gif
-│   nexah_cascade.gif
-│   nexah_simulation.gif
-│   NEXAH_SYSTEM_NAVIGATION_FRAMEWORK.png
-│   NEXAH_DEMO_SIMULATION.png
-│   NEXAH_DEMO_ENERGY_GRID_SIMULATION.png
-│   NEXAH_APPLICATIONS_MAP.png
-│   NEXAH_BUILDER_LAB_MAP.png
-│
-└ simulation engines
-    nexah_capacity_cascade_engine.py
-    nexah_planetary_engine.py
-    nexah_multisystem_engine.py
+├ demos/
+├ engines/
+├ visualizers/
+├ dashboards/
+├ systems/
+├ global_systems/
+├ data/
+├ proto_models/
+├ experimental/
+├ visuals/
+├ nexah_cli.py
+├ run_builder_lab.py
 ```
 
 ---
@@ -326,12 +258,23 @@ It allows experimentation with:
 - multi-layer infrastructure models  
 - planetary-scale simulations  
 
-Future work includes:
+---
 
-- interactive system explorers  
-- expanded infrastructure datasets  
-- real-world system integration  
-- autonomous system navigation agents  
+# Future Direction
+
+- integration with FIELD layer (`nexah/`)
+- unified navigation kernel
+- real-world system validation
+- improved navigation policies
+
+---
+
+## 🧠 Final Insight
+
+The Builder Lab shows:
+
+> systems can be explored as structured spaces —  
+> and navigation becomes a question of movement, not control
 
 ---
 
