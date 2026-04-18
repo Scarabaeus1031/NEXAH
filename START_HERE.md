@@ -115,5 +115,103 @@ NEXAH turns complex dynamics into a **structure you can move within**
 
 ---
 
+## 🧩 Want to build on this?
+
+NEXAH is not a finished system — it is a working prototype.
+
+You can actively experiment with it.
+
+---
+
+## 🔧 Try this (2 minutes)
+
+Open:
+
+APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
+
+---
+
+### Step 1 — change control strength
+
+Find this line in the code:
+
+control = -0.30 * dx
+
+Try changing it to:
+
+control = -0.10 * dx
+
+or:
+
+control = -0.80 * dx
+
+👉 Then run the script again.
+
+---
+
+### Step 2 — observe
+
+Watch how the system changes:
+
+- does it stabilize faster?  
+- does it become unstable?  
+- does it switch modes more often?  
+
+---
+
+### Step 3 — modify behavior
+
+Try changing:
+
+- mode selection logic  
+- thresholds (risk / entropy / confidence)  
+- memory strength  
+- switching sensitivity  
+
+---
+
+## 🧠 What you are doing
+
+You are not tuning parameters.
+
+You are:
+
+> **changing how a system navigates itself**
+
+---
+
+## 🚀 Where to go next
+
+You can extend:
+
+### 🔧 Control
+- design new control laws  
+- test alternative stabilization strategies  
+
+### 🧠 Prediction
+- improve pattern detection  
+- test different prediction models  
+
+### 🌐 Systems
+- apply NEXAH to your own system  
+- connect simulations or real data  
+
+---
+
+## 💡 Philosophy
+
+NEXAH is not meant to be used as a black box.
+
+It is meant to be:
+
+> explored, modified, and extended
+
+---
+
+👉 If you change something and observe new behavior,  
+you are already contributing to the system.
+
+---
+
 **NEXAH · Thomas K. R. Hofmann · 2026**
 
