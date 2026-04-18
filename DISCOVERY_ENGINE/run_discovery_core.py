@@ -1,15 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
-from sklearn.decomposition import PCA
-from scipy.interpolate import splprep, splev
-
-# =========================
-# Setup
-# =========================
-
-OUTPUT_DIR = "DISCOVERY_ENGINE/outputs"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # =========================
 # 1. Lorenz System
@@ -20,7 +11,6 @@ def lorenz(x, y, z, sigma=10, rho=28, beta=8/3):
     dy = x * (rho - z) - y
     dz = x * y - beta * z
     return np.array([dx, dy, dz])
-
 
 # =========================
 # 2. Simulation
@@ -35,7 +25,6 @@ def simulate(n_steps=5000, dt=0.01):
 
     return traj
 
-
 # =========================
 # 3. Metrics
 # =========================
@@ -48,161 +37,144 @@ def compute_metrics(traj, dt):
     curvature = np.linalg.norm(a, axis=1)
 
     risk = flow * curvature
-
-    return risk
-
+    return v, flow, curvature, risk
 
 # =========================
 # 4. Event Detection
 # =========================
 
-def detect_events(signal, threshold_factor=2.5, min_distance=50):
-    threshold = np.mean(signal) * threshold_factor
+def detect_events(signal, factor=2.5):
+    threshold = np.mean(signal) * factor
     peaks = np.where(signal > threshold)[0]
 
-    filtered = []
-    last = -min_distance
+    # Cluster peaks → einzelne Events
+    events = []
+    current = [peaks[0]]
 
-    for p in peaks:
-        if p - last > min_distance:
-            filtered.append(p)
-            last = p
+    for i in range(1, len(peaks)):
+        if peaks[i] - peaks[i-1] < 10:
+            current.append(peaks[i])
+        else:
+            events.append(int(np.mean(current)))
+            current = [peaks[i]]
 
-    return np.array(filtered)
-
-
-# =========================
-# 5. Directional Transitions
-# =========================
-
-def detect_directional_transitions(traj):
-    x = traj[:, 0]
-
-    LR = []
-    RL = []
-
-    for i in range(len(x) - 1):
-        if x[i] < 0 and x[i+1] > 0:
-            LR.append(i)
-        elif x[i] > 0 and x[i+1] < 0:
-            RL.append(i)
-
-    return np.array(LR), np.array(RL)
-
+    events.append(int(np.mean(current)))
+    return np.array(events)
 
 # =========================
-# 6. PCA Manifold (linear)
+# 5. Lobe classification
 # =========================
 
-def extract_pca_manifold(traj, transition_indices):
-    points = traj[transition_indices]
-
-    pca = PCA(n_components=1)
-    pca.fit(points)
-
-    direction = pca.components_[0]
-    center = np.mean(points, axis=0)
-
-    t = np.linspace(-20, 20, 100)
-    line = center + np.outer(t, direction)
-
-    return points, line, center
-
+def classify_lobes(traj, events):
+    x = traj[events, 0]
+    labels = np.where(x > 0, 1, 0)  # 1=Right, 0=Left
+    return labels
 
 # =========================
-# 7. Nonlinear Manifold (V8)
+# 6. Build features
 # =========================
 
-def extract_nonlinear_manifold(traj, transition_indices):
-    points = traj[transition_indices]
+def build_features(traj, velocity, events):
+    pos = traj[events]
+    vel = velocity[events]
 
-    # sortiert entlang Zeit
-    order = np.argsort(transition_indices)
-    points = points[order]
-
-    x, y, z = points[:,0], points[:,1], points[:,2]
-
-    # Spline Fit
-    tck, u = splprep([x, y, z], s=5)
-
-    u_fine = np.linspace(0, 1, 200)
-    x_f, y_f, z_f = splev(u_fine, tck)
-
-    curve = np.vstack([x_f, y_f, z_f]).T
-
-    return points, curve
-
+    features = np.hstack([pos, vel])  # [x,y,z, vx,vy,vz]
+    return features
 
 # =========================
-# MAIN
+# 7. Predict next lobe
+# =========================
+
+def build_predictor(features, labels):
+    # Simple prototype (mean of each class)
+    left_proto = features[labels == 0].mean(axis=0)
+    right_proto = features[labels == 1].mean(axis=0)
+
+    return left_proto, right_proto
+
+def predict(features, left_proto, right_proto):
+    preds = []
+    for f in features:
+        dL = np.linalg.norm(f - left_proto)
+        dR = np.linalg.norm(f - right_proto)
+        preds.append(1 if dR < dL else 0)
+    return np.array(preds)
+
+# =========================
+# 8. Evaluate transitions
+# =========================
+
+def compute_next_labels(labels):
+    # next lobe after event
+    next_labels = np.roll(labels, -1)
+    return next_labels[:-1], labels[:-1]
+
+# =========================
+# 9. Main
 # =========================
 
 def main():
-    print("Running Discovery Core V8...")
+    print("Running Discovery Core V9...")
+
+    os.makedirs("DISCOVERY_ENGINE/outputs", exist_ok=True)
 
     traj = simulate()
-    risk = compute_metrics(traj, dt=0.01)
+    v, flow, curvature, risk = compute_metrics(traj, dt=0.01)
 
     events = detect_events(risk)
-    LR, RL = detect_directional_transitions(traj)
+    labels = classify_lobes(traj, events)
 
-    transitions = np.concatenate([LR, RL])
+    features = build_features(traj, v, events)
+
+    # next step prediction problem
+    next_labels, current_labels = compute_next_labels(labels)
+    features = features[:-1]
+
+    left_proto, right_proto = build_predictor(features, next_labels)
+    preds = predict(features, left_proto, right_proto)
+
+    accuracy = np.mean(preds == next_labels)
 
     print(f"Events: {len(events)}")
-    print(f"L→R: {len(LR)} | R→L: {len(RL)}")
-
-    # PCA
-    points, line, center = extract_pca_manifold(traj, transitions)
-
-    # Nonlinear
-    points_nl, curve = extract_nonlinear_manifold(traj, transitions)
+    print(f"Prediction Accuracy: {accuracy:.3f}")
 
     # =========================
-    # Plot
+    # Visualization
     # =========================
 
-    fig = plt.figure(figsize=(14, 7))
-    ax = fig.add_subplot(111, projection='3d')
+    fig = plt.figure(figsize=(12, 6))
 
-    # Trajectory
+    ax = fig.add_subplot(121, projection='3d')
     ax.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.3)
 
-    # Events
-    ax.scatter(traj[events,0], traj[events,1], traj[events,2],
-               color='red', s=20, label="Events")
+    correct = preds == next_labels
 
-    # Transitions
-    ax.scatter(traj[LR,0], traj[LR,1], traj[LR,2],
-               color='green', s=40, label="L→R")
+    ax.scatter(
+        traj[events[:-1],0],
+        traj[events[:-1],1],
+        traj[events[:-1],2],
+        c=correct,
+        cmap='coolwarm',
+        s=40
+    )
 
-    ax.scatter(traj[RL,0], traj[RL,1], traj[RL,2],
-               color='purple', s=40, label="R→L")
+    ax.set_title("Prediction (blue=correct, red=wrong)")
 
-    # PCA Line
-    ax.plot(line[:,0], line[:,1], line[:,2],
-            color='black', linewidth=2, label="PCA Axis")
+    ax2 = fig.add_subplot(122)
+    ax2.plot(risk, label="Risk")
 
-    # Nonlinear Curve
-    ax.plot(curve[:,0], curve[:,1], curve[:,2],
-            color='orange', linewidth=3, label="Nonlinear Manifold")
+    ax2.scatter(events[:-1], risk[events[:-1]], c=correct, cmap='coolwarm')
 
-    # Center
-    ax.scatter(center[0], center[1], center[2],
-               color='yellow', s=80, label="Center")
-
-    ax.set_title("V8: Linear + Nonlinear Transition Manifold")
-    ax.legend()
+    ax2.set_title("Risk + Prediction Quality")
+    ax2.legend()
 
     plt.tight_layout()
-
-    # Save
-    plt.savefig(f"{OUTPUT_DIR}/lorenz_v8_manifold.png", dpi=200)
-
-    np.save(f"{OUTPUT_DIR}/transitions_v8.npy", transitions)
-    np.save(f"{OUTPUT_DIR}/risk_v8.npy", risk)
-
+    plt.savefig("DISCOVERY_ENGINE/outputs/v9_prediction.png", dpi=200)
     plt.show()
 
+    print("Saved V9 output")
+
+# =========================
 
 if __name__ == "__main__":
     main()
