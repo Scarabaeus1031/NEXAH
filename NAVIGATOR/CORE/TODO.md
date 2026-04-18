@@ -33,7 +33,7 @@ Must show:
 - Lorenz dynamics  
 - Field structure  
 - Coherence + Risk  
-- Navigation (V12)  
+- Navigation (V12 / Meta-Control)  
 
 Optional:
 - IEEE mini demo
@@ -66,6 +66,11 @@ Must include:
 # 🟣 PRIORITY 3 — LORENZ (REPRODUCIBLE CORE DEMO)
 
 👉 Your strongest and cleanest system.
+
+### Status:
+- [x] Full pipeline implemented (core → analysis → navigation → meta)
+- [x] Meta-control up to v6 (switch layer)
+- [x] Symbolic + pattern + prediction layers
 
 ### ToDo:
 
@@ -109,11 +114,16 @@ Must output:
 
 👉 Already strong — just polish.
 
+### Status:
+- [x] Visual system (V1–V12) implemented
+- [x] Visual gallery created
+- [x] Integrated into README (root + applications + lorenz)
+
 ### ToDo:
 
-- [ ] Finalize `FRAMEWORK_visual_gallery.md`
-- [ ] 1–2 lines per visual
-- [ ] clean ordering (V1 → V12)
+- [~] Finalize `FRAMEWORK_visual_gallery.md`
+- [ ] Add short captions (1–2 lines per visual)
+- [ ] Ensure clean ordering (V1 → V12)
 
 - [ ] Highlight:
   - V6 (Field structure)
@@ -126,11 +136,21 @@ Must output:
 
 👉 Do not over-engineer.
 
+### Status:
+- [x] Core demos restructured into:
+  - `core/`
+  - `analysis/`
+  - `navigation/`
+  - `meta/`
+  - `legacy/`
+  - `docs/`
+- [x] Documentation separated
+- [x] Lorenz module structured as layered system
+
 ### ToDo:
 
-- [~] Separate experimental code → `BUILDER_LAB/`
-- [~] Normalize language (partial)
-- [ ] (Optional) introduce `nexah/core/` module
+- [~] Normalize naming consistency (minor)
+- [ ] (Optional) introduce `nexah/core/` module later
 
 ---
 
@@ -144,12 +164,13 @@ Must output:
 - [x] Risk \( R(x) \)
 - [x] Control equation  
   `dx/dt = F(x) + u(x, C, R)`
+- [x] Implicit implementation across all demos
 
 ---
 
 ### ToDo:
 
-- [~] Clean definitions for:
+- [ ] Clean definitions for:
   - derivatives  
   - residuals  
   - distances  
@@ -169,8 +190,8 @@ Must output:
 
 1. `run_nexah_demo.py`
 2. `START_HERE.md`
-3. Lorenz reproducibility
-4. IEEE demo
+3. Lorenz reproducibility (metrics)
+4. IEEE demo (packaged)
 5. Visual gallery polish
 6. Math doc cleanup (final layer)
 
@@ -190,8 +211,10 @@ You already have:
 - ✅ Mathematical core  
 - ✅ Visual system  
 - ✅ Working demos  
+- ✅ Lorenz full pipeline (deep system)  
 - ✅ IEEE prototype  
-- ✅ Symbolic layer  
+- ✅ Symbolic + prediction + control layers  
+- ✅ Meta-control + memory + switching  
 
 ---
 
