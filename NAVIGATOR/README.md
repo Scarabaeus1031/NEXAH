@@ -1,14 +1,14 @@
 # 🧭 NEXAH Navigator
 
-The **NAVIGATOR** is the orientation and control layer of the NEXAH repository.
+The **NAVIGATOR** is the orientation layer of the NEXAH repository.
 
 It provides:
 
 - system overview  
-- architectural clarity  
-- development direction  
+- entry points  
+- navigation between components  
 
-> Think of it as the **map and control room** of NEXAH
+> Think of it as the **map of the system**
 
 ---
 
@@ -18,67 +18,68 @@ NEXAH is a system for:
 
 > **extracting structure from complex dynamics and navigating it**
 
-```text
-dynamics → structure → field → geometry → navigation
-```
+Core transformation:
+
+dynamics → structure → states → prediction → control → navigation
+
+---
 
 ## 🚀 Start Here
 
-- 👀 [Main README](../README.md) → quick understanding  
-- 🧱 [Framework](../FRAMEWORK/README.md) → architecture  
-- ⚡ [Applications](../APPLICATIONS/) → real systems  
-- 🧪 [Builder Lab](../BUILDER_LAB/) → experiments  
+- 👉 [Main README](../README.md) → quick overview  
+- 👉 [Architecture](../FRAMEWORK/NEXAH_Architecture.md) → system definition  
+- 👉 [Navigation Kernel](CORE/NAVIGATION_ARCHITECTURE.md) → how decisions work  
+- 👉 [Applications](../APPLICATIONS/) → runnable demos  
 
 ---
 
-## 🏗 Architecture
-
-```text
-META → ARCHY → MESO → NEXAH → MEVA
-```
-
-| Layer | Role |
-|------|------|
-| META  | system definition |
-| ARCHY | structure & regimes |
-| MESO  | risk geometry |
-| NEXAH | navigation |
-| MEVA  | execution |
-
----
-
-## 🗺 Repository
+## 🗺 Repository Structure
 
 | Directory | Role |
 |----------|------|
-| ENGINE | computation |
-| FRAMEWORK | architecture |
-| APPLICATIONS | validation |
-| BUILDER_LAB | experiments |
-| DISCOVERY_ENGINE | structure extraction |
-| nexah/ | geometric layer |
-| NAVIGATOR | orientation |
+| ENGINE | computation & structural analysis |
+| FRAMEWORK | system architecture |
+| APPLICATIONS | demos and real-world experiments |
+| NAVIGATOR | orientation and navigation logic |
+| BUILDER_LAB | experimental modules |
 
 ---
 
-## 🧠 NAVIGATOR Structure
+## 🧭 Navigation Logic
 
-- **CORE/** → decisions, TODOs, architecture  
-- **FRAGMENTS/** → unresolved ideas  
-- **symbolic_layer/** → notation & geometry  
-- **visuals/** → system representations  
+The operational system is defined in:
+
+👉 [`CORE/NAVIGATION_ARCHITECTURE.md`](CORE/NAVIGATION_ARCHITECTURE.md)
+
+It contains:
+
+- symbolic state layer  
+- pattern detection  
+- prediction  
+- control & meta-control  
+- memory and sequence logic  
+
+---
+
+## 🧠 Navigator Structure
+
+- **CORE/** → architecture & navigation kernel  
+- **FRAGMENTS/** → experimental ideas (optional)  
+- **visuals/** → system diagrams  
 
 ---
 
 ## 🔥 Key Insight
 
-```text
-exploration → structure → integration → navigation
-```
+NEXAH is not a static system.
 
-The NAVIGATOR keeps this process coherent.
+It is a process:
 
-⸻
+exploration → structure → prediction → control → navigation
 
-NEXAH Navigator
-Architecture, direction, and system orientation
+---
+
+**NEXAH Navigator**  
+System orientation and entry layer
+
+
