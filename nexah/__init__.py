@@ -32,20 +32,6 @@ class Engine:
         return self.Lattice(elements, order)
 
 
-# ================================================================
-# === Spiral Coupling Layer (v9.0) ===
-# ================================================================
-from .spiral_coupling import SpiralCouplingLayer, SpiralCouplingKernel
-
-
-# ================================================================
-# === URF Axial Space Layer (v9.1) ===
-# === 3D coordinate system for Matroschka + Switch Grid ===
-# ================================================================
-from .urf_axial_space.urf_axial_space_kernel import URFAxialSpaceKernel
-from .urf_axial_space.switch_grid_mapper import SwitchGridMapper
-
-
 # --- Public API export list ---
 __all__ = [
     "Poset",
@@ -56,12 +42,6 @@ __all__ = [
     "FrameOperator",
     "RegimeOperator",
     "Engine",
-    # Spiral Coupling
-    "SpiralCouplingLayer",
-    "SpiralCouplingKernel",
-    # URF Axial Space
-    "URFAxialSpaceKernel",
-    "SwitchGridMapper",
 ]
 
 __version__ = "1.1"
