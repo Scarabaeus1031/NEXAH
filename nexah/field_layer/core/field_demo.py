@@ -34,11 +34,10 @@ curvature = metrics.curvature()
 variance = metrics.fragmentation()
 
 # --- 3. Simple Risk Model ---
-# minimal but meaningful combination
 risk = curvature * (flow_strength + 1e-6)
 
 
-# --- 4. Visualization ---
+# --- 4. Main Visualization ---
 fig, axs = plt.subplots(2, 3, figsize=(14, 8))
 
 # Trajectory
@@ -63,8 +62,38 @@ axs[1, 0].set_title("State Variance (Dispersion Proxy)")
 axs[1, 1].plot(risk)
 axs[1, 1].set_title("Risk Signal (Curvature × Flow)")
 
-# Empty (future use)
+# Empty
 axs[1, 2].axis("off")
 
 plt.tight_layout()
+plt.show()
+
+
+# --- 5. Overlay: State vs Risk ---
+fig2, ax1 = plt.subplots(figsize=(10, 4))
+
+ax1.set_title("State vs Risk Overlay")
+
+# State (z-component)
+ax1.plot(states[:, 2], label="State (z)", alpha=0.7)
+
+# Scale risk for visibility
+risk_scaled = risk / (np.max(risk) + 1e-8) * np.max(states[:, 2])
+ax1.plot(risk_scaled, label="Risk (scaled)", linestyle="--")
+
+ax1.legend()
+plt.show()
+
+
+# --- 6. Peak Detection ---
+threshold = np.percentile(risk, 95)
+peaks = np.where(risk > threshold)[0]
+
+fig3, ax = plt.subplots(figsize=(10, 4))
+ax.plot(states[:, 2], label="State (z)")
+
+ax.scatter(peaks, states[peaks, 2], color="red", label="High Risk Events")
+
+ax.set_title("High-Risk Events in State Space")
+ax.legend()
 plt.show()
