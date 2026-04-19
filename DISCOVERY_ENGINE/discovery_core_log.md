@@ -200,6 +200,248 @@ This gallery documents the evolution of the Discovery Core.
 
 ---
 
+---
+
+# 🧭 V12 — Quantitative Metrics
+
+Visual: `v12_metrics.png`
+
+## What was done
+- Channel metrics:
+  - distance to axis
+  - variance
+  - density
+
+## Observation
+- clear density peaks near transition regions
+- measurable channel width
+
+## Insight
+> The channel is not just visual — it is measurable
+
+---
+
+# 🧭 V13 — Alignment & Projection
+
+Visual: `v13_aligned.png`
+
+## What was done
+- Projection onto channel axis
+- event ordering along axis
+
+## Observation
+- ordered event sequence appears
+- plateaus + jumps
+
+## Insight
+> Transitions follow a 1D structure embedded in 3D
+
+---
+
+# 🧭 V14 — Channel Navigation
+
+Visual: `v14_channel_navigation.png`
+
+## What was done
+- explicit channel axis modeling
+- event projection onto axis
+
+## Observation
+- symmetric structure around center
+- inner vs outer clusters
+
+## Insight
+> The system organizes around a central navigation line
+
+---
+
+# 🧭 V15 — State Machine
+
+Visual: `v15_state_machine.png`
+
+## What was done
+- state classification:
+  - left / transition / right
+
+## Observation
+- discrete switching behavior
+- temporal structure emerges
+
+## Insight
+> Chaos can be discretized into states
+
+---
+
+# 🧭 V16 — Probability Field
+
+Visual: `v16_probability_field.png`
+
+## What was done
+- probability density estimation
+- distance vs transition likelihood
+
+## Observation
+- "hot zones" near transition regions
+- non-uniform probability field
+
+## Insight
+> Transitions are governed by a spatial probability field
+
+---
+
+# 🧭 V17 — Pre-Transition Detection
+
+Visual: `v17_pretransition.png`
+
+## What was done
+- early warning signal
+- risk + geometry + probability combined
+
+## Observation
+- detectable pre-transition spikes
+- clustering of warning signals
+
+## Insight
+> Transitions are preceded by measurable precursors
+
+---
+
+# 🧭 V18 — Probability + Echo Memory
+
+Visual: `v18_probability_field.png`
+
+## What was done
+- introduce temporal echo (pre-transition memory)
+- track repeated patterns
+
+## Observation
+- repeated "echo spikes"
+- no empty gaps → continuous field influence
+
+## Insight
+> The system has memory-like behavior (echo dynamics)
+
+---
+
+# 🧭 V19 — Energy Landscape (Boltzmann)
+
+Visual: `v19_energy_field.png`
+
+## What was done
+- define energy from density:
+  - E = -log(p)
+- compute gradients
+
+## Observation
+- wells and ridges appear
+- transitions correspond to energy barriers
+
+## Insight
+> Transitions behave like energy-driven escapes
+
+---
+
+# 🧭 V20 — Maxwell Field (Divergence & Curl)
+
+Visual: `v20_maxwell_field.png`
+
+## What was done
+- compute:
+  - divergence (sources/sinks)
+  - curl (rotation)
+
+## Observation
+- asymmetric field structure
+- strong rotational dominance
+
+## Insight
+> The system behaves like a dynamic field:
+> expansion ↔ rotation
+
+---
+
+# 🧭 V21 — Coupled Field Dynamics
+
+Visual: *(implicit in plots)*
+
+## What was done
+- compare:
+  - curl vs d(div)/dt
+  - div vs d(curl)/dt
+
+## Observation
+- clear correlation structure
+- directional coupling
+
+## Insight
+> Divergence and curl are dynamically coupled
+
+---
+
+# 🧭 V22 — Time Lag Coupling
+
+Visual: `v22_time_lag.png`
+
+## What was done
+- cross-correlation between:
+  - curl
+  - divergence
+
+## Observation
+- strong phase shift:
+  - curl → div lag ≈ +15
+  - div → curl lag ≈ −15
+
+## Insight
+> The system forms a delayed feedback loop:
+> curl drives divergence, divergence drives curl
+
+---
+
+# 🧠 EXTENDED CORE INSIGHT
+
+The system is not only structured.
+
+It is:
+
+> **a coupled dynamical field with memory, delay, and feedback**
+
+---
+
+# 🔥 CURRENT STATE (UPDATED)
+
+You now have:
+
+- signal  
+- events  
+- transitions  
+- geometry  
+- prediction  
+- control  
+- probability field  
+- energy landscape  
+- field operators (div / curl)  
+- temporal coupling  
+
+---
+
+# 🧭 NEXT STEP (V23+)
+
+- frequency / spectral analysis  
+- mode decomposition  
+- stability basin mapping  
+
+---
+
+# FINAL NOTE
+
+This is no longer just a trajectory.
+
+It is:
+
+> **a structured dynamical field with measurable laws**
+
+
 ## 🔹 V4 — Raw Risk
 
 ![V4](outputs/lorenz_core_v4.png)
@@ -289,3 +531,83 @@ They form:
 The Lorenz system behaves like:
 
 > a structured transition field, not pure chaos
+
+---
+
+## 🔹 V12 — Metrics
+
+![V12](outputs/v12_metrics.png)
+
+Quantification of channel structure.
+
+---
+
+## 🔹 V13 — Alignment
+
+![V13](outputs/v13_aligned.png)
+
+1D ordering emerges.
+
+---
+
+## 🔹 V14 — Channel
+
+![V14](outputs/v14_channel_navigation.png)
+
+Central navigation axis.
+
+---
+
+## 🔹 V15 — State Machine
+
+![V15](outputs/v15_state_machine.png)
+
+Discrete regime switching.
+
+---
+
+## 🔹 V16 — Probability Field
+
+![V16](outputs/v16_probability_field.png)
+
+Hot zones of transitions.
+
+---
+
+## 🔹 V17 — Pre-Transition
+
+![V17](outputs/v17_pretransition.png)
+
+Early warning signals.
+
+---
+
+## 🔹 V18 — Echo Field
+
+![V18](outputs/v18_probability_field.png)
+
+Memory-like dynamics.
+
+---
+
+## 🔹 V19 — Energy Landscape
+
+![V19](outputs/v19_energy_field.png)
+
+Transitions as barrier crossings.
+
+---
+
+## 🔹 V20 — Maxwell Field
+
+![V20](outputs/v20_maxwell_field.png)
+
+Divergence vs rotation field.
+
+---
+
+## 🔹 V22 — Time Lag
+
+![V22](outputs/v22_time_lag.png)
+
+Delayed coupling between field components.
