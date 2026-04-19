@@ -64,10 +64,21 @@ htmlcov/
 # 🔥 NEXAH ENGINE OUTPUTS
 # =========================
 
-# Alles ignorieren...
+# Ignore ALL outputs by default
 **/outputs/*
 
-# ...ABER diese erlauben:
+# =========================
+# FIELD_LAYER OUTPUTS (ALLOW)
+# =========================
+
+!FIELD_LAYER/outputs/
+!FIELD_LAYER/outputs/plots/
+!FIELD_LAYER/outputs/plots/*.png
+
+# =========================
+# DISCOVERY ENGINE (ALLOW SELECTED)
+# =========================
+
 !**/outputs/json/
 !**/outputs/json/*.json
 
@@ -75,7 +86,7 @@ htmlcov/
 !**/outputs/visuals/**/*.png
 
 # =========================
-# VISUAL MASS OUTPUT
+# VISUAL MASS OUTPUT (IGNORE)
 # =========================
 **/*.gif
 
@@ -90,91 +101,26 @@ htmlcov/
 # CACHE / RENDER
 # =========================
 .cache/
-*.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_0_7.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_1_7.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_2_7.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_3_7.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_4_7.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_5_7.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_6_7.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_0.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_1.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_2.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_3.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_4.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_5.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_6.json
-DISCOVERY_ENGINE/nexah_dynamics_engine/outputs/json/grid_7_7.json
 
-!ENGINE/research/experiments/prime_modular_resonance/analysis/output/
-!ENGINE/research/experiments/prime_modular_resonance/analysis/output/plots/
-!*.png
-!*.gif
+# =========================
+# ALLOW CURATED VISUALS ONLY
+# =========================
 
-# allow curated gifs
-!**/output/curated/
-!**/output/curated/*.gif
-
-!APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/rift_extraction/
-
-# Allow demo results (NEXAH application layer)
-!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/
-!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/*
-
-# allow Lorenz curated visuals
+# Lorenz curated visuals
 !APPLICATIONS/dynamical_systems/lorenz/visuals/
 !APPLICATIONS/dynamical_systems/lorenz/visuals/*.png
 
-# Allow specific NEXAH test data
+# Power system curated outputs
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/*
+
+# Specific analysis export
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/rift_extraction/
+
+# Specific data allowed
 !APPLICATIONS/power_systems/stability_field_dynamics/data/
 !APPLICATIONS/power_systems/stability_field_dynamics/data/*.csv
+
+# =========================
+# END
+# =========================
