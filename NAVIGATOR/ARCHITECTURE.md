@@ -29,14 +29,13 @@ the Navigation Kernel defines **how it moves and decides**.
 
 ---
 
-
 # 🧠 Core Idea
 
 NEXAH is a structural navigation framework for complex dynamical systems.
 
 It transforms:
 
-dynamics → structure → states → patterns → prediction → control → navigation
+dynamics → structure → field → states → patterns → prediction → control → navigation
 
 The goal is not only to analyze systems, but to:
 
@@ -46,15 +45,16 @@ The goal is not only to analyze systems, but to:
 
 # 🏗 System Architecture
 
-## Core Stack (Simplified)
+## Core Stack (Updated)
 
 ```text
-System → Structure → Signals → Decision → Action
+System → Structure → Field → Signals → Decision → Action
 ```
 
 | Layer | Function |
 |------|---------|
 | Structure | Extracts system geometry and dynamics |
+| Field | Represents dynamics as continuous, structured fields |
 | Signals | Computes coherence, risk, and metrics |
 | Decision | Selects behavior (policies, meta-control) |
 | Action | Applies control to system |
@@ -72,7 +72,79 @@ System → Structure → Signals → Decision → Action
 
 ---
 
-## 2. Signal Layer
+## 🔥 2. Field Layer (NEW)
+
+The Field Layer transforms structure into a dynamic, continuous representation.
+
+### 🧠 Concept
+
+Instead of analyzing only trajectories or states, the system is modeled as:
+
+> **a transition field**
+
+capturing where and how dynamics evolve.
+
+---
+
+### 🔬 Components
+
+#### Probability Field
+- density estimation of system states  
+- identification of high-density regions  
+- detection of transition zones  
+
+---
+
+#### Energy Landscape
+Derived from probability:
+
+E = -log(p)
+
+Reveals:
+
+- wells → stable regions  
+- barriers → transition thresholds  
+
+---
+
+#### Field Operators
+
+##### Divergence (∇·F)
+- expansion / contraction  
+- sources and sinks  
+
+##### Curl (∇×F)
+- rotational dynamics  
+- circulation patterns  
+
+---
+
+#### Temporal Coupling
+
+Field components interact dynamically:
+
+curl(t) → div(t + τ)  
+div(t) → curl(t − τ)
+
+This introduces:
+
+- feedback loops  
+- time delay  
+- propagation behavior  
+
+---
+
+### ⚡ Key Property
+
+The field is:
+
+- continuous  
+- dynamic  
+- structured  
+
+---
+
+## 3. Signal Layer
 
 - coherence C(x)  
 - risk R(x)  
@@ -81,7 +153,7 @@ System → Structure → Signals → Decision → Action
 
 ---
 
-## 3. Decision Layer
+## 4. Decision Layer
 
 - symbolic state representation  
 - transition probabilities  
@@ -92,7 +164,7 @@ System → Structure → Signals → Decision → Action
 
 ---
 
-## 4. Action Layer
+## 5. Action Layer
 
 - control input u(x)  
 - trajectory shaping  
@@ -111,6 +183,9 @@ NEXAH currently supports:
 - anticipatory control  
 - adaptive meta-control  
 - memory-based decision behavior  
+- field construction (probability + energy)  
+- divergence and curl analysis  
+- temporal coupling detection  
 
 ---
 
@@ -121,6 +196,9 @@ NEXAH currently supports:
 | Component | Status |
 |----------|--------|
 | Structure Extraction | ✓ implemented |
+| Field Construction | ✓ implemented |
+| Field Operators (div / curl) | ✓ implemented |
+| Temporal Coupling | ✓ implemented |
 | Signal Computation (C, R) | ✓ implemented |
 | Symbolic State Layer | ✓ implemented |
 | Pattern Detection | ✓ implemented |
@@ -141,7 +219,7 @@ analysis → structure discovery
 
 to:
 
-structure → states → prediction → control → navigation  
+structure → field → dynamics → prediction → control → navigation  
 
 ---
 
@@ -149,7 +227,8 @@ structure → states → prediction → control → navigation
 
 The system operates as:
 
-- continuous dynamics → discrete states  
+- continuous dynamics → structured field  
+- field → states  
 - states → patterns  
 - patterns → prediction  
 - prediction → control  
@@ -157,16 +236,11 @@ The system operates as:
 
 This enables:
 
-> structured navigation within a chaotic system
+> structured navigation within a dynamic system
 
----
 ---
 
 # ⚡ System Capabilities
-
-NEXAH currently provides the following capabilities:
-
----
 
 ## Core Capabilities
 
@@ -177,16 +251,24 @@ NEXAH currently provides the following capabilities:
 
 ---
 
+### Field Modeling
+- construct probability fields  
+- derive energy landscapes  
+- analyze divergence and curl  
+- detect temporal coupling  
+
+---
+
 ### Signal Computation
-- coherence C(x) as alignment metric  
-- risk R(x) as stability indicator  
-- local trajectory behavior  
+- coherence C(x)  
+- risk R(x)  
+- transition signals  
 
 ---
 
 ### Symbolic Representation
 - discretization into system states  
-- transition structure (state graph)  
+- transition graph  
 - pattern detection  
 
 ---
@@ -214,7 +296,7 @@ NEXAH currently provides the following capabilities:
 ### Memory
 - state-dependent behavior  
 - sequence-aware decisions  
-- reward-based adaptation  
+- adaptive learning behavior  
 
 ---
 
@@ -225,7 +307,7 @@ These components enable:
 - structured interpretation of chaotic systems  
 - local predictability  
 - adaptive control behavior  
-- navigation within stability regions  
+- navigation within dynamic structures  
 
 ---
 
@@ -238,18 +320,6 @@ These components enable:
 
 ---
 
-## 🔥 Core Statement
-
-NEXAH transforms:
-
-dynamics → structure → states → prediction → control → behavior  
-
-It enables systems to be:
-
-> interpreted, stabilized, and navigated within their intrinsic structure
-
----
-
 # 🚀 Next Development Targets
 
 The current frontier is:
@@ -257,17 +327,18 @@ The current frontier is:
 - unify navigation kernel  
 - define reusable interface  
 - implement reproducibility metrics  
+- spectral / frequency analysis  
 - connect Lorenz ↔ real-world systems (IEEE)  
 
 ---
 
 # 🧠 Milestone Summary
 
-Status: **Functional navigation pipeline (prototype)**
+Status: **Field-aware navigation pipeline (prototype)**
 
 NEXAH now functions as:
 
-> a structure-aware system capable of prediction, control, and adaptive behavior
+> a structure-aware and field-aware system capable of prediction, control, and adaptive behavior
 
 ---
 
@@ -277,7 +348,7 @@ Complex systems are not controlled through isolated events.
 
 They can be:
 
-> **understood and navigated through their structure**
+> **understood and navigated through their structure and field dynamics**
 
 ---
 
