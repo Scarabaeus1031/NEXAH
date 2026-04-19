@@ -17,10 +17,19 @@ Outcome:
 
 ---
 
+
+Outcome:
+- poor fit (low R²)
+- boundary is not representable as single surface
+
+---
+
 # 🔷 V7.1 — Local Surface Approximation
 
 Files:
 - `v7_1_local_surfaces_q4.png`
+
+![V7.1 Local Surfaces](outputs/plots/v7_1_local_surfaces_q4.png)
 
 Description:
 - piecewise surface fitting (quadrants)
@@ -36,6 +45,8 @@ Outcome:
 
 Files:
 - `v7_2_density_field_q4.png`
+
+![V7.2 Density Field](outputs/plots/v7_2_density_field_q4.png)
 
 Description:
 - transition regions converted into density field
@@ -55,6 +66,8 @@ Outcome:
 Files:
 - `v7_3_ridge_detection.png`
 
+![V7.3 Ridge Detection](outputs/plots/v7_3_ridge_detection.png)
+
 Description:
 - extraction of local maxima in density field
 
@@ -69,6 +82,8 @@ Outcome:
 Files:
 - `v8_directional_field.png`
 
+![V8 Directional Field](outputs/plots/v8_directional_field.png)
+
 Description:
 - estimation of local flow vectors at ridge points
 
@@ -82,6 +97,8 @@ Outcome:
 
 Files:
 - `v8_1_flow_segmentation.png`
+
+![V8.1 Flow Segmentation](outputs/plots/v8_1_flow_segmentation.png)
 
 Description:
 - segmentation of ridge flow into:
