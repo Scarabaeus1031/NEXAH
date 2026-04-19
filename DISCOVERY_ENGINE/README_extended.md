@@ -1,56 +1,101 @@
-# DISCOVERY_ENGINE
+# NEXAH — Discovery & Dynamics Engine
 
-Computational laboratory for **dynamic structure discovery, transition modeling,  
-and field-based system analysis** in NEXAH.
+NEXAH is a research framework for exploring the stability, evolution, and organization of complex systems.
 
----
+It provides computational tools for:
 
-# 🔥 DISCOVERY CORE (ENTRY POINT)
+• architecture generation  
+• resilience analysis  
+• phase transition detection  
+• structural law discovery  
+• theory validation  
+• dynamic system simulation  
+• topology extraction  
+• field-based structure discovery  
 
-Minimal functional system demonstrating how:
+The framework enables large-scale exploration of architecture spaces and the discovery of structural principles governing:
 
-> **dynamics generate transitions, structure, and navigable fields**
-
----
-
-## 🧠 Core Idea
-
-Traditional systems analysis asks:
-
-> Where are systems stable?
-
-DISCOVERY asks:
-
-> **Where, how, and why do systems transition?**
+> **how systems evolve, transition, and organize into structured, connected fields**
 
 ---
 
-## 🔁 Core Pipeline
+# 🆕 Dynamic & Field-Based Systems
+
+NEXAH has evolved beyond static architecture analysis.
+
+It now supports:
+
+• dynamic system simulation  
+• flow-based structure formation  
+• emergence of loops, channels, and networks  
+• extraction of structure from trajectories  
+• construction of probability and energy fields  
+• divergence / curl field analysis  
+• time-delayed coupling between field components  
+
+---
+
+# NEXAH Tools
+
+## Overview
+
+The `tools/` directory contains the computational infrastructure of the **NEXAH Simulation Environment**.
+
+These tools form the experimental engine of the NEXAH project and support:
+
+- architecture exploration  
+- resilience analysis  
+- topology mapping  
+- evolutionary architecture search  
+- symbolic law discovery  
+- system visualization  
+
+Together they implement a:
+
+> **simulation laboratory for complex and dynamic systems**
+
+---
+
+# 🧭 Central Research Question
+
+> How do systems evolve, transition, and organize into structured, navigable fields?
+
+---
+
+# 🔁 Discovery Pipeline (Extended)
+
 NEXAH follows a structured discovery pipeline:
-
-Architecture Generation  
-↓  
-System Evolution  
-↓  
-Resilience Analysis  
-↓  
-Landscape Mapping  
-↓  
-Phase Transition Detection  
-↓  
-Structural Law Discovery  
-↓  
-Theory Validation  
-↓  
-Dynamics Simulation  
-↓  
-Resonance Formation  
-↓  
-Flow Structuring  
-↓  
-Topology Formation  
-↓  
-Topology Extraction  
+```text
+Architecture Generation
+↓
+System Evolution
+↓
+Resilience Analysis
+↓
+Landscape Mapping
+↓
+Phase Transition Detection
+↓
+Structural Law Discovery
+↓
+Theory Validation
+↓
+Dynamics Simulation
+↓
+Probability Field
+↓
+Energy Landscape
+↓
+Field Operators (div / curl)
+↓
+Field Coupling
+↓
+Flow Structuring
+↓
+Topology Formation
+↓
+Topology Extraction
+```
 
 ---
 
@@ -65,6 +110,8 @@ The system enables:
 • emergence of persistent flow structures  
 • formation of loops, channels, and networks  
 • extraction of topology from dynamic data  
+• modeling of systems as transition fields  
+• measurement of field coupling and delay  
 
 ---
 
@@ -73,12 +120,14 @@ The system enables:
 Across simulations, the system demonstrates:
 
 • geometry emerging from dynamics  
-• resonance-driven selection of states  
-• φ as an emergent transition ratio (observed, not imposed)  
 • flow organizing into persistent trajectories  
 • separation of density and structural topology  
 • formation of loop–channel networks  
 • existence of transition nodes between regimes  
+• emergence of probability and energy landscapes  
+• dominance of rotational (curl-like) dynamics  
+• coupling between expansion (divergence) and rotation (curl)  
+• time-delayed feedback between field components  
 
 ---
 
@@ -187,7 +236,7 @@ Examples:
 
 ---
 
-## 8. Dynamics & Topology Engine (NEW)
+## 8. Dynamics & Field Engine (NEW)
 
 Tools for simulating and extracting dynamic structure.
 
@@ -197,15 +246,19 @@ Examples:
 - `loop_detector.py`  
 - `channel_extractor.py`  
 - `transition_node_finder.py`  
+- `run_discovery_core_vXX.py`  
 
 Capabilities:
 
-• multi-agent dynamic simulation  
+• dynamic system simulation  
 • flow structuring  
 • loop detection  
 • channel extraction  
 • transition node detection  
-• topology reconstruction  
+• probability field modeling  
+• energy landscape reconstruction  
+• divergence / curl computation  
+• time-lag coupling analysis  
 
 ---
 
@@ -216,6 +269,10 @@ NEXAH is no longer only a system analysis framework.
 It is:
 
 > a system that **generates, evolves, and extracts structure from dynamics**
+
+and increasingly:
+
+> a system that models dynamics as **coupled fields with measurable structure**
 
 ---
 
@@ -233,6 +290,7 @@ The NEXAH tool ecosystem is organized into functional layers:
 Extended layers:
 
 - DYNAMICS — flow evolution  
+- FIELD — divergence / curl / coupling  
 - TOPOLOGY — loop/channel networks  
 
 ---
@@ -240,17 +298,21 @@ Extended layers:
 # 📊 Project Status
 
 Simulation Phase: COMPLETE  
-Dynamics & Topology Phase: ACTIVE  
+Dynamics Phase: COMPLETE  
+Field Phase: ESTABLISHED  
+Topology Phase: ACTIVE  
 Research Phase: PLANNED  
 
 ---
 
 # 🚀 Next Stage
 
+• spectral / frequency analysis  
+• mode decomposition  
+• stability basin mapping  
 • topology validation across runs  
-• loop and channel detection algorithms  
 • transition node identification  
-• real-world network testing  
+• real-world system testing (e.g. networks, power grids)  
 
 ---
 
@@ -262,13 +324,15 @@ The NEXAH system enables:
 • stability analysis  
 • law discovery  
 • dynamic simulation  
+• field construction  
 • topology formation and extraction  
 
 It forms a bridge between:
 
 → simulation  
 → structure discovery  
-→ scientific modeling  
+→ field modeling  
+→ scientific interpretation  
 
 ---
 
