@@ -1,66 +1,87 @@
-# ⚡ NEXAH — Structural Navigation in Complex Systems
+# ⚡ NEXAH — Structure & Transition Discovery in Dynamical Systems
 
-> Most complex systems are controlled by reacting to failure.  
-> **NEXAH explores how to navigate them before failure occurs.**
+> Most systems are analyzed after failure.  
+> **NEXAH explores how structure and transitions emerge before failure occurs.**
 
 ![Status](https://img.shields.io/badge/status-experimental-blue)
 ![Field Model](https://img.shields.io/badge/field-analysis-lightblue)
-![Control](https://img.shields.io/badge/control-prototype-orange)
+![Dynamics](https://img.shields.io/badge/dynamics-active-orange)
 
 ---
 
 ## 🧭 NEXAH
 
-**A structural modeling framework for complex dynamical systems.**  
-Relational structure. Explicit orientation.
+**A computational framework for extracting structure from dynamical systems.**
+
+NEXAH does not start from predefined states or thresholds.  
+Instead, it reconstructs:
+
+> **how systems evolve, organize, and transition in continuous space**
 
 ---
 
-## 🧭 Abstract
+## 🔬 Discovery Core (NEW)
 
-NEXAH explores complex dynamical systems through **structure, dynamics, and regimes**.
+At its core, NEXAH performs **structure discovery from raw dynamics**.
 
-Instead of binary classification (stable / unstable), systems are modeled as evolving within:
+From a trajectory, it extracts:
 
-> **intrinsic dynamical landscapes**
-
-This enables:
-
-- geometric representation of system dynamics  
-- identification of regime transitions  
-- trajectory-based interpretation  
-- exploration of navigation strategies within stability regions  
-
-NEXAH is designed as a **modular system framework**, with applications to power systems and reference dynamical models.
+- transition events  
+- geometric structure (manifolds / channels)  
+- probability fields  
+- energy landscapes  
+- flow properties (divergence / curl)  
+- temporal coupling between system components  
 
 ---
 
-## 🧭 Overview
+## 🔁 Core Perspective
 
-Classical system analysis focuses on:
+Classical system analysis asks:
+
+→ *Is the system stable?*
+
+NEXAH instead asks:
+
+> **Where and how does the system transition?**
+
+---
+
+## 🌊 Field Interpretation
+
+Rather than discrete states, systems are modeled as:
+
+- **probability fields** → where trajectories concentrate  
+- **energy landscapes** → stability vs transition regions  
+- **flow fields** → how the system moves  
+
+---
+
+## 🧠 Key Insight
+
+> Complex systems are not purely chaotic.  
+> They exhibit **structured, measurable transition dynamics**.
+
+---
+
+## 🧭 Overview (Updated)
+
+Classical approaches focus on:
 
 → threshold violations  
 → event detection  
 
-NEXAH provides a complementary perspective:
+NEXAH provides a complementary view:
 
-> systems evolve as **trajectories within geometric state spaces**
+> systems evolve as **trajectories within structured fields**
 
-This shifts the focus from:
+This shifts the question from:
 
 → "Is the system stable?"  
 
 to:
 
-→ **"How does the system move within its stability field?"**
-
-👉 **Core idea:**
-
-> NEXAH treats dynamical systems as **navigable stability fields**,  
-> rather than states to be controlled.
-
-Stability is not static —  
-it emerges from **trajectory alignment within structure**.
+→ **"How does the system move within its structure?"**
 
 ---
 
