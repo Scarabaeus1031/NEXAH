@@ -24,25 +24,34 @@ while keeping the mathematical core **explicit and documented**.
 ### Goal:
 > Clone → Run → Understand in 1 minute
 
+---
+
 ### ToDo:
 
 - [ ] Create `run_nexah_demo.py`
 
-Must show:
+Must show (minimal pipeline):
 
-- Lorenz dynamics  
-- Field structure  
-- Coherence + Risk  
-- Navigation (Meta-Control layer)  
-
-Optional:
-- IEEE mini demo
+1. Lorenz dynamics  
+2. Transition events (Discovery)  
+3. Field structure (probability / energy)  
+4. Divergence / Curl (flow insight)  
+5. Basic control / navigation signal  
 
 ---
 
+### Constraints:
+
 - [ ] Runtime < 30 seconds  
 - [ ] Minimal dependencies  
-- [ ] Clean output (plots only, no clutter)
+- [ ] Clean output (plots only, no debug clutter)  
+
+---
+
+### Output (critical)
+
+- 1–2 plots max  
+- 1 short printed result block  
 
 ---
 
@@ -50,16 +59,26 @@ Optional:
 
 👉 Without this, nobody can enter the system.
 
+---
+
 ### ToDo:
 
 - [ ] Create `START_HERE.md`
 
 Must include:
 
-1. Install  
+1. Install (minimal)  
 2. Run demo  
-3. What you see  
+3. What you see (very concrete)  
 4. Why it matters  
+
+---
+
+👉 Keep it:
+
+- short  
+- visual  
+- non-technical  
 
 ---
 
@@ -67,11 +86,15 @@ Must include:
 
 👉 Your strongest and most advanced system.
 
+---
+
 ### Status:
-- [x] Full pipeline implemented (core → analysis → navigation → meta)
-- [x] Meta-control up to v6 (switch layer)
-- [x] Symbolic + pattern + prediction layers
-- [x] Sequence + memory layers
+
+- [x] Full Discovery pipeline (events → field → coupling)  
+- [x] Prediction  
+- [x] Control  
+- [x] Meta layers  
+- [x] Visual system  
 
 ---
 
@@ -80,22 +103,21 @@ Must include:
 - [ ] Run multiple simulations (20–50 runs)
 
 - [ ] Compute metrics:
-  - mean risk  
-  - min risk  
-  - mean coherence  
-  - time in stable regions  
-  - switch frequency  
 
-- [ ] Compare:
-  - uncontrolled vs NEXAH  
+  - mean risk  
+  - max risk  
+  - event count  
+  - transition density  
+  - mean distance to channel  
+  - prediction accuracy  
 
 ---
 
 ### 🔥 NEW — Evidence Block (CRITICAL)
 
-👉 This is what makes the repo instantly “real”.
+👉 This makes the repo instantly real.
 
-- [ ] Add a **RESULTS block** (README or demo output):
+- [ ] Add a **RESULTS block**
 
 Example:
 
@@ -103,24 +125,29 @@ Example:
 
 Runs: 20
 
-Without NEXAH:
+Without control:
 Mean risk: 72.3
 
-With NEXAH:
+With control:
 Mean risk: 43.8
 
-Prediction accuracy: 0.38
+Events detected: 178  
+Prediction accuracy: 0.95  
 
 Observation:
-Consistent risk reduction and stabilization across runs.
+Consistent structure + transition predictability.
 
-👉 No hype. Only numbers.
+---
+
+👉 Only numbers. No interpretation overload.
 
 ---
 
 # 🟢 PRIORITY 4 — IEEE USE CASE (PACKAGED)
 
 👉 Shows real-world relevance.
+
+---
 
 ### ToDo:
 
@@ -129,7 +156,8 @@ Consistent risk reduction and stabilization across runs.
 Must output:
 
 - trajectory  
-- coherence curve  
+- risk / coherence curve  
+- 1–2 key metrics  
 - short interpretation  
 
 ---
@@ -144,23 +172,32 @@ Must output:
 
 👉 Already strong — just polish.
 
+---
+
 ### Status:
-- [x] Visual system (V1–V12) implemented
-- [x] Visual gallery created
-- [x] Integrated into README
+
+- [x] Discovery visuals (V4–V22)  
+- [x] Visual gallery  
 
 ---
 
 ### ToDo:
 
-- [~] Finalize `FRAMEWORK_visual_gallery.md`
-- [ ] Add short captions (1–2 lines per visual)
-- [ ] Ensure clean ordering (V1 → V12)
+- [ ] Add captions (1–2 lines per visual)  
+- [ ] Clean ordering (V4 → V22)  
+- [ ] Highlight key visuals:
 
-- [ ] Highlight:
-  - V6 (Field structure)
-  - V69 (real system)
-  - V12 (emergent navigation)
+  - V7 / V8 → manifold emergence  
+  - V13 → alignment  
+  - V18 → probability field  
+  - V20 → field behavior  
+  - V22 → temporal coupling  
+
+---
+
+👉 Goal:
+
+> visuals explain the system without text
 
 ---
 
@@ -168,16 +205,19 @@ Must output:
 
 👉 Do not over-engineer.
 
-### Status:
-- [x] Core demos modularized (core / analysis / navigation / meta / docs)
-- [x] Lorenz system structured as layered pipeline
-
 ---
 
 ### ToDo:
 
-- [~] Normalize naming consistency (minor)
-- [ ] Align output paths (`APPLICATIONS/outputs` vs local outputs)
+- [ ] Normalize naming consistency  
+- [ ] Align output paths (`DISCOVERY_ENGINE/outputs`)  
+- [ ] Remove redundant scripts (keep latest versions only)
+
+---
+
+👉 Goal:
+
+> clean, readable repo — not perfect architecture
 
 ---
 
@@ -185,30 +225,50 @@ Must output:
 
 👉 IMPORTANT: Do NOT expand — clarify.
 
-### Status:
-
-- [x] Coherence C(x)  
-- [x] Risk R(x)  
-- [x] Control equation implemented  
-- [x] Implicit across demos  
-
 ---
 
 ### ToDo:
 
 - [ ] Clean definitions for:
-  - derivatives  
-  - residuals  
-  - distances  
+
+  - probability field  
+  - energy landscape  
+  - divergence  
+  - curl  
+  - coupling (lag τ)
+
+---
 
 - [ ] Finalize:
+
   `FRAMEWORK/core_equations.md`
 
 ---
 
 👉 Goal:
 
-> make the math readable and reproducible — not more complex
+> make the math understandable and reproducible
+
+---
+
+# 🔗 PRIORITY 8 — INTEGRATION (DISCOVERY → NAVIGATOR)
+
+👉 This is the real system step.
+
+---
+
+### ToDo:
+
+- [ ] Map events → states  
+- [ ] Map field → decision inputs  
+- [ ] Define minimal loop:
+
+```text
+Field → Signals → Decision → Action → System
+```
+👉 Goal:
+
+first true closed-loop system
 
 ---
 
@@ -219,15 +279,16 @@ Must output:
 3. Evidence Block (Lorenz metrics)  
 4. Lorenz reproducibility  
 5. IEEE demo  
-6. Visual polish  
-7. Math clarity  
+6. Integration (Discovery → Navigator)  
+7. Visual polish  
+8. Math clarity  
 
 ---
 
 # 🧭 FINAL TARGET
 
-> NEXAH is a structural framework that extracts and navigates stability  
-> in dynamical systems through field geometry and trajectory alignment.
+> NEXAH extracts and navigates structure in dynamical systems  
+> through transition fields and flow dynamics  
 
 ---
 
@@ -235,13 +296,11 @@ Must output:
 
 You already have:
 
-- ✅ Mathematical core  
+- ✅ Discovery Engine (events, field, coupling)  
 - ✅ Visual system  
-- ✅ Working demos  
-- ✅ Full Lorenz pipeline (deep system)  
-- ✅ IEEE prototype  
-- ✅ Symbolic + prediction + control layers  
-- ✅ Meta-control + memory + switching  
+- ✅ Lorenz full pipeline  
+- ✅ Prediction + control  
+- ✅ Real-world direction (IEEE)  
 
 ---
 
@@ -259,7 +318,7 @@ You are no longer building the system.
 
 You are now:
 
-> **making it usable and verifiable**
+> **making it usable, visible, and verifiable**
 
 ---
 
@@ -269,12 +328,11 @@ You don’t need more depth.
 
 You need:
 
-> one clear path  
-> one runnable demo  
+> one clear entry  
+> one working demo  
 > one measurable result  
 
 ---
 
 Last Updated: April 2026  
 © Thomas K. R. Hofmann
-
