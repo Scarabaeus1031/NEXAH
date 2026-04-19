@@ -1,69 +1,233 @@
-# NEXAH — System State (Ground Truth)
+# NEXAH — System State (Current Ground Truth)
 
 This document defines the **actual current state of the NEXAH system**.
 
-It is NOT a vision document.  
-It is NOT a release description.  
+It reflects:
+
+- what exists  
+- what works  
+- what is validated  
+- what is still missing  
+
+---
+
+# 🧭 System Overview
+
+NEXAH is currently a:
+
+> **field-aware discovery and navigation system for dynamical systems**
+
+It transforms:
+
+dynamics → structure → field → transitions → prediction → control → navigation
+
+---
+
+# 🔬 1. Discovery Engine (Core System)
+
+Status:
+
+✔ transition events detected  
+✔ structured transition channels (manifold)  
+✔ probability field constructed  
+✔ energy landscape derived  
+✔ divergence and curl computed  
+✔ temporal coupling (time-lag) measured  
+✔ early warning signals observable  
+
+---
+
+## Key Result
+
+> The system produces **structured transition dynamics**, not random chaos
+
+---
+
+## Interpretation
+
+The Lorenz system is successfully modeled as:
+
+> a **dynamic transition field with measurable structure**
+
+---
+
+# ⚡ 2. Field Layer (Established)
+
+Status:
+
+✔ probability density field  
+✔ energy landscape (E = -log p)  
+✔ divergence (expansion)  
+✔ curl (rotation)  
+✔ time-delayed coupling between components  
+
+---
+
+## Key Result
+
+> The system behaves as a **coupled dynamic field**
+
+---
+
+## Important Observation
+
+Measured relationship:
+
+curl(t) → div(t + τ)  
+div(t) → curl(t − τ)
+
+→ indicates feedback with delay
+
+---
+
+# 🧠 3. Navigation Layer (Navigator)
+
+Status:
+
+✔ symbolic state representation  
+✔ pattern detection  
+✔ prediction  
+✔ control logic  
+✔ meta-control  
+✔ memory (state + sequence)  
+
+---
+
+## Current Limitation
+
+⚠ not fully integrated with Discovery Engine output  
+
+---
+
+## Interpretation
+
+> Navigation logic exists, but is not yet fully driven by real transition fields
+
+---
+
+# 🔗 4. System Integration
+
+Status:
+
+✔ structure → field pipeline works  
+✔ field → signal pipeline works  
+
+⚠ field → state mapping incomplete  
+⚠ full closed-loop navigation not yet unified  
+
+---
+
+## Missing Link
+
+> consistent transformation:
+field → states → decisions → actions → system feedback
+
+---
+
+# 🌍 5. Real-World Systems
+
+Status:
+
+✔ power system (IEEE) experiments exist  
+✔ field reconstruction works  
+✔ early warning signal observed  
+
+---
+
+## Limitations
+
+❌ not reproducible  
+❌ not unified with Discovery pipeline  
+❌ no validated transition model  
+
+---
+
+## Interpretation
+
+> Real-world relevance is plausible, but not yet demonstrated
+
+---
+
+# ⚠️ 6. Current Bottlenecks
+
+## 1. Integration Gap
+
+- Discovery ↔ Navigator not fully connected  
+
+---
+
+## 2. Application Gap
+
+- lack of clear, reproducible real-world use case  
+
+---
+
+## 3. System Packaging
+
+- no unified entry point (demo / API)  
+- pipeline not externally accessible  
+
+---
+
+# 🧠 7. What Is Proven
+
+✔ structure emerges from dynamics  
+✔ transitions exist and are detectable  
+✔ dynamics can be represented as fields  
+✔ divergence and curl reveal system behavior  
+✔ temporal coupling exists  
+✔ local prediction works  
+✔ basic control is possible  
+
+---
+
+# ❌ 8. What Is NOT Proven
+
+❌ generalization across systems  
+❌ robustness in real-world scenarios  
+❌ fully integrated navigation system  
+❌ large-scale predictive reliability  
+
+---
+
+# 🚀 9. Immediate Next Steps
+
+1. integrate Discovery → Navigator  
+2. build minimal APPLICATION (real use case)  
+3. create unified demo entry point  
+4. improve reproducibility  
+5. connect Lorenz ↔ real systems  
+
+---
+
+# 🧠 Final Insight
+
+NEXAH currently demonstrates:
+
+> **structured, coupled transition dynamics extracted from complex systems**
+
+It is no longer:
+
+- pure simulation  
+- or pure analysis  
 
 It is:
 
-> the **ground truth of what exists, works, and does not work**
+> **a system for discovering and navigating dynamic structure**
 
 ---
 
-## 1. Continuous Dynamics (Discovery Engine)
+# 🔥 Core Truth
 
-Status:
+> Complex systems are not random.  
+> They are structured through transitions.
 
-✔ structure emerges from dynamics  
-✔ flow organization  
-✔ loop / channel patterns (weak but present)  
-✔ meta-field construction  
-
-❌ no strong phase transitions  
-❌ no regime switching  
-❌ weak topology differentiation  
+> If transitions can be detected,  
+> systems can be understood and navigated.
 
 ---
 
-### Key Insight
-
-> The system is **too stable**
-
-This leads to:
-
-- uniform classification  
-- weak structural contrast  
-- no usable transitions  
-
----
-
-### Interpretation
-
-The system successfully generates structure,  
-but fails to produce **meaningful change between structures**
-
----
-
-## 2. Discrete Navigation (Builder Lab)
-
-Status:
-
-✔ explicit state graphs  
-✔ regime definitions (STABLE / STRESS / FAILURE / COLLAPSE)  
-✔ transitions between states  
-✔ navigation logic (lookahead, scoring, decision)  
-
----
-
-### Limitation
-
-> This system is **not derived from real dynamics**
-
-- transitions are predefined  
-- no connection to continuous systems  
-- no emergence from underlying physics  
-
+Last Updated: April 2026
 ---
 
 ### Interpretation
