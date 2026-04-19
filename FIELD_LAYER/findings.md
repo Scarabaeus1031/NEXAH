@@ -9,6 +9,31 @@ Focus:
 
 ---
 
+# 🔬 Minimal Field Formulation
+
+The findings are based on a field-aligned representation of the system:
+
+~~~text
+x(t) = α(t) · e₁ + β(t) · e₂ + γ(t) · e₃
+~~~
+
+Deviation from structure is defined as:
+
+~~~text
+D(t) = sqrt(β(t)² + γ(t)²)
+~~~
+
+Interpretation:
+
+- α → motion along system flow  
+- β, γ → deviation from structure  
+- D(t) → instability / transition intensity  
+
+Full formulation:
+→ see `core_equations.md`
+
+---
+
 # 🔥 1. Transitions are not points
 
 Initial assumption:
