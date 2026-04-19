@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+from sklearn.decomposition import PCA
 
 # =========================
 # CONFIG
@@ -9,8 +10,13 @@ import os
 OUTPUT_DIR = "DISCOVERY_ENGINE/outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-TARGET_LOBE = 1   # 1 = right, 0 = left
-CONTROL_STRENGTH = 2.0
+TARGET_LOBE = 1          # 1 = right, 0 = left
+DT = 0.01
+N_STEPS = 5000
+
+CONTROL_GAIN = 0.8
+CHANNEL_WIDTH = 8.0
+RISK_FACTOR = 2.5
 
 
 # =========================
@@ -25,127 +31,191 @@ def lorenz(x, y, z, sigma=10, rho=28, beta=8/3):
 
 
 # =========================
-# 2. Simulation with control
+# 2. Baseline Simulation
 # =========================
 
-def simulate_controlled(n_steps=5000, dt=0.01):
-    traj = np.zeros((n_steps, 3))
+def simulate_baseline():
+    traj = np.zeros((N_STEPS, 3))
     traj[0] = np.array([1.0, 1.0, 1.0])
 
-    control_flags = []
+    for i in range(N_STEPS - 1):
+        traj[i + 1] = traj[i] + DT * lorenz(*traj[i])
 
-    for i in range(n_steps - 1):
-        x, y, z = traj[i]
-
-        dx, dy, dz = lorenz(x, y, z)
-
-        # ===== CONTROL LOGIC =====
-        current_lobe = 1 if x > 0 else 0
-
-        control = 0.0
-
-        if current_lobe != TARGET_LOBE:
-            # push towards target side
-            direction = 1 if TARGET_LOBE == 1 else -1
-            control = CONTROL_STRENGTH * direction
-            dx += control
-
-        control_flags.append(control)
-
-        traj[i+1] = traj[i] + dt * np.array([dx, dy, dz])
-
-    return traj, np.array(control_flags)
+    return traj
 
 
 # =========================
 # 3. Metrics
 # =========================
 
-def compute_metrics(traj, dt):
-    v = np.gradient(traj, axis=0) / dt
-    a = np.gradient(v, axis=0) / dt
+def compute_metrics(traj):
+    v = np.gradient(traj, axis=0) / DT
+    a = np.gradient(v, axis=0) / DT
 
     flow = np.linalg.norm(v, axis=1)
     curvature = np.linalg.norm(a, axis=1)
     risk = flow * curvature
 
-    return risk
+    return flow, curvature, risk
 
 
 # =========================
-# 4. Event detection
+# 4. Event Detection
 # =========================
 
-def detect_events(signal, factor=2.5):
-    threshold = np.mean(signal) * factor
+def detect_events(signal):
+    threshold = np.mean(signal) * RISK_FACTOR
     peaks = np.where(signal > threshold)[0]
 
-    events = []
     if len(peaks) == 0:
-        return np.array(events)
+        return np.array([], dtype=int)
 
+    events = []
     cluster = [peaks[0]]
 
     for i in range(1, len(peaks)):
-        if peaks[i] - peaks[i-1] < 10:
+        if peaks[i] - peaks[i - 1] < 10:
             cluster.append(peaks[i])
         else:
             events.append(int(np.mean(cluster)))
             cluster = [peaks[i]]
 
     events.append(int(np.mean(cluster)))
-    return np.array(events)
+    return np.array(events, dtype=int)
 
 
 # =========================
-# 5. Main
+# 5. Transitions
+# =========================
+
+def detect_transitions(traj):
+    x = traj[:, 0]
+
+    lr = []
+    rl = []
+
+    for i in range(len(x) - 1):
+        if x[i] < 0 and x[i + 1] > 0:
+            lr.append(i)
+        elif x[i] > 0 and x[i + 1] < 0:
+            rl.append(i)
+
+    return np.array(lr), np.array(rl)
+
+
+# =========================
+# 6. PCA Axis
+# =========================
+
+def extract_pca_axis(points):
+    pca = PCA(n_components=1)
+    pca.fit(points)
+
+    axis = pca.components_[0]
+    axis = axis / (np.linalg.norm(axis) + 1e-12)
+
+    center = np.mean(points, axis=0)
+
+    return axis, center
+
+
+def project(point, axis, center):
+    return np.dot(point - center, axis)
+
+
+# =========================
+# 7. V11 Control
+# =========================
+
+def simulate_control(axis, center):
+    traj = np.zeros((N_STEPS, 3))
+    traj[0] = np.array([1.0, 1.0, 1.0])
+
+    control_mag = np.zeros(N_STEPS)
+    control_active = np.zeros(N_STEPS, dtype=bool)
+
+    target_sign = 1 if TARGET_LOBE == 1 else -1
+
+    for i in range(N_STEPS - 1):
+        x = traj[i].copy()
+        dx_nat = lorenz(*x)
+
+        proj = project(x, axis, center)
+        sign = 1 if x[0] >= 0 else -1
+
+        u = np.zeros(3)
+
+        if abs(proj) < CHANNEL_WIDTH and sign != target_sign:
+            u = CONTROL_GAIN * axis * target_sign
+            control_active[i] = True
+
+        traj[i + 1] = x + DT * (dx_nat + u)
+        control_mag[i] = np.linalg.norm(u)
+
+    return traj, control_mag, control_active
+
+
+# =========================
+# MAIN
 # =========================
 
 def main():
-    print("Running Discovery Core V10 (Control)...")
+    print("Running Discovery Core V11...")
 
-    traj, control = simulate_controlled()
-    risk = compute_metrics(traj, dt=0.01)
+    base_traj = simulate_baseline()
+    _, _, base_risk = compute_metrics(base_traj)
+    base_events = detect_events(base_risk)
 
-    events = detect_events(risk)
+    lr, rl = detect_transitions(base_traj)
+    transitions = np.concatenate([lr, rl])
+    transition_points = base_traj[transitions]
 
-    # success measure
-    final_lobe = np.sign(traj[-1, 0])
-    success = (final_lobe > 0 and TARGET_LOBE == 1) or (final_lobe < 0 and TARGET_LOBE == 0)
+    axis, center = extract_pca_axis(transition_points)
 
-    print(f"Events: {len(events)}")
-    print(f"Control success: {success}")
+    ctrl_traj, control_mag, control_active = simulate_control(axis, center)
+    _, _, ctrl_risk = compute_metrics(ctrl_traj)
+    ctrl_events = detect_events(ctrl_risk)
 
-    # =========================
-    # Visualization
-    # =========================
+    print(f"Baseline events: {len(base_events)}")
+    print(f"Controlled events: {len(ctrl_events)}")
+    print(f"Control active steps: {np.sum(control_active)}")
 
-    fig = plt.figure(figsize=(12,6))
+    # Plot
+    fig = plt.figure(figsize=(14, 10))
 
-    # trajectory
-    ax = fig.add_subplot(121, projection='3d')
-    ax.plot(traj[:,0], traj[:,1], traj[:,2], alpha=0.3)
+    # Baseline
+    ax1 = fig.add_subplot(221, projection='3d')
+    ax1.plot(base_traj[:,0], base_traj[:,1], base_traj[:,2], alpha=0.3)
+    ax1.scatter(base_traj[base_events,0], base_traj[base_events,1], base_traj[base_events,2], color='red')
+    ax1.set_title("Baseline")
 
-    ax.scatter(traj[events,0], traj[events,1], traj[events,2],
-               color='red', s=40, label="Events")
+    # Controlled
+    ax2 = fig.add_subplot(222, projection='3d')
+    ax2.plot(ctrl_traj[:,0], ctrl_traj[:,1], ctrl_traj[:,2], alpha=0.3)
+    ax2.scatter(ctrl_traj[ctrl_events,0], ctrl_traj[ctrl_events,1], ctrl_traj[ctrl_events,2], color='red')
+    ax2.scatter(ctrl_traj[control_active,0], ctrl_traj[control_active,1], ctrl_traj[control_active,2],
+                color='orange', s=5)
+    ax2.set_title("Controlled (Field-based)")
 
-    ax.set_title("Controlled Lorenz Trajectory")
-    ax.legend()
+    # Risk
+    ax3 = fig.add_subplot(223)
+    ax3.plot(base_risk, label="Base")
+    ax3.plot(ctrl_risk, label="Controlled")
+    ax3.legend()
 
-    # control signal
-    ax2 = fig.add_subplot(122)
-    ax2.plot(control, label="Control Signal")
-    ax2.set_title("Control Injection")
-    ax2.legend()
+    # Control signal
+    ax4 = fig.add_subplot(224)
+    ax4.plot(control_mag)
+    ax4.fill_between(range(len(control_mag)), 0, control_mag,
+                     where=control_active, alpha=0.3)
+    ax4.set_title("Control magnitude")
 
     plt.tight_layout()
-    plt.savefig(f"{OUTPUT_DIR}/v10_control.png", dpi=200)
+    plt.savefig(f"{OUTPUT_DIR}/v11.png", dpi=200)
     plt.show()
 
-    print("Saved V10 output")
+    print("Saved V11 output")
 
-
-# =========================
 
 if __name__ == "__main__":
     main()
