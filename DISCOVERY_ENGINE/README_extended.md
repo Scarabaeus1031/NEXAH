@@ -1,61 +1,31 @@
-# NEXAH — Discovery & Dynamics Engine
+# DISCOVERY_ENGINE
 
-NEXAH is a research framework for exploring the stability, evolution, and organization of complex systems.
-
-It provides computational tools for:
-
-• architecture generation  
-• resilience analysis  
-• phase transition detection  
-• structural law discovery  
-• theory validation  
-• dynamic system simulation  
-• topology extraction  
-
-The framework enables large-scale exploration of architecture spaces and the discovery of structural principles governing **how systems evolve, stabilize, and organize into connected structures**.
+Computational laboratory for **dynamic structure discovery, transition modeling,  
+and field-based system analysis** in NEXAH.
 
 ---
 
-# 🆕 Dynamic & Topological Systems
+# 🔥 DISCOVERY CORE (ENTRY POINT)
 
-NEXAH has evolved beyond static architecture analysis.
+Minimal functional system demonstrating how:
 
-It now supports:
-
-• dynamic system simulation  
-• flow-based structure formation  
-• emergence of loops, channels, and networks  
-• extraction of structure from trajectories  
+> **dynamics generate transitions, structure, and navigable fields**
 
 ---
 
-# NEXAH Tools
+## 🧠 Core Idea
 
-## Overview
+Traditional systems analysis asks:
 
-The `tools/` directory contains the computational infrastructure of the **NEXAH Simulation Environment**.
+> Where are systems stable?
 
-These tools form the experimental engine of the NEXAH project and support:
+DISCOVERY asks:
 
-- architecture exploration  
-- resilience analysis  
-- topology mapping  
-- evolutionary architecture search  
-- symbolic law discovery  
-- system visualization  
-
-Together they implement a **simulation laboratory for complex systems**.
+> **Where, how, and why do systems transition?**
 
 ---
 
-# 🧭 Central Research Question
-
-> How do systems evolve, stabilize, and organize into structured, connected states?
-
----
-
-# 🔁 Discovery Pipeline (Extended)
-
+## 🔁 Core Pipeline
 NEXAH follows a structured discovery pipeline:
 
 Architecture Generation  
