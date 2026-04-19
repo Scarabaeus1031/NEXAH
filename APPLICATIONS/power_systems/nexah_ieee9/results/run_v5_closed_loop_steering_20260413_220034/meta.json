@@ -1,0 +1,10 @@
+{
+  "run_id": "run_v5_closed_loop_steering_20260413_220034",
+  "mode": "closed_loop_v5_steering",
+  "n_steps": 120,
+  "lambda0": 0.5,
+  "lambda_step_base": 0.015,
+  "target_distance": 0.45,
+  "k_steer": 0.18,
+  "steer_clip": 0.06
+}

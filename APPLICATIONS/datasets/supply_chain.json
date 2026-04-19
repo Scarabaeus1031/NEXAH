@@ -1,0 +1,77 @@
+{
+  "name": "supply_chain",
+
+  "nodes": [
+    "normal_operation",
+    "supplier_delay",
+    "production_slowdown",
+    "distribution_backlog",
+    "system_disruption"
+  ],
+
+  "edges": [
+    {"from": "normal_operation", "to": "supplier_delay"},
+    {"from": "supplier_delay", "to": "production_slowdown"},
+    {"from": "production_slowdown", "to": "distribution_backlog"},
+    {"from": "distribution_backlog", "to": "system_disruption"},
+
+    {"from": "supplier_delay", "to": "normal_operation"},
+    {"from": "production_slowdown", "to": "supplier_delay"},
+    {"from": "distribution_backlog", "to": "production_slowdown"},
+    {"from": "system_disruption", "to": "distribution_backlog"}
+  ],
+
+  "transitions": {
+    "normal_operation": ["supplier_delay"],
+    "supplier_delay": ["normal_operation", "production_slowdown"],
+    "production_slowdown": ["supplier_delay", "distribution_backlog"],
+    "distribution_backlog": ["production_slowdown", "system_disruption"],
+    "system_disruption": ["distribution_backlog"]
+  },
+
+  "regimes": {
+    "normal_operation": "normal",
+    "supplier_delay": "unstable",
+    "production_slowdown": "critical",
+    "distribution_backlog": "critical",
+    "system_disruption": "collapse"
+  },
+
+  "collapse_states": [
+    "system_disruption"
+  ],
+
+  "risk_target": "system_disruption",
+
+  "control_actions": {
+    "increase_inventory": {
+      "from": "supplier_delay",
+      "to": "normal_operation"
+    },
+    "reroute_supply": {
+      "from": "production_slowdown",
+      "to": "supplier_delay"
+    },
+    "expedite_shipping": {
+      "from": "distribution_backlog",
+      "to": "production_slowdown"
+    },
+    "system_recovery": {
+      "from": "system_disruption",
+      "to": "distribution_backlog"
+    }
+  },
+
+  "shock_events": [
+    {
+      "event": "supplier_shutdown",
+      "from": "normal_operation",
+      "to": "supplier_delay"
+    },
+    {
+      "event": "logistics_strike",
+      "from": "production_slowdown",
+      "to": "distribution_backlog"
+    }
+  ]
+}

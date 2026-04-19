@@ -1,0 +1,56 @@
+{
+  "name": "server_cluster",
+
+  "nodes": [
+    "stable",
+    "high_load",
+    "overload",
+    "service_failure"
+  ],
+
+  "edges": [
+    {"from": "stable", "to": "high_load"},
+    {"from": "high_load", "to": "stable"},
+    {"from": "high_load", "to": "overload"},
+    {"from": "overload", "to": "high_load"},
+    {"from": "overload", "to": "service_failure"},
+    {"from": "service_failure", "to": "stable"}
+  ],
+
+  "transitions": {
+    "stable": ["high_load"],
+    "high_load": ["stable", "overload"],
+    "overload": ["high_load", "service_failure"],
+    "service_failure": ["stable"]
+  },
+
+  "regimes": {
+    "stable": "normal",
+    "high_load": "unstable",
+    "overload": "critical",
+    "service_failure": "collapse"
+  },
+
+  "collapse_states": [
+    "service_failure"
+  ],
+
+  "risk_target": "service_failure",
+
+  "control_actions": {
+    "balance_load": {
+      "from": "high_load",
+      "to": "stable"
+    },
+    "autoscale": {
+      "from": "overload",
+      "to": "high_load"
+    },
+    "restart_cluster": {
+      "from": "service_failure",
+      "to": "stable"
+    }
+  },
+
+  "shock_events": []
+}

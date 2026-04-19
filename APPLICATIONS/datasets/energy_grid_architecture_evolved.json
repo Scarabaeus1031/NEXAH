@@ -1,0 +1,160 @@
+{
+  "name": "Energy Grid Control Demo",
+  "nodes": [
+    "stable",
+    "freq_drop",
+    "recovery",
+    "congestion",
+    "blackout"
+  ],
+  "edges": [
+    [
+      "stable",
+      "f"
+    ],
+    [
+      "stable",
+      "r"
+    ],
+    [
+      "stable",
+      "e"
+    ],
+    [
+      "stable",
+      "q"
+    ],
+    [
+      "stable",
+      "_"
+    ],
+    [
+      "stable",
+      "d"
+    ],
+    [
+      "stable",
+      "o"
+    ],
+    [
+      "stable",
+      "p"
+    ],
+    [
+      "freq_drop",
+      "stable"
+    ],
+    [
+      "freq_drop",
+      "recovery"
+    ],
+    [
+      "recovery",
+      "b"
+    ],
+    [
+      "recovery",
+      "l"
+    ],
+    [
+      "recovery",
+      "a"
+    ],
+    [
+      "recovery",
+      "c"
+    ],
+    [
+      "recovery",
+      "k"
+    ],
+    [
+      "recovery",
+      "o"
+    ],
+    [
+      "recovery",
+      "u"
+    ],
+    [
+      "recovery",
+      "t"
+    ],
+    [
+      "congestion",
+      "f"
+    ],
+    [
+      "congestion",
+      "r"
+    ],
+    [
+      "congestion",
+      "e"
+    ],
+    [
+      "congestion",
+      "q"
+    ],
+    [
+      "congestion",
+      "_"
+    ],
+    [
+      "congestion",
+      "d"
+    ],
+    [
+      "congestion",
+      "o"
+    ],
+    [
+      "congestion",
+      "p"
+    ],
+    [
+      "blackout",
+      "s"
+    ],
+    [
+      "blackout",
+      "t"
+    ],
+    [
+      "blackout",
+      "a"
+    ],
+    [
+      "blackout",
+      "b"
+    ],
+    [
+      "blackout",
+      "l"
+    ],
+    [
+      "blackout",
+      "e"
+    ]
+  ],
+  "regimes": {
+    "stable": "STABLE",
+    "freq_drop": "STRESS",
+    "recovery": "STABLE",
+    "congestion": "FAILURE",
+    "blackout": "COLLAPSE"
+  },
+  "transitions": {
+    "stable": "freq_drop",
+    "freq_drop": [
+      "stable",
+      "recovery"
+    ],
+    "recovery": "blackout",
+    "congestion": "freq_drop",
+    "blackout": "stable"
+  },
+  "control_actions": {},
+  "shock_events": {},
+  "risk_target": "blackout"
+}

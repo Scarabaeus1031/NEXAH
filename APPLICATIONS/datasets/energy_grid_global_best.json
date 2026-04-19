@@ -1,0 +1,127 @@
+{
+  "name": "Energy Grid Control Demo",
+  "nodes": [
+    "stable",
+    "freq_drop",
+    "recovery",
+    "congestion",
+    "blackout"
+  ],
+  "edges": [
+    [
+      "stable",
+      "f"
+    ],
+    [
+      "stable",
+      "r"
+    ],
+    [
+      "stable",
+      "e"
+    ],
+    [
+      "stable",
+      "q"
+    ],
+    [
+      "stable",
+      "_"
+    ],
+    [
+      "stable",
+      "d"
+    ],
+    [
+      "stable",
+      "o"
+    ],
+    [
+      "stable",
+      "p"
+    ],
+    [
+      "freq_drop",
+      "stable"
+    ],
+    [
+      "freq_drop",
+      "recovery"
+    ],
+    [
+      "recovery",
+      "s"
+    ],
+    [
+      "recovery",
+      "t"
+    ],
+    [
+      "recovery",
+      "a"
+    ],
+    [
+      "recovery",
+      "b"
+    ],
+    [
+      "recovery",
+      "l"
+    ],
+    [
+      "recovery",
+      "e"
+    ],
+    [
+      "congestion",
+      "b"
+    ],
+    [
+      "congestion",
+      "l"
+    ],
+    [
+      "congestion",
+      "a"
+    ],
+    [
+      "congestion",
+      "c"
+    ],
+    [
+      "congestion",
+      "k"
+    ],
+    [
+      "congestion",
+      "o"
+    ],
+    [
+      "congestion",
+      "u"
+    ],
+    [
+      "congestion",
+      "t"
+    ]
+  ],
+  "regimes": {
+    "stable": "STABLE",
+    "freq_drop": "STRESS",
+    "recovery": "STABLE",
+    "congestion": "FAILURE",
+    "blackout": "COLLAPSE"
+  },
+  "transitions": {
+    "stable": "freq_drop",
+    "freq_drop": [
+      "stable",
+      "recovery"
+    ],
+    "recovery": "stable",
+    "congestion": "blackout"
+  },
+  "control_actions": {},
+  "shock_events": {},
+  "risk_target": "blackout"
+}

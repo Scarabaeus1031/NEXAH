@@ -1,0 +1,73 @@
+{
+  "name": "ecosystem_food_web",
+
+  "nodes": [
+    "balanced_ecosystem",
+    "herbivore_increase",
+    "plant_depletion",
+    "predator_decline",
+    "ecosystem_collapse"
+  ],
+
+  "edges": [
+    {"from": "balanced_ecosystem", "to": "herbivore_increase"},
+    {"from": "herbivore_increase", "to": "plant_depletion"},
+    {"from": "plant_depletion", "to": "predator_decline"},
+    {"from": "predator_decline", "to": "ecosystem_collapse"},
+
+    {"from": "herbivore_increase", "to": "balanced_ecosystem"},
+    {"from": "plant_depletion", "to": "herbivore_increase"},
+    {"from": "predator_decline", "to": "plant_depletion"},
+    {"from": "ecosystem_collapse", "to": "predator_decline"}
+  ],
+
+  "transitions": {
+    "balanced_ecosystem": ["herbivore_increase"],
+    "herbivore_increase": ["balanced_ecosystem", "plant_depletion"],
+    "plant_depletion": ["herbivore_increase", "predator_decline"],
+    "predator_decline": ["plant_depletion", "ecosystem_collapse"],
+    "ecosystem_collapse": ["predator_decline"]
+  },
+
+  "regimes": {
+    "balanced_ecosystem": "normal",
+    "herbivore_increase": "unstable",
+    "plant_depletion": "critical",
+    "predator_decline": "critical",
+    "ecosystem_collapse": "collapse"
+  },
+
+  "collapse_states": [
+    "ecosystem_collapse"
+  ],
+
+  "risk_target": "ecosystem_collapse",
+
+  "control_actions": {
+    "reintroduce_predators": {
+      "from": "plant_depletion",
+      "to": "herbivore_increase"
+    },
+    "restore_plants": {
+      "from": "herbivore_increase",
+      "to": "balanced_ecosystem"
+    },
+    "ecosystem_restoration": {
+      "from": "ecosystem_collapse",
+      "to": "predator_decline"
+    }
+  },
+
+  "shock_events": [
+    {
+      "event": "predator_extinction",
+      "from": "balanced_ecosystem",
+      "to": "herbivore_increase"
+    },
+    {
+      "event": "drought",
+      "from": "herbivore_increase",
+      "to": "plant_depletion"
+    }
+  ]
+}

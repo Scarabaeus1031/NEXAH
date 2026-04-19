@@ -1,0 +1,7 @@
+{
+  "run_id": "run_v4_closed_loop_20260413_215300",
+  "mode": "closed_loop_v4",
+  "n_steps": 120,
+  "lambda0": 0.5,
+  "lambda_step_base": 0.015
+}

@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    "stable",
+    "freq_drop",
+    "recovery",
+    "congestion",
+    "blackout"
+  ],
+
+  "regimes": {
+    "stable": "stable",
+    "freq_drop": "warning",
+    "recovery": "stable",
+    "congestion": "critical",
+    "blackout": "collapse"
+  },
+
+  "transitions": {
+    "stable": ["freq_drop"],
+    "freq_drop": ["recovery", "congestion"],
+    "recovery": ["stable"],
+    "congestion": ["blackout"],
+    "blackout": ["blackout"]
+  },
+
+  "probabilities": {
+    "freq_drop": [0.7, 0.3]
+  }
+}
