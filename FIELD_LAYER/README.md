@@ -2,7 +2,8 @@
 
 The **Field Layer** connects structure discovery with navigation.
 
-It transforms raw system dynamics into a **structured, interpretable coordinate system**.
+It transforms raw system dynamics into a **structured, interpretable coordinate system** —  
+and extends this into a **transition-aware field representation**.
 
 ---
 
@@ -22,32 +23,27 @@ The Field Layer introduces:
 
 > **a coordinate system aligned with the system's intrinsic flow**
 
+and builds on top of it:
+
+> **a structured representation of transitions as directional processes**
+
 ---
 
 # 🧠 Concept
 
 Instead of analyzing systems only in raw coordinates:
 
-(x, y, z)
-
-we transform them into:
-
-```text
-flow-aligned coordinates
-```
 ## Field-Aligned Representation
 
 Each state is decomposed into:
-
 ```text
 x(t) = α(t) · e₁ + β(t) · e₂ + γ(t) · e₃
 ```
+
 Where:
 
-* e₁ = dominant flow direction (FQ / PCA axis)
+* e₁ = dominant flow direction (PCA / intrinsic axis)
 * e₂, e₃ = orthogonal deviation directions
-
----
 
 ## Interpretation
 
@@ -86,16 +82,37 @@ The Field Layer makes it possible to:
 
 ---
 
-## 3. Connect to Field Dynamics
+## 3. Extract Transition Geometry
 
-- relate α, β, γ to:
-  - divergence  
-  - curl  
-  - probability / energy  
+- transitions are not points  
+- transitions occupy **structured regions in state space**  
 
 ---
 
-## 4. Prepare Navigation
+## 4. Identify Transition Channels
+
+- density fields reveal preferred paths  
+- ridge detection extracts **transition skeletons**  
+
+---
+
+## 5. Model Transition Dynamics
+
+- transitions are **directional**  
+- flow fields define how systems move through instability  
+
+---
+
+## 6. Decompose Transition Phases
+
+Transitions can be segmented into:
+
+```text
+ENTRY → CORE → EXIT
+```
+→ transitions are processes, not events
+
+## 7. Prepare Navigation
 
 Transforms raw system output into:
 
@@ -105,12 +122,12 @@ Transforms raw system output into:
 
 # 🔁 Role in NEXAH Architecture
 
-```text
+~~~text
 Dynamics
 → Discovery Engine
 → Field Layer
 → Navigator
-```
+~~~
 
 ---
 
@@ -119,59 +136,37 @@ Dynamics
 | Layer | Role |
 |------|------|
 | Discovery | extract structure from dynamics |
-| Field Layer | transform structure into coordinates |
+| Field Layer | transform structure into coordinates + transition field |
 | Navigator | act based on structured representation |
 
 ---
 
 # ⚡ Current Status
 
-- concept defined  
-- initial formulation complete  
-- not yet fully integrated  
+✔ Flow-aligned coordinate system (PCA-based)  
+✔ Deviation-based instability metric  
+✔ Transition detection (peaks vs switches)  
+✔ Pre-transition signal mapping (predictive structure)  
+✔ 3D transition geometry  
+✔ Density field representation  
+✔ Ridge (transition channel) extraction  
+✔ Directional flow field  
+✔ Flow segmentation (ENTRY / CORE / EXIT)  
 
 ---
 
-# 🚀 Building Plan
+# 🧪 Pipeline (Implemented)
 
-## Phase 1 — Core Coordinates
-
-- [ ] compute dominant direction (PCA / flow axis)  
-- [ ] construct orthogonal basis  
-- [ ] project system state → (α, β, γ)  
-
----
-
-## Phase 2 — Field Metrics
-
-- [ ] measure deviation magnitude  
-- [ ] track variance over time  
-- [ ] identify transition thresholds  
-
----
-
-## Phase 3 — Dynamics Coupling
-
-- [ ] relate α, β, γ to:
-  - divergence  
-  - curl  
-  - time lag behavior  
-
----
-
-## Phase 4 — Visualization
-
-- [ ] α vs β plots  
-- [ ] β vs γ plots  
-- [ ] transition bursts visualization  
-
----
-
-## Phase 5 — Integration
-
-- [ ] connect Field Layer → Navigator  
-- [ ] define state representation  
-- [ ] enable decision logic  
+~~~text
+Raw Dynamics
+→ PCA Projection (α, β, γ)
+→ Deviation Field D(t)
+→ Transition Detection
+→ Density Field
+→ Ridge Extraction
+→ Directional Field
+→ Flow Segmentation
+~~~
 
 ---
 
@@ -184,7 +179,7 @@ The Field Layer does NOT assume:
 
 Instead:
 
-> it computes **local, data-driven structure**
+> it computes **data-driven, system-specific structure**
 
 ---
 
@@ -193,7 +188,7 @@ Instead:
 The Field Layer introduces a new perspective:
 
 > systems are best understood as  
-> **flow + deviation within a structured field**
+> **flow + deviation within a structured transition field**
 
 ---
 
@@ -206,9 +201,17 @@ The Field Layer is the missing link between:
 
 It converts:
 
-```text
-raw dynamics → structured representation → usable intelligence
-```
+~~~text
+raw dynamics → structured representation → transition field → usable intelligence
+~~~
+
+---
+
+# 🚀 Next Steps
+
+- ridge-based trajectory reconstruction  
+- directional probability fields  
+- integration into Navigator  
 
 ---
 
