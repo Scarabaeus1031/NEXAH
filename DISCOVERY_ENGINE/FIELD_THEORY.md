@@ -1,12 +1,18 @@
 # NEXAH — FIELD THEORY (Discovery Core)
 
-## Overview
-
 This document describes the emergence of field-like dynamics within the Discovery Core experiments based on the Lorenz system.
 
 The goal is not to claim a physical field theory, but to:
 
 > identify structural analogies between chaotic dynamics and field behavior
+
+---
+
+👉 The empirical basis for all statements in this document is documented in:
+
+**→ [`DISCOVERY_OBSERVATIONS.md`](DISCOVERY_OBSERVATIONS.md)**
+
+This file contains the raw observations and measured patterns from which the following interpretation is derived.
 
 ---
 
@@ -222,3 +228,9 @@ The Discovery Core reveals:
 
 Status: Exploratory, structurally validated  
 Confidence: High (empirical), moderate (interpretation)
+
+## Reference
+
+For empirical observations and raw experimental findings, see:
+
+→ `DISCOVERY_OBSERVATIONS.md`
