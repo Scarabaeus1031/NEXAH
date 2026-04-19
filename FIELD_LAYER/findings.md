@@ -77,6 +77,8 @@ Transforming transition points into a density field:
 - reveals continuous bands
 - shows clustering and layering
 
+![Density Field](outputs/plots/v7_2_density_field_q4.png)
+
 Result:
 
 > Transitions occur along preferred regions, not arbitrary zones
@@ -89,6 +91,8 @@ Ridge extraction reveals:
 
 - discrete lines inside the density field
 - consistent pathways
+
+![Ridge Detection](outputs/plots/v7_3_ridge_detection.png)
 
 Result:
 
@@ -160,6 +164,8 @@ Observed behavior:
 - ENTRY: system is drawn into transition region  
 - CORE: direction becomes unstable / changes  
 - EXIT: system stabilizes into new state  
+
+![Flow Segmentation](outputs/plots/v8_1_flow_segmentation.png)
 
 Result:
 
