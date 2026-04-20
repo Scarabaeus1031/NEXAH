@@ -2,8 +2,8 @@
 
 The **Field Layer** connects structure discovery with navigation.
 
-It transforms raw system dynamics into a **structured, interpretable coordinate system**  
-and extends this into a **transition-aware, controllable field representation**.
+It transforms raw system dynamics into a **structured coordinate system**,  
+and extends this into a **controllable field with explicit convergence behavior**.
 
 ---
 
@@ -17,12 +17,12 @@ Discovery reveals:
 - energy landscapes  
 - divergence and curl  
 
-But this is not yet usable for navigation.
+But this alone is not sufficient for navigation.
 
 The Field Layer introduces:
 
 > a coordinate system aligned with the system’s intrinsic flow  
-> and a structured representation of transitions as directional processes
+> and a field representation where motion, transitions, and convergence become explicit
 
 ---
 
@@ -53,7 +53,7 @@ Where:
 ## Key Insight
 
 > Systems are not defined by position  
-> but by movement relative to their structure
+> but by **movement relative to their intrinsic structure**
 
 ---
 
@@ -78,7 +78,29 @@ Where:
 
 ## 5. Phase Decomposition
 
+```text
 ENTRY → CORE → EXIT
+```
+
+---
+
+# 🎯 Core Result
+
+The Field Layer reveals:
+
+> a structured dynamical field  
+> with **explicit attractors and stable convergence**
+
+- trajectories do not move randomly  
+- they follow geometry  
+- they converge to stable regions  
+
+---
+
+# 🧠 Final Insight (Short)
+
+> Complex systems can be transformed into  
+> **navigable fields with structure, direction, and destination**
 
 ---
 
