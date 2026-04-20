@@ -46,7 +46,7 @@ Suddenly:
 
 - trajectories stabilize  
 - regimes are controlled  
-- targets can be reached  
+- system behavior becomes steerable  
 
 👉 The system becomes **navigable**
 
@@ -68,25 +68,69 @@ It reveals:
 
 ## 🔥 Core idea
 
-    dynamics → structure → field → topology → navigation
+```text
+dynamics → structure → field → topology → navigation
+```
 
 ---
 
 ## 🧭 Architecture
 
-    Dynamics
-    → Discovery Engine
-    → Field Layer
-    → Navigator
+```text
+Dynamics
+→ Discovery Engine
+→ Field Layer
+→ Navigator
+```
 
 ### 🔬 Discovery Engine
-Extracts structure from raw dynamics.
+Extracts structure from raw dynamics:
+- transitions  
+- manifolds / channels  
+- probability fields  
+- energy landscapes  
+- divergence / curl  
+
+---
 
 ### 🌊 Field Layer
-Transforms structure into a navigable representation.
+Transforms structure into a navigable representation:
+- flow-aligned coordinates  
+- transition geometry  
+- attractor regions  
+- stability landscapes  
+
+---
 
 ### 🧭 Navigator
-Operates on the system as a trajectory within the field.
+Operates on the system as a trajectory within the field:
+- path selection  
+- control strategies  
+- trajectory shaping  
+
+---
+
+## 🔬 Evidence (Current Experiments)
+
+NEXAH has been tested on:
+
+- Lorenz system (reference chaotic system)  
+- IEEE power grid models (9 → 9241 buses)  
+
+Observed:
+
+- structured transition dynamics  
+- trajectory-based stability behavior  
+- emergence of discrete regimes  
+- local predictability of transitions  
+
+⚠️ Important:
+
+Early results (e.g. large lead times in collapse detection)  
+turned out to be **partially artifact-driven**.
+
+They remain useful for development,  
+but are **not yet validated as universal metrics**.
 
 ---
 
@@ -94,8 +138,9 @@ Operates on the system as a trajectory within the field.
 
 - detection of regime transitions  
 - geometric interpretation of instability  
-- trajectory-based control  
-- navigation within system dynamics  
+- trajectory-aware system analysis  
+- field-based control (prototype)  
+- navigation within dynamic systems  
 
 ---
 
@@ -121,7 +166,6 @@ Operates on the system as a trajectory within the field.
 
 👉 [START HERE — Run your first demo](START_HERE.md)
 
-
 ---
 
 ## 🧭 Navigate the system
@@ -141,7 +185,7 @@ Operates on the system as a trajectory within the field.
 
 ### 🧭 Navigation Layer
 - 🧭 Navigator → [NAVIGATOR/README.md](NAVIGATOR/README.md)  
-- 🧭 Navigation Architecture → [NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md](NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md)  
+- 🧭 Architecture → [NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md](NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md)  
 
 ---
 
@@ -154,7 +198,9 @@ Operates on the system as a trajectory within the field.
 
 ## 🌀 NEXAH
 
-    dynamics → structure → field → regimes → navigation
+```text
+dynamics → structure → field → regimes → navigation
+```
 
 ---
 
