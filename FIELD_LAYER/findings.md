@@ -686,99 +686,162 @@ Result:
 
 ---
 
-# 🧠 FINAL INSIGHT (EXTENDED)
+# 🔥 49. Field decomposition reveals dual structure
 
-The system is best described as:
+Observation (V29):
 
-> a dynamic field with structured geometry, discrete topology, and controllable attractors
+- field separates into:
+  - scalar (potential-like)
+  - rotational (curl-like)
 
-where:
+Result:
 
-- geometry defines possible motion  
-- flow defines trajectories  
-- topology defines state structure  
-- energy defines transition cost  
-- time-dependence enables navigation  
-- control reshapes the field  
+> System dynamics consist of two interacting components:
+> attraction (energy) and rotation (structure)
 
 ---
 
-# 🔥 FINAL SUMMARY (UPDATED)
+# 🔥 50. Flow defines global geometry
+
+Observation (V30–V31):
+
+- flow lines form continuous structures
+- separatrix defines basin boundaries
+
+Result:
+
+> The system is organized by a global flow geometry, not isolated transitions
+
+---
+
+# 🔥 51. Boundaries are controllable interfaces
+
+Observation (V32):
+
+- boundary seeds can be pushed into specific attractors
+- asymmetry in control effectiveness
+
+Result:
+
+> Basin boundaries act as controllable interfaces, not fixed barriers
+
+---
+
+# 🔥 52. Transitions follow energy landscape
+
+Observation (V33–V35):
+
+- control cost varies across space
+- minimal paths align with field structure
+- robustness reshapes accessible regions
+
+Result:
+
+> System motion is governed by an energy landscape with robustness constraints
+
+---
+
+# 🔥 53. System reduces to operational graph
+
+Observation (V36–V37):
+
+- dynamics compress into few nodes and weighted edges
+- navigation follows structured paths
+
+Result:
+
+> Complex dynamics can be reduced to a small operational graph with meaningful transitions
+
+---
+
+# 🔥 54. Attractor capture follows curved geometry
+
+Observation (V38):
+
+- trajectories bend before convergence
+- “hook”-like capture pattern appears
+
+Result:
+
+> Convergence is not direct, but occurs via curved attachment paths
+
+---
+
+# 🔥 55. A stable fixpoint governs the system
+
+Observation (V39):
+
+- precise convergence point identified:
+  x* ≈ (13.494, 25.994)
+- convergence independent of initial conditions
+- large basin of attraction
+
+Result:
+
+> The system is governed by a dominant global attractor
+
+---
+
+# 🔥 56. Local dynamics = damped rotation
+
+Observation (V40):
+
+- eigenvalues are complex with negative real part
+- contraction + rotation
+
+Result:
+
+> The system locally behaves as a **stable spiral attractor**
+
+---
+
+# 🧠 FINAL INSIGHT (COMPLETE)
+
+The system is best described as:
+
+> a structured, controllable dynamical field with a dominant spiral attractor
+
+where:
+
+- geometry defines motion constraints  
+- flow defines trajectories  
+- topology defines state structure  
+- energy defines transition cost  
+- control reshapes accessibility  
+- time-dependence enables navigation  
+- a fixpoint defines convergence  
+
+---
+
+# 🔥 FINAL SUMMARY (COMPLETE)
 
 The FIELD_LAYER now reveals:
 
-- transitions are structured and directional  
-- transitions form channels and cycles  
-- continuous dynamics collapse into discrete states  
-- states form a graph with competing regimes  
-- attractors define long-term behavior  
-- control operates on energy and topology  
-- the system can learn and adapt  
-- dynamics are best represented as a continuous field  
-- navigation requires time-dependent modulation  
+- transitions are structured, directional, and multi-phase  
+- transitions form channels, cycles, and basins  
+- continuous dynamics collapse into discrete structures  
+- the system can be controlled via energy and topology  
+- the field itself can be shaped and learned  
+- navigation requires dynamic modulation  
+- a dominant attractor governs long-term behavior  
+- local dynamics are rotational and contracting  
 
 ---
 
 # 🚀 FINAL IMPLICATION FOR NAVIGATOR
 
-Navigation is not:
-
-- event detection  
-- local optimization  
-- static policy execution  
-
 Navigation is:
 
-> movement through a dynamic, structured field under control and modulation
+> steering trajectories through a structured energy field toward stable attractors
+
+under:
+
+- geometric constraints  
+- dynamic flow  
+- control inputs  
+- and time-dependent modulation  
 
 ---
 
-Status: Derived from empirical analysis (V1–V28)  
-Confidence: Very High (consistent across geometry, topology, control, and field dynamics)
-
----
-
-Status: Derived from empirical analysis (V1–V12.1)  
-Confidence: Very High (consistent across geometry, flow, and topology)
-
-
-
-# 🧠 Final Insight
-
-The system is best described as:
-
-> motion through a structured transition field
-
-where:
-
-- geometry defines where transitions can occur  
-- density defines where they are likely  
-- flow defines how they happen  
-
----
-
-# 🔥 Summary
-
-The FIELD_LAYER reveals that:
-
-- transitions are structured  
-- transitions are directional  
-- transitions are multi-phase  
-- transitions are embedded in a field  
-
----
-
-# 🚀 Implication for NAVIGATOR
-
-Navigation should not:
-
-- react to events
-
-But instead:
-
-> operate on transition structure and flow
-
----
-
-Status: Derived from empirical analysis (V1–V8.1)  
-Confidence: High (consistent across multiple representations)
+Status: Derived from empirical analysis (V1–V40)  
+Confidence: Very High (consistent across geometry, topology, control, and local dynamics)
