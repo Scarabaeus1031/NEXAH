@@ -40,16 +40,183 @@ Navigation is based on:
 
 ## Importance
 
-First **explicit navigation system** in NEXAH.
+First explicit navigation system in NEXAH.
 
 ---
 
 ---
 
-## 🧭 GEM 002 — IEEE Collapse Detection
+## 🌊 GEM 002 — Field Reconstruction
 
 ## Status
-⚠️ Observed, NOT fully validated
+✅ Implemented (FIELD_LAYER)
+
+## Description
+
+The system reconstructs dynamics as a **continuous field representation**:
+
+- probability → density field  
+- energy → landscape  
+- flow → directional field  
+
+---
+
+## Key Insight
+
+> Systems are not just trajectories  
+> but **structured fields with geometry and flow**
+
+---
+
+## Importance
+
+This is the **central abstraction layer of NEXAH**
+
+---
+
+---
+
+## 🌀 GEM 003 — Gradient + Rotation Decomposition
+
+## Status
+✅ Implemented (V29+)
+
+## Description
+
+Field decomposition into:
+
+```text
+dx/dt ≈ -∇V(x) + R(x)
+```
+
+Where:
+
+- ∇V → attraction / energy minimization  
+- R → rotational / circulation structure  
+
+---
+
+## Key Insight
+
+> Dynamics are not purely gradient-driven  
+> but a combination of **attraction and rotation**
+
+---
+
+## Importance
+
+Bridges:
+
+- dynamical systems  
+- fluid dynamics  
+- control theory  
+
+---
+
+---
+
+## 🎯 GEM 004 — Convergence & Fixpoint Detection
+
+## Status
+✅ Implemented (V39–V40)
+
+## Description
+
+The system converges to a **stable fixpoint**:
+
+- reproducible endpoint  
+- small endpoint variance  
+- measurable basin radius  
+
+---
+
+## Key Insight
+
+> The field defines **real, stable convergence targets**
+
+---
+
+## Importance
+
+Transforms NEXAH from:
+
+- exploration → **goal-capable system**
+
+---
+
+---
+
+## 🎮 GEM 005 — Control as Field Shaping
+
+## Status
+✅ Implemented (V13–V37)
+
+## Description
+
+Control operates by modifying trajectories within the field:
+
+- energy shaping  
+- path steering  
+- attractor bias  
+
+---
+
+## Key Insight
+
+> Control is not external  
+> it **reshapes the field geometry**
+
+---
+
+## Importance
+
+Unifies:
+
+- control  
+- geometry  
+- dynamics  
+
+---
+
+---
+
+## 🔁 GEM 006 — Continuous ↔ Discrete Duality
+
+## Status
+✅ Implemented (V9–V12)
+
+## Description
+
+The system simultaneously exhibits:
+
+- continuous field dynamics  
+- discrete state topology  
+
+---
+
+## Key Insight
+
+> Continuous dynamics collapse into  
+> **discrete, navigable structures**
+
+---
+
+## Importance
+
+Foundation for:
+
+- graph navigation  
+- cycle detection  
+- regime modeling  
+
+---
+
+---
+
+## 🧭 GEM 007 — IEEE Collapse Detection
+
+## Status
+⚠️ Observed, NOT validated
 
 ## Description
 
@@ -59,12 +226,8 @@ Early detection signals observed in IEEE systems.
 
 ## IMPORTANT CORRECTION
 
-Previous interpretation overstated reliability.
-
-Current understanding:
-
 - signal exists  
-- but is **not consistently reproducible yet**
+- not reproducible yet  
 
 ---
 
@@ -72,7 +235,7 @@ Current understanding:
 
 Still critical — but must remain:
 
-> **experimental, not claimed**
+> experimental, not claimed  
 
 ---
 
@@ -82,10 +245,10 @@ Still critical — but must remain:
 
 ---
 
-## 🧭 GEM 003 — Channel & Dual-Strand Structure
+## 🧭 GEM 008 — Channel & Dual-Strand Structure
 
 ## Status
-⚠️ Observed in Lorenz + visual systems
+⚠️ Observed
 
 ## Description
 
@@ -97,19 +260,15 @@ Systems exhibit:
 
 ---
 
-## Interpretation
+## Key Insight
 
-- channel = valid motion region  
-- strand = directional flow  
-- switch = regime transition  
+> Motion is constrained to **structured pathways**
 
 ---
 
 ## Importance
 
-Strong candidate for:
-
-> geometric interpretation of navigation
+Strong geometric interpretation of dynamics  
 
 ---
 
@@ -119,45 +278,30 @@ Strong candidate for:
 
 ---
 
-## 🧭 GEM 004 — Spiral Coupling
+## 🧭 GEM 009 — Spiral Coupling
 
 ## Status
 🧪 Experimental
 
-## Risk
-High — must stay grounded in measurable behavior
-
 ---
 
----
-
-## 🧭 GEM 005 — Axial Space / Root Geometry
+## 🧭 GEM 010 — Axial Space / Root Geometry
 
 ## Status
 🧪 Experimental
+
+---
+
+## 🧭 GEM 011 — Modular Resonance (mod / primes)
+
+## Status
+🧪 Experimental
+
+---
 
 ## Rule
 
 ❗ Do NOT mix into core system yet
-
----
-
----
-
-## 🧭 GEM 006 — Modular Resonance (mod / primes)
-
-## Status
-🧪 Experimental
-
-## Risk
-
-⚠️ High risk of misinterpretation
-
-Must remain:
-
-- empirical  
-- testable  
-- connected to dynamics  
 
 ---
 
@@ -175,15 +319,16 @@ Only promote a GEM to CORE if:
 
 # 🧠 FINAL INSIGHT
 
-This document is:
+NEXAH is no longer just detecting structure.
 
-> a **memory system for important ideas**
+It now provides:
 
-Not all ideas are equal.
+> **a controllable, convergent field representation of dynamical systems**
 
 ---
 
 **NEXAH Gems**  
 Structure is discovered.  
-Insights are preserved.  
-Only some become system.
+Fields are reconstructed.  
+Dynamics are navigated.  
+Only some ideas become system.
