@@ -27,13 +27,53 @@ NEXAH shows:
 
 ## 🌊 The Shift
 
-Classical view:
+At first, systems look like this:
 
-> systems are unstable or stable  
+![Raw Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
 
-NEXAH view:
+Pure signal. Noise. No structure.
 
-> systems **move through structure**
+---
+
+Then something emerges:
+
+![Transitions](DISCOVERY_ENGINE/outputs/lorenz_v6_transitions.png)
+
+Transitions are not random anymore.
+
+---
+
+Then geometry appears:
+
+![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
+
+> The system moves along a **hidden structure**
+
+---
+
+## 🔥 The Breakthrough
+
+Now look at this:
+
+![Probability Field](DISCOVERY_ENGINE/outputs/v16_probability_field.png)
+
+> Transitions happen in **specific regions**
+
+---
+
+And this:
+
+![Energy Landscape](DISCOVERY_ENGINE/outputs/v19_energy_field.png)
+
+> Systems move like they are crossing **energy barriers**
+
+---
+
+And finally:
+
+![Time Lag Structure](DISCOVERY_ENGINE/outputs/v22_time_lag.png)
+
+> The system has **memory and internal feedback**
 
 ---
 
@@ -45,104 +85,23 @@ python ENGINE/run_nexah_demo.py
 
 This generates:
 
-- a trajectory (system behavior)  
-- a field (how the system moves)  
-- regimes (stable / transition / unstable)  
-- boundaries between them  
+- a trajectory  
+- a field  
+- regimes  
+- boundaries  
 
 ---
 
 ## 🔍 What to look for
 
-- where motion slows down → stability  
+- where motion slows → stability  
 - where it accelerates → instability  
-- where it crosses boundaries → regime change  
-- how trajectories follow the field  
+- where it bends → structure  
+- where it crosses → regime change  
 
 ---
 
-## 🧩 From Chaos → Structure
-
-At first, systems look like this:
-
-![Lorenz Dynamics](APPLICATIONS/core_demos/lorenz/outputs/lorenz_nexah_v12_final.gif)
-
-Chaotic. Complex. Hard to interpret.
-
----
-
-Then structure appears:
-
-![Risk Landscape](FRAMEWORK/visuals/output/v6_risk_field.png)
-
-You start seeing:
-
-- valleys (stable regions)  
-- slopes (transitions)  
-- peaks (instability)  
-
----
-
-And then the key insight:
-
-![Separatrix](FRAMEWORK/visuals/output/v7_separatrix.png)
-
-> Systems do not randomly fail  
-> they **cross boundaries**
-
----
-
-## 🔥 What NEXAH really extracts
-
-Beyond visualization, NEXAH reveals deeper structure:
-
-- symbolic system states  
-- transition sequences  
-- regime graphs  
-- stability patterns over time  
-- geometric transition channels  
-
-👉 Example (from Lorenz analysis):
-
-![Symbolic + Transition Structure](APPLICATIONS/core_demos/lorenz/outputs/lorenz_symbolic_states.png)
-
-This shows:
-
-- discrete system states (S0–S5)  
-- transition probabilities  
-- how the system *moves between regimes*  
-
----
-
-## ⚡ Hidden Structure in Time
-
-Even instability is structured:
-
-![Risk Structure](APPLICATIONS/core_demos/lorenz/outputs/lorenz_risk_analysis.png)
-
-Key observation:
-
-> Risk is not random noise  
-> it forms **repeating structural patterns**
-
----
-
-## 🧭 Geometry of Transitions
-
-NEXAH also reveals:
-
-![Probability Channel](APPLICATIONS/core_demos/lorenz/outputs/lorenz_probability_channel.png)
-
-- preferred movement paths  
-- transition corridors  
-- geometric constraints  
-
-👉 Systems don’t move arbitrarily  
-they follow **channels in state space**
-
----
-
-## ⚡ Step 2 — See it in Action (Lorenz System)
+## ⚡ Step 2 — See it in Action (Lorenz)
 
 ```bash
 python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
@@ -150,10 +109,10 @@ python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
 
 Now you will see:
 
-- chaotic dynamics (Lorenz attractor)  
+- chaotic motion  
 - structured trajectories  
 - adaptive behavior  
-- regime transitions ("switches")  
+- regime switching  
 
 ---
 
@@ -161,27 +120,26 @@ Now you will see:
 
 Before:
 
-> the system moved blindly  
+> chaos looked random  
 
 Now:
 
-> the system **reacts to structure**
+> chaos becomes **navigable**
 
 ---
 
-## ⚡ Step 3 — Real System (Power Grid)
+## ⚡ Step 3 — Full Field Navigation
 
-```bash
-PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
-```
+![Navigation Engine](FIELD_LAYER/outputs/plots/v37_full_navigation.png)
 
----
+Now everything connects:
 
-## ⚠️ Important
+- field  
+- graph  
+- trajectory  
+- attractor  
 
-- NEXAH is a **prototype system**  
-- behavior is **locally reliable, not globally predictive**  
-- real-world validation is **ongoing**  
+👉 This is the full system.
 
 ---
 
@@ -193,6 +151,14 @@ NEXAH turns complex dynamics into a:
 
 ---
 
+## ⚠️ Important
+
+- prototype system  
+- locally reliable  
+- still under validation  
+
+---
+
 ## 🧭 Explore Next
 
 - 🧠 Framework → FRAMEWORK/README.md  
@@ -201,68 +167,13 @@ NEXAH turns complex dynamics into a:
 
 ---
 
-## 🧩 Want to experiment?
+## 💡 Final Insight
 
-Open:
+Systems do not randomly fail.
 
-```
-APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
-```
+They:
 
----
-
-### 🔧 Try this (2 minutes)
-
-Change:
-
-```python
-control = -0.30 * dx
-```
-
-to:
-
-```python
-control = -0.10 * dx
-```
-
-or:
-
-```python
-control = -0.80 * dx
-```
-
----
-
-### 👀 Observe
-
-- does it stabilize faster?  
-- does it become unstable?  
-- does it switch more often?  
-
----
-
-## 🧠 What you are doing
-
-You are not tuning parameters.
-
-You are:
-
-> **changing how a system navigates itself**
-
----
-
-## 💡 Philosophy
-
-NEXAH is not a black box.
-
-It is meant to be:
-
-> explored, modified, and extended
-
----
-
-👉 If you change something and observe new behavior,  
-you are already contributing to the system.
+> **move through structured regions of stability, transition, and collapse**
 
 ---
 
