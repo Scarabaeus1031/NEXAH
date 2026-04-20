@@ -7,48 +7,10 @@
 
 ![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-**This is a real system.**
+This is a **real system trajectory**.
 
-Not noise.  
-Not randomness.
-
-👉 This is a **structured flow field**
-
----
-
-## 🧠 But it looks like this
-
-![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
-
-Chaotic.  
-Unpredictable.  
-No obvious structure.
-
----
-
-## 🔍 Until you extract the structure
-
-![Symbolic State + Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
-
-Suddenly:
-
-- discrete states emerge  
-- transitions become visible  
-- dynamics form a **graph**
-
-👉 Chaos becomes **structured**
-
----
-
-## 🔥 And now this becomes possible
-
-![Controlled Navigation](APPLICATIONS/core_demos/lorenz/outputs/lorenz_meta_control_v6_switch.png)
-
-- trajectories stabilize  
-- regimes are controlled  
-- system behavior becomes steerable  
-
-👉 The system becomes **navigable**
+👉 NEXAH interprets it not as noise —  
+but as movement inside a **structured field**
 
 ---
 
@@ -74,6 +36,54 @@ dynamics → structure → field → topology → navigation
 
 ---
 
+## 🧭 How this emerges
+
+### Step 1 — Chaos
+
+![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
+
+At first, the system looks completely random.
+
+---
+
+### Step 2 — Structure
+
+![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
+
+Hidden geometry appears:
+
+👉 transitions follow **specific paths**
+
+---
+
+### Step 3 — Representation
+
+![State Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
+
+The system can now be described as:
+
+- states  
+- transitions  
+- structure  
+
+👉 chaos becomes **organized**
+
+---
+
+### Step 4 — Navigation
+
+![Controlled Navigation](APPLICATIONS/core_demos/lorenz/outputs/lorenz_meta_control_v6_switch.png)
+
+Now something new becomes possible:
+
+- trajectories stabilize  
+- regimes are controlled  
+- behavior becomes steerable  
+
+👉 the system becomes **navigable**
+
+---
+
 ## 🧭 Architecture
 
 ```text
@@ -84,53 +94,13 @@ Dynamics
 ```
 
 ### 🔬 Discovery Engine
-Extracts structure from raw dynamics:
-- transitions  
-- manifolds / channels  
-- probability fields  
-- energy landscapes  
-- divergence / curl  
-
----
+Extracts structure from raw dynamics.
 
 ### 🌊 Field Layer
-Transforms structure into a navigable representation:
-- flow-aligned coordinates  
-- transition geometry  
-- attractor regions  
-- stability landscapes  
-
----
+Transforms structure into a navigable representation.
 
 ### 🧭 Navigator
-Operates on the system as a trajectory within the field:
-- path selection  
-- control strategies  
-- trajectory shaping  
-
----
-
-## 🔬 Evidence (Current Experiments)
-
-NEXAH has been tested on:
-
-- Lorenz system (reference chaotic system)  
-- IEEE power grid models (9 → 9241 buses)  
-
-Observed:
-
-- structured transition dynamics  
-- trajectory-based stability behavior  
-- emergence of discrete regimes  
-- local predictability of transitions  
-
-⚠️ Important:
-
-Early results (e.g. large lead times in collapse detection)  
-turned out to be **partially artifact-driven**.
-
-They remain useful for development,  
-but are **not yet validated as universal metrics**.
+Operates on the system as a trajectory within the field.
 
 ---
 
@@ -138,9 +108,8 @@ but are **not yet validated as universal metrics**.
 
 - detection of regime transitions  
 - geometric interpretation of instability  
-- trajectory-aware system analysis  
-- field-based control (prototype)  
-- navigation within dynamic systems  
+- trajectory-based control  
+- navigation within system dynamics  
 
 ---
 
