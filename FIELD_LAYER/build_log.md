@@ -381,6 +381,373 @@ Outcome:
 
 ---
 
+# 🔷 V12.2 — Cycle Entry / Exit Points
+
+Files:
+- `v12_2_entry_exit.png`
+
+![V12.2 Entry Exit](outputs/plots/v12_2_entry_exit.png)
+
+Description:
+- identification of entry and exit points relative to dominant cycles
+- mapping of transition boundaries into cycle structure
+
+Outcome:
+- transitions into cycles are structured and repeatable
+- entry/exit points form geometric arcs (non-random)
+- emergence of asymmetric entry behavior
+- system shows preferred injection and escape corridors
+
+---
+
+# 🔷 V12.3 — Entry → Cycle Mapping
+
+Files:
+- `v12_3_entry_to_cycle_mapping.png`
+
+![V12.3 Entry Mapping](outputs/plots/v12_3_entry_to_cycle_mapping.png)
+
+Description:
+- mapping entry points to nearest topological nodes
+
+Outcome:
+- entry points collapse onto specific nodes (non-uniform distribution)
+- certain nodes act as gateways into cycle structure
+- early indication of hierarchical node roles
+
+---
+
+# 🔷 V12.3.1 — Entry Clustering
+
+Files:
+- `v12_3_1_entry_clustering.png`
+
+![V12.3.1 Entry Clusters](outputs/plots/v12_3_1_entry_clustering.png)
+
+Description:
+- clustering of entry points in continuous space
+
+Outcome:
+- entry regions form compact geometric clusters
+- funnel-like structures emerge
+- system shows spatial compression before transition
+
+---
+
+# 🔷 V12.3.2 — Flow + Structure Overlay
+
+Files:
+- `v12_3_2_overlay_flow_and_structure.png`
+
+![V12.3.2 Overlay](outputs/plots/v12_3_2_overlay_flow_and_structure.png)
+
+Description:
+- overlay of continuous flow field with discrete node structure
+
+Outcome:
+- alignment between flow vectors and node transitions
+- nodes lie on slow-flow regions (velocity minima)
+- emergence of structural skeleton within continuous field
+
+---
+
+# 🔷 V12.4 — Exit Target Mapping
+
+Files:
+- `v12_4_exit_target_mapping.png`
+
+![V12.4 Exit Mapping](outputs/plots/v12_4_exit_target_mapping.png)
+
+Description:
+- mapping exit points to next target nodes
+
+Outcome:
+- exit behavior is biased toward specific nodes
+- dominant target node emerges
+- system shows directional preference after leaving cycles
+
+---
+
+# 🔷 V12.6 — Node Clustering
+
+Files:
+- `v12_6_node_clusters.png`
+
+![V12.6 Node Clusters](outputs/plots/v12_6_node_clusters.png)
+
+Description:
+- clustering of nodes based on spatial proximity
+
+Outcome:
+- 4 dominant node clusters identified
+- emergence of attractor basins
+- nodes group into coherent regions
+
+---
+
+# 🔷 V12.7 — Cluster Transition Graph
+
+Files:
+- `v12_7_cluster_transition_graph.png`
+
+![V12.7 Cluster Graph](outputs/plots/v12_7_cluster_transition_graph.png)
+
+Description:
+- transitions aggregated at cluster level
+
+Outcome:
+- system reduces to interacting regimes
+- strong cyclic structure between clusters
+- transition asymmetry visible
+
+---
+
+# 🔷 V12.8 — Cluster Dynamics
+
+Files:
+- `v12_8_cluster_dynamics.png`
+
+![V12.8 Cluster Dynamics](outputs/plots/v12_8_cluster_dynamics.png)
+
+Description:
+- visit frequency per cluster
+
+Outcome:
+- dominant clusters identified
+- system occupancy is non-uniform
+- attractor strength measurable
+
+---
+
+# 🔷 V12.9 — Backprojected Cluster Dynamics
+
+Files:
+- `v12_9_backprojected_cluster_dynamics.png`
+
+![V12.9 Backprojection](outputs/plots/v12_9_backprojected_cluster_dynamics.png)
+
+Description:
+- projection of cluster dynamics into continuous space
+
+Outcome:
+- spatial segmentation of activity
+- emergence of active zones
+- attractor regions become visible
+
+---
+
+# 🔷 V13 — Control Layer
+
+Files:
+- `v13_control_layer.png`
+
+![V13 Control](outputs/plots/v13_control_layer.png)
+
+Description:
+- introduction of control mechanism
+
+Outcome:
+- system can be steered toward target cluster
+- collapse of undesired regimes
+
+---
+
+# 🔷 V14 — Minimal Control Energy
+
+Files:
+- `v14_minimal_control_energy.png`
+
+![V14 Energy](outputs/plots/v14_minimal_control_energy.png)
+
+Description:
+- computation of transition energy
+
+Outcome:
+- optimal paths correspond to minimal energy
+- control efficiency becomes measurable
+
+---
+
+# 🔷 V15 — Optimal Policy
+
+Files:
+- `v15_optimal_policy_graph.png`
+
+![V15 Policy](outputs/plots/v15_optimal_policy_graph.png)
+
+Description:
+- derivation of optimal transition policy
+
+Outcome:
+- deterministic routing emerges
+- system converges toward target
+
+---
+
+# 🔷 V16 — Robust & Multi-Target Policies
+
+Files:
+- `v16_1_robust_policy.png`
+
+![V16 Robust](outputs/plots/v16_1_robust_policy.png)
+
+Description:
+- robustness and fallback strategies
+
+Outcome:
+- system stable under perturbations
+- multi-target behavior emerges
+
+---
+
+# 🔷 V17 — Adaptive Policy
+
+Files:
+- `v17_adaptive_policy.png`
+
+![V17 Adaptive](outputs/plots/v17_adaptive_policy.png)
+
+Description:
+- dynamic policy adjustment
+
+Outcome:
+- oscillation + correction behavior
+- adaptive control
+
+---
+
+# 🔷 V18 — Observer Layer
+
+Files:
+- `v18_observer_layer.png`
+
+![V18 Observer](outputs/plots/v18_observer_layer.png)
+
+Description:
+- monitoring instability
+
+Outcome:
+- 4-zone structure emerges
+- risk becomes measurable
+
+---
+
+# 🔷 V19 — Observer-Guided Control
+
+Files:
+- `v19_observer_guided_control.png`
+
+![V19 Guided](outputs/plots/v19_observer_guided_control.png)
+
+Description:
+- control guided by observer
+
+Outcome:
+- improved stability
+- structured interventions
+
+---
+
+# 🔷 V20 — Regime Locking
+
+Files:
+- `v20_regime_locking.png`
+
+![V20 Lock](outputs/plots/v20_regime_locking.png)
+
+Description:
+- locking into stable regimes
+
+Outcome:
+- reduced drift
+- stable attractor behavior
+
+---
+
+# 🔷 V23 — Transition Suppression
+
+Files:
+- `v23_transition_suppression.png`
+
+![V23 Suppression](outputs/plots/v23_transition_suppression.png)
+
+Description:
+- suppression of transitions
+
+Outcome:
+- dominant attractor emerges
+- system collapses into stable regime
+
+---
+
+# 🔷 V26 — Continuous Field Control
+
+Files:
+- `v26_continuous_field_control.png`
+
+![V26 Field](outputs/plots/v26_continuous_field_control.png)
+
+Description:
+- continuous control field
+
+Outcome:
+- trajectory stabilized in field
+- emergence of potential well
+
+---
+
+# 🔷 V26.1 — Gradient Flow Control
+
+Files:
+- `v26_1_flow_field_control.png`
+
+![V26.1 Flow](outputs/plots/v26_1_flow_field_control.png)
+
+Description:
+- gradient-based control
+
+Outcome:
+- smooth convergence
+- manifold-like trajectory
+
+---
+
+# 🔷 V27 — Multi-Attractor Navigation
+
+Files:
+- `v27_multi_attractor_navigation.png`
+
+![V27 Multi](outputs/plots/v27_multi_attractor_navigation.png)
+
+Description:
+- multiple attractors introduced
+
+Outcome:
+- system dominated by strongest basin
+- limited navigation (static field)
+
+---
+
+# 🔷 V28 — Envelope Field
+
+Files:
+- `v28_envelope_field.png`
+
+![V28 Envelope](outputs/plots/v28_envelope_field.png)
+
+Description:
+- time-dependent modulation of field
+
+Outcome:
+- intermediate regimes activated
+- emergence of navigation corridor
+- transition to dynamic field
+
+
+
+
+---
+
 # 🧠 Updated State
 
 FIELD_LAYER now provides:
