@@ -12,12 +12,7 @@ All visuals are located in:
 FIELD_LAYER/outputs/plots/
 ```
 
-Outcome:
-- poor fit (low R²)
-- boundary is not representable as single surface
-
 ---
-
 
 Outcome:
 - poor fit (low R²)
