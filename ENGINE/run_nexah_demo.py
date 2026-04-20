@@ -1,85 +1,64 @@
-# 🧭 NEXAH Minimal Demo
-# Goal: Trajectory + Field + Regime + Separatrix (+ optional Risk)
+# 🧭 NEXAH REAL DEMO (based on actual ENGINE behavior)
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 1. Trajectory
-from ENGINE.analysis.navigation_level61_multi_loop_engine import simulate_trajectory
+# REAL imports aus deinem System
+from ENGINE.analysis.stability_landscape_generator import generate_stability_landscape
 
-# 2. Flow Field
-from ENGINE.analysis.flow_field_analysis import compute_flow_field
-
-# 3. Regime Classification
-from ENGINE.analysis.stability_landscape_generator import classify_regime_grid
-
-# 4. Separatrix
-from ENGINE.analysis.stability_basin_map import detect_separatrix
-
-# 5. Optional Risk
-from ENGINE.analysis.stability_gradient_field import compute_risk_field
+# optional (falls vorhanden)
+try:
+    from ENGINE.analysis.flow_field_analysis import compute_flow_field
+    FLOW_AVAILABLE = True
+except:
+    FLOW_AVAILABLE = False
 
 
 def main():
 
-    print("🚀 Running NEXAH Demo...")
+    print("🚀 Running NEXAH Demo (REAL MODE)")
 
     # --------------------------------------------------
-    # 1. Generate trajectory (Lorenz or internal system)
+    # 1. Generate base field / landscape
     # --------------------------------------------------
-    trajectory = simulate_trajectory()
-
-    print("✔ Trajectory generated")
-
-    # --------------------------------------------------
-    # 2. Compute Flow Field
-    # --------------------------------------------------
-    field = compute_flow_field(trajectory)
-
-    print("✔ Flow field computed")
+    landscape = generate_stability_landscape()
+    print("✔ Landscape generated")
 
     # --------------------------------------------------
-    # 3. Classify regimes
+    # 2. Optional Flow Field
     # --------------------------------------------------
-    regime_grid = classify_regime_grid(field)
-
-    print("✔ Regime zones computed")
-
-    # --------------------------------------------------
-    # 4. Detect separatrix
-    # --------------------------------------------------
-    separatrix = detect_separatrix(regime_grid)
-
-    print("✔ Separatrix extracted")
-
-    # --------------------------------------------------
-    # 5. Optional risk layer
-    # --------------------------------------------------
-    try:
-        risk = compute_risk_field(field)
-        print("✔ Risk field computed")
-    except Exception:
-        risk = None
-        print("⚠ Risk field not available")
-
-    # --------------------------------------------------
-    # SIMPLE VISUALIZATION (minimal)
-    # --------------------------------------------------
-    plt.figure(figsize=(8, 6))
-
-    # Trajectory
-    traj = np.array(trajectory)
-    plt.plot(traj[:, 0], traj[:, 1], linewidth=0.5, label="Trajectory")
-
-    # Optional: separatrix overlay (if 2D compatible)
-    if separatrix is not None:
+    if FLOW_AVAILABLE:
         try:
-            plt.scatter(separatrix[:, 0], separatrix[:, 1], s=1, label="Separatrix")
+            flow = compute_flow_field(landscape)
+            print("✔ Flow field computed")
         except:
-            pass
+            flow = None
+            print("⚠ Flow field failed")
+    else:
+        flow = None
 
-    plt.title("NEXAH Demo — Trajectory + Structure")
-    plt.legend()
+    # --------------------------------------------------
+    # VISUALIZATION
+    # --------------------------------------------------
+    plt.figure(figsize=(12, 5))
+
+    # --- Landscape ---
+    plt.subplot(1, 2, 1)
+    plt.title("Stability Landscape")
+    plt.imshow(landscape, cmap="viridis", origin="lower")
+
+    # --- Flow or fallback ---
+    plt.subplot(1, 2, 2)
+    if flow is not None:
+        plt.title("Flow Field")
+        try:
+            plt.imshow(flow, cmap="plasma", origin="lower")
+        except:
+            plt.text(0.5, 0.5, "Flow exists but not plottable")
+    else:
+        plt.title("No Flow Available")
+
+    plt.tight_layout()
     plt.show()
 
 
