@@ -1,7 +1,7 @@
-# ⚡ NEXAH — Navigating Structure in Dynamical Systems
+# ⚡ NEXAH — Structure & Navigation in Dynamical Systems
 
 > Complex systems are not random.  
-> They evolve within **structured fields with direction and destination**.
+> They evolve within **structured dynamical fields**.
 
 ---
 
@@ -9,137 +9,138 @@
 
 **This is a real system.**
 
-Not chaos.  
-Not noise.
+Not noise.  
+Not randomness.
 
-👉 This is a **structured flow field**.
-
----
-
-## 🧠 What NEXAH does
-
-NEXAH reconstructs dynamical systems as:
-
-- **fields** instead of states  
-- **trajectories** instead of events  
-- **attractors** instead of targets  
-
-It reveals:
-
-> how systems **move, transition, and converge** within their intrinsic structure
+👉 A **structured flow field**
 
 ---
 
-## 🔥 Core idea
+## 🧠 What NEXAH is
 
-```text
-dynamics → structure → field → topology → navigation
-```
+NEXAH is a **computational framework for extracting structure from dynamical systems**.
+
+It reconstructs systems as:
+
+- fields instead of states  
+- trajectories instead of events  
+- regimes instead of thresholds  
+
+---
+
+## 🔬 Core Function
+
+From raw system dynamics, NEXAH extracts:
+
+- transition events  
+- geometric structure (manifolds / channels)  
+- probability fields  
+- energy landscapes  
+- flow properties (divergence / curl)  
+- temporal coupling  
+
+---
+
+## 🔁 Core Shift
+
+Classical question:
+
+> Is the system stable?
+
+NEXAH question:
+
+> **Where and how does the system transition?**
+
+---
+
+## 🌊 Field Interpretation
+
+Systems are modeled as:
+
+- probability fields → where trajectories concentrate  
+- energy landscapes → stability vs transition regions  
+- flow fields → how the system moves  
 
 ---
 
 ## 🧭 Architecture
 
-```text
-Discovery → Field Layer → Navigator
-```
+    Dynamics
+    → Discovery Engine
+    → Field Layer
+    → Navigator
 
-- Discovery → extracts structure  
-- Field Layer → builds the field  
-- Navigator → moves within it  
+### 🔬 Discovery Engine
+Extracts structure from raw dynamics.
 
----
+### 🌊 Field Layer
+Transforms structure into a navigable representation.
 
-## 🚀 Why this matters
-
-Instead of:
-
-- detecting failure  
-- reacting to thresholds  
-
-NEXAH enables:
-
-> **understanding and steering systems before failure occurs**
+### 🧭 Navigator
+Operates on the system as a trajectory within the field.
 
 ---
 
-## ⚡ How structure emerges
+## 🔥 Core Pipeline
 
-👉 Start with chaos:
-
-![Raw Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
+    dynamics → structure → field → topology → navigation
 
 ---
 
-👉 Structure appears:
+## ⚡ What this enables
 
-![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
-
----
-
-👉 Physics emerges:
-
-![Energy](DISCOVERY_ENGINE/outputs/v19_energy_field.png)
+- detection of regime transitions  
+- geometric interpretation of instability  
+- trajectory-based control  
+- navigation within system dynamics  
 
 ---
 
-👉 And finally:
+## 🧠 Current State
 
-Systems become **navigable**
+### ✔ Working (Prototype)
 
-![Navigation](FIELD_LAYER/outputs/plots/v37_full_navigation.png)
+- structure extraction (Lorenz)  
+- transition detection  
+- short-term prediction  
+- adaptive control behavior  
+- regime switching  
 
----
+### ⚠️ Limitations
 
-## 🧠 What is already working
-
-✔ structure extraction from chaotic dynamics  
-✔ symbolic state representation  
-✔ pattern detection and short-term prediction  
-✔ adaptive control behavior  
-✔ regime transition detection  
-
-👉 Result:
-
-> chaotic systems become **locally navigable**
-
----
-
-## ⚠️ Status
-
-- prototype system  
-- locally reliable  
+- not globally predictive  
+- system-dependent  
 - still under validation  
 
 ---
 
-## 🚀 Start here
+## 🚀 Entry Point
 
 👉 [START HERE — Run your first demo](START_HERE.md)
 
 ---
 
-## 🧭 Explore
+## 🧭 Modules
 
-- 🧠 Framework → FRAMEWORK/README.md  
-- ⚡ Applications → APPLICATIONS/README.md  
-- 🧭 Navigator → NAVIGATOR/README.md  
+- 🧠 Framework → `FRAMEWORK/`  
+- ⚡ Applications → `APPLICATIONS/`  
+- 🧭 Navigation → `NAVIGATOR/`  
+- 🔬 Discovery → `DISCOVERY_ENGINE/`  
+- 🌊 Field → `FIELD_LAYER/`  
 
 ---
 
-## 💡 Final insight
+## 💡 Core Insight
 
-Complex systems are not binary.
-
-They evolve within:
-
-> **structured dynamical regimes**
+> Stability is not a fixed state.  
+> It is a **region within a structured dynamical field**.
 
 ---
 
 ## 🌀 NEXAH
 
-```text
-dynamics → structure → field → regimes → navigation
-```
-Thomas K. R. Hofmann · 2026
+    dynamics → structure → field → regimes → navigation
+
+---
+
+**Thomas K. R. Hofmann · 2026**
