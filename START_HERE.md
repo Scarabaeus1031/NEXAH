@@ -1,139 +1,66 @@
-# ⚡ NEXAH — Navigating Structure in Dynamical Systems
+# 🚀 START HERE — NEXAH
 
-> Complex systems are not random.  
-> They evolve within **structured fields with direction and destination**.
+![Lorenz Dynamics](APPLICATIONS/core_demos/lorenz/outputs/lorenz_nexah_v12_final.gif)
 
----
-
-![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
-
-**This is a real system.**
-
-Not chaos.  
-Not noise.
-
-👉 This is a **structured flow field**.
+**At first, it looks like chaos.**
 
 ---
 
-## 🧠 What NEXAH does
+## 🧠 But watch closely
 
-NEXAH reconstructs dynamical systems as:
+- the system does not move randomly  
+- it switches between distinct modes  
+- colors appear and disappear  
 
-- **fields** instead of states  
-- **trajectories** instead of events  
-- **attractors** instead of targets  
-
-It reveals:
-
-> how systems **move, transition, and converge** within their intrinsic structure
+👉 these are **regimes**
 
 ---
 
-## 🔥 Core idea
+## ⚡ What you are seeing
 
-```text
-dynamics → structure → field → topology → navigation
+The system is:
+
+- detecting structure  
+- reacting to it  
+- changing behavior dynamically  
+
+> The “blinking” is not visual noise.  
+> It is **state switching inside the system**.
+
+---
+
+## 🔥 Key idea
+
+This is not:
+
+> continuous control
+
+This is:
+
+> **adaptive navigation between regimes**
+
+---
+
+## ⚡ Run it yourself
+
+```bash
+python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
 ```
 
-## 🧭 Architecture
+---
 
-```text
-Discovery → Field Layer → Navigator
-```
+## 🧠 What changed?
 
-- Discovery → extracts structure  
-- Field Layer → builds the field  
-- Navigator → moves within it  
+Before:
+
+> chaotic motion
+
+Now:
+
+> **structured, switching behavior**
 
 ---
 
-## 🚀 Why this matters
+## 🧭 Continue
 
-Instead of:
-
-- detecting failure  
-- reacting to thresholds  
-
-NEXAH enables:
-
-> **understanding and steering systems before failure occurs**
-
----
-
-## ⚡ See how this emerges
-
-👉 Start with chaos:
-
-![Raw Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
-
----
-
-👉 Structure appears:
-
-![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
-
----
-
-👉 Physics emerges:
-
-![Energy](DISCOVERY_ENGINE/outputs/v19_energy_field.png)
-
----
-
-👉 And finally:
-
-Systems become **navigable**
-
-![Navigation](FIELD_LAYER/outputs/plots/v37_full_navigation.png)
-
----
-
-## 🧠 What is already working
-
-✔ structure extraction from chaotic dynamics  
-✔ symbolic state representation  
-✔ pattern detection and prediction  
-✔ adaptive control behavior  
-✔ regime transition detection  
-
-👉 Result:
-
-> chaotic systems become **locally navigable**
-
----
-
-## ⚠️ Status
-
-- prototype system  
-- locally reliable  
-- still under validation  
-
----
-
-## 🚀 Start here
-
-👉 [Run your first demo](START_HERE.md)
-
----
-
-## 🧭 Explore
-
-- 🧠 Framework → FRAMEWORK/README.md  
-- ⚡ Applications → APPLICATIONS/README.md  
-- 🧭 Navigator → NAVIGATOR/README.md  
-
----
-
-## 💡 Final insight
-
-Complex systems are not binary.
-
-They evolve within:
-
-> **structured dynamical regimes**
-
----
-
-**Thomas K. R. Hofmann · 2026**
-
+👉 Go to README to understand the system architecture
