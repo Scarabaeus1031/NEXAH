@@ -15,100 +15,141 @@ It provides a clear view of:
 
 NEXAH is a system for:
 
-> **discovering, modeling, and navigating structure in dynamical systems**
+> **discovering, reconstructing, and navigating structure in dynamical systems**
 
 It transforms:
 
-Dynamics → Structure → Field → Transitions → Signals → States → Prediction → Control → Navigation
+```text
+Dynamics → Structure → Field → Topology → Control → Navigation → Convergence
+```
 
 ---
 
 # 🏗 System Components
 
-## 🔬 1. DISCOVERY ENGINE (Core System)
+## 🔬 1. DISCOVERY ENGINE (Structure Extraction)
 
 | Capability | Status |
 |-----------|--------|
-| Event Detection | ✅ |
-| Transition Extraction | ✅ |
-| Channel / Manifold Structure | ✅ |
+| Transition Structure | ✅ |
+| Channel / Manifold Detection | ✅ |
 | Probability Field | ✅ |
 | Energy Landscape | ✅ |
 | Divergence / Curl | ✅ |
 | Temporal Coupling (Lag) | ✅ |
 
-👉 **This is the strongest and most advanced part of the system**
+👉 Extracts structure from raw dynamics  
+
+---
 
 ### Interpretation
 
 The system can extract:
 
 - structure from dynamics  
-- transitions from flow  
 - fields from trajectories  
+- flow operators (div / curl)  
 
 ---
 
-## 🧭 2. NAVIGATOR (Decision & Control Layer)
+## 🌊 2. FIELD LAYER (Core System)
 
 | Capability | Status |
 |-----------|--------|
-| State Representation | ✅ |
-| Pattern Detection | ✅ |
-| Prediction | ✅ |
-| Control Logic | ✅ |
-| Meta-Control | ✅ |
-| Memory (state + sequence) | ✅ |
+| Field-Aligned Coordinates (α, β, γ) | ✅ |
+| Density / Transition Regions | ✅ |
+| Ridge / Channel Extraction | ✅ |
+| Flow Field (Directional) | ✅ |
+| Topology (Nodes / Cycles) | ✅ |
+| Energy-Based Control | ✅ |
+| Attractor Detection | ✅ |
+| Convergence Behavior | ✅ |
 
-⚠ Limitation:
-
-- not fully integrated with real field outputs  
-
-👉 **Conceptually strong, partially connected**
+👉 **This is the central breakthrough layer**
 
 ---
 
-## ⚙️ 3. ENGINE (Computation Layer)
+### Key Result
+
+> The system is reconstructed as a **continuous dynamical field with topology and control**
+
+---
+
+### Critical Insight
+
+Field decomposition reveals:
+
+```text
+dx/dt ≈ -∇V(x) + R(x)
+```
+
+→ attraction + rotation
+
+---
+
+## 🧭 3. NAVIGATOR (Control & Navigation)
+
+| Capability | Status |
+|-----------|--------|
+| Path Selection | ✅ |
+| Control Policies | ✅ |
+| Trajectory Shaping | ✅ |
+| Energy-Aware Navigation | ✅ |
+| Multi-Attractor Handling | ⚠️ |
+| Dynamic Field Navigation | ⚠️ |
+
+👉 Operates on reconstructed field  
+
+---
+
+### Interpretation
+
+> Navigation is performed as **trajectory shaping within the field**, not target tracking
+
+---
+
+## ⚙️ 4. ENGINE (Computation Layer)
 
 | Area | Status |
 |------|--------|
 | Simulation | ⚠️ |
-| Analysis (Lyapunov, etc.) | ✅ |
-| Navigation Logic | ⚠️ |
-| Kernel | ⚠️ |
+| Numerical Analysis | ✅ |
+| Field Computation | ✅ |
+| Integration Pipeline | ⚠️ |
 
-👉 **Technically functional, but not clearly structured as a core layer**
+👉 Functional, but not cleanly packaged  
 
 ---
 
-## 🧱 4. FRAMEWORK (Theory Layer)
+## 🧱 5. FRAMEWORK (Theory Layer)
 
 | Area | Status |
 |------|--------|
 | Geometry | ✅ |
-| Risk Field | ✅ |
-| Field Control | ✅ |
+| Field Representation | ✅ |
+| Energy Model | ✅ |
 | Formalization | ⚠️ |
 
 👉 Provides conceptual foundation  
-👉 Not directly driving current execution pipeline  
+👉 partially reflected in implementation  
 
 ---
 
-## 🌪 5. APPLICATIONS (Use Cases)
+## 🌪 6. APPLICATIONS (Use Cases)
 
-### 🔥 Lorenz System (Reference)
+### 🔥 Lorenz System (Reference System)
 
 | Feature | Status |
 |--------|--------|
 | Structure Extraction | ✅ |
-| Field Modeling | ✅ |
-| Transition Detection | ✅ |
-| Prediction | ✅ |
+| Field Reconstruction | ✅ |
+| Topology | ✅ |
 | Control | ✅ |
-| Visualization Pipeline | ✅ |
+| Navigation | ✅ |
+| Fixpoint Detection | ✅ |
+| Convergence | ✅ |
 
-👉 **Complete prototype system**
+👉 **Fully functional prototype system**
 
 ---
 
@@ -117,14 +158,12 @@ The system can extract:
 | Feature | Status |
 |--------|--------|
 | Field Reconstruction | ✅ |
-| Risk Signal | ✅ |
-| Early Warning | ⚠️ |
-| Control | ⚠️ |
+| Flow Structure | ✅ |
+| Risk Signal | ⚠️ |
+| Convergence | ❌ |
+| Reproducibility | ❌ |
 
-❌ not reproducible  
-❌ not unified with core pipeline  
-
-👉 **High potential, not validated**
+👉 High potential, not validated  
 
 ---
 
@@ -136,20 +175,20 @@ The system can extract:
 | Multi-Agent | ⚠️ |
 | Supply Chain | ⚠️ |
 
-👉 exploration only  
+👉 exploratory only  
 
 ---
 
-## 🧪 6. BUILDER LAB (Exploration)
+## 🧪 7. BUILDER LAB (Exploration)
 
 | Area | Status |
 |------|--------|
 | Experiments | ✅ |
 | Visuals | ✅ |
-| Prototypes | ⚠️ |
+| Rapid Prototyping | ⚠️ |
 
 👉 supports development  
-👉 not part of core system  
+👉 not part of core pipeline  
 
 ---
 
@@ -157,44 +196,42 @@ The system can extract:
 
 NEXAH successfully demonstrates:
 
-✔ structure extraction from dynamics  
-✔ transition detection  
-✔ field construction (probability + energy)  
-✔ flow analysis (divergence / curl)  
-✔ temporal coupling  
-✔ local prediction  
-✔ basic control  
+✔ structure emerges from dynamics  
+✔ dynamics form continuous fields  
+✔ transitions follow geometric channels  
+✔ topology emerges from flow  
+✔ attractors exist and are measurable  
+✔ trajectories converge to stable points  
+✔ control can shape trajectories  
+✔ navigation is possible within the field  
 
 ---
 
 # ⚠️ Current Gaps
 
-## 1. Integration Gap
+## 1. Packaging Gap
 
-- Discovery → Navigator not unified  
-- no full closed-loop system  
-
----
-
-## 2. Application Gap
-
-- no clean, reproducible use case  
-- limited real-world validation  
+- no unified entry point (`run_nexah_demo.py`)  
+- no simple onboarding  
 
 ---
 
-## 3. Usability Gap
+## 2. Validation Gap
 
-- no entry point (`run_nexah_demo.py`)  
-- no clear onboarding  
+- convergence not yet statistically validated  
+- limited multi-run evaluation  
 
 ---
 
-## 4. Scientific Clarity
+## 3. Application Gap
 
-- definitions not formalized  
-- metrics not emphasized  
-- comparisons missing  
+- no reproducible real-world demonstration  
+
+---
+
+## 4. Integration Clarity
+
+- pipeline exists but not simplified for external use  
 
 ---
 
@@ -204,8 +241,8 @@ This is NOT just simulation.
 
 The system shows:
 
-> dynamic systems can be represented as structured fields  
-> and transitions can be detected, analyzed, and predicted  
+> dynamical systems can be reconstructed as structured fields  
+> with controllable trajectories and stable convergence  
 
 ---
 
@@ -213,7 +250,7 @@ The system shows:
 
 NEXAH is:
 
-> a structural and field-based layer on top of dynamical systems
+> a **field reconstruction and navigation layer on top of dynamical systems**
 
 It enables:
 
@@ -235,7 +272,7 @@ NEXAH is NOT:
 
 NEXAH is:
 
-> a **structure and navigation layer for dynamic systems**
+> a **structure, field, and navigation framework for dynamical systems**
 
 ---
 
@@ -249,7 +286,7 @@ Current priority is NOT:
 
 But:
 
-> clarity, usability, and demonstration  
+> usability, validation, and demonstration  
 
 ---
 
@@ -257,9 +294,9 @@ But:
 
 1. build `run_nexah_demo.py`  
 2. create `START_HERE.md`  
-3. connect Discovery → Navigator  
-4. make Lorenz fully reproducible  
-5. unify Lorenz ↔ real systems  
+3. validate convergence statistically  
+4. create reproducible Lorenz results  
+5. package IEEE example  
 
 ---
 
@@ -269,9 +306,9 @@ NEXAH shows:
 
 > complex systems are not purely chaotic  
 
-They contain:
+They evolve within:
 
-> **structured, detectable, and navigable transition dynamics**
+> **structured fields with direction, topology, and convergence**
 
 ---
 
