@@ -7,7 +7,8 @@ Focus:
 - extraction of transition structure
 - progressive refinement from signals → geometry → flow → segmentation
 
-> All visuals are located in:
+
+### All visuals are located in:
 ```link
 FIELD_LAYER/outputs/plots/
 ```
