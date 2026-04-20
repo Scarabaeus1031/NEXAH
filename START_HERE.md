@@ -1,6 +1,6 @@
 # 🚀 START HERE — NEXAH
 
-![NEXAH Field](./visuals/output/v7_separatrix.png)
+![NEXAH Field](FRAMEWORK/visuals/output/v7_separatrix.png)
 
 **This is not chaos.**  
 This is a **stability field**.
