@@ -743,41 +743,362 @@ Outcome:
 - emergence of navigation corridor
 - transition to dynamic field
 
+---
 
+# 🔷 V29 — Field Decomposition
+
+Files:
+- `v29_field_decomposition.png`
+
+Description:
+- decomposition of field into:
+  - scalar (potential) component
+  - rotational (residual) component
+  - combined field
+
+Outcome:
+- separation of gradient vs rotational dynamics
+- identification of:
+  - driving forces (potential)
+  - structural deformation (rotation)
+- foundation for controlled navigation
 
 
 ---
 
-# 🧠 Updated State
+# 🔷 V30 — Flow Line Structure
+
+Files:
+- `v30_flow_lines.png`
+
+Description:
+- extraction of full streamline field
+
+Outcome:
+- emergence of continuous flow geometry
+- identification of:
+  - global circulation
+  - local flow channels
+- system resembles:
+  - fingerprint / tree-ring / vortex topology
+
+
+---
+
+# 🔷 V31 — Decision Regions & Separatrix
+
+Files:
+- `v31_decision_regions.png`
+
+Description:
+- detection of slow zones and basin boundaries
+- extraction of separatrix
+
+Outcome:
+- clear decision boundaries between attractors
+- emergence of:
+  - basin partitioning
+  - critical transition edges
+- system becomes piecewise deterministic
+
+
+---
+
+# 🔷 V32 — Boundary Crossing Control
+
+Files:
+- `v32_boundary_crossing_control.png`
+
+Description:
+- controlled perturbations at boundary seeds
+
+Outcome:
+- transitions can be actively redirected
+- asymmetry discovered:
+  - pushing toward C2 is dominant
+  - C3 partially resistant
+- emergence of controllability structure
+
+
+---
+
+# 🔷 V33 — Control Energy Field
+
+Files:
+- `v33_control_energy_field.png`
+
+Description:
+- computation of minimal control energy, amplitude, duration
+
+Outcome:
+- transition cost landscape revealed
+- sharp energy ridge at boundary (~β ≈ 28–29)
+- system exhibits:
+  - energy barriers
+  - preferred injection zones
+
+
+---
+
+# 🔷 V34 — Noise Stability
+
+Files:
+- `v34_noise_stability.png`
+
+Description:
+- system stability under stochastic perturbations
+
+Outcome:
+- low-noise → localized instability pockets
+- high-noise → structured channel collapse
+- robustness depends on:
+  - boundary geometry
+  - attractor dominance
+
+
+---
+
+# 🔷 V35 — Control × Robustness Phase Map
+
+Files:
+- `v35_control_robustness_phase.png`
+
+Description:
+- combination of control cost and robustness
+
+Outcome:
+- emergence of operational phase regions:
+  - low-cost + high-robust → optimal zone
+  - high-cost → unstable or inefficient
+- basin structure reshaped by control constraints
+
+
+---
+
+# 🔷 V36 — Operational Graph
+
+Files:
+- `v36_operational_graph.png`
+
+Description:
+- abstraction of system into operational nodes + edges
+
+Outcome:
+- system reduces to small graph (4 nodes)
+- edges weighted by:
+  - distance
+  - cost
+  - robustness
+- emergence of:
+  - minimal navigation graph
+  - decision topology
+
+
+---
+
+# 🔷 V37 — Full Navigation Engine
+
+Files:
+- `v37_full_navigation.png`
+
+Description:
+- integration of:
+  - field
+  - graph
+  - navigation path
+
+Outcome:
+- complete navigation pipeline
+- trajectory follows:
+  - global structure (graph)
+  - local geometry (field)
+- emergence of:
+  - "membrane + arc" navigation pattern
+
+
+---
+
+# 🔷 V38 — Capture Hook Geometry
+
+Files:
+- `v38_capture_hook_navigation.png`
+
+Description:
+- detailed analysis of capture behavior near attractor
+
+Outcome:
+- discovery of "hook" structure:
+  - trajectory does not go straight
+  - it bends and attaches
+- emergence of:
+  - capture manifold
+  - entry curvature pattern
+
+
+---
+
+# 🔷 V39 — Fixpoint Extraction
+
+Files:
+- `v39_fixpoint_extraction.png`
+
+Description:
+- estimation of stable fixpoint x*
+
+Outcome:
+- precise convergence point identified:
+  x* ≈ (13.494, 25.994)
+- strong stability:
+  - small endpoint spread (~0.03)
+  - large basin radius (~1.2)
+- convergence is:
+  - repeatable
+  - robust
+
+
+---
+
+# 🔷 V40 — Local Linearization
+
+Files:
+- `v40_local_linearization.png`
+
+Description:
+- Jacobian analysis at fixpoint
+
+Outcome:
+- eigenvalues:
+  complex with negative real part
+- system classified as:
+  → stable spiral attractor
+- local dynamics:
+  - contraction + rotation
+- confirms:
+  - observed hook / spiral behavior
+
+
+---
+
+# 🧠 FINAL STATE (V40)
 
 FIELD_LAYER now provides:
 
-- signal → geometry → flow → topology → graph → cycles
-- continuous dynamics → discrete state system
-- attractor detection
-- transition probabilities
-- cycle structure (core of dynamics)
+- full field reconstruction
+- transition geometry
+- flow channels
+- basin structure
+- control energy landscape
+- robustness analysis
+- operational graph
+- navigation engine
+- fixpoint extraction
+- local dynamical classification
 
 ---
 
-# 🔥 KEY INSIGHT
+# 🔥 FINAL INSIGHT
 
-The system has transitioned from:
+The system is no longer:
 
-→ "predicting events"
+→ a simulation  
+→ a detector  
+→ a predictor  
 
-to
+It is now:
 
-→ "mapping a closed dynamical structure"
+> a **navigable dynamical field with measurable structure and controllable behavior**
 
-This is no longer a detector — it is a **state-space engine**.
+---
+
+# 🚀 FINAL TRANSFORMATION
+
+```text
+raw dynamics
+→ field representation
+→ transition geometry
+→ flow structure
+→ discrete states
+→ graph abstraction
+→ control landscape
+→ navigation
+→ fixpoint
+→ local dynamics
+```
+
+---
+# 🧠 FINAL STATE (V40)
+
+FIELD_LAYER now provides:
+
+- field-aligned coordinate transformation  
+- transition geometry and flow structure  
+- density-based channel extraction  
+- discrete state abstraction (nodes, graph, cycles)  
+- control energy landscape  
+- robustness analysis under noise  
+- boundary and separatrix detection  
+- operational graph representation  
+- full navigation pipeline (graph + field)  
+- attractor capture dynamics ("hook geometry")  
+- fixpoint estimation (x*)  
+- local linearization (Jacobian, eigenvalues)  
 
 ---
 
-# 🚧 Next Steps
+# 🔥 KEY SHIFT
 
-- V12.2 → Cycle Entry / Exit Points
-- V12.3 → Stability Ranking of Cycles
-- V13 → Control / Intervention Layer
+The system has evolved from:
+
+→ detecting transitions  
+→ modeling structure  
+
+to:
+
+> **operating on the system as a navigable dynamical field**
 
 ---
+
+# 🧭 SYSTEM CLASSIFICATION
+
+The FIELD_LAYER is now:
+
+- a **state-space reconstruction engine**  
+- a **control-aware dynamical system model**  
+- a **navigation framework over structured flow fields**  
+
+---
+
+# ⚡ CORE INSIGHT
+
+> Stability is not a fixed state  
+> but a dynamically reachable region in a structured field  
+
+---
+
+# 🔬 DYNAMICAL RESULT
+
+The system exhibits:
+
+- attractor basins  
+- structured transition corridors  
+- energy barriers  
+- directional flow  
+- cyclic structure  
+- stable spiral fixpoint  
+
+---
+
+# 🧠 FINAL MODEL
+
+```text
+dynamics
+→ field
+→ geometry
+→ flow
+→ topology
+→ graph
+→ control
+→ navigation
+→ convergence
+```
+
