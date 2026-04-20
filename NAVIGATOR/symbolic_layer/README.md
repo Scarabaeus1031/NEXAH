@@ -1,88 +1,193 @@
-# NEXAH Navigation
+# 🧬 NEXAH — Symbolic Navigation Layer
 
-This directory contains the **operational navigation language** of NEXAH.
+The Symbolic Layer provides a **high-level language for describing movement, transitions, and structure** within the NEXAH field framework.
 
-It defines the vocabulary, constructs and decision logic that turn discovered structure (field, geometry, channel, switch) into **coherence-guided movement**.
+It does not define system behavior directly.
 
-All documents in this folder belong to the emerging **NEXAH navigation layer (v9)**.
+Instead, it serves as:
 
----
-
-## 🧭 What this directory is
-
-The `navigation/` layer is the place where NEXAH becomes **executable navigation** instead of pure description.
-
-It connects:
-- structural discovery → field & geometry
-- channel & switch dynamics (v8 → v9)
-- resonance constructs (RATH, OLGO-JANUS, v-bands)
-- **URF Axial Space + Root Bridge (v9.1)** – 3D reference frame
-
-Current center of gravity:
-> coherence-guided movement through structured dynamical geometry
+> an **interpretation and navigation language built on top of the Field Layer**
 
 ---
 
-## 📁 Documents in this directory
+# 🧠 Core Idea
 
-| Document | Purpose | Status |
-|----------|--------|--------|
-| **[NEXAH_NAVIGATION_PRIMITIVES.md](./NEXAH_NAVIGATION_PRIMITIVES.md)** | Core vocabulary & navigation chain | ✅ latest |
-| **[NEXAH_ZITHER_GATE_MODEL.md](./NEXAH_ZITHER_GATE_MODEL.md)** | Zither code system, gates, Perlenkette, Phi-Split | ✅ latest |
-| **[NEXUS_3_PLUS_1_GATE_NOTE.md](./NEXUS_3_PLUS_1_GATE_NOTE.md)** | 3+1 Gate architecture | ✅ latest |
-| **[OLGO_JANUS_SIX_SECTOR_GATE.md](./OLGO_JANUS_SIX_SECTOR_GATE.md)** | Six-sector symmetric navigation | — |
-| **[RATH_PHI_LAMBDA_RESONANCE_BRIDGE.md](./RATH_PHI_LAMBDA_RESONANCE_BRIDGE.md)** | Angular resonance bridge & n-bands | — |
-| **[SPLIT_INTERFACE_MARKERS_NOTE.md](./SPLIT_INTERFACE_MARKERS_NOTE.md)** | Split, interface & marker logic | — |
-| **[V_BANDS_BREATHING_WAVE_AND_BLINKING_PULSE.md](./V_BANDS_BREATHING_WAVE_AND_BLINKING_PULSE.md)** | Breathing background + pulse dynamics | — |
+NEXAH reconstructs systems as:
+
+- structured fields  
+- flow geometries  
+- attractor basins  
+- transition regions  
+
+The Symbolic Layer translates these into:
+
+> **intuitive navigation constructs**
 
 ---
 
-## 🔗 Current Navigation Stack (April 2026)
+# 🔗 System Context
+
+NEXAH pipeline:
 
 ```text
-Field (V69)
-    ↓
-Channel (v8) + Dual-Strand
-    ↓
-Switch (v9)
-    ↓
-Triple Spiral Coupling + Elastic Dual Lock
-    ↓
-RATH Phi-Lambda Bridge + n-bands
-    ↓
-OLGO-JANUS Six-Sector Gate
-    ↓
-v-bands (Breathing Wave + Blinking Pulse)
-    ↓
-Zither-Gate Code System
-    ↓
-**URF Axial Space + Root Bridge (v9.1)** ← 3D reference frame
-    ↓
-Controlled Navigation
+Dynamics
+→ Structure (Discovery)
+→ Field (Field Layer)
+→ Geometry (channels, basins, separatrices)
+→ Control (Navigator)
+→ Symbolic Interpretation (Symbolic Layer)
 ```
 
-## Visual Gallery
+---
 
-All key visuals for the navigation layer are collected in:
+# 🔥 Key Insight
 
-- `nexah/visuals/`
-- `nexah/urf_axial_space/visuals/` (Root Cube, White/Black Cube, From-Graphs-to-Root-Cube, Triple-Spiral-Root-Bridge)
-
-See the dedicated **[Visual Gallery](../docs/VISUAL-GALLERY.md)**.
+> The Symbolic Layer does not create structure.  
+> It **describes and encodes structure extracted from the field**.
 
 ---
 
-## Reading Order (recommended)
+# 🧭 Purpose
 
-1. **NEXAH_NAVIGATION_PRIMITIVES.md** – start here  
-2. **NEXAH_ZITHER_GATE_MODEL.md** – the operational code system  
-3. **NEXUS_3_PLUS_1_GATE_NOTE.md** – the 3+1 completion  
-4. RATH, OLGO-JANUS, v-bands (the resonance extensions)  
-5. **URF Axial Space + Root Bridge** (the 3D geometric foundation)
+The Symbolic Layer enables:
+
+- intuitive understanding of field dynamics  
+- compact representation of movement patterns  
+- higher-level navigation strategies  
+- mapping between geometry and decision logic  
 
 ---
 
-**NEXAH Navigation Layer**  
-From structure to controlled 3D movement.  
-The language is now complete.  
-The geometry is now navigable.
+# 🔬 Core Mapping (Symbolic ↔ Field)
+
+| Symbolic Concept | Field Interpretation |
+|-----------------|---------------------|
+| Channel | flow ridge / trajectory corridor |
+| Dual-Strand | parallel flow structure |
+| Switch | separatrix crossing / boundary transition |
+| Spiral | rotational flow (curl component) |
+| Gate | basin entry / capture region |
+| Pulse / Bands | time-dependent field modulation |
+| Axial Space | field-aligned coordinate system |
+
+---
+
+# 🌊 Navigation Stack (Symbolic View)
+
+```text
+Field
+↓
+Channel (flow structure)
+↓
+Switch (boundary crossing)
+↓
+Rotation / Spiral (curl dynamics)
+↓
+Gate (capture region)
+↓
+Pulse / Modulation (time-dependent field)
+↓
+Symbolic Navigation
+```
+
+---
+
+# 🧠 Interpretation Layer
+
+The symbolic constructs act as:
+
+- abstractions of geometry  
+- descriptions of flow behavior  
+- labels for dynamic regimes  
+
+---
+
+## Example
+
+Field observation:
+
+- trajectory enters basin  
+- follows curved path  
+- converges into attractor  
+
+Symbolic interpretation:
+
+- entry → gate  
+- movement → channel  
+- curvature → spiral  
+- convergence → lock  
+
+---
+
+# ⚙️ Role in Navigation
+
+The Symbolic Layer supports the Navigator by:
+
+- compressing field structure into actionable patterns  
+- enabling rule-based or heuristic navigation  
+- bridging geometry and decision logic  
+
+---
+
+# ⚠️ Important Clarification
+
+The Symbolic Layer:
+
+- is derived from empirical field structure  
+- is not a physical theory  
+- is not required for core system operation  
+
+It should be understood as:
+
+> an **interface layer for interpreting and expressing field dynamics**
+
+---
+
+# 🧪 Current Status
+
+| Component | Status |
+|----------|--------|
+| Channel / Flow Mapping | ✓ grounded |
+| Switch / Boundary Mapping | ✓ grounded |
+| Rotation / Spiral Mapping | ✓ grounded |
+| Gate / Capture Mapping | ✓ grounded |
+| Higher Constructs (RATH, OLGO, etc.) | ⚠️ experimental |
+
+---
+
+# 🚀 Usage
+
+Use the Symbolic Layer when:
+
+- interpreting field behavior  
+- designing navigation heuristics  
+- communicating system dynamics  
+- exploring higher-level abstractions  
+
+---
+
+# 🧠 Final Insight
+
+The Symbolic Layer reveals:
+
+> field dynamics can be expressed not only mathematically,  
+> but also **structurally and linguistically**
+
+---
+
+# 🔥 Summary
+
+The Symbolic Layer is:
+
+- not the system itself  
+- not the control logic  
+
+It is:
+
+> a **language for describing motion in structured dynamical fields**
+
+---
+
+**NEXAH Symbolic Layer**  
+From geometry to meaning.  
+From flow to language.
