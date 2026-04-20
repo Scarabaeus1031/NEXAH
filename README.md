@@ -1,7 +1,7 @@
-# ⚡ NEXAH — Structure & Navigation in Dynamical Systems
+# ⚡ NEXAH — Navigating Structure in Dynamical Systems
 
 > Complex systems are not random.  
-> They evolve within **structured dynamical fields**.
+> They evolve within **structured fields with direction and destination**.
 
 ---
 
@@ -12,54 +12,63 @@
 Not noise.  
 Not randomness.
 
-👉 A **structured flow field**
+👉 This is a **structured flow field**
 
 ---
 
-## 🧠 What NEXAH is
+## 🧠 But it looks like this
 
-NEXAH is a **computational framework for extracting structure from dynamical systems**.
+![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
 
-It reconstructs systems as:
-
-- fields instead of states  
-- trajectories instead of events  
-- regimes instead of thresholds  
+Chaotic.  
+Unpredictable.  
+No obvious structure.
 
 ---
 
-## 🔬 Core Function
+## 🔍 Until you extract the structure
 
-From raw system dynamics, NEXAH extracts:
+![Symbolic State + Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
 
-- transition events  
-- geometric structure (manifolds / channels)  
-- probability fields  
-- energy landscapes  
-- flow properties (divergence / curl)  
-- temporal coupling  
+Suddenly:
 
----
+- discrete states emerge  
+- transitions become visible  
+- dynamics form a **graph**
 
-## 🔁 Core Shift
-
-Classical question:
-
-> Is the system stable?
-
-NEXAH question:
-
-> **Where and how does the system transition?**
+👉 Chaos becomes **structured**
 
 ---
 
-## 🌊 Field Interpretation
+## 🔥 And now this becomes possible
 
-Systems are modeled as:
+![Controlled Navigation](APPLICATIONS/core_demos/lorenz/outputs/lorenz_meta_control_v6_switch.png)
 
-- probability fields → where trajectories concentrate  
-- energy landscapes → stability vs transition regions  
-- flow fields → how the system moves  
+- trajectories stabilize  
+- regimes are controlled  
+- targets can be reached  
+
+👉 The system becomes **navigable**
+
+---
+
+## 🧠 What NEXAH does
+
+NEXAH reconstructs dynamical systems as:
+
+- **fields** instead of states  
+- **trajectories** instead of events  
+- **attractors** instead of targets  
+
+It reveals:
+
+> how systems **move, transition, and converge** within their intrinsic structure
+
+---
+
+## 🔥 Core idea
+
+    dynamics → structure → field → topology → navigation
 
 ---
 
@@ -78,12 +87,6 @@ Transforms structure into a navigable representation.
 
 ### 🧭 Navigator
 Operates on the system as a trajectory within the field.
-
----
-
-## 🔥 Core Pipeline
-
-    dynamics → structure → field → topology → navigation
 
 ---
 
@@ -133,7 +136,7 @@ Operates on the system as a trajectory within the field.
 ## 💡 Core Insight
 
 > Stability is not a fixed state.  
-> It is a **region within a structured dynamical field**.
+> It is a **region within a structured dynamical field**
 
 ---
 
