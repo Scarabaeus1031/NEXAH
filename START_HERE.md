@@ -25,6 +25,18 @@ NEXAH shows:
 
 ---
 
+## 🌊 The Shift
+
+Classical view:
+
+> systems are unstable or stable  
+
+NEXAH view:
+
+> systems **move through structure**
+
+---
+
 ## ⚡ Step 1 — Run the Core Demo
 
 ```bash
@@ -49,13 +61,84 @@ This generates:
 
 ---
 
-## 🌊 Key Idea
+## 🧩 From Chaos → Structure
 
-Systems do not randomly become unstable.
+At first, systems look like this:
 
-They:
+![Lorenz Dynamics](APPLICATIONS/core_demos/lorenz/outputs/lorenz_nexah_v12_final.gif)
 
-> **move through regions of stability**
+Chaotic. Complex. Hard to interpret.
+
+---
+
+Then structure appears:
+
+![Risk Landscape](FRAMEWORK/visuals/output/v6_risk_field.png)
+
+You start seeing:
+
+- valleys (stable regions)  
+- slopes (transitions)  
+- peaks (instability)  
+
+---
+
+And then the key insight:
+
+![Separatrix](FRAMEWORK/visuals/output/v7_separatrix.png)
+
+> Systems do not randomly fail  
+> they **cross boundaries**
+
+---
+
+## 🔥 What NEXAH really extracts
+
+Beyond visualization, NEXAH reveals deeper structure:
+
+- symbolic system states  
+- transition sequences  
+- regime graphs  
+- stability patterns over time  
+- geometric transition channels  
+
+👉 Example (from Lorenz analysis):
+
+![Symbolic + Transition Structure](APPLICATIONS/core_demos/lorenz/outputs/lorenz_symbolic_states.png)
+
+This shows:
+
+- discrete system states (S0–S5)  
+- transition probabilities  
+- how the system *moves between regimes*  
+
+---
+
+## ⚡ Hidden Structure in Time
+
+Even instability is structured:
+
+![Risk Structure](APPLICATIONS/core_demos/lorenz/outputs/lorenz_risk_analysis.png)
+
+Key observation:
+
+> Risk is not random noise  
+> it forms **repeating structural patterns**
+
+---
+
+## 🧭 Geometry of Transitions
+
+NEXAH also reveals:
+
+![Probability Channel](APPLICATIONS/core_demos/lorenz/outputs/lorenz_probability_channel.png)
+
+- preferred movement paths  
+- transition corridors  
+- geometric constraints  
+
+👉 Systems don’t move arbitrarily  
+they follow **channels in state space**
 
 ---
 
@@ -78,11 +161,11 @@ Now you will see:
 
 Before:
 
-> the system moved blindly
+> the system moved blindly  
 
 Now:
 
-> the system **reacts to the structure**
+> the system **reacts to structure**
 
 ---
 
