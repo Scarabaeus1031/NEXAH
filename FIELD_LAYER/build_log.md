@@ -7,9 +7,8 @@ Focus:
 - extraction of transition structure
 - progressive refinement from signals → geometry → flow → segmentation
 
-All visuals are located in:
-
-FIELD_LAYER/outputs/plots/
+> All visuals are located in:
+> FIELD_LAYER/outputs/plots/
 
 Outcome:
 - poor fit (low R²)
@@ -750,17 +749,13 @@ Outcome:
 Files:
 - `v29_field_decomposition.png`
 
+![V29 Field Decomposition](outputs/plots/v29_field_decomposition.png)
+
 Description:
-- decomposition of field into:
-  - scalar (potential) component
-  - rotational (residual) component
-  - combined field
+- decomposition into potential and rotational components
 
 Outcome:
-- separation of gradient vs rotational dynamics
-- identification of:
-  - driving forces (potential)
-  - structural deformation (rotation)
+- separation of driving vs structural dynamics
 - foundation for controlled navigation
 
 
@@ -769,37 +764,33 @@ Outcome:
 # 🔷 V30 — Flow Line Structure
 
 Files:
-- `v30_flow_lines.png`
+- `v30_flow_line_extraction.png`
+
+![V30 Flow Lines](outputs/plots/v30_flow_line_extraction.png)
 
 Description:
-- extraction of full streamline field
+- extraction of continuous flow lines
 
 Outcome:
-- emergence of continuous flow geometry
-- identification of:
-  - global circulation
-  - local flow channels
-- system resembles:
-  - fingerprint / tree-ring / vortex topology
+- emergence of global flow geometry
+- identification of channels and circulation patterns
 
 
 ---
 
-# 🔷 V31 — Decision Regions & Separatrix
+# 🔷 V31 — Separatrix Detection
 
 Files:
-- `v31_decision_regions.png`
+- `v31_separatrix_detection.png`
+
+![V31 Separatrix](outputs/plots/v31_separatrix_detection.png)
 
 Description:
-- detection of slow zones and basin boundaries
-- extraction of separatrix
+- detection of basin boundaries
 
 Outcome:
-- clear decision boundaries between attractors
-- emergence of:
-  - basin partitioning
-  - critical transition edges
-- system becomes piecewise deterministic
+- clear separation between attractors
+- emergence of decision regions
 
 
 ---
@@ -809,15 +800,14 @@ Outcome:
 Files:
 - `v32_boundary_crossing_control.png`
 
+![V32 Boundary Control](outputs/plots/v32_boundary_crossing_control.png)
+
 Description:
-- controlled perturbations at boundary seeds
+- controlled perturbation at boundaries
 
 Outcome:
-- transitions can be actively redirected
-- asymmetry discovered:
-  - pushing toward C2 is dominant
-  - C3 partially resistant
-- emergence of controllability structure
+- asymmetric controllability discovered
+- preferred transition direction toward C2
 
 
 ---
@@ -827,33 +817,31 @@ Outcome:
 Files:
 - `v33_control_energy_field.png`
 
+![V33 Energy](outputs/plots/v33_control_energy_field.png)
+
 Description:
-- computation of minimal control energy, amplitude, duration
+- computation of transition energy
 
 Outcome:
-- transition cost landscape revealed
-- sharp energy ridge at boundary (~β ≈ 28–29)
-- system exhibits:
-  - energy barriers
-  - preferred injection zones
+- sharp energy ridge identified
+- minimal paths align with field structure
 
 
 ---
 
-# 🔷 V34 — Noise Stability
+# 🔷 V34 — Noise Robustness
 
 Files:
-- `v34_noise_stability.png`
+- `v34_noise_robustness.png`
+
+![V34 Noise](outputs/plots/v34_noise_robustness.png)
 
 Description:
-- system stability under stochastic perturbations
+- stability under stochastic perturbations
 
 Outcome:
-- low-noise → localized instability pockets
-- high-noise → structured channel collapse
-- robustness depends on:
-  - boundary geometry
-  - attractor dominance
+- structured collapse under noise
+- robustness depends on basin geometry
 
 
 ---
@@ -863,14 +851,14 @@ Outcome:
 Files:
 - `v35_control_robustness_phase.png`
 
+![V35 Phase](outputs/plots/v35_control_robustness_phase.png)
+
 Description:
-- combination of control cost and robustness
+- combined control and robustness analysis
 
 Outcome:
-- emergence of operational phase regions:
-  - low-cost + high-robust → optimal zone
-  - high-cost → unstable or inefficient
-- basin structure reshaped by control constraints
+- operational regions emerge
+- optimal zones identified
 
 
 ---
@@ -880,18 +868,14 @@ Outcome:
 Files:
 - `v36_operational_graph.png`
 
+![V36 Graph](outputs/plots/v36_operational_graph.png)
+
 Description:
-- abstraction of system into operational nodes + edges
+- reduction to node-edge system
 
 Outcome:
-- system reduces to small graph (4 nodes)
-- edges weighted by:
-  - distance
-  - cost
-  - robustness
-- emergence of:
-  - minimal navigation graph
-  - decision topology
+- minimal graph representation
+- weighted transitions (cost + robustness)
 
 
 ---
@@ -901,19 +885,14 @@ Outcome:
 Files:
 - `v37_full_navigation.png`
 
+![V37 Navigation](outputs/plots/v37_full_navigation.png)
+
 Description:
-- integration of:
-  - field
-  - graph
-  - navigation path
+- integration of graph + field
 
 Outcome:
 - complete navigation pipeline
-- trajectory follows:
-  - global structure (graph)
-  - local geometry (field)
-- emergence of:
-  - "membrane + arc" navigation pattern
+- trajectory follows structured arc ("membrane + path")
 
 
 ---
@@ -923,16 +902,14 @@ Outcome:
 Files:
 - `v38_capture_hook_navigation.png`
 
+![V38 Hook](outputs/plots/v38_capture_hook_navigation.png)
+
 Description:
-- detailed analysis of capture behavior near attractor
+- analysis of final approach to attractor
 
 Outcome:
-- discovery of "hook" structure:
-  - trajectory does not go straight
-  - it bends and attaches
-- emergence of:
-  - capture manifold
-  - entry curvature pattern
+- discovery of curved capture ("hook")
+- transition occurs via attachment, not direct convergence
 
 
 ---
@@ -942,18 +919,15 @@ Outcome:
 Files:
 - `v39_fixpoint_extraction.png`
 
+![V39 Fixpoint](outputs/plots/v39_fixpoint_extraction.png)
+
 Description:
-- estimation of stable fixpoint x*
+- estimation of stable convergence point
 
 Outcome:
-- precise convergence point identified:
-  x* ≈ (13.494, 25.994)
-- strong stability:
-  - small endpoint spread (~0.03)
-  - large basin radius (~1.2)
-- convergence is:
-  - repeatable
-  - robust
+- x* ≈ (13.494, 25.994)
+- large stable basin
+- convergence independent of trajectory
 
 
 ---
@@ -963,36 +937,15 @@ Outcome:
 Files:
 - `v40_local_linearization.png`
 
+![V40 Linearization](outputs/plots/v40_local_linearization.png)
+
 Description:
 - Jacobian analysis at fixpoint
 
 Outcome:
-- eigenvalues:
-  complex with negative real part
-- system classified as:
-  → stable spiral attractor
-- local dynamics:
-  - contraction + rotation
-- confirms:
-  - observed hook / spiral behavior
-
-
----
-
-# 🧠 FINAL STATE (V40)
-
-FIELD_LAYER now provides:
-
-- full field reconstruction
-- transition geometry
-- flow channels
-- basin structure
-- control energy landscape
-- robustness analysis
-- operational graph
-- navigation engine
-- fixpoint extraction
-- local dynamical classification
+- stable spiral attractor
+- contraction + rotation confirmed
+- local dynamics fully characterized
 
 ---
 
@@ -1102,3 +1055,4 @@ dynamics
 → convergence
 ```
 
+> Visuals represent the primary evidence of structure.
