@@ -224,5 +224,16 @@ These equations define the **operational core** of:
 
 ---
 
+# 🔗 Extended Formulation
+
+This document defines the minimal operational equations of the Field Layer.
+
+For a structural and conceptual interpretation (including connections to dynamical systems, energy landscapes, and control), see:
+
+→ `field_layer_core_formulation.md`
+
+---
+---
+
 **Status:** Active  
 **Scope:** Minimal working formulation  
