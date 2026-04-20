@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from scipy.ndimage import gaussian_filter
+from collections import Counter  # <-- hinzufügen
 
 OUTPUT_DIR = "FIELD_LAYER/outputs/plots"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
