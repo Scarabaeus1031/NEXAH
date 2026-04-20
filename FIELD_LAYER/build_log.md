@@ -8,7 +8,10 @@ Focus:
 - progressive refinement from signals → geometry → flow → segmentation
 
 > All visuals are located in:
-> FIELD_LAYER/outputs/plots/
+```link
+FIELD_LAYER/outputs/plots/
+```
+
 
 Outcome:
 - poor fit (low R²)
