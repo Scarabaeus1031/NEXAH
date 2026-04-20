@@ -17,6 +17,18 @@ NEXAH now provides:
 
 ---
 
+## 🧱 Theoretical Foundation
+
+The system is grounded in the **RESEARCH layer**:
+
+- minimal axiomatic structure (A0–A4)  
+- closure, transition, and stabilization operators (Γ, Δ, Ω)  
+
+This foundation is **already defined and not part of the current TODO**.
+
+👉 Current work focuses on:
+**validation, demonstration, and integration — not theory expansion**
+
 👉 The system is no longer only analytical.
 
 It is:
