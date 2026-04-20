@@ -36,4 +36,4 @@ python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
 
 ## 🧭 Understand what you saw
 
-👉 Go to README
+👉 Continue here: [README.md](README.md)
