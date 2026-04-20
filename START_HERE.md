@@ -39,7 +39,7 @@ Then something emerges:
 
 ![Transitions](DISCOVERY_ENGINE/outputs/lorenz_v6_transitions.png)
 
-Transitions are not random anymore.
+Transitions are no longer random.
 
 ---
 
@@ -53,7 +53,7 @@ Then geometry appears:
 
 ## 🔥 The Breakthrough
 
-Now look at this:
+Now the system reveals deeper structure:
 
 ![Probability Field](DISCOVERY_ENGINE/outputs/v16_probability_field.png)
 
@@ -61,19 +61,50 @@ Now look at this:
 
 ---
 
-And this:
-
 ![Energy Landscape](DISCOVERY_ENGINE/outputs/v19_energy_field.png)
 
-> Systems move like they are crossing **energy barriers**
+> The system behaves like it is crossing **energy barriers**
 
 ---
-
-And finally:
 
 ![Time Lag Structure](DISCOVERY_ENGINE/outputs/v22_time_lag.png)
 
 > The system has **memory and internal feedback**
+
+---
+
+## 🧭 From Structure → Navigation
+
+Now look at this:
+
+![Path Following](FIELD_LAYER/outputs/plots/v9_3_path_following.png)
+
+> The system is no longer wandering —  
+> it is **following structured paths**
+
+---
+
+## 🔬 The System Has Geometry
+
+![Curvature Topology](FIELD_LAYER/outputs/plots/v11_4_curvature_topology.png)
+
+- curvature  
+- rotation (curl)  
+- topology  
+
+> The system behaves like a **continuous field with measurable structure**
+
+---
+
+## 🌐 Perspective Matters
+
+![Boundary Perspectives](FIELD_LAYER/outputs/plots/v6_1_q4_boundary_views.png)
+
+Same system.  
+Different perspectives.
+
+> Structure is not just visible —  
+> it depends on how you **observe the field**
 
 ---
 
