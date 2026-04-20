@@ -8,32 +8,17 @@
 
 ## 🧠 But watch closely
 
-- the system does not move randomly  
+- the system is not random  
 - it switches between distinct modes  
 - colors appear and disappear  
 
-👉 these are **regimes**
-
----
-
-## ⚡ What you are seeing
-
-The system is:
-
-- detecting structure  
-- reacting to it  
-- changing behavior dynamically  
-
-> The “blinking” is not visual noise.  
-> It is **state switching inside the system**.
+👉 this is **state switching**
 
 ---
 
 ## 🔥 Key idea
 
-This is not:
-
-> continuous control
+This is not continuous control.
 
 This is:
 
@@ -49,18 +34,6 @@ python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
 
 ---
 
-## 🧠 What changed?
+## 🧭 Understand what you saw
 
-Before:
-
-> chaotic motion
-
-Now:
-
-> **structured, switching behavior**
-
----
-
-## 🧭 Continue
-
-👉 Go to README to understand the system architecture
+👉 Go to README
