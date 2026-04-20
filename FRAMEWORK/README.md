@@ -1,146 +1,156 @@
-# 🧭 NEXAH Framework
+# 🧭 NEXAH — Framework (Theoretical Foundation)
 
-NEXAH is a framework for analyzing and controlling complex dynamical systems  
-by representing them as **structured stability fields**.
+This module contains the **conceptual and theoretical foundation** of NEXAH.
 
-Instead of classifying systems as simply stable or unstable,  
-NEXAH models how system behavior **evolves geometrically across state space**.
+It describes the original ideas, definitions, and abstractions  
+that led to the current system architecture.
 
 ---
 
-## 🌐 Core Idea
+# 🧠 Position in NEXAH
+
+The FRAMEWORK is **not the active system core anymore**.
+
+Instead, it provides:
+
+> the **conceptual background and mathematical intuition**  
+> behind the FIELD_LAYER and NAVIGATOR
+
+---
+
+## 🔗 Relation to Current System
+
+NEXAH is now structured as:
+
+Dynamics → Structure → Field → Navigation
+
+Where:
+
+- `ENGINE` generates system dynamics  
+- `FIELD_LAYER` reconstructs geometric and topological structure  
+- `NAVIGATOR` operates on that structure  
+
+The FRAMEWORK explains:
+
+> **why this works**
+
+---
+
+# 🌐 Core Idea (Original Formulation)
 
 A system generates trajectories over time.
 
-These trajectories are embedded into a state space, forming a **continuous field structure**.
+These trajectories form a **structured field in state space**.
 
 Within this field:
 
-- regions correspond to different system behaviors (**regimes**)  
-- boundaries mark qualitative transitions (**rifts**)  
-- stability emerges from alignment with the field (**coherence**)  
+- regions correspond to behaviors (**regimes**)  
+- boundaries mark transitions (**rifts**)  
+- stability emerges from alignment (**coherence**)  
 
-> Stability is not a point — it is sustained alignment with the field.
+> Stability is not a point — it is sustained alignment with structure.
 
 ---
 
-## 🧠 Key Concepts
+# 🧠 Key Concepts
 
 - **Trajectory** → actual system evolution  
 - **Field** → global structure of system behavior  
 - **Coherence** → alignment between trajectory and field  
-- **Risk** → geometric measure of instability  
+- **Risk** → geometric instability measure  
 - **Regime** → region of consistent behavior  
-- **Rift** → transition boundary between regimes  
+- **Rift** → transition boundary  
 
 ---
 
-## 🔬 Mathematical View
+# 🔬 Mathematical View
 
 The system is modeled as:
 
-\[
-\dot{x} = F(x)
-\]
+dx/dt = F(x)
 
-### Coherence
+Coherence:
 
-\[
-C(x) = \frac{\dot{x} \cdot F(x)}{||\dot{x}|| \, ||F(x)||}
-\]
+C(x) = (dx/dt · F(x)) / (||dx/dt|| ||F(x)||)
 
-### Risk Field
+Risk Field:
 
-\[
 R(x) = 1 - C(x)
-\]
 
-### Control
+Control:
 
-\[
-\dot{x} = F(x) + u(x)
-\]
+dx/dt = F(x) + u(x)
 
 ---
 
-## 🎥 Visual System (V1–V12)
+# 🎥 Visual System (Historical Development)
 
-NEXAH includes a full visual progression from dynamics to emergence:
+→ See: FRAMEWORK_visual_gallery.md
 
-👉 **[Visual Gallery → FRAMEWORK_visual_gallery.md](./FRAMEWORK_visual_gallery.md)**
+This documents:
 
-This includes:
-
-- Field dynamics (V1)
-- Coherence (V2)
-- Risk landscapes (V3)
-- Control (V4)
-- Geometry & regimes (V6–V9)
-- Multi-agent systems (V10)
-- Swarm dynamics (V11)
-- Communication & emergence (V12)
-
----
-
-## 🧭 What NEXAH Enables
-
-- visualizing system dynamics as structured fields  
-- detecting regime transitions before collapse  
-- modeling stability as a geometric property  
-- trajectory-aware control instead of error-based control  
-- decentralized multi-agent coordination  
-
----
-
-## 🧱 Architecture
-
-```text
-META → ARCHY → MESO → NEXAH → MEVA- simulation
-- structure extraction
-- navigation
-- execution
-
-👉 This architecture is mainly relevant for internal organization and development.
-
-
-## 🧭 Learn More
-
-- Framework Overview → FRAMEWORK/README.md  
-- Architecture → FRAMEWORK/architecture.md  
-- Geometry & Field → FRAMEWORK/geometry.md  
-- Control → FRAMEWORK/control.md  
-```
-
-| Layer | Role |
-|------|------|
-| META | relational foundation |
-| ARCHY | regime & transition dynamics |
-| MESO | field construction & coherence |
-| NEXAH | navigation & control |
-| MEVA | multi-agent emergence |
-
----
-
-## 📚 Learn More
-
-- 📊 Visual System → `FRAMEWORK_visual_gallery.md`
-- 📐 Core Math → `FRAMEWORK/docs/core_equations.md`
-- 🧭 Framework → `FRAMEWORK/README.md`
-
----
-
-## 🔑 Summary
-
-NEXAH reframes stability as:
-
-> **a geometric property of trajectories moving through a structured field**
-
-It connects:
-
-- dynamics  
-- geometry  
+- field emergence  
+- coherence  
+- risk landscapes  
 - control  
-- emergence  
+- geometry  
+- multi-agent behavior  
 
-into a single coherent framework.
+---
 
+# 🧱 Original Architecture (Legacy Model)
+
+META → ARCHY → MESO → NEXAH → MEVA
+
+META  = relational foundation  
+ARCHY = regime & transition dynamics  
+MESO  = field construction & coherence  
+NEXAH = navigation & control  
+MEVA  = multi-agent emergence  
+
+---
+
+## ⚠️ Note
+
+This layered architecture is:
+
+- historically important  
+- conceptually useful  
+
+But:
+
+> it is no longer the primary implementation structure
+
+---
+
+# 🧭 What This Module Is
+
+The FRAMEWORK is:
+
+- a **theoretical reference layer**  
+- a **documentation of core ideas**  
+- a **bridge between intuition and implementation**
+
+---
+
+# 🧠 Final Insight
+
+The FRAMEWORK shows that:
+
+> stability, control, and behavior  
+> can be understood geometrically through field structure
+
+---
+
+# 🔗 Where to Continue
+
+For the actual system:
+
+- FIELD_LAYER/ → structure & geometry  
+- NAVIGATOR/   → decision & control  
+- ENGINE/      → dynamics  
+
+---
+
+**NEXAH Framework**  
+From idea → to structure → to system
