@@ -112,11 +112,205 @@ ENTRY → CORE → EXIT
 ```
 → transitions are processes, not events
 
+---
+
 ## 7. Prepare Navigation
 
 Transforms raw system output into:
 
 > **a structured state representation usable by the Navigator**
+
+---
+
+# 🧬 Extended Capabilities (V9 → V12)
+
+The Field Layer has evolved beyond flow representation.
+
+It now reconstructs the **discrete structure underlying continuous dynamics**.
+
+---
+
+## 🔷 8. Discrete State Emergence
+
+Continuous trajectories collapse into:
+
+- stable regions
+- recurring spatial clusters
+
+→ interpreted as **states**
+
+---
+
+## 🔷 9. Topological State Space
+
+From V11.5:
+
+- ~10–11 stable nodes detected
+- strong clustering in attractor regions
+
+![Topology Graph](outputs/plots/v11_5_topology_graph.png)
+
+> The system self-organizes into a finite state space
+
+---
+
+## 🔷 10. Transition Graph
+
+From V12:
+
+- transitions between nodes are directional
+- edges are weighted by frequency
+
+![Transition Graph](outputs/plots/v12_transition_graph.png)
+
+![Transition Matrix](outputs/plots/v12_transition_matrix.png)
+
+> The system behaves as a **directed weighted graph**
+
+---
+
+## 🔷 11. Dominant Transitions
+
+Observation:
+
+- not all transitions are equal
+- certain edges dominate (e.g. weight ≈ 15)
+
+→ emergence of **preferred system routes**
+
+---
+
+## 🔷 12. Cycle Structure
+
+From V12.1:
+
+- closed loops detected
+- dominant cycle weight ≈ 79
+
+![Cycle Detection](outputs/plots/v12_1_cycle_detection.png)
+
+![Cycle Weights](outputs/plots/v12_1_cycle_weights.png)
+
+> The system operates on **recurring transition cycles**
+
+---
+
+## 🔷 13. Multiple Dynamic Regimes
+
+Observation:
+
+- several competing cycles (79, 71, 69, 67…)
+- shared structure, different entry points
+
+→ interpreted as:
+
+> **orbit families within the same system**
+
+---
+
+## 🔷 14. Attractors as State Machines
+
+Combining:
+
+- nodes
+- transitions
+- cycles
+
+→ each attractor behaves like:
+
+> a **cyclic state machine**
+
+---
+
+# 🧠 Updated Conceptual Model
+
+The system is no longer just a flow field.
+
+It is:
+
+```text
+continuous dynamics
+→ structured flow
+→ transition channels
+→ discrete states
+→ transition graph
+→ cyclic system behavior
+```
+
+# 🔥 Key Shift
+
+Previous view:
+
+transitions are structured processes
+
+New view:
+
+the system is a closed, cyclic transition system
+
+---
+
+# 🧭 Implication for Navigation
+
+Navigation is no longer:
+
+- local (gradient following)
+- event-based
+
+Instead:
+
+navigation must operate on  
+cycle structure and state transitions
+
+---
+
+# 🧬 Final Insight
+
+The Field Layer reveals:
+
+a hidden discrete structure inside continuous dynamics
+
+This structure is:
+
+- stable  
+- repeatable  
+- navigable  
+
+---
+
+# 🚀 Updated Pipeline
+
+~~~text
+Raw Dynamics
+→ PCA Projection (α, β, γ)
+→ Deviation Field
+→ Density Field
+→ Ridge Extraction
+→ Flow Field
+→ Trajectories
+→ Topology (Nodes)
+→ Transition Graph
+→ Cycle Detection
+~~~
+
+---
+
+# ⚡ What This Means
+
+The Field Layer is no longer just a transformation layer.
+
+It is now:
+
+a Dynamical System Reconstruction Engine
+
+---
+
+# 🚧 Next Steps
+
+- cycle entry / exit analysis  
+- stability ranking of cycles  
+- control layer (active navigation)  
+
+
 
 ---
 
