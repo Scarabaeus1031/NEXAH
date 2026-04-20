@@ -57,6 +57,82 @@ Rather than discrete states, systems are modeled as:
 
 ---
 
+---
+
+## 🧩 System Architecture (NEW)
+
+NEXAH is organized into three core layers:
+
+### 🔬 Discovery Engine
+Extracts structure from raw dynamics:
+
+- transitions  
+- probability fields  
+- energy landscapes  
+- divergence / curl  
+- temporal coupling  
+
+→ answers:
+
+> *Where does structure emerge?*
+
+---
+
+### 🌊 Field Layer
+Transforms structure into a navigable field:
+
+- flow-aligned coordinates (α, β, γ)  
+- transition geometry (channels, ridges)  
+- topology (nodes, cycles)  
+- energy-based control  
+- attractors and convergence  
+
+→ answers:
+
+> *How does the system move and where does it go?*
+
+---
+
+### 🧭 Navigator
+Operates on the field:
+
+- path selection  
+- control strategies  
+- trajectory shaping  
+- attractor targeting  
+
+→ answers:
+
+> *How can we move through the system?*
+
+---
+
+## 🔁 Full Pipeline (Updated)
+
+```text
+Dynamics
+→ Discovery (structure extraction)
+→ Field Layer (field reconstruction)
+→ Topology (states & cycles)
+→ Control (energy & policies)
+→ Navigation (trajectory shaping)
+→ Convergence (attractor / fixpoint)
+```
+
+---
+
+## 🎯 Key Upgrade
+
+Earlier:
+
+> systems can be analyzed
+
+Now:
+
+> systems can be **reconstructed, controlled, and navigated toward stable attractors**
+
+---
+
 ## 🧠 Key Insight
 
 > Complex systems are not purely chaotic.  
