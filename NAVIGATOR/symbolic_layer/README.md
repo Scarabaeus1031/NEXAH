@@ -10,6 +10,46 @@ Instead, it serves as:
 
 ---
 
+# 🧭 From Field Geometry to Symbolic Language
+
+![Symbolic Mapping](visuals/how_it_fits_together.png)
+
+This diagram shows how symbolic navigation concepts emerge directly from field structure:
+
+- **Field Layer** computes measurable dynamics:
+  - probability  
+  - energy  
+  - gradient (flow)  
+  - curl (rotation)
+
+- **Geometry** extracts structure:
+  - channels (ridges)  
+  - basins (attractors)  
+  - separatrices (boundaries)
+
+- **Symbolic Layer** translates these into navigation primitives:
+  - channel → structured movement  
+  - gate → basin entry  
+  - switch → boundary crossing  
+  - spiral → rotational flow  
+  - pulse → time-dependent modulation  
+
+### 🔗 Core Mapping
+
+| Field | Symbolic |
+|------|---------|
+| ridge | channel |
+| basin | gate |
+| separatrix | switch |
+| curl | spiral |
+| gradient | flow |
+| modulation | pulse / bands |
+
+> The Symbolic Layer is not abstract invention —  
+> it is a **direct encoding of measurable field geometry**.
+
+---
+
 # 🧠 Core Idea
 
 NEXAH reconstructs systems as:
