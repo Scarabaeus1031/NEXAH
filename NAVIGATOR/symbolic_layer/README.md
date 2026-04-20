@@ -12,7 +12,7 @@ Instead, it serves as:
 
 # 🧭 From Field Geometry to Symbolic Language
 
-![Symbolic Mapping](visuals/how_it_fits_together.png)
+![Symbolic Mapping](./visuals/how_it_fits_together.png)
 
 This diagram shows how symbolic navigation concepts emerge directly from field structure:
 
