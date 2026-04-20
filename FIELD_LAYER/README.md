@@ -2,8 +2,8 @@
 
 The **Field Layer** connects structure discovery with navigation.
 
-It transforms raw system dynamics into a **structured, interpretable coordinate system** —  
-and extends this into a **transition-aware field representation**.
+It transforms raw system dynamics into a **structured, interpretable coordinate system**  
+and extends this into a **transition-aware, controllable field representation**.
 
 ---
 
@@ -21,221 +21,117 @@ But this is not yet usable for navigation.
 
 The Field Layer introduces:
 
-> **a coordinate system aligned with the system's intrinsic flow**
-
-and builds on top of it:
-
-> **a structured representation of transitions as directional processes**
+> a coordinate system aligned with the system’s intrinsic flow  
+> and a structured representation of transitions as directional processes
 
 ---
 
 # 🧠 Concept
 
-Instead of analyzing systems only in raw coordinates:
-
 ## Field-Aligned Representation
 
 Each state is decomposed into:
+
 ```text
 x(t) = α(t) · e₁ + β(t) · e₂ + γ(t) · e₃
 ```
 
 Where:
 
-* e₁ = dominant flow direction (PCA / intrinsic axis)
-* e₂, e₃ = orthogonal deviation directions
+- e₁ = dominant flow direction  
+- e₂, e₃ = orthogonal deviation directions  
 
 ## Interpretation
 
 | Component | Meaning |
 |----------|--------|
-| α (alpha) | motion along the flow (system progression) |
-| β, γ | deviation from structure (instability / transition) |
+| α | motion along system flow |
+| β, γ | deviation from structure |
 
 ---
 
 ## Key Insight
 
-> Systems are not defined by position —  
-> but by **movement relative to their structure**
+> Systems are not defined by position  
+> but by movement relative to their structure
 
 ---
 
 # 🔬 What This Enables
 
-The Field Layer makes it possible to:
+## 1. Structure Detection
+- dominant flow directions  
+- transition channels  
+- alignment vs deviation  
 
----
+## 2. Stability Quantification
+- low deviation → stable  
+- high deviation → transition  
 
-## 1. Detect Structure
+## 3. Transition Geometry
+- transitions are regions, not points  
+- structured spatial organization  
 
-- identify dominant flow directions  
-- define transition channels  
-- measure alignment vs deviation  
+## 4. Flow Modeling
+- directional transitions  
+- constrained movement  
 
----
+## 5. Phase Decomposition
 
-## 2. Quantify Stability
-
-- low deviation → stable trajectory  
-- high deviation → transition or instability  
-
----
-
-## 3. Extract Transition Geometry
-
-- transitions are not points  
-- transitions occupy **structured regions in state space**  
-
----
-
-## 4. Identify Transition Channels
-
-- density fields reveal preferred paths  
-- ridge detection extracts **transition skeletons**  
-
----
-
-## 5. Model Transition Dynamics
-
-- transitions are **directional**  
-- flow fields define how systems move through instability  
-
----
-
-## 6. Decompose Transition Phases
-
-Transitions can be segmented into:
-
-```text
 ENTRY → CORE → EXIT
-```
-→ transitions are processes, not events
 
 ---
 
-## 7. Prepare Navigation
+# 🧬 From Flow → Topology (V9–V12)
 
-Transforms raw system output into:
-
-> **a structured state representation usable by the Navigator**
+The Field Layer reconstructs the **discrete structure underlying continuous dynamics**.
 
 ---
 
-# 🧬 Extended Capabilities (V9 → V12)
-
-The Field Layer has evolved beyond flow representation.
-
-It now reconstructs the **discrete structure underlying continuous dynamics**.
-
----
-
-## 🔷 8. Discrete State Emergence
+## Discrete State Emergence
 
 Continuous trajectories collapse into:
 
-- stable regions
-- recurring spatial clusters
+- stable regions  
+- recurring clusters  
 
-→ interpreted as **states**
+→ interpreted as states
 
 ---
 
-## 🔷 9. Topological State Space
+## Topological State Space
 
-From V11.5:
-
-- ~10–11 stable nodes detected
-- strong clustering in attractor regions
+- ~10–11 stable nodes  
+- clustering in attractor regions  
 
 ![Topology Graph](outputs/plots/v11_5_topology_graph.png)
 
-> The system self-organizes into a finite state space
-
 ---
 
-## 🔷 10. Transition Graph
+## Transition Graph
 
-From V12:
-
-- transitions between nodes are directional
-- edges are weighted by frequency
+- directional edges  
+- weighted transitions  
 
 ![Transition Graph](outputs/plots/v12_transition_graph.png)
 
-![Transition Matrix](outputs/plots/v12_transition_matrix.png)
-
-> The system behaves as a **directed weighted graph**
-
 ---
 
-## 🔷 11. Dominant Transitions
+## Cycle Structure
 
-Observation:
-
-- not all transitions are equal
-- certain edges dominate (e.g. weight ≈ 15)
-
-→ emergence of **preferred system routes**
-
----
-
-## 🔷 12. Cycle Structure
-
-From V12.1:
-
-- closed loops detected
-- dominant cycle weight ≈ 79
+- closed loops  
+- dominant cycles  
+- competing orbit families  
 
 ![Cycle Detection](outputs/plots/v12_1_cycle_detection.png)
 
-![Cycle Weights](outputs/plots/v12_1_cycle_weights.png)
-
-> The system operates on **recurring transition cycles**
-
 ---
 
-## 🔷 13. Multiple Dynamic Regimes
+## Attractors
 
-Observation:
-
-- several competing cycles (79, 71, 69, 67…)
-- shared structure, different entry points
-
-→ interpreted as:
-
-> **orbit families within the same system**
+> Each attractor behaves like a cyclic state machine
 
 ---
-
-## 🔷 14. Attractors as State Machines
-
-Combining:
-
-- nodes
-- transitions
-- cycles
-
-→ each attractor behaves like:
-
-> a **cyclic state machine**
-
----
-
-# 🧠 Updated Conceptual Model
-
-The system is no longer just a flow field.
-
-It is:
-
-```text
-continuous dynamics
-→ structured flow
-→ transition channels
-→ discrete states
-→ transition graph
-→ cyclic system behavior
-```
 
 # 🔥 Key Shift
 
@@ -249,79 +145,128 @@ the system is a closed, cyclic transition system
 
 ---
 
-# 🧭 Implication for Navigation
+# 🧭 Navigation Implication
 
 Navigation is no longer:
 
-- local (gradient following)
-- event-based
+- event-based  
+- purely local  
 
 Instead:
 
-navigation must operate on  
-cycle structure and state transitions
+> navigation operates on cycle structure and state transitions
 
 ---
 
-# 🧬 Final Insight
+# ⚙️ Control & Learning (V13–V25)
+
+The system evolves from passive observation to active control.
+
+---
+
+## Control Layer
+- system can be steered toward target states  
+
+## Energy Landscape
+- transitions have cost  
+- optimal paths minimize energy  
+
+## Policy Learning
+- system learns optimal behavior  
+- emergence of dominant attractors  
+
+## Robustness
+- fallback strategies  
+- multi-target navigation  
+
+---
+
+# 🌊 Continuous Field Control (V26+)
+
+Transition from discrete to continuous dynamics:
+
+dx/dt ≈ -∇V(x)
+
+---
+
+## Gradient Flow
+- smooth trajectories  
+- energy minimization  
+
+## Potential Wells
+- attractors = minima  
+- trajectories converge continuously  
+
+---
+
+# 🌀 Multi-Attractor Systems (V27)
+
+- multiple basins exist  
+- one attractor dominates in static fields  
+
+---
+
+# ⏱ Dynamic Fields (V28)
+
+Introducing time-dependence:
+
+V(x, t)
+
+enables:
+
+- activation of intermediate states  
+- movement between attractors  
+- dynamic restructuring of the system  
+
+---
+
+## Result
+
+> Navigation requires a time-dependent field
+
+---
+
+# 🧠 Conceptual Model
+
+continuous dynamics  
+→ structured flow  
+→ transition channels  
+→ discrete states  
+→ transition graph  
+→ cycles  
+→ control  
+→ continuous field  
+→ dynamic field  
+
+---
+
+# 🔥 Final Insight
 
 The Field Layer reveals:
 
-a hidden discrete structure inside continuous dynamics
-
-This structure is:
-
-- stable  
-- repeatable  
-- navigable  
-
----
-
-# 🚀 Updated Pipeline
-
-~~~text
-Raw Dynamics
-→ PCA Projection (α, β, γ)
-→ Deviation Field
-→ Density Field
-→ Ridge Extraction
-→ Flow Field
-→ Trajectories
-→ Topology (Nodes)
-→ Transition Graph
-→ Cycle Detection
-~~~
+> a structured, dynamic field combining geometry, flow, topology, and control
 
 ---
 
 # ⚡ What This Means
 
-The Field Layer is no longer just a transformation layer.
+The Field Layer is:
 
-It is now:
+- not just a transformation layer  
+- not just a detector  
 
-a Dynamical System Reconstruction Engine
+It is:
 
----
-
-# 🚧 Next Steps
-
-- cycle entry / exit analysis  
-- stability ranking of cycles  
-- control layer (active navigation)  
-
-
+> a dynamical system reconstruction and control engine
 
 ---
 
-# 🔁 Role in NEXAH Architecture
+# 🔁 Role in NEXAH
 
-~~~text
-Dynamics
-→ Discovery Engine
-→ Field Layer
-→ Navigator
-~~~
+Dynamics  
+→ Discovery Engine  
+→ Field Layer  
+→ Navigator  
 
 ---
 
@@ -329,86 +274,56 @@ Dynamics
 
 | Layer | Role |
 |------|------|
-| Discovery | extract structure from dynamics |
-| Field Layer | transform structure into coordinates + transition field |
-| Navigator | act based on structured representation |
-
----
-
-# ⚡ Current Status
-
-✔ Flow-aligned coordinate system (PCA-based)  
-✔ Deviation-based instability metric  
-✔ Transition detection (peaks vs switches)  
-✔ Pre-transition signal mapping (predictive structure)  
-✔ 3D transition geometry  
-✔ Density field representation  
-✔ Ridge (transition channel) extraction  
-✔ Directional flow field  
-✔ Flow segmentation (ENTRY / CORE / EXIT)  
-
----
-
-# 🧪 Pipeline (Implemented)
-
-~~~text
-Raw Dynamics
-→ PCA Projection (α, β, γ)
-→ Deviation Field D(t)
-→ Transition Detection
-→ Density Field
-→ Ridge Extraction
-→ Directional Field
-→ Flow Segmentation
-~~~
+| Discovery | extract structure |
+| Field Layer | build field + topology |
+| Navigator | act on structure |
 
 ---
 
 # ⚠️ Important Clarification
 
-The Field Layer does NOT assume:
+The Field Layer:
 
-- a universal coordinate system  
-- a fixed global axis  
+- is data-driven  
+- is empirical  
+- does not assume universal coordinates  
 
-Instead:
-
-> it computes **data-driven, system-specific structure**
-
----
-
-# 🧠 Final Insight
-
-The Field Layer introduces a new perspective:
-
-> systems are best understood as  
-> **flow + deviation within a structured transition field**
+> it computes system-specific structure
 
 ---
 
-# 🔥 Summary
+# 🧪 Pipeline
 
-The Field Layer is the missing link between:
-
-- structure discovery  
-- and actionable navigation  
-
-It converts:
-
-~~~text
-raw dynamics → structured representation → transition field → usable intelligence
-~~~
+Raw Dynamics  
+→ PCA Projection  
+→ Deviation Field  
+→ Density Field  
+→ Ridge Extraction  
+→ Flow Field  
+→ Topology (Nodes)  
+→ Transition Graph  
+→ Cycles  
+→ Control  
+→ Continuous Field  
+→ Dynamic Field  
 
 ---
 
 # 🚀 Next Steps
 
-- ridge-based trajectory reconstruction  
-- directional probability fields  
-- integration into Navigator  
+- resonance / phase coupling (V29)  
+- goal-conditioned navigation  
+- real-world system mapping  
+
+---
+
+# 📘 Related Documents
+
+- core_equations.md  
+- field_layer_core_formulation.md  
+- findings.md  
 
 ---
 
 **Status:** Active Development  
-**Role:** Core architectural bridge  
-
+**Role:** Core architectural bridge of NEXAH
