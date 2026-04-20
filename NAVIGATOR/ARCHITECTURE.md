@@ -11,35 +11,17 @@ It is the single source for:
 
 ---
 
-## 🔗 Navigation Kernel
-
-The detailed navigation logic and operational architecture are defined in:
-
-👉 [`NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md`](NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md)
-
-This document specifies:
-
-- decision layers  
-- symbolic state representation  
-- prediction and meta-control  
-- memory and sequence behavior  
-
-While this document describes **what NEXAH is**,  
-the Navigation Kernel defines **how it moves and decides**.
-
----
-
 # 🧠 Core Idea
 
 NEXAH is a structural navigation framework for complex dynamical systems.
 
 It transforms:
 
-dynamics → structure → field → states → patterns → prediction → control → navigation
+dynamics → structure → field → geometry → control → navigation
 
 The goal is not only to analyze systems, but to:
 
-> **enable structured navigation within dynamical systems**
+> **enable structured navigation within dynamical fields**
 
 ---
 
@@ -48,16 +30,16 @@ The goal is not only to analyze systems, but to:
 ## Core Stack (Updated)
 
 ```text
-System → Structure → Field → Signals → Decision → Action
+System → Structure → Field → Geometry → Control → Navigation
 ```
 
 | Layer | Function |
 |------|---------|
 | Structure | Extracts system geometry and dynamics |
-| Field | Represents dynamics as continuous, structured fields |
-| Signals | Computes coherence, risk, and metrics |
-| Decision | Selects behavior (policies, meta-control) |
-| Action | Applies control to system |
+| Field | Represents dynamics as continuous structured fields |
+| Geometry | Reveals channels, basins, separatrices, fixpoints |
+| Control | Shapes trajectories within the field |
+| Navigation | Executes movement through field structure |
 
 ---
 
@@ -72,104 +54,134 @@ System → Structure → Field → Signals → Decision → Action
 
 ---
 
-## 🔥 2. Field Layer (NEW)
+## 🌊 2. Field Layer (CORE)
 
-The Field Layer transforms structure into a dynamic, continuous representation.
-
-### 🧠 Concept
-
-Instead of analyzing only trajectories or states, the system is modeled as:
-
-> **a transition field**
-
-capturing where and how dynamics evolve.
-
----
+The Field Layer transforms structure into a **continuous, operational representation**.
 
 ### 🔬 Components
 
 #### Probability Field
-- density estimation of system states  
-- identification of high-density regions  
-- detection of transition zones  
-
----
+- density estimation  
+- transition region detection  
 
 #### Energy Landscape
-Derived from probability:
-
-E = -log(p)
-
-Reveals:
+```text
+E(x) = -log(p(x))
+```
 
 - wells → stable regions  
-- barriers → transition thresholds  
+- barriers → transitions  
 
 ---
 
-#### Field Operators
+### 🌀 Field Decomposition (NEW — V29+)
 
-##### Divergence (∇·F)
-- expansion / contraction  
-- sources and sinks  
+The field is decomposed into:
 
-##### Curl (∇×F)
-- rotational dynamics  
-- circulation patterns  
+```text
+dx/dt ≈ -∇V(x) + R(x)
+```
+
+Where:
+
+- ∇V(x) → gradient (attraction / energy minimization)  
+- R(x) → rotational component (circulation / flow structure)  
 
 ---
 
-#### Temporal Coupling
+### 🧠 Key Insight
 
-Field components interact dynamically:
+> System dynamics are a combination of  
+> **energy minimization and rotational flow**
+
+---
+
+### ⚡ Implication
+
+- gradient alone ≠ sufficient  
+- rotation defines **channels and navigation paths**
+
+---
+
+---
+
+### 🔁 Temporal Coupling
 
 curl(t) → div(t + τ)  
 div(t) → curl(t − τ)
 
-This introduces:
-
-- feedback loops  
-- time delay  
-- propagation behavior  
+→ delayed feedback between field components  
 
 ---
 
-### ⚡ Key Property
+---
 
-The field is:
+## 🎯 3. Geometry Layer (NEW — V30+)
 
-- continuous  
-- dynamic  
-- structured  
+The field induces explicit geometry:
+
+- channels (ridges)  
+- separatrices (boundaries)  
+- basins (attractors)  
+- transition corridors  
 
 ---
 
-## 3. Signal Layer
+### 🔬 Fixpoint & Convergence (V39–V40)
 
-- coherence C(x)  
-- risk R(x)  
-- transition indicators  
-- local stability metrics  
-
----
-
-## 4. Decision Layer
-
-- symbolic state representation  
-- transition probabilities  
-- pattern detection  
-- prediction  
-- meta-control (mode selection)  
-- memory (state + sequence)  
+- stable convergence point x* detected  
+- small endpoint variance  
+- measurable basin radius  
 
 ---
 
-## 5. Action Layer
+### 🧠 Key Insight
 
-- control input u(x)  
+> The field defines **real convergence targets**
+
+---
+
+---
+
+## 🎮 4. Control Layer
+
+Control operates directly on the field:
+
 - trajectory shaping  
-- stabilization  
-- directional steering  
+- energy modulation  
+- attractor biasing  
+
+---
+
+### 🧠 Key Insight
+
+> Control is not external input  
+> it is **field shaping**
+
+---
+
+---
+
+## 🧭 5. Navigation Layer
+
+Navigation operates on:
+
+- field geometry  
+- channel structure  
+- convergence regions  
+
+---
+
+### Not based on:
+
+- static states  
+- discrete thresholds  
+
+---
+
+### Instead:
+
+> navigation = motion through field geometry
 
 ---
 
@@ -178,48 +190,45 @@ The field is:
 NEXAH currently supports:
 
 - structure extraction from dynamics  
-- symbolic representation of system states  
-- pattern detection and prediction  
-- anticipatory control  
-- adaptive meta-control  
-- memory-based decision behavior  
-- field construction (probability + energy)  
-- divergence and curl analysis  
-- temporal coupling detection  
+- field reconstruction (probability + energy)  
+- field decomposition (gradient + rotation)  
+- channel and separatrix detection  
+- fixpoint extraction and basin estimation  
+- trajectory convergence  
+- field-based control  
+- navigation along structured paths  
 
 ---
 
 # 📊 Implementation Status
 
-## Core Architecture
-
 | Component | Status |
 |----------|--------|
 | Structure Extraction | ✓ implemented |
 | Field Construction | ✓ implemented |
-| Field Operators (div / curl) | ✓ implemented |
-| Temporal Coupling | ✓ implemented |
-| Signal Computation (C, R) | ✓ implemented |
-| Symbolic State Layer | ✓ implemented |
-| Pattern Detection | ✓ implemented |
-| Prediction | ✓ implemented |
-| Control | ✓ implemented |
-| Meta-Control | ✓ implemented |
-| Memory (state + sequence) | ✓ implemented |
+| Field Decomposition | ✓ implemented |
+| Geometry Extraction | ✓ implemented |
+| Fixpoint Detection | ✓ implemented |
+| Control Layer | ✓ implemented |
+| Navigation Engine | ✓ implemented |
 | Unified Kernel | ☐ missing |
 | Reproducibility Layer | ☐ missing |
 
 ---
 
-# 🔥 Architectural Shift
+# 🔥 Architectural Shift (CRITICAL)
 
-NEXAH has transitioned from:
+NEXAH has evolved from:
 
-analysis → structure discovery  
+```text
+analysis → structure → signals
+```
 
 to:
 
-structure → field → dynamics → prediction → control → navigation  
+```text
+structure → field → geometry → control → navigation
+```
 
 ---
 
@@ -227,16 +236,10 @@ structure → field → dynamics → prediction → control → navigation
 
 The system operates as:
 
-- continuous dynamics → structured field  
-- field → states  
-- states → patterns  
-- patterns → prediction  
-- prediction → control  
-- control → adaptive behavior  
-
-This enables:
-
-> structured navigation within a dynamic system
+- dynamics → structured field  
+- field → geometry  
+- geometry → control  
+- control → navigation  
 
 ---
 
@@ -244,76 +247,38 @@ This enables:
 
 ## Core Capabilities
 
-### Structure Extraction
-- reconstruct system geometry from dynamics  
-- identify attractors and basins  
-- detect regime boundaries  
+### Field Reconstruction
+- probability fields  
+- energy landscapes  
+- flow fields  
 
 ---
 
-### Field Modeling
-- construct probability fields  
-- derive energy landscapes  
-- analyze divergence and curl  
-- detect temporal coupling  
-
----
-
-### Signal Computation
-- coherence C(x)  
-- risk R(x)  
-- transition signals  
-
----
-
-### Symbolic Representation
-- discretization into system states  
-- transition graph  
-- pattern detection  
-
----
-
-### Prediction
-- short-term state prediction  
-- probabilistic transition modeling  
+### Field Geometry
+- channels  
+- basins  
+- separatrices  
+- convergence zones  
 
 ---
 
 ### Control
 - trajectory shaping  
-- anticipatory stabilization  
-- risk-aware intervention  
+- energy-based steering  
+- attractor selection  
 
 ---
 
-### Meta-Control
-- dynamic strategy selection  
-- adaptive behavior modes  
-- uncertainty-aware control  
+### Navigation
+- path following in field  
+- transition between basins  
+- convergence to stable regions  
 
 ---
 
-### Memory
-- state-dependent behavior  
-- sequence-aware decisions  
-- adaptive learning behavior  
+# 🌍 Application Domains
 
----
-
-## System Behavior
-
-These components enable:
-
-- structured interpretation of chaotic systems  
-- local predictability  
-- adaptive control behavior  
-- navigation within dynamic structures  
-
----
-
-## Application Domains
-
-- dynamical systems (Lorenz, attractors)  
+- chaotic systems (Lorenz)  
 - power systems  
 - network dynamics  
 - multi-agent systems  
@@ -322,33 +287,27 @@ These components enable:
 
 # 🚀 Next Development Targets
 
-The current frontier is:
-
 - unify navigation kernel  
-- define reusable interface  
-- implement reproducibility metrics  
-- spectral / frequency analysis  
-- connect Lorenz ↔ real-world systems (IEEE)  
+- define reusable API  
+- build reproducible demos  
+- integrate real-world systems  
+- spectral / mode decomposition  
 
 ---
 
 # 🧠 Milestone Summary
 
-Status: **Field-aware navigation pipeline (prototype)**
-
-NEXAH now functions as:
-
-> a structure-aware and field-aware system capable of prediction, control, and adaptive behavior
+Status: **Field-based navigation system with control and convergence**
 
 ---
 
 # 🔥 Final Insight
 
-Complex systems are not controlled through isolated events.
+NEXAH is no longer a system that analyzes dynamics.
 
-They can be:
+It is:
 
-> **understood and navigated through their structure and field dynamics**
+> **a system that reconstructs, controls, and navigates dynamical fields**
 
 ---
 
