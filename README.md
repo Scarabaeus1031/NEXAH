@@ -122,14 +122,30 @@ Operates on the system as a trajectory within the field.
 👉 [START HERE — Run your first demo](START_HERE.md)
 
 ---
+## 🚀 Entry Point
 
-## 🧭 Modules
+👉 Start here: [START_HERE.md](START_HERE.md)
 
-- 🧠 Framework → `FRAMEWORK/`  
-- ⚡ Applications → `APPLICATIONS/`  
-- 🧭 Navigation → `NAVIGATOR/`  
-- 🔬 Discovery → `DISCOVERY_ENGINE/`  
-- 🌊 Field → `FIELD_LAYER/`  
+---
+
+## 🧭 Navigate the system
+
+### 🔬 Core System
+- 🧠 Framework → [FRAMEWORK/README.md](FRAMEWORK/README.md)  
+- 🌊 Field Layer → [FIELD_LAYER/build_log.md](FIELD_LAYER/build_log.md)  
+- 🔬 Discovery Engine → [DISCOVERY_ENGINE/discovery_core_log.md](DISCOVERY_ENGINE/discovery_core_log.md)  
+
+---
+
+### ⚡ Applications
+- ⚡ Lorenz Demo → [APPLICATIONS/core_demos/lorenz/](APPLICATIONS/core_demos/lorenz/)  
+- 🌐 Power Systems → [APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)  
+
+---
+
+### 🧭 Navigation Layer
+- 🧭 Navigator → [NAVIGATOR/README.md](NAVIGATOR/README.md)  
+- 🧭 Navigation Architecture → [NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md](NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md)  
 
 ---
 
