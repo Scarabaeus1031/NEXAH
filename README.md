@@ -5,7 +5,40 @@
 
 ---
 
-![NEXAH Field Navigation](FIELD_LAYER/outputs/plots/v37_full_navigation.png)
+![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+
+**This is a real system.**
+
+Not chaos.  
+Not noise.
+
+👉 This is a **structured flow field**.
+
+---
+
+## 🧠 But it starts like this
+
+![Raw Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
+
+---
+
+## 🔍 Then structure appears
+
+![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
+
+---
+
+## 🔥 Then physics emerges
+
+![Energy](DISCOVERY_ENGINE/outputs/v19_energy_field.png)
+
+---
+
+## ⚡ And finally
+
+Systems become **navigable**
+
+![Navigation](FIELD_LAYER/outputs/plots/v37_full_navigation.png)
 
 ---
 
