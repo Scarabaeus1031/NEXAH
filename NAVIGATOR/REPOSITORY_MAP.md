@@ -5,102 +5,116 @@ NEXAH is a system for discovering, modeling, and navigating structure in complex
 Core transformation:
 
 ```text
-simulation → structure → field → dynamics → geometry → navigation
+dynamics → structure → field → geometry → control → navigation
 ```
+
 ---
 
 ## 📦 Main Areas
 
 | Directory | Role |
 |----------|------|
-| ENGINE | core computation & structural analysis |
-| FRAMEWORK | system architecture & formal definitions |
-| APPLICATIONS | real-world validation & use cases |
+| ENGINE | core computation & simulation |
+| FRAMEWORK | system definitions & formalization |
+| APPLICATIONS | real-world validation & demos |
 | BUILDER_LAB | experiments & rapid prototypes |
-| DISCOVERY_ENGINE | transition detection & field construction |
-| NAVIGATOR | decision-making, control & navigation logic |
+| DISCOVERY_ENGINE | structure extraction & field construction |
+| NAVIGATOR | decision logic & control (partially integrated) |
 
 ---
 
-## 🔥 System Flow
+## 🔥 System Flow (Updated)
 
-The repository is organized around a layered discovery process:
+The repository is organized around a layered transformation:
 
 ```text
 Dynamics  
 → Structure  
 → Field  
-→ Transitions  
-→ Signals  
-→ States  
-→ Decision  
-→ Action  
+→ Geometry  
+→ Control  
 → Navigation
 ```
 
-## 🚀 Where to Start
+---
+
+## 🧭 Where to Start
 
 ### ⚡ Practical (recommended)
 
 → `APPLICATIONS/`  
-Use cases and real-world validation.
+
+Run examples and see:
+
+- structured dynamics  
+- field behavior  
+- navigation effects  
 
 ---
 
 ### 🔬 Core Discovery
 
 → `DISCOVERY_ENGINE/`  
-Extraction of:
 
-- events  
+Extracts:
+
 - transitions  
-- channels  
+- channels / manifolds  
 - probability fields  
 - energy landscapes  
-- divergence / curl dynamics  
+- divergence / curl  
 - temporal coupling  
 
 ---
 
-### 🧠 Architecture
+### 🌊 Field Layer (CORE)
 
-→ `NAVIGATOR/ARCHITECTURE.md`  
-System structure and conceptual model.
+→ `FIELD_LAYER/`
 
-→ `NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md`  
-Decision logic, state handling, and control behavior.
+Builds:
+
+- continuous field representation  
+- energy + flow structure  
+- channel geometry  
+- separatrices and basins  
+- convergence regions (fixpoints)  
+- control-relevant structure  
 
 ---
 
 ### 🧪 Exploration
 
 → `BUILDER_LAB/`  
-Experiments and prototypes.
+
+- fast experiments  
+- visual exploration  
+- prototype logic  
 
 ---
 
 ### ⚙️ Core Systems
 
 → `ENGINE/`  
-Simulation and computation.
+Simulation & computation  
 
 → `FRAMEWORK/`  
-Formal abstractions and system design.
+Conceptual and mathematical definitions  
 
 ---
 
 ## 🧠 What This Repository Does
 
-This is not a static codebase.
+NEXAH is not a static codebase.
 
 It is a system for:
 
 - extracting structure from dynamics  
-- detecting transitions and regime changes  
-- constructing probability and energy fields  
-- analyzing flow via divergence and curl  
-- identifying temporal coupling and feedback  
-- enabling prediction, control, and navigation  
+- reconstructing systems as continuous fields  
+- decomposing dynamics into gradient + rotation  
+- identifying geometry (channels, basins, separatrices)  
+- detecting convergence regions (fixpoints)  
+- enabling control through field shaping  
+- navigating systems via field structure  
 
 ---
 
@@ -109,14 +123,14 @@ It is a system for:
 NEXAH shows that:
 
 > complex systems are not purely chaotic  
-> they contain structured, measurable transition dynamics  
+> they contain structured, measurable, and controllable dynamics  
 
 ---
 
 ## 🔥 Core Principle
 
 > Structure is not imposed.  
-> It is extracted from dynamics.
+> It is extracted from dynamics and expressed as a field.
 
 ---
 
@@ -126,7 +140,8 @@ Systems are not best understood as static states.
 
 They are:
 
-> dynamic transition fields that can be explored and navigated  
+> structured dynamical fields  
+> with geometry, flow, and convergence
 
 ---
 
@@ -135,8 +150,9 @@ They are:
 If you want to understand:
 
 - **how structure emerges** → `DISCOVERY_ENGINE/`  
-- **how decisions are made** → `NAVIGATOR/`  
-- **how systems are applied** → `APPLICATIONS/`  
+- **how fields are constructed** → `FIELD_LAYER/`  
+- **how systems behave in practice** → `APPLICATIONS/`  
+- **how ideas are explored** → `BUILDER_LAB/`  
 
 ---
 
@@ -144,11 +160,33 @@ If you want to understand:
 
 NEXAH forms a bridge between:
 
-→ simulation  
+```text
+simulation  
 → structure discovery  
-→ field modeling  
-→ navigation  
+→ field reconstruction  
+→ geometric interpretation  
+→ control  
+→ navigation
+```
 
-It enables systems to be:
+---
 
-> observed, structured, and navigated through their intrinsic dynamics
+## 🚀 Current Reality
+
+The system already:
+
+- reconstructs fields from dynamics  
+- identifies geometry and flow  
+- detects convergence regions  
+- supports field-based control  
+- demonstrates navigation behavior  
+
+---
+
+## 🔥 Final Insight
+
+NEXAH is not just analyzing systems.
+
+It is:
+
+> reconstructing and operating on their underlying dynamical field
