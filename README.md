@@ -1,22 +1,69 @@
-# ⚡ NEXAH — Structure & Transition Discovery in Dynamical Systems
+# ⚡ NEXAH — Navigating Structure in Dynamical Systems
 
-> Most systems are analyzed after failure.  
-> **NEXAH explores how structure and transitions emerge before failure occurs.**
-
-![Status](https://img.shields.io/badge/status-experimental-blue)
-![Field Model](https://img.shields.io/badge/field-analysis-lightblue)
-![Dynamics](https://img.shields.io/badge/dynamics-active-orange)
+> Complex systems are not random.  
+> They evolve within **structured fields with direction and destination**.
 
 ---
 
-## 🧭 NEXAH
+![NEXAH Field Navigation](FIELD_LAYER/outputs/plots/v37_full_navigation.png)
 
-**A computational framework for extracting structure from dynamical systems.**
+---
 
-NEXAH does not start from predefined states or thresholds.  
-Instead, it reconstructs:
+## 🧠 What NEXAH Does
 
-> **how systems evolve, organize, and transition in continuous space**
+NEXAH reconstructs dynamical systems as:
+
+- **fields** instead of states  
+- **trajectories** instead of events  
+- **attractors** instead of targets  
+
+It reveals:
+
+> how systems **move, transition, and converge** within their intrinsic structure
+
+---
+
+## 🎯 Core Capability
+
+NEXAH turns:
+
+```text
+dynamics → structure → field → topology → control → navigation → convergence
+```
+
+into a **working computational pipeline**
+
+---
+
+## 🔥 Key Result
+
+> Systems can be transformed into  
+> **navigable fields with stable attractors and controllable trajectories**
+
+---
+
+## 🧭 Architecture
+
+```text
+Discovery → Field Layer → Navigator
+```
+
+- Discovery → extracts structure  
+- Field Layer → builds the field  
+- Navigator → moves within it  
+
+---
+
+## 🚀 Why This Matters
+
+Instead of:
+
+- detecting failure  
+- reacting to thresholds  
+
+NEXAH enables:
+
+> **understanding and steering systems before failure occurs**
 
 ---
 
