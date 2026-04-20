@@ -34,7 +34,7 @@ Empirical results show:
 
 Result:
 
-> The system is better described as a continuous flow field.
+> The system is best described as a continuous vector field over state space.
 
 ---
 
@@ -66,7 +66,7 @@ The system forms:
 
 Result:
 
-> The system behaves as a cyclic state machine embedded in a field.
+> The system behaves as a cyclic state machine embedded in a continuous field.
 
 ---
 
@@ -76,18 +76,59 @@ Control experiments show:
 
 - transitions require effort
 - optimal paths minimize energy
+- control reshapes accessible regions
 
 This leads to:
 
+```text
 dx/dt ≈ -∇V(x)
+```
 
 Result:
 
-> System dynamics can be approximated as gradient flow.
+> System dynamics can be approximated as gradient flow on an energy landscape.
 
 ---
 
-# 🌀 6. Multi-Attractor Structure
+# 🌀 6. Rotational Component
+
+Field decomposition (V29) reveals:
+
+- gradient (potential) component  
+- rotational (curl) component  
+
+This leads to:
+
+~~~text
+dx/dt ≈ -∇V(x) + R(x)
+~~~
+
+Result:
+
+> The system combines attraction (energy minimization) with rotational structure.
+
+---
+
+# 🎯 7. Attractor & Fixpoint Structure
+
+Empirical analysis (V39–V40):
+
+- a stable fixpoint exists:
+  x* ≈ (13.494, 25.994)
+- large basin of attraction
+- convergence independent of initial conditions
+
+Local linearization:
+
+- eigenvalues: complex with negative real part
+
+Result:
+
+> The system exhibits a **stable spiral attractor**.
+
+---
+
+# 🧭 8. Multi-Attractor Structure
 
 The system contains:
 
@@ -99,26 +140,47 @@ However:
 - static fields → dominance of one attractor  
 - dynamic fields → enable navigation  
 
+Result:
+
+> Attractor competition is governed by field structure and modulation.
+
 ---
 
-# ⏱ 7. Time-Dependent Field
+# ⏱ 9. Time-Dependent Field
 
 Introducing:
 
+~~~text
 V(x, t)
+~~~
 
 leads to:
 
-- activation of intermediate states  
+- activation of intermediate regimes  
 - transitions between attractors  
 
 Result:
 
-> Navigation requires time-dependent modulation.
+> Navigation requires time-dependent modulation of the field.
 
 ---
 
-# 🧬 8. Relation to Physics
+# 🧠 10. Operational Reduction
+
+The system can be reduced to:
+
+- a small set of nodes (states)
+- weighted transitions (graph)
+- control costs (energy)
+- robustness metrics
+
+Result:
+
+> Complex dynamics compress into a low-dimensional operational system.
+
+---
+
+# 🧬 11. Relation to Physics
 
 The structure is consistent with:
 
@@ -132,12 +194,14 @@ The structure is consistent with:
 - metastability
 
 ## Fluid Dynamics
-- flow fields
+- vector fields
 - streamlines
+- vortices
 
 ## Control Theory
 - optimal control
 - feedback stabilization
+- energy minimization
 
 ---
 
@@ -158,16 +222,19 @@ It demonstrates:
 
 The system is:
 
-> a structured, dynamic field combining geometry, flow, topology, and control
+> a structured dynamical field combining  
+> geometry, flow, topology, energy, and control
 
 ---
 
 # 🔥 Minimal Statement
 
-- dynamics → structure  
-- structure → topology  
+- dynamics → field  
+- field → geometry  
+- geometry → topology  
 - topology → control  
 - control → field shaping  
+- field → attractor  
 
 ---
 
@@ -175,6 +242,27 @@ The system is:
 
 Navigation is:
 
-> controlled motion through a structured, time-dependent field
+> controlled motion through a structured, time-dependent field  
+> toward stable attractors
 
 ---
+
+# 🧭 Final Form
+
+The system can be locally approximated as:
+
+~~~text
+dx/dt = J(x - x*)
+~~~
+
+with:
+
+- stable spiral dynamics  
+- contraction + rotation  
+
+---
+
+# 🔥 Final Interpretation
+
+> Complex systems are best understood as  
+> **motion within a structured field that can be reconstructed, shaped, and navigated**
