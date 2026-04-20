@@ -1,8 +1,20 @@
 # NEXAH Dynamics Engine
 
-The **NEXAH Dynamics Engine** extends the NEXAH Discovery Framework from static analysis to **dynamic system navigation**.
+The **NEXAH Dynamics Engine** is an experimental module for generating
+and exploring dynamical regimes within the NEXAH system.
 
-It models how systems evolve, organize, and transition through stability landscapes under interacting forces.
+It is used to:
+
+- simulate dynamic systems
+- induce structure formation
+- test emergence of transitions
+- explore instability and regime change
+
+⚠️ Important:
+This module is **not part of the core navigation pipeline**.
+
+It serves as a **generator and testing ground**
+for dynamics, structure, and transition conditions.
 
 ---
 
@@ -15,6 +27,22 @@ Traditional analysis asks:
 The NEXAH Dynamics Engine asks:
 
 > **How do systems move, stabilize, and transition between regimes?**
+
+---
+
+# ⚠️ Current Reality
+
+The current system is:
+
+- structurally rich
+- dynamically stable
+- lacking strong transitions
+
+→ This limits its usefulness for navigation
+
+👉 Therefore, the current focus is:
+
+**introducing instability to enable transitions**
 
 ---
 
@@ -359,6 +387,23 @@ NEXAH has evolved into:
 
 ---
 
+# 🧭 Role in NEXAH
+
+The Dynamics Engine is used to:
+
+- generate dynamic scenarios
+- test emergence of structure
+- explore transition conditions
+
+It does NOT:
+
+- define the field layer
+- define the navigation system
+- provide validated transitions
+
+👉 It supports development, but is not the core system.
+
+---
 # License
 
 Apache 2.0
