@@ -121,10 +121,6 @@ Operates on the system as a trajectory within the field.
 
 👉 [START HERE — Run your first demo](START_HERE.md)
 
----
-## 🚀 Entry Point
-
-👉 Start here: [START_HERE.md](START_HERE.md)
 
 ---
 
