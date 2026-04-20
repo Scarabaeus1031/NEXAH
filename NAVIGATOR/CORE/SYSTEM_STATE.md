@@ -15,31 +15,32 @@ It reflects:
 
 NEXAH is currently a:
 
-> **field-aware discovery and navigation system for dynamical systems**
+> **field-based reconstruction, control, and navigation system for dynamical systems**
 
 It transforms:
 
-dynamics → structure → field → transitions → prediction → control → navigation
+```text
+dynamics → structure → field → topology → control → navigation → convergence
+```
 
 ---
 
-# 🔬 1. Discovery Engine (Core System)
+# 🔬 1. Discovery Engine (Established)
 
 Status:
 
-✔ transition events detected  
-✔ structured transition channels (manifold)  
+✔ transition structure extracted  
+✔ geometric channels (manifolds) detected  
 ✔ probability field constructed  
 ✔ energy landscape derived  
 ✔ divergence and curl computed  
 ✔ temporal coupling (time-lag) measured  
-✔ early warning signals observable  
 
 ---
 
 ## Key Result
 
-> The system produces **structured transition dynamics**, not random chaos
+> The system reveals **structured dynamics with measurable geometry and flow**
 
 ---
 
@@ -47,98 +48,144 @@ Status:
 
 The Lorenz system is successfully modeled as:
 
-> a **dynamic transition field with measurable structure**
+> a **structured transition field with intrinsic geometry**
 
 ---
 
-# ⚡ 2. Field Layer (Established)
+# 🌊 2. Field Layer (Core Breakthrough)
 
 Status:
 
-✔ probability density field  
-✔ energy landscape (E = -log p)  
-✔ divergence (expansion)  
-✔ curl (rotation)  
-✔ time-delayed coupling between components  
+✔ flow-aligned coordinate system (α, β, γ)  
+✔ deviation-based stability metric  
+✔ density field (transition regions)  
+✔ ridge extraction (channels)  
+✔ directional flow field  
+✔ topology extraction (nodes, cycles)  
+✔ energy-based control  
+✔ attractor detection  
 
 ---
 
 ## Key Result
 
-> The system behaves as a **coupled dynamic field**
+> The system is reconstructed as a **continuous dynamical field with topology and control**
 
 ---
 
-## Important Observation
+## Critical Finding
 
-Measured relationship:
+Field decomposition shows:
 
-curl(t) → div(t + τ)  
-div(t) → curl(t − τ)
+```text
+dx/dt ≈ -∇V(x) + R(x)
+```
 
-→ indicates feedback with delay
+→ gradient (attraction) + rotation (structure)
 
 ---
 
-# 🧠 3. Navigation Layer (Navigator)
+# 🎯 3. Attractor & Convergence (Validated)
 
 Status:
 
-✔ symbolic state representation  
-✔ pattern detection  
-✔ prediction  
-✔ control logic  
-✔ meta-control  
-✔ memory (state + sequence)  
+✔ stable fixpoint identified  
+✔ convergence across trajectories  
+✔ basin of attraction measurable  
+✔ local linearization computed  
 
 ---
 
-## Current Limitation
+## Fixpoint
 
-⚠ not fully integrated with Discovery Engine output  
+```text
+x* ≈ (13.494, 25.994)
+```
+
+---
+
+## Local Dynamics
+
+- complex eigenvalues  
+- negative real part  
 
 ---
 
 ## Interpretation
 
-> Navigation logic exists, but is not yet fully driven by real transition fields
+> The system exhibits a **stable spiral attractor with robust convergence**
 
 ---
 
-# 🔗 4. System Integration
+# 🧭 4. Navigation Layer (Operational)
 
 Status:
 
-✔ structure → field pipeline works  
-✔ field → signal pipeline works  
-
-⚠ field → state mapping incomplete  
-⚠ full closed-loop navigation not yet unified  
-
----
-
-## Missing Link
-
-> consistent transformation:
-field → states → decisions → actions → system feedback
+✔ path selection  
+✔ control policies  
+✔ trajectory shaping  
+✔ energy-aware navigation  
+✔ multi-attractor experiments  
+✔ dynamic field modulation  
 
 ---
 
-# 🌍 5. Real-World Systems
+## Key Result
+
+> The system can **navigate within its own field toward attractors**
+
+---
+
+## Important Clarification
+
+Navigation is:
+
+- not target-based  
+- not reward-based  
+
+It is:
+
+> **field-based trajectory shaping toward stable regions**
+
+---
+
+# 🔗 5. System Integration
 
 Status:
 
-✔ power system (IEEE) experiments exist  
+✔ Discovery → Field Layer integrated  
+✔ Field → Control → Navigation working  
+✔ closed-loop behavior observable  
+
+---
+
+## Current Limitation
+
+⚠ full abstraction into reusable API not yet complete  
+
+---
+
+## Interpretation
+
+> The system is **functionally integrated**, but not yet packaged
+
+---
+
+# 🌍 6. Real-World Systems (Early Stage)
+
+Status:
+
+✔ IEEE / power system experiments exist  
 ✔ field reconstruction works  
-✔ early warning signal observed  
+✔ structured flow observed  
 
 ---
 
 ## Limitations
 
-❌ not reproducible  
-❌ not unified with Discovery pipeline  
-❌ no validated transition model  
+❌ reproducibility not established  
+❌ convergence not validated  
+❌ pipeline not unified with Lorenz system  
 
 ---
 
@@ -148,266 +195,78 @@ Status:
 
 ---
 
-# ⚠️ 6. Current Bottlenecks
+# ⚠️ 7. Current Bottlenecks
 
-## 1. Integration Gap
+## 1. Packaging Gap
 
-- Discovery ↔ Navigator not fully connected  
-
----
-
-## 2. Application Gap
-
-- lack of clear, reproducible real-world use case  
+- no unified demo entry point  
+- no simple onboarding  
 
 ---
 
-## 3. System Packaging
+## 2. Validation Gap
 
-- no unified entry point (demo / API)  
-- pipeline not externally accessible  
+- convergence not yet statistically validated  
+- limited multi-run evaluation  
 
 ---
 
-# 🧠 7. What Is Proven
+## 3. Application Gap
+
+- no clean real-world demonstration  
+
+---
+
+# 🧠 8. What Is Proven
 
 ✔ structure emerges from dynamics  
-✔ transitions exist and are detectable  
-✔ dynamics can be represented as fields  
-✔ divergence and curl reveal system behavior  
-✔ temporal coupling exists  
-✔ local prediction works  
-✔ basic control is possible  
+✔ dynamics form continuous fields  
+✔ transitions follow geometric channels  
+✔ topology emerges from flow  
+✔ attractors exist and are measurable  
+✔ trajectories converge to stable points  
+✔ control can shape trajectories  
+✔ navigation is possible within the field  
 
 ---
 
-# ❌ 8. What Is NOT Proven
+# ❌ 9. What Is NOT Proven
 
 ❌ generalization across systems  
-❌ robustness in real-world scenarios  
-❌ fully integrated navigation system  
-❌ large-scale predictive reliability  
+❌ robustness under strong perturbations  
+❌ large-scale real-world applicability  
+❌ theoretical completeness  
 
 ---
 
-# 🚀 9. Immediate Next Steps
+# 🚀 10. Immediate Next Steps
 
-1. integrate Discovery → Navigator  
-2. build minimal APPLICATION (real use case)  
-3. create unified demo entry point  
-4. improve reproducibility  
-5. connect Lorenz ↔ real systems  
+1. build `run_nexah_demo.py` (entry point)  
+2. validate convergence statistically (multi-run)  
+3. create reproducible Lorenz results block  
+4. package IEEE example  
+5. unify pipeline into simple interface  
 
 ---
 
-# 🧠 Final Insight
+# 🧭 Final Insight
 
-NEXAH currently demonstrates:
+NEXAH demonstrates:
 
-> **structured, coupled transition dynamics extracted from complex systems**
-
-It is no longer:
-
-- pure simulation  
-- or pure analysis  
-
-It is:
-
-> **a system for discovering and navigating dynamic structure**
+> **complex systems can be reconstructed as structured fields  
+> with controllable trajectories and stable convergence**
 
 ---
 
 # 🔥 Core Truth
 
 > Complex systems are not random.  
-> They are structured through transitions.
+> They evolve within structured fields.
 
-> If transitions can be detected,  
-> systems can be understood and navigated.
-
----
-
-Last Updated: April 2026
----
-
-### Interpretation
-
-The Builder Lab shows:
-
-> navigation is possible **if transitions exist**
-
-But does NOT yet prove:
-
-> that transitions can be extracted from real systems  
+> If the field is reconstructed,  
+> the system can be navigated.
 
 ---
 
-## 3. Integrated System (Lorenz)
-
-Status:
-
-✔ structure extraction  
-✔ signal generation (risk, coherence)  
-✔ pattern detection  
-✔ short-term prediction  
-✔ trajectory shaping (control)  
-✔ meta-control (mode switching)  
-✔ memory (state + sequence)  
-✔ transition-like behavior observed  
-
----
-
-### Role
-
-> The ONLY system where:
-
-continuous dynamics + signals + decision logic come together  
-
----
-
-### Important Limitation
-
-- transitions are **observed**, not formally defined  
-- behavior is **locally reliable**, not globally stable  
-- results are **not yet generalized**
-
----
-
-## 4. Real Systems (IEEE / Power Grid)
-
-Status:
-
-✔ field reconstruction  
-✔ risk signal exists  
-✔ closed-loop control prototype  
-
-⚠️ early detection signal observed (NOT robust)  
-
-❌ not reproducible  
-❌ not connected to Lorenz pipeline  
-❌ no validated transition model  
-
----
-
-### Interpretation
-
-> Real-world relevance is plausible, but not yet demonstrated
-
----
-
-## 5. Core Gap (Critical)
-
-Continuous System (Discovery Engine)  
-→ produces structure but no transitions  
-
-Discrete System (Builder Lab)  
-→ has transitions but no real dynamics  
-
----
-
-### Missing Link
-
-> **REAL transitions emerging from continuous dynamics**
-
-This is the central unsolved problem.
-
----
-
-## 6. Current Bottleneck
-
-> The system is too stable → no navigation emerges from dynamics
-
-Consequences:
-
-- no phase transitions  
-- weak topology  
-- poor graph extraction  
-- limited predictive power  
-
----
-
-## 7. Relationship to Building Plan
-
-The `BUILDING_PLAN.md` operates **inside this state**.
-
-It focuses on:
-
-FIELD → SIGNAL → VALIDATION  
-
----
-
-### Important Alignment
-
-SYSTEM_STATE says:
-
-> transitions are missing  
-
-BUILDING_PLAN says:
-
-> validate whether signals detect transitions  
-
----
-
-### Combined Meaning
-
-> The current work is NOT building a full system  
-> but testing whether **transition-relevant signals exist at all**
-
----
-
-## 8. What is Actually Proven
-
-✔ structure can be extracted from dynamics  
-✔ flow produces geometric organization  
-✔ simple signals correlate with trajectory behavior  
-✔ local prediction is possible  
-✔ basic trajectory shaping works  
-
----
-
-## 9. What is NOT Proven
-
-❌ existence of real phase transitions  
-❌ robustness across systems  
-❌ generalizable navigation  
-❌ real-world predictive capability  
-
----
-
-## 10. Immediate Next Requirement
-
-> Introduce instability into the system
-
-This is required to test:
-
-- whether transitions appear  
-- whether signals detect them  
-- whether navigation becomes meaningful  
-
----
-
-### Name (internal)
-
-Phase Breaker  
-
----
-
-## 🧠 Final Insight
-
-NEXAH currently demonstrates:
-
-> structure without transition
-
-The next step is:
-
-> **creating conditions where structure can change**
-
----
-
-## 🔥 Core Truth
-
-> Without instability  
-> there is no transition  
-
-> Without transition  
-> there is no navigation
+Last Updated: April 2026  
+© Thomas K. R. Hofmann
