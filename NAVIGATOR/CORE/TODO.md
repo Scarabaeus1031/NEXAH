@@ -5,6 +5,26 @@
 
 ---
 
+## 🧠 SYSTEM LEVEL (UPDATED)
+
+NEXAH now provides:
+
+- structure discovery (Discovery Engine)  
+- field reconstruction (Field Layer)  
+- topology extraction (states, cycles)  
+- control and navigation (Navigator)  
+- attractor detection and convergence  
+
+---
+
+👉 The system is no longer only analytical.
+
+It is:
+
+> a **reconstructive and operational framework for dynamical systems**
+
+---
+
 ## 🧠 Main Goal
 
 Make NEXAH:
@@ -30,13 +50,15 @@ while keeping the mathematical core **explicit and documented**.
 
 - [ ] Create `run_nexah_demo.py`
 
-Must show (minimal pipeline):
+---
+
+### Must show (minimal pipeline):
 
 1. Lorenz dynamics  
-2. Transition events (Discovery)  
-3. Field structure (probability / energy)  
-4. Divergence / Curl (flow insight)  
-5. Basic control / navigation signal  
+2. Field reconstruction (α, β, γ)  
+3. Flow field / structure  
+4. Convergence behavior  
+5. Final attractor (fixpoint)  
 
 ---
 
@@ -50,8 +72,16 @@ Must show (minimal pipeline):
 
 ### Output (critical)
 
-- 1–2 plots max  
+- trajectory plot  
+- field overlay  
+- final point (x*)  
 - 1 short printed result block  
+
+---
+
+### Goal:
+
+> show that the system **converges within a structured field**
 
 ---
 
@@ -90,11 +120,12 @@ Must include:
 
 ### Status:
 
-- [x] Full Discovery pipeline (events → field → coupling)  
-- [x] Prediction  
+- [x] Full Discovery pipeline  
+- [x] Field Layer  
+- [x] Topology extraction  
 - [x] Control  
-- [x] Meta layers  
-- [x] Visual system  
+- [x] Navigation  
+- [x] Fixpoint detection  
 
 ---
 
@@ -102,20 +133,21 @@ Must include:
 
 - [ ] Run multiple simulations (20–50 runs)
 
-- [ ] Compute metrics:
+---
 
-  - mean risk  
-  - max risk  
-  - event count  
-  - transition density  
-  - mean distance to channel  
-  - prediction accuracy  
+### Metrics:
+
+- mean risk  
+- max risk  
+- event count  
+- transition density  
+- mean distance to channel  
+- prediction accuracy  
+- distance to fixpoint  
 
 ---
 
-### 🔥 NEW — Evidence Block (CRITICAL)
-
-👉 This makes the repo instantly real.
+### 🔥 Evidence Block (CRITICAL)
 
 - [ ] Add a **RESULTS block**
 
@@ -123,19 +155,14 @@ Example:
 
 — RESULTS —
 
-Runs: 20
+Runs: 20  
 
-Without control:
-Mean risk: 72.3
+Mean distance to attractor: 0.034  
+Convergence rate: 0.95  
+Basin radius: 1.2  
 
-With control:
-Mean risk: 43.8
-
-Events detected: 178  
-Prediction accuracy: 0.95  
-
-Observation:
-Consistent structure + transition predictability.
+Observation:  
+Stable convergence across runs.
 
 ---
 
@@ -143,7 +170,36 @@ Consistent structure + transition predictability.
 
 ---
 
-# 🟢 PRIORITY 4 — IEEE USE CASE (PACKAGED)
+# 🟡 PRIORITY 4 — ATTRACTOR & CONVERGENCE (NEW)
+
+👉 This is the strongest result of the current system.
+
+---
+
+### ToDo:
+
+- [ ] Validate fixpoint across runs  
+- [ ] Measure convergence distance  
+- [ ] Measure basin size  
+- [ ] Visualize endpoint cloud  
+
+---
+
+### Output:
+
+- mean distance to x*  
+- convergence variance  
+- basin radius  
+
+---
+
+### Goal:
+
+> show that the system has a **stable attractor and reproducible convergence**
+
+---
+
+# 🟢 PRIORITY 5 — IEEE USE CASE (PACKAGED)
 
 👉 Shows real-world relevance.
 
@@ -157,8 +213,8 @@ Must output:
 
 - trajectory  
 - risk / coherence curve  
+- convergence behavior  
 - 1–2 key metrics  
-- short interpretation  
 
 ---
 
@@ -168,30 +224,21 @@ Must output:
 
 ---
 
-# 🟡 PRIORITY 5 — VISUAL SYSTEM FINALIZATION
-
-👉 Already strong — just polish.
-
----
-
-### Status:
-
-- [x] Discovery visuals (V4–V22)  
-- [x] Visual gallery  
+# 🟡 PRIORITY 6 — VISUAL SYSTEM FINALIZATION
 
 ---
 
 ### ToDo:
 
 - [ ] Add captions (1–2 lines per visual)  
-- [ ] Clean ordering (V4 → V22)  
+- [ ] Clean ordering  
 - [ ] Highlight key visuals:
 
-  - V7 / V8 → manifold emergence  
-  - V13 → alignment  
-  - V18 → probability field  
-  - V20 → field behavior  
-  - V22 → temporal coupling  
+  - V29 → field decomposition  
+  - V31 → separatrix  
+  - V37 → navigation  
+  - V39 → fixpoint  
+  - V40 → local dynamics  
 
 ---
 
@@ -201,94 +248,82 @@ Must output:
 
 ---
 
-# 🟠 PRIORITY 6 — REPOSITORY STRUCTURE (LIGHT CLEANUP)
-
-👉 Do not over-engineer.
+# 🟠 PRIORITY 7 — REPOSITORY STRUCTURE
 
 ---
 
 ### ToDo:
 
-- [ ] Normalize naming consistency  
-- [ ] Align output paths (`DISCOVERY_ENGINE/outputs`)  
-- [ ] Remove redundant scripts (keep latest versions only)
+- [ ] Normalize naming  
+- [ ] Align output paths  
+- [ ] Remove redundant scripts  
 
 ---
 
 👉 Goal:
 
-> clean, readable repo — not perfect architecture
+> clean, readable repo
 
 ---
 
-# 🧠 PRIORITY 7 — MATHEMATICAL CORE (CLARITY, NOT EXPANSION)
-
-👉 IMPORTANT: Do NOT expand — clarify.
+# 🧠 PRIORITY 8 — MATHEMATICAL CORE
 
 ---
 
 ### ToDo:
 
-- [ ] Clean definitions for:
+- [ ] Clean definitions:
 
   - probability field  
   - energy landscape  
   - divergence  
   - curl  
-  - coupling (lag τ)
-
----
-
-- [ ] Finalize:
-
-  `FRAMEWORK/core_equations.md`
+  - coupling (τ)  
+  - gradient + rotational decomposition  
 
 ---
 
 👉 Goal:
 
-> make the math understandable and reproducible
+> clarity, not expansion
 
 ---
 
-# 🔗 PRIORITY 8 — INTEGRATION (DISCOVERY → NAVIGATOR)
-
-👉 This is the real system step.
+# 🔗 PRIORITY 9 — INTEGRATION (DISCOVERY → NAVIGATOR)
 
 ---
 
-### ToDo:
-
-- [ ] Map events → states  
-- [ ] Map field → decision inputs  
-- [ ] Define minimal loop:
+### Define minimal loop:
 
 ```text
-Field → Signals → Decision → Action → System
+Field → Flow → Control → Trajectory → Convergence
 ```
-👉 Goal:
-
-first true closed-loop system
 
 ---
 
-# 🚀 NEXT MILESTONES (REAL ORDER)
+👉 Goal:
+
+> first true closed-loop navigation system
+
+---
+
+# 🚀 NEXT MILESTONES
 
 1. run_nexah_demo.py  
 2. START_HERE.md  
-3. Evidence Block (Lorenz metrics)  
-4. Lorenz reproducibility  
+3. Evidence Block  
+4. Convergence validation  
 5. IEEE demo  
-6. Integration (Discovery → Navigator)  
+6. Integration  
 7. Visual polish  
 8. Math clarity  
 
 ---
 
-# 🧭 FINAL TARGET
+# 🧭 FINAL TARGET (UPDATED)
 
-> NEXAH extracts and navigates structure in dynamical systems  
-> through transition fields and flow dynamics  
+> NEXAH reconstructs, controls, and navigates  
+> structured dynamical fields toward stable attractors
 
 ---
 
@@ -296,11 +331,12 @@ first true closed-loop system
 
 You already have:
 
-- ✅ Discovery Engine (events, field, coupling)  
-- ✅ Visual system  
-- ✅ Lorenz full pipeline  
-- ✅ Prediction + control  
-- ✅ Real-world direction (IEEE)  
+- ✅ Discovery Engine  
+- ✅ Field Layer  
+- ✅ Topology  
+- ✅ Control  
+- ✅ Navigation  
+- ✅ Fixpoint  
 
 ---
 
@@ -312,13 +348,20 @@ You do NOT need:
 
 ---
 
+You MAY need:
+
+- ✔ one clean demo  
+- ✔ convergence validation  
+
+---
+
 # 🔥 CURRENT STATE
 
 You are no longer building the system.
 
 You are now:
 
-> **making it usable, visible, and verifiable**
+> **proving that it works**
 
 ---
 
