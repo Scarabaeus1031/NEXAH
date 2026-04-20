@@ -170,6 +170,45 @@ It is:
 > and can be navigated through transitions
 
 ---
+---
+
+# 🔗 Relation to FIELD_LAYER
+
+The Discovery Engine identifies:
+
+- transitions  
+- probability structure  
+- energy landscapes  
+- field operators (div / curl)  
+
+However, this representation is still incomplete.
+
+The FIELD_LAYER extends this by:
+
+- constructing a flow-aligned coordinate system  
+- transforming structure into a continuous field  
+- extracting topology (nodes, cycles)  
+- enabling control and navigation  
+- revealing attractors and convergence behavior  
+
+---
+
+## Conceptual Transition
+
+```text
+DISCOVERY:
+Dynamics → Transitions → Structure
+
+FIELD_LAYER:
+Structure → Field → Geometry → Topology → Control → Convergence
+```
+
+---
+
+## Key Shift
+
+> Discovery identifies structure  
+> Field Layer makes it **operational and navigable**
 
 ## License
 
