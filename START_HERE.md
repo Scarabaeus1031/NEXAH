@@ -1,92 +1,102 @@
 # 🚀 START HERE — NEXAH
 
-**Welcome.**
+![NEXAH Field](./visuals/output/v7_separatrix.png)
 
-NEXAH turns complex system behavior into a **navigable stability landscape**.
+**This is not chaos.**  
+This is a **stability field**.
+
+---
+
+## 🧠 What you are looking at
+
+A system is moving through:
+
+- stable regions  
+- transition zones  
+- instability boundaries  
 
 Instead of asking:
 
 > “Will the system become unstable?”
 
-NEXAH answers:
+NEXAH shows:
 
-> **Where are we in the field — and how can we move safely?**
+> **Where the system is — and where it is going**
 
 ---
 
-## ⚡ Step 1 — Run the Core Demo (Lorenz System)
-
-This is the fastest way to understand NEXAH.
-
-Run:
+## ⚡ Step 1 — Run the Core Demo
 
 ```bash
-python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
+python ENGINE/run_nexah_demo.py
 ```
 
-You will see:
+This generates:
 
-- chaotic dynamics (Lorenz attractor)  
-- structured trajectories  
-- adaptive control behavior  
-- regime transitions ("switches")  
-
----
-
-## 🧠 What is happening?
-
-The system:
-
-- extracts structure from chaos  
-- builds symbolic states  
-- detects patterns and transitions  
-- applies adaptive control strategies  
-- reacts to regime changes  
-
-👉 This creates a **local navigation system inside a chaotic environment**
+- a trajectory (system behavior)  
+- a field (how the system moves)  
+- regimes (stable / transition / unstable)  
+- boundaries between them  
 
 ---
 
 ## 🔍 What to look for
 
-- trajectories stabilizing without fixed targets  
-- switching between control modes  
-- repeated patterns in chaotic motion  
-- structured regions in phase space  
+- where motion slows down → stability  
+- where it accelerates → instability  
+- where it crosses boundaries → regime change  
+- how trajectories follow the field  
 
 ---
 
 ## 🌊 Key Idea
 
-Instead of:
+Systems do not randomly become unstable.
 
-> controlling toward a fixed goal  
+They:
 
-NEXAH:
-
-> moves **within the structure of the system itself**
+> **move through regions of stability**
 
 ---
 
-## ⚡ Step 2 — Real System (Power Grid)
+## ⚡ Step 2 — See it in Action (Lorenz System)
 
-Once you understand the Lorenz system, try:
+```bash
+python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
+```
+
+Now you will see:
+
+- chaotic dynamics (Lorenz attractor)  
+- structured trajectories  
+- adaptive behavior  
+- regime transitions ("switches")  
+
+---
+
+## 🧠 What changed?
+
+Before:
+
+> the system moved blindly
+
+Now:
+
+> the system **reacts to the structure**
+
+---
+
+## ⚡ Step 3 — Real System (Power Grid)
 
 ```bash
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_closed_loop_ieee9_v6.py
 ```
 
-This shows:
-
-- a real dynamical system (power grid)  
-- structure-based interpretation of stability  
-- trajectory-based control behavior  
-
 ---
 
 ## ⚠️ Important
 
-- NEXAH is currently a **prototype system**  
+- NEXAH is a **prototype system**  
 - behavior is **locally reliable, not globally predictive**  
 - real-world validation is **ongoing**  
 
@@ -94,7 +104,9 @@ This shows:
 
 ## 🧠 In one sentence
 
-NEXAH turns complex dynamics into a **structure you can move within**
+NEXAH turns complex dynamics into a:
+
+> **structure you can move within**
 
 ---
 
@@ -106,67 +118,43 @@ NEXAH turns complex dynamics into a **structure you can move within**
 
 ---
 
-## 🚀 What NEXAH enables
-
-- understand structure in chaotic systems  
-- detect regime transitions  
-- apply adaptive control strategies  
-- explore navigation within system dynamics  
-
----
-
-## 🧩 Want to build on this?
-
-NEXAH is not a finished system — it is a working prototype.
-
-You can actively experiment with it.
-
----
-
-## 🔧 Try this (2 minutes)
+## 🧩 Want to experiment?
 
 Open:
 
+```
 APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
+```
 
 ---
 
-### Step 1 — change control strength
+### 🔧 Try this (2 minutes)
 
-Find this line in the code:
+Change:
 
+```python
 control = -0.30 * dx
+```
 
-Try changing it to:
+to:
 
+```python
 control = -0.10 * dx
+```
 
 or:
 
+```python
 control = -0.80 * dx
-
-👉 Then run the script again.
+```
 
 ---
 
-### Step 2 — observe
-
-Watch how the system changes:
+### 👀 Observe
 
 - does it stabilize faster?  
 - does it become unstable?  
-- does it switch modes more often?  
-
----
-
-### Step 3 — modify behavior
-
-Try changing:
-
-- mode selection logic  
-- thresholds (risk / entropy / confidence)  
-- memory strength  
-- switching sensitivity  
+- does it switch more often?  
 
 ---
 
@@ -180,27 +168,9 @@ You are:
 
 ---
 
-## 🚀 Where to go next
-
-You can extend:
-
-### 🔧 Control
-- design new control laws  
-- test alternative stabilization strategies  
-
-### 🧠 Prediction
-- improve pattern detection  
-- test different prediction models  
-
-### 🌐 Systems
-- apply NEXAH to your own system  
-- connect simulations or real data  
-
----
-
 ## 💡 Philosophy
 
-NEXAH is not meant to be used as a black box.
+NEXAH is not a black box.
 
 It is meant to be:
 
@@ -214,4 +184,3 @@ you are already contributing to the system.
 ---
 
 **NEXAH · Thomas K. R. Hofmann · 2026**
-
