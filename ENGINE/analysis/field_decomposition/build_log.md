@@ -306,3 +306,273 @@ This suggests:
 
 → underlying system organization is not random  
 → further formalization is justified  
+
+
+---
+
+## Implementation Timeline (V6 Series)
+
+This section documents the concrete evolution of the simulation pipeline.
+
+It complements the observational sections above by recording:
+
+- code structure
+- added capabilities
+- shifts in modeling approach
+
+---
+
+### V2 — Field Splitting (early structural separation)
+
+Files:
+- field_split_visual.py
+- v2_field_split_visual.py
+
+Focus:
+
+- initial separation of field components
+- visual distinction between regions
+- first indication of multiple basins
+
+Key outcome:
+
+→ recognition that the field is not uniform  
+→ emergence of distinct structural zones  
+
+---
+
+### V3 — Structure Detection
+
+File:
+- v3_field_structure_detector.py
+
+Focus:
+
+- automatic detection of field features
+- identification of minima and gradients
+
+Key outcome:
+
+→ confirmation that structure can be extracted algorithmically  
+→ transition from visual intuition → measurable features  
+
+---
+
+### V4 — Unified Field View
+
+File:
+- v4_unified_field_visual.py
+
+Focus:
+
+- merging separate views into one representation
+- combining potential + flow visualization
+
+Key outcome:
+
+→ field seen as continuous object  
+→ trajectories interpreted as embedded in structure  
+
+---
+
+### V5 — Gradient vs Rotation
+
+File:
+- v5_gradient_vs_rotation.py
+
+Focus:
+
+- separation of:
+  - gradient component (−∇V)
+  - rotational component
+
+Key outcome:
+
+→ asymmetry explained as interaction of components  
+→ curved trajectories not noise, but structural result  
+
+---
+
+### V6.1 — Multi-View System
+
+File:
+- v6_1_multi_view.py
+
+Focus:
+
+- simultaneous visualization of:
+  - field
+  - trajectories
+  - parameter sweeps
+
+Key outcome:
+
+→ consistency across views  
+→ emergence of stable patterns  
+
+---
+
+### V6.2 — Landscape + Orbit Projection
+
+File:
+- v6_2_landscape_orbits.py
+
+Focus:
+
+- mapping trajectories onto physical projection space
+- linking abstract field → spatial interpretation
+
+Key outcome:
+
+→ orbit-like structures become visible  
+→ connection between parameter space and geometry  
+
+---
+
+### V6.3 — Orbit Class Map
+
+File:
+- v6_3_orbit_class_map.py
+
+Focus:
+
+- classification of trajectories based on outcome
+- mapping initial conditions → final behavior
+
+Key outcome:
+
+→ identification of distinct dynamic regimes  
+→ emergence of class boundaries  
+
+---
+
+### V6.4 — Boundary Extraction
+
+File:
+- v6_4_boundary_extraction.py
+
+Focus:
+
+- detecting transitions between classes
+- highlighting discontinuities in parameter space
+
+Key outcome:
+
+→ first explicit visualization of boundary structures  
+→ "Riss"-like regions become measurable  
+
+---
+
+### V6.5 — Connected Boundary Curves
+
+File:
+- v6_5_boundary_curves.py
+
+Focus:
+
+- connecting fragmented boundary regions
+- smoothing discontinuities into curves
+
+Key outcome:
+
+→ boundaries interpreted as continuous objects  
+→ transition from noise → geometry  
+
+---
+
+### V6.6 — Core System Integration
+
+File:
+- v6.6_core.py
+
+Focus:
+
+- consolidation of:
+  - field definition
+  - dynamics
+  - classification
+  - visualization
+
+Key outcome:
+
+→ stable simulation core  
+→ reproducible results across runs  
+
+---
+
+### V6.7 — Class Detection / Transition Map
+
+File:
+- v6_7_class_detection_map.py
+
+Focus:
+
+- full classification layer:
+  - basin capture (left / right)
+  - upper region influence
+  - transition corridor
+  - escape tendency
+
+- explicit mapping of:
+  - trajectory classes
+  - spatial regions
+
+Key outcome:
+
+→ system can now assign meaning to regions  
+→ transition from visualization → structured interpretation  
+
+---
+
+## Current System State (End of V6 Phase)
+
+At this point, the system includes:
+
+- continuous field model
+- dynamic trajectory simulation
+- classification of outcomes
+- boundary detection
+- sensitivity mapping
+- orbit band structure
+
+Key property:
+
+→ all observed structure emerges from the same underlying field  
+
+No external rules or constraints are imposed.
+
+---
+
+## Transition to Next Phase
+
+The V6 phase established:
+
+- stable simulation pipeline
+- consistent structural patterns
+- reproducible observations
+
+Next phase direction:
+
+→ move from classification → deeper structure analysis
+
+Potential directions:
+
+- phase space reconstruction (V6.8+)
+- stability metrics (Lyapunov-like)
+- separatrix formalization
+- topology of flow
+
+---
+
+## Meta Observation (Implementation)
+
+A notable development:
+
+- early versions required interpretation
+- later versions produce structure directly
+
+This indicates:
+
+→ the system is not only visual, but computationally coherent  
+
+---
