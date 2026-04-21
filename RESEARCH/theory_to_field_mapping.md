@@ -1,3 +1,20 @@
+## 🔬 Scientific Role
+
+This document provides the **missing bridge between abstract structure and empirical behavior**.
+
+It addresses a central question:
+
+> How do minimal structural operators (Γ, Δ, Ω)  
+> explain the geometric and dynamical phenomena observed in real systems?
+
+It connects:
+
+- formal structure (RESEARCH layer)  
+- empirical observations (FIELD_LAYER)  
+- operational behavior (NAVIGATOR)  
+
+→ forming a **complete explanatory chain from theory to application**
+
 # 🧠 NEXAH — Theory to Field Mapping
 
 This document establishes the **explicit connection between the abstract structural theory (Γ, Δ, Ω)**  
