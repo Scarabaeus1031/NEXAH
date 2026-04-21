@@ -603,3 +603,296 @@ is intentionally left open.
 
 The purpose of this work is to document clearly enough  
 that others can decide.
+
+---
+
+---
+
+## V7 Extension — Cost, Navigation, and Reachability Structure
+
+This section documents the transition from pure observation (V6)  
+to **navigation-based analysis of the same field**.
+
+The goal is not to redefine the system,  
+but to test whether the observed structures:
+
+→ can be **operationalized**
+
+---
+
+### 20. Cost Field Emergence
+
+A scalar cost field is introduced:
+
+- based on trajectory simulation
+- integrating:
+  - speed (energy-like)
+  - curvature (directional change)
+  - failure penalties
+
+Meaning:
+
+→ cost(x) ≈ effort required to reach a target region
+
+Observation:
+
+- cost is highly non-uniform
+- sharp gradients appear near transition regions
+
+Interpretation:
+
+→ the system defines an **implicit energy landscape**
+
+---
+
+### 21. Reachability is Structured (Not Global)
+
+Binary classification of reachability shows:
+
+- only a limited region can reach the target
+- this region is:
+  - asymmetric
+  - wedge-shaped
+  - sharply bounded
+
+Observed geometry:
+
+→ triangular / splinter-like region
+
+Interpretation:
+
+→ the system is **not fully controllable**
+→ reachable states form a constrained manifold
+
+---
+
+### 22. Splinter / Transition Wedge
+
+The previously observed "Riss" becomes explicit:
+
+- appears as a narrow, structured corridor
+- separates reachable from unreachable regions
+
+Properties:
+
+- sharp boundary
+- directional asymmetry
+- stable across parameter variations
+
+Interpretation:
+
+→ this is not noise or artifact  
+
+→ it behaves like a **finite-time separatrix**
+
+---
+
+### 23. Navigation Field (−∇cost)
+
+By computing:
+
+    N(x) = −∇cost
+
+we obtain a navigation field.
+
+Observed:
+
+- trajectories align with N(x)
+- convergence is curved, not direct
+- flow organizes into channels
+
+Interpretation:
+
+→ optimal motion is embedded in the field itself  
+
+→ navigation = following field geometry  
+
+---
+
+### 24. Attractor Convergence
+
+Across many initial conditions:
+
+- trajectories converge to a common region near target
+
+Observed:
+
+- convergence is robust
+- independent of initial direction (within reachable region)
+
+Interpretation:
+
+→ presence of a **global attractor basin**
+
+Important:
+
+- approach is not radial  
+- follows curved "capture paths"
+
+---
+
+### 25. Boundary as Directional Gate
+
+Attempts to cross the splinter boundary show:
+
+- trajectories deflect or stall
+- only specific entry directions succeed
+
+Interpretation:
+
+→ boundary is not static  
+
+→ it acts as a **directional gate**
+
+Properties:
+
+- asymmetric
+- angle-dependent
+- sensitive to initial velocity
+
+---
+
+### 26. Alignment with V6 Structures
+
+Comparison between:
+
+- V6 boundary structures ("Riss", sensitivity zones)
+- V7 reachability map
+
+Result:
+
+→ near-perfect geometric overlap
+
+Interpretation:
+
+→ both analyses reveal the same underlying structure  
+
+→ V7 confirms V6 findings are structural, not visual artifacts  
+
+---
+
+### 27. Energy Ridge Interpretation
+
+Minimal control energy maps show:
+
+- sharp ridge along splinter boundary
+- low-energy channel inside wedge
+
+Interpretation:
+
+→ transitions require crossing an **energy barrier**
+
+→ optimal paths follow minimal-energy corridor  
+
+---
+
+### 28. Operator Interpretation (curl vs divergence)
+
+Link to earlier observations:
+
+- divergence → attraction / compression
+- curl → rotation / persistence
+
+Observed:
+
+→ splinter region appears where:
+
+- attraction and rotation compete
+- flow becomes unstable or redirects
+
+Interpretation:
+
+→ transition region = **operator conflict zone**
+
+---
+
+### 29. Geometry of the System (Updated View)
+
+The system can now be described as:
+
+- attractor basin (right region)
+- orbit / rotational region (left region)
+- narrow transition corridor (splinter)
+
+Key properties:
+
+- asymmetric structure
+- directional transitions
+- constrained navigation
+
+---
+
+### 30. Structural Confirmation
+
+V7 provides a critical validation step:
+
+- structures detected in V6  
+- are reproduced via independent method (cost/navigation)
+
+Meaning:
+
+→ the geometry is intrinsic to the system  
+
+→ not dependent on visualization method  
+
+---
+
+### 31. Conceptual Shift
+
+The interpretation evolves from:
+
+- describing trajectories  
+
+to:
+
+- describing **movement constraints in a field**
+
+Formally:
+
+→ motion is constrained by geometry, not only by force  
+
+---
+
+### 32. Limitations (V7 Layer)
+
+- cost function is heuristic
+- depends on simulation parameters
+- finite-time effects remain
+- no stochastic exploration yet
+- no analytical formulation of cost field
+
+---
+
+### 33. Next Directions
+
+Suggested extensions:
+
+- stochastic navigation (Boltzmann-like sampling)
+- multi-target cost fields
+- adaptive control strategies
+- phase-space extension (x, y, vx, vy)
+- analytical approximation of cost landscape
+
+---
+
+### 34. Key Insight (V7 Phase)
+
+> The system is not only structured —  
+> it defines where motion is possible.
+
+---
+
+### 35. Interpretation Status
+
+This layer remains:
+
+- empirical
+- computational
+- exploratory
+
+However:
+
+→ consistency across independent methods  
+→ increases confidence in structural validity  
+
+---
