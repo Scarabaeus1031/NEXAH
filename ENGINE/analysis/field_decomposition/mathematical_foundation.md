@@ -14,6 +14,24 @@ It clarifies:
 
 ---
 
+## Positioning
+
+This work does not introduce new equations.
+
+Instead, it proposes a different perspective:
+
+- dynamics are treated as a field
+- trajectories are treated as probes of structure
+- cost is constructed from simulated motion
+- navigation emerges from this constructed field
+
+The contribution is therefore:
+
+→ not new mathematics,  
+→ but a structured way to extract geometry and navigation from known systems
+
+---
+
 ## 1. State Space
 
 The system operates on a continuous 2D domain:
@@ -307,6 +325,33 @@ The system can be viewed as:
 Result:
 
 → a structured, navigable field representation  
+
+---
+
+---
+
+## Visual Examples
+
+### Navigation Field (Cost Gradient)
+
+![Navigation Field](outputs/v7_3/v7_3_navigation.png)
+
+Shows:
+
+- cost landscape
+- navigation field (−∇J)
+- resulting trajectories
+
+---
+
+### Reachability / Failure Map
+
+![Failure Map](outputs/v7_4/v7_4_failure_map.png)
+
+Shows:
+
+- regions from which the target is reachable
+- sharp transition boundary ("splinter")
 
 ---
 
