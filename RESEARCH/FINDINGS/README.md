@@ -80,7 +80,7 @@ NEXAH asks:
 
 ---
 
-![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+![Off-Manifold Flow](../../APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
 This is a real system trajectory from an IEEE power grid model.
 
