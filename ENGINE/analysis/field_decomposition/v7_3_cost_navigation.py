@@ -19,14 +19,21 @@ import matplotlib.pyplot as plt
 OUTDIR = "output/v7_3"
 os.makedirs(OUTDIR, exist_ok=True)
 
-# ============================================================
-# GRID (must match V7.2)
-# ============================================================
+# ------------------------------------------------------------
+# LOAD GRID FROM V7.2 (WICHTIG!)
+# ------------------------------------------------------------
+x_path = "output/v7_2/grid_x.npy"
+y_path = "output/v7_2/grid_y.npy"
 
-nx, ny = 240, 220
+if os.path.exists(x_path) and os.path.exists(y_path):
+    print("✓ Loaded grid from V7.2")
+    x = np.load(x_path)
+    y = np.load(y_path)
+else:
+    print("⚠️ No grid found → using fallback grid")
+    x = np.linspace(6, 17, cost_map.shape[1])
+    y = np.linspace(22, 31, cost_map.shape[0])
 
-x = np.linspace(6, 17, nx)
-y = np.linspace(22, 31, ny)
 X, Y = np.meshgrid(x, y)
 
 dx = x[1] - x[0]
