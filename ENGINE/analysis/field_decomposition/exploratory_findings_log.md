@@ -206,6 +206,328 @@ Status: interpretive layer only
 
 ---
 
+---
+
+### 9. Dual-Basin Interaction ("Two Chambers")
+
+Across class maps and trajectory plots, the system consistently shows:
+
+- two dominant basins (left / right)
+- a central transition region between them
+
+Observed patterns:
+
+- spatial separation into two large regions ("chambers")
+- sharp but structured boundary between them
+- asymmetric occupation depending on drift
+
+Notable:
+
+- sampling appears "perforated" due to discrete initialization
+- underlying structure remains continuous
+
+Interpretation:
+
+- system behaves like a dual-attractor configuration
+- central region acts as a decision boundary
+
+Status: stable and highly reproducible
+
+---
+
+### 10. Curved Transition Structures ("S-Shape" / "Sichel")
+
+Flow visualizations reveal:
+
+- curved transition zones between basins
+- often resembling:
+  - S-shaped curves
+  - crescent ("Sichel") structures
+
+Observed behavior:
+
+- trajectories bend strongly when crossing these regions
+- flow lines align along these curves before diverging
+
+Interpretation:
+
+- interaction of:
+  - gradient field
+  - rotational component (drift)
+
+→ produces broken symmetry
+
+These regions are:
+
+- not random
+- not noise
+
+but:
+
+→ structured transition manifolds
+
+Status: consistently present across parameter sets
+
+---
+
+### 11. High-Sensitivity Channels
+
+In sensitivity maps:
+
+- narrow vertical or curved regions show high response to perturbations
+
+Observed:
+
+- small change in initial condition → large change in outcome
+- strong alignment along specific angular regions (θ)
+
+Interpretation:
+
+- system contains preferred switching channels
+- likely related to:
+  - local flattening of potential
+  - directional dominance of drift
+
+These regions act as:
+
+→ transition amplifiers
+
+Status: strong and repeatable feature
+
+---
+
+### 12. Interference Zones (Multi-Influence Regions)
+
+Certain regions (especially between basins and near the upper source) show:
+
+- complex flow behavior
+- rapid direction changes
+- mixed trajectory outcomes
+
+Observed:
+
+- flow lines twist and reorient
+- trajectories diverge despite similar starting points
+
+Interpretation:
+
+- competing influence of:
+  - multiple minima
+  - elevated source region
+  - rotational field
+
+This produces:
+
+→ interference-like structures in the flow
+
+Status: consistent, especially near central and upper regions
+
+---
+
+### 13. Discrete Sampling Artifacts vs Persistent Structure
+
+Some visual features appear as:
+
+- dotted regions
+- segmented bands
+- "bead-like" structures along trajectories
+
+Analysis:
+
+- partially due to:
+  - grid resolution
+  - integration step size
+
+However:
+
+- persistence across different views suggests:
+
+→ underlying continuous structure
+
+Interpretation:
+
+- discrete appearance overlays a continuous field
+- observed "layers" may correspond to:
+
+  - energy levels
+  - trajectory families
+  - sampling of invariant sets
+
+Status: mixed (numerical + structural)
+
+---
+
+### 14. Phase Transition Behavior (Trajectory Transformation)
+
+Observed in trajectory overlays:
+
+- trajectories entering one region may exit with different qualitative behavior
+
+Example:
+
+- smooth entry → curved deflection → capture or escape
+- trajectory "type" changes mid-flight
+
+Interpretation:
+
+- local phase transitions in dynamics
+- region-dependent behavior switching
+
+Possible explanation:
+
+- crossing of:
+  - separatrix-like structures
+  - high-sensitivity zones
+
+Status: strongly present, requires deeper phase-space analysis
+
+---
+
+### 15. Central Radiating Structure ("Lighthouse" Effect)
+
+In several maps (distance, separatrix, stability):
+
+- central region emits radial or quasi-radial patterns
+
+Observed:
+
+- lines radiating outward
+- directional preference in flow
+- strong gradients near center
+
+Interpretation:
+
+- central point acts as:
+  - organizing singularity (numerical or structural)
+  - reference point for global flow
+
+Analogy (informal):
+
+- "lighthouse"
+- radial emission structure
+
+Important:
+
+- this is a visualization of field structure,
+  not a physical emission process
+
+Status: persistent across derived maps
+
+---
+
+### 16. Spiral / Rotational Persistence
+
+Trajectory overlays and stability maps show:
+
+- spiral-like convergence
+- circular or near-circular persistence
+- long-lived looping behavior
+
+Interpretation:
+
+- rotational component introduces:
+
+  - angular momentum-like effect
+  - delayed convergence
+
+Result:
+
+→ trajectories do not fall directly into minima  
+→ they circulate before stabilizing  
+
+Status: core structural feature
+
+---
+
+### 17. Separatrix Core Formation
+
+In separatrix-like visualizations:
+
+- a compact central structure emerges
+- often irregular but clearly bounded
+
+Observed:
+
+- small region where multiple boundaries meet
+- high instability and branching
+
+Interpretation:
+
+- candidate for:
+
+  - separatrix intersection region
+  - saddle-like core
+
+This region likely controls:
+
+→ global routing of trajectories
+
+Status: highly relevant, central feature
+
+---
+
+### 18. Breathing / Pulsation Analogy (Informal)
+
+Repeated observation across trajectory sets:
+
+- inward motion (capture)
+- outward motion (escape)
+- transitional pause regions
+
+Described informally as:
+
+- "breathing"
+- "in / out / pause"
+
+Interpretation:
+
+- system exhibits:
+
+  - multi-timescale dynamics
+  - slow-fast transitions
+
+This is consistent with:
+
+- nonlinear dynamical systems
+- damped oscillatory behavior
+
+Status: interpretive but consistent across observations
+
+---
+
+### 19. Dual-Structure Symmetry Breaking
+
+Despite symmetric base potentials:
+
+- system develops directional bias
+
+Observed:
+
+- one basin dominates certain regions
+
+- trajectories prefer specific directions
+
+Interpretation:
+
+- symmetry is broken by:
+
+  - rotational field
+
+  - drift component
+
+  - integration dynamics
+
+Result:
+
+→ emergent asymmetry from symmetric setup
+
+Status: robust and important
+
+---
+
+
+---
+
 ## Relation to Known Frameworks
 
 The system shows parallels to:
