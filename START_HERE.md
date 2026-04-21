@@ -16,13 +16,25 @@
 
 ---
 
-## 🔥 Key idea
+## 🔍 What is happening
 
-This is not continuous control.
+Even in chaos:
 
-This is:
+- patterns repeat  
+- transitions occur at specific regions  
+- structure emerges over time  
 
-> **adaptive navigation between regimes**
+---
+
+## 🔥 This is the key shift
+
+From:
+
+> random motion  
+
+To:
+
+> **structured transitions between regimes**
 
 ---
 
@@ -34,6 +46,46 @@ python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
 
 ---
 
-## 🧭 Understand what you saw
+## 🧪 Try one change (30 seconds)
 
-👉 Continue here: [README.md](README.md)
+Open the script and find:
+
+```python
+control = -0.30 * dx
+```
+
+Change it to:
+
+```python
+control = -0.10 * dx
+```
+
+Run again.
+
+👉 Watch how the behavior changes.
+
+---
+
+## 🧠 What you just did
+
+You did NOT tune parameters.
+
+You changed:
+
+> **how the system navigates its own structure**
+
+---
+
+## 🧭 What to explore next
+
+- 🧠 Full explanation → [README.md](README.md)  
+- 🔬 Structure discovery → [DISCOVERY_ENGINE/discovery_core_log.md](DISCOVERY_ENGINE/discovery_core_log.md)  
+- 🌊 Field construction → [FIELD_LAYER/build_log.md](FIELD_LAYER/build_log.md)  
+
+---
+
+## 💡 In one sentence
+
+NEXAH turns chaos into:
+
+> **something you can interact with**
