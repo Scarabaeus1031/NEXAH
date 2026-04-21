@@ -564,6 +564,339 @@ Potential directions:
 
 ---
 
+---
+
+# 🔷 V7 — Cost Field & Navigation Phase
+
+Files:
+- v7_2_transition_cost_map.py  
+- v7_3_cost_navigation.py  
+- v7_4_failure_map.py  
+- v7_5_alignment_check.py  
+- v7_6_controlled_crossing.py  
+- v7_7_minimal_control_energy_map.py  
+- v7_8_multi_target_navigation.py (planned)  
+- v7_9_policy_field.py (planned)  
+
+---
+
+## Concept Shift
+
+V7 introduces a fundamental extension:
+
+From:
+
+→ observing structure  
+
+To:
+
+→ **navigating structure**
+
+---
+
+## Core Idea
+
+Instead of asking:
+
+→ "What does the system do?"
+
+We now ask:
+
+→ "How can the system move optimally within itself?"
+
+---
+
+## 1. Cost Field (V7.2)
+
+A scalar field is constructed:
+
+    cost(x) = cumulative effort to reach target
+
+Components:
+
+- speed (energy usage)
+- curvature (directional change)
+- failure penalties
+
+Interpretation:
+
+→ cost encodes **difficulty of transition**
+
+---
+
+## 2. Emergence of a Transition Wedge
+
+Observed in cost_map:
+
+- sharp triangular region near target
+- asymmetric shape
+- bounded by high-cost walls
+
+Interpretation:
+
+→ reachable region is not radial  
+→ it is **channeled and constrained**
+
+This region is called:
+
+→ **Splinter / Transition Wedge**
+
+---
+
+## 3. Navigation Field (V7.3)
+
+Derived as:
+
+    N(x) = -∇cost
+
+Meaning:
+
+→ direction of optimal descent toward target
+
+Observation:
+
+- trajectories align into structured flows
+- convergence is indirect (curved)
+- central attractor emerges
+
+Interpretation:
+
+→ navigation is field-driven, not path-planned  
+
+---
+
+## 4. Attractor Behavior
+
+Observed:
+
+- trajectories from diverse starting points
+- converge toward same region
+
+Interpretation:
+
+→ system contains a **global attractor basin**
+
+Important:
+
+→ convergence occurs via **curved capture ("hook")**, not straight lines  
+
+---
+
+## 5. Failure / Reachability Map (V7.4)
+
+Binary classification:
+
+- reachable → low cost
+- unreachable → high cost
+
+Result:
+
+- sharp boundary region
+- matches splinter geometry
+
+Interpretation:
+
+→ system is **not globally controllable**
+→ reachability is spatially constrained  
+
+---
+
+## 6. Alignment with FIELD_LAYER (V7.5)
+
+Comparison:
+
+- V7 reachability region
+- FIELD_LAYER separatrix / boundary structures
+
+Result:
+
+→ near-perfect overlap (IoU ≈ 1.0)
+
+Interpretation:
+
+→ cost-based navigation and field geometry describe the same structure  
+
+---
+
+## 7. Controlled Boundary Crossing (V7.6)
+
+Experiment:
+
+- attempt to cross splinter boundary using control
+
+Observation:
+
+- trajectories stall or deflect
+- only specific entry angles succeed
+
+Interpretation:
+
+→ boundary behaves as **directional gate**
+→ control is asymmetric  
+
+---
+
+## 8. Energy Perspective (V7.7)
+
+Minimal control energy computed:
+
+- energy required to reach target
+- spatially varying
+
+Observation:
+
+- sharp ridge near splinter boundary
+- minimal paths align with channel
+
+Interpretation:
+
+→ system behaves as **energy landscape**
+
+---
+
+## 9. Interpretation of the Splinter
+
+The "Riss" is now understood as:
+
+- not a numerical artifact  
+- not a classification boundary  
+
+But:
+
+→ a **physical transition barrier in the field**
+
+Properties:
+
+- asymmetric
+- directional
+- energy-dependent
+- structurally stable
+
+---
+
+## 10. Relation to Field Operators
+
+Connection to V11–V29 analysis:
+
+- divergence → attraction / compression  
+- curl → rotation / orbit  
+
+Observation:
+
+→ splinter occurs where:
+
+    curl ≈ competing with divergence
+
+Interpretation:
+
+→ transition zone = operator conflict region  
+
+---
+
+## 11. Structural Interpretation
+
+System can now be described as:
+
+- attractor basin (right side)
+- rotational orbit region (left side)
+- narrow transition corridor (splinter)
+
+Geometry:
+
+→ not symmetric  
+→ not continuous  
+→ structured by field decomposition  
+
+---
+
+## 12. Key Insight
+
+```text
+Navigation does not create structure.
+It reveals the constraints already present in the field.
+```
+---
+
+## 13. Meta Observation
+
+V7 confirms:
+
+- FIELD_LAYER findings are not visual artifacts  
+- navigation exposes the same geometry  
+
+Meaning:
+
+→ structure is intrinsic, not representation-dependent  
+
+---
+
+## 14. Transition of the System Model
+
+The system evolves from:
+
+field → trajectories → classification  
+
+to:
+
+field → cost → navigation → control → convergence  
+
+---
+
+## 15. Interpretation Layer (Informal)
+
+The system resembles:
+
+- potential + rotational field  
+- constrained energy landscape  
+- directional transition barrier  
+
+Emerging picture:
+
+- central axis (low deviation region)  
+- lateral orbit structures  
+- gated transition corridor  
+
+---
+
+## 16. Current Limitations
+
+- cost is heuristic (not derived from physics)  
+- grid resolution effects remain  
+- no formal proof of optimality  
+- no stochastic policy yet  
+- no real-time control loop  
+
+---
+
+## 17. Next Steps
+
+1. stochastic navigation (Boltzmann / softmax)  
+2. multi-target fields  
+3. policy learning  
+4. real-time control feedback  
+5. higher-dimensional extension  
+6. analytical approximation of cost field  
+
+---
+
+## 18. Core Shift (Summary)
+
+V6:
+
+→ detects structure  
+
+V7:
+
+→ moves within structure  
+
+---
+
+## 🔥 Key Result of V7
+
+> The system is not only structured —  
+> it is navigable under constraints defined by its own geometry
+---
+
 ## Meta Observation (Implementation)
 
 A notable development:
