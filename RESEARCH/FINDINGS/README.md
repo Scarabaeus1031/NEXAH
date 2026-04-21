@@ -1,3 +1,94 @@
+# ⚡ NEXAH — Navigating Structure in Dynamical Systems
+
+**A computational framework for discovering and navigating structure in complex dynamical systems.**
+
+Most complex systems are treated as:
+
+- unpredictable  
+- noisy  
+- only locally controllable  
+
+NEXAH challenges this view.
+
+---
+
+## 🧠 What is new
+
+NEXAH shows that:
+
+> complex dynamical systems can be reconstructed as  
+> **structured fields with geometry, flow, and convergence behavior**
+
+This enables a shift from:
+
+- state-based analysis  
+- threshold-based control  
+
+to:
+
+> **trajectory-aware navigation within a structured field**
+
+---
+
+## 🔬 What was discovered
+
+Across multiple experiments (Lorenz, power systems), the following consistent structure emerges:
+
+- transitions are **not discrete events**, but spatially extended processes  
+- transition regions form **geometric channels**  
+- continuous dynamics collapse into **discrete state structures (graphs, cycles)**  
+- system motion follows an **implicit energy landscape**  
+- a **dominant attractor with stable convergence** governs long-term behavior  
+- the system is **locally controllable within its structure**  
+
+👉 These findings are documented in:
+
+→ [`RESEARCH/core_findings.md`](RESEARCH/core_findings.md)
+
+---
+
+## 🚀 Why this matters
+
+This changes how we interact with complex systems.
+
+Instead of:
+
+- detecting failure  
+- reacting to instability  
+
+NEXAH enables:
+
+> **understanding where the system is and steering how it moves**
+
+Potential implications:
+
+- early detection of critical transitions  
+- trajectory-based control instead of setpoint control  
+- navigation between regimes instead of static stabilization  
+
+---
+
+## 🧭 Core Perspective
+
+Classical question:
+
+→ *Is the system stable?*
+
+NEXAH asks:
+
+> **Where is the system in its structure — and where is it going?**
+
+---
+
+![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+
+This is a real system trajectory from an IEEE power grid model.
+
+NEXAH reconstructs a local flow field around it,  
+revealing how the system moves within a structured stability landscape.
+
+---
+
 # 🧠 NEXAH — Core Findings (Summary)
 
 This document provides a **condensed overview of the key empirical results**  
