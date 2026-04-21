@@ -1,9 +1,0 @@
-{
-  "run_id": "20260321_154703",
-  "metrics": {
-    "entropy": -330097.7444219556,
-    "recurrence": 0.17,
-    "cycles_detected": 33,
-    "unique_cycles": 7
-  }
-}

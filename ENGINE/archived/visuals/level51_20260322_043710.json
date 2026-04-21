@@ -1,0 +1,11 @@
+{
+  "num_particles": 120,
+  "steps": 900,
+  "config": {
+    "step_size": 0.18,
+    "rotation": 0.4,
+    "return": 0.16,
+    "rays": 7,
+    "angle_offset": 0.0
+  }
+}

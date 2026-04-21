@@ -1,0 +1,10 @@
+{
+  "config": {
+    "STEP_SIZE": 0.45,
+    "NOISE": 0.05,
+    "DAMPING": 0.92
+  },
+  "metrics": {
+    "entropy": 6.973156810935212
+  }
+}

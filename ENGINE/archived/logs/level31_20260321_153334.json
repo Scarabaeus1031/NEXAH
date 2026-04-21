@@ -1,0 +1,9 @@
+{
+  "run_id": "20260321_153334",
+  "metrics": {
+    "entropy": -151488.93096256308,
+    "recurrence": 0.193125,
+    "cycles_detected": 0,
+    "unique_cycles": 0
+  }
+}

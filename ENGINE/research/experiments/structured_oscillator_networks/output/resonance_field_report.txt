@@ -1,9 +1,0 @@
-Resonance Field Report
-======================
-
-nodes: 64
-timesteps: 9600
-
-mean field strength: 0.4011
-std field strength: 0.0506
-max field strength: 0.4945

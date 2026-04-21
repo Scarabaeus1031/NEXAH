@@ -1,0 +1,17 @@
+{
+  "run_id": "20260321_162434",
+  "metrics": {
+    "entropy": 5.696362352145998,
+    "recurrence": 0.05,
+    "cycles_detected": 43,
+    "unique_cycles": 15,
+    "semantic_groups": 5,
+    "semantic_sizes": [
+      6,
+      4,
+      2,
+      1,
+      2
+    ]
+  }
+}

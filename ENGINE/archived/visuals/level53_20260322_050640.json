@@ -1,0 +1,12 @@
+{
+  "num_particles": 140,
+  "steps": 1000,
+  "config": {
+    "step_size": 0.18,
+    "rotation": 0.38,
+    "return": 0.14,
+    "split": 0.22,
+    "rejoin": 0.18,
+    "pentagon": 5
+  }
+}

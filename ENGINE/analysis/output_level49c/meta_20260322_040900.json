@@ -1,9 +1,0 @@
-{
-  "num_particles": 120,
-  "steps": 600,
-  "config": {
-    "step": 0.22,
-    "drift": 0.045,
-    "rotation": 0.38
-  }
-}

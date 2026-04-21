@@ -1,0 +1,23 @@
+{
+  "run_id": "20260321_034723",
+  "config": {
+    "N_AGENTS": 120,
+    "STEPS": 220,
+    "STEP_SIZE": 0.45,
+    "NOISE": 0.05,
+    "DAMPING": 0.92,
+    "ALPHA_FIELD": 0.6,
+    "BETA_TARGET": 1.2,
+    "GAMMA_MEMORY": 0.6
+  },
+  "metrics": {
+    "entropy": 7.2591815255396055,
+    "peak": 0.9999991524655916,
+    "spread": 0.13207934741077568,
+    "center_of_mass": [
+      16.923984261918672,
+      20.967338235447926
+    ],
+    "path_length": 219.25883882938516
+  }
+}
