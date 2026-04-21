@@ -7,10 +7,10 @@
 
 ![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-This is a **real system trajectory**.
+This is a **real system trajectory** from an IEEE power grid model.
 
-👉 NEXAH interprets it not as noise —  
-but as movement inside a **structured field**
+Instead of treating it as noise,  
+NEXAH reveals it as motion within a **structured stability field**
 
 ---
 
