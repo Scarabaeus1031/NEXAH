@@ -305,6 +305,189 @@ Use:
 
 ---
 
+---
+
+## V7 Extension — Reading Navigation & Cost Fields
+
+The V7 layer introduces a new type of visualization:
+
+→ not only *what the system does*  
+→ but *what the system allows*
+
+---
+
+### 11. Cost Field
+
+The cost field represents:
+
+→ how difficult it is to reach a target region
+
+Visual indicators:
+
+- smooth gradients → easy movement  
+- steep gradients → difficult transitions  
+- sharp ridges → barriers  
+
+Interpretation:
+
+→ cost encodes a **navigation landscape**
+
+Important:
+
+- this is not physical energy  
+- it is a **constructed effort measure**
+
+---
+
+### 12. Navigation Field (−∇cost)
+
+The navigation field shows:
+
+→ the direction of optimal movement
+
+Visual indicators:
+
+- arrows / flow lines  
+- trajectories aligning into channels  
+
+Interpretation:
+
+→ trajectories follow the geometry of the cost field  
+
+Key idea:
+
+> optimal paths are embedded in the field — not externally computed  
+
+---
+
+### 13. Reachability Regions
+
+Not all starting points can reach the target.
+
+Visual indicators:
+
+- clear separation between:
+  - reachable zones  
+  - unreachable zones  
+
+Interpretation:
+
+→ the system defines **where motion is possible**
+
+---
+
+### 14. Splinter / Transition Wedge
+
+A central structure in V7:
+
+→ narrow, wedge-like region connecting space to the target  
+
+Visual indicators:
+
+- triangular or funnel-shaped region  
+- sharp boundaries  
+- asymmetric geometry  
+
+Interpretation:
+
+→ this is the **only efficient transition corridor**
+
+Important:
+
+- not an artifact  
+- appears consistently across methods  
+
+---
+
+### 15. Energy Ridge
+
+The boundary of the splinter often appears as:
+
+→ a ridge in the cost field  
+
+Visual indicators:
+
+- high-cost line or arc  
+- strong gradient change  
+
+Interpretation:
+
+→ crossing this region requires significantly higher effort  
+
+---
+
+### 16. Curved Convergence ("Hook")
+
+Trajectories approaching the target:
+
+- do not move straight  
+- bend into the attractor  
+
+Visual indicators:
+
+- arc-shaped approach paths  
+- spiral or hook-like structures  
+
+Interpretation:
+
+→ convergence follows field geometry, not direct distance  
+
+---
+
+### 17. Directional Boundaries
+
+Boundaries in V7 are:
+
+- not symmetric  
+- not equally crossable from all directions  
+
+Observed:
+
+- some angles allow crossing  
+- others deflect trajectories  
+
+Interpretation:
+
+→ boundaries act as **directional gates**
+
+---
+
+### 18. Alignment with V6 Structures
+
+The V7 visuals should be read together with V6:
+
+- splinter ↔ "Riss"  
+- reachability ↔ class boundaries  
+- cost ridges ↔ sensitivity zones  
+
+Interpretation:
+
+→ both layers describe the same structure  
+→ from different perspectives  
+
+---
+
+### 19. Reading Strategy (V6 + V7)
+
+To interpret a scene:
+
+1. Identify basins (V6)  
+2. locate boundaries (V6)  
+3. check sensitivity zones (V6)  
+4. overlay cost structure (V7)  
+5. identify reachable corridor (V7)  
+
+Result:
+
+→ a complete picture of:
+
+- structure  
+- dynamics  
+- navigation constraints  
+
+---
+---
+
 ## Important Notes
 
 - This system is exploratory.
