@@ -29,6 +29,15 @@ NAVIGATOR (Control & Navigation)
 
 ---
 
+## 🔬 Theory → Field Mapping
+
+→ [theory_to_field_mapping.md](./theory_to_field_mapping.md)
+
+This document connects the abstract operators (Γ, Δ, Ω)  
+to the observed field structure in dynamical systems.
+
+---
+
 # 🧱 Structure of This Module
 
 This research module is organized into:
