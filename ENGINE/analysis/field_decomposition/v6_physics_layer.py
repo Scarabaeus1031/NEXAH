@@ -149,7 +149,7 @@ fig, axs = plt.subplots(2, 2, figsize=(14, 12))
 # ------------------------------------------------------------
 ax = axs[0, 0]
 cf = ax.contourf(X, Y, V, levels=50, cmap="viridis")
-ax.streamplot(X, Y, Fx, Fy, color="white", density=1.3, linewidth=0.8)
+ax.streamplot(X, Y, Fx, Fy, color=(1, 1, 1, 0.6), density=1.1, linewidth=0.6)
 
 centers = [
     (10.0, 25.0, "C0"),
