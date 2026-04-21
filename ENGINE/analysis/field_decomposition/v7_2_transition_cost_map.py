@@ -119,14 +119,29 @@ cost_map = np.log1p(cost_map)
 # PLOT
 # ------------------------------------------------------------
 plt.figure(figsize=(7,6))
+
 plt.contourf(X, Y, cost_map, levels=50, cmap="viridis")
+
+# target marker
 plt.scatter(TARGET[0], TARGET[1], color="white", s=50, label="Target")
 
 plt.title("Transition Cost Map → Target (13, 26)")
 plt.legend()
 
 plt.tight_layout()
+
+# save image
 plt.savefig(os.path.join(OUTDIR, "v7_2_cost_map.png"), dpi=150)
+
 plt.close()
+
+# ------------------------------------------------------------
+# 🔥 SAVE DATA (WICHTIG!)
+# ------------------------------------------------------------
+np.save(os.path.join(OUTDIR, "cost_map.npy"), cost_map)
+
+# optional (empfohlen für spätere Pipeline)
+np.save(os.path.join(OUTDIR, "grid_x.npy"), x)
+np.save(os.path.join(OUTDIR, "grid_y.npy"), y)
 
 print("V7.2 done →", OUTDIR)
