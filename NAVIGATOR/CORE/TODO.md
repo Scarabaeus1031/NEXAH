@@ -26,7 +26,7 @@ The system is grounded in the **RESEARCH layer**:
 
 This foundation is **already defined and not part of the current TODO**.
 
-👉 Current work focuses on:
+👉 Current work focuses on:  
 **validation, demonstration, and integration — not theory expansion**
 
 👉 The system is no longer only analytical.
@@ -51,26 +51,35 @@ while keeping the mathematical core **explicit and documented**.
 
 # 🔴 PRIORITY 1 — ENTRY POINT (CRITICAL)
 
-👉 This is the single most important step.
+👉 This remains the single most important technical step.
 
 ### Goal:
 > Clone → Run → Understand in 1 minute
 
 ---
 
+### Status:
+- [x] Root `README.md` rewritten
+- [x] `START_HERE.md` created and focused
+- [~] `run_nexah_demo.py` exists in some form, but must be finalized as the **official** entry point
+
+---
+
 ### ToDo:
 
-- [ ] Create `run_nexah_demo.py`
+- [ ] Finalize `run_nexah_demo.py`
+- [ ] Ensure it runs cleanly from repo root
+- [ ] Ensure output is intentional, minimal, and reproducible
 
 ---
 
 ### Must show (minimal pipeline):
 
 1. Lorenz dynamics  
-2. Field reconstruction (α, β, γ)  
-3. Flow field / structure  
-4. Convergence behavior  
-5. Final attractor (fixpoint)  
+2. Field reconstruction / structure  
+3. Flow field / geometry  
+4. Regime / transition behavior  
+5. Navigation or convergence behavior  
 
 ---
 
@@ -84,49 +93,49 @@ while keeping the mathematical core **explicit and documented**.
 
 ### Output (critical)
 
-- trajectory plot  
-- field overlay  
-- final point (x*)  
-- 1 short printed result block  
+- 1 main visual or 1–2 plots max  
+- short printed result block  
+- no messy logs  
 
 ---
 
 ### Goal:
 
-> show that the system **converges within a structured field**
+> show that the system **extracts structure and supports navigation inside it**
 
 ---
 
 # 🔵 PRIORITY 2 — START HERE / ONBOARDING
 
-👉 Without this, nobody can enter the system.
+👉 This is largely done.
 
 ---
 
-### ToDo:
-
-- [ ] Create `START_HERE.md`
-
-Must include:
-
-1. Install (minimal)  
-2. Run demo  
-3. What you see (very concrete)  
-4. Why it matters  
+### Status:
+- [x] `START_HERE.md` exists
+- [x] README ↔ START_HERE separation is clear
+- [x] Visual entry point exists
+- [x] Basic onboarding flow exists
 
 ---
 
-👉 Keep it:
+### Remaining ToDo:
 
-- short  
-- visual  
-- non-technical  
+- [ ] Verify all links
+- [ ] Verify all referenced visuals exist
+- [ ] Verify demo command still matches actual script behavior
+
+---
+
+### Goal:
+
+> first-time users understand what NEXAH is and can run something immediately
 
 ---
 
 # 🟣 PRIORITY 3 — LORENZ (REPRODUCIBLE CORE DEMO)
 
-👉 Your strongest and most advanced system.
+👉 Still the strongest and most mature reference system.
 
 ---
 
@@ -144,6 +153,7 @@ Must include:
 ### ToDo:
 
 - [ ] Run multiple simulations (20–50 runs)
+- [ ] Store results in a compact reproducibility summary
 
 ---
 
@@ -161,7 +171,7 @@ Must include:
 
 ### 🔥 Evidence Block (CRITICAL)
 
-- [ ] Add a **RESULTS block**
+- [ ] Add a **RESULTS block** to the Lorenz demo or docs
 
 Example:
 
@@ -182,9 +192,9 @@ Stable convergence across runs.
 
 ---
 
-# 🟡 PRIORITY 4 — ATTRACTOR & CONVERGENCE (NEW)
+# 🟡 PRIORITY 4 — ATTRACTOR & CONVERGENCE
 
-👉 This is the strongest result of the current system.
+👉 This is still one of the strongest concrete claims in the system.
 
 ---
 
@@ -213,24 +223,29 @@ Stable convergence across runs.
 
 # 🟢 PRIORITY 5 — IEEE USE CASE (PACKAGED)
 
-👉 Shows real-world relevance.
+👉 Important for credibility, but should stay honest and compact.
+
+---
+
+### Status:
+- [x] Strong IEEE visuals exist
+- [x] IEEE V69 off-manifold flow visualization is reproducible
+- [ ] Packaged demo entry point still missing
 
 ---
 
 ### ToDo:
 
 - [ ] Create `run_ieee_demo.py`
-
-Must output:
-
-- trajectory  
-- risk / coherence curve  
-- convergence behavior  
-- 1–2 key metrics  
+- [ ] Make one official IEEE demo path
+- [ ] Output:
+  - one trajectory / flow visual
+  - one short metric block
+  - one short explanation
 
 ---
 
-👉 Goal:
+### Goal:
 
 > one reproducible real-world example
 
@@ -238,12 +253,20 @@ Must output:
 
 # 🟡 PRIORITY 6 — VISUAL SYSTEM FINALIZATION
 
+👉 Important, but now secondary to demo + evidence.
+
+---
+
+### Status:
+- [x] Core visual system is strong
+- [x] Key visuals selected for README / START_HERE
+
 ---
 
 ### ToDo:
 
-- [ ] Add captions (1–2 lines per visual)  
-- [ ] Clean ordering  
+- [ ] Add captions (1–2 lines per visual) in the major galleries
+- [ ] Clean ordering where needed
 - [ ] Highlight key visuals:
 
   - V29 → field decomposition  
@@ -254,7 +277,7 @@ Must output:
 
 ---
 
-👉 Goal:
+### Goal:
 
 > visuals explain the system without text
 
@@ -262,29 +285,34 @@ Must output:
 
 # 🟠 PRIORITY 7 — REPOSITORY STRUCTURE
 
+👉 Do light cleanup only. No destructive refactor now.
+
 ---
 
 ### ToDo:
 
-- [ ] Normalize naming  
-- [ ] Align output paths  
-- [ ] Remove redundant scripts  
+- [ ] Normalize naming where easy
+- [ ] Align output paths where easy
+- [ ] Mark redundant / obsolete scripts
+- [ ] Avoid large path-breaking refactors before release
 
 ---
 
-👉 Goal:
+### Goal:
 
-> clean, readable repo
+> clean, readable repo without breaking working code
 
 ---
 
 # 🧠 PRIORITY 8 — MATHEMATICAL CORE
 
+👉 Clarify, do not expand.
+
 ---
 
 ### ToDo:
 
-- [ ] Clean definitions:
+- [ ] Clean definitions for:
 
   - probability field  
   - energy landscape  
@@ -293,15 +321,19 @@ Must output:
   - coupling (τ)  
   - gradient + rotational decomposition  
 
+- [ ] Ensure these are documented in one stable place
+
 ---
 
-👉 Goal:
+### Goal:
 
 > clarity, not expansion
 
 ---
 
 # 🔗 PRIORITY 9 — INTEGRATION (DISCOVERY → NAVIGATOR)
+
+👉 This remains a genuine system milestone.
 
 ---
 
@@ -313,7 +345,15 @@ Field → Flow → Control → Trajectory → Convergence
 
 ---
 
-👉 Goal:
+### ToDo:
+
+- [ ] Define one minimal closed-loop example
+- [ ] Show how Discovery output becomes navigation input
+- [ ] Keep it small and demonstrable
+
+---
+
+### Goal:
 
 > first true closed-loop navigation system
 
@@ -321,18 +361,18 @@ Field → Flow → Control → Trajectory → Convergence
 
 # 🚀 NEXT MILESTONES
 
-1. run_nexah_demo.py  
-2. START_HERE.md  
-3. Evidence Block  
-4. Convergence validation  
-5. IEEE demo  
-6. Integration  
-7. Visual polish  
-8. Math clarity  
+1. Finalize `run_nexah_demo.py`  
+2. Add Lorenz evidence block  
+3. Validate convergence across runs  
+4. Create `run_ieee_demo.py`  
+5. Light visual/document polish  
+6. Light repo cleanup  
+7. Clarify math layer  
+8. Minimal integration loop  
 
 ---
 
-# 🧭 FINAL TARGET (UPDATED)
+# 🧭 FINAL TARGET
 
 > NEXAH reconstructs, controls, and navigates  
 > structured dynamical fields toward stable attractors
@@ -349,6 +389,7 @@ You already have:
 - ✅ Control  
 - ✅ Navigation  
 - ✅ Fixpoint  
+- ✅ README / START_HERE / visual entry  
 
 ---
 
@@ -357,13 +398,15 @@ You do NOT need:
 - ❌ more theory  
 - ❌ more abstraction  
 - ❌ more modules  
+- ❌ major refactors before first release  
 
 ---
 
-You MAY need:
+You still need:
 
-- ✔ one clean demo  
-- ✔ convergence validation  
+- ✔ one clean official demo  
+- ✔ one measurable result block  
+- ✔ one packaged IEEE example  
 
 ---
 
@@ -373,7 +416,7 @@ You are no longer building the system.
 
 You are now:
 
-> **proving that it works**
+> **packaging, validating, and proving it clearly**
 
 ---
 
@@ -384,8 +427,9 @@ You don’t need more depth.
 You need:
 
 > one clear entry  
-> one working demo  
+> one working official demo  
 > one measurable result  
+> one reproducible real-system example  
 
 ---
 
