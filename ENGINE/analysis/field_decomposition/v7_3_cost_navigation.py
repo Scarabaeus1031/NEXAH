@@ -1,11 +1,9 @@
 """
-NEXAH V7.3 — Cost Gradient Navigation
+NEXAH V7.3 — Cost Gradient Navigation (Stable Version)
 
-Uses the cost_map from V7.2 and computes:
-
-→ navigation field = -∇cost
-
-This represents optimal flow toward the target.
+→ uses cost_map from V7.2
+→ builds navigation field = -∇cost
+→ traces optimal paths toward target
 """
 
 import os
@@ -16,44 +14,51 @@ OUTDIR = "output/v7_3"
 os.makedirs(OUTDIR, exist_ok=True)
 
 # ------------------------------------------------------------
-# LOAD COST MAP (or recompute inline if needed)
+# LOAD COST MAP
 # ------------------------------------------------------------
-
-# fallback: load from file if saved
 cost_map = np.load("output/v7_2/cost_map.npy")
-np.save(os.path.join(OUTDIR, "cost_map.npy"), cost_map)
 
-# grid (must match V7.2)
-x = np.linspace(6, 17, cost_map.shape[1])
-y = np.linspace(22, 31, cost_map.shape[0])
+# grid reconstruction
+nx, ny = cost_map.shape[1], cost_map.shape[0]
+
+x = np.linspace(6, 17, nx)
+y = np.linspace(22, 31, ny)
 X, Y = np.meshgrid(x, y)
 
 dx = x[1] - x[0]
 dy = y[1] - y[0]
 
 # ------------------------------------------------------------
-# GRADIENT → NAVIGATION FIELD
+# GRADIENT (FIXED)
 # ------------------------------------------------------------
-dCdy, dCdx = np.gradient(cost_map, dy, dx)
+# NOTE: order is (axis_y, axis_x)
+dC_dy, dC_dx = np.gradient(cost_map)
 
-# negative gradient = direction of decreasing cost
-Nx = -dCdx
-Ny = -dCdy
+# scale with spacing
+dC_dx /= dx
+dC_dy /= dy
 
-# normalize for visualization
-norm = np.sqrt(Nx**2 + Ny**2) + 1e-6
+# navigation field = downhill
+Nx = -dC_dx
+Ny = -dC_dy
+
+# normalize (important for stability)
+norm = np.sqrt(Nx**2 + Ny**2) + 1e-8
 Nx /= norm
 Ny /= norm
 
 # ------------------------------------------------------------
-# TRAJECTORY IN NAVIGATION FIELD
+# SAMPLING FUNCTION
 # ------------------------------------------------------------
 def sample(px, py, A):
     ix = np.clip(np.searchsorted(x, px) - 1, 0, len(x)-1)
     iy = np.clip(np.searchsorted(y, py) - 1, 0, len(y)-1)
     return A[iy, ix]
 
-def trace_path(x0, y0, steps=200, dt=0.1):
+# ------------------------------------------------------------
+# TRAJECTORY TRACING
+# ------------------------------------------------------------
+def trace_path(x0, y0, steps=250, dt=0.12):
     px, py = x0, y0
     traj = []
 
@@ -63,29 +68,36 @@ def trace_path(x0, y0, steps=200, dt=0.1):
         vx = sample(px, py, Nx)
         vy = sample(px, py, Ny)
 
-        px += vx * dt
-        py += vy * dt
+        # adaptive slowdown near target
+        speed_scale = 0.7
+        px += vx * dt * speed_scale
+        py += vy * dt * speed_scale
 
-        if px < x.min() or px > x.max() or py < y.min() or py > y.max():
+        # stop if near target
+        if np.sqrt((px - 13)**2 + (py - 26)**2) < 0.2:
             break
 
     return np.array(traj)
 
-# sample starting points
+# ------------------------------------------------------------
+# START POINTS
+# ------------------------------------------------------------
 starts = [
     (7, 28),
     (8, 24),
-    (12, 30),
+    (10, 30),
     (15, 26),
-    (10, 23)
+    (11, 23),
+    (9, 27)
 ]
 
 # ------------------------------------------------------------
 # PLOT
 # ------------------------------------------------------------
-plt.figure(figsize=(8,6))
+plt.figure(figsize=(9,7))
 
-plt.contourf(X, Y, cost_map, levels=40, cmap="viridis", alpha=0.7)
+# cost background
+plt.contourf(X, Y, cost_map, levels=50, cmap="viridis", alpha=0.8)
 
 # vector field
 plt.quiver(X[::10,::10], Y[::10,::10],
@@ -95,9 +107,14 @@ plt.quiver(X[::10,::10], Y[::10,::10],
 # trajectories
 for s in starts:
     traj = trace_path(*s)
-    plt.plot(traj[:,0], traj[:,1], linewidth=2)
+    if len(traj) > 1:
+        plt.plot(traj[:,0], traj[:,1], linewidth=2)
+
+# target
+plt.scatter([13], [26], color="white", s=60, label="Target")
 
 plt.title("V7.3 — Cost Navigation Field")
+plt.legend()
 plt.tight_layout()
 
 plt.savefig(os.path.join(OUTDIR, "v7_3_navigation.png"), dpi=150)
