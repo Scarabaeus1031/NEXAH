@@ -14,6 +14,14 @@ revealing how the system moves within a structured stability landscape.
 
 ---
 
+🧪 Reproduce this visualization (IEEE off-manifold flow field):
+
+```bash
+python APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/analysis/run_ieee_off_manifold_flow_v69.py
+```
+
+---
+
 ## 🧠 What NEXAH does
 
 NEXAH reconstructs dynamical systems as:
