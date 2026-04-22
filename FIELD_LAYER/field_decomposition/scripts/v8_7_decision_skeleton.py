@@ -1,20 +1,22 @@
 # FIELD_LAYER/field_decomposition/scripts/v8_7_decision_skeleton.py
 
 """
-NEXAH V8.7 — Decision Skeleton
+NEXAH V8.7 — Decision Skeleton (Improved)
 
 Goal:
-→ extract structure from decision map (V8.6)
-→ reveal decision backbone
+→ extract thin structural backbone from V8.6
+→ reveal decision lines instead of blobs
 
-Result:
-→ thin structure of key decision regions
+Method:
+→ smoothing
+→ adaptive threshold
+→ ridge sharpening (gradient-based)
 """
 
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.ndimage import gaussian_filter
+from scipy.ndimage import gaussian_filter, sobel
 
 # ============================================================
 # PATHS
@@ -31,19 +33,30 @@ os.makedirs(OUTDIR, exist_ok=True)
 decision_map = np.load(os.path.join(BASE, "v8_6", "decision_structure.npy"))
 
 # ============================================================
-# SMOOTH (optional but helpful)
+# SMOOTH
 # ============================================================
 
-smooth = gaussian_filter(decision_map, sigma=1.0)
+smooth = gaussian_filter(decision_map, sigma=1.2)
 
 # ============================================================
-# THRESHOLD
+# GRADIENT (ridge detection)
 # ============================================================
 
-# keep only strongest regions
-threshold = np.percentile(smooth, 92)
+gx = sobel(smooth, axis=1)
+gy = sobel(smooth, axis=0)
 
-mask = smooth > threshold
+grad_mag = np.sqrt(gx**2 + gy**2)
+
+# invert gradient → ridges = low gradient inside high regions
+ridge_score = smooth - 0.5 * grad_mag
+
+# ============================================================
+# THRESHOLD (adaptive)
+# ============================================================
+
+threshold = np.percentile(ridge_score, 94)
+
+mask = ridge_score > threshold
 
 print("threshold:", threshold)
 print("active points:", np.sum(mask))
@@ -68,7 +81,7 @@ plt.imshow(
     extent=[x.min(), x.max(), y.min(), y.max()],
     origin="lower",
     cmap="gray",
-    alpha=0.3
+    alpha=0.25
 )
 
 # skeleton
@@ -77,10 +90,10 @@ plt.imshow(
     extent=[x.min(), x.max(), y.min(), y.max()],
     origin="lower",
     cmap="inferno",
-    alpha=0.9
+    alpha=0.95
 )
 
-plt.title("NEXAH V8.7 — Decision Skeleton")
+plt.title("NEXAH V8.7 — Decision Skeleton (Improved)")
 
 plt.tight_layout()
 plt.savefig(os.path.join(OUTDIR, "v8_7_decision_skeleton.png"), dpi=150)
