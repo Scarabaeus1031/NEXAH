@@ -149,7 +149,11 @@ plt.tight_layout()
 # ============================================================
 
 outdir = save_figure(__file__)
+plt.tight_layout()
 
+plt.savefig(os.path.join(OUTDIR, "v7_8_optimal_direction.png"), dpi=150)
+
+plt.close()
 np.save(os.path.join(outdir, "optimal_dir_x.npy"), Ux)
 np.save(os.path.join(outdir, "optimal_dir_y.npy"), Uy)
 np.save(os.path.join(outdir, "direction_confidence.npy"), confidence)
