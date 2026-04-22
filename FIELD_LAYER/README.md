@@ -20,11 +20,19 @@ It reveals:
 
 ---
 
+## 🧠 What NEXAH actually does
+
+NEXAH converts time-series dynamics into a structured field  
+where motion, transitions, and convergence become directly observable.
+
+---
+
 ## 🔥 Core Insight
 
 ```text
 The system does not offer choices.
 It defines paths.
+Those paths define outcomes.
 ```
 
 ---
@@ -89,7 +97,7 @@ The Field Layer reveals:
 
 ---
 
-# 🧬 From Flow → Topology (V9–V12)
+# 🧬 From Flow → Topology
 
 ## Discrete State Emergence
 
@@ -131,7 +139,7 @@ Instead:
 
 ---
 
-# ⚙️ Control & Learning (V13–V25)
+# ⚙️ Control & Learning
 
 - control layer  
 - energy-based transitions  
@@ -140,7 +148,7 @@ Instead:
 
 ---
 
-# 🌊 Continuous Field Control (V26+)
+# 🌊 Continuous Field Control
 
 dx/dt ≈ -∇V(x)
 
@@ -149,7 +157,7 @@ dx/dt ≈ -∇V(x)
 
 ---
 
-# 🌐 Geometry & Flow Structure (V29–V31)
+# 🌐 Geometry & Flow Structure
 
 ![Field Decomposition](NAVIGATION_ENGINE/outputs/plots/v29_field_decomposition.png)
 
@@ -157,7 +165,7 @@ dx/dt ≈ -∇V(x)
 
 ---
 
-# 🎯 Control & Navigation (V32–V37)
+# 🎯 Control & Navigation
 
 ![Full Navigation](NAVIGATION_ENGINE/outputs/plots/v37_full_navigation.png)
 
@@ -165,7 +173,7 @@ dx/dt ≈ -∇V(x)
 
 ---
 
-# 🌀 Final Structure (V38–V40)
+# 🌀 Final Structure
 
 Fixpoint:
 
@@ -224,14 +232,14 @@ Raw Dynamics
 
 ---
 
-# 🔬 Field Decomposition Module (V2–V10)
+# 🔬 Field Decomposition Module
 
 A dedicated submodule explores:
 
-- field structure (V2–V6)
-- navigation geometry (V7)
-- stability geometry (V8)
-- transport & regime structure (V9–V10)
+- field structure  
+- navigation geometry  
+- stability geometry  
+- transport & regime structure  
 
 👉 Open here:
 
