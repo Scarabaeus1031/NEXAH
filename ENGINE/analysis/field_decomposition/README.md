@@ -4,6 +4,18 @@
 
 ---
 
+## 🧭 Navigation
+
+| Section | Description |
+|--------|------------|
+| 👉 [Abstract](abstract.md) | Core idea, method, and main result |
+| 📐 [Mathematical Foundations](mathematical_foundation.md) | Formal structure and equations |
+| 🔍 [Exploratory Findings](exploratory_findings_log.md) | Observations and patterns |
+| 🧱 [Build Log](build_log.md) | Development history and evolution |
+| 🖼️ Visual Outputs | `outputs/` — all generated figures |
+
+---
+
 ## Overview
 
 This module explores a continuous 2D dynamical field and extracts:
