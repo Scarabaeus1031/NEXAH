@@ -71,6 +71,38 @@ Interpretation:
 
 ---
 
+# 🧪 Minimal Demo — Structure inside Chaos
+
+Run:
+
+    python -m nexah.run_nexah_demo
+
+---
+
+![NEXAH Demo](outputs/demo/nexah_lorenz_transitions.png)
+
+---
+
+### Interpretation
+
+The highlighted points mark **structural transitions** in the system.
+
+They are not random.
+
+They emerge from the **geometry of the dynamical field**:
+
+- trajectories follow structure  
+- transitions occur at specific regions  
+- the system reveals where change happens  
+
+---
+
+> NEXAH does not detect events.  
+>  
+> It reveals the structure that produces them.
+
+---
+
 # 🧭 System Architecture
 
 ```text
