@@ -4,7 +4,7 @@ Early experimental environment for exploring how **structure emerges from dynami
 
 ---
 
-## 🧭 Role in NEXAH
+## 🧭 Role in NEXAH 
 
 The Discovery Engine represents the **exploration phase** of NEXAH.
 
