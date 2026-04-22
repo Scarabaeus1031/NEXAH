@@ -1,4 +1,5 @@
 # ⚡ NEXAH — A Geometric Framework for Dynamical Systems
+> NEXAH is a computational framework that reveals structure, transitions, and stability directly from system dynamics.
 
 > Complex systems are not random.  
 > They evolve within **structured fields that constrain motion, transitions, and outcomes**.
@@ -63,6 +64,8 @@ Result:
 ---
 
 ![NEXAH Mic Drop](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+*Note: The “Mic Drop” label reflects an early internal milestone.  
+It is not a scientific claim, but marks a transition from intuition to measurable structure.*
 
 Interpretation:
 
