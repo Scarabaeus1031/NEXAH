@@ -1,4 +1,4 @@
-# 🧭 NEXAH — Field Decomposition Layer
+# 🔬 NEXAH — Field Decomposition Layer
 
 ## 🔥 What this module shows (in 5 lines)
 
@@ -8,7 +8,13 @@
 - outcomes are **constrained, not freely chosen**  
 - stability and change can be **read directly from the field**
 
-![Lyapunov Map](outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
+---
+
+## 🔬 Field Structure (V6)
+
+![Boundary Structure](outputs/v6_4_boundary_extraction/v6_4_boundary_extraction.png)
+
+→ transition geometry emerges from the field
 
 ---
 
@@ -53,9 +59,9 @@ It is:
 
 The system is defined by:
 
-$begin:math:display$
-\\dot\{x\} \= \-\\nabla V\(x\) \+ R\(x\)
-$end:math:display$
+\[
+\dot{x} = -\nabla V(x) + R(x)
+\]
 
 Where:
 
@@ -70,8 +76,6 @@ Result:
 ---
 
 ## Pipeline
-
-The module transforms:
 
 ```text
 field
@@ -99,8 +103,6 @@ field
 ---
 
 ## Visual System
-
-The system is explored through layered visualizations:
 
 | Layer | Meaning |
 |------|--------|
@@ -138,91 +140,57 @@ Important:
 
 ## Navigation Layer (V7)
 
-The system can be interpreted as a navigation problem:
-
 - cost field → effort to reach a target  
 - navigation field → optimal direction  
 - reachability → where motion is possible  
 
-Key result:
-
-→ motion is **not globally free**  
-→ it is **geometrically constrained**
+→ motion is **geometrically constrained**
 
 ---
 
 ## Stability Layer (V8)
 
-A Lyapunov-like analysis reveals:
-
-- global stability structure of the field  
+- global stability structure  
 - weak regions along boundaries ("gates")  
 - strong stability inside basins  
-
-### Critical Result
 
 ```text
 The system contains gates, but no decisions.
 ```
 
-Meaning:
-
-- transition regions exist  
-- entry points exist  
-- but no branching outcomes occur  
-
-→ all tested perturbations converge to the same attractor  
-
----
+→ all perturbations converge to the same attractor  
 
 ---
 
 ## Transport & Temporal Layer (V9–V10)
 
-The system can also be analyzed in terms of:
-
 ### Transport (V9)
 
-- trajectories from entry regions map to consistent outcomes  
-- flow organizes into **channels and regimes**  
-- transport is **structured and asymmetric**
+- trajectories map to consistent outcomes  
+- flow organizes into channels and regimes  
 
-→ the field defines a **transport function**
+→ transport is **structured**
 
 ---
 
 ### Temporal Signals (V10)
 
-Tracking boundary intensity over time reveals:
-
-- early structural changes  
-- signals before visible system transitions  
-- correlation with system collapse (e.g. IEEE experiments)
-
-→ boundaries act as **early-warning indicators**
-
----
-
-### Extended Insight
+- boundaries act as early-warning signals  
+- structural change appears before collapse  
 
 ```text
-The field does not only define motion.
-
-It defines where motion goes — and when it changes.
+The field defines where motion goes — and when it changes.
 ```
+---
 
 ## System Interpretation
 
-The system is best described as:
-
 → a **directed dynamical system**
-
-Properties:
 
 - structured flow  
 - constrained transitions  
-- dominant attractor behavior  
-- no multi-branch decision topology  
+- dominant attractor  
+- no branching decision structure  
 
 ---
 
@@ -249,73 +217,34 @@ Properties:
 ## Project Structure
 
 ```text
-ENGINE/analysis/field_decomposition/
+FIELD_DECOMPOSITION/
 
 scripts/
 ├── v2_* → field separation
 ├── v3_* → structure detection
-├── v4_* → unified field views
+├── v4_* → unified views
 ├── v5_* → gradient vs rotation
-├── v6_* → classification + boundaries
-├── v7_* → cost + navigation
-├── v8_* → stability + gates
+├── v6_* → boundaries
+├── v7_* → navigation
+├── v8_* → stability
 
 outputs/
 ├── v6_*/
 ├── v7_*/
 ├── v8_*/
+├── v9_*/
+├── v10_*/
 ```
 
 ---
 
 ## How to Run
 
-Example:
-
 ```bash
 python scripts/v6_6_core.py
 python scripts/v7_2_transition_cost_map.py
 python scripts/v8_0_lyapunov_map.py
 ```
-
-Outputs are saved to:
-
-```text
-ENGINE/analysis/field_decomposition/outputs/<version>/
-```
-
----
-
-## Status
-
-Current phase:
-
-→ exploratory but structurally consistent  
-
-Evolution:
-
-```text
-visual exploration
-→ structure detection
-→ navigation
-→ stability geometry
-```
-
----
-
-## Interpretation Scope
-
-This work:
-
-✔ explores structure in dynamical systems  
-✔ provides reproducible simulations  
-✔ identifies consistent geometric patterns  
-
-This work does NOT:
-
-✖ claim new physical laws  
-✖ provide analytical proofs  
-✖ map directly to real-world systems  
 
 ---
 
@@ -331,22 +260,19 @@ It defines paths.
 
 ## Next Steps
 
-- stochastic perturbation (noise)
-- multi-target navigation
-- higher-dimensional extension
-- analytical approximation
-- integration into NEXAH Navigator
+- stochastic perturbation  
+- multi-target navigation  
+- higher-dimensional extension  
+- analytical approximation  
+- integration into NEXAH Navigator  
 
 ---
 
 ## Final Note
 
-This module is best understood by:
-
-- running the scripts  
-- inspecting the visuals  
-- comparing layers  
-
 Understanding emerges from:
 
 > reading the field — not just observing trajectories
+
+
+
