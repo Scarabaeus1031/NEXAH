@@ -17,11 +17,12 @@ NEXAH is a structural navigation framework for complex dynamical systems.
 
 It transforms:
 
-dynamics → structure → field → geometry → control → navigation
-
+```text
+dynamics → structure → field → geometry → stability → control → navigation
+```
 The goal is not only to analyze systems, but to:
 
-> **enable structured navigation within dynamical fields**
+> **enable structured navigation within dynamical fields under stability constraints**
 
 ---
 
@@ -30,14 +31,14 @@ The goal is not only to analyze systems, but to:
 ## Core Stack (Updated)
 
 ```text
-System → Structure → Field → Geometry → Control → Navigation
+System → Structure → Field → Geometry → Stability → Control → Navigation
 ```
-
 | Layer | Function |
 |------|---------|
-| Structure | Extracts system geometry and dynamics |
+| Structure | Extracts system dynamics and regimes |
 | Field | Represents dynamics as continuous structured fields |
-| Geometry | Reveals channels, basins, separatrices, fixpoints |
+| Geometry | Reveals basins, channels, separatrices |
+| Stability | Measures convergence, sensitivity, and local instability |
 | Control | Shapes trajectories within the field |
 | Navigation | Executes movement through field structure |
 
@@ -56,9 +57,9 @@ System → Structure → Field → Geometry → Control → Navigation
 
 ## 🌊 2. Field Layer (CORE)
 
-The Field Layer transforms structure into a **continuous, operational representation**.
+Transforms structure into a **continuous representation**.
 
-### 🔬 Components
+### Components
 
 #### Probability Field
 - density estimation  
@@ -68,84 +69,101 @@ The Field Layer transforms structure into a **continuous, operational representa
 ```text
 E(x) = -log(p(x))
 ```
-
 - wells → stable regions  
 - barriers → transitions  
 
 ---
 
-### 🌀 Field Decomposition (NEW — V29+)
-
-The field is decomposed into:
+### 🌀 Field Decomposition
 
 ```text
 dx/dt ≈ -∇V(x) + R(x)
 ```
 
-Where:
+### 🧠 Key Insight
 
-- ∇V(x) → gradient (attraction / energy minimization)  
-- R(x) → rotational component (circulation / flow structure)  
+> Dynamics = attraction + rotation
+
+---
+
+## 🎯 3. Geometry Layer
+
+Extracted from field:
+
+- basins (attractors)  
+- channels (flow paths)  
+- separatrices (boundaries)  
+- transition corridors  
+
+---
+
+### Fixpoint & Convergence
+
+- stable point x*  
+- measurable basin  
+- spiral convergence  
+
+---
+
+## 🔶 4. Stability Layer (NEW — V8)
+
+This layer measures **how the system behaves locally and globally over time**.
+
+### Components
+
+#### Lyapunov Map
+
+λ(x) = divergence of nearby trajectories
+
+- λ < 0 → stable  
+- λ ≈ 0 → neutral  
+- λ > 0 → unstable  
+
+---
+
+#### Boundary Stability
+
+- separatrix is globally stable  
+- local weak points exist  
+
+→ "proto-gates"
+
+---
+
+#### Gate Detection
+
+- local Lyapunov maxima along boundary  
+- candidate transition points  
+
+---
+
+#### Injection Testing
+
+- directional perturbations applied  
+
+Result:
+
+no branching observed
 
 ---
 
 ### 🧠 Key Insight
 
-> System dynamics are a combination of  
-> **energy minimization and rotational flow**
+> The system is stability-constrained  
+> not all geometrically possible transitions are dynamically realizable
 
 ---
 
 ### ⚡ Implication
 
-- gradient alone ≠ sufficient  
-- rotation defines **channels and navigation paths**
+- boundaries ≠ instability  
+- instability ≠ transition  
+
+→ geometry and stability are separate layers  
 
 ---
 
----
-
-### 🔁 Temporal Coupling
-
-curl(t) → div(t + τ)  
-div(t) → curl(t − τ)
-
-→ delayed feedback between field components  
-
----
-
----
-
-## 🎯 3. Geometry Layer (NEW — V30+)
-
-The field induces explicit geometry:
-
-- channels (ridges)  
-- separatrices (boundaries)  
-- basins (attractors)  
-- transition corridors  
-
----
-
-### 🔬 Fixpoint & Convergence (V39–V40)
-
-- stable convergence point x* detected  
-- small endpoint variance  
-- measurable basin radius  
-
----
-
-### 🧠 Key Insight
-
-> The field defines **real convergence targets**
-
----
-
----
-
-## 🎮 4. Control Layer
-
-Control operates directly on the field:
+## 🎮 5. Control Layer
 
 - trajectory shaping  
 - energy modulation  
@@ -155,48 +173,37 @@ Control operates directly on the field:
 
 ### 🧠 Key Insight
 
-> Control is not external input  
-> it is **field shaping**
+> Control = shaping motion inside the field
 
 ---
 
----
+## 🧭 6. Navigation Layer
 
-## 🧭 5. Navigation Layer
-
-Navigation operates on:
-
-- field geometry  
-- channel structure  
-- convergence regions  
+- follows geometry  
+- respects stability  
+- converges to attractors  
 
 ---
 
-### Not based on:
+### Key Property
 
-- static states  
-- discrete thresholds  
-
----
-
-### Instead:
-
-> navigation = motion through field geometry
+> Navigation is constrained by both geometry AND stability
 
 ---
 
 # 🚀 Current Capability
 
-NEXAH currently supports:
+NEXAH supports:
 
-- structure extraction from dynamics  
-- field reconstruction (probability + energy)  
-- field decomposition (gradient + rotation)  
-- channel and separatrix detection  
-- fixpoint extraction and basin estimation  
-- trajectory convergence  
-- field-based control  
-- navigation along structured paths  
+- structure extraction  
+- field reconstruction  
+- field decomposition  
+- geometry extraction  
+- stability analysis (Lyapunov)  
+- gate detection  
+- trajectory control  
+- navigation  
+- attractor convergence  
 
 ---
 
@@ -204,75 +211,79 @@ NEXAH currently supports:
 
 | Component | Status |
 |----------|--------|
-| Structure Extraction | ✓ implemented |
-| Field Construction | ✓ implemented |
-| Field Decomposition | ✓ implemented |
-| Geometry Extraction | ✓ implemented |
-| Fixpoint Detection | ✓ implemented |
-| Control Layer | ✓ implemented |
-| Navigation Engine | ✓ implemented |
-| Unified Kernel | ☐ missing |
-| Reproducibility Layer | ☐ missing |
+| Structure Extraction | ✓ |
+| Field Construction | ✓ |
+| Field Decomposition | ✓ |
+| Geometry Extraction | ✓ |
+| Stability Layer | ✓ |
+| Fixpoint Detection | ✓ |
+| Control Layer | ✓ |
+| Navigation Engine | ✓ |
+| Unified Kernel | ☐ |
+| Reproducibility Layer | ☐ |
 
 ---
 
-# 🔥 Architectural Shift (CRITICAL)
+# 🔥 Architectural Shift
 
-NEXAH has evolved from:
+From:
 
-```text
-analysis → structure → signals
-```
+analysis → structure → signals  
 
-to:
+To:
 
-```text
-structure → field → geometry → control → navigation
-```
+structure → field → geometry → stability → control → navigation  
 
 ---
 
-# 🧭 Current Interpretation
+# 🧭 System Interpretation
 
 The system operates as:
 
-- dynamics → structured field  
+- dynamics → field  
 - field → geometry  
-- geometry → control  
-- control → navigation  
+- geometry → stability constraints  
+- stability → allowed motion  
+- control → trajectory shaping  
+- navigation → convergence  
 
 ---
 
 # ⚡ System Capabilities
 
-## Core Capabilities
-
-### Field Reconstruction
+## Field Reconstruction
 - probability fields  
 - energy landscapes  
 - flow fields  
 
 ---
 
-### Field Geometry
-- channels  
+## Geometry
 - basins  
+- channels  
 - separatrices  
-- convergence zones  
+- corridors  
 
 ---
 
-### Control
+## Stability
+- Lyapunov field  
+- stability gradients  
+- gate detection  
+- transition constraints  
+
+---
+
+## Control
 - trajectory shaping  
-- energy-based steering  
-- attractor selection  
+- energy steering  
 
 ---
 
-### Navigation
-- path following in field  
-- transition between basins  
-- convergence to stable regions  
+## Navigation
+- movement through field  
+- constrained transitions  
+- convergence to attractors  
 
 ---
 
@@ -287,29 +298,34 @@ The system operates as:
 
 # 🚀 Next Development Targets
 
-- unify navigation kernel  
-- define reusable API  
-- build reproducible demos  
-- integrate real-world systems  
-- spectral / mode decomposition  
+- unified navigation kernel  
+- reproducible demo pipeline  
+- API abstraction  
+- statistical validation  
+- real-world system packaging  
 
 ---
 
 # 🧠 Milestone Summary
 
-Status: **Field-based navigation system with control and convergence**
+Status:
+
+Field-based navigation system with explicit stability constraints
 
 ---
 
 # 🔥 Final Insight
 
-NEXAH is no longer a system that analyzes dynamics.
+NEXAH is no longer:
+
+- only a structural system  
+- only a navigation system  
 
 It is:
 
-> **a system that reconstructs, controls, and navigates dynamical fields**
+a system that reconstructs, constrains, and navigates dynamical fields  
 
 ---
 
-**NEXAH Architecture**  
+NEXAH Architecture  
 Current system definition and implementation state
