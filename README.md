@@ -103,6 +103,25 @@ They emerge from the **geometry of the dynamical field**:
 
 ---
 
+## ⚡ IEEE Demo — Early Collapse Detection
+
+Run:
+
+    python run_ieee_demo.py
+
+---
+
+![IEEE Demo](outputs/demo/nexah_ieee_collapse.png)
+
+---
+
+NEXAH detects structural instability **before collapse occurs**.
+
+It does not track failure —  
+it identifies the transition toward it.
+
+---
+
 # 🧭 System Architecture
 
 ```text
