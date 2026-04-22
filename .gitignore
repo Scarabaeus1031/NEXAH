@@ -8,11 +8,11 @@
 # =========================
 # PYTHON
 # =========================
-pycache/
-.pyc
-.pyo
-.pyd
-.py,cover
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py,cover
 
 # Virtual environments
 .venv/
@@ -21,7 +21,7 @@ env/
 ENV/
 
 # Packaging
-.egg-info/
+*.egg-info/
 dist/
 build/
 
@@ -34,7 +34,7 @@ build/
 # TESTING / COVERAGE
 # =========================
 .coverage
-.coverage.
+.coverage.*
 htmlcov/
 .pytest_cache/
 .mypy_cache/
@@ -42,9 +42,9 @@ htmlcov/
 # =========================
 # LOGS / TEMP FILES
 # =========================
-.log
-.tmp
-.temp
+*.log
+*.tmp
+*.temp
 
 # =========================
 # EDITOR / IDE
@@ -53,81 +53,51 @@ htmlcov/
 .idea/
 
 # =========================
-# ACCIDENTAL DUPLICATES
-# =========================
-* 2.
-* 3.
-* copy.
-* Kopie.
-
-# =========================
-# 🔥 NEXAH ENGINE OUTPUTS
+# 🔥 NEXAH OUTPUT POLICY
 # =========================
 
-# Ignore ALL outputs by default
-*/outputs/
+# 1. IGNORE ALL OUTPUTS (default)
+**/outputs/
 
 # =========================
-# FIELD_LAYER OUTPUTS (ALLOW)
+# ✅ ALLOW CURATED VISUALS (IMPORTANT)
 # =========================
 
+# --- DEMO (THIS IS YOUR CURRENT ISSUE FIX) ---
+!outputs/
+!outputs/demo/
+!outputs/demo/*.png
+
+# --- FIELD LAYER (plots used in README) ---
 !FIELD_LAYER/outputs/
 !FIELD_LAYER/outputs/plots/
-!FIELD_LAYER/outputs/plots/.png
+!FIELD_LAYER/outputs/plots/*.png
+
+# --- FIELD DECOMPOSITION VISUALS ---
+!FIELD_LAYER/FIELD_DECOMPOSITION/outputs/
+!FIELD_LAYER/FIELD_DECOMPOSITION/outputs/**/*.png
+
+# --- DISCOVERY ENGINE VISUALS ---
+!DISCOVERY_ENGINE/outputs/
+!DISCOVERY_ENGINE/outputs/**/*.png
+
+# --- APPLICATION VISUALS ---
+!APPLICATIONS/**/outputs/
+!APPLICATIONS/**/outputs/**/*.png
 
 # =========================
-# FIELD_DECOMPOSITION (ALLOW SELECTED VISUALS)
+# DATA (still ignored)
 # =========================
-
-!ENGINE/analysis/field_decomposition/outputs/
-!ENGINE/analysis/field_decomposition/outputs/**/.png
-
-# =========================
-# DISCOVERY ENGINE (ALLOW SELECTED)
-# =========================
-
-!/outputs/json/
-!/outputs/json/.json
-
-!/outputs/visuals/
-!/outputs/visuals/**/.png
+**/*.csv
+**/*.npy
+**/*.npz
 
 # =========================
-# VISUAL MASS OUTPUT (IGNORE)
+# HEAVY MEDIA
 # =========================
-**/.gif
+**/*.gif
 
 # =========================
-# DATA (Simulation Dumps)
-# =========================
-**/.csv
-**/.npy
-**/.npz
-
-# =========================
-# CACHE / RENDER
+# CACHE
 # =========================
 .cache/
-
-# =========================
-# ALLOW CURATED VISUALS ONLY
-# =========================
-
-# Lorenz curated visuals
-!APPLICATIONS/dynamical_systems/lorenz/visuals/
-!APPLICATIONS/dynamical_systems/lorenz/visuals/.png
-
-# Power system curated outputs
-!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/
-!APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/*
-
-# Specific analysis export
-!APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/rift_extraction/
-
-# Specific data allowed
-!APPLICATIONS/power_systems/stability_field_dynamics/data/
-!APPLICATIONS/power_systems/stability_field_dynamics/data/*.csv
-
-# =========================
-# END
-# =========================
