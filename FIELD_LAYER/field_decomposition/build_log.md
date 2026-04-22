@@ -1244,4 +1244,439 @@ It defines paths.
 
 ---
 
+---
 
+# 🔶 V9 — Transport, Regime Formation & Dynamic Structure
+
+Files:
+- v9_5_orbit_entry_channels.py  
+- v9_6_direction_field.py  
+- v9_7_transport_map.py  
+- v9_7b_transport_map.py  
+- v9_8_multi_regime_field.py  
+- v9_9_dynamic_regime_field.py  
+
+---
+
+## Concept Shift
+
+V9 introduces a fundamental extension:
+
+From:
+
+→ stability and navigation analysis  
+
+To:
+
+→ **full transport behavior of the system**
+
+---
+
+## Core Idea
+
+Instead of asking:
+
+→ "Where is the system stable?"
+
+We now ask:
+
+→ **"Where does the system actually go?"**
+
+---
+
+## 1. Entry Channels (V9.5)
+
+Detected:
+
+- discrete orbit entry points along boundary  
+- structured ring-like channel system  
+
+Properties:
+
+- not continuous  
+- clustered  
+- anisotropic  
+
+Interpretation:
+
+→ the boundary is not passive  
+
+→ it contains **preferred entry channels**
+
+---
+
+## 2. Direction Field (V9.6)
+
+Constructed:
+
+- normalized flow direction field  
+
+Observation:
+
+- coherent rotational structure  
+- inner swirl + outer drift  
+- directional asymmetry  
+
+Interpretation:
+
+→ the system defines **global motion orientation**
+
+---
+
+## 3. Transport Map (V9.7)
+
+Simulation:
+
+- trajectories launched from entry channels  
+
+Classification:
+
+- core (red)  
+- orbit (green)  
+- escape (blue)  
+
+Observation:
+
+- not all channels behave equally  
+- strong directional bias  
+- asymmetry emerges immediately  
+
+Interpretation:
+
+→ entry does not determine outcome uniquely  
+
+→ transport depends on **global field structure**
+
+---
+
+## 4. Symmetry Breaking (V9.7b)
+
+Modification:
+
+- small perturbation added  
+
+Result:
+
+- massive asymmetry in transport  
+- clear directional dominance  
+- separation of flow regions  
+
+Interpretation:
+
+→ system is **structurally unstable to symmetry**
+
+→ small changes → large transport differences  
+
+---
+
+## 5. Multi-Regime Transport (V9.8)
+
+Observation:
+
+- system splits into distinct transport zones  
+
+Examples:
+
+- large escape sector  
+- dominant orbit region  
+- compact core capture  
+
+Interpretation:
+
+→ regimes are not local  
+
+→ they form **global spatial domains**
+
+---
+
+## 6. Dynamic Regime Field (V9.9)
+
+Time aggregation:
+
+- trajectories accumulate into regions  
+
+Result:
+
+- stable regime clusters  
+- reinforced structures  
+- disappearance of noise  
+
+Interpretation:
+
+→ regimes are not static classifications  
+
+→ they are **emergent attractors of transport**
+
+---
+
+## 🔥 Key Result of V9
+
+```text
+Regimes are not defined by local rules.
+
+They emerge from global transport behavior.
+```
+
+---
+
+## Structural Interpretation
+
+The system now consists of:
+
+1. Entry channel network  
+2. Directed flow field  
+3. Transport pathways  
+4. Emergent regime basins  
+
+These layers are:
+
+→ fully coupled  
+
+---
+
+## Relation to Previous Phases
+
+| Phase | Capability |
+|------|----------|
+| V6 | detect structure |
+| V7 | navigate structure |
+| V8 | measure stability |
+| V9 | simulate transport + regime emergence |
+
+---
+
+## Key Insight
+
+```text
+Structure + stability do not define behavior alone.
+
+Transport completes the system.
+```
+
+---
+
+## Meta Observation
+
+A critical shift:
+
+- earlier phases required interpretation  
+- V9 produces **behavior directly**
+
+Meaning:
+
+→ the system is now **dynamically self-consistent**
+
+---
+
+---
+
+# 🔷 V10 — Regime Map & Boundary Formalization
+
+Files:
+- v10_regime_map.py  
+- v10_1_boundary_map.py  
+- ieee_boundary_tracking.py  
+
+---
+
+## Concept Shift
+
+V10 introduces the final abstraction layer:
+
+From:
+
+→ observing transport behavior  
+
+To:
+
+→ **formalizing regime structure and boundaries**
+
+---
+
+## Core Idea
+
+Instead of asking:
+
+→ "What happens?"
+
+We now ask:
+
+→ **"Where are the transitions between behaviors?"**
+
+---
+
+## 1. Regime Map (V10)
+
+Computed:
+
+- classification of full state space  
+
+Classes:
+
+- orbit  
+- shear  
+- escape  
+- drift  
+
+Observation:
+
+- large coherent regions  
+- sharp boundaries  
+- non-trivial topology  
+
+Interpretation:
+
+→ system decomposes into **distinct behavioral domains**
+
+---
+
+## 2. Boundary Extraction (V10.1)
+
+Derived:
+
+- separatrix-like structures  
+
+Observation:
+
+- continuous curves  
+- high-density transition zones  
+- complex geometry  
+
+Boundary strength:
+
+- reveals intensity of transition  
+
+Interpretation:
+
+→ boundaries are **active regions of transformation**
+
+---
+
+## 3. Boundary Strength Field
+
+Computed:
+
+- transition intensity map  
+
+Observation:
+
+- localized high-energy regions  
+- clustered boundary activity  
+- non-uniform distribution  
+
+Interpretation:
+
+→ transitions are not uniform  
+
+→ they concentrate into **hotspots ("ignition zones")**
+
+---
+
+## 4. Boundary Tracking vs Voltage Collapse (IEEE)
+
+Experiment:
+
+- compare:
+  - classical voltage curve  
+  - boundary energy over time  
+
+Observation:
+
+- voltage decays smoothly  
+- boundary energy rises early and stabilizes  
+
+Key property:
+
+→ **decoupling of collapse and structural change**
+
+---
+
+## 🔥 Key Result of V10
+
+```text
+Instability is not the collapse itself.
+
+It is the structural separation that occurs earlier.
+```
+
+---
+
+## Structural Interpretation
+
+The system now includes:
+
+1. regime basins  
+2. transport pathways  
+3. separatrix network  
+4. boundary intensity field  
+5. time-dependent boundary evolution  
+
+---
+
+## Final System Property
+
+```text
+The system is a structured flow landscape with intrinsic transition geometry.
+```
+
+---
+
+## Relation to Previous Phases
+
+| Phase | Capability |
+|------|----------|
+| V6 | structure detection |
+| V7 | navigation |
+| V8 | stability |
+| V9 | transport |
+| V10 | regime + boundary formalization |
+
+---
+
+## Meta Insight
+
+A final realization:
+
+- boundaries looked like artifacts  
+- then like gates  
+- then like constraints  
+
+Now:
+
+→ they are **the central object of the system**
+
+---
+
+## System Reinterpretation
+
+From:
+
+→ trajectory system  
+
+To:
+
+→ **boundary-defined dynamical system**
+
+---
+
+## Conceptual Upgrade
+
+Old:
+
+→ collapse = event  
+
+New:
+
+→ collapse = late effect of earlier boundary formation  
+
+---
+
+## End-of-Phase Insight
+
+```text
+The system does not fail suddenly.
+
+It reorganizes itself — and collapse is only the visible consequence.
+```
+
+---
