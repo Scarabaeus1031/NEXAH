@@ -5,18 +5,22 @@ NEXAH V8.2 — Decision Delay Map
 
 Goal:
 → measure how long trajectories "hesitate"
-→ detect real transition / gate regions
+→ detect transition / gate regions
 """
 
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+# ============================================================
+# PATHS
+# ============================================================
+
 OUTDIR = "FIELD_LAYER/field_decomposition/outputs/v8_2"
 os.makedirs(OUTDIR, exist_ok=True)
 
 # ============================================================
-# LOAD FIELD (from V8.1)
+# GRID
 # ============================================================
 
 nx, ny = 200, 200
@@ -24,7 +28,10 @@ x = np.linspace(6, 17, nx)
 y = np.linspace(22, 31, ny)
 X, Y = np.meshgrid(x, y)
 
-# reload field (recompute for consistency)
+# ============================================================
+# FIELD (same as V8.1 for consistency)
+# ============================================================
+
 def gaussian(x, y, cx, cy, sigma=1.5):
     return np.exp(-((x - cx)**2 + (y - cy)**2) / (2 * sigma**2))
 
@@ -51,12 +58,13 @@ Ry = 0.6 * Ry1 + 0.6 * Ry2
 Fx_total = Fx + 0.3 * Rx
 Fy_total = Fy + 0.3 * Ry
 
+# normalize
 norm = np.sqrt(Fx_total**2 + Fy_total**2) + 1e-8
 Fx_total /= norm
 Fy_total /= norm
 
 # ============================================================
-# TARGET BASINS (centers)
+# TARGET BASINS
 # ============================================================
 
 A1 = np.array([10.5, 25.0])
@@ -74,7 +82,6 @@ def classify(px, py):
 def simulate_delay(x0, y0, steps=400, dt=0.08, radius=0.5):
 
     px, py = x0, y0
-    initial_class = None
 
     for t in range(steps):
 
@@ -87,17 +94,18 @@ def simulate_delay(x0, y0, steps=400, dt=0.08, radius=0.5):
         px += vx * dt
         py += vy * dt
 
-        c = classify(px, py)
+        # check basin entry
+        if np.linalg.norm([px - A1[0], py - A1[1]]) < radius:
+            return t
 
-        # detect stable basin entry
-        if c == 1:
-            if np.linalg.norm([px - A1[0], py - A1[1]]) < radius:
-                return t
-        if c == 2:
-            if np.linalg.norm([px - A2[0], py - A2[1]]) < radius:
-                return t
+        if np.linalg.norm([px - A2[0], py - A2[1]]) < radius:
+            return t
 
-    return steps  # max = long delay
+        # early exit if outside grid
+        if px < x.min() or px > x.max() or py < y.min() or py > y.max():
+            return steps
+
+    return steps
 
 # ============================================================
 # COMPUTE MAP
@@ -107,16 +115,13 @@ delay_map = np.zeros((ny, nx))
 
 for i in range(nx):
     for j in range(ny):
-
-        px = x[i]
-        py = y[j]
-
-        delay_map[j, i] = simulate_delay(px, py)
+        delay_map[j, i] = simulate_delay(x[i], y[j])
 
 print("✓ delay computed")
+print("min:", delay_map.min(), "max:", delay_map.max())
 
-# normalize for visualization
-delay_norm = delay_map / np.max(delay_map)
+# normalized for plotting
+delay_norm = delay_map / (np.max(delay_map) + 1e-8)
 
 # ============================================================
 # PLOT
@@ -135,9 +140,11 @@ plt.savefig(os.path.join(OUTDIR, "v8_2_delay_map.png"), dpi=150)
 plt.close()
 
 # ============================================================
-# SAVE
+# SAVE (CRITICAL FOR V8.6)
 # ============================================================
 
 np.save(os.path.join(OUTDIR, "delay_map.npy"), delay_map)
+np.save(os.path.join(OUTDIR, "decision_delay.npy"), delay_map)
 
+print("✓ saved delay_map.npy + decision_delay.npy")
 print("✓ V8.2 done →", OUTDIR)
