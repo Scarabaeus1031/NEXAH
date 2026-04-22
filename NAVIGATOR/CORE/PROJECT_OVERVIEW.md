@@ -20,7 +20,7 @@ NEXAH is a system for:
 It transforms:
 
 ```text
-Dynamics → Structure → Field → Topology → Control → Navigation → Convergence
+Dynamics → Structure → Field → Topology → Control → Navigation → Stability → Convergence
 ```
 
 ---
@@ -65,13 +65,13 @@ The system can extract:
 | Attractor Detection | ✅ |
 | Convergence Behavior | ✅ |
 
-👉 **This is the central breakthrough layer**
+👉 **This is the central reconstruction layer**
 
 ---
 
 ### Key Result
 
-> The system is reconstructed as a **continuous dynamical field with topology and control**
+> The system is reconstructed as a **continuous dynamical field with geometry and topology**
 
 ---
 
@@ -83,7 +83,8 @@ Field decomposition reveals:
 dx/dt ≈ -∇V(x) + R(x)
 ```
 
-→ attraction + rotation
+→ attraction + rotation  
+→ gradient + curl interaction  
 
 ---
 
@@ -108,7 +109,50 @@ dx/dt ≈ -∇V(x) + R(x)
 
 ---
 
-## ⚙️ 4. ENGINE (Computation Layer)
+## 🔶 4. STABILITY LAYER (V8 Extension)
+
+| Capability | Status |
+|-----------|--------|
+| Lyapunov Mapping | ✅ |
+| Stability Field | ✅ |
+| Gate Detection | ✅ |
+| Injection Testing | ✅ |
+| Decision Point Detection | ✅ |
+
+👉 Measures **stability structure of the field**
+
+---
+
+### Key Result
+
+```text
+The system contains gates, but no decisions.
+```
+
+---
+
+### Interpretation
+
+- transition regions exist  
+- weak stability zones ("gates") exist  
+- but:
+
+→ no branching outcomes occur  
+
+All tested trajectories converge to the same attractor.
+
+---
+
+### Critical Insight
+
+> stability structure and transition structure are **not identical**
+
+- boundaries ≠ instability  
+- gates ≠ decision points  
+
+---
+
+## ⚙️ 5. ENGINE (Computation Layer)
 
 | Area | Status |
 |------|--------|
@@ -121,7 +165,7 @@ dx/dt ≈ -∇V(x) + R(x)
 
 ---
 
-## 🧱 5. FRAMEWORK (Theory Layer)
+## 🧱 6. FRAMEWORK (Theory Layer)
 
 | Area | Status |
 |------|--------|
@@ -131,11 +175,10 @@ dx/dt ≈ -∇V(x) + R(x)
 | Formalization | ⚠️ |
 
 👉 Provides conceptual foundation  
-👉 partially reflected in implementation  
 
 ---
 
-## 🌪 6. APPLICATIONS (Use Cases)
+## 🌪 7. APPLICATIONS (Use Cases)
 
 ### 🔥 Lorenz System (Reference System)
 
@@ -179,7 +222,7 @@ dx/dt ≈ -∇V(x) + R(x)
 
 ---
 
-## 🧪 7. BUILDER LAB (Exploration)
+## 🧪 8. BUILDER LAB (Exploration)
 
 | Area | Status |
 |------|--------|
@@ -188,22 +231,21 @@ dx/dt ≈ -∇V(x) + R(x)
 | Rapid Prototyping | ⚠️ |
 
 👉 supports development  
-👉 not part of core pipeline  
 
 ---
 
 # 🧠 Current System State
 
-NEXAH successfully demonstrates:
+NEXAH demonstrates:
 
 ✔ structure emerges from dynamics  
 ✔ dynamics form continuous fields  
 ✔ transitions follow geometric channels  
-✔ topology emerges from flow  
+✔ navigation is constrained by field geometry  
 ✔ attractors exist and are measurable  
-✔ trajectories converge to stable points  
-✔ control can shape trajectories  
-✔ navigation is possible within the field  
+✔ trajectories converge to stable regions  
+✔ stability structure can be measured (Lyapunov)  
+✔ control shapes trajectories but does not create branching  
 
 ---
 
@@ -218,7 +260,7 @@ NEXAH successfully demonstrates:
 
 ## 2. Validation Gap
 
-- convergence not yet statistically validated  
+- convergence not statistically validated  
 - limited multi-run evaluation  
 
 ---
@@ -242,7 +284,7 @@ This is NOT just simulation.
 The system shows:
 
 > dynamical systems can be reconstructed as structured fields  
-> with controllable trajectories and stable convergence  
+> with constrained navigation and stable convergence  
 
 ---
 
@@ -250,15 +292,14 @@ The system shows:
 
 NEXAH is:
 
-> a **field reconstruction and navigation layer on top of dynamical systems**
+> a **field reconstruction and navigation framework for dynamical systems**
 
 It enables:
 
 - understanding  
 - measurement  
-- prediction  
-- control  
 - navigation  
+- stability analysis  
 
 ---
 
@@ -272,7 +313,7 @@ NEXAH is NOT:
 
 NEXAH is:
 
-> a **structure, field, and navigation framework for dynamical systems**
+> a **structure–field–navigation–stability framework**
 
 ---
 
@@ -282,7 +323,7 @@ Current priority is NOT:
 
 - new systems  
 - new theory  
-- new layers  
+- deeper layers  
 
 But:
 
@@ -308,7 +349,7 @@ NEXAH shows:
 
 They evolve within:
 
-> **structured fields with direction, topology, and convergence**
+> **structured fields with direction, topology, and constrained convergence**
 
 ---
 
