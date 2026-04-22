@@ -74,7 +74,6 @@ ax.set_xlabel("α")
 ax.set_ylabel("β")
 
 plt.colorbar(contour)
-plt.show()
 
 # =========================
 # NEXAH SAVE BLOCK
