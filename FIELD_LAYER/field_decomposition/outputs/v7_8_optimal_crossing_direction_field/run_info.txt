@@ -1,0 +1,4 @@
+script: v7_8_optimal_crossing_direction_field
+time: 2026-04-22 13:14:20.089567
+method: nav_field_direct
+normalized: True
