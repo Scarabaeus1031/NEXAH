@@ -8,11 +8,11 @@
 # =========================
 # PYTHON
 # =========================
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.py,cover
+pycache/
+.pyc
+.pyo
+.pyd
+.py,cover
 
 # Virtual environments
 .venv/
@@ -21,7 +21,7 @@ env/
 ENV/
 
 # Packaging
-*.egg-info/
+.egg-info/
 dist/
 build/
 
@@ -34,7 +34,7 @@ build/
 # TESTING / COVERAGE
 # =========================
 .coverage
-.coverage.*
+.coverage.
 htmlcov/
 .pytest_cache/
 .mypy_cache/
@@ -42,9 +42,9 @@ htmlcov/
 # =========================
 # LOGS / TEMP FILES
 # =========================
-*.log
-*.tmp
-*.temp
+.log
+.tmp
+.temp
 
 # =========================
 # EDITOR / IDE
@@ -55,17 +55,17 @@ htmlcov/
 # =========================
 # ACCIDENTAL DUPLICATES
 # =========================
-* 2.*
-* 3.*
-* copy.*
-* Kopie.*
+* 2.
+* 3.
+* copy.
+* Kopie.
 
 # =========================
 # 🔥 NEXAH ENGINE OUTPUTS
 # =========================
 
 # Ignore ALL outputs by default
-**/outputs/*
+*/outputs/
 
 # =========================
 # FIELD_LAYER OUTPUTS (ALLOW)
@@ -73,29 +73,36 @@ htmlcov/
 
 !FIELD_LAYER/outputs/
 !FIELD_LAYER/outputs/plots/
-!FIELD_LAYER/outputs/plots/*.png
+!FIELD_LAYER/outputs/plots/.png
+
+# =========================
+# FIELD_DECOMPOSITION (ALLOW SELECTED VISUALS)
+# =========================
+
+!ENGINE/analysis/field_decomposition/outputs/
+!ENGINE/analysis/field_decomposition/outputs/**/.png
 
 # =========================
 # DISCOVERY ENGINE (ALLOW SELECTED)
 # =========================
 
-!**/outputs/json/
-!**/outputs/json/*.json
+!/outputs/json/
+!/outputs/json/.json
 
-!**/outputs/visuals/
-!**/outputs/visuals/**/*.png
+!/outputs/visuals/
+!/outputs/visuals/**/.png
 
 # =========================
 # VISUAL MASS OUTPUT (IGNORE)
 # =========================
-**/*.gif
+**/.gif
 
 # =========================
 # DATA (Simulation Dumps)
 # =========================
-**/*.csv
-**/*.npy
-**/*.npz
+**/.csv
+**/.npy
+**/.npz
 
 # =========================
 # CACHE / RENDER
@@ -108,7 +115,7 @@ htmlcov/
 
 # Lorenz curated visuals
 !APPLICATIONS/dynamical_systems/lorenz/visuals/
-!APPLICATIONS/dynamical_systems/lorenz/visuals/*.png
+!APPLICATIONS/dynamical_systems/lorenz/visuals/.png
 
 # Power system curated outputs
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_application/results/
