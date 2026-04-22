@@ -103,9 +103,10 @@ They emerge from the **geometry of the dynamical field**:
 >  
 > It does not detect collapse.  
 > It detects the structure that leads to it.
-> 
-> This behavior is not a one-off observation.
-> It is reproducible:
+
+
+This behavior is not a one-off observation.
+It is reproducible:
 
 ---
 
