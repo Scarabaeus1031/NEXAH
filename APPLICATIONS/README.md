@@ -75,7 +75,11 @@ From the Lorenz module:
 
 ![NEXAH Overview](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
 
+*Structural transition behavior in large-scale power system dynamics.*
+
 ![NEXAH Pipeline](power_systems/nexah_ieeeX/results/run_ieee300_20260413_015843/paper_figure.png)
+
+*Field-based analysis pipeline and resulting system structure.*
 
 ---
 
