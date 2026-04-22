@@ -113,6 +113,45 @@ Without transitions:
 
 ---
 
+---
+
+# 🧪 Visual Evolution (Discovery Log)
+
+The Discovery Engine evolved through a sequence of experiments  
+that gradually revealed structure within dynamics.
+
+A full visual trace of this process is available here:
+
+👉 `visual_gallery.md`
+
+---
+
+## 🧭 What this shows
+
+- how raw signals became structured transitions  
+- how geometry emerged from trajectories  
+- how fields formed from local dynamics  
+- how interpretation evolved over time  
+
+---
+
+## 🧠 Key Takeaway
+
+> Structure was not imposed on the system.  
+> It **emerged from the dynamics**.
+
+---
+
+⚠️ These visuals represent:
+
+- intermediate stages  
+- exploratory interpretations  
+- evolving understanding  
+
+They are not final claims, but part of the discovery process.
+
+---
+
 # 🧪 Extended Discovery Engine
 
 The broader DISCOVERY_ENGINE includes experimental tools for:
