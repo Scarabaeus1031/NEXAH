@@ -1,0 +1,18 @@
+NEXAH Lorenz Demo — Run Summary
+========================================
+
+Start Time: 2026-04-15 03:57:04.859844
+End Time:   2026-04-15 04:05:23.012076
+Duration:   0:08:18.152232
+
+Executed Scripts:
+--------------------
+lorenz_filament_3d.py → OK (0:00:04.899054)
+lorenz_lyapunov_map.py → OK (0:02:00.521517)
+lorenz_ftle_lcs_map.py → OK (0:00:23.830410)
+lorenz_separatrix_map.py → OK (0:05:48.868183)
+lorenz_chaos_navigation_map.py → FAIL (0:00:00.032385)
+
+Generated Files:
+--------------------
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/demos/lorenz_demo/outputs/lorenz_5d_polar_projection_20260415_025159.png

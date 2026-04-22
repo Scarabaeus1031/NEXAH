@@ -1,0 +1,4 @@
+case,num_points,num_clusters_detected,num_noise_points,num_transition_types
+ieee30,40,3,5,6
+ieee57,40,3,5,6
+ieee118,40,3,5,6

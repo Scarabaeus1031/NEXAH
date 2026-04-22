@@ -1,0 +1,4 @@
+case,num_nodes,num_edges,nodes
+ieee30,3,6,"core, noise, secondary"
+ieee57,3,6,"core, noise, secondary"
+ieee118,3,6,"core, noise, secondary"
