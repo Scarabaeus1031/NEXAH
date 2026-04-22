@@ -909,3 +909,339 @@ This indicates:
 → the system is not only visual, but computationally coherent  
 
 ---
+
+---
+
+# 🔶 V8 — Stability Geometry & Lyapunov Phase
+
+Files:
+- v8_0_lyapunov_map.py  
+- v8_1_overlay_splinter_vs_lyapunov.py  
+- v8_2_distance_to_boundary_vs_lyapunov.py  
+- v8_3_lyapunov_along_boundary.py  
+- v8_4_extract_gate_points.py  
+- v8_5_injection_tests.py  
+- v8_6_true_decision_gates.py  
+
+---
+
+## Concept Shift
+
+V8 introduces a deeper layer:
+
+From:
+
+→ navigation and reachability  
+
+To:
+
+→ **stability structure of the field itself**
+
+---
+
+## Core Idea
+
+Instead of asking:
+
+→ "Where can we go?"
+
+We now ask:
+
+→ **"Where is the system stable, unstable, or sensitive?"**
+
+---
+
+## 1. Lyapunov Map (V8.0)
+
+Computed:
+
+    λ(x) = divergence of nearby trajectories over time
+
+Interpretation:
+
+- λ < 0 → stable (converging flow)
+- λ ≈ 0 → neutral
+- λ > 0 → unstable (diverging flow)
+
+Observation:
+
+- large stable basin (dark region)
+- structured instability ridges
+- sharp folds and cusps
+
+Key insight:
+
+→ stability is **not uniform**  
+→ it forms **geometric structures**
+
+---
+
+## 2. Separatrix vs Lyapunov (V8.1)
+
+Comparison:
+
+- splinter boundary (V7)
+- Lyapunov ridge (V8)
+
+Result:
+
+    IoU ≈ 0
+
+Interpretation:
+
+→ **they are different objects**
+
+- boundary = outcome transition
+- Lyapunov = local stability
+
+Key insight:
+
+→ instability does NOT define the boundary  
+
+---
+
+## 3. Distance vs Stability (V8.2)
+
+Measured:
+
+- distance to boundary
+- Lyapunov value
+
+Observation:
+
+- strong correlation trend
+- near boundary → more unstable
+- far away → more stable
+
+But:
+
+→ not strictly linear
+
+Interpretation:
+
+→ boundary is embedded in a **gradient of stability**
+
+---
+
+## 4. Lyapunov Along Boundary (V8.3)
+
+Sampled:
+
+- Lyapunov values along extracted boundary
+
+Observation:
+
+- strongly negative values (≈ -1.4 mean)
+- local peaks (less negative)
+
+Interpretation:
+
+→ boundary is **globally stable**,  
+but contains **local weak points**
+
+These are:
+
+→ **proto-gates**
+
+---
+
+## 5. Gate Point Extraction (V8.4)
+
+Selected:
+
+- top Lyapunov maxima along boundary
+
+Result:
+
+- discrete set of candidate gate points
+
+Example:
+
+    λ ≈ -0.53 … -0.85
+
+Interpretation:
+
+→ these are **least stable parts of boundary**
+
+Working definition:
+
+→ gate = locally weakened stability region  
+
+---
+
+## 6. Injection Tests (V8.5)
+
+Experiment:
+
+- inject trajectories from gate points
+- apply directional perturbations
+
+Result:
+
+    ALL trajectories → same basin (C2)
+
+Interpretation:
+
+→ gates do NOT allow branching
+
+Key insight:
+
+→ system is **directionally biased**
+
+---
+
+## 7. True Decision Gate Test (V8.6)
+
+Definition:
+
+A true decision gate requires:
+
+→ different outcomes depending on direction
+
+Result:
+
+```
+num_decision_points: 0
+```
+
+Interpretation:
+
+→ **no true decision gates exist**
+
+---
+
+## 🔥 Key Result of V8
+
+```text
+The system contains gates, but no decisions.
+```
+
+---
+
+## Structural Interpretation
+
+The field is:
+
+- structured (V6)
+- navigable (V7)
+- stability-layered (V8)
+
+But:
+
+→ NOT multi-outcome controllable  
+
+---
+
+## Final System Property
+
+```text
+Flow is constrained, not chosen.
+```
+
+---
+
+## Geometry of the System
+
+The system now consists of:
+
+1. Stable basin (attractor region)
+2. Transition wedge (splinter)
+3. Stability gradient (Lyapunov field)
+4. Weak boundary regions (gates)
+
+But:
+
+→ no branching topology  
+
+---
+
+## Relation to Previous Phases
+
+| Phase | Capability |
+|------|----------|
+| V6 | detect structure |
+| V7 | navigate structure |
+| V8 | measure stability structure |
+
+---
+
+## Meta Insight
+
+A critical realization:
+
+- boundaries looked like decision layers
+- gates looked like entry points
+
+But experiments show:
+
+→ **these are illusions of control**
+
+---
+
+## Interpretation Layer (Informal)
+
+The system behaves like:
+
+- a funnel
+- a guided flow channel
+- a directed energy landscape
+
+Not like:
+
+- a branching decision tree
+
+---
+
+## Conceptual Upgrade
+
+Old view:
+
+→ separatrix = decision boundary  
+
+New view:
+
+→ separatrix = **guided transition surface**
+
+---
+
+## System Type (Reclassified)
+
+From:
+
+→ multi-stable system  
+
+To:
+
+→ **directed transition system**
+
+---
+
+## Current Limits
+
+- Lyapunov is finite-time approximation  
+- no analytic stability proof  
+- gates depend on sampling resolution  
+- no stochastic perturbation tested  
+
+---
+
+## Next Steps (Optional)
+
+1. stochastic perturbation (noise injection)  
+2. time-dependent fields  
+3. parameter sweeps  
+4. higher-dimensional stability analysis  
+
+---
+
+## End-of-Phase Insight
+
+```text
+The system does not offer choices.
+
+It defines paths.
+```
+
+---
+
+
