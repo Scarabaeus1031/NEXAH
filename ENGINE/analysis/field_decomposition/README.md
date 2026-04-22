@@ -1,19 +1,29 @@
-# NEXAH — Field Decomposition Layer
+# 🧭 NEXAH — Field Decomposition Layer
+
+![Lyapunov Map](outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
+
+---
 
 ## Overview
 
-This module explores a continuous 2D field system and extracts:
+This module explores a continuous 2D dynamical field and extracts:
 
 - structure (basins, boundaries, channels)
 - dynamics (trajectories, orbits)
-- transition behavior (sensitivity, separatrix-like regions)
-- navigation properties (cost, reachability, optimal flow)
+- transitions (sensitivity, separatrix-like regions)
+- navigation (cost, reachability, optimal flow)
+- stability (Lyapunov structure)
 
-The system is built through iterative simulation and visualization.
+It is built through iterative simulation, visualization, and structural analysis.
 
-It is **not a physical theory**.
+It is:
 
-It is a **computational exploration of structured dynamics**.
+→ not a physical theory  
+→ not a new mathematical framework  
+
+It is:
+
+→ a **computational system for extracting geometry from dynamics**
 
 ---
 
@@ -21,100 +31,88 @@ It is a **computational exploration of structured dynamics**.
 
 > Structure shapes motion.
 
-The system is defined by a field:
+The system is defined by:
 
-    dx/dt = -∇V + rotational component
+$begin:math:display$
+\\dot\{x\} \= \-\\nabla V\(x\) \+ R\(x\)
+$end:math:display$
 
-Meaning:
+Where:
 
-- the gradient pulls toward minima
-- rotation introduces curvature and persistence
+- gradient → attraction  
+- rotation → curvature and persistence  
 
 Result:
 
-→ motion emerges from field geometry
+→ motion is not imposed  
+→ it **emerges from field geometry**
 
 ---
 
-## What This Module Does
+## Pipeline
 
-The pipeline transforms:
+The module transforms:
 
 ```text
-raw field
+field
 → trajectories
 → structure detection
 → boundary extraction
+→ cost field
 → navigation
-→ control interpretation
+→ stability analysis
 ```
 
-Key capabilities:
+---
 
-- basin detection
-- orbit classification
-- separatrix-like boundary detection
-- sensitivity mapping
-- cost-based navigation
-- energy landscape estimation
+## Key Capabilities
+
+- basin detection  
+- orbit classification  
+- separatrix-like boundary detection  
+- sensitivity mapping  
+- cost-based navigation  
+- energy landscape estimation  
+- Lyapunov stability mapping  
+- gate detection (weak stability regions)  
 
 ---
 
 ## Visual System
 
-The module produces multiple visual layers:
+The system is explored through layered visualizations:
 
 | Layer | Meaning |
 |------|--------|
-| Q1 | class map (where trajectories end) |
+| Q1 | trajectory class map |
 | Q2 | field + trajectories |
-| Q3 | sensitivity (where small changes matter) |
-| Q4 | projection / geometry |
+| Q3 | sensitivity |
+| Q4 | geometric projection |
 | Q5 | orbit bands |
 | Q6 | representative trajectories |
 
-V7 adds:
+Extended layers:
 
-- cost maps
-- navigation fields
-- reachability regions
-- energy landscapes
+- V7 → cost, navigation, reachability  
+- V8 → stability (Lyapunov), gates, injection behavior  
 
 ---
 
 ## Key Observations
 
-The system consistently shows:
+Across all phases, the system consistently shows:
 
-- multiple attractor basins
-- orbit-like trajectories
-- structured transition regions ("Riss")
-- narrow transition corridors (splinter)
-- asymmetric flow behavior
-- layered orbit families ("bands")
+- multiple attractor basins  
+- orbit-like trajectories  
+- structured transition regions ("Riss")  
+- narrow transition corridors ("splinter")  
+- asymmetric flow behavior  
+- layered orbit families  
 
 Important:
 
-→ these structures emerge from the field  
+→ these structures **emerge from the field**  
 → they are not manually imposed  
-
----
-
-## Transition Structures
-
-Transitions are not points.
-
-They are:
-
-- spatial regions
-- directional
-- multi-phase
-
-Often observed as:
-
-- curved boundaries
-- S-shaped structures
-- narrow corridors between basins
 
 ---
 
@@ -122,14 +120,130 @@ Often observed as:
 
 The system can be interpreted as a navigation problem:
 
-- cost field → effort to reach a target
-- navigation field → optimal direction
-- reachability → where motion is possible
+- cost field → effort to reach a target  
+- navigation field → optimal direction  
+- reachability → where motion is possible  
 
-Key finding:
+Key result:
 
-→ not all regions can reach the target  
-→ motion is constrained by field geometry  
+→ motion is **not globally free**  
+→ it is **geometrically constrained**
+
+---
+
+## Stability Layer (V8)
+
+A Lyapunov-like analysis reveals:
+
+- global stability structure of the field  
+- weak regions along boundaries ("gates")  
+- strong stability inside basins  
+
+### Critical Result
+
+```text
+The system contains gates, but no decisions.
+```
+
+Meaning:
+
+- transition regions exist  
+- entry points exist  
+- but no branching outcomes occur  
+
+→ all tested perturbations converge to the same attractor  
+
+---
+
+## System Interpretation
+
+The system is best described as:
+
+→ a **directed dynamical system**
+
+Properties:
+
+- structured flow  
+- constrained transitions  
+- dominant attractor behavior  
+- no multi-branch decision topology  
+
+---
+
+## Example Visuals
+
+### Navigation Field
+
+![Navigation](outputs/v7_3/v7_3_navigation.png)
+
+---
+
+### Energy Landscape
+
+![Energy](outputs/v7_7/v7_7_energy_map.png)
+
+---
+
+### Injection Behavior
+
+![Injection](outputs/v8_5_injection_tests/v8_5_injection_tests.png)
+
+---
+
+## Project Structure
+
+```text
+ENGINE/analysis/field_decomposition/
+
+scripts/
+├── v2_* → field separation
+├── v3_* → structure detection
+├── v4_* → unified field views
+├── v5_* → gradient vs rotation
+├── v6_* → classification + boundaries
+├── v7_* → cost + navigation
+├── v8_* → stability + gates
+
+outputs/
+├── v6_*/
+├── v7_*/
+├── v8_*/
+```
+
+---
+
+## How to Run
+
+Example:
+
+```bash
+python scripts/v6_6_core.py
+python scripts/v7_2_transition_cost_map.py
+python scripts/v8_0_lyapunov_map.py
+```
+
+Outputs are saved to:
+
+```text
+ENGINE/analysis/field_decomposition/outputs/<version>/
+```
+
+---
+
+## Status
+
+Current phase:
+
+→ exploratory but structurally consistent  
+
+Evolution:
+
+```text
+visual exploration
+→ structure detection
+→ navigation
+→ stability geometry
+```
 
 ---
 
@@ -144,60 +258,28 @@ This work:
 This work does NOT:
 
 ✖ claim new physical laws  
-✖ map directly to real-world systems  
 ✖ provide analytical proofs  
+✖ map directly to real-world systems  
 
 ---
 
-## Project Structure
+## Final Insight
 
 ```text
-ENGINE/analysis/field_decomposition/
+The system does not offer choices.
 
-├── v2_*.py      → early field separation
-├── v3_*.py      → structure detection
-├── v4_*.py      → unified field views
-├── v5_*.py      → gradient vs rotation
-├── v6_*.py      → classification + boundaries
-├── v7_*.py      → cost + navigation + energy
-
-output/
-├── v6_*/
-├── v7_*/
+It defines paths.
 ```
-
-## How to Run
-
-Example:
-```bash
-python v6_6_core.py
-python v7_2_transition_cost_map.py
-python v7_3_cost_navigation.py
-```
-Outputs are saved to:
-
-```text
-ENGINE/analysis/field_decomposition/outputs/<version>/
-```
-## Status
-
-Current phase:
-
-→ exploratory but structurally consistent  
-
-The system has evolved from:
-
-visual exploration → structured field → navigable system  
 
 ---
 
 ## Next Steps
 
-- stochastic navigation (Boltzmann-like)  
-- multi-target control  
-- phase-space extension  
-- analytical approximation  
-- integration into NEXAH Navigator  
+- stochastic perturbation (noise)
+- multi-target navigation
+- higher-dimensional extension
+- analytical approximation
+- integration into NEXAH Navigator
 
 ---
 
@@ -207,8 +289,8 @@ This module is best understood by:
 
 - running the scripts  
 - inspecting the visuals  
-- reading patterns across layers  
+- comparing layers  
 
-Understanding comes from:
+Understanding emerges from:
 
 > reading the field — not just observing trajectories
