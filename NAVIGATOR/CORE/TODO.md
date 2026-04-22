@@ -1,3 +1,104 @@
+# NEXAH — Cleanup & Release TODO (Release Phase)
+
+**Date:** April 2026  
+**Goal:** Prepare for public release, first collaborators, and external validation
+
+---
+
+## 🧠 SYSTEM STATUS (CURRENT)
+
+NEXAH now provides a complete working pipeline:
+
+- structure discovery (Discovery Engine) ✅  
+- field reconstruction (Field Layer) ✅  
+- topology extraction (states, cycles) ✅  
+- control & navigation (Navigator prototype) ✅  
+- attractor detection & convergence behavior ✅  
+- stability structure (Lyapunov + boundaries) ✅  
+- gate detection (no-decision result) ✅  
+
+👉 The system is no longer experimental code —  
+it is a **demonstrable framework**
+
+---
+
+## 🧱 THEORETICAL STATUS
+
+- minimal axiomatic layer exists (A0–A4)  
+- operators defined (Γ, Δ, Ω)  
+
+⚠️ Important shift:
+
+> No further theory expansion now.
+
+👉 Focus:
+- validation  
+- demonstration  
+- communication  
+
+---
+
+# 🔴 PRIORITY 1 — ENTRY POINT (CRITICAL)
+
+### Goal:
+> Clone → Run → Understand in 60 seconds
+
+### Status:
+- [x] Root `README.md`
+- [x] `START_HERE.md`
+- [x] `run_nexah_demo.py` ✅ (working)
+- [x] clean console output
+- [x] visual output (saved)
+
+### ToDo:
+- [ ] test from clean environment (fresh clone)
+- [ ] verify relative paths
+- [ ] confirm no hidden dependencies
+
+### Demo must show:
+- Lorenz dynamics  
+- field construction  
+- structural signal  
+- transition clustering  
+
+### Constraints:
+- [x] runtime < 30s  
+- [x] minimal dependencies  
+- [x] single clear output  
+
+---
+
+# 🔵 PRIORITY 2 — ONBOARDING
+
+### Status:
+- [x] START_HERE.md  
+- [x] README structure  
+- [x] demo integrated  
+- [x] visual entry works  
+
+### ToDo:
+- [ ] full link check (one pass through repo)
+- [ ] confirm all referenced images exist
+- [ ] test all run commands
+
+👉 Goal:
+> zero friction first contact
+
+---
+
+# 🟣 PRIORITY 3 — LORENZ DEMO (CORE)
+
+### Status:
+- [x] working demo  
+- [x] structural signal  
+- [x] visual output  
+- [x] peak detection  
+
+### ToDo:
+- [ ] add **RESULTS block in README**
+
+Example:
+
 - [ ] optional: multi-run validation script
 
 ---
