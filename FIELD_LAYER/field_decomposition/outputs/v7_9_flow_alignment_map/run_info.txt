@@ -1,0 +1,4 @@
+script: v7_9_flow_alignment_map
+time: 2026-04-22 13:18:12.283624
+method: nav_vs_normalized
+interpretation: alignment consistency
