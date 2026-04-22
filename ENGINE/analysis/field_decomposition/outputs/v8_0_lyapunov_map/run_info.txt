@@ -1,0 +1,6 @@
+script: v8_0_lyapunov_map
+time: 2026-04-22 03:03:53.753688
+DT: 0.05
+STEPS: 80
+EPS: 0.0001
+GRID_RES: 60
