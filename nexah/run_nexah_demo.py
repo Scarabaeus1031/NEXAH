@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 from nexah.field_layer.core.field_demo import generate_lorenz
 from nexah.field_layer.core.field import Field
-from nexah.field_layer.core.metrics import Metrics
+from nexah.field_layer.core.metrics import FieldMetrics
 
 
 def main():
@@ -11,16 +11,14 @@ def main():
 
     # --- 1. Generate system ---
     t, trajectory = generate_lorenz(n_steps=5000)
-
     print("✔ Generated Lorenz trajectory")
 
     # --- 2. Build field ---
     field = Field(trajectory)
-
     print("✔ Constructed field")
 
     # --- 3. Metrics ---
-    metrics = Metrics(field)
+    metrics = FieldMetrics(field)
 
     flow = metrics.flow_strength()
     curvature = metrics.curvature()
