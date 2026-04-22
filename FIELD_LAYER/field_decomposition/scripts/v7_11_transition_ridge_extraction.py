@@ -45,12 +45,8 @@ y = np.linspace(22, 31, ny)
 X, Y = np.meshgrid(x, y)
 
 # ============================================================
-# SIMPLE RIDGE EXTRACTION
+# RIDGE EXTRACTION (LESS AGGRESSIVE)
 # ============================================================
-
-# Idea:
-# keep only pixels that are "center-like"
-# → remove thick regions, keep spine
 
 ridge = np.zeros_like(mask)
 
@@ -59,11 +55,10 @@ for j in range(1, ny-1):
 
         if mask[j, i] == 1:
 
-            # count neighbors
             neighbors = np.sum(mask[j-1:j+2, i-1:i+2]) - 1
 
-            # keep only "thin" structure
-            if 1 <= neighbors <= 4:
+            # NEW: keep boundary-like pixels
+            if neighbors <= 6:
                 ridge[j, i] = 1
 
 # ============================================================
