@@ -1,4 +1,120 @@
+
 # NEXAH — Exploratory Findings Log (V6 Phase)
+
+> Structured observations from numerical field experiments in dynamical systems.
+
+## 🔷 Quick Entry — What this document shows
+
+This document is a structured log of experiments exploring a simple question:
+
+> What structure emerges when motion is governed by a continuous field?
+
+Instead of assuming randomness, the system reveals:
+
+- consistent **geometric structures**
+- constrained **movement patterns**
+- stable **transition boundaries**
+- directed **flow behavior**
+
+---
+
+## 🔥 Key Findings (V6 → V10)
+
+Across all phases, the following core results emerge:
+
+### 1. Structure exists
+The system forms:
+
+- basins (attractors)  
+- orbit regions  
+- transition zones  
+
+→ not random, but **spatially organized**
+
+---
+
+### 2. Motion is constrained
+Trajectories do not move freely:
+
+- they follow **channels**
+- they align with **field geometry**
+
+→ motion is **guided, not arbitrary**
+
+---
+
+### 3. Transitions are structured
+Between regions, we observe:
+
+- sharp boundaries  
+- high-sensitivity zones  
+- curved transition manifolds  
+
+→ transitions occur along **specific geometric structures**
+
+---
+
+### 4. No true decisions exist
+Despite apparent “choice regions”:
+
+- trajectories ultimately converge to the same outcomes  
+- direction changes do not create new basins  
+
+→ the system defines **paths, not choices**
+
+---
+
+### 5. Transport is predictable (V9)
+From entry regions:
+
+- trajectories map to consistent outcomes  
+- transport is asymmetric and structured  
+
+→ the field defines a **transport function**
+
+---
+
+### 6. Boundaries carry signal (V10)
+Tracking boundary intensity over time shows:
+
+- early changes before visible system collapse  
+- strong correlation with regime transitions  
+
+→ boundaries act as **early-warning indicators**
+
+---
+
+## 🧭 How to read this document
+
+This is an **exploratory log**, not a formal theory.
+
+Suggested reading path:
+
+1. **V6** → structure and patterns  
+2. **V7** → navigation and reachability  
+3. **V8** → stability and Lyapunov structure  
+4. **V9–V10** → transport and temporal dynamics  
+
+Each section builds on the previous one.
+
+---
+
+## ⚠️ Scope
+
+This document:
+
+- does NOT claim new physical laws  
+- does NOT assume real-world equivalence  
+- DOES provide reproducible computational observations  
+
+---
+
+## 🧠 Core Idea
+
+> Structure shapes motion  
+> and motion reveals structure
+
+---
 
 ## Context
 

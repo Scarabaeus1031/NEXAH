@@ -8,9 +8,9 @@ It does NOT introduce new mathematics.
 
 It clarifies:
 
-- which standard concepts are used
-- how they are combined
-- what is actually computed in the system
+- which standard concepts are used  
+- how they are combined  
+- what is actually computed in the system  
 
 ---
 
@@ -20,16 +20,16 @@ This work does not introduce new equations.
 
 Instead, it proposes a different perspective:
 
-- dynamics are treated as a field
-- trajectories are treated as probes of structure
-- cost is constructed from simulated motion
-- navigation emerges from this constructed field
-- stability is measured directly from trajectory divergence
+- dynamics are treated as a field  
+- trajectories are treated as probes of structure  
+- cost is constructed from simulated motion  
+- navigation emerges from this constructed field  
+- stability is measured directly from trajectory divergence  
 
 The contribution is therefore:
 
-→ not new mathematics,  
-→ but a structured way to extract **geometry, navigation, and stability** from known systems
+→ not new mathematics  
+→ but a structured method to extract **geometry, navigation, and stability** from known systems  
 
 ---
 
@@ -37,9 +37,9 @@ The contribution is therefore:
 
 The system operates on a continuous 2D domain:
 
-$begin:math:display$
-x \= \(x\_1\, x\_2\) \\in \\mathbb\{R\}\^2
-$end:math:display$
+$$
+x = (x_1, x_2) \in \mathbb{R}^2
+$$
 
 ---
 
@@ -47,9 +47,9 @@ $end:math:display$
 
 A scalar field is defined:
 
-$begin:math:display$
-V\(x\) \: \\mathbb\{R\}\^2 \\to \\mathbb\{R\}
-$end:math:display$
+$$
+V(x) : \mathbb{R}^2 \to \mathbb{R}
+$$
 
 Constructed as a superposition of Gaussian functions.
 
@@ -64,14 +64,14 @@ Interpretation:
 
 The fundamental flow is:
 
-$begin:math:display$
-\\dot\{x\} \= \-\\nabla V\(x\)
-$end:math:display$
+$$
+\dot{x} = -\nabla V(x)
+$$
 
 Meaning:
 
 - trajectories move toward local minima  
-- this is a classical gradient descent system  
+- this corresponds to a classical gradient descent system  
 
 ---
 
@@ -79,13 +79,13 @@ Meaning:
 
 A rotational perturbation is added:
 
-$begin:math:display$
-F\(x\) \= \-\\nabla V\(x\) \+ R\(x\)
-$end:math:display$
+$$
+F(x) = -\nabla V(x) + R(x)
+$$
 
 Where:
 
-- $begin:math:text$R\(x\)$end:math:text$ is a curl-like component  
+- $R(x)$ is a curl-like component  
 - introduces circulation and asymmetry  
 
 Result:
@@ -98,16 +98,17 @@ Result:
 
 Extended system:
 
-$begin:math:display$
-\\dot\{x\} \= v
-$end:math:display$
-$begin:math:display$
-\\dot\{v\} \= F\(x\) \- \\gamma v
-$end:math:display$
+$$
+\dot{x} = v
+$$
+
+$$
+\dot{v} = F(x) - \gamma v
+$$
 
 Where:
 
-- $begin:math:text$ \\gamma \> 0 $end:math:text$ is a damping coefficient  
+- $\gamma > 0$ is a damping coefficient  
 
 Interpretation:
 
@@ -120,9 +121,9 @@ Interpretation:
 
 Trajectories are solutions of:
 
-$begin:math:display$
-x\'\(t\) \= F\(x\(t\)\)
-$end:math:display$
+$$
+\dot{x}(t) = F(x(t))
+$$
 
 Important:
 
@@ -135,20 +136,20 @@ Important:
 
 A scalar cost is assigned:
 
-$begin:math:display$
-J\(x\_0\) \= \\int\_0\^T \\ell\(x\(t\)\, v\(t\)\) \\\, dt
-$end:math:display$
+$$
+J(x_0) = \int_0^T \ell(x(t), v(t)) \, dt
+$$
 
 Where:
 
-$begin:math:display$
-\\ell\(x\, v\) \= \\\|v\\\| \+ \\alpha \\\|\\dot\{v\}\\\|
-$end:math:display$
+$$
+\ell(x, v) = \|v\| + \alpha \|\dot{v}\|
+$$
 
 Interpretation:
 
-- movement cost (speed)
-- curvature cost (direction change)
+- movement cost (speed)  
+- curvature cost (direction change)  
 
 → measures effort required to reach a target  
 
@@ -156,9 +157,9 @@ Interpretation:
 
 ## 8. Value Field Interpretation
 
-$begin:math:display$
-J\(x\) \\approx \\text\{Value Function\}
-$end:math:display$
+$$
+J(x) \approx \text{Value Function}
+$$
 
 Interpretation:
 
@@ -174,9 +175,9 @@ Important:
 
 ## 9. Navigation Field
 
-$begin:math:display$
-N\(x\) \= \-\\nabla J\(x\)
-$end:math:display$
+$$
+N(x) = -\nabla J(x)
+$$
 
 Interpretation:
 
@@ -191,14 +192,14 @@ Interpretation:
 
 Implicitly approximates:
 
-$begin:math:display$
-\\min\_\{x\(t\)\} \\int\_0\^T \\ell\(x\(t\)\, v\(t\)\) dt
-$end:math:display$
+$$
+\min_{x(t)} \int_0^T \ell(x(t), v(t)) \, dt
+$$
 
 Related to:
 
-- optimal control
-- Hamilton–Jacobi–Bellman theory
+- optimal control  
+- Hamilton–Jacobi–Bellman theory  
 
 But:
 
@@ -211,14 +212,14 @@ But:
 
 Finite-time Lyapunov-like quantity:
 
-$begin:math:display$
-\\lambda\(x\) \= \\frac\{1\}\{T\} \\log \\frac\{\\\| \\delta x\(T\) \\\|\}\{\\\| \\delta x\(0\) \\\|\}
-$end:math:display$
+$$
+\lambda(x) = \frac{1}{T} \log \frac{\|\delta x(T)\|}{\|\delta x(0)\|}
+$$
 
 Interpretation:
 
-- λ < 0 → stable (convergence)
-- λ > 0 → unstable (divergence)
+- $\lambda < 0$ → stable (convergence)  
+- $\lambda > 0$ → unstable (divergence)  
 
 Key point:
 
@@ -230,8 +231,8 @@ Key point:
 
 Observed:
 
-- transition boundaries (from cost / classification)
-- stability structures (from Lyapunov)
+- transition boundaries (from cost / classification)  
+- stability structures (from Lyapunov)  
 
 Result:
 
@@ -239,8 +240,8 @@ Result:
 
 Interpretation:
 
-→ boundary = outcome transition  
-→ Lyapunov = local stability  
+- boundary = outcome transition  
+- Lyapunov = local stability  
 
 ---
 
@@ -248,12 +249,12 @@ Interpretation:
 
 Transition regions correspond to:
 
-- non-smooth regions of $begin:math:text$J\(x\)$end:math:text$
-- competing trajectories
+- non-smooth regions of $J(x)$  
+- competing trajectories  
 
-$begin:math:display$
-\\nabla J\(x\) \\text\{ unstable or discontinuous\}
-$end:math:display$
+$$
+\nabla J(x) \ \text{unstable or non-smooth}
+$$
 
 Interpretation:
 
@@ -265,9 +266,9 @@ Interpretation:
 
 Sensitivity approximates:
 
-$begin:math:display$
-\\frac\{\\partial x\(T\)\}\{\\partial x\(0\)\}
-$end:math:display$
+$$
+\frac{\partial x(T)}{\partial x(0)}
+$$
 
 Interpretation:
 
@@ -283,15 +284,14 @@ Related to:
 
 From experiments:
 
-- gates exist (weak stability regions)
-- but no branching occurs
+- gates exist (weak stability regions)  
+- but no branching occurs  
 
 Result:
 
 ```text
 num_decision_points = 0
 ```
-
 Interpretation:
 
 → system has transitions  
@@ -307,7 +307,7 @@ The system combines:
 - rotational flow (circulation)  
 - dissipation (stability)  
 - cost accumulation (navigation)  
-- Lyapunov estimation (stability geometry)
+- Lyapunov estimation (stability geometry)  
 
 This produces:
 
@@ -323,15 +323,15 @@ This produces:
 
 The system is best described as:
 
-$begin:math:display$
-\\text\{Directed Dynamical System\}
-$end:math:display$
+$$
+\text{Directed Dynamical System}
+$$
 
 Properties:
 
-- constrained flow
-- dominant attractor
-- no multi-branch decision structure
+- constrained flow  
+- dominant attractor  
+- no multi-branch decision structure  
 
 ---
 
@@ -355,12 +355,12 @@ It is NOT:
 
 The system can be summarized as:
 
-$begin:math:display$
-\\text\{Dynamical Field\} 
-\+ \\text\{Cost Field\} 
-\+ \\text\{Navigation Field\} 
-\+ \\text\{Stability Field\}
-$end:math:display$
+$$
+\text{Dynamical Field} 
++ \text{Cost Field} 
++ \text{Navigation Field} 
++ \text{Stability Field}
+$$
 
 Result:
 
@@ -417,4 +417,3 @@ No structure is explicitly imposed.
 The system does not offer choices.
 
 It defines paths.
-```

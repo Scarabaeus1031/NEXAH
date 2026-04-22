@@ -1,5 +1,13 @@
 # 🧭 NEXAH — Field Decomposition Layer
 
+## 🔥 What this module shows (in 5 lines)
+
+- complex systems form **structure**, not randomness  
+- motion follows **geometry**, not arbitrary paths  
+- transitions occur along **specific boundaries**  
+- outcomes are **constrained, not freely chosen**  
+- stability and change can be **read directly from the field**
+
 ![Lyapunov Map](outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
 
 ---
@@ -166,6 +174,42 @@ Meaning:
 → all tested perturbations converge to the same attractor  
 
 ---
+
+---
+
+## Transport & Temporal Layer (V9–V10)
+
+The system can also be analyzed in terms of:
+
+### Transport (V9)
+
+- trajectories from entry regions map to consistent outcomes  
+- flow organizes into **channels and regimes**  
+- transport is **structured and asymmetric**
+
+→ the field defines a **transport function**
+
+---
+
+### Temporal Signals (V10)
+
+Tracking boundary intensity over time reveals:
+
+- early structural changes  
+- signals before visible system transitions  
+- correlation with system collapse (e.g. IEEE experiments)
+
+→ boundaries act as **early-warning indicators**
+
+---
+
+### Extended Insight
+
+```text
+The field does not only define motion.
+
+It defines where motion goes — and when it changes.
+```
 
 ## System Interpretation
 
