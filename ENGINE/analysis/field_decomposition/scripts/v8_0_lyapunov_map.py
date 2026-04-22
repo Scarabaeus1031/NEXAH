@@ -1,12 +1,30 @@
 # ENGINE/analysis/field_decomposition/scripts/v8_0_lyapunov_map.py
 
-import sys
+# =========================
+# LOCAL SAVE (NO IMPORT)
+# =========================
+
 import os
+from datetime import datetime
 
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, CURRENT_DIR)
+def save_figure(script_path):
+    SCRIPT_NAME = os.path.splitext(os.path.basename(script_path))[0]
+    OUTDIR = os.path.join("ENGINE/analysis/field_decomposition/outputs", SCRIPT_NAME)
+    os.makedirs(OUTDIR, exist_ok=True)
 
-from save_pipeline import save_figure, save_run_info
+    outfile = os.path.join(OUTDIR, f"{SCRIPT_NAME}.png")
+    plt.savefig(outfile, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"✓ saved figure → {outfile}")
+
+def save_run_info(script_path):
+    SCRIPT_NAME = os.path.splitext(os.path.basename(script_path))[0]
+    OUTDIR = os.path.join("ENGINE/analysis/field_decomposition/outputs", SCRIPT_NAME)
+
+    info_path = os.path.join(OUTDIR, "run_info.txt")
+    with open(info_path, "w") as f:
+        f.write(f"script: {SCRIPT_NAME}\n")
+        f.write(f"time: {datetime.now()}\n")
 
 # ============================================================
 # PARAMETERS
