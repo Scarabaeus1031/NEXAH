@@ -1,9 +1,44 @@
 # 🖼️ NEXAH — Visual Gallery (Field Decomposition)
 
-This gallery documents the emergence of structure, navigation, and stability
-within the NEXAH field system.
+## 🔥 What this gallery shows (in 5 lines)
 
-It is organized chronologically by discovery phase.
+- complex systems form **structure**, not randomness  
+- motion follows **geometry**, not arbitrary paths  
+- transitions occur along **specific boundaries**  
+- outcomes are **constrained, not freely chosen**  
+- stability and change can be **read from the field**
+
+---
+
+## 🧭 How to read this
+
+This gallery is organized as a discovery sequence:
+
+| Phase | What emerges |
+|------|-------------|
+| V2–V5 | field structure |
+| V6 | geometric organization |
+| V7 | navigation constraints |
+| V8 | stability geometry |
+| V9 | transport & regimes |
+| V10 | temporal signals |
+
+👉 Each phase reveals a deeper layer of the same system.
+
+---
+
+## Overview
+
+This gallery documents the emergence of:
+
+- structure  
+- motion  
+- transitions  
+- stability  
+- transport  
+- temporal signals  
+
+All visuals come from the same underlying field.
 
 ---
 
@@ -191,13 +226,139 @@ It is organized chronologically by discovery phase.
 
 ---
 
+# 🔷 V9 — Transport & Regime Structure
+
+## Flow Graph
+
+![V9.0 Flow Graph](outputs/v9_0/v9_0_flow_graph.png)
+
+→ Sparse connectivity between nodes  
+→ first indication of directional transport structure  
+
+---
+
+## Node Extraction
+
+![V9.1 Nodes](outputs/v9_1/v9_1_nodes.png)
+
+→ Dense regions of activity  
+→ emergence of core vs outer regions  
+
+---
+
+## Unique Density Field
+
+![V9.2 Density](outputs/v9_2/v9_2_unique_density.png)
+
+→ Field reveals layered structure  
+
+---
+
+## Orbit Stability
+
+![V9.3 Stability](outputs/v9_3/v9_3_orbit_stability.png)
+
+→ layered stability structure  
+
+---
+
+## Orbit Entry Map
+
+![V9.4 Entry](outputs/v9_4/v9_4_orbit_entry.png)
+
+→ entry into orbit structures  
+
+---
+
+## Entry Channels
+
+![V9.5 Channels](outputs/v9_5/v9_5_channels.png)
+
+→ preferred pathways  
+
+---
+
+## True Channels
+
+![V9.5 True Channels](outputs/v9_5/v9_5_true_channels.png)
+
+→ stable transport structure  
+
+---
+
+## Direction Field
+
+![V9.6 Direction](outputs/v9_6/v9_6_direction_field.png)
+
+→ local flow direction  
+
+---
+
+## Transport Map
+
+![V9.7 Transport](outputs/v9_7/v9_7_transport_map.png)
+
+→ mapping: entry → outcome  
+
+---
+
+## Multi-Regime Field
+
+![V9.8 Regimes](outputs/v9_8/v9_8_transport_map.png)
+
+→ distinct motion regimes  
+
+---
+
+## Dynamic Regime Field
+
+![V9.9 Dynamic](outputs/v9_9/v9_9_dynamic_regime_field.png)
+
+→ evolving structure  
+
+---
+
+# 🔷 V10 — Boundary Dynamics & Temporal Signals
+
+## Regime Map
+
+![V10.0 Regime](outputs/v10_0/v10_0_regime_map.png)
+
+→ global system classification  
+
+---
+
+## Boundary (Raw)
+
+![V10.1 Raw](outputs/v10_1/v10_1_boundary_raw.png)
+
+→ detailed transition structure  
+
+---
+
+## Boundary Strength
+
+![V10.1 Strength](outputs/v10_1/v10_1_boundary_strength.png)
+
+→ active transition zones  
+
+---
+
+## Key Insight (V10)
+
+```text
+Boundaries are not static separators.
+
+They are dynamic signals of system change.
+```
+---
+
 # 🔥 Final Insight
 
-The system evolves as:
-
-Field → Structure → Navigation → Stability
+Field → Structure → Navigation → Stability → Transport → Time
 
 But:
 
-→ It does not branch.  
+→ It does not branch.
 → It constrains.
+→ It signals change.
