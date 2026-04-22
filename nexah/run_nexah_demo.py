@@ -2,7 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from nexah.field_layer.core.field_demo import generate_lorenz
-from nexah.field_layer.core.metrics import compute_flow_strength, compute_curvature
+from nexah.field_layer.core.field import Field
+from nexah.field_layer.core.metrics import Metrics
 
 
 def main():
@@ -13,21 +14,28 @@ def main():
 
     print("✔ Generated Lorenz trajectory")
 
-    # --- 2. Compute field metrics ---
-    flow = compute_flow_strength(trajectory)
-    curvature = compute_curvature(trajectory)
+    # --- 2. Build field ---
+    field = Field(trajectory)
+
+    print("✔ Constructed field")
+
+    # --- 3. Metrics ---
+    metrics = Metrics(field)
+
+    flow = metrics.flow_strength()
+    curvature = metrics.curvature()
 
     # normalize
     flow_norm = flow / (np.max(flow) + 1e-8)
     curvature_norm = curvature / (np.max(curvature) + 1e-8)
 
-    # --- 3. Combined signal ---
+    # --- 4. Combined signal ---
     risk = flow_norm * curvature_norm
 
-    print("✔ Computed field metrics")
+    print("✔ Computed metrics")
     print("✔ Generated structural signal (risk)")
 
-    # --- 4. Plot ---
+    # --- 5. Plot ---
     fig, axs = plt.subplots(4, 1, figsize=(10, 8), sharex=True)
 
     axs[0].plot(t, trajectory[:, 0])
@@ -46,7 +54,12 @@ def main():
     plt.show()
 
     print("\n🔥 Result:")
-    print("Signal peaks indicate structural transitions in the system.\n")
+    print("Signal peaks indicate structural transitions.\n")
+
+    # --- 6. Mini Result Block ---
+    print("📊 Stats:")
+    print(f"Max risk: {np.max(risk):.3f}")
+    print(f"Mean risk: {np.mean(risk):.3f}")
 
 
 if __name__ == "__main__":
