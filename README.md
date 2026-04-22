@@ -131,6 +131,36 @@ Example (single run):
 
 ---
 
+### 🔬 Stability Insight (V8)
+
+The field does not only define where transitions occur —  
+it also defines how stable they are.
+
+Analysis shows:
+
+- stability forms a continuous gradient across the field  
+- boundaries are not unstable — they are **weakly stable regions**  
+- local weak points ("gates") exist, but do not create branching outcomes  
+
+---
+
+> The system contains gates, but no decisions.
+
+All tested perturbations converge to the same attractor.
+
+---
+
+This means:
+
+- motion is constrained by geometry  
+- transitions are constrained by stability  
+- outcomes are structurally determined  
+
+→ the system is not only structured —  
+→ it is **stability-constrained**
+
+---
+
 ## ⚡ IEEE Demo — Early Collapse Detection
 
 Run:
