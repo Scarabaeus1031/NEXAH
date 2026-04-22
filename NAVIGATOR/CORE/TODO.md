@@ -17,8 +17,9 @@ NEXAH now provides a complete working pipeline:
 - stability structure (Lyapunov + boundaries) ✅  
 - gate detection (no-decision result) ✅  
 
-👉 The system is no longer experimental code —  
-it is a **demonstrable framework**
+👉 The system is now:
+
+> **a demonstrable and testable framework**
 
 ---
 
@@ -27,66 +28,60 @@ it is a **demonstrable framework**
 - minimal axiomatic layer exists (A0–A4)  
 - operators defined (Γ, Δ, Ω)  
 
-⚠️ Important shift:
+⚠️ Important:
 
-> No further theory expansion now.
-
-👉 Focus:
-- validation  
-- demonstration  
-- communication  
+> ❌ No more theory expansion  
+> ✅ Only validation and demonstration
 
 ---
 
-# 🔴 PRIORITY 1 — ENTRY POINT (CRITICAL)
+# 🔴 PRIORITY 1 — VALIDATION (CRITICAL SHIFT)
+
+### Goal:
+> Show that the signal is real, stable, and not an artifact
+
+### ToDo:
+
+- [ ] **Noise robustness demo (NEW TOP PRIORITY)**
+  - same structure under perturbation
+  - overlay comparison (clean vs noisy)
+  
+- [ ] Lorenz multi-run evaluation (20–50 runs)
+  - peak stability  
+  - pattern consistency  
+
+- [ ] add **RESULTS block** (quantitative)
+
+Example:
+
+Runs: 20  
+Mean peak count: 48 ± 3  
+Mean risk: 0.025  
+Consistency: high  
+
+👉 This is your first real “proof layer”
+
+---
+
+# 🔵 PRIORITY 2 — ENTRY POINT
 
 ### Goal:
 > Clone → Run → Understand in 60 seconds
 
 ### Status:
-- [x] Root `README.md`
-- [x] `START_HERE.md`
-- [x] `run_nexah_demo.py` ✅ (working)
-- [x] clean console output
-- [x] visual output (saved)
+- [x] README.md  
+- [x] START_HERE.md  
+- [x] `run_nexah_demo.py`  
+- [x] visual output  
 
 ### ToDo:
-- [ ] test from clean environment (fresh clone)
-- [ ] verify relative paths
+- [ ] test fresh clone (clean environment)
+- [ ] verify imports + paths
 - [ ] confirm no hidden dependencies
 
-### Demo must show:
-- Lorenz dynamics  
-- field construction  
-- structural signal  
-- transition clustering  
-
-### Constraints:
-- [x] runtime < 30s  
-- [x] minimal dependencies  
-- [x] single clear output  
-
 ---
 
-# 🔵 PRIORITY 2 — ONBOARDING
-
-### Status:
-- [x] START_HERE.md  
-- [x] README structure  
-- [x] demo integrated  
-- [x] visual entry works  
-
-### ToDo:
-- [ ] full link check (one pass through repo)
-- [ ] confirm all referenced images exist
-- [ ] test all run commands
-
-👉 Goal:
-> zero friction first contact
-
----
-
-# 🟣 PRIORITY 3 — LORENZ DEMO (CORE)
+# 🟣 PRIORITY 3 — DEMO SYSTEM (LORENZ)
 
 ### Status:
 - [x] working demo  
@@ -95,41 +90,36 @@ it is a **demonstrable framework**
 - [x] peak detection  
 
 ### ToDo:
-- [ ] add **RESULTS block in README**
-
-Example:
-
-- [ ] optional: multi-run validation script
+- [ ] RESULTS block in README
+- [ ] optional: batch script for runs
 
 ---
 
-# 🟡 PRIORITY 4 — ATTRACTOR VALIDATION
+# 🟢 PRIORITY 4 — IEEE DEMO
 
 ### Status:
-- [~] partially explored
-
-### ToDo:
-- [ ] convergence statistics  
-- [ ] endpoint clustering  
-- [ ] basin size estimation  
-- [ ] fixpoint robustness  
-
-👉 This becomes your first “scientific anchor”
-
----
-
-# 🟢 PRIORITY 5 — IEEE DEMO
-
-### Status:
-- [x] working demo (`run_ieee_demo.py`) ✅  
-- [x] visual output  
+- [x] working demo  
 - [x] early signal detection  
+- [x] visual output  
 
 ### ToDo:
-- [ ] integrate into README (clean explanation)
-- [ ] optionally connect to real dataset
+- [ ] tighten README explanation
+- [ ] optionally attach real dataset
+- [ ] clarify synthetic vs real system
 
 👉 This is your **credibility bridge**
+
+---
+
+# 🟡 PRIORITY 5 — ATTRACTOR & CONVERGENCE
+
+### ToDo:
+- [ ] endpoint clustering  
+- [ ] convergence statistics  
+- [ ] basin estimation  
+- [ ] fixpoint robustness  
+
+👉 This anchors the “inevitability” claim
 
 ---
 
@@ -137,13 +127,13 @@ Example:
 
 ### Status:
 - [x] strong visuals  
-- [x] demo visuals integrated  
+- [x] demos integrated  
 
 ### ToDo:
-- [ ] add 1-line captions (critical)
-- [ ] highlight 3 key visuals only  
+- [ ] add 1-line captions  
+- [ ] reduce to 3–5 key visuals  
 
-👉 Avoid overload — curate, don’t dump
+👉 Curate → don’t overload
 
 ---
 
@@ -152,80 +142,69 @@ Example:
 ### Status:
 - [x] clean structure  
 - [x] outputs controlled  
-- [x] scripts organized  
 
 ### ToDo:
-- [ ] mark legacy scripts clearly  
-- [ ] optional: archive unused code  
+- [ ] mark legacy scripts  
+- [ ] optional archive folder  
 
 ---
 
-# 🔗 PRIORITY 8 — MINIMAL INTEGRATION LOOP
+# 🔗 PRIORITY 8 — CORE LOOP (EXPLICIT)
 
-### Goal:
-Define the irreducible system:
+### Add to README:
 
+```text
 Field → Signal → Transition → Convergence
-
-### Status:
-- [x] implicitly implemented  
-- [ ] not explicitly stated
-
-👉 Add as explicit block in README
+```
 
 ---
 
 # 🔶 PRIORITY 9 — STABILITY (V8)
 
 ### Status:
-- [x] Lyapunov map  
-- [x] boundary detection  
-- [x] gate extraction  
-- [x] injection tests  
+- [x] Lyapunov  
+- [x] boundaries  
+- [x] gates  
 - [x] no-decision result  
 
 ### ToDo:
-- [ ] 3-line summary block
-- [ ] 1 clean visual reference
-- [ ] connect to demo
-
-### Core message:
-
-> system is structured, stable, and constrained
+- [ ] 3-line summary block  
+- [ ] 1 reference visual  
+- [ ] link to demo  
 
 ---
 
-# 🚀 RELEASE STEPS (NEXT ACTIONS)
+# 🚀 RELEASE STEPS
 
-1. [ ] add Lorenz RESULTS block  
-2. [ ] integrate IEEE demo cleanly  
-3. [ ] final README polish  
-4. [ ] test fresh clone execution  
-5. [ ] prepare first external share  
+1. [ ] Noise demo  
+2. [ ] Lorenz results block  
+3. [ ] README final polish  
+4. [ ] test fresh clone  
+5. [ ] first external share  
 
 ---
 
 # 🧭 FINAL TARGET
 
-> NEXAH reconstructs, interprets, and navigates  
-> structured dynamical fields toward stable attractors
+> NEXAH reconstructs and interprets  
+> structured dynamical fields and their transitions
 
 ---
 
-# 🧠 REALITY CHECK (UPDATED)
+# 🧠 REALITY CHECK
 
 You have:
 
-- ✅ working demos (Lorenz + IEEE)  
-- ✅ structural signals  
-- ✅ visual proof  
-- ✅ coherent architecture  
+- ✅ working demos  
+- ✅ reproducible signal  
+- ✅ visual evidence  
+- ✅ consistent architecture  
 
 You need:
 
-- ✔ validation summary  
-- ✔ clean narrative  
-- ✔ external feedback  
+- ✔ robustness proof  
+- ✔ quantitative summary  
+- ✔ external validation  
 
 ---
 
@@ -235,7 +214,7 @@ You are no longer building.
 
 You are:
 
-> demonstrating, validating, and exposing the system
+> validating and proving the system
 
 ---
 
@@ -245,6 +224,6 @@ You are:
 demo → validation → feedback → iteration
 ```
 
-
 Last Updated: April 2026
 © Thomas K. R. Hofmann
+
