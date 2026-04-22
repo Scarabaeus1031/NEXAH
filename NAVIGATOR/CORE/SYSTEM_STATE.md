@@ -15,12 +15,12 @@ It reflects:
 
 NEXAH is currently a:
 
-> **field-based reconstruction, control, and navigation system for dynamical systems**
+> **field-based reconstruction, control, navigation, and stability analysis system for dynamical systems**
 
 It transforms:
 
 ```text
-dynamics → structure → field → topology → control → navigation → convergence
+dynamics → structure → field → topology → control → navigation → stability → convergence
 ```
 
 ---
@@ -69,7 +69,7 @@ Status:
 
 ## Key Result
 
-> The system is reconstructed as a **continuous dynamical field with topology and control**
+> The system is reconstructed as a **continuous dynamical field with geometry and topology**
 
 ---
 
@@ -149,12 +149,68 @@ It is:
 
 ---
 
-# 🔗 5. System Integration
+# 🔶 5. Stability Layer (V8 — Newly Established)
+
+Status:
+
+✔ Lyapunov mapping (finite-time)  
+✔ stability field construction  
+✔ boundary vs stability comparison  
+✔ gate detection (weak stability regions)  
+✔ injection testing  
+✔ decision point analysis  
+
+---
+
+## Key Result
+
+```text
+The system contains gates, but no decisions.
+```
+
+---
+
+## Interpretation
+
+The system exhibits:
+
+- transition regions  
+- entry points ("gates")  
+- stability gradients  
+
+But:
+
+→ no branching outcomes  
+
+All tested trajectories within reachable regions converge to the same attractor.
+
+---
+
+## Critical Insight
+
+- transition boundaries ≠ instability structures  
+- gates ≠ decision nodes  
+
+This separates:
+
+→ geometry of motion  
+→ stability of motion  
+
+---
+
+## System-Level Consequence
+
+> The system behaves as a **directed flow system**, not a decision system.
+
+---
+
+# 🔗 6. System Integration
 
 Status:
 
 ✔ Discovery → Field Layer integrated  
 ✔ Field → Control → Navigation working  
+✔ Stability layer integrated  
 ✔ closed-loop behavior observable  
 
 ---
@@ -171,7 +227,7 @@ Status:
 
 ---
 
-# 🌍 6. Real-World Systems (Early Stage)
+# 🌍 7. Real-World Systems (Early Stage)
 
 Status:
 
@@ -195,7 +251,7 @@ Status:
 
 ---
 
-# ⚠️ 7. Current Bottlenecks
+# ⚠️ 8. Current Bottlenecks
 
 ## 1. Packaging Gap
 
@@ -206,7 +262,7 @@ Status:
 
 ## 2. Validation Gap
 
-- convergence not yet statistically validated  
+- convergence not statistically validated  
 - limited multi-run evaluation  
 
 ---
@@ -217,29 +273,38 @@ Status:
 
 ---
 
-# 🧠 8. What Is Proven
+## 4. Conceptual Gap
+
+- analytical description of cost field missing  
+- analytical formulation of stability field missing  
+
+---
+
+# 🧠 9. What Is Established
 
 ✔ structure emerges from dynamics  
 ✔ dynamics form continuous fields  
 ✔ transitions follow geometric channels  
 ✔ topology emerges from flow  
 ✔ attractors exist and are measurable  
-✔ trajectories converge to stable points  
-✔ control can shape trajectories  
+✔ trajectories converge to stable regions  
 ✔ navigation is possible within the field  
+✔ stability structure can be measured (Lyapunov)  
+✔ system exhibits **directed convergence behavior**  
 
 ---
 
-# ❌ 9. What Is NOT Proven
+# ❌ 10. What Is NOT Established
 
-❌ generalization across systems  
+❌ generalization across arbitrary systems  
 ❌ robustness under strong perturbations  
 ❌ large-scale real-world applicability  
-❌ theoretical completeness  
+❌ analytical completeness  
+❌ existence of true decision structures  
 
 ---
 
-# 🚀 10. Immediate Next Steps
+# 🚀 11. Immediate Next Steps
 
 1. build `run_nexah_demo.py` (entry point)  
 2. validate convergence statistically (multi-run)  
@@ -254,7 +319,7 @@ Status:
 NEXAH demonstrates:
 
 > **complex systems can be reconstructed as structured fields  
-> with controllable trajectories and stable convergence**
+> with constrained navigation and stable convergence**
 
 ---
 
@@ -263,8 +328,9 @@ NEXAH demonstrates:
 > Complex systems are not random.  
 > They evolve within structured fields.
 
-> If the field is reconstructed,  
-> the system can be navigated.
+> These fields constrain motion,  
+> guide trajectories,  
+> and determine outcomes.
 
 ---
 
