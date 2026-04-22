@@ -5,29 +5,30 @@
 
 ## 🧭 Overview
 
-This directory contains **applied system modules** built with the NEXAH framework.
+This directory contains **application modules built with the NEXAH framework**.
 
-NEXAH explores how complex systems can be interpreted through:
+NEXAH provides a unified approach to analyzing complex systems through:
 
 → structure  
 → flow  
 → geometry  
 → regime transitions  
 
-Instead of focusing purely on event detection (e.g. collapse),  
-NEXAH analyzes how systems evolve within **structured dynamical landscapes**.
+Instead of focusing on isolated events (e.g. collapse), NEXAH studies how systems evolve within:
+
+> **structured dynamical landscapes**
 
 ---
 
-## 🚀 Core Idea
+## 🚀 Core Principle
 
-NEXAH shifts the focus from:
+Classical system analysis:
 
-→ discrete instability events  
+→ detects instability as a discrete event  
 
-to:
+NEXAH:
 
-→ **continuous structural and regime-based analysis**
+→ interprets instability as a **continuous transition between regimes**
 
 ---
 
@@ -35,25 +36,25 @@ to:
 
 ![Lorenz Core](core_demos/lorenz/outputs/lorenz_nexah_v12_final.png)
 
-The Lorenz system serves as the **primary reference model** for NEXAH.
+The Lorenz system serves as the **reference implementation** of the NEXAH framework.
 
-It demonstrates the full transformation:
+It demonstrates the full transformation pipeline:
+
 ```text
-Dynamics → Structure → Symbols → Prediction → Control → Meta-Control → Memory → Switching → Behavior
+Dynamics → Structure → Geometry → Prediction → Control → Adaptation
 ```
 
 ---
 
-## 🧠 What This Shows
+## 🧠 Key Insights
 
-Across the Lorenz demos:
+From the Lorenz module:
 
-- chaos is structured, not random  
-- trajectories form symbolic states  
-- patterns and sequences emerge  
-- prediction becomes possible  
-- control becomes anticipatory  
-- behavior becomes adaptive  
+- chaotic systems exhibit **latent structure**
+- trajectories form **repeatable patterns**
+- symbolic representations can emerge from dynamics  
+- prediction becomes possible through structure  
+- control becomes **trajectory-aware** rather than reactive  
 
 ---
 
@@ -61,24 +62,17 @@ Across the Lorenz demos:
 
 👉 [`core_demos/lorenz/`](core_demos/lorenz/README.md)
 
-Structure:
-
-- `core/` → pipeline & field extraction  
-- `analysis/` → structure & symbolic dynamics  
-- `navigation/` → control & behavior  
-- `meta/` → adaptive intelligence  
-- `docs/` → theory & development logs  
-
 ---
 
 ## 🧠 Interpretation
 
-> The Lorenz system is not just a toy model.  
-> It is a **minimal working example of the NEXAH framework**.
+> The Lorenz system is a **minimal working example** of NEXAH:
+>
+> a system where dynamics, structure, and control can be studied in a unified way.
 
 ---
 
-# ⚡ 2. Power Systems — Structural Analysis
+# ⚡ 2. Power Systems — Structural Stability Analysis
 
 ![NEXAH Overview](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
 
@@ -88,17 +82,17 @@ Structure:
 
 ## 🔍 Observations
 
-- system trajectories exhibit **structured behavior**
-- collapse appears as a **transition boundary**
-- dynamics follow **flow-like evolution**
-- patterns scale across system sizes  
+- system trajectories exhibit **structured organization**  
+- collapse appears as a **boundary in state space**  
+- system evolution follows **flow-like dynamics**  
+- qualitative patterns persist across different network sizes  
 
 ---
 
 ## 🧠 Interpretation
 
 > Power system stability can be interpreted as a  
-> **trajectory evolving within a structured dynamical landscape**
+> **trajectory within a structured dynamical landscape**
 
 ---
 
@@ -106,35 +100,28 @@ Structure:
 
 - structural analysis of IEEE test systems  
 - trajectory-based stability interpretation  
-- regime transition detection (experimental)  
+- experimental regime transition detection  
 - scaling up to **9241-bus systems**  
 
 ---
 
 ## ⚠️ Important Note
 
-- early detection performance is **case-dependent**  
-- no universal guarantee  
-- current validation is limited  
+- early detection performance is **scenario-dependent**  
+- no universal guarantee of lead time  
+- validation on real-world data is ongoing  
 
 ---
 
 ## 🧭 Entry Points
 
-### 🔹 Quick Results
-👉 [`power_systems/nexah_ieeeX/`](power_systems/nexah_ieeeX/README.md)
-
-### 🔹 Full System Overview
-👉 [`power_systems/`](power_systems/README.md)
-
-### 🔹 Minimal Pipeline
-👉 [`power_systems/nexah_ieee9`](power_systems/nexah_ieee9/README.md)
-
-### 🔹 Structural Theory
-👉 [`power_systems/stability_field_dynamics`](power_systems/stability_field_dynamics/ieee_test_cases/README.md)
-
-### 🔹 Geometric Analysis
-👉 [`power_systems/ieee_xray_pipeline`](power_systems/ieee_xray_pipeline/README.md)
+| Purpose | Path |
+|--------|------|
+| Quick results | `power_systems/nexah_ieeeX/` |
+| Full overview | `power_systems/` |
+| Minimal pipeline | `power_systems/nexah_ieee9/` |
+| Structural theory | `power_systems/stability_field_dynamics/` |
+| Geometric analysis | `power_systems/ieee_xray_pipeline/` |
 
 ---
 
@@ -144,6 +131,8 @@ Structure:
 PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieeeX/decision/main_ieee300.py
 ```
 
+---
+
 # 🧩 3. Structural Theory — Collapse Geometry
 
 ![Collapse Geometry](power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
@@ -152,9 +141,8 @@ PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieeeX/decision/main_ieee300
 
 ## 🧠 Interpretation
 
-Collapse is better understood as a:
-
-→ **geometric transition within system structure**
+> Collapse is not a singular failure event,  
+> but a **geometric transition within system structure**
 
 ---
 
@@ -162,9 +150,9 @@ Collapse is better understood as a:
 
 System → Adapter → State Graph → NEXAH → Analysis
 
-Supports:
+Supported domains:
 
-- power grids  
+- power systems  
 - dynamical systems  
 - synthetic environments  
 
@@ -172,12 +160,12 @@ Supports:
 
 ---
 
-# 🧠 Core Insight
+# 🧠 Unified Insight
 
 Across all modules:
 
 > Systems evolve along structured trajectories.  
-> Instability emerges as a **regime transition**, not a single event.
+> Instability emerges as a **transition between regimes**, not a single event.
 
 ---
 
@@ -185,21 +173,18 @@ Across all modules:
 
 | Goal | Start Here |
 |------|-----------|
-| Core framework (Lorenz) | `core_demos/lorenz/` |
-| Large system experiments | `power_systems/nexah_ieeeX/` |
-| System understanding | `power_systems/` |
-| Code entry point | `power_systems/nexah_ieee9/` |
-| Theory | `power_systems/stability_field_dynamics/` |
+| Understand the framework | `core_demos/lorenz/` |
+| Explore large-scale systems | `power_systems/nexah_ieeeX/` |
+| Dive into system structure | `power_systems/` |
+| Run a minimal example | `power_systems/nexah_ieee9/` |
+| Study theory | `power_systems/stability_field_dynamics/` |
 
 ---
 
 # 🌀 NEXAH
 
-> From dynamics → structure  
-> From structure → navigation  
+> From dynamics → structure → flow → geometry → regimes → navigation
 
 ---
 
 **Scarabæus1033 · NEXAH**
-
-
