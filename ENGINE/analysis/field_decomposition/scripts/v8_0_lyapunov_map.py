@@ -1,30 +1,38 @@
 # ENGINE/analysis/field_decomposition/scripts/v8_0_lyapunov_map.py
 
-# =========================
-# LOCAL SAVE (NO IMPORT)
-# =========================
-
 import os
 from datetime import datetime
 
-def save_figure(script_path):
-    SCRIPT_NAME = os.path.splitext(os.path.basename(script_path))[0]
-    OUTDIR = os.path.join("ENGINE/analysis/field_decomposition/outputs", SCRIPT_NAME)
-    os.makedirs(OUTDIR, exist_ok=True)
+import numpy as np
+import matplotlib.pyplot as plt
 
-    outfile = os.path.join(OUTDIR, f"{SCRIPT_NAME}.png")
+# ============================================================
+# LOCAL SAVE (NO IMPORT)
+# ============================================================
+
+def save_figure(script_path):
+    script_name = os.path.splitext(os.path.basename(script_path))[0]
+    outdir = os.path.join("ENGINE/analysis/field_decomposition/outputs", script_name)
+    os.makedirs(outdir, exist_ok=True)
+
+    outfile = os.path.join(outdir, f"{script_name}.png")
     plt.savefig(outfile, dpi=150, bbox_inches="tight")
     plt.close()
-    print(f"✓ saved figure → {outfile}")
+    print(f"✓ saved figure -> {outfile}")
+    return outdir
 
-def save_run_info(script_path):
-    SCRIPT_NAME = os.path.splitext(os.path.basename(script_path))[0]
-    OUTDIR = os.path.join("ENGINE/analysis/field_decomposition/outputs", SCRIPT_NAME)
+def save_run_info(script_path, extra=None):
+    script_name = os.path.splitext(os.path.basename(script_path))[0]
+    outdir = os.path.join("ENGINE/analysis/field_decomposition/outputs", script_name)
+    os.makedirs(outdir, exist_ok=True)
 
-    info_path = os.path.join(OUTDIR, "run_info.txt")
-    with open(info_path, "w") as f:
-        f.write(f"script: {SCRIPT_NAME}\n")
+    info_path = os.path.join(outdir, "run_info.txt")
+    with open(info_path, "w", encoding="utf-8") as f:
+        f.write(f"script: {script_name}\n")
         f.write(f"time: {datetime.now()}\n")
+        if extra:
+            for k, v in extra.items():
+                f.write(f"{k}: {v}\n")
 
 # ============================================================
 # PARAMETERS
@@ -33,11 +41,10 @@ def save_run_info(script_path):
 DT = 0.05
 STEPS = 80
 EPS = 1e-4
-
 GRID_RES = 60
 
 # ============================================================
-# FIELD (reuse your logic)
+# FIELD
 # ============================================================
 
 clusters = {
@@ -48,7 +55,9 @@ clusters = {
 }
 
 def gaussian(x, y, center, strength, sigma=1.2):
-    return strength * np.exp(-((x - center[0])**2 + (y - center[1])**2) / (2 * sigma**2))
+    return strength * np.exp(
+        -((x - center[0])**2 + (y - center[1])**2) / (2 * sigma**2)
+    )
 
 def scalar_field(x, y):
     return (
@@ -69,11 +78,11 @@ def rotational_field(x, y):
 
     r2 = p - clusters["C2"]
     d2 = np.linalg.norm(r2) + 1e-9
-    v += 0.6 * np.array([r2[1], -r2[0]]) * np.exp(-(d2**2)/(2*1.6**2))
+    v += 0.6 * np.array([r2[1], -r2[0]]) * np.exp(-(d2**2) / (2 * 1.6**2))
 
     r3 = p - clusters["C3"]
     d3 = np.linalg.norm(r3) + 1e-9
-    v += 0.55 * np.array([-r3[1], r3[0]]) * np.exp(-(d3**2)/(2*1.3**2))
+    v += 0.55 * np.array([-r3[1], r3[0]]) * np.exp(-(d3**2) / (2 * 1.3**2))
 
     return v
 
@@ -100,8 +109,8 @@ def simulate(x0):
 # ============================================================
 
 def lyapunov_at_point(x0):
-    x1 = x0
-    x2 = x0 + np.array([EPS, 0])
+    x1 = x0.copy()
+    x2 = x0 + np.array([EPS, 0.0])
 
     traj1 = simulate(x1)
     traj2 = simulate(x2)
@@ -133,19 +142,35 @@ for i in range(GRID_RES):
 # ============================================================
 
 plt.figure(figsize=(10, 6))
-
 plt.contourf(X, Y, L, levels=60, cmap="inferno")
 plt.colorbar(label="Lyapunov exponent")
-
 plt.title("V8.0 — Lyapunov Map (Stability Field)")
 plt.xlabel("x")
 plt.ylabel("y")
+
+# optional cluster markers
+for name, c in clusters.items():
+    plt.scatter(c[0], c[1], s=50, edgecolor="black", linewidth=0.8, label=name)
+
+plt.legend(loc="upper right", fontsize=8)
 
 # ============================================================
 # SAVE
 # ============================================================
 
-save_figure(__file__)
-save_run_info(__file__)
+outdir = save_figure(__file__)
+np.save(os.path.join(outdir, "lyapunov_map.npy"), L)
+np.save(os.path.join(outdir, "grid_x.npy"), xv)
+np.save(os.path.join(outdir, "grid_y.npy"), yv)
+
+save_run_info(
+    __file__,
+    extra={
+        "DT": DT,
+        "STEPS": STEPS,
+        "EPS": EPS,
+        "GRID_RES": GRID_RES,
+    },
+)
 
 print("Done.")
