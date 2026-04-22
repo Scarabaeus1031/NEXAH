@@ -1,15 +1,11 @@
-# ENGINE/analysis/field_decomposition/scripts/v7_8_fast_optimal_direction.py
+# FIELD_LAYER/field_decomposition/scripts/v7_8_fast_optimal_direction.py
 
 """
 NEXAH V7.8 (FAST) — Optimal Direction ≈ Navigation Field
 
-Goal:
-→ show that optimal control direction is already encoded in the navigation field
-→ avoid brute force trajectory search
-→ visualize direction + energy structure
-
-Key Insight:
-→ optimal direction ≈ -∇cost ≈ navigation field
+Robust Version:
+→ auto-detects correct outputs folder
+→ no hardcoded ENGINE paths
 """
 
 import os
@@ -19,12 +15,39 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # ============================================================
+# PATH HANDLING (ROBUST)
+# ============================================================
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# try multiple possible locations
+CANDIDATE_BASES = [
+    os.path.join(SCRIPT_DIR, "..", "outputs"),
+    os.path.join(SCRIPT_DIR, "..", "..", "outputs"),
+    "FIELD_LAYER/field_decomposition/outputs",
+    "ENGINE/analysis/field_decomposition/outputs",
+]
+
+BASE = None
+
+for path in CANDIDATE_BASES:
+    path = os.path.normpath(path)
+    if os.path.exists(os.path.join(path, "v7_2")):
+        BASE = path
+        break
+
+if BASE is None:
+    raise FileNotFoundError("❌ Could not locate outputs directory")
+
+print("✓ Using BASE:", BASE)
+
+# ============================================================
 # LOCAL SAVE
 # ============================================================
 
 def save_figure(script_path):
     script_name = os.path.splitext(os.path.basename(script_path))[0]
-    outdir = os.path.join("ENGINE/analysis/field_decomposition/outputs", script_name)
+    outdir = os.path.join(BASE, script_name)
     os.makedirs(outdir, exist_ok=True)
 
     outfile = os.path.join(outdir, f"{script_name}.png")
@@ -35,7 +58,7 @@ def save_figure(script_path):
 
 def save_run_info(script_path, extra=None):
     script_name = os.path.splitext(os.path.basename(script_path))[0]
-    outdir = os.path.join("ENGINE/analysis/field_decomposition/outputs", script_name)
+    outdir = os.path.join(BASE, script_name)
     os.makedirs(outdir, exist_ok=True)
 
     info_path = os.path.join(outdir, "run_info.txt")
@@ -49,8 +72,6 @@ def save_run_info(script_path, extra=None):
 # ============================================================
 # LOAD DATA
 # ============================================================
-
-BASE = "ENGINE/analysis/field_decomposition/outputs"
 
 cost_map = np.load(os.path.join(BASE, "v7_2", "cost_map.npy"))
 Nx = np.load(os.path.join(BASE, "v7_3", "nav_field_x.npy"))
@@ -69,10 +90,16 @@ Ux = Nx / norm
 Uy = Ny / norm
 
 # ============================================================
-# OPTIONAL: FIELD CONFIDENCE (magnitude)
+# CONFIDENCE FIELD
 # ============================================================
 
 confidence = norm / np.max(norm)
+
+# ============================================================
+# TARGET (visual only)
+# ============================================================
+
+TARGET = np.array([13, 26])
 
 # ============================================================
 # PLOT
@@ -80,10 +107,7 @@ confidence = norm / np.max(norm)
 
 fig, axs = plt.subplots(1, 2, figsize=(15, 6))
 
-# ------------------------------------------------------------
-# Q1 — cost + optimal direction field
-# ------------------------------------------------------------
-
+# --- Q1: cost + direction field ---
 axs[0].contourf(X, Y, cost_map, levels=60, cmap="inferno")
 
 step = 6
@@ -97,18 +121,13 @@ axs[0].quiver(
     scale=40
 )
 
-axs[0].set_title("Optimal Direction Field (≈ Navigation Field)")
+axs[0].scatter(TARGET[0], TARGET[1], color="cyan", s=90, edgecolor="black")
+
+axs[0].set_title("Optimal Direction ≈ Navigation Field")
 axs[0].set_xlabel("x")
 axs[0].set_ylabel("y")
 
-# target
-TARGET = np.array([13, 26])
-axs[0].scatter(TARGET[0], TARGET[1], color="cyan", s=90, edgecolor="black", zorder=5)
-
-# ------------------------------------------------------------
-# Q2 — confidence / strength of direction field
-# ------------------------------------------------------------
-
+# --- Q2: confidence ---
 im = axs[1].imshow(
     confidence,
     origin="lower",
@@ -117,7 +136,7 @@ im = axs[1].imshow(
     cmap="viridis"
 )
 
-axs[1].set_title("Direction Field Strength (Confidence)")
+axs[1].set_title("Direction Field Strength")
 axs[1].set_xlabel("x")
 axs[1].set_ylabel("y")
 
