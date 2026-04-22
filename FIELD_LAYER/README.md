@@ -465,3 +465,182 @@ Raw Dynamics
 
 **Status:** Core Phase Complete (V1–V40)  
 **Role:** Structural and operational bridge of NEXAH
+
+---
+
+# 🔬 Field Decomposition & Stability Geometry (V6–V8)
+
+This module introduces a deeper layer inside the Field Layer:
+
+→ explicit decomposition of the field structure and stability geometry
+
+Location:
+
+FIELD_LAYER/field_decomposition/
+
+---
+
+## 🧠 Concept
+
+Instead of only reconstructing the field,  
+we explicitly separate and analyze:
+
+F(x) ≈ -∇V(x) + R(x)
+
+Where:
+
+- ∇V(x) → gradient (attraction / energy minimization)  
+- R(x) → rotational component (circulation / orbit structure)  
+
+---
+
+## 🔍 What This Module Adds
+
+### 1. Structural Decomposition (V2–V6)
+
+- separation of gradient vs rotational flow  
+- detection of attractors, sources, and saddle-like regions  
+- orbit band formation and classification  
+- boundary extraction ("splinter" / transition regions)  
+
+Result:
+
+→ the field becomes geometrically readable  
+
+---
+
+### 2. Navigation Geometry (V7)
+
+- cost field construction  
+- reachability analysis  
+- transition wedge ("splinter") detection  
+- energy-based navigation constraints  
+
+Key insight:
+
+not all regions can reach all attractors  
+→ navigation is geometrically constrained  
+
+---
+
+### 3. Stability Geometry (V8 — NEW)
+
+Introduction of:
+
+- Lyapunov map λ(x)  
+- stability gradients across the field  
+- boundary stability analysis  
+- gate detection  
+
+---
+
+## 🔥 Key Findings
+
+### Separatrix vs Stability
+
+- transition boundary ≠ instability ridge  
+- geometry and stability are independent layers  
+
+---
+
+### Stability Gradient
+
+- near boundary → less stable  
+- far from boundary → strongly stable  
+
+→ boundary sits inside a continuous stability field  
+
+---
+
+### Gate Structure
+
+- boundary is globally stable  
+- contains local weak points ("proto-gates")  
+
+But:
+
+→ no true decision gates observed  
+
+---
+
+### Strong Directional Bias
+
+Injection experiments show:
+
+→ all perturbations converge to the same attractor  
+
+Interpretation:
+
+the system is structurally biased  
+
+---
+
+## 🎯 Core Result
+
+The Field Layer now contains:
+
+geometry + stability + navigation constraints  
+
+Meaning:
+
+the system is structured, navigable,  
+and constrained by stability  
+
+---
+
+## 🧠 Updated Interpretation
+
+The system consists of:
+
+- attractor basins  
+- rotational orbit regions  
+- transition corridor (splinter)  
+- stability gradient  
+- weak boundary points (gates)  
+
+---
+
+## 🔗 Relation to Navigator
+
+The Navigator must now operate on:
+
+- geometry (where paths exist)  
+- stability (which paths are viable)
+
+---
+
+### Updated Navigation Principle
+
+valid movement = geometrically allowed AND stability-consistent  
+
+---
+
+## ⚠️ Status
+
+- decomposition: ✓  
+- navigation geometry: ✓  
+- stability layer: ✓  
+- true decision gates: ✗  
+
+---
+
+## 🚀 Next Direction
+
+- stochastic perturbation tests  
+- multi-attractor configurations  
+- stability-aware navigation policies  
+- analytical approximation of λ(x)  
+
+---
+
+## 🧭 Meta Insight
+
+This module marks a critical transition:
+
+From field reconstruction  
+
+To:
+
+field understanding as geometry + stability  
+
+---

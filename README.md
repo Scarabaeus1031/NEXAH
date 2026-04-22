@@ -32,15 +32,14 @@ NEXAH reconstructs dynamical systems as:
 
 It reveals:
 
-> how systems **move, transition, and converge** within their intrinsic structure
+> how systems **move, transition, and converge** within their intrinsic structure  
+> — and how **stability constrains which transitions are actually possible**
 
 ---
 
 ## 🔥 Core idea
 
-```text
-dynamics → structure → field → topology → navigation
-```
+dynamics → structure → field → topology → stability → navigation
 
 ---
 
@@ -94,18 +93,17 @@ Now something new becomes possible:
 
 ## 🧭 Architecture
 
-```text
-Dynamics
-→ Discovery Engine
-→ Field Layer
-→ Navigator
-```
+Dynamics  
+→ Discovery Engine  
+→ Field Layer (geometry + stability)  
+→ Navigator  
 
 ### 🔬 Discovery Engine
 Extracts structure from raw dynamics.
 
 ### 🌊 Field Layer
-Transforms structure into a navigable representation.
+Transforms structure into a navigable representation,  
+including geometry **and stability constraints**.
 
 ### 🧭 Navigator
 Operates on the system as a trajectory within the field.
@@ -173,11 +171,26 @@ Operates on the system as a trajectory within the field.
 
 ---
 
+## 🔬 Stability Geometry (V8)
+
+![Lyapunov Map](FIELD_LAYER/field_decomposition/outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
+
+The system’s stability is not uniform.
+
+- stable regions form basins  
+- instability forms structured ridges  
+- transitions occur within constrained zones  
+
+Key insight:
+
+> geometry defines possible motion  
+> stability defines **viable motion**
+
+---
+
 ## 🌀 NEXAH
 
-```text
-dynamics → structure → field → regimes → navigation
-```
+dynamics → structure → field → regimes → stability → navigation
 
 ---
 
