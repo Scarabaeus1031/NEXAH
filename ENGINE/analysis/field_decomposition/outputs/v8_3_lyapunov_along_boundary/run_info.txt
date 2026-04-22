@@ -1,0 +1,5 @@
+script: v8_3_lyapunov_along_boundary
+time: 2026-04-22 03:37:49.389474
+num_points: 65
+mean_lyapunov: -1.4215694440342268
+max_lyapunov: -0.5303627560099898
