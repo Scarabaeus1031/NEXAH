@@ -102,19 +102,19 @@ Continuous trajectories collapse into:
 
 ## Topological Structure
 
-![Topology Graph](outputs/plots/v11_5_topology_graph.png)
+![Topology Graph](./outputs/plots/v11_5_topology_graph.png)
 
 ---
 
 ## Transition Graph
 
-![Transition Graph](outputs/plots/v12_transition_graph.png)
+![Transition Graph](./outputs/plots/v12_transition_graph.png)
 
 ---
 
 ## Cycle Structure
 
-![Cycle Detection](outputs/plots/v12_1_cycle_detection.png)
+![Cycle Detection](./outputs/plots/v12_1_cycle_detection.png)
 
 ---
 
