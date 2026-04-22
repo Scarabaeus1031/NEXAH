@@ -1,0 +1,4 @@
+orbit: 20376
+shear: 5932
+escape: 10220
+drift: 3472
