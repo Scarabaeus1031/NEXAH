@@ -1,143 +1,146 @@
+# ENGINE/analysis/field_decomposition/scripts/v7_8_fast_optimal_direction.py
+
 """
-NEXAH V7.8 — Optimal Crossing Direction Field
+NEXAH V7.8 (FAST) — Optimal Direction ≈ Navigation Field
 
 Goal:
-→ find best control direction per point
-→ minimal energy direction for reaching target
-→ visualize optimal crossing vector field
+→ show that optimal control direction is already encoded in the navigation field
+→ avoid brute force trajectory search
+→ visualize direction + energy structure
+
+Key Insight:
+→ optimal direction ≈ -∇cost ≈ navigation field
 """
 
 import os
+from datetime import datetime
+
 import numpy as np
 import matplotlib.pyplot as plt
 
-OUTDIR = "output/v7_8"
-os.makedirs(OUTDIR, exist_ok=True)
+# ============================================================
+# LOCAL SAVE
+# ============================================================
+
+def save_figure(script_path):
+    script_name = os.path.splitext(os.path.basename(script_path))[0]
+    outdir = os.path.join("ENGINE/analysis/field_decomposition/outputs", script_name)
+    os.makedirs(outdir, exist_ok=True)
+
+    outfile = os.path.join(outdir, f"{script_name}.png")
+    plt.savefig(outfile, dpi=150, bbox_inches="tight")
+    plt.close()
+    print(f"✓ saved figure -> {outfile}")
+    return outdir
+
+def save_run_info(script_path, extra=None):
+    script_name = os.path.splitext(os.path.basename(script_path))[0]
+    outdir = os.path.join("ENGINE/analysis/field_decomposition/outputs", script_name)
+    os.makedirs(outdir, exist_ok=True)
+
+    info_path = os.path.join(outdir, "run_info.txt")
+    with open(info_path, "w", encoding="utf-8") as f:
+        f.write(f"script: {script_name}\n")
+        f.write(f"time: {datetime.now()}\n")
+        if extra:
+            for k, v in extra.items():
+                f.write(f"{k}: {v}\n")
 
 # ============================================================
 # LOAD DATA
 # ============================================================
 
-cost_map = np.load("output/v7_2/cost_map.npy")
-Nx = np.load("output/v7_3/nav_field_x.npy")
-Ny = np.load("output/v7_3/nav_field_y.npy")
+BASE = "ENGINE/analysis/field_decomposition/outputs"
 
-nx, ny = cost_map.shape[1], cost_map.shape[0]
+cost_map = np.load(os.path.join(BASE, "v7_2", "cost_map.npy"))
+Nx = np.load(os.path.join(BASE, "v7_3", "nav_field_x.npy"))
+Ny = np.load(os.path.join(BASE, "v7_3", "nav_field_y.npy"))
+xv = np.load(os.path.join(BASE, "v7_2", "grid_x.npy"))
+yv = np.load(os.path.join(BASE, "v7_2", "grid_y.npy"))
 
-x = np.linspace(6, 17, nx)
-y = np.linspace(22, 31, ny)
-X, Y = np.meshgrid(x, y)
-
-TARGET = np.array([13, 26])
+X, Y = np.meshgrid(xv, yv)
 
 # ============================================================
-# SAMPLING
+# NORMALIZE NAVIGATION FIELD
 # ============================================================
 
-def sample(px, py, A):
-    ix = np.clip(np.searchsorted(x, px) - 1, 0, len(x)-1)
-    iy = np.clip(np.searchsorted(y, py) - 1, 0, len(y)-1)
-    return A[iy, ix]
+norm = np.sqrt(Nx**2 + Ny**2) + 1e-8
+Ux = Nx / norm
+Uy = Ny / norm
 
 # ============================================================
-# TRAJECTORY TEST
+# OPTIONAL: FIELD CONFIDENCE (magnitude)
 # ============================================================
 
-def reaches_target(x0, y0, control_vec, strength, steps=200, dt=0.12):
-
-    px, py = x0, y0
-
-    for i in range(steps):
-
-        vx = sample(px, py, Nx)
-        vy = sample(px, py, Ny)
-
-        # apply control
-        vx += strength * control_vec[0]
-        vy += strength * control_vec[1]
-
-        norm = np.sqrt(vx**2 + vy**2) + 1e-8
-        vx /= norm
-        vy /= norm
-
-        px += vx * dt
-        py += vy * dt
-
-        if np.linalg.norm([px - TARGET[0], py - TARGET[1]]) < 0.2:
-            return True
-
-        if px < x.min() or px > x.max() or py < y.min() or py > y.max():
-            return False
-
-    return False
-
-# ============================================================
-# DIRECTION CANDIDATES (dense!)
-# ============================================================
-
-angles = np.linspace(0, 2*np.pi, 16)
-dirs = np.stack([np.cos(angles), np.sin(angles)], axis=1)
-
-strength_levels = np.linspace(0.0, 2.0, 15)
-
-# ============================================================
-# RESULT FIELDS
-# ============================================================
-
-best_dx = np.zeros_like(cost_map)
-best_dy = np.zeros_like(cost_map)
-best_energy = np.full_like(cost_map, np.inf)
-
-# ============================================================
-# MAIN LOOP
-# ============================================================
-
-for i in range(nx):
-    for j in range(ny):
-
-        px = x[i]
-        py = y[j]
-
-        for d in dirs:
-            for s in strength_levels:
-
-                if reaches_target(px, py, d, s):
-
-                    if s < best_energy[j, i]:
-                        best_energy[j, i] = s
-                        best_dx[j, i] = d[0]
-                        best_dy[j, i] = d[1]
-
-                    break  # stop increasing strength
-
-# clean unreachable
-best_energy[np.isinf(best_energy)] = 2.5
+confidence = norm / np.max(norm)
 
 # ============================================================
 # PLOT
 # ============================================================
 
-plt.figure(figsize=(9,7))
+fig, axs = plt.subplots(1, 2, figsize=(15, 6))
 
-# energy background
-plt.contourf(X, Y, best_energy, levels=50, cmap="inferno")
+# ------------------------------------------------------------
+# Q1 — cost + optimal direction field
+# ------------------------------------------------------------
 
-# direction field (downsample)
-step = 10
-plt.quiver(
-    X[::step,::step], Y[::step,::step],
-    best_dx[::step,::step], best_dy[::step,::step],
-    color="white", alpha=0.7
+axs[0].contourf(X, Y, cost_map, levels=60, cmap="inferno")
+
+step = 6
+axs[0].quiver(
+    X[::step, ::step],
+    Y[::step, ::step],
+    Ux[::step, ::step],
+    Uy[::step, ::step],
+    color="white",
+    alpha=0.8,
+    scale=40
 )
 
-# target
-plt.scatter(TARGET[0], TARGET[1], color="cyan", s=80, edgecolor="black")
+axs[0].set_title("Optimal Direction Field (≈ Navigation Field)")
+axs[0].set_xlabel("x")
+axs[0].set_ylabel("y")
 
-plt.title("NEXAH V7.8 — Optimal Crossing Direction Field")
-plt.colorbar(label="minimal control energy")
+# target
+TARGET = np.array([13, 26])
+axs[0].scatter(TARGET[0], TARGET[1], color="cyan", s=90, edgecolor="black", zorder=5)
+
+# ------------------------------------------------------------
+# Q2 — confidence / strength of direction field
+# ------------------------------------------------------------
+
+im = axs[1].imshow(
+    confidence,
+    origin="lower",
+    extent=[xv.min(), xv.max(), yv.min(), yv.max()],
+    aspect="auto",
+    cmap="viridis"
+)
+
+axs[1].set_title("Direction Field Strength (Confidence)")
+axs[1].set_xlabel("x")
+axs[1].set_ylabel("y")
+
+plt.colorbar(im, ax=axs[1])
 
 plt.tight_layout()
-plt.savefig(os.path.join(OUTDIR, "v7_8_optimal_direction.png"), dpi=150)
-plt.close()
 
-print("✓ V7.8 done →", OUTDIR)
+# ============================================================
+# SAVE
+# ============================================================
+
+outdir = save_figure(__file__)
+
+np.save(os.path.join(outdir, "optimal_dir_x.npy"), Ux)
+np.save(os.path.join(outdir, "optimal_dir_y.npy"), Uy)
+np.save(os.path.join(outdir, "direction_confidence.npy"), confidence)
+
+save_run_info(
+    __file__,
+    extra={
+        "method": "nav_field_direct",
+        "normalized": True
+    }
+)
+
+print("✓ V7.8 FAST done.")
