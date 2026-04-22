@@ -896,3 +896,267 @@ However:
 → increases confidence in structural validity  
 
 ---
+---
+
+## V8 Extension — Stability Geometry & Lyapunov Structure
+
+This section extends the analysis from:
+
+→ structure (V6)  
+→ navigation (V7)  
+
+to:
+
+→ **stability properties of the field itself**
+
+---
+
+### 36. Lyapunov Stability Field
+
+A finite-time Lyapunov-like quantity is computed:
+
+    λ(x) = log separation of nearby trajectories
+
+Interpretation:
+
+- λ < 0 → stable (converging flow)
+- λ ≈ 0 → neutral
+- λ > 0 → unstable (diverging flow)
+
+Observed:
+
+- large coherent stable region (dominant basin)
+- structured instability ridges
+- sharp folds and cusp-like structures
+
+#### Visual Reference
+
+![Lyapunov Map](outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
+
+Interpretation:
+
+→ stability forms **geometric patterns**, not uniform fields  
+
+---
+
+### 37. Boundary vs Stability Decoupling
+
+Comparison between:
+
+- V7 boundary (reachability / splinter)
+- V8 Lyapunov ridges
+
+Result:
+
+→ no direct overlap
+
+Interpretation:
+
+- boundary ≠ instability
+- stability ≠ reachability
+
+Meaning:
+
+→ different structural layers coexist in the same field  
+
+---
+
+### 38. Stability Gradient Around Boundary
+
+Analysis shows:
+
+- Lyapunov values become less negative near boundary
+- deeper regions remain strongly stable
+
+Interpretation:
+
+→ boundary is embedded in a **stability gradient**
+
+→ not a sharp stability discontinuity  
+
+---
+
+### 39. Boundary Stability Profile
+
+Sampling along the boundary reveals:
+
+- globally negative Lyapunov values
+- local maxima (less negative regions)
+
+Interpretation:
+
+→ boundary is:
+
+- globally stable  
+- locally weakened  
+
+These weak regions act as:
+
+→ **proto-gates**
+
+---
+
+### 40. Gate Extraction (Weak Stability Regions)
+
+Gate points are defined as:
+
+→ local maxima of Lyapunov along boundary
+
+Observed:
+
+- small discrete set of candidate points
+- clustered along specific boundary segments
+
+Interpretation:
+
+→ these are:
+
+- not arbitrary points  
+- but **structurally determined weak zones**
+
+---
+
+### 41. Injection Behavior
+
+Perturbation experiments from gate points show:
+
+- trajectories converge to the same basin (C2)
+- independent of direction of perturbation
+
+#### Visual Reference
+
+![Injection Tests](outputs/v8_5_injection_tests/v8_5_injection_tests.png)
+
+Interpretation:
+
+→ gate regions do not enable branching  
+
+→ they act as **entry channels**
+
+---
+
+### 42. Absence of True Decision Points
+
+A systematic search for decision points shows:
+
+- no location where:
+  - different perturbation directions lead to different basins
+
+Result:
+
+```text
+num_decision_points: 0
+```
+
+Interpretation:
+
+→ the system contains:
+
+- transitions  
+- gates  
+- boundaries  
+
+But:
+
+→ **no true decision nodes**
+
+---
+
+### 43. Reinterpretation of "Gate"
+
+Previous interpretation:
+
+→ gate = decision point  
+
+Updated interpretation:
+
+→ gate = **locally weakened stability region enabling entry**
+
+---
+
+### 44. Global System Behavior
+
+Combining V6–V8:
+
+The system exhibits:
+
+- multiple local structures
+- but a dominant global attractor
+
+Flow behavior:
+
+→ trajectories are guided  
+→ not freely distributed  
+
+---
+
+### 45. Structural Conclusion
+
+The system is best described as:
+
+→ **a directed transition system**
+
+rather than:
+
+→ a multi-stable decision system  
+
+---
+
+### 46. Conceptual Insight
+
+The initial interpretation suggested:
+
+→ multiple possible outcomes depending on perturbation  
+
+However, experiments show:
+
+→ outcomes are constrained by global field structure  
+
+---
+
+### 47. Final Interpretation (V8 Layer)
+
+```text
+The system does not offer choices.
+
+It defines paths.
+```
+
+---
+
+### 48. Integration Across Phases
+
+| Phase | Insight |
+|------|--------|
+| V6 | structure exists |
+| V7 | structure constrains movement |
+| V8 | structure constrains outcomes |
+
+---
+
+### 49. Status
+
+- empirical
+- simulation-based
+- structurally consistent across methods
+
+---
+
+### 50. Closing Note (Updated)
+
+The system reveals:
+
+- structured motion  
+- constrained navigation  
+- directed stability  
+
+It does not behave like:
+
+- a random dynamical system  
+- a freely branching system  
+
+Instead:
+
+→ it behaves like a **geometrically constrained flow system**
+
+---
