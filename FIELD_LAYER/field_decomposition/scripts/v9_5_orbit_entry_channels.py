@@ -1,20 +1,20 @@
 # FIELD_LAYER/field_decomposition/scripts/v9_5_orbit_entry_channels.py
 
 """
-NEXAH V9.5 — Orbit Entry Channels
+NEXAH V9.5 — TRUE Orbit Entry Channels (FIXED)
 
 Goal:
-→ extract discrete entry channels into orbit ring
-→ detect transversal connection points
+→ extract real transition channels (NOT full ring)
+→ combine Delay + Entropy + Entry boundary
 
 Result:
-→ sparse channel nodes (true entry points)
+→ sparse channel points (true transversal ports)
 """
 
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.ndimage import gaussian_filter
+from scipy.ndimage import gaussian_filter, binary_erosion
 
 # ============================================================
 # PATHS
@@ -28,37 +28,61 @@ os.makedirs(OUTDIR, exist_ok=True)
 # LOAD DATA
 # ============================================================
 
-orbit_entry = np.load(os.path.join(BASE, "v9_4", "orbit_entry.npy"))
+entry = np.load(os.path.join(BASE, "v9_4", "orbit_entry.npy")).astype(bool)
+delay = np.load(os.path.join(BASE, "v8_2", "decision_delay.npy"))
+entropy = np.load(os.path.join(BASE, "v8_5", "entropy_map.npy"))
 
 # ============================================================
-# SMOOTH (reduces pixel noise)
+# NORMALIZE
 # ============================================================
 
-smooth = gaussian_filter(orbit_entry.astype(float), sigma=1.0)
+def normalize(A):
+    A = A - np.min(A)
+    return A / (np.max(A) + 1e-8)
+
+delay_n = normalize(delay)
+entropy_n = normalize(entropy)
 
 # ============================================================
-# GRADIENT → detect boundaries
+# ENTRY BOUNDARY
 # ============================================================
 
-gy, gx = np.gradient(smooth)
-grad_mag = np.sqrt(gx**2 + gy**2)
+boundary = entry & (~binary_erosion(entry))
 
 # ============================================================
-# THRESHOLD → isolate strong transitions
+# SMOOTH (important)
 # ============================================================
 
-threshold = np.percentile(grad_mag, 95)
+delay_s = gaussian_filter(delay_n, sigma=1.0)
+entropy_s = gaussian_filter(entropy_n, sigma=1.0)
 
-channels = grad_mag > threshold
+# ============================================================
+# THRESHOLDS (tunable)
+# ============================================================
 
-print("threshold:", threshold)
+delay_thr = np.percentile(delay_s, 80)
+entropy_thr = np.percentile(entropy_s, 75)
+
+print("delay_thr:", delay_thr)
+print("entropy_thr:", entropy_thr)
+
+# ============================================================
+# TRUE CHANNEL DETECTION
+# ============================================================
+
+channels = (
+    boundary &
+    (delay_s > delay_thr) &
+    (entropy_s > entropy_thr)
+)
+
 print("channel points:", np.sum(channels))
 
 # ============================================================
 # GRID
 # ============================================================
 
-ny, nx = orbit_entry.shape
+ny, nx = entry.shape
 x = np.linspace(6, 17, nx)
 y = np.linspace(22, 31, ny)
 
@@ -68,34 +92,45 @@ y = np.linspace(22, 31, ny)
 
 plt.figure(figsize=(10, 7))
 
-# background: entry map
+# background
 plt.imshow(
-    orbit_entry,
+    delay_s,
     extent=[x.min(), x.max(), y.min(), y.max()],
     origin="lower",
-    cmap="coolwarm",
-    alpha=0.3
+    cmap="plasma",
+    alpha=0.4
 )
 
-# overlay: channels
-plt.imshow(
-    channels,
-    extent=[x.min(), x.max(), y.min(), y.max()],
-    origin="lower",
-    cmap="inferno",
-    alpha=0.9
+# boundary
+plt.contour(
+    x, y, boundary.astype(float),
+    levels=[0.5],
+    colors="white",
+    linewidths=1
 )
 
-plt.title("NEXAH V9.5 — Orbit Entry Channels")
+# channels (REAL)
+ys, xs = np.where(channels)
+
+plt.scatter(
+    x[xs],
+    y[ys],
+    color="cyan",
+    s=20,
+    label="true entry channels"
+)
+
+plt.legend()
+plt.title("NEXAH V9.5 — TRUE Orbit Entry Channels")
 
 plt.tight_layout()
-plt.savefig(os.path.join(OUTDIR, "v9_5_channels.png"), dpi=150)
+plt.savefig(os.path.join(OUTDIR, "v9_5_true_channels.png"), dpi=150)
 plt.close()
 
 # ============================================================
 # SAVE
 # ============================================================
 
-np.save(os.path.join(OUTDIR, "orbit_entry_channels.npy"), channels)
+np.save(os.path.join(OUTDIR, "true_channels.npy"), channels)
 
-print("✓ V9.5 done →", OUTDIR)
+print("✓ V9.5 (fixed) done →", OUTDIR)
