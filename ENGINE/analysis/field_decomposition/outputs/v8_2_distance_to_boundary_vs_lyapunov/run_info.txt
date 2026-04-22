@@ -1,0 +1,4 @@
+script: v8_2_distance_to_boundary_vs_lyapunov
+time: 2026-04-22 03:32:07.973026
+mean_distance: 0.4042949460345628
+mean_lyapunov: -0.5456710541626977

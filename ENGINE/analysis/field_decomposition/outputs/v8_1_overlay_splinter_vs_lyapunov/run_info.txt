@@ -1,0 +1,6 @@
+script: v8_1_overlay_splinter_vs_lyapunov
+time: 2026-04-22 03:21:10.269928
+ridge_threshold: 0.20098107752491307
+iou: 0.0
+overlap_boundary: 0.0
+overlap_ridge: 0.0
