@@ -99,7 +99,10 @@ They emerge from the **geometry of the dynamical field**:
 
 > NEXAH does not detect events.  
 >  
-> It reveals the structure that produces them.
+> It reveals the structure that produces them.  
+>  
+> It does not detect collapse.  
+> It detects the structure that leads to it.
 
 ---
 
@@ -115,10 +118,23 @@ Run:
 
 ---
 
+The dashed line marks **NEXAH detection**.  
+The dotted line marks **actual collapse**.
+
+---
+
+### Result
+
 NEXAH detects structural instability **before collapse occurs**.
 
-It does not track failure —  
-it identifies the transition toward it.
+Example (synthetic system):
+
+- detection: t ≈ 248  
+- collapse: t ≈ 700  
+- lead time: **~450 steps**
+
+→ the transition is visible in the field  
+→ long before failure manifests in the state
 
 ---
 
