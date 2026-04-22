@@ -10,7 +10,9 @@ def main():
     print("\n🧭 NEXAH Demo — Field → Signal\n")
 
     # --- 1. Generate system ---
-    t, trajectory = generate_lorenz(n_steps=5000)
+    trajectory = generate_lorenz(T=5000)
+    t = np.arange(len(trajectory))
+
     print("✔ Generated Lorenz trajectory")
 
     # --- 2. Build field ---
@@ -33,11 +35,15 @@ def main():
     print("✔ Computed metrics")
     print("✔ Generated structural signal (risk)")
 
-    # --- 5. Plot ---
+    # --- 5. Peak detection (Mic Drop)
+    peaks = risk > np.percentile(risk, 99)
+
+    # --- 6. Plot ---
     fig, axs = plt.subplots(4, 1, figsize=(10, 8), sharex=True)
 
-    axs[0].plot(t, trajectory[:, 0])
-    axs[0].set_title("Lorenz Trajectory (x)")
+    axs[0].plot(t, trajectory[:, 0], linewidth=1)
+    axs[0].scatter(t[peaks], trajectory[peaks, 0], s=8)
+    axs[0].set_title("Lorenz Trajectory (x) + Transition Peaks")
 
     axs[1].plot(t, flow_norm)
     axs[1].set_title("Flow Strength")
@@ -46,18 +52,20 @@ def main():
     axs[2].set_title("Curvature")
 
     axs[3].plot(t, risk)
+    axs[3].scatter(t[peaks], risk[peaks], s=8)
     axs[3].set_title("NEXAH Signal (Flow × Curvature)")
 
     plt.tight_layout()
     plt.show()
 
+    # --- 7. Result block ---
     print("\n🔥 Result:")
     print("Signal peaks indicate structural transitions.\n")
 
-    # --- 6. Mini Result Block ---
     print("📊 Stats:")
     print(f"Max risk: {np.max(risk):.3f}")
     print(f"Mean risk: {np.mean(risk):.3f}")
+    print(f"Peak count: {np.sum(peaks)}")
 
 
 if __name__ == "__main__":
