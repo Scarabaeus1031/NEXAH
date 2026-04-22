@@ -108,4 +108,33 @@ ax.set_xlabel("α")
 ax.set_ylabel("β")
 ax.set_zlabel("V")
 
-plt.show()
+# =========================
+# NEXAH SAVE BLOCK
+# =========================
+
+import os
+import matplotlib.pyplot as plt
+from datetime import datetime
+
+SCRIPT_NAME = os.path.splitext(os.path.basename(__file__))[0]
+OUTDIR = os.path.join("ENGINE/analysis/field_decomposition/outputs", SCRIPT_NAME)
+
+os.makedirs(OUTDIR, exist_ok=True)
+
+# --- Save figure ---
+outfile = os.path.join(OUTDIR, f"{SCRIPT_NAME}.png")
+
+try:
+    plt.savefig(outfile, dpi=150, bbox_inches="tight")
+    print(f"✓ saved figure → {outfile}")
+except Exception as e:
+    print("⚠️ could not save figure:", e)
+
+# --- Save run info ---
+info_path = os.path.join(OUTDIR, "run_info.txt")
+with open(info_path, "w") as f:
+    f.write(f"script: {SCRIPT_NAME}\n")
+    f.write(f"time: {datetime.now()}\n")
+
+# --- Close plot ---
+plt.close()
