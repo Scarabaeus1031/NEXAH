@@ -4,12 +4,13 @@
 NEXAH V8.6 — Decision Structure Map
 
 Goal:
-→ combine Delay, Lyapunov, and Entropy
+→ combine Delay, Entropy, and optional Lyapunov
 → detect true decision regions
 
 Robust version:
-→ handles missing filenames
+→ handles missing files
 → auto-resizes inputs
+→ fallback if Lyapunov not available
 """
 
 import os
@@ -26,18 +27,23 @@ OUTDIR = os.path.join(BASE, "v8_6")
 os.makedirs(OUTDIR, exist_ok=True)
 
 # ============================================================
-# HELPER: flexible loader
+# HELPER: flexible loader (with optional support)
 # ============================================================
 
-def load_first_existing(path_list):
+def load_first_existing(path_list, optional=False):
     for p in path_list:
         if os.path.exists(p):
             print("✓ loading:", p)
             return np.load(p)
+
+    if optional:
+        print("⚠ optional data not found:", path_list)
+        return None
+
     raise FileNotFoundError(f"None of these found: {path_list}")
 
 # ============================================================
-# LOAD DATA (robust)
+# LOAD DATA
 # ============================================================
 
 delay = load_first_existing([
@@ -52,7 +58,7 @@ entropy = load_first_existing([
 lyap = load_first_existing([
     os.path.join(BASE, "v8_3", "lyapunov_map_resampled.npy"),
     os.path.join(BASE, "v8_3", "lyapunov_map.npy"),
-])
+], optional=True)
 
 # ============================================================
 # RESIZE
@@ -61,6 +67,8 @@ lyap = load_first_existing([
 target_shape = delay.shape
 
 def match_shape(A):
+    if A is None:
+        return None
     if A.shape != target_shape:
         zoom_factors = (
             target_shape[0] / A.shape[0],
@@ -83,16 +91,20 @@ def normalize(A):
 
 delay_n = normalize(delay)
 entropy_n = normalize(entropy)
-lyap_n = normalize(lyap)
-
-# invert Lyapunov → instability
-instability = 1 - lyap_n
 
 # ============================================================
 # COMBINATION
 # ============================================================
 
-decision_map = delay_n * entropy_n * instability
+if lyap is not None:
+    lyap_n = normalize(lyap)
+    instability = 1 - lyap_n
+
+    print("✓ using Lyapunov in decision map")
+    decision_map = delay_n * entropy_n * instability
+else:
+    print("✓ fallback: using delay × entropy only")
+    decision_map = delay_n * entropy_n
 
 print("✓ decision_map stats:")
 print("min:", decision_map.min())
