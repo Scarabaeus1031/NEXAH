@@ -7,8 +7,9 @@ Goal:
 → combine Delay, Lyapunov, and Entropy
 → detect true decision regions
 
-Result:
-→ high values = strong decision zones
+Robust version:
+→ handles missing filenames
+→ auto-resizes inputs
 """
 
 import os
@@ -25,15 +26,36 @@ OUTDIR = os.path.join(BASE, "v8_6")
 os.makedirs(OUTDIR, exist_ok=True)
 
 # ============================================================
-# LOAD DATA
+# HELPER: flexible loader
 # ============================================================
 
-delay = np.load(os.path.join(BASE, "v8_2", "decision_delay.npy"))
-entropy = np.load(os.path.join(BASE, "v8_5", "entropy_map.npy"))
-lyap = np.load(os.path.join(BASE, "v8_3", "lyapunov_map_resampled.npy"))
+def load_first_existing(path_list):
+    for p in path_list:
+        if os.path.exists(p):
+            print("✓ loading:", p)
+            return np.load(p)
+    raise FileNotFoundError(f"None of these found: {path_list}")
 
 # ============================================================
-# RESIZE (if needed)
+# LOAD DATA (robust)
+# ============================================================
+
+delay = load_first_existing([
+    os.path.join(BASE, "v8_2", "decision_delay.npy"),
+    os.path.join(BASE, "v8_2", "delay_map.npy"),
+])
+
+entropy = load_first_existing([
+    os.path.join(BASE, "v8_5", "entropy_map.npy"),
+])
+
+lyap = load_first_existing([
+    os.path.join(BASE, "v8_3", "lyapunov_map_resampled.npy"),
+    os.path.join(BASE, "v8_3", "lyapunov_map.npy"),
+])
+
+# ============================================================
+# RESIZE
 # ============================================================
 
 target_shape = delay.shape
@@ -44,6 +66,7 @@ def match_shape(A):
             target_shape[0] / A.shape[0],
             target_shape[1] / A.shape[1]
         )
+        print("↻ resizing:", A.shape, "→", target_shape)
         return zoom(A, zoom_factors, order=1)
     return A
 
@@ -66,10 +89,15 @@ lyap_n = normalize(lyap)
 instability = 1 - lyap_n
 
 # ============================================================
-# COMBINE
+# COMBINATION
 # ============================================================
 
 decision_map = delay_n * entropy_n * instability
+
+print("✓ decision_map stats:")
+print("min:", decision_map.min())
+print("max:", decision_map.max())
+print("mean:", decision_map.mean())
 
 # ============================================================
 # GRID
