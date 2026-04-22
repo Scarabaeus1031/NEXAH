@@ -102,19 +102,19 @@ Continuous trajectories collapse into:
 
 ## Topological Structure
 
-![Topology Graph](FIELD_LAYER/outputs/plots/v11_5_topology_graph.png)
+![Topology Graph](outputs/plots/v11_5_topology_graph.png)
 
 ---
 
 ## Transition Graph
 
-[Transition Graph](FIELD_LAYER/outputs/plots/v12_transition_graph.png)
+![Transition Graph](outputs/plots/v12_transition_graph.png)
 
 ---
 
 ## Cycle Structure
 
-[Cycle Detection](FIELD_LAYER/outputs/plots/v12_1_cycle_detection.png)
+![Cycle Detection](outputs/plots/v12_1_cycle_detection.png)
 
 ---
 
@@ -151,7 +151,7 @@ dx/dt ≈ -∇V(x)
 
 # 🌐 Geometry & Flow Structure (V29–V31)
 
-[Field Decomposition](FIELD_LAYER/outputs/plots/v29_field_decomposition.png)
+![Field Decomposition](outputs/plots/v29_field_decomposition.png)
 
 > The system is governed by global flow geometry
 
@@ -159,7 +159,7 @@ dx/dt ≈ -∇V(x)
 
 # 🎯 Control & Navigation (V32–V37)
 
-[Full Navigation](FIELD_LAYER/outputs/plots/v37_full_navigation.png)
+![Full Navigation](outputs/plots/v37_full_navigation.png)
 
 > complex dynamics collapse into structured navigation
 
@@ -175,7 +175,7 @@ Local dynamics:
 
 dx/dt = J(x - x*)
 
-[Fixpoint Extraction](FIELD_LAYER/outputs/plots/v39_fixpoint_extraction.png)
+![Fixpoint Extraction](outputs/plots/v39_fixpoint_extraction.png)
 
 ---
 
@@ -235,7 +235,7 @@ A dedicated submodule explores:
 
 👉 Open here:
 
-FIELD_LAYER/FIELD_DECOMPOSITION/
+FIELD_DECOMPOSITION/
 
 ---
 
