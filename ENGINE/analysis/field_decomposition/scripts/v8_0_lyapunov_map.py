@@ -3,7 +3,8 @@
 import sys
 import os
 
-sys.path.append(os.path.dirname(__file__))
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, CURRENT_DIR)
 
 from save_pipeline import save_figure, save_run_info
 
