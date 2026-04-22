@@ -1,7 +1,10 @@
 # ENGINE/analysis/field_decomposition/scripts/v8_0_lyapunov_map.py
 
-import numpy as np
-import matplotlib.pyplot as plt
+import sys
+import os
+
+sys.path.append(os.path.dirname(__file__))
+
 from save_pipeline import save_figure, save_run_info
 
 # ============================================================
