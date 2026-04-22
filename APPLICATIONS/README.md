@@ -1,11 +1,12 @@
-# NEXAH Applications  
+# NEXAH — Demonstrations of Structured Dynamics  
 **Structural Analysis and Regime Navigation in Complex Systems**
 
 ---
 
 ## 🧭 Overview
 
-This directory contains **application modules built with the NEXAH framework**.
+This directory contains **validated demonstrations and early applications**  
+of the NEXAH framework.
 
 NEXAH provides a unified approach to analyzing complex systems through:
 
@@ -38,13 +39,11 @@ NEXAH:
 
 The Lorenz system serves as the **reference implementation** of the NEXAH framework.
 
-It demonstrates the full transformation pipeline:
+It demonstrates the core transformation pipeline:
 
 ```text
-Dynamics → Structure → Geometry → Prediction → Control → Adaptation
+Dynamics → Structure → Geometry → Signal → Behavior
 ```
-
----
 
 ## 🧠 Key Insights
 
@@ -52,15 +51,15 @@ From the Lorenz module:
 
 - chaotic systems exhibit **latent structure**
 - trajectories form **repeatable patterns**
-- symbolic representations can emerge from dynamics  
-- prediction becomes possible through structure  
-- control becomes **trajectory-aware** rather than reactive  
+- transitions occur in **specific regions**
+- signals emerge directly from local dynamics  
+- behavior becomes **geometry-aware** rather than reactive  
 
 ---
 
 ## 🧭 Entry Point
 
-👉 [`core_demos/lorenz/`](core_demos/lorenz/README.md)
+👉 `core_demos/lorenz/README.md`
 
 ---
 
@@ -68,7 +67,7 @@ From the Lorenz module:
 
 > The Lorenz system is a **minimal working example** of NEXAH:
 >
-> a system where dynamics, structure, and control can be studied in a unified way.
+> a system where dynamics and structure can be observed in a unified way.
 
 ---
 
@@ -93,6 +92,11 @@ From the Lorenz module:
 
 > Power system stability can be interpreted as a  
 > **trajectory within a structured dynamical landscape**
+
+---
+
+⚠️ These results are currently based on controlled simulations  
+and should be interpreted as **early-stage validation**, not final performance claims.
 
 ---
 
@@ -156,7 +160,7 @@ Supported domains:
 - dynamical systems  
 - synthetic environments  
 
-👉 [`adapters/`](adapters/README.md)
+👉 `adapters/README.md`
 
 ---
 
@@ -188,3 +192,4 @@ Across all modules:
 ---
 
 **Scarabæus1033 · NEXAH**
+
