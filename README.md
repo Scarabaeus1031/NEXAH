@@ -9,11 +9,16 @@
 
 This visualization shows a trajectory from a real IEEE power grid model.
 
-NEXAH reconstructs the local **flow field** around the system state, revealing:
+NEXAH reconstructs the local **flow field** around the system state.
+
+What becomes visible:
 
 - directional structure  
 - transition channels  
 - stability constraints  
+
+→ the system does not move freely  
+→ it is **guided by an underlying field geometry**
 
 ---
 
@@ -40,7 +45,9 @@ Instead of detecting isolated failures, NEXAH identifies:
 
 # 🔥 Core Principle
 
+```text
 dynamics → structure → field → regimes → stability → navigation
+```
 
 ---
 
@@ -59,17 +66,19 @@ Result:
 
 Interpretation:
 
-- classical methods detect **state failure**
+- classical methods detect **state failure**  
 - NEXAH detects **structural transition**
 
 ---
 
 # 🧭 System Architecture
 
+```text
 Dynamics  
 → Discovery Engine  
 → Field Layer (geometry + stability)  
 → Navigator  
+```
 
 ---
 
@@ -104,9 +113,7 @@ Operates on trajectories within the field:
 
 ![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
 
-Hidden structure appears:
-
-→ trajectories follow constrained paths
+→ trajectories follow constrained paths  
 
 ---
 
@@ -114,11 +121,7 @@ Hidden structure appears:
 
 ![State Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
 
-System behavior becomes describable as:
-
-- states  
-- transitions  
-- regimes  
+→ system decomposes into states, transitions, regimes  
 
 ---
 
@@ -161,7 +164,7 @@ System behavior becomes describable as:
 
 # 🔬 Boundary & Stability (V10)
 
-![Boundary](FIELD_LAYER/field_decomposition/outputs/v10_1_boundary_map.png)
+![Boundary](FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v10_1/v10_1_boundary_strength.png)
 
 NEXAH identifies:
 
@@ -169,9 +172,7 @@ NEXAH identifies:
 - boundaries (separatrices)  
 - transition intensity (boundary strength)  
 
-These define:
-
-> where the system can go — and where it cannot
+→ these define where the system can move — and where it cannot
 
 ---
 
