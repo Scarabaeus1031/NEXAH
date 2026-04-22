@@ -488,16 +488,225 @@ Result:
 ---
 ---
 
+## V8–V10 Extension — Reading Stability, Transport, and Time
+
+With V8–V10, the visuals extend beyond structure and navigation.
+
+They now show:
+
+→ **how stable the system is**  
+→ **how movement propagates**  
+→ **how transitions evolve over time**
+
+---
+
+### 20. Stability Field (Lyapunov Map)
+
+The stability map shows:
+
+→ how trajectories behave under small perturbations  
+
+Visual indicators:
+
+- dark regions → stable (converging flow)  
+- bright regions → unstable (diverging flow)  
+
+Important:
+
+- stability is **not uniform**
+- it forms **structured ridges and basins**
+
+Interpretation:
+
+→ the field contains a **stability geometry layer**
+
+---
+
+### 21. Boundary vs Stability
+
+A key insight:
+
+- boundaries (V6/V7)  
+- stability (V8)  
+
+→ do NOT coincide
+
+Meaning:
+
+- a region can be:
+  - stable but still a boundary  
+  - unstable but not a transition  
+
+Interpretation:
+
+→ different structural layers coexist  
+
+---
+
+### 22. Gate Points (Weak Stability Regions)
+
+Along boundaries, some regions show:
+
+- slightly reduced stability  
+
+Visual indicators:
+
+- local maxima in Lyapunov map  
+
+Interpretation:
+
+→ these are **entry points into transition zones**  
+
+Important:
+
+- they do NOT create new outcomes  
+- they only **enable passage**
+
+---
+
+### 23. Transport Map (V9)
+
+Transport maps show:
+
+→ where trajectories from a region end up  
+
+Visual indicators:
+
+- colored paths (e.g. orbit / core / escape)  
+- structured flow patterns  
+
+Interpretation:
+
+→ the system defines a **mapping from input → outcome**
+
+Key insight:
+
+→ transport is **not random**  
+→ it is geometrically constrained  
+
+---
+
+### 24. Channels
+
+Certain regions act as:
+
+→ preferred pathways through the system  
+
+Visual indicators:
+
+- dense bundles of trajectories  
+- aligned flow lines  
+
+Interpretation:
+
+→ these are **transport channels**
+
+Important:
+
+- not all paths are equally likely  
+- flow concentrates into **specific routes**
+
+---
+
+### 25. Regime Structure (V9.8+)
+
+The field can be decomposed into:
+
+- orbit regions  
+- shear regions  
+- escape regions  
+- drift regions  
+
+Interpretation:
+
+→ the system consists of **distinct motion regimes**
+
+Each regime:
+
+- has its own behavior  
+- follows its own geometry  
+
+---
+
+### 26. Temporal Signals (V10)
+
+Tracking boundary or field intensity over time reveals:
+
+- smooth evolution  
+- sudden increases before transitions  
+
+Visual indicators:
+
+- rising boundary signal  
+- correlation with system collapse (in IEEE tests)
+
+Interpretation:
+
+→ boundaries act as **early-warning indicators**
+
+---
+
+### 27. Reading Time Evolution
+
+Instead of static maps:
+
+→ read the system as evolving in time  
+
+Key questions:
+
+- where does structure change?  
+- where does instability grow?  
+- where do transitions begin?  
+
+Interpretation:
+
+→ the field is **dynamic, not static**
+
+---
+
+## Updated Reading Strategy (V6 → V10)
+
+To fully interpret a scene:
+
+1. Identify structure (basins, boundaries) — V6  
+2. understand navigation constraints — V7  
+3. analyze stability distribution — V8  
+4. trace transport paths — V9  
+5. observe temporal signals — V10  
+
+---
+
+## Final Insight (Updated)
+
+```text
+The system is not just a field.
+
+It is a structured, dynamic, and directed flow system
+with constrained motion, stable regions, and predictable transitions.
+```
+
+---
+---
+
 ## Important Notes
 
-- This system is exploratory.
-- It is not a physical theory.
-- It does not claim real-world equivalence.
+This system is **computational and exploratory**, but not arbitrary.
 
-It is:
+- based on reproducible simulations  
+- structurally consistent across multiple layers (V6–V10)  
+- partially validated on real-world systems (e.g. IEEE grids)  
 
-→ a structured dynamical system  
-→ producing consistent patterns  
+It does NOT claim:
+
+- new physical laws  
+- exact real-world equivalence  
+- closed-form analytical solutions  
+
+It DOES provide:
+
+→ a **structured dynamical field framework**  
+→ consistent geometric and stability patterns  
+→ a basis for further mathematical and applied analysis  
 
 ---
 
@@ -505,15 +714,16 @@ It is:
 
 Some terms used during exploration:
 
-- "Riss" → boundary
-- "Korbstruktur" → layered orbit bands
-- "Gate" → transition region
-- "Channels" → preferred flow paths
+- "Riss" → transition boundary  
+- "Korbstruktur" → layered orbit bands  
+- "Gate" → locally weakened stability region  
+- "Channels" → preferred transport paths  
 
 These are:
 
 → intuitive descriptors  
-→ not formal definitions  
+→ grounded in observed structure  
+→ candidates for later formalization  
 
 ---
 
@@ -521,10 +731,20 @@ These are:
 
 The system demonstrates:
 
-- how structure generates motion
-- how simple rules produce complex behavior
+- how structure generates motion  
+- how motion reveals hidden geometry  
+- how simple components produce constrained complexity  
 
-Understanding comes from:
+Understanding emerges from:
 
 → reading the field  
-→ not just observing trajectories  
+→ interpreting structure, stability, and flow together  
+
+---
+
+## Final Insight
+
+```text
+The field does not describe what could happen.
+
+It describes what can happen.
