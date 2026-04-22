@@ -1,0 +1,4 @@
+script: v8_5_injection_tests
+time: 2026-04-22 03:54:43.763606
+tested_gate_points: 5
+directions_per_point: 8

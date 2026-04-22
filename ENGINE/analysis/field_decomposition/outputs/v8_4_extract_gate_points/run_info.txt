@@ -1,0 +1,6 @@
+script: v8_4_extract_gate_points
+time: 2026-04-22 03:47:52.124282
+num_boundary_points: 65
+num_gate_points: 10
+max_lyapunov: -0.5303627560099898
+min_lyapunov: -0.8518996917648827
