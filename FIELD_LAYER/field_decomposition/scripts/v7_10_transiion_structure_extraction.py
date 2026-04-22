@@ -1,13 +1,13 @@
 """
-NEXAH V7.10 — Transition Structure Extraction
+NEXAH V7.10 — Transition Structure Extraction (ROBUST)
 
 Goal:
 → extract geometric transition structures
 → from alignment inconsistency (V7.9)
 
-Result:
-→ binary mask of transition zones
-→ shows splinter / gate / interface structure explicitly
+Improvement:
+→ adaptive threshold instead of fixed cutoff
+→ detects weak-alignment regions reliably
 """
 
 import os
@@ -15,7 +15,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # ============================================================
-# PATH SETUP (robust)
+# PATH SETUP
 # ============================================================
 
 BASE = "FIELD_LAYER/field_decomposition/outputs"
@@ -57,14 +57,23 @@ best_dx, best_dy = normalize(best_dx, best_dy)
 alignment = Nx * best_dx + Ny * best_dy
 alignment = np.clip(alignment, -1, 1)
 
+print("alignment stats:")
+print("min:", np.min(alignment))
+print("max:", np.max(alignment))
+print("mean:", np.mean(alignment))
+
 # ============================================================
-# TRANSITION EXTRACTION
+# TRANSITION EXTRACTION (KEY FIX)
 # ============================================================
 
-# threshold: near-zero alignment = conflict / interface
-threshold = 0.85   # adjust if needed (0.7–0.95 range)
+# adaptive threshold: lowest 15% = transition zone
+threshold = np.percentile(alignment, 15)
 
-transition_mask = np.abs(alignment) < threshold
+print("threshold (auto):", threshold)
+
+transition_mask = alignment < threshold
+
+print("mask sum:", np.sum(transition_mask))
 
 # ============================================================
 # PLOT
@@ -73,9 +82,9 @@ transition_mask = np.abs(alignment) < threshold
 plt.figure(figsize=(10, 7))
 
 # background alignment
-plt.contourf(X, Y, alignment, levels=50, cmap="coolwarm", alpha=0.6)
+plt.contourf(X, Y, alignment, levels=50, cmap="coolwarm", alpha=0.8)
 
-# overlay transition structure
+# transition contour
 plt.contour(
     X, Y, transition_mask,
     levels=[0.5],
@@ -83,16 +92,16 @@ plt.contour(
     linewidths=2
 )
 
-# optional fill for clarity
+# highlight mask
 plt.imshow(
     transition_mask,
     extent=[x.min(), x.max(), y.min(), y.max()],
     origin="lower",
     cmap="gray",
-    alpha=0.2
+    alpha=0.25
 )
 
-# vector field overlay (light)
+# vector field
 step = 12
 plt.quiver(
     X[::step, ::step], Y[::step, ::step],
@@ -100,7 +109,7 @@ plt.quiver(
     color="white", alpha=0.4
 )
 
-plt.title("NEXAH V7.10 — Extracted Transition Structure")
+plt.title("NEXAH V7.10 — Extracted Transition Structure (Adaptive)")
 plt.colorbar(label="Alignment")
 
 plt.tight_layout()
@@ -108,7 +117,7 @@ plt.savefig(os.path.join(OUTDIR, "v7_10_transition_structure.png"), dpi=150)
 plt.close()
 
 # ============================================================
-# SAVE MASK
+# SAVE
 # ============================================================
 
 np.save(os.path.join(OUTDIR, "transition_mask.npy"), transition_mask)
