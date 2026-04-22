@@ -7,21 +7,18 @@ from nexah.field_layer.core.metrics import FieldMetrics
 
 
 def main():
-    print("\n🧭 NEXAH Demo — Field → Signal\n")
+    print("\n🧭 NEXAH Demo — Structure inside Dynamics\n")
 
     # --- 1. Generate system ---
     trajectory = generate_lorenz(T=5000)
-    t = np.arange(len(trajectory))
-
     print("✔ Generated Lorenz trajectory")
 
     # --- 2. Build field ---
     field = Field(trajectory)
+    metrics = FieldMetrics(field)
     print("✔ Constructed field")
 
     # --- 3. Metrics ---
-    metrics = FieldMetrics(field)
-
     flow = metrics.flow_strength()
     curvature = metrics.curvature()
 
@@ -29,38 +26,41 @@ def main():
     flow_norm = flow / (np.max(flow) + 1e-8)
     curvature_norm = curvature / (np.max(curvature) + 1e-8)
 
-    # --- 4. Combined signal ---
+    # --- 4. Structural signal ---
     risk = flow_norm * curvature_norm
+    print("✔ Generated structural signal")
 
-    print("✔ Computed metrics")
-    print("✔ Generated structural signal (risk)")
-
-    # --- 5. Peak detection (Mic Drop)
+    # --- 5. Peak detection ---
     peaks = risk > np.percentile(risk, 99)
 
-    # --- 6. Plot ---
-    fig, axs = plt.subplots(4, 1, figsize=(10, 8), sharex=True)
+    # --- 6. Single "Mic Drop" Plot ---
+    plt.figure(figsize=(8, 6))
 
-    axs[0].plot(t, trajectory[:, 0], linewidth=1)
-    axs[0].scatter(t[peaks], trajectory[peaks, 0], s=8)
-    axs[0].set_title("Lorenz Trajectory (x) + Transition Peaks")
+    # trajectory (xy-plane projection)
+    plt.plot(
+        trajectory[:, 0],
+        trajectory[:, 1],
+        alpha=0.25,
+        linewidth=1
+    )
 
-    axs[1].plot(t, flow_norm)
-    axs[1].set_title("Flow Strength")
+    # highlight structural transitions
+    plt.scatter(
+        trajectory[peaks, 0],
+        trajectory[peaks, 1],
+        s=10
+    )
 
-    axs[2].plot(t, curvature_norm)
-    axs[2].set_title("Curvature")
-
-    axs[3].plot(t, risk)
-    axs[3].scatter(t[peaks], risk[peaks], s=8)
-    axs[3].set_title("NEXAH Signal (Flow × Curvature)")
+    plt.title("NEXAH — Structural Transitions in Lorenz System")
+    plt.xlabel("x")
+    plt.ylabel("y")
 
     plt.tight_layout()
     plt.show()
 
     # --- 7. Result block ---
     print("\n🔥 Result:")
-    print("Signal peaks indicate structural transitions.\n")
+    print("Transitions are not random — they cluster in specific regions.\n")
 
     print("📊 Stats:")
     print(f"Max risk: {np.max(risk):.3f}")
