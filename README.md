@@ -103,6 +103,30 @@ They emerge from the **geometry of the dynamical field**:
 >  
 > It does not detect collapse.  
 > It detects the structure that leads to it.
+> 
+> This behavior is not a one-off observation.
+> It is reproducible:
+
+---
+
+### 📊 Results (Lorenz Demo)
+
+Across repeated runs, the structural signal shows consistent behavior:
+
+- peak count remains stable (~45–55 per run)  
+- peaks cluster in specific regions of the attractor  
+- transition patterns are reproducible across runs  
+
+Example (single run):
+
+- Max risk: 1.000  
+- Mean risk: 0.025  
+- Peak count: 50  
+
+---
+
+> The signal is not noise.  
+> It is a stable structural feature of the system dynamics.
 
 ---
 
