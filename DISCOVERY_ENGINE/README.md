@@ -1,13 +1,29 @@
-# DISCOVERY_ENGINE
+# DISCOVERY_ENGINE (Experimental / Legacy)
 
-Computational laboratory for architecture exploration, resilience analysis,  
-and **dynamic structure discovery** in NEXAH.
+Early experimental environment for exploring how **structure emerges from dynamics**.
 
 ---
 
-# 🔥 DISCOVERY CORE (ENTRY POINT)
+## 🧭 Role in NEXAH
 
-Minimal functional core for understanding how **dynamics generate transitions and structure**.
+The Discovery Engine represents the **exploration phase** of NEXAH.
+
+It was used to investigate:
+
+- whether transitions emerge from dynamics  
+- how structure forms from trajectories  
+- which signals indicate structural change  
+
+👉 It is **not the primary operational system**  
+→ see `FIELD_LAYER/` for the current core implementation
+
+---
+
+# 🔥 DISCOVERY CORE
+
+Minimal experimental setup to study:
+
+> **how dynamics generate transitions and structure**
 
 ---
 
@@ -25,7 +41,7 @@ DISCOVERY asks:
 
 ## 🔁 Core Pipeline
 
-```
+```text
 Dynamics
 → Phase Space
 → Risk Field
@@ -72,31 +88,18 @@ Dynamics
 
 - ✔ Field construction works  
 - ✔ Structure emerges  
-- ❌ Transitions are weak or missing  
+- ⚠️ Transition signals are weak / system-dependent  
 
 ---
 
-## 🚧 Core Limitation
+## 🚧 Limitation
 
-The system is currently:
+In many configurations, the system remains:
 
 > **too stable**
 
-→ no regime switching  
-→ weak transition signals  
-→ no meaningful navigation
-
----
-
-## 🚀 Next Step
-
-Introduce instability:
-
-- noise injection  
-- nonlinear coupling  
-- parameter expansion  
-
-→ to force real transitions
+→ limited regime switching  
+→ weak transition contrast  
 
 ---
 
@@ -105,110 +108,99 @@ Introduce instability:
 Without transitions:
 
 > no structure change  
-> no decision  
+> no meaningful regime distinction  
 > no navigation  
 
 ---
 
-# 🧪 FULL DISCOVERY ENGINE
+# 🧪 Extended Discovery Engine
 
-Beyond the core, this folder contains:
+The broader DISCOVERY_ENGINE includes experimental tools for:
 
 - architecture generation  
 - resilience analysis  
 - phase-space exploration  
 - topology extraction  
 - law discovery  
-- visualization tools  
+- visualization  
 
 ---
 
 ## Capabilities
 
-- Generate and evolve architectures  
-- Map resilience landscapes  
-- Detect phase transitions  
-- Discover structural laws  
-- Simulate dynamic systems  
-- Extract topology from flow  
-- Convert systems into navigable graphs  
-
----
-
-## Pipeline
-
-```
-Architecture  
-→ Evolution  
-→ Analysis  
-→ Landscape  
-→ Phase Detection  
-→ Law Discovery  
-→ Validation  
-→ Dynamics  
-→ Flow  
-→ Topology  
-→ Graph  
-→ Navigation
-```
+- generate and evolve system architectures  
+- map resilience landscapes  
+- detect phase transitions  
+- explore structural relationships  
+- simulate dynamic systems  
+- extract topology from trajectories  
 
 ---
 
 ## Interpretation
 
-The system is not only analyzing structures.
+The Discovery Engine explores whether:
 
-It is:
-
-> **generating, extracting, and transforming structure into navigable systems**
+> **dynamic systems naturally organize into structured, navigable forms**
 
 ---
 
 ## 🔬 Key Insight
 
 > Systems are flows that organize into structure  
-> and can be navigated through transitions
+> and can be described through their transitions
 
----
 ---
 
 # 🔗 Relation to FIELD_LAYER
 
 The Discovery Engine identifies:
 
-- transitions  
+- transition patterns  
 - probability structure  
-- energy landscapes  
-- field operators (div / curl)  
+- energy-like landscapes  
+- local flow properties  
 
-However, this representation is still incomplete.
+However, this representation is exploratory.
 
-The FIELD_LAYER extends this by:
+---
 
-- constructing a flow-aligned coordinate system  
-- transforming structure into a continuous field  
-- extracting topology (nodes, cycles)  
-- enabling control and navigation  
-- revealing attractors and convergence behavior  
+## FIELD_LAYER (Current Core)
+
+The FIELD_LAYER extends this into a usable system:
+
+- constructs continuous vector fields  
+- aligns structure with flow geometry  
+- extracts topology (basins, boundaries, channels)  
+- enables navigation and control  
+- reveals attractors and convergence  
 
 ---
 
 ## Conceptual Transition
 
-```text
 DISCOVERY:
 Dynamics → Transitions → Structure
 
 FIELD_LAYER:
 Structure → Field → Geometry → Topology → Control → Convergence
-```
 
 ---
 
 ## Key Shift
 
-> Discovery identifies structure  
-> Field Layer makes it **operational and navigable**
+> Discovery explores structure  
+> Field Layer makes it operational
+
+---
+
+## 🧠 Summary
+
+The Discovery Engine is:
+
+> an experimental laboratory that led to the FIELD_LAYER
+
+---
 
 ## License
 

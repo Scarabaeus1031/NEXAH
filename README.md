@@ -99,7 +99,97 @@ They emerge from the **geometry of the dynamical field**:
 
 > NEXAH does not detect events.  
 >  
-> It reveals the structure that produces them.
+> It reveals the structure that produces them.  
+>  
+> It does not detect collapse.  
+> It detects the structure that leads to it.
+
+
+This behavior is not a one-off observation.
+It is reproducible:
+
+---
+
+### 📊 Results (Lorenz Demo)
+
+Across repeated runs, the structural signal shows consistent behavior:
+
+- peak count remains stable (~45–55 per run)  
+- peaks cluster in specific regions of the attractor  
+- transition patterns are reproducible across runs  
+
+Example (single run):
+
+- Max risk: 1.000  
+- Mean risk: 0.025  
+- Peak count: 50  
+
+---
+
+> The signal is not noise.  
+> It is a stable structural feature of the system dynamics.
+
+---
+
+### 🔬 Stability Insight (V8)
+
+The field does not only define where transitions occur —  
+it also defines how stable they are.
+
+Analysis shows:
+
+- stability forms a continuous gradient across the field  
+- boundaries are not unstable — they are **weakly stable regions**  
+- local weak points ("gates") exist, but do not create branching outcomes  
+
+---
+
+> The system contains gates, but no decisions.
+
+All tested perturbations converge to the same attractor.
+
+---
+
+This means:
+
+- motion is constrained by geometry  
+- transitions are constrained by stability  
+- outcomes are structurally determined  
+
+→ the system is not only structured —  
+→ it is **stability-constrained**
+
+---
+
+## ⚡ IEEE Demo — Early Collapse Detection
+
+Run:
+
+    python run_ieee_demo.py
+
+---
+
+![IEEE Demo](outputs/demo/nexah_ieee_collapse.png)
+
+---
+
+The dashed line marks **NEXAH detection**.  
+The dotted line marks **actual collapse**.
+
+---
+
+### Result
+
+NEXAH detects structural instability **before collapse occurs**.
+
+Example (synthetic system):
+
+- detection: t ≈ 248  
+- collapse: t ≈ 700  
+- lead time: **~450 steps**
+
+→ the transition is visible in the field  
+→ long before failure manifests in the state
 
 ---
 

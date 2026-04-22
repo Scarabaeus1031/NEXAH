@@ -2,43 +2,39 @@
 
 ![Lorenz Dynamics](APPLICATIONS/core_demos/lorenz/outputs/lorenz_nexah_v12_final.gif)
 
-**At first, it looks like chaos.**
+---
+
+## ⚡ What you are looking at
+
+At first, it looks like chaos.
+
+But it isn’t.
 
 ---
 
-## 🧠 But watch closely
+## 🧠 Look again
 
 - the system is not random  
-- it switches between distinct modes  
-- colors appear and disappear  
+- it moves between recurring regions  
+- transitions happen at specific points  
 
-👉 this is **state switching**
-
----
-
-## 🔍 What is happening
-
-Even in chaos:
-
-- patterns repeat  
-- transitions occur at specific regions  
-- structure emerges over time  
+👉 this is **structured behavior inside chaos**
 
 ---
 
-## 🔥 This is the key shift
+## 🔥 The key idea
 
-From:
+NEXAH does not analyze values.
 
-> random motion  
+It reveals:
 
-To:
-
-> **structured transitions between regimes**
+> **how a system moves through its own structure**
 
 ---
 
-## ⚡ Run it yourself
+## ⚡ Try it (30 seconds)
+
+Run:
 
 ```bash
 python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
@@ -46,46 +42,57 @@ python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
 
 ---
 
-## 🧪 Try one change (30 seconds)
+## 🧪 Now change ONE line
 
-Open the script and find:
+Find:
 
 ```python
 control = -0.30 * dx
 ```
+Run again.
 
-Change it to:
+---
+
+Change to:
 
 ```python
 control = -0.10 * dx
 ```
-
 Run again.
 
-👉 Watch how the behavior changes.
+--
 
 ---
 
-## 🧠 What you just did
+## 🧠 What just happened
 
-You did NOT tune parameters.
+You did NOT tune a parameter.
 
 You changed:
 
-> **how the system navigates its own structure**
+> how the system navigates its own dynamics
 
 ---
 
-## 🧭 What to explore next
+## 💡 What this shows
 
-- 🧠 Full explanation → [README.md](README.md)  
-- 🔬 Structure discovery → [DISCOVERY_ENGINE/discovery_core_log.md](DISCOVERY_ENGINE/discovery_core_log.md)  
-- 🌊 Field construction → [FIELD_LAYER/build_log.md](FIELD_LAYER/build_log.md)  
+- chaos contains structure  
+- transitions are not random  
+- behavior can be influenced via geometry  
 
 ---
 
-## 💡 In one sentence
+## 🧭 Where to go next
 
-NEXAH turns chaos into:
+- 👉 Full overview → [README.md](README.md)  
+- 👉 Structure extraction → [DISCOVERY_ENGINE/discovery_core_log.md](DISCOVERY_ENGINE/discovery_core_log.md)  
+- 👉 Field construction → [FIELD_LAYER/build_log.md](FIELD_LAYER/build_log.md)  
 
-> **something you can interact with**
+---
+
+## 🔥 One sentence
+
+NEXAH turns chaotic systems into:
+
+> **something you can observe, understand — and navigate**
+
