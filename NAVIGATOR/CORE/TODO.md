@@ -1,119 +1,34 @@
-# NEXAH — Cleanup & Release TODO (Updated)
-
-**Date:** April 2026  
-**Goal:** Prepare the project for release and first collaborators — exit solo mode
-
----
-
-## 🧠 SYSTEM LEVEL (UPDATED)
-
-NEXAH now provides:
-
-- structure discovery (Discovery Engine)  
-- field reconstruction (Field Layer)  
-- topology extraction (states, cycles)  
-- control and navigation (Navigator)  
-- attractor detection, convergence, and stability structure  
-- gate detection (no-decision result)
-
----
-
-## 🧱 Theoretical Foundation
-
-The system is grounded in the **RESEARCH layer**:
-
-- minimal axiomatic structure (A0–A4)  
-- closure, transition, and stabilization operators (Γ, Δ, Ω)  
-
-👉 Focus now:
-
-> validation, demonstration, integration — not theory expansion
-
----
-
-# 🔴 PRIORITY 1 — ENTRY POINT (CRITICAL)
-
-### Goal:
-> Clone → Run → Understand in 1 minute
-
-### Status:
-- [x] Root `README.md`
-- [x] `START_HERE.md`
-- [~] `run_nexah_demo.py` (needs final version)
-
-### ToDo:
-- [ ] finalize `run_nexah_demo.py`
-- [ ] ensure clean execution from root
-- [ ] minimal, intentional output
-
-### Must show:
-1. Lorenz dynamics  
-2. field reconstruction  
-3. flow structure  
-4. transition behavior  
-5. convergence  
-
-### Constraints:
-- [ ] runtime < 30s  
-- [ ] minimal dependencies  
-- [ ] clean output  
-
----
-
-# 🔵 PRIORITY 2 — ONBOARDING
-
-### Status:
-- [x] START_HERE.md  
-- [x] README separation  
-- [x] visual entry  
-
-### ToDo:
-- [ ] verify links  
-- [ ] verify visuals exist  
-- [ ] verify commands  
-
-👉 Goal: instant usability
-
----
-
-# 🟣 PRIORITY 3 — LORENZ (CORE DEMO)
-
-### Status:
-- [x] full pipeline  
-- [x] navigation  
-- [x] fixpoint  
-
-### ToDo:
-- [ ] multi-run evaluation (20–50 runs)  
-- [ ] add RESULTS block  
-
-Example:
-
-Runs: 20
-Mean distance: 0.03
-Convergence rate: 0.95
+- [ ] optional: multi-run validation script
 
 ---
 
 # 🟡 PRIORITY 4 — ATTRACTOR VALIDATION
 
+### Status:
+- [~] partially explored
+
 ### ToDo:
-- [ ] fixpoint validation across runs  
 - [ ] convergence statistics  
+- [ ] endpoint clustering  
 - [ ] basin size estimation  
-- [ ] endpoint cloud visualization  
+- [ ] fixpoint robustness  
+
+👉 This becomes your first “scientific anchor”
 
 ---
 
 # 🟢 PRIORITY 5 — IEEE DEMO
 
 ### Status:
-- [x] visuals exist  
-- [ ] packaged demo missing  
+- [x] working demo (`run_ieee_demo.py`) ✅  
+- [x] visual output  
+- [x] early signal detection  
 
 ### ToDo:
-- [ ] create `run_ieee_demo.py`  
-- [ ] minimal output (1 visual + metrics)  
+- [ ] integrate into README (clean explanation)
+- [ ] optionally connect to real dataset
+
+👉 This is your **credibility bridge**
 
 ---
 
@@ -121,115 +36,95 @@ Convergence rate: 0.95
 
 ### Status:
 - [x] strong visuals  
-- [ ] captions missing  
+- [x] demo visuals integrated  
 
 ### ToDo:
-- [ ] add captions  
-- [ ] highlight key visuals  
+- [ ] add 1-line captions (critical)
+- [ ] highlight 3 key visuals only  
+
+👉 Avoid overload — curate, don’t dump
 
 ---
 
 # 🟠 PRIORITY 7 — REPO STRUCTURE
 
 ### Status:
-- [x] outputs structured  
+- [x] clean structure  
+- [x] outputs controlled  
 - [x] scripts organized  
 
 ### ToDo:
-- [ ] small naming cleanup  
-- [ ] mark obsolete scripts  
+- [ ] mark legacy scripts clearly  
+- [ ] optional: archive unused code  
 
 ---
 
-# 🧠 PRIORITY 8 — MATH CORE
-
-### Status:
-- [x] mathematical_foundation.md  
-
-👉 DONE
-
----
-
-# 🔗 PRIORITY 9 — INTEGRATION LOOP
-
-### ToDo:
-- [ ] define minimal loop:
-
-Field → Flow → Control → Trajectory → Convergence
-
-# 🔶 PRIORITY 10 — STABILITY VALIDATION (V8)
-
-### Status:
-
-- [x] Lyapunov map  
-
-- [x] boundary comparison  
-
-- [x] gate extraction  
-
-- [x] injection tests  
-
-- [x] decision test (no branching)
-
-### ToDo:
-
-- [ ] summarize stability findings (compact block)  
-
-- [ ] add 1 clean stability example  
-
-- [ ] connect to Lorenz demo  
+# 🔗 PRIORITY 8 — MINIMAL INTEGRATION LOOP
 
 ### Goal:
+Define the irreducible system:
 
-> show system is structured, navigable, and stability-constrained
+Field → Signal → Transition → Convergence
+
+### Status:
+- [x] implicitly implemented  
+- [ ] not explicitly stated
+
+👉 Add as explicit block in README
 
 ---
 
-# 🚀 NEXT STEPS (FOCUS)
+# 🔶 PRIORITY 9 — STABILITY (V8)
 
-1. finalize `run_nexah_demo.py`  
+### Status:
+- [x] Lyapunov map  
+- [x] boundary detection  
+- [x] gate extraction  
+- [x] injection tests  
+- [x] no-decision result  
 
-2. add Lorenz results block  
+### ToDo:
+- [ ] 3-line summary block
+- [ ] 1 clean visual reference
+- [ ] connect to demo
 
-3. validate convergence  
+### Core message:
 
-4. create IEEE demo  
+> system is structured, stable, and constrained
 
-5. polish visuals/docs  
+---
+
+# 🚀 RELEASE STEPS (NEXT ACTIONS)
+
+1. [ ] add Lorenz RESULTS block  
+2. [ ] integrate IEEE demo cleanly  
+3. [ ] final README polish  
+4. [ ] test fresh clone execution  
+5. [ ] prepare first external share  
 
 ---
 
 # 🧭 FINAL TARGET
 
-> NEXAH reconstructs, controls, and navigates  
-
+> NEXAH reconstructs, interprets, and navigates  
 > structured dynamical fields toward stable attractors
 
 ---
 
-# 🧠 REALITY CHECK
+# 🧠 REALITY CHECK (UPDATED)
 
-You already have:
+You have:
 
-- ✅ Discovery Engine  
+- ✅ working demos (Lorenz + IEEE)  
+- ✅ structural signals  
+- ✅ visual proof  
+- ✅ coherent architecture  
 
-- ✅ Field Layer  
+You need:
 
-- ✅ Topology  
-
-- ✅ Control  
-
-- ✅ Navigation  
-
-- ✅ Stability (V8)  
-
-You still need:
-
-- ✔ one clean demo  
-
-- ✔ one result block  
-
-- ✔ one real example  
+- ✔ validation summary  
+- ✔ clean narrative  
+- ✔ external feedback  
 
 ---
 
@@ -239,10 +134,16 @@ You are no longer building.
 
 You are:
 
-> packaging, validating, and proving
+> demonstrating, validating, and exposing the system
 
 ---
 
-Last Updated: April 2026  
+# 🧭 NEXT PHASE
 
+```text
+demo → validation → feedback → iteration
+```
+
+
+Last Updated: April 2026
 © Thomas K. R. Hofmann
