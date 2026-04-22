@@ -136,7 +136,7 @@ ax.set_ylabel("β")
 fig.colorbar(cf, ax=ax)
 
 plt.tight_layout()
-plt.show()
+
 # =========================
 # NEXAH SAVE BLOCK
 # =========================
