@@ -24,11 +24,12 @@ Instead, it proposes a different perspective:
 - trajectories are treated as probes of structure
 - cost is constructed from simulated motion
 - navigation emerges from this constructed field
+- stability is measured directly from trajectory divergence
 
 The contribution is therefore:
 
 → not new mathematics,  
-→ but a structured way to extract geometry and navigation from known systems
+→ but a structured way to extract **geometry, navigation, and stability** from known systems
 
 ---
 
@@ -36,9 +37,9 @@ The contribution is therefore:
 
 The system operates on a continuous 2D domain:
 
-\[
-x = (x_1, x_2) \in \mathbb{R}^2
-\]
+$begin:math:display$
+x \= \(x\_1\, x\_2\) \\in \\mathbb\{R\}\^2
+$end:math:display$
 
 ---
 
@@ -46,9 +47,9 @@ x = (x_1, x_2) \in \mathbb{R}^2
 
 A scalar field is defined:
 
-\[
-V(x) : \mathbb{R}^2 \to \mathbb{R}
-\]
+$begin:math:display$
+V\(x\) \: \\mathbb\{R\}\^2 \\to \\mathbb\{R\}
+$end:math:display$
 
 Constructed as a superposition of Gaussian functions.
 
@@ -63,9 +64,9 @@ Interpretation:
 
 The fundamental flow is:
 
-\[
-\dot{x} = -\nabla V(x)
-\]
+$begin:math:display$
+\\dot\{x\} \= \-\\nabla V\(x\)
+$end:math:display$
 
 Meaning:
 
@@ -78,13 +79,13 @@ Meaning:
 
 A rotational perturbation is added:
 
-\[
-F(x) = -\nabla V(x) + R(x)
-\]
+$begin:math:display$
+F\(x\) \= \-\\nabla V\(x\) \+ R\(x\)
+$end:math:display$
 
 Where:
 
-- \(R(x)\) is a curl-like component  
+- $begin:math:text$R\(x\)$end:math:text$ is a curl-like component  
 - introduces circulation and asymmetry  
 
 Result:
@@ -97,16 +98,16 @@ Result:
 
 Extended system:
 
-\[
-\dot{x} = v
-\]
-\[
-\dot{v} = F(x) - \gamma v
-\]
+$begin:math:display$
+\\dot\{x\} \= v
+$end:math:display$
+$begin:math:display$
+\\dot\{v\} \= F\(x\) \- \\gamma v
+$end:math:display$
 
 Where:
 
-- \( \gamma > 0 \) is a damping coefficient  
+- $begin:math:text$ \\gamma \> 0 $end:math:text$ is a damping coefficient  
 
 Interpretation:
 
@@ -119,11 +120,9 @@ Interpretation:
 
 Trajectories are solutions of:
 
-\[
-x'(t) = F(x(t))
-\]
-
-or second-order form.
+$begin:math:display$
+x\'\(t\) \= F\(x\(t\)\)
+$end:math:display$
 
 Important:
 
@@ -134,24 +133,22 @@ Important:
 
 ## 7. Cost Functional (V7 Layer)
 
-A scalar cost is assigned to each initial condition:
+A scalar cost is assigned:
 
-\[
-J(x_0) = \int_0^T \ell(x(t), v(t)) \, dt
-\]
+$begin:math:display$
+J\(x\_0\) \= \\int\_0\^T \\ell\(x\(t\)\, v\(t\)\) \\\, dt
+$end:math:display$
 
 Where:
 
-\[
-\ell(x, v) = \|v\| + \alpha \|\dot{v}\|
-\]
-
-Components:
-
-- speed term → movement cost  
-- turning term → curvature penalty  
+$begin:math:display$
+\\ell\(x\, v\) \= \\\|v\\\| \+ \\alpha \\\|\\dot\{v\}\\\|
+$end:math:display$
 
 Interpretation:
+
+- movement cost (speed)
+- curvature cost (direction change)
 
 → measures effort required to reach a target  
 
@@ -159,146 +156,186 @@ Interpretation:
 
 ## 8. Value Field Interpretation
 
-The computed cost map can be interpreted as:
+$begin:math:display$
+J\(x\) \\approx \\text\{Value Function\}
+$end:math:display$
 
-\[
-J(x) \approx \text{Value Function}
-\]
+Interpretation:
 
-from optimal control theory.
+- each point stores cost-to-go  
+- approximates optimal control structure  
 
-Meaning:
+Important:
 
-- each point stores the cost of reaching the target  
-- structure emerges from dynamic simulation  
+→ computed numerically via simulation  
+→ not via HJB solution  
 
 ---
 
 ## 9. Navigation Field
 
-The navigation field is defined as:
-
-\[
-N(x) = -\nabla J(x)
-\]
+$begin:math:display$
+N\(x\) \= \-\\nabla J\(x\)
+$end:math:display$
 
 Interpretation:
 
 - direction of steepest cost decrease  
-- approximates optimal motion  
+- induces flow toward target  
 
-Important:
-
-→ this is not analytically solved  
-→ it is numerically constructed  
+→ navigation emerges from field geometry  
 
 ---
 
 ## 10. Relation to Optimal Control
 
-The system implicitly approximates:
+Implicitly approximates:
 
-\[
-\min_{x(t)} \int_0^T \ell(x(t), v(t)) dt
-\]
-
-This is related to:
-
-- optimal control theory  
-- Hamilton–Jacobi–Bellman (HJB) framework  
-
-However:
-
-- no explicit HJB equation is solved  
-- solution is obtained via simulation  
-
----
-
-## 11. Lyapunov Perspective
-
-The potential field \(V(x)\) acts as a Lyapunov candidate:
-
-\[
-\dot{V}(x) = \nabla V \cdot \dot{x}
-\]
-
-For pure gradient flow:
-
-\[
-\dot{V}(x) \le 0
-\]
-
-With rotation:
-
-- monotonic decrease is broken locally  
-- but global stability persists  
-
-Interpretation:
-
-→ system remains dissipative but not strictly gradient  
-
----
-
-## 12. Boundary / Splinter Interpretation
-
-Observed transition regions correspond to:
-
-- regions where \(J(x)\) is non-smooth  
-- multiple competing trajectories exist  
-
-Interpretation:
-
-\[
-\nabla J(x) \text{ is discontinuous or unstable}
-\]
-
-These regions behave like:
-
-→ finite-time separatrices  
-
----
-
-## 13. Sensitivity and Instability
-
-Sensitivity maps approximate:
-
-\[
-\frac{\partial x(T)}{\partial x(0)}
-\]
-
-Meaning:
-
-- how strongly trajectories diverge  
-
-Interpretation:
-
-→ local instability / transition amplification  
+$begin:math:display$
+\\min\_\{x\(t\)\} \\int\_0\^T \\ell\(x\(t\)\, v\(t\)\) dt
+$end:math:display$
 
 Related to:
 
-- Lyapunov-like behavior (finite-time)
+- optimal control
+- Hamilton–Jacobi–Bellman theory
+
+But:
+
+→ no PDE is solved  
+→ structure is obtained via simulation  
 
 ---
 
-## 14. Structural Summary
+## 11. Lyapunov Perspective (V8 Layer)
+
+Finite-time Lyapunov-like quantity:
+
+$begin:math:display$
+\\lambda\(x\) \= \\frac\{1\}\{T\} \\log \\frac\{\\\| \\delta x\(T\) \\\|\}\{\\\| \\delta x\(0\) \\\|\}
+$end:math:display$
+
+Interpretation:
+
+- λ < 0 → stable (convergence)
+- λ > 0 → unstable (divergence)
+
+Key point:
+
+→ stability is **measured**, not assumed  
+
+---
+
+## 12. Boundary vs Stability
+
+Observed:
+
+- transition boundaries (from cost / classification)
+- stability structures (from Lyapunov)
+
+Result:
+
+→ they do NOT coincide  
+
+Interpretation:
+
+→ boundary = outcome transition  
+→ Lyapunov = local stability  
+
+---
+
+## 13. Boundary / Splinter Interpretation
+
+Transition regions correspond to:
+
+- non-smooth regions of $begin:math:text$J\(x\)$end:math:text$
+- competing trajectories
+
+$begin:math:display$
+\\nabla J\(x\) \\text\{ unstable or discontinuous\}
+$end:math:display$
+
+Interpretation:
+
+→ finite-time separatrix-like structures  
+
+---
+
+## 14. Sensitivity and Instability
+
+Sensitivity approximates:
+
+$begin:math:display$
+\\frac\{\\partial x\(T\)\}\{\\partial x\(0\)\}
+$end:math:display$
+
+Interpretation:
+
+→ local amplification of perturbations  
+
+Related to:
+
+- finite-time Lyapunov behavior  
+
+---
+
+## 15. Structural Result (V8 Insight)
+
+From experiments:
+
+- gates exist (weak stability regions)
+- but no branching occurs
+
+Result:
+
+```text
+num_decision_points = 0
+```
+
+Interpretation:
+
+→ system has transitions  
+→ but no true decision nodes  
+
+---
+
+## 16. Structural Summary
 
 The system combines:
 
-- gradient descent (energy minimization)  
-- rotational dynamics (circulation)  
+- gradient flow (energy minimization)  
+- rotational flow (circulation)  
 - dissipation (stability)  
-- path-based cost accumulation  
+- cost accumulation (navigation)  
+- Lyapunov estimation (stability geometry)
 
 This produces:
 
 - attractor basins  
-- orbit-like structures  
+- orbit structures  
 - transition corridors  
 - energy barriers  
+- stability gradients  
 
 ---
 
-## 15. Scope
+## 17. System Classification
+
+The system is best described as:
+
+$begin:math:display$
+\\text\{Directed Dynamical System\}
+$end:math:display$
+
+Properties:
+
+- constrained flow
+- dominant attractor
+- no multi-branch decision structure
+
+---
+
+## 18. Scope
 
 This framework is:
 
@@ -308,50 +345,52 @@ This framework is:
 
 It is NOT:
 
-- an analytical solution  
-- a physical theory  
+- a closed-form theory  
+- a new physical law  
 - a claim of new mathematics  
 
 ---
 
-## 16. Interpretation
+## 19. Interpretation
 
-The system can be viewed as:
+The system can be summarized as:
 
-\[
-\text{Dynamical System} + \text{Cost Functional} + \text{Navigation Field}
-\]
+$begin:math:display$
+\\text\{Dynamical Field\} 
+\+ \\text\{Cost Field\} 
+\+ \\text\{Navigation Field\} 
+\+ \\text\{Stability Field\}
+$end:math:display$
 
 Result:
 
-→ a structured, navigable field representation  
-
----
+→ a structured, navigable, stability-aware field representation  
 
 ---
 
 ## Visual Examples
 
-### Navigation Field (Cost Gradient)
+### Navigation Field
 
 ![Navigation Field](outputs/v7_3/v7_3_navigation.png)
 
-Shows:
+---
 
-- cost landscape
-- navigation field (−∇J)
-- resulting trajectories
+### Energy / Transition Structure
+
+![Energy Map](outputs/v7_7/v7_7_energy_map.png)
 
 ---
 
-### Reachability / Failure Map
+### Lyapunov Stability Field
 
-![Failure Map](outputs/v7_4/v7_4_failure_map.png)
+![Lyapunov Map](outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
 
-Shows:
+---
 
-- regions from which the target is reachable
-- sharp transition boundary ("splinter")
+### Injection Behavior
+
+![Injection Tests](outputs/v8_5_injection_tests/v8_5_injection_tests.png)
 
 ---
 
@@ -362,10 +401,20 @@ All observed structures:
 - basins  
 - boundaries  
 - corridors  
-- orbit bands  
+- stability regions  
 
 emerge from:
 
 > the interaction of simple, standard mathematical components  
 
 No structure is explicitly imposed.
+
+---
+
+## Final Insight
+
+```text
+The system does not offer choices.
+
+It defines paths.
+```
