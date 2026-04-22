@@ -1,196 +1,211 @@
-# ⚡ NEXAH — Navigating Structure in Dynamical Systems
+# ⚡ NEXAH — A Geometric Framework for Dynamical Systems
 
 > Complex systems are not random.  
-> They evolve within **structured fields with direction and destination**.
+> They evolve within **structured fields that constrain motion, transitions, and outcomes**.
 
 ---
 
 ![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
-This is a real system trajectory from an IEEE power grid model.
+This visualization shows a trajectory from a real IEEE power grid model.
 
-NEXAH reconstructs a local flow field around it,
-revealing how the system moves within a structured stability landscape.
+NEXAH reconstructs the local **flow field** around the system state, revealing:
 
----
-
-🧪 Reproduce this visualization (IEEE off-manifold flow field):
-
-```bash
-python APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/analysis/run_ieee_off_manifold_flow_v69.py
-```
+- directional structure  
+- transition channels  
+- stability constraints  
 
 ---
 
-## 🧠 What NEXAH does
+🧪 Reproduce this visualization:
 
-NEXAH reconstructs dynamical systems as:
-
-- **fields** instead of states  
-- **trajectories** instead of events  
-- **attractors** instead of targets  
-
-It reveals:
-
-> how systems **move, transition, and converge** within their intrinsic structure  
-> — and how **stability constrains which transitions are actually possible**
+    python APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/analysis/run_ieee_off_manifold_flow_v69.py
 
 ---
 
-## 🔥 Core idea
+# 🧠 What NEXAH does
 
-dynamics → structure → field → topology → stability → navigation
+NEXAH transforms time-series system data into a **geometric representation**:
 
----
+- states → field  
+- time evolution → trajectories  
+- events → regime transitions  
 
-## 🧭 How this emerges
+Instead of detecting isolated failures, NEXAH identifies:
 
-### Step 1 — Chaos
-
-![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
-
-At first, the system looks completely random.
-
----
-
-### Step 2 — Structure
-
-![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
-
-Hidden geometry appears:
-
-👉 transitions follow **specific paths**
+> how systems **move within structured dynamical landscapes**  
+> and how **stability constrains possible transitions**
 
 ---
 
-### Step 3 — Representation
+# 🔥 Core Principle
 
-![State Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
-
-The system can now be described as:
-
-- states  
-- transitions  
-- structure  
-
-👉 chaos becomes **organized**
+dynamics → structure → field → regimes → stability → navigation
 
 ---
 
-### Step 4 — Navigation
+# ⚡ Key Result — Power Systems (IEEE)
 
-![Controlled Navigation](APPLICATIONS/core_demos/lorenz/outputs/lorenz_meta_control_v6_switch.png)
+NEXAH has been tested on real IEEE grid models (118 → 9241 buses).
 
-Now something new becomes possible:
+Result:
 
-- trajectories stabilize  
-- regimes are controlled  
-- behavior becomes steerable  
-
-👉 the system becomes **navigable**
+> Voltage collapse can be detected **~43.9 seconds earlier**  
+> than classical methods — consistently across system sizes.
 
 ---
 
-## 🧭 Architecture
+![NEXAH Mic Drop](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
+Interpretation:
+
+- classical methods detect **state failure**
+- NEXAH detects **structural transition**
+
+---
+
+# 🧭 System Architecture
 
 Dynamics  
 → Discovery Engine  
 → Field Layer (geometry + stability)  
 → Navigator  
 
-### 🔬 Discovery Engine
-Extracts structure from raw dynamics.
+---
 
-### 🌊 Field Layer
-Transforms structure into a navigable representation,  
-including geometry **and stability constraints**.
+## 🔬 Discovery Engine
+Extracts structure from raw system dynamics.
 
-### 🧭 Navigator
-Operates on the system as a trajectory within the field.
+## 🌊 Field Layer
+Constructs a continuous representation of:
+
+- flow (direction)  
+- geometry (structure)  
+- stability (Lyapunov / boundary)  
+
+## 🧭 Navigator
+Operates on trajectories within the field:
+
+- transition detection  
+- regime tracking  
+- trajectory control  
 
 ---
 
-## ⚡ What this enables
+# 🌀 From Chaos to Structure
+
+### Step 1 — Raw Dynamics
+
+![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
+
+---
+
+### Step 2 — Emergent Geometry
+
+![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
+
+Hidden structure appears:
+
+→ trajectories follow constrained paths
+
+---
+
+### Step 3 — Structured Representation
+
+![State Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
+
+System behavior becomes describable as:
+
+- states  
+- transitions  
+- regimes  
+
+---
+
+# ⚡ What NEXAH enables
 
 - detection of regime transitions  
 - geometric interpretation of instability  
-- trajectory-based control  
-- navigation within system dynamics  
+- trajectory-based system analysis  
+- early-warning signals based on structure  
+- navigation within dynamical systems  
 
 ---
 
-## 🧠 Current State
+# 🧠 Current State
 
 ### ✔ Working (Prototype)
 
-- structure extraction (Lorenz)  
-- transition detection  
-- short-term prediction  
-- adaptive control behavior  
-- regime switching  
+- structure extraction (Lorenz, IEEE systems)  
+- regime detection  
+- trajectory-based analysis  
+- early transition signals (validated on IEEE grids)  
+
+---
 
 ### ⚠️ Limitations
 
-- not globally predictive  
-- system-dependent  
-- still under validation  
+- no formal theoretical proof yet  
+- system-dependent performance  
+- ongoing validation on real-world data  
+- not a universal predictor  
 
 ---
 
-## 🚀 Entry Point
+# 💡 Core Insight
 
-👉 [START HERE — Run your first demo](START_HERE.md)
-
----
-
-## 🧭 Navigate the system
-
-### 🔬 Core System
-- 🧠 Framework → [FRAMEWORK/README.md](FRAMEWORK/README.md)  
-- 🌊 Field Layer → [FIELD_LAYER/build_log.md](FIELD_LAYER/build_log.md)  
-- 🔬 Discovery Engine → [DISCOVERY_ENGINE/discovery_core_log.md](DISCOVERY_ENGINE/discovery_core_log.md)  
-
----
-
-### ⚡ Applications
-- ⚡ Lorenz Demo → [APPLICATIONS/core_demos/lorenz/](APPLICATIONS/core_demos/lorenz/)  
-- 🌐 Power Systems → [APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)  
-
----
-
-### 🧭 Navigation Layer
-- 🧭 Navigator → [NAVIGATOR/README.md](NAVIGATOR/README.md)  
-- 🧭 Architecture → [NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md](NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md)  
-
----
-
-## 💡 Core Insight
-
-> Stability is not a fixed state.  
+> Stability is not a fixed value.  
 > It is a **region within a structured dynamical field**
 
 ---
 
-## 🔬 Stability Geometry (V8)
+# 🔬 Boundary & Stability (V10)
 
-![Lyapunov Map](FIELD_LAYER/field_decomposition/outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
+![Boundary](FIELD_LAYER/field_decomposition/outputs/v10_1_boundary_map.png)
 
-The system’s stability is not uniform.
+NEXAH identifies:
 
-- stable regions form basins  
-- instability forms structured ridges  
-- transitions occur within constrained zones  
+- regime regions (orbit, escape, drift)  
+- boundaries (separatrices)  
+- transition intensity (boundary strength)  
 
-Key insight:
+These define:
 
-> geometry defines possible motion  
-> stability defines **viable motion**
+> where the system can go — and where it cannot
 
 ---
 
-## 🌀 NEXAH
+# 🧭 Entry Points
 
-dynamics → structure → field → regimes → stability → navigation
+👉 START_HERE.md
+
+---
+
+## 🔬 Core System
+- FRAMEWORK/README.md  
+- FIELD_LAYER/build_log.md  
+- DISCOVERY_ENGINE/discovery_core_log.md  
+
+---
+
+## ⚡ Applications
+- APPLICATIONS/core_demos/lorenz/  
+- APPLICATIONS/power_systems/  
+
+---
+
+## 🧭 Navigation
+- NAVIGATOR/README.md  
+- NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md  
+
+---
+
+# 🌀 NEXAH
+
+From dynamics → structure  
+From structure → geometry  
+From geometry → regimes  
+From regimes → navigation  
 
 ---
 
