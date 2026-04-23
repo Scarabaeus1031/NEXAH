@@ -45,22 +45,23 @@ System → Structure → Field → Geometry → Stability → Control → Naviga
 | Navigation | Executes movement through field structure |
 
 ---
+
 ## 🧭 Architecture Flow
 
 ```mermaid
 flowchart TD
 
-A[ARCHY<br/>Simulation] --> B[Discovery Engine<br/>Structure Extraction]
+A["ARCHY\nSimulation"] --> B["Discovery Engine\nStructure Extraction"]
 
-B --> C[Field Reconstruction<br/>(CORE)]
-C --> D[Field Layer<br/>Geometry + Stability]
+B --> C["Field Reconstruction\n(CORE)"]
+C --> D["Field Layer\nGeometry + Stability"]
 
-D --> E[Transition Geometry<br/>Basins / Separatrix / Gates]
+D --> E["Transition Geometry\nBasins / Separatrix / Gates"]
 
-E --> F[Control Layer<br/>(CORE)]
-F --> G[Navigator]
+E --> F["Control Layer\n(CORE)"]
+F --> G["Navigator"]
 
-G --> H[System Behavior<br/>Convergence / Stability]
+G --> H["System Behavior\nConvergence / Stability"]
 
 %% Styling
 classDef core fill:#1f77b4,color:#fff,stroke:#0d3b66
