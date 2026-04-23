@@ -47,41 +47,15 @@ Status:
 
 ## Interpretation
 
-The Lorenz system is successfully modeled as:
+The system can extract:
 
-> a **structured transition field with intrinsic geometry**
-
----
-
-# 🌊 2. Field Reconstruction (CORE)
-
-Status:
-
-✔ density field reconstruction  
-✔ flow field estimation  
-✔ boundary / transition region detection  
-✔ stability-sensitive reconstruction  
-✔ validity region identification  
+- structure from dynamics  
+- fields from trajectories  
+- flow operators (div / curl)  
 
 ---
 
-## Key Result
-
-> The system state can be reconstructed as a **continuous field with locally valid structure**
-
----
-
-## Interpretation
-
-Field reconstruction reveals:
-
-- where structure is reliable  
-- where interpolation dominates  
-- where transitions emerge  
-
----
-
-# 🌐 3. Field Layer (Core Breakthrough)
+# 🌊 2. Field Reconstruction + Field Layer (Core System)
 
 Status:
 
@@ -91,13 +65,14 @@ Status:
 ✔ ridge extraction (channels)  
 ✔ directional flow field  
 ✔ topology extraction (nodes, cycles)  
+✔ energy-based interpretation  
 ✔ attractor detection  
 
 ---
 
 ## Key Result
 
-> The system is represented as a **continuous dynamical field with geometry and topology**
+> The system is reconstructed as a **continuous dynamical field with geometry and topology**
 
 ---
 
@@ -105,15 +80,13 @@ Status:
 
 Field decomposition shows:
 
-```text
 dx/dt ≈ -∇V(x) + R(x)
-```
 
 → gradient (attraction) + rotation (structure)
 
 ---
 
-# 🎯 4. Attractor & Convergence (Validated)
+# 🎯 3. Attractor & Convergence (Validated)
 
 Status:
 
@@ -126,9 +99,7 @@ Status:
 
 ## Fixpoint
 
-```text
 x* ≈ (13.494, 25.994)
-```
 
 ---
 
@@ -138,39 +109,7 @@ x* ≈ (13.494, 25.994)
 
 ---
 
-# 🎮 5. Control Layer (CORE — Newly Integrated)
-
-Status:
-
-✔ basin detection  
-✔ separatrix extraction  
-✔ gate detection  
-✔ gate tracking  
-✔ trajectory steering  
-✔ multi-gate routing experiments  
-
----
-
-## Key Result
-
-> The system can be **actively steered using its intrinsic field structure**
-
----
-
-## Interpretation
-
-Control is:
-
-- not external forcing  
-- not arbitrary  
-
-It is:
-
-> **structure-aware trajectory shaping within the field**
-
----
-
-# 🧭 6. Navigation Layer (Operational)
+# 🧭 4. Navigation Layer (Operational)
 
 Status:
 
@@ -178,7 +117,8 @@ Status:
 ✔ control policies  
 ✔ trajectory shaping  
 ✔ energy-aware navigation  
-✔ dynamic field interaction  
+✔ multi-attractor experiments (partial)  
+✔ dynamic field modulation (partial)  
 
 ---
 
@@ -197,28 +137,26 @@ Navigation is:
 
 It is:
 
-> **field-based motion constrained by geometry and stability**
+> **field-based trajectory shaping toward stable regions**
 
 ---
 
-# 🔶 7. Stability Layer (V8 — Established)
+# 🔶 5. Stability + Transition Layer (V8+)
 
 Status:
 
 ✔ Lyapunov mapping (finite-time)  
 ✔ stability field construction  
 ✔ boundary vs stability comparison  
+✔ separatrix detection  
 ✔ gate detection (weak stability regions)  
 ✔ injection testing  
-✔ decision point analysis  
 
 ---
 
 ## Key Result
 
-```text
 The system contains gates, but no decisions.
-```
 
 ---
 
@@ -226,7 +164,7 @@ The system contains gates, but no decisions.
 
 The system exhibits:
 
-- transition regions  
+- transition regions (separatrix)  
 - entry points ("gates")  
 - stability gradients  
 
@@ -256,14 +194,13 @@ This separates:
 
 ---
 
-# 🔗 8. System Integration
+# 🔗 6. System Integration
 
 Status:
 
-✔ Discovery → Reconstruction integrated  
-✔ Reconstruction → Field Layer integrated  
+✔ Discovery → Field Reconstruction → Field Layer connected  
 ✔ Field → Control → Navigation working  
-✔ Stability layer integrated  
+✔ Stability integrated  
 ✔ closed-loop behavior observable  
 
 ---
@@ -280,35 +217,49 @@ Status:
 
 ---
 
-# 🌍 9. Real-World Systems (Early Stage)
+# 🌍 7. Real-World Systems (Status)
 
-Status:
+### 🔥 Lorenz (Reference System)
 
-✔ IEEE / power system experiments exist  
-✔ field reconstruction works  
-✔ structured flow observed  
+✔ fully working  
+✔ structure, flow, topology, control, convergence validated  
+
+→ complete prototype system  
 
 ---
 
-## Limitations
+### ⚡ Power Systems (IEEE)
 
-❌ reproducibility not fully established  
-❌ convergence not statistically validated  
-❌ pipeline not unified across systems  
+✔ field reconstruction works  
+✔ flow structure visible  
+
+But:
+
+❌ convergence not validated  
+❌ reproducibility not established  
+❌ unified pipeline missing  
+
+---
+
+### 🔄 Other Systems
+
+- Kuramoto → exploratory  
+- Multi-agent → exploratory  
+- Supply chain → exploratory  
 
 ---
 
 ## Interpretation
 
-> Real-world relevance is plausible, but not yet fully demonstrated
+> Real-world relevance is plausible, but not yet demonstrated
 
 ---
 
-# ⚠️ 10. Current Bottlenecks
+# ⚠️ 8. Current Bottlenecks
 
 ## 1. Packaging Gap
 
-- no unified demo entry point  
+- no unified entry point (run_nexah_demo.py)  
 - no simple onboarding  
 
 ---
@@ -322,18 +273,19 @@ Status:
 
 ## 3. Application Gap
 
-- no clean real-world demonstration pipeline  
+- no reproducible real-world demonstration  
 
 ---
 
 ## 4. Conceptual Gap
 
-- analytical description of cost field missing  
-- analytical formulation of stability field missing  
+- no clean analytical formulation of:
+  - cost field  
+  - stability field  
 
 ---
 
-# 🧠 11. What Is Established
+# 🧠 9. What Is Established
 
 ✔ structure emerges from dynamics  
 ✔ dynamics form continuous fields  
@@ -342,13 +294,12 @@ Status:
 ✔ attractors exist and are measurable  
 ✔ trajectories converge to stable regions  
 ✔ navigation is possible within the field  
-✔ control is possible via transition structure  
 ✔ stability structure can be measured (Lyapunov)  
-✔ system exhibits **directed convergence behavior**  
+✔ system exhibits directed convergence behavior  
 
 ---
 
-# ❌ 12. What Is NOT Established
+# ❌ 10. What Is NOT Established
 
 ❌ generalization across arbitrary systems  
 ❌ robustness under strong perturbations  
@@ -358,9 +309,23 @@ Status:
 
 ---
 
-# 🚀 13. Immediate Next Steps
+# 🧭 11. System Positioning
 
-1. build `run_nexah_demo.py` (entry point)  
+NEXAH is NOT:
+
+- a simulator  
+- a machine learning framework  
+- a classical control system  
+
+NEXAH is:
+
+> a structure–field–navigation–stability framework  
+
+---
+
+# 🚀 12. Immediate Next Steps
+
+1. build run_nexah_demo.py (entry point)  
 2. validate convergence statistically (multi-run)  
 3. create reproducible Lorenz results block  
 4. package IEEE example  
@@ -372,8 +337,8 @@ Status:
 
 NEXAH demonstrates:
 
-> **complex systems can be reconstructed as structured fields  
-> with constrained navigation and controllable transitions**
+> complex systems can be reconstructed as structured fields  
+> with constrained navigation and stable convergence  
 
 ---
 
