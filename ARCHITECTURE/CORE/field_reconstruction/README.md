@@ -1,5 +1,5 @@
 # ⚡ NEXAH — Field Reconstruction Module  
-> From trajectory data → to structure → to field geometry
+> From trajectory data → to structure → to field geometry → to navigation
 
 ---
 
@@ -8,6 +8,12 @@
 This module investigates how dynamical systems can be reconstructed as **continuous fields** from discrete trajectory data.
 
 Rather than treating system behavior as isolated trajectories, we interpret it as motion within an underlying **geometric field structure with varying validity**.
+
+This module marks the transition from:
+
+- trajectory analysis  
+→ to field reconstruction  
+→ to navigable system geometry  
 
 ---
 
@@ -23,6 +29,7 @@ This module reconstructs:
 - flow fields from discrete trajectories  
 - invariant regions under transformation  
 - limits and artifacts of reconstruction  
+- **navigable directions within the field**  
 
 ---
 
@@ -34,6 +41,7 @@ field_reconstruction/
 ├── dynamics/         # flow transitions (GIFs)
 ├── stability/        # invariant vs frame-dependent regions
 ├── robustness/       # noise & perturbation analysis
+├── outputs/          # generated field visualizations
 ├── scripts/          # reproducible experiments
 ```
 
@@ -82,11 +90,11 @@ Interpretation:
 
 - system leaves linear regime  
 - rotational field components emerge  
-- indicates onset of nonlinear dynamics  
+- onset of nonlinear dynamics  
 
 Implication:
 
-Field reconstruction reveals dynamics that are not visible in the original trajectory representation.
+Field reconstruction reveals dynamics not visible in the original trajectory.
 
 ---
 
@@ -116,6 +124,77 @@ Field reconstruction reveals dynamics that are not visible in the original traje
 
 ---
 
+## 🧭 From Field → Navigation
+
+---
+
+### 🔹 Boundary Detection
+
+![Boundary](outputs/demo/nexah_boundary_map.png)
+
+→ separation of:
+- stable core  
+- transition regions  
+
+---
+
+### 🔹 Boundary Gradient
+
+![Boundary Gradient](outputs/demo/nexah_boundary_gradient.png)
+
+→ continuous transition intensity  
+
+- bright → unstable / transition  
+- dark → stable  
+
+---
+
+### 🔹 Stability Flow Field
+
+![Flow](outputs/demo/nexah_stability_flow.png)
+
+→ direction toward stable regions  
+
+---
+
+### 🔹 Flow Channels
+
+![Channels](outputs/demo/nexah_flow_channels.png)
+
+→ extraction of coherent motion corridors  
+
+- system motion is constrained  
+- movement occurs along preferred paths  
+
+---
+
+### 🔹 Trajectory Simulation
+
+![Trajectory](outputs/demo/nexah_flow_trajectory.png)
+
+→ motion follows field geometry  
+
+- bends along channels  
+- avoids unstable regions  
+
+---
+
+### 🔹 Target-Guided Navigation
+
+![Target](outputs/demo/nexah_target_navigation.png)
+
+→ navigation under dual constraint:
+
+- field structure (local geometry)  
+- target direction (global goal)  
+
+**Key Insight:**
+
+> The target does not define the path.  
+> The field defines the path.
+
+---
+
 ## 🔥 Key Findings
 
 ### 1. Structure Exists
@@ -137,7 +216,7 @@ Field reconstruction reveals dynamics that are not visible in the original traje
 
 - resolution changes create motion illusion  
 - interpolation introduces artifacts  
-- perceived geometry can depend on representation  
+- perceived geometry depends on representation  
 
 ---
 
@@ -157,7 +236,7 @@ Outside trajectory support:
 Invariant regions:
 
 - persist across transformations  
-- represent **reliable underlying system geometry**  
+- represent **reliable system geometry**  
 
 ---
 
@@ -166,8 +245,23 @@ Invariant regions:
 Between stable and unstable regions:
 
 - transition zones  
-- potential regime boundaries  
-- candidate separatrix structures  
+- regime boundaries  
+- separatrix-like structures  
+
+---
+
+### 7. Flow Defines Motion
+
+- motion is not arbitrary  
+- system follows field geometry  
+
+---
+
+### 8. Navigation Becomes Possible
+
+- trajectories can be guided  
+- stable paths exist  
+- system can be steered through structure  
 
 ---
 
@@ -181,21 +275,27 @@ Now:
 
 > reconstruction of a **field with validity regions**
 
+Now (extended):
+
+> navigation within a **structured dynamical field**
+
 ---
 
 ## 🌀 Interpretation Layer
 
-Observed patterns:
+Observed:
 
 - folds  
 - channels  
-- density clusters  
+- loops  
+- gradients  
 
-Interpretation:
+Meaning:
 
 - constrained motion  
 - preferred trajectories  
 - stability gradients  
+- transition boundaries  
 
 ⚠️ Important:
 
@@ -206,11 +306,11 @@ Interpretation:
 
 ## 🚀 Next Directions
 
-- boundary extraction (stable ↔ unstable)  
+- invariant core extraction  
 - reachability mapping  
-- invariant field core detection  
-- multi-scale decomposition  
+- control optimization  
 - integration into FIELD_LAYER  
+- real-world system application  
 
 ---
 
@@ -218,14 +318,16 @@ Interpretation:
 
 > Not all observed structure is real.  
 >  
-> But invariant structure reveals the true system geometry.
+> But invariant structure reveals the true system geometry —  
+>  
+> and within it, motion becomes navigable.
 
 ---
 
 ## ⚙️ Status
 
 Experimental → emerging method  
-Transitioning toward structured field analysis within NEXAH  
+Transitioning toward FIELD_LAYER integration (navigation + control)
 
 ---
 
