@@ -1,167 +1,153 @@
-# Axioms of NEXAH
+# NEXAH — Structural Axioms (Working Assumptions)
 
-The **Axioms** of the NEXAH Framework are the foundational principles upon which the entire system is built. These axioms define the relational structure and provide the groundwork for how the NEXAH framework interacts with system components.
+This document defines the **core working assumptions** of the NEXAH framework.
 
-## Key Axioms
+These are not universal laws.
 
-### **Axiom 1 — Relational Primacy (META)**
-This axiom establishes the idea that the relationships between system elements are the primary focus. The framework is built upon the interactions and dependencies of these relationships.
+They are:
 
-- **Purpose**: To define the relational rules of the system.
-- **Key Focus**: The interaction and hierarchy between system elements.
-
-### **Axiom 2 — Regime Restriction (ARCHY)**
-This axiom defines the concept of a regime as a restriction operator that governs the transition between different system states. The **ARCHY** layer ensures that the system remains stable despite changes in its components.
-
-- **Purpose**: To regulate the stability of the system.
-- **Key Focus**: The stability regimes and transitions between system states.
-
-### **Axiom 3 — Frame Admissibility (NEXAH)**
-This axiom states that frames, which provide orientation and structure within the system, must be admissible. A frame is considered admissible if it preserves the relational order and constraints.
-
-- **Purpose**: To provide orientation and navigation within the system.
-- **Key Focus**: The admissibility of frames and their role in system organization.
+> **practical structural hypotheses**  
+> used to build, test, and operate the system
 
 ---
 
-## How to Use These Axioms
+## 🧭 Purpose
 
-These axioms serve as the foundation for the NEXAH framework. To apply these axioms:
+The axioms define how NEXAH:
 
-1. **Understand Relationships**: Begin by understanding the relationships between system elements (Axiom 1).
-2. **Ensure Stability**: Apply the regime rules to ensure system stability (Axiom 2).
-3. **Define Frames**: Use admissible frames to guide interaction within the system (Axiom 3).
-
-These axioms should be applied as the starting point for building complex models and navigating through the system.
-
-# NEXAH Axioms v1 — Geometric Theory of Stability
-
-This document defines the foundational axioms of the NEXAH framework.
-
-NEXAH proposes that complex systems are governed by **geometric flow structures**,  
-and that stability emerges from **coherence within these structures**.
+- interprets system behavior  
+- reconstructs structure  
+- detects transitions  
+- enables navigation  
 
 ---
 
-## Axiom 1 — Field Existence
+## ⚠️ Important
 
-Every complex system can be represented as a **state space with an underlying flow field**.
+These axioms are:
 
-> System evolution is not arbitrary — it is constrained by a geometric structure.
+- empirically motivated  
+- system-dependent  
+- subject to revision  
+
+They are not claimed to be:
+
+- complete  
+- universal  
+- formally proven  
 
 ---
 
-## Axiom 2 — Structured Flow
+# 🔑 Core Axioms
 
-System trajectories follow **preferred paths** within the field.
+---
 
-> These paths form corridors, manifolds, and attractor-like structures.
+## Axiom 1 — Field Representation
+
+A dynamical system can be approximated as a **structured field** in state space.
+
+> System evolution is constrained by local flow structure.
+
+---
+
+## Axiom 2 — Structured Motion
+
+System trajectories follow **non-random paths** within this field.
+
+> Motion is guided by underlying geometry.
 
 ---
 
 ## Axiom 3 — Local Coherence
 
-Stability arises from **local alignment of system dynamics with the field**.
+Stability corresponds to **alignment between system motion and local field direction**.
 
-> Coherence = alignment of local motion with the underlying flow geometry.
+> Coherence is a directional property, not a static value.
 
 ---
 
 ## Axiom 4 — Interface Regions
 
-The most critical system behavior occurs at **interfaces between competing dynamics**.
+Transitions occur in **structured regions** where coherence is reduced.
 
-> These interfaces form the boundary between stability and instability.
-
----
-
-## Axiom 5 — Collapse Mechanism
-
-Collapse occurs when a system **loses coherence** and exits its structured flow.
-
-> Collapse is not a sudden event — it is a geometric divergence.
+> These regions act as transition zones between regimes.
 
 ---
 
-## Axiom 6 — Universal Sequence
+## Axiom 5 — Transition as Process
 
-All complex systems exhibit a shared transition sequence:
+Transitions are not instantaneous.
 
-coherence → fragmentation → acceleration → collapse
-
-> This sequence is independent of domain and scale.
-
----
-
-## Axiom 7 — Navigability
-
-If the field structure is known, system trajectories can be **guided along stable paths**.
-
-> Navigation = maintaining coherence within the field.
-
----
-
-## Axiom 8 — Scale Invariance
-
-The geometric structure of the field is **scale-invariant**.
-
-> The same structural patterns appear across system sizes and domains.
-
----
-
-## Axiom 9 — Dual Dynamics
-
-System behavior emerges from the interaction of **competing dynamical tendencies**:
-
-- stabilizing vs destabilizing  
-- coupling vs decoupling  
-- expansion vs contraction  
-
-> Coherence exists at the interface of these opposing flows.
-
----
-
-## Axiom 10 — Field Independence
-
-The underlying structural principles are **not system-specific**.
-
-> The same geometric logic appears in:
-- discrete systems (primes)
-- physical systems (power grids)
-- chaotic systems (Lorenz)
-- agent-based systems
-
----
-
-## Interpretation
-
-NEXAH describes complex systems as:
-
-> dynamical entities evolving within a structured geometric field,  
-> where stability depends on coherence and collapse corresponds to loss of alignment.
-
----
-
-## Status
-
-These axioms are currently:
-
-- empirically supported (IEEE systems)
-- structurally consistent across domains
-- partially formalized
-
-Further work is required to:
-
-- define measurable coherence metrics  
-- derive formal theorems  
-- establish falsifiability conditions  
-
----
-
-## Core Statement
+They occur as:
 
 ```text
-Stability is the persistence of coherence within a dynamic field.
+ENTRY → CORE → EXIT
+```
 
-Collapse occurs when coherence is lost
-and the system leaves its structured path.
+> A multi-phase geometric process.
+
+---
+
+## Axiom 6 — Stability as Region
+
+Stability is not a scalar quantity.
+
+It is:
+
+> a **region within the field** where motion remains coherent.
+
+---
+
+## Axiom 7 — Collapse Mechanism
+
+Breakdown occurs when a trajectory:
+
+- loses coherence  
+- exits structured flow  
+- enters unstable regions  
+
+> Collapse is a process, not a point.
+
+---
+
+## Axiom 8 — Navigability
+
+If field structure is known, trajectories can be influenced.
+
+> Navigation = maintaining or restoring coherence.
+
+---
+
+# 🧠 Interpretation
+
+These axioms describe systems as:
+
+> trajectories evolving within a structured field,  
+> where stability depends on local alignment and transitions occur in geometric regions
+
+---
+
+# 🔬 Status
+
+- supported by empirical observations (Lorenz, IEEE systems)  
+- implemented in prototype form  
+- not formally proven  
+
+---
+
+# 🧭 Role in NEXAH
+
+These axioms:
+
+- guide implementation  
+- inform method design  
+- define interpretation boundaries  
+
+They are:
+
+> a **working foundation**, not a final theory
+
+---
+
+**Author:** Thomas K. R. Hofmann  
+**Version:** v0.5.0  
