@@ -20,35 +20,29 @@ NEXAH reveals:
 
 ---
 
-## 🔹 V68 — Discrete Structure
+## 🔹 Signal → Field Reconstruction
 
-![V68](../power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v68_off_manifold_field.png)
+![1D to field](dynamics/ieee_1d_to_field.gif)
 
-→ system occupies structured regions  
-→ not uniform state-space  
-
----
-
-## 🔹 V69 — Flow Field
-
-![V69](../power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
-
-→ structure becomes movement  
-→ direction + transitions emerge  
+→ temporal signal becomes spatial structure  
+→ field is reconstructed from dynamics  
 
 ---
 
-## 🔹 V68 → V69 Transition
+## 🔹 Structure → Flow Transition
 
-![Transition](outputs/v68_v69_transition.gif)
+![Transition](dynamics/v68_v69_transition.gif)
+
+![Real Transition](dynamics/v68_v69_real_transition.gif)
 
 → geometry transforms into flow  
+→ model vs data-driven transition  
 
 ---
 
 ## 🔹 Field Reconstruction (raw)
 
-![V68 reconstruction](../demo/nexah_ieee_field_v68.png)
+![V68 reconstruction](reconstruction/nexah_ieee_field_v68.png)
 
 → discrete reconstruction  
 → visible grid artifacts  
@@ -57,7 +51,7 @@ NEXAH reveals:
 
 ## 🔹 Field Reconstruction (clean)
 
-![V68 clean](../demo/nexah_ieee_field_v68_clean.png)
+![V68 clean](reconstruction/nexah_ieee_field_v68_clean.png)
 
 → continuous density field  
 → structure becomes smoother  
@@ -66,27 +60,16 @@ NEXAH reveals:
 
 ## 🔹 Continuous Flow Field
 
-![V69 clean](../demo/nexah_ieee_field_v69_clean.png)
+![V69 clean](reconstruction/nexah_ieee_field_v69_clean.png)
 
 → global flow geometry  
 → channels + folds + direction  
 
 ---
 
-## 🔹 Multi-Agent Exploration
-
-![Multi-agent](../demo/nexah_multi_agent_field.png)
-
-→ agents reveal:
-- preferred paths
-- collapse zones
-- flow constraints  
-
----
-
 ## 🔹 Frame Stability Test
 
-![Frame stability](../demo/nexah_field_frame_stability.png)
+![Frame stability](stability/nexah_field_frame_stability.png)
 
 → resolution changes structure  
 
@@ -98,10 +81,25 @@ NEXAH reveals:
 
 ## 🔹 Stable Field Mask
 
-![Stable mask](../demo/nexah_stable_field_mask.png)
+![Stable mask](stability/nexah_stable_field_mask.png)
 
 → green = stable structure  
 → dark = unstable  
+
+---
+
+## 🔹 Robustness Analysis
+
+![Noise](robustness/nexah_noise_robustness.png)
+
+![Noise v2](robustness/nexah_noise_robustness_v2.png)
+
+![Noise v3](robustness/nexah_noise_robustness_v3.png)
+
+![Structure comparison](robustness/nexah_structure_comparison.png)
+
+→ system under perturbation  
+→ structure persistence  
 
 ---
 
