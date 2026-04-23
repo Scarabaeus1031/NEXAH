@@ -8,6 +8,7 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Tests](https://img.shields.io/badge/tests-pytest-green)
 ![Status](https://img.shields.io/badge/status-research--prototype-orange)
+
 ---
 
 # 🚀 Quick Start
@@ -22,17 +23,24 @@ python run_nexah_demo.py
 
 ## 📊 Current System State
 
-Before diving deeper, read:
+Before diving deeper:
 
-→ [SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)  
-→ [METHODS.md](ARCHITECTURE/METHODS.md)
+→ [SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)
 
-This defines:
+This document defines:
 
 - what is implemented  
 - what works  
-- how it works  
+- what is validated  
 - what is still missing  
+
+---
+
+## 🔬 Methods
+
+For a technical description of the computation:
+
+→ [METHODS.md](METHODS.md)  
 
 ---
 
