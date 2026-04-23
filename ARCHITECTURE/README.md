@@ -71,6 +71,7 @@ classDef result fill:#d62728,color:#fff,stroke:#7f1d1d
 class C,F core
 class D,E layer
 class H result
+```
 ---
 
 # 🔧 Implementation Mapping
