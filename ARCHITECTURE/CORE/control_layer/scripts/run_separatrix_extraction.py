@@ -168,8 +168,18 @@ import os
 OUTPUT_PATH = "ARCHITECTURE/CORE/control_layer/outputs/demo/"
 os.makedirs(OUTPUT_PATH, exist_ok=True)
 
-# falls separatrix_points Liste von (x,y) ist:
-sep_array = np.array(separatrix_points)
+# --------------------------------
+# SAVE separatrix points (FIXED)
+# --------------------------------
+
+sep_array = sep_pts  # ← DAS ist deine separatrix!
+
+np.save(
+    os.path.join(OUT_DIR, "separatrix_points.npy"),
+    sep_array
+)
+
+print("✔ Saved → separatrix_points.npy")
 
 # falls mehr Dimensionen → nur x,y
 if sep_array.shape[1] > 2:
