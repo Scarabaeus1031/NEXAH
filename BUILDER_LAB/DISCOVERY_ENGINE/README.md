@@ -1,21 +1,29 @@
-# DISCOVERY_ENGINE (Experimental / Legacy)
+# DISCOVERY_ENGINE (Exploration Phase / Legacy Module)
 
-Early experimental environment for exploring how **structure emerges from dynamics**.
+⚠️ This module represents the **experimental discovery phase** of NEXAH.
+
+It is **not part of the current operational system**,  
+but documents how the core concepts of NEXAH emerged.
+
+👉 Current core implementation:
+- `FIELD_LAYER/`
+- `ARCHITECTURE/CORE/`
 
 ---
 
-## 🧭 Role in NEXAH 
+# 🧭 Role in NEXAH
 
-The Discovery Engine represents the **exploration phase** of NEXAH.
+The Discovery Engine is the **origin layer** of NEXAH.
 
-It was used to investigate:
+It was used to explore:
 
 - whether transitions emerge from dynamics  
 - how structure forms from trajectories  
 - which signals indicate structural change  
 
-👉 It is **not the primary operational system**  
-→ see `FIELD_LAYER/` for the current core implementation
+It represents:
+
+> 🔬 **the exploration phase that led to the Field Layer**
 
 ---
 
@@ -49,7 +57,6 @@ Dynamics
 → Transitions
 → Structure
 ```
-
 ---
 
 ## 📦 Core Modules
@@ -84,7 +91,7 @@ Dynamics
 
 ---
 
-## ⚠️ Current Status
+## ⚠️ Status
 
 - ✔ Field construction works  
 - ✔ Structure emerges  
@@ -113,14 +120,10 @@ Without transitions:
 
 ---
 
----
-
 # 🧪 Visual Evolution (Discovery Log)
 
 The Discovery Engine evolved through a sequence of experiments  
 that gradually revealed structure within dynamics.
-
-A full visual trace of this process is available here:
 
 👉 `visual_gallery.md`
 
@@ -137,7 +140,7 @@ A full visual trace of this process is available here:
 
 ## 🧠 Key Takeaway
 
-> Structure was not imposed on the system.  
+> Structure was not imposed.  
 > It **emerged from the dynamics**.
 
 ---
@@ -165,25 +168,6 @@ The broader DISCOVERY_ENGINE includes experimental tools for:
 
 ---
 
-## Capabilities
-
-- generate and evolve system architectures  
-- map resilience landscapes  
-- detect phase transitions  
-- explore structural relationships  
-- simulate dynamic systems  
-- extract topology from trajectories  
-
----
-
-## Interpretation
-
-The Discovery Engine explores whether:
-
-> **dynamic systems naturally organize into structured, navigable forms**
-
----
-
 ## 🔬 Key Insight
 
 > Systems are flows that organize into structure  
@@ -193,40 +177,44 @@ The Discovery Engine explores whether:
 
 # 🔗 Relation to FIELD_LAYER
 
-The Discovery Engine identifies:
+The Discovery Engine identified:
 
 - transition patterns  
 - probability structure  
 - energy-like landscapes  
 - local flow properties  
 
-However, this representation is exploratory.
+However, this representation is:
+
+> ⚠️ exploratory and not operational
 
 ---
 
 ## FIELD_LAYER (Current Core)
 
-The FIELD_LAYER extends this into a usable system:
+The FIELD_LAYER extends these findings into a functional system:
 
-- constructs continuous vector fields  
-- aligns structure with flow geometry  
-- extracts topology (basins, boundaries, channels)  
-- enables navigation and control  
-- reveals attractors and convergence  
+- continuous vector fields  
+- flow-aligned geometry  
+- topology (basins, boundaries, channels)  
+- navigation and control  
+- attractors and convergence  
 
 ---
 
 ## Conceptual Transition
 
+```text
 DISCOVERY:
 Dynamics → Transitions → Structure
 
 FIELD_LAYER:
 Structure → Field → Geometry → Topology → Control → Convergence
+```
 
 ---
 
-## Key Shift
+## 🔥 Key Shift
 
 > Discovery explores structure  
 > Field Layer makes it operational
@@ -237,7 +225,15 @@ Structure → Field → Geometry → Topology → Control → Convergence
 
 The Discovery Engine is:
 
-> an experimental laboratory that led to the FIELD_LAYER
+> an experimental laboratory that led to the current NEXAH system
+
+It should be understood as:
+
+- exploration  
+- origin  
+- research history  
+
+—not as part of the production architecture.
 
 ---
 

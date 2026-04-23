@@ -1,12 +1,56 @@
-# ⚡ NEXAH Builder Lab — Demos
+# ⚡ NEXAH Builder Lab — Demos & Exploration
 
-Ready-to-run examples that show what NEXAH can do in practice.
+The Builder Lab is the **active workshop of NEXAH**.
 
-This folder contains **interactive demos and simulations** — from simple regime exploration to multi-agent navigation and cascade dynamics.
+It contains:
+
+- interactive demos  
+- experimental modules  
+- early-stage systems  
+- exploratory research code  
+
+It is:
+
+> ⚙️ **where NEXAH is built, tested, and explored**
 
 ---
 
-## 🚀 Quick Start
+# 🧭 Structure
+
+The Builder Lab consists of three main parts:
+
+### 🔬 DISCOVERY_ENGINE (Origin)
+
+- early experiments  
+- transition detection  
+- structure emergence  
+
+👉 the **research phase that led to FIELD_LAYER**
+
+---
+
+### 🧪 EXPLORATION (ex NAVIGATOR)
+
+- experimental control logic  
+- symbolic layers  
+- prototype navigation systems  
+- advanced concepts (not yet stabilized)
+
+👉 active **concept + system exploration space**
+
+---
+
+### 🚀 DEMOS (this folder)
+
+- runnable examples  
+- interactive simulations  
+- visual system behavior  
+
+👉 **entry point for understanding NEXAH in practice**
+
+---
+
+# 🚀 Quick Start
 
 ```bash
 cd BUILDER_LAB/demos
@@ -72,7 +116,7 @@ The demos illustrate:
 
 Add a new Python file to:
 
-```
+```bash
 BUILDER_LAB/demos/
 ```
 
@@ -94,16 +138,17 @@ python BUILDER_LAB/nexah_cli.py simulate my_system
 
 ## 🔗 Go deeper
 
-→ **[Extended Documentation](README_extended.md)**  
-(architecture, system models, folder structure, future plans)
+→ **Core System** → `FIELD_LAYER/`  
+→ **Architecture** → `ARCHITECTURE/`  
+→ **Theory** → `RESEARCH/`  
 
 ---
 
 ## 🧪 Status
 
-- prototype-level
-- exploratory
-- focused on system understanding (not production use)
+- experimental  
+- exploratory  
+- not production-ready  
 
 ---
 
@@ -115,5 +160,44 @@ NEXAH treats systems as:
 
 ---
 
-**License**  
+## 🔥 Important
+
+The Builder Lab is:
+
+- not the final system  
+- not fully validated  
+- not cleanly abstracted  
+
+It is:
+
+> ⚙️ the **working environment where new capabilities emerge**
+
+---
+
+## 🧭 Position in NEXAH
+
+```text
+RESEARCH (foundation)
+→ FRAMEWORK (interpretation)
+→ FIELD_LAYER (core system)
+→ ARCHITECTURE (system integration)
+→ BUILDER_LAB (experiments & demos)
+```
+
+## 🧠 Final Insight
+
+The Builder Lab is where:
+
+* ideas become systems
+* systems become structure
+* structure becomes navigation
+
+⸻
+
+NEXAH Builder Lab
+Exploration → Experimentation → Emergence
+
+⸻
+
+License
 Apache 2.0
