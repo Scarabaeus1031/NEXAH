@@ -29,6 +29,24 @@ NAVIGATOR (Control & Navigation)
 
 ---
 
+## ⚠️ Scope
+
+This layer defines a **minimal structural framework** for reasoning about  
+stability and transitions in dynamical systems.
+
+It is:
+
+- not a complete physical theory  
+- not a fully formalized mathematical system  
+- not a claim of universality  
+
+It provides:
+
+> a **conceptual and structural basis** that is empirically supported  
+> and extended in later NEXAH layers
+
+---
+
 ## 🔬 Theory → Field Mapping
 
 → [theory_to_field_mapping.md](./theory_to_field_mapping.md)
