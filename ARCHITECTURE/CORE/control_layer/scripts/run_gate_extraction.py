@@ -114,3 +114,13 @@ plt.savefig(
 
 print("✔ Saved → nexah_gate_extraction.png")
 print("✔ Gates:", gates)
+
+# --------------------------------
+# SAVE separatrix points
+# --------------------------------
+np.save(
+    "ARCHITECTURE/CORE/control_layer/outputs/demo/separatrix_points.npy",
+    np.array(separatrix_points)
+)
+
+print("✔ Saved → separatrix_points.npy")
