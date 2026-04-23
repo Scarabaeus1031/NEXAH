@@ -14,13 +14,18 @@ __pycache__/
 *.pyd
 *.py,cover
 
-# Virtual environments
+# =========================
+# VIRTUAL ENVIRONMENTS
+# =========================
 .venv/
 venv/
 env/
 ENV/
+clean_env/
 
-# Packaging
+# =========================
+# PACKAGING
+# =========================
 *.egg-info/
 dist/
 build/
@@ -31,7 +36,7 @@ build/
 .ipynb_checkpoints/
 
 # =========================
-# TESTING / COVERAGE
+# TESTING / TYPE CHECK
 # =========================
 .coverage
 .coverage.*
@@ -60,67 +65,57 @@ htmlcov/
 **/outputs/
 
 # =========================
-# ✅ CURATED VISUALS ONLY
+# ✅ CURATED OUTPUTS (ALLOWLIST)
 # =========================
 
-# --- ROOT DEMOS (important) ---
+# --- ROOT DEMO OUTPUTS ---
 !outputs/
 !outputs/demo/
 !outputs/demo/*.png
 
-# --- VISUAL SYSTEM (NEW CORE AREA) ---
-!APPLICATIONS/visuals/
-!APPLICATIONS/visuals/outputs/
-!APPLICATIONS/visuals/outputs/*.png
-!APPLICATIONS/visuals/outputs/*.gif
+# --- CORE VISUALS (README / DOCS) ---
+!DISCOVERY_ENGINE/outputs/
+!DISCOVERY_ENGINE/outputs/**/*.png
 
-# --- CORE VISUALS USED IN README ---
-!FIELD_LAYER/outputs/plots/
-!FIELD_LAYER/outputs/plots/*.png
+!FIELD_LAYER/outputs/
+!FIELD_LAYER/outputs/**/*.png
 
 !FIELD_LAYER/FIELD_DECOMPOSITION/outputs/
 !FIELD_LAYER/FIELD_DECOMPOSITION/outputs/**/*.png
-
-!DISCOVERY_ENGINE/outputs/
-!DISCOVERY_ENGINE/outputs/**/*.png
 
 # --- IEEE KEY VISUALS ---
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/*.png
 
-# =========================
-# CONTROL LAYER VISUALS (NEW)
-# =========================
-
+# --- CONTROL LAYER VISUALS ---
 !ARCHITECTURE/CORE/control_layer/outputs/
 !ARCHITECTURE/CORE/control_layer/outputs/demo/
 !ARCHITECTURE/CORE/control_layer/outputs/demo/*.png
 
+# --- VISUAL SYSTEM (CURATED MEDIA) ---
+!APPLICATIONS/visuals/
+!APPLICATIONS/visuals/**/*.png
+!APPLICATIONS/visuals/**/*.gif
+!APPLICATIONS/visuals/**/*.md
+
 # =========================
-# DATA (still ignored)
+# DATA (always ignored)
 # =========================
 **/*.csv
 **/*.npy
 **/*.npz
 
 # =========================
-# HEAVY MEDIA (default ignore)
+# MEDIA POLICY
 # =========================
+
+# Ignore heavy media by default
 *.gif
 
 # Allow only curated GIFs
-!APPLICATIONS/visuals/outputs/*.gif
+!APPLICATIONS/visuals/**/*.gif
 
 # =========================
 # CACHE
 # =========================
 .cache/
-
-# =========================
-# ✅ VISUAL ROOT (IMPORTANT)
-# =========================
-
-!APPLICATIONS/visuals/
-!APPLICATIONS/visuals/*.png
-!APPLICATIONS/visuals/*.gif
-!APPLICATIONS/visuals/*.md
