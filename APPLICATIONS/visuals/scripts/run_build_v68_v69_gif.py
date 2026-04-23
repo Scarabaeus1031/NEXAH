@@ -92,8 +92,8 @@ for i in range(N_FRAMES):
 
     # save frame
     fig.canvas.draw()
-    frame = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
-    frame = frame.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    buffer = np.asarray(fig.canvas.buffer_rgba())
+    frame = buffer[:, :, :3]  # drop alpha channel
     frames.append(frame)
 
 plt.close()
