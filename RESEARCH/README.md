@@ -147,7 +147,7 @@ Key observations include:
 
 👉 Full results:
 
-→ [Core Findings (V1–V40)](./core_findings.md)
+→ [Core Findings (V1–V40)](./FINDINGS/core_findings.md)
 
 > These findings represent a first empirical validation  
 > of the structural principles defined in A0–A4.
