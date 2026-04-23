@@ -5,20 +5,23 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "nexah"
 version = "0.5.0"
-description = "NEXAH Engine – Structural Navigation Framework"
+description = "NEXAH – Structural Field & Navigation Framework for Dynamical Systems"
 authors = [
     { name = "Thomas Hofmann" }
 ]
 requires-python = ">=3.10"
 
 dependencies = [
-    "numpy>=1.24"
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+    "scikit-learn>=1.3",
+    "pandas>=2.0"
 ]
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["nexah*", "ENGINE*"]
-exclude = ["tests*"]
+include = ["nexah*"]
+exclude = ["tests*", "BUILDER_LAB*", "APPLICATIONS*"]
 
 [tool.mypy]
 python_version = "3.12"
