@@ -1,4 +1,5 @@
 # ⚡ NEXAH — A Geometric Framework for Dynamical Systems
+
 > NEXAH is a computational framework that reveals structure, transitions, and stability directly from system dynamics.
 
 > Complex systems are not random.  
@@ -107,21 +108,17 @@ They emerge from the **geometry of the dynamical field**:
 > It does not detect collapse.  
 > It detects the structure that leads to it.
 
-
-This behavior is not a one-off observation.
-It is reproducible:
-
 ---
 
 ### 📊 Results (Lorenz Demo)
 
-Across repeated runs, the structural signal shows consistent behavior:
+Across repeated runs:
 
 - peak count remains stable (~45–55 per run)  
-- peaks cluster in specific regions of the attractor  
-- transition patterns are reproducible across runs  
+- peaks cluster in specific regions  
+- transition patterns are reproducible  
 
-Example (single run):
+Example:
 
 - Max risk: 1.000  
 - Mean risk: 0.025  
@@ -134,33 +131,17 @@ Example (single run):
 
 ---
 
-### 🔬 Stability Insight (V8)
+### 🔬 Stability Insight
 
-The field does not only define where transitions occur —  
-it also defines how stable they are.
-
-Analysis shows:
-
-- stability forms a continuous gradient across the field  
-- boundaries are not unstable — they are **weakly stable regions**  
-- local weak points ("gates") exist, but do not create branching outcomes  
-
----
+- stability forms a continuous gradient  
+- boundaries are **weakly stable regions**  
+- no branching decisions occur  
 
 > The system contains gates, but no decisions.
 
-All tested perturbations converge to the same attractor.
-
----
-
-This means:
-
-- motion is constrained by geometry  
-- transitions are constrained by stability  
-- outcomes are structurally determined  
-
-→ the system is not only structured —  
-→ it is **stability-constrained**
+→ motion is constrained  
+→ transitions are structured  
+→ outcomes are determined by geometry  
 
 ---
 
@@ -176,23 +157,99 @@ Run:
 
 ---
 
-The dashed line marks **NEXAH detection**.  
-The dotted line marks **actual collapse**.
-
----
-
-### Result
-
-NEXAH detects structural instability **before collapse occurs**.
-
-Example (synthetic system):
+Result:
 
 - detection: t ≈ 248  
 - collapse: t ≈ 700  
 - lead time: **~450 steps**
 
-→ the transition is visible in the field  
-→ long before failure manifests in the state
+→ transition visible in structure long before failure
+
+---
+
+# 🧪 Validation — Structure Under Noise & Across Systems
+
+A central question:
+
+> Is the detected structure real — or a noise artifact?
+
+---
+
+## 1. Synthetic Noise Robustness
+
+    python run_noise_robustness_demo.py
+
+- structural peaks remain aligned  
+- match ratio ≈ **1.00**
+
+---
+
+## 2. Multi-Run Stability
+
+    python run_noise_robustness_multirun.py
+
+- 50 runs → identical results  
+- mean match ratio: **1.000 ± 0.000**
+
+---
+
+## 3. Noise Stress Test
+
+    python run_noise_robustness_stress_test.py
+
+- structure persists under increasing noise  
+- defines operational limits  
+
+---
+
+## 4. Real System Robustness (IEEE)
+
+    python run_ieee_noise_robustness.py
+
+- gradient correlation ≈ **0.69**  
+- curvature correlation ≈ **0.61**
+
+→ global structure remains stable  
+→ local transitions partially degrade  
+
+---
+
+## 5. Cross-System Validation
+
+    python run_lorenz_vs_ieee_noise_robustness.py
+
+Results:
+
+- Lorenz (oscillatory):
+  - raw: low correlation  
+  - smoothed: **0.895 → structure recovered**
+
+- IEEE (drift system):
+  - raw: **0.55 → stable trend**
+  - smoothed: **0.78 → improved clarity**
+
+---
+
+## 🧠 Key Insight
+
+Structure exists at multiple scales:
+
+- high-frequency → noise-sensitive  
+- low-frequency → robust  
+- smoothing reveals latent structure  
+
+---
+
+## 🔥 Conclusion
+
+Across all experiments:
+
+- structure persists under noise  
+- structure is reproducible  
+- structure generalizes across systems  
+
+> NEXAH does not depend on clean data.  
+> It reveals the **underlying structure of the system itself**.
 
 ---
 
@@ -208,17 +265,17 @@ Dynamics
 ---
 
 ## 🔬 Discovery Engine
-Extracts structure from raw system dynamics.
+Extracts structure from raw dynamics.
 
 ## 🌊 Field Layer
-Constructs a continuous representation of:
+Builds continuous representations of:
 
-- flow (direction)  
-- geometry (structure)  
-- stability (Lyapunov / boundary)  
+- flow  
+- geometry  
+- stability  
 
 ## 🧭 Navigator
-Operates on trajectories within the field:
+Operates on structure:
 
 - transition detection  
 - regime tracking  
@@ -228,101 +285,45 @@ Operates on trajectories within the field:
 
 # 🌀 From Chaos to Structure
 
-### Step 1 — Raw Dynamics
-
 ![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
-
----
-
-### Step 2 — Emergent Geometry
 
 ![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
 
-→ trajectories follow constrained paths  
-
----
-
-### Step 3 — Structured Representation
-
 ![State Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
-
-→ system decomposes into states, transitions, regimes  
 
 ---
 
 # ⚡ What NEXAH enables
 
-- detection of regime transitions  
-- geometric interpretation of instability  
-- trajectory-based system analysis  
-- early-warning signals based on structure  
-- navigation within dynamical systems  
+- transition detection  
+- geometric interpretation  
+- early-warning signals  
+- system navigation  
 
 ---
 
 # 🧠 Current State
 
-### ✔ Working (Prototype)
+### ✔ Working
 
-- structure extraction (Lorenz, IEEE systems)  
+- structure extraction  
 - regime detection  
-- trajectory-based analysis  
-- early transition signals (validated on IEEE grids)  
+- early transition signals  
 
 ---
 
 ### ⚠️ Limitations
 
-- no formal theoretical proof yet  
+- no formal proof yet  
 - system-dependent performance  
-- ongoing validation on real-world data  
-- not a universal predictor  
+- ongoing validation  
 
 ---
 
 # 💡 Core Insight
 
-> Stability is not a fixed value.  
-> It is a **region within a structured dynamical field**
-
----
-
-# 🔬 Boundary & Stability (V10)
-
-![Boundary](FIELD_LAYER/FIELD_DECOMPOSITION/outputs/v10_1/v10_1_boundary_strength.png)
-
-NEXAH identifies:
-
-- regime regions (orbit, escape, drift)  
-- boundaries (separatrices)  
-- transition intensity (boundary strength)  
-
-→ these define where the system can move — and where it cannot
-
----
-
-# 🧭 Entry Points
-
-👉 START_HERE.md
-
----
-
-## 🔬 Core System
-- FRAMEWORK/README.md  
-- FIELD_LAYER/build_log.md  
-- DISCOVERY_ENGINE/discovery_core_log.md  
-
----
-
-## ⚡ Applications
-- APPLICATIONS/core_demos/lorenz/  
-- APPLICATIONS/power_systems/  
-
----
-
-## 🧭 Navigation
-- NAVIGATOR/README.md  
-- NAVIGATOR/CORE/NAVIGATION_ARCHITECTURE.md  
+> Stability is not a value.  
+> It is a **region in a structured field**
 
 ---
 
