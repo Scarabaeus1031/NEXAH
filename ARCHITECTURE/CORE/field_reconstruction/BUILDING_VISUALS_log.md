@@ -1,5 +1,5 @@
 # ⚡ NEXAH — Visual Field Exploration Log
-> From visualization → to structure → to field geometry
+> From visualization → to structure → to field geometry → to navigation
 
 ---
 
@@ -13,6 +13,7 @@ NEXAH reveals:
 - stable structure (invariant)
 - unstable reconstruction zones
 - limits of visualization
+- navigable field geometry
 
 ---
 
@@ -27,15 +28,15 @@ NEXAH reveals:
 → temporal signal becomes spatial structure  
 → field is reconstructed from dynamics  
 
-## Emergent Rotation from 1D Signal
+### Emergent Rotation from 1D Signal
 
-Observation:
+Observation:  
 A simple trajectory evolves into rotational flow structures.
 
 Interpretation:
-- system leaves linear regime
-- rotational field component emerges
-- indicates onset of nonlinear dynamics
+- system leaves linear regime  
+- rotational field component emerges  
+- onset of nonlinear dynamics  
 
 Implication:
 Field reconstruction reveals hidden dynamics not visible in raw trajectory.
@@ -44,8 +45,7 @@ Field reconstruction reveals hidden dynamics not visible in raw trajectory.
 
 ## 🔹 Structure → Flow Transition
 
-![Transition](dynamics/v68_v69_transition.gif)
-
+![Transition](dynamics/v68_v69_transition.gif)  
 ![Real Transition](dynamics/v68_v69_real_transition.gif)
 
 → geometry transforms into flow  
@@ -103,16 +103,111 @@ Field reconstruction reveals hidden dynamics not visible in raw trajectory.
 
 ## 🔹 Robustness Analysis
 
-![Noise](robustness/nexah_noise_robustness.png)
-
-![Noise v2](robustness/nexah_noise_robustness_v2.png)
-
-![Noise v3](robustness/nexah_noise_robustness_v3.png)
-
+![Noise](robustness/nexah_noise_robustness.png)  
+![Noise v2](robustness/nexah_noise_robustness_v2.png)  
+![Noise v3](robustness/nexah_noise_robustness_v3.png)  
 ![Structure comparison](robustness/nexah_structure_comparison.png)
 
 → system under perturbation  
 → structure persistence  
+
+---
+
+# 🧭 FIELD STRUCTURE → NAVIGATION (New Phase)
+
+---
+
+## 🔹 Boundary Detection
+
+![Boundary](outputs/demo/nexah_boundary_map.png)
+
+→ separation of:
+- stable core (blue)
+- transition regions (red)
+
+**Insight:**
+Boundaries define limits of reliable reconstruction.
+
+---
+
+## 🔹 Boundary Strength (Gradient Field)
+
+![Boundary Gradient](outputs/demo/nexah_boundary_gradient.png)
+
+→ continuous transition intensity  
+
+**Interpretation:**
+- bright → strong transition zones  
+- dark → stable regions  
+
+→ reveals where system becomes unstable  
+
+---
+
+## 🔹 Stability Flow Field
+
+![Flow](outputs/demo/nexah_stability_flow.png)
+
+→ arrows show direction toward stability  
+
+**Insight:**
+System has **preferred motion directions**
+
+---
+
+## 🔹 Smoothed Stability Flow
+
+![Flow smooth](outputs/demo/nexah_stability_flow_smooth.png)
+
+→ continuous flow field  
+
+**Interpretation:**
+- flow bends along structure  
+- asymmetry drives motion  
+- folds generate directional bias  
+
+---
+
+## 🔹 Flow Channel Extraction
+
+![Channels](outputs/demo/nexah_flow_channels.png)
+
+→ extraction of coherent motion corridors  
+
+**Insight:**
+- system does not move everywhere  
+- movement is constrained to channels  
+
+---
+
+## 🔹 Trajectory Simulation
+
+![Trajectory](outputs/demo/nexah_flow_trajectory.png)
+
+→ simulated motion inside the field  
+
+**Interpretation:**
+- trajectory follows field geometry  
+- bends along channels  
+- avoids unstable regions  
+
+→ **first true field navigation**
+
+---
+
+## 🔹 Target-Guided Navigation
+
+![Target](outputs/demo/nexah_target_navigation.png)
+
+→ navigation under constraint:
+
+- field stability (geometry)
+- target direction (goal)
+
+**Key Insight:**
+
+> The target does NOT define the path.  
+> The field defines the path.
 
 ---
 
@@ -169,7 +264,22 @@ Invariant regions:
 Between stable and unstable zones:
 
 - transition regions  
-- potential regime boundaries  
+- regime limits  
+
+---
+
+## 7. Flow defines motion
+
+- system follows geometry  
+- not arbitrary paths  
+
+---
+
+## 8. Navigation becomes possible
+
+- trajectories can be guided  
+- stable paths exist  
+- targets can be reached through structure  
 
 ---
 
@@ -177,36 +287,42 @@ Between stable and unstable zones:
 
 Before:
 
-> visualization of data
+> visualization of data  
 
 Now:
 
 > reconstruction of a **field with validity regions**
 
+Now (extended):
+
+> navigation within a **structured dynamical field**
+
 ---
 
 # 🌀 Interpretation Layer
 
-What appears visually:
+Observed:
 
-- folds
-- channels
-- density clusters
+- folds  
+- channels  
+- loops  
+- gradients  
 
-What it means:
+Meaning:
 
-- constrained motion
-- preferred trajectories
+- constrained motion  
+- preferred trajectories  
 - stability gradients  
+- transition boundaries  
 
 ---
 
 # ⚡ Next Directions
 
-- boundary extraction (stable ↔ unstable)
-- reachability mapping
-- invariant field core
-- multi-scale decomposition  
+- invariant core extraction  
+- reachability mapping  
+- control optimization  
+- real system integration (power grids, etc.)  
 
 ---
 
@@ -216,7 +332,9 @@ What it means:
 >  
 > It exists within a structured field —  
 >  
-> and only parts of that field are reliably observable.
+> and only parts of that field are reliably observable.  
+>  
+> And within those regions — motion is navigable.
 
 ---
 
