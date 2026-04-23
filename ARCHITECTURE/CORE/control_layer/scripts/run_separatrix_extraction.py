@@ -159,6 +159,29 @@ plt.savefig(out_path, dpi=200)
 
 print(f"✔ Saved → {out_path}")
 
+# --------------------------------
+# SAVE separatrix points
+# --------------------------------
+
+import os
+
+OUTPUT_PATH = "ARCHITECTURE/CORE/control_layer/outputs/demo/"
+os.makedirs(OUTPUT_PATH, exist_ok=True)
+
+# falls separatrix_points Liste von (x,y) ist:
+sep_array = np.array(separatrix_points)
+
+# falls mehr Dimensionen → nur x,y
+if sep_array.shape[1] > 2:
+    sep_array = sep_array[:, :2]
+
+np.save(
+    os.path.join(OUTPUT_PATH, "separatrix_points.npy"),
+    sep_array
+)
+
+print("✔ Saved → separatrix_points.npy")
+
 # --------------------------------------------------
 # INTERPRETATION
 # --------------------------------------------------
