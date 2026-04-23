@@ -10,6 +10,25 @@ The goal is to present:
 
 ---
 
+## ⚠️ Scope
+
+These findings are derived from:
+
+- controlled experiments (e.g. Lorenz system)  
+- initial real-world applications (e.g. power systems)  
+
+They represent:
+
+> **empirical structural observations**, not formal proofs
+
+Interpretations should be understood as:
+
+- system-dependent  
+- structurally consistent  
+- subject to further validation  
+
+---
+
 # 🔬 1. Transition Structure
 
 ## Observation
@@ -109,7 +128,7 @@ Continuous trajectories:
 
 ## State Graph
 
-Observed:
+Observed (example: Lorenz system):
 
 - ~10–11 stable nodes  
 - directed transitions between nodes  
@@ -170,6 +189,7 @@ Density-based transformation:
 ```text
 E = -log(p)
 ```
+
 reveals:
 
 - transition regions correspond to higher energy  
@@ -212,11 +232,12 @@ Observed:
 
 ## Observation
 
-- convergence toward a stable point:
-  
+Example (Lorenz system):
+
 ```text
 x* ≈ (13.494, 25.994)
 ```
+
 - convergence occurs across multiple trajectories  
 
 ## Local Dynamics
@@ -228,7 +249,8 @@ Observed:
 
 ## Result
 
-> The system exhibits a **stable spiral attractor**
+> The system exhibits a **stable spiral attractor**  
+> (system-dependent)
 
 ---
 
@@ -240,6 +262,7 @@ Field decomposition reveals:
 
 - scalar (potential-like) component  
 - rotational (curl-like) component  
+- delayed coupling between both  
 
 ## Result
 
@@ -261,10 +284,32 @@ Field decomposition reveals:
 
 ---
 
+# 🔬 12. Real-World Validation (Power Systems)
+
+## Observation
+
+Applied to IEEE power grid models:
+
+- structural transitions appear before system collapse  
+- transition regions remain stable under noise  
+- field geometry constrains system evolution  
+
+## Result
+
+> Structural transitions can be detected  
+> **significantly earlier than classical failure indicators**
+
+## Interpretation
+
+- classical methods detect **state failure**  
+- NEXAH detects **structural transition**
+
+---
+
 # ⚠️ Limitations
 
-- results are primarily derived from the Lorenz system  
-- validation across systems is ongoing  
+- results are partly derived from specific systems (e.g. Lorenz)  
+- validation across domains is ongoing  
 - global predictability is not established  
 - some interpretations remain structural analogies  
 
@@ -272,7 +317,7 @@ Field decomposition reveals:
 
 # 🧠 Final Statement
 
-The system is best described as:
+The system can be described as:
 
 > a structured dynamical field with:
 >
@@ -280,7 +325,7 @@ The system is best described as:
 > - discrete emergent state structure  
 > - directed flow geometry  
 > - energy-constrained motion  
-> - and a dominant spiral attractor  
+> - and attractor-driven convergence  
 
 ---
 
@@ -302,5 +347,3 @@ They should be interpreted as:
 **Status:** Core Findings Extracted  
 **Basis:** FIELD_LAYER (V1–V40)  
 **Confidence:** High (structural consistency), ongoing validation
-
-
