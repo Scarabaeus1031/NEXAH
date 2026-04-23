@@ -27,6 +27,19 @@ NEXAH reveals:
 → temporal signal becomes spatial structure  
 → field is reconstructed from dynamics  
 
+## Emergent Rotation from 1D Signal
+
+Observation:
+A simple trajectory evolves into rotational flow structures.
+
+Interpretation:
+- system leaves linear regime
+- rotational field component emerges
+- indicates onset of nonlinear dynamics
+
+Implication:
+Field reconstruction reveals hidden dynamics not visible in raw trajectory.
+
 ---
 
 ## 🔹 Structure → Flow Transition
