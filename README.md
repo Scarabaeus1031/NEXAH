@@ -45,6 +45,21 @@ Instead of detecting isolated failures, NEXAH identifies:
 
 ---
 
+# ❌ What NEXAH is NOT
+
+NEXAH does not rely on:
+
+- machine learning models  
+- predefined control rules  
+- purely simulation-based analysis  
+
+It is:
+
+> a **structure–field–geometry framework**  
+> that reconstructs and navigates dynamical systems directly from their dynamics
+
+---
+
 # 🔥 Core Principle
 
 ```text
