@@ -107,3 +107,12 @@ htmlcov/
 # CACHE
 # =========================
 .cache/
+
+# =========================
+# ✅ VISUAL ROOT (IMPORTANT)
+# =========================
+
+!APPLICATIONS/visuals/
+!APPLICATIONS/visuals/*.png
+!APPLICATIONS/visuals/*.gif
+!APPLICATIONS/visuals/*.md
