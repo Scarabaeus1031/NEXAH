@@ -6,7 +6,7 @@ It is the single source for:
 
 - system structure  
 - architectural capabilities  
-- implementation status  
+- implementation mapping  
 - current development frontier  
 
 ---
@@ -20,6 +20,7 @@ It transforms:
 ```text
 dynamics → structure → field → geometry → stability → control → navigation
 ```
+
 The goal is not only to analyze systems, but to:
 
 > **enable structured navigation within dynamical fields under stability constraints**
@@ -33,6 +34,7 @@ The goal is not only to analyze systems, but to:
 ```text
 System → Structure → Field → Geometry → Stability → Control → Navigation
 ```
+
 | Layer | Function |
 |------|---------|
 | Structure | Extracts system dynamics and regimes |
@@ -44,7 +46,22 @@ System → Structure → Field → Geometry → Stability → Control → Naviga
 
 ---
 
+# 🔧 Implementation Mapping
+
+```text
+ARCHY (Simulation)
+→ DISCOVERY_ENGINE
+→ ARCHITECTURE/CORE/field_reconstruction
+→ FIELD_LAYER
+→ ARCHITECTURE/CORE/control_layer
+→ NAVIGATOR
+```
+
+---
+
 # 🔧 Core Components
+
+---
 
 ## 1. Structure Layer
 
@@ -55,9 +72,34 @@ System → Structure → Field → Geometry → Stability → Control → Naviga
 
 ---
 
-## 🌊 2. Field Layer (CORE)
+## 🌊 2. Field Reconstruction (CORE)
 
-Transforms structure into a **continuous representation**.
+Location:
+
+```text
+ARCHITECTURE/CORE/field_reconstruction
+```
+
+Builds the system representation from data:
+
+- density fields  
+- flow fields  
+- stability estimates  
+- boundary candidates  
+
+👉 This is the transition from **data → structure**
+
+---
+
+## 🌊 3. Field Layer (Interpretation Layer)
+
+Location:
+
+```text
+FIELD_LAYER/
+```
+
+Transforms structure into a **continuous representation with meaning**.
 
 ### Components
 
@@ -66,9 +108,11 @@ Transforms structure into a **continuous representation**.
 - transition region detection  
 
 #### Energy Landscape
+
 ```text
 E(x) = -log(p(x))
 ```
+
 - wells → stable regions  
 - barriers → transitions  
 
@@ -86,7 +130,7 @@ dx/dt ≈ -∇V(x) + R(x)
 
 ---
 
-## 🎯 3. Geometry Layer
+## 🎯 4. Geometry Layer
 
 Extracted from field:
 
@@ -105,7 +149,7 @@ Extracted from field:
 
 ---
 
-## 🔶 4. Stability Layer (NEW — V8)
+## 🔶 5. Stability Layer (V8)
 
 This layer measures **how the system behaves locally and globally over time**.
 
@@ -143,7 +187,7 @@ This layer measures **how the system behaves locally and globally over time**.
 
 Result:
 
-no branching observed
+no branching observed  
 
 ---
 
@@ -163,21 +207,52 @@ no branching observed
 
 ---
 
-## 🎮 5. Control Layer
+## 🎮 6. Control Layer (CORE)
 
-- trajectory shaping  
-- energy modulation  
-- attractor biasing  
+Location:
+
+```text
+ARCHITECTURE/CORE/control_layer
+```
+
+Implements active system interaction:
+
+- basin detection  
+- separatrix extraction  
+- gate extraction  
+- gate tracking  
+- trajectory steering  
 
 ---
 
 ### 🧠 Key Insight
 
-> Control = shaping motion inside the field
+> Control = shaping motion inside the field  
+> using valid geometric and stability structures
 
 ---
 
-## 🧭 6. Navigation Layer
+## 🔹 Transition Geometry (NEW CORE)
+
+New structural elements:
+
+- Basins → stable long-term behavior  
+- Separatrix → boundary between regimes  
+- Gates → minimal-cost transition points  
+
+👉 Control operates on these structures  
+
+---
+
+## 🧭 7. Navigation Layer
+
+Location:
+
+```text
+NAVIGATOR/
+```
+
+Executes movement:
 
 - follows geometry  
 - respects stability  
@@ -187,7 +262,7 @@ no branching observed
 
 ### Key Property
 
-> Navigation is constrained by both geometry AND stability
+> Navigation is constrained by both geometry AND stability  
 
 ---
 
@@ -200,6 +275,8 @@ NEXAH supports:
 - field decomposition  
 - geometry extraction  
 - stability analysis (Lyapunov)  
+- basin detection  
+- separatrix extraction  
 - gate detection  
 - trajectory control  
 - navigation  
@@ -212,11 +289,10 @@ NEXAH supports:
 | Component | Status |
 |----------|--------|
 | Structure Extraction | ✓ |
-| Field Construction | ✓ |
-| Field Decomposition | ✓ |
+| Field Reconstruction | ✓ |
+| Field Layer | ✓ |
 | Geometry Extraction | ✓ |
 | Stability Layer | ✓ |
-| Fixpoint Detection | ✓ |
 | Control Layer | ✓ |
 | Navigation Engine | ✓ |
 | Unified Kernel | ☐ |
@@ -240,7 +316,8 @@ structure → field → geometry → stability → control → navigation
 
 The system operates as:
 
-- dynamics → field  
+- dynamics → structure  
+- structure → field  
 - field → geometry  
 - geometry → stability constraints  
 - stability → allowed motion  
@@ -276,7 +353,8 @@ The system operates as:
 
 ## Control
 - trajectory shaping  
-- energy steering  
+- gate-based routing  
+- adaptive steering  
 
 ---
 
@@ -310,7 +388,8 @@ The system operates as:
 
 Status:
 
-Field-based navigation system with explicit stability constraints
+Field-based navigation system with explicit stability constraints  
+and operational control layer  
 
 ---
 
@@ -323,7 +402,7 @@ NEXAH is no longer:
 
 It is:
 
-a system that reconstructs, constrains, and navigates dynamical fields  
+a system that reconstructs, constrains, controls, and navigates dynamical fields  
 
 ---
 
