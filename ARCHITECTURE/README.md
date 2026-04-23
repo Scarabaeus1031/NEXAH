@@ -45,6 +45,32 @@ System → Structure → Field → Geometry → Stability → Control → Naviga
 | Navigation | Executes movement through field structure |
 
 ---
+## 🧭 Architecture Flow
+
+```mermaid
+flowchart TD
+
+A[ARCHY<br/>Simulation] --> B[Discovery Engine<br/>Structure Extraction]
+
+B --> C[Field Reconstruction<br/>(CORE)]
+C --> D[Field Layer<br/>Geometry + Stability]
+
+D --> E[Transition Geometry<br/>Basins / Separatrix / Gates]
+
+E --> F[Control Layer<br/>(CORE)]
+F --> G[Navigator]
+
+G --> H[System Behavior<br/>Convergence / Stability]
+
+%% Styling
+classDef core fill:#1f77b4,color:#fff,stroke:#0d3b66
+classDef layer fill:#2ca02c,color:#fff,stroke:#14532d
+classDef result fill:#d62728,color:#fff,stroke:#7f1d1d
+
+class C,F core
+class D,E layer
+class H result
+---
 
 # 🔧 Implementation Mapping
 
