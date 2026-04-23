@@ -114,7 +114,7 @@ plt.plot(t_ieee, grad_i_clean, linestyle="-.", label="IEEE clean")
 plt.plot(t_ieee, grad_i_noisy, alpha=0.3, linestyle=":", label="IEEE noisy (raw)")
 plt.plot(t_ieee, grad_i_noisy_s, linewidth=2, linestyle="--", label="IEEE noisy (smoothed)")
 
-plt.title("NEXAH — Structure Under Noise: Oscillatory vs Real System")
+plt.title("NEXAH — Hidden Structure Under Noise (Recovered via Smoothing)")
 plt.xlabel("normalized time")
 plt.ylabel("gradient (structure)")
 plt.legend()
