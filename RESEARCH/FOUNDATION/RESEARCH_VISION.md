@@ -1,21 +1,26 @@
 # NEXAH Research Vision (v2 — Field & Coherence Update)
 
-NEXAH is an orientation-based framework that investigates whether **intrinsic stability in complex systems may emerge through local structural coherence**, rather than through global optimization, rewards, or centralized control.
+NEXAH is an orientation-based framework that investigates whether  
+**intrinsic stability in complex systems may emerge from local structural coherence**,  
+rather than from global optimization, reward mechanisms, or centralized control.
 
 ---
 
 ## Core Hypothesis (Working)
 
-Across multiple investigated systems, a recurring pattern appears:
+Across multiple investigated systems, a recurring pattern is observed:
 
-> Stability seems to be associated with coherence in interface regions —  
-> and system breakdown tends to occur when this coherence is lost.
+> Stability is associated with coherence in interface regions,  
+> while system breakdown tends to occur when this coherence is lost.
 
 A commonly observed sequence is:
 
-→ coherence → fragmentation → acceleration → collapse  
+```text
+coherence → fragmentation → acceleration → collapse
+```
 
-This sequence is **empirical and system-dependent**, not claimed to be universal.
+This sequence is **empirical and system-dependent**,  
+and is not claimed to be universal.
 
 ---
 
@@ -24,13 +29,13 @@ This sequence is **empirical and system-dependent**, not claimed to be universal
 | Strand | Domain | Input Type | Observed Patterns | Current Status |
 |--------|--------|------------|------------------|----------------|
 | 1 | Discrete Mathematics | Prime numbers (mod systems) | cycles, gaps, corridors | exploratory |
-| 2 | Technical Systems | IEEE Power Grids (9, 14, 30) | early warning patterns, instability regions | empirically tested |
+| 2 | Technical Systems | IEEE Power Grids (9, 14, 30) | early warning signals, instability regions | empirically tested |
 | 3 | Chaotic Dynamics | Lorenz Attractor | separatrix-like regions, basin interfaces | qualitative alignment |
 | 4 | Multi-Agent Systems | local orientation agents | coherence without reward signals | ongoing |
 
 ---
 
-## Core Observations (Updated)
+## Core Observations
 
 Across these domains, NEXAH consistently identifies:
 
@@ -39,20 +44,20 @@ Across these domains, NEXAH consistently identifies:
 - emergence of global structure from local interactions  
 - breakdown preceded by loss of alignment / coherence  
 - structured flow in state space  
-- trajectories that appear aligned with underlying field structure  
+- trajectories aligned with underlying field structure  
 
 Interpretation:
 
-→ systems do not evolve randomly  
-→ they appear to follow **preferred paths within a structured space**
+> Systems do not evolve randomly.  
+> They appear to follow **preferred paths within a structured state space**.
 
 ---
 
 # 🌐 Field Layer & Geometric Flow
 
-A key extension introduces:
+A key extension of the framework introduces:
 
-→ an **explicit field representation of system dynamics**
+> an **explicit field representation of system dynamics**
 
 Previously:
 
@@ -60,7 +65,7 @@ Previously:
 
 Now:
 
-→ the system is approximated as a **continuous flow field**
+- the system is approximated as a **continuous flow field**
 
 ---
 
@@ -74,16 +79,16 @@ Now:
 
 ## Interpretation (Cautious)
 
-These trajectories can be interpreted as:
+Trajectories can be interpreted as:
 
-→ paths that appear aligned with the field structure  
+> paths that align with the underlying field structure
 
-This is conceptually similar to:
+This is conceptually related to:
 
-- energy-efficient paths  
-- or geometry-constrained motion  
+- energy-efficient motion  
+- geometry-constrained trajectories  
 
-(no formal geodesic claim is made)
+No formal geodesic claim is made.
 
 ---
 
@@ -103,40 +108,39 @@ This is conceptually similar to:
 
 A working definition:
 
-\[
-C(x) = \frac{\dot{x} \cdot F(x)}{|\dot{x}| \, |F(x)|}
-\]
+$begin:math:display$
+C\(x\) \= \\frac\{\\dot\{x\} \\cdot F\(x\)\}\{\|\\dot\{x\}\| \\\, \|F\(x\)\|\}
+$end:math:display$
 
 Interpretation:
 
-- C ≈ 1 → strong alignment  
-- C ≈ 0 → transition region  
-- C < 0 → opposing direction  
+- $begin:math:text$ C \\approx 1 $end:math:text$ → strong alignment  
+- $begin:math:text$ C \\approx 0 $end:math:text$ → transition region  
+- $begin:math:text$ C \< 0 $end:math:text$ → opposing motion  
 
 ---
 
 ## 🔄 Observed Field Behavior
-
-Empirically, systems often show:
 
 ```text
 Aligned motion      → C > 0  
 Transition region   → C ≈ 0  
 Opposing behavior   → C < 0
 ```
+
 ---
 
-## 🧠 Interpretation
+## Interpretation
 
-- systems do not move uniformly  
-- they exhibit regions of alignment and misalignment  
-- transitions often occur near C ≈ 0  
+- system motion is not uniform  
+- regions of alignment and misalignment exist  
+- transitions frequently occur near $begin:math:text$ C \\approx 0 $end:math:text$
 
 ---
 
 ## Updated Collapse Interpretation (Empirical)
 
-A commonly observed pattern:
+A recurring pattern:
 
 1. Coherent motion (aligned trajectories)  
 2. Transition region (reduced alignment)  
@@ -150,7 +154,7 @@ A commonly observed pattern:
 
 > Stability appears to be associated with  
 > persistent alignment within the field structure,  
-> especially across transition regions.
+> particularly across transition regions.
 
 ---
 
@@ -170,12 +174,12 @@ A commonly observed pattern:
 
 ### Discrete Systems (Primes)
 
-- exhibit structured modular patterns  
-- show corridor-like transitions  
+- structured modular patterns  
+- corridor-like transitions  
 
 Interpretation:
 
-→ may reflect discrete projections of structured spaces  
+→ possible discrete projection of structured spaces  
 
 ---
 
@@ -184,7 +188,7 @@ Interpretation:
 - alignment measures correlate with instability regions  
 - drops in coherence often precede failure in simulation  
 
-→ strongest applied signal so far  
+→ strongest applied signal currently  
 
 ---
 
@@ -209,22 +213,22 @@ Interpretation:
 
 ---
 
-## Research Direction
+## Research Directions
 
 1. Generalization  
-   → test across more system classes  
+   → test across additional system classes  
 
 2. Localization  
    → identify transition zones more precisely  
 
 3. Time Dynamics  
-   → track coherence over time  
+   → track coherence evolution over time  
 
 4. Formalization  
    → define mathematical properties of alignment  
 
 5. Topology  
-   → analyze loop and cyclic structures  
+   → analyze loops and cyclic structures  
 
 ---
 
@@ -234,9 +238,9 @@ NEXAH currently provides:
 
 - consistent structural observations across domains  
 - empirical alignment-based indicators  
-- field-based interpretation of system dynamics  
+- a field-based interpretation of system dynamics  
 
-But remains:
+However, it remains:
 
 - exploratory  
 - simulation-driven  
@@ -247,15 +251,10 @@ But remains:
 ## Final Core Insight (Working)
 
 ```text
-Stability does not appear to come from resisting change.
+Stability does not appear to arise from resisting change.
 
-It appears to be related to maintaining alignment
+It is associated with maintaining alignment
 while moving through the system’s structure.
 
 Breakdown tends to occur when this alignment is lost.
 ```
-
-
-
-
-
