@@ -1,8 +1,9 @@
 # NEXAH — System State (Current Ground Truth)
 
-This document defines the **actual current state of the NEXAH system**.
+> This document reflects the **actual implemented state of NEXAH**,  
+> not the intended or ideal architecture.
 
-It reflects:
+It defines:
 
 - what exists  
 - what works  
@@ -20,7 +21,7 @@ NEXAH is currently a:
 It transforms:
 
 ```text
-dynamics → structure → field → topology → control → navigation → stability → convergence
+dynamics → structure → field → geometry → stability → control → navigation → convergence
 ```
 
 ---
@@ -52,7 +53,35 @@ The Lorenz system is successfully modeled as:
 
 ---
 
-# 🌊 2. Field Layer (Core Breakthrough)
+# 🌊 2. Field Reconstruction (CORE)
+
+Status:
+
+✔ density field reconstruction  
+✔ flow field estimation  
+✔ boundary / transition region detection  
+✔ stability-sensitive reconstruction  
+✔ validity region identification  
+
+---
+
+## Key Result
+
+> The system state can be reconstructed as a **continuous field with locally valid structure**
+
+---
+
+## Interpretation
+
+Field reconstruction reveals:
+
+- where structure is reliable  
+- where interpolation dominates  
+- where transitions emerge  
+
+---
+
+# 🌐 3. Field Layer (Core Breakthrough)
 
 Status:
 
@@ -62,14 +91,13 @@ Status:
 ✔ ridge extraction (channels)  
 ✔ directional flow field  
 ✔ topology extraction (nodes, cycles)  
-✔ energy-based control  
 ✔ attractor detection  
 
 ---
 
 ## Key Result
 
-> The system is reconstructed as a **continuous dynamical field with geometry and topology**
+> The system is represented as a **continuous dynamical field with geometry and topology**
 
 ---
 
@@ -85,7 +113,7 @@ dx/dt ≈ -∇V(x) + R(x)
 
 ---
 
-# 🎯 3. Attractor & Convergence (Validated)
+# 🎯 4. Attractor & Convergence (Validated)
 
 Status:
 
@@ -104,20 +132,45 @@ x* ≈ (13.494, 25.994)
 
 ---
 
-## Local Dynamics
-
-- complex eigenvalues  
-- negative real part  
-
----
-
 ## Interpretation
 
 > The system exhibits a **stable spiral attractor with robust convergence**
 
 ---
 
-# 🧭 4. Navigation Layer (Operational)
+# 🎮 5. Control Layer (CORE — Newly Integrated)
+
+Status:
+
+✔ basin detection  
+✔ separatrix extraction  
+✔ gate detection  
+✔ gate tracking  
+✔ trajectory steering  
+✔ multi-gate routing experiments  
+
+---
+
+## Key Result
+
+> The system can be **actively steered using its intrinsic field structure**
+
+---
+
+## Interpretation
+
+Control is:
+
+- not external forcing  
+- not arbitrary  
+
+It is:
+
+> **structure-aware trajectory shaping within the field**
+
+---
+
+# 🧭 6. Navigation Layer (Operational)
 
 Status:
 
@@ -125,8 +178,7 @@ Status:
 ✔ control policies  
 ✔ trajectory shaping  
 ✔ energy-aware navigation  
-✔ multi-attractor experiments  
-✔ dynamic field modulation  
+✔ dynamic field interaction  
 
 ---
 
@@ -145,11 +197,11 @@ Navigation is:
 
 It is:
 
-> **field-based trajectory shaping toward stable regions**
+> **field-based motion constrained by geometry and stability**
 
 ---
 
-# 🔶 5. Stability Layer (V8 — Newly Established)
+# 🔶 7. Stability Layer (V8 — Established)
 
 Status:
 
@@ -182,7 +234,7 @@ But:
 
 → no branching outcomes  
 
-All tested trajectories within reachable regions converge to the same attractor.
+All tested trajectories converge to the same attractor.
 
 ---
 
@@ -204,11 +256,12 @@ This separates:
 
 ---
 
-# 🔗 6. System Integration
+# 🔗 8. System Integration
 
 Status:
 
-✔ Discovery → Field Layer integrated  
+✔ Discovery → Reconstruction integrated  
+✔ Reconstruction → Field Layer integrated  
 ✔ Field → Control → Navigation working  
 ✔ Stability layer integrated  
 ✔ closed-loop behavior observable  
@@ -227,7 +280,7 @@ Status:
 
 ---
 
-# 🌍 7. Real-World Systems (Early Stage)
+# 🌍 9. Real-World Systems (Early Stage)
 
 Status:
 
@@ -239,19 +292,19 @@ Status:
 
 ## Limitations
 
-❌ reproducibility not established  
-❌ convergence not validated  
-❌ pipeline not unified with Lorenz system  
+❌ reproducibility not fully established  
+❌ convergence not statistically validated  
+❌ pipeline not unified across systems  
 
 ---
 
 ## Interpretation
 
-> Real-world relevance is plausible, but not yet demonstrated
+> Real-world relevance is plausible, but not yet fully demonstrated
 
 ---
 
-# ⚠️ 8. Current Bottlenecks
+# ⚠️ 10. Current Bottlenecks
 
 ## 1. Packaging Gap
 
@@ -269,7 +322,7 @@ Status:
 
 ## 3. Application Gap
 
-- no clean real-world demonstration  
+- no clean real-world demonstration pipeline  
 
 ---
 
@@ -280,7 +333,7 @@ Status:
 
 ---
 
-# 🧠 9. What Is Established
+# 🧠 11. What Is Established
 
 ✔ structure emerges from dynamics  
 ✔ dynamics form continuous fields  
@@ -289,12 +342,13 @@ Status:
 ✔ attractors exist and are measurable  
 ✔ trajectories converge to stable regions  
 ✔ navigation is possible within the field  
+✔ control is possible via transition structure  
 ✔ stability structure can be measured (Lyapunov)  
 ✔ system exhibits **directed convergence behavior**  
 
 ---
 
-# ❌ 10. What Is NOT Established
+# ❌ 12. What Is NOT Established
 
 ❌ generalization across arbitrary systems  
 ❌ robustness under strong perturbations  
@@ -304,7 +358,7 @@ Status:
 
 ---
 
-# 🚀 11. Immediate Next Steps
+# 🚀 13. Immediate Next Steps
 
 1. build `run_nexah_demo.py` (entry point)  
 2. validate convergence statistically (multi-run)  
@@ -319,7 +373,7 @@ Status:
 NEXAH demonstrates:
 
 > **complex systems can be reconstructed as structured fields  
-> with constrained navigation and stable convergence**
+> with constrained navigation and controllable transitions**
 
 ---
 
