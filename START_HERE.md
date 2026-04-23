@@ -96,3 +96,10 @@ NEXAH turns chaotic systems into:
 
 > **something you can observe, understand — and navigate**
 
+---
+
+🧠 If you remember one thing
+
+> **sThe system is not random.
+> It follows structure —
+> and that structure can be revealed.
