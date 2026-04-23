@@ -19,6 +19,16 @@ It is:
 
 The Builder Lab consists of three main parts:
 
+### ⚙️ ENGINE (Experimental)
+
+- early computational layer  
+- signal extraction experiments  
+- prototype pipelines  
+
+👉 legacy computation layer that preceded FIELD_LAYER
+
+---
+
 ### 🔬 DISCOVERY_ENGINE (Origin)
 
 - early experiments  
