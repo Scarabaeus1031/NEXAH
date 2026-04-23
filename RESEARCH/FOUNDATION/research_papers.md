@@ -1,45 +1,124 @@
-# NEXAH Framework - Research Papers
+# NEXAH — Research Overview
 
-The **Research Papers** section of the NEXAH Framework provides an overview of the theoretical foundations and the academic research that supports the development of the framework. This includes foundational papers, theoretical models, and applied research that demonstrate how NEXAH can be used to model and understand complex systems.
+This section provides an overview of the **theoretical and empirical foundations** of the NEXAH framework.
 
-## Key Areas of Research
+It is not a collection of formal publications, but a structured set of:
 
-### **Foundational Research**
-This body of research forms the basis for the NEXAH framework. It includes studies on relational modeling, system dynamics, stability theory, and other related fields.
-
-- **Purpose**: To establish the theoretical background that supports the NEXAH framework.
-- **Key Focus**: Understanding relational dynamics, system behavior, and the principles that guide the framework's development.
-
-### **Applied Research**
-Applied research demonstrates how the NEXAH framework can be used in real-world situations. These papers showcase practical use cases, solutions, and experiments that validate the framework’s effectiveness.
-
-- **Purpose**: To apply the principles of NEXAH to solve real-world problems.
-- **Key Focus**: Exploring practical applications across various industries and domains.
-
-### **Ongoing Research**
-NEXAH continues to evolve, and ongoing research papers will contribute to its development. These papers explore new insights, techniques, and improvements to the framework.
-
-- **Purpose**: To continue developing and refining NEXAH through research.
-- **Key Focus**: Expanding the framework’s capabilities and applications.
+- foundational concepts  
+- empirical findings  
+- working hypotheses  
+- methodological bridges  
 
 ---
 
-## How to Use This Section
+## 🧭 Purpose
 
-1. **Review Foundational Papers**: Start by reviewing the foundational research that defines NEXAH. This will give you a solid understanding of the theory behind the framework.
-2. **Explore Applied Use Cases**: Look at the applied research to see how NEXAH has been used to solve real-world problems.
-3. **Contribute to Ongoing Research**: If you have new insights or findings, you can contribute to the ongoing research to improve and expand the framework.
+The goal of this layer is to:
 
-The **Research Papers** section is essential for anyone interested in the theoretical background of NEXAH or looking to contribute new research and ideas to the framework.
+> connect abstract structure, empirical observations,  
+> and operational system behavior
 
----
-
-## 🚀 Next Steps
-
-- **Explore Research**: Dive deeper into the research papers to understand the theories and principles behind NEXAH.
-- **Contribute to Research**: If you have new findings or ideas, feel free to share them and contribute to the framework’s ongoing development.
-- **Apply the Framework**: Use the research to help you apply NEXAH to real-world challenges.
+It serves as the **conceptual backbone** of NEXAH.
 
 ---
 
-This document serves as the entry point into the **Research Papers** section of the NEXAH framework. It provides a comprehensive overview of the theoretical background, applied use cases, and ongoing research that supports the framework's development.
+## 🔬 Structure of the Research Layer
+
+### 1. Foundation
+
+Core structural theory:
+
+- axioms (A0–A4)  
+- operators (Γ, Δ, Ω)  
+- minimal system definitions  
+
+→ `FOUNDATION/`
+
+---
+
+### 2. Theory → Field Mapping
+
+Bridges abstract structure to observed system behavior:
+
+→ `theory_to_field_mapping.md`
+
+---
+
+### 3. Field Interpretation
+
+Exploratory interpretation of dynamics as field-like structures:
+
+→ `FIELD_MODEL.md`
+
+---
+
+### 4. Empirical Findings
+
+Reproducible observations from system experiments:
+
+→ `FINDINGS/core_findings.md`
+
+---
+
+### 5. Structural Theorems (Working)
+
+Formalized structural statements derived from observations:
+
+→ `FOUNDATION/structural_theorems.md`
+
+---
+
+## 🧠 What This Layer Is
+
+- a **research workspace**
+- a **theory–experiment bridge**
+- a **structured knowledge base**
+
+---
+
+## ⚠️ What This Layer Is NOT
+
+- not a collection of peer-reviewed papers  
+- not a finalized theory  
+- not a closed system  
+
+---
+
+## 🧠 Key Insight
+
+NEXAH does not begin with equations.
+
+It begins with:
+
+> structure → observation → abstraction → validation
+
+---
+
+## 🚀 Future Direction
+
+This layer may evolve into:
+
+- formal publications  
+- mathematical proofs  
+- domain-specific applications  
+
+But currently, it serves as:
+
+> a **transparent and evolving research foundation**
+
+---
+
+## 🧭 Contribution
+
+This section is open-ended.
+
+New content should be clearly labeled as:
+
+- observation  
+- hypothesis  
+- validated result  
+
+---
+
+**Status:** Active Research Layer  
+**Role:** Foundation and conceptual bridge  
