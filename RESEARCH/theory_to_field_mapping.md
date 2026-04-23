@@ -15,6 +15,17 @@ It connects:
 
 → forming a **complete explanatory chain from theory to application**
 
+---
+
+## Scope
+
+This document provides a conceptual mapping between abstract operators  
+and observed system behavior.
+
+It does not constitute a formal proof.
+
+---
+
 # 🧠 NEXAH — Theory to Field Mapping
 
 This document establishes the **explicit connection between the abstract structural theory (Γ, Δ, Ω)**  
