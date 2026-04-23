@@ -1,13 +1,17 @@
+# ⚡ NEXAH Boundary Detection (robust version)
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.neighbors import NearestNeighbors
+import os
 
 print("⚡ NEXAH Boundary Detection")
 
 # =========================
-# 1. DATA (same as before)
+# 1. DATA (synthetic field)
 # =========================
 t = np.linspace(0, 20, 600)
+
 x = np.sin(t) + 0.2*np.sin(5*t)
 y = np.cos(t) + 0.2*np.cos(3*t)
 z = np.sin(2*t)
@@ -38,7 +42,17 @@ boundary_mask = density_norm > threshold
 core_mask = density_norm <= threshold
 
 # =========================
-# 5. PLOT (3D)
+# 5. OUTPUT PATH (FIXED)
+# =========================
+base_dir = os.path.dirname(__file__)
+
+out_dir = os.path.join(base_dir, "..", "outputs", "demo")
+os.makedirs(out_dir, exist_ok=True)
+
+out_path = os.path.join(out_dir, "nexah_boundary_map.png")
+
+# =========================
+# 6. PLOT (3D)
 # =========================
 fig = plt.figure(figsize=(12,5))
 
@@ -53,7 +67,7 @@ ax.set_title("3D Boundary Detection")
 ax.legend()
 
 # =========================
-# 6. PROJECTION (α-β view)
+# 7. PROJECTION (α-β)
 # =========================
 ax2 = fig.add_subplot(122)
 
@@ -70,15 +84,14 @@ ax2.set_ylabel("β")
 plt.tight_layout()
 
 # =========================
-# 7. SAVE
+# 8. SAVE
 # =========================
-out_path = "../outputs/demo/nexah_boundary_map.png"
 plt.savefig(out_path, dpi=200)
 
 print(f"✔ Saved → {out_path}")
 
 # =========================
-# 8. INSIGHT
+# 9. INTERPRETATION
 # =========================
 print("""
 🧠 Interpretation:
