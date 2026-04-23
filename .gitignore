@@ -56,34 +56,37 @@ htmlcov/
 # 🔥 NEXAH OUTPUT POLICY
 # =========================
 
-# 1. IGNORE ALL OUTPUTS (default)
+# ❌ Default: ignore ALL outputs everywhere
 **/outputs/
 
 # =========================
-# ✅ ALLOW CURATED VISUALS (IMPORTANT)
+# ✅ CURATED VISUALS ONLY
 # =========================
 
-# --- DEMO (THIS IS YOUR CURRENT ISSUE FIX) ---
+# --- ROOT DEMOS (important) ---
 !outputs/
 !outputs/demo/
 !outputs/demo/*.png
 
-# --- FIELD LAYER (plots used in README) ---
-!FIELD_LAYER/outputs/
+# --- VISUAL SYSTEM (NEW CORE AREA) ---
+!APPLICATIONS/visuals/
+!APPLICATIONS/visuals/outputs/
+!APPLICATIONS/visuals/outputs/*.png
+!APPLICATIONS/visuals/outputs/*.gif
+
+# --- CORE VISUALS USED IN README ---
 !FIELD_LAYER/outputs/plots/
 !FIELD_LAYER/outputs/plots/*.png
 
-# --- FIELD DECOMPOSITION VISUALS ---
 !FIELD_LAYER/FIELD_DECOMPOSITION/outputs/
 !FIELD_LAYER/FIELD_DECOMPOSITION/outputs/**/*.png
 
-# --- DISCOVERY ENGINE VISUALS ---
 !DISCOVERY_ENGINE/outputs/
 !DISCOVERY_ENGINE/outputs/**/*.png
 
-# --- APPLICATION VISUALS ---
-!APPLICATIONS/**/outputs/
-!APPLICATIONS/**/outputs/**/*.png
+# --- IEEE KEY VISUALS ---
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/
+!APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/*.png
 
 # =========================
 # DATA (still ignored)
@@ -93,9 +96,12 @@ htmlcov/
 **/*.npz
 
 # =========================
-# HEAVY MEDIA
+# HEAVY MEDIA (default ignore)
 # =========================
-**/*.gif
+*.gif
+
+# Allow only curated GIFs
+!APPLICATIONS/visuals/outputs/*.gif
 
 # =========================
 # CACHE
