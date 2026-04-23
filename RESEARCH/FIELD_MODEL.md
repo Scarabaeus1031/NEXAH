@@ -14,6 +14,10 @@ It is:
 > an empirical model describing how structure, flow, and coupling  
 > emerge from system dynamics
 
+
+This document describes an empirical interpretation derived from observations.
+
+It does not claim physical equivalence to known field theories.
 ---
 
 ## 🔗 Origin
