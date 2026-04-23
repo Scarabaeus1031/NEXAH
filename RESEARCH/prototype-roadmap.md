@@ -65,7 +65,7 @@ Bind abstract structure to:
 - Engineering constraint system
 - Decision tree model
 - Policy simulation environment
-- **Triple Spiral Coupling Layer (Water–Mercury–Ferrofluid)** with Elastic Dual Lock
+- Advanced coupling layer (experimental multi-domain interaction model)
 
 Goal: Empirical validation and dynamic navigation.
 
