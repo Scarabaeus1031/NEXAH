@@ -5,6 +5,9 @@
 > Complex systems are not random.  
 > They evolve within **structured fields that constrain motion, transitions, and outcomes**.
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![Tests](https://img.shields.io/badge/tests-pytest-green)
+![Status](https://img.shields.io/badge/status-research--prototype-orange)
 ---
 
 # 🚀 Quick Start
