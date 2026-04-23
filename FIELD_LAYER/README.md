@@ -376,7 +376,7 @@ New structural elements:
 
 ## 🔹 Visual Example (Core Transition Structure)
 
-![Separatrix](CORE/control_layer/outputs/demo/nexah_separatrix_extraction.png)
+![Separatrix](../ARCHITECTURE/CORE/control_layer/outputs/demo/nexah_separatrix_extraction.png)
 
 → boundaries define where control is possible
 
@@ -384,7 +384,7 @@ New structural elements:
 
 ## 🔹 Gate Dynamics
 
-![Gate Tracking](CORE/control_layer/outputs/demo/nexah_gate_tracking.png)
+![Gate Tracking](../ARCHITECTURE/CORE/control_layer/outputs/demo/nexah_gate_tracking.png)
 
 → transitions are dynamic  
 → control must adapt in time  
