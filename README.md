@@ -48,12 +48,60 @@ Instead of detecting isolated failures, NEXAH identifies:
 # 🔥 Core Principle
 
 ```text
-dynamics → structure → field → regimes → stability → navigation
+dynamics → structure → field → geometry → stability → control → navigation
 ```
 
 ---
 
-# ⚡ Key Result — Power Systems (IEEE)
+# 🧭 System Architecture
+
+```text
+Dynamics  
+→ Discovery Engine  
+→ Field Reconstruction (CORE)  
+→ Field Layer (geometry + stability)  
+→ Control Layer (CORE)  
+→ Navigator  
+```
+
+---
+
+## 🔬 Discovery Engine  
+Extracts structure from raw dynamics.
+
+## 🌊 Field Reconstruction (CORE)  
+Builds the field from trajectory data:
+
+- density  
+- flow  
+- boundary structure  
+- validity regions  
+
+## 🌐 Field Layer  
+Transforms structure into:
+
+- geometry  
+- stability  
+- interpretable field structure  
+
+## 🎮 Control Layer (CORE)  
+Operates on transition structure:
+
+- basin detection  
+- separatrix extraction  
+- gate detection  
+- trajectory steering  
+
+## 🧭 Navigator  
+Executes constrained motion through the field:
+
+- transition-aware movement  
+- stability-constrained paths  
+- convergence to attractors  
+
+---
+
+# 🔥 Key Result — Power Systems (IEEE)
 
 NEXAH has been tested on real IEEE grid models (118 → 9241 buses).
 
@@ -65,6 +113,7 @@ Result:
 ---
 
 ![NEXAH Mic Drop](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+
 *Note: The “Mic Drop” label reflects an early internal milestone.  
 It is not a scientific claim, but marks a transition from intuition to measurable structure.*
 
@@ -253,36 +302,6 @@ Across all experiments:
 
 ---
 
-# 🧭 System Architecture
-
-```text
-Dynamics  
-→ Discovery Engine  
-→ Field Layer (geometry + stability)  
-→ Navigator  
-```
-
----
-
-## 🔬 Discovery Engine
-Extracts structure from raw dynamics.
-
-## 🌊 Field Layer
-Builds continuous representations of:
-
-- flow  
-- geometry  
-- stability  
-
-## 🧭 Navigator
-Operates on structure:
-
-- transition detection  
-- regime tracking  
-- trajectory control  
-
----
-
 # 🌀 From Chaos to Structure
 
 ![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
@@ -299,6 +318,7 @@ Operates on structure:
 - geometric interpretation  
 - early-warning signals  
 - system navigation  
+- **structure-aware control**
 
 ---
 
@@ -309,6 +329,7 @@ Operates on structure:
 - structure extraction  
 - regime detection  
 - early transition signals  
+- control via transition geometry  
 
 ---
 
@@ -331,8 +352,9 @@ Operates on structure:
 
 From dynamics → structure  
 From structure → geometry  
-From geometry → regimes  
-From regimes → navigation  
+From geometry → stability  
+From stability → control  
+From control → navigation  
 
 ---
 
