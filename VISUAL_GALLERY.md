@@ -42,7 +42,7 @@ The system decomposes into:
 
 ## 4. Explicit Structure (V68)
 
-![Off-Manifold Structure](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v68_off_manifold_cloud.png)
+![Off-Manifold Structure](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v68_off_manifold_field.png)
 
 Structure becomes explicit:
 
