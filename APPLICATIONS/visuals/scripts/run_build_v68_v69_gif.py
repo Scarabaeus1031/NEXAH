@@ -1,11 +1,10 @@
 # ==========================================================
-# NEXAH — Build V68 → V69 Transition GIF
+# NEXAH — Build V68 → V69 Transition GIF (Fixed)
 # ==========================================================
 
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-import imageio
+import imageio.v2 as imageio
 import os
 
 # ----------------------------------------------------------
@@ -23,7 +22,6 @@ np.random.seed(42)
 # SYNTHETIC STRUCTURE (approximation of v68)
 # ----------------------------------------------------------
 
-# create clustered structure (core + expansion)
 t = np.linspace(0, 20, N_POINTS)
 
 x = np.sin(t) + 0.3 * np.random.randn(N_POINTS)
@@ -37,7 +35,6 @@ y = (y - y.mean()) / y.std()
 # FLOW FIELD (approximation of v69)
 # ----------------------------------------------------------
 
-# simple rotational + outward flow
 def compute_flow(x, y):
     u = -y + 0.3 * x
     v = x + 0.3 * y
@@ -51,7 +48,7 @@ u /= norm
 v /= norm
 
 # ----------------------------------------------------------
-# BUILD FRAMES
+# BUILD FRAMES (FIXED)
 # ----------------------------------------------------------
 
 frames = []
@@ -64,16 +61,16 @@ for i in range(N_FRAMES):
 
     ax.clear()
 
-    # interpolate point movement
+    # interpolate movement
     x_new = x + alpha * u * 2.0
     y_new = y + alpha * v * 2.0
 
     # plot points
-    ax.scatter(x_new, y_new, s=2, alpha=0.6)
+    ax.scatter(x_new, y_new, s=3, alpha=0.7)
 
-    # gradually add flow vectors
-    if alpha > 0.3:
-        step = max(1, int(20 - 15 * alpha))
+    # flow appears gradually
+    if alpha > 0.2:
+        step = max(1, int(25 - 20 * alpha))
         ax.quiver(
             x_new[::step],
             y_new[::step],
@@ -81,36 +78,41 @@ for i in range(N_FRAMES):
             v[::step],
             angles='xy',
             scale_units='xy',
-            scale=5,
+            scale=6,
             alpha=alpha
         )
 
     ax.set_xlim(-3, 3)
     ax.set_ylim(-3, 3)
-    ax.set_title("NEXAH — Structure → Flow")
+    ax.set_title(f"NEXAH — Structure → Flow (t={alpha:.2f})")
     ax.axis("off")
 
-    # save frame
+    # --- CRITICAL PART ---
     fig.canvas.draw()
     buffer = np.asarray(fig.canvas.buffer_rgba())
-    frame = buffer[:, :, :3]  # drop alpha channel
+    frame = buffer.copy()   # <<< prevents same-frame bug
+
     frames.append(frame)
 
 plt.close()
 
 # ----------------------------------------------------------
-# SAVE GIF
+# SAVE GIF (FIXED)
 # ----------------------------------------------------------
 
 os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
 
-imageio.mimsave(OUTPUT_PATH, frames, fps=20)
+imageio.mimsave(
+    OUTPUT_PATH,
+    frames,
+    duration=0.05
+)
 
 # ----------------------------------------------------------
 # OUTPUT
 # ----------------------------------------------------------
 
-print("\n⚡ NEXAH — V68 → V69 GIF built")
+print("\n⚡ NEXAH — V68 → V69 GIF built (Fixed)")
 print(f"✔ Saved → {OUTPUT_PATH}")
 
 print("\n🧠 Interpretation:")
