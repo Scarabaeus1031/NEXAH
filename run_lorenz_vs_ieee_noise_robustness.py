@@ -56,8 +56,9 @@ signal_ieee_noisy = signal_ieee_clean + noise_i
 # TIME NORMALIZATION
 # ----------------------------------------------------------
 
-t_lorenz /= t_lorenz.max()
-t_ieee /= t_ieee.max()
+t_lorenz = t_lorenz / t_lorenz.max()
+t_ieee = t_ieee.astype(float)
+t_ieee = t_ieee / t_ieee.max()
 
 # ----------------------------------------------------------
 # STRUCTURE EXTRACTION
