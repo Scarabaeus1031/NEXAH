@@ -295,3 +295,116 @@ Complex systems are not random.
 
 They are structured fields  
 with constrained motion and inevitable convergence.
+
+---
+
+# 🚀 Extension — From Reconstruction to Control
+
+The FIELD_LAYER is no longer only a representation layer.
+
+It now integrates:
+
+- field reconstruction (how the structure emerges)
+- navigation (how motion follows structure)
+- control (how transitions are actively used)
+
+---
+
+## 🔹 Field Reconstruction (Input Layer)
+
+The system field is reconstructed from trajectory data.
+
+Key additions:
+
+- validity regions (where reconstruction is reliable)
+- boundary detection (where structure changes)
+- flow channels (preferred motion paths)
+
+👉 See module:
+`CORE/field_reconstruction/`
+
+---
+
+## 🔹 Control Layer (Intervention Layer)
+
+The system is not only navigable — it is controllable.
+
+Control operates via:
+
+- basin detection (stable regimes)
+- separatrix extraction (transition boundaries)
+- gate detection (optimal transition points)
+- gate tracking (dynamic transitions)
+
+👉 See module:
+`CORE/control_layer/`
+
+---
+
+## 🔥 Key Extension Insight
+
+> The field is not only a structure —  
+> it is a space of possible transitions.
+
+---
+
+## 🧭 Updated Pipeline
+
+```text
+Dynamics
+→ Reconstruction
+→ Field Geometry
+→ Stability Structure
+→ Transition Boundaries
+→ Gate Extraction
+→ Control
+→ Navigation
+→ Convergence
+```
+
+## 🔹 Transition Geometry (NEW CORE)
+
+New structural elements:
+
+- Basins → stable long-term behavior  
+- Separatrix → boundary between regimes  
+- Gates → minimal-cost transition points  
+
+👉 Control operates **on these structures**
+
+---
+
+## 🔹 Visual Example (Core Transition Structure)
+
+![Separatrix](CORE/control_layer/outputs/demo/nexah_separatrix_extraction.png)
+
+→ boundaries define where control is possible
+
+---
+
+## 🔹 Gate Dynamics
+
+![Gate Tracking](CORE/control_layer/outputs/demo/nexah_gate_tracking.png)
+
+→ transitions are dynamic  
+→ control must adapt in time  
+
+---
+
+## 🧠 Updated System View
+
+| Layer | Role |
+|------|------|
+| Reconstruction | builds field |
+| Field Layer | defines geometry |
+| Control Layer | enables intervention |
+| Navigator | executes movement |
+
+---
+
+## 🔥 Final Insight
+
+> The FIELD_LAYER is no longer passive.  
+>  
+> It becomes a **control-aware dynamical system representation**.
+

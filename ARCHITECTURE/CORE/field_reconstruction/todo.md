@@ -1,183 +1,154 @@
-# 🧭 Field Reconstruction — TODO (Closure → FIELD_LAYER Integration)
+# 🧭 NEXAH — FIELD_LAYER Integration TODO
 
 ---
 
-## 🔹 1. Core Concepts (Finalize Definitions)
+## 🔹 1. Module Integration Mapping
 
-- [ ] Field Reconstruction (FR)
-- [ ] Valid Region (VR)
-- [ ] Unstable / Artifact Region (AR)
-- [ ] Invariant Structure (IS)
-- [ ] Boundary Region (BR)
-- [ ] Flow Channel (FC)
+- [ ] Field Reconstruction → Geometry Layer
+- [ ] Field Reconstruction → Validity Layer
+- [ ] Field Reconstruction → Boundary Layer
+
+- [ ] Control Layer → Navigation Layer
+- [ ] Control Layer → Gate Layer
+- [ ] Control Layer → Intervention Layer
 
 👉 Ziel:
-→ klare, kurze, mathematisch anschlussfähige Definitionen
+→ klare Schnittstellen zwischen Modulen
 
 ---
 
-## 🔹 2. Operatoren (Ready for FIELD_LAYER)
+## 🔹 2. Unified Field Model
 
-- [ ] Frame Stability Operator (F)
-- [ ] Invariant Mask Operator (I)
-- [ ] Reconstruction Confidence (C)
-- [ ] Boundary Gradient Operator (B)
-- [ ] Flow Field Operator (Φ)
-- [ ] Channel Extraction Operator (Ξ)
-
-👉 Ziel:
-→ direkte Integration in FIELD_LAYER möglich
-
----
-
-## 🔹 3. Mathematische Beschreibung (Minimal, aber sauber)
-
-- [ ] Feldrekonstruktion:
-  → f(x) aus Trajektorien (Embedding + Density + Flow)
-
-- [ ] Stabilität:
-  → Sensitivität gegenüber Frame / Resolution
-
-- [ ] Invarianz:
-  → Struktur bleibt unter Transformation stabil
-
-- [ ] Boundary:
-  → hohe Gradienten / Übergangsbereiche
-
-- [ ] Flow:
-  → lokales Richtungsfeld (Gradient / Drift)
-
-👉 Ziel:
-→ konsistente, leichte Formulierung (kein Overkill)
-
----
-
-## 🔹 4. Visual → Meaning Mapping (Fixieren)
-
-- [ ] folds → constraints
-- [ ] channels → preferred paths
-- [ ] density → attractor likelihood
-- [ ] boundary → transition zones
-- [ ] gradient → instability / regime change
-- [ ] flow arrows → direction of stable motion
-
-👉 Ziel:
-→ eindeutige Semantik (keine Interpretationsunschärfe)
-
----
-
-## 🔹 5. Grenzen (Scientific Credibility)
-
-- [ ] extrapolation ≠ real structure
-- [ ] interpolation artifacts sichtbar machen
-- [ ] dependency on embedding / resolution
-- [ ] false symmetry vermeiden
-- [ ] interpretation nur in valid regions
-
-👉 Ziel:
-→ klare Abgrenzung zu „Overinterpretation“
-
----
-
-## 🔹 6. Minimal Pipeline (Finalize)
-
-- [ ] input: trajectory data  
-- [ ] embedding: (x(t), x(t+τ), x(t+2τ))  
-- [ ] reconstruction:
+- [ ] combine:
   - density field
-  - flow field  
-
-- [ ] stability test:
-  - frame variation
-  - resolution sensitivity  
-
-- [ ] extraction:
-  - invariant regions  
-  - boundary regions  
-  - flow channels  
+  - flow field
+  - stability field
+  - boundary gradient
+  - gate structures
 
 👉 Ziel:
-→ reproduzierbarer Workflow
+→ ein konsistentes FIELD_LAYER Modell
 
 ---
 
-## 🔹 7. Navigation Layer (NEW — wichtig)
+## 🔹 3. Core Objects (Definition)
 
-- [ ] Stability Flow Field (Φ)
-- [ ] Boundary Gradient (B)
-- [ ] Channel Extraction (Ξ)
-- [ ] Trajectory Simulation
-- [ ] Target-Guided Navigation
+- [ ] Basin
+- [ ] Separatrix
+- [ ] Gate
+- [ ] Flow Channel
+- [ ] Stability Region
 
 👉 Ziel:
-→ Übergang von Analyse → Bewegung → Kontrolle
+→ gemeinsame Sprache über alle Module hinweg
 
 ---
 
-## 🔹 8. FIELD_LAYER Anschluss (Final Positioning)
+## 🔹 4. Operators (Unification)
 
-- [ ] Mapping:
+- [ ] Φ → Flow Operator
+- [ ] B → Boundary Operator
+- [ ] I → Invariant Mask
+- [ ] C → Confidence
+- [ ] Ξ → Channel Extraction
+- [ ] G → Gate Extraction
 
-  Field Reconstruction →
-  - Geometry Layer
-  - Validity Layer
-  - Boundary Layer
-
-- [ ] Übergabe an:
-
-  FIELD_LAYER →
-  - Flow Field
-  - Stability Field
-  - Navigation Field
-
-👉 Ergebnis:
-
-→ FIELD_RECONSTRUCTION = **Input + Geometry Layer**
+👉 Ziel:
+→ ein Operator-System für FIELD_LAYER
 
 ---
 
-## 🔹 9. Strukturentscheidung (Final)
+## 🔹 5. Pipeline Integration
 
-- [x] eigenständiges Modul  
-- [x] Teil der CORE Architektur  
-- [ ] Integration in FIELD_LAYER vorbereiten  
+- [ ] trajectory → reconstruction
+- [ ] reconstruction → field
+- [ ] field → navigation
+- [ ] navigation → control
+- [ ] control → intervention
 
-👉 Final:
-
-→ Field Reconstruction bleibt eigenständig  
-→ wird aber als **Input Layer für FIELD_LAYER** genutzt  
-
----
-
-## 🔹 10. Closure Criteria (Definition of DONE)
-
-Das Modul ist abgeschlossen wenn:
-
-- [ ] Begriffe definiert sind  
-- [ ] Operatoren beschrieben sind  
-- [ ] Pipeline reproduzierbar ist  
-- [ ] Grenzen klar sind  
-- [ ] Navigation demonstriert ist  
-- [ ] README + BUILD_LOG vollständig sind  
+👉 Ziel:
+→ durchgehender Workflow
 
 ---
 
-## 🧠 Final Insight
+## 🔹 6. Gate System (NEW CORE)
 
-> Field Reconstruction does not describe the system.  
+- [ ] gate extraction
+- [ ] gate scoring
+- [ ] gate tracking
+- [ ] gate selection
+
+👉 Ziel:
+→ Übergänge als zentrales Konzept
+
+---
+
+## 🔹 7. Visual Unification
+
+- [ ] gemeinsame Farbsemantik:
+  - blau → basin
+  - rot → boundary
+  - gelb → attractor
+  - magenta → gates
+
+- [ ] Visual consistency across modules
+
+👉 Ziel:
+→ sofort lesbare Systemdarstellung
+
+---
+
+## 🔹 8. Scientific Framing
+
+- [ ] dynamical systems mapping
+- [ ] relation to:
+  - attractors
+  - separatrices
+  - phase space
+  - control theory
+
+👉 Ziel:
+→ Anschlussfähigkeit (Paper-ready)
+
+---
+
+## 🔹 9. Architecture Definition
+
+- [ ] FIELD_LAYER README erstellen
+- [ ] Diagram:
+  - Reconstruction → Field → Control
+
+👉 Ziel:
+→ System verständlich machen
+
+---
+
+## 🔹 10. Closure Criteria
+
+FIELD_LAYER ist fertig wenn:
+
+- [ ] beide Module integriert sind
+- [ ] Begriffe konsistent sind
+- [ ] Pipeline geschlossen ist
+- [ ] Visuals zusammenpassen
+- [ ] README klar ist
+
+---
+
+## 🧠 Core Insight
+
+> The field is not just reconstructed.  
 >  
-> It reveals where the system can be trusted —  
->  
-> and where motion becomes navigable.
+> It becomes a navigable and controllable structure.
 
 ---
 
 ## 🚀 Next Step
 
-→ Integration into FIELD_LAYER  
-→ Transition to control and intervention
+→ FIELD_LAYER README  
+→ System Architecture Diagram  
+→ optional: Paper Draft
 
 ---
 
-**Status:** 90–95% complete  
-**Next:** Formalization + Integration
+**Status:** Integration Phase  
