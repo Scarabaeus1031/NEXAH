@@ -89,6 +89,14 @@ htmlcov/
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/*.png
 
 # =========================
+# CONTROL LAYER VISUALS (NEW)
+# =========================
+
+!ARCHITECTURE/CORE/control_layer/outputs/
+!ARCHITECTURE/CORE/control_layer/outputs/demo/
+!ARCHITECTURE/CORE/control_layer/outputs/demo/*.png
+
+# =========================
 # DATA (still ignored)
 # =========================
 **/*.csv
