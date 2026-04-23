@@ -70,6 +70,26 @@ field_reconstruction/
 
 ---
 
+### 🔹 Emergent Rotation (IEEE 1D → Field)
+
+![1D to field](dynamics/ieee_1d_to_field.gif)
+
+Observation:
+
+A simple trajectory evolves into rotational flow structures.
+
+Interpretation:
+
+- system leaves linear regime  
+- rotational field components emerge  
+- indicates onset of nonlinear dynamics  
+
+Implication:
+
+Field reconstruction reveals dynamics that are not visible in the original trajectory representation.
+
+---
+
 ### 🔹 Frame Stability
 
 ![Frame stability](stability/nexah_field_frame_stability.png)
