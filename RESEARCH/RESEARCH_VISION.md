@@ -1,5 +1,13 @@
 # NEXAH Research Vision (v2 — Field & Coherence Update)
 
+![NEXAH Conceptual Overview](./visuals/NEXAH_Structure_inside_Dynamics.png)
+
+*Conceptual illustration of the NEXAH framework.  
+This visualization represents the hypothesized relationship between dynamics, structure, field geometry, and navigation.  
+It is not a direct representation of implementation, but a synthesis of observed patterns and working interpretations.*
+
+---
+
 NEXAH is an orientation-based framework that investigates whether  
 **intrinsic stability in complex systems may emerge from local structural coherence**,  
 rather than from global optimization, reward mechanisms, or centralized control.
@@ -108,15 +116,15 @@ No formal geodesic claim is made.
 
 A working definition:
 
-$begin:math:display$
-C\(x\) \= \\frac\{\\dot\{x\} \\cdot F\(x\)\}\{\|\\dot\{x\}\| \\\, \|F\(x\)\|\}
-$end:math:display$
+$$
+C(x) = \frac{\dot{x} \cdot F(x)}{\|\dot{x}\| \, \|F(x)\|}
+$$
 
 Interpretation:
 
-- $begin:math:text$ C \\approx 1 $end:math:text$ → strong alignment  
-- $begin:math:text$ C \\approx 0 $end:math:text$ → transition region  
-- $begin:math:text$ C \< 0 $end:math:text$ → opposing motion  
+- \( C \approx 1 \) → strong alignment  
+- \( C \approx 0 \) → transition region  
+- \( C < 0 \) → opposing motion  
 
 ---
 
@@ -134,7 +142,7 @@ Opposing behavior   → C < 0
 
 - system motion is not uniform  
 - regions of alignment and misalignment exist  
-- transitions frequently occur near $begin:math:text$ C \\approx 0 $end:math:text$
+- transitions frequently occur near \( C \approx 0 \)
 
 ---
 
@@ -258,3 +266,4 @@ while moving through the system’s structure.
 
 Breakdown tends to occur when this alignment is lost.
 ```
+
