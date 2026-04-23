@@ -7,18 +7,29 @@ The goal is not to impose models, but to reconstruct structure directly from sys
 
 ---
 
+# Method Overview
+
+NEXAH reconstructs system structure in four stages:
+
+1. Field Reconstruction  
+2. Geometry Extraction  
+3. Transition Detection  
+4. Stability Representation  
+
+---
+
 # 1. Input Data
 
 NEXAH operates on time-series data of dynamical systems:
 
-$begin:math:display$
-x\(t\) \\in \\mathbb\{R\}\^n
-$end:math:display$
+$$
+x(t) \in \mathbb{R}^n
+$$
 
 Examples:
 
-- Lorenz system (synthetic)
-- IEEE power grid models (real-world simulation)
+- Lorenz system (synthetic)  
+- IEEE power grid models (real-world simulation)  
 
 The system does not require:
 
@@ -36,9 +47,9 @@ The system state trajectory is transformed into a continuous field representatio
 
 The local flow is estimated as:
 
-$begin:math:display$
-F\(x\) \= \\frac\{dx\}\{dt\}
-$end:math:display$
+$$
+F(x) = \frac{dx}{dt}
+$$
 
 using finite differences on the trajectory.
 
@@ -59,9 +70,9 @@ Implementation:
 
 An effective energy function is defined as:
 
-$begin:math:display$
-E\(x\) \= \-\\log\(p\(x\)\)
-$end:math:display$
+$$
+E(x) = -\log(p(x))
+$$
 
 Interpretation:
 
@@ -78,11 +89,11 @@ The reconstructed field is used to extract geometric structure.
 
 ## 3.1 Gradient Field
 
-$begin:math:display$
-\\nabla E\(x\)
-$end:math:display$
+$$
+\nabla E(x)
+$$
 
-indicates direction of steepest ascent (instability direction).
+indicates the direction of steepest ascent (instability direction).
 
 ---
 
@@ -106,9 +117,9 @@ These are derived from:
 
 The curl of the flow field is approximated:
 
-$begin:math:display$
-\\nabla \\times F\(x\)
-$end:math:display$
+$$
+\nabla \times F(x)
+$$
 
 Observation:
 
@@ -119,9 +130,9 @@ Observation:
 
 ## 3.4 Divergence
 
-$begin:math:display$
-\\nabla \\cdot F\(x\)
-$end:math:display$
+$$
+\nabla \cdot F(x)
+$$
 
 indicates:
 
@@ -134,15 +145,15 @@ indicates:
 
 Empirical observation:
 
-$begin:math:display$
-\\text\{div\}\(t\) \\approx \\text\{curl\}\(t \- \\tau\)
-$end:math:display$
+$$
+\text{div}(t) \approx \text{curl}(t - \tau)
+$$
 
 with:
 
-$begin:math:display$
-\\tau \\approx 15
-$end:math:display$
+$$
+\tau \approx 15
+$$
 
 This suggests a delayed feedback between expansion and rotation.
 
@@ -195,7 +206,7 @@ In power system experiments:
 
 Detection point:
 
-- first significant structural deviation from stable manifold  
+- first significant structural deviation from the stable manifold  
 
 Baseline comparison:
 
@@ -203,7 +214,7 @@ Baseline comparison:
 
 Measured result:
 
-> NEXAH detects transition ~43.9 seconds earlier (IEEE 300 system)
+> NEXAH detects transitions ~43.9 seconds earlier (IEEE 300 system)
 
 ---
 
@@ -211,7 +222,7 @@ Measured result:
 
 ## 7.1 Noise Injection
 
-Gaussian noise added to system trajectories.
+Gaussian noise is added to system trajectories.
 
 Evaluation:
 
@@ -222,10 +233,10 @@ Evaluation:
 
 ## 7.2 Multi-Run Stability
 
-Repeated simulations:
+Repeated simulations show:
 
-- transition patterns remain stable  
-- peak clustering preserved  
+- stable transition patterns  
+- preserved clustering of transition events  
 
 ---
 
@@ -267,4 +278,4 @@ Key principle:
 ---
 
 **Author:** Thomas K. R. Hofmann  
-**Version:** v0.5.0  
+**Version:** v0.5.0
