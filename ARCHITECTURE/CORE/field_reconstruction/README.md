@@ -7,7 +7,7 @@
 
 This module investigates how dynamical systems can be reconstructed as **continuous fields** from discrete trajectory data.
 
-Rather than treating system behavior as isolated paths, we interpret it as motion within an underlying **geometric field structure**.
+Rather than treating system behavior as isolated trajectories, we interpret it as motion within an underlying **geometric field structure with varying validity**.
 
 ---
 
@@ -15,7 +15,7 @@ Rather than treating system behavior as isolated paths, we interpret it as motio
 
 A system is not just a trajectory.
 
-It exists within a structured field.
+It exists within a structured field — but this field is only **partially observable and locally reliable**.
 
 This module reconstructs:
 
@@ -47,7 +47,7 @@ field_reconstruction/
 ![V68 clean](reconstruction/nexah_ieee_field_v68_clean.png)
 
 → grid artifacts vs continuous density  
-→ transition from discrete to geometric representation  
+→ transition from discrete sampling to geometric approximation  
 
 ---
 
@@ -117,6 +117,7 @@ field_reconstruction/
 
 - resolution changes create motion illusion  
 - interpolation introduces artifacts  
+- perceived geometry can depend on representation  
 
 ---
 
@@ -127,7 +128,7 @@ Outside trajectory support:
 - no real data  
 - interpolation dominates  
 
-→ produces unstable regions  
+→ produces **non-physical or unstable regions**  
 
 ---
 
@@ -136,7 +137,7 @@ Outside trajectory support:
 Invariant regions:
 
 - persist across transformations  
-- represent true system geometry  
+- represent **reliable underlying system geometry**  
 
 ---
 
@@ -146,6 +147,7 @@ Between stable and unstable regions:
 
 - transition zones  
 - potential regime boundaries  
+- candidate separatrix structures  
 
 ---
 
@@ -174,6 +176,11 @@ Interpretation:
 - constrained motion  
 - preferred trajectories  
 - stability gradients  
+
+⚠️ Important:
+
+> Not every visible structure corresponds to a real dynamical feature.  
+> Interpretation must be restricted to **stable / invariant regions**.
 
 ---
 
