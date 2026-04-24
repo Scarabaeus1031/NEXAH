@@ -40,7 +40,7 @@ This document defines:
 
 For a technical description of the computation:
 
-→ [METHODS.md](METHODS.md)  
+→ [METHODS.md](ARCHITECTURE/METHODS.md)  
 
 ---
 
