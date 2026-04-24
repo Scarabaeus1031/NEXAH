@@ -1,63 +1,75 @@
 # 🌀 NEXAH — Visual Gallery
 
-These visuals illustrate how NEXAH reveals structure in dynamical systems.
+This gallery shows how NEXAH reveals structure in dynamical systems.
 
 ---
 
-## 01 — Field / Observation Frame
+## 01 — Structural Transitions (Lorenz)
 
-![Grid Field](path/to/01_grid_field.png)
+![Lorenz Transitions](outputs/demo/nexah_lorenz_transitions.png)
 
-A structured grid representing the observation space of the system.
+Detected transition points in a chaotic system.
 
----
-
-## 02 — Structure Concentration
-
-![Boundary Density](path/to/02_boundary_density.png)
-
-Regions where trajectories concentrate — early indication of structure.
+→ Transitions are not random — they follow structure.
 
 ---
 
-## 03 — Transition Skeleton
+## 02 — IEEE Collapse Detection
 
-![Ridge Paths](path/to/03_ridge_paths.png)
+![IEEE Collapse](outputs/demo/nexah_ieee_collapse.png)
 
-Extracted transition paths (ridges) showing how the system moves.
+Structural signal preceding system collapse.
 
----
-
-## 04 — Aperture / Ring Structure
-
-![Aperture Ring](path/to/04_aperture_ring.png)
-
-Projection of transition regions forming a coherent boundary (aperture).
+→ Early indication of instability.
 
 ---
 
-## 05 — Gate Detection
+## 03 — Noise Robustness
 
-![Gate Sequence](path/to/05_gate_sequence.png)
+![Noise Robustness](outputs/demo/nexah_cross_system_noise_robustness.png)
 
-Discrete transition points emerging from coherence loss.
+System behavior under perturbation.
 
----
-
-## 06 — Minimal Boundary Trace
-
-![Ghost Snake](path/to/06_ghost_snake.png)
-
-Simplified representation of the system’s transition boundary.
+→ Structure persists even under noise.
 
 ---
 
-## Key Idea
+## 04 — IEEE Noise Behavior
+
+![IEEE Noise](outputs/demo/nexah_ieee_noise_robustness.png)
+
+Transition signals remain visible under noisy conditions.
+
+---
+
+## 05 — Surface Geometry
+
+![Surface Mesh](outputs/demo/nexah_surface_mesh.png)
+
+Geometric structure of the reconstructed field.
+
+---
+
+## 06 — Field Sheet
+
+![Surface Sheet](outputs/demo/nexah_surface_sheet.png)
+
+Continuous representation of the system landscape.
+
+---
+
+# 🔑 Key Idea
 
 Different perspectives reveal the same structure:
 
-- field → where structure exists  
-- geometry → how it connects  
 - signal → when transitions occur  
+- geometry → how structure forms  
+- field → where stability exists  
 
-NEXAH makes these connections visible.
+---
+
+# 🧠 Interpretation
+
+NEXAH does not detect events.
+
+It reveals the structure that produces them.
