@@ -26,7 +26,7 @@ It provides:
 
 # 🧩 1. From Series to Structure (Intuition)
 
-![From Series to Structure](./visuals/FROM_SERIES_TO_STRUCTURE.png)
+![From Series to Structure](../visuals/FROM_SERIES_TO_STRUCTURE.png)
 
 ### Idea
 
