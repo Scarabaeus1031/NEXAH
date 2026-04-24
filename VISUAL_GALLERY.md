@@ -1,88 +1,63 @@
-# 🖼️ NEXAH — Visual Evolution
+# 🌀 NEXAH — Visual Gallery
 
-This gallery documents the emergence of structure from dynamics.
-
-It is not a collection of images.
-
-It is a sequence of discovery.
+These visuals illustrate how NEXAH reveals structure in dynamical systems.
 
 ---
 
-## 1. Raw Dynamics
+## 01 — Field / Observation Frame
 
-![Lorenz Chaos](DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
+![Grid Field](path/to/01_grid_field.png)
 
-Unstructured trajectories.
-
-No visible order.
+A structured grid representing the observation space of the system.
 
 ---
 
-## 2. Emergent Geometry
+## 02 — Structure Concentration
 
-![Manifold](DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
+![Boundary Density](path/to/02_boundary_density.png)
 
-Structure begins to emerge.
-
-Trajectories align along hidden geometry.
+Regions where trajectories concentrate — early indication of structure.
 
 ---
 
-## 3. State Representation
+## 03 — Transition Skeleton
 
-![State Graph](DISCOVERY_ENGINE/outputs/v15_state_machine.png)
+![Ridge Paths](path/to/03_ridge_paths.png)
 
-The system decomposes into:
-
-- states  
-- transitions  
-- regimes  
+Extracted transition paths (ridges) showing how the system moves.
 
 ---
 
-## 4. Explicit Structure (V68)
+## 04 — Aperture / Ring Structure
 
-![Off-Manifold Structure](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v68_off_manifold_field.png)
+![Aperture Ring](path/to/04_aperture_ring.png)
 
-Structure becomes explicit:
-
-- core region (stable)  
-- transition region  
-- expansion region  
-
-The system is no longer a trajectory.
-
-It is a structured space.
+Projection of transition regions forming a coherent boundary (aperture).
 
 ---
 
-## 5. Flow Field (V69)
+## 05 — Gate Detection
 
-![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
+![Gate Sequence](path/to/05_gate_sequence.png)
 
-Structure turns into flow.
-
-The system defines:
-
-- direction  
-- movement  
-- evolution  
+Discrete transition points emerging from coherence loss.
 
 ---
 
-## 🧠 Key Insight
+## 06 — Minimal Boundary Trace
 
-Structure and flow are not separate.
+![Ghost Snake](path/to/06_ghost_snake.png)
 
-They are two views of the same system:
-
-- structure defines where the system can be  
-- flow defines how the system moves  
+Simplified representation of the system’s transition boundary.
 
 ---
 
-## 🔥 Final Statement
+## Key Idea
 
-> The system does not move freely.  
->  
-> It follows a structured field.
+Different perspectives reveal the same structure:
+
+- field → where structure exists  
+- geometry → how it connects  
+- signal → when transitions occur  
+
+NEXAH makes these connections visible.
