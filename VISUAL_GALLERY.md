@@ -4,7 +4,18 @@ This gallery shows how NEXAH reveals structure in dynamical systems.
 
 ---
 
-## 01 — Structural Transitions (Lorenz)
+# 01 - Dynamic View
+
+## Coherence Dynamics
+
+![Coherence](ARCHITECTURE/visuals/output/nexah_v2_coherence.gif)
+
+Shows alignment between motion and field.
+
+→ Stability = alignment  
+→ collapse = transition
+
+## 02 — Structural Transitions (Lorenz)
 
 ![Lorenz Transitions](outputs/demo/nexah_lorenz_transitions.png)
 
@@ -14,7 +25,7 @@ Detected transition points in a chaotic system.
 
 ---
 
-## 02 — IEEE Collapse Detection
+## 03 — IEEE Collapse Detection
 
 ![IEEE Collapse](outputs/demo/nexah_ieee_collapse.png)
 
@@ -24,7 +35,17 @@ Structural signal preceding system collapse.
 
 ---
 
-## 03 — Noise Robustness
+## 04 - Risk / Boundary Dynamics
+
+![Risk Field](ARCHITECTURE/visuals/output/nexah_v3_risk.gif)
+
+Dynamic evolution of system risk.
+
+→ transitions emerge as geometric structure
+
+---
+
+## 05 — Noise Robustness
 
 ![Noise Robustness](outputs/demo/nexah_cross_system_noise_robustness.png)
 
@@ -34,7 +55,7 @@ System behavior under perturbation.
 
 ---
 
-## 04 — IEEE Noise Behavior
+## 06 — IEEE Noise Behavior
 
 ![IEEE Noise](outputs/demo/nexah_ieee_noise_robustness.png)
 
@@ -42,7 +63,7 @@ Transition signals remain visible under noisy conditions.
 
 ---
 
-## 05 — Surface Geometry
+## 07 — Surface Geometry
 
 ![Surface Mesh](outputs/demo/nexah_surface_mesh.png)
 
@@ -50,7 +71,7 @@ Geometric structure of the reconstructed field.
 
 ---
 
-## 06 — Field Sheet
+## 08 — Field Sheet
 
 ![Surface Sheet](outputs/demo/nexah_surface_sheet.png)
 
