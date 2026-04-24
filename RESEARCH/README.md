@@ -44,13 +44,9 @@ It is **not driven by formal theory-building as a primary goal**.
 
 # ⚙️ Development Approach
 
-The project follows a simple loop:
-
 ```text
 build → observe → extract structure → refine → build
 ```
-
-This means:
 
 - implementation comes first  
 - interpretation follows  
@@ -75,19 +71,21 @@ It is:
 
 # 🧱 Structure of This Module
 
-## FOUNDATION
+---
+
+## 🧩 FOUNDATION
 
 → `FOUNDATION/`
 
 Core structural assumptions:
 
 - axioms (A0–A4)  
-- basic operators (Γ, Δ, Ω)  
+- operators (Γ, Δ, Ω)  
 - minimal discrete structure  
 
 ---
 
-## FIELD MODEL
+## 🔬 FIELD MODEL
 
 → `field_model.md`
 
@@ -97,26 +95,77 @@ Exploratory interpretation of systems as:
 - coupled structures  
 - delayed interactions  
 
+👉 **Focus:** what emerges from dynamics
+
 ---
 
-## FINDINGS
+## 🔗 THEORY → FIELD MAPPING
+
+→ `theory_to_field_mapping.md`
+
+Connects:
+
+- discrete structure (FOUNDATION)  
+- to geometric representation (FIELD_LAYER)
+
+👉 **Focus:** translation from structure → geometry
+
+---
+
+## ⚙️ MULTI-LAYER INTERACTION
+
+→ see `APPLIED_CASES/`
+
+Relevant example:
+
+- `applied-case-06-multi-regime-interaction.md`
+
+Describes:
+
+- regimes  
+- transitions  
+- gates  
+- interaction between system layers  
+
+👉 **Focus:** how systems behave across regimes
+
+---
+
+## 🧠 INTERPRETATION LAYER
+
+→ `zeta_lens_framework.md`
+
+A conceptual viewing framework used to:
+
+- reason about local vs global structure  
+- understand projection vs underlying geometry  
+- connect dynamics (flow) with structure (mapping)  
+
+Important:
+
+> This layer does not define system behavior.  
+> It provides a way to **interpret and think about it**.
+
+---
+
+## 📊 FINDINGS
 
 → `FINDINGS/`
 
-Empirical observations from experiments:
+Empirical observations:
 
 - transition structure  
 - stability behavior  
 - geometry emergence  
-- noise robustness  
+- robustness under noise  
 
 ---
 
-## APPLIED CASES
+## 🧪 APPLIED CASES
 
 → `APPLIED_CASES/`
 
-Concrete interpretations of structure in:
+Concrete examples of structure in:
 
 - urban systems  
 - engineering thresholds  
@@ -125,7 +174,7 @@ Concrete interpretations of structure in:
 
 ---
 
-## HISTORY
+## 🕰️ HISTORY
 
 → `HISTORY/`
 
@@ -137,16 +186,20 @@ Development timeline:
 
 ---
 
-## VISUALS
+## 🖼️ VISUAL NOTES
 
-→ `visuals/`
+→ `visual_gallery.md`
 
-Conceptual diagrams and structural illustrations:
+Collection of:
 
-- regime models  
-- stability maps  
-- applied examples  
-- development sketches  
+- conceptual diagrams  
+- structural interpretations  
+- exploratory visuals  
+
+Important:
+
+> These visuals support thinking and development.  
+> They are not formal models or claims.
 
 ---
 
@@ -186,7 +239,7 @@ in later layers:
 
 - DISCOVERY ENGINE  
 - FIELD_LAYER  
-- CONTROL / NAVIGATION  
+- NAVIGATION  
 
 ---
 
