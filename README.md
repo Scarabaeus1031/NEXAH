@@ -58,7 +58,7 @@ Defines:
 
 For a visual introduction to NEXAH:
 
-→ [Visual Gallery](visual_gallery.md)
+→ [Visual Gallery](VISUAL_GALLERY.md)
 
 Shows how structure, transitions, and geometry emerge across different systems.
 
