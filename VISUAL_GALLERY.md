@@ -6,27 +6,7 @@ This gallery shows how NEXAH reveals structure in dynamical systems.
 
 ## 01 — Field Reconstruction (IEEE)
 
-## Field Reconstruction (IEEE)
-
 ![Field Reconstruction](ARCHITECTURE/CORE/field_reconstruction/dynamics/ieee_1d_to_field.gif)
-
-Shows how a 1D signal is lifted into a structured field.
-
-→ dynamics → geometry
-
-## 02 — Structural Transitions (Lorenz)
-
-![Lorenz Transitions](outputs/demo/nexah_lorenz_transitions.png)
-
-Detected transition points in a chaotic system.
-
-→ Transitions are not random — they follow structure.
-
----
-
-## 03 — IEEE Collapse Detection
-
-![IEEE Collapse](outputs/demo/nexah_ieee_collapse.png)
 
 A real IEEE signal lifted into a structured dynamical field.
 
@@ -34,13 +14,34 @@ A real IEEE signal lifted into a structured dynamical field.
 
 ---
 
+## 02 — Structural Transitions (Lorenz)
+
+![Lorenz Transitions](outputs/demo/nexah_lorenz_transitions.png)
+
+Transition points in a chaotic system.
+
+→ not random  
+→ structurally determined
+
+---
+
+## 03 — IEEE Collapse Detection
+
+![IEEE Collapse](outputs/demo/nexah_ieee_collapse.png)
+
+Structural signal preceding system collapse.
+
+→ early indication of instability
+
+---
+
 ## 04 — Transition Dynamics
 
 ![Transition Dynamics](ARCHITECTURE/CORE/field_reconstruction/dynamics/v68_v69_transition.gif)
 
-Evolution of system transitions in the reconstructed field.
+Evolution of transitions in the reconstructed field.
 
-→ transitions emerge as geometric structures
+→ transitions emerge from geometry
 
 ---
 
@@ -50,7 +51,7 @@ Evolution of system transitions in the reconstructed field.
 
 System behavior under perturbation.
 
-→ Structure persists even under noise.
+→ structure persists under noise
 
 ---
 
@@ -80,7 +81,7 @@ Continuous representation of the system landscape.
 
 # 🔑 Key Idea
 
-Different perspectives reveal the same structure:
+Different views reveal the same underlying structure:
 
 - signal → when transitions occur  
 - geometry → how structure forms  
