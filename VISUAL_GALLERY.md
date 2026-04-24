@@ -4,7 +4,7 @@ This gallery shows how NEXAH reveals structure in dynamical systems.
 
 ---
 
-# 01 - 🔁 Dynamic View
+## 01 — Field Reconstruction (IEEE)
 
 ## Field Reconstruction (IEEE)
 
@@ -28,13 +28,13 @@ Detected transition points in a chaotic system.
 
 ![IEEE Collapse](outputs/demo/nexah_ieee_collapse.png)
 
-Structural signal preceding system collapse.
+A real IEEE signal lifted into a structured dynamical field.
 
-→ Early indication of instability.
+→ raw signal → geometry → structure
 
 ---
 
-## 04 - ## Transition Dynamics
+## 04 — Transition Dynamics
 
 ![Transition Dynamics](ARCHITECTURE/CORE/field_reconstruction/dynamics/v68_v69_transition.gif)
 
