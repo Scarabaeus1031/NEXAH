@@ -112,7 +112,7 @@ Each step reveals one layer of the same underlying system.
 
 # 🧩 6. Full Structure vs Ghost Snake — Minimal Representation
 
-![Ghost Structure](./visuals/VISUAL 06_FULL_STRUCTUREvsGHOST_SNAKE.png)
+![Ghost Structure](./visuals/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png  )
 
 ### Idea
 
