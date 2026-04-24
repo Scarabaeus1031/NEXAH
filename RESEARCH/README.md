@@ -1,22 +1,18 @@
-# 🧠 NEXAH — Research (Foundational Layer)
+# 🧠 NEXAH — Research Layer
 
-![Research Architecture](./visuals/Research_Architecture_Opener.png)
+This module contains the **conceptual and structural foundation** of NEXAH.
 
-This module contains the **foundational theory and structural origin** of the NEXAH system.
+It is not a finished theory.
 
-It represents the **starting point** of the entire project:
-
-> a minimal attempt to describe **stability, transitions, and organization**  
-> using the simplest possible structural rules.
+It is a **working research layer** that captures ideas, observations, and structural patterns  
+emerging during the development of the system.
 
 ---
 
-# 🧭 Position in NEXAH
-
-The Research Layer sits at the **base of the system hierarchy**:
+# 🧭 Role in NEXAH
 
 ```text
-RESEARCH (Foundation)
+RESEARCH (Foundation & Ideas)
         ↓
 FRAMEWORK (Interpretation)
         ↓
@@ -24,222 +20,214 @@ ENGINE / DISCOVERY (Extraction)
         ↓
 FIELD_LAYER (Geometry)
         ↓
-NAVIGATOR (Control & Navigation)
+NAVIGATION (Control)
 ```
 
 ---
 
-## ⚠️ Scope
+# 🧠 Perspective
 
-This layer defines a **minimal structural framework** for reasoning about  
-stability and transitions in dynamical systems.
+NEXAH is developed from a **builder-first perspective**.
 
-It is:
+The goal is not to construct a complete theoretical description of reality,  
+but to **build systems that reveal structure in complex dynamics**.
+
+This research layer exists to:
+
+- capture emerging ideas  
+- connect observations  
+- support system development  
+
+It is **not driven by formal theory-building as a primary goal**.
+
+---
+
+# ⚙️ Development Approach
+
+The project follows a simple loop:
+
+```text
+build → observe → extract structure → refine → build
+```
+
+This means:
+
+- implementation comes first  
+- interpretation follows  
+- theory emerges gradually  
+
+---
+
+# ⚠️ Scope
+
+This module is:
 
 - not a complete physical theory  
 - not a fully formalized mathematical system  
 - not a claim of universality  
 
-It provides:
+It is:
 
-> a **conceptual and structural basis** that is empirically supported  
-> and extended in later NEXAH layers
-
----
-
-## 🔬 Theory → Field Mapping
-
-→ [theory_to_field_mapping.md](./theory_to_field_mapping.md)
-
-This document connects the abstract operators (Γ, Δ, Ω)  
-to the observed field structure in dynamical systems.
+> a **structured collection of working ideas and models**  
+> grounded in empirical system behavior
 
 ---
 
 # 🧱 Structure of This Module
 
-This research module is organized into:
+## FOUNDATION
 
-- **FOUNDATION** → axioms, operators, theoretical core  
-- **APPLIED_CASES** → concrete structural examples and interpretations  
-- **HISTORY** → evolution of ideas and development stages  
-- **visuals** → diagrams and conceptual models  
+→ `FOUNDATION/`
 
----
+Core structural assumptions:
 
-# 🔬 What This Layer Is
-
-This layer is deliberately:
-
-- **minimal**
-- **discrete**
-- **structural**
-
-It is built using basic concepts from:
-
-- finite partially ordered sets (Q, ⪯)  
-- monotone operators  
-- closure structures  
-- simple stabilization rules  
-
-It does **not** use:
-
-- geometry  
-- continuous time  
-- metrics  
-- physical assumptions  
+- axioms (A0–A4)  
+- basic operators (Γ, Δ, Ω)  
+- minimal discrete structure  
 
 ---
 
-# 🔑 Core Ideas (A0–A4)
+## FIELD MODEL
 
-The foundation rests on a small set of axioms (A0–A4).
+→ `field_model.md`
 
-From these, three key operators emerge:
+Exploratory interpretation of systems as:
 
-- **Γ (Gamma)** → closure structure  
-- **Δ (Delta)** → regime transition operator  
-- **Ω (Omega)** → stabilization projection  
+- transition fields  
+- coupled structures  
+- delayed interactions  
 
-Together they describe:
+---
 
-- how systems move between structural regimes  
-- how stability can emerge  
-- how transitions occur **without external goals or rewards**
+## FINDINGS
+
+→ `FINDINGS/`
+
+Empirical observations from experiments:
+
+- transition structure  
+- stability behavior  
+- geometry emergence  
+- noise robustness  
+
+---
+
+## APPLIED CASES
+
+→ `APPLIED_CASES/`
+
+Concrete interpretations of structure in:
+
+- urban systems  
+- engineering thresholds  
+- decision processes  
+- regime interactions  
+
+---
+
+## HISTORY
+
+→ `HISTORY/`
+
+Development timeline:
+
+- early versions (v1–v6)  
+- evolving ideas  
+- experimental directions  
+
+---
+
+## VISUALS
+
+→ `visuals/`
+
+Conceptual diagrams and structural illustrations:
+
+- regime models  
+- stability maps  
+- applied examples  
+- development sketches  
+
+---
+
+# 🔑 Core Idea
+
+Across all documents, a consistent pattern emerges:
+
+> systems are not best understood as isolated states  
+> but as **structured regions with constrained transitions**
 
 ---
 
 # 🧠 Key Insight
 
-> Stability and transition do not require geometry, energy, or control.
+> Stability is not a value.  
+> It is a **region within a structured system**.
 
-They can emerge purely from:
+Transitions:
 
-> **order, closure, and structural relationships**
-
----
-
-# 🔗 Relation to the Rest of NEXAH
-
-The Research Layer is the **root of all higher layers**.
-
-From here:
-
-- the **FRAMEWORK** introduces interpretation (coherence, risk)  
-- the **ENGINE / DISCOVERY** extracts structure from real dynamics  
-- the **FIELD_LAYER** builds geometric and continuous representations  
-- the **NAVIGATOR** enables movement and control  
+- are not random  
+- occur at specific regions  
+- follow underlying structure  
 
 ---
 
-# 🔬 Empirical Findings
+# 🔬 Relation to Implementation
 
-The abstract structural principles defined in this layer  
-have been empirically investigated in the FIELD_LAYER.
+The ideas in this module are **not directly executed**.
 
-Key observations include:
+They are:
 
-- transitions as structured, multi-phase processes  
-- emergence of geometric transition channels  
-- reduction of continuous dynamics to discrete state structures  
-- existence of energy-like landscapes governing motion  
-- convergence toward a dominant attractor  
+- interpreted  
+- tested  
+- translated  
 
-👉 Full results:
+in later layers:
 
-→ [Core Findings (V1–V40)](./FINDINGS/core_findings.md)
-
-> These findings represent a first empirical validation  
-> of the structural principles defined in A0–A4.
+- DISCOVERY ENGINE  
+- FIELD_LAYER  
+- CONTROL / NAVIGATION  
 
 ---
 
-## Important
+# ⚠️ Important
 
-The Research Layer:
+This layer should be read as:
 
-- does **not depend** on any later layers  
-- remains valid independently of geometry or dynamics  
+> a **working research notebook**, not a final theory
 
-All higher layers are:
+Some ideas are:
 
-> **extensions of this minimal structural core**
-
----
-
-# 🧪 Applied Perspective
-
-The `APPLIED_CASES/` section demonstrates:
-
-- how abstract structure maps to real systems  
-- how regimes, transitions, and stabilization appear in practice  
-- how discrete ideas connect to dynamic behavior  
+- partial  
+- exploratory  
+- not fully validated  
 
 ---
 
-# 🧠 Development History
+# 🚀 Next Steps
 
-The `HISTORY/` section contains:
-
-- earlier iterations (v1–v6)  
-- evolving interpretations  
-- experimental directions  
-
-It documents:
-
-> how the system evolved from abstraction → structure → field
+- test ideas across multiple systems  
+- refine structural operators  
+- connect discrete → geometric representations  
+- validate against real-world datasets  
 
 ---
 
-# 🚧 Current Status
-
-- ✅ Core axioms (A0–A4) defined  
-- ✅ Operators (Γ, Δ, Ω) established  
-- ✅ Structural consistency validated  
-
----
-
-## Next Steps
-
-- connect discrete operators to geometric FIELD_LAYER  
-- validate against real-world systems (e.g. power grids)  
-- clarify mapping from theory → computation  
-
----
-
-# 🔥 Final Insight
-
-The NEXAH Research Layer shows that:
-
-> complex system behavior can emerge from extremely simple structural rules
-
-Everything else in NEXAH:
-
-- geometry  
-- fields  
-- control  
-- navigation  
-
-is built on top of this foundation.
-
----
-
-# 🧠 Summary
+# 🧭 Summary
 
 The Research Layer is:
 
 - not an application  
 - not a simulation  
-- not a field model  
+- not a final theory  
 
 It is:
 
-> a **minimal structural foundation for understanding transitions and stability**
+> a **foundation of ideas emerging from building and observing systems**
 
 ---
 
 **NEXAH Research Layer**  
-From structure → to system → to navigation  
+From building → to structure → to insight  
 
-**Last Updated:** April 2026  
-© Thomas K. R. Hofmann
+© Thomas K. R. Hofmann · 2026
