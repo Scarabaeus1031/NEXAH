@@ -26,7 +26,7 @@ It provides:
 
 # 🧩 1. From Series to Structure (Intuition)
 
-![From Series to Structure](./visuals/NEXAH_LENS_on_the_ZETA_FIELD_ii.png)
+![From Series to Structure](./visuals/NEXAH_LENS_on_the_ZETA_FIELD.png)
 
 ### Idea
 
@@ -77,7 +77,7 @@ It is a structural interpretation used within NEXAH.
 ```
 # 🧠 3. NEXAH Lens on the Zeta Field
 
-![NEXAH Lens](./visuals/NEXAH_LENS_on_the_ZETA_FIELD.png)
+![NEXAH Lens](./visuals/NEXAH_LENS_on_the_ZETA_FIELD_ii.png)
 
 ---
 
