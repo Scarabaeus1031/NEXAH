@@ -54,6 +54,16 @@ Defines:
 
 ---
 
+## 🌀 Visual Gallery
+
+For a visual introduction to NEXAH:
+
+→ [Visual Gallery](visual_gallery.md)
+
+Shows how structure, transitions, and geometry emerge across different systems.
+
+---
+
 ![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
 This visualization shows a trajectory from a real IEEE power grid model.
