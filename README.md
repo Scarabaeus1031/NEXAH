@@ -26,8 +26,12 @@ Clone and run:
 
 ```bash
 pip install -e .
+# or
+pip install -r requirements.txt
+
 python run_nexah_demo.py
 ```
+
 
 ---
 
