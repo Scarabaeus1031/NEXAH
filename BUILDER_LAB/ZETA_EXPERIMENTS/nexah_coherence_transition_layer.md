@@ -1,3 +1,118 @@
+# NEXAH — Coherence Transition Layer (Build Plan)
+
+## 🎯 Goal
+
+Develop a reproducible, structure-based transition detection mechanism:
+
+> Transitions occur at coherence collapse induced by field structure
+
+---
+
+# 🧪 PHASE 1 — SIGNAL VALIDITY
+
+- [ ] signal shows clear regime separation
+- [ ] includes at least one true structural break
+- [ ] not just amplitude increase
+- [ ] stable → oscillatory → decoherent → new regime
+
+---
+
+# 📊 PHASE 2 — COHERENCE MODEL
+
+- [ ] replace lag-1 correlation
+- [ ] implement multi-lag coherence
+- [ ] test spectral coherence (FFT)
+- [ ] optional: entropy / phase variance
+
+Validation:
+
+- [ ] coherence drops significantly at transition
+- [ ] coherence stable within regimes
+
+---
+
+# 🚪 PHASE 3 — GATE DETECTION
+
+- [ ] remove simple threshold logic
+- [ ] detect sustained collapse regions
+- [ ] implement minimum duration filter
+- [ ] avoid initialization artifacts
+
+---
+
+# 📈 PHASE 4 — VISUAL VALIDATION
+
+- [ ] signal plot
+- [ ] coherence plot
+- [ ] gate overlay
+- [ ] transitions align with coherence collapse
+
+---
+
+# 🔁 PHASE 5 — MULTI-RUN VALIDATION
+
+- [ ] run ≥ 30 simulations
+- [ ] measure gate consistency
+- [ ] compute mean + variance
+- [ ] check robustness to noise
+
+---
+
+# 🧠 PHASE 6 — STRUCTURAL VALIDATION
+
+- [ ] gates align with field geometry
+- [ ] not random in time
+- [ ] reproducible across seeds
+- [ ] linked to interference structure
+
+---
+
+# 📦 PHASE 7 — MODULE READINESS
+
+To move into core system:
+
+## FIELD_LAYER candidate if:
+- [ ] coherence is field-derived
+- [ ] transitions emerge from geometry
+- [ ] no hard thresholds needed
+
+## ARCHITECTURE candidate if:
+- [ ] usable for navigation
+- [ ] enables decision-making
+- [ ] supports control / intervention
+
+## APPLICATION candidate if:
+- [ ] validated on IEEE test case
+- [ ] real data compatibility
+- [ ] measurable improvement
+
+---
+
+# 🚫 NOT ALLOWED
+
+- [ ] no symbolic explanations
+- [ ] no metaphors (tunnel, snake, etc.)
+- [ ] no unverifiable claims
+- [ ] no complexity without validation
+
+---
+
+# 🔥 SUCCESS CONDITION
+
+We can state:
+
+> Regime transitions correspond to measurable coherence collapse  
+> induced by underlying field structure
+
+---
+
+# STATUS
+
+⚠️ Currently in experimental stage (Builder Lab)
+
+Next step:
+→ implement v2 and validate collapse
+
 # NEXAH — IEEE Gate Detection (v2 PLAN)
 
 ## Status
