@@ -4,9 +4,7 @@ This gallery shows how NEXAH reveals structure in dynamical systems.
 
 ---
 
-# 01 - 
-
-# 🔁 Dynamic View
+# 01 - 🔁 Dynamic View
 
 ## Field Reconstruction (IEEE)
 
