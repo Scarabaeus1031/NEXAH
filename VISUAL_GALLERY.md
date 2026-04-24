@@ -4,16 +4,17 @@ This gallery shows how NEXAH reveals structure in dynamical systems.
 
 ---
 
-# 01 - Dynamic View
+# 01 - 
 
-## Coherence Dynamics
+# 🔁 Dynamic View
 
-![Coherence](ARCHITECTURE/visuals/output/nexah_v2_coherence.gif)
+## Field Reconstruction (IEEE)
 
-Shows alignment between motion and field.
+![Field Reconstruction](ARCHITECTURE/CORE/field_reconstruction/dynamics/ieee_1d_to_field.gif)
 
-→ Stability = alignment  
-→ collapse = transition
+Shows how a 1D signal is lifted into a structured field.
+
+→ dynamics → geometry
 
 ## 02 — Structural Transitions (Lorenz)
 
@@ -35,13 +36,13 @@ Structural signal preceding system collapse.
 
 ---
 
-## 04 - Risk / Boundary Dynamics
+## 04 - ## Transition Dynamics
 
-![Risk Field](ARCHITECTURE/visuals/output/nexah_v3_risk.gif)
+![Transition Dynamics](ARCHITECTURE/CORE/field_reconstruction/dynamics/v68_v69_transition.gif)
 
-Dynamic evolution of system risk.
+Evolution of system transitions in the reconstructed field.
 
-→ transitions emerge as geometric structure
+→ transitions emerge as geometric structures
 
 ---
 
