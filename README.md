@@ -11,11 +11,21 @@
 
 ---
 
+## ⚠️ Research Prototype
+
+NEXAH is an experimental framework for exploring structure and transitions in dynamical systems.
+
+Results are promising, but **full validation and reproducibility are ongoing**.  
+Feedback and discussion are welcome.
+
+---
+
 # 🚀 Quick Start
+
+Clone and run:
 
 ```bash
 pip install -e .
-pytest
 python run_nexah_demo.py
 ```
 
@@ -23,11 +33,9 @@ python run_nexah_demo.py
 
 ## 📊 Current System State
 
-Before diving deeper:
-
 → [SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)
 
-This document defines:
+Defines:
 
 - what is implemented  
 - what works  
@@ -38,9 +46,7 @@ This document defines:
 
 ## 🔬 Methods
 
-For a technical description of the computation:
-
-→ [METHODS.md](ARCHITECTURE/METHODS.md)  
+→ [METHODS.md](ARCHITECTURE/METHODS.md)
 
 ---
 
@@ -101,22 +107,18 @@ It is:
 
 # 🔥 Core Principle
 
-```text
 dynamics → structure → field → geometry → stability → control → navigation
-```
 
 ---
 
 # 🧭 System Architecture
 
-```text
 Dynamics  
 → Structure Extraction (Discovery phase)  
 → Field Reconstruction (CORE)  
 → Field Layer (geometry + stability)  
 → Control Layer (CORE)  
 → Navigation  
-```
 
 ---
 
@@ -157,12 +159,14 @@ Executes constrained motion through the field:
 
 # 🔥 Key Result — Power Systems (IEEE)
 
-NEXAH has been tested on real IEEE grid models (118 → 9241 buses).
+NEXAH has been tested on IEEE grid models (118 → 9241 buses).
 
-Result:
+Preliminary observation:
 
-> Voltage collapse can be detected **~43.9 seconds earlier**  
-> than classical methods — consistently across system sizes.
+> structural transition signals appear **earlier than classical failure detection methods**
+
+⚠️ Note:
+Exact timing (e.g. ~43.9s in some runs) depends on setup and is **not yet fully validated across all scenarios**.
 
 ---
 
@@ -180,10 +184,10 @@ Interpretation:
 Run:
 
 ```bash
-python -m nexah.run_nexah_demo
+python run_nexah_demo.py
 ```
 
----
+
 
 ![NEXAH Demo](outputs/demo/nexah_lorenz_transitions.png)
 
@@ -198,17 +202,20 @@ They are not random.
 They emerge from the **geometry of the dynamical field**:
 
 - trajectories follow structure  
+
 - transitions occur at specific regions  
+
 - the system reveals where change happens  
 
 ---
 
-> NEXAH does not detect events.  
->  
-> It reveals the structure that produces them.  
->  
-> It does not detect collapse.  
-> It detects the structure that leads to it.
+NEXAH does not detect events.  
+
+It reveals the structure that produces them.  
+
+It does not detect collapse.  
+
+It detects the structure that leads to it.
 
 ---
 
@@ -225,10 +232,14 @@ They emerge from the **geometry of the dynamical field**:
 # ⚡ What NEXAH enables
 
 - transition detection  
+
 - geometric interpretation  
+
 - early-warning signals  
+
 - system navigation  
-- **structure-aware control**
+
+- structure-aware control  
 
 ---
 
@@ -237,8 +248,11 @@ They emerge from the **geometry of the dynamical field**:
 ### ✔ Working
 
 - structure extraction  
+
 - regime detection  
+
 - early transition signals  
+
 - control via transition geometry  
 
 ---
@@ -246,26 +260,33 @@ They emerge from the **geometry of the dynamical field**:
 ### ⚠️ Limitations
 
 - no formal proof yet  
+
 - system-dependent performance  
+
 - ongoing validation  
 
 ---
 
 # 💡 Core Insight
 
-> Stability is not a value.  
-> It is a **region in a structured field**
+Stability is not a value.  
+
+It is a **region in a structured field**
 
 ---
 
 # 🌀 NEXAH
 
 From dynamics → structure  
+
 From structure → geometry  
+
 From geometry → stability  
+
 From stability → control  
+
 From control → navigation  
 
 ---
 
-**Thomas K. R. Hofmann · 2026**
+Thomas K. R. Hofmann · 2026
