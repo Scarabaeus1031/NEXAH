@@ -26,7 +26,7 @@ It provides:
 
 # 🧩 1. From Series to Structure (Intuition)
 
-![From Series to Structure](./visuals/NEXAH_LENS_on_the_ZETA_FIELD.png)
+![From Series to Structure](./visuals/NEXAH_LENS_on_the_ZETA_FIELD_ii.png)
 
 ### Idea
 
