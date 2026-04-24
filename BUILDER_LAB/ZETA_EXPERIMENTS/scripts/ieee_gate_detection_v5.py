@@ -6,7 +6,7 @@ from scipy.stats import entropy
 np.random.seed(42)
 
 # --------------------------------------------------
-# 1. SIGNAL GENERATION (clear regimes)
+# 1. SIGNAL GENERATION
 # --------------------------------------------------
 def generate_signal(t):
     x = np.zeros_like(t)
@@ -14,22 +14,19 @@ def generate_signal(t):
     for i, ti in enumerate(t):
 
         if ti < 30:
-            # stable
             x[i] = 0.3 * np.sin(0.5 * ti)
 
         elif ti < 75:
-            # oscillatory structured
             x[i] = (1 + 0.02 * ti) * np.sin(1.5 * ti)
 
         else:
-            # chaotic / decoherence
             x[i] = np.random.normal(0, 1.0)
 
     return x
 
 
 # --------------------------------------------------
-# 2. COHERENCE (multi-lag autocorrelation)
+# 2. COHERENCE (multi-lag)
 # --------------------------------------------------
 def coherence(signal, window=20, max_lag=5):
     C = np.zeros(len(signal))
@@ -46,16 +43,14 @@ def coherence(signal, window=20, max_lag=5):
                 corr = np.corrcoef(s1, s2)[0, 1]
                 corrs.append(abs(corr))
 
-        if len(corrs) > 0:
+        if corrs:
             C[i] = np.mean(corrs)
-        else:
-            C[i] = 0
 
     return C
 
 
 # --------------------------------------------------
-# 3. SPECTRAL ENTROPY (structure vs noise)
+# 3. SPECTRAL ENTROPY
 # --------------------------------------------------
 def spectral_entropy(signal, fs=1.0, window=40):
     S = np.zeros(len(signal))
@@ -65,9 +60,9 @@ def spectral_entropy(signal, fs=1.0, window=40):
 
         f, Pxx = welch(segment, fs=fs, nperseg=len(segment))
         Pxx = Pxx + 1e-12
-        Pxx_norm = Pxx / np.sum(Pxx)
+        Pxx /= np.sum(Pxx)
 
-        S[i] = entropy(Pxx_norm)
+        S[i] = entropy(Pxx)
 
     return S
 
@@ -76,13 +71,17 @@ def spectral_entropy(signal, fs=1.0, window=40):
 # 4. ADAPTIVE THRESHOLDS
 # --------------------------------------------------
 def adaptive_thresholds(C, S):
-    C_thr = np.percentile(C[np.nonzero(C)], 20)   # low coherence
-    S_thr = np.percentile(S[np.nonzero(S)], 80)   # high entropy
+    C_valid = C[C > 0]
+    S_valid = S[S > 0]
+
+    C_thr = np.percentile(C_valid, 20)
+    S_thr = np.percentile(S_valid, 80)
+
     return C_thr, S_thr
 
 
 # --------------------------------------------------
-# 5. GATE DETECTION (combined condition)
+# 5. GATE DETECTION (FIXED)
 # --------------------------------------------------
 def detect_gates(C, S, C_thr, S_thr, min_duration=5):
 
@@ -103,14 +102,15 @@ def detect_gates(C, S, C_thr, S_thr, min_duration=5):
                 gates.append((start, i))
             active = False
 
+    # 🔧 FIX: End-Gate korrekt behandeln
     if active:
-        gates.append((start, len(mask)))
+        gates.append((start, len(mask) - 1))
 
     return gates, mask
 
 
 # --------------------------------------------------
-# 6. PRECURSOR (early instability)
+# 6. PRECURSOR
 # --------------------------------------------------
 def detect_precursor(C):
     dC = np.gradient(C)
@@ -122,7 +122,7 @@ def detect_precursor(C):
 
 
 # --------------------------------------------------
-# 7. RUN EXPERIMENT
+# 7. RUN
 # --------------------------------------------------
 t = np.linspace(0, 100, 1000)
 
@@ -136,16 +136,17 @@ gates, mask = detect_gates(C, S, C_thr, S_thr)
 
 precursor_idx = detect_precursor(C)
 
+
 # --------------------------------------------------
 # 8. VISUALIZATION
 # --------------------------------------------------
 fig, axs = plt.subplots(4, 1, figsize=(12, 10), sharex=True)
 
-# --- signal
+# --- SIGNAL
 axs[0].plot(t, x)
 axs[0].set_title("System Dynamics x(t)")
 
-# --- coherence
+# --- COHERENCE
 axs[1].plot(t, C, label="C(t)")
 axs[1].axhline(C_thr, linestyle='--', label="C threshold")
 
@@ -153,13 +154,15 @@ if precursor_idx is not None:
     axs[1].axvline(t[precursor_idx], color='orange', label="precursor")
 
 axs[1].set_title("Coherence")
+axs[1].legend()
 
-# --- spectral entropy
-axs[2].plot(t, S, label="S(t)")
+# --- ENTROPY
+axs[2].plot(t, S, label="Entropy S(t)")
 axs[2].axhline(S_thr, linestyle='--', label="entropy threshold")
 axs[2].set_title("Spectral Entropy")
+axs[2].legend()
 
-# --- gates
+# --- GATES
 axs[3].set_title("Gate Detection")
 
 for g in gates:
@@ -167,14 +170,11 @@ for g in gates:
 
 axs[3].set_ylim(0, 1)
 
-# legends
-for ax in axs:
-    ax.legend()
-
 plt.tight_layout()
 
 output_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v5.png"
 plt.savefig(output_path)
+
 
 # --------------------------------------------------
 # 9. LOGGING
@@ -184,12 +184,17 @@ print("\n--- NEXAH IEEE Gate Detection v5 ---")
 print(f"Coherence threshold: {C_thr:.3f}")
 print(f"Entropy threshold: {S_thr:.3f}")
 
-if precursor_idx:
+if precursor_idx is not None:
     print(f"Precursor at t ≈ {t[precursor_idx]:.2f}")
 
 print(f"Detected gates: {len(gates)}")
 
 for g in gates:
     print(f"Gate: t = {t[g[0]]:.2f} → {t[g[1]]:.2f}")
+
+# 🔥 Zusatz: Persistent Regime Detection
+for g in gates:
+    if g[1] >= len(t) - 1:
+        print("⚠️ Persistent regime (no recovery)")
 
 print(f"\nSaved to: {output_path}")
