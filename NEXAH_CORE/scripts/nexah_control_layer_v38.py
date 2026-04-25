@@ -1,16 +1,18 @@
+# ============================================================
+# NEXAH CONTROL LAYER v38 (FIXED)
+# Structure-Aware Return Dynamics
+# ============================================================
+
 import numpy as np
 from scipy.ndimage import gaussian_filter
 from scipy.interpolate import RegularGridInterpolator
 
 
-# ============================================================
-# NEXAH CONTROL LAYER v38
-# Structure-Aware Return Dynamics
-# ============================================================
-
+# ------------------------------------------------------------
+# Phase Embedding
+# ------------------------------------------------------------
 
 def phase_embedding(x, dt=1.0):
-    """Convert signal x(t) into state s=(r, theta)."""
     dx = np.gradient(x, dt)
 
     r = np.sqrt(x**2 + dx**2)
@@ -19,8 +21,11 @@ def phase_embedding(x, dt=1.0):
     return r, theta
 
 
+# ------------------------------------------------------------
+# Density Field
+# ------------------------------------------------------------
+
 def build_density_field(r, theta, bins=80, sigma=1.5):
-    """Estimate rho(r, theta) by smoothed histogram."""
     rho, r_edges, th_edges = np.histogram2d(
         r,
         theta,
@@ -34,11 +39,14 @@ def build_density_field(r, theta, bins=80, sigma=1.5):
     r_centers = 0.5 * (r_edges[:-1] + r_edges[1:])
     th_centers = 0.5 * (th_edges[:-1] + th_edges[1:])
 
-    return rho, r_centers, th_centers
+    return rho, r_centers, th_centers, r_edges, th_edges
 
+
+# ------------------------------------------------------------
+# Gradient
+# ------------------------------------------------------------
 
 def gradient_field(field, r_grid, theta_grid):
-    """Compute numerical gradient of a scalar field."""
     dr = np.mean(np.diff(r_grid))
     dtheta = np.mean(np.diff(theta_grid))
 
@@ -47,21 +55,24 @@ def gradient_field(field, r_grid, theta_grid):
     return grad_r, grad_theta
 
 
+# ------------------------------------------------------------
+# Interpolator
+# ------------------------------------------------------------
+
 def make_interpolator(field, r_grid, theta_grid):
-    """Create interpolator for field lookup."""
     return RegularGridInterpolator(
         (r_grid, theta_grid),
         field,
         bounds_error=False,
-        fill_value=None
+        fill_value=0.0
     )
 
 
-def estimate_ridge_distance(rho, r_grid, theta_grid):
-    """
-    Approximate ridge distance D.
-    Ridge = high-density cells above 90th percentile.
-    """
+# ------------------------------------------------------------
+# Ridge Distance
+# ------------------------------------------------------------
+
+def estimate_ridge_distance(rho):
     threshold = np.percentile(rho, 90)
     ridge_points = np.argwhere(rho >= threshold)
 
@@ -80,16 +91,27 @@ def estimate_ridge_distance(rho, r_grid, theta_grid):
     return D
 
 
-def estimate_iota_probability(r, theta, dr_dtheta, r_grid, theta_grid, bins=80):
-    """
-    Estimate P(IOTA | r, theta).
-    IOTA = high |dr/dtheta| event.
-    """
+# ------------------------------------------------------------
+# Flow derivative
+# ------------------------------------------------------------
+
+def compute_flow_derivative(r, theta):
+    dr = np.gradient(r)
+    dtheta = np.gradient(theta)
+
+    return dr / (dtheta + 1e-9)
+
+
+# ------------------------------------------------------------
+# IOTA Probability (FIXED)
+# ------------------------------------------------------------
+
+def estimate_iota_probability(r, theta, dr_dtheta, r_edges, theta_edges):
     threshold = np.percentile(np.abs(dr_dtheta), 98)
     iota = np.abs(dr_dtheta) > threshold
 
-    total, _, _ = np.histogram2d(r, theta, bins=[r_grid, theta_grid])
-    events, _, _ = np.histogram2d(r[iota], theta[iota], bins=[r_grid, theta_grid])
+    total, _, _ = np.histogram2d(r, theta, bins=[r_edges, theta_edges])
+    events, _, _ = np.histogram2d(r[iota], theta[iota], bins=[r_edges, theta_edges])
 
     P = events / (total + 1e-9)
     P = gaussian_filter(P, sigma=1.5)
@@ -97,13 +119,9 @@ def estimate_iota_probability(r, theta, dr_dtheta, r_grid, theta_grid, bins=80):
     return P
 
 
-def compute_flow_derivative(r, theta):
-    """Compute dr/dtheta."""
-    dr = np.gradient(r)
-    dtheta = np.gradient(theta)
-
-    return dr / (dtheta + 1e-9)
-
+# ------------------------------------------------------------
+# Control Step
+# ------------------------------------------------------------
 
 def control_step(
     s,
@@ -117,16 +135,6 @@ def control_step(
     delta=1.0,
     eta=0.02
 ):
-    """
-    V38 control law:
-
-    u =
-    - alpha ∇P
-    + beta  ∇rho
-    - gamma ∇G
-    - delta ∇D
-    """
-
     point = np.array([s])
 
     grad_P = np.array([
@@ -159,26 +167,28 @@ def control_step(
     return s + eta * u, u
 
 
+# ------------------------------------------------------------
+# MAIN PIPELINE
+# ------------------------------------------------------------
+
 def run_v38_control(x, dt=1.0, bins=80):
-    """Full NEXAH v38 pipeline."""
 
     r, theta = phase_embedding(x, dt)
     dr_dtheta = compute_flow_derivative(r, theta)
 
-    rho, r_grid, theta_grid = build_density_field(r, theta, bins=bins)
+    rho, r_grid, theta_grid, r_edges, theta_edges = build_density_field(r, theta, bins=bins)
 
     G = 1.0 / rho
     G = G / np.max(G)
 
-    D = estimate_ridge_distance(rho, r_grid, theta_grid)
+    D = estimate_ridge_distance(rho)
 
     P = estimate_iota_probability(
         r,
         theta,
         dr_dtheta,
-        r_grid,
-        theta_grid,
-        bins=bins
+        r_edges,
+        theta_edges
     )
 
     grad_rho = gradient_field(rho, r_grid, theta_grid)
@@ -223,9 +233,6 @@ def run_v38_control(x, dt=1.0, bins=80):
         controlled.append(s_new)
         controls.append(u)
 
-    controlled = np.array(controlled)
-    controls = np.array(controls)
-
     return {
         "r": r,
         "theta": theta,
@@ -233,16 +240,16 @@ def run_v38_control(x, dt=1.0, bins=80):
         "G": G,
         "D": D,
         "P_IOTA": P,
-        "controlled": controlled,
-        "controls": controls,
+        "controlled": np.array(controlled),
+        "controls": np.array(controls),
         "r_grid": r_grid,
         "theta_grid": theta_grid,
     }
 
 
-# ============================================================
+# ------------------------------------------------------------
 # TEST RUN
-# ============================================================
+# ------------------------------------------------------------
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
@@ -257,22 +264,17 @@ if __name__ == "__main__":
 
     result = run_v38_control(x, dt=t[1] - t[0])
 
-    r = result["r"]
-    theta = result["theta"]
-    controlled = result["controlled"]
-
     plt.figure(figsize=(8, 8))
-    plt.scatter(theta, r, s=2, alpha=0.35, label="original")
+    plt.scatter(result["theta"], result["r"], s=2, alpha=0.3, label="original")
     plt.scatter(
-        controlled[:, 1],
-        controlled[:, 0],
+        result["controlled"][:, 1],
+        result["controlled"][:, 0],
         s=2,
-        alpha=0.35,
+        alpha=0.3,
         label="v38 controlled"
     )
+    plt.legend()
     plt.xlabel("theta")
     plt.ylabel("r")
-    plt.title("NEXAH Control Layer v38 — Inhale Dynamics")
-    plt.legend()
-    plt.tight_layout()
+    plt.title("NEXAH v38 Control (Fixed)")
     plt.show()
