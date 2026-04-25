@@ -1,310 +1,421 @@
-# 🧪 NEXAH — Zeta Experiments (Builder Lab)
-
-This module contains **experimental scripts and generated outputs**  
-exploring how structure, instability, and transitions emerge in dynamical systems.
+# 🧭 NEXAH — Gate Detection & Field Navigation System  
+## Module: Coherence Transition Layer
 
 ---
 
-## ⚠️ Scope
+# 🌍 What this module is about (Big Picture)
 
-This module:
+This module is NOT just signal analysis.
 
-- does **not** claim new mathematics  
-- does **not** address the Riemann Hypothesis  
-- does **not** represent a validated physical theory  
+It is a prototype of a new system class:
 
-It is:
-
-> a **computational exploration layer** connecting  
-> rotation → interference → structure → geometry → phase → transitions → instability
+> **Field-based navigation of dynamical stability**
 
 ---
 
-# 🧭 Core Idea
+## 🧠 Core Idea
 
-Across all experiments, a consistent pipeline emerges:
+A system does not collapse randomly.
 
-Rotation  
-→ Interference  
-→ Emergent structure  
-→ Coherence & entropy  
-→ Geometry  
-→ Phase  
-→ Layered dynamics (sheets)  
-→ Mode switching  
-→ Gate formation  
+It moves through a structured state space:
+
+```
+stable regions
+→ transition corridors
+→ instability zones
+→ collapse
+```
 
 ---
 
-# 📂 Structure
+## 🔥 What we are building
 
-## Scripts
+```
+Signal
+→ State space (r, θ)
+→ Structure (density, ridges, sheets)
+→ Risk field P(IOTA)
+→ Transition detection
+→ Navigation layer
+→ (next: Control system)
+```
 
-scripts/
+---
 
-- zeta_nexah_demo.py  
-- zeta_nexah_bridge.py  
-- zeta_nexah_bridge_vii.py  
-- V7_lense_scaffold.py  
-- ieee_gate_detection_v2 → v14  
-- ieee_gate_detection_v10_phase_radius_map.py  
-- ieee_gate_detection_v11_vector_field.py  
-- ieee_gate_detection_v12_steering.py  
-- ieee_gate_detection_v13_sheets.py  
-- ieee_gate_detection_v14_sheet_tracking.py  
+## 🎯 Final Goal
+
+```
+Detect transitions
+Predict transitions
+Navigate around transitions
+Control system stability
+```
+
+---
+
+## 🔑 Core Insight
+
+```
+Instability is not noise
+
+Instability is geometry
+```
+
+---
+
+# 🔬 System Representation
+
+---
+
+## State Embedding
+
+r = √(x² + ẋ²)  
+θ = atan2(ẋ, x)
+
+---
+
+## Fields
+
+Density:
+```
+ρ(r, θ)
+```
+
+Greyspace:
+```
+G = 1 / ρ
+```
+
+Risk:
+```
+P(IOTA | r, θ)
+```
+
+---
+
+## Structures
+
+Detected:
+
+- ridges (stable manifolds)
+- sheets (flow layers)
+- clusters (post-transition structure)
+
+---
+
+## Events
+
+IOTA:
+```
+high derivative + structural escape
+```
+
+---
+
+# 🚪 Transition Model
+
+```
+Transition =
+entry into low-density region
++ loss of directional coherence
++ interaction of competing structures
+```
+
+---
+
+# 🧭 Navigation Layer (v34–v37)
+
+---
+
+## 🔹 v34 — Gradient Steering
+
+```
+move away from high-risk regions
+```
+
+→ works locally  
+→ fails globally  
+
+---
+
+## 🔹 v35 — Target Navigation
+
+```
+repel (risk)
++ attract (target)
+```
+
+→ introduces direction  
+
+---
+
+## 🔹 v36 — Adaptive Targets
+
+```
+targets follow local structure
+```
+
+Result:
+
+- ~5% risk reduction  
+- smoother trajectories  
+
+---
+
+### 📊 Reference Visual (V36)
+
+![v36](outputs/ieee_gates/v36_adaptive_target_trajectory.png)
+
+---
+
+## 🔹 v37 — Structure-Aware Navigation
+
+```
+follow structural anchors
+```
+
+Result:
+
+- lower raw optimization  
+- higher structural coherence  
+
+---
+
+### 📊 Reference Visual (V37)
+
+![v37](outputs/ieee_gates/v37_structure_trajectory.png)
+
+---
+
+## 💡 Key Insight
+
+```
+Best path ≠ lowest risk
+
+Best path = structure-consistent motion
+```
+
+---
+
+# 🧠 What we are learning
+
+---
+
+## 1. Transitions are spatial
+
+```
+NOT time-based
+BUT state-based
+```
+
+---
+
+## 2. Instability forms corridors
+
+```
+system enters instability regions
+before collapse
+```
+
+---
+
+## 3. Collapse happens at boundaries
+
+```
+structure breaks along edges
+```
+
+---
+
+## 4. Motion is discrete
+
+Observed:
+
+- loops
+- chains
+- polygon-like patterns
+
+---
+
+## 5. Navigation requires balance
+
+```
+avoid risk
++ follow structure
+```
+
+---
+
+# ⚠️ What is still missing
+
+---
+
+## 🔴 Critical gap
+
+```
+INHALE / RETURN DYNAMICS
+```
+
+Current:
+
+```
+push away from danger
+```
+
+Missing:
+
+```
+pull back into stability
+```
+
+---
+
+## 🔴 No memory yet
+
+System does not remember:
+
+- stable regions  
+- past trajectories  
+
+---
+
+## 🔴 No global policy
+
+Only:
+
+```
+local steering
+```
+
+Needed:
+
+```
+global navigation strategy
+```
+
+---
+
+# 🚀 Where this is going
+
+---
+
+## Next phase (v38+)
+
+```
+u =
+- ∇P(IOTA)
++ ∇A_stable
+```
+
+---
+
+## Goal
+
+```
+stable oscillatory motion
+inside safe manifold
+```
+
+---
+
+# 📊 Applications
+
+- power grids  
+- climate systems  
+- financial dynamics  
+- biological systems  
+
+---
+
+# 🧭 How to use this module
+
+---
+
+## Run scripts
+
+```
+python BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v3x_*.py
+```
 
 ---
 
 ## Outputs
 
-outputs/
-
-- zeta_demo/  
-- zeta_bridge/  
-- ieee_gates/  
-- lens/  
-
-Contains all generated visualizations:
-
-- signal dynamics  
-- phase-space structures  
-- gate detection  
-- vector fields  
-- sheet reconstruction  
-- switching behavior  
+```
+outputs/ieee_gates/
+```
 
 ---
 
-# 🔬 Experiment Types
+## What to look at
 
-## 1. Zeta Demo
+### Field
+```
+where is instability located?
+```
 
-Focus:
+### Trajectory
+```
+how does the system move?
+```
 
-- rotating contributions  
-- interference trajectories  
-- emergence of structure  
-
----
-
-## 2. Zeta Bridge
-
-Focus:
-
-- mapping interference → spatial structure  
-- projection into system-like representations  
-- clustering & symmetry  
+### Risk
+```
+is stability improving?
+```
 
 ---
 
-## 3. IEEE Gate Detection (Evolving System)
-
-Focus evolved across versions:
-
-### Early stages
-- coherence signal C(t)  
-- entropy S(t)  
-- threshold-based gates  
-
-### Mid stages
-- geometry G(t)  
-- phase θ  
-- clustering  
-
-### Advanced stages
-- phase-radius field (r, θ)  
-- probability fields  
-- vector flow field  
-- sheet reconstruction  
-- mode switching  
+# 🧠 Conceptual Shift
 
 ---
 
-## 4. Lens Scaffold
+## Before
 
-Focus:
-
-- multi-perspective projections  
-- consistency of structure  
-- structural invariants  
+```
+detect collapse after it happens
+```
 
 ---
 
-# 🧠 Key Observations
+## Now
 
-## 1. Structure emerges from rotation
-
-- simple rotation → interference  
-- interference → geometry  
-
----
-
-## 2. Transitions are NOT time-driven
-
-Transition ≠ f(t)
-
-Instead:
-
-Transition = f(state)
+```
+navigate the space before collapse
+```
 
 ---
 
-## 3. Instability is geometric
+# 🔥 Final Statement
 
-- orbit expands  
-- structure breaks  
-- collapse follows  
+```
+We are not analyzing signals.
 
----
-
-## 4. Gates are phase-dependent
-
-P(gate | θ) is NOT constant
+We are mapping and navigating
+the field in which collapse occurs.
+```
 
 ---
 
-## 5. Phase space is layered
+# 📍 Status
 
-Core → orbit  
-Intermediate → oscillation  
-Outer → instability  
-Beyond → noise  
+```
+Field + Navigation COMPLETE
 
-Refined:
-
-> phase space consists of multiple overlapping sheets
+Next:
+Control layer
+```
 
 ---
 
-## 6. Gates form structured clusters
+# 🧭 One-Line Summary
 
-- ~88 gate points  
-- consistent clustering  
-
-Status:
-
-> observed pattern (not yet derived)
+```
+NEXAH turns dynamical systems
+into navigable stability fields
+```
 
 ---
 
-## 7. Instability appears in bursts
-
-- not uniform  
-- clustered in time  
-
----
-
-## 8. Phase ↔ frequency link
-
-- lattice patterns  
-- Fourier-like structure  
-
----
-
-## 9. Mode switching drives instability (v14)
-
-Observed:
-
-- system switches between sheets  
-- switching rate rises before collapse  
-
-Interpretation:
-
-> instability ≈ high switching rate  
-
----
-
-## 10. Gates occur at sheet intersections
-
-Observed:
-
-- gate points align with sheet intersections  
-
-Interpretation:
-
-> Gate = intersection of incompatible flow directions  
-
----
-
-## 11. Collapse mechanism
-
-Multiple dynamics coexist:
-
-- different flow directions  
-- conflict between them  
-
-Result:
-
-→ switching  
-→ instability  
-→ collapse  
-
----
-
-# 🔗 Relation to NEXAH
-
-Concept Layer  
-↓  
-ZETA_EXPERIMENTS  
-↓  
-Discovery Engine  
-↓  
-Field Layer  
-↓  
-Navigation Layer  
-
----
-
-# ⚙️ Development Status
-
-| Component | Status |
-|----------|--------|
-| Zeta demo | working |
-| Bridge mapping | exploratory |
-| Gate detection | advanced prototype |
-| Phase analysis | working |
-| Geometry layer | working |
-| Sheet model | experimental |
-| Switching detection | new |
-| Steering/control | experimental |
-
----
-
-# 🚧 Next Steps
-
-- derive P(gate | r, θ)  
-- extend to include sheet transitions  
-- build transition matrix  
-- test across systems  
-- validate invariance  
-
----
-
-# 📌 Important
-
-This module is:
-
-> an experimental builder layer  
-
-NOT:
-
-> a finalized theory  
-
----
-
-# 🧭 Summary
-
-Rotation  
-→ Interference  
-→ Structure  
-→ Geometry  
-→ Phase  
-→ Sheets  
-→ Switching  
-→ Instability  
-→ Collapse  
-
----
-
-**NEXAH Builder Lab**  
-From computation → to structure → to dynamics → to insight
+© Thomas K. R. Hofmann  
+NEXAH — 2026
