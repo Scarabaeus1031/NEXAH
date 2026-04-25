@@ -316,7 +316,7 @@ predict AND steer transitions
 
 # 🧭 Final Summary
 
-´´´text
+```text
 Signal
 → Oscillation
 → Phase Structure
