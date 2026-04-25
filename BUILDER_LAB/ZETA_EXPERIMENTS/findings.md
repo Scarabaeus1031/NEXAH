@@ -9,7 +9,7 @@ This document summarizes the **core findings** from the NEXAH gate detection exp
 
 Focus:
 
-Signal → Coherence → Entropy → Geometry → Phase → Structure → Gates
+Signal → Coherence → Entropy → Geometry → Phase → Structure → Gates → Switching
 
 NOT:
 - implementation details
@@ -44,7 +44,7 @@ $$
 
 Measured:
 
-- coherence $$C(t)$$ drops
+- coherence $C(t)$ drops
 - before entropy rises
 
 $$
@@ -94,7 +94,7 @@ $$
 
 Observed:
 
-- gates cluster at specific $$\theta$$
+- gates cluster at specific $\theta$
 - NOT uniformly distributed
 
 Formal statement:
@@ -131,7 +131,7 @@ Possible meanings:
 
 ---
 
-# 🔹 Finding 6 — Phase space is layered
+# 🔹 Finding 6 — Phase space is layered (Sheet Structure)
 
 Observed structure:
 
@@ -140,11 +140,13 @@ Intermediate → oscillatory regime
 Outer → gate zone  
 Beyond → stochastic collapse  
 
-> System is not uniform — it has layers
+Refined interpretation (v13–v14):
 
-Transitions occur at:
+> Phase space decomposes into multiple overlapping dynamical layers ("sheets")
 
-> layer boundaries
+Each sheet represents:
+
+> a locally coherent flow regime
 
 ---
 
@@ -183,7 +185,68 @@ $$
 
 ---
 
-# 🔹 Minimal Model (Emerging)
+# 🔹 Finding 9 — Instability = Mode Switching (v14)
+
+New observation:
+
+- system trajectory moves between multiple sheets
+- switching rate increases sharply before collapse
+
+Measured:
+
+- low switching → stable regime  
+- high switching density → instability  
+
+Formal interpretation:
+
+$$
+\text{Instability} \propto \frac{d}{dt}(\text{sheet index})
+$$
+
+or qualitatively:
+
+> Instability occurs when the system rapidly switches between incompatible dynamical regimes
+
+---
+
+# 🔹 Finding 10 — Gates occur at Sheet Intersections
+
+Observed:
+
+- gate points align with intersections of sheets in phase space
+- these correspond to regions of conflicting flow directions
+
+Interpretation:
+
+> Gate = intersection of incompatible flow manifolds
+
+More precisely:
+
+> A gate occurs when multiple dynamical trajectories compete locally
+
+---
+
+# 🔹 Finding 11 — Collapse is driven by incompatible dynamics
+
+Refined core mechanism:
+
+- multiple sheets coexist
+- each defines a local flow direction
+- system becomes unstable when:
+
+$$
+v_1(x) \neq v_2(x)
+$$
+
+and both are active
+
+Result:
+
+> directional conflict → switching → instability → collapse
+
+---
+
+# 🔹 Minimal Model (Updated)
 
 $$
 \text{Gate Condition} =
@@ -191,20 +254,18 @@ $$
 C(t) < C_{crit} \\
 S(t) > S_{crit} \\
 G(t) > G_{crit} \\
-\theta \in \Theta_{critical}
+\theta \in \Theta_{critical} \\
+\text{switching rate high}
 \end{cases}
 $$
 
-Interpretation:
-
-> A gate occurs when structure collapses, randomness rises, geometry expands, and phase is critical
-
 ---
 
-# 🔹 Core Insight
+# 🔹 Core Insight (Updated)
 
 > Transitions are not random failures  
-> They are structured events in phase space
+> They are structured, phase-locked, geometry-driven events  
+> amplified by rapid switching between incompatible dynamical regimes
 
 ---
 
@@ -213,6 +274,7 @@ Interpretation:
 $$
 \text{Transition} =
 \text{Phase-Locked Structural Collapse}
++ \text{Mode Switching Instability}
 $$
 
 ---
@@ -226,13 +288,29 @@ Next steps:
   P(\text{gate} \mid r, \theta)
   $$
 
+- extend to:
+  $$
+  P(\text{gate} \mid r, \theta, \text{sheet transitions})
+  $$
+
+- build transition matrix:
+  $$
+  P(\text{sheet}_i \rightarrow \text{sheet}_j)
+  $$
+
 - identify invariant structures  
-- test on real-world systems  
+- test on real-world systems (power grids, markets, biological systems)
 
 ---
 
 # 🧭 Summary
 
-Structure → Phase → Geometry → Instability → Collapse
+Structure  
+→ Phase  
+→ Geometry  
+→ Sheets  
+→ Switching  
+→ Instability  
+→ Collapse
 
 ---
