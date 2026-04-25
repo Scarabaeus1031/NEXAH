@@ -1,3 +1,524 @@
+
+# 🧭 NEXAH — Coherence Transition Layer  
+## Build Plan (Updated after v37)
+
+---
+
+# 🧠 RESUME — What has been achieved
+
+The system has evolved from signal analysis to **field-based navigation of dynamical systems**.
+
+Originally:
+> detect transitions via coherence collapse
+
+Now:
+
+We have identified a **multi-layer structural + probabilistic transition mechanism with navigation capability**.
+
+---
+
+# 🔹 UPDATED CORE DISCOVERIES
+
+---
+
+## 1. Transitions are state-based, not time-based
+
+Transition ≠ f(t)  
+Transition = f(state)
+
+---
+
+## 2. Instability is geometric
+
+- orbit expands  
+- structure deforms  
+- collapse follows  
+
+> Collapse = geometric failure of trajectory
+
+---
+
+## 3. Gates are phase-locked
+
+$$
+P(\text{gate} \mid \theta) \neq \text{const}
+$$
+
+> Instability depends on position in the cycle
+
+---
+
+## 4. Phase space is layered (sheet structure)
+
+Observed:
+
+```text
+Core → stable orbit  
+Mid → oscillatory layer  
+Outer → instability region  
+```
+
+Refined:
+
+> interacting dynamical sheets
+
+---
+
+## 5. Gates occur at structural conflicts
+
+→ sheet intersections  
+→ incompatible flow directions  
+
+---
+
+## 6. Instability is switching-driven
+
+- system jumps between sheets  
+- switching density rises before collapse  
+
+---
+
+## 7. Collapse mechanism (refined)
+
+Collapse is:
+
+```text
+loss of consistency between competing flow structures
+```
+
+---
+
+## 🔥 EXTENDED CORE MODEL (v1 → v31)
+
+```text
+Transition =
+phase-locked
++ geometric expansion
++ sheet interaction
++ switching instability
+```
+
+---
+
+# 🔹 NEW DISCOVERIES (v32 → v37)
+
+---
+
+## 8. Transition occurs via Greyspace
+
+$$
+G(r,\theta) = 1/\rho
+$$
+
+Observed:
+
+- greyspace rises BEFORE IOTA  
+- IOTA follows low-density regions  
+
+---
+
+### Insight
+
+```text
+Transition = movement through low-density corridors
+```
+
+---
+
+## 9. Collapse occurs along boundaries
+
+Observed:
+
+```text
+boundary collapse >> gap escape
+```
+
+---
+
+### Insight
+
+```text
+system breaks ALONG structure, not into emptiness
+```
+
+---
+
+## 10. Instability is a continuous field
+
+$$
+P(\text{IOTA} \mid r, \theta)
+$$
+
+---
+
+### Insight
+
+```text
+IOTA is not an event
+It is a probability field
+```
+
+---
+
+## 11. Local avoidance is insufficient
+
+Gradient steering (v34):
+
+```text
+avoid risk → local improvement
+but no global stability
+```
+
+---
+
+### Insight
+
+```text
+system needs guidance, not just repulsion
+```
+
+---
+
+## 12. Navigation requires dual forces
+
+(v35)
+
+```text
+repel (risk)
++ attract (target)
+```
+
+---
+
+### Insight
+
+```text
+stable motion = guided flow
+```
+
+---
+
+## 13. Adaptive targets reduce instability
+
+(v36)
+
+```text
+~5% risk reduction
+```
+
+---
+
+### Insight
+
+```text
+following local structure improves stability
+```
+
+---
+
+## 14. Optimal motion ≠ minimal risk
+
+(v37)
+
+```text
+less risk reduction (~2.4%)
+but more coherent trajectories
+```
+
+---
+
+### Insight
+
+```text
+structure-consistent motion is more physical
+than purely optimal avoidance
+```
+
+---
+
+## 15. Motion is discrete (anchor-based)
+
+Observed:
+
+- loops  
+- chains  
+- polygon-like structures  
+- mirrored “bays”  
+
+---
+
+### Insight
+
+```text
+trajectory = sequence of structural anchors
+```
+
+---
+
+# 🔥 UPDATED MASTER MODEL
+
+```text
+System =
+trajectory moving through
+
+- probability field (P(IOTA))
+- geometric structure (ridges)
+- low-density gaps (greyspace)
+- local attractors (anchors)
+```
+
+---
+
+## 🔥 NEW CORE STATEMENT
+
+```text
+Transition =
+failure to remain anchored in stable structure
+while moving through a probabilistic instability field
+```
+
+---
+
+# 🎯 UPDATED GOAL
+
+Build a **structure-aware navigation system**:
+
+```text
+detect
+predict
+and CONTROL transitions
+```
+
+---
+
+# 🧪 PHASE STATUS
+
+---
+
+## ✅ PHASE 1 — SIGNAL VALIDITY
+
+✔ done
+
+---
+
+## ⚠️ PHASE 2 — COHERENCE MODEL
+
+✔ basic  
+❗ missing:
+
+- [ ] multi-scale coherence  
+- [ ] phase coherence  
+- [ ] sheet coupling  
+
+---
+
+## ⚠️ PHASE 3 — GATE DETECTION
+
+✔ clustering  
+✔ phase-locking  
+✔ probabilistic field  
+
+❗ next:
+
+- [ ] topology-based detection  
+- [ ] sheet linkage  
+
+---
+
+## ⚠️ PHASE 4 — FIELD REPRESENTATION
+
+✔ (r, θ)  
+✔ vector field  
+✔ P(IOTA)  
+
+❗ next:
+
+- [ ] invariant structures  
+- [ ] manifold learning  
+
+---
+
+## ⚠️ PHASE 5 — SHEET MODEL
+
+✔ detected  
+❗ next:
+
+- [ ] formal definition  
+- [ ] dimensionality  
+- [ ] stability metrics  
+
+---
+
+## ⚠️ PHASE 6 — SWITCHING
+
+✔ measured  
+❗ next:
+
+- [ ] operator definition  
+- [ ] transition matrix  
+
+---
+
+## ⚠️ PHASE 7 — VALIDATION
+
+- [ ] cross-run invariance  
+- [ ] statistical robustness  
+- [ ] real data  
+
+---
+
+## ⚠️ PHASE 8 — NAVIGATION (ACTIVE)
+
+✔ gradient steering  
+✔ target navigation  
+✔ adaptive targets  
+✔ structure-aware steering  
+
+❗ next:
+
+- [ ] memory (stable attractors)  
+- [ ] return dynamics (inhale)  
+- [ ] trajectory smoothing  
+- [ ] policy optimization  
+
+---
+
+# 🔥 CRITICAL MISSING PIECE
+
+```text
+INHALE DYNAMICS
+```
+
+Current:
+
+```text
+repel from risk
+```
+
+Missing:
+
+```text
+return to stable structure
+```
+
+---
+
+# 🧭 PHASE 9 — NEXT (v38+)
+
+```text
+Dual Field Navigation:
+
+u =
+- ∇P(IOTA)
++ ∇A_stable
+```
+
+---
+
+## Goal
+
+```text
+stable oscillatory trajectories
+inside safe manifold
+```
+
+---
+
+# 📦 PHASE 10 — SYSTEM INTEGRATION
+
+Field layer if:
+
+✔ geometry-driven  
+✔ no thresholds  
+✔ probabilistic  
+
+Architecture if:
+
+✔ controllable  
+✔ predictive  
+✔ stable  
+
+---
+
+# 🚫 CONSTRAINTS
+
+- no symbolic reasoning as proof  
+- no uncontrolled complexity  
+- no narrative over data  
+
+---
+
+# 🔥 SUCCESS CONDITION (UPDATED)
+
+```text
+We can steer a system
+
+through instability regions
+
+while maintaining structural coherence
+```
+
+---
+
+# 🧭 FINAL TRAJECTORY
+
+```text
+v1–v5   → signal
+v6–v9   → geometry
+v10–v12 → field
+v13–v14 → sheets + switching
+v27–v31 → structure + greyspace + geometry
+v32–v33 → minimal + probabilistic model
+v34–v37 → navigation layer
+
+next:
+v38+ → stable control
+```
+
+---
+
+# 📍 STATUS
+
+```text
+Builder Lab → Transition complete
+
+Now entering:
+CONTROL PHASE
+```
+
+---
+
+# 🧠 META INSIGHT (FINAL)
+
+```text
+This is not signal processing
+
+This is navigation in a dynamical field
+```
+
+---
+
+# 🧭 SUMMARY
+
+```text
+Structure
+→ Geometry
+→ Phase
+→ Sheets
+→ Switching
+→ Greyspace
+→ Probability field
+→ Navigation
+→ Control (next)
+```
+
+---
+
+Last updated: April 2026  
+© Thomas K. R. Hofmann
+
+
+
 # 🧭 NEXAH — Coherence Transition Layer  
 ## Build Plan (Updated after v14)
 
