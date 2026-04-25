@@ -1131,3 +1131,285 @@ We are mapping:
 ```
 
 ---
+# 🔷 NEXAH — Minimal Transition Model (V32)
+
+---
+
+## 📍 Goal
+
+Define a **minimal, reproducible, structure-based transition model**.
+
+---
+
+# 🧠 Core Idea
+
+A dynamical system does not collapse randomly.
+
+A transition occurs when the system enters a structurally unstable region in state space.
+
+---
+
+# 🔹 State Representation
+
+We embed the system into phase space:
+
+$$
+r(t) = \sqrt{x^2 + \dot{x}^2}
+$$
+
+$$
+\theta(t) = \arctan2(\dot{x}, x)
+$$
+
+State:
+
+$$
+s(t) = (r(t), \theta(t))
+$$
+
+---
+
+# 🔹 Derived Quantities
+
+## 1. Flow (local dynamics)
+
+$$
+\frac{dr}{d\theta}
+$$
+
+---
+
+## 2. Density field
+
+Estimate local density:
+
+$$
+\rho(r, \theta)
+$$
+
+---
+
+## 3. Greyspace (instability proxy)
+
+$$
+G(r, \theta) = \frac{1}{\rho(r, \theta)}
+$$
+
+Interpretation:
+
+```text
+Low density → unstable region
+High density → stable manifold
+```
+
+---
+
+## 4. Ridge (structure)
+
+Define ridge as:
+
+$$
+\text{ridge} = \{ (r, \theta) \mid \rho(r, \theta) \text{ is locally maximal} \}
+$$
+
+---
+
+## 5. Ridge distance
+
+$$
+D(r, \theta) = \text{distance to nearest ridge point}
+$$
+
+---
+
+# 🔹 Event Definition
+
+## IOTA (transition event)
+
+An IOTA occurs when:
+
+$$
+\left| \frac{dr}{d\theta} \right| > \tau
+$$
+
+where:
+
+- τ = high percentile threshold (e.g. 98%)
+
+---
+
+# 🔹 IOTA Classification
+
+Each IOTA is classified using:
+
+- Greyspace score
+- Ridge distance
+
+---
+
+## Boundary Collapse
+
+$$
+G \leq G_c \quad \text{and/or} \quad D \leq D_c
+$$
+
+Interpretation:
+
+```text
+System breaks along structure boundary
+```
+
+---
+
+## Gap Escape
+
+$$
+G > G_c \quad \text{and} \quad D > D_c
+$$
+
+Interpretation:
+
+```text
+System escapes into low-density region
+```
+
+---
+
+# 🔹 Transition Mechanism
+
+A full transition is not a single event.
+
+It is a process:
+
+```text
+1. Density decreases (ρ ↓)
+2. Greyspace increases (G ↑)
+3. Flow destabilizes (|dr/dθ| ↑)
+4. IOTA events occur
+5. System leaves ridge structure
+6. New structure forms
+```
+
+---
+
+# 🔹 Formal Transition Condition
+
+A transition region exists where:
+
+$$
+G(r, \theta) \text{ is high}
+$$
+
+AND
+
+$$
+\left| \frac{dr}{d\theta} \right| \text{ is high}
+$$
+
+AND
+
+$$
+D(r, \theta) \text{ is non-zero}
+$$
+
+---
+
+# 🔹 Interpretation
+
+```text
+Transition =
+entry into low-density region
++ loss of directional coherence
++ separation from structural manifold
+```
+
+---
+
+# 🔹 System View
+
+The system is:
+
+```text
+a trajectory moving on a structured manifold
+with regions of instability (gaps)
+and structural attractors (ridges)
+```
+
+---
+
+# 🔹 Key Insight
+
+```text
+Instability is not noise
+
+Instability is geometry
+```
+
+---
+
+# 🔹 Minimal Pipeline
+
+```text
+Signal x(t)
+→ Phase embedding (r, θ)
+→ Density field ρ
+→ Greyspace G
+→ Ridge detection
+→ Ridge distance D
+→ Flow derivative dr/dθ
+→ IOTA detection
+→ IOTA classification
+```
+
+---
+
+# 🔹 What this model does NOT assume
+
+- no specific system physics  
+- no predefined thresholds (except statistical τ)  
+- no symbolic interpretation  
+
+---
+
+# 🔹 What this model enables
+
+- transition detection  
+- early warning (via Greyspace)  
+- structural interpretation  
+- potential trajectory steering  
+
+---
+
+# 🔹 Status
+
+```text
+Minimal working model (empirical)
+
+✔ reproducible
+✔ interpretable
+⚠ not yet formally proven
+```
+
+---
+
+# 🔹 Next Step (V33)
+
+```text
+Replace thresholds with continuous fields:
+
+P(IOTA | r, θ)
+
+→ probabilistic transition model
+```
+
+---
+
+# 🔹 Final Statement
+
+```text
+A system does not collapse.
+
+It leaves the manifold on which it was stable.
+```
+
+---
