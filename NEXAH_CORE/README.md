@@ -1,61 +1,93 @@
-# 🧭 NEXAH — Gate Detection & Field Navigation System  
-## Module: Coherence Transition Layer
+# 🧭 NEXAH — Field-Based Stability Navigation
 
 ---
 
-# 🌍 What this module is about (Big Picture)
+## 🌍 What is NEXAH?
 
-This module is NOT just signal analysis.
+NEXAH is a system for:
 
-It is a prototype of a new system class:
-
-> **Field-based navigation of dynamical stability**
+```text
+detecting, understanding, and navigating
+transitions in complex dynamical systems
+```
 
 ---
 
 ## 🧠 Core Idea
 
-A system does not collapse randomly.
+A system does not fail randomly.
 
-It moves through a structured state space:
-
+```text
+It moves through a structured state space
+and becomes unstable only in specific regions.
 ```
-stable regions
-→ transition corridors
-→ instability zones
-→ collapse
+
+NEXAH maps this space and enables:
+
+```text
+→ early detection of instability  
+→ structural understanding  
+→ active navigation toward stability  
 ```
 
 ---
 
-## 🔥 What we are building
+## 🔥 What makes NEXAH different?
 
+Traditional approaches:
+
+```text
+thresholds → alerts → reaction
 ```
+
+NEXAH:
+
+```text
+state space → structure → fields → navigation
+```
+
+---
+
+## 🎯 System Capability
+
+### Today
+
+```text
+✔ detect transitions early  
+✔ identify instability regions  
+✔ explain system behavior structurally  
+```
+
+---
+
+### With navigation layer
+
+```text
+✔ steer system away from instability  
+✔ guide trajectories through stable regions  
+✔ reduce collapse probability  
+```
+
+---
+
+## 🧬 Conceptual Model
+
+```text
 Signal
-→ State space (r, θ)
-→ Structure (density, ridges, sheets)
+→ Phase space (r, θ)
+→ Density field
+→ Greyspace (instability regions)
+→ Structural ridges (stable manifolds)
+→ IOTA events (transition points)
 → Risk field P(IOTA)
-→ Transition detection
-→ Navigation layer
-→ (next: Control system)
+→ Navigation field
 ```
 
 ---
 
-## 🎯 Final Goal
+## 🧭 Core Insight
 
-```
-Detect transitions
-Predict transitions
-Navigate around transitions
-Control system stability
-```
-
----
-
-## 🔑 Core Insight
-
-```
+```text
 Instability is not noise
 
 Instability is geometry
@@ -63,332 +95,124 @@ Instability is geometry
 
 ---
 
-# 🔬 System Representation
+## 📁 Project Structure
 
----
-
-## State Embedding
-
-r = √(x² + ẋ²)  
-θ = atan2(ẋ, x)
-
----
-
-## Fields
-
-Density:
-```
-ρ(r, θ)
-```
-
-Greyspace:
-```
-G = 1 / ρ
-```
-
-Risk:
-```
-P(IOTA | r, θ)
-```
-
----
-
-## Structures
-
-Detected:
-
-- ridges (stable manifolds)
-- sheets (flow layers)
-- clusters (post-transition structure)
-
----
-
-## Events
-
-IOTA:
-```
-high derivative + structural escape
+```text
+NEXAH/
+│
+├── README.md                 ← this file
+│
+├── NEXAH_CORE/              ← main system
+│   │
+│   ├── mathematics/
+│   │   └── nexah_foundation.md
+│   │
+│   ├── scripts/
+│   │   ├── ieee_gate_detection_v27_iota_state_model.py
+│   │   ├── ieee_gate_detection_v28_yugo_flow_iota_coupling.py
+│   │   ├── ieee_gate_detection_v29_yugo_iota_predictor.py
+│   │   ├── ieee_gate_detection_v30_iota_typing.py
+│   │   ├── ieee_gate_detection_v31_shape_extraction.py
+│   │   ├── ieee_gate_detection_v32_mini_transition_model.py
+│   │   ├── ieee_gate_detection_v33_probalistic_iota_field.py
+│   │   ├── ieee_gate_detection_v34_gradient_steering.py
+│   │   ├── ieee_gate_detection_v35_target_navigation.py
+│   │   ├── ieee_gate_detection_v36_adaptive_target_navigation.py
+│   │   └── ieee_gate_detection_v37_structure_aware_steering.py
+│   │
+│   ├── outputs/
+│   │   └── ieee_gates/
+│   │       ├── v36_adaptive_target_trajectory.png
+│   │       ├── v37_structure_trajectory.png
+│   │       └── ...
+│   │
+│   └── findings.md
+│
+├── BUILDER_LAB/             ← experimental / legacy
+│   └── zeta_legacy/
+│
 ```
 
 ---
 
-# 🚪 Transition Model
+## 📊 Example Output
 
-```
-Transition =
-entry into low-density region
-+ loss of directional coherence
-+ interaction of competing structures
+### Adaptive Navigation (V36)
+
+![v36](NEXAH_CORE/outputs/ieee_gates/v36_adaptive_target_trajectory.png)
+
+---
+
+### Structure-Aware Navigation (V37)
+
+![v37](NEXAH_CORE/outputs/ieee_gates/v37_structure_trajectory.png)
+
+---
+
+## 🔬 Mathematical Foundation
+
+Core definitions:
+
+
+- state: $begin:math:text$ s\(t\) \= \(r\, \\theta\) $end:math:text$
+- density: $begin:math:text$ \\rho\(r\, \\theta\) $end:math:text$
+- greyspace: $begin:math:text$ G \= 1 \/ \\rho $end:math:text$
+- risk field: $begin:math:text$ P\(\\text\{IOTA\} \| r\, \\theta\) $end:math:text$
+
+Full formulation:
+
+```text
+NEXAH_CORE/mathematics/nexah_foundation.md
 ```
 
 ---
 
-# 🧭 Navigation Layer (v34–v37)
+## 🧭 Navigation Layer
 
----
+The system defines a control field:
 
-## 🔹 v34 — Gradient Steering
-
-```
-move away from high-risk regions
-```
-
-→ works locally  
-→ fails globally  
-
----
-
-## 🔹 v35 — Target Navigation
-
-```
-repel (risk)
-+ attract (target)
-```
-
-→ introduces direction  
-
----
-
-## 🔹 v36 — Adaptive Targets
-
-```
-targets follow local structure
-```
-
-Result:
-
-- ~5% risk reduction  
-- smoother trajectories  
-
----
-
-### 📊 Reference Visual (V36)
-
-![v36](outputs/ieee_gates/v36_adaptive_target_trajectory.png)
-
----
-
-## 🔹 v37 — Structure-Aware Navigation
-
-```
-follow structural anchors
-```
-
-Result:
-
-- lower raw optimization  
-- higher structural coherence  
-
----
-
-### 📊 Reference Visual (V37)
-
-![v37](outputs/ieee_gates/v37_structure_trajectory.png)
-
----
-
-## 💡 Key Insight
-
-```
-Best path ≠ lowest risk
-
-Best path = structure-consistent motion
-```
-
----
-
-# 🧠 What we are learning
-
----
-
-## 1. Transitions are spatial
-
-```
-NOT time-based
-BUT state-based
-```
-
----
-
-## 2. Instability forms corridors
-
-```
-system enters instability regions
-before collapse
-```
-
----
-
-## 3. Collapse happens at boundaries
-
-```
-structure breaks along edges
-```
-
----
-
-## 4. Motion is discrete
-
-Observed:
-
-- loops
-- chains
-- polygon-like patterns
-
----
-
-## 5. Navigation requires balance
-
-```
-avoid risk
-+ follow structure
-```
-
----
-
-# ⚠️ What is still missing
-
----
-
-## 🔴 Critical gap
-
-```
-INHALE / RETURN DYNAMICS
-```
-
-Current:
-
-```
-push away from danger
-```
-
-Missing:
-
-```
-pull back into stability
-```
-
----
-
-## 🔴 No memory yet
-
-System does not remember:
-
-- stable regions  
-- past trajectories  
-
----
-
-## 🔴 No global policy
-
-Only:
-
-```
-local steering
-```
-
-Needed:
-
-```
-global navigation strategy
-```
-
----
-
-# 🚀 Where this is going
-
----
-
-## Next phase (v38+)
-
-```
+```math
 u =
 - ∇P(IOTA)
-+ ∇A_stable
++ ∇T
++ ∇ρ
+```
+
+Interpretation:
+
+```text
+avoid instability
++ move toward stable regions
++ follow structural geometry
 ```
 
 ---
 
-## Goal
+## 🌍 Applications
 
-```
-stable oscillatory motion
-inside safe manifold
+- power grid stability  
+- financial systems  
+- climate tipping points  
+- biological dynamics  
+
+---
+
+## 🚀 Status
+
+```text
+✔ Field model
+✔ Transition detection
+✔ Structural analysis
+✔ Navigation (prototype)
+
+→ Next: Control layer
 ```
 
 ---
 
-# 📊 Applications
+## 🧠 Final Statement
 
-- power grids  
-- climate systems  
-- financial dynamics  
-- biological systems  
-
----
-
-# 🧭 How to use this module
-
----
-
-## Run scripts
-
-```
-python NEXAH_CORE/scripts/ieee_gate_detection_v3x_*.py
-```
-
----
-
-## Outputs
-
-```
-outputs/ieee_gates/
-```
-
----
-
-## What to look at
-
-### Field
-```
-where is instability located?
-```
-
-### Trajectory
-```
-how does the system move?
-```
-
-### Risk
-```
-is stability improving?
-```
-
----
-
-# 🧠 Conceptual Shift
-
----
-
-## Before
-
-```
-detect collapse after it happens
-```
-
----
-
-## Now
-
-```
-navigate the space before collapse
-```
-
----
-
-# 🔥 Final Statement
-
-```
+```text
 We are not analyzing signals.
 
 We are mapping and navigating
@@ -397,25 +221,6 @@ the field in which collapse occurs.
 
 ---
 
-# 📍 Status
-
-```
-Field + Navigation COMPLETE
-
-Next:
-Control layer
-```
-
----
-
-# 🧭 One-Line Summary
-
-```
-NEXAH turns dynamical systems
-into navigable stability fields
-```
-
----
-
 © Thomas K. R. Hofmann  
 NEXAH — 2026
+
