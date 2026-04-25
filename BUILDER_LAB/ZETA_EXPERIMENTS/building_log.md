@@ -1413,3 +1413,366 @@ It leaves the manifold on which it was stable.
 ```
 
 ---
+
+---
+
+# 🔹 v33: Probabilistic IOTA Field
+
+## Idea
+
+Replace hard thresholds with a continuous field:
+
+$$
+P(\text{IOTA} \mid r, \theta)
+$$
+
+---
+
+## Visual
+
+![v33](outputs/ieee_gates/v33_probabilistic_iota_field.png)
+
+---
+
+## Observations
+
+- smooth probability distribution instead of binary events  
+- IOTA regions become **spatial “bubbles”**  
+- clear separation between:
+  - stable orbit
+  - transition cloud  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+IOTA is not an event.
+
+IOTA is a probability field in state space.
+```
+
+---
+
+## Interpretation
+
+```text
+System moves through gradients of instability
+NOT discrete jump points
+```
+
+---
+
+# 🔹 v34: Gradient Steering (First Navigation Layer)
+
+## Idea
+
+Use gradient of risk field:
+
+$$
+u(r, \theta) = -\nabla P(\text{IOTA})
+$$
+
+---
+
+## Visuals
+
+![v34-field](outputs/ieee_gates/v34_gradient_field.png)  
+![v34-traj](outputs/ieee_gates/v34_steered_trajectory.png)
+
+---
+
+## Observations
+
+- system is pushed away from high-risk zones  
+- trajectory visibly deflects  
+- but remains unstable globally  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Avoiding risk locally is NOT sufficient
+```
+
+---
+
+## Interpretation
+
+```text
+System needs guidance, not just repulsion
+```
+
+---
+
+# 🔹 v35: Target Field (Directed Navigation)
+
+## Idea
+
+Introduce global target:
+
+```text
+safe region = center of stable manifold
+```
+
+Combine:
+
+```text
+risk avoidance + target attraction
+```
+
+---
+
+## Visuals
+
+![v35-field](outputs/ieee_gates/v35_target_field.png)  
+![v35-traj](outputs/ieee_gates/v35_target_navigation.png)
+
+---
+
+## Observations
+
+- trajectory becomes more coherent  
+- direction emerges  
+- still unstable under noise  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Navigation requires BOTH:
+
+repulsion (risk)
++ attraction (target)
+```
+
+---
+
+## Interpretation
+
+```text
+System begins to behave like a guided flow
+```
+
+---
+
+# 🔹 v36: Adaptive Target Field
+
+## Idea
+
+Replace static target with dynamic targets:
+
+```text
+local low-risk regions = moving attractors
+```
+
+---
+
+## Visuals
+
+![v36-field](outputs/ieee_gates/v36_adaptive_target_field.png)  
+![v36-traj](outputs/ieee_gates/v36_adaptive_target_trajectory.png)  
+![v36-risk](outputs/ieee_gates/v36_risk_comparison.png)
+
+---
+
+## Results
+
+```text
+Mean original risk: 0.6345
+Mean steered risk:  0.6027
+Reduction: ~5%
+```
+
+---
+
+## Observations
+
+- adaptive targets follow structure  
+- trajectory becomes smoother  
+- system avoids some IOTA zones  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Local structure-aware navigation reduces risk measurably
+```
+
+---
+
+## Interpretation
+
+```text
+System learns to move ALONG the field, not against it
+```
+
+---
+
+# 🔹 v37: Structure-Aware Steering
+
+## Idea
+
+Add structural constraint:
+
+```text
+follow ridge topology + avoid risk
+```
+
+---
+
+## Visuals
+
+![v37-field](outputs/ieee_gates/v37_structure_field.png)  
+![v37-traj](outputs/ieee_gates/v37_structure_trajectory.png)  
+![v37-risk](outputs/ieee_gates/v37_risk_comparison.png)
+
+---
+
+## Results
+
+```text
+Mean original risk: 0.6345
+Mean steered risk:  0.6193
+Reduction: ~2.4%
+```
+
+---
+
+## Observations
+
+- trajectory aligns with structural contours  
+- visible “loop / chain / polygon” patterns emerge  
+- motion follows discrete anchor points  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Optimal navigation is NOT minimal risk.
+
+It is STRUCTURE-CONSISTENT motion.
+```
+
+---
+
+## Interpretation
+
+What appears visually as:
+
+```text
+chains / nonagons / loops / mirrored bays
+```
+
+is formally:
+
+```text
+discrete attractor segments + transition links
+```
+
+---
+
+## Deeper Finding
+
+```text
+System does not move continuously.
+
+It hops between structural anchors.
+```
+
+---
+
+# 🔹 Unified Insight (v33 → v37)
+
+We now have:
+
+```text
+PROBABILITY FIELD  → P(IOTA)
+GRADIENT FIELD     → risk avoidance
+TARGET FIELD       → directed motion
+ADAPTIVE TARGETS   → local structure following
+STRUCTURE FIELD    → ridge topology constraint
+```
+
+---
+
+# 🔥 Major Breakthrough (Navigation Layer)
+
+```text
+Transition is not avoided.
+
+It is NAVIGATED.
+```
+
+---
+
+# 🔹 Key Tradeoff Discovered
+
+```text
+Efficiency (risk minimization)
+vs
+Structure fidelity (stable motion)
+```
+
+---
+
+## Interpretation
+
+- V36 → aggressive avoidance (better reduction)  
+- V37 → structure-aligned motion (more stable, less reduction)  
+
+---
+
+# 🔹 Updated System View
+
+```text
+Trajectory =
+movement through
+
+- risk gradients
+- structural ridges
+- local attractor anchors
+```
+
+---
+
+# 🔹 Updated Final Insight
+
+```text
+Instability is a field
+Structure is a constraint
+Navigation is a balance between both
+```
+
+---
+
+# 🔹 NEXT STEP (v38)
+
+```text
+Add memory + return flow:
+
+repel (risk)
++ attract (structure memory)
+
+→ stable oscillatory navigation
+```
+
+---
+
+## Final Statement (Extended)
+
+```text
+We are no longer detecting collapse.
+
+We are:
+
+learning how systems move
+through stability and instability
+as structured flows.
+```
+
+---
