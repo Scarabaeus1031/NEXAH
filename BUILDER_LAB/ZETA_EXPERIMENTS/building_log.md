@@ -325,14 +325,426 @@ Signal
 → Collapse
 ```
 
+# 🔹 v10: Phase–Radius Field (r, θ)
 
+## Idea
 
+Extend phase-only view → full state coordinates:
 
+$$
+r(t) = \sqrt{x^2 + \dot{x}^2}, \quad
+\theta(t) = \arctan2(\dot{x}, x)
+$$
 
+---
 
+## Visual
+![v10](outputs/ieee_gates/ieee_gate_detection_v10_phase_radius.png)
 
+---
 
+## Insight
 
+```text
+State is not 1D (time)
+State is 2D (radius + phase)
+```
 
+Observed:
 
+- two dominant vertical structures (“columns”)
+- low-radius band near θ ≈ 0
+- sparse outer regions
 
+---
+
+## 🔥 Critical Finding
+
+$$
+P(\text{gate} \mid r, \theta) \neq P(\text{gate} \mid \theta)
+$$
+
+```text
+Gate probability depends on BOTH phase AND energy level
+```
+
+---
+
+# 🔹 v11: Flow Field (State Dynamics)
+
+## Idea
+
+Compute motion in state space:
+
+$$
+\frac{dr}{dt}, \quad \frac{d\theta}{dt}
+$$
+
+---
+
+## Visual
+![v11](outputs/ieee_gates/ieee_gate_detection_v11_vector_field.png)
+
+---
+
+## Interpretation
+
+This is a **vector field**:
+
+```text
+Each point (r, θ) has a direction of motion
+```
+
+---
+
+## Insight
+
+System structure emerges:
+
+```text
+Stable region → circular flow (orbit)
+Transition zone → diverging flow
+Collapse → chaotic flow
+```
+
+---
+
+## 🔥 Key Concept
+
+```text
+System does not jump → it flows
+```
+
+Transitions are:
+
+```text
+trajectories through instability regions
+```
+
+---
+
+# 🔹 v12: Steering + Risk Field
+
+## Idea
+
+Define risk:
+
+$$
+P(\text{gate} \mid r, \theta)
+$$
+
+Use it for control.
+
+---
+
+## Visuals
+
+### System + Control
+![v12-control](outputs/ieee_gates/ieee_gate_detection_v12_control_steering.png)
+
+### Risk Field
+![v12-risk](outputs/ieee_gates/ieee_gate_detection_v12_risk_field.png)
+
+---
+
+## Observations
+
+### 1. Control works locally
+
+```text
+Geometry reduced slightly
+G: 2.946 → 2.799
+```
+
+BUT:
+
+```text
+Global behavior mostly unchanged
+```
+
+---
+
+### 2. Risk Field Structure
+
+Observed:
+
+```text
+Two dominant gate columns
+```
+
+Interpretation:
+
+```text
+System has preferred transition channels
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Gates are NOT random events
+Gates are regions in state space
+```
+
+---
+
+# 🔹 Field Interpretation (Unified)
+
+System behaves like:
+
+```text
+Orbit → expansion → instability corridor → collapse
+```
+
+More formally:
+
+```text
+dynamical system on a curved manifold
+with structured instability regions
+```
+
+---
+
+# 🔹 Geometry of Transition
+
+From v10–v12:
+
+We now have:
+
+- position → $(r, \theta)$
+- motion → $(dr/dt, d\theta/dt)$
+- risk → $P(\text{gate} \mid r, \theta)$
+
+---
+
+## This forms:
+
+```text
+STATE SPACE + FLOW + RISK FIELD
+```
+
+---
+
+# 🔹 Major Conceptual Shift
+
+Before:
+
+```text
+Detect collapse AFTER it happens
+```
+
+Now:
+
+```text
+Navigate system BEFORE collapse
+```
+
+---
+
+# 🔹 Interpretation of “Two Columns”
+
+Your observation:
+
+```text
+two pillars / Lorenz-like structure
+```
+
+Formal version:
+
+```text
+multi-attractor-like geometry
+with transition channel between them
+```
+
+---
+
+## Analogy
+
+- Lorenz attractor → 2 lobes
+- Here → 2 phase-energy corridors
+
+---
+
+# 🔹 Why Control is still weak
+
+Current control:
+
+```text
+reactive (event-based)
+local (point correction)
+```
+
+System behavior:
+
+```text
+trajectory-based (continuous flow)
+```
+
+---
+
+## Missing Piece
+
+```text
+trajectory steering instead of point correction
+```
+
+---
+
+# 🔹 What is STILL missing
+
+## 1. Gradient-Based Navigation
+
+We need:
+
+$$
+u(r, \theta) = -\nabla P(\text{gate})
+$$
+
+```text
+System actively moves away from risk zones
+```
+
+---
+
+## 2. Attractor Detection
+
+Find:
+
+```text
+stable orbit regions
+unstable saddle regions
+transition corridors
+```
+
+---
+
+## 3. Global Policy
+
+Instead of:
+
+```text
+if gate → act
+```
+
+We need:
+
+```text
+always steer system through safe regions
+```
+
+---
+
+## 4. Memory / Hysteresis
+
+System likely has:
+
+```text
+history dependence
+```
+
+→ not yet modeled
+
+---
+
+## 5. Multi-Dimensional Extension
+
+Current:
+
+```text
+(x, dx/dt)
+```
+
+Future:
+
+```text
+high-dimensional grid / network states
+```
+
+---
+
+# 🔹 Where this leads (IMPORTANT)
+
+This is no longer:
+
+```text
+signal analysis
+```
+
+This is becoming:
+
+```text
+a navigation system for dynamical fields
+```
+
+---
+
+## Target Architecture
+
+```text
+Simulation
+→ State embedding (r, θ)
+→ Flow field
+→ Risk field
+→ Navigation policy
+→ Controlled trajectory
+```
+
+---
+
+# 🔹 Final Insight (v1 → v12)
+
+```text
+Instability is not noise
+Instability is geometry
+```
+
+---
+
+# 🧭 Updated Final Summary
+
+```text
+Signal
+→ Oscillation
+→ Phase structure
+→ Energy layer (r)
+→ Flow field
+→ Risk field
+→ Transition corridors
+→ Navigable system
+```
+
+---
+
+# 🔹 NEXT TARGET (v13+)
+
+```text
+Full trajectory steering
+```
+
+Goal:
+
+```text
+keep system inside stable manifold
+```
+
+---
+
+# 🔹 Long-Term Vision
+
+This can generalize to:
+
+- power grid stability
+- climate tipping points
+- biological systems
+- neural dynamics
+
+---
+
+## Final Statement
+
+```text
+We are no longer detecting collapse.
+
+We are mapping and navigating the space in which collapse occurs.
+```
