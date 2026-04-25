@@ -748,3 +748,386 @@ We are no longer detecting collapse.
 
 We are mapping and navigating the space in which collapse occurs.
 ```
+
+---
+
+# 🔹 v27: State Layer (THETA / TAO / DAO / IOTA)
+
+## Idea
+
+Discretize phase space into structural states:
+
+```text
+THETA → stable oscillation core  
+TAO   → boundary layer  
+DAO   → expanded / unstable region  
+IOTA  → escape / discontinuity event
+```
+
+## Visuals
+
+![v27-state](outputs/ieee_gates/v27_phase_state_map.png)  
+![v27-iota](outputs/ieee_gates/v27_iota_events.png)  
+![v27-time](outputs/ieee_gates/v27_state_time.png)
+
+---
+
+## Insight
+
+```text
+System is not continuous → it moves through discrete regimes
+```
+
+Observed:
+
+- clean separation pre/post transition
+- IOTA = rare but high-impact events
+- DAO dominates post-transition
+
+---
+
+## 🔥 Critical Finding
+
+```text
+Transitions are state transitions, not just geometric expansion
+```
+
+---
+
+# 🔹 v28: YUGO Direction (Flow Orientation)
+
+## Idea
+
+Introduce directional field:
+
+$$
+\text{YUGO} = \arctan2\left(\frac{dr}{d\theta}, \frac{d\theta}{dt}\right)
+$$
+
+---
+
+## Visuals
+
+![v28-angle](outputs/ieee_gates/v28_yugo_angle_time.png)  
+![v28-flow](outputs/ieee_gates/v28_yugo_state_flow.png)  
+![v28-local](outputs/ieee_gates/v28_iota_local_windows.png)
+
+---
+
+## Observations
+
+- pre-transition → stable oscillatory direction
+- post-transition → chaotic angular scattering
+
+---
+
+## 🔥 Critical Insight
+
+```text
+IOTA events are directional breaks in flow
+```
+
+NOT just:
+
+```text
+large derivative
+```
+
+BUT:
+
+```text
+loss of directional coherence
+```
+
+---
+
+# 🔹 v29: Greyscape (Pre-IOTA Warning Field)
+
+## Idea
+
+Invert density:
+
+$$
+\text{Greyspace} = \frac{1}{\rho(r, \theta)}
+$$
+
+→ detect low-density regions (structural gaps)
+
+---
+
+## Visuals
+
+![v29-score](outputs/ieee_gates/v29_greyspace_iota_score_time.png)  
+![v29-phase](outputs/ieee_gates/v29_greyspace_phase_map.png)  
+![v29-windows](outputs/ieee_gates/v29_pre_iota_warning_windows.png)
+
+---
+
+## Observations
+
+- clear score jump at transition
+- IOTA events cluster AFTER greyspace rise
+- warnings appear BEFORE IOTA
+
+---
+
+## Metrics
+
+```text
+Mean lead time:   ~12 steps
+Median lead time: ~5 steps
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Greyspace = early warning signal for structural escape
+```
+
+---
+
+## Interpretation
+
+```text
+System does not collapse randomly
+It enters a low-density corridor first
+```
+
+---
+
+# 🔹 v30: IOTA Typing (Gap vs Boundary)
+
+## Idea
+
+Classify IOTA events using:
+
+- Greyspace score
+- Distance to structural ridge
+
+---
+
+## Visual
+
+![v30](outputs/ieee_gates/v30_iota_types.png)
+
+---
+
+## Result
+
+```text
+GAP_ESCAPE:        0
+BOUNDARY_COLLAPSE: 20
+```
+
+---
+
+## Insight
+
+```text
+All IOTA events occur on structure boundaries
+NOT inside free gaps
+```
+
+---
+
+## 🔥 Critical Finding
+
+```text
+System does NOT jump into emptiness
+
+It breaks along structural edges
+```
+
+---
+
+## Interpretation
+
+- ridges = attractor remnants
+- IOTA = failure of boundary stability
+- collapse propagates along structure
+
+---
+
+# 🔹 v31: Shape Extraction (Clusters + Geometry)
+
+## Idea
+
+Extract geometric structures from state cloud:
+
+- clustering (DBSCAN)
+- triangulation (Delaunay)
+
+---
+
+## Visual
+
+![v31](outputs/ieee_gates/v31_shape_extraction.png)
+
+---
+
+## Observations
+
+- one dominant post-transition cluster
+- clear internal triangulation structure
+- latent geometric connections appear
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Post-transition state space is NOT random
+
+It has hidden geometric structure
+```
+
+---
+
+## Interpretation
+
+What you observed visually:
+
+```text
+points → align → form shapes → triangles → bundles
+```
+
+Formal version:
+
+```text
+emergent geometric manifold with internal connectivity
+```
+
+---
+
+## Your Observation (VERY IMPORTANT)
+
+> "unsichtbare sphere", "kleiner Wagen", "Dreiecke"
+
+Translated:
+
+```text
+localized geometric attractors inside chaotic region
+```
+
+---
+
+## Hypothesis
+
+```text
+System reorganizes after transition into:
+
+local micro-attractors
++
+connection geometry between them
+```
+
+---
+
+# 🔹 Unified Insight (v27 → v31)
+
+We now have:
+
+```text
+STATE        → (THETA / TAO / DAO / IOTA)
+FLOW         → YUGO direction
+STRUCTURE    → ridge + density field
+GAP FIELD    → greyspace
+EVENT TYPES  → boundary vs gap
+GEOMETRY     → clusters + triangulation
+```
+
+---
+
+# 🔥 Major Breakthrough
+
+```text
+Collapse is not a single event
+
+It is a STRUCTURED PROCESS:
+
+1. density drops (greyspace)
+2. direction breaks (YUGO)
+3. boundary weakens (ridge distance)
+4. system escapes (IOTA)
+5. new structure forms (clusters)
+```
+
+---
+
+# 🔹 Updated Architecture
+
+```text
+Simulation
+→ (r, θ)
+→ Flow field
+→ Density field
+→ Greyspace field
+→ Ridge structure
+→ IOTA detection
+→ IOTA typing
+→ Shape extraction
+```
+
+---
+
+# 🔹 Updated Final Insight
+
+```text
+Instability is geometry
+Transition is navigation through gaps
+Collapse is structured reconfiguration
+```
+
+---
+
+# 🧭 Updated Summary (v1 → v31)
+
+```text
+Signal
+→ Oscillation
+→ Phase structure
+→ Energy layer (r)
+→ Flow field
+→ Risk field
+→ State regimes
+→ Directional breaks
+→ Greyspace gaps
+→ Boundary collapse
+→ Geometric reorganization
+```
+
+---
+
+# 🔹 NEXT STEP (v32+)
+
+```text
+Trajectory steering using:
+
+- greyspace gradient
+- ridge avoidance
+- YUGO stabilization
+```
+
+Goal:
+
+```text
+guide system AROUND collapse corridors
+```
+
+---
+
+# 🔹 Final Statement (Updated)
+
+```text
+We are no longer detecting collapse.
+
+We are mapping:
+
+- where it forms
+- how it emerges
+- and how to navigate around it.
+```
+
+---
