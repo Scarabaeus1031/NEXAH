@@ -104,6 +104,108 @@ Instead of detecting isolated failures, NEXAH identifies:
 
 ---
 
+## 🧭 Structure-Aware Transition Field
+
+![NEXAH Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+
+This visualization shows:
+
+```text
+Left  → stable oscillatory regime  
+Center → transition boundary  
+Right → structured instability field  
+```
+
+What becomes visible:
+
+- instability is localized (not random)  
+- trajectories follow structural patterns  
+- transitions occur at specific regions  
+
+→ the system is governed by a geometric field  
+→ not by random fluctuations  
+
+---
+
+# 🧩 Core Module — NEXAH_CORE
+
+The current core implementation of NEXAH is located in:
+
+```text
+NEXAH_CORE/
+```
+
+This module contains the **first fully working transition–navigation system**.
+
+---
+
+## What NEXAH_CORE does
+
+```text
+Transforms raw system dynamics into a navigable stability field
+```
+
+Pipeline:
+
+```text
+Signal
+→ Phase space (r, θ)
+→ Density field
+→ Greyspace (instability regions)
+→ Structural ridges (stable manifolds)
+→ IOTA events (transition points)
+→ Risk field P(IOTA)
+→ Navigation field
+```
+
+---
+
+## Key Capability (current state)
+
+```text
+✔ detect transitions early
+✔ map instability regions
+✔ represent instability as a continuous field
+✔ steer trajectories through the system
+```
+
+---
+
+## Example (Navigation Layer)
+
+![V36 Navigation](NEXAH_CORE/outputs/ieee_gates/v36_adaptive_target_trajectory.png)
+
+This shows:
+
+```text
+→ original trajectory vs. structure-aware navigation
+→ movement constrained by field geometry
+→ reduction of instability exposure
+```
+
+---
+
+## Important
+
+```text
+NEXAH_CORE is still experimental.
+
+It represents the transition from:
+analysis → navigation → control (in progress)
+```
+
+---
+
+## Where to start
+
+```text
+NEXAH_CORE/README.md
+NEXAH_CORE/mathematics/nexah_foundation.md
+NEXAH_CORE/docs/module_overview.md
+```
+
+---
+
 # ❌ What NEXAH is NOT
 
 NEXAH does not rely on:
