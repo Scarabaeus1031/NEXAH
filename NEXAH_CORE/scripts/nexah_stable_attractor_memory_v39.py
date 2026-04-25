@@ -138,3 +138,90 @@ def control_step_v39(
     )
 
     return s + eta * u, u
+
+if __name__ == "__main__":
+    import os
+    import sys
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+    CORE_DIR = os.path.dirname(CURRENT_DIR)
+    OUT_DIR = os.path.join(CORE_DIR, "outputs", "ieee_gates")
+    os.makedirs(OUT_DIR, exist_ok=True)
+
+    sys.path.append(CURRENT_DIR)
+
+    from nexah_control_layer_v38 import (
+        run_v38_control,
+        gradient_field,
+        make_interpolator
+    )
+
+    t = np.linspace(0, 80, 3000)
+
+    x = (
+        np.sin(t)
+        + 0.25 * np.sin(3.1 * t)
+        + 0.02 * t * np.sin(0.7 * t)
+    )
+
+    result = run_v38_control(x, dt=t[1] - t[0], bins=80)
+
+    rho = result["rho"]
+    P = result["P_IOTA"]
+    D = result["D"]
+    r_grid = result["r_grid"]
+    theta_grid = result["theta_grid"]
+
+    S = stability_score(rho, P, D)
+
+    attractors = detect_stable_attractors(
+        S,
+        r_grid,
+        theta_grid,
+        percentile=95
+    )
+
+    A = attractor_memory_field(
+        attractors,
+        r_grid,
+        theta_grid
+    )
+
+    np.save(os.path.join(OUT_DIR, "v39_stability_score.npy"), S)
+    np.save(os.path.join(OUT_DIR, "v39_attractor_memory_field.npy"), A)
+
+    plt.figure(figsize=(8, 7))
+    plt.imshow(
+        S.T,
+        origin="lower",
+        aspect="auto",
+        extent=[r_grid.min(), r_grid.max(), theta_grid.min(), theta_grid.max()]
+    )
+    plt.xlabel("r")
+    plt.ylabel("theta")
+    plt.title("NEXAH v39 — Stability Score Field")
+    plt.colorbar(label="S")
+    plt.tight_layout()
+    plt.savefig(os.path.join(OUT_DIR, "v39_stability_score_field.png"), dpi=200)
+    plt.close()
+
+    plt.figure(figsize=(8, 7))
+    plt.imshow(
+        A.T,
+        origin="lower",
+        aspect="auto",
+        extent=[r_grid.min(), r_grid.max(), theta_grid.min(), theta_grid.max()]
+    )
+    plt.xlabel("r")
+    plt.ylabel("theta")
+    plt.title("NEXAH v39 — Stable Attractor Memory Field")
+    plt.colorbar(label="A")
+    plt.tight_layout()
+    plt.savefig(os.path.join(OUT_DIR, "v39_attractor_memory_field.png"), dpi=200)
+    plt.close()
+
+    print("NEXAH v39 complete")
+    print(f"Attractors detected: {len(attractors)}")
+    print(f"Outputs written to: {OUT_DIR}")
