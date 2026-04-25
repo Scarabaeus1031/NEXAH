@@ -248,12 +248,20 @@ def run_v38_control(x, dt=1.0, bins=80):
 
 
 # ------------------------------------------------------------
-# TEST RUN
+# TEST RUN (WITH SAVE)
 # ------------------------------------------------------------
 
 if __name__ == "__main__":
+    import os
     import matplotlib.pyplot as plt
 
+    # --- output path (aligned with your repo structure)
+    CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+    CORE_DIR = os.path.dirname(CURRENT_DIR)
+    OUT_DIR = os.path.join(CORE_DIR, "outputs", "ieee_gates")
+    os.makedirs(OUT_DIR, exist_ok=True)
+
+    # --- signal
     t = np.linspace(0, 80, 3000)
 
     x = (
@@ -262,8 +270,10 @@ if __name__ == "__main__":
         + 0.02 * t * np.sin(0.7 * t)
     )
 
+    # --- run control
     result = run_v38_control(x, dt=t[1] - t[0])
 
+    # --- plot
     plt.figure(figsize=(8, 8))
     plt.scatter(result["theta"], result["r"], s=2, alpha=0.3, label="original")
     plt.scatter(
@@ -277,4 +287,17 @@ if __name__ == "__main__":
     plt.xlabel("theta")
     plt.ylabel("r")
     plt.title("NEXAH v38 Control (Fixed)")
+    plt.tight_layout()
+
+    # --- save
+    out_path = os.path.join(OUT_DIR, "v38_control_trajectory.png")
+    plt.savefig(out_path, dpi=200)
+
+    # optional: also save raw arrays (useful later)
+    np.save(os.path.join(OUT_DIR, "v38_controlled.npy"), result["controlled"])
+    np.save(os.path.join(OUT_DIR, "v38_original_r_theta.npy"),
+            np.column_stack([result["r"], result["theta"]]))
+
     plt.show()
+
+    print(f"Saved: {out_path}")
