@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v16_sheet_phase_map.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v16_sheet_phase_map.py
 #
 # v16 — Sheet → Phase Mapping + Transition Matrix
 #
@@ -13,8 +13,8 @@ from collections import Counter
 
 np.random.seed(42)
 
-OUTPUT_PHASE = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v16_phase_map.png"
-OUTPUT_TRANS = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v16_transition_matrix.png"
+OUTPUT_PHASE = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v16_phase_map.png"
+OUTPUT_TRANS = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v16_transition_matrix.png"
 
 
 # --------------------------------------------------

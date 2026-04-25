@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v9_phase_angle.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v9_phase_angle.py
 #
 # v9: Phase-angle gate mapping
 #
@@ -24,7 +24,7 @@ from scipy.stats import entropy
 
 np.random.seed(42)
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v9_phase_angle.png"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v9_phase_angle.png"
 
 
 # --------------------------------------------------

@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v36_adaptive_target_navigation.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v36_adaptive_target_navigation.py
 #
 # V36 — Adaptive Target Navigation (NEXAH)
 #
@@ -32,7 +32,7 @@ np.random.seed(42)
 N = 1000
 TRANSITION_POINT = 600
 
-OUTPUT_DIR = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates"
+OUTPUT_DIR = "NEXAH_CORE/outputs/ieee_gates"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 OUT_FIELD = os.path.join(OUTPUT_DIR, "v36_adaptive_target_field.png")

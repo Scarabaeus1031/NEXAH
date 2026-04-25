@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v14_sheet_tracking.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v14_sheet_tracking.py
 #
 # v14: Sheet Tracking + Mode Switching
 #
@@ -13,7 +13,7 @@ from sklearn.cluster import KMeans
 
 np.random.seed(42)
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v14_sheet_tracking.png"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v14_sheet_tracking.png"
 
 
 # --------------------------------------------------

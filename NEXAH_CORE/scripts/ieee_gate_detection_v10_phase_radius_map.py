@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v10_phase_radius_map.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v10_phase_radius_map.py
 #
 # v10: Phase + Radius Gate Map
 #
@@ -16,7 +16,7 @@ from scipy.stats import entropy
 
 np.random.seed(42)
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v10_phase_radius.png"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v10_phase_radius.png"
 
 
 # --------------------------------------------------

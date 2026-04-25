@@ -9,7 +9,7 @@ import os
 # =========================
 # LOAD DATA (fallback)
 # =========================
-data_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v28_data.npz"
+data_path = "NEXAH_CORE/outputs/ieee_gates/v28_data.npz"
 
 if os.path.exists(data_path):
     print("Loading V28 data...")
@@ -122,7 +122,7 @@ plt.legend()
 plt.grid()
 
 plt.tight_layout()
-plt.savefig("BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v32_minimal_model.png", dpi=150)
+plt.savefig("NEXAH_CORE/outputs/ieee_gates/v32_minimal_model.png", dpi=150)
 plt.show()
 
 # =========================

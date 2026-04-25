@@ -73,5 +73,5 @@ plt.title("V25 — Phase Flow Field")
 plt.legend()
 
 plt.tight_layout()
-plt.savefig("BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v25_phase_flow_field.png")
+plt.savefig("NEXAH_CORE/outputs/ieee_gates/v25_phase_flow_field.png")
 plt.show()

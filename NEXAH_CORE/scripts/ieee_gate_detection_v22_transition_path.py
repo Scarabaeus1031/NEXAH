@@ -107,7 +107,7 @@ plt.legend()
 plt.grid(True)
 
 # save
-out_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v22_transition_path.png"
+out_path = "NEXAH_CORE/outputs/ieee_gates/v22_transition_path.png"
 plt.savefig(out_path, dpi=150)
 plt.show()
 

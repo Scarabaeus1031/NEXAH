@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v15_flow_sheets.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v15_flow_sheets.py
 #
 # v15: Flow-Based Sheet Definition
 #
@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 np.random.seed(42)
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v15_flow_sheets.png"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v15_flow_sheets.png"
 
 
 # --------------------------------------------------

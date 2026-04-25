@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v6.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v6.py
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -7,7 +7,7 @@ from scipy.stats import entropy
 
 np.random.seed(42)
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v6.png"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v6.png"
 
 
 # --------------------------------------------------

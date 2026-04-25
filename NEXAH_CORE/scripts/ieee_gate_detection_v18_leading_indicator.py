@@ -70,6 +70,6 @@ plt.title("v18 — Leading Indicator Test")
 plt.xlabel("time")
 
 # SAVE (important!)
-plt.savefig("BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v18_leading_indicator.png", dpi=150)
+plt.savefig("NEXAH_CORE/outputs/ieee_gates/v18_leading_indicator.png", dpi=150)
 
 plt.close()

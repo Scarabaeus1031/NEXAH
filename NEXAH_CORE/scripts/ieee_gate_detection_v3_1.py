@@ -187,5 +187,5 @@ if __name__ == "__main__":
 
     plot(
         t, x, C, precursor, zones,
-        save_path="BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v3_1.png"
+        save_path="NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v3_1.png"
     )

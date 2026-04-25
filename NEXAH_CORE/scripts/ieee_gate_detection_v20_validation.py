@@ -155,7 +155,7 @@ axs[2].legend()
 plt.tight_layout()
 
 # SAVE
-output_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v20_final_validation.png"
+output_path = "NEXAH_CORE/outputs/ieee_gates/v20_final_validation.png"
 plt.savefig(output_path, dpi=150)
 
 print("\nSaved visual to:", output_path)

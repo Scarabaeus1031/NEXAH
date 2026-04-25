@@ -152,7 +152,7 @@ plt.tight_layout()
 # =========================
 # 8. SAVE
 # =========================
-out_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v4.png"
+out_path = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v4.png"
 plt.savefig(out_path)
 
 print("\n--- NEXAH IEEE Gate Detection v4 ---")

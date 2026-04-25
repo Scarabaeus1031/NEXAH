@@ -334,7 +334,7 @@ inside safe manifold
 ## Run scripts
 
 ```
-python BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v3x_*.py
+python NEXAH_CORE/scripts/ieee_gate_detection_v3x_*.py
 ```
 
 ---

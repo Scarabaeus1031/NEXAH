@@ -112,7 +112,7 @@ def classify_iota(theta, r, ridge_pts, greyspace, iota_idx):
 def run_pipeline():
 
     theta, r = load_data(
-        "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v28_data.npz"
+        "NEXAH_CORE/outputs/ieee_gates/v28_data.npz"
     )
 
     dr, yugo = compute_derivatives(theta, r)

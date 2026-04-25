@@ -71,7 +71,7 @@ plt.title("V23 — Transition Path Overlay (Multi-Run)")
 
 plt.grid(True)
 
-out_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v23_transition_overlay.png"
+out_path = "NEXAH_CORE/outputs/ieee_gates/v23_transition_overlay.png"
 plt.savefig(out_path, dpi=150)
 plt.show()
 

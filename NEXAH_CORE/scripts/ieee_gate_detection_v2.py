@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
     plot_results(
         t, x, C, gates,
-        save_path="BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v2.png"
+        save_path="NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v2.png"
     )
 
     multi_run_test(runs=20)

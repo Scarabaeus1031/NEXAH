@@ -9,7 +9,7 @@ import os
 N = 1000
 TRANSITION_POINT = 600
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates"
 os.makedirs(OUTPUT_PATH, exist_ok=True)
 
 # thresholds (kannst du später tunen)

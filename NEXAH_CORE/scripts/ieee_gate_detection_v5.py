@@ -172,7 +172,7 @@ axs[3].set_ylim(0, 1)
 
 plt.tight_layout()
 
-output_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v5.png"
+output_path = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v5.png"
 plt.savefig(output_path)
 
 

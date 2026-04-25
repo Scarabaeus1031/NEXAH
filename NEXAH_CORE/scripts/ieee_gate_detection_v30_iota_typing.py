@@ -9,7 +9,7 @@ import os
 # =========================
 # LOAD DATA (auto fallback)
 # =========================
-data_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v28_data.npz"
+data_path = "NEXAH_CORE/outputs/ieee_gates/v28_data.npz"
 
 if os.path.exists(data_path):
     print("Loading V28 data...")

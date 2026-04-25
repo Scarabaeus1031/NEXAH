@@ -87,7 +87,7 @@ plt.title("V24 — Transition Density Field")
 
 plt.grid(False)
 
-out_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v24_transition_density.png"
+out_path = "NEXAH_CORE/outputs/ieee_gates/v24_transition_density.png"
 plt.savefig(out_path, dpi=150)
 plt.show()
 

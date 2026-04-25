@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v8.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v8.py
 #
 # v8: Phase-space clustering of transition zones
 #
@@ -20,8 +20,8 @@ from sklearn.cluster import DBSCAN
 
 np.random.seed(42)
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v8.png"
-PHASE_OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v8_phase_space.png"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v8.png"
+PHASE_OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v8_phase_space.png"
 
 
 # --------------------------------------------------

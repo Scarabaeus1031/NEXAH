@@ -51,7 +51,7 @@ plt.title("V26 — Phase Derivative Field (dr/dθ)")
 plt.legend()
 
 plt.tight_layout()
-plt.savefig("BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v26_dr_dtheta_scatter.png")
+plt.savefig("NEXAH_CORE/outputs/ieee_gates/v26_dr_dtheta_scatter.png")
 plt.show()
 
 
@@ -79,7 +79,7 @@ plt.ylabel("dr/dθ")
 plt.title("V26 — Phase Derivative Density")
 
 plt.tight_layout()
-plt.savefig("BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v26_dr_dtheta_density.png")
+plt.savefig("NEXAH_CORE/outputs/ieee_gates/v26_dr_dtheta_density.png")
 plt.show()
 
 
@@ -101,5 +101,5 @@ plt.ylabel("dr/dθ (clipped)")
 plt.title("V26 — Phase Derivative (Clipped)")
 
 plt.tight_layout()
-plt.savefig("BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v26_dr_dtheta_clipped.png")
+plt.savefig("NEXAH_CORE/outputs/ieee_gates/v26_dr_dtheta_clipped.png")
 plt.show()

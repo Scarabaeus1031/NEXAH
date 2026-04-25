@@ -1,4 +1,4 @@
-# BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v12_control_steering.py
+# NEXAH_CORE/scripts/ieee_gate_detection_v12_control_steering.py
 #
 # v12: Simple Control / Steering Layer
 #
@@ -22,7 +22,7 @@ from scipy.stats import entropy
 
 np.random.seed(42)
 
-OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v12_control_steering.png"
+OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v12_control_steering.png"
 
 
 # --------------------------------------------------
@@ -335,7 +335,7 @@ plt.savefig(OUTPUT_PATH, dpi=150)
 # --------------------------------------------------
 # 14. RISK FIELD VISUAL
 # --------------------------------------------------
-RISK_OUTPUT_PATH = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/ieee_gate_detection_v12_risk_field.png"
+RISK_OUTPUT_PATH = "NEXAH_CORE/outputs/ieee_gates/ieee_gate_detection_v12_risk_field.png"
 
 fig2, ax = plt.subplots(figsize=(8, 6))
 
