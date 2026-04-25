@@ -1,33 +1,52 @@
-# V30 — IOTA Typisierung + Ridge Distance + Greyspace/YUGO Integration
+# V30 — IOTA Typisierung + Ridge Distance + Greyspace/YUGO Integration (FIXED)
 
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import KDTree
 from scipy.ndimage import gaussian_filter
+import os
 
 # =========================
-# INPUT (ersetzen falls nötig)
+# LOAD DATA (auto fallback)
 # =========================
-theta = theta_unwrapped
-r_vals = r
-dr_dtheta = np.gradient(r_vals, theta)
-yugo_angle = np.arctan2(dr_dtheta, np.gradient(theta))
+data_path = "BUILDER_LAB/ZETA_EXPERIMENTS/outputs/ieee_gates/v28_data.npz"
+
+if os.path.exists(data_path):
+    print("Loading V28 data...")
+    data = np.load(data_path)
+    theta = data["theta"]
+    r_vals = data["r"]
+else:
+    print("No data found → using test data")
+
+    np.random.seed(0)
+    N = 1000
+    theta = np.linspace(0, 300, N)
+    r_vals = 0.5 + 0.5 * np.sin(theta * 0.2)
+
+    transition = 600
+    r_vals[transition:] += np.random.normal(0, 0.5, N - transition)
 
 N = len(theta)
 
 # =========================
-# 1. DENSITY FIELD (für Greyspace + Ridge)
+# DERIVATIVES
+# =========================
+dr_dtheta = np.gradient(r_vals) / np.gradient(theta)
+yugo_angle = np.arctan2(dr_dtheta, np.gradient(theta))
+
+# =========================
+# 1. DENSITY FIELD
 # =========================
 bins = 80
 heatmap, xedges, yedges = np.histogram2d(theta, r_vals, bins=bins)
 heatmap_smooth = gaussian_filter(heatmap, sigma=2)
 
-# Koordinaten-Gitter
 x_centers = (xedges[:-1] + xedges[1:]) / 2
 y_centers = (yedges[:-1] + yedges[1:]) / 2
 
 # =========================
-# 2. RIDGE DETECTION (Maxima im Feld)
+# 2. RIDGE DETECTION
 # =========================
 ridge_mask = heatmap_smooth > np.percentile(heatmap_smooth, 85)
 
@@ -39,19 +58,17 @@ for i in range(len(x_centers)):
 
 ridge_points = np.array(ridge_points)
 
-# KDTree für Distanz
-if len(ridge_points) > 0:
-    ridge_tree = KDTree(ridge_points)
-else:
-    ridge_tree = None
+ridge_tree = KDTree(ridge_points) if len(ridge_points) > 0 else None
 
 # =========================
 # 3. GREYSPACE SCORE
 # =========================
 density_vals = []
+
 for t, r_ in zip(theta, r_vals):
     xi = np.searchsorted(xedges, t) - 1
     yi = np.searchsorted(yedges, r_) - 1
+
     if 0 <= xi < bins and 0 <= yi < bins:
         density_vals.append(heatmap_smooth[xi, yi])
     else:
@@ -59,19 +76,15 @@ for t, r_ in zip(theta, r_vals):
 
 density_vals = np.array(density_vals)
 
-# invertierte Dichte = Greyspace
 greyspace_score = 1 / (density_vals + 1e-3)
-
-# normalisieren
 greyspace_score = (greyspace_score - greyspace_score.min()) / (
     greyspace_score.max() - greyspace_score.min()
 )
 
 # =========================
-# 4. IOTA DETECTION (wie V28)
+# 4. IOTA DETECTION
 # =========================
 IOTA_THRESHOLD = np.percentile(np.abs(dr_dtheta), 98)
-
 iota_indices = np.where(np.abs(dr_dtheta) > IOTA_THRESHOLD)[0]
 
 # =========================
@@ -86,7 +99,6 @@ if ridge_tree is not None:
 else:
     ridge_dist[:] = np.nan
 
-# normalisieren
 ridge_dist_norm = (ridge_dist - np.nanmin(ridge_dist)) / (
     np.nanmax(ridge_dist) - np.nanmin(ridge_dist)
 )
@@ -110,10 +122,8 @@ for idx in iota_indices:
 # =========================
 plt.figure(figsize=(12, 6))
 
-# all points
 plt.scatter(theta, r_vals, s=5, c="lightgrey", label="all")
 
-# ridge
 if len(ridge_points) > 0:
     plt.scatter(
         ridge_points[:, 0],
@@ -124,19 +134,19 @@ if len(ridge_points) > 0:
         label="ridge"
     )
 
-# IOTA
-for idx, t in zip(iota_indices, iota_types):
-    if t == "GAP_ESCAPE":
-        plt.scatter(theta[idx], r_vals[idx], c="red", s=80, label="GAP" if "GAP" not in plt.gca().get_legend_handles_labels()[1] else "")
-    else:
-        plt.scatter(theta[idx], r_vals[idx], c="orange", s=80, label="BOUNDARY" if "BOUNDARY" not in plt.gca().get_legend_handles_labels()[1] else "")
+labels_added = set()
 
-# transition line (optional)
+for idx, t in zip(iota_indices, iota_types):
+    color = "red" if t == "GAP_ESCAPE" else "orange"
+    label = t if t not in labels_added else ""
+    plt.scatter(theta[idx], r_vals[idx], c=color, s=80, label=label)
+    labels_added.add(t)
+
 plt.axvline(x=120, linestyle="--", color="black", label="transition")
 
 plt.xlabel("theta")
 plt.ylabel("r")
-plt.title("V30 — IOTA Types (Gap vs Boundary) + Ridge Field")
+plt.title("V30 — IOTA Types (Gap vs Boundary)")
 plt.legend()
 plt.grid()
 
@@ -145,7 +155,7 @@ plt.savefig("v30_iota_types.png", dpi=150)
 plt.show()
 
 # =========================
-# 8. OUTPUT
+# OUTPUT
 # =========================
 print("\n--- V30 RESULTS ---")
 print(f"Total IOTA: {len(iota_indices)}")
@@ -155,11 +165,3 @@ boundary_count = sum(1 for t in iota_types if t == "BOUNDARY_COLLAPSE")
 
 print(f"GAP_ESCAPE: {gap_count}")
 print(f"BOUNDARY_COLLAPSE: {boundary_count}")
-
-print("\nDetails:")
-for idx, t in zip(iota_indices, iota_types):
-    print(
-        f"t={idx:4d} | theta={theta[idx]:7.2f} | r={r_vals[idx]:5.3f} | "
-        f"dr/dθ={dr_dtheta[idx]:7.2f} | GS={greyspace_score[idx]:.2f} | "
-        f"ridge_d={ridge_dist_norm[idx]:.2f} | TYPE={t}"
-    )
