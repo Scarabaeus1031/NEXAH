@@ -1,11 +1,9 @@
 # BUILDER_LAB/ZETA_EXPERIMENTS/scripts/ieee_gate_detection_v11_vector_field.py
 #
-# v11: Phase-Radius Vector Field
+# v11: Phase-Radius Vector Field (FIXED)
 #
-# Goal:
-# Compute flow:
-#   dr/dt, dθ/dt
-# → visualize system movement in (r, θ)
+# Fix:
+# Grid alignment corrected (centers vs bins)
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -42,11 +40,9 @@ x = generate_signal(t)
 
 dx = np.gradient(x, t)
 
-# phase + radius
 theta = np.arctan2(dx, x)
 r = np.sqrt(x**2 + dx**2)
 
-# derivatives
 dr_dt = np.gradient(r, t)
 dtheta_dt = np.gradient(theta, t)
 
@@ -69,15 +65,16 @@ r_bins = np.linspace(0, np.max(r), bins_r)
 theta_idx = np.digitize(theta, theta_bins) - 1
 r_idx = np.digitize(r, r_bins) - 1
 
-U = np.zeros((bins_theta, bins_r))
-V = np.zeros((bins_theta, bins_r))
-counts = np.zeros((bins_theta, bins_r))
+# IMPORTANT: use (bins-1)
+U = np.zeros((bins_theta - 1, bins_r - 1))
+V = np.zeros((bins_theta - 1, bins_r - 1))
+counts = np.zeros((bins_theta - 1, bins_r - 1))
 
 for i in range(len(theta)):
     ti = theta_idx[i]
     ri = r_idx[i]
 
-    if 0 <= ti < bins_theta and 0 <= ri < bins_r:
+    if 0 <= ti < bins_theta - 1 and 0 <= ri < bins_r - 1:
         U[ti, ri] += dtheta_dt[i]
         V[ti, ri] += dr_dt[i]
         counts[ti, ri] += 1
@@ -87,7 +84,9 @@ mask_counts = counts > 0
 U[mask_counts] /= counts[mask_counts]
 V[mask_counts] /= counts[mask_counts]
 
-# grid centers
+# --------------------------------------------------
+# GRID CENTERS (MATCH SIZE!)
+# --------------------------------------------------
 theta_centers = (theta_bins[:-1] + theta_bins[1:]) / 2
 r_centers = (r_bins[:-1] + r_bins[1:]) / 2
 
@@ -99,20 +98,22 @@ T, R = np.meshgrid(theta_centers, r_centers, indexing="ij")
 plt.figure(figsize=(8, 6))
 
 plt.quiver(
-    T, R,
-    U, V,
-    scale=10,
+    T,
+    R,
+    U,
+    V,
+    scale=15,
     width=0.003
 )
 
 plt.xlabel("θ (phase)")
 plt.ylabel("r (radius)")
-plt.title("v11 — Flow Field in (r, θ) Space")
+plt.title("v11 — Flow Field in (r, θ) Space (fixed)")
 
 plt.tight_layout()
 plt.savefig(OUTPUT_PATH, dpi=150)
 
-print("\n--- NEXAH IEEE Gate Detection v11 ---")
+print("\n--- NEXAH IEEE Gate Detection v11 (FIXED) ---")
 print(f"Saved to: {OUTPUT_PATH}")
 
 plt.show()
