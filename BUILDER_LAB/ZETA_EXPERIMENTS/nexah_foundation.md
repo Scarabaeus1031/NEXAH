@@ -43,6 +43,41 @@ $$
 
 ---
 
+## State Vector
+
+We define the system state as:
+
+$$
+s(t) = \big(r(t), \theta(t)\big)
+$$
+
+---
+
+## Interpretation
+
+```text
+The system is represented as a trajectory in 2D state space.
+```
+
+- $r(t)$ → energy / amplitude  
+- $\theta(t)$ → phase position  
+
+---
+
+## Extension (optional)
+
+For richer models:
+
+$$
+s(t) = \big(r(t), \theta(t), \dot{r}(t), \dot{\theta}(t)\big)
+$$
+
+```text
+This extends the system to a higher-dimensional phase space.
+```
+
+---
+
 ## 🔹 2. Derived Quantities
 
 ---
