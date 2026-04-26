@@ -77,7 +77,7 @@ What becomes visible:
 - stability constraints  
 
 → the system does not move freely  
-→ it is **guided by an underlying field geometry**
+→ it is **guided by an underlying field geometry** and **controllable through that geometry**
 
 ---
 
@@ -99,8 +99,9 @@ NEXAH transforms time-series system data into a **geometric representation**:
 
 Instead of detecting isolated failures, NEXAH identifies:
 
-> how systems **move within structured dynamical landscapes**  
-> and how **stability constrains possible transitions**
+> how systems move within structured dynamical landscapes  
+> how transitions emerge from field geometry  
+> and how trajectories can be guided through stability regions
 
 ---
 
@@ -136,6 +137,29 @@ NEXAH_CORE/
 ```
 
 This module contains the **first fully working transition–navigation system**.
+
+---
+
+## 🔬 What is new in NEXAH_CORE
+
+NEXAH_CORE is not only a detection system.
+
+It implements a **field-based transition control framework**:
+
+```text
+- instability represented as a continuous probability field
+- system motion modeled as trajectories in state space
+- transitions defined as directional gates (not points)
+- control achieved via structure-aware navigation
+```
+
+This enables:
+
+```text
+→ trajectory steering instead of event reaction  
+→ transition-aware system control  
+→ navigation across basin structures  
+```
 
 ---
 
