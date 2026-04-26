@@ -400,5 +400,372 @@ It leaves the structure that kept it stable.
 
 ---
 
+---
+
+# 🚀 Control Layer Extension (v38–v55)
+
+---
+
+## 📍 Extension Purpose
+
+Extends the module from:
+
+```text
+detection + navigation
+```
+
+to:
+
+```text
+active control of system behavior
+```
+
+New core question:
+
+```text
+How can transitions be shaped, not only avoided?
+```
+
+---
+
+# 🔹 Control Layer Architecture
+
+Extended pipeline:
+
+```text
+Signal
+→ State (r, θ)
+→ Structure (ρ, ridges, sheets)
+→ Instability field P(IOTA)
+→ Basin identity
+→ Transition matrix
+→ Memory
+→ Control inputs
+→ Modified transition behavior
+```
+
+---
+
+# 🔹 Basin Layer (v43–v46)
+
+---
+
+## Basin Identity
+
+```text
+State space partitions into discrete basins
+```
+
+Each basin:
+
+- represents a stable dynamical regime  
+- has characteristic radius + phase  
+
+---
+
+## Transition Matrix
+
+```text
+P(Bᵢ → Bⱼ)
+```
+
+Interpretation:
+
+```text
+System becomes a probabilistic transition network
+```
+
+---
+
+## Memory
+
+```text
+Historical transitions improve prediction
+```
+
+Result:
+
+```text
+prediction accuracy increases (~0.47 → ~0.68)
+```
+
+---
+
+# 🔹 Control Modes (v47–v55)
+
+---
+
+## v47 — Memory-Guided Control
+
+```text
+trajectory influenced by past basin behavior
+```
+
+---
+
+## v48 — Target Basin Control
+
+```text
+direct attraction to basin centroid
+```
+
+Limitation:
+
+```text
+breaks natural structure
+```
+
+---
+
+## v49 — Transition Probability Control
+
+```text
+direct manipulation of:
+
+P(B_source → B_target)
+```
+
+Result:
+
+```text
+transitions become controllable
+```
+
+---
+
+## v50 — Multi-Transition Policy
+
+```text
+control multiple transitions simultaneously
+```
+
+Observation:
+
+```text
+transitions interfere
+```
+
+---
+
+## v51 — Adaptive Policy
+
+```text
+retain only beneficial transitions
+```
+
+Result:
+
+```text
+sparse control is more effective
+```
+
+---
+
+## v52 — Temporal Pattern Control
+
+```text
+control applied in time patterns
+```
+
+Insight:
+
+```text
+timing strongly affects system response
+```
+
+---
+
+## v53 — Phase Pattern Control
+
+```text
+engage → lock → release → next
+```
+
+Insight:
+
+```text
+system has internal control phases
+```
+
+---
+
+## v54 — Topological Constraints
+
+```text
+restrict transitions to valid neighbors
+```
+
+Insight:
+
+```text
+topology alone does not drive dynamics
+```
+
+---
+
+## v55 — Transition Resonance Control
+
+```text
+control aligned with natural transition distribution
+```
+
+Example:
+
+```text
+0→1 = 0.625
+0→3 = 0.375
+```
+
+Insight:
+
+```text
+dominant transitions amplify under aligned control
+```
+
+---
+
+# 🔥 Control Principles (Derived)
+
+---
+
+## 1. Transitions are controllable
+
+```text
+system behavior can be actively shaped
+```
+
+---
+
+## 2. Transitions are coupled
+
+```text
+increasing one decreases others
+```
+
+---
+
+## 3. Control is multi-dimensional
+
+```text
+direction + timing + phase + topology + distribution
+```
+
+---
+
+## 4. Control must align with structure
+
+```text
+best control follows natural system dynamics
+```
+
+---
+
+## 5. Transition space is discrete
+
+Observed:
+
+```text
+0.8333 ≈ 10 / 12
+0.1666 ≈  2 / 12
+```
+
+Interpretation:
+
+```text
+system operates on discrete transition counts
+```
+
+---
+
+# 🔹 Updated System Capability
+
+Before:
+
+```text
+detect instability
+```
+
+Now:
+
+```text
+detect + predict + control transitions
+```
+
+---
+
+# 🔹 Updated System Model
+
+```text
+Trajectory =
+f(
+    structure,
+    instability field,
+    basin transitions,
+    control inputs
+)
+```
+
+---
+
+# 🔹 Updated Limitation
+
+Still missing:
+
+---
+
+## Mass-Conserving Control
+
+Current:
+
+```text
+amplifies transitions
+```
+
+Missing:
+
+```text
+redistributes transition probability mass
+```
+
+---
+
+## Full Closed-Loop Control
+
+Current:
+
+```text
+partial feedback
+```
+
+Missing:
+
+```text
+policy optimization across entire trajectory
+```
+
+---
+
+# 🔮 Next Layer (v56+)
+
+```text
+mass-conserving transition control
++
+global policy optimization
+```
+
+---
+
+# 🔥 Extended Final Statement
+
+```text
+A system does not collapse.
+
+It moves through a structured instability field,
+transitions between discrete regimes,
+and can be guided by controlling transition probabilities.
+```
+
+---
+
 © Thomas K. R. Hofmann  
 NEXAH — 2026
