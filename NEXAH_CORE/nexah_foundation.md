@@ -556,6 +556,304 @@ KERNEL  → navigation
 
 ---
 
+---
+
+# 🔹 17. Unified Field Control (v38+)
+
+---
+
+## 🧠 Motivation
+
+Previous control layers operate on:
+
+```text
+- local gradients (∇P, ∇ρ)
+- structural alignment (π, sheets)
+- directional gates
+```
+
+However:
+
+```text
+control is still fragmented
+```
+
+We now define a **unified control formulation**.
+
+---
+
+## 🔹 17.1 Full Control Field
+
+$$
+u(s) =
+- \nabla P(\text{IOTA})
++ \nabla \rho
++ u_{\pi}
++ u_{\text{sheet}}
++ u_{\text{gate}}
++ u_{\text{graph}}
+$$
+
+---
+
+## Components
+
+### Risk Avoidance
+
+$$
+-\nabla P(\text{IOTA})
+$$
+
+→ repels trajectory from instability regions  
+
+---
+
+### Structure Attraction
+
+$$
+\nabla \rho
+$$
+
+→ pulls trajectory toward stable manifolds  
+
+---
+
+### Rotational Consistency
+
+$$
+u_{\pi} = -k_{\theta} \cdot \Delta \theta
+$$
+
+→ enforces smooth angular evolution  
+
+---
+
+### Sheet Alignment
+
+$$
+u_{\text{sheet}} \sim (r_{\text{target}} - r)
+$$
+
+→ controls radial layer transitions  
+
+---
+
+### Gate Direction
+
+$$
+u_{\text{gate}} \sim v_{\text{gate}}(s)
+$$
+
+→ aligns trajectory with transition direction  
+
+---
+
+### Graph Control (NEW)
+
+$$
+u_{\text{graph}} \sim \nabla P(B_i \rightarrow B_j)
+$$
+
+→ shapes transition probabilities between basins  
+
+---
+
+## 🔥 Core Insight
+
+```text
+Control is not a single force.
+
+It is a composition of:
+
+geometry + probability + topology + direction
+```
+
+---
+
+# 🔹 17.2 Gate Formalization (NEW)
+
+---
+
+## Definition
+
+A gate is defined as a **directed transition manifold**:
+
+$$
+\mathcal{G} =
+\{ (s, v) \mid
+\text{alignment}(v, F(s)) > 0
+\ \land \
+\text{barrier}(s) \text{ minimal}
+\}
+$$
+
+---
+
+## Interpretation
+
+```text
+Gate ≠ point in space
+
+Gate = (position + direction + local flow condition)
+```
+
+---
+
+## Alignment Condition
+
+$$
+\text{alignment} =
+\frac{v_{\text{current}} \cdot v_{\text{gate}}}
+{\|v_{\text{current}}\| \|v_{\text{gate}}\|}
+$$
+
+---
+
+## 🔥 Core Insight
+
+```text
+Transitions require directional agreement with system flow
+```
+
+---
+
+# 🔹 17.3 Trajectory as Optimization Problem
+
+---
+
+## Objective
+
+Trajectory is defined as minimizing a global functional:
+
+$$
+\mathcal{J} =
+\int
+\Big(
+\alpha \, P(\text{IOTA})
++ \beta \, D_{\text{ridge}}
++ \gamma \, (1 - \text{alignment})
+\Big)
+dt
+$$
+
+---
+
+## Terms
+
+- $P(\text{IOTA})$ → instability exposure  
+- $D_{\text{ridge}}$ → distance from structure  
+- alignment → directional mismatch  
+
+---
+
+## Interpretation
+
+```text
+Optimal trajectory balances:
+
+- low risk
+- structural alignment
+- directional consistency
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Trajectory is not simulated.
+
+It is optimized within a structured field.
+```
+
+---
+
+# 🔹 17.4 Field–Graph Duality
+
+---
+
+## Continuous Layer
+
+$$
+(r, \theta) \rightarrow \rho, P(\text{IOTA}), F(s)
+$$
+
+---
+
+## Discrete Layer
+
+$$
+B_i \rightarrow B_j
+$$
+
+---
+
+## Coupling
+
+$$
+P(B_i \rightarrow B_j) =
+\int_{\mathcal{G}_{ij}} P(\text{IOTA} \mid s) \, ds
+$$
+
+---
+
+## Interpretation
+
+```text
+Discrete transitions emerge from continuous field structure
+```
+
+---
+
+## 🔥 Core Insight
+
+```text
+Field and graph are dual representations
+of the same system
+```
+
+---
+
+# 🔹 17.5 Final Control Interpretation
+
+---
+
+```text
+System evolution = navigation through:
+
+- continuous field (geometry)
+- transition graph (topology)
+- directional gates (flow constraints)
+```
+
+---
+
+## Final Unified Law
+
+$$
+\text{Trajectory} =
+f(
+F(s),
+\nabla P,
+\nabla \rho,
+\mathcal{G},
+P(B_i \rightarrow B_j)
+)
+$$
+
+---
+
+## 🔥 Final Insight
+
+```text
+Control does not push the system.
+
+It aligns it with the structure
+through which it must move.
+```
+
+---
+
 ## Unified Control Law
 
 $$
