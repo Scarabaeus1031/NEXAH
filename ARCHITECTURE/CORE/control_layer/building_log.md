@@ -154,6 +154,99 @@ This log reflects that progression.
 
 ---
 
+# 🔹 Stage 11 — Transition Consistency & Cyclic Flow Structure
+
+🧠 Insight:
+
+→ transition probabilities must satisfy conservation constraints  
+→ inconsistent transitions lead to unstable or non-physical behavior  
+→ enforcing mass conservation closes the transition system  
+
+---
+
+### Structural Shift
+
+Before:
+
+```text
+open transition graph
+→ probability leakage
+→ inconsistent routing
+```
+
+After:
+
+```text
+closed transition system
+→ flow-conserving dynamics
+→ stable trajectory propagation
+```
+
+---
+
+### Emerging Structure
+
+→ transition system evolves from:
+
+```text
+binary / split dynamics
+```
+
+toward:
+
+```text
+cyclic multi-state coupling
+```
+
+---
+
+### Interpretation
+
+→ transitions are no longer independent  
+→ states become mutually coupled  
+→ flow circulates through the system  
+
+This introduces a structure similar to:
+
+```text
+A → B → C → A
+```
+
+---
+
+### Relation to Dynamical Systems
+
+This behavior aligns with cyclically coupled systems  
+(e.g. Halvorsen-type attractors), where:
+
+- no single dominant basin exists  
+- dynamics are distributed across interacting states  
+- motion is governed by continuous circulation  
+
+---
+
+### Implication for Control
+
+→ control must operate on **closed transition flows**  
+→ trajectory steering becomes flow-balancing  
+→ stability emerges from consistent circulation  
+
+---
+
+### Key Result
+
+```text
+Control requires transition consistency.
+
+Without conservation:
+→ control is unstable
+
+With conservation:
+→ control becomes physically meaningful
+```
+
+---
+
 # 🧠 Structural Interpretation
 
 Across all stages, a consistent pattern emerges:
