@@ -171,9 +171,25 @@ def main():
     plt.title("NEXAH v75 — Flow-Aligned Channel Control")
     plt.legend()
 
-    plt.tight_layout()
-    plt.show()
+    # --------------------------------------------------------
+# Save instead of show
+# --------------------------------------------------------
 
+CORE_DIR = os.path.dirname(CURRENT_DIR)
+OUT_DIR = os.path.join(CORE_DIR, "outputs", "ieee_gates")
+os.makedirs(OUT_DIR, exist_ok=True)
+
+out_path = os.path.join(
+    OUT_DIR,
+    "v75_flow_aligned_channel_control.png"
+)
+
+plt.tight_layout()
+plt.savefig(out_path, dpi=200)
+plt.close()
+
+print("NEXAH v75 complete")
+print(f"Saved: {out_path}")
 
 if __name__ == "__main__":
     main()
