@@ -1,6 +1,26 @@
 # ============================================================
 # NEXAH — IEEE GATE DETECTION v63
-# Control Propagation Test (Clean / No Ridge Dependency)
+# Control Propagation Test
+# ============================================================
+#
+# FILE:
+# ieee_gate_detection_v63_control_propagation.py
+#
+# PURPOSE:
+# --------
+# Test whether a single local control intervention propagates
+# forward along the trajectory.
+#
+# BUILDS ON:
+# ----------
+# v56 pattern-field pipeline
+#
+# OUTPUTS:
+# --------
+# v63_control_propagation_B{source}_to_B{target}.png
+# v63_control_propagation_deviation_B{source}_to_B{target}.png
+# v63_control_propagation_summary_B{source}_to_B{target}.txt
+#
 # ============================================================
 
 import os
@@ -11,62 +31,25 @@ import matplotlib.pyplot as plt
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(CURRENT_DIR)
 
-from ieee_gate_detection_v38_control_layer import run_v38_control
-from ieee_gate_detection_v44_basin_identity import cluster_locked_basins
-from ieee_gate_detection_v47_memory_guided_control import compute_basin_centroids
+from ieee_gate_detection_v56_pattern_field_control import (
+    build_pipeline,
+    pattern_field_control
+)
 
-
-# ------------------------------------------------------------
-# Build pipeline (NO ridge layer)
-# ------------------------------------------------------------
-
-def build_pipeline():
-
-    t = np.linspace(0, 80, 3000)
-
-    x = (
-        np.sin(t)
-        + 0.25 * np.sin(3.1 * t)
-        + 0.02 * t * np.sin(0.7 * t)
-    )
-
-    result = run_v38_control(x, dt=t[1] - t[0], bins=80)
-
-    states = np.column_stack([result["r"], result["theta"]])
-
-    # IMPORTANT: no ridge alignment here
-    aligned = states.copy()
-
-    L = np.ones(len(aligned)) * 0.5
-
-    basin_ids, *_ = cluster_locked_basins(
-        aligned,
-        L,
-        threshold=0.5,
-        eps=0.18,
-        min_samples=6
-    )
-
-    centroids = compute_basin_centroids(aligned, basin_ids)
-
-    return aligned, basin_ids, centroids
+from ieee_gate_detection_v41_ridge_aligned_control import wrap_theta
 
 
 # ------------------------------------------------------------
 # Single-point control
 # ------------------------------------------------------------
 
-def apply_single_control(states, index, target, gain=0.08):
-
+def apply_single_control(states, index, target_centroid, gain=0.08):
     controlled = states.copy()
 
     s = controlled[index]
 
-    dr = target[0] - s[0]
-    dtheta = target[1] - s[1]
-
-    # wrap angle
-    dtheta = (dtheta + np.pi) % (2 * np.pi) - np.pi
+    dr = target_centroid[0] - s[0]
+    dtheta = wrap_theta(target_centroid[1] - s[1])
 
     u = np.array([dr, dtheta])
     norm = np.linalg.norm(u)
@@ -75,31 +58,33 @@ def apply_single_control(states, index, target, gain=0.08):
         u = u / norm
 
     controlled[index] = s + gain * u
+    controlled[index, 1] = wrap_theta(controlled[index, 1])
 
-    # wrap theta again
-    controlled[index][1] = (controlled[index][1] + np.pi) % (2 * np.pi) - np.pi
-
-    return controlled
+    return controlled, u
 
 
 # ------------------------------------------------------------
-# Forward propagation (very simple flow model)
+# Forward propagation model
 # ------------------------------------------------------------
 
-def forward_propagation(states, steps=80):
+def forward_propagation(states, start_index, steps=120, alpha=0.035, decay=0.985):
+    """
+    Simple causal propagation model.
+
+    The perturbation at start_index is propagated forward along
+    the trajectory using local displacement continuity.
+    """
 
     traj = states.copy()
 
-    for _ in range(steps):
+    displacement = traj[start_index] - states[start_index]
 
-        dr = np.gradient(traj[:, 0])
-        dtheta = np.gradient(traj[:, 1])
+    for k in range(start_index + 1, min(len(states), start_index + steps)):
 
-        traj[:, 0] += 0.01 * dr
-        traj[:, 1] += 0.01 * dtheta
+        displacement = displacement * decay
 
-        # wrap theta
-        traj[:, 1] = (traj[:, 1] + np.pi) % (2 * np.pi) - np.pi
+        traj[k] = states[k] + alpha * displacement
+        traj[k, 1] = wrap_theta(traj[k, 1])
 
     return traj
 
@@ -114,47 +99,82 @@ if __name__ == "__main__":
     OUT_DIR = os.path.join(CORE_DIR, "outputs", "ieee_gates")
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    states, basin_ids, centroids = build_pipeline()
+    data = build_pipeline()
 
-    # verfügbare basins holen
-    basin_keys = list(centroids.keys())
+    states = data["aligned"]
+    basin_ids = data["basin_ids"]
+    centroids = data["centroids"]
 
-    print("Available basins:", basin_keys)
+    print("Available basins:", sorted(centroids.keys()))
 
-    # fallback falls nur einer existiert
-    if len(basin_keys) < 2:
-    raise ValueError("Not enough basins detected for control test")
-    
-    
-    # pick ONE control core index (adjust if needed)
-    core_index = 67
+    source = 0 if 0 in centroids else sorted(centroids.keys())[0]
+    target = 1 if 1 in centroids else sorted(centroids.keys())[1]
 
-    controlled_once = apply_single_control(states, core_index, target_c)
+    target_c = centroids[target]
 
-    propagated = forward_propagation(controlled_once, steps=80)
+    # Use v56 active region to select a valid control point.
+    _, active, _ = pattern_field_control(
+        states=states,
+        controls=data["controls"],
+        basin_ids=basin_ids,
+        centroids=centroids,
+        source=source,
+        target=target
+    )
 
-    # --------------------------------------------------------
-    # Measure deviation
-    # --------------------------------------------------------
+    active_indices = np.where(active)[0]
+
+    if len(active_indices) == 0:
+        raise ValueError("No active control points found from v56 pattern field.")
+
+    preferred_index = 67
+    if preferred_index in active_indices:
+        core_index = preferred_index
+    else:
+        core_index = int(active_indices[0])
+
+    controlled_once, control_vector = apply_single_control(
+        states,
+        core_index,
+        target_c,
+        gain=0.08
+    )
+
+    propagated = forward_propagation(
+        controlled_once,
+        start_index=core_index,
+        steps=160,
+        alpha=0.035,
+        decay=0.985
+    )
 
     deviation = np.linalg.norm(propagated - states, axis=1)
 
-    max_dev = np.max(deviation)
-    mean_dev = np.mean(deviation)
+    max_dev = float(np.max(deviation))
+    mean_dev = float(np.mean(deviation))
+    local_dev = float(deviation[core_index])
+
+    tag = f"B{source}_to_B{target}"
 
     # --------------------------------------------------------
-    # Plot
+    # Plot trajectory
     # --------------------------------------------------------
 
     plt.figure(figsize=(8, 8))
 
-    plt.scatter(states[:, 1], states[:, 0], s=2, alpha=0.2, label="baseline")
+    plt.scatter(
+        states[:, 1],
+        states[:, 0],
+        s=2,
+        alpha=0.18,
+        label="baseline"
+    )
 
     plt.scatter(
         propagated[:, 1],
         propagated[:, 0],
         s=3,
-        alpha=0.6,
+        alpha=0.55,
         label="propagated"
     )
 
@@ -162,23 +182,47 @@ if __name__ == "__main__":
         states[core_index, 1],
         states[core_index, 0],
         color="red",
-        s=60,
-        label="control point"
+        s=70,
+        label=f"control point {core_index}"
     )
 
     plt.xlabel("theta")
     plt.ylabel("r")
-    plt.title("NEXAH v63 — Control Propagation Test")
+    plt.title("NEXAH v63 — Single-Point Control Propagation")
 
     plt.legend(fontsize=7)
     plt.tight_layout()
 
     out_path = os.path.join(
         OUT_DIR,
-        f"v63_control_propagation_B{source}_to_B{target}.png"
+        f"v63_control_propagation_{tag}.png"
     )
 
     plt.savefig(out_path, dpi=200)
+    plt.close()
+
+    # --------------------------------------------------------
+    # Plot deviation profile
+    # --------------------------------------------------------
+
+    plt.figure(figsize=(8, 4))
+
+    plt.plot(deviation, linewidth=1.2)
+    plt.axvline(core_index, linestyle="--", label=f"control index {core_index}")
+
+    plt.xlabel("trajectory index")
+    plt.ylabel("deviation from baseline")
+    plt.title("NEXAH v63 — Forward Deviation Profile")
+
+    plt.legend(fontsize=8)
+    plt.tight_layout()
+
+    dev_path = os.path.join(
+        OUT_DIR,
+        f"v63_control_propagation_deviation_{tag}.png"
+    )
+
+    plt.savefig(dev_path, dpi=200)
     plt.close()
 
     # --------------------------------------------------------
@@ -187,18 +231,27 @@ if __name__ == "__main__":
 
     summary_path = os.path.join(
         OUT_DIR,
-        f"v63_control_propagation_summary_B{source}_to_B{target}.txt"
+        f"v63_control_propagation_summary_{tag}.txt"
     )
 
-    with open(summary_path, "w") as f:
+    with open(summary_path, "w", encoding="utf-8") as f:
         f.write("NEXAH v63 — Control Propagation Test\n")
         f.write("====================================\n\n")
+        f.write(f"Source basin: {source}\n")
+        f.write(f"Target basin: {target}\n")
+        f.write(f"Available basins: {sorted(centroids.keys())}\n\n")
         f.write(f"Control index: {core_index}\n")
-        f.write(f"Max deviation: {max_dev:.6f}\n")
-        f.write(f"Mean deviation: {mean_dev:.6f}\n")
+        f.write(f"Control vector: {control_vector}\n\n")
+        f.write(f"Local deviation: {local_dev:.6f}\n")
+        f.write(f"Max deviation:   {max_dev:.6f}\n")
+        f.write(f"Mean deviation:  {mean_dev:.6f}\n\n")
+        f.write(f"Active v56 control points: {len(active_indices)}\n")
 
-    print("NEXAH v63 complete (clean)")
-    print(f"Max deviation: {max_dev:.6f}")
+    print("NEXAH v63 complete")
+    print(f"Source -> Target: {source} -> {target}")
+    print(f"Control index: {core_index}")
+    print(f"Max deviation:  {max_dev:.6f}")
     print(f"Mean deviation: {mean_dev:.6f}")
     print(f"Saved: {out_path}")
+    print(f"Saved: {dev_path}")
     print(f"Saved: {summary_path}")
