@@ -49,18 +49,16 @@ Find:
 ```python
 control = -0.30 * dx
 ```
-Run again.
 
----
+Run again.
 
 Change to:
 
 ```python
 control = -0.10 * dx
 ```
-Run again.
 
---
+Run again.
 
 ---
 
@@ -84,9 +82,10 @@ You changed:
 
 ## 🧭 Where to go next
 
-- 👉 Full overview → [README.md](README.md)  
-- 👉 Structure extraction → [DISCOVERY_ENGINE/discovery_core_log.md](DISCOVERY_ENGINE/discovery_core_log.md)  
-- 👉 Field construction → [FIELD_LAYER/build_log.md](FIELD_LAYER/build_log.md)  
+- 👉 Overview → [README.md](README.md)  
+- 👉 System state → [ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)  
+- 👉 Methods → [ARCHITECTURE/METHODS.md](ARCHITECTURE/METHODS.md)  
+- 👉 Visuals → [VISUAL_GALLERY.md](VISUAL_GALLERY.md)  
 
 ---
 
@@ -98,8 +97,8 @@ NEXAH turns chaotic systems into:
 
 ---
 
-🧠 If you remember one thing
+## 🧠 If you remember one thing
 
-> **sThe system is not random.
-> It follows structure —
+> The system is not random.  
+> It follows structure —  
 > and that structure can be revealed.
