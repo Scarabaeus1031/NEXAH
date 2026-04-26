@@ -1,0 +1,27 @@
+NEXAH v67 — Barrier Gate Field
+==============================
+
+States: 3000
+Gates detected: 86
+
+Top gate candidates:
+  index 1294: barrier=0.0214, control=0.9881, excess=0.9667, r=0.4827, theta=3.1055
+  index 1291: barrier=0.0338, control=0.9881, excess=0.9542, r=0.4841, theta=3.1150
+  index 1295: barrier=0.0375, control=0.9883, excess=0.9507, r=0.4821, theta=3.1214
+  index 1297: barrier=0.0540, control=0.9994, excess=0.9454, r=0.4825, theta=-3.1025
+  index 376: barrier=0.0451, control=0.9886, excess=0.9434, r=0.5142, theta=3.0848
+  index 1836: barrier=0.0486, control=0.9902, excess=0.9417, r=0.4816, theta=3.0965
+  index 2273: barrier=0.0522, control=0.9929, excess=0.9407, r=2.1500, theta=3.1009
+  index 1288: barrier=0.0604, control=0.9998, excess=0.9394, r=0.4846, theta=-3.0729
+  index 1820: barrier=0.0504, control=0.9884, excess=0.9380, r=0.5366, theta=3.0741
+  index 1296: barrier=0.0622, control=0.9997, excess=0.9375, r=0.4819, theta=-3.1366
+  index 1821: barrier=0.0604, control=0.9883, excess=0.9278, r=0.5386, theta=3.0091
+  index 391: barrier=0.0624, control=0.9898, excess=0.9274, r=0.4692, theta=3.0808
+  index 377: barrier=0.0630, control=0.9884, excess=0.9254, r=0.5157, theta=3.0227
+  index 1290: barrier=0.0686, control=0.9881, excess=0.9195, r=0.4842, theta=3.1373
+  index 1289: barrier=0.0856, control=1.0000, excess=0.9144, r=0.4842, theta=-3.1140
+  index 390: barrier=0.0750, control=0.9891, excess=0.9141, r=0.4729, theta=3.0203
+  index 392: barrier=0.0857, control=0.9974, excess=0.9117, r=0.4680, theta=-3.1349
+  index 163: barrier=0.0808, control=0.9913, excess=0.9105, r=0.7304, theta=3.0613
+  index 1835: barrier=0.0866, control=0.9894, excess=0.9028, r=0.4851, theta=3.0306
+  index 2270: barrier=0.0942, control=0.9951, excess=0.9009, r=2.1510, theta=-3.0766
