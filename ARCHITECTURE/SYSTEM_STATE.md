@@ -16,12 +16,12 @@ It defines:
 
 NEXAH is currently a:
 
-> **field-based reconstruction, control, navigation, and stability analysis system for dynamical systems**
+> **field-based reconstruction, transition, control, and navigation system for dynamical systems**
 
 It transforms:
 
 ```text
-dynamics → structure → field → geometry → stability → control → navigation → convergence
+dynamics → structure → field → geometry → stability → transition geometry → control → navigation
 ```
 
 ---
@@ -45,23 +45,13 @@ Status:
 
 ---
 
-## Interpretation
-
-The system can extract:
-
-- structure from dynamics  
-- fields from trajectories  
-- flow operators (div / curl)  
-
----
-
 # 🌊 2. Field Reconstruction + Field Layer (Core System)
 
 Status:
 
 ✔ flow-aligned coordinate system (α, β, γ)  
 ✔ deviation-based stability metric  
-✔ density field (transition regions)  
+✔ density field (transition regions / greyspace)  
 ✔ ridge extraction (channels)  
 ✔ directional flow field  
 ✔ topology extraction (nodes, cycles)  
@@ -78,53 +68,137 @@ Status:
 
 ## Critical Finding
 
-Field decomposition shows:
-
+```
 dx/dt ≈ -∇V(x) + R(x)
+```
 
 → gradient (attraction) + rotation (structure)
 
 ---
 
-# 🎯 3. Attractor & Convergence (Validated)
+# 🎯 3. Stability Layer (Validated)
 
 Status:
 
-✔ stable fixpoint identified  
-✔ convergence across trajectories  
-✔ basin of attraction measurable  
-✔ local linearization computed  
-
----
-
-## Fixpoint
-
-x* ≈ (13.494, 25.994)
-
----
-
-## Interpretation
-
-> The system exhibits a **stable spiral attractor with robust convergence**
-
----
-
-# 🧭 4. Navigation Layer (Operational)
-
-Status:
-
-✔ path selection  
-✔ control policies  
-✔ trajectory shaping  
-✔ energy-aware navigation  
-✔ multi-attractor experiments (partial)  
-✔ dynamic field modulation (partial)  
+✔ Lyapunov mapping (finite-time)  
+✔ stability field construction  
+✔ boundary vs stability comparison  
+✔ local instability detection  
 
 ---
 
 ## Key Result
 
-> The system can **navigate within its own field toward attractors**
+> Stability is a **spatial field**, not a scalar property
+
+---
+
+## Interpretation
+
+- basins → stable regions  
+- boundaries → weak stability regions  
+- instability forms structured ridges  
+
+---
+
+# 🔷 4. Transition Geometry (NEW CORE)
+
+Status:
+
+✔ basin decomposition  
+✔ transition detection between basins  
+✔ transition probability estimation  
+✔ gate detection (structured transition corridors)  
+✔ basin graph construction  
+✔ saddle / boundary structure extraction  
+
+---
+
+## Key Result
+
+> Transitions occur through **structured geometric corridors (gates)**
+
+---
+
+## Definition
+
+```text
+Gate = directional transition corridor between basins
+```
+
+NOT:
+
+- a point  
+- not a random event  
+
+---
+
+## Interpretation
+
+The system is:
+
+> a **basin–gate structured transition system**
+
+---
+
+# 🎮 5. Control Layer (Operational, Extended v38–v80)
+
+Status:
+
+✔ transition probability control (v49)  
+✔ policy-based control (v50–v51)  
+✔ pattern-based control (v52–v56)  
+✔ flow-aligned control (v61+)  
+✔ control propagation (v63)  
+✔ structure-aware flow shaping (v65+)  
+✔ stability field interaction (v66)  
+✔ barrier / gate-aware control (v67+)  
+✔ basin graph navigation control (v69+)  
+✔ gate-path control (v70+)  
+✔ phase-aligned control (v76+)  
+✔ sheet-aware control (v77+)  
+✔ phase-aligned gate navigation (v80)  
+
+---
+
+## Key Result
+
+> Control operates on **transition structure**, not raw dynamics
+
+---
+
+## Core Principle
+
+```text
+Do not block transitions → guide them
+```
+
+---
+
+## Interpretation
+
+- control modifies transition probabilities  
+- control aligns with system structure  
+- control propagates through the field  
+
+---
+
+# 🧭 6. Navigation Layer (Operational)
+
+Status:
+
+✔ trajectory steering  
+✔ basin-to-basin navigation  
+✔ gate-based routing  
+✔ phase-aware navigation  
+✔ structure-aligned motion  
+✔ constrained path planning  
+
+---
+
+## Key Result
+
+> The system can **navigate through instability regions using gates**
 
 ---
 
@@ -132,184 +206,118 @@ Status:
 
 Navigation is:
 
-- not target-based  
 - not reward-based  
+- not brute-force optimization  
 
 It is:
 
-> **field-based trajectory shaping toward stable regions**
+> **structure-constrained movement through a dynamical field**
 
 ---
 
-# 🔶 5. Stability + Transition Layer (V8+)
+# 🔗 7. System Integration
 
 Status:
 
-✔ Lyapunov mapping (finite-time)  
-✔ stability field construction  
-✔ boundary vs stability comparison  
-✔ separatrix detection  
-✔ gate detection (weak stability regions)  
-✔ injection testing  
-
----
-
-## Key Result
-
-The system contains gates, but no decisions.
-
----
-
-## Interpretation
-
-The system exhibits:
-
-- transition regions (separatrix)  
-- entry points ("gates")  
-- stability gradients  
-
-But:
-
-→ no branching outcomes  
-
-All tested trajectories converge to the same attractor.
-
----
-
-## Critical Insight
-
-- transition boundaries ≠ instability structures  
-- gates ≠ decision nodes  
-
-This separates:
-
-→ geometry of motion  
-→ stability of motion  
-
----
-
-## System-Level Consequence
-
-> The system behaves as a **directed flow system**, not a decision system.
-
----
-
-# 🔗 6. System Integration
-
-Status:
-
-✔ Discovery → Field Reconstruction → Field Layer connected  
-✔ Field → Control → Navigation working  
-✔ Stability integrated  
+✔ Discovery → Field → Geometry → Stability integrated  
+✔ Transition geometry connected to control  
+✔ Control → Navigation loop operational  
 ✔ closed-loop behavior observable  
 
 ---
 
 ## Current Limitation
 
-⚠ full abstraction into reusable API not yet complete  
+⚠ no unified runtime kernel yet  
 
 ---
 
-## Interpretation
+# 🌍 8. Real-World Systems (Status)
 
-> The system is **functionally integrated**, but not yet packaged
+### 🔥 Lorenz
 
----
+✔ fully validated  
+✔ structure, flow, stability, transitions, control  
 
-# 🌍 7. Real-World Systems (Status)
-
-### 🔥 Lorenz (Reference System)
-
-✔ fully working  
-✔ structure, flow, topology, control, convergence validated  
-
-→ complete prototype system  
+→ reference system  
 
 ---
 
-### ⚡ Power Systems (IEEE)
+### ⚡ IEEE Power Systems
 
 ✔ field reconstruction works  
-✔ flow structure visible  
+✔ transition structure partially visible  
 
 But:
 
-❌ convergence not validated  
-❌ reproducibility not established  
-❌ unified pipeline missing  
+❌ transition geometry not fully validated  
+❌ control not yet robust  
+❌ reproducible pipeline missing  
 
 ---
 
 ### 🔄 Other Systems
 
 - Kuramoto → exploratory  
-- Multi-agent → exploratory  
-- Supply chain → exploratory  
+- multi-agent → exploratory  
+- supply chain → exploratory  
 
 ---
 
-## Interpretation
+# ⚠️ 9. Current Bottlenecks
 
-> Real-world relevance is plausible, but not yet demonstrated
+## 1. Kernel Gap
 
----
-
-# ⚠️ 8. Current Bottlenecks
-
-## 1. Packaging Gap
-
-- no unified entry point (run_nexah_demo.py)  
-- no simple onboarding  
+- no unified execution pipeline  
+- no standardized runtime  
 
 ---
 
 ## 2. Validation Gap
 
-- convergence not statistically validated  
-- limited multi-run evaluation  
+- limited statistical validation  
+- no large-scale benchmarking  
 
 ---
 
 ## 3. Application Gap
 
-- no reproducible real-world demonstration  
+- real-world deployment not yet achieved  
 
 ---
 
-## 4. Conceptual Gap
+## 4. Abstraction Gap
 
-- no clean analytical formulation of:
-  - cost field  
-  - stability field  
+- geometry layer not fully formalized (→ VESSEL_GEOMETRY)  
+- transition layer not yet unified into API  
 
 ---
 
-# 🧠 9. What Is Established
+# 🧠 10. What Is Established
 
 ✔ structure emerges from dynamics  
 ✔ dynamics form continuous fields  
-✔ transitions follow geometric channels  
-✔ topology emerges from flow  
-✔ attractors exist and are measurable  
-✔ trajectories converge to stable regions  
-✔ navigation is possible within the field  
-✔ stability structure can be measured (Lyapunov)  
-✔ system exhibits directed convergence behavior  
+✔ geometry defines motion constraints  
+✔ stability is spatially structured  
+✔ basins define long-term behavior  
+✔ gates define transition structure  
+✔ transitions follow constrained paths  
+✔ control can reshape transitions  
+✔ navigation operates on structured geometry  
 
 ---
 
-# ❌ 10. What Is NOT Established
+# ❌ 11. What Is NOT Established
 
-❌ generalization across arbitrary systems  
-❌ robustness under strong perturbations  
-❌ large-scale real-world applicability  
+❌ universal generalization  
+❌ full robustness under noise / perturbations  
+❌ large-scale real-world validation  
 ❌ analytical completeness  
-❌ existence of true decision structures  
+❌ optimal control guarantees  
 
 ---
 
-# 🧭 11. System Positioning
+# 🧭 12. System Positioning
 
 NEXAH is NOT:
 
@@ -319,17 +327,17 @@ NEXAH is NOT:
 
 NEXAH is:
 
-> a structure–field–navigation–stability framework  
+> a **field-based transition, control, and navigation framework**
 
 ---
 
-# 🚀 12. Immediate Next Steps
+# 🚀 13. Immediate Next Steps
 
-1. build run_nexah_demo.py (entry point)  
-2. validate convergence statistically (multi-run)  
-3. create reproducible Lorenz results block  
-4. package IEEE example  
-5. unify pipeline into simple interface  
+1. implement NEXAH kernel (state → field → graph → control → next state)  
+2. unify transition geometry layer  
+3. validate basin + gate structure statistically  
+4. build reproducible demo pipeline  
+5. integrate real-world system case (IEEE)  
 
 ---
 
@@ -337,19 +345,20 @@ NEXAH is:
 
 NEXAH demonstrates:
 
-> complex systems can be reconstructed as structured fields  
-> with constrained navigation and stable convergence  
+> complex systems evolve within structured fields  
+> and transitions are governed by geometry, stability, and control
 
 ---
 
 # 🔥 Core Truth
 
-> Complex systems are not random.  
-> They evolve within structured fields.
+> Systems do not randomly fail.  
+> They move through structured transition spaces.
 
-> These fields constrain motion,  
-> guide trajectories,  
-> and determine outcomes.
+> These spaces define:
+- where motion is possible  
+- where transitions occur  
+- how systems can be controlled  
 
 ---
 
