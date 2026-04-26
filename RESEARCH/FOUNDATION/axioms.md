@@ -1,19 +1,12 @@
 # NEXAH — Structural Axioms (Working Assumptions)
 
-This document defines the **core working assumptions** of the NEXAH framework.
-
-These are not universal laws.
-
-They are:
-
-> **practical structural hypotheses**  
-> used to build, test, and operate the system
-
 ---
 
 ## 🧭 Purpose
 
-The axioms define how NEXAH:
+This document defines the **core working assumptions** of the NEXAH framework.
+
+They describe how NEXAH:
 
 - interprets system behavior  
 - reconstructs structure  
@@ -30,11 +23,15 @@ These axioms are:
 - system-dependent  
 - subject to revision  
 
-They are not claimed to be:
+They are NOT:
 
+- universal laws  
 - complete  
-- universal  
 - formally proven  
+
+They are:
+
+> **practical structural hypotheses used to build and operate the system**
 
 ---
 
@@ -42,95 +39,285 @@ They are not claimed to be:
 
 ---
 
-## Axiom 1 — Field Representation
+## **Axiom 1 — Field Representation**
 
-A dynamical system can be approximated as a **structured field** in state space.
+A dynamical system can be represented as a **continuous field in state space**:
 
-> System evolution is constrained by local flow structure.
+$$
+s = (r, \theta)
+$$
 
----
+with local flow:
 
-## Axiom 2 — Structured Motion
-
-System trajectories follow **non-random paths** within this field.
-
-> Motion is guided by underlying geometry.
-
----
-
-## Axiom 3 — Local Coherence
-
-Stability corresponds to **alignment between system motion and local field direction**.
-
-> Coherence is a directional property, not a static value.
+$$
+\dot{s} = F(s)
+$$
 
 ---
 
-## Axiom 4 — Interface Regions
+**Interpretation**
 
-Transitions occur in **structured regions** where coherence is reduced.
-
-> These regions act as transition zones between regimes.
+```text
+System evolution is governed by local structure,
+not isolated time events.
+```
 
 ---
 
-## Axiom 5 — Transition as Process
+## **Axiom 2 — Structured Motion**
 
-Transitions are not instantaneous.
+System trajectories are **not random**.
 
-They occur as:
+They follow:
+
+> structured paths induced by the field
+
+---
+
+**Interpretation**
+
+```text
+Motion reflects geometry, not noise.
+```
+
+---
+
+## **Axiom 3 — Local Coherence**
+
+Stability corresponds to **alignment between trajectory and field**:
+
+$$
+C(s) =
+\frac{\dot{s} \cdot F(s)}{\|\dot{s}\| \cdot \|F(s)\|}
+$$
+
+---
+
+**Interpretation**
+
+```text
+Coherence is directional (alignment),
+not a scalar energy value.
+```
+
+---
+
+## **Axiom 4 — Interface Regions**
+
+Transitions occur in regions where:
+
+$$
+C(s) \approx 0
+$$
+
+---
+
+**Interpretation**
+
+```text
+Transitions occur in structured interface zones,
+not at isolated points.
+```
+
+---
+
+## **Axiom 5 — Transition as Process**
+
+Transitions are extended processes:
 
 ```text
 ENTRY → CORE → EXIT
 ```
 
-> A multi-phase geometric process.
+---
+
+**Interpretation**
+
+```text
+A transition is a geometric traversal,
+not an instantaneous event.
+```
 
 ---
 
-## Axiom 6 — Stability as Region
+## **Axiom 6 — Stability as Region**
 
-Stability is not a scalar quantity.
+Stability is not a scalar value.
 
 It is:
 
-> a **region within the field** where motion remains coherent.
+> a **region in state space** where trajectories remain coherent
 
 ---
 
-## Axiom 7 — Collapse Mechanism
+**Interpretation**
 
-Breakdown occurs when a trajectory:
+```text
+Stable behavior = staying inside structured flow regions
+```
+
+---
+
+## **Axiom 7 — Collapse Mechanism**
+
+Collapse occurs when a trajectory:
 
 - loses coherence  
 - exits structured flow  
-- enters unstable regions  
-
-> Collapse is a process, not a point.
+- enters low-density regions  
 
 ---
 
-## Axiom 8 — Navigability
+**Interpretation**
 
-If field structure is known, trajectories can be influenced.
-
-> Navigation = maintaining or restoring coherence.
+```text
+Collapse = loss of structural anchoring
+```
 
 ---
 
-# 🧠 Interpretation
+## **Axiom 8 — Greyspace (Low-Density Instability)**
 
-These axioms describe systems as:
+Define:
 
-> trajectories evolving within a structured field,  
-> where stability depends on local alignment and transitions occur in geometric regions
+$$
+G(s) = \frac{1}{\rho(s)}
+$$
+
+---
+
+**Interpretation**
+
+```text
+Low density regions act as transition corridors
+```
+
+---
+
+## **Axiom 9 — Navigability**
+
+If field structure is known, trajectories can be influenced:
+
+$$
+\dot{s} = F(s) + u(s)
+$$
+
+---
+
+**Interpretation**
+
+```text
+Navigation = modifying motion within the field
+```
+
+---
+
+## **Axiom 10 — Dual Navigation Principle**
+
+Effective control requires:
+
+$$
+u =
+-\nabla P(\text{IOTA})
++
+\nabla \rho
+$$
+
+---
+
+**Interpretation**
+
+```text
+Stability requires BOTH:
+
+avoidance of instability
++ attraction to structure
+```
+
+---
+
+## **Axiom 11 — Discrete Structural Regimes**
+
+State space decomposes into regions (basins):
+
+$$
+s \in B_i
+$$
+
+---
+
+**Interpretation**
+
+```text
+System operates across discrete regimes
+```
+
+---
+
+## **Axiom 12 — Probabilistic Transitions**
+
+Transitions between regimes follow:
+
+$$
+P(B_i \rightarrow B_j)
+$$
+
+---
+
+**Interpretation**
+
+```text
+System evolution is probabilistic at the regime level
+```
+
+---
+
+## **Axiom 13 — Controllability of Transitions**
+
+Transition probabilities can be influenced:
+
+$$
+P(B_i \rightarrow B_j \mid u)
+\neq
+P(B_i \rightarrow B_j)
+$$
+
+---
+
+**Interpretation**
+
+```text
+Transitions are not only observed —
+they can be shaped
+```
+
+---
+
+# 🧠 Unified Interpretation
+
+```text
+A system is a trajectory in a structured field.
+
+Stability:
+→ alignment with flow
+→ high-density regions
+
+Instability:
+→ misalignment
+→ low-density regions
+→ competing flow directions
+
+Transition:
+→ navigation through structured instability corridors
+```
 
 ---
 
 # 🔬 Status
 
-- supported by empirical observations (Lorenz, IEEE systems)  
-- implemented in prototype form  
+- empirically supported  
+- implemented in prototype systems  
+- consistent with observed dynamics  
 - not formally proven  
 
 ---
@@ -139,15 +326,28 @@ These axioms describe systems as:
 
 These axioms:
 
-- guide implementation  
-- inform method design  
-- define interpretation boundaries  
+- define the conceptual foundation  
+- guide modeling decisions  
+- constrain interpretation  
 
 They are:
 
-> a **working foundation**, not a final theory
+> a **working operational layer** for the NEXAH framework
+
+---
+
+# 🧠 Final Statement
+
+```text
+Systems do not fail randomly.
+
+They evolve within structure,
+lose coherence,
+leave the field,
+and transition into a new regime.
+```
 
 ---
 
 **Author:** Thomas K. R. Hofmann  
-**Version:** v0.5.0  
+**Version:** v0.6.0
