@@ -1,3 +1,12 @@
+# 📦 Archived Root README
+
+Original root README before restructuring.
+
+Archived on: 2026-04-26  
+Reason: Simplification and separation into README + START_HERE
+
+---
+
 # ⚡ NEXAH — A Geometric Framework for Dynamical Systems
 
 > NEXAH is a computational framework that reveals structure, transitions, and stability directly from system dynamics.
