@@ -1,0 +1,8 @@
+NEXAH v57 — Clustered Pattern Control
+====================================
+
+Clusters detected: 2
+Selected cluster size: 19
+
+P_before: 0.6250
+P_after:  1.0000
