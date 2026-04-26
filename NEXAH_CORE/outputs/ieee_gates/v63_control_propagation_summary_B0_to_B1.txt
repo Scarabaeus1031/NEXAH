@@ -1,0 +1,15 @@
+NEXAH v63 — Control Propagation Test
+====================================
+
+Source basin: 0
+Target basin: 1
+Available basins: [0, 1, 2, 3]
+
+Control index: 67
+Control vector: [-0.00160306 -0.99999872]
+
+Local deviation: 0.080000
+Max deviation:   0.080000
+Mean deviation:  0.000027
+
+Active v56 control points: 34
