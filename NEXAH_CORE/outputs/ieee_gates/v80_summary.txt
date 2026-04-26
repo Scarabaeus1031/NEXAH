@@ -1,0 +1,13 @@
+NEXAH v80 — Phase-Aligned Gate Navigation
+========================================
+
+Reached gates: 2/2
+Final distance: 0.181698
+
+π / turning metrics:
+  max |turn|:  0.389205
+  mean |turn|: 0.007567
+  total turn:  1.694968
+
+Sheet metrics:
+  unique sheets visited: [1, 2, 3]
