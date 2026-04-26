@@ -1,0 +1,47 @@
+NEXAH v46 — Basin Prediction Summary
+===================================
+
+Basins: [0, 1, 2, 3]
+Segments: 33
+Predictions: 32
+Accuracy: 0.4688
+Mean confidence: 0.6739
+
+Transition probability matrix:
+[[0.         0.625      0.         0.375     ]
+ [0.28571429 0.         0.71428571 0.        ]
+ [0.8        0.2        0.         0.        ]
+ [0.5        0.5        0.         0.        ]]
+
+Segment 0: actual=0, predicted=1, confidence=0.6250
+Segment 1: actual=1, predicted=1, confidence=0.6250
+Segment 2: actual=2, predicted=2, confidence=0.7143
+Segment 3: actual=2, predicted=0, confidence=0.8000
+Segment 4: actual=1, predicted=0, confidence=0.8000
+Segment 5: actual=0, predicted=2, confidence=0.7143
+Segment 6: actual=0, predicted=1, confidence=0.6250
+Segment 7: actual=0, predicted=1, confidence=0.6250
+Segment 8: actual=1, predicted=1, confidence=0.6250
+Segment 9: actual=2, predicted=2, confidence=0.7143
+Segment 10: actual=0, predicted=0, confidence=0.8000
+Segment 11: actual=0, predicted=1, confidence=0.6250
+Segment 12: actual=1, predicted=1, confidence=0.6250
+Segment 13: actual=2, predicted=2, confidence=0.7143
+Segment 14: actual=2, predicted=0, confidence=0.8000
+Segment 15: actual=0, predicted=0, confidence=0.8000
+Segment 16: actual=0, predicted=1, confidence=0.6250
+Segment 17: actual=1, predicted=1, confidence=0.6250
+Segment 18: actual=2, predicted=2, confidence=0.7143
+Segment 19: actual=0, predicted=0, confidence=0.8000
+Segment 20: actual=1, predicted=1, confidence=0.6250
+Segment 21: actual=0, predicted=2, confidence=0.7143
+Segment 22: actual=3, predicted=1, confidence=0.6250
+Segment 23: actual=1, predicted=0, confidence=0.5000
+Segment 24: actual=1, predicted=2, confidence=0.7143
+Segment 25: actual=2, predicted=2, confidence=0.7143
+Segment 26: actual=0, predicted=0, confidence=0.8000
+Segment 27: actual=3, predicted=1, confidence=0.6250
+Segment 28: actual=3, predicted=0, confidence=0.5000
+Segment 29: actual=0, predicted=0, confidence=0.5000
+Segment 30: actual=0, predicted=1, confidence=0.6250
+Segment 31: actual=3, predicted=1, confidence=0.6250
