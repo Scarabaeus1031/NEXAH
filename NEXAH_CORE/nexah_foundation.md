@@ -71,15 +71,83 @@ The system is mapped into a rotational state space:
 This transformation defines the geometric domain
 in which dynamics are analyzed.
 ```
+
 ---
 
 ## 🔥 Key Property
+
 ```text
 θ is a rotational coordinate:
 
 θ ∈ [0, 2π]
 
 → the system evolves on a circular / cylindrical geometry
+```
+
+---
+
+# 🔹 1.1 Rotational Geometry and π
+
+---
+
+## Rotational Structure
+
+$$
+\theta(t + \Delta t) = \theta(t) + \omega(t)
+$$
+
+$$
+\omega(t) = \frac{d\theta}{dt}
+$$
+
+---
+
+## Interpretation
+
+```text
+The system is not only evolving in time,
+but rotating in state space.
+
+The coordinate θ introduces a continuous rotational symmetry.
+```
+
+---
+
+## 🔥 Role of π
+
+```text
+π defines the geometry of rotation.
+
+It is not causing instability,
+but defining the space in which dynamics unfold.
+```
+
+---
+
+## Key Insight
+
+```text
+π → perfect rotational symmetry
+
+NEXAH → detects where this symmetry breaks
+```
+
+---
+
+## Formal Observation
+
+$$
+P(\text{IOTA} \mid \theta) \neq \text{const}
+$$
+
+---
+
+## Interpretation
+
+```text
+Instability is not isotropic.
+
+It depends on phase → symmetry is broken.
 ```
 
 ---
@@ -173,8 +241,6 @@ $$
 ---
 
 ## 3.3 Sheets (Layered Dynamics)
-
-Define radial layers:
 
 $$
 \mathcal{S}_i = \{ (r,\theta) \mid r \approx r_i \}
@@ -503,7 +569,7 @@ u_{\pi}
 u_{\text{sheet}}
 +
 u_{\text{gate}}
-```
+$$
 
 ---
 
@@ -559,8 +625,6 @@ We do not simulate systems.
 
 We navigate them.
 ```
-
----
 
 ---
 
