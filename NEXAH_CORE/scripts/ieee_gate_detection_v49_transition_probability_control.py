@@ -217,7 +217,7 @@ def build_pipeline():
 
 
 # ------------------------------------------------------------
-# Transition-control steering
+# Transition-control steering (FIXED)
 # ------------------------------------------------------------
 
 def transition_probability_control(
@@ -237,9 +237,9 @@ def transition_probability_control(
     """
     Apply transition-specific control.
 
-    Control is active only when the trajectory is inside source_basin.
-    During source basin segments, states are biased toward target_basin.
-    Elsewhere, only weak base motion is preserved.
+    Compatible with BOTH segment formats:
+    - dict: {"basin": b, "start": i, "end": j}
+    - tuple: (b, i, j)
     """
 
     controlled = aligned_states.copy()
@@ -248,9 +248,21 @@ def transition_probability_control(
 
     for seg in segments:
 
-        b = seg["basin"]
-        start = seg["start"]
-        end = seg["end"]
+        # ----------------------------------------
+        # FORMAT FIX
+        # ----------------------------------------
+        if isinstance(seg, dict):
+            b = seg["basin"]
+            start = seg["start"]
+            end = seg["end"]
+
+        elif isinstance(seg, (list, tuple)) and len(seg) == 3:
+            b, start, end = seg
+
+        else:
+            raise ValueError(f"Unknown segment format: {seg}")
+
+        # ----------------------------------------
 
         if b != source_basin:
             continue
@@ -260,20 +272,25 @@ def transition_probability_control(
             s = controlled[t]
 
             u_base = raw_controls[t]
+
             u_target = target_attraction(
                 s,
                 target_centroid,
                 gain=transition_gain
             )
 
+            # combined control
             u = base_gain * eta * u_base + u_target
 
+            # step clipping
             step_norm = np.linalg.norm(u)
             if step_norm > max_step:
                 u = u / step_norm * max_step
 
+            # smoothing
             u = (1.0 - smoothing) * u + smoothing * previous_step
 
+            # update
             s_new = s + u
             s_new[1] = wrap_theta(s_new[1])
 
@@ -282,7 +299,6 @@ def transition_probability_control(
             previous_step = u
 
     return controlled, active_mask
-
 
 # ------------------------------------------------------------
 # Reclassify controlled states by nearest original basin centroid
