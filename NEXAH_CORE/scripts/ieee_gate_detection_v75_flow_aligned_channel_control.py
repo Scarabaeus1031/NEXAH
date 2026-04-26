@@ -147,32 +147,44 @@ def main():
     controlled = run_flow_control(traj, gates, path)
 
     # --------------------------------------------------------
-    # Plot
-    # --------------------------------------------------------
+# Plot + Save (stable, no white-out)
+# --------------------------------------------------------
 
-    plt.figure(figsize=(8, 6))
+# Create figure EXPLICITLY
+fig, ax = plt.subplots(figsize=(8, 6))
 
-    plt.scatter(traj[:, 1], traj[:, 0], s=1, alpha=0.25, label="field")
+# --- Field
+ax.scatter(
+    traj[:, 1], traj[:, 0],
+    s=1, alpha=0.3, label="field"
+)
 
-    plt.plot(
-        controlled[:, 1],
-        controlled[:, 0],
-        color="red",
-        linewidth=2,
-        label="flow-aligned control"
+# --- Controlled trajectory
+ax.plot(
+    controlled[:, 1],
+    controlled[:, 0],
+    color="red",
+    linewidth=2,
+    label="flow-aligned control"
+)
+
+# --- Gates
+for (a, b), g in gates.items():
+    ax.scatter(
+        g["theta"], g["r"],
+        c="black",
+        s=80
     )
 
-    for (a, b), g in gates.items():
-        plt.scatter(g["theta"], g["r"], c="black", s=80)
-        plt.text(g["theta"], g["r"], f"G{a}->{b}", fontsize=8)
+# --- Labels
+ax.set_xlabel("theta")
+ax.set_ylabel("r")
+ax.set_title("NEXAH v75 — Flow-Aligned Channel Control")
+ax.legend()
 
-    plt.xlabel("theta")
-    plt.ylabel("r")
-    plt.title("NEXAH v75 — Flow-Aligned Channel Control")
-    plt.legend()
 
-   # --------------------------------------------------------
-# Save instead of show (robust)
+# --------------------------------------------------------
+# Save (robust)
 # --------------------------------------------------------
 
 CORE_DIR = os.path.dirname(CURRENT_DIR)
@@ -184,14 +196,12 @@ out_path = os.path.join(
     "v75_flow_aligned_channel_control.png"
 )
 
-# IMPORTANT: grab current figure explicitly
-fig = plt.gcf()
-
+# Save using FIG (NOT plt)
 fig.tight_layout()
-fig.savefig(out_path, dpi=200, bbox_inches="tight")
+fig.savefig(out_path, dpi=200)
 
 print("NEXAH v75 complete")
 print(f"Saved: {out_path}")
 
-# Optional: keep or close depending on your workflow
+# Close cleanly
 plt.close(fig)
