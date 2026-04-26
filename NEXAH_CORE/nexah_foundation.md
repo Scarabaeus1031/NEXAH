@@ -447,7 +447,319 @@ A system does not collapse.
 It leaves one structured regime
 and transitions into another.
 ```
+---
 
+---
+
+# 🔹 16. π-Consistency (v76)
+
+## Definition
+
+Directional smoothness is measured via turning rate:
+
+$$
+\Delta \theta_t = \theta_{t+1} - \theta_t
+$$
+
+---
+
+## Metrics
+
+- max turn:
+  $$
+  \max |\Delta \theta|
+  $$
+
+- mean turn:
+  $$
+  \mathbb{E}[|\Delta \theta|]
+  $$
+
+---
+
+## Interpretation
+
+```text
+Low turning variance → smooth rotational flow
+High turning spikes → staircase / unstable motion
+```
+
+---
+
+## 🔥 Insight
+
+```text
+π emerges as the constraint for continuous rotation
+```
+
+---
+
+## Control Term
+
+$$
+u_{\pi} = -k_{\theta} \cdot \Delta \theta
+$$
+
+---
+
+# 🔹 17. Sheet Structure (v77–v78)
+
+---
+
+## Definition
+
+Phase space decomposes into radial layers:
+
+$$
+\mathcal{S}_i = \{ (r,\theta) \mid r \approx r_i \}
+$$
+
+---
+
+## Sheet Index
+
+$$
+\text{sheet}(r) = \arg\min_i |r - r_i|
+$$
+
+---
+
+## Interpretation
+
+```text
+Each sheet = locally coherent flow regime
+```
+
+---
+
+## Sheet Switching
+
+$$
+\frac{d}{dt} \text{sheet}(r)
+$$
+
+---
+
+## 🔥 Insight
+
+```text
+Instability correlates with rapid sheet switching
+```
+
+---
+
+## Sheet Control
+
+$$
+u_{\sqrt{2}} \sim (r_{\text{next}} - r)
+$$
+
+---
+
+# 🔹 18. Multi-Operator Control (v79)
+
+---
+
+## Operators
+
+- π → angular alignment  
+- φ → radial drift  
+- √2 → sheet transition  
+
+---
+
+## Combined Control
+
+$$
+u =
+w_{\pi} u_{\pi}
++
+w_{\phi} u_{\phi}
++
+w_{\sqrt{2}} u_{\sqrt{2}}
+$$
+
+---
+
+## Dynamic Weights
+
+$$
+w_i = f(\text{state})
+$$
+
+---
+
+## 🔥 Insight
+
+```text
+Control is multi-dimensional and state-adaptive
+```
+
+---
+
+# 🔹 19. Phase-Aligned Gate Navigation (v80)
+
+---
+
+## Idea
+
+Align trajectory with gate direction:
+
+$$
+u_{\text{gate}} \sim \nabla d_{\text{gate}}
+$$
+
+---
+
+## Combined Navigation
+
+$$
+u =
+u_{\pi}
++
+u_{\text{gate}}
++
+u_{\text{sheet}}
+$$
+
+---
+
+## Observed Behavior
+
+```text
+trajectory follows flow channels
+→ aligns with gate direction
+→ minimizes turning
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Gates are not targets
+
+They are directional structures in the flow field
+```
+
+---
+
+# 🔹 20. NEXAH Kernel (Unified Architecture)
+
+---
+
+## System Decomposition
+
+```text
+ARCHY   → simulation layer
+FIELD   → continuous geometry + probability
+GRAPH   → basin + transition structure
+KERNEL  → navigation + control
+```
+
+---
+
+## Unified Control Law
+
+$$
+u =
+-\nabla P(\text{IOTA})
++
+\nabla A_{\text{stable}}
++
+u_{\pi}
++
+u_{\text{gate}}
++
+u_{\text{sheet}}
+$$
+
+---
+
+## Interpretation
+
+Control integrates:
+
+```text
+risk avoidance
++ structure attraction
++ rotational consistency
++ directional alignment
++ sheet transitions
+```
+
+---
+
+# 🔹 21. Final System Equation
+
+$$
+\text{Trajectory} =
+f(
+\text{flow},
+\text{field},
+\text{structure},
+\text{control}
+)
+$$
+
+---
+
+# 🔥 Final Insight (v80 + Kernel)
+
+```text
+A dynamical system is not evolving in time
+
+It is navigating a structured state space
+```
+
+---
+
+# 🔹 Updated Final Statement
+
+$$
+\text{Transition} =
+\text{Field Navigation}
++
+\text{Structural Misalignment}
++
+\text{Controlled Basin Transition}
+$$
+
+---
+
+# 🧭 Final Summary (Extended)
+
+```text
+Signal
+→ Phase
+→ Geometry
+→ Density
+→ Greyspace
+→ Flow
+→ Sheets
+→ Switching
+→ Basins
+→ Transitions
+→ Probability field
+→ Gradient navigation
+→ Multi-operator control
+→ π-consistency
+→ Sheet alignment
+→ Gate alignment
+→ NEXAH Kernel
+```
+
+---
+
+## 🔥 Closing Statement
+
+```text
+We do not simulate systems.
+
+We navigate them.
+```
+
+---
 ---
 
 © Thomas K. R. Hofmann  
