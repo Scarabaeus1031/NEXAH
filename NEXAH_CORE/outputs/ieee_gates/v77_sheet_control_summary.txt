@@ -1,0 +1,22 @@
+NEXAH v77 — Sheet-Aware π-Control
+=================================
+
+Path: [0, 3, 1]
+Reached gates: 0/2
+Final distance to target: 3.021782
+
+Sheet centers:
+  S0: r=0.541108
+  S1: r=0.866514
+  S2: r=1.205243
+  S3: r=1.608337
+  S4: r=1.993285
+
+π-consistency metrics:
+  max |turn|:  0.047138
+  mean |turn|: 0.030551
+  total turn:  17.108484
+
+Sheet-switch metrics:
+  sheet switches attempted: 34
+  unique sheets visited: [0, 1, 2, 3, 4]
