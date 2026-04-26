@@ -1,5 +1,5 @@
 # ============================================================
-# NEXAH v59 — Control Core Extraction (ΔP-based FINAL)
+# NEXAH v59 — Control Core Extraction (Subset-Based FINAL)
 # ============================================================
 
 import os
@@ -16,16 +16,15 @@ from ieee_gate_detection_v56_pattern_field_control import (
 )
 
 from ieee_gate_detection_v45_transition_matrix import compute_transition_matrix_from_segments
-from ieee_gate_detection_v44_basin_identity import cluster_locked_basins
 
 
 # ------------------------------------------------------------
-# Compute transition probability
+# Compute transition probability (FIXED BASELINE SPACE)
 # ------------------------------------------------------------
 
 def compute_P(basin_ids, source, target):
 
-    counts, probs, basin_list, _ = compute_transition_matrix_from_segments(basin_ids)
+    _, probs, basin_list, _ = compute_transition_matrix_from_segments(basin_ids)
 
     if source not in basin_list:
         return 0.0
@@ -39,43 +38,64 @@ def compute_P(basin_ids, source, target):
 
 
 # ------------------------------------------------------------
-# Influence scoring (CORRECT)
+# Apply control only on subset
+# ------------------------------------------------------------
+
+def apply_subset_control(states, controls, basin_ids, centroids,
+                         source, target, active_indices, subset):
+
+    controlled = states.copy()
+
+    target_c = centroids[target]
+
+    for idx in subset:
+
+        s = controlled[idx]
+        u_base = controls[idx]
+
+        dr = target_c[0] - s[0]
+        dtheta = target_c[1] - s[1]
+
+        norm = np.sqrt(dr**2 + dtheta**2)
+        if norm > 1e-9:
+            dr /= norm
+            dtheta /= norm
+
+        u = 0.55 * 0.02 * u_base + 0.065 * np.array([dr, dtheta])
+
+        controlled[idx] = s + u
+
+    return controlled
+
+
+# ------------------------------------------------------------
+# Influence scoring (REAL)
 # ------------------------------------------------------------
 
 def compute_influence(states, controls, basin_ids, centroids, source, target):
 
-    # full controlled system
-    controlled, active, mask = pattern_field_control(
+    # full control
+    controlled_full, active, _ = pattern_field_control(
         states, controls, basin_ids, centroids, source, target
     )
 
-    controlled_ids, *_ = cluster_locked_basins(
-        controlled,
-        np.ones(len(controlled)) * 0.5,
-        threshold=0.5,
-        eps=0.18,
-        min_samples=6
-    )
+    full_P = compute_P(basin_ids, source, target)
 
-    full_P = compute_P(controlled_ids, source, target)
+    active_indices = list(np.where(active)[0])
 
-    active_indices = np.where(active)[0]
     influence = []
 
     for idx in active_indices:
 
-        test_states = controlled.copy()
-        test_states[idx] = states[idx]
+        subset = [i for i in active_indices if i != idx]
 
-        test_ids, *_ = cluster_locked_basins(
-            test_states,
-            np.ones(len(test_states)) * 0.5,
-            threshold=0.5,
-            eps=0.18,
-            min_samples=6
+        controlled = apply_subset_control(
+            states, controls, basin_ids, centroids,
+            source, target, active_indices, subset
         )
 
-        test_P = compute_P(test_ids, source, target)
+        # IMPORTANT: evaluate in ORIGINAL basin_ids space
+        test_P = compute_P(basin_ids, source, target)
 
         delta = full_P - test_P
 
@@ -83,7 +103,7 @@ def compute_influence(states, controls, basin_ids, centroids, source, target):
 
     influence.sort(key=lambda x: x[1], reverse=True)
 
-    return influence, active_indices, controlled, active, full_P
+    return influence, active_indices, controlled_full, active, full_P
 
 
 # ------------------------------------------------------------
@@ -151,7 +171,7 @@ if __name__ == "__main__":
         label="control core"
     )
 
-    plt.title("NEXAH v59 — Control Core Extraction (ΔP)")
+    plt.title("NEXAH v59 — Control Core (Subset-Based)")
     plt.xlabel("theta")
     plt.ylabel("r")
 
@@ -177,8 +197,8 @@ if __name__ == "__main__":
 
     with open(summary_path, "w") as f:
 
-        f.write("NEXAH v59 — Control Core Extraction (ΔP-based)\n")
-        f.write("==============================================\n\n")
+        f.write("NEXAH v59 — Control Core (Subset-Based)\n")
+        f.write("=======================================\n\n")
 
         f.write(f"Full P: {full_P:.4f}\n")
         f.write(f"Active points: {len(active_indices)}\n\n")
@@ -188,8 +208,5 @@ if __name__ == "__main__":
         for idx, score in influence[:top_k]:
             f.write(f"  index {idx} → ΔP = {score:.6f}\n")
 
-    print("NEXAH v59 complete (ΔP-based)")
+    print("NEXAH v59 complete (subset-based)")
     print(f"Full P: {full_P:.4f}")
-    print(f"Top-{top_k} core extracted")
-    print(f"Saved: {out_path}")
-    print(f"Saved: {summary_path}")
