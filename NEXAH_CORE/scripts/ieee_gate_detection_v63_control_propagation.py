@@ -116,11 +116,16 @@ if __name__ == "__main__":
 
     states, basin_ids, centroids = build_pipeline()
 
-    source = 0
-    target = 1
+    # verfügbare basins holen
+    basin_keys = list(centroids.keys())
 
-    target_c = centroids[target]
+    print("Available basins:", basin_keys)
 
+    # fallback falls nur einer existiert
+    if len(basin_keys) < 2:
+    raise ValueError("Not enough basins detected for control test")
+    
+    
     # pick ONE control core index (adjust if needed)
     core_index = 67
 
