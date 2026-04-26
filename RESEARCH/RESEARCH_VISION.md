@@ -12,6 +12,82 @@ It is not a direct representation of implementation, but a synthesis of observed
 
 ---
 
+## 🧭 From Concept to System Structure
+
+While the previous figure illustrates the **conceptual hypothesis** of NEXAH,  
+the following diagrams outline the **emerging structural interpretation**  
+and the **current architectural gap** between theory and implementation.
+
+---
+
+### ⚠️ Identified System Gaps (Current Limitations)
+
+![NEXAH System Gaps](./visuals/NEXAH_SYSTEM_GAPS_missing_layers_v_2.png)
+
+*This diagram highlights the key structural gaps that currently prevent NEXAH  
+from operating as a fully closed-loop navigation system.*
+
+Main limitations:
+
+- ❌ no unified execution kernel  
+- ❌ no global trajectory policy  
+- ❌ inconsistent transition probabilities  
+- ❌ missing real-world validation layer  
+
+👉 **Interpretation:**  
+The system structure is largely discovered,  
+but not yet fully integrated into a consistent operational framework.
+
+---
+
+### 🔄 Target Architecture (Closed Navigation System)
+
+![NEXAH Closed System](./visuals/NEXAH_Closed_Dynamical_Navigation_v_3.png)
+
+*Target architecture of a fully integrated NEXAH system.*
+
+This representation introduces:
+
+- closed-loop execution (state → field → graph → control → state)  
+- mass-conserving transition structure  
+- global policy-driven trajectory selection  
+- real-world system integration  
+
+👉 **Important:**  
+This diagram represents a **target architecture**,  
+not the current implementation state.
+
+---
+
+## 🧠 Interpretation
+
+Together, these diagrams illustrate the central research direction:
+
+```text
+Conceptual understanding → structural discovery → system integration → closed-loop navigation
+```
+
+---
+
+## 🔬 Research Implication
+
+The key challenge is not discovering structure.
+
+It is:
+
+```text
+closing the loop between field, transition, control, and execution
+```
+
+This includes:
+
+- unifying the execution pipeline  
+- enforcing consistency constraints (e.g. probability conservation)  
+- integrating long-horizon decision policies  
+- validating behavior in real-world systems  
+
+---
+
 NEXAH is an orientation-based framework that investigates whether  
 
 > **intrinsic stability in complex systems emerges from local structural coherence  
