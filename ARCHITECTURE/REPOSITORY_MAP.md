@@ -1,12 +1,8 @@
-# 🧭 NEXAH — Repository Map
+# 🧭 NEXAH — Repository Map (Grounded)
 
 This document provides a **practical orientation** for navigating the NEXAH repository.
 
-It answers:
-
-- where things are  
-- what they do  
-- where to start  
+It reflects the **actual structure**, not the idealized one.
 
 ---
 
@@ -14,169 +10,38 @@ It answers:
 
 NEXAH is a framework for:
 
-> **reconstructing, understanding, and navigating dynamical systems as structured fields**
+> **reconstructing, controlling, and navigating dynamical systems as structured fields**
 
 Core transformation:
 
 ```text
-Dynamics → Structure → Field → Geometry → Stability → Control → Navigation
+Dynamics → Structure → Field → Geometry → Stability → Transition → Control → Navigation
 ```
 
 ---
 
-# 📦 Repository Structure
+# 📦 Repository Structure (Real)
+
+---
 
 ## 🔷 1. ARCHITECTURE (System Definition)
 
+```text
 ARCHITECTURE/
+```
 
 Defines:
 
 - system design  
 - layer structure  
 - integration logic  
+- current system state  
 
-→ Start here if you want to understand the system
-
----
-
-## 🔶 2. CORE (Implementation)
-
-ARCHITECTURE/CORE/
-
-The actual working system.
+👉 **Single source of truth for architecture**
 
 ---
 
-### 🌊 Field Reconstruction
-
-ARCHITECTURE/CORE/field_reconstruction/
-
-Builds structure from data:
-
-- density fields  
-- flow fields  
-- boundary detection  
-- validity regions  
-
-→ transforms data → field
-
----
-
-### 🎮 Control Layer
-
-ARCHITECTURE/CORE/control_layer/
-
-Enables system interaction:
-
-- basin detection  
-- separatrix extraction  
-- gate extraction  
-- gate tracking  
-- trajectory steering  
-
-→ operates on transition structure
-
----
-
-## 🌊 3. FIELD_LAYER (Interpretation)
-
-FIELD_LAYER/
-
-Adds meaning to structure:
-
-- geometry (basins, channels)  
-- stability structure  
-- energy landscape  
-- flow decomposition  
-
-→ transforms field → geometry + stability
-
----
-
-## 🧭 4. NAVIGATOR (Execution)
-
-NAVIGATOR/
-
-Executes movement:
-
-- trajectory shaping  
-- path following  
-- convergence behavior  
-
-→ transforms structure → motion
-
----
-
-## 🔬 5. DISCOVERY ENGINE
-
-DISCOVERY_ENGINE/
-
-Extracts structure from dynamics:
-
-- transition detection  
-- manifold discovery  
-- divergence / curl  
-- temporal structure  
-
-→ transforms dynamics → structure
-
----
-
-## 🌍 6. APPLICATIONS (Use Cases)
-
-APPLICATIONS/
-
-Real-world and demo systems:
-
-- Lorenz system (reference)  
-- power systems (IEEE)  
-- experimental systems  
-
-→ see the system in action
-
----
-
-## 🧪 7. BUILDER LAB (Exploration)
-
-BUILDER_LAB/
-
-- rapid experiments  
-- visual prototypes  
-- exploratory models  
-
-→ supports development and discovery
-
----
-
-# 🔥 System Flow (Actual)
-
-ARCHY (Simulation)  
-→ Discovery Engine  
-→ Field Reconstruction  
-→ Field Layer  
-→ Transition Geometry  
-→ Control Layer  
-→ Navigator  
-→ Convergence  
-
----
-
-# 🔹 Transition Geometry (Key Concept)
-
-The system operates on:
-
-- Basins → stable long-term behavior  
-- Separatrix → boundary between regimes  
-- Gates → minimal-cost transition points  
-
-→ These define where control is possible
-
----
-
-## 🔷 Advanced Transition Layer
-
-Location:
+## 🔶 2. NEXAH_CORE (Transition + Control Theory Layer)
 
 ```text
 NEXAH_CORE/
@@ -184,56 +49,232 @@ NEXAH_CORE/
 
 Contains:
 
-- transition system (v56–v80)
-- gate geometry
-- phase-aligned navigation
-- flow-aligned control
+- full transition system (v1–v80)  
+- basin / gate model  
+- control evolution  
+- phase-aware navigation  
+
+👉 **Deep system logic (experimental + validated)**
 
 ---
+
+## 🌊 3. FIELD_LAYER (Geometry + Stability Layer)
+
+```text
+FIELD_LAYER/
+```
+
+Includes:
+
+- FIELD_DECOMPOSITION  
+- NAVIGATION_ENGINE  
+- stability + geometry extraction  
+
+Defines:
+
+- basins  
+- separatrix  
+- flow geometry  
+- stability structure  
+
+👉 transforms field → geometry + stability
+
+---
+
+## 🔧 4. ARCHITECTURE/CORE (Executable Core Components)
+
+```text
+ARCHITECTURE/CORE/
+```
+
+### Field Reconstruction
+
+```text
+field_reconstruction/
+```
+
+- density fields  
+- flow fields  
+- boundary detection  
+
+→ data → field  
+
+---
+
+### Control Layer
+
+```text
+control_layer/
+```
+
+- basin detection  
+- gate extraction  
+- trajectory control  
+
+→ operates on transition geometry  
+
+---
+
+## 📦 5. nexah/ (Runtime Package)
+
+```text
+nexah/
+```
+
+Contains:
+
+- core logic (in progress)  
+- navigation modules  
+- system abstraction  
+
+👉 **future unified kernel / API**
+
+---
+
+## 🧪 6. BUILDER_LAB (Exploration + Integration)
+
+```text
+BUILDER_LAB/
+```
+
+Contains:
+
+- demos  
+- experimental systems  
+- discovery experiments  
+- proto models  
+- dashboards  
+
+Also includes:
+
+- DISCOVERY_ENGINE (early research)  
+- ENGINE (legacy computation)  
+- EXPLORATION (concept systems)  
+
+👉 **active development + experimental workspace**
+
+---
+
+## 🌍 7. APPLICATIONS (Use Cases)
+
+```text
+APPLICATIONS/
+```
+
+Includes:
+
+- Lorenz system  
+- IEEE power systems  
+- datasets  
+- demos  
+
+👉 **real-world and test systems**
+
+---
+
+## 🧠 8. FRAMEWORK (Conceptual Layer)
+
+```text
+FRAMEWORK/
+```
+
+Contains:
+
+- ARCHY  
+- system abstractions  
+- conceptual system layers  
+
+👉 **higher-level system modeling layer**
+
+---
+
+## 🔬 9. RESEARCH (Theory + Documentation)
+
+```text
+RESEARCH/
+```
+
+Contains:
+
+- theory documents  
+- experiments  
+- notes  
+- visual galleries  
+
+👉 **long-form thinking + documentation**
+
+---
+
+# 🔥 System Flow (Actual)
+
+```text
+ARCHY (simulation)
+→ BUILDER_LAB / DISCOVERY_ENGINE
+→ CORE/field_reconstruction
+→ FIELD_LAYER
+→ Transition Geometry (NEXAH_CORE)
+→ CORE/control_layer
+→ nexah/ (kernel in progress)
+→ Navigation / Execution
+```
+
+---
+
+# 🔹 Transition Geometry (Core Concept)
+
+The system operates on:
+
+- Basins → stable regions  
+- Separatrix → boundaries  
+- Gates → transition corridors  
+
+👉 transitions are structured, not random  
+
+---
+
 # 🧭 Where to Start
 
-## ⚡ Quick Start (Recommended)
+## ⚡ Run something
 
-Run a demo:
+```bash
+python run_nexah_demo.py
+```
 
-python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
+or
 
-Observe:
-
-- structure in chaos  
-- transitions  
-- controlled motion  
-
----
-
-## 🧠 Understand the System
-
-→ ARCHITECTURE/README.md
+```bash
+python APPLICATIONS/core_demos/...
+```
 
 ---
 
-## 🔬 Understand Structure Extraction
+## 🧠 Understand system
 
-→ DISCOVERY_ENGINE/
-
----
-
-## 🌊 Understand Field Construction
-
-→ ARCHITECTURE/CORE/field_reconstruction/
+→ `ARCHITECTURE/README.md`
 
 ---
 
-## 🎮 Understand Control
+## 🔬 Deep logic
 
-→ ARCHITECTURE/CORE/control_layer/
+→ `NEXAH_CORE/`
 
 ---
 
-## 🧭 See Full Pipeline
+## 🌊 Geometry & stability
 
-→ FIELD_LAYER/  
-→ NAVIGATOR/
+→ `FIELD_LAYER/`
+
+---
+
+## 🎮 Control
+
+→ `ARCHITECTURE/CORE/control_layer/`
+
+---
+
+## 🧪 Explore
+
+→ `BUILDER_LAB/`
 
 ---
 
@@ -241,9 +282,8 @@ Observe:
 
 - structure extraction from dynamics  
 - field reconstruction  
-- geometric interpretation  
-- stability analysis  
-- transition detection  
+- geometry + stability analysis  
+- transition modeling  
 - gate-based control  
 - navigation through system structure  
 
@@ -251,9 +291,7 @@ Observe:
 
 # 🧠 Key Insight
 
-> Systems are not random.  
->  
-> They evolve within structured fields  
+> Systems evolve within structured fields  
 > that constrain motion, transitions, and outcomes.
 
 ---
@@ -264,7 +302,7 @@ NEXAH is not a collection of scripts.
 
 It is:
 
-> a layered system that reconstructs, constrains, and navigates dynamical fields
+> a layered system for **understanding and controlling structured dynamical fields**
 
 ---
 
