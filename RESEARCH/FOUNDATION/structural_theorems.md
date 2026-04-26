@@ -41,26 +41,26 @@ and the system leaves its structured trajectory.
 
 ## **Theorem 1 — Relational Structure Theorem (Working)**
 
-**Statement**
+### Statement
 
 A system’s behavior is determined by its relational structure.
 
 ---
 
-**Formal Idea**
+### Formal Idea
 
 Let:
 
-- $begin:math:text$ S $end:math:text$ = system  
-- $begin:math:text$ R $end:math:text$ = set of relations  
+- $S$ = system  
+- $R$ = set of relations  
 
-$begin:math:display$
-S \\equiv \(E\, R\)
-$end:math:display$
+$$
+S \equiv (E, R)
+$$
 
 ---
 
-**Interpretation**
+### Interpretation
 
 - structure constrains dynamics  
 - relations define possible motion  
@@ -70,21 +70,21 @@ $end:math:display$
 
 ## **Theorem 2 — Regime Transition Theorem (Working)**
 
-**Statement**
+### Statement
 
 Regime transitions occur through structured regions in state space.
 
 ---
 
-**Formal Idea**
+### Formal Idea
 
-$begin:math:display$
-A \\rightarrow M\_\{\\text\{transition\}\} \\rightarrow B
-$end:math:display$
+$$
+A \rightarrow M_{\text{transition}} \rightarrow B
+$$
 
 ---
 
-**Interpretation**
+### Interpretation
 
 - transitions are extended processes  
 - intermediate states are structured  
@@ -94,13 +94,13 @@ $end:math:display$
 
 ## **Theorem 3 — Frame Preservation Theorem (Working)**
 
-**Statement**
+### Statement
 
 Admissible transformations preserve structural consistency.
 
 ---
 
-**Interpretation**
+### Interpretation
 
 - valid transformations preserve geometry  
 - structure is invariant under admissible frames  
@@ -108,158 +108,324 @@ Admissible transformations preserve structural consistency.
 
 ---
 
-# 🧠 Coherence-Based Structural Theorems
+# 🔬 Structural Theorems (Tightened – Semi-Formal)
+
+All statements are defined on the NEXAH state space:
+
+$$
+s = (r, \theta)
+$$
+
+with:
+
+- flow field: $F(s)$  
+- density: $\rho(s)$  
+- risk field: $P(\text{IOTA} \mid s)$  
 
 ---
 
-## **Theorem 4 — Coherence Stability Theorem (Working)**
+## **Theorem 4 — Coherence Stability Theorem (Refined)**
 
-**Statement**
+### Definition
 
-Stability corresponds to alignment with the field.
-
----
-
-**Definition**
-
-$begin:math:display$
-C\(x\) \= \\frac\{\\dot\{x\} \\cdot F\(x\)\}\{\|\\dot\{x\}\| \\\, \|F\(x\)\|\}
-$end:math:display$
-
----
-
-**Interpretation**
-
-- high alignment → stable motion  
-- stability is dynamic, not static  
+$$
+C(s) =
+\frac{
+\dot{s} \cdot F(s)
+}{
+\|\dot{s}\| \cdot \|F(s)\|
+}
+$$
 
 ---
 
-## **Theorem 5 — Coherence Collapse Theorem (Working)**
+### Statement
 
-**Statement**
-
-Loss of coherence precedes collapse.
-
----
-
-**Condition**
-
-$begin:math:display$
-C\(x\) \< C\_\{\\text\{critical\}\} \\Rightarrow \\text\{collapse regime\}
-$end:math:display$
+$$
+C(s) \approx 1 \Rightarrow \text{stable trajectory}
+$$
 
 ---
 
-**Interpretation**
+### Interpretation
 
-- collapse is a process  
-- measurable before failure  
+```text
+Stability = directional alignment with the field
+```
+
+---
+
+## **Theorem 5 — Coherence Collapse Theorem (Refined)**
+
+### Condition
+
+$$
+C(s) < C_{\text{crit}}
+$$
+
+---
+
+### Interpretation
+
+```text
+Misalignment → trajectory leaves stable manifold
+```
 
 ---
 
 ## **Theorem 6 — Directional Flow Theorem (Working)**
 
-**Statement**
+### Statement
 
 System dynamics partition into directional flow regimes.
 
 ---
 
-$begin:math:display$
-F \= F\^\{\+\} \\cup F\^\{0\} \\cup F\^\{\-\}
-$end:math:display$
+$$
+F = F^{+} \cup F^{0} \cup F^{-}
+$$
 
 ---
 
-**Interpretation**
+### Interpretation
 
-- motion is directionally structured  
-- transitions occur at interfaces  
-
----
-
-## **Theorem 7 — Interface Transition Theorem (Working)**
-
-**Statement**
-
-Transitions occur at coherence interface regions.
+```text
+Motion is directionally structured
+Transitions occur at interfaces
+```
 
 ---
 
-$begin:math:display$
-C\(x\) \\approx 0 \\Rightarrow \\text\{transition zone\}
-$end:math:display$
+## **Theorem 7 — Interface Transition Theorem (Refined)**
+
+### Condition
+
+$$
+C(s) \approx 0
+$$
 
 ---
 
-**Interpretation**
+### Interpretation
 
-- transitions are not boundary points  
-- but extended interface regions  
-
----
-
-## **Theorem 8 — Geometric Navigation Theorem (Working)**
-
-**Statement**
-
-System evolution follows trajectories within structured geometry.
+```text
+Loss of directional coherence → transition zone
+```
 
 ---
 
-**Interpretation**
+## **Theorem 8 — Geometric Navigation Theorem (Refined)**
 
-- systems move within constraints  
-- navigation replaces state switching  
+### Formal Form
+
+$$
+\dot{s} = F(s) + u(s)
+$$
+
+---
+
+### Interpretation
+
+```text
+System motion = natural flow + control
+```
 
 ---
 
 ## **Theorem 9 — Loop Stabilization Theorem (Working)**
 
-**Statement**
+### Statement
 
 Stable behavior corresponds to closed or quasi-closed trajectories.
 
 ---
 
-**Interpretation**
-
-- loops → stability  
-- spirals → transitions  
-- attractors → confinement  
-
----
-
-# 🔗 Structural Dependencies
-
-Depends on:
-
-- CORE_GEOMETRY  
-- coherence definitions  
-- field decomposition  
-
----
-
-# 🧠 Unified Insight
+### Interpretation
 
 ```text
-Stability is not a state.
+Loops → stability  
+Spirals → transitions  
+Attractors → confinement
+```
 
-It is the ability to move coherently
-within a structured field.
+---
+
+## **Theorem 10 — Gate Intersection Theorem (Refined)**
+
+### Condition
+
+$$
+F_1(s) \neq F_2(s)
+$$
+
+---
+
+### Interpretation
+
+```text
+Competing flow directions → instability
+```
+
+---
+
+## **Theorem 12 — Greyspace Transition Theorem (Refined)**
+
+### Definition
+
+$$
+G(s) = \frac{1}{\rho(s)}
+$$
+
+---
+
+### Condition
+
+$$
+\rho(s) \to 0
+$$
+
+---
+
+### Interpretation
+
+```text
+Low density → weak structure → transition corridor
+```
+
+---
+
+## **Theorem 15 — Risk Field Theorem (Refined)**
+
+### Definition
+
+$$
+P(\text{IOTA} \mid s)
+$$
+
+---
+
+### Interpretation
+
+```text
+Instability is a continuous spatial field
+```
+
+---
+
+## **Theorem 19 — Structure vs Optimality Theorem (Refined)**
+
+### Statement
+
+$$
+\min P(\text{IOTA}) \neq \text{structure-consistent path}
+$$
+
+---
+
+### Interpretation
+
+```text
+System prefers structural consistency over minimal risk
+```
+
+---
+
+## **Theorem 22 — Transition Control Theorem (Refined)**
+
+### Statement
+
+$$
+P(B_i \rightarrow B_j \mid u) \neq P(B_i \rightarrow B_j)
+$$
+
+---
+
+### Interpretation
+
+```text
+Control reshapes transition probabilities
+```
+
+---
+
+## **Theorem 26 — Phase Sensitivity Theorem (Refined)**
+
+### Statement
+
+Control effectiveness depends on phase alignment.
+
+---
+
+### Interpretation
+
+```text
+Same control → different outcome depending on phase
+```
+
+---
+
+## **Theorem 50 — NEXAH Kernel Theorem (Core)**
+
+### Statement
+
+A dynamical system evolves as a navigation process within a structured field.
+
+---
+
+### Formal Form
+
+$$
+\dot{s} =
+F(s)
++
+u(s)
+$$
+
+with:
+
+$$
+u(s) =
+-\nabla P(\text{IOTA})
++
+\nabla \rho
++
+u_{\pi}
++
+u_{\text{sheet}}
++
+u_{\text{gate}}
+$$
+
+---
+
+### Interpretation
+
+```text
+System evolution = navigation in structured state space
+```
+
+---
+
+# 🔥 Unified Insight
+
+```text
+Stability =
+alignment with flow + high density
+
+Instability =
+misalignment + low density + competing flows
 ```
 
 ---
 
 # 🚀 Application Perspective
 
-These theorems suggest:
+These theorems enable:
 
 - early instability detection  
 - transition prediction  
-- flow-based control  
-- geometry-aware navigation  
+- field-based control  
+- trajectory navigation  
 
 ---
 
@@ -279,5 +445,10 @@ Systems do not fail randomly.
 
 They lose coherence,
 leave the structure,
-and collapse.
+and transition into a new regime.
 ```
+
+---
+
+© Thomas K. R. Hofmann  
+NEXAH — 2026
