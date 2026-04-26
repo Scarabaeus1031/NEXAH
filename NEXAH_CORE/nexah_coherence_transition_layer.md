@@ -320,9 +320,454 @@ and CONTROL transitions
 
 ❗ next:
 
-- [ ] topology-based detection  
-- [ ] sheet linkage  
+---
 
+# 🚀 EXTENSION — Control Layer Integration (v38–v55)
+
+---
+
+# 🧠 RESUME — System Evolution (Extended)
+
+The system has progressed through three distinct layers:
+
+```text
+Detection → Navigation → Control
+```
+
+Originally:
+> detect transitions via coherence collapse
+
+Now:
+
+```text
+model + predict + actively control transition behavior
+```
+
+---
+
+# 🔹 NEW CORE DISCOVERIES (v38–v55)
+
+---
+
+## 16. State space is discretized into basins
+
+Observed:
+
+```text
+continuous phase space → discrete regimes
+```
+
+Each basin represents:
+
+```text
+stable dynamical mode
+```
+
+---
+
+## 17. System dynamics can be reduced to transitions
+
+```text
+P(Bᵢ → Bⱼ)
+```
+
+Interpretation:
+
+```text
+system behaves as a stochastic transition network
+```
+
+---
+
+## 18. Transitions are predictable
+
+Using memory (v46.2):
+
+```text
+accuracy ≈ 0.68
+```
+
+---
+
+### Insight
+
+```text
+transitions are not random
+they follow learned structural patterns
+```
+
+---
+
+## 19. Transitions are controllable
+
+(v49)
+
+```text
+P(B₀ → B₁): 0.625 → 1.000
+```
+
+---
+
+### Insight
+
+```text
+system behavior can be actively shaped
+```
+
+---
+
+## 20. Transitions are coupled
+
+(v50)
+
+```text
+increasing one transition decreases others
+```
+
+---
+
+### Insight
+
+```text
+transition space is constrained
+```
+
+---
+
+## 21. Sparse control is optimal
+
+(v51)
+
+```text
+only beneficial transitions should be controlled
+```
+
+---
+
+### Insight
+
+```text
+over-control degrades system behavior
+```
+
+---
+
+## 22. Timing is a control dimension
+
+(v52)
+
+```text
+ON/OFF patterns change system outcome
+```
+
+---
+
+### Insight
+
+```text
+control is temporal, not only directional
+```
+
+---
+
+## 23. Control has internal phases
+
+(v53)
+
+```text
+engage → lock → release → next
+```
+
+---
+
+### Insight
+
+```text
+system responds differently depending on control phase
+```
+
+---
+
+## 24. Topology constrains transitions
+
+(v54)
+
+```text
+only adjacent basins are reachable
+```
+
+---
+
+### Insight
+
+```text
+control must respect system connectivity
+```
+
+---
+
+## 25. Control must align with natural dynamics
+
+(v55)
+
+```text
+natural distribution:
+0→1 = 0.625
+0→3 = 0.375
+```
+
+---
+
+### Insight
+
+```text
+aligned control amplifies dominant transitions
+misaligned control destabilizes system
+```
+
+---
+
+# 🔥 UPDATED MASTER MODEL (v1 → v55)
+
+```text
+System =
+trajectory moving through
+
+- probability field (P(IOTA))
+- geometric structure (ridges)
+- low-density corridors (greyspace)
+- discrete basins
+- transition network
+- control inputs
+```
+
+---
+
+# 🔥 UPDATED TRANSITION MODEL
+
+```text
+Transition =
+state-dependent
++ phase-locked
++ geometry-driven
++ sheet interaction
++ switching dynamics
++ probabilistic structure
++ controllable transition behavior
+```
+
+---
+
+# 🎯 UPDATED GOAL (v55)
+
+Build a **fully controllable dynamical navigation system**:
+
+```text
+detect
+predict
+and CONTROL transitions
+in structured dynamical fields
+```
+
+---
+
+# 🧪 PHASE STATUS (UPDATED)
+
+---
+
+## ✅ PHASE 1–4 — Detection + Field
+
+✔ complete
+
+---
+
+## ✅ PHASE 5–8 — Navigation
+
+✔ complete
+
+---
+
+## ✅ PHASE 9 — Control (ACTIVE)
+
+✔ memory-based prediction  
+✔ basin modeling  
+✔ transition matrix  
+✔ transition control  
+✔ policy control  
+✔ adaptive selection  
+✔ temporal control  
+✔ phase control  
+✔ topology-aware control  
+✔ resonance-aligned control  
+
+---
+
+## ⚠️ PHASE 10 — Advanced Control (NEXT)
+
+---
+
+### Missing:
+
+- [ ] mass-conserving transition control  
+- [ ] global policy optimization  
+- [ ] multi-step planning  
+- [ ] long-horizon stability control  
+
+---
+
+# 🔥 CRITICAL NEXT STEP
+
+```text
+TRANSITION MASS CONSERVATION
+```
+
+Current:
+
+```text
+increase one transition freely
+```
+
+Missing:
+
+```text
+redistribute probability across all transitions
+```
+
+---
+
+# 🧭 PHASE 11 — NEXT (v56+)
+
+```text
+Constrained Transition Control:
+
+maximize:
+    P(B_source → B_target)
+
+subject to:
+    Σ_j P(B_source → B_j) = 1
+```
+
+---
+
+## Goal
+
+```text
+physically consistent control
+```
+
+---
+
+# 📦 PHASE 12 — SYSTEM INTEGRATION (UPDATED)
+
+System qualifies as:
+
+---
+
+## FIELD SYSTEM
+
+✔ geometry-driven  
+✔ probabilistic  
+✔ continuous representation  
+
+---
+
+## CONTROL SYSTEM
+
+✔ transition-level control  
+✔ policy-level control  
+✔ adaptive behavior  
+
+---
+
+## NAVIGATION SYSTEM
+
+✔ trajectory shaping  
+✔ state prediction  
+✔ intervention capability  
+
+---
+
+# 🚫 CONSTRAINTS (UNCHANGED)
+
+- no symbolic reasoning as proof  
+- no narrative over data  
+- no uncontrolled complexity  
+
+---
+
+# 🔥 SUCCESS CONDITION (UPDATED)
+
+```text
+We can steer a system
+
+through instability regions
+
+by controlling transition probabilities
+
+while maintaining structural coherence
+```
+
+---
+
+# 🧭 FINAL TRAJECTORY (UPDATED)
+
+```text
+v1–v5   → signal
+v6–v9   → geometry
+v10–v12 → field
+v13–v14 → sheets + switching
+v27–v33 → structure + probability
+v34–v37 → navigation
+v38–v46 → basins + prediction
+v47–v55 → transition control
+
+next:
+v56+ → constrained optimal control
+```
+
+---
+
+# 📍 STATUS (UPDATED)
+
+```text
+Builder Lab → COMPLETED
+
+Now entering:
+STRUCTURED CONTROL SYSTEM PHASE
+```
+
+---
+
+# 🧠 META INSIGHT (UPDATED)
+
+```text
+This is not signal processing
+
+This is control of a structured dynamical field
+```
+
+---
+
+# 🧭 SUMMARY (UPDATED)
+
+```text
+Structure
+→ Geometry
+→ Phase
+→ Sheets
+→ Switching
+→ Greyspace
+→ Probability field
+→ Basins
+→ Transitions
+→ Control
+→ (Next: constrained optimization)
+```
+
+---
+
+Last updated: April 2026  
+© Thomas K. R. Hofmann
 ---
 
 ## ⚠️ PHASE 4 — FIELD REPRESENTATION
