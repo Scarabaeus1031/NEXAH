@@ -5,7 +5,7 @@
 
 # 📍 Purpose of this Module
 
-This module implements the **core transition detection and navigation logic** of NEXAH.
+This module implements the **core transition detection, navigation, and control logic** of NEXAH.
 
 It answers:
 
@@ -13,6 +13,7 @@ It answers:
 Where does instability occur?
 How does it emerge?
 How can we move through it?
+How can we actively guide it?
 ```
 
 ---
@@ -22,10 +23,10 @@ How can we move through it?
 Within NEXAH, this module represents:
 
 ```text
-State → Structure → Instability → Navigation
+State → Structure → Instability → Navigation → Control → Gate Geometry
 ```
 
-It transforms raw signals into a **navigable dynamical field**.
+It transforms raw signals into a **navigable and controllable dynamical field**.
 
 ---
 
@@ -39,28 +40,21 @@ Signal x(t)
 → Ridge structure
 → IOTA detection
 → Risk field P(IOTA | r, θ)
+→ Basin decomposition
+→ Transition system P(Bᵢ → Bⱼ)
 → Navigation field u(r, θ)
+→ Control inputs
+→ Gate geometry
 ```
 
 ---
 
 # 🔹 State Representation
 
-The system is embedded into phase space:
+```text
+r(t) = √(x² + ẋ²)
+θ(t) = atan2(ẋ, x)
 
-- radius:
-  ```
-  r(t) = √(x² + ẋ²)
-  ```
-
-- phase:
-  ```
-  θ(t) = atan2(ẋ, x)
-  ```
-
-State:
-
-```
 s(t) = (r, θ)
 ```
 
@@ -72,7 +66,7 @@ s(t) = (r, θ)
 
 ## Density Field
 
-```
+```text
 ρ(r, θ)
 ```
 
@@ -83,29 +77,21 @@ s(t) = (r, θ)
 
 ## Greyspace
 
-```
+```text
 G(r, θ) = 1 / ρ(r, θ)
 ```
 
-Interpretation:
-
-```text
-Greyspace = low-density corridor of instability
-```
+→ low-density instability corridors  
 
 ---
 
 ## Risk Field
 
-```
+```text
 P(IOTA | r, θ)
 ```
 
-Interpretation:
-
-```text
-Probability of transition at a given state
-```
+→ continuous instability probability  
 
 ---
 
@@ -116,8 +102,7 @@ Probability of transition at a given state
 ## Ridge
 
 ```text
-Regions of maximal density
-→ approximating stable manifolds
+high-density structure → stable manifolds
 ```
 
 ---
@@ -125,29 +110,22 @@ Regions of maximal density
 ## Sheets
 
 ```text
-Locally coherent flow layers
+locally coherent flow layers
 ```
 
-- multiple sheets can overlap  
-- transitions occur at sheet conflicts  
+- overlapping  
+- interacting  
+- transitions at intersections  
 
 ---
 
 ## Anchors
 
-Observed structures:
-
 ```text
-loops
-chains
-polygon-like formations
+loops / chains / polygonal motifs
 ```
 
-Interpretation:
-
-```text
-local attractors guiding motion
-```
+→ local attractors guiding motion  
 
 ---
 
@@ -157,28 +135,20 @@ local attractors guiding motion
 
 ## IOTA Event
 
-```
-|dr/dθ| is high
-```
-
-Interpretation:
-
 ```text
-local structural instability / transition event
+|dr/dθ| high
 ```
+
+→ local structural instability  
 
 ---
 
 # 🔥 Transition Model
 
-A transition is NOT a single event.
-
-It is a process:
-
 ```text
-1. density decreases        (ρ ↓)
-2. greyspace increases      (G ↑)
-3. flow destabilizes        (|dr/dθ| ↑)
+1. density decreases (ρ ↓)
+2. greyspace increases (G ↑)
+3. flow destabilizes (|dr/dθ| ↑)
 4. IOTA events occur
 5. system leaves ridge
 6. trajectory reorganizes
@@ -192,7 +162,7 @@ It is a process:
 Transition =
 movement through low-density regions
 + loss of structural coherence
-+ conflict between flow structures
++ competing flow dynamics
 ```
 
 ---
@@ -201,54 +171,32 @@ movement through low-density regions
 
 ---
 
-## v34 — Gradient Steering
+## Gradient Steering
 
-```
+```text
 u = -∇P(IOTA)
 ```
 
-- avoids risk locally  
-- insufficient globally  
-
 ---
 
-## v35 — Target Navigation
+## Target Navigation
 
-```
+```text
 u = -∇P(IOTA) + ∇T
 ```
 
-- introduces direction  
-- improves coherence  
+---
+
+## Adaptive Targets
+
+→ follow local structure (~5% improvement)
 
 ---
 
-## v36 — Adaptive Targets
-
-```
-targets follow local structure
-```
-
-Result:
+## Structure-Aware Navigation
 
 ```text
-~5% risk reduction
-smoother trajectories
-```
-
----
-
-## v37 — Structure-Aware Navigation
-
-```
 u = -∇P(IOTA) + ∇T + ∇ρ
-```
-
-Result:
-
-```text
-less risk optimization
-but stronger structural coherence
 ```
 
 ---
@@ -257,21 +205,157 @@ but stronger structural coherence
 
 ```text
 Best trajectory ≠ minimal risk
-
 Best trajectory = structure-consistent motion
 ```
 
 ---
 
-# 🧠 What this Module Demonstrates
+# 🔷 Control Layer (v38–v55)
+
+---
+
+## Basin System
+
+```text
+state space → discrete basins
+```
+
+---
+
+## Transition Matrix
+
+```text
+P(Bᵢ → Bⱼ)
+```
+
+---
+
+## Control Dimensions
+
+```text
+direction
+timing
+phase
+topology
+distribution
+```
+
+---
+
+## Key Insight
+
+```text
+Transitions are controllable
+but structurally constrained
+```
+
+---
+
+# 🔷 Gate Geometry Layer (v56–v80)
+
+---
+
+## Pattern Fields
+
+```text
+control regions are spatially distributed
+```
+
+---
+
+## Flow Propagation
+
+```text
+control spreads along field structure
+```
+
+---
+
+## Basin / Saddle Geometry
+
+```text
+basins = stable zones
+saddles = transition gates
+```
+
+---
+
+## Gate Graph
+
+```text
+state space → graph of gates + basins
+```
+
+---
+
+## Phase-Aligned Control
+
+```text
+control depends on system phase
+```
+
+---
+
+## Sheet Interaction
+
+```text
+multiple flow layers interact
+```
+
+---
+
+## π-Consistent Structure
+
+```text
+cyclic symmetry
+balanced transitions
+geometric consistency
+```
+
+---
+
+## Gate Geometry
+
+```text
+Gates =
+structured transition corridors
+in phase space
+```
+
+---
+
+## Navigation Principle
+
+```text
+Do not block transitions
+→ guide them
+```
+
+---
+
+# 🔥 Unified System Model
+
+```text
+Trajectory =
+f(
+    structure,
+    instability field,
+    basin transitions,
+    control inputs,
+    gate geometry
+)
+```
+
+---
+
+# 🔹 What this Module Demonstrates
 
 ---
 
 ## 1. Transitions are spatial
 
 ```text
-NOT time-based
-BUT state-based
+state-based, not time-based
 ```
 
 ---
@@ -284,18 +368,18 @@ system enters instability regions before collapse
 
 ---
 
-## 3. Collapse occurs along structure
+## 3. Collapse follows structure
 
 ```text
-boundary collapse >> gap escape
+boundary-driven
 ```
 
 ---
 
-## 4. Instability is a field
+## 4. Instability is continuous
 
 ```text
-continuous probability distribution
+field-based probability
 ```
 
 ---
@@ -303,7 +387,23 @@ continuous probability distribution
 ## 5. Motion is structured
 
 ```text
-trajectories follow geometric anchors
+anchor-based trajectories
+```
+
+---
+
+## 6. Transitions are controllable
+
+```text
+via transition probabilities and field control
+```
+
+---
+
+## 7. Control evolves into geometry
+
+```text
+from local steering → global gate navigation
 ```
 
 ---
@@ -312,80 +412,47 @@ trajectories follow geometric anchors
 
 ---
 
-## Missing Inhale Dynamics
-
-Current system:
+## Missing Mass-Conserving Control
 
 ```text
-pushes away from instability
-```
-
-Missing:
-
-```text
-returns to stable structure
+probability redistribution not yet enforced
 ```
 
 ---
 
-## No Memory
-
-System does not yet retain:
+## No Long-Horizon Planning
 
 ```text
-stable attractors
-trajectory history
+trajectory planning still local
 ```
 
 ---
 
-## No Global Policy
-
-Only:
+## No Full Closed Loop
 
 ```text
-local steering
-```
-
-Needed:
-
-```text
-global trajectory planning
+feedback incomplete
 ```
 
 ---
 
-# 🚀 Next Step — Control Layer (v38+)
-
----
-
-## Dual Field Navigation
-
-```
-u =
-- ∇P(IOTA)
-+ ∇A_stable
-```
-
----
-
-## Goal
+# 🚀 Next Step
 
 ```text
-Maintain stable oscillatory motion
-inside safe manifold
+constrained transition control
++
+global trajectory optimization
 ```
 
 ---
 
 # 🧭 Interpretation
 
-This module shows that:
-
 ```text
-instability is not random
-instability is geometric
-instability is navigable
+Instability is not random
+Instability is geometric
+Instability is controllable
+Instability is navigable
 ```
 
 ---
@@ -395,374 +462,9 @@ instability is navigable
 ```text
 A system does not collapse.
 
-It leaves the structure that kept it stable.
-```
-
----
-
----
-
-# 🚀 Control Layer Extension (v38–v55)
-
----
-
-## 📍 Extension Purpose
-
-Extends the module from:
-
-```text
-detection + navigation
-```
-
-to:
-
-```text
-active control of system behavior
-```
-
-New core question:
-
-```text
-How can transitions be shaped, not only avoided?
-```
-
----
-
-# 🔹 Control Layer Architecture
-
-Extended pipeline:
-
-```text
-Signal
-→ State (r, θ)
-→ Structure (ρ, ridges, sheets)
-→ Instability field P(IOTA)
-→ Basin identity
-→ Transition matrix
-→ Memory
-→ Control inputs
-→ Modified transition behavior
-```
-
----
-
-# 🔹 Basin Layer (v43–v46)
-
----
-
-## Basin Identity
-
-```text
-State space partitions into discrete basins
-```
-
-Each basin:
-
-- represents a stable dynamical regime  
-- has characteristic radius + phase  
-
----
-
-## Transition Matrix
-
-```text
-P(Bᵢ → Bⱼ)
-```
-
-Interpretation:
-
-```text
-System becomes a probabilistic transition network
-```
-
----
-
-## Memory
-
-```text
-Historical transitions improve prediction
-```
-
-Result:
-
-```text
-prediction accuracy increases (~0.47 → ~0.68)
-```
-
----
-
-# 🔹 Control Modes (v47–v55)
-
----
-
-## v47 — Memory-Guided Control
-
-```text
-trajectory influenced by past basin behavior
-```
-
----
-
-## v48 — Target Basin Control
-
-```text
-direct attraction to basin centroid
-```
-
-Limitation:
-
-```text
-breaks natural structure
-```
-
----
-
-## v49 — Transition Probability Control
-
-```text
-direct manipulation of:
-
-P(B_source → B_target)
-```
-
-Result:
-
-```text
-transitions become controllable
-```
-
----
-
-## v50 — Multi-Transition Policy
-
-```text
-control multiple transitions simultaneously
-```
-
-Observation:
-
-```text
-transitions interfere
-```
-
----
-
-## v51 — Adaptive Policy
-
-```text
-retain only beneficial transitions
-```
-
-Result:
-
-```text
-sparse control is more effective
-```
-
----
-
-## v52 — Temporal Pattern Control
-
-```text
-control applied in time patterns
-```
-
-Insight:
-
-```text
-timing strongly affects system response
-```
-
----
-
-## v53 — Phase Pattern Control
-
-```text
-engage → lock → release → next
-```
-
-Insight:
-
-```text
-system has internal control phases
-```
-
----
-
-## v54 — Topological Constraints
-
-```text
-restrict transitions to valid neighbors
-```
-
-Insight:
-
-```text
-topology alone does not drive dynamics
-```
-
----
-
-## v55 — Transition Resonance Control
-
-```text
-control aligned with natural transition distribution
-```
-
-Example:
-
-```text
-0→1 = 0.625
-0→3 = 0.375
-```
-
-Insight:
-
-```text
-dominant transitions amplify under aligned control
-```
-
----
-
-# 🔥 Control Principles (Derived)
-
----
-
-## 1. Transitions are controllable
-
-```text
-system behavior can be actively shaped
-```
-
----
-
-## 2. Transitions are coupled
-
-```text
-increasing one decreases others
-```
-
----
-
-## 3. Control is multi-dimensional
-
-```text
-direction + timing + phase + topology + distribution
-```
-
----
-
-## 4. Control must align with structure
-
-```text
-best control follows natural system dynamics
-```
-
----
-
-## 5. Transition space is discrete
-
-Observed:
-
-```text
-0.8333 ≈ 10 / 12
-0.1666 ≈  2 / 12
-```
-
-Interpretation:
-
-```text
-system operates on discrete transition counts
-```
-
----
-
-# 🔹 Updated System Capability
-
-Before:
-
-```text
-detect instability
-```
-
-Now:
-
-```text
-detect + predict + control transitions
-```
-
----
-
-# 🔹 Updated System Model
-
-```text
-Trajectory =
-f(
-    structure,
-    instability field,
-    basin transitions,
-    control inputs
-)
-```
-
----
-
-# 🔹 Updated Limitation
-
-Still missing:
-
----
-
-## Mass-Conserving Control
-
-Current:
-
-```text
-amplifies transitions
-```
-
-Missing:
-
-```text
-redistributes transition probability mass
-```
-
----
-
-## Full Closed-Loop Control
-
-Current:
-
-```text
-partial feedback
-```
-
-Missing:
-
-```text
-policy optimization across entire trajectory
-```
-
----
-
-# 🔮 Next Layer (v56+)
-
-```text
-mass-conserving transition control
-+
-global policy optimization
-```
-
----
-
-# 🔥 Extended Final Statement
-
-```text
-A system does not collapse.
-
-It moves through a structured instability field,
-transitions between discrete regimes,
-and can be guided by controlling transition probabilities.
+It moves through structured instability regions,
+transitions between regimes,
+and can be guided through gate geometry.
 ```
 
 ---
