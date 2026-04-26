@@ -55,7 +55,7 @@ def save_plot(fig, name="halvorsen_attractor"):
         "APPLICATIONS",
         "dynamical_systems",
         "halvorsen",
-        "visuals"
+        "outputs"
     )
 
     os.makedirs(base_dir, exist_ok=True)
