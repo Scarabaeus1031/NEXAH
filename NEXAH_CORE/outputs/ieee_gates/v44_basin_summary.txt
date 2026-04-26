@@ -1,0 +1,35 @@
+NEXAH v44 — Basin Identity Summary
+=================================
+
+Total states: 3000
+Locked states: 252
+Basins detected: 4
+
+Basin 0:
+  count:        116
+  mean_r:       0.8594
+  mean_theta:   0.6577
+  mean_locking: 0.6945
+  max_locking:  0.9529
+
+Basin 1:
+  count:        54
+  mean_r:       0.9319
+  mean_theta:   -2.4282
+  mean_locking: 0.6497
+  max_locking:  0.7474
+
+Basin 2:
+  count:        24
+  mean_r:       0.7850
+  mean_theta:   -3.0157
+  mean_locking: 0.6100
+  max_locking:  0.6656
+
+Basin 3:
+  count:        58
+  mean_r:       1.8608
+  mean_theta:   2.9770
+  mean_locking: 0.7813
+  max_locking:  1.0000
+
