@@ -174,6 +174,22 @@ The system operates on:
 
 ---
 
+## 🔷 Advanced Transition Layer
+
+Location:
+
+```text
+NEXAH_CORE/
+```
+
+Contains:
+
+- transition system (v56–v80)
+- gate geometry
+- phase-aligned navigation
+- flow-aligned control
+
+---
 # 🧭 Where to Start
 
 ## ⚡ Quick Start (Recommended)
