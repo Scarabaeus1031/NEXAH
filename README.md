@@ -1,14 +1,11 @@
-# ⚡ NEXAH — A Geometric Framework for Dynamical Systems
+# ⚡ NEXAH — Structure inside Dynamics
 
-> NEXAH reconstructs structure, transitions, and stability  
-> directly from system dynamics.
+> A geometric framework for analyzing and navigating transitions in complex dynamical systems.
 
-> Complex systems are not random.  
-> They evolve within **structured fields that constrain motion, transitions, and outcomes**.
+![NEXAH Ecosystem Map](RESEARCH/visuals/NEXAH_Ecosystem_Map_v1.png)
 
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![Tests](https://img.shields.io/badge/tests-pytest-green)
-![Status](https://img.shields.io/badge/status-research--prototype-orange)
+> NEXAH connects continuous field dynamics with discrete decision systems  
+> through structured, navigable transitions.
 
 ---
 
@@ -22,7 +19,45 @@ NEXAH is an experimental framework.
 
 ---
 
-# 🚀 Quick Start
+## 🧠 What NEXAH does
+
+NEXAH reconstructs structure directly from system dynamics:
+
+```text
+dynamics → structure → field → geometry → stability → control → navigation
+```
+
+It enables:
+
+- early detection of transitions  
+- identification of instability regions  
+- structure-aware system navigation  
+- trajectory steering within dynamical fields  
+
+---
+
+## 🧭 Key Idea
+
+```text
+Systems are not random.
+
+They evolve within structured fields
+that constrain motion, transitions, and outcomes.
+```
+
+---
+
+## 🧪 Example (IEEE System)
+
+![Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+
+→ instability is **not random**  
+→ transitions occur in **specific regions**  
+→ trajectories follow **field geometry**
+
+---
+
+## 🚀 Quick Start
 
 ```bash
 pip install -e .
@@ -34,34 +69,7 @@ python run_nexah_demo.py
 
 ---
 
-# 🧠 What NEXAH does
-
-NEXAH transforms time-series data into a **geometric system representation**:
-
-```text
-dynamics → structure → field → geometry → stability → control → navigation
-```
-
-It enables:
-
-- early detection of transitions  
-- identification of instability regions  
-- structure-aware system navigation  
-- trajectory steering inside dynamical fields  
-
----
-
-# 🧭 Example
-
-![Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
-
-→ instability is **not random**  
-→ transitions occur in **specific regions**  
-→ trajectories follow **field geometry**
-
----
-
-# 🧩 Core Module
+## 🧩 Core Module
 
 ```text
 NEXAH_CORE/
@@ -76,25 +84,17 @@ Implements:
 
 ---
 
-# 📚 Documentation
+## 📚 Documentation
 
-- 📊 [System State](ARCHITECTURE/SYSTEM_STATE.md)
-- 🔬 [Methods](ARCHITECTURE/METHODS.md)
-- 🧭 [Architecture](ARCHITECTURE/README.md)
-- 🌀 [Visual Gallery](VISUAL_GALLERY.md)
-
----
-
-# 🧪 Demos
-
-```bash
-python run_nexah_demo.py
-python run_ieee_demo.py
-```
+- 📊 [System State](ARCHITECTURE/SYSTEM_STATE.md)  
+- 🔬 [Methods](ARCHITECTURE/METHODS.md)  
+- 🧭 [Architecture](ARCHITECTURE/README.md)  
+- 🌀 [Visual Gallery](VISUAL_GALLERY.md)  
+- 🧠 [Research Vision](RESEARCH/RESEARCH_VISION.md)
 
 ---
 
-# 🧠 Learn More
+## 🧠 Learn More
 
 👉 [START_HERE.md](START_HERE.md)
 
@@ -102,10 +102,11 @@ Full explanation, visuals, and system walkthrough.
 
 ---
 
-# ⚡ Core Insight
+## ⚡ Core Insight
 
 ```text
 Stability is not a value.
+
 It is a region in a structured field.
 ```
 
