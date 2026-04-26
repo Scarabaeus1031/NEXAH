@@ -253,18 +253,23 @@ NEXAH_CORE/
 
 ![v55](outputs/ieee_gates/v55_transition_resonance_B0_to_B1.png)
 
+---
+
+### 🔹 Basin & Gate Structure (v68)
+
+![v68](outputs/ieee_gates/v68_basin_saddle_map.png)
 
 ---
 
-### 🔹 Basin + Gate Structure (v70+)
+### 🔹 Flow-Aligned Transition Channels (v75)
 
-![v70](outputs/ieee_gates/v70_basin_gate_structure.png)
+![v75](outputs/ieee_gates/v75_flow_aligned_channel_control.png)
 
 ---
 
-### 🔹 Transition Corridors / Gate Flow (v75+)
+### 🔹 Phase-Aligned Gate Navigation (v80)
 
-![v75](outputs/ieee_gates/v75_transition_corridors.png)
+![v80](outputs/ieee_gates/v80_phase_aligned_gate_navigation.png)
 
 ---
 
