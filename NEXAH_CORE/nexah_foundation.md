@@ -5,7 +5,7 @@
 
 # 📍 Scope
 
-This document defines the core mathematical structure of the NEXAH system.
+This document defines the mathematical structure of the NEXAH system.
 
 Goal:
 
@@ -26,7 +26,7 @@ Transitions occur when the system leaves a stable manifold
 and enters a structurally unstable region of state space.
 ```
 
-Extended (v55):
+Extended:
 
 ```text
 Transitions are state-dependent, structured, and controllable.
@@ -36,7 +36,7 @@ Transitions are state-dependent, structured, and controllable.
 
 # 🔹 1. State Representation
 
-We embed a time series $x(t)$ into phase space:
+Given a time series $x(t)$:
 
 $$
 r(t) = \sqrt{x(t)^2 + \dot{x}(t)^2}
@@ -54,23 +54,34 @@ $$
 s(t) = (r(t), \theta(t))
 $$
 
-Interpretation:
+---
+
+## Interpretation
 
 ```text
-Trajectory in polar phase space
+System evolves as a trajectory in polar phase space
 ```
 
 ---
 
-# 🔹 2. Derived Fields
+# 🔹 2. Continuous Field Representation
 
 ---
 
-## 2.1 Flow
+## 2.1 Flow Field
 
 $$
-\frac{dr}{d\theta}
-=
+F(s) =
+\left(
+\frac{dr}{dt},
+\frac{d\theta}{dt}
+\right)
+$$
+
+Alternative:
+
+$$
+\frac{dr}{d\theta} =
 \frac{\frac{dr}{dt}}{\frac{d\theta}{dt}}
 $$
 
@@ -82,16 +93,18 @@ $$
 \rho(r, \theta)
 $$
 
-Interpretation:
+---
+
+## Interpretation
 
 ```text
-High density → stable structure  
+High density → stable manifold  
 Low density → transition corridor
 ```
 
 ---
 
-## 2.3 Greyspace
+## 2.3 Greyspace (Instability Field)
 
 $$
 G(r, \theta) = \frac{1}{\rho(r, \theta)}
@@ -105,10 +118,14 @@ $$
 P(\text{IOTA} \mid r, \theta)
 $$
 
-Interpretation:
+---
+
+## 🔥 Core Insight
 
 ```text
-Continuous instability probability field
+Instability is not an event
+
+It is a continuous field
 ```
 
 ---
@@ -117,7 +134,7 @@ Continuous instability probability field
 
 ---
 
-## 3.1 Ridge
+## 3.1 Ridge (Stable Structure)
 
 $$
 \nabla \rho(r,\theta) \approx 0
@@ -130,16 +147,33 @@ $$
 
 $$
 D(r,\theta) =
-\min_{(r',\theta') \in \text{ridge}}
-\| (r,\theta) - (r',\theta') \|
+\min_{s' \in \text{ridge}} \| s - s' \|
 $$
 
 ---
 
-## 3.3 Sheets
+## 3.3 Sheets (Layered Dynamics)
+
+Define radial layers:
+
+$$
+\mathcal{S}_i = \{ (r,\theta) \mid r \approx r_i \}
+$$
+
+---
+
+## Sheet Index
+
+$$
+\text{sheet}(r) = \arg\min_i |r - r_i|
+$$
+
+---
+
+## Interpretation
 
 ```text
-Locally coherent flow layers
+Each sheet = locally coherent flow regime
 ```
 
 ---
@@ -164,19 +198,15 @@ low density + high flow + structural separation
 
 ---
 
-# 🔹 5. Basin Structure (v44+)
+# 🔹 5. Discrete Structure (Basins)
 
-State space decomposes into discrete regions:
+---
+
+## Basin Decomposition
 
 $$
 B_i \subset (r, \theta)
 $$
-
-Each basin represents:
-
-```text
-stable dynamical regime
-```
 
 ---
 
@@ -186,7 +216,13 @@ $$
 \text{basin}(s) = \arg\min_i \| s - c_i \|
 $$
 
-where $c_i$ are basin centroids.
+---
+
+## Interpretation
+
+```text
+Each basin represents a stable dynamical regime
+```
 
 ---
 
@@ -200,11 +236,9 @@ $$
 P(B_i \rightarrow B_j)
 $$
 
-Estimated from observed transitions.
-
 ---
 
-## 6.2 Transition Constraints
+## Constraint
 
 $$
 \sum_j P(B_i \rightarrow B_j) = 1
@@ -215,28 +249,25 @@ $$
 ## Interpretation
 
 ```text
-System behaves as a Markov transition process over basins
+System behaves as a Markov process over basins
 ```
 
 ---
 
-# 🔹 7. Prediction Model (v46)
+# 🔹 7. Prediction
 
-Given current basin:
+---
 
-$$
-B_t \rightarrow B_{t+1}
-$$
-
-Prediction:
+## Next-State Prediction
 
 $$
-\hat{B}_{t+1} = \arg\max_j P(B_t \rightarrow B_j)
+\hat{B}_{t+1} =
+\arg\max_j P(B_t \rightarrow B_j)
 $$
 
 ---
 
-# 🔹 8. Navigation Field
+# 🔹 8. Control Field (Continuous)
 
 ---
 
@@ -248,7 +279,15 @@ $$
 
 ---
 
-## 8.2 Target Attraction
+## 8.2 Structure Attraction
+
+$$
+u_{\text{structure}} = \nabla \rho
+$$
+
+---
+
+## 8.3 Target Field
 
 $$
 u_{\text{target}} = \nabla T(r,\theta)
@@ -256,46 +295,122 @@ $$
 
 ---
 
-## 8.3 Combined Field
+## Combined Field
 
 $$
 u =
 -\nabla P(\text{IOTA})
 +
-\nabla T
-+
 \nabla \rho
++
+\nabla T
 $$
 
 ---
 
-# 🔹 9. Transition Control (v49+)
+# 🔹 9. π-Consistency (Rotational Control)
 
 ---
 
-## 9.1 Control Objective
+## Turning Rate
 
 $$
-\max \; P(B_s \rightarrow B_t)
+\Delta \theta_t = \theta_{t+1} - \theta_t
 $$
 
 ---
 
-## 9.2 Control Input
+## Control
+
+$$
+u_{\pi} = -k_{\theta} \cdot \Delta \theta
+$$
+
+---
+
+## Interpretation
+
+```text
+π enforces smooth rotational flow
+```
+
+---
+
+# 🔹 10. Sheet Control
+
+---
+
+## Radial Transition
+
+$$
+u_{\text{sheet}} \sim (r_{\text{next}} - r)
+$$
+
+---
+
+## Insight
+
+```text
+Instability correlates with sheet switching
+```
+
+---
+
+# 🔹 11. Multi-Operator Control
+
+---
+
+## Combined Control
 
 $$
 u =
-\alpha \, u_{\text{base}}
+w_{\pi} u_{\pi}
 +
-\beta \, u_{\text{target}}
+w_{\text{risk}} u_{\text{risk}}
++
+w_{\text{sheet}} u_{\text{sheet}}
++
+w_{\text{target}} u_{\text{target}}
 $$
 
 ---
 
-## 9.3 Constrained System
+## Interpretation
+
+```text
+Control is state-adaptive and multi-dimensional
+```
+
+---
+
+# 🔹 12. Gate Navigation
+
+---
+
+## Gate Direction
 
 $$
-\sum_j P(B_s \rightarrow B_j) = 1
+u_{\text{gate}} \sim \nabla d_{\text{gate}}
+$$
+
+---
+
+## Insight
+
+```text
+Gates are directional structures, not static targets
+```
+
+---
+
+# 🔹 13. Discrete Control (Transition Layer)
+
+---
+
+## Control Objective
+
+$$
+\max P(B_s \rightarrow B_t)
 $$
 
 ---
@@ -308,353 +423,49 @@ Control redistributes transition probabilities
 
 ---
 
-# 🔹 10. Temporal Control (v52–v53)
+# 🔹 14. Temporal Control
 
-Control is time-dependent:
+---
 
 $$
 u(t) = m(t) \cdot u
 $$
 
-where:
-
-```text
-m(t) ∈ {0,1}
-```
-
-or multi-phase:
-
-```text
-engage → lock → release → next
-```
-
----
-
-# 🔹 11. Topological Constraint (v54)
-
-Allowed transitions:
-
-$$
-B_i \rightarrow B_j \quad \text{only if } j \in \text{Adj}(i)
-$$
-
----
-
-# 🔹 12. Resonance Control (v55)
-
-Let natural distribution:
-
-$$
-P_{\text{nat}}(B_s \rightarrow B_j)
-$$
-
-Control aligns with:
-
-$$
-u \sim P_{\text{nat}}
-$$
-
 ---
 
 ## Interpretation
 
 ```text
-Control is most effective when aligned with natural dynamics
+Control effectiveness depends on timing and phase
 ```
 
 ---
 
-# 🔹 13. Transition Mechanism (Unified)
+# 🔹 15. Transition Mechanism (Unified)
 
 ```text
 1. density decreases        (ρ ↓)
 2. greyspace increases      (G ↑)
 3. flow destabilizes        (|dr/dθ| ↑)
-4. IOTA events occur
-5. system leaves ridge
-6. enters basin transition regime
-7. transition probabilities shift
-8. new basin reached
+4. trajectory loses alignment
+5. ridge structure breaks
+6. basin transition occurs
+7. system reconfigures
 ```
 
 ---
 
-# 🔹 14. Minimal Pipeline (Updated)
-
-```text
-Signal x(t)
-→ Phase embedding (r, θ)
-→ Density ρ
-→ Greyspace G
-→ Risk field P(IOTA)
-→ Ridge / structure
-→ Basin segmentation
-→ Transition matrix P(B_i → B_j)
-→ Prediction
-→ Control
-```
-
----
-
-# 🔹 15. Key Properties (Updated)
-
----
-
-## Field-based
-
-```text
-continuous instability representation
-```
-
-## Discrete structure
-
-```text
-basins + transitions
-```
-
-## Predictive
-
-```text
-future state estimation possible
-```
-
-## Controllable
-
-```text
-transition probabilities can be modified
-```
-
----
-
-# 🔹 Final Statement (v55)
-
-$$
-\text{Transition} =
-\text{Loss of structural anchoring}
-+
-\text{Entry into instability field}
-+
-\text{Probabilistic transition between basins}
-$$
-
----
-
-# 🔹 Interpretation
-
-```text
-A system does not collapse.
-
-It leaves one structured regime
-and transitions into another.
-```
----
-
----
-
-# 🔹 16. π-Consistency (v76)
-
-## Definition
-
-Directional smoothness is measured via turning rate:
-
-$$
-\Delta \theta_t = \theta_{t+1} - \theta_t
-$$
-
----
-
-## Metrics
-
-- max turn:
-  $$
-  \max |\Delta \theta|
-  $$
-
-- mean turn:
-  $$
-  \mathbb{E}[|\Delta \theta|]
-  $$
-
----
-
-## Interpretation
-
-```text
-Low turning variance → smooth rotational flow
-High turning spikes → staircase / unstable motion
-```
-
----
-
-## 🔥 Insight
-
-```text
-π emerges as the constraint for continuous rotation
-```
-
----
-
-## Control Term
-
-$$
-u_{\pi} = -k_{\theta} \cdot \Delta \theta
-$$
-
----
-
-# 🔹 17. Sheet Structure (v77–v78)
-
----
-
-## Definition
-
-Phase space decomposes into radial layers:
-
-$$
-\mathcal{S}_i = \{ (r,\theta) \mid r \approx r_i \}
-$$
-
----
-
-## Sheet Index
-
-$$
-\text{sheet}(r) = \arg\min_i |r - r_i|
-$$
-
----
-
-## Interpretation
-
-```text
-Each sheet = locally coherent flow regime
-```
-
----
-
-## Sheet Switching
-
-$$
-\frac{d}{dt} \text{sheet}(r)
-$$
-
----
-
-## 🔥 Insight
-
-```text
-Instability correlates with rapid sheet switching
-```
-
----
-
-## Sheet Control
-
-$$
-u_{\sqrt{2}} \sim (r_{\text{next}} - r)
-$$
-
----
-
-# 🔹 18. Multi-Operator Control (v79)
-
----
-
-## Operators
-
-- π → angular alignment  
-- φ → radial drift  
-- √2 → sheet transition  
-
----
-
-## Combined Control
-
-$$
-u =
-w_{\pi} u_{\pi}
-+
-w_{\phi} u_{\phi}
-+
-w_{\sqrt{2}} u_{\sqrt{2}}
-$$
-
----
-
-## Dynamic Weights
-
-$$
-w_i = f(\text{state})
-$$
-
----
-
-## 🔥 Insight
-
-```text
-Control is multi-dimensional and state-adaptive
-```
-
----
-
-# 🔹 19. Phase-Aligned Gate Navigation (v80)
-
----
-
-## Idea
-
-Align trajectory with gate direction:
-
-$$
-u_{\text{gate}} \sim \nabla d_{\text{gate}}
-$$
-
----
-
-## Combined Navigation
-
-$$
-u =
-u_{\pi}
-+
-u_{\text{gate}}
-+
-u_{\text{sheet}}
-$$
-
----
-
-## Observed Behavior
-
-```text
-trajectory follows flow channels
-→ aligns with gate direction
-→ minimizes turning
-```
-
----
-
-## 🔥 Critical Insight
-
-```text
-Gates are not targets
-
-They are directional structures in the flow field
-```
-
----
-
-# 🔹 20. NEXAH Kernel (Unified Architecture)
+# 🔹 16. NEXAH Kernel
 
 ---
 
 ## System Decomposition
 
 ```text
-ARCHY   → simulation layer
-FIELD   → continuous geometry + probability
-GRAPH   → basin + transition structure
-KERNEL  → navigation + control
+ARCHY   → system dynamics
+FIELD   → continuous geometry
+GRAPH   → basin structure
+KERNEL  → navigation
 ```
 
 ---
@@ -665,69 +476,41 @@ $$
 u =
 -\nabla P(\text{IOTA})
 +
-\nabla A_{\text{stable}}
+\nabla \rho
 +
 u_{\pi}
 +
-u_{\text{gate}}
-+
 u_{\text{sheet}}
-$$
-
----
-
-## Interpretation
-
-Control integrates:
-
-```text
-risk avoidance
-+ structure attraction
-+ rotational consistency
-+ directional alignment
-+ sheet transitions
++
+u_{\text{gate}}
 ```
 
 ---
 
-# 🔹 21. Final System Equation
-
-$$
-\text{Trajectory} =
-f(
-\text{flow},
-\text{field},
-\text{structure},
-\text{control}
-)
-$$
-
----
-
-# 🔥 Final Insight (v80 + Kernel)
+## 🔥 Core Insight
 
 ```text
-A dynamical system is not evolving in time
+A system does not evolve in time
 
-It is navigating a structured state space
+It navigates a structured state space
 ```
 
 ---
 
-# 🔹 Updated Final Statement
+# 🔹 Final Statement
 
 $$
 \text{Transition} =
 \text{Field Navigation}
 +
-\text{Structural Misalignment}
+\text{Loss of Structural Alignment}
 +
-\text{Controlled Basin Transition}
+\text{Discrete Basin Transition}
 $$
 
 ---
 
-# 🧭 Final Summary (Extended)
+# 🧭 Final Summary
 
 ```text
 Signal
@@ -737,12 +520,10 @@ Signal
 → Greyspace
 → Flow
 → Sheets
-→ Switching
 → Basins
 → Transitions
 → Probability field
-→ Gradient navigation
-→ Multi-operator control
+→ Control field
 → π-consistency
 → Sheet alignment
 → Gate alignment
@@ -759,7 +540,6 @@ We do not simulate systems.
 We navigate them.
 ```
 
----
 ---
 
 © Thomas K. R. Hofmann  
