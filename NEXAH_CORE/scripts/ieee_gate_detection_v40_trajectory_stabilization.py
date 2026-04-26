@@ -6,7 +6,7 @@
 # PURPOSE:
 # --------
 # Extend control from local state steering (v38–v39)
-# to trajectory-level stabilization.
+# to trajectory-level stabilization. 
 #
 # Core idea:
 # The system should not only move to stable regions,
