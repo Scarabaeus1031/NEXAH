@@ -1,8 +1,8 @@
-NEXAH v59 — Control Core Extraction (Trajectory-Based)
-======================================================
+NEXAH v59 — Control Core Extraction (Window-Based)
+=================================================
 
-Total active points: 34
 Detected transitions: 0
+Total active points: 34
 Top-k core points: 5
 
 Top influence points:
