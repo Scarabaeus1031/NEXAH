@@ -1,4 +1,4 @@
-# 🧭 NEXAH — Field-Based Stability Navigation
+# 🧭 NEXAH — Field-Based Stability Navigation & Control
 
 ---
 
@@ -7,7 +7,7 @@
 NEXAH is a system for:
 
 ```text
-detecting, understanding, and navigating
+detecting, understanding, predicting, and controlling
 transitions in complex dynamical systems
 ```
 
@@ -27,7 +27,8 @@ NEXAH maps this space and enables:
 ```text
 → early detection of instability  
 → structural understanding  
-→ active navigation toward stability  
+→ prediction of transitions  
+→ active control of system behavior  
 ```
 
 ---
@@ -43,29 +44,43 @@ thresholds → alerts → reaction
 NEXAH:
 
 ```text
-state space → structure → fields → navigation
+state space → structure → fields → transitions → control
 ```
 
 ---
 
 ## 🎯 System Capability
 
-### Today
+---
+
+### Detection Layer (v1–v33)
 
 ```text
 ✔ detect transitions early  
 ✔ identify instability regions  
-✔ explain system behavior structurally  
+✔ map risk fields P(IOTA | r, θ)  
 ```
 
 ---
 
-### With navigation layer
+### Navigation Layer (v34–v37)
 
 ```text
 ✔ steer system away from instability  
-✔ guide trajectories through stable regions  
+✔ guide trajectories along structural manifolds  
 ✔ reduce collapse probability  
+```
+
+---
+
+### Control Layer (v38–v55)
+
+```text
+✔ identify discrete basins (system regimes)  
+✔ model transitions as P(B_i → B_j)  
+✔ predict transitions using memory  
+✔ actively modify transition probabilities  
+✔ apply temporal, adaptive, and structured control  
 ```
 
 ---
@@ -75,12 +90,15 @@ state space → structure → fields → navigation
 ```text
 Signal
 → Phase space (r, θ)
-→ Density field
-→ Greyspace (instability regions)
-→ Structural ridges (stable manifolds)
-→ IOTA events (transition points)
+→ Density field ρ
+→ Greyspace G
+→ Ridge structure
+→ IOTA events
 → Risk field P(IOTA)
+→ Basins (discrete regimes)
+→ Transition matrix P(B_i → B_j)
 → Navigation field
+→ Control layer
 ```
 
 ---
@@ -91,6 +109,8 @@ Signal
 Instability is not noise
 
 Instability is geometry
++ probability
++ structure
 ```
 
 ---
@@ -100,52 +120,72 @@ Instability is geometry
 ```text
 NEXAH/
 │
-├── README.md                 ← this file
+├── README.md
 │
-├── NEXAH_CORE/              ← main system
+├── NEXAH_CORE/
 │   │
-│   ├── mathematics/
-│   │   └── nexah_foundation.md
+│   ├── nexah_foundation.md
+│   ├── findings.md
 │   │
 │   ├── scripts/
-│   │   ├── ieee_gate_detection_v27_iota_state_model.py
-│   │   ├── ieee_gate_detection_v28_yugo_flow_iota_coupling.py
-│   │   ├── ieee_gate_detection_v29_yugo_iota_predictor.py
-│   │   ├── ieee_gate_detection_v30_iota_typing.py
-│   │   ├── ieee_gate_detection_v31_shape_extraction.py
-│   │   ├── ieee_gate_detection_v32_mini_transition_model.py
-│   │   ├── ieee_gate_detection_v33_probalistic_iota_field.py
-│   │   ├── ieee_gate_detection_v34_gradient_steering.py
-│   │   ├── ieee_gate_detection_v35_target_navigation.py
-│   │   ├── ieee_gate_detection_v36_adaptive_target_navigation.py
-│   │   └── ieee_gate_detection_v37_structure_aware_steering.py
+│   │   ├── ... (v1–v33 detection)
+│   │   ├── ... (v34–v37 navigation)
+│   │   ├── ieee_gate_detection_v38_control_layer.py
+│   │   ├── ieee_gate_detection_v44_basin_identity.py
+│   │   ├── ieee_gate_detection_v45_transition_matrix.py
+│   │   ├── ieee_gate_detection_v46_2_memory_basin_prediction.py
+│   │   ├── ieee_gate_detection_v49_transition_probability_control.py
+│   │   ├── ieee_gate_detection_v52_pattern_control.py
+│   │   ├── ieee_gate_detection_v53_phase_pattern_control.py
+│   │   ├── ieee_gate_detection_v54_adjacency_pattern_control.py
+│   │   ├── ieee_gate_detection_v55_transition_resonance_control.py
 │   │
 │   ├── outputs/
 │   │   └── ieee_gates/
-│   │       ├── v36_adaptive_target_trajectory.png
 │   │       ├── v37_structure_trajectory.png
-│   │       └── ...
+│   │       ├── v45_transition_matrix.png
+│   │       ├── v49_transition_control_B0_to_B1.png
+│   │       ├── v53_phase_pattern_B0_to_B1.png
+│   │       ├── v55_transition_resonance_B0_to_B1.png
 │   │
-│   └── findings.md
+│   └── visuals/
 │
-├── BUILDER_LAB/             ← experimental / legacy
-│   └── zeta_legacy/
-│
+└── BUILDER_LAB/
 ```
 
 ---
 
-## 📊 Example Output
-
-### Adaptive Navigation (V36)
-
-![v36](NEXAH_CORE/outputs/ieee_gates/v36_adaptive_target_trajectory.png)
+## 📊 Key Visuals
 
 ---
 
-### Structure-Aware Navigation (V37)
+### 🔹 Structure-Aware Navigation (v37)
 
 ![v37](NEXAH_CORE/outputs/ieee_gates/v37_structure_trajectory.png)
+
+---
+
+### 🔹 Transition Matrix (v45)
+
+![v45](NEXAH_CORE/outputs/ieee_gates/v45_transition_matrix.png)
+
+---
+
+### 🔹 Transition Control (v49)
+
+![v49](NEXAH_CORE/outputs/ieee_gates/v49_transition_control_B0_to_B1.png)
+
+---
+
+### 🔹 Phase Pattern Control (v53)
+
+![v53](NEXAH_CORE/outputs/ieee_gates/v53_phase_pattern_B0_to_B1.png)
+
+---
+
+### 🔹 Resonance-Aligned Control (v55)
+
+![v55](NEXAH_CORE/outputs/ieee_gates/v55_transition_resonance_B0_to_B1.png)
 
 ---
 
@@ -153,23 +193,40 @@ NEXAH/
 
 Core definitions:
 
+- state:
+  ```
+  s(t) = (r, θ)
+  ```
 
-- state: $begin:math:text$ s\(t\) \= \(r\, \\theta\) $end:math:text$
-- density: $begin:math:text$ \\rho\(r\, \\theta\) $end:math:text$
-- greyspace: $begin:math:text$ G \= 1 \/ \\rho $end:math:text$
-- risk field: $begin:math:text$ P\(\\text\{IOTA\} \| r\, \\theta\) $end:math:text$
+- density:
+  ```
+  ρ(r, θ)
+  ```
+
+- greyspace:
+  ```
+  G = 1 / ρ
+  ```
+
+- risk field:
+  ```
+  P(IOTA | r, θ)
+  ```
+
+- transition system:
+  ```
+  P(B_i → B_j)
+  ```
 
 Full formulation:
 
 ```text
-NEXAH_CORE/mathematics/nexah_foundation.md
+NEXAH_CORE/nexah_foundation.md
 ```
 
 ---
 
-## 🧭 Navigation Layer
-
-The system defines a control field:
+## 🧭 Navigation Field
 
 ```math
 u =
@@ -178,12 +235,34 @@ u =
 + ∇ρ
 ```
 
-Interpretation:
+---
+
+## 🎯 Control Layer
+
+Control objective:
+
+```math
+maximize P(B_source → B_target)
+```
+
+Subject to:
+
+```math
+Σ_j P(B_source → B_j) = 1
+```
+
+---
+
+### Control Types
 
 ```text
-avoid instability
-+ move toward stable regions
-+ follow structural geometry
+v49 → transition control  
+v50 → multi-policy  
+v51 → adaptive selection  
+v52 → temporal gating  
+v53 → phase control  
+v54 → topology constraints  
+v55 → resonance-aligned control  
 ```
 
 ---
@@ -194,6 +273,7 @@ avoid instability
 - financial systems  
 - climate tipping points  
 - biological dynamics  
+- complex network control  
 
 ---
 
@@ -203,9 +283,11 @@ avoid instability
 ✔ Field model
 ✔ Transition detection
 ✔ Structural analysis
-✔ Navigation (prototype)
+✔ Navigation
+✔ Transition prediction
+✔ Transition control
 
-→ Next: Control layer
+→ Next: constrained optimal control (v56+)
 ```
 
 ---
@@ -215,12 +297,11 @@ avoid instability
 ```text
 We are not analyzing signals.
 
-We are mapping and navigating
-the field in which collapse occurs.
+We are modeling and controlling
+a structured dynamical field.
 ```
 
 ---
 
 © Thomas K. R. Hofmann  
 NEXAH — 2026
-
