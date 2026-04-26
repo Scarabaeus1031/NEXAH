@@ -690,3 +690,257 @@ Structure
 ```
 
 ---
+
+---
+
+# 🔹 Finding 22 — Transitions are controllable at the distribution level
+
+Using:
+
+P(basin_i → basin_j)
+
+Observed (v49):
+
+- targeted intervention can modify transition probabilities
+- specific edges can be amplified
+
+Example:
+
+P(0 → 1): 0.625 → 1.000
+
+---
+
+## 🔥 Critical Insight
+
+Transitions are not only detectable  
+They are controllable
+
+---
+
+## Interpretation
+
+System behavior can be shaped  
+by altering transition likelihoods between basins
+
+---
+
+# 🔹 Finding 23 — Transition control creates global side-effects
+
+Observed (v50–v51):
+
+- increasing one transition reduces others
+- multi-edge policies interfere
+
+Example:
+
+2→0 drops while 0→1 increases
+
+---
+
+## 🔥 Critical Insight
+
+Transitions are not independent
+
+---
+
+## Interpretation
+
+System operates on a constrained probability distribution
+
+---
+
+# 🔹 Finding 24 — Control requires selection, not accumulation
+
+Using adaptive filtering (v51):
+
+- only beneficial transitions are retained
+- harmful edges are removed
+
+---
+
+## 🔥 Critical Insight
+
+More control ≠ better control
+
+---
+
+## Interpretation
+
+Optimal control is sparse and selective
+
+---
+
+# 🔹 Finding 25 — Timing of control is critical
+
+Using pattern gating (v52):
+
+- control applied intermittently
+- same direction, different timing → different results
+
+---
+
+## 🔥 Critical Insight
+
+WHEN control is applied  
+is as important as WHERE
+
+---
+
+## Interpretation
+
+System responds differently depending on temporal alignment
+
+---
+
+# 🔹 Finding 26 — Control has an internal phase structure
+
+Using phase patterns (v53):
+
+engage → lock → release → next
+
+Observed:
+
+- control effectiveness varies across phases
+- locking suppresses intervention
+- boundary states amplify it
+
+---
+
+## 🔥 Critical Insight
+
+Control must respect internal system phase
+
+---
+
+## Interpretation
+
+System exhibits cyclic control sensitivity
+
+---
+
+# 🔹 Finding 27 — Topological constraints alone are insufficient
+
+Using adjacency restriction (v54):
+
+- valid transitions enforced
+- no significant behavioral change
+
+---
+
+## 🔥 Critical Insight
+
+Topology defines possibilities  
+but not dynamics
+
+---
+
+## Interpretation
+
+Control requires dynamic weighting, not just valid edges
+
+---
+
+# 🔹 Finding 28 — Transition dynamics follow discrete ratios
+
+Observed repeatedly:
+
+0.8333 ≈ 10 / 12  
+0.1666 ≈  2 / 12
+
+---
+
+## 🔥 Critical Insight
+
+Transition probabilities are quantized
+
+---
+
+## Interpretation
+
+System operates on discrete transition counts  
+not continuous probability space
+
+---
+
+# 🔹 Finding 29 — Natural transition distributions act as attractors
+
+Using resonance control (v55):
+
+- blending target with natural distribution
+- dominant transitions become amplified
+
+---
+
+## 🔥 Critical Insight
+
+The system prefers its native transition structure
+
+---
+
+## Interpretation
+
+Control is most effective when aligned  
+with natural transition geometry
+
+---
+
+# 🔹 Finding 30 — Control operates on multiple independent axes
+
+Identified control dimensions:
+
+Direction     (v49)  
+Timing        (v52)  
+Phase         (v53)  
+Topology      (v54)  
+Distribution  (v55)
+
+---
+
+## 🔥 Critical Insight
+
+Control is multi-dimensional
+
+---
+
+## Interpretation
+
+System behavior emerges from combined control axes  
+not single interventions
+
+---
+
+# 🔹 Updated Final Statement (Control Layer)
+
+Transition =  
+Field Navigation  
++ Structural Constraints  
++ Discrete Transition Dynamics  
++ Control Inputs  
+
+---
+
+# 🔹 Updated Summary (v1 → v55)
+
+Structure  
+→ Phase  
+→ Geometry  
+→ Sheets  
+→ Switching  
+→ Greyspace  
+→ Boundaries  
+→ Probability field  
+→ Gradient flow  
+→ Target navigation  
+→ Adaptive structure  
+→ Discrete anchors  
+→ Basin identity  
+→ Transition matrix  
+→ Memory  
+→ Control (direction)  
+→ Control (timing)  
+→ Control (phase)  
+→ Control (topology)  
+→ Control (distribution)  
+→ Controlled transitions  
+
+---
