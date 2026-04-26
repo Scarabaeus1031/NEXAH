@@ -1776,3 +1776,260 @@ as structured flows.
 ```
 
 ---
+
+---
+
+## 🔷 NEXAH Control Evolution — Structural Transition Layer (v34 → v55)
+
+### 🧭 Overview
+
+This block documents the transition from local gradient steering  
+to global transition distribution control.
+
+Core shift:
+
+- v34–v41 → trajectory shaping
+- v42–v46 → structure discovery (basins, transitions)
+- v47–v55 → **active transition control layer**
+
+---
+
+## 📊 Key Visual Milestones
+
+### 🔹 v34 — Gradient Field (Local Geometry)
+![v34](outputs/ieee_gates/v34_gradient_field.png)
+
+- First explicit field representation
+- Local direction = ∇ρ
+- Foundation for all steering layers
+
+---
+
+### 🔹 v37 — Structure-Aware Trajectory
+![v37](outputs/ieee_gates/v37_structure_trajectory.png)
+
+- Transition from raw dynamics → structured flow
+- First indication of basin-like regions
+
+---
+
+### 🔹 v41 — Ridge-Aligned Control
+![v41](outputs/ieee_gates/v41_ridge_aligned_control.png)
+
+- Stabilizes motion along ridges
+- Removes chaotic drift component
+- Defines “natural flow manifold”
+
+---
+
+### 🔹 v44 — Basin Identity Map
+![v44](outputs/ieee_gates/v44_basin_identity_map.png)
+
+- Discrete basin segmentation
+- Basis for all higher-level control
+- Introduces symbolic state space
+
+---
+
+### 🔹 v45 — Transition Matrix
+![v45](outputs/ieee_gates/v45_transition_matrix.png)
+
+- First Markov representation
+- System reduced to:
+
+    P(Bᵢ → Bⱼ)
+
+- Key object for all later control layers
+
+---
+
+## 🎯 CONTROL LAYER (v47+)
+
+---
+
+### 🔹 v47 — Memory-Guided Control
+![v47](outputs/ieee_gates/v47_memory_guided_control.png)
+
+- Uses historical basin occupancy
+- First global influence on trajectory
+- Still indirect (trajectory-level)
+
+---
+
+### 🔹 v48 — Target Basin Control
+![v48](outputs/ieee_gates/v48_target_basin_0_control.png)
+
+- Direct attraction to centroid
+- Works, but:
+
+    ❗ breaks system structure
+
+---
+
+### 🔹 v49 — Transition Probability Control
+![v49](outputs/ieee_gates/v49_transition_control_B0_to_B1.png)
+
+- Control objective:
+
+    P(B₀ → B₁)
+
+- First true **transition-level control**
+- Result:
+
+    P: 0.625 → 1.000
+
+---
+
+### 🔹 v50 — Multi-Transition Policy
+![v50](outputs/ieee_gates/v50_policy_transition_control_2to0_0to1_1to2.png)
+
+- Multiple edges controlled simultaneously
+- Reveals:
+
+    ❗ interference between transitions
+
+---
+
+### 🔹 v51 — Adaptive Policy Selection
+![v51](outputs/ieee_gates/v51_adaptive_policy_control_2to0_0to1_1to2.png)
+
+- Filters only beneficial transitions
+- Result:
+
+    Selected: (0 → 1)
+
+- Introduces:
+
+    ✔ control selection logic
+
+---
+
+### 🔹 v52 — Pattern Control (Temporal Gating)
+![v52](outputs/ieee_gates/v52_pattern_control_B0_to_B1_110111.png)
+
+- Binary activation pattern:
+
+    ON/OFF in time
+
+- Insight:
+
+    ✔ timing matters as much as direction
+
+---
+
+### 🔹 v53 — Phase Pattern Control (Hybrid)
+![v53](outputs/ieee_gates/v53_phase_pattern_B0_to_B1.png)
+
+- Multi-phase control:
+
+    engage → lock → release → next
+
+- Combines:
+    - temporal structure
+    - state awareness (locking score)
+- First “breathing” behavior
+
+---
+
+### 🔹 v54 — Adjacency-Constrained Control
+![v54](outputs/ieee_gates/v54_adjacency_pattern_B0_to_B1.png)
+
+- Restricts control to valid neighbors:
+
+    Bᵢ → Adj(Bᵢ)
+
+- Insight:
+
+    ✔ topology alone does not move system
+
+---
+
+### 🔹 v55 — Transition Resonance Control
+![v55](outputs/ieee_gates/v55_transition_resonance_B0_to_B1.png)
+
+- Mix:
+
+    target direction + natural distribution
+
+- Uses real transition weights:
+
+    0→1 = 0.625  
+    0→3 = 0.375
+
+- Key result:
+
+    ✔ amplification of dominant transition
+
+---
+
+## 🧠 Structural Insights
+
+### 1. Transition Space is Quantized
+
+Observed repeatedly:
+
+```text
+0.8333 = 10 / 12
+0.1666 = 2 / 12
+```
+
+→ System operates on discrete transition counts
+
+⸻
+
+### 2. Natural Transition Geometry
+
+Each basin has:
+
+- preferred outgoing edges  
+- stable ratios  
+
+Control works best when:
+
+aligned with natural distribution
+
+⸻
+
+### 3. Three Independent Control Axes
+
+| Axis         | Introduced in |
+|-------------|--------------|
+| Direction    | v49 |
+| Timing       | v52 |
+| Phase        | v53 |
+| Topology     | v54 |
+| Distribution | v55 |
+
+⸻
+
+### 4. Control Hierarchy (emerged)
+
+trajectory → basin → transition → distribution
+
+⸻
+
+## 🔮 Next Layer (v56+)
+
+Logical continuation:
+
+Instead of:
+
+increase P(0→1)
+
+use:
+
+redistribute outgoing probability mass from basin 0
+
+⸻
+
+## 📁 Output Reference
+
+All visuals stored in:
+
+outputs/ieee_gates/
+
+Key data artifacts:
+
+- transition_probs.npy  
+- basin_ids.npy  
+- controlled_states.npy
