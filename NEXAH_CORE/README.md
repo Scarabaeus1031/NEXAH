@@ -223,6 +223,9 @@ NEXAH_CORE/
 
 ## 📊 Key Visuals
 
+These visuals illustrate the evolution from structure detection (v37)
+to full transition navigation and gate-aware control (v80).
+
 ---
 
 ### 🔹 Structure-Aware Navigation (v37)
