@@ -1,4 +1,8 @@
-# NEXAH Research Vision (v2 — Field & Coherence Update)
+# NEXAH Research Vision (v3 — Field, Coherence & Navigation)
+
+NEXAH is a research framework for analyzing and navigating transitions in complex dynamical systems.
+
+It focuses on identifying structure within system dynamics and leveraging this structure for prediction and control.
 
 ![NEXAH Conceptual Overview](./visuals/NEXAH_Structure_inside_Dynamics.png)
 
@@ -9,8 +13,9 @@ It is not a direct representation of implementation, but a synthesis of observed
 ---
 
 NEXAH is an orientation-based framework that investigates whether  
-**intrinsic stability in complex systems may emerge from local structural coherence**,  
-rather than from global optimization, reward mechanisms, or centralized control.
+
+> **intrinsic stability in complex systems emerges from local structural coherence  
+> and can be actively navigated through field-aware control**
 
 ---
 
@@ -21,249 +26,346 @@ Across multiple investigated systems, a recurring pattern is observed:
 > Stability is associated with coherence in interface regions,  
 > while system breakdown tends to occur when this coherence is lost.
 
-A commonly observed sequence is:
+Observed sequence:
 
 ```text
 coherence → fragmentation → acceleration → collapse
 ```
 
-This sequence is **empirical and system-dependent**,  
-and is not claimed to be universal.
+Extended (v80):
+
+```text
+alignment → misalignment → transition corridor → regime shift
+```
 
 ---
 
-## The 3+1 Experimental Strands
+# 🔷 Key Extension (v56+)
 
-| Strand | Domain | Input Type | Observed Patterns | Current Status |
-|--------|--------|------------|------------------|----------------|
-| 1 | Discrete Mathematics | Prime numbers (mod systems) | cycles, gaps, corridors | exploratory |
-| 2 | Technical Systems | IEEE Power Grids (9, 14, 30) | early warning signals, instability regions | empirically tested |
-| 3 | Chaotic Dynamics | Lorenz Attractor | separatrix-like regions, basin interfaces | qualitative alignment |
-| 4 | Multi-Agent Systems | local orientation agents | coherence without reward signals | ongoing |
+A major shift in NEXAH:
+
+```text
+From:
+    detection of transitions
+
+To:
+    navigation and control of transitions
+```
 
 ---
 
-## Core Observations
+## Updated Principle
 
-Across these domains, NEXAH consistently identifies:
-
-- interface-like regions (gaps / corridors)  
-- anisotropic motion (preferred vs constrained directions)  
-- emergence of global structure from local interactions  
-- breakdown preceded by loss of alignment / coherence  
-- structured flow in state space  
-- trajectories aligned with underlying field structure  
-
-Interpretation:
-
-> Systems do not evolve randomly.  
-> They appear to follow **preferred paths within a structured state space**.
+> Systems do not only evolve within a field  
+> — they can be **guided through it**
 
 ---
 
 # 🌐 Field Layer & Geometric Flow
 
-A key extension of the framework introduces:
+A key extension introduces:
 
 > an **explicit field representation of system dynamics**
 
-Previously:
-
-- structure was inferred from trajectories  
-
-Now:
-
-- the system is approximated as a **continuous flow field**
-
 ---
 
-## Observations
-
-- consistent directional flow patterns  
-- local branching structures  
-- global alignment tendencies  
-
----
-
-## Interpretation (Cautious)
-
-Trajectories can be interpreted as:
-
-> paths that align with the underlying field structure
-
-This is conceptually related to:
-
-- energy-efficient motion  
-- geometry-constrained trajectories  
-
-No formal geodesic claim is made.
-
----
-
-## Structural Mapping
-
-| Concept | Field Interpretation |
-|--------|---------------------|
-| Manifold | structured region in field |
-| Rift / Gap | transition corridor |
-| Distance | deviation from flow alignment |
-| Branching | local divergence of flow |
-| Collapse | exit from structured behavior |
-
----
-
-## 🧠 Coherence as Alignment
-
-A working definition:
+## State Representation
 
 $$
-C(x) = \frac{\dot{x} \cdot F(x)}{\|\dot{x}\| \, \|F(x)\|}
+s = (r, \theta)
 $$
-
-Interpretation:
-
-- \( C \approx 1 \) → strong alignment  
-- \( C \approx 0 \) → transition region  
-- \( C < 0 \) → opposing motion  
 
 ---
 
-## 🔄 Observed Field Behavior
+## Flow Field
+
+$$
+\dot{s} = F(s)
+$$
+
+---
+
+## Interpretation
 
 ```text
-Aligned motion      → C > 0  
-Transition region   → C ≈ 0  
-Opposing behavior   → C < 0
+System behavior = trajectory inside structured field
+```
+
+---
+
+# 🧠 Coherence as Alignment
+
+$$
+C(s) =
+\frac{\dot{s} \cdot F(s)}{\|\dot{s}\| \, \|F(s)\|}
+$$
+
+---
+
+## Observed Behavior
+
+```text
+C ≈ 1 → stable motion  
+C ≈ 0 → transition region  
+C < 0 → opposing flow
 ```
 
 ---
 
 ## Interpretation
 
-- system motion is not uniform  
-- regions of alignment and misalignment exist  
-- transitions frequently occur near \( C \approx 0 \)
-
----
-
-## Updated Collapse Interpretation (Empirical)
-
-A recurring pattern:
-
-1. Coherent motion (aligned trajectories)  
-2. Transition region (reduced alignment)  
-3. Fragmentation (diverging trajectories)  
-4. Acceleration (loss of structure)  
-5. Breakdown / escape  
-
----
-
-## Revised Structural Principle (Working)
-
-> Stability appears to be associated with  
-> persistent alignment within the field structure,  
-> particularly across transition regions.
-
----
-
-## Cross-Domain Interpretation
-
-| Feature | Interpretation |
-|--------|---------------|
-| Gap / Interface | transition region |
-| Corridor | region of stable aligned motion |
-| Fragmentation | loss of alignment |
-| Acceleration | divergence from structured flow |
-| Collapse | exit from structured region |
-
----
-
-## Strand Notes
-
-### Discrete Systems (Primes)
-
-- structured modular patterns  
-- corridor-like transitions  
-
-Interpretation:
-
-→ possible discrete projection of structured spaces  
-
----
-
-### IEEE Systems
-
-- alignment measures correlate with instability regions  
-- drops in coherence often precede failure in simulation  
-
-→ strongest applied signal currently  
-
----
-
-### Chaotic Systems (Lorenz)
-
-- separatrix-like structures align with transition regions  
-- trajectory switching occurs near low-alignment zones  
-
----
-
-### Multi-Agent Systems
-
-- local alignment produces global structure  
-- no reward signal required  
-
----
-
-## Central Insight (Working)
-
-> Systems do not appear to fail solely due to limits,  
-> but often after losing alignment with their structured motion.
-
----
-
-## Research Directions
-
-1. Generalization  
-   → test across additional system classes  
-
-2. Localization  
-   → identify transition zones more precisely  
-
-3. Time Dynamics  
-   → track coherence evolution over time  
-
-4. Formalization  
-   → define mathematical properties of alignment  
-
-5. Topology  
-   → analyze loops and cyclic structures  
-
----
-
-## Current Position
-
-NEXAH currently provides:
-
-- consistent structural observations across domains  
-- empirical alignment-based indicators  
-- a field-based interpretation of system dynamics  
-
-However, it remains:
-
-- exploratory  
-- simulation-driven  
-- not formally validated  
-
----
-
-## Final Core Insight (Working)
-
 ```text
-Stability does not appear to arise from resisting change.
-
-It is associated with maintaining alignment
-while moving through the system’s structure.
-
-Breakdown tends to occur when this alignment is lost.
+Coherence defines stability of motion
 ```
 
+---
+
+# 🔹 Structural Observations
+
+Across domains:
+
+- interface-like regions (gaps / corridors)  
+- anisotropic motion (preferred directions)  
+- layered structure (sheets / basins)  
+- structured transitions (not random)  
+
+---
+
+## Interpretation
+
+> Systems follow **preferred paths within structured state space**
+
+---
+
+# 🔷 Transition Geometry
+
+Observed:
+
+```text
+low-density regions → transition corridors
+```
+
+Define:
+
+$$
+G(s) = \frac{1}{\rho(s)}
+$$
+
+---
+
+## Interpretation
+
+```text
+Instability emerges in low-density regions
+```
+
+---
+
+# 🔷 Basin & Regime Structure
+
+State space decomposes into:
+
+```text
+basins (regimes)
+```
+
+Transitions:
+
+$$
+P(B_i \rightarrow B_j)
+$$
+
+---
+
+## Interpretation
+
+```text
+System evolves as transitions between regimes
+```
+
+---
+
+# 🔷 Navigation Layer (v34+)
+
+Control emerges as:
+
+$$
+u(s) = -\nabla P(\text{IOTA}) + \nabla \rho
+$$
+
+---
+
+## Interpretation
+
+```text
+navigation = avoid instability + follow structure
+```
+
+---
+
+# 🔷 Transition Control (v49+)
+
+Observed:
+
+- transition probabilities can be modified  
+- dominant transitions can be amplified  
+
+---
+
+## Formal Idea
+
+$$
+P(B_i \rightarrow B_j \mid u)
+\neq
+P(B_i \rightarrow B_j)
+$$
+
+---
+
+## Interpretation
+
+```text
+System behavior is not fixed —
+it is shapeable
+```
+
+---
+
+# 🔷 Phase & Timing Layer (v52–v53)
+
+Control depends on:
+
+```text
+WHEN and WHERE it is applied
+```
+
+---
+
+## Interpretation
+
+```text
+System has internal phase sensitivity
+```
+
+---
+
+# 🔷 Sheet / Layer Dynamics (v76–v80)
+
+Observed:
+
+- multiple overlapping flow layers  
+- structured switching between them  
+- gates at layer intersections  
+
+---
+
+## Interpretation
+
+```text
+System moves across interacting flow layers
+```
+
+---
+
+# 🔷 Kernel View (v80)
+
+System evolution can be written as:
+
+$$
+\dot{s} = F(s) + u(s)
+$$
+
+## Interpretation
+
+```text
+System = natural dynamics + structured intervention
+
+Control does not override the system —
+it redirects motion within the existing field.
+```
+
+---
+
+# 🧠 Unified Interpretation
+
+```text
+System =
+trajectory in structured field
+
+Stability:
+→ alignment + density
+
+Instability:
+→ misalignment + low density + competing flows
+
+Transition:
+→ navigation through structured corridors
+```
+
+---
+
+# 🔬 Cross-Domain Validation
+
+| Domain        | Observation                 | Role                     |
+|---------------|----------------------------|--------------------------|
+| Primes        | modular corridors          | structural analogy       |
+| IEEE systems  | early instability detection| primary validation       |
+| Lorenz        | separatrix / switching     | geometric consistency    |
+| Multi-agent   | structure without reward   | emergent behavior test   |
+
+---
+
+# 🧠 Central Insight (Updated)
+
+> Systems do not fail due to limits alone  
+> but due to **loss of alignment within structured motion**
+
+---
+
+# 🔬 Research Directions
+
+1. Generalization  
+2. Transition localization  
+3. Temporal coherence dynamics  
+4. Formal field properties  
+5. Basin topology  
+6. Control theory integration  
+
+---
+
+# 🔬 Current Position
+
+NEXAH provides:
+
+- field-based system representation  
+- coherence-based stability measure  
+- probabilistic transition modeling  
+- navigation and control capability  
+
+---
+
+## Status
+
+- empirical  
+- simulation-supported  
+- not formally proven  
+
+---
+
+# 🧭 Final Insight (v80)
+
+```text
+Stability is not resistance.
+
+It is the ability to remain aligned
+while moving through structure.
+
+Transitions are not failures.
+
+They are structured transformations that can be navigated.
+```
+
+---
+
+© Thomas K. R. Hofmann  
+NEXAH — 2026
