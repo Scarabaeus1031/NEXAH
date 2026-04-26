@@ -1,0 +1,19 @@
+NEXAH v70 — Gate-Path Control
+=============================
+
+Source basin: B0
+Target basin: B1
+Shortest path: [0, 3, 1]
+Path cost: 0.0167
+Reached path edges: 0/2
+
+Path gates:
+  B0 -> B3: gate_r=1.1488, gate_theta=-0.1580, barrier=0.0150
+  B3 -> B1: gate_r=1.4856, gate_theta=-1.5620, barrier=0.0017
+
+Deviation:
+  final deviation: 0.652484
+  max deviation:   0.652484
+  mean deviation:  0.522122
+
+Final distance to target basin B1: 2.296405

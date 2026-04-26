@@ -1,0 +1,28 @@
+NEXAH v71 — Barrier-Aware Gate Control
+======================================
+
+Source basin: B0
+Target basin: B1
+Shortest path: [0, 3, 1]
+Path cost: 0.0167
+Reached path edges: 2/2
+
+Path gates:
+  B0 -> B3: gate_r=1.1488, gate_theta=-0.1580, barrier=0.0150
+  B3 -> B1: gate_r=1.4856, gate_theta=-1.5620, barrier=0.0017
+
+Final state:
+  final r: 0.959354
+  final theta: -2.119012
+  nearest basin: B1
+  nearest basin distance: 0.217147
+  distance to target B1: 0.217147
+
+Deviation:
+  final deviation: 2.734272
+  max deviation:   2.734272
+  mean deviation:  1.933257
+
+Boost:
+  max boost:  0.950000
+  mean boost: 0.129395
