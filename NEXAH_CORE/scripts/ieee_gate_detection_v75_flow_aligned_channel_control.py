@@ -171,8 +171,8 @@ def main():
     plt.title("NEXAH v75 — Flow-Aligned Channel Control")
     plt.legend()
 
-    # --------------------------------------------------------
-# Save instead of show
+   # --------------------------------------------------------
+# Save instead of show (robust)
 # --------------------------------------------------------
 
 CORE_DIR = os.path.dirname(CURRENT_DIR)
@@ -184,12 +184,14 @@ out_path = os.path.join(
     "v75_flow_aligned_channel_control.png"
 )
 
-plt.tight_layout()
-plt.savefig(out_path, dpi=200)
-plt.close()
+# IMPORTANT: grab current figure explicitly
+fig = plt.gcf()
+
+fig.tight_layout()
+fig.savefig(out_path, dpi=200, bbox_inches="tight")
 
 print("NEXAH v75 complete")
 print(f"Saved: {out_path}")
 
-if __name__ == "__main__":
-    main()
+# Optional: keep or close depending on your workflow
+plt.close(fig)
