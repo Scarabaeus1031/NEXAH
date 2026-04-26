@@ -60,7 +60,52 @@ def plot_3d(traj):
     ax.set_zlabel("Z")
     
     plt.tight_layout()
-    plt.show()
+ import os
+from datetime import datetime
+
+# -----------------------------
+# Save output
+# -----------------------------
+
+def save_plot(fig, name="halvorsen_attractor"):
+    base_dir = os.path.join(
+        "APPLICATIONS",
+        "dynamical_systems",
+        "halvorsen",
+        "visuals"
+    )
+    
+    os.makedirs(base_dir, exist_ok=True)
+    
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"{name}_{timestamp}.png"
+    
+    filepath = os.path.join(base_dir, filename)
+    
+    fig.savefig(filepath, dpi=300)
+    
+    print(f"[✓] Saved: {filepath}")
+
+
+# -----------------------------
+# Plot (updated)
+# -----------------------------
+
+def plot_3d(traj):
+    fig = plt.figure(figsize=(8,6))
+    ax = fig.add_subplot(projection='3d')
+    
+    ax.plot(traj[:,0], traj[:,1], traj[:,2], lw=0.3)
+    
+    ax.set_title("Halvorsen Attractor")
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
+    ax.set_zlabel("Z")
+    
+    plt.tight_layout()
+    
+    save_plot(fig)   # 👈 speichern
+    # plt.show()     # optional aktivieren
 
 
 # -----------------------------
