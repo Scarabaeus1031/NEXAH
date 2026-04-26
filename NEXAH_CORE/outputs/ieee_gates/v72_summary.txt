@@ -1,0 +1,7 @@
+NEXAH v72 — Adaptive Gradient Control
+====================================
+
+Path: [0, 3, 1]
+Gates reached: 2/2
+Max boost: 0.7152
+Mean boost: 0.1332
