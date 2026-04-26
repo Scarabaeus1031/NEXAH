@@ -1,20 +1,6 @@
 # ============================================================
 # NEXAH — IEEE GATE DETECTION v59
-# Control Core Extraction (Trajectory-Based Influence)
-# ============================================================
-
-# FILE:
-# ieee_gate_detection_v59_control_core_extraction.py
-
-# PURPOSE:
-# --------
-# Identify which control points actually drive transitions
-# WITHOUT re-clustering (fixed basin reference).
-#
-# METHOD:
-# --------
-# Measure influence based on local transition loss along trajectory.
-#
+# Control Core Extraction (Window-Based FIX)
 # ============================================================
 
 import os
@@ -30,53 +16,59 @@ from ieee_gate_detection_v56_pattern_field_control import (
     pattern_field_control
 )
 
-
 # ------------------------------------------------------------
-# Compute baseline transitions
-# ------------------------------------------------------------
-
-def get_transition_indices(basin_ids, source, target):
-
-    transitions = []
-
-    for i in range(len(basin_ids) - 1):
-        if basin_ids[i] == source and basin_ids[i + 1] == target:
-            transitions.append(i)
-
-    return transitions
-
-
-# ------------------------------------------------------------
-# Influence scoring (NO re-clustering)
+# Transition detection (WINDOW-BASED)
 # ------------------------------------------------------------
 
-def compute_influence_scores(states, controls, basin_ids, centroids, source, target):
+def detect_transitions(basin_ids, source, target, window=5):
+
+    indices = []
+
+    for i in range(len(basin_ids) - window):
+
+        if basin_ids[i] != source:
+            continue
+
+        for j in range(1, window+1):
+            if basin_ids[i+j] == target:
+                indices.append(i)
+                break
+
+    return indices
+
+
+# ------------------------------------------------------------
+# Influence scoring
+# ------------------------------------------------------------
+
+def compute_influence(states, controls, basin_ids, centroids, source, target):
 
     controlled, active, mask = pattern_field_control(
         states, controls, basin_ids, centroids, source, target
     )
 
-    # baseline transitions (fixed reference)
-    baseline_transitions = get_transition_indices(basin_ids, source, target)
+    # baseline transitions
+    baseline_transitions = detect_transitions(basin_ids, source, target)
+    full_count = len(baseline_transitions)
 
     active_indices = np.where(active)[0]
     influence = []
-
-    window = 3  # local neighborhood size
 
     for idx in active_indices:
 
         loss = 0
 
         for t in baseline_transitions:
-            if abs(t - idx) <= window:
+
+            # if control point lies near transition region
+            if abs(idx - t) < 6:
                 loss += 1
 
         influence.append((idx, loss))
 
     influence.sort(key=lambda x: x[1], reverse=True)
 
-    return influence, active_indices, controlled, active, baseline_transitions
+    return influence, active_indices, controlled, active, full_count
 
 
 # ------------------------------------------------------------
@@ -94,7 +86,7 @@ if __name__ == "__main__":
     source = 0
     target = 1
 
-    influence, active_indices, controlled, active, transitions = compute_influence_scores(
+    influence, active_indices, controlled, active, full_count = compute_influence(
         data["aligned"],
         data["controls"],
         data["basin_ids"],
@@ -143,12 +135,12 @@ if __name__ == "__main__":
     plt.scatter(
         controlled[core_indices, 1],
         controlled[core_indices, 0],
-        s=40,
+        s=35,
         c="red",
         label="control core"
     )
 
-    plt.title("NEXAH v59 — Control Core Extraction (Trajectory-Based)")
+    plt.title("NEXAH v59 — Control Core Extraction (Window-Based)")
     plt.xlabel("theta")
     plt.ylabel("r")
 
@@ -174,11 +166,11 @@ if __name__ == "__main__":
 
     with open(summary_path, "w") as f:
 
-        f.write("NEXAH v59 — Control Core Extraction (Trajectory-Based)\n")
-        f.write("======================================================\n\n")
+        f.write("NEXAH v59 — Control Core Extraction (Window-Based)\n")
+        f.write("=================================================\n\n")
 
+        f.write(f"Detected transitions: {full_count}\n")
         f.write(f"Total active points: {len(active_indices)}\n")
-        f.write(f"Detected transitions: {len(transitions)}\n")
         f.write(f"Top-k core points: {top_k}\n\n")
 
         f.write("Top influence points:\n")
@@ -186,8 +178,8 @@ if __name__ == "__main__":
         for idx, score in influence[:top_k]:
             f.write(f"  index {idx} → influence {score}\n")
 
-    print("NEXAH v59 complete (trajectory-based)")
-    print(f"Transitions detected: {len(transitions)}")
+    print("NEXAH v59 complete (window-based)")
+    print(f"Transitions detected: {full_count}")
     print(f"Top-{top_k} core extracted")
     print(f"Saved: {out_path}")
     print(f"Saved: {summary_path}")
