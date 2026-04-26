@@ -1,0 +1,4 @@
+NEXAH v73 — Minimal Energy Control
+Scale: 0.11551724137931034
+Energy: 3.8164506539833525
+Gates reached: 2/2
