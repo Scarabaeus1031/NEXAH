@@ -286,8 +286,83 @@ if __name__ == "__main__":
 
     plt.legend()
     plt.tight_layout()
-    plt.show()
-
+    
     print("NEXAH v53 complete")
     print(f"P before: {p_before:.4f}")
     print(f"P after:  {p_after:.4f}")
+    # ------------------------------------------------------------
+# SAVE OUTPUTS (wie v49–v52)
+# ------------------------------------------------------------
+
+CORE_DIR = os.path.dirname(CURRENT_DIR)
+OUT_DIR = os.path.join(CORE_DIR, "outputs", "ieee_gates")
+os.makedirs(OUT_DIR, exist_ok=True)
+
+# --- file names ---
+tag = f"v53_phase_pattern_B{source}_to_B{target}"
+
+png_path = os.path.join(
+    OUT_DIR,
+    f"{tag}.png"
+)
+
+txt_path = os.path.join(
+    OUT_DIR,
+    f"{tag}_summary.txt"
+)
+
+# --- save figure ---
+plt.savefig(png_path, dpi=200)
+plt.close()
+
+# --- save arrays ---
+np.save(
+    os.path.join(OUT_DIR, f"{tag}_states.npy"),
+    controlled
+)
+
+np.save(
+    os.path.join(OUT_DIR, f"{tag}_active_mask.npy"),
+    active
+)
+
+np.save(
+    os.path.join(OUT_DIR, f"{tag}_pattern_mask.npy"),
+    pattern
+)
+
+# ------------------------------------------------------------
+# WRITE SUMMARY
+# ------------------------------------------------------------
+
+with open(txt_path, "w", encoding="utf-8") as f:
+
+    f.write("NEXAH v53 — Phase Pattern Control Summary\n")
+    f.write("=========================================\n\n")
+
+    f.write(f"Source basin: {source}\n")
+    f.write(f"Target basin: {target}\n\n")
+
+    f.write(f"P_before({source}->{target}): {p_before:.4f}\n")
+    f.write(f"P_after({source}->{target}):  {p_after:.4f}\n")
+    f.write(f"Delta P: {p_after - p_before:.4f}\n\n")
+
+    f.write(f"Pattern ON states: {int(np.sum(pattern))}\n")
+    f.write(f"Active states:     {int(np.sum(active))}\n\n")
+
+    f.write("Baseline transition probs:\n")
+    f.write(str(data["transition_probs"]))
+    f.write("\n\nControlled transition probs:\n")
+    f.write(str(probs2))
+    f.write("\n")
+
+# ------------------------------------------------------------
+# PRINT
+# ------------------------------------------------------------
+
+print("NEXAH v53 complete")
+print(f"P before: {p_before:.4f}")
+print(f"P after:  {p_after:.4f}")
+print(f"Saved: {png_path}")
+print(f"Saved: {txt_path}")
+
