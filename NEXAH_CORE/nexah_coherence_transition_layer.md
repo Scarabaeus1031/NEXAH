@@ -1,5 +1,23 @@
 # 🧭 NEXAH — Coherence Transition Layer  
-## Build Plan (Updated v80 — Gate Geometry & Control Integration)
+## System Blueprint & Integration Plan
+
+---
+
+## 🧠 Purpose of this Document
+
+This document is NOT a full development log.
+
+It is a structured condensation of:
+
+→ `building_log.md` (detailed evolution v1 → v80)  
+→ `nexah_foundation.md` (formal mathematical model)  
+
+Its purpose is:
+
+```text
+Define the CURRENT SYSTEM STATE
+and guide implementation of the NEXAH runtime (kernel)
+```
 
 ---
 
@@ -7,17 +25,22 @@
 
 The system has evolved through multiple layers:
 
-~~~text
+```text
 Signal → Geometry → Field → Structure → Navigation → Control → Gate Geometry
-~~~
+```
 
 Originally:
 
-> detect transitions via coherence collapse
+```text
+detect transitions via coherence collapse
+```
 
 Now:
 
-> model, predict, and actively navigate transitions in structured dynamical fields
+```text
+model, predict, and actively navigate transitions
+in structured dynamical fields
+```
 
 ---
 
@@ -25,42 +48,38 @@ Now:
 
 ---
 
-## 1. Transitions are state-based, not time-based
+## 1. Transitions are state-based
 
-Transition ≠ f(t)  
+```text
+Transition ≠ f(t)
 Transition = f(state)
+```
 
 ---
 
 ## 2. Instability is geometric
 
-- orbit expands  
-- structure deforms  
-- collapse follows  
-
-> Collapse = geometric failure of trajectory
+```text
+orbit expands → structure deforms → collapse follows
+```
 
 ---
 
-## 3. Gates are phase-locked
+## 3. Gates are phase-dependent
 
-P(gate | θ) ≠ const  
-
-> Instability depends on system position in cycle
+```text
+P(gate | θ) ≠ const
+```
 
 ---
 
 ## 4. Phase space is layered (sheet structure)
 
-~~~text
+```text
 Core → stable orbit  
 Mid → oscillatory layer  
 Outer → instability region  
-~~~
-
-Refined:
-
-> interacting dynamical sheets
+```
 
 ---
 
@@ -73,102 +92,83 @@ Refined:
 
 ## 6. Instability is switching-driven
 
-- system switches between sheets  
-- switching density rises before collapse  
+```text
+sheet switching increases before collapse
+```
 
 ---
 
 ## 7. Collapse mechanism
 
-> breakdown of consistency between competing flow structures
+```text
+breakdown of consistency between competing flow structures
+```
 
 ---
 
 # 🔥 CORE MODEL (v1 → v31)
 
-~~~text
+```text
 Transition =
 phase-locked
 + geometric expansion
 + sheet interaction
 + switching instability
-~~~
+```
 
 ---
 
-# 🔷 EXTENDED DISCOVERIES (v32 → v37)
+# 🔷 EXTENDED FIELD MODEL (v32 → v37)
 
 ---
 
-## 8. Greyspace (low-density corridors)
+## Greyspace (low-density corridors)
 
-G(r,θ) = 1 / ρ  
+```
+G(r,θ) = 1 / ρ
+```
 
-- rises before IOTA  
-- defines transition corridors  
-
----
-
-## 9. Boundary collapse
-
-~~~text
-boundary collapse >> gap escape
-~~~
-
-→ system breaks along structure
+- rises before transition  
+- defines instability corridors  
 
 ---
 
-## 10. Instability is a field
+## Boundary collapse dominates
 
+```text
+system breaks along structure
+```
+
+---
+
+## Instability is a field
+
+```
 P(IOTA | r, θ)
-
-→ continuous probability landscape
-
----
-
-## 11. Local avoidance is insufficient
-
-- gradient steering works locally  
-- fails globally  
+```
 
 ---
 
-## 12. Dual-force navigation
+## Navigation requires dual forces
 
-~~~text
+```text
 repel (risk) + attract (structure)
-~~~
+```
 
 ---
 
-## 13. Adaptive targets
+## Structure-consistent motion
 
-- follow structure  
-- reduce instability (~5%)
-
----
-
-## 14. Structure-consistent motion
-
-> optimal ≠ minimal risk  
-> stable = structure-aligned
-
----
-
-## 15. Discrete motion (anchors)
-
-- loops  
-- chains  
-- polygons  
-
-→ trajectory = anchor sequence
+```text
+optimal ≠ minimal risk
+stable = structure-aligned
+```
 
 ---
 
 # 🔷 NAVIGATION MODEL
 
-~~~text
+```text
 System =
 trajectory moving through
 
@@ -176,17 +176,17 @@ trajectory moving through
 - geometric structure
 - greyspace corridors
 - attractor anchors
-~~~
+```
 
 ---
 
 ## CORE STATEMENT
 
-~~~text
+```text
 Transition =
 loss of structural anchoring
 inside probabilistic instability field
-~~~
+```
 
 ---
 
@@ -194,75 +194,65 @@ inside probabilistic instability field
 
 ---
 
-## 16. Basin decomposition
+## Basin decomposition
 
+```text
 state space → discrete basins
+```
 
 ---
 
-## 17. Transition system
+## Transition system
 
+```
 P(Bᵢ → Bⱼ)
+```
 
 ---
 
-## 18. Predictability
+## Controllability
 
-≈ 0.68 accuracy observed
-
----
-
-## 19. Controllability
-
-example:
-
-~~~text
-P(0→1): 0.625 → 1.000
-~~~
+```text
+transition probabilities can be reshaped
+```
 
 ---
 
-## 20. Coupling
+## Sparse control
 
-transitions are not independent
-
----
-
-## 21. Sparse control
-
-> less control = better control
+```text
+less control = better control
+```
 
 ---
 
-## 22. Temporal control
+## Temporal + phase control
 
-ON/OFF timing matters
-
----
-
-## 23. Phase control
-
-~~~text
-engage → lock → release → next
-~~~
+```text
+timing + phase determine effectiveness
+```
 
 ---
 
-## 24. Topology constraint
+## Topology constraint
 
+```text
 only adjacent basins reachable
+```
 
 ---
 
-## 25. Resonance alignment
+## Resonance alignment
 
-control must match natural distribution
+```text
+control must match natural transition distribution
+```
 
 ---
 
 # 🔥 CONTROL MODEL
 
-~~~text
+```text
 System =
 trajectory through
 
@@ -270,20 +260,7 @@ trajectory through
 - transition network
 - probability constraints
 - control inputs
-~~~
-
----
-
-## TRANSITION MODEL
-
-~~~text
-Transition =
-state-dependent
-+ geometry-driven
-+ sheet interaction
-+ probabilistic structure
-+ controllable transitions
-~~~
+```
 
 ---
 
@@ -291,80 +268,83 @@ state-dependent
 
 ---
 
-## 26. Pattern fields
+## Pattern fields
 
-- control regions are spatial  
-- not point-based  
-
----
-
-## 27. Flow propagation
-
-control spreads through field structure  
+```text
+control acts in spatial regions (not points)
+```
 
 ---
 
-## 28. Basin / saddle detection
+## Flow propagation
 
-- basins = stable zones  
-- saddles = transition gates  
-
----
-
-## 29. Gate graph
-
-~~~text
-state space → graph of gates + basins
-~~~
+```text
+control spreads through system dynamics
+```
 
 ---
 
-## 30. Phase-aligned navigation
+## Basin / saddle structure
 
-- control depends on phase position  
-- not static  
-
----
-
-## 31. Sheet-aware control
-
-- multiple layers interact  
-- transitions occur at intersections  
+```text
+basins = stable zones
+saddles = transition gates
+```
 
 ---
 
-## 32. π-consistent structure
+## Gate graph
 
-observed:
-
-- symmetric flow relations  
-- cyclic geometry  
-- phase-balanced transitions  
+```text
+state space → graph of basins + gates
+```
 
 ---
 
-## 33. Gate geometry
+## Phase-aligned navigation
 
-~~~text
-Gates =
-structured transition corridors
-in phase-space geometry
-~~~
+```text
+control depends on phase position
+```
 
 ---
 
-## 34. Navigation principle
+## Sheet-aware control
 
-~~~text
-Do not block transitions
-→ guide them
-~~~
+```text
+multiple layers interact
+```
+
+---
+
+## π-consistency
+
+```text
+smooth rotation stabilizes motion
+```
+
+---
+
+## Gate definition
+
+```text
+Gate = directional transition corridor
+NOT a point in space
+```
+
+---
+
+## Navigation principle
+
+```text
+Do not block transitions → guide them
+```
 
 ---
 
 # 🔥 FINAL SYSTEM MODEL (v80)
 
-~~~text
+```text
 System =
 trajectory evolving in
 
@@ -374,13 +354,13 @@ trajectory evolving in
 - discrete basins
 - transition graph
 - controllable geometry
-~~~
+```
 
 ---
 
 # 🔥 FINAL TRANSITION DEFINITION
 
-~~~text
+```text
 Transition =
 navigation through
 
@@ -389,22 +369,20 @@ navigation through
 - probabilistic instability fields
 
 under structural and control constraints
-~~~
+```
 
 ---
 
 # 🎯 SYSTEM GOAL
 
-~~~text
+```text
 Detect
 Predict
 Control
 Navigate
-```
----
 
 transitions in structured dynamical fields
-~~~
+```
 
 ---
 
@@ -432,16 +410,18 @@ transitions in structured dynamical fields
 
 ## NEXT
 
-- mass-conserving transition control  
-- multi-step planning  
-- long-horizon stability  
-- real-world deployment  
+```text
+- mass-conserving transition control
+- multi-step planning
+- long-horizon stability
+- real-world deployment
+```
 
 ---
 
 # 🔥 SUCCESS CONDITION
 
-~~~text
+```text
 System can be steered
 
 through instability regions
@@ -449,24 +429,24 @@ through instability regions
 by controlling transitions
 
 while maintaining structural coherence
-~~~
+```
 
 ---
 
 # 🧠 META INSIGHT
 
-~~~text
+```text
 This is not signal processing
 
 This is navigation and control
 of a structured dynamical field
-~~~
+```
 
 ---
 
 # 🧭 FINAL TRAJECTORY
 
-~~~text
+```text
 Signal
 → Geometry
 → Field
@@ -474,13 +454,13 @@ Signal
 → Navigation
 → Control
 → Gate Geometry
-~~~
+```
 
 ---
 
 # 🧭 SUMMARY
 
-~~~text
+```text
 Structure
 → Geometry
 → Phase
@@ -492,103 +472,38 @@ Structure
 → Transitions
 → Control
 → Gate Geometry
-~~~
+```
+
+---
+
+# 🔷 SYSTEM ARCHITECTURE BRIDGE
+
+This document connects:
+
+```text
+FOUNDATION  → mathematical definitions
+THEOREMS    → structural interpretation
+BUILD LOG   → empirical discovery
+```
+
+to:
+
+```text
+KERNEL      → executable system
+```
+
+---
+
+# 🚀 NEXT STEP
+
+```text
+Implement NEXAH Kernel:
+
+state → field → graph → control → next state
+```
 
 ---
 
 Last updated: April 2026  
-© Thomas K. R. Hofmanntransitions in structured dynamical fields
-~~~
-
----
-
-# 🧪 PHASE STATUS
-
----
-
-## COMPLETE
-
-- detection  
-- field representation  
-- probability modeling  
-- navigation  
-- control layer  
-
----
-
-## ACTIVE
-
-- constrained control  
-- gate geometry  
-- transition optimization  
-
----
-
-## NEXT
-
-- mass-conserving transition control  
-- multi-step planning  
-- long-horizon stability  
-- real-world deployment  
-
----
-
-# 🔥 SUCCESS CONDITION
-
-~~~text
-System can be steered
-
-through instability regions
-
-by controlling transitions
-
-while maintaining structural coherence
-~~~
-
----
-
-# 🧠 META INSIGHT
-
-~~~text
-This is not signal processing
-
-This is navigation and control
-of a structured dynamical field
-~~~
-
----
-
-# 🧭 FINAL TRAJECTORY
-
-~~~text
-Signal
-→ Geometry
-→ Field
-→ Structure
-→ Navigation
-→ Control
-→ Gate Geometry
-~~~
-
----
-
-# 🧭 SUMMARY
-
-~~~text
-Structure
-→ Geometry
-→ Phase
-→ Sheets
-→ Switching
-→ Greyspace
-→ Probability field
-→ Basins
-→ Transitions
-→ Control
-→ Gate Geometry
-~~~
-
----
-
-Last updated: April 2026  
-© Thomas K. R. Hofmann
+© Thomas K. R. Hofmann  
+NEXAH
