@@ -1,74 +1,108 @@
-# ⚡ NEXAH Builder Lab — Demos & Exploration
+# ⚡ NEXAH Builder Lab
 
-The Builder Lab is the **active workshop of NEXAH**.
+Internal builder environment for the NEXAH framework.
 
-It contains:
+This is the **active workspace** for:
+- simulations
+- experiments
+- navigation systems
+- system prototypes
 
-- interactive demos  
-- experimental modules  
-- early-stage systems  
-- exploratory research code  
+---
+
+## 🚀 Quick Start
+
+Run full lab:
+
+```bash
+python BUILDER_LAB/run_builder_lab.py
+```
+
+Run individual demos:
+
+```bash
+python BUILDER_LAB/demos/nexah_demo.py
+python BUILDER_LAB/demos/nexah_explorer.py
+python BUILDER_LAB/demos/nexah_graph_simulation.py
+```
+
+---
+
+## 🧭 Core Concept
+
+NEXAH treats systems as:
+
+> **navigable structures instead of static states**
+
+---
+
+## 🧪 Main Capabilities
+
+- simulate dynamic systems  
+- detect regimes (stable → collapse)  
+- extract structure (topology, basins, transitions)  
+- navigate through system states  
+- model cascading failures  
+
+---
+
+## 🧱 Builder Lab Layers
+
+```
+CORE                → mathematical structure (lattices, operators)
+DYNAMICS_ENGINE     → structure discovery (basins, transitions, topology)
+RUNTIME             → simulation + execution
+NAVIGATION          → movement through state space
+ENGINES             → real-world systems (energy, infrastructure, planetary)
+VISUALIZATION       → system rendering & analysis
+DEMOS               → entry points
+```
+
+---
+
+## 🧭 Navigation
+
+Run CLI:
+
+```bash
+python BUILDER_LAB/nexah_cli.py demo
+python BUILDER_LAB/nexah_cli.py explorer
+python BUILDER_LAB/nexah_cli.py systems-list
+```
+
+---
+
+## 📚 Inventory & Structure
+
+Full system index:
+
+👉 `BUILDER_LAB_INVENTORY_INDEX.md`
+
+---
+
+## ⚠️ Status
+
+- experimental  
+- evolving  
+- not production-ready  
+
+---
+
+## 🧠 Role in NEXAH
+
+```
+RESEARCH → FRAMEWORK → FIELD_LAYER → ARCHITECTURE → BUILDER_LAB
+```
+
+---
+
+## 🔥 Note
+
+This is not a clean framework.
 
 It is:
 
-> ⚙️ **where NEXAH is built, tested, and explored**
-
----
-
-# 🧭 Structure
-
-The Builder Lab consists of three main parts:
-
-### ⚙️ ENGINE (Experimental)
-
-- early computational layer  
-- signal extraction experiments  
-- prototype pipelines  
-
-👉 legacy computation layer that preceded FIELD_LAYER
-
----
-
-### 🔬 DISCOVERY_ENGINE (Origin)
-
-- early experiments  
-- transition detection  
-- structure emergence  
-
-👉 the **research phase that led to FIELD_LAYER**
-
----
-
-### 🧪 EXPLORATION (ex NAVIGATOR)
-
-- experimental control logic  
-- symbolic layers  
-- prototype navigation systems  
-- advanced concepts (not yet stabilized)
-
-👉 active **concept + system exploration space**
-
----
-
-### 🚀 DEMOS (this folder)
-
-- runnable examples  
-- interactive simulations  
-- visual system behavior  
-
-👉 **entry point for understanding NEXAH in practice**
-
----
-
-# 🚀 Quick Start
-
-```bash
-cd BUILDER_LAB/demos
-
-python nexah_demo.py              # Basic demo
-python nexah_explorer.py          # Interactive explorer
-python nexah_graph_simulation.py  # Graph + multi-agent navigation
-```
+> ⚙️ a **live system where structure is discovered and tested**```
 
 Or run the full demo suite:
 
