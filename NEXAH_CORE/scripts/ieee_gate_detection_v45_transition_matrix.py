@@ -1,27 +1,15 @@
 # ============================================================
-# NEXAH — IEEE GATE DETECTION v45
-# Transition Matrix / Basin Dynamics Model
+# NEXAH — IEEE GATE DETECTION v45 (FIXED)
+# Basin Transition Matrix (Segment-Based)
 # ============================================================
 #
 # PURPOSE:
 # --------
-# Learn transition probabilities between stable basins.
+# Compute transitions between basins using SEGMENT logic:
 #
-# Builds on:
-# - v44: basin identities (basin_ids over time)
+#   Basin A → (Greyspace) → Basin B
 #
-# CORE IDEA:
-# ----------
-# Construct empirical transition matrix:
-#
-#     P(B_i → B_j)
-#
-# describing how the system moves between basins.
-#
-# OUTPUTS:
-# --------
-# v45_transition_matrix.png
-# v45_transition_matrix.npy
+# instead of incorrect stepwise transitions.
 #
 # ============================================================
 
@@ -41,44 +29,63 @@ from ieee_gate_detection_v39_attractor_memory import stability_score, detect_sta
 
 
 # ------------------------------------------------------------
-# Transition matrix computation
+# SEGMENT-BASED TRANSITION MATRIX
 # ------------------------------------------------------------
 
-def compute_transition_matrix(basin_ids):
+def compute_transition_matrix_from_segments(basin_ids):
     """
-    Compute transition counts and probabilities between basins.
+    Compute transitions between basins using segment logic.
 
-    Only considers transitions where:
-    basin_ids[t] != basin_ids[t+1]
-    and both are valid (>= 0)
+    Transition:
+        Basin_i → Basin_j
+    where system leaves i, goes through greyspace, enters j.
     """
 
-    valid_ids = sorted([i for i in np.unique(basin_ids) if i >= 0])
+    segments = []
+    current = None
 
-    if len(valid_ids) == 0:
-        return None, None
+    # --- extract basin segments
+    for t, b in enumerate(basin_ids):
+        if b >= 0:
+            if current is None:
+                current = [b, t, t]
+            elif current[0] == b:
+                current[2] = t
+            else:
+                segments.append(tuple(current))
+                current = [b, t, t]
+        else:
+            if current is not None:
+                segments.append(tuple(current))
+                current = None
 
-    id_map = {bid: i for i, bid in enumerate(valid_ids)}
-    n = len(valid_ids)
+    if current is not None:
+        segments.append(tuple(current))
+
+    # --- basin IDs
+    basin_list = sorted(list(set([s[0] for s in segments])))
+    id_map = {b: i for i, b in enumerate(basin_list)}
+    n = len(basin_list)
 
     counts = np.zeros((n, n))
 
-    for t in range(len(basin_ids) - 1):
-        i = basin_ids[t]
-        j = basin_ids[t + 1]
+    # --- transitions between segments
+    for i in range(len(segments) - 1):
+        b1 = segments[i][0]
+        b2 = segments[i + 1][0]
 
-        if i >= 0 and j >= 0 and i != j:
-            counts[id_map[i], id_map[j]] += 1
+        if b1 != b2:
+            counts[id_map[b1], id_map[b2]] += 1
 
-    # normalize rows → probabilities
+    # --- normalize to probabilities
     probs = np.zeros_like(counts)
 
     for i in range(n):
-        row_sum = np.sum(counts[i])
-        if row_sum > 0:
-            probs[i] = counts[i] / row_sum
+        s = counts[i].sum()
+        if s > 0:
+            probs[i] = counts[i] / s
 
-    return counts, probs, valid_ids
+    return counts, probs, basin_list, segments
 
 
 # ------------------------------------------------------------
@@ -162,15 +169,11 @@ if __name__ == "__main__":
         min_samples=6
     )
 
-    # --- v45 transition matrix
-    counts, probs, valid_ids = compute_transition_matrix(basin_ids)
-
-    if counts is None:
-        print("No valid basins detected.")
-        exit()
+    # --- v45 (FIXED)
+    counts, probs, basin_list, segments = compute_transition_matrix_from_segments(basin_ids)
 
     # --------------------------------------------------------
-    # Plot: transition matrix
+    # Plot transition matrix
     # --------------------------------------------------------
 
     plt.figure(figsize=(6, 5))
@@ -180,21 +183,17 @@ if __name__ == "__main__":
 
     plt.xlabel("to basin j")
     plt.ylabel("from basin i")
-    plt.title("NEXAH v45 — Transition Matrix")
+    plt.title("NEXAH v45 — Transition Matrix (Segment-Based)")
 
-    ticks = np.arange(len(valid_ids))
-    labels = [str(b) for b in valid_ids]
+    ticks = np.arange(len(basin_list))
+    labels = [str(b) for b in basin_list]
 
     plt.xticks(ticks, labels)
     plt.yticks(ticks, labels)
 
     plt.tight_layout()
 
-    out_path = os.path.join(
-        OUT_DIR,
-        "v45_transition_matrix.png"
-    )
-
+    out_path = os.path.join(OUT_DIR, "v45_transition_matrix.png")
     plt.savefig(out_path, dpi=200)
     plt.close()
 
@@ -202,10 +201,15 @@ if __name__ == "__main__":
     np.save(os.path.join(OUT_DIR, "v45_transition_counts.npy"), counts)
     np.save(os.path.join(OUT_DIR, "v45_transition_probs.npy"), probs)
 
-    print("NEXAH v45 complete")
-    print(f"Basins: {len(valid_ids)}")
-    print("Transition matrix (counts):")
+    # --- print results
+    print("NEXAH v45 complete (FIXED)")
+    print(f"Basins: {len(basin_list)}")
+    print(f"Segments detected: {len(segments)}")
+
+    print("\nTransition counts:")
     print(counts)
-    print("Transition matrix (probabilities):")
+
+    print("\nTransition probabilities:")
     print(probs)
-    print(f"Saved: {out_path}")
+
+    print(f"\nSaved: {out_path}")
