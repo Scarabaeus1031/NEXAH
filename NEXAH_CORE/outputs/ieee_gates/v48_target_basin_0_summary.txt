@@ -1,0 +1,14 @@
+NEXAH v48 — Target Basin Control Summary
+=======================================
+
+Target basin: 0
+Target centroid: r=0.8594, theta=0.6575
+
+Target gain: 0.045
+Base gain: 0.55
+
+Mean distance before: 1.7320
+Mean distance after:  1.6875
+Distance improvement: 0.0445
+Median distance before: 1.7126
+Median distance after:  1.6684
