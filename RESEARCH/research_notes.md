@@ -1,5 +1,9 @@
 # NEXAH — Notes (Exploratory Ideas)
 
+---
+
+## 🧠 Purpose
+
 This document collects **raw ideas, intuitions, and early interpretations**  
 emerging during development.
 
@@ -9,93 +13,184 @@ These notes are:
 - not validated  
 - not intended as final statements  
 
-They exist to **capture thoughts before they are lost**.
+They exist to:
+
+> **capture structural intuition before formalization**
+
+---
+
+## 🧭 Context
+
+Recent experiments (v27–v80) suggest that system behavior is not purely continuous or random.
+
+Instead, it appears:
+
+- structured  
+- layered  
+- navigable  
 
 ---
 
 ## 🧠 Observation — Regime-Like Behavior
 
-During recent experiments and visual exploration, a recurring pattern appears:
+Across multiple visualizations:
 
-- systems seem to exhibit **distinct modes of behavior**
-- these modes feel like **separate regimes**
-- each regime appears to impose its own **constraints**
+- systems exhibit **distinct modes of behavior**
+- these resemble **separate regimes**
+- each regime imposes its own **constraints on motion**
+
+Possible mapping:
+
+```text
+regime ↔ basin / sheet / flow region
+```
 
 ---
 
 ## 🔁 Transitions Between Regimes
 
-At the same time:
+Observed:
 
-- transitions between regimes are clearly observable  
-- but they are **not rigid or discontinuous**
+- transitions clearly occur  
+- but they are NOT discontinuous  
 
 Instead:
 
-> transitions appear **smooth, flexible, and structured**
+> transitions appear **smooth, structured, and guided by geometry**
 
 ---
 
 ## 🚪 “Gate” Intuition
 
-A useful internal concept:
+Working concept:
 
-> regimes may be connected through **transition regions (“gates”)**
+> regimes are connected through **transition regions (“gates”)**
 
-These are not sharp boundaries, but:
+These are not boundaries, but:
 
-- zones of increased flexibility  
-- areas where constraints shift  
-- regions where behavior reorganizes  
+- zones of directional conflict  
+- regions of reduced coherence  
+- areas of increased flexibility  
+
+Possible field interpretation:
+
+```text
+gate ↔ low-density region + competing flows
+```
+
+---
+
+## 🧩 Sheet / Layer Intuition
+
+The system often appears as:
+
+```text
+multiple overlapping layers ("sheets")
+```
+
+Each layer:
+
+- has its own flow direction  
+- defines local stability  
+- interacts with neighboring layers  
+
+Transitions may correspond to:
+
+```text
+movement between sheets
+```
 
 ---
 
 ## 🧬 Analogy (Intuitive Only)
 
-The structure feels similar to biological systems:
+The structure resembles biological systems:
 
-- joints (stability + movement)  
-- cartilage / fascia (connection + flexibility)  
+- joints → structured flexibility  
+- fascia → distributed connectivity  
+- bones → stable structure  
 
-→ not as an explanation, but as an **intuition for continuity + constraint**
+→ not explanatory, but helpful intuition:
 
----
-
-## ⚡ Working Mental Model
-
-- regimes = constraint regions  
-- transitions = structured but flexible  
-- system = continuous, not segmented  
-
-> not isolated parts  
-> but a **connected structure with variable constraints**
+```text
+stability + flexibility coexist
+```
 
 ---
 
-## 🎯 Open Questions
+## ⚡ Emerging Mental Model
 
-- can these “gates” be detected in the field representation?  
-- are transitions linked to coherence / divergence patterns?  
-- can regimes be identified automatically?  
-- how do transitions behave under noise?  
+```text
+system = trajectory inside structured field
+
+field = composed of regions (regimes)
+
+regimes = locally coherent motion
+
+transitions = movement between regimes
+```
 
 ---
 
-## 📊 Visuals
+## 🧭 Navigation Intuition
 
-Several visuals generated during this phase seem to reflect these ideas.
+Recent control experiments suggest:
 
-Not all are curated yet.
+- trajectories can be **guided**
+- not arbitrarily, but:
 
-→ selection and interpretation still ongoing
+```text
+along structure
+and away from instability
+```
+
+Possible principle:
+
+```text
+navigation = alignment + avoidance
+```
+
+---
+
+## 📊 Visual Patterns (Observed)
+
+Recurring motifs:
+
+- loops / orbits  
+- layered bands  
+- “columns” or corridors  
+- clustered regions  
+- smooth but structured transitions  
+
+---
+
+## ❓ Open Questions
+
+- can gates be detected directly from field structure?  
+- are gates linked to density minima (greyspace)?  
+- how do sheet transitions relate to instability?  
+- can regimes (basins) be discovered automatically?  
+- what determines preferred transition paths?  
+- how stable is navigation under noise?  
 
 ---
 
 ## ⚠️ Status
 
-Very early  
-Highly intuitive  
-Not formalized  
+- exploratory  
+- partially supported by visuals  
+- not formalized  
+
+---
+
+## 🧠 Meta Insight
+
+```text
+The system does not behave like a signal.
+
+It behaves like a structure
+that is being traversed.
+```
 
 ---
 
