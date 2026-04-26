@@ -12,6 +12,40 @@ It is not a direct representation of implementation, but a synthesis of observed
 
 ---
 
+## 🔷 Transition Geometry & Navigation Mechanism
+
+![NEXAH Gate Geometry](./visuals/gate_geometry_navigation.png)
+
+*Geometric interpretation of transitions in structured dynamical fields.*
+
+This diagram illustrates the **core transition mechanism** observed in NEXAH:
+
+- systems evolve within a structured field (density + flow)  
+- stable regions form **basins (regimes)**  
+- transitions occur through **gates (structural intersections)**  
+- low-density regions create **navigable corridors (greyspace)**  
+
+👉 **Key idea:**  
+Transitions are not random —  
+they occur through **geometrically constrained pathways**
+
+---
+
+### 🧠 Interpretation
+
+```text
+Field structure → layered dynamics → gate intersections → corridor navigation → regime transition
+```
+
+---
+
+### 🔑 Core Insight
+
+> A system does not jump between states.  
+> It moves through a structured transition geometry.
+
+---
+
 ## 🧭 From Concept to System Structure
 
 While the previous figure illustrates the **conceptual hypothesis** of NEXAH,  
