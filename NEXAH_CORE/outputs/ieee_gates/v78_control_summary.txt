@@ -1,0 +1,23 @@
+NEXAH v78 — Gate-Permissive Sheet-Aware π-Control
+================================================
+
+Path: [0, 3, 1]
+Reached gates: 2/2
+Final distance to target: 0.226944
+
+Sheet centers:
+  S0: r=0.541108
+  S1: r=0.866514
+  S2: r=1.205243
+  S3: r=1.608337
+  S4: r=1.993285
+
+π-consistency metrics:
+  max |turn|:  0.081166
+  mean |turn|: 0.048151
+  total turn:  16.515730
+
+Sheet/navigation metrics:
+  unique sheets visited: [0, 1, 2, 3]
+  mean gate weight:  0.607415
+  mean sheet weight: 0.079885
