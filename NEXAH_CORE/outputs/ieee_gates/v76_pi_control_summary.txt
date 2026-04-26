@@ -1,0 +1,15 @@
+NEXAH v76 — π-Consistent Control
+================================
+
+Path: [0, 3, 1]
+Reached gates: 2/2
+Final distance to target: 0.211546
+
+π-consistency metrics:
+  max |turn|:  0.063870
+  mean |turn|: 0.031973
+  total turn:  13.460476
+
+Interpretation:
+  Lower turn spikes indicate smoother directional evolution.
+  This approximates continuous rotation instead of staircase-like motion.
