@@ -1,6 +1,6 @@
 # ============================================================
 # NEXAH — IEEE GATE DETECTION v63
-# Control Propagation Test (Forward Influence)
+# Control Propagation Test (Clean / No Ridge Dependency)
 # ============================================================
 
 import os
@@ -12,16 +12,12 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(CURRENT_DIR)
 
 from ieee_gate_detection_v38_control_layer import run_v38_control
-from ieee_gate_detection_v41_ridge_aligned_control import (
-    ridge_aligned_control,
-    wrap_theta
-)
 from ieee_gate_detection_v44_basin_identity import cluster_locked_basins
 from ieee_gate_detection_v47_memory_guided_control import compute_basin_centroids
 
 
 # ------------------------------------------------------------
-# Build pipeline
+# Build pipeline (NO ridge layer)
 # ------------------------------------------------------------
 
 def build_pipeline():
@@ -38,15 +34,8 @@ def build_pipeline():
 
     states = np.column_stack([result["r"], result["theta"]])
 
-    aligned = ridge_aligned_control(
-        states,
-        result["controls"],
-        None,
-        eta=0.02,
-        max_step=0.04,
-        tangential_gain=1.0,
-        damping=0.15
-    )
+    # IMPORTANT: no ridge alignment here
+    aligned = states.copy()
 
     L = np.ones(len(aligned)) * 0.5
 
@@ -64,7 +53,7 @@ def build_pipeline():
 
 
 # ------------------------------------------------------------
-# Apply single-point control
+# Single-point control
 # ------------------------------------------------------------
 
 def apply_single_control(states, index, target, gain=0.08):
@@ -74,7 +63,10 @@ def apply_single_control(states, index, target, gain=0.08):
     s = controlled[index]
 
     dr = target[0] - s[0]
-    dtheta = wrap_theta(target[1] - s[1])
+    dtheta = target[1] - s[1]
+
+    # wrap angle
+    dtheta = (dtheta + np.pi) % (2 * np.pi) - np.pi
 
     u = np.array([dr, dtheta])
     norm = np.linalg.norm(u)
@@ -83,16 +75,18 @@ def apply_single_control(states, index, target, gain=0.08):
         u = u / norm
 
     controlled[index] = s + gain * u
-    controlled[index][1] = wrap_theta(controlled[index][1])
+
+    # wrap theta again
+    controlled[index][1] = (controlled[index][1] + np.pi) % (2 * np.pi) - np.pi
 
     return controlled
 
 
 # ------------------------------------------------------------
-# Forward propagation (simulate trajectory drift)
+# Forward propagation (very simple flow model)
 # ------------------------------------------------------------
 
-def forward_propagation(states, steps=50):
+def forward_propagation(states, steps=80):
 
     traj = states.copy()
 
@@ -103,7 +97,9 @@ def forward_propagation(states, steps=50):
 
         traj[:, 0] += 0.01 * dr
         traj[:, 1] += 0.01 * dtheta
-        traj[:, 1] = np.array([wrap_theta(t) for t in traj[:, 1]])
+
+        # wrap theta
+        traj[:, 1] = (traj[:, 1] + np.pi) % (2 * np.pi) - np.pi
 
     return traj
 
@@ -125,7 +121,7 @@ if __name__ == "__main__":
 
     target_c = centroids[target]
 
-    # pick one core point manually (from v59)
+    # pick ONE control core index (adjust if needed)
     core_index = 67
 
     controlled_once = apply_single_control(states, core_index, target_c)
@@ -137,6 +133,9 @@ if __name__ == "__main__":
     # --------------------------------------------------------
 
     deviation = np.linalg.norm(propagated - states, axis=1)
+
+    max_dev = np.max(deviation)
+    mean_dev = np.mean(deviation)
 
     # --------------------------------------------------------
     # Plot
@@ -190,9 +189,11 @@ if __name__ == "__main__":
         f.write("NEXAH v63 — Control Propagation Test\n")
         f.write("====================================\n\n")
         f.write(f"Control index: {core_index}\n")
-        f.write(f"Max deviation: {np.max(deviation):.6f}\n")
-        f.write(f"Mean deviation: {np.mean(deviation):.6f}\n")
+        f.write(f"Max deviation: {max_dev:.6f}\n")
+        f.write(f"Mean deviation: {mean_dev:.6f}\n")
 
-    print("NEXAH v63 complete")
-    print(f"Max deviation: {np.max(deviation):.6f}")
+    print("NEXAH v63 complete (clean)")
+    print(f"Max deviation: {max_dev:.6f}")
+    print(f"Mean deviation: {mean_dev:.6f}")
     print(f"Saved: {out_path}")
+    print(f"Saved: {summary_path}")
