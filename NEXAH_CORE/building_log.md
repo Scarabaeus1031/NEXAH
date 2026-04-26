@@ -2033,3 +2033,644 @@ Key data artifacts:
 - transition_probs.npy  
 - basin_ids.npy  
 - controlled_states.npy
+
+---
+
+---
+
+# 🔷 NEXAH Control Evolution — Gate Geometry, Basin Navigation & π-Control (v56 → v80)
+
+## 🧭 Overview
+
+This block documents the transition from pattern-field control into explicit gate navigation.
+
+Core shift:
+
+```text
+pattern control
+→ control core extraction
+→ flow propagation
+→ basin/saddle detection
+→ gate graph navigation
+→ π-consistent sheet-aware control
+→ phase-aligned gate navigation
+```
+# 🔹 v56: Pattern Field Control
+
+## Idea
+
+Extract active control regions from the B0 → B1 transition pattern.
+
+## Visual
+
+![v56](outputs/ieee_gates/v56_pattern_field_B0_to_B1.png)
+
+## Insight
+
+```text
+Control is not continuous.
+Control acts only in specific spatial regions.
+```
+
+---
+
+# 🔹 v57: Clustered Pattern Control
+
+## Idea
+
+Group active pattern regions into clusters.
+
+## Visual
+
+![v57](outputs/ieee_gates/v57_clustered_pattern_B0_to_B1.png)
+
+## Insight
+
+```text
+Control regions form clusters → not isolated points
+```
+
+---
+
+# 🔹 v58: Minimal Control Set
+
+## Idea
+
+Reduce control to minimal necessary intervention.
+
+## Visual
+
+![v58](outputs/ieee_gates/v58_minimal_control_curve_B0_to_B1.png)
+
+## Insight
+
+```text
+Only a few interventions are needed to trigger transition
+```
+
+---
+
+# 🔹 v59: Control Core Extraction
+
+## Idea
+
+Identify core control trajectory.
+
+## Visual
+
+![v59](outputs/ieee_gates/v59_control_core_B0_to_B1.png)
+
+## Insight
+
+```text
+There exists a central control path
+```
+
+---
+
+# 🔹 v60: Phase Alignment Control
+
+## Idea
+
+Align control with phase dynamics.
+
+## Visual
+
+![v60](outputs/ieee_gates/v60_phase_alignment_B0_to_B1.png)
+
+## Insight
+
+```text
+Timing (phase) is critical for successful control
+```
+
+---
+
+# 🔹 v61: Flow Transformation
+
+## Idea
+
+Modify system flow instead of direct control.
+
+## Visual
+
+![v61](outputs/ieee_gates/v61_flow_transformation_B0_to_B1.png)
+
+## Insight
+
+```text
+Better to shape flow than to force state
+```
+
+---
+
+# 🔹 v62: Directional Control Vectors
+
+## Idea
+
+Introduce explicit control directions.
+
+## Visual
+
+![v62](outputs/ieee_gates/v62_directional_control_B0_to_B1.png)
+
+## Insight
+
+```text
+Direction matters more than magnitude
+```
+
+---
+
+# 🔹 v63: Control Propagation
+
+## Idea
+
+Observe how control spreads through trajectory.
+
+## Visual
+
+![v63](outputs/ieee_gates/v63_control_propagation_B0_to_B1.png)
+
+## Insight
+
+```text
+Control propagates through system over time
+```
+
+---
+
+# 🔹 v64: Learned Flow Field
+
+## Visual
+
+![v64](outputs/ieee_gates/v64_learned_flow_trajectory.png)
+
+## Insight
+
+```text
+System flow can be learned and reused for navigation
+```
+
+---
+
+# 🔹 v65: Structure-Aware Flow
+
+## Visual
+
+![v65](outputs/ieee_gates/v65_structure_aware_flow.png)
+
+## Insight
+
+```text
+Flow is constrained by underlying structure
+```
+
+---
+
+# 🔹 v66: Stability Field
+
+## Visual
+
+![v66](outputs/ieee_gates/v66_stability_field.png)
+
+## Insight
+
+```text
+System contains stable and unstable regions
+```
+
+---
+
+# 🔹 v67: Barrier Gate Field
+
+## Visual
+
+![v67](outputs/ieee_gates/v67_barrier_gate_field.png)
+
+## Insight
+
+```text
+Transitions occur across low-barrier regions
+```
+
+---
+
+# 🔹 v68: Basin–Saddle Detection
+
+## Visual
+
+![v68](outputs/ieee_gates/v68_basin_saddle_map.png)
+
+## Insight
+
+```text
+System decomposes into basins and saddle points
+```
+
+---
+
+# 🔹 v69: Basin Graph Navigation
+
+## Insight
+
+```text
+Transitions form a graph between basins
+```
+
+---
+
+# 🔹 v70: Gate Path Control
+
+## Visual
+
+![v70](outputs/ieee_gates/v70_gate_path_control_B0_to_B1.png)
+
+## Insight
+
+```text
+Control should follow basin graph paths
+NOT direct targets
+```
+
+---
+
+# 🔹 v71: Barrier-Aware Control
+
+## Visual
+
+![v71](outputs/ieee_gates/v71_barrier_aware_gate_control_B0_to_B1.png)
+
+## Insight
+
+```text
+Barrier height determines control strength
+```
+
+---
+
+# 🔹 v72: Adaptive Gradient Control
+
+## Visual
+
+![v72](outputs/ieee_gates/v72_adaptive_control.png)
+
+## Insight
+
+```text
+Control adapts to local gradient
+```
+
+---
+
+# 🔹 v73: Minimal Energy Control
+
+## Insight
+
+```text
+Minimum energy required to cross gates
+```
+
+---
+
+# 🔹 v74: Smooth Gate Transition
+
+## Visual
+
+![v74](outputs/ieee_gates/v74_smooth_control.png)
+
+## Insight
+
+```text
+Smooth trajectories outperform direct steering
+```
+
+---
+
+# 🔹 v75: Flow-Aligned Channel Control
+
+## Visual
+
+![v75](outputs/ieee_gates/v75_flow_aligned_channel_control.png)
+
+## Insight
+
+```text
+System follows natural transport channels
+```
+
+---
+
+# 🔹 v76: π-Consistent Control
+
+## Visual
+
+![v76](outputs/ieee_gates/v76_pi_consistent_control.png)
+
+## Insight
+
+```text
+Smooth rotation (π-consistency) stabilizes motion
+```
+
+---
+
+# 🔹 v77: Sheet-Aware π-Control
+
+## Visual
+
+![v77](outputs/ieee_gates/v77_sheet_aware_pi_control.png)
+
+## Insight
+
+```text
+System operates on layered radial sheets
+```
+
+---
+
+# 🔹 v78: Gate-Permissive Sheet Control
+
+## Visual
+
+![v78](outputs/ieee_gates/v78_gate_permissive_sheet_pi_control.png)
+
+## Insight
+
+```text
+Allowing gate deviation enables successful transitions
+```
+
+---
+
+# 🔹 v79: Multi-Operator Control
+
+## Idea
+
+Combine π, φ, √2 operators.
+
+## Insight
+
+```text
+Multiple operators must be coordinated
+```
+
+---
+
+# 🔹 v80: Phase-Aligned Gate Navigation
+
+## Visual
+
+![v80](outputs/ieee_gates/v80_phase_aligned_gate_navigation.png)
+
+## Insight
+
+```text
+Gate = directional transition, not a point
+```
+
+---
+
+# 🧭 Final Insight (v56 → v80)
+
+```text
+Control evolved from:
+
+pattern → path → flow → structure → gates → direction
+
+We are no longer steering to positions.
+
+We are steering through transitions.
+```
+
+---
+
+# 🔷 v79: Multi-Operator Control (π / φ / √2)
+
+## Idea
+
+Combine three control mechanisms:
+
+- **π (rotation)** → phase alignment  
+- **φ (radial drift)** → target attraction  
+- **√2 (sheet transitions)** → layer navigation  
+
+---
+
+## Control Law
+
+u = w_pi * u_pi + w_phi * u_phi + w_sqrt2 * u_sqrt2
+
+---
+
+## Visuals
+
+![v79-sheet](outputs/ieee_gates/v78_sheet_profile.png)  
+![v79-turn](outputs/ieee_gates/v78_turning_profile.png)
+
+---
+
+## Observations
+
+- system becomes multi-operator driven  
+- sheet transitions become explicitly visible  
+- strong oscillations near sheet boundaries  
+
+---
+
+## Result
+
+Reached gates: 1/2  
+Final distance: 1.067621  
+
+---
+
+## 🔥 Critical Insight
+
+Combining operators alone is insufficient.
+
+→ coordination between operators is required  
+
+---
+
+## Problem
+
+- operators interfere  
+- no directional constraint  
+- gates treated as static points  
+
+---
+
+# 🔷 v80: Phase-Aligned Gate Navigation
+
+---
+
+## 🧠 Core Idea
+
+A gate is not a position.
+
+A gate is a:
+
+directed transition in state space
+
+---
+
+## Key Mechanism
+
+Directional alignment:
+
+alignment = dot(v_current, v_gate)
+
+Gate condition:
+
+distance < threshold  
+AND  
+alignment > 0  
+
+---
+
+## Visuals
+
+![v80-main](outputs/ieee_gates/v80_phase_aligned_gate_navigation.png)  
+![v80-sheet](outputs/ieee_gates/v80_sheet_profile.png)  
+![v80-dist](outputs/ieee_gates/v80_gate_distance_profile.png)  
+![v80-turn](outputs/ieee_gates/v80_turning_profile.png)
+
+---
+
+## Results
+
+Reached gates: 2/2  
+Final distance: 0.181698  
+
+---
+
+## Turning Metrics
+
+max |turn|:  0.389205  
+mean |turn|: 0.007567  
+total turn:  1.694968  
+
+---
+
+## Sheet Metrics
+
+unique sheets visited: [1, 2, 3]
+
+---
+
+## Observations
+
+### 1. Clean Gate Passage
+
+- no oscillation at gate  
+- no overshoot  
+- smooth traversal  
+
+---
+
+### 2. Directional Lock
+
+System must approach gate with correct orientation.
+
+→ eliminates false gate detection  
+
+---
+
+### 3. Energy Efficiency
+
+mean |turn| ≈ 0.007  
+
+→ near-linear motion  
+
+---
+
+### 4. Structured Sheet Transitions
+
+Sheet changes are:
+
+- minimal  
+- intentional  
+- aligned with trajectory  
+
+---
+
+## 🔥 Major Breakthrough
+
+Gate = oriented transition  
+NOT position in space  
+
+---
+
+## Interpretation
+
+System behavior:
+
+flow → alignment → transition → continuation  
+
+---
+
+## Conceptual Upgrade
+
+Before:
+
+navigate to point  
+
+Now:
+
+enter transition manifold with correct phase + direction  
+
+---
+
+## Structural Mapping
+
+π        → phase alignment  
+φ        → radial drift  
+√2       → sheet topology  
+Gate     → oriented boundary  
+
+---
+
+## 🔥 Deep Insight
+
+Navigation is:
+
+directional + structural  
+NOT positional  
+
+---
+
+## Limitation
+
+Gate direction still approximated globally:
+
+(prev → next target)
+
+---
+
+## Next Step (v81)
+
+Field-aligned gate vectors:
+
+use local flow instead of global direction  
+
+---
+
+# 🧭 Updated System View (v79 → v80)
+
+Operators  
+→ Combined Control  
+→ Directional Constraint  
+→ Gate Alignment  
+→ Successful Transition  
+
+---
+
+# 🔚 Meta Insight
+
+System does not move to targets.
+
+System moves THROUGH transitions  
+under directional constraints.
+
+---
