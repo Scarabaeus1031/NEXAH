@@ -27,12 +27,14 @@ They reveal:
 
 ## 🔬 Systems Included
 
-### 🔹 Lorenz System — Core Example
+---
+
+### 🔹 Lorenz System — Bistable Chaos (Core Example)
 
 👉 `lorenz/`
 
 - chaotic attractor  
-- regime switching  
+- regime switching (LEFT / RIGHT)  
 - separatrix structure  
 - navigation experiments  
 
@@ -41,6 +43,58 @@ Run example:
 ```bash
 python APPLICATIONS/dynamical_systems/lorenz/navigation/lorenz_chaos_navigation_map.py
 ```
+
+🧠 Role:
+
+- primary intuition system  
+- demonstrates structure extraction from chaos  
+- enables regime-based navigation  
+
+---
+
+### 🔹 Halvorsen System — Cyclic Flow Dynamics (NEW)
+
+👉 `halvorsen/`
+
+- continuous chaotic attractor  
+- cyclically coupled dynamics (x ↔ y ↔ z)  
+- no clear regime separation  
+- distributed flow structure  
+
+---
+
+#### Key Difference to Lorenz
+
+Unlike the Lorenz system:
+
+- no clear regime switching  
+- no binary attractor structure  
+- continuous, cyclically coupled dynamics  
+
+This results in:
+
+- distributed flow structure  
+- reduced separatrix clarity  
+- continuous transition dynamics  
+
+---
+
+#### Research Role in NEXAH
+
+The Halvorsen system is used to test:
+
+- behavior without clear basin separation  
+- robustness of field reconstruction  
+- validity of mass-conserving transition modeling  
+- control in cyclic flow systems  
+
+🧠 Role:
+
+- tests generalization beyond bistable systems  
+- challenges regime-based assumptions  
+- introduces cyclic transition structure  
+
+---
 
 ## 🔹 Conceptual System Models
 
@@ -75,14 +129,18 @@ These systems will extend NEXAH toward:
 
 ## 🧠 Role in NEXAH
 
-Lorenz = intuition  
-IEEE   = validation  
+```text
+Lorenz     = intuition (bistable structure)
+Halvorsen  = generalization (cyclic dynamics)
+IEEE       = validation (real-world systems)
+```
 
 Dynamical systems provide:
 
 - intuition  
 - visual understanding  
 - structural insight  
+- validation of generality  
 
 ---
 
@@ -92,6 +150,7 @@ Dynamical systems provide:
 |----------|--------|
 | Lorenz visuals | ✅ |
 | Navigation maps | ✅ |
+| Halvorsen integration | 🚧 |
 | Control experiments | 🧪 |
 | Multi-system expansion | 🚧 |
 | Integration with demos | 🚧 |
@@ -100,9 +159,12 @@ Dynamical systems provide:
 
 ## 🧭 Next Step
 
-Move core experiments into:
+- integrate Halvorsen into full pipeline  
+- compare structure vs Lorenz  
+- validate control under cyclic flow  
+- move curated demos into:
 
-APPLICATIONS/demos/lorenz_demo/
+APPLICATIONS/demos/
 
 ---
 
@@ -110,3 +172,15 @@ APPLICATIONS/demos/lorenz_demo/
 
 Chaos is not random.  
 It is structured — and potentially navigable.
+
+But:
+
+```text
+structure is not always discrete
+
+it can also be continuous, distributed, and cyclic
+```
+
+---
+
+**Thomas K. R. Hofmann · NEXAH · 2026**
