@@ -36,7 +36,11 @@ Transitions are state-dependent, structured, and controllable.
 
 # 🔹 1. State Representation
 
-Given a time series $x(t)$:
+Given a time series $x(t)$, we define a transformation into polar phase space:
+
+---
+
+## Phase Transformation
 
 $$
 r(t) = \sqrt{x(t)^2 + \dot{x}(t)^2}
@@ -59,7 +63,23 @@ $$
 ## Interpretation
 
 ```text
-System evolves as a trajectory in polar phase space
+The system is mapped into a rotational state space:
+
+- r(t)     → amplitude / energy
+- θ(t)     → phase / rotation
+
+This transformation defines the geometric domain
+in which dynamics are analyzed.
+```
+---
+
+## 🔥 Key Property
+```text
+θ is a rotational coordinate:
+
+θ ∈ [0, 2π]
+
+→ the system evolves on a circular / cylindrical geometry
 ```
 
 ---
