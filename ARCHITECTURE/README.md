@@ -410,7 +410,181 @@ The system operates as:
 - statistical validation  
 - real-world system packaging  
 
+
 ---
+
+# 🚀 EXTENSION — Advanced Transition & Control Layer (v56–v80)
+
+This section reflects the latest evolution of NEXAH beyond classical field-based analysis.
+
+It introduces **explicit transition geometry and navigable control structures**.
+
+---
+
+## 🔷 Transition Geometry (Explicit Model)
+
+The system is no longer described only by fields, but by:
+
+- **Basins** → stable long-term regions  
+- **Separatrices** → regime boundaries  
+- **Gates** → directional transition corridors  
+
+Key refinement:
+
+```text
+A gate is NOT a point.
+A gate is a directional corridor in state space.
+```
+
+---
+
+## 🔷 Gate Structure & Basin Graph
+
+The system can be represented as:
+
+```text
+State Space → Basin Decomposition → Gate Graph
+```
+
+This introduces:
+
+- adjacency constraints  
+- transition feasibility  
+- structured routing between regimes  
+
+---
+
+## 🔷 Flow-Aligned Control
+
+Control is no longer arbitrary.
+
+```text
+Control must align with the natural flow of the system.
+```
+
+Key properties:
+
+- control propagates through system dynamics  
+- minimal intervention yields maximal effect  
+- forcing against structure leads to instability  
+
+---
+
+## 🔷 Phase-Aligned Navigation
+
+Transitions depend on phase:
+
+```text
+P(gate | θ) ≠ const
+```
+
+This introduces:
+
+- phase-dependent accessibility  
+- timing constraints  
+- dynamic transition windows  
+
+---
+
+## 🔷 Sheet Structure & Multi-Layer Dynamics
+
+The field is layered:
+
+```text
+Core → stable orbit  
+Mid → oscillatory region  
+Outer → instability layer  
+```
+
+Transitions occur via:
+
+- sheet interactions  
+- switching behavior  
+- structural conflicts  
+
+---
+
+## 🔷 Final Transition Definition (Updated)
+
+```text
+Transition =
+navigation through
+
+- low-density corridors (greyspace)
+- competing flow structures
+- probabilistic instability fields
+
+under structural and control constraints
+```
+
+---
+
+## 🔷 Updated System Model
+
+```text
+System =
+trajectory evolving in
+
+- structured field
+- layered sheets
+- probabilistic instability regions
+- discrete basins
+- transition graph
+- controllable geometry
+```
+
+---
+
+## 🔷 Key Shift
+
+From:
+
+```text
+detect → predict → react
+```
+
+To:
+
+```text
+model → navigate → control transitions
+```
+
+---
+
+## 🔷 Integration into Architecture
+
+This layer extends:
+
+```text
+Field → Geometry → Stability
+```
+
+into:
+
+```text
+→ Transition Geometry
+→ Gate Graph
+→ Flow-Aligned Control
+→ Phase-Aware Navigation
+```
+
+---
+
+## 🔥 Final Insight
+
+NEXAH is not only:
+
+- a field reconstruction system  
+- a navigation system  
+
+It is:
+
+> a system that **actively steers trajectories through structured transition spaces**
+> under geometric, probabilistic, and stability constraints
+
+---
+
+
 
 # 🧠 Milestone Summary
 
