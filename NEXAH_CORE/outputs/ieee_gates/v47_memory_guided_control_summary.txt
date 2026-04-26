@@ -1,0 +1,17 @@
+NEXAH v47 — Memory-Guided Basin Control Summary
+==============================================
+
+Basins: [0, 1, 2, 3]
+Segments: 33
+Controlled states: 223
+
+Target basin counts:
+  basin 0: 84
+  basin 1: 104
+  basin 2: 35
+
+Basin centroids:
+  basin 0: r=0.8594, theta=0.6575
+  basin 1: r=0.9319, theta=-2.4281
+  basin 2: r=0.7850, theta=-3.0157
+  basin 3: r=1.8608, theta=2.9770

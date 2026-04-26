@@ -1,0 +1,43 @@
+NEXAH v46.2 — Memory-Based Basin Prediction Summary
+=================================================
+
+Basins: [0, 1, 2, 3]
+Segments: 33
+Predictions: 31
+Accuracy: 0.6774
+Mean confidence: 0.6774
+Memory used: 31
+Fallback used: 0
+No prediction: 0
+
+Segment 0: actual=1, predicted=1, confidence=0.6667, mode=memory
+Segment 1: actual=2, predicted=2, confidence=0.8000, mode=memory
+Segment 2: actual=2, predicted=0, confidence=0.6000, mode=memory
+Segment 3: actual=1, predicted=0, confidence=0.5000, mode=memory
+Segment 4: actual=0, predicted=0, confidence=1.0000, mode=memory
+Segment 5: actual=0, predicted=0, confidence=0.5000, mode=memory
+Segment 6: actual=0, predicted=1, confidence=0.6667, mode=memory
+Segment 7: actual=1, predicted=1, confidence=0.6667, mode=memory
+Segment 8: actual=2, predicted=2, confidence=0.8000, mode=memory
+Segment 9: actual=0, predicted=0, confidence=0.6000, mode=memory
+Segment 10: actual=0, predicted=0, confidence=0.5000, mode=memory
+Segment 11: actual=1, predicted=1, confidence=0.6667, mode=memory
+Segment 12: actual=2, predicted=2, confidence=0.8000, mode=memory
+Segment 13: actual=2, predicted=0, confidence=0.6000, mode=memory
+Segment 14: actual=0, predicted=0, confidence=0.5000, mode=memory
+Segment 15: actual=0, predicted=0, confidence=0.5000, mode=memory
+Segment 16: actual=1, predicted=1, confidence=0.6667, mode=memory
+Segment 17: actual=2, predicted=2, confidence=0.8000, mode=memory
+Segment 18: actual=0, predicted=0, confidence=0.6000, mode=memory
+Segment 19: actual=1, predicted=0, confidence=0.5000, mode=memory
+Segment 20: actual=0, predicted=2, confidence=0.8000, mode=memory
+Segment 21: actual=3, predicted=0, confidence=0.5000, mode=memory
+Segment 22: actual=1, predicted=1, confidence=0.5000, mode=memory
+Segment 23: actual=1, predicted=1, confidence=1.0000, mode=memory
+Segment 24: actual=2, predicted=2, confidence=1.0000, mode=memory
+Segment 25: actual=0, predicted=0, confidence=0.6000, mode=memory
+Segment 26: actual=3, predicted=0, confidence=0.5000, mode=memory
+Segment 27: actual=3, predicted=1, confidence=0.5000, mode=memory
+Segment 28: actual=0, predicted=0, confidence=1.0000, mode=memory
+Segment 29: actual=0, predicted=0, confidence=1.0000, mode=memory
+Segment 30: actual=3, predicted=1, confidence=0.6667, mode=memory
