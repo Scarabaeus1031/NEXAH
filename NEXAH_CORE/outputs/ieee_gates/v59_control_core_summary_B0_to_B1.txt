@@ -1,7 +1,7 @@
-NEXAH v59 — Control Core Extraction (ΔP-based)
-==============================================
+NEXAH v59 — Control Core (Subset-Based)
+=======================================
 
-Full P: 0.0000
+Full P: 0.6250
 Active points: 34
 
 Top influence points:
