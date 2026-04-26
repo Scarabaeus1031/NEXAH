@@ -2,38 +2,6 @@
 # NEXAH — IEEE GATE DETECTION v75
 # Flow-Aligned Channel Control
 # ============================================================
-#
-# FILE:
-# ieee_gate_detection_v75_flow_aligned_channel_control.py
-#
-# PURPOSE:
-# --------
-# Upgrade v74 from smooth gate targeting to channel-following.
-#
-# v74:
-#   target = blended gate point
-#
-# v75:
-#   control aligns with the learned local flow channel while
-#   weakly guiding the system through the gate sequence.
-#
-# CORE IDEA:
-# ----------
-# A good transition is not a straight line to a gate.
-# It is motion through a stable transport channel.
-#
-# OUTPUTS:
-# --------
-# v75_flow_aligned_channel_control.png
-# v75_channel_alignment.png
-# v75_flow_aligned_summary.txt
-#
-# ============================================================
-
-# ============================================================
-# NEXAH — IEEE GATE DETECTION v75
-# Flow-Aligned Channel Control
-# ============================================================
 
 import os
 import sys
@@ -90,8 +58,6 @@ def estimate_flow_direction(traj, idx):
     backward = traj[idx] - traj[idx - 1]
 
     flow = 0.5 * (forward + backward)
-
-    # fix theta wrapping
     flow[1] = wrap_theta(flow[1])
 
     return unit_vector(flow)
@@ -108,7 +74,7 @@ def run_flow_control(traj, gates, path, max_steps=300):
 
     gate_index = 0
 
-    for t in range(max_steps):
+    for _ in range(max_steps):
 
         if gate_index >= len(path) - 1:
             break
@@ -116,31 +82,29 @@ def run_flow_control(traj, gates, path, max_steps=300):
         current_gate = gates[(path[gate_index], path[gate_index + 1])]
         target = np.array([current_gate["r"], current_gate["theta"]])
 
-        # nearest trajectory index
-        dists = np.linalg.norm(traj - state, axis=1)
+        # 🔧 correct wrapped distance
+        dr = traj[:, 0] - state[0]
+        dtheta = np.array([wrap_theta(th - state[1]) for th in traj[:, 1]])
+        dists = np.sqrt(dr**2 + dtheta**2)
         idx = np.argmin(dists)
 
-        # 🔷 FLOW component
+        # flow + target
         flow_dir = estimate_flow_direction(traj, idx)
-
-        # 🔷 TARGET component (weak)
         target_dir = unit_vector_to_target(state, target)
 
-        # 🔷 BLEND
-        alpha = 0.85   # flow weight
-        beta = 0.15    # target pull
+        alpha = 0.85
+        beta = 0.15
 
         u = alpha * flow_dir + beta * target_dir
         u = unit_vector(u)
 
-        # step
         step_size = 0.02
         state = state + step_size * u
         state[1] = wrap_theta(state[1])
 
         controlled.append(state.copy())
 
-        # check gate reached
+        # gate reached
         if state_distance(state, target) < 0.1:
             gate_index += 1
 
@@ -153,10 +117,24 @@ def run_flow_control(traj, gates, path, max_steps=300):
 
 def main():
 
-    traj = run_v38_control(return_only_trajectory=True)
+    # --------------------------------------------------------
+    # Build trajectory via v38
+    # --------------------------------------------------------
+
+    t = np.linspace(0, 80, 3000)
+
+    x = (
+        np.sin(t)
+        + 0.25 * np.sin(3.1 * t)
+        + 0.02 * t * np.sin(0.7 * t)
+    )
+
+    result = run_v38_control(x, dt=t[1] - t[0], bins=80)
+
+    traj = np.column_stack([result["r"], result["theta"]])
 
     # --------------------------------------------------------
-    # Gates (from v68)
+    # Gates (v68)
     # --------------------------------------------------------
 
     gates = {
@@ -174,19 +152,26 @@ def main():
 
     plt.figure(figsize=(8, 6))
 
-    plt.scatter(traj[:, 1], traj[:, 0], s=1, alpha=0.3, label="field")
+    plt.scatter(traj[:, 1], traj[:, 0], s=1, alpha=0.25, label="field")
 
-    plt.plot(controlled[:, 1], controlled[:, 0],
-             color="red", linewidth=2, label="flow control")
+    plt.plot(
+        controlled[:, 1],
+        controlled[:, 0],
+        color="red",
+        linewidth=2,
+        label="flow-aligned control"
+    )
 
     for (a, b), g in gates.items():
         plt.scatter(g["theta"], g["r"], c="black", s=80)
+        plt.text(g["theta"], g["r"], f"G{a}->{b}", fontsize=8)
 
     plt.xlabel("theta")
     plt.ylabel("r")
-    plt.title("NEXAH v75 — Flow-Aligned Control")
+    plt.title("NEXAH v75 — Flow-Aligned Channel Control")
     plt.legend()
 
+    plt.tight_layout()
     plt.show()
 
 
