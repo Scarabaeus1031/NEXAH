@@ -26,6 +26,22 @@ dynamics → structure → field → geometry → stability → transition geome
 
 ---
 
+## 🧠 System Representation (Field → Geometry → Navigation)
+
+![NEXAH Gate Geometry](./archive/gate_geometry_navigation.png)
+
+This diagram shows the **integrated structure of the NEXAH system**:
+
+- continuous field (density, flow)
+- layered geometry (sheets)
+- transition structure (gates)
+- instability corridors (greyspace)
+- discrete regimes (basins)
+- trajectory-level control and navigation
+
+---
+---
+
 # 🔬 1. Discovery Engine (Established)
 
 Status:
