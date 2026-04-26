@@ -1,343 +1,19 @@
-# 🧠 NEXAH – Core Findings  
-## Gate Formation in Dynamical Systems
-
 ---
 
-## 📍 Scope
+# 🔹 Finding 31 — Control localizes into spatial activation fields
 
-This document summarizes the **core findings** from the NEXAH gate detection experiments.
+Observed (v56–v57):
 
-Focus:
-
-Signal → Coherence → Entropy → Geometry → Phase → Structure → Gates → Switching
-
-NOT:
-- implementation details
-- iteration history
-
----
-
-# 🔹 Finding 1 — Transitions are NOT time-based
-
-Observed:
-
-- collapse occurs around t ≈ 80
-- but NOT triggered by time itself
-
-Formal statement:
-
-$$
-\text{Transition} \neq f(t)
-$$
-
-Instead:
-
-$$
-\text{Transition} = f(\text{state})
-$$
-
-> Collapse happens only when a structural condition is met
-
----
-
-# 🔹 Finding 2 — Coherence collapse precedes instability
-
-Measured:
-
-- coherence $C(t)$ drops
-- before entropy rises
-
-$$
-C(t) \downarrow \quad \Rightarrow \quad S(t) \uparrow
-$$
-
-> Loss of structure comes BEFORE randomness
-
-→ Chaos is not the cause  
-→ it is the result
-
----
-
-# 🔹 Finding 3 — Geometry breaks before collapse
-
-Phase-space dispersion:
-
-$$
-G(t) = \text{spread in } (x, \dot{x})
-$$
-
-Observed:
-
-- orbit expands
-- structure deforms
-- THEN collapse
-
-> Collapse = geometric failure
-
-Not:
-- amplitude threshold
-- energy threshold
-
-But:
-
-> loss of coherent trajectory
-
----
-
-# 🔹 Finding 4 — Gates are phase-locked
-
-Phase definition:
-
-$$
-\theta = \arctan2(\dot{x}, x)
-$$
-
-Observed:
-
-- gates cluster at specific $\theta$
-- NOT uniformly distributed
-
-Formal statement:
-
-$$
-P(\text{gate} \mid \theta) \neq \text{const}
-$$
-
-> Instability depends on WHERE you are in the cycle
-
----
-
-# 🔹 Finding 5 — Gates form discrete structures
-
-Observed:
-
-- ~88 gate points
-- cluster into stable groups
-- consistent across runs
-
-Interpretation:
-
-> discrete resonance lattice
-
-Possible meanings:
-
-- phase quantization  
-- resonance locking  
-- underlying grid (non-continuous state space)
-
-⚠️ Status:
-- strong empirical pattern
-- theoretical origin not yet derived
-
----
-
-# 🔹 Finding 6 — Phase space is layered (Sheet Structure)
-
-Observed structure:
-
-Core → stable orbit  
-Intermediate → oscillatory regime  
-Outer → gate zone  
-Beyond → stochastic collapse  
-
-Refined interpretation (v13–v14):
-
-> Phase space decomposes into multiple overlapping dynamical layers ("sheets")
-
-Each sheet represents:
-
-> a locally coherent flow regime
-
----
-
-# 🔹 Finding 7 — Transition zones are clustered in time
-
-Observed:
-
-- gates do not appear uniformly
-- they appear in bursts
-
-> Instability accumulates → releases in packets
-
-Analogy:
-
-- stress fracture  
-- cascading failure  
-- energy discharge  
-
----
-
-# 🔹 Finding 8 — Phase space and frequency space are linked
-
-Observed:
-
-- grid-like structures  
-- Fourier slicing patterns  
-- lattice symmetry  
-
-Interpretation:
-
-$$
-\text{Phase Space} \leftrightarrow \text{Frequency Space}
-$$
-
-> Transitions are spectral-geometric events
-
----
-
-# 🔹 Finding 9 — Instability = Mode Switching (v14)
-
-New observation:
-
-- system trajectory moves between multiple sheets
-- switching rate increases sharply before collapse
-
-Measured:
-
-- low switching → stable regime  
-- high switching density → instability  
-
-Formal interpretation:
-
-$$
-\text{Instability} \propto \frac{d}{dt}(\text{sheet index})
-$$
-
-or qualitatively:
-
-> Instability occurs when the system rapidly switches between incompatible dynamical regimes
-
----
-
-# 🔹 Finding 10 — Gates occur at Sheet Intersections
-
-Observed:
-
-- gate points align with intersections of sheets in phase space
-- these correspond to regions of conflicting flow directions
-
-Interpretation:
-
-> Gate = intersection of incompatible flow manifolds
-
-More precisely:
-
-> A gate occurs when multiple dynamical trajectories compete locally
-
----
-
-# 🔹 Finding 11 — Collapse is driven by incompatible dynamics
-
-Refined core mechanism:
-
-- multiple sheets coexist
-- each defines a local flow direction
-- system becomes unstable when:
-
-$$
-v_1(x) \neq v_2(x)
-$$
-
-and both are active
-
-Result:
-
-> directional conflict → switching → instability → collapse
-
----
-
-# 🔹 Minimal Model (Updated)
-
-$$
-\text{Gate Condition} =
-\begin{cases}
-C(t) < C_{crit} \\
-S(t) > S_{crit} \\
-G(t) > G_{crit} \\
-\theta \in \Theta_{critical} \\
-\text{switching rate high}
-\end{cases}
-$$
-
----
-
-# 🔹 Core Insight (Updated)
-
-> Transitions are not random failures  
-> They are structured, phase-locked, geometry-driven events  
-> amplified by rapid switching between incompatible dynamical regimes
-
----
-
-# 🔹 Final Statement
-
-$$
-\text{Transition} =
-\text{Phase-Locked Structural Collapse}
-+ \text{Mode Switching Instability}
-$$
-
----
-
-# 🔹 Outlook
-
-Next steps:
-
-- derive continuous field:
-  $$
-  P(\text{gate} \mid r, \theta)
-  $$
-
-- extend to:
-  $$
-  P(\text{gate} \mid r, \theta, \text{sheet transitions})
-  $$
-
-- build transition matrix:
-  $$
-  P(\text{sheet}_i \rightarrow \text{sheet}_j)
-  $$
-
-- identify invariant structures  
-- test on real-world systems (power grids, markets, biological systems)
-
----
-
-# 🧭 Summary
-
-Structure  
-→ Phase  
-→ Geometry  
-→ Sheets  
-→ Switching  
-→ Instability  
-→ Collapse
-
----
-
----
-
-# 🔹 Finding 12 — Transition occurs via Greyspace (Low-Density Corridors)
-
-Defined:
-
-$$
-G(r, \theta) = \frac{1}{\rho(r, \theta)}
-$$
-
-Observed:
-
-- IOTA events occur AFTER greyspace increase  
-- greyspace rises BEFORE collapse  
+- control is not uniformly distributed  
+- activation appears in structured regions  
+- clusters form stable control zones  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-System does not collapse randomly
-
-It enters a low-density corridor first
+Control is spatially localized
 ```
 
 ---
@@ -345,60 +21,24 @@ It enters a low-density corridor first
 ## Interpretation
 
 ```text
-Transition = movement through structural gaps
+System responds only in sensitive regions of state space
 ```
 
 ---
 
-# 🔹 Finding 13 — Collapse occurs along boundaries, not gaps
+# 🔹 Finding 32 — Transitions follow minimal control skeletons
 
-Using:
+Observed (v58–v59):
 
-- Greyspace $G$
-- Ridge distance $D$
-
-Observed:
-
-```text
-BOUNDARY_COLLAPSE: dominant
-GAP_ESCAPE:        rare / none
-```
+- control can be reduced to a minimal curve  
+- a small subset of points drives the transition  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-System does NOT jump into emptiness
-
-It breaks along structural edges
-```
-
----
-
-## Interpretation
-
-- ridges = attractor remnants  
-- collapse propagates along structure  
-
----
-
-# 🔹 Finding 14 — Post-transition space contains hidden geometry
-
-Observed (v31):
-
-- clusters form  
-- triangulation reveals connectivity  
-- shapes emerge (triangles, bundles, local motifs)
-
----
-
-## 🔥 Critical Insight
-
-```text
-Post-collapse dynamics are NOT random
-
-They reorganize into local geometric structures
+Transitions are governed by minimal structural paths
 ```
 
 ---
@@ -406,31 +46,23 @@ They reorganize into local geometric structures
 ## Interpretation
 
 ```text
-chaos → micro-attractors + connection graph
+Full trajectories are redundant representations of a compact transition skeleton
 ```
 
 ---
 
-# 🔹 Finding 15 — IOTA is a field, not an event
+# 🔹 Finding 33 — Phase alignment is required for control effectiveness
 
-Defined:
+Observed (v60):
 
-$$
-P(\text{IOTA} \mid r, \theta)
-$$
-
-Observed (v33):
-
-- smooth probability regions  
-- “bubbles” of instability  
-- continuous gradients  
+- identical control inputs yield different results depending on phase  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-Instability is spatially distributed
+Control effectiveness is phase-dependent
 ```
 
 ---
@@ -438,31 +70,23 @@ Instability is spatially distributed
 ## Interpretation
 
 ```text
-System moves THROUGH risk fields
-not between discrete failure points
+System sensitivity varies along the oscillation cycle
 ```
 
 ---
 
-# 🔹 Finding 16 — Local avoidance alone is insufficient
+# 🔹 Finding 34 — Flow shaping is more effective than direct forcing
 
-Using gradient steering:
+Observed (v61–v62):
 
-$$
-u = -\nabla P(\text{IOTA})
-$$
-
-Observed (v34):
-
-- local deflection occurs  
-- global instability remains  
+- modifying flow yields better results than targeting positions  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-Avoiding risk locally does not stabilize the trajectory
+Control should modify dynamics, not states
 ```
 
 ---
@@ -470,33 +94,24 @@ Avoiding risk locally does not stabilize the trajectory
 ## Interpretation
 
 ```text
-System requires directional guidance
-not only repulsion
+System follows its flow — not external commands
 ```
 
 ---
 
-# 🔹 Finding 17 — Navigation requires dual forces
+# 🔹 Finding 35 — Control propagates through the trajectory
 
-Introduced:
+Observed (v63–v65):
 
-- risk avoidance  
-- target attraction  
-
-Observed (v35):
-
-- trajectory becomes directional  
-- motion becomes coherent  
+- small perturbations influence future trajectory  
+- delayed effects dominate  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-Stable navigation requires:
-
-repulsion (risk)
-+ attraction (structure)
+Control is temporally propagated
 ```
 
 ---
@@ -504,32 +119,24 @@ repulsion (risk)
 ## Interpretation
 
 ```text
-System behaves as a guided flow in state space
+System response is path-dependent and non-local in time
 ```
 
 ---
 
-# 🔹 Finding 18 — Adaptive targets reduce instability
+# 🔹 Finding 36 — Stability emerges from field structure
 
-Using dynamic targets (v36):
+Observed (v66):
 
-- local low-risk regions  
-- continuously updated  
-
----
-
-## Results
-
-```text
-Mean risk reduction ≈ 5%
-```
+- stability field restores trajectories  
+- perturbations decay  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-Following local structure reduces instability measurably
+Stability is an emergent field property
 ```
 
 ---
@@ -537,26 +144,24 @@ Following local structure reduces instability measurably
 ## Interpretation
 
 ```text
-System stabilizes when it moves WITH the field
+System contains intrinsic restoring dynamics
 ```
 
 ---
 
-# 🔹 Finding 19 — Optimal motion is NOT minimal risk
+# 🔹 Finding 37 — Gates correspond to low-barrier transitions
 
-Adding structural constraint (v37):
+Observed (v67–v68):
 
-Observed:
-
-- lower risk reduction (~2.4%)  
-- BUT more coherent trajectories  
+- gates align with saddle points  
+- low energy barriers connect basins  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-Minimum-risk trajectory ≠ physically consistent trajectory
+Gate = minimal energy transition point
 ```
 
 ---
@@ -564,27 +169,24 @@ Minimum-risk trajectory ≠ physically consistent trajectory
 ## Interpretation
 
 ```text
-System prefers structure-consistent paths over purely optimal ones
+Transitions occur along energetically favorable pathways
 ```
 
 ---
 
-# 🔹 Finding 20 — Motion occurs via discrete structural anchors
+# 🔹 Finding 38 — Global transitions follow basin graph structure
 
-Observed:
+Observed (v69):
 
-- loops, chains, polygon-like patterns  
-- repeated turning points  
-- mirrored “bays” / symmetry  
+- system decomposes into basins  
+- transitions follow graph paths  
 
 ---
 
 ## 🔥 Critical Insight
 
 ```text
-System does not move continuously
-
-It transitions between discrete structural anchors
+Transition dynamics are graph-structured
 ```
 
 ---
@@ -592,85 +194,294 @@ It transitions between discrete structural anchors
 ## Interpretation
 
 ```text
-Trajectory = sequence of attractor segments
+State space reduces to discrete basin connectivity
 ```
 
 ---
 
-# 🔹 Finding 21 — Transition is navigation through a constrained field
+# 🔹 Finding 39 — Optimal transitions follow indirect paths
 
-Unified model (v33–v37):
+Observed (v70):
+
+- shortest path ≠ direct path  
+- intermediate basins reduce cost  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Optimal transition = minimal barrier path
+```
+
+---
+
+## Interpretation
+
+```text
+System prefers multi-step transitions over direct jumps
+```
+
+---
+
+# 🔹 Finding 40 — Control requires energy adaptation
+
+Observed (v71–v73):
+
+- insufficient force → no transition  
+- excessive force → instability  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+There exists a minimal energy threshold for transitions
+```
+
+---
+
+## Interpretation
+
+```text
+Control must match barrier height
+```
+
+---
+
+# 🔹 Finding 41 — Smooth trajectories outperform direct steering
+
+Observed (v74):
+
+- sharp targeting produces instability  
+- smooth blending improves success  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Continuity of motion is essential
+```
+
+---
+
+## Interpretation
+
+```text
+System requires differentiable trajectory evolution
+```
+
+---
+
+# 🔹 Finding 42 — Systems move through flow channels
+
+Observed (v75):
+
+- trajectories follow narrow transport corridors  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Transitions occur inside structured channels
+```
+
+---
+
+## Interpretation
+
+```text
+State space contains preferred transport pathways
+```
+
+---
+
+# 🔹 Finding 43 — π-consistency stabilizes motion
+
+Observed (v76):
+
+- smooth angular evolution reduces instability  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Continuous rotation is a stabilizing constraint
+```
+
+---
+
+## Interpretation
+
+```text
+System penalizes discontinuous directional changes
+```
+
+---
+
+# 🔹 Finding 44 — Phase space is layered (sheet topology)
+
+Observed (v77):
+
+- radial layers define distinct regimes  
+- excessive switching leads to instability  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+State space is multi-layered
+```
+
+---
+
+## Interpretation
+
+```text
+System transitions across discrete radial sheets
+```
+
+---
+
+# 🔹 Finding 45 — Strict constraints can block transitions
+
+Observed (v77):
+
+- enforcing sheet consistency prevents gate crossing  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Over-constraining navigation leads to failure
+```
+
+---
+
+## Interpretation
+
+```text
+Flexibility is required for successful transitions
+```
+
+---
+
+# 🔹 Finding 46 — Gates must override local constraints
+
+Observed (v78):
+
+- gate-following requires temporary constraint violation  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Transitions require local rule-breaking
+```
+
+---
+
+## Interpretation
+
+```text
+System must temporarily deviate to complete transitions
+```
+
+---
+
+# 🔹 Finding 47 — Multi-operator control introduces interference
+
+Observed (v79):
+
+- combining π, φ, √2 produces unstable interactions  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Control operators interact non-linearly
+```
+
+---
+
+## Interpretation
+
+```text
+Operator coordination is required
+```
+
+---
+
+# 🔹 Finding 48 — Gates are directional, not positional
+
+Observed (v80):
+
+- gate success depends on approach direction  
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Gate = oriented transition
+```
+
+---
+
+## Interpretation
+
+```text
+System must align with transition direction to pass
+```
+
+---
+
+# 🔹 Finding 49 — Navigation is phase-aligned motion through transitions
+
+Unified model (v70–v80):
 
 $$
 \text{Trajectory} =
-f\big(
-P(\text{IOTA}),
-\nabla P,
-\text{ridge structure},
-\text{local attractors}
-\big)
+f(
+\text{flow},
+\text{gates},
+\text{phase alignment},
+\text{energy},
+\text{structure}
+)
 $$
 
 ---
 
-## 🔥 Core Insight (Extended)
+## 🔥 Final Core Insight
 
 ```text
-Instability is a field
-Structure is a constraint
-Transition is navigation under both
+Transitions are not positions in space
+
+They are directional passages through structured flow
 ```
 
 ---
 
-# 🔹 Updated Mechanism of Collapse
-
-```text
-1. density drops (greyspace ↑)
-2. flow destabilizes (directional coherence ↓)
-3. boundary weakens (ridge separation ↑)
-4. system enters instability field
-5. trajectory loses structural anchor
-6. system reconfigures into new geometry
-```
-
----
-
-# 🔹 Final Statement (Extended)
+# 🔹 Updated Final Statement (Full System)
 
 $$
 \text{Transition} =
-\text{Field Navigation Failure}
-\;+\;
-\text{Loss of Structural Anchoring}
-$$
+\text{Directional Flow Alignment}
++ \text{Barrier Crossing}
++ \text{Structural Navigation}
+```
 
 ---
 
-# 🔹 Updated Outlook
-
-Next steps:
-
-- introduce memory:
-  $$
-  A_{\text{stable}}(r, \theta)
-  $$
-
-- define dual field:
-  $$
-  u =
-  -\nabla P(\text{IOTA})
-  +
-  \nabla A_{\text{stable}}
-  $$
-
-- model hysteresis / return flow  
-- identify invariant attractor sets  
-- extend to high-dimensional systems  
-
----
-
-# 🧭 Updated Summary (v1 → v37)
+# 🧭 Updated Summary (v1 → v80)
 
 ```text
 Structure
@@ -685,262 +496,280 @@ Structure
 → Target navigation
 → Adaptive structure
 → Discrete anchors
-→ Constrained navigation
-→ Collapse
+→ Basin graph
+→ Gate structure
+→ Flow channels
+→ π-consistency
+→ Sheet topology
+→ Operator control
+→ Directional gates
+→ Phase-aligned navigation
 ```
 
 ---
 
 ---
 
-# 🔹 Finding 22 — Transitions are controllable at the distribution level
+# 🔹 Finding 50 — The NEXAH Kernel (Field Navigation Architecture)
 
-Using:
+## 🧭 Idea
 
-P(basin_i → basin_j)
+All previous findings converge into a unified system:
 
-Observed (v49):
+```text
+NEXAH = Navigation in Structured Dynamical Fields
+```
 
-- targeted intervention can modify transition probabilities
-- specific edges can be amplified
+---
 
-Example:
+## 🧠 Core Architecture
 
-P(0 → 1): 0.625 → 1.000
+The system decomposes into four fundamental layers:
+
+```text
+1. ARCHY        → Simulation / system dynamics
+2. FIELD        → geometric + probabilistic structure
+3. GRAPH        → discrete basin / gate topology
+4. KERNEL       → navigation + control engine
+```
+
+---
+
+## 🔹 1. ARCHY — Dynamic Substrate
+
+Represents:
+
+```text
+raw system evolution
+```
+
+Formal:
+
+$$
+x(t), \dot{x}(t)
+\rightarrow (r, \theta)
+```
+
+---
+
+## 🔹 2. FIELD — Continuous Structure Layer
+
+Encodes:
+
+- risk field:
+  $$
+  P(\text{IOTA} \mid r, \theta)
+  $$
+- density:
+  $$
+  \rho(r, \theta)
+  $$
+- greyspace:
+  $$
+  G = \frac{1}{\rho}
+  $$
+
+- flow:
+  $$
+  (dr/dt, d\theta/dt)
+  $$
 
 ---
 
 ## 🔥 Critical Insight
 
-Transitions are not only detectable  
-They are controllable
+```text
+The system is not a trajectory
+
+It is a continuous field with structure
+```
 
 ---
 
-## Interpretation
+## 🔹 3. GRAPH — Discrete Transition Layer
 
-System behavior can be shaped  
-by altering transition likelihoods between basins
+Derived from field:
 
----
+```text
+basins
+→ gates
+→ transitions
+```
 
-# 🔹 Finding 23 — Transition control creates global side-effects
+Formal:
 
-Observed (v50–v51):
-
-- increasing one transition reduces others
-- multi-edge policies interfere
-
-Example:
-
-2→0 drops while 0→1 increases
-
----
-
-## 🔥 Critical Insight
-
-Transitions are not independent
-
----
-
-## Interpretation
-
-System operates on a constrained probability distribution
-
----
-
-# 🔹 Finding 24 — Control requires selection, not accumulation
-
-Using adaptive filtering (v51):
-
-- only beneficial transitions are retained
-- harmful edges are removed
+$$
+P(B_i \rightarrow B_j)
+$$
 
 ---
 
 ## 🔥 Critical Insight
 
-More control ≠ better control
+```text
+Continuous dynamics collapse into discrete transition structure
+```
+
+---
+
+## 🔹 4. KERNEL — Navigation Engine
+
+Defines control:
+
+$$
+u =
+-\nabla P(\text{IOTA})
++ \nabla A_{\text{stable}}
++ \text{phase alignment}
++ \text{gate direction}
+```
 
 ---
 
 ## Interpretation
 
-Optimal control is sparse and selective
+Control is a combination of:
+
+```text
+risk avoidance
++ structure attraction
++ directional alignment
++ barrier crossing
+```
 
 ---
 
-# 🔹 Finding 25 — Timing of control is critical
+## 🔥 Core Mechanism
 
-Using pattern gating (v52):
+```text
+System moves through:
 
-- control applied intermittently
-- same direction, different timing → different results
-
----
-
-## 🔥 Critical Insight
-
-WHEN control is applied  
-is as important as WHERE
+flow channels
+→ into gate regions
+→ across basin transitions
+→ while maintaining phase coherence
+```
 
 ---
 
-## Interpretation
+## 🔹 Unified Equation (Conceptual)
 
-System responds differently depending on temporal alignment
-
----
-
-# 🔹 Finding 26 — Control has an internal phase structure
-
-Using phase patterns (v53):
-
-engage → lock → release → next
-
-Observed:
-
-- control effectiveness varies across phases
-- locking suppresses intervention
-- boundary states amplify it
+$$
+\text{Trajectory} =
+f(
+\text{flow},
+\text{field gradients},
+\text{basin graph},
+\text{control policy}
+)
+$$
 
 ---
 
-## 🔥 Critical Insight
+## 🔥 Ultimate Insight
 
-Control must respect internal system phase
+```text
+A dynamical system is not evolving in time
 
----
-
-## Interpretation
-
-System exhibits cyclic control sensitivity
+It is navigating a structured state space
+```
 
 ---
 
-# 🔹 Finding 27 — Topological constraints alone are insufficient
+## 🔹 NEXAH Principle
 
-Using adjacency restriction (v54):
+```text
+Stability =
+alignment with structure
 
-- valid transitions enforced
-- no significant behavioral change
-
----
-
-## 🔥 Critical Insight
-
-Topology defines possibilities  
-but not dynamics
+Instability =
+misalignment + forced transition
+```
 
 ---
 
-## Interpretation
+## 🔹 Collapse Mechanism (Final Form)
 
-Control requires dynamic weighting, not just valid edges
-
----
-
-# 🔹 Finding 28 — Transition dynamics follow discrete ratios
-
-Observed repeatedly:
-
-0.8333 ≈ 10 / 12  
-0.1666 ≈  2 / 12
+```text
+1. field weakens (density ↓)
+2. switching increases
+3. trajectory loses alignment
+4. gate is entered
+5. transition occurs
+6. new structure is formed
+```
 
 ---
 
-## 🔥 Critical Insight
+## 🔹 Control Principle (Final Form)
 
-Transition probabilities are quantized
+```text
+To control a system:
 
----
+do NOT push it
 
-## Interpretation
-
-System operates on discrete transition counts  
-not continuous probability space
-
----
-
-# 🔹 Finding 29 — Natural transition distributions act as attractors
-
-Using resonance control (v55):
-
-- blending target with natural distribution
-- dominant transitions become amplified
+guide it through its natural structure
+```
 
 ---
 
-## 🔥 Critical Insight
+## 🔹 System Identity
 
-The system prefers its native transition structure
+NEXAH is:
 
----
+```text
+NOT a detector
+NOT a predictor
 
-## Interpretation
+BUT:
 
-Control is most effective when aligned  
-with natural transition geometry
-
----
-
-# 🔹 Finding 30 — Control operates on multiple independent axes
-
-Identified control dimensions:
-
-Direction     (v49)  
-Timing        (v52)  
-Phase         (v53)  
-Topology      (v54)  
-Distribution  (v55)
+a navigation framework
+for dynamical systems
+```
 
 ---
 
-## 🔥 Critical Insight
+## 🔹 Final Statement (Kernel-Level)
 
-Control is multi-dimensional
-
----
-
-## Interpretation
-
-System behavior emerges from combined control axes  
-not single interventions
+$$
+\text{Transition} =
+\text{Navigation through structured flow fields}
+$$
 
 ---
 
-# 🔹 Updated Final Statement (Control Layer)
+# 🧭 Final Unified Summary (v1 → v80 + Kernel)
 
-Transition =  
-Field Navigation  
-+ Structural Constraints  
-+ Discrete Transition Dynamics  
-+ Control Inputs  
+```text
+Signal
+→ Oscillation
+→ Phase
+→ Geometry
+→ Sheets
+→ Switching
+→ Greyspace
+→ Boundaries
+→ Probability field
+→ Gradient flow
+→ Structure alignment
+→ Basin graph
+→ Gate structure
+→ Flow channels
+→ π-consistency
+→ Sheet topology
+→ Directional gates
+→ Phase-aligned navigation
+→ NEXAH Kernel
+```
 
 ---
 
-# 🔹 Updated Summary (v1 → v55)
+## 🔥 Closing Insight
 
-Structure  
-→ Phase  
-→ Geometry  
-→ Sheets  
-→ Switching  
-→ Greyspace  
-→ Boundaries  
-→ Probability field  
-→ Gradient flow  
-→ Target navigation  
-→ Adaptive structure  
-→ Discrete anchors  
-→ Basin identity  
-→ Transition matrix  
-→ Memory  
-→ Control (direction)  
-→ Control (timing)  
-→ Control (phase)  
-→ Control (topology)  
-→ Control (distribution)  
-→ Controlled transitions  
+```text
+We are no longer modeling systems.
+
+We are navigating them.
+```
 
 ---
