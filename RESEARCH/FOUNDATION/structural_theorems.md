@@ -1,12 +1,12 @@
-# NEXAH — Structural Theorems (Working)
+# NEXAH — Structural Theorems
 
 ---
 
 ## 🧠 Overview
 
-This document presents a set of **working theorems** within the NEXAH framework.
+This document presents a set of structural theorems within the NEXAH framework.
 
-They formalize structural principles governing:
+They formalize principles governing:
 
 - system stability  
 - regime transitions  
@@ -39,7 +39,7 @@ and the system leaves its structured trajectory.
 
 ---
 
-## **Theorem 1 — Relational Structure Theorem (Working)**
+## **Theorem 1 — Relational Structure Theorem**
 
 ### Statement
 
@@ -68,7 +68,7 @@ $$
 
 ---
 
-## **Theorem 2 — Regime Transition Theorem (Working)**
+## **Theorem 2 — Regime Transition Theorem**
 
 ### Statement
 
@@ -92,7 +92,7 @@ $$
 
 ---
 
-## **Theorem 3 — Frame Preservation Theorem (Working)**
+## **Theorem 3 — Frame Preservation Theorem**
 
 ### Statement
 
@@ -124,7 +124,7 @@ with:
 
 ---
 
-## **Theorem 4 — Coherence Stability Theorem (Refined)**
+## **Theorem 4 — Coherence Stability Theorem**
 
 ### Definition
 
@@ -155,7 +155,7 @@ Stability = directional alignment with the field
 
 ---
 
-## **Theorem 5 — Coherence Collapse Theorem (Refined)**
+## **Theorem 5 — Coherence Collapse Theorem**
 
 ### Condition
 
@@ -173,7 +173,7 @@ Misalignment → trajectory leaves stable manifold
 
 ---
 
-## **Theorem 6 — Directional Flow Theorem (Working)**
+## **Theorem 6 — Directional Flow Theorem**
 
 ### Statement
 
@@ -196,7 +196,7 @@ Transitions occur at interfaces
 
 ---
 
-## **Theorem 7 — Interface Transition Theorem (Refined)**
+## **Theorem 7 — Interface Transition Theorem**
 
 ### Condition
 
@@ -214,7 +214,7 @@ Loss of directional coherence → transition zone
 
 ---
 
-## **Theorem 8 — Geometric Navigation Theorem (Refined)**
+## **Theorem 8 — Geometric Navigation Theorem**
 
 ### Formal Form
 
@@ -232,7 +232,7 @@ System motion = natural flow + control
 
 ---
 
-## **Theorem 9 — Loop Stabilization Theorem (Working)**
+## **Theorem 9 — Loop Stabilization Theorem**
 
 ### Statement
 
@@ -250,7 +250,7 @@ Attractors → confinement
 
 ---
 
-## **Theorem 10 — Gate Intersection Theorem (Refined)**
+## **Theorem 10 — Gate Intersection Theorem**
 
 ### Condition
 
@@ -268,7 +268,7 @@ Competing flow directions → instability
 
 ---
 
-## **Theorem 12 — Greyspace Transition Theorem (Refined)**
+## **Theorem 12 — Greyspace Transition Theorem**
 
 ### Definition
 
@@ -294,7 +294,7 @@ Low density → weak structure → transition corridor
 
 ---
 
-## **Theorem 15 — Risk Field Theorem (Refined)**
+## **Theorem 15 — Risk Field Theorem**
 
 ### Definition
 
@@ -312,7 +312,7 @@ Instability is a continuous spatial field
 
 ---
 
-## **Theorem 19 — Structure vs Optimality Theorem (Refined)**
+## **Theorem 19 — Structure vs Optimality Theorem**
 
 ### Statement
 
@@ -330,7 +330,7 @@ System prefers structural consistency over minimal risk
 
 ---
 
-## **Theorem 22 — Transition Control Theorem (Refined)**
+## **Theorem 22 — Transition Control Theorem**
 
 ### Statement
 
@@ -348,7 +348,7 @@ Control reshapes transition probabilities
 
 ---
 
-## **Theorem 26 — Phase Sensitivity Theorem (Refined)**
+## **Theorem 26 — Phase Sensitivity Theorem**
 
 ### Statement
 
@@ -364,7 +364,7 @@ Same control → different outcome depending on phase
 
 ---
 
-## **Theorem 50 — NEXAH Kernel Theorem (Core)**
+## **Theorem 50 — NEXAH Kernel Theorem**
 
 ### Statement
 
