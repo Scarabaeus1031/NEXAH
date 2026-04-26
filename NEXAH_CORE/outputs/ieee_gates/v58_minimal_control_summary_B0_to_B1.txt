@@ -1,0 +1,12 @@
+NEXAH v58 — Minimal Control Set
+================================
+
+Original cluster size: 19
+
+Points:  19 → P: 1.0000
+Points:  14 → P: 1.0000
+Points:   9 → P: 1.0000
+Points:   4 → P: 1.0000
+Points:   1 → P: 1.0000
+Points:   1 → P: 1.0000
+Points:   1 → P: 1.0000

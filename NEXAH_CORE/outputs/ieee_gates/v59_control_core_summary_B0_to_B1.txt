@@ -1,0 +1,13 @@
+NEXAH v59 — Control Core Extraction (FIXED)
+===========================================
+
+Total active points: 34
+Top-k core points: 5
+Full controlled P: 0.0000
+
+Top influence points:
+  index 25 → influence 0.000000
+  index 67 → influence 0.000000
+  index 68 → influence 0.000000
+  index 69 → influence 0.000000
+  index 70 → influence 0.000000
