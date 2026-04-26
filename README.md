@@ -10,7 +10,7 @@
 
 ## 🧭 Conceptual Overview
 
-![NEXAH Ecosystem Map](RESEARCH/visuals/nexah_ecosystem_map.png)
+![NEXAH Ecosystem Map](RESEARCH/visuals/NEXAH_Ecosystem_Map_v1.png)
 
 *Positioning of NEXAH within the landscape of dynamical systems, control theory, and graph-based models.*
 
