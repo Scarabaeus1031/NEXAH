@@ -1,0 +1,26 @@
+NEXAH v49 — Transition Probability Control Summary
+=================================================
+
+Source basin: 0
+Target basin: 1
+
+Transition gain: 0.065
+Base gain: 0.55
+
+Active controlled states: 116
+
+P_before(0->1): 0.6250
+P_after(0->1):  1.0000
+Delta P: 0.3750
+
+Baseline transition probs:
+[[0.         0.625      0.         0.375     ]
+ [0.28571429 0.         0.71428571 0.        ]
+ [0.8        0.2        0.         0.        ]
+ [0.5        0.5        0.         0.        ]]
+
+Controlled transition probs:
+[[0.         1.         0.         0.        ]
+ [0.17391304 0.         0.60869565 0.2173913 ]
+ [0.1875     0.3125     0.         0.5       ]
+ [0.83333333 0.         0.16666667 0.        ]]
