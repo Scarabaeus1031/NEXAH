@@ -542,5 +542,29 @@ We navigate them.
 
 ---
 
+---
+
+# 🔹 Theorem Layer (Working)
+
+The structural behavior of the NEXAH system is further formalized in:
+
+📄 `RESEARCH/FOUNDATION/structural_theorems.md`
+
+This includes:
+
+- coherence-based stability conditions  
+- transition structure theorems  
+- flow and geometry constraints  
+
+⚠️ These statements are currently:
+
+- empirically supported  
+- structurally consistent  
+- not yet formally proven  
+
+They define the **emerging theoretical layer** of NEXAH.
+
+---
+
 © Thomas K. R. Hofmann  
 NEXAH — 2026
