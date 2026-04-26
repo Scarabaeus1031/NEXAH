@@ -46,6 +46,62 @@ It is constrained by:
 
 ---
 
+## 🔒 Core Constraints
+
+### 🔹 Mass-Conserving Transition Constraint
+
+All transition dynamics must satisfy:
+
+```text
+Σ P(i → j) = 1
+```
+
+for every state **i**.
+
+This enforces:
+
+- probabilistic consistency  
+- closed flow dynamics  
+- physically meaningful transitions  
+- stable and controllable system behavior  
+
+---
+
+### Why this matters
+
+Without mass conservation:
+
+- transitions become inconsistent  
+- probability "leaks" or accumulates artificially  
+- control actions become unreliable  
+- system behavior diverges from field structure  
+
+---
+
+### Interpretation in NEXAH
+
+This constraint transforms the transition system from:
+
+```text
+open / inconsistent graph
+→ closed, flow-consistent system
+```
+
+It is a prerequisite for:
+
+- valid trajectory steering  
+- stable navigation  
+- execution-level control  
+
+---
+
+### Status
+
+⚠ currently violated in prototype systems  
+→ active integration into control layer  
+
+---
+
 ## 🧩 Module Structure
 
 ```text
@@ -155,14 +211,14 @@ Field → Geometry → Graph → Control → Navigation
 
 System dynamics with control:
 
-$begin:math:display$
-\\dot\{x\} \= F\(x\) \+ u\(x\)
-$end:math:display$
+```text
+dx/dt = F(x) + u(x)
+```
 
 Where:
 
-- $begin:math:text$F\(x\)$end:math:text$ = intrinsic system dynamics (field)  
-- $begin:math:text$u\(x\)$end:math:text$ = control input (geometry-aware)  
+- F(x) = intrinsic system dynamics (field)  
+- u(x) = control input (geometry-aware)  
 
 ---
 
@@ -248,7 +304,6 @@ analysis framework
 
 - integrate unified control kernel  
 - connect control to transition graph explicitly  
-- enforce probabilistic consistency (mass conservation)  
 - validate on real-world systems (IEEE, multi-agent)  
 
 ---
