@@ -85,6 +85,77 @@ state space → structure → fields → transitions → control
 
 ---
 
+### Gate Geometry & Transition Navigation (v56–v80)
+
+```text
+✔ model transitions as directional corridors (gates)
+✔ identify saddle structures as transition regions
+✔ represent system as basin + gate graph
+✔ incorporate phase-dependent transition dynamics
+✔ enable structure-aligned transition guidance
+✔ shift from control → navigation through transitions
+```
+
+---
+
+## 🧬 Extended Conceptual Model
+
+```text
+Signal
+→ Phase space (r, θ)
+→ Density field ρ
+→ Greyspace G
+→ Ridge structure
+→ IOTA events
+→ Risk field P(IOTA)
+→ Basins (discrete regimes)
+→ Transition matrix P(B_i → B_j)
+→ Navigation field
+→ Control layer
+→ Gate geometry (transition corridors)
+→ Structured transition navigation
+```
+
+---
+
+## 🧭 Updated Core Insight
+
+```text
+Instability is not noise
+
+Instability is:
+
+geometry
++ probability
++ structure
++ competing flows
++ transition corridors
+```
+
+---
+
+## 🚀 Updated Status
+
+```text
+✔ Field model
+✔ Transition detection
+✔ Structural analysis
+✔ Navigation
+✔ Transition prediction
+✔ Transition control
+✔ Gate geometry
+✔ Transition corridor modeling
+
+→ Next:
+
+- constrained optimal control
+- multi-step planning
+- long-horizon navigation
+- real-world deployment
+```
+
+---
+
 ## 🧬 Conceptual Model
 
 ```text
@@ -181,6 +252,19 @@ NEXAH_CORE/
 ### 🔹 Resonance-Aligned Control (v55)
 
 ![v55](outputs/ieee_gates/v55_transition_resonance_B0_to_B1.png)
+
+
+---
+
+### 🔹 Basin + Gate Structure (v70+)
+
+![v70](outputs/ieee_gates/v70_basin_gate_structure.png)
+
+---
+
+### 🔹 Transition Corridors / Gate Flow (v75+)
+
+![v75](outputs/ieee_gates/v75_transition_corridors.png)
 
 ---
 
