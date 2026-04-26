@@ -118,39 +118,34 @@ Instability is geometry
 ## 📁 Project Structure
 
 ```text
-NEXAH/
+NEXAH_CORE/
 │
 ├── README.md
+├── nexah_foundation.md
+├── findings.md
 │
-├── NEXAH_CORE/
-│   │
-│   ├── nexah_foundation.md
-│   ├── findings.md
-│   │
-│   ├── scripts/
-│   │   ├── ... (v1–v33 detection)
-│   │   ├── ... (v34–v37 navigation)
-│   │   ├── ieee_gate_detection_v38_control_layer.py
-│   │   ├── ieee_gate_detection_v44_basin_identity.py
-│   │   ├── ieee_gate_detection_v45_transition_matrix.py
-│   │   ├── ieee_gate_detection_v46_2_memory_basin_prediction.py
-│   │   ├── ieee_gate_detection_v49_transition_probability_control.py
-│   │   ├── ieee_gate_detection_v52_pattern_control.py
-│   │   ├── ieee_gate_detection_v53_phase_pattern_control.py
-│   │   ├── ieee_gate_detection_v54_adjacency_pattern_control.py
-│   │   ├── ieee_gate_detection_v55_transition_resonance_control.py
-│   │
-│   ├── outputs/
-│   │   └── ieee_gates/
-│   │       ├── v37_structure_trajectory.png
-│   │       ├── v45_transition_matrix.png
-│   │       ├── v49_transition_control_B0_to_B1.png
-│   │       ├── v53_phase_pattern_B0_to_B1.png
-│   │       ├── v55_transition_resonance_B0_to_B1.png
-│   │
-│   └── visuals/
+├── scripts/
+│   ├── ... (v1–v33 detection)
+│   ├── ... (v34–v37 navigation)
+│   ├── ieee_gate_detection_v38_control_layer.py
+│   ├── ieee_gate_detection_v44_basin_identity.py
+│   ├── ieee_gate_detection_v45_transition_matrix.py
+│   ├── ieee_gate_detection_v46_2_memory_basin_prediction.py
+│   ├── ieee_gate_detection_v49_transition_probability_control.py
+│   ├── ieee_gate_detection_v52_pattern_control.py
+│   ├── ieee_gate_detection_v53_phase_pattern_control.py
+│   ├── ieee_gate_detection_v54_adjacency_pattern_control.py
+│   ├── ieee_gate_detection_v55_transition_resonance_control.py
 │
-└── BUILDER_LAB/
+├── outputs/
+│   └── ieee_gates/
+│       ├── v37_structure_trajectory.png
+│       ├── v45_transition_matrix.png
+│       ├── v49_transition_control_B0_to_B1.png
+│       ├── v53_phase_pattern_B0_to_B1.png
+│       ├── v55_transition_resonance_B0_to_B1.png
+│
+└── visuals/
 ```
 
 ---
@@ -161,31 +156,31 @@ NEXAH/
 
 ### 🔹 Structure-Aware Navigation (v37)
 
-![v37](NEXAH_CORE/outputs/ieee_gates/v37_structure_trajectory.png)
+![v37](outputs/ieee_gates/v37_structure_trajectory.png)
 
 ---
 
 ### 🔹 Transition Matrix (v45)
 
-![v45](NEXAH_CORE/outputs/ieee_gates/v45_transition_matrix.png)
+![v45](outputs/ieee_gates/v45_transition_matrix.png)
 
 ---
 
 ### 🔹 Transition Control (v49)
 
-![v49](NEXAH_CORE/outputs/ieee_gates/v49_transition_control_B0_to_B1.png)
+![v49](outputs/ieee_gates/v49_transition_control_B0_to_B1.png)
 
 ---
 
 ### 🔹 Phase Pattern Control (v53)
 
-![v53](NEXAH_CORE/outputs/ieee_gates/v53_phase_pattern_B0_to_B1.png)
+![v53](outputs/ieee_gates/v53_phase_pattern_B0_to_B1.png)
 
 ---
 
 ### 🔹 Resonance-Aligned Control (v55)
 
-![v55](NEXAH_CORE/outputs/ieee_gates/v55_transition_resonance_B0_to_B1.png)
+![v55](outputs/ieee_gates/v55_transition_resonance_B0_to_B1.png)
 
 ---
 
