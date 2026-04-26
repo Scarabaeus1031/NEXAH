@@ -1,5 +1,5 @@
-NEXAH v59 — Control Core Extraction (Window-Based)
-=================================================
+NEXAH v59 — Control Core Extraction (FINAL)
+===========================================
 
 Detected transitions: 0
 Total active points: 34
