@@ -1,0 +1,13 @@
+NEXAH v69 — Gate Ranking (low barrier first)
+============================================
+
+B1 <-> B3 | barrier=0.0017
+B0 <-> B4 | barrier=0.0104
+B0 <-> B3 | barrier=0.0150
+B0 <-> B2 | barrier=0.0171
+B2 <-> B4 | barrier=0.0190
+B1 <-> B4 | barrier=0.0191
+B3 <-> B4 | barrier=0.0253
+B1 <-> B2 | barrier=0.0341
+B2 <-> B3 | barrier=0.0401
+B0 <-> B1 | barrier=0.0482

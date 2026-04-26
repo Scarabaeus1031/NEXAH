@@ -1,0 +1,25 @@
+NEXAH v68 — Basin Map + Saddle Detection
+========================================
+
+States: 3000
+Basins detected: 5
+Saddle candidates: 10
+
+Basins:
+  B0: r=0.8715, theta=0.6494, V=0.0000, rho=0.143821
+  B1: r=0.9310, theta=-2.3343, V=0.0088, rho=0.134330
+  B2: r=1.8223, theta=2.6151, V=0.0466, rho=0.100232
+  B3: r=1.6242, theta=-1.3514, V=0.0577, rho=0.092007
+  B4: r=1.7431, theta=0.5090, V=0.0723, rho=0.082158
+
+Top saddle / gate candidates:
+  G0: B0->B1, r=0.8913, theta=-0.6143, V=0.0570, barrier=0.0482
+  G1: B2->B3, r=1.6638, theta=-0.3686, V=0.0978, barrier=0.0401
+  G2: B1->B2, r=1.4460, theta=0.5090, V=0.0807, barrier=0.0341
+  G3: B3->B4, r=1.6836, theta=-0.3686, V=0.0976, barrier=0.0253
+  G4: B1->B4, r=1.5648, theta=-0.1229, V=0.0914, barrier=0.0191
+  G5: B2->B4, r=1.7629, theta=1.2461, V=0.0913, barrier=0.0190
+  G6: B0->B2, r=1.4856, theta=1.9481, V=0.0638, barrier=0.0171
+  G7: B0->B3, r=1.1488, theta=-0.1580, V=0.0727, barrier=0.0150
+  G8: B0->B4, r=1.5252, theta=0.5090, V=0.0827, barrier=0.0104
+  G9: B1->B3, r=1.4856, theta=-1.5620, V=0.0594, barrier=0.0017
