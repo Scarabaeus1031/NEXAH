@@ -1,0 +1,8 @@
+NEXAH v61 — Flow Transformation Analysis
+========================================
+
+index 25 → before: 0.3364, after: 0.3364, Δ: 0.0000
+index 67 → before: 1.8031, after: -1.3608, Δ: -3.1640
+index 68 → before: 2.2832, after: 2.3102, Δ: 0.0270
+index 69 → before: 3.5942, after: 3.4713, Δ: -0.1229
+index 70 → before: 2364.0855, after: -41.0138, Δ: -2405.0993
