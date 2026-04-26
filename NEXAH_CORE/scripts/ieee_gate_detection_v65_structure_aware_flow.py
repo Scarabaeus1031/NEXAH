@@ -1,36 +1,6 @@
 # ============================================================
-# NEXAH — IEEE GATE DETECTION v65
-# Structure-Aware Learned Flow Field
-# ============================================================
-#
-# FILE:
-# ieee_gate_detection_v65_structure_aware_flow.py
-#
-# PURPOSE:
-# --------
-# Upgrade v64 learned average-flow dynamics by adding structure.
-#
-# v64:
-#   f(s) = local mean flow
-#
-# v65:
-#   f(s) =
-#       local mean flow
-#     + ridge attraction
-#     + basin-centroid attraction
-#     + control impulse
-#
-# GOAL:
-# -----
-# Test whether structure-aware dynamics amplify a local control
-# intervention into a persistent trajectory deviation.
-#
-# OUTPUTS:
-# --------
-# v65_structure_aware_flow_trajectory.png
-# v65_structure_aware_flow_deviation.png
-# v65_structure_aware_flow_summary.txt
-#
+# NEXAH — IEEE GATE DETECTION v65 (FIXED)
+# Structure-Aware Flow (No Clustering Dependency)
 # ============================================================
 
 import os
@@ -42,13 +12,18 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(CURRENT_DIR)
 
 from ieee_gate_detection_v38_control_layer import run_v38_control
-from ieee_gate_detection_v44_basin_identity import cluster_locked_basins
-from ieee_gate_detection_v47_memory_guided_control import compute_basin_centroids
-from ieee_gate_detection_v41_ridge_aligned_control import wrap_theta
 
 
 # ------------------------------------------------------------
-# Build base trajectory
+# Wrap theta
+# ------------------------------------------------------------
+
+def wrap_theta(theta):
+    return (theta + np.pi) % (2 * np.pi) - np.pi
+
+
+# ------------------------------------------------------------
+# Build base data
 # ------------------------------------------------------------
 
 def build_pipeline():
@@ -63,28 +38,13 @@ def build_pipeline():
 
     result = run_v38_control(x, dt=t[1] - t[0], bins=80)
 
-    states = np.column_stack([
-        result["r"],
-        result["theta"]
-    ])
+    states = np.column_stack([result["r"], result["theta"]])
 
-    L = np.ones(len(states)) * 0.5
-
-    basin_ids, *_ = cluster_locked_basins(
-        states,
-        L,
-        threshold=0.5,
-        eps=0.18,
-        min_samples=6
-    )
-
-    centroids = compute_basin_centroids(states, basin_ids)
-
-    return states, basin_ids, centroids
+    return states
 
 
 # ------------------------------------------------------------
-# Learned local flow
+# Learned local flow (kNN)
 # ------------------------------------------------------------
 
 def learn_local_flow(states, k=25):
@@ -93,14 +53,10 @@ def learn_local_flow(states, k=25):
 
     def flow(s):
 
-        dtheta = np.array([
-            wrap_theta(p[1] - s[1]) for p in states
-        ])
-
         dr = states[:, 0] - s[0]
+        dtheta = np.array([wrap_theta(p[1] - s[1]) for p in states])
 
         dists = np.sqrt(dr**2 + dtheta**2)
-
         idx = np.argsort(dists)[:k]
 
         return np.mean(velocities[idx], axis=0)
@@ -109,73 +65,63 @@ def learn_local_flow(states, k=25):
 
 
 # ------------------------------------------------------------
-# Nearest basin centroid
+# Simple structural stabilization (IMPORTANT)
 # ------------------------------------------------------------
 
-def nearest_centroid_vector(s, centroids):
+def radial_stabilization(s, center):
 
-    best = None
-    best_dist = np.inf
+    dr = center[0] - s[0]
+    dtheta = wrap_theta(center[1] - s[1])
 
-    for bid, c in centroids.items():
-
-        dr = c[0] - s[0]
-        dtheta = wrap_theta(c[1] - s[1])
-
-        dist = np.sqrt(dr**2 + dtheta**2)
-
-        if dist < best_dist:
-            best_dist = dist
-            best = np.array([dr, dtheta])
-
-    norm = np.linalg.norm(best)
+    v = np.array([dr, dtheta])
+    norm = np.linalg.norm(v)
 
     if norm > 1e-9:
-        best = best / norm
+        v = v / norm
 
-    return best
+    return v
 
 
 # ------------------------------------------------------------
-# Target centroid vector
+# Target direction
 # ------------------------------------------------------------
 
-def target_vector(s, target_centroid):
+def target_vector(s, target):
 
-    dr = target_centroid[0] - s[0]
-    dtheta = wrap_theta(target_centroid[1] - s[1])
+    dr = target[0] - s[0]
+    dtheta = wrap_theta(target[1] - s[1])
 
-    u = np.array([dr, dtheta])
-
-    norm = np.linalg.norm(u)
+    v = np.array([dr, dtheta])
+    norm = np.linalg.norm(v)
 
     if norm > 1e-9:
-        u = u / norm
+        v = v / norm
 
-    return u
+    return v
 
 
 # ------------------------------------------------------------
 # Structure-aware flow
 # ------------------------------------------------------------
 
-def structure_aware_flow(
+def structure_flow(
     s,
     local_flow,
-    centroids,
-    target_centroid=None,
-    ridge_gain=0.018,
-    target_gain=0.000
+    center,
+    target=None,
+    alpha=1.0,
+    beta=0.08,
+    gamma=0.04
 ):
 
     v = local_flow(s)
 
-    # Pull gently toward nearest structural centroid.
-    v += ridge_gain * nearest_centroid_vector(s, centroids)
+    # weak stabilization (prevents drift)
+    v += beta * radial_stabilization(s, center)
 
-    # Optional target bias.
-    if target_centroid is not None and target_gain > 0:
-        v += target_gain * target_vector(s, target_centroid)
+    # optional directional bias
+    if target is not None:
+        v += gamma * target_vector(s, target)
 
     return v
 
@@ -187,32 +133,29 @@ def structure_aware_flow(
 def simulate(
     s0,
     local_flow,
-    centroids,
-    target_centroid=None,
+    center,
+    target=None,
     steps=300,
     dt=0.08,
     control_step=None,
     control_vector=None,
-    control_gain=0.12,
-    ridge_gain=0.018,
-    target_gain=0.000
+    control_gain=0.2
 ):
 
     traj = [s0.copy()]
     s = s0.copy()
 
-    for step in range(steps):
+    for t in range(steps):
 
-        v = structure_aware_flow(
+        v = structure_flow(
             s,
             local_flow,
-            centroids,
-            target_centroid=target_centroid,
-            ridge_gain=ridge_gain,
-            target_gain=target_gain
+            center,
+            target=target
         )
 
-        if control_step is not None and step == control_step:
+        # control injection
+        if control_step is not None and t == control_step:
             v = v + control_gain * control_vector
 
         s = s + dt * v
@@ -233,53 +176,44 @@ if __name__ == "__main__":
     OUT_DIR = os.path.join(CORE_DIR, "outputs", "ieee_gates")
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    states, basin_ids, centroids = build_pipeline()
-
-    print("Available basins:", sorted(centroids.keys()))
-
-    source = 0 if 0 in centroids else sorted(centroids.keys())[0]
-    target = 1 if 1 in centroids else sorted(centroids.keys())[1]
-
-    target_centroid = centroids[target]
+    states = build_pipeline()
 
     local_flow = learn_local_flow(states, k=25)
 
+    # global center (fallback structure)
+    center = np.mean(states, axis=0)
+
+    # start point (same as before)
     start_index = 67
     s0 = states[start_index].copy()
 
-    # Same direction seen in v62: nearly pure negative theta rotation.
-    control_vector = target_vector(s0, target_centroid)
+    # define artificial target (slightly shifted region)
+    target = s0 + np.array([0.0, -0.5])
 
+    control_vector = target_vector(s0, target)
+
+    # baseline
     baseline = simulate(
         s0,
         local_flow,
-        centroids,
-        target_centroid=None,
-        steps=300,
-        dt=0.08,
-        ridge_gain=0.018,
-        target_gain=0.000
+        center,
+        target=None,
+        steps=300
     )
 
+    # controlled
     controlled = simulate(
         s0,
         local_flow,
-        centroids,
-        target_centroid=target_centroid,
+        center,
+        target=target,
         steps=300,
-        dt=0.08,
         control_step=10,
-        control_vector=control_vector,
-        control_gain=0.12,
-        ridge_gain=0.018,
-        target_gain=0.004
+        control_vector=control_vector
     )
 
+    # deviation
     deviation = np.linalg.norm(controlled - baseline, axis=1)
-
-    final_dev = float(deviation[-1])
-    max_dev = float(np.max(deviation))
-    mean_dev = float(np.mean(deviation))
 
     # --------------------------------------------------------
     # Plot trajectory
@@ -287,54 +221,23 @@ if __name__ == "__main__":
 
     plt.figure(figsize=(8, 8))
 
-    plt.scatter(
-        states[:, 1],
-        states[:, 0],
-        s=2,
-        alpha=0.10,
-        label="data field"
-    )
+    plt.scatter(states[:, 1], states[:, 0], s=2, alpha=0.1, label="field")
 
-    plt.plot(
-        baseline[:, 1],
-        baseline[:, 0],
-        linewidth=2,
-        label="baseline structure-flow"
-    )
+    plt.plot(baseline[:, 1], baseline[:, 0], label="baseline")
+    plt.plot(controlled[:, 1], controlled[:, 0], label="controlled")
 
-    plt.plot(
-        controlled[:, 1],
-        controlled[:, 0],
-        linewidth=2,
-        label="controlled structure-flow"
-    )
-
-    plt.scatter(
-        s0[1],
-        s0[0],
-        color="red",
-        s=70,
-        label=f"start {start_index}"
-    )
-
-    plt.scatter(
-        target_centroid[1],
-        target_centroid[0],
-        marker="x",
-        s=90,
-        label=f"target basin {target}"
-    )
+    plt.scatter(s0[1], s0[0], color="red", s=70, label="start")
 
     plt.xlabel("theta")
     plt.ylabel("r")
-    plt.title("NEXAH v65 — Structure-Aware Learned Flow")
+    plt.title("NEXAH v65 — Structure-Aware Flow (Fixed)")
 
-    plt.legend(fontsize=7)
+    plt.legend()
     plt.tight_layout()
 
     out_path = os.path.join(
         OUT_DIR,
-        "v65_structure_aware_flow_trajectory.png"
+        "v65_structure_aware_flow.png"
     )
 
     plt.savefig(out_path, dpi=200)
@@ -346,15 +249,10 @@ if __name__ == "__main__":
 
     plt.figure(figsize=(8, 4))
 
-    plt.plot(deviation, linewidth=1.5)
-    plt.axvline(10, linestyle="--", label="control step")
+    plt.plot(deviation)
+    plt.axvline(10, linestyle="--")
 
-    plt.xlabel("simulation step")
-    plt.ylabel("controlled - baseline deviation")
-    plt.title("NEXAH v65 — Structure-Aware Flow Deviation")
-
-    plt.legend(fontsize=8)
-    plt.tight_layout()
+    plt.title("Deviation over time")
 
     dev_path = os.path.join(
         OUT_DIR,
@@ -364,44 +262,7 @@ if __name__ == "__main__":
     plt.savefig(dev_path, dpi=200)
     plt.close()
 
-    # --------------------------------------------------------
-    # Summary
-    # --------------------------------------------------------
-
-    summary_path = os.path.join(
-        OUT_DIR,
-        "v65_structure_aware_flow_summary.txt"
-    )
-
-    with open(summary_path, "w", encoding="utf-8") as f:
-
-        f.write("NEXAH v65 — Structure-Aware Learned Flow\n")
-        f.write("========================================\n\n")
-
-        f.write(f"Start index: {start_index}\n")
-        f.write(f"Source basin: {source}\n")
-        f.write(f"Target basin: {target}\n")
-        f.write(f"Available basins: {sorted(centroids.keys())}\n\n")
-
-        f.write(f"Control step: 10\n")
-        f.write(f"Control vector: {control_vector}\n\n")
-
-        f.write("Parameters:\n")
-        f.write("  k neighbors: 25\n")
-        f.write("  dt: 0.08\n")
-        f.write("  ridge_gain: 0.018\n")
-        f.write("  target_gain controlled: 0.004\n")
-        f.write("  control_gain: 0.12\n\n")
-
-        f.write(f"Final deviation: {final_dev:.6f}\n")
-        f.write(f"Max deviation:   {max_dev:.6f}\n")
-        f.write(f"Mean deviation:  {mean_dev:.6f}\n")
-
-    print("NEXAH v65 complete")
-    print(f"Source -> Target: {source} -> {target}")
-    print(f"Final deviation: {final_dev:.6f}")
-    print(f"Max deviation:   {max_dev:.6f}")
-    print(f"Mean deviation:  {mean_dev:.6f}")
+    print("NEXAH v65 complete (FIXED)")
+    print(f"Final deviation: {deviation[-1]:.6f}")
+    print(f"Max deviation:   {np.max(deviation):.6f}")
     print(f"Saved: {out_path}")
-    print(f"Saved: {dev_path}")
-    print(f"Saved: {summary_path}")
