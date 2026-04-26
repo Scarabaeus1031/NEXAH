@@ -1,6 +1,6 @@
 # ============================================================
 # NEXAH — IEEE GATE DETECTION v59
-# Control Core Extraction (Window-Based FIX)
+# Control Core Extraction (FINAL CORRECT VERSION)
 # ============================================================
 
 import os
@@ -16,25 +16,22 @@ from ieee_gate_detection_v56_pattern_field_control import (
     pattern_field_control
 )
 
+from ieee_gate_detection_v44_basin_identity import cluster_locked_basins
+
+
 # ------------------------------------------------------------
-# Transition detection (WINDOW-BASED)
+# Transition detection (CONTROLLED BASINS)
 # ------------------------------------------------------------
 
-def detect_transitions(basin_ids, source, target, window=5):
+def detect_transitions(basin_ids, source, target):
 
-    indices = []
+    transitions = []
 
-    for i in range(len(basin_ids) - window):
+    for i in range(len(basin_ids) - 1):
+        if basin_ids[i] == source and basin_ids[i+1] == target:
+            transitions.append(i)
 
-        if basin_ids[i] != source:
-            continue
-
-        for j in range(1, window+1):
-            if basin_ids[i+j] == target:
-                indices.append(i)
-                break
-
-    return indices
+    return transitions
 
 
 # ------------------------------------------------------------
@@ -43,28 +40,46 @@ def detect_transitions(basin_ids, source, target, window=5):
 
 def compute_influence(states, controls, basin_ids, centroids, source, target):
 
+    # --- apply control ---
     controlled, active, mask = pattern_field_control(
         states, controls, basin_ids, centroids, source, target
     )
 
-    # baseline transitions
-    baseline_transitions = detect_transitions(basin_ids, source, target)
-    full_count = len(baseline_transitions)
+    # --- CRITICAL: compute NEW basin_ids from controlled states ---
+    controlled_basin_ids, *_ = cluster_locked_basins(
+        controlled,
+        np.ones(len(controlled)) * 0.5,
+        threshold=0.5,
+        eps=0.18,
+        min_samples=6
+    )
+
+    # --- detect transitions in CONTROLLED system ---
+    transitions = detect_transitions(controlled_basin_ids, source, target)
+    full_count = len(transitions)
 
     active_indices = np.where(active)[0]
     influence = []
 
     for idx in active_indices:
 
-        loss = 0
+        test_states = controlled.copy()
+        test_states[idx] = states[idx]
 
-        for t in baseline_transitions:
+        # recompute basin ids after removing this control point
+        test_basin_ids, *_ = cluster_locked_basins(
+            test_states,
+            np.ones(len(test_states)) * 0.5,
+            threshold=0.5,
+            eps=0.18,
+            min_samples=6
+        )
 
-            # if control point lies near transition region
-            if abs(idx - t) < 6:
-                loss += 1
+        test_transitions = detect_transitions(test_basin_ids, source, target)
 
-        influence.append((idx, loss))
+        drop = full_count - len(test_transitions)
+
+        influence.append((idx, drop))
 
     influence.sort(key=lambda x: x[1], reverse=True)
 
@@ -140,7 +155,7 @@ if __name__ == "__main__":
         label="control core"
     )
 
-    plt.title("NEXAH v59 — Control Core Extraction (Window-Based)")
+    plt.title("NEXAH v59 — Control Core Extraction (FINAL)")
     plt.xlabel("theta")
     plt.ylabel("r")
 
@@ -166,8 +181,8 @@ if __name__ == "__main__":
 
     with open(summary_path, "w") as f:
 
-        f.write("NEXAH v59 — Control Core Extraction (Window-Based)\n")
-        f.write("=================================================\n\n")
+        f.write("NEXAH v59 — Control Core Extraction (FINAL)\n")
+        f.write("===========================================\n\n")
 
         f.write(f"Detected transitions: {full_count}\n")
         f.write(f"Total active points: {len(active_indices)}\n")
@@ -178,7 +193,7 @@ if __name__ == "__main__":
         for idx, score in influence[:top_k]:
             f.write(f"  index {idx} → influence {score}\n")
 
-    print("NEXAH v59 complete (window-based)")
+    print("NEXAH v59 complete (FINAL)")
     print(f"Transitions detected: {full_count}")
     print(f"Top-{top_k} core extracted")
     print(f"Saved: {out_path}")
