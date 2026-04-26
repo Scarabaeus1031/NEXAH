@@ -1,6 +1,7 @@
 # ⚡ NEXAH — A Geometric Framework for Dynamical Systems
 
-> NEXAH is a computational framework that reveals structure, transitions, and stability directly from system dynamics.
+> NEXAH reconstructs structure, transitions, and stability  
+> directly from system dynamics.
 
 > Complex systems are not random.  
 > They evolve within **structured fields that constrain motion, transitions, and outcomes**.
@@ -13,16 +14,15 @@
 
 ## ⚠️ Research Prototype
 
-NEXAH is an experimental framework for exploring structure and transitions in dynamical systems.
+NEXAH is an experimental framework.
 
-Results are promising, but **full validation and reproducibility are ongoing**.  
-Feedback and discussion are welcome.
+- promising results  
+- ongoing validation  
+- not yet production-ready  
 
 ---
 
 # 🚀 Quick Start
-
-Clone and run:
 
 ```bash
 pip install -e .
@@ -32,401 +32,83 @@ pip install -r requirements.txt
 python run_nexah_demo.py
 ```
 
-
----
-
-## 📊 Current System State
-
-→ [SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)
-
-Defines:
-
-- what is implemented  
-- what works  
-- what is validated  
-- what is still missing  
-
----
-
-## 🔬 Methods
-
-→ [METHODS.md](ARCHITECTURE/METHODS.md)
-
----
-
-## 🌀 Visual Gallery
-
-For a visual introduction to NEXAH:
-
-→ [VISUAL_GALLERY.md](VISUAL_GALLERY.md)
-
-Shows how structure, transitions, and geometry emerge across different systems.
-
----
-
-![Off-Manifold Flow](APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
-
-This visualization shows a trajectory from a real IEEE power grid model.
-
-NEXAH reconstructs the local **flow field** around the system state.
-
-What becomes visible:
-
-- directional structure  
-- transition channels  
-- stability constraints  
-
-→ the system does not move freely  
-→ it is **guided by an underlying field geometry** and **controllable through that geometry**
-
----
-
-🧪 Reproduce this visualization:
-
-```bash
-python APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/analysis/run_ieee_off_manifold_flow_v69.py
-```
-
 ---
 
 # 🧠 What NEXAH does
 
-NEXAH transforms time-series system data into a **geometric representation**:
-
-- states → field  
-- time evolution → trajectories  
-- events → regime transitions  
-
-Instead of detecting isolated failures, NEXAH identifies:
-
-> how systems move within structured dynamical landscapes  
-> how transitions emerge from field geometry  
-> and how trajectories can be guided through stability regions
-
----
-
-## 🧭 Structure-Aware Transition Field
-
-![NEXAH Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
-
-This visualization shows:
+NEXAH transforms time-series data into a **geometric system representation**:
 
 ```text
-Left  → stable oscillatory regime  
-Center → transition boundary  
-Right → structured instability field  
+dynamics → structure → field → geometry → stability → control → navigation
 ```
 
-What becomes visible:
+It enables:
 
-- instability is localized (not random)  
-- trajectories follow structural patterns  
-- transitions occur at specific regions  
-
-→ the system is governed by a geometric field  
-→ not by random fluctuations  
+- early detection of transitions  
+- identification of instability regions  
+- structure-aware system navigation  
+- trajectory steering inside dynamical fields  
 
 ---
 
-# 🧩 Core Module — NEXAH_CORE
+# 🧭 Example
 
-The current core implementation of NEXAH is located in:
+![Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+
+→ instability is **not random**  
+→ transitions occur in **specific regions**  
+→ trajectories follow **field geometry**
+
+---
+
+# 🧩 Core Module
 
 ```text
 NEXAH_CORE/
 ```
 
-This module contains the **first fully working transition–navigation system**.
+Implements:
+
+- transition detection  
+- probabilistic instability field  
+- structure-aware navigation  
+- early control concepts  
 
 ---
 
-## 🔬 What is new in NEXAH_CORE
+# 📚 Documentation
 
-NEXAH_CORE is not only a detection system.
-
-It implements a **field-based transition control framework**:
-
-```text
-- instability represented as a continuous probability field
-- system motion modeled as trajectories in state space
-- transitions defined as directional gates (not points)
-- control achieved via structure-aware navigation
-```
-
-This enables:
-
-```text
-→ trajectory steering instead of event reaction  
-→ transition-aware system control  
-→ navigation across basin structures  
-```
+- 📊 [System State](ARCHITECTURE/SYSTEM_STATE.md)
+- 🔬 [Methods](ARCHITECTURE/METHODS.md)
+- 🧭 [Architecture](ARCHITECTURE/README.md)
+- 🌀 [Visual Gallery](VISUAL_GALLERY.md)
 
 ---
 
-## What NEXAH_CORE does
-
-```text
-Transforms raw system dynamics into a navigable stability field
-```
-
-Pipeline:
-
-```text
-Signal
-→ Phase space (r, θ)
-→ Density field
-→ Greyspace (instability regions)
-→ Structural ridges (stable manifolds)
-→ IOTA events (transition points)
-→ Risk field P(IOTA)
-→ Navigation field
-```
-
----
-
-## Key Capability (current state)
-
-```text
-✔ detect transitions early
-✔ map instability regions
-✔ represent instability as a continuous field
-✔ steer trajectories through the system
-```
-
----
-
-## Example (Navigation Layer)
-
-![V36 Navigation](NEXAH_CORE/outputs/ieee_gates/v36_adaptive_target_trajectory.png)
-
-This shows:
-
-```text
-→ original trajectory vs. structure-aware navigation
-→ movement constrained by field geometry
-→ reduction of instability exposure
-```
-
----
-
-## Important
-
-```text
-NEXAH_CORE is still experimental.
-
-It represents the transition from:
-analysis → navigation → control (in progress)
-```
-
----
-
-## Where to start
-
-```text
-NEXAH_CORE/README.md
-NEXAH_CORE/mathematics/nexah_foundation.md
-NEXAH_CORE/docs/module_overview.md
-```
-
----
-
-# ❌ What NEXAH is NOT
-
-NEXAH does not rely on:
-
-- machine learning models  
-- predefined control rules  
-- purely simulation-based analysis  
-
-It is:
-
-> a **structure–field–geometry framework**  
-> that reconstructs and navigates dynamical systems directly from their dynamics
-
----
-
-# 🔥 Core Principle
-
-dynamics → structure → field → geometry → stability → control → navigation
-
----
-
-# 🧭 System Architecture
-
-Dynamics  
-→ Structure Extraction (Discovery phase)  
-→ Field Reconstruction (CORE)  
-→ Field Layer (geometry + stability)  
-→ Control Layer (CORE)  
-→ Navigation  
-
----
-
-## 🔬 Structure Extraction  
-Extracts structure from raw dynamics.
-
-## 🌊 Field Reconstruction (CORE)  
-Builds the field from trajectory data:
-
-- density  
-- flow  
-- boundary structure  
-- validity regions  
-
-## 🌐 Field Layer  
-Transforms structure into:
-
-- geometry  
-- stability  
-- interpretable field structure  
-
-## 🎮 Control Layer (CORE)  
-Operates on transition structure:
-
-- basin detection  
-- separatrix extraction  
-- gate detection  
-- trajectory steering  
-
-## 🧭 Navigation  
-Executes constrained motion through the field:
-
-- transition-aware movement  
-- stability-constrained paths  
-- convergence to attractors  
-
----
-
-# 🔥 Key Result — Power Systems (IEEE)
-
-NEXAH has been tested on IEEE grid models (118 → 9241 buses).
-
-Preliminary observation:
-
-> structural transition signals appear **earlier than classical failure detection methods**
-
-⚠️ Note:
-Exact timing (e.g. ~43.9s in some runs) depends on setup and is **not yet fully validated across all scenarios**.
-
----
-
-![IEEE Result](APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee300_transition_detection.png)
-
-Interpretation:
-
-- classical methods detect **state failure**  
-- NEXAH detects **structural transition**
-
----
-
-# 🧪 Minimal Demo — Structure inside Chaos
-
-Run:
+# 🧪 Demos
 
 ```bash
 python run_nexah_demo.py
+python run_ieee_demo.py
 ```
 
+---
 
+# 🧠 Learn More
 
-![NEXAH Demo](outputs/demo/nexah_lorenz_transitions.png)
+👉 [START_HERE.md](START_HERE.md)
+
+Full explanation, visuals, and system walkthrough.
 
 ---
 
-### Interpretation
+# ⚡ Core Insight
 
-The highlighted points mark **structural transitions** in the system.
-
-They are not random.
-
-They emerge from the **geometry of the dynamical field**:
-
-- trajectories follow structure  
-
-- transitions occur at specific regions  
-
-- the system reveals where change happens  
+```text
+Stability is not a value.
+It is a region in a structured field.
+```
 
 ---
 
-NEXAH does not detect events.  
-
-It reveals the structure that produces them.  
-
-It does not detect collapse.  
-
-It detects the structure that leads to it.
-
----
-
-# 🌀 From Chaos to Structure
-
-![Lorenz Chaos](BUILDER_LAB/DISCOVERY_ENGINE/outputs/lorenz_core_v4.png)
-
-![Manifold](BUILDER_LAB/DISCOVERY_ENGINE/outputs/lorenz_v8_manifold.png)
-
-![State Graph](BUILDER_LAB/DISCOVERY_ENGINE/outputs/v15_state_machine.png)
-
----
-
-# ⚡ What NEXAH enables
-
-- transition detection  
-
-- geometric interpretation  
-
-- early-warning signals  
-
-- system navigation  
-
-- structure-aware control  
-
----
-
-# 🧠 Current State
-
-### ✔ Working
-
-- structure extraction  
-
-- regime detection  
-
-- early transition signals  
-
-- control via transition geometry  
-
----
-
-### ⚠️ Limitations
-
-- no formal proof yet  
-
-- system-dependent performance  
-
-- ongoing validation  
-
----
-
-# 💡 Core Insight
-
-Stability is not a value.  
-
-It is a **region in a structured field**
-
----
-
-# 🌀 NEXAH
-
-From dynamics → structure  
-
-From structure → geometry  
-
-From geometry → stability  
-
-From stability → control  
-
-From control → navigation  
-
----
-
-Thomas K. R. Hofmann · 2026
+Thomas K. R. Hofmann · NEXAH · 2026
