@@ -1,15 +1,19 @@
 # ============================================================
-# 🧭 NEXAH — State Space Control (v5.1 STABLE)
+# 🧭 NEXAH — State Space Control v6
+# Basin-Level Switching Prototype
 # ============================================================
 #
 # Goal:
-# Stabilize field-based control in (x, v) space
-# without numerical explosion.
+# Controlled regime shifts ("step behavior") instead of only smoothing.
 #
-# Key Fix:
-# → bounded control
-# → blending instead of overriding dynamics
-# → gradient normalization
+# Core idea:
+# - build state space (x, dx/dt)
+# - define basins from signal levels
+# - detect high-risk points
+# - push trajectory toward neighboring basin center
+#
+# Status:
+# Prototype — first real "regime control"
 #
 # ============================================================
 
@@ -26,139 +30,156 @@ def build_state_space(x):
 
 
 # ------------------------------------------------------------
-# FIELD (density + gradient)
+# BASINS
 # ------------------------------------------------------------
 
-def compute_density_field(states, bins=40):
-    x = states[:, 0]
-    v = states[:, 1]
+def assign_basins_by_levels(x, levels=None):
+    """
+    Split signal into vertical regimes.
+    """
 
-    H, xedges, yedges = np.histogram2d(x, v, bins=bins)
-    H = H.T  # correct orientation
+    if levels is None:
+        levels = [-0.6, 0.0, 0.6]
 
-    # small smoothing to avoid zero gradients
-    H = H + 1e-6
+    return np.digitize(x, levels)
 
-    grad_y, grad_x = np.gradient(H)
 
-    return H, grad_x, grad_y, xedges, yedges
+def compute_basin_centers(states, basins):
+    centers = {}
+
+    for b in np.unique(basins):
+        pts = states[basins == b]
+
+        if len(pts) > 0:
+            centers[int(b)] = np.mean(pts, axis=0)
+
+    return centers
 
 
 # ------------------------------------------------------------
-# CORE CONTROL LOGIC
+# CONTROL
 # ------------------------------------------------------------
 
-def apply_state_space_control(
+def choose_target_basin(current, centers, direction):
+    keys = sorted(centers.keys())
+
+    if current not in keys:
+        return current
+
+    idx = keys.index(current)
+    target_idx = np.clip(idx + direction, 0, len(keys) - 1)
+
+    return keys[target_idx]
+
+
+def apply_basin_switch_control(
     x,
     risk,
-    strength=0.1,
+    strength=0.08,
     threshold=0.8,
-    bins=40
+    levels=None,
+    direction_policy="alternate"
 ):
-    """
-    Apply stable trajectory-aligned control.
-
-    Parameters
-    ----------
-    x : np.ndarray
-        input signal
-    risk : np.ndarray
-        risk signal (same length)
-    strength : float
-        control strength
-    threshold : float
-        activation threshold
-    bins : int
-        grid resolution
-
-    Returns
-    -------
-    x_controlled : np.ndarray
-    """
-
     states = build_state_space(x)
-    _, grad_x, grad_y, xedges, yedges = compute_density_field(states, bins)
+    basins = assign_basins_by_levels(x, levels)
+    centers = compute_basin_centers(states, basins)
 
-    x_controlled = x.copy()
+    x_ctrl = x.copy()
+    events = []
+
+    last_direction = 1
 
     for t in range(2, len(x) - 1):
 
-        # activate only on high-risk
         if risk[t] < threshold:
             continue
 
-        px, pv = states[t]
+        current = int(basins[t])
 
-        ix = np.searchsorted(xedges, px) - 1
-        iy = np.searchsorted(yedges, pv) - 1
+        # --- direction policy ---
+        if direction_policy == "up":
+            direction = 1
+        elif direction_policy == "down":
+            direction = -1
+        else:
+            direction = last_direction
+            last_direction *= -1
 
-        if not (0 <= ix < bins and 0 <= iy < bins):
+        target = choose_target_basin(current, centers, direction)
+
+        if target == current:
             continue
 
-        # --- local gradient ---
-        gx = grad_x[ix, iy]
-        gy = grad_y[ix, iy]
+        # --- current state ---
+        px = x_ctrl[t]
+        pv = x_ctrl[t] - x_ctrl[t - 1]
+        current_state = np.array([px, pv])
 
-        grad_vec = np.array([gx, gy])
+        target_state = centers[target]
 
-        # --- current motion ---
-        dx = x_controlled[t] - x_controlled[t - 1]
+        # --- movement toward basin center ---
+        delta = target_state - current_state
 
-        # -------------------------
-        # 🔥 STABILITY FIXES
-        # -------------------------
+        correction = strength * delta[0]
+        correction = np.clip(correction, -0.12, 0.12)
 
-        # 1. limit motion
-        dx = np.clip(dx, -1.0, 1.0)
+        x_ctrl[t + 1] = x_ctrl[t] + correction
 
-        # 2. normalize gradient
-        grad_norm = np.linalg.norm(grad_vec) + 1e-8
-        grad_unit = grad_vec / grad_norm
+        events.append({
+            "t": int(t),
+            "from": current,
+            "to": target,
+            "risk": float(risk[t]),
+            "corr": float(correction),
+        })
 
-        # 3. bounded correction
-        correction = strength * dx * grad_unit[0]
-        correction = np.clip(correction, -0.1, 0.1)
-
-        # 4. blend (CRITICAL)
-        new_dx = (1 - strength) * dx - correction
-
-        # integrate
-        x_controlled[t + 1] = x_controlled[t] + new_dx
-
-    return x_controlled
+    return x_ctrl, basins, events
 
 
 # ------------------------------------------------------------
-# OPTIONAL: INTERNAL TEST (standalone)
+# DEMO
 # ------------------------------------------------------------
 
-def _demo():
+def demo():
     import matplotlib.pyplot as plt
 
-    # simple signal
-    t = np.linspace(0, 20, 500)
+    n = 500
+    t = np.linspace(0, 20, n)
     x = np.sin(t) + 0.3 * np.sin(5 * t)
 
-    # simple risk
     flow = np.abs(np.gradient(x))
     accel = np.abs(np.gradient(flow))
     risk = flow * accel
     risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
 
-    x_ctrl = apply_state_space_control(x, risk)
-
-    plt.figure(figsize=(12, 5))
-    plt.plot(x, label="Original")
-    plt.plot(x_ctrl, "--", label="Controlled")
+    x_ctrl, basins, events = apply_basin_switch_control(
+        x,
+        risk,
+        strength=0.08,
+        threshold=0.8,
+        direction_policy="alternate"
+    )
 
     peaks = np.where(risk > 0.8)[0]
-    plt.scatter(peaks, x[peaks], color="red", label="High Risk")
 
+    plt.figure(figsize=(12, 5))
+    plt.plot(x, label="Original", alpha=0.7)
+    plt.plot(x_ctrl, "--", label="Controlled v6")
+
+    plt.scatter(peaks, x[peaks], color="red", s=20, label="High Risk")
+
+    for e in events:
+        plt.axvline(e["t"], color="gray", alpha=0.15)
+
+    plt.title(f"NEXAH v6 — Basin Switching | events={len(events)}")
     plt.legend()
-    plt.title("State Space Control v5.1")
     plt.tight_layout()
     plt.show()
 
+    print("\n--- Events ---")
+    for e in events[:20]:
+        print(e)
+
 
 if __name__ == "__main__":
-    _demo()
+    demo()
