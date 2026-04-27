@@ -2,7 +2,10 @@ import numpy as np
 
 # FIELD
 from nexah.field_layer.core.field import compute_field
-from nexah.field_layer.core.metrics import compute_flow_strength, compute_acceleration
+from nexah.field_layer.core.metrics import (
+    compute_flow_strength,
+    compute_curvature,
+)
 
 # BASIN
 from nexah.core.system.basin import assign_basins_by_threshold
@@ -29,24 +32,24 @@ def run_pipeline():
     # --- state ---
     x = generate_signal()
 
-    # reshape to (N, 1) for field
+    # reshape to (T, 1)
     X = x.reshape(-1, 1)
 
     # --- FIELD ---
     F = compute_field(X)
 
     flow = compute_flow_strength(F)
-    accel = compute_acceleration(X)
+    curvature = compute_curvature(F)
 
-    # align lengths
-    min_len = min(len(flow), len(accel))
+    # align lengths (safety)
+    min_len = min(len(flow), len(curvature))
     flow = flow[:min_len]
-    accel = accel[:min_len]
+    curvature = curvature[:min_len]
 
     # --- SIGNAL (risk) ---
-    risk = flow * accel
+    risk = flow * curvature
 
-    # normalize for stability
+    # normalize
     risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
 
     # --- BASIN ---
@@ -61,7 +64,7 @@ def run_pipeline():
     return {
         "x": x,
         "flow": flow,
-        "accel": accel,
+        "curvature": curvature,
         "risk": risk,
         "basins": basins,
         "P": P,
