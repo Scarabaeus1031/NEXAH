@@ -93,7 +93,7 @@ A **regime** is a region where:
 
 ---
 
-![Lorenz vs Halvorsen — Continuous Flow to Discrete Structure](RESEARCH/visuals/lorenz_haverson_v_2.png)
+![Lorenz vs Halvorsen — Continuous Flow to Discrete Structure](./visuals/lorenz_haverson_v_2.png)
 
 *Different systems exhibit distinct flow regimes, yet share structured transition behavior and underlying discrete dynamics.*
 
