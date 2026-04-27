@@ -1,0 +1,22 @@
+NEXAH — Halvorsen Component Connection Report
+============================================================
+
+Source matrix: APPLICATIONS/dynamical_systems/halvorsen/outputs/coarse_matrix_20260427_022349.npy
+
+WEAK COMPONENTS
+------------------------------------------------------------
+Component 0: [0, 1, 2, 4, 5]
+Component 1: [3, 6, 7, 8, 12, 13, 14]
+Component 2: [9, 10, 11]
+Component 3: [15, 16, 17]
+
+BRIDGES ADDED
+------------------------------------------------------------
+5 -> 3 | bridge_weight=0.0500
+14 -> 9 | bridge_weight=0.0500
+11 -> 15 | bridge_weight=0.0500
+
+NOTE
+------------------------------------------------------------
+Bridge edges are synthetic control candidates, not observed transitions.
+They represent minimal interventions required for global navigability.
