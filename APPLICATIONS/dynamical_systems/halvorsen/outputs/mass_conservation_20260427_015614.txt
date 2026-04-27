@@ -1,0 +1,14 @@
+NEXAH — Mass Conservation Report
+==================================================
+
+RAW TRANSITIONS:
+B1 -> {'B2': 0.6, 'B3': 0.7, 'B4': 0.3}
+
+RAW SUMS:
+B1: 1.600000
+
+NORMALIZED TRANSITIONS:
+B1 -> {'B2': 0.375, 'B3': 0.4375, 'B4': 0.1875}
+
+NORMALIZED SUMS:
+B1: 1.000000
