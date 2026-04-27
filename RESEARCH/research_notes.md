@@ -51,7 +51,7 @@ regime = locally stable flow structure
 transition = guided movement between regimes
 ```
 
-![NEXAH — From Field Discovery to Controlled Navigation](RESEARCH/visuals/a_detailed_infographic_poster_diagram_in_a_clean_s.png)
+![NEXAH — From Field Discovery to Controlled Navigation](./visuals/a_detailed_infographic_poster_diagram_in_a_clean_s.png)
 
 *Observed vs controlled behavior: systems first reveal structure (left), then can be guided through it (right).*
 
