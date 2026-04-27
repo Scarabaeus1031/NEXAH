@@ -29,3 +29,18 @@ class Field:
 
     def get_state(self, t: int):
         return self.states[t]
+    def compute_field(X):
+    
+    """
+    Unified interface for FIELD computation.
+
+    Parameters
+    ----------
+    X : np.ndarray (T, N)
+
+    Returns
+    -------
+    vectors : np.ndarray (T, N)
+    """
+    field = Field(X)
+    return field.get_vector_field()
