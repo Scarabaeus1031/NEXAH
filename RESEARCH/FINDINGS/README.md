@@ -11,9 +11,11 @@ in dynamical systems.
 
 This document is a **summary**, not the full result set.
 
-For complete, structured and validated findings:
+For structured findings at different levels:
 
-→ [core_findings.md](./core_findings.md)
+→ [core_findings.md](./core_findings.md)  
+→ [dynamical_unification.md](./dynamical_unification.md)  
+→ [../NEXAH_CORE/findings.md](../../NEXAH_CORE/findings.md)
 
 ---
 
@@ -37,7 +39,7 @@ to:
 
 # 🔬 What was observed
 
-Across multiple systems (Lorenz, power systems), the following consistent patterns emerge:
+Across multiple systems (Lorenz, Halvorsen, power systems), the following patterns emerge:
 
 - transitions are **not discrete events**, but spatially extended processes  
 - transition regions form **geometric channels**  
@@ -45,6 +47,25 @@ Across multiple systems (Lorenz, power systems), the following consistent patter
 - system motion follows an **implicit energy landscape**  
 - systems converge toward **stable attractor structures**  
 - trajectories can be **locally influenced and redirected**  
+
+---
+
+# 🔷 Cross-System Insight (NEW)
+
+A key result of recent experiments:
+
+→ [dynamical_unification.md](./dynamical_unification.md)
+
+```text
+Different systems (Lorenz, Halvorsen) exhibit different flow geometries,
+but share the same transition structure.
+```
+
+This reveals:
+
+- transition structure is **invariant across systems**  
+- flow geometry changes, but structure persists  
+- control operates on transitions, not trajectories  
 
 ---
 
@@ -61,12 +82,6 @@ NEXAH enables:
 
 > understanding where the system is  
 > and **steering how it moves**
-
-Potential implications:
-
-- early detection of critical transitions  
-- trajectory-based control  
-- navigation between system regimes  
 
 ---
 
@@ -105,11 +120,18 @@ NEXAH reconstructs the local field structure, revealing:
 
 ---
 
-# 🔬 Next Step
+# 🔬 Next Steps
 
-For full results, definitions, and validation:
+For deeper layers:
 
+### Core empirical findings  
 → [core_findings.md](./core_findings.md)
+
+### Cross-system structure (Lorenz ↔ Halvorsen)  
+→ [dynamical_unification.md](./dynamical_unification.md)
+
+### Full system architecture / kernel  
+→ [../../NEXAH_CORE/findings.md](../../NEXAH_CORE/findings.md)
 
 ---
 
