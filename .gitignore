@@ -123,3 +123,19 @@ htmlcov/
 # --- HALVORSEN EXPERIMENTS (ALLOW NPY) ---
 !APPLICATIONS/dynamical_systems/halvorsen/outputs/
 !APPLICATIONS/dynamical_systems/halvorsen/outputs/*.npy
+
+# ignore all raw data
+**/*.npy
+**/data/
+
+# allow halvorsen outputs folder
+!APPLICATIONS/dynamical_systems/halvorsen/outputs/
+
+# but ignore raw outputs
+APPLICATIONS/dynamical_systems/halvorsen/outputs/*.npy
+APPLICATIONS/dynamical_systems/halvorsen/outputs/*.txt
+
+# keep visuals
+!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.png
+!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.gif
+!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.mp4
