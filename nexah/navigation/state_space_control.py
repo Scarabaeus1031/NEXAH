@@ -153,14 +153,64 @@ if __name__ == "__main__":
     plot_state_space_control()
 
 # ------------------------------------------------------------
-# PUBLIC API (for demos / pipelines)
+# PUBLIC API (fixed)
 # ------------------------------------------------------------
 
-def apply_state_space_control(**kwargs):
+def apply_state_space_control(x=None, risk=None, **kwargs):
     """
-    Standard interface for external modules (demo / pipeline).
+    External API for demos.
+
+    Supports:
+    - direct input (x, risk)
+    - or internal generation via kwargs
 
     Returns:
-        x, x_controlled, risk
+        x_controlled
     """
-    return run_state_space_control(**kwargs)
+
+    # fallback: full pipeline
+    if x is None:
+        x, x_ctrl, risk = run_state_space_control(**kwargs)
+        return x_ctrl
+
+    # otherwise: apply control only
+    X = x.reshape(-1, 1)
+    states = build_state_space(x)
+
+    H, grad_x, grad_y, xedges, yedges = compute_density_field(states)
+
+    x_controlled = x.copy()
+
+    for t in range(2, len(x) - 1):
+        if risk[t] < kwargs.get("threshold", 0.8):
+            continue
+
+        px, pv = states[t]
+
+        ix = np.searchsorted(xedges, px) - 1
+        iy = np.searchsorted(yedges, pv) - 1
+
+        if not (0 <= ix < grad_x.shape[0] and 0 <= iy < grad_x.shape[1]):
+            continue
+
+        gx = grad_x[ix, iy]
+        gy = grad_y[ix, iy]
+
+        grad_vec = np.array([gx, gy])
+
+        dx = x_controlled[t] - x_controlled[t - 1]
+        dx = np.clip(dx, -1.0, 1.0)
+
+        grad_norm = np.linalg.norm(grad_vec) + 1e-8
+        grad_unit = grad_vec / grad_norm
+
+        strength = kwargs.get("strength", 0.15)
+
+        correction = strength * dx * grad_unit[0]
+        correction = np.clip(correction, -0.1, 0.1)
+
+        new_dx = (1 - strength) * dx - correction
+
+        x_controlled[t + 1] = x_controlled[t] + new_dx
+
+    return x_controlled
