@@ -1,19 +1,6 @@
 # ============================================================
-# 🧭 NEXAH — State Space Control (v8)
-# Graph-Aware Transition Control
-# ============================================================
-#
-# Purpose:
-# Use the intrinsic transition graph to guide control.
-#
-# Core shift:
-# v7: target transition manually
-# v8: learn transition graph first, then follow dominant structure
-#
-# Rule:
-# Core module returns data.
-# No saving. No plotting.
-#
+# 🧭 NEXAH — State Space Control (v9)
+# Transition Activation + Graph Control
 # ============================================================
 
 import numpy as np
@@ -25,12 +12,23 @@ from nexah.navigation.transition_graph import (
 
 
 # ------------------------------------------------------------
-# SIGNAL
+# SIGNAL (UNSTABLE REGIME)
 # ------------------------------------------------------------
 
 def generate_signal(n=500):
     t = np.linspace(0, 20, n)
-    return np.sin(t) + 0.3 * np.sin(5 * t)
+
+    base = np.sin(t)
+    high = 0.3 * np.sin(5 * t)
+
+    # 🔥 NEW: slow drift
+    drift = 0.4 * np.sin(0.2 * t)
+
+    # 🔥 NEW: noise
+    noise = 0.08 * np.random.randn(n)
+
+    x = base + high + drift + noise
+    return x
 
 
 # ------------------------------------------------------------
@@ -72,50 +70,9 @@ def apply_graph_aware_control(
     x,
     risk,
     strength=0.08,
-    threshold=0.8,
+    threshold=0.75,
     levels=None,
 ):
-    """
-    Apply graph-aware transition control.
-
-    Steps:
-    1. Segment signal into basins.
-    2. Build transition graph from basin sequence.
-    3. At high-risk points, determine dominant natural transition.
-    4. Steer gently toward the dominant next basin center.
-
-    Parameters
-    ----------
-    x : np.ndarray
-        Input signal.
-
-    risk : np.ndarray
-        Risk signal in [0, 1].
-
-    strength : float
-        Control strength.
-
-    threshold : float
-        Risk activation threshold.
-
-    levels : list | None
-        Basin thresholds.
-
-    Returns
-    -------
-    x_controlled : np.ndarray
-        Controlled signal.
-
-    basins : np.ndarray
-        Basin assignments.
-
-    graph : dict
-        Transition graph.
-
-    events : list[dict]
-        Control events.
-    """
-
     states = build_state_space(x)
     basins = assign_basins(x, levels)
     centers = compute_basin_centers(states, basins)
@@ -136,42 +93,41 @@ def apply_graph_aware_control(
         if target_basin is None:
             continue
 
-        if target_basin == current_basin:
-            continue
-
         if target_basin not in centers:
             continue
 
-        # current controlled state
+        # current state
         px = x_ctrl[t]
         pv = x_ctrl[t] - x_ctrl[t - 1]
         current_state = np.array([px, pv])
 
         target_state = centers[target_basin]
 
-        # vector toward natural next basin
         delta = target_state - current_state
 
-        correction = strength * delta[0]
-        correction = np.clip(correction, -0.12, 0.12)
+        # 🔥 stronger activation near transitions
+        activation = 1.0 + 0.5 * risk[t]
 
-        # blend with current motion
+        correction = strength * activation * delta[0]
+        correction = np.clip(correction, -0.2, 0.2)
+
         dx = x_ctrl[t] - x_ctrl[t - 1]
-        dx = np.clip(dx, -1.0, 1.0)
+        dx = np.clip(dx, -1.5, 1.5)
 
         new_dx = (1 - strength) * dx + correction
 
         x_ctrl[t + 1] = x_ctrl[t] + new_dx
 
-        events.append(
-            {
-                "t": int(t),
-                "from": int(current_basin),
-                "to": int(target_basin),
-                "risk": float(risk[t]),
-                "correction": float(correction),
-            }
-        )
+        if current_basin != target_basin:
+            events.append(
+                {
+                    "t": int(t),
+                    "from": int(current_basin),
+                    "to": int(target_basin),
+                    "risk": float(risk[t]),
+                    "correction": float(correction),
+                }
+            )
 
     return x_ctrl, basins, graph, events
 
@@ -193,22 +149,22 @@ def demo():
     x_ctrl, basins, graph, events = apply_graph_aware_control(
         x,
         risk,
-        strength=0.08,
-        threshold=0.8,
+        strength=0.1,
+        threshold=0.7,
     )
 
-    peaks = np.where(risk > 0.8)[0]
+    peaks = np.where(risk > 0.7)[0]
 
     plt.figure(figsize=(12, 5))
-    plt.plot(x, label="Original", alpha=0.7)
-    plt.plot(x_ctrl, "--", label="Controlled v8")
+    plt.plot(x, label="Original", alpha=0.6)
+    plt.plot(x_ctrl, "--", label="Controlled v9")
 
     plt.scatter(peaks, x[peaks], color="red", s=20, label="High Risk")
 
     for e in events:
         plt.axvline(e["t"], color="gray", alpha=0.08)
 
-    plt.title(f"NEXAH v8 — Graph-Aware Control | events={len(events)}")
+    plt.title(f"NEXAH v9 — Activated Transitions | events={len(events)}")
     plt.legend()
     plt.tight_layout()
     plt.show()
