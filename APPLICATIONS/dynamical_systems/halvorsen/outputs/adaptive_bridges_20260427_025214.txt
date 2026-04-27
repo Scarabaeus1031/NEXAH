@@ -1,0 +1,11 @@
+NEXAH — Adaptive Bridge Report
+==================================================
+
+Source matrix: APPLICATIONS/dynamical_systems/halvorsen/outputs/coarse_matrix_20260427_022349.npy
+
+2 -> 3 | weight=0.4554
+3 -> 6 | weight=0.4840
+6 -> 7 | weight=0.4036
+8 -> 9 | weight=0.3545
+12 -> 10 | weight=0.3766
+10 -> 11 | weight=0.2500
