@@ -130,7 +130,7 @@ def run_flow_animation(
             basin_dot,
         )
 
-    anim = FuncAnimation(
+       anim = FuncAnimation(
         fig,
         update,
         frames=n,
@@ -139,8 +139,24 @@ def run_flow_animation(
     )
 
     plt.tight_layout()
+
+    # ----------------------------
+    # OPTIONAL EXPORT
+    # ----------------------------
+    save = True  # <- toggle
+
+    if save:
+        import os
+        os.makedirs("outputs", exist_ok=True)
+
+        print("Saving animation to outputs/nexah_flow.gif ...")
+
+        anim.save(
+            "outputs/nexah_flow.gif",
+            writer="pillow",
+            fps=30
+        )
+
+        print("Done.")
+
     plt.show()
-
-
-if __name__ == "__main__":
-    run_flow_animation()
