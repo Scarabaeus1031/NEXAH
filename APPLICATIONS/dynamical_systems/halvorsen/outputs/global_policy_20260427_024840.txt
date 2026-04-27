@@ -1,0 +1,48 @@
+NEXAH — Halvorsen Global Policy
+============================================================
+
+Target cluster: 15
+Source matrix: APPLICATIONS/dynamical_systems/halvorsen/outputs/connected_matrix_20260427_024610.npy
+Matrix type: connected
+
+POLICY
+------------------------------------------------------------
+0 -> STOP / UNREACHABLE
+1 -> STOP / UNREACHABLE
+2 -> STOP / UNREACHABLE
+3 -> STOP / UNREACHABLE
+4 -> STOP / UNREACHABLE
+5 -> STOP / UNREACHABLE
+6 -> STOP / UNREACHABLE
+7 -> STOP / UNREACHABLE
+8 -> STOP / UNREACHABLE
+9 -> 17
+10 -> 9
+11 -> 15
+12 -> STOP / UNREACHABLE
+13 -> STOP / UNREACHABLE
+14 -> 9
+15 -> STOP / UNREACHABLE
+16 -> 15
+17 -> 15
+
+PATHS
+------------------------------------------------------------
+0: NO PATH
+1: NO PATH
+2: NO PATH
+3: NO PATH
+4: NO PATH
+5: NO PATH
+6: NO PATH
+7: NO PATH
+8: NO PATH
+9: path=[9, 17, 15] | cost=5.5626
+10: path=[10, 9, 17, 15] | cost=6.2558
+11: path=[11, 15] | cost=3.0445
+12: NO PATH
+13: NO PATH
+14: path=[14, 9, 17, 15] | cost=8.6071
+15: path=[15] | cost=0.0000
+16: path=[16, 15] | cost=2.0203
+17: path=[17, 15] | cost=1.5041
