@@ -1,5 +1,5 @@
 # ============================================================
-# 🧭 NEXAH v13 — Flow Animation
+# 🧭 NEXAH v13 — Flow Animation (FIXED)
 # ============================================================
 
 import numpy as np
@@ -51,7 +51,7 @@ def run_flow_animation(
         ax_time.axhline(lvl, color="gray", alpha=0.08)
 
     time_trail, = ax_time.plot([], [], color="blue", linewidth=2)
-    time_dot, = ax_time.plot([], [], "o", color="red", markersize=6)
+    time_dot, = ax_time.plot([], [], "o", color="black", markersize=5)
 
     ax_time.set_xlim(0, n)
     ax_time.set_ylim(np.min(x) - 0.2, np.max(x) + 0.2)
@@ -63,7 +63,7 @@ def run_flow_animation(
     ax_state.plot(x, v, color="gray", alpha=0.25)
 
     state_trail, = ax_state.plot([], [], color="purple", linewidth=2)
-    state_dot, = ax_state.plot([], [], "o", color="red", markersize=6)
+    state_dot, = ax_state.plot([], [], "o", color="black", markersize=5)
 
     ax_state.set_xlim(np.min(x) - 0.2, np.max(x) + 0.2)
     ax_state.set_ylim(np.min(v) - 0.05, np.max(v) + 0.05)
@@ -75,93 +75,95 @@ def run_flow_animation(
     ax_basin.plot(basins, color="green", alpha=0.35)
 
     basin_trail, = ax_basin.plot([], [], color="green", linewidth=2)
-    basin_dot, = ax_basin.plot([], [], "o", color="red", markersize=6)
+    basin_dot, = ax_basin.plot([], [], "o", color="black", markersize=5)
 
     ax_basin.set_xlim(0, n)
     ax_basin.set_ylim(np.min(basins) - 1, np.max(basins) + 1)
     ax_basin.set_title("Basin Space")
 
     # ----------------------------
-# Animation
-# ----------------------------
-def update(frame):
-    start = max(0, frame - trail)
+    # Animation Update
+    # ----------------------------
+    def update(frame):
+        start = max(0, frame - trail)
+        t_range = np.arange(start, frame + 1)
 
-    t_range = np.arange(start, frame + 1)
+        # Time
+        time_trail.set_data(t_range, x[start:frame + 1])
+        time_dot.set_data([frame], [x[frame]])
 
-    # time
-    time_trail.set_data(t_range, x[start:frame + 1])
-    time_dot.set_data([frame], [x[frame]])
+        # State
+        state_trail.set_data(x[start:frame + 1], v[start:frame + 1])
+        state_dot.set_data([x[frame]], [v[frame]])
 
-    # state
-    state_trail.set_data(x[start:frame + 1], v[start:frame + 1])
-    state_dot.set_data([x[frame]], [v[frame]])
+        # Basin
+        basin_trail.set_data(t_range, basins[start:frame + 1])
+        basin_dot.set_data([frame], [basins[frame]])
 
-    # basin
-    basin_trail.set_data(t_range, basins[start:frame + 1])
-    basin_dot.set_data([frame], [basins[frame]])
+        # Risk highlight
+        if high_risk[frame]:
+            size = 9
+            color = "red"
+        else:
+            size = 5
+            color = "black"
 
-    # risk highlight
-    if high_risk[frame]:
-        size = 9
-        color = "red"
-    else:
-        size = 5
-        color = "black"
+        for dot in [time_dot, state_dot, basin_dot]:
+            dot.set_markersize(size)
+            dot.set_color(color)
 
-    time_dot.set_markersize(size)
-    state_dot.set_markersize(size)
-    basin_dot.set_markersize(size)
+        fig.suptitle(
+            f"NEXAH v13 — t={frame} | basin={basins[frame]} | risk={risk[frame]:.3f}"
+        )
 
-    time_dot.set_color(color)
-    state_dot.set_color(color)
-    basin_dot.set_color(color)
+        return (
+            time_trail,
+            time_dot,
+            state_trail,
+            state_dot,
+            basin_trail,
+            basin_dot,
+        )
 
-    fig.suptitle(
-        f"NEXAH v13 — t={frame} | basin={basins[frame]} | risk={risk[frame]:.3f}"
+    # ----------------------------
+    # CREATE ANIMATION  ✅ (FIXED POSITION)
+    # ----------------------------
+    anim = FuncAnimation(
+        fig,
+        update,
+        frames=n,
+        interval=interval,
+        repeat=True,
     )
 
-    return (
-        time_trail,
-        time_dot,
-        state_trail,
-        state_dot,
-        basin_trail,
-        basin_dot,
-    )
+    plt.tight_layout()
+
+    # ----------------------------
+    # OPTIONAL EXPORT
+    # ----------------------------
+    save = True  # toggle
+
+    if save:
+        import os
+        os.makedirs("outputs", exist_ok=True)
+
+        print("Saving animation to outputs/nexah_flow.gif ...")
+
+        anim.save(
+            "outputs/nexah_flow.gif",
+            writer="pillow",
+            fps=30
+        )
+
+        print("Done.")
+
+    plt.show()
+
+    return anim
 
 
 # ----------------------------
-# CREATE ANIMATION (OUTSIDE update!)
+# ENTRY POINT
 # ----------------------------
-anim = FuncAnimation(
-    fig,
-    update,
-    frames=n,
-    interval=interval,
-    repeat=True,
-)
-
-plt.tight_layout()
-
-
-# ----------------------------
-# OPTIONAL EXPORT
-# ----------------------------
-save = True  # <- toggle
-
-if save:
-    import os
-    os.makedirs("outputs", exist_ok=True)
-
-    print("Saving animation to outputs/nexah_flow.gif ...")
-
-    anim.save(
-        "outputs/nexah_flow.gif",
-        writer="pillow",
-        fps=30
-    )
-
-    print("Done.")
-
-plt.show()
+if __name__ == "__main__":
+    run_flow_animation()
