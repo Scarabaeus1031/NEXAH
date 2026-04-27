@@ -133,6 +133,26 @@ def save_outputs(matrix, mapping):
             f.write(f"{state} -> cluster {cluster}\n")
 
     # PNG matrix
+    png_path = f"{base_path}/coarse_matrix_{timestamp}.png"
+    plt.figure(figsize=(6,5))
+    plt.imshow(matrix)
+    plt.colorbar()
+    plt.title("Coarse Transition Matrix")
+    plt.xlabel("to cluster")
+    plt.ylabel("from cluster")
+    plt.tight_layout()
+    plt.savefig(png_path)
+    plt.close()
+
+    # NPY matrix (🔥 WICHTIG für nächste Schritte)
+    npy_path = f"{base_path}/coarse_matrix_{timestamp}.npy"
+    np.save(npy_path, matrix)
+
+    print(f"[✓] Mapping saved: {txt_path}")
+    print(f"[✓] Matrix PNG saved: {png_path}")
+    print(f"[✓] Matrix NPY saved: {npy_path}")
+
+    # PNG matrix
     fig = plt.figure(figsize=(6,5))
     plt.imshow(matrix)
     plt.title("Coarse-Grained Transition Matrix")
