@@ -20,6 +20,6 @@ for i in range(T):
     state = state + dt * halvorsen(state)
 
 # save
-np.save("APPLICATIONS/dynamical_systems/halvorsen/data/trajectory.npy", traj)
+np.save("../data/trajectory.npy", traj)
 
 print("✓ trajectory saved")
