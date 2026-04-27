@@ -14,7 +14,7 @@ but share a common transition structure.
 
 ---
 
-## 🔷 1. SYSTEM CONTRAST
+#🔷 1. Empirical System Contrast
 
 ### Lorenz
 
@@ -53,7 +53,7 @@ Both exhibit structured transitions.
 
 ---
 
-## 🔁 2. UNIFIED VIEW
+# 🔁 2. Structural Unification
 
 Both systems can be described as:
 
