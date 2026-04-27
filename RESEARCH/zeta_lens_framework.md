@@ -1,4 +1,17 @@
-# 🧠 NEXAH — Zeta Lens Framework (Exploratory)
+
+# 🧠 NEXAH — Zeta Lens Framework (Interpretation Layer)
+
+⚠️ This document is a **purely conceptual analogy layer**.
+
+It is NOT:
+
+- a contribution to number theory  
+- a statement about the Riemann zeta function  
+- a mathematical claim  
+
+It is used as:
+
+> a **cognitive mapping tool to reason about structure vs observation**# 🧠 NEXAH — Zeta Lens Framework (Exploratory)
 
 This document introduces a **conceptual interpretation layer**  
 inspired by structures observed in the Riemann zeta function.
