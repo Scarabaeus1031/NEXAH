@@ -38,8 +38,14 @@ def compute_gradient_field(risk_grid):
 
 def apply_state_space_control(x, risk, strength=0.1, bins=50):
     """
-    Apply control based on spatial risk gradient
+    Trajectory-aligned control (v5)
+
+    Instead of modifying position directly,
+    we modify the direction of motion.
+
+    This prevents drift and collapse.
     """
+
     states = build_state_space(x)
 
     risk_grid, xedges, yedges = build_risk_grid(states, risk, bins=bins)
@@ -47,17 +53,41 @@ def apply_state_space_control(x, risk, strength=0.1, bins=50):
 
     x_controlled = x.copy()
 
-    for t in range(1, len(x) - 1):
+    for t in range(2, len(x) - 1):
         px, pv = states[t]
 
-        # find grid index
+        # grid index
         ix = np.searchsorted(xedges, px) - 1
         iy = np.searchsorted(yedges, pv) - 1
 
-        if 0 <= ix < bins and 0 <= iy < bins:
-            gx = grad_x[ix, iy]
+        if not (0 <= ix < bins and 0 <= iy < bins):
+            continue
 
-            # steer opposite to gradient
-            x_controlled[t + 1] = x_controlled[t] - strength * gx
+        # --- gradient in state space ---
+        gx = grad_x[ix, iy]
+        gy = grad_y[ix, iy]
+
+        grad_vec = np.array([gx, gy])
+
+        # --- current motion ---
+        dx = x_controlled[t] - x_controlled[t - 1]
+        dv = px - states[t - 1][0]  # approx velocity change
+
+        motion_vec = np.array([dx, dv])
+
+        # normalize (avoid explosions)
+        norm = np.linalg.norm(motion_vec) + 1e-8
+        motion_unit = motion_vec / norm
+
+        # --- projection: how much motion aligns with risk ---
+        projection = np.dot(motion_unit, grad_vec)
+
+        # --- correction only along motion direction ---
+        correction = strength * projection
+
+        # --- apply ONLY to motion ---
+        new_dx = dx - correction
+
+        x_controlled[t + 1] = x_controlled[t] + new_dx
 
     return x_controlled
