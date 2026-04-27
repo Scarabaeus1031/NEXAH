@@ -143,7 +143,7 @@ def plot_path(graph, path, base_path):
 
 
 # ============================================================
-# SAVE TXT
+# SAVE TXT (FIXED)
 # ============================================================
 
 def save_path(path, cost, base_path):
@@ -153,14 +153,30 @@ def save_path(path, cost, base_path):
     with open(txt_path, "w") as f:
         f.write("NEXAH Path Planning\n")
         f.write("="*40 + "\n\n")
-        f.write(f"path: {path}\n")
-        f.write(f"cost: {cost:.4f}\n")
+
+        if path is None:
+            f.write("NO PATH FOUND\n")
+        else:
+            f.write(f"path: {path}\n")
+            f.write(f"cost: {cost:.4f}\n")
 
     print(f"[✓] Path TXT saved: {txt_path}")
 
 
 # ============================================================
-# MAIN
+# DEBUG: SHOW GRAPH CONNECTIONS
+# ============================================================
+
+def debug_graph(graph):
+    print("\n--- GRAPH STRUCTURE ---")
+    for node in graph:
+        neighbors = [n for (n, _, _) in graph[node]]
+        print(f"{node} -> {neighbors}")
+    print("------------------------\n")
+
+
+# ============================================================
+# MAIN (FIXED)
 # ============================================================
 
 if __name__ == "__main__":
@@ -174,18 +190,26 @@ if __name__ == "__main__":
     print("→ build graph")
     graph = build_graph(M, threshold=0.05)
 
-    # 🔥 HIER SPIELST DU
+    # 🔍 DEBUG (WICHTIG!)
+    debug_graph(graph)
+
+    # 🔥 SPIEL HIERMIT
     start = 6
     target = 15
 
     print(f"→ plan path: {start} → {target}")
     cost, path = shortest_path(graph, start, target)
 
-    print("PATH:", path)
-    print("COST:", cost)
+    if path is None:
+        print("❌ NO PATH FOUND")
+    else:
+        print("PATH:", path)
+        print("COST:", cost)
 
     print("→ save")
     save_path(path, cost, base_path)
-    plot_path(graph, path, base_path)
+
+    if path is not None:
+        plot_path(graph, path, base_path)
 
     print("✔ DONE")
