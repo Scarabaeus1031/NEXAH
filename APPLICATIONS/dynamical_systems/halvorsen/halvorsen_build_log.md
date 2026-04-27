@@ -1,229 +1,286 @@
 # NEXAH — Halvorsen Build Log
-============================================================
 
-Status: ACTIVE
-System: Halvorsen Attractor (Coarse → Control Pipeline)
+Status: ACTIVE  
+System: Halvorsen Attractor  
+Pipeline: Continuous Flow → Transition Matrix → Gates → Policy → Residue Dynamics → Dual-System Animation
 
-------------------------------------------------------------
-0. RAW SYSTEM
-------------------------------------------------------------
+---
 
-Simulation + Attractor
+## 0. RAW SYSTEM
 
-![Halvorssen Attractor](outputs/halvorsen_attractor_20260427_014720.png)
+Simulation of the Halvorsen attractor.
 
-→ Continuous chaotic system
-→ No discrete structure yet
+![Halvorsen Attractor](outputs/halvorsen_attractor_20260427_014720.png)
 
+**Interpretation**
 
-------------------------------------------------------------
-1. TRANSITION EXTRACTION
-------------------------------------------------------------
+- Continuous chaotic flow  
+- No explicit discrete structure yet  
+- Attractor shows rotational / cyclic organization  
+
+---
+
+## 1. TRANSITION EXTRACTION
 
 ![Transition Matrix](outputs/transition_matrix_20260427_015925.png)
 
-→ Discretization of flow
-→ Probabilistic transition graph
+**Result**
 
+- Flow discretized into transition states  
+- Probabilistic transition graph extracted  
+- First Markov-like representation  
 
-------------------------------------------------------------
-2. MASS CONSERVATION CHECK
-------------------------------------------------------------
+---
+
+## 2. MASS CONSERVATION CHECK
 
 ![Mass Conservation](outputs/mass_conservation_20260427_015614.png)
 
-→ Row normalization valid
-→ Markov structure confirmed
+**Result**
 
+- Row-normalized transition matrix  
+- Markov structure validated  
 
-------------------------------------------------------------
-3. COARSE GRAINING
-------------------------------------------------------------
+```text
+Σ P(B_i → B_j) = 1
+```
+
+---
+
+## 3. COARSE GRAINING
 
 ![Coarse Matrix](outputs/coarse_matrix_20260427_022349.png)
 
-→ Collapse into basins
-→ Emergent diagonal structure
+**Result**
 
-Key observation:
-- quasi-chain + weak off-diagonal jumps
+- Collapse into basins  
+- Strong diagonal structure emerges  
+- Off-diagonal = transition channels  
 
+**Key insight**
 
-------------------------------------------------------------
-4. GATE DETECTION
-------------------------------------------------------------
+- quasi-chain + cyclic movement  
+
+---
+
+## 4. GATE DETECTION
 
 ![Gates](outputs/gates_20260427_022645.png)
 
-→ rare transitions identified
-→ “escape channels”
+**Result**
 
-Example:
-- 10 → 9 (rel = 1.0)
-- multiple ~0.33 structures
+- rare but structured transitions  
+- escape / switching channels  
 
+**Interpretation**
 
-------------------------------------------------------------
-5. GATE GRAPH
-------------------------------------------------------------
+- gates = structured transition corridors  
+- not noise  
+
+---
+
+## 5. GATE GRAPH
 
 ![Gate Graph](outputs/gate_graph_20260427_023206.png)
 
-→ sparse control skeleton
-→ directional switching structure
+**Result**
 
-Interpretation:
-- local cycles
-- partial reversibility
+- sparse control skeleton  
+- local cycles + directional structure  
 
+---
 
-------------------------------------------------------------
-6. PATH PLANNING (FAILED)
-------------------------------------------------------------
+## 6. PATH PLANNING
 
-→ No global path found
-→ system fragmented
+```text
+6 → 15 : NO PATH
+```
 
+**Interpretation**
 
-------------------------------------------------------------
-7. REACHABILITY ANALYSIS
-------------------------------------------------------------
+- fragmented system  
+- navigation requires intervention  
+
+---
+
+## 7. REACHABILITY
 
 ![Reachability](outputs/reachability_20260427_024039.png)
 
-→ multiple disconnected regions
+**Result**
 
-Detected components:
-- upper basin
-- middle cyclic region
-- lower terminal region
+- multiple disconnected components  
 
+**Interpretation**
 
-------------------------------------------------------------
-8. COMPONENT CONNECTION (MANUAL CONTROL)
-------------------------------------------------------------
+- no global connectivity  
+- defines control targets  
+
+---
+
+## 8. COMPONENT CONNECTION
 
 ![Connected Matrix](outputs/connected_matrix_20260427_024610.png)
 
-Bridges added:
-- 5 → 3
-- 14 → 9
-- 11 → 15
+**Bridges**
 
-→ minimal intervention strategy
+```text
+5 → 3
+14 → 9
+11 → 15
+```
 
+**Interpretation**
 
-------------------------------------------------------------
-9. GLOBAL POLICY (TARGET = 15)
-------------------------------------------------------------
+- control = topology repair  
+
+---
+
+## 9. GLOBAL POLICY
 
 ![Global Policy](outputs/global_policy_20260427_024840.png)
 
-→ only partial reachability
+**Target**
 
-Key region:
-- 9 → 17 → 15 funnel
+```text
+cluster 15
+```
 
+**Key funnel**
 
-------------------------------------------------------------
-10. ADAPTIVE BRIDGING
-------------------------------------------------------------
+```text
+9 → 17 → 15
+```
+
+---
+
+## 10. ADAPTIVE BRIDGING
 
 ![Adaptive Matrix](outputs/adaptive_matrix_20260427_025214.png)
 
-→ data-driven bridge suggestion
-→ smoother connectivity
+**Result**
 
-Key edges:
-- 2 → 3
-- 6 → 7
-- 12 → 10
+- data-driven bridges  
+- smoother connectivity  
 
+---
 
-------------------------------------------------------------
-11. POLICY GRADIENT (LEARNING)
-------------------------------------------------------------
+## 11. POLICY GRADIENT
 
 ![Policy Gradient](outputs/policy_gradient_success_20260427_025829.png)
 
-→ learning improves success slightly (~0.11 → ~0.23)
+![Policy Matrix](outputs/policy_gradient_matrix_20260427_025829.png)
 
-![Learned Policy](outputs/policy_gradient_matrix_20260427_025829.png)
+**Result**
 
-→ distributed policy (not deterministic chain)
+```text
+~0.11 → ~0.23 success
+```
 
+---
 
-------------------------------------------------------------
-12. GATE-AWARE POLICY
-------------------------------------------------------------
+## 12. GATE-AWARE POLICY
 
-![Gate Policy Matrix](outputs/gate_aware_policy_matrix_20260427_025844.png)
+![Gate Policy](outputs/gate_aware_policy_matrix_20260427_025844.png)
 
 ![Policy Delta](outputs/gate_aware_policy_delta_20260427_025844.png)
 
-→ emphasizes critical transitions
-→ suppresses noise transitions
+**Result**
 
-Effect:
-- sharper control directions
-- stronger structure along gates
+- emphasizes critical transitions  
+- suppresses noise  
 
+---
 
-------------------------------------------------------------
-13. FLOW DECOMPOSITION (DUAL VIEW)
-------------------------------------------------------------
+## 13. FLOW DECOMPOSITION
 
 ![Dual System](outputs/dual_system_overlay_20260427_030748.png)
 
-Comparison:
+### Lorenz
 
-Lorenz-like:
-- discrete switching
-- few strong edges
+- discrete switching  
+- few strong edges  
 
-Halvorsen:
-- distributed cyclic flow
-- many medium edges
+### Halvorsen
 
-Metrics:
+- distributed cyclic flow  
+- many medium edges  
 
-Halvorsen:
-- diag ≈ 0.635
-- offdiag ≈ 0.365
-- gates = 21
+---
 
-Lorenz:
-- diag ≈ 0.6
-- gates = 4
+## 14. RESIDUE FLOW MODEL
 
+![Residue Mod7](outputs/residue_flow_prediction_matrix_mod7_20260427_033254.png)  
+![Residue Mod17](outputs/residue_flow_prediction_matrix_mod17_20260427_033254.png)
 
-------------------------------------------------------------
-GLOBAL INTERPRETATION
-------------------------------------------------------------
+![Residue Models](outputs/residue_flow_models_20260427_033254.png)
+
+![Accuracy](outputs/residue_flow_accuracy_20260427_033254.png)
+
+**Result**
+
+```text
+mod7 exact     ≈ 0.07
+mod7 observed  ≈ 0.27
+mod17 exact    ≈ 0.27
+mod17 observed ≈ 0.27
+```
+
+**Interpretation**
+
+- residue structure captures real transitions  
+- mod17 > mod7  
+- structure is real but incomplete  
+
+---
+
+## 15. DUAL SYSTEM ANIMATION
+
+![Dual Animation](outputs/halvorsen_lorenz_dual.gif)
+
+**Observation**
+
+- Lorenz → switching between lobes  
+- Halvorsen → rotational cycling  
+- both share structured transition logic  
+
+---
+
+## GLOBAL INTERPRETATION
 
 Halvorsen is NOT:
-→ a regime-switch system
+
+```text
+a regime-switch system
+```
 
 Halvorsen IS:
-→ a distributed cyclic transport system
-→ with embedded local gate structures
-→ requiring active intervention for global navigation
 
-Key insight:
-- control ≠ path finding
-- control = restructuring flow topology
+```text
+a distributed cyclic transport system
+with embedded transition gates
+requiring control for navigation
+```
 
+---
 
-------------------------------------------------------------
-NEXT STEPS
-------------------------------------------------------------
+## KEY INSIGHT
 
-[ ] Full pipeline runner
-[ ] Cross-system embedding (Lorenz ↔ Halvorsen)
-[ ] Continuous-space control injection
-[ ] Real system application (grid / ecosystem)
+```text
+control ≠ path finding
+control = restructuring flow topology
+```
 
+---
 
-============================================================
-END OF LOG
-============================================================
+## NEXT STEPS
+
+- [ ] unified execution kernel  
+- [ ] closed-loop control  
+- [ ] continuous control injection  
+- [ ] real-world system (IEEE / grid)  
+- [ ] formal gate detection  
+
+---
+
+END

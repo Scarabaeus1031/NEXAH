@@ -1,22 +1,26 @@
 # 🧠 NEXAH — Research Layer
 
-This module contains the **conceptual and structural foundation** of NEXAH.
+This module contains the **conceptual, structural, and empirical foundation** of NEXAH.
 
 It is not a finished theory.
 
-It is a **working research layer** that captures ideas, observations, and structural patterns  
-emerging during the development of the system.
+It is a **living research layer** that integrates:
+
+- foundational assumptions  
+- empirical findings  
+- cross-system insights  
+- emerging control concepts  
 
 ---
 
 # 🧭 Role in NEXAH
 
 ```text
-RESEARCH (Foundation & Ideas)
+RESEARCH (Foundation & Findings)
         ↓
 FRAMEWORK (Interpretation)
         ↓
-ENGINE / DISCOVERY (Extraction)
+DISCOVERY ENGINE (Extraction)
         ↓
 FIELD_LAYER (Geometry)
         ↓
@@ -29,28 +33,31 @@ NAVIGATION (Control)
 
 NEXAH is developed from a **builder-first perspective**.
 
-The goal is not to construct a complete theoretical description of reality,  
-but to **build systems that reveal structure in complex dynamics**.
+The goal is not to start with theory,  
+but to:
+
+> **build systems that reveal structure in complex dynamics**
 
 This research layer exists to:
 
 - capture emerging ideas  
-- connect observations  
-- support system development  
-
-It is **not driven by formal theory-building as a primary goal**.
+- consolidate findings  
+- connect systems  
+- guide further development  
 
 ---
 
-# ⚙️ Development Approach
+# ⚙️ Development Loop
 
 ```text
-build → observe → extract structure → refine → build
+build → observe → extract structure → compare → refine → build
 ```
 
-- implementation comes first  
-- interpretation follows  
-- theory emerges gradually  
+Key addition:
+
+```text
+compare across systems → identify invariants
+```
 
 ---
 
@@ -59,13 +66,12 @@ build → observe → extract structure → refine → build
 This module is:
 
 - not a complete physical theory  
-- not a fully formalized mathematical system  
+- not a finalized mathematical system  
 - not a claim of universality  
 
 It is:
 
-> a **structured collection of working ideas and models**  
-> grounded in empirical system behavior
+> a **structured research layer grounded in empirical system behavior**
 
 ---
 
@@ -77,11 +83,13 @@ It is:
 
 → `FOUNDATION/`
 
-Core structural assumptions:
+Defines the **core assumptions and semi-formal structure**:
 
-- axioms (A0–A4)  
-- operators (Γ, Δ, Ω)  
-- minimal discrete structure  
+- axioms (field, coherence, transitions)  
+- structural theorems  
+- navigation formulation  
+
+👉 **Role:** conceptual backbone
 
 ---
 
@@ -89,13 +97,13 @@ Core structural assumptions:
 
 → `field_model.md`
 
-Exploratory interpretation of systems as:
+Explores systems as:
 
-- transition fields  
-- coupled structures  
-- delayed interactions  
+- continuous fields  
+- flow-driven structures  
+- coupled geometries  
 
-👉 **Focus:** what emerges from dynamics
+👉 **Focus:** how structure emerges from dynamics  
 
 ---
 
@@ -108,26 +116,23 @@ Connects:
 - discrete structure (FOUNDATION)  
 - to geometric representation (FIELD_LAYER)
 
-👉 **Focus:** translation from structure → geometry
+👉 **Focus:** structure → geometry translation  
 
 ---
 
 ## ⚙️ MULTI-LAYER INTERACTION
 
-→ see `APPLIED_CASES/`
-
-Relevant example:
-
-- `applied-case-06-multi-regime-interaction.md`
+→ `multi_layer_interaction.md`  
+→ `APPLIED_CASES/applied-case-06-multi-regime-interaction.md`
 
 Describes:
 
 - regimes  
 - transitions  
 - gates  
-- interaction between system layers  
+- sheet interactions  
 
-👉 **Focus:** how systems behave across regimes
+👉 **Focus:** layered system behavior  
 
 ---
 
@@ -135,29 +140,37 @@ Describes:
 
 → `zeta_lens_framework.md`
 
-A conceptual viewing framework used to:
+Provides a **conceptual lens** for:
 
-- reason about local vs global structure  
-- understand projection vs underlying geometry  
-- connect dynamics (flow) with structure (mapping)  
+- local vs global structure  
+- projection vs underlying geometry  
+- flow vs representation  
 
 Important:
 
-> This layer does not define system behavior.  
-> It provides a way to **interpret and think about it**.
+> This layer interprets — it does not define system behavior
 
 ---
 
-## 📊 FINDINGS
+## 📊 FINDINGS (CORE UPDATE)
 
 → `FINDINGS/`
 
-Empirical observations:
+Contains **empirical results and cross-system validation**:
 
 - transition structure  
-- stability behavior  
-- geometry emergence  
-- robustness under noise  
+- flow geometry  
+- control behavior  
+- energy interpretation  
+- real-world validation  
+
+NEW:
+
+- **cross-system invariance (Lorenz ↔ Halvorsen)**  
+- **distributed vs switching dynamics**  
+- **transition-first perspective**  
+
+👉 **Focus:** what is consistently observed  
 
 ---
 
@@ -165,12 +178,14 @@ Empirical observations:
 
 → `APPLIED_CASES/`
 
-Concrete examples of structure in:
+Examples across domains:
 
 - urban systems  
 - engineering thresholds  
-- decision processes  
-- regime interactions  
+- decision systems  
+- regime interaction  
+
+👉 **Focus:** structure in applied contexts  
 
 ---
 
@@ -178,64 +193,131 @@ Concrete examples of structure in:
 
 → `HISTORY/`
 
-Development timeline:
+Tracks:
 
 - early versions (v1–v6)  
-- evolving ideas  
+- evolution of ideas  
 - experimental directions  
+
+👉 **Focus:** development trajectory  
 
 ---
 
 ## 🖼️ VISUAL NOTES
 
-→ `visual_gallery.md`
+→ `visual_gallery.md`  
+→ `visuals/`
 
-Collection of:
+Contains:
 
-- conceptual diagrams  
-- structural interpretations  
-- exploratory visuals  
+- structural diagrams  
+- field interpretations  
+- transition visualizations  
 
 Important:
 
-> These visuals support thinking and development.  
-> They are not formal models or claims.
+> visuals support reasoning — not formal proof  
+
+---
+
+## 🧠 EXPLORATION / EXTENSIONS (Emerging)
+
+Implicitly connected (outside strict structure):
+
+- Janus field (bidirectional control)  
+- gate geometry extensions  
+- sector-based navigation (e.g. 6-sector models)  
+
+👉 **Focus:** next-generation control concepts  
 
 ---
 
 # 🔑 Core Idea
 
-Across all documents, a consistent pattern emerges:
+Across all components, a consistent pattern emerges:
 
-> systems are not best understood as isolated states  
-> but as **structured regions with constrained transitions**
+> Systems are not best understood as states  
+> but as **structured fields with constrained motion**
 
 ---
 
-# 🧠 Key Insight
+# 🧠 Key Insights (Updated)
 
-> Stability is not a value.  
-> It is a **region within a structured system**.
+### 1. Structure over state
 
-Transitions:
+```text
+System ≠ state evolution  
+System = movement in structured space
+```
 
-- are not random  
-- occur at specific regions  
-- follow underlying structure  
+---
+
+### 2. Stability is geometric
+
+```text
+Stability = region of coherent flow
+```
+
+---
+
+### 3. Transitions are structural
+
+```text
+Transitions occur in geometric channels,
+not at isolated points
+```
+
+---
+
+### 4. Control is structural
+
+```text
+Control ≠ forcing states  
+Control = reshaping flow + transitions
+```
+
+---
+
+### 5. Cross-system invariance
+
+```text
+Different systems → same transition structure
+```
+
+Example:
+
+- Lorenz → switching system  
+- Halvorsen → distributed cyclic system  
+
+BUT:
+
+> identical transition geometry
+
+---
+
+### 6. Navigation replaces prediction
+
+```text
+Old: predict system state  
+New: navigate system structure
+```
 
 ---
 
 # 🔬 Relation to Implementation
 
-The ideas in this module are **not directly executed**.
+The research layer is:
 
-They are:
+- not directly executable  
+- not part of runtime systems  
 
-- interpreted  
-- tested  
-- translated  
+It is:
 
-in later layers:
+```text
+interpreted → tested → implemented
+```
+
+in:
 
 - DISCOVERY ENGINE  
 - FIELD_LAYER  
@@ -247,22 +329,23 @@ in later layers:
 
 This layer should be read as:
 
-> a **working research notebook**, not a final theory
+> a **structured research notebook**
 
-Some ideas are:
+NOT:
 
-- partial  
-- exploratory  
-- not fully validated  
+- a finalized theory  
+- a universal model  
+- a claim of physical law  
 
 ---
 
 # 🚀 Next Steps
 
-- test ideas across multiple systems  
-- refine structural operators  
-- connect discrete → geometric representations  
-- validate against real-world datasets  
+- expand cross-system comparison (beyond Lorenz/Halvorsen)  
+- formalize transition invariants  
+- integrate Janus control into FIELD_LAYER  
+- validate on real-world datasets  
+- unify discrete + continuous representations  
 
 ---
 
@@ -272,15 +355,26 @@ The Research Layer is:
 
 - not an application  
 - not a simulation  
-- not a final theory  
+- not a finished theory  
 
 It is:
 
-> a **foundation of ideas emerging from building and observing systems**
+> a **foundation of ideas + findings emerging from building systems**
+
+---
+
+# 🔥 Final Insight
+
+```text
+We are not modeling systems.
+
+We are discovering the structure
+that systems are forced to follow.
+```
 
 ---
 
 **NEXAH Research Layer**  
-From building → to structure → to insight  
+From building → to structure → to navigation  
 
 © Thomas K. R. Hofmann · 2026

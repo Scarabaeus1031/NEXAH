@@ -1,11 +1,13 @@
 # 🧠 NEXAH — Core Findings
 
-This document summarizes the **core empirical findings** derived from the FIELD_LAYER development (V1–V40).
+This document summarizes the **core empirical findings** derived from the FIELD_LAYER development (V1–V40)  
+and extended through **cross-system experiments (Lorenz, Halvorsen, power systems)**.
 
 The goal is to present:
 
 - reproducible observations  
 - structurally consistent results  
+- cross-system invariants  
 - carefully framed interpretations  
 
 ---
@@ -14,14 +16,15 @@ The goal is to present:
 
 These findings are derived from:
 
-- controlled experiments (e.g. Lorenz system)  
-- initial real-world applications (e.g. power systems)  
+- controlled experiments (Lorenz, Halvorsen)  
+- structural field simulations  
+- initial real-world applications (power systems)  
 
 They represent:
 
 > **empirical structural observations**, not formal proofs
 
-Interpretations should be understood as:
+Interpretations are:
 
 - system-dependent  
 - structurally consistent  
@@ -49,15 +52,11 @@ Instead:
 
 ## Phase Structure
 
-Transitions can be decomposed into:
+Transitions decompose into:
 
 ```text
 ENTRY → CORE → EXIT
 ```
-
-- ENTRY: system is drawn into transition region  
-- CORE: instability and directional change  
-- EXIT: stabilization into new regime  
 
 ## Result
 
@@ -69,15 +68,9 @@ ENTRY → CORE → EXIT
 
 ## Observation
 
-Transition states:
-
-- cluster in specific regions  
+- transitions cluster into regions  
 - form continuous bands  
 - exhibit non-uniform density  
-
-Ridge extraction reveals:
-
-- stable pathways within transition regions  
 
 ## Result
 
@@ -90,11 +83,11 @@ Ridge extraction reveals:
 Observed:
 
 - consistent flow along channels  
-- asymmetric structure across regions  
+- asymmetric structure  
 
 ## Result
 
-> Transition dynamics are **directional and structured**, not random
+> Transition dynamics are **directional and structured**
 
 ---
 
@@ -102,12 +95,12 @@ Observed:
 
 ## Observation
 
-- local regions are smooth and approximable  
-- global structure is fragmented and folded  
+- local regions are smooth  
+- global structure is folded and fragmented  
 
 ## Result
 
-> Transition geometry is **locally smooth but globally non-linear and folded**
+> Geometry is **locally smooth, globally non-linear**
 
 ---
 
@@ -115,28 +108,26 @@ Observed:
 
 ## Observation
 
-Continuous trajectories:
-
-- repeatedly pass through the same regions  
+- trajectories revisit regions  
 - cluster into stable zones  
 
 ## Result
 
-> Continuous dynamics collapse into a **finite set of discrete states**
+> Continuous dynamics collapse into **finite discrete states**
 
 ---
 
 ## State Graph
 
-Observed (example: Lorenz system):
+Observed:
 
-- ~10–11 stable nodes  
-- directed transitions between nodes  
+- stable nodes  
+- directed transitions  
 - weighted edges  
 
 ## Result
 
-> The system forms a **directed, weighted state graph**
+> System forms a **directed state graph**
 
 ---
 
@@ -144,26 +135,20 @@ Observed (example: Lorenz system):
 
 ## Observation
 
-- multiple closed loops detected  
-- cycles vary in strength  
-- entry points are structured  
+- closed loops  
+- structured entry points  
 
 ## Result
 
-> The system operates on **recurring transition cycles**
+> System operates on **recurring transition cycles**
 
 ---
 
 ## Attractor Structure
 
-Observed:
-
-- nodes group into clusters  
-- clusters form attractor basins  
-
 ## Result
 
-> The system organizes into **dynamic regimes (basins)**
+> System organizes into **regimes (basins)**
 
 ---
 
@@ -171,12 +156,12 @@ Observed:
 
 ## Observation
 
-- discrete nodes align with slow-flow regions  
-- transitions align with flow direction  
+- nodes align with slow-flow regions  
+- transitions align with flow  
 
 ## Result
 
-> Discrete topology emerges from **continuous flow geometry**
+> Discrete topology emerges from **continuous flow**
 
 ---
 
@@ -184,20 +169,16 @@ Observed:
 
 ## Observation
 
-Density-based transformation:
-
 ```text
 E = -log(p)
 ```
 
-reveals:
-
-- transition regions correspond to higher energy  
-- stable regions correspond to lower energy  
+- transitions → higher energy  
+- stable zones → lower energy  
 
 ## Result
 
-> System dynamics can be interpreted as motion on a **derived energy landscape**
+> Dynamics follow a **derived energy landscape**
 
 ---
 
@@ -205,26 +186,21 @@ reveals:
 
 ## Observation
 
-- control biases transition probabilities  
-- trajectories can be redirected  
-- regime locking is possible  
+- transition probabilities can be biased  
+- trajectories redirected  
+- regime locking possible  
 
 ## Result
 
-> The system is **locally controllable within its structure**
+> System is **locally controllable**
 
 ---
 
 ## Energy Cost
 
-Observed:
-
-- transitions require varying control effort  
-- minimal paths align with structure  
-
 ## Result
 
-> Navigation corresponds to **energy-efficient path selection**
+> Navigation follows **energy-efficient paths**
 
 ---
 
@@ -232,25 +208,12 @@ Observed:
 
 ## Observation
 
-Example (Lorenz system):
-
-```text
-x* ≈ (13.494, 25.994)
-```
-
-- convergence occurs across multiple trajectories  
-
-## Local Dynamics
-
-Observed:
-
-- contraction + rotation  
-- complex eigenvalues with negative real part  
+- convergence across trajectories  
+- spiral-like dynamics  
 
 ## Result
 
-> The system exhibits a **stable spiral attractor**  
-> (system-dependent)
+> Stable **attractor structures exist**
 
 ---
 
@@ -258,16 +221,13 @@ Observed:
 
 ## Observation
 
-Field decomposition reveals:
-
-- scalar (potential-like) component  
-- rotational (curl-like) component  
-- delayed coupling between both  
+- gradient (attractive) component  
+- rotational component  
+- delayed coupling  
 
 ## Result
 
-> Dynamics consist of interacting components:
-> attraction (gradient) and rotation (structure)
+> Dynamics = **attraction + rotation interaction**
 
 ---
 
@@ -275,12 +235,12 @@ Field decomposition reveals:
 
 ## Observation
 
-- static fields lead to attractor dominance  
-- time-varying structure enables transitions  
+- static fields → trapping  
+- time variation → transitions  
 
 ## Result
 
-> Navigation requires **time-dependent field modulation**
+> Navigation requires **time-dependent modulation**
 
 ---
 
@@ -288,30 +248,170 @@ Field decomposition reveals:
 
 ## Observation
 
-Applied to IEEE power grid models:
-
-- structural transitions appear before system collapse  
-- transition regions remain stable under noise  
-- field geometry constrains system evolution  
+- structural transitions precede collapse  
+- robust under noise  
 
 ## Result
 
-> Structural transitions can be detected  
-> **significantly earlier than classical failure indicators**
+> NEXAH detects **pre-failure structure**
+
+---
 
 ## Interpretation
 
-- classical methods detect **state failure**  
-- NEXAH detects **structural transition**
+- classical → detect failure  
+- NEXAH → detect **transition**
+
+---
+
+# 🔷 13. Cross-System Invariance (NEW)
+
+## Observation
+
+Comparison between:
+
+- Lorenz (switch-like system)  
+- Halvorsen (distributed cyclic system)  
+
+reveals:
+
+- different flow geometry  
+- identical transition structure  
+
+## Result
+
+> Transition structure is **system-invariant**
+
+---
+
+## Interpretation
+
+```text
+Flow differs  
+Structure persists
+```
+
+---
+
+## Implication
+
+- control acts on transitions, not trajectories  
+- models differ, structure remains  
+
+---
+
+# 🔷 14. Distributed vs Switching Dynamics
+
+## Observation
+
+Lorenz:
+
+- discrete switching  
+- few dominant transitions  
+
+Halvorsen:
+
+- distributed cyclic transport  
+- many medium-strength transitions  
+
+## Result
+
+> Systems differ in **flow topology**, not in structure
+
+---
+
+## Insight
+
+```text
+Lorenz = switching system  
+Halvorsen = transport system  
+```
+
+BUT:
+
+```text
+Both share identical transition geometry
+```
+
+---
+
+# 🔷 15. Residue Structure (Emerging Layer)
+
+## Observation
+
+Residue-based models (mod 7, mod 17):
+
+- partially predict transitions  
+- capture cyclic structure  
+
+## Result
+
+> Transition structure contains **modular patterns**
+
+---
+
+## Interpretation
+
+```text
+Discrete arithmetic structure overlays continuous flow
+```
+
+---
+
+# 🔷 16. Control as Flow Restructuring
+
+## Observation
+
+- path finding fails in disconnected systems  
+- control requires adding bridges  
+
+## Result
+
+> Control = **modifying topology of flow**
+
+---
+
+## Insight
+
+```text
+Control ≠ selecting path  
+Control = restructuring transitions
+```
+
+---
+
+# 🔷 17. Gate Structure
+
+## Observation
+
+- gates = low-density / weak stability regions  
+- directional entry required  
+
+## Result
+
+> Gates are **directional transition channels**
+
+---
+
+# 🔷 18. No True Decision Points
+
+## Observation
+
+- no point yields multiple stable outcomes  
+- trajectories converge globally  
+
+## Result
+
+> System defines **paths, not choices**
 
 ---
 
 # ⚠️ Limitations
 
-- results are partly derived from specific systems (e.g. Lorenz)  
-- validation across domains is ongoing  
-- global predictability is not established  
-- some interpretations remain structural analogies  
+- partly system-specific  
+- no full formal proof  
+- global predictability not guaranteed  
+- some interpretations remain structural  
 
 ---
 
@@ -325,7 +425,8 @@ The system can be described as:
 > - discrete emergent state structure  
 > - directed flow geometry  
 > - energy-constrained motion  
-> - and attractor-driven convergence  
+> - attractor-driven convergence  
+> - and cross-system invariant transition structure  
 
 ---
 
@@ -333,17 +434,27 @@ The system can be described as:
 
 These findings are:
 
-- empirically derived  
+- empirical  
 - structurally consistent  
 - partially validated  
 
-They should be interpreted as:
+They represent:
 
-> a **field-based structural model of complex dynamics**,  
+> a **field-based structural model of dynamics**,  
 > not a fundamental physical theory  
 
 ---
 
-**Status:** Core Findings Extracted  
-**Basis:** FIELD_LAYER (V1–V40)  
-**Confidence:** High (structural consistency), ongoing validation
+# 🔥 Core Insight (Updated)
+
+```text
+Systems do not differ in structure.
+
+They differ in how flow is distributed within that structure.
+```
+
+---
+
+**Status:** Core Findings Extended  
+**Basis:** FIELD_LAYER + Cross-System Analysis  
+**Confidence:** High (structural consistency), ongoing validation  
