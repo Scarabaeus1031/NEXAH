@@ -89,56 +89,89 @@ nexah/navigation/field_control.py
 """
 
 import numpy as np
+import matplotlib.pyplot as plt
+
+from nexah.field_layer.core.field import compute_field
+from nexah.field_layer.core.metrics import (
+    compute_flow_strength,
+    compute_curvature,
+)
+
+# NEW
+from nexah.navigation.field_control import apply_field_control
 
 
-def apply_field_control(states, risk, strength=0.05):
-    """
-    Apply simple field-based control to a trajectory.
+# ----------------------------
+# Signal
+# ----------------------------
 
-    Parameters
-    ----------
-    states : np.ndarray
-        Shape (T, N) — system states
-
-    risk : np.ndarray
-        Shape (T,) — structural signal
-
-    strength : float
-        control intensity (small value recommended)
-
-    Returns
-    -------
-    controlled_states : np.ndarray
-        Modified trajectory
-    """
-
-    controlled = states.copy()
-
-    # temporal gradient of risk
-    grad = np.gradient(risk)
-
-    for t in range(1, len(states)):
-        # move away from increasing risk
-        direction = -grad[t]
-
-        # apply correction (same direction across dimensions)
-        controlled[t] = controlled[t] + strength * direction
-
-    return controlled
+def generate_signal(n=500):
+    t = np.linspace(0, 20, n)
+    x = np.sin(t) + 0.3 * np.sin(5 * t)
+    return x
 
 
-# ----------------------------------------
-# Optional: debug helper
-# ----------------------------------------
+# ----------------------------
+# CONTROL PIPELINE (v3)
+# ----------------------------
 
-def compute_control_signal(risk):
-    """
-    Returns the raw control signal used internally.
+def run_control_pipeline(control_strength=0.05):
+    x = generate_signal()
+    X = x.reshape(-1, 1)
 
-    Useful for debugging / plotting.
+    # --- FIELD ---
+    F = compute_field(X)
 
-    Returns
-    -------
-    signal : np.ndarray
-    """
-    return -np.gradient(risk)
+    flow = compute_flow_strength(F)
+    curvature = compute_curvature(F)
+
+    min_len = min(len(flow), len(curvature))
+    flow = flow[:min_len]
+    curvature = curvature[:min_len]
+    X = X[:min_len]
+
+    # --- SIGNAL ---
+    risk = flow * curvature
+    risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
+
+    # ----------------------------
+    # CONTROL (NEW: continuous)
+    # ----------------------------
+
+    X_controlled = apply_field_control(
+        X,
+        risk,
+        strength=control_strength
+    )
+
+    x_controlled = X_controlled.flatten()
+
+    return x[:min_len], x_controlled, risk
+
+
+# ----------------------------
+# PLOT
+# ----------------------------
+
+def plot_control():
+    x, x_ctrl, risk = run_control_pipeline()
+
+    plt.figure(figsize=(12, 5))
+
+    plt.plot(x, label="Original", alpha=0.7)
+    plt.plot(x_ctrl, label="Controlled", linestyle="--")
+
+    # High-risk markieren
+    threshold = 0.8
+    peaks = np.where(risk > threshold)[0]
+
+    plt.scatter(peaks, x[peaks], color="red", label="High Risk", s=20)
+
+    plt.title("Field-Based Control (v3)")
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+
+if __name__ == "__main__":
+    plot_control()
