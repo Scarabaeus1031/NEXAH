@@ -1,93 +1,153 @@
+# ============================================================
+# 🧭 NEXAH — State Space Control (v5.1 STABLE)
+# ============================================================
+#
+# Goal:
+# Stabilize field-based control in (x, v) space
+# without numerical explosion.
+#
+# Key Fix:
+# → bounded control
+# → blending instead of overriding dynamics
+# → gradient normalization
+#
+# ============================================================
+
 import numpy as np
 
 
+# ------------------------------------------------------------
+# SIGNAL
+# ------------------------------------------------------------
+
+def generate_signal(n=500):
+    t = np.linspace(0, 20, n)
+    x = np.sin(t) + 0.3 * np.sin(5 * t)
+    return x
+
+
+# ------------------------------------------------------------
+# STATE SPACE
+# ------------------------------------------------------------
+
 def build_state_space(x):
-    """
-    Build phase space: (x, dx/dt)
-    """
     v = np.gradient(x)
-    return np.column_stack([x, v])
+    return np.stack([x, v], axis=1)
 
 
-def build_risk_grid(states, risk, bins=50):
-    """
-    Map risk onto 2D grid
-    """
+# ------------------------------------------------------------
+# FIELD (density + gradient)
+# ------------------------------------------------------------
+
+def compute_density_field(states, bins=40):
     x = states[:, 0]
     v = states[:, 1]
 
-    H, xedges, yedges = np.histogram2d(
-        x, v, bins=bins, weights=risk
-    )
+    H, xedges, yedges = np.histogram2d(x, v, bins=bins)
+    H = H.T  # orientation
 
-    counts, _, _ = np.histogram2d(x, v, bins=bins)
+    # smooth a bit (optional but helps)
+    H = H + 1e-6
 
-    # avoid division by zero
-    avg_risk = np.divide(H, counts + 1e-8)
+    grad_y, grad_x = np.gradient(H)
 
-    return avg_risk, xedges, yedges
-
-
-def compute_gradient_field(risk_grid):
-    """
-    Compute spatial gradient of risk field
-    """
-    grad_y, grad_x = np.gradient(risk_grid)
-    return grad_x, grad_y
+    return H, grad_x, grad_y, xedges, yedges
 
 
-def apply_state_space_control(x, risk, strength=0.1, bins=50):
-    """
-    Trajectory-aligned control (v5)
+# ------------------------------------------------------------
+# CONTROL (STABLE VERSION)
+# ------------------------------------------------------------
 
-    Instead of modifying position directly,
-    we modify the direction of motion.
-
-    This prevents drift and collapse.
-    """
-
+def run_state_space_control(
+    strength=0.15,
+    threshold=0.8,
+    bins=40
+):
+    x = generate_signal()
     states = build_state_space(x)
 
-    risk_grid, xedges, yedges = build_risk_grid(states, risk, bins=bins)
-    grad_x, grad_y = compute_gradient_field(risk_grid)
+    # --- FIELD ---
+    H, grad_x, grad_y, xedges, yedges = compute_density_field(states, bins)
+
+    # --- simple risk ---
+    flow = np.abs(np.gradient(x))
+    accel = np.abs(np.gradient(flow))
+    risk = flow * accel
+    risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
 
     x_controlled = x.copy()
 
     for t in range(2, len(x) - 1):
+        if risk[t] < threshold:
+            continue
+
         px, pv = states[t]
 
-        # grid index
         ix = np.searchsorted(xedges, px) - 1
         iy = np.searchsorted(yedges, pv) - 1
 
         if not (0 <= ix < bins and 0 <= iy < bins):
             continue
 
-        # --- gradient in state space ---
+        # --- local gradient ---
         gx = grad_x[ix, iy]
         gy = grad_y[ix, iy]
 
         grad_vec = np.array([gx, gy])
 
-        # --- current motion ---
+        # --- current movement ---
         dx = x_controlled[t] - x_controlled[t - 1]
-        dv = px - states[t - 1][0]  # approx velocity change
 
-        motion_vec = np.array([dx, dv])
+        # -------------------------
+        # 🔥 STABILITY FIXES
+        # -------------------------
 
-        # normalize (avoid explosions)
-        norm = np.linalg.norm(motion_vec) + 1e-8
-        motion_unit = motion_vec / norm
+        # 1. limit raw movement
+        dx = np.clip(dx, -1.0, 1.0)
 
-        # --- projection: how much motion aligns with risk ---
-        projection = np.dot(motion_unit, grad_vec)
+        # 2. normalize gradient
+        grad_norm = np.linalg.norm(grad_vec) + 1e-8
+        grad_unit = grad_vec / grad_norm
 
-        # --- correction only along motion direction ---
-        correction = strength * projection
+        # 3. compute bounded correction
+        correction = strength * dx * grad_unit[0]
 
-        # --- apply ONLY to motion ---
-        new_dx = dx - correction
+        correction = np.clip(correction, -0.1, 0.1)
 
+        # 4. blend instead of override
+        new_dx = (1 - strength) * dx - correction
+
+        # --- integrate ---
         x_controlled[t + 1] = x_controlled[t] + new_dx
 
-    return x_controlled
+    return x, x_controlled, risk
+
+
+# ------------------------------------------------------------
+# DEMO PLOT
+# ------------------------------------------------------------
+
+def plot_state_space_control():
+    import matplotlib.pyplot as plt
+
+    x, x_ctrl, risk = run_state_space_control()
+
+    plt.figure(figsize=(12, 5))
+
+    plt.plot(x, label="Original", alpha=0.7)
+    plt.plot(x_ctrl, label="Controlled", linestyle="--")
+
+    # high-risk points
+    threshold = 0.8
+    peaks = np.where(risk > threshold)[0]
+
+    plt.scatter(peaks, x[peaks], color="red", s=20, label="High Risk")
+
+    plt.title("State Space Control (v5.1 — Stable)")
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+
+
+if __name__ == "__main__":
+    plot_state_space_control()
