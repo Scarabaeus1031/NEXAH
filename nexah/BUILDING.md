@@ -35,6 +35,25 @@ This is experimental validation, not a generalized solution.
 
 ---
 
+### Phase 1.5 — Structure Extraction (NEW)
+
+Goal:
+
+extract a minimal, reusable core system from experimental scripts  
+
+Steps:
+
+* identify stable components across experiments  
+* isolate field, signal, and transition logic  
+* refactor into modular components inside `nexah/`  
+* remove duplication and script-specific artifacts  
+
+Outcome:
+
+a minimal NEXAH engine with reusable building blocks  
+
+---
+
 ## 2. What Actually Exists (Implemented)
 
 ### Field Layer
@@ -200,16 +219,20 @@ Only after validation:
 
 ## 9. Role of `nexah/`
 
-The `nexah/` package currently represents:
+The `nexah/` package is evolving into:
 
-* minimal reusable components  
+the minimal executable core of the NEXAH system  
+
+It will contain:
+
 * field construction  
-* basic navigation logic  
+* signal computation  
+* transition modeling  
+* navigation logic  
 
-It is not yet a complete system, but:
+It replaces script-based experimentation with reusable structure  
 
-a collection of building blocks for the core loop  
-
+`NEXAH_CORE/` remains the experimental source space
 ---
 
 ## 10. Immediate Next Step
@@ -217,7 +240,7 @@ a collection of building blocks for the core loop
 Focus exclusively on:
 
 ```text
-FIELD → SIGNAL → VALIDATION
+FIELD → SIGNAL → TRANSITIONS → EXTRACTION → VALIDATION
 ```
 
 Concrete:
