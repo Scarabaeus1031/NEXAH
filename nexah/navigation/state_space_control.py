@@ -151,3 +151,16 @@ def plot_state_space_control():
 
 if __name__ == "__main__":
     plot_state_space_control()
+
+# ------------------------------------------------------------
+# PUBLIC API (for demos / pipelines)
+# ------------------------------------------------------------
+
+def apply_state_space_control(**kwargs):
+    """
+    Standard interface for external modules (demo / pipeline).
+
+    Returns:
+        x, x_controlled, risk
+    """
+    return run_state_space_control(**kwargs)
