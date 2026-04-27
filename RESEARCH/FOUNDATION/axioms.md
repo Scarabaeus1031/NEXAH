@@ -1,17 +1,20 @@
-# NEXAH — Structural Axioms (Working Assumptions)
+# NEXAH — Structural Axioms (Working)
+
+Status: PRE-FORMAL  
+Scope: Cross-system (Halvorsen, Lorenz, IEEE, …)
 
 ---
 
 ## 🧭 Purpose
 
-This document defines the **core working assumptions** of the NEXAH framework.
+This document defines the **core structural assumptions** of the NEXAH framework.
 
-They describe how NEXAH:
+They describe how systems:
 
-- interprets system behavior  
-- reconstructs structure  
-- detects transitions  
-- enables navigation  
+- evolve  
+- organize structure  
+- transition between regimes  
+- can be navigated  
 
 ---
 
@@ -20,18 +23,17 @@ They describe how NEXAH:
 These axioms are:
 
 - empirically motivated  
-- system-dependent  
+- operational  
 - subject to revision  
 
 They are NOT:
 
 - universal laws  
-- complete  
 - formally proven  
 
 They are:
 
-> **practical structural hypotheses used to build and operate the system**
+> **minimal assumptions required to explain and operate the system**
 
 ---
 
@@ -41,13 +43,7 @@ They are:
 
 ## **Axiom 1 — Field Representation**
 
-A dynamical system can be represented as a **continuous field in state space**:
-
-$$
-s = (r, \theta)
-$$
-
-with local flow:
+A dynamical system is represented as a continuous field:
 
 $$
 \dot{s} = F(s)
@@ -58,33 +54,32 @@ $$
 **Interpretation**
 
 ```text
-System evolution is governed by local structure,
-not isolated time events.
+System evolution is governed by local field structure.
 ```
 
 ---
 
 ## **Axiom 2 — Structured Motion**
 
-System trajectories are **not random**.
+Trajectories are not random.
 
 They follow:
 
-> structured paths induced by the field
+> structured paths induced by the field geometry
 
 ---
 
 **Interpretation**
 
 ```text
-Motion reflects geometry, not noise.
+Motion reflects structure, not noise.
 ```
 
 ---
 
 ## **Axiom 3 — Local Coherence**
 
-Stability corresponds to **alignment between trajectory and field**:
+Stability is defined by directional alignment:
 
 $$
 C(s) =
@@ -96,149 +91,14 @@ $$
 **Interpretation**
 
 ```text
-Coherence is directional (alignment),
-not a scalar energy value.
+Stable motion = alignment with local flow.
 ```
 
 ---
 
-## **Axiom 4 — Interface Regions**
+## **Axiom 4 — Regimes as Regions**
 
-Transitions occur in regions where:
-
-$$
-C(s) \approx 0
-$$
-
----
-
-**Interpretation**
-
-```text
-Transitions occur in structured interface zones,
-not at isolated points.
-```
-
----
-
-## **Axiom 5 — Transition as Process**
-
-Transitions are extended processes:
-
-```text
-ENTRY → CORE → EXIT
-```
-
----
-
-**Interpretation**
-
-```text
-A transition is a geometric traversal,
-not an instantaneous event.
-```
-
----
-
-## **Axiom 6 — Stability as Region**
-
-Stability is not a scalar value.
-
-It is:
-
-> a **region in state space** where trajectories remain coherent
-
----
-
-**Interpretation**
-
-```text
-Stable behavior = staying inside structured flow regions
-```
-
----
-
-## **Axiom 7 — Collapse Mechanism**
-
-Collapse occurs when a trajectory:
-
-- loses coherence  
-- exits structured flow  
-- enters low-density regions  
-
----
-
-**Interpretation**
-
-```text
-Collapse = loss of structural anchoring
-```
-
----
-
-## **Axiom 8 — Greyspace (Low-Density Instability)**
-
-Define:
-
-$$
-G(s) = \frac{1}{\rho(s)}
-$$
-
----
-
-**Interpretation**
-
-```text
-Low density regions act as transition corridors
-```
-
----
-
-## **Axiom 9 — Navigability**
-
-If field structure is known, trajectories can be influenced:
-
-$$
-\dot{s} = F(s) + u(s)
-$$
-
----
-
-**Interpretation**
-
-```text
-Navigation = modifying motion within the field
-```
-
----
-
-## **Axiom 10 — Dual Navigation Principle**
-
-Effective control requires:
-
-$$
-u =
--\nabla P(\text{IOTA})
-+
-\nabla \rho
-$$
-
----
-
-**Interpretation**
-
-```text
-Stability requires BOTH:
-
-avoidance of instability
-+ attraction to structure
-```
-
----
-
-## **Axiom 11 — Discrete Structural Regimes**
-
-State space decomposes into regions (basins):
+State space decomposes into coherent regions:
 
 $$
 s \in B_i
@@ -249,14 +109,73 @@ $$
 **Interpretation**
 
 ```text
-System operates across discrete regimes
+Stability is regional, not scalar.
 ```
 
 ---
 
-## **Axiom 12 — Probabilistic Transitions**
+## **Axiom 5 — Structured Transitions**
 
-Transitions between regimes follow:
+Transitions occur in structured regions where coherence is lost:
+
+$$
+C(s) \approx 0
+$$
+
+---
+
+**Interpretation**
+
+```text
+Transitions are geometric processes, not discrete jumps.
+```
+
+---
+
+## **Axiom 6 — Interface Geometry (Gates)**
+
+Transitions are mediated by interface regions characterized by:
+
+- low density  
+- competing flow directions  
+
+---
+
+**Interpretation**
+
+```text
+Gates are geometric transition zones.
+```
+
+---
+
+## **Axiom 7 — Density Structure**
+
+Define density:
+
+$$
+\rho(s)
+$$
+
+Low-density regions act as transition corridors:
+
+$$
+\rho(s) \to 0 \Rightarrow \text{transition-prone region}
+$$
+
+---
+
+**Interpretation**
+
+```text
+Structure weakens in low-density regions.
+```
+
+---
+
+## **Axiom 8 — Discrete Regime Layer**
+
+Continuous dynamics induce a discrete regime structure:
 
 $$
 P(B_i \rightarrow B_j)
@@ -267,19 +186,17 @@ $$
 **Interpretation**
 
 ```text
-System evolution is probabilistic at the regime level
+Global behavior is governed by probabilistic transitions between regimes.
 ```
 
 ---
 
-## **Axiom 13 — Controllability of Transitions**
+## **Axiom 9 — Mass Conservation**
 
-Transition probabilities can be influenced:
+Transition probabilities are conserved:
 
 $$
-P(B_i \rightarrow B_j \mid u)
-\neq
-P(B_i \rightarrow B_j)
+\sum_j P(B_i \rightarrow B_j) = 1
 $$
 
 ---
@@ -287,8 +204,48 @@ $$
 **Interpretation**
 
 ```text
-Transitions are not only observed —
-they can be shaped
+System evolution is closed and consistent.
+```
+
+---
+
+## **Axiom 10 — Controllability**
+
+System motion can be influenced via control:
+
+$$
+\dot{s} = F(s) + u(s)
+$$
+
+---
+
+**Interpretation**
+
+```text
+Control modifies motion within the field, not outside it.
+```
+
+---
+
+## **Axiom 11 — Dual Navigation Principle**
+
+Effective control combines:
+
+$$
+u =
+-\nabla P(\text{instability})
++
+\nabla \rho
+$$
+
+---
+
+**Interpretation**
+
+```text
+Navigation requires:
+avoidance of instability
++ attraction to structure
 ```
 
 ---
@@ -308,7 +265,7 @@ Instability:
 → competing flow directions
 
 Transition:
-→ navigation through structured instability corridors
+→ traversal through structured interface regions
 ```
 
 ---
@@ -316,8 +273,8 @@ Transition:
 # 🔬 Status
 
 - empirically supported  
-- implemented in prototype systems  
-- consistent with observed dynamics  
+- consistent across tested systems  
+- partially implemented  
 - not formally proven  
 
 ---
@@ -326,28 +283,23 @@ Transition:
 
 These axioms:
 
-- define the conceptual foundation  
+- define the structural foundation  
 - guide modeling decisions  
 - constrain interpretation  
-
-They are:
-
-> a **working operational layer** for the NEXAH framework
 
 ---
 
 # 🧠 Final Statement
 
 ```text
-Systems do not fail randomly.
+Systems do not evolve randomly.
 
-They evolve within structure,
+They move within structured fields,
 lose coherence,
-leave the field,
-and transition into a new regime.
+and transition through geometry into new regimes.
 ```
 
 ---
 
 **Author:** Thomas K. R. Hofmann  
-**Version:** v0.6.0
+**Version:** v0.7.0
