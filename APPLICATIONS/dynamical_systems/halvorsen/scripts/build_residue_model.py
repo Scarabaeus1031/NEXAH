@@ -1,6 +1,7 @@
 import numpy as np
 
-P = np.load("APPLICATIONS/dynamical_systems/halvorsen/outputs/gate_aware_policy_matrix_20260427_025844.npy")
+P = np.load("../outputs/gate_aware_policy_matrix_20260427_025844.npy")
+np.save("../outputs/residue_model_mod17.npy", model)
 
 n = P.shape[0]
 mod = 17
