@@ -1,35 +1,11 @@
 # ============================================================
 # NEXAH — Coarse Graining (Halvorsen System)
 # ============================================================
-#
-# Purpose:
-# Reduce high-resolution transition graph into coarse basins
-# via similarity clustering of transition probability vectors.
-#
-# Pipeline:
-# probs → vector space → similarity clustering → coarse matrix
-#
-# Outputs:
-# - cluster mapping (txt)
-# - coarse transition matrix (png)
-#
-# ============================================================
 
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 from datetime import datetime
-
-# ============================================================
-# 🔹 LOAD REAL PROBABILITIES
-# ============================================================
-
-# 👉 WICHTIG:
-# Erstelle Datei:
-# APPLICATIONS/dynamical_systems/halvorsen/data/probs.py
-#
-# mit:
-# PROBS = { ... dein dict ... }
 
 from APPLICATIONS.dynamical_systems.halvorsen.data.probs import PROBS
 
@@ -117,7 +93,7 @@ def build_coarse_matrix(states, probs, clusters):
     return matrix, state_to_cluster
 
 # ============================================================
-# 🔹 SAVE OUTPUT
+# 🔹 SAVE OUTPUT (CLEAN VERSION)
 # ============================================================
 
 def save_outputs(matrix, mapping):
@@ -144,28 +120,13 @@ def save_outputs(matrix, mapping):
     plt.savefig(png_path)
     plt.close()
 
-    # NPY matrix (🔥 WICHTIG für nächste Schritte)
+    # NPY matrix (🔥 WICHTIG)
     npy_path = f"{base_path}/coarse_matrix_{timestamp}.npy"
     np.save(npy_path, matrix)
 
     print(f"[✓] Mapping saved: {txt_path}")
     print(f"[✓] Matrix PNG saved: {png_path}")
     print(f"[✓] Matrix NPY saved: {npy_path}")
-
-    # PNG matrix
-    fig = plt.figure(figsize=(6,5))
-    plt.imshow(matrix)
-    plt.title("Coarse-Grained Transition Matrix")
-    plt.colorbar()
-    plt.xlabel("to cluster j")
-    plt.ylabel("from cluster i")
-
-    png_path = f"{base_path}/coarse_matrix_{timestamp}.png"
-    plt.savefig(png_path)
-    plt.close()
-
-    print(f"[✓] Mapping saved: {txt_path}")
-    print(f"[✓] Matrix saved: {png_path}")
 
 # ============================================================
 # 🔹 MAIN
