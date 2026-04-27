@@ -1,6 +1,19 @@
 # ============================================================
-# 🧭 NEXAH — State Space Control (v9)
-# Transition Activation + Graph Control
+# 🧭 NEXAH — State Space Control (v10)
+# Adaptive Basin Graph Control
+# ============================================================
+#
+# Purpose:
+# Convert continuous dynamics into a useful discrete transition graph.
+#
+# Key insight:
+# Coarse basins hide transitions.
+# Adaptive basins reveal transition structure.
+#
+# Rule:
+# Core logic returns data.
+# No saving. No output files.
+#
 # ============================================================
 
 import numpy as np
@@ -12,23 +25,20 @@ from nexah.navigation.transition_graph import (
 
 
 # ------------------------------------------------------------
-# SIGNAL (UNSTABLE REGIME)
+# SIGNAL
 # ------------------------------------------------------------
 
-def generate_signal(n=500):
+def generate_signal(n=500, seed=42):
+    rng = np.random.default_rng(seed)
+
     t = np.linspace(0, 20, n)
 
     base = np.sin(t)
     high = 0.3 * np.sin(5 * t)
-
-    # 🔥 NEW: slow drift
     drift = 0.4 * np.sin(0.2 * t)
+    noise = 0.08 * rng.normal(size=n)
 
-    # 🔥 NEW: noise
-    noise = 0.08 * np.random.randn(n)
-
-    x = base + high + drift + noise
-    return x
+    return base + high + drift + noise
 
 
 # ------------------------------------------------------------
@@ -41,13 +51,51 @@ def build_state_space(x):
 
 
 # ------------------------------------------------------------
-# BASINS
+# RISK
 # ------------------------------------------------------------
 
-def assign_basins(x, levels=None):
-    if levels is None:
-        levels = [-0.6, 0.0, 0.6]
+def compute_risk(x):
+    flow = np.abs(np.gradient(x))
+    accel = np.abs(np.gradient(flow))
 
+    risk = flow * accel
+    risk = (risk - np.min(risk)) / (np.max(risk) - np.min(risk) + 1e-8)
+
+    return risk
+
+
+# ------------------------------------------------------------
+# ADAPTIVE BASINS
+# ------------------------------------------------------------
+
+def compute_adaptive_levels(x, n_basins=10, method="quantile"):
+    """
+    Compute basin boundaries.
+
+    method="quantile":
+        creates basins with roughly equal occupancy
+
+    method="linear":
+        creates evenly spaced amplitude levels
+    """
+
+    if n_basins < 2:
+        raise ValueError("n_basins must be >= 2")
+
+    if method == "quantile":
+        qs = np.linspace(0, 1, n_basins + 1)[1:-1]
+        levels = np.quantile(x, qs)
+
+    elif method == "linear":
+        levels = np.linspace(np.min(x), np.max(x), n_basins + 1)[1:-1]
+
+    else:
+        raise ValueError("method must be 'quantile' or 'linear'")
+
+    return levels
+
+
+def assign_basins(x, levels):
     return np.digitize(x, levels)
 
 
@@ -69,14 +117,36 @@ def compute_basin_centers(states, basins):
 def apply_graph_aware_control(
     x,
     risk,
-    strength=0.08,
-    threshold=0.75,
-    levels=None,
+    strength=0.06,
+    threshold=0.65,
+    n_basins=10,
+    basin_method="quantile",
+    allow_self=False,
 ):
+    """
+    Adaptive basin graph-aware control.
+
+    Steps:
+    1. Compute adaptive basin boundaries.
+    2. Assign basin sequence.
+    3. Build transition graph.
+    4. At high-risk points, follow dominant non-self transition.
+    5. Apply bounded steering toward target basin center.
+
+    Returns:
+        x_ctrl, basins, graph, events, levels
+    """
+
     states = build_state_space(x)
+
+    levels = compute_adaptive_levels(
+        x,
+        n_basins=n_basins,
+        method=basin_method,
+    )
+
     basins = assign_basins(x, levels)
     centers = compute_basin_centers(states, basins)
-
     graph = build_transition_graph(basins)
 
     x_ctrl = x.copy()
@@ -87,49 +157,65 @@ def apply_graph_aware_control(
         if risk[t] < threshold:
             continue
 
-        current_basin = int(basins[t])
-        target_basin = dominant_next_state(graph, current_basin)
+        current = int(basins[t])
 
-        if target_basin is None:
+        # dominant transition
+        target = dominant_next_state(graph, current)
+
+        # If dominant is self-transition, try strongest non-self edge.
+        if target == current and not allow_self:
+            candidates = graph.get(current, {})
+
+            non_self = {
+                k: v for k, v in candidates.items()
+                if int(k) != current
+            }
+
+            if not non_self:
+                continue
+
+            target = max(
+                non_self.items(),
+                key=lambda item: (item[1]["probability"], item[1]["count"])
+            )[0]
+
+        if target is None or target not in centers:
             continue
 
-        if target_basin not in centers:
+        if target == current and not allow_self:
             continue
 
-        # current state
         px = x_ctrl[t]
         pv = x_ctrl[t] - x_ctrl[t - 1]
-        current_state = np.array([px, pv])
 
-        target_state = centers[target_basin]
+        current_state = np.array([px, pv])
+        target_state = centers[target]
 
         delta = target_state - current_state
 
-        # 🔥 stronger activation near transitions
         activation = 1.0 + 0.5 * risk[t]
 
         correction = strength * activation * delta[0]
-        correction = np.clip(correction, -0.2, 0.2)
+        correction = np.clip(correction, -0.15, 0.15)
 
         dx = x_ctrl[t] - x_ctrl[t - 1]
-        dx = np.clip(dx, -1.5, 1.5)
+        dx = np.clip(dx, -1.2, 1.2)
 
         new_dx = (1 - strength) * dx + correction
 
         x_ctrl[t + 1] = x_ctrl[t] + new_dx
 
-        if current_basin != target_basin:
-            events.append(
-                {
-                    "t": int(t),
-                    "from": int(current_basin),
-                    "to": int(target_basin),
-                    "risk": float(risk[t]),
-                    "correction": float(correction),
-                }
-            )
+        events.append(
+            {
+                "t": int(t),
+                "from": int(current),
+                "to": int(target),
+                "risk": float(risk[t]),
+                "correction": float(correction),
+            }
+        )
 
-    return x_ctrl, basins, graph, events
+    return x_ctrl, basins, graph, events, levels
 
 
 # ------------------------------------------------------------
@@ -140,34 +226,39 @@ def demo():
     import matplotlib.pyplot as plt
 
     x = generate_signal()
+    risk = compute_risk(x)
 
-    flow = np.abs(np.gradient(x))
-    accel = np.abs(np.gradient(flow))
-    risk = flow * accel
-    risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
-
-    x_ctrl, basins, graph, events = apply_graph_aware_control(
+    x_ctrl, basins, graph, events, levels = apply_graph_aware_control(
         x,
         risk,
-        strength=0.1,
-        threshold=0.7,
+        strength=0.06,
+        threshold=0.65,
+        n_basins=10,
+        basin_method="quantile",
+        allow_self=False,
     )
 
-    peaks = np.where(risk > 0.7)[0]
+    peaks = np.where(risk > 0.65)[0]
 
     plt.figure(figsize=(12, 5))
     plt.plot(x, label="Original", alpha=0.6)
-    plt.plot(x_ctrl, "--", label="Controlled v9")
+    plt.plot(x_ctrl, "--", label="Controlled v10")
 
-    plt.scatter(peaks, x[peaks], color="red", s=20, label="High Risk")
+    plt.scatter(peaks, x[peaks], color="red", s=18, label="High Risk")
+
+    for level in levels:
+        plt.axhline(level, color="gray", alpha=0.12, linewidth=1)
 
     for e in events:
-        plt.axvline(e["t"], color="gray", alpha=0.08)
+        plt.axvline(e["t"], color="gray", alpha=0.06, linewidth=1)
 
-    plt.title(f"NEXAH v9 — Activated Transitions | events={len(events)}")
+    plt.title(f"NEXAH v10 — Adaptive Basin Graph Control | events={len(events)}")
     plt.legend()
     plt.tight_layout()
     plt.show()
+
+    print("\n--- Adaptive Levels ---")
+    print(levels)
 
     print("\n--- Transition Graph ---")
     for source, targets in graph.items():
@@ -179,7 +270,7 @@ def demo():
             )
 
     print("\n--- Events ---")
-    for e in events[:30]:
+    for e in events[:40]:
         print(e)
 
 
