@@ -28,3 +28,15 @@ class FieldMetrics:
         Magnitude of local flow.
         """
         return np.linalg.norm(self.vectors, axis=1)
+
+        def compute_flow_strength(vectors):
+        return np.linalg.norm(vectors, axis=1)
+
+
+    def compute_acceleration(states):
+        """
+        Approximate second derivative (curvature proxy)
+        """
+        first = np.gradient(states, axis=0)
+        second = np.gradient(first, axis=0)
+        return np.linalg.norm(second, axis=1)
