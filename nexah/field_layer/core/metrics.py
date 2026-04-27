@@ -9,6 +9,7 @@ class FieldMetrics:
     def __init__(self, field):
         self.field = field
         self.vectors = field.get_vector_field()
+        self.states = field.states
 
     def curvature(self):
         """
@@ -19,9 +20,9 @@ class FieldMetrics:
 
     def fragmentation(self):
         """
-        Simple proxy: variance increase across state dimensions.
+        Simple proxy: variance across state dimensions.
         """
-        return np.var(self.field.states, axis=1)
+        return np.var(self.states, axis=1)
 
     def flow_strength(self):
         """
@@ -29,14 +30,31 @@ class FieldMetrics:
         """
         return np.linalg.norm(self.vectors, axis=1)
 
-        def compute_flow_strength(vectors):
-        return np.linalg.norm(vectors, axis=1)
+
+# ----------------------------
+# Functional Interface (API)
+# ----------------------------
+
+def compute_flow_strength(vectors: np.ndarray):
+    return np.linalg.norm(vectors, axis=1)
 
 
-    def compute_acceleration(states):
-        """
-        Approximate second derivative (curvature proxy)
-        """
-        first = np.gradient(states, axis=0)
-        second = np.gradient(first, axis=0)
-        return np.linalg.norm(second, axis=1)
+def compute_curvature(vectors: np.ndarray):
+    second_derivative = np.gradient(vectors, axis=0)
+    return np.linalg.norm(second_derivative, axis=1)
+
+
+def compute_fragmentation(states: np.ndarray):
+    return np.var(states, axis=1)
+
+
+def compute_risk(states: np.ndarray, vectors: np.ndarray):
+    """
+    Default risk signal used in pipeline.
+
+    risk = curvature × flow_strength
+    """
+    flow = compute_flow_strength(vectors)
+    curvature = compute_curvature(vectors)
+
+    return curvature * (flow + 1e-8)
