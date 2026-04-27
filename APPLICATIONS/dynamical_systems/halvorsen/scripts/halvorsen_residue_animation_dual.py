@@ -122,9 +122,9 @@ ani = FuncAnimation(
 print("→ saving dual animation...")
 
 ani.save(
-    "../outputs/halvorsen_lorenz_dual.mp4",
-    writer="ffmpeg",
-    fps=30
+    "../outputs/halvorsen_lorenz_dual.gif",
+    writer="pillow",
+    fps=25
 )
 
 print("✓ saved: ../outputs/halvorsen_lorenz_dual.mp4")
