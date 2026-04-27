@@ -89,5 +89,3 @@ Main characteristics:
 
 **NEXAH Navigation Layer**  
 From discrete gates to sectoral resonant navigation with breathing background.
-
-EOF
