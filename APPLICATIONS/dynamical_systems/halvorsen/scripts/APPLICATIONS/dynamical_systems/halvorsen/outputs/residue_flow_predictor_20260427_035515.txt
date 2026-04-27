@@ -1,0 +1,80 @@
+NEXAH — Residue Flow Predictor
+======================================================================
+
+Source matrix: /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/dynamical_systems/halvorsen/scripts/../outputs/policy_gradient_matrix_20260427_025829.npy
+
+SUMMARY
+----------------------------------------------------------------------
+mod 7 tested states: 15
+mod 7 exact top-target accuracy: 0.0667
+mod 7 observed-target accuracy: 0.2667
+
+mod 17 tested states: 15
+mod 17 exact top-target accuracy: 0.2667
+mod 17 observed-target accuracy: 0.2667
+
+DETAILS MOD 7
+----------------------------------------------------------------------
+0 -> pred 1 | conf=0.514 | true_top=1 | observed=[1] | exact=True | hit_observed=True
+1 -> pred 2 | conf=0.415 | true_top=4 | observed=[2, 4] | exact=False | hit_observed=True
+2 -> pred 8 | conf=0.589 | true_top=3 | observed=[3, 4, 5] | exact=False | hit_observed=False
+3 -> pred 8 | conf=0.416 | true_top=0 | observed=[0, 6] | exact=False | hit_observed=False
+4 -> pred 10 | conf=0.534 | true_top=5 | observed=[5] | exact=False | hit_observed=False
+6 -> pred 12 | conf=0.414 | true_top=7 | observed=[3, 7] | exact=False | hit_observed=False
+7 -> pred 8 | conf=0.514 | true_top=6 | observed=[6, 8] | exact=False | hit_observed=True
+8 -> pred 9 | conf=0.415 | true_top=6 | observed=[6, 9] | exact=False | hit_observed=True
+10 -> pred 15 | conf=0.416 | true_top=9 | observed=[9, 11] | exact=False | hit_observed=False
+11 -> pred 17 | conf=0.534 | true_top=10 | observed=[10] | exact=False | hit_observed=False
+12 -> pred 17 | conf=0.365 | true_top=10 | observed=[7, 8, 10] | exact=False | hit_observed=False
+13 -> pred 1 | conf=0.414 | true_top=12 | observed=[12] | exact=False | hit_observed=False
+14 -> pred 15 | conf=0.514 | true_top=13 | observed=[13] | exact=False | hit_observed=False
+16 -> pred 4 | conf=0.589 | true_top=15 | observed=[15] | exact=False | hit_observed=False
+17 -> pred 4 | conf=0.416 | true_top=15 | observed=[15] | exact=False | hit_observed=False
+
+DETAILS MOD 17
+----------------------------------------------------------------------
+0 -> pred 15 | conf=0.633 | true_top=1 | observed=[1] | exact=False | hit_observed=False
+1 -> pred 4 | conf=0.626 | true_top=4 | observed=[2, 4] | exact=True | hit_observed=True
+2 -> pred 3 | conf=0.378 | true_top=3 | observed=[3, 4, 5] | exact=True | hit_observed=True
+3 -> pred 17 | conf=0.547 | true_top=0 | observed=[0, 6] | exact=False | hit_observed=False
+4 -> pred 5 | conf=1.000 | true_top=5 | observed=[5] | exact=True | hit_observed=True
+6 -> pred 7 | conf=0.579 | true_top=7 | observed=[3, 7] | exact=True | hit_observed=True
+7 -> pred 5 | conf=0.504 | true_top=6 | observed=[6, 8] | exact=False | hit_observed=False
+8 -> pred 5 | conf=0.539 | true_top=6 | observed=[6, 9] | exact=False | hit_observed=False
+10 -> pred 8 | conf=0.517 | true_top=9 | observed=[9, 11] | exact=False | hit_observed=False
+11 -> pred 9 | conf=1.000 | true_top=10 | observed=[10] | exact=False | hit_observed=False
+12 -> pred 9 | conf=0.365 | true_top=10 | observed=[7, 8, 10] | exact=False | hit_observed=False
+13 -> pred 11 | conf=1.000 | true_top=12 | observed=[12] | exact=False | hit_observed=False
+14 -> pred 12 | conf=1.000 | true_top=13 | observed=[13] | exact=False | hit_observed=False
+16 -> pred 14 | conf=1.000 | true_top=15 | observed=[15] | exact=False | hit_observed=False
+17 -> pred 14 | conf=0.633 | true_top=15 | observed=[15] | exact=False | hit_observed=False
+
+RESIDUE MODEL MOD 7
+----------------------------------------------------------------------
+residue 0: [0.0, 0.5139, 0.0, 0.0, 0.0, 0.0, 0.4861]
+residue 1: [0.0, 0.415, 0.0, 0.3316, 0.0, 0.2534, 0.0]
+residue 2: [0.0, 0.1552, 0.1168, 0.1385, 0.0, 0.0, 0.5895]
+residue 3: [0.0, 0.1341, 0.0, 0.1388, 0.1677, 0.4159, 0.1435]
+residue 4: [0.0, 0.4656, 0.0, 0.0, 0.0, 0.0, 0.5344]
+residue 5: [0.0, 0.0, 0.308, 0.3275, 0.0, 0.3645, 0.0]
+residue 6: [0.0, 0.3389, 0.0, 0.0, 0.2467, 0.0, 0.4145]
+
+RESIDUE MODEL MOD 17
+----------------------------------------------------------------------
+residue 0: [0.0, 0.367, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.633, 0.0]
+residue 1: [0.0, 0.3738, 0.0, 0.6262, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+residue 2: [0.0, 0.3781, 0.2845, 0.3373, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+residue 3: [0.0, 0.0, 0.0, 0.4528, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5472, 0.0, 0.0]
+residue 4: [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+residue 5: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+residue 6: [0.0, 0.5787, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4213, 0.0, 0.0]
+residue 7: [0.0, 0.4963, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5037]
+residue 8: [0.0, 0.4613, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5387, 0.0]
+residue 9: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+residue 10: [0.0, 0.4831, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.5169]
+residue 11: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+residue 12: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.308, 0.3275, 0.0, 0.3645, 0.0]
+residue 13: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+residue 14: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+residue 15: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+residue 16: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
