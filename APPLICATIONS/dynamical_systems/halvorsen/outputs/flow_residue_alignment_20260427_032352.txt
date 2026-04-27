@@ -1,0 +1,40 @@
+NEXAH — Halvorsen Flow / Residue Alignment
+======================================================================
+
+Source matrix: APPLICATIONS/dynamical_systems/halvorsen/outputs/gate_aware_policy_matrix_20260427_025844.npy
+
+GLOBAL SUMMARY
+----------------------------------------------------------------------
+number of transitions: 25
+mean transition strength: 0.260872
+max transition strength: 0.531021
+corr(p, residue distance mod 7): 0.111273
+corr(p, residue distance mod 17): -0.218268
+
+TRANSITIONS
+----------------------------------------------------------------------
+0 -> 1 | p=0.1831 | rel=0.224 | jump7=1 dist7=1 | jump17=1 dist17=1
+1 -> 2 | p=0.1444 | rel=0.170 | jump7=1 dist7=1 | jump17=1 dist17=1
+2 -> 3 | p=0.5134 | rel=1.176 | jump7=1 dist7=1 | jump17=1 dist17=1
+2 -> 4 | p=0.0484 | rel=0.111 | jump7=2 dist7=2 | jump17=2 dist17=2
+3 -> 6 | p=0.5310 | rel=1.176 | jump7=3 dist7=3 | jump17=3 dist17=3
+4 -> 5 | p=0.1480 | rel=0.174 | jump7=1 dist7=1 | jump17=1 dist17=1
+6 -> 3 | p=0.2051 | rel=0.562 | jump7=4 dist7=3 | jump17=14 dist17=3
+6 -> 7 | p=0.4296 | rel=1.176 | jump7=1 dist7=1 | jump17=1 dist17=1
+7 -> 6 | p=0.0735 | rel=0.166 | jump7=6 dist7=1 | jump17=16 dist17=1
+7 -> 8 | p=0.4831 | rel=1.090 | jump7=1 dist7=1 | jump17=1 dist17=1
+8 -> 6 | p=0.3074 | rel=0.966 | jump7=5 dist7=2 | jump17=15 dist17=2
+8 -> 9 | p=0.3744 | rel=1.176 | jump7=1 dist7=1 | jump17=1 dist17=1
+9 -> 17 | p=0.0202 | rel=0.021 | jump7=1 dist7=1 | jump17=8 dist17=8
+10 -> 9 | p=0.5195 | rel=2.353 | jump7=6 dist7=1 | jump17=16 dist17=1
+10 -> 11 | p=0.2597 | rel=1.176 | jump7=1 dist7=1 | jump17=1 dist17=1
+11 -> 10 | p=0.4396 | rel=0.784 | jump7=6 dist7=1 | jump17=16 dist17=1
+12 -> 7 | p=0.2450 | rel=0.715 | jump7=2 dist7=2 | jump17=12 dist17=5
+12 -> 10 | p=0.4029 | rel=1.176 | jump7=5 dist7=2 | jump17=15 dist17=2
+13 -> 12 | p=0.1307 | rel=0.150 | jump7=6 dist7=1 | jump17=16 dist17=1
+14 -> 13 | p=0.3368 | rel=0.508 | jump7=6 dist7=1 | jump17=16 dist17=1
+15 -> 14 | p=0.0481 | rel=0.051 | jump7=6 dist7=1 | jump17=16 dist17=1
+16 -> 14 | p=0.0310 | rel=0.038 | jump7=5 dist7=2 | jump17=15 dist17=2
+16 -> 15 | p=0.1517 | rel=0.186 | jump7=6 dist7=1 | jump17=16 dist17=1
+17 -> 15 | p=0.3960 | rel=0.784 | jump7=5 dist7=2 | jump17=15 dist17=2
+17 -> 16 | p=0.0990 | rel=0.196 | jump7=6 dist7=1 | jump17=16 dist17=1
