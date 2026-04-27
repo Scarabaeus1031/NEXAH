@@ -19,10 +19,10 @@ def generate_signal(n=500):
 
 
 # ----------------------------
-# CONTROL PIPELINE
+# CONTROL PIPELINE (v2)
 # ----------------------------
 
-def run_control_pipeline(control_strength=0.1, threshold=0.8):
+def run_control_pipeline(control_strength=0.2, threshold=0.8):
     x = generate_signal()
     X = x.reshape(-1, 1)
 
@@ -40,16 +40,18 @@ def run_control_pipeline(control_strength=0.1, threshold=0.8):
     risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
 
     # ----------------------------
-    # CONTROL
+    # CONTROL (improved)
     # ----------------------------
 
     x_controlled = x.copy()
 
-    for t in range(min_len - 1):
+    for t in range(1, min_len - 1):
         if risk[t] > threshold:
-            # simple correction: damp movement
+            # Bewegung (Trend)
             delta = x_controlled[t] - x_controlled[t - 1]
-            x_controlled[t + 1] -= control_strength * delta
+
+            # aktive Gegensteuerung (nicht nur Dämpfung!)
+            x_controlled[t + 1] = x_controlled[t] - control_strength * delta
 
     return x, x_controlled, risk
 
@@ -66,13 +68,13 @@ def plot_control():
     plt.plot(x, label="Original", alpha=0.7)
     plt.plot(x_ctrl, label="Controlled", linestyle="--")
 
-    # markieren wo Control greift
+    # High-risk markieren
     threshold = 0.8
     peaks = np.where(risk > threshold)[0]
 
     plt.scatter(peaks, x[peaks], color="red", label="High Risk", s=20)
 
-    plt.title("Control Injection Test")
+    plt.title("Control Injection Test (v2)")
     plt.legend()
     plt.tight_layout()
     plt.show()
