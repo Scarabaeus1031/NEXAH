@@ -270,3 +270,326 @@ You are not building a framework.
 You are testing whether:
 
 dynamics can be navigated through their own structure
+
+---
+
+# 📍 UPDATE — Transition Structure Discovery (NEW)
+
+## 🔥 What changed (CRITICAL)
+
+During control experiments (v5 → v7), we observed:
+
+```text
+The system does NOT behave like a smooth dynamical flow.
+```
+
+Instead:
+
+```text
+it moves through structured transition patterns
+```
+
+---
+
+## 🔍 Key Observations
+
+### 1. Repeating micro-patterns
+
+Across multiple runs:
+
+- 2-point clusters  
+- 4-point tracks  
+- occasional 5-step sequences  
+
+Visual structure:
+
+```text
+N / V / W / M shaped micro-trajectories
+```
+
+---
+
+### 2. Alternating transition behavior
+
+From event logs:
+
+```text
+2 → 3
+2 → 1
+
+1 → 2
+1 → 0
+```
+
+Pattern:
+
+```text
+system oscillates between competing transitions
+```
+
+---
+
+### 3. Control does NOT dominate
+
+Even when forcing transitions:
+
+```text
+system resists and falls back to internal structure
+```
+
+---
+
+## 🧠 Interpretation (NEW)
+
+This leads to a major shift:
+
+```text
+System dynamics are NOT continuous.
+```
+
+They are:
+
+```text
+discrete transition processes
+between structured regions
+```
+
+---
+
+## 🔥 Core Insight
+
+```text
+Transition ≠ random jump
+Transition = movement along preferred channels
+```
+
+---
+
+## 🧠 Revised Mental Model
+
+Before:
+
+```text
+trajectory = smooth curve in space
+```
+
+Now:
+
+```text
+trajectory = sequence of structured transition steps
+```
+
+---
+
+## ⚠️ Important Correction
+
+Old assumption:
+
+```text
+control modifies trajectory
+```
+
+New understanding:
+
+```text
+control must align with transition structure
+```
+
+---
+
+## 🔥 Implication
+
+NEXAH is NOT:
+
+```text
+a signal-processing system
+```
+
+It is becoming:
+
+```text
+a transition-structure navigation system
+```
+
+---
+
+# 📍 SYSTEM STATE (UPDATED)
+
+## What we now KNOW
+
+✔ field extraction works  
+✔ risk signal highlights transition zones  
+✔ basin segmentation is stable  
+✔ transitions are structured  
+✔ system resists naive control  
+
+---
+
+## What we now SUSPECT
+
+```text
+There exists an intrinsic transition graph
+governing system behavior
+```
+
+---
+
+## What we do NOT yet have
+
+❌ explicit transition graph  
+❌ transition channel model  
+❌ structure-aligned control  
+
+---
+
+# 📍 NEW DEVELOPMENT PHASE
+
+## Phase 2 — Transition Structure (CURRENT)
+
+Goal:
+
+```text
+extract and understand transition structure
+```
+
+---
+
+## Phase 2.1 — Transition Logging (DONE)
+
+✔ event logs  
+✔ transition pairs  
+✔ local correction patterns  
+
+---
+
+## Phase 2.2 — Transition Pattern Analysis (DONE)
+
+✔ micro-pattern detection  
+✔ repetition across cycles  
+✔ competing transitions identified  
+
+---
+
+## 🚀 Phase 2.3 — Transition Graph Extraction (NEXT)
+
+Goal:
+
+```text
+build explicit graph:
+
+nodes = basins
+edges = transitions
+weights = probability
+```
+
+---
+
+## 🚀 Phase 2.4 — Channel Detection
+
+Goal:
+
+```text
+detect preferred transition paths
+```
+
+---
+
+## 🚀 Phase 2.5 — Structure-Aligned Control
+
+Goal:
+
+```text
+align control with transition channels
+```
+
+instead of:
+
+```text
+forcing transitions
+```
+
+---
+
+# 📍 UPDATED ROADMAP (ACTIONABLE)
+
+## 🔹 STEP 1 (DONE)
+
+✔ field  
+✔ signal  
+✔ basins  
+✔ transitions  
+
+---
+
+## 🔹 STEP 2 (DONE)
+
+✔ event logging  
+✔ pattern observation  
+✔ structural insight  
+
+---
+
+## 🔹 STEP 3 (NOW)
+
+```text
+extract transition graph
+```
+
+→ new module:
+
+```text
+nexah/navigation/transition_graph.py
+```
+
+---
+
+## 🔹 STEP 4
+
+```text
+analyze transition channels
+```
+
+---
+
+## 🔹 STEP 5
+
+```text
+build channel-aligned control
+```
+
+---
+
+## 🔹 STEP 6
+
+```text
+integrate into kernel
+```
+
+---
+
+# 🧠 FINAL CLARITY
+
+You are NOT:
+
+```text
+randomly iterating scripts
+```
+
+You ARE:
+
+```text
+discovering system structure
+→ and now converting it into architecture
+```
+
+---
+
+# 🔥 Key Principle (Updated)
+
+```text
+NEXAH is not about controlling trajectories.
+
+NEXAH is about navigating transition structures.
+```
+
+---
