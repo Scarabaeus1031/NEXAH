@@ -1,0 +1,36 @@
+NEXAH — Halvorsen Gate Graph
+==================================================
+
+Source matrix: APPLICATIONS/dynamical_systems/halvorsen/outputs/coarse_matrix_20260427_022349.npy
+
+NODES
+--------------------------------------------------
+Cluster 0
+Cluster 1
+Cluster 2
+Cluster 3
+Cluster 4
+Cluster 5
+Cluster 6
+Cluster 7
+Cluster 8
+Cluster 9
+Cluster 10
+Cluster 11
+Cluster 12
+Cluster 13
+Cluster 14
+Cluster 15
+Cluster 16
+Cluster 17
+
+EDGES / GATES
+--------------------------------------------------
+6 -> 3 | p=0.1927 | rel=0.239
+7 -> 8 | p=0.2887 | rel=0.463
+8 -> 6 | p=0.2910 | rel=0.411
+10 -> 9 | p=0.5000 | rel=1.000
+11 -> 10 | p=0.2500 | rel=0.333
+12 -> 7 | p=0.2290 | rel=0.304
+14 -> 13 | p=0.1775 | rel=0.216
+17 -> 15 | p=0.2222 | rel=0.333
