@@ -95,7 +95,88 @@ Transitions occur in:
 
 ---
 
-## 🔁 5. CONTROL IMPLICATION
+
+# 🔗 5. Empirical Basis (Link to Findings)
+
+The unification presented here is grounded in previously established findings:
+
+---
+
+## Phase Sensitivity (Finding 33)
+
+```text
+System response depends on phase alignment
+```
+
+→ explains differences in transition behavior between systems
+
+---
+
+## Flow Shaping (Finding 34)
+
+```text
+System follows modified flow, not direct forcing
+```
+
+→ consistent across Lorenz, Halvorsen, and controlled systems
+
+---
+
+## Temporal Propagation (Finding 35)
+
+```text
+Local perturbations influence future trajectory
+```
+
+→ supports modulation-based control (Janus)
+
+---
+
+## Flow Channels (Finding 42)
+
+```text
+Systems move through structured corridors
+```
+
+→ explains transport vs switching differences
+
+---
+
+## Directional Gates (Finding 48)
+
+```text
+Gate success depends on direction
+```
+
+→ critical for understanding transition geometry
+
+---
+
+## Stability Field (Finding 36)
+
+```text
+Stability emerges from structure
+```
+
+→ consistent across all systems
+
+---
+
+## 🧠 Interpretation
+
+```text
+The observed differences between systems
+are not differences in fundamental behavior,
+
+but differences in:
+
+- distribution of structure
+- strength of transitions
+- topology of flow
+```
+
+---
+## 🔁 6. CONTROL IMPLICATION
 
 ```text
 Control ≠ forcing trajectory
@@ -105,7 +186,7 @@ Control = reshaping transition structure
 
 ---
 
-# 🔶 6. JANUS FIELD (NEW CORE COMPONENT)
+# 🔶 7. JANUS FIELD (NEW CORE COMPONENT)
 
 ---
 
