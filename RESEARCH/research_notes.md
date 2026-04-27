@@ -51,6 +51,10 @@ regime = locally stable flow structure
 transition = guided movement between regimes
 ```
 
+![NEXAH — From Field Discovery to Controlled Navigation](RESEARCH/visuals/a_detailed_infographic_poster_diagram_in_a_clean_s.png)
+
+*Observed vs controlled behavior: systems first reveal structure (left), then can be guided through it (right).*
+
 ---
 
 # 🧭 2. REGIME LAYER (KEY STRUCTURE)
@@ -86,6 +90,12 @@ A **regime** is a region where:
 | Discrete State Regime | Markov / Graph |
 | Spectral Regime | Koopman |
 | Harmonic Structure | Fourier / MMF / waves |
+
+---
+
+![Lorenz vs Halvorsen — Continuous Flow to Discrete Structure](RESEARCH/visuals/lorenz_haverson_v_2.png)
+
+*Different systems exhibit distinct flow regimes, yet share structured transition behavior and underlying discrete dynamics.*
 
 ---
 
