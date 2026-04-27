@@ -35,8 +35,15 @@ import matplotlib.pyplot as plt
 # ============================================================
 
 def load_latest_matrix():
-    base = "APPLICATIONS/dynamical_systems/halvorsen/outputs"
+    import glob
+    import os
+    import numpy as np
 
+    # 🔥 dynamischer Pfad (wichtig!)
+    base_path = os.path.dirname(__file__)
+    outputs_path = os.path.join(base_path, "..", "outputs")
+
+    # 🔍 alle möglichen Matrix-Typen
     patterns = [
         "gate_aware_policy_matrix_*.npy",
         "policy_gradient_matrix_*.npy",
@@ -45,15 +52,21 @@ def load_latest_matrix():
         "coarse_matrix_*.npy",
     ]
 
+    files = []
     for pattern in patterns:
-        files = sorted(glob.glob(os.path.join(base, pattern)))
-        if files:
-            path = files[-1]
-            print(f"→ loading matrix: {path}")
-            return np.load(path), path
+        files.extend(glob.glob(os.path.join(outputs_path, pattern)))
 
-    raise RuntimeError("No transition / policy matrix found.")
+    if not files:
+        raise RuntimeError("❌ No transition / policy matrix found.")
 
+    files = sorted(files)
+    latest = files[-1]
+
+    print(f"→ loading matrix: {latest}")
+
+    M = np.load(latest)
+
+    return M, latest
 
 # ============================================================
 # EXTRACT OBSERVED TRANSITIONS
