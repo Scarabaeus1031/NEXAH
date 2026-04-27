@@ -197,6 +197,140 @@ through oscillatory alignment.
 - simulation-level validated  
 - structurally consistent  
 - not analytically proven  
+---
+
+---
+
+# 🔗 Empirical Grounding (Findings Integration)
+
+The Janus construct is not introduced as an abstract concept.
+
+It emerges consistently from empirical observations within the NEXAH findings layer.
+
+---
+
+## 🔬 Phase Sensitivity
+
+Observed:
+
+```text
+Same control → different outcome depending on phase
+```
+
+Relation to Janus:
+
+```text
+Janus modulation is inherently phase-dependent
+```
+
+---
+
+## 🔬 Flow Shaping vs Forcing
+
+Observed:
+
+```text
+Modifying flow is more effective than direct forcing
+```
+
+Relation to Janus:
+
+```text
+Janus does not push the system
+
+It modulates how motion unfolds within the field
+```
+
+---
+
+## 🔬 Temporal Propagation of Control
+
+Observed:
+
+```text
+Small perturbations influence future trajectory
+```
+
+Relation to Janus:
+
+```text
+Janus operates as a time-dependent modulation layer
+```
+
+---
+
+## 🔬 Stability as Field Property
+
+Observed:
+
+```text
+Stability emerges from field structure
+```
+
+Relation to Janus:
+
+```text
+Janus regulates motion relative to stability regions
+```
+
+---
+
+## 🔬 Flow Channel Alignment
+
+Observed:
+
+```text
+Systems move through structured channels
+```
+
+Relation to Janus:
+
+```text
+Janus operates along existing flow structure,
+not against it
+```
+
+---
+
+## 🔬 Directional Gate Behavior
+
+Observed:
+
+```text
+Gate success depends on direction of approach
+```
+
+Relation to Janus:
+
+```text
+Janus modulation depends on motion alignment
+(sign of velocity term)
+```
+
+---
+
+# 🧠 Unified Interpretation
+
+```text
+Janus is not an external control mechanism.
+
+It is a structural modulation pattern
+emerging from:
+
+- phase sensitivity
+- flow alignment
+- temporal propagation
+- stability interaction
+```
+
+---
+
+# 🔥 Final Insight
+
+```text
+Janus = observed dual-phase behavior of systems
+near transitions
+```
 
 ---
 
