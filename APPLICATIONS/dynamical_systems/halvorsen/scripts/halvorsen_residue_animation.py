@@ -85,7 +85,7 @@ def update(frame):
     return line, point, text_cluster, text_residue, text_jump, pulse
 
 # =========================
-# RUN
+# RUN + SAVE
 # =========================
 
 ani = FuncAnimation(
@@ -96,5 +96,13 @@ ani = FuncAnimation(
     blit=False
 )
 
-plt.tight_layout()
-plt.show()
+print("→ saving animation...")
+
+# Option 1: GIF (einfach, aber langsam)
+ani.save(
+    "../outputs/halvorsen_residue_animation.gif",
+    writer="pillow",
+    fps=30
+)
+
+print("✓ saved: ../outputs/halvorsen_residue_animation.gif")
