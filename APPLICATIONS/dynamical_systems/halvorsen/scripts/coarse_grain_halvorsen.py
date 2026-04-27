@@ -1,7 +1,14 @@
 # ============================================================
 # NEXAH — Coarse Graining (Halvorsen System)
 # ============================================================
+import sys
+import os
 
+# 👉 add repo root to path
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../../"))
+if ROOT not in sys.path:
+    sys.path.append(ROOT)
+    
 import numpy as np
 import matplotlib.pyplot as plt
 import os
