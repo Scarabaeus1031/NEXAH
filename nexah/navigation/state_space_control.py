@@ -1,9 +1,27 @@
 # ============================================================
-# 🧭 NEXAH — State Space Control (v7 FINAL)
-# Transition Probability Control
+# 🧭 NEXAH — State Space Control (v8)
+# Graph-Aware Transition Control
+# ============================================================
+#
+# Purpose:
+# Use the intrinsic transition graph to guide control.
+#
+# Core shift:
+# v7: target transition manually
+# v8: learn transition graph first, then follow dominant structure
+#
+# Rule:
+# Core module returns data.
+# No saving. No plotting.
+#
 # ============================================================
 
 import numpy as np
+
+from nexah.navigation.transition_graph import (
+    build_transition_graph,
+    dominant_next_state,
+)
 
 
 # ------------------------------------------------------------
@@ -31,45 +49,78 @@ def build_state_space(x):
 def assign_basins(x, levels=None):
     if levels is None:
         levels = [-0.6, 0.0, 0.6]
+
     return np.digitize(x, levels)
 
 
-def compute_transition_matrix(basins):
-    unique = np.unique(basins)
-    n = len(unique)
+def compute_basin_centers(states, basins):
+    centers = {}
 
-    index = {b: i for i, b in enumerate(unique)}
-    P = np.zeros((n, n))
+    for b in np.unique(basins):
+        pts = states[basins == b]
+        if len(pts) > 0:
+            centers[int(b)] = np.mean(pts, axis=0)
 
-    for i in range(len(basins) - 1):
-        a = index[basins[i]]
-        b = index[basins[i + 1]]
-        P[a, b] += 1
-
-    P = P / (P.sum(axis=1, keepdims=True) + 1e-8)
-
-    return P, index
+    return centers
 
 
 # ------------------------------------------------------------
-# CONTROL (v7)
+# GRAPH-AWARE CONTROL
 # ------------------------------------------------------------
 
-def apply_transition_control(
+def apply_graph_aware_control(
     x,
     risk,
     strength=0.08,
     threshold=0.8,
-    target_transition=(0, 1)
+    levels=None,
 ):
     """
-    Control by increasing probability of specific transition.
+    Apply graph-aware transition control.
+
+    Steps:
+    1. Segment signal into basins.
+    2. Build transition graph from basin sequence.
+    3. At high-risk points, determine dominant natural transition.
+    4. Steer gently toward the dominant next basin center.
+
+    Parameters
+    ----------
+    x : np.ndarray
+        Input signal.
+
+    risk : np.ndarray
+        Risk signal in [0, 1].
+
+    strength : float
+        Control strength.
+
+    threshold : float
+        Risk activation threshold.
+
+    levels : list | None
+        Basin thresholds.
+
+    Returns
+    -------
+    x_controlled : np.ndarray
+        Controlled signal.
+
+    basins : np.ndarray
+        Basin assignments.
+
+    graph : dict
+        Transition graph.
+
+    events : list[dict]
+        Control events.
     """
 
     states = build_state_space(x)
-    basins = assign_basins(x)
+    basins = assign_basins(x, levels)
+    centers = compute_basin_centers(states, basins)
 
-    P, index = compute_transition_matrix(basins)
+    graph = build_transition_graph(basins)
 
     x_ctrl = x.copy()
     events = []
@@ -79,39 +130,50 @@ def apply_transition_control(
         if risk[t] < threshold:
             continue
 
-        b_now = basins[t]
-        b_next = basins[t + 1]
+        current_basin = int(basins[t])
+        target_basin = dominant_next_state(graph, current_basin)
 
-        # --- target condition ---
-        if (b_now, b_next) == target_transition:
+        if target_basin is None:
             continue
 
-        # --- if we're in source basin, steer toward target ---
-        if b_now == target_transition[0]:
+        if target_basin == current_basin:
+            continue
 
-            # desired direction: upward shift
-            direction = 1
+        if target_basin not in centers:
+            continue
 
-            dx = x_ctrl[t] - x_ctrl[t - 1]
-            dx = np.clip(dx, -1.0, 1.0)
+        # current controlled state
+        px = x_ctrl[t]
+        pv = x_ctrl[t] - x_ctrl[t - 1]
+        current_state = np.array([px, pv])
 
-            # push toward transition
-            correction = strength * direction * (1.0 - abs(dx))
+        target_state = centers[target_basin]
 
-            correction = np.clip(correction, -0.12, 0.12)
+        # vector toward natural next basin
+        delta = target_state - current_state
 
-            new_dx = dx + correction
+        correction = strength * delta[0]
+        correction = np.clip(correction, -0.12, 0.12)
 
-            x_ctrl[t + 1] = x_ctrl[t] + new_dx
+        # blend with current motion
+        dx = x_ctrl[t] - x_ctrl[t - 1]
+        dx = np.clip(dx, -1.0, 1.0)
 
-            events.append({
+        new_dx = (1 - strength) * dx + correction
+
+        x_ctrl[t + 1] = x_ctrl[t] + new_dx
+
+        events.append(
+            {
                 "t": int(t),
-                "basin": int(b_now),
-                "target": target_transition,
-                "corr": float(correction),
-            })
+                "from": int(current_basin),
+                "to": int(target_basin),
+                "risk": float(risk[t]),
+                "correction": float(correction),
+            }
+        )
 
-    return x_ctrl, basins, events
+    return x_ctrl, basins, graph, events
 
 
 # ------------------------------------------------------------
@@ -128,32 +190,40 @@ def demo():
     risk = flow * accel
     risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
 
-    x_ctrl, basins, events = apply_transition_control(
+    x_ctrl, basins, graph, events = apply_graph_aware_control(
         x,
         risk,
         strength=0.08,
         threshold=0.8,
-        target_transition=(0, 1)
     )
 
     peaks = np.where(risk > 0.8)[0]
 
     plt.figure(figsize=(12, 5))
     plt.plot(x, label="Original", alpha=0.7)
-    plt.plot(x_ctrl, "--", label="Controlled v7")
+    plt.plot(x_ctrl, "--", label="Controlled v8")
 
     plt.scatter(peaks, x[peaks], color="red", s=20, label="High Risk")
 
     for e in events:
-        plt.axvline(e["t"], color="gray", alpha=0.1)
+        plt.axvline(e["t"], color="gray", alpha=0.08)
 
-    plt.title(f"NEXAH v7 — Transition Control | events={len(events)}")
+    plt.title(f"NEXAH v8 — Graph-Aware Control | events={len(events)}")
     plt.legend()
     plt.tight_layout()
     plt.show()
 
+    print("\n--- Transition Graph ---")
+    for source, targets in graph.items():
+        for target, data in targets.items():
+            print(
+                f"{source} -> {target} | "
+                f"count={data['count']} | "
+                f"P={data['probability']:.3f}"
+            )
+
     print("\n--- Events ---")
-    for e in events[:20]:
+    for e in events[:30]:
         print(e)
 
 
