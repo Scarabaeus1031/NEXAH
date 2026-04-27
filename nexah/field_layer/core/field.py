@@ -25,22 +25,37 @@ class Field:
         return np.gradient(self.states, axis=0)
 
     def get_vector_field(self):
+        """
+        Returns the computed vector field.
+        """
         return self.vectors
 
     def get_state(self, t: int):
+        """
+        Returns the state at time t.
+        """
         return self.states[t]
-    def compute_field(X):
-    
+
+
+# ----------------------------
+# Functional Interface (API)
+# ----------------------------
+
+def compute_field(states: np.ndarray):
     """
     Unified interface for FIELD computation.
 
+    This is the function the pipeline should use.
+
     Parameters
     ----------
-    X : np.ndarray (T, N)
+    states : np.ndarray
+        Shape (T, N)
 
     Returns
     -------
-    vectors : np.ndarray (T, N)
+    vectors : np.ndarray
+        Shape (T, N)
     """
-    field = Field(X)
+    field = Field(states)
     return field.get_vector_field()
