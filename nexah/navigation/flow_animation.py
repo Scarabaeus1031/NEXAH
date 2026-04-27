@@ -130,7 +130,7 @@ def run_flow_animation(
             basin_dot,
         )
 
-    FuncAnimation(
+    anim = FuncAnimation(
         fig,
         update,
         frames=n,
