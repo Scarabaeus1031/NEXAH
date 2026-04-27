@@ -1,199 +1,173 @@
-# ⚡ NEXAH — Coarse Graining (Halvorsen)
-# ------------------------------------------------------------
-# Groups fine-grained states into flow channels
+# ============================================================
+# NEXAH — Coarse Graining (Halvorsen System)
+# ============================================================
 #
-# Idea:
-# states with similar transition behavior → same macro-state
+# Purpose:
+# Reduce high-resolution transition graph into coarse basins
+# via similarity clustering of transition probability vectors.
 #
-# Output:
-# - coarse_transition_matrix.png
-# - coarse_mapping.txt
-# ------------------------------------------------------------
+# Pipeline:
+# probs → vector space → similarity clustering → coarse matrix
+#
+# Outputs:
+# - cluster mapping (txt)
+# - coarse transition matrix (png)
+#
+# ============================================================
 
 import numpy as np
+import matplotlib.pyplot as plt
 import os
 from datetime import datetime
-import matplotlib.pyplot as plt
-from collections import defaultdict
 
+# ============================================================
+# 🔹 LOAD REAL PROBABILITIES
+# ============================================================
 
-# -----------------------------
-# Load / define transitions
-# -----------------------------
-# 👉 hier einfach dein probs dict reinkopieren
-# oder später aus Datei laden
+# 👉 WICHTIG:
+# Erstelle Datei:
+# APPLICATIONS/dynamical_systems/halvorsen/data/probs.py
+#
+# mit:
+# PROBS = { ... dein dict ... }
 
-def load_example():
-    return {
-        0: {0: 0.8, 1: 0.2},
-        1: {1: 0.7, 2: 0.3},
-        2: {2: 0.6, 3: 0.4},
-        3: {3: 1.0}
-    }
+from APPLICATIONS.dynamical_systems.halvorsen.data.probs import PROBS
 
-
-# -----------------------------
-# Build transition vectors
-# -----------------------------
+# ============================================================
+# 🔹 BUILD VECTORS
+# ============================================================
 
 def build_vectors(probs):
-    states = list(probs.keys())
-    state_index = {s: i for i, s in enumerate(states)}
+    states = sorted(probs.keys())
+    index = {s: i for i, s in enumerate(states)}
 
-    dim = len(states)
-    vectors = {}
-
+    vectors = []
     for s in states:
-        vec = np.zeros(dim)
+        vec = np.zeros(len(states))
         for t, p in probs[s].items():
-            if t in state_index:
-                vec[state_index[t]] = p
-        vectors[s] = vec
+            if t in index:
+                vec[index[t]] = p
+        vectors.append(vec)
 
-    return vectors
+    return states, np.array(vectors)
 
-
-# -----------------------------
-# Similarity grouping (cosine)
-# -----------------------------
+# ============================================================
+# 🔹 COSINE SIMILARITY
+# ============================================================
 
 def cosine_similarity(a, b):
     if np.linalg.norm(a) == 0 or np.linalg.norm(b) == 0:
         return 0
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
+# ============================================================
+# 🔹 CLUSTERING
+# ============================================================
 
-def cluster_states(vectors, threshold=0.95):
+def cluster_states(vectors, threshold=0.90):
     clusters = []
     assigned = set()
 
-    states = list(vectors.keys())
-
-    for s in states:
-        if s in assigned:
+    for i in range(len(vectors)):
+        if i in assigned:
             continue
 
-        cluster = [s]
-        assigned.add(s)
+        cluster = [i]
+        assigned.add(i)
 
-        for t in states:
-            if t in assigned:
+        for j in range(i + 1, len(vectors)):
+            if j in assigned:
                 continue
 
-            sim = cosine_similarity(vectors[s], vectors[t])
-
+            sim = cosine_similarity(vectors[i], vectors[j])
             if sim > threshold:
-                cluster.append(t)
-                assigned.add(t)
+                cluster.append(j)
+                assigned.add(j)
 
         clusters.append(cluster)
 
     return clusters
 
+# ============================================================
+# 🔹 BUILD COARSE MATRIX
+# ============================================================
 
-# -----------------------------
-# Build coarse matrix
-# -----------------------------
-
-def build_coarse_matrix(probs, clusters):
-    cluster_id = {}
-    for i, cluster in enumerate(clusters):
-        for s in cluster:
-            cluster_id[s] = i
-
-    coarse = defaultdict(lambda: defaultdict(float))
-
-    for s, edges in probs.items():
-        i = cluster_id[s]
-        for t, p in edges.items():
-            j = cluster_id.get(t, None)
-            if j is not None:
-                coarse[i][j] += p
-
-    # normalize again (important)
-    for i in coarse:
-        total = sum(coarse[i].values())
-        for j in coarse[i]:
-            coarse[i][j] /= total
-
-    return coarse, cluster_id
-
-
-# -----------------------------
-# Save mapping
-# -----------------------------
-
-def save_mapping(cluster_id, base_dir):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    path = os.path.join(base_dir, f"coarse_mapping_{timestamp}.txt")
-
-    with open(path, "w") as f:
-        for k, v in sorted(cluster_id.items()):
-            f.write(f"{k} -> cluster {v}\n")
-
-    print(f"[✓] Mapping saved: {path}")
-
-
-# -----------------------------
-# Plot matrix
-# -----------------------------
-
-def plot_matrix(coarse, base_dir):
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-    states = list(coarse.keys())
-    n = len(states)
-
+def build_coarse_matrix(states, probs, clusters):
+    n = len(clusters)
     matrix = np.zeros((n, n))
 
-    for i, edges in coarse.items():
-        for j, p in edges.items():
-            matrix[i, j] = p
+    state_to_cluster = {}
+    for i, cluster in enumerate(clusters):
+        for idx in cluster:
+            state_to_cluster[states[idx]] = i
 
-    fig, ax = plt.subplots(figsize=(6,6))
-    im = ax.imshow(matrix)
+    for s, transitions in probs.items():
+        i = state_to_cluster[s]
 
-    plt.colorbar(im)
-    ax.set_title("Coarse-Grained Transition Matrix")
+        for t, p in transitions.items():
+            if t in state_to_cluster:
+                j = state_to_cluster[t]
+                matrix[i, j] += p
 
-    plt.tight_layout()
+    # normalize rows
+    for i in range(n):
+        if matrix[i].sum() > 0:
+            matrix[i] /= matrix[i].sum()
 
-    path = os.path.join(base_dir, f"coarse_matrix_{timestamp}.png")
-    fig.savefig(path, dpi=300)
+    return matrix, state_to_cluster
 
-    print(f"[✓] Matrix saved: {path}")
+# ============================================================
+# 🔹 SAVE OUTPUT
+# ============================================================
 
+def save_outputs(matrix, mapping):
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-# -----------------------------
-# Run
-# -----------------------------
+    base_path = "APPLICATIONS/dynamical_systems/halvorsen/outputs"
+    os.makedirs(base_path, exist_ok=True)
+
+    # TXT mapping
+    txt_path = f"{base_path}/coarse_mapping_{timestamp}.txt"
+    with open(txt_path, "w") as f:
+        for state, cluster in mapping.items():
+            f.write(f"{state} -> cluster {cluster}\n")
+
+    # PNG matrix
+    fig = plt.figure(figsize=(6,5))
+    plt.imshow(matrix)
+    plt.title("Coarse-Grained Transition Matrix")
+    plt.colorbar()
+    plt.xlabel("to cluster j")
+    plt.ylabel("from cluster i")
+
+    png_path = f"{base_path}/coarse_matrix_{timestamp}.png"
+    plt.savefig(png_path)
+    plt.close()
+
+    print(f"[✓] Mapping saved: {txt_path}")
+    print(f"[✓] Matrix saved: {png_path}")
+
+# ============================================================
+# 🔹 MAIN
+# ============================================================
 
 if __name__ == "__main__":
 
-    base_dir = os.path.join(
-        "APPLICATIONS",
-        "dynamical_systems",
-        "halvorsen",
-        "outputs"
-    )
-    os.makedirs(base_dir, exist_ok=True)
-
     print("→ load transitions")
-    probs = load_example()  # 🔴 hier später echte probs rein
+    probs = PROBS
 
     print("→ build vectors")
-    vectors = build_vectors(probs)
+    states, vectors = build_vectors(probs)
 
     print("→ cluster states")
-    clusters = cluster_states(vectors, threshold=0.97)
+    clusters = cluster_states(vectors, threshold=0.90)
 
     print(f"clusters: {len(clusters)}")
 
     print("→ build coarse matrix")
-    coarse, mapping = build_coarse_matrix(probs, clusters)
+    matrix, mapping = build_coarse_matrix(states, probs, clusters)
 
     print("→ save")
-    save_mapping(mapping, base_dir)
-    plot_matrix(coarse, base_dir)
+    save_outputs(matrix, mapping)
 
     print("✔ DONE")
