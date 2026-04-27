@@ -1,0 +1,30 @@
+NEXAH — Dual System Overlay
+============================================================
+
+NOTE
+------------------------------------------------------------
+Lorenz reference is synthetic and structural only.
+It is not a simulation output.
+
+Halvorsen source: APPLICATIONS/dynamical_systems/halvorsen/outputs/gate_aware_policy_matrix_20260427_025844.npy
+
+LORENZ-LIKE SIGNATURE
+------------------------------------------------------------
+diag_strength: 0.6
+offdiag_mass: 0.4000000000000001
+max_gate: 0.45
+active_edges: 4
+
+HALVORSEN SIGNATURE
+------------------------------------------------------------
+diag_strength: 0.6350910816772547
+offdiag_mass: 0.36490891832274525
+max_gate: 0.5310214034137091
+active_edges: 21
+
+INTERPRETATION
+------------------------------------------------------------
+Lorenz-like: discrete regime switching.
+Halvorsen: distributed cyclic transition structure.
+They should not be overlaid geometrically.
+They can be compared structurally via transition topology.
