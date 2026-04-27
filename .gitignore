@@ -119,3 +119,7 @@ htmlcov/
 # CACHE
 # =========================
 .cache/
+
+# --- HALVORSEN EXPERIMENTS (ALLOW NPY) ---
+!APPLICATIONS/dynamical_systems/halvorsen/outputs/
+!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.npy
