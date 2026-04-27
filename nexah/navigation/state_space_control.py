@@ -1,19 +1,6 @@
 # ============================================================
-# 🧭 NEXAH — State Space Control (v10)
-# Adaptive Basin Graph Control
-# ============================================================
-#
-# Purpose:
-# Convert continuous dynamics into a useful discrete transition graph.
-#
-# Key insight:
-# Coarse basins hide transitions.
-# Adaptive basins reveal transition structure.
-#
-# Rule:
-# Core logic returns data.
-# No saving. No output files.
-#
+# 🧭 NEXAH — State Space Control (v10.1)
+# Adaptive Basin Graph Control + Transition Analysis
 # ============================================================
 
 import numpy as np
@@ -22,6 +9,8 @@ from nexah.navigation.transition_graph import (
     build_transition_graph,
     dominant_next_state,
 )
+
+from nexah.navigation.transition_analysis import analyze_transitions
 
 
 # ------------------------------------------------------------
@@ -69,15 +58,6 @@ def compute_risk(x):
 # ------------------------------------------------------------
 
 def compute_adaptive_levels(x, n_basins=10, method="quantile"):
-    """
-    Compute basin boundaries.
-
-    method="quantile":
-        creates basins with roughly equal occupancy
-
-    method="linear":
-        creates evenly spaced amplitude levels
-    """
 
     if n_basins < 2:
         raise ValueError("n_basins must be >= 2")
@@ -123,19 +103,6 @@ def apply_graph_aware_control(
     basin_method="quantile",
     allow_self=False,
 ):
-    """
-    Adaptive basin graph-aware control.
-
-    Steps:
-    1. Compute adaptive basin boundaries.
-    2. Assign basin sequence.
-    3. Build transition graph.
-    4. At high-risk points, follow dominant non-self transition.
-    5. Apply bounded steering toward target basin center.
-
-    Returns:
-        x_ctrl, basins, graph, events, levels
-    """
 
     states = build_state_space(x)
 
@@ -158,11 +125,8 @@ def apply_graph_aware_control(
             continue
 
         current = int(basins[t])
-
-        # dominant transition
         target = dominant_next_state(graph, current)
 
-        # If dominant is self-transition, try strongest non-self edge.
         if target == current and not allow_self:
             candidates = graph.get(current, {})
 
@@ -242,7 +206,7 @@ def demo():
 
     plt.figure(figsize=(12, 5))
     plt.plot(x, label="Original", alpha=0.6)
-    plt.plot(x_ctrl, "--", label="Controlled v10")
+    plt.plot(x_ctrl, "--", label="Controlled v10.1")
 
     plt.scatter(peaks, x[peaks], color="red", s=18, label="High Risk")
 
@@ -252,10 +216,14 @@ def demo():
     for e in events:
         plt.axvline(e["t"], color="gray", alpha=0.06, linewidth=1)
 
-    plt.title(f"NEXAH v10 — Adaptive Basin Graph Control | events={len(events)}")
+    plt.title(f"NEXAH v10.1 — Adaptive Basin Control | events={len(events)}")
     plt.legend()
     plt.tight_layout()
     plt.show()
+
+    # ------------------------
+    # PRINT CORE OUTPUT
+    # ------------------------
 
     print("\n--- Adaptive Levels ---")
     print(levels)
@@ -272,6 +240,23 @@ def demo():
     print("\n--- Events ---")
     for e in events[:40]:
         print(e)
+
+    # ------------------------
+    # 🔥 NEW: ANALYSIS
+    # ------------------------
+
+    analysis = analyze_transitions(basins, graph)
+
+    print("\n--- Drift ---")
+    print(analysis["drift"])
+
+    print("\n--- Symmetry (first 10) ---")
+    for s in analysis["symmetry"][:10]:
+        print(s)
+
+    print("\n--- Transition Distances (first 10) ---")
+    for d in analysis["distances"][:10]:
+        print(d)
 
 
 if __name__ == "__main__":
