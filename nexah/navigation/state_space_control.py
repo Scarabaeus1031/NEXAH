@@ -1,23 +1,18 @@
 # ============================================================
-# 🧭 NEXAH — State Space Control v6
-# Basin-Level Switching Prototype
-# ============================================================
-#
-# Goal:
-# Controlled regime shifts ("step behavior") instead of only smoothing.
-#
-# Core idea:
-# - build state space (x, dx/dt)
-# - define basins from signal levels
-# - detect high-risk points
-# - push trajectory toward neighboring basin center
-#
-# Status:
-# Prototype — first real "regime control"
-#
+# 🧭 NEXAH — State Space Control (v7 FINAL)
+# Transition Probability Control
 # ============================================================
 
 import numpy as np
+
+
+# ------------------------------------------------------------
+# SIGNAL
+# ------------------------------------------------------------
+
+def generate_signal(n=500):
+    t = np.linspace(0, 20, n)
+    return np.sin(t) + 0.3 * np.sin(5 * t)
 
 
 # ------------------------------------------------------------
@@ -33,105 +28,88 @@ def build_state_space(x):
 # BASINS
 # ------------------------------------------------------------
 
-def assign_basins_by_levels(x, levels=None):
-    """
-    Split signal into vertical regimes.
-    """
-
+def assign_basins(x, levels=None):
     if levels is None:
         levels = [-0.6, 0.0, 0.6]
-
     return np.digitize(x, levels)
 
 
-def compute_basin_centers(states, basins):
-    centers = {}
+def compute_transition_matrix(basins):
+    unique = np.unique(basins)
+    n = len(unique)
 
-    for b in np.unique(basins):
-        pts = states[basins == b]
+    index = {b: i for i, b in enumerate(unique)}
+    P = np.zeros((n, n))
 
-        if len(pts) > 0:
-            centers[int(b)] = np.mean(pts, axis=0)
+    for i in range(len(basins) - 1):
+        a = index[basins[i]]
+        b = index[basins[i + 1]]
+        P[a, b] += 1
 
-    return centers
+    P = P / (P.sum(axis=1, keepdims=True) + 1e-8)
+
+    return P, index
 
 
 # ------------------------------------------------------------
-# CONTROL
+# CONTROL (v7)
 # ------------------------------------------------------------
 
-def choose_target_basin(current, centers, direction):
-    keys = sorted(centers.keys())
-
-    if current not in keys:
-        return current
-
-    idx = keys.index(current)
-    target_idx = np.clip(idx + direction, 0, len(keys) - 1)
-
-    return keys[target_idx]
-
-
-def apply_basin_switch_control(
+def apply_transition_control(
     x,
     risk,
     strength=0.08,
     threshold=0.8,
-    levels=None,
-    direction_policy="alternate"
+    target_transition=(0, 1)
 ):
+    """
+    Control by increasing probability of specific transition.
+    """
+
     states = build_state_space(x)
-    basins = assign_basins_by_levels(x, levels)
-    centers = compute_basin_centers(states, basins)
+    basins = assign_basins(x)
+
+    P, index = compute_transition_matrix(basins)
 
     x_ctrl = x.copy()
     events = []
-
-    last_direction = 1
 
     for t in range(2, len(x) - 1):
 
         if risk[t] < threshold:
             continue
 
-        current = int(basins[t])
+        b_now = basins[t]
+        b_next = basins[t + 1]
 
-        # --- direction policy ---
-        if direction_policy == "up":
-            direction = 1
-        elif direction_policy == "down":
-            direction = -1
-        else:
-            direction = last_direction
-            last_direction *= -1
-
-        target = choose_target_basin(current, centers, direction)
-
-        if target == current:
+        # --- target condition ---
+        if (b_now, b_next) == target_transition:
             continue
 
-        # --- current state ---
-        px = x_ctrl[t]
-        pv = x_ctrl[t] - x_ctrl[t - 1]
-        current_state = np.array([px, pv])
+        # --- if we're in source basin, steer toward target ---
+        if b_now == target_transition[0]:
 
-        target_state = centers[target]
+            # desired direction: upward shift
+            direction = 1
 
-        # --- movement toward basin center ---
-        delta = target_state - current_state
+            dx = x_ctrl[t] - x_ctrl[t - 1]
+            dx = np.clip(dx, -1.0, 1.0)
 
-        correction = strength * delta[0]
-        correction = np.clip(correction, -0.12, 0.12)
+            # push toward transition
+            correction = strength * direction * (1.0 - abs(dx))
 
-        x_ctrl[t + 1] = x_ctrl[t] + correction
+            correction = np.clip(correction, -0.12, 0.12)
 
-        events.append({
-            "t": int(t),
-            "from": current,
-            "to": target,
-            "risk": float(risk[t]),
-            "corr": float(correction),
-        })
+            new_dx = dx + correction
+
+            x_ctrl[t + 1] = x_ctrl[t] + new_dx
+
+            events.append({
+                "t": int(t),
+                "basin": int(b_now),
+                "target": target_transition,
+                "corr": float(correction),
+            })
 
     return x_ctrl, basins, events
 
@@ -143,35 +121,33 @@ def apply_basin_switch_control(
 def demo():
     import matplotlib.pyplot as plt
 
-    n = 500
-    t = np.linspace(0, 20, n)
-    x = np.sin(t) + 0.3 * np.sin(5 * t)
+    x = generate_signal()
 
     flow = np.abs(np.gradient(x))
     accel = np.abs(np.gradient(flow))
     risk = flow * accel
     risk = (risk - np.min(risk)) / (np.max(risk) + 1e-8)
 
-    x_ctrl, basins, events = apply_basin_switch_control(
+    x_ctrl, basins, events = apply_transition_control(
         x,
         risk,
         strength=0.08,
         threshold=0.8,
-        direction_policy="alternate"
+        target_transition=(0, 1)
     )
 
     peaks = np.where(risk > 0.8)[0]
 
     plt.figure(figsize=(12, 5))
     plt.plot(x, label="Original", alpha=0.7)
-    plt.plot(x_ctrl, "--", label="Controlled v6")
+    plt.plot(x_ctrl, "--", label="Controlled v7")
 
     plt.scatter(peaks, x[peaks], color="red", s=20, label="High Risk")
 
     for e in events:
-        plt.axvline(e["t"], color="gray", alpha=0.15)
+        plt.axvline(e["t"], color="gray", alpha=0.1)
 
-    plt.title(f"NEXAH v6 — Basin Switching | events={len(events)}")
+    plt.title(f"NEXAH v7 — Transition Control | events={len(events)}")
     plt.legend()
     plt.tight_layout()
     plt.show()
