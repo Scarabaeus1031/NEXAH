@@ -1,5 +1,7 @@
 # NEXAH IEEE X-Ray Pipeline
 
+X-Ray = structural projection of power system dynamics into geometric state space
+
 ## Overview
 The NEXAH IEEE X-Ray Pipeline transforms classical power system simulations into a low-dimensional geometric state space for structural analysis and experimental control.
 
