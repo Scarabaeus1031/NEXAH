@@ -1,5 +1,5 @@
 # ============================================================
-# 🧭 NEXAH v21 — Basin Vector Field + Flow Animation
+# 🧭 NEXAH v21 — Basin Vector Field + Flow Animation (FIXED)
 # ============================================================
 
 import numpy as np
@@ -55,7 +55,6 @@ def build_vector_field(records):
 
         field[key].append(delta)
 
-    # compute mean delta
     field_mean = {}
 
     for key, values in field.items():
@@ -78,7 +77,6 @@ def plot_vector_field(field):
             if (basin, direction) in field:
                 delta = field[(basin, direction)]
 
-                # arrow
                 plt.arrow(
                     basin,
                     0,
@@ -102,7 +100,7 @@ def plot_vector_field(field):
 # FLOW SIMULATION
 # ------------------------------------------------------------
 
-def simulate_flow(field, start_basin=5, steps=100):
+def simulate_flow(field, start_basin=5, steps=200):
     basin = start_basin
     direction = 1
 
@@ -111,19 +109,13 @@ def simulate_flow(field, start_basin=5, steps=100):
     for _ in range(steps):
         key = (basin, direction)
 
-        if key in field:
-            delta = field[key]
-        else:
-            delta = 0
+        delta = field.get(key, 0)
 
-        # stochastic variation
         noise = np.random.normal(scale=0.3)
         step = delta + noise
 
-        # update basin
         basin = int(np.clip(round(basin + step), 0, 9))
 
-        # update direction
         direction = int(np.sign(step))
         if direction == 0:
             direction = np.random.choice([-1, 1])
@@ -138,7 +130,7 @@ def simulate_flow(field, start_basin=5, steps=100):
 # ------------------------------------------------------------
 
 def animate_flow(field):
-    traj = simulate_flow(field, start_basin=5, steps=200)
+    traj = simulate_flow(field)
 
     fig, ax = plt.subplots(figsize=(10, 4))
 
@@ -146,20 +138,17 @@ def animate_flow(field):
     ax.set_ylim(0, 10)
     ax.set_title("NEXAH v21 — Flow in Basin Field")
 
-    line, = ax.plot([], [], color="blue", linewidth=2)
-    dot, = ax.plot([], [], "o", color="red")
+    line, = ax.plot([], [], linewidth=2)
+    dot, = ax.plot([], [], "o")
 
     def update(frame):
+        x = np.arange(frame + 1)
+        y = traj[:frame + 1]
 
-    x = np.arange(frame + 1)
+        line.set_data(x, y)
+        dot.set_data([frame], [traj[frame]])
 
-    y = traj[:frame + 1]
-
-    line.set_data(x, y)
-
-    dot.set_data([frame], [traj[frame]])
-
-    return line, dot
+        return line, dot
 
     anim = FuncAnimation(
         fig,
@@ -169,7 +158,9 @@ def animate_flow(field):
         repeat=True,
     )
 
+    # ----------------------------
     # SAVE GIF
+    # ----------------------------
     save = True
 
     if save:
@@ -194,8 +185,7 @@ def animate_flow(field):
 # ------------------------------------------------------------
 
 def main():
-    records, basins = build_field_data()
-
+    records, _ = build_field_data()
     field = build_vector_field(records)
 
     print("\n--- Vector Field (sample) ---")
