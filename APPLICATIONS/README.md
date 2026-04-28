@@ -33,6 +33,61 @@ NEXAH:
 
 ---
 
+# 🧪 🔥 Validation Layer (CRITICAL)
+
+📂 `power_systems/VALIDATION_LAYER/`
+
+The Validation Layer provides **quantitative and structural evidence**  
+for the NEXAH approach.
+
+---
+
+## Purpose
+
+To test whether NEXAH can:
+
+```text
+detect instability earlier
+and/or
+reveal structural behavior beyond classical signals
+```
+
+---
+
+## Key Mechanism
+
+```text
+signal → event → shape → geometry → motion
+```
+
+---
+
+## Verified Results
+
+- early warning up to **40–50 time units** (IEEE collapse scenarios)  
+- instability appears as **geometric drift**, not threshold crossing  
+- motion-based metrics (angle, speed) reveal **transition dynamics**  
+- statistical validation confirms reliability (~86% detection rate)
+
+---
+
+## Interpretation
+
+```text
+Instability is not a point.
+
+It is a movement through structure.
+```
+
+---
+
+## References
+
+- `power_systems/VALIDATION_LAYER/reports/validation_report_v3.md`  
+- `power_systems/VALIDATION_LAYER/reports/validated_findings.md`  
+
+---
+
 # 🌀 1. Dynamical Systems — Core Reference (Lorenz)
 
 ![Lorenz Core](core_demos/lorenz/outputs/lorenz_nexah_v12_final.png)
@@ -44,6 +99,8 @@ It demonstrates the core transformation pipeline:
 ```text
 Dynamics → Structure → Geometry → Signal → Behavior
 ```
+
+---
 
 ## 🧠 Key Insights
 
@@ -99,8 +156,8 @@ From the Lorenz module:
 
 ---
 
-⚠️ These results are currently based on controlled simulations  
-and should be interpreted as **early-stage validation**, not final performance claims.
+⚠️ These results are based on controlled simulations  
+and should be interpreted as **validated structural behavior**, not final operational guarantees.
 
 ---
 
@@ -130,6 +187,7 @@ and should be interpreted as **early-stage validation**, not final performance c
 | Minimal pipeline | `power_systems/nexah_ieee9/` |
 | Structural theory | `power_systems/stability_field_dynamics/` |
 | Geometric analysis | `power_systems/ieee_xray_pipeline/` |
+| Validation (critical) | `power_systems/VALIDATION_LAYER/` |
 
 ---
 
@@ -156,7 +214,9 @@ PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieeeX/decision/main_ieee300
 
 # 🔵 4. Adapter Layer — System Integration
 
+```text
 System → Adapter → State Graph → NEXAH → Analysis
+```
 
 Supported domains:
 
@@ -182,18 +242,19 @@ Across all modules:
 | Goal | Start Here |
 |------|-----------|
 | Understand the framework | `core_demos/lorenz/` |
+| Explore validation | `power_systems/VALIDATION_LAYER/` |
 | Explore large-scale systems | `power_systems/nexah_ieeeX/` |
-| Dive into system structure | `power_systems/` |
-| Run a minimal example | `power_systems/nexah_ieee9/` |
-| Study theory | `power_systems/stability_field_dynamics/` |
+| Run minimal example | `power_systems/nexah_ieee9/` |
+| Study structure | `power_systems/stability_field_dynamics/` |
 
 ---
 
 # 🌀 NEXAH
 
-> From dynamics → structure → flow → geometry → regimes → navigation
+```text
+dynamics → structure → flow → geometry → regimes → navigation
+```
 
 ---
 
-**Scarabæus1033 · NEXAH**
-
+**Scarabæus1031 · NEXAH**
