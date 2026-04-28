@@ -50,11 +50,12 @@ def extract_events(signal, threshold, min_length=3):
 
 
 # ============================================================
-# 🔥 NEW: Event Shape Extraction
+# 🔥 NEW: Event Shape Features
 # ============================================================
 
 def extract_event_shapes(t, curvature, events):
     shapes = []
+    features = []
 
     for (start, end, peak) in events:
         segment = curvature[start:end]
@@ -62,12 +63,49 @@ def extract_event_shapes(t, curvature, events):
         if len(segment) < 5:
             continue
 
-        t_norm = np.linspace(0, 1, len(segment))
+        # normalize
         seg_norm = segment / (np.max(segment) + 1e-8)
+        t_norm = np.linspace(0, 1, len(segment))
 
         shapes.append((t_norm, seg_norm))
 
-    return shapes
+        # --- FEATURES ---
+        entry_slope = seg_norm[1] - seg_norm[0]
+        exit_slope = seg_norm[-1] - seg_norm[-2]
+
+        peak_idx = np.argmax(seg_norm)
+        peak_pos = peak_idx / len(seg_norm)
+
+        left_energy = np.sum(seg_norm[:peak_idx])
+        right_energy = np.sum(seg_norm[peak_idx:])
+        symmetry = left_energy / (right_energy + 1e-8)
+
+        features.append({
+            "entry_slope": entry_slope,
+            "exit_slope": exit_slope,
+            "peak_pos": peak_pos,
+            "symmetry": symmetry
+        })
+
+    return shapes, features
+
+
+def aggregate_shape_features(features):
+
+    if len(features) == 0:
+        return {
+            "entry_slope_mean": 0,
+            "exit_slope_mean": 0,
+            "peak_pos_mean": 0,
+            "symmetry_mean": 0
+        }
+
+    return {
+        "entry_slope_mean": np.mean([f["entry_slope"] for f in features]),
+        "exit_slope_mean": np.mean([f["exit_slope"] for f in features]),
+        "peak_pos_mean": np.mean([f["peak_pos"] for f in features]),
+        "symmetry_mean": np.mean([f["symmetry"] for f in features])
+    }
 
 
 def plot_event_overlay(all_shapes):
@@ -100,9 +138,7 @@ def run_validation(data, scenario_name="scenario"):
     t = np.asarray(data["time"])
     V = np.asarray(data["voltage"])
 
-    # -----------------------------
-    # Parameters (FIXED!)
-    # -----------------------------
+    # Parameters
     V_threshold = 0.7
     dv_threshold = -0.02
     stable_fraction = 0.30
@@ -111,20 +147,15 @@ def run_validation(data, scenario_name="scenario"):
 
     stable_idx = int(stable_fraction * len(t))
 
-    # -----------------------------
     # Features
-    # -----------------------------
     V_smooth = gaussian_filter1d(V, sigma=smooth_sigma)
 
     dv_dt = gaussian_filter1d(np.gradient(V_smooth, t), sigma=smooth_sigma)
     d2v_dt2 = gaussian_filter1d(np.gradient(dv_dt, t), sigma=smooth_sigma)
 
     x = np.vstack([V_smooth, dv_dt, d2v_dt2]).T
-    mu_stable = np.mean(x[:stable_idx], axis=0)
 
-    # -----------------------------
-    # NEXAH signal (curvature)
-    # -----------------------------
+    # Curvature
     dx_dt = np.gradient(x, axis=0)
     d2x_dt2 = np.gradient(dx_dt, axis=0)
 
@@ -138,15 +169,11 @@ def run_validation(data, scenario_name="scenario"):
         2.0 * np.std(curvature[:stable_idx])
     )
 
-    # -----------------------------
     # Classical detection
-    # -----------------------------
     t_collapse = sustained_first_crossing(V_smooth < V_threshold, t, sustained_samples)
     t_classical = sustained_first_crossing(dv_dt < dv_threshold, t, sustained_samples)
 
-    # -----------------------------
-    # 🔥 Event-based NEXAH detection
-    # -----------------------------
+    # NEXAH events
     events = extract_events(curvature, curvature_threshold, min_length=3)
 
     if len(events) > 0:
@@ -157,23 +184,22 @@ def run_validation(data, scenario_name="scenario"):
         t_nexah = None
         width = 0.0
 
-    # -----------------------------
-    # Lead times
-    # -----------------------------
+    # Leads
     lead_classical = compute_lead_time(t_collapse, t_classical)
     lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
-    # -----------------------------
     # Metrics
-    # -----------------------------
     signal_strength = np.max(curvature)
     noise_level = np.std(curvature[:stable_idx])
     snr = signal_strength / (noise_level + 1e-8)
 
     num_events = len(events)
-
     coherence = width / num_events if num_events > 0 else 0.0
     concentration = width / (len(t) * (t[1] - t[0]))
+
+    # 🔥 NEW: SHAPE FEATURES
+    shapes, shape_features = extract_event_shapes(t, curvature, events)
+    shape_summary = aggregate_shape_features(shape_features)
 
     result = {
         "scenario": scenario_name,
@@ -185,19 +211,18 @@ def run_validation(data, scenario_name="scenario"):
             else None
         ),
         "event_width": width,
-        "curvature_peak": float(signal_strength),
-        "dvdt_min": float(np.min(dv_dt)),
         "snr": float(snr),
         "num_events": num_events,
         "coherence": coherence,
         "concentration": concentration,
+        **shape_summary
     }
 
-    return result, events, curvature, t
+    return result, shapes
 
 
 # ============================================================
-# 🔁 MULTI SCENARIO RUNNER
+# MULTI RUN
 # ============================================================
 
 def run_multi_scenarios():
@@ -211,26 +236,24 @@ def run_multi_scenarios():
         print(f"\n=== RUN: {s} ===")
 
         data = make_synthetic_scenario(kind=s)
-        res, events, curvature, t = run_validation(data, scenario_name=s)
+        res, shapes = run_validation(data, scenario_name=s)
 
         print(res)
         results.append(res)
-
-        shapes = extract_event_shapes(t, curvature, events)
         all_shapes[s] = shapes
 
     return results, all_shapes
 
 
 # ============================================================
-# 📊 TABLE OUTPUT
+# TABLE
 # ============================================================
 
 def print_results_table(results):
 
     print("\n=== MULTI-SCENARIO RESULTS ===\n")
 
-    header = f"{'Scenario':<12} {'Lead C':<10} {'Lead N':<10} {'Δ':<10} {'Width':<10} {'Events':<10} {'Coh':<10} {'Conc':<10} {'SNR':<10}"
+    header = f"{'Scenario':<12} {'Δ':<10} {'Events':<8} {'Coh':<8} {'PeakPos':<10} {'Sym':<10}"
     print(header)
     print("-" * len(header))
 
@@ -241,19 +264,16 @@ def print_results_table(results):
 
         print(
             f"{r['scenario']:<12} "
-            f"{fmt(r['lead_classical']):<10} "
-            f"{fmt(r['lead_nexah']):<10} "
             f"{fmt(r['improvement']):<10} "
-            f"{fmt(r['event_width']):<10} "
-            f"{r['num_events']:<10} "
-            f"{fmt(r['coherence']):<10} "
-            f"{fmt(r['concentration']):<10} "
-            f"{fmt(r['snr']):<10}"
+            f"{r['num_events']:<8} "
+            f"{fmt(r['coherence']):<8} "
+            f"{fmt(r['peak_pos_mean']):<10} "
+            f"{fmt(r['symmetry_mean']):<10}"
         )
 
 
 # ============================================================
-# 🧪 SCENARIOS
+# SCENARIOS
 # ============================================================
 
 def make_synthetic_scenario(kind="nonlinear", n=500):
@@ -261,10 +281,7 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 
     V = 1.0 - 0.002 * t - 0.0005 * t**2
 
-    if kind == "smooth":
-        pass
-
-    elif kind == "nonlinear":
+    if kind == "nonlinear":
         precursor = 0.015 * np.exp((t - 16) / 4.0)
         precursor *= (t < 25)
 
@@ -281,7 +298,7 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 
 
 # ============================================================
-# 🚀 MAIN
+# MAIN
 # ============================================================
 
 if __name__ == "__main__":
@@ -290,5 +307,4 @@ if __name__ == "__main__":
 
     print_results_table(results)
 
-    # 🔥 KEY VISUAL INSIGHT
     plot_event_overlay(all_shapes)
