@@ -269,3 +269,104 @@ if __name__ == "__main__":
     print_table(results)
 
     plot_overlay(all_shapes)
+
+# ============================================================
+# 🧠 NEW: Transition Classification Layer
+# ============================================================
+
+def classify_transition(result):
+    """
+    Classify whether a detected event is:
+    - structural transition
+    - noisy signal
+    - ambiguous
+    """
+
+    alignment = result["alignment"]
+    events = result["events"]
+    width = result["width"]
+    snr = result["snr"]
+
+    # -----------------------------
+    # Heuristic rules (first version)
+    # -----------------------------
+
+    # 🔥 Clean structural transition
+    if alignment < 0.15 and events <= 2:
+        return "STRUCTURAL"
+
+    # ⚠️ Noisy / fragmented
+    if events >= 4 or alignment > 0.3:
+        return "NOISE"
+
+    # 🤷 unclear region
+    return "AMBIGUOUS"
+
+
+# ============================================================
+# 🔁 UPDATED MULTI RUN (with classification)
+# ============================================================
+
+def run_multi_scenarios_with_classification():
+
+    scenarios = ["smooth", "nonlinear", "noisy"]
+
+    results = []
+    all_shapes = {}
+
+    for s in scenarios:
+        print(f"\n=== RUN: {s} ===")
+
+        data = make_synthetic_scenario(kind=s)
+        res, shapes = run_validation(data, scenario_name=s)
+
+        # 🔥 NEW: classification
+        label = classify_transition(res)
+        res["class"] = label
+
+        print(res)
+
+        results.append(res)
+        all_shapes[s] = shapes
+
+    return results, all_shapes
+
+
+# ============================================================
+# 📊 UPDATED TABLE
+# ============================================================
+
+def print_results_table_with_class(results):
+
+    print("\n=== MULTI-SCENARIO RESULTS (CLASSIFIED) ===\n")
+
+    header = f"{'Scenario':<12} {'Δ':<10} {'Events':<8} {'Width':<8} {'Align':<10} {'Class':<12}"
+    print(header)
+    print("-" * len(header))
+
+    for r in results:
+
+        def fmt(x):
+            return f"{x:.3f}" if x is not None else "None"
+
+        print(
+            f"{r['scenario']:<12} "
+            f"{fmt(r['Δ']):<10} "
+            f"{r['events']:<8} "
+            f"{fmt(r['width']):<8} "
+            f"{fmt(r['alignment']):<10} "
+            f"{r['class']:<12}"
+        )
+
+
+# ============================================================
+# 🚀 NEW MAIN ENTRY
+# ============================================================
+
+if __name__ == "__main__":
+
+    results, all_shapes = run_multi_scenarios_with_classification()
+
+    print_results_table_with_class(results)
+
+    plot_event_overlay(all_shapes)
