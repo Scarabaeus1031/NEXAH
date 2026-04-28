@@ -142,13 +142,13 @@ From the Lorenz module:
 
 ## 🔬 Highlight Results
 
-### ⚡ Early Warning (IEEE Collapse Sweep)
+### ⚡ Early Warning — IEEE Collapse Sweep
 
-![Early Warning](power_systems/VALIDATION_LAYER/figures/fig_10_ieee_sweep.png)
+![IEEE Collapse Sweep](power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_03.png)
 
 **Observation:**
-- collapse at ~60–75  
-- NEXAH warning at ~20–25  
+- collapse under high load stress (~60–75)  
+- NEXAH warning significantly earlier (~20–25)  
 
 **Result:**
 
@@ -158,9 +158,9 @@ Lead time ≈ 40–50 time units
 
 ---
 
-### 🌀 Geometric Instability (Shape Flow)
+### 🌀 Geometric Instability — Continuous Shape Flow
 
-![Shape Flow](power_systems/VALIDATION_LAYER/figures/fig_08_shape_flow.png)
+![Continuous Shape Flow](power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_02.png)
 
 **Observation:**
 - angle spikes precede collapse  
@@ -171,8 +171,6 @@ Lead time ≈ 40–50 time units
 ```text
 Instability emerges as directional change in system motion
 ```
-
----
 
 ---
 
@@ -293,4 +291,4 @@ dynamics → structure → flow → geometry → regimes → navigation
 
 ---
 
-***Scarabæus1031 · NEXAH*** (Thomas K. R. Hofmann)
+**Thomas K. R. Hofmann · NEXAH**
