@@ -1,28 +1,33 @@
 # 🧭 NEXAH — Navigating Dynamical Systems
 
-NEXAH explores a simple but powerful idea:
+The `nexah` package provides the **core navigation layer** of the NEXAH framework.
+
+It implements the transition:
 
 ```text
-Can we understand and navigate complex systems
-by using their own internal structure?
+structure → field → transitions → motion → navigation
 ```
 
 ---
 
-# 🧠 What NEXAH does
+# 🧠 What NEXAH actually does
 
-NEXAH transforms raw system dynamics into:
+NEXAH transforms raw system dynamics into **navigable structure**.
+
+It does NOT approximate systems blindly.
+
+It reconstructs:
 
 ```text
-signal → structure → transitions → motion → field
+dynamics → basins → transitions → direction → motion field
 ```
 
-This allows us to:
+This allows:
 
-- detect structural transitions  
-- extract hidden movement patterns  
-- reconstruct system dynamics  
-- simulate motion inside learned structure  
+- detection of structural transitions  
+- extraction of hidden motion patterns  
+- reconstruction of system dynamics  
+- simulation of movement inside learned structure  
 
 ---
 
@@ -50,35 +55,35 @@ direct observations of motion inside the learned field
 
 ## 🌀 Flow (Time + Basin Dynamics)
 
-![Flow Animation](./outputs/nexah_flow.gif)
+![Flow Animation](nexah/outputs/nexah_flow.gif)
 
 ---
 
 ## 🧭 Field Dynamics
 
-![Field Flow](./outputs/nexah_flow_field.gif)
+![Field Flow](nexah/outputs/nexah_flow_field.gif)
 
 ---
 
 ## 🔗 Transition Graph Behavior
 
-![Graph Flow](./outputs/nexah_flow_graph.gif)
+![Graph Flow](nexah/outputs/nexah_flow_graph.gif)
 
 ---
 
 ## 🧱 Basin Vector Field Simulation
 
-![Basin Flow](./outputs/nexah_v21_flow.gif)
+![Basin Flow](nexah/outputs/nexah_v21_flow.gif)
 
 ---
 
-# 🧠 What you are seeing
+## 🧠 Interpretation
 
 Across all visualizations:
 
 - motion is structured  
 - transitions are local  
-- oscillations occur in channels  
+- oscillations occur within channels  
 - behavior is NOT random  
 
 Most important:
@@ -89,7 +94,14 @@ the system behaves as if it follows an internal flow field
 
 ---
 
-# 🧱 System Structure
+# 📦 Components
+
+- `field_layer/` — continuous field construction and metrics  
+- `navigation/` — discrete navigation primitives and policies  
+
+---
+
+# 🧱 System Structure (Current)
 
 NEXAH currently consists of:
 
@@ -105,31 +117,51 @@ Field Layer
 
 ---
 
-# 🧭 What this means
+# 🧭 Navigation Layer (Discrete Prototype)
 
-We are not just analyzing systems.
+The `navigation/` module provides a **discrete navigation engine** operating on learned structure.
 
-We are:
+It includes:
+
+- basin segmentation  
+- transition graph extraction  
+- direction-aware dynamics  
+- vector field reconstruction  
+- flow simulation  
+
+Conceptual pipeline:
 
 ```text
-reconstructing how they move
+state → basin → sequence → transition → direction → Δ → motion
 ```
 
 ---
 
-# 🚀 Current State
+## Status
 
-✔ structure extraction works  
-✔ transition graph discovered  
-✔ motion field reconstructed  
-✔ flow simulation working  
+- functional prototype  
+- operates on reconstructed structure  
+- produces realistic system motion  
+- not yet actively steering trajectories  
+
+---
+
+# 🔥 What is NEW
+
+NEXAH no longer only detects structure.
+
+It now reconstructs:
+
+```text
+how the system moves
+```
 
 ---
 
 # ⚠️ What is missing
 
 ```text
-Navigation
+Navigation (active control)
 ```
 
 We can:
@@ -141,47 +173,55 @@ We can:
 But not yet:
 
 ```text
-actively guide trajectories
+guide trajectories intentionally
 ```
 
 ---
 
-# 🔥 Next Step
+# 🚀 Next Step
 
 ```text
 Field Steering
 ```
 
-→ move WITH the system  
-→ not against it  
-
----
-
-# 🧠 Core Principle
+Goal:
 
 ```text
-NEXAH is not about controlling systems.
-
-NEXAH is about moving through them correctly.
+move WITH the system
+not against it
 ```
 
 ---
 
-# 📂 Project Structure
+# 🧭 Role in the System
 
 ```text
-nexah/
-├── field_layer/
-├── navigation/
-├── outputs/
-└── app/
+ENGINE      → computation  
+FIELD       → structure extraction  
+NEXAH       → navigation layer  
+```
+
+The `nexah/` package is where:
+
+```text
+structure becomes usable for motion
 ```
 
 ---
 
-# ⚡ How to run
+# ▶️ Minimal Usage
 
-Example:
+```python
+import nexah
+```
+
+(Direct API is evolving — current usage via demos)
+
+---
+
+# 🔧 Where to start
+
+Run a demo:
 
 ```bash
 PYTHONPATH=. python nexah/navigation/flow_animation.py
@@ -189,12 +229,12 @@ PYTHONPATH=. python nexah/navigation/flow_animation.py
 
 ---
 
-# 🧭 Status
+# 🧠 Summary
 
-NEXAH is currently:
+NEXAH transforms:
 
 ```text
-a structure discovery and motion reconstruction system
+structure → transitions → motion → navigation
 ```
 
 ---
@@ -210,4 +250,15 @@ We learned motion.
 
 Next:
 we navigate.
+```
+
+---
+
+# 🌀 Concept
+
+```text
+You are not controlling the system.
+
+You are navigating the geometry
+that the system unfolds.
 ```
