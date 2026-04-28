@@ -3,7 +3,12 @@
 # Shape Geometry Analysis (Crossings + Convergence)
 # ============================================================
 
+import sys
 import os
+
+# add repo root to path
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../.."))
+sys.path.append(ROOT)
 import numpy as np
 import matplotlib.pyplot as plt
 
