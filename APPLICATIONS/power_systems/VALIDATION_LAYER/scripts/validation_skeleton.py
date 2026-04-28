@@ -1,6 +1,5 @@
 import os
 import numpy as np
-import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 
 
@@ -22,40 +21,6 @@ def compute_lead_time(t_collapse, t_detection):
     if t_collapse is None or t_detection is None:
         return None
     return t_collapse - t_detection
-
-
-# ============================================================
-# Flow field (unchanged)
-# ============================================================
-
-def compute_flow_field(V, dv_dt, t, grid_size=25):
-    x = V
-    y = dv_dt
-
-    dx = np.gradient(x, t)
-    dy = np.gradient(y, t)
-
-    xi = np.linspace(np.min(x), np.max(x), grid_size)
-    yi = np.linspace(np.min(y), np.max(y), grid_size)
-
-    U = np.zeros((grid_size, grid_size))
-    Vv = np.zeros((grid_size, grid_size))
-    counts = np.zeros((grid_size, grid_size))
-
-    for i in range(len(x)):
-        ix = np.searchsorted(xi, x[i]) - 1
-        iy = np.searchsorted(yi, y[i]) - 1
-
-        if 0 <= ix < grid_size and 0 <= iy < grid_size:
-            U[iy, ix] += dx[i]
-            Vv[iy, ix] += dy[i]
-            counts[iy, ix] += 1
-
-    mask = counts > 0
-    U[mask] /= counts[mask]
-    Vv[mask] /= counts[mask]
-
-    return xi, yi, U, Vv
 
 
 # ============================================================
@@ -90,7 +55,7 @@ def run_validation(data, scenario_name="scenario"):
     mu_stable = np.mean(x[:stable_idx], axis=0)
 
     # -----------------------------
-    # NEXAH signal
+    # NEXAH signal (curvature)
     # -----------------------------
     dx_dt = np.gradient(x, axis=0)
     d2x_dt2 = np.gradient(dx_dt, axis=0)
@@ -120,6 +85,11 @@ def run_validation(data, scenario_name="scenario"):
     # -----------------------------
     width = np.sum(curvature > curvature_threshold) * (t[1] - t[0])
 
+    # 🔥 NEW: Signal-to-noise ratio
+    signal_strength = np.max(curvature)
+    noise_level = np.std(curvature[:stable_idx])
+    snr = signal_strength / (noise_level + 1e-8)
+
     result = {
         "scenario": scenario_name,
         "lead_classical": lead_classical,
@@ -130,8 +100,9 @@ def run_validation(data, scenario_name="scenario"):
             else None
         ),
         "event_width": width,
-        "curvature_peak": float(np.max(curvature)),
+        "curvature_peak": float(signal_strength),
         "dvdt_min": float(np.min(dv_dt)),
+        "snr": float(snr),
     }
 
     return result
@@ -167,7 +138,7 @@ def print_results_table(results):
 
     print("\n=== MULTI-SCENARIO RESULTS ===\n")
 
-    header = f"{'Scenario':<12} {'Lead C':<10} {'Lead N':<10} {'Δ':<10} {'Width':<10}"
+    header = f"{'Scenario':<12} {'Lead C':<10} {'Lead N':<10} {'Δ':<10} {'Width':<10} {'SNR':<10}"
     print(header)
     print("-" * len(header))
 
@@ -181,7 +152,8 @@ def print_results_table(results):
             f"{fmt(r['lead_classical']):<10} "
             f"{fmt(r['lead_nexah']):<10} "
             f"{fmt(r['improvement']):<10} "
-            f"{fmt(r['event_width']):<10}"
+            f"{fmt(r['event_width']):<10} "
+            f"{fmt(r['snr']):<10}"
         )
 
 
