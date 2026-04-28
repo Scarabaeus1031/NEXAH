@@ -24,6 +24,31 @@ def compute_lead_time(t_collapse, t_detection):
 
 
 # ============================================================
+# 🔥 NEW: Event extraction (KEY UPGRADE)
+# ============================================================
+
+def extract_events(signal, threshold, min_length=3):
+    mask = signal > threshold
+    events = []
+
+    i = 0
+    while i < len(mask):
+        if mask[i]:
+            start = i
+            while i < len(mask) and mask[i]:
+                i += 1
+            end = i
+
+            if end - start >= min_length:
+                peak = np.max(signal[start:end])
+                events.append((start, end, peak))
+        else:
+            i += 1
+
+    return events
+
+
+# ============================================================
 # 🔬 SINGLE VALIDATION RUN
 # ============================================================
 
@@ -71,21 +96,34 @@ def run_validation(data, scenario_name="scenario"):
     )
 
     # -----------------------------
-    # Detection
+    # Classical detection (unchanged)
     # -----------------------------
     t_collapse = sustained_first_crossing(V_smooth < V_threshold, t, sustained_samples)
     t_classical = sustained_first_crossing(dv_dt < dv_threshold, t, sustained_samples)
-    t_nexah = sustained_first_crossing(curvature > curvature_threshold, t, sustained_samples)
 
+    # -----------------------------
+    # 🔥 NEW: NEXAH event-based detection
+    # -----------------------------
+    events = extract_events(curvature, curvature_threshold, min_length=3)
+
+    if len(events) > 0:
+        start_idx, end_idx, peak = events[0]
+
+        t_nexah = t[start_idx]
+        width = t[end_idx] - t[start_idx]
+    else:
+        t_nexah = None
+        width = 0.0
+
+    # -----------------------------
+    # Lead times
+    # -----------------------------
     lead_classical = compute_lead_time(t_collapse, t_classical)
     lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
     # -----------------------------
     # Metrics
     # -----------------------------
-    width = np.sum(curvature > curvature_threshold) * (t[1] - t[0])
-
-    # 🔥 NEW: Signal-to-noise ratio
     signal_strength = np.max(curvature)
     noise_level = np.std(curvature[:stable_idx])
     snr = signal_strength / (noise_level + 1e-8)
@@ -103,6 +141,7 @@ def run_validation(data, scenario_name="scenario"):
         "curvature_peak": float(signal_strength),
         "dvdt_min": float(np.min(dv_dt)),
         "snr": float(snr),
+        "num_events": len(events),
     }
 
     return result
@@ -138,7 +177,7 @@ def print_results_table(results):
 
     print("\n=== MULTI-SCENARIO RESULTS ===\n")
 
-    header = f"{'Scenario':<12} {'Lead C':<10} {'Lead N':<10} {'Δ':<10} {'Width':<10} {'SNR':<10}"
+    header = f"{'Scenario':<12} {'Lead C':<10} {'Lead N':<10} {'Δ':<10} {'Width':<10} {'Events':<10} {'SNR':<10}"
     print(header)
     print("-" * len(header))
 
@@ -153,6 +192,7 @@ def print_results_table(results):
             f"{fmt(r['lead_nexah']):<10} "
             f"{fmt(r['improvement']):<10} "
             f"{fmt(r['event_width']):<10} "
+            f"{r['num_events']:<10} "
             f"{fmt(r['snr']):<10}"
         )
 
