@@ -68,7 +68,7 @@ def extract_event_shapes(t, curvature, events):
 
 
 # ============================================================
-# 🔥 NEW: FIELD METRICS
+# FIELD METRICS
 # ============================================================
 
 def resample_shapes(shapes, n=50):
@@ -84,17 +84,6 @@ def resample_shapes(shapes, n=50):
 
 def compute_mean_shape(resampled):
     return np.mean(resampled, axis=0)
-
-
-def compute_area_matrix(resampled):
-    N = len(resampled)
-    M = np.zeros((N, N))
-
-    for i in range(N):
-        for j in range(N):
-            M[i, j] = np.mean(np.abs(resampled[i] - resampled[j]))
-
-    return M
 
 
 def compute_alignment(resampled, mean_shape):
@@ -118,6 +107,7 @@ def run_validation(data, scenario_name="scenario"):
 
     stable_idx = int(stable_fraction * len(t))
 
+    # --- signals ---
     V_smooth = gaussian_filter1d(V, sigma=sigma)
     dv_dt = gaussian_filter1d(np.gradient(V_smooth, t), sigma=sigma)
 
@@ -134,7 +124,7 @@ def run_validation(data, scenario_name="scenario"):
 
     threshold = np.mean(curvature[:stable_idx]) + 2 * np.std(curvature[:stable_idx])
 
-    # detections
+    # --- detections ---
     t_collapse = sustained_first_crossing(V_smooth < V_threshold, t)
     t_classical = sustained_first_crossing(dv_dt < dv_threshold, t)
 
@@ -146,29 +136,25 @@ def run_validation(data, scenario_name="scenario"):
         width = t[end] - t[start]
     else:
         t_nexah = None
-        width = 0
+        width = 0.0
 
     lead_classical = compute_lead_time(t_collapse, t_classical)
     lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
-    # SNR
+    # --- metrics ---
     snr = np.max(curvature) / (np.std(curvature[:stable_idx]) + 1e-8)
 
-    # shapes
     shapes = extract_event_shapes(t, curvature, events)
 
-    alignment = None
-
+    alignment = 0.0
     if len(shapes) > 0:
         resampled = resample_shapes(shapes)
         mean_shape = compute_mean_shape(resampled)
         alignment = compute_alignment(resampled, mean_shape)
-    else:
-        resampled = None
 
     return {
         "scenario": scenario_name,
-        "Δ": lead_nexah - lead_classical if lead_classical and lead_nexah else None,
+        "Δ": (lead_nexah - lead_classical) if (lead_classical and lead_nexah) else None,
         "events": len(events),
         "width": width,
         "snr": snr,
@@ -177,10 +163,29 @@ def run_validation(data, scenario_name="scenario"):
 
 
 # ============================================================
+# CLASSIFICATION
+# ============================================================
+
+def classify_transition(result):
+
+    alignment = result["alignment"]
+    events = result["events"]
+
+    if alignment < 0.15 and events <= 2:
+        return "STRUCTURAL"
+
+    if events >= 4 or alignment > 0.3:
+        return "NOISE"
+
+    return "AMBIGUOUS"
+
+
+# ============================================================
 # MULTI RUN
 # ============================================================
 
 def run_multi():
+
     scenarios = ["smooth", "nonlinear", "noisy"]
 
     results = []
@@ -188,10 +193,14 @@ def run_multi():
 
     for s in scenarios:
         print(f"\n=== RUN: {s} ===")
+
         data = make_synthetic_scenario(s)
         res, shapes = run_validation(data, s)
 
+        res["class"] = classify_transition(res)
+
         print(res)
+
         results.append(res)
         all_shapes[s] = shapes
 
@@ -203,19 +212,25 @@ def run_multi():
 # ============================================================
 
 def print_table(results):
-    print("\n=== RESULTS ===\n")
-    header = f"{'Scenario':<12} {'Δ':<10} {'Events':<8} {'Width':<8} {'Align':<10} {'SNR':<10}"
+
+    print("\n=== MULTI-SCENARIO RESULTS ===\n")
+
+    header = f"{'Scenario':<12} {'Δ':<10} {'Events':<8} {'Width':<8} {'Align':<10} {'Class':<12}"
     print(header)
     print("-" * len(header))
 
     for r in results:
+
+        def fmt(x):
+            return f"{x:.3f}" if x is not None else "None"
+
         print(
             f"{r['scenario']:<12} "
-            f"{r['Δ'] if r['Δ'] else 0:<10.3f} "
+            f"{fmt(r['Δ']):<10} "
             f"{r['events']:<8} "
-            f"{r['width']:<8.3f} "
-            f"{(r['alignment'] or 0):<10.3f} "
-            f"{r['snr']:<10.3f}"
+            f"{fmt(r['width']):<8} "
+            f"{fmt(r['alignment']):<10} "
+            f"{r['class']:<12}"
         )
 
 
@@ -232,8 +247,8 @@ def plot_overlay(all_shapes):
 
     handles, labels = plt.gca().get_legend_handles_labels()
     unique = dict(zip(labels, handles))
-    plt.legend(unique.values(), unique.keys())
 
+    plt.legend(unique.values(), unique.keys())
     plt.title("Event Shape Overlay")
     plt.grid(alpha=0.3)
     plt.show()
@@ -244,6 +259,7 @@ def plot_overlay(all_shapes):
 # ============================================================
 
 def make_synthetic_scenario(kind="nonlinear", n=500):
+
     t = np.linspace(0, 100, n)
     V = 1.0 - 0.002 * t - 0.0005 * t**2
 
@@ -269,104 +285,3 @@ if __name__ == "__main__":
     print_table(results)
 
     plot_overlay(all_shapes)
-
-# ============================================================
-# 🧠 NEW: Transition Classification Layer
-# ============================================================
-
-def classify_transition(result):
-    """
-    Classify whether a detected event is:
-    - structural transition
-    - noisy signal
-    - ambiguous
-    """
-
-    alignment = result["alignment"]
-    events = result["events"]
-    width = result["width"]
-    snr = result["snr"]
-
-    # -----------------------------
-    # Heuristic rules (first version)
-    # -----------------------------
-
-    # 🔥 Clean structural transition
-    if alignment < 0.15 and events <= 2:
-        return "STRUCTURAL"
-
-    # ⚠️ Noisy / fragmented
-    if events >= 4 or alignment > 0.3:
-        return "NOISE"
-
-    # 🤷 unclear region
-    return "AMBIGUOUS"
-
-
-# ============================================================
-# 🔁 UPDATED MULTI RUN (with classification)
-# ============================================================
-
-def run_multi_scenarios_with_classification():
-
-    scenarios = ["smooth", "nonlinear", "noisy"]
-
-    results = []
-    all_shapes = {}
-
-    for s in scenarios:
-        print(f"\n=== RUN: {s} ===")
-
-        data = make_synthetic_scenario(kind=s)
-        res, shapes = run_validation(data, scenario_name=s)
-
-        # 🔥 NEW: classification
-        label = classify_transition(res)
-        res["class"] = label
-
-        print(res)
-
-        results.append(res)
-        all_shapes[s] = shapes
-
-    return results, all_shapes
-
-
-# ============================================================
-# 📊 UPDATED TABLE
-# ============================================================
-
-def print_results_table_with_class(results):
-
-    print("\n=== MULTI-SCENARIO RESULTS (CLASSIFIED) ===\n")
-
-    header = f"{'Scenario':<12} {'Δ':<10} {'Events':<8} {'Width':<8} {'Align':<10} {'Class':<12}"
-    print(header)
-    print("-" * len(header))
-
-    for r in results:
-
-        def fmt(x):
-            return f"{x:.3f}" if x is not None else "None"
-
-        print(
-            f"{r['scenario']:<12} "
-            f"{fmt(r['Δ']):<10} "
-            f"{r['events']:<8} "
-            f"{fmt(r['width']):<8} "
-            f"{fmt(r['alignment']):<10} "
-            f"{r['class']:<12}"
-        )
-
-
-# ============================================================
-# 🚀 NEW MAIN ENTRY
-# ============================================================
-
-if __name__ == "__main__":
-
-    results, all_shapes = run_multi_scenarios_with_classification()
-
-    print_results_table_with_class(results)
-
-    plot_event_overlay(all_shapes)
