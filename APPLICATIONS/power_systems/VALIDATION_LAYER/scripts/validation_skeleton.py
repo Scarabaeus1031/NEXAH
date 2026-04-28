@@ -24,7 +24,7 @@ def compute_lead_time(t_collapse, t_detection):
 
 
 # ============================================================
-# 🔥 Event extraction
+# Event extraction
 # ============================================================
 
 def extract_events(signal, threshold, min_length=3):
@@ -49,7 +49,40 @@ def extract_events(signal, threshold, min_length=3):
 
 
 # ============================================================
-# 🔬 SINGLE VALIDATION RUN
+# Basin concentration
+# ============================================================
+
+def compute_event_concentration(V_smooth, curvature, curvature_threshold, num_bins=10):
+    """
+    Measures how localized NEXAH events are in state/basin space.
+
+    concentration = max event-bin count / total event count
+
+    High concentration:
+        events are localized in few regions
+
+    Low concentration:
+        events are spread across many regions
+    """
+
+    bins = np.linspace(np.min(V_smooth), np.max(V_smooth), num_bins + 1)
+    basin = np.digitize(V_smooth, bins) - 1
+    basin = np.clip(basin, 0, num_bins - 1)
+
+    event_mask = curvature > curvature_threshold
+    event_basins = basin[event_mask]
+
+    if len(event_basins) == 0:
+        return 0.0
+
+    _, counts = np.unique(event_basins, return_counts=True)
+    concentration = np.max(counts) / np.sum(counts)
+
+    return float(concentration)
+
+
+# ============================================================
+# SINGLE VALIDATION RUN
 # ============================================================
 
 def run_validation(data, scenario_name="scenario"):
@@ -102,7 +135,7 @@ def run_validation(data, scenario_name="scenario"):
     t_classical = sustained_first_crossing(dv_dt < dv_threshold, t, sustained_samples)
 
     # -----------------------------
-    # 🔥 Event-based NEXAH detection
+    # Event-based NEXAH detection
     # -----------------------------
     events = extract_events(curvature, curvature_threshold, min_length=3)
 
@@ -133,6 +166,13 @@ def run_validation(data, scenario_name="scenario"):
     if num_events > 0:
         coherence = width / num_events
 
+    concentration = compute_event_concentration(
+        V_smooth,
+        curvature,
+        curvature_threshold,
+        num_bins=10
+    )
+
     result = {
         "scenario": scenario_name,
         "lead_classical": lead_classical,
@@ -147,14 +187,15 @@ def run_validation(data, scenario_name="scenario"):
         "dvdt_min": float(np.min(dv_dt)),
         "snr": float(snr),
         "num_events": num_events,
-        "coherence": coherence,
+        "coherence": float(coherence),
+        "concentration": float(concentration),
     }
 
     return result
 
 
 # ============================================================
-# 🔁 MULTI SCENARIO RUNNER
+# MULTI SCENARIO RUNNER
 # ============================================================
 
 def run_multi_scenarios():
@@ -176,14 +217,25 @@ def run_multi_scenarios():
 
 
 # ============================================================
-# 📊 TABLE OUTPUT
+# TABLE OUTPUT
 # ============================================================
 
 def print_results_table(results):
 
     print("\n=== MULTI-SCENARIO RESULTS ===\n")
 
-    header = f"{'Scenario':<12} {'Lead C':<10} {'Lead N':<10} {'Δ':<10} {'Width':<10} {'Events':<10} {'Coh':<10} {'SNR':<10}"
+    header = (
+        f"{'Scenario':<12} "
+        f"{'Lead C':<10} "
+        f"{'Lead N':<10} "
+        f"{'Δ':<10} "
+        f"{'Width':<10} "
+        f"{'Events':<10} "
+        f"{'Coh':<10} "
+        f"{'Conc':<10} "
+        f"{'SNR':<10}"
+    )
+
     print(header)
     print("-" * len(header))
 
@@ -200,12 +252,13 @@ def print_results_table(results):
             f"{fmt(r['event_width']):<10} "
             f"{r['num_events']:<10} "
             f"{fmt(r['coherence']):<10} "
+            f"{fmt(r['concentration']):<10} "
             f"{fmt(r['snr']):<10}"
         )
 
 
 # ============================================================
-# 🧪 SCENARIOS
+# SCENARIOS
 # ============================================================
 
 def make_synthetic_scenario(kind="nonlinear", n=500):
@@ -233,7 +286,7 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 
 
 # ============================================================
-# 🚀 MAIN
+# MAIN
 # ============================================================
 
 if __name__ == "__main__":
