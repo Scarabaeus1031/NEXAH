@@ -1,4 +1,4 @@
-# APPLICATIONS/power_systems/VALIDATION_LAYER/export_figures.py
+# APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/export_figures.py
 
 import os
 import shutil
@@ -6,12 +6,21 @@ from pathlib import Path
 
 
 # ============================================================
-# CONFIG
+# FIND PROJECT ROOT (VALIDATION_LAYER)
 # ============================================================
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve()
+
+while BASE_DIR.name != "VALIDATION_LAYER":
+    BASE_DIR = BASE_DIR.parent
+
 OUTPUT_DIR = BASE_DIR / "outputs"
 FIGURE_DIR = BASE_DIR / "figures"
+
+
+# ============================================================
+# CONFIG
+# ============================================================
 
 FIGURE_MAP = {
     "overlay.png": "fig_01_overlay.png",
@@ -28,7 +37,14 @@ FIGURE_MAP = {
 # ============================================================
 
 def get_latest_run():
-    runs = [d for d in OUTPUT_DIR.iterdir() if d.is_dir() and d.name.startswith("run_")]
+    if not OUTPUT_DIR.exists():
+        print(f"❌ Output directory not found: {OUTPUT_DIR}")
+        return None
+
+    runs = [
+        d for d in OUTPUT_DIR.iterdir()
+        if d.is_dir() and d.name.startswith("run_")
+    ]
 
     if not runs:
         print("❌ No run folders found")
@@ -73,6 +89,10 @@ def export_from_run(run_path):
 # ============================================================
 
 if __name__ == "__main__":
+    print(f"📁 Base dir: {BASE_DIR}")
+    print(f"📁 Output dir: {OUTPUT_DIR}")
+    print(f"📁 Figure dir: {FIGURE_DIR}")
+
     latest_run = get_latest_run()
 
     if latest_run:
