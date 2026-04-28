@@ -493,3 +493,533 @@ there exists an internal transition geometry
 ```
 
 → THIS is the NEXAH kernel candidate.
+
+
+# 📍 ENTRY 003 — Basin Dynamics → Sequence → Vector Field (v13 → v21)
+
+## Setup
+
+Pipeline erweitert um:
+
+```text
+signal → basin → sequence → transition → direction → vector field → flow simulation
+```
+
+Neue Komponenten:
+
+- SEQUENCE: diskrete Basin-Folge
+- TRANSITION GRAPH: empirische Übergangswahrscheinlichkeiten
+- DIRECTION: lokale Bewegungsrichtung (sign(dx))
+- VECTOR FIELD: erwartete Bewegung Δ pro (basin, direction)
+- FLOW SIMULATION: Bewegung im gelernten Feld
+
+Visual Outputs:
+
+```text
+nexah_flow.gif
+nexah_flow_field.gif
+nexah_flow_graph.gif
+nexah_v21_flow.gif
+```
+
+---
+
+## 🔍 Observation — Sequence Layer
+
+Extrahierte Struktur:
+
+```text
+[4, 5, 4, 5, 6, 7, 6, 7, 6, 5, ...]
+```
+
+Merkmale:
+
+- lokale Oszillation (±1 transitions)
+- dominante Nachbarschaftsbewegung
+- seltene größere Sprünge
+
+Detected loops:
+
+```text
+4 ↔ 5
+6 ↔ 7
+```
+
+---
+
+## 🔥 Key Finding
+
+```text
+System bewegt sich NICHT frei zwischen Zuständen.
+```
+
+Sondern:
+
+```text
+→ es oszilliert innerhalb lokaler Transition-Paare
+```
+
+---
+
+## 🧠 Interpretation
+
+Das System hat:
+
+```text
+lokale Transition-Kanäle
+```
+
+Diese sind:
+
+- stabil
+- wiederkehrend
+- richtungsabhängig
+
+---
+
+## 📊 Observation — Transition Graph
+
+Beispiel:
+
+```text
+5 → 5 | P=0.551
+5 → 6 | P=0.245
+5 → 4 | P=0.184
+```
+
+Interpretation:
+
+```text
+→ hohe Selbstpersistenz
+→ begrenzte Nachbarschaftsbewegung
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Transitions sind lokal begrenzt UND probabilistisch stabil.
+```
+
+---
+
+## 🧭 Observation — Direction Layer
+
+Beispiel:
+
+```text
+basin=6 dir=+1 → jump_prob=0.600
+basin=7 dir=-1 → jump_prob=0.520
+basin=9 dir=+1 → jump_prob=0.000
+```
+
+---
+
+## 🔥 Key Finding
+
+```text
+Transition-Wahrscheinlichkeit hängt stark von Richtung ab
+```
+
+→ nicht nur Zustand, sondern:
+
+```text
+(state, direction) = relevante Einheit
+```
+
+---
+
+## 🧠 Interpretation
+
+Systemzustand ist:
+
+```text
+NICHT:
+basin
+
+SONDERN:
+(basin + motion state)
+```
+
+---
+
+## 📊 Observation — Vector Field (v21)
+
+Beispiel:
+
+```text
+(6, +1) → +0.4
+(7, -1) → -0.56
+(8, +1) → +0.11
+```
+
+---
+
+## 🔥 Key Finding
+
+```text
+Man kann ein erwartetes Bewegungsfeld lernen
+```
+
+→ Mapping:
+
+```text
+(basin, direction) → expected Δ
+```
+
+---
+
+## 🧠 Interpretation
+
+Das ist:
+
+```text
+ein diskretes Vektorfeld über Zuständen
+```
+
+---
+
+## 🎬 Observation — Flow Simulation
+
+Simulation im Feld:
+
+```text
+basin(t+1) = basin(t) + Δ + noise
+```
+
+Ergebnis:
+
+- kohärente Bewegung
+- keine random jumps
+- strukturierte Trajektorie
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Das System ist navigierbar im gelernten Feld
+```
+
+---
+
+## ⚠️ Important Correction
+
+Frühere Annahme:
+
+```text
+Transitions sind stochastisch
+```
+
+Neue Erkenntnis:
+
+```text
+Transitions folgen einem strukturierten Feld
+```
+
+---
+
+## 🧠 Core Insight
+
+```text
+Sequence → zeigt Bewegung
+Graph → zeigt Möglichkeiten
+Vector Field → zeigt Dynamik
+```
+
+---
+
+## 🔥 Major Conceptual Shift
+
+Von:
+
+```text
+transition probabilities
+```
+
+Zu:
+
+```text
+field-driven motion
+```
+
+---
+
+## 🧭 Structural Layers (jetzt klar)
+
+```text
+Layer 1: Basin (Position)
+Layer 2: Direction (Local Motion)
+Layer 3: Δ (Field Response)
+Layer 4: Jump (Transition Event)
+```
+
+---
+
+## 📊 Hidden Geometry
+
+System zeigt:
+
+- lokale Oszillationspaare
+- gerichtete Drift-Zonen
+- Rand-Stabilität (z.B. basin 9)
+- zentrale Dynamik (5–7)
+
+---
+
+## 🔥 Kernel-Level Insight
+
+```text
+Systembewegung ist:
+lokal + gerichtet + feldgesteuert
+```
+
+Nicht:
+
+```text
+frei + zufällig
+```
+
+---
+
+## ❗ Conclusion
+
+```text
+Control muss auf dem Vektorfeld operieren
+nicht auf Zustand oder Transition allein
+```
+
+---
+
+## 🚀 Next Step
+
+Von:
+
+```text
+learned field (passiv)
+```
+
+Zu:
+
+```text
+field steering (aktiv)
+```
+
+---
+
+## 🧠 Open Question
+
+```text
+Kann man Trajektorien gezielt durch das gelernte Feld führen,
+ohne gegen die Dynamik zu arbeiten?
+```
+
+---
+
+## 📊 Status
+
+```text
+✔ sequence structure verstanden
+✔ transition graph extrahiert
+✔ direction layer identifiziert
+✔ vector field gelernt
+✔ flow simulation funktioniert
+
+❌ steering noch nicht implementiert
+❌ continuous field mapping fehlt
+```
+
+---
+
+## 🔥 Critical Transition Point
+
+```text
+→ nicht nur erkennen
+→ sondern Bewegung modellieren
+```
+
+# 📍 ENTRY 004 — Field Steering (v22 → ?)
+
+## Setup
+
+Bisher:
+
+```text
+System wird beobachtet und modelliert
+```
+
+Jetzt Ziel:
+
+```text
+System wird aktiv durch das Feld geführt
+```
+
+---
+
+## 🧠 Core Shift
+
+Vorher:
+
+```text
+Δ wird gemessen
+```
+
+Jetzt:
+
+```text
+Δ wird genutzt
+```
+
+---
+
+## 🔍 Problem
+
+Aktuell:
+
+```text
+trajectory folgt dem Feld passiv
+```
+
+Aber:
+
+```text
+keine Kontrolle über Zielrichtung
+```
+
+---
+
+## 🔥 Key Question
+
+```text
+Kann man Bewegung im Feld steuern,
+ohne gegen das Feld zu arbeiten?
+```
+
+---
+
+## 🧭 Concept: Field Steering
+
+Idee:
+
+```text
+statt state zu ändern
+→ beeinflusse Bewegungsrichtung
+```
+
+Form:
+
+```text
+Δ_total = Δ_field + Δ_control
+```
+
+---
+
+## ⚠️ Constraint
+
+Control darf NICHT:
+
+```text
+gegen das Feld arbeiten
+```
+
+Sondern:
+
+```text
+→ vorhandene Bewegungen verstärken
+→ konkurrierende unterdrücken
+```
+
+---
+
+## 🔬 First Approach
+
+Ansatz:
+
+```text
+wenn Ziel = höherer Basin
+→ verstärke positive Δ
+→ dämpfe negative Δ
+```
+
+---
+
+## 📊 Expected Behavior
+
+- weniger Oszillation
+- gerichtete Bewegung
+- stabilere Trajektorien
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Control = Richtungsgewichtung
+nicht Zustandseingriff
+```
+
+---
+
+## ❗ Risk
+
+Wenn falsch gemacht:
+
+```text
+→ System wird instabil
+→ natürliche Dynamik bricht
+```
+
+---
+
+## 🧠 Interpretation
+
+Das System hat:
+
+```text
+intrinsische Bewegungslogik
+```
+
+Control muss:
+
+```text
+diese Logik nutzen
+nicht ersetzen
+```
+
+---
+
+## 🚀 Next Step
+
+Implementiere:
+
+```text
+field-aligned steering
+```
+
+→ leichte Modifikation von Δ
+
+---
+
+## 📊 Status
+
+```text
+✔ Feld gelernt
+✔ Bewegung modelliert
+
+❌ Navigation noch nicht aktiv
+❌ Zielsteuerung fehlt
+```
+
+---
+
+## 🔥 Transition Point
+
+```text
+von:
+"verstehen"
+
+zu:
+"navigieren"
+```
+
