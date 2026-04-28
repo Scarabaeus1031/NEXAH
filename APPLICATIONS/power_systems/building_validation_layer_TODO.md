@@ -243,3 +243,303 @@ At the end, we want:
 > If NEXAH consistently detects instability earlier or reveals structure  
 > that classical indicators miss,  
 > then the geometric approach is justified.
+
+---
+
+# ⚡ NEXAH — Validation Layer Gameplan
+
+---
+
+# 🧭 Strategy
+
+We do **NOT** build a new system.
+
+We extract a **minimal validation slice** from the existing codebase.
+
+> Goal: isolate the **simplest possible proof** of NEXAH advantage
+
+---
+
+# 🧱 Principle
+
+```text
+Use existing assets → strip complexity → rebuild minimal pipeline
+```
+
+---
+
+# 🧰 What We Reuse (High Value)
+
+## 1. Data / Simulation Layer
+
+From:
+
+```
+ieee_application/
+ieee_test_cases/
+```
+
+Use:
+
+- existing IEEE loaders
+- existing collapse scenarios
+- voltage time series generation
+
+👉 DO NOT rebuild simulation
+
+---
+
+## 2. Feature Logic (CRITICAL)
+
+From:
+
+- `drift`, `acceleration`
+- existing feature extraction in:
+  - pipeline
+  - regime detection
+  - early warning scripts
+
+👉 This is already VALIDATED and useful
+
+---
+
+## 3. NEXAH Core Signals
+
+Reuse (if stable):
+
+- risk signal  
+- distance / geometry proxy  
+- simple embedding (2D / 3D max)
+
+👉 DO NOT use full RootRoom / Cube / high-dim experiments
+
+---
+
+## 4. Existing Plots (Optional Mining)
+
+From:
+
+```
+ieee_test_cases/outputs/
+resonance_maps/
+```
+
+👉 Only reuse if:
+- clean
+- interpretable
+- reproducible
+
+Otherwise → regenerate
+
+---
+
+# ❌ What We DO NOT Use
+
+Avoid:
+
+- RootRoom experiments (v17+)
+- complex controllers (v14–v30)
+- attractor / aperture systems
+- multi-agent / navigation layers
+- experimental geometry stacks
+
+👉 These are:
+- too complex
+- hard to justify
+- not needed for validation
+
+---
+
+# 🆕 What We Build (Minimal New Layer)
+
+## File:
+
+```text
+APPLICATIONS/power_systems/validation/
+    ├── validation_skeleton.py
+    ├── validation_plotting.py
+    └── README.md
+```
+
+---
+
+# 🧪 validation_skeleton.py
+
+This is the **core script**.
+
+### Responsibilities:
+
+1. load simulation data  
+2. compute:
+   - voltage
+   - drift
+   - acceleration  
+3. compute NEXAH signal:
+   - risk OR distance OR simple embedding metric  
+4. detect:
+   - t_collapse
+   - t_classical
+   - t_nexah  
+5. compute lead times  
+
+👉 ONE script, no framework
+
+---
+
+# 📊 validation_plotting.py
+
+Minimal plotting:
+
+- time series with markers  
+- risk vs time  
+- 2D state space  
+- golden line diagram  
+
+👉 clean, publication-ready
+
+---
+
+# 🔍 Detection Logic (Keep Simple)
+
+## Classical
+
+Option 1:
+```text
+V < threshold
+```
+
+Option 2:
+```text
+dv/dt exceeds threshold
+```
+
+---
+
+## NEXAH
+
+Pick ONE signal:
+
+- risk increase threshold  
+OR  
+- distance drop  
+OR  
+- curvature change  
+
+👉 do NOT mix signals
+
+---
+
+# 🧠 Key Design Decision
+
+> Simplicity > sophistication
+
+---
+
+# 🧪 Scenario Selection
+
+Start with:
+
+- IEEE14 OR IEEE30  
+- single controlled collapse  
+
+👉 ONE clean case is enough
+
+---
+
+# 📈 Output (Strict)
+
+## Required
+
+1. time series plot  
+2. risk/distance plot  
+3. state space plot  
+4. lead time table  
+
+---
+
+## Optional
+
+- overlay comparison figure  
+- clean export (png + csv)
+
+---
+
+# 🧠 Interpretation Layer
+
+After results:
+
+- compare lead times  
+- check robustness  
+- identify structural behavior  
+
+👉 NO speculation  
+👉 ONLY observable claims
+
+---
+
+# ⚠️ Pitfalls to Avoid
+
+- overfitting thresholds  
+- tuning until NEXAH wins  
+- mixing multiple signals  
+- using too many dimensions  
+- hiding negative results  
+
+---
+
+# 🧭 Execution Plan
+
+## Day 1
+
+- pick system  
+- extract voltage time series  
+- implement skeleton script  
+
+---
+
+## Day 2
+
+- implement classical detection  
+- implement NEXAH signal  
+- compute lead times  
+
+---
+
+## Day 3
+
+- plotting  
+- clean outputs  
+- minimal README  
+
+---
+
+# 🌀 Golden Rule
+
+> If it cannot be explained in one figure,  
+> it is too complex for validation.
+
+---
+
+# 🚀 End State
+
+You will have:
+
+- 1 script  
+- 3–4 figures  
+- 1 table  
+
+👉 and ONE clear statement:
+
+```text
+NEXAH detects earlier / differently / structurally
+```
+
+---
+
+# 🧠 Final Insight
+
+This is not about proving the full system.
+
+It is about creating:
+
+> a **small, undeniable anchor point of truth**
