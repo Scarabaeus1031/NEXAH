@@ -49,13 +49,19 @@ Goal:
 
 NEXAH consists of three conceptual layers:
 
+---
+
 ### 1. Extraction Layer
 - simulation → feature generation  
 - transformation into structured state representation  
 
+---
+
 ### 2. Representation Layer
 - construction of geometric state space  
 - flow field and risk landscape  
+
+---
 
 ### 3. Navigation / Application Layer (Experimental)
 - trajectory analysis  
@@ -64,7 +70,73 @@ NEXAH consists of three conceptual layers:
 
 ---
 
+# 🧪 🔥 Validation Layer (CRITICAL BRIDGE)
+
+📂 `VALIDATION_LAYER/`
+
+This layer provides **quantitative and structural validation** of the NEXAH approach.
+
+---
+
+## Purpose
+
+To test whether NEXAH can:
+
+```text
+detect instability earlier
+and/or
+reveal structural behavior not visible in classical signals
+```
+
+---
+
+## Key Mechanism
+
+```text
+signal → event → shape → geometry → motion
+```
+
+---
+
+## Core Concepts
+
+- curvature-based event detection  
+- event shape extraction  
+- shape space (PCA embedding)  
+- motion metrics (speed, angle)  
+- trajectory-based instability detection  
+
+---
+
+## Key Findings
+
+- early warning up to ~40–50 time units (IEEE collapse cases)  
+- instability appears as **geometric drift**, not threshold crossing  
+- motion in shape space reveals **transition dynamics**  
+- angle-based signals provide **earlier detection than magnitude-based signals**
+
+---
+
+## Outputs
+
+- reproducible experiment pipeline  
+- statistical validation  
+- IEEE system validation (collapse sweep)  
+- figure map and structured reports  
+
+---
+
+## References
+
+- `VALIDATION_LAYER/reports/validation_report_v3.md`  
+- `VALIDATION_LAYER/reports/validated_findings.md`  
+- `VALIDATION_LAYER/experiments/`  
+
+---
+
 # 📦 Module Structure
+
+---
 
 ## 🔬 1. IEEE X-Ray Pipeline
 
@@ -148,7 +220,10 @@ System-level validation across increasing grid size
 
 ```text
 ieee_xray_pipeline
-    ↓ (method + representation)
+    ↓ (feature extraction + embedding)
+
+VALIDATION_LAYER
+    ↓ (structural validation + evidence)
 
 nexah_ieee9
     ↓ (minimal working system)
@@ -161,14 +236,17 @@ nexah_ieeeX
 
 # 🚀 Recommended Entry Path
 
-1. **Start with IEEE9**
-   → understand core mechanism in a minimal system  
+1. **Start with IEEE9**  
+   → understand core mechanism  
 
-2. **Explore X-Ray Pipeline**
-   → understand feature extraction and geometry construction  
+2. **Run Validation Layer**  
+   → verify structural behavior + early warning  
 
-3. **Move to IEEE X**
-   → analyze scaling behavior and system-level effects  
+3. **Explore X-Ray Pipeline**  
+   → understand feature extraction  
+
+4. **Move to IEEE X**  
+   → analyze scaling behavior  
 
 ---
 
@@ -177,7 +255,7 @@ nexah_ieeeX
 - control remains experimental (no stability guarantees)  
 - sensitivity to parameters not fully explored  
 - limited validation on real-world datasets  
-- benchmarking vs classical methods is ongoing  
+- benchmarking vs classical methods ongoing  
 
 ---
 
@@ -186,7 +264,7 @@ nexah_ieeeX
 Ongoing work focuses on:
 
 - quantitative validation vs classical stability methods  
-- robustness across scenarios and perturbations  
+- robustness across noise and perturbations  
 - improved mapping to physical grid variables  
 - development of reliable control strategies  
 
@@ -212,9 +290,12 @@ It is **not yet a production-ready control system**.
 
 ---
 
-# 🌀 NEXAH
+# ⚡ NEXAH
 
-> From simulation to structure  
-> From structure to field  
-> From field to navigation  
-> From navigation to stability
+```text
+From simulation → to structure  
+From structure → to field  
+From field → to motion  
+From motion → to instability  
+From instability → to navigation
+```
