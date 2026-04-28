@@ -40,8 +40,9 @@ We construct a **controlled comparison** between:
 x(t) = (V(t), dV/dt, d²V/dt²)
 ```
 
-- geometric distance to stable region  
-- trajectory evolution  
+- trajectory geometry  
+- structural deviation  
+- curvature-based dynamics  
 
 ---
 
@@ -50,7 +51,7 @@ x(t) = (V(t), dV/dt, d²V/dt²)
 ## System
 
 - IEEE test case (recommended: IEEE14)  
-- single collapse scenario  
+- synthetic baseline scenarios (smooth, nonlinear, noisy)  
 
 ## Data
 
@@ -58,6 +59,291 @@ Input:
 
 ```text
 V(t)
+```
+
+Derived:
+
+```text
+dV/dt, d²V/dt²
+```
+
+---
+
+# 🔁 Pipeline
+
+```text
+Simulation
+    ↓
+Time Series (V(t))
+    ↓
+Feature Extraction
+    ↓
+State Reconstruction
+    ↓
+Curvature Signal
+    ↓
+Event Extraction
+    ↓
+Shape Representation
+    ↓
+Detection Comparison
+```
+
+---
+
+# 📊 Detection Definitions
+
+## Collapse (Reference)
+
+```text
+t_collapse = first t where V(t) < threshold
+```
+
+---
+
+## Classical Detection
+
+```text
+t_classical = first t where dV/dt < dv_threshold
+```
+
+---
+
+## NEXAH Detection (Core Layer)
+
+State:
+
+```text
+x(t) = (V, dV/dt, d²V/dt²)
+```
+
+Curvature:
+
+```text
+κ(t) = || d²x/dt² ||
+```
+
+Detection:
+
+```text
+t_nexah = first sustained increase in curvature
+```
+
+---
+
+# 📈 Golden Metric
+
+```text
+Lead Time = t_collapse - t_detection
+```
+
+| Method      | Lead Time |
+|------------|----------|
+| Classical   | Δt_classical |
+| NEXAH       | Δt_nexah |
+
+---
+
+# 🔷 Extended Structural Interpretation (NEW)
+
+Validation revealed that NEXAH does not operate as a simple signal detector.
+
+Instead:
+
+```text
+signal → event → shape → geometry → motion
+```
+
+---
+
+## Event Layer
+
+- curvature peaks form **events**  
+- events are not scalar → they have **shape**  
+
+---
+
+## Shape Layer
+
+Each event becomes:
+
+```text
+normalized curvature profile
+```
+
+---
+
+## Shape Space
+
+Shapes can be embedded into a geometric space:
+
+```text
+shape → vector → PCA projection
+```
+
+This reveals:
+
+- clusters (noise / structure)  
+- separation of regimes  
+- transition regions  
+
+---
+
+## Motion Layer (Experiments)
+
+Events are not independent:
+
+```text
+they move through shape space
+```
+
+This enables:
+
+- trajectory reconstruction  
+- motion analysis  
+- instability detection via geometry  
+
+---
+
+# 📊 Outputs
+
+## Core (Skeleton)
+
+- multi-scenario comparison table  
+- event extraction  
+- shape overlay  
+- shape space (PCA)  
+- clustering  
+
+---
+
+## Experiments
+
+Located in:
+
+```text
+experiments/
+```
+
+Includes:
+
+- shape geometry analysis  
+- motion metrics (speed / angle)  
+- statistical validation  
+- IEEE system validation  
+- collapse sweep  
+
+---
+
+## Reports
+
+Located in:
+
+```text
+reports/
+```
+
+- `validation_report_v1.md` → shape & structure  
+- `validation_report_v2.md` → dynamics & motion  
+- `validated_findings.md` → final condensed insights  
+
+---
+
+# ⚖️ Validation Criteria
+
+A successful validation shows:
+
+- earlier detection OR  
+- richer structural insight  
+
+AND / OR:
+
+- detection of trajectory-level behavior  
+- identification of transition dynamics  
+
+---
+
+# ⚠️ Constraints
+
+- limited number of systems (currently IEEE14)  
+- curvature sensitive to noise  
+- PCA is a reduced representation  
+
+---
+
+# 🧠 Interpretation
+
+Classical methods:
+
+```text
+Instability = threshold crossing in V(t)
+```
+
+NEXAH:
+
+```text
+Instability = geometric deviation in trajectory space
+```
+
+---
+
+# 🌀 Golden Line
+
+> If trajectory-based signals derived from V(t)  
+> detect instability earlier or reveal structural precursors,  
+> then the geometric interpretation is justified.
+
+---
+
+# 🚀 Usage
+
+### Core validation
+
+```bash
+python scripts/validation_skeleton.py
+```
+
+### Experiments
+
+```bash
+python experiments/run_XXX_*.py
+```
+
+---
+
+# 📌 Status
+
+- minimal validation: ✅  
+- structural interpretation: ✅  
+- motion-based detection: ✅  
+- statistical validation: ✅  
+- real-world validation (IEEE): 🟡 (in progress)  
+
+---
+
+# 🧭 Philosophy
+
+This is not about proving a full theory.
+
+It is about establishing:
+
+> a **small, clear, and reproducible structural advantage**
+
+---
+
+# ⚡ NEXAH
+
+```text
+signal → structure → geometry → motion
+```
+
+---
+
+# 🔗 See Also
+
+- `scripts/validation_skeleton.py`  
+- `experiments/`  
+- `reports/validated_findings.md`  V(t)
 ```
 
 Derived:
