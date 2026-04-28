@@ -8,167 +8,191 @@ Track all validation experiments in a reproducible and structured way.
 
 Each experiment documents:
 
-- goal
-- script
-- key result
-- interpretation
+- goal  
+- script  
+- key results  
+- interpretation  
 
 ---
 
 # 🧪 Experiment 001 — Shape Validation
 
-**Script:**
-run_001_shape_validation.py
+**Script:**  
+`run_001_shape_validation.py`
 
-**Goal:**
-Validate event extraction + shape space concept
+**Goal:**  
+Validate event extraction and establish the shape representation concept.
 
 **Key Results:**
-- events extracted
-- shape clusters visible
+- curvature events successfully extracted  
+- normalized event shapes constructed  
+- initial clustering visible  
 
 **Insight:**
-Event shape encodes system dynamics
+```text
+Event shape encodes system dynamics.
+```
 
 ---
 
 # 🧪 Experiment 002 — Shape Geometry
 
-**Script:**
-run_002_shape_geometry.py
+**Script:**  
+`run_002_shape_geometry.py`
 
-**Goal:**
-Analyze relationships between shape clusters
+**Goal:**  
+Analyze geometric relationships between shape clusters.
 
 **Key Results:**
-- crossings detected
-- area differences between clusters
+- crossings between shape curves detected  
+- area differences between clusters measured  
+- end-state divergence identified  
 
 **Insight:**
-Shape space has structure (not random)
+```text
+Shape space is structured, not random.
+```
 
 ---
 
 # 🧪 Experiment 003 — Shape Dynamics
 
-**Script:**
-run_003_shape_dynamics.py
+**Script:**  
+`run_003_shape_dynamics.py`
 
-**Goal:**
-Track movement through shape space
+**Goal:**  
+Track how events evolve through shape space.
 
 **Key Results:**
-- trajectories visible
-- ordered vs chaotic paths
+- trajectories between shapes identified  
+- ordered vs chaotic motion patterns observed  
 
 **Insight:**
-Instability is movement, not a point
+```text
+Instability is movement through shape space, not a single event.
+```
 
 ---
 
 # 🧪 Experiment 004 — Pre-Collapse Dynamics
 
-**Script:**
-run_004_pre_collapse_dynamics.py
+**Script:**  
+`run_004_pre_collapse_dynamics.py`
 
-**Goal:**
-Compare pre vs post collapse behavior
+**Goal:**  
+Compare system behavior before and after collapse.
 
 **Key Results:**
-- separation in shape space
-- structural shift before collapse
+- separation of regimes in shape space  
+- structural shift occurs before collapse  
 
 **Insight:**
-System transitions before observable collapse
+```text
+The system transitions structurally before observable collapse.
+```
 
 ---
 
 # 🧪 Experiment 005 — Motion Instability Metric
 
-**Script:**
-run_005_motion_instability_metric.py
+**Script:**  
+`run_005_motion_instability_metric.py`
 
-**Goal:**
-Define motion-based instability metric
+**Goal:**  
+Define a motion-based instability indicator.
 
 **Key Results:**
-- angle spikes detected
-- instability measurable
+- angle spikes detected  
+- instability quantified as directional change  
 
 **Insight:**
-Directional change encodes instability
+```text
+Directional change encodes instability.
+```
 
 ---
 
 # 🧪 Experiment 006 — Continuous Shape Flow
 
-**Script:**
-run_006_continuous_shape_flow.py
+**Script:**  
+`run_006_continuous_shape_flow.py`
 
-**Goal:**
-Track continuous movement in shape space
+**Goal:**  
+Track continuous motion through shape space.
 
 **Key Results:**
-- speed + angle signals
-- early warning before collapse
+- speed and angle signals extracted  
+- early warning occurs before collapse  
+- angle reacts earlier than speed  
 
 **Insight:**
-Instability = deviation in motion
+```text
+Instability manifests as deviation in motion dynamics.
+```
 
 ---
 
 # 🧪 Experiment 007 — Statistical Validation
 
-**Script:**
-run_007_statistical_validation.py
+**Script:**  
+`run_007_statistical_validation.py`
 
-**Goal:**
-Test robustness over multiple runs
+**Goal:**  
+Evaluate robustness across multiple runs.
 
 **Key Results:**
-- detection rate: 43 / 50
-- mean lead time ~11.6
+- detection rate: 43 / 50 (~86%)  
+- mean lead time: ~11.6 (synthetic baseline)  
+- consistent detection behavior  
 
 **Insight:**
-Method is statistically stable
+```text
+The method is statistically stable and reproducible.
+```
 
 ---
 
 # 🧪 Experiment 008 — IEEE Bridge
 
-**Script:**
-run_008_ieee_bridge.py
+**Script:**  
+`run_008_ieee_bridge.py`
 
-**Goal:**
-Apply method to real power system model
+**Goal:**  
+Apply NEXAH to a real power system model (IEEE14).
 
 **Key Results:**
-- shape flow visible in stable regime
-- warnings without collapse
+- structured motion visible even in stable regime  
+- speed and angle signals active without collapse  
+- latent instability patterns present  
 
 **Insight:**
-System has structure even when stable
+```text
+Power systems exhibit structured motion even before instability.
+```
 
 ---
 
 # 🧪 Experiment 009 — IEEE Collapse Sweep
 
-**Script:**
-run_009_ieee_collapse_sweep.py
+**Script:**  
+`run_009_ieee_collapse_sweep.py`
 
-**Goal:**
-Test early warning under varying load
+**Goal:**  
+Evaluate early warning across varying load conditions.
 
 **Key Results:**
-- collapse detected at high load_rate
-- NEXAH warning ~40–50 time units earlier
+- collapse occurs at high load rates  
+- NEXAH warning appears significantly earlier  
+- lead time: ~40–50 time units  
 
 **Insight:**
-Geometric drift precedes voltage collapse
+```text
+Geometric drift precedes voltage collapse.
+```
 
 ---
 
-# 🧠 Summary
+# 🧠 Unified Insight
 
 ```text
 signal → event → shape → geometry → motion → instability
@@ -176,11 +200,47 @@ signal → event → shape → geometry → motion → instability
 
 ---
 
-# 🟡 2. Outputs – ja, aber simpel
+# 📦 Outputs
 
-Du hast schon:
+Each experiment stores results in:
 
 ```text
-outputs/run_...
+outputs/run_YYYYMMDD_HHMMSS/
 ```
 
+Typical contents:
+
+- `results.json` → structured results  
+- `results.csv` → tabular data  
+- `overlay.png` → shape overlay  
+- `shape_space.png` → PCA projection  
+- `clusters.png` → clustering  
+
+These outputs ensure:
+
+```text
+reproducibility
+traceability
+visual validation
+```
+
+---
+
+# 🧭 Interpretation
+
+Across all experiments, a consistent pattern emerges:
+
+```text
+Instability is not detected.
+
+It is reconstructed as motion
+through a structured geometric space.
+```
+
+---
+
+# ⚡ NEXAH
+
+```text
+signal → structure → geometry → motion
+```
