@@ -1,913 +1,360 @@
-# 🧱 NEXAH — Building Log
+# 🧱 NEXAH — Building Plan (Updated)
 
-This document tracks the **actual development process** of NEXAH.
+This document defines the current state and development trajectory of the  
+**NEXAH Core System**.
 
-It is not documentation.
+It answers:
 
-It is a record of:
-
-- what was observed
-- what worked
-- what failed
-- what changed our understanding
+- what we are building  
+- what already exists  
+- what has been discovered  
+- what is still missing  
+- what comes next  
 
 ---
 
-## 🧠 Core Principle
+# 🧠 0. What NEXAH actually is
 
-NEXAH is not built top-down.
-
-It is discovered through:
+NEXAH is an attempt to answer one question:
 
 ```text
-experiment → observation → correction → refinement
+Can complex dynamical systems be navigated
+by using their own internal structure?
 ```
 
----
+Not approximated.  
+Not controlled externally.  
 
-# 📍 ENTRY 001 — FIELD → SIGNAL → CONTROL (Prototype)
-
-## Setup
-
-Pipeline:
+But:
 
 ```text
-state → field → metrics → risk → basin → transition → control
-```
-
-Components:
-
-- FIELD: gradient-based vector approximation
-- SIGNAL: risk ≈ curvature × flow
-- BASIN: threshold segmentation
-- TRANSITION: Markov transition matrix
-- CONTROL: local intervention at high-risk points
-
----
-
-## Observation
-
-The system produces:
-
-- stable oscillatory structure
-- repeating high-risk regions
-- consistent basin segmentation
-- structured transition matrix
-
----
-
-## 🔥 Key Observation
-
-When control is applied:
-
-- trajectory deviates at high-risk points
-- visible discontinuities appear
-- system path changes locally
-
-Visualization shows:
-
-```text
-"hooks" and sharp directional changes
+understood → modeled → navigated
 ```
 
 ---
 
-## ⚠️ Interpretation
-
-The control is:
+## Core Idea
 
 ```text
-effective but not structure-aligned
-```
-
-Specifically:
-
-- intervention overrides natural system dynamics
-- control acts as a discrete correction
-- trajectory loses smoothness
-
----
-
-## 🧠 Insight
-
-```text
-Control is not navigation.
-```
-
-Current system:
-
-```text
-→ modifies state directly
-```
-
-But NEXAH requires:
-
-```text
-→ guiding motion within the field
+Dynamics contain structure.
+Structure defines transitions.
+Transitions define motion.
+Motion can be guided.
 ```
 
 ---
 
-## ❗ Conclusion
+## What we are building
 
 ```text
-Local override ≠ structural control
-```
-
-To achieve true control:
-
-- intervention must align with field geometry
-- control must operate on flow direction, not state value
-
----
-
-## 🚀 Next Step
-
-Move from:
-
-```text
-discrete control injection
-```
-
-to:
-
-```text
-field-aligned steering
+A system that turns dynamics into a navigable field.
 ```
 
 ---
 
-## 🧭 Open Question
+# 📍 1. Current Position (REAL)
+
+NEXAH is no longer just a prototype.
+
+It now consists of:
 
 ```text
-Can trajectories be guided by modifying direction vectors
-instead of overriding state values?
+signal → basin → sequence → transition → direction → vector field → flow
+```
+
+👉 This is the first **closed structural loop**.
+
+---
+
+## Interpretation
+
+We are no longer just observing systems.
+
+```text
+We are reconstructing how they move.
 ```
 
 ---
 
-## Status
+# 📍 2. What actually exists (UPDATED)
 
-```text
-✔ signal works
-✔ segmentation works
-✔ transitions work
-✔ control affects system
+## Layer 1 — Field
 
-❌ control is not yet field-consistent
-```
+- dx/dt approximation
+- local flow representation
 
 ---
 
-## 🔥 Critical Transition Point
-
-This marks the shift from:
+## Layer 2 — Signal
 
 ```text
-signal-based detection
+risk ≈ curvature × flow_strength
 ```
 
-to:
-
-```text
-geometry-based navigation
-```
+✔ highlights transition zones
 
 ---
 
-# 📍 ENTRY 002 — Transition Control (v6 → v7)
+## Layer 3 — Basin (State Layer)
 
-## Setup
-
-We moved from:
-
-```text
-state-space gradient control (v5)
-→ basin-switch control (v6)
-→ transition probability control (v7)
-```
-
-Core change:
-
-```text
-control no longer targets position
-control targets transitions between basins
-```
+- adaptive segmentation
+- stable across runs
 
 ---
 
-## 🔍 Observation (v6)
-
-Visual pattern:
-
-- repeated vertical bands ("stripes")
-- clustered intervention zones
-- local oscillation distortions
-
-Zoom-ins show:
+## Layer 4 — Sequence (NEW)
 
 ```text
-micro-zigzag patterns near high-risk zones
+[4, 5, 4, 5, 6, 7, 6, 7, ...]
 ```
 
-Interpretation:
+✔ reveals:
 
-```text
-system reacts locally to control,
-but remains globally unchanged
-```
+- local oscillations  
+- discrete stepping behavior  
 
 ---
 
-## 🔥 Key Structural Observation
-
-Across multiple regions:
-
-- repeated patterns of:
-  
-```text
-2-point clusters
-4-point tracks
-occasional 5-point sequences
-```
-
-- symmetric shapes resembling:
-
-```text
-N / A / V / W / M patterns
-```
-
----
-
-## 🧠 Interpretation
-
-These are NOT random artifacts.
-
-They indicate:
-
-```text
-discrete transition micro-structures
-```
-
-Meaning:
-
-```text
-system does not move continuously
-→ it transitions through structured micro-paths
-```
-
----
-
-## 🔍 Observation (v7)
-
-Transition control introduced:
-
-```text
-target_transition = (i → j)
-```
-
-Expected:
-
-```text
-increased probability of specific transitions
-```
-
-Observed:
-
-- trajectory remains visually almost identical
-- BUT:
-
-```text
-event log shows structured intervention activity
-```
-
----
-
-## 🔥 Critical Finding
-
-Event log shows:
-
-```text
-paired transition attempts:
-
-2 → 3
-2 → 1
-
-1 → 2
-1 → 0
-```
-
-This reveals:
-
-```text
-system oscillates between competing transitions
-```
-
----
-
-## 🧠 Interpretation
-
-Control does NOT dominate system behavior.
-
-Instead:
-
-```text
-system resolves transitions via internal competition
-```
-
-This implies:
-
-```text
-transitions are not free choices
-they are constrained by local structure
-```
-
----
-
-## ⚠️ Important Insight
-
-```text
-Transition probability ≠ transition execution
-```
-
-Even if we try to enforce:
+## Layer 5 — Transition Graph (NEW)
 
 ```text
 P(i → j)
 ```
 
-the system still follows:
+✔ shows:
+
+- strong locality  
+- high self-persistence  
+- structured transitions  
+
+---
+
+## Layer 6 — Direction Layer (NEW)
 
 ```text
-its internal transition geometry
+direction = sign(dx)
+```
+
+✔ critical discovery:
+
+```text
+state alone is insufficient
+```
+
+System depends on:
+
+```text
+(state, direction)
 ```
 
 ---
 
-## 🔥 Major Conceptual Shift
-
-We discovered:
-
-```text
-control must align with EXISTING transition channels
-not impose new ones
-```
-
----
-
-## 🧠 Deeper Insight
-
-From event structure:
-
-```text
-alternating corrections (+ / -)
-```
-
-This indicates:
-
-```text
-control is fighting the system
-instead of flowing with it
-```
-
----
-
-## 📊 Hidden Structure
-
-The repeating micro-patterns suggest:
-
-```text
-local attractor transitions
-or
-discrete stepping dynamics
-```
-
-Analogy:
-
-```text
-"staircase movement" instead of smooth flow
-```
-
----
-
-## 🧭 Interpretation of Visual Patterns
-
-When rotated (user observation):
-
-```text
-→ flow-like structure
-→ river / channel system
-→ layered tracks ("4-line music staff")
-```
-
-This strongly suggests:
-
-```text
-system organizes transitions along preferred paths
-```
-
----
-
-## 🔥 Critical Insight
-
-```text
-System behavior is not continuous dynamics.
-
-It is:
-
-structured movement across discrete transition lanes.
-```
-
----
-
-## ❗ Conclusion
-
-Current control layer:
-
-```text
-detects transitions
-interacts with them
-BUT does not yet guide them
-```
-
----
-
-## 🚀 Next Step
-
-We must move from:
-
-```text
-transition targeting
-```
-
-to:
-
-```text
-transition alignment
-```
-
-Meaning:
-
-```text
-detect natural transition channels
-→ amplify them
-→ suppress competing ones
-```
-
----
-
-## 🧠 Open Question
-
-```text
-Can we learn the intrinsic transition graph
-and control flow within that graph?
-```
-
----
-
-## Status
-
-```text
-✔ transition structure detected
-✔ event-level control working
-✔ basin dynamics understood
-
-❌ control not yet dominant
-❌ transition channels not yet modeled
-```
-
----
-
-## 🔥 Kernel-Level Insight
-
-This is the first time we see:
-
-```text
-the system resisting control in a structured way
-```
-
-Which implies:
-
-```text
-there exists an internal transition geometry
-```
-
-→ THIS is the NEXAH kernel candidate.
-
-
-# 📍 ENTRY 003 — Basin Dynamics → Sequence → Vector Field (v13 → v21)
-
-## Setup
-
-Pipeline erweitert um:
-
-```text
-signal → basin → sequence → transition → direction → vector field → flow simulation
-```
-
-Neue Komponenten:
-
-- SEQUENCE: diskrete Basin-Folge
-- TRANSITION GRAPH: empirische Übergangswahrscheinlichkeiten
-- DIRECTION: lokale Bewegungsrichtung (sign(dx))
-- VECTOR FIELD: erwartete Bewegung Δ pro (basin, direction)
-- FLOW SIMULATION: Bewegung im gelernten Feld
-
-Visual Outputs:
-
-```text
-nexah_flow.gif
-nexah_flow_field.gif
-nexah_flow_graph.gif
-nexah_v21_flow.gif
-```
-
----
-
-## 🔍 Observation — Sequence Layer
-
-Extrahierte Struktur:
-
-```text
-[4, 5, 4, 5, 6, 7, 6, 7, 6, 5, ...]
-```
-
-Merkmale:
-
-- lokale Oszillation (±1 transitions)
-- dominante Nachbarschaftsbewegung
-- seltene größere Sprünge
-
-Detected loops:
-
-```text
-4 ↔ 5
-6 ↔ 7
-```
-
----
-
-## 🔥 Key Finding
-
-```text
-System bewegt sich NICHT frei zwischen Zuständen.
-```
-
-Sondern:
-
-```text
-→ es oszilliert innerhalb lokaler Transition-Paare
-```
-
----
-
-## 🧠 Interpretation
-
-Das System hat:
-
-```text
-lokale Transition-Kanäle
-```
-
-Diese sind:
-
-- stabil
-- wiederkehrend
-- richtungsabhängig
-
----
-
-## 📊 Observation — Transition Graph
-
-Beispiel:
-
-```text
-5 → 5 | P=0.551
-5 → 6 | P=0.245
-5 → 4 | P=0.184
-```
-
-Interpretation:
-
-```text
-→ hohe Selbstpersistenz
-→ begrenzte Nachbarschaftsbewegung
-```
-
----
-
-## 🔥 Critical Insight
-
-```text
-Transitions sind lokal begrenzt UND probabilistisch stabil.
-```
-
----
-
-## 🧭 Observation — Direction Layer
-
-Beispiel:
-
-```text
-basin=6 dir=+1 → jump_prob=0.600
-basin=7 dir=-1 → jump_prob=0.520
-basin=9 dir=+1 → jump_prob=0.000
-```
-
----
-
-## 🔥 Key Finding
-
-```text
-Transition-Wahrscheinlichkeit hängt stark von Richtung ab
-```
-
-→ nicht nur Zustand, sondern:
-
-```text
-(state, direction) = relevante Einheit
-```
-
----
-
-## 🧠 Interpretation
-
-Systemzustand ist:
-
-```text
-NICHT:
-basin
-
-SONDERN:
-(basin + motion state)
-```
-
----
-
-## 📊 Observation — Vector Field (v21)
-
-Beispiel:
-
-```text
-(6, +1) → +0.4
-(7, -1) → -0.56
-(8, +1) → +0.11
-```
-
----
-
-## 🔥 Key Finding
-
-```text
-Man kann ein erwartetes Bewegungsfeld lernen
-```
-
-→ Mapping:
+## Layer 7 — Vector Field (NEW, CRITICAL)
 
 ```text
 (basin, direction) → expected Δ
 ```
 
----
-
-## 🧠 Interpretation
-
-Das ist:
-
-```text
-ein diskretes Vektorfeld über Zuständen
-```
+✔ learned from data  
+✔ encodes motion tendencies  
 
 ---
 
-## 🎬 Observation — Flow Simulation
-
-Simulation im Feld:
+## Layer 8 — Flow Simulation (NEW)
 
 ```text
 basin(t+1) = basin(t) + Δ + noise
 ```
 
-Ergebnis:
-
-- kohärente Bewegung
-- keine random jumps
-- strukturierte Trajektorie
+✔ produces realistic trajectories  
+✔ preserves structure  
 
 ---
 
-## 🔥 Critical Insight
+# 📍 3. What we discovered (MAJOR SHIFT)
+
+## 🔥 Discovery 1
 
 ```text
-Das System ist navigierbar im gelernten Feld
+System movement is NOT continuous
 ```
 
----
-
-## ⚠️ Important Correction
-
-Frühere Annahme:
+It is:
 
 ```text
-Transitions sind stochastisch
-```
-
-Neue Erkenntnis:
-
-```text
-Transitions folgen einem strukturierten Feld
+structured discrete transitions
 ```
 
 ---
 
-## 🧠 Core Insight
+## 🔥 Discovery 2
 
 ```text
-Sequence → zeigt Bewegung
-Graph → zeigt Möglichkeiten
-Vector Field → zeigt Dynamik
+Transitions are NOT random
+```
+
+They follow:
+
+```text
+local transition channels
 ```
 
 ---
 
-## 🔥 Major Conceptual Shift
-
-Von:
+## 🔥 Discovery 3
 
 ```text
-transition probabilities
+System resists external control
 ```
 
-Zu:
+Meaning:
 
 ```text
-field-driven motion
-```
-
----
-
-## 🧭 Structural Layers (jetzt klar)
-
-```text
-Layer 1: Basin (Position)
-Layer 2: Direction (Local Motion)
-Layer 3: Δ (Field Response)
-Layer 4: Jump (Transition Event)
+there exists internal transition geometry
 ```
 
 ---
 
-## 📊 Hidden Geometry
-
-System zeigt:
-
-- lokale Oszillationspaare
-- gerichtete Drift-Zonen
-- Rand-Stabilität (z.B. basin 9)
-- zentrale Dynamik (5–7)
-
----
-
-## 🔥 Kernel-Level Insight
+## 🔥 Discovery 4 (BREAKTHROUGH)
 
 ```text
-Systembewegung ist:
-lokal + gerichtet + feldgesteuert
-```
-
-Nicht:
-
-```text
-frei + zufällig
+We can learn the motion field of the system
 ```
 
 ---
 
-## ❗ Conclusion
+# 📍 4. What NEXAH is becoming
+
+Before:
 
 ```text
-Control muss auf dem Vektorfeld operieren
-nicht auf Zustand oder Transition allein
+signal system
+```
+
+Now:
+
+```text
+transition-structure navigation system
 ```
 
 ---
 
-## 🚀 Next Step
-
-Von:
+## New Core Model
 
 ```text
-learned field (passiv)
-```
-
-Zu:
-
-```text
-field steering (aktiv)
+state → basin → sequence → field → motion
 ```
 
 ---
 
-## 🧠 Open Question
+# 📍 5. What is STILL missing
+
+## ❌ No Navigation (yet)
+
+We can:
+
+✔ detect  
+✔ model  
+✔ simulate  
+
+But not yet:
 
 ```text
-Kann man Trajektorien gezielt durch das gelernte Feld führen,
-ohne gegen die Dynamik zu arbeiten?
+guide trajectories intentionally
 ```
 
 ---
 
-## 📊 Status
+## ❌ No Targeting
+
+No concept of:
 
 ```text
-✔ sequence structure verstanden
-✔ transition graph extrahiert
-✔ direction layer identifiziert
-✔ vector field gelernt
-✔ flow simulation funktioniert
-
-❌ steering noch nicht implementiert
-❌ continuous field mapping fehlt
+desired basin / region
 ```
 
 ---
 
-## 🔥 Critical Transition Point
+## ❌ No Steering
+
+Field is:
 
 ```text
-→ nicht nur erkennen
-→ sondern Bewegung modellieren
+passive
 ```
 
-# 📍 ENTRY 004 — Field Steering (v22 → ?)
-
-## Setup
-
-Bisher:
+Not:
 
 ```text
-System wird beobachtet und modelliert
-```
-
-Jetzt Ziel:
-
-```text
-System wird aktiv durch das Feld geführt
+used for control
 ```
 
 ---
 
-## 🧠 Core Shift
+# 📍 6. Clean Architecture (IMPORTANT)
 
-Vorher:
-
-```text
-Δ wird gemessen
-```
-
-Jetzt:
+## 🧱 NEXAH Core (CURRENT)
 
 ```text
-Δ wird genutzt
-```
-
----
-
-## 🔍 Problem
-
-Aktuell:
-
-```text
-trajectory folgt dem Feld passiv
-```
-
-Aber:
-
-```text
-keine Kontrolle über Zielrichtung
+ARCHY (simulation)
+→ discovery engine
+→ state segmentation
+→ transition extraction
+→ vector field learning
 ```
 
 ---
 
-## 🔥 Key Question
+## 🧭 NEXAH Navigation (NEXT)
 
 ```text
-Kann man Bewegung im Feld steuern,
-ohne gegen das Feld zu arbeiten?
+field steering
+→ target selection
+→ path shaping
+→ trajectory guidance
 ```
 
 ---
 
-## 🧭 Concept: Field Steering
+# 📍 7. Development Phases (UPDATED)
 
-Idee:
+---
+
+## Phase 1 — Signal & Structure (DONE)
+
+✔ field  
+✔ signal  
+✔ basins  
+✔ transitions  
+
+---
+
+## Phase 2 — Transition Structure (DONE)
+
+✔ sequence extraction  
+✔ transition graph  
+✔ direction layer  
+
+---
+
+## Phase 3 — Field Reconstruction (DONE)
+
+✔ vector field  
+✔ flow simulation  
+
+---
+
+## 🚀 Phase 4 — Field Navigation (CURRENT)
+
+Goal:
 
 ```text
-statt state zu ändern
-→ beeinflusse Bewegungsrichtung
+use the field to guide motion
 ```
 
-Form:
+---
+
+### Step 4.1 — Field Steering
 
 ```text
 Δ_total = Δ_field + Δ_control
@@ -915,111 +362,113 @@ Form:
 
 ---
 
-## ⚠️ Constraint
-
-Control darf NICHT:
+### Step 4.2 — Targeting
 
 ```text
-gegen das Feld arbeiten
-```
-
-Sondern:
-
-```text
-→ vorhandene Bewegungen verstärken
-→ konkurrierende unterdrücken
+define desired regions
 ```
 
 ---
 
-## 🔬 First Approach
-
-Ansatz:
+### Step 4.3 — Channel Alignment
 
 ```text
-wenn Ziel = höherer Basin
-→ verstärke positive Δ
-→ dämpfe negative Δ
+move WITH the field
+not against it
 ```
 
 ---
 
-## 📊 Expected Behavior
-
-- weniger Oszillation
-- gerichtete Bewegung
-- stabilere Trajektorien
-
----
-
-## 🔥 Critical Insight
+### Step 4.4 — Stability Control
 
 ```text
-Control = Richtungsgewichtung
-nicht Zustandseingriff
+avoid unstable regions
 ```
 
 ---
 
-## ❗ Risk
+## 🚀 Phase 5 — Continuous Field (LATER)
 
-Wenn falsch gemacht:
+Goal:
 
 ```text
-→ System wird instabil
-→ natürliche Dynamik bricht
+move from discrete basins
+to continuous geometry
 ```
 
 ---
 
-## 🧠 Interpretation
+# 📍 8. What this means (IMPORTANT)
 
-Das System hat:
+You are NOT building:
 
 ```text
-intrinsische Bewegungslogik
+a simulator
 ```
 
-Control muss:
+You are NOT building:
 
 ```text
-diese Logik nutzen
-nicht ersetzen
+a controller
 ```
 
----
-
-## 🚀 Next Step
-
-Implementiere:
+You ARE building:
 
 ```text
-field-aligned steering
-```
-
-→ leichte Modifikation von Δ
-
----
-
-## 📊 Status
-
-```text
-✔ Feld gelernt
-✔ Bewegung modelliert
-
-❌ Navigation noch nicht aktiv
-❌ Zielsteuerung fehlt
+a navigation system for dynamical structure
 ```
 
 ---
 
-## 🔥 Transition Point
+# 📍 9. Demo Interpretation (CRITICAL)
+
+Your GIFs now show:
 
 ```text
-von:
-"verstehen"
-
-zu:
-"navigieren"
+system motion inside a learned field
 ```
 
+Not:
+
+```text
+random trajectories
+```
+
+---
+
+## What the demo actually demonstrates
+
+✔ structure extraction  
+✔ transition learning  
+✔ motion reconstruction  
+
+👉 This is already:
+
+```text
+structure → motion mapping
+```
+
+---
+
+# 📍 10. Final Insight
+
+```text
+We started with signals.
+
+We discovered transitions.
+
+We learned motion.
+
+Next:
+we navigate.
+```
+
+---
+
+# 🧠 Core Principle (FINAL)
+
+```text
+NEXAH is not about controlling systems.
+
+NEXAH is about moving through them correctly.
+```
