@@ -7,16 +7,36 @@
 
 NEXAH introduces a **geometry-based framework for analyzing power system stability**.
 
-Rather than treating instability as a threshold violation, NEXAH interprets it as:
+Instead of treating instability as a threshold violation, NEXAH models the system as a:
 
-> a **structural transition in the system’s dynamical behavior**
+> **trajectory evolving within a structured dynamical field**
 
-This perspective enables:
+This enables:
 
 - early detection of regime transitions  
 - continuous stability assessment  
 - trajectory-aware analysis  
-- phase-space interpretation of system evolution  
+- geometric interpretation of system dynamics  
+
+---
+
+## ⚙️ Technical Context
+
+- **Simulation:** AC power flow / dynamic voltage simulations (pandapower-based)  
+- **Input signals:** voltage magnitude, derived temporal features  
+- **Feature space:**  
+  - coherence (c)  
+  - drift (dv/dt)  
+  - acceleration (d²v/dt²)  
+  - residual structure  
+  - geometric distance metrics  
+  - phase variable (ψ)  
+
+- **Dimensionality reduction:** custom low-dimensional embedding  
+- **Output representation:**
+  - geometric state space  
+  - flow field (vector field)  
+  - risk landscape  
 
 ---
 
@@ -24,11 +44,29 @@ This perspective enables:
 
 Classical stability analysis focuses on:
 
-→ scalar indicators (e.g. voltage magnitude)
+→ scalar indicators (e.g. voltage thresholds)
 
 NEXAH shifts the focus to:
 
 → **structure, flow, and geometry of system dynamics**
+
+---
+
+## 🔁 System Pipeline
+
+```text
+Simulation
+    ↓
+Feature Extraction
+    ↓
+Low-Dimensional State Embedding
+    ↓
+Flow Field Reconstruction
+    ↓
+Risk Mapping
+    ↓
+Trajectory Analysis / Control Experiments
+```
 
 ---
 
@@ -45,13 +83,11 @@ NEXAH shifts the focus to:
 
 ---
 
-# 📊 System Insights
-
-The following figures illustrate how stability emerges from structure and dynamics.
+# 📊 Structural Observations
 
 ---
 
-## 🔹 Figure 1 — Collapse Geometry
+## 🔹 Collapse Geometry
 
 ![Collapse Geometry](stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
 
@@ -61,53 +97,52 @@ The following figures illustrate how stability emerges from structure and dynami
 
 **Interpretation:**
 
-> Stability can be interpreted as **geometric proximity within state space**
+> Stability corresponds to **geometric proximity within state space**
 
 ---
 
-## 🔹 Figure 2 — Flow Field (Dynamics)
+## 🔹 Flow Field (Dynamics)
 
 ![Flow Field](stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
 **Observation:**
-- trajectories exhibit directional organization  
-- system evolution is not random, but structured  
+- trajectories follow structured directions  
+- system evolution exhibits coherent flow  
 
 **Interpretation:**
 
-> The system behaves like a **vector field**,  
-> where stability corresponds to coherent flow.
+> The system behaves as a **vector field**, not as independent state updates
 
 ---
 
-## 🔹 Figure 3 — Geometric State Space
+## 🔹 Geometric State Space
 
 ![Root Cube](ieee_xray_pipeline/results/v36b_good_final_3d.png)
 
 **Observation:**
-- high-dimensional dynamics can be mapped to geometric structures  
+- high-dimensional dynamics can be embedded into structured geometry  
 
 **Interpretation:**
 
-> Stability becomes analyzable via **geometry rather than raw signals**
+> Stability becomes analyzable via **geometry instead of raw signals**
 
 ---
 
-## 🔹 Figure 4 — Control Interaction
+## 🔹 Control Interaction (Experimental)
 
 ![Control](nexah_ieee9/results/controller_v9/output_v9_plot.png)
 
 **Observation:**
 - control modifies trajectory evolution  
-- system stabilizes without suppressing dynamics  
+- stabilization occurs without suppressing dynamics  
 
 **Interpretation:**
 
-> Control acts on **trajectory shaping**, not only on state correction.
+> Control acts via **trajectory shaping in the field**
 
 ---
 
-## 🔹 Figure 5 — Phase Dynamics
+## 🔹 Phase Dynamics
 
 ![Phase Lambda Psi](nexah_ieee9/results/controller_v9/output_v9_phase_lambda_psi.png)
 
@@ -115,13 +150,9 @@ The following figures illustrate how stability emerges from structure and dynami
 - structured trajectories appear in phase space  
 - attractor-like behavior emerges  
 
-**Interpretation:**
-
-> Stability is a **dynamical structure**, not a static condition.
-
 ---
 
-## 🔹 Figure 6 — Risk–Distance Field
+## 🔹 Risk–Distance Field
 
 ![Risk Distance](nexah_ieee9/results/controller_v9/output_v9_phase_risk_distance.png)
 
@@ -130,25 +161,21 @@ The following figures illustrate how stability emerges from structure and dynami
 
 **Interpretation:**
 
-> Risk can be viewed as a **projection of system geometry**
+> Risk is a **projection of system geometry**
 
 ---
 
-## 🔹 Figure 7 — Trajectory-Based Stabilization
+## 🔹 Trajectory-Based Stabilization
 
 ![Navigation](nexah_ieee9/results/visuals/nexah_navigation_v11.gif)
 
 **Observation:**
 - trajectories are redirected near critical regions  
-- collapse is avoided in this scenario  
-
-**Interpretation:**
-
-> Stabilization can be achieved by **guiding trajectories within the field**
+- collapse can be avoided in controlled scenarios  
 
 ---
 
-## 🔹 Figure 8 — Scaling Behavior
+## 🔹 Scaling Behavior
 
 ![IEEE9241](nexah_ieeeX/results/run_ieee9241_20260413_021422/plot.png)
 
@@ -157,14 +184,13 @@ The following figures illustrate how stability emerges from structure and dynami
 
 **Interpretation:**
 
-> The framework shows **potential scalability**,  
-> though further validation is required.
+> The framework shows **scalability across IEEE test systems**
 
 ---
 
 # 🔬 Regime Detection
 
-A signal-based regime detection layer was introduced using:
+A signal-based detection layer is defined using:
 
 - drift (dv/dt)  
 - acceleration (d²v/dt²)  
@@ -174,9 +200,6 @@ A signal-based regime detection layer was introduced using:
 ---
 
 ## Key Observations
-
-- regime transitions can be detected before collapse  
-- lead time depends on system behavior  
 
 | Scenario           | Lead Time |
 |------------------|----------|
@@ -196,7 +219,7 @@ A signal-based regime detection layer was introduced using:
 
 # 🧠 System View
 
-The system can be interpreted as:
+The system can be modeled as:
 
 > a trajectory evolving within a structured dynamical landscape
 
@@ -212,11 +235,15 @@ where:
 
 State vector:
 
+```text
 x = (c, drift, acceleration, residual, distance, ψ)
+```
 
 Dynamics:
 
+```text
 dx/dt = f(x)
+```
 
 NEXAH focuses on:
 
@@ -246,6 +273,10 @@ NEXAH focuses on:
 - limited validation on real-world datasets  
 - no probabilistic confidence model yet  
 
+> This framework is currently **experimental** and focuses on  
+> structural insight and early-stage validation,  
+> not yet on guaranteed stability control.
+
 ---
 
 # 🔮 Next Steps
@@ -253,23 +284,15 @@ NEXAH focuses on:
 - validation on real grid data  
 - sensitivity analysis  
 - probabilistic regime detection  
-- comparison with existing early-warning indicators  
-
----
-
-# 🧠 Final Insight
-
-> Instability is not reliably captured by a single threshold.
-
-It is better understood as:
-
-→ a **transition between dynamical regimes**
+- comparison with classical stability methods  
 
 ---
 
 # 🌀 NEXAH Principle
 
+```text
 simulation → structure → flow → geometry → dynamics → regimes
+```
 
 ---
 
