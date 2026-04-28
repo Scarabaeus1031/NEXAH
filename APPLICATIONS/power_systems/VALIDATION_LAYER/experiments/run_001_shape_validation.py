@@ -71,6 +71,7 @@ def extract_event_shapes(t, curvature, events):
 
     for (start, end, _) in events:
         seg = curvature[start:end]
+
         if len(seg) < 5:
             continue
 
@@ -123,10 +124,10 @@ def compute_shape_space(all_shapes, n=50):
             X.append(r)
             labels.append(scenario)
 
-    X = np.array(X)
-
     if len(X) < 2:
         return None, None, None
+
+    X = np.array(X)
 
     X_centered = X - np.mean(X, axis=0)
     _, _, Vt = np.linalg.svd(X_centered, full_matrices=False)
@@ -141,7 +142,8 @@ def compute_shape_space(all_shapes, n=50):
 # ============================================================
 
 def cluster_shapes(X, n_clusters=3):
-    if len(X) < n_clusters:
+
+    if X is None or len(X) < n_clusters:
         return None
 
     kmeans = KMeans(n_clusters=n_clusters, random_state=0)
@@ -160,6 +162,7 @@ def run_validation(data, scenario):
     sigma = 2
     stable_idx = int(0.3 * len(t))
 
+    # --- signals ---
     V_smooth = gaussian_filter1d(V, sigma)
     dv_dt = gaussian_filter1d(np.gradient(V_smooth, t), sigma)
 
@@ -174,8 +177,9 @@ def run_validation(data, scenario):
         sigma
     )
 
-    threshold = np.mean(curvature[:stable_idx]) + 2*np.std(curvature[:stable_idx])
+    threshold = np.mean(curvature[:stable_idx]) + 2 * np.std(curvature[:stable_idx])
 
+    # --- detections ---
     t_collapse = sustained_first_crossing(V_smooth < 0.7, t)
     t_classical = sustained_first_crossing(dv_dt < -0.02, t)
 
@@ -189,24 +193,31 @@ def run_validation(data, scenario):
         t_nexah = None
         width = 0
 
-    Δ = compute_lead_time(t_collapse, t_nexah) - compute_lead_time(t_collapse, t_classical)
+    lead_classical = compute_lead_time(t_collapse, t_classical)
+    lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
+    if lead_classical is None or lead_nexah is None:
+        delta = None
+    else:
+        delta = lead_nexah - lead_classical
+
+    # --- metrics ---
     snr = np.max(curvature) / (np.std(curvature[:stable_idx]) + 1e-8)
 
     shapes = extract_event_shapes(t, curvature, events)
 
-    alignment = 0
-    if shapes:
+    alignment = 0.0
+    if len(shapes) > 0:
         res = resample_shapes(shapes)
         alignment = compute_alignment(res, compute_mean_shape(res))
 
     return {
         "scenario": scenario,
-        "Δ": Δ,
+        "delta": delta,
         "events": len(events),
-        "width": width,
-        "snr": snr,
-        "alignment": alignment
+        "width": float(width),
+        "snr": float(snr),
+        "alignment": float(alignment)
     }, shapes
 
 
@@ -215,27 +226,44 @@ def run_validation(data, scenario):
 # ============================================================
 
 def save_overlay(all_shapes, path):
-    plt.figure()
+
+    plt.figure(figsize=(8, 5))
+
     for label, shapes in all_shapes.items():
         for t_norm, seg in shapes:
             plt.plot(t_norm, seg, alpha=0.3)
-    plt.title("Overlay")
+
+    plt.title("Event Shape Overlay")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
     plt.savefig(os.path.join(path, "overlay.png"))
     plt.close()
 
 
 def save_shape_space(coords, labels, path):
-    plt.figure()
+
+    plt.figure(figsize=(6, 6))
+
     for (x, y), l in zip(coords, labels):
-        plt.scatter(x, y)
+        plt.scatter(x, y, label=l, alpha=0.7)
+
+    plt.title("Shape Space (PCA)")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
     plt.savefig(os.path.join(path, "shape_space.png"))
     plt.close()
 
 
 def save_clusters(coords, cluster_ids, path):
-    plt.figure()
+
+    plt.figure(figsize=(6, 6))
+
     for (x, y), cid in zip(coords, cluster_ids):
-        plt.scatter(x, y, c=f"C{cid}")
+        plt.scatter(x, y, c=f"C{cid}", alpha=0.7)
+
+    plt.title("Shape Clusters")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
     plt.savefig(os.path.join(path, "clusters.png"))
     plt.close()
 
@@ -264,15 +292,17 @@ def save_results(results, path):
 
 def make_synthetic_scenario(kind):
 
+    np.random.seed(7)
+
     t = np.linspace(0, 100, 500)
-    V = 1 - 0.002*t - 0.0005*t**2
+    V = 1 - 0.002 * t - 0.0005 * t**2
 
     if kind == "nonlinear":
-        V += 0.015*np.exp((t-16)/4)*(t<25)
-        V += 0.01*np.sin(0.8*t)*(t<25)
+        V += 0.015 * np.exp((t - 16) / 4) * (t < 25)
+        V += 0.01 * np.sin(0.8 * t) * (t < 25)
 
     elif kind == "noisy":
-        V += 0.01*np.random.default_rng(7).normal(size=len(t))
+        V += 0.01 * np.random.normal(size=len(t))
 
     return {"time": t, "voltage": V}
 
@@ -293,8 +323,10 @@ if __name__ == "__main__":
     for s in scenarios:
         data = make_synthetic_scenario(s)
         res, shapes = run_validation(data, s)
+
         results.append(res)
         all_shapes[s] = shapes
+
         print(res)
 
     save_results(results, output_dir)
