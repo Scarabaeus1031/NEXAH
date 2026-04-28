@@ -150,18 +150,21 @@ def animate_flow(field):
     dot, = ax.plot([], [], "o", color="red")
 
     def update(frame):
-        x = np.arange(frame)
-        y = traj[:frame]
 
-        line.set_data(x, y)
-        dot.set_data(frame, traj[frame])
+    x = np.arange(frame + 1)
 
-        return line, dot
+    y = traj[:frame + 1]
+
+    line.set_data(x, y)
+
+    dot.set_data([frame], [traj[frame]])
+
+    return line, dot
 
     anim = FuncAnimation(
         fig,
         update,
-        frames=len(traj),
+        frames=len(traj) - 1,
         interval=40,
         repeat=True,
     )
