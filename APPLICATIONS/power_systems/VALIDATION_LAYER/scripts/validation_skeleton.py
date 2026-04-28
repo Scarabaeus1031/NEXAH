@@ -56,6 +56,7 @@ def extract_event_shapes(t, curvature, events):
 
     for (start, end, peak) in events:
         seg = curvature[start:end]
+
         if len(seg) < 5:
             continue
 
@@ -68,7 +69,7 @@ def extract_event_shapes(t, curvature, events):
 
 
 # ============================================================
-# FIELD METRICS
+# Shape processing
 # ============================================================
 
 def resample_shapes(shapes, n=50):
@@ -92,6 +93,63 @@ def compute_alignment(resampled, mean_shape):
 
 
 # ============================================================
+# 🔥 SHAPE SPACE (PCA)
+# ============================================================
+
+def compute_shape_space(all_shapes, n=50):
+
+    X = []
+    labels = []
+
+    for scenario, shapes in all_shapes.items():
+        if len(shapes) == 0:
+            continue
+
+        resampled = resample_shapes(shapes, n=n)
+
+        for r in resampled:
+            X.append(r)
+            labels.append(scenario)
+
+    X = np.array(X)
+
+    if len(X) < 2:
+        return None, None, None
+
+    X_mean = np.mean(X, axis=0)
+    X_centered = X - X_mean
+
+    U, S, Vt = np.linalg.svd(X_centered, full_matrices=False)
+
+    coords = X_centered @ Vt[:2].T
+
+    return coords, labels, Vt
+
+
+def plot_shape_space(coords, labels):
+
+    plt.figure(figsize=(6, 6))
+
+    color_map = {
+        "smooth": "orange",
+        "nonlinear": "green",
+        "noisy": "blue"
+    }
+
+    for (x, y), label in zip(coords, labels):
+        plt.scatter(x, y, color=color_map.get(label, "black"), alpha=0.7)
+
+    for k, c in color_map.items():
+        plt.scatter([], [], color=c, label=k)
+
+    plt.legend()
+    plt.title("NEXAH Shape Space (PCA)")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+# ============================================================
 # SINGLE RUN
 # ============================================================
 
@@ -107,7 +165,6 @@ def run_validation(data, scenario_name="scenario"):
 
     stable_idx = int(stable_fraction * len(t))
 
-    # --- signals ---
     V_smooth = gaussian_filter1d(V, sigma=sigma)
     dv_dt = gaussian_filter1d(np.gradient(V_smooth, t), sigma=sigma)
 
@@ -124,7 +181,7 @@ def run_validation(data, scenario_name="scenario"):
 
     threshold = np.mean(curvature[:stable_idx]) + 2 * np.std(curvature[:stable_idx])
 
-    # --- detections ---
+    # detections
     t_collapse = sustained_first_crossing(V_smooth < V_threshold, t)
     t_classical = sustained_first_crossing(dv_dt < dv_threshold, t)
 
@@ -141,7 +198,7 @@ def run_validation(data, scenario_name="scenario"):
     lead_classical = compute_lead_time(t_collapse, t_classical)
     lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
-    # --- metrics ---
+    # metrics
     snr = np.max(curvature) / (np.std(curvature[:stable_idx]) + 1e-8)
 
     shapes = extract_event_shapes(t, curvature, events)
@@ -235,10 +292,11 @@ def print_table(results):
 
 
 # ============================================================
-# VISUAL
+# VISUALS
 # ============================================================
 
 def plot_overlay(all_shapes):
+
     plt.figure(figsize=(8, 5))
 
     for label, shapes in all_shapes.items():
@@ -251,6 +309,7 @@ def plot_overlay(all_shapes):
     plt.legend(unique.values(), unique.keys())
     plt.title("Event Shape Overlay")
     plt.grid(alpha=0.3)
+    plt.tight_layout()
     plt.show()
 
 
@@ -285,3 +344,8 @@ if __name__ == "__main__":
     print_table(results)
 
     plot_overlay(all_shapes)
+
+    coords, labels, _ = compute_shape_space(all_shapes)
+
+    if coords is not None:
+        plot_shape_space(coords, labels)
