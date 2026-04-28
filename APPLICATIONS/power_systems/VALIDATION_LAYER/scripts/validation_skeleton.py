@@ -31,7 +31,7 @@ def compute_lead_time(t_collapse, t_detection):
 
 
 # ============================================================
-# 🔥 NEW: Data-driven Flow Field
+# 🔥 Data-driven Flow Field
 # ============================================================
 
 def compute_flow_field(V, dv_dt, t, grid_size=25):
@@ -100,19 +100,13 @@ def run_validation(data,
     # State
     # -----------------------------
     x = np.vstack([V_smooth, dv_dt, d2v_dt2]).T
-
-    x_stable = x[:stable_idx]
-    mu_stable = np.mean(x_stable, axis=0)
+    mu_stable = np.mean(x[:stable_idx], axis=0)
 
     # -----------------------------
     # Signals
     # -----------------------------
     distance = np.linalg.norm(x - mu_stable, axis=1)
 
-    d_dist = np.gradient(distance, t)
-    d_dist = gaussian_filter1d(d_dist, sigma=smooth_sigma)
-
-    # 🔥 Curvature
     dx_dt = np.gradient(x, axis=0)
     d2x_dt2 = np.gradient(dx_dt, axis=0)
 
@@ -122,81 +116,90 @@ def run_validation(data,
     # -----------------------------
     # Thresholds
     # -----------------------------
-    curvature_stable = curvature[:stable_idx]
-    curvature_threshold = np.mean(curvature_stable) + 2.0 * np.std(curvature_stable)
+    curvature_threshold = (
+        np.mean(curvature[:stable_idx]) +
+        2.0 * np.std(curvature[:stable_idx])
+    )
 
     # -----------------------------
     # Detection
     # -----------------------------
-    collapse_mask = V_smooth < V_threshold
-    classical_mask = dv_dt < dv_threshold
-    nexah_mask = curvature > curvature_threshold
-
-    t_collapse = sustained_first_crossing(collapse_mask, t, sustained_samples)
-    t_classical = sustained_first_crossing(classical_mask, t, sustained_samples)
-    t_nexah = sustained_first_crossing(nexah_mask, t, sustained_samples)
+    t_collapse = sustained_first_crossing(V_smooth < V_threshold, t, sustained_samples)
+    t_classical = sustained_first_crossing(dv_dt < dv_threshold, t, sustained_samples)
+    t_nexah = sustained_first_crossing(curvature > curvature_threshold, t, sustained_samples)
 
     lead_classical = compute_lead_time(t_collapse, t_classical)
     lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
-    print("\n=== NEXAH CURVATURE + FLOW VALIDATION ===")
-    print(f"Scenario:    {scenario_name}")
+    print("\n=== NEXAH VALIDATION ===")
     print(f"Collapse:    {t_collapse}")
-    print(f"Classical:   {t_classical} -> Δt = {lead_classical}")
-    print(f"NEXAH(curv): {t_nexah} -> Δt = {lead_nexah}")
+    print(f"Classical:   {t_classical} → Δt = {lead_classical}")
+    print(f"NEXAH:       {t_nexah} → Δt = {lead_nexah}")
 
     # -----------------------------
-    # 🔥 Compute Flow Field
+    # Flow Field
     # -----------------------------
     xi, yi, U, Vv = compute_flow_field(V_smooth, dv_dt, t)
     X, Y = np.meshgrid(xi, yi)
 
     # -----------------------------
-    # Plot
+    # PAPER FIGURE
     # -----------------------------
-    fig, axs = plt.subplots(4, 1, figsize=(11, 12))
+    fig, axs = plt.subplots(3, 1, figsize=(10, 10))
 
-    # Voltage
-    axs[0].plot(t, V_smooth)
-    axs[0].axhline(V_threshold, linestyle=":")
+    # Panel A — Signal comparison
+    axs[0].plot(t, dv_dt, label="dv/dt", alpha=0.7)
+    axs[0].plot(t, curvature, label="curvature", linewidth=2)
 
-    if t_collapse:
-        axs[0].axvline(t_collapse, linestyle="--", label="Collapse")
+    axs[0].axhline(dv_threshold, linestyle=":", label="dv/dt threshold")
+    axs[0].axhline(curvature_threshold, linestyle="--", label="curvature threshold")
+
     if t_classical:
-        axs[0].axvline(t_classical, linestyle="--", label="Classical")
+        axs[0].axvline(t_classical, linestyle=":", label="classical detect")
     if t_nexah:
-        axs[0].axvline(t_nexah, linestyle="--", label="NEXAH")
+        axs[0].axvline(t_nexah, linestyle="--", label="NEXAH detect")
+    if t_collapse:
+        axs[0].axvline(t_collapse, linestyle="-.", label="collapse")
 
-    axs[0].set_title("Voltage")
+    axs[0].set_title("Signal Comparison")
     axs[0].legend()
 
-    # Distance
-    axs[1].plot(t, distance)
-    axs[1].axvspan(t[0], t[stable_idx], alpha=0.1)
-    axs[1].set_title("Distance")
+    # Panel B — State space
+    sc = axs[1].scatter(V_smooth, dv_dt, c=curvature, s=10)
+    axs[1].set_title("State Space")
+    axs[1].set_xlabel("Voltage")
+    axs[1].set_ylabel("dV/dt")
+    plt.colorbar(sc, ax=axs[1])
 
-    # Curvature
-    axs[2].plot(t, curvature, label="Curvature")
-    axs[2].axhline(curvature_threshold, linestyle="--", label="Threshold")
+    # Panel C — Flow (zoom)
+    mask = (V_smooth > 0.3) & (V_smooth < 1.1)
 
-    if t_nexah:
-        axs[2].axvline(t_nexah, linestyle="--")
+    axs[2].quiver(X, Y, U, Vv, alpha=0.4)
+    axs[2].scatter(V_smooth[mask], dv_dt[mask], c=curvature[mask], s=15)
 
-    axs[2].set_title("Curvature (NEXAH Signal)")
-    axs[2].legend()
-
-    # 🔥 State Space + Flow Field
-    axs[3].quiver(X, Y, U, Vv, alpha=0.4)
-    sc = axs[3].scatter(V_smooth, dv_dt, c=curvature, s=8)
-
-    axs[3].set_title("State Space + Local Flow Field")
-    axs[3].set_xlabel("Voltage")
-    axs[3].set_ylabel("dV/dt")
-
-    plt.colorbar(sc, ax=axs[3])
+    axs[2].set_title("Flow Field (Transition Corridor)")
+    axs[2].set_xlabel("Voltage")
+    axs[2].set_ylabel("dV/dt")
 
     plt.tight_layout()
     plt.show()
+
+    # -----------------------------
+    # METRICS
+    # -----------------------------
+    print("\n--- METRICS ---")
+
+    print(f"Lead Classical: {lead_classical}")
+    print(f"Lead NEXAH:     {lead_nexah}")
+
+    if lead_classical and lead_nexah:
+        print(f"Improvement:    {lead_nexah - lead_classical}")
+
+    print(f"Curvature peak: {np.max(curvature)}")
+    print(f"dv/dt min:      {np.min(dv_dt)}")
+
+    width = np.sum(curvature > curvature_threshold) * (t[1] - t[0])
+    print(f"Event width:    {width:.2f}")
 
     return {
         "t_collapse": t_collapse,
@@ -218,16 +221,12 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 
     if kind == "nonlinear":
         precursor = 0.015 * np.exp((t - 16) / 4.0)
-        precursor = precursor * (t < 25)
+        precursor *= (t < 25)
 
         oscillation = 0.01 * np.sin(0.8 * t)
-        oscillation = oscillation * (t < 25)
+        oscillation *= (t < 25)
 
         V += precursor + oscillation
-
-    elif kind == "noisy":
-        rng = np.random.default_rng(7)
-        V += 0.01 * rng.normal(size=len(t))
 
     return {"time": t, "voltage": V}
 
@@ -238,4 +237,4 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 
 if __name__ == "__main__":
     data = make_synthetic_scenario("nonlinear")
-    run_validation(data, scenario_name="flow_test")
+    run_validation(data, scenario_name="final_validation")
