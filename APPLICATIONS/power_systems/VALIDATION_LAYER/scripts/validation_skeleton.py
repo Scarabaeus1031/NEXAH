@@ -6,7 +6,7 @@ from scipy.ndimage import gaussian_filter1d
 
 
 # ============================================================
-# ⚡ NEXAH Validation Skeleton (Curvature + Nonlinear Scenario)
+# ⚡ NEXAH Validation Skeleton (Curvature + Flow Field)
 # ============================================================
 
 
@@ -28,6 +28,40 @@ def compute_lead_time(t_collapse, t_detection):
     if t_collapse is None or t_detection is None:
         return None
     return t_collapse - t_detection
+
+
+# ============================================================
+# 🔥 NEW: Data-driven Flow Field
+# ============================================================
+
+def compute_flow_field(V, dv_dt, t, grid_size=25):
+    x = V
+    y = dv_dt
+
+    dx = np.gradient(x, t)
+    dy = np.gradient(y, t)
+
+    xi = np.linspace(np.min(x), np.max(x), grid_size)
+    yi = np.linspace(np.min(y), np.max(y), grid_size)
+
+    U = np.zeros((grid_size, grid_size))
+    Vv = np.zeros((grid_size, grid_size))
+    counts = np.zeros((grid_size, grid_size))
+
+    for i in range(len(x)):
+        ix = np.searchsorted(xi, x[i]) - 1
+        iy = np.searchsorted(yi, y[i]) - 1
+
+        if 0 <= ix < grid_size and 0 <= iy < grid_size:
+            U[iy, ix] += dx[i]
+            Vv[iy, ix] += dy[i]
+            counts[iy, ix] += 1
+
+    mask = counts > 0
+    U[mask] /= counts[mask]
+    Vv[mask] /= counts[mask]
+
+    return xi, yi, U, Vv
 
 
 def run_validation(data,
@@ -78,7 +112,7 @@ def run_validation(data,
     d_dist = np.gradient(distance, t)
     d_dist = gaussian_filter1d(d_dist, sigma=smooth_sigma)
 
-    # 🔥 Curvature (core NEXAH signal)
+    # 🔥 Curvature
     dx_dt = np.gradient(x, axis=0)
     d2x_dt2 = np.gradient(dx_dt, axis=0)
 
@@ -86,7 +120,7 @@ def run_validation(data,
     curvature = gaussian_filter1d(curvature, sigma=smooth_sigma)
 
     # -----------------------------
-    # Thresholds (stable only!)
+    # Thresholds
     # -----------------------------
     curvature_stable = curvature[:stable_idx]
     curvature_threshold = np.mean(curvature_stable) + 2.0 * np.std(curvature_stable)
@@ -105,14 +139,17 @@ def run_validation(data,
     lead_classical = compute_lead_time(t_collapse, t_classical)
     lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
-    # -----------------------------
-    # Output
-    # -----------------------------
-    print("\n=== NEXAH CURVATURE VALIDATION ===")
+    print("\n=== NEXAH CURVATURE + FLOW VALIDATION ===")
     print(f"Scenario:    {scenario_name}")
     print(f"Collapse:    {t_collapse}")
     print(f"Classical:   {t_classical} -> Δt = {lead_classical}")
     print(f"NEXAH(curv): {t_nexah} -> Δt = {lead_nexah}")
+
+    # -----------------------------
+    # 🔥 Compute Flow Field
+    # -----------------------------
+    xi, yi, U, Vv = compute_flow_field(V_smooth, dv_dt, t)
+    X, Y = np.meshgrid(xi, yi)
 
     # -----------------------------
     # Plot
@@ -148,9 +185,11 @@ def run_validation(data,
     axs[2].set_title("Curvature (NEXAH Signal)")
     axs[2].legend()
 
-    # State space
+    # 🔥 State Space + Flow Field
+    axs[3].quiver(X, Y, U, Vv, alpha=0.4)
     sc = axs[3].scatter(V_smooth, dv_dt, c=curvature, s=8)
-    axs[3].set_title("State Space (colored by curvature)")
+
+    axs[3].set_title("State Space + Local Flow Field")
     axs[3].set_xlabel("Voltage")
     axs[3].set_ylabel("dV/dt")
 
@@ -169,24 +208,18 @@ def run_validation(data,
 
 
 # ============================================================
-# 🔥 Improved synthetic scenarios
+# Scenario
 # ============================================================
 
 def make_synthetic_scenario(kind="nonlinear", n=500):
     t = np.linspace(0, 100, n)
 
-    # base collapse
     V = 1.0 - 0.002 * t - 0.0005 * t**2
 
-    if kind == "smooth":
-        pass
-
-    elif kind == "nonlinear":
-        # exponential precursor
+    if kind == "nonlinear":
         precursor = 0.015 * np.exp((t - 16) / 4.0)
         precursor = precursor * (t < 25)
 
-        # oscillation (key!)
         oscillation = 0.01 * np.sin(0.8 * t)
         oscillation = oscillation * (t < 25)
 
@@ -196,10 +229,7 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
         rng = np.random.default_rng(7)
         V += 0.01 * rng.normal(size=len(t))
 
-    return {
-        "time": t,
-        "voltage": V,
-    }
+    return {"time": t, "voltage": V}
 
 
 # ============================================================
@@ -207,9 +237,5 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 # ============================================================
 
 if __name__ == "__main__":
-
-    scenario = "nonlinear"
-
-    data = make_synthetic_scenario(kind=scenario)
-
-    run_validation(data, scenario_name=f"test_{scenario}")
+    data = make_synthetic_scenario("nonlinear")
+    run_validation(data, scenario_name="flow_test")
