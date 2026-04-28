@@ -27,6 +27,124 @@ what actually emerged during validation
 
 ---
 
+# 📊 0. Validation Results (Ground Truth)
+
+This section documents the actual measured outcomes from the validation layer.
+
+---
+
+## Scenarios
+
+The validation currently uses three controlled scenarios:
+
+```text
+smooth
+nonlinear
+noisy
+```
+
+---
+
+## Results
+
+| Scenario   | Δ (Lead Gain) | Events | Width | Alignment | Class       |
+|-----------|--------------|--------|-------|----------|------------|
+| smooth    | +18.036      | 2      | 1.20  | 0.259    | AMBIGUOUS  |
+| nonlinear | +0.200       | 1      | 2.20  | 0.000    | STRUCTURAL |
+| noisy     | -3.206       | 6      | 1.20  | 0.065    | NOISE      |
+
+---
+
+## Interpretation (Direct)
+
+### Smooth
+
+```text
+very large lead time
+but unstable shape consistency
+```
+
+→ early detection  
+→ but ambiguous structure  
+
+---
+
+### Nonlinear
+
+```text
+small lead time
+but perfect structural coherence
+```
+
+→ clean structural transition  
+→ minimal ambiguity  
+
+---
+
+### Noisy
+
+```text
+negative lead time
+multiple fragmented events
+```
+
+→ curvature reacts to noise  
+→ false structural signals  
+
+---
+
+## Key Validation Insight
+
+```text
+Lead time alone is NOT sufficient
+```
+
+We need:
+
+```text
+structure + coherence + persistence
+```
+
+---
+
+## Updated Validation Criterion
+
+A valid NEXAH detection must satisfy:
+
+```text
+early OR structurally coherent
+```
+
+NOT:
+
+```text
+early alone
+```
+
+---
+
+## Conclusion (Validation Layer)
+
+NEXAH provides:
+
+✔ earlier detection in smooth systems  
+✔ structurally clean detection in nonlinear systems  
+❌ unstable detection in noisy systems  
+
+---
+
+This confirms:
+
+```text
+curvature detects structure,
+but requires filtering to separate signal from noise
+```
+
+---
+
+
+---
+
 # 🧠 1. Shift in Understanding
 
 Initial assumption:
