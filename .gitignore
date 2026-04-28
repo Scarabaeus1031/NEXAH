@@ -139,3 +139,10 @@ APPLICATIONS/dynamical_systems/halvorsen/outputs/*.txt
 !APPLICATIONS/dynamical_systems/halvorsen/outputs/*.png
 !APPLICATIONS/dynamical_systems/halvorsen/outputs/*.gif
 !APPLICATIONS/dynamical_systems/halvorsen/outputs/*.mp4
+
+# =========================
+# VALIDATION LAYER (CURATED FIGURES)
+# =========================
+
+!APPLICATIONS/power_systems/VALIDATION_LAYER/figures/
+!APPLICATIONS/power_systems/VALIDATION_LAYER/figures/*.png
