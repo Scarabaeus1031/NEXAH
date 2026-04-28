@@ -56,19 +56,19 @@ direct observations of motion inside the learned field
 
 ## 🧭 Field Dynamics
 
-![Field Flow](nexah/outputs/nexah_flow_field.gif)
+![Field Flow](./outputs/nexah_flow_field.gif)
 
 ---
 
 ## 🔗 Transition Graph Behavior
 
-![Graph Flow](nexah/outputs/nexah_flow_graph.gif)
+![Graph Flow](./outputs/nexah_flow_graph.gif)
 
 ---
 
 ## 🧱 Basin Vector Field Simulation
 
-![Basin Flow](nexah/outputs/nexah_v21_flow.gif)
+![Basin Flow](./outputs/nexah_v21_flow.gif)
 
 ---
 
