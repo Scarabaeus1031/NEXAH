@@ -9,8 +9,9 @@ This document summarizes the validated insights of the NEXAH validation layer.
 
 It integrates:
 
-- core validation (validation_skeleton.py)  
-- experimental extensions (run_001 → run_009)  
+- core validation (`validation_skeleton.py`)  
+- experimental extensions (`run_001 → run_009`)  
+- IEEE system validation  
 
 ---
 
@@ -116,13 +117,13 @@ These findings extend the skeleton into a full structural interpretation.
 NEXAH detects instability significantly earlier than classical methods.
 ```
 
-### Evidence (IEEE14)
+### Evidence (IEEE14 Collapse Sweep)
 
 - collapse: ~60–75  
 - warning: ~20–25  
 
 ```text
-Lead time: ~40–50
+Lead time: ~40–50 time units
 ```
 
 ---
@@ -156,60 +157,99 @@ events are not isolated
 they move through shape space
 ```
 
+Observed:
+
+- ordered trajectories (nonlinear)  
+- fragmented clouds (noise)  
+- multi-path transitions (smooth)  
+
 ---
 
 ## B5. Stable vs Pre-Collapse Motion
 
-### Stable
+### Stable regime
 
-- closed loops  
+- loop structures  
 - cyclic motion  
+- bounded trajectories  
 
-### Pre-collapse
+### Pre-collapse regime
 
-- drift  
-- deformation  
-- escape behavior  
+- deformation of loops  
+- directional drift  
+- escape from stable region  
 
 ---
 
 ## B6. Motion Metrics Detect Instability
 
+Two key quantities:
+
 ### Speed
 
 ```text
-movement magnitude
+magnitude of movement in shape space
 ```
 
 ### Angle
 
 ```text
-directional change
+change of direction between steps
 ```
 
 ---
 
-### Behavior
+### Observed Behavior
 
-- angle spikes → early warning  
+- angle spikes → early warning signal  
 - speed spikes → later confirmation  
+- both occur before collapse  
 
 ---
 
 ## B7. Statistical Validation
 
-- detection rate: ~86%  
-- mean lead time: ~11.6 (synthetic)  
+From repeated runs:
+
+- detection rate: ~86% (43 / 50)  
+- mean lead time: ~11.6 (synthetic baseline)  
 
 ---
 
-## B8. Works on IEEE System
+## B8. IEEE System Validation
 
 Observed:
 
-- structure even without collapse  
+- structured trajectories even without collapse  
+- persistent motion patterns in stable regime  
 - clear transition behavior under stress  
-- strong early warning in collapse cases  
+
+---
+
+### Key Observation
+
+```text
+NEXAH produces warnings even when
+no classical collapse is detected.
+```
+
+---
+
+## B9. Collapse Dynamics (IEEE Sweep)
+
+At increasing load:
+
+- no collapse → structured motion persists  
+- collapse onset → strong geometric drift  
+- post-threshold → rapid trajectory escape  
+
+---
+
+### Critical Result
+
+```text
+geometric drift consistently precedes voltage collapse
+```
 
 ---
 
@@ -245,18 +285,20 @@ stable motion
 
 # ⚠️ Limitations
 
-- noise sensitivity  
-- single IEEE system  
-- no persistence filtering  
-- PCA simplification  
+- curvature sensitive to noise  
+- single IEEE system (IEEE14)  
+- no persistence filtering yet  
+- PCA is a reduced representation  
 
 ---
 
 # 🚀 Implications
 
+NEXAH enables:
+
 - early warning systems  
-- structural monitoring  
-- trajectory-based stability analysis  
+- trajectory-based monitoring  
+- structural interpretation of dynamics  
 
 ---
 
@@ -265,14 +307,14 @@ stable motion
 ```text
 Power system instability appears as geometric drift
 in reconstructed state space,
-well before observable collapse.
+well before observable collapse occurs.
 ```
 
 ---
 
 # 🔗 References
 
-- validation_skeleton.py  
-- validation_report_v1.md  
-- validation_report_v2.md  
-- experiments/run_001 → run_009  
+- `scripts/validation_skeleton.py`  
+- `experiments/run_001 → run_009`  
+- `reports/validation_report_v1.md`  
+- `reports/validation_report_v2.md`  
