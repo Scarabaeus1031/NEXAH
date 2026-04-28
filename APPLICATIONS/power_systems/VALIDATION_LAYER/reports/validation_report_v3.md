@@ -225,29 +225,61 @@ NEXAH detects instability ~40–50 time units earlier
 
 ---
 
-## 7. Geometric Interpretation
-
-Observed trajectory behavior:
-
-- loop deformation  
-- directional escape  
-- collapse after geometric drift  
+# 📊 Figures (Validation Evidence)
 
 ---
 
-### Revised Model
+## Fig. 1 — Shape Geometry (Cluster Relations)
 
-Before:
+Mean event shapes across clusters showing structural differences and intersections.
 
-```text
-stable → threshold → collapse
-```
+---
 
-Now:
+## Fig. 2 — Shape Geometry (Detailed)
 
-```text
-stable motion → geometric drift → directional escape → collapse
-```
+Area differences and crossings reveal structured relationships in shape space.
+
+---
+
+## Fig. 3 — Shape Space Trajectories
+
+Events form ordered trajectories, demonstrating that instability emerges as motion.
+
+---
+
+## Fig. 4 — Pre-Collapse Structural Shift
+
+Separation between stable and pre-collapse regimes before voltage collapse.
+
+---
+
+## Fig. 5 — Motion Instability Metric
+
+Directional change (angle) reveals instability earlier than magnitude-based signals.
+
+---
+
+## Fig. 6 — Continuous Shape Flow (Speed)
+
+Increase in motion magnitude as instability develops.
+
+---
+
+## Fig. 7 — Continuous Shape Flow (Angle)
+
+Early spikes indicate structural transitions before collapse.
+
+---
+
+## Fig. 8–10 — IEEE Shape Flow
+
+Structured trajectories in real system (IEEE14), even under stable conditions.
+
+---
+
+## Fig. 11–13 — IEEE Collapse Sweep
+
+Progression from stable regime to collapse through geometric drift.
 
 ---
 
