@@ -102,6 +102,152 @@ risk ≈ curvature × flow_strength
 
 ---
 
+---
+
+# 📍 3.5 Validation Layer — Golden Line (NEW)
+
+The NEXAH validation layer establishes a minimal, reproducible comparison between:
+
+```text
+classical indicators
+vs
+geometric / structural indicators
+```
+
+---
+
+## Purpose
+
+The goal is not to prove the full framework.
+
+The goal is to test whether NEXAH can detect or represent instability:
+
+```text
+earlier
+or
+more structurally
+```
+
+than classical signal-based methods.
+
+---
+
+## Current Validation Setup
+
+Input:
+
+```text
+V(t)
+```
+
+Classical signal:
+
+```text
+dV/dt
+```
+
+NEXAH signal:
+
+```text
+curvature of reconstructed state trajectory
+```
+
+State reconstruction:
+
+```text
+x(t) = (V(t), dV/dt, d²V/dt²)
+```
+
+---
+
+## Current Findings
+
+Across minimal scenarios:
+
+```text
+smooth     → NEXAH detects structural drift much earlier
+nonlinear  → NEXAH detects slightly earlier than dv/dt
+noisy      → NEXAH becomes less robust
+```
+
+---
+
+## Interpretation
+
+NEXAH is not simply detecting voltage collapse.
+
+It detects:
+
+```text
+changes in trajectory structure
+```
+
+Specifically:
+
+```text
+curvature peaks
+flow disruption
+transition corridor formation
+```
+
+---
+
+## Key Discovery
+
+```text
+Curvature is sensitive to structural change,
+but can confuse real dynamical transition with noise-induced fluctuation.
+```
+
+This means NEXAH needs:
+
+```text
+persistence
+coherence
+flow-consistency
+```
+
+before being used as a robust detector.
+
+---
+
+## Current Status
+
+Validation is now:
+
+```text
+functional
+reproducible
+honest
+```
+
+But not yet:
+
+```text
+robust under noise
+production-ready
+fully benchmarked
+```
+
+---
+
+## Next Validation Step
+
+Add persistence filtering:
+
+```text
+transition = curvature high AND sustained
+```
+
+Goal:
+
+```text
+separate real structural transitions
+from noisy curvature spikes
+```
+
+---
+
 ## Layer 4 — Sequence (NEW)
 
 ```text
@@ -344,46 +490,95 @@ field steering
 
 ---
 
-## 🚀 Phase 4 — Field Navigation (CURRENT)
+## 🚀 Phase 4 — Validation + Signal Stabilization (CURRENT)
 
 Goal:
 
 ```text
-use the field to guide motion
+establish that structural signals are reliable before navigation
 ```
 
 ---
 
-### Step 4.1 — Field Steering
+### Step 4.1 — Minimal Validation (Golden Line)
 
 ```text
-Δ_total = Δ_field + Δ_control
+compare:
+classical signal (dv/dt)
+vs
+NEXAH signal (curvature)
+```
+
+Goal:
+
+```text
+measure lead time and structural behavior
 ```
 
 ---
 
-### Step 4.2 — Targeting
+### Step 4.2 — Multi-Scenario Testing
 
 ```text
-define desired regions
+smooth
+nonlinear
+noisy
+```
+
+Goal:
+
+```text
+identify when NEXAH works
+and when it fails
 ```
 
 ---
 
-### Step 4.3 — Channel Alignment
+### Step 4.3 — Signal Interpretation
 
 ```text
-move WITH the field
-not against it
+understand what curvature actually measures
+```
+
+Insight:
+
+```text
+curvature detects structural change,
+but does not separate signal from noise
 ```
 
 ---
 
-### Step 4.4 — Stability Control
+### Step 4.4 — Signal Stabilization (NEXT)
 
 ```text
-avoid unstable regions
+transition = high curvature + persistence
 ```
+
+Goal:
+
+```text
+separate real dynamical transitions
+from noise-induced fluctuations
+```
+
+---
+
+### Step 4.5 — Readiness for Navigation
+
+Only after:
+
+```text
+signal is stable across scenarios
+```
+
+we move to:
+
+```text
+field-based trajectory guidance
+```
+
+---
 
 ---
 
