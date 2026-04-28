@@ -3,20 +3,15 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 
 # =========================================
-# ⚡ NEXAH Validation Skeleton
+# ⚡ NEXAH Validation Skeleton (v2)
+# - includes EARLY SIGNAL FIX (d/dt distance)
 # =========================================
-
-# -----------------------------------------
-# INPUT (hook to your pipeline)
-# -----------------------------------------
-# Expected structure:
-# data = {
-#     "time": np.array,
-#     "voltage": np.array
-# }
 
 def run_validation(data):
 
+    # -----------------------------------------
+    # INPUT
+    # -----------------------------------------
     t = data["time"]
     V = data["voltage"]
 
@@ -32,10 +27,11 @@ def run_validation(data):
     # -----------------------------------------
     # FEATURE EXTRACTION
     # -----------------------------------------
-    # smoothing to avoid unfair dv/dt noise
     V_smooth = gaussian_filter1d(V, sigma=2)
 
     dv_dt = np.gradient(V_smooth, t)
+    dv_dt = gaussian_filter1d(dv_dt, sigma=2)
+
     d2v_dt2 = np.gradient(dv_dt, t)
 
     # -----------------------------------------
@@ -49,10 +45,16 @@ def run_validation(data):
     # distance signal
     distance = np.linalg.norm(x - mu_stable, axis=1)
 
-    # fixed threshold (no tuning!)
-    dist_mean = np.mean(distance)
-    dist_std = np.std(distance)
-    dist_threshold = dist_mean + 2 * dist_std
+    # -----------------------------------------
+    # 🔥 EARLY WARNING SIGNAL (KEY FIX)
+    # -----------------------------------------
+    d_dist = np.gradient(distance, t)
+    d_dist = gaussian_filter1d(d_dist, sigma=2)
+
+    # threshold (fixed)
+    dd_mean = np.mean(d_dist)
+    dd_std = np.std(d_dist)
+    dd_threshold = dd_mean + 2 * dd_std
 
     # -----------------------------------------
     # DETECTION FUNCTIONS
@@ -61,14 +63,14 @@ def run_validation(data):
         idx = np.where(condition(signal))[0]
         return t[idx[0]] if len(idx) > 0 else None
 
-    # collapse
+    # collapse (ground truth)
     t_collapse = first_crossing(V, lambda x: x < V_threshold)
 
-    # classical
+    # classical detection
     t_classical = first_crossing(dv_dt, lambda x: x < dv_threshold)
 
-    # NEXAH
-    t_nexah = first_crossing(distance, lambda x: x > dist_threshold)
+    # NEXAH detection (NEW)
+    t_nexah = first_crossing(d_dist, lambda x: x > dd_threshold)
 
     # -----------------------------------------
     # LEAD TIMES
@@ -87,81 +89,50 @@ def run_validation(data):
     print(f"NEXAH:      {t_nexah} → Δt = {lead_nexah}")
 
     # -----------------------------------------
-    # PLOT 1 — Voltage
+    # PLOT — GOLDEN FIGURE
     # -----------------------------------------
-    plt.figure()
-    plt.plot(t, V, label="Voltage")
+    fig, axs = plt.subplots(4, 1, figsize=(10, 12))
+
+    # (1) Voltage
+    axs[0].plot(t, V)
+    axs[0].set_title("Voltage V(t)")
 
     if t_collapse:
-        plt.axvline(t_collapse, linestyle="--", label="Collapse")
-
+        axs[0].axvline(t_collapse, linestyle="--", label="Collapse")
     if t_classical:
-        plt.axvline(t_classical, linestyle="--", label="Classical")
+        axs[0].axvline(t_classical, linestyle="--", label="Classical")
+    if t_nexah:
+        axs[0].axvline(t_nexah, linestyle="--", label="NEXAH")
+
+    axs[0].legend()
+
+    # (2) Distance
+    axs[1].plot(t, distance)
+    axs[1].set_title("Distance to Stable Region")
+
+    # (3) Distance Derivative (KEY)
+    axs[2].plot(t, d_dist)
+    axs[2].axhline(dd_threshold, linestyle="--", label="Threshold")
 
     if t_nexah:
-        plt.axvline(t_nexah, linestyle="--", label="NEXAH")
+        axs[2].axvline(t_nexah, linestyle="--", label="NEXAH")
 
-    plt.title("Voltage + Detection")
-    plt.legend()
+    axs[2].set_title("d/dt Distance (Early Warning)")
+    axs[2].legend()
 
-    # -----------------------------------------
-    # PLOT 2 — Distance (NEXAH Signal)
-    # -----------------------------------------
-    plt.figure()
-    plt.plot(t, distance, label="Distance")
-    plt.axhline(dist_threshold, linestyle="--", label="Threshold")
+    # (4) State Space
+    sc = axs[3].scatter(V_smooth, dv_dt, c=d_dist, s=6)
+    axs[3].set_xlabel("Voltage")
+    axs[3].set_ylabel("dV/dt")
+    axs[3].set_title("State Space (colored by d/dt distance)")
 
-    if t_nexah:
-        plt.axvline(t_nexah, linestyle="--", label="NEXAH detection")
+    plt.colorbar(sc, ax=axs[3])
 
-    plt.title("NEXAH Distance Signal")
-    plt.legend()
-
-    # -----------------------------------------
-    # PLOT 3 — State Space
-    # -----------------------------------------
-    plt.figure()
-    plt.scatter(V_smooth, dv_dt, c=t, s=5)
-
-    plt.xlabel("Voltage")
-    plt.ylabel("dV/dt")
-    plt.title("State Space (Trajectory)")
-
-    plt.colorbar(label="Time")
-
-    # -----------------------------------------
-    # OPTIONAL — Golden Line Plot
-    # -----------------------------------------
-    plt.figure()
-
-    y = [1, 1, 1]
-    x_vals = []
-
-    labels = []
-
-    if t_classical:
-        x_vals.append(t_classical)
-        labels.append("Classical")
-
-    if t_nexah:
-        x_vals.append(t_nexah)
-        labels.append("NEXAH")
-
-    if t_collapse:
-        x_vals.append(t_collapse)
-        labels.append("Collapse")
-
-    for xv, label in zip(x_vals, labels):
-        plt.axvline(xv, linestyle="--", label=label)
-
-    plt.yticks([])
-    plt.title("Golden Line — Detection Timing")
-    plt.legend()
-
+    plt.tight_layout()
     plt.show()
 
     # -----------------------------------------
-    # RETURN RESULTS
+    # RETURN
     # -----------------------------------------
     return {
         "t_collapse": t_collapse,
@@ -173,13 +144,14 @@ def run_validation(data):
 
 
 # =========================================
-# EXAMPLE USAGE (replace with your loader)
+# TEST RUN (replace with real data)
 # =========================================
 if __name__ == "__main__":
 
-    # Dummy example (replace!)
     t = np.linspace(0, 100, 500)
-    V = 1.0 - 0.002*t - 0.0005*t**2  # artificial collapse
+
+    # synthetic collapse
+    V = 1.0 - 0.002*t - 0.0005*t**2
 
     data = {
         "time": t,
