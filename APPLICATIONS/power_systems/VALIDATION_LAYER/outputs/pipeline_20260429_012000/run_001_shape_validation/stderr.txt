@@ -1,0 +1,27 @@
+
+
+=== PIPELINE ERROR ===
+Traceback (most recent call last):
+  File "/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/run_all_experiments.py", line 123, in run_experiment
+    runpy.run_path(str(script_path), run_name="__main__")
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/run_001_shape_validation.py", line 333, in <module>
+    save_overlay(all_shapes, output_dir)
+  File "/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/run_001_shape_validation.py", line 230, in save_overlay
+    plt.figure(figsize=(8, 5))
+  File "/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py", line 1027, in figure
+    manager = new_figure_manager(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py", line 549, in new_figure_manager
+    _warn_if_gui_out_of_main_thread()
+  File "/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py", line 526, in _warn_if_gui_out_of_main_thread
+    canvas_class = cast(type[FigureCanvasBase], _get_backend_mod().FigureCanvas)
+                                                ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py", line 358, in _get_backend_mod
+    switch_backend(rcParams._get("backend"))
+  File "/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py", line 505, in switch_backend
+    globals()[func_name].__signature__ = inspect.signature(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'method' object has no attribute '__signature__'

@@ -1,0 +1,2 @@
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/run_008_ieee_bridge.py:295: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  plt.legend()

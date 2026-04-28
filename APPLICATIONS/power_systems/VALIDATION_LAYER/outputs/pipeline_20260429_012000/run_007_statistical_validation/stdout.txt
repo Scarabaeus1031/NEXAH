@@ -1,0 +1,12 @@
+
+=== STATISTICAL RESULTS ===
+
+Total runs: 50
+Detections: 43
+Missed    : 7
+
+Lead time stats:
+  mean: 11.646548911777044
+  std : 5.183681590768134
+  max : 18.436873747494992
+  min : 0.20040080160320528

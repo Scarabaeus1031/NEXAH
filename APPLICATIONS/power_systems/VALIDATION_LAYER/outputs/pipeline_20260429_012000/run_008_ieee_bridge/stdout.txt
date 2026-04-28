@@ -1,0 +1,16 @@
+
+=== NEXAH EXPERIMENT 008: IEEE BRIDGE ===
+Case: ieee14
+
+Collapse time: None
+Speed warning: 54.50901803607215
+Angle warning: 54.50901803607215
+
+Min voltage: 1.0049487196451121
+Mean speed: 0.07526451754280983
+Max speed:  2.5996145935781048
+Mean angle: 0.06671558238229618
+Max angle:  2.580474527666306
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_01.png
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_02.png
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_03.png

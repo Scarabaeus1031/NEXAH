@@ -1,0 +1,15 @@
+
+=== NEXAH EXPERIMENT 006: CONTINUOUS SHAPE FLOW ===
+Scenario: noisy
+
+Collapse time: 22.645290581162325
+Speed warning: None
+Angle warning: 22.44488977955912
+Angle lead time: 0.20040080160320528
+
+Mean speed: 0.4022266587319969
+Max speed:  1.035704728202705
+Mean angle: 0.38782236726270475
+Max angle:  2.7570494019977945
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_01.png
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_02.png

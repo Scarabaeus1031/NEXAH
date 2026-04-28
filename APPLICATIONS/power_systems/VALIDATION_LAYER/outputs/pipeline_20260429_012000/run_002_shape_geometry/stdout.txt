@@ -1,0 +1,20 @@
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_002_shape_geometry/figure_01.png
+
+=== SHAPE GEOMETRY ANALYSIS ===
+
+Cluster 0 vs 1
+  crossings : 1
+  area      : 0.5165
+  end gap   : 0.1425
+
+Cluster 0 vs 2
+  crossings : 0
+  area      : 0.0733
+  end gap   : 0.0885
+
+Cluster 1 vs 2
+  crossings : 1
+  area      : 0.4702
+  end gap   : 0.2310
+
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_002_shape_geometry/figure_02.png

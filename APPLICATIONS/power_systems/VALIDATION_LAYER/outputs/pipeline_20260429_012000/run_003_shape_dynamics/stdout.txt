@@ -1,0 +1,4 @@
+{'scenario': 'smooth', 'delta': 18.03607214428858, 'events': 2, 'width': 1.2024048096192386, 'snr': 341.53696125423795, 'alignment': 0.2586196251884127}
+{'scenario': 'nonlinear', 'delta': 0.20040080160320528, 'events': 1, 'width': 2.2044088176352723, 'snr': 4.348412384258337, 'alignment': 0.0}
+{'scenario': 'noisy', 'delta': 7.615230460921843, 'events': 4, 'width': 2.2044088176352714, 'snr': 6.748888034965129, 'alignment': 0.04850898225241816}
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_003_shape_dynamics/figure_01.png

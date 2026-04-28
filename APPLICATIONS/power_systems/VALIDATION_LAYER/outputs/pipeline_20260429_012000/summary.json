@@ -1,0 +1,56 @@
+[
+  {
+    "script": "run_001_shape_validation.py",
+    "status": "failed",
+    "error": "Traceback (most recent call last):\n  File \"/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/run_all_experiments.py\", line 123, in run_experiment\n    runpy.run_path(str(script_path), run_name=\"__main__\")\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/run_001_shape_validation.py\", line 333, in <module>\n    save_overlay(all_shapes, output_dir)\n  File \"/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/experiments/run_001_shape_validation.py\", line 230, in save_overlay\n    plt.figure(figsize=(8, 5))\n  File \"/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py\", line 1027, in figure\n    manager = new_figure_manager(\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py\", line 549, in new_figure_manager\n    _warn_if_gui_out_of_main_thread()\n  File \"/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py\", line 526, in _warn_if_gui_out_of_main_thread\n    canvas_class = cast(type[FigureCanvasBase], _get_backend_mod().FigureCanvas)\n                                                ^^^^^^^^^^^^^^^^^^\n  File \"/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py\", line 358, in _get_backend_mod\n    switch_backend(rcParams._get(\"backend\"))\n  File \"/opt/anaconda3/lib/python3.12/site-packages/matplotlib/pyplot.py\", line 505, in switch_backend\n    globals()[func_name].__signature__ = inspect.signature(\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'method' object has no attribute '__signature__'\n",
+    "figures_saved": 0
+  },
+  {
+    "script": "run_002_shape_geometry.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 2
+  },
+  {
+    "script": "run_003_shape_dynamics.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 1
+  },
+  {
+    "script": "run_004_pre_collapse_dynamics.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 1
+  },
+  {
+    "script": "run_005_motion_instability_metric.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 1
+  },
+  {
+    "script": "run_006_continuous_shape_flow.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 2
+  },
+  {
+    "script": "run_007_statistical_validation.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 0
+  },
+  {
+    "script": "run_008_ieee_bridge.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 3
+  },
+  {
+    "script": "run_009_ieee_collapse_sweep.py",
+    "status": "success",
+    "error": null,
+    "figures_saved": 3
+  }
+]

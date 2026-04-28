@@ -1,0 +1,45 @@
+
+=== NEXAH EXPERIMENT 009: IEEE COLLAPSE SWEEP ===
+Case: ieee14
+
+--- load_rate=0.004 ---
+  minV=1.005 collapse=None speed_warn=54.509 angle_warn=54.509 speed_lead=None angle_lead=None
+--- load_rate=0.006 ---
+  minV=0.998 collapse=None speed_warn=33.667 angle_warn=33.667 speed_lead=None angle_lead=None
+--- load_rate=0.008 ---
+  minV=0.987 collapse=None speed_warn=23.246 angle_warn=27.655 speed_lead=None angle_lead=None
+--- load_rate=0.01 ---
+  minV=0.973 collapse=None speed_warn=16.834 angle_warn=21.643 speed_lead=None angle_lead=None
+--- load_rate=0.012 ---
+  minV=0.959 collapse=None speed_warn=28.457 angle_warn=28.858 speed_lead=None angle_lead=None
+--- load_rate=0.015 ---
+  minV=0.935 collapse=None speed_warn=24.449 angle_warn=25.651 speed_lead=None angle_lead=None
+--- load_rate=0.02 ---
+  minV=0.890 collapse=None speed_warn=20.040 angle_warn=21.242 speed_lead=None angle_lead=None
+--- load_rate=0.03 ---
+  minV=0.708 collapse=None speed_warn=15.631 angle_warn=15.631 speed_lead=None angle_lead=None
+--- load_rate=0.04 ---
+  minV=0.207 collapse=75.150 speed_warn=24.449 angle_warn=25.651 speed_lead=50.701 angle_lead=49.499
+--- load_rate=0.05 ---
+  minV=0.209 collapse=60.120 speed_warn=20.842 angle_warn=22.044 speed_lead=39.279 angle_lead=38.076
+
+=== SUMMARY TABLE ===
+
+rate     minV     collapse   s_warn     a_warn     s_lead     a_lead    
+------------------------------------------------------------------------
+0.004    1.005    None       54.509     54.509     None       None      
+0.006    0.998    None       33.667     33.667     None       None      
+0.008    0.987    None       23.246     27.655     None       None      
+0.010    0.973    None       16.834     21.643     None       None      
+0.012    0.959    None       28.457     28.858     None       None      
+0.015    0.935    None       24.449     25.651     None       None      
+0.020    0.890    None       20.040     21.242     None       None      
+0.030    0.708    None       15.631     15.631     None       None      
+0.040    0.207    75.150     24.449     25.651     50.701     49.499    
+0.050    0.209    60.120     20.842     22.044     39.279     38.076    
+
+Plotting best candidate:
+{'case': 'ieee14', 'load_rate': 0.04, 'min_voltage': 0.206975609023852, 'pf_failed_at': 75.1503006012024, 'voltage_collapse': 75.1503006012024, 'collapse': 75.1503006012024, 'speed_warning': 24.448897795591183, 'angle_warning': 25.65130260521042, 'speed_lead': 50.701402805611224, 'angle_lead': 49.498997995991985, 'mean_speed': 0.15130537668775715, 'max_speed': 2.535429761899031, 'mean_angle': 0.12401460702784156, 'max_angle': 2.5207718273941397}
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_01.png
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_02.png
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_03.png

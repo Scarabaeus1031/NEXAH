@@ -1,0 +1,6 @@
+
+=== RUN: pre-collapse dynamics ===
+
+t_collapse: 22.645290581162325
+events: 6
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_004_pre_collapse_dynamics/figure_01.png

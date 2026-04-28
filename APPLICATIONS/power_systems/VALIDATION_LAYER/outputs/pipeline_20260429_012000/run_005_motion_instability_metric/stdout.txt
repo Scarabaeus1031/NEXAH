@@ -1,0 +1,9 @@
+
+=== RUN: motion instability metric ===
+
+t_collapse: 22.645290581162325
+events: 6
+[saved figure] /Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_005_motion_instability_metric/figure_01.png
+
+mean instability: 1.8320300050925644
+max instability : 3.099780378658507
