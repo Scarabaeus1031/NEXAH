@@ -1,27 +1,66 @@
 # ⚡ NEXAH — Power Systems Applications
 
 This section contains the **applied NEXAH framework for power system dynamics**,  
-including experimental pipelines, scalable system validation, and closed-loop control prototypes.
+including experimental pipelines, system-level validation, and early-stage control experiments.
 
 ---
 
 # 🧭 Overview
 
-NEXAH introduces a new approach to power system stability:
+NEXAH introduces a geometry-based perspective on power system stability:
 
-> **Stability is a continuous, navigable field — not a binary condition.**
+> **Stability is modeled as a trajectory evolving within a structured dynamical field.**
 
-Across all modules, the core transformation is:
+Instead of treating instability as a threshold violation, the system is interpreted as:
+
+- a continuous dynamical process  
+- evolving across structured regions (regimes)  
+- with transitions between stable and unstable behavior  
+
+---
+
+# ⚙️ Technical Context (Condensed)
+
+- **Simulation basis:** AC power flow / dynamic simulations (pandapower)  
+- **Input signals:** voltage magnitude and derived temporal features  
+- **Feature space:** coherence, drift, acceleration, residual structure, distance metrics, phase  
+- **Representation:** low-dimensional geometric state space  
+- **Derived objects:**
+  - flow field (vector field)
+  - risk landscape
+  - regime structure  
+
+---
+
+# 🔁 Core Transformation
 
 ```text
-Simulation → Features → Manifold → Field → Risk → Control → Navigation
+Simulation → Features → State Embedding → Field → Risk → Analysis / Control
 ```
 
-The goal is to move from:
+Goal:
 
-- ❌ collapse detection  
-to  
-- ✅ **geometry-aware stability navigation**
+- ❌ detect collapse after it occurs  
+- ✅ **analyze and anticipate structural regime transitions**
+
+---
+
+# 🧠 System Architecture
+
+NEXAH consists of three conceptual layers:
+
+### 1. Extraction Layer
+- simulation → feature generation  
+- transformation into structured state representation  
+
+### 2. Representation Layer
+- construction of geometric state space  
+- flow field and risk landscape  
+
+### 3. Navigation / Application Layer (Experimental)
+- trajectory analysis  
+- early-stage control strategies  
+- stability navigation experiments  
 
 ---
 
@@ -31,100 +70,77 @@ to
 
 📂 `ieee_xray_pipeline/`
 
-**Purpose:**
-Core experimental pipeline for transforming classical simulations into  
-a **low-dimensional geometric state space**.
+**Role:**
+Core **extraction and representation pipeline**
 
-**Focus:**
-- Feature extraction & manifold construction  
-- Structural analysis of instability  
-- Experimental controllers  
-- Root Cube & attractor dynamics  
+**Purpose:**
+Transforms classical simulations into a **low-dimensional geometric state space**
+
+**Includes:**
+- feature extraction  
+- manifold construction  
+- structural analysis  
+- experimental controller designs  
 
 **Status:**
-- Detection layer: ✅ functional  
-- Control/navigation: 🧪 experimental  
+- Detection: ✅ functional  
+- Control: 🧪 experimental  
 
 👉 Entry point:  
 `ieee_xray_pipeline/README.md`
 
 ---
 
-## ⚡ 2. NEXAH IEEE9 — Closed-Loop Control (Reference System)
+## ⚡ 2. NEXAH IEEE9 — Reference System
 
 📂 `nexah_ieee9/`
 
+**Role:**
+First **reproducible closed-loop prototype**
+
 **Purpose:**
-First **fully working closed-loop system** demonstrating:
+Demonstrates:
 
 - field reconstruction  
 - risk modeling  
-- trajectory-based control  
+- trajectory-based intervention  
 
-**Key Property:**
-👉 **Reproducible baseline implementation**
-
-**Highlights:**
-- Flow field as central object  
-- Early instability detection  
-- Geometry-aware control  
-- Stable operation near collapse boundary  
+**Key property:**
+👉 Minimal working system with reproducible behavior
 
 **Status:**
-- Controller v6: ✅ stable & public  
-- Higher versions: 🧪 experimental  
+- v6: ✅ stable baseline  
+- later versions: 🧪 experimental  
 
 👉 Entry point:  
 `nexah_ieee9/README.md`
 
 ---
 
-## 🌍 3. NEXAH IEEE X — Scalable Systems
+## 🌍 3. NEXAH IEEE X — Scaling Experiments
 
 📂 `nexah_ieeeX/`
 
-**Purpose:**
-Demonstrates **scaling of NEXAH** from small systems to real grids:
+**Role:**
+System-level validation across increasing grid size
 
+**Systems:**
 - IEEE 118  
 - IEEE 300  
 - IEEE 1354  
 - IEEE 9241 (PEGASE)
 
 **Focus:**
-- robustness across system size  
+- structural consistency across scales  
 - emergence of nonlinear dynamics  
-- large-scale field behavior  
-- adaptive intervention  
+- behavior under increasing complexity  
 
-**Key Result:**
-👉 NEXAH scales from **toy systems → real-world grids**
-
-**Status:**
-- Large-scale validation: ✅ successful  
-- Control strategies: 🧪 ongoing  
+**Observed:**
+- stable behavior at large scale  
+- increased sensitivity in nonlinear regimes  
 
 👉 Entry point:  
 `nexah_ieeeX/README.md`
-
----
-
-# 🧠 Conceptual Layers
-
-Across all modules, NEXAH operates in three layers:
-
-### 1. Detection
-- identify structural precursors  
-- map collapse as continuous trajectory  
-
-### 2. Field Construction
-- build low-dimensional state space  
-- derive flow field & risk landscape  
-
-### 3. Navigation
-- shape trajectories  
-- stabilize system dynamically  
-- operate near optimal boundary  
 
 ---
 
@@ -132,47 +148,67 @@ Across all modules, NEXAH operates in three layers:
 
 ```text
 ieee_xray_pipeline
-    ↓ (method + experiments)
+    ↓ (method + representation)
 
 nexah_ieee9
-    ↓ (first stable closed-loop system)
+    ↓ (minimal working system)
 
 nexah_ieeeX
-    ↓ (scaling & real-world validation)
+    ↓ (scaling & system-level validation)
 ```
 
 ---
 
 # 🚀 Recommended Entry Path
 
-For new users:
-
 1. **Start with IEEE9**
-   → understand core idea + working system  
+   → understand core mechanism in a minimal system  
 
 2. **Explore X-Ray Pipeline**
-   → see experimental structure + controllers  
+   → understand feature extraction and geometry construction  
 
 3. **Move to IEEE X**
-   → understand scaling & real-world behavior  
+   → analyze scaling behavior and system-level effects  
 
 ---
 
 # ⚠️ Current Limitations
 
-- Navigation (true multi-attractor control) is not yet solved  
-- Physical coupling to real grid variables is still evolving  
-- Benchmarking vs classical methods is incomplete  
+- control remains experimental (no stability guarantees)  
+- sensitivity to parameters not fully explored  
+- limited validation on real-world datasets  
+- benchmarking vs classical methods is ongoing  
 
 ---
 
 # 🧭 Direction
 
-NEXAH is moving toward:
+Ongoing work focuses on:
 
-- real-time stability navigation  
-- geometry-based grid control  
-- integration with real-world power systems  
+- quantitative validation vs classical stability methods  
+- robustness across scenarios and perturbations  
+- improved mapping to physical grid variables  
+- development of reliable control strategies  
+
+---
+
+# 🌀 NEXAH Principle
+
+```text
+simulation → structure → field → geometry → dynamics → regimes
+```
+
+---
+
+# 🧠 Positioning
+
+This framework is currently **experimental** and aims to:
+
+- provide structural insight into power system dynamics  
+- explore geometry-based representations  
+- evaluate early-stage navigation concepts  
+
+It is **not yet a production-ready control system**.
 
 ---
 
