@@ -27,6 +27,22 @@ what actually emerged during validation
 
 ---
 
+# Experiment Reference
+
+Run:
+
+`experiments/run_001_shape_validation/`
+
+Generated artifacts:
+
+- `results.csv`
+- `event_shape_overlay.png`
+- `shape_space_pca.png`
+- `shape_clusters.png`
+- `mean_shape_per_cluster.png`
+
+---
+
 # 📊 0. Validation Results (Ground Truth)
 
 This section documents the actual measured outcomes from the validation layer.
