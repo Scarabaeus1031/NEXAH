@@ -140,6 +140,42 @@ From the Lorenz module:
 
 ---
 
+## 🔬 Highlight Results
+
+### ⚡ Early Warning (IEEE Collapse Sweep)
+
+![Early Warning](power_systems/VALIDATION_LAYER/figures/fig_10_ieee_sweep.png)
+
+**Observation:**
+- collapse at ~60–75  
+- NEXAH warning at ~20–25  
+
+**Result:**
+
+```text
+Lead time ≈ 40–50 time units
+```
+
+---
+
+### 🌀 Geometric Instability (Shape Flow)
+
+![Shape Flow](power_systems/VALIDATION_LAYER/figures/fig_08_shape_flow.png)
+
+**Observation:**
+- angle spikes precede collapse  
+- speed increases later  
+
+**Interpretation:**
+
+```text
+Instability emerges as directional change in system motion
+```
+
+---
+
+---
+
 ## 🔍 Observations
 
 - system trajectories exhibit **structured organization**  
@@ -257,4 +293,4 @@ dynamics → structure → flow → geometry → regimes → navigation
 
 ---
 
-**Scarabæus1031 · NEXAH**
+***Scarabæus1031 · NEXAH*** (Thomas K. R. Hofmann)
