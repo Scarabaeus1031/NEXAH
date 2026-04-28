@@ -50,7 +50,7 @@ direct observations of motion inside the learned field
 
 ## 🌀 Flow (Time + Basin Dynamics)
 
-![Flow Animation](nexah/outputs/nexah_flow.gif)
+![Flow Animation](./outputs/nexah_flow.gif)
 
 ---
 
