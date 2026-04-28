@@ -172,3 +172,15 @@ Geometric drift precedes voltage collapse
 
 ```text
 signal → event → shape → geometry → motion → instability
+```
+
+---
+
+# 🟡 2. Outputs – ja, aber simpel
+
+Du hast schon:
+
+```text
+outputs/run_...
+```
+
