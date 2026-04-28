@@ -2,8 +2,6 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
-
-# NEW
 from sklearn.cluster import KMeans
 
 
@@ -57,7 +55,7 @@ def extract_events(signal, threshold, min_length=3):
 def extract_event_shapes(t, curvature, events):
     shapes = []
 
-    for (start, end, peak) in events:
+    for event_index, (start, end, peak) in enumerate(events):
         seg = curvature[start:end]
 
         if len(seg) < 5:
@@ -66,7 +64,14 @@ def extract_event_shapes(t, curvature, events):
         seg_norm = seg / (np.max(seg) + 1e-8)
         t_norm = np.linspace(0, 1, len(seg))
 
-        shapes.append((t_norm, seg_norm))
+        shapes.append({
+            "event_index": event_index,
+            "start": start,
+            "end": end,
+            "peak": peak,
+            "t_norm": t_norm,
+            "shape": seg_norm,
+        })
 
     return shapes
 
@@ -79,8 +84,8 @@ def resample_shapes(shapes, n=50):
     resampled = []
     target_t = np.linspace(0, 1, n)
 
-    for t_norm, seg in shapes:
-        interp = np.interp(target_t, t_norm, seg)
+    for item in shapes:
+        interp = np.interp(target_t, item["t_norm"], item["shape"])
         resampled.append(interp)
 
     return np.array(resampled)
@@ -100,9 +105,9 @@ def compute_alignment(resampled, mean_shape):
 # ============================================================
 
 def compute_shape_space(all_shapes, n=50):
-
     X = []
     labels = []
+    event_meta = []
 
     for scenario, shapes in all_shapes.items():
         if len(shapes) == 0:
@@ -110,14 +115,21 @@ def compute_shape_space(all_shapes, n=50):
 
         resampled = resample_shapes(shapes, n=n)
 
-        for r in resampled:
+        for r, item in zip(resampled, shapes):
             X.append(r)
             labels.append(scenario)
+            event_meta.append({
+                "scenario": scenario,
+                "event_index": item["event_index"],
+                "start": item["start"],
+                "end": item["end"],
+                "peak": item["peak"],
+            })
 
     X = np.array(X)
 
     if len(X) < 2:
-        return None, None, None, None
+        return None, None, None, None, None
 
     X_mean = np.mean(X, axis=0)
     X_centered = X - X_mean
@@ -126,53 +138,21 @@ def compute_shape_space(all_shapes, n=50):
 
     coords = X_centered @ Vt[:2].T
 
-    return coords, labels, X, Vt
+    return coords, labels, X, Vt, event_meta
 
 
 # ============================================================
-# 🔥 NEW: CLUSTERING
+# CLUSTERING
 # ============================================================
 
 def cluster_shapes(X, n_clusters=3):
-
     if len(X) < n_clusters:
         return None, None
 
-    kmeans = KMeans(n_clusters=n_clusters, random_state=0)
+    kmeans = KMeans(n_clusters=n_clusters, random_state=0, n_init=10)
     cluster_ids = kmeans.fit_predict(X)
 
     return cluster_ids, kmeans.cluster_centers_
-
-
-def plot_shape_clusters(coords, labels, cluster_ids):
-
-    plt.figure(figsize=(6, 6))
-
-    for (x, y), cid in zip(coords, cluster_ids):
-        plt.scatter(x, y, c=f"C{cid}", alpha=0.7)
-
-    plt.title("Shape Space Clusters")
-    plt.grid(alpha=0.3)
-    plt.tight_layout()
-    plt.show()
-
-
-def plot_cluster_mean_shapes(X, cluster_ids):
-
-    plt.figure(figsize=(8, 5))
-
-    for cid in np.unique(cluster_ids):
-        cluster_shapes = X[cluster_ids == cid]
-        mean_shape = np.mean(cluster_shapes, axis=0)
-
-        t = np.linspace(0, 1, len(mean_shape))
-        plt.plot(t, mean_shape, label=f"Cluster {cid}", linewidth=2)
-
-    plt.title("Mean Shape per Cluster")
-    plt.legend()
-    plt.grid(alpha=0.3)
-    plt.tight_layout()
-    plt.show()
 
 
 # ============================================================
@@ -180,7 +160,6 @@ def plot_cluster_mean_shapes(X, cluster_ids):
 # ============================================================
 
 def run_validation(data, scenario_name="scenario"):
-
     t = np.asarray(data["time"])
     V = np.asarray(data["voltage"])
 
@@ -235,7 +214,7 @@ def run_validation(data, scenario_name="scenario"):
 
     return {
         "scenario": scenario_name,
-        "Δ": (lead_nexah - lead_classical) if (lead_classical and lead_nexah) else None,
+        "delta": (lead_nexah - lead_classical) if (lead_classical is not None and lead_nexah is not None) else None,
         "events": len(events),
         "width": width,
         "snr": snr,
@@ -248,7 +227,6 @@ def run_validation(data, scenario_name="scenario"):
 # ============================================================
 
 def classify_transition(result):
-
     alignment = result["alignment"]
     events = result["events"]
 
@@ -266,7 +244,6 @@ def classify_transition(result):
 # ============================================================
 
 def run_multi():
-
     scenarios = ["smooth", "nonlinear", "noisy"]
 
     results = []
@@ -293,7 +270,6 @@ def run_multi():
 # ============================================================
 
 def print_table(results):
-
     print("\n=== MULTI-SCENARIO RESULTS ===\n")
 
     header = f"{'Scenario':<12} {'Δ':<10} {'Events':<8} {'Width':<8} {'Align':<10} {'Class':<12}"
@@ -301,13 +277,12 @@ def print_table(results):
     print("-" * len(header))
 
     for r in results:
-
         def fmt(x):
             return f"{x:.3f}" if x is not None else "None"
 
         print(
             f"{r['scenario']:<12} "
-            f"{fmt(r['Δ']):<10} "
+            f"{fmt(r['delta']):<10} "
             f"{r['events']:<8} "
             f"{fmt(r['width']):<8} "
             f"{fmt(r['alignment']):<10} "
@@ -320,19 +295,133 @@ def print_table(results):
 # ============================================================
 
 def plot_overlay(all_shapes):
-
     plt.figure(figsize=(8, 5))
 
     for label, shapes in all_shapes.items():
-        for t_norm, seg in shapes:
-            plt.plot(t_norm, seg, alpha=0.3, label=label)
+        for item in shapes:
+            plt.plot(item["t_norm"], item["shape"], alpha=0.3, label=label)
 
     handles, labels = plt.gca().get_legend_handles_labels()
     unique = dict(zip(labels, handles))
 
     plt.legend(unique.values(), unique.keys())
     plt.title("Event Shape Overlay")
+    plt.xlabel("Normalized time")
+    plt.ylabel("Normalized curvature")
     plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_shape_space(coords, labels):
+    plt.figure(figsize=(6, 6))
+
+    color_map = {
+        "smooth": "orange",
+        "nonlinear": "green",
+        "noisy": "blue",
+    }
+
+    for (x, y), label in zip(coords, labels):
+        plt.scatter(x, y, color=color_map.get(label, "black"), alpha=0.75)
+
+    for label, color in color_map.items():
+        plt.scatter([], [], color=color, label=label)
+
+    plt.legend()
+    plt.title("Shape Space (PCA)")
+    plt.xlabel("PC1")
+    plt.ylabel("PC2")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_shape_clusters(coords, labels, cluster_ids):
+    plt.figure(figsize=(6, 6))
+
+    for (x, y), cid in zip(coords, cluster_ids):
+        plt.scatter(x, y, c=f"C{cid}", alpha=0.75)
+
+    plt.title("Shape Space Clusters")
+    plt.xlabel("PC1")
+    plt.ylabel("PC2")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_cluster_mean_shapes(X, cluster_ids):
+    plt.figure(figsize=(8, 5))
+
+    for cid in np.unique(cluster_ids):
+        cluster_shapes = X[cluster_ids == cid]
+        mean_shape = np.mean(cluster_shapes, axis=0)
+
+        t = np.linspace(0, 1, len(mean_shape))
+        plt.plot(t, mean_shape, label=f"Cluster {cid}", linewidth=2)
+
+    plt.title("Mean Shape per Cluster")
+    plt.xlabel("Normalized time")
+    plt.ylabel("Mean normalized curvature")
+    plt.legend()
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_shape_trajectory(coords, labels, event_meta):
+    plt.figure(figsize=(7, 6))
+
+    color_map = {
+        "smooth": "orange",
+        "nonlinear": "green",
+        "noisy": "blue",
+    }
+
+    # Scatter all points
+    for (x, y), label in zip(coords, labels):
+        plt.scatter(x, y, color=color_map.get(label, "black"), alpha=0.75)
+
+    # Connect events within each scenario by event order
+    for scenario in sorted(set(labels)):
+        idx = [
+            i for i, meta in enumerate(event_meta)
+            if meta["scenario"] == scenario
+        ]
+
+        idx = sorted(idx, key=lambda i: event_meta[i]["event_index"])
+
+        if len(idx) > 1:
+            xs = coords[idx, 0]
+            ys = coords[idx, 1]
+            plt.plot(
+                xs,
+                ys,
+                color=color_map.get(scenario, "black"),
+                alpha=0.6,
+                linewidth=1.5,
+                marker="o",
+                label=f"{scenario} path"
+            )
+
+            for local_order, i in enumerate(idx):
+                plt.text(
+                    coords[i, 0],
+                    coords[i, 1],
+                    str(event_meta[i]["event_index"]),
+                    fontsize=8
+                )
+
+    plt.title("Shape Space Trajectories")
+    plt.xlabel("PC1")
+    plt.ylabel("PC2")
+    plt.grid(alpha=0.3)
+
+    handles, legend_labels = plt.gca().get_legend_handles_labels()
+    unique = dict(zip(legend_labels, handles))
+    plt.legend(unique.values(), unique.keys())
+
     plt.tight_layout()
     plt.show()
 
@@ -342,7 +431,6 @@ def plot_overlay(all_shapes):
 # ============================================================
 
 def make_synthetic_scenario(kind="nonlinear", n=500):
-
     t = np.linspace(0, 100, n)
     V = 1.0 - 0.002 * t - 0.0005 * t**2
 
@@ -362,19 +450,21 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 # ============================================================
 
 if __name__ == "__main__":
-
     results, all_shapes = run_multi()
 
     print_table(results)
 
     plot_overlay(all_shapes)
 
-    coords, labels, X, _ = compute_shape_space(all_shapes)
+    coords, labels, X, _, event_meta = compute_shape_space(all_shapes)
 
     if coords is not None:
+        plot_shape_space(coords, labels)
 
         cluster_ids, centers = cluster_shapes(X)
 
         if cluster_ids is not None:
             plot_shape_clusters(coords, labels, cluster_ids)
             plot_cluster_mean_shapes(X, cluster_ids)
+
+        plot_shape_trajectory(coords, labels, event_meta)
