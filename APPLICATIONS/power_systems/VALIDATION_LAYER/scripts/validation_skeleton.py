@@ -6,7 +6,7 @@ from scipy.ndimage import gaussian_filter1d
 
 
 # ============================================================
-# ⚡ NEXAH Validation Skeleton (Curvature Upgrade)
+# ⚡ NEXAH Validation Skeleton (Curvature + Nonlinear Scenario)
 # ============================================================
 
 
@@ -71,16 +71,14 @@ def run_validation(data,
     mu_stable = np.mean(x_stable, axis=0)
 
     # -----------------------------
-    # Distance (baseline signal)
+    # Signals
     # -----------------------------
     distance = np.linalg.norm(x - mu_stable, axis=1)
 
     d_dist = np.gradient(distance, t)
     d_dist = gaussian_filter1d(d_dist, sigma=smooth_sigma)
 
-    # -----------------------------
-    # 🔥 NEW: Curvature Signal
-    # -----------------------------
+    # 🔥 Curvature (core NEXAH signal)
     dx_dt = np.gradient(x, axis=0)
     d2x_dt2 = np.gradient(dx_dt, axis=0)
 
@@ -88,21 +86,17 @@ def run_validation(data,
     curvature = gaussian_filter1d(curvature, sigma=smooth_sigma)
 
     # -----------------------------
-    # Thresholds (ONLY stable region!)
+    # Thresholds (stable only!)
     # -----------------------------
     curvature_stable = curvature[:stable_idx]
-
-    curvature_threshold = (
-        np.mean(curvature_stable)
-        + 2.0 * np.std(curvature_stable)
-    )
+    curvature_threshold = np.mean(curvature_stable) + 2.0 * np.std(curvature_stable)
 
     # -----------------------------
     # Detection
     # -----------------------------
     collapse_mask = V_smooth < V_threshold
     classical_mask = dv_dt < dv_threshold
-    nexah_mask = curvature > curvature_threshold  # ← KEY CHANGE
+    nexah_mask = curvature > curvature_threshold
 
     t_collapse = sustained_first_crossing(collapse_mask, t, sustained_samples)
     t_classical = sustained_first_crossing(classical_mask, t, sustained_samples)
@@ -130,31 +124,35 @@ def run_validation(data,
     axs[0].axhline(V_threshold, linestyle=":")
 
     if t_collapse:
-        axs[0].axvline(t_collapse, linestyle="--")
+        axs[0].axvline(t_collapse, linestyle="--", label="Collapse")
     if t_classical:
-        axs[0].axvline(t_classical, linestyle="--")
+        axs[0].axvline(t_classical, linestyle="--", label="Classical")
     if t_nexah:
-        axs[0].axvline(t_nexah, linestyle="--")
+        axs[0].axvline(t_nexah, linestyle="--", label="NEXAH")
 
     axs[0].set_title("Voltage")
+    axs[0].legend()
 
     # Distance
     axs[1].plot(t, distance)
     axs[1].axvspan(t[0], t[stable_idx], alpha=0.1)
     axs[1].set_title("Distance")
 
-    # Curvature (NEW CORE)
-    axs[2].plot(t, curvature)
-    axs[2].axhline(curvature_threshold, linestyle="--")
+    # Curvature
+    axs[2].plot(t, curvature, label="Curvature")
+    axs[2].axhline(curvature_threshold, linestyle="--", label="Threshold")
 
     if t_nexah:
         axs[2].axvline(t_nexah, linestyle="--")
 
     axs[2].set_title("Curvature (NEXAH Signal)")
+    axs[2].legend()
 
     # State space
     sc = axs[3].scatter(V_smooth, dv_dt, c=curvature, s=8)
     axs[3].set_title("State Space (colored by curvature)")
+    axs[3].set_xlabel("Voltage")
+    axs[3].set_ylabel("dV/dt")
 
     plt.colorbar(sc, ax=axs[3])
 
@@ -171,22 +169,47 @@ def run_validation(data,
 
 
 # ============================================================
-# Synthetic scenarios
+# 🔥 Improved synthetic scenarios
 # ============================================================
 
-def make_synthetic_scenario(kind="precursor", n=500):
+def make_synthetic_scenario(kind="nonlinear", n=500):
     t = np.linspace(0, 100, n)
 
+    # base collapse
     V = 1.0 - 0.002 * t - 0.0005 * t**2
 
-    if kind == "precursor":
-        precursor = 0.02 * np.exp((t - 18) / 5.0)
+    if kind == "smooth":
+        pass
+
+    elif kind == "nonlinear":
+        # exponential precursor
+        precursor = 0.015 * np.exp((t - 16) / 4.0)
         precursor = precursor * (t < 25)
-        V += precursor
 
-    return {"time": t, "voltage": V}
+        # oscillation (key!)
+        oscillation = 0.01 * np.sin(0.8 * t)
+        oscillation = oscillation * (t < 25)
 
+        V += precursor + oscillation
+
+    elif kind == "noisy":
+        rng = np.random.default_rng(7)
+        V += 0.01 * rng.normal(size=len(t))
+
+    return {
+        "time": t,
+        "voltage": V,
+    }
+
+
+# ============================================================
+# Run
+# ============================================================
 
 if __name__ == "__main__":
-    data = make_synthetic_scenario("precursor")
-    run_validation(data, scenario_name="curvature_test")
+
+    scenario = "nonlinear"
+
+    data = make_synthetic_scenario(kind=scenario)
+
+    run_validation(data, scenario_name=f"test_{scenario}")
