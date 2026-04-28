@@ -70,6 +70,74 @@ Trajectory Analysis / Control Experiments
 
 ---
 
+## 🧪 🔥 Validation Layer (CRITICAL)
+
+📂 `VALIDATION_LAYER/`
+
+The Validation Layer provides **quantitative and structural evidence**  
+for the NEXAH framework.
+
+---
+
+### Purpose
+
+To test whether NEXAH can:
+
+```text
+detect instability earlier
+and/or
+reveal structural behavior not visible in classical signals
+```
+
+---
+
+### Core Mechanism
+
+```text
+signal → event → shape → geometry → motion
+```
+
+---
+
+### Key Methods
+
+- curvature-based event detection  
+- event shape extraction  
+- shape space (PCA embedding)  
+- trajectory reconstruction  
+- motion metrics:
+  - speed (magnitude)
+  - angle (directional change)  
+
+---
+
+### Key Findings
+
+- early warning up to **40–50 time units** (IEEE collapse cases)  
+- instability appears as **geometric drift**, not threshold crossing  
+- motion in shape space reveals **transition dynamics**  
+- **angle-based signals detect instability earlier** than amplitude-based signals  
+
+---
+
+### Interpretation
+
+```text
+Instability is not a point.
+
+It is a movement through a geometric structure.
+```
+
+---
+
+### References
+
+- `VALIDATION_LAYER/reports/validation_report_v3.md`  
+- `VALIDATION_LAYER/reports/validated_findings.md`  
+- `VALIDATION_LAYER/experiments/`  
+
+---
+
 ## 🧠 Conceptual Paradigm
 
 **Classical methods:**
@@ -292,6 +360,18 @@ NEXAH focuses on:
 
 ```text
 simulation → structure → flow → geometry → dynamics → regimes
+```
+
+---
+
+# ⚡ NEXAH
+
+```text
+From simulation → to structure  
+From structure → to field  
+From field → to motion  
+From motion → to instability  
+From instability → to navigation
 ```
 
 ---
