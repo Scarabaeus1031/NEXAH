@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 
 
@@ -24,7 +25,7 @@ def compute_lead_time(t_collapse, t_detection):
 
 
 # ============================================================
-# Event extraction
+# 🔥 Event extraction
 # ============================================================
 
 def extract_events(signal, threshold, min_length=3):
@@ -49,40 +50,49 @@ def extract_events(signal, threshold, min_length=3):
 
 
 # ============================================================
-# Basin concentration
+# 🔥 NEW: Event Shape Extraction
 # ============================================================
 
-def compute_event_concentration(V_smooth, curvature, curvature_threshold, num_bins=10):
-    """
-    Measures how localized NEXAH events are in state/basin space.
+def extract_event_shapes(t, curvature, events):
+    shapes = []
 
-    concentration = max event-bin count / total event count
+    for (start, end, peak) in events:
+        segment = curvature[start:end]
 
-    High concentration:
-        events are localized in few regions
+        if len(segment) < 5:
+            continue
 
-    Low concentration:
-        events are spread across many regions
-    """
+        t_norm = np.linspace(0, 1, len(segment))
+        seg_norm = segment / (np.max(segment) + 1e-8)
 
-    bins = np.linspace(np.min(V_smooth), np.max(V_smooth), num_bins + 1)
-    basin = np.digitize(V_smooth, bins) - 1
-    basin = np.clip(basin, 0, num_bins - 1)
+        shapes.append((t_norm, seg_norm))
 
-    event_mask = curvature > curvature_threshold
-    event_basins = basin[event_mask]
+    return shapes
 
-    if len(event_basins) == 0:
-        return 0.0
 
-    _, counts = np.unique(event_basins, return_counts=True)
-    concentration = np.max(counts) / np.sum(counts)
+def plot_event_overlay(all_shapes):
+    plt.figure(figsize=(8, 5))
 
-    return float(concentration)
+    for label, shapes in all_shapes.items():
+        for t_norm, seg_norm in shapes:
+            plt.plot(t_norm, seg_norm, alpha=0.4, label=label)
+
+    handles, labels = plt.gca().get_legend_handles_labels()
+    unique = dict(zip(labels, handles))
+
+    plt.legend(unique.values(), unique.keys())
+
+    plt.title("NEXAH Event Shape Overlay")
+    plt.xlabel("Normalized Time (0 → 1)")
+    plt.ylabel("Normalized Curvature")
+    plt.grid(alpha=0.3)
+
+    plt.tight_layout()
+    plt.show()
 
 
 # ============================================================
-# SINGLE VALIDATION RUN
+# 🔬 SINGLE VALIDATION RUN
 # ============================================================
 
 def run_validation(data, scenario_name="scenario"):
@@ -135,7 +145,7 @@ def run_validation(data, scenario_name="scenario"):
     t_classical = sustained_first_crossing(dv_dt < dv_threshold, t, sustained_samples)
 
     # -----------------------------
-    # Event-based NEXAH detection
+    # 🔥 Event-based NEXAH detection
     # -----------------------------
     events = extract_events(curvature, curvature_threshold, min_length=3)
 
@@ -162,16 +172,8 @@ def run_validation(data, scenario_name="scenario"):
 
     num_events = len(events)
 
-    coherence = 0.0
-    if num_events > 0:
-        coherence = width / num_events
-
-    concentration = compute_event_concentration(
-        V_smooth,
-        curvature,
-        curvature_threshold,
-        num_bins=10
-    )
+    coherence = width / num_events if num_events > 0 else 0.0
+    concentration = width / (len(t) * (t[1] - t[0]))
 
     result = {
         "scenario": scenario_name,
@@ -187,15 +189,15 @@ def run_validation(data, scenario_name="scenario"):
         "dvdt_min": float(np.min(dv_dt)),
         "snr": float(snr),
         "num_events": num_events,
-        "coherence": float(coherence),
-        "concentration": float(concentration),
+        "coherence": coherence,
+        "concentration": concentration,
     }
 
-    return result
+    return result, events, curvature, t
 
 
 # ============================================================
-# MULTI SCENARIO RUNNER
+# 🔁 MULTI SCENARIO RUNNER
 # ============================================================
 
 def run_multi_scenarios():
@@ -203,39 +205,32 @@ def run_multi_scenarios():
     scenarios = ["smooth", "nonlinear", "noisy"]
 
     results = []
+    all_shapes = {}
 
     for s in scenarios:
         print(f"\n=== RUN: {s} ===")
 
         data = make_synthetic_scenario(kind=s)
-        res = run_validation(data, scenario_name=s)
+        res, events, curvature, t = run_validation(data, scenario_name=s)
 
         print(res)
         results.append(res)
 
-    return results
+        shapes = extract_event_shapes(t, curvature, events)
+        all_shapes[s] = shapes
+
+    return results, all_shapes
 
 
 # ============================================================
-# TABLE OUTPUT
+# 📊 TABLE OUTPUT
 # ============================================================
 
 def print_results_table(results):
 
     print("\n=== MULTI-SCENARIO RESULTS ===\n")
 
-    header = (
-        f"{'Scenario':<12} "
-        f"{'Lead C':<10} "
-        f"{'Lead N':<10} "
-        f"{'Δ':<10} "
-        f"{'Width':<10} "
-        f"{'Events':<10} "
-        f"{'Coh':<10} "
-        f"{'Conc':<10} "
-        f"{'SNR':<10}"
-    )
-
+    header = f"{'Scenario':<12} {'Lead C':<10} {'Lead N':<10} {'Δ':<10} {'Width':<10} {'Events':<10} {'Coh':<10} {'Conc':<10} {'SNR':<10}"
     print(header)
     print("-" * len(header))
 
@@ -258,7 +253,7 @@ def print_results_table(results):
 
 
 # ============================================================
-# SCENARIOS
+# 🧪 SCENARIOS
 # ============================================================
 
 def make_synthetic_scenario(kind="nonlinear", n=500):
@@ -286,10 +281,14 @@ def make_synthetic_scenario(kind="nonlinear", n=500):
 
 
 # ============================================================
-# MAIN
+# 🚀 MAIN
 # ============================================================
 
 if __name__ == "__main__":
 
-    results = run_multi_scenarios()
+    results, all_shapes = run_multi_scenarios()
+
     print_results_table(results)
+
+    # 🔥 KEY VISUAL INSIGHT
+    plot_event_overlay(all_shapes)
