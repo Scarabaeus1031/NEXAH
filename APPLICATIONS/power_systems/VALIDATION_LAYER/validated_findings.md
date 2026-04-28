@@ -1,145 +1,230 @@
 # ⚡ NEXAH — Validated Findings
-### (Condensed Results from Validation Experiments)
+### (Unified Results from Skeleton + Experiments)
 
 ---
 
 # 🧭 Purpose
 
-This document summarizes the core validated insights  
-from the NEXAH validation experiments.
+This document summarizes the validated insights of the NEXAH validation layer.
 
-It distills findings from:
+It integrates:
 
-- validation_report_v1.md  
-- validation_report_v2.md  
-- experiments (run_001 → run_009)
+- core validation (validation_skeleton.py)  
+- experimental extensions (run_001 → run_009)  
 
 ---
 
-# 🔥 Core Findings
+# 🧱 PART A — Core Validation Findings (Skeleton)
+
+These findings are directly reproducible from:
+
+```text
+validation_skeleton.py
+```
 
 ---
 
-## 1. Early Warning Exists (Verified)
+## A1. Structural Detection Exists
+
+```text
+Curvature-based signals detect deviations
+before classical threshold-based methods.
+```
+
+### Evidence
+
+- smooth → strong early detection  
+- nonlinear → slight early detection  
+- noisy → degraded performance  
+
+---
+
+## A2. Events are Structured Objects
+
+```text
+Instability does not appear as a single signal,
+but as a sequence of curvature events.
+```
+
+---
+
+## A3. Event Shapes Exist
+
+Each event can be represented as:
+
+```text
+normalized curvature profile over time
+```
+
+---
+
+## A4. Shape Distributions Differ by Regime
+
+| Scenario   | Behavior |
+|------------|----------|
+| smooth     | multiple shapes |
+| nonlinear  | single dominant shape |
+| noisy      | fragmented shapes |
+
+---
+
+## A5. Alignment Metric Separates Regimes
+
+```text
+alignment = deviation from mean shape
+```
+
+### Interpretation
+
+- low → coherent structure  
+- medium → mixed dynamics  
+- high → noise  
+
+---
+
+## A6. Classification Emerges from Geometry
+
+```text
+STRUCTURAL / AMBIGUOUS / NOISE
+```
+
+→ derived from:
+
+- alignment  
+- number of events  
+
+---
+
+## 🔥 Core Insight (Skeleton)
+
+```text
+NEXAH detects structural changes in system trajectories,
+not just threshold crossings.
+```
+
+---
+
+# 🧪 PART B — Extended Experimental Findings
+
+These findings extend the skeleton into a full structural interpretation.
+
+---
+
+## B1. Early Warning Exists (Verified)
 
 ```text
 NEXAH detects instability significantly earlier than classical methods.
 ```
 
-### Evidence
+### Evidence (IEEE14)
 
-- IEEE14 collapse sweep:
-  - collapse at ~60–75
-  - warning at ~20–25
-
-### Result
+- collapse: ~60–75  
+- warning: ~20–25  
 
 ```text
-Lead time: ~40–50 time units
+Lead time: ~40–50
 ```
 
 ---
 
-## 2. Instability is a Geometric Process
+## B2. Instability is a Geometric Process
 
 ```text
-Instability is not a threshold event,
-but a structural deformation in state space.
+Instability is not a threshold,
+but a deformation in trajectory geometry.
 ```
-
-### Observation
-
-- voltage appears stable  
-- trajectory already drifting  
 
 ---
 
-## 3. Shape Flow Encodes Dynamics
+## B3. Shape Space Exists
 
 ```text
-System behavior is captured as movement in shape space.
+event shapes form a geometric space
 ```
 
-### Components
+Using:
 
-- curvature-based events  
-- normalized event shapes  
+- resampling  
 - PCA embedding  
 
 ---
 
-## 4. Stable vs Unstable Motion is Distinguishable
+## B4. Motion in Shape Space
 
-### Stable regime
-
-- loop structures  
-- cyclic motion  
-- low directional change  
-
-### Pre-collapse regime
-
-- deformation of loop  
-- directional drift  
-- loss of symmetry  
+```text
+events are not isolated
+they move through shape space
+```
 
 ---
 
-## 5. Motion Metrics Provide Detection Signal
+## B5. Stable vs Pre-Collapse Motion
 
-Two key quantities:
+### Stable
+
+- closed loops  
+- cyclic motion  
+
+### Pre-collapse
+
+- drift  
+- deformation  
+- escape behavior  
+
+---
+
+## B6. Motion Metrics Detect Instability
 
 ### Speed
 
 ```text
-magnitude of movement in shape space
+movement magnitude
 ```
 
 ### Angle
 
 ```text
-change of direction between steps
+directional change
 ```
 
 ---
 
-### Detection behavior
+### Behavior
 
-- early spikes in angle  
-- later spikes in speed  
-- both precede collapse  
+- angle spikes → early warning  
+- speed spikes → later confirmation  
 
 ---
 
-## 6. Statistical Validation Confirms Reliability
-
-From repeated runs:
+## B7. Statistical Validation
 
 - detection rate: ~86%  
-- mean lead time: ~11.6 (synthetic baseline)  
+- mean lead time: ~11.6 (synthetic)  
 
 ---
 
-## 7. Works on Real System Model (IEEE14)
+## B8. Works on IEEE System
 
 Observed:
 
-- structured motion even without collapse  
-- consistent early warning in collapse scenarios  
-- clear separation between stable and collapsing regimes in motion metrics  
+- structure even without collapse  
+- clear transition behavior under stress  
+- strong early warning in collapse cases  
 
 ---
 
-# 🧠 Interpretation
+# 🧠 Unified Interpretation
 
 ```text
-NEXAH does not detect collapse directly.
+NEXAH does not detect collapse.
 
-It reconstructs how the system moves toward instability.
+It reconstructs how instability emerges
+as motion through a geometric structure.
 ```
 
 ---
 
-# 🔁 Revised Model of Instability
+# 🔁 Final Model
 
 Before:
 
@@ -150,45 +235,44 @@ stable → threshold → collapse
 Now:
 
 ```text
-stable motion → geometric drift → directional escape → collapse
+stable motion
+→ geometric drift
+→ directional escape
+→ collapse
 ```
 
 ---
 
 # ⚠️ Limitations
 
-Current system:
-
-- sensitive to noise  
-- single-system validation (IEEE14)  
+- noise sensitivity  
+- single IEEE system  
 - no persistence filtering  
-- reduced dimensionality (PCA projection)  
+- PCA simplification  
 
 ---
 
 # 🚀 Implications
 
-This enables:
-
-- earlier warning systems  
-- trajectory-based stability monitoring  
-- structural interpretation of system dynamics  
+- early warning systems  
+- structural monitoring  
+- trajectory-based stability analysis  
 
 ---
 
 # 🧭 Final Statement
 
 ```text
-Power system instability manifests as a measurable geometric drift
+Power system instability appears as geometric drift
 in reconstructed state space,
-well before voltage collapse occurs.
+well before observable collapse.
 ```
 
 ---
 
 # 🔗 References
 
-See detailed analysis:
-
-- reports/validation_report_v1.md  
-- reports/validation_report_v2.md  
+- validation_skeleton.py  
+- validation_report_v1.md  
+- validation_report_v2.md  
+- experiments/run_001 → run_009  
