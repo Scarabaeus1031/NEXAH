@@ -22,7 +22,9 @@ It distills findings from:
 
 ## 1. Early Warning Exists (Verified)
 
-text NEXAH detects instability significantly earlier than classical methods. 
+```text
+NEXAH detects instability significantly earlier than classical methods.
+```
 
 ### Evidence
 
@@ -32,24 +34,31 @@ text NEXAH detects instability significantly earlier than classical methods.
 
 ### Result
 
-text Lead time: ~40–50 time units 
+```text
+Lead time: ~40–50 time units
+```
 
 ---
 
 ## 2. Instability is a Geometric Process
 
-text Instability is not a threshold event, but a structural deformation in state space. 
+```text
+Instability is not a threshold event,
+but a structural deformation in state space.
+```
 
 ### Observation
 
-- voltage appears stable
-- trajectory already drifting
+- voltage appears stable  
+- trajectory already drifting  
 
 ---
 
 ## 3. Shape Flow Encodes Dynamics
 
-text System behavior is captured as movement in shape space. 
+```text
+System behavior is captured as movement in shape space.
+```
 
 ### Components
 
@@ -81,11 +90,15 @@ Two key quantities:
 
 ### Speed
 
-text magnitude of movement in shape space 
+```text
+magnitude of movement in shape space
+```
 
 ### Angle
 
-text change of direction between steps 
+```text
+change of direction between steps
+```
 
 ---
 
@@ -112,16 +125,17 @@ Observed:
 
 - structured motion even without collapse  
 - consistent early warning in collapse scenarios  
+- clear separation between stable and collapsing regimes in motion metrics  
 
 ---
 
 # 🧠 Interpretation
 
+```text
 NEXAH does not detect collapse directly.
 
-It reconstructs:
-
-text how the system moves toward instability 
+It reconstructs how the system moves toward instability.
+```
 
 ---
 
@@ -129,11 +143,15 @@ text how the system moves toward instability
 
 Before:
 
-text stable → threshold → collapse 
+```text
+stable → threshold → collapse
+```
 
 Now:
 
-text stable motion → geometric drift → directional escape → collapse 
+```text
+stable motion → geometric drift → directional escape → collapse
+```
 
 ---
 
@@ -144,7 +162,7 @@ Current system:
 - sensitive to noise  
 - single-system validation (IEEE14)  
 - no persistence filtering  
-- reduced dimensionality (PCA)  
+- reduced dimensionality (PCA projection)  
 
 ---
 
@@ -154,13 +172,17 @@ This enables:
 
 - earlier warning systems  
 - trajectory-based stability monitoring  
-- structural interpretation of dynamics  
+- structural interpretation of system dynamics  
 
 ---
 
 # 🧭 Final Statement
 
-text Power system instability manifests as a measurable geometric drift in reconstructed state space, well before voltage collapse occurs. 
+```text
+Power system instability manifests as a measurable geometric drift
+in reconstructed state space,
+well before voltage collapse occurs.
+```
 
 ---
 
@@ -170,5 +192,3 @@ See detailed analysis:
 
 - reports/validation_report_v1.md  
 - reports/validation_report_v2.md  
-
---
