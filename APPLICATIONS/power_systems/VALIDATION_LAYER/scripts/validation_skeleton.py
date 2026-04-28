@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter1d
 
+# NEW
+from sklearn.cluster import KMeans
+
 
 # ============================================================
 # Core utils
@@ -93,7 +96,7 @@ def compute_alignment(resampled, mean_shape):
 
 
 # ============================================================
-# 🔥 SHAPE SPACE (PCA)
+# SHAPE SPACE (PCA)
 # ============================================================
 
 def compute_shape_space(all_shapes, n=50):
@@ -114,7 +117,7 @@ def compute_shape_space(all_shapes, n=50):
     X = np.array(X)
 
     if len(X) < 2:
-        return None, None, None
+        return None, None, None, None
 
     X_mean = np.mean(X, axis=0)
     X_centered = X - X_mean
@@ -123,27 +126,50 @@ def compute_shape_space(all_shapes, n=50):
 
     coords = X_centered @ Vt[:2].T
 
-    return coords, labels, Vt
+    return coords, labels, X, Vt
 
 
-def plot_shape_space(coords, labels):
+# ============================================================
+# 🔥 NEW: CLUSTERING
+# ============================================================
+
+def cluster_shapes(X, n_clusters=3):
+
+    if len(X) < n_clusters:
+        return None, None
+
+    kmeans = KMeans(n_clusters=n_clusters, random_state=0)
+    cluster_ids = kmeans.fit_predict(X)
+
+    return cluster_ids, kmeans.cluster_centers_
+
+
+def plot_shape_clusters(coords, labels, cluster_ids):
 
     plt.figure(figsize=(6, 6))
 
-    color_map = {
-        "smooth": "orange",
-        "nonlinear": "green",
-        "noisy": "blue"
-    }
+    for (x, y), cid in zip(coords, cluster_ids):
+        plt.scatter(x, y, c=f"C{cid}", alpha=0.7)
 
-    for (x, y), label in zip(coords, labels):
-        plt.scatter(x, y, color=color_map.get(label, "black"), alpha=0.7)
+    plt.title("Shape Space Clusters")
+    plt.grid(alpha=0.3)
+    plt.tight_layout()
+    plt.show()
 
-    for k, c in color_map.items():
-        plt.scatter([], [], color=c, label=k)
 
+def plot_cluster_mean_shapes(X, cluster_ids):
+
+    plt.figure(figsize=(8, 5))
+
+    for cid in np.unique(cluster_ids):
+        cluster_shapes = X[cluster_ids == cid]
+        mean_shape = np.mean(cluster_shapes, axis=0)
+
+        t = np.linspace(0, 1, len(mean_shape))
+        plt.plot(t, mean_shape, label=f"Cluster {cid}", linewidth=2)
+
+    plt.title("Mean Shape per Cluster")
     plt.legend()
-    plt.title("NEXAH Shape Space (PCA)")
     plt.grid(alpha=0.3)
     plt.tight_layout()
     plt.show()
@@ -181,7 +207,6 @@ def run_validation(data, scenario_name="scenario"):
 
     threshold = np.mean(curvature[:stable_idx]) + 2 * np.std(curvature[:stable_idx])
 
-    # detections
     t_collapse = sustained_first_crossing(V_smooth < V_threshold, t)
     t_classical = sustained_first_crossing(dv_dt < dv_threshold, t)
 
@@ -198,7 +223,6 @@ def run_validation(data, scenario_name="scenario"):
     lead_classical = compute_lead_time(t_collapse, t_classical)
     lead_nexah = compute_lead_time(t_collapse, t_nexah)
 
-    # metrics
     snr = np.max(curvature) / (np.std(curvature[:stable_idx]) + 1e-8)
 
     shapes = extract_event_shapes(t, curvature, events)
@@ -345,7 +369,12 @@ if __name__ == "__main__":
 
     plot_overlay(all_shapes)
 
-    coords, labels, _ = compute_shape_space(all_shapes)
+    coords, labels, X, _ = compute_shape_space(all_shapes)
 
     if coords is not None:
-        plot_shape_space(coords, labels)
+
+        cluster_ids, centers = cluster_shapes(X)
+
+        if cluster_ids is not None:
+            plot_shape_clusters(coords, labels, cluster_ids)
+            plot_cluster_mean_shapes(X, cluster_ids)
