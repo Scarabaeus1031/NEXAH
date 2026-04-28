@@ -1,52 +1,379 @@
-# 🧱 NEXAH — Building Plan
+# 🧱 NEXAH — Building Plan (Unified)
 
-This document defines the current state and development path of the  
+This document defines the current state and development trajectory of the  
 **NEXAH Core System**.
 
 It answers:
 
+- what we are building  
 - what currently exists  
-- what has been observed  
+- what has been discovered  
 - what is still unclear  
 - what the next steps are  
 
 ---
 
-## 1. Current Position
+# 🧠 0. What NEXAH actually is
 
-NEXAH currently provides a **prototype pipeline** demonstrated in the Lorenz system.
-
-This pipeline connects:
+NEXAH explores one central idea:
 
 ```text
-dynamics → field → metrics → signal → behavior
+Can dynamical systems be understood and navigated
+through their own internal structure?
 ```
 
-Observed:
+Not controlled externally.  
+Not approximated blindly.
 
-* local structure can be extracted from chaotic dynamics
-* simple field-based metrics produce interpretable signals
-* signals correlate with trajectory transitions
-* basic trajectory shaping (control) is possible
+But:
 
-👉 Important:
-
-This is experimental validation, not a generalized solution.
+```text
+observed → structured → reconstructed → navigated
+```
 
 ---
 
-### Phase 1.5 — Structure Extraction (NEW)
+# 📍 1. Current Position (REAL)
+
+NEXAH is no longer just a prototype.
+
+It now reconstructs:
+
+```text
+dynamics → structure → transitions → motion → field
+```
+
+👉 This is a **closed structural loop**
+
+---
+
+# 📍 2. System Architecture (CURRENT)
+
+## Layer 1 — Field
+
+```text
+time series → dx/dt
+```
+
+✔ local flow representation  
+
+---
+
+## Layer 2 — Signal
+
+```text
+risk ≈ curvature × flow
+```
+
+✔ highlights transition zones  
+
+---
+
+## Layer 3 — Basin (State Layer)
+
+```text
+continuous → discrete regions
+```
+
+✔ stable segmentation  
+
+---
+
+## Layer 4 — Sequence (NEW)
+
+```text
+[4, 5, 4, 5, 6, 7, ...]
+```
+
+✔ reveals:
+
+- local oscillations  
+- discrete stepping behavior  
+
+---
+
+## Layer 5 — Transition Graph
+
+```text
+P(i → j)
+```
+
+✔ shows:
+
+- local transitions  
+- strong self-persistence  
+- structured probabilities  
+
+---
+
+## Layer 6 — Direction Layer
+
+```text
+direction = sign(dx)
+```
+
+🔥 critical:
+
+```text
+state alone is insufficient
+```
+
+System depends on:
+
+```text
+(state, direction)
+```
+
+---
+
+## Layer 7 — Vector Field (BREAKTHROUGH)
+
+```text
+(basin, direction) → Δ
+```
+
+✔ learned from data  
+✔ encodes motion tendencies  
+
+---
+
+## Layer 8 — Flow Simulation
+
+```text
+basin(t+1) = basin(t) + Δ + noise
+```
+
+✔ produces realistic trajectories  
+✔ preserves structure  
+
+---
+
+# 📍 3. What we discovered (CORE INSIGHTS)
+
+## 🔥 Insight 1
+
+```text
+System dynamics are NOT continuous
+```
+
+They are:
+
+```text
+discrete transition processes
+```
+
+---
+
+## 🔥 Insight 2
+
+```text
+Transitions are NOT random
+```
+
+They follow:
+
+```text
+local transition channels
+```
+
+---
+
+## 🔥 Insight 3
+
+```text
+System resists external control
+```
+
+→ implies:
+
+```text
+internal transition geometry
+```
+
+---
+
+## 🔥 Insight 4 (KEY)
+
+```text
+We can reconstruct the motion field of the system
+```
+
+---
+
+# 📍 4. What NEXAH is becoming
+
+Before:
+
+```text
+signal detection system
+```
+
+Now:
+
+```text
+transition-structure navigation system
+```
+
+---
+
+# 📍 5. What is STILL missing
+
+## ❌ No Navigation
+
+We can:
+
+✔ detect  
+✔ model  
+✔ simulate  
+
+But not yet:
+
+```text
+guide trajectories intentionally
+```
+
+---
+
+## ❌ No Steering
+
+Field is:
+
+```text
+passive
+```
+
+Not:
+
+```text
+actively used
+```
+
+---
+
+# 📍 6. Clean System Split
+
+## 🧱 NEXAH Core (CURRENT)
+
+```text
+field
+→ signal
+→ basin
+→ sequence
+→ transition graph
+→ vector field
+```
+
+---
+
+## 🧭 NEXAH Navigation (NEXT)
+
+```text
+field steering
+→ target selection
+→ path shaping
+```
+
+---
+
+# 📍 7. Development Phases (UPDATED)
+
+## Phase 1 — Signal & Structure ✔
+
+- field extraction  
+- signal detection  
+- basin segmentation  
+
+---
+
+## Phase 2 — Transition Structure ✔
+
+- sequence extraction  
+- transition graph  
+- direction layer  
+
+---
+
+## Phase 3 — Field Reconstruction ✔
+
+- vector field  
+- flow simulation  
+
+---
+
+## 🚀 Phase 4 — Navigation (CURRENT)
 
 Goal:
 
-extract a minimal, reusable core system from experimental scripts  
+```text
+use the field to guide motion
+```
 
-Steps:
+---
 
-* identify stable components across experiments  
-* isolate field, signal, and transition logic  
-* refactor into modular components inside `nexah/`  
-* remove duplication and script-specific artifacts  
+### Step 4.1 — Field Steering
+
+```text
+Δ_total = Δ_field + Δ_control
+```
+
+---
+
+### Step 4.2 — Targeting
+
+```text
+define desired regions
+```
+
+---
+
+### Step 4.3 — Channel Alignment
+
+```text
+move WITH the field
+```
+
+---
+
+## 🚀 Phase 5 — Continuous Field (LATER)
+
+```text
+discrete → continuous geometry
+```
+
+---
+
+# 📍 8. What the Demo now shows
+
+Your GIFs are NOT random visuals.
+
+They show:
+
+```text
+motion inside a learned field
+```
+
+---
+
+# 📍 9. Final Insight
+
+```text
+We started with signals.
+We discovered transitions.
+We reconstructed motion.
+
+Next:
+we navigate.
+```
+
+---
+
+# 🧠 Core Principle
+
+```text
+NEXAH is not about controlling systems.
+
+NEXAH is about moving through them correctly.
+```* remove duplication and script-specific artifacts  
 
 Outcome:
 
