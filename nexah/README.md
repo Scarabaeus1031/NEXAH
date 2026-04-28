@@ -1,194 +1,213 @@
-# NEXAH Package
+# 🧭 NEXAH — Navigating Dynamical Systems
 
-The `nexah` package provides the **core navigation layer** of the NEXAH framework.
-
-It implements the transition:
-
-structure → field → geometry → navigation
-
----
-
-## 🧠 What this package does
-
-The package turns system representations into **navigable structures**.
-
-It provides:
-
-- geometric interpretation of dynamics  
-- stability and risk signals  
-- navigation primitives  
-- control-ready abstractions  
-
-👉 This is where analysis becomes **actionable behavior**
-
----
-
-## 📦 Components
-
-- `field_layer/` — continuous field construction and metrics  
-- `navigation/` — navigation primitives and policies  
-
----
-
-## 🧭 Navigation Layer (Discrete Prototype)
-
-The `navigation/` module provides a **discrete navigation engine** operating on state graphs.
-
-It implements:
-
-- regime-based scoring  
-- risk distance computation (graph-based)  
-- lookahead evaluation  
-- policy-based next-state selection  
-
-👉 Conceptual pipeline:
+NEXAH explores a simple but powerful idea:
 
 ```text
-state graph → scoring → lookahead → decision → next state
+Can we understand and navigate complex systems
+by using their own internal structure?
 ```
 
-## Status
-
-* functional prototype
-* operates on symbolic state representations
-* requires adapter (state graph input)
-* not yet fully integrated with FIELD layer
-
-## Role
-
-This module represents the decision layer of NEXAH:
-
-FIELD → extracts structure
-NAVIGATION → selects movement within that structure
-
-👉 See:
-```text
-nexah/navigation/navigator.py
-```
 ---
 
-## 🧭 Role in the System
+# 🧠 What NEXAH does
+
+NEXAH transforms raw system dynamics into:
 
 ```text
-ENGINE      → computation  
-FRAMEWORK   → architecture  
-NEXAH       → navigation layer  
+signal → structure → transitions → motion → field
 ```
 
-The `nexah/` package is where:
+This allows us to:
 
-> system structure becomes directly usable for navigation
-
----
-
-## ▶️ Minimal Usage
-
-```python
-import nexah
-```
-
-(Currently used internally by demo systems — direct API is evolving)
+- detect structural transitions  
+- extract hidden movement patterns  
+- reconstruct system dynamics  
+- simulate motion inside learned structure  
 
 ---
 
-## 🔧 Where it is used
-
-You can see this package in action in:
-
-APPLICATIONS/core_demos/lorenz/
-
-👉 especially:
-
-- meta-control  
-- navigation logic  
-- adaptive behavior  
-
----
-
-## 🔬 Minimal Working Example (FIELD Layer)
-
-The FIELD layer is not only conceptual — it produces observable structural signals.
-
-A simple experiment (Lorenz system) using:
-
-- flow strength (‖dx/dt‖)  
-- acceleration (curvature proxy)  
-
-yields a combined signal:
+# 🔥 Core Insight
 
 ```text
-risk ∼ curvature × flow_strength
+Systems do not move randomly.
+
+They move through structured transition channels.
 ```
 
-### Observed behavior
-
-- the signal produces sparse, high-intensity peaks  
-- peaks occur only at specific moments in time  
-- these moments correspond to:
-  - rapid trajectory changes  
-  - transitions between dynamical regions  
-  - strong local deformation of system flow  
-
 ---
 
-### Interpretation
+# 📍 Visual Evidence
 
-even simple FIELD-based metrics can highlight  
-structurally significant events in system dynamics  
+These are not illustrations.
 
----
-
-### Important
-
-- no thresholds required  
-- no labels required  
-- signal emerges directly from local dynamics  
-
----
-
-### Status
-
-- prototype-level validation  
-- demonstrated on Lorenz system  
-- extension to real systems in progress  
-
-👉 See:
-
-`nexah/field_layer/core/field_demo.py`
-
----
-
-## 🧠 Summary
-
-NEXAH transforms:
-
-structure → field → geometry → controlled movement  
-
----
-
-## 🔥 Final Insight
-
-The `nexah/` directory is where the framework becomes:
-
-- computational  
-- geometric  
-- operational  
-- navigable  
-
-It is the layer where:
-
-> structure is not only described  
->  
-> but actively used to guide system behavior  
-
----
-
-## 🌀 Concept
+They are:
 
 ```text
-You are not controlling the system.
+direct observations of motion inside the learned field
+```
 
-You are navigating the geometry  
-that the system unfolds.
+---
 
+## 🌀 Flow (Time + Basin Dynamics)
 
+![Flow Animation](nexah/outputs/nexah_flow.gif)
+
+---
+
+## 🧭 Field Dynamics
+
+![Field Flow](nexah/outputs/nexah_flow_field.gif)
+
+---
+
+## 🔗 Transition Graph Behavior
+
+![Graph Flow](nexah/outputs/nexah_flow_graph.gif)
+
+---
+
+## 🧱 Basin Vector Field Simulation
+
+![Basin Flow](nexah/outputs/nexah_v21_flow.gif)
+
+---
+
+# 🧠 What you are seeing
+
+Across all visualizations:
+
+- motion is structured  
+- transitions are local  
+- oscillations occur in channels  
+- behavior is NOT random  
+
+Most important:
+
+```text
+the system behaves as if it follows an internal flow field
+```
+
+---
+
+# 🧱 System Structure
+
+NEXAH currently consists of:
+
+```text
+Field Layer
+→ Signal Layer
+→ Basin Segmentation
+→ Transition Graph
+→ Direction Layer
+→ Vector Field
+→ Flow Simulation
+```
+
+---
+
+# 🧭 What this means
+
+We are not just analyzing systems.
+
+We are:
+
+```text
+reconstructing how they move
+```
+
+---
+
+# 🚀 Current State
+
+✔ structure extraction works  
+✔ transition graph discovered  
+✔ motion field reconstructed  
+✔ flow simulation working  
+
+---
+
+# ⚠️ What is missing
+
+```text
+Navigation
+```
+
+We can:
+
+✔ observe  
+✔ model  
+✔ simulate  
+
+But not yet:
+
+```text
+actively guide trajectories
+```
+
+---
+
+# 🔥 Next Step
+
+```text
+Field Steering
+```
+
+→ move WITH the system  
+→ not against it  
+
+---
+
+# 🧠 Core Principle
+
+```text
+NEXAH is not about controlling systems.
+
+NEXAH is about moving through them correctly.
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+nexah/
+├── field_layer/
+├── navigation/
+├── outputs/
+└── app/
+```
+
+---
+
+# ⚡ How to run
+
+Example:
+
+```bash
+PYTHONPATH=. python nexah/navigation/flow_animation.py
+```
+
+---
+
+# 🧭 Status
+
+NEXAH is currently:
+
+```text
+a structure discovery and motion reconstruction system
+```
+
+---
+
+# 🔥 Final Insight
+
+```text
+We started with signals.
+
+We discovered transitions.
+
+We learned motion.
+
+Next:
+we navigate.
+```
