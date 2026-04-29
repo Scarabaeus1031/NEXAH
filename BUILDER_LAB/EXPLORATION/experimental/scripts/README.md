@@ -258,10 +258,11 @@ Instability is a SEQUENCE, not a signal.
 ```
 
 ---
-
+```
 # ============================================================
 # 🧠 GLOBAL STRUCTURE (EMERGING)
 # ============================================================
+```
 
 ## Observed Mechanism
 
