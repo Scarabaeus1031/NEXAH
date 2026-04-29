@@ -82,6 +82,11 @@ Key ideas:
 state → projection → channel → switch → motion
 ```
 
+🔗 See:
+```text
+navigation_vs_coupling.md
+```
+
 ---
 
 ## 2. Spiral Coupling (Internal Dynamics Layer)
@@ -108,6 +113,11 @@ Interpretation:
 - water → slow component  
 - mercury → fast component  
 - ferro → coupling mechanism  
+
+🔗 See:
+```text
+navigation_vs_coupling.md
+```
 
 ---
 
@@ -205,6 +215,11 @@ Key hypothesis:
 systems move through structured transition regions
 ```
 
+🔗 Core interpretation:
+```text
+instability = movement through regimes
+```
+
 ---
 
 ## 2. Channel / Path Hypothesis
@@ -234,6 +249,39 @@ Includes ideas such as:
 
 ```text
 interpretative — not mathematically validated
+```
+
+---
+
+# 🧠 Architecture Insight (NEW)
+
+The experimental layer suggests a structural decomposition:
+
+```text
+STATE SPACE (what exists)
+→ REGIMES (where we are)
+→ CHANNELS (how we move between regions)
+→ COUPLING (why direction emerges)
+→ NAVIGATION (how movement is executed)
+```
+
+---
+
+## Combined View
+
+```text
+Three-Regime Model        → structure
+Channels                  → pathways
+Coupling                  → direction
+Navigation                → execution
+```
+
+---
+
+## Resulting System View
+
+```text
+structure → direction → motion
 ```
 
 ---
