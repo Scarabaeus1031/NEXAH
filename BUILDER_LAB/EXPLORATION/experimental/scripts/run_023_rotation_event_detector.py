@@ -1,23 +1,21 @@
-# ============================================================
-# RUN 023 — ROTATION EVENT DETECTOR
-# ============================================================
-
 import numpy as np
 import matplotlib.pyplot as plt
-from pathlib import Path
+import imageio
+import os
+
 from scipy.ndimage import gaussian_filter1d
 from scipy.signal import find_peaks
 
+# ------------------------------------------------------------
+# OUTPUT
+# ------------------------------------------------------------
+OUTPUT_DIR = "../outputs/run_026_flowfield_animation"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+GIF_PATH = os.path.join(OUTPUT_DIR, "flowfield.gif")
 
 # ------------------------------------------------------------
-# CONFIG
-# ------------------------------------------------------------
-OUT_DIR = Path("outputs/run_023_rotation_events")
-OUT_DIR.mkdir(parents=True, exist_ok=True)
-
-
-# ------------------------------------------------------------
-# Synthetic scenario
+# SCENARIO (same as run_023)
 # ------------------------------------------------------------
 def make_scenario(n=500):
     t = np.linspace(0, 100, n)
@@ -28,86 +26,117 @@ def make_scenario(n=500):
 
     return t, V
 
-
 # ------------------------------------------------------------
-# Embedding
+# EMBEDDING (same as run_023)
 # ------------------------------------------------------------
 def embedding(t, V):
     V_s = gaussian_filter1d(V, sigma=2)
     dV = gaussian_filter1d(np.gradient(V_s, t), sigma=2)
-
     return np.vstack([V_s, dV]).T
 
-
 # ------------------------------------------------------------
-# Rotation metric
+# ROTATION METRIC (same as run_023)
 # ------------------------------------------------------------
 def rotation_metric(x):
     dx = np.gradient(x, axis=0)
 
     angles = []
-
     for i in range(1, len(dx)):
         v1 = dx[i-1]
         v2 = dx[i]
 
         norm = (np.linalg.norm(v1) * np.linalg.norm(v2)) + 1e-8
         cos_theta = np.dot(v1, v2) / norm
-
         cos_theta = np.clip(cos_theta, -1, 1)
-        angle = np.arccos(cos_theta)
 
+        angle = np.arccos(cos_theta)
         angles.append(angle)
 
     return np.array([0] + angles)
 
+# ------------------------------------------------------------
+# REGIONS (simple proxy for now)
+# ------------------------------------------------------------
+def compute_regions(t):
+    regions = []
+    for ti in t:
+        if ti < 70:
+            regions.append("stable")
+        elif ti < 85:
+            regions.append("transition")
+        else:
+            regions.append("collapse")
+    return regions
+
+def get_color(region):
+    if region == "stable":
+        return "blue"
+    elif region == "transition":
+        return "orange"
+    else:
+        return "red"
 
 # ------------------------------------------------------------
 # MAIN
 # ------------------------------------------------------------
-if __name__ == "__main__":
-    print("\n=== RUN 023 — ROTATION EVENT DETECTOR ===\n")
+t, V = make_scenario()
+x = embedding(t, V)
 
-    t, V = make_scenario()
-    x = embedding(t, V)
+rot = rotation_metric(x)
+regions = compute_regions(t)
 
-    rot = rotation_metric(x)
+# rotation events
+peaks, _ = find_peaks(rot, height=0.2, distance=5)
 
-    # --------------------------------------------------------
-    # Detect peaks (rotation events)
-    # --------------------------------------------------------
-    peaks, props = find_peaks(rot, height=0.2, distance=5)
+# ------------------------------------------------------------
+# ANIMATION
+# ------------------------------------------------------------
+frames = []
 
-    print("Number of rotation events:", len(peaks))
-    print("Event times:", t[peaks])
+fig, ax = plt.subplots(figsize=(6, 5))
 
-    # --------------------------------------------------------
-    # PLOT 1 — rotation + events
-    # --------------------------------------------------------
-    plt.figure(figsize=(10,5))
-    plt.plot(t, rot, label="rotation signal")
-    plt.scatter(t[peaks], rot[peaks], color="red", label="events")
+for i in range(len(t)):
 
-    plt.title("Rotation Events Detection")
-    plt.legend()
-    plt.grid(alpha=0.3)
+    ax.clear()
 
-    plt.savefig(OUT_DIR / "figure_01_rotation_events.png", dpi=150)
-    plt.close()
+    # trajectory
+    ax.plot(x[:i,0], x[:i,1], color="gray", alpha=0.3)
 
-    # --------------------------------------------------------
-    # PLOT 2 — zoom into transition
-    # --------------------------------------------------------
-    plt.figure(figsize=(10,5))
-    mask = (t > 0) & (t < 40)
+    # colored path
+    for j in range(1, i):
+        ax.plot(
+            [x[j-1,0], x[j,0]],
+            [x[j-1,1], x[j,1]],
+            color=get_color(regions[j]),
+            linewidth=2
+        )
 
-    plt.plot(t[mask], rot[mask])
-    plt.scatter(t[peaks], rot[peaks], color="red")
+    # current point
+    ax.scatter(x[i,0], x[i,1], color="black", s=30)
 
-    plt.title("Rotation Events (Transition Phase)")
-    plt.grid(alpha=0.3)
+    # rotation events
+    for idx in peaks:
+        if idx < i:
+            ax.scatter(x[idx,0], x[idx,1], color="red", s=50)
 
-    plt.savefig(OUT_DIR / "figure_02_transition_zoom.png", dpi=150)
-    plt.close()
+    ax.set_title(f"t = {t[i]:.2f}")
+    ax.set_xlabel("V")
+    ax.set_ylabel("dV")
 
-    print(f"\nSaved to: {OUT_DIR}")
+    ax.set_xlim(np.min(x[:,0])-0.05, np.max(x[:,0])+0.05)
+    ax.set_ylim(np.min(x[:,1])-0.02, np.max(x[:,1])+0.02)
+
+    ax.grid(alpha=0.3)
+
+    # NEW buffer (fix warning)
+    fig.canvas.draw()
+    buffer = fig.canvas.buffer_rgba()
+    frame = np.asarray(buffer)
+
+    frames.append(frame)
+
+# save GIF
+imageio.mimsave(GIF_PATH, frames, fps=20)
+
+print("\n=== RUN 026 — FLOWFIELD ANIMATION ===")
+print(f"Saved to: {GIF_PATH}")
