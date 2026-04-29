@@ -1,5 +1,5 @@
 # 📊 NEXAH — Figure Map
-### (Validation Layer Visual Reference — Pipeline v1)
+### (Validation Layer Visual Reference — Pipeline + Core Results)
 
 ---
 
@@ -24,12 +24,12 @@ It ensures:
 All figures originate from:
 
 ```text
-APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/
+APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/
 ```
 
 ---
 
-# 📊 FIGURE INDEX (PIPELINE OUTPUT)
+# 📊 PART A — PIPELINE FIGURES (STRUCTURE DISCOVERY)
 
 ---
 
@@ -37,33 +37,11 @@ APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/
 
 ![Fig01](outputs/pipeline_20260429_012000/run_002_shape_geometry/figure_01.png)
 
-**Source:**
-```text
-run_002_shape_geometry.py
-```
-
-**Meaning:**
-```text
-First comparison between cluster shapes.
-Shows crossings and structural similarity.
-```
-
 ---
 
 ## 🔹 FIG 02 — Shape Geometry (Cluster Relations II)
 
 ![Fig02](outputs/pipeline_20260429_012000/run_002_shape_geometry/figure_02.png)
-
-**Source:**
-```text
-run_002_shape_geometry.py
-```
-
-**Meaning:**
-```text
-Additional cluster comparison.
-Highlights geometric differences and deformation.
-```
 
 ---
 
@@ -71,37 +49,11 @@ Highlights geometric differences and deformation.
 
 ![Fig03](outputs/pipeline_20260429_012000/run_003_shape_dynamics/figure_01.png)
 
-**Source:**
-```text
-run_003_shape_dynamics.py
-```
-
-**Meaning:**
-```text
-Ordered movement of events in shape space.
-
-Key insight:
-events form trajectories, not isolated points.
-```
-
 ---
 
 ## 🔹 FIG 04 — Pre-Collapse Structural Shift
 
 ![Fig04](outputs/pipeline_20260429_012000/run_004_pre_collapse_dynamics/figure_01.png)
-
-**Source:**
-```text
-run_004_pre_collapse_dynamics.py
-```
-
-**Meaning:**
-```text
-Separation between stable and pre-collapse regimes.
-
-Key insight:
-structure changes before collapse is visible in voltage.
-```
 
 ---
 
@@ -109,181 +61,135 @@ structure changes before collapse is visible in voltage.
 
 ![Fig05](outputs/pipeline_20260429_012000/run_005_motion_instability_metric/figure_01.png)
 
-**Source:**
-```text
-run_005_motion_instability_metric.py
-```
-
-**Meaning:**
-```text
-Directional instability measure.
-
-Key insight:
-instability is encoded in directional change (angle).
-```
-
 ---
 
-## 🔹 FIG 06 — Continuous Shape Flow (Speed)
+## 🔹 FIG 06 — Shape Flow (Speed)
 
 ![Fig06](outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_01.png)
 
-**Source:**
-```text
-run_006_continuous_shape_flow.py
-```
-
-**Meaning:**
-```text
-Speed of movement in shape space over time.
-```
-
 ---
 
-## 🔹 FIG 07 — Continuous Shape Flow (Angle)
+## 🔹 FIG 07 — Shape Flow (Angle)
 
 ![Fig07](outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_02.png)
 
-**Source:**
-```text
-run_006_continuous_shape_flow.py
-```
-
-**Meaning:**
-```text
-Directional change over time.
-
-Key insight:
-angle spikes occur before collapse.
-```
-
 ---
 
-## 🔹 FIG 08 — IEEE Shape Flow (State Evolution I)
+## 🔹 FIG 08–10 — IEEE Shape Flow
 
 ![Fig08](outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_01.png)
 
-**Source:**
-```text
-run_008_ieee_bridge.py
-```
-
-**Meaning:**
-```text
-Shape space behavior in IEEE14 system.
-
-Shows structured motion even without collapse.
-```
-
 ---
 
-## 🔹 FIG 09 — IEEE Shape Flow (State Evolution II)
-
-![Fig09](outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_02.png)
-
-**Source:**
-```text
-run_008_ieee_bridge.py
-```
-
-**Meaning:**
-```text
-Additional perspective on trajectory structure.
-```
-
----
-
-## 🔹 FIG 10 — IEEE Shape Flow (State Evolution III)
-
-![Fig10](outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_03.png)
-
-**Source:**
-```text
-run_008_ieee_bridge.py
-```
-
-**Meaning:**
-```text
-Detailed view of geometric structure in IEEE system.
-```
-
----
-
-## 🔹 FIG 11 — IEEE Collapse Sweep (Overview)
+## 🔹 FIG 11–13 — IEEE Collapse Sweep
 
 ![Fig11](outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_01.png)
 
-**Source:**
-```text
-run_009_ieee_collapse_sweep.py
-```
+---
 
-**Meaning:**
+# 📊 PART B — SIGNAL LAYER (LIMITATION ANALYSIS)
+
+---
+
+## 🔹 FIG 14 — Hybrid Detection Timeline
+
+![Fig14](outputs/run_016_hybrid_detector/figure_01_hybrid_detector.png)
+
+**Key Insight:**
 ```text
-Transition from stable to collapse across load rates.
+Combining signals improves robustness, not lead time.
 ```
 
 ---
 
-## 🔹 FIG 12 — IEEE Collapse Sweep (Detail)
+# 📊 PART C — STATE SPACE STRUCTURE (CORE RESULTS)
 
-![Fig12](outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_02.png)
+---
 
-**Source:**
+## 🔹 FIG 21 — State Region Map (CRITICAL)
+
+![Fig21](outputs/run_017_state_region_map/figure_01_state_region_map.png)
+
+**Key Insight:**
 ```text
-run_009_ieee_collapse_sweep.py
-```
-
-**Meaning:**
-```text
-Intermediate regime behavior under increasing load.
+State space partitions into stable / transition / collapse regions.
 ```
 
 ---
 
-## 🔹 FIG 13 — IEEE Collapse Sweep (Critical Case)
+## 🔹 FIG 22 — Curvature Region Map
 
-![Fig13](outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_03.png)
-
-**Source:**
-```text
-run_009_ieee_collapse_sweep.py
-```
-
-**Meaning:**
-```text
-Collapse scenario with strong geometric drift.
-
-Key insight:
-warning appears ~40–50 time units before collapse.
-```
+![Fig22](outputs/run_017_state_region_map/figure_02_curvature_map.png)
 
 ---
 
-# ⚠️ Notes
+## 🔹 FIG 23 — Region Timeline
 
-- `run_001_shape_validation.py` failed → no figures generated  
-- `run_007_statistical_validation.py` produces numeric output only  
+![Fig23](outputs/run_017_state_region_map/figure_03_region_timeline.png)
 
----
-
-# 🧠 Summary
-
+**Key Insight:**
 ```text
-signal → event → shape → geometry → motion → instability
+A consistent transition phase exists before collapse.
 ```
 
 ---
 
-# 🧭 Usage in Reports
+## 🔹 FIG 24 — 3D State Space Trajectory
 
-Use consistent references:
+![Fig24](outputs/run_018_state_space_3d/figure_01_state_space_3d.png)
+
+**Key Insight:**
+```text
+Time series corresponds to a trajectory in state space.
+```
+
+---
+
+## 🔹 FIG 25 — 3D State Space (Curvature Overlay)
+
+![Fig25](outputs/run_018_state_space_3d/figure_02_state_space_curvature.png)
+
+---
+
+# 🚨 CORE RESULT (PAPER FIGURE)
+
+---
+
+## 🔹 FIG 26 — Multi-Trajectory State Space (MAIN RESULT)
+
+![Fig26](outputs/run_019_multi_trajectory_map/figure_01_multi_trajectory.png)
+
+**Key Insight:**
+```text
+All trajectories pass through the same transition region
+at the same time (~23.85), independent of perturbations.
+```
+
+---
+
+## 🔹 FIG 27 — Multi-Trajectory Curvature Comparison
+
+![Fig27](outputs/run_019_multi_trajectory_map/figure_02_curvature_compare.png)
+
+---
+
+# 🧠 Updated Summary
 
 ```text
-Fig. 1 — Shape Geometry
-Fig. 3 — Shape Trajectory
-Fig. 7 — Angle Signal
-Fig. 13 — IEEE Collapse Case
+signal → event → shape → geometry → motion → transition region → collapse
+```
+
+---
+
+# 🔥 Recommended Figures for Paper
+
+Use only:
+
+```text
+Fig. 21 — State Region Map
+Fig. 23 — Region Timeline
+Fig. 24 — 3D State Space
+Fig. 26 — Multi-Trajectory State Space (MAIN RESULT)
 ```
 
 ---
