@@ -1,0 +1,5 @@
+{
+  "max_deviation": 0.08000000000000002,
+  "mean_deviation": 0.004,
+  "interpretation": "Curvature-based control attempts true escape from flow manifold."
+}
