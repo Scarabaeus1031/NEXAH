@@ -3,6 +3,8 @@
 # 📁 PROPOSED STRUCTURE — EXPERIMENTAL MODULE
 # ============================================================
 ```
+
+```text
 experimental/
 │
 ├── README.md
@@ -26,6 +28,7 @@ experimental/
 ├── spiral_coupling/
 ├── scripts/
 ├── outputs/
+```
 
 ```
 # ============================================================
