@@ -1,0 +1,8 @@
+{
+  "scenario": "nonlinear",
+  "t_transition": 23.847695390781563,
+  "t_collapse": 25.050100200400802,
+  "kappa_threshold": 0.007165500970774804,
+  "drift_threshold": 0.02019332708148874,
+  "interpretation": "3D state space reveals separation between stable, transition, and collapse regimes as geometric structure."
+}
