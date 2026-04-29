@@ -1,0 +1,5 @@
+{
+  "max_deviation": 0.10043156812076837,
+  "mean_deviation": 0.006061201454088045,
+  "interpretation": "Phase-aligned control injects structured drift across gate."
+}
