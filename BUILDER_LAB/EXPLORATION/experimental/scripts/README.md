@@ -1227,3 +1227,391 @@ It is self-preserving.
 ```text
 Escape requires leaving the system itself.
 ```
+
+
+
+
+
+
+
+# ============================================================
+# RUN 028 — FLOW CHANNEL DETECTION
+# ============================================================
+
+## 📊 Visuals
+
+![Density Map](../outputs/run_028_density_map/figure_01_density_map.png)
+
+![Density + Trajectory](../outputs/run_028_density_map/figure_02_density_with_trajectory.png)
+
+---
+
+**Key insight:**
+
+```text
+Flow is not uniform.
+It is organized into high-density channels.
+```
+
+---
+
+## Insight
+
+```
+Motion is constrained to preferred paths.
+```
+
+→ emergence of "lanes" in state space  
+
+---
+
+# ============================================================
+# RUN 029 — FLOW STABILITY MAP
+# ============================================================
+
+## 📊 Visual
+
+![Density Gradient Field](../outputs/run_029_density_gradient/figure_01_density_gradient_field.png)
+
+---
+
+**Key insight:**
+
+```text
+Gradient structure reveals regions of resistance and acceleration.
+```
+
+---
+
+## Insight
+
+```
+Stability is encoded in spatial gradients.
+```
+
+→ first clear indication of control zones  
+
+---
+
+# ============================================================
+# RUN 030 — NOISE ROBUSTNESS TEST
+# ============================================================
+
+## 📊 Visuals
+
+![Noise Density Comparison](../outputs/run_030_noise_robustness/figure_01_noise_density_comparison.png)
+
+![Noise Metrics](../outputs/run_030_noise_robustness/figure_02_noise_metrics.png)
+
+---
+
+**Key insight:**
+
+```text
+System structure survives noise injection.
+```
+
+---
+
+## Result
+
+```
+entropy increases with noise,
+but geometry remains stable
+```
+
+---
+
+## Insight
+
+```
+Dynamics are robust, not fragile.
+```
+
+→ structure ≠ noise artifact  
+
+---
+
+# ============================================================
+# 🧠 GLOBAL TRANSITION (RUN 027–030)
+# ============================================================
+
+## Structural Shift
+
+Before:
+
+```
+signal-based view
+```
+
+After:
+
+```
+field-based view
+```
+
+---
+
+## Emerging Model
+
+```
+flow field → density → gradient → robustness
+```
+
+---
+
+## BREAKTHROUGH
+
+```text
+The system is structured BEFORE control is applied.
+```
+
+---
+
+## Critical Insight
+
+```
+Control must align with existing structure.
+```
+
+---
+
+## Connection to Later Runs
+
+```
+Run 030 → validates structure under noise
+Run 032 → defines decision zones
+Run 033+ → attempts control
+```
+
+---
+
+## Meta Insight
+
+```text
+You cannot control what you have not mapped.
+```
+
+---
+
+# ============================================================
+# RUN 032 — DECISION FIELD / CONTROL ZONES
+# ============================================================
+
+## 📊 Visuals
+
+![Entropy Field](../outputs/run_032_decision_field/figure_01_entropy_field.png)
+
+![Flow Magnitude](../outputs/run_032_decision_field/figure_02_flow_magnitude.png)
+
+![Decision Field](../outputs/run_032_decision_field/figure_03_decision_field.png)
+
+![Decision Timeline](../outputs/run_032_decision_field/figure_04_decision_timeline.png)
+
+---
+
+**Key insight:**
+
+```text
+Control is only possible where entropy AND flow overlap.
+```
+
+---
+
+## Result
+
+```
+active_control_cells = 6
+```
+
+---
+
+## Insight
+
+```
+Decision zones are sparse and localized.
+```
+
+---
+
+# ============================================================
+# RUN 033 — CONTROL INJECTION TEST
+# ============================================================
+
+## 📊 Visuals
+
+![State Comparison](../outputs/run_033_control_injection/figure_01_state_comparison.png)
+
+![Time Series](../outputs/run_033_control_injection/figure_02_time_series.png)
+
+![Difference](../outputs/run_033_control_injection/figure_03_difference.png)
+
+---
+
+**Key insight:**
+
+```text
+Control only creates small local deviations.
+```
+
+---
+
+## Insight
+
+```
+System resists external perturbation.
+```
+
+---
+
+# ============================================================
+# RUN 037 — REGIME FLIP ATTEMPT
+# ============================================================
+
+## 📊 Visuals
+
+![State Space](../outputs/run_037_regime_flip/figure_01_state.png)
+
+![Deviation](../outputs/run_037_regime_flip/figure_03_deviation.png)
+
+---
+
+**Key insight:**
+
+```text
+Asymmetric forcing attempts regime transition but fails.
+```
+
+---
+
+## Insight
+
+```
+System resists regime flip.
+```
+
+---
+
+# ============================================================
+# RUN 038 — REGIME ESCAPE DRIFT
+# ============================================================
+
+## 📊 Visuals
+
+![State Space](../outputs/run_038_regime_escape/figure_01_state.png)
+
+![Deviation](../outputs/run_038_regime_escape/figure_03_deviation.png)
+
+---
+
+**Key insight:**
+
+```text
+Post-gate drift attempts escape but stabilizes.
+```
+
+---
+
+## Insight
+
+```
+System allows drift, but prevents escape.
+```
+
+---
+
+# ============================================================
+# RUN 040 — PHASE SPACE CONTROL
+# ============================================================
+
+## 📊 Visuals
+
+![State Space](../outputs/run_040_phase_space_control/figure_01_state.png)
+
+![Time Series](../outputs/run_040_phase_space_control/figure_02_time.png)
+
+![Velocity](../outputs/run_040_phase_space_control/figure_03_velocity.png)
+
+![Deviation](../outputs/run_040_phase_space_control/figure_04_deviation.png)
+
+![Phase Density](../outputs/run_040_phase_space_control/figure_05_phase_density.png)
+
+---
+
+**Key insight:**
+
+```text
+Even 2D control (V, dV) is fully absorbed by the system.
+```
+
+---
+
+## Result
+
+```
+max deviation ≈ 0.0026
+```
+
+---
+
+## CRITICAL INSIGHT
+
+```text
+(V, dV) is NOT a sufficient control space.
+```
+
+---
+
+## Interpretation
+
+```
+System behaves like a constrained manifold.
+```
+
+---
+
+# ============================================================
+# 🧠 GLOBAL UPDATE (RUN 032–040)
+# ============================================================
+
+## Observed Pattern
+
+```
+control → reaction → absorption
+```
+
+---
+
+## Structural Law
+
+```text
+System preserves its manifold.
+```
+
+---
+
+## BREAKTHROUGH
+
+```text
+The system is CONTROL-RESISTANT internally.
+```
+
+---
+
+## Next Step
+
+```
+Introduce external dimension:
+
+(V, dV, u)
+```
+
+---
+
+## FINAL INSIGHT
+
+```text
+The system is self-preserving.
+
+Escape requires leaving the system itself.
+```
