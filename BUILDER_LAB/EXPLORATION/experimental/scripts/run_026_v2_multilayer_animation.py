@@ -14,10 +14,14 @@ from scipy.signal import find_peaks
 # ------------------------------------------------------------
 # OUTPUT
 # ------------------------------------------------------------
-OUTPUT_DIR = "../outputs/run_026_multilayer_animation"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+from pathlib import Path
 
-GIF_PATH = os.path.join(OUTPUT_DIR, "multilayer_flow.gif")
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = BASE_DIR.parent / "outputs" / "run_026_multilayer_animation"
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+GIF_PATH = OUTPUT_DIR / "multilayer_flow.gif"
 
 
 # ------------------------------------------------------------
