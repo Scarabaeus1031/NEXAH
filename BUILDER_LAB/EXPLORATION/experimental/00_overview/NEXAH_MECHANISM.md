@@ -1,50 +1,26 @@
-# 🧠 NEXAH — Mechanism Model (Experimental)
+---
+
+# ============================================================
+# 🔬 EXTENSION — FIELD, CONTROL & CONSTRAINT (RUN 026–040)
+# ============================================================
 
 ---
 
-# 🧭 Purpose
-
-This document describes the **emerging mechanism** observed in the experimental layer.
-
-It is derived from:
-
-- hybrid navigation (run_022)  
-- rotation events (run_023)  
-- region mapping (run_024)  
-- sequence modeling (run_025)  
-
----
-
-# ⚠️ Status
-
-```
-Experimental — not yet validated
-```
-
----
-
-# 🧩 Core Observation
-
-Across all experiments, a consistent structure emerges:
-
-```
-event → flow → event
-```
-
----
-
-# 🔹 1. Event Layer (Rotation)
+# 🔹 5. Multilayer Observation (Run 026)
 
 ## 📊 Evidence
 
-![Rotation Events](outputs/run_023_rotation_events/figure_01_rotation_events.png)
+![Multilayer Flow](outputs/run_026_multilayer_animation/multilayer_flow.gif)
 
 ---
 
 ## Observation
 
 ```
-Rotation appears as discrete peaks.
+The system can only be understood when observed across layers:
+- signal
+- geometry
+- regime
 ```
 
 ---
@@ -52,98 +28,9 @@ Rotation appears as discrete peaks.
 ## Interpretation
 
 ```
-Rotation = local structural reconfiguration
-```
+The "signal" is not primary.
 
----
-
-## Properties
-
-- localized  
-- high intensity  
-- short duration  
-- repeatable  
-
----
-
-# 🔹 2. Flow Layer (Transition)
-
-## 📊 Evidence
-
-![Rotation vs Region](outputs/run_024_rotation_vs_region_map/figure_01_rotation_region_timeline.png)
-
----
-
-## Observation
-
-```
-No rotation events occur in the transition region.
-```
-
----
-
-## Interpretation
-
-```
-Transition = continuous system transport
-```
-
----
-
-## Key Insight
-
-```
-System is not switching.
-
-System is moving.
-```
-
----
-
-# 🔹 3. Collapse Layer
-
-## 📊 Evidence
-
-![Event Sequence](outputs/run_025_event_sequence/figure_01_event_sequence.png)
-
----
-
-## Observation
-
-```
-Rotation reappears after collapse.
-```
-
----
-
-## Interpretation
-
-```
-Collapse = structural breakdown + reconfiguration phase
-```
-
----
-
-# 🔹 4. Hybrid System Behavior
-
-## 📊 Evidence
-
-![Hybrid Trajectory](outputs/run_022_hybrid_navigation/figure_01_trajectory.png)
-
----
-
-## Observation
-
-```
-Coherence remains ≈ 1.0
-```
-
----
-
-## Interpretation
-
-```
-System is over-stabilized.
+It is a projection of state space motion.
 ```
 
 ---
@@ -151,112 +38,309 @@ System is over-stabilized.
 ## Insight
 
 ```
-Coupling suppresses transition.
+Single-layer observation is insufficient.
 ```
 
 ---
 
-# 🧠 Unified Mechanism
+# 🔹 6. Field Structure (Run 027–029)
 
-The system operates as:
+## 📊 Evidence
+
+![Flow Field](outputs/run_027_flow_field/figure_01_flow_field.png)
+
+![Density Map](outputs/run_028_density_map/figure_01_density_map.png)
+
+![Gradient Field](outputs/run_029_density_gradient/figure_01_density_gradient_field.png)
+
+---
+
+## Observation
 
 ```
-1. rotation events (structure change)
-2. drift phase (flow transport)
-3. collapse (instability)
-4. rotation returns (reconfiguration)
+Flow organizes into:
+- channels (density)
+- gradients (directional pressure)
 ```
 
 ---
 
-# 🔥 KEY RESULT
+## Interpretation
 
 ```
-Rotation and transition are mutually exclusive regimes.
-```
-
----
-
-# 🧭 Geometric Interpretation
-
-The system consists of two superimposed layers:
-
----
-
-## Layer 1 — Geometry
-
-```
-(V, dV, d²V)
-```
-
-→ defines trajectory  
-
----
-
-## Layer 2 — Events
-
-```
-rotation peaks
-```
-
-→ defines structural changes  
-
----
-
-## Combined
-
-```
-system = trajectory + discrete reconfiguration events
+System motion is spatially structured BEFORE control.
 ```
 
 ---
 
-# ⚡ Mechanism Equation (Conceptual)
+## Insight
 
 ```
-dx/dt = flow(x)         (continuous transport)
-events = R(x)           (discrete reconfiguration)
-```
-
----
-
-# 🧠 Interpretation
-
-```
-Instability is not a signal.
-
-It is a process:
-    structure → movement → breakdown → restructuring
+The system behaves like a continuous field, not a trajectory.
 ```
 
 ---
 
-# 🚀 Implication
+# 🔹 7. Robustness Layer (Run 030)
 
-NEXAH does NOT detect instability.
+## 📊 Evidence
 
-It reconstructs:
+![Noise Comparison](outputs/run_030_noise_robustness/figure_01_noise_density_comparison.png)
+
+---
+
+## Observation
 
 ```
-the mechanism that produces instability
+Structure persists under noise.
 ```
 
 ---
 
-# 🧭 Next Step
-
-Test:
+## Interpretation
 
 ```
-Does forced transition eliminate rotation?
+Geometry is intrinsic, not data-dependent.
 ```
-
-→ critical validation test  
 
 ---
 
-# ⚡ NEXAH
+## Insight
 
 ```
-event → flow → collapse → event
+System structure is stable under perturbation.
+```
+
+---
+
+# 🔹 8. Entropy & Gate Formation (Run 031–032)
+
+## 📊 Evidence
+
+![Entropy Field](outputs/run_032_decision_field/figure_01_entropy_field.png)
+
+![Decision Field](outputs/run_032_decision_field/figure_03_decision_field.png)
+
+---
+
+## Observation
+
+```
+High-entropy regions are localized.
+```
+
+---
+
+## Interpretation
+
+```
+These regions define transition gates.
+```
+
+---
+
+## Insight
+
+```
+Control is only possible at specific spatial locations.
+```
+
+---
+
+# 🔹 9. Control Interaction (Run 033–038)
+
+## 📊 Evidence
+
+![Control Deviation](outputs/run_033_control_injection/figure_03_difference.png)
+
+![Escape Attempt](outputs/run_038_regime_escape/figure_03_deviation.png)
+
+---
+
+## Observation
+
+```
+Control produces:
+- local deformation
+- temporary drift
+- no regime change
+```
+
+---
+
+## Interpretation
+
+```
+System absorbs internal perturbations.
+```
+
+---
+
+## Insight
+
+```
+Control inside the flow is not sufficient to alter system behavior.
+```
+
+---
+
+# 🔹 10. Curvature & Oscillation Response (Run 039)
+
+## 📊 Evidence
+
+![Curvature Field](outputs/run_040_phase_space_control/figure_03_velocity.png)
+
+---
+
+## Observation
+
+```
+Control induces oscillatory responses.
+```
+
+---
+
+## Interpretation
+
+```
+System reacts dynamically but preserves structure.
+```
+
+---
+
+## Insight
+
+```
+Escape attempts produce oscillation, not transition.
+```
+
+---
+
+# 🔹 11. Phase-Space Constraint (Run 040)
+
+## 📊 Evidence
+
+![Phase Density](outputs/run_040_phase_space_control/figure_05_phase_density.png)
+
+---
+
+## Observation
+
+```
+Even 2D control (V, dV) remains confined.
+```
+
+---
+
+## Interpretation
+
+```
+The system operates on a constrained manifold.
+```
+
+---
+
+## CRITICAL INSIGHT
+
+```
+Internal state space is NOT a controllable space.
+```
+
+---
+
+# 🧠 EXTENDED MECHANISM MODEL
+
+---
+
+## Updated Structure
+
+```
+geometry → flow → event → collapse
+        ↓
+     constraint
+```
+
+---
+
+## Full Mechanism
+
+```
+1. geometry defines possible motion
+2. flow transports system
+3. events reconfigure structure
+4. collapse resets local geometry
+5. constraint preserves global structure
+```
+
+---
+
+# 🔥 MAJOR BREAKTHROUGH
+
+```
+The system is NOT only dynamic.
+
+It is self-preserving.
+```
+
+---
+
+# 🧭 Control Law (Emerging)
+
+```
+internal control → absorbed
+external control → required
+```
+
+---
+
+# ⚡ Refined Mechanism Equation (Conceptual)
+
+```
+dx/dt = flow(x)
+
+events = R(x)
+
+constraint = C(x)
+
+→ system evolves on constrained flow manifold
+```
+
+---
+
+# 🚀 FINAL INSIGHT (CURRENT STATE)
+
+```
+Instability is not caused.
+
+It is allowed.
+```
+
+---
+
+```
+System behavior =
+
+    allowed motion
+    within constrained geometry
+    with discrete reconfiguration events
+```
+
+---
+
+# 🧭 NEXT STEP
+
+Introduce:
+
+```
+external dimension (u)
+```
+
+→ true control space
+
+---
+
+# ⚡ NEXAH (Extended)
+
+```
+event → flow → collapse → constraint → event
 ```

@@ -1,30 +1,66 @@
-# 🧪 NEXAH — Experimental Builder Lab
+```
+# ============================================================
+# 📁 PROPOSED STRUCTURE — EXPERIMENTAL MODULE
+# ============================================================
+```
+
+```text
+experimental/
+│
+├── README.md
+│
+├── 00_overview/
+│   ├── NEXAH_MECHANISM.md
+│   ├── navigation_vs_coupling.md
+│   ├── three_regime_channel_model.md
+│
+├── 01_control/
+│   ├── NEXAH_CONTROL.md
+│   ├── control_sensitivity_field.md
+│   ├── multi_field_control_implications.md
+│
+├── 02_models/
+│   ├── multi_field_dynamics_model.md
+│
+├── 03_mapping/
+│   ├── ieee_mapping_module.md
+│
+├── spiral_coupling/
+├── scripts/
+├── outputs/
+```
+
+```
+# ============================================================
+# 🧪 README.md — UPDATED (NAVIGATION + INDEX)
+# ============================================================
+```
+# 🧪 NEXAH — Experimental Mechanism Lab
+### (Structure → Flow → Constraint → Control)
 
 ---
 
 # 🧭 Purpose
 
-This directory is the **active experimentation zone** of NEXAH.
+This directory is the **mechanism discovery layer** of NEXAH.
 
 It is used to:
 
-- explore new mechanisms  
-- test hypotheses  
-- prototype kernels  
-- connect intuition → structure → implementation  
+- reconstruct system dynamics as fields  
+- identify flow, structure, and transitions  
+- test control hypotheses  
+- extract constraints of motion  
 
 ---
 
-# ⚠️ Scope (Important)
-
-This is **NOT the validation layer**.
+# ⚠️ Scope
 
 ```text
 Validation Layer → proves results
-Experimental Layer → explores ideas
+Experimental Layer → discovers mechanisms
 ```
 
-Nothing here is considered:
+Nothing here is:
 
 - validated  
 - final  
@@ -32,323 +68,115 @@ Nothing here is considered:
 
 ---
 
-# 🧠 Role in NEXAH
-
-NEXAH pipeline:
+# 🧠 Core Insight
 
 ```text
-Dynamics
-→ Structure
-→ Field
-→ Geometry
-→ Stability
-→ Control
-→ Navigator
-→ Convergence
-```
+Systems do NOT evolve as signals.
 
-This layer operates **before formal integration** into the pipeline.
-
-It is where:
-
-```text
-new mechanisms are discovered
+They evolve as motion inside structured fields.
 ```
 
 ---
 
-# 🧩 Core Themes
+# 🔬 Visual Evidence
 
-This experimental layer currently explores:
-
----
-
-## 1. Navigation Kernel (Execution Layer)
-
-File:
-```text
-nexah_navigation_kernel_v1.py
-```
-
-Purpose:
-
-- execute movement in a geometric field  
-- follow axis-based structure  
-- detect channels and switching behavior  
-
-Key ideas:
-
-```text
-state → projection → channel → switch → motion
-```
-
-🔗 See:
-```text
-navigation_vs_coupling.md
-```
+## 🌀 Multilayer Dynamics
+![Flow](outputs/run_026_multilayer_animation/multilayer_flow.gif)
 
 ---
 
-## 2. Spiral Coupling (Internal Dynamics Layer)
-
-Folder:
-```text
-spiral_coupling/
-```
-
-Purpose:
-
-- model multi-component internal dynamics  
-- generate flow direction  
-- measure coherence and coupling  
-
-Key idea:
-
-```text
-latent dynamics → flow direction → system motion
-```
-
-Interpretation:
-
-- water → slow component  
-- mercury → fast component  
-- ferro → coupling mechanism  
-
-🔗 See:
-```text
-navigation_vs_coupling.md
-```
+## 🧭 Flow Field
+![Flow Field](outputs/run_027_flow_field/figure_01_flow_field.png)
 
 ---
 
-## 3. Hybrid Hypothesis (Critical Direction)
-
-Emerging idea:
-
-```text
-Spiral Coupling = direction generator
-Navigator       = execution mechanism
-```
-
-Formal view:
-
-```text
-u(x) = coupling(state)
-dx/dt = navigator(x, u)
-```
-
-This is a candidate for the **NEXAH kernel core**.
+## 🧱 Channels
+![Density](outputs/run_028_density_map/figure_01_density_map.png)
 
 ---
 
-# 🔬 Imported Experiments (from Validation Layer)
-
-The following experiments are **moved here for further exploration**:
-
----
-
-## run_015 — Koopman Embedding Probe
-
-Purpose:
-
-```text
-Compare classical embedding vs lifted (Koopman-like) space
-```
-
-Focus:
-
-- robustness  
-- noise sensitivity  
-- structural stability  
+## 🌊 Gradient Field
+![Gradient](outputs/run_029_density_gradient/figure_01_density_gradient_field.png)
 
 ---
 
-## run_021 — Rotation / Phase Metric (planned)
-
-Purpose:
-
-```text
-Test whether rotational structure exists in transition regions
-```
-
-Motivation:
-
-- observed spiral-like behavior in state space  
-- potential precursor to instability  
+## ⚡ Decision Zones
+![Decision](outputs/run_032_decision_field/figure_03_decision_field.png)
 
 ---
 
-## Signal-Level Experiments (010–013)
-
-Reinterpreted here as:
-
-```text
-local vs global signal hierarchy
-```
-
-- κ (curvature) → local event detection  
-- drift → global motion  
-- angle → directional change  
+## 🔒 Constraint (Phase Space)
+![Phase](outputs/run_040_phase_space_control/figure_05_phase_density.png)
 
 ---
 
-# 🧠 Conceptual Extensions
+# 🧠 Structure of This Module
 
 ---
 
-## 1. Three-Regime Model
+## 🔹 00 — System Overview
 
-File:
+- [Mechanism Model](00_overview/NEXAH_MECHANISM.md)
+- [Navigation vs Coupling](00_overview/navigation_vs_coupling.md)
+- [Three-Regime Model](00_overview/three_regime_channel_model.md)
+
+---
+
+## 🔹 01 — Control Layer
+
+- [Control Model](01_control/NEXAH_CONTROL.md)
+- [Sensitivity Field](01_control/control_sensitivity_field.md)
+- [Multi-Field Control](01_control/multi_field_control_implications.md)
+
+---
+
+## 🔹 02 — System Models
+
+- [Multi-Field Dynamics](02_models/multi_field_dynamics_model.md)
+
+---
+
+## 🔹 03 — Real-World Mapping
+
+- [IEEE Mapping](03_mapping/ieee_mapping_module.md)
+
+---
+
+## 🔹 Core Components
+
+- `spiral_coupling/` → direction generation  
+- `scripts/` → experimental execution  
+- `outputs/` → visual evidence  
+
+---
+
+# 🔥 Core Discovery
+
 ```text
-three_regime_channel_model.md
-```
-
-Concept:
-
-```text
-stable → transition → unstable
-```
-
-Key hypothesis:
-
-```text
-systems move through structured transition regions
-```
-
-🔗 Core interpretation:
-```text
-instability = movement through regimes
+Control → absorbed
+Flow → constrained
+System → self-preserving
 ```
 
 ---
 
-## 2. Channel / Path Hypothesis
-
-Explores:
-
-- multiple entry paths into transition regions  
-- structured trajectories in state space  
-
-Note:
+# 🔒 Constraint Law
 
 ```text
-channels are currently qualitative, not formally defined
-```
-
----
-
-## 3. Fiber / Spiral Interpretations (Experimental)
-
-Includes ideas such as:
-
-- spiral motion in transition regions  
-- local rotation / phase behavior  
-- possible fiber-like structures  
-
-⚠️ Status:
-
-```text
-interpretative — not mathematically validated
-```
-
----
-
-# 🧠 Architecture Insight (NEW)
-
-The experimental layer suggests a structural decomposition:
-
-```text
-STATE SPACE (what exists)
-→ REGIMES (where we are)
-→ CHANNELS (how we move between regions)
-→ COUPLING (why direction emerges)
-→ NAVIGATION (how movement is executed)
-```
-
----
-
-## Combined View
-
-```text
-Three-Regime Model        → structure
-Channels                  → pathways
-Coupling                  → direction
-Navigation                → execution
-```
-
----
-
-## Resulting System View
-
-```text
-structure → direction → motion
-```
-
----
-
-# 🔧 Design Principle
-
-```text
-Simplicity > complexity
-```
-
-- minimal models  
-- local mechanisms  
-- observable behavior  
-
----
-
-# ⚠️ Constraints
-
-- no overfitting to visuals  
-- no symbolic interpretation without data grounding  
-- no mixing with validation results  
-
----
-
-# 🧭 Development Strategy
-
-Work in this layer follows:
-
-```text
-1. intuition
-→ 2. minimal model
-→ 3. observable behavior
-→ 4. potential integration
-```
-
----
-
-# 🚀 Integration Path
-
-Successful components may later move to:
-
-```text
-BUILDER_LAB/kernel/
-```
-
-or:
-
-```text
-NEXAH_CORE/
+The system evolves on a constrained manifold.
 ```
 
 ---
 
 # 🧠 Final Insight
 
-This layer is not about proving correctness.
-
-It is about discovering:
-
 ```text
-what mechanisms could generate the observed structure
+You are not controlling the system.
+
+You are navigating the geometry
+that the system allows.
 ```
 
 ---
 
-# ⚡ NEXAH
-
-```text
-structure → mechanism → motion
-```
+Thomas K. R. Hofmann · NEXAH · 2026

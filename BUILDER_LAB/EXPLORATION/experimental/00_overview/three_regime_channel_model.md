@@ -308,5 +308,186 @@ based on reconstructed state space dynamics
 ```
 
 ---
+---
+
+# ============================================================
+# 🔬 EXTENSION — CHANNELS, GATES & CONSTRAINT (RUN 028–040)
+# ============================================================
+
+---
+
+# 🔹 11. Channel Structure (Updated)
+
+## Observation (Run 028)
+
+```text
+Flow is concentrated in high-density paths.
+```
+
+---
+
+## Interpretation
+
+```text
+Channels are not optional.
+
+They define where motion can occur.
+```
+
+---
+
+## Insight
+
+```text
+System motion is restricted to channels.
+```
+
+---
+
+# 🔹 12. Gate Structure (NEW)
+
+## Observation (Run 031–032)
+
+```text
+High-entropy + high-flow regions form localized zones.
+```
+
+---
+
+## Definition
+
+```text
+Gates = entry points into transition region
+```
+
+---
+
+## Key Property
+
+- sparse  
+- localized  
+- repeatable  
+
+---
+
+## Insight
+
+```text
+Transition is only possible through gates.
+```
+
+---
+
+# 🔹 13. Constraint Behavior (NEW)
+
+## Observation (Run 033–040)
+
+```text
+Trajectories cannot escape even under control.
+```
+
+---
+
+## Interpretation
+
+```text
+The system is constrained to its manifold.
+```
+
+---
+
+## Insight
+
+```text
+Channels + gates exist INSIDE a constrained geometry.
+```
+
+---
+
+# 🔹 14. Revised Transition Model
+
+Old:
+
+```text
+stable → transition → collapse
+```
+
+New:
+
+```text
+stable
+→ gate
+→ transition channel
+→ collapse
+→ constrained return
+```
+
+---
+
+# 🔹 15. Escape Limitation
+
+## Observation
+
+```text
+No experiment achieved true escape.
+```
+
+---
+
+## Interpretation
+
+```text
+System is not only structured.
+
+It is self-preserving.
+```
+
+---
+
+## Critical Insight
+
+```text
+Instability occurs WITHIN the system,
+not outside it.
+```
+
+---
+
+# 🔹 16. Full Geometric Model
+
+```text
+stable basin
+    ↓
+gate (localized entropy peak)
+    ↓
+channel (directed flow)
+    ↓
+collapse region
+    ↓
+return / reconfiguration
+```
+
+---
+
+# 🔥 FINAL BREAKTHROUGH
+
+```text
+The system does not transition freely.
+
+It moves through:
+
+    constrained channels
+    via discrete gates
+```
+
+---
+
+# ⚡ Updated Concept
+
+```text
+instability = constrained motion through structured pathways
+```
+
+---
 
 Thomas K. R. Hofmann · NEXAH · 2026
