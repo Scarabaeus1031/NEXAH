@@ -10,7 +10,7 @@ from scipy.ndimage import gaussian_filter1d
 # ------------------------------------------------------------
 # OUTPUT
 # ------------------------------------------------------------
-OUT_DIR = Path("../outputs/run_028_density_map")
+OUT_DIR = Path(__file__).resolve().parent.parent / "outputs/run_028_density_map"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ------------------------------------------------------------
