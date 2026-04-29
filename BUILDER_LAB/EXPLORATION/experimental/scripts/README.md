@@ -94,7 +94,23 @@ Coupling stabilizes motion too strongly.
 ```
 ## 📊 Visual
 
+# RUN 023 — Rotation Event Detector
+
 ![Rotation Events](../outputs/run_023_rotation_events/figure_01_rotation_events.png)
+
+![Rotation Events (Transition Zoom)](../outputs/run_023_rotation_events/figure_02_transition_zoom.png)
+
+**Key insight:**
+
+```text
+
+Rotation appears as discrete spikes in the signal.
+
+These are NOT continuous oscillations,
+
+but localized structural reconfiguration events.
+
+```
 
 ---
 
