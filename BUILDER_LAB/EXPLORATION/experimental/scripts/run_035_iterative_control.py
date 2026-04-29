@@ -70,7 +70,7 @@ print(results)
 # Output folder
 # =========================
 
-output_path = "../outputs/run_035_iterative_control"
+output_path = "/Users/tho2020/Documents/GitHub/NEXAH/outputs/run_035_iterative_control"
 os.makedirs(output_path, exist_ok=True)
 
 # =========================
