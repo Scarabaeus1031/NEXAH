@@ -130,7 +130,7 @@ From the Lorenz module:
 
 # ⚡ 2. Power Systems — Structural Stability Analysis
 
-![NEXAH Overview](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+![NEXAH Overview](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee300_transition_detection.png)
 
 *Structural transition behavior in large-scale power system dynamics.*
 
