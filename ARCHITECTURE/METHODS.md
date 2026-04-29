@@ -198,7 +198,7 @@ No explicit binary classification is used.
 
 ---
 
-# 6. Transition Geometry & Basin Graph (NEW)
+# 6. Transition Geometry & Basin Graph
 
 Beyond continuous fields, NEXAH extracts a **discrete transition structure**.
 
@@ -258,13 +258,14 @@ Constraints:
 
 ---
 
-# 7. Control Methods (NEW)
+# 7. Control Methods
 
-NEXAH introduces **active control of transitions**.
+NEXAH introduces **active interaction with transition structure**,  
+but not unconstrained control.
 
-## 7.1 Transition Control Objective
+## 7.1 Control Objective
 
-Control acts on transition probabilities:
+Control is formulated as influencing transition behavior:
 
 $$
 \max P(B_{source} \rightarrow B_{target})
@@ -280,13 +281,11 @@ $$
 
 ## 7.2 Flow-Aligned Control
 
-Control inputs are not arbitrary.
-
-They must align with system dynamics:
+Control inputs must align with system structure:
 
 - gradient direction  
 - flow direction  
-- structural constraints  
+- transition geometry  
 
 ---
 
@@ -295,23 +294,106 @@ They must align with system dynamics:
 Control is applied as structured patterns:
 
 - temporal gating  
-- phase masks  
+- phase alignment  
 - adjacency constraints  
 
 ---
 
 ## 7.4 Control Propagation
 
-Control effects propagate through system dynamics:
+Local perturbations may propagate through system dynamics:
 
-- local changes influence global trajectory  
-- minimal intervention can yield large effects  
+- local deformation of trajectories  
+- alignment with flow channels  
+
+However, propagation is constrained by field geometry.
 
 ---
 
-# 8. Navigation Methods (NEW)
+# 🔒 7.5 Constraint Behavior (Experimental Update)
+
+Recent experimental results (Builder Lab, runs 033–040) refine the control model.
+
+## Observation
+
+```text
+perturbation → local deviation → absorption → re-alignment
+```
+
+- deviations remain localized  
+- no persistent redirection occurs  
+- no regime transitions achieved internally  
+
+---
+
+## Interpretation
+
+```text
+Control does not freely modify system dynamics.
+```
+
+Instead:
+
+```text
+Control interacts with a constraint structure.
+```
+
+---
+
+## Structural Model
+
+The system evolves on an implicit manifold:
+
+```text
+x(t) ∈ M
+```
+
+Control acts as:
+
+```text
+u(x) → deformation within M
+```
+
+NOT:
+
+```text
+u(x) → arbitrary trajectory change
+```
+
+---
+
+## Key Result
+
+```text
+The system is navigable,
+but not freely controllable from within.
+```
+
+---
+
+## Updated Control Principle
+
+```text
+Do not force transitions.
+
+Align with the geometry that permits them.
+```
+
+---
+
+# 8. Navigation Methods
 
 Navigation treats the system as a **structured movement problem**.
+
+## Constraint Note
+
+```text
+Navigation does not represent free path selection.
+
+It traces trajectories allowed by the field geometry.
+```
+
+---
 
 ## 8.1 Navigation Field
 
@@ -343,7 +425,7 @@ This introduces:
 
 ## 8.3 Sheet-Based Dynamics
 
-The system is modeled as layered:
+The system is layered:
 
 - core → stable motion  
 - intermediate → oscillatory  
@@ -376,15 +458,15 @@ In power system experiments:
 
 Detection point:
 
-- first significant structural deviation from the stable manifold  
+- first structural deviation from stable manifold  
 
-Baseline comparison:
+Baseline:
 
 - classical voltage threshold detection  
 
-Measured result:
+Result:
 
-> NEXAH detects transitions ~43.9 seconds earlier (IEEE 300 system)
+> NEXAH detects transitions earlier (empirical observation)
 
 ---
 
@@ -392,21 +474,15 @@ Measured result:
 
 ## 10.1 Noise Injection
 
-Gaussian noise is added to system trajectories.
-
-Evaluation:
-
-- alignment of detected transition points  
-- structural consistency across runs  
+- Gaussian noise applied  
+- structural consistency evaluated  
 
 ---
 
 ## 10.2 Multi-Run Stability
 
-Repeated simulations show:
-
 - stable transition patterns  
-- preserved clustering of transition events  
+- preserved clustering  
 
 ---
 
@@ -414,22 +490,21 @@ Repeated simulations show:
 
 Tested on:
 
-- Lorenz (oscillatory system)  
-- IEEE grids (drift system)  
+- Lorenz  
+- IEEE systems  
 
 Observation:
 
-- structure persists across system types  
-- smoothing improves robustness  
+- structure persists across systems  
 
 ---
 
 # 11. Limitations
 
-- results are empirical  
+- empirical method  
 - no formal proof of generality  
-- performance depends on system dynamics  
-- sensitivity to sampling density  
+- sampling-dependent  
+- finite-time approximations  
 
 ---
 
@@ -438,14 +513,27 @@ Observation:
 NEXAH reconstructs:
 
 ```text
-trajectory → field → geometry → stability → transitions → control → navigation
+trajectory → field → geometry → stability → transitions → constrained control → navigation
 ```
 
-Key principle:
+---
 
-> structure is not imposed — it is extracted from dynamics
+## Core Principle
+
+> Structure is not imposed — it is extracted.
+
+---
+
+## Final Insight
+
+```text
+Systems do not offer arbitrary control.
+
+They define constrained paths,
+and control must align with them.
+```
 
 ---
 
 **Author:** Thomas K. R. Hofmann  
-**Version:** v0.6.0
+**Version:** v0.7.0
