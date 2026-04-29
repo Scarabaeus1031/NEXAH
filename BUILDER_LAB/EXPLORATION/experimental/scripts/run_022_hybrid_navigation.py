@@ -1,12 +1,19 @@
 # ============================================================
-# RUN 022 — HYBRID NAVIGATION (COUPLING + NAVIGATOR)
+# RUN 022 — HYBRID NAVIGATION (FIXED)
 # ============================================================
 
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
+import sys
 
-# import your modules
+# ------------------------------------------------------------
+# FIX PATH
+# ------------------------------------------------------------
+BASE_DIR = Path(__file__).resolve().parents[1]
+sys.path.append(str(BASE_DIR))
+
+# imports (now working)
 from spiral_coupling.spiral_coupling_kernel import SpiralCouplingKernel
 from nexah_navigation_kernel_v1 import nexah_kernel_step
 
@@ -14,7 +21,7 @@ from nexah_navigation_kernel_v1 import nexah_kernel_step
 # ------------------------------------------------------------
 # CONFIG
 # ------------------------------------------------------------
-OUT_DIR = Path("outputs/run_022_hybrid_navigation")
+OUT_DIR = BASE_DIR / "outputs/run_022_hybrid_navigation"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 steps = 600
@@ -26,7 +33,6 @@ steps = 600
 if __name__ == "__main__":
     print("\n=== RUN 022 — HYBRID NAVIGATION ===\n")
 
-    # init systems
     coupling = SpiralCouplingKernel(coupling_strength=0.85)
 
     x, y = -6.0, -5.0
@@ -40,17 +46,16 @@ if __name__ == "__main__":
     for t in range(steps):
 
         # ----------------------------------------------------
-        # 1. get direction from coupling
+        # 1. Coupling → direction
         # ----------------------------------------------------
         result = coupling.step()
         flow = result["flow_direction"]
         coherence = result["coherence"]
 
-        # project flow into 2D (simple)
         flow_x, flow_y = flow[0], flow[1]
 
         # ----------------------------------------------------
-        # 2. navigator step (with external direction)
+        # 2. Navigator → execution
         # ----------------------------------------------------
         new_x, new_y, ch, sw, sig = nexah_kernel_step(
             x + 0.2 * flow_x,
@@ -95,7 +100,7 @@ if __name__ == "__main__":
     plt.close()
 
     # --------------------------------------------------------
-    # PLOT 3 — drift + collapse
+    # PLOT 3 — signals
     # --------------------------------------------------------
     plt.figure(figsize=(8,4))
     plt.plot(drift_list, label="drift")
