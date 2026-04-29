@@ -4,10 +4,10 @@
 
 # 🧭 Objective
 
-Establish a **minimal, clear, and reproducible validation** of the NEXAH framework  
+Establish a **minimal, clear, and fully reproducible validation** of the NEXAH framework  
 against classical power system stability analysis.
 
-The goal is not to prove the full system, but to demonstrate:
+The goal is not to validate the full system, but to demonstrate:
 
 > **NEXAH provides earlier or structurally richer insight than classical methods**
 
@@ -18,7 +18,7 @@ The goal is not to prove the full system, but to demonstrate:
 Can NEXAH detect or represent instability **earlier or more structurally** than:
 
 - voltage threshold methods  
-- derivative-based indicators (dv/dt)  
+- derivative-based indicators (`dV/dt`)  
 
 ---
 
@@ -29,7 +29,7 @@ We construct a **controlled comparison** between:
 ## Classical View
 
 - voltage magnitude `V(t)`  
-- threshold crossing (collapse definition)  
+- threshold-based collapse definition  
 - derivative signal `dV/dt`  
 
 ## NEXAH View
@@ -140,17 +140,19 @@ t_nexah = first sustained increase in curvature
 Lead Time = t_collapse - t_detection
 ```
 
+All time values are measured in **simulation steps**.
+
 ---
 
-# 🔷 Extended Structural Interpretation (NEW)
+# 🔷 Extended Structural Interpretation
 
-Validation revealed:
+Validation reveals that:
 
 ```text
-NEXAH is NOT a signal detector.
+NEXAH is not a signal detector.
 ```
 
-It operates as:
+Instead, it operates as:
 
 ```text
 signal → event → shape → geometry → motion
@@ -160,14 +162,14 @@ signal → event → shape → geometry → motion
 
 ## Event Layer
 
-- curvature peaks form **events**  
-- events are not scalar → they have **shape**  
+- curvature peaks define **events**  
+- events are structured objects, not scalar values  
 
 ---
 
 ## Shape Layer
 
-Each event becomes:
+Each event is represented as:
 
 ```text
 normalized curvature profile
@@ -177,23 +179,23 @@ normalized curvature profile
 
 ## Shape Space
 
-Shapes embedded via PCA:
+Shapes are embedded via PCA:
 
 ```text
 shape → vector → low-dimensional geometry
 ```
 
-Reveals:
+This reveals:
 
-- clusters  
-- regime separation  
+- clusters (regimes)  
+- separations  
 - transition regions  
 
 ---
 
-## Motion Layer (CRITICAL)
+## Motion Layer (Critical)
 
-Events are not independent:
+Events evolve over time:
 
 ```text
 they move through shape space
@@ -209,12 +211,12 @@ This enables:
 
 # 📊 Outputs
 
-## Core (validation_skeleton.py)
+## Core (`validation_skeleton.py`)
 
 - multi-scenario comparison  
 - event extraction  
 - shape overlay  
-- shape space (PCA)  
+- PCA shape space  
 - clustering  
 - trajectory visualization  
 
@@ -231,7 +233,7 @@ experiments/
 Includes:
 
 - shape geometry  
-- motion metrics (speed / angle)  
+- motion metrics (speed, angle)  
 - statistical validation  
 - IEEE bridge  
 - collapse sweep  
@@ -252,15 +254,16 @@ Located in:
 reports/
 ```
 
-- `validation_report_v1.md` → shape & structure  
-- `validation_report_v2.md` → motion & dynamics  
+- `validation_report_v1.md` → structure  
+- `validation_report_v2.md` → dynamics  
 - `validated_findings.md` → consolidated results  
+- `nexah_paper_core.md` → formal paper draft  
 
 ---
 
 # ⚖️ Validation Criteria
 
-Validation is successful if NEXAH shows:
+Validation is successful if NEXAH provides:
 
 - earlier detection  
 OR  
@@ -269,21 +272,21 @@ OR
 AND / OR:
 
 - trajectory-level information  
-- transition dynamics  
+- observable transition dynamics  
 
 ---
 
 # ⚠️ Constraints
 
 - limited system set (currently IEEE14)  
-- curvature sensitive to noise  
-- PCA is a reduced representation  
+- curvature sensitivity to noise  
+- PCA as a reduced representation  
 
 ---
 
 # 🧠 Interpretation
 
-Classical:
+Classical methods:
 
 ```text
 Instability = threshold crossing
@@ -327,13 +330,13 @@ python experiments/run_XXX_*.py
 - structural interpretation: ✅  
 - motion-based detection: ✅  
 - statistical validation: ✅  
-- real-world validation (IEEE): 🟡 ongoing  
+- real-system validation (IEEE): 🟡 ongoing  
 
 ---
 
 # 🧭 Philosophy
 
-This is not about proving a full theory.
+This is not about proving a complete theory.
 
 It is about establishing:
 
@@ -356,4 +359,5 @@ scripts/validation_skeleton.py
 experiments/
 experiments_log.md
 reports/validated_findings.md
+reports/nexah_paper_core.md
 ```
