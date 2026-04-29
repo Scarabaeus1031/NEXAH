@@ -1,0 +1,19 @@
+{
+  "scenario": "nonlinear",
+  "t_kappa": 24.04809619238477,
+  "t_drift": 24.248496993987978,
+  "t_angle": 24.248496993987978,
+  "t_hybrid": 24.248496993987978,
+  "t_collapse": 25.050100200400802,
+  "lead_kappa": 1.0020040080160335,
+  "lead_drift": 0.8016032064128247,
+  "lead_angle": 0.8016032064128247,
+  "lead_hybrid": 0.8016032064128247,
+  "thresholds": {
+    "kappa": 0.008767737507756154,
+    "drift": 0.024159487186363657,
+    "angle": 0.35149604228087766
+  },
+  "rule": "hybrid_active = at least 2 of {kappa, drift, angle} active after transient filter",
+  "transient_ignore_fraction": 0.1
+}
