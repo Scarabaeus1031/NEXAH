@@ -361,3 +361,242 @@ structure = superposition of:
 ```
 system = moving + reconfiguring object
 ```
+
+```
+# ============================================================
+# RUN 026 — MULTILAYER FLOW ANIMATION
+# ============================================================
+```
+
+## 📊 Visual
+
+# RUN 026 — Multilayer Flow Animation
+
+![Multilayer Flow Animation](../outputs/run_026_multilayer_animation/multilayer_flow.gif)
+
+---
+
+**Key insight:**
+
+```text
+The system must be observed across multiple layers simultaneously:
+
+- signal (rotation)
+- state space (geometry)
+- regime timeline (structure)
+
+Only the combination reveals the true dynamics.
+```
+
+---
+
+## Result
+
+```
+A synchronized 3-layer system:
+
+1. rotation signal (events)
+2. state space trajectory (geometry)
+3. regime evolution (structure)
+```
+
+---
+
+## Core Observation
+
+```text
+The blue signal (V(t)) is NOT a signal.
+
+It is a projection of motion in state space.
+```
+
+---
+
+## Structural Behavior
+
+### 1. State Space
+
+- visible loop structures ("micro-loops")
+- contraction → expansion behavior
+- local spiraling before collapse  
+
+---
+
+### 2. Rotation Layer
+
+- discrete spikes (events)
+- disappear during transition  
+- reappear during collapse  
+
+---
+
+### 3. Regime Layer
+
+- stable → transition → collapse  
+- sharp boundary between regimes  
+- transition appears as smooth transport  
+
+---
+
+## Critical Insight
+
+```text
+Transition is not an event.
+
+It is a FLOW.
+```
+
+---
+
+## Combined Interpretation
+
+```text
+Event Layer     → rotation spikes
+Geometry Layer  → loops + trajectories
+Regime Layer    → system phase
+
+System behavior = coupling of all three
+```
+
+---
+
+## Breakthrough
+
+```text
+We can now SEE:
+
+- when the system rotates
+- when it flows
+- when it collapses
+```
+
+---
+
+## Deep Insight
+
+```text
+The system does not evolve as a signal.
+
+It evolves as motion inside a structured field.
+```
+
+---
+
+## Extended Model
+
+```text
+event → flow → collapse → event
+```
+
+---
+
+## Important Detail
+
+```text
+Rotation disappears exactly when:
+
+flow dominates the system dynamics
+```
+
+→ confirms:
+
+```
+flow ≠ oscillation
+flow ≠ event
+flow = transport mechanism
+```
+
+---
+
+## New Structural View
+
+```
+STATE SPACE
+→ defines geometry
+
+EVENT LAYER
+→ defines reconfiguration points
+
+FLOW FIELD
+→ defines motion between them
+```
+
+---
+
+## Visual Insight (CRITICAL)
+
+```text
+Only the multilayer view reveals:
+
+- shrinking before collapse
+- expansion after transition
+- loop formation inside stable regions
+```
+
+Single plots cannot show this.
+
+---
+
+## Meta Insight
+
+```text
+This is the first time the system becomes:
+
+visually navigable
+```
+
+---
+
+## Interpretation Upgrade
+
+Before:
+
+```
+signal → threshold → collapse
+```
+
+Now:
+
+```
+geometry → flow → event → collapse
+```
+
+---
+
+## Insight
+
+```text
+Instability is not a value.
+
+It is a geometric process.
+```
+
+---
+
+## Next Direction
+
+```
+1. reconstruct flow field explicitly
+2. detect flow channels
+3. test intervention (control layer)
+```
+
+---
+
+# 🚀 NEW SYSTEM VIEW (UPDATED)
+
+```
+geometry + events + flow = system dynamics
+```
+
+---
+
+# ⚡ NEXAH (Refined)
+
+```
+structure → flow → event → transformation
+```
+
+```
+system = moving field with discrete reconfiguration points
+```
