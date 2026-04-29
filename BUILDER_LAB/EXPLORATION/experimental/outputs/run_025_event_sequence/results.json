@@ -1,0 +1,35 @@
+{
+  "sequence": [
+    {
+      "time": 0.8016032064128257,
+      "rotation": 0.43011364569264426,
+      "phase": "pre-transition"
+    },
+    {
+      "time": 7.81563126252505,
+      "rotation": 0.6134135851528133,
+      "phase": "pre-transition"
+    },
+    {
+      "time": 23.246492985971944,
+      "rotation": 1.0907041346003468,
+      "phase": "pre-transition"
+    },
+    {
+      "time": 25.050100200400802,
+      "rotation": 0.3805041276087741,
+      "phase": "collapse"
+    },
+    {
+      "time": 26.452905811623246,
+      "rotation": 0.3166850085915191,
+      "phase": "collapse"
+    }
+  ],
+  "transition_counts": {
+    "pre-transition->pre-transition": 2,
+    "pre-transition->collapse": 1,
+    "collapse->collapse": 1
+  },
+  "interpretation": "Rotation events are mapped into a temporal phase sequence. This reveals how the system transitions between pre-transition, transition, and collapse phases."
+}
