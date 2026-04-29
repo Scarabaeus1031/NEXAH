@@ -1,314 +1,296 @@
-# 📊 NEXAH — Figure Map
-### (Validation Layer Visual Reference — Pipeline v1)
+# ⚡ NEXAH — Validated Findings
+### (Unified Results from Skeleton + Experiments)
 
 ---
 
 # 🧭 Purpose
 
-This document maps all generated figures from the validation pipeline to:
+This document summarizes the validated insights of the NEXAH validation layer.
 
-```text
-experiments → outputs → interpretation
-```
+It integrates:
 
-It ensures:
-
-- full reproducibility  
-- correct file references  
-- clean integration into reports  
+- core validation (`validation_skeleton.py`)  
+- experimental extensions (`run_001 → run_019`)  
+- synthetic and IEEE-based analysis  
 
 ---
 
-# 📁 Source
-
-All figures originate from:
-
-```text
-APPLICATIONS/power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/
-```
+# 🧱 PART A — Core Validation Findings (Skeleton)
 
 ---
 
-# 📊 FIGURE INDEX (PIPELINE OUTPUT)
+## A1. Structural Detection Exists
 
----
-
-## 🔹 FIG 01 — Shape Geometry (Cluster Relations I)
-
-![Fig01](outputs/pipeline_20260429_012000/run_002_shape_geometry/figure_01.png)
-
-**Source:**
 ```text
-run_002_shape_geometry.py
-```
-
-**Meaning:**
-```text
-First comparison between cluster shapes.
-Shows crossings and structural similarity.
+Curvature-based signals detect deviations
+before classical threshold-based methods.
 ```
 
 ---
 
-## 🔹 FIG 02 — Shape Geometry (Cluster Relations II)
+## A2. Events are Structured Objects
 
-![Fig02](outputs/pipeline_20260429_012000/run_002_shape_geometry/figure_02.png)
-
-**Source:**
 ```text
-run_002_shape_geometry.py
-```
-
-**Meaning:**
-```text
-Additional cluster comparison.
-Highlights geometric differences and deformation.
+Instability appears as a sequence of curvature events,
+not as a single scalar signal.
 ```
 
 ---
 
-## 🔹 FIG 03 — Shape Space Trajectory
+## A3. Event Shapes Exist
 
-![Fig03](outputs/pipeline_20260429_012000/run_003_shape_dynamics/figure_01.png)
-
-**Source:**
 ```text
-run_003_shape_dynamics.py
-```
-
-**Meaning:**
-```text
-Ordered movement of events in shape space.
-
-Key insight:
-events form trajectories, not isolated points.
+Each event can be represented as a normalized shape.
 ```
 
 ---
 
-## 🔹 FIG 04 — Pre-Collapse Structural Shift
+## A4. Shape Space Structure
 
-![Fig04](outputs/pipeline_20260429_012000/run_004_pre_collapse_dynamics/figure_01.png)
-
-**Source:**
 ```text
-run_004_pre_collapse_dynamics.py
-```
-
-**Meaning:**
-```text
-Separation between stable and pre-collapse regimes.
-
-Key insight:
-structure changes before collapse is visible in voltage.
+Shapes form clusters and trajectories in a low-dimensional space.
 ```
 
 ---
 
-## 🔹 FIG 05 — Motion Instability Metric
+## 🔥 Core Insight (Skeleton)
 
-![Fig05](outputs/pipeline_20260429_012000/run_005_motion_instability_metric/figure_01.png)
-
-**Source:**
 ```text
-run_005_motion_instability_metric.py
-```
-
-**Meaning:**
-```text
-Directional instability measure.
-
-Key insight:
-instability is encoded in directional change (angle), observable prior to collapse.
+NEXAH detects structural changes in trajectories,
+not just threshold crossings.
 ```
 
 ---
 
-## 🔹 FIG 06 — Continuous Shape Flow (Speed)
+# 🧪 PART B — Motion & Shape Dynamics
 
-![Fig06](outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_01.png)
+---
 
-**Source:**
+## B1. Instability is a Geometric Process
+
 ```text
-run_006_continuous_shape_flow.py
-```
-
-**Meaning:**
-```text
-Speed of movement in shape space over time.
+Instability = deformation of trajectory geometry
 ```
 
 ---
 
-## 🔹 FIG 07 — Continuous Shape Flow (Angle)
+## B2. Motion in Shape Space
 
-![Fig07](outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_02.png)
-
-**Source:**
 ```text
-run_006_continuous_shape_flow.py
-```
-
-**Meaning:**
-```text
-Directional change over time.
-
-Key insight:
-angle spikes occur before collapse (early structural signal).
+Events move through shape space → forming trajectories
 ```
 
 ---
 
-## 🔹 FIG 08 — IEEE Shape Flow (State Evolution I)
+## B3. Motion Metrics
 
-![Fig08](outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_01.png)
+- angle → early directional change  
+- speed → magnitude of motion  
 
-**Source:**
+---
+
+## B4. Stable vs Pre-Collapse Behavior
+
+| Regime        | Behavior              |
+|--------------|----------------------|
+| stable       | bounded motion       |
+| pre-collapse | drift + deformation  |
+| collapse     | escape trajectory    |
+
+---
+
+## 🔁 Transition Model
+
 ```text
-run_008_ieee_bridge.py
-```
-
-**Meaning:**
-```text
-Shape space behavior in IEEE14 system.
-
-Shows structured motion even without collapse.
+stable motion
+→ geometric drift
+→ directional escape
+→ collapse
 ```
 
 ---
 
-## 🔹 FIG 09 — IEEE Shape Flow (State Evolution II)
+# 🧪 PART C — Signal-Level Findings (CRITICAL)
 
-![Fig09](outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_02.png)
+---
 
-**Source:**
+## C1. No Single Signal is Sufficient
+
 ```text
-run_008_ieee_bridge.py
-```
-
-**Meaning:**
-```text
-Additional perspective on trajectory structure.
+κ(t)       → local event detection
+angle(t)   → directional sensitivity
+drift(t)   → global motion
 ```
 
 ---
 
-## 🔹 FIG 10 — IEEE Shape Flow (State Evolution III)
+## C2. Early Warning is Limited
 
-![Fig10](outputs/pipeline_20260429_012000/run_008_ieee_bridge/figure_03.png)
+- curvature → no global lead  
+- drift → small lead (~2 steps)  
+- angle → very early but noisy  
 
-**Source:**
+---
+
+## 🔥 Signal Insight
+
 ```text
-run_008_ieee_bridge.py
-```
-
-**Meaning:**
-```text
-Detailed view of geometric structure in IEEE system.
+Signals capture different layers of instability,
+but none alone defines it.
 ```
 
 ---
 
-## 🔹 FIG 11 — IEEE Collapse Sweep (Overview)
+# 🧪 PART D — State Space & Structural Findings (NEW CORE)
 
-![Fig11](outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_01.png)
+---
 
-**Source:**
+## D1. Trajectories Form a Structured State Space
+
+Using reconstruction:
+
 ```text
-run_009_ieee_collapse_sweep.py
+x(t) = (V, dV/dt, d²V/dt²)
 ```
 
-**Meaning:**
+Observed:
+
+- trajectories are continuous curves  
+- system evolves along a structured path  
+- collapse follows this path  
+
+---
+
+## D2. Transition Region Exists
+
 ```text
-Transition from stable to collapse across load rates.
+A distinct transition phase occurs before collapse.
+```
+
+Detected consistently at:
+
+```text
+t_transition ≈ 23.85
+t_collapse   ≈ 25.05
 ```
 
 ---
 
-## 🔹 FIG 12 — IEEE Collapse Sweep (Detail)
+## D3. Transition is Invariant (CRITICAL RESULT)
 
-![Fig12](outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_02.png)
+Across multiple runs:
 
-**Source:**
+- identical transition time  
+- identical region in state space  
+- independent of perturbations  
+
+---
+
+### 🔥 Key Finding
+
 ```text
-run_009_ieee_collapse_sweep.py
-```
-
-**Meaning:**
-```text
-Intermediate regime behavior under increasing load.
+The transition is invariant across trajectories.
 ```
 
 ---
 
-## 🔹 FIG 13 — IEEE Collapse Sweep (Critical Case)
-
-![Fig13](outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_03.png)
-
-**Source:**
-```text
-run_009_ieee_collapse_sweep.py
-```
-
-# ⏱ Time Definition (IMPORTANT)
+## D4. Instability is a Region, not a Point
 
 ```text
-All time references in this document are expressed in simulation steps.
+Instability is not triggered at a moment.
 
-1 step = Δt from the discretized time grid:
-t = linspace(0, 100, n)
-
-For n = 500:
-Δt ≈ 0.2
-
-Example:
-50 steps ≈ 10 normalized time units
-``
-
-**Meaning:**
-```text
-Collapse scenario with strong geometric drift.
-
-Key insight:
-warning appears ~40–50 simulation steps (~20–30% of the pre-collapse trajectory) before collapse.
+It occurs when the trajectory enters
+a specific region in state space.
 ```
 
 ---
 
-# ⚠️ Notes
-
-- `run_001_shape_validation.py` failed → no figures generated  
-- `run_007_statistical_validation.py` produces numeric output only  
-
----
-
-# 🧠 Summary
+## D5. Collapse is a Consequence
 
 ```text
-signal → event → shape → geometry → motion → instability
+Transition → collapse
+
+NOT
+
+collapse → transition
 ```
 
 ---
 
-# 🧭 Usage in Reports
+# 🧠 Unified Interpretation
 
-Use consistent references:
+---
+
+## Old View
 
 ```text
-Fig. 1 — Shape Geometry
-Fig. 3 — Shape Trajectory
-Fig. 7 — Angle Signal
-Fig. 13 — IEEE Collapse Case
+instability = threshold crossing
 ```
 
 ---
 
-# 🧪 Measurement Note
+## NEXAH View
 
 ```text
-Lead times reported in this document refer to simulation steps
-and are normalized relative to the underlying time discretization.
+instability = trajectory entering
+a geometric transition region
 ```
+
+---
+
+## Final Model
+
+```text
+signal
+→ event
+→ shape
+→ geometry
+→ motion
+→ transition region
+→ collapse
+```
+
+---
+
+# ⚠️ Limitations
+
+- curvature sensitive to noise  
+- PCA is reduced representation  
+- limited system set (IEEE14)  
+- synthetic scenarios dominate  
+- no control/action layer yet  
+
+---
+
+# 🚀 Implications
+
+NEXAH enables:
+
+- detection of transition regions  
+- trajectory-based monitoring  
+- structural interpretation of instability  
+
+---
+
+# 🧭 Final Statement
+
+```text
+Power system instability is not a sudden event.
+
+It is the result of a trajectory entering
+an invariant geometric transition region
+in reconstructed state space,
+which consistently precedes collapse.
+```
+
+---
+
+# 🔗 References
+
+- `scripts/validation_skeleton.py`  
+- `experiments/run_001 → run_019`  
+- `outputs/`  
+- `reports/`  
 
 ---
 
