@@ -1,0 +1,6 @@
+{
+  "max_decision": 0.41011631857189784,
+  "threshold_p90": 0.1217840747529583,
+  "active_control_cells": 6,
+  "interpretation": "Decision zones are cells where local flow entropy and flow magnitude overlap."
+}
