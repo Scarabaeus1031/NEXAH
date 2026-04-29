@@ -151,6 +151,87 @@ Also includes:
 - ENGINE (legacy computation)  
 - EXPLORATION (concept systems)  
 
+---
+
+### 🔬 Experimental Mechanism Lab (NEW CORE SUBMODULE)
+
+```text
+BUILDER_LAB/EXPLORATION/experimental/
+```
+
+This module represents the **mechanism discovery layer** of NEXAH.
+
+It operates between:
+
+```text
+FIELD_LAYER → (structure)
+NEXAH_CORE → (transition + control)
+```
+
+---
+
+## 🧠 Role
+
+- reconstruct system behavior beyond signal level  
+- analyze flow, events, and transition structure  
+- test control behavior under perturbation  
+- detect structural constraints of motion  
+
+---
+
+## 🔥 Key Findings
+
+- control attempts are largely absorbed  
+- system preserves its manifold  
+- transitions cannot be forced internally  
+- motion follows constrained flow geometry  
+
+---
+
+## 🔒 Key Insight
+
+```text
+The system is navigable,
+but not freely controllable from within.
+```
+
+---
+
+## 🧩 Internal Structure
+
+```text
+00_overview → mechanism + regime models
+01_control  → control behavior + limits
+02_models   → formal abstractions
+03_mapping  → real-world mapping (IEEE etc.)
+```
+
+---
+
+## 🔗 System Position
+
+```text
+FIELD_LAYER → provides geometry + stability
+EXPERIMENTAL → reveals mechanism + constraints
+NEXAH_CORE  → builds transition + control logic
+```
+
+---
+
+## ⚠️ Status
+
+```text
+Experimental — not validated
+```
+
+Used for:
+
+- hypothesis generation  
+- mechanism discovery  
+- pre-kernel development  
+
+---
+
 👉 **active development + experimental workspace**
 
 ---
