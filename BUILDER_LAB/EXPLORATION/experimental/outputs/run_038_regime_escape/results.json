@@ -1,0 +1,6 @@
+{
+  "max_deviation": 0.08000000000000002,
+  "mean_deviation": 0.014999999999999911,
+  "drift_active": true,
+  "interpretation": "Post-gate drift attempts regime escape."
+}
