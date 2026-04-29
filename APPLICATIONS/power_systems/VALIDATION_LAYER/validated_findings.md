@@ -119,7 +119,7 @@ run_005_motion_instability_metric.py
 Directional instability measure.
 
 Key insight:
-instability is encoded in directional change (angle).
+instability is encoded in directional change (angle), observable prior to collapse.
 ```
 
 ---
@@ -154,7 +154,7 @@ run_006_continuous_shape_flow.py
 Directional change over time.
 
 Key insight:
-angle spikes occur before collapse.
+angle spikes occur before collapse (early structural signal).
 ```
 
 ---
@@ -250,12 +250,27 @@ Intermediate regime behavior under increasing load.
 run_009_ieee_collapse_sweep.py
 ```
 
+# ⏱ Time Definition (IMPORTANT)
+
+```text
+All time references in this document are expressed in simulation steps.
+
+1 step = Δt from the discretized time grid:
+t = linspace(0, 100, n)
+
+For n = 500:
+Δt ≈ 0.2
+
+Example:
+50 steps ≈ 10 normalized time units
+``
+
 **Meaning:**
 ```text
 Collapse scenario with strong geometric drift.
 
 Key insight:
-warning appears ~40–50 time units before collapse.
+warning appears ~40–50 simulation steps (~20–30% of the pre-collapse trajectory) before collapse.
 ```
 
 ---
@@ -284,6 +299,15 @@ Fig. 1 — Shape Geometry
 Fig. 3 — Shape Trajectory
 Fig. 7 — Angle Signal
 Fig. 13 — IEEE Collapse Case
+```
+
+---
+
+# 🧪 Measurement Note
+
+```text
+Lead times reported in this document refer to simulation steps
+and are normalized relative to the underlying time discretization.
 ```
 
 ---
