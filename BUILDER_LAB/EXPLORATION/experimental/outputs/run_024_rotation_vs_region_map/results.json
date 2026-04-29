@@ -1,0 +1,71 @@
+{
+  "num_rotation_events": 5,
+  "event_times": [
+    0.8016032064128257,
+    7.81563126252505,
+    23.246492985971944,
+    25.050100200400802,
+    26.452905811623246
+  ],
+  "event_regions": [
+    "stable",
+    "stable",
+    "stable",
+    "collapse",
+    "collapse"
+  ],
+  "t_transition": 23.847695390781563,
+  "t_collapse": 25.050100200400802,
+  "thresholds": {
+    "kappa": 0.007165500970774804,
+    "drift": 0.02019332708148874
+  },
+  "events": [
+    {
+      "index": 4,
+      "time": 0.8016032064128257,
+      "rotation": 0.43011364569264426,
+      "region": "stable",
+      "V": 1.0040371598976392,
+      "dV": 0.002397836198087319,
+      "ddV": -0.0024894645889398377
+    },
+    {
+      "index": 39,
+      "time": 7.81563126252505,
+      "rotation": 0.6134135851528133,
+      "region": "stable",
+      "V": 0.9554033466428042,
+      "dV": -0.0021415523526943994,
+      "ddV": -0.0007100606818220098
+    },
+    {
+      "index": 116,
+      "time": 23.246492985971944,
+      "rotation": 1.0907041346003468,
+      "region": "stable",
+      "V": 0.7731226432751541,
+      "dV": 0.0035463719324236097,
+      "ddV": -0.011140632092644055
+    },
+    {
+      "index": 125,
+      "time": 25.050100200400802,
+      "rotation": 0.3805041276087741,
+      "region": "collapse",
+      "V": 0.6914873956761436,
+      "dV": -0.1130254425352718,
+      "ddV": -0.0041822080379514065
+    },
+    {
+      "index": 132,
+      "time": 26.452905811623246,
+      "rotation": 0.3166850085915191,
+      "region": "collapse",
+      "V": 0.5971455281315657,
+      "dV": -0.0316911379878358,
+      "ddV": 0.023398273628608975
+    }
+  ],
+  "interpretation": "Rotation events are mapped against stable, transition, and collapse regions. This tests whether directional changes cluster around the transition region."
+}
