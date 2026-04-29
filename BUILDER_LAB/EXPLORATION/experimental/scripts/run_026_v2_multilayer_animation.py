@@ -179,7 +179,7 @@ for i in range(10, len(t), 3):  # step size reduziert für Performance
     # ========================================================
     fig.canvas.draw()
     buffer = fig.canvas.buffer_rgba()
-    frame = np.asarray(buffer)
+    frame = np.asarray(buffer).copy()
 
     frames.append(frame)
 
