@@ -4,30 +4,20 @@
 
 # 🧭 Purpose
 
-This log tracks **all experimental scripts and findings** in the Builder Lab.
+Track all experimental scripts + results with:
 
-It captures:
-
-- what was tested  
-- what was observed  
-- what was learned  
-- what changed in understanding  
+- visuals  
+- interpretation  
+- structural insight  
 
 ---
 
 # ⚠️ Important
 
 ```
-This is NOT a results log.
-
-It is a thinking log.
+This is NOT a validation log.
+This is a mechanism discovery log.
 ```
-
-Focus:
-
-- mechanism discovery  
-- hypothesis evolution  
-- structural insights  
 
 ---
 
@@ -35,59 +25,50 @@ Focus:
 # RUN 022 — HYBRID NAVIGATION
 # ============================================================
 
-## Goal
+## 📊 Visuals
 
-Combine:
+![Trajectory](outputs/run_022_hybrid_navigation/figure_01_trajectory.png)
+![Signals](outputs/run_022_hybrid_navigation/figure_02_signals.png)
+![Coupling](outputs/run_022_hybrid_navigation/figure_03_coherence.png)
+
+---
+
+## Goal
 
 ```
 Spiral Coupling → direction
 Navigator       → execution
 ```
 
-into a unified motion system.
-
 ---
 
 ## Result
 
-- trajectory follows structured oscillatory path  
-- strong regular patterns (diamond / oscillation structures)  
-- coherence ≈ 1.0 across entire run  
-
----
-
-## Observation
-
-```
-System stabilizes into a highly coherent oscillatory regime.
-```
-
-- repeated geometric motifs  
-- no collapse triggered  
-- trajectory remains bounded  
+- structured oscillatory trajectory  
+- diamond / rectangular loop patterns  
+- coherence ≈ 1.0  
 
 ---
 
 ## Interpretation
 
 ```
-Coupling generates stable directional flow.
-Navigator executes motion along constrained geometry.
+System forms a stable oscillatory attractor.
 ```
+
+- no collapse  
+- no transition  
+- purely coherent regime  
 
 ---
 
 ## Insight
 
 ```
-Hybrid system behaves like a stable attractor mechanism.
+Coupling stabilizes motion too strongly.
 ```
 
-BUT:
-
-```
-No transition / instability observed → needs perturbation
-```
+→ system gets trapped in **Regime 1-like behavior**
 
 ---
 
@@ -95,13 +76,9 @@ No transition / instability observed → needs perturbation
 # RUN 023 — ROTATION EVENT DETECTOR
 # ============================================================
 
-## Goal
+## 📊 Visual
 
-Detect:
-
-```
-local rotation / phase change in state space
-```
+![Rotation Events](outputs/run_023_rotation_events/figure_01_rotation_events.png)
 
 ---
 
@@ -111,35 +88,15 @@ local rotation / phase change in state space
 5 rotation events detected
 ```
 
-Event times:
-
-```
-~0.8, ~7.8, ~23.2, ~25.0, ~26.4
-```
-
----
-
-## Observation
-
-- strong peak before transition (~23.2)  
-- additional events near collapse  
-
----
-
-## Interpretation
-
-```
-Rotation events mark local geometric changes.
-```
-
 ---
 
 ## Insight
 
 ```
-Rotation is NOT continuous behavior.
-It is discrete.
+Rotation is discrete, not continuous.
 ```
+
+→ peaks = local structural reconfigurations  
 
 ---
 
@@ -147,54 +104,35 @@ It is discrete.
 # RUN 024 — ROTATION VS REGION MAP
 # ============================================================
 
-## Goal
+## 📊 Visuals
 
-Map rotation events to:
-
-```
-stable / transition / collapse regions
-```
+![Rotation Timeline](outputs/run_024_rotation_vs_region_map/figure_01_timeline.png)
+![State Map](outputs/run_024_rotation_vs_region_map/figure_02_state_map.png)
 
 ---
 
 ## Result
 
 ```
-Event regions:
-
+Events:
 stable, stable, stable, collapse, collapse
 ```
 
-NO events in transition.
-
 ---
 
-## Observation
+## Key Observation
 
 ```
-Rotation disappears during transition phase.
-```
-
----
-
-## Interpretation
-
-```
-Transition is not event-driven.
-It is flow-driven.
+NO events in transition region
 ```
 
 ---
 
-## Insight
+## Insight (CRITICAL)
 
 ```
-Rotation events occur:
-
-→ before transition (preparation phase)
-→ after collapse (breakdown phase)
-
-NOT during transition itself.
+Transition = flow
+Rotation   = event
 ```
 
 ---
@@ -203,132 +141,138 @@ NOT during transition itself.
 # RUN 025 — EVENT SEQUENCE MODEL
 # ============================================================
 
-## Goal
+## 📊 Visual
 
-Construct:
-
-```
-temporal sequence of rotation events → phase model
-```
+![Event Sequence](outputs/run_025_event_sequence/figure_01_sequence.png)
 
 ---
 
 ## Result
 
 ```
-Sequence:
-
-pre-transition → pre-transition → pre-transition → collapse → collapse
-```
-
-Transitions:
-
-```
-pre → pre
-pre → collapse
-collapse → collapse
-```
-
----
-
-## Observation
-
-```
-No rotation events in transition phase.
+pre → pre → pre → collapse → collapse
 ```
 
 ---
 
 ## Interpretation
 
-System behavior separates into:
+System dynamics split into:
 
 ```
-1. Local reconfiguration (rotation events)
-2. Directed motion (transition)
-3. Structural breakdown (collapse)
+1. event phase (rotation)
+2. flow phase (transition)
+3. breakdown phase (collapse)
 ```
 
 ---
 
-## Insight (CRITICAL)
+## Insight
 
 ```
-Rotation ≠ Transition
-
-Rotation = discrete reconfiguration points
-Transition = continuous flow
+Instability is a SEQUENCE, not a signal.
 ```
 
 ---
 
 # ============================================================
-# GLOBAL INSIGHT (SO FAR)
+# 🧠 GLOBAL STRUCTURE (EMERGING)
 # ============================================================
 
-## Mechanism Model
+## Observed Mechanism
 
 ```
-Event → Flow → Event
-```
-
----
-
-## System Dynamics
-
-```
-pre-transition:
-    discrete rotation events
-    increasing instability
-
-transition:
-    smooth directional flow
-    no rotation
-
-collapse:
-    re-emergence of rotation
-    structural breakdown
+rotation → drift → rotation
 ```
 
 ---
 
-## Updated Understanding
-
-Before:
+## Phase Model
 
 ```
-instability = detected event
-```
-
-Now:
-
-```
-instability = sequence of:
-
-reconfiguration → flow → breakdown
+[stable]
+    ↓ (rotation events)
+[pre-transition]
+    ↓ (drift / flow)
+[transition]
+    ↓
+[collapse]
+    ↓ (rotation returns)
+[post-collapse]
 ```
 
 ---
 
-# 🧠 Open Questions
-
-- What defines the transition flow geometry?  
-- Can drift fully characterize transition phase?  
-- How does coupling influence rotation events?  
-- Can events be predicted before they occur?  
-
----
-
-# 🚀 Next Step Candidates
-
-- run_026_transition_flow_analysis.py  
-- integrate rotation + drift + coupling  
-- test perturbation in hybrid system  
-
----
-
-# ⚡ NEXAH (Experimental)
+# 🔥 IMPORTANT BREAKTHROUGH
 
 ```
-structure → mechanism → motion → phase sequence
+Rotation disappears exactly when flow dominates.
+```
+
+Meaning:
+
+- system is not switching  
+- system is being transported  
+
+---
+
+# 🧭 Meta Insight
+
+You now have **two orthogonal grids**:
+
+---
+
+## Grid 1 — State Space
+
+```
+(V, dV, d²V)
+```
+
+→ geometric structure  
+
+---
+
+## Grid 2 — Event Layer
+
+```
+rotation peaks
+```
+
+→ discrete structural events  
+
+---
+
+## Combined View
+
+```
+events happen ON TOP of flow geometry
+```
+
+---
+
+# 🚀 Next Direction
+
+- inject perturbation into hybrid system  
+- force transition regime  
+- test:
+
+```
+does rotation disappear there too?
+```
+
+---
+
+# ⚡ NEXAH (Experimental Form)
+
+```
+event → flow → event
+```
+
+```
+structure = superposition of:
+    geometry + event layer
+```
+
+```
+system = moving + reconfiguring object
 ```
