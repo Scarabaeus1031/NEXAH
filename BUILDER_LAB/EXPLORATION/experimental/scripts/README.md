@@ -600,11 +600,11 @@ structure → flow → event → transformation
 ```
 system = moving field with discrete reconfiguration points
 ```
-
+```
 # ============================================================
 # RUN 027 — FLOW FIELD RECONSTRUCTION
 # ============================================================
-
+```
 ## 📊 Visual
 
 ![Flow Field](../outputs/run_027_flow_field/figure_01_flow_field.png)
@@ -629,11 +629,11 @@ Flow can be reconstructed from trajectory.
 → system = field, not signal  
 
 ---
-
+```
 # ============================================================
 # RUN 028 — FLOW CHANNEL DETECTION
 # ============================================================
-
+```
 ## 📊 Visual
 
 ![Flow Channels](../outputs/run_028_flow_channels/figure_01_channels.png)
@@ -658,11 +658,11 @@ Motion is constrained to preferred paths.
 → emergence of "lanes" in state space  
 
 ---
-
+```
 # ============================================================
 # RUN 029 — FLOW STABILITY MAP
 # ============================================================
-
+```
 ## 📊 Visual
 
 ![Stability Map](../outputs/run_029_stability_map/figure_01_stability.png)
@@ -687,11 +687,11 @@ Stability is spatially distributed.
 → first indication of control zones  
 
 ---
-
+```
 # ============================================================
 # RUN 030 — NOISE ROBUSTNESS TEST
 # ============================================================
-
+```
 ## 📊 Result
 
 ```text
@@ -718,11 +718,11 @@ Dynamics are robust, not fragile.
 → structure ≠ noise artifact  
 
 ---
-
+```
 # ============================================================
 # RUN 031 — LOCAL FLOW ENTROPY
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![Entropy Field](../outputs/run_031_local_entropy/figure_01_entropy_field.png)
@@ -756,11 +756,11 @@ These regions act as transition gates.
 → first appearance of your "antenna block"  
 
 ---
-
+```
 # ============================================================
 # 🧠 GLOBAL TRANSITION (RUN 027–031)
 # ============================================================
-
+```
 ## Structural Shift
 
 Before:
@@ -817,12 +817,13 @@ Run 033+ → attempts control
 You cannot control what you have not mapped.
 ```
 
+---
 
-
+```
 # ============================================================
 # RUN 032 — DECISION FIELD / CONTROL ZONES
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![Entropy Field](../outputs/run_032_decision_field/figure_01_entropy_field.png)
@@ -862,11 +863,11 @@ Decision zones are sparse and localized.
 → only small "gates" exist  
 
 ---
-
+```
 # ============================================================
 # RUN 033 — CONTROL INJECTION TEST
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![State Space](../outputs/run_033_control_injection/figure_01_state.png)
@@ -900,11 +901,11 @@ System resists external perturbation.
 ```
 
 ---
-
+```
 # ============================================================
 # RUN 034 — FLOW-ALIGNED CONTROL
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![State Space](../outputs/run_034_flow_control/figure_01_state.png)
@@ -933,11 +934,11 @@ Flow-aligned control is absorbed by the system.
 → no instability  
 
 ---
-
+```
 # ============================================================
 # RUN 035 — ITERATIVE CONTROL
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![State Space](../outputs/run_035_iterative_control/figure_01_state.png)
@@ -972,11 +973,11 @@ Control integrates but does not propagate.
 ```
 
 ---
-
+```
 # ============================================================
 # RUN 036 — PHASE-SHIFT CONTROL
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![State Space](../outputs/run_036_phase_control/figure_01_state.png)
@@ -1009,11 +1010,11 @@ but still returns to manifold.
 ```
 
 ---
-
+```
 # ============================================================
 # RUN 037 — REGIME FLIP ATTEMPT
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![State Space](../outputs/run_037_regime_flip/figure_01_state.png)
@@ -1039,11 +1040,11 @@ System resists regime flip.
 → no separatrix crossing  
 
 ---
-
+```
 # ============================================================
 # RUN 038 — REGIME ESCAPE DRIFT
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![State Space](../outputs/run_038_regime_escape/figure_01_state.png)
@@ -1075,11 +1076,11 @@ System allows drift, but prevents escape.
 ```
 
 ---
-
+```
 # ============================================================
 # RUN 039 — ESCAPE VECTOR CONTROL
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![State Space](../outputs/run_039_escape_vector/figure_01_state.png)
@@ -1105,11 +1106,11 @@ System reacts with oscillation, not transition.
 → spike / counter-spike pattern  
 
 ---
-
+```
 # ============================================================
 # RUN 040 — PHASE SPACE CONTROL
 # ============================================================
-
+```
 ## 📊 Visuals
 
 ![Velocity Field](../outputs/run_040_phase_space_control/figure_01_state.png)
@@ -1160,11 +1161,11 @@ Control outside the system → required
 ```
 
 ---
-
+```
 # ============================================================
 # 🧠 GLOBAL UPDATE (RUN 032–040)
 # ============================================================
-
+```
 ## Observed Pattern
 
 ```
