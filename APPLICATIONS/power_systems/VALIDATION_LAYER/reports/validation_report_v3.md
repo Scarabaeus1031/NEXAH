@@ -31,6 +31,24 @@ compared to classical power system indicators.
 
 ---
 
+## ⏱ Time Definition (IMPORTANT)
+
+```text
+All time references in this report are expressed in simulation steps.
+
+The time grid is defined as:
+t = linspace(0, 100, n)
+
+For n = 500:
+Δt ≈ 0.2
+
+Example:
+50 steps ≈ 10 normalized time units
+≈ 20–30% of the pre-collapse trajectory
+```
+
+---
+
 ## Signals
 
 Input:
@@ -154,16 +172,16 @@ they form trajectories in shape space
 
 From continuous shape flow:
 
-- angle spikes occur before collapse  
-- speed increases later  
-- combined signal gives early warning  
+- angle spikes occur before collapse (early structural signal)  
+- speed increases later (confirmation signal)  
+- combined signal provides early warning  
 
 ---
 
 ### Example
 
 ```text
-angle warning ≈ collapse - 0.2 (synthetic)
+angle warning occurs shortly before collapse (~1 step lead in synthetic case)
 ```
 
 ---
@@ -173,8 +191,8 @@ angle warning ≈ collapse - 0.2 (synthetic)
 From 50 runs:
 
 - detection rate: 43 / 50  
-- mean lead time: ~11.6  
-- max lead time: ~18.4  
+- mean lead time: ~11.6 steps  
+- max lead time: ~18.4 steps  
 
 ---
 
@@ -212,15 +230,16 @@ At increasing load:
 | Load Rate | Collapse | Warning | Lead Time |
 |----------|--------|--------|-----------|
 | ≤ 0.03   | None   | present | N/A       |
-| 0.04     | ~75    | ~24–25  | ~50       |
-| 0.05     | ~60    | ~20–22  | ~40       |
+| 0.04     | ~75    | ~24–25  | ~50 steps |
+| 0.05     | ~60    | ~20–22  | ~40 steps |
 
 ---
 
 ### Key Result
 
 ```text
-NEXAH detects instability ~40–50 time units earlier
+NEXAH detects instability ~40–50 simulation steps earlier
+(~20–30% of the pre-collapse trajectory).
 ```
 
 ---
@@ -290,7 +309,8 @@ Progression from stable regime to collapse through geometric drift.
 ## 1. Early Warning (Confirmed)
 
 ```text
-lead time ≈ 40–50 (IEEE collapse scenarios)
+lead time ≈ 40–50 simulation steps
+(~20–30% of trajectory before collapse)
 ```
 
 ---
