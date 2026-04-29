@@ -49,31 +49,130 @@ System → Structure → Field → Geometry → Stability → Constraint → Con
 
 ## 🧭 Architecture Flow
 
-```mermaid
-flowchart TD
+![NEXAH Architecture Flow](archive/NEXAH_Architecture_Flow(Updated).png)
 
-A["ARCHY\nSimulation"] --> B["Discovery Engine\nStructure Extraction"]
+---
 
-B --> C["Field Reconstruction\n(CORE)"]
-C --> D["Field Layer\nGeometry + Stability"]
+### 🧠 Interpretation
 
-D --> E["Transition Geometry\nBasins / Separatrix / Gates"]
+This diagram shows the **full operational pipeline of NEXAH** as it currently exists.
 
-E --> F["Constraint Layer\n(NEW)"]
+It integrates all layers:
 
-F --> G["Control Layer\n(CORE)"]
-G --> H["Navigator"]
-
-H --> I["System Behavior\nConvergence / Stability"]
-
-classDef core fill:#1f77b4,color:#fff,stroke:#0d3b66
-classDef layer fill:#2ca02c,color:#fff,stroke:#14532d
-classDef result fill:#d62728,color:#fff,stroke:#7f1d1d
-
-class C,G core
-class D,E,F layer
-class I result
+```text
+Structure → Field → Geometry → Stability → Constraint → Control → Navigation
 ```
+
+---
+
+### 🔷 Key Elements
+
+#### 1. Discovery → Field Reconstruction
+- raw system dynamics are transformed into:
+  - flow fields  
+  - density fields  
+  - energy landscapes  
+
+→ **data becomes structure**
+
+---
+
+#### 2. Field Layer → Geometry + Stability
+- extraction of:
+  - basins  
+  - channels  
+  - separatrices  
+  - Lyapunov stability  
+
+→ **structure becomes interpretable geometry**
+
+---
+
+#### 3. Transition Geometry
+- system decomposes into:
+  - basins (states)  
+  - gates (transition corridors)  
+
+→ **motion is structured, not random**
+
+---
+
+#### 4. Constraint Layer (CRITICAL NEW INSIGHT)
+
+This is the key addition:
+
+```text
+Not all geometrically possible motion is allowed.
+```
+
+Observed behavior:
+
+```text
+perturbation → deviation → absorption → return
+```
+
+Meaning:
+
+→ the system evolves on a **constrained manifold**
+
+---
+
+#### 5. Control Layer
+- operates **within constraints**, not against them  
+- aligns with:
+  - flow  
+  - geometry  
+  - transition structure  
+
+---
+
+#### 6. Navigation
+- executes movement through:
+  - valid channels  
+  - accessible gates  
+  - stability-compatible paths  
+
+---
+
+### 🔁 Feedback Loops (IMPORTANT)
+
+The diagram includes two loops:
+
+#### Adaptive Feedback
+- system learns from navigation + outcome  
+
+#### Model Refinement
+- updates:
+  - field  
+  - geometry  
+  - transition structure  
+
+---
+
+### 🔥 Core Insight
+
+```text
+Navigation does not create structure.
+
+It follows constraints that already exist in the field.
+```
+
+---
+
+### 🧭 Final Reading
+
+The system is best understood as:
+
+```text
+a constrained flow system
+with structured transitions
+and geometry-driven navigation
+```
+
+---
+
+This diagram replaces the previous simplified flowchart  
+and represents the **current ground truth architecture of NEXAH**.
 
 ---
 
