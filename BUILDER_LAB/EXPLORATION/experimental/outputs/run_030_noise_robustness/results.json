@@ -1,0 +1,47 @@
+{
+  "noise_levels": [
+    0.0,
+    0.001,
+    0.003,
+    0.006,
+    0.01
+  ],
+  "results": [
+    {
+      "active_cells": 121,
+      "sparsity": 0.98109375,
+      "entropy": 4.995476786890211,
+      "top_10_percent_mass": 0.999999999999984,
+      "noise": 0.0
+    },
+    {
+      "active_cells": 125,
+      "sparsity": 0.98046875,
+      "entropy": 5.009836258972555,
+      "top_10_percent_mass": 0.999999999999982,
+      "noise": 0.001
+    },
+    {
+      "active_cells": 132,
+      "sparsity": 0.979375,
+      "entropy": 5.1471188924590905,
+      "top_10_percent_mass": 0.9999999999999821,
+      "noise": 0.003
+    },
+    {
+      "active_cells": 123,
+      "sparsity": 0.98078125,
+      "entropy": 5.38148507263062,
+      "top_10_percent_mass": 0.9999999999999779,
+      "noise": 0.006
+    },
+    {
+      "active_cells": 109,
+      "sparsity": 0.98296875,
+      "entropy": 5.563951048400577,
+      "top_10_percent_mass": 0.999999999999984,
+      "noise": 0.01
+    }
+  ],
+  "interpretation": "This test checks whether the observed density/channel structure persists under increasing noise. Stable sparsity and concentration suggest real structure; rapid entropy growth suggests sampling/noise sensitivity."
+}
