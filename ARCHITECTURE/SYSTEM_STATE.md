@@ -254,7 +254,7 @@ Status:
 
 ## Key Result
 
-> The system can **navigate through instability regions using gates**
+> The system navigates along allowed paths defined by its geometry and flow structure.
 
 ---
 
@@ -288,7 +288,49 @@ Status:
 
 ---
 
-# 🌍 8. Real-World Systems (Status)
+# 🔒 8. Constraint Layer (NEW)
+
+Status:
+
+✔ constraint behavior observed  
+✔ control absorption confirmed  
+✔ manifold preservation detected  
+
+---
+
+## Key Result
+
+```text
+The system evolves on a constrained manifold.
+```
+
+---
+
+## Interpretation
+
+- internal perturbations are absorbed  
+- structure is preserved  
+- transitions cannot be forced internally  
+
+---
+
+## Structural Law
+
+```text
+System preserves its geometric structure under internal control.
+```
+
+---
+
+## Implication
+
+```text
+Effective control requires interaction with the structure,
+not against it.
+```
+---
+
+# 🌍 9. Real-World Systems (Status)
 
 ### 🔥 Lorenz
 
@@ -320,7 +362,7 @@ But:
 
 ---
 
-# ⚠️ 9. Current Bottlenecks
+# ⚠️ 10. Current Bottlenecks
 
 ## 1. Kernel Gap
 
