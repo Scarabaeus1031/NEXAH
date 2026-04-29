@@ -199,6 +199,46 @@ Do not block transitions → guide them
 
 ---
 
+---
+
+## ⚠️ Constraint Observation (Experimental Layer)
+
+Recent experimental results (runs 033–040) reveal:
+
+```text
+Control attempts are mostly absorbed by the system.
+```
+
+Observed behavior:
+
+- perturbations create local deviations  
+- deviations do not propagate globally  
+- no regime transitions are achieved internally  
+
+---
+
+## Updated Interpretation
+
+```text
+Control interacts with transition structure,
+but is strongly constrained by the system manifold.
+```
+
+```text
+Internal control does NOT create new trajectories.
+
+It deforms existing ones.
+```
+
+---
+
+## Implication
+
+```text
+The system is navigable,
+but not freely controllable from within.
+```
+
 # 🧭 6. Navigation Layer (Operational)
 
 Status:
