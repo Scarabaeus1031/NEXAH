@@ -110,7 +110,7 @@ for i in range(len(t)):
 
     fig.canvas.draw()
     frame = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
-    frame = frame.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    frame = frame.reshape(fig.canvas.get_width_height()[::-1] + (3,)).copy()
     frames.append(frame)
 
 # ------------------------------------------------------------
