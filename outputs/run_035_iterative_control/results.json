@@ -1,0 +1,6 @@
+{
+  "max_deviation": 0.050000000000000044,
+  "mean_deviation": 0.0030000000000000027,
+  "iterations": 5,
+  "interpretation": "Iterative control accumulates small flow-aligned perturbations."
+}
