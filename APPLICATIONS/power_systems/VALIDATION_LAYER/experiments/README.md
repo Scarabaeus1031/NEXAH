@@ -244,3 +244,180 @@ through a structured geometric space.
 ```text
 signal → structure → geometry → motion
 ```
+
+---
+
+# 🧪 PART C — Signal-Level Validation (Critical Layer)
+
+These experiments test whether NEXAH provides **true early warning signals**,  
+not just structural interpretation.
+
+Focus:
+
+```text
+compare curvature (event), drift (motion), angle (direction), and shape-based signals
+```
+
+---
+
+## 🧪 Experiment 010 — Detection Alignment
+
+**Script:**  
+`run_010_detection_analysis.py`
+
+**Goal:**  
+Compare NEXAH curvature detection vs classical dv/dt detection.
+
+**Key Results:**
+- NEXAH and classical detection occur nearly simultaneously  
+- both detect **local instability events**  
+- no significant lead advantage  
+
+**Insight:**
+```text
+Curvature is a local event detector, not a global early warning signal.
+```
+
+---
+
+## 🧪 Experiment 011 — Drift Signal
+
+**Script:**  
+`run_011_drift_signal.py`
+
+**Goal:**  
+Test drift (dv/dt) as a continuous early warning signal.
+
+**Key Results:**
+- drift detection occurs before collapse  
+- lead time: ~2.2 simulation steps  
+
+**Insight:**
+```text
+Drift captures global system motion and provides weak early warning.
+```
+
+---
+
+## 🧪 Experiment 012 — Angle Signal
+
+**Script:**  
+`run_012_angle_signal.py`
+
+**Goal:**  
+Test directional change (angle) as early instability indicator.
+
+**Key Results:**
+- angle signal reacts very early  
+- lead time: ~24 simulation steps  
+- strong sensitivity to local fluctuations  
+
+**Insight:**
+```text
+Angle is highly sensitive and can produce very early signals,
+but may reflect local geometric fluctuations rather than global instability.
+```
+
+---
+
+## 🧪 Experiment 013 — Combined Signal Analysis
+
+**Script:**  
+`run_013_combined_signal.py`
+
+**Goal:**  
+Compare all signals in a unified timeline.
+
+**Key Results:**
+- curvature (κ) detects earliest local event (~t ≈ 1)  
+- drift and angle detect near pre-collapse (~t ≈ 22–23)  
+- collapse occurs at ~t ≈ 25  
+
+**Insight:**
+```text
+Different signals capture different aspects of instability:
+
+- κ → local event onset
+- drift → global motion
+- angle → directional change
+```
+
+---
+
+## 🧪 Experiment 014 — Shape Drift Signal (NEW)
+
+**Script:**  
+`run_014_shape_drift_signal.py`
+
+**Goal:**  
+Test whether **shape-space motion** provides a true global early warning signal.
+
+**Method:**
+- sliding window over curvature  
+- convert windows → shapes  
+- project into shape space (PCA)  
+- compute distance to stable region  
+
+**Key Result (to be evaluated):**
+- distance(t) forms a continuous signal  
+- potential early drift before collapse  
+
+**Insight (hypothesis):**
+```text
+Global instability may appear as a continuous drift in shape space,
+not as discrete events.
+```
+
+---
+
+# 🧠 Critical Interpretation
+
+These experiments reveal a hierarchy:
+
+```text
+κ(t)       → detects local events
+angle(t)   → detects directional instability
+drift(t)   → detects global motion
+shape drift→ potential global structural signal
+```
+
+---
+
+# ⚠️ Important Result
+
+```text
+No single signal fully captures instability.
+```
+
+Instead:
+
+```text
+Instability emerges across multiple geometric layers.
+```
+
+---
+
+# 🧭 Updated Understanding
+
+Before:
+
+```text
+instability = detected by one signal
+```
+
+Now:
+
+```text
+instability = multi-scale geometric process
+```
+
+---
+
+# ⚡ NEXAH (Refined)
+
+```text
+signal → event → shape → geometry → motion → drift → instability
+```
+
+
+
