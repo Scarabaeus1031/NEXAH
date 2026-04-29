@@ -146,3 +146,7 @@ APPLICATIONS/dynamical_systems/halvorsen/outputs/*.txt
 
 !APPLICATIONS/power_systems/VALIDATION_LAYER/figures/
 !APPLICATIONS/power_systems/VALIDATION_LAYER/figures/*.png
+# --- EXPERIMENTAL BUILDER LAB OUTPUTS ---
+!BUILDER_LAB/EXPLORATION/experimental/outputs/
+!BUILDER_LAB/EXPLORATION/experimental/outputs/**
+!BUILDER_LAB/EXPLORATION/experimental/outputs/**/*.gif
