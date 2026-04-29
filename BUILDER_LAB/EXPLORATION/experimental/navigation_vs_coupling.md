@@ -315,4 +315,163 @@ and its motion follows the geometry of the field.
 
 ---
 
+---
+
+# ============================================================
+# 🔒 EXTENSION — CONSTRAINT & CONTROL (RUN 026–040)
+# ============================================================
+
+---
+
+# 🔹 10. Constraint Layer (NEW)
+
+## Definition
+
+Constraint defines:
+
+```text
+which motions are allowed at all
+```
+
+---
+
+## Observation (Experimental)
+
+From runs 033–040:
+
+```text
+control attempts are absorbed by the system
+```
+
+---
+
+## Interpretation
+
+```text
+System evolves on a constrained manifold.
+```
+
+---
+
+## Formal Extension
+
+```text
+dx/dt = f(x, u)      (navigation)
+u      = g(z)        (coupling)
+valid  = C(x)        (constraint)
+```
+
+---
+
+## Key Property
+
+```text
+Constraint = global structure preservation
+```
+
+---
+
+# 🔹 11. Control Layer (NEW)
+
+## Definition
+
+Control attempts to:
+
+```text
+modify system trajectory
+```
+
+---
+
+## Experimental Result
+
+From runs:
+
+- run_033 → small deviation  
+- run_035 → accumulation  
+- run_036 → drift  
+- run_037 → failed regime flip  
+- run_038 → drift without escape  
+- run_039 → oscillatory response  
+- run_040 → full absorption  
+
+---
+
+## Core Observation
+
+```text
+Internal control does NOT change system regime.
+```
+
+---
+
+## Insight
+
+```text
+Control inside the manifold is absorbed.
+```
+
+---
+
+# 🔥 12. Updated System Structure
+
+Full NEXAH stack now:
+
+```text
+Coupling   → direction
+Navigator  → execution
+Constraint → boundary
+Control    → perturbation attempt
+```
+
+---
+
+## Combined Dynamics
+
+```text
+u(x)        = coupling(state)
+dx/dt       = navigator(x, u)
+valid(x)    = constraint(x)
+```
+
+---
+
+# 🧠 13. CRITICAL INSIGHT
+
+```text
+Direction ≠ motion ≠ control ≠ allowed motion
+```
+
+---
+
+## Meaning
+
+| Layer | Role |
+|------|------|
+| Coupling | generates direction |
+| Navigation | executes motion |
+| Constraint | limits motion |
+| Control | attempts to override |
+
+---
+
+# 🚀 14. Breakthrough
+
+```text
+The system is not controlled by direction.
+
+It is limited by constraint.
+```
+
+---
+
+# ⚡ Final Update
+
+```text
+Coupling generates motion,
+Navigator executes motion,
+Constraint defines possibility,
+Control is secondary.
+```
+
 Thomas K. R. Hofmann · NEXAH · 2026
