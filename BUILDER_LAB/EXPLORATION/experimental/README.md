@@ -1,7 +1,8 @@
+```
 # ============================================================
 # 📁 PROPOSED STRUCTURE — EXPERIMENTAL MODULE
 # ============================================================
-
+```
 experimental/
 │
 ├── README.md
@@ -26,11 +27,11 @@ experimental/
 ├── scripts/
 ├── outputs/
 
-
+```
 # ============================================================
 # 🧪 README.md — UPDATED (NAVIGATION + INDEX)
 # ============================================================
-
+```
 # 🧪 NEXAH — Experimental Mechanism Lab
 ### (Structure → Flow → Constraint → Control)
 
