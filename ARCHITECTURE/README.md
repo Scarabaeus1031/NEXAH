@@ -18,12 +18,12 @@ NEXAH is a structural navigation framework for complex dynamical systems.
 It transforms:
 
 ```text
-dynamics → structure → field → geometry → stability → control → navigation
+dynamics → structure → field → geometry → stability → constraint → control → navigation
 ```
 
 The goal is not only to analyze systems, but to:
 
-> **enable structured navigation within dynamical fields under stability constraints**
+> **enable structured navigation within dynamical fields under intrinsic constraints**
 
 ---
 
@@ -32,7 +32,7 @@ The goal is not only to analyze systems, but to:
 ## Core Stack (Updated)
 
 ```text
-System → Structure → Field → Geometry → Stability → Control → Navigation
+System → Structure → Field → Geometry → Stability → Constraint → Control → Navigation
 ```
 
 | Layer | Function |
@@ -41,7 +41,8 @@ System → Structure → Field → Geometry → Stability → Control → Naviga
 | Field | Represents dynamics as continuous structured fields |
 | Geometry | Reveals basins, channels, separatrices |
 | Stability | Measures convergence, sensitivity, and local instability |
-| Control | Shapes trajectories within the field |
+| Constraint | Defines what motion is physically possible |
+| Control | Interacts with trajectories within constraints |
 | Navigation | Executes movement through field structure |
 
 ---
@@ -58,20 +59,22 @@ C --> D["Field Layer\nGeometry + Stability"]
 
 D --> E["Transition Geometry\nBasins / Separatrix / Gates"]
 
-E --> F["Control Layer\n(CORE)"]
-F --> G["Navigator"]
+E --> F["Constraint Layer\n(NEW)"]
 
-G --> H["System Behavior\nConvergence / Stability"]
+F --> G["Control Layer\n(CORE)"]
+G --> H["Navigator"]
 
-%% Styling
+H --> I["System Behavior\nConvergence / Stability"]
+
 classDef core fill:#1f77b4,color:#fff,stroke:#0d3b66
 classDef layer fill:#2ca02c,color:#fff,stroke:#14532d
 classDef result fill:#d62728,color:#fff,stroke:#7f1d1d
 
-class C,F core
-class D,E layer
-class H result
+class C,G core
+class D,E,F layer
+class I result
 ```
+
 ---
 
 # 🔧 Implementation Mapping
@@ -81,6 +84,8 @@ ARCHY (Simulation)
 → DISCOVERY_ENGINE
 → ARCHITECTURE/CORE/field_reconstruction
 → FIELD_LAYER
+→ Transition Geometry
+→ Constraint Layer (emergent)
 → ARCHITECTURE/CORE/control_layer
 → NAVIGATOR
 ```
@@ -115,11 +120,11 @@ Builds the system representation from data:
 - stability estimates  
 - boundary candidates  
 
-👉 This is the transition from **data → structure**
+👉 transition from **data → structure**
 
 ---
 
-## 🌊 3. Field Layer (Interpretation Layer)
+## 🌊 3. Field Layer
 
 Location:
 
@@ -127,7 +132,7 @@ Location:
 FIELD_LAYER/
 ```
 
-Transforms structure into a **continuous representation with meaning**.
+Transforms structure into a **continuous field representation**.
 
 ### Components
 
@@ -141,9 +146,6 @@ Transforms structure into a **continuous representation with meaning**.
 E(x) = -log(p(x))
 ```
 
-- wells → stable regions  
-- barriers → transitions  
-
 ---
 
 ### 🌀 Field Decomposition
@@ -152,90 +154,60 @@ E(x) = -log(p(x))
 dx/dt ≈ -∇V(x) + R(x)
 ```
 
-### 🧠 Key Insight
-
 > Dynamics = attraction + rotation
 
 ---
 
 ## 🎯 4. Geometry Layer
 
-Extracted from field:
-
-- basins (attractors)  
-- channels (flow paths)  
-- separatrices (boundaries)  
+- basins  
+- channels  
+- separatrices  
 - transition corridors  
 
 ---
 
-### Fixpoint & Convergence
+## 🔶 5. Stability Layer
 
-- stable point x*  
-- measurable basin  
-- spiral convergence  
-
----
-
-## 🔶 5. Stability Layer (V8)
-
-This layer measures **how the system behaves locally and globally over time**.
-
-### Components
-
-#### Lyapunov Map
-
-λ(x) = divergence of nearby trajectories
-
-- λ < 0 → stable  
-- λ ≈ 0 → neutral  
-- λ > 0 → unstable  
+- Lyapunov field  
+- stability gradients  
+- proto-gates  
 
 ---
 
-#### Boundary Stability
+## 🔒 6. Constraint Layer (NEW CORE)
 
-- separatrix is globally stable  
-- local weak points exist  
+This layer reflects a **critical discovery from experimental results**.
 
-→ "proto-gates"
+### Observation
 
----
+```text
+control → deviation → absorption → return
+```
 
-#### Gate Detection
+### Key Property
 
-- local Lyapunov maxima along boundary  
-- candidate transition points  
+```text
+The system preserves its manifold.
+```
 
----
+### Interpretation
 
-#### Injection Testing
+- motion is constrained to structured regions  
+- transitions cannot be forced arbitrarily  
+- internal perturbations are absorbed  
 
-- directional perturbations applied  
+### Implication
 
-Result:
+```text
+Control does not override the system.
 
-no branching observed  
-
----
-
-### 🧠 Key Insight
-
-> The system is stability-constrained  
-> not all geometrically possible transitions are dynamically realizable
-
----
-
-### ⚡ Implication
-
-- boundaries ≠ instability  
-- instability ≠ transition  
-
-→ geometry and stability are separate layers  
+It must operate within its constraints.
+```
 
 ---
 
-## 🎮 6. Control Layer (CORE)
+## 🎮 7. Control Layer (REVISED)
 
 Location:
 
@@ -243,36 +215,32 @@ Location:
 ARCHITECTURE/CORE/control_layer
 ```
 
-Implements active system interaction:
+### Updated Role
 
-- basin detection  
-- separatrix extraction  
-- gate extraction  
-- gate tracking  
-- trajectory steering  
+Control is NOT free-form trajectory shaping.
 
----
+It is:
 
-### 🧠 Key Insight
+```text
+constraint-aware interaction with system geometry
+```
 
-> Control = shaping motion inside the field  
-> using valid geometric and stability structures
+### Capabilities
 
----
+- trajectory alignment  
+- gate targeting  
+- flow-aligned perturbation  
+- local trajectory deformation  
 
-## 🔹 Transition Geometry (NEW CORE)
+### Limitation (CRITICAL)
 
-New structural elements:
-
-- Basins → stable long-term behavior  
-- Separatrix → boundary between regimes  
-- Gates → minimal-cost transition points  
-
-👉 Control operates on these structures  
+```text
+Control cannot break system constraints.
+```
 
 ---
 
-## 🧭 7. Navigation Layer
+## 🧭 8. Navigation Layer
 
 Location:
 
@@ -280,17 +248,19 @@ Location:
 NAVIGATOR/
 ```
 
-Executes movement:
+Navigation executes motion:
 
 - follows geometry  
 - respects stability  
-- converges to attractors  
+- respects constraints  
 
 ---
 
-### Key Property
+### Updated Principle
 
-> Navigation is constrained by both geometry AND stability  
+```text
+Navigation = movement inside allowed geometry
+```
 
 ---
 
@@ -300,15 +270,12 @@ NEXAH supports:
 
 - structure extraction  
 - field reconstruction  
-- field decomposition  
 - geometry extraction  
-- stability analysis (Lyapunov)  
-- basin detection  
-- separatrix extraction  
+- stability mapping  
+- constraint detection (implicit)  
 - gate detection  
-- trajectory control  
+- constrained control  
 - navigation  
-- attractor convergence  
 
 ---
 
@@ -321,22 +288,26 @@ NEXAH supports:
 | Field Layer | ✓ |
 | Geometry Extraction | ✓ |
 | Stability Layer | ✓ |
-| Control Layer | ✓ |
+| Constraint Layer | ✓ (emergent) |
+| Control Layer | ✓ (revised) |
 | Navigation Engine | ✓ |
 | Unified Kernel | ☐ |
-| Reproducibility Layer | ☐ |
 
 ---
 
-# 🔥 Architectural Shift
+# 🔥 Architectural Shift (UPDATED)
 
 From:
 
-analysis → structure → signals  
+```text
+analysis → control → navigation
+```
 
 To:
 
-structure → field → geometry → stability → control → navigation  
+```text
+structure → field → geometry → stability → constraint → control → navigation
+```
 
 ---
 
@@ -344,59 +315,27 @@ structure → field → geometry → stability → control → navigation
 
 The system operates as:
 
-- dynamics → structure  
-- structure → field  
-- field → geometry  
-- geometry → stability constraints  
-- stability → allowed motion  
-- control → trajectory shaping  
-- navigation → convergence  
+- structure defines geometry  
+- geometry defines stability  
+- stability defines constraints  
+- constraints define possible motion  
+- control interacts within constraints  
+- navigation executes allowed motion  
 
 ---
 
-# ⚡ System Capabilities
+# ⚡ Core Law
 
-## Field Reconstruction
-- probability fields  
-- energy landscapes  
-- flow fields  
-
----
-
-## Geometry
-- basins  
-- channels  
-- separatrices  
-- corridors  
-
----
-
-## Stability
-- Lyapunov field  
-- stability gradients  
-- gate detection  
-- transition constraints  
-
----
-
-## Control
-- trajectory shaping  
-- gate-based routing  
-- adaptive steering  
-
----
-
-## Navigation
-- movement through field  
-- constrained transitions  
-- convergence to attractors  
+```text
+The system evolves on a constrained manifold.
+```
 
 ---
 
 # 🌍 Application Domains
 
 - chaotic systems (Lorenz)  
-- power systems  
+- power systems (IEEE)  
 - network dynamics  
 - multi-agent systems  
 
@@ -405,208 +344,22 @@ The system operates as:
 # 🚀 Next Development Targets
 
 - unified navigation kernel  
-- reproducible demo pipeline  
-- API abstraction  
-- statistical validation  
-- real-world system packaging  
-
-
----
-
-# 🚀 EXTENSION — Advanced Transition & Control Layer (v56–v80)
-
-This section reflects the latest evolution of NEXAH beyond classical field-based analysis.
-
-It introduces **explicit transition geometry and navigable control structures**.
-
----
-
-## 🔷 Transition Geometry (Explicit Model)
-
-The system is no longer described only by fields, but by:
-
-- **Basins** → stable long-term regions  
-- **Separatrices** → regime boundaries  
-- **Gates** → directional transition corridors  
-
-Key refinement:
-
-```text
-A gate is NOT a point.
-A gate is a directional corridor in state space.
-```
-
----
-
-## 🔷 Gate Structure & Basin Graph
-
-The system can be represented as:
-
-```text
-State Space → Basin Decomposition → Gate Graph
-```
-
-This introduces:
-
-- adjacency constraints  
-- transition feasibility  
-- structured routing between regimes  
-
----
-
-## 🔷 Flow-Aligned Control
-
-Control is no longer arbitrary.
-
-```text
-Control must align with the natural flow of the system.
-```
-
-Key properties:
-
-- control propagates through system dynamics  
-- minimal intervention yields maximal effect  
-- forcing against structure leads to instability  
-
----
-
-## 🔷 Phase-Aligned Navigation
-
-Transitions depend on phase:
-
-```text
-P(gate | θ) ≠ const
-```
-
-This introduces:
-
-- phase-dependent accessibility  
-- timing constraints  
-- dynamic transition windows  
-
----
-
-## 🔷 Sheet Structure & Multi-Layer Dynamics
-
-The field is layered:
-
-```text
-Core → stable orbit  
-Mid → oscillatory region  
-Outer → instability layer  
-```
-
-Transitions occur via:
-
-- sheet interactions  
-- switching behavior  
-- structural conflicts  
-
----
-
-## 🔷 Final Transition Definition (Updated)
-
-```text
-Transition =
-navigation through
-
-- low-density corridors (greyspace)
-- competing flow structures
-- probabilistic instability fields
-
-under structural and control constraints
-```
-
----
-
-## 🔷 Updated System Model
-
-```text
-System =
-trajectory evolving in
-
-- structured field
-- layered sheets
-- probabilistic instability regions
-- discrete basins
-- transition graph
-- controllable geometry
-```
-
----
-
-## 🔷 Key Shift
-
-From:
-
-```text
-detect → predict → react
-```
-
-To:
-
-```text
-model → navigate → control transitions
-```
-
----
-
-## 🔷 Integration into Architecture
-
-This layer extends:
-
-```text
-Field → Geometry → Stability
-```
-
-into:
-
-```text
-→ Transition Geometry
-→ Gate Graph
-→ Flow-Aligned Control
-→ Phase-Aware Navigation
-```
-
----
-
-## 🔥 Final Insight
-
-NEXAH is not only:
-
-- a field reconstruction system  
-- a navigation system  
-
-It is:
-
-> a system that **actively steers trajectories through structured transition spaces**
-> under geometric, probabilistic, and stability constraints
-
----
-
-
-
-# 🧠 Milestone Summary
-
-Status:
-
-Field-based navigation system with explicit stability constraints  
-and operational control layer  
+- explicit constraint formalization  
+- stochastic robustness  
+- real-world validation (IEEE)  
 
 ---
 
 # 🔥 Final Insight
 
-NEXAH is no longer:
+```text
+You are not controlling the system.
 
-- only a structural system  
-- only a navigation system  
-
-It is:
-
-a system that reconstructs, constrains, controls, and navigates dynamical fields  
+You are navigating the geometry
+that the system allows.
+```
 
 ---
 
 NEXAH Architecture  
-Current system definition and implementation state
+Updated system definition · 2026
