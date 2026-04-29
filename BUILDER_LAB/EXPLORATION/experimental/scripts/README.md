@@ -636,7 +636,7 @@ Flow can be reconstructed from trajectory.
 ```
 ## 📊 Visual
 
-![Flow Channels](../outputs/run_028_flow_channels/figure_01_channels.png)
+![Flow Channels](../outputs/run_028_flow_channels/figure_01_flow_channels.png)
 
 ---
 
@@ -665,7 +665,7 @@ Motion is constrained to preferred paths.
 ```
 ## 📊 Visual
 
-![Stability Map](../outputs/run_029_stability_map/figure_01_stability.png)
+![Stability Map](../outputs/../outputs/run_029_flow_stability/figure_01_stability_map.png)
 
 ---
 
@@ -725,9 +725,9 @@ Dynamics are robust, not fragile.
 ```
 ## 📊 Visuals
 
-![Entropy Field](../outputs/run_031_local_entropy/figure_01_entropy_field.png)
+![Entropy Field](../outputs/run_031_local_flow_entropy/figure_01_entropy_field.png)
 
-![Entropy Timeline](../outputs/run_031_local_entropy/figure_02_entropy_timeline.png)
+![Entropy Timeline](../outputs/run_031_local_flow_entropy/figure_02_entropy_timeline.png)
 
 ---
 
@@ -870,11 +870,11 @@ Decision zones are sparse and localized.
 ```
 ## 📊 Visuals
 
-![State Space](../outputs/run_033_control_injection/figure_01_state.png)
+![State Space](../outputs/run_033_control_injection_test/figure_01_state.png)
 
-![Time Series](../outputs/run_033_control_injection/figure_02_time.png)
+![Time Series](../outputs/run_033_control_injection_test/figure_02_time.png)
 
-![Deviation](../outputs/run_033_control_injection/figure_03_deviation.png)
+![Deviation](../outputs/run_033_control_injection_test/figure_03_deviation.png)
 
 ---
 
@@ -908,11 +908,11 @@ System resists external perturbation.
 ```
 ## 📊 Visuals
 
-![State Space](../outputs/run_034_flow_control/figure_01_state.png)
+![State Space](../outputs/run_034_flow_aligned_control/figure_01_state.png)
 
-![Time Series](../outputs/run_034_flow_control/figure_02_time.png)
+![Time Series](../outputs/run_034_flow_aligned_control/figure_02_time.png)
 
-![Deviation](../outputs/run_034_flow_control/figure_03_deviation.png)
+![Deviation](../outputs/run_034_flow_aligned_control/figure_03_deviation.png)
 
 ---
 
@@ -980,9 +980,9 @@ Control integrates but does not propagate.
 ```
 ## 📊 Visuals
 
-![State Space](../outputs/run_036_phase_control/figure_01_state.png)
+![State Space](../outputs/run_036_phase_shift_control/figure_01_state.png)
 
-![Deviation](../outputs/run_036_phase_control/figure_03_deviation.png)
+![Deviation](../outputs/run_036_phase_shift_control/figure_03_deviation.png)
 
 ---
 
@@ -1083,9 +1083,9 @@ System allows drift, but prevents escape.
 ```
 ## 📊 Visuals
 
-![State Space](../outputs/run_039_escape_vector/figure_01_state.png)
+![State Space](../outputs/run_039_escape_vector_control/figure_01_state.png)
 
-![Curvature Field](../outputs/run_039_escape_vector/figure_04_curvature.png)
+![Curvature Field](../outputs/run_039_escape_vector_control/figure_04_curvature.png)
 
 ---
 
