@@ -64,7 +64,7 @@ data → lifting → linear operator → spectrum → modes
 | Density | $p(x)$ via KDE | invariant measure $\mu$ |
 | Energy | $E(x) = -\log p(x)$ | implicit via eigenfunctions |
 | Gradient | $\nabla E(x)$ | $\nabla \phi_i(x)$ |
-| Stability | alignment / motion coherence | $\operatorname{Re}(\lambda_i)$ |
+| Stability | alignment / motion coherence | $\text{Re}(\lambda_i)$ |
 | Transition | basins + gates | eigenfunction level sets |
 | Control | navigation field $u$ | Koopman-MPC |
 
