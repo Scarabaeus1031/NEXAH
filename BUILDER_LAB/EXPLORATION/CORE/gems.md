@@ -1,307 +1,385 @@
-# 💎 NEXAH Gems
+# 💎 NEXAH Gems (v2 — System Anchors)
 
-This document collects **critical insights, breakthroughs, and high-value components**.
+This document collects **critical structural insights and system-defining components**.
 
-These are not todos.  
-They are **anchors of the system**.
+These are not ideas.
 
----
+They are:
 
-# 🟢 CORE GEMS (IMPLEMENTED / VERIFIED)
-
----
-
-## 🧭 GEM 001 — Discrete Navigator (State Graph Engine)
-
-## Status
-✅ Implemented
-
-## Description
-
-A working **navigation engine on state graphs**:
-
-State Graph  
-→ Regime Scoring  
-→ Risk Distance  
-→ Lookahead  
-→ Decision  
+> **verified, observable, or structurally necessary elements of NEXAH**
 
 ---
 
-## Key Insight
-
-Navigation is based on:
-
-- structure  
-- risk distance  
-- forward simulation  
+# 🟢 CORE GEMS (IMPLEMENTED / STRUCTURALLY VERIFIED)
 
 ---
 
-## Importance
+## 🌊 GEM 001 — Field Reconstruction
 
-First explicit navigation system in NEXAH.
+## Status  
+✅ Implemented (FIELD_LAYER / CORE)
 
----
+## Description  
 
----
+Reconstruction of system dynamics as a **continuous field**:
 
-## 🌊 GEM 002 — Field Reconstruction
-
-## Status
-✅ Implemented (FIELD_LAYER)
-
-## Description
-
-The system reconstructs dynamics as a **continuous field representation**:
-
-- probability → density field  
+- density → probability field  
 - energy → landscape  
-- flow → directional field  
+- flow → directional structure  
 
 ---
 
-## Key Insight
+## Key Insight  
 
-> Systems are not just trajectories  
-> but **structured fields with geometry and flow**
-
----
-
-## Importance
-
-This is the **central abstraction layer of NEXAH**
+> Systems are not trajectories.  
+> They are **fields with geometry and flow**.
 
 ---
 
+## Importance  
+
+**Central abstraction layer of NEXAH**
+
 ---
 
-## 🌀 GEM 003 — Gradient + Rotation Decomposition
+---
 
-## Status
-✅ Implemented (V29+)
+## 🌀 GEM 002 — Gradient + Rotation Decomposition
 
-## Description
+## Status  
+✅ Implemented (FIELD_DECOMPOSITION)
 
-Field decomposition into:
+## Description  
+
+Field decomposition:
 
 ```text
 dx/dt ≈ -∇V(x) + R(x)
 ```
 
-Where:
-
-- ∇V → attraction / energy minimization  
-- R → rotational / circulation structure  
+- ∇V → attraction / stability  
+- R → rotation / structure  
 
 ---
 
-## Key Insight
+## Key Insight  
 
-> Dynamics are not purely gradient-driven  
-> but a combination of **attraction and rotation**
+> Dynamics = attraction + rotation  
+> not purely gradient descent
 
 ---
 
-## Importance
+## Importance  
 
-Bridges:
+Links:
 
 - dynamical systems  
-- fluid dynamics  
-- control theory  
+- fluid-like structure  
+- transition behavior  
 
 ---
 
 ---
 
-## 🎯 GEM 004 — Convergence & Fixpoint Detection
+## 🔶 GEM 003 — Geometry Emergence
 
-## Status
-✅ Implemented (V39–V40)
+## Status  
+✅ Implemented
 
-## Description
+## Description  
 
-The system converges to a **stable fixpoint**:
+Field structure yields:
 
-- reproducible endpoint  
-- small endpoint variance  
-- measurable basin radius  
-
----
-
-## Key Insight
-
-> The field defines **real, stable convergence targets**
+- basins (stable regions)  
+- channels (flow paths)  
+- separatrix (boundaries)  
 
 ---
 
-## Importance
+## Key Insight  
 
-Transforms NEXAH from:
-
-- exploration → **goal-capable system**
-
----
+> Geometry is not imposed.  
+> It emerges from the field.
 
 ---
 
-## 🎮 GEM 005 — Control as Field Shaping
-
-## Status
-✅ Implemented (V13–V37)
-
-## Description
-
-Control operates by modifying trajectories within the field:
-
-- energy shaping  
-- path steering  
-- attractor bias  
-
----
-
-## Key Insight
-
-> Control is not external  
-> it **reshapes the field geometry**
-
----
-
-## Importance
-
-Unifies:
-
-- control  
-- geometry  
-- dynamics  
-
----
-
----
-
-## 🔁 GEM 006 — Continuous ↔ Discrete Duality
-
-## Status
-✅ Implemented (V9–V12)
-
-## Description
-
-The system simultaneously exhibits:
-
-- continuous field dynamics  
-- discrete state topology  
-
----
-
-## Key Insight
-
-> Continuous dynamics collapse into  
-> **discrete, navigable structures**
-
----
-
-## Importance
+## Importance  
 
 Foundation for:
 
-- graph navigation  
-- cycle detection  
-- regime modeling  
+- transition modeling  
+- navigation  
+- control  
 
 ---
 
 ---
 
-## 🧭 GEM 007 — IEEE Collapse Detection
+## 🔷 GEM 004 — Transition Geometry (Basins + Gates)
 
-## Status
-⚠️ Observed, NOT validated
+## Status  
+⚠️ Partially validated
 
-## Description
+## Description  
 
-Early detection signals observed in IEEE systems.
+System forms a **basin–gate structure**:
 
----
-
-## IMPORTANT CORRECTION
-
-- signal exists  
-- not reproducible yet  
+- basins → stable regimes  
+- gates → transition corridors  
 
 ---
 
-## Importance
+## Key Insight  
 
-Still critical — but must remain:
+> Transitions are NOT events.  
+> They are **structured pathways through geometry**.
 
-> experimental, not claimed  
+---
+
+## Importance  
+
+Core of:
+
+- navigation  
+- control  
+- system interpretation  
 
 ---
 
 ---
 
-# 🟡 EXTENDED GEMS (STRUCTURAL OBSERVATIONS)
+## 🔒 GEM 005 — Constraint Layer (CRITICAL)
+
+## Status  
+⚠️ Newly discovered (experimental → stabilizing)
+
+## Description  
+
+Observed across experiments:
+
+- control attempts are absorbed  
+- motion remains confined  
+- transitions follow allowed pathways  
 
 ---
 
-## 🧭 GEM 008 — Channel & Dual-Strand Structure
+## Key Insight  
 
-## Status
+```text
+The system evolves on a constrained manifold.
+```
+
+---
+
+## Implication  
+
+- not all geometric transitions are realizable  
+- control is structure-limited  
+- system preserves its internal consistency  
+
+---
+
+## Importance  
+
+🔥 **This is a defining NEXAH property**
+
+---
+
+---
+
+## 🎮 GEM 006 — Control as Structure-Aligned Intervention
+
+## Status  
+⚠️ Early-stage (partially validated)
+
+## Description  
+
+Control operates via:
+
+- flow alignment  
+- gate interaction  
+- trajectory shaping  
+
+NOT:
+
+- arbitrary forcing  
+
+---
+
+## Key Insight  
+
+> Control does not override the system.  
+>  
+> It operates **within allowed structure**.
+
+---
+
+## Importance  
+
+Transforms NEXAH into:
+
+→ intervention-capable system  
+
+---
+
+---
+
+## 🧭 GEM 007 — Navigation as Geometry-Constrained Motion
+
+## Status  
+⚠️ Prototype
+
+## Description  
+
+Navigation operates on:
+
+- basin graph  
+- gate structure  
+- field geometry  
+
+---
+
+## Key Insight  
+
+> Navigation is not optimization.  
+>  
+> It is **movement inside constrained geometry**.
+
+---
+
+## Importance  
+
+Final execution layer  
+
+---
+
+---
+
+## 🔁 GEM 008 — Continuous ↔ Discrete Duality
+
+## Status  
+✅ Implemented
+
+## Description  
+
+System simultaneously exhibits:
+
+- continuous field  
+- discrete topology (basins, transitions)  
+
+---
+
+## Key Insight  
+
+> Continuous dynamics collapse into  
+> **discrete, navigable structure**
+
+---
+
+## Importance  
+
+Bridge between:
+
+- field theory  
+- graph-based navigation  
+
+---
+
+---
+
+# 🟡 STRUCTURAL GEMS (OBSERVED, NOT FULLY VALIDATED)
+
+---
+
+## 🧭 GEM 009 — Channel Structure
+
+## Status  
 ⚠️ Observed
 
-## Description
+## Description  
 
-Systems exhibit:
-
-- channel-like motion  
-- dual trajectory strands  
-- transition regions  
+- motion concentrates in channels  
+- pathways are structured  
+- transitions follow corridors  
 
 ---
 
-## Key Insight
+## Key Insight  
 
-> Motion is constrained to **structured pathways**
-
----
-
-## Importance
-
-Strong geometric interpretation of dynamics  
+> Motion is not free.  
+> It is **channel-constrained**.
 
 ---
 
 ---
 
-# 🟠 EXPERIMENTAL GEMS (DO NOT PROMOTE)
+## 🧭 GEM 010 — Sensitivity / Decision Zones
+
+## Status  
+⚠️ Observed
+
+## Description  
+
+- localized regions where control is effective  
+- sparse transition windows  
 
 ---
 
-## 🧭 GEM 009 — Spiral Coupling
+## Key Insight  
 
-## Status
+> Control is only possible  
+> in **small, structured regions**
+
+---
+
+---
+
+## 🧭 GEM 011 — Multi-Field Interaction
+
+## Status  
+⚠️ Experimental (Builder Lab)
+
+## Description  
+
+Interaction between:
+
+- flow field  
+- stability field  
+- control field  
+
+---
+
+## Importance  
+
+Relevant for:
+
+→ IEEE systems  
+→ real-world dynamics  
+
+---
+
+---
+
+# 🔴 EXPERIMENTAL GEMS (DO NOT PROMOTE)
+
+---
+
+## GEM 012 — Spiral Coupling  
+## GEM 013 — Axial Space / Root Geometry  
+## GEM 014 — Modular / Prime Structures  
+
+## Status  
 🧪 Experimental
 
 ---
 
-## 🧭 GEM 010 — Axial Space / Root Geometry
+## Rule  
 
-## Status
-🧪 Experimental
+❗ Must remain outside core until:
 
----
-
-## 🧭 GEM 011 — Modular Resonance (mod / primes)
-
-## Status
-🧪 Experimental
-
----
-
-## Rule
-
-❗ Do NOT mix into core system yet
+- reproducible  
+- measurable  
+- system-relevant  
 
 ---
 
@@ -309,26 +387,47 @@ Strong geometric interpretation of dynamics
 
 # 🧭 GEM RULE
 
-Only promote a GEM to CORE if:
+A GEM becomes CORE only if:
 
-- it is reproducible  
-- it is measurable  
-- it is implemented or testable  
+✔ reproducible  
+✔ measurable  
+✔ structurally necessary  
+✔ integrated into system pipeline  
 
 ---
 
-# 🧠 FINAL INSIGHT
+# 🧠 FINAL SYSTEM VIEW
 
-NEXAH is no longer just detecting structure.
+NEXAH now consists of:
 
-It now provides:
+```text
+Field
+→ Geometry
+→ Transition Structure
+→ Constraint Layer
+→ Control
+→ Navigation
+```
 
-> **a controllable, convergent field representation of dynamical systems**
+---
+
+# 🔥 FINAL INSIGHT
+
+```text
+Systems do not offer arbitrary motion.
+
+They define:
+
+- allowed paths
+- constrained transitions
+- inevitable outcomes
+```
 
 ---
 
 **NEXAH Gems**  
-Structure is discovered.  
-Fields are reconstructed.  
-Dynamics are navigated.  
-Only some ideas become system.
+Structure is extracted.  
+Geometry emerges.  
+Constraints restrict motion.  
+Control operates within limits.  
+Navigation follows structure.
