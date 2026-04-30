@@ -235,14 +235,53 @@ The NEXAH Gate Operator provides:
 
 ---
 
-## ⚠️ Important Clarification
+# ⚠️ Important Clarification
 
 The Gate Operator does NOT directly detect transitions.
 
-It identifies regions of structural instability.
+It identifies regions of structural instability in the continuous flow field.
 
-Actual transitions depend on additional discrete structure
-(e.g. sheet / basin switching).
+Empirical results show:
+
+```text
+• high G(x) does not guarantee a transition
+• transitions can occur without strong G(x) peaks
+```
+
+---
+
+# 🔁 Relation to Transition Structure
+
+Transitions depend on an additional discrete layer:
+
+```text
+sheet / regime structure
+```
+
+Formally:
+
+```text
+Transition =
+sheet switch
++ interaction with instability field
+```
+
+---
+
+## 🧠 Interpretation
+
+```text
+G(x) = instability field (continuous)
+
+Transitions = structural reconfiguration (discrete)
+```
+
+---
+
+## 🔗 See also
+
+- `transition_structure.md`
+- `experiments.md`
 
 ---
 
