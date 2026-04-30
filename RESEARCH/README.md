@@ -8,12 +8,25 @@ It is a **living research layer** that evolves through building, observation, an
 
 ---
 
+# 🧭 Start Here
+
+If you are new to NEXAH, follow this order:
+
+```text
+1. CORE_CONCEPT_MAP.md
+2. CORE_CONCEPTS/
+3. FOUNDATION/
+4. FINDINGS/
+```
+
+This provides a complete path from intuition → structure → validation.
+
+---
+
 # 🧭 Role in NEXAH
 
 ```text
-RESEARCH (foundation & findings)
-        ↓
-FRAMEWORK (interpretation)
+RESEARCH (concepts & findings)
         ↓
 DISCOVERY ENGINE (extraction)
         ↓
@@ -71,66 +84,33 @@ It is:
 
 ---
 
+## 🧩 CORE CONCEPTS
+
+→ `CORE_CONCEPTS/`
+
+Defines the **core system view**:
+
+- field (structure from dynamics)  
+- vessel (constraints & containment)  
+- multi-layer interaction  
+- transition geometry (aperture system)  
+- structural operators (Γ, Δ, Ω)  
+
+👉 **Role:** conceptual backbone
+
+---
+
 ## 🧩 FOUNDATION
 
 → `FOUNDATION/`
 
-Core assumptions and semi-formal structure:
+Defines the **minimal structural assumptions**:
 
 - axioms (field, coherence, transitions)  
-- structural relations  
-- navigation formulation  
+- definitions (regime, gate, coherence)  
+- structural theorems  
 
----
-
-## 🔬 FIELD MODEL
-
-→ `field_model.md`
-
-Systems as:
-
-- continuous fields  
-- flow-driven structures  
-- geometric dynamics  
-
----
-
-## 🔗 THEORY → FIELD MAPPING
-
-→ `theory_to_field_mapping.md`
-
-Translation:
-
-```text
-structure → geometry
-```
-
----
-
-## ⚙️ MULTI-LAYER INTERACTION
-
-→ `multi_layer_interaction.md`  
-→ `APPLIED_CASES/...`
-
-Describes:
-
-- regimes  
-- transitions  
-- gates  
-- layered flow interactions  
-
----
-
-## 🧠 INTERPRETATION
-
-→ `zeta_lens_framework.md`
-
-Conceptual lens for interpreting:
-
-- local vs global structure  
-- projection vs underlying geometry  
-
-⚠️ Interpretation layer only — not defining system behavior  
+👉 **Role:** formal grounding
 
 ---
 
@@ -144,11 +124,13 @@ Empirical results and cross-system observations:
 - flow geometry  
 - control behavior  
 
-Key update:
+Key result:
 
 ```text
-cross-system invariance
+cross-system invariance of transition structure
 ```
+
+👉 **Role:** validation layer
 
 ---
 
@@ -162,6 +144,8 @@ Examples across domains:
 - socio-technical systems  
 - decision systems  
 
+👉 **Role:** applied interpretation
+
 ---
 
 ## 🕰️ HISTORY
@@ -172,14 +156,36 @@ Evolution of ideas and early versions.
 
 ---
 
-## 🖼️ VISUAL NOTES
+## 📝 NOTES
+
+→ `NOTES/`
+
+Exploratory and informal research notes.
+
+---
+
+## 🧠 FORMALIZATION (System Models)
+
+→ `SYSTEM_MODELS/`
+
+Contains formal and semi-formal extensions:
+
+- operator-based models  
+- Koopman-style mappings  
+- structural modeling experiments  
+
+👉 **Role:** bridge to formal systems
+
+---
+
+## 🖼️ VISUALS
 
 → `visual_gallery.md`  
 → `visuals/`
 
 Visualizations supporting reasoning.
 
-⚠️ Not formal proof.
+⚠️ Visuals are **interpretive**, not proofs.
 
 ---
 
