@@ -1,5 +1,9 @@
 # 🧠 NEXAH — Research Layer
 
+![NEXAH Structure Pipeline](RESEARCH/visuals/nexah_hero_structure_pipeline_v1.png)
+
+*From raw dynamics to structured fields and navigable system behavior.*
+
 This module contains the **conceptual, structural, and empirical foundation** of NEXAH.
 
 It is not a finished theory.
