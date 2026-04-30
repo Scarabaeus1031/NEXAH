@@ -1,388 +1,431 @@
-# 🚀 NEXAH — Cleanup, Validation & Release TODO (v2)
+# ⚡ NEXAH — A Geometric Framework for Dynamical Systems
 
-**Date:** April 2026  
-**Phase:** Transition from Experimental System → Validated Framework  
+> NEXAH reconstructs structure, transitions, and stability  
+> directly from system dynamics.
 
----
-
-# 🧠 CURRENT SYSTEM STATE (REAL)
-
-NEXAH currently provides a **complete structural pipeline**:
-
-✔ structure discovery (Discovery Engine)  
-✔ field reconstruction (Field Layer)  
-✔ geometry extraction (basins, channels, separatrix)  
-✔ transition geometry (gates, basin graph)  
-✔ control layer (trajectory shaping, gate interaction)  
-✔ navigation layer (structured movement)  
-✔ attractor & convergence detection  
-✔ stability field (Lyapunov + boundary structure)  
+> Complex systems are not random.  
+> They evolve within **structured fields that constrain motion, transitions, and outcomes**.
 
 ---
 
-## 🔥 SYSTEM STATUS
+## 🧭 Conceptual Overview
 
-> NEXAH is no longer a prototype.  
->  
-> It is a **working structural system — not yet validated.**
+![NEXAH Ecosystem Map](RESEARCH/visuals/NEXAH_Ecosystem_Map_v1.png)
+
+*Positioning of NEXAH within dynamical systems, control theory, and graph-based models.*
+
+NEXAH integrates:
+
+- continuous field representation (dynamics, flow, geometry)  
+- discrete transition structure (basins, regimes, graphs)  
+- control as trajectory shaping within structured space  
+
+👉 It acts as an **integration layer across dynamical, geometric, and discrete perspectives**.
 
 ---
 
-# ⚠️ STRATEGIC SHIFT
+## ⚠️ Research Status
 
-```text
-OLD:
-build → extend → explore
+NEXAH is an experimental framework.
 
-NEW:
-validate → stabilize → consolidate → expose
+- validated core concepts  
+- active development  
+- not yet production-ready  
+
+---
+
+# 🚀 Quick Start
+
+```bash
+pip install -e .
+# or
+pip install -r requirements.txt
+
+python run_nexah_demo.py
 ```
 
 ---
 
-# 🔴 PRIORITY 1 — VALIDATION (HIGHEST PRIORITY)
+# 🧠 What NEXAH Does
 
-## Goal:
-> Prove that the observed structure is **real and reproducible**
-
----
-
-### Core Tasks:
-
-- [ ] Multi-run validation (20–50 runs):
-  - Lorenz
-  - additional systems (optional)
-
-- [ ] Structure stability:
-  - basins
-  - channels
-  - gates
-  - attractor position
-
-- [ ] Transition consistency:
-  - probability stability
-  - path reproducibility
-
----
-
-### Noise Robustness (CRITICAL):
-
-- [ ] inject Gaussian noise
-- [ ] compare:
-  - clean vs noisy fields
-  - gate stability
-  - basin integrity
-
----
-
-### Required Output:
-
-Add **RESULTS blocks**:
+NEXAH transforms time-series data into a **geometric system representation**:
 
 ```text
-Runs: 30
-Attractor variance: low
-Channel stability: high
-Gate persistence: medium-high
-Noise robustness: confirmed
+dynamics → structure → field → geometry → stability → control → navigation
+```
+
+This enables:
+
+- early detection of transitions  
+- identification of instability regions  
+- reconstruction of system structure  
+- trajectory-aware system analysis  
+
+---
+
+# 🔬 Core Idea
+
+Traditional approaches model:
+
+```text
+state → next state
+```
+
+NEXAH models:
+
+```text
+trajectory within a structured field
+```
+
+Where:
+
+- stability = alignment with field structure  
+- instability = drift into low-density / conflicting regions  
+- transitions = movement through structured corridors  
+
+---
+
+# 🧭 Example
+
+![Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+
+- instability is **not random**  
+- transitions occur in **specific regions**  
+- trajectories follow **field geometry**
+
+---
+
+# 🧪 Validation (Power Systems)
+
+📂 `APPLICATIONS/power_systems/VALIDATION_LAYER/`
+
+NEXAH has been tested on IEEE power system models.
+
+**Key results:**
+
+- early warning up to **40–50 time units before collapse**  
+- instability appears as **geometric drift**  
+- motion metrics (angle, speed) reveal transition dynamics  
+
+👉 See:
+
+- `APPLICATIONS/power_systems/VALIDATION_LAYER/README.md`  
+- `APPLICATIONS/power_systems/VALIDATION_LAYER/reports/validation_report_v3.md`
+
+---
+
+# 🧩 Core Module
+
+```text
+NEXAH_CORE/
+```
+
+Implements:
+
+- transition detection  
+- probabilistic instability field  
+- structure-aware analysis  
+- early navigation concepts  
+
+---
+
+# 🔷 System Perspective
+
+NEXAH combines:
+
+```text
+Field (continuous)
+↔ Geometry (structure)
+↔ Graph (transitions)
+↔ Control (trajectory shaping)
+```
+
+Interpretation:
+
+- field → defines motion  
+- geometry → defines constraints  
+- graph → defines transitions  
+- control → shapes trajectories  
+
+---
+
+# 🔬 Current Capabilities
+
+✔ field reconstruction from data  
+✔ stability as spatial structure  
+✔ transition detection (gates, basins)  
+✔ probabilistic transition modeling  
+✔ early trajectory steering concepts  
+
+---
+
+# ⚠️ Current Limitations
+
+❌ no unified runtime kernel  
+❌ limited large-scale validation  
+❌ incomplete control layer  
+❌ no production-ready pipeline  
+
+---
+
+# 🧭 Positioning
+
+NEXAH is NOT:
+
+- a simulator  
+- a machine learning model  
+- a classical control system  
+
+NEXAH IS:
+
+> a **field-based framework for transition, structure, and system navigation**
+
+---
+
+# 🚀 Demos
+
+```bash
+python run_nexah_demo.py
+python run_ieee_demo.py
 ```
 
 ---
 
-### Target:
+# 📚 Documentation
 
-> Demonstrate that structure is **not a visualization artifact**
-
----
-
-# 🔵 PRIORITY 2 — CONTROL VALIDATION
-
-## Goal:
-> Prove that the system is **actually controllable**
+- 📊 [System State](ARCHITECTURE/SYSTEM_STATE.md)  
+- 🔬 [Methods](ARCHITECTURE/METHODS.md)  
+- 🧭 [Architecture](ARCHITECTURE/README.md)  
+- 🌀 [Visual Gallery](VISUAL_GALLERY.md)  
+- 🧠 [Research Vision](RESEARCH/RESEARCH_VISION.md)
 
 ---
 
-### Tasks:
+# 🧠 Learn More
 
-- [ ] trajectory steering reproducibility  
-- [ ] transition enforcement / avoidance  
-- [ ] gate-based routing success rate  
-- [ ] control stability under noise  
+👉 [START_HERE.md](START_HERE.md)
+
+Full explanation, visuals, and system walkthrough.
 
 ---
 
-### Key Question:
+# ⚡ Core Insight
 
 ```text
-Does control reliably influence transitions?
+Stability is not a value.
+It is a region in a structured field.
 ```
 
 ---
 
-### Target:
-
-> System behaves as a **controlled transition system**
-
----
-
-# 🟣 PRIORITY 3 — IEEE SYSTEM (REAL-WORLD BRIDGE)
-
-## Goal:
-> Establish credibility beyond synthetic systems
-
----
-
-### Status:
-
-✔ early detection works  
-✔ structure visible  
-
----
-
-### Tasks:
-
-- [ ] clarify pipeline (README)
-- [ ] distinguish:
-  - synthetic vs real system
-- [ ] validate:
-  - transition geometry
-  - stability structure
-- [ ] improve reproducibility
-
----
-
-### Target:
-
-> IEEE becomes the **external validation anchor**
-
----
-
-# 🟢 PRIORITY 4 — ATTRACTOR & CONVERGENCE
-
-## Goal:
-> Anchor the “inevitability” claim
-
----
-
-### Tasks:
-
-- [ ] endpoint clustering  
-- [ ] fixpoint estimation  
-- [ ] convergence rate  
-- [ ] basin size estimation  
-
----
-
-### Target:
-
-> Convergence is **measurable and stable**
-
----
-
-# 🟡 PRIORITY 5 — TRANSITION GEOMETRY CONSOLIDATION
-
-## Goal:
-> Stabilize the strongest concept in NEXAH
-
----
-
-### Tasks:
-
-- [ ] validate ENTRY → CORE → EXIT structure  
-- [ ] quantify gate geometry  
-- [ ] test directionality  
-- [ ] confirm across runs  
-
----
-
-### Target:
-
-> Transition = **structured geometric process**
-
----
-
-# 🟠 PRIORITY 6 — KERNEL (CRITICAL MISSING PIECE)
-
-## Goal:
-> Build the executable core of NEXAH
-
----
-
-### Current Problem:
-
-❌ no unified execution pipeline  
-❌ logic spread across modules  
-
----
-
-### Required:
-
-- [ ] define kernel pipeline:
+# 🧭 Final Statement
 
 ```text
-state → field → geometry → graph → control → next state
-```
+A system does not randomly fail.
 
-- [ ] unify:
-  - Field Layer
-  - Control Layer
-  - Navigation
-
-- [ ] implement minimal runtime
-
----
-
-### Target:
-
-> NEXAH becomes an **executable system**, not just modules
-
----
-
-# 🔶 PRIORITY 7 — ENTRY EXPERIENCE
-
-## Goal:
-> Clone → Run → Understand in 60 seconds
-
----
-
-### Tasks:
-
-- [ ] clean environment test  
-- [ ] remove hidden dependencies  
-- [ ] verify demo scripts  
-- [ ] simplify outputs  
-
----
-
-### Target:
-
-> external users can run NEXAH instantly
-
----
-
-# 🧩 PRIORITY 8 — VISUAL SYSTEM (CURATION)
-
-## Goal:
-> Reduce noise, increase clarity
-
----
-
-### Tasks:
-
-- [ ] reduce visuals to 3–5 key ones  
-- [ ] add 1-line explanation  
-- [ ] remove redundant plots  
-
----
-
-### Target:
-
-> visuals explain system, not overwhelm it
-
----
-
-# 🧱 PRIORITY 9 — REPO CONSOLIDATION
-
-## Goal:
-> Reduce structural fragmentation
-
----
-
-### Tasks:
-
-- [ ] mark legacy scripts  
-- [ ] archive unused experiments  
-- [ ] align Builder Lab → Core flow  
-- [ ] ensure module discoverability  
-
----
-
-### Target:
-
-> clear separation:
-
-```text
-experimental → research → core
+It moves through structured transition regions
+that define what outcomes are possible.
 ```
 
 ---
 
-# 🚀 RELEASE STRATEGY
-
-## Minimal Release Condition:
-
-✔ validation (multi-run + noise)  
-✔ control works  
-✔ IEEE demo understandable  
-✔ kernel prototype exists  
-✔ clean entry point  
+**Thomas K. R. Hofmann · NEXAH · 2026**- trajectory steering inside dynamical fields  
 
 ---
 
-## Release Steps:
+# 🔬 Core Idea
 
-1. [ ] validation complete  
-2. [ ] kernel prototype  
-3. [ ] README polish  
-4. [ ] test fresh clone  
-5. [ ] controlled external share  
-
----
-
-# 🧠 REALITY CHECK
-
-You have:
-
-✔ working system  
-✔ strong structural signal  
-✔ visual proof  
-✔ coherent architecture  
-
----
-
-You are missing:
-
-❗ validation  
-❗ kernel  
-❗ reproducibility  
-
----
-
-# 🔥 CURRENT POSITION
-
-You are NOT:
-
-> building a new system
-
-You ARE:
-
-> stabilizing and proving an existing one
-
----
-
-# 🧭 FINAL PHASE
+Traditional approaches treat systems as:
 
 ```text
-system → validation → kernel → exposure → feedback → iteration
+state → next state
+```
+
+NEXAH instead models:
+
+```text
+trajectory inside structured field
+```
+
+Where:
+
+- stability = alignment with field structure  
+- instability = low-density / competing flow regions  
+- transitions = movement through structured corridors  
+
+---
+
+# 🧭 Example
+
+![Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+
+→ instability is **not random**  
+→ transitions occur in **specific regions**  
+→ trajectories follow **field geometry**
+
+---
+
+# 🧩 Core Module
+
+```text
+NEXAH_CORE/
+```
+
+Implements:
+
+- transition detection  
+- probabilistic instability field  
+- structure-aware navigation  
+- early control concepts  
+
+---
+
+# 📚 Documentation
+
+- 📊 [System State](ARCHITECTURE/SYSTEM_STATE.md)  
+- 🔬 [Methods](ARCHITECTURE/METHODS.md)  
+- 🧭 [Architecture](ARCHITECTURE/README.md)  
+- 🌀 [Visual Gallery](VISUAL_GALLERY.md)  
+
+---
+
+# 🔷 System Perspective
+
+NEXAH combines three layers:
+
+```text
+Field (continuous)
+↔ Geometry (structure)
+↔ Graph (discrete transitions)
+↔ Control (trajectory shaping)
+```
+
+Interpretation:
+
+- field → defines motion  
+- geometry → defines constraints  
+- graph → defines regime transitions  
+- control → shapes trajectories within structure  
+
+---
+
+# 🔬 Current Capabilities
+
+✔ field reconstruction from data  
+✔ stability as spatial structure  
+✔ transition detection (gates, basins)  
+✔ probabilistic transition modeling  
+✔ trajectory steering (early stage)  
+
+---
+
+# ⚠️ Current Limitations
+
+❌ no unified runtime kernel  
+❌ limited large-scale validation  
+❌ incomplete control optimization  
+❌ no production-ready pipeline  
+
+---
+
+# 🧭 Positioning
+
+NEXAH is NOT:
+
+- a simulator  
+- a machine learning model  
+- a classical control system  
+
+NEXAH is:
+
+> a **field-based transition, control, and navigation framework**
+
+---
+
+# 🚀 Demos
+
+```bash
+python run_nexah_demo.py
+python run_ieee_demo.py
 ```
 
 ---
 
-# ⚡ FINAL INSIGHT
+# 🧠 Learn More
+
+👉 [START_HERE.md](START_HERE.md)
+
+Full explanation, visuals, and system walkthrough.
+
+---
+
+# ⚡ Core Insight
 
 ```text
-If the structure survives validation,
-
-NEXAH becomes a real framework.
-
-If not,
-
-it collapses to visualization.
+Stability is not a value.
+It is a region in a structured field.
 ```
 
 ---
 
-**Status:** Active  
-**Phase:** Validation & System Consolidation  
+# 🧭 Final Statement
 
-© Thomas K. R. Hofmann · NEXAH · 2026
+```text
+A system does not randomly fail.
+
+It moves through structured transition regions
+that define what outcomes are possible.
+```
+
+---
+
+Thomas K. R. Hofmann · NEXAH · 2026
+python run_nexah_demo.py
+```
+
+---
+
+## 🧩 Core Module
+
+```text
+NEXAH_CORE/
+```
+
+Implements:
+
+- transition detection  
+- probabilistic instability field  
+- structure-aware navigation  
+- early control concepts  
+
+---
+
+## 📚 Documentation
+
+- 📊 [System State](ARCHITECTURE/SYSTEM_STATE.md)  
+- 🔬 [Methods](ARCHITECTURE/METHODS.md)  
+- 🧭 [Architecture](ARCHITECTURE/README.md)  
+- 🌀 [Visual Gallery](VISUAL_GALLERY.md)  
+- 🧠 [Research Vision](RESEARCH/RESEARCH_VISION.md)
+
+---
+
+## 🧠 Learn More
+
+👉 [START_HERE.md](START_HERE.md)
+
+Full explanation, visuals, and system walkthrough.
+
+---
+
+## ⚡ Core Insight
+
+```text
+Stability is not a value.
+
+It is a region in a structured field.
+```
+
+---
+
+Thomas K. R. Hofmann · NEXAH · 2026
