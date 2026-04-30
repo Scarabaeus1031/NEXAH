@@ -905,6 +905,263 @@ Only their combination yields a valid transition model.
 
 ---
 
+# 🔬 Experiment 3.5 — Transition Matrix (Sheet Dynamics)
+
+## Goal
+
+```text
+Extract the discrete transition structure of the system
+independent of the Gate Operator.
+```
+
+---
+
+## Method
+
+1. Discretize trajectory into sheets:
+
+```text
+s(t) ∈ {0,1,...,N}
+```
+
+2. Build transition counts:
+
+$$
+T(i,j) = \#\{t \mid s(t-1)=i, s(t)=j\}
+$$
+
+3. Normalize:
+
+$$
+P(i \rightarrow j) = \frac{T(i,j)}{\sum_k T(i,k)}
+$$
+
+---
+
+## Result (Observed)
+
+- Strong diagonal dominance:
+
+```text
+P(i → i) ≫ P(i → j)
+```
+
+- Local transitions only:
+
+```text
+|i - j| ≈ 1
+```
+
+- No long-range jumps
+
+---
+
+## 🔥 Structural Insight
+
+```text
+The system behaves as a banded Markov process.
+```
+
+More precisely:
+
+```text
+• sheets form ordered structure
+• transitions occur locally
+• system exhibits directional drift
+```
+
+---
+
+## Key Observation
+
+Example:
+
+```text
+P(5 → 6) ≈ 0.033
+P(5 → 5) ≈ 0.766
+P(5 → 4) ≈ 0.2
+```
+
+Interpretation:
+
+```text
+• system prefers to stay
+• occasionally moves backward
+• rarely moves forward
+```
+
+---
+
+## 🔥 Interpretation
+
+```text
+Transitions are NOT random.
+
+They follow constrained local geometry.
+```
+
+---
+
+## 🧠 Conclusion
+
+```text
+The system already encodes transition structure
+independently of G(x).
+```
+
+---
+
+## Visual
+
+```text
+output_results/experiment_3_5_transition_matrix.png
+```
+
+---
+
+# 🔬 Experiment 3.6 — Gate Field from Transition Matrix
+
+## Goal
+
+```text
+Derive gate structure purely from transition probabilities.
+```
+
+---
+
+## Method
+
+Define gate strength:
+
+$$
+G_{ij} = -\log(P(i \rightarrow j))
+$$
+
+---
+
+## Interpretation
+
+```text
+• high probability → low gate
+• low probability → strong gate
+```
+
+---
+
+## Result (Observed)
+
+```text
+Detected gate edges: 0
+Gate events in time: 0
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+The system contains almost no "rare" transitions.
+```
+
+Meaning:
+
+```text
+• transitions are smooth
+• transitions are distributed
+• transitions are NOT sparse events
+```
+
+---
+
+## Structural Consequence
+
+```text
+Halvorsen / Lorenz-type systems do NOT have sharp gates.
+```
+
+Instead:
+
+```text
+they exhibit continuous transition corridors
+```
+
+---
+
+## Visual Interpretation
+
+### Gate Strength Matrix
+
+```text
+• strong diagonal symmetry
+• banded structure
+• no isolated spikes
+```
+
+---
+
+### Time Series
+
+```text
+sheet switching occurs continuously
+→ no discrete gate events
+```
+
+---
+
+## 🔥 Final Insight
+
+```text
+Gate ≠ rare event
+
+Gate = distributed transition region
+```
+
+---
+
+## 🧠 Revised Definition
+
+```text
+A gate is not a point or spike.
+
+A gate is a region of structured transition probability.
+```
+
+---
+
+## 🔥 Consequence for G(x)
+
+```text
+G(x) tries to detect "events"
+
+but the system exhibits "fields"
+```
+
+---
+
+## 🧠 Final Model Upgrade
+
+```text
+Transition =
+movement along structured probability manifold
+```
+
+NOT:
+
+```text
+threshold crossing
+```
+
+---
+
+## Visuals
+
+```text
+output_results/experiment_3_6_gate_matrix.png
+output_results/experiment_3_6_gate_events.png
+```
+
+---
+
 # 🔬 Experiment 4 — Parameter Sensitivity
 
 ## Goal
