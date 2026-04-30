@@ -4,6 +4,16 @@ from scipy.stats import gaussian_kde
 import os
 
 # ============================================================
+# SAFE OUTPUT PATH (FIX!)
+# ============================================================
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+output_dir = os.path.join(BASE_DIR, "../output_results")
+os.makedirs(output_dir, exist_ok=True)
+
+print(f"📁 Output directory: {output_dir}")
+
+# ============================================================
 # SYSTEM (Lorenz)
 # ============================================================
 
@@ -101,14 +111,7 @@ print(f"Detected (sheet + gate): {detected}")
 print(f"Detection ratio: {detected / (total_transitions + 1e-9):.3f}")
 
 # ============================================================
-# OUTPUT DIR
-# ============================================================
-
-output_dir = "../output_results"
-os.makedirs(output_dir, exist_ok=True)
-
-# ============================================================
-# SAVE DATA (WICHTIG!)
+# SAVE DATA
 # ============================================================
 
 np.save(os.path.join(output_dir, "experiment_3_4_G_values.npy"), G)
@@ -116,7 +119,7 @@ np.save(os.path.join(output_dir, "experiment_3_4_sheet_sequence.npy"), sheets)
 np.save(os.path.join(output_dir, "experiment_3_4_sheet_transitions.npy"), sheet_transitions.astype(int))
 np.save(os.path.join(output_dir, "experiment_3_4_combined.npy"), combined.astype(int))
 
-print("Saved Experiment 3.4 data")
+print(f"💾 Saved data to: {output_dir}")
 
 # ============================================================
 # PLOT
@@ -139,12 +142,17 @@ plt.title("Experiment 3.4 — Sheet-Aware Gate Detection")
 
 plt.tight_layout()
 
-# SAVE FIGURE
-plt.savefig(
-    os.path.join(output_dir, "experiment_3_4_sheet_aware_gate.png"),
-    dpi=200
-)
+# ============================================================
+# SAVE FIGURE (VERIFIED)
+# ============================================================
+
+file_path = os.path.join(output_dir, "experiment_3_4_sheet_aware_gate.png")
+
+plt.savefig(file_path, dpi=200)
+
+if os.path.exists(file_path):
+    print(f"✅ Saved visualization: {file_path}")
+else:
+    print("❌ ERROR: File was NOT saved!")
 
 plt.close()
-
-print("Saved visualization: experiment_3_4_sheet_aware_gate.png")
