@@ -1,8 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # ============================================================
-# INPUT FROM 3.4 (reuse logic)
+# SYSTEM
 # ============================================================
 
 def lorenz(x, y, z, s=10, r=28, b=2.667):
@@ -26,7 +27,7 @@ def compute_sheets(xs, ys, num_sheets=6):
     return np.digitize(r, bins) - 1
 
 # ============================================================
-# BUILD TRANSITION MATRIX
+# RUN
 # ============================================================
 
 print("Running Experiment 3.5 — Transition Matrix")
@@ -35,11 +36,12 @@ xs, ys = simulate()
 sheets = compute_sheets(xs, ys)
 
 num_states = len(np.unique(sheets))
+
 T = np.zeros((num_states, num_states))
 
 for i in range(1, len(sheets)):
-    a = sheets[i-1]
-    b = sheets[i]
+    a = int(sheets[i-1])
+    b = int(sheets[i])
     T[a, b] += 1
 
 # normalize rows
@@ -52,15 +54,43 @@ print("\nTransition Matrix (probabilities):")
 print(P)
 
 # ============================================================
+# OUTPUT DIR
+# ============================================================
+
+output_dir = "../output_results"
+os.makedirs(output_dir, exist_ok=True)
+
+# ============================================================
+# SAVE DATA (WICHTIG FÜR 3.6)
+# ============================================================
+
+np.save(os.path.join(output_dir, "experiment_3_5_transition_matrix.npy"), T)
+np.save(os.path.join(output_dir, "experiment_3_5_transition_prob_matrix.npy"), P)
+np.save(os.path.join(output_dir, "experiment_3_5_sheet_sequence.npy"), sheets)
+
+print("Saved transition matrix + probabilities + sheet sequence")
+
+# ============================================================
 # PLOT
 # ============================================================
 
 plt.figure(figsize=(6,5))
+
 plt.imshow(P, cmap="viridis")
 plt.colorbar(label="P(i → j)")
+
 plt.xlabel("to state")
 plt.ylabel("from state")
-plt.title("Sheet Transition Matrix")
+plt.title("Experiment 3.5 — Sheet Transition Matrix")
 
 plt.tight_layout()
-plt.show()
+
+# SAVE FIGURE
+plt.savefig(
+    os.path.join(output_dir, "experiment_3_5_transition_matrix.png"),
+    dpi=200
+)
+
+plt.close()
+
+print("Saved visualization: experiment_3_5_transition_matrix.png")
