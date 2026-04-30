@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import gaussian_kde
+import os
 
 # ============================================================
 # SYSTEM (Lorenz)
@@ -51,14 +52,13 @@ def compute_gate(density, coherence, rotation):
     return normalize((1 - rho) * (1 - C) * (1 - R))
 
 # ============================================================
-# SHEET DETECTION (simple radial clustering)
+# SHEET DETECTION
 # ============================================================
 
 def compute_sheets(xs, ys, num_sheets=6):
     r = np.sqrt(xs**2 + ys**2)
     bins = np.linspace(r.min(), r.max(), num_sheets + 1)
-    sheet_idx = np.digitize(r, bins) - 1
-    return sheet_idx
+    return np.digitize(r, bins) - 1
 
 def detect_sheet_transitions(sheets):
     transitions = np.zeros(len(sheets), dtype=bool)
@@ -86,7 +86,6 @@ sheet_transitions = detect_sheet_transitions(sheets)
 THRESHOLD = 0.7
 gate_active = G > THRESHOLD
 
-# Sheet-aware transition condition
 combined = sheet_transitions & gate_active
 
 # ============================================================
@@ -102,6 +101,24 @@ print(f"Detected (sheet + gate): {detected}")
 print(f"Detection ratio: {detected / (total_transitions + 1e-9):.3f}")
 
 # ============================================================
+# OUTPUT DIR
+# ============================================================
+
+output_dir = "../output_results"
+os.makedirs(output_dir, exist_ok=True)
+
+# ============================================================
+# SAVE DATA (WICHTIG!)
+# ============================================================
+
+np.save(os.path.join(output_dir, "experiment_3_4_G_values.npy"), G)
+np.save(os.path.join(output_dir, "experiment_3_4_sheet_sequence.npy"), sheets)
+np.save(os.path.join(output_dir, "experiment_3_4_sheet_transitions.npy"), sheet_transitions.astype(int))
+np.save(os.path.join(output_dir, "experiment_3_4_combined.npy"), combined.astype(int))
+
+print("Saved Experiment 3.4 data")
+
+# ============================================================
 # PLOT
 # ============================================================
 
@@ -110,10 +127,10 @@ plt.figure(figsize=(16,5))
 plt.plot(G, label="G(x)", alpha=0.7)
 
 plt.scatter(np.where(sheet_transitions)[0], G[sheet_transitions],
-            color="black", label="Sheet transitions")
+            color="black", label="Sheet transitions", s=10)
 
 plt.scatter(np.where(combined)[0], G[combined],
-            color="green", label="Detected (Sheet + Gate)")
+            color="green", label="Detected (Sheet + Gate)", s=20)
 
 plt.axhline(THRESHOLD, linestyle="--")
 
@@ -121,4 +138,13 @@ plt.legend()
 plt.title("Experiment 3.4 — Sheet-Aware Gate Detection")
 
 plt.tight_layout()
-plt.show()
+
+# SAVE FIGURE
+plt.savefig(
+    os.path.join(output_dir, "experiment_3_4_sheet_aware_gate.png"),
+    dpi=200
+)
+
+plt.close()
+
+print("Saved visualization: experiment_3_4_sheet_aware_gate.png")
