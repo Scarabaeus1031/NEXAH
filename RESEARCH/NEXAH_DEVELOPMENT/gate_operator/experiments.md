@@ -46,23 +46,7 @@ Parameters:
 
 ---
 
-## Steps
-
-1. simulate trajectory  
-2. compute density $\rho(x)$ via KDE  
-3. estimate flow $F(x)$  
-4. compute:
-
-   - coherence $C(x)$  
-   - rotation $R(x)$  
-
-5. compute $G(x)$  
-
----
-
 ## Evaluation
-
-Check:
 
 ```text
 Do high G(x) regions align with trajectory switching behavior?
@@ -70,11 +54,11 @@ Do high G(x) regions align with trajectory switching behavior?
 
 ---
 
-## Output
+## Result (Observed)
 
-- visualization of $G(x)$  
-- overlay with trajectory  
-- qualitative alignment  
+- Gate regions appear between attractor lobes  
+- Gates are **spatially extended**, not point-like  
+- Structure is consistent with transition intuition  
 
 ---
 
@@ -84,7 +68,7 @@ Do high G(x) regions align with trajectory switching behavior?
 
 - Lorenz  
 - Rössler  
-- Kuramoto  
+- Kuramoto (projected)
 
 ---
 
@@ -96,24 +80,142 @@ Does G(x) detect similar transition regions across systems?
 
 ---
 
-## Evaluation
+## Results (Observed)
 
-Compare:
+### ✔ Lorenz
 
-- spatial distribution of high G(x)  
-- consistency of structure  
+- Gate regions located between attractor branches  
+- clear geometric transition zones  
 
 ---
 
-## Key Question
+### ✔ Rössler
+
+- central instability region detected  
+- circular structure → gate near core  
+
+---
+
+### ⚠ Kuramoto (Important Finding)
+
+Observed:
 
 ```text
-Is G(x) system-independent?
+• density collapses into a narrow vertical strip  
+• rotation collapses to 1D structure  
+• gate shows sharp boundary edges
 ```
 
 ---
 
-# 🔬 Experiment 3 — Component Ablation
+## Interpretation — Degenerate Structure
+
+The Kuramoto projection behaves fundamentally differently:
+
+```text
+This is NOT a volumetric phase space.
+```
+
+Instead:
+
+```text
+the system evolves on a low-dimensional manifold
+embedded in a higher-dimensional space.
+```
+
+---
+
+## Key Insight
+
+```text
+Kuramoto acts like a measurement probe,
+not a full field.
+```
+
+More precisely:
+
+- the (r, ψ) projection captures **collective synchronization state**
+- not the full oscillator dynamics  
+
+---
+
+## Conceptual Interpretation
+
+```text
+Kuramoto behaves like a "cross-sectional probe"
+through the dynamical system.
+```
+
+Analogy:
+
+```text
+like inserting a measurement strip into a flow field
+```
+
+---
+
+## Structural Consequence
+
+```text
+Gate Operator requires volumetric structure.
+```
+
+It fails or degenerates when:
+
+```text
+phase space collapses to low-dimensional manifolds
+```
+
+---
+
+# 🔬 New Finding — Structural Regimes
+
+From experiments so far:
+
+---
+
+## Type A — Volumetric Systems
+
+Examples:
+
+- Lorenz  
+- Rössler  
+
+Properties:
+
+```text
+• full 2D/3D field structure  
+• meaningful density gradients  
+• gates are spatial regions  
+```
+
+---
+
+## Type B — Degenerate / Projected Systems
+
+Example:
+
+- Kuramoto (r, ψ projection)
+
+Properties:
+
+```text
+• structure collapses to thin strip  
+• no true gates  
+• boundary artifacts appear  
+```
+
+---
+
+## 🔥 Key Insight
+
+```text
+The Gate Operator is valid only for systems with sufficient geometric dimensionality.
+```
+
+---
+
+# 🔬 Experiment 3 — Component Ablation (Next)
 
 ## Goal
 
@@ -127,8 +229,6 @@ $$
 
 ## Variants
 
-Test:
-
 ```text
 G₁ = (1 - ρ̂)
 G₂ = (1 - Ĉ)
@@ -138,18 +238,10 @@ G_full = combined
 
 ---
 
-## Evaluation
+## Target Question
 
 ```text
-Which component actually drives transition detection?
-```
-
----
-
-## Insight Target
-
-```text
-Is rotation essential or optional?
+Is rotation essential or does density already explain transitions?
 ```
 
 ---
@@ -158,83 +250,40 @@ Is rotation essential or optional?
 
 ## Goal
 
-Test robustness to parameters:
+Test robustness to:
 
 - KDE bandwidth  
-- normalization method  
-- scaling of λ, μ  
+- normalization  
+- sampling density  
 
 ---
 
-## Evaluation
+# 🔬 Experiment 5 — Synthetic System
 
-```text
-Does G(x) remain stable under perturbation?
-```
+## Goal
 
----
-
-## Failure Mode
-
-```text
-If G(x) changes drastically → not reliable
-```
-
----
-
-# 🔬 Experiment 5 — Synthetic Controlled System
-
-## Setup
-
-Create simple system with known transitions:
+Validate against known transitions:
 
 - double-well potential  
-- bistable system  
+- bistable dynamics  
 
 ---
+
+# 🔬 Experiment 6 — Prediction Capability
 
 ## Goal
 
 ```text
-Does G(x) correctly identify known transition regions?
-```
-
----
-
-## Evaluation
-
-Compare:
-
-- known separatrix  
-- detected gate region  
-
----
-
-# 🔬 Experiment 6 — Trajectory Prediction vs Gate Detection
-
-## Goal
-
-Compare:
-
-```text
-Trajectory-based prediction vs G(x)-based detection
-```
-
----
-
-## Evaluation
-
-```text
-Does G(x) anticipate transitions earlier?
+Does G(x) anticipate transitions earlier than trajectory analysis?
 ```
 
 ---
 
 # 🔬 Experiment 7 — Noise Robustness
 
-## Setup
+## Goal
 
-Add noise:
+Test stability under:
 
 $$
 \dot{x} = F(x) + \sigma \eta
@@ -242,59 +291,31 @@ $$
 
 ---
 
-## Goal
-
-```text
-Does G(x) remain meaningful under noise?
-```
-
----
-
-## Evaluation
-
-- structure persistence  
-- gate stability  
-
----
-
-# 🔬 Experiment 8 — High-Dimensional Stress Test
+# 🔬 Experiment 8 — High-Dimensional Systems
 
 ## Goal
 
-Apply to higher-dimensional system (if available)
-
----
-
-## Evaluation
+Evaluate:
 
 ```text
-Does structure still emerge?
-Does G(x) degrade?
+Does the Gate Operator scale?
 ```
 
 ---
 
 # 📊 Evaluation Criteria
 
-Each experiment should assess:
-
----
-
 ## 1. Alignment
 
 ```text
-Does G(x) match observed transitions?
+Does G(x) match transitions?
 ```
-
----
 
 ## 2. Stability
 
 ```text
-Is G(x) robust to parameter changes?
+Is G(x) robust?
 ```
-
----
 
 ## 3. Generality
 
@@ -302,12 +323,10 @@ Is G(x) robust to parameter changes?
 Does it work across systems?
 ```
 
----
-
-## 4. Interpretability
+## 4. Structural Validity
 
 ```text
-Can results be visually and conceptually explained?
+Is the underlying phase space sufficiently dimensional?
 ```
 
 ---
@@ -315,40 +334,41 @@ Can results be visually and conceptually explained?
 # ⚠️ Known Risks
 
 - KDE artifacts  
-- over-smoothing  
-- false positives in low-density regions  
-- dependence on sampling quality  
+- projection errors  
+- false gates in low-density regions  
+- dimensional collapse  
 
 ---
 
-# 🧠 Working Hypothesis
+# 🧠 Updated Working Hypothesis
 
 ```text
 Transitions occur in regions of simultaneous
-density loss, coherence loss, and rotational breakdown.
+density loss, coherence loss, and rotational breakdown,
+but only in sufficiently volumetric phase spaces.
 ```
 
 ---
 
 # 🚀 Success Criteria
 
-The Gate Operator is considered promising if:
-
 ```text
-• consistently identifies transition regions  
-• generalizes across systems  
-• remains stable under perturbations  
+• works in volumetric systems  
+• fails predictably in degenerate systems  
+• reveals structural transition regions  
 ```
 
 ---
 
 # 🧠 Notes
 
-Use this section for:
+Key new concept:
 
-- unexpected observations  
-- anomalies  
-- hypothesis updates  
+```text
+"Measurement strip vs full field"
+```
+
+This distinction is critical for interpreting results.
 
 ---
 
