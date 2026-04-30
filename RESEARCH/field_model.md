@@ -1,7 +1,7 @@
 # NEXAH — Field Model (Exploratory)
 
 This document describes an **emergent field-like interpretation**  
-of dynamic systems observed during early NEXAH experiments.
+of dynamical systems observed during early NEXAH experiments.
 
 ---
 
@@ -14,15 +14,14 @@ It is:
 > an empirical model describing how structure, flow, and coupling  
 > emerge from system dynamics
 
+This document is based on observations and provides a **working interpretation**,  
+not a formal or physical equivalence to known field theories.
 
-This document describes an empirical interpretation derived from observations.
-
-It does not claim physical equivalence to known field theories.
 ---
 
 ## 🔗 Origin
 
-This model is based on observations from the Discovery Engine:
+This model is derived from observations in the Discovery Engine:
 
 → `DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md`
 
@@ -33,9 +32,9 @@ The Discovery Engine represents the **exploration phase** of NEXAH.
 ## 🧭 Context in NEXAH
 
 ```text
-DISCOVERY → observation of structure
-FIELD_LAYER → operational field representation
-RESEARCH → interpretation and abstraction
+DISCOVERY → observation
+FIELD_LAYER → operational representation
+RESEARCH → interpretation
 ```
 
 ---
@@ -44,9 +43,9 @@ RESEARCH → interpretation and abstraction
 
 Initial experiments focused on:
 
-- trajectories (Lorenz system)
-- transition signals
-- clustering behavior
+- trajectories (e.g. Lorenz system)  
+- transition signals  
+- clustering behavior  
 
 A key shift emerged:
 
@@ -58,17 +57,25 @@ A key shift emerged:
 # 🧩 2. Emergent Field Components
 
 ### Geometry
-- low-dimensional structure (e.g. PCA axis)
-- transition alignment
+- low-dimensional structure (e.g. PCA projections)  
+- alignment of transitions  
 
 ### Density
-- spatial clustering of transitions
-- non-uniform probability distribution
+- spatial clustering  
+- non-uniform probability distribution  
 
-### Energy (derived)
+### Energy (heuristic)
+
+```text
 E = -log(p)
+```
 
-- transitions behave like barrier crossings
+Interpretation:
+
+- stable regions → high density  
+- transition regions → low density  
+
+⚠️ This is a **derived representation**, not a physical energy law.
 
 ---
 
@@ -77,35 +84,41 @@ E = -log(p)
 Two structural quantities were analyzed:
 
 ### Divergence (∇·F)
-- local expansion / contraction
-- identifies sources and sinks
+- local expansion / contraction  
+- identifies sources and sinks  
 
 ### Curl (∇×F)
-- rotational behavior
-- identifies circulation patterns
+- rotational behavior  
+- identifies circulation patterns  
 
 ---
 
-# 🔁 4. Observed Coupling
+# 🔁 4. Observed Coupling (Empirical)
 
-Empirical analysis shows:
+Empirical observation suggests:
 
-div(t) ≈ curl(t - τ)  
+```text
+div(t) ≈ curl(t - τ)
 curl(t) ≈ div(t + τ)
+```
 
 with:
 
-τ ≈ constant delay
+```text
+τ ≈ constant delay (system-dependent)
+```
 
 ---
 
 ## Interpretation
 
-This suggests:
+This indicates:
 
-- delayed feedback between components  
+- delayed interaction between expansion and rotation  
 - phase-shifted coupling  
 - non-instantaneous system response  
+
+⚠️ This is an **observed pattern**, not a derived law.
 
 ---
 
@@ -115,34 +128,34 @@ The system behaves like:
 
 > a **coupled dynamical field with memory and delay**
 
-This does not imply:
+This interpretation does **not imply**:
 
 - a physical field  
-- or known fundamental equations  
+- known governing equations  
 
 ---
 
 # ⚠️ 6. Limitations
 
-- derived from Lorenz system  
-- empirical / simulation-based  
-- not validated across domains  
+- derived primarily from Lorenz-like systems  
+- simulation-based  
+- not yet validated across domains  
 - no claim of universality  
 
 ---
 
 # 🔗 Relation to FIELD_LAYER
 
-The FIELD_LAYER implements:
+The FIELD_LAYER provides:
 
-- continuous vector fields  
-- geometry-aligned representations  
+- continuous vector field representation  
+- geometry-aligned dynamics  
 - topology extraction  
-- navigation and control  
+- navigation primitives  
 
-This model provides:
+This document provides:
 
-> **interpretation**, not implementation
+> **interpretation of observed behavior**, not implementation
 
 ---
 
@@ -166,7 +179,7 @@ This model provides:
 
 Exploratory model  
 Empirical basis: strong  
-Interpretation: provisional
+Interpretation: provisional  
 
 ---
 
