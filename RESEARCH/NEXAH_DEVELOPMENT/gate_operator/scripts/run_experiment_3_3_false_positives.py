@@ -1,30 +1,91 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
+from scipy.stats import gaussian_kde
 
-# ------------------------------------------------------------
-# LOAD DATA
-# ------------------------------------------------------------
+# ============================================================
+# SYSTEM (Lorenz)
+# ============================================================
 
-G_values = np.load("../output_results/experiment_3_2_G_values.npy")
-transition_indices = np.load("../output_results/experiment_3_2_transitions.npy")
+def lorenz(x, y, z, s=10, r=28, b=2.667):
+    return s*(y-x), x*(r-z)-y, x*y - b*z
 
-# ------------------------------------------------------------
-# PARAMETERS
-# ------------------------------------------------------------
+def simulate(steps=8000, dt=0.01):
+    xs, ys, zs = np.zeros(steps), np.zeros(steps), np.zeros(steps)
+    xs[0], ys[0], zs[0] = (0.1, 0.0, 0.0)
+
+    for i in range(steps - 1):
+        dx, dy, dz = lorenz(xs[i], ys[i], zs[i])
+        xs[i+1] = xs[i] + dx*dt
+        ys[i+1] = ys[i] + dy*dt
+        zs[i+1] = zs[i] + dz*dt
+
+    return xs, ys
+
+# ============================================================
+# FIELD
+# ============================================================
+
+def compute_density(xs, ys):
+    kde = gaussian_kde(np.vstack([xs, ys]))
+    return kde(np.vstack([xs, ys]))
+
+def compute_flow(xs, ys):
+    dx = np.gradient(xs)
+    dy = np.gradient(ys)
+    return dx, dy
+
+def compute_rotation(dx, dy):
+    return np.abs(np.gradient(dx) - np.gradient(dy))
+
+def compute_coherence(dx, dy):
+    mag = np.sqrt(dx**2 + dy**2) + 1e-8
+    return (dx/mag)**2 + (dy/mag)**2
+
+def normalize(x):
+    return (x - np.min(x)) / (np.max(x) - np.min(x) + 1e-8)
+
+def compute_gate(density, coherence, rotation):
+    rho = normalize(density)
+    C = normalize(coherence)
+    R = normalize(rotation)
+    return normalize((1 - rho) * (1 - C) * (1 - R))
+
+# ============================================================
+# TRANSITIONS
+# ============================================================
+
+def detect_transitions(xs):
+    return np.where(np.diff(np.sign(xs)) != 0)[0]
+
+# ============================================================
+# MAIN
+# ============================================================
+
+print("Running Experiment 3.3 (independent)")
+
+xs, ys = simulate()
+
+density = compute_density(xs, ys)
+dx, dy = compute_flow(xs, ys)
+rotation = compute_rotation(dx, dy)
+coherence = compute_coherence(dx, dy)
+
+G_values = compute_gate(density, coherence, rotation)
+transition_indices = detect_transitions(xs)
+
+# ============================================================
+# DETECT PEAKS
+# ============================================================
 
 THRESHOLD = 0.7
 WINDOW = 50
 
-# ------------------------------------------------------------
-# DETECT PEAKS
-# ------------------------------------------------------------
-
 peaks, _ = find_peaks(G_values, height=THRESHOLD, distance=20)
 
-# ------------------------------------------------------------
+# ============================================================
 # MATCH EVENTS
-# ------------------------------------------------------------
+# ============================================================
 
 TP, FP, FN = [], [], []
 used_transitions = set()
@@ -44,9 +105,9 @@ for t in transition_indices:
     if int(t) not in used_transitions:
         FN.append(int(t))
 
-# ------------------------------------------------------------
+# ============================================================
 # METRICS
-# ------------------------------------------------------------
+# ============================================================
 
 precision = len(TP) / (len(TP) + len(FP) + 1e-9)
 recall = len(TP) / (len(TP) + len(FN) + 1e-9)
@@ -58,9 +119,9 @@ print(f"FN: {len(FN)}")
 print(f"Precision: {precision:.3f}")
 print(f"Recall: {recall:.3f}")
 
-# ------------------------------------------------------------
+# ============================================================
 # PLOT
-# ------------------------------------------------------------
+# ============================================================
 
 plt.figure(figsize=(16, 5))
 
@@ -72,7 +133,7 @@ plt.scatter(FN, G_values[FN], color="orange", label="FN")
 
 plt.scatter(
     transition_indices,
-    G_values[transition_indices.astype(int)],
+    G_values[transition_indices],
     color="black",
     label="Transitions",
     s=20
@@ -87,30 +148,4 @@ plt.legend()
 
 plt.tight_layout()
 
-plt.savefig(
-    "../output_results/experiment_3_3_false_positive_analysis.png",
-    dpi=300
-)
-
 plt.show()
-
-# ------------------------------------------------------------
-# SAVE DATA FOR EXP 3.3
-# ------------------------------------------------------------
-
-import os
-
-output_dir = "../output_results"
-os.makedirs(output_dir, exist_ok=True)
-
-np.save(
-    os.path.join(output_dir, "experiment_3_2_G_values.npy"),
-    G_values
-)
-
-np.save(
-    os.path.join(output_dir, "experiment_3_2_transitions.npy"),
-    np.array(transition_indices)
-)
-
-print("Saved G_values + transitions for Experiment 3.3")
