@@ -283,6 +283,359 @@ Conclusion:
 Rotation is essential for capturing transition-relevant structure.
 ```
 
+# 🔬 Experiment 3.1 — Gate Alignment with Transitions
+
+## Goal
+
+```text
+Evaluate whether high G(x) values align spatially and temporally
+with observed transitions.
+```
+
+---
+
+## Method
+
+- Overlay transition points on trajectory
+- compare with G(x) field
+- analyze temporal distribution of G(x)
+
+---
+
+## Observations
+
+- transition points cluster in specific regions of phase space
+- G(x) often increases near transition zones
+- but alignment is not exact
+
+---
+
+## Key Finding
+
+```text
+G(x) correlates with transition regions,
+but does not precisely localize transition events.
+```
+
+---
+
+## Interpretation
+
+```text
+G(x) highlights regions of instability,
+not discrete transition events.
+```
+
+---
+
+# 🔬 Experiment 3.2 — Prediction Capability
+
+## Goal
+
+```text
+Test whether G(x) can anticipate transitions
+before they occur.
+```
+
+---
+
+## Method
+
+- detect peaks in G(x)
+- compare timing with transition indices
+- measure lead/lag behavior
+
+---
+
+## Observations
+
+- some G(x) peaks occur shortly before transitions
+- other peaks occur without any transition
+- many transitions occur without strong preceding peak
+
+---
+
+## Key Finding
+
+```text
+G(x) has partial predictive power,
+but produces both false positives and false negatives.
+```
+
+---
+
+## Interpretation
+
+```text
+G(x) captures rising instability,
+but lacks structural awareness of system state.
+```
+
+---
+
+## Critical Insight
+
+```text
+Prediction based on G(x) alone is unreliable.
+```
+
+It requires:
+
+```text
+structural context (system state / sheet / basin)
+```
+
+---
+
+# 🔬 Experiment 3.3 — False Positives & Structural Misalignment
+
+## Goal
+
+```text
+Evaluate how well G(x) corresponds to true structural transitions
+versus local instability peaks.
+```
+
+---
+
+## Method
+
+1. Detect peaks in the Gate Operator:
+
+```text
+G(x) > threshold
+```
+
+2. Compare detected peaks with known transition indices.
+
+3. Classify events:
+
+```text
+TP = true positives
+FP = false positives
+FN = false negatives
+```
+
+---
+
+## Result (Observed)
+
+Observed result:
+
+```text
+Precision ≈ 0.50
+Recall ≈ 0.02
+```
+
+Interpretation:
+
+```text
+G(x) produces some meaningful high-instability peaks,
+but it misses most actual transitions when used alone.
+```
+
+---
+
+## Critical Observation
+
+```text
+High G(x) does not automatically imply transition.
+
+Low G(x) does not automatically imply stability.
+```
+
+---
+
+# 🧩 Structural Analysis
+
+Visual inspection shows:
+
+- repeating arc-like patterns in the signal
+- layered structures in phase space
+- discrete switching behavior over time
+- false positives often occur as local instability peaks without global transition
+
+---
+
+# 🔥 Interpretation — Sheet Structure
+
+The system exhibits layered flow structure:
+
+$$
+\mathcal{S}_i = \{(r,\theta) \mid r \approx r_i\}
+$$
+
+Each sheet corresponds to a locally coherent dynamical regime.
+
+---
+
+# 🔁 Sheet Switching
+
+Transitions are not fully defined by peaks in $G(x)$.
+
+Instead, transitions appear when the trajectory switches between structural layers:
+
+```text
+transition(t) = sheet(t) ≠ sheet(t-1)
+```
+
+---
+
+# 🔥 Core Insight
+
+```text
+Transition =
+sheet switch
++ directional flow break
++ passage through low-density structure
+```
+
+---
+
+# 🔬 Reinterpretation of TP / FP / FN
+
+## True Positives
+
+```text
+G(x) peaks that coincide with sheet transitions.
+```
+
+---
+
+## False Positives
+
+```text
+G(x) peaks inside a single sheet.
+
+These indicate local turbulence or instability,
+but not a global structural transition.
+```
+
+---
+
+## False Negatives
+
+```text
+Smooth sheet transitions without strong G(x) peaks.
+
+These indicate that a transition can occur through
+an existing gate without producing a large scalar spike.
+```
+
+---
+
+# ⚠️ Structural Limitation of G(x)
+
+```text
+G(x) is a local scalar instability field.
+
+Transitions are global structural events.
+```
+
+Therefore:
+
+```text
+G(x) detects instability,
+not transitions directly.
+```
+
+---
+
+# 🧠 Continuous vs Discrete Structure
+
+## Continuous Layer
+
+```text
+G(x), ρ(x), C(x), R(x)
+→ local field properties
+```
+
+---
+
+## Discrete Layer
+
+```text
+Sheets / basins
+→ global system structure
+```
+
+---
+
+## Connection
+
+```text
+Sheets → basins
+Switches → transitions
+```
+
+---
+
+# 🔬 Required Upgrade — Sheet-Aware Transition Model
+
+To correctly detect transitions, the system requires:
+
+## 1. Sheet Identification
+
+```text
+cluster (r, θ) into structural layers
+```
+
+---
+
+## 2. Time Mapping
+
+```text
+sheet(t)
+```
+
+---
+
+## 3. Transition Detection
+
+```text
+transition(t) = sheet(t) ≠ sheet(t-1)
+```
+
+---
+
+## 4. Gate Validation
+
+```text
+transition(t) AND high G(x)
+```
+
+---
+
+# 🔥 Resulting Model
+
+```text
+Transition =
+sheet switch
++ instability signal
+```
+
+---
+
+# 🧭 Updated Working Hypothesis
+
+```text
+Transitions occur when:
+
+1. the system enters a low-density region
+2. local flow coherence weakens
+3. the trajectory switches structural sheet
+```
+
+---
+
+# 🔥 Final Upgrade Statement
+
+```text
+The Gate Operator detects instability fields.
+
+True transitions emerge only when instability interacts
+with the underlying sheet / basin structure.
+```
 ---
 
 # 🔬 Experiment 4 — Parameter Sensitivity
