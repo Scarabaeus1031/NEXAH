@@ -1,255 +1,308 @@
-# 🧠 NEXAH — Structure Extraction & Navigation Demonstrator
+# 🧪 NEXAH — Gate Operator & Transition Structure (Demonstrator)
 
-This module demonstrates how **NEXAH extracts structure from dynamical systems**  
-and reveals **transition geometry, regimes, and navigable pathways**.
+## 🧭 Overview
 
-It is not a finalized theory.
+This module demonstrates a **geometry-based approach to analyzing dynamical systems**,  
+focusing on how **structure, instability, and transitions emerge from trajectories**.
 
-It is a **working demonstration of a structural pipeline**.
-
----
-
-# 🧭 Core Idea
-
-Traditional modeling:
+The core idea is simple:
 
 ```text
-system → states → prediction
-```
+We do not model transitions as events.
 
-NEXAH approach:
-
-```text
-dynamics → field → structure → transitions → navigation
+We extract them from the structure of the system itself.
 ```
 
 ---
 
-# 🔁 Pipeline Overview
+## 🔁 Pipeline
+
+All experiments follow a consistent pipeline:
 
 ```text
-Dynamics (trajectory data)
-        ↓
-Density Field (structure emerges)
-        ↓
-Flow Field (motion tendencies)
-        ↓
-Coherence + Rotation (stability indicators)
-        ↓
-Gate Detection (transition regions)
-        ↓
-Navigation / Regime Graph
+System → Trajectories → Field → Structure → Transitions → Navigation
+```
+
+This separates the problem into two layers:
+
+```text
+1. Continuous field (density, flow, instability)
+2. Discrete structure (sheets, transitions)
 ```
 
 ---
 
-# 🔑 Key Concepts
+## 🔬 What This Module Does
 
-## 🌀 Field
+This repository implements and tests:
 
-A system is represented as a **continuous field derived from trajectories**:
+### 1. Field Construction
 
-- density = structural presence  
-- gradients = motion tendencies  
+From simulated trajectories (e.g. Lorenz):
+
+- density field ρ(x) (via KDE)  
+- flow field F(x)  
+- derived quantities:
+  - coherence C(x)
+  - rotation R(x)
+
+---
+
+### 2. Gate Operator
+
+A continuous instability measure:
+
+$$
+G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
+$$
+
+Interpreted as:
 
 ```text
-System = trajectory inside structured field
+high G(x) → local structural instability
+low G(x) → stable region
 ```
 
 ---
 
-## 🔷 Coherence
+### 3. Transition Structure
 
-Measures alignment with local structure:
+A discrete representation induced from the trajectory:
 
 ```text
-High coherence → stable motion  
-Low coherence → instability
+s(t) = sheet index
+```
+
+From this:
+
+- transition events:  
+  ```text
+  s(t) ≠ s(t-1)
+  ```
+
+- transition matrix:
+  $$
+  P(i \rightarrow j)
+  $$
+
+---
+
+### 4. Navigation Kernel
+
+A hybrid motion model:
+
+```text
+continuous flow
++ structure-aware correction
+```
+
+$$
+\dot{x} = F(x) - \lambda \nabla G(x) + \mu \nabla \rho(x)
+$$
+
+combined with:
+
+```text
+discrete transition constraints from P(i → j)
 ```
 
 ---
 
-## 🔁 Rotation (π Principle)
+## 🔍 Key Observations (from Experiments)
 
-Rotation is treated as a structural invariant:
+The following findings are directly supported by the implemented experiments:
+
+---
+
+### 1. Structure emerges from trajectories
 
 ```text
-Stable regions → coherent rotational structure  
-Transitions → rotation breakdown
+trajectory aggregation → density → geometry
+```
+
+No explicit model of structure is required.
+
+---
+
+### 2. Transitions are not point events
+
+Observed:
+
+```text
+• no isolated spikes
+• transitions occur over regions
 ```
 
 ---
 
-## 🚪 Gate (Core Innovation)
+### 3. Transition structure is local
 
-A gate is NOT a threshold crossing.
-
-A gate is a **structural region** defined by:
+Transition matrices show:
 
 ```text
-Gate(s) =
-low density
-+ low coherence
-+ rotation breakdown
+• strong diagonal dominance
+• transitions only between neighboring states
 ```
 
-This defines **where transitions actually occur**.
+→ the system behaves like a **banded Markov process**
 
 ---
 
-## 🧭 Navigation
+### 4. Gate operator detects instability — not transitions
 
-Control is not forcing the system.
+Empirically:
+
+```text
+• high G(x) does not guarantee a transition
+• many transitions occur without strong G(x)
+```
+
+Interpretation:
+
+```text
+G(x) = local instability field
+NOT a transition detector
+```
+
+---
+
+### 5. Transitions require structure
+
+Reliable transitions occur only when:
+
+```text
+sheet switch (discrete)
++ interaction with instability (continuous)
+```
+
+---
+
+### 6. No evidence for sparse “gate events”
+
+From transition matrix analysis:
+
+```text
+• no rare edges
+• no isolated transitions
+```
+
+Interpretation:
+
+```text
+transitions are distributed processes,
+not discrete triggers
+```
+
+---
+
+## 🧠 Resulting Model
+
+The system is best described as a **hybrid dynamical system**:
+
+```text
+STATE = (x(t), s(t))
+```
+
+with:
+
+```text
+continuous dynamics → geometry & instability
+discrete dynamics → structural transitions
+```
+
+---
+
+## ⚠️ What This Is NOT
+
+This module does **not** claim:
+
+- a universal theory of dynamical systems  
+- optimal control solutions  
+- formal proofs of stability or convergence  
 
 It is:
 
 ```text
-alignment with structure
-+ avoidance of instability
-+ guided traversal through gates
+an empirical, code-driven exploration of structure in dynamics
 ```
 
 ---
 
-# 🧪 Systems Demonstrated
-
-This module applies the same pipeline across:
-
-- Lorenz system  
-- Rössler system  
-- Kuramoto synchronization  
-
-Key observation:
+## 📂 Module Structure
 
 ```text
-Different systems → similar transition geometry
+scripts/
+    run_experiment_*.py
+
+output_results/
+    generated data + plots
+
+visuals/
+    curated figures (Demonstrator)
 ```
 
 ---
 
-# 🧱 Module Structure
+## ▶️ How to Run
+
+Example:
+
+```bash
+python scripts/run_experiment_3_5_transition_matrix.py
+python scripts/run_experiment_3_6_gate_field_from_transition_matrix.py
+```
+
+---
+
+## 📊 Key Outputs
+
+- Gate field visualizations  
+- Sheet partition plots  
+- Transition matrices  
+- Time-series of structural switching  
+
+---
+
+## 🔗 Related Documents
+
+- `gate_operator.md` → definition of G(x)  
+- `transition_structure.md` → discrete transition model  
+- `navigation_kernel.md` → hybrid motion model  
+
+---
+
+## 🚀 Why This Matters
+
+This work suggests a shift in perspective:
 
 ```text
-NEXAH_DEMONSTRATOR/
-├── scripts/
-│   → reproducible experiments
-│
-├── visuals/
-│   → generated results (organized by concept)
-│
-├── docs/
-│   → conceptual explanations (optional expansion)
-│
-└── README.md
+From:
+    predicting trajectories
+
+To:
+    extracting and navigating structure
 ```
 
----
+If validated further, this could impact:
 
-# 🧪 Script Categories
-
-| Category       | Description |
-|----------------|------------|
-| core           | basic pipeline |
-| hero           | overview visuals |
-| cross_system   | invariance across systems |
-| kuramoto       | synchronization fields |
-| navigation     | control and agent motion |
-| rotation       | curl / rotation fields |
-| slice          | projection / manifold views |
-| kernel         | transition geometry masks |
-| unified        | gate operator |
+- transition detection  
+- control of nonlinear systems  
+- interpretation of complex dynamics  
 
 ---
 
-# 🔬 Key Results
-
-## 1. Structure emerges from dynamics
+## 🧠 Summary
 
 ```text
-Trajectories → density → field geometry
+Dynamical systems generate structure.
+
+Structure defines transitions.
+
+Transitions are not events —
+they are movements within that structure.
 ```
 
 ---
 
-## 2. Transitions are geometric
-
-```text
-Not points — but regions (gates)
-```
-
----
-
-## 3. Rotation matters
-
-```text
-Stable flow = coherent rotation  
-Transitions = rotation breakdown
-```
-
----
-
-## 4. Cross-system invariance
-
-```text
-Different systems share similar structural patterns
-```
-
----
-
-## 5. Unified Gate Operator
-
-```text
-G(s) = (1 - ρ)(1 - C)(1 - R)
-```
-
-Where:
-
-- ρ = density  
-- C = coherence  
-- R = rotation  
-
----
-
-# ⚠️ Scope
-
-This module is:
-
-- empirical  
-- experimental  
-- partially formalized  
-
-It is NOT:
-
-- a proven theory  
-- a complete framework  
-- a universal claim  
-
----
-
-# 🚀 Purpose
-
-This demonstrator exists to:
-
-- validate structural ideas  
-- compare across systems  
-- guide further development  
-- serve as a prototype for NEXAH kernel design  
-
----
-
-# 🧠 Final Insight
-
-```text
-Systems do not evolve randomly.
-
-They move within structured fields,
-lose coherence,
-and transition through geometry into new regimes.
-```
-
----
-
-# 👤 Author
-
-Thomas K. R. Hofmann  
-NEXAH — 2026
+**NEXAH Demonstrator — Gate Operator & Transition Structure**  
+Thomas K. R. Hofmann · 2026
