@@ -49,11 +49,11 @@ Observed consistently across multiple systems.
 
 ---
 
-## 2. Transitions are spatially extended
+## 2. Instability is spatially extended
 
 ```text
-transitions ≠ points
-→ transitions = regions
+instability ≠ point
+→ instability = region
 ```
 
 ---
@@ -62,6 +62,22 @@ transitions ≠ points
 
 ```text
 high-density regions form pathways
+```
+
+---
+
+## 4. Discrete transition structure emerges
+
+```text
+trajectory → sheet structure → transitions
+```
+
+Observed:
+
+```text
+• transitions occur between neighboring regions
+• no long-range jumps
+• structured switching behavior
 ```
 
 ---
@@ -89,6 +105,16 @@ motion within a structured field
 
 ---
 
+## 3. Hybrid system representation
+
+The system is modeled as:
+
+```text
+continuous field + discrete structure
+```
+
+---
+
 # 🔥 IV. Novel Structural Hypotheses
 
 ## Claim 1 — Gate as Multi-Factor Structural Collapse
@@ -101,12 +127,6 @@ low density
 + breakdown of rotational structure
 ```
 
-This differs from:
-
-```text
-threshold-based transition models
-```
-
 ---
 
 ## Claim 2 — Rotation as Stability Indicator
@@ -114,7 +134,7 @@ threshold-based transition models
 Let:
 
 ```text
-R(s) = |curl(F)|
+R(x) = |curl(F(x))|
 ```
 
 Hypothesis:
@@ -124,25 +144,84 @@ high R → stable looping structure
 low R → breakdown of stability
 ```
 
-This extends the role of rotational structure beyond classical fluid systems.
+---
+
+## Claim 3 — Gate Operator as Instability Field
+
+```text
+G(x) = (1 - ρ̂)(1 - Ĉ)(1 - R̂)
+```
+
+Refined Hypothesis:
+
+```text
+G(x) measures local structural instability,
+NOT transition events.
+```
 
 ---
 
-## Claim 3 — Unified Gate Operator
+## 🔥 Claim 4 — Transitions are Discrete Structural Events
+
+Define:
 
 ```text
-G(s) = (1 - ρ̂)(1 - Ĉ)(1 - R̂)
+s(t) = structural layer (sheet index)
+```
+
+Then:
+
+```text
+transition(t) = s(t) ≠ s(t-1)
 ```
 
 Hypothesis:
 
 ```text
-transition likelihood increases with combined structural weakness
+Transitions are discrete reconfigurations
+of underlying system structure.
 ```
 
 ---
 
-## Claim 4 — Structural Navigation
+## 🔥 Claim 5 — Transitions follow constrained geometry
+
+Observed:
+
+```text
+• transitions occur only between neighboring sheets
+• transition matrix is banded
+• probabilities are smooth (not sparse)
+```
+
+Hypothesis:
+
+```text
+Transitions are governed by local geometric constraints,
+not random jumps.
+```
+
+---
+
+## 🔥 Claim 6 — Gates are Distributed Transition Regions
+
+Observation:
+
+```text
+no isolated rare transitions
+no sharp gate events
+```
+
+Hypothesis:
+
+```text
+Gates are not points or edges,
+but distributed regions of transition flow.
+```
+
+---
+
+## Claim 7 — Structural Navigation
 
 System motion is governed by:
 
@@ -158,31 +237,23 @@ optimization of a scalar objective
 
 ---
 
-## 🔥 Claim 5 — Janus Field (Bidirectional Flow Structure)
+## 🔥 Claim 8 — Janus Field (Bidirectional Flow Structure)
 
 Define:
 
 ```text
-F_J(s) = F_forward(s) + F_backward(s)
+F_J(x) = F_forward(x) + F_backward(x)
 ```
 
 Hypothesis:
 
 ```text
-local system behavior encodes both forward evolution and backward structure
+local system behavior encodes both forward evolution and backward constraints
 ```
-
-Interpretation:
-
-- field is not purely forward-defined  
-- structure contains implicit historical constraints  
-- navigation uses bidirectional information  
-
-This deviates from standard Markovian flow assumptions.
 
 ---
 
-## Claim 6 — Cross-System Structural Invariance
+## Claim 9 — Cross-System Structural Invariance
 
 Across different systems:
 
@@ -193,8 +264,8 @@ Lorenz, Kuramoto, Rössler
 we observe:
 
 - similar density structures  
-- similar transition regions  
-- similar gate geometry  
+- similar transition organization  
+- similar geometric constraints  
 
 Hypothesis:
 
@@ -210,8 +281,8 @@ these structures are system-independent features of dynamical organization
 - theoretical grounding of rotation hypothesis  
 - relation to Lyapunov stability  
 - relation to invariant manifolds  
-- mathematical formulation of Janus field  
-- probabilistic interpretation of G(s)  
+- mathematical formulation of sheet structure  
+- probabilistic interpretation of G(x)  
 
 ---
 
@@ -220,17 +291,18 @@ these structures are system-independent features of dynamical organization
 NEXAH suggests:
 
 ```text
-system transitions are governed by geometry,
-not only by equations or thresholds
+system behavior is governed by the interaction of
+continuous instability fields and discrete structural transitions
 ```
 
 ---
 
 # 🚀 VII. Next Steps
 
-- formalize gate operator  
-- derive analytical conditions  
-- validate across broader system classes  
+- formalize sheet structure mathematically  
+- connect transition matrix to manifold geometry  
+- derive analytical conditions for gate regions  
+- validate across higher-dimensional systems  
 - connect to control theory  
 
 ---
@@ -238,9 +310,9 @@ not only by equations or thresholds
 # 🧠 Final Statement
 
 ```text
-The observed structures suggest that
-stability, transition, and control
-are geometric properties of the system.
+Dynamical systems are governed by
+interacting continuous fields and discrete structures,
+not isolated transition events.
 ```
 
 ---
