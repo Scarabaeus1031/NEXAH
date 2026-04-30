@@ -1,58 +1,66 @@
-# 🧪 Vessel Geometry System
+# 🧪 Vessel Geometry System (Structural Model)
 
 ## Overview
 
-The Vessel Geometry System introduces a structural layer on top of field-based dynamics.
+The Vessel Geometry System introduces a **structural interpretation layer**  
+on top of field-based dynamics.
 
-It formalizes how **structure is contained, constrained, and stabilized** within a system.
+It describes how structure can be:
 
-While previous work describes:
+- contained  
+- constrained  
+- stabilized  
 
-- fields (geometry)
-- dynamics (flow)
-- memory (recurrence)
-- resonance (band structure)
-- coupling (interaction)
+within observed dynamical systems.
 
-this module asks:
+---
 
-> **What defines the boundary and capacity of a system?**
+## ⚠️ Scope
+
+This is:
+
+- not a physical theory  
+- not a universal system definition  
+
+It is:
+
+> a **structural model describing when and how stable system structure emerges**
 
 ---
 
 ## Core Idea
 
-> A system does not exist only as a field —  
-> it exists inside a **vessel**.
+Observed behavior suggests:
 
-A vessel defines:
+> structured dynamics often appear within **bounded regions of state space**
 
-- where structure can form  
-- how much structure can persist  
-- how dynamics are constrained  
+These regions act as effective “containers” for:
+
+- trajectories  
+- recurrence  
+- coupling  
+- topology  
 
 ---
 
-## Definition
+## Definition (Working)
 
-A **vessel** is a bounded region in state space such that:
+A **vessel** is a region in state space such that:
 
-- trajectories remain contained  
+- trajectories remain largely contained  
 - recurrence is sustained  
-- structure (loops, states) can persist  
+- structural patterns (loops, states) persist  
 
 ---
 
-## Formal Components
-
-A vessel is defined by:
+## Structural Components
 
 ### 1. Boundary (B)
 
-The geometric constraint of the system:
+Defines the effective limits of the system:
 
-- derived from stability thresholds  
-- separates viable vs non-viable regions  
+- separates stable vs unstable regions  
+- often aligned with transition thresholds  
 
 ---
 
@@ -60,27 +68,27 @@ The geometric constraint of the system:
 
 Region where:
 
-- trajectories exist  
-- recurrence is possible  
-- coupling can emerge  
+- trajectories evolve  
+- recurrence occurs  
+- structure is maintained  
 
 ---
 
 ### 3. Interface (Γ)
 
-Critical transition region:
+Critical transition layer:
 
-- where structure is formed  
-- where coupling is strongest  
-- corresponds to previously observed **gap regions**
+- region of high interaction  
+- corresponds to transition zones / gates  
+- often linked to previously observed low-density regions  
 
 ---
 
 ### 4. Capacity (K)
 
-Maximum structural complexity that can persist:
+Represents the **maximum structural complexity**:
 
-- number of states  
+- number of stable states  
 - number of loops  
 - density of recurrence  
 
@@ -90,21 +98,20 @@ Maximum structural complexity that can persist:
 
 The vessel acts as:
 
-- a **container of dynamics**
-- a **filter of trajectories**
-- a **constraint on structure formation**
+- a **constraint on dynamics**  
+- a **filter for trajectories**  
+- a **support for persistent structure**
 
 ---
 
-## Relation to Previous Work
+## Relation to Field Model
 
 | Concept   | Vessel Interpretation        |
 |-----------|-----------------------------|
 | Field     | underlying geometry         |
-| Flow      | motion inside vessel        |
-| Memory    | persistence inside vessel   |
-| Resonance | structure within vessel     |
-| Coupling  | interaction across interface|
+| Flow      | motion within region        |
+| Density   | occupation of space         |
+| Coupling  | interaction at interfaces   |
 
 ---
 
@@ -112,85 +119,89 @@ The vessel acts as:
 
 ### IEEE 9
 
-- structure present but uncoupled  
-- no persistent loops  
-- weak or absent vessel  
+- weak recurrence  
+- limited structure  
+- no stable loops  
 
-→ **diffuse vessel / non-binding container**
+→ interpreted as:
+
+> **weakly defined or diffuse vessel**
 
 ---
 
 ### IEEE 14
 
-- stable loops and states  
-- strong coupling at interface  
+- stable loops  
+- strong coupling  
 - persistent topology  
 
-→ **well-formed vessel with active boundary**
+→ interpreted as:
+
+> **well-defined structural containment**
 
 ---
 
-## Key Hypothesis
+## Working Hypothesis
 
-> Structure emerges only when a vessel is sufficiently defined.
-
-Conditions:
-
-- boundary exists  
-- interface is active  
-- trajectories remain contained  
-- coupling exceeds threshold  
+> Persistent structure appears when a system exhibits  
+> **sufficient containment and interface activity**
 
 ---
 
 ## Failure Modes
 
-A system fails to form a vessel if:
+A vessel does not form when:
 
-- trajectories escape (no containment)  
-- recurrence is uniform (no memory)  
-- no closure (no loops)  
+- trajectories disperse  
+- recurrence is uniform or absent  
+- no stable loops emerge  
 
 ---
 
 ## Implications
 
-The vessel concept explains:
+The vessel model helps explain:
 
-- why some systems form structure (IEEE 14)  
-- why others remain diffuse (IEEE 9)  
-- why coupling localizes near interfaces  
+- why structure forms in some systems but not others  
+- why coupling localizes near boundaries  
+- why stability appears region-based  
 
 ---
 
-## Connection to Stability
+## Relation to Stability
 
-Previous result:
+Previous:
 
-> Stability is not a point — it is a region  
+```text
+Stability = region of coherent flow
+```
 
-Refined:
+Extended:
 
-> Stability is the existence of a **vessel**  
-> within which structure can persist  
+```text
+Stability = existence of a region where structure can persist
+```
 
 ---
 
 ## Next Steps
 
-- quantify vessel boundary  
-- measure vessel capacity (K)  
+- define measurable boundary criteria  
+- estimate capacity (K)  
 - detect vessel formation conditions  
-- relate vessel to phase transitions  
+- test across different systems  
 
 ---
 
 ## Summary
 
-> A field becomes a system when it forms a vessel.  
+> Structure does not emerge everywhere in state space  
+> but within regions that support persistence and recurrence  
 
-- the field defines possibility  
-- the vessel defines reality  
+---
 
-Structure exists not everywhere —  
-but only where it is contained.
+## Status
+
+Exploratory structural model  
+Empirically motivated  
+Not yet validated across systems
