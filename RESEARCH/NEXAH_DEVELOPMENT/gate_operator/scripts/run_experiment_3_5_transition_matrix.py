@@ -3,6 +3,16 @@ import matplotlib.pyplot as plt
 import os
 
 # ============================================================
+# SAFE OUTPUT PATH (FIX!)
+# ============================================================
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+output_dir = os.path.join(BASE_DIR, "../output_results")
+os.makedirs(output_dir, exist_ok=True)
+
+print(f"📁 Output directory: {output_dir}")
+
+# ============================================================
 # SYSTEM
 # ============================================================
 
@@ -54,21 +64,23 @@ print("\nTransition Matrix (probabilities):")
 print(P)
 
 # ============================================================
-# OUTPUT DIR
+# SAVE DATA (CRITICAL FOR 3.6)
 # ============================================================
 
-output_dir = "../output_results"
-os.makedirs(output_dir, exist_ok=True)
+path_T = os.path.join(output_dir, "experiment_3_5_transition_matrix.npy")
+path_P = os.path.join(output_dir, "experiment_3_5_transition_prob_matrix.npy")
+path_sheets = os.path.join(output_dir, "experiment_3_5_sheet_sequence.npy")
 
-# ============================================================
-# SAVE DATA (WICHTIG FÜR 3.6)
-# ============================================================
+np.save(path_T, T)
+np.save(path_P, P)
+np.save(path_sheets, sheets)
 
-np.save(os.path.join(output_dir, "experiment_3_5_transition_matrix.npy"), T)
-np.save(os.path.join(output_dir, "experiment_3_5_transition_prob_matrix.npy"), P)
-np.save(os.path.join(output_dir, "experiment_3_5_sheet_sequence.npy"), sheets)
-
-print("Saved transition matrix + probabilities + sheet sequence")
+# VERIFY SAVE
+for path in [path_T, path_P, path_sheets]:
+    if os.path.exists(path):
+        print(f"✅ Saved: {path}")
+    else:
+        print(f"❌ ERROR saving: {path}")
 
 # ============================================================
 # PLOT
@@ -85,12 +97,14 @@ plt.title("Experiment 3.5 — Sheet Transition Matrix")
 
 plt.tight_layout()
 
-# SAVE FIGURE
-plt.savefig(
-    os.path.join(output_dir, "experiment_3_5_transition_matrix.png"),
-    dpi=200
-)
+file_plot = os.path.join(output_dir, "experiment_3_5_transition_matrix.png")
+plt.savefig(file_plot, dpi=200)
+
+if os.path.exists(file_plot):
+    print(f"✅ Saved visualization: {file_plot}")
+else:
+    print("❌ ERROR saving visualization")
 
 plt.close()
 
-print("Saved visualization: experiment_3_5_transition_matrix.png")
+print("✅ Experiment 3.5 complete")
