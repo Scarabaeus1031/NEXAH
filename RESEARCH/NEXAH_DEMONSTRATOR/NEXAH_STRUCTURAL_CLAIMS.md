@@ -1,98 +1,111 @@
-# 🧠 NEXAH — Structural Claims
+# 🧠 NEXAH — Structural Claims (Extended)
 
 ## 🧭 Purpose
 
-This document separates:
+This document distinguishes:
 
-- known methods  
+- standard methods  
 - empirical observations  
-- novel structural claims  
+- structural reinterpretations  
+- novel hypotheses  
 
-It aims to make NEXAH interpretable from a **scientific perspective**.
+It aims to position NEXAH within the context of **dynamical systems and control theory**.
 
 ---
 
 # ⚠️ Scope
 
-This is NOT a final theory.
+This is not a final theory.
 
 It is:
 
 ```text
-a set of structural hypotheses derived from empirical exploration
+a set of structured, testable hypotheses derived from empirical exploration
 ```
 
 ---
 
-# 🧱 I. Known Components
+# 🧱 I. Standard Components (Not Claimed as Novel)
 
-The following elements are standard:
-
-- Lorenz / Rössler dynamical systems  
-- Kuramoto synchronization model  
-- Kernel density estimation (KDE)  
+- Lorenz / Rössler systems  
+- Kuramoto model  
+- Kernel density estimation  
 - Gradient-based flow fields  
 - Agent-based simulation  
 
-These are used as **tools**, not claims.
+These are used purely as **instrumentation**.
 
 ---
 
 # 🔬 II. Empirical Observations
 
-## 1. Structure emerges from trajectories
+## 1. Structure emerges from trajectory aggregation
 
 ```text
-Trajectories → density → geometric structure
+trajectories → density → geometry
 ```
 
-Observed across:
-
-- Lorenz  
-- Kuramoto  
-- Rössler  
+Observed consistently across multiple systems.
 
 ---
 
-## 2. Transitions are not point-like
+## 2. Transitions are spatially extended
 
 ```text
-Transitions occur in regions
-```
-
-These regions:
-
-- have low density  
-- are spatially extended  
-
----
-
-## 3. Systems form ridge-like pathways
-
-```text
-high-density regions organize into paths
+transitions ≠ points
+→ transitions = regions
 ```
 
 ---
 
-# 🔥 III. Structural Claims
+## 3. Ridge structures organize motion
 
-## Claim 1 — Gate Definition
+```text
+high-density regions form pathways
+```
+
+---
+
+# 🔁 III. Structural Reinterpretations
+
+## 1. Density as structural field
+
+Density is treated as:
+
+```text
+a geometric object,
+not just a statistical estimate
+```
+
+---
+
+## 2. Phase space as navigable geometry
+
+System evolution is interpreted as:
+
+```text
+motion within a structured field
+```
+
+---
+
+# 🔥 IV. Novel Structural Hypotheses
+
+## Claim 1 — Gate as Multi-Factor Structural Collapse
 
 A gate is defined as:
 
 ```text
-Gate(s) =
 low density
-+ low coherence
-+ rotation breakdown
++ loss of directional alignment
++ breakdown of rotational structure
 ```
 
-Interpretation:
+This differs from:
 
-- density → structural support  
-- coherence → alignment with flow  
-- rotation → local stability  
+```text
+threshold-based transition models
+```
 
 ---
 
@@ -104,54 +117,72 @@ Let:
 R(s) = |curl(F)|
 ```
 
-Then:
+Hypothesis:
 
 ```text
-high R → stable looping behavior  
-low R → structural breakdown  
+high R → stable looping structure
+low R → breakdown of stability
 ```
+
+This extends the role of rotational structure beyond classical fluid systems.
 
 ---
 
 ## Claim 3 — Unified Gate Operator
 
-Define:
-
-```text
-ρ̂, Ĉ, R̂ ∈ [0,1]
-```
-
-Then:
-
 ```text
 G(s) = (1 - ρ̂)(1 - Ĉ)(1 - R̂)
 ```
 
-Interpretation:
+Hypothesis:
 
 ```text
-high G → strong transition candidate
+transition likelihood increases with combined structural weakness
 ```
 
 ---
 
 ## Claim 4 — Structural Navigation
 
-System motion is better described as:
+System motion is governed by:
 
 ```text
-movement within a structured field
+alignment with geometric structure
 ```
 
 rather than:
 
 ```text
-state transition sequence
+optimization of a scalar objective
 ```
 
 ---
 
-## Claim 5 — Cross-System Invariance
+## 🔥 Claim 5 — Janus Field (Bidirectional Flow Structure)
+
+Define:
+
+```text
+F_J(s) = F_forward(s) + F_backward(s)
+```
+
+Hypothesis:
+
+```text
+local system behavior encodes both forward evolution and backward structure
+```
+
+Interpretation:
+
+- field is not purely forward-defined  
+- structure contains implicit historical constraints  
+- navigation uses bidirectional information  
+
+This deviates from standard Markovian flow assumptions.
+
+---
+
+## Claim 6 — Cross-System Structural Invariance
 
 Across different systems:
 
@@ -165,37 +196,42 @@ we observe:
 - similar transition regions  
 - similar gate geometry  
 
----
-
-# 🔁 IV. Open Questions
-
-The following are not yet resolved:
-
-- formal definition of coherence  
-- theoretical justification of gate operator  
-- relation to Lyapunov stability  
-- relation to invariant manifolds  
-- probabilistic interpretation  
-
----
-
-# 🧠 V. Interpretation
-
-NEXAH proposes:
+Hypothesis:
 
 ```text
-Systems are constrained by geometry,
-not only by equations.
+these structures are system-independent features of dynamical organization
 ```
 
 ---
 
-# 🚀 VI. Next Steps
+# 🔁 V. Open Questions
 
-- formalization of gate operator  
-- validation across more systems  
-- connection to control theory  
-- analytical grounding  
+- formal definition of coherence  
+- theoretical grounding of rotation hypothesis  
+- relation to Lyapunov stability  
+- relation to invariant manifolds  
+- mathematical formulation of Janus field  
+- probabilistic interpretation of G(s)  
+
+---
+
+# 🧠 VI. Interpretation
+
+NEXAH suggests:
+
+```text
+system transitions are governed by geometry,
+not only by equations or thresholds
+```
+
+---
+
+# 🚀 VII. Next Steps
+
+- formalize gate operator  
+- derive analytical conditions  
+- validate across broader system classes  
+- connect to control theory  
 
 ---
 
@@ -203,11 +239,11 @@ not only by equations.
 
 ```text
 The observed structures suggest that
-system transitions are governed by geometry,
-not discrete thresholds.
+stability, transition, and control
+are geometric properties of the system.
 ```
 
 ---
 
-**NEXAH — Structural Claims**  
+**NEXAH — Structural Claims (Extended)**  
 Thomas K. R. Hofmann · 2026
