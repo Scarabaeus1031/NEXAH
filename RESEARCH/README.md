@@ -4,45 +4,37 @@ This module contains the **conceptual, structural, and empirical foundation** of
 
 It is not a finished theory.
 
-It is a **living research layer** that integrates:
-
-- foundational assumptions  
-- empirical findings  
-- cross-system insights  
-- emerging control concepts  
+It is a **living research layer** that evolves through building, observation, and validation.
 
 ---
 
 # 🧭 Role in NEXAH
 
 ```text
-RESEARCH (Foundation & Findings)
+RESEARCH (foundation & findings)
         ↓
-FRAMEWORK (Interpretation)
+FRAMEWORK (interpretation)
         ↓
-DISCOVERY ENGINE (Extraction)
+DISCOVERY ENGINE (extraction)
         ↓
-FIELD_LAYER (Geometry)
+FIELD_LAYER (geometry)
         ↓
-NAVIGATION (Control)
+NAVIGATION (control)
 ```
 
 ---
 
-# 🧠 Perspective
+# 🧠 Research Approach
 
-NEXAH is developed from a **builder-first perspective**.
+NEXAH follows a **builder-first methodology**:
 
-The goal is not to start with theory,  
-but to:
+> build systems → observe behavior → extract structure → refine understanding
 
-> **build systems that reveal structure in complex dynamics**
-
-This research layer exists to:
+This layer exists to:
 
 - capture emerging ideas  
 - consolidate findings  
-- connect systems  
+- compare across systems  
 - guide further development  
 
 ---
@@ -50,10 +42,10 @@ This research layer exists to:
 # ⚙️ Development Loop
 
 ```text
-build → observe → extract structure → compare → refine → build
+build → observe → extract → compare → refine → build
 ```
 
-Key addition:
+Key principle:
 
 ```text
 compare across systems → identify invariants
@@ -75,7 +67,7 @@ It is:
 
 ---
 
-# 🧱 Structure of This Module
+# 🧱 Module Structure
 
 ---
 
@@ -83,13 +75,11 @@ It is:
 
 → `FOUNDATION/`
 
-Defines the **core assumptions and semi-formal structure**:
+Core assumptions and semi-formal structure:
 
 - axioms (field, coherence, transitions)  
-- structural theorems  
+- structural relations  
 - navigation formulation  
-
-👉 **Role:** conceptual backbone
 
 ---
 
@@ -97,13 +87,11 @@ Defines the **core assumptions and semi-formal structure**:
 
 → `field_model.md`
 
-Explores systems as:
+Systems as:
 
 - continuous fields  
 - flow-driven structures  
-- coupled geometries  
-
-👉 **Focus:** how structure emerges from dynamics  
+- geometric dynamics  
 
 ---
 
@@ -111,66 +99,56 @@ Explores systems as:
 
 → `theory_to_field_mapping.md`
 
-Connects:
+Translation:
 
-- discrete structure (FOUNDATION)  
-- to geometric representation (FIELD_LAYER)
-
-👉 **Focus:** structure → geometry translation  
+```text
+structure → geometry
+```
 
 ---
 
 ## ⚙️ MULTI-LAYER INTERACTION
 
 → `multi_layer_interaction.md`  
-→ `APPLIED_CASES/applied-case-06-multi-regime-interaction.md`
+→ `APPLIED_CASES/...`
 
 Describes:
 
 - regimes  
 - transitions  
 - gates  
-- sheet interactions  
-
-👉 **Focus:** layered system behavior  
+- layered flow interactions  
 
 ---
 
-## 🧠 INTERPRETATION LAYER
+## 🧠 INTERPRETATION
 
 → `zeta_lens_framework.md`
 
-Provides a **conceptual lens** for:
+Conceptual lens for interpreting:
 
 - local vs global structure  
 - projection vs underlying geometry  
-- flow vs representation  
 
-Important:
-
-> This layer interprets — it does not define system behavior
+⚠️ Interpretation layer only — not defining system behavior  
 
 ---
 
-## 📊 FINDINGS (CORE UPDATE)
+## 📊 FINDINGS
 
 → `FINDINGS/`
 
-Contains **empirical results and cross-system validation**:
+Empirical results and cross-system observations:
 
 - transition structure  
 - flow geometry  
 - control behavior  
-- energy interpretation  
-- real-world validation  
 
-NEW:
+Key update:
 
-- **cross-system invariance (Lorenz ↔ Halvorsen)**  
-- **distributed vs switching dynamics**  
-- **transition-first perspective**  
-
-👉 **Focus:** what is consistently observed  
+```text
+cross-system invariance
+```
 
 ---
 
@@ -180,12 +158,9 @@ NEW:
 
 Examples across domains:
 
-- urban systems  
-- engineering thresholds  
+- engineering systems  
+- socio-technical systems  
 - decision systems  
-- regime interaction  
-
-👉 **Focus:** structure in applied contexts  
 
 ---
 
@@ -193,13 +168,7 @@ Examples across domains:
 
 → `HISTORY/`
 
-Tracks:
-
-- early versions (v1–v6)  
-- evolution of ideas  
-- experimental directions  
-
-👉 **Focus:** development trajectory  
+Evolution of ideas and early versions.
 
 ---
 
@@ -208,46 +177,27 @@ Tracks:
 → `visual_gallery.md`  
 → `visuals/`
 
-Contains:
+Visualizations supporting reasoning.
 
-- structural diagrams  
-- field interpretations  
-- transition visualizations  
-
-Important:
-
-> visuals support reasoning — not formal proof  
-
----
-
-## 🧠 EXPLORATION / EXTENSIONS (Emerging)
-
-Implicitly connected (outside strict structure):
-
-- Janus field (bidirectional control)  
-- gate geometry extensions  
-- sector-based navigation (e.g. 6-sector models)  
-
-👉 **Focus:** next-generation control concepts  
+⚠️ Not formal proof.
 
 ---
 
 # 🔑 Core Idea
 
-Across all components, a consistent pattern emerges:
-
-> Systems are not best understood as states  
-> but as **structured fields with constrained motion**
+```text
+System ≠ state evolution
+System = movement in structured space
+```
 
 ---
 
-# 🧠 Key Insights (Updated)
+# 🧠 Key Insights
 
 ### 1. Structure over state
 
 ```text
-System ≠ state evolution  
-System = movement in structured space
+Dynamics are structured, not random
 ```
 
 ---
@@ -263,8 +213,7 @@ Stability = region of coherent flow
 ### 3. Transitions are structural
 
 ```text
-Transitions occur in geometric channels,
-not at isolated points
+Transitions occur in channels, not points
 ```
 
 ---
@@ -272,8 +221,7 @@ not at isolated points
 ### 4. Control is structural
 
 ```text
-Control ≠ forcing states  
-Control = reshaping flow + transitions
+Control = shaping flow and transitions
 ```
 
 ---
@@ -281,35 +229,22 @@ Control = reshaping flow + transitions
 ### 5. Cross-system invariance
 
 ```text
-Different systems → same transition structure
+Different systems → similar transition structure
 ```
-
-Example:
-
-- Lorenz → switching system  
-- Halvorsen → distributed cyclic system  
-
-BUT:
-
-> identical transition geometry
 
 ---
 
 ### 6. Navigation replaces prediction
 
 ```text
-Old: predict system state  
-New: navigate system structure
+Not predicting states — navigating structure
 ```
 
 ---
 
 # 🔬 Relation to Implementation
 
-The research layer is:
-
-- not directly executable  
-- not part of runtime systems  
+This layer is not executable.
 
 It is:
 
@@ -325,27 +260,12 @@ in:
 
 ---
 
-# ⚠️ Important
-
-This layer should be read as:
-
-> a **structured research notebook**
-
-NOT:
-
-- a finalized theory  
-- a universal model  
-- a claim of physical law  
-
----
-
 # 🚀 Next Steps
 
-- expand cross-system comparison (beyond Lorenz/Halvorsen)  
+- expand cross-system validation  
 - formalize transition invariants  
-- integrate Janus control into FIELD_LAYER  
-- validate on real-world datasets  
-- unify discrete + continuous representations  
+- integrate control mechanisms  
+- validate on real-world systems  
 
 ---
 
@@ -355,11 +275,11 @@ The Research Layer is:
 
 - not an application  
 - not a simulation  
-- not a finished theory  
+- not a finalized theory  
 
 It is:
 
-> a **foundation of ideas + findings emerging from building systems**
+> a **structured body of evolving knowledge grounded in system behavior**
 
 ---
 
