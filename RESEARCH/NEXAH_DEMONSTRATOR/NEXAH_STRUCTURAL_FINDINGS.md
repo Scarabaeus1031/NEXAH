@@ -21,15 +21,15 @@ Dynamics → Density → Structure → Gates → Navigation
 
 Formally, given a trajectory set:
 
-$begin:math:display$
-\\\{x\_t\\\}\_\{t\=1\}\^T \\subset \\mathbb\{R\}\^n
-$end:math:display$
+$$
+\{x_t\}_{t=1}^{T} \subset \mathbb{R}^n
+$$
 
 we construct:
 
-- density field: $begin:math:text$ \\rho\(x\) $end:math:text$
-- flow field: $begin:math:text$ F\(x\) $end:math:text$
-- derived geometric quantities
+- density field: $ \rho(x) $  
+- flow field: $ F(x) $  
+- derived geometric quantities  
 
 ---
 
@@ -49,13 +49,13 @@ Aggregated trajectories form stable, repeatable density distributions.
 
 Let:
 
-$begin:math:display$
-\\rho\(x\) \= \\text\{KDE\}\(\\\{x\_t\\\}\)
-$end:math:display$
+$$
+\rho(x) = \mathrm{KDE}(\{x_t\})
+$$
 
 Then:
 
-- regions of high $begin:math:text$ \\rho\(x\) $end:math:text$ correspond to **persistent system occupation**
+- regions of high $ \rho(x) $ correspond to **persistent system occupation**  
 - structure emerges **without explicit modeling assumptions**
 
 👉 **Key Insight**
@@ -82,9 +82,9 @@ High-density regions form continuous ridge-like pathways.
 
 Define gradient:
 
-$begin:math:display$
-\\nabla \\rho\(x\)
-$end:math:display$
+$$
+\nabla \rho(x)
+$$
 
 Then:
 
@@ -115,13 +115,13 @@ Low-density regions cluster into coherent spatial zones.
 
 Let:
 
-$begin:math:display$
-\\Omega\_\{\\text\{low\}\} \= \\\{ x \\mid \\rho\(x\) \< \\epsilon \\\}
-$end:math:display$
+$$
+\Omega_{\text{low}} = \{ x \mid \rho(x) < \epsilon \}
+$$
 
 Then:
 
-- transitions occur within $begin:math:text$ \\Omega\_\{\\text\{low\}\} $end:math:text$  
+- transitions occur within $ \Omega_{\text{low}} $  
 - these regions are **extended and structured**
 
 👉 **Key Insight**
@@ -142,21 +142,21 @@ Transitions are geometric regions, not discrete events.
 
 Gate regions coincide with simultaneous reduction in:
 
-- density $begin:math:text$ \\rho\(x\) $end:math:text$
-- directional coherence $begin:math:text$ C\(x\) $end:math:text$
-- rotational magnitude $begin:math:text$ R\(x\) $end:math:text$
+- density $ \rho(x) $  
+- directional coherence $ C(x) $  
+- rotational magnitude $ R(x) $  
 
 ### Interpretation
 
 Define:
 
-$begin:math:display$
-G\(x\) \= \(1 \- \\hat\{\\rho\}\)\(1 \- \\hat\{C\}\)\(1 \- \\hat\{R\}\)
-$end:math:display$
+$$
+G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
+$$
 
 Then:
 
-- high $begin:math:text$ G\(x\) $end:math:text$ identifies regions of **multi-factor instability**
+- high $ G(x) $ identifies regions of **multi-factor instability**
 
 👉 **Key Insight**
 
@@ -182,14 +182,14 @@ Stable regions exhibit coherent rotational structure.
 
 Let:
 
-$begin:math:display$
-R\(x\) \= \\left\| \\nabla \\times F\(x\) \\right\|
-$end:math:display$
+$$
+R(x) = \left| \nabla \times F(x) \right|
+$$
 
 Then:
 
-- high $begin:math:text$ R\(x\) $end:math:text$ → local cyclic stability  
-- low $begin:math:text$ R\(x\) $end:math:text$ → structural breakdown  
+- high $ R(x) $ → local cyclic stability  
+- low $ R(x) $ → structural breakdown  
 
 👉 **Key Insight**
 
@@ -203,9 +203,9 @@ Rotational coherence is a geometric indicator of stability.
 
 ### Definition
 
-$begin:math:display$
-G\(x\) \= \(1 \- \\hat\{\\rho\}\)\(1 \- \\hat\{C\}\)\(1 \- \\hat\{R\}\)
-$end:math:display$
+$$
+G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
+$$
 
 ### Observation
 
@@ -215,8 +215,8 @@ High G(x) regions align with empirically observed transitions.
 
 ### Interpretation
 
-- replaces binary thresholds with **continuous geometry**
-- enables spatial transition likelihood estimation
+- replaces binary thresholds with **continuous geometry**  
+- enables spatial transition likelihood estimation  
 
 👉 **Key Insight**
 
@@ -240,15 +240,15 @@ Agents follow high-density pathways and avoid gate regions.
 
 ### Interpretation
 
-Let agent trajectory $begin:math:text$ a\_t $end:math:text$:
+Let agent trajectory $ a_t $:
 
-$begin:math:display$
-a\_\{t\+1\} \= a\_t \+ \\alpha F\(a\_t\) \+ \\eta\_t
-$end:math:display$
+$$
+a_{t+1} = a_t + \alpha F(a_t) + \eta_t
+$$
 
 subject to:
 
-- reduced movement in high $begin:math:text$ G\(x\) $end:math:text$ regions
+- reduced movement in high $ G(x) $ regions  
 
 👉 **Key Insight**
 
@@ -274,13 +274,13 @@ Local field behavior reflects both forward and backward structure.
 
 Define:
 
-$begin:math:display$
-F\_J\(x\) \= F\_\{\\text\{forward\}\}\(x\) \+ F\_\{\\text\{backward\}\}\(x\)
-$end:math:display$
+$$
+F_J(x) = F_{\text{forward}}(x) + F_{\text{backward}}(x)
+$$
 
 Then:
 
-- structure encodes both **future tendency and past constraint**
+- structure encodes both **future tendency and past constraint**  
 - system behavior deviates from purely Markovian dynamics  
 
 👉 **Key Insight**
@@ -320,17 +320,17 @@ Structural organization may be system-independent.
 
 # 🧠 Synthesis
 
-$begin:math:display$
-\\text\{Stability\} \\sim \\rho\(x\)\, C\(x\)\, R\(x\)
-$end:math:display$
+$$
+\text{Stability} \sim \rho(x)\, C(x)\, R(x)
+$$
 
-$begin:math:display$
-\\text\{Transition\} \\sim G\(x\)
-$end:math:display$
+$$
+\text{Transition} \sim G(x)
+$$
 
-$begin:math:display$
-\\text\{Motion\} \\sim F\(x\) \\text\{ constrained by geometry\}
-$end:math:display$
+$$
+\text{Motion} \sim F(x) \text{ constrained by geometry}
+$$
 
 ---
 
