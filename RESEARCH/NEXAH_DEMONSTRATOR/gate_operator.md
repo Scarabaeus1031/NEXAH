@@ -235,5 +235,16 @@ The NEXAH Gate Operator provides:
 
 ---
 
+## ⚠️ Important Clarification
+
+The Gate Operator does NOT directly detect transitions.
+
+It identifies regions of structural instability.
+
+Actual transitions depend on additional discrete structure
+(e.g. sheet / basin switching).
+
+---
+
 **NEXAH — Gate Operator**  
 Thomas K. R. Hofmann · 2026
