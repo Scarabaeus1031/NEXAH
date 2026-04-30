@@ -207,6 +207,32 @@ Properties:
 
 ---
 
+## 🔬 Observation — Gradient Strip Artifact
+
+In projected systems (e.g. Kuramoto):
+
+- density collapses into a narrow band
+- gradient becomes one-dimensional
+- visualization produces apparent strip patterns
+
+### Interpretation
+
+These strips are not intrinsic structural features.
+
+They result from:
+
+- low-dimensional embedding
+- density gradient discretization
+- visualization mapping
+
+### Insight
+
+The system exhibits:
+
+```text
+gradient-dominated structure with reduced dimensionality
+```
+
 ## 🔥 Key Insight
 
 ```text
@@ -235,7 +261,6 @@ G₂ = (1 - Ĉ)
 G₃ = (1 - R̂)
 G_full = combined
 ```
-
 ---
 
 ## Target Question
