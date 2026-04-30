@@ -1,11 +1,12 @@
 # 🖼️ NEXAH — Visual Discovery Log (v1–v25)
 
-This gallery is not a collection of images.
+This is not a collection of visuals.
 
 It is a **record of discovery**:
 
 ```text
-how structure was extracted from dynamics
+how structure emerges from dynamics
+→ and becomes navigable
 ```
 
 ---
@@ -34,8 +35,8 @@ low density
 ## 2. π → Rotation Principle
 
 ```text
-Stable systems → coherent rotation  
-Transitions → rotation collapse
+Stable regions → coherent rotation
+Transitions → rotation breakdown
 ```
 
 ---
@@ -43,31 +44,33 @@ Transitions → rotation collapse
 ## 3. Slice ≠ Structure
 
 ```text
-2D channel = projection of higher-dimensional geometry
+Observed channels = projections of higher-dimensional geometry
 ```
 
 ---
 
-## 4. Cross-System Invariance
+## 4. Janus Field (Bidirectional Awareness)
 
 ```text
-Lorenz, Kuramoto, Rössler → same geometry
+Forward + backward flow simultaneously
+
+→ system encodes origin + destination
 ```
 
 ---
 
-## 5. Navigation is structural
+## 5. Cross-System Invariance
 
 ```text
-Not shortest path → structure-following motion
+Lorenz, Kuramoto, Rössler → same structural geometry
 ```
 
 ---
 
 # 🧩 PHASE 1 — Field Emergence (v1–v4)
 
-![Trajectory](visuals/core/VISUAL_02_TRAJECTORYvsDENSITY.png)
-![Density](visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
+![Trajectory](./visuals/core/VISUAL_02_TRAJECTORYvsDENSITY.png)
+![Density](./visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
 
 ```text
 Discovery:
@@ -78,38 +81,54 @@ structure emerges from density, not equations
 
 # 🧩 PHASE 2 — Structure & Pathways (v5–v9)
 
-![Structure](visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
+![Structure](./visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
 
 ```text
 Discovery:
-systems form navigable pathways (ridges)
+systems form stable pathways (ridges)
+→ geometry appears
 ```
 
 ---
 
-# 🧩 PHASE 3 — Transition Geometry (v10–v12)
+# 🧩 PHASE 3 — Transition Geometry (v10)
 
-![Kernel](visuals/kernel/nexah_transition_geometry_kernel_mask_v10.png)
-![Kernel](visuals/kernel/nexah_kernel_navigation_v11.png)
+![Kernel v10](./visuals/kernel/nexah_transition_geometry_kernel_mask_v10.png)
 
 ```text
 Discovery:
-transitions are regions, not points
+transitions are not points
+→ they are regions (gates)
 ```
 
 ---
 
-# 🧩 PHASE 4 — Navigation (v13–v20)
+# 🧩 PHASE 4 — Navigation & Control (v11–v20)
 
-![Goal](visuals/navigation/nexah_goal_navigation_v13.png)
-![Janus](visuals/navigation/nexah_janus_navigation_v14.png)
+## 🔷 Kernel Navigation (v11)
+
+![Kernel Nav](./visuals/kernel/nexah_kernel_navigation_v11.png)
 
 ```text
 Discovery:
-navigation = alignment with structure
+agents can move using gate-aware dynamics
 ```
 
-### 🔥 Highlight: Janus Field
+---
+
+## 🔷 Goal Navigation (v13)
+
+![Goal](./visuals/navigation/nexah_goal_navigation_v13.png)
+
+```text
+Navigation follows structure, not shortest path
+```
+
+---
+
+## 🔷 Janus Field (v14)
+
+![Janus](./visuals/navigation/nexah_janus_navigation_v14.png)
 
 ```text
 Forward + backward flow simultaneously
@@ -118,48 +137,106 @@ Forward + backward flow simultaneously
 
 ---
 
-# 🧩 PHASE 5 — Slice Problem (v15–v17)
+## 🔷 Manifold Navigation (v18)
 
-![Slice](visuals/slice/nexah_slice_operator_v16.png)
-![Manifold](visuals/slice/nexah_slice_manifold_v17.png)
+![Manifold Nav](./visuals/navigation/nexah_manifold_navigation_field_v18.png)
 
 ```text
-Discovery:
-channels are projections of higher-dimensional objects
+Navigation happens on embedded manifolds
+→ not flat geometry
 ```
 
 ---
 
-# 🧩 PHASE 6 — Cross-System (v21–v23)
+## 🔷 Policy Navigation (v19)
 
-![Kuramoto](visuals/kuramoto/nexah_kuramoto_field_v21.png)
-![Graph](visuals/kuramoto/nexah_kuramoto_regime_graph_v22.png)
-![Cross](visuals/cross_system/nexah_cross_system_structure_v23.png)
+![Policy](./visuals/navigation/nexah_policy_navigation_v19.png)
 
 ```text
-Discovery:
-structure persists across fundamentally different systems
+Control reshapes transition structure
 ```
 
 ---
 
-# 🧩 PHASE 7 — Rotation Field (v24)
+## 🔷 Multi-Agent Navigation (v20)
 
-![Rotation](visuals/rotation/nexah_rotation_field_v24.png)
+![Multi-Agent](./visuals/navigation/nexah_multi_agent_navigation_v20.png)
+
+```text
+Multiple agents interact through shared geometry
+```
+
+---
+
+## 🧠 Interpretation
+
+```text
+Navigation =
+alignment with structure
++ anticipation of transitions
++ interaction across agents
+```
+
+---
+
+# 🧩 PHASE 5 — Slice vs Structure (v15–v17)
+
+![Slice](./visuals/slice/nexah_slice_operator_v16.png)
+![Manifold](./visuals/slice/nexah_slice_manifold_v17.png)
+
+```text
+Discovery:
+observed channels are projections
+
+true structure is higher-dimensional
+```
+
+---
+
+# 🧩 PHASE 6 — Synchronization & Regimes (v21–v22)
+
+![Kuramoto Field](./visuals/kuramoto/nexah_kuramoto_field_v21.png)
+![Regime Graph](./visuals/kuramoto/nexah_kuramoto_regime_graph_v22.png)
+
+```text
+Discovery:
+synchronization creates regime structure
+→ transitions between regimes become visible
+```
+
+---
+
+# 🧩 PHASE 7 — Cross-System Invariance (v23)
+
+![Cross System](./visuals/cross_system/nexah_cross_system_structure_v23.png)
+
+```text
+Discovery:
+same structural patterns across fundamentally different systems
+```
+
+---
+
+# 🧩 PHASE 8 — Rotation & Stability (v24)
+
+![Rotation](./visuals/rotation/nexah_rotation_field_v24.png)
 
 ```text
 Discovery:
 rotation encodes stability
+
+stable = coherent rotation
+transition = rotation collapse
 ```
 
 ---
 
-# 🧩 PHASE 8 — Unified Gate Operator (v25)
+# 🧩 PHASE 9 — Unified Gate Operator (v25)
 
-![Unified](visuals/unified/nexah_unified_gate_operator_v25.png)
+![Unified Gate](./visuals/unified/nexah_unified_gate_operator_v25.png)
 
 ```text
-G(s) = (1-ρ)(1-C)(1-R)
+G(s) = (1 - ρ)(1 - C)(1 - R)
 ```
 
 ```text
@@ -183,14 +260,14 @@ and transition through geometry.
 
 # 📌 Notes
 
-- Not a final theory  
-- Empirical + structural  
-- Cross-system consistent  
+- empirical  
+- cross-system consistent  
+- partially formalized  
 
 ---
 
 # 🚀 Next
 
-→ `docs/gate_operator.md`  
-→ Navigation kernel  
+→ docs/gate_operator.md  
+→ navigation kernel  
 → formalization
