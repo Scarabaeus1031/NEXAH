@@ -1,180 +1,238 @@
-# 🧠 NEXAH — Research TODO 
+# 🧠 NEXAH — Research Layer (Validation & Formalization)
 
-**Ziel:**  
-Strukturierte wissenschaftliche Weiterentwicklung des NEXAH-Systems  
-auf Basis der bestehenden empirischen und theoretischen Ergebnisse.
+**Purpose:**  
+This module defines the **scientific validation layer** of NEXAH.
 
----
+It ensures that all structural, geometric, and control-related findings:
 
-# 🧭 Grundprinzip
-
-Das Research-Modul dient als:
-
-> **zentraler Ort für Hypothesen, Beweise, Tests und Validierung**
-
-Wichtig:
-
-- ❌ Keine ungeprüften Aussagen im Core
-- ❌ Keine Vermischung von Hypothese und Ergebnis
-- ✅ Klare Trennung von:
-  - Beobachtung
-  - Interpretation
-  - Validierung
+- are reproducible  
+- are measurable  
+- are not artifacts of simulation or visualization  
 
 ---
 
-# 🔴 PRIORITÄT 1 — EMPIRISCHE VALIDIERUNG
+# 🧭 POSITION IN NEXAH
 
-## Ziel:
-Nachweisen, dass die beobachteten Strukturen reproduzierbar sind.
-
----
-
-### ToDo:
-
-- [ ] Mehrfachläufe (20–50 Runs) für:
-  - Lorenz-System
-  - ggf. weitere Systeme
-
-- [ ] Stabilität prüfen von:
-  - Transition-Kanälen  
-  - Zustandsknoten  
-  - Zyklen  
-  - Attraktor (Fixpunkt)
+```text
+BUILDER LAB (exploration, hypothesis generation)
+→ RESEARCH LAYER (validation, filtering, measurement)
+→ CORE SYSTEM (accepted, stable structure)
+```
 
 ---
 
-### Metriken:
+# 🔴 CORE PRINCIPLE
 
-- mittlere Distanz zum Attraktor  
-- Varianz der Konvergenz  
-- Übergangshäufigkeiten  
-- Zyklusgewichte  
-- Stabilität der Kanalstruktur  
+```text
+Nothing enters the core system without validation.
+```
 
 ---
 
-### Ziel:
+# 🧠 FUNCTION OF THIS LAYER
 
-> zeigen, dass die Struktur **kein Artefakt eines einzelnen Runs ist**
+This module is responsible for:
 
----
-
-# 🔵 PRIORITÄT 2 — ATTRAKTOR & KONVERGENZ
-
-## Ziel:
-Saubere mathematisch-empirische Beschreibung der Konvergenz.
+- separating **observation vs interpretation vs proof**
+- validating structural findings across runs
+- converting experimental insights into **stable system knowledge**
+- preventing bias from single-run or visual artifacts
 
 ---
 
-### ToDo:
+# ⚠️ STRICT RULES
 
-- [ ] Fixpunkt über mehrere Runs bestimmen  
-- [ ] Basin-Größe schätzen  
-- [ ] Konvergenzrate messen  
-- [ ] Endpunkt-Cluster visualisieren  
+## ❌ NOT ALLOWED
 
----
-
-### Zusatz:
-
-- [ ] lokale Linearisierung (Jacobian)
-- [ ] Eigenwerte bestimmen
+- unverified claims in core modules  
+- visual interpretations without measurement  
+- mixing hypothesis with validated results  
 
 ---
 
-### Ziel:
+## ✅ REQUIRED FOR CORE INTEGRATION
 
-> Nachweis eines **stabilen Spiral-Attraktors**
+Any result must be:
 
----
-
-# 🟣 PRIORITÄT 3 — TRANSITIONSGEOMETRIE
-
-## Ziel:
-Die stärksten empirischen Findings absichern.
+- reproducible across runs  
+- statistically stable  
+- structurally consistent  
+- measurable  
 
 ---
 
-### ToDo:
+# 🔬 VALIDATION PIPELINE
 
-- [ ] Übergangsregionen systematisch vermessen  
-- [ ] ENTRY → CORE → EXIT quantifizieren  
-- [ ] Kanalstruktur stabil über Runs prüfen  
-- [ ] Richtungsabhängigkeit validieren  
+Every idea must pass:
 
----
-
-### Ziel:
-
-> Transition = **strukturierter, mehrphasiger Prozess**
-
----
-
-# 🟡 PRIORITÄT 4 — TOPOLOGIE & ZUSTANDSRAUM
-
-## Ziel:
-Übergang von kontinuierlicher Dynamik zu diskreter Struktur absichern.
+```text
+1. Observation
+→ 2. Hypothesis
+→ 3. Measurement
+→ 4. Reproduction
+→ 5. Integration (optional)
+```
 
 ---
 
-### ToDo:
+# 🔴 PRIORITY 1 — EMPIRICAL VALIDATION
 
-- [ ] Knotenstabilität über Runs prüfen  
-- [ ] Übergangsmatrix vergleichen  
-- [ ] dominante Zyklen analysieren  
-- [ ] Cluster → Basin Mapping validieren  
+## Goal:
+Verify that observed structures are **not single-run artifacts**
 
 ---
 
-### Ziel:
+### Tasks:
 
-> System = **gerichteter, gewichteter Zustandsgraph mit Zyklen**
+- [ ] 20–50 repeated runs for:
+  - Lorenz system
+  - additional systems (optional)
 
----
-
-# 🟢 PRIORITÄT 5 — ENERGIELANDSCHAFT (BOLTZMANN-ANALOGIE)
-
-## Ziel:
-Saubere Interpretation der Dichte → Energie Abbildung.
-
----
-
-### ToDo:
-
-- [ ] Dichtefeld robust schätzen  
-- [ ] Energie definieren:  
-  ```text
-  E = -log(p)
-  ```
-- [ ] Übergänge als Barrier-Crossings prüfen  
-- [ ] Zusammenhang mit Kontrollaufwand testen  
+- [ ] Measure stability of:
+  - transition channels  
+  - basin structure  
+  - attractor position  
+  - cycles and routing paths  
 
 ---
 
-### Ziel:
+### Metrics:
 
-> Dynamik als Bewegung in einer **abgeleiteten Energielandschaft**
-
----
-
-# 🟠 PRIORITÄT 6 — FELDOPERATOREN (DIV / CURL)
-
-## Ziel:
-Strukturelle Kopplung im Feld sauber analysieren.
+- attractor distance (mean / variance)  
+- convergence variance  
+- transition frequency  
+- cycle stability  
+- channel persistence  
 
 ---
 
-### ToDo:
+### Target:
 
-- [ ] Divergenz berechnen  
-- [ ] Rotation (Curl) berechnen  
-- [ ] Zeitverzögerung (Lag) analysieren  
-- [ ] Kreuzkorrelation messen  
+> Demonstrate that structure is **reproducible and stable**
 
 ---
 
-### Ergebnis (Hypothese prüfen):
+# 🔵 PRIORITY 2 — ATTRACTOR & CONVERGENCE
+
+## Goal:
+Formalize convergence behavior
+
+---
+
+### Tasks:
+
+- [ ] estimate fixpoint across runs  
+- [ ] estimate basin size  
+- [ ] measure convergence rate  
+- [ ] cluster terminal states  
+
+---
+
+### Optional:
+
+- [ ] local Jacobian approximation  
+- [ ] eigenvalue analysis  
+
+---
+
+### Target:
+
+> Confirm existence of a **stable attractor structure**
+
+---
+
+# 🟣 PRIORITY 3 — TRANSITION GEOMETRY
+
+## Goal:
+Validate strongest structural finding
+
+---
+
+### Tasks:
+
+- [ ] quantify ENTRY → CORE → EXIT  
+- [ ] verify channel stability across runs  
+- [ ] test directional dependence  
+- [ ] measure transition density  
+
+---
+
+### Target:
+
+> Transition is a **structured multi-phase process**
+
+---
+
+# 🟡 PRIORITY 4 — TOPOLOGY & STATE GRAPH
+
+## Goal:
+Validate discrete system representation
+
+---
+
+### Tasks:
+
+- [ ] verify node stability  
+- [ ] compare transition matrices  
+- [ ] analyze dominant cycles  
+- [ ] map clusters → basins  
+
+---
+
+### Target:
+
+> System behaves as a  
+> **directed, weighted state graph with cycles**
+
+---
+
+# 🟢 PRIORITY 5 — ENERGY LANDSCAPE
+
+## Goal:
+Validate density → energy mapping
+
+---
+
+### Definition:
+
+```text
+E(x) = -log(p(x))
+```
+
+---
+
+### Tasks:
+
+- [ ] robust density estimation  
+- [ ] barrier crossing analysis  
+- [ ] relation to control effort  
+
+---
+
+### Target:
+
+> System behaves like motion in an  
+> **effective energy landscape**
+
+---
+
+# 🟠 PRIORITY 6 — FIELD OPERATORS (DIV / CURL)
+
+## Goal:
+Understand internal field coupling
+
+---
+
+### Tasks:
+
+- [ ] compute divergence  
+- [ ] compute curl  
+- [ ] measure temporal lag  
+- [ ] cross-correlation analysis  
+
+---
+
+### Hypothesis:
 
 ```text
 div(t) ≈ curl(t - τ)
@@ -182,139 +240,131 @@ div(t) ≈ curl(t - τ)
 
 ---
 
-### Ziel:
+### Target:
 
-> Nachweis eines **gekoppelten Feldverhaltens mit Zeitverzögerung**
-
----
-
-# 🔴 PRIORITÄT 7 — GENERALISIERUNG
-
-## Ziel:
-Prüfen, ob Struktur systemübergreifend gilt.
+> Identify **coupled operator dynamics with delay**
 
 ---
 
-### ToDo:
+# 🔴 PRIORITY 7 — GENERALIZATION
 
-- [ ] zweites chaotisches System testen  
-- [ ] Parameter-Sweeps (Lorenz)  
-- [ ] IEEE-Systeme vergleichen  
-- [ ] Dimensionsänderung testen  
+## Goal:
+Test cross-system validity
 
 ---
 
-### Ziel:
+### Tasks:
 
-> zeigen, ob die Struktur **universell oder systemspezifisch ist**
-
----
-
-# 🔵 PRIORITÄT 8 — NAVIGATION & CONTROL
-
-## Ziel:
-Vom Beobachten zum gezielten Eingriff.
+- [ ] second chaotic system  
+- [ ] parameter sweeps (Lorenz)  
+- [ ] IEEE comparison  
+- [ ] dimension scaling  
 
 ---
 
-### ToDo:
+### Target:
 
-- [ ] Trajektorien gezielt steuern  
-- [ ] Übergänge vermeiden/erzwingen  
-- [ ] Multi-Attractor Routing testen  
-- [ ] adaptive Policies evaluieren  
+> Determine if structure is  
+> **universal vs system-specific**
 
 ---
 
-### Ziel:
+# 🔵 PRIORITY 8 — CONTROL & NAVIGATION VALIDATION
 
-> System als **navigierbares Feld** nutzen
-
----
-
-# 🟣 PRIORITÄT 9 — FORMALISIERUNG
-
-## Ziel:
-Brücke zwischen RESEARCH und FIELD_LAYER.
+## Goal:
+Verify that system is truly controllable
 
 ---
 
-### ToDo:
+### Tasks:
 
-- [ ] Mapping definieren:
+- [ ] targeted trajectory steering  
+- [ ] transition enforcement / avoidance  
+- [ ] multi-attractor routing  
+- [ ] policy robustness  
+
+---
+
+### Target:
+
+> System behaves as a  
+> **navigable constrained field**
+
+---
+
+# 🟣 PRIORITY 9 — FORMALIZATION
+
+## Goal:
+Bridge research → core system
+
+---
+
+### Tasks:
+
+- [ ] define mapping:
   ```text
-  (Q, Γ, Δ, Ω) → (α, β, γ, Feld)
+  (Q, Γ, Δ, Ω) → (α, β, γ, field)
   ```
-- [ ] Operatoren geometrisch interpretieren  
-- [ ] Verbindung zu:
-  - Dynamical Systems
-  - Potentialfeldern
-  - Graph-Theorie  
+- [ ] interpret operators geometrically  
+- [ ] connect to:
+  - dynamical systems  
+  - potential theory  
+  - graph theory  
 
 ---
 
-### Ziel:
+### Target:
 
-> ein konsistentes **mathematisches Gesamtmodell**
-
----
-
-# 🧠 ARBEITSREGELN
-
-Beim Arbeiten im Research-Modul:
+> coherent **mathematical system model**
 
 ---
 
-## Jede neue Idee muss eingeordnet werden:
+# 🧠 CLASSIFICATION RULE (MANDATORY)
 
-- [ ] Beobachtung (empirisch)
-- [ ] Hypothese (Interpretation)
-- [ ] Validierung (belegt)
+Every statement must be labeled as:
 
----
-
-## Jede Aussage muss markieren:
-
-- sicher  
-- plausibel  
-- spekulativ  
+- ✅ **validated**
+- 🟡 **plausible**
+- 🔴 **speculative**
 
 ---
 
-## Core bleibt sauber:
+# 🔒 CORE INTEGRATION RULE
 
-Nur übernehmen, wenn:
+A result enters the core ONLY if:
 
-- reproduzierbar  
-- messbar  
-- konsistent  
-
----
-
-# 🚀 ENDZIEL
-
-> NEXAH als:
-
-- reproduzierbares System  
-- strukturell erklärbares Modell  
-- navigierbares dynamisches Feld  
+```text
+✔ reproducible
+✔ measurable
+✔ stable across runs
+✔ consistent across methods
+```
 
 ---
 
-# 🧭 FINALER GEDANKE
+# 🚀 END GOAL
 
-Du baust nicht mehr:
+NEXAH becomes:
 
-> ein Modell
-
-sondern:
-
-> ein **prüfbares System von Struktur → Dynamik → Navigation**
+- a reproducible system  
+- a structurally explainable model  
+- a navigable dynamical field  
 
 ---
 
-**Status:** Aktiv  
-**Fokus:** Validierung & Konsolidierung  
-**Ort:** RESEARCH Layer  
+# 🧭 FINAL INSIGHT
 
-© Thomas K. R. Hofmann · 2026
+```text
+This layer protects the system from false structure.
+
+It ensures that:
+only real geometry survives.
+```
+
+---
+
+**Status:** Active  
+**Role:** Validation Layer  
+**Position:** Between Exploration and Core  
+
+© Thomas K. R. Hofmann · NEXAH · 2026
