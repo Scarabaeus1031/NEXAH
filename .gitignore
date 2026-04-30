@@ -151,3 +151,6 @@ APPLICATIONS/dynamical_systems/halvorsen/outputs/*.txt
 !BUILDER_LAB/EXPLORATION/experimental/outputs/
 !BUILDER_LAB/EXPLORATION/experimental/outputs/**
 !BUILDER_LAB/EXPLORATION/experimental/outputs/**/*.gif
+
+!RESEARCH/NEXAH_DEVELOPMENT/gate_operator/output_results/
+!RESEARCH/NEXAH_DEVELOPMENT/gate_operator/output_results/*.png
