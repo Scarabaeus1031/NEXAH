@@ -1162,6 +1162,10 @@ output_results/experiment_3_6_gate_events.png
 
 ---
 
+
+
+### Research Directions / Validation Path
+
 # 🔬 Experiment 4 — Parameter Sensitivity
 
 ## Goal
