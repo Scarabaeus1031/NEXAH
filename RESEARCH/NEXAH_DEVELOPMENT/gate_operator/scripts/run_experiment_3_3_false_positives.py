@@ -1,7 +1,3 @@
-"""
-NEXAH Experiment 3.3 — False Positive Analysis
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
@@ -21,7 +17,7 @@ THRESHOLD = 0.7
 WINDOW = 50
 
 # ------------------------------------------------------------
-# DETECT HIGH G EVENTS
+# DETECT PEAKS
 # ------------------------------------------------------------
 
 peaks, _ = find_peaks(G_values, height=THRESHOLD, distance=20)
@@ -30,10 +26,7 @@ peaks, _ = find_peaks(G_values, height=THRESHOLD, distance=20)
 # MATCH EVENTS
 # ------------------------------------------------------------
 
-TP = []
-FP = []
-FN = []
-
+TP, FP, FN = [], [], []
 used_transitions = set()
 
 for p in peaks:
@@ -41,15 +34,15 @@ for p in peaks:
     for t in transition_indices:
         if abs(p - t) < WINDOW:
             TP.append(p)
-            used_transitions.add(t)
+            used_transitions.add(int(t))
             match = True
             break
     if not match:
         FP.append(p)
 
 for t in transition_indices:
-    if t not in used_transitions:
-        FN.append(t)
+    if int(t) not in used_transitions:
+        FN.append(int(t))
 
 # ------------------------------------------------------------
 # METRICS
@@ -73,13 +66,13 @@ plt.figure(figsize=(16, 5))
 
 plt.plot(G_values, label="G(x)", alpha=0.8)
 
-plt.scatter(TP, G_values[TP], color="green", label="TP", zorder=3)
-plt.scatter(FP, G_values[FP], color="red", label="FP", zorder=3)
-plt.scatter(FN, G_values[FN], color="orange", label="FN", zorder=3)
+plt.scatter(TP, G_values[TP], color="green", label="TP")
+plt.scatter(FP, G_values[FP], color="red", label="FP")
+plt.scatter(FN, G_values[FN], color="orange", label="FN")
 
 plt.scatter(
     transition_indices,
-    G_values[transition_indices],
+    G_values[transition_indices.astype(int)],
     color="black",
     label="Transitions",
     s=20
