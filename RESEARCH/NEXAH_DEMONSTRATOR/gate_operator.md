@@ -2,15 +2,15 @@
 
 ## 🧭 Overview
 
-In NEXAH, a **gate** is a region where a system transitions between regimes.
+In the NEXAH framework, a **gate** is a region in state space where a dynamical system transitions between regimes.
 
-This document defines the **Unified Gate Operator**.
+This document defines a **continuous geometric operator** for identifying such regions.
 
 ---
 
-# ⚠️ Key Shift
+# ⚠️ Conceptual Shift
 
-Traditional view:
+Classical view:
 
 ```text
 Transition = threshold crossing
@@ -19,170 +19,219 @@ Transition = threshold crossing
 NEXAH view:
 
 ```text
-Transition = geometric region
+Transition = structured region in state space
 ```
+
+Transitions are not instantaneous events, but **extended zones of structural instability**.
 
 ---
 
 # 🧠 Definition
 
-A gate is defined as:
+Let a dynamical system be represented by a flow field:
 
-```text
-Gate(s) =
-low density
-+ low coherence
-+ rotation breakdown
-```
+$$
+\dot{x} = F(x), \quad x \in \mathbb{R}^n
+$$
 
----
-
-# 🔬 Components
-
-## 1. Density (ρ)
-
-Represents structural presence:
-
-```text
-high density → stable region  
-low density → weak structure  
-```
+We define three local structural quantities:
 
 ---
 
-## 2. Coherence (C)
+## 1. Density — $begin:math:text$ \\rho\(x\) $end:math:text$
 
-Measures alignment with local flow:
+Estimated from trajectory data:
 
-```text
-C(s) = alignment of motion with field
-```
+$$
+\rho(x) = \mathrm{KDE}(\{x_t\})
+$$
 
 Interpretation:
 
-```text
-high C → stable motion  
-low C → instability  
-```
+- high $begin:math:text$ \\rho\(x\) $end:math:text$ → stable occupancy  
+- low $begin:math:text$ \\rho\(x\) $end:math:text$ → weak structural support  
 
 ---
 
-## 3. Rotation (R)
+## 2. Coherence — $begin:math:text$ C\(x\) $end:math:text$
 
-Derived from curl:
+Measures local alignment between motion and field structure.
 
-```text
-R(s) = |curl(F)|
-```
+A practical approximation:
+
+$$
+C(x) = \frac{\langle F(x), \nabla \rho(x) \rangle}{\|F(x)\| \, \|\nabla \rho(x)\|}
+$$
 
 Interpretation:
 
-```text
-high rotation → coherent loops  
-low rotation → structural breakdown  
-```
+- high $begin:math:text$ C\(x\) $end:math:text$ → aligned, coherent motion  
+- low $begin:math:text$ C\(x\) $end:math:text$ → directional instability  
+
+---
+
+## 3. Rotation — $begin:math:text$ R\(x\) $end:math:text$
+
+Defined via the curl of the flow field:
+
+$$
+R(x) = \left| \nabla \times F(x) \right|
+$$
+
+Interpretation:
+
+- high $begin:math:text$ R\(x\) $end:math:text$ → cyclic, stable motion  
+- low $begin:math:text$ R\(x\) $end:math:text$ → breakdown of local flow structure  
 
 ---
 
 # 🧩 Unified Gate Operator
 
-Define normalized fields:
+Normalize all quantities to:
 
-```text
-ρ̂(s), Ĉ(s), R̂(s)
-```
+$$
+\hat{\rho}(x), \hat{C}(x), \hat{R}(x) \in [0,1]
+$$
 
-Then:
+Define the **Gate Operator**:
 
-```text
-G(s) = (1 - ρ̂)(1 - Ĉ)(1 - R̂)
-```
+$$
+G(x) = (1 - \hat{\rho}(x)) (1 - \hat{C}(x)) (1 - \hat{R}(x))
+$$
 
 ---
 
-# 🔁 Interpretation
+# 🔬 Interpretation
 
 ```text
-High G(s) → strong gate candidate
+High G(x) → strong transition candidate
+Low G(x) → stable region
 ```
 
 Gate regions occur where:
 
-- structure is weak  
-- alignment is lost  
-- rotation collapses  
+- density is low  
+- coherence is lost  
+- rotational structure collapses  
 
 ---
 
-# 🧠 Geometric Meaning
+# 🌐 Geometric Meaning
+
+Stable regions:
 
 ```text
-Stable regions → closed flow (loops)
-Gates → broken loops
-Transitions → movement through broken geometry
+→ high density  
+→ coherent flow  
+→ closed orbits / rotational structure
+```
+
+Gate regions:
+
+```text
+→ broken flow  
+→ weak alignment  
+→ open geometry
+```
+
+👉 Interpretation:
+
+```text
+A gate is where the geometry that sustains motion fails.
 ```
 
 ---
 
-# 🔬 Properties
+# 🔁 Relation to Dynamics
 
-## 1. Continuous
+Let $begin:math:text$ x\(t\) $end:math:text$ be a trajectory:
 
-```text
-G(s) ∈ [0,1]
-```
+$$
+\dot{x}(t) = F(x(t))
+$$
 
----
-
-## 2. Local
-
-Depends only on local field structure.
-
----
-
-## 3. System-independent
-
-Applies across:
-
-- Lorenz  
-- Kuramoto  
-- Rössler  
-
----
-
-# 🔁 Relation to Transitions
+Then:
 
 ```text
-Transition probability ∝ G(s)
+Transitions are likely when x(t) enters regions of high G(x)
 ```
+
+This replaces discrete switching rules with a **continuous transition field**.
 
 ---
 
-# 🧭 Role in NEXAH
+# 🧭 Role in Navigation
 
-The gate operator is used for:
+The Gate Operator enables:
 
 - transition detection  
-- regime identification  
-- navigation control  
+- regime boundary identification  
+- structure-aware control  
+
+Agent dynamics can be modulated by:
+
+$$
+\dot{x} = F(x) - \lambda \nabla G(x)
+$$
+
+Interpretation:
+
+- avoid high $begin:math:text$ G\(x\) $end:math:text$ → stability  
+- move toward high $begin:math:text$ G\(x\) $end:math:text$ → exploration  
 
 ---
 
-# 🚀 Future Work
+# 🔬 Empirical Evidence
 
-- incorporate directional flow conflict  
-- connect to regime graph transitions  
-- formalize probabilistic interpretation  
+Gate structures appear consistently across:
+
+- Lorenz systems  
+- Rössler systems  
+- Kuramoto synchronization  
+
+See:
+
+- `visuals/kernel/nexah_transition_geometry_kernel_mask_v10.png`
+- `visuals/unified/nexah_unified_gate_operator_v25.png`
 
 ---
 
-# 🧠 Final Statement
+# ⚠️ Limitations
+
+- coherence definition is approximate  
+- KDE introduces smoothing bias  
+- no formal proof of optimality  
+- limited system class explored  
+
+---
+
+# 🚀 Open Questions
+
+- relation to Lyapunov stability  
+- connection to invariant manifolds  
+- probabilistic interpretation of $begin:math:text$ G\(x\) $end:math:text$  
+- extension to high-dimensional systems  
+
+---
+
+# 🧠 Key Insight
 
 ```text
-A gate is not where a system crosses a threshold.
+A transition is not a point in time.
 
-It is where the structure that sustained its motion collapses.
+It is a region in space
+where structural support collapses.
 ```
+
+---
+
+# 🧠 Summary
+
+The NEXAH Gate Operator provides:
+
+- a continuous measure of transition likelihood  
+- a geometric interpretation of regime change  
+- a system-independent detection mechanism  
 
 ---
 
