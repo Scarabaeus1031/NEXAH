@@ -269,6 +269,20 @@ G_full = combined
 Is rotation essential or does density already explain transitions?
 ```
 
+## 🔬 Result — Ablation Study
+
+Observed:
+
+- Density alone produces smooth inverse structure  
+- Rotation introduces directional separation  
+- Combined gate highlights regions of structural conflict  
+
+Conclusion:
+
+```text
+Rotation is essential for capturing transition-relevant structure.
+```
+
 ---
 
 # 🔬 Experiment 4 — Parameter Sensitivity
