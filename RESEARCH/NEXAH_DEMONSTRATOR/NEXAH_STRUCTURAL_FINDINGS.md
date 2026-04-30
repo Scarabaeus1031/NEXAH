@@ -3,13 +3,13 @@
 ## 🧭 Purpose
 
 This document presents **empirical findings derived from the NEXAH pipeline**,  
-based on systematic visualization and analysis of dynamical systems.
+based on systematic visualization and analysis of nonlinear dynamical systems.
 
 It provides:
 
 - evidence-backed observations  
-- structural interpretation of system behavior  
-- support for the proposed NEXAH conceptual framework  
+- geometric interpretation of system behavior  
+- justification for structural hypotheses  
 
 ---
 
@@ -19,8 +19,17 @@ It provides:
 Dynamics → Density → Structure → Gates → Navigation
 ```
 
-This pipeline is applied consistently across multiple systems  
-(Lorenz, Kuramoto, Rössler).
+Formally, given a trajectory set:
+
+$begin:math:display$
+\\\{x\_t\\\}\_\{t\=1\}\^T \\subset \\mathbb\{R\}\^n
+$end:math:display$
+
+we construct:
+
+- density field: $begin:math:text$ \\rho\(x\) $end:math:text$
+- flow field: $begin:math:text$ F\(x\) $end:math:text$
+- derived geometric quantities
 
 ---
 
@@ -28,24 +37,31 @@ This pipeline is applied consistently across multiple systems
 
 ### Evidence
 
-![Density](../visuals/core/VISUAL_02_TRAJECTORYvsDENSITY.png)
+![Density](./visuals/core/VISUAL_02_TRAJECTORYvsDENSITY.png)
 
 ### Observation
 
 ```text
-Aggregated trajectories form stable, repeatable density patterns.
+Aggregated trajectories form stable, repeatable density distributions.
 ```
 
 ### Interpretation
 
-- density is not merely statistical noise  
-- it reveals **persistent occupation of phase space**  
-- this induces a **geometric structure** independent of individual trajectories  
+Let:
+
+$begin:math:display$
+\\rho\(x\) \= \\text\{KDE\}\(\\\{x\_t\\\}\)
+$end:math:display$
+
+Then:
+
+- regions of high $begin:math:text$ \\rho\(x\) $end:math:text$ correspond to **persistent system occupation**
+- structure emerges **without explicit modeling assumptions**
 
 👉 **Key Insight**
 
 ```text
-Structure is not imposed — it emerges from dynamics.
+Geometric structure is an emergent property of dynamics.
 ```
 
 ---
@@ -54,24 +70,31 @@ Structure is not imposed — it emerges from dynamics.
 
 ### Evidence
 
-![Ridges](../visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
+![Ridges](./visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
 
 ### Observation
 
 ```text
-High-density regions form continuous, connected pathways.
+High-density regions form continuous ridge-like pathways.
 ```
 
 ### Interpretation
 
-- these pathways behave like **flow channels**
-- trajectories are not evenly distributed — they **prefer structured corridors**
-- motion is effectively **guided by density gradients**
+Define gradient:
+
+$begin:math:display$
+\\nabla \\rho\(x\)
+$end:math:display$
+
+Then:
+
+- trajectories align with ridge structures  
+- motion is constrained to **low-divergence corridors**
 
 👉 **Key Insight**
 
 ```text
-Dynamics self-organize into navigable pathways.
+System dynamics self-organize into navigable geometric channels.
 ```
 
 ---
@@ -80,56 +103,65 @@ Dynamics self-organize into navigable pathways.
 
 ### Evidence
 
-![Kernel](../visuals/kernel/nexah_transition_geometry_kernel_mask_v10.png)
+![Kernel](./visuals/kernel/nexah_transition_geometry_kernel_mask_v10.png)
 
 ### Observation
 
 ```text
-Low-density regions cluster into structured zones.
+Low-density regions cluster into coherent spatial zones.
 ```
 
 ### Interpretation
 
-- transitions are not instantaneous events  
-- they occur across **extended geometric regions**
-- these regions act as **interfaces between regimes**
+Let:
+
+$begin:math:display$
+\\Omega\_\{\\text\{low\}\} \= \\\{ x \\mid \\rho\(x\) \< \\epsilon \\\}
+$end:math:display$
+
+Then:
+
+- transitions occur within $begin:math:text$ \\Omega\_\{\\text\{low\}\} $end:math:text$  
+- these regions are **extended and structured**
 
 👉 **Key Insight**
 
 ```text
-Transitions are geometric, not discrete.
+Transitions are geometric regions, not discrete events.
 ```
 
 ---
 
-# 🔬 Finding 4 — Gate Regions Exhibit Structural Collapse
+# 🔬 Finding 4 — Gate Regions as Structural Collapse
 
 ### Evidence
 
-![Unified Gate](../visuals/unified/nexah_unified_gate_operator_v25.png)
+![Unified Gate](./visuals/unified/nexah_unified_gate_operator_v25.png)
 
 ### Observation
 
-Gate regions consistently align with:
+Gate regions coincide with simultaneous reduction in:
 
-- low density  
-- low directional coherence  
-- reduced rotational structure  
+- density $begin:math:text$ \\rho\(x\) $end:math:text$
+- directional coherence $begin:math:text$ C\(x\) $end:math:text$
+- rotational magnitude $begin:math:text$ R\(x\) $end:math:text$
 
 ### Interpretation
 
-```text
-Transitions occur where multiple structural supports fail simultaneously.
-```
+Define:
 
-- density loss → weak spatial support  
-- coherence loss → directional instability  
-- rotation loss → breakdown of local stability loops  
+$begin:math:display$
+G\(x\) \= \(1 \- \\hat\{\\rho\}\)\(1 \- \\hat\{C\}\)\(1 \- \\hat\{R\}\)
+$end:math:display$
+
+Then:
+
+- high $begin:math:text$ G\(x\) $end:math:text$ identifies regions of **multi-factor instability**
 
 👉 **Key Insight**
 
 ```text
-A gate is a multi-factor structural collapse.
+Transitions arise from combined structural failure, not single thresholds.
 ```
 
 ---
@@ -138,52 +170,58 @@ A gate is a multi-factor structural collapse.
 
 ### Evidence
 
-![Rotation](../visuals/rotation/nexah_rotation_field_v24.png)
+![Rotation](./visuals/rotation/nexah_rotation_field_v24.png)
 
 ### Observation
 
 ```text
-Stable regions exhibit coherent rotational patterns.
+Stable regions exhibit coherent rotational structure.
 ```
 
 ### Interpretation
 
-- rotational structure corresponds to **local cyclic stability**
-- these loops reinforce trajectory confinement
-- transitions correlate with **rotation breakdown**
+Let:
+
+$begin:math:display$
+R\(x\) \= \\left\| \\nabla \\times F\(x\) \\right\|
+$end:math:display$
+
+Then:
+
+- high $begin:math:text$ R\(x\) $end:math:text$ → local cyclic stability  
+- low $begin:math:text$ R\(x\) $end:math:text$ → structural breakdown  
 
 👉 **Key Insight**
 
 ```text
-Stability is associated with coherent rotational structure.
+Rotational coherence is a geometric indicator of stability.
 ```
 
 ---
 
-# 🔬 Finding 6 — Gate Operator as Continuous Transition Indicator
+# 🔬 Finding 6 — Gate Operator as Continuous Transition Field
 
 ### Definition
 
-```text
-G(s) = (1 - ρ̂)(1 - Ĉ)(1 - R̂)
-```
+$begin:math:display$
+G\(x\) \= \(1 \- \\hat\{\\rho\}\)\(1 \- \\hat\{C\}\)\(1 \- \\hat\{R\}\)
+$end:math:display$
 
 ### Observation
 
 ```text
-Regions of high G(s) align with empirically observed transitions.
+High G(x) regions align with empirically observed transitions.
 ```
 
 ### Interpretation
 
-- combines independent instability signals into a single scalar field  
-- allows **continuous detection of transition likelihood**
-- avoids binary threshold logic  
+- replaces binary thresholds with **continuous geometry**
+- enables spatial transition likelihood estimation
 
 👉 **Key Insight**
 
 ```text
-Transitions can be represented as a continuous geometric field.
+Transition probability can be modeled as a continuous field.
 ```
 
 ---
@@ -192,7 +230,7 @@ Transitions can be represented as a continuous geometric field.
 
 ### Evidence
 
-![Kernel Nav](../visuals/kernel/nexah_kernel_navigation_v11.png)
+![Kernel Nav](./visuals/kernel/nexah_kernel_navigation_v11.png)
 
 ### Observation
 
@@ -202,43 +240,54 @@ Agents follow high-density pathways and avoid gate regions.
 
 ### Interpretation
 
-- motion is not random nor purely deterministic  
-- it is constrained by **underlying field geometry**
-- gates act as **decision zones**, not barriers  
+Let agent trajectory $begin:math:text$ a\_t $end:math:text$:
+
+$begin:math:display$
+a\_\{t\+1\} \= a\_t \+ \\alpha F\(a\_t\) \+ \\eta\_t
+$end:math:display$
+
+subject to:
+
+- reduced movement in high $begin:math:text$ G\(x\) $end:math:text$ regions
 
 👉 **Key Insight**
 
 ```text
-Navigation is alignment with structure, not optimization.
+Navigation is governed by field geometry, not global optimization.
 ```
 
 ---
 
-# 🔬 Finding 8 — Janus Field Behavior (Bidirectional Structure)
+# 🔬 Finding 8 — Janus Field (Bidirectional Structure)
 
 ### Evidence
 
-![Janus](../visuals/navigation/nexah_janus_navigation_v14.png)
+![Janus](./visuals/navigation/nexah_janus_navigation_v14.png)
 
 ### Observation
 
 ```text
-Local flow patterns reflect both forward and backward structural influence.
+Local field behavior reflects both forward and backward structure.
 ```
 
 ### Interpretation
 
-- system behavior cannot be fully described as forward-only evolution  
-- local structure encodes **historical constraints**  
-- navigation implicitly uses **bidirectional information**
+Define:
+
+$begin:math:display$
+F\_J\(x\) \= F\_\{\\text\{forward\}\}\(x\) \+ F\_\{\\text\{backward\}\}\(x\)
+$end:math:display$
+
+Then:
+
+- structure encodes both **future tendency and past constraint**
+- system behavior deviates from purely Markovian dynamics  
 
 👉 **Key Insight**
 
 ```text
-Field structure is not purely forward-defined.
+Local system structure is bidirectional.
 ```
-
-(This deviates from strictly Markovian interpretations of dynamics.)
 
 ---
 
@@ -246,7 +295,7 @@ Field structure is not purely forward-defined.
 
 ### Evidence
 
-![Cross](../visuals/cross_system/nexah_cross_system_structure_v23.png)
+![Cross](./visuals/cross_system/nexah_cross_system_structure_v23.png)
 
 ### Observation
 
@@ -256,8 +305,10 @@ Different dynamical systems produce structurally similar fields.
 
 ### Interpretation
 
-- despite different governing equations  
-- density → structure → gates pattern persists  
+Across systems:
+
+- density → ridge → gate pattern persists  
+- independent of governing equations  
 
 👉 **Key Insight**
 
@@ -269,22 +320,26 @@ Structural organization may be system-independent.
 
 # 🧠 Synthesis
 
-Across all findings:
+$begin:math:display$
+\\text\{Stability\} \\sim \\rho\(x\)\, C\(x\)\, R\(x\)
+$end:math:display$
 
-```text
-Stability = sustained structural support  
-Transition = multi-factor structural breakdown  
-Motion = constrained by emergent geometry  
-```
+$begin:math:display$
+\\text\{Transition\} \\sim G\(x\)
+$end:math:display$
+
+$begin:math:display$
+\\text\{Motion\} \\sim F\(x\) \\text\{ constrained by geometry\}
+$end:math:display$
 
 ---
 
 # ⚠️ Limitations
 
-- empirical (visual + computational), not formally proven  
-- coherence metric not yet rigorously defined  
-- limited system class tested  
-- no analytical derivation yet  
+- empirical (visual + numerical)  
+- coherence not formally defined  
+- limited system diversity  
+- no analytical proofs  
 
 ---
 
@@ -292,19 +347,18 @@ Motion = constrained by emergent geometry
 
 If validated:
 
-- transitions can be detected geometrically  
-- control strategies can become structure-aware  
-- prediction may be replaced by navigation within fields  
+- transition detection becomes geometric  
+- control becomes structure-aware  
+- prediction → navigation paradigm shift  
 
 ---
 
 # 🧠 Final Statement
 
 ```text
-The observed evidence suggests that
-dynamical systems are governed by
+Dynamical systems appear to be governed by
 emergent geometric constraints,
-rather than isolated transition events.
+rather than discrete transition rules.
 ```
 
 ---
