@@ -1,193 +1,331 @@
-# NEXAH — Cleanup & Release TODO (Release Phase)
+# 🚀 NEXAH — Cleanup, Validation & Release TODO (v2)
 
 **Date:** April 2026  
-**Goal:** Prepare for public release, first collaborators, and external validation
+**Phase:** Transition from Experimental System → Validated Framework  
 
 ---
 
-## 🧠 SYSTEM STATUS (CURRENT)
+# 🧠 CURRENT SYSTEM STATE (REAL)
 
-NEXAH now provides a complete working pipeline:
+NEXAH currently provides a **complete structural pipeline**:
 
-- structure discovery (Discovery Engine) ✅  
-- field reconstruction (Field Layer) ✅  
-- topology extraction (states, cycles) ✅  
-- control & navigation (Navigator prototype) ✅  
-- attractor detection & convergence behavior ✅  
-- stability structure (Lyapunov + boundaries) ✅  
-- gate detection (no-decision result) ✅  
-
-👉 The system is now:
-
-> **a demonstrable and testable framework**
+✔ structure discovery (Discovery Engine)  
+✔ field reconstruction (Field Layer)  
+✔ geometry extraction (basins, channels, separatrix)  
+✔ transition geometry (gates, basin graph)  
+✔ control layer (trajectory shaping, gate interaction)  
+✔ navigation layer (structured movement)  
+✔ attractor & convergence detection  
+✔ stability field (Lyapunov + boundary structure)  
 
 ---
 
-## 🧱 THEORETICAL STATUS
+## 🔥 SYSTEM STATUS
 
-- minimal axiomatic layer exists (A0–A4)  
-- operators defined (Γ, Δ, Ω)  
-
-⚠️ Important:
-
-> ❌ No more theory expansion  
-> ✅ Only validation and demonstration
+> NEXAH is no longer a prototype.  
+>  
+> It is a **working structural system — not yet validated.**
 
 ---
 
-# 🔴 PRIORITY 1 — VALIDATION (CRITICAL SHIFT)
-
-### Goal:
-> Show that the signal is real, stable, and not an artifact
-
-### ToDo:
-
-- [ ] **Noise robustness demo (NEW TOP PRIORITY)**
-  - same structure under perturbation
-  - overlay comparison (clean vs noisy)
-  
-- [ ] Lorenz multi-run evaluation (20–50 runs)
-  - peak stability  
-  - pattern consistency  
-
-- [ ] add **RESULTS block** (quantitative)
-
-Example:
-
-Runs: 20  
-Mean peak count: 48 ± 3  
-Mean risk: 0.025  
-Consistency: high  
-
-👉 This is your first real “proof layer”
-
----
-
-# 🔵 PRIORITY 2 — ENTRY POINT
-
-### Goal:
-> Clone → Run → Understand in 60 seconds
-
-### Status:
-- [x] README.md  
-- [x] START_HERE.md  
-- [x] `run_nexah_demo.py`  
-- [x] visual output  
-
-### ToDo:
-- [ ] test fresh clone (clean environment)
-- [ ] verify imports + paths
-- [ ] confirm no hidden dependencies
-
----
-
-# 🟣 PRIORITY 3 — DEMO SYSTEM (LORENZ)
-
-### Status:
-- [x] working demo  
-- [x] structural signal  
-- [x] visual output  
-- [x] peak detection  
-
-### ToDo:
-- [ ] RESULTS block in README
-- [ ] optional: batch script for runs
-
----
-
-# 🟢 PRIORITY 4 — IEEE DEMO
-
-### Status:
-- [x] working demo  
-- [x] early signal detection  
-- [x] visual output  
-
-### ToDo:
-- [ ] tighten README explanation
-- [ ] optionally attach real dataset
-- [ ] clarify synthetic vs real system
-
-👉 This is your **credibility bridge**
-
----
-
-# 🟡 PRIORITY 5 — ATTRACTOR & CONVERGENCE
-
-### ToDo:
-- [ ] endpoint clustering  
-- [ ] convergence statistics  
-- [ ] basin estimation  
-- [ ] fixpoint robustness  
-
-👉 This anchors the “inevitability” claim
-
----
-
-# 🟡 PRIORITY 6 — VISUAL SYSTEM
-
-### Status:
-- [x] strong visuals  
-- [x] demos integrated  
-
-### ToDo:
-- [ ] add 1-line captions  
-- [ ] reduce to 3–5 key visuals  
-
-👉 Curate → don’t overload
-
----
-
-# 🟠 PRIORITY 7 — REPO STRUCTURE
-
-### Status:
-- [x] clean structure  
-- [x] outputs controlled  
-
-### ToDo:
-- [ ] mark legacy scripts  
-- [ ] optional archive folder  
-
----
-
-# 🔗 PRIORITY 8 — CORE LOOP (EXPLICIT)
-
-### Add to README:
+# ⚠️ STRATEGIC SHIFT
 
 ```text
-Field → Signal → Transition → Convergence
+OLD:
+build → extend → explore
+
+NEW:
+validate → stabilize → consolidate → expose
 ```
 
 ---
 
-# 🔶 PRIORITY 9 — STABILITY (V8)
+# 🔴 PRIORITY 1 — VALIDATION (HIGHEST PRIORITY)
+
+## Goal:
+> Prove that the observed structure is **real and reproducible**
+
+---
+
+### Core Tasks:
+
+- [ ] Multi-run validation (20–50 runs):
+  - Lorenz
+  - additional systems (optional)
+
+- [ ] Structure stability:
+  - basins
+  - channels
+  - gates
+  - attractor position
+
+- [ ] Transition consistency:
+  - probability stability
+  - path reproducibility
+
+---
+
+### Noise Robustness (CRITICAL):
+
+- [ ] inject Gaussian noise
+- [ ] compare:
+  - clean vs noisy fields
+  - gate stability
+  - basin integrity
+
+---
+
+### Required Output:
+
+Add **RESULTS blocks**:
+
+```text
+Runs: 30
+Attractor variance: low
+Channel stability: high
+Gate persistence: medium-high
+Noise robustness: confirmed
+```
+
+---
+
+### Target:
+
+> Demonstrate that structure is **not a visualization artifact**
+
+---
+
+# 🔵 PRIORITY 2 — CONTROL VALIDATION
+
+## Goal:
+> Prove that the system is **actually controllable**
+
+---
+
+### Tasks:
+
+- [ ] trajectory steering reproducibility  
+- [ ] transition enforcement / avoidance  
+- [ ] gate-based routing success rate  
+- [ ] control stability under noise  
+
+---
+
+### Key Question:
+
+```text
+Does control reliably influence transitions?
+```
+
+---
+
+### Target:
+
+> System behaves as a **controlled transition system**
+
+---
+
+# 🟣 PRIORITY 3 — IEEE SYSTEM (REAL-WORLD BRIDGE)
+
+## Goal:
+> Establish credibility beyond synthetic systems
+
+---
 
 ### Status:
-- [x] Lyapunov  
-- [x] boundaries  
-- [x] gates  
-- [x] no-decision result  
 
-### ToDo:
-- [ ] 3-line summary block  
-- [ ] 1 reference visual  
-- [ ] link to demo  
+✔ early detection works  
+✔ structure visible  
 
 ---
 
-# 🚀 RELEASE STEPS
+### Tasks:
 
-1. [ ] Noise demo  
-2. [ ] Lorenz results block  
-3. [ ] README final polish  
+- [ ] clarify pipeline (README)
+- [ ] distinguish:
+  - synthetic vs real system
+- [ ] validate:
+  - transition geometry
+  - stability structure
+- [ ] improve reproducibility
+
+---
+
+### Target:
+
+> IEEE becomes the **external validation anchor**
+
+---
+
+# 🟢 PRIORITY 4 — ATTRACTOR & CONVERGENCE
+
+## Goal:
+> Anchor the “inevitability” claim
+
+---
+
+### Tasks:
+
+- [ ] endpoint clustering  
+- [ ] fixpoint estimation  
+- [ ] convergence rate  
+- [ ] basin size estimation  
+
+---
+
+### Target:
+
+> Convergence is **measurable and stable**
+
+---
+
+# 🟡 PRIORITY 5 — TRANSITION GEOMETRY CONSOLIDATION
+
+## Goal:
+> Stabilize the strongest concept in NEXAH
+
+---
+
+### Tasks:
+
+- [ ] validate ENTRY → CORE → EXIT structure  
+- [ ] quantify gate geometry  
+- [ ] test directionality  
+- [ ] confirm across runs  
+
+---
+
+### Target:
+
+> Transition = **structured geometric process**
+
+---
+
+# 🟠 PRIORITY 6 — KERNEL (CRITICAL MISSING PIECE)
+
+## Goal:
+> Build the executable core of NEXAH
+
+---
+
+### Current Problem:
+
+❌ no unified execution pipeline  
+❌ logic spread across modules  
+
+---
+
+### Required:
+
+- [ ] define kernel pipeline:
+
+```text
+state → field → geometry → graph → control → next state
+```
+
+- [ ] unify:
+  - Field Layer
+  - Control Layer
+  - Navigation
+
+- [ ] implement minimal runtime
+
+---
+
+### Target:
+
+> NEXAH becomes an **executable system**, not just modules
+
+---
+
+# 🔶 PRIORITY 7 — ENTRY EXPERIENCE
+
+## Goal:
+> Clone → Run → Understand in 60 seconds
+
+---
+
+### Tasks:
+
+- [ ] clean environment test  
+- [ ] remove hidden dependencies  
+- [ ] verify demo scripts  
+- [ ] simplify outputs  
+
+---
+
+### Target:
+
+> external users can run NEXAH instantly
+
+---
+
+# 🧩 PRIORITY 8 — VISUAL SYSTEM (CURATION)
+
+## Goal:
+> Reduce noise, increase clarity
+
+---
+
+### Tasks:
+
+- [ ] reduce visuals to 3–5 key ones  
+- [ ] add 1-line explanation  
+- [ ] remove redundant plots  
+
+---
+
+### Target:
+
+> visuals explain system, not overwhelm it
+
+---
+
+# 🧱 PRIORITY 9 — REPO CONSOLIDATION
+
+## Goal:
+> Reduce structural fragmentation
+
+---
+
+### Tasks:
+
+- [ ] mark legacy scripts  
+- [ ] archive unused experiments  
+- [ ] align Builder Lab → Core flow  
+- [ ] ensure module discoverability  
+
+---
+
+### Target:
+
+> clear separation:
+
+```text
+experimental → research → core
+```
+
+---
+
+# 🚀 RELEASE STRATEGY
+
+## Minimal Release Condition:
+
+✔ validation (multi-run + noise)  
+✔ control works  
+✔ IEEE demo understandable  
+✔ kernel prototype exists  
+✔ clean entry point  
+
+---
+
+## Release Steps:
+
+1. [ ] validation complete  
+2. [ ] kernel prototype  
+3. [ ] README polish  
 4. [ ] test fresh clone  
-5. [ ] first external share  
-
----
-
-# 🧭 FINAL TARGET
-
-> NEXAH reconstructs and interprets  
-> structured dynamical fields and their transitions
+5. [ ] controlled external share  
 
 ---
 
@@ -195,35 +333,56 @@ Field → Signal → Transition → Convergence
 
 You have:
 
-- ✅ working demos  
-- ✅ reproducible signal  
-- ✅ visual evidence  
-- ✅ consistent architecture  
-
-You need:
-
-- ✔ robustness proof  
-- ✔ quantitative summary  
-- ✔ external validation  
+✔ working system  
+✔ strong structural signal  
+✔ visual proof  
+✔ coherent architecture  
 
 ---
 
-# 🔥 CURRENT STATE
+You are missing:
 
-You are no longer building.
-
-You are:
-
-> validating and proving the system
+❗ validation  
+❗ kernel  
+❗ reproducibility  
 
 ---
 
-# 🧭 NEXT PHASE
+# 🔥 CURRENT POSITION
+
+You are NOT:
+
+> building a new system
+
+You ARE:
+
+> stabilizing and proving an existing one
+
+---
+
+# 🧭 FINAL PHASE
 
 ```text
-demo → validation → feedback → iteration
+system → validation → kernel → exposure → feedback → iteration
 ```
 
-Last Updated: April 2026
-© Thomas K. R. Hofmann
+---
 
+# ⚡ FINAL INSIGHT
+
+```text
+If the structure survives validation,
+
+NEXAH becomes a real framework.
+
+If not,
+
+it collapses to visualization.
+```
+
+---
+
+**Status:** Active  
+**Phase:** Validation & System Consolidation  
+
+© Thomas K. R. Hofmann · NEXAH · 2026
