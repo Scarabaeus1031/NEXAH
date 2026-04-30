@@ -638,6 +638,273 @@ with the underlying sheet / basin structure.
 ```
 ---
 
+# 🔬 Experiment 3.4 — Sheet-Aware Gate Operator
+
+## Goal
+
+```text
+Integrate structural information (sheets / basins)
+with the Gate Operator to improve transition detection.
+```
+
+---
+
+## Motivation
+
+Previous experiments show:
+
+```text
+• G(x) detects instability
+• but fails to reliably detect transitions
+```
+
+Root cause:
+
+```text
+Transitions are structural (sheet switching),
+not purely local (scalar peaks).
+```
+
+---
+
+## Core Idea
+
+Instead of:
+
+```text
+Transition ≈ G(x)
+```
+
+we define:
+
+```text
+Transition ≈ Sheet Switch + Gate Activation
+```
+
+---
+
+## Formal Model
+
+Let:
+
+- $s(t)$ = sheet index at time $t$
+- $G(x_t)$ = Gate Operator
+
+Define transition event:
+
+$$
+T(t) = \mathbf{1}[s(t) \neq s(t-1)]
+$$
+
+---
+
+## Sheet-Aware Gate Condition
+
+We define:
+
+$$
+T_{\text{gate}}(t) =
+\mathbf{1}[s(t) \neq s(t-1)] \cdot \mathbf{1}[G(x_t) > \tau]
+$$
+
+---
+
+## Interpretation
+
+```text
+A transition occurs only when:
+
+1. the system switches structural layer
+2. AND passes through a high-instability region
+```
+
+---
+
+# 🔬 Method
+
+## Step 1 — Sheet Identification
+
+```text
+Cluster trajectory into sheets (e.g. via r or phase)
+```
+
+Example:
+
+```text
+s(t) ∈ {0,1,2,3,4,5}
+```
+
+---
+
+## Step 2 — Sheet Transition Detection
+
+```text
+transition(t) = s(t) ≠ s(t-1)
+```
+
+---
+
+## Step 3 — Gate Filtering
+
+```text
+keep only transitions where G(x) > threshold
+```
+
+---
+
+## Step 4 — Evaluation
+
+Compare:
+
+```text
+• raw G(x) peaks
+• sheet transitions
+• sheet-aware gated transitions
+```
+
+---
+
+# 🔬 Expected Behavior
+
+## Before (Experiment 3.3)
+
+```text
+• many false positives
+• many missed transitions
+```
+
+---
+
+## After (Sheet-Aware)
+
+```text
+• false positives reduced
+• recall increases
+• transitions align with structure
+```
+
+---
+
+# 🔬 Result (Observed Pattern)
+
+Empirically:
+
+```text
+• G(x) peaks occur before transitions
+• transitions occur during relaxation phase
+• sheet switching captures actual transition moment
+```
+
+---
+
+# 🔥 Key Insight
+
+```text
+G(x) ≠ Transition
+
+G(x) = Pre-transition instability field
+```
+
+and
+
+```text
+Transition = structural reconfiguration (sheet switch)
+```
+
+---
+
+# 🧠 Combined Model
+
+```text
+Instability builds → G(x) rises
+→ system destabilizes
+→ sheet switch occurs
+→ system relaxes into new structure
+```
+
+---
+
+# 🔬 Structural Interpretation
+
+The system is best described as:
+
+```text
+continuous field + discrete switching system
+```
+
+---
+
+## Continuous Layer
+
+```text
+G(x), ρ(x), C(x), R(x)
+→ instability dynamics
+```
+
+---
+
+## Discrete Layer
+
+```text
+s(t)
+→ structural regime
+```
+
+---
+
+## Hybrid Model
+
+```text
+(s(t), x(t)) defines system state
+```
+
+---
+
+# 🔬 Transition Matrix Extension
+
+Using sheet-aware transitions:
+
+$$
+P(i \rightarrow j) =
+\mathbb{P}(s(t)=j \mid s(t-1)=i, G(x_t) > \tau)
+$$
+
+---
+
+## Insight
+
+```text
+Transition probabilities become conditional on instability.
+```
+
+---
+
+# 🚀 Implication
+
+```text
+We move from:
+
+signal-based detection
+
+to:
+
+structure-aware transition modeling
+```
+
+---
+
+# 🔥 Final Statement
+
+```text
+The Gate Operator identifies where instability exists.
+
+The sheet structure determines when a transition actually occurs.
+
+Only their combination yields a valid transition model.
+```
+
+---
+
 # 🔬 Experiment 4 — Parameter Sensitivity
 
 ## Goal
