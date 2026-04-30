@@ -1,0 +1,25 @@
+{
+  "Lorenz": {
+    "num_points": 10000,
+    "num_regimes": 3,
+    "num_gates": 12500,
+    "transition_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        0
+      ]
+    ]
+  }
+}
