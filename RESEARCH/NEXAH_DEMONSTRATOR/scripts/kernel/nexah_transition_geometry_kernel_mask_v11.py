@@ -1,6 +1,9 @@
+# NEXAH v11 — Kernel Navigation Engine (Fixed Paths)
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import gaussian_kde
+import os
 
 # ============================================================
 # SYSTEM
@@ -20,6 +23,7 @@ def simulate(system, steps=8000, dt=0.01):
         zs[i+1] = zs[i] + dz*dt
 
     return xs, ys
+
 
 # ============================================================
 # FIELD + GATES
@@ -45,8 +49,9 @@ def detect_gates(Z):
     threshold = np.percentile(Z, 20)
     return Z < threshold
 
+
 # ============================================================
-# INTERPOLATION HELPERS
+# INTERPOLATION
 # ============================================================
 
 def interp_field(X, Y, Z, x, y):
@@ -58,6 +63,7 @@ def interp_field(X, Y, Z, x, y):
 
     return Z[xi, yi]
 
+
 # ============================================================
 # AGENT NAVIGATION
 # ============================================================
@@ -66,35 +72,25 @@ def run_agent(xs, ys, X, Y, Z, steps=2000):
 
     dx, dy = compute_flow(xs, ys)
 
-    # initial state
     x = xs[len(xs)//2]
     y = ys[len(ys)//2]
 
-    traj_x = []
-    traj_y = []
-
-    gate_mask = detect_gates(Z)
+    traj_x, traj_y = [], []
 
     for _ in range(steps):
 
-        # nearest field direction
         idx = np.random.randint(0, len(xs))
         fx = dx[idx]
         fy = dy[idx]
 
-        # density at position
         density = interp_field(X, Y, Z, x, y)
 
-        # gate check
         is_gate = density < np.percentile(Z, 20)
 
-        # motion logic
         if is_gate:
-            # allow exploration
             noise = np.random.randn(2) * 0.2
             step = np.array([fx, fy]) * 0.5 + noise
         else:
-            # stay coherent
             step = np.array([fx, fy]) * 0.9
 
         x += step[0] * 0.01
@@ -105,14 +101,16 @@ def run_agent(xs, ys, X, Y, Z, steps=2000):
 
     return np.array(traj_x), np.array(traj_y)
 
+
 # ============================================================
-# MAIN PIPELINE
+# MAIN
 # ============================================================
 
 xs, ys = simulate(lorenz)
 X, Y, Z = density_field(xs, ys)
 
 agent_x, agent_y = run_agent(xs, ys, X, Y, Z)
+
 
 # ============================================================
 # PLOT
@@ -142,7 +140,6 @@ axes[1].axis("off")
 # AGENT PATH
 axes[2].imshow(np.rot90(Z), cmap="inferno", extent=extent)
 axes[2].plot(agent_x, agent_y, color="white", lw=1.2)
-
 axes[2].scatter(gx, gy, color="cyan", s=3, alpha=0.5)
 
 axes[2].set_title("Kernel Navigation")
@@ -156,10 +153,25 @@ plt.suptitle(
 
 plt.tight_layout()
 
+
+# ============================================================
+# SAVE (FIXED + ROBUST)
+# ============================================================
+
+output_path = os.path.join(
+    os.path.dirname(__file__),
+    "../../visuals/kernel/nexah_kernel_navigation_v11.png"
+)
+
+# ensure directory exists
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
 plt.savefig(
-    "RESEARCH/visuals/nexah_kernel_navigation_v11.png",
+    output_path,
     dpi=300,
     bbox_inches='tight'
 )
+
+print(f"Saved to: {output_path}")
 
 plt.show()
