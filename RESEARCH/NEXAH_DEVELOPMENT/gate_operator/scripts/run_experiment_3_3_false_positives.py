@@ -93,3 +93,24 @@ plt.savefig(
 )
 
 plt.show()
+
+# ------------------------------------------------------------
+# SAVE DATA FOR EXP 3.3
+# ------------------------------------------------------------
+
+import os
+
+output_dir = "../output_results"
+os.makedirs(output_dir, exist_ok=True)
+
+np.save(
+    os.path.join(output_dir, "experiment_3_2_G_values.npy"),
+    G_values
+)
+
+np.save(
+    os.path.join(output_dir, "experiment_3_2_transitions.npy"),
+    np.array(transition_indices)
+)
+
+print("Saved G_values + transitions for Experiment 3.3")
