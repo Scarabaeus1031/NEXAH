@@ -2,24 +2,25 @@
 
 This document defines the **core conceptual structure** of NEXAH.
 
-It connects the main ideas developed across the research layer into a **single coherent system view**.
+It connects the main ideas of the research layer into a **single coherent system view**  
+and serves as the primary entry point into the framework.
 
 ---
 
 # 🧭 Overview
 
-NEXAH models systems not as state transitions,  
-but as motion within structured spaces.
+NEXAH models systems not as sequences of states,  
+but as motion within **structured dynamical fields**.
 
 ```text
-dynamics → structure → field → constraints → transitions → navigation
+dynamics → field → structure → constraints → transitions → navigation
 ```
 
 ---
 
 # 🔷 Core Concept Stack
 
-The NEXAH framework is composed of five interacting conceptual layers:
+The NEXAH framework consists of five interacting conceptual layers:
 
 ---
 
@@ -27,7 +28,7 @@ The NEXAH framework is composed of five interacting conceptual layers:
 
 → `CORE_CONCEPTS/field_model.md`
 
-> Systems can be represented as structured fields emerging from dynamics.
+> Structure emerges directly from system dynamics.
 
 Key ideas:
 
@@ -45,7 +46,7 @@ System = trajectory inside structured field
 
 ## 2. 🧪 Vessel (Constraint & Containment)
 
-→ `CORE_CONCEPTS/vessel_geometry.md`
+→ `CORE_CONCEPTS/vessel_geometry_system.md`
 
 > Structure only exists where it is contained.
 
@@ -60,7 +61,7 @@ Key ideas:
 
 ```text
 Field defines possibility  
-Vessel defines reality
+Vessel defines realizable structure
 ```
 
 ---
@@ -75,7 +76,7 @@ Key ideas:
 
 - regimes are not isolated  
 - dynamics emerges from interaction  
-- coupling across layers  
+- cross-layer coupling  
 - phase-shifted responses  
 
 ### Interpretation
@@ -88,7 +89,7 @@ System = coupled multi-layer dynamics
 
 ## 4. 🧩 Transition Geometry (Aperture System)
 
-→ `CORE_CONCEPTS/aperture_geometry.md`
+→ `CORE_CONCEPTS/aperture_geometry_system.md`
 
 > Transitions occur through structured geometric pathways.
 
@@ -102,7 +103,7 @@ Key ideas:
 ### Interpretation
 
 ```text
-Transitions = navigation through geometric constraints
+Transitions = geometry-constrained movement
 ```
 
 ---
@@ -111,7 +112,7 @@ Transitions = navigation through geometric constraints
 
 → `CORE_CONCEPTS/theory_to_field_mapping.md`
 
-> Minimal operators explain observed system behavior.
+> Minimal operators formalize observed structure.
 
 Core operators:
 
@@ -127,9 +128,9 @@ structure → geometry → field → behavior
 
 ---
 
-# 🔁 Unified Flow
+# 🔁 Unified System Flow
 
-All concepts integrate into a single system process:
+All components integrate into a single process:
 
 ```text
 Dynamics
@@ -138,9 +139,9 @@ Field (structure emerges)
     ↓
 Vessel (structure is constrained)
     ↓
-Layers (structure interacts)
+Layer interaction (structure evolves)
     ↓
-Aperture (transitions become visible)
+Transition geometry (movement becomes structured)
     ↓
 Operators (structure is formalized)
     ↓
@@ -151,7 +152,7 @@ Navigation (structure is used)
 
 # 🧠 Central Principle
 
-> Systems are not defined by states  
+> Systems are not defined by states,  
 > but by the **structure that constrains their motion**
 
 ---
@@ -160,10 +161,14 @@ Navigation (structure is used)
 
 ```text
 Stability:
-→ high density + alignment + containment
+→ alignment with flow
+→ high-density regions
+→ structural containment
 
 Instability:
-→ low density + misalignment + weak constraint
+→ misalignment
+→ low density
+→ competing flow directions
 
 Transition:
 → movement through structured corridors
@@ -180,7 +185,7 @@ It is:
 ```text
 alignment with structure  
 + avoidance of instability  
-+ guidance through transitions
++ guided movement through transitions
 ```
 
 ---
