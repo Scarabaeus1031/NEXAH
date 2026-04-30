@@ -9,7 +9,7 @@ The NEXAH framework separates system behavior into two layers:
 2. Discrete structure (regimes / transitions)
 ```
 
-This document defines the **discrete transition structure** of dynamical systems.
+This document defines the **discrete transition structure induced by continuous dynamical systems**.
 
 ---
 
@@ -24,10 +24,10 @@ System = trajectory in state space
 NEXAH view:
 
 ```text
-System = structured space being traversed
+System = continuous dynamics inducing a structured discrete representation
 ```
 
-Transitions are not random events, but **structured movements between coherent regions**.
+Transitions are not random events, but **structured movements between coherent regions of phase space**.
 
 ---
 
@@ -60,7 +60,7 @@ s(t) = sheet / regime index at time t
 A **sheet** is a locally coherent region of the flow:
 
 $$
-\mathcal{S}_i = \{ x \mid x \text{ follows coherent dynamics} \}
+\mathcal{S}_i = \{ x \mid x \text{ follows locally coherent dynamics} \}
 $$
 
 ---
@@ -81,6 +81,12 @@ Example (used in experiments):
 
 ```text
 s(t) = binning of radius r = √(x² + y²)
+```
+
+⚠️ Note:
+
+```text
+This is a projection-based approximation, not an intrinsic partition.
 ```
 
 ---
@@ -157,7 +163,7 @@ P(5 → 6) ≈ 0.03   (forward)
 ```text
 Transitions are local and constrained.
 
-The system moves along a structured adjacency graph.
+The system induces an ordered adjacency structure.
 ```
 
 ---
@@ -167,7 +173,7 @@ The system moves along a structured adjacency graph.
 The system behaves as:
 
 ```text
-a banded Markov process with geometric origin
+a banded Markov process induced by underlying continuous dynamics
 ```
 
 More precisely:
@@ -185,7 +191,7 @@ More precisely:
 We interpret the transition matrix as:
 
 ```text
-a discrete projection of an underlying flow manifold
+a discrete representation of an underlying continuous flow manifold
 ```
 
 ---
@@ -195,7 +201,7 @@ a discrete projection of an underlying flow manifold
 ```text
 The system does not jump randomly.
 
-It flows along structured pathways.
+It evolves along structured pathways induced by geometry.
 ```
 
 ---
@@ -233,7 +239,7 @@ low probability → high resistance → gate-like behavior
 ```text
 Gates are NOT discrete edges.
 
-They are distributed transition regions.
+They emerge as distributed regions in transition structure.
 ```
 
 ---
@@ -249,7 +255,7 @@ gate = rare transition
 we define:
 
 ```text
-gate = region of structured transition probability
+gate = region of structured transition resistance
 ```
 
 ---
@@ -269,7 +275,7 @@ Observed:
 ## Insight
 
 ```text
-Transitions are continuous processes,
+Transitions are temporally distributed processes,
 not discrete impulses.
 ```
 
@@ -298,7 +304,7 @@ x(t)
 
 ```text
 s(t)
-→ regime / structural position
+→ structural regime
 ```
 
 ---
@@ -306,8 +312,9 @@ s(t)
 ## Combined Dynamics
 
 ```text
-flow moves within sheets
-transition moves between sheets
+continuous flow evolves within sheets
+
+discrete transitions occur between sheets
 ```
 
 ---
@@ -335,7 +342,7 @@ The transition structure provides:
 • regime identification
 • connectivity structure
 • navigation graph
-• control targets
+• control-relevant abstraction
 ```
 
 ---
@@ -353,8 +360,8 @@ gate_operator.md
 ## Key Relationship
 
 ```text
-G(x) → where instability occurs
-s(t) → where the system is structurally
+G(x) → local instability field
+s(t) → structural position
 ```
 
 ---
@@ -364,7 +371,7 @@ s(t) → where the system is structurally
 ```text
 Transition =
 sheet switch
-+ instability interaction
++ interaction with instability field
 ```
 
 ---
@@ -372,17 +379,17 @@ sheet switch
 # ⚠️ Limitations
 
 - sheet definition is approximate  
-- clustering method affects structure  
+- current partition is projection-based  
 - Markov assumption is local approximation  
-- higher-dimensional systems require generalization  
+- higher-dimensional systems require improved partitioning  
 
 ---
 
 # 🚀 Open Questions
 
-- optimal sheet definition (clustering vs geometry)  
+- optimal sheet definition (clustering vs manifold learning)  
 - relation to invariant manifolds  
-- probabilistic interpretation of transition flow  
+- probabilistic interpretation of transition dynamics  
 - extension to high-dimensional state spaces  
 
 ---
@@ -390,10 +397,10 @@ sheet switch
 # 🧠 Key Insight
 
 ```text
-The system is not a trajectory.
+Continuous dynamics induce a discrete transition structure.
 
-It is a structured space
-being traversed through discrete layers.
+This structure is not imposed,
+but emerges from geometric organization of the system.
 ```
 
 ---
@@ -402,7 +409,7 @@ being traversed through discrete layers.
 
 The Transition Structure provides:
 
-- a discrete representation of system dynamics  
+- a discrete representation induced by continuous dynamics  
 - a structured transition graph  
 - a bridge between geometry and control  
 

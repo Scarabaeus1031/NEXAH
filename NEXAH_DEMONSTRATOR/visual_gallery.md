@@ -243,6 +243,96 @@ G(s) = (1 - ρ)(1 - C)(1 - R)
 Discovery:
 gates emerge from combined structural weakness
 ```
+---
+
+# 🧩 PHASE 10 — Transition Structure (v26–v28)
+
+## 🔷 Sheet Partition (Phase Space)
+
+![Sheets](./visuals/structure/transition_structure_phase.png)
+
+```text
+Discovery:
+continuous dynamics induce discrete structural layers (sheets)
+```
+
+---
+
+## 🔷 Transition Time Series
+
+![Time Series](./visuals/structure/transition_structure_timeseries.png)
+
+```text
+Discovery:
+system switches continuously between adjacent structural states
+→ transitions are distributed over time
+```
+
+---
+
+## 🔷 Transition Matrix
+
+![Transition Matrix](./visuals/structure/transition_structure_matrix.png)
+
+```text
+Discovery:
+transition structure is banded and local
+
+→ system behaves like a constrained Markov process
+```
+
+---
+
+## 🧠 Interpretation
+
+```text
+Continuous dynamics → induces discrete transition structure
+
+The system does not jump randomly.
+
+It evolves along an ordered adjacency graph
+defined by geometric constraints.
+```
+
+---
+
+## 🔥 Key Insight (NEW)
+
+```text
+The system is not only a field.
+
+It is a field that induces a discrete state space.
+```
+
+---
+
+## 🔁 Upgrade to Previous Phases
+
+Before:
+
+```text
+Dynamics → Density → Structure → Gates
+```
+
+Now:
+
+```text
+Dynamics → Density → Structure → Sheets → Transitions → Gates → Navigation
+```
+
+---
+
+## 🚀 Conceptual Impact
+
+```text
+G(x) describes instability
+
+BUT
+
+s(t) describes structural position
+
+→ both are required to understand transitions
+```
 
 ---
 

@@ -7,10 +7,10 @@ The **Navigation Kernel** defines how a system (or agent) moves within a structu
 It operationalizes the NEXAH framework:
 
 ```text
-Structure → Gates → Motion
+Structure → Sheets → Transitions → Gates → Motion
 ```
 
-Instead of predicting trajectories, the system is **navigated through geometry**.
+Instead of predicting trajectories, the system is **navigated through geometry and induced structure**.
 
 ---
 
@@ -25,7 +25,8 @@ Predict future states from equations
 NEXAH approach:
 
 ```text
-Move within a structured field using geometric constraints
+Navigate within a continuous field
++ discrete transition structure
 ```
 
 ---
@@ -40,6 +41,8 @@ $$
 
 We define:
 
+### Continuous Layer
+
 - density: $ \rho(x) $
 - coherence: $ C(x) $
 - rotation: $ R(x) $
@@ -47,9 +50,20 @@ We define:
 
 ---
 
+### Discrete Layer
+
+- structural state: $ s(t) $
+- transition matrix: $ P(i \rightarrow j) $
+
+---
+
 # 🔬 Kernel Definition
 
-The Navigation Kernel defines local motion:
+The Navigation Kernel defines motion on **two coupled layers**:
+
+---
+
+## 1. Continuous Motion
 
 $$
 \dot{x} = F(x) + u(x)
@@ -63,11 +77,45 @@ $$
 
 ---
 
-# 🔁 Interpretation
+## 2. Discrete Transition Layer
 
-The control term $u(x)$ combines:
+```text
+s(t) → s(t+1)
+```
+
+governed by:
+
+$$
+P(i \rightarrow j)
+$$
 
 ---
+
+# 🔁 Interpretation
+
+The system evolves as:
+
+```text
+continuous flow within sheets
++
+discrete transitions between sheets
+```
+
+---
+
+# 🧭 Motion Law
+
+Full hybrid dynamics:
+
+```text
+x(t+1) = x(t) + F(x) + u(x)
+
+s(t+1) ~ P(s(t) → ·)
+```
+
+---
+
+# 🔬 Continuous Control Terms
 
 ## 1. Gate Avoidance
 
@@ -76,7 +124,7 @@ $$
 $$
 
 ```text
-pushes system away from transition regions
+pushes system away from unstable regions
 ```
 
 ---
@@ -101,20 +149,43 @@ Follow structure + avoid collapse
 
 ---
 
-# 🧭 Motion Law
+# 🔬 Discrete Transition Control
 
-Full dynamics:
+The transition structure introduces:
 
-$$
-\dot{x} = F(x) 
-- \lambda \nabla G(x) 
-+ \mu \nabla \rho(x)
-$$
+```text
+transition constraints
+```
 
-Parameters:
+---
 
-- $\lambda$ → sensitivity to instability  
-- $\mu$ → attraction to structure  
+## Key Property
+
+```text
+only local transitions are allowed
+```
+
+```text
+|i - j| ≈ 1
+```
+
+---
+
+## Interpretation
+
+```text
+motion is constrained by adjacency graph
+```
+
+---
+
+# 🔁 Combined Navigation Principle
+
+```text
+Continuous dynamics propose motion
+
+Discrete structure constrains motion
+```
 
 ---
 
@@ -123,33 +194,29 @@ Parameters:
 ## Stable Navigation
 
 ```text
-high density, low gate
-→ motion follows ridges
+high density + strong self-transition
+→ system remains in sheet
 ```
 
 ---
 
-## Transition Avoidance
+## Controlled Transition
 
 ```text
-high gate
-→ motion is redirected
+low density + allowed transition
+→ system moves to adjacent sheet
 ```
 
 ---
 
 ## Exploration Mode
 
-If desired:
-
 $$
 u(x) = -\lambda \nabla G(x) + \mu \nabla \rho(x) + \sigma \eta
 $$
 
-with noise:
-
 ```text
-→ controlled exploration of gates
+noise allows crossing transition regions
 ```
 
 ---
@@ -159,36 +226,28 @@ with noise:
 The kernel can be interpreted as:
 
 ```text
-geometry-aware feedback control
+geometry + graph-constrained control
 ```
 
-It differs from classical control:
+---
 
 | Classical | NEXAH |
 |----------|------|
 | target-based | structure-based |
-| cost function | geometric field |
-| optimal path | stable navigation |
+| cost function | field + graph |
+| optimal path | constrained navigation |
 
 ---
 
-# 🔁 Relation to Gradient Systems
+# 🔁 Relation to Markov Systems
 
-Standard gradient flow:
-
-$$
-\dot{x} = -\nabla V(x)
-$$
-
-NEXAH:
+The system combines:
 
 ```text
-multi-field gradient
+continuous flow
++
+discrete Markov transitions
 ```
-
-$$
-\dot{x} = F(x) - \lambda \nabla G(x) + \mu \nabla \rho(x)
-$$
 
 ---
 
@@ -200,10 +259,18 @@ $$
 G(x) \uparrow \Rightarrow \text{instability}
 $$
 
-Then:
+and
+
+$$
+P(i \rightarrow i) \uparrow \Rightarrow \text{structural stability}
+$$
+
+---
+
+## Insight
 
 ```text
-kernel acts as stability regulator
+stability emerges from both field and transition structure
 ```
 
 ---
@@ -222,12 +289,6 @@ $$
 \dot{x} = F_J(x) - \lambda \nabla G(x)
 $$
 
-Interpretation:
-
-```text
-motion considers forward and backward structure
-```
-
 ---
 
 # 🧠 Interpretation
@@ -235,8 +296,11 @@ motion considers forward and backward structure
 The Navigation Kernel suggests:
 
 ```text
-systems can be guided through structure
-instead of predicted step-by-step
+systems can be guided through
+
+continuous geometry
++
+discrete transition structure
 ```
 
 ---
@@ -254,15 +318,16 @@ See:
 - `visuals/kernel/nexah_kernel_navigation_v11.png`
 - `visuals/navigation/nexah_goal_navigation_v13.png`
 - `visuals/navigation/nexah_janus_navigation_v14.png`
+- `visuals/structure/transition_structure_matrix.png`
 
 ---
 
 # ⚠️ Limitations
 
-- no optimality guarantee  
+- sheet definition is approximate  
+- transition model is empirical  
 - parameter sensitivity  
-- requires density estimation  
-- not yet formally analyzed  
+- no formal optimality proof  
 
 ---
 
@@ -270,9 +335,10 @@ See:
 
 If validated:
 
-- control becomes geometric  
+- control becomes geometry + graph aware  
 - instability can be actively avoided  
-- systems become navigable  
+- transitions become controllable  
+- systems become navigable in hybrid space  
 
 ---
 
@@ -281,7 +347,11 @@ If validated:
 ```text
 A system does not need to be predicted.
 
-It can be steered through its own structure.
+It can be steered through:
+
+geometry (continuous layer)
++
+transition structure (discrete layer)
 ```
 
 ---
@@ -290,9 +360,9 @@ It can be steered through its own structure.
 
 The NEXAH Navigation Kernel:
 
-- uses geometry instead of prediction  
-- combines flow, density, and instability  
-- enables structure-aware motion  
+- combines continuous field dynamics with discrete transition structure  
+- replaces prediction with structure-aware navigation  
+- enables hybrid control of dynamical systems  
 
 ---
 
