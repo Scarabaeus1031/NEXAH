@@ -1,11 +1,11 @@
 ## 🔬 Scientific Role
 
-This document provides the **missing bridge between abstract structure and empirical behavior**.
+This document provides a **hypothesis-level bridge between abstract structure and empirical behavior**.
 
-It addresses a central question:
+It addresses the central question:
 
-> How do minimal structural operators (Γ, Δ, Ω)  
-> explain the geometric and dynamical phenomena observed in real systems?
+> How can minimal structural operators (Γ, Δ, Ω)  
+> be mapped to geometric and dynamical phenomena observed in real systems?
 
 It connects:
 
@@ -13,219 +13,182 @@ It connects:
 - empirical observations (FIELD_LAYER)  
 - operational behavior (NAVIGATOR)  
 
-→ forming a **complete explanatory chain from theory to application**
+→ forming a **proposed explanatory chain from structure to dynamics**
 
 ---
 
-## Scope
+## ⚠️ Scope
 
-This document provides a conceptual mapping between abstract operators  
+This document provides a **conceptual mapping** between abstract operators  
 and observed system behavior.
 
-It does not constitute a formal proof.
+It is:
+
+- not a formal proof  
+- not a complete theory  
+- not a claim of physical law  
 
 ---
 
 # 🧠 NEXAH — Theory to Field Mapping
 
-This document establishes the **explicit connection between the abstract structural theory (Γ, Δ, Ω)**  
-and the **empirical field behavior observed in the FIELD_LAYER (V1–V40)**.
+This document establishes a **working correspondence** between:
+
+- abstract structural operators (Γ, Δ, Ω)  
+- empirical field behavior observed in simulations  
 
 ---
 
 # 🎯 Purpose
 
-The goal is to demonstrate that:
+The goal is to show that:
 
-> minimal structural operators are sufficient to explain  
-> the emergence of geometry, transitions, and convergence in dynamical systems
+> minimal structural operators may be sufficient  
+> to reproduce key observed properties of dynamical systems
 
 ---
 
 # 🧭 Mapping Overview
 
-STRUCTURE (RESEARCH)  
-→ TRANSITIONS (DISCOVERY)  
-→ FIELD (FIELD_LAYER)  
-→ NAVIGATION (NAVIGATOR)  
+```text
+STRUCTURE → TRANSITIONS → FIELD → NAVIGATION
+```
 
 ---
 
 # 🔬 1. Γ — Closure Operator → Attractor Structure
 
-## Definition (Conceptual)
-
-Γ defines closure under structural constraints:
-
-Γ(S) → stabilized subset of states
-
-## Observed Correspondence
-
-FIELD_LAYER shows:
+## Observation (FIELD_LAYER)
 
 - clustering of trajectories  
-- formation of attractor basins  
-- repeated visitation of stable regions  
+- stable regions (basins)  
+- repeated visitation  
 
-## Mapping
+## Structural Mapping
 
-Γ ↔ attractor basin formation
+Γ ↔ attractor basin formation  
 
 ## Interpretation
 
-> Closure in abstract structure manifests as  
+> Closure in abstract structure corresponds to  
 > **stable regions in the dynamical field**
 
 ---
 
 # 🔬 2. Δ — Transition Operator → Transition Channels
 
-## Definition (Conceptual)
+## Observation
 
-Δ defines admissible transitions between structural regimes:
-
-Δ(S₁ → S₂)
-
-## Observed Correspondence
-
-FIELD_LAYER reveals:
-
-- transitions occur in extended regions  
-- formation of transition bands and channels  
+- transitions occur over extended regions  
 - directional movement between regimes  
 
-## Mapping
+## Structural Mapping
 
-Δ ↔ transition geometry (channels, entry/exit regions)
+Δ ↔ transition geometry (channels, corridors)  
 
 ## Interpretation
 
-> Structural regime transitions manifest as  
+> Structural transitions correspond to  
 > **geometric pathways in state space**
 
 ---
 
 # 🔬 3. Ω — Stabilization Operator → Convergence Dynamics
 
-## Definition (Conceptual)
+## Observation
 
-Ω projects system states toward stable configurations:
+- convergence toward stable states  
+- reproducible attractor behavior  
 
-Ω(x) → stabilized state
+## Structural Mapping
 
-## Observed Correspondence
-
-FIELD_LAYER shows:
-
-- convergence toward a stable point  
-- consistent attractor across trajectories  
-- damped rotational dynamics  
-
-x* ≈ (13.494, 25.994)
-
-## Mapping
-
-Ω ↔ convergence to attractor
+Ω ↔ convergence dynamics  
 
 ## Interpretation
 
-> Stabilization in abstract structure manifests as  
-> **attractor convergence in the field**
+> Stabilization corresponds to  
+> **movement toward attractor regions**
 
 ---
 
-# 🔬 4. Emergent Geometry from Structure
+# 🔬 4. Emergent Geometry
 
 ## Observation
 
-The FIELD_LAYER reveals:
-
-- channels  
 - basins  
+- channels  
 - cycles  
-- separatrices  
 
-## Structural Interpretation
+## Interpretation
 
-These structures are not explicitly defined in the theory, but emerge from:
+These structures are not explicitly defined but emerge from:
 
 - closure (Γ)  
 - transitions (Δ)  
 - stabilization (Ω)  
 
+---
+
 ## Result
 
-> Geometry is not assumed —  
-> it **emerges from structural relations**
+> Geometry appears as an **emergent property of structural relations**
 
 ---
 
-# 🔬 5. Field Dynamics as Structural Projection
+# 🔬 5. Field as Structural Projection
 
 ## Observation
 
-The system behaves as:
+System behaves as:
 
 - flow field  
-- energy landscape  
 - directional dynamics  
+- structured trajectories  
 
-## Structural Interpretation
+## Interpretation
 
-This corresponds to:
-
-- Γ → stability regions  
-- Δ → transition flows  
-- Ω → convergence dynamics  
-
-## Result
-
-> The field is a **continuous projection of discrete structure**
+> The field can be understood as a  
+> **continuous projection of underlying structure**
 
 ---
 
-# 🔬 6. Energy Interpretation
+# 🔬 6. Energy Interpretation (Heuristic)
 
 Using:
 
+```text
 E = -log(p)
+```
 
-Observed:
+## Observation
 
-- stable regions → low energy  
-- transition regions → high energy  
+- stable regions → high density  
+- transition regions → low density  
 
-## Structural Mapping
+## Interpretation
 
-- Γ → energy minima (closure)  
-- Δ → barrier crossing (transition)  
-- Ω → descent toward minima  
+This can be interpreted as:
 
-## Result
+- Γ → low-energy regions  
+- Δ → barrier regions  
+- Ω → descent dynamics  
 
-> Energy landscape is a derived representation of  
-> **structural stability and transition cost**
+⚠️ This is a **derived interpretation**, not a physical energy law.
 
 ---
 
 # 🔬 7. Flow Operators (Discovery Layer)
 
-Discovery introduces:
+Observed:
 
 - divergence (∇·F)  
 - curl (∇×F)  
 
-## Observation
+## Interpretation
 
-- divergence ↔ expansion / contraction  
-- curl ↔ rotation  
-- time-lag coupling between both  
+These represent:
 
-## Structural Interpretation
-
-These are not fundamental operators, but:
-
-> **continuous expressions of underlying structural dynamics**
+> continuous expressions of underlying structural behavior  
 
 ---
 
@@ -233,18 +196,15 @@ These are not fundamental operators, but:
 
 Observed:
 
+```text
 ENTRY → CORE → EXIT
+```
 
-## Structural Mapping
+## Interpretation
 
-- ENTRY → approach via Δ  
-- CORE → instability / structural overlap  
-- EXIT → stabilization via Ω  
-
-## Result
-
-> Multi-phase transitions are  
-> **structured paths through regime space**
+- ENTRY → approach (Δ)  
+- CORE → instability region  
+- EXIT → stabilization (Ω)  
 
 ---
 
@@ -252,20 +212,15 @@ ENTRY → CORE → EXIT
 
 Observed:
 
-- nodes (states)  
+- nodes (regions)  
 - edges (transitions)  
 - cycles  
 
-## Structural Mapping
+## Interpretation
 
-- Γ → node formation  
-- Δ → edge structure  
+- Γ → nodes  
+- Δ → edges  
 - repeated Δ → cycles  
-
-## Result
-
-> Discrete topology is a direct expression of  
-> **structural regime relations**
 
 ---
 
@@ -276,49 +231,47 @@ Given:
 - structure (Γ, Δ, Ω)  
 - field (geometry, flow)  
 
-Navigation becomes:
-
-trajectory → constrained by structure → guided through field
-
 ## Result
 
-> Navigation is not imposed —  
-> it emerges from **structure-aware movement**
+> Navigation emerges as  
+> **structure-constrained movement**
 
 ---
 
 # 🧠 Final Statement
 
-The NEXAH framework demonstrates that:
+This mapping suggests that:
 
 > minimal structural operators (Γ, Δ, Ω)  
-> are sufficient to generate  
+> can generate  
 > **transition geometry, field structure, and convergence behavior**
 
 ---
 
 # 🔥 Core Insight
 
-structure → transitions → geometry → field → navigation → convergence
+```text
+structure → transitions → geometry → field → navigation
+```
 
 ---
 
-# ⚠️ Scope
+# ⚠️ Status
 
-- empirically validated (Lorenz, initial real systems)  
-- structurally consistent across layers  
-- not yet fully formalized mathematically  
+- empirically supported (simulations)  
+- structurally consistent  
+- not formally proven  
 
 ---
 
 # 🚀 Next Steps
 
 - formalize operator definitions  
-- prove structural properties  
-- validate across additional systems  
-- derive reduced analytical models  
+- test across additional systems  
+- derive reduced models  
+- investigate mathematical properties  
 
 ---
 
-**Status:** Structural Mapping Established  
-**Role:** Bridge between theory and empirical field behavior  
+**Status:** Hypothesis-level structural mapping  
+**Role:** Bridge between structure and observed field behavior
