@@ -1,193 +1,110 @@
-# NEXAH Research Vision (v3 — Field, Coherence & Navigation)
+# NEXAH Research Vision (v4 — Field, Coherence & Navigation)
 
 NEXAH is a research framework for analyzing and navigating transitions in complex dynamical systems.
 
 It focuses on identifying structure within system dynamics and leveraging this structure for prediction and control.
 
+---
+
+## 🧭 Conceptual Overview
+
 ![NEXAH Conceptual Overview](./visuals/NEXAH_Structure_inside_Dynamics.png)
 
-*Conceptual illustration of the NEXAH framework.  
-This visualization represents the hypothesized relationship between dynamics, structure, field geometry, and navigation.  
-It is not a direct representation of implementation, but a synthesis of observed patterns and working interpretations.*
+*Conceptual illustration of NEXAH as a field-based interpretation of dynamical systems.*
+
+👉 This visualization represents a **synthesis of observations**, not a direct implementation.
 
 ---
 
-## 🔷 Transition Geometry & Navigation Mechanism
+## 🔷 Core Hypothesis
+
+> Complex systems evolve within **structured fields**  
+> that constrain motion, stability, and transitions.
+
+---
+
+## 🔷 Transition Geometry
 
 ![NEXAH Gate Geometry](./visuals/gate_geometry_navigation.png)
 
-*Geometric interpretation of transitions in structured dynamical fields.*
+Observed structure:
 
-This diagram illustrates the **core transition mechanism** observed in NEXAH:
-
-- systems evolve within a structured field (density + flow)  
+- systems evolve within a **density + flow field**  
 - stable regions form **basins (regimes)**  
-- transitions occur through **gates (structural intersections)**  
-- low-density regions create **navigable corridors (greyspace)**  
-
-👉 **Key idea:**  
-Transitions are not random —  
-they occur through **geometrically constrained pathways**
+- transitions occur through **gates (intersections)**  
+- low-density regions form **corridors (greyspace)**  
 
 ---
 
-### 🧠 Interpretation
+### 🔑 Key Insight
 
 ```text
-Field structure → layered dynamics → gate intersections → corridor navigation → regime transition
+Transitions are not random.
+They follow geometrically constrained pathways.
 ```
-
----
-
-### 🔑 Core Insight
-
-> A system does not jump between states.  
-> It moves through a structured transition geometry.
-
----
-
-## 🧭 From Concept to System Structure
-
-While the previous figure illustrates the **conceptual hypothesis** of NEXAH,  
-the following diagrams outline the **emerging structural interpretation**  
-and the **current architectural gap** between theory and implementation.
-
----
-
-### ⚠️ Identified System Gaps (Current Limitations)
-
-![NEXAH System Gaps](./visuals/NEXAH_SYSTEM_GAPS_missing_layers_v_2.png)
-
-*This diagram highlights the key structural gaps that currently prevent NEXAH  
-from operating as a fully closed-loop navigation system.*
-
-Main limitations:
-
-- ❌ no unified execution kernel  
-- ❌ no global trajectory policy  
-- ❌ inconsistent transition probabilities  
-- ❌ missing real-world validation layer  
-
-👉 **Interpretation:**  
-The system structure is largely discovered,  
-but not yet fully integrated into a consistent operational framework.
-
----
-
-### 🔄 Target Architecture (Closed Navigation System)
-
-![NEXAH Closed System](./visuals/NEXAH_Closed_Dynamical_Navigation_v_3.png)
-
-*Target architecture of a fully integrated NEXAH system.*
-
-This representation introduces:
-
-- closed-loop execution (state → field → graph → control → state)  
-- mass-conserving transition structure  
-- global policy-driven trajectory selection  
-- real-world system integration  
-
-👉 **Important:**  
-This diagram represents a **target architecture**,  
-not the current implementation state.
 
 ---
 
 ## 🧠 Interpretation
 
-Together, these diagrams illustrate the central research direction:
-
 ```text
-Conceptual understanding → structural discovery → system integration → closed-loop navigation
+field → structure → gates → corridors → regime transition
 ```
 
 ---
 
-## 🔬 Research Implication
+## 🔬 Structural Observations
 
-The key challenge is not discovering structure.
+Across systems:
 
-It is:
+- coherent regions (basins)  
+- anisotropic motion (preferred directions)  
+- layered dynamics (flow sheets)  
+- structured transitions (non-random)  
+
+---
+
+## ⚠️ Current System Gaps
+
+![NEXAH System Gaps](./visuals/NEXAH_SYSTEM_GAPS_missing_layers_v_2.png)
+
+NEXAH has discovered structure, but is not yet a closed system.
+
+Main gaps:
+
+- ❌ no unified execution kernel  
+- ❌ no global trajectory policy  
+- ❌ inconsistent transition probabilities  
+- ❌ missing real-world validation  
+
+---
+
+## 🧠 Research Direction
+
+The key challenge is:
 
 ```text
-closing the loop between field, transition, control, and execution
+closing the loop between field, transition, and control
 ```
 
-This includes:
+This requires:
 
-- unifying the execution pipeline  
-- enforcing consistency constraints (e.g. probability conservation)  
-- integrating long-horizon decision policies  
-- validating behavior in real-world systems  
-
----
-
-NEXAH is an orientation-based framework that investigates whether  
-
-> **intrinsic stability in complex systems emerges from local structural coherence  
-> and can be actively navigated through field-aware control**
+- unified execution architecture  
+- consistent transition modeling  
+- long-horizon trajectory planning  
+- real-world validation  
 
 ---
 
-## Core Hypothesis (Working)
+## 🔷 Field-Based System View
 
-Across multiple investigated systems, a recurring pattern is observed:
-
-> Stability is associated with coherence in interface regions,  
-> while system breakdown tends to occur when this coherence is lost.
-
-Observed sequence:
-
-```text
-coherence → fragmentation → acceleration → collapse
-```
-
-Extended (v80):
-
-```text
-alignment → misalignment → transition corridor → regime shift
-```
-
----
-
-# 🔷 Key Extension (v56+)
-
-A major shift in NEXAH:
-
-```text
-From:
-    detection of transitions
-
-To:
-    navigation and control of transitions
-```
-
----
-
-## Updated Principle
-
-> Systems do not only evolve within a field  
-> — they can be **guided through it**
-
----
-
-# 🌐 Field Layer & Geometric Flow
-
-A key extension introduces:
-
-> an **explicit field representation of system dynamics**
-
----
-
-## State Representation
+System state:
 
 $$
 s = (r, \theta)
 $$
 
----
-
-## Flow Field
+Dynamics:
 
 $$
 \dot{s} = F(s)
@@ -195,208 +112,31 @@ $$
 
 ---
 
-## Interpretation
-
-```text
-System behavior = trajectory inside structured field
-```
-
----
-
-# 🧠 Coherence as Alignment
+## 🔷 Coherence
 
 $$
 C(s) =
 \frac{\dot{s} \cdot F(s)}{\|\dot{s}\| \, \|F(s)\|}
 $$
 
----
+Interpretation:
 
-## Observed Behavior
-
-```text
-C ≈ 1 → stable motion  
-C ≈ 0 → transition region  
-C < 0 → opposing flow
-```
+- high coherence → stable motion  
+- low coherence → transition regions  
 
 ---
 
-## Interpretation
+## 🔷 Navigation Principle
 
-```text
-Coherence defines stability of motion
-```
-
----
-
-# 🔹 Structural Observations
-
-Across domains:
-
-- interface-like regions (gaps / corridors)  
-- anisotropic motion (preferred directions)  
-- layered structure (sheets / basins)  
-- structured transitions (not random)  
-
----
-
-## Interpretation
-
-> Systems follow **preferred paths within structured state space**
-
----
-
-# 🔷 Transition Geometry
-
-Observed:
-
-```text
-low-density regions → transition corridors
-```
-
-Define:
+Control:
 
 $$
-G(s) = \frac{1}{\rho(s)}
+u(s) = -\nabla P(\text{instability}) + \nabla \rho
 $$
 
 ---
 
-## Interpretation
-
-```text
-Instability emerges in low-density regions
-```
-
----
-
-# 🔷 Basin & Regime Structure
-
-State space decomposes into:
-
-```text
-basins (regimes)
-```
-
-Transitions:
-
-$$
-P(B_i \rightarrow B_j)
-$$
-
----
-
-## Interpretation
-
-```text
-System evolves as transitions between regimes
-```
-
----
-
-# 🔷 Navigation Layer (v34+)
-
-Control emerges as:
-
-$$
-u(s) = -\nabla P(\text{IOTA}) + \nabla \rho
-$$
-
----
-
-## Interpretation
-
-```text
-navigation = avoid instability + follow structure
-```
-
----
-
-# 🔷 Transition Control (v49+)
-
-Observed:
-
-- transition probabilities can be modified  
-- dominant transitions can be amplified  
-
----
-
-## Formal Idea
-
-$$
-P(B_i \rightarrow B_j \mid u)
-\neq
-P(B_i \rightarrow B_j)
-$$
-
----
-
-## Interpretation
-
-```text
-System behavior is not fixed —
-it is shapeable
-```
-
----
-
-# 🔷 Phase & Timing Layer (v52–v53)
-
-Control depends on:
-
-```text
-WHEN and WHERE it is applied
-```
-
----
-
-## Interpretation
-
-```text
-System has internal phase sensitivity
-```
-
----
-
-# 🔷 Sheet / Layer Dynamics (v76–v80)
-
-Observed:
-
-- multiple overlapping flow layers  
-- structured switching between them  
-- gates at layer intersections  
-
----
-
-## Interpretation
-
-```text
-System moves across interacting flow layers
-```
-
----
-
-# 🔷 Kernel View (v80)
-
-System evolution can be written as:
-
-$$
-\dot{s} = F(s) + u(s)
-$$
-
-## Interpretation
-
-```text
-System = natural dynamics + structured intervention
-
-Control does not override the system —
-it redirects motion within the existing field.
-```
-
----
-
-# 🧠 Unified Interpretation
+## 🧠 Unified Interpretation
 
 ```text
 System =
@@ -406,55 +146,15 @@ Stability:
 → alignment + density
 
 Instability:
-→ misalignment + low density + competing flows
+→ misalignment + low density
 
 Transition:
-→ navigation through structured corridors
+→ movement through structured corridors
 ```
 
 ---
 
-# 🔬 Cross-Domain Validation
-
-| Domain        | Observation                 | Role                     |
-|---------------|----------------------------|--------------------------|
-| Primes        | modular corridors          | structural analogy       |
-| IEEE systems  | early instability detection| primary validation       |
-| Lorenz        | separatrix / switching     | geometric consistency    |
-| Multi-agent   | structure without reward   | emergent behavior test   |
-
----
-
-# 🧠 Central Insight (Updated)
-
-> Systems do not fail due to limits alone  
-> but due to **loss of alignment within structured motion**
-
----
-
-# 🔬 Research Directions
-
-1. Generalization  
-2. Transition localization  
-3. Temporal coherence dynamics  
-4. Formal field properties  
-5. Basin topology  
-6. Control theory integration  
-
----
-
-# 🔬 Current Position
-
-NEXAH provides:
-
-- field-based system representation  
-- coherence-based stability measure  
-- probabilistic transition modeling  
-- navigation and control capability  
-
----
-
-## Status
+## 🔬 Status
 
 - empirical  
 - simulation-supported  
@@ -462,17 +162,13 @@ NEXAH provides:
 
 ---
 
-# 🧭 Final Insight (v80)
+## 🧭 Final Insight
 
 ```text
-Stability is not resistance.
+Systems do not fail randomly.
 
-It is the ability to remain aligned
-while moving through structure.
-
-Transitions are not failures.
-
-They are structured transformations that can be navigated.
+They move through structured transition regions
+that define what outcomes are possible.
 ```
 
 ---
