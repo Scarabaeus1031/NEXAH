@@ -10,7 +10,7 @@
 
 ## 🧭 Conceptual Overview
 
-![NEXAH Core System](RESEARCH/visuals/nexah_core_navigation_system_v4.png)
+![NEXAH Core System](ARCHITECTURE/archive/gate_geometry_navigation.png)
 
 *NEXAH connects continuous dynamics with discrete transition systems through navigable structure.*
 
