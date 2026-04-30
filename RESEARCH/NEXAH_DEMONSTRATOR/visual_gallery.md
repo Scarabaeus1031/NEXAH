@@ -1,239 +1,196 @@
-# 🖼️ NEXAH — Visual Discovery Gallery
+# 🖼️ NEXAH — Visual Discovery Log (v1–v25)
 
-This gallery documents the **progression of structure discovery** in NEXAH.
+This gallery is not a collection of images.
 
-It is not just a collection of images.
-
-It is a **step-by-step emergence of a structural model**:
+It is a **record of discovery**:
 
 ```text
-dynamics → structure → geometry → transitions → navigation
+how structure was extracted from dynamics
 ```
 
 ---
 
-# 🧭 Reading Guide
-
-The visuals are grouped into conceptual stages:
-
-1. Field emergence  
-2. Structure extraction  
-3. Transition geometry  
-4. Navigation  
-5. Cross-system validation  
-6. Rotation & stability  
-7. Unified gate operator  
-
----
-
-# 🔷 1. Field Emergence (Core)
-
-### From trajectories to structure
-
-![Trajectory vs Density](visuals/core/VISUAL_02_TRAJECTORYvsDENSITY.png)
+# 🧭 Core Pipeline
 
 ```text
-Raw motion → density → structure appears
+Dynamics → Density → Structure → Gates → Navigation → Control
 ```
 
 ---
 
-### Ridge formation
+# 🔥 KEY INNOVATIONS (READ FIRST)
 
-![Density to Ridge](visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
+## 1. Gate is NOT a threshold
 
 ```text
-Structure organizes into pathways
+Gate =
+low density
++ low coherence
++ rotation breakdown
 ```
 
 ---
 
-### Aperture & gates
-
-![Aperture Ring](visuals/core/VISUAL_04_RIDGE_PATHSvsAPERTURE_RING.png)
+## 2. π → Rotation Principle
 
 ```text
-Transitions concentrate in geometric regions
+Stable systems → coherent rotation  
+Transitions → rotation collapse
 ```
 
 ---
 
-# 🧩 2. Structure Extraction
-
-### Full structural field
-
-![Full Structure](visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
+## 3. Slice ≠ Structure
 
 ```text
-System becomes a navigable geometry
+2D channel = projection of higher-dimensional geometry
 ```
 
 ---
 
-### NEXAH lens
-
-![Lens](visuals/core/VISUAL_07_THE_NEXAH_LENS.png)
+## 4. Cross-System Invariance
 
 ```text
-Observation depends on projection
+Lorenz, Kuramoto, Rössler → same geometry
 ```
 
 ---
 
-# 🔁 3. Transition Geometry
-
-### Kernel mask (early)
-
-![Kernel v10](visuals/kernel/nexah_transition_geometry_kernel_mask_v10.png)
+## 5. Navigation is structural
 
 ```text
-Gates begin to appear as structured regions
+Not shortest path → structure-following motion
 ```
 
 ---
 
-### Kernel refinement
+# 🧩 PHASE 1 — Field Emergence (v1–v4)
 
-![Kernel v11](visuals/kernel/nexah_kernel_navigation_v11.png)
+![Trajectory](visuals/core/VISUAL_02_TRAJECTORYvsDENSITY.png)
+![Density](visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
 
 ```text
-Transition geometry stabilizes
+Discovery:
+structure emerges from density, not equations
 ```
 
 ---
 
-### Multi-agent interaction
+# 🧩 PHASE 2 — Structure & Pathways (v5–v9)
 
-![Swarm](visuals/navigation/nexah_swarm_navigation_v12.png)
+![Structure](visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
 
 ```text
-Multiple agents interact through the same structure
+Discovery:
+systems form navigable pathways (ridges)
 ```
 
 ---
 
-# 🧭 4. Navigation
+# 🧩 PHASE 3 — Transition Geometry (v10–v12)
 
-### Goal-directed navigation
-
-![Goal Navigation](visuals/navigation/nexah_goal_navigation_v13.png)
+![Kernel](visuals/kernel/nexah_transition_geometry_kernel_mask_v10.png)
+![Kernel](visuals/kernel/nexah_kernel_navigation_v11.png)
 
 ```text
-Navigation follows structure, not shortest path
+Discovery:
+transitions are regions, not points
 ```
 
 ---
 
-### Janus control
+# 🧩 PHASE 4 — Navigation (v13–v20)
 
+![Goal](visuals/navigation/nexah_goal_navigation_v13.png)
 ![Janus](visuals/navigation/nexah_janus_navigation_v14.png)
 
 ```text
-Forward + backward field interaction
+Discovery:
+navigation = alignment with structure
 ```
 
----
-
-### Policy navigation
-
-![Policy](visuals/navigation/nexah_policy_navigation_v19.png)
+### 🔥 Highlight: Janus Field
 
 ```text
-Control reshapes transition probabilities
+Forward + backward flow simultaneously
+→ bidirectional stability awareness
 ```
 
 ---
 
-# 🔄 5. Slice vs Structure
-
-### Slice illusion
+# 🧩 PHASE 5 — Slice Problem (v15–v17)
 
 ![Slice](visuals/slice/nexah_slice_operator_v16.png)
-
-```text
-2D channel = projection of higher-dimensional structure
-```
-
----
-
-### Manifold view
-
 ![Manifold](visuals/slice/nexah_slice_manifold_v17.png)
 
 ```text
-True structure is embedded, not flat
+Discovery:
+channels are projections of higher-dimensional objects
 ```
 
 ---
 
-# 🌐 6. Cross-System Invariance
+# 🧩 PHASE 6 — Cross-System (v21–v23)
 
-### Multi-system extraction
-
-![Cross System](visuals/cross_system/nexah_cross_system_structure_v23.png)
+![Kuramoto](visuals/kuramoto/nexah_kuramoto_field_v21.png)
+![Graph](visuals/kuramoto/nexah_kuramoto_regime_graph_v22.png)
+![Cross](visuals/cross_system/nexah_cross_system_structure_v23.png)
 
 ```text
-Lorenz, Rössler, Kuramoto → same structural patterns
+Discovery:
+structure persists across fundamentally different systems
 ```
 
 ---
 
-# 🔁 7. Rotation & Stability
-
-### Rotation field
+# 🧩 PHASE 7 — Rotation Field (v24)
 
 ![Rotation](visuals/rotation/nexah_rotation_field_v24.png)
 
 ```text
-Stable regions → coherent rotation  
-Transitions → rotation breakdown
+Discovery:
+rotation encodes stability
 ```
 
 ---
 
-# 🧠 8. Unified Gate Operator
+# 🧩 PHASE 8 — Unified Gate Operator (v25)
 
-### Final integration
-
-![Unified Gate](visuals/unified/nexah_unified_gate_operator_v25.png)
+![Unified](visuals/unified/nexah_unified_gate_operator_v25.png)
 
 ```text
-Gate = low density + low coherence + low rotation
+G(s) = (1-ρ)(1-C)(1-R)
 ```
-
----
-
-# 🧠 Final Insight
 
 ```text
-A system does not randomly evolve.
-
-It moves through a structured field,
-loses coherence,
-and transitions through geometric gates.
+Discovery:
+gates emerge from combined structural weakness
 ```
 
 ---
 
-# 🧭 Interpretation
+# 🧠 FINAL INSIGHT
 
-This gallery shows:
+```text
+Systems do not randomly evolve.
 
-- structure emerges from data  
-- transitions are geometric  
-- control is structural  
-- patterns persist across systems  
+They move through structured fields,
+lose coherence,
+and transition through geometry.
+```
 
 ---
 
-# 🚀 Next Step
+# 📌 Notes
 
-Formalization of:
+- Not a final theory  
+- Empirical + structural  
+- Cross-system consistent  
 
-- gate operator  
-- transition dynamics  
-- navigation kernel  
+---
 
-See:
+# 🚀 Next
 
-→ `docs/gate_operator.md`
+→ `docs/gate_operator.md`  
+→ Navigation kernel  
+→ formalization
