@@ -70,7 +70,7 @@ Interpretation:
 
 ---
 
-## 3. Rotation — $begin:math:text$ R\(x\) $end:math:text$
+## 3. Rotation — $R(x)$
 
 Defined via the curl of the flow field:
 
