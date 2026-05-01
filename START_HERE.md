@@ -1,6 +1,6 @@
 # 🚀 START HERE — NEXAH
 
-![Lorenz Dynamics](APPLICATIONS/core_demos/lorenz/outputs/lorenz_nexah_v12_final.gif)
+![Transition-Aware Navigation](NEXAH_DEMONSTRATOR/visuals/hero/nexah_transition_navigation_v13.gif)
 
 ---
 
@@ -15,16 +15,17 @@ But it isn’t.
 ## 🧠 Look again
 
 - the system is not random  
-- it repeatedly visits specific regions  
-- transitions occur in consistent areas  
+- it repeatedly follows structured pathways  
+- transitions occur in specific regions  
+- red points mark **actual structural transitions**
 
-👉 this is **structured behavior in a dynamical system**
+👉 this is **structured behavior inside a dynamical system**
 
 ---
 
 ## 🔥 The key idea
 
-NEXAH does not focus on individual values.
+NEXAH does not analyze isolated values.
 
 It reconstructs:
 
@@ -38,51 +39,60 @@ In other words:
 
 ---
 
-## ⚡ Try it (30 seconds)
+## 🧠 What the visualization shows
 
-Run:
+- line → continuous system motion  
+- color → coherence (alignment with system flow)  
+- red points → discrete transitions (sheet changes)  
 
-```bash
-python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
-```
-
----
-
-## 🧪 Modify one line
-
-Find:
-
-```python
-control = -0.30 * dx
-```
-
-Change it to:
-
-```python
-control = -0.10 * dx
-```
-
-Run again.
-
----
-
-## 🧠 What just changed
-
-You did not just tune a parameter.
-
-You changed:
+👉 this combines:
 
 ```text
-how the trajectory interacts with the system’s flow structure
+continuous dynamics + discrete structure
+```
+
+---
+
+## ⚡ Try it (30 seconds)
+
+Run the demonstrator:
+
+```bash
+python NEXAH_DEMONSTRATOR/scripts/run_demo.py
+```
+
+---
+
+## 🧪 Explore the core experiment
+
+Run the transition-aware navigation:
+
+```bash
+python NEXAH_DEMONSTRATOR/scripts/hero/run_transition_navigation_v13.py
+```
+
+---
+
+## 🧠 What just happened
+
+You are not simulating chaos.
+
+You are observing:
+
+```text
+structure emerging from dynamics
++
+transitions occurring within that structure
 ```
 
 ---
 
 ## 💡 What this shows
 
-- chaotic systems exhibit stable geometric structure  
-- transitions occur in specific regions of state space  
-- system behavior can be influenced through local dynamics  
+- dynamical systems exhibit geometric structure  
+- transitions are not random events  
+- behavior follows constrained pathways  
+- system evolution can be understood via geometry  
 
 ---
 
@@ -96,9 +106,9 @@ how the trajectory interacts with the system’s flow structure
 This contains a **clean, reproducible implementation** of:
 
 - field construction  
-- Gate Operator  
-- Transition Structure  
-- Navigation Kernel  
+- Gate Operator (instability field)  
+- Transition Structure (discrete layer)  
+- Navigation Kernel (geometry-aware motion)  
 
 ---
 
