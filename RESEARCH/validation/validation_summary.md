@@ -286,6 +286,98 @@ of continuous dynamical systems.
 
 ---
 
+# 🌐 9. Cross-System Transition Validation
+
+**Scripts:**
+- `run_cross_system_transition_comparison.py`
+- `run_cross_system_transition_distance_matrix.py`
+
+**Systems:**
+- Lorenz
+- Rössler
+- Duffing
+
+---
+
+## Results
+
+**Pairwise transition matrix distances:**
+
+- Lorenz vs Rössler: **0.0164**
+- Lorenz vs Duffing: **0.0163**
+- Rössler vs Duffing: **0.0017**
+
+---
+
+## Visual Evidence
+
+![Cross-System Transition Matrices](cross_validation/cross_system_transition_matrices.png)
+
+![Cross-System Distance Matrix](cross_validation/cross_system_distance_matrix.png)
+
+---
+
+## Interpretation
+
+- All systems produce **highly similar transition structures**
+- Rössler and Duffing are **almost identical** in transition behavior
+- Lorenz differs slightly, but remains within a **narrow similarity band**
+
+---
+
+## Key Observation
+
+```text
+Transition matrices derived from fundamentally different dynamical systems
+remain structurally similar.
+```
+
+---
+
+## Implication
+
+- Transition structure is **not system-specific**
+- It reflects **intrinsic properties of continuous flow dynamics**
+- The observed structure is likely **geometry-driven**, not equation-driven
+
+---
+
+## Conclusion (Cross-System)
+
+- Transition dynamics are:
+  - reproducible
+  - noise-robust
+  - partition-invariant
+  - **cross-system consistent**
+
+---
+
+## Extended Insight
+
+Observed in:
+
+- Lorenz ✔  
+- Rössler ✔  
+- Duffing ✔  
+
+---
+
+## Interpretation (Extended)
+
+- Transition dynamics persist across **qualitatively different attractor geometries**
+- Stability emerges from **underlying flow structure**, not system-specific artifacts
+- Systems with different topology still exhibit **stable transition structure**
+
+---
+
+## Implication (Extended)
+
+```text
+The stability of transition structure is a general property
+of continuous dynamical systems.
+```
+---
+
 # 🧠 GLOBAL OBSERVATIONS
 
 Across all tests:
