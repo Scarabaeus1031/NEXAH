@@ -7,23 +7,44 @@ field → transition structure → navigation behavior
 
 import subprocess
 import sys
+import os
 
-def run(script):
-    print(f"\n▶ Running: {script}\n")
-    subprocess.run([sys.executable, script])
 
+# ============================
+# Helper
+# ============================
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
+def run(script_rel_path):
+    script_path = os.path.join(BASE_DIR, script_rel_path)
+
+    print(f"\n▶ Running: {script_rel_path}\n")
+
+    try:
+        subprocess.run([sys.executable, script_path], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Error while running {script_rel_path}")
+        print(e)
+        sys.exit(1)
+
+
+# ============================
+# Main
+# ============================
 
 if __name__ == "__main__":
 
     print("⚡ NEXAH Demonstrator — Quick Run")
 
-    # 1. Transition structure
-    run("NEXAH_DEMONSTRATOR/scripts/generate_transition_structure.py")
+    # 1. Transition structure (discrete layer)
+    run("generate_transition_structure.py")
 
-    # 2. Kernel navigation
-    run("NEXAH_DEMONSTRATOR/scripts/kernel/nexah_transition_geometry_kernel_mask_v12.py")
+    # 2. Kernel / gate field (continuous layer)
+    run("kernel/nexah_transition_geometry_kernel_mask_v12.py")
 
-    # 3. Optional: Kuramoto or others
-    # run("NEXAH_DEMONSTRATOR/scripts/kuramoto/...")
+    # 3. HERO — transition-aware navigation (v13)
+    run("hero/run_transition_navigation_v13.py")
 
-    print("\n✅ Done.")
+    print("\n✅ All steps completed.")
