@@ -153,7 +153,9 @@ structure remains stable across runs
 
 ## Visual Evidence
 
-![Multi-Partition Structure](lorenz/results/multi_partition_structure.png)
+![Multi-Partition State Partitions](lorenz/results/multi_partition_state_partitions.png)
+
+![Multi-Partition Transition Matrices](lorenz/results/multi_partition_transition_matrices.png)
 
 ## Interpretation
 
