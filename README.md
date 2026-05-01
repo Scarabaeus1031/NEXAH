@@ -5,13 +5,15 @@
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 ![Focus](https://img.shields.io/badge/focus-dynamical%20systems-lightgrey)
-> Status: Active research system — validation and kernel integration in progress.
 
+> **Status:** Active research system — validation and kernel integration in progress
+
+---
 
 > NEXAH reconstructs structure, transitions, and stability  
 > directly from system dynamics.
 
->  Complex systems are not random.  
+> Complex systems are not random.  
 > They evolve within **structured fields that constrain motion, transitions, and outcomes**.
 
 ---
@@ -67,7 +69,8 @@ Where:
 
 📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
 
-The demonstrator provides a **minimal, reproducible implementation** of the core pipeline and serves as the recommended entry point.
+The demonstrator provides a **minimal, reproducible implementation** of the core pipeline  
+and serves as the recommended entry point.
 
 It includes:
 
