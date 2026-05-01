@@ -1,0 +1,8 @@
+NEXAH — Real Partition Sensitivity
+
+Runs: 20
+Noise: 1.0
+Clusters: 6
+
+Mean diff: 0.004940
+Mean noisy variance: 0.000223
