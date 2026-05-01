@@ -19,7 +19,7 @@
 
 ## Visual Evidence
 
-![Trajectory Overlay](validation/lorenz/results/trajectory_overlay.png)  
+![Trajectory Overlay](./validation/lorenz/results/trajectory_overlay.png)  
 ![Endpoint Distribution](validation/lorenz/results/endpoint_distribution.png)
 
 ## Interpretation
