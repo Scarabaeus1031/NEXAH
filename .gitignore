@@ -98,6 +98,11 @@ htmlcov/
 !APPLICATIONS/visuals/**/*.gif
 !APPLICATIONS/visuals/**/*.md
 
+# --- DEMONSTRATOR VISUALS ---
+!NEXAH_DEMONSTRATOR/visuals/
+!NEXAH_DEMONSTRATOR/visuals/**/*.gif
+!NEXAH_DEMONSTRATOR/visuals/**/*.png
+
 # =========================
 # DATA (always ignored)
 # =========================
