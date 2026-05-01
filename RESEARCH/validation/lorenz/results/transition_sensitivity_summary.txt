@@ -1,0 +1,7 @@
+NEXAH — Transition Sensitivity
+
+Runs: 20
+Noise: 1.0
+
+Mean diff: 0.001060
+Mean noisy variance: 0.000022
