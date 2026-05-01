@@ -1,14 +1,7 @@
 # NEXAH — System State (Current Ground Truth)
 
-> This document reflects the **actual implemented state of NEXAH**,  
+> This document reflects the **actual implemented and observed state of NEXAH**,  
 > not the intended or ideal architecture.
-
-It defines:
-
-- what exists  
-- what works  
-- what is validated  
-- what is still missing  
 
 ---
 
@@ -16,449 +9,350 @@ It defines:
 
 NEXAH is currently a:
 
-> **field-based reconstruction, transition, control, and navigation system for dynamical systems**
+> **field-based structural analysis and navigation framework for dynamical systems**
 
 It transforms:
 
 ```text
-dynamics → structure → field → geometry → stability → transition geometry → control → navigation
+dynamics → structure → field → geometry → transition structure → navigation behavior
 ```
 
 ---
 
-## 🧠 System Representation (Field → Geometry → Navigation)
+# ⚠️ IMPORTANT STATUS
 
-![NEXAH Gate Geometry](./archive/gate_geometry_navigation.png)
-
-This diagram shows the **integrated structure of the NEXAH system**:
-
-- continuous field (density, flow)
-- layered geometry (sheets)
-- transition structure (gates)
-- instability corridors (greyspace)
-- discrete regimes (basins)
-- trajectory-level control and navigation
-
----
----
-
-# 🔬 1. Discovery Engine (Established)
-
-Status:
-
-✔ transition structure extracted  
-✔ geometric channels (manifolds) detected  
-✔ probability field constructed  
-✔ energy landscape derived  
-✔ divergence and curl computed  
-✔ temporal coupling (time-lag) measured  
-
----
-
-## Key Result
-
-> The system reveals **structured dynamics with measurable geometry and flow**
-
----
-
-# 🌊 2. Field Reconstruction + Field Layer (Core System)
-
-Status:
-
-✔ flow-aligned coordinate system (α, β, γ)  
-✔ deviation-based stability metric  
-✔ density field (transition regions / greyspace)  
-✔ ridge extraction (channels)  
-✔ directional flow field  
-✔ topology extraction (nodes, cycles)  
-✔ energy-based interpretation  
-✔ attractor detection  
-
----
-
-## Key Result
-
-> The system is reconstructed as a **continuous dynamical field with geometry and topology**
-
----
-
-## Critical Finding
-
-```
-dx/dt ≈ -∇V(x) + R(x)
-```
-
-→ gradient (attraction) + rotation (structure)
-
----
-
-# 🎯 3. Stability Layer (Validated)
-
-Status:
-
-✔ Lyapunov mapping (finite-time)  
-✔ stability field construction  
-✔ boundary vs stability comparison  
-✔ local instability detection  
-
----
-
-## Key Result
-
-> Stability is a **spatial field**, not a scalar property
-
----
-
-## Interpretation
-
-- basins → stable regions  
-- boundaries → weak stability regions  
-- instability forms structured ridges  
-
----
-
-# 🔷 4. Transition Geometry (NEW CORE)
-
-Status:
-
-✔ basin decomposition  
-✔ transition detection between basins  
-✔ transition probability estimation  
-✔ gate detection (structured transition corridors)  
-✔ basin graph construction  
-✔ saddle / boundary structure extraction  
-
----
-
-## Key Result
-
-> Transitions occur through **structured geometric corridors (gates)**
-
----
-
-## Definition
+NEXAH is:
 
 ```text
-Gate = directional transition corridor between basins
+✔ a working structural system (demonstrator level)
+✔ capable of extracting transition structure
+✔ capable of producing consistent geometric behavior
 ```
-
-NOT:
-
-- a point  
-- not a random event  
-
----
-
-## Interpretation
-
-The system is:
-
-> a **basin–gate structured transition system**
-
----
-
-# 🎮 5. Control Layer (Operational, Extended v38–v80)
-
-Status:
-
-✔ transition probability control (v49)  
-✔ policy-based control (v50–v51)  
-✔ pattern-based control (v52–v56)  
-✔ flow-aligned control (v61+)  
-✔ control propagation (v63)  
-✔ structure-aware flow shaping (v65+)  
-✔ stability field interaction (v66)  
-✔ barrier / gate-aware control (v67+)  
-✔ basin graph navigation control (v69+)  
-✔ gate-path control (v70+)  
-✔ phase-aligned control (v76+)  
-✔ sheet-aware control (v77+)  
-✔ phase-aligned gate navigation (v80)  
-
----
-
-## Key Result
-
-> Control operates on **transition structure**, not raw dynamics
-
----
-
-## Core Principle
-
-```text
-Do not block transitions → guide them
-```
-
----
-
-## Interpretation
-
-- control modifies transition probabilities  
-- control aligns with system structure  
-- control propagates through the field  
-
----
-
----
-
-## ⚠️ Constraint Observation (Experimental Layer)
-
-Recent experimental results (runs 033–040) reveal:
-
-```text
-Control attempts are mostly absorbed by the system.
-```
-
-Observed behavior:
-
-- perturbations create local deviations  
-- deviations do not propagate globally  
-- no regime transitions are achieved internally  
-
----
-
-## Updated Interpretation
-
-```text
-Control interacts with transition structure,
-but is strongly constrained by the system manifold.
-```
-
-```text
-Internal control does NOT create new trajectories.
-
-It deforms existing ones.
-```
-
----
-
-## Implication
-
-```text
-The system is navigable,
-but not freely controllable from within.
-```
-
-# 🧭 6. Navigation Layer (Operational)
-
-Status:
-
-✔ trajectory steering  
-✔ basin-to-basin navigation  
-✔ gate-based routing  
-✔ phase-aware navigation  
-✔ structure-aligned motion  
-✔ constrained path planning  
-
----
-
-## Key Result
-
-> The system navigates along allowed paths defined by its geometry and flow structure.
-
----
-
-## Important Clarification
-
-Navigation is:
-
-- not reward-based  
-- not brute-force optimization  
-
-It is:
-
-> **structure-constrained movement through a dynamical field**
-
----
-
-# 🔗 7. System Integration
-
-Status:
-
-✔ Discovery → Field → Geometry → Stability integrated  
-✔ Transition geometry connected to control  
-✔ Control → Navigation loop operational  
-✔ closed-loop behavior observable  
-
----
-
-## Current Limitation
-
-⚠ no unified runtime kernel yet  
-
----
-
-# 🔒 8. Constraint Layer (NEW)
-
-Status:
-
-✔ constraint behavior observed  
-✔ control absorption confirmed  
-✔ manifold preservation detected  
-
----
-
-## Key Result
-
-```text
-The system evolves on a constrained manifold.
-```
-
----
-
-## Interpretation
-
-- internal perturbations are absorbed  
-- structure is preserved  
-- transitions cannot be forced internally  
-
----
-
-## Structural Law
-
-```text
-System preserves its geometric structure under internal control.
-```
-
----
-
-## Implication
-
-```text
-Effective control requires interaction with the structure,
-not against it.
-```
----
-
-# 🌍 9. Real-World Systems (Status)
-
-### 🔥 Lorenz
-
-✔ fully validated  
-✔ structure, flow, stability, transitions, control  
-
-→ reference system  
-
----
-
-### ⚡ IEEE Power Systems
-
-✔ field reconstruction works  
-✔ transition structure partially visible  
 
 But:
 
-❌ transition geometry not fully validated  
-❌ control not yet robust  
-❌ reproducible pipeline missing  
+```text
+❗ not yet statistically validated
+❗ not yet formally unified
+❗ not yet a stable kernel system
+```
 
 ---
 
-### 🔄 Other Systems
+# 🔬 1. Structural Extraction (Demonstrator-Level)
 
-- Kuramoto → exploratory  
-- multi-agent → exploratory  
-- supply chain → exploratory  
+Status:
 
----
-
-# ⚠️ 10. Current Bottlenecks
-
-## 1. Kernel Gap
-
-- no unified execution pipeline  
-- no standardized runtime  
+✔ discrete transition structure (sheet model)  
+✔ transition matrices (banded, local)  
+✔ basic regime decomposition  
+✔ trajectory-to-structure mapping  
 
 ---
 
-## 2. Validation Gap
+## Key Observation
 
-- limited statistical validation  
-- no large-scale benchmarking  
-
----
-
-## 3. Application Gap
-
-- real-world deployment not yet achieved  
+```text
+Transitions are local and structured.
+```
 
 ---
 
-## 4. Abstraction Gap
+## Status
 
-- geometry layer not fully formalized (→ VESSEL_GEOMETRY)  
-- transition layer not yet unified into API  
-
----
-
-# 🧠 10. What Is Established
-
-✔ structure emerges from dynamics  
-✔ dynamics form continuous fields  
-✔ geometry defines motion constraints  
-✔ stability is spatially structured  
-✔ basins define long-term behavior  
-✔ gates define transition structure  
-✔ transitions follow constrained paths  
-✔ control can reshape transitions  
-✔ navigation operates on structured geometry  
+```text
+🟡 plausible (single-run consistent)
+❗ requires multi-run validation
+```
 
 ---
 
-# ❌ 11. What Is NOT Established
+# 🌊 2. Field Reconstruction (Partial / Experimental)
 
-❌ universal generalization  
-❌ full robustness under noise / perturbations  
-❌ large-scale real-world validation  
-❌ analytical completeness  
-❌ optimal control guarantees  
+Status:
+
+✔ density estimation  
+✔ flow estimation  
+✔ basic geometric interpretation  
+
+---
+
+## Interpretation
+
+```text
+System can be represented as a continuous field.
+```
+
+---
+
+## Status
+
+```text
+🟡 plausible
+❗ not yet validated across runs
+```
+
+---
+
+# 🔷 3. Transition Structure (Core Finding)
+
+Status:
+
+✔ transition matrices computed  
+✔ strong diagonal dominance  
+✔ local transitions only  
+
+---
+
+## Key Result
+
+```text
+System behaves like a banded Markov process with geometric origin.
+```
+
+---
+
+## Status
+
+```text
+🟡 plausible
+❗ needs statistical validation
+```
+
+---
+
+# 🎯 4. Gate Operator (Reinterpreted)
+
+Status:
+
+✔ G(x) implemented  
+✔ ablation experiments performed  
+
+---
+
+## Key Finding
+
+```text
+G(x) detects local instability,
+NOT transition events.
+```
+
+---
+
+## Status
+
+```text
+🟡 plausible
+✔ partially supported by experiments
+❗ requires quantitative validation
+```
+
+---
+
+# 🎮 5. Control Layer (Experimental)
+
+Status:
+
+✔ control terms implemented  
+✔ trajectory deformation observed  
+
+---
+
+## Observed Behavior
+
+```text
+Control affects local motion,
+but does not reliably enforce transitions.
+```
+
+---
+
+## Interpretation
+
+```text
+System is influenced, but not freely controllable.
+```
+
+---
+
+## Status
+
+```text
+🟡 plausible
+❗ not validated across runs
+```
+
+---
+
+# 🧭 6. Navigation Behavior (Demonstrator-Level)
+
+Status:
+
+✔ trajectory steering observed  
+✔ structure-aligned motion  
+
+---
+
+## Key Observation
+
+```text
+Motion follows structural pathways.
+```
+
+---
+
+## Status
+
+```text
+🟡 plausible
+❗ requires quantitative validation
+```
+
+---
+
+# 🔒 7. Constraint Behavior (Experimental Observation)
+
+Observed:
+
+```text
+perturbations are locally absorbed
+structure remains stable
+```
+
+---
+
+## Interpretation
+
+```text
+System may evolve on a constrained manifold.
+```
+
+---
+
+## Status
+
+```text
+🔴 speculative
+❗ requires formal and empirical validation
+```
+
+---
+
+# 🌍 8. Systems Tested
+
+### Lorenz
+
+✔ primary test system  
+✔ all components tested  
+
+---
+
+### IEEE Systems
+
+✔ field reconstruction works  
+🟡 structural interpretation possible  
+
+---
+
+## Status
+
+```text
+❗ exploratory
+❗ not validated
+```
+
+---
+
+# ⚠️ 9. Current Bottlenecks
+
+## 1. Validation Gap
+
+- no multi-run validation  
+- no statistical metrics  
+
+---
+
+## 2. Kernel Gap
+
+- no unified runtime system  
+- logic distributed across scripts  
+
+---
+
+## 3. Control Gap
+
+- no reliable transition control  
+- no reproducible steering  
+
+---
+
+## 4. Formalization Gap
+
+- no formal sheet definition  
+- no unified transition model  
+
+---
+
+# 🧠 10. What Is Supported
+
+```text
+✔ structure emerges from dynamics
+✔ transitions show local structure
+✔ dynamics can be mapped to fields
+✔ system behavior is geometrically constrained
+```
+
+---
+
+# ❌ 11. What Is NOT Yet Established
+
+```text
+❌ universality
+❌ robustness under noise
+❌ controllability
+❌ formal mathematical model
+❌ real-world validation
+```
 
 ---
 
 # 🧭 12. System Positioning
 
-NEXAH is NOT:
+NEXAH is currently:
 
-- a simulator  
-- a machine learning framework  
-- a classical control system  
+> a **structure extraction and navigation framework under validation**
 
-NEXAH is:
+NOT yet:
 
-> a **field-based transition, control, and navigation framework**
+- a validated scientific theory  
+- a production system  
+- a generalized control framework  
 
 ---
 
 # 🚀 13. Immediate Next Steps
 
-1. implement NEXAH kernel (state → field → graph → control → next state)  
-2. unify transition geometry layer  
-3. validate basin + gate structure statistically  
-4. build reproducible demo pipeline  
-5. integrate real-world system case (IEEE)  
+```text
+1. transition matrix multi-run validation
+2. gate operator quantitative evaluation
+3. navigation A/B experiments
+4. minimal kernel definition
+5. IEEE pipeline clarification
+```
 
 ---
 
 # 🧭 Final Insight
 
-NEXAH demonstrates:
+```text
+NEXAH suggests that system behavior
+is structured and constrained.
 
-> complex systems evolve within structured fields  
-> and transitions are governed by geometry, stability, and control
-
----
-
-# 🔥 Core Truth
-
-> Systems do not randomly fail.  
-> They move through structured transition spaces.
-
-> These spaces define:
-- where motion is possible  
-- where transitions occur  
-- how systems can be controlled  
+But this must now be proven,
+not assumed.
+```
 
 ---
 
-Last Updated: April 2026  
+Last Updated: May 2026  
 © Thomas K. R. Hofmann
