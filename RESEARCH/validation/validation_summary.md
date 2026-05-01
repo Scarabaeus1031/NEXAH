@@ -132,6 +132,84 @@ structure remains stable across runs
 
 ---
 
+# 🧬 6. Partition Invariance (Multi-Method Test)
+
+**Script:** `run_multi_partition_invariance_test.py`  
+
+## Methods
+
+- KMeans  
+- PCA + KMeans  
+- Random Projection + KMeans  
+- DBSCAN  
+
+## Results
+
+- KMeans vs PCA + KMeans: **0.014032**  
+- KMeans vs Random Projection + KMeans: **0.017065**  
+- PCA + KMeans vs Random Projection + KMeans: **0.012935**
+
+(DBSCAN excluded due to collapse)
+
+## Visual Evidence
+
+![Multi-Partition Structure](lorenz/results/multi_partition_structure.png)
+
+## Interpretation
+
+- Different partition methods produce **similar transition matrices**  
+- Structure is not tied to a specific embedding or projection  
+- DBSCAN collapses to 1 cluster → no discrete states detected  
+
+---
+
+# 🧪 7. DBSCAN Geometry Sweep
+
+**Script:** `run_dbscan_sweep.py`  
+
+## Results
+
+- Low eps → multiple clusters (fragmentation)  
+- Intermediate eps → transient structure  
+- High eps → single cluster (collapse)  
+
+## Visual Evidence
+
+![DBSCAN Sweep](lorenz/results/dbscan_partition_sweep.png)  
+![Cluster Count vs eps](lorenz/results/dbscan_cluster_count.png)
+
+## Interpretation
+
+- No stable discrete clustering exists  
+- System behaves as a **continuous geometric object**  
+
+---
+
+# 🔁 8. Transition Invariance under Geometric Masking (Forced K)
+
+**Script:** `run_dbscan_transition_forced_k.py`  
+**Clusters (forced):** 6  
+
+## Results
+
+- Mean transition difference: **~0.02–0.03**
+
+## Visual Evidence
+
+![Forced-K Transition Differences](lorenz/results/dbscan_forced_k_transition_diff.png)
+
+## Interpretation
+
+- DBSCAN changes geometry (valid regions, density support)  
+- KMeans imposes artificial partitions  
+
+BUT:
+
+- Transition matrices remain stable  
+- Differences are small (~2–3%)  
+
+---
+
 # 🧠 GLOBAL OBSERVATIONS
 
 Across all tests:
@@ -141,40 +219,57 @@ Across all tests:
 - Transition dynamics are:
   - reproducible  
   - noise-robust  
-  - structurally constrained  
+  - partition-invariant  
+  - geometrically constrained  
 
 ---
 
 # 🔑 CORE INSIGHT
 
-Dynamics are unstable at the trajectory level  
+```text
+Dynamics are unstable at the trajectory level
 
-BUT  
+BUT
 
-stable at the structural level  
+stable at the structural level
+```
 
 ---
+
+# 🔥 EXTENDED INSIGHT
+
+```text
+Clustering is not stable.
+
+Transition structure is.
+```
 
 # ✅ CONCLUSION
 
 - Structure is **reproducible across runs**  
 - Structure is **robust under noise**  
+- Structure is **independent of partition method**  
+- No natural discrete state system exists (DBSCAN result)
+
+**THEREFORE:**
+
 - Stability is **geometric, not point-based**  
-- Transitions behave as **structured processes**, not random events  
+- Transitions are **intrinsic to system dynamics**  
+- Transition structure reflects **underlying flow geometry, not discretization**
 
 ---
 
 # ⚠️ VALIDATION STATUS
 
-Level: PRELIMINARY  
-Confidence: MEDIUM (increasing)  
+Level: PRELIMINARY → STRONG EMPIRICAL  
+Confidence: MEDIUM → HIGH (Lorenz only)
 
 ---
 
 # 🔜 NEXT STEPS
 
 - increase runs (30–50)  
-- validate on additional systems  
+- validate on additional systems (Rössler, Duffing, etc.)  
 - test control layer reproducibility  
 - extend to IEEE system  
 
