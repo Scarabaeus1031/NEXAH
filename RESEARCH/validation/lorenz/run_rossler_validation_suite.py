@@ -2,6 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from scipy.spatial.distance import cdist
+import os
+
+# ============================
+# Setup (FIX)
+# ============================
+
+OUTPUT_DIR = "RESEARCH/validation/rossler/results"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # ============================
 # Rössler system
@@ -13,12 +21,15 @@ def rossler(x, y, z, a=0.2, b=0.2, c=5.7):
     dz = b + z*(x - c)
     return dx, dy, dz
 
-def simulate_rossler(steps=5000, dt=0.01):
+def simulate_rossler(steps=5000, dt=0.01, noise_init=0.01):
     xs = np.zeros(steps)
     ys = np.zeros(steps)
     zs = np.zeros(steps)
 
-    xs[0], ys[0], zs[0] = (0.0, 1.0, 0.0)
+    # 🔥 FIX: random initial conditions
+    xs[0] = 0.0 + noise_init * np.random.randn()
+    ys[0] = 1.0 + noise_init * np.random.randn()
+    zs[0] = 0.0 + noise_init * np.random.randn()
 
     for i in range(steps - 1):
         dx, dy, dz = rossler(xs[i], ys[i], zs[i])
@@ -60,8 +71,9 @@ def run_multirun(n_runs=10):
 
     endpoints = np.array(endpoints)
 
-    mean_dist = np.mean(cdist(endpoints, endpoints))
-    std_dist = np.std(cdist(endpoints, endpoints))
+    D = cdist(endpoints, endpoints)
+    mean_dist = np.mean(D)
+    std_dist = np.std(D)
 
     print("\n=== MULTI-RUN ===")
     print(f"Mean endpoint distance: {mean_dist:.4f}")
@@ -72,7 +84,7 @@ def run_multirun(n_runs=10):
     for traj in trajectories:
         plt.plot(traj[:,0], traj[:,1], alpha=0.5)
     plt.title("Rössler Trajectory Overlay")
-    plt.savefig("RESEARCH/validation/rossler/results/trajectory_overlay.png")
+    plt.savefig(f"{OUTPUT_DIR}/trajectory_overlay.png")
     plt.close()
 
     return mean_dist, std_dist
@@ -81,7 +93,7 @@ def run_multirun(n_runs=10):
 # Noise test
 # ============================
 
-def run_noise_test(n_runs=10, noise=1.0):
+def run_noise_test(noise=1.0):
     clean_data = simulate_rossler()
     noisy_data = clean_data + noise * np.random.randn(*clean_data.shape)
 
@@ -90,7 +102,7 @@ def run_noise_test(n_runs=10, noise=1.0):
     plt.plot(noisy_data[:,0], noisy_data[:,1], alpha=0.6, label="noisy")
     plt.legend()
     plt.title("Noise Comparison")
-    plt.savefig("RESEARCH/validation/rossler/results/noise_comparison.png")
+    plt.savefig(f"{OUTPUT_DIR}/noise_comparison.png")
     plt.close()
 
     print("\n=== NOISE TEST ===")
@@ -115,13 +127,13 @@ def run_transition_test():
     plt.imshow(T, cmap="viridis")
     plt.title("Transition Matrix")
     plt.colorbar()
-    plt.savefig("RESEARCH/validation/rossler/results/transition_matrix.png")
+    plt.savefig(f"{OUTPUT_DIR}/transition_matrix.png")
     plt.close()
 
     return T
 
 # ============================
-# Partition invariance (simple)
+# Partition invariance
 # ============================
 
 def run_partition_invariance():
@@ -149,7 +161,7 @@ def run_partition_invariance():
     plt.imshow(T2)
     plt.title("Projected")
 
-    plt.savefig("RESEARCH/validation/rossler/results/partition_invariance.png")
+    plt.savefig(f"{OUTPUT_DIR}/partition_invariance.png")
     plt.close()
 
     return d
