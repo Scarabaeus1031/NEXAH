@@ -3,12 +3,15 @@
 ![Status](https://img.shields.io/badge/status-research--active-orange)
 ![Validation](https://img.shields.io/badge/validation-in%20progress-yellow)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-Apache%202.0-green)
+![Focus](https://img.shields.io/badge/focus-dynamical%20systems-lightgrey)
+> Status: Active research system — validation and kernel integration in progress.
+
 
 > NEXAH reconstructs structure, transitions, and stability  
 > directly from system dynamics.
->
-> > Complex systems are not random.  
+
+>  Complex systems are not random.  
 > They evolve within **structured fields that constrain motion, transitions, and outcomes**.
 
 ---
