@@ -1,0 +1,14 @@
+NEXAH — Phase Gate Control v2
+
+Gate events: 29
+IOTA events: 148
+Threshold: 2.0
+Cooldown steps: 25
+Control strength k: 0.2
+Use phase velocity filter: True
+Omega trigger limit: -4.0
+
+Interpretation:
+Gate control is now selective.
+It activates only when mismatch is large, rising, outside cooldown, and optionally in a critical omega regime.
+This reduces blinking and tests whether phase-gated intervention can target transition precursors.
