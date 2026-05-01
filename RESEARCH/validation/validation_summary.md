@@ -423,11 +423,13 @@ They occur in structured regions of the flow.
 
 - Mean transition difference: **0.014460**
 
+---
+
 ## Visual Evidence
 
-![Gate Transition Comparison](lorenz/results/gate_transition_comparison.png)
-![Transition Difference Map](lorenz/results/gate_transition_difference.png)
-![Gate Region](lorenz/results/gate_region.png)
+![Gate Transition Comparison](causality/results/gate_transition_comparison.png)  
+![Transition Difference Map](causality/results/gate_transition_difference.png)  
+![Gate Region](causality/results/gate_region.png)
 
 ## Interpretation
 
