@@ -8,9 +8,8 @@ focusing on how **structure, instability, and transitions emerge from trajectori
 The core idea is simple:
 
 ```text
-We do not model transitions as events.
-
-We extract them from the structure of the system itself.
+We do not impose transitions as discrete events.
+We extract them from the observed structure of the system.
 ```
 
 ---

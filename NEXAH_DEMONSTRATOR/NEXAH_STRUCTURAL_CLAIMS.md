@@ -25,6 +25,15 @@ a set of structured, testable hypotheses derived from empirical exploration
 
 ---
 
+# 🔥 Claim Classification
+
+```text
+🔥 = empirically supported structural insight
+⚠️ = conceptual hypothesis (not yet validated by experiments)
+```
+
+---
+
 # 🧱 I. Standard Components (Not Claimed as Novel)
 
 - Lorenz / Rössler systems  
@@ -237,7 +246,7 @@ optimization of a scalar objective
 
 ---
 
-## 🔥 Claim 8 — Janus Field (Bidirectional Flow Structure)
+## ⚠️ Claim 8 — Janus Field (Bidirectional Flow Structure)
 
 Define:
 

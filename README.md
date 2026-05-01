@@ -10,15 +10,15 @@
 
 ## 🧭 Conceptual Overview
 
-![NEXAH Core System](ARCHITECTURE/archive/gate_geometry_navigation.png)
+![NEXAH Core System](ARCHITECTURE/archive/NEXAH_Regime_Atlas.png)
 
-*NEXAH connects continuous dynamics with discrete transition systems through navigable structure.*
+*NEXAH connects continuous dynamics with discrete transition structure across regimes.*
 
 ---
 
 ## 🧠 What NEXAH Does
 
-NEXAH transforms time-series data into a **structured dynamical field**:
+NEXAH transforms time-series data into a **structured representation of system behavior**:
 
 ```text
 dynamics → structure → field → transitions → navigation
@@ -41,27 +41,54 @@ Traditional approaches model:
 state → next state
 ```
 
-NEXAH models:
+NEXAH instead models:
 
 ```text
-trajectory within a structured field
+motion within a structured field
 ```
 
 Where:
 
 - stability = alignment with field structure  
 - instability = drift into low-density / conflicting regions  
-- transitions = movement through structured corridors  
+- transitions = movement across structured regions  
 
 ---
 
-## 🧭 Example
+## 🧪 Demonstrator (Reproducible Core)
 
-![Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
 
-- transitions occur in **specific regions**  
-- motion follows **field geometry**  
-- instability appears as **structured drift**  
+The demonstrator provides a **minimal, reproducible implementation** of the core pipeline:
+
+- field construction from trajectories  
+- Gate Operator (continuous instability field)  
+- Transition Structure (discrete sheet dynamics)  
+- Navigation Kernel (geometry-aware motion)  
+
+👉 Entry point:  
+- [`NEXAH_DEMONSTRATOR/README.md`](NEXAH_DEMONSTRATOR/README.md)
+
+👉 Core components:  
+- `gate_operator.md`  
+- `transition_structure.md`  
+- `navigation_kernel.md`  
+
+---
+
+## 🌊 Field Reality (Example)
+
+![Off-Manifold Flow](FRAMEWORK/NEXAH/geometry/visuals/ieee57_v69_off_manifold_flow.png)
+
+*System motion follows a constrained flow field — transitions occur only along admissible paths.*
+
+---
+
+## 🎯 Structure-Aware Field (Control View)
+
+![Structure-Aware Target Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+
+*Structure-aware fields enable control by aligning with system geometry rather than overriding it.*
 
 ---
 
@@ -69,15 +96,17 @@ Where:
 
 📂 `APPLICATIONS/power_systems/VALIDATION_LAYER/`
 
-Key results:
+Key observations:
 
 - early warning up to **40–50 time units before collapse**  
 - instability emerges as **geometric deviation**  
-- transition behavior visible in motion metrics  
+- transition behavior becomes visible in motion metrics  
 
 ---
 
-## 🧩 Core Module
+## 🧩 Core Modules
+
+### 🔷 Field & Transition System
 
 ```text
 NEXAH_CORE/
@@ -89,6 +118,18 @@ Implements:
 - transition detection (gates, basins)  
 - probabilistic instability modeling  
 - structure-aware trajectory analysis  
+
+---
+
+### 🔷 Demonstrator (Reference Implementation)
+
+```text
+NEXAH_DEMONSTRATOR/
+```
+
+- minimal working system  
+- reproducible experiments  
+- empirical validation layer  
 
 ---
 
@@ -174,7 +215,7 @@ It is a region in a structured field.
 A system does not randomly fail.
 
 It moves through structured transition regions
-that define what outcomes are possible.
+that constrain what outcomes are possible.
 ```
 
 ---
