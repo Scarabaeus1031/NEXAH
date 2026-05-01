@@ -15,20 +15,26 @@ But it isn’t.
 ## 🧠 Look again
 
 - the system is not random  
-- it moves between recurring regions  
-- transitions happen at specific points  
+- it repeatedly visits specific regions  
+- transitions occur in consistent areas  
 
-👉 this is **structured behavior inside chaos**
+👉 this is **structured behavior in a dynamical system**
 
 ---
 
 ## 🔥 The key idea
 
-NEXAH does not analyze values.
+NEXAH does not focus on individual values.
 
-It reveals:
+It reconstructs:
 
-> **how a system moves through its own structure**
+```text
+trajectory → structure → field → transitions
+```
+
+In other words:
+
+> **how a system moves through its own geometry**
 
 ---
 
@@ -42,7 +48,7 @@ python APPLICATIONS/core_demos/lorenz/lorenz_meta_control_v6_switch.py
 
 ---
 
-## 🧪 Now change ONE line
+## 🧪 Modify one line
 
 Find:
 
@@ -50,9 +56,7 @@ Find:
 control = -0.30 * dx
 ```
 
-Run again.
-
-Change to:
+Change it to:
 
 ```python
 control = -0.10 * dx
@@ -62,28 +66,46 @@ Run again.
 
 ---
 
-## 🧠 What just happened
+## 🧠 What just changed
 
-You did NOT tune a parameter.
+You did not just tune a parameter.
 
 You changed:
 
-> how the system navigates its own dynamics
+```text
+how the trajectory interacts with the system’s flow structure
+```
 
 ---
 
 ## 💡 What this shows
 
-- chaos contains structure  
-- transitions are not random  
-- behavior can be influenced via geometry  
+- chaotic systems exhibit stable geometric structure  
+- transitions occur in specific regions of state space  
+- system behavior can be influenced through local dynamics  
+
+---
+
+## 🧪 Want the minimal system?
+
+👉 Start here:
+
+- [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
+- [`NEXAH_DEMONSTRATOR/README.md`](NEXAH_DEMONSTRATOR/README.md)
+
+This contains a **clean, reproducible implementation** of:
+
+- field construction  
+- Gate Operator  
+- Transition Structure  
+- Navigation Kernel  
 
 ---
 
 ## 🧭 Where to go next
 
 - 👉 Overview → [README.md](README.md)  
-- 👉 System state → [ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)  
+- 👉 Architecture → [ARCHITECTURE/README.md](ARCHITECTURE/README.md)  
 - 👉 Methods → [ARCHITECTURE/METHODS.md](ARCHITECTURE/METHODS.md)  
 - 👉 Visuals → [VISUAL_GALLERY.md](VISUAL_GALLERY.md)  
 
@@ -91,9 +113,9 @@ You changed:
 
 ## 🔥 One sentence
 
-NEXAH turns chaotic systems into:
+NEXAH turns dynamical systems into:
 
-> **something you can observe, understand — and navigate**
+> **something you can observe, analyze — and navigate**
 
 ---
 
@@ -101,4 +123,4 @@ NEXAH turns chaotic systems into:
 
 > The system is not random.  
 > It follows structure —  
-> and that structure can be revealed.
+> and that structure can be reconstructed.
