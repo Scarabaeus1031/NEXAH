@@ -10,9 +10,9 @@
 
 ## 🧭 Conceptual Overview
 
-![NEXAH Core System](ARCHITECTURE/archive/gate_geometry_navigation.png)
+![NEXAH Core System](ARCHITECTURE/archive/NEXAH_Regime_Atlas.png)
 
-*NEXAH connects continuous dynamics with discrete transition structure through geometry.*
+*NEXAH connects continuous dynamics with discrete transition structure across regimes.*
 
 ---
 
@@ -57,7 +57,7 @@ Where:
 
 ## 🧪 Demonstrator (Reproducible Core)
 
-📂 `NEXAH_DEMONSTRATOR/`
+📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
 
 The demonstrator provides a **minimal, reproducible implementation** of the core pipeline:
 
@@ -66,24 +66,29 @@ The demonstrator provides a **minimal, reproducible implementation** of the core
 - Transition Structure (discrete sheet dynamics)  
 - Navigation Kernel (geometry-aware motion)  
 
-👉 See:
+👉 Entry point:  
+- [`NEXAH_DEMONSTRATOR/README.md`](NEXAH_DEMONSTRATOR/README.md)
 
-- `NEXAH_DEMONSTRATOR/README.md`  
+👉 Core components:  
 - `gate_operator.md`  
 - `transition_structure.md`  
 - `navigation_kernel.md`  
 
 ---
 
-## 🧭 Example
+## 🌊 Field Reality (Example)
 
-![Structure Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+![Off-Manifold Flow](FRAMEWORK/NEXAH/geometry/visuals/ieee57_v69_off_manifold_flow.png)
 
-Observed behavior:
+*System motion follows a constrained flow field — transitions occur only along admissible paths.*
 
-- transitions occur in **specific regions**  
-- motion follows **field geometry**  
-- instability appears as **structured deviation**  
+---
+
+## 🎯 Structure-Aware Field (Control View)
+
+![Structure-Aware Target Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+
+*Structure-aware fields enable control by aligning with system geometry rather than overriding it.*
 
 ---
 
