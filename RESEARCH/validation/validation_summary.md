@@ -449,7 +449,7 @@ They occur in structured regions of the flow.
 - `run_gate_path_control.py`
 - `run_gate_target_reach.py`
 - `run_gate_time_to_target.py`
-- `run_gate_resonance_scan.py`
+- `run_gate_minimal_intervention.py`
 - `run_gate_resonance_scan_multirun.py`
 
 ---
