@@ -311,9 +311,9 @@ of continuous dynamical systems.
 
 ## Visual Evidence
 
-![Cross-System Transition Matrices](cross_validation/cross_system_transition_matrices.png)
+![Cross-System Transition Matrices](cross_system_transition_matrices.png)
 
-![Cross-System Distance Matrix](cross_validation/cross_system_distance_matrix.png)
+![Cross-System Distance Matrix](cross_system_distance_matrix.png)
 
 ---
 
@@ -376,6 +376,103 @@ Observed in:
 The stability of transition structure is a general property
 of continuous dynamical systems.
 ```
+
+---
+
+# 🌊 10. Field-Level Structure (Continuous Geometry)
+
+**Scripts:**
+- `run_instability_field_estimation.py`
+- `run_transition_field_estimation.py`
+- `run_navigation_field.py`
+
+---
+
+## Visual Evidence
+
+![Instability Field](lorenz/results/instability_field.png)
+![Transition Field](lorenz/results/transition_field.png)
+![Navigation Field](lorenz/results/navigation_field.png)
+
+---
+
+## Interpretation
+
+- Instability concentrates in **transition zones between attractor lobes**
+- Flow field reveals **smooth directional structure**
+- Navigation field combines:
+  - direction (vector field)
+  - instability (decision zones)
+
+---
+
+## Key Observation
+
+```text
+Transitions are not random jumps.
+
+They occur in structured regions of the flow.
+```
+
+---
+
+# 🧭 VALIDATION STATUS (Current)
+
+## LEVEL 1 — Reproducibility ✔
+- Multi-run validation ✔
+- Noise robustness ✔  
+
+👉 Result:  
+Structure remains stable despite chaotic divergence  
+
+---
+
+## LEVEL 2 — Transition Structure ✔
+- Transition matrices ✔  
+- Noise on transitions ✔  
+- Sensitivity maps ✔  
+
+👉 Result:  
+Transitions are stable and non-random  
+
+---
+
+## LEVEL 3 — Partition Invariance ✔
+- KMeans / PCA / Random Projection ✔  
+- DBSCAN analysis ✔  
+
+👉 Result:  
+Structure is independent of discretization  
+
+---
+
+## LEVEL 4 — Cross-System Validation ✔
+- Lorenz ✔  
+- Rössler ✔  
+- Duffing ✔  
+
+👉 Result:  
+Phenomenon is system-independent  
+
+---
+
+## LEVEL 5 — Field-Level Validation ✔
+- Flow field ✔  
+- Instability field ✔  
+- Navigation field ✔  
+
+👉 Result:  
+Structure exists in continuous state space  
+
+---
+
+## CURRENT STATE
+
+```text
+Empirical structural validation is STRONG.
+Causal validation is NOT yet completed.
+```
+
 ---
 
 # 🧠 GLOBAL OBSERVATIONS
@@ -411,6 +508,8 @@ Clustering is not stable.
 
 Transition structure is.
 ```
+
+---
 
 # ✅ CONCLUSION
 
