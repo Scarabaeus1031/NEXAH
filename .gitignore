@@ -159,3 +159,12 @@ APPLICATIONS/dynamical_systems/halvorsen/outputs/*.txt
 
 !RESEARCH/NEXAH_DEVELOPMENT/gate_operator/output_results/
 !RESEARCH/NEXAH_DEVELOPMENT/gate_operator/output_results/*.png
+
+# =========================
+# VALIDATION RESULTS (CURATED)
+# =========================
+
+!RESEARCH/validation/
+!RESEARCH/validation/**/
+!RESEARCH/validation/**/results/
+!RESEARCH/validation/**/results/*.png
