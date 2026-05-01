@@ -1,0 +1,12 @@
+NEXAH — Lorenz Noise Validation
+
+Runs: 10
+Noise level: 1.0
+
+CLEAN
+Mean distance: 9.7892
+Std: 5.9301
+
+NOISY
+Mean distance: 10.4864
+Std: 4.9895
