@@ -83,7 +83,7 @@ for i, s in enumerate(strength_values):
         heatmap[i, j] = hit_rate
 
         print(f"s={s:.2f}, phase={p:.2f} → hit={hit_rate:.4f}")
-np.save("RESEARCH/validation/causality/gate_resonance_scan_multirun.npy", Z)
+np.save("RESEARCH/validation/causality/gate_resonance_scan_multirun.npy", heatmap)
 
 # =========================
 # PLOT
