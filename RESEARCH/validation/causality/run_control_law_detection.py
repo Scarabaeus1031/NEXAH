@@ -96,7 +96,13 @@ plt.tight_layout()
 
 plt.savefig("RESEARCH/validation/causality/results/control_law_detection.png", dpi=200)
 plt.close()
+np.savez(
+    "RESEARCH/validation/causality/control_law_data.npz",
+    phi=phi_grid,
+    s_star=s_star
+)
 
+print("✅ Saved: control_law_data.npz")
 # =========================
 # SAVE SUMMARY
 # =========================
