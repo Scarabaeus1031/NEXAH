@@ -1,0 +1,6 @@
+NEXAH — Lorenz Multi-Run Validation
+
+Runs: 10
+Mean endpoint distance: 9.7892
+Std endpoint distance: 5.9301
+Attractor stability: MEDIUM
