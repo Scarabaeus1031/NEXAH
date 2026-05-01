@@ -488,12 +488,12 @@ strength ≈ 0.3 – 0.4
 
 ## 🧠 Visual Evidence
 
-![Path Control](validation/causality/results/path_control.png)  
-![Target Reach](validation/causality/results/target_reach.png)  
-![Time to Target](validation/causality/results/time_to_target.png)  
+![Path Control](causality/results/path_control.png)  
+![Target Reach](causality/results/target_reach.png)  
+![Time to Target](causality/results/time_to_target.png)  
 
-![Gate Minimal Intervention](validation/causality/gate_minimal_intervention.png)  
-![Gate Resonance Scan](validation/causality/gate_resonance_scan_multirun.png)
+![Gate Minimal Intervention](causality/gate_minimal_intervention.png)  
+![Gate Resonance Scan](causality/gate_resonance_scan_multirun.png)
 
 ---
 
