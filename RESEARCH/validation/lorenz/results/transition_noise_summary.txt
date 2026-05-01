@@ -1,0 +1,6 @@
+NEXAH — Transition Noise Validation
+
+Runs: 10
+Noise level: 1.0
+
+Mean transition difference: 0.0008
