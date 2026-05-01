@@ -1,82 +1,57 @@
 # 🧠 NEXAH — Research Layer
 
-![NEXAH Structure Pipeline](RESEARCH/visuals/nexah_hero_structure_pipeline_v1.png)
-
-*From raw dynamics to structured fields and navigable system behavior.*
-
+**Purpose:**  
 This module contains the **conceptual, structural, and empirical foundation** of NEXAH.
 
 It is not a finished theory.
 
-It is a **living research layer** that evolves through building, observation, and validation.
-
----
-
-# 🧭 Start Here
-
-If you are new to NEXAH, follow this order:
+It is a **living research layer** that evolves through:
 
 ```text
-1. CORE_CONCEPT_MAP.md
-2. CORE_CONCEPTS/
-3. FOUNDATION/
-4. FINDINGS/
-```
-
-This provides a complete path from intuition → structure → validation.
-
----
-
-# 🧭 Role in NEXAH
-
-```text
-RESEARCH (concepts & findings)
-        ↓
-DISCOVERY ENGINE (extraction)
-        ↓
-FIELD_LAYER (geometry)
-        ↓
-NAVIGATION (control)
+building → observation → validation → consolidation
 ```
 
 ---
 
-# 🧠 Research Approach
-
-NEXAH follows a **builder-first methodology**:
-
-> build systems → observe behavior → extract structure → refine understanding
-
-This layer exists to:
-
-- capture emerging ideas  
-- consolidate findings  
-- compare across systems  
-- guide further development  
-
----
-
-# ⚙️ Development Loop
+# 🧭 POSITION IN NEXAH
 
 ```text
-build → observe → extract → compare → refine → build
-```
-
-Key principle:
-
-```text
-compare across systems → identify invariants
+BUILDER LAB (exploration)
+→ RESEARCH LAYER (understanding & validation)
+→ CORE SYSTEM (stable, accepted structure)
+→ DEMONSTRATOR / APPLICATIONS (execution)
 ```
 
 ---
 
-# ⚠️ Scope
+# 🔴 CORE PRINCIPLE
+
+```text
+No concept becomes part of the system
+without validation.
+```
+
+---
+
+# 🧠 ROLE OF THIS LAYER
+
+This module is responsible for:
+
+- capturing emerging concepts  
+- structuring observations  
+- separating **hypothesis vs validated result**  
+- guiding system development  
+- preventing interpretation bias  
+
+---
+
+# ⚠️ SCOPE
 
 This module is:
 
-- not a complete physical theory  
-- not a finalized mathematical system  
+- not a finalized mathematical theory  
 - not a claim of universality  
+- not an executable system  
 
 It is:
 
@@ -84,7 +59,21 @@ It is:
 
 ---
 
-# 🧱 Module Structure
+# 🧭 HOW TO READ THIS MODULE
+
+Recommended path:
+
+```text
+1. CORE_CONCEPT_MAP.md
+2. CORE_CONCEPTS/
+3. FOUNDATION/
+4. FINDINGS/
+5. SYSTEM_MODELS/
+```
+
+---
+
+# 🧱 MODULE STRUCTURE
 
 ---
 
@@ -92,15 +81,15 @@ It is:
 
 → `CORE_CONCEPTS/`
 
-Defines the **core system view**:
+Defines the conceptual system:
 
-- field (structure from dynamics)  
-- vessel (constraints & containment)  
+- field representation  
+- vessel / constraints  
 - multi-layer interaction  
-- transition geometry (aperture system)  
-- structural operators (Γ, Δ, Ω)  
+- transition geometry  
+- structural operators  
 
-👉 **Role:** conceptual backbone
+👉 Role: **conceptual backbone**
 
 ---
 
@@ -108,13 +97,13 @@ Defines the **core system view**:
 
 → `FOUNDATION/`
 
-Defines the **minimal structural assumptions**:
+Defines minimal assumptions:
 
-- axioms (field, coherence, transitions)  
-- definitions (regime, gate, coherence)  
+- axioms  
+- definitions  
 - structural theorems  
 
-👉 **Role:** formal grounding
+👉 Role: **formal grounding**
 
 ---
 
@@ -122,19 +111,13 @@ Defines the **minimal structural assumptions**:
 
 → `FINDINGS/`
 
-Empirical results and cross-system observations:
+Empirical observations:
 
 - transition structure  
 - flow geometry  
 - control behavior  
 
-Key result:
-
-```text
-cross-system invariance of transition structure
-```
-
-👉 **Role:** validation layer
+👉 Role: **measured system behavior**
 
 ---
 
@@ -142,21 +125,26 @@ cross-system invariance of transition structure
 
 → `APPLIED_CASES/`
 
-Examples across domains:
+Interpretations across domains:
 
 - engineering systems  
-- socio-technical systems  
 - decision systems  
+- regime shifts  
 
-👉 **Role:** applied interpretation
+👉 Role: **external mapping**
 
 ---
 
-## 🕰️ HISTORY
+## 🧠 SYSTEM MODELS
 
-→ `HISTORY/`
+→ `SYSTEM_MODELS/`
 
-Evolution of ideas and early versions.
+Semi-formal models:
+
+- operator-based systems  
+- Koopman-style mappings  
+
+👉 Role: **bridge to formal theory**
 
 ---
 
@@ -164,50 +152,56 @@ Evolution of ideas and early versions.
 
 → `NOTES/`
 
-Exploratory and informal research notes.
+Exploratory thinking and informal ideas.
 
 ---
 
-## 🧠 FORMALIZATION (System Models)
+## 🕰️ HISTORY
 
-→ `SYSTEM_MODELS/`
+→ `HISTORY/`
 
-Contains formal and semi-formal extensions:
-
-- operator-based models  
-- Koopman-style mappings  
-- structural modeling experiments  
-
-👉 **Role:** bridge to formal systems
+Evolution of concepts across versions.
 
 ---
 
-## 🖼️ VISUALS
+## 🔬 DEVELOPMENT TRACK (LEGACY / EXPERIMENTAL)
 
-→ `visual_gallery.md`  
-→ `visuals/`
+→ `NEXAH_DEVELOPMENT/`
 
-Visualizations supporting reasoning.
+Contains:
 
-⚠️ Visuals are **interpretive**, not proofs.
+- early experiments  
+- raw outputs  
+- prototype scripts  
+
+⚠️ Not validated, not canonical
 
 ---
 
-# 🔑 Core Idea
+# 🔬 VALIDATION PRINCIPLE
+
+Every idea follows:
 
 ```text
-System ≠ state evolution
-System = movement in structured space
+Observation → Hypothesis → Measurement → Reproduction → Validation
+```
+
+Only after this:
+
+```text
+→ eligible for CORE integration
 ```
 
 ---
 
-# 🧠 Key Insights
+# 🧠 KEY IDEAS (CURRENT STATE)
+
+---
 
 ### 1. Structure over state
 
 ```text
-Dynamics are structured, not random
+System behavior is structured, not random
 ```
 
 ---
@@ -223,77 +217,74 @@ Stability = region of coherent flow
 ### 3. Transitions are structural
 
 ```text
-Transitions occur in channels, not points
+Transitions occur across regions,
+not at isolated points
 ```
 
 ---
 
-### 4. Control is structural
+### 4. Hybrid system nature
 
 ```text
-Control = shaping flow and transitions
+continuous field + discrete transition structure
 ```
 
 ---
 
-### 5. Cross-system invariance
+### 5. Navigation replaces prediction
 
 ```text
-Different systems → similar transition structure
+Not predicting states —
+navigating structure
 ```
 
 ---
 
-### 6. Navigation replaces prediction
+### 6. Cross-system similarity (under investigation)
 
 ```text
-Not predicting states — navigating structure
+Different systems show similar structural patterns
 ```
 
 ---
 
-# 🔬 Relation to Implementation
+# 🔗 RELATION TO IMPLEMENTATION
 
 This layer is not executable.
 
-It is:
+It is implemented and tested in:
 
-```text
-interpreted → tested → implemented
-```
-
-in:
-
-- DISCOVERY ENGINE  
-- FIELD_LAYER  
-- NAVIGATION  
+- `NEXAH_DEMONSTRATOR/` → minimal reproducible system  
+- `NEXAH_CORE/` → extended system logic  
+- `FIELD_LAYER/` → geometry extraction  
 
 ---
 
-# 🚀 Next Steps
+# 🚀 NEXT STEPS
 
-- expand cross-system validation  
-- formalize transition invariants  
-- integrate control mechanisms  
-- validate on real-world systems  
+- validate structural findings across runs  
+- quantify transition geometry  
+- formalize sheet / regime structure  
+- connect to dynamical systems theory  
+- stabilize kernel abstraction  
 
 ---
 
-# 🧭 Summary
+# 🧭 SUMMARY
 
 The Research Layer is:
 
-- not an application  
 - not a simulation  
-- not a finalized theory  
+- not a product  
+- not a finished theory  
 
 It is:
 
-> a **structured body of evolving knowledge grounded in system behavior**
+> a **structured system of evolving knowledge grounded in observed behavior**
 
 ---
 
-# 🔥 Final Insight
+# 🔥 FINAL INSIGHT
 
 ```text
 We are not modeling systems.
@@ -305,6 +296,4 @@ that systems are forced to follow.
 ---
 
 **NEXAH Research Layer**  
-From building → to structure → to navigation  
-
-© Thomas K. R. Hofmann · 2026
+Thomas K. R. Hofmann · 2026
