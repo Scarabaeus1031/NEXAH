@@ -1,0 +1,17 @@
+NEXAH — DBSCAN Sweep
+
+eps=0.100, clusters=4, valid_ratio=0.188
+eps=0.156, clusters=3, valid_ratio=0.613
+eps=0.211, clusters=1, valid_ratio=0.804
+eps=0.267, clusters=1, valid_ratio=0.889
+eps=0.322, clusters=1, valid_ratio=0.942
+eps=0.378, clusters=1, valid_ratio=0.960
+eps=0.433, clusters=1, valid_ratio=0.972
+eps=0.489, clusters=1, valid_ratio=0.977
+eps=0.544, clusters=1, valid_ratio=0.981
+eps=0.600, clusters=1, valid_ratio=0.987
+
+Interpretation:
+Low eps → many clusters (over-segmentation)
+High eps → 1 cluster (collapse)
+Intermediate eps → meaningful structure

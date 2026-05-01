@@ -1,0 +1,22 @@
+NEXAH — Multi-Partition Invariance Test
+
+Steps: 5000
+Noise level: 0.0
+KMeans clusters: 6
+
+States per method:
+- KMeans: 6
+- PCA + KMeans: 6
+- Random Projection + KMeans: 6
+- DBSCAN: 1
+
+Pairwise transition matrix distances:
+- KMeans vs PCA + KMeans: 0.014032
+- KMeans vs Random Projection + KMeans: 0.017065
+- KMeans vs DBSCAN: different shapes, skipped
+- PCA + KMeans vs Random Projection + KMeans: 0.012935
+- PCA + KMeans vs DBSCAN: different shapes, skipped
+- Random Projection + KMeans vs DBSCAN: different shapes, skipped
+
+Interpretation:
+If transition matrices remain structurally similar across multiple partition methods, this supports the hypothesis that the observed transition structure reflects intrinsic geometry rather than a single discretization artifact.
