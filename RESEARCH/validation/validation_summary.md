@@ -20,7 +20,7 @@
 ## Visual Evidence
 
 ![Trajectory Overlay](lorenz/results/trajectory_overlay.png)  
-![Endpoint Distribution](validation/lorenz/results/endpoint_distribution.png)
+![Endpoint Distribution](lorenz/results/endpoint_distribution.png)
 
 ## Interpretation
 
@@ -48,8 +48,8 @@
 
 ## Visual Evidence
 
-![Endpoint Comparison](validation/lorenz/results/noise_endpoint_comparison.png)  
-![Clean vs Noisy Trajectories](validation/lorenz/results/noise_trajectory_comparison.png)
+![Endpoint Comparison](lorenz/results/noise_endpoint_comparison.png)  
+![Clean vs Noisy Trajectories](lorenz/results/noise_trajectory_comparison.png)
 
 ## Interpretation
 
@@ -71,7 +71,7 @@
 
 ## Visual Evidence
 
-![Transition Matrices](validation/lorenz/results/transition_noise_comparison.png)
+![Transition Matrices](lorenz/results/transition_noise_comparison.png)
 
 ## Interpretation
 
@@ -94,7 +94,7 @@
 
 ## Visual Evidence
 
-![Sensitivity Map (Grid)](validation/lorenz/results/transition_sensitivity_map.png)
+![Sensitivity Map (Grid)](lorenz/results/transition_sensitivity_map.png)
 
 ## Interpretation
 
@@ -118,7 +118,7 @@
 
 ## Visual Evidence
 
-![Sensitivity Map (Real Partition)](validation/lorenz/results/transition_sensitivity_real_partition.png)
+![Sensitivity Map (Real Partition)](lorenz/results/transition_sensitivity_real_partition.png)
 
 ## Interpretation
 
