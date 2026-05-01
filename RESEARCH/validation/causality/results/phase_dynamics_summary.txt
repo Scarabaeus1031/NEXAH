@@ -1,0 +1,12 @@
+NEXAH — Phase Dynamics Analysis
+
+IOTA count: 150
+Mean |omega| at IOTA: 10.684587
+Mean |omega| overall: 2.895547
+Mean phase mismatch at IOTA: 2.669765
+Mean phase mismatch overall: 0.893388
+Delta mismatch: 1.776377
+
+Interpretation:
+IOTA events are tested against deviations in phase velocity.
+This checks whether transitions are associated with broken rotational consistency.

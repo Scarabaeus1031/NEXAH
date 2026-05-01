@@ -1,0 +1,8 @@
+NEXAH — Phase-Aligned Control
+
+IOTA count: 1678
+Control strength k: 0.15
+
+Interpretation:
+Control reduces phase mismatch.
+Transitions occur when mismatch exceeds threshold.
