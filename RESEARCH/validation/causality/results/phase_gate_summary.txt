@@ -1,0 +1,9 @@
+NEXAH — Phase Gate Control
+
+IOTA events: 1640
+Threshold: 2.0
+Control strength k: 0.25
+
+Interpretation:
+Control is only active at phase mismatch peaks.
+System is allowed to evolve freely otherwise.
