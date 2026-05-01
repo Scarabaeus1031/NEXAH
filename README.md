@@ -50,7 +50,7 @@ motion within a structured field
 Where:
 
 - stability = alignment with field structure  
-- instability = drift into low-density / conflicting regions  
+- instability = drift into low-density or conflicting regions  
 - transitions = movement across structured regions  
 
 ---
@@ -59,14 +59,18 @@ Where:
 
 📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
 
-The demonstrator provides a **minimal, reproducible implementation** of the core pipeline:
+The demonstrator provides a **minimal, reproducible implementation** of the core pipeline.
+
+👉 **Recommended entry point for understanding NEXAH**
+
+It includes:
 
 - field construction from trajectories  
 - Gate Operator (continuous instability field)  
 - Transition Structure (discrete sheet dynamics)  
 - Navigation Kernel (geometry-aware motion)  
 
-👉 Entry point:  
+👉 Start here:  
 - [`NEXAH_DEMONSTRATOR/README.md`](NEXAH_DEMONSTRATOR/README.md)
 
 👉 Core components:  
@@ -88,7 +92,7 @@ The demonstrator provides a **minimal, reproducible implementation** of the core
 
 ![Structure-Aware Target Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
 
-*Structure-aware fields enable control by aligning with system geometry rather than overriding it.*
+*Control emerges from alignment with system geometry rather than external forcing.*
 
 ---
 
@@ -96,10 +100,10 @@ The demonstrator provides a **minimal, reproducible implementation** of the core
 
 📂 `APPLICATIONS/power_systems/VALIDATION_LAYER/`
 
-Key observations:
+Observed behavior:
 
 - early warning up to **40–50 time units before collapse**  
-- instability emerges as **geometric deviation**  
+- instability appears as **geometric deviation**  
 - transition behavior becomes visible in motion metrics  
 
 ---
