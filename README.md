@@ -44,7 +44,7 @@ state → next state
 NEXAH instead models:
 
 ```text
-motion within a structured field
+**motion within a structured field**
 ```
 
 Where:
@@ -55,11 +55,29 @@ Where:
 
 ---
 
+## 🔬 What is actually implemented
+
+All core concepts described above are **implemented and reproducible**.
+
+The minimal working version is provided in:
+
+📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)
+
+This ensures that:
+
+```text
+• results are code-driven  
+• claims are empirically grounded  
+• the system can be directly inspected and reproduced  
+```
+
+---
+
 ## 🧪 Demonstrator (Reproducible Core)
 
 📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
 
-The demonstrator provides a **minimal, reproducible implementation** of the core pipeline.
+The demonstrator provides a **minimal, reproducible reference implementation** of the core pipeline.
 
 👉 **Recommended entry point for understanding NEXAH**
 
@@ -84,7 +102,7 @@ It includes:
 
 ![Off-Manifold Flow](FRAMEWORK/NEXAH/geometry/visuals/ieee57_v69_off_manifold_flow.png)
 
-*System motion follows a constrained flow field — transitions occur only along admissible paths.*
+*Observed system motion follows a constrained flow field — transitions occur only along admissible paths.*
 
 ---
 
@@ -92,7 +110,7 @@ It includes:
 
 ![Structure-Aware Target Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
 
-*Control emerges from alignment with system geometry rather than external forcing.*
+*Control can be achieved through alignment with system geometry rather than external forcing.*
 
 ---
 
