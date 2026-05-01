@@ -413,6 +413,55 @@ Transitions are not random jumps.
 
 They occur in structured regions of the flow.
 ```
+---
+
+## 🧪 10. Gate-Based Transition Causality
+
+**Script:** `run_gate_transition_causality.py`
+
+## Results
+
+- Mean transition difference: **0.014460**
+
+## Visual Evidence
+
+![Gate Transition Comparison](lorenz/results/gate_transition_comparison.png)
+![Transition Difference Map](lorenz/results/gate_transition_difference.png)
+![Gate Region](lorenz/results/gate_region.png)
+
+## Interpretation
+
+- Targeted intervention in transition regions produces **measurable changes** in transition structure  
+- Changes are:
+  - localized  
+  - structured  
+  - non-random  
+
+- Global attractor structure remains intact  
+
+---
+
+## Key Observation
+
+```text
+Transition structure can be actively modified
+through local intervention in state space.
+```
+
+---
+
+## Implication
+
+- Transition dynamics are not only descriptive  
+- They are **causally controllable**  
+- System behavior can be influenced without altering system equations  
+
+---
+
+## Conclusion
+
+- NEXAH does not only detect structure  
+- It enables **intervention on structure**
 
 ---
 
