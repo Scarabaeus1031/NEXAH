@@ -44,7 +44,7 @@ state → next state
 NEXAH instead models:
 
 ```text
-**motion within a structured field**
+motion within a structured field
 ```
 
 Where:
@@ -55,31 +55,11 @@ Where:
 
 ---
 
-## 🔬 What is actually implemented
-
-All core concepts described above are **implemented and reproducible**.
-
-The minimal working version is provided in:
-
-📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)
-
-This ensures that:
-
-```text
-• results are code-driven  
-• claims are empirically grounded  
-• the system can be directly inspected and reproduced  
-```
-
----
-
 ## 🧪 Demonstrator (Reproducible Core)
 
 📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
 
-The demonstrator provides a **minimal, reproducible reference implementation** of the core pipeline.
-
-👉 **Recommended entry point for understanding NEXAH**
+The demonstrator provides a **minimal, reproducible implementation** of the core pipeline and serves as the recommended entry point.
 
 It includes:
 
@@ -102,7 +82,7 @@ It includes:
 
 ![Off-Manifold Flow](FRAMEWORK/NEXAH/geometry/visuals/ieee57_v69_off_manifold_flow.png)
 
-*Observed system motion follows a constrained flow field — transitions occur only along admissible paths.*
+*System motion follows a constrained flow field — transitions occur only along admissible paths.*
 
 ---
 
@@ -110,7 +90,7 @@ It includes:
 
 ![Structure-Aware Target Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
 
-*Control can be achieved through alignment with system geometry rather than external forcing.*
+*Control emerges from alignment with system geometry rather than external forcing.*
 
 ---
 
@@ -170,8 +150,8 @@ Interpretation:
 
 - field → defines motion  
 - geometry → defines constraints  
-- graph → defines transitions  
-- control → shapes trajectories within structure  
+- graph → encodes transition structure  
+- control → shapes trajectories within these constraints  
 
 ---
 
@@ -181,7 +161,7 @@ Interpretation:
 ✔ stability as spatial structure  
 ✔ transition detection (gates, basins)  
 ✔ probabilistic transition modeling  
-✔ trajectory simulation within field  
+✔ trajectory simulation within learned fields  
 
 ---
 
@@ -225,8 +205,9 @@ python run_nexah_demo.py
 ## ⚡ Core Insight
 
 ```text
-Stability is not a value.
-It is a region in a structured field.
+Stability is not a scalar value.
+
+It is a region within a structured field.
 ```
 
 ---
@@ -234,7 +215,7 @@ It is a region in a structured field.
 ## 🧭 Final Statement
 
 ```text
-A system does not randomly fail.
+A system does not fail randomly.
 
 It moves through structured transition regions
 that constrain what outcomes are possible.
