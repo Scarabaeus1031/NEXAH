@@ -7,7 +7,7 @@
 # dynamics → projection → density → gates → structure comparison
 #
 # Output:
-# RESEARCH/visuals/nexah_cross_system_structure_v23.png
+# NEXAH_DEMONSTRATOR/visuals/nexah_cross_system_structure_v23.png
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -185,7 +185,7 @@ fig.suptitle(
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_cross_system_structure_v23.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_cross_system_structure_v23.png",
     dpi=300,
     bbox_inches="tight"
 )

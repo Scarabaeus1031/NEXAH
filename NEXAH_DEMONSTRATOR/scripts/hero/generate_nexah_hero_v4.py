@@ -4,7 +4,7 @@
 # Lorenz + Halvorsen → Basins → Transition Field → Gates
 #
 # Output:
-# RESEARCH/visuals/nexah_hero_cross_system_structure_v4.png
+# NEXAH_DEMONSTRATOR/visuals/nexah_hero_cross_system_structure_v4.png
 # ============================================================
 
 import numpy as np
@@ -296,7 +296,7 @@ plt.tight_layout(rect=[0, 0, 1, 0.93])
 # 6. SAVE
 # ============================================================
 
-out = "RESEARCH/visuals/nexah_hero_cross_system_structure_v4.png"
+out = "NEXAH_DEMONSTRATOR/visuals/nexah_hero_cross_system_structure_v4.png"
 
 plt.savefig(
     out,

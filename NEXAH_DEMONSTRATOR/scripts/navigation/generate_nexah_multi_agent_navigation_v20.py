@@ -178,7 +178,7 @@ fig.suptitle(
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_multi_agent_navigation_v20.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_multi_agent_navigation_v20.png",
     dpi=300,
     bbox_inches='tight'
 )

@@ -162,7 +162,7 @@ fig.suptitle("NEXAH v19 — Policy-Guided Navigation", fontsize=14)
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_policy_navigation_v19.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_policy_navigation_v19.png",
     dpi=300,
     bbox_inches='tight'
 )

@@ -134,7 +134,7 @@ ax.legend()
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_goal_navigation_v13.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_goal_navigation_v13.png",
     dpi=300,
     bbox_inches='tight'
 )

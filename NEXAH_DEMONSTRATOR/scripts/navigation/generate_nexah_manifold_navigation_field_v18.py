@@ -10,7 +10,7 @@
 # - Kuramoto
 #
 # Output:
-# RESEARCH/visuals/nexah_manifold_navigation_field_v18.png
+# NEXAH_DEMONSTRATOR/visuals/nexah_manifold_navigation_field_v18.png
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -241,7 +241,7 @@ fig.suptitle(
 
 plt.tight_layout(rect=[0, 0, 1, 0.94])
 
-out = "RESEARCH/visuals/nexah_manifold_navigation_field_v18.png"
+out = "NEXAH_DEMONSTRATOR/visuals/nexah_manifold_navigation_field_v18.png"
 
 plt.savefig(out, dpi=300, bbox_inches="tight")
 

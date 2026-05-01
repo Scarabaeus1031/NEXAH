@@ -4,7 +4,7 @@
 # Kuramoto → NEXAH Field → Basins → Gates → Regime Transition Graph
 #
 # Output:
-# RESEARCH/visuals/nexah_kuramoto_regime_graph_v22.png
+# NEXAH_DEMONSTRATOR/visuals/nexah_kuramoto_regime_graph_v22.png
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -319,7 +319,7 @@ fig.suptitle(
 
 plt.tight_layout(rect=[0, 0, 1, 0.88])
 
-out = "RESEARCH/visuals/nexah_kuramoto_regime_graph_v22.png"
+out = "NEXAH_DEMONSTRATOR/visuals/nexah_kuramoto_regime_graph_v22.png"
 
 plt.savefig(out, dpi=300, bbox_inches="tight")
 

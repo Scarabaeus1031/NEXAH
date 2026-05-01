@@ -8,7 +8,7 @@
 # dynamics → density → flow → rotation (curl) → gates
 #
 # Output:
-# RESEARCH/visuals/nexah_rotation_field_v24.png
+# NEXAH_DEMONSTRATOR/visuals/nexah_rotation_field_v24.png
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -178,7 +178,7 @@ fig.suptitle(
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_rotation_field_v24.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_rotation_field_v24.png",
     dpi=300,
     bbox_inches="tight"
 )

@@ -7,7 +7,7 @@ from scipy.stats import gaussian_kde
 # Systems: Lorenz · Halvorsen · Rössler
 #
 # Output:
-# RESEARCH/visuals/nexah_structure_cross_system_v6.png
+# NEXAH_DEMONSTRATOR/visuals/nexah_structure_cross_system_v6.png
 # ============================================================
 
 # ============================================================
@@ -270,7 +270,7 @@ fig.suptitle(
 
 plt.tight_layout(rect=[0, 0, 1, 0.93])
 
-out = "RESEARCH/visuals/nexah_structure_cross_system_v6.png"
+out = "NEXAH_DEMONSTRATOR/visuals/nexah_structure_cross_system_v6.png"
 
 plt.savefig(
     out,

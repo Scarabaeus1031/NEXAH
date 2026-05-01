@@ -121,7 +121,7 @@ fig.suptitle(
 plt.tight_layout()
 
 # Save
-output_path = "RESEARCH/visuals/nexah_slice_manifold_v17.png"
+output_path = "NEXAH_DEMONSTRATOR/visuals/nexah_slice_manifold_v17.png"
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 
 print(f"Saved visual to: {output_path}")

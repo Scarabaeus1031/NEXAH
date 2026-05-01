@@ -162,7 +162,7 @@ plt.suptitle(
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_transition_geometry_kernel_mask_v10.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_transition_geometry_kernel_mask_v10.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -173,7 +173,7 @@ plt.show()
 # SAVE JSON
 # ============================================================
 
-with open("RESEARCH/visuals/nexah_transition_geometry_kernel_mask_v10.json", "w") as f:
+with open("NEXAH_DEMONSTRATOR/visuals/nexah_transition_geometry_kernel_mask_v10.json", "w") as f:
     json.dump(results, f, indent=2)
 
 print("Saved:")

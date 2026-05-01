@@ -201,7 +201,7 @@ plt.tight_layout()
 # SAVE
 # -----------------------------
 plt.savefig(
-    "RESEARCH/visuals/nexah_structure_cross_system_v7.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_structure_cross_system_v7.png",
     dpi=300,
     bbox_inches="tight"
 )

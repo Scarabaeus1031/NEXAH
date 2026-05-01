@@ -189,7 +189,7 @@ fig.suptitle(
 plt.tight_layout(rect=[0, 0, 1, 0.93])
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_kuramoto_slice_structure_v15.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_kuramoto_slice_structure_v15.png",
     dpi=300,
     bbox_inches="tight",
 )

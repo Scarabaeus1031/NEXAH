@@ -3,7 +3,7 @@
 # Gate = low density + low coherence + low rotation
 #
 # Output:
-# RESEARCH/visuals/nexah_unified_gate_operator_v25.png
+# NEXAH_DEMONSTRATOR/visuals/nexah_unified_gate_operator_v25.png
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -161,7 +161,7 @@ fig.suptitle(
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_unified_gate_operator_v25.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_unified_gate_operator_v25.png",
     dpi=300,
     bbox_inches="tight"
 )

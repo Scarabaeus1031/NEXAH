@@ -183,7 +183,7 @@ fig.suptitle(
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_kuramoto_field_v21.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_kuramoto_field_v21.png",
     dpi=300,
     bbox_inches='tight'
 )

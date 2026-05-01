@@ -1,4 +1,4 @@
-# RESEARCH/visuals/nexah_slice_operator_v16.py
+# NEXAH_DEMONSTRATOR/visuals/nexah_slice_operator_v16.py
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -178,7 +178,7 @@ plt.tight_layout()
 # SAVE
 # -----------------------------
 
-output_path = "RESEARCH/visuals/nexah_slice_operator_v16.png"
+output_path = "NEXAH_DEMONSTRATOR/visuals/nexah_slice_operator_v16.png"
 plt.savefig(output_path, dpi=300, bbox_inches='tight')
 print(f"Saved visual to: {output_path}")
 

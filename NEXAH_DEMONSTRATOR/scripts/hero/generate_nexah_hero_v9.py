@@ -185,7 +185,7 @@ fig.suptitle(
 plt.tight_layout()
 
 plt.savefig(
-    "RESEARCH/visuals/nexah_structure_v9.png",
+    "NEXAH_DEMONSTRATOR/visuals/nexah_structure_v9.png",
     dpi=300,
     bbox_inches='tight'
 )
@@ -201,5 +201,5 @@ kuramoto_data = kuramoto()
 plt.figure(figsize=(6,4))
 plt.plot(np.sin(kuramoto_data))
 plt.title("Kuramoto Synchronization")
-plt.savefig("RESEARCH/visuals/kuramoto_sync.png", dpi=300)
+plt.savefig("NEXAH_DEMONSTRATOR/visuals/kuramoto_sync.png", dpi=300)
 plt.close()
