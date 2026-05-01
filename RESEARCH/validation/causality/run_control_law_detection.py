@@ -98,8 +98,8 @@ plt.savefig("RESEARCH/validation/causality/results/control_law_detection.png", d
 plt.close()
 np.savez(
     "RESEARCH/validation/causality/control_law_data.npz",
-    phi=phi_grid,
-    s_star=s_star
+    phi=phase_values,
+    s_star=s_star_smooth
 )
 
 print("✅ Saved: control_law_data.npz")
