@@ -415,7 +415,7 @@ They occur in structured regions of the flow.
 ```
 ---
 
-## 🧪 10. Gate-Based Transition Causality
+## 🧪 11. Gate-Based Transition Causality
 
 **Script:** `run_gate_transition_causality.py`
 
@@ -439,6 +439,132 @@ They occur in structured regions of the flow.
 
 - Global attractor structure remains intact  
 
+---
+
+# 🧭 12. Gate-Based Control & Resonance Structure
+
+**Scripts:**
+- `run_gate_path_control.py`
+- `run_gate_target_reach.py`
+- `run_gate_time_to_target.py`
+- `run_gate_resonance_scan.py`
+- `run_gate_resonance_scan_multirun.py`
+
+---
+
+## 📊 Results
+
+### Path Deviation under Control
+
+- Mean transition difference: **0.019595**
+
+---
+
+### Target Reach
+
+- Baseline hits: **51 (0.0102)**  
+- Controlled hits: **79 (0.0158)**  
+- Improvement: **+0.0056 (~+55%)**
+
+---
+
+### Time-to-Target
+
+- Baseline mean: **1118 steps**  
+- Controlled mean: **199 steps**  
+- Speed-up: **~5.6× faster**
+
+---
+
+### Resonance Scan (Multi-Run)
+
+- Peak region:
+```text
+strength ≈ 0.3 – 0.4
+```
+- Maximum hit rate: **~0.04+**
+
+---
+
+## 🧠 Visual Evidence
+
+![Path Control](validation/causality/results/path_control.png)  
+![Target Reach](validation/causality/results/target_reach.png)  
+![Time to Target](validation/causality/results/time_to_target.png)  
+
+![Gate Minimal Intervention](validation/causality/gate_minimal_intervention.png)  
+![Gate Resonance Scan](validation/causality/gate_resonance_scan_multirun.png)
+
+---
+
+## 🔍 Interpretation
+
+### 1. Control is Effective
+
+- System can be steered toward target regions  
+- Without modifying system equations  
+- Global attractor structure remains intact  
+
+---
+
+### 2. Control is NOT linear
+```text
+More control ≠ better performance
+```
+
+- Weak → no effect  
+- Medium → optimal  
+- Strong → degradation  
+
+---
+
+### 3. Resonance Structure
+
+- Horizontal bands → strength regimes  
+- Vertical modulation → phase sensitivity  
+- Interference patterns → flow–control coupling  
+
+---
+
+### 4. Optimal Control Region
+
+```text
+s* ≈ 0.3 – 0.4
+```
+
+- stable across runs  
+- robust to noise  
+
+---
+
+### 5. Time Acceleration
+
+```text
+~5.6× faster convergence
+```
+
+---
+
+## 🔑 Key Observation
+
+```text
+Control effectiveness is localized
+in resonance regions of parameter space
+```
+
+---
+
+## 🔥 Core Insight
+
+```text
+Chaotic systems are not directly controllable
+
+BUT
+
+they are controllable along resonance-aligned pathways
+```
+
+---
 ---
 
 ## Key Observation
@@ -515,11 +641,25 @@ Structure exists in continuous state space
 
 ---
 
+## LEVEL 6 — Control & Causality ⚡
+
+- Gate intervention ✔  
+- Target reach ✔  
+- Time-to-target ✔  
+- Resonance mapping ✔  
+
+👉 Result:
+```text
+System dynamics are not only observable,
+but controllable within structured parameter regions
+```
+---
+
 ## CURRENT STATE
 
-```text
-Empirical structural validation is STRONG.
-Causal validation is NOT yet completed.
+```diff
+- Causal validation is NOT yet completed.
++ Causal validation is PARTIALLY validated (control layer confirmed).
 ```
 
 ---
@@ -535,7 +675,9 @@ Across all tests:
   - noise-robust  
   - partition-invariant  
   - geometrically constrained  
-
+  - Control effectiveness is phase–strength dependent  
+  - System response exhibits resonance structure in parameter space
+  
 ---
 
 # 🔑 CORE INSIGHT
