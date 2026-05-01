@@ -2,7 +2,8 @@
 
 This document provides a **practical orientation** for navigating the NEXAH repository.
 
-It reflects the **actual structure**, not the idealized one.
+It reflects the **actual structure and current development state**,  
+not an idealized or fully validated system.
 
 ---
 
@@ -10,17 +11,37 @@ It reflects the **actual structure**, not the idealized one.
 
 NEXAH is a framework for:
 
-> **reconstructing, controlling, and navigating dynamical systems as structured fields**
+> **extracting and analyzing structure in dynamical systems**
 
 Core transformation:
 
 ```text
-Dynamics → Structure → Field → Geometry → Stability → Transition → Control → Navigation
+dynamics → structure → field → geometry → transition structure → navigation behavior
 ```
 
 ---
 
-# 📦 Repository Structure (Real)
+# ⚠️ CURRENT STATUS
+
+NEXAH is:
+
+```text
+✔ a working structural system (demonstrator level)
+✔ capable of extracting transition structure
+✔ capable of producing consistent geometric patterns
+```
+
+But:
+
+```text
+❗ not yet fully validated
+❗ not yet unified into a kernel
+❗ not yet a production system
+```
+
+---
+
+# 📦 Repository Structure (Actual)
 
 ---
 
@@ -32,16 +53,33 @@ ARCHITECTURE/
 
 Defines:
 
-- system design  
-- layer structure  
+- system structure  
+- layer organization  
 - integration logic  
 - current system state  
 
-👉 **Single source of truth for architecture**
+👉 **Primary reference for system understanding**
 
 ---
 
-## 🔶 2. NEXAH_CORE (Transition + Control Theory Layer)
+## 🧪 2. NEXAH_DEMONSTRATOR (Entry Point)
+
+```text
+NEXAH_DEMONSTRATOR/
+```
+
+Contains:
+
+- minimal working pipeline  
+- reproducible experiments  
+- transition structure extraction  
+- navigation demonstrations  
+
+👉 **Recommended starting point**
+
+---
+
+## 🔶 3. NEXAH_CORE (Transition + Control Logic)
 
 ```text
 NEXAH_CORE/
@@ -49,16 +87,16 @@ NEXAH_CORE/
 
 Contains:
 
-- full transition system (v1–v80)  
-- basin / gate model  
-- control evolution  
-- phase-aware navigation  
+- transition structure models  
+- basin / gate representations  
+- control experiments  
+- navigation logic  
 
-👉 **Deep system logic (experimental + validated)**
+👉 **Core system logic (partly experimental)**
 
 ---
 
-## 🌊 3. FIELD_LAYER (Geometry + Stability Layer)
+## 🌊 4. FIELD_LAYER (Geometry + Stability)
 
 ```text
 FIELD_LAYER/
@@ -66,22 +104,20 @@ FIELD_LAYER/
 
 Includes:
 
-- FIELD_DECOMPOSITION  
-- NAVIGATION_ENGINE  
-- stability + geometry extraction  
-
-Defines:
-
-- basins  
-- separatrix  
-- flow geometry  
+- field reconstruction outputs  
 - stability structure  
+- flow geometry  
+- separatrix / basin structure  
 
-👉 transforms field → geometry + stability
+👉 transforms:
+
+```text
+field → geometry → stability interpretation
+```
 
 ---
 
-## 🔧 4. ARCHITECTURE/CORE (Executable Core Components)
+## 🔧 5. ARCHITECTURE/CORE (Executable Components)
 
 ```text
 ARCHITECTURE/CORE/
@@ -97,8 +133,6 @@ field_reconstruction/
 - flow fields  
 - boundary detection  
 
-→ data → field  
-
 ---
 
 ### Control Layer
@@ -109,13 +143,15 @@ control_layer/
 
 - basin detection  
 - gate extraction  
-- trajectory control  
-
-→ operates on transition geometry  
+- trajectory shaping  
 
 ---
 
-## 📦 5. nexah/ (Runtime Package)
+👉 connects structure → execution
+
+---
+
+## 📦 6. nexah/ (Kernel — in progress)
 
 ```text
 nexah/
@@ -123,15 +159,14 @@ nexah/
 
 Contains:
 
-- core logic (in progress)  
-- navigation modules  
-- system abstraction  
+- early runtime logic  
+- navigation abstractions  
 
-👉 **future unified kernel / API**
+👉 **future unified system kernel**
 
 ---
 
-## 🧪 6. BUILDER_LAB (Exploration + Integration)
+## 🧪 7. BUILDER_LAB (Exploration Layer)
 
 ```text
 BUILDER_LAB/
@@ -139,104 +174,55 @@ BUILDER_LAB/
 
 Contains:
 
-- demos  
 - experimental systems  
 - discovery experiments  
-- proto models  
-- dashboards  
-
-Also includes:
-
-- DISCOVERY_ENGINE (early research)  
-- ENGINE (legacy computation)  
-- EXPLORATION (concept systems)  
+- early prototypes  
+- dashboards and tools  
 
 ---
 
-### 🔬 Experimental Mechanism Lab (NEW CORE SUBMODULE)
+### 🔬 Experimental Mechanism Layer
 
 ```text
 BUILDER_LAB/EXPLORATION/experimental/
 ```
 
-This module represents the **mechanism discovery layer** of NEXAH.
+Purpose:
 
-It operates between:
+- test structural hypotheses  
+- analyze system behavior under perturbation  
+- explore control interaction  
+
+---
+
+### Observations (Current)
 
 ```text
-FIELD_LAYER → (structure)
-NEXAH_CORE → (transition + control)
+• structure appears consistent across runs
+• control affects local behavior
+• global transitions are hard to enforce
 ```
 
 ---
 
-## 🧠 Role
-
-- reconstruct system behavior beyond signal level  
-- analyze flow, events, and transition structure  
-- test control behavior under perturbation  
-- detect structural constraints of motion  
-
----
-
-## 🔥 Key Findings
-
-- control attempts are largely absorbed  
-- system preserves its manifold  
-- transitions cannot be forced internally  
-- motion follows constrained flow geometry  
-
----
-
-## 🔒 Key Insight
+### Interpretation
 
 ```text
-The system is navigable,
-but not freely controllable from within.
+🟡 system appears constrained by its geometry
+🔴 not yet validated
 ```
 
 ---
 
-## 🧩 Internal Structure
+👉 used for:
 
 ```text
-00_overview → mechanism + regime models
-01_control  → control behavior + limits
-02_models   → formal abstractions
-03_mapping  → real-world mapping (IEEE etc.)
+hypothesis generation, not validation
 ```
 
 ---
 
-## 🔗 System Position
-
-```text
-FIELD_LAYER → provides geometry + stability
-EXPERIMENTAL → reveals mechanism + constraints
-NEXAH_CORE  → builds transition + control logic
-```
-
----
-
-## ⚠️ Status
-
-```text
-Experimental — not validated
-```
-
-Used for:
-
-- hypothesis generation  
-- mechanism discovery  
-- pre-kernel development  
-
----
-
-👉 **active development + experimental workspace**
-
----
-
-## 🌍 7. APPLICATIONS (Use Cases)
+## 🌍 8. APPLICATIONS (Test Systems)
 
 ```text
 APPLICATIONS/
@@ -246,14 +232,13 @@ Includes:
 
 - Lorenz system  
 - IEEE power systems  
-- datasets  
-- demos  
+- experimental demos  
 
-👉 **real-world and test systems**
+👉 **testbed for structure extraction**
 
 ---
 
-## 🧠 8. FRAMEWORK (Conceptual Layer)
+## 🧠 9. FRAMEWORK (Conceptual Layer)
 
 ```text
 FRAMEWORK/
@@ -261,15 +246,15 @@ FRAMEWORK/
 
 Contains:
 
-- ARCHY  
-- system abstractions  
-- conceptual system layers  
+- ARCHY (simulation layer)  
+- conceptual system abstractions  
+- experimental modeling ideas  
 
-👉 **higher-level system modeling layer**
+👉 **high-level modeling layer (not validated)**
 
 ---
 
-## 🔬 9. RESEARCH (Theory + Documentation)
+## 🔬 10. RESEARCH (Theory + Validation Layer)
 
 ```text
 RESEARCH/
@@ -277,65 +262,77 @@ RESEARCH/
 
 Contains:
 
-- theory documents  
-- experiments  
-- notes  
-- visual galleries  
+- conceptual models  
+- structural claims  
+- validation plans  
+- notes and documentation  
 
-👉 **long-form thinking + documentation**
+👉 **bridge between experiments and core system**
 
 ---
 
 # 🔥 System Flow (Actual)
 
 ```text
-ARCHY (simulation)
-→ BUILDER_LAB / DISCOVERY_ENGINE
-→ CORE/field_reconstruction
-→ FIELD_LAYER
-→ Transition Geometry (NEXAH_CORE)
-→ CORE/control_layer
-→ nexah/ (kernel in progress)
-→ Navigation / Execution
+ARCHY (simulation / systems)
+→ BUILDER_LAB (exploration)
+→ field_reconstruction (data → field)
+→ FIELD_LAYER (geometry)
+→ NEXAH_CORE (transition structure)
+→ control_layer (trajectory shaping)
+→ nexah/ (kernel — in progress)
+→ navigation behavior
 ```
 
 ---
 
-# 🔹 Transition Geometry (Core Concept)
+# 🔹 Core Structural Concept
 
-The system operates on:
+The system is interpreted in terms of:
 
-- Basins → stable regions  
-- Separatrix → boundaries  
-- Gates → transition corridors  
+```text
+basins → stable regions
+boundaries → transition zones
+gates → structured transition regions
+```
 
-👉 transitions are structured, not random  
+---
+
+## Key Observation
+
+```text
+Transitions are not random —
+they appear constrained by system geometry.
+```
+
+---
+
+## Status
+
+```text
+🟡 plausible
+❗ requires validation
+```
 
 ---
 
 # 🧭 Where to Start
 
-## ⚡ Run something
+## ⚡ Run a minimal system
 
 ```bash
-python run_nexah_demo.py
-```
-
-or
-
-```bash
-python APPLICATIONS/core_demos/...
+python NEXAH_DEMONSTRATOR/scripts/run_demo.py
 ```
 
 ---
 
-## 🧠 Understand system
+## 🧠 Understand system structure
 
 → `ARCHITECTURE/README.md`
 
 ---
 
-## 🔬 Deep logic
+## 🔬 Explore core logic
 
 → `NEXAH_CORE/`
 
@@ -347,13 +344,13 @@ python APPLICATIONS/core_demos/...
 
 ---
 
-## 🎮 Control
+## 🎮 Control experiments
 
 → `ARCHITECTURE/CORE/control_layer/`
 
 ---
 
-## 🧪 Explore
+## 🧪 Exploration layer
 
 → `BUILDER_LAB/`
 
@@ -363,27 +360,31 @@ python APPLICATIONS/core_demos/...
 
 - structure extraction from dynamics  
 - field reconstruction  
-- geometry + stability analysis  
+- geometric interpretation of behavior  
 - transition modeling  
-- gate-based control  
-- navigation through system structure  
+- exploratory control interaction  
+- trajectory analysis within structured fields  
 
 ---
 
 # 🧠 Key Insight
 
-> Systems evolve within structured fields  
-> that constrain motion, transitions, and outcomes.
+```text
+Systems do not evolve randomly.
+
+They appear to move within structured fields
+that constrain motion and transitions.
+```
 
 ---
 
 # 🔥 Final Orientation
 
-NEXAH is not a collection of scripts.
+NEXAH is not yet a finalized framework.
 
 It is:
 
-> a layered system for **understanding and controlling structured dynamical fields**
+> a **structured system for discovering and validating geometry in dynamical behavior**
 
 ---
 
