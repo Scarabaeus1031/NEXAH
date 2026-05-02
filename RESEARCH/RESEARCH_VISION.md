@@ -46,6 +46,10 @@ Observed structure:
 - transitions occur through **gates (intersections)**  
 - phase dynamics determine **when transitions activate**
 
+This empirical structure corresponds to the extracted sheet, gate and transition layers shown in:
+
+![Extraction](./FIGURES/main/Fig_02.png)
+
 ---
 
 ### 🔑 Key Insight
