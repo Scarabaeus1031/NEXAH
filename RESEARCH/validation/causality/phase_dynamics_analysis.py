@@ -236,37 +236,71 @@ print("✅ Saved: phase_dynamics_summary.txt")
 # IOTA ANGULAR SYMMETRY TEST
 # ================================
 
-print("\n🔬 Running angular symmetry test...")
+print("\n🔬 Running IOTA angular symmetry test...")
 
-theta_iota = theta[iota_indices]  # oder iota_mask
+# IOTA angles
+theta_iota = theta[iota_mask]
 
-# normalize
+# normalize to [0, 2π]
 theta_iota = (theta_iota + 2*np.pi) % (2*np.pi)
 
-# histogram
+# =========================
+# HISTOGRAM
+# =========================
+
 bins = 36
 hist, edges = np.histogram(theta_iota, bins=bins, density=True)
 centers = (edges[:-1] + edges[1:]) / 2
 
-plt.figure(figsize=(8,4))
-plt.plot(centers, hist)
+plt.figure(figsize=(8, 4))
+plt.plot(centers, hist, linewidth=2)
 plt.title("IOTA Angular Distribution")
 plt.xlabel("theta")
 plt.ylabel("density")
-plt.grid()
-plt.show()
+plt.grid(True)
+plt.tight_layout()
 
-# Fourier
+plt.savefig(
+    "RESEARCH/validation/causality/results/iota_angular_distribution.png",
+    dpi=200
+)
+plt.close()
+
+# =========================
+# FOURIER ANALYSIS
+# =========================
+
 fft_vals = np.abs(np.fft.fft(hist))
 
-plt.figure(figsize=(8,4))
-plt.plot(fft_vals[:len(fft_vals)//2])
+plt.figure(figsize=(8, 4))
+plt.plot(fft_vals[:len(fft_vals)//2], linewidth=2)
 plt.title("Angular Frequency Spectrum")
 plt.xlabel("mode k")
 plt.ylabel("amplitude")
-plt.grid()
-plt.show()
+plt.grid(True)
+plt.tight_layout()
 
-# dominant modes
-dominant = np.argsort(fft_vals)[-5:]
-print("Top angular modes:", dominant)
+plt.savefig(
+    "RESEARCH/validation/causality/results/iota_angular_spectrum.png",
+    dpi=200
+)
+plt.close()
+
+# =========================
+# DOMINANT MODES
+# =========================
+
+dominant_modes = np.argsort(fft_vals)[-5:]
+
+print("Top angular modes:", dominant_modes)
+
+# =========================
+# SAVE SUMMARY EXTENSION
+# =========================
+
+with open(summary_path, "a") as f:
+    f.write("\nAngular Symmetry Test:\n")
+    f.write(f"Top angular modes: {dominant_modes.tolist()}\n")
+
+print("✅ Saved: iota_angular_distribution.png")
+print("✅ Saved: iota_angular_spectrum.png")
