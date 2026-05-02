@@ -35,7 +35,7 @@ Each step reveals one layer of the same underlying system.
 
 # 🧩 1. Trajectory vs Density — Emergence of Structure
 
-![Trajectory Overlay](../../VALIDATION/lorenz/results/trajectory_overlay.png)
+![Trajectory Overlay](../VALIDATION/lorenz/results/trajectory_overlay.png)
 
 ### Idea
 
