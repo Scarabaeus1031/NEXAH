@@ -31,7 +31,7 @@ Dynamics → Density → Structure → Sheets → Regimes → Gates → Transiti
 
 # 🔬 1. Raw Dynamics
 
-![Cross-System Dynamics](../../FIGURES/fig_01_field_structure.png)
+![Field Structure](../../FIGURES/fig_01_field_structure.png)
 
 ---
 
@@ -100,6 +100,18 @@ Dynamics → Density → Structure → Sheets → Regimes → Gates → Transiti
 ```text
 Structure persists across systems.
 Only its expression changes.
+```
+
+---
+
+# 🧠 Final Statement
+
+```text
+Dynamics differ.
+
+Structure persists.
+
+Topology emerges from transitions.
 ```
 
 ---
