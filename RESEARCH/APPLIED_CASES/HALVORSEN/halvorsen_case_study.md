@@ -2,27 +2,48 @@
 
 ## 🧭 Purpose
 
-This document presents a full structural and control analysis
+This document presents a full structural and control analysis  
 of the Halvorsen system within the NEXAH framework.
 
-It serves as a complex system validation case, demonstrating that:
+It demonstrates that:
 
-text NEXAH applies beyond classical attractor systems to fragmented, multi-interaction dynamical fields 
+```text
+NEXAH applies beyond classical attractor systems
+to fragmented, multi-interaction dynamical fields
+```
 
 ---
 
 # 🧠 System Overview
 
-Halvorsen system:
+The Halvorsen system is defined by:
 
-text dx/dt = -a x - 4y - 4z - y² dy/dt = -a y - 4z - 4x - z² dz/dt = -a z - 4x - 4y - x² 
+$$
+\begin{aligned}
+\dot{x} &= -a x - 4y - 4z - y^2 \\
+\dot{y} &= -a y - 4z - 4x - z^2 \\
+\dot{z} &= -a z - 4x - 4y - x^2
+\end{aligned}
+$$
 
-Properties:
+---
+
+## Properties
 
 - chaotic dynamics  
 - strong nonlinearity  
 - fragmented attractor structure  
 - multi-directional flow interaction  
+
+---
+
+## Role in NEXAH
+
+```text
+Halvorsen serves as a stress test for structural extraction.
+```
+
+Unlike Lorenz, it lacks simple global symmetry.
 
 ---
 
@@ -33,9 +54,22 @@ Observed:
 - no simple lobe structure (unlike Lorenz)  
 - no simple spiral (unlike Rössler)  
 
-Instead:
+---
 
-text fragmented multi-region attractor 
+## 🖼️ Figure A — Field Structure (Generalized)
+
+![Field Structure](../../FIGURES/fig_01_field_structure.png)
+
+---
+
+## Interpretation
+
+```text
+Structure exists, but it is fragmented and distributed.
+```
+
+The system decomposes into multiple locally coherent regions  
+instead of a global attractor geometry.
 
 ---
 
@@ -43,7 +77,9 @@ text fragmented multi-region attractor
 
 From trajectory and density:
 
-text trajectory → density → flow → structure 
+```text
+trajectory → density → flow → structure
+```
 
 Observed:
 
@@ -55,15 +91,20 @@ Observed:
 
 ## Interpretation
 
-text Structure emerges locally, not globally 
+```text
+Structure emerges locally, not globally
+```
 
 ---
 
 # 🧩 3. Gate Structure (Critical)
 
-From scripts:
+From:
 
-text detect_gates_halvorsen.py build_gate_graph_halvorsen.py 
+```text
+detect_gates_halvorsen.py
+build_gate_graph_halvorsen.py
+```
 
 Observed:
 
@@ -75,7 +116,9 @@ Observed:
 
 ## Key Insight
 
-text Gates exist even in fragmented systems 
+```text
+Gates exist even in fragmented systems
+```
 
 ---
 
@@ -83,7 +126,10 @@ text Gates exist even in fragmented systems
 
 From:
 
-text extract_transitions_halvorsen.py reachability_halvorsen.py 
+```text
+extract_transitions_halvorsen.py
+reachability_halvorsen.py
+```
 
 Observed:
 
@@ -94,13 +140,23 @@ Observed:
 
 NOT:
 
-text random jumps 
+```text
+random jumps
+```
+
+---
+
+## 🖼️ Figure B — Transition Geometry (Generalized)
+
+![Transition Geometry](../../FIGURES/fig_02_transition_geometry.png)
 
 ---
 
 ## Interpretation
 
-text Transitions follow complex connectivity patterns 
+```text
+Transitions follow complex connectivity patterns
+```
 
 ---
 
@@ -108,7 +164,10 @@ text Transitions follow complex connectivity patterns
 
 From:
 
-text build_gate_graph_halvorsen.py connect_components_halvorsen.py 
+```text
+build_gate_graph_halvorsen.py
+connect_components_halvorsen.py
+```
 
 Observed:
 
@@ -119,7 +178,9 @@ Observed:
 
 ## Interpretation
 
-text Continuous system → discrete connectivity structure 
+```text
+Continuous system → discrete connectivity structure
+```
 
 ---
 
@@ -127,7 +188,11 @@ text Continuous system → discrete connectivity structure
 
 From:
 
-text policy_gradient_halvorsen.py gate_aware_policy_halvorsen.py global_policy_halvorsen.py 
+```text
+policy_gradient_halvorsen.py
+gate_aware_policy_halvorsen.py
+global_policy_halvorsen.py
+```
 
 Observed:
 
@@ -140,15 +205,44 @@ Observed:
 
 ## Key Insight
 
-text Control operates on structure, not on state 
+```text
+Control operates on structure, not on state
+```
 
 ---
 
-# 🔁 7. Flow Decomposition
+# 🧠 7. Phase & Mismatch (Generalized)
+
+Even without clear global phase coherence:
+
+- local phase-like dynamics exist  
+- mismatch regions correlate with transitions  
+
+---
+
+## 🖼️ Figure C — Phase Mismatch (Generalized)
+
+![Phase Mismatch](../../FIGURES/fig_03_phase_mismatch.png)
+
+---
+
+## Interpretation
+
+```text
+Phase mismatch remains a transition driver,
+even in irregular systems
+```
+
+---
+
+# 🔁 8. Flow Decomposition
 
 From:
 
-text flow_decomposition_halvorsen.py flow_residue_alignment_halvorsen.py 
+```text
+flow_decomposition_halvorsen.py
+flow_residue_alignment_halvorsen.py
+```
 
 Observed:
 
@@ -159,15 +253,20 @@ Observed:
 
 ## Interpretation
 
-text system dynamics contain hidden structural layers 
+```text
+System dynamics contain hidden structural layers
+```
 
 ---
 
-# 🌉 8. Bridge & Path Planning
+# 🌉 9. Bridge & Path Planning
 
 From:
 
-text adaptive_bridge_halvorsen.py plan_path_halvorsen.py 
+```text
+adaptive_bridge_halvorsen.py
+plan_path_halvorsen.py
+```
 
 Observed:
 
@@ -178,60 +277,88 @@ Observed:
 
 ## Insight
 
-text Navigation is possible even in fragmented systems 
+```text
+Navigation is possible even in fragmented systems
+```
 
 ---
 
-# 🧠 9. Comparison to Other Systems
+# 🧠 10. Comparison to Other Systems
 
 | Property | Lorenz | Rössler | Halvorsen |
-|--------|--------|--------|----------|
+|----------|--------|--------|----------|
 | Structure | dual-lobe | spiral | fragmented |
 | Transitions | discrete | smooth | multi-path |
 | Control | phase-aligned | smooth | graph-based |
 
 ---
 
-# 🔷 10. Topology
+# 🔷 11. Topology
 
 Observed:
 
 - no simple topology (Möbius / torus)  
-- instead:
 
-text irregular connectivity topology 
+Instead:
+
+```text
+irregular connectivity topology
+```
 
 ---
 
 ## Interpretation
 
-text Topology emerges from connectivity, not symmetry 
+```text
+Topology emerges from connectivity, not symmetry
+```
 
 ---
 
-# 🔥 11. Core Result
+# 🔥 12. Core Results
 
-text Even highly irregular dynamical systems exhibit structured transitions, gates, and navigable pathways 
+```text
+1. Structure exists without global symmetry
+2. Gates persist in fragmented systems
+3. Transitions are structured and constrained
+4. Connectivity defines system organization
+5. Control operates via structural pathways
+6. Navigation is possible in irregular dynamics
+```
 
 ---
 
-# 🧠 12. Unified Interpretation
+# 🧠 Unified Interpretation
 
-text The Halvorsen system is not chaotic noise.  It is a structured, navigable field with complex connectivity. 
+```text
+The Halvorsen system is not chaotic noise.
+
+It is a structured, navigable field
+with complex connectivity.
+```
 
 ---
 
-# 🚀 Status
+# 🚀 Role in NEXAH
 
-diff + full structural analysis + gate detection implemented + graph structure extracted + control layer implemented + navigation demonstrated 
+The Halvorsen system provides:
+
+- validation beyond symmetric systems  
+- demonstration of robustness  
+- extension to irregular dynamics  
 
 ---
 
 # 🔥 Final Insight
 
-text NEXAH does not depend on system simplicity.  It reveals structure even in highly irregular, fragmented dynamical systems. 
+```text
+NEXAH does not depend on system simplicity.
+
+It reveals structure even in highly irregular,
+fragmented dynamical systems.
+```
 
 ---
 
-NEXAH Case Study — Halvorsen System  
+**NEXAH Case Study — Halvorsen System**  
 Thomas K. R. Hofmann · 2026
