@@ -72,7 +72,7 @@ Observed:
 
 ## 🖼️ Structural Field View
 
-![Lorenz Field Structure](../../APPLICATIONS/core_demos/lorenz/outputs/lorenz_field/lorenz_density_vs_field.png)
+![Lorenz Field Structure](../APPLICATIONS/core_demos/lorenz/outputs/lorenz_field/lorenz_density_vs_field.png)
 
 ---
 
