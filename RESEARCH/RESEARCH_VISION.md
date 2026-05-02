@@ -1,38 +1,36 @@
-# NEXAH Research Vision (v4 — Field, Coherence & Navigation)
+# NEXAH Research Vision (v5 — Field, Phase & Causal Structure)
 
 NEXAH is a research framework for analyzing and navigating transitions in complex dynamical systems.
 
-It focuses on identifying structure within system dynamics and leveraging this structure for prediction and control.
+It identifies **structure within system dynamics** and enables **causal interaction** through alignment with that structure.
 
 ---
 
 ## 🧭 Conceptual Overview
 
-![NEXAH Conceptual Overview](./visuals/NEXAH_Structure_inside_Dynamics.png)
+![Validation Summary](./VALIDATION/nexah_validation_summary_visual.png)
 
-*Conceptual illustration of NEXAH as a field-based interpretation of dynamical systems.*
-
-👉 This visualization represents a **synthesis of observations**, not a direct implementation.
+*Empirical validation summary of structure, transitions, and control behavior.*
 
 ---
 
 ## 🔷 Core Hypothesis
 
 > Complex systems evolve within **structured fields**  
-> that constrain motion, stability, and transitions.
+> and transition when **phase coherence breaks**.
 
 ---
 
-## 🔷 Transition Geometry
+## 🔷 Transition Geometry + Phase Dynamics
 
-![NEXAH Gate Geometry](./visuals/gate_geometry_navigation.png)
+![Gate Resonance](./VALIDATION/causality/gate_resonance_scan_multirun.png)
 
 Observed structure:
 
 - systems evolve within a **density + flow field**  
 - stable regions form **basins (regimes)**  
 - transitions occur through **gates (intersections)**  
-- low-density regions form **corridors (greyspace)**  
+- phase dynamics determine **when transitions activate**
 
 ---
 
@@ -40,7 +38,9 @@ Observed structure:
 
 ```text
 Transitions are not random.
-They follow geometrically constrained pathways.
+
+They follow geometrically constrained pathways
+AND are triggered by phase mismatch.
 ```
 
 ---
@@ -48,7 +48,7 @@ They follow geometrically constrained pathways.
 ## 🧠 Interpretation
 
 ```text
-field → structure → gates → corridors → regime transition
+field → structure → geometry → phase → mismatch → transition
 ```
 
 ---
@@ -61,38 +61,56 @@ Across systems:
 - anisotropic motion (preferred directions)  
 - layered dynamics (flow sheets)  
 - structured transitions (non-random)  
+- phase-dependent activation of transitions  
 
 ---
 
-## ⚠️ Current System Gaps
+## 🔬 Causal Mechanism (Validated)
 
-![NEXAH System Gaps](./visuals/NEXAH_SYSTEM_GAPS_missing_layers_v_2.png)
+![Phase Mismatch](./VALIDATION/causality/results/phase_mismatch_iota.png)
 
-NEXAH has discovered structure, but is not yet a closed system.
-
-Main gaps:
-
-- ❌ no unified execution kernel  
-- ❌ no global trajectory policy  
-- ❌ inconsistent transition probabilities  
-- ❌ missing real-world validation  
-
----
-
-## 🧠 Research Direction
-
-The key challenge is:
+Observed:
 
 ```text
-closing the loop between field, transition, and control
+IOTA ⇔ phase mismatch >> 0
 ```
 
-This requires:
+NOT:
 
-- unified execution architecture  
-- consistent transition modeling  
-- long-horizon trajectory planning  
-- real-world validation  
+```text
+IOTA ⇔ instability
+```
+
+---
+
+### Interpretation
+
+- instability = potential  
+- mismatch = trigger  
+
+---
+
+## 🧭 Control Principle
+
+![Phase Gate Control](./VALIDATION/causality/results/phase_gate_v2_activation.png)
+
+Control is not magnitude-based.
+
+It is:
+
+```text
+phase-aligned intervention
+```
+
+---
+
+### Key Law
+
+```text
+Control effectiveness depends on:
+
+alignment(control, phase dynamics)
+```
 
 ---
 
@@ -112,6 +130,28 @@ $$
 
 ---
 
+## 🔷 Phase Dynamics Extension
+
+Phase:
+
+$$
+\phi = \arctan2(y, x)
+$$
+
+Velocity:
+
+$$
+\omega = \frac{d\phi}{dt}
+$$
+
+Mismatch:
+
+$$
+\Delta_\phi = |\omega - \text{expected}(\omega)|
+$$
+
+---
+
 ## 🔷 Coherence
 
 $$
@@ -119,46 +159,72 @@ C(s) =
 \frac{\dot{s} \cdot F(s)}{\|\dot{s}\| \, \|F(s)\|}
 $$
 
-Interpretation:
-
-- high coherence → stable motion  
-- low coherence → transition regions  
-
 ---
 
 ## 🔷 Navigation Principle
 
-Control:
-
-$$
-u(s) = -\nabla P(\text{instability}) + \nabla \rho
-$$
+```text
+navigate along structure
+minimize mismatch
+avoid unstable divergence
+```
 
 ---
 
-## 🧠 Unified Interpretation
+## 🧠 Unified Interpretation (Updated)
 
 ```text
 System =
 trajectory in structured field
 
 Stability:
-→ alignment + density
+→ alignment + density + phase coherence
 
 Instability:
 → misalignment + low density
 
 Transition:
-→ movement through structured corridors
+→ geometry-defined
+→ phase-triggered (mismatch)
 ```
+
+---
+
+## ⚠️ Current Limitation
+
+- phase-aligned control improves trajectories  
+- BUT does not yet suppress transitions  
+
+Missing:
+
+```text
+adaptive control depending on:
+
+phase AND instability
+```
+
+---
+
+## 🔧 Next Step
+
+```text
+s = f(φ, instability)
+```
+
+Expected:
+
+- reduce mismatch peaks  
+- suppress transitions  
+- preserve structure  
 
 ---
 
 ## 🔬 Status
 
-- empirical  
-- simulation-supported  
-- not formally proven  
+- empirically validated  
+- cross-system confirmed  
+- causally interpretable  
+- partially controllable  
 
 ---
 
@@ -167,8 +233,10 @@ Transition:
 ```text
 Systems do not fail randomly.
 
-They move through structured transition regions
-that define what outcomes are possible.
+They transition when phase coherence breaks
+within a structured dynamical field.
+
+Control succeeds when alignment is restored.
 ```
 
 ---
