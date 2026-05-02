@@ -217,6 +217,90 @@ From Fig.3:
 
 ---
 
+# 🔬 12. Coherence, Gradient and Gate Separation
+
+Current interpretation:
+
+C(x) measures local coherence or alignment between motion and structure.
+
+ρ(x) measures where the system tends to reside.
+
+∇ρ(x) measures the local density gradient and may reveal ridges, slopes, apertures or gate candidates.
+
+G(x) measures transition susceptibility and should not be identified with C(x) or ∇ρ(x) alone.
+
+---
+
+## Working Distinction
+
+C(x): coherence / alignment  
+ρ(x): density / occupancy  
+R(x): residence / persistence  
+∇ρ(x): density gradient / structural slope  
+G(x): gate score / structural weakness  
+
+---
+
+## Open Question
+
+Can the gate score be defined as a principled combination of:
+
+low density,  
+low coherence,  
+low residence time,  
+and high local structural contrast?
+
+---
+
+## Candidate Form
+
+G(x) ∝ Wρ(x) · WC(x) · WR(x) · W∇(x)
+
+where:
+
+Wρ(x) increases when density is low  
+WC(x) increases when coherence is low  
+WR(x) increases when residence time is low  
+W∇(x) increases near strong structural gradients or boundary regions  
+
+---
+
+## Interpretation
+
+G(x) is not an inverted coherence field.
+
+Rather, it is a compound indicator of structural weakness.
+
+Coherence describes where motion remains aligned.  
+Gate score describes where aligned structure becomes permeable.
+
+---
+
+## GH / Measurement Axis Hypothesis
+
+The GH resonance bar / trajectory sled is currently interpreted as a conceptual measurement axis across structural layers.
+
+Possible interpretation:
+
+GH samples how transitions move across density, coherence and response gradients.
+
+This remains hypothetical and requires formal validation.
+
+---
+
+## Research Direction
+
+Future work should test whether gate events correlate more strongly with:
+
+- low C(x) alone  
+- low ρ(x) alone  
+- high |∇ρ(x)| alone  
+- or a combined gate score G(x)
+
+This comparison is necessary before assigning mathematical status to GH, G(x), or the density-gradient field.
+
+---
+
 # 🧠 Summary
 
 NEXAH currently provides:
