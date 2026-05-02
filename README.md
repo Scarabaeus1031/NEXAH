@@ -42,6 +42,7 @@ This enables:
 - simulation of motion within learned structure  
 
 ---
+
 ## 🔬 Research & Findings
 
 📂 [`RESEARCH/`](RESEARCH/)
@@ -144,6 +145,14 @@ Observed behavior:
 - early warning up to **40–50 time units before collapse**  
 - instability appears as **geometric deviation**  
 - transition behavior becomes visible in motion metrics  
+
+---
+
+## 🧠 Structural Insight (Unified View)
+
+![NEXAH Core Structure](RESEARCH/FINDINGS/visuals/nexah_core_structure_diagram.png)
+
+*Unified structural hierarchy: field dynamics, transition geometry, discrete regimes, and control layer.*
 
 ---
 
@@ -261,6 +270,17 @@ A system does not fail randomly.
 It moves through structured transition regions
 that constrain what outcomes are possible.
 ```
+
+---
+
+## 🔬 Try It Yourself
+
+NEXAH is designed to be explored.
+
+Run the demonstrator, test different systems,  
+and observe how structure emerges from dynamics.
+
+→ The system is not just described — it can be experienced.
 
 ---
 
