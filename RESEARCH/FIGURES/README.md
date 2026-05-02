@@ -214,6 +214,13 @@ Recommended order:
 
 ---
 
+## 🔗 Empirical Visuals
+
+For system-specific visual outputs:
+
+→ ../APPLICATIONS/dynamical_systems/  
+→ ../APPLICATIONS/core_demos/
+
 # 🧭 Positioning
 
 This figure system connects:
