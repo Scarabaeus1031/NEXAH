@@ -10,6 +10,21 @@ from first principles to applied systems.
 
 ---
 
+# 🔥 What This Framework Does
+
+```text
+NEXAH extracts structure from dynamical systems
+and makes it navigable.
+```
+
+It transforms:
+
+```text
+trajectory → field → structure → transitions → control
+```
+
+---
+
 # 🧭 Recommended Reading Path
 
 ```text
@@ -40,7 +55,7 @@ from first principles to applied systems.
 
 ## 🔬 VALIDATION
 → empirical verification across systems  
-→ proves structure is real  
+→ demonstrates that structure is real  
 
 ---
 
@@ -65,6 +80,26 @@ from first principles to applied systems.
 ## 🧪 THEORETICAL_EXTENSIONS
 → Koopman, operator formalization  
 → explores future mathematical grounding  
+
+---
+
+# 🔁 Logical Dependency
+
+```text
+FOUNDATION → defines assumptions
+
+CORE_CONCEPTS → defines measurable structure
+
+VALIDATION → shows structure exists
+
+FINDINGS → extracts invariant principles
+
+APPLIED_CASES → demonstrates real behavior
+
+FIGURES → unify understanding
+
+THEORETICAL_EXTENSIONS → formalize and extend
+```
 
 ---
 
@@ -93,26 +128,6 @@ in dynamical systems.
 
 - Visual system  
   → `FIGURES/README.md`
-
----
-
-# 🧭 Interpretation
-
-```text
-FOUNDATION defines assumptions
-
-CORE_CONCEPTS defines measurable structure
-
-VALIDATION proves structure exists
-
-FINDINGS extract general principles
-
-APPLIED_CASES demonstrate real behavior
-
-FIGURES unify understanding
-
-THEORETICAL_EXTENSIONS explore formalization
-```
 
 ---
 
