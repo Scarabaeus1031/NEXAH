@@ -1,43 +1,43 @@
 # ⚡ NEXAH — Koopman Bridge
-### (Geometric–Spectral Integration for Dynamical Systems)
+### (Geometric–Spectral Perspectives on Dynamical Systems)
 
 ---
 
 # 🧭 Purpose
 
-This document establishes a **conceptual and mathematical bridge** between:
+This document explores a **conceptual bridge** between:
 
 ```text
-NEXAH (geometric, empirical framework)
+NEXAH (geometric, data-driven framework)
 and
 Koopman operator theory (spectral, operator-theoretic framework)
 ```
 
-The goal is not to replace either approach, but to:
+The goal is to:
 
-> **clarify their relationship and explore a hybrid formulation**
+> compare both perspectives and identify potential complementarities
 
 ---
 
 # 🧠 Core Perspective
 
-Two fundamentally different views on dynamical systems:
+Two complementary views on dynamical systems:
 
 ---
 
 ## 🔷 NEXAH
 
 ```text
-data → density → geometry → motion → structure
+data → density → geometry → structure → motion
 ```
 
-- operates directly in **state space**
+- operates in **state space**
 - reconstructs:
-  - probability field
-  - geometry
-  - trajectories
+  - density fields
+  - geometric structure
+  - transition regions
 - fully **data-driven**
-- no explicit model or lifting required
+- no explicit lifting required
 
 ---
 
@@ -49,9 +49,9 @@ data → lifting → linear operator → spectrum → modes
 
 - operates in a **function space**
 - represents dynamics via:
-  - linear operator
+  - linear operators
   - eigenvalues and eigenfunctions
-- provides **global, spectral structure**
+- provides **global spectral structure**
 
 ---
 
@@ -59,44 +59,18 @@ data → lifting → linear operator → spectrum → modes
 
 | Aspect | NEXAH | Koopman |
 |------|------|--------|
-| Dynamics | $F(x) = \frac{dx}{dt}$ (finite differences) | $\mathcal{K} g(x) = g(f(x))$ |
+| Dynamics | $\dot{x} = F(x)$ | $\mathcal{K} g(x) = g(f(x))$ |
 | Generator | implicit (empirical) | $\mathcal{L} g = F \cdot \nabla g$ |
-| Density | $p(x)$ via KDE | invariant measure $\mu$ |
-| Energy | $E(x) = -\log p(x)$ | implicit via eigenfunctions |
-| Gradient | $\nabla E(x)$ | $\nabla \phi_i(x)$ |
-| Stability | alignment / motion coherence | $\text{Re}(\lambda_i)$ |
-| Transition | basins + gates | eigenfunction level sets |
-| Control | navigation field $u$ | Koopman-MPC |
+| Density | $\rho(x)$ via KDE | invariant measure $\mu$ |
+| Structure | geometric | spectral |
+| Stability | coherence / alignment | $\mathrm{Re}(\lambda_i)$ |
+| Transitions | gates / corridors | level sets of eigenfunctions |
 
 ---
 
 # 🧠 Conceptual Alignment
 
-The two frameworks are **not competing**, but complementary:
-
----
-
-## NEXAH provides
-
-- intuitive geometric interpretation  
-- explicit spatial structure  
-- direct connection to trajectories  
-- observable, data-driven fields  
-
----
-
-## Koopman provides
-
-- global linearization  
-- spectral decomposition  
-- invariant structures  
-- theoretical rigor  
-
----
-
-# 🔁 Unified Interpretation
-
-We can interpret both as describing the same object:
+Both frameworks describe:
 
 ```text
 the structure of system evolution
@@ -111,184 +85,90 @@ Koopman → spectral / functional
 
 ---
 
-# 🔗 Bridge Formulation
-
-A conceptual hybrid:
-
----
-
-## NEXAH core
-
-```text
-p(x) → E(x) = -log p(x)
-F(x) = dx/dt
-```
-
----
-
-## Koopman augmentation
+# 🔗 Potential Bridge
 
 Let:
 
 ```text
+ρ(x) = empirical density
 φ_i(x) = Koopman eigenfunctions
 ```
 
-Then define hybrid structure:
+A hybrid view may consider:
 
 ```text
-p(x) ≈ Σ c_i φ_i(x)
+ρ(x) ≈ Σ c_i φ_i(x)
 ```
 
-and:
+and combine:
 
 ```text
-u_hybrid = -∇E(x) + Σ α_i ∇φ_i(x)
-```
-
----
-
-## Interpretation
-
-```text
-NEXAH defines WHERE structure is
-Koopman defines WHY it exists
+geometry (density)
++ spectral modes
 ```
 
 ---
 
-# 🧪 Relevance for Validation Layer
+# 🧪 Motivation
 
-Current validation shows:
+Current observations:
 
-```text
-local signals (κ, drift, angle) are insufficient for strong early warning
-```
-
-Limitation:
-
-```text
-purely local information → limited predictive horizon
-```
+- local geometric signals are strong  
+- but purely local information may limit prediction  
 
 ---
 
 ## Hypothesis
 
-Koopman integration may provide:
+Spectral structure may provide:
 
 - global dynamical modes  
-- improved robustness under noise  
-- better generalization across systems  
+- improved robustness  
+- better generalization  
 
 ---
 
-## Key Question
+# 🧪 Proposed Experiment
+
+Compare embeddings:
 
 ```text
-Does a Koopman-based embedding improve
-geometric signals such as shape drift?
-```
-
----
-
-# 🧪 Proposed Minimal Experiment
-
-```text
-run_015_koopman_embedding_probe.py
-```
-
-Compare:
-
-```text
-Embedding A:
-x(t) = (V, dV/dt, d²V/dt²)
-
-Embedding B:
-Koopman / EDMD lifted space
+A: raw state-space features
+B: Koopman / EDMD lifted features
 ```
 
 Evaluate:
 
-- shape drift stability  
 - regime separation  
-- sensitivity to noise  
+- transition predictability  
+- robustness to noise  
 
 ---
 
-# ⚠️ Important Constraints
+# ⚠️ Constraints
 
-- Koopman requires:
-  - dictionary selection or learning  
-  - additional assumptions  
+Koopman methods require:
+
+- dictionary selection or learning  
+- additional assumptions  
 - increased complexity  
-- less direct interpretability  
 
 ---
 
 # 🧠 Positioning
 
-NEXAH is:
-
 ```text
-a geometric, empirical framework
-```
+NEXAH → geometric reconstruction
 
-Koopman is:
-
-```text
-a spectral, operator-theoretic framework
+Koopman → spectral representation
 ```
 
 ---
 
-## Hybrid view
+# 🔥 Final Insight
 
 ```text
-geometry (NEXAH) + spectrum (Koopman)
-```
-
----
-
-# 🚀 Potential Benefits of Hybridization
-
-- more stable flow estimation  
-- smoother density reconstruction  
-- improved transition modeling  
-- scalable representation across systems  
-
----
-
-# ⚠️ Current Status
-
-This integration is:
-
-```text
-conceptual and exploratory
-```
-
-NOT yet:
-
-- implemented in core pipeline  
-- validated on IEEE systems  
-- part of the reported results  
-
----
-
-# 🧭 Interpretation
-
-```text
-NEXAH reconstructs structure from data
-
-Koopman explains structure through spectral modes
-```
-
----
-
-# ⚡ Final Insight
-
-```text
-A complete understanding of dynamical systems
+A full understanding of dynamical systems
 may require both:
 
 geometry (where the system moves)
@@ -298,25 +178,14 @@ spectrum (how the system evolves)
 
 ---
 
-# 🔮 Future Work
-
-- Koopman-based flow estimation  
-- hybrid density modeling  
-- Koopman-informed transition probabilities  
-- integration into navigation/control layer  
-
----
-
-# ⚡ NEXAH
+# 🚀 Status
 
 ```text
-geometry reveals structure
-
-spectrum explains it
+exploratory / not part of validation claims
 ```
 
 ---
 
-**Status:** exploratory bridge  
-**Scope:** theoretical + experimental extension  
-**Not part of validation claims**
+**NEXAH — Koopman Bridge**  
+Theoretical Extension  
+Thomas K. R. Hofmann · 2026
