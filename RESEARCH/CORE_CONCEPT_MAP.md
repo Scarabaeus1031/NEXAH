@@ -128,6 +128,141 @@ structure → geometry → field → behavior
 
 ---
 
+## 6. 🧭 Phase Dynamics & Alignment (Causal Layer)
+
+→ `VALIDATION/causality/`
+
+> Transitions are not triggered by instability alone,
+> but by misalignment in phase dynamics.
+
+Key ideas:
+
+- phase = intrinsic system progression (φ)
+- ω = phase velocity (dφ/dt)
+- mismatch = deviation from expected phase evolution
+- control operates relative to phase, not absolute state
+
+### Observations (Validation)
+
+- IOTA events occur when:
+
+  ```
+  phase mismatch >> 0
+  ```
+
+- NOT when instability is maximal
+
+- Angular structure emerges in transition events:
+
+  ```
+  dominant modes: [4, 32, 34, 2, 0]
+  ```
+
+### Interpretation
+
+```
+Transitions = breakdown of rotational consistency
+```
+
+---
+
+### Control Implication
+
+```
+phase-aligned, not magnitude-based
+```
+
+---
+
+### Extended System View
+
+```
+Instability → potential for transition  
+Phase mismatch → trigger of transition  
+Control alignment → suppression or guidance
+```
+
+---
+
+### Updated Principle
+
+```
+A system transitions not when it becomes unstable,
+
+but when its phase dynamics lose coherence
+relative to its expected evolution.
+```
+
+---
+
+# 🔁 Unified System Flow (Updated)
+
+```
+Dynamics
+    ↓
+Field (structure emerges)
+    ↓
+Vessel (structure is constrained)
+    ↓
+Layer interaction (structure evolves)
+    ↓
+Transition geometry (movement becomes structured)
+    ↓
+Phase dynamics (alignment / mismatch emerges)
+    ↓
+Operators (structure is formalized)
+    ↓
+Navigation (structure is used)
+```
+
+---
+
+# 🔬 Stability & Transition (Updated)
+
+```
+Stability:
+→ alignment with flow
+→ high-density regions
+→ structural containment
+
+Instability:
+→ misalignment
+→ low density
+→ competing flow directions
+
+Transition:
+→ movement through structured corridors
+→ triggered by phase mismatch
+```
+
+---
+
+# 🧭 Control Perspective (Updated)
+
+```
+alignment with structure  
++ phase-aligned control  
++ mismatch suppression  
++ guided movement through transitions
+```
+
+---
+
+# 🔥 Final Insight (Updated)
+
+```
+A system does not randomly evolve.
+
+It moves through a structured space
+that defines what motion is possible.
+
+Transitions occur when phase coherence breaks.
+
+Control succeeds when it restores alignment
+with the intrinsic phase structure.
+```
+
+---
 # 🔁 Unified System Flow
 
 All components integrate into a single process:
@@ -142,6 +277,8 @@ Vessel (structure is constrained)
 Layer interaction (structure evolves)
     ↓
 Transition geometry (movement becomes structured)
+    ↓
+Phase dynamics (alignment / mismatch emerges)
     ↓
 Operators (structure is formalized)
     ↓
@@ -164,6 +301,7 @@ Stability:
 → alignment with flow
 → high-density regions
 → structural containment
+→ phase coherence
 
 Instability:
 → misalignment
@@ -172,6 +310,7 @@ Instability:
 
 Transition:
 → movement through structured corridors
+→ triggered by phase mismatch
 ```
 
 ---
@@ -184,7 +323,8 @@ It is:
 
 ```text
 alignment with structure  
-+ avoidance of instability  
++ phase-aligned intervention  
++ mismatch suppression  
 + guided movement through transitions
 ```
 
@@ -237,6 +377,10 @@ A system does not randomly evolve.
 
 It moves through a structured space
 that defines what motion is possible.
+
+Transitions occur when phase coherence breaks.
+
+Control succeeds when alignment is restored.
 ```
 
 ---
