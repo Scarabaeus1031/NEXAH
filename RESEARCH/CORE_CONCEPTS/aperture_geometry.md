@@ -3,8 +3,8 @@
 This document describes a **visual and structural pipeline**  
 for extracting transition structure from dynamical systems.
 
-It is based on empirical observations and visualization methods  
-developed during NEXAH experiments.
+It is based on empirical observations and validation experiments  
+developed during NEXAH research.
 
 ---
 
@@ -18,7 +18,7 @@ This is:
 
 It is:
 
-> a **practical visual system** for revealing structure, transitions,  
+> a practical system for revealing structure, transitions,  
 > and organization in complex dynamics
 
 ---
@@ -26,117 +26,165 @@ It is:
 # 🔁 Pipeline Overview
 
 ```text
-Grid → Density → Ridge → Aperture → Gate → Phase → Transition
+Trajectory → Field → Instability → Gate → Phase → Mismatch → Transition
 ```
 
 Each step reveals one layer of the same underlying system.
 
 ---
 
-# 🧩 1. Grid vs Field — The Observation Frame
+# 🧩 1. Trajectory vs Density — Emergence of Structure
 
-![Grid vs Field](../visuals/VISUAL01_GRIDvsFIELD.png)
-
----
-
-# 🧩 2. Trajectory vs Density — Emergence of Structure
-
-![Trajectory vs Density](../visuals/VISUAL_02_TRAJECTORYvsDENSITY.png)
-
----
-
-# 🧩 3. Density vs Ridge Paths — Extracting the Skeleton
-
-![Density vs Ridge Paths](../visuals/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
-
----
-
-# 🧩 4. Ridge Paths vs Aperture Ring — Hidden Geometry
-
-![Aperture Ring](../visuals/VISUAL_04_RIDGE_PATHSvsAPERTURE_RING.png)
-
----
-
-# 🧩 5. Aperture Ring vs Gate Structure — Transition Locations
-
-![Gate Sequence](../visuals/VISUAL_05_APERTURE_RINGvsGATE_SEQUENCE.png)
-
----
-
-# 🧩 6. Gate vs Phase Dynamics — Transition Activation
-
-*(Validated in VALIDATION/causality)*
+![Trajectory Overlay](../../VALIDATION/lorenz/results/trajectory_overlay.png)
 
 ### Idea
 
-- Phase evolves along trajectory:
+- Individual trajectories appear chaotic  
+- Aggregating them reveals density patterns  
+
+### Insight
+
+> Structure does not appear in single paths  
+> but in **collective behavior**
+
+---
+
+# 🧩 2. Density vs Structure — Extracting the Skeleton
+
+![Instability Field](../../VALIDATION/lorenz/results/instability_field.png)
+
+### Idea
+
+- Density shows where the system spends time  
+- Structural fields reveal how the system moves  
+
+### Insight
+
+> Density tells us where  
+> Structure tells us how the system moves
+
+---
+
+# 🧩 3. Field Geometry — Hidden Structure
+
+![Transition Field](../../VALIDATION/lorenz/results/transition_field.png)
+
+### Idea
+
+- Flow organizes into structured regions  
+- What appears local is part of a global geometry  
+
+### Insight
+
+> Observed channels reflect deeper geometric structure
+
+---
+
+# 🧩 4. Gate Regions — Transition Points
+
+![Gate Region](../../VALIDATION/causality/results/gate_region.png)
+
+### Idea
+
+- Instability peaks identify transition regions  
+- These are localized but structurally constrained  
+
+### Insight
+
+> Transitions occur at **specific structural locations**, not randomly
+
+---
+
+# 🧩 5. Phase Mismatch — Trigger Mechanism
+
+![Phase Mismatch](../../VALIDATION/causality/results/phase_mismatch_iota.png)
+
+### Idea
+
+- Phase evolves along the trajectory  
+- Expected motion defines a baseline  
+- Deviations create mismatch  
+
+### Key Quantity
 
 ```text
-φ(t),  ω = dφ/dt
-```
-
-- Expected phase defines baseline  
-- Deviation creates mismatch  
-
-### Key quantity
-
-```text
-mismatch = |ω - expected(ω)|
+mismatch = |ω - smooth(ω)|
 ```
 
 ### Insight
 
-> Geometry defines where transitions can occur  
-> Phase defines when they occur
+> Phase mismatch determines **when transitions activate**
 
 ---
 
-# 🧩 7. Full Structure vs Ghost Snake — Minimal Representation
+# 🧩 6. Phase-Gated Control — Selective Activation
 
-![Ghost Structure](../visuals/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
+![Phase Gate Mismatch](../../VALIDATION/causality/results/phase_gate_v2_mismatch.png)
+
+![Phase Gate Activation](../../VALIDATION/causality/results/phase_gate_v2_activation.png)
+
+### Idea
+
+- Control should not be continuous  
+- Activation is tied to mismatch peaks  
+- Cooldown prevents over-triggering  
+
+### Insight
+
+> Effective control is sparse, phase-aware, and state-dependent
 
 ---
 
-# 🧩 8. The NEXAH Lens — Multi-Perspective View
+# 🧩 7. Multi-System Structure — Consistency
 
-![NEXAH Lens](../visuals/VISUAL_07_THE_NEXAH_LENS.png)
+![Cross-System Transition](../../VALIDATION/cross_system/cross_system_transition_matrices.png)
+
+### Idea
+
+- Different systems exhibit similar transition structures  
+- Geometry is not system-specific  
+
+### Insight
+
+> Structure persists across systems  
+> → geometry-driven, not equation-driven
 
 ---
 
 # 🧠 Core Principle
 
 ```text
-What looks like a line → may be a projected ring
-What looks like a channel → may be an aperture
-What looks like a point → may be a gate
+Geometry defines where transitions can occur.
 
-What looks like a transition trigger →
-is a phase mismatch event
+Phase mismatch defines when they activate.
+
+Control succeeds when intervention is aligned
+with the intrinsic phase structure.
 ```
 
 ---
 
-# 🔬 Interpretation (Updated)
+# 🔬 Interpretation
 
 ```text
-trajectory → density → structure → geometry → phase → mismatch → transition
+trajectory → density → field → instability → gate → phase → mismatch → transition
 ```
 
 ---
 
-# 🔬 Key Insight (Updated)
+# 🔬 Key Insight
 
-> Structure defines where transitions can occur.  
-> Phase dynamics determine when they occur.
+> Structure defines possible transitions.  
+> Phase dynamics determine actual transitions.
 
 ---
 
 # 🚧 Limitations
 
-- based on specific systems (e.g. Lorenz-like)  
-- dependent on projection  
-- partially heuristic  
-- phase model currently empirical  
+- primarily validated on Lorenz-style systems  
+- dependent on projection and observable choice  
+- phase model is empirical  
+- full transition suppression not yet achieved  
 
 ---
 
@@ -144,19 +192,20 @@ trajectory → density → structure → geometry → phase → mismatch → tra
 
 ## → field_model.md
 
-Interprets systems as **fields of transitions**
+- systems as structured dynamical fields  
 
 ## → theory_to_field_mapping.md
 
-Maps structure to operators (Γ, Δ, Ω)
+- operators (Γ, Δ, Ω) mapped to structure  
 
-## → ../VALIDATION/causality/
+## → ../VALIDATION/
 
-Provides empirical evidence for:
+- empirical validation layer  
+- contains all supporting experiments  
 
-- phase mismatch  
-- control alignment  
-- transition triggering  
+## → ../VALIDATION/validation_summary.md
+
+- full validation report  
 
 ---
 
@@ -168,7 +217,7 @@ Provides empirical evidence for:
 
 ### FIELD_LAYER
 - geometric representation  
-- phase-aware interpretation  
+- phase-aware structure  
 
 ### NAVIGATION
 - movement between regimes  
@@ -180,19 +229,28 @@ Provides empirical evidence for:
 
 The Aperture Geometry System is:
 
-- a **visual pipeline**
-- a **structure extraction method**
-- a **geometry + phase integration layer**
+- a visual + structural pipeline  
+- a transition detection framework  
+- a bridge between dynamics and control  
+
+It is not:
+
+- a theory of physics  
+- a universal model  
+
+It is:
+
+> a working system for revealing hidden structure and transition triggers
 
 ---
 
 ## Status
 
 Exploratory  
-Visually validated  
-Causally extended (phase layer)  
+Empirically supported  
+Causally extended (phase dynamics)
 
 ---
 
 **NEXAH Research Layer**  
-From dynamics → to structure → to phase → to transition
+From dynamics → to structure → to phase → to transition  
