@@ -109,6 +109,7 @@ Key ideas:
 ```text
 Transitions = geometry-constrained movement
 ```
+![Extraction](./FIGURES/main/Fig_02.png)
 
 ---
 
@@ -316,6 +317,7 @@ Transition:
 → movement through structured corridors
 → triggered by phase mismatch
 ```
+![Quantitative](./FIGURES/main/Fig_03.png)
 
 ---
 
