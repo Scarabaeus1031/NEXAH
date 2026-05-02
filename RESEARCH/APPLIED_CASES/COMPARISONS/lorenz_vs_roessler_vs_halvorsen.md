@@ -2,11 +2,11 @@
 
 ## 🧭 Purpose
 
-This document compares three canonical dynamical systems to demonstrate a central hypothesis:
+This document compares three canonical dynamical systems to evaluate a central hypothesis:
 
 ```text
-Structure is invariant across systems.
-Only its geometric expression changes.
+Structural organization is invariant across systems.
+Only its geometric expression and complexity change.
 ```
 
 ---
@@ -15,143 +15,110 @@ Only its geometric expression changes.
 
 | System | Role | Behavior |
 |--------|------|----------|
-| **Lorenz** | Reference case | discrete switching between lobes |
-| **Rössler** | Intermediate case | continuous spiral transport |
+| **Lorenz** | Reference | discrete switching between lobes |
+| **Rössler** | Intermediate | continuous spiral transport |
 | **Halvorsen** | Stress test | fragmented, distributed dynamics |
 
-These systems differ significantly in appearance, symmetry, and complexity —  
-yet are processed through the same structural extraction pipeline.
+These systems span increasing structural complexity:
+
+```text
+simple → intermediate → complex
+```
 
 ---
 
-# 🔁 Shared Structural Pipeline
+# 🔁 Structural Pipeline
+
+All systems are analyzed using the same extraction process:
 
 ```text
 Dynamics → Density → Structure → Sheets → Transitions → Topology
 ```
 
-This pipeline separates the problem into two interacting layers:
+This induces a hybrid representation:
 
 ```text
-Continuous:
-    density ρ(x), flow F(x), instability G(x)
-
-Discrete:
-    sheets s(t), transitions P(i → j)
+continuous field  +  discrete structure
 ```
 
 ---
 
-# 🔬 1. From Dynamics to Structure
+# 🔬 1. Structure Emergence
 
-![Trajectory → Density](../../../NEXAH_DEMONSTRATOR/visuals/core/VISUAL_02_TRAJECTORYvsDENSITY.png)
+![Density](../../../NEXAH_DEMONSTRATOR/visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
 
-Raw trajectories differ strongly across systems:
+Across all systems:
 
-- Lorenz: bounded switching between lobes  
-- Rössler: spiral expansion around a center  
-- Halvorsen: irregular, high-dimensional structure  
-
-However, after aggregation:
-
-```text
-trajectories → density → geometry
-```
+- trajectories aggregate into density fields  
+- density induces geometric structure  
+- motion aligns with high-density regions  
 
 ---
 
-## Key Insight
+## Insight
 
 ```text
-Structure is not imposed.
+Structure is not encoded in equations.
 
 It emerges from trajectory aggregation.
 ```
 
 ---
 
-# 🔬 2. Density as Structural Carrier
-
-![Density](../../../NEXAH_DEMONSTRATOR/visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
-
-Across all systems:
-
-- high-density regions form **stable pathways (ridges)**  
-- low-density regions form **transition zones**
-
----
-
-## Interpretation
-
-```text
-Density is not just statistical.
-
-It defines the geometry of the system.
-```
-
----
-
-# 🔬 3. Emergence of Geometric Structure
+# 🔬 2. Geometric Structure
 
 ![Structure](../../../NEXAH_DEMONSTRATOR/visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
 
-The density field induces:
-
-- coherent flow-aligned structures  
-- continuous transport pathways  
-- system-specific geometric patterns  
-
----
-
-## Cross-System Observation
-
-| System | Structure Type |
-|--------|----------------|
-| Lorenz | bridge between lobes |
+| System | Geometry |
+|--------|----------|
+| Lorenz | dual-lobe bridge |
 | Rössler | spiral ridge |
-| Halvorsen | fragmented ridge network |
+| Halvorsen | fragmented network |
 
 ---
 
-## Key Insight
+## Insight
 
 ```text
-Different geometry.
-Same structural mechanism.
+Different geometries arise,
+but all are organized by flow-aligned structure.
 ```
 
 ---
 
-# 🔬 4. Discrete Sheets (Structural Layers)
+# 🔬 3. Sheet Structure (Discrete Layer)
 
 ![Sheets](../../../NEXAH_DEMONSTRATOR/visuals/structure/transition_structure_phase.png)
 
-Continuous dynamics induce a **discrete representation**:
+Continuous dynamics induce:
 
 ```text
 s(t) = sheet index
 ```
 
-Sheets represent:
+---
 
-- locally coherent regions of phase space  
-- persistent dynamical regimes  
+## Observations
+
+- Lorenz → few dominant sheets  
+- Rössler → layered spiral sheets  
+- Halvorsen → fragmented sheets  
 
 ---
 
-## Key Insight
+## Insight
 
 ```text
-Continuous systems naturally induce discrete structure.
+Discrete structure is induced by continuous dynamics.
 ```
 
 ---
 
-# 🔬 5. Transition Structure
+# 🔬 4. Transition Dynamics
 
 ![Transition Matrix](../../../NEXAH_DEMONSTRATOR/visuals/structure/transition_structure_matrix.png)
 
-Empirically observed across all systems:
+Observed across all systems:
 
 ```text
 • strong diagonal dominance
@@ -164,13 +131,12 @@ Empirically observed across all systems:
 ## Interpretation
 
 ```text
-The system behaves like a constrained Markov process
-induced by geometry.
+The system behaves like a locally constrained Markov process.
 ```
 
 ---
 
-## Important Correction
+## Important Result
 
 ```text
 Transitions are NOT rare events.
@@ -180,9 +146,9 @@ They are continuous flows across adjacent structure.
 
 ---
 
-# 🔬 6. Gate Structure (Instability Field)
+# 🔬 5. Gate Structure (Instability Field)
 
-![Gate Operator](../../../NEXAH_DEMONSTRATOR/visuals/unified/nexah_unified_gate_operator_v25.png)
+![Gate](../../../NEXAH_DEMONSTRATOR/visuals/unified/nexah_unified_gate_operator_v25.png)
 
 Defined as:
 
@@ -190,34 +156,37 @@ Defined as:
 G(x) = (1 - ρ)(1 - C)(1 - R)
 ```
 
-Where:
+---
 
-- ρ → density  
-- C → coherence  
-- R → rotational structure  
+## Observations
+
+- Lorenz → localized transition corridor  
+- Rössler → central instability region  
+- Halvorsen → distributed weak regions  
 
 ---
 
-## Interpretation
+## Insight
 
 ```text
-G(x) does NOT detect transitions.
+Gates are not discrete triggers.
 
-It reveals regions of structural weakness.
+They are spatial regions of structural weakness.
 ```
 
 ---
 
-# 🔬 7. Cross-System Invariance
+# 🔬 6. Cross-System Invariance
 
 ![Cross System](../../../NEXAH_DEMONSTRATOR/visuals/cross_system/nexah_cross_system_structure_v23.png)
 
-Despite different dynamics, all systems exhibit:
+All systems exhibit:
 
 ```text
-• coherent regions (structure)
-• transition zones (low density)
-• constrained motion paths
+✔ coherent regions
+✔ transition zones
+✔ constrained motion
+✔ structured pathways
 ```
 
 ---
@@ -225,18 +194,14 @@ Despite different dynamics, all systems exhibit:
 ## Core Result
 
 ```text
-Structure is invariant.
-
-Only its geometric realization differs.
+These properties are invariant across systems.
 ```
 
 ---
 
-# 🔬 8. Emergent Topology
+# 🔬 7. Emergent Topology
 
-Topology is not predefined.
-
-It emerges from:
+Topology arises from:
 
 ```text
 Sheets → Connectivity → Transitions
@@ -250,15 +215,15 @@ Sheets → Connectivity → Transitions
 |--------|----------|
 | Lorenz | switching (Möbius-like) |
 | Rössler | spiral / disc |
-| Halvorsen | graph-like network |
+| Halvorsen | graph-like |
 
 ---
 
-## Key Insight
+## Insight
 
 ```text
-Topology is a consequence of dynamics,
-not an input.
+Topology is induced by transition structure,
+not predefined by geometry.
 ```
 
 ---
@@ -266,9 +231,9 @@ not an input.
 # 🔥 Unified Interpretation
 
 ```text
-Lorenz     → switching-dominated structure
-Rössler    → transport-dominated structure
-Halvorsen  → distributed structure
+Lorenz     → switching-dominated system
+Rössler    → transport-dominated system
+Halvorsen  → distributed transition system
 ```
 
 ---
@@ -276,9 +241,9 @@ Halvorsen  → distributed structure
 # 🧠 Final Insight
 
 ```text
-A dynamical system is not defined by its equations.
+Dynamical systems are not defined by their equations.
 
-It is defined by the structure it induces.
+They are defined by the structure they induce.
 ```
 
 ---
@@ -286,7 +251,7 @@ It is defined by the structure it induces.
 # 🚀 Implication
 
 ```text
-NEXAH is not a model of a system.
+NEXAH is not a model of a specific system.
 
 It is a framework for extracting structure
 from arbitrary dynamical systems.
