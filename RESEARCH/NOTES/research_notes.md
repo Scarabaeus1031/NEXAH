@@ -1,199 +1,115 @@
-# NEXAH — Notes (Structured Exploratory Framework)
+# 🧠 NEXAH — Research Notes (Exploratory Layer)
 
 ---
 
-## 🧠 Purpose
+## 🧭 Purpose
 
-This document collects **structured exploratory insights** emerging from the development of NEXAH.
+This document contains **exploratory, pre-formal ideas**  
+developed during the construction of the NEXAH framework.
 
-It is not a formal theory yet, but a **pre-formal framework**.
+It is intentionally:
 
-Its purpose is to:
-
-> **organize intuition, map concepts, and prepare formalization**
+- incomplete  
+- speculative (within observed constraints)  
+- evolving  
 
 ---
 
-## 🧭 Core Hypothesis (Working)
+## ⚠️ Status
 
 ```text
-A system does not evolve randomly in state space.
+This document is NOT part of the formal framework.
+```
+
+It serves as:
+
+```text
+→ idea generator
+→ hypothesis space
+→ conceptual sandbox
+```
+
+---
+
+# 🔷 Core Working Hypothesis
+
+```text
+A system does not evolve randomly.
 
 It moves within a structured field,
-organized into regimes,
 with transitions governed by geometry and interaction.
 ```
 
 ---
 
-# 🧱 1. SYSTEM VIEW — CORE MODEL
+# 🔶 Exploratory Concepts
 
-| Concept | Working Definition | Status |
-|--------|------------------|--------|
-| System | trajectory in state space | ✔ observed |
-| Field | structured landscape governing motion | ✔ supported |
-| Regime | locally coherent motion pattern | ✔ strong evidence |
-| Transition | structured movement between regimes | ✔ strong evidence |
-| Gate | region enabling transition | ⚠️ hypothesis |
-| Sheet | coherent flow layer | ⚠️ hypothesis |
+The following concepts are **not fully formalized**:
+
+| Concept | Status |
+|--------|--------|
+| Gate | partially defined |
+| Sheet | hypothesis |
+| Regime boundary | unclear |
+| Transition probability | open |
 
 ---
 
-## 🧠 Canonical Representation
+# 🔷 Structural Intuition
 
 ```text
-system = trajectory in field
+structure emerges from trajectory density
 
-field = set of regimes
+flow defines direction
 
-regime = locally stable flow structure
-
-transition = guided movement between regimes
-```
-
-![NEXAH — From Field Discovery to Controlled Navigation](./visuals/a_detailed_infographic_poster_diagram_in_a_clean_s.png)
-
-*Observed vs controlled behavior: systems first reveal structure (left), then can be guided through it (right).*
-
----
-
-# 🧭 2. REGIME LAYER (KEY STRUCTURE)
-
-## 🟣 Definition
-
-A **regime** is a region where:
-
-- motion is coherent  
-- dynamics are predictable (locally)  
-- trajectories align with flow  
-
----
-
-## 📊 Observed Properties
-
-| Property | Description | Evidence |
-|--------|------------|---------|
-| Stability | trajectories remain within region | ✔ |
-| Coherence | flow direction is consistent | ✔ |
-| Attractiveness | trajectories converge | ✔ |
-| Separation | regimes are distinguishable | ✔ |
-
----
-
-## 🔁 Types of Regimes (Observed)
-
-| Type | Example Systems |
-|-----|---------------|
-| Chaotic Basin | Lorenz, Halvorsen, Rössler |
-| Rotational Regime | Halvorsen |
-| Synchronized Regime | Kuramoto |
-| Discrete State Regime | Markov / Graph |
-| Spectral Regime | Koopman |
-| Harmonic Structure | Fourier / MMF / waves |
-
----
-
-![Lorenz vs Halvorsen — Continuous Flow to Discrete Structure](./visuals/lorenz_haverson_v_2.png)
-
-*Different systems exhibit distinct flow regimes, yet share structured transition behavior and underlying discrete dynamics.*
-
----
-
-# 🔁 3. TRANSITION STRUCTURE
-
-## 🧭 Core Idea
-
-```text
-NOT random
-NOT discontinuous
-BUT structured and geometry-driven
+geometry constrains transitions
 ```
 
 ---
 
-## 🚪 Gate Concept
+# 🔁 Regime Idea (Pre-Formal)
 
-| Aspect | Interpretation |
-|------|--------------|
-| Gate | transition-enabling region |
-| Geometry | directional constraint |
-| Field | low-density / competing flows |
+```text
+regime = locally coherent motion region
+```
+
+Open aspects:
+
+- exact boundary definition  
+- relation to invariant sets  
+- relation to Lyapunov structure  
 
 ---
 
-### Working Mapping
+# 🚪 Gate Idea (Pre-Formal)
 
 ```text
-gate ↔ low density + flow conflict
+gate = region where structure weakens
+```
+
+Hypothesis:
+
+```text
+low density + flow conflict → transition region
 ```
 
 ---
 
-## 🔄 Transition Properties
-
-| Property | Description |
-|--------|------------|
-| Smoothness | transitions are continuous |
-| Directionality | preferred directions exist |
-| Constraint | not all transitions possible |
-| Sensitivity | small changes can redirect path |
-
----
-
-# 🧩 4. SHEET / LAYER STRUCTURE
-
-## 🧠 Hypothesis
+# 🧩 Sheet Hypothesis
 
 ```text
-overlapping flow layers ("sheets")
+system may consist of overlapping flow layers
 ```
 
----
+Open:
 
-## 📊 Properties
-
-| Property | Description |
-|--------|------------|
-| Local flow | each sheet has direction |
-| Stability | sheets define coherence |
-| Interaction | sheets intersect |
-| Transition | occurs at intersections |
+- formal definition  
+- dimensionality  
+- relation to manifolds  
 
 ---
 
-## Mapping
-
-```text
-sheet intersection → gate → transition
-```
-
----
-
-# 🧭 5. LOCAL vs GLOBAL STRUCTURE
-
-## 🔑 Core Distinction
-
-| Level | Meaning |
-|------|--------|
-| Local | trajectory behavior |
-| Global | structure of regimes |
-
----
-
-## 📊 Model Mapping
-
-| Model | Local / Global |
-|------|---------------|
-| Lorenz / Halvorsen | Local dynamics |
-| Kuramoto | Local → Global bridge |
-| Graph / Markov | Global transitions |
-| Koopman | Global field |
-| Control / RL | Global decision |
-| Hybrid / Janus | Transition layer |
-
----
-
-## 🧠 Insight
+# 🔷 Local vs Global Insight
 
 ```text
 systems move locally
@@ -202,57 +118,18 @@ but change globally
 
 ---
 
-# 🔷 6. MODEL REGIME MAP (INTEGRATION TABLE)
+# 🔷 Model Integration (Conceptual)
 
-| Regime Family | Models | Role |
-|--------------|--------|------|
-| Chaotic Flow | Lorenz, Halvorsen, Rössler | local motion |
-| Synchronization | Kuramoto | emergence |
-| Stability | Lyapunov, Control | regulation |
-| Transition | Bifurcation, Hybrid | regime change |
-| Reconstruction | Koopman, DMD | field inference |
-| Discrete | Markov, Graph | state transitions |
-| Harmonic | Fourier, MMF | global structure |
-| Geometry | Riemann, Polar | space definition |
+NEXAH potentially connects:
+
+- dynamical systems  
+- control theory  
+- Koopman analysis  
+- graph transitions  
 
 ---
 
-# 🔶 7. NEXAH POSITION
-
-## 🧠 Definition (Current)
-
-```text
-NEXAH = transition geometry layer
-connecting regimes across representations
-```
-
----
-
-## Role
-
-| Function | Description |
-|--------|------------|
-| Detection | identify regimes |
-| Mapping | reveal structure |
-| Prediction | estimate transitions |
-| Navigation | guide trajectories |
-| Control | influence transitions |
-
----
-
-## 🧭 Key Statement
-
-```text
-NEXAH does not replace models.
-
-It connects them via transition structure.
-```
-
----
-
-# ⚙️ 8. NAVIGATION PRINCIPLE
-
-## Working Model
+# 🔷 Navigation Intuition
 
 ```text
 navigation = alignment + avoidance
@@ -260,100 +137,36 @@ navigation = alignment + avoidance
 
 ---
 
-## Components
+# ❓ Open Directions (Informal)
 
-| Component | Meaning |
-|----------|--------|
-| Alignment | follow stable flow |
-| Avoidance | avoid instability |
-| Control | minimal intervention |
-| Path | structure-consistent |
+- how to define regimes mathematically?  
+- how to detect gates robustly?  
+- how to model transitions probabilistically?  
 
 ---
 
-# 📊 9. CHECKLIST — CURRENT STATUS
-
-## Structure Discovery
-
-- [x] regimes visible  
-- [x] flow field structure  
-- [x] transitions observable  
-- [ ] gate detection formalized  
-- [ ] sheet structure validated  
-
----
-
-## Transition Understanding
-
-- [x] smooth transitions observed  
-- [x] directional constraints  
-- [ ] transition probabilities modeled  
-- [ ] instability metric defined  
-
----
-
-## Control / Navigation
-
-- [x] guided trajectories possible  
-- [x] avoidance behavior observed  
-- [ ] optimal control formalized  
-- [ ] robustness under noise tested  
-
----
-
-## Integration
-
-- [x] multiple models mapped  
-- [x] local/global distinction  
-- [ ] unified mathematical formalism  
-- [ ] experimental validation  
-
----
-
-# ❓ 10. OPEN QUESTIONS (REFINED)
-
-### Structure
-
-- how to detect regimes algorithmically?  
-- what defines regime boundaries mathematically?  
-
-### Transitions
-
-- are gates identifiable via density minima?  
-- can transition probability be derived from field?  
-
-### Control
-
-- how minimal can intervention be?  
-- can navigation be guaranteed?  
-
-### Robustness
-
-- behavior under noise?  
-- sensitivity to model error?  
-
----
-
-# 🧠 11. META INSIGHT (REFINED)
+# 🧠 Meta Insight
 
 ```text
 The system is not a signal.
 
-It is a structured space
-that is being traversed.
+It is a structured space being traversed.
 ```
 
 ---
 
-# 🔥 FINAL ADDITION
+# 🔥 Role in NEXAH
 
-## 🧭 Interpretation Layer
+This document is:
 
 ```text
-Dynamics = how the system moves  
-Structure = where it moves  
-Representation = what we observe  
-NEXAH = how we navigate
+NOT authoritative
+
+BUT essential for development
 ```
 
 ---
+
+**NEXAH Research Notes**  
+Exploratory Layer  
+Thomas K. R. Hofmann · 2026

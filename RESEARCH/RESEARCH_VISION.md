@@ -14,6 +14,20 @@ It identifies **structure within system dynamics** and enables **causal interact
 
 ---
 
+## 🔷 Structural Framework
+
+See core figures:
+
+![Structural Framework](./FIGURES/main/Fig_01.png)
+
+The NEXAH framework reduces dynamical systems to a structural pipeline:
+
+Flow → Sheets → Regimes & Gates → Transitions → Connectivity → Topology
+
+Structure is not imposed — it is extracted from trajectory data.
+
+---
+
 ## 🔷 Core Hypothesis
 
 > Complex systems evolve within **structured fields**  
@@ -31,6 +45,10 @@ Observed structure:
 - stable regions form **basins (regimes)**  
 - transitions occur through **gates (intersections)**  
 - phase dynamics determine **when transitions activate**
+
+This empirical structure corresponds to the extracted sheet, gate and transition layers shown in:
+
+![Extraction](./FIGURES/main/Fig_02.png)
 
 ---
 

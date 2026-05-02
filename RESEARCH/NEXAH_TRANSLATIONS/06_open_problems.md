@@ -11,81 +11,100 @@ It serves to:
 - identify missing formalization  
 - guide future development  
 
+All questions arise from the structural framework and empirical results of the NEXAH research layer.
+
+---
+
+# 🔷 Context: What is already established
+
+From the current framework:
+
+- structure can be extracted from trajectories  
+- coherent regions (regimes) can be identified  
+- transition regions emerge at low-density / low-coherence zones  
+- transitions are structured and non-random  
+- phase mismatch correlates with transition activation  
+
 ---
 
 # 🔬 1. Formal Definition of Coherence
 
-Current definition:
+Current interpretation:
 
 ```text
-C(x) ≈ alignment between flow and structure
+C(x) ≈ alignment between motion and local flow structure
 ```
 
 Problem:
 
 - not uniquely defined  
-- depends on approximation  
+- depends on representation and projection  
 
 ---
 
 ## Open Question
 
-$$
-\text{How can coherence } C(x) \text{ be rigorously defined?}
-$$
+How can coherence $begin:math:text$ C\(x\) $end:math:text$ be defined:
+
+- in a coordinate-independent way  
+- robust under noise  
+- stable across systems  
 
 ---
 
-# 🔬 2. Mathematical Properties of the Gate Operator
+# 🔬 2. Mathematical Properties of the Gate Function
 
-Definition:
+Current interpretation:
 
-$$
-G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
-$$
+```text
+G(x) ∝ low density × low coherence × low residence
+```
 
 ---
 
 ## Open Questions
 
-- continuity and differentiability of $G(x)$  
+- continuity and differentiability of $begin:math:text$ G\(x\) $end:math:text$  
 - sensitivity to normalization  
 - invariance under coordinate transformations  
+- relation to geometric singularities or separatrices  
 
 ---
 
 # 🔬 3. Relation to Lyapunov Stability
 
-Current interpretation:
+Observed:
 
 ```text
-low G(x) → stable region
+low G(x) ↔ stable regions
 ```
 
 ---
 
 ## Open Question
 
-$$
-\text{Is there a formal relation between } G(x) \text{ and Lyapunov functions?}
-$$
+Is there a formal relation between:
+
+- $begin:math:text$ G\(x\) $end:math:text$ and Lyapunov functions  
+- or other stability certificates?  
 
 ---
 
-# 🔬 4. Connection to Invariant Manifolds
+# 🔬 4. Connection to Invariant Structures
 
 Observed:
 
 ```text
-density ridges resemble manifolds
+density ridges resemble structured manifolds
 ```
 
 ---
 
 ## Open Questions
 
-- Are ridges approximations of invariant manifolds?  
-- Can they be formally linked to stable/unstable manifolds?  
+- Are density ridges approximations of invariant manifolds?  
+- Can sheet structures be linked to stable/unstable manifolds?  
+- Do sheets define a generalized foliation of phase space?  
 
 ---
 
@@ -93,20 +112,23 @@ density ridges resemble manifolds
 
 Current limitation:
 
-- KDE does not scale well  
+```text
+density estimation (KDE) does not scale well
+```
 
 ---
 
 ## Open Questions
 
-- Can $\rho(x)$ be replaced by learned density models?  
-- How does structure behave in high-dimensional systems?  
+- Can $begin:math:text$ \\rho\(x\) $end:math:text$ be replaced by learned density models?  
+- Can structure be extracted in latent spaces?  
+- How stable are structural features under dimensionality reduction?  
 
 ---
 
 # 🔬 6. Probabilistic Interpretation
 
-Observation:
+Observed:
 
 ```text
 G(x) behaves like transition likelihood
@@ -116,9 +138,11 @@ G(x) behaves like transition likelihood
 
 ## Open Question
 
-$$
-\text{Can } G(x) \text{ be interpreted as a probability density or hazard function?}
-$$
+Can structural quantities be interpreted as:
+
+- transition probabilities  
+- hazard rates  
+- stochastic switching kernels?  
 
 ---
 
@@ -127,7 +151,7 @@ $$
 Current approach:
 
 ```text
-geometry-based feedback
+geometry-based, phase-aligned control
 ```
 
 ---
@@ -137,6 +161,7 @@ geometry-based feedback
 - stability guarantees under NEXAH control  
 - relation to optimal control  
 - compatibility with MPC  
+- controllability of transitions between regimes  
 
 ---
 
@@ -145,15 +170,16 @@ geometry-based feedback
 Current:
 
 ```text
-field derived from trajectories
+structure is reconstructed from trajectories
 ```
 
 ---
 
 ## Open Questions
 
-- can $G(x)$ be learned via neural networks?  
-- can structure be inferred without full trajectory data?  
+- can $begin:math:text$ G\(x\) $end:math:text$ be learned directly (e.g. neural fields)?  
+- can structure be inferred from partial observations?  
+- can dynamics → structure mapping be learned end-to-end?  
 
 ---
 
@@ -171,13 +197,14 @@ geometric interpretation of dynamics
 
 - relation to energy landscapes  
 - compatibility with conservation laws  
-- extension to continuous fields (PDEs)  
+- extension to PDE systems  
+- relation to transport phenomena  
 
 ---
 
-# 🔬 10. Janus Field Formalization
+# 🔬 10. Bidirectional / Janus Field
 
-Current:
+Concept:
 
 ```text
 F_J(x) = F_forward + F_backward
@@ -188,8 +215,129 @@ F_J(x) = F_forward + F_backward
 ## Open Questions
 
 - how to define backward flow rigorously  
-- relation to reversible dynamics  
-- connection to time-symmetric formulations  
+- relation to reversible systems  
+- connection to Koopman / Perron–Frobenius operators  
+
+---
+
+# 🔬 11. Temporal Structure of Transitions
+
+Observed:
+
+- transitions are temporally clustered  
+- switching is non-uniform  
+
+---
+
+## Open Questions
+
+- what governs transition intensity $begin:math:text$ \\kappa\(t\) $end:math:text$?  
+- are there scaling laws?  
+- can transition timing be predicted from structure?  
+
+---
+
+# 🔬 12. Structural Quantity Separation
+
+Current quantities:
+
+```text
+ρ(x) → density / occupancy  
+C(x) → coherence / alignment  
+∇ρ(x) → structural gradient  
+G(x) → transition susceptibility
+```
+
+---
+
+## Core Problem
+
+These quantities are:
+
+- empirically meaningful  
+- but not yet formally unified  
+
+---
+
+## Open Question
+
+Can $begin:math:text$ G\(x\) $end:math:text$ be defined as a principled function of:
+
+- density  
+- coherence  
+- residence time  
+- structural gradients  
+
+---
+
+## Candidate Form
+
+$$
+G(x) \propto W_\rho(x)\, W_C(x)\, W_R(x)\, W_{\nabla}(x)
+$$
+
+---
+
+## Interpretation
+
+```text
+C(x): describes aligned motion
+
+G(x): describes structural breakdown
+```
+
+Important:
+
+```text
+G(x) is NOT an inverse of C(x)
+```
+
+---
+
+## Research Direction
+
+Compare predictive power of:
+
+- density-only  
+- coherence-only  
+- gradient-only  
+- combined gate score  
+
+---
+
+# 🔬 13. Measurement Axis / GH Hypothesis (Exploratory)
+
+A conceptual measurement axis (e.g. "trajectory sled")  
+has been used to probe transitions across structural layers.
+
+---
+
+## Status
+
+```text
+exploratory / not formalized
+```
+
+---
+
+## Open Question
+
+Can transition behavior be consistently measured along a  
+low-dimensional projection that captures:
+
+- density variation  
+- coherence breakdown  
+- transition activation  
+
+---
+
+## Requirement
+
+This concept requires:
+
+- formal definition  
+- reproducibility  
+- independence from visualization choices  
 
 ---
 
@@ -197,19 +345,17 @@ F_J(x) = F_forward + F_backward
 
 NEXAH currently provides:
 
-```text
-• strong empirical observations  
-• consistent geometric interpretation  
-• promising control framework  
-```
+- strong empirical observations  
+- consistent geometric interpretation  
+- structured transition model  
+- initial control framework  
 
 But lacks:
 
-```text
-• formal proofs  
-• theoretical grounding  
-• scalability guarantees  
-```
+- formal proofs  
+- theoretical grounding  
+- scalability guarantees  
+- probabilistic formalization  
 
 ---
 
@@ -217,11 +363,11 @@ But lacks:
 
 Future work should focus on:
 
-```text
-1. Formalization
-2. Validation
-3. Integration with existing theory
-```
+1. Formalization  
+2. Quantitative validation  
+3. Integration with existing theory  
+4. High-dimensional scaling  
+5. Control guarantees  
 
 ---
 
@@ -230,7 +376,10 @@ Future work should focus on:
 ```text
 NEXAH is not a finished theory.
 
-It is a structured hypothesis about how geometry governs dynamics.
+It is a structured hypothesis that:
+
+geometry extracted from dynamics  
+governs transitions and emergent topology.
 ```
 
 ---
