@@ -311,9 +311,9 @@ of continuous dynamical systems.
 
 ## Visual Evidence
 
-![Cross-System Transition Matrices](cross_system_transition_matrices.png)
+![Cross-System Transition Matrices](cross_system/cross_system_transition_matrices.png)
 
-![Cross-System Distance Matrix](cross_system_distance_matrix.png)
+![Cross-System Distance Matrix](cross_system/cross_system_distance_matrix.png)
 
 ---
 
