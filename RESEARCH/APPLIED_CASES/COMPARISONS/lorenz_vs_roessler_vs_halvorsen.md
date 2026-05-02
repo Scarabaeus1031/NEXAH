@@ -31,7 +31,7 @@ Dynamics → Density → Structure → Sheets → Regimes → Gates → Transiti
 
 # 🔬 1. Raw Dynamics
 
-![Cross-System Dynamics](../../../../FIGURES/fig_01_field_structure.png)
+![Cross-System Dynamics](../../FIGURES/fig_01_field_structure.png)
 
 ## Observation
 
@@ -50,7 +50,7 @@ different geometry
 
 # 🔬 2. Density Field
 
-![Density Comparison](../../visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
+![Density Comparison](../../../../visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
 
 ## Observation
 
@@ -68,7 +68,7 @@ density is universal structural carrier
 
 # 🔬 3. Structure (Ridges / Flow Geometry)
 
-![Structure](../../../visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
+![Structure](../../../../visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
 
 ## Observation
 
@@ -86,7 +86,7 @@ structure emerges from flow alignment
 
 # 🔬 4. Sheets (Discrete Structural Layers)
 
-![Sheets](../../../visuals/structure/transition_structure_phase.png)
+![Sheets](../../../../visuals/structure/transition_structure_phase.png)
 
 ## Observation
 
@@ -104,9 +104,9 @@ continuous dynamics induce discrete layers
 
 # 🔬 5. Transition Structure
 
-![Transition Matrix](../../../visuals/structure/transition_structure_matrix.png)
+![Transition Matrix](../../../../visuals/structure/transition_structure_matrix.png)
 
-![Transition Time](../../../visuals/structure/transition_structure_timeseries.png)
+![Transition Time](../../../../visuals/structure/transition_structure_timeseries.png)
 
 ## Observation
 
@@ -128,7 +128,7 @@ systems behave like constrained Markov processes
 
 # 🔬 6. Gate Structure
 
-![Gate Operator](../../../visuals/unified/nexah_unified_gate_operator_v25.png)
+![Gate Operator](../../../../visuals/unified/nexah_unified_gate_operator_v25.png)
 
 ## Definition
 
@@ -153,7 +153,7 @@ NOT discrete triggers
 
 # 🔬 7. Transition Geometry (Cross-System)
 
-![Cross System](../../../visuals/cross_system/nexah_cross_system_structure_v23.png)
+![Cross System](../../../../visuals/cross_system/nexah_cross_system_structure_v23.png)
 
 ## Observation
 
@@ -175,7 +175,7 @@ geometry of transitions is invariant
 
 # 🔬 8. Navigation & Flow
 
-![Navigation](../../../visuals/navigation/nexah_goal_navigation_v13.png)
+![Navigation](../../../../visuals/navigation/nexah_goal_navigation_v13.png)
 
 ## Observation
 
@@ -188,7 +188,7 @@ NOT shortest path
 
 # 🔬 9. Rotation & Stability
 
-![Rotation](../../../visuals/rotation/nexah_rotation_field_v24.png)
+![Rotation](../../../../visuals/rotation/nexah_rotation_field_v24.png)
 
 ## Insight
 
