@@ -19,13 +19,53 @@ Instead, it introduces a **geometric perspective on dynamical systems** that can
 
 At its core, NEXAH proposes:
 
-```text
-Dynamical systems generate structure.
-
-That structure constrains motion.
-
+Dynamical systems generate structure.  
+That structure constrains motion.  
 Transitions occur where structure breaks down.
-```
+
+---
+
+## 🔷 Structural Framework (Visual Reference)
+
+![Framework](../FIGURES/main/Fig_01.png)
+
+This pipeline represents the core transformation:
+
+Flow → Sheets → Regimes & Gates → Transitions → Connectivity → Topology
+
+It serves as the **shared conceptual backbone** across all translations.
+
+---
+
+## 🔷 Data-Driven Extraction
+
+![Extraction](../FIGURES/main/Fig_02.png)
+
+All structural elements are **extracted from trajectory data**:
+
+- sheets → coherent motion regions  
+- gates → low-density, low-coherence intersections  
+- transitions → switching between sheets  
+
+This ensures that the framework remains:
+
+data-driven  
+non-assumptive  
+empirically grounded  
+
+---
+
+## 🔷 Quantitative Structure
+
+![Quantitative](../FIGURES/main/Fig_03.png)
+
+Transitions are not random.
+
+They follow measurable patterns:
+
+- probability depends on distance from structure  
+- switching is temporally clustered  
+- transitions are local in sheet space  
 
 ---
 
@@ -39,11 +79,9 @@ The core NEXAH ideas are:
 
 However, each field uses different language and concepts.
 
-👉 This layer ensures:
+This layer ensures:
 
-```text
 Same idea → different interpretations → same underlying structure
-```
 
 ---
 
@@ -51,85 +89,65 @@ Same idea → different interpretations → same underlying structure
 
 ## 🔹 Core
 
-- `00_core_claims_short.md`  
-  → Minimal, discipline-independent formulation of NEXAH  
+- 00_core_claims_short.md  
+  → Minimal, discipline-independent formulation  
 
 ---
 
 ## 🔹 Domain Translations
 
-- `01_for_dynamical_systems.md`  
+- 01_for_dynamical_systems.md  
   → phase space, manifolds, stability  
 
-- `02_for_control_theory.md`  
+- 02_for_control_theory.md  
   → feedback, control, stability  
 
-- `03_for_ml_rl.md`  
+- 03_for_ml_rl.md  
   → policy, exploration, state space  
 
-- `04_for_physics.md`  
+- 04_for_physics.md  
   → fields, flow, stability, structure  
 
 ---
 
 ## 🔹 Visual Layer
 
-- `05_visual_explanations.md`  
-  → intuitive, image-driven explanation of all core ideas  
+- 05_visual_explanations.md  
+  → intuitive, image-driven explanation  
 
 ---
 
 # 🔬 Key Concepts (Shared Across All Domains)
 
-The following concepts appear in all translations:
-
----
-
 ## 1. Density Field
 
-$$
-\rho(x) = \mathrm{KDE}(\{x_t\})
-$$
+ρ(x) = KDE({x_t})
 
-```text
 Represents where the system tends to exist.
-```
 
 ---
 
 ## 2. Flow Field
 
-$$
-\dot{x} = F(x)
-$$
+ẋ = F(x)
 
-```text
 Defines how the system moves.
-```
 
 ---
 
 ## 3. Gate Operator
 
-$$
-G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
-$$
+G(x) ∝ low density × low coherence × low residence
 
-```text
-Measures structural instability.
-```
+Measures structural instability and transition likelihood.
 
 ---
 
 ## 4. Navigation Kernel
 
-$$
-\dot{x} = F(x) - \lambda \nabla G(x) + \mu \nabla \rho(x)
-$$
+ẋ = F(x) - λ ∇G(x) + μ ∇ρ(x)
 
-```text
 Defines structure-aware motion.
-```
 
 ---
 
@@ -137,15 +155,11 @@ Defines structure-aware motion.
 
 Traditional view:
 
-```text
 Systems evolve according to equations.
-```
 
 NEXAH view:
 
-```text
 Systems move within an emergent geometric field.
-```
 
 ---
 
@@ -153,9 +167,10 @@ Systems move within an emergent geometric field.
 
 | Concept | Dynamical Systems | Control | ML / RL | Physics |
 |--------|------------------|--------|--------|--------|
-| $\rho(x)$ | invariant measure | state occupancy | state distribution | density |
-| $G(x)$ | separatrix region | instability field | risk / uncertainty | instability |
-| navigation | trajectory flow | feedback control | policy | motion in field |
+| ρ(x) | invariant measure | state occupancy | state distribution | density |
+| G(x) | separatrix region | instability field | risk / uncertainty | instability |
+| sheets | manifolds / foliations | operating regimes | latent structure | layered flow |
+| transitions | switching dynamics | control boundaries | policy shifts | phase transitions |
 
 ---
 
@@ -163,9 +178,9 @@ Systems move within an emergent geometric field.
 
 Recommended order:
 
-1. `00_core_claims_short.md`  
+1. 00_core_claims_short.md  
 2. Your domain-specific file  
-3. `05_visual_explanations.md`  
+3. 05_visual_explanations.md  
 
 ---
 
@@ -173,9 +188,7 @@ Recommended order:
 
 This layer is:
 
-```text
 interpretive and translational
-```
 
 It does NOT:
 
@@ -189,22 +202,18 @@ It does NOT:
 
 The purpose of this layer is:
 
-```text
-to make NEXAH understandable from multiple perspectives
-without losing its core idea.
-```
+to make NEXAH understandable from multiple perspectives  
+without losing its core structure.
 
 ---
 
 # 🧠 Final Insight
 
-```text
 Different disciplines describe systems differently.
 
 But the underlying structure may be the same.
-```
 
 ---
 
-**NEXAH — Translation Layer**  
+NEXAH — Translation Layer  
 Thomas K. R. Hofmann · 2026
