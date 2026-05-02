@@ -25,7 +25,9 @@ It is:
 
 # 🔁 Pipeline Overview
 
-Grid → Density → Ridge → Aperture → Gate → Ghost
+```text
+Grid → Density → Ridge → Aperture → Gate → Phase → Transition
+```
 
 Each step reveals one layer of the same underlying system.
 
@@ -95,24 +97,51 @@ Each step reveals one layer of the same underlying system.
 
 ---
 
-# 🧩 5. Aperture Ring vs Gate Sequence — Transition Points
+# 🧩 5. Aperture Ring vs Gate Structure — Transition Locations
 
 ![Gate Sequence](./visuals/VISUAL_05_APERTURE_RINGvsGATE_SEQUENCE.png)
 
 ### Idea
 
-- Coherence signal C(t) identifies instability points  
-- These map to discrete positions on the aperture  
+- Structural analysis identifies **candidate transition regions (gates)**  
+- These are fixed in geometry  
 
 ### Insight
 
-> Transitions occur at **specific structural locations**, not randomly
+> Geometry defines **where transitions can occur**
 
 ---
 
-# 🧩 6. Full Structure vs Ghost Snake — Minimal Representation
+# 🧩 6. Gate vs Phase Dynamics — Transition Activation
 
-![Ghost Structure](./visuals/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png  )
+*(NEW LAYER — validated in NEXAH causality module)*
+
+### Idea
+
+- Phase evolves along the trajectory:
+  
+  ```text
+  φ(t),  ω = dφ/dt
+  ```
+
+- Expected phase evolution defines a baseline  
+- Deviation from it creates **phase mismatch**
+
+### Key quantity
+
+```text
+mismatch = |ω - expected(ω)|
+```
+
+### Insight
+
+> Phase determines **when transitions occur**
+
+---
+
+# 🧩 7. Full Structure vs Ghost Snake — Minimal Representation
+
+![Ghost Structure](./visuals/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
 
 ### Idea
 
@@ -125,7 +154,7 @@ Each step reveals one layer of the same underlying system.
 
 ---
 
-# 🧩 7. The NEXAH Lens — Multi-Perspective View
+# 🧩 8. The NEXAH Lens — Multi-Perspective View
 
 ![NEXAH Lens](./visuals/VISUAL_07_THE_NEXAH_LENS.png)
 
@@ -136,6 +165,7 @@ The same structure appears differently depending on perspective:
 - 2D projection → density & ridges  
 - 3D view → geometry & depth  
 - time view → coherence & transitions  
+- phase view → activation & mismatch  
 
 ### Insight
 
@@ -145,11 +175,48 @@ The same structure appears differently depending on perspective:
 ---
 
 # 🧠 Core Principle
+
 ```text
 What looks like a line → may be a projected ring
 What looks like a channel → may be an aperture
 What looks like a point → may be a gate
+
+What looks like a transition trigger →
+is a phase mismatch event
 ```
+
+---
+
+# 🔬 Interpretation (Updated)
+
+The pipeline can be summarized as:
+
+```text
+trajectory → density → structure → geometry → phase → mismatch → transition
+```
+
+---
+
+# 🔬 Key Insight (Updated)
+
+> Structure defines where transitions can occur.
+
+> Phase dynamics determine when they occur.
+
+And:
+
+> Transitions are triggered when phase evolution deviates  
+> from its expected trajectory.
+
+---
+
+# 🚧 Limitations
+
+- based on specific systems (e.g. Lorenz-like)  
+- dependent on projection  
+- partially heuristic  
+- phase model currently empirical  
+- not yet generalized across domains  
 
 ---
 
@@ -162,7 +229,6 @@ This system connects to:
 ## → field_model.md
 
 - interprets systems as **fields of transitions**  
-- provides conceptual grounding  
 
 ---
 
@@ -173,10 +239,12 @@ This system connects to:
 
 ---
 
-## → zeta_lens_framework.md
+## → VALIDATION/causality/
 
-- provides an interpretation layer  
-- connects mapping, perception, and structure  
+- provides empirical evidence for:
+  - phase mismatch  
+  - control alignment  
+  - transition triggering  
 
 ---
 
@@ -189,45 +257,6 @@ This system connects to:
 ## → visual_gallery.md
 
 - contains earlier exploratory visuals  
-- used for intuition and development  
-
----
-
-# 🔬 Interpretation (Non-Formal)
-
-The pipeline can be summarized as:
-
-trajectory → density → structure → constraint → transition
-
----
-
-## Important
-
-This is:
-
-- an empirical pipeline  
-- not a formal derivation  
-
----
-
-# 🚧 Limitations
-
-- based on specific systems (e.g. Lorenz-like)  
-- dependent on projection  
-- partially heuristic  
-- not yet validated across domains  
-
----
-
-# 🧠 Key Insight
-
-> Structure is not directly observable.  
-> It emerges through aggregation, projection, and transformation.
-
-And:
-
-> Transitions occur where coherence collapses  
-> and structure reorganizes.
 
 ---
 
@@ -237,15 +266,15 @@ Supports:
 
 ### DISCOVERY ENGINE
 - structure extraction  
-- transition detection  
+- gate detection  
 
 ### FIELD_LAYER
 - geometric representation  
-- continuous field interpretation  
+- phase-aware interpretation  
 
 ### NAVIGATION
 - movement between regimes  
-- control via structure  
+- control via phase alignment  
 
 ---
 
@@ -255,7 +284,7 @@ The Aperture Geometry System is:
 
 - a **visual pipeline**
 - a **structure extraction method**
-- a **bridge between dynamics and geometry**
+- a **geometry + phase integration layer**
 
 It is not:
 
@@ -264,7 +293,7 @@ It is not:
 
 It is:
 
-> a **working system for revealing hidden structure**
+> a **working system for revealing hidden structure and transition triggers**
 
 ---
 
@@ -272,9 +301,9 @@ It is:
 
 Exploratory  
 Visually validated  
-Partially implemented  
+Causally extended (phase layer)  
 
 ---
 
 **NEXAH Research Layer**  
-From dynamics → to structure → to navigation
+From dynamics → to structure → to phase → to transition
