@@ -50,7 +50,7 @@ different geometry
 
 # 🔬 2. Density Field
 
-![Density Comparison](../../../../visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
+![Density](../../../../visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
 
 ## Observation
 
