@@ -1,10 +1,16 @@
 # 🧮 NEXAH — Core Equations
 
-This document defines the **minimal mathematical structure**  
-underlying the NEXAH validation and control framework.
+This document defines the **minimal operational mathematical structure**  
+underlying the NEXAH framework.
 
-All equations are directly derived from simulation behavior  
-and correspond to implemented analysis pipelines.
+It formalizes the relationship between:
+
+- phase dynamics  
+- mismatch  
+- transitions  
+- control  
+
+All quantities are derived from empirical system behavior.
 
 ---
 
@@ -17,60 +23,64 @@ This is:
 
 It is:
 
-> a **minimal operational system of equations**  
-> describing phase dynamics, transitions, and control
+> a **minimal, empirically grounded equation system**
 
 ---
 
-# 🧭 1. State Representation
+# 🧭 1. Dynamical System
 
-Given a dynamical system:
+We consider:
 
-```text
-dx/dt = F(x)
-```
+$$
+\dot{x} = F(x), \quad x \in \mathbb{R}^n
+$$
 
-We analyze motion in projected phase space:
+with trajectory:
 
-```text
-x = (x₁, x₂, x₃, ...)
-```
+$$
+x(t)
+$$
 
 ---
 
 # 🌀 2. Phase Definition
 
-Phase is defined in a 2D projection:
+Phase is defined via a projection:
 
-```text
-φ(t) = arctan2(x₂(t), x₁(t))
-```
+$$
+\phi(t) = \arctan2(x_2(t), x_1(t))
+$$
 
 ---
 
 # 🔁 3. Phase Velocity
 
-```text
-ω(t) = dφ/dt
-```
+Temporal derivative:
 
-Computed numerically:
+$$
+\omega(t) = \frac{d\phi(t)}{dt}
+$$
 
-```text
-ω ≈ ∇φ
-```
+In discrete form:
+
+$$
+\omega(t) \approx \frac{\phi(t+\Delta t) - \phi(t)}{\Delta t}
+$$
 
 ---
 
 # 🧩 4. Expected Phase Dynamics
 
-A smoothed reference:
+Define a local expectation operator:
 
-```text
-ω̂(t) = smooth(ω(t))
-```
+$$
+\hat{\omega}(t) = \mathcal{E}[\omega](t)
+$$
 
-(e.g. moving average)
+where:
+
+- $\mathcal{E}$ = smoothing / local averaging operator  
+- e.g. moving average or low-pass filter  
 
 ---
 
@@ -78,14 +88,16 @@ A smoothed reference:
 
 Core quantity:
 
-```text
-M(t) = |ω(t) - ω̂(t)|
-```
+$$
+M(t) = |\omega(t) - \hat{\omega}(t)|
+$$
 
 Interpretation:
 
-- low M → aligned dynamics  
-- high M → phase disruption  
+```text
+M small → coherent phase evolution  
+M large → disruption of phase consistency
+```
 
 ---
 
@@ -93,52 +105,56 @@ Interpretation:
 
 Local dynamical magnitude:
 
-```text
-I(t) = ||dx/dt||
-```
+$$
+I(t) = \|\dot{x}(t)\|
+$$
 
 ---
 
-# ⚡ 7. IOTA Event Definition
+# ⚡ 7. Transition Events (IOTA)
 
-Transition events occur when mismatch exceeds threshold:
+Define transition activation probabilistically:
 
-```text
-IOTA ⇔ M(t) > M_threshold
-```
+$$
+P(\text{IOTA at } t) = f(M(t))
+$$
 
-Equivalent interpretation:
+with:
 
-```text
-IOTA ⇔ phase alignment breaks
-```
+$$
+\frac{dP}{dM} > 0
+$$
+
+---
+
+## Threshold Approximation (Operational)
+
+In practice:
+
+$$
+\text{IOTA} \;\Longleftrightarrow\; M(t) > \tau
+$$
+
+for threshold $\tau$.
 
 ---
 
 # 🔬 8. Conditional Transition Law
 
-Empirical law:
+Empirical observation:
 
-```text
-P(IOTA | M) ↑ as M ↑
-```
-
-→ transition probability increases with mismatch
+$$
+P(\text{IOTA} \mid M) \uparrow \text{ as } M \uparrow
+$$
 
 ---
 
-# 🧠 9. Mismatch Interpretation
+# 🧠 9. Interpretation of Mismatch
 
-Mismatch reflects misalignment between:
-
-```text
-M(t) ≈ I(t) − control_alignment
-```
-
-More precisely:
+Mismatch measures deviation from expected rotational behavior:
 
 ```text
-M(t) = deviation from expected rotational consistency
+M(t) = deviation from local phase-consistent motion
 ```
 
 ---
@@ -147,74 +163,71 @@ M(t) = deviation from expected rotational consistency
 
 Current control:
 
-```text
-s(t) = s*(φ(t))
-```
-
-Where:
-
-- s = control strength  
-- φ = phase  
+$$
+s(t) = s^*(\phi(t))
+$$
 
 ---
 
 # ⚠️ Limitation
 
-Phase-only control cannot fully suppress transitions.
+Phase-only control is insufficient to suppress transitions.
 
 ---
 
 # 🚀 11. Extended Control Law
 
-Required extension:
+Proposed extension:
 
-```text
-s(t) = f(φ(t), I(t))
-```
-
-Goal:
-
-- adapt control to both phase and instability  
+$$
+s(t) = f(\phi(t), I(t))
+$$
 
 ---
 
 # 🔧 12. Control Objective
 
-Control aims to minimize mismatch:
+Primary objective:
 
-```text
-minimize M(t)
-```
+$$
+\min M(t)
+$$
 
 Equivalent:
 
-```text
-align ω(t) with ω̂(t)
-```
+$$
+\omega(t) \rightarrow \hat{\omega}(t)
+$$
 
 ---
 
-# 🧭 13. Control Effectiveness Condition
+# 🧭 13. Control Effectiveness
 
 ```text
-effective control ⇔ M(t) → small
+effective control ⇔ M(t) small
 ```
 
 ---
 
 # 🔁 14. Transition Mechanism (Core Result)
 
-Transitions are not driven by instability alone:
+Empirical result:
 
 ```text
-IOTA ⇔ M(t) ≫ 0
+Transitions are not driven by instability alone.
 ```
 
-Expanded:
+Formally:
 
-```text
-IOTA ⇔ phase–control mismatch
-```
+$$
+\text{IOTA} \not\sim I(t)
+$$
+
+but:
+
+$$
+\text{IOTA} \sim M(t)
+$$
 
 ---
 
@@ -237,23 +250,17 @@ Transition:
 
 Observed dominant modes:
 
-```text
-k ∈ {4, 32, 34, 2, 0}
-```
-
-Indicating:
-
-```text
-non-uniform angular transition structure
-```
+$$
+k \in \{4, 32, 34, 2, 0\}
+$$
 
 ---
 
-# 🔑 Core System Summary
+# 🔑 System Summary
 
 ```text
-φ → ω → ω̂ → M → IOTA
-           ↑
+φ → ω → ω̂ → M → transition probability
+            ↑
          control
 ```
 
@@ -266,10 +273,8 @@ non-uniform angular transition structure
 # 🔥 Central Insight
 
 ```text
-Transitions are not caused by instability magnitude.
-
-They are caused by mismatch
-between actual and expected phase dynamics.
+Transitions are caused by phase mismatch,
+not by instability magnitude alone.
 ```
 
 ---
@@ -277,10 +282,8 @@ between actual and expected phase dynamics.
 # 🚀 Operational Principle
 
 ```text
-Control does not reduce instability.
-
-Control aligns the system
-with its intrinsic phase structure.
+Control aligns phase dynamics,
+rather than suppressing system energy.
 ```
 
 ---
@@ -288,11 +291,11 @@ with its intrinsic phase structure.
 # 🧭 Status
 
 - empirically validated  
-- multi-system consistent  
+- cross-system consistent  
 - causally supported  
 
 ---
 
 **NEXAH Core Equation Layer**  
 Minimal Phase–Mismatch–Control Framework  
-© Thomas K. R. Hofmann · 2026
+Thomas K. R. Hofmann · 2026
