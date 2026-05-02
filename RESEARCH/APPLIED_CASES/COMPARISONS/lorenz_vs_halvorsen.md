@@ -2,25 +2,33 @@
 
 ## 🧭 Purpose
 
-This document compares the Lorenz system and the Halvorsen system
+This document compares the Lorenz system and the Halvorsen system  
 within the NEXAH framework.
 
 Its purpose is to demonstrate that:
 
-text NEXAH captures structural principles that persist across fundamentally different dynamical systems 
+```text
+NEXAH captures structural principles that persist
+across fundamentally different dynamical systems
+```
 
 ---
 
 # 🧠 Core Hypothesis
 
-text Dynamical systems do not evolve randomly.  They move through structured fields, with transitions governed by geometry and connectivity. 
+```text
+Dynamical systems do not evolve randomly.
+
+They move through structured fields,
+with transitions governed by geometry and connectivity.
+```
 
 ---
 
 # 🔷 1. System Overview
 
 | Property | Lorenz | Halvorsen |
-|--------|--------|----------|
+|----------|--------|----------|
 | Structure | dual-lobe attractor | fragmented multi-region |
 | Symmetry | partial symmetry | weak / broken symmetry |
 | Dynamics | switching between lobes | multi-directional interaction |
@@ -30,13 +38,21 @@ text Dynamical systems do not evolve randomly.  They move through structured fie
 
 # 🌀 2. Field Structure
 
+## 🖼️ Visual Comparison — State / Residue
+
+![Lorenz vs Halvorsen State](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/residue_flow_models_20260427_033254.png)
+
+---
+
 ## Lorenz
 
 - clearly separated density regions  
 - strong attractor cores  
-- well-defined low-density transition zones  
+- well-defined transition zones  
 
-text structured, globally visible geometry 
+```text
+structured, globally visible geometry
+```
 
 ---
 
@@ -44,15 +60,20 @@ text structured, globally visible geometry
 
 - irregular density distribution  
 - no dominant global structure  
-- multiple interacting flow regions  
+- multiple interacting regions  
 
-text structure emerges locally, not globally 
+```text
+structure emerges locally, not globally
+```
 
 ---
 
 ## 🔑 Insight
 
-text Structure exists in both systems, but with different degrees of global coherence. 
+```text
+Structure exists in both systems,
+but global coherence differs
+```
 
 ---
 
@@ -61,20 +82,23 @@ text Structure exists in both systems, but with different degrees of global cohe
 ## Lorenz
 
 - two dominant sheets (lobes)  
-- clear separation  
-- strong coherence  
+- strong separation  
+- high coherence  
 
 ## Halvorsen
 
-- multiple fragmented sheets  
-- overlapping flow regions  
-- weak global separation  
+- fragmented sheets  
+- overlapping regions  
+- weak separation  
 
 ---
 
 ## 🔑 Insight
 
-text Sheets are not limited to simple systems.  They generalize from clean separation (Lorenz) to fragmented layering (Halvorsen). 
+```text
+Sheets generalize from clean separation
+to fragmented layering
+```
 
 ---
 
@@ -82,21 +106,22 @@ text Sheets are not limited to simple systems.  They generalize from clean separ
 
 ## Lorenz
 
-- gates located between lobes  
-- highly structured  
-- spatially stable  
+- single dominant transition corridor  
+- stable geometry  
 
 ## Halvorsen
 
-- multiple irregular gate regions  
-- distributed across state space  
-- less symmetric  
+- multiple distributed gates  
+- irregular placement  
 
 ---
 
 ## 🔑 Insight
 
-text Gates are a universal feature, but their geometry depends on system complexity. 
+```text
+Gates are universal,
+but geometry scales with complexity
+```
 
 ---
 
@@ -105,26 +130,37 @@ text Gates are a universal feature, but their geometry depends on system complex
 ## Lorenz
 
 - discrete switching  
-- transitions between two regions  
-- temporally clustered  
+- binary structure  
 
-text clear regime transitions 
+```text
+clear regime transitions
+```
 
 ---
 
 ## Halvorsen
 
 - multi-path transitions  
-- no single dominant switching pattern  
-- transitions spread across regions  
+- distributed switching  
 
-text distributed transition dynamics 
+```text
+distributed transition dynamics
+```
+
+---
+
+## 🖼️ Visual — Flow Behavior
+
+![Flow Comparison](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/dual_system_overlay_20260427_030748.png)
 
 ---
 
 ## 🔑 Insight
 
-text Transitions are always structured,  but the structure can be: - discrete (Lorenz) - distributed (Halvorsen) 
+```text
+Transitions are always structured,
+but can be discrete or distributed
+```
 
 ---
 
@@ -132,21 +168,22 @@ text Transitions are always structured,  but the structure can be: - discrete (L
 
 ## Lorenz
 
-- simple connectivity  
-- two dominant nodes  
-- predictable switching  
+- simple graph  
+- few dominant nodes  
 
 ## Halvorsen
 
-- complex connectivity graph  
-- multiple nodes and paths  
+- complex connectivity  
+- multiple components  
 - non-trivial reachability  
 
 ---
 
 ## 🔑 Insight
 
-text Continuous systems collapse into a discrete connectivity structure. 
+```text
+Continuous systems collapse into discrete graphs
+```
 
 ---
 
@@ -155,20 +192,20 @@ text Continuous systems collapse into a discrete connectivity structure.
 ## Lorenz
 
 - phase-aligned control  
-- resonance-based steering  
-- low-dimensional navigation  
+- low-dimensional steering  
 
 ## Halvorsen
 
 - policy-based control  
-- gate-aware navigation  
 - path planning required  
 
 ---
 
 ## 🔑 Insight
 
-text Control complexity scales with structural complexity. 
+```text
+Control complexity scales with structural complexity
+```
 
 ---
 
@@ -176,69 +213,119 @@ text Control complexity scales with structural complexity.
 
 ## Lorenz
 
-text Möbius-like switching topology 
+```text
+Möbius-like switching topology
+```
 
 ## Halvorsen
 
-text irregular connectivity topology 
+```text
+irregular connectivity topology
+```
 
 ---
 
 ## 🔑 Insight
 
-text Topology is not predefined.  It emerges from transition connectivity. 
+```text
+Topology emerges from transitions,
+not from geometry alone
+```
 
 ---
 
 # 🌐 9. Structural Invariants (Critical)
 
-Despite major differences, both systems exhibit:
+Both systems exhibit:
 
-text ✔ density structure ✔ coherent flow regions ✔ gate-like transition regions ✔ constrained transitions ✔ navigable pathways 
+```text
+✔ density structure
+✔ coherent flow regions
+✔ gate-like transitions
+✔ constrained transitions
+✔ navigable pathways
+```
 
 ---
 
-## 🔥 Core Result
+# 🔥 Core Result
 
-text These properties are NOT system-specific.  They are structural invariants of continuous dynamics. 
+```text
+These properties are NOT system-specific.
+
+They are structural invariants of continuous dynamics.
+```
 
 ---
 
 # 🧠 10. Unified Interpretation
 
-text Lorenz: → structured, low-dimensional switching system  Halvorsen: → high-dimensional, fragmented transition system 
+```text
+Lorenz:
+→ structured, low-dimensional switching system
+
+Halvorsen:
+→ high-dimensional, fragmented transition system
+```
 
 BUT:
 
-text both obey the same structural principles 
+```text
+both obey the same structural principles
+```
 
 ---
 
-# 🔬 11. Implication for NEXAH
+# 🧠 11. Dynamic Comparison
 
-This comparison shows:
+## 🖼️ Dual System Animation
 
-text NEXAH is not tied to a specific attractor type.  It generalizes from:  simple → complex systems 
+![Dual Animation](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/halvorsen_lorenz_dual.gif)
+
+---
+
+## Interpretation
+
+- Lorenz → discrete switching  
+- Halvorsen → continuous rotational transport  
+
+```text
+Different geometry — same underlying logic
+```
+
+---
+
+# 🔬 12. Implication for NEXAH
+
+```text
+NEXAH is not tied to a specific attractor type.
+
+It generalizes from:
+simple → complex systems
+```
 
 ---
 
 # 🔥 Final Insight
 
-text Structure governs motion across all levels of complexity.  Only its expression changes. 
+```text
+Structure governs motion across all levels of complexity.
+
+Only its expression changes.
+```
 
 ---
 
 # 🚀 Conclusion
 
-text Lorenz demonstrates that structure exists.  Halvorsen demonstrates that structure persists even under high complexity. 
+```text
+Lorenz demonstrates that structure exists.
+
+Halvorsen demonstrates that structure persists
+even under high complexity.
+```
 
 ---
 
-# 🧭 Status
-
-diff + cross-system validated + simple → complex generalization + structural invariants identified - formal theory not yet complete 
-
----
-
-NEXAH Comparative Study — Lorenz vs Halvorsen  
+**NEXAH Comparative Study — Lorenz vs Halvorsen**  
 Thomas K. R. Hofmann · 2026
