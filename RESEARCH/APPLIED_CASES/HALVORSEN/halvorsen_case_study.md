@@ -37,80 +37,37 @@ $$
 
 ---
 
-## Role in NEXAH
+# 🔬 1. Raw System (Continuous Flow)
 
-```text
-Halvorsen serves as a stress test for structural extraction.
-```
-
-Unlike Lorenz, it lacks simple global symmetry.
-
----
-
-# 🔬 1. Empirical Structure
-
-Observed:
-
-- no simple lobe structure (unlike Lorenz)  
-- no simple spiral (unlike Rössler)  
-
----
-
-## 🖼️ Figure A — Field Structure (Generalized)
-
-![Field Structure](../../FIGURES/fig_01_field_structure.png)
-
----
+![Halvorsen Attractor](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/halvorsen_attractor_20260427_014720.png)
 
 ## Interpretation
 
 ```text
-Structure exists, but it is fragmented and distributed.
-```
-
-The system decomposes into multiple locally coherent regions  
-instead of a global attractor geometry.
-
----
-
-# 🌀 2. Field Structure
-
-From trajectory and density:
-
-```text
-trajectory → density → flow → structure
-```
-
-Observed:
-
-- multiple interacting flow regions  
-- irregular density distribution  
-- no globally dominant structure  
-
----
-
-## Interpretation
-
-```text
-Structure emerges locally, not globally
+Continuous chaotic flow without explicit discrete structure
 ```
 
 ---
 
-# 🧩 3. Gate Structure (Critical)
+# 🔁 2. Transition Extraction
 
-From:
+![Transition Matrix](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/transition_matrix_20260427_015925.png)
 
-```text
-detect_gates_halvorsen.py
-build_gate_graph_halvorsen.py
-```
+## Result
 
-Observed:
+- flow discretized into transition states  
+- probabilistic transition graph extracted  
 
-- multiple gate regions  
-- irregular placement  
-- non-symmetric transitions  
+---
+
+# 🧩 3. Gate Structure
+
+![Gates](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/gates_20260427_022645.png)
+
+## Observation
+
+- rare but structured transitions  
+- localized escape regions  
 
 ---
 
@@ -122,208 +79,161 @@ Gates exist even in fragmented systems
 
 ---
 
-# 🔁 4. Transition Structure
+# 🔗 4. Connectivity & Graph Structure
 
-From:
+![Gate Graph](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/gate_graph_20260427_023206.png)
 
-```text
-extract_transitions_halvorsen.py
-reachability_halvorsen.py
-```
+## Observation
 
-Observed:
-
-- transitions are:
-  - structured  
-  - constrained  
-  - multi-path  
-
-NOT:
-
-```text
-random jumps
-```
-
----
-
-## 🖼️ Figure B — Transition Geometry (Generalized)
-
-![Transition Geometry](../../FIGURES/fig_02_transition_geometry.png)
+- sparse connectivity  
+- local cycles  
+- disconnected components  
 
 ---
 
 ## Interpretation
 
 ```text
-Transitions follow complex connectivity patterns
+Continuous system → discrete connectivity graph
 ```
 
 ---
 
-# 🧠 5. Graph Structure
+# 🌉 5. Reachability & Fragmentation
 
-From:
+![Reachability](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/reachability_20260427_024039.png)
 
-```text
-build_gate_graph_halvorsen.py
-connect_components_halvorsen.py
-```
+## Observation
 
-Observed:
-
-- system decomposes into connected regions  
-- transitions form a graph  
-
----
-
-## Interpretation
-
-```text
-Continuous system → discrete connectivity structure
-```
-
----
-
-# ⚡ 6. Control & Policy Layer
-
-From:
-
-```text
-policy_gradient_halvorsen.py
-gate_aware_policy_halvorsen.py
-global_policy_halvorsen.py
-```
-
-Observed:
-
-- control is:
-  - localized  
-  - path-dependent  
-  - non-linear  
-
----
-
-## Key Insight
-
-```text
-Control operates on structure, not on state
-```
-
----
-
-# 🧠 7. Phase & Mismatch (Generalized)
-
-Even without clear global phase coherence:
-
-- local phase-like dynamics exist  
-- mismatch regions correlate with transitions  
-
----
-
-## 🖼️ Figure C — Phase Mismatch (Generalized)
-
-![Phase Mismatch](../../FIGURES/fig_03_phase_mismatch.png)
-
----
-
-## Interpretation
-
-```text
-Phase mismatch remains a transition driver,
-even in irregular systems
-```
-
----
-
-# 🔁 8. Flow Decomposition
-
-From:
-
-```text
-flow_decomposition_halvorsen.py
-flow_residue_alignment_halvorsen.py
-```
-
-Observed:
-
-- flow can be decomposed into components  
-- residue structures exist  
-
----
-
-## Interpretation
-
-```text
-System dynamics contain hidden structural layers
-```
-
----
-
-# 🌉 9. Bridge & Path Planning
-
-From:
-
-```text
-adaptive_bridge_halvorsen.py
-plan_path_halvorsen.py
-```
-
-Observed:
-
-- transitions can be planned  
-- paths exist between regions  
+- multiple disconnected regions  
+- incomplete global reachability  
 
 ---
 
 ## Insight
 
 ```text
-Navigation is possible even in fragmented systems
+System is not globally navigable without intervention
 ```
 
 ---
 
-# 🧠 10. Comparison to Other Systems
+# ⚡ 6. Control & Topology Repair
 
-| Property | Lorenz | Rössler | Halvorsen |
-|----------|--------|--------|----------|
-| Structure | dual-lobe | spiral | fragmented |
-| Transitions | discrete | smooth | multi-path |
-| Control | phase-aligned | smooth | graph-based |
+![Connected Matrix](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/connected_matrix_20260427_024610.png)
+
+## Observation
+
+- control introduces bridges  
+- topology becomes connected  
 
 ---
 
-# 🔷 11. Topology
-
-Observed:
-
-- no simple topology (Möbius / torus)  
-
-Instead:
+## Key Insight
 
 ```text
-irregular connectivity topology
+Control = topology repair
 ```
+
+---
+
+# 🧭 7. Policy & Navigation
+
+![Global Policy](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/global_policy_20260427_024840.png)
+
+## Result
+
+- navigation funnel identified  
+- structured paths emerge  
+
+---
+
+# 🔁 8. Adaptive Control
+
+![Adaptive Matrix](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/adaptive_matrix_20260427_025214.png)
+
+## Observation
+
+- smoother transitions  
+- improved connectivity  
+
+---
+
+# 📈 9. Policy Optimization
+
+![Policy Gradient](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/policy_gradient_success_20260427_025829.png)
+
+## Result
+
+```text
+~0.11 → ~0.23 success rate
+```
+
+---
+
+# 🧠 10. Flow Structure Comparison
+
+![Dual System](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/dual_system_overlay_20260427_030748.png)
+
+## Comparison
+
+### Lorenz
+- discrete switching  
+- few dominant transitions  
+
+### Halvorsen
+- distributed cyclic flow  
+- many medium-strength transitions  
+
+---
+
+## Insight
+
+```text
+Different geometry — same structural logic
+```
+
+---
+
+# 🔬 11. Residue Flow Structure
+
+![Residue Models](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/residue_flow_models_20260427_033254.png)
+
+## Observation
+
+- modular structures approximate transition dynamics  
+- mod17 shows strong alignment  
 
 ---
 
 ## Interpretation
 
 ```text
-Topology emerges from connectivity, not symmetry
+Hidden arithmetic structure exists in transition dynamics
 ```
 
 ---
 
-# 🔥 12. Core Results
+# 🌀 12. Dynamic Behavior
+
+![Dual Animation](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/halvorsen_lorenz_dual.gif)
+
+## Observation
+
+- Lorenz → switching attractor  
+- Halvorsen → rotational transport  
+
+---
+
+# 🔥 Core Results
 
 ```text
 1. Structure exists without global symmetry
 2. Gates persist in fragmented systems
 3. Transitions are structured and constrained
 4. Connectivity defines system organization
-5. Control operates via structural pathways
-6. Navigation is possible in irregular dynamics
+5. Control modifies topology, not just trajectory
+6. Navigation requires structural intervention
 ```
 
 ---
@@ -334,28 +244,28 @@ Topology emerges from connectivity, not symmetry
 The Halvorsen system is not chaotic noise.
 
 It is a structured, navigable field
-with complex connectivity.
+with fragmented connectivity.
 ```
 
 ---
 
 # 🚀 Role in NEXAH
 
-The Halvorsen system provides:
+Halvorsen demonstrates:
 
-- validation beyond symmetric systems  
-- demonstration of robustness  
-- extension to irregular dynamics  
+- robustness of the framework  
+- applicability beyond canonical systems  
+- necessity of control for navigation  
 
 ---
 
 # 🔥 Final Insight
 
 ```text
-NEXAH does not depend on system simplicity.
+Control is not path finding.
 
-It reveals structure even in highly irregular,
-fragmented dynamical systems.
+Control is restructuring the geometry
+through which the system moves.
 ```
 
 ---
