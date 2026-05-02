@@ -13,6 +13,14 @@ building → observation → validation → consolidation
 
 ---
 
+## 🔷 Core Figures
+
+![Framework](./FIGURES/main/Fig_01.png)
+
+See: [FIGURES](./FIGURES/README.md)
+
+---
+
 # 🧭 POSITION IN NEXAH
 
 ```text
