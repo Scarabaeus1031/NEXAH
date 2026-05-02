@@ -10,8 +10,8 @@ It addresses the central question:
 It connects:
 
 - formal structure (RESEARCH layer)  
-- empirical observations (FIELD_LAYER)  
-- operational behavior (NAVIGATOR)  
+- empirical observations (VALIDATION layer)  
+- operational behavior (NAVIGATION)  
 
 → forming a **proposed explanatory chain from structure to dynamics**
 
@@ -35,7 +35,7 @@ It is:
 This document establishes a **working correspondence** between:
 
 - abstract structural operators (Γ, Δ, Ω)  
-- empirical field behavior observed in simulations  
+- empirical field behavior observed in validation experiments  
 
 ---
 
@@ -51,14 +51,14 @@ The goal is to show that:
 # 🧭 Mapping Overview
 
 ```text
-STRUCTURE → TRANSITIONS → FIELD → NAVIGATION
+STRUCTURE → TRANSITIONS → FIELD → PHASE → CONTROL → NAVIGATION
 ```
 
 ---
 
 # 🔬 1. Γ — Closure Operator → Attractor Structure
 
-## Observation (FIELD_LAYER)
+## Observation (VALIDATION)
 
 - clustering of trajectories  
 - stable regions (basins)  
@@ -75,16 +75,17 @@ STRUCTURE → TRANSITIONS → FIELD → NAVIGATION
 
 ---
 
-# 🔬 2. Δ — Transition Operator → Transition Channels
+# 🔬 2. Δ — Transition Operator → Transition Geometry
 
 ## Observation
 
 - transitions occur over extended regions  
 - directional movement between regimes  
+- gate regions in state space  
 
 ## Structural Mapping
 
-Δ ↔ transition geometry (channels, corridors)  
+Δ ↔ transition geometry (channels, gates, corridors)  
 
 ## Interpretation
 
@@ -99,6 +100,7 @@ STRUCTURE → TRANSITIONS → FIELD → NAVIGATION
 
 - convergence toward stable states  
 - reproducible attractor behavior  
+- trajectory alignment with flow  
 
 ## Structural Mapping
 
@@ -117,11 +119,12 @@ STRUCTURE → TRANSITIONS → FIELD → NAVIGATION
 
 - basins  
 - channels  
-- cycles  
+- transition regions  
+- cyclic motion  
 
 ## Interpretation
 
-These structures are not explicitly defined but emerge from:
+These structures emerge from:
 
 - closure (Γ)  
 - transitions (Δ)  
@@ -147,8 +150,8 @@ System behaves as:
 
 ## Interpretation
 
-> The field can be understood as a  
-> **continuous projection of underlying structure**
+> The field is a  
+> **continuous projection of underlying structural operators**
 
 ---
 
@@ -167,17 +170,15 @@ E = -log(p)
 
 ## Interpretation
 
-This can be interpreted as:
+- Γ → low-energy basins  
+- Δ → barrier / transition regions  
+- Ω → descent toward stability  
 
-- Γ → low-energy regions  
-- Δ → barrier regions  
-- Ω → descent dynamics  
-
-⚠️ This is a **derived interpretation**, not a physical energy law.
+⚠️ Derived interpretation, not physical law.
 
 ---
 
-# 🔬 7. Flow Operators (Discovery Layer)
+# 🔬 7. Flow Operators (Continuous Layer)
 
 Observed:
 
@@ -188,11 +189,47 @@ Observed:
 
 These represent:
 
-> continuous expressions of underlying structural behavior  
+> continuous expressions of structural dynamics  
 
 ---
 
-# 🔬 8. Transition Phases
+# 🔬 8. Phase Dynamics Extension (CRITICAL)
+
+## Observation (VALIDATION)
+
+- phase velocity: ω = dφ/dt  
+- expected motion: smooth(ω)  
+- mismatch:
+
+```text
+mismatch = |ω - smooth(ω)|
+```
+
+Observed:
+
+- IOTA events align with mismatch peaks  
+- instability alone is insufficient  
+
+---
+
+## Structural Mapping
+
+Δ (transition) activates when:
+
+```text
+instability + phase mismatch
+```
+
+---
+
+## Interpretation
+
+> Structure defines where transitions can occur  
+> Phase mismatch determines when they activate  
+
+---
+
+# 🔬 9. Transition Phases
 
 Observed:
 
@@ -203,12 +240,12 @@ ENTRY → CORE → EXIT
 ## Interpretation
 
 - ENTRY → approach (Δ)  
-- CORE → instability region  
+- CORE → instability + mismatch peak  
 - EXIT → stabilization (Ω)  
 
 ---
 
-# 🔬 9. Topology Emergence
+# 🔬 10. Topology Emergence
 
 Observed:
 
@@ -216,7 +253,7 @@ Observed:
 - edges (transitions)  
 - cycles  
 
-## Interpretation
+## Structural Mapping
 
 - Γ → nodes  
 - Δ → edges  
@@ -224,17 +261,43 @@ Observed:
 
 ---
 
-# 🔬 10. Navigation Implication
+# 🔬 11. Control Mapping
+
+Observed:
+
+- control effectiveness is phase-dependent  
+- mismatch drives transitions  
+
+## Structural Interpretation
+
+Control must satisfy:
+
+```text
+alignment with structure (Γ)
++ alignment with phase (Δ activation timing)
+```
+
+---
+
+## Result
+
+> Control is not force  
+> but **alignment with structural + phase dynamics**
+
+---
+
+# 🔬 12. Navigation Implication
 
 Given:
 
 - structure (Γ, Δ, Ω)  
 - field (geometry, flow)  
+- phase (timing layer)  
 
 ## Result
 
 > Navigation emerges as  
-> **structure-constrained movement**
+> **structure- and phase-constrained movement**
 
 ---
 
@@ -243,23 +306,25 @@ Given:
 This mapping suggests that:
 
 > minimal structural operators (Γ, Δ, Ω)  
+> combined with phase dynamics  
 > can generate  
-> **transition geometry, field structure, and convergence behavior**
+> **geometry, transitions, and control behavior**
 
 ---
 
 # 🔥 Core Insight
 
 ```text
-structure → transitions → geometry → field → navigation
+structure → transitions → geometry → field → phase → control → navigation
 ```
 
 ---
 
 # ⚠️ Status
 
-- empirically supported (simulations)  
+- empirically supported (multi-system validation)  
 - structurally consistent  
+- causally extended (phase + mismatch)  
 - not formally proven  
 
 ---
@@ -267,11 +332,11 @@ structure → transitions → geometry → field → navigation
 # 🚀 Next Steps
 
 - formalize operator definitions  
-- test across additional systems  
-- derive reduced models  
-- investigate mathematical properties  
+- derive minimal mathematical representation  
+- validate operator dynamics explicitly  
+- integrate into NAVIGATION kernel  
 
 ---
 
 **Status:** Hypothesis-level structural mapping  
-**Role:** Bridge between structure and observed field behavior
+**Role:** Bridge between structure, field, and control
