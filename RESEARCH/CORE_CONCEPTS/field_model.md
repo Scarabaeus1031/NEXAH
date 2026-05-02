@@ -1,7 +1,7 @@
-# NEXAH — Field Model (Exploratory)
+# 🧠 NEXAH — Field Model (Exploratory)
 
 This document describes an **emergent field-like interpretation**  
-of dynamical systems observed during early NEXAH experiments.
+of dynamical systems observed during NEXAH validation experiments.
 
 ---
 
@@ -14,18 +14,8 @@ It is:
 > an empirical model describing how structure, flow, and coupling  
 > emerge from system dynamics
 
-This document is based on observations and provides a **working interpretation**,  
+This document provides a **working interpretation grounded in validation results**,  
 not a formal or physical equivalence to known field theories.
-
----
-
-## 🔗 Origin
-
-This model is derived from observations in the Discovery Engine:
-
-→ `DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md`
-
-The Discovery Engine represents the **exploration phase** of NEXAH.
 
 ---
 
@@ -33,6 +23,7 @@ The Discovery Engine represents the **exploration phase** of NEXAH.
 
 ```text
 DISCOVERY → observation
+VALIDATION → empirical confirmation
 FIELD_LAYER → operational representation
 RESEARCH → interpretation
 ```
@@ -40,6 +31,8 @@ RESEARCH → interpretation
 ---
 
 # 🌀 1. From Trajectory to Field
+
+![Trajectory Overlay](../VALIDATION/lorenz/results/trajectory_overlay.png)
 
 Initial experiments focused on:
 
@@ -49,39 +42,92 @@ Initial experiments focused on:
 
 A key shift emerged:
 
-> systems are better understood as **fields of transitions**,  
+> systems are better understood as **fields of motion**,  
 > not isolated trajectories
 
 ---
 
-# 🧩 2. Emergent Field Components
+# 🧩 2. Emergent Field Structure
 
-### Geometry
-- low-dimensional structure (e.g. PCA projections)  
-- alignment of transitions  
+![Transition Field](../VALIDATION/lorenz/results/transition_field.png)
 
-### Density
-- spatial clustering  
-- non-uniform probability distribution  
+Observed:
 
-### Energy (heuristic)
+- coherent regions (basins)  
+- structured flow directions  
+- non-random transition zones  
+
+### Interpretation
+
+```text
+trajectory → density → structure → field
+```
+
+> The field encodes how the system tends to move.
+
+---
+
+# 🧩 3. Instability as Field Property
+
+![Instability Field](../VALIDATION/lorenz/results/instability_field.png)
+
+Observed:
+
+- instability is spatially localized  
+- concentrated in transition regions  
+- not uniformly distributed  
+
+### Insight
+
+> Instability is a **geometric property of the field**,  
+> not a random fluctuation.
+
+---
+
+# 🧩 4. Navigation Field
+
+![Navigation Field](../VALIDATION/lorenz/results/navigation_field.png)
+
+Observed:
+
+- direction + instability combine into a usable field  
+- trajectories follow structured flow paths  
+- navigation is geometry-aligned  
+
+### Interpretation
+
+```text
+Field = direction + structure + instability
+```
+
+> The system defines its own navigable space.
+
+---
+
+# 🧩 5. Density & Energy (Heuristic Representation)
+
+We define:
 
 ```text
 E = -log(p)
 ```
 
+Where:
+
+- p = local density  
+
 Interpretation:
 
-- stable regions → high density  
-- transition regions → low density  
+- high density → stable regions  
+- low density → transition regions  
 
 ⚠️ This is a **derived representation**, not a physical energy law.
 
 ---
 
-# 🔬 3. Local Field Properties
+# 🔬 6. Local Field Properties
 
-Two structural quantities were analyzed:
+Two structural quantities:
 
 ### Divergence (∇·F)
 - local expansion / contraction  
@@ -93,9 +139,9 @@ Two structural quantities were analyzed:
 
 ---
 
-# 🔁 4. Observed Coupling (Empirical)
+# 🔁 7. Observed Coupling (Empirical)
 
-Empirical observation suggests:
+Empirical observation:
 
 ```text
 div(t) ≈ curl(t - τ)
@@ -105,48 +151,76 @@ curl(t) ≈ div(t + τ)
 with:
 
 ```text
-τ ≈ constant delay (system-dependent)
+τ ≈ system-dependent delay
 ```
 
 ---
 
 ## Interpretation
 
-This indicates:
+This suggests:
 
 - delayed interaction between expansion and rotation  
 - phase-shifted coupling  
-- non-instantaneous system response  
+- non-instantaneous response  
 
-⚠️ This is an **observed pattern**, not a derived law.
+⚠️ Observational pattern, not derived law.
 
 ---
 
-# 🧠 5. Structural Interpretation
+# 🧠 8. Phase Dynamics Extension
+
+![Phase Mismatch](../VALIDATION/causality/results/phase_mismatch_iota.png)
+
+Validation shows:
+
+- phase velocity: ω = dφ/dt  
+- expected motion: smooth(ω)  
+- mismatch:
+
+```text
+mismatch = |ω - smooth(ω)|
+```
+
+Observed:
+
+- IOTA events occur at mismatch peaks  
+- instability alone is insufficient  
+
+---
+
+## Insight
+
+> The field is not only spatial —  
+> it has a **phase structure governing transitions**.
+
+---
+
+# 🧠 9. Structural Interpretation
 
 The system behaves like:
 
-> a **coupled dynamical field with memory and delay**
+> a **structured dynamical field with geometry + phase coupling**
 
-This interpretation does **not imply**:
+This does NOT imply:
 
 - a physical field  
 - known governing equations  
 
 ---
 
-# ⚠️ 6. Limitations
+# ⚠️ 10. Limitations
 
-- derived primarily from Lorenz-like systems  
+- primarily validated on Lorenz / Rössler / Duffing  
 - simulation-based  
-- not yet validated across domains  
+- phase model is empirical  
 - no claim of universality  
 
 ---
 
 # 🔗 Relation to FIELD_LAYER
 
-The FIELD_LAYER provides:
+FIELD_LAYER provides:
 
 - continuous vector field representation  
 - geometry-aligned dynamics  
@@ -155,31 +229,47 @@ The FIELD_LAYER provides:
 
 This document provides:
 
-> **interpretation of observed behavior**, not implementation
+> interpretation of observed structure and behavior
+
+---
+
+# 🔗 Relation to VALIDATION
+
+→ `../VALIDATION/validation_summary.md`
+
+Validation confirms:
+
+- field structure is reproducible  
+- robust under noise  
+- consistent across systems  
+- causally interpretable  
 
 ---
 
 # 🧠 Key Insight
 
-> Structure, flow, and coupling emerge directly from dynamics  
-> and can be described using field-like representations
+```text
+Structure, flow, and instability are not separate.
+
+They are different projections of the same underlying field.
+```
 
 ---
 
 # 🚀 Next Steps
 
-- test across different systems  
-- quantify coupling stability  
-- evaluate robustness under noise  
-- compare with real-world datasets  
+- extend to real-world systems (IEEE)  
+- formalize phase–field coupling  
+- derive operator-level representation  
+- test control integration  
 
 ---
 
 ## Status
 
-Exploratory model  
-Empirical basis: strong  
-Interpretation: provisional  
+Empirically supported  
+Cross-system validated  
+Interpretation: evolving toward formal model  
 
 ---
 
