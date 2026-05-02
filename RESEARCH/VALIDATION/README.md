@@ -17,7 +17,7 @@ It establishes that the observed structures, transition dynamics, and control me
 ![NEXAH Validation Summary](./nexah_validation_summary_visual.png)
 ```text
 This figure represents the compression of ~180+ validation artifacts into a single structural representation.
-``
+```
 
 **Figure — NEXAH Validation Overview**
 
@@ -137,10 +137,31 @@ Result:
 - Control law extraction  
 - IOTA event correlation  
 
-Result:
+---
 
-text Transitions are not caused by instability alone.  They occur when: phase dynamics and control are misaligned. 
+### 🧠 Mechanism Overview
 
+![Phase Mismatch Control Mechanism](../CORE_CONCEPTS/visuals/nexah_phase_mismatch_control_mechanism.png)
+
+This diagram summarizes the causal mechanism observed in NEXAH:
+
+- φ → phase  
+- ω → phase velocity  
+- ω̂ → expected phase dynamics  
+- M = |ω − ω̂| → mismatch  
+- I → instability  
+- s(φ, I) → control  
+
+---
+
+## Result
+
+```text
+Transitions are not caused by instability alone.
+
+They occur when:
+phase dynamics and control are misaligned.
+```
 ---
 
 ## LEVEL 8 — Angular Structure (IOTA Symmetry)

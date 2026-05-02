@@ -7,6 +7,23 @@ into a **coherent system of structural and operational concepts**.
 
 ---
 
+## 🧠 Fundamental Mechanism
+
+![NEXAH Core Mechanism](./visuals/nexah_phase_mismatch_control_mechanism.png)
+
+This diagram shows the minimal dynamical layer of NEXAH:
+
+- phase (φ)
+- phase velocity (ω)
+- expected phase (ω̂)
+- mismatch (M)
+- instability (I)
+- control (s)
+
+→ forming the causal structure behind transitions.
+
+---
+
 # 🧭 Role in NEXAH
 
 ```text

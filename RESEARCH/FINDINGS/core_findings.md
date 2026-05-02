@@ -32,6 +32,25 @@ Interpretations are:
 
 ---
 
+# 🔷 Structural Overview (NEW)
+
+![NEXAH Core Structure](./visuals/nexah_core_structure_diagram.png)
+
+This diagram summarizes the **full structural hierarchy** observed in NEXAH:
+
+```text
+Field Dynamics → Transition Geometry → Discrete Structure → Control Layer
+```
+
+---
+
+It captures the central empirical result:
+
+> Continuous dynamics collapse into structured transitions,  
+> which form discrete regimes that can be actively controlled.
+
+---
+
 # 🔬 1. Transition Structure
 
 ## Observation
@@ -264,7 +283,7 @@ E = -log(p)
 
 ---
 
-# 🔷 13. Cross-System Invariance (NEW)
+# 🔷 13. Cross-System Invariance
 
 ## Observation
 
@@ -445,7 +464,7 @@ They represent:
 
 ---
 
-# 🔥 Core Insight (Updated)
+# 🔥 Core Insight
 
 ```text
 Systems do not differ in structure.

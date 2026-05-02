@@ -37,19 +37,6 @@ to:
 
 ---
 
-# 🔬 What was observed
-
-Across multiple systems (Lorenz, Halvorsen, power systems), the following patterns emerge:
-
-- transitions are **not discrete events**, but spatially extended processes  
-- transition regions form **geometric channels**  
-- continuous dynamics collapse into **discrete state structures**  
-- system motion follows an **implicit energy landscape**  
-- systems converge toward **stable attractor structures**  
-- trajectories can be **locally influenced and redirected**  
-
----
-
 # 🔷 Cross-System Insight (NEW)
 
 A key result of recent experiments:
@@ -61,11 +48,30 @@ Different systems (Lorenz, Halvorsen) exhibit different flow geometries,
 but share the same transition structure.
 ```
 
-This reveals:
+---
 
-- transition structure is **invariant across systems**  
-- flow geometry changes, but structure persists  
-- control operates on transitions, not trajectories  
+# 🧭 Structural Unification (Visual Summary)
+
+![Dynamical Unification](./visuals/nexah_dynamical_unification_diagram.png)
+
+**Interpretation:**
+
+- Flow geometry differs across systems  
+- Transition structure remains invariant  
+- Control operates on structure, not trajectories  
+
+---
+
+# 🔬 What was observed
+
+Across multiple systems (Lorenz, Halvorsen, power systems), the following patterns emerge:
+
+- transitions are **not discrete events**, but spatially extended processes  
+- transition regions form **geometric channels**  
+- continuous dynamics collapse into **discrete state structures**  
+- system motion follows an **implicit energy landscape**  
+- systems converge toward **stable attractor structures**  
+- trajectories can be **locally influenced and redirected**  
 
 ---
 
@@ -97,7 +103,7 @@ NEXAH asks:
 
 ---
 
-# 🔗 Visual Example
+# 🔗 Visual Example (Real System)
 
 ![Off-Manifold Flow](../../APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
 
