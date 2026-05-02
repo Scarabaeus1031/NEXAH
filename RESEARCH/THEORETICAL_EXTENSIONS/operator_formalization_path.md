@@ -1,289 +1,176 @@
-# 🧠 NEXAH — Operator Engine Roadmap (Field-Aligned)
-
-**Status:** Transitional / Formalization Layer  
-**Role:** Bridge between field-based system behavior and structural operators  
+# 🧠 NEXAH — Operator Formalization Path
 
 ---
 
 ## 🧭 Purpose
 
-This document describes how **field-based system behavior**  
-can be progressively translated into **formal structural operators**.
-
-It replaces the previous structure-first roadmap with a:
-
-```text
-field → structure → operators → formal system
-```
-
-approach.
+This document describes a **possible pathway** for translating  
+empirical structure observed in NEXAH into a **formal operator-based system**.
 
 ---
 
 ## ⚠️ Scope
 
-This roadmap is:
+This is:
 
-- not the core NEXAH pipeline  
-- not required for implementation  
-- not a finalized formal system  
+- not part of the core framework  
+- not required for current validation  
+- not a finalized mathematical system  
 
 It is:
 
-> a **formalization pathway** for translating empirical structure  
-> into a minimal operator-based system
+> a **formalization pathway derived from observed structure**
 
 ---
 
 # 🔁 Core Direction
 
-NEXAH now follows:
+NEXAH proceeds as:
 
 ```text
-Dynamics
-→ Field
-→ Geometry
-→ Transition Structure
-→ Navigation
-→ (then) Formalization
+Dynamics → Field → Structure → Transitions → Navigation
 ```
 
-This roadmap begins **after structure is observed**.
+Formalization is applied **after structure is identified**.
 
 ---
 
-# 🧩 Stage 1 — Field Extraction (Given)
+# 🧩 Stage 1 — Field Extraction
 
-Already implemented / observed:
+From trajectories:
 
-- trajectory → density  
-- density → field  
-- field → flow structure  
-- coherence (C)  
-- transition regions (gates, corridors)  
-
----
-
-## Goal
-
-```text
-Extract stable geometric structure from dynamics
-```
+- density field ρ(x)  
+- flow field F(x)  
+- coherence C(x)  
+- transition regions  
 
 ---
 
 # 🧩 Stage 2 — Structural Segmentation
 
-From the field, extract:
+Extract:
 
-- basins (stable regions)  
+- regimes (stable regions)  
 - transition corridors  
 - gate regions  
-- density structure  
-
----
-
-## Result
-
-```text
-Continuous field → discrete structural segmentation
-```
 
 ---
 
 # 🧩 Stage 3 — Operator Identification
 
-Map observed structure to operators:
+Map structure to operators:
 
 ---
 
-## Γ — Closure (Basins)
+## Γ — Closure
 
 ```text
-Field clustering → attractor regions → Γ
+stable regions / basins
 ```
 
 ---
 
-## Δ — Transition (Channels)
+## Δ — Transition
 
 ```text
-Transition corridors → regime transitions → Δ
+connections between regions
 ```
 
 ---
 
-## Ω — Stabilization (Flow Convergence)
+## Ω — Stabilization
 
 ```text
-Flow convergence → attractor stabilization → Ω
+flow convergence / attractor behavior
 ```
 
 ---
 
-## F — Frame / Projection
+## F — Frame
 
 ```text
-Different views → projection effects → F
+projection / representation effects
 ```
 
 ---
 
-## Goal
+# 🧩 Stage 4 — Consistency Testing
 
-```text
-Empirical structure → minimal operator set
-```
+Evaluate:
 
----
-
-# 🧩 Stage 4 — Operator Consistency
-
-Test:
-
-- stability of operators across systems  
-- invariance under transformation  
-- consistency of transition structure  
-- preservation of basin topology  
+- stability across systems  
+- invariance under transformations  
+- robustness of extracted structure  
 
 ---
 
-## Goal
-
-```text
-Verify that operators reflect real system behavior
-```
-
----
-
-# 🧩 Stage 5 — Composite System Modeling
+# 🧩 Stage 5 — Composite Modeling
 
 Combine operators:
 
-- Γ + Δ → regime systems  
-- Ω → stabilization dynamics  
-- F → multi-frame interpretation  
-
----
-
-## Result
-
 ```text
-Operator system reproduces observed structure
+Γ + Δ + Ω → structural system
 ```
 
 ---
 
-# 🧩 Stage 6 — Navigation Integration
+# 🧩 Stage 6 — Navigation
 
 Use operators for:
 
 - transition prediction  
 - trajectory shaping  
-- regime navigation  
 - control approximation  
 
 ---
 
-## Interpretation
+# 🧩 Stage 7 — Domain Application
 
-```text
-Navigation = operator-guided movement in structure
-```
+Apply to:
 
----
-
-# 🧩 Stage 7 — Domain Binding
-
-Apply system to:
-
-- power systems  
-- dynamical systems (Lorenz, etc.)  
+- dynamical systems  
+- engineering systems  
 - decision systems  
-- multi-agent environments  
 
 ---
 
-## Goal
+# 🧠 Key Principle
 
 ```text
-Validate operator model against real-world structure
-```
+Operators are not assumed.
 
----
-
-# 🧠 Final System View
-
-```text
-Dynamics
-    ↓
-Field
-    ↓
-Geometry
-    ↓
-Structure
-    ↓
-Operators (Γ, Δ, Ω, F)
-    ↓
-Navigation
-```
-
----
-
-# 🔬 Key Insight
-
-> Operators do not define the system.
-
-They emerge from:
-
-```text
-observed structure in the field
+They are inferred from observed structure.
 ```
 
 ---
 
 # ⚠️ Important Shift
 
-OLD:
-
 ```text
-structure → system
+OLD: define operators → model system
+
+NEW: observe system → derive operators
 ```
-
-NEW:
-
-```text
-system → structure → operators
-```
-
----
-
-# 🚀 Role in NEXAH
-
-This roadmap is:
-
-- a **formalization pathway**
-- a **mathematical compression layer**
-- a **bridge to theory**
-
-It is NOT:
-
-- the core runtime  
-- the discovery mechanism  
-- the primary system representation  
 
 ---
 
 # 🔥 Final Insight
 
 ```text
-We do not start with operators.
-
-We discover them
-by observing how structure forms in real systems.
+Formal systems should emerge from structure,
+not impose structure.
 ```
 
 ---
 
-**NEXAH Operator Engine Roadmap**  
+# 🧭 Status
+
+```text
+exploratory formalization pathway
+```
+
+---
+
+**NEXAH Operator Formalization Path**  
+Theoretical Extension  
 Thomas K. R. Hofmann · 2026
