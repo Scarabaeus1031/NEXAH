@@ -11,64 +11,75 @@ It serves to:
 - identify missing formalization  
 - guide future development  
 
+All questions arise from the structural framework and empirical results shown in:
+
+- Fig.1 — Structural Framework  
+- Fig.2 — Data-driven Extraction  
+- Fig.3 — Quantitative Characterization  
+
+---
+
+# 🔷 Context: What is already established
+
+From the current framework:
+
+- structure can be extracted from trajectories  
+- sheets define coherent motion regions  
+- gates emerge at low-density, low-coherence regions  
+- transitions are structured and non-random  
+- phase mismatch activates transitions  
+
 ---
 
 # 🔬 1. Formal Definition of Coherence
 
-Current definition:
+Current interpretation:
 
-```text
 C(x) ≈ alignment between flow and structure
-```
 
 Problem:
 
 - not uniquely defined  
-- depends on approximation  
+- depends on approximation and representation  
 
 ---
 
 ## Open Question
 
-$$
-\text{How can coherence } C(x) \text{ be rigorously defined?}
-$$
+How can coherence C(x) be rigorously defined  
+in a coordinate-independent and stable way?
 
 ---
 
 # 🔬 2. Mathematical Properties of the Gate Operator
 
-Definition:
+Current interpretation:
 
-$$
-G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
-$$
+G(x) ∝ low density × low coherence × low residence
 
 ---
 
 ## Open Questions
 
-- continuity and differentiability of $G(x)$  
-- sensitivity to normalization  
+- continuity and differentiability of G(x)  
+- sensitivity to normalization and scaling  
 - invariance under coordinate transformations  
+- relation to geometric singularities  
 
 ---
 
 # 🔬 3. Relation to Lyapunov Stability
 
-Current interpretation:
+Observed:
 
-```text
-low G(x) → stable region
-```
+low G(x) corresponds to stable regions
 
 ---
 
 ## Open Question
 
-$$
-\text{Is there a formal relation between } G(x) \text{ and Lyapunov functions?}
-$$
+Is there a formal relationship between G(x)  
+and Lyapunov functions or stability certificates?
 
 ---
 
@@ -76,16 +87,15 @@ $$
 
 Observed:
 
-```text
-density ridges resemble manifolds
-```
+density ridges resemble structured manifolds
 
 ---
 
 ## Open Questions
 
-- Are ridges approximations of invariant manifolds?  
-- Can they be formally linked to stable/unstable manifolds?  
+- Are density ridges approximations of invariant manifolds?  
+- Can sheet structures be formally linked to stable/unstable manifolds?  
+- Do sheets define a generalized foliation of phase space?  
 
 ---
 
@@ -93,32 +103,33 @@ density ridges resemble manifolds
 
 Current limitation:
 
-- KDE does not scale well  
+density estimation (KDE) does not scale well
 
 ---
 
 ## Open Questions
 
-- Can $\rho(x)$ be replaced by learned density models?  
-- How does structure behave in high-dimensional systems?  
+- Can ρ(x) be replaced by learned density models?  
+- Can sheets be extracted in latent spaces?  
+- How stable are sheet structures under dimensionality reduction?  
 
 ---
 
-# 🔬 6. Probabilistic Interpretation
+# 🔬 6. Probabilistic Interpretation of Transitions
 
-Observation:
+Observed:
 
-```text
 G(x) behaves like transition likelihood
-```
 
 ---
 
 ## Open Question
 
-$$
-\text{Can } G(x) \text{ be interpreted as a probability density or hazard function?}
-$$
+Can G(x) or derived quantities be interpreted as:
+
+- transition probability  
+- hazard rate  
+- stochastic switching kernel  
 
 ---
 
@@ -126,17 +137,16 @@ $$
 
 Current approach:
 
-```text
-geometry-based feedback
-```
+geometry-based, phase-aligned control
 
 ---
 
 ## Open Questions
 
 - stability guarantees under NEXAH control  
-- relation to optimal control  
-- compatibility with MPC  
+- relation to optimal control formulations  
+- compatibility with MPC and feedback linearization  
+- controllability of sheet transitions  
 
 ---
 
@@ -144,16 +154,15 @@ geometry-based feedback
 
 Current:
 
-```text
-field derived from trajectories
-```
+field is reconstructed from trajectory data
 
 ---
 
 ## Open Questions
 
-- can $G(x)$ be learned via neural networks?  
-- can structure be inferred without full trajectory data?  
+- can G(x) be learned via neural networks?  
+- can structure be inferred from partial observations?  
+- can dynamics → structure mapping be learned directly?  
 
 ---
 
@@ -161,9 +170,7 @@ field derived from trajectories
 
 Current:
 
-```text
 geometric interpretation of dynamics
-```
 
 ---
 
@@ -171,17 +178,16 @@ geometric interpretation of dynamics
 
 - relation to energy landscapes  
 - compatibility with conservation laws  
-- extension to continuous fields (PDEs)  
+- extension to continuous systems (PDEs)  
+- relation to transport phenomena  
 
 ---
 
-# 🔬 10. Janus Field Formalization
+# 🔬 10. Bidirectional / Janus Field Formalization
 
-Current:
+Current idea:
 
-```text
 F_J(x) = F_forward + F_backward
-```
 
 ---
 
@@ -190,6 +196,24 @@ F_J(x) = F_forward + F_backward
 - how to define backward flow rigorously  
 - relation to reversible dynamics  
 - connection to time-symmetric formulations  
+- link to Koopman or Perron–Frobenius operators  
+
+---
+
+# 🔬 11. Temporal Structure of Transitions
+
+From Fig.3:
+
+- transitions are temporally clustered  
+- switching is not uniform  
+
+---
+
+## Open Questions
+
+- what governs switching density κ(t)?  
+- are there universal scaling laws?  
+- can transition timing be predicted from structure?  
 
 ---
 
@@ -197,19 +221,17 @@ F_J(x) = F_forward + F_backward
 
 NEXAH currently provides:
 
-```text
 • strong empirical observations  
 • consistent geometric interpretation  
-• promising control framework  
-```
+• structured transition model  
+• initial control framework  
 
 But lacks:
 
-```text
 • formal proofs  
 • theoretical grounding  
 • scalability guarantees  
-```
+• probabilistic formalization  
 
 ---
 
@@ -217,23 +239,24 @@ But lacks:
 
 Future work should focus on:
 
-```text
-1. Formalization
-2. Validation
-3. Integration with existing theory
-```
+1. Formalization  
+2. Quantitative validation  
+3. Integration with existing theory  
+4. Scaling to high-dimensional systems  
+5. Control guarantees  
 
 ---
 
 # 🧠 Final Statement
 
-```text
 NEXAH is not a finished theory.
 
-It is a structured hypothesis about how geometry governs dynamics.
-```
+It is a structured hypothesis that:
+
+geometry extracted from dynamics  
+governs transitions and emergent topology.
 
 ---
 
-**NEXAH — Open Problems**  
+NEXAH — Open Problems  
 Thomas K. R. Hofmann · 2026
