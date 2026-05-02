@@ -12,6 +12,34 @@ It establishes that the observed structures, transition dynamics, and control me
 
 ---
 
+# 🧭 Validation Overview (Visual Summary)
+
+![NEXAH Validation Summary](./nexah_validation_summary_visual.png)
+```text
+This figure represents the compression of ~180+ validation artifacts into a single structural representation.
+``
+
+**Figure — NEXAH Validation Overview**
+
+This diagram summarizes the full validation stack across:
+
+- reproducibility  
+- noise robustness  
+- partition invariance  
+- cross-system consistency  
+- control and causality  
+- phase dynamics and angular structure  
+
+It integrates all experimental results into a single structural view, linking:
+
+- empirical observations  
+- geometric interpretation  
+- control mechanisms  
+
+The figure serves as a **map of the validation space**, not just a collection of results.
+
+---
+
 # 🧭 Purpose
 
 The VALIDATION layer bridges theory and empirical behavior.
@@ -202,6 +230,16 @@ The validation demonstrates that:
 - observed structures are real and robust  
 - transition dynamics are intrinsic to flow geometry  
 - control operates through phase alignment, not force  
+
+---
+
+---
+
+# 📄 Full Validation Report
+
+For detailed results, metrics, and experiment descriptions:
+
+→ [VALIDATION_SUMMARY.md](./VALIDATION_SUMMARY.md)
 
 ---
 
