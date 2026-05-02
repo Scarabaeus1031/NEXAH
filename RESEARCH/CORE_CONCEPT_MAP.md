@@ -16,6 +16,10 @@ but as motion within **structured dynamical fields**.
 dynamics → field → structure → constraints → transitions → navigation
 ```
 
+## 🔷 Visual Structural Pipeline
+
+![Framework](./FIGURES/main/Fig_01.png)
+
 ---
 
 # 🔷 Core Concept Stack
