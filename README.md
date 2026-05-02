@@ -42,6 +42,21 @@ This enables:
 - simulation of motion within learned structure  
 
 ---
+## 🔬 Research & Findings
+
+📂 [`RESEARCH/`](RESEARCH/)
+
+NEXAH is grounded in a structured research layer:
+
+- empirical findings across systems  
+- structural models (field, vessel, transitions)  
+- cross-system invariance analysis  
+
+👉 Start here:
+- [`RESEARCH/FINDINGS/`](RESEARCH/FINDINGS/)
+- [`RESEARCH/CORE_CONCEPTS/`](RESEARCH/CORE_CONCEPTS/)
+
+---
 
 ## 🔬 Core Idea
 
@@ -105,9 +120,24 @@ It includes:
 
 ---
 
-## 🧪 Validation (Power Systems)
+## 🧪 Validation (Empirical Layer)
 
-📂 `APPLICATIONS/power_systems/VALIDATION_LAYER/`
+📂 [`RESEARCH/VALIDATION/`](RESEARCH/VALIDATION/)
+
+NEXAH has been tested across:
+
+- chaotic systems (Lorenz, Halvorsen)  
+- controlled experiments (transition modulation)  
+- real-world inspired systems (power grids)  
+
+Key observations:
+
+- early detection of transition behavior before instability  
+- structure is robust under noise  
+- transition geometry persists across systems  
+
+👉 See:
+- [`RESEARCH/VALIDATION/validation_summary.md`](RESEARCH/VALIDATION/validation_summary.md)
 
 Observed behavior:
 
