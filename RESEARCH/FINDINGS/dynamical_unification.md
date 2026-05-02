@@ -1,7 +1,19 @@
 # NEXAH — Dynamical Unification (Lorenz ↔ Halvorsen ↔ Control)
 
-Status: ACTIVE  
-Scope: Cross-System Structural Insight  
+**Status:** ACTIVE  
+**Scope:** Cross-System Structural Insight  
+
+---
+
+## 🔷 Structural Overview (NEW)
+
+![NEXAH Dynamical Unification](./visuals/nexah_dynamical_unification_diagram.png)
+
+This diagram summarizes the central result:
+
+```text
+Different flow geometries → same transition structure → unified control principle
+```
 
 ---
 
@@ -14,7 +26,7 @@ but share a common transition structure.
 
 ---
 
-#🔷 1. Empirical System Contrast
+# 🔷 1. Empirical System Contrast
 
 ### Lorenz
 
@@ -68,7 +80,7 @@ trajectory in field
 ### Structural Mapping
 
 | Concept | Lorenz | Halvorsen |
-|--------|-------|----------|
+|--------|--------|-----------|
 | Regimes | lobes | rotational zones |
 | Transitions | jumps | rotations |
 | Gates | few, strong | many, weak |
@@ -76,7 +88,7 @@ trajectory in field
 
 ---
 
-## 🔷 3. CRITICAL INSIGHT
+## 🔷 3. Critical Insight
 
 ```text
 Transition structure is invariant
@@ -85,7 +97,7 @@ even when flow geometry changes.
 
 ---
 
-## 🚪 4. TRANSITION GEOMETRY
+# 🚪 4. Transition Geometry
 
 Transitions occur in:
 
@@ -95,14 +107,13 @@ Transitions occur in:
 
 ---
 
-
 # 🔗 5. Empirical Basis (Link to Findings)
 
 The unification presented here is grounded in previously established findings:
 
 ---
 
-## Phase Sensitivity (Finding 33)
+## Phase Sensitivity
 
 ```text
 System response depends on phase alignment
@@ -112,7 +123,7 @@ System response depends on phase alignment
 
 ---
 
-## Flow Shaping (Finding 34)
+## Flow Shaping
 
 ```text
 System follows modified flow, not direct forcing
@@ -122,17 +133,17 @@ System follows modified flow, not direct forcing
 
 ---
 
-## Temporal Propagation (Finding 35)
+## Temporal Propagation
 
 ```text
 Local perturbations influence future trajectory
 ```
 
-→ supports modulation-based control (Janus)
+→ supports modulation-based control
 
 ---
 
-## Flow Channels (Finding 42)
+## Flow Channels
 
 ```text
 Systems move through structured corridors
@@ -142,23 +153,23 @@ Systems move through structured corridors
 
 ---
 
-## Directional Gates (Finding 48)
+## Directional Gates
 
 ```text
 Gate success depends on direction
 ```
 
-→ critical for understanding transition geometry
+→ critical for transition geometry
 
 ---
 
-## Stability Field (Finding 36)
+## Stability Field
 
 ```text
 Stability emerges from structure
 ```
 
-→ consistent across all systems
+→ consistent across systems
 
 ---
 
@@ -176,7 +187,8 @@ but differences in:
 ```
 
 ---
-## 🔁 6. CONTROL IMPLICATION
+
+# 🔁 6. Control Implication
 
 ```text
 Control ≠ forcing trajectory
@@ -186,7 +198,7 @@ Control = reshaping transition structure
 
 ---
 
-# 🔶 7. JANUS FIELD (NEW CORE COMPONENT)
+# 🔶 7. Janus Field (Conceptual Component)
 
 ---
 
@@ -252,7 +264,7 @@ between motion and resistance.
 
 ---
 
-# 🔁 7. REGIME SWITCHING (DISCRETE LAYER)
+# 🔁 8. Regime Switching (Discrete Layer)
 
 ```text
 φ ∈ discrete state set
@@ -274,22 +286,22 @@ Continuous dynamics produce discrete regime changes.
 
 ---
 
-# ⚡ 8. REAL SYSTEM VALIDATION (IEEE)
+# ⚡ 9. Real System Validation (IEEE)
 
 ---
 
 ## Observation
 
-- system exhibits early instability signals  
-- Janus + Lyapunov modulation detects transitions earlier  
-- control shifts regime before collapse  
+- early structural instability signals  
+- transition detection before collapse  
+- control shifts regime before failure  
 
 ---
 
 ## Result
 
 ```text
-Prediction lead time > classical model
+Prediction lead time > classical models
 ```
 
 ---
@@ -304,7 +316,7 @@ It predicts transition into instability.
 
 ---
 
-# 🔷 9. MASTER INSIGHT
+# 🔷 10. Master Insight
 
 ```text
 All systems share:
@@ -322,7 +334,7 @@ Differences are only:
 
 ---
 
-# 🧠 FINAL STATEMENT
+# 🧠 Final Statement
 
 ```text
 Chaos is not random.
