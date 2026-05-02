@@ -306,6 +306,24 @@ simple → complex systems
 
 ---
 
+# 🌀 13. Residue Flow Dynamics
+
+![Residue Animation](../../../APPLICATIONS/dynamical_systems/halvorsen/outputs/halvorsen_residue_animation.gif)
+
+## Observation
+
+- cyclic flow patterns emerge  
+- transitions align with residue structure  
+- local periodicity within global chaos  
+
+## Insight
+
+```text
+Even irregular systems contain hidden structured cycles
+```
+
+---
+
 # 🔥 Final Insight
 
 ```text
