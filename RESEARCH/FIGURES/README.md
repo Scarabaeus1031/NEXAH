@@ -16,7 +16,7 @@ It is extracted from trajectory data through slice-based field, sheet, gate and 
 
 ### Figure 1 — Structural Framework
 
-![Figure 1](./main/fig_01_framework.png)
+![Framework](main/fig_01.png)
 
 **NEXAH — From Flow to Topology in Dynamical Systems**
 
