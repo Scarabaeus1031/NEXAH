@@ -10,3 +10,6 @@ Delta mismatch: 1.776377
 Interpretation:
 IOTA events are tested against deviations in phase velocity.
 This checks whether transitions are associated with broken rotational consistency.
+
+Angular Symmetry Test:
+Top angular modes: [4, 32, 34, 2, 0]
