@@ -259,6 +259,10 @@ non-uniform angular transition structure
 
 ---
 
+![Core Dynamical Variables](./visuals/nexah_phase_mismatch_control_mechanism.png)
+
+---
+
 # 🔥 Central Insight
 
 ```text
