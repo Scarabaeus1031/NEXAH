@@ -11,11 +11,7 @@ It serves to:
 - identify missing formalization  
 - guide future development  
 
-All questions arise from the structural framework and empirical results shown in:
-
-- Fig.1 — Structural Framework  
-- Fig.2 — Data-driven Extraction  
-- Fig.3 — Quantitative Characterization  
+All questions arise from the structural framework and empirical results of the NEXAH research layer.
 
 ---
 
@@ -24,10 +20,10 @@ All questions arise from the structural framework and empirical results shown in
 From the current framework:
 
 - structure can be extracted from trajectories  
-- sheets define coherent motion regions  
-- gates emerge at low-density, low-coherence regions  
+- coherent regions (regimes) can be identified  
+- transition regions emerge at low-density / low-coherence zones  
 - transitions are structured and non-random  
-- phase mismatch activates transitions  
+- phase mismatch correlates with transition activation  
 
 ---
 
@@ -35,36 +31,43 @@ From the current framework:
 
 Current interpretation:
 
-C(x) ≈ alignment between flow and structure
+```text
+C(x) ≈ alignment between motion and local flow structure
+```
 
 Problem:
 
 - not uniquely defined  
-- depends on approximation and representation  
+- depends on representation and projection  
 
 ---
 
 ## Open Question
 
-How can coherence C(x) be rigorously defined  
-in a coordinate-independent and stable way?
+How can coherence $begin:math:text$ C\(x\) $end:math:text$ be defined:
+
+- in a coordinate-independent way  
+- robust under noise  
+- stable across systems  
 
 ---
 
-# 🔬 2. Mathematical Properties of the Gate Operator
+# 🔬 2. Mathematical Properties of the Gate Function
 
 Current interpretation:
 
+```text
 G(x) ∝ low density × low coherence × low residence
+```
 
 ---
 
 ## Open Questions
 
-- continuity and differentiability of G(x)  
-- sensitivity to normalization and scaling  
+- continuity and differentiability of $begin:math:text$ G\(x\) $end:math:text$  
+- sensitivity to normalization  
 - invariance under coordinate transformations  
-- relation to geometric singularities  
+- relation to geometric singularities or separatrices  
 
 ---
 
@@ -72,29 +75,35 @@ G(x) ∝ low density × low coherence × low residence
 
 Observed:
 
-low G(x) corresponds to stable regions
+```text
+low G(x) ↔ stable regions
+```
 
 ---
 
 ## Open Question
 
-Is there a formal relationship between G(x)  
-and Lyapunov functions or stability certificates?
+Is there a formal relation between:
+
+- $begin:math:text$ G\(x\) $end:math:text$ and Lyapunov functions  
+- or other stability certificates?  
 
 ---
 
-# 🔬 4. Connection to Invariant Manifolds
+# 🔬 4. Connection to Invariant Structures
 
 Observed:
 
+```text
 density ridges resemble structured manifolds
+```
 
 ---
 
 ## Open Questions
 
 - Are density ridges approximations of invariant manifolds?  
-- Can sheet structures be formally linked to stable/unstable manifolds?  
+- Can sheet structures be linked to stable/unstable manifolds?  
 - Do sheets define a generalized foliation of phase space?  
 
 ---
@@ -103,33 +112,37 @@ density ridges resemble structured manifolds
 
 Current limitation:
 
+```text
 density estimation (KDE) does not scale well
+```
 
 ---
 
 ## Open Questions
 
-- Can ρ(x) be replaced by learned density models?  
-- Can sheets be extracted in latent spaces?  
-- How stable are sheet structures under dimensionality reduction?  
+- Can $begin:math:text$ \\rho\(x\) $end:math:text$ be replaced by learned density models?  
+- Can structure be extracted in latent spaces?  
+- How stable are structural features under dimensionality reduction?  
 
 ---
 
-# 🔬 6. Probabilistic Interpretation of Transitions
+# 🔬 6. Probabilistic Interpretation
 
 Observed:
 
+```text
 G(x) behaves like transition likelihood
+```
 
 ---
 
 ## Open Question
 
-Can G(x) or derived quantities be interpreted as:
+Can structural quantities be interpreted as:
 
-- transition probability  
-- hazard rate  
-- stochastic switching kernel  
+- transition probabilities  
+- hazard rates  
+- stochastic switching kernels?  
 
 ---
 
@@ -137,16 +150,18 @@ Can G(x) or derived quantities be interpreted as:
 
 Current approach:
 
+```text
 geometry-based, phase-aligned control
+```
 
 ---
 
 ## Open Questions
 
 - stability guarantees under NEXAH control  
-- relation to optimal control formulations  
-- compatibility with MPC and feedback linearization  
-- controllability of sheet transitions  
+- relation to optimal control  
+- compatibility with MPC  
+- controllability of transitions between regimes  
 
 ---
 
@@ -154,15 +169,17 @@ geometry-based, phase-aligned control
 
 Current:
 
-field is reconstructed from trajectory data
+```text
+structure is reconstructed from trajectories
+```
 
 ---
 
 ## Open Questions
 
-- can G(x) be learned via neural networks?  
+- can $begin:math:text$ G\(x\) $end:math:text$ be learned directly (e.g. neural fields)?  
 - can structure be inferred from partial observations?  
-- can dynamics → structure mapping be learned directly?  
+- can dynamics → structure mapping be learned end-to-end?  
 
 ---
 
@@ -170,7 +187,9 @@ field is reconstructed from trajectory data
 
 Current:
 
+```text
 geometric interpretation of dynamics
+```
 
 ---
 
@@ -178,126 +197,147 @@ geometric interpretation of dynamics
 
 - relation to energy landscapes  
 - compatibility with conservation laws  
-- extension to continuous systems (PDEs)  
+- extension to PDE systems  
 - relation to transport phenomena  
 
 ---
 
-# 🔬 10. Bidirectional / Janus Field Formalization
+# 🔬 10. Bidirectional / Janus Field
 
-Current idea:
+Concept:
 
+```text
 F_J(x) = F_forward + F_backward
+```
 
 ---
 
 ## Open Questions
 
 - how to define backward flow rigorously  
-- relation to reversible dynamics  
-- connection to time-symmetric formulations  
-- link to Koopman or Perron–Frobenius operators  
+- relation to reversible systems  
+- connection to Koopman / Perron–Frobenius operators  
 
 ---
 
 # 🔬 11. Temporal Structure of Transitions
 
-From Fig.3:
+Observed:
 
 - transitions are temporally clustered  
-- switching is not uniform  
+- switching is non-uniform  
 
 ---
 
 ## Open Questions
 
-- what governs switching density κ(t)?  
-- are there universal scaling laws?  
+- what governs transition intensity $begin:math:text$ \\kappa\(t\) $end:math:text$?  
+- are there scaling laws?  
 - can transition timing be predicted from structure?  
 
 ---
 
-# 🔬 12. Coherence, Gradient and Gate Separation
+# 🔬 12. Structural Quantity Separation
 
-Current interpretation:
+Current quantities:
 
-C(x) measures local coherence or alignment between motion and structure.
-
-ρ(x) measures where the system tends to reside.
-
-∇ρ(x) measures the local density gradient and may reveal ridges, slopes, apertures or gate candidates.
-
-G(x) measures transition susceptibility and should not be identified with C(x) or ∇ρ(x) alone.
+```text
+ρ(x) → density / occupancy  
+C(x) → coherence / alignment  
+∇ρ(x) → structural gradient  
+G(x) → transition susceptibility
+```
 
 ---
 
-## Working Distinction
+## Core Problem
 
-C(x): coherence / alignment  
-ρ(x): density / occupancy  
-R(x): residence / persistence  
-∇ρ(x): density gradient / structural slope  
-G(x): gate score / structural weakness  
+These quantities are:
+
+- empirically meaningful  
+- but not yet formally unified  
 
 ---
 
 ## Open Question
 
-Can the gate score be defined as a principled combination of:
+Can $begin:math:text$ G\(x\) $end:math:text$ be defined as a principled function of:
 
-low density,  
-low coherence,  
-low residence time,  
-and high local structural contrast?
+- density  
+- coherence  
+- residence time  
+- structural gradients  
 
 ---
 
 ## Candidate Form
 
-G(x) ∝ Wρ(x) · WC(x) · WR(x) · W∇(x)
-
-where:
-
-Wρ(x) increases when density is low  
-WC(x) increases when coherence is low  
-WR(x) increases when residence time is low  
-W∇(x) increases near strong structural gradients or boundary regions  
+$$
+G(x) \propto W_\rho(x)\, W_C(x)\, W_R(x)\, W_{\nabla}(x)
+$$
 
 ---
 
 ## Interpretation
 
-G(x) is not an inverted coherence field.
+```text
+C(x): describes aligned motion
 
-Rather, it is a compound indicator of structural weakness.
+G(x): describes structural breakdown
+```
 
-Coherence describes where motion remains aligned.  
-Gate score describes where aligned structure becomes permeable.
+Important:
 
----
-
-## GH / Measurement Axis Hypothesis
-
-The GH resonance bar / trajectory sled is currently interpreted as a conceptual measurement axis across structural layers.
-
-Possible interpretation:
-
-GH samples how transitions move across density, coherence and response gradients.
-
-This remains hypothetical and requires formal validation.
+```text
+G(x) is NOT an inverse of C(x)
+```
 
 ---
 
 ## Research Direction
 
-Future work should test whether gate events correlate more strongly with:
+Compare predictive power of:
 
-- low C(x) alone  
-- low ρ(x) alone  
-- high |∇ρ(x)| alone  
-- or a combined gate score G(x)
+- density-only  
+- coherence-only  
+- gradient-only  
+- combined gate score  
 
-This comparison is necessary before assigning mathematical status to GH, G(x), or the density-gradient field.
+---
+
+# 🔬 13. Measurement Axis / GH Hypothesis (Exploratory)
+
+A conceptual measurement axis (e.g. "trajectory sled")  
+has been used to probe transitions across structural layers.
+
+---
+
+## Status
+
+```text
+exploratory / not formalized
+```
+
+---
+
+## Open Question
+
+Can transition behavior be consistently measured along a  
+low-dimensional projection that captures:
+
+- density variation  
+- coherence breakdown  
+- transition activation  
+
+---
+
+## Requirement
+
+This concept requires:
+
+- formal definition  
+- reproducibility  
+- independence from visualization choices  
 
 ---
 
@@ -305,17 +345,17 @@ This comparison is necessary before assigning mathematical status to GH, G(x), o
 
 NEXAH currently provides:
 
-• strong empirical observations  
-• consistent geometric interpretation  
-• structured transition model  
-• initial control framework  
+- strong empirical observations  
+- consistent geometric interpretation  
+- structured transition model  
+- initial control framework  
 
 But lacks:
 
-• formal proofs  
-• theoretical grounding  
-• scalability guarantees  
-• probabilistic formalization  
+- formal proofs  
+- theoretical grounding  
+- scalability guarantees  
+- probabilistic formalization  
 
 ---
 
@@ -326,21 +366,23 @@ Future work should focus on:
 1. Formalization  
 2. Quantitative validation  
 3. Integration with existing theory  
-4. Scaling to high-dimensional systems  
+4. High-dimensional scaling  
 5. Control guarantees  
 
 ---
 
 # 🧠 Final Statement
 
+```text
 NEXAH is not a finished theory.
 
 It is a structured hypothesis that:
 
 geometry extracted from dynamics  
 governs transitions and emergent topology.
+```
 
 ---
 
-NEXAH — Open Problems  
+**NEXAH — Open Problems**  
 Thomas K. R. Hofmann · 2026
