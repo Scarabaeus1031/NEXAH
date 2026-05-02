@@ -72,7 +72,7 @@ Observed:
 
 ## 🖼️ Structural Field View
 
-![Lorenz Field Structure](../APPLICATIONS/core_demos/lorenz/outputs/lorenz_field/lorenz_density_vs_field.png)
+![Lorenz Field Structure](../../../APPLICATIONS/core_demos/lorenz/outputs/lorenz_field/lorenz_density_vs_field.png)
 
 ---
 
@@ -151,7 +151,7 @@ random jumps
 
 ## 🖼️ Transition / Navigation Structure
 
-![Lorenz Transition Field](../../APPLICATIONS/core_demos/lorenz/outputs/lorenz_transition_channel/lorenz_transition_channel.png)
+![Lorenz Transition Field](../../../APPLICATIONS/core_demos/lorenz/outputs/lorenz_transition_channel/lorenz_transition_channel.png)
 
 ---
 
