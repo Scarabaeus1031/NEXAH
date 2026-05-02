@@ -800,6 +800,89 @@ Control effectiveness depends on alignment, not amplitude.
 
 ---
 
+# 🧭 14. Phase Dynamics & Angular Structure (Final Check)
+
+**Scripts:**
+- `phase_dynamics_analysis.py`
+- `run_iota_angular_symmetry_test.py`
+
+---
+
+## 📊 Results
+
+- IOTA count: **150**
+- Mean |ω| at IOTA: **10.6846**
+- Mean |ω| overall: **2.8955**
+
+- Mean phase mismatch at IOTA: **2.6698**
+- Mean phase mismatch overall: **0.8934**
+
+→ Δ mismatch: **+1.7764**
+
+---
+
+## 🔁 Angular Analysis
+
+Top angular modes:
+
+```text
+[4, 32, 34, 2, 0]
+```
+---
+
+## 🧠 Interpretation
+
+### Phase Dynamics
+
+- IOTA events correlate strongly with:
+  - high phase velocity deviation
+  - high mismatch
+
+- Not with:
+  - absolute instability alone
+
+---
+
+### Angular Structure
+
+- IOTA distribution is **not uniform**
+- Preferred angular regions exist  
+
+BUT:
+
+- No dominant discrete symmetry (e.g. 5-fold, 7-fold)  
+- Spectrum shows **distributed harmonic content**
+
+---
+
+## 🔑 Key Observation
+
+```text
+Angular position influences transition likelihood,
+but does not define the transition mechanism.
+```
+
+---
+
+## 🚨 Critical Clarification
+
+```text
+Transitions are NOT caused by angular symmetry.
+
+They are caused by phase–control mismatch.
+```
+
+---
+
+## 🧭 Conclusion (Phase Layer)
+
+- Phase mismatch = primary driver ✔  
+- Angular structure = secondary modulation ✔  
+- No discrete symmetry law detected ✔  
+
+---
+---
+
 # 🧭 VALIDATION STATUS (Current)
 
 ## LEVEL 1 — Reproducibility ✔
@@ -867,19 +950,30 @@ Control effectiveness is phase-dependent and non-linear.
 
 ---
 
-## LEVEL 7 — Causal Mechanism (NEW) 🔥
+## LEVEL 7 — Causal Mechanism (FINAL) 🔥
 
 - Control law extraction ✔  
 - Regime detection ✔  
 - Phase dependency ✔  
 - Mismatch correlation ✔  
+- Phase dynamics validation ✔  
+- Angular structure test ✔  
 
 👉 Result:
+
 Transitions are NOT driven by instability alone.  
 
 They are driven by:
 
-phase–control mismatch  
+```text
+phase–control mismatch
+```
+
+Angular structure:
+
+- present ✔  
+- non-uniform ✔  
+- NOT causal ✔  
 
 ---
 
@@ -891,15 +985,22 @@ phase–control mismatch
 + Causal structure is IDENTIFIED
 + Control law is EXTRACTED
 + Transition trigger mechanism is UNDERSTOOD
++ Angular symmetry tested (non-causal)
 - Full suppression not yet achieved
 ```
 
+---
+
 ## 🧬 CONTROL INSIGHT
+
 ```text
 Control does NOT reduce instability.
 
 Control aligns trajectories with flow geometry.
 ```
+
+---
+
 # ✅ CONCLUSION
 
 - Structure is reproducible across runs  
@@ -920,7 +1021,8 @@ Control aligns trajectories with flow geometry.
 
 **AND:**
 
-- Transitions are causally linked to mismatch  
+- Transitions are causally driven by phase–control mismatch  
+- Angular structure modulates transitions but does not define them  
 - Control must align with system phase  
 
 ---
@@ -951,8 +1053,8 @@ but by aligning control with the intrinsic phase structure
 of the system.
 ```
 
-NEXAH Validation Layer
-Extended Control Validation Series
+---
+
+NEXAH Validation Layer  
+Extended Control Validation Series  
 © Thomas K. R. Hofmann · 2026
-
-
