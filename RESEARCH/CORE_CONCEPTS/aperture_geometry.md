@@ -28,7 +28,7 @@ It is:
 ```text
 Trajectory → Field → Instability → Gate → Phase → Mismatch → Transition
 ```
-
+ 
 Each step reveals one layer of the same underlying system.
 
 ---
