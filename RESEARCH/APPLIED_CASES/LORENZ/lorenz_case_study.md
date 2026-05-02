@@ -70,19 +70,20 @@ Observed:
 
 ---
 
-## 🖼️ Structural Field View
+## 🖼️ Figure A — Field Structure
 
-![Lorenz Field Structure](../../../APPLICATIONS/core_demos/lorenz/outputs/lorenz_field/lorenz_density_vs_field.png)
+![Field Structure](../../FIGURES/fig_01_field_structure.png)
 
----
-
-## Interpretation
+**Interpretation**
 
 ```text
 The system does not move randomly.
 
 It moves within a structured field.
 ```
+
+High-density regions correspond to stable motion,  
+while low-density regions indicate transition corridors.
 
 ---
 
@@ -132,8 +133,6 @@ Transitions occur through structured gates
 
 # 🔁 4. Transition Dynamics
 
-From transition matrices and trajectory analysis:
-
 Observed:
 
 - transitions are:
@@ -149,17 +148,18 @@ random jumps
 
 ---
 
-## 🖼️ Transition / Navigation Structure
+## 🖼️ Figure B — Transition Geometry
 
-![Lorenz Transition Field](../../../APPLICATIONS/core_demos/lorenz/outputs/lorenz_transition_channel/lorenz_transition_channel.png)
+![Transition Geometry](../../FIGURES/fig_02_transition_geometry.png)
 
----
-
-## Key Insight
+**Interpretation**
 
 ```text
 Transition dynamics are geometry-constrained
 ```
+
+Transitions occur along structured corridors between coherent regions,  
+not arbitrarily in state space.
 
 ---
 
@@ -174,7 +174,11 @@ Core quantities:
 
 ---
 
-## Observation
+## 🖼️ Figure C — Phase Mismatch Mechanism
+
+![Phase Mismatch](../../FIGURES/fig_03_phase_mismatch.png)
+
+**Observation**
 
 ```text
 IOTA events occur when mismatch is high
