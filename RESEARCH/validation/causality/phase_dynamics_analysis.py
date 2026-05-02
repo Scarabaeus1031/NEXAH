@@ -231,3 +231,42 @@ print("✅ Saved: phase_mismatch_iota.png")
 print("✅ Saved: phase_mismatch_probability.png")
 print("✅ Saved: phase_dynamics_space.png")
 print("✅ Saved: phase_dynamics_summary.txt")
+
+# ================================
+# IOTA ANGULAR SYMMETRY TEST
+# ================================
+
+print("\n🔬 Running angular symmetry test...")
+
+theta_iota = theta[iota_indices]  # oder iota_mask
+
+# normalize
+theta_iota = (theta_iota + 2*np.pi) % (2*np.pi)
+
+# histogram
+bins = 36
+hist, edges = np.histogram(theta_iota, bins=bins, density=True)
+centers = (edges[:-1] + edges[1:]) / 2
+
+plt.figure(figsize=(8,4))
+plt.plot(centers, hist)
+plt.title("IOTA Angular Distribution")
+plt.xlabel("theta")
+plt.ylabel("density")
+plt.grid()
+plt.show()
+
+# Fourier
+fft_vals = np.abs(np.fft.fft(hist))
+
+plt.figure(figsize=(8,4))
+plt.plot(fft_vals[:len(fft_vals)//2])
+plt.title("Angular Frequency Spectrum")
+plt.xlabel("mode k")
+plt.ylabel("amplitude")
+plt.grid()
+plt.show()
+
+# dominant modes
+dominant = np.argsort(fft_vals)[-5:]
+print("Top angular modes:", dominant)
