@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Vessel Geometry System introduces a **structural interpretation layer**  
+The Vessel Geometry System introduces a **structural containment layer**  
 on top of field-based dynamics.
 
 It describes how structure can be:
@@ -24,15 +24,27 @@ This is:
 
 It is:
 
-> a **structural model describing when and how stable system structure emerges**
+> a structural model describing when and how  
+> **persistent system structure emerges**
+
+---
+
+## 🧭 Context in NEXAH
+
+```text
+FIELD → geometry + flow
+VESSEL → containment + persistence
+PHASE → activation (when transitions occur)
+CONTROL → alignment with structure
+```
 
 ---
 
 ## Core Idea
 
-Observed behavior suggests:
+Observed behavior (VALIDATION):
 
-> structured dynamics often appear within **bounded regions of state space**
+> structured dynamics appear within **bounded regions of state space**
 
 These regions act as effective “containers” for:
 
@@ -40,6 +52,17 @@ These regions act as effective “containers” for:
 - recurrence  
 - coupling  
 - topology  
+
+---
+
+## 🔁 Empirical Evidence
+
+![Trajectory Overlay](../VALIDATION/lorenz/results/trajectory_overlay.png)
+
+Observed:
+
+- trajectories diverge locally  
+- but remain globally contained  
 
 ---
 
@@ -53,18 +76,24 @@ A **vessel** is a region in state space such that:
 
 ---
 
-## Structural Components
+# 🧩 Structural Components
 
-### 1. Boundary (B)
+---
+
+## 1. Boundary (B)
+
+![Instability Field](../VALIDATION/lorenz/results/instability_field.png)
 
 Defines the effective limits of the system:
 
 - separates stable vs unstable regions  
-- often aligned with transition thresholds  
+- aligned with high-instability zones  
 
 ---
 
-### 2. Interior (I)
+## 2. Interior (I)
+
+![Transition Field](../VALIDATION/lorenz/results/transition_field.png)
 
 Region where:
 
@@ -74,21 +103,23 @@ Region where:
 
 ---
 
-### 3. Interface (Γ)
+## 3. Interface (Σ)
+
+![Gate Region](../VALIDATION/causality/results/gate_region.png)
 
 Critical transition layer:
 
 - region of high interaction  
 - corresponds to transition zones / gates  
-- often linked to previously observed low-density regions  
+- aligns with instability + mismatch regions  
 
 ---
 
-### 4. Capacity (K)
+## 4. Capacity (K)
 
 Represents the **maximum structural complexity**:
 
-- number of stable states  
+- number of stable regions  
 - number of loops  
 - density of recurrence  
 
@@ -98,53 +129,52 @@ Represents the **maximum structural complexity**:
 
 The vessel acts as:
 
-- a **constraint on dynamics**  
-- a **filter for trajectories**  
-- a **support for persistent structure**
+- a constraint on dynamics  
+- a filter for trajectories  
+- a support for persistent structure  
 
 ---
 
-## Relation to Field Model
+## 🔗 Relation to Field Model
 
 | Concept   | Vessel Interpretation        |
-|-----------|-----------------------------|
+|----------|-----------------------------|
 | Field     | underlying geometry         |
 | Flow      | motion within region        |
 | Density   | occupation of space         |
-| Coupling  | interaction at interfaces   |
+| Instability | boundary / interface signal |
+| Phase     | transition activation       |
 
 ---
 
-## Observations (IEEE Systems)
+## 🔬 Phase Coupling (Critical Extension)
 
-### IEEE 9
+![Phase Mismatch](../VALIDATION/causality/results/phase_mismatch_iota.png)
 
-- weak recurrence  
-- limited structure  
-- no stable loops  
+Observed:
 
-→ interpreted as:
-
-> **weakly defined or diffuse vessel**
+- transitions occur at vessel interfaces  
+- but only activate under phase mismatch  
 
 ---
 
-### IEEE 14
+## Insight
 
-- stable loops  
-- strong coupling  
-- persistent topology  
+```text
+Vessel defines where transitions are possible
 
-→ interpreted as:
-
-> **well-defined structural containment**
+Phase mismatch defines when they occur
+```
 
 ---
 
 ## Working Hypothesis
 
-> Persistent structure appears when a system exhibits  
-> **sufficient containment and interface activity**
+> Persistent structure appears when a system exhibits:
+
+- sufficient containment (vessel formation)  
+- active interfaces (transition zones)  
+- phase-aligned dynamics  
 
 ---
 
@@ -153,18 +183,18 @@ The vessel acts as:
 A vessel does not form when:
 
 - trajectories disperse  
-- recurrence is uniform or absent  
+- recurrence is weak  
 - no stable loops emerge  
 
 ---
 
 ## Implications
 
-The vessel model helps explain:
+The vessel model explains:
 
-- why structure forms in some systems but not others  
-- why coupling localizes near boundaries  
-- why stability appears region-based  
+- why structure forms only in specific regions  
+- why transitions localize at boundaries  
+- why stability is region-based  
 
 ---
 
@@ -179,29 +209,65 @@ Stability = region of coherent flow
 Extended:
 
 ```text
-Stability = existence of a region where structure can persist
+Stability = existence of a region
+where structure persists under dynamics
 ```
 
 ---
 
-## Next Steps
+## 🔗 Relation to VALIDATION
+
+→ `../VALIDATION/validation_summary.md`
+
+Validation confirms:
+
+- global containment despite chaos  
+- localized instability at boundaries  
+- structured transition regions  
+- reproducible geometry across systems  
+
+---
+
+## 🚀 Next Steps
 
 - define measurable boundary criteria  
 - estimate capacity (K)  
 - detect vessel formation conditions  
-- test across different systems  
+- validate on IEEE systems  
+- integrate into control framework  
+
+---
+
+## 🧠 Key Insight
+
+```text
+Structure does not exist everywhere.
+
+It exists where the system is able
+to contain and sustain it.
+```
 
 ---
 
 ## Summary
 
-> Structure does not emerge everywhere in state space  
-> but within regions that support persistence and recurrence  
+> A vessel is the minimal condition for persistent structure.
+
+Without containment:
+
+- no recurrence  
+- no topology  
+- no stable dynamics  
 
 ---
 
 ## Status
 
-Exploratory structural model  
-Empirically motivated  
-Not yet validated across systems
+Exploratory → Empirically supported  
+Cross-system consistent (Lorenz / Rössler / Duffing)  
+IEEE validation: pending  
+
+---
+
+**NEXAH Research Layer**  
+Structure → containment → persistence → transition
