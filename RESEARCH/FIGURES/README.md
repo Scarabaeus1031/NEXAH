@@ -16,7 +16,7 @@ It is extracted from trajectory data through slice-based field, sheet, gate and 
 
 ### Figure 1 — Structural Framework
 
-![Framework](main/fig_01.png)
+![Framework](main/Fig_01.png)
 
 **NEXAH — From Flow to Topology in Dynamical Systems**
 
@@ -30,7 +30,7 @@ This figure shows how continuous flow can be reduced into locally coherent sheet
 
 ### Figure 2 — Data-Driven Extraction
 
-![Figure 2](main/fig_02_extraction.png)
+![Figure 2](main/Fig_02.png)
 
 **Empirical Extraction of Structure and Transitions**
 
@@ -46,7 +46,7 @@ It shows how sheets, gates and transition structures are extracted from trajecto
 
 ### Figure 3 — Quantitative Characterization
 
-![Figure 3](main/fig_03_quantitative.png)
+![Figure 3](main/Fig_03.png)
 
 **Quantitative Characterization of Transitions and Topology**
 
@@ -60,7 +60,7 @@ This figure supports the claim that transitions are governed by structural geome
 
 ### Figure 4 — Extended Flow-to-Topology Framework
 
-![Figure 4](extended/fig_04_extended_pipeline.png)
+![Figure 4](extended/Fig_04.png)
 
 Extended visual explanation of the flow-to-topology pathway, including cross-system topology mappings.
 
@@ -68,7 +68,7 @@ Extended visual explanation of the flow-to-topology pathway, including cross-sys
 
 ### Figure 5 — Structural Atlas
 
-![Figure 5](extended/fig_05_structural_atlas.png)
+![Figure 5](extended/Fig_05.png)
 
 Atlas-style overview of the core NEXAH concepts:
 
@@ -85,7 +85,7 @@ Atlas-style overview of the core NEXAH concepts:
 
 ### Figure 6 — Topology Emergence Framework
 
-![Figure 6](extended/fig_06_topology_framework.png)
+![Figure 6](extended/Fig_06.png)
 
 Cross-system comparison showing how Lorenz-like, Rössler-like and Halvorsen-like systems can induce different effective topologies through sheet connectivity.
 
@@ -93,7 +93,7 @@ Cross-system comparison showing how Lorenz-like, Rössler-like and Halvorsen-lik
 
 ### Figure 7 — Regime Geometry Pipeline
 
-![Figure 7](extended/fig_07_regime_geometry.png)
+![Figure 7](extended/Fig_07.png)
 
 Detailed pipeline emphasizing sheet decomposition, regime geometry, gates, temporal switching and navigation.
 
@@ -101,7 +101,7 @@ Detailed pipeline emphasizing sheet decomposition, regime geometry, gates, tempo
 
 ### Figure 8 — Full Structural Pipeline with Slice Operator
 
-![Figure 8](extended/fig_08_full_pipeline.png)
+![Figure 8](extended/Fig_08.png)
 
 Full structural pipeline:
 
