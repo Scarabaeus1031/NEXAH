@@ -2,105 +2,117 @@
 
 ## 🧭 Purpose
 
-This module contains **applications, case studies, and scenario mappings**  
-of the NEXAH framework.
+This module contains **case studies, cross-system analyses, and application scenarios**  
+built on top of the NEXAH framework.
 
-It translates the abstract structure of NEXAH into:
+It serves as the bridge between:
 
-- concrete systems  
-- applied interpretations  
-- decision and control scenarios  
+```text
+abstract structure → observable systems → practical interpretation
+```
 
 ---
 
 ## 🧠 Role in NEXAH
 
 ```text
-FOUNDATION → axioms & definitions  
-CORE_CONCEPTS → operational structure  
-VALIDATION → empirical evidence  
-APPLIED_CASES → interpretation & application  
+FOUNDATION      → axioms & definitions  
+CORE_CONCEPTS   → structural formulation  
+VALIDATION      → empirical evidence  
+APPLIED_CASES   → system-level interpretation  
 ```
+
+This layer does not introduce new theoretical components.  
+Instead, it evaluates how NEXAH structure manifests across different systems.
 
 ---
 
-## 🔷 Structure of This Module
+## 🔷 Module Structure
 
 ### 🔬 1. System Case Studies
 
-Real dynamical systems analyzed using NEXAH:
+Canonical dynamical systems analyzed using the NEXAH pipeline:
 
 ```text
 LORENZ/
 HALVORSEN/
+ROESSLER/
 ```
 
-These represent:
+These provide:
 
-- fully analyzed systems  
-- empirical validation contexts  
-- structural interpretation examples  
+- reference systems (Lorenz)  
+- intermediate transport systems (Rössler)  
+- high-complexity stress tests (Halvorsen)  
+
+Each case study includes:
+
+- structural extraction (density, sheets, transitions)  
+- transition behavior analysis  
+- system-specific interpretation  
 
 ---
 
-### 🔁 2. Comparisons
-
-Cross-system insights:
+### 🔁 2. Cross-System Comparisons
 
 ```text
 COMPARISONS/
 ```
 
+Focus:
+
+- structural invariance across systems  
+- differences in geometric expression  
+- topology emerging from dynamics  
+
 Example:
 
-- Lorenz vs Halvorsen  
-- topology differences  
-- transition behavior differences  
+```text
+Lorenz vs Rössler vs Halvorsen
+```
 
 ---
 
 ### 🌍 3. Application Scenarios
 
-Conceptual mappings of NEXAH to real-world domains:
-
 ```text
 SCENARIOS/
 ```
 
-Examples include:
+Conceptual mappings of NEXAH to real-world domains:
 
-- urban stability  
+- infrastructure stability  
 - engineering thresholds  
 - decision systems  
 - regime shift detection  
+
+These are **interpretative extensions**, not validated applications.
 
 ---
 
 ### 🧩 4. Worked Examples
 
-Structured demonstrations of NEXAH reasoning:
-
 ```text
 WORKED_EXAMPLES/
 ```
 
-These show:
+Step-by-step demonstrations of:
 
-- how to apply NEXAH step-by-step  
-- how structure maps to decisions  
-- how transitions are interpreted  
+- applying the NEXAH pipeline  
+- mapping structure to decisions  
+- interpreting transitions and regimes  
 
 ---
 
 ## 🧠 Interpretation Layer
 
 ```text
-APPLIED_CASES does not introduce new theory.
+APPLIED_CASES does not define new theory.
 
 It translates existing structure into:
-- systems
-- decisions
-- real-world interpretations
+    • system-specific behavior
+    • decision-relevant interpretation
+    • application-oriented reasoning
 ```
 
 ---
@@ -110,28 +122,28 @@ It translates existing structure into:
 ```text
 NEXAH is not only a descriptive framework.
 
-It is a navigation framework
-for structured dynamical systems.
+It provides a structure-aware perspective
+for analyzing and navigating dynamical systems.
 ```
 
 ---
 
-## 🔬 What is grounded vs interpretative
+## 🔬 Evidence vs Interpretation
 
-### Grounded (validated)
+### Grounded (empirical / demonstrated)
 
-- structure extraction  
-- transition dynamics  
-- phase mismatch mechanism  
-- control alignment  
+- structure emerges from trajectories  
+- density induces geometry  
+- transitions form local, constrained structures  
+- hybrid representation (continuous + discrete)  
 
 ---
 
 ### Interpretative (application layer)
 
-- mapping to real-world systems  
+- mapping to real-world domains  
 - scenario abstraction  
-- decision interpretation  
+- decision and control interpretation  
 
 ---
 
@@ -139,23 +151,23 @@ for structured dynamical systems.
 
 This module is:
 
-- partially empirical (case studies)  
-- partially interpretative (scenarios)  
+- empirical at the level of dynamical systems  
+- interpretative at the level of applications  
 
 It is NOT:
 
-- a complete applied theory  
-- a domain-specific model  
-- a validated real-world system (yet)  
+- a domain-specific applied model  
+- a validated engineering solution  
+- a complete control framework  
 
 ---
 
 ## 🔗 Related Modules
 
-- `../CORE_CONCEPTS/` → definitions and equations  
-- `../VALIDATION/` → empirical verification  
-- `../FIGURES/` → conceptual visual framework  
-- `../SYSTEM_MODELS/` → theoretical bridges  
+- `../CORE_CONCEPTS/` → definitions, equations, operators  
+- `../VALIDATION/` → empirical validation across systems  
+- `../FIGURES/` → conceptual and paper-level figures  
+- `../FOUNDATION/` → axioms and formal structure  
 
 ---
 
@@ -163,26 +175,30 @@ It is NOT:
 
 Recommended order:
 
-1. LORENZ case study  
-2. HALVORSEN case study  
-3. COMPARISONS  
-4. SCENARIOS  
-5. WORKED_EXAMPLES  
+```text
+1. LORENZ       → reference structure  
+2. ROESSLER     → transport structure  
+3. HALVORSEN    → complexity stress test  
+4. COMPARISONS  → invariance across systems  
+5. SCENARIOS    → interpretation layer  
+6. WORKED_EXAMPLES → applied reasoning  
+```
 
 ---
 
 ## 🔥 Final Insight
 
 ```text
-A system is not just evolving.
+A system does not evolve arbitrarily.
 
-It is navigating a structured space
-that can be interpreted, predicted,
-and potentially controlled.
+It moves within a structured space
+that constrains transitions,
+defines regimes,
+and shapes possible outcomes.
 ```
 
 ---
 
-**NEXAH Applied Cases Layer**  
-Interpretation & System Mapping  
+**NEXAH — Applied Cases Layer**  
+System Interpretation & Structural Mapping  
 © Thomas K. R. Hofmann · 2026
