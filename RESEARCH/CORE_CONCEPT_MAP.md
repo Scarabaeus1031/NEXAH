@@ -97,6 +97,9 @@ System = coupled multi-layer dynamics
 
 > Transitions occur through structured geometric pathways.
 
+> Transitions occur at low-density, low-coherence regions
+and are triggered by phase mismatch.
+
 Key ideas:
 
 - density → ridge → aperture → gate  
