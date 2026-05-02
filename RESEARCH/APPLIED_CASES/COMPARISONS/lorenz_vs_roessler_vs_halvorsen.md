@@ -23,29 +23,21 @@ structure is invariant
 
 # 🔁 Shared Structural Pipeline
 
-All systems follow:
-
 ```text
-Dynamics
-→ Density
-→ Structure
-→ Sheets
-→ Regimes
-→ Gates
-→ Transitions
-→ Connectivity
-→ Topology
+Dynamics → Density → Structure → Sheets → Regimes → Gates → Transitions → Topology
 ```
 
 ---
 
 # 🔬 1. Raw Dynamics
 
+![Cross-System Dynamics](../../FIGURES/fig_01_field_structure.png)
+
 ## Observation
 
-- Lorenz: two-lobed attractor  
-- Rössler: spiral attractor  
-- Halvorsen: irregular, folded attractor  
+- Lorenz → two-lobed attractor  
+- Rössler → spiral attractor  
+- Halvorsen → irregular attractor  
 
 ## Insight
 
@@ -58,17 +50,13 @@ different geometry
 
 # 🔬 2. Density Field
 
+![Density Comparison](../../../visuals/core/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
+
 ## Observation
 
-All systems produce:
-
-```text
-coherent density concentrations
-```
-
-- Lorenz → two elongated clusters  
-- Rössler → central spiral concentration  
-- Halvorsen → fragmented multi-core density  
+- Lorenz → elongated density ridge  
+- Rössler → central spiral density  
+- Halvorsen → fragmented density clusters  
 
 ## Insight
 
@@ -80,11 +68,13 @@ density is universal structural carrier
 
 # 🔬 3. Structure (Ridges / Flow Geometry)
 
+![Structure](../../../visuals/core/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
+
 ## Observation
 
-- Lorenz → clear ridge pathways between lobes  
-- Rössler → smooth spiral ridges  
-- Halvorsen → multiple intersecting ridge fragments  
+- Lorenz → bridge between lobes  
+- Rössler → spiral ridge  
+- Halvorsen → fragmented ridges  
 
 ## Insight
 
@@ -96,16 +86,12 @@ structure emerges from flow alignment
 
 # 🔬 4. Sheets (Discrete Structural Layers)
 
+![Sheets](../../../visuals/structure/transition_structure_phase.png)
+
 ## Observation
 
-All systems admit:
-
-```text
-sheet decomposition s(t)
-```
-
 - Lorenz → few dominant sheets  
-- Rössler → many layered spiral sheets  
+- Rössler → layered spiral sheets  
 - Halvorsen → irregular fragmented sheets  
 
 ## Insight
@@ -116,69 +102,11 @@ continuous dynamics induce discrete layers
 
 ---
 
-# 🔬 5. Regimes
+# 🔬 5. Transition Structure
 
-## Observation
+![Transition Matrix](../../../visuals/structure/transition_structure_matrix.png)
 
-- Lorenz → well-separated basins (lobes)  
-- Rössler → weakly separated spiral regions  
-- Halvorsen → diffuse, overlapping regions  
-
-## Insight
-
-```text
-regimes are aggregation of sheets
-```
-
----
-
-# 🔬 6. Gates
-
-## Definition
-
-```text
-G(x) = (1 - ρ)(1 - C)(1 - R)
-```
-
-## Observation
-
-- Lorenz → localized gate (between lobes)  
-- Rössler → distributed central gate region  
-- Halvorsen → multiple weak gate regions  
-
-## Insight
-
-```text
-gates = structural weakness regions
-NOT discrete events
-```
-
----
-
-# 🔬 7. Transitions
-
-## Definition
-
-```text
-s(t) ≠ s(t-1)
-```
-
-## Observation
-
-- Lorenz → discrete switching events  
-- Rössler → continuous local transitions  
-- Halvorsen → dense, distributed switching  
-
-## Insight
-
-```text
-transition behavior varies
-structure does not
-```
-
----
-
-# 🔬 8. Transition Structure
+![Transition Time](../../../visuals/structure/transition_structure_timeseries.png)
 
 ## Observation
 
@@ -186,7 +114,7 @@ All systems show:
 
 ```text
 • local transitions
-• banded transition matrix
+• banded structure
 • no long-range jumps
 ```
 
@@ -198,40 +126,96 @@ systems behave like constrained Markov processes
 
 ---
 
-# 🔬 9. Connectivity
+# 🔬 6. Gate Structure
+
+![Gate Operator](../../../visuals/unified/nexah_unified_gate_operator_v25.png)
+
+## Definition
+
+```text
+G(x) = (1 - ρ)(1 - C)(1 - R)
+```
 
 ## Observation
 
-- Lorenz → simple graph (2–3 nodes)  
-- Rössler → chain-like adjacency  
-- Halvorsen → dense irregular graph  
+- Lorenz → localized gate  
+- Rössler → central instability region  
+- Halvorsen → distributed weak regions  
 
 ## Insight
 
 ```text
-connectivity emerges from sheet transitions
+gates = structural weakness regions
+NOT discrete triggers
+```
+
+---
+
+# 🔬 7. Transition Geometry (Cross-System)
+
+![Cross System](../../../visuals/cross_system/nexah_cross_system_structure_v23.png)
+
+## Observation
+
+Same pattern across systems:
+
+```text
+• coherent regions
+• weak transition zones
+• structured paths
+```
+
+## Insight
+
+```text
+geometry of transitions is invariant
+```
+
+---
+
+# 🔬 8. Navigation & Flow
+
+![Navigation](../../../visuals/navigation/nexah_goal_navigation_v13.png)
+
+## Observation
+
+```text
+movement follows structure
+NOT shortest path
+```
+
+---
+
+# 🔬 9. Rotation & Stability
+
+![Rotation](../../../visuals/rotation/nexah_rotation_field_v24.png)
+
+## Insight
+
+```text
+stable = coherent rotation
+transition = rotation breakdown
 ```
 
 ---
 
 # 🔬 10. Topology (Emergent)
 
-## Interpretation (NOT imposed)
+## Interpretation
 
 | System | Effective Topology |
 |--------|------------------|
-| Lorenz | Möbius-like switching manifold |
-| Rössler | Disc / spiral (torus projection) |
-| Halvorsen | Mixed / graph-like topology |
+| Lorenz | Möbius-like switching |
+| Rössler | Spiral / disc (torus projection) |
+| Halvorsen | Graph-like topology |
 
 ---
 
-## Key Insight
+## 🔥 Key Insight
 
 ```text
-Topology is not given.
+Topology emerges from:
 
-It emerges from:
 Sheets → Connectivity → Transitions
 ```
 
@@ -239,15 +223,14 @@ Sheets → Connectivity → Transitions
 
 # 🔥 Core Structural Invariant
 
-Across all systems:
-
 ```text
-structure exists independently of dynamics type
+Structure persists across systems.
+Only its expression changes.
 ```
 
 ---
 
-## Unified View
+# 🧠 Unified Interpretation
 
 ```text
 Lorenz     → switching-dominated
@@ -257,19 +240,7 @@ Halvorsen  → distributed-dominated
 
 ---
 
-# 🧠 Interpretation
-
-```text
-Different systems express the same structural logic:
-
-• coherent regions (sheets)
-• weak regions (gates)
-• constrained transitions
-```
-
----
-
-# 🔥 Critical Insight
+# 🔥 Final Insight
 
 ```text
 The system is not defined by its equations.
@@ -279,31 +250,13 @@ It is defined by the structure it induces.
 
 ---
 
-# 🧭 Relation to Visual Discovery Log
-
-This comparison confirms:
-
-```text
-v1–v25 discoveries are NOT system-specific
-```
-
-but:
-
-```text
-structural properties of dynamical organization
-```
-
----
-
 # 🚀 Implication
-
-If validated:
 
 ```text
 NEXAH is not a model of a system.
 
 It is a framework for extracting structure
-from any dynamical system.
+from ANY dynamical system.
 ```
 
 ---
