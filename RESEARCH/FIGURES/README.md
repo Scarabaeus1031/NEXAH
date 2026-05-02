@@ -1,199 +1,194 @@
 # NEXAH — Core Figures
 
-This section contains the central visual representations of the NEXAH framework.
+This folder contains the central visual figure set for the NEXAH research layer.
 
 The figures are organized into:
 
-- **Main Figures** — core conceptual, empirical, and quantitative layers  
-- **Extended Figures** — atlas-style and structural expansions  
+- `main/` — core paper figures
+- `extended/` — extended framework and atlas figures
 
-All figures are derived from trajectory data in reduced slice spaces (v13 / v16).  
-Structure is **not assumed** — it is **extracted**.
+Structure is not assumed.  
+It is extracted from trajectory data through slice-based field, sheet, gate and transition analysis.
 
 ---
 
-# Main Figures
+## Main Figures
 
-## Figure 1 — Structural Framework
+### Figure 1 — Structural Framework
 
-![Fig1](./main/fig_01_framework.png)
+![Figure 1](main/fig_01_framework.png)
 
 **NEXAH — From Flow to Topology in Dynamical Systems**
 
-This figure presents the core structural pipeline:
+Conceptual overview of the core pipeline:
 
 **Flow → Sheets → Regimes & Gates → Transitions → Connectivity → Topology**
 
-- Flow generates continuous dynamics in phase space  
-- Sheets partition the system into locally coherent motion regions  
-- Gates mark regions of structural weakness (low density, coherence, residence)  
-- Transitions occur between sheets  
-- Connectivity induces global topology  
-
-> Topology is not imposed — it emerges from sheet connectivity.
+This figure shows how continuous flow can be reduced into locally coherent sheets, how transitions occur between sheets, and how global topology emerges from sheet connectivity.
 
 ---
 
-## Figure 2 — Data-Driven Extraction (v13 / v16)
+### Figure 2 — Data-Driven Extraction
 
-![Fig2](./main/fig_02_extraction.png)
+![Figure 2](main/fig_02_extraction.png)
 
-**Empirical Extraction of Sheets, Gates and Transitions**
+**Empirical Extraction of Structure and Transitions**
 
-This figure shows how structural elements are obtained directly from data:
+Hybrid figure combining a clean extraction pipeline with data-driven evidence from v13 / v16.
 
-Pipeline:
+Main steps:
 
 **Dynamics → Slice → Density → Sheets → Gates → Transitions**
 
-- Slice operator reduces dynamics to structurally relevant coordinates  
-- Density and flow fields are estimated from trajectories  
-- Sheets are identified as coherent flow layers  
-- Gates emerge at low-density, low-coherence intersections  
-- Transition statistics are computed from sheet switching  
-
-Right-side panels provide raw evidence:
-- Sheet reconstruction (v13)  
-- Gate detection (v16)  
-- Transition statistics and temporal dynamics  
-
-> All structural elements are empirically extracted from trajectory data.
+It shows how sheets, gates and transition structures are extracted from trajectory data rather than imposed as predefined categories.
 
 ---
 
-## Figure 3 — Quantitative Characterization
+### Figure 3 — Quantitative Characterization
 
-![Fig3](./main/fig_03_quantitative.png)
+![Figure 3](main/fig_03_quantitative.png)
 
-**Quantitative Structure of Transitions and Connectivity**
+**Quantitative Characterization of Transitions and Topology**
 
-This figure provides statistical validation of the framework:
+Quantitative layer of the framework, including transition probability, event density, switching dynamics, residence times, transition matrices and connectivity-to-topology summaries.
 
-Key observations:
-
-- **Transition probability decreases with proximity to structural cores**
-- **Transitions concentrate in intermediate to peripheral regions**
-- **Switching is temporally clustered (bursty dynamics)**
-- **Residence times follow heavy-tailed distributions**
-- **Transitions are local in sheet space**
-- **Connectivity structure correlates with emergent topology**
-
-A gate score is defined as:
-```text
-G(x) ∝ (low density) × (low coherence) × (low residence)
-```
-
-Connectivity is quantified via transition matrices and spectral properties.
-
-> Transitions are governed by structural geometry, not random fluctuations.
+This figure supports the claim that transitions are governed by structural geometry and sheet connectivity.
 
 ---
 
-# Extended Figures
+## Extended Figures
 
-These figures expand and generalize the structural framework.
+### Figure 4 — Extended Flow-to-Topology Framework
 
----
+![Figure 4](extended/fig_04_extended_pipeline.png)
 
-## Figure 4 — Extended Structural Pipeline
-
-![Fig4](./extended/fig_04_extended_pipeline.png)
-
-Expanded representation of the full structural pipeline including intermediate layers:
-field reconstruction, structure formation, and transition geometry.
+Extended visual explanation of the flow-to-topology pathway, including cross-system topology mappings.
 
 ---
 
-## Figure 5 — Structural Atlas
+### Figure 5 — Structural Atlas
 
-![Fig5](./extended/fig_05_structural_atlas.png)
+![Figure 5](extended/fig_05_structural_atlas.png)
 
-Atlas-style decomposition of dynamical systems into:
+Atlas-style overview of the core NEXAH concepts:
 
-- State space  
-- Field  
-- Sheets  
-- Regimes  
-- Gates  
-- Transitions  
-- Temporal dynamics  
-- Topology  
-
-Each block is defined both visually and conceptually.
+- state space
+- field
+- sheets
+- regimes
+- gates
+- transitions
+- temporal dynamics
+- topology
 
 ---
 
-## Figure 6 — Topology Emergence Framework
+### Figure 6 — Topology Emergence Framework
 
-![Fig6](./extended/fig_06_topology_framework.png)
+![Figure 6](extended/fig_06_topology_framework.png)
 
-Cross-system comparison showing how different dynamics lead to:
-
-- Twisted (Lorenz-like) topology  
-- Spiral (Rössler-like) topology  
-- Fragmented (Halvorsen-like) topology  
-
-> Topology emerges from sheet connectivity, not from equations directly.
+Cross-system comparison showing how Lorenz-like, Rössler-like and Halvorsen-like systems can induce different effective topologies through sheet connectivity.
 
 ---
 
-## Figure 7 — Regime Geometry Pipeline
+### Figure 7 — Regime Geometry Pipeline
 
-![Fig7](./extended/fig_07_regime_geometry.png)
+![Figure 7](extended/fig_07_regime_geometry.png)
 
-Detailed view of:
-
-- Sheet aggregation into regimes  
-- Basin geometry  
-- Gate formation at structural intersections  
-- Transition graph construction  
+Detailed pipeline emphasizing sheet decomposition, regime geometry, gates, temporal switching and navigation.
 
 ---
 
-## Figure 8 — Full Structural Pipeline with Slice Operator
+### Figure 8 — Full Structural Pipeline with Slice Operator
 
-![Fig8](./extended/fig_08_full_pipeline.png)
+![Figure 8](extended/fig_08_full_pipeline.png)
 
-Complete pipeline including:
+Full structural pipeline:
 
 **Dynamics → Slice → Field → Structure → Sheets → Regimes → Gates → Transitions → Time → Navigation**
 
-Includes:
-
-- Temporal switching dynamics  
-- Transition intensity  
-- Structure-aware navigation  
+This figure emphasizes the slice operator as the extraction layer connecting raw dynamics to structural and temporal representations.
 
 ---
 
-# Core Principle
+## Core Principle
 
-Across all figures, the same principle holds:
-
-> Flow creates structure.  
-> Structure forms sheets.  
-> Sheets define transitions.  
-> Transitions create connectivity.  
-> Connectivity defines topology.
+```text
+Flow creates structure.
+Structure forms sheets.
+Sheets define transitions.
+Transitions create connectivity.
+Connectivity defines topology.
+```
 
 ---
 
-# Notes
+## Suggested Paper Mapping
+
+| Paper role | Figure |
+|---|---|
+| Conceptual framework | Figure 1 |
+| Empirical extraction (v13/v16) | Figure 2 |
+| Quantitative validation | Figure 3 |
+| Supplementary atlas | Figures 4–8 |
+
+---
+
+## Repository Integration
+
+Recommended links:
+
+- ../CORE_CONCEPT_MAP.md — conceptual overview  
+- ../FINDINGS/core_findings.md — empirical findings  
+- ../VALIDATION/README.md — validation layer  
+- ../NEXAH_DEVELOPMENT/gate_operator/ — gate operator experiments  
+
+---
+
+## Summary
+
+These figures form the visual backbone of the NEXAH research framework.
+
+They describe a consistent structural reduction:
+
+Dynamics → Slice → Field → Sheets → Gates → Transitions → Connectivity → Topology
+
+Key claim:
+
+Topology is not imposed on the system.  
+It emerges from the connectivity of coherent structural sheets extracted from dynamics.
+
+---
+
+## Notes
 
 - All results are computed from trajectory data  
 - No topological assumptions are imposed  
-- The framework is consistent across multiple dynamical systems  
-- Structural elements are robust under system variation  
+- Structural elements are robust across different dynamical systems  
+- The same extraction pipeline applies to Lorenz, Rössler, Halvorsen and beyond  
 
 ---
 
-# Integration
+## Practical Reading Guide
 
-These figures connect to:
+Recommended order:
 
-- `CORE_CONCEPT_MAP.md` — conceptual structure  
-- `FINDINGS/` — empirical results  
-- `VALIDATION/` — experimental verification  
+1. Figure 1 — understand the conceptual pipeline  
+2. Figure 2 — see how structure is extracted from data  
+3. Figure 3 — verify the quantitative behavior  
+4. Figures 4–8 — explore extended structure and generalizations  
 
-They form the visual backbone of the NEXAH framework.
+---
 
+## Positioning
+
+This figure set bridges:
+
+- dynamical systems (continuous trajectories)  
+- geometric structure (fields, sheets, basins)  
+- discrete representations (transitions, graphs)  
+- topology (emergent global structure)  
+
+It provides a unified view from motion to structure to connectivity.
+
+---
