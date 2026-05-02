@@ -17,7 +17,7 @@ building → observation → validation → consolidation
 
 ```text
 BUILDER LAB (exploration)
-→ RESEARCH LAYER (understanding & validation)
+→ RESEARCH LAYER (understanding, structuring, validation)
 → CORE SYSTEM (stable, accepted structure)
 → DEMONSTRATOR / APPLICATIONS (execution)
 ```
@@ -42,7 +42,8 @@ This module is responsible for:
 - separating **hypothesis vs validated result**  
 - guiding system development  
 - preventing interpretation bias  
-
+- enforcing empirical validation across all system claims
+  
 ---
 
 # ⚠️ SCOPE
@@ -74,6 +75,31 @@ Recommended path:
 ---
 
 # 🧱 MODULE STRUCTURE
+
+---
+
+## 🔬 VALIDATION
+
+→ `VALIDATION/`
+
+Empirical verification layer of the system.
+
+![NEXAH Validation Summary](./VALIDATION/nexah_validation_summary_visual.png)
+
+**Figure — Validation Overview**
+
+This visual summarizes the full validation stack across:
+
+- reproducibility  
+- noise robustness  
+- partition invariance  
+- cross-system consistency  
+- control and causality  
+- phase dynamics and angular structure  
+
+It integrates over 150+ experimental artifacts into a single structural representation.
+
+👉 Role: **empirical backbone of the system**
 
 ---
 
@@ -190,6 +216,7 @@ Only after this:
 
 ```text
 → eligible for CORE integration
+→ AND inclusion in VALIDATION layer
 ```
 
 ---
@@ -267,7 +294,10 @@ It is implemented and tested in:
 - formalize sheet / regime structure  
 - connect to dynamical systems theory  
 - stabilize kernel abstraction  
-
+- complete adaptive control validation (phase + instability)
+- reduce transition frequency (IOTA suppression)
+- validate control reproducibility across runs
+  
 ---
 
 # 🧭 SUMMARY
