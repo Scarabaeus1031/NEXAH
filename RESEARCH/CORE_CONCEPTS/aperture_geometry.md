@@ -51,7 +51,7 @@ Each step reveals one layer of the same underlying system.
 
 # 🧩 2. Density vs Structure — Extracting the Skeleton
 
-![Instability Field](../../VALIDATION/lorenz/results/instability_field.png)
+![Instability Field](../VALIDATION/lorenz/results/instability_field.png)
 
 ### Idea
 
@@ -67,7 +67,7 @@ Each step reveals one layer of the same underlying system.
 
 # 🧩 3. Field Geometry — Hidden Structure
 
-![Transition Field](../../VALIDATION/lorenz/results/transition_field.png)
+![Transition Field](../VALIDATION/lorenz/results/transition_field.png)
 
 ### Idea
 
@@ -82,7 +82,7 @@ Each step reveals one layer of the same underlying system.
 
 # 🧩 4. Gate Regions — Transition Points
 
-![Gate Region](../../VALIDATION/causality/results/gate_region.png)
+![Gate Region](../VALIDATION/causality/results/gate_region.png)
 
 ### Idea
 
@@ -97,7 +97,7 @@ Each step reveals one layer of the same underlying system.
 
 # 🧩 5. Phase Mismatch — Trigger Mechanism
 
-![Phase Mismatch](../../VALIDATION/causality/results/phase_mismatch_iota.png)
+![Phase Mismatch](../VALIDATION/causality/results/phase_mismatch_iota.png)
 
 ### Idea
 
@@ -119,9 +119,9 @@ mismatch = |ω - smooth(ω)|
 
 # 🧩 6. Phase-Gated Control — Selective Activation
 
-![Phase Gate Mismatch](../../VALIDATION/causality/results/phase_gate_v2_mismatch.png)
+![Phase Gate Mismatch](../VALIDATION/causality/results/phase_gate_v2_mismatch.png)
 
-![Phase Gate Activation](../../VALIDATION/causality/results/phase_gate_v2_activation.png)
+![Phase Gate Activation](../VALIDATION/causality/results/phase_gate_v2_activation.png)
 
 ### Idea
 
@@ -137,7 +137,7 @@ mismatch = |ω - smooth(ω)|
 
 # 🧩 7. Multi-System Structure — Consistency
 
-![Cross-System Transition](../../VALIDATION/cross_system/cross_system_transition_matrices.png)
+![Cross-System Transition](../VALIDATION/cross_system/cross_system_transition_matrices.png)
 
 ### Idea
 
