@@ -31,7 +31,7 @@ Dynamics → Density → Structure → Sheets → Regimes → Gates → Transiti
 
 # 🔬 1. Raw Dynamics
 
-![Cross-System Dynamics](../../FIGURES/fig_01_field_structure.png)
+![Cross-System Dynamics](../../../../FIGURES/fig_01_field_structure.png)
 
 ## Observation
 
