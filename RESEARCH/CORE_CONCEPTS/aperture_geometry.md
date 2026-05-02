@@ -35,97 +35,48 @@ Each step reveals one layer of the same underlying system.
 
 # 🧩 1. Grid vs Field — The Observation Frame
 
-![Grid vs Field](./visuals/VISUAL01_GRIDvsFIELD.png)
-
-### Idea
-
-- The system is observed in a coordinate frame (α, β)  
-- Initially, the grid is neutral  
-- No structure is visible  
-
-### Insight
-
-> The observation frame defines what we can see  
-> before structure emerges
+![Grid vs Field](../visuals/VISUAL01_GRIDvsFIELD.png)
 
 ---
 
 # 🧩 2. Trajectory vs Density — Emergence of Structure
 
-![Trajectory vs Density](./visuals/VISUAL_02_TRAJECTORYvsDENSITY.png)
-
-### Idea
-
-- Individual trajectories appear chaotic  
-- Aggregating them reveals density patterns  
-
-### Insight
-
-> Structure does not appear in single paths  
-> but in **collective behavior**
+![Trajectory vs Density](../visuals/VISUAL_02_TRAJECTORYvsDENSITY.png)
 
 ---
 
 # 🧩 3. Density vs Ridge Paths — Extracting the Skeleton
 
-![Density vs Ridge Paths](./visuals/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
-
-### Idea
-
-- Density shows where the system spends time  
-- Ridge paths extract the **main flow structure**
-
-### Insight
-
-> Density tells us where  
-> Ridge paths tell us how the system moves
+![Density vs Ridge Paths](../visuals/VISUAL_03_DENSITYvsRIDGE_PATHS.png)
 
 ---
 
 # 🧩 4. Ridge Paths vs Aperture Ring — Hidden Geometry
 
-![Aperture Ring](./visuals/VISUAL_04_RIDGE_PATHSvsAPERTURE_RING.png)
-
-### Idea
-
-- Ridge structures form closed shapes  
-- What appears as a “line” is actually a **projected ring**
-
-### Insight
-
-> Observed channels can be slices of higher-dimensional structure
+![Aperture Ring](../visuals/VISUAL_04_RIDGE_PATHSvsAPERTURE_RING.png)
 
 ---
 
 # 🧩 5. Aperture Ring vs Gate Structure — Transition Locations
 
-![Gate Sequence](./visuals/VISUAL_05_APERTURE_RINGvsGATE_SEQUENCE.png)
-
-### Idea
-
-- Structural analysis identifies **candidate transition regions (gates)**  
-- These are fixed in geometry  
-
-### Insight
-
-> Geometry defines **where transitions can occur**
+![Gate Sequence](../visuals/VISUAL_05_APERTURE_RINGvsGATE_SEQUENCE.png)
 
 ---
 
 # 🧩 6. Gate vs Phase Dynamics — Transition Activation
 
-*(NEW LAYER — validated in NEXAH causality module)*
+*(Validated in VALIDATION/causality)*
 
 ### Idea
 
-- Phase evolves along the trajectory:
-  
-  ```text
-  φ(t),  ω = dφ/dt
-  ```
+- Phase evolves along trajectory:
 
-- Expected phase evolution defines a baseline  
-- Deviation from it creates **phase mismatch**
+```text
+φ(t),  ω = dφ/dt
+```
+
+- Expected phase defines baseline  
+- Deviation creates mismatch  
 
 ### Key quantity
 
@@ -135,42 +86,20 @@ mismatch = |ω - expected(ω)|
 
 ### Insight
 
-> Phase determines **when transitions occur**
+> Geometry defines where transitions can occur  
+> Phase defines when they occur
 
 ---
 
 # 🧩 7. Full Structure vs Ghost Snake — Minimal Representation
 
-![Ghost Structure](./visuals/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
-
-### Idea
-
-- The full system is complex  
-- A minimal path captures its essential structure  
-
-### Insight
-
-> Complex systems reduce to a **minimal transition skeleton**
+![Ghost Structure](../visuals/VISUAL_06_FULL_STRUCTUREvsGHOST_SNAKE.png)
 
 ---
 
 # 🧩 8. The NEXAH Lens — Multi-Perspective View
 
-![NEXAH Lens](./visuals/VISUAL_07_THE_NEXAH_LENS.png)
-
-### Idea
-
-The same structure appears differently depending on perspective:
-
-- 2D projection → density & ridges  
-- 3D view → geometry & depth  
-- time view → coherence & transitions  
-- phase view → activation & mismatch  
-
-### Insight
-
-> The system is one —  
-> only the perspective changes
+![NEXAH Lens](../visuals/VISUAL_07_THE_NEXAH_LENS.png)
 
 ---
 
@@ -189,8 +118,6 @@ is a phase mismatch event
 
 # 🔬 Interpretation (Updated)
 
-The pipeline can be summarized as:
-
 ```text
 trajectory → density → structure → geometry → phase → mismatch → transition
 ```
@@ -199,14 +126,8 @@ trajectory → density → structure → geometry → phase → mismatch → tra
 
 # 🔬 Key Insight (Updated)
 
-> Structure defines where transitions can occur.
-
+> Structure defines where transitions can occur.  
 > Phase dynamics determine when they occur.
-
-And:
-
-> Transitions are triggered when phase evolution deviates  
-> from its expected trajectory.
 
 ---
 
@@ -216,53 +137,30 @@ And:
 - dependent on projection  
 - partially heuristic  
 - phase model currently empirical  
-- not yet generalized across domains  
 
 ---
 
 # 🔗 Relation to Other Research Modules
 
-This system connects to:
-
----
-
 ## → field_model.md
 
-- interprets systems as **fields of transitions**  
-
----
+Interprets systems as **fields of transitions**
 
 ## → theory_to_field_mapping.md
 
-- connects abstract operators (Γ, Δ, Ω)  
-- to observed structural transformations  
+Maps structure to operators (Γ, Δ, Ω)
 
----
+## → ../VALIDATION/causality/
 
-## → VALIDATION/causality/
+Provides empirical evidence for:
 
-- provides empirical evidence for:
-  - phase mismatch  
-  - control alignment  
-  - transition triggering  
-
----
-
-## → APPLIED_CASES/
-
-- shows how these structures appear in real-world systems  
-
----
-
-## → visual_gallery.md
-
-- contains earlier exploratory visuals  
+- phase mismatch  
+- control alignment  
+- transition triggering  
 
 ---
 
 # 🚀 Role in NEXAH
-
-Supports:
 
 ### DISCOVERY ENGINE
 - structure extraction  
@@ -285,15 +183,6 @@ The Aperture Geometry System is:
 - a **visual pipeline**
 - a **structure extraction method**
 - a **geometry + phase integration layer**
-
-It is not:
-
-- a theory of physics  
-- a universal model  
-
-It is:
-
-> a **working system for revealing hidden structure and transition triggers**
 
 ---
 
