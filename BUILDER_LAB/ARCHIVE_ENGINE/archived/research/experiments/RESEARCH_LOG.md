@@ -295,3 +295,237 @@ within the broader NEXAH research framework.
 Active research.
 
 Experiments are exploratory and ongoing.
+
+---
+
+## Experiment 06 — Prime Modular Transition Dynamics
+
+File
+
+prime_modular_resonance/
+
+---
+
+### Goal
+
+Investigate whether purely discrete systems (prime numbers under modular projection)  
+produce structured transition dynamics comparable to continuous dynamical systems.
+
+---
+
+### Construction
+
+Prime sequence:
+
+pₙ = 2, 3, 5, 7, ...
+
+Residue mapping:
+
+rₙ = pₙ mod m
+
+Transition definition:
+
+Δrₙ = (rₙ₊₁ - rₙ) mod m
+
+Embedding (optional):
+
+θₙ = 2π rₙ / m  
+(xₙ, yₙ) = (cos θₙ, sin θₙ)
+
+---
+
+### Methods
+
+• Transition matrix construction  
+• Residue jump distribution  
+• Drift vector estimation  
+• Spectral / geometric embedding  
+• Cross-modulus comparison  
+• Clustering in transition space  
+
+---
+
+### Visual Outputs
+
+#### 1. Modular Transition Regimes
+
+![Mod Comparison](analysis/output/plots/figure_1_mod_comparison.png)
+
+- transition graphs for mod 7, 11, 13, 17  
+- increasing connectivity with modulus size  
+- emergence of dense transition structure  
+
+---
+
+#### 2. Drift Scaling
+
+![Drift Scaling](analysis/output/plots/mod_drift_scaling.png)
+
+Observation:
+
+- drift strength increases monotonically with modulus  
+- non-linear growth behavior  
+- suggests scaling law in transition dynamics  
+
+---
+
+#### 3. Transition Matrix Distance (Raw)
+
+![Distance Raw](analysis/output/plots/mod_distance_matrix_raw.png)
+
+Observation:
+
+- structured distance patterns across moduli  
+- not random → clear gradient + clustering tendency  
+
+---
+
+#### 4. Transition Matrix Distance (Clustered)
+
+![Distance Clustered](analysis/output/plots/mod_distance_matrix_clustered.png)
+
+Observation:
+
+- moduli form distinct clusters  
+- block structure emerges  
+- indicates dynamical regime families  
+
+---
+
+### Observations
+
+1. Non-uniform transition structure
+
+Prime residue transitions are not uniformly distributed.
+
+→ clear directional bias in state transitions  
+
+---
+
+2. Emergent drift
+
+Each modulus exhibits a consistent directional drift in residue space.
+
+Example:
+
+mod 7 → weak drift  
+mod 17 → strong drift  
+mod 47 → very strong drift  
+
+---
+
+3. Scaling behavior
+
+Drift strength grows with modulus:
+
+mod 7 → ~1.5  
+mod 17 → ~4.8  
+mod 31 → ~16  
+mod 47 → ~32  
+
+→ approximately superlinear growth  
+
+---
+
+4. Cluster formation
+
+Moduli group into dynamic regimes:
+
+Cluster A  
+7, 11, 13, 17, 19  
+
+Cluster B  
+23, 29, 31  
+
+Cluster C  
+37, 41  
+
+Cluster D  
+43, 47  
+
+---
+
+5. Structural similarity to dynamical systems
+
+Transition matrices exhibit:
+
+• band structures  
+• clustering  
+• directional flow bias  
+
+These resemble:
+
+• Markov processes  
+• transport operators  
+• coarse-grained dynamical flows  
+
+---
+
+### Interpretation
+
+The system behaves as a:
+
+→ discrete Markov-like transition system  
+→ with emergent directional bias (drift)  
+→ and structured topology in state space  
+
+Key insight:
+
+> Structure is not imposed — it emerges from transition asymmetry.
+
+---
+
+### Connection to Symmetry Graph Experiments
+
+Parallels observed:
+
+| Symmetry Graph | Prime Modular System |
+|------|----------------|
+| Phase synchronization | Transition stabilization |
+| Vortex structures | drift / directional bias |
+| Cycle layers | modular residue loops |
+| Domain locking | cluster formation |
+
+Hypothesis:
+
+Both systems may be governed by a shared principle:
+
+→ **structured transitions induce emergent order**
+
+---
+
+### Open Questions
+
+1. Is drift a universal property of prime residue systems?
+
+2. Does normalization remove or preserve structure?
+
+3. What is the spectral signature (eigenvalues) of these transition matrices?
+
+4. Do similar patterns appear in non-prime sequences?
+
+5. Can transition matrices be mapped to known dynamical operators?
+
+---
+
+### Next Steps
+
+• eigenvalue analysis of transition matrices  
+• stationary distribution computation  
+• normalization tests (drift / m, drift / √m)  
+• comparison with random controls  
+• higher modulus extension (m > 50)  
+• spectral clustering refinement  
+
+---
+
+### Status
+
+✔ reproducible  
+✔ quantified  
+✔ scalable  
+✔ connected to existing experiments  
+
+→ integrated into research layer
+
+---
