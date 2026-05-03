@@ -175,14 +175,34 @@ def update(frame):
     return lines + dots
 
 # ----------------------------
-# RUN
+# SINGLE FRAME (NO ANIMATION)
 # ----------------------------
 
-frames = min(len(traj)//FRAME_SKIP, MAX_FRAMES)
+# 🔥 wähle einen interessanten Zeitpunkt
+IDX = int(len(traj) * 0.6)   # 60% in der Trajectory (typisch guter Bereich)
 
-anim = FuncAnimation(fig, update, frames=frames, interval=40)
+sub = traj[:IDX]
+current = sub[-1]
 
-out = BASE_PATH / f"{CASE}_v10_comparison.gif"
-anim.save(out, writer="pillow", fps=FPS)
+modes = ["naive", "phase", "nexah"]
+
+for i, mode in enumerate(modes):
+    path = simulate(current, target, mode)
+
+    lines[i].set_data(path[:,0], path[:,1])
+    dots[i].set_offsets([current])
+
+    # 🔥 optional: auch Vergangenheit anzeigen (leicht transparent)
+    axs[i].plot(sub[:,0], sub[:,1], color="white", alpha=0.2, lw=1)
+
+# ----------------------------
+# SAVE FIGURE
+# ----------------------------
+
+plt.tight_layout()
+
+out = BASE_PATH / f"{CASE}_v10_comparison_static.png"
+plt.savefig(out, dpi=220, facecolor="black")
+plt.close()
 
 print(f"[OK] saved → {out}")
