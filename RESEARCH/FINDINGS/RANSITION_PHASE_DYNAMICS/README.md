@@ -11,7 +11,7 @@ discrete prime modular systems, also emerges in **continuous dynamical systems**
 It serves as a **bridge layer** between:
 
 - discrete transition systems (e.g. prime residues mod m)  
-- continuous dynamical systems (e.g. Lorenz, Rössler, Halvorsen)
+- continuous dynamical systems (e.g. Lorenz, Rössler, Halvorsen, Kuramoto)
 
 ---
 
@@ -24,6 +24,7 @@ Phase structure, drift, and topology
 are not system-specific,
 but emerge from transition dynamics.
 ```
+
 ---
 
 ## 🔬 Core Questions
@@ -48,9 +49,7 @@ We compare two system classes:
 
 ### 1. Discrete System (Prime Modular)
 
-```text
 p_n → r_n = p_n mod m → θ_n
-```
 
 Observed:
 
@@ -90,8 +89,6 @@ For each system:
 
 θ = atan2(y, x)
 
-(or other projection)
-
 3. Compute:
 
 - phase increments Δθ  
@@ -103,44 +100,66 @@ W(t) = θ_unwrapped / (2π)
 
 ---
 
-## 📊 Analysis Components
-
-- phase_on_lorenz.py  
-- phase_on_rossler.py  
-- phase_on_halvorsen.py  
-
-Each script produces:
-
-- phase trajectory  
-- increment distribution  
-- drift statistics  
-- winding plot  
+## 📊 Key Visual Results
 
 ---
 
-## 🔁 Comparison Layer
+### 🔹 Cross-System Phase Structure
 
-→ comparison_prime_vs_continuous.md
+![Phase Master](../TRANSITION_PHASE_DYNAMICS/figures/master/phase_field_master_visual.png)
 
-This compares:
+**Observation:**
 
-| Property | Prime | Continuous |
-|----------|------|-----------|
-| phase drift | ✔ | ? |
-| winding | ✔ | ? |
-| structure in Δθ | ✔ | ? |
-| linear phase growth | ✔ | ? |
+- Lorenz → drift with intermittent plateaus  
+- Rössler → smooth continuous phase transport  
+- Halvorsen → fragmented / step-like phase evolution  
 
 ---
 
-## 🔬 Expected Observations
+### 🔹 Kuramoto Phase Sweep (Control Parameter K)
 
-If the hypothesis holds:
+![Kuramoto Sweep](../TRANSITION_PHASE_DYNAMICS/figures/kuramoto/kuramoto_phase_sweep.png)
 
-- phase grows approximately linearly  
-- Δθ is structured (non-random)  
-- drift direction exists  
-- winding accumulates over time  
+**Observation:**
+
+K small   → fragmented phase (Halvorsen-like)  
+K medium  → structured drift (Lorenz-like)  
+K larger  → smooth transport (Rössler-like)  
+K large   → full synchronization (phase locking)  
+
+---
+
+### 🔹 Phase Increment Distributions
+
+Examples:
+
+- Lorenz → skewed + heavy tail  
+- Rössler → narrow unimodal  
+- Halvorsen → broad / mixed  
+- Kuramoto → delta-like (synchronized)
+
+---
+
+## 🔁 Structural Interpretation
+
+Across all systems:
+
+Phase θ(t) defines position within structure  
+Δθ defines local motion (transport)  
+Drift defines global directionality  
+Plateaus define transition boundaries  
+
+---
+
+## 🧭 Unified View
+
+All systems can be interpreted along a **phase-coherence axis**:
+
+fragmented → structured → transport → synchronized
+
+Mapping:
+
+Halvorsen → Lorenz → Rössler → Kuramoto
 
 ---
 
@@ -148,13 +167,15 @@ If the hypothesis holds:
 
 This module directly connects to:
 
-Field → Structure → Transition → Topology
+Field → Structure → Transition → Topology → Control
 
 Interpretation:
 
 - phase = local coordinate on structure  
+- Δθ = local flow  
 - drift = directional transport  
-- winding = global topology  
+- plateaus = transition regions (gates)  
+- coherence (Kuramoto r) = structural alignment  
 
 ---
 
@@ -163,32 +184,41 @@ Interpretation:
 This module:
 
 - is empirical  
-- is exploratory  
-- compares structural behavior across systems  
+- is cross-system comparative  
+- demonstrates structural similarity  
 
 It does NOT:
 
-- claim physical interpretation  
 - claim universality beyond tested systems  
 - replace formal dynamical analysis  
+- provide a closed-form theory  
 
 ---
 
 ## 🚀 Status
 
-✔ concept defined  
-✔ pipeline compatible with prime system  
-✔ ready for cross-system testing  
+✔ cross-system validated  
+✔ discrete ↔ continuous bridge established  
+✔ phase dynamics consistently observed  
+✔ ready for integration into core framework  
 
 ---
 
-## 🔥 Key Insight (Working)
+## 🔥 Key Insight
 
-Phase may act as a universal coordinate  
+Phase acts as a universal coordinate  
 for transition-induced structure.
+
+---
+
+## 🧭 Next Steps
+
+- formalize phase dynamics as core NEXAH operator  
+- integrate phase into navigation kernel  
+- define phase-based gate/control mechanisms  
+- extend to additional systems (e.g. Duffing, Kuramoto variants)  
 
 ---
 
 **NEXAH · Research Layer**  
 Transition Phase Dynamics Module
-
