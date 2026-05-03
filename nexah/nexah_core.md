@@ -1,4 +1,4 @@
-# NEXAH Core Specification
+# NEXAH Core Specification (v0.7 – Frozen Kernel)
 
 ## Overview
 
@@ -10,14 +10,15 @@ It transforms a trajectory into a discrete state system, extracts transition dyn
 - regime detection
 - probabilistic navigation
 - intervention suggestions
+- system comparison (v0.7)
 
-The system is intentionally minimal and interpretable.
+The system is intentionally minimal, interpretable, and deterministic.
 
 ---
 
 ## Core API
 
-python nexah.analyze(trajectory, target_state=None) 
+python nexah.analyze(trajectory, target_state=None)
 
 ### Input
 
@@ -31,7 +32,16 @@ python nexah.analyze(trajectory, target_state=None)
 - current_state: last inferred state
 - best_state: highest scoring state
 - transitions: transition probability matrix
-- path_bfs: shortest path to target (if provided)
+- stable_states: high self-transition states
+- regime_shifts: indices of state changes
+- instability: local instability scores
+- escape_difficulty: difficulty to leave states
+- state_scores: heuristic ranking of states
+- signature: structural fingerprint (v0.7)
+
+If target_state is provided:
+
+- path_bfs: shortest path to target
 - path_prob: stochastic path sample
 - dynamics: transition statistics (probability + time)
 - intervention: path-based intervention cost
@@ -45,10 +55,12 @@ python nexah.analyze(trajectory, target_state=None)
 
 Transforms raw trajectory into a state space representation.
 
-Method:
-- Sliding window embedding
+Steps:
+- optional normalization
+- reshape to (T, D)
+- sliding window embedding
 
-python X_t = [x_t, x_{t+1}, ..., x_{t+w}] 
+python X_t = [x_t, x_{t+1}, ..., x_{t+w}]
 
 ---
 
@@ -58,6 +70,7 @@ Extracts discrete system states and transitions.
 
 #### Clustering
 - KMeans over embedded states
+- deterministic via random_state
 
 #### Transition Matrix
 
@@ -141,7 +154,7 @@ Captures realistic system dynamics.
 
 ### Path Cost
 
-For a path ( s_0 \rightarrow s_1 \rightarrow ... \rightarrow s_n ):
+For a path ( s_0 → s_1 → ... → s_n ):
 
 [
 \text{cost} = \sum_{i} (1 - P(s_i \rightarrow s_{i+1}))
@@ -156,11 +169,6 @@ Interpretation:
 ## Transition Dynamics Estimation
 
 Monte Carlo simulation:
-
-For multiple trials:
-
-- simulate until target reached or cutoff
-- measure:
 
 ### Hit Probability
 
@@ -183,7 +191,7 @@ Identify which transition modification most improves reachability.
 
 Method:
 
-1. For each transition ( a \rightarrow b )
+1. For each transition ( a → b )
 2. Slightly increase probability (+ε)
 3. Renormalize
 4. Recompute hit probability
@@ -193,13 +201,16 @@ Method:
 
 ### Output
 
-python {   "from": state_a,   "to": state_b,   "improvement": delta_probability,   "new_probability": updated_hit_probability } 
+python {
+  "from": state_a,
+  "to": state_b,
+  "improvement": delta_probability,
+  "new_probability": updated_hit_probability
+}
 
 ---
 
 ## State Scoring
-
-Simple heuristic:
 
 [
 score(s) = P(s \rightarrow s) - \alpha (1 - P(s \rightarrow s))
@@ -207,7 +218,34 @@ score(s) = P(s \rightarrow s) - \alpha (1 - P(s \rightarrow s))
 
 Interpretation:
 - rewards stability
-- penalizes excessive lock-in slightly
+- slightly penalizes excessive lock-in
+
+---
+
+## System Signature (v0.7)
+
+Each trajectory produces a structural fingerprint:
+
+- n_states_observed
+- dominant_state
+- occupancy distribution
+- escape_difficulty
+- transition_entropy
+
+---
+
+## System Comparison (v0.7)
+
+Two systems are compared via:
+
+- stability profile difference
+- transition entropy difference
+
+Similarity score:
+
+[
+similarity = \frac{1}{1 + \Delta_{stability} + \Delta_{entropy}}
+]
 
 ---
 
@@ -217,7 +255,30 @@ Interpretation:
 - no hidden latent models
 - no symbolic abstraction layers
 - fully interpretable
+- deterministic behavior (via random_state)
 - minimal dependencies
+
+---
+
+## Core Freeze (v0.7)
+
+The NEXAH kernel is frozen.
+
+No further changes will be made to:
+
+- embedding logic
+- clustering method
+- transition modeling
+- navigation algorithms
+- control heuristic
+
+Reason:
+
+- preserve reproducibility
+- ensure interpretability
+- stabilize system behavior
+
+All future extensions must be implemented as external layers.
 
 ---
 
@@ -225,6 +286,7 @@ Interpretation:
 
 - discrete approximation of continuous systems
 - clustering instability (label permutations)
+- comparison ignores phase alignment
 - control is local and heuristic
 - no causal guarantees
 - sensitive to embedding parameters
@@ -235,30 +297,44 @@ Interpretation:
 
 - exploratory system analysis
 - regime detection
+- transition modeling
 - early-stage control prototyping
-- educational / research use
+- cross-system comparison
 
 ---
 
-## Future Extensions
+## Future Extensions (Outside Core)
 
-- sensitivity analysis (transition gradients)
-- continuous control models
-- adaptive embeddings
-- multi-dimensional trajectory support
-- real-world system integration
+- sensitivity analysis
+- continuous control fields
+- improved similarity metrics
+- advanced embeddings
+- visualization layer
+- CLI / tooling
+- real-world integrations
 
 ---
 
 ## Summary
 
-NEXAH Core provides a minimal, interpretable framework for:
+NEXAH Core v0.7 provides:
 
-- extracting structure from time series
-- modeling transitions
-- navigating state spaces
-- estimating intervention strategies
+- structure extraction
+- dynamic modeling
+- navigation
+- intervention estimation
+- system comparison
 
-It is designed as a foundation for further development into a full dynamical control system.
+It is a minimal, deterministic, and interpretable kernel for analyzing dynamical systems.
+
+The core is now frozen.
+
+Further value will come from:
+
+→ applications  
+→ tooling  
+→ analysis layers  
+
+not from modifying the kernel.
 
 ---
