@@ -15,13 +15,19 @@ This diagram summarizes the central result:
 Different flow geometries → same transition structure → unified control principle
 ```
 
+Extended with phase layer:
+
+```text
+Transition structure → phase organization → drift → transport → control
+```
+
 ---
 
 ## 🧠 Core Insight
 
 ```text
 Different dynamical systems exhibit different flow geometries,
-but share a common transition structure.
+but share a common transition structure and phase organization.
 ```
 
 ---
@@ -52,6 +58,18 @@ behavior = cyclic transport
 
 ---
 
+### Kuramoto (Limit Case)
+
+- coupling-dependent behavior  
+- coherence-driven dynamics  
+- collapses to phase-dominated system  
+
+```text
+behavior = synchronization (phase collapse)
+```
+
+---
+
 ## 🧠 Key Observation
 
 ```text
@@ -73,6 +91,7 @@ Both systems can be described as:
 trajectory in field
 → decomposed into regimes
 → connected via transitions
+→ organized by phase
 ```
 
 ---
@@ -95,6 +114,12 @@ Transition structure is invariant
 even when flow geometry changes.
 ```
 
+Extended:
+
+```text
+Phase dynamics reveals this invariant structure.
+```
+
 ---
 
 # 🚪 4. Transition Geometry
@@ -104,12 +129,44 @@ Transitions occur in:
 - low-density regions  
 - flow conflict zones  
 - directional misalignment  
+- phase mismatch regions  
 
 ---
 
-# 🔗 5. Empirical Basis (Link to Findings)
+# 🔷 5. Phase Structure (NEW)
 
-The unification presented here is grounded in previously established findings:
+Across all systems:
+
+- phase θ(t) can be defined  
+- phase increments Δθ are structured  
+- mean drift μ_Δθ ≠ 0  
+- winding accumulates  
+
+---
+
+## Result
+
+```text
+Phase provides a universal coordinate
+for transition structure.
+```
+
+---
+
+## Interpretation
+
+```text
+θ → position in structure  
+Δθ → local motion  
+μ_Δθ → directional asymmetry  
+winding → global topology
+```
+
+---
+
+# 🔗 6. Empirical Basis (Link to Findings)
+
+The unification presented here is grounded in:
 
 ---
 
@@ -119,7 +176,7 @@ The unification presented here is grounded in previously established findings:
 System response depends on phase alignment
 ```
 
-→ explains differences in transition behavior between systems
+→ explains transition timing and activation
 
 ---
 
@@ -129,7 +186,7 @@ System response depends on phase alignment
 System follows modified flow, not direct forcing
 ```
 
-→ consistent across Lorenz, Halvorsen, and controlled systems
+→ consistent across Lorenz, Halvorsen, Kuramoto
 
 ---
 
@@ -139,7 +196,7 @@ System follows modified flow, not direct forcing
 Local perturbations influence future trajectory
 ```
 
-→ supports modulation-based control
+→ enables phase-based control
 
 ---
 
@@ -149,17 +206,15 @@ Local perturbations influence future trajectory
 Systems move through structured corridors
 ```
 
-→ explains transport vs switching differences
+→ transport pathways
 
 ---
 
 ## Directional Gates
 
 ```text
-Gate success depends on direction
+Gate success depends on direction and phase
 ```
-
-→ critical for transition geometry
 
 ---
 
@@ -169,36 +224,35 @@ Gate success depends on direction
 Stability emerges from structure
 ```
 
-→ consistent across systems
-
 ---
 
 ## 🧠 Interpretation
 
 ```text
-The observed differences between systems
-are not differences in fundamental behavior,
+Differences between systems are not fundamental.
 
-but differences in:
+They arise from:
 
-- distribution of structure
-- strength of transitions
+- distribution of transitions
+- strength of gates
 - topology of flow
+- degree of phase coherence
 ```
 
 ---
 
-# 🔁 6. Control Implication
+# 🔁 7. Control Implication
 
 ```text
 Control ≠ forcing trajectory
 
 Control = reshaping transition structure
+      = aligning phase dynamics
 ```
 
 ---
 
-# 🔶 7. Janus Field (Conceptual Component)
+# 🔶 8. Janus Field (Conceptual Component)
 
 ---
 
@@ -259,12 +313,12 @@ Janus regulates transitions:
 Stability is not static.
 
 It is dynamically negotiated
-between motion and resistance.
+through phase, flow, and resistance.
 ```
 
 ---
 
-# 🔁 8. Regime Switching (Discrete Layer)
+# 🔁 9. Regime Switching (Discrete Layer)
 
 ```text
 φ ∈ discrete state set
@@ -281,12 +335,13 @@ Transition condition:
 ## Interpretation
 
 ```text
-Continuous dynamics produce discrete regime changes.
+Continuous dynamics produce discrete regimes
+through structured transitions.
 ```
 
 ---
 
-# ⚡ 9. Real System Validation (IEEE)
+# ⚡ 10. Real System Validation (IEEE)
 
 ---
 
@@ -316,7 +371,7 @@ It predicts transition into instability.
 
 ---
 
-# 🔷 10. Master Insight
+# 🔷 11. Master Insight
 
 ```text
 All systems share:
@@ -324,12 +379,14 @@ All systems share:
 - field structure
 - regime decomposition
 - transition geometry
+- phase organization
 
 Differences are only:
 
 - distribution of transitions
 - strength of gates
 - topology of flow
+- level of phase coherence
 ```
 
 ---
@@ -341,7 +398,8 @@ Chaos is not random.
 
 It is structured motion
 across regimes
-connected by transitions.
+connected by transitions
+and organized by phase.
 
 NEXAH reveals and controls this structure.
 ```
