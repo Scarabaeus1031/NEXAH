@@ -89,3 +89,36 @@ It encodes:
 → global rotation  
 → accumulated transport  
 → emergent topology
+
+---
+
+## Approximate Relation: Drift → Winding
+
+Under the assumption of approximately stationary phase increments:
+
+μ_Δθ = E[Δθ(t)] ≈ const
+
+the winding number evolves approximately as:
+
+w(t) ≈ (μ_Δθ / 2π) · t
+
+---
+
+## Interpretation
+
+This relation shows that:
+
+- local phase drift accumulates linearly over time  
+- the slope of w(t) is directly determined by μ_Δθ  
+- global topology (winding) is induced by local asymmetry  
+
+---
+
+## Implication
+
+Statistical properties of Δθ fully determine
+the large-scale behavior of the system.
+
+Thus:
+
+local transition asymmetry ⇒ global topological structure
