@@ -3,6 +3,14 @@
 
 ---
 
+![Prime Modular Resonance — System Overview](analysis/output/plots/PRIME_MODULAR_RESONANCE_SYSTEM_OVERVIEW.png)
+
+**System overview:**
+Discrete prime residues → asymmetric transitions → cycle structure + drift → emergent flow and geometry.
+
+
+---
+
 ## 🔷 Overview
 
 This module investigates whether **prime number sequences**, when projected into modular residue spaces, exhibit **non-random dynamical structure**.
