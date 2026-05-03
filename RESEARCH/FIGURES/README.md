@@ -1,163 +1,135 @@
 # 🔬 NEXAH — Core Figures
 
-This directory contains the canonical figure set for the NEXAH research layer.
+This directory contains the canonical figure set  
+for the NEXAH research layer.
 
-The figures provide a structured visual representation of how  
-dynamical system behavior is transformed into geometric, structural,  
-and connectivity-based descriptions.
-
----
-
-## 🧭 Organization
-
-The figure system is organized into two tiers:
-
-- main/ — core figures used for primary explanation and publication  
-- extended/ — supplementary figures providing deeper structural insight  
+The figures provide a minimal, structured representation of how  
+dynamical systems are transformed into geometric and structural descriptions.
 
 ---
 
-## 🧠 Conceptual Basis
+# 🧭 Organization
+
+```text
+main/      → primary figures (paper-ready)
+extended/  → supporting figures (deeper analysis)
+```
+
+---
+
+# 🧠 Conceptual Principle
 
 NEXAH does not assume predefined structure.
 
-Instead, structure is empirically extracted from trajectory data through:
+Instead, structure is extracted from data:
 
-- density estimation  
-- local flow analysis  
-- coherence detection  
-- transition observation  
-
----
-
-# 🔷 Main Figures
-
-## Figure 1 — Structural Framework
-
-Framework
-
-NEXAH — From Flow to Structured Connectivity
-
-This figure presents the conceptual pipeline:
-
-Flow → Sheets → Regimes & Gates → Transitions → Connectivity → Topology
-
-It illustrates how continuous system dynamics can be interpreted as:
-
-- locally coherent flow regions ("sheets")  
-- structured transition zones ("gates")  
-- connectivity patterns between regions  
+```text
+trajectories → field → structure → transitions → connectivity
+```
 
 ---
 
-## Figure 2 — Data-Driven Structure Extraction
+# 🔷 Main Figures (Canonical Set)
 
-Figure 2
+## Figure 1 — Field Structure
 
-Empirical Extraction of Structural Components
+![Figure 1](./fig_01_field_structure.png)
 
-Pipeline:
+**Role:** Conceptual foundation
 
-Dynamics → Slice → Density → Sheets → Gates → Transitions
+Shows how continuous dynamics generate a **structured field**:
 
-This figure demonstrates how structural elements are derived directly from data:
+- density organization  
+- coherent flow regions  
+- emergence of geometric structure  
 
-- no predefined state partition  
-- no imposed topology  
-- purely observation-driven segmentation  
+👉 Interpretation:
 
----
-
-## Figure 3 — Quantitative Characterization
-
-Figure 3
-
-Quantitative Description of Transition Structure
-
-This layer includes:
-
-- transition probabilities  
-- event density  
-- switching behavior  
-- residence time distributions  
-- transition matrices  
+```text
+structure emerges from dynamics
+```
 
 ---
 
-## Interpretation
+## Figure 2 — Transition Geometry
 
-The figure supports the empirical observation that:
+![Figure 2](./fig_02_transition_geometry.png)
 
-transition behavior is structured and non-random
+**Role:** Structural decomposition
 
-and reflects underlying geometric organization.
+Shows how the field organizes into:
 
----
+- sheets (coherent regions)  
+- transition zones (gates)  
+- structured pathways between regions  
 
-# 🔷 Extended Figures
+👉 Interpretation:
 
-## Figure 4 — Extended Flow-to-Structure Framework
-
-Figure 4
-
-Expanded view of the structural pipeline, including cross-system interpretation.
-
----
-
-## Figure 5 — Structural Atlas
-
-Figure 5
-
-Overview of core structural components:
-
-- state space representation  
-- density fields  
-- sheet structures  
-- transition regions  
-- temporal behavior  
+```text
+transitions are geometric regions, not discrete events
+```
 
 ---
 
-## Figure 6 — Emergent Topology (Cross-System)
+## Figure 3 — Phase Mismatch & Control
 
-Figure 6
+![Figure 3](./fig_03_phase_mismatch.png)
 
-Comparison across systems (e.g. Lorenz, Rössler, Halvorsen):
+**Role:** Dynamic interpretation
 
-Different connectivity patterns induce different effective structural organizations.
+Illustrates:
 
-⚠️ Note:  
-Topology here is used in an interpretative / structural sense,  
-not as a formally proven topological equivalence.
+- instability as geometric deviation  
+- phase mismatch as transition precursor  
+- control via alignment with structure  
 
----
+👉 Interpretation:
 
-## Figure 7 — Regime Geometry Pipeline
-
-Figure 7
-
-Detailed decomposition:
-
-flow → sheets → regimes → transitions → navigation
+```text
+stability and control are geometric phenomena
+```
 
 ---
 
-## Figure 8 — Full Extraction Pipeline
+# 🔁 Structural Pipeline (Unified View)
 
-Figure 8
+Across all figures:
 
-Complete structural pipeline:
-
-Dynamics → Slice → Field → Structure → Sheets → Regimes → Gates → Transitions → Time → Navigation
+```text
+dynamics → field → structure → transitions → connectivity
+```
 
 ---
 
-# 🔑 Core Principle
+# 🔷 Extended Figures (Supporting Layer)
 
-Flow generates structure.  
-Structure organizes motion.  
-Transitions connect structure.  
-Connectivity defines global organization.
+## Figure 4–8 — Structural Extensions
+
+Located in `extended/`
+
+Provide deeper analysis of:
+
+- cross-system comparison (Lorenz, Rössler, Halvorsen)  
+- regime structure and connectivity  
+- temporal transition behavior  
+- full extraction pipeline  
+
+⚠️ These figures are:
+
+- supplementary  
+- not required for core understanding  
+- intended for extended analysis  
+
+---
+
+# 🔑 Core Insight
+
+```text
+Flow generates structure.
+Structure organizes motion.
+Transitions connect structure.
+Connectivity defines global behavior.
+```
 
 ---
 
@@ -165,32 +137,10 @@ Connectivity defines global organization.
 
 | Role | Figure |
 |------|--------|
-| Conceptual framework | Fig. 1 |
-| Data-driven extraction | Fig. 2 |
-| Quantitative validation | Fig. 3 |
+| Conceptual foundation | Fig. 1 |
+| Structural decomposition | Fig. 2 |
+| Dynamic interpretation | Fig. 3 |
 | Extended analysis | Fig. 4–8 |
-
----
-
-# 🔗 Repository Integration
-
-- ../CORE_CONCEPT_MAP.md  
-- ../FINDINGS/  
-- ../VALIDATION/  
-- ../NEXAH_DEVELOPMENT/gate_operator/  
-
----
-
-# 🧠 Summary
-
-The figure set describes a consistent transformation:
-
-Dynamics → Field → Structure → Transitions → Connectivity
-
-Key interpretation:
-
-Global system organization can be described  
-through connectivity between coherent flow regions.
 
 ---
 
@@ -198,43 +148,32 @@ through connectivity between coherent flow regions.
 
 - All results are empirical and data-driven  
 - No formal topological equivalence is claimed  
-- Structural elements are observed across multiple systems  
-- Generality beyond tested systems remains an open question  
+- Structural elements are observed across systems  
+- Generality beyond tested systems remains open  
 
 ---
 
-# 📖 Reading Guide
+# 🧠 Summary
 
-Recommended order:
+The figure set describes a transformation:
 
-1. Fig. 1  
-2. Fig. 2  
-3. Fig. 3  
-4. Fig. 4–8  
+```text
+dynamics → structure → transitions → connectivity
+```
 
----
+NEXAH interprets dynamical systems as:
 
-## 🔗 Empirical Visuals
-
-For system-specific visual outputs:
-
-→ ../APPLICATIONS/dynamical_systems/  
-→ ../APPLICATIONS/core_demos/
-
-# 🧭 Positioning
-
-This figure system connects:
-
-- dynamical systems (continuous evolution)  
-- geometric structure (fields, coherence)  
-- transition behavior (connectivity)  
-- global organization (emergent structure)  
+```text
+structured fields with constrained motion
+```
 
 ---
 
 # 🔥 Final Insight
 
-The system is not only a trajectory.
+```text
+A system is not only a trajectory.
 
-It exhibits structured motion  
-that can be analyzed through geometry and transitions
+It is a structured space
+that constrains how motion can occur.
+```
