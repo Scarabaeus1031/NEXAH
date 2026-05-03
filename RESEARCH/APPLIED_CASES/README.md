@@ -35,14 +35,14 @@ Canonical dynamical systems analyzed using the NEXAH pipeline:
 
 ```text
 LORENZ/
-HALVORSEN/
 ROESSLER/
+HALVORSEN/
 ```
 
-These provide:
+These represent:
 
 - reference systems (Lorenz)  
-- intermediate transport systems (Rössler)  
+- transport-dominated systems (Rössler)  
 - high-complexity stress tests (Halvorsen)  
 
 Each case study includes:
@@ -63,7 +63,7 @@ Focus:
 
 - structural invariance across systems  
 - differences in geometric expression  
-- topology emerging from dynamics  
+- emergence of topology from transition structure  
 
 Example:
 
@@ -133,7 +133,7 @@ for analyzing and navigating dynamical systems.
 ### Grounded (empirical / demonstrated)
 
 - structure emerges from trajectories  
-- density induces geometry  
+- density induces geometric organization  
 - transitions form local, constrained structures  
 - hybrid representation (continuous + discrete)  
 
@@ -176,11 +176,11 @@ It is NOT:
 Recommended order:
 
 ```text
-1. LORENZ       → reference structure  
-2. ROESSLER     → transport structure  
-3. HALVORSEN    → complexity stress test  
-4. COMPARISONS  → invariance across systems  
-5. SCENARIOS    → interpretation layer  
+1. LORENZ        → reference structure  
+2. ROESSLER      → transport structure  
+3. HALVORSEN     → complexity stress test  
+4. COMPARISONS   → invariance across systems  
+5. SCENARIOS     → interpretation layer  
 6. WORKED_EXAMPLES → applied reasoning  
 ```
 
