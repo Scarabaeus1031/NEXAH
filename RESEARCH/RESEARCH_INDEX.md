@@ -20,7 +20,7 @@ and makes it navigable.
 It transforms:
 
 ```text
-trajectory → field → structure → transitions → control
+dynamics → density → structure → sheets → transitions → topology
 ```
 
 ---
