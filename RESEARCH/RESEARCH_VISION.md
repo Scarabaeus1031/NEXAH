@@ -6,7 +6,7 @@ It identifies **structure within system dynamics** and enables **causal interact
 
 ---
 
-## 🧭 Conceptual Overview
+# 🧭 Conceptual Overview
 
 ![Validation Summary](./VALIDATION/nexah_validation_summary_visual.png)
 
@@ -14,28 +14,28 @@ It identifies **structure within system dynamics** and enables **causal interact
 
 ---
 
-## 🔷 Structural Framework
-
-See core figures:
+# 🔷 Structural Framework
 
 ![Structural Framework](./FIGURES/main/Fig_01.png)
 
 The NEXAH framework reduces dynamical systems to a structural pipeline:
 
+```text
 Flow → Sheets → Regimes & Gates → Transitions → Connectivity → Topology
+```
 
 Structure is not imposed — it is extracted from trajectory data.
 
 ---
 
-## 🔷 Core Hypothesis
+# 🔷 Core Hypothesis
 
 > Complex systems evolve within **structured fields**  
 > and transition when **phase coherence breaks**.
 
 ---
 
-## 🔷 Transition Geometry + Phase Dynamics
+# 🔷 Transition Geometry + Phase Dynamics
 
 ![Gate Resonance](./VALIDATION/causality/gate_resonance_scan_multirun.png)
 
@@ -46,13 +46,13 @@ Observed structure:
 - transitions occur through **gates (intersections)**  
 - phase dynamics determine **when transitions activate**
 
-This empirical structure corresponds to the extracted sheet, gate and transition layers shown in:
+This empirical structure corresponds to the extracted sheet, gate, and transition layers:
 
 ![Extraction](./FIGURES/main/Fig_02.png)
 
 ---
 
-### 🔑 Key Insight
+## 🔑 Key Insight
 
 ```text
 Transitions are not random.
@@ -63,15 +63,20 @@ AND are triggered by phase mismatch.
 
 ---
 
-## 🧠 Interpretation
+# 🧠 Structural Interpretation
 
 ```text
 field → structure → geometry → phase → mismatch → transition
 ```
 
+This defines a **two-layer mechanism**:
+
+- geometry defines *where transitions are possible*  
+- phase dynamics defines *when transitions occur*
+
 ---
 
-## 🔬 Structural Observations
+# 🔬 Structural Observations
 
 Across systems:
 
@@ -83,7 +88,7 @@ Across systems:
 
 ---
 
-## 🔬 Causal Mechanism (Validated)
+# 🔬 Causal Mechanism (Validated)
 
 ![Phase Mismatch](./VALIDATION/causality/results/phase_mismatch_iota.png)
 
@@ -101,14 +106,18 @@ IOTA ⇔ instability
 
 ---
 
-### Interpretation
+## 🧠 Interpretation
 
-- instability = potential  
-- mismatch = trigger  
+```text
+instability = potential  
+phase mismatch = trigger
+```
+
+This establishes **phase as the causal activation variable**.
 
 ---
 
-## 🧭 Control Principle
+# 🧭 Control Principle
 
 ![Phase Gate Control](./VALIDATION/causality/results/phase_gate_v2_activation.png)
 
@@ -122,7 +131,7 @@ phase-aligned intervention
 
 ---
 
-### Key Law
+## 🔑 Control Law
 
 ```text
 Control effectiveness depends on:
@@ -132,7 +141,7 @@ alignment(control, phase dynamics)
 
 ---
 
-## 🔷 Field-Based System View
+# 🔷 Field-Based System View
 
 System state:
 
@@ -148,7 +157,7 @@ $$
 
 ---
 
-## 🔷 Phase Dynamics Extension
+# 🔷 Phase Dynamics Extension
 
 Phase:
 
@@ -156,7 +165,7 @@ $$
 \phi = \arctan2(y, x)
 $$
 
-Velocity:
+Phase velocity:
 
 $$
 \omega = \frac{d\phi}{dt}
@@ -170,7 +179,7 @@ $$
 
 ---
 
-## 🔷 Coherence
+# 🔷 Coherence
 
 $$
 C(s) =
@@ -179,7 +188,7 @@ $$
 
 ---
 
-## 🔷 Navigation Principle
+# 🔷 Navigation Principle
 
 ```text
 navigate along structure
@@ -189,29 +198,37 @@ avoid unstable divergence
 
 ---
 
-## 🧠 Unified Interpretation (Updated)
+# 🧠 Unified System Interpretation
 
 ```text
 System =
 trajectory in structured field
-
-Stability:
-→ alignment + density + phase coherence
-
-Instability:
-→ misalignment + low density
-
-Transition:
-→ geometry-defined
-→ phase-triggered (mismatch)
 ```
+
+### Stability
+
+- alignment with flow  
+- high-density regions  
+- structural containment  
+- phase coherence  
+
+### Instability
+
+- misalignment  
+- low density  
+- competing flow  
+
+### Transition
+
+- geometry-defined  
+- phase-triggered (mismatch)
 
 ---
 
-## ⚠️ Current Limitation
+# ⚠️ Current Limitation
 
 - phase-aligned control improves trajectories  
-- BUT does not yet suppress transitions  
+- BUT does not yet fully suppress transitions  
 
 Missing:
 
@@ -223,7 +240,7 @@ phase AND instability
 
 ---
 
-## 🔧 Next Step
+# 🔧 Next Step
 
 ```text
 s = f(φ, instability)
@@ -237,7 +254,7 @@ Expected:
 
 ---
 
-## 🔬 Status
+# 🔬 Status
 
 - empirically validated  
 - cross-system confirmed  
@@ -246,7 +263,7 @@ Expected:
 
 ---
 
-## 🧭 Final Insight
+# 🧭 Final Insight
 
 ```text
 Systems do not fail randomly.
