@@ -6,12 +6,16 @@
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 ![Focus](https://img.shields.io/badge/focus-dynamical%20systems-lightgrey)
 
+> A framework for discovering and navigating structure in dynamical systems.
+
 > **Status:** Active research system — validation and kernel integration in progress
 
 ---
 
 > NEXAH reconstructs structure, transitions, and stability  
 > directly from system dynamics.
+
+> It reveals how systems move, where transitions occur, and when they are triggered.
 
 > Complex systems are not random.  
 > They evolve within **structured fields that constrain motion, transitions, and outcomes**.
@@ -39,7 +43,7 @@ raw trajectories → continuous field → structured regions → transition dyna
 into a representation that makes systems:
 
 ```text
-observable → interpretable → navigable
+observable → structurally interpretable → navigable
 ```
 
 This enables:
@@ -58,7 +62,7 @@ This enables:
 NEXAH is grounded in a structured research layer:
 
 - empirical findings across systems  
-- structural models (field, vessel, transitions)  
+- structural models (field, vessel, transitions, phase)  
 - cross-system invariance analysis  
 
 👉 Start here:
@@ -93,6 +97,7 @@ Where:
 - stability = alignment with field structure  
 - instability = drift into low-density or conflicting regions  
 - transitions = movement across structured regions  
+- **phase mismatch = trigger of transitions**
 
 ---
 
@@ -146,20 +151,17 @@ NEXAH has been tested across:
 - controlled experiments (transition modulation)  
 - real-world inspired systems (power grids)  
 
-Key observations:
+Key observations (validated across tested systems):
 
 - early detection of transition behavior before instability  
-- structure is robust under noise  
+- structure remains robust under noise  
 - transition geometry persists across systems  
+
+These results indicate that transition structure is not system-specific,  
+but an emergent property of dynamical systems.
 
 👉 See:
 - [`RESEARCH/VALIDATION/validation_summary.md`](RESEARCH/VALIDATION/validation_summary.md)
-
-Observed behavior (in tested systems):
-
-- early indication of transition behavior before instability  
-- structure remains robust under noise  
-- transition geometry persists across systems   
 
 ---
 
@@ -167,7 +169,7 @@ Observed behavior (in tested systems):
 
 ![NEXAH Core Structure](RESEARCH/FINDINGS/visuals/nexah_core_structure_diagram.png)
 
-*Unified structural hierarchy: field dynamics, transition geometry, discrete regimes, and control layer.*
+*Unified structural hierarchy: field dynamics, transition geometry, phase dynamics, and control layer.*
 
 ---
 
@@ -208,7 +210,8 @@ NEXAH integrates:
 Field (continuous)
 ↔ Geometry (structure)
 ↔ Graph (transitions)
-↔ Control (trajectory shaping)
+↔ Phase (causal dynamics)
+↔ Control (trajectory navigation)
 ```
 
 Interpretation:
@@ -216,7 +219,8 @@ Interpretation:
 - field → defines motion  
 - geometry → defines constraints  
 - graph → encodes transition structure  
-- control → shapes trajectories within these constraints  
+- phase → defines transition activation  
+- control → navigates trajectories within these constraints  
 
 ---
 
