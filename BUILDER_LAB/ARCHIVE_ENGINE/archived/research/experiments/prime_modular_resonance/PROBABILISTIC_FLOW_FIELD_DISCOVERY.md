@@ -63,88 +63,48 @@ with:
 ### Triangle Generator Layer
 ![Triangle Flow](analysis/output/curated/mod7_triangle_rotation.gif)
 
-### Particle Flow (Raw Field)
-![Particle Flow](analysis/output/curated/mod7_particle_flow.gif)
+### Particle Flow (Clean)
+![Particle Flow](analysis/output/plots/mod7_particle_flow_clean.gif)
 
-### Particle Flow with Trails
-![Particle Trails](analysis/output/curated/mod7_particle_flow_trails.gif)
-
-### Transition Flow (Full System)
-![Transition Flow](analysis/output/curated/mod7_transition_flow.gif)
+### Perturbation Flow
+![Perturbation Flow](analysis/output/plots/mod7_perturbation_flow.gif)
 
 ---
 
-## Visual Evidence — Asymmetry & Structure
+## Visual Evidence — Spectral Flow
 
-### State Asymmetry Maps
-![Asymmetry Maps](analysis/output/plots/asymmetry_map_mod23.png)
+### Spectral Projection
+![Spectral Flow](analysis/output/plots/spectral_flow_projection_0.png)
 
-Observation:
-
-- strong deviation from random baseline  
-- persistent directional bias  
+### Spectral Complex Plane
+![Spectral Complex](analysis/output/plots/spectral_flow_complex_plane_0.png)
 
 ---
 
-## Visual Evidence — Transition Channels
+## Visual Evidence — Flow Field Structure
 
-### Dominant Transition Channels
-![Channels](analysis/output/plots/transition_channels_mod31.png)
+### Stream / Basin Flow
+![Basin Flow](analysis/output/plots/basin_flow_field_visualizer_0.png)
 
-Observation:
-
-- sparse but dominant edges  
-- preferred transport directions  
-- non-uniform connectivity  
+### Cycle Flow Overlay
+![Cycle Flow](analysis/output/plots/cycle_flow_field_overlay_0.png)
 
 ---
 
-## Visual Evidence — Cycle Structure
+## Visual Evidence — Multi-Structure Geometry
 
-### Dominant Cycles
-![Cycles](analysis/output/plots/dominant_cycle_mod23.png)
+### Unified Flow Torus Map
+![Torus Map](analysis/output/plots/unified_flow_torus_map_0.png)
 
-Observation:
-
-- stable loop structures  
-- increasing cycle length with modulus  
-- consistent cycle weights (~0.20)
+### Triangle Flow Generator
+![Triangle Generator](analysis/output/plots/triangle_flow_animation_0.png)
 
 ---
 
-## Visual Evidence — Cycle Alignment with Drift
+## Visual Evidence — Cross-Mod Interaction
 
-### Drift-Aligned Cycles
-![Aligned Cycles](analysis/output/plots/cycle_alignment_mod23.png)
-
-Observation:
-
-- cycles align with global drift direction  
-- preferred step sizes emerge (e.g. +6, +7)  
-
----
-
-## Visual Evidence — Cycle Connectivity
-
-### Cycle Overlap Graph
-![Cycle Overlap](analysis/output/plots/cycle_overlap_mod23.png)
-
-Observation:
-
-- all cycles connected  
-- single global component  
-- no isolated recurrence structures  
-
----
-
-## Visual Evidence — Flow Decomposition
-
-### Matrix Decomposition
-![Flow Decomposition](analysis/output/plots/flow_decomposition_mod23.png)
-
-### Graph Decomposition
-![Flow Graph](analysis/output/plots/flow_graph_mod23.png)
-
+### Edge Flow (mod7 × mod11)
+![Edge Flow](analysis/output/plots/edge_flow_circulation_mod7_mod11_0.png)
 Observation:
 
 - clear separation:
