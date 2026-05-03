@@ -169,3 +169,114 @@ Initial exploration phase — emergence of structured modular flow dynamics
 - Trace accumulation (trajectory → structure)
 - Multi-mod coupling (mod7 × mod11 × mod17)
 - Stabilization vs symmetry breaking
+
+---
+
+## 🔹 PHASE 11 — MULTI-MOD STRUCTURE & CYCLE CORE
+
+### state_asymmetry_map.py
+- Computed asymmetry matrices across mod systems
+- Strong deviation from random baseline confirmed
+- Structured transition bias persists across all tested moduli
+- Visualization shows diagonal transport bands and state-to-state preference
+
+### transition_channel_extractor.py
+- Extracted dominant transition channels per state
+- Identified strongest directed edges (flow backbone)
+- Observed consistent directional transport patterns
+- Revealed non-uniform transition topology
+
+### dominant_cycle_detector.py
+- Detected high-weight cycles across mod systems
+- Cycles increase in length with modulus size
+- Identified dominant recurrence structures
+- Cycle weights stabilize around ~0.20–0.26 across moduli
+
+### cycle_drift_alignment.py
+- Measured alignment of cycles with global drift direction
+- Identified cycles with maximal directional coherence
+- Observed repeating step-patterns (e.g. +6, +7 drift structures)
+- Strong indication of drift-constrained cycle dynamics
+
+### cycle_overlap_graph.py
+- Constructed overlap graph of detected cycles
+- Result: single connected component
+- All cycles share nodes → no isolated structures
+- System behaves as a unified recurrence network
+
+### flow_decomposition.py
+- Decomposed transition matrix into:
+  - cycle flow (recurrent component)
+  - residual drift (transport component)
+- Observed:
+  - strong cyclic backbone
+  - superimposed directional drift
+- Confirms:
+  Flow = cyclic structure + directed transport
+
+### cycle_core_embedding.py
+- Extracted recurrent core of system (cycle-supported states)
+- Result:
+  - Core contains all states except 0
+  - Core forms ring-like topology
+- Spectral embedding reveals:
+  - circular / phase-like structure
+  - deformation due to drift anisotropy
+
+### Key Observation
+
+- State 0 behaves as transient (non-recurrent)
+- Remaining states form a strongly connected cycle-core
+- System decomposes into:
+
+  transient layer + recurrent manifold
+
+- Recurrent manifold behaves as a deformed ring structure
+- Drift operates on top of this structure
+
+### Structural Interpretation
+
+Prime modular system exhibits:
+
+- non-random transition dynamics
+- persistent asymmetry
+- dominant cycles
+- unified cycle network
+- ring-like recurrence manifold
+- superimposed drift flow
+
+This structure resembles:
+
+- Markov systems with geometry
+- phase oscillator systems
+- transport on constrained manifolds
+
+---
+
+## 🔹 UPDATED INSIGHT
+
+System structure refined:
+
+- NOT random walk on modular space
+- NOT purely cyclic system
+
+Instead:
+
+→ structured transition system  
+→ with emergent phase manifold  
+→ and directional drift on top
+
+---
+
+## 🔹 STATUS
+
+✔ multi-mod structure confirmed  
+✔ cycle-core identified  
+✔ flow decomposition established  
+✔ recurrence vs drift separation achieved  
+
+➡ Next phase:
+- phase coordinate extraction (θ embedding)
+- drift projection onto phase manifold
+- winding number analysis
+- cross-modulus universality tests
