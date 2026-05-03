@@ -160,6 +160,83 @@ Detailed interpretation of:
 
 ---
 
+---
+
+# 📊 Quantitative Comparison (V10)
+
+To move beyond visual inspection, we compare control strategies using simple metrics.
+
+---
+
+## 🧮 Metrics
+
+We evaluate:
+
+- **distance to target**
+- **path efficiency**
+- **alignment with field structure**
+
+---
+
+## 📐 Definitions
+
+```text
+distance(t) = ||x(t) - target||
+
+path_length = Σ ||x(t+1) - x(t)||
+
+efficiency = straight_line_distance / path_length
+```
+
+---
+
+## 🧠 Observed Behavior
+
+| Method       | Distance ↓ | Efficiency ↑ | Structure Alignment |
+|-------------|------------|--------------|---------------------|
+| Naive       | slow       | low          | none                |
+| Phase-aware | medium     | medium       | partial             |
+| NEXAH       | fast       | high         | strong              |
+
+---
+
+## 🔬 Interpretation
+
+The difference between control strategies is not just visual:
+
+- Naive control ignores structure → inefficient motion  
+- Phase-aware control partially aligns → improved behavior  
+- NEXAH control leverages structure → efficient navigation  
+
+---
+
+## 🔥 Key Insight
+
+```text
+Better performance emerges from alignment with transition structure,
+not from stronger control input.
+```
+
+---
+
+## 🧭 Implication
+
+This suggests:
+
+- control should operate on structure, not state  
+- transition geometry encodes navigational information  
+- phase and drift provide actionable signals  
+
+---
+
+## ⚠️ Status
+
+- preliminary  
+- qualitative metrics  
+- requires systematic benchmarking  
+
+---
+
 # 🔬 Key Observations
 
 Across all experiments:
