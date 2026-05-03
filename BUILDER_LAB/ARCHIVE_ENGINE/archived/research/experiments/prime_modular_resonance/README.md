@@ -1,221 +1,204 @@
 # 🧠 PRIME MODULAR RESONANCE  
-### Discrete Prime Dynamics → Emergent Structure & Flow
-
----
-
-## 🔥 START HERE (2 min)
-
-Run this:
-
-cd analysis  
-python run_all_visuals.py
-
-👉 You will see:
-
-- flow fields  
-- loops  
-- basins  
-- transition structures  
-
-All generated from:
-
-> prime numbers mod 7
+### Structured Dynamics in Prime Residue Systems
 
 ---
 
 ## 🔷 Overview
 
-This project investigates whether **prime number sequences**, when projected into modular spaces (e.g. mod 7), produce **non-random geometric, spectral, and dynamical patterns**.
+This module investigates whether **prime number sequences**, when projected into modular residue spaces, exhibit **non-random dynamical structure**.
 
 Core idea:
 
-> Discrete arithmetic → structured transitions → emergent geometry
+> Discrete arithmetic → asymmetric transitions → emergent structure
+
+The system is entirely defined by:
+
+- prime numbers  
+- modular projection  
+- transition frequencies  
+
+No continuous dynamics are introduced.
 
 ---
 
-## 🔷 Core Example (mod 7)
+## 🔷 Core Construction
 
-We define:
+Residue sequence:
 
-$$
-r_n = p_n \bmod 7
-$$
+rₙ = pₙ mod m  
 
-$$
-\theta_n = \frac{2\pi}{7} r_n
-$$
+Transition system:
 
-$$
-x_n = \cos(\theta_n), \quad y_n = \sin(\theta_n)
-$$
+Tᵢⱼ = P(rₙ₊₁ = j | rₙ = i)
 
-→ Discrete residues embedded into continuous phase space
+Optional embedding:
 
----
+θₙ = (2π / m) · rₙ  
+(xₙ, yₙ) = (cos θₙ, sin θₙ)
 
-## 🖼 Key Visuals
-
-### 1. Transition Structure
-
-![Visual I](analysis/output/plots/title_visual_mod7.png)
-
-- discrete states form a **non-uniform transition network**
+→ discrete transitions become visible as geometric structure  
 
 ---
 
-### 2. Flow Emergence
+## 🔷 Why This Matters
 
-![Visual II](analysis/output/plots/title_visual_ii_mod7.png)
+This module demonstrates a minimal but powerful idea:
 
-- transitions generate **continuous trajectories**
-- rotational structure appears
+> Structured behavior can emerge purely from discrete transition asymmetry.
 
----
+Observed consequences:
 
-### 3. Basin & Cycle Structure
+- non-uniform state transitions  
+- persistent cycles  
+- coherent flow-like structure  
+- directional drift  
+- emergence of geometric organization  
 
-![Visual III](analysis/output/plots/title_visual_iii_mod7.png)
+Importantly:
 
-- clustering into basins  
-- dominant 3-cycles  
-- structured recurrence  
+- no physical assumptions are required  
+- no continuous equations are used  
 
----
+This places the system at the intersection of:
 
-# 🔥 Dynamic Layer — Transport Emerges
-
-### Particle Flow
-
-![Particle Flow](analysis/output/curated/mod7_particle_flow.gif)
-
-### Particle Flow (Trails)
-
-![Particle Trails](analysis/output/curated/mod7_particle_flow_trails.gif)
-
-### Transition Flow
-
-![Transition Flow](analysis/output/curated/mod7_transition_flow.gif)
+- Markov processes  
+- graph dynamics  
+- discrete dynamical systems  
+- transport processes  
 
 ---
 
-## 🔷 What changes here?
+## 🔷 Key Findings
 
-The system is no longer static.
-
-We observe:
-
-- particles move along transition probabilities  
-- directional drift emerges  
-- flow channels form  
-- motion becomes pulse-like  
-
-→ **a transport layer appears**
+### 1. Non-Random Transition Structure
+- transitions are strongly biased  
+- clear deviation from random controls  
 
 ---
 
-## 🔷 Key Phenomenon
-
-This is the critical step:
-
-> A purely discrete system develops **transport dynamics**
-
-Without:
-
-- forces  
-- differential equations  
-- continuous time dynamics  
+### 2. Persistent Cycle System
+- stable directed cycles exist  
+- cycle weights ≈ 0.20 across moduli  
+- cycles form a connected network  
 
 ---
 
-## 🔷 What is observed?
+### 3. Cycle-Core Structure
+- almost all states participate in cycles  
+- state `0` is typically excluded  
+- remaining states form a strongly connected core  
 
-Across experiments:
-
-- non-uniform transition matrices  
-- persistent short cycles  
-- coherent flow fields  
-- basin-like clustering  
-- vortex-like structures  
-- directed transport behavior  
-
-Not reproduced by random controls.
+→ emergent **recurrence manifold**
 
 ---
 
-## 🔷 Interpretation (Mathematical)
+### 4. Drift (Directional Transport)
+- transitions show consistent directional bias  
+- drift persists across runs  
+- strength varies with modulus  
 
-The system can be described as:
-
-- state space → residues  
-- dynamics → transition matrix  
-- embedding → phase mapping  
-- behavior → trajectory + flow  
-
-→ A **discrete Markov-like system** generating  
-→ **continuous dynamical structure**
+→ system supports **transport behavior**
 
 ---
 
-## 🔷 System Layers
+### 5. Flow Decomposition
 
-DISCRETE STATES  
-↓  
-TRANSITIONS  
-↓  
-FLOW FIELD  
-↓  
-LOOPS / CYCLES  
-↓  
-BASINS / TOPOLOGY  
-↓  
-TRANSPORT  
+Flow separates into:
+
+Flow = Cycle Structure + Drift
+
+- cycles → recurrence / stability  
+- drift → directional movement  
 
 ---
 
-## 🔷 Key Insight
+### 6. Emergent Geometry
+Under embedding:
 
-> Structure is not imposed — it emerges from transitions.
+- ring-like structures appear  
+- deformation reflects drift  
+- trajectories become continuous-like  
+
+→ discrete system induces geometric structure  
 
 ---
 
-## 🔷 Important Note
+## 🔷 Structural Interpretation
 
-This is not a physics claim.
+The system is best described as:
 
-All results are:
+- a discrete state space  
+- a non-uniform transition operator  
+- a recurrent cycle network  
+- a drift-driven transport layer  
 
-- computational  
-- reproducible  
-- compared against null models  
+Together forming:
+
+> a structured transition system with an emergent phase-like manifold
+
+---
+
+## 🔷 Visual Overview (Suggested)
+
+A single “master visual” for this module should combine:
+
+- transition graph  
+- dominant cycles  
+- flow field  
+- cycle-core ring  
+
+Recommended candidates:
+
+- unified_flow_torus_map_0.png  
+- cycle_core_ring_mod23.png  
 
 ---
 
 ## 🔷 Project Structure
 
-prime_modular_resonance/  
+prime_modular_resonance/
+
 ├── analysis/  
-├── analysis/output/  
-│   ├── plots/  
-│   ├── curated/  
-├── RESULT_SUMMARY_MOD_7.md  
-├── NEUTRINO_FLOW_FIELD_DISCOVERY.md  
+│   ├── scripts  
+│   ├── output/plots/  
+│   ├── output/curated/  
+
+├── BUILD_LOG.md  
+├── EXPERIMENT_INDEX.md  
+├── PRIME_MODULAR_RESONANCE_THEORY.md  
+├── PRIME_MOD_FINDINGS.md  
 
 ---
 
-## 🔗 Further Reading
+## 🔷 Important Clarification
 
-- RESULT_SUMMARY_MOD_7.md  
-- NEUTRINO_FLOW_FIELD_DISCOVERY.md  
+This module presents:
+
+- computational results  
+- statistical observations  
+- structural analysis  
+
+It does **not** claim:
+
+- physical laws  
+- fundamental explanations of primes  
+- external interpretations  
 
 ---
 
-## 🔮 Status
+## 🔷 Status
 
 ✔ reproducible  
-✔ visualized  
-✔ structurally consistent  
-✔ dynamically extended  
-✔ ready for exploration  
+✔ multi-mod validated  
+✔ cycle-core identified  
+✔ drift confirmed  
+✔ structure vs randomness established  
+
+---
+
+## 🔷 Core Insight
+
+> Discrete transition systems can generate structure, recurrence, and transport purely through asymmetry.
 
 ---
 
