@@ -1,4 +1,4 @@
-# 🔬 PROBABILISTIC FLOW FIELD — DISCOVERY (mod7)
+# 🔬 PROBABILISTIC FLOW FIELD — DISCOVERY
 
 ---
 
@@ -6,25 +6,55 @@
 
 This observation emerges from a sequence of experiments on:
 
-- prime residue sequences (mod 7)
+- prime residue sequences (mod n)
 - transition graphs
 - particle-based simulations
 - geometric embeddings (circular phase space)
 
 The system evolved from:
 
-> static transition structure → dynamic transport behavior
+> static transition structure → dynamic transport behavior → structured recurrence + drift decomposition
 
 ---
 
-## Observation
+## Phase Evolution
 
-In particle-based simulations driven by transition probabilities:
+### Phase 1
+Transition matrices (mod 7)
 
-- particles do not move randomly  
-- motion follows non-uniform transition structure  
-- localized clusters and pulses emerge  
-- trajectories exhibit smooth, continuous-like behavior  
+→ non-random structure
+
+### Phase 2
+Particle simulations
+
+→ emergent flow behavior
+
+### Phase 3
+Cycle detection + drift analysis
+
+→ decomposition into:
+
+- recurrent cycles
+- directional transport
+
+---
+
+## Core Observation
+
+The system does **not** behave like:
+
+- a random walk  
+- a uniform Markov process  
+
+Instead:
+
+→ it forms a **structured transition field**
+
+with:
+
+- preferred paths  
+- recurrent loops  
+- directional drift  
 
 ---
 
@@ -44,14 +74,97 @@ In particle-based simulations driven by transition probabilities:
 
 ---
 
+## Extended Observations (multi-mod)
+
+Across mod systems (7 → 31):
+
+- asymmetry persists (vs random baseline)
+- entropy is reduced (structured distribution)
+- cycles increase in length with modulus
+- drift becomes more pronounced
+
+---
+
 ## Key Phenomena
 
 The system exhibits:
 
 - localized flow pulses  
 - directional drift regions  
-- partial synchronization of trajectories  
-- persistent movement channels  
+- persistent transition channels  
+- dominant cycles (recurrence loops)  
+- global connectivity (cycle overlap network)  
+
+---
+
+## Structural Decomposition
+
+The system decomposes into:
+
+### 1. Cycle Component (Recurrent Structure)
+
+- closed loops
+- high-probability transitions
+- strongly connected core
+
+Interpretation:
+
+→ defines the **stable manifold** of the system
+
+---
+
+### 2. Residual / Drift Component (Transport)
+
+- directional bias
+- non-reversible transitions
+- long-range movement
+
+Interpretation:
+
+→ defines **transport across the manifold**
+
+---
+
+## Key Insight
+
+```text
+Flow = Cycle Structure + Drift
+```
+
+- cycles define geometry
+- drift defines direction
+
+---
+
+## Cycle-Core Discovery
+
+New result (multi-mod analysis):
+
+- almost all states participate in cycles
+- exception: state 0 often excluded
+- cycle-core forms:
+
+→ ring-like structure in embedding space
+
+Properties:
+
+- strongly connected
+- recurrent
+- phase-like organization
+
+---
+
+## Geometric Interpretation
+
+The system behaves like:
+
+→ transport on a deformed circular manifold
+
+Structure:
+
+- ring (cycle-core)
+- drift field (directional bias)
+- local distortions (anisotropy)
 
 ---
 
@@ -60,62 +173,29 @@ The system exhibits:
 The behavior emerges purely from:
 
 1. Prime sequence  
-2. Modular projection (mod 7)  
+2. Modular projection (mod n)  
 3. Transition counts between residues  
 4. Normalized transition probabilities  
-5. Particle motion driven by these probabilities  
 
-Important:
+No continuous field is defined.
 
-- no continuous field is explicitly defined  
-- no external dynamics are introduced  
-
-→ the flow emerges from **discrete transition asymmetry**
+→ structure arises from **discrete asymmetry**
 
 ---
 
 ## Interpretation
 
-The transition graph induces a **probabilistic flow field**.
+Prime modular systems define:
 
-This field:
-
-- is discrete in definition  
-- becomes continuous under embedding  
-- contains preferred transition channels  
-- generates non-uniform exploration dynamics  
-
-Particles:
-
-- do not sample the space uniformly  
-- follow transition density gradients  
-- form structured trajectories over time  
-
----
-
-## Hypothesis
-
-Prime residue transitions mod n define:
-
-> a **probabilistic transport field** over the modular state space
+> a **probabilistic transport field with intrinsic geometry**
 
 Properties:
 
-- sparse connectivity  
 - asymmetric transition structure  
-- induced drift  
-- emergence of stable and unstable regions  
-
----
-
-## Geometric Correspondence
-
-Observed structures align with:
-
-- heptagonal symmetry (mod 7 state space)  
-- triangular transition motifs (local cycles)  
-- loop structures (circulation patterns)  
-- basin-like regions (state clustering)  
+- emergent drift  
+- recurrent cycle backbone  
+- global connectivity  
+- non-uniform stationary distribution  
 
 ---
 
@@ -128,7 +208,26 @@ A dynamic layer where:
 - primes → discrete states  
 - transitions → weighted edges  
 - probabilities → motion rules  
-- motion → emergent flow behavior  
+- motion → emergent transport  
+
+---
+
+### Cycle-Core Manifold
+
+A subset of states where:
+
+- recurrence dominates  
+- cycles overlap  
+- structure stabilizes  
+
+---
+
+### Drift Layer
+
+A directional component where:
+
+- transitions are biased  
+- transport occurs across cycles  
 
 ---
 
@@ -145,26 +244,35 @@ It does **not** imply:
 
 - physical fields  
 - particles  
-- or physical transport processes  
+- physical transport processes  
+
+---
+
+## Updated Hypothesis
+
+Prime residue transitions mod n define:
+
+> a **structured transport system with an emergent phase manifold**
 
 ---
 
 ## Next Steps
 
-- quantify drift directionality  
-- measure transition anisotropy  
-- detect stable flow channels  
-- analyze recurrence structures  
-- extend to higher moduli (mod 11, 13, 17)  
-- compare across modular classes  
+- extract phase coordinate (θ embedding)
+- measure winding numbers
+- project drift onto phase direction
+- compare across moduli
+- identify universal scaling laws
+- test non-prime sequences
 
 ---
 
 ## Status
 
 ✔ reproducible  
-✔ visually confirmed  
-✔ structurally consistent  
-✔ dynamically emergent  
+✔ multi-mod confirmed  
+✔ cycle-core identified  
+✔ drift separation achieved  
+✔ geometric structure observed  
 
-→ ready for formal analysis
+→ ready for formalization
