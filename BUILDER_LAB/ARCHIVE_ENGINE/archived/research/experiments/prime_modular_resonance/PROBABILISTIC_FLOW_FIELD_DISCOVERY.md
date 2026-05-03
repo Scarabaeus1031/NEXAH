@@ -58,7 +58,7 @@ with:
 
 ---
 
-## Visual Evidence
+## Visual Evidence — Flow Emergence (mod 7)
 
 ### Triangle Generator Layer
 ![Triangle Flow](analysis/output/curated/mod7_triangle_rotation.gif)
@@ -74,26 +74,101 @@ with:
 
 ---
 
-## Extended Observations (multi-mod)
+## Visual Evidence — Asymmetry & Structure
 
-Across mod systems (7 → 31):
+### State Asymmetry Maps
+![Asymmetry Maps](analysis/output/plots/asymmetry_map_mod23.png)
 
-- asymmetry persists (vs random baseline)
-- entropy is reduced (structured distribution)
-- cycles increase in length with modulus
-- drift becomes more pronounced
+Observation:
+
+- strong deviation from random baseline  
+- persistent directional bias  
 
 ---
 
-## Key Phenomena
+## Visual Evidence — Transition Channels
 
-The system exhibits:
+### Dominant Transition Channels
+![Channels](analysis/output/plots/transition_channels_mod31.png)
 
-- localized flow pulses  
-- directional drift regions  
-- persistent transition channels  
-- dominant cycles (recurrence loops)  
-- global connectivity (cycle overlap network)  
+Observation:
+
+- sparse but dominant edges  
+- preferred transport directions  
+- non-uniform connectivity  
+
+---
+
+## Visual Evidence — Cycle Structure
+
+### Dominant Cycles
+![Cycles](analysis/output/plots/dominant_cycle_mod23.png)
+
+Observation:
+
+- stable loop structures  
+- increasing cycle length with modulus  
+- consistent cycle weights (~0.20)
+
+---
+
+## Visual Evidence — Cycle Alignment with Drift
+
+### Drift-Aligned Cycles
+![Aligned Cycles](analysis/output/plots/cycle_alignment_mod23.png)
+
+Observation:
+
+- cycles align with global drift direction  
+- preferred step sizes emerge (e.g. +6, +7)  
+
+---
+
+## Visual Evidence — Cycle Connectivity
+
+### Cycle Overlap Graph
+![Cycle Overlap](analysis/output/plots/cycle_overlap_mod23.png)
+
+Observation:
+
+- all cycles connected  
+- single global component  
+- no isolated recurrence structures  
+
+---
+
+## Visual Evidence — Flow Decomposition
+
+### Matrix Decomposition
+![Flow Decomposition](analysis/output/plots/flow_decomposition_mod23.png)
+
+### Graph Decomposition
+![Flow Graph](analysis/output/plots/flow_graph_mod23.png)
+
+Observation:
+
+- clear separation:
+  - cycle flow (structure)
+  - residual flow (drift)
+
+---
+
+## Visual Evidence — Cycle Core
+
+### Spectral Embedding
+![Cycle Core Embedding](analysis/output/plots/cycle_core_embedding_mod23.png)
+
+### Cycle Core Matrix
+![Cycle Core Matrix](analysis/output/plots/cycle_core_matrix_mod23.png)
+
+### Cycle Core Ring
+![Cycle Core Ring](analysis/output/plots/cycle_core_ring_mod23.png)
+
+Observation:
+
+- almost all states in core (except 0)
+- ring-like structure emerges
+- deformation caused by drift
 
 ---
 
@@ -107,9 +182,7 @@ The system decomposes into:
 - high-probability transitions
 - strongly connected core
 
-Interpretation:
-
-→ defines the **stable manifold** of the system
+→ defines the **stable manifold**
 
 ---
 
@@ -117,9 +190,6 @@ Interpretation:
 
 - directional bias
 - non-reversible transitions
-- long-range movement
-
-Interpretation:
 
 → defines **transport across the manifold**
 
@@ -127,30 +197,18 @@ Interpretation:
 
 ## Key Insight
 
-```text
+```
 Flow = Cycle Structure + Drift
 ```
-
-- cycles define geometry
-- drift defines direction
 
 ---
 
 ## Cycle-Core Discovery
 
-New result (multi-mod analysis):
+- state 0 is typically excluded  
+- remaining states form a **connected cycle-core**  
 
-- almost all states participate in cycles
-- exception: state 0 often excluded
-- cycle-core forms:
-
-→ ring-like structure in embedding space
-
-Properties:
-
-- strongly connected
-- recurrent
-- phase-like organization
+→ emergent ring-like phase structure  
 
 ---
 
@@ -158,13 +216,13 @@ Properties:
 
 The system behaves like:
 
-→ transport on a deformed circular manifold
+→ transport on a **deformed circular manifold**
 
 Structure:
 
 - ring (cycle-core)
-- drift field (directional bias)
-- local distortions (anisotropy)
+- drift (direction)
+- local distortions
 
 ---
 
@@ -173,13 +231,13 @@ Structure:
 The behavior emerges purely from:
 
 1. Prime sequence  
-2. Modular projection (mod n)  
-3. Transition counts between residues  
-4. Normalized transition probabilities  
+2. Modular projection  
+3. Transition counts  
+4. Probability normalization  
 
-No continuous field is defined.
+→ no continuous dynamics defined  
 
-→ structure arises from **discrete asymmetry**
+→ structure emerges from **discrete asymmetry**
 
 ---
 
@@ -187,15 +245,7 @@ No continuous field is defined.
 
 Prime modular systems define:
 
-> a **probabilistic transport field with intrinsic geometry**
-
-Properties:
-
-- asymmetric transition structure  
-- emergent drift  
-- recurrent cycle backbone  
-- global connectivity  
-- non-uniform stationary distribution  
+> a **probabilistic transport system with intrinsic geometry**
 
 ---
 
@@ -203,67 +253,51 @@ Properties:
 
 ### Probabilistic Flow Layer
 
-A dynamic layer where:
-
-- primes → discrete states  
-- transitions → weighted edges  
-- probabilities → motion rules  
-- motion → emergent transport  
+- transitions → motion rules  
+- probabilities → flow behavior  
 
 ---
 
 ### Cycle-Core Manifold
 
-A subset of states where:
-
-- recurrence dominates  
-- cycles overlap  
-- structure stabilizes  
+- recurrent backbone  
+- structural stability  
 
 ---
 
 ### Drift Layer
 
-A directional component where:
-
-- transitions are biased  
-- transport occurs across cycles  
+- directional transport  
+- asymmetry-driven  
 
 ---
 
 ## Important Clarification
 
-This is a **mathematical and computational observation**.
+This is a **mathematical/computational observation**.
 
-It describes:
-
-- transition-driven transport behavior  
-- emergent structure in discrete systems  
-
-It does **not** imply:
+It does NOT imply:
 
 - physical fields  
-- particles  
-- physical transport processes  
+- real particles  
 
 ---
 
 ## Updated Hypothesis
 
-Prime residue transitions mod n define:
+Prime residue transitions define:
 
-> a **structured transport system with an emergent phase manifold**
+> a structured transport system with an emergent phase manifold
 
 ---
 
 ## Next Steps
 
-- extract phase coordinate (θ embedding)
-- measure winding numbers
-- project drift onto phase direction
-- compare across moduli
-- identify universal scaling laws
-- test non-prime sequences
+- extract phase coordinate θ  
+- measure winding numbers  
+- project drift onto phase direction  
+- compare across moduli  
+- test universality  
 
 ---
 
