@@ -227,6 +227,65 @@ NEXAH reconstructs the local field structure, revealing:
 
 ---
 
+# 🧪 Testable Hypotheses
+
+The findings presented here can be formulated as testable statements:
+
+---
+
+## H1 — Transition Structure
+
+```text
+Transitions in dynamical systems occupy extended regions
+with internal structure, not isolated points.
+```
+
+---
+
+## H2 — Phase Universality
+
+```text
+A phase coordinate θ(t) can be defined across systems,
+and exhibits drift, winding, and structured increments Δθ.
+```
+
+---
+
+## H3 — Structure Invariance
+
+```text
+Transition structure is invariant across system types,
+despite differences in flow geometry.
+```
+
+---
+
+## H4 — Discrete–Continuous Bridge
+
+```text
+Discrete transition systems induce continuous-like
+flow, phase, and topology when interpreted structurally.
+```
+
+---
+
+## H5 — Control Principle
+
+```text
+Control performance improves when aligned with
+transition structure, compared to state-based control.
+```
+
+---
+
+## Status
+
+- empirically observed  
+- partially validated  
+- not yet formally proven  
+
+---
+
 # 🔬 Next Steps
 
 ### Core empirical findings  
