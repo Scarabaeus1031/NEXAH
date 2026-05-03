@@ -150,8 +150,6 @@ First topology scan completed.
 Further runs needed for statistical confirmation.
 
 ---
-5"}
----
 
 ## Experiment 05 — Cycle Balance Synchronization Test
 
@@ -217,13 +215,7 @@ This supports the hypothesis that hybrid networks combining
 
 produce efficient synchronization dynamics.
 
-
-# Status
-
-Experiment completed.
-
-Result integrated into the symmetry graph result summa
-
+---
 
 # Structural Hypothesis
 
@@ -243,7 +235,7 @@ Numbers explored in experiments
 
 17  
 19  
-29
+29  
 
 These values may correspond to resonance or frustration regimes in oscillator networks.
 
@@ -259,7 +251,7 @@ Further experiments are required.
 
 3. How do vortex structures influence synchronization transitions?
 
-4. Can layered symmetry graphs (such as 17 inner nodes + outer shells) produce stable toroidal phase structures?
+4. Can layered symmetry graphs produce stable higher-dimensional phase structures?
 
 ---
 
@@ -269,9 +261,9 @@ Planned experiments include
 
 • multi-layer symmetry graphs  
 • vortex tracking across parameter sweeps  
-• phase-space visualization of oscillator networks  
-• statistical synchronization scans across larger shell ranges  
-• comparison of prime vs composite shell topologies
+• phase-space visualization  
+• statistical synchronization scans  
+• comparison of prime vs composite shell topologies  
 
 ---
 
@@ -279,26 +271,9 @@ Planned experiments include
 
 These experiments serve as a dynamic testing environment for studying nonlinear oscillator networks and resonance structures.
 
-The results may contribute to understanding:
-
-• synchronization phenomena  
-• resonance webs  
-• toroidal phase dynamics  
-• emergent structures in coupled oscillator systems
-
-within the broader NEXAH research framework.
-
 ---
 
-# Status
-
-Active research.
-
-Experiments are exploratory and ongoing.
-
----
-
-## Experiment 06 — Prime Modular Transition Dynamics
+## Experiment 06 — Prime Modular Transition Dynamics (REVISED)
 
 File
 
@@ -308,8 +283,9 @@ prime_modular_resonance/
 
 ### Goal
 
-Investigate whether purely discrete systems (prime numbers under modular projection)  
-produce structured transition dynamics comparable to continuous dynamical systems.
+Investigate whether purely discrete systems (prime numbers under modular projection)
+
+produce structured transition behavior.
 
 ---
 
@@ -327,205 +303,129 @@ Transition definition:
 
 Δrₙ = (rₙ₊₁ - rₙ) mod m
 
-Embedding (optional):
-
-θₙ = 2π rₙ / m  
-(xₙ, yₙ) = (cos θₙ, sin θₙ)
-
 ---
 
 ### Methods
 
 • Transition matrix construction  
-• Residue jump distribution  
-• Drift vector estimation  
-• Spectral / geometric embedding  
-• Cross-modulus comparison  
-• Clustering in transition space  
+• Drift estimation  
+• Spectral analysis  
+• Random control comparison  
+• Robust multi-run validation  
+• Local structure metrics  
 
 ---
 
-### Visual Outputs
+### ⚠️ Critical Revision
 
-#### 1. Modular Transition Regimes
+Initial interpretation suggested:
 
-![Mod Comparison](analysis/output/plots/figure_1_mod_comparison.png)
+→ global flow field  
+→ scaling transport dynamics  
 
-- transition graphs for mod 7, 11, 13, 17  
-- increasing connectivity with modulus size  
-- emergence of dense transition structure  
-
----
-
-#### 2. Drift Scaling
-
-![Drift Scaling](analysis/output/plots/mod_drift_scaling.png)
-
-Observation:
-
-- drift strength increases monotonically with modulus  
-- non-linear growth behavior  
-- suggests scaling law in transition dynamics  
+This is NOT supported by validation.
 
 ---
 
-#### 3. Transition Matrix Distance (Raw)
+### ❌ Invalidated Findings
 
-![Distance Raw](analysis/output/plots/mod_distance_matrix_raw.png)
-
-Observation:
-
-- structured distance patterns across moduli  
-- not random → clear gradient + clustering tendency  
+• drift scaling is not stable  
+• spectral structure aligns with random baseline  
+• global transport behavior disappears under averaging  
 
 ---
 
-#### 4. Transition Matrix Distance (Clustered)
+### ✅ Robust Findings
 
-![Distance Clustered](analysis/output/plots/mod_distance_matrix_clustered.png)
+#### 1. Transition Asymmetry
 
-Observation:
+Prime systems show strong directional bias compared to random.
 
-- moduli form distinct clusters  
-- block structure emerges  
-- indicates dynamical regime families  
+→ transitions are not symmetric  
 
 ---
 
-### Observations
+#### 2. Reduced Entropy
 
-1. Non-uniform transition structure
+Prime transitions have lower entropy than random systems.
 
-Prime residue transitions are not uniformly distributed.
-
-→ clear directional bias in state transitions  
+→ structured probability distribution  
 
 ---
 
-2. Emergent drift
+#### 3. Suppressed Cycles
 
-Each modulus exhibits a consistent directional drift in residue space.
+Fewer short cycles than random baseline.
 
-Example:
-
-mod 7 → weak drift  
-mod 17 → strong drift  
-mod 47 → very strong drift  
+→ less local looping  
+→ more directed behavior  
 
 ---
 
-3. Scaling behavior
+### 🧠 Revised Interpretation
 
-Drift strength grows with modulus:
+System behaves as:
 
-mod 7 → ~1.5  
-mod 17 → ~4.8  
-mod 31 → ~16  
-mod 47 → ~32  
+→ a discrete transition network with constrained probabilities  
 
-→ approximately superlinear growth  
+NOT as:
 
----
-
-4. Cluster formation
-
-Moduli group into dynamic regimes:
-
-Cluster A  
-7, 11, 13, 17, 19  
-
-Cluster B  
-23, 29, 31  
-
-Cluster C  
-37, 41  
-
-Cluster D  
-43, 47  
+→ a continuous flow system  
+→ a physical transport field  
 
 ---
 
-5. Structural similarity to dynamical systems
+### Conceptual Model
 
-Transition matrices exhibit:
-
-• band structures  
-• clustering  
-• directional flow bias  
-
-These resemble:
-
-• Markov processes  
-• transport operators  
-• coarse-grained dynamical flows  
+anisotropic transition probabilities  
+→ biased movement in state space  
+→ local structure without global dynamics  
 
 ---
 
-### Interpretation
+### Key Insight
 
-The system behaves as a:
-
-→ discrete Markov-like transition system  
-→ with emergent directional bias (drift)  
-→ and structured topology in state space  
-
-Key insight:
-
-> Structure is not imposed — it emerges from transition asymmetry.
+Structure is real — but it is local, not global.
 
 ---
 
 ### Connection to Symmetry Graph Experiments
 
-Parallels observed:
-
 | Symmetry Graph | Prime Modular System |
 |------|----------------|
-| Phase synchronization | Transition stabilization |
-| Vortex structures | drift / directional bias |
-| Cycle layers | modular residue loops |
-| Domain locking | cluster formation |
-
-Hypothesis:
-
-Both systems may be governed by a shared principle:
-
-→ **structured transitions induce emergent order**
+| phase synchronization | transition bias |
+| vortices | local asymmetry |
+| cycles | modular loops |
+| domain locking | clustering tendencies |
 
 ---
 
-### Open Questions
+### Updated Conclusion
 
-1. Is drift a universal property of prime residue systems?
+Prime modular systems:
 
-2. Does normalization remove or preserve structure?
+✔ encode non-random structure  
+✔ exhibit directional bias  
+✔ reduce entropy locally  
 
-3. What is the spectral signature (eigenvalues) of these transition matrices?
-
-4. Do similar patterns appear in non-prime sequences?
-
-5. Can transition matrices be mapped to known dynamical operators?
+✖ do not generate global dynamical fields  
 
 ---
 
 ### Next Steps
 
-• eigenvalue analysis of transition matrices  
-• stationary distribution computation  
-• normalization tests (drift / m, drift / √m)  
-• comparison with random controls  
-• higher modulus extension (m > 50)  
-• spectral clustering refinement  
+• state-level asymmetry maps  
+• transition graph analysis  
+• local clustering detection  
+• graph-theoretic metrics  
+• comparison with other sequences  
 
 ---
 
 ### Status
 
+✔ validated  
+✔ corrected  
 ✔ reproducible  
-✔ quantified  
-✔ scalable  
-✔ connected to existing experiments  
 
 → integrated into research layer
-
----
