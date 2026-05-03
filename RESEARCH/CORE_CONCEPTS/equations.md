@@ -1,3 +1,13 @@
+## 🧭 Role in NEXAH
+
+This document defines the **minimal operational layer**  
+linking empirical observations to formal structure.
+
+It translates:
+```
+validation → measurable quantities → control-relevant structure
+```
+
 # 🧮 NEXAH — Core Equations
 
 This document defines the **minimal operational mathematical structure**  
