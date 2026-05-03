@@ -90,7 +90,7 @@ Across systems:
 Observed:
 
 ```text
-IOTA ⇔ phase mismatch >> 0
+IOTA (instability activation metric) ⇔ phase mismatch >> 0
 ```
 
 NOT:
