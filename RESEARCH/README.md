@@ -13,6 +13,20 @@ building → observation → validation → consolidation
 
 ---
 
+## 🧭 Entry Point
+
+For structured navigation through the research layer:
+
+👉 See: [`RESEARCH_INDEX.md`](./RESEARCH_INDEX.md)
+
+This index defines:
+
+```text
+how to move from assumptions → structure → validation → application
+```
+
+---
+
 ## 🔷 Core Figures
 
 ![Framework](./FIGURES/main/Fig_01.png)
@@ -24,10 +38,10 @@ See: [FIGURES](./FIGURES/README.md)
 # 🧭 POSITION IN NEXAH
 
 ```text
-BUILDER LAB (exploration)
-→ RESEARCH LAYER (understanding, structuring, validation)
-→ CORE SYSTEM (stable, accepted structure)
-→ DEMONSTRATOR / APPLICATIONS (execution)
+BUILDER LAB (exploration / hypothesis generation)
+→ RESEARCH LAYER (structure extraction & validation)
+→ CORE SYSTEM (stabilized mechanisms)
+→ DEMONSTRATOR / APPLICATIONS (execution & testing)
 ```
 
 ---
@@ -36,7 +50,10 @@ BUILDER LAB (exploration)
 
 ```text
 No concept becomes part of the system
-without validation.
+without empirical validation.
+
+Validation is not optional —
+it defines what is real within the framework.
 ```
 
 ---
@@ -50,8 +67,8 @@ This module is responsible for:
 - separating **hypothesis vs validated result**  
 - guiding system development  
 - preventing interpretation bias  
-- enforcing empirical validation across all system claims
-  
+- enforcing empirical validation across all system claims  
+
 ---
 
 # ⚠️ SCOPE
@@ -73,11 +90,12 @@ It is:
 Recommended path:
 
 ```text
-1. CORE_CONCEPT_MAP.md
-2. CORE_CONCEPTS/
-3. FOUNDATION/
-4. FINDINGS/
-5. SYSTEM_MODELS/
+1. RESEARCH_INDEX.md
+2. FOUNDATION/
+3. CORE_CONCEPTS/
+4. VALIDATION/
+5. FINDINGS/
+6. APPLIED_CASES/
 ```
 
 ---
@@ -96,16 +114,14 @@ Empirical verification layer of the system.
 
 **Figure — Validation Overview**
 
-This visual summarizes the full validation stack across:
+This visual summarizes the validation stack across:
 
 - reproducibility  
 - noise robustness  
 - partition invariance  
 - cross-system consistency  
 - control and causality  
-- phase dynamics and angular structure  
-
-It integrates over 150+ experimental artifacts into a single structural representation.
+- phase dynamics  
 
 👉 Role: **empirical backbone of the system**
 
@@ -161,9 +177,9 @@ Empirical observations:
 
 Interpretations across domains:
 
+- dynamical systems  
 - engineering systems  
 - decision systems  
-- regime shifts  
 
 👉 Role: **external mapping**
 
@@ -231,55 +247,27 @@ Only after this:
 
 # 🧠 KEY IDEAS (CURRENT STATE)
 
+These are **empirically supported structural interpretations**, not final theory:
+
 ---
 
 ### 1. Structure over state
-
-```text
 System behavior is structured, not random
-```
-
----
 
 ### 2. Stability is geometric
-
-```text
 Stability = region of coherent flow
-```
-
----
 
 ### 3. Transitions are structural
-
-```text
-Transitions occur across regions,
-not at isolated points
-```
-
----
+Transitions occur across regions, not at isolated points
 
 ### 4. Hybrid system nature
-
-```text
 continuous field + discrete transition structure
-```
-
----
 
 ### 5. Navigation replaces prediction
-
-```text
-Not predicting states —
-navigating structure
-```
-
----
+Not predicting states — navigating structure
 
 ### 6. Cross-system similarity (under investigation)
-
-```text
 Different systems show similar structural patterns
-```
 
 ---
 
@@ -297,15 +285,13 @@ It is implemented and tested in:
 
 # 🚀 NEXT STEPS
 
-- validate structural findings across runs  
+- validate structural findings across systems  
 - quantify transition geometry  
 - formalize sheet / regime structure  
 - connect to dynamical systems theory  
 - stabilize kernel abstraction  
-- complete adaptive control validation (phase + instability)
-- reduce transition frequency (IOTA suppression)
-- validate control reproducibility across runs
-  
+- validate control reproducibility  
+
 ---
 
 # 🧭 SUMMARY
