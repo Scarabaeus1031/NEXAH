@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sympy import primerange
+import os
 
 # =========================
 # CONFIG
@@ -9,35 +10,30 @@ from sympy import primerange
 np.random.seed(42)
 
 N_RUNS = 20
-N_RANDOM = 1000
+N_RANDOM = 500
 
 mods = np.array(list(primerange(3, 200)))[:12]
 
+OUTPUT_PATH = "output/plots"
+os.makedirs(OUTPUT_PATH, exist_ok=True)
+
 # =========================
-# PLACEHOLDER (DEIN CORE)
+# ⚠️ HIER ERSETZEN MIT DEINER LOGIK
 # =========================
 
 def compute_metrics(mod):
-    """
-    HIER nutzt du deine bestehende Logik aus mod_validation_suite.py
-    Muss zurückgeben:
-    gap, drift, stat
-    """
-
-    # ⚠️ hier deine echte Berechnung rein
+    # TODO: ersetze mit deinem echten Code
     gap = np.random.uniform(0.1, 0.7)
     drift = np.random.uniform(0.5, 2.0)
     stat = np.random.uniform(0.03, 0.15)
-
     return gap, drift, stat
-
 
 def compute_random_baseline(mod):
     vals = [compute_metrics(mod) for _ in range(N_RANDOM)]
     vals = np.array(vals)
 
     mean = vals.mean(axis=0)
-    std  = vals.std(axis=0)
+    std  = vals.std(axis=0) + 1e-9
 
     return mean, std
 
@@ -86,13 +82,33 @@ stat_mean = z_stat_runs.mean(axis=0)
 stat_std  = z_stat_runs.std(axis=0)
 
 # =========================
+# PRINT OUTPUT
+# =========================
+
+print("\n=== ROBUST VALIDATION ===\n")
+
+for i, m in enumerate(mods):
+    print(f"mod {m:2d} | "
+          f"Z-gap = {gap_mean[i]:6.2f} ± {gap_std[i]:5.2f} | "
+          f"Z-drift = {drift_mean[i]:6.2f} ± {drift_std[i]:5.2f} | "
+          f"Z-stat = {stat_mean[i]:6.2f} ± {stat_std[i]:5.2f}")
+
+# =========================
+# SAVE DATA
+# =========================
+
+np.save("output/data/z_gap_mean.npy", gap_mean)
+np.save("output/data/z_drift_mean.npy", drift_mean)
+np.save("output/data/z_stat_mean.npy", stat_mean)
+
+# =========================
 # PLOT
 # =========================
 
 plt.figure(figsize=(10,6))
 
 def plot_with_band(x, mean, std, label):
-    plt.plot(x, mean, label=label)
+    plt.plot(x, mean, marker='o', label=label)
     plt.fill_between(x, mean-std, mean+std, alpha=0.2)
 
 plot_with_band(mods, gap_mean, gap_std, "Z-gap")
@@ -105,5 +121,11 @@ plt.xlabel("Modulus")
 plt.ylabel("Z-score")
 plt.legend()
 plt.grid()
+
+# ✅ SAVE
+plot_file = f"{OUTPUT_PATH}/robust_validation.png"
+plt.savefig(plot_file)
+
+print(f"\n[OK] saved plot → {plot_file}")
 
 plt.show()
