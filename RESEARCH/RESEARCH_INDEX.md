@@ -14,88 +14,84 @@ from first principles to applied systems.
 
 text NEXAH extracts structure from dynamical systems and makes it navigable. 
 
-It transforms:
-text dynamics → field → structure → transitions → control 
+Pipeline:
 
-Detailed pipeline:
-
-text dynamics → density → structure → sheets → transitions → phase → topology → control 
+text dynamics → density → structure → transitions → phase → topology → control 
 
 ---
 
 # 🧭 Recommended Reading Path
 
-text 1. FOUNDATION → minimal assumptions 2. CORE_CONCEPTS → operational structure 3. VALIDATION → empirical evidence 4. TRANSITION & PHASE LAYER → structure extraction (NEW) 5. FINDINGS → extracted principles 6. APPLIED_CASES → real system applications 7. FIGURES → visual synthesis 8. THEORETICAL_EXTENSIONS → formalization 
+text 1. FOUNDATION → minimal assumptions   2. CORE_CONCEPTS → operational structure   3. VALIDATION → empirical evidence   4. TRANSITION & PHASE LAYER → structure extraction   5. FINDINGS → invariant principles   6. APPLIED_CASES → real systems   7. FIGURES → visual synthesis   8. THEORETICAL_EXTENSIONS → formalization   
 
 ---
 
 # 📂 Module Overview
 
-## 🧱 FOUNDATION
-→ axioms, definitions, topology  
+## 🧱 FOUNDATION  
+Axioms, definitions, topology  
 → defines what must be true  
 
 ---
 
-## 🧠 CORE_CONCEPTS
-→ equations, field model, structure quantities  
+## 🧠 CORE_CONCEPTS  
+Field model, equations, structural quantities  
 → defines how the system behaves  
 
 ---
 
-## 🔬 VALIDATION
-→ empirical verification across systems  
-→ demonstrates that structure is real  
+## 🔬 VALIDATION  
+Empirical verification across systems  
+→ demonstrates that structure exists  
 
 ---
 
-## 🔁 TRANSITION & PHASE LAYER (NEW)
+## 🔁 TRANSITION & PHASE LAYER  
+Transition geometry, phase dynamics, invariants  
 
-→ transition geometry, phase dynamics, cross-system invariants  
-→ extracts structure from observed dynamics  
+Introduces:
 
-This layer introduces:
-
-- phase as a structural coordinate  
-- transition regions as extended processes  
-- drift and winding as transport mechanisms  
-- cross-system structural invariance  
-
-It connects:
+- phase as coordinate  
+- transitions as extended regions  
+- drift and winding as transport  
+- cross-system structural consistency  
 
 text VALIDATION → FINDINGS 
 
-by transforming empirical observations into structured quantities.
+---
+
+## 🔥 FINDINGS  
+Extracted structural principles  
+
+→ compresses empirical observations  
+→ identifies invariant behavior  
 
 ---
 
-## 🔥 FINDINGS
-→ extracted structural principles from transition and phase dynamics  
-→ compresses empirical observations into invariant statements  
+## 🌍 APPLIED_CASES  
+Lorenz, Halvorsen, power systems  
+
+→ demonstrates real behavior  
 
 ---
 
-## 🌍 APPLIED_CASES
-→ Lorenz, Halvorsen, power systems, comparisons  
-→ shows NEXAH in action  
+## 🖼 FIGURES  
+Visual backbone  
+
+→ connects structure, data, and intuition  
 
 ---
 
-## 🖼 FIGURES
-→ visual backbone of the framework  
-→ connects concepts, data, and structure  
+## 🧪 THEORETICAL_EXTENSIONS  
+Koopman, operators, formalization  
 
----
-
-## 🧪 THEORETICAL_EXTENSIONS
-→ Koopman, operator formalization  
-→ explores future mathematical grounding  
+→ future grounding  
 
 ---
 
 # 🔁 Logical Dependency
 
-text FOUNDATION → defines assumptions  CORE_CONCEPTS → defines measurable structure  VALIDATION → shows structure exists  TRANSITION & PHASE LAYER → extracts structure  FINDINGS → identifies invariant principles  APPLIED_CASES → demonstrates real behavior  FIGURES → unify understanding  THEORETICAL_EXTENSIONS → formalize and extend 
+text FOUNDATION   → CORE_CONCEPTS   → VALIDATION   → TRANSITION & PHASE   → FINDINGS   → APPLIED_CASES   → FIGURES   → THEORETICAL_EXTENSIONS 
 
 ---
 
@@ -108,25 +104,25 @@ text NEXAH is not a model.  It is a framework for discovering and navigating str
 # 🚀 Entry Points
 
 - Conceptual overview  
-  → CORE_CONCEPT_MAP.md
+  → CORE_CONCEPT_MAP.md  
 
 - Empirical validation  
-  → VALIDATION/README.md
+  → VALIDATION/README.md  
 
 - Transition & phase structure  
-  → FINDINGS/TRANSITION_PHASE_DYNAMICS/
+  → FINDINGS/TRANSITION_PHASE_DYNAMICS/  
 
-- Primary case study  
-  → APPLIED_CASES/LORENZ/lorenz_case_study.md
+- Case study  
+  → APPLIED_CASES/LORENZ/  
 
 - Visual system  
-  → FIGURES/README.md
+  → FIGURES/README.md  
 
 ---
 
 # 🔥 Final Insight
 
-text NEXAH does not start from theory.  It starts from observed dynamics and builds structure from data. 
+text NEXAH starts from observed dynamics and builds structure from data. 
 
 ---
 
