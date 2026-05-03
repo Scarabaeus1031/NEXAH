@@ -1,7 +1,7 @@
 import argparse
 import numpy as np
 import json
-from nexah import NEXAH
+from nexah.core import NEXAH
 
 
 def load_csv(path):
