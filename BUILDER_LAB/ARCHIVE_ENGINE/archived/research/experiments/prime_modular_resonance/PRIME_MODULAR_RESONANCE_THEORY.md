@@ -1,4 +1,19 @@
-# 🧠 NEXAH — Prime Modular Resonance  
+## 🔷 EXPERIMENTAL OVERVIEW
+
+This system was developed through a sequence of experiments:
+
+- transition matrices
+- particle simulations
+- cycle detection
+- flow decomposition
+
+Initial observations showed:
+
+- non-random transitions
+- emergence of flow-like behavior
+- presence of cycles and drift
+
+These observations led to the formal structure described below.# 🧠 NEXAH — Prime Modular Resonance  
 ## Unified Theory & Empirical Structure
 
 ---
