@@ -7,10 +7,8 @@
 
 Run this:
 
-```bash
-cd analysis
+cd analysis  
 python run_all_visuals.py
-```
 
 👉 You will see:
 
@@ -31,7 +29,7 @@ This project investigates whether **prime number sequences**, when projected int
 
 Core idea:
 
-> Discrete arithmetic → structured dynamics → emergent geometry
+> Discrete arithmetic → structured transitions → emergent geometry
 
 ---
 
@@ -39,17 +37,17 @@ Core idea:
 
 We define:
 
-$begin:math:display$
-r\_n \= p\_n \\bmod 7
-$end:math:display$
+$$
+r_n = p_n \bmod 7
+$$
 
-$begin:math:display$
-\\theta\_n \= \\frac\{2\\pi\}\{7\} r\_n
-$end:math:display$
+$$
+\theta_n = \frac{2\pi}{7} r_n
+$$
 
-$begin:math:display$
-x\_n \= \\cos\(\\theta\_n\)\, \\quad y\_n \= \\sin\(\\theta\_n\)
-$end:math:display$
+$$
+x_n = \cos(\theta_n), \quad y_n = \sin(\theta_n)
+$$
 
 → Discrete residues embedded into continuous phase space
 
@@ -84,7 +82,7 @@ $end:math:display$
 
 ---
 
-## 🔥 Dynamic Layer (New)
+# 🔥 Dynamic Layer — Transport Emerges
 
 ### Particle Flow
 
@@ -100,16 +98,32 @@ $end:math:display$
 
 ---
 
-### What changes here?
+## 🔷 What changes here?
 
 The system is no longer static.
 
+We observe:
+
 - particles move along transition probabilities  
-- drift emerges  
+- directional drift emerges  
 - flow channels form  
 - motion becomes pulse-like  
 
 → **a transport layer appears**
+
+---
+
+## 🔷 Key Phenomenon
+
+This is the critical step:
+
+> A purely discrete system develops **transport dynamics**
+
+Without:
+
+- forces  
+- differential equations  
+- continuous time dynamics  
 
 ---
 
@@ -144,19 +158,17 @@ The system can be described as:
 
 ## 🔷 System Layers
 
-```
-DISCRETE STATES
-    ↓
-TRANSITIONS
-    ↓
-FLOW FIELD
-    ↓
-LOOPS / CYCLES
-    ↓
-BASINS / TOPOLOGY
-    ↓
-TRANSPORT
-```
+DISCRETE STATES  
+↓  
+TRANSITIONS  
+↓  
+FLOW FIELD  
+↓  
+LOOPS / CYCLES  
+↓  
+BASINS / TOPOLOGY  
+↓  
+TRANSPORT  
 
 ---
 
@@ -180,22 +192,20 @@ All results are:
 
 ## 🔷 Project Structure
 
-```text
-prime_modular_resonance/
-├── analysis/                  
-├── analysis/output/
-│   ├── plots/                
-│   ├── curated/              
-├── RESULT_SUMMARY_MOD_7.md
-├── NEUTRINO_FLOW_FIELD_DISCOVERY.md
-```
+prime_modular_resonance/  
+├── analysis/  
+├── analysis/output/  
+│   ├── plots/  
+│   ├── curated/  
+├── RESULT_SUMMARY_MOD_7.md  
+├── NEUTRINO_FLOW_FIELD_DISCOVERY.md  
 
 ---
 
 ## 🔗 Further Reading
 
-- 📄 RESULT_SUMMARY_MOD_7.md  
-- ⚛️ NEUTRINO_FLOW_FIELD_DISCOVERY.md  
+- RESULT_SUMMARY_MOD_7.md  
+- NEUTRINO_FLOW_FIELD_DISCOVERY.md  
 
 ---
 
