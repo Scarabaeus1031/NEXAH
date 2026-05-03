@@ -9,11 +9,11 @@ This document formulates the **core structural hypothesis of NEXAH**:
 
 It integrates:
 
-- empirical observations  
-- geometric interpretation  
-- quantitative structure  
+- empirical observations (see `core_findings.md`)  
+- cross-system invariance (see `dynamical_unification.md`)  
+- phase-based dynamics (see `TRANSITION_PHASE_DYNAMICS/`)  
 
-into a unified conceptual framework.
+into a unified structural framework.
 
 ---
 
@@ -25,14 +25,14 @@ Dynamical systems evolve within structured fields.
 Stable behavior corresponds to coherent regions.
 
 Transitions occur along geometrically constrained pathways
-and are triggered by phase mismatch.
+and are activated by phase mismatch.
 ```
 
 ---
 
 # 🔷 2. System Representation
 
-We consider a dynamical system:
+We consider:
 
 $$
 \dot{x} = F(x)
@@ -42,20 +42,20 @@ with trajectory:
 
 $$
 x(t)
-$$
+```
 
 ---
 
 ## 🔹 Field Representation
 
-From trajectories, we extract:
+From trajectories:
 
-- density field:  
+- density field  
   $$
   \rho(x)
   $$
 
-- flow field:  
+- flow field  
   $$
   F(x)
   $$
@@ -81,7 +81,7 @@ $$
 G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
 $$
 
-→ indicator of structural transition regions
+→ indicator of transition regions
 
 ---
 
@@ -89,11 +89,11 @@ $$
 
 $$
 \phi(x) = \arctan2(y, x)
-$$
+```
 
 $$
 \omega(x) = \frac{d\phi}{dt}
-$$
+```
 
 ---
 
@@ -101,32 +101,27 @@ $$
 
 $$
 \Delta_\phi(x) = |\omega(x) - \mathbb{E}[\omega(x)]|
-$$
+```
 
 ---
 
 # 🔷 3. Structural Decomposition
 
-## 🧩 3.1 Regimes
+## 🧩 Regimes
 
-Regions where:
-
-- $\rho(x)$ is high  
-- $C(x)$ is high  
-- trajectories remain locally stable  
+- high density  
+- high coherence  
 
 ```text
-Regimes = coherent regions of structured flow
+Regimes = stable flow regions
 ```
 
 ---
 
-## 🧩 3.2 Sheets
+## 🧩 Sheets
 
-Locally coherent flow layers forming:
-
-- directional structure  
-- stratified motion  
+- locally coherent layers  
+- directional flow structure  
 
 ```text
 Sheets = local flow manifolds (empirical)
@@ -134,13 +129,11 @@ Sheets = local flow manifolds (empirical)
 
 ---
 
-## 🧩 3.3 Gates
+## 🧩 Gates
 
-Regions where:
-
-- density is low  
-- coherence breaks  
-- multiple flow directions interact  
+- low density  
+- low coherence  
+- flow conflict  
 
 ```text
 Gates = transition-enabling regions
@@ -167,13 +160,12 @@ Transitions occur:
 
 - along low-density corridors  
 - between connected sheets  
-- within gate regions  
 
 ---
 
 ## 🔹 Phase Trigger
 
-Empirical observation:
+Empirical result:
 
 ```text
 Δφ(x) >> 0  ⇒ transition activation
@@ -190,9 +182,8 @@ instability alone ⇒ transition
 ## 🔹 Interpretation
 
 ```text
-Instability provides potential
-
-Phase mismatch provides activation
+Instability = potential  
+Phase mismatch = activation
 ```
 
 ---
@@ -216,37 +207,27 @@ Edges: transitions
 ## 🔹 Emergent Topology
 
 ```text
-Topology = structure induced by sheet connectivity
+Topology = connectivity of sheets
 ```
-
-Observed examples:
-
-- Lorenz → two-sheet switching → Möbius-like  
-- Rössler → spiral layering → toroidal  
-- Halvorsen → fragmented → mixed topology  
 
 ---
 
 # 🔷 6. Navigation Principle
 
-Control is not force-based.
-
-It is:
-
 ```text
-structure-aware and phase-aligned
+Control = structure-aware + phase-aligned
 ```
 
 ---
 
-## 🔹 Control Law (Conceptual)
+## 🔹 Conceptual Law
 
 $$
 \dot{x} =
 F(x)
 - \lambda \nabla G(x)
 + \mu \nabla \rho(x)
-$$
+```
 
 ---
 
@@ -254,7 +235,7 @@ $$
 
 - follow flow  
 - avoid gates  
-- stay within coherent regions  
+- remain in coherent regions  
 
 ---
 
@@ -268,54 +249,38 @@ control effectiveness ∝ phase alignment
 
 # 🔷 7. Empirical Support
 
-Across multiple systems:
+Validated in:
 
 - Lorenz  
 - Rössler  
-- Duffing  
+- Halvorsen  
+- Kuramoto (limit case)  
 
-observed:
+Observed:
 
-- stable regime structure  
 - reproducible transition regions  
-- noise robustness  
-- partition invariance  
-- phase-dependent transition activation  
+- phase-dependent activation  
+- cross-system consistency  
 
 ---
 
 # 🔷 8. Limitations
 
-This theory is currently:
-
 ```text
-empirically supported
-partially formalized
+empirical  
+partially formalized  
 not fully proven
 ```
 
 ---
 
-## Known gaps:
-
-- formal definition of coherence $C(x)$  
-- theoretical properties of $G(x)$  
-- relation to Lyapunov stability  
-- high-dimensional scalability  
-- formal topology mapping  
-
----
-
 # 🔷 9. Research Direction
 
-Future work:
-
 ```text
-1. formalize structural quantities
-2. connect to dynamical systems theory
+1. formalize coherence and gate structure
+2. connect to classical dynamical systems theory
 3. derive stability guarantees
 4. extend to high-dimensional systems
-5. validate control laws across domains
 ```
 
 ---
@@ -325,12 +290,10 @@ Future work:
 ```text
 Complex systems do not transition randomly.
 
-They move within structured fields,
-and transitions occur when phase coherence breaks
-along geometrically constrained pathways.
+Transitions are geometrically constrained
+and activated by phase mismatch.
 ```
 
 ---
 
-**NEXAH — Structural Transition Theory**  
-Thomas K. R. Hofmann · 2026
+**NEXAH — Structural Transition Theory**
