@@ -139,6 +139,7 @@ Defines the conceptual system:
 - multi-layer interaction  
 - transition geometry  
 - structural operators  
+- phase dynamics (causal layer)
 
 👉 Role: **conceptual backbone**
 
@@ -166,9 +167,10 @@ Empirical observations:
 
 - transition structure  
 - flow geometry  
+- phase dynamics  
 - control behavior  
 
-👉 Role: **measured system behavior**
+👉 Role: **compressed empirical insights**
 
 ---
 
@@ -182,7 +184,7 @@ Interpretations across domains:
 - engineering systems  
 - decision systems  
 
-👉 Role: **external mapping**
+👉 Role: **external mapping of structure**
 
 ---
 
@@ -240,7 +242,7 @@ Observation → Hypothesis → Measurement → Reproduction → Validation
 Only after this:
 
 ```text
-→ eligible for CORE integration
+→ eligible for CORE integration  
 → AND inclusion in VALIDATION layer
 ```
 
@@ -252,22 +254,25 @@ These are **empirically supported structural interpretations**, not final theory
 
 ---
 
-### 1. Structure over state
+### 1. Structure over state  
 System behavior is structured, not random
 
-### 2. Stability is geometric
+### 2. Stability is geometric  
 Stability = region of coherent flow
 
-### 3. Transitions are structural
+### 3. Transitions are structural  
 Transitions occur across regions, not at isolated points
 
-### 4. Hybrid system nature
+### 4. Phase as causal trigger  
+Transitions are activated by phase mismatch, not instability alone
+
+### 5. Hybrid system nature  
 continuous field + discrete transition structure
 
-### 5. Navigation replaces prediction
+### 6. Navigation replaces prediction  
 Not predicting states — navigating structure
 
-### 6. Cross-system similarity (under investigation)
+### 7. Cross-system similarity (under investigation)  
 Different systems show similar structural patterns
 
 ---
@@ -289,6 +294,7 @@ It is implemented and tested in:
 - validate structural findings across systems  
 - quantify transition geometry  
 - formalize sheet / regime structure  
+- integrate phase explicitly into control  
 - connect to dynamical systems theory  
 - stabilize kernel abstraction  
 - validate control reproducibility  
