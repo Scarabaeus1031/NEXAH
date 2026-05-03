@@ -1,121 +1,177 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
+from pathlib import Path
 
-# =========================
-# INPUT (anpassen!)
-# =========================
+# --------------------------------------------------
+# CONFIG
+# --------------------------------------------------
 
-# trajectory: shape (T, 2)
-# flow field: X, Y grid + U, V over time
+BASE_PATH = Path("APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs")
+CASE = "ieee118"
+GRID_RES = 45
 
-# Beispiel-Placeholder (ersetzen!)
-T = len(trajectory)
+ALPHA_RETURN = 0.18
+ALPHA_DRIFT = 0.85
 
-# =========================
-# PHASE (zentral!)
-# =========================
+# --------------------------------------------------
+# LOAD
+# --------------------------------------------------
 
-theta = np.unwrap(np.arctan2(trajectory[:,1], trajectory[:,0]))
-phase_norm = (theta - theta.min()) / (theta.max() - theta.min())
+def load_dataset(case):
+    path = BASE_PATH / f"{case}_v43_dataset.csv"
+    return pd.read_csv(path).dropna()
 
-# colormap (clean + scientific)
-cmap = plt.cm.hsv
-colors = cmap(phase_norm)
+def load_off_field(case):
+    path = BASE_PATH / f"{case}_v68_off_manifold_cloud.csv"
+    return pd.read_csv(path).dropna()
 
-# =========================
-# FIGURE SETUP (clean)
-# =========================
+# --------------------------------------------------
+# HELPERS (dein Code)
+# --------------------------------------------------
 
-fig, ax = plt.subplots(figsize=(6,6))
-ax.set_facecolor("white")
+def normalize_safe(x):
+    x = np.asarray(x, dtype=float)
+    m = np.max(np.abs(x))
+    return x if m == 0 else x / m
 
-# limits
-ax.set_xlim(np.min(X), np.max(X))
-ax.set_ylim(np.min(Y), np.max(Y))
+def nearest_traj_point(px, py, traj):
+    diff = traj - np.array([px, py])
+    dist2 = np.sum(diff**2, axis=1)
+    idx = np.argmin(dist2)
+    return idx, traj[idx]
 
-# remove clutter
-ax.set_xticks([])
-ax.set_yticks([])
+def local_tangent(traj, idx):
+    if idx == 0:
+        v = traj[1] - traj[0]
+    elif idx == len(traj) - 1:
+        v = traj[-1] - traj[-2]
+    else:
+        v = traj[idx + 1] - traj[idx - 1]
 
-# =========================
-# INITIAL ELEMENTS
-# =========================
+    n = np.linalg.norm(v)
+    return np.array([0.0, 0.0]) if n == 0 else v / n
 
-# flow field (light, not dominant)
-quiver = ax.quiver(
-    X, Y, U[0], V[0],
-    color='black',
-    alpha=0.15,
-    scale=40
-)
+# --------------------------------------------------
+# FLOW FIELD
+# --------------------------------------------------
 
-# trajectory line
-line, = ax.plot([], [], lw=2, color='black')
+def build_flow_field(traj, xmin, xmax, ymin, ymax, grid_res=45):
+    xs = np.linspace(xmin, xmax, grid_res)
+    ys = np.linspace(ymin, ymax, grid_res)
+    X, Y = np.meshgrid(xs, ys)
 
-# phase-colored points
-scatter = ax.scatter([], [], c=[], s=10)
+    U = np.zeros_like(X)
+    V = np.zeros_like(Y)
 
-# =========================
-# DRIFT DISPLAY
-# =========================
+    for i in range(X.shape[0]):
+        for j in range(X.shape[1]):
+            px, py = X[i, j], Y[i, j]
 
-drift_text = ax.text(
-    0.02, 0.95,
-    "",
-    transform=ax.transAxes,
-    fontsize=10
-)
+            idx, nearest = nearest_traj_point(px, py, traj)
+            tangent = local_tangent(traj, idx)
 
-# =========================
-# UPDATE FUNCTION
-# =========================
+            drift = ALPHA_DRIFT * tangent
+            return_vec = ALPHA_RETURN * (nearest - np.array([px, py]))
 
-def update(frame):
-    
-    # update flow
-    quiver.set_UVC(U[frame], V[frame])
+            vec = drift + return_vec
+
+            U[i, j], V[i, j] = vec
+
+    return X, Y, U, V
+
+# --------------------------------------------------
+# MAIN
+# --------------------------------------------------
+
+def main():
+
+    print("NEXAH V69 — CLEAN ANIMATION")
+
+    df = load_dataset(CASE)
+    cloud = load_off_field(CASE)
+
+    c = normalize_safe(df["c"].values)
+    dc = normalize_safe(df["dc"].values)
+
+    trajectory = np.column_stack([c, dc])
+    T = len(trajectory)
+
+    xmin, xmax = cloud["c"].min(), cloud["c"].max()
+    ymin, ymax = cloud["dc"].min(), cloud["dc"].max()
+
+    X, Y, U, V = build_flow_field(trajectory, xmin, xmax, ymin, ymax)
+
+    # --------------------------------------------------
+    # PHASE (dein neuer Layer 🔥)
+    # --------------------------------------------------
+
+    theta = np.unwrap(np.arctan2(dc, c))
+    phase_norm = (theta - theta.min()) / (theta.max() - theta.min())
+    colors = plt.cm.hsv(phase_norm)
+
+    # --------------------------------------------------
+    # FIGURE (clean)
+    # --------------------------------------------------
+
+    fig, ax = plt.subplots(figsize=(6, 6))
+    ax.set_facecolor("white")
+
+    ax.set_xlim(xmin, xmax)
+    ax.set_ylim(ymin, ymax)
+
+    ax.set_xticks([])
+    ax.set_yticks([])
+
+    # flow (leicht!)
+    quiver = ax.quiver(X, Y, U, V, color="black", alpha=0.15, scale=2)
 
     # trajectory
-    x = trajectory[:frame, 0]
-    y = trajectory[:frame, 1]
+    line, = ax.plot([], [], color="black", lw=2)
 
-    line.set_data(x, y)
+    # phase points
+    scatter = ax.scatter([], [], s=8)
 
-    # phase coloring
-    scatter.set_offsets(np.c_[x, y])
-    scatter.set_color(colors[:frame])
+    # drift text
+    drift_text = ax.text(0.02, 0.95, "", transform=ax.transAxes, fontsize=9)
 
-    # drift (μ Δθ)
-    if frame > 10:
-        drift = np.mean(np.diff(theta[:frame]))
-        drift_text.set_text(f"drift μΔθ ≈ {drift:.4f}")
-    else:
-        drift_text.set_text("")
+    # --------------------------------------------------
+    # UPDATE
+    # --------------------------------------------------
 
-    return line, scatter, quiver, drift_text
+    def update(frame):
 
-# =========================
-# ANIMATION
-# =========================
+        x = trajectory[:frame, 0]
+        y = trajectory[:frame, 1]
 
-anim = FuncAnimation(
-    fig,
-    update,
-    frames=T,
-    interval=30,
-    blit=False
-)
+        line.set_data(x, y)
 
-# =========================
-# SAVE (clean output)
-# =========================
+        scatter.set_offsets(np.c_[x, y])
+        scatter.set_color(colors[:frame])
 
-anim.save(
-    "nexah_phase_flow_clean.gif",
-    writer="pillow",
-    fps=30
-)
+        if frame > 20:
+            drift = np.mean(np.diff(theta[:frame]))
+            drift_text.set_text(f"μΔθ ≈ {drift:.4f}")
 
-# optional mp4 (besser für papers)
-# anim.save("nexah_phase_flow_clean.mp4", fps=30, dpi=200)
+        return line, scatter, drift_text
+
+    # --------------------------------------------------
+    # ANIMATION
+    # --------------------------------------------------
+
+    anim = FuncAnimation(
+        fig,
+        update,
+        frames=T,
+        interval=20
+    )
+
+    out_path = BASE_PATH / f"{CASE}_v69_flow_animation.gif"
+    anim.save(out_path, writer="pillow", fps=30)
+
+    print(f"Saved animation: {out_path}")
+
+
+if __name__ == "__main__":
+    main()
