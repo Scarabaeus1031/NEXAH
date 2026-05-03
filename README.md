@@ -28,10 +28,18 @@
 
 ## 🧠 What NEXAH Does
 
-NEXAH transforms time-series data into a **structured representation of system behavior**:
+NEXAH reconstructs **latent structure from dynamical systems**.
+
+It transforms:
 
 ```text
-dynamics → structure → field → transitions → navigation
+raw trajectories → continuous field → structured regions → transition dynamics
+```
+
+into a representation that makes systems:
+
+```text
+observable → interpretable → navigable
 ```
 
 This enables:
@@ -54,8 +62,15 @@ NEXAH is grounded in a structured research layer:
 - cross-system invariance analysis  
 
 👉 Start here:
-- [`RESEARCH/FINDINGS/`](RESEARCH/FINDINGS/)
-- [`RESEARCH/CORE_CONCEPTS/`](RESEARCH/CORE_CONCEPTS/)
+
+- [`RESEARCH/RESEARCH_INDEX.md`](RESEARCH/RESEARCH_INDEX.md)  
+- [`RESEARCH/CORE_CONCEPT_MAP.md`](RESEARCH/CORE_CONCEPT_MAP.md)  
+
+Then:
+
+- [`RESEARCH/FOUNDATION/`](RESEARCH/FOUNDATION/)  
+- [`RESEARCH/CORE_CONCEPTS/`](RESEARCH/CORE_CONCEPTS/)  
+- [`RESEARCH/VALIDATION/`](RESEARCH/VALIDATION/)
 
 ---
 
@@ -140,11 +155,11 @@ Key observations:
 👉 See:
 - [`RESEARCH/VALIDATION/validation_summary.md`](RESEARCH/VALIDATION/validation_summary.md)
 
-Observed behavior:
+Observed behavior (in tested systems):
 
-- early warning up to **40–50 time units before collapse**  
-- instability appears as **geometric deviation**  
-- transition behavior becomes visible in motion metrics  
+- early indication of transition behavior before instability  
+- structure remains robust under noise  
+- transition geometry persists across systems   
 
 ---
 
