@@ -1,7 +1,8 @@
 # 🧠 NEXAH — Core Findings
 
 This document summarizes the **core empirical findings** derived from the FIELD_LAYER development (V1–V40)  
-and extended through **cross-system experiments (Lorenz, Halvorsen, power systems)**.
+and extended through **cross-system experiments (Lorenz, Halvorsen, power systems)**  
+and the **phase dynamics extension layer**.
 
 The goal is to present:
 
@@ -18,6 +19,7 @@ These findings are derived from:
 
 - controlled experiments (Lorenz, Halvorsen)  
 - structural field simulations  
+- phase-based analysis (θ, Δθ, drift, winding)  
 - initial real-world applications (power systems)  
 
 They represent:
@@ -32,22 +34,29 @@ Interpretations are:
 
 ---
 
-# 🔷 Structural Overview (NEW)
+# 🔷 Structural Overview
 
 ![NEXAH Core Structure](./visuals/nexah_core_structure_diagram.png)
 
-This diagram summarizes the **full structural hierarchy** observed in NEXAH:
+This diagram summarizes the **structural hierarchy** observed in NEXAH:
 
 ```text
 Field Dynamics → Transition Geometry → Discrete Structure → Control Layer
 ```
 
+Extended with phase layer:
+
+```text
+Transitions → Phase → Drift → Transport → Topology
+```
+
 ---
 
-It captures the central empirical result:
+## Core Result
 
 > Continuous dynamics collapse into structured transitions,  
-> which form discrete regimes that can be actively controlled.
+> which induce phase organization, directional transport,  
+> and emergent topology.
 
 ---
 
@@ -55,23 +64,21 @@ It captures the central empirical result:
 
 ## Observation
 
-Transitions do not occur at single points in time or state space.
+Transitions:
 
-Instead:
-
-- they occupy **extended regions**
-- they exhibit **internal structure**
-- they persist across multiple trajectories
+- are spatially extended  
+- exhibit internal structure  
+- persist across trajectories  
 
 ## Result
 
-> Transitions are **spatially extended processes**, not discrete events.
+> Transitions are **processes**, not discrete events
 
 ---
 
-## Phase Structure
+## Phase Decomposition
 
-Transitions decompose into:
+Transitions resolve into:
 
 ```text
 ENTRY → CORE → EXIT
@@ -106,16 +113,42 @@ Observed:
 
 ## Result
 
-> Transition dynamics are **directional and structured**
+> Transition dynamics are **directional (symmetry-broken)**
 
 ---
 
-# 🔬 3. Local vs Global Structure
+# 🔬 3. Phase Structure (NEW)
+
+## Observation
+
+Across all systems:
+
+- a phase coordinate θ(t) can be defined  
+- phase increments Δθ show structure  
+- mean drift μ_Δθ ≠ 0  
+- phase accumulates (winding)  
+
+## Result
+
+> Phase emerges as a **universal coordinate of transition structure**
+
+---
+
+## Interpretation
+
+- θ → position in structure  
+- Δθ → local motion  
+- μ_Δθ → structural asymmetry  
+- winding → global topology  
+
+---
+
+# 🔬 4. Local vs Global Structure
 
 ## Observation
 
 - local regions are smooth  
-- global structure is folded and fragmented  
+- global structure is folded  
 
 ## Result
 
@@ -123,7 +156,7 @@ Observed:
 
 ---
 
-# 🔬 4. Continuous → Discrete Structure
+# 🔬 5. Continuous → Discrete Structure
 
 ## Observation
 
@@ -140,30 +173,30 @@ Observed:
 
 Observed:
 
-- stable nodes  
-- directed transitions  
-- weighted edges  
+- nodes (states)  
+- directed edges (transitions)  
+- weighted structure  
 
 ## Result
 
-> System forms a **directed state graph**
+> System forms a **directed transition graph**
 
 ---
 
-# 🔬 5. Cycles and Regimes
+# 🔬 6. Cycles and Regimes
 
 ## Observation
 
 - closed loops  
-- structured entry points  
+- structured recurrence  
 
 ## Result
 
-> System operates on **recurring transition cycles**
+> System operates on **cycle-based structure**
 
 ---
 
-## Attractor Structure
+## Attractors
 
 ## Result
 
@@ -171,20 +204,43 @@ Observed:
 
 ---
 
-# 🔬 6. Flow–Topology Alignment
+# 🔬 7. Drift and Transport (NEW)
 
 ## Observation
 
-- nodes align with slow-flow regions  
+- Δθ is asymmetric  
+- μ_Δθ persists  
+- motion accumulates directionally  
+
+## Result
+
+> Drift induces **transport across structure**
+
+---
+
+## Interpretation
+
+```text
+Drift = structural asymmetry
+Transport = accumulated drift
+```
+
+---
+
+# 🔬 8. Flow–Topology Alignment
+
+## Observation
+
+- nodes align with slow regions  
 - transitions align with flow  
 
 ## Result
 
-> Discrete topology emerges from **continuous flow**
+> Topology emerges from **flow organization**
 
 ---
 
-# 🔬 7. Energy Interpretation
+# 🔬 9. Energy Interpretation
 
 ## Observation
 
@@ -201,13 +257,13 @@ E = -log(p)
 
 ---
 
-# 🔬 8. Control and Navigation
+# 🔬 10. Control and Navigation
 
 ## Observation
 
-- transition probabilities can be biased  
+- transitions can be biased  
 - trajectories redirected  
-- regime locking possible  
+- regimes stabilized  
 
 ## Result
 
@@ -215,20 +271,20 @@ E = -log(p)
 
 ---
 
-## Energy Cost
+## Insight
 
-## Result
-
-> Navigation follows **energy-efficient paths**
+```text
+Control = modifying transition structure
+```
 
 ---
 
-# 🔬 9. Attractor and Convergence
+# 🔬 11. Attractor and Convergence
 
 ## Observation
 
 - convergence across trajectories  
-- spiral-like dynamics  
+- spiral / rotational structure  
 
 ## Result
 
@@ -236,70 +292,67 @@ E = -log(p)
 
 ---
 
-# 🔬 10. Field Structure
+# 🔬 12. Field Structure
 
 ## Observation
 
-- gradient (attractive) component  
+- gradient component  
 - rotational component  
-- delayed coupling  
+- delayed interaction  
 
 ## Result
 
-> Dynamics = **attraction + rotation interaction**
+> Dynamics = **attraction + rotation**
 
 ---
 
-# 🔬 11. Time-Dependent Behavior
+# 🔬 13. Time Dependence
 
 ## Observation
 
-- static fields → trapping  
-- time variation → transitions  
+- static → trapping  
+- dynamic → transitions  
 
 ## Result
 
-> Navigation requires **time-dependent modulation**
+> Transitions require **time-dependent dynamics**
 
 ---
 
-# 🔬 12. Real-World Validation (Power Systems)
+# 🔬 14. Real-World Validation
 
-## Observation
+## Observation (Power Systems)
 
 - structural transitions precede collapse  
 - robust under noise  
 
 ## Result
 
-> NEXAH detects **pre-failure structure**
+> NEXAH detects **pre-failure transition structure**
 
 ---
 
-## Interpretation
-
-- classical → detect failure  
-- NEXAH → detect **transition**
-
----
-
-# 🔷 13. Cross-System Invariance
+# 🔷 15. Cross-System Invariance
 
 ## Observation
 
-Comparison between:
+Across:
 
-- Lorenz (switch-like system)  
-- Halvorsen (distributed cyclic system)  
+- Lorenz  
+- Halvorsen  
+- Rössler  
+- Kuramoto  
+- discrete modular systems  
 
-reveals:
+we observe:
 
-- different flow geometry  
-- identical transition structure  
+- identical phase structure  
+- consistent drift behavior  
+- comparable transition organization  
 
 ## Result
 
-> Transition structure is **system-invariant**
+> Transition-induced phase structure is **system-invariant (empirical)**
 
 ---
 
@@ -307,117 +360,68 @@ reveals:
 
 ```text
 Flow differs  
-Structure persists
+Structure persists  
+Phase reveals it
 ```
 
 ---
 
-## Implication
-
-- control acts on transitions, not trajectories  
-- models differ, structure remains  
-
----
-
-# 🔷 14. Distributed vs Switching Dynamics
+# 🔷 16. Distributed vs Switching Systems
 
 ## Observation
 
 Lorenz:
 
 - discrete switching  
-- few dominant transitions  
 
 Halvorsen:
 
-- distributed cyclic transport  
-- many medium-strength transitions  
+- distributed transport  
+
+Kuramoto:
+
+- coherence-driven collapse  
 
 ## Result
 
-> Systems differ in **flow topology**, not in structure
+> Systems differ in **flow expression**, not in structure
 
 ---
 
-## Insight
-
-```text
-Lorenz = switching system  
-Halvorsen = transport system  
-```
-
-BUT:
-
-```text
-Both share identical transition geometry
-```
-
----
-
-# 🔷 15. Residue Structure (Emerging Layer)
+# 🔷 17. Residue Structure
 
 ## Observation
 
-Residue-based models (mod 7, mod 17):
+Residue models:
 
-- partially predict transitions  
 - capture cyclic structure  
+- partially predict transitions  
 
 ## Result
 
-> Transition structure contains **modular patterns**
+> Discrete arithmetic overlays continuous flow
 
 ---
 
-## Interpretation
-
-```text
-Discrete arithmetic structure overlays continuous flow
-```
-
----
-
-# 🔷 16. Control as Flow Restructuring
+# 🔷 18. Gate Structure
 
 ## Observation
 
-- path finding fails in disconnected systems  
-- control requires adding bridges  
+- low-density regions  
+- directional access  
 
 ## Result
 
-> Control = **modifying topology of flow**
+> Gates are **transition channels**
 
 ---
 
-## Insight
-
-```text
-Control ≠ selecting path  
-Control = restructuring transitions
-```
-
----
-
-# 🔷 17. Gate Structure
+# 🔷 19. No True Decision Points
 
 ## Observation
 
-- gates = low-density / weak stability regions  
-- directional entry required  
-
-## Result
-
-> Gates are **directional transition channels**
-
----
-
-# 🔷 18. No True Decision Points
-
-## Observation
-
-- no point yields multiple stable outcomes  
-- trajectories converge globally  
+- trajectories converge  
+- no branching equilibria  
 
 ## Result
 
@@ -427,10 +431,10 @@ Control = restructuring transitions
 
 # ⚠️ Limitations
 
-- partly system-specific  
-- no full formal proof  
-- global predictability not guaranteed  
-- some interpretations remain structural  
+- no formal proof  
+- partly system-dependent  
+- predictive limits remain  
+- interpretation layer evolving  
 
 ---
 
@@ -440,12 +444,12 @@ The system can be described as:
 
 > a structured dynamical field with:
 >
-> - spatially organized transitions  
+> - transition-induced phase organization  
+> - directional drift and transport  
 > - discrete emergent state structure  
-> - directed flow geometry  
-> - energy-constrained motion  
+> - flow-aligned topology  
 > - attractor-driven convergence  
-> - and cross-system invariant transition structure  
+> - cross-system invariant structure  
 
 ---
 
@@ -459,7 +463,7 @@ These findings are:
 
 They represent:
 
-> a **field-based structural model of dynamics**,  
+> a **transition-driven field model of dynamics**,  
 > not a fundamental physical theory  
 
 ---
@@ -469,11 +473,12 @@ They represent:
 ```text
 Systems do not differ in structure.
 
-They differ in how flow is distributed within that structure.
+They differ in how flow is distributed
+and how phase organizes that flow.
 ```
 
 ---
 
-**Status:** Core Findings Extended  
-**Basis:** FIELD_LAYER + Cross-System Analysis  
+**Status:** Core Findings (Phase-Extended)  
+**Basis:** FIELD_LAYER + Cross-System + Phase Dynamics  
 **Confidence:** High (structural consistency), ongoing validation  
