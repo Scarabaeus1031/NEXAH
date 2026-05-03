@@ -1,3 +1,14 @@
+## ⚠️ NOTE
+
+This document reflects the early exploratory phase of the project.
+
+The current consolidated findings and formal structure are documented in:
+
+- PRIME_MODULAR_RESONANCE_THEORY.md
+- PRIME_MOD_FINDINGS.md
+- PROOF_PATH.md
+
+
 # NEXAH Prime Modular Resonance Experiment
 
 **Path:** `ENGINE/research/experiments/prime_modular_resonance/`  
