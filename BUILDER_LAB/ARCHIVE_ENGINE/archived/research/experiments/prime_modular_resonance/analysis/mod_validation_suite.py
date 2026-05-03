@@ -1,9 +1,8 @@
-import os
 import numpy as np
 import matplotlib.pyplot as plt
 
 from sympy import primerange
-
+import os
 # =========================
 # PRIME GENERATOR
 # =========================
