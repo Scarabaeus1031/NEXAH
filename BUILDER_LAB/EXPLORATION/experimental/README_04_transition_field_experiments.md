@@ -35,7 +35,7 @@ of transitions.
 
 ## 🔹 V2 — Swarm Field
 
-![V2](./visuals/ieee118_v2_swarm_field.gif)
+![V2](./04_transition_field_experiments/visuals/ieee118_v2_swarm_field.gif)
 
 Particles follow local alignment rules, revealing the **emergence of coherent flow** from simple interactions.
 
@@ -43,7 +43,7 @@ Particles follow local alignment rules, revealing the **emergence of coherent fl
 
 ## 🔹 V3 — Transition Field
 
-![V3](./visuals/ieee118_v3_transition_field.gif)
+![V3](./04_transition_field_experiments/visuals/ieee118_v3_transition_field.gif)
 
 The system begins to exhibit **structured transition regions**, no longer purely local motion.
 
@@ -51,7 +51,7 @@ The system begins to exhibit **structured transition regions**, no longer purely
 
 ## 🔹 V4 — Transition Maps
 
-![V4](./visuals/ieee118_v4_transition_maps.gif)
+![V4](./04_transition_field_experiments/visuals/ieee118_v4_transition_maps.gif)
 
 Transition regions become spatially identifiable, forming **proto-geometric channels**.
 
@@ -59,7 +59,7 @@ Transition regions become spatially identifiable, forming **proto-geometric chan
 
 ## 🔹 V5 — Prediction Field
 
-![V5](./visuals/ieee118_v5_prediction_field.gif)
+![V5](./04_transition_field_experiments/visuals/ieee118_v5_prediction_field.gif)
 
 The field is used for forward projection, showing how **future motion is constrained by structure**.
 
@@ -67,7 +67,7 @@ The field is used for forward projection, showing how **future motion is constra
 
 ## 🔹 V6 — Learned Field
 
-![V6](./visuals/ieee118_v6_learned_field.gif)
+![V6](./04_transition_field_experiments/visuals/ieee118_v6_learned_field.gif)
 
 The system learns from trajectory history, producing a **refined, trajectory-informed flow field**.
 
@@ -75,7 +75,7 @@ The system learns from trajectory history, producing a **refined, trajectory-inf
 
 ## 🔹 V69 — Off-Manifold Flow
 
-![V69](./visuals/ieee118_v69_flow_animation.gif)
+![V69](./04_transition_field_experiments/visuals/ieee118_v69_flow_animation.gif)
 
 Vector field reconstruction around the trajectory reveals:
 
@@ -87,7 +87,7 @@ Vector field reconstruction around the trajectory reveals:
 
 ## 🔹 V7 — Hybrid Navigation
 
-![V7](./visuals/ieee118_v7_hybrid_navigation.gif)
+![V7](./04_transition_field_experiments/visuals/ieee118_v7_hybrid_navigation.gif)
 
 Combines:
 
@@ -100,7 +100,7 @@ Combines:
 
 ## 🔹 V8 — Control Kernel
 
-![V8](./visuals/ieee118_v8_control_kernel.gif)
+![V8](./04_transition_field_experiments/visuals/ieee118_v8_control_kernel.gif)
 
 Introduces structured control:
 
@@ -113,7 +113,7 @@ Introduces structured control:
 
 ## 🔹 V9 — Transition Structure
 
-![V9](./visuals/ieee118_v9_transition_field.gif)
+![V9](./04_transition_field_experiments/visuals/ieee118_v9_transition_field.gif)
 
 Transitions become clearly visible as:
 
@@ -125,7 +125,7 @@ Transitions become clearly visible as:
 
 ## 🔹 V10 — Control Comparison (Static)
 
-![V10 Static](./visuals/ieee118_v10_comparison_static.png)
+![V10 Static](./04_transition_field_experiments/visuals/ieee118_v10_comparison_static.png)
 
 Comparison of control strategies:
 
@@ -137,7 +137,7 @@ Comparison of control strategies:
 
 ## 🔹 V10 — Control Comparison (Animated)
 
-![V10 GIF](./visuals/ieee118_v10_comparison.gif)
+![V10 GIF](./04_transition_field_experiments/visuals/ieee118_v10_comparison.gif)
 
 Dynamic comparison showing:
 
@@ -149,7 +149,7 @@ Dynamic comparison showing:
 
 ## 🔹 V10 — Annotated View
 
-![V10 Annotated](./visuals/ieee118_v10_annotated.png)
+![V10 Annotated](./04_transition_field_experiments/visuals/ieee118_v10_annotated.png)
 
 Detailed interpretation of:
 
@@ -221,8 +221,9 @@ Next steps:
 ## 📁 Structure
 
 ```text
-scripts/   → generation code  
-visuals/   → resulting figures & animations  
+04_transition_field_experiments/
+├── scripts/
+├── visuals/
 ```
 
 ---
