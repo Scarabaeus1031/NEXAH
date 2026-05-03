@@ -16,7 +16,7 @@ A minimal functional system that can:
 
 ## Core API
 
-python nexah.analyze(trajectory, target_state=None) 
+python nexah.analyze(trajectory, target_state=None)
 
 Returns:
 
@@ -52,7 +52,44 @@ Operates on the state graph
 
 ---
 
-## Current Capabilities (v0.5)
+## Evolution of the System
+
+### v0.1 – Initial Kernel
+- sliding window embedding
+- clustering
+- transition matrix
+
+### v0.2 – Dynamics
+- stability detection
+- regime shifts
+
+### v0.3 – Navigation
+- probabilistic transitions
+- BFS pathfinding
+
+### v0.4 – Decision Layer
+- minimal intervention
+- cost estimation
+
+### v0.5 – Control Layer
+- transition optimization
+- Monte Carlo dynamics (probability + time)
+
+### v0.6 – Robustness Upgrade
+- deterministic mode (random_state)
+- preprocessing (normalization)
+- multi-dimensional support
+- reproducibility
+
+### v0.7 – System-Level Capability
+- state signatures (system fingerprint)
+- batch analysis (multiple trajectories)
+- system comparison (similarity metric)
+- config traceability in output
+
+---
+
+## Current Capabilities (v0.7)
 
 ### State Modeling
 - Discrete states via clustering
@@ -86,13 +123,31 @@ Heuristic optimization:
 - tests small perturbations of transitions
 - identifies most impactful transition
 
+### System Signature (NEW)
+Each trajectory produces a structural fingerprint:
+
+- number of observed states
+- dominant state
+- occupancy distribution
+- escape difficulty
+- transition entropy
+
+### Batch Processing (NEW)
+- analyze multiple trajectories consistently
+
+### System Comparison (NEW)
+- similarity score between systems
+- based on stability + entropy profiles
+
 ---
 
 ## Example Insight
 
 Given:
 
-Current: 1 Target: 0 Path: [1 → 2 → 0]
+Current: 1  
+Target: 0  
+Path: [1 → 2 → 0]
 
 System detects:
 
@@ -120,36 +175,117 @@ Result:
 
 ---
 
-## Known Limitations
+## Core Freeze (v0.7)
 
-- discrete state approximation
-- clustering instability (label shifts)
-- no continuous control yet
-- intervention is heuristic (not optimal)
-- no real-world actuation layer
+The NEXAH kernel is now considered functionally stable.
+
+No further structural changes will be made to:
+
+- embedding method
+- clustering approach
+- transition modeling
+- navigation logic
+- control heuristic
+
+Reason:
+
+- preserve reproducibility
+- maintain interpretability
+- avoid instability from continuous refactoring
+
+All future work will be implemented outside the kernel.
 
 ---
 
-## Next Steps
+## Known Limitations
 
-Potential directions:
+- discrete state approximation
+- clustering instability (label permutations)
+- comparison currently ignores phase alignment
+- control is heuristic (not globally optimal)
+- no continuous control field
+- no direct real-world actuation layer
 
-1. sensitivity analysis (transition influence)
-2. continuous control field
-3. improved embeddings (delay / manifold)
-4. domain-specific integration (power grids, markets)
+---
+
+## Future Ideas (Logged, not implemented)
+
+### Control & Intervention
+- continuous control field
+- gradient-based optimization
+- multi-step planning
+
+### Sensitivity Analysis
+- transition influence ranking
+- robustness under perturbation
+
+### Improved Comparison
+- occupancy distance metrics
+- transition graph similarity
+- sequence alignment
+
+### Embeddings
+- delay embedding
+- frequency features
+- learned representations (optional)
+
+### Visualization
+- state timelines
+- instability heatmaps
+- transition graphs
+
+### Tooling
+- CLI interface
+- JSON export
+- batch pipelines
+
+### Applications
+- power grids
+- financial markets
+- sensor systems
+- ecological systems
+
+---
+
+## Next Phase (Post-Core)
+
+The focus shifts from:
+
+→ building the core
+
+to:
+
+→ using the core
+
+### Immediate Next Steps
+
+1. CLI tool (v0.8)
+2. real dataset integration
+3. visualization layer
+4. domain-specific application
 
 ---
 
 ## Summary
 
-NEXAH Kernel v0.5 provides:
+NEXAH Kernel v0.7 provides:
 
 - structure extraction
 - dynamic modeling
 - navigation capability
-- first-level control insight
+- intervention estimation
+- system comparison
 
-It operates as a minimal system for exploring and influencing state transitions in complex time-dependent systems.
+It is a minimal, interpretable engine for analyzing and navigating dynamical systems.
+
+The core is now frozen.
+
+Future progress will come from:
+
+→ applications  
+→ tooling  
+→ analysis layers  
+
+not from modifying the kernel.
 
 ---
