@@ -2,7 +2,7 @@
 
 ## 🧭 Purpose
 
-This document compares three canonical dynamical systems to evaluate a central hypothesis:
+This document compares three canonical dynamical systems to evaluate the following central hypothesis:
 
 ```text
 Structural organization is invariant across systems.
@@ -29,13 +29,13 @@ simple → intermediate → complex
 
 # 🔁 Structural Pipeline
 
-All systems are analyzed using the same extraction process:
+All systems are analyzed using a consistent extraction process:
 
 ```text
 Dynamics → Density → Structure → Sheets → Transitions → Topology
 ```
 
-This induces a hybrid representation:
+This induces a hybrid system representation:
 
 ```text
 continuous field  +  discrete structure
@@ -58,9 +58,9 @@ Across all systems:
 ## Insight
 
 ```text
-Structure is not encoded in equations.
+Structure is not explicitly encoded in the governing equations.
 
-It emerges from trajectory aggregation.
+It emerges from trajectory aggregation in state space.
 ```
 
 ---
@@ -80,8 +80,8 @@ It emerges from trajectory aggregation.
 ## Insight
 
 ```text
-Different geometries arise,
-but all are organized by flow-aligned structure.
+Geometric expressions differ,
+but all systems organize motion through flow-aligned structure.
 ```
 
 ---
@@ -90,7 +90,7 @@ but all are organized by flow-aligned structure.
 
 ![Sheets](../../../NEXAH_DEMONSTRATOR/visuals/structure/transition_structure_phase.png)
 
-Continuous dynamics induce:
+Continuous dynamics induce a discrete structural mapping:
 
 ```text
 s(t) = sheet index
@@ -109,7 +109,8 @@ s(t) = sheet index
 ## Insight
 
 ```text
-Discrete structure is induced by continuous dynamics.
+Discrete structure is induced by continuous dynamics,
+not imposed externally.
 ```
 
 ---
@@ -122,8 +123,8 @@ Observed across all systems:
 
 ```text
 • strong diagonal dominance
-• transitions only between neighbors
-• no long-range jumps
+• transitions primarily between neighboring states
+• no evidence of long-range jumps
 ```
 
 ---
@@ -131,7 +132,8 @@ Observed across all systems:
 ## Interpretation
 
 ```text
-The system behaves like a locally constrained Markov process.
+The transition structure exhibits properties
+consistent with a locally constrained Markov process.
 ```
 
 ---
@@ -139,9 +141,9 @@ The system behaves like a locally constrained Markov process.
 ## Important Result
 
 ```text
-Transitions are NOT rare events.
+Transitions are not rare events.
 
-They are continuous flows across adjacent structure.
+They occur as continuous flows across adjacent structure.
 ```
 
 ---
@@ -153,8 +155,14 @@ They are continuous flows across adjacent structure.
 Defined as:
 
 ```text
-G(x) = (1 - ρ)(1 - C)(1 - R)
+G(x) = (1 - ρ̂)(1 - Ĉ)(1 - R̂)
 ```
+
+where:
+
+- ρ̂ = normalized density  
+- Ĉ = normalized coherence  
+- R̂ = normalized rotation  
 
 ---
 
@@ -171,7 +179,8 @@ G(x) = (1 - ρ)(1 - C)(1 - R)
 ```text
 Gates are not discrete triggers.
 
-They are spatial regions of structural weakness.
+They are spatial regions of structural weakness
+within the field.
 ```
 
 ---
@@ -194,14 +203,15 @@ All systems exhibit:
 ## Core Result
 
 ```text
-These properties are invariant across systems.
+These structural properties persist across systems,
+independent of their specific dynamics.
 ```
 
 ---
 
 # 🔬 7. Emergent Topology
 
-Topology arises from:
+An effective topology arises from:
 
 ```text
 Sheets → Connectivity → Transitions
@@ -214,7 +224,7 @@ Sheets → Connectivity → Transitions
 | System | Topology |
 |--------|----------|
 | Lorenz | switching (Möbius-like) |
-| Rössler | spiral / disc |
+| Rössler | spiral / disc-like |
 | Halvorsen | graph-like |
 
 ---
@@ -223,7 +233,7 @@ Sheets → Connectivity → Transitions
 
 ```text
 Topology is induced by transition structure,
-not predefined by geometry.
+not predefined by geometric form.
 ```
 
 ---
@@ -238,7 +248,7 @@ Halvorsen  → distributed transition system
 
 ---
 
-# 🧠 Final Insight
+# 🔥 Central Claim
 
 ```text
 Dynamical systems are not defined by their equations.
