@@ -29,10 +29,10 @@ It is:
 
 # 🧭 1. Dynamical System
 
-We consider:
+We consider a continuous dynamical system:
 
 $$
-\dot{x} = F(x), \quad x \in \mathbb{R}^n
+\dot{x}(t) = F(x(t)), \quad x(t) \in \mathbb{R}^n
 $$
 
 with trajectory:
@@ -45,11 +45,13 @@ $$
 
 # 🌀 2. Phase Definition
 
-Phase is defined via a projection:
+Phase is defined via a projection onto a 2D subspace:
 
 $$
 \phi(t) = \arctan2(x_2(t), x_1(t))
 $$
+
+This defines a **scalar coordinate capturing rotational progression**.
 
 ---
 
@@ -61,7 +63,7 @@ $$
 \omega(t) = \frac{d\phi(t)}{dt}
 $$
 
-In discrete form:
+Discrete approximation:
 
 $$
 \omega(t) \approx \frac{\phi(t+\Delta t) - \phi(t)}{\Delta t}
@@ -79,8 +81,14 @@ $$
 
 where:
 
-- $\mathcal{E}$ = smoothing / local averaging operator  
-- e.g. moving average or low-pass filter  
+- $\mathcal{E}$ is a local smoothing operator  
+- e.g. moving average, kernel smoothing, or low-pass filter  
+
+Interpretation:
+
+```text
+ω̂(t) represents expected phase evolution under local consistency
+```
 
 ---
 
@@ -95,19 +103,25 @@ $$
 Interpretation:
 
 ```text
-M small → coherent phase evolution  
-M large → disruption of phase consistency
+M(t) small → coherent phase evolution  
+M(t) large → disruption of phase consistency
 ```
 
 ---
 
 # 🔥 6. Instability Measure
 
-Local dynamical magnitude:
+Define local dynamical magnitude:
 
 $$
 I(t) = \|\dot{x}(t)\|
 $$
+
+Interpretation:
+
+```text
+I(t) measures local dynamical intensity, not structural change
+```
 
 ---
 
@@ -144,7 +158,7 @@ for threshold $\tau$.
 Empirical observation:
 
 $$
-P(\text{IOTA} \mid M) \uparrow \text{ as } M \uparrow
+P(\text{IOTA} \mid M) \uparrow \quad \text{as } M \uparrow
 $$
 
 ---
@@ -154,14 +168,14 @@ $$
 Mismatch measures deviation from expected rotational behavior:
 
 ```text
-M(t) = deviation from local phase-consistent motion
+M(t) = deviation from locally consistent phase evolution
 ```
 
 ---
 
 # 🎯 10. Control Law (Phase-Based)
 
-Current control:
+Current control formulation:
 
 $$
 s(t) = s^*(\phi(t))
@@ -238,10 +252,10 @@ Stability:
 → M ≈ 0
 
 Instability:
-→ I high
+→ I large
 
 Transition:
-→ M high
+→ M large
 ```
 
 ---
@@ -253,6 +267,12 @@ Observed dominant modes:
 $$
 k \in \{4, 32, 34, 2, 0\}
 $$
+
+Interpretation:
+
+```text
+Transitions exhibit structured angular signatures
+```
 
 ---
 
