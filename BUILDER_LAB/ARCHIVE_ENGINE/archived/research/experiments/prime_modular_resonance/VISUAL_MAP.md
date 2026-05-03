@@ -81,7 +81,7 @@
 ![flux](analysis/output/plots/energy_flux_field_mod7_0.png)
 
 - Type: vector field  
-- Meaning: directional energy transport  
+- Meaning: directional transport  
 
 ---
 
@@ -92,7 +92,38 @@
 
 ---
 
-## 🔹 E. ENERGY
+## 🔹 E. TRANSPORT (DYNAMIC LAYER)
+
+### mod7_particle_flow
+![particle](analysis/output/curated/mod7_particle_flow.gif)
+
+- Type: particle simulation  
+- Insight: motion along transition field  
+
+---
+
+### mod7_particle_flow_trails
+![trails](analysis/output/curated/mod7_particle_flow_trails.gif)
+
+- Insight: trajectory memory + path formation  
+
+---
+
+### mod7_transition_flow
+![transition_flow](analysis/output/curated/mod7_transition_flow.gif)
+
+- Insight: pulse-like transport + drift  
+
+---
+
+### mod7_structure_flow
+![structure_flow](analysis/output/curated/mod7_structure_flow.gif)
+
+- Insight: structural propagation of motion  
+
+---
+
+## 🔹 F. ENERGY
 
 ### energy_density_map_mod7
 ![energy](analysis/output/plots/energy_density_map_mod7_0.png)
@@ -102,7 +133,7 @@
 
 ---
 
-## 🔹 F. BASINS
+## 🔹 G. BASINS
 
 ### basin_map_mod7
 ![basin](analysis/output/plots/basin_map_mod7_0.png)
@@ -126,7 +157,7 @@
 
 ---
 
-## 🔹 G. LOOPS
+## 🔹 H. LOOPS
 
 ### circulation_loops_mod7
 ![loops](analysis/output/plots/circulation_loops_mod7_0.png)
@@ -150,7 +181,7 @@
 
 ---
 
-## 🔹 H. VORTEX
+## 🔹 I. VORTEX
 
 ### vortex_field_detector_mod7
 ![vortex](analysis/output/plots/vortex_field_detector_mod7_0.png)
@@ -167,7 +198,7 @@
 
 ---
 
-## 🔹 I. MULTI-MOD COUPLING
+## 🔹 J. MULTI-MOD COUPLING
 
 ### edge_flow_circulation_mod7_mod11
 ![mod7x11](analysis/output/plots/edge_flow_circulation_mod7_mod11_0.png)
@@ -183,7 +214,37 @@
 
 ---
 
-## 🔹 J. GEOMETRY
+## 🔹 K. CROSS-MOD STRUCTURE (NEW)
+
+### figure_1_mod_comparison
+![mod_compare](analysis/output/plots/figure_1_mod_comparison.png)
+
+- Insight: structural differences across moduli  
+
+---
+
+### mod_drift_scaling
+![drift](analysis/output/plots/mod_drift_scaling.png)
+
+- Insight: drift increases with modulus  
+
+---
+
+### mod_distance_matrix_raw
+![distance](analysis/output/plots/mod_distance_matrix_raw.png)
+
+- Insight: structured similarity between mod systems  
+
+---
+
+### mod_distance_matrix_clustered
+![clustered](analysis/output/plots/mod_distance_matrix_clustered.png)
+
+- Insight: moduli form distinct dynamic clusters  
+
+---
+
+## 🔹 L. GEOMETRY
 
 ### torus_projection_mod7
 ![torus](analysis/output/plots/torus_projection_mod7_0.png)
@@ -200,7 +261,7 @@
 
 ---
 
-## 🔹 K. GENERATOR
+## 🔹 M. GENERATOR
 
 ### triangle_flow_animation
 ![triangle](analysis/output/plots/triangle_flow_animation_0.png)
@@ -213,15 +274,17 @@
 ## 🔹 STATUS
 
 ✔ visuals generated  
-✔ saved via pipeline  
-✔ reproducible system  
-✔ multi-layer structure confirmed  
+✔ dynamic layer discovered  
+✔ transport behavior observed  
+✔ multi-mod structure identified  
+✔ clustering confirmed  
 
 ---
 
 ## 🔮 NEXT LAYER
 
-- trace accumulation  
-- phase mapping  
-- torus dynamics (3D → 4D)  
-- mod coupling expansion (7 × 11 × 13)  
+- spectral eigenvalue analysis  
+- stationary distributions  
+- drift normalization laws  
+- higher moduli (m > 50)  
+- multi-mod coupling (7 × 11 × 13)  
