@@ -12,7 +12,23 @@ and serves as the primary entry point into the framework.
 NEXAH models systems not as sequences of states,  
 but as motion within **structured dynamical fields**.
 
-dynamics → field → structure → constraints → transitions → navigation
+```text
+dynamics → field → structure → constraints → transitions → phase → navigation
+```
+
+---
+
+## 🔷 Unified Transition Architecture (Cross-System View)
+
+![Unified Architecture](./FIGURES/main/unified_transition_architecture.png)
+
+This diagram summarizes the **full NEXAH pipeline across systems**, showing:
+
+- how discrete dynamics generate transitions  
+- how transitions form structure  
+- how phase embeds motion  
+- how flow and topology emerge  
+- how synchronization arises as a global effect  
 
 ---
 
@@ -93,8 +109,11 @@ System = coupled multi-layer dynamics
 
 > Transitions occur through structured geometric pathways.
 
-Transitions occur at low-density, low-coherence regions  
-and are activated by phase mismatch.
+Transitions occur at:
+
+- low-density regions  
+- low-coherence zones  
+- regions of competing flow  
 
 Key ideas:
 
@@ -118,27 +137,9 @@ Phase dynamics determines *when* they occur.
 
 ---
 
-## 5. 🔗 Structural Operators (Theory → Field Mapping)
+## 5. 🧭 Phase Dynamics & Alignment (Causal Layer)
 
-→ CORE_CONCEPTS/theory_to_field_mapping.md
-
-> Minimal operators formalize observed structure.
-
-Core operators:
-
-- Γ → closure → basins  
-- Δ → transitions → channels  
-- Ω → stabilization → convergence  
-
-### Interpretation
-
-structure → geometry → field → behavior
-
----
-
-## 6. 🧭 Phase Dynamics & Alignment (Causal Layer)
-
-→ VALIDATION/causality/
+→ FINDINGS/TRANSITION_PHASE_DYNAMICS/
 
 > Transitions are not triggered by instability alone,  
 > but by misalignment in phase dynamics.
@@ -148,17 +149,19 @@ Key ideas:
 - phase = intrinsic system progression (φ)  
 - ω = phase velocity (dφ/dt)  
 - mismatch = deviation from expected phase evolution  
-- control operates relative to phase, not absolute state  
+- drift = persistent directional transport  
 
 ### Observations (Validation)
 
-- IOTA events occur when:
+- transitions occur when:
 
-  phase mismatch >> 0  
+```text
+phase mismatch >> 0
+```
 
 - NOT when instability is maximal  
 
-- Angular structure emerges in transition events:
+- angular structure emerges in transition events:
 
   dominant modes: [4, 32, 34, 2, 0]
 
@@ -178,7 +181,7 @@ phase-aligned, not magnitude-based
 
 Instability → potential for transition  
 Phase mismatch → activation of transition  
-Control alignment → suppression or guidance
+Control alignment → suppression or guidance  
 
 ---
 
@@ -191,8 +194,27 @@ relative to its expected evolution.
 
 ---
 
+## 6. 🔗 Structural Operators (Theory → Field Mapping)
+
+→ CORE_CONCEPTS/theory_to_field_mapping.md
+
+> Minimal operators formalize observed structure.
+
+Core operators:
+
+- Γ → closure → basins  
+- Δ → transitions → channels  
+- Ω → stabilization → convergence  
+
+### Interpretation
+
+structure → geometry → field → behavior
+
+---
+
 # 🔁 Unified System Flow
 
+```text
 Dynamics  
 ↓  
 Field (structure emerges)  
@@ -208,25 +230,29 @@ Phase dynamics (alignment / mismatch emerges)
 Operators (structure is formalized)  
 ↓  
 Navigation (structure is used)
+```
 
 ---
 
 # 🔬 Stability & Transition (Unified View)
 
-Stability:  
-→ alignment with flow  
-→ high-density regions  
-→ structural containment  
-→ phase coherence  
+**Stability:**
 
-Instability:  
-→ misalignment  
-→ low density  
-→ competing flow directions  
+- alignment with flow  
+- high-density regions  
+- structural containment  
+- phase coherence  
 
-Transition:  
-→ movement through structured corridors  
-→ triggered by phase mismatch  
+**Instability:**
+
+- misalignment  
+- low density  
+- competing flow directions  
+
+**Transition:**
+
+- movement through structured corridors  
+- triggered by phase mismatch  
 
 Quantitative validation of transition structure:
 
@@ -240,10 +266,10 @@ Control is not external forcing.
 
 It is:
 
-alignment with structure  
-+ phase-aligned intervention  
-+ mismatch suppression  
-+ guided movement through transitions  
+- alignment with structure  
+- phase-aligned intervention  
+- mismatch suppression  
+- guided movement through transitions  
 
 ---
 
@@ -256,13 +282,15 @@ alignment with structure
 
 # 🔗 Relation to System Architecture
 
+```text
 RESEARCH (Concepts)  
 ↓  
 DISCOVERY ENGINE (Extraction)  
 ↓  
 FIELD_LAYER (Representation)  
 ↓  
-NAVIGATION (Control)  
+NAVIGATION (Control)
+```
 
 ---
 
@@ -305,5 +333,5 @@ Control succeeds when alignment is restored.
 
 ---
 
-NEXAH Core Concept Map  
+**NEXAH Core Concept Map**  
 Thomas K. R. Hofmann · 2026
