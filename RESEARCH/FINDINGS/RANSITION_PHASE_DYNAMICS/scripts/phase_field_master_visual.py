@@ -1,17 +1,19 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.ndimage import gaussian_filter
+import os
 
 # ============================================================
 # CONFIG
 # ============================================================
 
 OUTPUT_PATH = "RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/master"
-import os
 os.makedirs(OUTPUT_PATH, exist_ok=True)
 
-T = 20000
-DT = 0.01
+T = 30000          # länger für bessere Statistik
+DT = 0.002         # 🔥 WICHTIG: kleiner Schritt!
+
+TRANSIENT = 5000   # 🔥 Anfang wegschneiden
 
 # ============================================================
 # SYSTEMS
@@ -26,9 +28,12 @@ def lorenz():
         dx = sigma*(x[i,1]-x[i,0])
         dy = x[i,0]*(rho-x[i,2]) - x[i,1]
         dz = x[i,0]*x[i,1] - beta*x[i,2]
-        x[i+1] = x[i] + DT*np.array([dx,dy,dz])
 
-    return x
+        step = DT*np.array([dx,dy,dz])
+        x[i+1] = x[i] + step
+
+    return x[TRANSIENT:]
+
 
 def rossler():
     a, b, c = 0.2, 0.2, 5.7
@@ -39,9 +44,12 @@ def rossler():
         dx = -x[i,1] - x[i,2]
         dy = x[i,0] + a*x[i,1]
         dz = b + x[i,2]*(x[i,0] - c)
-        x[i+1] = x[i] + DT*np.array([dx,dy,dz])
 
-    return x
+        step = DT*np.array([dx,dy,dz])
+        x[i+1] = x[i] + step
+
+    return x[TRANSIENT:]
+
 
 def halvorsen():
     a = 1.4
@@ -55,12 +63,13 @@ def halvorsen():
 
         step = DT*np.array([dx,dy,dz])
 
-        if np.any(np.isnan(step)) or np.linalg.norm(step) > 50:
-            x[i+1] = x[i]
-        else:
-            x[i+1] = x[i] + step
+        # 🔥 STABILISIERUNG (kein Freeze!)
+        step = np.clip(step, -5, 5)
 
-    return x
+        x[i+1] = x[i] + step
+
+    return x[TRANSIENT:]
+
 
 # ============================================================
 # PHASE + ANALYSIS
@@ -72,20 +81,20 @@ def compute_phase(x):
     dtheta = np.diff(theta_unwrapped)
     return theta_unwrapped, dtheta
 
+
 def density_field(x, bins=200):
     H, xedges, yedges = np.histogram2d(
         x[:,0], x[:,1], bins=bins
     )
     H = gaussian_filter(H, sigma=2)
-    return H, xedges, yedges
+    return H
+
 
 # ============================================================
 # PLOT FUNCTION
 # ============================================================
 
-def plot_system(ax_row, data, name):
-
-    x = data
+def plot_system(ax_row, x, name):
 
     # ---- trajectory
     ax = ax_row[0]
@@ -95,7 +104,7 @@ def plot_system(ax_row, data, name):
 
     # ---- density
     ax = ax_row[1]
-    H, xe, ye = density_field(x)
+    H = density_field(x)
     ax.imshow(H.T, origin='lower', aspect='auto')
     ax.set_title("Field / Density")
     ax.set_xticks([]); ax.set_yticks([])
@@ -108,9 +117,11 @@ def plot_system(ax_row, data, name):
     ax.set_title("Phase θ(t)")
     ax.set_xticks([])
 
-    # plateau shading
+    # 🔥 Plateau Detection (besser)
     grad = np.abs(np.gradient(theta))
-    mask = grad < np.percentile(grad, 25)
+    threshold = np.percentile(grad, 20)
+
+    mask = grad < threshold
 
     for i in range(len(mask)):
         if mask[i]:
@@ -118,8 +129,9 @@ def plot_system(ax_row, data, name):
 
     # ---- distribution
     ax = ax_row[3]
-    ax.hist(dtheta, bins=100)
+    ax.hist(dtheta, bins=120)
     ax.set_title("Δθ Distribution")
+
 
 # ============================================================
 # MAIN
@@ -138,4 +150,5 @@ for i, (name, data) in enumerate(systems):
 
 plt.tight_layout()
 plt.savefig(f"{OUTPUT_PATH}/phase_field_master_visual.png", dpi=200)
+
 print(f"[OK] saved → {OUTPUT_PATH}/phase_field_master_visual.png")
