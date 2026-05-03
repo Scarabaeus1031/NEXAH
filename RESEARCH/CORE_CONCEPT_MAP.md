@@ -50,7 +50,7 @@ System = trajectory inside structured field
 
 ## 2. 🧪 Vessel (Constraint & Containment)
 
-→ CORE_CONCEPTS/vessel_geometry_system.md
+→ CORE_CONCEPTS/vessel_geometry.md
 
 > Structure only exists where it is contained.
 
