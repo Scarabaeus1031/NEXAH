@@ -52,11 +52,17 @@ They are derived from validated system behavior.
 
 ---
 
-## 🧮 Equations (Core Layer)
+## 🧮 Minimal System & Equations
 
+→ `minimal_system.md`  
 → `equations.md`
 
-Defines the **minimal dynamical system**:
+Defines the **operational core of NEXAH** at two levels:
+
+- `minimal_system.md` → minimal, irreducible structure  
+- `equations.md` → full operational formulation  
+
+Core variables:
 
 - phase (φ)  
 - phase velocity (ω)  
@@ -65,7 +71,7 @@ Defines the **minimal dynamical system**:
 - instability (I)  
 - control (s)  
 
-👉 **This is the operational core of NEXAH**
+👉 **Together, these define the causal mechanism of transitions**
 
 ---
 
