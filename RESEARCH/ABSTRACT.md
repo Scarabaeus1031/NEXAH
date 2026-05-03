@@ -46,4 +46,4 @@ through their intrinsic transition geometry.
 
 ---
 
-**Keywords:** dynamical systems, phase dynamics, transitions, control, field structure
+**Keywords:** dynamical systems, phase dynamics, transition structure, control, field-based modeling
