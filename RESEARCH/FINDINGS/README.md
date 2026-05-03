@@ -15,6 +15,7 @@ For structured findings at different levels:
 
 → [core_findings.md](./core_findings.md)  
 → [dynamical_unification.md](./dynamical_unification.md)  
+→ [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)  
 → [../NEXAH_CORE/findings.md](../../NEXAH_CORE/findings.md)
 
 ---
@@ -68,6 +69,56 @@ Key observation:
 
 ---
 
+# 🔷 Phase Dynamics Insight (NEW)
+
+→ [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)
+
+A new layer introduces **phase as a structural coordinate** across systems.
+
+Defined as:
+
+θ(t) = atan2(y, x)
+
+Observed in:
+
+- Lorenz  
+- Rössler  
+- Halvorsen  
+- Kuramoto  
+
+We observe:
+
+- continuous phase evolution  
+- directional drift (Δθ ≠ 0)  
+- winding accumulation  
+- plateau regions (low phase velocity)  
+- structured Δθ distributions  
+
+---
+
+## 🧭 Structural Role of Phase
+
+Phase reveals hidden structure:
+
+- phase = **local coordinate on the structure**
+- drift = **directional transport**
+- winding = **global topology**
+- plateaus = **transition slow zones (gate candidates)**
+
+---
+
+## 🔬 Key Observation
+
+> Phase structure emerges independently of system type.
+
+Now observed in:
+
+- continuous systems  
+- discrete systems  
+- collective systems (Kuramoto synchronization)
+
+---
+
 ## 🧭 Structural Implication
 
 This extends the NEXAH hypothesis:
@@ -79,7 +130,8 @@ It emerges from transition dynamics.
 Now observed in:
 
 - continuous dynamical systems (Lorenz, Halvorsen, power grids)  
-- discrete systems (prime modular transitions)
+- discrete systems (prime modular transitions)  
+- collective synchronization systems (Kuramoto)
 
 ---
 
@@ -95,9 +147,22 @@ Now observed in:
 
 ---
 
+# 🔁 Phase Structure (Cross-System View)
+
+![Phase Field Master](./TRANSITION_PHASE_DYNAMICS/figures/master/phase_field_master_visual.png)
+
+**Interpretation:**
+
+- phase evolves smoothly even in chaotic systems  
+- drift direction persists  
+- plateau regions mark slow transition zones  
+- Δθ is structured, not random  
+
+---
+
 # 🔬 What was observed
 
-Across multiple systems (continuous + discrete), the following patterns emerge:
+Across multiple systems (continuous + discrete):
 
 - transitions are **not discrete events**, but structured processes  
 - transition regions form **geometric channels**  
@@ -105,6 +170,8 @@ Across multiple systems (continuous + discrete), the following patterns emerge:
 - discrete systems generate **continuous-like flow behavior**  
 - system motion follows an **implicit structural constraint**  
 - systems converge toward **stable structural configurations**  
+- phase evolves with **drift, winding, and plateau structure**  
+- synchronization emerges as **phase alignment (Kuramoto)**  
 
 ---
 
@@ -161,13 +228,14 @@ NEXAH reconstructs the local field structure, revealing:
 
 # 🔬 Next Steps
 
-For deeper layers:
-
 ### Core empirical findings  
 → [core_findings.md](./core_findings.md)
 
 ### Cross-system structure (Lorenz ↔ Halvorsen)  
 → [dynamical_unification.md](./dynamical_unification.md)
+
+### Phase dynamics layer  
+→ [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)
 
 ### Discrete transition systems (prime modular resonance)  
 → [PRIME_MODULAR_RESONANCE/](./PRIME_MODULAR_RESONANCE/)
