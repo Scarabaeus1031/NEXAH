@@ -12,35 +12,20 @@ from first principles to applied systems.
 
 # 🔥 What This Framework Does
 
-```text
-NEXAH extracts structure from dynamical systems
-and makes it navigable.
-```
+text NEXAH extracts structure from dynamical systems and makes it navigable. 
 
 It transforms:
-```text
-dynamics → field → structure → transitions → control
-```
+text dynamics → field → structure → transitions → control 
 
-detailed pipeline:
+Detailed pipeline:
 
-```text
-dynamics → density → structure → sheets → transitions → topology
-```
+text dynamics → density → structure → sheets → transitions → phase → topology → control 
 
 ---
 
 # 🧭 Recommended Reading Path
 
-```text
-1. FOUNDATION → minimal assumptions
-2. CORE_CONCEPTS → operational structure
-3. VALIDATION → empirical evidence
-4. FINDINGS → extracted principles
-5. APPLIED_CASES → real system applications
-6. FIGURES → visual synthesis
-7. THEORETICAL_EXTENSIONS → formalization
-```
+text 1. FOUNDATION → minimal assumptions 2. CORE_CONCEPTS → operational structure 3. VALIDATION → empirical evidence 4. TRANSITION & PHASE LAYER → structure extraction (NEW) 5. FINDINGS → extracted principles 6. APPLIED_CASES → real system applications 7. FIGURES → visual synthesis 8. THEORETICAL_EXTENSIONS → formalization 
 
 ---
 
@@ -64,14 +49,34 @@ dynamics → density → structure → sheets → transitions → topology
 
 ---
 
+## 🔁 TRANSITION & PHASE LAYER (NEW)
+
+→ transition geometry, phase dynamics, cross-system invariants  
+→ extracts structure from observed dynamics  
+
+This layer introduces:
+
+- phase as a structural coordinate  
+- transition regions as extended processes  
+- drift and winding as transport mechanisms  
+- cross-system structural invariance  
+
+It connects:
+
+text VALIDATION → FINDINGS 
+
+by transforming empirical observations into structured quantities.
+
+---
+
 ## 🔥 FINDINGS
-→ extracted structural principles  
-→ compresses empirical observations  
+→ extracted structural principles from transition and phase dynamics  
+→ compresses empirical observations into invariant statements  
 
 ---
 
 ## 🌍 APPLIED_CASES
-→ Lorenz, Halvorsen, comparisons, scenarios  
+→ Lorenz, Halvorsen, power systems, comparisons  
 → shows NEXAH in action  
 
 ---
@@ -90,62 +95,40 @@ dynamics → density → structure → sheets → transitions → topology
 
 # 🔁 Logical Dependency
 
-```text
-FOUNDATION → defines assumptions
-
-CORE_CONCEPTS → defines measurable structure
-
-VALIDATION → shows structure exists
-
-FINDINGS → extracts invariant principles
-
-APPLIED_CASES → demonstrates real behavior
-
-FIGURES → unify understanding
-
-THEORETICAL_EXTENSIONS → formalize and extend
-```
+text FOUNDATION → defines assumptions  CORE_CONCEPTS → defines measurable structure  VALIDATION → shows structure exists  TRANSITION & PHASE LAYER → extracts structure  FINDINGS → identifies invariant principles  APPLIED_CASES → demonstrates real behavior  FIGURES → unify understanding  THEORETICAL_EXTENSIONS → formalize and extend 
 
 ---
 
 # 🔑 Core Idea
 
-```text
-NEXAH is not a model.
-
-It is a framework for discovering
-and navigating structure
-in dynamical systems.
-```
+text NEXAH is not a model.  It is a framework for discovering and navigating structure in dynamical systems. 
 
 ---
 
 # 🚀 Entry Points
 
 - Conceptual overview  
-  → `CORE_CONCEPT_MAP.md`
+  → CORE_CONCEPT_MAP.md
 
 - Empirical validation  
-  → `VALIDATION/README.md`
+  → VALIDATION/README.md
+
+- Transition & phase structure  
+  → FINDINGS/TRANSITION_PHASE_DYNAMICS/
 
 - Primary case study  
-  → `APPLIED_CASES/LORENZ/lorenz_case_study.md`
+  → APPLIED_CASES/LORENZ/lorenz_case_study.md
 
 - Visual system  
-  → `FIGURES/README.md`
+  → FIGURES/README.md
 
 ---
 
 # 🔥 Final Insight
 
-```text
-NEXAH does not start from theory.
-
-It starts from observed dynamics
-and builds structure from data.
-```
+text NEXAH does not start from theory.  It starts from observed dynamics and builds structure from data. 
 
 ---
 
-**NEXAH Research Index**  
+NEXAH Research Index  
 Navigation Layer · 2026
