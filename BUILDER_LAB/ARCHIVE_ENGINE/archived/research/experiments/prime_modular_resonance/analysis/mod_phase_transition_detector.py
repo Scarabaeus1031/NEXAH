@@ -8,7 +8,7 @@ import os
 # =========================
 
 USE_AUTO_MODS = True
-N_PRIMES_MODS = 25   # erste 25 Primzahlen als Moduli
+N_PRIMES_MODS = 25
 
 DATA_PATH = "output/data"
 PLOT_PATH = "output/plots"
@@ -26,7 +26,7 @@ else:
     mods = np.array([7,11,13,17,19,23,29,31])
 
 # =========================
-# LOAD DATA (aus validation suite)
+# LOAD DATA
 # =========================
 
 def safe_load(name):
@@ -39,8 +39,13 @@ z_gap   = safe_load("z_gap")
 z_drift = safe_load("z_drift")
 z_stat  = safe_load("z_stat")
 
-# 🔥 AUTOMATISCH MATCHEN
-mods = mods[:len(z_gap)]
+# 🔥 MATCH LENGTHS
+n = min(len(mods), len(z_gap), len(z_drift), len(z_stat))
+
+mods    = mods[:n]
+z_gap   = z_gap[:n]
+z_drift = z_drift[:n]
+z_stat  = z_stat[:n]
 
 # =========================
 # GRADIENTS
@@ -79,13 +84,20 @@ def detect_drift_collapse(z_drift, threshold=1.0):
 drift_collapse = detect_drift_collapse(z_drift)
 
 # =========================
-# SCALING TEST
+# SCALING TEST (robust)
 # =========================
 
 def compute_scaling(mods, values):
-    mask = values != 0
+    values = np.array(values)
+
+    # ❗ remove zeros & negatives safely
+    mask = (values != 0) & (~np.isnan(values))
     mods = mods[mask]
     values = np.abs(values[mask])
+
+    # avoid log(0)
+    eps = 1e-12
+    values = values + eps
 
     log_m = np.log(mods)
     log_v = np.log(values)
@@ -153,9 +165,14 @@ plt.show()
 
 plt.figure(figsize=(8,6))
 
-plt.scatter(np.log(mods), np.log(np.abs(z_drift)), label='drift')
-plt.scatter(np.log(mods), np.log(np.abs(z_gap)), label='gap')
-plt.scatter(np.log(mods), np.log(np.abs(z_stat)), label='stat')
+# safer plotting (ignore zeros)
+def safe_log_plot(x, y, label):
+    mask = (y != 0) & (~np.isnan(y))
+    plt.scatter(np.log(x[mask]), np.log(np.abs(y[mask])), label=label)
+
+safe_log_plot(mods, z_drift, 'drift')
+safe_log_plot(mods, z_gap, 'gap')
+safe_log_plot(mods, z_stat, 'stat')
 
 plt.title("Scaling (log-log)")
 plt.xlabel("log(mod)")
