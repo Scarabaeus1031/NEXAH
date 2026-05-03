@@ -1,286 +1,211 @@
-Symmetry Graph Experiment — Experiment Map
+# NEXAH Research System Map
 
-This document provides a structural overview of all experiments inside the symmetry_graph_experiment module.
+This document provides a structural overview of the experimental systems inside the NEXAH research layer.
 
-The goal is to make navigation through the research environment easier and to show how the experiments relate to each other conceptually.
+The goal is to organize experiments not by files, but by **conceptual system types and dynamics**.
 
-⸻
+---
 
-System Overview
+# Overview
 
-The symmetry graph experiments study nonlinear oscillator dynamics on structured networks.
+The NEXAH research environment currently explores two fundamental classes of systems:
 
-Core research topics include:
+---
 
-• synchronization
-• resonance structures
-• phase transitions
-• vortex dynamics
-• toroidal phase space
-• stability landscapes
+## 1 — Continuous Dynamical Systems
 
-The experiments are organized by physical interpretation.
+Systems with explicit time evolution and coupling dynamics.
 
-⸻
+Examples:
 
-Experiment Structure
+• Kuramoto oscillator networks  
+• phase synchronization systems  
+• resonance flows  
+• toroidal embeddings  
+• energy landscapes  
 
-symmetry_graph_experiment
+---
 
-core
-central visualizers and kernel bridges
+## 2 — Discrete Transition Systems
 
-dynamics
-Kuramoto-type oscillator dynamics
+Systems without explicit dynamics, where structure emerges from transitions.
 
-resonance
-resonance channel flows and resonance webs
+Examples:
 
-topology
-toroidal embeddings and Arnold resonance webs
+• prime modular residue systems  
+• transition matrices  
+• drift fields  
+• modular state spaces  
 
-energy_landscapes
-stability potentials and attractor landscapes
+---
 
-transitions
-phase transition detection and separatrix tracing
+# Core Research Axes
 
-phiC
-φ-resonance structures and Lissajous dynamics
+All experiments fall into the following conceptual axes:
 
-phase_space
-vector fields and domain maps
+• topology (network structure)  
+• dynamics (time evolution)  
+• transitions (state changes)  
+• resonance (pattern propagation)  
+• stability (basins & attractors)  
+• geometry (embedding & visualization)  
 
-experiments_misc
-additional prototype experiments
+---
 
-visuals
-generated figures and experiment outputs
+# System A — Symmetry Graph Experiments (Continuous)
 
-⸻
+These experiments investigate nonlinear oscillator dynamics on structured graphs.
 
-Core Infrastructure
+---
 
-core/
+## Structure
 
-symmetry_graph_visualizer.py
-Graph layout and visualization utilities.
+center node  
++ radial spokes  
++ cycle layers  
 
-symmetry_graph_kernel_bridge.py
-Connection between symmetry graph experiments and the NEXAH kernel.
+Example:
 
-symmetry_graph_vortex_detector.py
-Detection of phase vortices via winding number calculations.
+C5 + C6 + C6 = 17
 
-⸻
+---
 
-Dynamics Experiments
+## Key Components
 
-dynamics/
+### dynamics/
+Kuramoto simulations, drift, energy flow  
 
-symmetry_graph_full_kuramoto.py
-Full Kuramoto synchronization simulation on symmetry graphs.
+### topology/
+toroidal embeddings, Arnold webs  
 
-symmetry_graph_drift_simulation.py
-Investigates phase drift behavior.
+### resonance/
+resonance flows and channel structures  
 
-symmetry_graph_gyroscope_dynamics.py
-Oscillator coupling with gyroscopic effects.
+### phase_space/
+vector fields and domain maps  
 
-symmetry_graph_mode_dynamics.py
-Analysis of mode structures inside the oscillator network.
+### transitions/
+phase transitions, basin maps  
 
-symmetry_graph_energy_flow.py
-Energy transfer between oscillator nodes.
+---
 
-⸻
+## Core Insight
 
-Resonance Experiments
+> Balanced topology → stable synchronization dynamics  
 
-resonance/
+---
 
-symmetry_graph_resonance_flow.py
-Simulates resonance propagation through the network.
+# System B — Prime Modular Transition Experiments (Discrete)
 
-symmetry_graph_resonance_web_lines.py
-Visualizes resonance channels forming web-like structures.
+These experiments investigate structure emerging from purely discrete systems.
 
-symmetry_graph_resonance_modes.py
-Mode decomposition of resonance patterns.
+---
 
-symmetry_graph_resonance_generator.py
-Generator for structured resonance networks.
+## Structure
 
-symmetry_graph_resonance_flow_web.py
-Combined visualization of resonance channels and phase flow.
+Prime sequence:
 
-⸻
+pₙ → residues mod m  
 
-Topology Experiments
+State space:
 
-topology/
+finite modular ring  
 
-symmetry_graph_torus_nodes.py
-Embeds symmetry graph nodes onto toroidal surfaces.
+Dynamics:
 
-symmetry_graph_torus_resonance.py
-Studies resonance patterns on torus-embedded graphs.
+defined by transition sequence  
 
-symmetry_graph_torus_arnold_web.py
-Investigates Arnold resonance webs.
+---
 
-symmetry_graph_torus_resonance_web.py
-Visualizes toroidal resonance channels.
+## Key Components
 
-symmetry_graph_torus_chaos.py
-Explores chaotic regimes on toroidal oscillator systems.
+• transition matrices  
+• residue jumps  
+• drift fields  
+• cross-modulus comparison  
+• clustering  
 
-⸻
+---
 
-Energy Landscape Experiments
+## Core Insight
 
-energy_landscapes/
+> Structured transitions → emergent flow-like behavior  
 
-symmetry_graph_energy_landscape.py
-Computes energy potentials of oscillator states.
+---
 
-symmetry_graph_resonance_landscape.py
-Studies resonance potential fields.
+# Cross-System Connection
 
-symmetry_graph_stability_landscape.py
-Maps attractor basins and stability ridges.
+Despite different definitions:
 
-symmetry_graph_entropy_scan.py
-Measures entropy and structural disorder across phase states.
+| Continuous Systems | Discrete Systems |
+|------------------|-----------------|
+| phase flow | transition flow |
+| vortices | drift |
+| synchronization | stabilization |
+| attractors | clusters |
 
-⸻
+---
 
-Phase Space Experiments
+## Unified Principle
 
-phase_space/
+> Structure emerges from transition rules — not from the system type.
 
-symmetry_graph_vector_field.py
-Vector field representation of oscillator dynamics.
+---
 
-symmetry_graph_domain_map.py
-Mapping of stable and unstable domains.
+# Supporting Infrastructure
 
-symmetry_graph_cluster_map.py
-Visualization of cluster formation in phase space.
+## core/
 
-⸻
+visualization  
+kernel bridge  
+vortex detection  
 
-Transition Experiments
+---
 
-transitions/
+## visuals/
 
-symmetry_graph_phase_transition_detector.py
-Detects transitions between dynamical regimes.
+All generated figures and experiment outputs.
 
-symmetry_graph_phase_transition_scan.py
-Parameter sweep for transition detection.
+---
 
-symmetry_graph_basin_map.py
-Maps attractor basins.
+# Experiment Workflow
 
-symmetry_graph_separatrix_tracer.py
-Traces separatrix boundaries between regimes.
+General pipeline:
 
-⸻
+1. define system  
+2. generate transitions / dynamics  
+3. extract structure  
+4. detect patterns  
+5. map regimes  
+6. visualize  
 
-φ-Resonance Experiments
+---
 
-phiC/
+# Current Status
 
-symmetry_graph_phiC_bridge.py
-Explores φ-based resonance coupling.
+✔ continuous systems established  
+✔ discrete systems integrated  
+✔ cross-system patterns observed  
 
-symmetry_graph_phiC_lissajous_flow.py
-Studies Lissajous-type resonance flows.
+---
 
-⸻
+# Next Directions
 
-Structured Symmetry Experiments
+• spectral analysis (eigenvalues)  
+• normalization and scaling laws  
+• random control comparison  
+• mapping between discrete and continuous systems  
 
-symmetry_graph_3cycle.py
-Basic symmetry graph with three cycle layers.
+---
 
-symmetry_graph_3cycle_vortex_analysis.py
-Cycle-based vortex detection.
+# Role in NEXAH
 
-symmetry_graph_3cycle_transition_tracker.py
-Tracks synchronization phases and transition regimes.
+This research layer provides:
 
-Graph structure used
+→ structure discovery  
+→ pattern extraction  
+→ system comparison  
 
-center node
-17 spokes
+It acts as the experimental foundation for the NEXAH framework.
 
-cycle layers
-
-C5 + C6 + C6
-
-Partition
-
-5 + 6 + 6 = 17
-
-⸻
-
-Shell Synchronization Experiments
-
-prime_shell_scan.py
-
-Scans synchronization behavior for hub-ring networks of size
-
-N = 8 … 40
-
-Each system consists of
-
-center node
-+
-N ring oscillators
-
-Measured properties include
-
-• synchronization time
-• global order parameter
-• metastable phase clustering
-
-Initial results suggest that some shell sizes produce delayed synchronization or frustration regimes.
-
-⸻
-
-Visual Outputs
-
-All generated figures are stored in
-
-visuals/
-
-Examples include
-
-symmetry_graph.png
-symmetry_graph_3cycle.png
-symmetry_graph_regime_map.png
-symmetry_graph_geometric.png
-
-These images illustrate structural modes of the oscillator network.
-
-⸻
-
-Experiment Flow
-
-Typical experiment workflow
-	1.	Construct symmetry graph topology
-	2.	Simulate oscillator dynamics
-	3.	Analyze phase fields
-	4.	Detect resonance structures
-	5.	Map stability regimes
-	6.	Visualize results
-
-⸻
-
-Research Status
-
-The symmetry graph experiment environment is an active exploratory research system.
-
-New experiments and analysis modules are added continuously as part of the NEXAH research program.
+---
