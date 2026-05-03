@@ -148,3 +148,16 @@ def plot_results(results):
 if __name__ == "__main__":
     results = run_validation()
     plot_results(results)
+
+# =========================
+# SAVE DATA FOR PIPELINE
+# =========================
+
+import os
+os.makedirs("output/data", exist_ok=True)
+
+np.save("output/data/z_gap.npy", z_gap)
+np.save("output/data/z_drift.npy", z_drift)
+np.save("output/data/z_stat.npy", z_stat)
+
+print("[OK] saved arrays → output/data/")
