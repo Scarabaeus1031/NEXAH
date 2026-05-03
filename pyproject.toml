@@ -18,6 +18,10 @@ dependencies = [
     "pandas>=2.0"
 ]
 
+# 👉 DAS ist der entscheidende CLI-Eintrag
+[project.scripts]
+nexah = "nexah.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["nexah*"]
