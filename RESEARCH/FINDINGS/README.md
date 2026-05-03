@@ -43,10 +43,43 @@ A key result of recent experiments:
 
 → [dynamical_unification.md](./dynamical_unification.md)
 
-```text
-Different systems (Lorenz, Halvorsen) exhibit different flow geometries,
+Different systems (Lorenz, Halvorsen) exhibit different flow geometries,  
 but share the same transition structure.
-```
+
+---
+
+# 🔷 Discrete System Insight (NEW)
+
+A complementary result extends this perspective beyond continuous systems:
+
+→ [PRIME_MODULAR_RESONANCE/](./PRIME_MODULAR_RESONANCE/)
+
+Prime residue sequences (mod m) generate:
+
+- non-uniform transition structure  
+- emergent phase dynamics  
+- persistent rotational behavior  
+- directional drift across states  
+
+Key observation:
+
+> Even purely discrete systems induce **continuous-like structure, flow, and topology**  
+> when interpreted through transition dynamics.
+
+---
+
+## 🧭 Structural Implication
+
+This extends the NEXAH hypothesis:
+
+Structure is not dependent on the underlying system type.
+
+It emerges from transition dynamics.
+
+Now observed in:
+
+- continuous dynamical systems (Lorenz, Halvorsen, power grids)  
+- discrete systems (prime modular transitions)
 
 ---
 
@@ -64,14 +97,14 @@ but share the same transition structure.
 
 # 🔬 What was observed
 
-Across multiple systems (Lorenz, Halvorsen, power systems), the following patterns emerge:
+Across multiple systems (continuous + discrete), the following patterns emerge:
 
-- transitions are **not discrete events**, but spatially extended processes  
+- transitions are **not discrete events**, but structured processes  
 - transition regions form **geometric channels**  
 - continuous dynamics collapse into **discrete state structures**  
-- system motion follows an **implicit energy landscape**  
-- systems converge toward **stable attractor structures**  
-- trajectories can be **locally influenced and redirected**  
+- discrete systems generate **continuous-like flow behavior**  
+- system motion follows an **implicit structural constraint**  
+- systems converge toward **stable structural configurations**  
 
 ---
 
@@ -135,6 +168,9 @@ For deeper layers:
 
 ### Cross-system structure (Lorenz ↔ Halvorsen)  
 → [dynamical_unification.md](./dynamical_unification.md)
+
+### Discrete transition systems (prime modular resonance)  
+→ [PRIME_MODULAR_RESONANCE/](./PRIME_MODULAR_RESONANCE/)
 
 ### Full system architecture / kernel  
 → [../../NEXAH_CORE/findings.md](../../NEXAH_CORE/findings.md)
