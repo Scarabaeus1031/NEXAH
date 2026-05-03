@@ -171,7 +171,7 @@ Observation:
 - deformation caused by drift
 
 ---
-
+ 
 ## Structural Decomposition
 
 The system decomposes into:
