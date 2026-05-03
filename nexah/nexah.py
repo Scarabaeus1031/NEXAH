@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.cluster import KMeans
-from collections import defaultdict
+from collections import defaultdict, deque
+import random
 
 class NEXAH:
 
@@ -8,14 +9,14 @@ class NEXAH:
         self.n_clusters = n_clusters
         self.window = window
 
-    # --- Representation Layer ---
+    # --- Representation ---
     def _embed(self, trajectory):
-        X = []
-        for i in range(len(trajectory) - self.window):
-            X.append(trajectory[i:i+self.window])
-        return np.array(X)
+        return np.array([
+            trajectory[i:i+self.window]
+            for i in range(len(trajectory) - self.window)
+        ])
 
-    # --- Structure Layer ---
+    # --- Structure ---
     def _compute_transitions(self, labels):
         T = defaultdict(lambda: defaultdict(int))
 
@@ -27,44 +28,38 @@ class NEXAH:
         P = {}
         for a in T:
             total = sum(T[a].values())
-            P[a] = {b: T[a][b] / total for b in T[a]}
+            P[a] = {b: T[a][b]/total for b in T[a]}
         return P
 
     # --- Stability ---
     def _detect_stable_states(self, transitions, threshold=0.9):
-        stable = []
-        for s in transitions:
-            if s in transitions[s] and transitions[s][s] > threshold:
-                stable.append(s)
-        return stable
+        return [
+            s for s in transitions
+            if s in transitions[s] and transitions[s][s] > threshold
+        ]
 
     # --- Regime Shifts ---
     def _detect_regime_shifts(self, labels):
-        shifts = []
-        for i in range(1, len(labels)):
-            if labels[i] != labels[i-1]:
-                shifts.append(i)
-        return shifts
+        return [
+            i for i in range(1, len(labels))
+            if labels[i] != labels[i-1]
+        ]
 
-    # --- Instability Score ---
+    # --- Instability ---
     def _instability_score(self, labels, window=5):
         scores = []
         for i in range(len(labels)):
-            start = max(0, i - window)
-            segment = labels[start:i+1]
-
-            changes = 0
-            for j in range(1, len(segment)):
-                if segment[j] != segment[j-1]:
-                    changes += 1
-
+            segment = labels[max(0, i-window):i+1]
+            changes = sum(
+                1 for j in range(1, len(segment))
+                if segment[j] != segment[j-1]
+            )
             score = changes / max(1, len(segment)-1)
             scores.append(score)
-
         return scores
 
-    # --- Navigation: greedy next-step path ---
-    def _navigate_to_target(self, transitions, start, target, max_steps=10):
+    # --- Navigation 1: Probabilistic (escape) ---
+    def _navigate_probabilistic(self, transitions, start, target, max_steps=20):
         path = [start]
         current = start
 
@@ -75,16 +70,40 @@ class NEXAH:
             if current not in transitions:
                 break
 
-            # greedy: pick most likely next
-            next_state = max(transitions[current], key=transitions[current].get)
+            next_states = list(transitions[current].keys())
+            probs = list(transitions[current].values())
+
+            next_state = random.choices(next_states, weights=probs)[0]
+
             path.append(next_state)
-
-            if next_state == current:
-                break  # stuck in stable state
-
             current = next_state
 
         return path
+
+    # --- Navigation 2: Graph shortest path (BFS) ---
+    def _find_path_bfs(self, transitions, start, target):
+        queue = deque([[start]])
+        visited = set()
+
+        while queue:
+            path = queue.popleft()
+            node = path[-1]
+
+            if node == target:
+                return path
+
+            if node in visited:
+                continue
+
+            visited.add(node)
+
+            if node in transitions:
+                for neighbor in transitions[node]:
+                    new_path = list(path)
+                    new_path.append(neighbor)
+                    queue.append(new_path)
+
+        return None  # no path found
 
     # --- Main API ---
     def analyze(self, trajectory, target_state=None):
@@ -102,10 +121,10 @@ class NEXAH:
 
         # 4. Current / next
         current = labels[-1]
-        if current in transitions:
-            next_state = max(transitions[current], key=transitions[current].get)
-        else:
-            next_state = None
+        next_state = (
+            max(transitions[current], key=transitions[current].get)
+            if current in transitions else None
+        )
 
         # 5. Stability
         stable_states = self._detect_stable_states(transitions)
@@ -116,10 +135,17 @@ class NEXAH:
         # 7. Instability
         instability = self._instability_score(labels)
 
-        # 8. Navigation (optional)
-        path = None
+        # 8. Navigation
+        path_prob = None
+        path_bfs = None
+
         if target_state is not None:
-            path = self._navigate_to_target(transitions, current, target_state)
+            path_prob = self._navigate_probabilistic(
+                transitions, current, target_state
+            )
+            path_bfs = self._find_path_bfs(
+                transitions, current, target_state
+            )
 
         return {
             "states": states,
@@ -130,25 +156,27 @@ class NEXAH:
             "stable_states": stable_states,
             "regime_shifts": regime_shifts,
             "instability": instability,
-            "path_to_target": path
+            "path_probabilistic": path_prob,
+            "path_bfs": path_bfs
         }
 
 
-# --- Example usage ---
+# --- Example ---
 if __name__ == "__main__":
     traj = np.sin(np.linspace(0, 20, 200))
 
     nx = NEXAH(n_clusters=3, window=10)
-
-    # z.B. Zielzustand 0
     result = nx.analyze(traj, target_state=0)
 
-    print("Current state:", result["current_state"])
-    print("Next state:", result["next_state"])
-    print("Stable states:", result["stable_states"])
-    print("Regime shifts:", result["regime_shifts"][:10], "...")
+    print("Current:", result["current_state"])
+    print("Next:", result["next_state"])
+    print("Stable:", result["stable_states"])
+    print("Shifts:", result["regime_shifts"][:10], "...")
+    print()
 
-    print("Path to target:", result["path_to_target"])
+    print("Probabilistic path:", result["path_probabilistic"])
+    print("Shortest path (BFS):", result["path_bfs"])
+    print()
 
     print("Transitions:")
     for k, v in result["transitions"].items():
