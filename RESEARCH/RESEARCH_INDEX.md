@@ -18,6 +18,11 @@ and makes it navigable.
 ```
 
 It transforms:
+```text
+dynamics → field → structure → transitions → control
+```
+
+detailed pipeline:
 
 ```text
 dynamics → density → structure → sheets → transitions → topology
