@@ -84,6 +84,24 @@ class NEXAH:
 
         return scores
 
+    # --- NEW: Regime Aggregation ---
+    def _aggregate_regimes(self, instability, threshold=0.15, min_length=5):
+        regimes = []
+        current = []
+
+        for i, val in enumerate(instability):
+            if val >= threshold:
+                current.append(i)
+            else:
+                if len(current) >= min_length:
+                    regimes.append((current[0], current[-1]))
+                current = []
+
+        if len(current) >= min_length:
+            regimes.append((current[0], current[-1]))
+
+        return regimes
+
     # --- Escape Difficulty ---
     def _escape_difficulty(self, transitions):
         return {
@@ -302,6 +320,8 @@ class NEXAH:
         stable_states = self._detect_stable_states(transitions)
         regime_shifts = self._detect_regime_shifts(labels)
         instability = self._instability_score(labels)
+        regime_zones = self._aggregate_regimes(instability)
+
         escape_difficulty = self._escape_difficulty(transitions)
         state_scores = self._score_states(transitions)
         best_state = self._best_state(state_scores)
@@ -320,6 +340,7 @@ class NEXAH:
             "stable_states": stable_states,
             "regime_shifts": regime_shifts,
             "instability": instability,
+            "regime_zones": regime_zones,
             "escape_difficulty": escape_difficulty,
             "state_scores": state_scores,
             "signature": signature,
@@ -345,22 +366,18 @@ class NEXAH:
 
         return result
 
-    # --- v0.7: Analyze Many ---
+    # --- Analyze Many ---
     def analyze_many(self, trajectories, target_state=None):
         results = []
 
         for i, trajectory in enumerate(trajectories):
-            result = self.analyze(
-                trajectory,
-                target_state=target_state
-            )
-
+            result = self.analyze(trajectory, target_state=target_state)
             result["id"] = i
             results.append(result)
 
         return results
 
-    # --- v0.7: Compare Two Trajectories ---
+    # --- Compare ---
     def compare(self, trajectory_a, trajectory_b):
         result_a = self.analyze(trajectory_a)
         result_b = self.analyze(trajectory_b)
@@ -398,35 +415,14 @@ class NEXAH:
 
 # --- Example ---
 if __name__ == "__main__":
-    traj1 = np.sin(np.linspace(0, 20, 200))
-    traj2 = np.cos(np.linspace(0, 20, 200))
-    traj3 = np.sin(np.linspace(0, 20, 200)) + 0.2 * np.random.randn(200)
+    traj = np.concatenate([
+        np.sin(np.linspace(0, 10, 250)),
+        np.cos(np.linspace(0, 10, 250))
+    ])
 
-    nx = NEXAH(n_clusters=3, window=10)
+    nx = NEXAH(n_clusters=4, window=10)
+    res = nx.analyze(traj)
 
-    res = nx.analyze(traj1, target_state=0)
-
-    print("=== Single Analysis ===")
     print("Current:", res["current_state"])
     print("Best:", res["best_state"])
-    print("Signature:", res["signature"])
-    print("Dynamics:", res.get("dynamics"))
-    print("Control:", res.get("control"))
-    print()
-
-    print("=== Batch Analysis ===")
-    batch = nx.analyze_many([traj1, traj2, traj3], target_state=0)
-    for item in batch:
-        print(
-            "ID:", item["id"],
-            "Current:", item["current_state"],
-            "Best:", item["best_state"],
-            "Dominant:", item["signature"]["dominant_state"]
-        )
-    print()
-
-    print("=== Compare ===")
-    comp = nx.compare(traj1, traj2)
-    print("Similarity:", comp["similarity"])
-    print("Stability delta:", comp["stability_delta"])
-    print("Entropy delta:", comp["entropy_delta"])
+    print("Regime zones:", res["regime_zones"])
