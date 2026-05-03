@@ -38,20 +38,16 @@ to:
 
 ---
 
-# 🔷 Cross-System Insight (NEW)
-
-A key result of recent experiments:
+# 🔷 Cross-System Insight
 
 → [dynamical_unification.md](./dynamical_unification.md)
 
 Different systems (Lorenz, Halvorsen) exhibit different flow geometries,  
-but share the same transition structure.
+but share the same **transition structure**.
 
 ---
 
-# 🔷 Discrete System Insight (NEW)
-
-A complementary result extends this perspective beyond continuous systems:
+# 🔷 Discrete System Insight
 
 → [PRIME_MODULAR_RESONANCE/](./PRIME_MODULAR_RESONANCE/)
 
@@ -69,7 +65,7 @@ Key observation:
 
 ---
 
-# 🔷 Phase Dynamics Insight (NEW)
+# 🔷 Phase Dynamics Insight
 
 → [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)
 
@@ -77,7 +73,9 @@ A new layer introduces **phase as a structural coordinate** across systems.
 
 Defined as:
 
+```text
 θ(t) = atan2(y, x)
+```
 
 Observed in:
 
@@ -101,7 +99,8 @@ We observe:
 Phase reveals hidden structure:
 
 - phase = **local coordinate on the structure**
-- drift = **directional transport**
+- Δθ = **local motion**
+- drift (μ_Δθ) = **directional transport**
 - winding = **global topology**
 - plateaus = **transition slow zones (gate candidates)**
 
@@ -115,7 +114,7 @@ Now observed in:
 
 - continuous systems  
 - discrete systems  
-- collective systems (Kuramoto synchronization)
+- collective systems (Kuramoto)
 
 ---
 
@@ -123,9 +122,10 @@ Now observed in:
 
 This extends the NEXAH hypothesis:
 
-Structure is not dependent on the underlying system type.
-
+```text
+Structure is not dependent on system type.
 It emerges from transition dynamics.
+```
 
 Now observed in:
 
@@ -143,6 +143,7 @@ Now observed in:
 
 - Flow geometry differs across systems  
 - Transition structure remains invariant  
+- Phase organizes motion within that structure  
 - Control operates on structure, not trajectories  
 
 ---
@@ -237,7 +238,7 @@ NEXAH reconstructs the local field structure, revealing:
 ### Phase dynamics layer  
 → [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)
 
-### Discrete transition systems (prime modular resonance)  
+### Discrete transition systems  
 → [PRIME_MODULAR_RESONANCE/](./PRIME_MODULAR_RESONANCE/)
 
 ### Full system architecture / kernel  
@@ -246,4 +247,4 @@ NEXAH reconstructs the local field structure, revealing:
 ---
 
 **Status:** Summary  
-**Role:** Entry point to empirical findings  
+**Role:** Entry point to empirical findings
