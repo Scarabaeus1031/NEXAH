@@ -91,6 +91,39 @@ they emerge from observed structure
 
 ---
 
+### 🌀 Phase Mismatch Transition Model
+
+```text
+phase_mismatch_transition_model.md
+```
+
+Defines a minimal geometric formulation of transition behavior:
+
+```text
+phase → mismatch → transition
+```
+
+Key idea:
+
+```text
+transitions correlate with phase mismatch,
+not with instability magnitude alone
+```
+
+Role:
+
+- bridges empirical findings (VALIDATION)  
+- provides a first formal quantity for transitions  
+- connects geometry with control mechanisms  
+
+⚠️ Status:
+
+- empirically supported  
+- not yet fully formalized  
+- partially integrated into the NEXAH pipeline
+
+---
+
 ## 🧠 Conceptual Direction
 
 NEXAH currently operates as:
