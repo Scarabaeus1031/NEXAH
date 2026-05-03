@@ -30,6 +30,23 @@ class NEXAH:
             P[a] = {b: T[a][b] / total for b in T[a]}
         return P
 
+    # --- Stability Detection ---
+    def _detect_stable_states(self, transitions, threshold=0.9):
+        stable = []
+        for state in transitions:
+            if state in transitions[state]:
+                if transitions[state][state] > threshold:
+                    stable.append(state)
+        return stable
+
+    # --- Regime Shift Detection ---
+    def _detect_regime_shifts(self, labels):
+        shifts = []
+        for i in range(1, len(labels)):
+            if labels[i] != labels[i-1]:
+                shifts.append(i)
+        return shifts
+
     # --- Main API ---
     def analyze(self, trajectory):
         trajectory = np.array(trajectory)
@@ -51,12 +68,20 @@ class NEXAH:
         else:
             next_state = None
 
+        # 5. Stability
+        stable_states = self._detect_stable_states(transitions)
+
+        # 6. Regime shifts
+        regime_shifts = self._detect_regime_shifts(labels)
+
         return {
             "states": states,
             "labels": labels,
             "transitions": transitions,
             "current_state": int(current),
-            "next_state": None if next_state is None else int(next_state)
+            "next_state": None if next_state is None else int(next_state),
+            "stable_states": stable_states,
+            "regime_shifts": regime_shifts
         }
 
 
@@ -69,4 +94,6 @@ if __name__ == "__main__":
 
     print("Current state:", result["current_state"])
     print("Next state:", result["next_state"])
+    print("Stable states:", result["stable_states"])
+    print("Regime shifts (indices):", result["regime_shifts"])
     print("Transitions:", result["transitions"])
