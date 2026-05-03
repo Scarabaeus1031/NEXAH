@@ -49,7 +49,9 @@ We compare two system classes:
 
 ### 1. Discrete System (Prime Modular)
 
+```text
 p_n → r_n = p_n mod m → θ_n
+```
 
 Observed:
 
@@ -62,7 +64,9 @@ Observed:
 
 ### 2. Continuous System (Lorenz, etc.)
 
+```text
 x(t) → projection → θ(t)
+```
 
 We test:
 
@@ -87,16 +91,22 @@ For each system:
 1. Extract trajectory  
 2. Define phase coordinate:
 
+```text
 θ = atan2(y, x)
+```
+
+(or system-specific equivalent)
 
 3. Compute:
 
 - phase increments Δθ  
 - unwrapped phase θ(t)  
-- drift statistics  
+- drift statistics μ_Δθ  
 - winding number:
 
+```text
 W(t) = θ_unwrapped / (2π)
+```
 
 ---
 
@@ -122,10 +132,12 @@ W(t) = θ_unwrapped / (2π)
 
 **Observation:**
 
-K small   → fragmented phase (Halvorsen-like)  
-K medium  → structured drift (Lorenz-like)  
-K larger  → smooth transport (Rössler-like)  
-K large   → full synchronization (phase locking)  
+```text
+K small   → fragmented phase (Halvorsen-like)
+K medium  → structured drift (Lorenz-like)
+K larger  → smooth transport (Rössler-like)
+K large   → full synchronization (phase locking)
+```
 
 ---
 
@@ -136,7 +148,7 @@ Examples:
 - Lorenz → skewed + heavy tail  
 - Rössler → narrow unimodal  
 - Halvorsen → broad / mixed  
-- Kuramoto → delta-like (synchronized)
+- Kuramoto → delta-like (synchronized)  
 
 ---
 
@@ -144,10 +156,11 @@ Examples:
 
 Across all systems:
 
-Phase θ(t) defines position within structure  
-Δθ defines local motion (transport)  
-Drift defines global directionality  
-Plateaus define transition boundaries  
+- phase θ(t) defines position within structure  
+- Δθ defines local motion (transport)  
+- μ_Δθ encodes directional asymmetry  
+- winding W(t) encodes accumulated global behavior  
+- plateaus indicate regions of reduced phase evolution  
 
 ---
 
@@ -155,11 +168,15 @@ Plateaus define transition boundaries
 
 All systems can be interpreted along a **phase-coherence axis**:
 
+```text
 fragmented → structured → transport → synchronized
+```
 
 Mapping:
 
+```text
 Halvorsen → Lorenz → Rössler → Kuramoto
+```
 
 ---
 
@@ -167,7 +184,9 @@ Halvorsen → Lorenz → Rössler → Kuramoto
 
 This module directly connects to:
 
+```text
 Field → Structure → Transition → Topology → Control
+```
 
 Interpretation:
 
@@ -197,7 +216,7 @@ It does NOT:
 
 ## 🚀 Status
 
-✔ cross-system validated  
+✔ cross-system validated (initial)  
 ✔ discrete ↔ continuous bridge established  
 ✔ phase dynamics consistently observed  
 ✔ ready for integration into core framework  
@@ -206,14 +225,14 @@ It does NOT:
 
 ## 🔥 Key Insight
 
-Phase acts as a universal coordinate  
-for transition-induced structure.
+Phase acts as an induced coordinate  
+for transition-driven structure, asymmetry, and transport.
 
 ---
 
 ## 🧭 Next Steps
 
-- formalize phase dynamics as core NEXAH operator  
+- formalize phase dynamics as NEXAH operator  
 - integrate phase into navigation kernel  
 - define phase-based gate/control mechanisms  
 - extend to additional systems (e.g. Duffing, Kuramoto variants)  
