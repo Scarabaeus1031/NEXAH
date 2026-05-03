@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import Counter
+import os
 
 # =========================
 # PARAMETERS
@@ -8,6 +9,8 @@ from collections import Counter
 MODS = [7, 11, 13, 17]
 N_PRIMES = 3000
 MIN_WEIGHT = 0.08
+
+SAVE_PATH = "BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/prime_modular_resonance/analysis/output/plots"
 
 # =========================
 # PRIME GENERATOR
@@ -99,8 +102,14 @@ def main():
         fontsize=16
     )
 
-    plt.tight_layout()
-    plt.savefig("output/plots/figure_1_mod_comparison.png", dpi=300)
+    # ensure path exists (safety)
+    os.makedirs(SAVE_PATH, exist_ok=True)
+
+    save_file = f"{SAVE_PATH}/figure_1_mod_comparison.png"
+    plt.savefig(save_file, dpi=300)
+
+    print(f"[OK] saved to {save_file}")
+
     plt.show()
 
 if __name__ == "__main__":
