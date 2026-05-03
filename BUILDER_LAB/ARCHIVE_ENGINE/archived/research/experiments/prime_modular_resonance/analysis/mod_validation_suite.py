@@ -153,11 +153,14 @@ if __name__ == "__main__":
 # SAVE DATA FOR PIPELINE
 # =========================
 
-import os
 os.makedirs("output/data", exist_ok=True)
+
+z_gap = np.array([r[4] for r in results])
+z_drift = np.array([r[5] for r in results])
+z_stat = np.array([r[6] for r in results])
 
 np.save("output/data/z_gap.npy", z_gap)
 np.save("output/data/z_drift.npy", z_drift)
 np.save("output/data/z_stat.npy", z_stat)
 
-print("[OK] saved arrays → output/data/")
+print("[OK] saved arrays -> output/data/")
