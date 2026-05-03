@@ -3,6 +3,7 @@ from sklearn.cluster import KMeans
 from collections import defaultdict, deque
 import random
 
+
 class NEXAH:
 
     def __init__(self, n_clusters=4, window=5):
@@ -24,11 +25,11 @@ class NEXAH:
             a, b = labels[i], labels[i+1]
             T[a][b] += 1
 
-        # normalize
         P = {}
         for a in T:
             total = sum(T[a].values())
-            P[a] = {b: T[a][b]/total for b in T[a]}
+            P[a] = {b: T[a][b] / total for b in T[a]}
+
         return P
 
     # --- Stability ---
@@ -48,17 +49,85 @@ class NEXAH:
     # --- Instability ---
     def _instability_score(self, labels, window=5):
         scores = []
+
         for i in range(len(labels)):
             segment = labels[max(0, i-window):i+1]
+
             changes = sum(
                 1 for j in range(1, len(segment))
                 if segment[j] != segment[j-1]
             )
+
             score = changes / max(1, len(segment)-1)
             scores.append(score)
+
         return scores
 
-    # --- Navigation 1: Probabilistic (escape) ---
+    # --- Escape Difficulty ---
+    def _escape_difficulty(self, transitions):
+        difficulty = {}
+
+        for s in transitions:
+            stay_prob = transitions[s].get(s, 0.0)
+            difficulty[s] = stay_prob
+
+        return difficulty
+
+    # --- State Scores ---
+    def _score_states(self, transitions):
+        scores = {}
+
+        for s in transitions:
+            stay_prob = transitions[s].get(s, 0.0)
+            outgoing = 1.0 - stay_prob
+
+            # simple v0 score:
+            # high stability is good,
+            # but too much lock-in slightly reduces flexibility
+            scores[s] = stay_prob - 0.25 * outgoing
+
+        return scores
+
+    # --- Best State ---
+    def _best_state(self, state_scores):
+        if not state_scores:
+            return None
+        return max(state_scores, key=state_scores.get)
+
+    # --- Minimal Intervention ---
+    def _minimal_intervention(self, transitions, start, target):
+        if start == target:
+            return {
+                "needed": False,
+                "reason": "already_at_target",
+                "cost": 0.0
+            }
+
+        if start not in transitions:
+            return {
+                "needed": True,
+                "reason": "no_outgoing_transitions",
+                "cost": None
+            }
+
+        prob = transitions[start].get(target, 0.0)
+
+        if prob > 0:
+            return {
+                "needed": True,
+                "reason": "direct_transition_exists",
+                "transition_probability": prob,
+                "cost": 1.0 - prob
+            }
+
+        return {
+            "needed": True,
+            "reason": "no_direct_transition",
+            "transition_probability": 0.0,
+            "cost": 1.0
+        }
+
+    # --- Navigation 1: Probabilistic ---
     def _navigate_probabilistic(self, transitions, start, target, max_steps=20):
         path = [start]
         current = start
@@ -80,7 +149,7 @@ class NEXAH:
 
         return path
 
-    # --- Navigation 2: Graph shortest path (BFS) ---
+    # --- Navigation 2: BFS ---
     def _find_path_bfs(self, transitions, start, target):
         queue = deque([[start]])
         visited = set()
@@ -103,41 +172,37 @@ class NEXAH:
                     new_path.append(neighbor)
                     queue.append(new_path)
 
-        return None  # no path found
+        return None
 
     # --- Main API ---
     def analyze(self, trajectory, target_state=None):
         trajectory = np.array(trajectory)
 
-        # 1. Representation
         states = self._embed(trajectory)
 
-        # 2. Structure
         kmeans = KMeans(n_clusters=self.n_clusters, n_init=10)
         labels = kmeans.fit_predict(states)
 
-        # 3. Transitions
         transitions = self._compute_transitions(labels)
 
-        # 4. Current / next
-        current = labels[-1]
+        current = int(labels[-1])
+
         next_state = (
             max(transitions[current], key=transitions[current].get)
             if current in transitions else None
         )
 
-        # 5. Stability
         stable_states = self._detect_stable_states(transitions)
-
-        # 6. Regime shifts
         regime_shifts = self._detect_regime_shifts(labels)
-
-        # 7. Instability
         instability = self._instability_score(labels)
 
-        # 8. Navigation
+        escape_difficulty = self._escape_difficulty(transitions)
+        state_scores = self._score_states(transitions)
+        best_state = self._best_state(state_scores)
+
         path_prob = None
         path_bfs = None
+        minimal_intervention = None
 
         if target_state is not None:
             path_prob = self._navigate_probabilistic(
@@ -146,18 +211,25 @@ class NEXAH:
             path_bfs = self._find_path_bfs(
                 transitions, current, target_state
             )
+            minimal_intervention = self._minimal_intervention(
+                transitions, current, target_state
+            )
 
         return {
             "states": states,
             "labels": labels,
             "transitions": transitions,
-            "current_state": int(current),
+            "current_state": current,
             "next_state": None if next_state is None else int(next_state),
             "stable_states": stable_states,
             "regime_shifts": regime_shifts,
             "instability": instability,
+            "escape_difficulty": escape_difficulty,
+            "state_scores": state_scores,
+            "best_state": None if best_state is None else int(best_state),
             "path_probabilistic": path_prob,
-            "path_bfs": path_bfs
+            "path_bfs": path_bfs,
+            "minimal_intervention": minimal_intervention
         }
 
 
@@ -170,14 +242,26 @@ if __name__ == "__main__":
 
     print("Current:", result["current_state"])
     print("Next:", result["next_state"])
+    print("Best state:", result["best_state"])
     print("Stable:", result["stable_states"])
     print("Shifts:", result["regime_shifts"][:10], "...")
     print()
 
+    print("Escape difficulty:")
+    for k, v in result["escape_difficulty"].items():
+        print(f"{k}: {v:.3f}")
+
+    print()
+    print("State scores:")
+    for k, v in result["state_scores"].items():
+        print(f"{k}: {v:.3f}")
+
+    print()
     print("Probabilistic path:", result["path_probabilistic"])
     print("Shortest path (BFS):", result["path_bfs"])
-    print()
+    print("Minimal intervention:", result["minimal_intervention"])
 
+    print()
     print("Transitions:")
     for k, v in result["transitions"].items():
         print(f"{k} -> {v}")
