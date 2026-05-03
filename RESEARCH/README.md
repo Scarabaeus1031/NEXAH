@@ -96,6 +96,7 @@ Recommended path:
 4. VALIDATION/
 5. FINDINGS/
 6. APPLIED_CASES/
+7. FIGURES/
 ```
 
 ---
