@@ -1,29 +1,60 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from sympy import primerange
+import os
 
 # =========================
-# INPUT (paste your results)
+# CONFIG
 # =========================
 
-mods = np.array([7,11,13,17,19,23,29,31,37,41,43,47])
+USE_AUTO_MODS = True
+N_PRIMES_MODS = 25   # erste 25 Primzahlen als Moduli
 
-z_gap   = np.array([-18.40, -28.45, -33.92, -47.72, -45.23, -55.18, -60.99, -70.80])
-z_drift = np.array([26.06, 6.16, 9.48, 2.23, 4.53, 3.87, 0.22, 2.35])
-z_stat  = np.array([29.89,14.76,13.55,10.17,7.89,7.61,3.88,4.23])
+DATA_PATH = "output/data"
+PLOT_PATH = "output/plots"
+
+os.makedirs(DATA_PATH, exist_ok=True)
+os.makedirs(PLOT_PATH, exist_ok=True)
 
 # =========================
-# DERIVATIVES (gradient)
+# LOAD OR GENERATE MODS
 # =========================
 
-def compute_gradients(values):
+if USE_AUTO_MODS:
+    mods = np.array(list(primerange(3, 300)))[:N_PRIMES_MODS]
+else:
+    mods = np.array([7,11,13,17,19,23,29,31])
+
+# =========================
+# LOAD DATA (aus validation suite)
+# =========================
+
+def safe_load(name):
+    path = f"{DATA_PATH}/{name}.npy"
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Missing file: {path}")
+    return np.load(path)
+
+z_gap   = safe_load("z_gap")
+z_drift = safe_load("z_drift")
+z_stat  = safe_load("z_stat")
+
+# 🔥 AUTOMATISCH MATCHEN
+mods = mods[:len(z_gap)]
+
+# =========================
+# GRADIENTS
+# =========================
+
+def compute_gradients(values, mods):
     return np.gradient(values, mods)
 
-grad_gap   = compute_gradients(z_gap)
-grad_drift = compute_gradients(z_drift)
-grad_stat  = compute_gradients(z_stat)
+grad_gap   = compute_gradients(z_gap, mods)
+grad_drift = compute_gradients(z_drift, mods)
+grad_stat  = compute_gradients(z_stat, mods)
 
 # =========================
-# CHANGE POINT DETECTION
+# DETECT TRANSITIONS
 # =========================
 
 def detect_phase_transitions(signal, threshold=0.5):
@@ -34,22 +65,37 @@ def detect_phase_transitions(signal, threshold=0.5):
             transitions.append((mods[i-1], mods[i], delta))
     return transitions
 
-trans_gap   = detect_phase_transitions(grad_gap, threshold=0.5)
-trans_drift = detect_phase_transitions(grad_drift, threshold=0.5)
-trans_stat  = detect_phase_transitions(grad_stat, threshold=0.5)
+trans_gap   = detect_phase_transitions(grad_gap)
+trans_drift = detect_phase_transitions(grad_drift)
+trans_stat  = detect_phase_transitions(grad_stat)
 
 # =========================
-# DRIFT COLLAPSE DETECTION
+# DRIFT COLLAPSE
 # =========================
 
 def detect_drift_collapse(z_drift, threshold=1.0):
-    collapse_points = []
-    for m, val in zip(mods, z_drift):
-        if abs(val) < threshold:
-            collapse_points.append((m, val))
-    return collapse_points
+    return [(m, v) for m, v in zip(mods, z_drift) if abs(v) < threshold]
 
 drift_collapse = detect_drift_collapse(z_drift)
+
+# =========================
+# SCALING TEST
+# =========================
+
+def compute_scaling(mods, values):
+    mask = values != 0
+    mods = mods[mask]
+    values = np.abs(values[mask])
+
+    log_m = np.log(mods)
+    log_v = np.log(values)
+
+    slope, intercept = np.polyfit(log_m, log_v, 1)
+    return slope, intercept
+
+slope_drift, _ = compute_scaling(mods, z_drift)
+slope_gap, _   = compute_scaling(mods, z_gap)
+slope_stat, _  = compute_scaling(mods, z_stat)
 
 # =========================
 # OUTPUT
@@ -57,24 +103,29 @@ drift_collapse = detect_drift_collapse(z_drift)
 
 print("\n=== PHASE TRANSITIONS ===")
 
-print("\nZ-gap transitions:")
+print("\nZ-gap:")
 for t in trans_gap:
     print(f"{t[0]} → {t[1]}  Δ={t[2]:.2f}")
 
-print("\nZ-drift transitions:")
+print("\nZ-drift:")
 for t in trans_drift:
     print(f"{t[0]} → {t[1]}  Δ={t[2]:.2f}")
 
-print("\nZ-stat transitions:")
+print("\nZ-stat:")
 for t in trans_stat:
     print(f"{t[0]} → {t[1]}  Δ={t[2]:.2f}")
 
-print("\n=== DRIFT COLLAPSE POINTS ===")
-for m, val in drift_collapse:
-    print(f"mod {m}  (Z-drift ≈ {val:.2f})")
+print("\n=== DRIFT COLLAPSE ===")
+for m, v in drift_collapse:
+    print(f"mod {m}  (Z≈{v:.2f})")
+
+print("\n=== SCALING ===")
+print(f"drift ~ mod^{slope_drift:.3f}")
+print(f"gap   ~ mod^{slope_gap:.3f}")
+print(f"stat  ~ mod^{slope_stat:.3f}")
 
 # =========================
-# VISUALIZATION
+# PLOT 1 — Z-SCORES
 # =========================
 
 plt.figure(figsize=(10,6))
@@ -83,38 +134,57 @@ plt.plot(mods, z_gap, 'o-', label='Z-gap')
 plt.plot(mods, z_drift, 'o-', label='Z-drift')
 plt.plot(mods, z_stat, 'o-', label='Z-stat')
 
-# highlight collapse
-for m, val in drift_collapse:
-    plt.scatter(m, val, s=120, marker='x', label=f'collapse @ {m}')
+for m, v in drift_collapse:
+    plt.scatter(m, v, s=120, marker='x', color='black')
 
 plt.axhline(0, linestyle='--')
-plt.title("Phase Transition Detection")
+plt.title("Phase Transition Map")
 plt.xlabel("Modulus")
 plt.ylabel("Z-score")
 plt.legend()
 plt.grid()
 
-plt.savefig("output/plots/phase_transition_detection.png")
+plt.savefig(f"{PLOT_PATH}/phase_map.png")
 plt.show()
 
 # =========================
-# SUMMARY INTERPRETATION
+# PLOT 2 — SCALING
+# =========================
+
+plt.figure(figsize=(8,6))
+
+plt.scatter(np.log(mods), np.log(np.abs(z_drift)), label='drift')
+plt.scatter(np.log(mods), np.log(np.abs(z_gap)), label='gap')
+plt.scatter(np.log(mods), np.log(np.abs(z_stat)), label='stat')
+
+plt.title("Scaling (log-log)")
+plt.xlabel("log(mod)")
+plt.ylabel("log(|Z|)")
+plt.legend()
+plt.grid()
+
+plt.savefig(f"{PLOT_PATH}/scaling.png")
+plt.show()
+
+# =========================
+# SUMMARY
 # =========================
 
 print("\n=== INTERPRETATION ===")
-
 print("""
-Detected structure:
+System behavior:
 
-1. Strong structural regime (low mod)
-   → high drift, high stat deviation
+LOW MOD:
+→ strong transport + structure
 
-2. Transition regime (mid mod)
-   → gradients fluctuate
+MID MOD:
+→ unstable transition regime
 
-3. Drift collapse regime (high mod)
-   → drift → 0, gap persists
+HIGH MOD:
+→ transport collapses
+→ structure persists
 
-Key insight:
-→ system shifts from transport-dominated → structure-dominated
+Key:
+→ structure ≠ transport
+→ system becomes diffusive at scale
 """)
