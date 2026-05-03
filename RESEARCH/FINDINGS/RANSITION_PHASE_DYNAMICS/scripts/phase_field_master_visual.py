@@ -10,10 +10,9 @@ import os
 OUTPUT_PATH = "RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/master"
 os.makedirs(OUTPUT_PATH, exist_ok=True)
 
-T = 30000          # länger für bessere Statistik
-DT = 0.002         # 🔥 WICHTIG: kleiner Schritt!
-
-TRANSIENT = 5000   # 🔥 Anfang wegschneiden
+T = 30000
+DT = 0.002
+TRANSIENT = 5000
 
 # ============================================================
 # SYSTEMS
@@ -54,7 +53,9 @@ def rossler():
 def halvorsen():
     a = 1.4
     x = np.zeros((T, 3))
-    x[0] = [1, 1, 1]
+    
+    # 🔥 stabilerer Startwert
+    x[0] = [0.5, 0.1, 0.1]
 
     for i in range(T-1):
         dx = -a*x[i,0] - 4*x[i,1] - 4*x[i,2] - x[i,1]**2
@@ -63,10 +64,15 @@ def halvorsen():
 
         step = DT*np.array([dx,dy,dz])
 
-        # 🔥 STABILISIERUNG (kein Freeze!)
-        step = np.clip(step, -5, 5)
+        # 🔥 adaptive Stabilisierung (statt clipping)
+        norm = np.linalg.norm(step)
+        if norm > 10:
+            step = step / norm * 10
 
-        x[i+1] = x[i] + step
+        if np.any(np.isnan(step)) or np.any(np.isinf(step)):
+            x[i+1] = x[i]
+        else:
+            x[i+1] = x[i] + step
 
     return x[TRANSIENT:]
 
@@ -83,9 +89,7 @@ def compute_phase(x):
 
 
 def density_field(x, bins=200):
-    H, xedges, yedges = np.histogram2d(
-        x[:,0], x[:,1], bins=bins
-    )
+    H, _, _ = np.histogram2d(x[:,0], x[:,1], bins=bins)
     H = gaussian_filter(H, sigma=2)
     return H
 
@@ -112,20 +116,26 @@ def plot_system(ax_row, x, name):
     # ---- phase
     theta, dtheta = compute_phase(x)
 
+    # 🔥 zentrieren (wichtiger Fix!)
+    theta_centered = theta - np.mean(theta)
+
     ax = ax_row[2]
-    ax.plot(theta, lw=1)
+    ax.plot(theta_centered, lw=1)
     ax.set_title("Phase θ(t)")
     ax.set_xticks([])
 
-    # 🔥 Plateau Detection (besser)
-    grad = np.abs(np.gradient(theta))
+    # 🔥 bessere Plateau Detection
+    grad = np.abs(np.gradient(theta_centered))
     threshold = np.percentile(grad, 20)
-
     mask = grad < threshold
 
-    for i in range(len(mask)):
-        if mask[i]:
-            ax.axvspan(i, i+1, color='red', alpha=0.05)
+    start = None
+    for i, val in enumerate(mask):
+        if val and start is None:
+            start = i
+        elif not val and start is not None:
+            ax.axvspan(start, i, color='red', alpha=0.1)
+            start = None
 
     # ---- distribution
     ax = ax_row[3]
