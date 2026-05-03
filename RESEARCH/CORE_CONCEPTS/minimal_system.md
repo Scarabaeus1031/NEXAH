@@ -12,26 +12,30 @@ It captures the irreducible mechanism underlying:
 # 🧭 Role in NEXAH
 
 This document defines the **irreducible operational core**  
-
 of the NEXAH framework.
 
 It provides the minimal link between:
-```
+
+```text
 validation → structure → control
 ```
+
+---
+
 ```text
-FOUNDATION → defines assumptions
+FOUNDATION     → defines assumptions
 
-CORE_CONCEPTS → defines operational structure  ← (this document)
+CORE_CONCEPTS  → defines operational structure  ← (this document)
 
-VALIDATION → confirms empirical behavior
+VALIDATION     → confirms empirical behavior
 
-SYSTEM → implements control and navigation
+SYSTEM         → implements control and navigation
 ```
+
+---
 
 This document represents the **smallest complete description**  
 of the NEXAH mechanism.
-
 ---
 
 # 🧭 System Definition
