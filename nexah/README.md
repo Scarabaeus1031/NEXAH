@@ -16,57 +16,50 @@ The system is fully functional and validated on real-world data.
 
 ---
 
+## 🧭 Visual Demonstrations
+
+Visual outputs are generated automatically and stored in:
+
+outputs/
+
+Example:
+
+- outputs/plots/ → CLI-generated plots  
+- outputs/demos/gifs/ → system flow visualizations  
+- outputs/experiments_archive/ → experiment runs  
+
+👉 Full visual showcase:
+outputs/README.md
+
+---
+
 ## Quick Start
 
 ### 1. Installation (once)
 
-```bash
-pip install -e .
-```
+bash pip install -e . 
 
 ---
 
 ### 2. Example Data
 
-Create test data:
-
-```bash
-python - <<EOF
-import numpy as np
-np.savetxt("data.csv", np.sin(np.linspace(0,20,500)), delimiter=",")
-EOF
-```
+bash python - <<EOF import numpy as np np.savetxt("data.csv", np.sin(np.linspace(0,20,500)), delimiter=",") EOF 
 
 ---
 
 ### 3. Run Analysis
 
-```bash
-nexah analyze data.csv
-```
+bash nexah analyze data.csv 
 
 Optional:
 
-```bash
-nexah analyze data.csv --clusters 5 --window 20
-nexah analyze data.csv --out result.json
-```
+bash nexah analyze data.csv --clusters 5 --window 20 nexah analyze data.csv --out result.json nexah analyze data.csv --plot 
 
 ---
 
 ### 4. Compare Systems
 
-```bash
-nexah compare a.csv b.csv
-```
-
----
-
-### 5. Visualize Regimes
-
-```bash
-python plot_regimes.py
-```
+bash nexah compare a.csv b.csv 
 
 ---
 
@@ -90,96 +83,85 @@ python plot_regimes.py
 
 ## Core API
 
-```python
-nexah.analyze(trajectory, target_state=None)
-nexah.compare(trajectory_a, trajectory_b)
-nexah.analyze_many(list_of_trajectories)
-```
+python nexah.analyze(trajectory, target_state=None) nexah.compare(trajectory_a, trajectory_b) nexah.analyze_many(list_of_trajectories) 
 
 ---
 
-## Repository Structure
+## Repository Structure (Clean Kernel)
 
-### Core Files
+text nexah/ ├── core.py        → core kernel (v0.7 frozen) ├── cli.py         → CLI interface (v0.8 layer) ├── README.md      → documentation ├── nexah_core.md  → full specification 
 
-- `core.py` → main kernel (ALL core logic)  
-- `cli.py` → command-line interface  
-- `plot_regimes.py` → visualization tool  
+External layers:
+
+text outputs/            → all generated artifacts BUILDER_LAB/        → archived experimental systems 
 
 ---
 
 ## Core Functional Blocks
 
 ### 1. Preprocessing
-
 - normalization (optional)  
 - multi-dimensional support  
 
 Functions:
-- `_preprocess()`
+- _preprocess()
 
 ---
 
 ### 2. Representation
-
 - sliding window embedding  
 
 Functions:
-- `_embed()`
+- _embed()
 
 ---
 
 ### 3. Structure Extraction
-
 - clustering (KMeans)  
 - transition matrix (Markov-like)  
 
 Functions:
-- `_compute_transitions()`
+- _compute_transitions()
 
 ---
 
 ### 4. Stability Analysis
-
 - stable states detection  
 - escape difficulty  
 
 Functions:
-- `_detect_stable_states()`  
-- `_escape_difficulty()`
+- _detect_stable_states()  
+- _escape_difficulty()
 
 ---
 
 ### 5. Regime Detection
-
 - regime shifts (label changes)  
 - local instability score  
 - regime aggregation (zones)  
 
 Functions:
-- `_detect_regime_shifts()`  
-- `_instability_score()`  
-- `_aggregate_regimes()`
+- _detect_regime_shifts()  
+- _instability_score()  
+- _aggregate_regimes()
 
 ---
 
 ### 6. Navigation
-
 - shortest path (BFS)  
 - probabilistic path (Monte Carlo)  
 
 Functions:
-- `_find_path_bfs()`  
-- `_navigate_probabilistic()`
+- _find_path_bfs()  
+- _navigate_probabilistic()
 
 ---
 
 ### 7. Intervention Layer
-
 - path-based intervention cost  
 
 Functions:
-- `_minimal_intervention()`
+- _minimal_intervention()
 
 ---
 
@@ -191,26 +173,24 @@ Monte Carlo simulation:
 - expected steps  
 
 Functions:
-- `_estimate_transition_dynamics()`
+- _estimate_transition_dynamics()
 
 ---
 
 ### 9. Control Layer
-
 - transition optimization (local perturbation)  
 
 Functions:
-- `_optimize_transition()`
+- _optimize_transition()
 
 ---
 
 ### 10. State Scoring
-
 - stability vs mobility heuristic  
 
 Functions:
-- `_score_states()`  
-- `_best_state()`
+- _score_states()  
+- _best_state()
 
 ---
 
@@ -225,54 +205,46 @@ Each system produces:
 - transition entropy  
 
 Functions:
-- `_state_signature()`  
-- `_transition_entropy()`
+- _state_signature()  
+- _transition_entropy()
 
 ---
 
 ### 12. System Comparison
-
 - similarity metric  
 - based on stability + entropy  
 
 Function:
-- `compare()`
+- compare()
 
 ---
 
 ### 13. Batch Processing
 
 Function:
-- `analyze_many()`
+- analyze_many()
 
 ---
 
-## CLI (v0.8 Ready)
+## CLI (v0.8 Layer)
 
 Commands:
 
-```bash
-nexah analyze data.csv
-nexah analyze data.csv --clusters 5 --window 20
-nexah analyze data.csv --out result.json
-
-nexah compare a.csv b.csv
-```
+bash nexah analyze data.csv nexah analyze data.csv --clusters 5 --window 20 nexah analyze data.csv --plot nexah analyze data.csv --out result.json  nexah compare a.csv b.csv 
 
 ---
 
 ## Visualization
 
-### Regime Plot
+### Regime Plot (CLI Integrated)
 
-File:
-`plot_regimes.py`
+Generated automatically via:
 
-Features:
+bash nexah analyze data.csv --plot 
 
-- time series plotting  
-- regime zone overlay  
-- visual validation of system behavior  
+Output:
+
+outputs/plots/<file>_plot.png
 
 ---
 
@@ -423,6 +395,6 @@ It is a minimal but powerful foundation for analyzing complex dynamical systems.
 Core complete  
 Validated on real data  
 CLI operational  
-Visualization working  
+Visualization integrated  
 
 → System ready for application phase
