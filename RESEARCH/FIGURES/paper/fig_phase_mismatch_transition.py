@@ -1,30 +1,47 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 # ============================================
-# INPUT (hier deine echten Daten einsetzen)
+# SETTINGS
 # ============================================
 
-# Beispiel: ersetze das mit deinen echten Arrays
-# x: trajectory (T, n)
-# phi: phase
-# omega: phase velocity
-# omega_hat: smoothed phase velocity
-# I: instability
-# IOTA: binary transition events (0/1)
+OUTPUT_PATH = "RESEARCH/FIGURES/paper/fig_phase_mismatch_transition.png"
 
-# --- Dummy fallback (falls du testen willst) ---
+# ============================================
+# CREATE OUTPUT FOLDER (fix für deinen Fehler)
+# ============================================
+
+os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
+
+# ============================================
+# DEMO DATA (läuft sofort)
+# 👉 später durch deine echten Daten ersetzen
+# ============================================
+
 T = 1000
 t = np.arange(T)
 
+# Fake trajectory (2D)
 x = np.cumsum(np.random.randn(T, 2) * 0.1, axis=0)
-phi = np.arctan2(x[:,1], x[:,0])
+
+# Phase
+phi = np.arctan2(x[:, 1], x[:, 0])
+
+# Phase velocity
 omega = np.gradient(phi)
-omega_hat = np.convolve(omega, np.ones(20)/20, mode='same')
+
+# Expected phase (glättung)
+window = 20
+omega_hat = np.convolve(omega, np.ones(window)/window, mode='same')
+
+# Mismatch
 M = np.abs(omega - omega_hat)
+
+# Instability
 I = np.linalg.norm(np.gradient(x, axis=0), axis=1)
 
-# simple IOTA detection (ersetzen durch dein echtes)
+# Transition detection (einfach)
 threshold = np.percentile(M, 90)
 IOTA = (M > threshold).astype(int)
 
@@ -34,48 +51,37 @@ IOTA = (M > threshold).astype(int)
 
 fig, axs = plt.subplots(4, 1, figsize=(10, 12), sharex=True)
 
-# --------------------------------------------
 # (A) Trajectory
-# --------------------------------------------
-axs[0].plot(x[:,0], x[:,1], linewidth=1.0)
-axs[0].set_title("(A) Trajectory in State Space")
-axs[0].set_xlabel("x₁")
-axs[0].set_ylabel("x₂")
+axs[0].plot(x[:, 0], x[:, 1], linewidth=1)
+axs[0].set_title("(A) Trajectory")
+axs[0].set_xlabel("x1")
+axs[0].set_ylabel("x2")
 
-# --------------------------------------------
 # (B) Instability
-# --------------------------------------------
-axs[1].plot(t, I, linewidth=1.0)
+axs[1].plot(t, I, linewidth=1)
 axs[1].set_title("(B) Instability I(t)")
 axs[1].set_ylabel("I")
 
-# --------------------------------------------
 # (C) Mismatch
-# --------------------------------------------
-axs[2].plot(t, M, linewidth=1.0)
-axs[2].scatter(t[IOTA == 1], M[IOTA == 1], s=10)  # Highlight events
+axs[2].plot(t, M, linewidth=1)
+axs[2].scatter(t[IOTA == 1], M[IOTA == 1], s=10)
+axs[2].axhline(threshold, linestyle="--")
 axs[2].set_title("(C) Phase Mismatch M(t)")
 axs[2].set_ylabel("M")
 
-# --------------------------------------------
 # (D) IOTA Events
-# --------------------------------------------
-axs[3].plot(t, IOTA, linewidth=1.0)
+axs[3].plot(t, IOTA, linewidth=1)
 axs[3].set_title("(D) Transition Events (IOTA)")
 axs[3].set_xlabel("time")
 axs[3].set_ylabel("event")
 
-# --------------------------------------------
-# Layout
-# --------------------------------------------
 plt.tight_layout()
 
 # ============================================
-# SAVE
+# SAVE PNG
 # ============================================
 
-output_path = "FIGURES/paper/fig_phase_mismatch_transition.png"
-plt.savefig(output_path, dpi=300)
+plt.savefig(OUTPUT_PATH, dpi=300)
 plt.close()
 
-print(f"Saved figure to: {output_path}")
+print(f"✅ Figure saved to: {OUTPUT_PATH}")
