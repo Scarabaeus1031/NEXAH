@@ -1,264 +1,428 @@
-# 🧭 NEXAH — Navigating Dynamical Systems
+# NEXAH – System Status Report (v0.7 Freeze)
 
-The `nexah` package provides the **core navigation layer** of the NEXAH framework.
+## Overview
 
-It implements the transition:
+NEXAH is a minimal, interpretable framework for analyzing and navigating dynamical systems.
 
-```text
-structure → field → transitions → motion → navigation
+It transforms time series into discrete state systems and enables:
+
+- structure extraction  
+- transition modeling  
+- regime detection  
+- probabilistic navigation  
+- intervention estimation  
+
+The system is fully functional and validated on real-world data.
+
+---
+
+## Quick Start
+
+### 1. Installation (once)
+
+```bash
+pip install -e .
 ```
 
 ---
 
-# 🧠 What NEXAH actually does
+### 2. Example Data
 
-NEXAH transforms raw system dynamics into **navigable structure**.
+Create test data:
 
-It does NOT approximate systems blindly.
-
-It reconstructs:
-
-```text
-dynamics → basins → transitions → direction → motion field
-```
-
-This allows:
-
-- detection of structural transitions  
-- extraction of hidden motion patterns  
-- reconstruction of system dynamics  
-- simulation of movement inside learned structure  
-
----
-
-# 🔥 Core Insight
-
-```text
-Systems do not move randomly.
-
-They move through structured transition channels.
+```bash
+python - <<EOF
+import numpy as np
+np.savetxt("data.csv", np.sin(np.linspace(0,20,500)), delimiter=",")
+EOF
 ```
 
 ---
 
-# 📍 Visual Evidence
+### 3. Run Analysis
 
-These are not illustrations.
+```bash
+nexah analyze data.csv
+```
 
-They are:
+Optional:
 
-```text
-direct observations of motion inside the learned field
+```bash
+nexah analyze data.csv --clusters 5 --window 20
+nexah analyze data.csv --out result.json
 ```
 
 ---
 
-## 🌀 Flow (Time + Basin Dynamics)
+### 4. Compare Systems
 
-![Flow Animation](nexah/outputs/nexah_flow.gif)
-
----
-
-## 🧭 Field Dynamics
-
-![Field Flow](nexah/outputs/nexah_flow_field.gif)
-
----
-
-## 🔗 Transition Graph Behavior
-
-![Graph Flow](nexah/outputs/nexah_flow_graph.gif)
-
----
-
-## 🧱 Basin Vector Field Simulation
-
-![Basin Flow](nexah/outputs/nexah_v21_flow.gif)
-
----
-
-## 🧠 Interpretation
-
-Across all visualizations:
-
-- motion is structured  
-- transitions are local  
-- oscillations occur within channels  
-- behavior is NOT random  
-
-Most important:
-
-```text
-the system behaves as if it follows an internal flow field
+```bash
+nexah compare a.csv b.csv
 ```
 
 ---
 
-# 📦 Components
+### 5. Visualize Regimes
 
-- `field_layer/` — continuous field construction and metrics  
-- `navigation/` — discrete navigation primitives and policies  
-
----
-
-# 🧱 System Structure (Current)
-
-NEXAH currently consists of:
-
-```text
-Field Layer
-→ Signal Layer
-→ Basin Segmentation
-→ Transition Graph
-→ Direction Layer
-→ Vector Field
-→ Flow Simulation
+```bash
+python plot_regimes.py
 ```
 
 ---
 
-# 🧭 Navigation Layer (Discrete Prototype)
+## Output Includes
 
-The `navigation/` module provides a **discrete navigation engine** operating on learned structure.
+- current_state  
+- best_state  
+- transitions  
+- regime_zones  
+- signature  
 
-It includes:
+---
 
-- basin segmentation  
-- transition graph extraction  
-- direction-aware dynamics  
-- vector field reconstruction  
-- flow simulation  
+## Interpretation
 
-Conceptual pipeline:
+- regime_zones → structural instability (important transitions)  
+- stable_states → persistent regimes  
+- transitions → system dynamics  
 
-```text
-state → basin → sequence → transition → direction → Δ → motion
+---
+
+## Core API
+
+```python
+nexah.analyze(trajectory, target_state=None)
+nexah.compare(trajectory_a, trajectory_b)
+nexah.analyze_many(list_of_trajectories)
 ```
+
+---
+
+## Repository Structure
+
+### Core Files
+
+- `core.py` → main kernel (ALL core logic)  
+- `cli.py` → command-line interface  
+- `plot_regimes.py` → visualization tool  
+
+---
+
+## Core Functional Blocks
+
+### 1. Preprocessing
+
+- normalization (optional)  
+- multi-dimensional support  
+
+Functions:
+- `_preprocess()`
+
+---
+
+### 2. Representation
+
+- sliding window embedding  
+
+Functions:
+- `_embed()`
+
+---
+
+### 3. Structure Extraction
+
+- clustering (KMeans)  
+- transition matrix (Markov-like)  
+
+Functions:
+- `_compute_transitions()`
+
+---
+
+### 4. Stability Analysis
+
+- stable states detection  
+- escape difficulty  
+
+Functions:
+- `_detect_stable_states()`  
+- `_escape_difficulty()`
+
+---
+
+### 5. Regime Detection
+
+- regime shifts (label changes)  
+- local instability score  
+- regime aggregation (zones)  
+
+Functions:
+- `_detect_regime_shifts()`  
+- `_instability_score()`  
+- `_aggregate_regimes()`
+
+---
+
+### 6. Navigation
+
+- shortest path (BFS)  
+- probabilistic path (Monte Carlo)  
+
+Functions:
+- `_find_path_bfs()`  
+- `_navigate_probabilistic()`
+
+---
+
+### 7. Intervention Layer
+
+- path-based intervention cost  
+
+Functions:
+- `_minimal_intervention()`
+
+---
+
+### 8. Dynamics Estimation
+
+Monte Carlo simulation:
+
+- hit probability  
+- expected steps  
+
+Functions:
+- `_estimate_transition_dynamics()`
+
+---
+
+### 9. Control Layer
+
+- transition optimization (local perturbation)  
+
+Functions:
+- `_optimize_transition()`
+
+---
+
+### 10. State Scoring
+
+- stability vs mobility heuristic  
+
+Functions:
+- `_score_states()`  
+- `_best_state()`
+
+---
+
+### 11. System Signature (Fingerprint)
+
+Each system produces:
+
+- number of states  
+- dominant state  
+- occupancy distribution  
+- escape difficulty  
+- transition entropy  
+
+Functions:
+- `_state_signature()`  
+- `_transition_entropy()`
+
+---
+
+### 12. System Comparison
+
+- similarity metric  
+- based on stability + entropy  
+
+Function:
+- `compare()`
+
+---
+
+### 13. Batch Processing
+
+Function:
+- `analyze_many()`
+
+---
+
+## CLI (v0.8 Ready)
+
+Commands:
+
+```bash
+nexah analyze data.csv
+nexah analyze data.csv --clusters 5 --window 20
+nexah analyze data.csv --out result.json
+
+nexah compare a.csv b.csv
+```
+
+---
+
+## Visualization
+
+### Regime Plot
+
+File:
+`plot_regimes.py`
+
+Features:
+
+- time series plotting  
+- regime zone overlay  
+- visual validation of system behavior  
+
+---
+
+## Validated Behavior (Empirical)
+
+Tested on:
+
+- synthetic signals (sin, cos)  
+- noisy signals  
+- structural shifts  
+- BTC-USD real market data  
+
+### Observed Results
+
+- high state stability (~0.98 self-transition)  
+- low transition entropy (structured dynamics)  
+- regime zones align with:
+  - trend changes  
+  - volatility spikes  
+  - structural transitions  
+
+---
+
+## System Capabilities
+
+NEXAH enables:
+
+### 1. Structure Extraction
+Time series → discrete state system  
+
+### 2. Dynamic Modeling
+Transition probabilities between states  
+
+### 3. Regime Detection
+Identification of instability and transitions  
+
+### 4. Navigation
+Simulation of possible system paths  
+
+### 5. Intervention Estimation
+What needs to change to reach a target  
+
+### 6. System Comparison
+Compare different dynamical systems  
+
+---
+
+## Core Insight
+
+NEXAH does NOT predict values.
+
+It detects:
+
+- stability  
+- transitions  
+- structural uncertainty  
+
+This makes it robust across domains.
+
+---
+
+## Design Principles
+
+- minimal complexity  
+- interpretable outputs  
+- simulation over assumption  
+- no black-box models  
+- modular extension  
+
+---
+
+## Known Limitations
+
+- discrete approximation of continuous systems  
+- clustering sensitivity  
+- no real-time processing yet  
+- no global optimal control  
+- no semantic interpretation of states  
+
+---
+
+## Core Freeze (v0.7)
+
+The kernel is now frozen.
+
+No further changes to:
+
+- embedding  
+- clustering  
+- transitions  
+- navigation  
+- control logic  
+
+Reason:
+
+- preserve reproducibility  
+- ensure comparability  
+- maintain stability  
+
+---
+
+## Current System Level
+
+NEXAH is now:
+
+→ a State-Space Extraction Engine  
+→ a Dynamical System Interpreter  
+→ a Navigation & Intervention Framework  
+
+---
+
+## Next Phase
+
+Focus shifts from:
+
+→ building the core  
+
+to:
+
+→ using the core  
+
+### Planned Directions
+
+- CLI refinement (v0.8)  
+- real-world datasets  
+- visualization layer  
+- application development  
+
+---
+
+## Summary
+
+NEXAH v0.7 provides:
+
+- structure extraction  
+- dynamic modeling  
+- regime detection  
+- navigation  
+- intervention estimation  
+- system comparison  
+
+It is a minimal but powerful foundation for analyzing complex dynamical systems.
 
 ---
 
 ## Status
 
-- functional prototype  
-- operates on reconstructed structure  
-- produces realistic system motion  
-- not yet actively steering trajectories  
+Core complete  
+Validated on real data  
+CLI operational  
+Visualization working  
 
----
-
-# 🔥 What is NEW
-
-NEXAH no longer only detects structure.
-
-It now reconstructs:
-
-```text
-how the system moves
-```
-
----
-
-# ⚠️ What is missing
-
-```text
-Navigation (active control)
-```
-
-We can:
-
-✔ observe  
-✔ model  
-✔ simulate  
-
-But not yet:
-
-```text
-guide trajectories intentionally
-```
-
----
-
-# 🚀 Next Step
-
-```text
-Field Steering
-```
-
-Goal:
-
-```text
-move WITH the system
-not against it
-```
-
----
-
-# 🧭 Role in the System
-
-```text
-ENGINE      → computation  
-FIELD       → structure extraction  
-NEXAH       → navigation layer  
-```
-
-The `nexah/` package is where:
-
-```text
-structure becomes usable for motion
-```
-
----
-
-# ▶️ Minimal Usage
-
-```python
-import nexah
-```
-
-(Direct API is evolving — current usage via demos)
-
----
-
-# 🔧 Where to start
-
-Run a demo:
-
-```bash
-PYTHONPATH=. python nexah/navigation/flow_animation.py
-```
-
----
-
-# 🧠 Summary
-
-NEXAH transforms:
-
-```text
-structure → transitions → motion → navigation
-```
-
----
-
-# 🔥 Final Insight
-
-```text
-We started with signals.
-
-We discovered transitions.
-
-We learned motion.
-
-Next:
-we navigate.
-```
-
----
-
-# 🌀 Concept
-
-```text
-You are not controlling the system.
-
-You are navigating the geometry
-that the system unfolds.
-```
+→ System ready for application phase
