@@ -1,66 +1,196 @@
 """
-NEXAH CLI (Command Line Interface)
+NEXAH CLI (v0.8 – Navigation + Plotting)
 
-This module provides a simple command-line interface for the NEXAH kernel.
+Adds:
 
-It allows users to:
-
-- analyze a single time series (CSV)
-- compare two time series
-- optionally save results as JSON
+- target-based navigation
+- regime visualization
+- automatic plot saving
 
 ---
 
-Usage examples:
+Examples:
 
-Analyze a file:
+Analyze:
     nexah analyze data.csv
 
-Analyze with parameters:
-    nexah analyze data.csv --clusters 5 --window 20
+With target:
+    nexah analyze data.csv --target 0
 
-Save output:
-    nexah analyze data.csv --out result.json
+With plot:
+    nexah analyze data.csv --plot
 
-Compare two systems:
-    nexah compare a.csv b.csv
-
----
-
-Input format:
-
-- CSV file
-- 1D or multi-dimensional numeric data
-- no headers required
+Full:
+    nexah analyze data.csv --target 0 --plot --out result.json
 
 ---
 
 Output:
 
-- JSON printed to terminal OR saved to file
-- includes:
-    - system states
-    - transitions
-    - stability metrics
-    - regime shifts
-    - system signature
+- JSON (stdout or file)
+- optional plot → outputs/plots/
 
----
+"""
 
-Design principles:
+import argparse
+import numpy as np
+import json
+import os
+import matplotlib.pyplot as plt
+from nexah.core import NEXAH
 
-- minimal dependencies
-- simple interface
-- transparent output
-- no hidden behavior
 
-This CLI is a thin wrapper around:
+# =========================
+# IO
+# =========================
 
-    nexah.core.NEXAH
+def load_csv(path):
+    try:
+        data = np.loadtxt(path, delimiter=",")
+        return data
+    except Exception as e:
+        print(f"[ERROR] Could not load file: {e}")
+        return None
 
-All core logic lives in the kernel.
 
----
+def save_output(result, path):
+    try:
+        with open(path, "w") as f:
+            json.dump(result, f, indent=2, default=str)
+        print(f"[INFO] Saved output to {path}")
+    except Exception as e:
+        print(f"[ERROR] Could not save file: {e}")
+
+
+# =========================
+# PLOTTING
+# =========================
+
+def plot_regimes(data, result, filename="plot.png"):
+    os.makedirs("outputs/plots", exist_ok=True)
+
+    plt.figure()
+    plt.plot(data, label="data")
+
+    # regime zones (if available)
+    zones = result.get("regime_zones", [])
+    for (start, end) in zones:
+        plt.axvspan(start, end, alpha=0.3)
+
+    plt.title("NEXAH Regime Detection")
+    plt.legend()
+
+    path = f"outputs/plots/{filename}"
+    plt.savefig(path)
+    plt.close()
+
+    print(f"[INFO] Plot saved to {path}")
+
+
+# =========================
+# COMMANDS
+# =========================
+
+def analyze_command(args):
+    data = load_csv(args.file)
+    if data is None:
+        return
+
+    nx = NEXAH(
+        n_clusters=args.clusters,
+        window=args.window,
+        random_state=args.seed,
+        normalize=not args.no_normalize
+    )
+
+    result = nx.analyze(
+        data,
+        target_state=args.target
+    )
+
+    # ---- OUTPUT ----
+    if args.out:
+        save_output(result, args.out)
+    else:
+        print(json.dumps(result, indent=2, default=str))
+
+    # ---- PLOT ----
+    if args.plot:
+        fname = os.path.basename(args.file).replace(".csv", "_plot.png")
+        plot_regimes(data, result, fname)
+
+
+def compare_command(args):
+    data_a = load_csv(args.file_a)
+    data_b = load_csv(args.file_b)
+
+    if data_a is None or data_b is None:
+        return
+
+    nx = NEXAH(
+        n_clusters=args.clusters,
+        window=args.window,
+        random_state=args.seed,
+        normalize=not args.no_normalize
+    )
+
+    result = nx.compare(data_a, data_b)
+
+    if args.out:
+        save_output(result, args.out)
+    else:
+        print(json.dumps(result, indent=2, default=str))
+
+
+# =========================
+# CLI
+# =========================
+
+def main():
+    parser = argparse.ArgumentParser(description="NEXAH CLI")
+
+    subparsers = parser.add_subparsers(dest="command")
+
+    # ---- ANALYZE ----
+    analyze_parser = subparsers.add_parser("analyze")
+    analyze_parser.add_argument("file")
+
+    analyze_parser.add_argument("--clusters", type=int, default=4)
+    analyze_parser.add_argument("--window", type=int, default=5)
+    analyze_parser.add_argument("--seed", type=int, default=42)
+    analyze_parser.add_argument("--no-normalize", action="store_true")
+
+    analyze_parser.add_argument("--target", type=int, help="Target state")
+    analyze_parser.add_argument("--plot", action="store_true", help="Create plot")
+
+    analyze_parser.add_argument("--out", help="Save JSON output")
+
+    # ---- COMPARE ----
+    compare_parser = subparsers.add_parser("compare")
+    compare_parser.add_argument("file_a")
+    compare_parser.add_argument("file_b")
+
+    compare_parser.add_argument("--clusters", type=int, default=4)
+    compare_parser.add_argument("--window", type=int, default=5)
+    compare_parser.add_argument("--seed", type=int, default=42)
+    compare_parser.add_argument("--no-normalize", action="store_true")
+
+    compare_parser.add_argument("--out", help="Save JSON output")
+
+    args = parser.parse_args()
+
+    if args.command == "analyze":
+        analyze_command(args)
+
+    elif args.command == "compare":
+        compare_command(args)
+
+    else:
+        parser.print_help()
+
+
+if __name__ == "__main__":
+    main()---
 """
 
 import argparse
