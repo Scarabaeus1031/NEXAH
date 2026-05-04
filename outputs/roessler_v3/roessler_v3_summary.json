@@ -1,0 +1,52 @@
+{
+  "system": "roessler",
+  "config": {
+    "a": 0.2,
+    "b": 0.2,
+    "c": 5.7,
+    "t_max": 500.0,
+    "dt": 0.01,
+    "initial_state": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "transient_fraction": 0.1,
+    "iota_quantile": 0.92,
+    "peak_distance": 50,
+    "peak_prominence_quantile": 0.75,
+    "output_dir": "outputs/roessler_v3",
+    "random_seed": 42
+  },
+  "samples": 45001,
+  "time_start": 50.0,
+  "time_end": 500.0,
+  "pca_explained_variance_ratio": [
+    0.5166797598622228,
+    0.36640082114999806,
+    0.116919418987779
+  ],
+  "thresholds": {
+    "theta_threshold_abs_delta": 0.0017483055313114448,
+    "iota_threshold_abs_delta": 0.035155845187119894,
+    "iota_quantile": 0.92
+  },
+  "regime_counts": {
+    "Tao": 20703,
+    "Theta": 15751,
+    "Dao": 4946,
+    "Iota": 3601
+  },
+  "regime_distribution_percent": {
+    "Tao": 46.00564431901513,
+    "Theta": 35.001444412346395,
+    "Dao": 10.990866869625119,
+    "Iota": 8.002044399013355
+  },
+  "iota_event_count": 139,
+  "transition_rate": 0.0030888202484389234,
+  "delta_theta_mean": 0.005583939378307109,
+  "delta_theta_std": 0.035473597288422136,
+  "abs_delta_theta_mean": 0.01216694626984308,
+  "abs_delta_theta_std": 0.0337863775102992
+}
