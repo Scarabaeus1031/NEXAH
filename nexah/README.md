@@ -102,14 +102,19 @@ bash nexah compare a.csv b.csv
 python nexah.analyze(trajectory, target_state=None) nexah.compare(trajectory_a, trajectory_b) nexah.analyze_many(list_of_trajectories) 
 
 ---
-
 ## Repository Structure (Clean Kernel)
 
-text nexah/ ├── core.py        → core kernel (v0.7 frozen) ├── cli.py         → CLI interface (v0.8 layer) ├── README.md      → documentation ├── nexah_core.md  → full specification 
-
+```text
+nexah/
+├── core.py        → core kernel (v0.7 frozen)
+├── cli.py         → CLI interface (v0.8 layer)
+├── README.md      → documentation
+├── nexah_core.md  → full specification
+```
 External layers:
 
-text outputs/            → all generated artifacts BUILDER_LAB/        → archived experimental systems 
+outputs/           → all generated artifacts
+BUILDER_LAB/       → archived experimental systems
 
 ---
 
