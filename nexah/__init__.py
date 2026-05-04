@@ -1,14 +1,14 @@
 """
-NEXAH Core Package
+NEXAH — Minimal Kernel Package (v0.7)
 
-Lightweight navigation + field layer for system dynamics.
+This package exposes the core NEXAH kernel:
+
+- NEXAH (main class)
+- CLI interface
+
+All experimental modules have been moved to BUILDER_LAB.
 """
 
-# Optional: expose navigator
-from .navigation.navigator import NexahNavigator
+from .core import NEXAH
 
-__all__ = [
-    "NexahNavigator",
-]
-
-__version__ = "2.0"
+__all__ = ["NEXAH"]
