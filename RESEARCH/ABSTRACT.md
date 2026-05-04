@@ -1,4 +1,13 @@
-# 🧠 NEXAH — Abstract
+# NEXAH: Phase-Driven Transition Structure in Dynamical Systems
+
+## 🔑 Core Claim
+
+Transitions in complex dynamical systems are not primarily driven by instability magnitude,  
+but by phase mismatch relative to the system’s expected evolution within a structured dynamical field.
+
+---
+
+## 🧠 Abstract
 
 NEXAH is a framework for analyzing and navigating transitions  
 in complex dynamical systems.
@@ -43,6 +52,37 @@ state prediction → structure-aware navigation
 
 enabling systems to be understood and steered  
 through their intrinsic transition geometry.
+
+---
+
+## 🧭 Interpretation
+
+The NEXAH framework suggests a structural reinterpretation of system dynamics:
+
+- systems evolve within **latent geometric fields**  
+- transitions follow **structured pathways**, not random jumps  
+- phase defines a **local coordinate of progression**  
+- mismatch encodes **deviation from expected motion**  
+
+This leads to a unified view:
+
+```text
+field → structure → phase → mismatch → transition → control
+```
+
+---
+
+## 🚀 Implication
+
+This perspective enables:
+
+- early detection of transition behavior  
+- structure-aware control strategies  
+- cross-system analysis independent of model type  
+
+and provides a pathway toward:
+
+> navigating system behavior instead of predicting isolated states.
 
 ---
 
