@@ -1,0 +1,54 @@
+{
+  "system": "halvorsen",
+  "config": {
+    "a": 1.4,
+    "t_max": 500.0,
+    "dt": 0.01,
+    "initial_state": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "transient_fraction": 0.1,
+    "iota_quantile": 0.92,
+    "peak_distance": 50,
+    "peak_prominence_quantile": 0.75,
+    "iota_window": 100,
+    "output_dir": "outputs/halvorsen_v3",
+    "random_seed": 42
+  },
+  "samples": 45001,
+  "time_start": 50.0,
+  "time_end": 500.0,
+  "pca_explained_variance_ratio": [
+    0.45000176625195576,
+    0.4470630367897535,
+    0.10293519695829068
+  ],
+  "thresholds": {
+    "theta_threshold_abs_delta": 0.021535005948180697,
+    "iota_threshold_abs_delta": 0.12594096428779267,
+    "iota_quantile": 0.92
+  },
+  "regime_counts": {
+    "Theta": 15751,
+    "Tao": 15643,
+    "Dao": 10006,
+    "Iota": 3601
+  },
+  "regime_distribution_percent": {
+    "Theta": 35.001444412346395,
+    "Tao": 34.76144974556121,
+    "Dao": 22.235061443079044,
+    "Iota": 8.002044399013355
+  },
+  "iota_event_count": 475,
+  "transition_rate": 0.010555320992866825,
+  "delta_theta_mean": 0.016362570782616513,
+  "delta_theta_std": 0.0984582249621141,
+  "abs_delta_theta_mean": 0.05180764081552748,
+  "abs_delta_theta_std": 0.0853092635235247,
+  "iota_window_local_density_mean": 0.05308831107364004,
+  "iota_return_time_mean": 0.9463924050632913,
+  "iota_return_time_std": 0.2555387750731243
+}
