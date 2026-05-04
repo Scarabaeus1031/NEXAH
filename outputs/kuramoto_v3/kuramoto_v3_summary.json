@@ -2,7 +2,7 @@
   "system": "kuramoto",
   "config": {
     "n_oscillators": 128,
-    "coupling_k": 1.8,
+    "coupling_k": 3.0,
     "omega_mean": 0.0,
     "omega_std": 1.0,
     "t_max": 500.0,
@@ -20,39 +20,39 @@
   "time_end": 500.0,
   "omega_mean_actual": -2.7755575615628914e-17,
   "omega_std_actual": 0.7950203850322608,
-  "r_mean": 0.8115394863104505,
-  "r_std": 0.016489527651165466,
-  "r_min": 0.7620655781733969,
-  "r_max": 0.8567740852401893,
+  "r_mean": 0.9595410395347653,
+  "r_std": 2.6531000003398898e-11,
+  "r_min": 0.9595410394503283,
+  "r_max": 0.9595410396188724,
   "pca_explained_variance_ratio": [
-    0.6393096635577086,
-    0.2374753014943698,
-    0.12321503494792159
+    0.891727618240552,
+    0.10827238175944799,
+    0.0
   ],
   "thresholds": {
-    "theta_threshold_abs_delta": 0.009374036739700387,
-    "iota_threshold_abs_delta": 0.053512471804822326,
+    "theta_threshold_abs_delta": 0.017503663642997932,
+    "iota_threshold_abs_delta": 0.11638477705706407,
     "iota_quantile": 0.92
   },
   "regime_counts": {
-    "Tao": 21970,
-    "Theta": 15751,
-    "Dao": 3679,
+    "Theta": 15750,
+    "Dao": 13888,
+    "Tao": 11762,
     "Iota": 3601
   },
   "regime_distribution_percent": {
-    "Tao": 48.82113730805982,
-    "Theta": 35.001444412346395,
-    "Dao": 8.175373880580432,
+    "Theta": 34.99922223950579,
+    "Dao": 30.861536410301994,
+    "Tao": 26.137196951178865,
     "Iota": 8.002044399013355
   },
-  "iota_event_count": 205,
-  "transition_rate": 0.004555454323237261,
-  "delta_theta_mean": 0.012715608193742385,
-  "delta_theta_std": 0.04853984468503787,
-  "abs_delta_theta_mean": 0.023355815438797164,
-  "abs_delta_theta_std": 0.04441059074049096,
-  "iota_window_local_density_mean": 0.030440003484500246,
-  "iota_return_time_mean": 2.185196078431373,
-  "iota_return_time_std": 1.8479893109494887
+  "iota_event_count": 277,
+  "transition_rate": 0.0061554187684718115,
+  "delta_theta_mean": -0.003588356420583546,
+  "delta_theta_std": 0.12234584457558817,
+  "abs_delta_theta_mean": 0.052337726410964194,
+  "abs_delta_theta_std": 0.11064395055781169,
+  "iota_window_local_density_mean": 0.05143577126756069,
+  "iota_return_time_mean": 1.6250362318840579,
+  "iota_return_time_std": 0.5889562405034284
 }
