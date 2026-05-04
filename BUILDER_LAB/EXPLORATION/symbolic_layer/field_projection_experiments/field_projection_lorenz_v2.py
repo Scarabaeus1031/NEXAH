@@ -1,17 +1,18 @@
-# field_projection_v2.py
-# NEXAH Field Projection Experiment V2
-#
-# Goal:
-# - simulate Lorenz dynamics
-# - compute field-aligned coordinates via PCA
-# - compute phase around dominant axis
-# - compute phase drift
-# - classify regimes: Theta / Tao / Dao / Iota
-# - save visual outputs
+#!/usr/bin/env python3
+"""
+field_projection_lorenz_v2.py
+
+NEXAH Field Projection Experiment V2 (cleaned)
+
+Fixes:
+- safe output path
+- no overwrite of other experiments
+"""
 
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 from sklearn.decomposition import PCA
 from scipy.signal import find_peaks
 
@@ -20,8 +21,8 @@ from scipy.signal import find_peaks
 # SETUP
 # =========================
 
-OUTPUT_DIR = "BUILDER_LAB/EXPLORATION/symbolic_layer/field_projection_experiments/outputs"
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+OUTPUT_DIR = Path(__file__).parent / "outputs" / "legacy" / "v2_lorenz"
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 np.random.seed(42)
 
@@ -39,32 +40,23 @@ def lorenz_step(x, y, z, sigma=10.0, rho=28.0, beta=8.0 / 3.0):
 
 def simulate_lorenz(n_steps=5000, dt=0.01):
     X = np.zeros((n_steps, 3))
-
     x, y, z = 1.0, 1.0, 1.0
 
     for i in range(n_steps):
         dx, dy, dz = lorenz_step(x, y, z)
-
         x += dx * dt
         y += dy * dt
         z += dz * dt
-
         X[i] = [x, y, z]
 
     return X
 
 
 # =========================
-# FIELD-ALIGNED COORDINATES
+# FIELD COORDINATES
 # =========================
 
 def compute_field_coordinates(X):
-    """
-    Compute PCA basis:
-    e1 = dominant flow / FQ axis
-    e2, e3 = deviation axes
-    """
-
     X_centered = X - np.mean(X, axis=0)
 
     pca = PCA(n_components=3)
@@ -77,13 +69,11 @@ def compute_field_coordinates(X):
     deviation = np.sqrt(beta**2 + gamma**2)
 
     return {
-        "X_centered": X_centered,
         "coords": coords,
         "alpha": alpha,
         "beta": beta,
         "gamma": gamma,
         "deviation": deviation,
-        "components": pca.components_,
         "explained_variance": pca.explained_variance_ratio_,
     }
 
@@ -93,39 +83,21 @@ def compute_field_coordinates(X):
 # =========================
 
 def compute_phase(beta, gamma):
-    """
-    Phase around dominant axis.
-    Think of beta/gamma as the transverse plane around e1.
-    """
-
     theta = np.arctan2(gamma, beta)
     theta_unwrapped = np.unwrap(theta)
-
     dtheta = np.diff(theta_unwrapped, prepend=theta_unwrapped[0])
-
-    return theta, theta_unwrapped, dtheta
+    return dtheta
 
 
 # =========================
-# REGIME CLASSIFICATION
+# REGIMES
 # =========================
 
 def classify_regimes(deviation, dtheta):
-    """
-    Heuristic regime classification.
-
-    Theta = low deviation + low phase drift
-    Tao   = moderate drift / organized transition
-    Dao   = high deviation / complex circulation
-    Iota  = sharp phase drift / release event
-    """
-
     D = deviation
     A = np.abs(dtheta)
 
-    d_low = np.percentile(D, 45)
     d_high = np.percentile(D, 80)
-
     a_mid = np.percentile(A, 75)
     a_high = np.percentile(A, 92)
 
@@ -141,115 +113,76 @@ def classify_regimes(deviation, dtheta):
         else:
             regimes[i] = "Theta"
 
-    return regimes, {
-        "d_low": d_low,
-        "d_high": d_high,
-        "a_mid": a_mid,
-        "a_high": a_high,
-    }
+    return regimes
 
 
 def regime_colors(regimes):
-    color_map = {
+    cmap = {
         "Theta": "cyan",
         "Tao": "orange",
         "Dao": "green",
         "Iota": "red",
     }
-    return [color_map[r] for r in regimes]
+    return [cmap[r] for r in regimes]
 
 
 # =========================
-# EVENT DETECTION
+# EVENTS
 # =========================
 
-def detect_iota_events(dtheta, prominence=0.2):
+def detect_iota_events(dtheta):
     signal = np.abs(dtheta)
+    threshold = np.percentile(signal, 90)
 
-    peaks, props = find_peaks(
+    peaks, _ = find_peaks(
         signal,
-        prominence=prominence,
+        prominence=threshold * 0.25,
         distance=20
     )
 
-    return peaks, props
+    return peaks
 
 
 # =========================
-# VISUALIZATION
+# PLOTS
 # =========================
 
-def plot_alpha_beta(alpha, beta, regimes):
+def save_plot(fig, name):
+    path = OUTPUT_DIR / name
+    fig.savefig(path, dpi=160)
+    plt.close(fig)
+    return path
+
+
+def plot_all(alpha, beta, gamma, deviation, dtheta, regimes, peaks):
+
     colors = regime_colors(regimes)
 
-    plt.figure(figsize=(8, 7))
-    plt.scatter(alpha, beta, c=colors, s=4, alpha=0.65)
+    # Alpha-Beta
+    fig = plt.figure(figsize=(7,6))
+    plt.scatter(alpha, beta, c=colors, s=4)
+    plt.title("V2 Alpha-Beta")
+    save_plot(fig, "v2_alpha_beta.png")
 
-    plt.title("V2 Field Projection: Alpha vs Beta")
-    plt.xlabel("alpha — flow axis")
-    plt.ylabel("beta — deviation axis")
+    # Drift
+    fig = plt.figure(figsize=(10,3))
+    plt.plot(np.abs(dtheta))
+    plt.scatter(peaks, np.abs(dtheta)[peaks], c="red")
+    plt.title("V2 Phase Drift")
+    save_plot(fig, "v2_phase_drift.png")
 
-    out = os.path.join(OUTPUT_DIR, "v2_alpha_beta_regimes.png")
-    plt.savefig(out, dpi=160)
-    plt.close()
+    # Deviation
+    fig = plt.figure(figsize=(10,3))
+    plt.scatter(np.arange(len(deviation)), deviation, c=colors, s=3)
+    plt.title("V2 Deviation")
+    save_plot(fig, "v2_deviation.png")
 
-    return out
-
-
-def plot_phase_drift(dtheta, peaks):
-    plt.figure(figsize=(12, 4))
-    plt.plot(np.abs(dtheta), linewidth=1.0, label="|dtheta| phase drift")
-
-    if len(peaks) > 0:
-        plt.scatter(peaks, np.abs(dtheta)[peaks], c="red", s=25, label="Iota events")
-
-    plt.title("V2 Phase Drift + Iota Events")
-    plt.xlabel("time")
-    plt.ylabel("|dtheta|")
-    plt.legend()
-
-    out = os.path.join(OUTPUT_DIR, "v2_phase_drift_iota_events.png")
-    plt.savefig(out, dpi=160)
-    plt.close()
-
-    return out
-
-
-def plot_deviation(deviation, regimes):
-    colors = regime_colors(regimes)
-
-    plt.figure(figsize=(12, 4))
-    plt.scatter(np.arange(len(deviation)), deviation, c=colors, s=3, alpha=0.7)
-
-    plt.title("V2 Deviation D(t) with Regime Colors")
-    plt.xlabel("time")
-    plt.ylabel("D(t) = sqrt(beta^2 + gamma^2)")
-
-    out = os.path.join(OUTPUT_DIR, "v2_deviation_regimes.png")
-    plt.savefig(out, dpi=160)
-    plt.close()
-
-    return out
-
-
-def plot_3d_projection(alpha, beta, gamma, regimes):
-    colors = regime_colors(regimes)
-
-    fig = plt.figure(figsize=(9, 8))
+    # 3D
+    fig = plt.figure(figsize=(8,7))
     ax = fig.add_subplot(111, projection="3d")
-
-    ax.scatter(alpha, beta, gamma, c=colors, s=3, alpha=0.55)
-
-    ax.set_title("V2 Field-Aligned Coordinates")
-    ax.set_xlabel("alpha — flow")
-    ax.set_ylabel("beta — deviation")
-    ax.set_zlabel("gamma — deviation")
-
-    out = os.path.join(OUTPUT_DIR, "v2_field_coordinates_3d.png")
-    plt.savefig(out, dpi=160)
-    plt.close()
-
-    return out
+    ax.scatter(alpha, beta, gamma, c=colors, s=3)
+    ax.set_title("V2 3D Projection")
+    save_plot(fig, "v2_3d.png")
 
 
 # =========================
@@ -257,54 +190,26 @@ def plot_3d_projection(alpha, beta, gamma, regimes):
 # =========================
 
 def main():
-    print("Running NEXAH Field Projection V2...")
+    print("Running V2 (clean)...")
 
-    X = simulate_lorenz(n_steps=5000, dt=0.01)
-
+    X = simulate_lorenz()
     field = compute_field_coordinates(X)
 
-    alpha = field["alpha"]
-    beta = field["beta"]
-    gamma = field["gamma"]
-    deviation = field["deviation"]
+    dtheta = compute_phase(field["beta"], field["gamma"])
+    regimes = classify_regimes(field["deviation"], dtheta)
+    peaks = detect_iota_events(dtheta)
 
-    theta, theta_unwrapped, dtheta = compute_phase(beta, gamma)
+    plot_all(
+        field["alpha"],
+        field["beta"],
+        field["gamma"],
+        field["deviation"],
+        dtheta,
+        regimes,
+        peaks
+    )
 
-    regimes, thresholds = classify_regimes(deviation, dtheta)
-
-    peaks, props = detect_iota_events(dtheta, prominence=np.percentile(np.abs(dtheta), 90) * 0.25)
-
-    # save plots
-    files = []
-    files.append(plot_alpha_beta(alpha, beta, regimes))
-    files.append(plot_phase_drift(dtheta, peaks))
-    files.append(plot_deviation(deviation, regimes))
-    files.append(plot_3d_projection(alpha, beta, gamma, regimes))
-
-    # metrics
-    unique, counts = np.unique(regimes, return_counts=True)
-    regime_counts = dict(zip(unique, counts))
-
-    print("\n--- FIELD PROJECTION V2 RESULTS ---")
-    print(f"Samples: {len(X)}")
-    print(f"Iota events detected: {len(peaks)}")
-    print(f"Mean deviation: {np.mean(deviation):.4f}")
-    print(f"Max deviation: {np.max(deviation):.4f}")
-    print(f"Mean |dtheta|: {np.mean(np.abs(dtheta)):.4f}")
-    print(f"Max |dtheta|: {np.max(np.abs(dtheta)):.4f}")
-    print(f"PCA explained variance: {field['explained_variance']}")
-
-    print("\nRegime counts:")
-    for k in ["Theta", "Tao", "Dao", "Iota"]:
-        print(f"- {k}: {regime_counts.get(k, 0)}")
-
-    print("\nThresholds:")
-    for k, v in thresholds.items():
-        print(f"- {k}: {v:.4f}")
-
-    print("\nSaved outputs:")
-    for f in files:
-        print(f"- {f}")
+    print("Done. Output:", OUTPUT_DIR)
 
 
 if __name__ == "__main__":
