@@ -30,7 +30,7 @@ Output:
 - JSON (stdout or file)
 - optional plot → outputs/plots/
 
-"""
+
 
 import argparse
 import numpy as np
@@ -191,7 +191,7 @@ def main():
 
 if __name__ == "__main__":
     main()---
-"""
+
 
 import argparse
 import numpy as np
