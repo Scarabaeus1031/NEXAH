@@ -7,7 +7,7 @@ Status: **Locked / Framework Level**
 
 ## 🔷 Visual Reference
 
-![Field Structure](outputs/NEXAH_kuramoto_field_structure_v2.png)
+![Field Structure](../outputs/NEXAH_kuramoto_field_structure_v2.png)
 
 ---
 
