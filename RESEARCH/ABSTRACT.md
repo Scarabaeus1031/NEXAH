@@ -5,6 +5,9 @@
 Transitions in complex dynamical systems are not primarily driven by instability magnitude,  
 but by phase mismatch relative to the system’s expected evolution within a structured dynamical field.
 
+Stabilization, in turn, depends not only on phase alignment,  
+but on the **directional alignment of control relative to intrinsic system dynamics**.
+
 ---
 
 ## 🧠 Abstract
@@ -39,19 +42,17 @@ high mismatch ⇒ high transition probability
 
 independent of system type.
 
-This leads to a new control principle:
-
-> control should not act on state magnitude,  
-> but on alignment with the underlying phase structure.
-
-NEXAH therefore shifts the perspective from:
+Extending this, we identify a second structural principle:
 
 ```text
-state prediction → structure-aware navigation
+control effectiveness depends on direction relative to system phase dynamics
 ```
 
-enabling systems to be understood and steered  
-through their intrinsic transition geometry.
+Empirical results show that:
+
+- phase-aligned control can increase transition activity  
+- magnitude-based damping does not guarantee stabilization  
+- only **phase-opposed control** reduces both drift and transition events  
 
 ---
 
@@ -63,11 +64,12 @@ The NEXAH framework suggests a structural reinterpretation of system dynamics:
 - transitions follow **structured pathways**, not random jumps  
 - phase defines a **local coordinate of progression**  
 - mismatch encodes **deviation from expected motion**  
+- control acts through **directional alignment within the phase structure**
 
 This leads to a unified view:
 
 ```text
-field → structure → phase → mismatch → transition → control
+field → structure → phase → mismatch → transition → control(direction)
 ```
 
 ---
@@ -77,7 +79,7 @@ field → structure → phase → mismatch → transition → control
 This perspective enables:
 
 - early detection of transition behavior  
-- structure-aware control strategies  
+- structure-aware and direction-aware control strategies  
 - cross-system analysis independent of model type  
 
 and provides a pathway toward:
