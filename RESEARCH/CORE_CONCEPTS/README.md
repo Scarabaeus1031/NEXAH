@@ -64,12 +64,12 @@ Defines the **operational core of NEXAH** at two levels:
 
 Core variables:
 
-- phase (φ)  
-- phase velocity (ω)  
-- expected phase (ω̂)  
-- mismatch (M)  
-- instability (I)  
-- control (s)  
+- φ (phase)  
+- ω (phase velocity)  
+- ω̂ (expected phase)  
+- M (mismatch)  
+- I (instability)  
+- s (control)  
 
 👉 **Together, these define the causal mechanism of transitions**
 
@@ -198,7 +198,9 @@ Everything else is:
 The system can be described as:
 
 ```text
-φ → ω → ω̂ → M → I → s
+φ → ω → ω̂ → M → transition probability
+            ↑
+         control
 ```
 
 Meaning:
@@ -206,9 +208,8 @@ Meaning:
 - φ defines intrinsic progression  
 - ω defines local motion  
 - ω̂ defines expected evolution  
-- M defines deviation (mismatch)  
-- I defines instability potential  
-- s defines intervention  
+- M defines structural deviation (mismatch)  
+- control modifies phase evolution  
 
 ---
 
@@ -225,11 +226,35 @@ Mismatch ⇒ transition activation
 ## 🔁 Full Interpretation
 
 ```text
-instability → potential
+instability → potential (energy scale)
 
-mismatch → trigger
+mismatch → trigger (structural)
 
-control → alignment
+control → alignment (phase correction)
+```
+
+---
+
+# 🔬 Physical Consistency (Phase Perspective)
+
+In nonlinear physical systems:
+
+```text
+phase alignment → constructive accumulation  
+phase mismatch → oscillatory or inefficient interaction  
+```
+
+If phase relations are not consistent, energy transfer becomes unstable or reversible instead of directional  [oai_citation:0‡RP Photonics](https://www.rp-photonics.com/phase_matching.html?utm_source=chatgpt.com)  
+
+---
+
+## 🧠 Interpretation for NEXAH
+
+```text
+coherent phase → stable structure
+
+phase mismatch → loss of consistency
+               → transition region
 ```
 
 ---
@@ -258,7 +283,7 @@ The system is not defined by states.
 It is defined by:
 
 phase dynamics
-and mismatch structure.
+and mismatch structure
 ```
 
 ---
