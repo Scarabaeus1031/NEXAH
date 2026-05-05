@@ -213,8 +213,7 @@ but an emergent property of dynamical systems.
 
 ---
 
-### 🔬 Fractal Transition Extension
-### 🔬 Fractal Transition Validation (Extension)
+### 🔬 Fractal Transition Validation 
 
 > ⚠️ This section represents an experimental extension of the validation layer.  
 > Results are consistent with core findings, but not yet validated across multiple dynamical systems.
