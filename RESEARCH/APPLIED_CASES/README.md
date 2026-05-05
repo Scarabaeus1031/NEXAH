@@ -1,5 +1,33 @@
 # 🌍 NEXAH — Applied Cases Layer
 
+---
+
+## 🌌 Fractal Transition Dynamics (New)
+
+![Julia Path Animation](FRACTAL_SYSTEMS/scripts/outputs/julia_path_final.gif)
+
+This layer now includes a new module:
+
+```text
+FRACTAL_SYSTEMS/
+```
+
+which extends NEXAH into **classical fractal dynamics**.
+
+Key result:
+
+- parameter paths → dynamical transitions  
+- instability becomes measurable (Δ spikes)  
+- fractals behave as **transition systems**
+
+👉 This is the first bridge between:
+
+```text
+symbolic dynamics ↔ classical mathematical objects
+```
+
+---
+
 ## 🧭 Purpose
 
 This module contains **case studies, cross-system analyses, and application scenarios**  
@@ -28,6 +56,30 @@ Instead, it evaluates how NEXAH structure manifests across different systems.
 ---
 
 ## 🔷 Module Structure
+
+---
+
+### 🌀 0. Fractal Systems (New)
+
+```text
+FRACTAL_SYSTEMS/
+```
+
+Explores:
+
+- Mandelbrot (parameter space)
+- Julia sets (dynamical space)
+- transition detection via parameter motion
+
+Key concepts:
+
+```text
+c(t) → trajectory in parameter space  
+Δ → transition intensity  
+boundary crossings → phase transitions  
+```
+
+---
 
 ### 🔬 1. System Case Studies
 
@@ -136,6 +188,7 @@ for analyzing and navigating dynamical systems.
 - density induces geometric organization  
 - transitions form local, constrained structures  
 - hybrid representation (continuous + discrete)  
+- fractal systems exhibit measurable transition events  
 
 ---
 
@@ -176,12 +229,13 @@ It is NOT:
 Recommended order:
 
 ```text
-1. LORENZ        → reference structure  
-2. ROESSLER      → transport structure  
-3. HALVORSEN     → complexity stress test  
-4. COMPARISONS   → invariance across systems  
-5. SCENARIOS     → interpretation layer  
-6. WORKED_EXAMPLES → applied reasoning  
+1. FRACTAL_SYSTEMS → transition dynamics (new perspective)  
+2. LORENZ          → reference structure  
+3. ROESSLER        → transport structure  
+4. HALVORSEN       → complexity stress test  
+5. COMPARISONS     → invariance across systems  
+6. SCENARIOS       → interpretation layer  
+7. WORKED_EXAMPLES → applied reasoning  
 ```
 
 ---
