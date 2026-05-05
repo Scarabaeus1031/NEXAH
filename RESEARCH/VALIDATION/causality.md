@@ -100,6 +100,31 @@ damped     → drift: 0.6030, events: 0
 inverse    → drift: 0.0165, events: 0
 ```
 
+## 📊 Results
+
+```text
+no_control → drift: 0.2156, events: 5
+
+aligned    → drift: 0.8245, events: 47
+invert     → drift: 0.1899, events: 58
+damped     → drift: 0.6030, events: 0
+inverse    → drift: 0.0165, events: 0
+```
+
+![Control Comparison](./causality/results/control_v4_comparison.png)
+
+**Figure — Phase-Aligned Control Comparison (V4)**
+
+The plot shows drift evolution under different control strategies.
+
+Key observations:
+
+- aligned control strongly amplifies instability  
+- damped control suppresses events but not drift  
+- inverse control suppresses both drift and events  
+
+This confirms that only phase-opposed control leads to stabilization.
+
 ---
 
 # 🧠 Key Observation
