@@ -1,166 +1,258 @@
-# 🚀 NEXAH — Validation & Consolidation TODO (v3)
+# 🚀 NEXAH — Validation & Consolidation TODO (v4)
 
-**Phase:** System exists → now must be validated and stabilized
+**Phase:** Mechanism identified → now must be verified, reproduced, and generalized
 
 ---
 
 # 🧠 CURRENT POSITION
 
-✔ demonstrator works  
-✔ transition structure is consistent  
-✔ navigation behavior observable  
-✔ visuals coherent  
+✔ field structure reproducible  
+✔ transition geometry consistent  
+✔ phase structure observed across systems  
+✔ control effect measurable (Kuramoto)  
+✔ causal hypothesis formulated  
 
 ---
 
-# 🔴 PRIORITY 1 — STRUCTURAL VALIDATION (CRITICAL)
+# 🔴 PRIORITY 1 — REPRODUCIBILITY (CRITICAL)
 
 ## Goal:
-Prove structure is real, not artifact
+Make results independently reproducible
 
 ### Tasks:
 
-- [ ] run 20–50 simulations (Lorenz)
-- [ ] compute:
+- [ ] create ONE entry script:
 
 ```text
-transition matrix variance
-sheet stability
-state occupancy distribution
+run_full_validation.py
 ```
 
-- [ ] add RESULT blocks:
+- [ ] ensure:
 
 ```text
-Runs: 30
-Matrix variance: low
-Local transitions: consistent
-Conclusion: structure stable
+script → generates ALL core plots
+script → runs without manual changes
+```
+
+- [ ] map:
+
+```text
+script → figure → claim
 ```
 
 ---
 
-# 🔵 PRIORITY 2 — TRANSITION MODEL VALIDATION
-
-## Goal:
-Confirm strongest claim
-
-### Already observed:
-
-✔ banded transition matrix  
-✔ local transitions only  
-
-### Now:
-
-- [ ] quantify locality:
+## Target:
 
 ```text
-P(|i-j| > 1) ≈ 0
+anyone can run the repo
+and reproduce key results
 ```
-
-- [ ] verify across runs
 
 ---
 
-# 🟣 PRIORITY 3 — NAVIGATION VALIDATION
+# 🔵 PRIORITY 2 — MECHANISM VALIDATION (CRITICAL)
 
 ## Goal:
-Prove system can be influenced
+Prove core claim:
+
+```text
+phase mismatch → transition
+control direction → system behavior
+```
 
 ### Tasks:
 
-- [ ] run with / without control
+- [ ] quantify correlation:
+
+```text
+corr(mismatch, events)
+```
+
+- [ ] verify across runs (not single run)
+
+- [ ] verify stability of effect
+
+---
+
+## Output:
+
+```text
+Mismatch vs Events plot
+Control vs Drift plot
+```
+
+---
+
+# 🟣 PRIORITY 3 — CROSS-SYSTEM CONTROL TEST
+
+## Goal:
+Show mechanism is NOT Kuramoto-specific
+
+### Tasks:
+
+- [ ] apply control direction test to:
+
+```text
+Lorenz
+Rössler
+```
+
 - [ ] compare:
 
 ```text
+drift behavior
 transition frequency
-time in high-density regions
-escape behavior
 ```
 
 ---
 
-# 🟠 PRIORITY 4 — MINIMAL KERNEL
+## Result Target:
 
-## Goal:
-Unify logic into one system
-
-### Build:
-
-```python
-class NexahKernel:
-    def step(x):
-        field = F(x)
-        gate = G(x)
-        density = rho(x)
-        return x_next
+```text
+same directional effect across systems
 ```
-
-- [ ] wrap existing logic
-- [ ] no new theory
 
 ---
 
-# 🟢 PRIORITY 5 — DEMONSTRATOR POLISH
+# 🟠 PRIORITY 4 — RESULT → CLAIM LINKING
 
 ## Goal:
-External usability
+Make paper reviewer-proof
 
-- [ ] ensure `run_demo.py` works clean
-- [ ] ensure visuals always save
-- [ ] ensure paths consistent
+### Tasks:
+
+- [ ] for each claim:
+
+```text
+Claim → Script → Figure → File
+```
+
+Example:
+
+```text
+"phase mismatch triggers transitions"
+→ run_control_vs_phase_geometry_v4.py
+→ mismatch_plot.png
+→ causality/results/
+```
+
+---
+
+# 🟢 PRIORITY 5 — DEMONSTRATOR HARDENING
+
+## Goal:
+Make system usable without context
+
+### Tasks:
+
+- [ ] ensure:
+
+```text
+run_demo.py works clean
+all outputs saved automatically
+no broken paths
+```
+
+- [ ] fix:
+
+```text
+relative paths
+output folders
+```
 
 ---
 
 # 🟡 PRIORITY 6 — VISUAL REDUCTION
 
 ## Goal:
-Clarity > quantity
+Only keep proof-relevant visuals
 
-Keep only:
+Keep:
 
-1. regime atlas (overview)  
-2. off-manifold flow (geometry)  
-3. transition GIF (behavior)  
+1. phase mismatch vs events  
+2. control comparison plot  
+3. Kuramoto field diagram  
+
+Remove:
+
+- redundant intermediate plots  
+- exploratory visuals  
 
 ---
 
 # 🧱 PRIORITY 7 — REPO CLEANUP
 
 ## Goal:
-Make system understandable
+Make repo readable for external users
 
-- [ ] mark legacy folders
+### Tasks:
+
+- [ ] mark:
+
+```text
+/legacy
+/archive
+/lab
+```
+
+- [ ] define:
+
+```text
+canonical outputs only
+```
+
+---
+
+# 📄 PRIORITY 8 — PAPER CONSOLIDATION
+
+## Goal:
+Make PAPER_DRAFT usable
+
+### Tasks:
+
+- [ ] ensure:
+
+```text
+each section references real results
+no unsupported claims
+```
+
 - [ ] keep:
 
 ```text
-NEXAH_DEMONSTRATOR/
-NEXAH_CORE/
-ARCHITECTURE/
+mechanism minimal + precise
 ```
-
-- [ ] everything else = lab / archive
 
 ---
 
 # 🚀 RELEASE CONDITION
 
-Minimal viable release:
+Minimal scientific release:
 
-✔ transition structure validated  
-✔ navigation effect measurable  
-✔ demonstrator runs clean  
-✔ kernel stub exists  
+✔ results reproducible (script-level)  
+✔ mechanism observable in multiple runs  
+✔ control effect measurable  
+✔ cross-system indication present  
+✔ paper draft consistent with results  
 
 ---
 
 # 🧠 FINAL POSITION
 
-You are not building anymore.
+You are no longer building structure.
 
-You are proving that:
+You are validating a mechanism:
 
 ```text
-structure exists
-and can be used
+phase mismatch drives transitions
+control direction modifies system behavior
+```
+
+---
+
+# 🔥 CORE TRANSITION
+
+```text
+Framework → Mechanism → Reproducible Science
 ```
