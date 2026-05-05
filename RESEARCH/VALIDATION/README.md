@@ -152,6 +152,47 @@ observable mismatch proxy
 → fractal systems provide the first measurable validation  
 of the transition law.
 
+### 🔬 Fractal Transition Validation (Extension)
+
+![Fractal Transition Validation](./visuals/Nexah-Fractal_Transition_Validation.png)
+
+```text
+Parameter-driven transitions validated via fractal systems (Mandelbrot / Julia).
+```
+
+**Figure — Fractal Transition Validation Framework**
+
+This figure extends the NEXAH validation layer to **parameter-driven systems**.
+
+It shows:
+
+- the full mechanism pipeline  
+  (parameter space → trajectory → structure evolution → observable Δ → mismatch → transition law)
+
+- and the corresponding **empirical validation layer**, including:
+  - reproducibility of Δ(t) spikes  
+  - stable transition thresholds  
+  - robustness across resolutions  
+  - dependence on parameter trajectories  
+  - correlation between Δ and mismatch  
+
+Key result:
+
+```text
+Transitions are not only intrinsic to system dynamics —
+they can be induced through structured parameter motion.
+```
+
+This provides the first **externally controllable validation case**  
+of the NEXAH transition law:
+
+```text
+Δ(t) ≈ M(t)
+P(transition) = f(M)
+```
+
+→ Fractal systems act as a **controlled testbed for transition induction**
+
 ---
 ## LEVEL 5 — Field-Level Structure
 
