@@ -101,6 +101,56 @@ Where:
 
 ---
 
+### 🔁 Phase & Control Extension (New)
+
+Recent validation results show:
+
+```text
+Transitions are not only triggered by phase mismatch,
+but can be causally influenced through phase-aligned control.
+```
+
+Key empirical result:
+
+```text
+Control effectiveness depends on direction relative to phase dynamics.
+```
+
+Observed behavior:
+
+- phase-aligned control → amplifies drift and transition activity  
+- phase-opposed control → suppresses drift and transitions  
+- inverse control → stabilizes system near zero-drift regime  
+
+This leads to an extended mechanism:
+
+```text
+phase → mismatch → transition
+            ↑
+        control (directional)
+```
+
+Interpretation:
+
+- instability defines potential  
+- phase mismatch triggers transitions  
+- control direction determines whether dynamics amplify or stabilize  
+
+This establishes a closed-loop causal structure:
+
+```text
+system dynamics ↔ phase ↔ control
+```
+
+and introduces a new control principle:
+
+> effective control is achieved by opposing intrinsic phase-aligned instability,  
+> not by reducing system magnitude.
+
+---
+
+---
+
 ## 🧪 Demonstrator (Reproducible Core)
 
 📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
