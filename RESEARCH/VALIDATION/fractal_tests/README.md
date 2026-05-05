@@ -1,10 +1,5 @@
 # 🧪 Fractal Transition Validation
 
-Location:  
-RESEARCH/VALIDATION/fractal_tests/
-
----
-
 ## 🎯 Purpose
 
 This module investigates:
