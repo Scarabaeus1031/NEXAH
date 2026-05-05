@@ -143,7 +143,7 @@ to externally driven transition structures.
 
 ### 🔬 Fractal Transition Validation (Extension)
 
-![Fractal Transition Validation](VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
+![Fractal Transition Validation](./VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
 
 ```text
 Parameter-driven transitions validated via fractal systems.
