@@ -188,7 +188,7 @@ M(t) = deviation from locally consistent phase evolution
 Current control formulation:
 
 $$
-s(t) = s^*(\phi(t))
+s(t) = s^*(φ(t), d)
 $$
 
 ---
@@ -318,6 +318,72 @@ rather than suppressing system energy.
 
 ---
 
+# 🔬 17. Control Directionality (Extension)
+
+Empirical results show:
+
+```text
+Control effectiveness depends on direction, not magnitude alone.
+```
+
+We extend the control law:
+
+$$
+s(t) = s^*(\phi(t), d)
+$$
+
+where:
+
+- $d \in \{-1, +1\}$ represents control direction relative to phase flow
+
+---
+
+## 🔁 Directional Effect
+
+Observed behavior:
+
+```text
+d aligned (+1)   → increases drift and transition activity  
+d inverted (-1)  → reduces drift but may increase mismatch  
+d damped         → suppresses transitions but retains instability  
+d inverse        → minimizes drift AND suppresses transitions  
+```
+
+---
+
+## 🧠 Interpretation
+
+Control interacts with system dynamics as:
+
+$$
+\omega_{\text{eff}}(t) = \omega(t) - s(t)
+$$
+
+Mismatch becomes:
+
+$$
+M(t) = |\omega_{\text{eff}}(t) - \hat{\omega}(t)|
+$$
+
+---
+
+## 🔑 Extended Control Objective
+
+```text
+Minimize mismatch via correct directional alignment.
+```
+
+---
+
+## 🚀 Updated Principle
+
+```text
+Control does not reduce instability.
+
+Control modifies phase dynamics through directional interaction.
+```
+
+---
 # 🧭 Status
 
 - empirically validated  
