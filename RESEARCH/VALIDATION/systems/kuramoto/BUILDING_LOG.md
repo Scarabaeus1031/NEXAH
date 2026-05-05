@@ -76,7 +76,7 @@ transition_rate ≈ 0.00309
 iota_event_count = 139
 ```
 
-![Rössler PCA Projection](outputs/roessler_v3/roessler_v3_pca_projection.png)
+![Rössler PCA Projection](runs/outputs/roessler_v3/roessler_v3_pca_projection.png)
 
 ![Rössler Phase Drift + Iota](../runs/outputs/roessler_v3/roessler_v3_phase_drift_iota.png)
 
