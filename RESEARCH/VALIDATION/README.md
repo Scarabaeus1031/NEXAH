@@ -128,6 +128,31 @@ Result:
 
 ---
 
+### 🌀 Fractal Systems (Mandelbrot / Julia)
+
+NEXAH was applied to fractal systems to analyze **parameter-induced transitions**.
+
+Key observation:
+
+```text
+parameter motion → induces mismatch → triggers transitions
+```
+
+This extends the framework beyond intrinsic system dynamics  
+to **externally driven transition structures**.
+
+Empirical result:
+
+```text
+Δ(t) ≈ M(t)
+
+observable mismatch proxy
+```
+
+→ fractal systems provide the first measurable validation  
+of the transition law.
+
+---
 ## LEVEL 5 — Field-Level Structure
 
 - Instability field  
