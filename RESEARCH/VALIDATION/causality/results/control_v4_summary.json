@@ -1,0 +1,22 @@
+{
+    "no_control": {
+        "mean_drift": 0.2156112055233398,
+        "events": 5
+    },
+    "aligned": {
+        "mean_drift": 0.8245118581926266,
+        "events": 47
+    },
+    "invert": {
+        "mean_drift": 0.18985524379567287,
+        "events": 58
+    },
+    "damped": {
+        "mean_drift": 0.6029635585316403,
+        "events": 0
+    },
+    "inverse": {
+        "mean_drift": 0.01646711616157026,
+        "events": 0
+    }
+}
