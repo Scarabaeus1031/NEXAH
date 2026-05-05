@@ -25,17 +25,55 @@ import time
 # CONFIG
 # =========================
 
-INPUT_CSV = "outputs/kuramoto_v6/master_runs/latest/sweep_results.csv"
+BASE_INPUT_DIR = Path(__file__).parent / "outputs" / "kuramoto_v6" / "master_runs"
 
 
 # =========================
-# LOAD DATA
+# LOAD DATA (AUTO-DETECT)
 # =========================
 
-def load_data(path):
-    df = pd.read_csv(path)
+def find_latest_sweep_csv(base_dir: Path):
+    runs = sorted(base_dir.glob("run_*"), key=lambda p: p.stat().st_mtime)
+
+    if not runs:
+        raise FileNotFoundError("No run_* directories found in master_runs")
+
+    latest_run = runs[-1]
+    csv_path = latest_run / "sweep_results.csv"
+
+    if not csv_path.exists():
+        raise FileNotFoundError(f"sweep_results.csv not found in {latest_run}")
+
+    print(f"Using sweep file → {csv_path}")
+    return csv_path
+
+
+def load_data():
+    csv_path = find_latest_sweep_csv(BASE_INPUT_DIR)
+    df = pd.read_csv(csv_path)
     return df
 
+
+# =========================
+# MAIN
+# =========================
+
+def main():
+    base_dir = Path(__file__).parent / "outputs" / "kuramoto_v7"
+    run_dir = base_dir / f"boundary_run_{int(time.time())}"
+    run_dir.mkdir(parents=True, exist_ok=True)
+
+    print(f"Saving → {run_dir}")
+
+    df = load_data()
+
+    boundary_r, boundary_d = extract_boundary(df)
+
+    plot_phase_diagram(df, boundary_r, boundary_d, run_dir)
+    save_boundary(boundary_r, boundary_d, run_dir)
+
+    print("\n--- PHASE BOUNDARY V7 COMPLETE ---")
+    print(f"Boundary points: {len(boundary_r)}")
 
 # =========================
 # BOUNDARY EXTRACTION
