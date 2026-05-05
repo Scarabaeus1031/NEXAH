@@ -49,7 +49,7 @@ class KuramotoConfig:
     peak_distance: int = 50
     peak_prominence_quantile: float = 0.75
     iota_window: int = 100
-    output_dir: str = "outputs/kuramoto_v3"
+    output_dir: str | None = None
     random_seed: int = 42
 
 
@@ -348,9 +348,14 @@ def save_plots(df: pd.DataFrame, output_dir: Path) -> None:
 
 def run_experiment(config: KuramotoConfig) -> Dict[str, object]:
     """Run full Kuramoto FIELD_LAYER V3 experiment."""
-    output_dir = Path(config.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
+    base_dir = Path(__file__).parent / "outputs" / "kuramoto_v3"
 
+    # unique run folder
+    run_id = f"K_{config.coupling_k:.3f}".replace(".", "_")
+
+    output_dir = base_dir / run_id
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
     t_raw, phases_raw, omega = simulate_kuramoto(config)
     t, phases = remove_transient(t_raw, phases_raw, config.transient_fraction)
 
