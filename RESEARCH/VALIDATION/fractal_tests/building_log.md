@@ -1,6 +1,6 @@
 # 🧪 NEXAH — Fractal Transition Validation (Building Log)
 
-Path:
+Path:  
 RESEARCH/VALIDATION/fractal_tests/
 
 ---
@@ -9,235 +9,199 @@ RESEARCH/VALIDATION/fractal_tests/
 
 Investigate whether structural transitions in Julia dynamics:
 
-- are detectable via frame-to-frame change (Δ)
-- correlate with parameter-space position
-- form a structured transition field
+- are detectable via frame-to-frame change (Δ)  
+- correlate with parameter-space position  
+- form a structured transition field  
 
 ---
 
-## 🧩 Phase 1 — Δ Detection
+# 🧩 Phase 1 — Δ Detection
 
-Script:
-scripts/fractal_delta_test.py
+## 📊 Output
 
-Outputs:
-- delta_circle_plot.png
-- delta_peaks.png
+![Δ entlang Kreis](./scripts/outputs/delta_circle_plot.png)
 
 ---
 
-### Observation
+## 🔍 Observation
 
-- Δ shows sharp peaks along parameter paths
-- Peaks cluster near Mandelbrot boundary structures
-
----
-
-## 🔁 Phase 2 — Random Path Sampling
-
-Script:
-scripts/fractal_delta_random_paths.py
-
-Outputs:
-- delta_random_paths.png
+- Δ shows sharp peaks along parameter paths  
+- Peaks align with structurally sensitive regions  
 
 ---
 
-### Observation
+# 🔁 Phase 2 — Random Path Sampling
 
-- Δ peaks occur across random paths
-- Not restricted to circular sampling
-- Heavy-tailed distribution
+## 📊 Output
 
----
-
-## 🧠 Phase 3 — Topology Check
-
-Script:
-scripts/fractal_topology_metrics.py
-
-Outputs:
-- topology_check_peak_*.png
-- topology_metrics.csv
+![Δ Random Paths](./scripts/outputs/delta_random_paths.png)
 
 ---
 
-### Method
+## 🔍 Observation
 
-Compare:
-- binary structure before peak
-- at peak
-- after peak
-
-Metric:
-- structural_change(before, after)
+- Δ peaks persist across random paths  
+- Distribution is heavy-tailed  
+- Peaks are not path-dependent  
 
 ---
 
-### Observation
+# 🧠 Phase 3 — Topology Check
 
-- Most Δ peaks do NOT produce persistent topology change
-- Structural differences often revert
+## 📊 Output
 
-→ Δ peak ≠ guaranteed transition
-
----
-
-## 🔺 Phase 4 — Transition Classification
-
-Types introduced:
-
-- Type I — noise
-- Type II — local deformation
-- Type III — reversible variation
-- Type IV — structural transition
+![Topology Peak](./scripts/outputs/topology_check_peak_22.png)
 
 ---
 
-### Result
+## 🔍 Observation
 
-- Type IV extremely rare
-- Majority = Type III
+- Most Δ peaks do NOT result in persistent structural change  
+- Structures often revert after disturbance  
 
----
-
-## 🧭 Phase 5 — Transition Path
-
-Script:
-scripts/fractal_transition_path.py
-
-Outputs:
-- transition_path_delta.png
-- transition_path_area.png
-- forced_transition_sequence.png
+→ Δ peak ≠ transition  
 
 ---
 
-### Observation
+# 🔺 Phase 4 — Transition Behavior
 
-- Transition can be forced via path
-- Occurs near Δ spike + structural instability
-- Transition is localized in parameter space
+## 🔍 Observation
 
----
-
-## 📊 Phase 6 — Transition Probability
-
-Script:
-scripts/fractal_transition_probability.py
-
-Outputs:
-- transition_probability_vs_delta.png
-- raw_transition_data.png
+- Majority of events are reversible variations  
+- True structural transitions are rare  
 
 ---
 
-### Result
+# 🧭 Phase 5 — Transition Path
 
-- Total peaks: ~100
-- Transitions: ~2–5
-- Rate: ~2–3%
+## 📊 Outputs
 
----
+![Δ Transition Path](./scripts/outputs/transition_path_delta.png)
 
-### Observation
-
-- Δ alone insufficient predictor
-- High Δ does not always → transition
+![Area Transition Path](./scripts/outputs/transition_path_area.png)
 
 ---
 
-## 🌐 Phase 7 — Continuous Distance Integration
+## 🔍 Observation
 
-Script:
-scripts/fractal_transition_probability_continuous.py
-
-Outputs:
-- transition_map_continuous.png
-- transition_heatmap_continuous.png
-- transition_probability_data.csv
+- Transition occurs at localized Δ spikes  
+- Structural collapse visible in area  
+- Transition is path-dependent but reproducible  
 
 ---
 
-### Method
+# 📊 Phase 6 — Transition Probability (Δ only)
 
-Introduce:
-continuous Mandelbrot distance:
+## 📊 Outputs
 
-distance(c)
+![Probability vs Δ](./scripts/outputs/transition_probability_vs_delta.png)
 
----
-
-### Observation
-
-- Data forms structured scatter in (Δ, distance)
-- Transitions cluster in specific regions
+![Raw Data](./scripts/outputs/raw_transition_data.png)
 
 ---
 
-## 🔬 Phase 8 — Clean Transition Field
+## 🔍 Observation
 
-Script:
-scripts/fractal_transition_field_clean.py
-
-Outputs:
-- transition_field_clean.png
-- transition_field_overlay.png
+- Transition rate ~2–3%  
+- Δ alone is not predictive  
 
 ---
 
-### Method
+# 🌐 Phase 7 — Continuous Distance Integration
 
-- Kernel smoothing (Gaussian)
-- Avoid histogram artifacts
-- Normalize by local density
+## 📊 Output
 
----
-
-### Result
-
-Stable transition field emerges
+![Transition Map](./scripts/outputs/transition_map_continuous.png)
 
 ---
 
-## 📐 Phase 9 — Field Fit
+## 🔍 Observation
 
-Script:
-scripts/fractal_transition_field_fit.py
-
-Outputs:
-- transition_field_fit.png
+- Structure emerges in (Δ, distance)  
+- Transitions cluster in specific regions  
 
 ---
 
-### Observation
+# 🔬 Phase 8 — Clean Transition Field
 
-- Transition boundary approximates linear separation
-- but requires 2D model (Δ + distance)
+## 📊 Outputs
+
+![Transition Field](./scripts/outputs/transition_field_clean.png)
+
+![Field + Data](./scripts/outputs/transition_field_overlay.png)
 
 ---
 
-## 📦 Outputs
+## 🔍 Observation
+
+- Stable transition field emerges  
+- Clear directional structure visible  
+- Not random distribution  
+
+---
+
+# 📐 Phase 9 — Field Fit
+
+## 📊 Output
+
+![Field Fit](./scripts/outputs/transition_field_fit.png)
+
+---
+
+## 🔍 Observation
+
+- Transition boundary approximates linear separation  
+- Requires 2D interpretation (Δ + distance)  
+
+---
+
+# 📦 Outputs
 
 All visuals stored in:
 
+```
 scripts/outputs/
+```
 
 Key files:
 
-- transition_field_clean.png
-- transition_field_overlay.png
-- transition_field_fit.png
-- transition_map_continuous.png
-- transition_probability_data.csv
+- transition_field_clean.png  
+- transition_field_overlay.png  
+- transition_field_fit.png  
+- transition_map_continuous.png  
+- transition_probability_data.csv  
 
 ---
 
-## 🧠 Summary (Process)
+# 🧠 Process Summary
 
-```text
-Δ → peak detection
-→ topology comparison
-→ transition classification
-→ probability estimation
-→ 2D field reconstruction
+```
+Δ detection  
+→ peak extraction  
+→ topology comparison  
+→ transition filtering  
+→ probability estimation  
+→ 2D field reconstruction  
+→ boundary estimation  
+```
+
+---
+
+# ⚠️ Notes
+
+- Early heatmaps unstable (overflow artifacts)  
+- Histogram binning produced misleading structure  
+- Kernel smoothing required for stability  
+- Sampling limited (random paths)  
+
+---
+
+# 📌 Status
+
+- internally consistent  
+- empirically reproducible  
+- exploratory but stable  
+
+---
+
+**End of Building Log**
