@@ -10,10 +10,14 @@ WIDTH, HEIGHT = 600, 600
 MAX_ITER = 200
 FRAMES = 60
 
-OUTPUT_PATH = "RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/julia_path_final.gif"
+BASE_PATH = "RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs"
+GIF_PATH = os.path.join(BASE_PATH, "julia_path_final.gif")
+MAND_PATH = os.path.join(BASE_PATH, "mandelbrot_path.png")
+DELTA_PATH = os.path.join(BASE_PATH, "delta_plot.png")
 
-# Mandelbrot sampling grid (für Referenz-Plot)
 MAND_RES = 400
+
+os.makedirs(BASE_PATH, exist_ok=True)
 
 # ----------------------------
 # COMPLEX GRID
@@ -33,6 +37,10 @@ def compute_julia(c):
 
     for i in range(MAX_ITER):
         Z[mask] = Z[mask]**2 + c
+
+        # Optional stability clamp (prevents overflow noise)
+        Z[np.abs(Z) > 10] = 10
+
         mask = np.abs(Z) < 4
         output += mask
 
@@ -64,11 +72,9 @@ for i, c in enumerate(c_vals):
     print(f"Frame {i+1}/{FRAMES} | c = {c}")
 
     julia = compute_julia(c)
-
-    # Normalize
     julia_norm = julia / np.max(julia)
 
-    # Detect transition
+    # Transition detection
     if prev_frame is not None:
         delta = np.mean(np.abs(julia_norm - prev_frame))
         if delta > 0.08:
@@ -83,10 +89,10 @@ for i, c in enumerate(c_vals):
     ax.set_title(f"Julia Set | c = {c.real:.3f} + {c.imag:.3f}i")
     ax.axis('off')
 
-    # Save frame to buffer
+    # --- MODERN BUFFER METHOD ---
     fig.canvas.draw()
-    image = np.frombuffer(fig.canvas.tostring_rgb(), dtype='uint8')
-    image = image.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+    buf = np.asarray(fig.canvas.buffer_rgba())
+    image = buf[:, :, :3]  # drop alpha channel
     images.append(image)
 
     plt.close(fig)
@@ -94,16 +100,12 @@ for i, c in enumerate(c_vals):
 # ----------------------------
 # SAVE GIF
 # ----------------------------
-os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-imageio.mimsave(OUTPUT_PATH, images, fps=10)
-
-print(f"\nGIF saved at: {OUTPUT_PATH}")
+imageio.mimsave(GIF_PATH, images, fps=10)
+print(f"\nGIF saved at: {GIF_PATH}")
 
 # ----------------------------
-# EXTRA PLOTS
+# MANDELBROT
 # ----------------------------
-
-# 1️⃣ Mandelbrot + Path
 def compute_mandelbrot():
     x = np.linspace(-2, 1, MAND_RES)
     y = np.linspace(-1.5, 1.5, MAND_RES)
@@ -129,9 +131,15 @@ plt.scatter(c_vals.real, c_vals.imag, s=5, color='white')
 plt.title("Mandelbrot + Path")
 plt.xlabel("Re")
 plt.ylabel("Im")
-plt.show()
 
-# 2️⃣ Delta Plot
+plt.savefig(MAND_PATH, dpi=200, bbox_inches='tight')
+plt.close()
+
+print(f"Mandelbrot plot saved at: {MAND_PATH}")
+
+# ----------------------------
+# DELTA PLOT
+# ----------------------------
 deltas = []
 for i in range(1, len(images)):
     d = np.mean(np.abs(images[i].astype(float) - images[i-1].astype(float)))
@@ -142,9 +150,15 @@ plt.plot(deltas)
 plt.title("Frame-to-Frame Change (Δ)")
 plt.xlabel("Frame")
 plt.ylabel("Change")
-plt.show()
 
-# 3️⃣ Transition Printout
+plt.savefig(DELTA_PATH, dpi=200, bbox_inches='tight')
+plt.close()
+
+print(f"Delta plot saved at: {DELTA_PATH}")
+
+# ----------------------------
+# TRANSITIONS
+# ----------------------------
 print("\nDetected Transitions:")
 for idx, c, d in transition_frames:
     print(f"Frame {idx} | c = {c} | Δ = {d:.4f}")
