@@ -63,7 +63,10 @@ htmlcov/
 
 # ❌ Default: ignore ALL outputs everywhere
 **/outputs/
-
+# --- FRACTAL SYSTEM OUTPUTS (CURATED) ---
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/**/*.png
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/**/*.gif
 # =========================
 # ✅ CURATED OUTPUTS (ALLOWLIST)
 # =========================
