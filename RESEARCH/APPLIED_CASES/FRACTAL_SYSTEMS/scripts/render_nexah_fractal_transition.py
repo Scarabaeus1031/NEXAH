@@ -94,5 +94,13 @@ ax3.set_title("Julia (Behavior)", color="white")
 ax3.axis("off")
 
 plt.tight_layout()
-plt.savefig("nexah_fractal_transition.png", dpi=300, facecolor="black")
-plt.show()
+import os
+
+output_dir = "RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs"
+os.makedirs(output_dir, exist_ok=True)
+
+output_path = os.path.join(output_dir, "nexah_fractal_transition.png")
+
+plt.savefig(output_path, dpi=300, facecolor="black")
+
+print(f"Saved to: {output_path}")
