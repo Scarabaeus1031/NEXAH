@@ -1,0 +1,36 @@
+{
+  "config": {
+    "n_oscillators": 128,
+    "coupling_k": 1.4090909090909092,
+    "omega_mean": 0.0,
+    "omega_std": 1.0,
+    "t_max": 500.0,
+    "dt": 0.01,
+    "transient_fraction": 0.1,
+    "random_seed": 42,
+    "iota_sigma": 2.5,
+    "theta_sigma": 0.5,
+    "peak_distance": 50,
+    "lyapunov_eps": 1e-07,
+    "lyapunov_segment_time": 1.0
+  },
+  "K": 1.4090909090909092,
+  "samples": 45001,
+  "r_mean": 0.32678966357749095,
+  "r_std": 0.11594661829070328,
+  "r_min": 0.0015188075388688606,
+  "r_max": 0.5867767107587618,
+  "abs_delta_theta_mean": 0.008734656362663306,
+  "abs_delta_theta_std": 0.025771473666409722,
+  "theta_threshold": 0.021620393195868167,
+  "iota_threshold": 0.07316334052868761,
+  "iota_percent": 0.49998888913579703,
+  "n_events": 23,
+  "transition_rate": 0.0005110997533388147,
+  "lyapunov_estimate": 0.07399651392469983,
+  "pca_explained_variance_ratio": [
+    0.955345659041744,
+    0.03504028273228385,
+    0.009614058225972255
+  ]
+}

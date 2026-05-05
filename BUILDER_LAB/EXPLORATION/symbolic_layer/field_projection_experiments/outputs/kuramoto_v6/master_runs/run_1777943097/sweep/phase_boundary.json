@@ -1,0 +1,74 @@
+{
+  "max_drift_boundary": {
+    "config": {
+      "n_oscillators": 128,
+      "coupling_k": 2.5454545454545454,
+      "omega_mean": 0.0,
+      "omega_std": 1.0,
+      "t_max": 500.0,
+      "dt": 0.01,
+      "transient_fraction": 0.1,
+      "random_seed": 42,
+      "iota_sigma": 2.5,
+      "theta_sigma": 0.5,
+      "peak_distance": 50,
+      "lyapunov_eps": 1e-07,
+      "lyapunov_segment_time": 1.0
+    },
+    "K": 2.5454545454545454,
+    "samples": 45001,
+    "r_mean": 0.9390896358572273,
+    "r_std": 3.930196867272992e-11,
+    "r_min": 0.9390896353840391,
+    "r_max": 0.9390896362524416,
+    "abs_delta_theta_mean": 0.05888506749490025,
+    "abs_delta_theta_std": 0.40549114164756034,
+    "theta_threshold": 0.26163063831868044,
+    "iota_threshold": 1.072612921613801,
+    "iota_percent": 1.897735605875425,
+    "n_events": 506,
+    "transition_rate": 0.011244194573453924,
+    "lyapunov_estimate": -0.004273894833824933,
+    "pca_explained_variance_ratio": [
+      0.9999994375877997,
+      5.048414801331722e-07,
+      5.757072022668873e-08
+    ]
+  },
+  "max_event_boundary": {
+    "config": {
+      "n_oscillators": 128,
+      "coupling_k": 2.7727272727272725,
+      "omega_mean": 0.0,
+      "omega_std": 1.0,
+      "t_max": 500.0,
+      "dt": 0.01,
+      "transient_fraction": 0.1,
+      "random_seed": 42,
+      "iota_sigma": 2.5,
+      "theta_sigma": 0.5,
+      "peak_distance": 50,
+      "lyapunov_eps": 1e-07,
+      "lyapunov_segment_time": 1.0
+    },
+    "K": 2.7727272727272725,
+    "samples": 45001,
+    "r_mean": 0.9510895501232745,
+    "r_std": 8.81475064333687e-12,
+    "r_min": 0.9510895500541833,
+    "r_max": 0.9510895501947946,
+    "abs_delta_theta_mean": 0.0644974018493158,
+    "abs_delta_theta_std": 0.3700998502719815,
+    "theta_threshold": 0.24954732698530654,
+    "iota_threshold": 0.9897470275292695,
+    "iota_percent": 2.27106064309682,
+    "n_events": 524,
+    "transition_rate": 0.01164418568476256,
+    "lyapunov_estimate": -0.004273953263526827,
+    "pca_explained_variance_ratio": [
+      0.9999999872381972,
+      8.940105896573785e-09,
+      3.821696906068893e-09
+    ]
+  }
+}
