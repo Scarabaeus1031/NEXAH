@@ -17,6 +17,7 @@ For structured findings at different levels:
 → [dynamical_unification.md](./dynamical_unification.md)  
 → [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)  
 → [../NEXAH_CORE/findings.md](../../NEXAH_CORE/findings.md)
+→ [control_phase_mismatch.md](./control_phase_mismatch.md)
 
 ---
 
@@ -132,6 +133,40 @@ Now observed in:
 - continuous dynamical systems (Lorenz, Halvorsen, power grids)  
 - discrete systems (prime modular transitions)  
 - collective synchronization systems (Kuramoto)
+
+---
+
+# 🔷 Control & Causal Mechanism
+
+→ [control_phase_mismatch.md](./control_phase_mismatch.md)
+
+A new layer introduces **directional control based on phase structure**.
+
+Observed:
+
+- transitions are triggered by **phase mismatch**  
+- control effectiveness depends on **direction relative to phase drift**  
+
+Key result:
+
+```text
+alignment   → amplifies instability  
+opposition  → suppresses instability
+```
+
+This reveals a second structural layer:
+
+```text
+Stability is not achieved by reducing magnitude,
+but by opposing phase-aligned instability direction.
+```
+
+#🔑 Control Insight
+
+```text
+Stability is not achieved by reducing magnitude,
+but by opposing phase-aligned instability direction.
+```
 
 ---
 
