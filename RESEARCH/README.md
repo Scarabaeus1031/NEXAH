@@ -266,13 +266,21 @@ Transitions occur across regions, not at isolated points
 ### 4. Phase as causal trigger  
 Transitions are activated by phase mismatch, not instability alone
 
-### 5. Hybrid system nature  
+### 5. Directional control (NEW)  
+Control effectiveness depends on its direction relative to phase dynamics  
+
+- alignment with phase drift → amplifies instability  
+- opposition to phase drift → suppresses instability  
+
+👉 control is not scalar — it is directional within phase space  
+
+### 6. Hybrid system nature  
 continuous field + discrete transition structure
 
-### 6. Navigation replaces prediction  
+### 7. Navigation replaces prediction  
 Not predicting states — navigating structure
 
-### 7. Cross-system similarity (under investigation)  
+### 8. Cross-system similarity (under investigation)  
 Different systems show similar structural patterns
 
 ---
