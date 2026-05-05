@@ -881,6 +881,127 @@ inverse      → drift: 0.0165, events: 0
 ![Control Comparison](causality/results/control_v4_comparison.png)
 
 ---
+# 🧪 16. Fractal Transition Validation (Experimental Extension)
+
+**Module:**  
+
+RESEARCH/VALIDATION/fractal_tests/
+
+---
+
+## 🧠 Purpose
+
+Extend transition analysis beyond intrinsic system dynamics  
+
+to **parameter-driven systems** (Julia / Mandelbrot).
+
+---
+
+## 🔬 Approach
+
+- generate Julia sets along parameter paths  
+
+- compute frame-to-frame change (Δ)  
+
+- detect peaks  
+
+- compare structural change (topology)  
+
+- estimate transition probability  
+
+- embed into (Δ, distance) space  
+
+---
+
+## 📊 Key Result
+
+```text
+
+P(transition) = f(Δ, distance)
+
+```
+
+---
+
+## 🔺 Observations
+
+- Δ peaks are frequent but mostly reversible  
+
+- true transitions are rare (~2–3%)  
+
+- transitions cluster in a bounded region:
+
+```text
+
+Δ ≈ 10–20
+
+distance ≈ 60–85
+
+```
+
+---
+
+## 📈 Visual Evidence
+
+![Transition Map](fractal_tests/scripts/outputs/transition_map_continuous.png)
+
+![Transition Field](fractal_tests/scripts/outputs/transition_heatmap_continuous.png)
+
+![Field Fit](fractal_tests/scripts/outputs/transition_field_fit.png)
+
+---
+
+## 🔍 Interpretation
+
+- Δ = local structural change  
+
+- distance = global parameter context  
+
+- transitions occur only when both align  
+
+---
+
+## ⚠️ Status
+
+```text
+
+experimental
+
+sampling-limited
+
+not yet cross-system validated
+
+```
+
+---
+
+## 🧭 Relation to Core Validation
+
+- consistent with:
+
+  - transition structure is non-random ✔  
+
+  - transitions occur in structured regions ✔  
+
+- extends:
+
+  - from state-space → parameter-space  
+
+---
+
+## 📌 Conclusion
+
+```text
+
+Transition structure can also be induced
+
+through structured parameter motion,
+
+not only intrinsic system dynamics.
+
+```
+
+---
 
 ## 🔍 Interpretation
 
