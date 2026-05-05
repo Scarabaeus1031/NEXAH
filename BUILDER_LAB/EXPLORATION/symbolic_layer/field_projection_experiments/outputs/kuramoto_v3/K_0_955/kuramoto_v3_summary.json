@@ -1,0 +1,58 @@
+{
+  "system": "kuramoto",
+  "config": {
+    "n_oscillators": 128,
+    "coupling_k": 0.9545454545454546,
+    "omega_mean": 0.0,
+    "omega_std": 1.0,
+    "t_max": 500.0,
+    "dt": 0.01,
+    "transient_fraction": 0.1,
+    "iota_quantile": 0.92,
+    "peak_distance": 50,
+    "peak_prominence_quantile": 0.75,
+    "iota_window": 100,
+    "output_dir": null,
+    "random_seed": 42
+  },
+  "samples": 45001,
+  "time_start": 50.0,
+  "time_end": 500.0,
+  "omega_mean_actual": -2.7755575615628914e-17,
+  "omega_std_actual": 0.7950203850322608,
+  "r_mean": 0.15311258074068057,
+  "r_std": 0.0751121708224312,
+  "r_min": 0.001048136378195854,
+  "r_max": 0.4225033069131597,
+  "pca_explained_variance_ratio": [
+    0.991584045392236,
+    0.004856772504564461,
+    0.0035591821031996434
+  ],
+  "thresholds": {
+    "theta_threshold_abs_delta": 0.007064145146841837,
+    "iota_threshold_abs_delta": 0.02071815667983401,
+    "iota_quantile": 0.92
+  },
+  "regime_counts": {
+    "Dao": 23767,
+    "Theta": 15750,
+    "Iota": 3601,
+    "Tao": 1883
+  },
+  "regime_distribution_percent": {
+    "Dao": 52.81438190262438,
+    "Theta": 34.99922223950579,
+    "Iota": 8.002044399013355,
+    "Tao": 4.18435145885647
+  },
+  "iota_event_count": 108,
+  "transition_rate": 0.0023999466678518255,
+  "delta_theta_mean": -0.008244640591933637,
+  "delta_theta_std": 0.021386638231032745,
+  "abs_delta_theta_mean": 0.011172961171112402,
+  "abs_delta_theta_std": 0.02001314738883141,
+  "iota_window_local_density_mean": 0.015461748933148863,
+  "iota_return_time_mean": 4.130467289719626,
+  "iota_return_time_std": 3.603920659393456
+}
