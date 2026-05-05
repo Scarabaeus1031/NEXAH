@@ -4,9 +4,12 @@ This document defines the **minimal operational layer**
 linking empirical observations to formal structure.
 
 It translates:
-```
+
+```text
 validation → measurable quantities → control-relevant structure
 ```
+
+---
 
 # 🧮 NEXAH — Core Equations
 
@@ -119,6 +122,29 @@ M(t) large → disruption of phase consistency
 
 ---
 
+## 🔬 Physical Interpretation (Phase Consistency)
+
+In nonlinear physical systems:
+
+```text
+Phase alignment → constructive accumulation  
+Phase mismatch → oscillatory or inefficient interaction  
+```
+
+If phases are not aligned, energy transfer does not accumulate but oscillates or cancels out  [oai_citation:0‡RP Photonics](https://www.rp-photonics.com/phase_matching.html?utm_source=chatgpt.com)  
+
+---
+
+## 🧠 Transfer to NEXAH
+
+```text
+coherent phase → stable structural evolution  
+phase mismatch → breakdown of consistency  
+→ transition region
+```
+
+---
+
 # 🔥 6. Instability Measure
 
 Define local dynamical magnitude:
@@ -130,7 +156,8 @@ $$
 Interpretation:
 
 ```text
-I(t) measures local dynamical intensity, not structural change
+I(t) measures local dynamical intensity (energy scale),
+not structural consistency
 ```
 
 ---
@@ -153,13 +180,9 @@ $$
 
 ## Threshold Approximation (Operational)
 
-In practice:
-
 $$
-\text{IOTA} \;\Longleftrightarrow\; M(t) > \tau
+\text{IOTA} \Longleftrightarrow M(t) > \tau
 $$
-
-for threshold $\tau$.
 
 ---
 
@@ -175,8 +198,6 @@ $$
 
 # 🧠 9. Interpretation of Mismatch
 
-Mismatch measures deviation from expected rotational behavior:
-
 ```text
 M(t) = deviation from locally consistent phase evolution
 ```
@@ -185,10 +206,8 @@ M(t) = deviation from locally consistent phase evolution
 
 # 🎯 10. Control Law (Phase-Based)
 
-Current control formulation:
-
 $$
-s(t) = d · s^*(\phi(t))
+s(t) = d \cdot s^*(\phi(t))
 $$
 
 ---
@@ -201,8 +220,6 @@ Phase-only control is insufficient to suppress transitions.
 
 # 🚀 11. Extended Control Law
 
-Proposed extension:
-
 $$
 s(t) = f(\phi(t), I(t))
 $$
@@ -210,8 +227,6 @@ $$
 ---
 
 # 🔧 12. Control Objective
-
-Primary objective:
 
 $$
 \min M(t)
@@ -238,7 +253,7 @@ effective control ⇔ M(t) small
 Empirical result:
 
 ```text
-Transitions are not driven by instability alone.
+Transitions are not driven by instability alone
 ```
 
 Formally:
@@ -259,26 +274,22 @@ $$
 
 ```text
 Stability:
-→ M ≈ 0
+→ M ≈ 0 (coherent phase structure)
 
 Instability:
-→ I large
+→ I large (high dynamical magnitude)
 
 Transition:
-→ M large
+→ M large (loss of phase consistency)
 ```
 
 ---
 
 # 🔄 16. Angular Structure (Empirical)
 
-Observed dominant modes:
-
 $$
 k \in \{4, 32, 34, 2, 0\}
 $$
-
-Interpretation:
 
 ```text
 Transitions exhibit structured angular signatures
@@ -304,7 +315,7 @@ Transitions exhibit structured angular signatures
 
 ```text
 Transitions are caused by phase mismatch,
-not by instability magnitude alone.
+not by instability magnitude alone
 ```
 
 ---
@@ -313,53 +324,39 @@ not by instability magnitude alone.
 
 ```text
 Control aligns phase dynamics,
-rather than suppressing system energy.
+rather than suppressing system energy
 ```
 
 ---
 
 # 🔬 17. Control Directionality (Extension)
 
-Empirical results show:
-
-```text
-Control effectiveness depends on direction, not magnitude alone.
-```
-
-We extend the control law:
-
 $$
 s(t) = s^*(\phi(t), d)
 $$
 
-where:
+with:
 
-- $d \in \{-1, +1\}$ represents control direction relative to phase flow
+- $d \in \{-1, +1\}$
 
 ---
 
 ## 🔁 Directional Effect
 
-Observed behavior:
-
 ```text
-d aligned (+1)   → increases drift and transition activity  
-d inverted (-1)  → reduces drift but may increase mismatch  
-d damped         → suppresses transitions but retains instability  
-d inverse        → minimizes drift AND suppresses transitions  
+aligned (+1)   → increases transitions  
+inverted (-1)  → reduces drift, may increase mismatch  
+damped         → partial suppression  
+inverse        → minimizes mismatch and transitions
 ```
 
 ---
 
 ## 🧠 Interpretation
 
-Control interacts with system dynamics as:
-
 $$
 \omega_{\text{eff}}(t) = \omega(t) - s(t)
 $$
-
-Mismatch becomes:
 
 $$
 M(t) = |\omega_{\text{eff}}(t) - \hat{\omega}(t)|
@@ -370,7 +367,7 @@ $$
 ## 🔑 Extended Control Objective
 
 ```text
-Minimize mismatch via correct directional alignment.
+Minimize mismatch via directional alignment
 ```
 
 ---
@@ -380,10 +377,11 @@ Minimize mismatch via correct directional alignment.
 ```text
 Control does not reduce instability.
 
-Control modifies phase dynamics through directional interaction.
+Control modifies phase dynamics through directional interaction
 ```
 
 ---
+
 # 🧭 Status
 
 - empirically validated  
