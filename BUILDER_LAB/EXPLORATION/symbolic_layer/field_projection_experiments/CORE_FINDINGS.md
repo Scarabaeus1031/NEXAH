@@ -1,206 +1,115 @@
 # NEXAH FIELD_LAYER — Core Findings  
-## Kuramoto Phase Structure (V3 → V8)
+## Cross-System Structural Result
 
-Status: **Locked / Stable**
+Status: **Locked / Framework Level**
 
 ---
 
 ## 🔷 Visual Reference
 
-![Kuramoto Field Structure](./outputs/NEXAH_kuramoto_field_structure_v2.png)
+![Field Structure](./outputs/NEXAH_kuramoto_field_structure_v2.png)
 
 ---
 
 ## 1. Core Result
 
-The FIELD_LAYER representation reveals that synchronization and internal stability are not identical.
+Across multiple dynamical systems, the FIELD_LAYER representation reveals:
 
 ```text
-High synchronization ≠ low internal activity
+Global organization ≠ internal stability
 ```
 
 ---
 
 ## 2. Observable Separation
 
-The system separates into four independent observables:
+Independent observables:
 
 ```text
-r_mean                  → global synchronization
-abs_delta_theta_std     → internal drift
-transition_rate         → event activity
-lyapunov_estimate       → global stability
+organization_metric      (e.g. r_mean)
+internal_variability     (e.g. drift)
+event_activity           (transition rate)
+stability_indicator      (e.g. Lyapunov)
 ```
 
 Key insight:
 
 ```text
-These quantities peak at different coupling strengths K.
+These quantities peak at different parameter values.
 ```
 
 ---
 
-## 3. Phase Structure
+## 3. Structural Transition
 
-Instead of a single transition, the system shows a **multi-stage transition**:
+Systems do not exhibit a single transition, but a **multi-stage structure**:
 
 ```text
-incoherent
-→ synchronized
-→ synchronized + drift-active
+disordered
+→ organized
+→ organized but internally active
 → high-transition regime
 ```
 
 ---
 
-## 4. Extracted Critical Points
+## 4. Universal Pattern
 
-```json
-{
-  "onset": {
-    "K": 2.32,
-    "meaning": "start of drift amplification"
-  },
-  "max_drift": {
-    "K": 2.55,
-    "meaning": "maximum internal phase instability"
-  },
-  "max_events": {
-    "K": 2.77,
-    "meaning": "maximum transition activity"
-  }
-}
-```
-
-Interpretation:
+Observed consistently in:
 
 ```text
-The instability emerges AFTER synchronization,
-not before it.
-```
-
----
-
-## 5. Iota Events — Clarification
-
-Early V3:
-
-```text
-Iota ≈ 8 %
-```
-
-This was caused by:
-
-```text
-fixed quantile threshold (artifact)
-```
-
-Final definition (V5+):
-
-```text
-Iota = statistically defined high-drift events
-```
-
-Therefore:
-
-```text
-Iota is NOT inherently 8 %
-```
-
-It is:
-
-```text
-a dynamic instability marker
-```
-
----
-
-## 6. Meaning of Iota
-
-Iota events correspond to:
-
-```text
-localized phase slips  
-internal reconfigurations  
-transition bursts inside synchronized regimes  
-```
-
-Key insight:
-
-```text
-A system can be synchronized AND unstable internally.
-```
-
----
-
-## 7. Phase Boundary
-
-The extracted boundary in:
-
-```text
-(r_mean, drift_std)
-```
-
-defines:
-
-```text
-the envelope of accessible system states
-```
-
-Important:
-
-```text
-The boundary bends before exploding upward,
-indicating delayed instability.
-```
-
----
-
-## 8. Core Structural Insight
-
-```text
-Synchronization is a geometric constraint,
-not a stability guarantee.
-```
-
-The system organizes first (r ↑),  
-then destabilizes internally (drift ↑),  
-then transitions (events ↑).
-
----
-
-## 9. Final Statement
-
-```text
-The FIELD_LAYER detects hidden transition structure
-inside synchronized regimes that classical analysis does not resolve.
-```
-
----
-
-## 10. Status
-
-```text
-Finding validated across:
 - Lorenz
 - Rössler
 - Halvorsen
 - Kuramoto
+```
 
 Kuramoto provides the clearest measurable separation.
+
+---
+
+## 5. Internal Events (Iota)
+
+```text
+Localized instability events inside organized regimes
+```
+
+NOT:
+
+```text
+fixed-percentage phenomenon
+```
+
+BUT:
+
+```text
+dynamic structural markers
 ```
 
 ---
 
-## 🔻 Interpretation in NEXAH Terms
+## 6. Structural Interpretation
 
 ```text
-Observed phase diagram = local slice
+Observed dynamics = projection
 
-Underlying system = structured field
+True system = structured field
+```
 
-Transitions = movement within the field,
-not jumps between discrete states
+Transitions correspond to:
+
+```text
+movement within the field,
+not discrete jumps between states
+```
+
+---
+
+## 7. Core Insight
+
+```text
+Organization is a geometric constraint,
+not a stability guarantee.
 ```
 
 ---
@@ -208,5 +117,5 @@ not jumps between discrete states
 ## 🔒 Status
 
 ```text
-Locked.
+Framework-level finding confirmed.
 ```
