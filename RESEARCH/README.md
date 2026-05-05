@@ -111,7 +111,7 @@ Recommended path:
 
 Empirical verification layer of the system.
 
-![NEXAH Validation Summary](./VALIDATION/nexah_validation_summary_visual.png)
+![NEXAH Validation Summary](./VALIDATION/visuals/nexah_validation_summary_visual.png)
 
 **Figure — Validation Overview**
 
