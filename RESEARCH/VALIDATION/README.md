@@ -146,10 +146,13 @@ Result:
 - Target reach experiments  
 - Time-to-target measurements  
 - Resonance scans  
+- phase-aligned vs phase-opposed control comparison  
 
 Result:
+
 - System behavior can be influenced  
-- Control effectiveness is non-linear and phase-dependent  
+- Control effectiveness is non-linear, phase-dependent, and direction-sensitive  
+- naive phase alignment can destabilize the system  
 
 ---
 
@@ -209,20 +212,25 @@ text 1. Transition dynamics are stable across runs, noise, and systems 2. Struct
 ---
 
 # 🧠 Key Principle
+```text
+Chaotic systems are not controlled by reducing instability.
 
-text Chaotic systems are not controlled by reducing instability.  They are controlled by aligning intervention with the intrinsic phase structure of the system. 
+They are controlled by aligning control direction
+with the intrinsic phase structure of the system.
+```
 
 ---
 
 # ⚠️ Current Limitation
 
 - Phase-aligned control improves trajectory structure  
-- BUT does not yet reduce transition frequency (IOTA count)
+- BUT can increase transition activity if misaligned  
 
 Missing component:
 
-text adaptive control depending on both: phase AND instability 
-
+```text
+correct directional alignment of control
+```
 ---
 
 # 🔧 Next Step
@@ -239,10 +247,64 @@ Expected effect:
 
 ---
 
+## LEVEL 9 — Control Directionality (Critical Result)
+
+- Phase-aligned control test  
+- Inverted control test  
+- Damped control  
+- Phase-opposed (inverse) control  
+
+Result:
+
+```text
+aligned  → increases drift and events
+invert   → reduces drift but increases transitions
+damped   → suppresses events but keeps instability
+inverse  → minimizes drift AND suppresses events
+```
+
+---
+
+## 🔑 Key Observation
+
+```text
+Control effectiveness depends on direction, not magnitude.
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Stabilization occurs only when control is phase-opposed
+to the intrinsic system dynamics.
+```
+
+---
+
+## Implication
+
+- Phase alignment alone is insufficient  
+- Instability suppression alone is insufficient  
+
+Only:
+
+```text
+phase-opposed control → structural stabilization
+```
+---
+
 # 📂 Structure
 
-text VALIDATION/ ├── lorenz/              # baseline validation (multi-run, noise, transitions) ├── rossler/             # cross-system validation ├── duffing/             # additional system validation ├── cross_validation/    # system comparison ├── causality/           # control, mismatch, phase dynamics ├── results/             # generated figures and summaries 
-
+```text
+VALIDATION/
+├── lorenz/              # baseline validation (multi-run, noise, transitions)
+├── rossler/             # cross-system validation
+├── duffing/             # additional system validation
+├── cross_validation/    # system comparison
+├── causality/           # control, mismatch, phase dynamics
+├── results/             # generated figures and summaries 
+```
 ---
 
 # 📊 Output
@@ -273,7 +335,7 @@ The validation demonstrates that:
 
 - observed structures are real and robust  
 - transition dynamics are intrinsic to flow geometry  
-- control operates through phase alignment, not force  
+- control operates through phase structure AND directional alignment, not force  
 
 ---
 
