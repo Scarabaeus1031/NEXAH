@@ -1,6 +1,6 @@
-# 🚀 NEXAH — Validation & Consolidation TODO (v4)
+# 🚀 NEXAH — Validation & Consolidation TODO (v5)
 
-**Phase:** Mechanism identified → now must be verified, reproduced, and generalized
+**Phase:** Mechanism identified → now must be verified, reproduced, and minimally generalized
 
 ---
 
@@ -9,15 +9,15 @@
 ✔ field structure reproducible  
 ✔ transition geometry consistent  
 ✔ phase structure observed across systems  
-✔ control effect measurable (Kuramoto)  
-✔ causal hypothesis formulated  
+✔ control effect measurable  
+✔ causal mechanism identified (phase mismatch)  
 
 ---
 
 # 🔴 PRIORITY 1 — REPRODUCIBILITY (CRITICAL)
 
 ## Goal:
-Make results independently reproducible
+Make core results independently reproducible
 
 ### Tasks:
 
@@ -30,14 +30,19 @@ run_full_validation.py
 - [ ] ensure:
 
 ```text
-script → generates ALL core plots
-script → runs without manual changes
+script runs without manual edits  
+script generates core figures automatically  
+outputs saved in defined folders  
 ```
 
-- [ ] map:
+---
+
+## Required Outputs:
 
 ```text
-script → figure → claim
+1. mismatch vs transition plot  
+2. control comparison plot  
+3. one field/structure visualization  
 ```
 
 ---
@@ -45,196 +50,134 @@ script → figure → claim
 ## Target:
 
 ```text
-anyone can run the repo
-and reproduce key results
+anyone can clone → run → reproduce key results
 ```
 
 ---
 
-# 🔵 PRIORITY 2 — MECHANISM VALIDATION (CRITICAL)
+# 🔴 PRIORITY 2 — MECHANISM VALIDATION (CRITICAL)
 
 ## Goal:
-Prove core claim:
+Empirically anchor core claim:
 
 ```text
-phase mismatch → transition
-control direction → system behavior
+phase mismatch → transition probability
 ```
 
 ### Tasks:
 
-- [ ] quantify correlation:
+- [ ] compute:
 
 ```text
-corr(mismatch, events)
+P(transition | M)
 ```
 
-- [ ] verify across runs (not single run)
+- [ ] generate:
 
-- [ ] verify stability of effect
+```text
+Mismatch vs Transition Probability Plot
+```
+
+- [ ] verify:
+
+```text
+effect persists across multiple runs
+```
 
 ---
 
-## Output:
+## Target:
 
 ```text
-Mismatch vs Events plot
-Control vs Drift plot
+clear monotonic or structured relationship:
+higher mismatch → higher transition probability
 ```
 
 ---
 
-# 🟣 PRIORITY 3 — CROSS-SYSTEM CONTROL TEST
+# 🔴 PRIORITY 3 — MINIMAL CROSS-SYSTEM CHECK
 
 ## Goal:
-Show mechanism is NOT Kuramoto-specific
+Show effect is not system-specific
 
 ### Tasks:
 
-- [ ] apply control direction test to:
+- [ ] run validation on:
 
 ```text
-Lorenz
-Rössler
+Lorenz  
++ 1 additional system (e.g. Rössler)
 ```
 
 - [ ] compare:
 
 ```text
-drift behavior
-transition frequency
+mismatch vs transitions behavior
 ```
 
 ---
 
-## Result Target:
+## Target:
 
 ```text
-same directional effect across systems
+same qualitative relationship across systems
 ```
 
 ---
 
-# 🟠 PRIORITY 4 — RESULT → CLAIM LINKING
+# 🟡 PRIORITY 4 — CLAIM ↔ RESULT LINKING
 
 ## Goal:
-Make paper reviewer-proof
+Make results verifiable and reviewer-proof
 
 ### Tasks:
 
-- [ ] for each claim:
+- [ ] ensure each claim maps to:
 
 ```text
-Claim → Script → Figure → File
+Claim → Script → Figure → Output file
 ```
 
 Example:
 
 ```text
-"phase mismatch triggers transitions"
-→ run_control_vs_phase_geometry_v4.py
-→ mismatch_plot.png
-→ causality/results/
+"phase mismatch triggers transitions"  
+→ run_full_validation.py  
+→ mismatch_transition_plot.png  
+→ outputs/
 ```
 
 ---
 
-# 🟢 PRIORITY 5 — DEMONSTRATOR HARDENING
+# 🟡 PRIORITY 5 — PAPER CONSISTENCY (LIGHT)
 
 ## Goal:
-Make system usable without context
+Align paper with actual results
 
 ### Tasks:
 
-- [ ] ensure:
+- [ ] check:
 
 ```text
-run_demo.py works clean
-all outputs saved automatically
-no broken paths
-```
-
-- [ ] fix:
-
-```text
-relative paths
-output folders
-```
-
----
-
-# 🟡 PRIORITY 6 — VISUAL REDUCTION
-
-## Goal:
-Only keep proof-relevant visuals
-
-Keep:
-
-1. phase mismatch vs events  
-2. control comparison plot  
-3. Kuramoto field diagram  
-
-Remove:
-
-- redundant intermediate plots  
-- exploratory visuals  
-
----
-
-# 🧱 PRIORITY 7 — REPO CLEANUP
-
-## Goal:
-Make repo readable for external users
-
-### Tasks:
-
-- [ ] mark:
-
-```text
-/legacy
-/archive
-/lab
-```
-
-- [ ] define:
-
-```text
-canonical outputs only
-```
-
----
-
-# 📄 PRIORITY 8 — PAPER CONSOLIDATION
-
-## Goal:
-Make PAPER_DRAFT usable
-
-### Tasks:
-
-- [ ] ensure:
-
-```text
-each section references real results
-no unsupported claims
+no claim without corresponding figure  
+no speculative statements without label  
 ```
 
 - [ ] keep:
 
 ```text
-mechanism minimal + precise
+mechanism minimal and precise
 ```
 
 ---
 
-# 🚀 RELEASE CONDITION
+# 🚀 RELEASE CONDITION (MINIMAL SCIENTIFIC)
 
-Minimal scientific release:
-
-✔ results reproducible (script-level)  
-✔ mechanism observable in multiple runs  
-✔ control effect measurable  
-✔ cross-system indication present  
-✔ paper draft consistent with results  
+✔ reproducible via single script  
+✔ mismatch → transition relationship visible  
+✔ effect confirmed in multiple runs  
+✔ effect observed in at least 2 systems  
+✔ paper statements backed by figures  
 
 ---
 
@@ -245,8 +188,8 @@ You are no longer building structure.
 You are validating a mechanism:
 
 ```text
-phase mismatch drives transitions
-control direction modifies system behavior
+phase mismatch drives transitions  
+control direction modifies system behavior  
 ```
 
 ---
