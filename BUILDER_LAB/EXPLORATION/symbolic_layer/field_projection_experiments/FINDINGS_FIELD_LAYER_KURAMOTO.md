@@ -7,7 +7,7 @@ Status: **Locked / Stable**
 
 ## 🔷 Visual Reference
 
-![Kuramoto Field Structure](./outputs/kuramoto_structure_visuals/NEXAH_kuramoto_field_structure_v2.png)
+![Kuramoto Field Structure](./outputs/kuramoto_structure_visuals/kuramoto_field_structure_v2_1777946421.png)
 
 ---
 
