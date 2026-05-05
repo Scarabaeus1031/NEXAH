@@ -115,13 +115,13 @@ P(transition) = f(Δ, distance)
 
 ### Clean Transition Field
 
-![Transition Field](./scripts/outputs/transition_field_clean.png)
+![Transition Field](scripts/outputs/transition_field_clean.png)
 
 ---
 
 ### Field + Data Overlay
 
-![Transition Overlay](./scripts/outputs/transition_field_overlay.png)
+![Transition Overlay](scripts/outputs/transition_field_overlay.png)
 
 ---
 
