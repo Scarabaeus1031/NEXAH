@@ -66,7 +66,7 @@ AND are triggered by phase mismatch.
 # 🧠 Structural Interpretation
 
 ```text
-field → structure → geometry → phase → mismatch → transition
+field → structure → geometry → phase → mismatch → transition → control(direction)
 ```
 
 This defines a **two-layer mechanism**:
@@ -126,7 +126,7 @@ Control is not magnitude-based.
 It is:
 
 ```text
-phase-aligned intervention
+phase-dependent AND direction-sensitive intervention
 ```
 
 ---
@@ -136,8 +136,36 @@ phase-aligned intervention
 ```text
 Control effectiveness depends on:
 
-alignment(control, phase dynamics)
+alignment AND direction relative to phase dynamics
 ```
+
+---
+
+## 🔬 Control Directionality (Validated Result)
+
+Empirical observation:
+
+```text
+aligned control  → increases drift and transitions  
+inverted control → reduces drift but increases events  
+damped control   → suppresses events but retains instability  
+inverse control  → minimizes drift AND suppresses transitions  
+```
+
+---
+
+## 🔑 Key Insight
+
+```text
+Control effectiveness depends on direction, not magnitude.
+```
+
+---
+
+## 🧠 Interpretation
+
+Stabilization occurs only when control is applied
+**phase-opposed to intrinsic system dynamics**.
 
 ---
 
@@ -228,14 +256,12 @@ trajectory in structured field
 # ⚠️ Current Limitation
 
 - phase-aligned control improves trajectories  
-- BUT does not yet fully suppress transitions  
+- BUT can increase transition activity if misaligned  
 
 Missing:
 
 ```text
-adaptive control depending on:
-
-phase AND instability
+correct directional alignment of control
 ```
 
 ---
@@ -271,7 +297,9 @@ Systems do not fail randomly.
 They transition when phase coherence breaks
 within a structured dynamical field.
 
-Control succeeds when alignment is restored.
+Control succeeds when alignment is restored
+
+in both phase and direction.
 ```
 
 ---
