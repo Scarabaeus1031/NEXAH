@@ -141,6 +141,26 @@ to externally driven transition structures.
 
 ---
 
+### 🔬 Fractal Transition Validation (Extension)
+
+![Fractal Transition Validation](./VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
+
+```text
+Parameter-driven transitions validated via fractal systems.
+```
+
+Key result:
+
+```text
+parameter motion → mismatch → transitions
+Δ(t) ≈ M(t)
+```
+
+→ This extends validation from intrinsic dynamics  
+to **externally induced transition mechanisms**.
+
+---
+
 ## 🧩 CORE CONCEPTS
 
 → `CORE_CONCEPTS/`
