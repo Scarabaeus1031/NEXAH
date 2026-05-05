@@ -177,9 +177,9 @@ Synchronization and internal stability separate.
 
 ## 9. Phase Boundary (V7 / V8)
 
-![Kuramoto Phase Diagram Final](runs/outputs/kuramoto_v8/final_1777944907/phase_diagram_final.png)
+![Kuramoto Phase Diagram Final](kuramoto_v8/final_1777944907/phase_diagram_final.png)
 
-![Kuramoto System Overview](runs/outputs/kuramoto_v8/final_1777944907/system_overview.png)
+![Kuramoto System Overview](kuramoto_v8/final_1777944907/system_overview.png)
 
 ---
 
