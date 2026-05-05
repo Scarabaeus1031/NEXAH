@@ -113,16 +113,9 @@ P(transition) = f(Δ, distance)
 
 ---
 
-### Clean Transition Field
+### Transition Field (Smoothed)
 
-![Transition Field](R./scripts/outputs/transition_field_clean.png)
-
----
-
-### Field + Data Overlay
-
-
-![Transition Overlay](./scripts/outputs/transition_field_overlay.png)
+![Transition Field](scripts/outputs/transition_heatmap_continuous.png)
 
 ---
 
