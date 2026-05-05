@@ -40,6 +40,29 @@ The figure serves as a **map of the validation space**, not just a collection of
 
 ---
 
+## 🧠 System-Level Structure (Kuramoto FIELD_LAYER)
+
+![Kuramoto Field Structure](./systems/kuramoto/figures/NEXAH_kuramoto_field_structure_v2.png)
+
+**Figure — Kuramoto FIELD_LAYER Structure**
+
+This figure shows the extracted field structure of the Kuramoto system.
+
+Key insight:
+
+- synchronization structure is geometrically organized  
+- internal phase drift emerges *within* the synchronized regime  
+- transition activity is embedded inside the field  
+
+This is the clearest measurable instance of:
+
+global organization ≠ internal stability
+
+The Kuramoto system serves as the primary reference system  
+for FIELD_LAYER structure validation.
+
+---
+
 # 🧭 Purpose
 
 The VALIDATION layer bridges theory and empirical behavior.
