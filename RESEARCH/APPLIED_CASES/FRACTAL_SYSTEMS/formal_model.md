@@ -310,6 +310,85 @@ System evolution follows:
          control
 ```
 
+# 🌌 16. Parameter-Induced Transitions (Fractal Case)
+
+Empirical observations from fractal systems suggest:
+
+```text
+Transitions can be induced by parameter motion,
+not only by internal system dynamics.
+```
+
+Formal extension:
+
+Let a parameter trajectory:
+
+$$
+c(t)
+$$
+
+induce system dynamics.
+
+Then mismatch generalizes to:
+
+$$
+M(t) = |\omega(t) - \hat{\omega}(t; c(t))|
+$$
+
+---
+
+## 🧠 Interpretation
+
+```text
+Mismatch is not only internal.
+
+It can be externally induced
+via parameter evolution.
+```
+
+---
+
+## 🔥 Consequence
+
+```text
+Parameter space becomes a control space
+for transition activation.
+```
+
+---
+
+## 🧭 Example (Fractal Systems)
+
+- Mandelbrot → parameter space
+- Julia → dynamical realization
+
+Observed:
+
+```text
+c(t) crossing boundary → Δ spike → transition
+```
+
+---
+
+## 🧩 Generalization
+
+```text
+Any system with parameter-dependent dynamics
+can exhibit transition structures induced by parameter trajectories.
+```
+
+---
+
+## 🧠 Key Insight
+
+```text
+Transitions are not purely intrinsic.
+
+They emerge from mismatch between:
+    internal dynamics
+    and externally induced structure
+```
+
 ---
 
 # 🔥 Central Insight
