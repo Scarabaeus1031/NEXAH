@@ -1296,6 +1296,26 @@ of the system.
 
 ---
 
+---
+
+# 🧪 Experimental Extensions
+
+## Fractal Transition Validation
+
+An additional experimental validation was performed using fractal systems (Julia / Mandelbrot).
+
+This extends transition analysis from:
+
+```text
+state-space dynamics → parameter-space dynamics
+```
+
+→ See full results:
+
+`RESEARCH/VALIDATION/fractal_tests/README.md`
+
+---
+
 NEXAH Validation Layer  
 Extended Control Validation Series  
 © Thomas K. R. Hofmann · 2026
