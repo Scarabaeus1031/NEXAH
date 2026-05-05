@@ -31,12 +31,12 @@ dist/
 build/
 
 # =========================
-# JUPYTER / NOTEBOOKS
+# JUPYTER
 # =========================
 .ipynb_checkpoints/
 
 # =========================
-# TESTING / TYPE CHECK
+# TESTING
 # =========================
 .coverage
 .coverage.*
@@ -45,129 +45,92 @@ htmlcov/
 .mypy_cache/
 
 # =========================
-# LOGS / TEMP FILES
+# TEMP / LOGS
 # =========================
 *.log
 *.tmp
 *.temp
 
 # =========================
-# EDITOR / IDE
+# EDITORS
 # =========================
 .vscode/
 .idea/
 
 # =========================
-# 🔥 NEXAH OUTPUT POLICY
+# 🔥 GLOBAL OUTPUT RULE
 # =========================
 
-# ❌ Default: ignore ALL outputs everywhere
+# ignore ALL outputs by default
 **/outputs/
-# --- FRACTAL SYSTEM OUTPUTS (CURATED) ---
-!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/
-!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/**/*.png
-!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/**/*.gif
+
 # =========================
-# ✅ CURATED OUTPUTS (ALLOWLIST)
+# 🔥 MEDIA POLICY
 # =========================
 
-# --- ROOT DEMO OUTPUTS ---
+# ignore heavy media globally
+*.gif
+
+# =========================
+# ✅ CORE ALLOWLIST
+# =========================
+
+# --- ROOT DEMO ---
 !outputs/
 !outputs/demo/
 !outputs/demo/*.png
 
-# --- CORE VISUALS (README / DOCS) ---
+# --- CORE VISUALS ---
 !DISCOVERY_ENGINE/outputs/
 !DISCOVERY_ENGINE/outputs/**/*.png
 
 !FIELD_LAYER/outputs/
 !FIELD_LAYER/outputs/**/*.png
 
-!FIELD_LAYER/FIELD_DECOMPOSITION/outputs/
-!FIELD_LAYER/FIELD_DECOMPOSITION/outputs/**/*.png
-
-# --- IEEE KEY VISUALS ---
+# --- IEEE ---
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/*.png
 
-# --- CONTROL LAYER VISUALS ---
+# --- CONTROL ---
 !ARCHITECTURE/CORE/control_layer/outputs/
-!ARCHITECTURE/CORE/control_layer/outputs/demo/
-!ARCHITECTURE/CORE/control_layer/outputs/demo/*.png
+!ARCHITECTURE/CORE/control_layer/outputs/**/*.png
 
-# --- VISUAL SYSTEM (CURATED MEDIA) ---
+# --- DEMONSTRATOR ---
+!NEXAH_DEMONSTRATOR/visuals/
+!NEXAH_DEMONSTRATOR/visuals/**/*.png
+!NEXAH_DEMONSTRATOR/visuals/**/*.gif
+
+# --- APPLICATION VISUALS ---
 !APPLICATIONS/visuals/
+!APPLICATIONS/visuals/**
 !APPLICATIONS/visuals/**/*.png
 !APPLICATIONS/visuals/**/*.gif
-!APPLICATIONS/visuals/**/*.md
-
-# --- DEMONSTRATOR VISUALS ---
-!NEXAH_DEMONSTRATOR/visuals/
-!NEXAH_DEMONSTRATOR/visuals/**/*.gif
-!NEXAH_DEMONSTRATOR/visuals/**/*.png
 
 # =========================
-# DATA (always ignored)
+# 🚀 FRACTAL SYSTEM (NEU)
+# =========================
+
+# allow traversal first (CRITICAL)
+!RESEARCH/
+!RESEARCH/APPLIED_CASES/
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/
+
+# allow files inside
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/**
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/**/*.png
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/**/*.gif
+
+# =========================
+# DATA
 # =========================
 **/*.csv
 **/*.npy
 **/*.npz
-
-# =========================
-# MEDIA POLICY
-# =========================
-
-# Ignore heavy media by default
-*.gif
-
-# Allow only curated GIFs
-!APPLICATIONS/visuals/**/*.gif
+**/data/
 
 # =========================
 # CACHE
 # =========================
 .cache/
-
-# --- HALVORSEN EXPERIMENTS (ALLOW NPY) ---
-!APPLICATIONS/dynamical_systems/halvorsen/outputs/
-!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.npy
-
-# ignore all raw data
-**/*.npy
-**/data/
-
-# allow halvorsen outputs folder
-!APPLICATIONS/dynamical_systems/halvorsen/outputs/
-
-# but ignore raw outputs
-APPLICATIONS/dynamical_systems/halvorsen/outputs/*.npy
-APPLICATIONS/dynamical_systems/halvorsen/outputs/*.txt
-
-# keep visuals
-!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.png
-!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.gif
-!APPLICATIONS/dynamical_systems/halvorsen/outputs/*.mp4
-
-# =========================
-# VALIDATION LAYER (CURATED FIGURES)
-# =========================
-
-!APPLICATIONS/power_systems/VALIDATION_LAYER/figures/
-!APPLICATIONS/power_systems/VALIDATION_LAYER/figures/*.png
-
-# --- EXPERIMENTAL BUILDER LAB OUTPUTS ---
-!BUILDER_LAB/EXPLORATION/experimental/outputs/
-!BUILDER_LAB/EXPLORATION/experimental/outputs/**
-!BUILDER_LAB/EXPLORATION/experimental/outputs/**/*.gif
-
-!RESEARCH/NEXAH_DEVELOPMENT/gate_operator/output_results/
-!RESEARCH/NEXAH_DEVELOPMENT/gate_operator/output_results/*.png
-
-# =========================
-# VALIDATION RESULTS (CURATED)
-# =========================
-
-!RESEARCH/validation/
-!RESEARCH/validation/**/
-!RESEARCH/validation/**/results/
-!RESEARCH/validation/**/results/*.png
