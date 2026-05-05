@@ -5,6 +5,12 @@ Status: **Locked / Stable**
 
 ---
 
+## 🔷 Visual Reference
+
+![Kuramoto Field Structure](./outputs/kuramoto_structure_visuals/NEXAH_kuramoto_field_structure_v2.png)
+
+---
+
 ## 1. Core Result
 
 The FIELD_LAYER representation reveals that synchronization and internal stability are not identical.
@@ -184,4 +190,23 @@ Finding validated across:
 Kuramoto provides the clearest measurable separation.
 ```
 
+---
+
+## 🔻 Interpretation in NEXAH Terms
+
+```text
+Observed phase diagram = local slice
+
+Underlying system = structured field
+
+Transitions = movement within the field,
+not jumps between discrete states
+```
+
+---
+
+## 🔒 Status
+
+```text
 Locked.
+```
