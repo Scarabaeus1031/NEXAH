@@ -14,6 +14,10 @@ Across multiple systems (Lorenz, Rössler, Halvorsen, Kuramoto), we observe that
 - phase evolves continuously across systems  
 - transition activation correlates with phase mismatch  
 
+- This mechanism extends to parameter-driven systems,
+where externally controlled parameter motion induces transitions
+through observable structural mismatch.
+
 A key result is that:
 
 phase mismatch, not instability magnitude, determines transition activation.
@@ -163,6 +167,119 @@ invert    → drift ↓, events ↑
 damped    → drift ↓, events → 0  
 inverse   → drift → 0, events → 0  
 ```
+
+---
+
+## 3.1 Parameter-Driven Transition Extension (Fractal Systems)
+
+To test whether transition structure depends on intrinsic system dynamics  
+or represents a more general phenomenon, we extend the analysis to  
+parameter-driven systems using Julia set evolution.
+
+### Setup
+
+We define a parameter trajectory:
+
+```text
+c(t) ∈ ℂ
+```
+
+and generate the corresponding Julia sets:
+
+```text
+z_{n+1} = z_n^2 + c(t)
+```
+
+For each step, we compute a structural observable:
+
+```text
+Δ(t) = frame-to-frame difference
+```
+
+Additionally, we introduce a global parameter-space metric:
+
+```text
+distance(c)
+```
+
+which measures the position relative to the Mandelbrot set boundary  
+(using continuous escape-time smoothing).
+
+---
+
+### Empirical Result
+
+We observe that transition events (structural changes between frames)  
+are not determined by Δ alone.
+
+Instead, they follow:
+
+```text
+P(transition) = f(Δ, distance)
+```
+
+---
+
+### Observations
+
+- Δ peaks are frequent but mostly reversible  
+- true transitions are rare (~2–3%)  
+- transitions occur only within a bounded region:
+
+```text
+Δ ≈ 10–20  
+distance ≈ 60–85
+```
+
+---
+
+### Interpretation
+
+- Δ captures local structural variation  
+- distance encodes global parameter-space context  
+- transitions occur only when both align  
+
+---
+
+### Relation to Core Mechanism
+
+This result is consistent with the core NEXAH structure:
+
+```text
+phase → mismatch → transition
+```
+
+but introduces a key extension:
+
+```text
+parameter motion → observable Δ → structural mismatch → transition
+```
+
+---
+
+### Status
+
+```text
+empirically observed
+reproducible across runs
+not yet validated across multiple parameter-driven systems
+```
+
+---
+
+### Implication
+
+Transitions are not exclusively intrinsic to system dynamics.
+
+They can also be:
+
+```text
+externally induced through structured parameter motion
+```
+
+This suggests that transition structure is a property of  
+the mapping between dynamics and structure,  
+not only of the underlying system equations.
 
 ---
 

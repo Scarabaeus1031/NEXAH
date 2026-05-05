@@ -137,6 +137,62 @@ Phase dynamics determines *when* they occur.
 
 ---
 
+### 🧪 Extension: Parameter-Driven Transition Activation
+
+In addition to intrinsic system dynamics,  
+transition activation can also be induced externally  
+through structured parameter motion.
+
+Observed in fractal systems (Julia / Mandelbrot):
+
+```text
+c(t) → structure evolution → observable Δ → transition
+```
+
+Empirical relation:
+
+```text
+Δ(t) ≈ M(t)
+```
+
+and:
+
+```text
+P(transition) = f(Δ, context)
+```
+
+where:
+
+- Δ = observable structural change  
+- context = global parameter-space position  
+
+---
+
+### 🧠 Interpretation
+
+- geometry still defines **where transitions are possible**  
+- phase/mismatch defines **when they activate (intrinsic systems)**  
+- parameter motion defines **when they are externally triggered**  
+
+---
+
+### 🧭 Extended Activation View
+
+```text
+intrinsic:   phase → mismatch → transition
+external:    parameter motion → Δ → transition
+```
+
+---
+
+### ⚠️ Status
+
+- empirically observed  
+- consistent with core mechanism  
+- not yet generalized across systems
+  
+---
+
 ## 5. 🧭 Phase Dynamics & Alignment (Causal Layer)
 
 → FINDINGS/TRANSITION_PHASE_DYNAMICS/

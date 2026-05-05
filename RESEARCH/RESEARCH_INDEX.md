@@ -51,11 +51,31 @@ Field model, equations, structural quantities
 Empirical verification across systems  
 → demonstrates that structure exists  
 
-**Key extension:**
+**Core validated results:**
+
+- structure is reproducible across runs  
+- structure is robust under noise  
+- structure is partition-invariant  
+- structure is consistent across systems  
+
+**Control extension:**
 
 - control is phase-dependent  
 - control is direction-sensitive  
 - stabilization requires phase-opposed alignment  
+
+**Experimental extension:**
+
+- parameter-driven transitions (fractal systems)  
+- observable mismatch proxy:  
+  ```text
+  Δ(t) ≈ M(t)
+  ```  
+- transition probability structure:  
+  ```text
+  P(transition) = f(Δ, distance)
+  ```  
+- not yet cross-system validated  
 
 ---
 
@@ -71,6 +91,11 @@ Introduces:
 
 VALIDATION → FINDINGS  
 
+Additionally extended to:
+
+- parameter-space induced transitions (fractal systems)  
+- mapping between observable change and structural mismatch
+- 
 ---
 
 ## 🔥 FINDINGS  
@@ -134,6 +159,15 @@ It is a framework for discovering and navigating structure in dynamical systems.
 
 ---
 
+## 🧪 Experimental Modules
+
+Some modules extend the validation layer beyond core system dynamics:
+
+- fractal transition experiments  
+- parameter-driven transition fields  
+
+→ see: VALIDATION/fractal_tests/
+
 # 🔥 Final Insight
 
 NEXAH starts from observed dynamics and builds structure from data.
@@ -143,3 +177,5 @@ Control is not applied externally to the system.
 ```text
 Control emerges from alignment with intrinsic phase structure,
 and becomes effective only when correctly oriented.
+``
+---

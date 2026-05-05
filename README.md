@@ -211,18 +211,57 @@ but an emergent property of dynamical systems.
 👉 See:
 - [`RESEARCH/VALIDATION/validation_summary.md`](RESEARCH/VALIDATION/validation_summary.md)
 
-### 🔬 Fractal Transition Extension
+---
 
-### 🔬 Fractal Transition Extension
+### 🔬 Fractal Transition Validation (Extension)
+
+> ⚠️ This section represents an experimental extension of the validation layer.  
+> Results are consistent with core findings, but not yet validated across multiple dynamical systems.
 
 ![Fractal Transition Validation](RESEARCH/VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
 
 ```text
-parameter motion → mismatch → transitions
-Δ(t) ≈ M(t)
+Parameter-driven transitions observed in fractal systems (Julia / Mandelbrot).
 ```
 
-→ Demonstrates externally induced transitions via parameter space.
+This extension suggests that transitions can also be induced  
+through structured parameter motion.
+
+It complements the core validation by showing:
+
+- externally driven transition activation  
+- observable structural change (Δ) as a proxy for mismatch  
+- consistent transition patterns across parameter trajectories  
+
+---
+
+### 🔍 Interpretation (Minimal)
+
+- intrinsic systems:  
+  ```text
+  phase → mismatch → transition
+  ```
+
+- parameter-driven systems:  
+  ```text
+  parameter motion → structural change (Δ) → transition
+  ```
+
+---
+
+### 🧭 Status
+
+```text
+experimental
+internally consistent
+not yet cross-system validated
+```
+
+---
+
+→ Full analysis:
+
+`RESEARCH/VALIDATION/fractal_tests/README.md`
 
 ---
 

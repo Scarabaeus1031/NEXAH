@@ -352,6 +352,105 @@ inverse        → minimizes mismatch and transitions
 
 ---
 
+# 🧪 18. Parameter-Driven Transition Extension (Fractal Systems)
+
+To test whether the transition mechanism extends beyond intrinsic system dynamics,  
+we introduce an observable derived from structural evolution:
+
+$$
+\Delta(t) = \text{frame-to-frame structural difference}
+$$
+
+---
+
+## 🔗 Relation to Mismatch
+
+Empirical observation:
+
+$$
+\Delta(t) \approx M(t)
+$$
+
+Interpretation:
+
+```text
+Δ(t) acts as an observable proxy for phase mismatch
+when phase is not explicitly defined
+```
+
+---
+
+## 🌐 Extended Transition Law
+
+For parameter-driven systems:
+
+$$
+P(\text{IOTA}) = f(\Delta(t), C(t))
+$$
+
+where:
+
+- $\Delta(t)$ = local structural change  
+- $C(t)$ = global context (e.g. parameter-space position)
+
+---
+
+## 🧠 Interpretation
+
+```text
+Intrinsic systems:
+M(t) → transition
+
+Parameter-driven systems:
+Δ(t) → transition
+```
+
+with:
+
+```text
+Δ(t) ≈ M(t)
+```
+
+---
+
+## 🔁 Unified View
+
+$$
+P(\text{IOTA}) = f(\mathcal{X}(t))
+$$
+
+with:
+
+$$
+\mathcal{X}(t) =
+\begin{cases}
+M(t) & \text{(phase-defined systems)} \\
+\Delta(t) & \text{(structure-defined systems)}
+\end{cases}
+$$
+
+---
+
+## ⚠️ Status
+
+- empirically observed  
+- consistent with mismatch-based transition mechanism  
+- not yet generalized across systems  
+
+---
+
+## 🔑 Extended Insight
+
+```text
+Transitions are triggered by mismatch,
+
+whether measured via:
+- phase deviation (M)
+- structural change (Δ)
+```
+
+---
+
 ## 🧠 Interpretation
 
 $$
