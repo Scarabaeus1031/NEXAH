@@ -22,34 +22,30 @@ import time
 # CONFIG
 # =========================
 
-BASE_INPUT_DIR = Path(__file__).parent / "outputs" / "kuramoto_v6" / "master_runs"
+SEARCH_ROOT = Path(__file__).parent / "outputs"
 
 
 # =========================
-# LOAD DATA (AUTO-DETECT)
+# LOAD DATA (ROBUST)
 # =========================
 
-def find_latest_sweep_csv(base_dir: Path):
-    runs = sorted(base_dir.glob("run_*"), key=lambda p: p.stat().st_mtime)
+def find_sweep_csv(root: Path):
+    files = list(root.rglob("sweep_results.csv"))
 
-    if not runs:
-        raise FileNotFoundError("No run_* directories found in master_runs")
+    if not files:
+        raise FileNotFoundError("No sweep_results.csv found anywhere in outputs/")
 
-    latest_run = runs[-1]
-    csv_path = latest_run / "sweep_results.csv"
+    # newest file
+    latest = max(files, key=lambda p: p.stat().st_mtime)
 
-    if not csv_path.exists():
-        raise FileNotFoundError(f"sweep_results.csv not found in {latest_run}")
-
-    print(f"Using sweep file → {csv_path}")
-    return csv_path
+    print(f"Using sweep file → {latest}")
+    return latest
 
 
 def load_data():
-    csv_path = find_latest_sweep_csv(BASE_INPUT_DIR)
+    csv_path = find_sweep_csv(SEARCH_ROOT)
     df = pd.read_csv(csv_path)
     return df
-
 
 # =========================
 # BOUNDARY EXTRACTION
