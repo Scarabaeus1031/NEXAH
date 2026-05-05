@@ -416,6 +416,17 @@ instead of suppressing system energy.
 - partially formalized  
 - not yet fully proven  
 
+## 🔗 Model Consistency
+
+The extended formulation preserves the original model structure:
+
+```text
+internal mismatch → intrinsic transitions  
+parameter-induced mismatch → externally driven transitions  
+```
+
+Thus, both mechanisms are unified within a single transition framework.
+
 ---
 
 **NEXAH Phase–Mismatch Transition Model**  
