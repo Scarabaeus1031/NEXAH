@@ -1,0 +1,9 @@
+{
+  "K": 0.5,
+  "iota_percent": 1.262194173462812,
+  "transition_rate": 0.0014444123463923024,
+  "r_mean": 0.10442374648970441,
+  "abs_delta_theta_std": 0.0280920603256736,
+  "lyapunov_estimate": -9.743941019899161e-05,
+  "n_events": 65
+}
