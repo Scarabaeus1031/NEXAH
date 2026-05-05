@@ -188,7 +188,7 @@ with open(output_path, "w", newline="") as f:
     writer = csv.writer(f)
     writer.writerow(["delta", "distance", "transition"])
 
-    for d, dist, t in zip(deltas, distances, transitions):
+    for d, dist, t in zip(delta_arr, distance_arr, transition_arr):
         writer.writerow([d, dist, t])
 
 print(f"Saved data to: {output_path}")
