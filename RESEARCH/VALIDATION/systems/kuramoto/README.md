@@ -18,7 +18,7 @@ from dynamical systems using a unified pipeline.
 
 ## 🔷 Visual Overview
 
-![Field Structure](./outputs/NEXAH_kuramoto_field_structure_v2.png)
+![Field Structure](./figures/NEXAH_kuramoto_field_structure_v2.png)
 
 ---
 
@@ -140,16 +140,15 @@ not jumps between discrete states
 ## 🧪 Repository Structure
 
 ```text
-field_projection_experiments/
+systems/kuramoto/
 │
-├── field_projection_*.py        # system projections
-├── kuramoto_master_v6.py        # full pipeline
-├── kuramoto_phase_boundary_v8.py
+├── scripts/      # projection + sweep + boundary extraction
+├── runs/         # raw experimental outputs (multi-run, sweeps)
+├── figures/      # curated canonical visuals
+├── summaries/    # compressed findings (CORE, FIELD_LAYER)
 │
-└── outputs/
-    ├── kuramoto_v6/
-    ├── kuramoto_v8/
-    └── visuals/
+├── BUILDING_LOG.md
+└── README.md
 ```
 
 ---
@@ -202,6 +201,8 @@ Core finding validated
 
 ## 📎 Related
 
-- CORE_FINDINGS.md
-- kuramoto_findings.md
-- visual_gallery.md
+```text
+summaries/CORE_FINDINGS.md
+summaries/FINDINGS_FIELD_LAYER_KURAMOTO.md
+BUILDING_LOG.md
+```
