@@ -107,7 +107,7 @@ Recent validation results show:
 
 ```text
 Transitions are not only triggered by phase mismatch,
-but can be causally influenced through phase-aligned control.
+but can be causally influenced through phase-dependent control.
 ```
 
 Key empirical result:
@@ -146,8 +146,6 @@ and introduces a new control principle:
 
 > effective control is achieved by opposing intrinsic phase-aligned instability,  
 > not by reducing system magnitude.
-
----
 
 ---
 
@@ -215,6 +213,8 @@ but an emergent property of dynamical systems.
 
 ### 🔬 Fractal Transition Extension
 
+### 🔬 Fractal Transition Extension
+
 ![Fractal Transition Validation](RESEARCH/VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
 
 ```text
@@ -222,7 +222,7 @@ parameter motion → mismatch → transitions
 Δ(t) ≈ M(t)
 ```
 
-→ Demonstrates externally induced transitions in structured systems.
+→ Demonstrates externally induced transitions via parameter space.
 
 ---
 
