@@ -162,7 +162,7 @@ parameter path crossing boundary → transition spike
 
 ## Visual
 
-![Julia Path](./figures/julia_path_final.gif)
+![Delta Plot](../../APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/delta_plot.png)
 
 # ⚡ transition_detection.md
 
