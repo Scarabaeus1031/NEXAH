@@ -213,18 +213,18 @@ but an emergent property of dynamical systems.
 
 ---
 
-### 🔬 Fractal Transition Validation 
+### 🔬 Fractal Transition Validation (Extension)
 
 > ⚠️ This section represents an experimental extension of the validation layer.  
 > Results are consistent with core findings, but not yet validated across multiple dynamical systems.
 
-![Fractal Transition Validation](./visuals/Nexah-Fractal_Transition_Validation.png)
+![Fractal Transition Validation](RESEARCH/VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
 
 ```text
 Parameter-driven transitions observed in fractal systems (Julia / Mandelbrot).
 ```
 
-This extension demonstrates that transitions can also be induced  
+This extension suggests that transitions can also be induced  
 through structured parameter motion.
 
 It complements the core validation by showing:
