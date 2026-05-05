@@ -855,6 +855,126 @@ BUT:
 
 ---
 
+---
+
+# 🧪 15. Phase-Aligned Control Comparison (V4)
+
+**Script:**
+run_control_vs_phase_geometry_v4.py
+
+---
+
+## 📊 Results
+
+```text
+no_control   → drift: 0.2156, events: 5
+aligned      → drift: 0.8245, events: 47
+invert       → drift: 0.1899, events: 58
+damped       → drift: 0.6030, events: 0
+inverse      → drift: 0.0165, events: 0
+```
+
+---
+
+## 🧠 Visual Evidence
+
+![Control Comparison](causality/results/control_v4_comparison.png)
+
+---
+
+## 🔍 Interpretation
+
+### 1. Alignment is NOT sufficient
+
+```text
+aligned → increases drift AND events
+```
+
+→ naive phase alignment destabilizes the system
+
+---
+
+### 2. Inversion alone is NOT stable
+
+```text
+invert → low drift but high event count
+```
+
+→ suppresses amplitude locally but triggers transitions
+
+---
+
+### 3. Damping removes events but not instability
+
+```text
+damped → zero events but high drift
+```
+
+→ system remains energetically unstable
+
+---
+
+### 4. Inverse control is structurally optimal
+
+```text
+inverse → minimal drift AND zero events
+```
+
+→ first instance of full stabilization behavior
+
+---
+
+## 🔑 Key Observation
+
+```text
+Control effectiveness depends on direction, not magnitude.
+```
+
+---
+
+## 🔥 Critical Insight
+
+```text
+Stabilization occurs only when control is phase-opposed
+to the intrinsic system dynamics.
+```
+
+---
+
+## 🧭 Implication
+
+- Phase alignment alone is insufficient  
+- Instability suppression alone is insufficient  
+
+Only:
+
+```text
+phase-opposed control → stabilizes system structure
+```
+
+---
+
+## ⚠️ Important Limitation
+
+- Result observed in controlled test setting  
+- Requires validation across:
+  - multi-run  
+  - noise  
+  - cross-system  
+
+---
+
+## 🚀 Next Step
+
+```text
+Validate inverse control under:
+- noise
+- multi-run variability
+- other dynamical systems
+```
+
+---
+
 ## 🔑 Key Observation
 
 ```text
