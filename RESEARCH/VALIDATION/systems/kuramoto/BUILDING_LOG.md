@@ -108,9 +108,9 @@ Iota ≈ 8.00 %
 transition_rate ≈ 0.00456
 ```
 
-![Kuramoto r(t)](runs/kuramoto_v3/K_1_800/kuramoto_v3_order_parameter.png)
+![Kuramoto r(t)](runs/outputs/kuramoto_v3/K_1_800/kuramoto_v3_order_parameter.png)
 
-![Kuramoto Slice Projection](runs/kuramoto_v3/K_1_800/kuramoto_v3_slice_r_dr_dt.png)
+![Kuramoto Slice Projection](runs/outputs/kuramoto_v3/K_1_800/kuramoto_v3_slice_r_dr_dt.png)
 
 ---
 
@@ -136,9 +136,9 @@ Iota = mean(|Δθ|) + k * std(|Δθ|)
 
 → dynamic, data-driven threshold
 
-![Kuramoto Phase Cloud](runs/kuramoto_v5/runs/K_1_800_1777941892/phase_cloud.png)
+![Kuramoto Phase Cloud](runs/outputs/kuramoto_v5/runs/K_1_800_1777941892/phase_cloud.png)
 
-![Kuramoto Lyapunov](runs/kuramoto_v5/runs/K_1_800_1777941892/lyapunov.png)
+![Kuramoto Lyapunov](runs/outputs/kuramoto_v5/runs/K_1_800_1777941892/lyapunov.png)
 
 ---
 
@@ -157,13 +157,13 @@ Key outputs:
 - transition_rate vs K  
 - Lyapunov vs K  
 
-![Mean Synchronization vs K](runs/kuramoto_v6/master_runs/run_1777943097/sweep/r_mean_vs_K.png)
+![Mean Synchronization vs K](runs/outputs/kuramoto_v6/master_runs/run_1777943097/sweep/r_mean_vs_K.png)
 
-![Drift STD vs K](runs/kuramoto_v6/master_runs/run_1777943097/sweep/drift_std_vs_K.png)
+![Drift STD vs K](runs/outputs/kuramoto_v6/master_runs/run_1777943097/sweep/drift_std_vs_K.png)
 
-![Transition Rate vs K](runs/kuramoto_v6/master_runs/run_1777943097/sweep/transition_rate_vs_K.png)
+![Transition Rate vs K](runs/outputs/kuramoto_v6/master_runs/run_1777943097/sweep/transition_rate_vs_K.png)
 
-![Lyapunov vs K](runs/kuramoto_v6/master_runs/run_1777943097/sweep/lyapunov_vs_K.png)
+![Lyapunov vs K](runs/outputs/kuramoto_v6/master_runs/run_1777943097/sweep/lyapunov_vs_K.png)
 
 ---
 
@@ -177,9 +177,9 @@ Synchronization and internal stability separate.
 
 ## 9. Phase Boundary (V7 / V8)
 
-![Final Phase Diagram](runs/kuramoto_v8/final_1777944907/phase_diagram_final.png)
+![Kuramoto Phase Diagram Final](runs/outputs/kuramoto_v8/final_1777944907/phase_diagram_final.png)
 
-![System Overview](runs/kuramoto_v8/final_1777944907/system_overview.png)
+![Kuramoto System Overview](runs/outputs/kuramoto_v8/final_1777944907/system_overview.png)
 
 ---
 
