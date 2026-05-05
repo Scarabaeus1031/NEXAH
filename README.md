@@ -211,18 +211,20 @@ but an emergent property of dynamical systems.
 👉 See:
 - [`RESEARCH/VALIDATION/validation_summary.md`](RESEARCH/VALIDATION/validation_summary.md)
 
-### 🔬 Fractal Transition Extension
+---
 
 ### 🔬 Fractal Transition Extension
 
 ![Fractal Transition Validation](RESEARCH/VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
 
 ```text
-parameter motion → mismatch → transitions
-Δ(t) ≈ M(t)
+Parameter-driven transitions observed in fractal systems (Julia / Mandelbrot).
 ```
 
-→ Demonstrates externally induced transitions via parameter space.
+This experimental extension shows that transitions can also be  
+induced through structured parameter motion.
+
+→ See: `RESEARCH/VALIDATION/fractal_tests/`
 
 ---
 
