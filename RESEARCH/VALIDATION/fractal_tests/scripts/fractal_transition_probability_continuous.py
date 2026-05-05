@@ -179,3 +179,16 @@ plt.close()
 print("Samples:", len(delta_arr))
 print("Transitions:", np.sum(transition_arr))
 print("Rate:", np.mean(transition_arr))
+
+import csv
+
+output_path = "RESEARCH/VALIDATION/fractal_tests/scripts/outputs/transition_probability_data.csv"
+
+with open(output_path, "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["delta", "distance", "transition"])
+
+    for d, dist, t in zip(deltas, distances, transitions):
+        writer.writerow([d, dist, t])
+
+print(f"Saved data to: {output_path}")
