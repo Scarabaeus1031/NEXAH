@@ -14,7 +14,7 @@ It establishes that the observed structures, transition dynamics, and control me
 
 # 🧭 Validation Overview (Visual Summary)
 
-![NEXAH Validation Summary](./nexah_validation_summary_visual.png)
+![NEXAH Validation Summary](./visuals/nexah_validation_summary_visual.png)
 ```text
 This figure represents the compression of ~180+ validation artifacts into a single structural representation.
 ```
