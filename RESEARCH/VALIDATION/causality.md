@@ -138,9 +138,12 @@ Only inverse control suppresses both drift and events.
 # 🔥 Core Result
 
 ```text
-Instability is phase-aligned.
+This is the first direct empirical evidence that:
 
-Stabilization requires phase-opposed control.
+stability in the system is achieved
+not by reducing instability magnitude,
+
+but by reversing its phase-aligned direction.
 ```
 
 ---
@@ -191,8 +194,8 @@ but opposes intrinsic phase-aligned instability.
 
 # 🔑 Principle
 
-```text
-Control effectiveness depends on phase alignment.
+```
+Control effectiveness depends on directional phase alignment.
 ```
 
 More precisely:
