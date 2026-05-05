@@ -51,6 +51,12 @@ Field model, equations, structural quantities
 Empirical verification across systems  
 → demonstrates that structure exists  
 
+**Key extension:**
+
+- control is phase-dependent  
+- control is direction-sensitive  
+- stabilization requires phase-opposed alignment  
+
 ---
 
 ## 🔁 TRANSITION & PHASE LAYER  
@@ -132,7 +138,8 @@ It is a framework for discovering and navigating structure in dynamical systems.
 
 NEXAH starts from observed dynamics and builds structure from data.
 
----
+Control is not applied externally to the system.
 
-NEXAH Research Index  
-Navigation Layer · 2026
+```text
+Control emerges from alignment with intrinsic phase structure,
+and becomes effective only when correctly oriented.
