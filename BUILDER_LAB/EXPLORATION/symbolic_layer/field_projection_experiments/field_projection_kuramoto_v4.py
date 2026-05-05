@@ -6,7 +6,7 @@ import json
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Dict, Tuple
+from typing import Dict
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -49,7 +49,8 @@ def simulate(config: KuramotoConfig):
 
     phases0 = rng.uniform(-np.pi, np.pi, config.n_oscillators)
 
-    t_eval = np.arange(0, config.t_max, config.dt)
+    # ✅ FIX: include final timestep
+    t_eval = np.arange(0, config.t_max + config.dt, config.dt)
 
     sol = solve_ivp(
         kuramoto_rhs,
@@ -59,6 +60,9 @@ def simulate(config: KuramotoConfig):
         args=(omega, config.coupling_k),
         method="DOP853"
     )
+
+    if not sol.success:
+        raise RuntimeError("Integration failed")
 
     phases = sol.y.T
     return sol.t, phases
@@ -70,11 +74,19 @@ def simulate(config: KuramotoConfig):
 
 def run_experiment(config: KuramotoConfig):
 
-    # 🔥 unique run
+    # 🔥 OUTPUT STRUCTURE
     base_dir = Path(__file__).parent / "outputs" / "kuramoto_v4" / "runs"
     run_id = f"K_{config.coupling_k:.3f}_{int(time.time())}".replace(".", "_")
+
     out = base_dir / run_id
     out.mkdir(parents=True, exist_ok=True)
+
+    print(f"\nRunning K={config.coupling_k}")
+    print(f"Saving to → {out}")
+
+    # =========================
+    # SIMULATION
+    # =========================
 
     t, phases = simulate(config)
 
@@ -83,7 +95,10 @@ def run_experiment(config: KuramotoConfig):
     t = t[cut:]
     phases = phases[cut:]
 
-    # order parameter
+    # =========================
+    # OBSERVABLES
+    # =========================
+
     z = np.mean(np.exp(1j * phases), axis=1)
     r = np.abs(z)
     psi = np.unwrap(np.angle(z))
@@ -93,15 +108,23 @@ def run_experiment(config: KuramotoConfig):
 
     states = np.column_stack([r, dr, dpsi])
 
+    # =========================
+    # PCA
+    # =========================
+
     pca = PCA(n_components=3)
     proj = pca.fit_transform(states)
 
-    beta = proj[:,1]
-    gamma = proj[:,2]
+    alpha = proj[:, 0]
+    beta  = proj[:, 1]
+    gamma = proj[:, 2]
+
+    # =========================
+    # PHASE + DRIFT
+    # =========================
 
     theta = np.unwrap(np.arctan2(gamma, beta))
     dtheta = np.diff(theta, prepend=theta[0])
-
     abs_d = np.abs(dtheta)
 
     # =========================
@@ -111,24 +134,32 @@ def run_experiment(config: KuramotoConfig):
     mean = np.mean(abs_d)
     std = np.std(abs_d)
 
-    theta_th = mean + 0.5*std
-    iota_th  = mean + 2.5*std
+    theta_th = mean + 0.5 * std
+    iota_th  = mean + 2.5 * std
 
     regimes = np.full(len(abs_d), "Theta", dtype=object)
     regimes[(abs_d > theta_th) & (dtheta > 0)] = "Tao"
     regimes[(abs_d > theta_th) & (dtheta < 0)] = "Dao"
     regimes[abs_d >= iota_th] = "Iota"
 
-    # events
+    # =========================
+    # EVENTS
+    # =========================
+
     peaks, _ = find_peaks(abs_d, height=iota_th, distance=50)
 
     # =========================
-    # SAVE
+    # SAVE DATA
     # =========================
 
     df = pd.DataFrame({
         "t": t,
         "r": r,
+        "dr": dr,
+        "dpsi": dpsi,
+        "alpha": alpha,
+        "beta": beta,
+        "gamma": gamma,
         "abs_delta_theta": abs_d,
         "regime": regimes
     })
@@ -137,13 +168,70 @@ def run_experiment(config: KuramotoConfig):
 
     summary = {
         "K": config.coupling_k,
-        "iota_percent": float((regimes == "Iota").mean()*100),
-        "transition_rate": float(len(peaks)/len(df)),
+        "iota_percent": float((regimes == "Iota").mean() * 100),
+        "transition_rate": float(len(peaks) / len(df)),
         "r_mean": float(r.mean()),
-        "abs_delta_theta_std": float(abs_d.std())
+        "r_std": float(r.std()),
+        "abs_delta_theta_mean": float(abs_d.mean()),
+        "abs_delta_theta_std": float(abs_d.std()),
+        "n_events": int(len(peaks))
     }
 
     with open(out / "summary.json", "w") as f:
         json.dump(summary, f, indent=2)
 
+    # =========================
+    # PLOTS
+    # =========================
+
+    # r(t)
+    plt.figure(figsize=(10,4))
+    plt.plot(t, r)
+    plt.title("r(t)")
+    plt.xlabel("t")
+    plt.ylabel("r")
+    plt.savefig(out / "r_timeseries.png", dpi=150)
+    plt.close()
+
+    # phase drift
+    plt.figure(figsize=(10,4))
+    plt.plot(abs_d)
+    plt.scatter(peaks, abs_d[peaks], s=10)
+    plt.title("abs delta theta + events")
+    plt.savefig(out / "phase_drift.png", dpi=150)
+    plt.close()
+
+    # PCA projection
+    fig = plt.figure(figsize=(8,6))
+    ax = fig.add_subplot(111, projection="3d")
+    ax.plot(alpha, beta, gamma, linewidth=0.3)
+    ax.set_title("PCA projection")
+    plt.savefig(out / "pca_projection.png", dpi=150)
+    plt.close()
+
+    # phase diagram
+    plt.figure(figsize=(6,5))
+    plt.scatter(r, abs_d, s=1, alpha=0.3)
+    plt.xlabel("r")
+    plt.ylabel("abs_delta_theta")
+    plt.title("phase cloud")
+    plt.savefig(out / "phase_cloud.png", dpi=150)
+    plt.close()
+
     return summary
+
+
+# =========================
+# MAIN
+# =========================
+
+def main():
+    config = KuramotoConfig()
+    summary = run_experiment(config)
+
+    print("\n--- RUN COMPLETE ---")
+    print(json.dumps(summary, indent=2))
+
+
+if __name__ == "__main__":
+    main()
