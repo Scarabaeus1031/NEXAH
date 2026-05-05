@@ -176,6 +176,8 @@ where transitions correspond to structural changes in system behavior  [oai_cita
 
 ---
 
+---
+
 # 🎯 10. Control Interaction
 
 Define control input:
@@ -184,94 +186,159 @@ $$
 s(t)
 $$
 
----
+which acts on system dynamics.
 
-Modified phase velocity:
+We model its effect on phase velocity:
 
 $$
 \omega_{\text{eff}}(t) = \omega(t) - s(t)
 $$
 
-Mismatch becomes:
+---
+
+## 🧠 Interpretation
+
+```text
+Control does not directly reduce system energy.
+
+It modifies phase evolution.
+```
+
+---
+
+# 🔁 11. Controlled Mismatch
+
+Under control, mismatch becomes:
 
 $$
-M(t) = |\omega_{\text{eff}}(t) - \hat{\omega}(t)|
+M_c(t) = |\omega_{\text{eff}}(t) - \hat{\omega}(t)|
 $$
 
 ---
 
-## 🔑 Control Principle
+## 🔑 Control Objective
 
 ```text
-Control acts by modifying phase evolution,
-not by reducing energy directly
+Minimize phase mismatch:
+
+M_c(t) → 0
+```
+
+Equivalent:
+
+$$
+\omega_{\text{eff}}(t) \rightarrow \hat{\omega}(t)
+$$
+
+---
+
+# ⚡ 12. Directional Control
+
+Empirical results show:
+
+```text
+Control effectiveness depends on direction.
+```
+
+We extend:
+
+$$
+s(t) = s^*(\phi(t), d)
+$$
+
+where:
+
+- $d \in \{-1, +1\}$ defines direction relative to phase flow  
+
+---
+
+## 🔁 Observed Behavior
+
+```text
+d aligned (+1)   → increases drift and transition activity  
+d inverted (-1)  → reduces drift but may increase mismatch  
+d damped         → suppresses transitions partially  
+d inverse        → minimizes mismatch and suppresses transitions
 ```
 
 ---
 
-# 🔬 11. Summary Mapping
+# 🧭 13. Transition Mechanism
+
+Empirical result:
 
 ```text
-x(t)
-↓
-φ(t)
-↓
-ω(t)
-↓
-ω̂(t)
-↓
-M(t)
-↓
-transition probability
+Transitions are NOT driven by instability magnitude alone.
+```
+
+Formally:
+
+$$
+\text{transition} \not\sim I(t)
+$$
+
+but:
+
+$$
+\text{transition} \sim M(t)
+$$
+
+---
+
+# 🧬 14. Geometric Interpretation
+
+```text
+Stability:
+→ M ≈ 0 (coherent phase flow)
+
+Instability:
+→ I large (high dynamical magnitude)
+
+Transition:
+→ M large (phase mismatch region)
 ```
 
 ---
 
-# 🔥 Core Result
+# 🔄 15. Structural Flow
+
+System evolution follows:
 
 ```text
-Transitions in dynamical systems
-are governed by phase mismatch,
-not by instability magnitude alone
+φ → ω → ω̂ → M → transition probability
+            ↑
+         control
 ```
 
 ---
 
-# ⚠️ Scope
-
-This model is:
-
-- empirically grounded  
-- structurally consistent  
-- not a complete formal theory  
-
----
-
-# 🚀 Outlook
-
-Future extensions:
+# 🔥 Central Insight
 
 ```text
-- multi-dimensional phase embeddings
-- invariant measure connection
-- operator formulation
-- spectral representation
+Transitions are caused by phase mismatch,
+not by instability magnitude alone.
 ```
 
 ---
 
-# 🧠 Final Statement
+# 🚀 Operational Principle
 
 ```text
-The system is governed by a continuous transition field,
-which determines when and where trajectories change regime.
+Control aligns phase dynamics
+instead of suppressing system energy.
 ```
 
 ---
 
-**NEXAH Formal Model Layer**  
-Phase · Mismatch · Transition Field  
-© Thomas K. R. Hofmann · 2026
+# 🧭 Status
 
+- empirically supported  
+- cross-system consistent  
+- partially formalized  
+- not yet fully proven  
 
+---
 
+**NEXAH Phase–Mismatch Transition Model**  
+Minimal Formal Layer  
+Thomas K. R. Hofmann · 2026
