@@ -194,6 +194,95 @@ P(transition) = f(M)
 → Fractal systems act as a **controlled testbed for transition induction**
 
 ---
+
+> ⚠️ **Experimental Status**
+>
+> The fractal validation represents an **extension of the validation layer**, not a fully validated system-level result.
+>
+> - validated internally (consistent results) ✔  
+> - not yet cross-system tested ✘  
+> - not yet integrated into control framework ✘  
+
+---
+
+### 🔍 Empirical Extension (Δ–Distance Transition Field)
+
+A detailed empirical analysis was performed in:
+
+```
+RESEARCH/VALIDATION/fractal_tests/
+```
+
+Key result:
+
+```text
+P(transition) = f(Δ, distance)
+```
+
+---
+
+### 📊 Observed Transition Structure
+
+- Δ peaks are frequent but mostly reversible  
+- transitions are rare (~2–3%)  
+- transitions occur only within a bounded region:
+
+```text
+Δ ≈ 10–20
+distance ≈ 60–85
+```
+
+---
+
+### 📈 Empirical Evidence
+
+![Transition Map](fractal_tests/scripts/outputs/transition_map_continuous.png)
+
+![Transition Field](fractal_tests/scripts/outputs/transition_heatmap_continuous.png)
+
+![Boundary Fit](fractal_tests/scripts/outputs/transition_field_fit.png)
+
+---
+
+### 🧠 Interpretation (Minimal)
+
+- Δ = local structural change  
+- distance = global parameter-space position  
+- transition occurs only when both align  
+
+---
+
+### 🧭 Relation to Core Validation
+
+This extension is consistent with:
+
+```text
+Transitions occur in structured regions ✔
+Structure is non-random ✔
+```
+
+but differs in:
+
+```text
+parameter-space driven (external) vs state-space driven (intrinsic)
+```
+
+---
+
+### 📌 Conclusion (Extension)
+
+```text
+Transition structure can be induced through structured parameter motion,
+not only intrinsic system dynamics.
+```
+
+---
+
+→ Full experimental breakdown:
+
+`RESEARCH/VALIDATION/fractal_tests/README.md`
+
+---
 ## LEVEL 5 — Field-Level Structure
 
 - Instability field  
