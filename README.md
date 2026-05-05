@@ -213,6 +213,17 @@ but an emergent property of dynamical systems.
 👉 See:
 - [`RESEARCH/VALIDATION/validation_summary.md`](RESEARCH/VALIDATION/validation_summary.md)
 
+### 🔬 Fractal Transition Extension
+
+![Fractal Transition Validation](RESEARCH/VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
+
+```text
+parameter motion → mismatch → transitions
+Δ(t) ≈ M(t)
+```
+
+→ Demonstrates externally induced transitions in structured systems.
+
 ---
 
 ## 🧠 Structural Insight (Unified View)
