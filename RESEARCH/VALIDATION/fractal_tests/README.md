@@ -115,14 +115,14 @@ P(transition) = f(Δ, distance)
 
 ### Clean Transition Field
 
-![Transition Field](RESEARCH/VALIDATION/fractal_tests/scripts/outputs/transition_field_clean.png)
+![Transition Field](R./scripts/outputs/transition_field_clean.png)
 
 ---
 
 ### Field + Data Overlay
 
 
-![Transition Overlay](RESEARCH/VALIDATION/fractal_tests/scripts/outputs/transition_field_overlay.png)
+![Transition Overlay](./scripts/outputs/transition_field_overlay.png)
 
 ---
 
