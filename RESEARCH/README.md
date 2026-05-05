@@ -126,6 +126,19 @@ This visual summarizes the validation stack across:
 
 👉 Role: **empirical backbone of the system**
 
+### Fractal Systems (Mandelbrot / Julia)
+
+NEXAH was applied to fractal systems by analyzing parameter-induced transitions.
+
+Key observation:
+
+```text
+parameter motion → induces mismatch → triggers transitions
+```
+
+This extends the framework beyond intrinsic system dynamics
+to externally driven transition structures.
+
 ---
 
 ## 🧩 CORE CONCEPTS
