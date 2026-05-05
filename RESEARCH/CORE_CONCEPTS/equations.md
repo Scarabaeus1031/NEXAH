@@ -188,7 +188,7 @@ M(t) = deviation from locally consistent phase evolution
 Current control formulation:
 
 $$
-s(t) = s^*(φ(t), d)
+s(t) = d · s^*(\phi(t))
 $$
 
 ---
