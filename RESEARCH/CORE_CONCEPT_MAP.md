@@ -173,7 +173,17 @@ Transitions = breakdown of rotational consistency
 
 ### Control Implication
 
-phase-aligned, not magnitude-based
+Control is phase-dependent and direction-sensitive.
+
+```text
+phase alignment alone is insufficient
+```
+
+Effective control requires:
+
+```text
+correct directional alignment relative to system phase dynamics
+```
 
 ---
 
@@ -181,7 +191,37 @@ phase-aligned, not magnitude-based
 
 Instability → potential for transition  
 Phase mismatch → activation of transition  
-Control alignment → suppression or guidance  
+Control direction → determines stabilization or amplification  
+
+---
+
+---
+
+### 🔬 Control Directionality (Validated Result)
+
+Empirical observation:
+
+```text
+aligned control  → increases drift and transition activity  
+inverted control → reduces drift but increases transitions  
+damped control   → suppresses events but retains instability  
+inverse control  → minimizes drift AND suppresses transitions  
+```
+
+---
+
+### 🔑 Key Insight
+
+```text
+Control effectiveness depends on direction, not magnitude.
+```
+
+---
+
+### Interpretation
+
+Stabilization occurs only when control is applied **phase-opposed**
+to the intrinsic system dynamics.
 
 ---
 
@@ -267,7 +307,8 @@ Control is not external forcing.
 It is:
 
 - alignment with structure  
-- phase-aligned intervention  
+- phase-dependent intervention  
+- directionally correct control relative to system dynamics  
 - mismatch suppression  
 - guided movement through transitions  
 
@@ -329,7 +370,8 @@ that defines what motion is possible.
 
 Transitions occur when phase coherence breaks.
 
-Control succeeds when alignment is restored.
+Control succeeds when alignment is restored
+in both phase and direction.
 
 ---
 
