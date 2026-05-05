@@ -12,17 +12,24 @@ from first principles to applied systems.
 
 # 🔥 What This Framework Does
 
-text NEXAH extracts structure from dynamical systems and makes it navigable. 
+NEXAH extracts structure from dynamical systems and makes it navigable.
 
 Pipeline:
 
-text dynamics → density → structure → transitions → phase → topology → control 
+dynamics → density → structure → transitions → phase → topology → control
 
 ---
 
 # 🧭 Recommended Reading Path
 
-text 1. FOUNDATION → minimal assumptions   2. CORE_CONCEPTS → operational structure   3. VALIDATION → empirical evidence   4. TRANSITION & PHASE LAYER → structure extraction   5. FINDINGS → invariant principles   6. APPLIED_CASES → real systems   7. FIGURES → visual synthesis   8. THEORETICAL_EXTENSIONS → formalization   
+1. FOUNDATION → minimal assumptions  
+2. CORE_CONCEPTS → operational structure  
+3. VALIDATION → empirical evidence  
+4. TRANSITION & PHASE LAYER → structure extraction  
+5. FINDINGS → invariant principles  
+6. APPLIED_CASES → real systems  
+7. FIGURES → visual synthesis  
+8. THEORETICAL_EXTENSIONS → formalization  
 
 ---
 
@@ -56,7 +63,7 @@ Introduces:
 - drift and winding as transport  
 - cross-system structural consistency  
 
-text VALIDATION → FINDINGS 
+VALIDATION → FINDINGS  
 
 ---
 
@@ -91,13 +98,14 @@ Koopman, operators, formalization
 
 # 🔁 Logical Dependency
 
-text FOUNDATION   → CORE_CONCEPTS   → VALIDATION   → TRANSITION & PHASE   → FINDINGS   → APPLIED_CASES   → FIGURES   → THEORETICAL_EXTENSIONS 
+FOUNDATION → CORE_CONCEPTS → VALIDATION → TRANSITION & PHASE → FINDINGS → APPLIED_CASES → FIGURES → THEORETICAL_EXTENSIONS  
 
 ---
 
 # 🔑 Core Idea
 
-text NEXAH is not a model.  It is a framework for discovering and navigating structure in dynamical systems. 
+NEXAH is not a model.  
+It is a framework for discovering and navigating structure in dynamical systems.
 
 ---
 
@@ -122,7 +130,7 @@ text NEXAH is not a model.  It is a framework for discovering and navigating str
 
 # 🔥 Final Insight
 
-text NEXAH starts from observed dynamics and builds structure from data. 
+NEXAH starts from observed dynamics and builds structure from data.
 
 ---
 
