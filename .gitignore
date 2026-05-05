@@ -134,3 +134,6 @@ htmlcov/
 # CACHE
 # =========================
 .cache/
+# --- FRACTAL SYSTEM OUTPUTS ---
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/
+!RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/*.gif
