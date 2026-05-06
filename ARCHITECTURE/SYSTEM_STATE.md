@@ -1,7 +1,7 @@
 # NEXAH — System State (Current Ground Truth)
 
-> This document reflects the **actual implemented and observed state of NEXAH**,  
-> not the intended or ideal architecture.
+> This document reflects the **current implemented and empirically observed state of NEXAH**,  
+> not an idealized or finalized architecture.
 
 ---
 
@@ -9,7 +9,8 @@
 
 NEXAH is currently a:
 
-> **field-based structural analysis and navigation framework for dynamical systems**
+> **field-based structural analysis framework  
+> with exploratory navigation capabilities for dynamical systems**
 
 It transforms:
 
@@ -24,17 +25,17 @@ dynamics → structure → field → geometry → transition structure → navig
 NEXAH is:
 
 ```text
-✔ a working structural system (demonstrator level)
+✔ a working structural research framework (demonstrator level)
 ✔ capable of extracting transition structure
-✔ capable of producing consistent geometric behavior
+✔ capable of producing consistent geometric patterns
 ```
 
 But:
 
 ```text
-❗ not yet statistically validated
-❗ not yet formally unified
-❗ not yet a stable kernel system
+❗ not yet comprehensively validated
+❗ limited statistical evaluation
+❗ not yet unified into a stable runtime kernel
 ```
 
 ---
@@ -44,7 +45,7 @@ But:
 Status:
 
 ✔ discrete transition structure (sheet model)  
-✔ transition matrices (banded, local)  
+✔ transition matrices with local structure  
 ✔ basic regime decomposition  
 ✔ trajectory-to-structure mapping  
 
@@ -53,7 +54,7 @@ Status:
 ## Key Observation
 
 ```text
-Transitions are local and structured.
+Transitions appear local and structured.
 ```
 
 ---
@@ -61,8 +62,8 @@ Transitions are local and structured.
 ## Status
 
 ```text
-🟡 plausible (single-run consistent)
-❗ requires multi-run validation
+🟡 empirically consistent
+❗ requires broader validation
 ```
 
 ---
@@ -80,7 +81,8 @@ Status:
 ## Interpretation
 
 ```text
-System can be represented as a continuous field.
+System dynamics can be represented
+as continuous structured fields.
 ```
 
 ---
@@ -89,25 +91,26 @@ System can be represented as a continuous field.
 
 ```text
 🟡 plausible
-❗ not yet validated across runs
+❗ not yet broadly validated across systems
 ```
 
 ---
 
-# 🔷 3. Transition Structure (Core Finding)
+# 🔷 3. Transition Structure (Core Observation)
 
 Status:
 
 ✔ transition matrices computed  
-✔ strong diagonal dominance  
-✔ local transitions only  
+✔ strong diagonal dominance observed  
+✔ predominantly local transitions  
 
 ---
 
 ## Key Result
 
 ```text
-System behaves like a banded Markov process with geometric origin.
+Observed transition behavior resembles
+a locally structured Markov-like process.
 ```
 
 ---
@@ -115,8 +118,8 @@ System behaves like a banded Markov process with geometric origin.
 ## Status
 
 ```text
-🟡 plausible
-❗ needs statistical validation
+🟡 empirically supported
+❗ requires additional statistical evaluation
 ```
 
 ---
@@ -133,8 +136,9 @@ Status:
 ## Key Finding
 
 ```text
-G(x) detects local instability,
-NOT transition events.
+G(x) appears to detect regions
+of local instability,
+not transition events directly.
 ```
 
 ---
@@ -142,9 +146,8 @@ NOT transition events.
 ## Status
 
 ```text
-🟡 plausible
-✔ partially supported by experiments
-❗ requires quantitative validation
+🟡 partially supported by experiments
+❗ requires quantitative evaluation
 ```
 
 ---
@@ -161,7 +164,7 @@ Status:
 ## Observed Behavior
 
 ```text
-Control affects local motion,
+Control influences local trajectory behavior,
 but does not reliably enforce transitions.
 ```
 
@@ -170,7 +173,8 @@ but does not reliably enforce transitions.
 ## Interpretation
 
 ```text
-System is influenced, but not freely controllable.
+System dynamics can be influenced,
+but not arbitrarily controlled.
 ```
 
 ---
@@ -178,8 +182,8 @@ System is influenced, but not freely controllable.
 ## Status
 
 ```text
-🟡 plausible
-❗ not validated across runs
+🟡 exploratory
+❗ not yet validated across systems and runs
 ```
 
 ---
@@ -188,15 +192,16 @@ System is influenced, but not freely controllable.
 
 Status:
 
-✔ trajectory steering observed  
-✔ structure-aligned motion  
+✔ structure-aware trajectory steering observed  
+✔ geometry-aligned motion patterns  
 
 ---
 
 ## Key Observation
 
 ```text
-Motion follows structural pathways.
+Motion appears to follow
+persistent structural pathways.
 ```
 
 ---
@@ -204,7 +209,7 @@ Motion follows structural pathways.
 ## Status
 
 ```text
-🟡 plausible
+🟡 exploratory
 ❗ requires quantitative validation
 ```
 
@@ -216,7 +221,7 @@ Observed:
 
 ```text
 perturbations are locally absorbed
-structure remains stable
+while global structure remains stable
 ```
 
 ---
@@ -224,7 +229,9 @@ structure remains stable
 ## Interpretation
 
 ```text
-System may evolve on a constrained manifold.
+Observed dynamics suggest
+constrained motion behavior
+within structured regions of state space.
 ```
 
 ---
@@ -232,8 +239,8 @@ System may evolve on a constrained manifold.
 ## Status
 
 ```text
-🔴 speculative
-❗ requires formal and empirical validation
+🟡 exploratory observation
+❗ requires formalization and validation
 ```
 
 ---
@@ -242,14 +249,14 @@ System may evolve on a constrained manifold.
 
 ### Lorenz
 
-✔ primary test system  
-✔ all components tested  
+✔ primary validation system  
+✔ all major components tested  
 
 ---
 
 ### IEEE Systems
 
-✔ field reconstruction works  
+✔ field reconstruction operational  
 🟡 structural interpretation possible  
 
 ---
@@ -258,48 +265,49 @@ System may evolve on a constrained manifold.
 
 ```text
 ❗ exploratory
-❗ not validated
+❗ limited real-world validation
 ```
 
 ---
 
 # ⚠️ 9. Current Bottlenecks
 
-## 1. Validation Gap
+## 1. Validation Scope
 
-- no multi-run validation  
-- no statistical metrics  
+- limited statistical evaluation  
+- limited external reproduction  
+- limited large-scale testing  
 
 ---
 
-## 2. Kernel Gap
+## 2. Kernel Integration
 
 - no unified runtime system  
 - logic distributed across scripts  
 
 ---
 
-## 3. Control Gap
+## 3. Control Layer
 
-- no reliable transition control  
-- no reproducible steering  
+- no reliable transition suppression  
+- no generalized control framework  
 
 ---
 
-## 4. Formalization Gap
+## 4. Formalization
 
 - no formal sheet definition  
-- no unified transition model  
+- no unified transition formalism  
 
 ---
 
-# 🧠 10. What Is Supported
+# 🧠 10. What Is Currently Supported
 
 ```text
 ✔ structure emerges from dynamics
-✔ transitions show local structure
-✔ dynamics can be mapped to fields
-✔ system behavior is geometrically constrained
+✔ transitions exhibit persistent local structure
+✔ trajectories can be mapped to continuous fields
+✔ trajectories exhibit structured geometric organization
 ```
 
 ---
@@ -308,10 +316,10 @@ System may evolve on a constrained manifold.
 
 ```text
 ❌ universality
-❌ robustness under noise
-❌ controllability
-❌ formal mathematical model
-❌ real-world validation
+❌ generalized controllability
+❌ complete robustness characterization
+❌ formal mathematical foundation
+❌ broad real-world validation
 ```
 
 ---
@@ -320,12 +328,12 @@ System may evolve on a constrained manifold.
 
 NEXAH is currently:
 
-> a **structure extraction and navigation framework under validation**
+> a **structure extraction and exploratory navigation framework under active validation**
 
 NOT yet:
 
 - a validated scientific theory  
-- a production system  
+- a production-ready system  
 - a generalized control framework  
 
 ---
@@ -333,11 +341,11 @@ NOT yet:
 # 🚀 13. Immediate Next Steps
 
 ```text
-1. transition matrix multi-run validation
-2. gate operator quantitative evaluation
+1. broader multi-run validation
+2. quantitative gate operator evaluation
 3. navigation A/B experiments
-4. minimal kernel definition
-5. IEEE pipeline clarification
+4. minimal kernel consolidation
+5. IEEE pipeline refinement
 ```
 
 ---
@@ -345,11 +353,16 @@ NOT yet:
 # 🧭 Final Insight
 
 ```text
-NEXAH suggests that system behavior
-is structured and constrained.
+NEXAH suggests that
+dynamical behavior may exhibit
+persistent geometric structure
+and constrained transition behavior.
+```
 
-But this must now be proven,
-not assumed.
+```text
+These observations now require
+broader validation, refinement,
+and independent investigation.
 ```
 
 ---
