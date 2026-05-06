@@ -217,7 +217,7 @@ It includes:
 
 ## 🌊 Field Reality (Example)
 
-![Off-Manifold Flow](FRAMEWORK/NEXAH/geometry/visuals/ieee57_v69_off_manifold_flow.png)
+![Off-Manifold Flow](PROTOCORE/visuals/ieee57_v69_off_manifold_flow.png)
 
 *System motion follows a constrained flow field — transitions occur only along admissible paths.*
 
@@ -225,10 +225,9 @@ It includes:
 
 ## 🎯 Structure-Aware Field (Control View)
 
-![Structure-Aware Target Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
+![Structure-Aware Target Field](PROTOCORE/visuals/v37_structure_field.png)
 
 *Control emerges from alignment with system geometry rather than external forcing.*
-
 ---
 
 ## 🧪 Validation (Empirical Layer)
