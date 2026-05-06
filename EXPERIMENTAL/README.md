@@ -66,6 +66,20 @@ The FRAMEWORK explains:
 
 ---
 
+⚠️ Note:
+
+Many operational and empirically validated components
+have since migrated into:
+
+- RESEARCH/
+- PROTO_CORE/
+- NEXAH_CORE/
+
+The FRAMEWORK now primarily serves as the conceptual
+and historical foundation layer of NEXAH.
+
+---
+
 ## 🧠 Core Concepts
 
 The FRAMEWORK introduces:
