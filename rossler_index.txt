@@ -1,3 +1,0 @@
-./RESEARCH/VALIDATION/rossler
-./RESEARCH/VALIDATION/lorenz/run_rossler_validation_suite.py
-./rossler_index.txt
