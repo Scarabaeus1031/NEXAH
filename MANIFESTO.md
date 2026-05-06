@@ -1,6 +1,6 @@
 # NEXAH Manifesto
 
-![What is NEXAH?](./ARCHITECTURE/archive/WHAT_is_NEXAH.png)
+![What is NEXAH?](ARCHITECTURE/archive/WHAT_is_NEXAH.png)
  
 ---
 
