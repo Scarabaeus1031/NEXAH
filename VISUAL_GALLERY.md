@@ -36,7 +36,7 @@ dynamics → structure → field → geometry
 
 ## Unified Transition Architecture
 
-![Unified Transition Architecture](./FIGURES/main/unified_transition_architecture.png)
+![Unified Transition Architecture](ARCHITECTURE/FIGURES/main/unified_transition_architecture.png)
 
 A high-level overview of transition organization and structural flow reconstruction.
 
