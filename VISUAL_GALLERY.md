@@ -1,412 +1,544 @@
 # 🌌 NEXAH — Visual Gallery
 
-> A curated visual overview of the NEXAH research framework  
-> exploring structure, transitions, synchronization, instability, and navigation behavior in dynamical systems.
+This gallery presents a curated visual overview of the NEXAH research framework.
+
+It shows how structure emerges from dynamical systems and becomes:
+
+```text
+observable → measurable → interpretable → navigable
+```
+
+The gallery is intentionally selective.
+
+It does not list every output.  
+It highlights the strongest visual evidence across the current NEXAH ecosystem.
 
 ---
 
-# 🧠 About This Gallery
+# 🧠 How to Read This Gallery
 
-NEXAH investigates how complex systems organize into:
+Each section represents one major visual layer of NEXAH:
 
-- transition structures
-- stability basins
-- synchronization regimes
-- geometric flow fields
-- navigable dynamical landscapes
-
-This gallery presents selected visual highlights from the repository.
-
-It is intentionally curated.
-
-The goal is not to show all outputs —
-but to reveal the most important structural patterns discovered so far.
+```text
+dynamics
+→ field geometry
+→ transition structure
+→ phase dynamics
+→ synchronization regimes
+→ control/navigation
+→ cross-system validation
+```
 
 ---
 
 # 🔷 1. Core Field Geometry
 
-These figures illustrate the foundational idea of NEXAH:
+These figures show the foundational NEXAH idea:
 
 ```text
-dynamics → structure → field → geometry
+raw dynamics → field → geometry → structure
 ```
 
 ---
 
 ## Unified Transition Architecture
 
-![Unified Transition Architecture](ARCHITECTURE/FIGURES/main/unified_transition_architecture.png)
+![Unified Transition Architecture](RESEARCH/FIGURES/main/unified_transition_architecture.png)
 
-A high-level overview of transition organization and structural flow reconstruction.
+This diagram summarizes the full NEXAH pipeline across systems.
 
----
+It shows how:
 
-## Core Field Structure
-
-![Field Structure](./FIGURES/fig_01_field_structure.png)
-
-Example of extracted transition geometry from dynamical trajectories.
-
----
-
-## NEXAH Core Mechanism
-
-![Core Mechanism](./CORE_CONCEPTS/visuals/nexah_core_mechanism.png)
-
-Illustration of the relationship between dynamics, mismatch, gates, and structural flow.
+- dynamics generate transitions
+- transitions form structure
+- phase embeds motion
+- flow and topology emerge
+- synchronization appears as a global effect
 
 ---
 
-## Dynamical Unification Diagram
+## Structural Reduction Pipeline
 
-![Dynamical Unification](./FINDINGS/visuals/nexah_dynamical_unification_diagram.png)
+![Structural Pipeline](RESEARCH/FIGURES/main/Fig_01.png)
 
-Visual synthesis of recurring structures observed across multiple systems.
+A visual reduction from continuous dynamics into interpretable structural geometry.
+
+---
+
+## Transition Geometry Extraction
+
+![Transition Geometry](RESEARCH/FIGURES/main/Fig_02.png)
+
+This figure shows how transition pathways emerge from the underlying field structure.
+
+---
+
+## Quantitative Transition Structure
+
+![Quantitative Structure](RESEARCH/FIGURES/main/Fig_03.png)
+
+A quantitative view of transition organization and structural consistency.
 
 ---
 
 # 🌊 2. Transition Phase Dynamics
 
-One of the strongest observed behaviors in NEXAH is the emergence of:
+This layer is one of the strongest parts of NEXAH.
+
+It studies:
 
 - phase drift
-- synchronization plateaus
-- regime transitions
-- topological phase structure
+- mismatch
+- transition activation
+- winding behavior
+- angular structure
+- cross-system phase consistency
 
 ---
 
 ## Master Phase Field
 
-![Master Figure](./FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/master/master_figure_v2.png)
+![Master Phase Field](RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/master/master_figure_v2.png)
 
-Unified representation of phase organization across systems.
+Unified visual summary of phase behavior across multiple systems.
 
 ---
 
-## Phase Field Geometry
+## Phase Field Master Visual
 
-![Phase Field](./FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/master/phase_field_master_visual.png)
+![Phase Field Master](RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/master/phase_field_master_visual.png)
 
-Emergent phase geometry reconstructed from transition behavior.
+A compact view of phase-field structure and transition organization.
 
 ---
 
 ## Kuramoto Phase Sweep
 
-![Kuramoto Sweep](./FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/kuramoto/kuramoto_phase_sweep.png)
+![Kuramoto Phase Sweep](RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/kuramoto/kuramoto_phase_sweep.png)
 
-Synchronization transitions across varying coupling strengths.
+Kuramoto synchronization regimes across changing coupling strength.
 
 ---
 
 ## Lorenz Phase Unwrapping
 
-![Lorenz Phase](./FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/phase/lorenz_phase_unwrapped.png)
+![Lorenz Phase](RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/figures/phase/lorenz_phase_unwrapped.png)
 
-Phase continuity and drift organization in Lorenz dynamics.
+Phase evolution and drift structure in the Lorenz system.
 
 ---
 
 # 🔥 3. Kuramoto Regime Structures
 
-The Kuramoto experiments reveal highly structured synchronization boundaries.
+Kuramoto is currently one of the clearest systems for showing:
 
-Observed features include:
+```text
+global synchronization ≠ internal stability
+```
 
-- regime separation
-- phase drift events
-- Lyapunov-linked transitions
-- geometric synchronization landscapes
+It reveals:
+
+- synchronization boundaries
+- internal phase drift
+- transition activity inside ordered regimes
+- Lyapunov-linked transition behavior
+
+---
+
+## Kuramoto Field Structure
+
+![Kuramoto Field Structure](RESEARCH/VALIDATION/systems/kuramoto/figures/NEXAH_kuramoto_field_structure_v2.png)
+
+The primary Kuramoto FIELD_LAYER structure visual.
 
 ---
 
 ## Final Phase Diagram
 
-![Kuramoto Final](./VALIDATION/systems/kuramoto/kuramoto_v8/final_1777944907/phase_diagram_final.png)
+![Kuramoto Final Phase Diagram](RESEARCH/VALIDATION/systems/kuramoto/kuramoto_v8/final_1777944907/phase_diagram_final.png)
 
-Large-scale synchronization geometry across coupling regimes.
+Final synchronization phase diagram with regime structure.
 
 ---
 
-## Phase Boundary Structure
+## Phase Boundary Detection
 
-![Phase Boundary](./VALIDATION/systems/kuramoto/kuramoto_v7/boundary_run_1777944125/phase_diagram_with_boundary.png)
+![Kuramoto Boundary](RESEARCH/VALIDATION/systems/kuramoto/kuramoto_v7/boundary_run_1777944125/phase_diagram_with_boundary.png)
 
-Detected transition boundary structures between synchronization states.
+Detected transition boundary between synchronization regimes.
 
 ---
 
 ## Event Rate vs Lyapunov
 
-![Lyapunov Events](./VALIDATION/systems/kuramoto/kuramoto_v5/sweeps/sweep_1777942300/event_rate_vs_lyapunov.png)
+![Event Rate vs Lyapunov](RESEARCH/VALIDATION/systems/kuramoto/kuramoto_v5/sweeps/sweep_1777942300/event_rate_vs_lyapunov.png)
 
-Relationship between instability and transition frequency.
+Shows the relationship between instability and transition-event frequency.
 
 ---
 
 ## Phase Boundary Sweep
 
-![Phase Boundary Sweep](./VALIDATION/systems/kuramoto/kuramoto_v6/master_runs/run_1777943097/sweep/phase_boundary_sweep.gif)
+![Kuramoto Boundary Sweep](RESEARCH/VALIDATION/systems/kuramoto/kuramoto_v6/master_runs/run_1777943097/sweep/phase_boundary_sweep.gif)
 
-Animated evolution of synchronization boundary formation.
+Animated sweep showing how synchronization boundaries emerge.
 
 ---
 
 # 🌀 4. Fractal Transition Systems
 
-Fractal systems revealed surprisingly continuous transition behavior.
+Fractal systems extend NEXAH from intrinsic state-space dynamics into parameter-driven transition dynamics.
 
-NEXAH experiments suggest:
+Core idea:
 
-- measurable topology changes
-- structured transition fields
-- phase mismatch regions
-- geometric transition pathways
+```text
+parameter motion → structural change Δ → transition probability
+```
 
 ---
 
 ## NEXAH Fractal Transition
 
-![Fractal Transition](./APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/nexah_fractal_transition.png)
+![Fractal Transition](RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/nexah_fractal_transition.png)
 
-Transition field between Mandelbrot and Julia structures.
+A visual framework for Mandelbrot / Julia transition behavior.
+
+---
+
+## Julia Path Animation
+
+![Julia Path](RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/julia_path_final.gif)
+
+Animated traversal through Julia-set parameter space.
+
+---
+
+## Phase Mismatch Animation
+
+![Phase Mismatch](RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/phase_mismatch.gif)
+
+Shows mismatch-like structural change emerging through parameter motion.
 
 ---
 
 ## Continuous Transition Heatmap
 
-![Transition Heatmap](./VALIDATION/fractal_tests/scripts/outputs/transition_heatmap_continuous.png)
+![Transition Heatmap](RESEARCH/VALIDATION/fractal_tests/scripts/outputs/transition_heatmap_continuous.png)
 
-Continuous transition probability landscape across fractal structures.
-
----
-
-## Transition Field Overlay
-
-![Transition Overlay](./VALIDATION/fractal_tests/scripts/outputs/transition_field_overlay.png)
-
-Overlay of transition intensity and topology variation.
+Transition probability landscape derived from Δ and parameter context.
 
 ---
 
-## Julia Transition Animation
+## Transition Field Fit
 
-![Julia Path](./APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/julia_path_final.gif)
+![Transition Field Fit](RESEARCH/VALIDATION/fractal_tests/scripts/outputs/transition_field_fit.png)
 
-Animated traversal through fractal transition space.
-
----
-
-## Phase Mismatch Dynamics
-
-![Phase Mismatch](./APPLIED_CASES/FRACTAL_SYSTEMS/scripts/outputs/phase_mismatch.gif)
-
-Emergent instability zones generated through phase mismatch accumulation.
+Empirical boundary fit for parameter-driven transition regions.
 
 ---
 
 # 🧭 5. Prime Modular Resonance
 
-Prime modular systems produced unexpectedly rich flow structures.
+This section is more exploratory.
 
-Observed phenomena include:
+It shows how modular arithmetic systems can be visualized as flow fields, transition structures, and resonance geometries.
 
-- circulation fields
-- toroidal organization
-- spectral transition channels
-- winding structures
-- vortex-like behavior
+Important clarification:
+
+```text
+This is exploratory / experimental,
+not part of the core validated dynamical-systems layer.
+```
 
 ---
 
 ## Unified Flow Torus
 
-![Flow Torus](./FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/unified_flow_torus_map_0.png)
+![Unified Flow Torus](RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/unified_flow_torus_map_0.png)
 
-Toroidal projection of modular transition flow.
+Toroidal view of modular flow organization.
 
 ---
 
 ## Spectral Flow Projection
 
-![Spectral Flow](./FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/spectral_flow_projection_0.png)
+![Spectral Flow](RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/spectral_flow_projection_0.png)
 
-Spectral organization of modular transition dynamics.
+Spectral projection of modular transition structure.
 
 ---
 
 ## Topology Signature Scan
 
-![Topology Scan](./FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/topology_signature_scan.png)
+![Topology Signature](RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/topology_signature_scan.png)
 
-Detection of persistent structural signatures across modular systems.
+Scan for persistent structural signatures across modular systems.
 
 ---
 
 ## Mod7 Transition Flow
 
-![Mod7 Flow](./FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/curated/mod7_transition_flow.gif)
+![Mod7 Transition Flow](RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/curated/mod7_transition_flow.gif)
 
-Animated transition dynamics in modular resonance space.
+Animated modular transition flow.
 
 ---
 
 ## Vortex Field Detection
 
-![Vortex Field](./FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/vortex_field_detector_mod7_0.png)
+![Vortex Field](RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/analysis/output/plots/vortex_field_detector_mod7_0.png)
 
-Localized rotational structures within modular flow fields.
+Localized rotational structures in modular state space.
 
 ---
 
 # 🎯 6. Control & Navigation Geometry
 
-NEXAH is not only focused on observation.
+NEXAH is not only descriptive.
 
-It also explores:
+It also explores how systems may be influenced through:
 
-```text
-intervention
-navigation
-minimal control
-transition steering
-```
+- gate intervention
+- target reachability
+- transition steering
+- phase-aware control
+- minimal intervention
 
 ---
 
 ## Control vs Phase Geometry
 
-![Control Geometry](./VALIDATION/causality/results/control_vs_phase_geometry_v2.png)
+![Control vs Phase](RESEARCH/VALIDATION/causality/results/control_vs_phase_geometry_v2.png)
 
-Relationship between phase structure and intervention behavior.
+Comparison of control behavior under different phase geometries.
 
 ---
 
-## Gate Activation
+## Control Comparison V4
 
-![Gate Activation](./VALIDATION/causality/results/phase_gate_activation.png)
+![Control Comparison](RESEARCH/VALIDATION/causality/results/control_v4_comparison.png)
 
-Localized transition activation regions.
+Shows how aligned, inverted, damped, and inverse control modes affect drift and transition events.
 
 ---
 
 ## Gate Transition Comparison
 
-![Gate Transition](./VALIDATION/causality/results/gate_transition_comparison.png)
+![Gate Transition](RESEARCH/VALIDATION/causality/results/gate_transition_comparison.png)
 
-Comparison between controlled and uncontrolled transition behavior.
-
----
-
-## Target Reachability
-
-![Target Reach](./VALIDATION/causality/results/target_reach.png)
-
-Navigation behavior within reconstructed transition geometry.
+Controlled vs uncontrolled transition structure.
 
 ---
 
-## Minimal Intervention Geometry
+## Gate Region
 
-![Minimal Intervention](./VALIDATION/causality/gate_minimal_intervention.png)
+![Gate Region](RESEARCH/VALIDATION/causality/results/gate_region.png)
 
-Illustration of low-energy structural steering.
+Localized transition region used for intervention.
+
+---
+
+## Target Reach
+
+![Target Reach](RESEARCH/VALIDATION/causality/results/target_reach.png)
+
+Target-reaching behavior under gate-based control.
+
+---
+
+## Minimal Intervention
+
+![Minimal Intervention](RESEARCH/VALIDATION/causality/gate_minimal_intervention.png)
+
+Low-strength intervention scan across transition regions.
 
 ---
 
 # 🌍 7. Cross-System Structural Invariance
 
-A central observation throughout NEXAH is the recurrence of similar transition organization across very different systems.
+NEXAH tests whether transition structures persist across qualitatively different systems.
+
+Current systems include:
+
+- Lorenz
+- Rössler
+- Duffing
+- Kuramoto
+- Halvorsen in research phase layers
 
 ---
 
-## Lorenz Transition Field
+## Cross-System Transition Matrices
 
-![Lorenz Transition](./VALIDATION/lorenz/results/transition_field.png)
+![Cross-System Transition Matrices](RESEARCH/VALIDATION/cross_system/cross_system_transition_matrices.png)
 
----
-
-## Rössler Transition Matrix
-
-![Roessler](./VALIDATION/rossler/results/transition_matrix.png)
+Transition matrices from multiple dynamical systems.
 
 ---
 
 ## Cross-System Distance Matrix
 
-![Cross System](./VALIDATION/cross_system/cross_system_distance_matrix.png)
+![Cross-System Distance Matrix](RESEARCH/VALIDATION/cross_system/cross_system_distance_matrix.png)
+
+Pairwise transition-structure distances between systems.
 
 ---
 
-## Cross-System Transition Structures
+## Lorenz Transition Field
 
-![Cross Transition](./VALIDATION/cross_system/cross_system_transition_matrices.png)
+![Lorenz Transition Field](RESEARCH/VALIDATION/lorenz/results/transition_field.png)
+
+Continuous transition field extracted from Lorenz dynamics.
+
+---
+
+## Rössler Transition Matrix
+
+![Rössler Transition Matrix](RESEARCH/VALIDATION/rossler/results/transition_matrix.png)
+
+Transition structure in the Rössler system.
+
+---
+
+## Duffing Transition Matrix
+
+![Duffing Transition Matrix](RESEARCH/VALIDATION/duffing/results/transition_matrix.png)
+
+Transition structure in the Duffing system.
 
 ---
 
 # 🔬 8. Validation Layer
 
-Validation experiments currently include:
+The validation layer contains the empirical backbone of NEXAH.
 
+It includes:
+
+- multi-run validation
 - noise robustness
+- transition matrix stability
 - partition invariance
-- transition sensitivity
-- cross-system consistency
-- phase alignment tests
-- topology comparisons
-
----
-
-## Transition Sensitivity Map
-
-![Sensitivity](./VALIDATION/lorenz/results/transition_sensitivity_map.png)
-
----
-
-## Noise Comparison
-
-![Noise Comparison](./VALIDATION/rossler/results/noise_comparison.png)
-
----
-
-## Partition Invariance
-
-![Partition Invariance](./VALIDATION/rossler/results/partition_invariance.png)
+- DBSCAN geometry checks
+- cross-system validation
+- phase and mismatch analysis
+- control causality experiments
 
 ---
 
 ## Validation Summary
 
-![Validation Summary](./VALIDATION/visuals/nexah_validation_summary_visual.png)
+![Validation Summary](RESEARCH/VALIDATION/visuals/nexah_validation_summary_visual.png)
+
+A compressed visual overview of the validation stack.
+
+---
+
+## Transition Sensitivity Map
+
+![Transition Sensitivity](RESEARCH/VALIDATION/lorenz/results/transition_sensitivity_map.png)
+
+Sensitivity structure of transition probabilities.
+
+---
+
+## Multi-Partition Transition Matrices
+
+![Partition Invariance](RESEARCH/VALIDATION/lorenz/results/multi_partition_transition_matrices.png)
+
+Transition matrices under different partition methods.
+
+---
+
+## DBSCAN Partition Sweep
+
+![DBSCAN Sweep](RESEARCH/VALIDATION/lorenz/results/dbscan_partition_sweep.png)
+
+Analysis of clustering limits and continuous geometry.
+
+---
+
+## Noise Comparison
+
+![Rössler Noise](RESEARCH/VALIDATION/rossler/results/noise_comparison.png)
+
+Noise robustness in the Rössler system.
+
+---
+
+# 🧪 9. Demonstrator & Core System Visuals
+
+These visuals come from the executable and demonstrator-facing side of NEXAH.
+
+They are useful for explaining the framework quickly.
+
+---
+
+## Surface Mesh
+
+![Surface Mesh](outputs/demos/images/nexah_surface_mesh.png)
+
+Field reconstruction as surface geometry.
+
+---
+
+## Surface Sheet
+
+![Surface Sheet](outputs/demos/images/nexah_surface_sheet.png)
+
+Sheet-like structure emerging from field representation.
+
+---
+
+## Lorenz Transitions
+
+![Lorenz Transitions](outputs/demos/images/nexah_lorenz_transitions.png)
+
+Transition structure in Lorenz dynamics.
+
+---
+
+## Cross-System Noise Robustness
+
+![Cross-System Noise](outputs/demos/images/nexah_cross_system_noise_robustness.png)
+
+Robustness comparison across systems.
+
+---
+
+## Noise Stress Test
+
+![Noise Stress](outputs/demos/images/nexah_noise_stress_test.png)
+
+Stress-test visualization of structural persistence under perturbation.
 
 ---
 
 # 🧠 Core Observation
 
-Across tested systems, dynamics repeatedly exhibit:
+Across these visuals, one recurring pattern appears:
 
 ```text
-localized transition organization
-persistent geometric structure
-non-random instability regions
-field-like transition behavior
-```
+systems do not only evolve in time
 
-These recurring patterns motivate the broader NEXAH research direction.
+they move through structured fields
+where transitions, stability, and instability
+have geometric organization
+```
 
 ---
 
 # ⚠️ Scope Clarification
 
-NEXAH currently represents:
+This gallery presents visual evidence from an active research framework.
+
+NEXAH currently is:
 
 ```text
-✔ a working exploratory research framework
-✔ an active empirical experimentation system
-✔ a reproducible structure-discovery pipeline
-✔ a growing transition geometry framework
+✔ exploratory
+✔ computational
+✔ empirical
+✔ reproducible in selected modules
+✔ supported by validation experiments
 ```
 
 NEXAH is not yet:
@@ -414,8 +546,8 @@ NEXAH is not yet:
 ```text
 ❌ a finalized scientific theory
 ❌ a production-ready control system
-❌ fully validated across all domains
-❌ a completed unified kernel
+❌ a fully unified runtime kernel
+❌ validated across all real-world domains
 ```
 
 ---
@@ -424,7 +556,7 @@ NEXAH is not yet:
 
 NEXAH should currently be understood as:
 
-> a structured research ecosystem for discovering geometry and transition organization in dynamical systems
+> a structured research ecosystem for discovering transition geometry, field organization, and navigation behavior in dynamical systems.
 
 ---
 
