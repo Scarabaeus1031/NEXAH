@@ -1,4 +1,3 @@
-```markdown
 # ⚙️ PROTO_CORE — Experimental Structural Engine
 
 > Core experimental layer of the NEXAH framework.
