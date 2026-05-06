@@ -399,4 +399,3 @@ PROTO_CORE should currently be understood as:
 ---
 
 **Thomas K. R. Hofmann · NEXAH · 2026**
-```
