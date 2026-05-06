@@ -1,115 +1,149 @@
-# 🧭 NEXAH — Repository Map (Grounded)
+# 🧭 NEXAH — Repository Map
 
-This document provides a **practical orientation** for navigating the NEXAH repository.
+This document provides a **practical overview of the NEXAH repository structure**  
+and its current development state.
 
-It reflects the **actual structure and current development state**,  
-not an idealized or fully validated system.
+It is intended as a navigation guide for:
+
+- researchers  
+- developers  
+- collaborators  
+- and new visitors exploring the framework  
 
 ---
 
-# 🧠 What NEXAH is
+# 🧠 What NEXAH Is
 
-NEXAH is a framework for:
+NEXAH is a:
 
-> **extracting and analyzing structure in dynamical systems**
+> **field-oriented research framework for analyzing structure, transitions, and stability in dynamical systems**
 
 Core transformation:
 
 ```text
-dynamics → structure → field → geometry → transition structure → navigation behavior
+raw dynamics
+→ structure extraction
+→ field reconstruction
+→ geometric interpretation
+→ transition analysis
+→ exploratory navigation behavior
 ```
 
 ---
 
 # ⚠️ CURRENT STATUS
 
-NEXAH is:
+NEXAH currently combines:
+
+- experimental dynamical systems research  
+- field reconstruction methods  
+- transition structure analysis  
+- exploratory control and navigation experiments  
+
+The repository contains both:
 
 ```text
-✔ a working structural system (demonstrator level)
-✔ capable of extracting transition structure
-✔ capable of producing consistent geometric patterns
+✔ implemented components
+✔ reproducible demonstrations
+✔ empirical validation layers
+✔ active conceptual research
 ```
 
-But:
+But also:
 
 ```text
-❗ not yet fully validated
-❗ not yet unified into a kernel
-❗ not yet a production system
+❗ incomplete kernel integration
+❗ limited large-scale validation
+❗ ongoing theoretical refinement
 ```
 
 ---
 
-# 📦 Repository Structure (Actual)
+# 📦 Repository Structure
 
 ---
 
-## 🔷 1. ARCHITECTURE (System Definition)
+## 🔷 1. ARCHITECTURE/
 
 ```text
 ARCHITECTURE/
 ```
 
-Defines:
+Defines the implemented system structure:
 
-- system structure  
-- layer organization  
-- integration logic  
+- system organization  
+- layer relationships  
+- execution flow  
 - current system state  
+- integration logic  
 
-👉 **Primary reference for system understanding**
+Contains:
+
+- `README.md`
+- `SYSTEM_STATE.md`
+- architecture diagrams
+- component mappings
+
+👉 Primary reference for understanding the implemented system.
 
 ---
 
-## 🧪 2. NEXAH_DEMONSTRATOR (Entry Point)
+## 🧪 2. NEXAH_DEMONSTRATOR/
 
 ```text
 NEXAH_DEMONSTRATOR/
 ```
 
-Contains:
+Minimal reproducible implementation of the core pipeline.
 
-- minimal working pipeline  
-- reproducible experiments  
-- transition structure extraction  
+Includes:
+
+- trajectory → field reconstruction  
+- transition extraction  
+- gate analysis  
 - navigation demonstrations  
 
-👉 **Recommended starting point**
+👉 Recommended entry point for first-time users.
 
 ---
 
-## 🔶 3. NEXAH_CORE (Transition + Control Logic)
+## 🔶 3. NEXAH_CORE/
 
 ```text
 NEXAH_CORE/
 ```
 
-Contains:
+Core structural and transition logic.
 
-- transition structure models  
-- basin / gate representations  
+Includes:
+
+- basin representations  
+- gate structures  
+- transition modeling  
 - control experiments  
-- navigation logic  
+- navigation-related logic  
 
-👉 **Core system logic (partly experimental)**
+👉 Main experimental system layer.
 
 ---
 
-## 🌊 4. FIELD_LAYER (Geometry + Stability)
+## 🌊 4. FIELD_LAYER/
 
 ```text
 FIELD_LAYER/
 ```
 
+Continuous field and geometry representation layer.
+
 Includes:
 
-- field reconstruction outputs  
+- density fields  
+- flow reconstruction  
 - stability structure  
-- flow geometry  
-- separatrix / basin structure  
+- separatrix / basin geometry  
+- navigation fields  
 
-👉 transforms:
+Core transformation:
 
 ```text
 field → geometry → stability interpretation
@@ -117,253 +151,313 @@ field → geometry → stability interpretation
 
 ---
 
-## 🔧 5. ARCHITECTURE/CORE (Executable Components)
-
-```text
-ARCHITECTURE/CORE/
-```
-
-### Field Reconstruction
-
-```text
-field_reconstruction/
-```
-
-- density fields  
-- flow fields  
-- boundary detection  
-
----
-
-### Control Layer
-
-```text
-control_layer/
-```
-
-- basin detection  
-- gate extraction  
-- trajectory shaping  
-
----
-
-👉 connects structure → execution
-
----
-
-## 📦 6. nexah/ (Kernel — in progress)
+## 📦 5. nexah/
 
 ```text
 nexah/
 ```
 
-Contains:
-
-- early runtime logic  
-- navigation abstractions  
-
-👉 **future unified system kernel**
-
----
-
-## 🧪 7. BUILDER_LAB (Exploration Layer)
-
-```text
-BUILDER_LAB/
-```
+Early unified runtime kernel (in progress).
 
 Contains:
 
-- experimental systems  
-- discovery experiments  
-- early prototypes  
-- dashboards and tools  
+- runtime abstractions  
+- navigation interfaces  
+- experimental kernel components  
+
+👉 Intended future integration layer.
 
 ---
 
-### 🔬 Experimental Mechanism Layer
-
-```text
-BUILDER_LAB/EXPLORATION/experimental/
-```
-
-Purpose:
-
-- test structural hypotheses  
-- analyze system behavior under perturbation  
-- explore control interaction  
-
----
-
-### Observations (Current)
-
-```text
-• structure appears consistent across runs
-• control affects local behavior
-• global transitions are hard to enforce
-```
-
----
-
-### Interpretation
-
-```text
-🟡 system appears constrained by its geometry
-🔴 not yet validated
-```
-
----
-
-👉 used for:
-
-```text
-hypothesis generation, not validation
-```
-
----
-
-## 🌍 8. APPLICATIONS (Test Systems)
-
-```text
-APPLICATIONS/
-```
-
-Includes:
-
-- Lorenz system  
-- IEEE power systems  
-- experimental demos  
-
-👉 **testbed for structure extraction**
-
----
-
-## 🧠 9. FRAMEWORK (Conceptual Layer)
-
-```text
-FRAMEWORK/
-```
-
-Contains:
-
-- ARCHY (simulation layer)  
-- conceptual system abstractions  
-- experimental modeling ideas  
-
-👉 **high-level modeling layer (not validated)**
-
----
-
-## 🔬 10. RESEARCH (Theory + Validation Layer)
+## 🔬 6. RESEARCH/
 
 ```text
 RESEARCH/
 ```
 
+Primary conceptual, empirical, and validation layer.
+
 Contains:
 
 - conceptual models  
-- structural claims  
-- validation plans  
-- notes and documentation  
+- validation experiments  
+- findings and interpretations  
+- theoretical extensions  
+- figures and documentation  
 
-👉 **bridge between experiments and core system**
-
----
-
-# 🔥 System Flow (Actual)
+Key files:
 
 ```text
-ARCHY (simulation / systems)
-→ BUILDER_LAB (exploration)
-→ field_reconstruction (data → field)
-→ FIELD_LAYER (geometry)
-→ NEXAH_CORE (transition structure)
-→ control_layer (trajectory shaping)
-→ nexah/ (kernel — in progress)
-→ navigation behavior
+RESEARCH_INDEX.md
+CORE_CONCEPT_MAP.md
+RESEARCH_VISION.md
 ```
 
 ---
 
-# 🔹 Core Structural Concept
-
-The system is interpreted in terms of:
+### Major RESEARCH Sections
 
 ```text
-basins → stable regions
-boundaries → transition zones
-gates → structured transition regions
+RESEARCH/
+├── VALIDATION/
+├── CORE_CONCEPTS/
+├── FOUNDATION/
+├── FINDINGS/
+├── APPLIED_CASES/
+├── THEORETICAL_EXTENSIONS/
+├── NEXAH_TRANSLATIONS/
+├── FIGURES/
+├── NOTES/
+└── HISTORY/
 ```
 
 ---
 
-## Key Observation
+### VALIDATION/
+
+The empirical backbone of the repository.
+
+Includes:
+
+- reproducibility tests  
+- noise robustness  
+- partition invariance  
+- cross-system comparisons  
+- control experiments  
+- phase dynamics analysis  
+- fractal transition experiments  
+
+👉 Main evidence and experimental layer.
+
+---
+
+## 🧪 7. BUILDER_LAB/
 
 ```text
-Transitions are not random —
-they appear constrained by system geometry.
+BUILDER_LAB/
 ```
+
+Exploratory sandbox and prototype environment.
+
+Used for:
+
+- experimental tooling  
+- hypothesis generation  
+- early-stage system exploration  
+- visualization prototypes  
+- exploratory control tests  
+
+⚠️ Experimental by nature.
+
+Not considered stable or validated.
 
 ---
 
-## Status
+## 🌍 8. APPLICATIONS/
 
 ```text
-🟡 plausible
-❗ requires validation
+APPLICATIONS/
+```
+
+Applied and real-world inspired systems.
+
+Includes:
+
+- Lorenz systems  
+- IEEE power systems  
+- experimental case studies  
+- applied demonstrations  
+
+👉 Testbed for structure extraction and validation.
+
+---
+
+## 🧠 9. FRAMEWORK/
+
+```text
+FRAMEWORK/
+```
+
+High-level conceptual modeling layer.
+
+Contains:
+
+- ARCHY-related abstractions  
+- simulation concepts  
+- exploratory modeling ideas  
+- system-level interpretations  
+
+⚠️ Conceptual and exploratory.
+
+Not equivalent to implemented architecture.
+
+---
+
+## 📊 10. outputs/
+
+```text
+outputs/
+```
+
+Generated outputs and experiment artifacts.
+
+Includes:
+
+- figures  
+- metrics  
+- generated visualizations  
+- exported experiment results  
+
+---
+
+## ✅ 11. tests/
+
+```text
+tests/
+```
+
+Automated and semi-automated testing layer.
+
+Includes:
+
+- validation scripts  
+- consistency checks  
+- experimental test cases  
+
+Status:
+
+```text
+growing
+not yet comprehensive
 ```
 
 ---
 
-# 🧭 Where to Start
+# 🔥 Current System Flow
 
-## ⚡ Run a minimal system
-
-```bash
-python NEXAH_DEMONSTRATOR/scripts/run_demo.py
+```text
+Raw Dynamics / Simulation
+        ↓
+Field Reconstruction
+(FIELD_LAYER / DEMONSTRATOR)
+        ↓
+Transition & Structure Extraction
+(NEXAH_CORE)
+        ↓
+Validation & Exploration
+(RESEARCH / BUILDER_LAB)
+        ↓
+Kernel Integration
+(nexah/)
 ```
 
 ---
 
-## 🧠 Understand system structure
-
-→ `ARCHITECTURE/README.md`
+# 🧭 Recommended Navigation
 
 ---
 
-## 🔬 Explore core logic
+## 🔹 For New Visitors
 
-→ `NEXAH_CORE/`
+Start here:
 
----
+```text
+START_HERE.md
+MANIFESTO.md
+```
 
-## 🌊 Geometry & stability
+Then:
 
-→ `FIELD_LAYER/`
-
----
-
-## 🎮 Control experiments
-
-→ `ARCHITECTURE/CORE/control_layer/`
-
----
-
-## 🧪 Exploration layer
-
-→ `BUILDER_LAB/`
+```text
+NEXAH_DEMONSTRATOR/
+ARCHITECTURE/README.md
+RESEARCH/RESEARCH_INDEX.md
+```
 
 ---
 
-# ⚡ What This Repository Enables
+## 🔹 For Researchers
 
-- structure extraction from dynamics  
-- field reconstruction  
-- geometric interpretation of behavior  
-- transition modeling  
-- exploratory control interaction  
-- trajectory analysis within structured fields  
+Focus on:
+
+```text
+RESEARCH/
+VALIDATION/
+CORE_CONCEPTS/
+FINDINGS/
+```
+
+---
+
+## 🔹 For Developers
+
+Focus on:
+
+```text
+NEXAH_CORE/
+FIELD_LAYER/
+nexah/
+tests/
+```
+
+---
+
+## 🔹 For Experimental Exploration
+
+Explore:
+
+```text
+BUILDER_LAB/
+APPLICATIONS/
+FRAMEWORK/
+```
+
+---
+
+# 🧠 Central Observation
+
+Across tested systems, observed dynamics often exhibit:
+
+```text
+persistent geometric organization
+localized transition structure
+structured instability regions
+```
+
+These observations motivate the broader NEXAH research direction.
+
+---
+
+# ⚠️ Scope Clarification
+
+NEXAH is currently:
+
+```text
+✔ a working exploratory research framework
+✔ capable of producing reproducible structural patterns
+✔ supported by an active empirical validation layer
+```
+
+NEXAH is NOT yet:
+
+```text
+❌ a finalized scientific theory
+❌ a fully unified kernel system
+❌ a production-ready control framework
+❌ comprehensively validated across domains
+```
+
+---
+
+# 🧭 Final Orientation
+
+NEXAH should currently be understood as:
+
+> a structured research ecosystem for exploring geometry, transitions, and organization in dynamical systems
+
+---
+
+Thomas K. R. Hofmann · NEXAH · 2026- trajectory analysis within structured fields  
 
 ---
 
