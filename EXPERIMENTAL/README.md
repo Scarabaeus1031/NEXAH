@@ -1,4 +1,3 @@
-```markdown
 # ⚡ NEXAH — Experimental Systems
 
 This directory contains the **experimental and exploratory layers** of the NEXAH ecosystem.
@@ -435,4 +434,3 @@ The `EXPERIMENTAL/` layer should currently be understood as:
 ---
 
 **Thomas K. R. Hofmann · NEXAH · 2026**
-```
