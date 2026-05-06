@@ -1,7 +1,7 @@
 # NEXAH Manifesto
 
 ![What is NEXAH?](ARCHITECTURE/archive/WHAT_is_NEXAH.png)
-
+ 
 ---
 
 ## Why NEXAH Exists
