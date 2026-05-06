@@ -1,9 +1,3 @@
-# NEXAH Manifesto
-
-![What is NEXAH?](ARCHITECTURE/archive/WHAT_is_NEXAH.png)
- 
----
-
 ## Why NEXAH Exists
 
 NEXAH was created as an exploratory framework for thinking about structure, transition, stability and motion in complex dynamical systems.
@@ -16,6 +10,12 @@ The motivation behind this work is simple:
 to share perspectives, experiments and tools
 that may help others think differently about complex systems
 ```
+
+---
+
+# NEXAH Manifesto
+
+![What is NEXAH?](ARCHITECTURE/archive/WHAT_is_NEXAH.png)
 
 ---
 
