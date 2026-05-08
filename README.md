@@ -95,6 +95,39 @@ Includes:
 
 ---
 
+## 🌀 Visual Exploration
+
+...
+
+- layered reference systems
+
+---
+
+## 🗺️ Comparative Visual Languages
+
+![Grammar Table](ARCHITECTURE/archive/THE_GRAMMAR_TABLE.png)
+
+NEXAH also explores possible relationships between different visual and structural languages used across physics, systems theory, topology, cartography, information geometry, computation and dynamic systems.
+
+The goal is not to unify these disciplines into a single theory,
+
+but to investigate whether common navigational patterns emerge between them.
+
+This comparative layer functions as an exploratory orientation grammar:
+
+```text
+
+different systems
+
+→ different representations
+
+→ potentially comparable structural behaviors
+```
+
+
+
+---
+
 ## 🧠 What NEXAH Does
 
 NEXAH attempts to infer **emergent structure from dynamical behavior**.
@@ -124,6 +157,10 @@ This enables exploratory analysis of:
 - trajectory behavior
 - phase-dependent transitions
 - structure-aware navigation
+
+*NEXAH does not replace domain expertise.*
+
+It attempts to provide orientation between specialized representations.
 
 ---
 
