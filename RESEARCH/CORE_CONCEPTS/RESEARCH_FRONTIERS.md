@@ -377,13 +377,11 @@ and should not be interpreted as a replacement for established theory.
 
 Current exploratory concept:
 
-$$
-F_J(x)
-=
-F_{\text{forward}}(x)
-+
-F_{\text{backward}}(x)
-$$
+```markdown
+\[
+F_J(x) = F_{\mathrm{forward}}(x) + F_{\mathrm{backward}}(x)
+\]
+```
 
 ---
 
