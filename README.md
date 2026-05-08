@@ -95,14 +95,6 @@ Includes:
 
 ---
 
-## 🌀 Visual Exploration
-
-...
-
-- layered reference systems
-
----
-
 ## 🗺️ Comparative Visual Languages
 
 ![Grammar Table](ARCHITECTURE/archive/THE_GRAMMAR_TABLE.png)
@@ -123,8 +115,6 @@ different systems
 
 → potentially comparable structural behaviors
 ```
-
-
 
 ---
 
