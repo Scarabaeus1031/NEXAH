@@ -1,4 +1,3 @@
-```markdown
 # 🧠 NEXAH — Research Frontiers
 
 ## 🧭 Purpose
@@ -626,4 +625,4 @@ and navigation in complex systems.
 
 **NEXAH — Research Frontiers**  
 Thomas K. R. Hofmann · 2026
-```
+
