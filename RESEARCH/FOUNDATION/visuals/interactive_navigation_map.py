@@ -259,4 +259,43 @@ plt.savefig(
     bbox_inches="tight"
 )
 
-plt.show()
+# ============================================================
+# SAVE — interactive_navigation_map.py
+# Target:
+# RESEARCH/FOUNDATION/visuals/interactive_navigation_map.py
+# ============================================================
+
+from pathlib import Path
+
+# ------------------------------------------------------------
+# output directory
+# ------------------------------------------------------------
+
+OUTDIR = Path("RESEARCH/FOUNDATION/visuals")
+OUTDIR.mkdir(parents=True, exist_ok=True)
+
+# ------------------------------------------------------------
+# save figure
+# ------------------------------------------------------------
+
+png_path = OUTDIR / "interactive_navigation_map.png"
+
+plt.savefig(
+    png_path,
+    dpi=300,
+    bbox_inches="tight",
+    facecolor="white"
+)
+
+print(f"[saved] {png_path}")
+
+# ------------------------------------------------------------
+# optional: save script copy itself
+# ------------------------------------------------------------
+
+script_path = OUTDIR / "interactive_navigation_map.py"
+
+with open(script_path, "w", encoding="utf-8") as f:
+    f.write(open(__file__, "r", encoding="utf-8").read())
+
+print(f"[saved] {script_path}")
