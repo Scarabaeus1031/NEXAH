@@ -8,7 +8,7 @@ It identifies **structure within system dynamics** and enables **causal interact
 
 # 🧭 Conceptual Overview
 
-![Validation Summary](./VALIDATION/nexah_validation_summary_visual.png)
+![Validation Summary](./VALIDATION/visuals/nexah_validation_summary_visual.png)
 
 *Empirical validation summary of structure, transitions, and control behavior.*
 
