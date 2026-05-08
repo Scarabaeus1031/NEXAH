@@ -186,29 +186,6 @@ as structural properties of motion within evolving system geometry.
 
 ---
 
-## 🧭 Navigation Perspective
-
-NEXAH is not designed as a universal theory.
-
-It functions more as:
-
-```text
-a navigation grammar for dynamic systems
-```
-
-The framework attempts to connect:
-
-- field representations
-- geometry
-- transitions
-- topology
-- phase behavior
-- and control dynamics
-
-into a shared orientation layer.
-
----
-
 ## 🔬 Research & Findings
 
 📂 [`RESEARCH/`](RESEARCH/)
