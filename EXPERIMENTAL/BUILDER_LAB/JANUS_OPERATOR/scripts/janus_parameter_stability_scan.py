@@ -139,7 +139,6 @@ def rhs_for(system: str, value: float) -> Callable[[float, Array], Array]:
         return make_halvorsen_rhs(value)
     raise ValueError(f"Unknown system: {system}")
 
-
 def simulate_system(cfg: SweepConfig, value: float) -> Tuple[Array, Array]:
     rhs = rhs_for(cfg.system, value)
 
@@ -159,21 +158,31 @@ def simulate_system(cfg: SweepConfig, value: float) -> Tuple[Array, Array]:
         atol=1.0e-12,
     )
 
+    # IMPORTANT FIX:
+    # Some Halvorsen parameter regions explode numerically.
+    # We skip unstable integrations instead of crashing.
+
     if not sol.success:
         print(
             f"[warning] {cfg.system} parameter={value:g} "
             f"integration unstable: {sol.message}"
-    )
-    return np.array([]), np.empty((0, 3))
+        )
+        return np.array([]), np.empty((0, 3))
 
     t = sol.t
     states = sol.y.T
 
     start = int(len(t) * cfg.transient_fraction)
+
     return t[start:], states[start:]
 
 
-def compute_janus(t: Array, states: Array, eps: float = 1.0e-8) -> Tuple[Array, Array]:
+def compute_janus(
+    t: Array,
+    states: Array,
+    eps: float = 1.0e-8,
+) -> Tuple[Array, Array]:
+
     dt_f = (t[2:] - t[1:-1])[:, None]
     dt_b = (t[1:-1] - t[:-2])[:, None]
 
@@ -181,27 +190,48 @@ def compute_janus(t: Array, states: Array, eps: float = 1.0e-8) -> Tuple[Array, 
     backward = (states[1:-1] - states[:-2]) / dt_b
 
     overlap = forward * backward
+
     numerator = np.linalg.norm(overlap, axis=1)
-    denominator = np.linalg.norm(forward, axis=1) * np.linalg.norm(backward, axis=1) + eps
+
+    denominator = (
+        np.linalg.norm(forward, axis=1)
+        * np.linalg.norm(backward, axis=1)
+        + eps
+    )
 
     janus = numerator / denominator
+
     return states[1:-1], janus
 
 
-def compute_curvature(states: Array, eps: float = 1.0e-8) -> Array:
+def compute_curvature(
+    states: Array,
+    eps: float = 1.0e-8,
+) -> Array:
+
     r1 = states[1:-1] - states[:-2]
     r2 = states[2:] - states[1:-1]
 
     cross = np.cross(r1, r2)
+
     numerator = np.linalg.norm(cross, axis=1)
 
     speed = np.linalg.norm(r1, axis=1)
+
     denominator = speed**3 + eps
 
     return numerator / denominator
 
-tedef analyze_parameter(cfg: SweepConfig, value: float) -> Dict[str, float]:
+
+def analyze_parameter(
+    cfg: SweepConfig,
+    value: float,
+) -> Dict[str, float]:
+
     t, states = simulate_system(cfg, value)
+
+    # IMPORTANT FIX:
+    # Skip failed integrations cleanly.
 
     if len(t) < 10 or len(states) < 10:
         return {
@@ -215,6 +245,60 @@ tedef analyze_parameter(cfg: SweepConfig, value: float) -> Dict[str, float]:
             "orientation_angle": np.nan,
         }
 
+    _, janus = compute_janus(t, states)
+
+    curvature = compute_curvature(states)
+
+    curvature = curvature[: len(janus)]
+
+    log_curv = np.log10(curvature + 1.0e-8)
+
+    n = min(len(janus), len(log_curv))
+
+    janus = janus[:n]
+    log_curv = log_curv[:n]
+    curvature = curvature[:n]
+
+    if (
+        np.std(janus) <= 1.0e-12
+        or np.std(log_curv) <= 1.0e-12
+    ):
+        r = 0.0
+    else:
+        r, _ = pearsonr(janus, log_curv)
+
+    low_threshold = np.quantile(janus, 0.08)
+
+    high_threshold = np.quantile(log_curv, 0.92)
+
+    low_mask = janus <= low_threshold
+
+    high_mask = log_curv >= high_threshold
+
+    overlap_mask = low_mask & high_mask
+
+    overlap_fraction = (
+        np.sum(overlap_mask)
+        / max(np.sum(low_mask), 1)
+    )
+
+    angle = np.degrees(
+        np.arctan2(overlap_fraction, r)
+    )
+
+    if angle > 180:
+        angle -= 360
+
+    return {
+        "parameter": float(value),
+        "samples": float(n),
+        "janus_mean": float(np.mean(janus)),
+        "janus_std": float(np.std(janus)),
+        "curvature_mean": float(np.mean(curvature)),
+        "r": float(r),
+        "overlap_fraction": float(overlap_fraction),
+        "orientation_angle": float(angle),
+    }
     _, janus = compute_janus(t, states)
 
     curvature = compute_curvature(states)
