@@ -1,73 +1,170 @@
 # 🧠 NEXAH — Research Layer
 
-**Purpose:**  
-This module contains the **conceptual, structural, and empirical foundation** of NEXAH.
+## 🔷 Purpose
+
+This module contains the conceptual, structural, empirical, and semi-formal research foundation of NEXAH.
 
 It is not a finished theory.
 
-It is a **living research layer** that evolves through:
+It is a continuously evolving research framework built through:
 
 ```text
-building → observation → validation → consolidation
+observation
+→ structure extraction
+→ validation
+→ consolidation
+→ navigation
+```
+
+NEXAH investigates how complex systems generate:
+
+- structured dynamics
+- coherent motion
+- transition geometry
+- phase-dependent activation
+- and direction-sensitive control behavior
+
+---
+
+# 🧭 Research Navigation
+
+## Primary Entry Points
+
+| Document | Role |
+|---|---|
+| `RESEARCH_INDEX.md` | Full navigation map through the research architecture |
+| `RESEARCH_VISION.md` | Conceptual overview and structural interpretation |
+| `ABSTRACT.md` | Compact research summary |
+| `PAPER_DRAFT.md` | Current integrated paper draft |
+| `CORE_CONCEPT_MAP.md` | Visual concept architecture |
+
+---
+
+# 🌌 Core Perspective
+
+NEXAH does not primarily model isolated system states.
+
+Instead:
+
+```text
+systems are interpreted as trajectories
+inside structured dynamical fields
+```
+
+Within this interpretation:
+
+- geometry constrains motion
+- density organizes persistence
+- coherence stabilizes trajectories
+- mismatch activates transitions
+- topology emerges from connectivity
+- control becomes directional navigation
+
+---
+
+# 🔷 Central Mechanism
+
+The current research layer converges toward the following operational structure:
+
+```text
+field
+→ structure
+→ geometry
+→ phase
+→ mismatch
+→ transition
+        ↑
+   control(direction)
+```
+
+This introduces a two-layer interpretation:
+
+```text
+geometry determines where transitions are possible
+
+phase dynamics determines when transitions activate
 ```
 
 ---
 
-## 🧭 Entry Point
+# 🔥 Core Empirical Result
 
-For structured navigation through the research layer:
+Across multiple investigated systems:
 
-👉 See: [`RESEARCH_INDEX.md`](./RESEARCH_INDEX.md)
+- Lorenz
+- Rössler
+- Halvorsen
+- Duffing
+- Kuramoto
+- parameter-driven fractal systems
 
-This index defines:
+we consistently observe:
 
 ```text
-how to move from assumptions → structure → validation → application
+transition activation correlates more strongly
+with phase mismatch
+than with instability magnitude alone
+```
+
+Operational mismatch definition:
+
+$$ M(t)=|\omega(t)-\hat{\omega}(t)| $$
+
+---
+
+# 🔑 Structural Interpretation
+
+```text
+instability = potential
+mismatch = trigger
+```
+
+This distinction is currently one of the central validated observations within the framework.
+
+---
+
+# 🧭 POSITION INSIDE NEXAH
+
+```text
+BUILDER LAB
+(exploration / hypothesis generation)
+
+→ RESEARCH LAYER
+(structure extraction & validation)
+
+→ CORE SYSTEM
+(stabilized mechanisms)
+
+→ DEMONSTRATOR / APPLICATIONS
+(execution & testing)
 ```
 
 ---
 
-## 🔷 Core Figures
-
-![Framework](./FIGURES/main/Fig_01.png)
-
-See: [FIGURES](./FIGURES/README.md)
-
----
-
-# 🧭 POSITION IN NEXAH
+# 🔴 VALIDATION PRINCIPLE
 
 ```text
-BUILDER LAB (exploration / hypothesis generation)
-→ RESEARCH LAYER (structure extraction & validation)
-→ CORE SYSTEM (stabilized mechanisms)
-→ DEMONSTRATOR / APPLICATIONS (execution & testing)
-```
-
----
-
-# 🔴 CORE PRINCIPLE
-
-```text
-No concept becomes part of the system
+No concept becomes part of the framework
 without empirical validation.
-
-Validation is not optional —
-it defines what is real within the framework.
 ```
+
+Validation is not optional.
+
+It defines what is operationally considered real inside the system.
 
 ---
 
 # 🧠 ROLE OF THIS LAYER
 
-This module is responsible for:
+The Research Layer is responsible for:
 
-- capturing emerging concepts  
-- structuring observations  
-- separating **hypothesis vs validated result**  
-- guiding system development  
-- preventing interpretation bias  
-- enforcing empirical validation across all system claims  
+- extracting structure from observed dynamics
+- formalizing emerging concepts
+- separating hypothesis from validated result
+- organizing empirical evidence
+- connecting observations across systems
+- guiding future formalization
+- preventing interpretation drift
 
 ---
 
@@ -75,19 +172,19 @@ This module is responsible for:
 
 This module is:
 
-- not a finalized mathematical theory  
-- not a claim of universality  
-- not an executable system  
+- not a finalized mathematical theory
+- not a universal proof
+- not a closed formal system
 
 It is:
 
-> a **structured research layer grounded in empirical system behavior**
+> an empirically grounded framework for discovering structured behavior in dynamical systems
 
 ---
 
-# 🧭 HOW TO READ THIS MODULE
+# 🧭 HOW TO READ THIS REPOSITORY
 
-Recommended path:
+Recommended progression:
 
 ```text
 1. RESEARCH_INDEX.md
@@ -97,248 +194,396 @@ Recommended path:
 5. FINDINGS/
 6. APPLIED_CASES/
 7. FIGURES/
+8. THEORETICAL_EXTENSIONS/
 ```
 
 ---
 
-# 🧱 MODULE STRUCTURE
+# 🧱 RESEARCH ARCHITECTURE
 
 ---
 
-## 🔬 VALIDATION
-
-→ `VALIDATION/`
-
-Empirical verification layer of the system.
-
-![NEXAH Validation Summary](./VALIDATION/visuals/nexah_validation_summary_visual.png)
-
-**Figure — Validation Overview**
-
-This visual summarizes the validation stack across:
-
-- reproducibility  
-- noise robustness  
-- partition invariance  
-- cross-system consistency  
-- control and causality  
-- phase dynamics  
-
-👉 Role: **empirical backbone of the system**
-
-### Fractal Systems (Mandelbrot / Julia)
-
-NEXAH was applied to fractal systems by analyzing parameter-induced transitions.
-
-Key observation:
-
-```text
-parameter motion → induces mismatch → triggers transitions
-```
-
-This extends the framework beyond intrinsic system dynamics
-to externally driven transition structures.
-
----
-
-### 🔬 Fractal Transition Validation (Extension)
-
-![Fractal Transition Validation](./VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
-
-```text
-Parameter-driven transitions validated via fractal systems.
-```
-
-Key result:
-
-```text
-parameter motion → mismatch → transitions
-Δ(t) ≈ M(t)
-```
-
-→ This extends validation from intrinsic dynamics  
-to **externally induced transition mechanisms**.
-
----
-
-## 🧩 CORE CONCEPTS
-
-→ `CORE_CONCEPTS/`
-
-Defines the conceptual system:
-
-- field representation  
-- vessel / constraints  
-- multi-layer interaction  
-- transition geometry  
-- structural operators  
-- phase dynamics (causal layer)
-
-👉 Role: **conceptual backbone**
-
----
-
-## 🧩 FOUNDATION
+# 🧩 FOUNDATION
 
 → `FOUNDATION/`
 
-Defines minimal assumptions:
+Defines the minimal assumptions of the framework.
 
-- axioms  
-- definitions  
-- structural theorems  
+Contains:
 
-👉 Role: **formal grounding**
+- axioms
+- definitions
+- structural assumptions
+- topology primitives
+- variable mappings
+
+Role:
+
+```text
+formal grounding layer
+```
 
 ---
 
-## 📊 FINDINGS
+# 🧠 CORE_CONCEPTS
+
+→ `CORE_CONCEPTS/`
+
+Defines the operational architecture of NEXAH.
+
+Includes:
+
+- field representation
+- density structure
+- coherence
+- vessel geometry
+- transition geometry
+- phase dynamics
+- structural quantities
+- multi-layer interaction
+- theory-to-field mapping
+
+Role:
+
+```text
+conceptual backbone of the framework
+```
+
+---
+
+# 🔬 VALIDATION
+
+→ `VALIDATION/`
+
+Empirical verification layer.
+
+![NEXAH Validation Summary](./VALIDATION/visuals/nexah_validation_summary_visual.png)
+
+Validated properties currently include:
+
+- reproducibility
+- noise robustness
+- partition invariance
+- cross-system consistency
+- phase-transition correlation
+- directional control behavior
+- mismatch activation
+- causal control effects
+
+---
+
+## 🔷 Fractal Transition Extension
+
+![Fractal Transition Validation](./VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
+
+The framework was extended to parameter-driven fractal systems.
+
+Observed:
+
+```text
+parameter motion
+→ structural mismatch
+→ transition activation
+```
+
+Operational relation:
+
+$$ \Delta(t)\approx M(t) $$
+
+This extends NEXAH beyond intrinsic dynamics
+toward externally induced transition structure.
+
+---
+
+# 🔥 FINDINGS
 
 → `FINDINGS/`
 
-Empirical observations:
+Compressed empirical observations extracted across systems.
 
-- transition structure  
-- flow geometry  
-- phase dynamics  
-- control behavior  
+Includes:
 
-👉 Role: **compressed empirical insights**
+- transition geometry
+- phase dynamics
+- drift structure
+- coherence behavior
+- control directionality
+- topology emergence
+- structural transition laws
 
 ---
 
-## 🧪 APPLIED CASES
+## 🔷 TRANSITION & PHASE DYNAMICS
+
+→ `FINDINGS/TRANSITION_PHASE_DYNAMICS/`
+
+One of the central active research layers.
+
+Investigates:
+
+- phase as structural coordinate
+- winding behavior
+- transition activation
+- cross-system phase consistency
+- phase drift
+- emergent topology
+
+---
+
+## 🔷 PRIME MODULAR RESONANCE
+
+→ `FINDINGS/PRIME_MODULAR_RESONANCE/`
+
+Extended structural investigations on:
+
+- modular flow systems
+- transition circulation
+- resonance structures
+- topology signatures
+- spectral flow behavior
+- winding and vortex geometry
+
+This currently acts as an exploratory structural mathematics extension layer.
+
+---
+
+# 🌍 APPLIED_CASES
 
 → `APPLIED_CASES/`
 
-Interpretations across domains:
+Cross-domain interpretation layer.
 
-- dynamical systems  
-- engineering systems  
-- decision systems  
+Contains:
 
-👉 Role: **external mapping of structure**
+- Lorenz
+- Rössler
+- Halvorsen
+- fractal systems
+- engineering scenarios
+- decision-system examples
+
+Role:
+
+```text
+mapping structural principles
+into interpretable domains
+```
 
 ---
 
-## 🧠 SYSTEM MODELS
+# 🖼 FIGURES
+
+→ `FIGURES/`
+
+Visual backbone of the framework.
+
+Contains:
+
+- structural diagrams
+- transition geometry
+- phase mismatch figures
+- unified architecture visuals
+- paper-ready figures
+
+Role:
+
+```text
+visual synthesis of the framework
+```
+
+---
+
+# 🧠 SYSTEM_MODELS
 
 → `SYSTEM_MODELS/`
 
-Semi-formal models:
+Semi-formal modeling layer.
 
-- operator-based systems  
-- Koopman-style mappings  
+Bridges empirical observations toward:
 
-👉 Role: **bridge to formal theory**
+- operator systems
+- abstract representations
+- field mappings
+- future formalization
 
 ---
 
-## 📝 NOTES
+# 🧪 THEORETICAL_EXTENSIONS
+
+→ `THEORETICAL_EXTENSIONS/`
+
+Future formalization path.
+
+Current directions include:
+
+- Koopman connections
+- operator formalization
+- mismatch-transition models
+- topology/operator bridges
+
+Role:
+
+```text
+bridge toward mathematical closure
+```
+
+---
+
+# 📝 NOTES
 
 → `NOTES/`
 
-Exploratory thinking and informal ideas.
+Exploratory observations and informal research thoughts.
 
 ---
 
-## 🕰️ HISTORY
+# 🕰️ HISTORY
 
 → `HISTORY/`
 
-Evolution of concepts across versions.
+Evolution of the framework across versions.
+
+Tracks conceptual development from early prototypes
+toward structured architecture.
 
 ---
 
-## 🔬 DEVELOPMENT TRACK (LEGACY / EXPERIMENTAL)
+# 🔬 DEVELOPMENT TRACK (LEGACY / EXPERIMENTAL)
 
 → `NEXAH_DEVELOPMENT/`
 
 Contains:
 
-- early experiments  
-- raw outputs  
-- prototype scripts  
+- prototype systems
+- experimental operators
+- raw transition experiments
+- legacy gate logic
 
-⚠️ Not validated, not canonical
+⚠️ Experimental only — not canonical.
 
 ---
 
-# 🔬 VALIDATION PRINCIPLE
+# 🔬 CURRENT KEY IDEAS
 
-Every idea follows:
+The following are currently interpreted as:
 
 ```text
-Observation → Hypothesis → Measurement → Reproduction → Validation
+empirically supported structural observations
 ```
 
-Only after this:
+NOT finalized theory.
+
+---
+
+## 1. Structure over state
+
+System behavior is structured rather than random.
+
+---
+
+## 2. Stability is geometric
+
+Stability corresponds to coherent regions of structured flow.
+
+---
+
+## 3. Transitions are spatially organized
+
+Transitions occur through extended regions and corridors,
+not isolated points.
+
+---
+
+## 4. Phase mismatch activates transitions
+
+Observed operationally:
 
 ```text
-→ eligible for CORE integration  
-→ AND inclusion in VALIDATION layer
+mismatch
+→ increased transition probability
 ```
 
 ---
 
-# 🧠 KEY IDEAS (CURRENT STATE)
+## 5. Control is directional
 
-These are **empirically supported structural interpretations**, not final theory:
+Control effectiveness depends on:
+
+```text
+direction relative to intrinsic phase dynamics
+```
+
+Observed empirically:
+
+- aligned control amplifies transitions
+- inverse control suppresses transitions
 
 ---
 
-### 1. Structure over state  
-System behavior is structured, not random
+## 6. Topology emerges from connectivity
 
-### 2. Stability is geometric  
-Stability = region of coherent flow
+Topology is interpreted as an emergent property of:
 
-### 3. Transitions are structural  
-Transitions occur across regions, not at isolated points
+- coherent motion
+- transition connectivity
+- winding structure
+- admissible trajectories
 
-### 4. Phase as causal trigger  
-Transitions are activated by phase mismatch, not instability alone
+---
 
-### 5. Directional control (NEW)  
-Control effectiveness depends on its direction relative to phase dynamics  
+## 7. Navigation replaces prediction
 
-- alignment with phase drift → amplifies instability  
-- opposition to phase drift → suppresses instability  
+NEXAH shifts focus from:
 
-👉 control is not scalar — it is directional within phase space  
+```text
+predicting isolated states
+```
 
-### 6. Hybrid system nature  
-continuous field + discrete transition structure
+toward:
 
-### 7. Navigation replaces prediction  
-Not predicting states — navigating structure
+```text
+navigating structured dynamical geometry
+```
 
-### 8. Cross-system similarity (under investigation)  
-Different systems show similar structural patterns
+---
+
+## 8. Cross-system structural similarity
+
+Different systems appear to exhibit:
+
+- similar transition organization
+- similar mismatch behavior
+- similar coherence structures
+
+This remains under active investigation.
 
 ---
 
 # 🔗 RELATION TO IMPLEMENTATION
 
-This layer is not executable.
+The Research Layer itself is not executable.
 
-It is implemented and tested in:
+Implementation and experimentation occur in:
 
-- `NEXAH_DEMONSTRATOR/` → minimal reproducible system  
-- `NEXAH_CORE/` → extended system logic  
-- `FIELD_LAYER/` → geometry extraction  
+- `NEXAH_DEMONSTRATOR/`
+- `NEXAH_CORE/`
+- `FIELD_LAYER/`
 
 ---
 
-# 🚀 NEXT STEPS
+# 🚀 CURRENT RESEARCH DIRECTIONS
 
-- validate structural findings across systems  
-- quantify transition geometry  
-- formalize sheet / regime structure  
-- integrate phase explicitly into control  
-- connect to dynamical systems theory  
-- stabilize kernel abstraction  
-- validate control reproducibility  
+Ongoing development includes:
+
+- stronger phase formalization
+- transition geometry quantification
+- directional control integration
+- topology extraction
+- cross-system universality tests
+- fractal transition extensions
+- causal structure analysis
+- operator formalization
+- navigation-layer stabilization
 
 ---
 
@@ -346,23 +591,23 @@ It is implemented and tested in:
 
 The Research Layer is:
 
-- not a simulation  
-- not a product  
-- not a finished theory  
+- not a product
+- not a closed theory
+- not a finalized formal system
 
 It is:
 
-> a **structured system of evolving knowledge grounded in observed behavior**
+> a structured research architecture for discovering, validating, and navigating dynamical structure
 
 ---
 
 # 🔥 FINAL INSIGHT
 
 ```text
-We are not modeling systems.
+We are not imposing structure onto systems.
 
-We are discovering the structure
-that systems are forced to follow.
+We are extracting the structure
+that system dynamics are forced to follow.
 ```
 
 ---
