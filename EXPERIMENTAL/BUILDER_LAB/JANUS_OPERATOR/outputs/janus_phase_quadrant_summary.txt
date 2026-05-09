@@ -1,0 +1,37 @@
+JANUS recursive phase quadrants
+================================================
+
+Goal:
+Decompose JANUS transport into four recursive phase regimes.
+
+Q1 — Expansion
+---------------
+count: 6796
+fraction: 0.571140
+
+Q2 — Compression
+-----------------
+count: 173
+fraction: 0.014539
+
+Q3 — Memory / Echo
+-------------------
+count: 2143
+fraction: 0.180099
+
+Q4 — Transition / Gate
+-----------------------
+count: 2787
+fraction: 0.234221
+
+Global statistics:
+samples: 11899
+shell crossings: 3945
+mean memory signal: 0.760845
+mean abs breathing velocity: 0.679720
+
+Working interpretation:
+- expansion and compression form breathing transport phases
+- memory / echo captures delayed recurrence structure
+- transition / gate identifies low-coherence axis-linked crossings
+- the four regimes form a recursive phase decomposition of JANUS flow
