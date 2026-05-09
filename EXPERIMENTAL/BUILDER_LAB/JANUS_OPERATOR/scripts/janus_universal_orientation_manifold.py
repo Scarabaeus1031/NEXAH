@@ -1,4 +1,3 @@
-```python
 #!/usr/bin/env python3
 """
 JANUS_OPERATOR / Experiment 18
