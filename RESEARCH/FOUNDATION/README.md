@@ -1,340 +1,312 @@
-# 🔬 NEXAH — VALIDATION Layer
+# 🔬 NEXAH — FOUNDATION Layer
 
-This module contains the full empirical validation suite of the NEXAH framework.
+NEXAH studies how structure emerges from dynamics,
+how transitions form,
+and how navigation becomes possible inside structured fields.
 
-It establishes that the observed structures, transition dynamics, and control mechanisms are:
+This directory contains the current foundational layer of the NEXAH framework.
 
-- reproducible  
-- noise-robust  
-- partition-invariant  
-- cross-system consistent  
-- causally interpretable  
+It defines:
 
----
-
-# 🧭 Overview
-
-![NEXAH Validation Summary](../nexah_validation_summary_visual.png)
-
-*Integrated validation overview across all levels: structure → transitions → control → causality.*
-
-👉 This visual summarizes the **entire validation stack** and its convergence toward a unified mechanism.
+- the structural variable system  
+- geometric assumptions  
+- transition mechanisms  
+- navigation principles  
+- emergent topology  
+- empirical operational structure  
 
 ---
 
-# 🧭 Purpose
+# 🧭 Foundation Overview
 
-The VALIDATION layer bridges theory and empirical behavior.
+![Interactive Navigation Map](./visuals/interactive_navigation_map.png)
 
-It answers three core questions:
+---
+
+## 🧠 Core Principle
+
+NEXAH does not treat systems as isolated equations.
+
+Instead, it studies:
 
 ```text
-1. Does the structure persist under variation?
-2. Is the structure independent of representation?
-3. Can the structure be causally influenced?
+motion
+→ structure
+→ coherence
+→ transitions
+→ navigation
+```
+
+The framework explores how dynamical systems generate:
+
+- coherent regions  
+- transition corridors  
+- structural gates  
+- navigable manifolds  
+- directional constraints  
+
+---
+
+# 🔤 Structural Grammar
+
+The NEXAH variable system defines the operational grammar
+used across all modules.
+
+Core quantities include:
+
+| Variable | Meaning |
+|---|---|
+| $x$ | system state |
+| $F(x)$ | flow field |
+| $\rho(x)$ | structural density |
+| $\nabla \rho(x)$ | structural drift |
+| $C(x)$ | coherence |
+| $G(x)$ | gate susceptibility |
+| $M(t)$ | mismatch |
+| $T(x)$ | transition tension |
+| $s(t)$ | navigation / control |
+
+---
+
+![Structural Grammar Map](./visuals/NEXAH_STRUCTURAL_GRAMMAR_MAP.png)
+
+---
+
+## 📘 Reference
+
+See:
+
+```text
+core_variable_map.md
+```
+
+for the full operational variable system.
+
+---
+
+# 🧭 Axiomatic Layer
+
+The axioms define the minimal structural assumptions of NEXAH.
+
+They describe:
+
+- field-based evolution  
+- coherent motion  
+- gate formation  
+- transition geometry  
+- controllability  
+
+---
+
+## Core Perspective
+
+```text
+Systems move within structured fields.
+
+Transitions occur when coherence weakens
+and trajectories enter low-density interface regions.
 ```
 
 ---
 
-# 🧪 Validation Scope
+## 📘 Reference
 
-The validation is organized across multiple levels:
-
----
-
-## LEVEL 1 — Reproducibility
-
-- Multi-run simulations  
-- Sensitivity to initial conditions  
-
-Result:
-- Chaotic divergence occurs locally  
-- Global structure remains stable  
-
----
-
-## LEVEL 2 — Noise Robustness
-
-- Additive noise on trajectories  
-- Noise on transition matrices  
-
-Result:
-- No structural collapse  
-- Transition dynamics remain stable  
-
----
-
-## LEVEL 3 — Partition Invariance
-
-- KMeans  
-- PCA + KMeans  
-- Random Projection + KMeans  
-- DBSCAN (limit behavior)
-
-Result:
-- Transition structure is independent of discretization  
-- No stable discrete clustering → continuous geometry  
-
----
-
-## LEVEL 4 — Cross-System Validation
-
-Validated systems:
-
-- Lorenz  
-- Rössler  
-- Duffing  
-
-Result:
-- Similar transition structures across systems  
-- Not system-specific  
-
----
-
-## LEVEL 5 — Field-Level Structure
-
-- Instability field  
-- Transition field  
-- Navigation field  
-
-Result:
-- Transitions occur in structured regions of the flow  
-- System behavior is geometrically organized  
-
----
-
-## LEVEL 6 — Control & Causality
-
-- Gate-based interventions  
-- Target reach experiments  
-- Time-to-target measurements  
-- Resonance scans  
-
-Result:
-- System behavior can be influenced  
-- Control effectiveness is non-linear and phase-dependent  
-
----
-
-## LEVEL 7 — Phase Dynamics & Causal Mechanism
-
-- Phase velocity analysis  
-- Phase mismatch detection  
-- Control law extraction  
-- IOTA event correlation  
-
-Result:
+See:
 
 ```text
-Transitions are not caused by instability alone.
-
-They occur when:
-
-phase dynamics and control are misaligned.
+axioms.md
 ```
 
 ---
 
-## LEVEL 8 — Angular Structure (IOTA Symmetry)
+# 🔷 Structural Theorems
 
-- Angular distribution of transition events  
-- Fourier spectrum of phase structure  
+The structural theorems formalize the current operational propositions of NEXAH.
 
-Observed dominant modes:
+They describe:
 
-```text
-[4, 32, 34, 2, 0]
-```
-
-Result:
-- Transitions exhibit non-uniform angular structure  
-- Evidence of underlying geometric constraints  
+- coherence stability  
+- transition regions  
+- gate intersections  
+- density-driven structure  
+- navigation dynamics  
+- field-aligned control  
 
 ---
 
-# 🔑 Core Findings
+## Key Idea
 
 ```text
-1. Transition dynamics are stable across runs, noise, and systems
-2. Structure is independent of representation and partitioning
-3. Transitions occur in geometrically defined regions
-4. Control is possible without modifying system equations
-5. Transition events are linked to phase mismatch
+Stability emerges from coherent motion within structured geometry.
+
+Transitions emerge from structural misalignment.
 ```
 
 ---
 
-# 🧠 Key Principle
+## 📘 Reference
+
+See:
 
 ```text
-Chaotic systems are not controlled by reducing instability.
-
-They are controlled by aligning intervention
-with the intrinsic phase structure of the system.
+structural_theorems.md
 ```
 
 ---
 
-# ⚠️ Current Limitation
+# 🌌 Emergent Topology
 
-- Phase-aligned control improves trajectory structure  
-- BUT does not yet reduce transition frequency (IOTA count)
+NEXAH treats topology as an emergent property of structured motion.
 
-Missing component:
+Topology is not imposed externally.
+
+It arises from:
+
+- sheet connectivity  
+- transition structure  
+- flow organization  
+- navigation constraints  
+
+---
+
+## Core Principle
 
 ```text
-adaptive control depending on both:
-
-phase AND instability
+Topology emerges from how systems are allowed to move.
 ```
 
 ---
 
-# 🚀 Next Steps
+## 📘 Reference
 
-## 1. Adaptive Control Integration
-
-Implement:
+See:
 
 ```text
-s = f(φ, instability)
-```
-
-Goal:
-
-- reduce phase–control mismatch  
-- suppress IOTA events  
-- maintain geometric alignment  
-
----
-
-## 2. Mismatch Suppression
-
-Focus:
-
-- detect mismatch peaks  
-- actively damp mismatch growth  
-
-Target:
-
-```text
-reduce IOTA count
+topology_structure.md
 ```
 
 ---
 
-## 3. Control Robustness (Multi-Run)
+# 🧪 Empirical Validation
 
-Validate:
+The framework has been tested across multiple systems and operational layers.
 
-- reproducibility across runs  
-- sensitivity to initial conditions  
-- stability under noise  
+Current experiments include:
 
----
-
-## 4. Cross-System Control Validation
-
-Extend to:
-
-- Rössler  
-- Duffing  
+- Lorenz systems  
+- Rössler systems  
+- Duffing systems  
+- IEEE-inspired navigation experiments  
+- gate detection  
+- mismatch analysis  
+- transition geometry  
+- navigation fields  
 
 ---
 
-## 5. IEEE System Integration
+# 🧭 System Atlas
 
-Apply to:
-
-- IEEE 9  
-- IEEE 14  
+![NEXAH System Atlas](./visuals/NEXAH_SYSTEM_ATLAS.png)
 
 ---
 
-## 6. Angular Structure Consolidation
+## Validation Focus
 
-Analyze:
-
-- dominant modes  
-- symmetry vs asymmetry  
-- phase coupling  
-
----
-
-## 7. Minimal Control Law Extraction
-
-Target form:
+The current validation stack explores:
 
 ```text
-s ≈ f(φ, mismatch)
+dynamics
+→ density structure
+→ coherence
+→ transition fields
+→ navigation behavior
+→ control interaction
 ```
 
 ---
 
-# 📂 Structure
+# 🔥 Current Insight
+
+The present NEXAH framework suggests:
 
 ```text
-VALIDATION/
-├── lorenz/
-├── rossler/
-├── duffing/
-├── cross_validation/
-├── cross_system/
-├── causality/
-└── results/
+Dynamics generate structure.
+
+Structure generates constraints.
+
+Constraints generate transitions.
+
+Transitions generate navigable geometry.
 ```
 
 ---
 
-# 📊 Output
+# 🧠 Operational Perspective
 
-The module produces:
+NEXAH is currently:
 
-- trajectory overlays  
-- transition matrices  
-- sensitivity maps  
-- field visualizations  
-- control response plots  
-- phase dynamics analysis  
-- angular symmetry spectra  
+```text
+empirical
+semi-formal
+geometry-oriented
+navigation-centered
+```
 
-All results are reproducible via scripts in this directory.
+It is NOT yet:
+
+- a complete mathematical theory  
+- a universal physical model  
+- a formally proven framework  
 
 ---
 
-# 🧭 Status
+# 🧭 Repository Structure
+
+```text
+FOUNDATION/
+│
+├── README.md
+├── core_variable_map.md
+├── axioms.md
+├── structural_theorems.md
+├── topology_structure.md
+│
+├── visuals/
+│   ├── interactive_navigation_map.png
+│   ├── NEXAH_STRUCTURAL_GRAMMAR_MAP.png
+│   ├── NEXAH_SYSTEM_ATLAS.png
+│   └── ...
+│
+└── scripts/
+```
+
+---
+
+# 🔬 Status
 
 ```diff
-+ Structural validation: COMPLETE
-+ Cross-system validation: COMPLETE
-+ Control validation: COMPLETE
-+ Causal mechanism: IDENTIFIED
-- Full transition suppression: NOT YET ACHIEVED
++ Structural grammar established
++ Transition geometry operational
++ Navigation layer implemented
++ Visual semantics consolidated
++ Cross-system consistency observed
+- Formal mathematical closure incomplete
 ```
 
 ---
 
-# 📌 Conclusion
-
-The validation demonstrates that:
-
-- observed structures are real and robust  
-- transition dynamics are intrinsic to flow geometry  
-- control operates through phase alignment, not force  
-
----
-
-# 🔥 Final Insight
+# 🔥 Final Perspective
 
 ```text
-We are not just observing chaotic systems.
+NEXAH studies how systems become structurally navigable.
 
-We are identifying the mechanism
-that governs when and how they transition.
+The framework does not seek to suppress dynamics.
+
+It seeks to understand how motion organizes itself
+into coherent geometry, transitions, and admissible paths.
 ```
 
 ---
 
-**NEXAH Validation Layer**  
-Empirical Structure & Control Verification  
-© Thomas K. R. Hofmann · 2026
+**NEXAH — FOUNDATION Layer**  
+Thomas K. R. Hofmann · 2026
