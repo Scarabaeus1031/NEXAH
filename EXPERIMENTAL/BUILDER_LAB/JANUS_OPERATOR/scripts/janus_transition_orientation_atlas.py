@@ -128,8 +128,8 @@ SYSTEMS = [
 # ------------------------------------------------------------
 
 def simulate_system(cfg: SystemConfig) -> Tuple[Array, Array]:
-    t_eval = np.arange(0.0, cfg.t_max + cfg.dt, cfg.dt)
-
+    n_steps = int(cfg.t_max / cfg.dt)
+    t_eval = np.linspace(0.0, cfg.t_max, n_steps + 1)
     sol = solve_ivp(
         fun=cfg.rhs,
         t_span=(0.0, cfg.t_max),
