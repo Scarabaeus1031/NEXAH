@@ -585,3 +585,796 @@ remains intentionally open.
 The purpose of this log
 is to preserve the observations clearly enough
 for systematic future investigation.
+
+# 🔷 EXP-6 — Multi-Scale Coherence Analysis
+
+Script:
+`scripts/janus_multiscale_analysis.py`
+
+Outputs:
+
+- `outputs/janus_multiscale_overlay.png`
+- `outputs/janus_multiscale_heatmap.png`
+- `outputs/janus_scale_variance.png`
+
+---
+
+## Multi-Scale Overlay
+
+![Multi-Scale Overlay](outputs/janus_multiscale_overlay.png)
+
+---
+
+## Multi-Scale Heatmap
+
+![Multi-Scale Heatmap](outputs/janus_multiscale_heatmap.png)
+
+---
+
+## Scale Variance
+
+![Scale Variance](outputs/janus_scale_variance.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 12000
+
+variance per scale:
+
+scale=  1 variance=0.070885
+scale=  2 variance=0.061448
+scale=  5 variance=0.034483
+scale= 10 variance=0.013927
+scale= 20 variance=0.004386
+scale= 40 variance=0.001464
+```
+
+---
+
+## Observation
+
+The JANUS coherence structure persists
+across multiple smoothing scales.
+
+Important:
+
+```text
+The system does not collapse under smoothing.
+```
+
+Instead:
+
+- local oscillations compress
+- large-scale structure remains stable
+- coherent modulation survives aggregation
+
+---
+
+## Structural Interpretation
+
+The heatmap reveals:
+
+- vertical coherence channels
+- persistent temporal ridges
+- scale-spanning alignment structures
+
+The strongest observation:
+
+```text
+coherence corridors remain aligned
+across scales
+```
+
+This suggests:
+
+- hierarchical organization
+- nested modulation geometry
+- scale-robust coherence structure
+
+---
+
+## Variance Decay
+
+Variance decreases smoothly
+with increasing scale.
+
+This is important because:
+
+```text
+the system becomes smoother
+without losing structural identity
+```
+
+Observed behavior resembles:
+
+- hierarchical field compression
+- persistent attractor scaffolding
+- multi-scale stability
+
+---
+
+## Visual Observation
+
+The overlay visualization shows:
+
+- coherent resonance bands
+- nested oscillation families
+- persistent modulation envelopes
+
+At large scales:
+
+- the fast oscillations disappear
+- but the global field geometry remains visible
+
+This strongly suggests:
+
+```text
+JANUS is not dominated
+by high-frequency noise.
+```
+
+---
+
+# 🔷 EXP-7 — Frequency Decomposition
+
+Script:
+`scripts/janus_frequency_decomposition.py`
+
+Outputs:
+
+- `outputs/janus_frequency_spectrum.png`
+- `outputs/janus_power_spectrum.png`
+- `outputs/janus_frequency_peaks.png`
+
+---
+
+## JANUS Frequency Spectrum
+
+![JANUS Frequency Spectrum](outputs/janus_frequency_spectrum.png)
+
+---
+
+## JANUS Power Spectrum
+
+![JANUS Power Spectrum](outputs/janus_power_spectrum.png)
+
+---
+
+## Dominant Frequency Peaks
+
+![Dominant Frequency Peaks](outputs/janus_frequency_peaks.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 12000
+
+dominant peaks:
+0
+```
+
+---
+
+## Observation
+
+The JANUS spectrum does NOT exhibit
+a single dominant carrier frequency.
+
+Instead:
+
+- broad low-amplitude excitation exists
+- weak distributed harmonics appear
+- energy spreads continuously across modes
+
+---
+
+## Important Structural Finding
+
+This is highly significant.
+
+Why?
+
+Because the system behaves unlike:
+
+- a pure oscillator
+- a fixed resonance
+- a single-mode periodic signal
+
+Instead:
+
+```text
+JANUS behaves like
+a distributed coherence field.
+```
+
+---
+
+## Spectrum Interpretation
+
+The frequency plot reveals:
+
+- a strong DC-like baseline
+- distributed excitation ridges
+- weak spectral islands
+
+The signal appears:
+
+- smooth
+- modulated
+- continuously reorganizing
+
+rather than:
+
+- sharply periodic
+- spectrally concentrated
+
+---
+
+## Structural Implication
+
+The absence of sharp peaks suggests:
+
+- coherence is geometrically distributed
+- information is carried structurally
+- modulation is flow-dependent
+
+This supports the hypothesis that:
+
+```text
+JANUS tracks field organization,
+not simple oscillation frequency.
+```
+
+---
+
+# 🔷 EXP-8 — Phase Synchronization Analysis
+
+Script:
+`scripts/janus_phase_synchonization.py`
+
+Outputs:
+
+- `outputs/janus_phase_difference.png`
+- `outputs/janus_phase_locking_distribution.png`
+- `outputs/janus_phase_space.png`
+
+---
+
+## Phase Difference
+
+![Phase Difference](outputs/janus_phase_difference.png)
+
+---
+
+## Phase Locking Distribution
+
+![Phase Locking Distribution](outputs/janus_phase_locking_distribution.png)
+
+---
+
+## Phase Space
+
+![Phase Space](outputs/janus_phase_space.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 12000
+
+phase locking value:
+0.877538
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS and curvature exhibit
+strong phase synchronization.
+```
+
+---
+
+## Observation
+
+The phase-locking value is extremely high:
+
+```text
+PLV ≈ 0.878
+```
+
+This indicates:
+
+- persistent phase alignment
+- structured temporal coupling
+- stable synchronization geometry
+
+---
+
+## Phase Difference Structure
+
+The phase-difference plot reveals:
+
+- bounded oscillation
+- recurrent modulation bands
+- non-random temporal drift
+
+Importantly:
+
+```text
+the phase does not diverge freely.
+```
+
+Instead:
+
+- it remains trapped inside
+  structured oscillatory corridors
+
+---
+
+## Phase Space Observation
+
+The phase-space plot reveals:
+
+- dense upper-state clustering
+- bounded coherence domains
+- compressed state occupation
+
+The structure resembles:
+
+- phase locking
+- attractor trapping
+- constrained synchronization geometry
+
+---
+
+## Distribution Structure
+
+The locking histogram exhibits:
+
+- highly non-uniform density
+- preferred synchronization regions
+- mirrored boundary clustering
+
+This suggests:
+
+```text
+the system prefers
+specific phase relationships.
+```
+
+---
+
+## Structural Interpretation
+
+Combined observations indicate:
+
+- JANUS and curvature are not independent
+- coherence and geometry co-evolve
+- synchronization persists dynamically
+
+Most importantly:
+
+```text
+the coupling is organized,
+not random.
+```
+
+---
+
+# 🔷 EXP-9 — Noise Robustness
+
+Script:
+`scripts/janus_noise_robustness.py`
+
+Outputs:
+
+- `outputs/janus_noise_distribution_shift.png`
+- `outputs/janus_noise_signal_overlay.png`
+- `outputs/janus_noise_correlation_decay.png`
+- `outputs/janus_noise_heatmap.png`
+
+---
+
+## Noise Distribution Shift
+
+![Noise Distribution Shift](outputs/janus_noise_distribution_shift.png)
+
+---
+
+## Noise Signal Overlay
+
+![Noise Signal Overlay](outputs/janus_noise_signal_overlay.png)
+
+---
+
+## Correlation Decay
+
+![Correlation Decay](outputs/janus_noise_correlation_decay.png)
+
+---
+
+## Noise Heatmap
+
+![Noise Heatmap](outputs/janus_noise_heatmap.png)
+
+---
+
+## Numerical Results
+
+```text
+samples per signal: 8499
+
+smoothing sigma: 3.0
+
+noise_level, correlation_to_clean, mean, std
+
+0.000000, 1.000000, 0.770717, 0.085190
+0.001000, 0.999946, 0.770162, 0.084996
+0.002500, 0.998883, 0.767254, 0.083880
+0.005000, 0.983646, 0.756572, 0.081334
+0.010000, 0.816825, 0.720423, 0.080203
+0.025000, 0.223967, 0.612475, 0.085790
+0.050000, 0.196734, 0.565076, 0.069165
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS coherence remains stable
+under low-to-moderate perturbation.
+```
+
+---
+
+## Observation
+
+The signal overlay reveals:
+
+- persistent alignment corridors
+- stable coherence bands
+- repeated structural overlap
+
+A particularly important region appears near:
+
+```text
+JANUS coherence ≈ 0.83
+```
+
+Across multiple noise realizations,
+signals repeatedly intersect
+near this level.
+
+---
+
+## Structural Interpretation
+
+This suggests the existence of:
+
+- preferred coherence channels
+- structural attractor corridors
+- noise-resistant synchronization bands
+
+---
+
+## Distribution Analysis
+
+The distribution overlays are extremely informative.
+
+As noise increases:
+
+- the coherence field broadens
+- variance increases
+- but structural layering remains visible
+
+Importantly:
+
+```text
+the distributions deform continuously,
+not catastrophically.
+```
+
+---
+
+## Visual Structure
+
+The overlayed pastel distributions create:
+
+- layered interference regions
+- quasi-depth perception
+- stacked coherence surfaces
+
+The result visually resembles:
+
+- folded field sheets
+- coherence membranes
+- layered attractor geometry
+
+---
+
+## Heatmap Observation
+
+The heatmap reveals:
+
+- vertical persistence channels
+- stable impulse ridges
+- repeated coherence bands
+
+Even under perturbation:
+
+```text
+the global field scaffold remains visible.
+```
+
+---
+
+## Correlation Decay
+
+The decay curve shows:
+
+- extremely high robustness
+  for small perturbations
+
+Observed behavior:
+
+```text
+noise ≤ 0.005
+→ structure largely preserved
+```
+
+A sharper transition occurs near:
+
+```text
+noise ≈ 0.01 – 0.025
+```
+
+suggesting:
+
+- a structural robustness threshold
+- coherence regime destabilization
+
+---
+
+## Important Interpretation
+
+The experiment strongly suggests:
+
+```text
+JANUS extracts mesoscopic structure,
+not microscopic detail.
+```
+
+This may explain:
+
+- smoothing robustness
+- phase persistence
+- stable recurrence behavior
+- multi-scale coherence survival
+
+---
+
+# 🔷 EXP-10 — Attractor Memory & Recurrence Geometry
+
+Script:
+`scripts/janus_attractor_memory.py`
+
+Outputs:
+
+- `outputs/janus_recurrence_matrix.png`
+- `outputs/janus_delayed_correlation.png`
+- `outputs/janus_memory_decay.png`
+- `outputs/janus_memory_trace.png`
+
+---
+
+## Recurrence Matrix
+
+![Recurrence Matrix](outputs/janus_recurrence_matrix.png)
+
+---
+
+## Delayed Self-Correlation
+
+![Delayed Self-Correlation](outputs/janus_delayed_correlation.png)
+
+---
+
+## Memory Decay
+
+![Memory Decay](outputs/janus_memory_decay.png)
+
+---
+
+## Memory Trace
+
+![Memory Trace](outputs/janus_memory_trace.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 10199
+
+peak delayed corr:
+0.408206
+
+peak lag:
+230
+
+memory variance decay:
+
+window=  50 variance=0.001382
+window= 100 variance=0.000545
+window= 200 variance=0.000151
+window= 400 variance=0.000040
+window= 800 variance=0.000010
+window=1200 variance=0.000005
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS exhibits persistent
+recurrence structure and delayed memory organization.
+```
+
+---
+
+## Delayed Correlation Observation
+
+The delayed self-correlation reveals:
+
+- structured recurrence peaks
+- oscillatory memory bands
+- repeated lag families
+
+Importantly:
+
+```text
+the signal does not decorrelate randomly.
+```
+
+Instead:
+
+- correlation repeatedly re-emerges
+- delayed structure persists
+- recurrence intervals stabilize
+
+---
+
+## Recurrence Matrix Observation
+
+The recurrence matrix reveals:
+
+- diagonal recurrence families
+- intersection nodes
+- grid-like geometric organization
+- repeated state-return corridors
+
+The resulting structure resembles:
+
+- attractor lattices
+- recursive field geometry
+- transition networks
+
+---
+
+## Structural Interpretation
+
+The recurrence geometry strongly suggests:
+
+```text
+JANUS organizes into
+repeating state families.
+```
+
+The bright intersection points behave like:
+
+- recurrence hubs
+- synchronization nodes
+- structural crossings
+
+---
+
+## Memory Decay
+
+Variance decreases smoothly
+with increasing observation window.
+
+This indicates:
+
+- stable large-scale organization
+- persistent structural averaging
+- memory compression without collapse
+
+---
+
+## Memory Trace
+
+The memory trace reveals:
+
+- repeated amplitude families
+- stable oscillatory envelopes
+- persistent modulation corridors
+
+The signal appears:
+
+- recursive
+- structured
+- temporally layered
+
+rather than:
+
+- stochastic
+- fully chaotic
+- memoryless
+
+---
+
+## Important Structural Insight
+
+The recurrence matrix is one of the strongest findings
+of the current experimental series.
+
+Why?
+
+Because random systems do NOT produce:
+
+- stable recurrence grids
+- persistent diagonal families
+- structured intersection networks
+
+Instead,
+the JANUS system exhibits:
+
+```text
+recursive geometric organization.
+```
+
+---
+
+## Relation to FIELD_LAYER / ARCHY
+
+Several recurrence structures visually resemble:
+
+- FIELD_LAYER transition corridors
+- ARCHY state graphs
+- separatrix-like routing geometry
+- recursive flow topology
+
+Important:
+
+```text
+This remains a structural analogy,
+not a formal equivalence.
+```
+
+However,
+the similarity is visually significant
+and repeatedly reproducible.
+
+---
+
+# 🔥 Updated Working Insight
+
+```text
+The JANUS system does not evolve randomly.
+
+It reorganizes through recursive coherence geometry,
+phase synchronization,
+multi-scale structure,
+and attractor recurrence networks.
+```
