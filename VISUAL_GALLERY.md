@@ -31,6 +31,53 @@ dynamics
 
 ---
 
+## 🔥 Featured System Visuals
+
+These visuals currently represent the clearest high-level view of the NEXAH framework.
+
+They summarize:
+
+```text
+field structure
+→ transition activation
+→ regime organization
+→ navigation dynamics
+```
+
+---
+
+### Transition Activation Framework
+
+![NEXAH Transition Activation Framework](RESEARCH/FIGURES/main/nexah_transition_activation_framework.png)
+
+Current working interpretation of phase-driven transition activation and directional control interaction.
+
+---
+
+### Interactive Navigation Map
+
+![Interactive Navigation Map](RESEARCH/FIGURES/main/interactive_navigation_map.png)
+
+A regime-aware navigation perspective across structured dynamical geometry.
+
+This visual represents one of the current central NEXAH directions:
+
+```text
+geometry-aware movement through transition structure
+```
+
+rather than isolated state evolution.
+
+---
+
+### Regime Atlas
+
+![NEXAH Regime Atlas](ARCHITECTURE/archive/NEXAH_Regime_Atlas.png)
+
+High-level conceptual map connecting dynamics, synchronization, geometry, transitions, control, and mathematical representations.
+
+---
+
 # 🔷 1. Core Field Geometry
 
 These figures show the foundational NEXAH idea:
