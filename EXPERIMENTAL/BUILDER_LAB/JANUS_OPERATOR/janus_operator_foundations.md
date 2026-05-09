@@ -38,6 +38,9 @@ but to introduce an additional geometric layer for studying:
 - gate structure
 - local asymmetry
 - phase-related instability
+- shell organization
+- transition compression
+- recursive phase structure
 
 inside structured dynamical systems.
 
@@ -370,6 +373,140 @@ inside reconstructed local flow structure.
 
 ---
 
+# 🌀 Recursive Phase Geometry
+
+Recent experiments suggest that JANUS structure itself
+may recursively organize into distinct transport regimes.
+
+Current exploratory phase families:
+
+```text
+Q1 — Expansion
+Q2 — Compression
+Q3 — Memory / Echo
+Q4 — Transition / Gate
+```
+
+These quadrants emerge from combinations of:
+
+- coherence intensity
+- radial breathing velocity
+- shell-crossing structure
+- delayed recurrence memory
+- axis-distance geometry
+
+---
+
+# 🪞 Recursive Phase Quadrants
+
+![Recursive Phase Quadrants](outputs/janus_recursive_phase_quadrants.png)
+
+*Recursive phase decomposition of directional transport organization inside the Lorenz attractor.*
+
+The resulting geometry resembles:
+
+- nested shell transport
+- breathing flow
+- coherence compression
+- transition apertures
+- directional exchange corridors
+
+Importantly:
+
+```text
+the transition regions appear highly structured
+rather than randomly diffusive
+```
+
+---
+
+# 🌪️ Transition Aperture Geometry
+
+One of the strongest visual findings
+of the current experimental series
+is the emergence of a compressed central structure.
+
+This structure behaves like:
+
+```text
+a directional aperture
+```
+
+or:
+
+```text
+a coherence throat
+```
+
+inside the reconstructed field.
+
+Observed properties include:
+
+- shell crossing concentration
+- local coherence collapse
+- geometric compression
+- transport inversion
+- re-expansion after crossing
+- directional branching
+
+The geometry visually resembles:
+
+- a broken cylinder
+- a yin-yang exchange structure
+- a rotational aperture
+- a bifurcation throat
+
+Importantly:
+
+```text
+the center is not maximally chaotic
+```
+
+Instead:
+
+```text
+it appears geometrically constrained
+and dynamically organized
+```
+
+This observation remains exploratory,
+but repeatedly reproducible.
+
+---
+
+# 🌌 Janus Geometry as a Field Layer
+
+The Janus framework introduces a possible additional field layer:
+
+```text
+Dynamics
+→ Transition Geometry
+→ Janus Geometry
+```
+
+where:
+
+```text
+Janus Geometry
+=
+local directional coherence structure
+```
+
+This layer does not replace:
+
+- topology
+- Lyapunov analysis
+- phase analysis
+- transition matrices
+
+Instead it complements them through:
+
+```text
+directional structural comparison
+```
+
+---
+
 # 🧠 Geometric Interpretation
 
 The Janus framework interprets directional structure itself as geometry.
@@ -388,6 +525,65 @@ inside the local field?
 ```
 
 This transforms directionality into a measurable geometric layer.
+
+---
+
+# 🔄 Shell Geometry & Transition Corridors
+
+Recent experiments additionally suggest that JANUS coherence
+organizes into layered transport shells.
+
+Observed structures include:
+
+- shell families
+- shell crossings
+- corridor concentration
+- transition spines
+- orbital compression regions
+
+The strongest current observation:
+
+```text
+basin-transfer events cluster near shell crossings
+```
+
+This suggests that transition organization may be:
+
+```text
+shell-mediated
+```
+
+rather than freely diffusive.
+
+---
+
+# 🧠 Temporal Ordering
+
+Cross-correlation experiments suggest:
+
+```text
+JANUS coherence deformation
+may precede visible curvature reorganization
+```
+
+Observed behavior:
+
+```text
+coherence minima
+→ curvature peaks
+```
+
+This does NOT establish causality.
+
+However,
+it suggests the possibility that:
+
+```text
+directional coherence organization
+may act as an early transition indicator
+```
+
+inside reconstructed flow systems.
 
 ---
 
@@ -422,6 +618,9 @@ Potential applications include:
 - flow bifurcation scans
 - gate localization
 - directional stability analysis
+- shell-crossing analysis
+- recursive phase decomposition
+- transition-aperture detection
 
 Primary candidate systems:
 
@@ -437,19 +636,19 @@ Primary candidate systems:
 
 # 🌌 Foundations Map
 
-![Janus Operator Foundations Map](visualizations/janus_operator_foundations_map.png)
+![Janus Operator Foundations Map](visualizations/janus_operator_foundations_map_v3.png)
 
-*The Janus Operator Foundations Map connects existing operator-theoretic approaches (Koopman, Perron–Frobenius, DMD, coherent sets) with the NEXAH interpretation layer of directional coherence, transition geometry and phase-sensitive navigation.*
+*The JANUS Foundations Map v3 connects operator-theoretic approaches with directional coherence geometry, recursive phase transport, shell structure and transition-aperture organization.*
 
-The visualization illustrates:
+The visualization now additionally integrates:
 
-- forward/backward directional structure
-- local coherence overlap
-- transition-sensitive regions
-- directional asymmetry
-- computational realization
-- relationship to transition gates
-- integration with existing dynamical systems theory
+- recursive phase quadrants
+- shell-transition geometry
+- transition apertures
+- breathing transport
+- memory recurrence structure
+- orientation sectors
+- coherence spines
 
 The map should be understood as:
 
@@ -459,17 +658,6 @@ built on top of existing systems science
 ```
 
 rather than a replacement for classical operator theory.
-
-It acts as a conceptual bridge between:
-
-```text
-operator theory
-↔ local field geometry
-↔ transition diagnostics
-↔ navigational structure
-```
-
-inside reconstructed dynamical systems.
 
 ---
 
@@ -509,6 +697,7 @@ The framework is explicitly designed to investigate:
 transition gates
 directional asymmetry
 coherence collapse
+recursive transport structure
 ```
 
 inside reconstructed fields.
@@ -589,6 +778,19 @@ and may act as a geometric indicator
 for transition-sensitive regions.
 ```
 
+The current experiments additionally suggest:
+
+```text
+transition organization may involve:
+
+- shell-mediated transport
+- recursive phase structure
+- coherence breathing
+- transition apertures
+- directional compression
+- structured exchange corridors
+```
+
 ---
 
 # 🧭 Current Status
@@ -601,10 +803,16 @@ visualization:
 active development
 
 cross-system validation:
-starting
+ongoing
 
 operator-theoretic grounding:
 partial
+
+recursive phase geometry:
+active
+
+transition-aperture analysis:
+active
 
 navigation integration:
 planned
