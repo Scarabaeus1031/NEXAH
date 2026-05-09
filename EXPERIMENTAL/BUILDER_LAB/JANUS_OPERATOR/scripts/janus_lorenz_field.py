@@ -307,6 +307,7 @@ def plot_janus_vectorfield(result: JanusResult, out_path: Path, cfg: OutputConfi
 def print_summary(result: JanusResult) -> None:
     """Print concise numerical diagnostics."""
     j = result.janus_intensity
+
     print("JANUS Lorenz experiment complete")
     print(f"samples: {len(j)}")
     print(f"J min:   {np.min(j):.6f}")
@@ -319,23 +320,35 @@ def print_summary(result: JanusResult) -> None:
 
 def run_experiment() -> None:
     """Run the full Janus Lorenz experiment and save all outputs."""
+
     lorenz_cfg = LorenzConfig()
-    output_cfg = OutputConfig()
+
+    output_cfg = OutputConfig(
+        output_dir=Path(__file__).resolve().parent.parent / "outputs"
+    )
+
     output_cfg.output_dir.mkdir(parents=True, exist_ok=True)
 
     t, states = simulate_lorenz(lorenz_cfg)
-    result = compute_janus_fields(t, states, lorenz_cfg)
+
+    result = compute_janus_fields(
+        t,
+        states,
+        lorenz_cfg,
+    )
 
     plot_janus_heatmap(
         result,
         output_cfg.output_dir / "janus_lorenz_heatmap.png",
         output_cfg,
     )
+
     plot_janus_overlay(
         result,
         output_cfg.output_dir / "janus_lorenz_overlay.png",
         output_cfg,
     )
+
     plot_janus_vectorfield(
         result,
         output_cfg.output_dir / "janus_lorenz_vectorfield.png",
@@ -343,7 +356,11 @@ def run_experiment() -> None:
     )
 
     print_summary(result)
-    print(f"outputs saved to: {output_cfg.output_dir.resolve()}")
+
+    print(
+        f"outputs saved to: "
+        f"{output_cfg.output_dir.resolve()}"
+    )
 
 
 if __name__ == "__main__":
