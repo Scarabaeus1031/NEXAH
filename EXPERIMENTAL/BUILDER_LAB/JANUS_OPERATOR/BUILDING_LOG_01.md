@@ -2556,3 +2556,613 @@ Nonlinear systems may occupy
 persistent transition-orientation regions
 inside a shared coherence-curvature geometry.
 ```
+
+# 🔷 EXP-17 — Recursive Orientation Geometry
+
+Script:
+`scripts/janus_recursive_orientation_geometry.py`
+
+Outputs:
+
+- `outputs/janus_recursive_orientation_tree.png`
+- `outputs/janus_recursive_self_similarity.png`
+- `outputs/janus_recursive_open8_geometry.png`
+- `outputs/janus_recursive_breathing_modes.png`
+- `outputs/janus_recursive_orientation_summary.txt`
+
+---
+
+## Recursive Orientation Tree
+
+![Recursive Orientation Tree](outputs/janus_recursive_orientation_tree.png)
+
+---
+
+## Recursive Self-Similarity
+
+![Recursive Self-Similarity](outputs/janus_recursive_self_similarity.png)
+
+---
+
+## Recursive Open-8 Geometry
+
+![Recursive Open-8 Geometry](outputs/janus_recursive_open8_geometry.png)
+
+---
+
+## Recursive Breathing Modes
+
+![Recursive Breathing Modes](outputs/janus_recursive_breathing_modes.png)
+
+---
+
+## Numerical Results
+
+```text
+recursive scales analyzed:
+
+128
+256
+512
+1024
+2048
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+Recursive coherence organization
+persists across nested temporal scales.
+```
+
+---
+
+## Observation
+
+The recursive orientation analysis reveals:
+
+- persistent variance organization
+- nested breathing structures
+- self-similar coherence recurrence
+- scale-stable transition geometry
+
+Most importantly:
+
+```text
+the recursive structure survives smoothing.
+```
+
+This is highly significant.
+
+Because random chaotic fluctuations would tend to:
+
+- decorrelate across scales
+- lose orientation persistence
+- collapse under recursive aggregation
+
+Instead:
+
+- coherent geometry remains visible
+- recursive transport corridors persist
+- orientation structure reorganizes hierarchically
+
+---
+
+## Recursive Orientation Tree
+
+The recursive variance evolution reveals:
+
+- stable oscillatory families
+- bounded variance envelopes
+- repeated scale organization
+
+Importantly:
+
+```text
+variance does not diffuse randomly.
+```
+
+Instead:
+
+- recursive bands remain coherent
+- scale families preserve structure
+- orientation regimes persist recursively
+
+This suggests:
+
+- nested transport organization
+- recursive modulation geometry
+- hierarchical coherence scaffolding
+
+---
+
+## Self-Similarity Matrix
+
+The recursive self-similarity matrix reveals:
+
+- large-scale coherence plateaus
+- persistent recurrence bands
+- structured block geometry
+- nested alignment corridors
+
+The resulting structure resembles:
+
+- recursive attractor lattices
+- orientation manifolds
+- phase-aligned transport layers
+
+Most importantly:
+
+```text
+the system retains long-range structural memory.
+```
+
+---
+
+## Open-8 Geometry
+
+The recursive Open-8 geometry is one of the strongest visual results.
+
+The structure reveals:
+
+- nested transport corridors
+- recursive spine alignment
+- central compression geometry
+- mirrored lobe expansion
+
+The resulting shape resembles:
+
+- recursive transfer funnels
+- breathing orbital families
+- coherence-guided transport channels
+
+Importantly:
+
+```text
+the transport geometry remains recursively aligned.
+```
+
+Rather than broad diffusion,
+the trajectories organize into:
+
+- coherent recursive manifolds
+- structured orbital layers
+- persistent transport corridors
+
+---
+
+## Recursive Breathing Modes
+
+The breathing-mode analysis reveals:
+
+- multi-scale expansion/compression cycles
+- persistent oscillatory envelopes
+- nested modulation families
+- recursive amplitude organization
+
+As scale increases:
+
+- fast oscillations compress
+- large-scale breathing survives
+- coherent modulation remains visible
+
+This strongly suggests:
+
+```text
+JANUS organization is mesoscopic,
+not microscopic.
+```
+
+---
+
+## Structural Interpretation
+
+The experiment strongly suggests:
+
+```text
+JANUS coherence organizes recursively
+through nested transport geometry.
+```
+
+The observed structure resembles:
+
+- recursive phase manifolds
+- breathing attractor scaffolds
+- nested transport corridors
+- self-similar transition geometry
+
+Importantly:
+
+```text
+the recursive geometry remains stable
+across multiple temporal scales.
+```
+
+---
+
+## Relation to Previous Experiments
+
+EXP-17 substantially extends earlier findings:
+
+- EXP-6 showed multi-scale persistence
+- EXP-10 showed recurrence geometry
+- EXP-13 showed shell-mediated transport
+- EXP-14 identified transition-spine compression
+
+EXP-17 now reveals:
+
+```text
+the recursive hierarchical organization
+of the transport geometry itself.
+```
+
+The system appears to organize through:
+
+1. recursive shell layering
+2. breathing modulation
+3. orientation persistence
+4. transport corridor nesting
+5. self-similar transition geometry
+
+---
+
+# 🔥 Updated Working Insight
+
+```text
+The JANUS system does not merely exhibit
+localized coherence structure.
+
+It reorganizes recursively through
+nested transport geometry,
+breathing manifolds,
+and self-similar orientation corridors.
+```
+
+---
+
+# 🔷 EXP-18 — Recursive Phase Quadrants
+
+Script:
+`scripts/janus_recursive_phase_quadrants.py`
+
+Outputs:
+
+- `outputs/janus_recursive_phase_quadrants.png`
+- `outputs/janus_phase_quadrant_map.png`
+- `outputs/janus_phase_quadrant_timeseries.png`
+- `outputs/janus_phase_quadrant_density.png`
+- `outputs/janus_phase_quadrant_summary.txt`
+
+---
+
+## Recursive Phase Quadrants
+
+![Recursive Phase Quadrants](outputs/janus_recursive_phase_quadrants.png)
+
+---
+
+## Phase Quadrant Map
+
+![Phase Quadrant Map](outputs/janus_phase_quadrant_map.png)
+
+---
+
+## Phase Quadrant Timeseries
+
+![Phase Quadrant Timeseries](outputs/janus_phase_quadrant_timeseries.png)
+
+---
+
+## Phase Quadrant Density
+
+![Phase Quadrant Density](outputs/janus_phase_quadrant_density.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 11899
+
+shell crossings:
+3945
+
+mean memory signal:
+0.760845
+
+mean abs breathing velocity:
+0.679720
+
+Q1 Expansion:
+6796
+(57.1140%)
+
+Q2 Compression:
+173
+(1.4539%)
+
+Q3 Memory / Echo:
+2143
+(18.0099%)
+
+Q4 Transition / Gate:
+2787
+(23.4221%)
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS transport decomposes into
+four recursive phase regimes.
+```
+
+---
+
+## Phase Quadrant Definition
+
+The recursive transport geometry separates into:
+
+| Quadrant | Meaning |
+|---|---|
+| Q1 | Expansion |
+| Q2 | Compression |
+| Q3 | Memory / Echo |
+| Q4 | Transition / Gate |
+
+The decomposition combines:
+
+- JANUS coherence
+- breathing velocity
+- shell crossings
+- recursive memory
+- axis proximity
+- transport transitions
+
+---
+
+## Observation
+
+The recursive phase geometry reveals:
+
+- non-random quadrant occupation
+- structured transport partitioning
+- stable gate corridors
+- persistent memory zones
+- asymmetric breathing organization
+
+Importantly:
+
+```text
+the phase quadrants occupy
+distinct transport regions.
+```
+
+Rather than diffuse mixing,
+the system organizes into:
+
+- expansion corridors
+- compressed transition pockets
+- recursive echo regions
+- gate-aligned transfer manifolds
+
+---
+
+## Expansion Regime
+
+Expansion dominates the system:
+
+```text
+Q1 ≈ 57%
+```
+
+The expansion regions form:
+
+- large orbital transport layers
+- outward breathing structures
+- coherence-preserving manifolds
+
+The geometry appears:
+
+- smooth
+- extended
+- recursively organized
+
+rather than chaotic.
+
+---
+
+## Compression Regime
+
+Compression is extremely sparse:
+
+```text
+Q2 ≈ 1.45%
+```
+
+This is highly significant.
+
+Because the compression regions appear:
+
+- localized
+- transient
+- structurally concentrated
+
+Most compression events occur near:
+
+- transition throats
+- shell-boundary crossings
+- central reorganization corridors
+
+This suggests:
+
+```text
+compression may act
+as a trigger phase.
+```
+
+---
+
+## Memory / Echo Regime
+
+The memory regime forms:
+
+```text
+Q3 ≈ 18%
+```
+
+The memory regions exhibit:
+
+- recursive recurrence structure
+- delayed coherence locking
+- persistent transport traces
+
+The resulting geometry resembles:
+
+- attractor echoes
+- recursive return manifolds
+- coherence memory corridors
+
+Importantly:
+
+```text
+memory remains spatially localized.
+```
+
+---
+
+## Transition / Gate Regime
+
+The gate regime forms:
+
+```text
+Q4 ≈ 23%
+```
+
+The gate structure aligns strongly with:
+
+- shell crossings
+- low-coherence regions
+- outer transport corridors
+- switching preparation zones
+
+The transition corridors appear:
+
+- structured
+- directional
+- recursively organized
+
+rather than randomly distributed.
+
+---
+
+## Phase Map Observation
+
+The phase map reveals:
+
+- separated transport bands
+- structured coherence bifurcation
+- recursive gate corridors
+- asymmetric breathing branches
+
+Most importantly:
+
+```text
+the quadrants occupy distinct
+coherence–velocity sectors.
+```
+
+This strongly suggests:
+
+- organized transport decomposition
+- phase-constrained routing
+- recursive breathing geometry
+
+---
+
+## Density Observation
+
+The shell-density matrix reveals:
+
+- non-uniform shell occupation
+- preferred transport layers
+- shell-selective gate concentration
+- memory accumulation regions
+
+Particularly important:
+
+```text
+transition/gate density concentrates
+inside lower shell regions.
+```
+
+This supports earlier findings from:
+
+- EXP-13 shell geometry
+- EXP-14 transition spine compression
+- EXP-17 recursive transport organization
+
+---
+
+## Structural Interpretation
+
+The experiment strongly suggests:
+
+```text
+JANUS transport behaves as
+a recursive four-phase system.
+```
+
+The resulting organization resembles:
+
+1. expansion transport
+2. compression preparation
+3. memory locking
+4. gate-mediated transition
+
+Importantly:
+
+```text
+the phases are spatially organized,
+not statistically uniform.
+```
+
+---
+
+## Relation to Previous Experiments
+
+EXP-18 integrates several earlier findings:
+
+- EXP-10 recurrence memory
+- EXP-13 shell crossings
+- EXP-14 transition spine compression
+- EXP-17 recursive transport geometry
+
+EXP-18 now reveals:
+
+```text
+a recursive phase decomposition
+of the JANUS transport manifold itself.
+```
+
+---
+
+# 🔥 Updated Working Insight
+
+```text
+The JANUS system does not transition
+through undifferentiated chaos.
+
+It reorganizes through recursive
+phase-partitioned transport geometry:
+
+Expansion
+→ Compression
+→ Memory / Echo
+→ Gate Transition
+→ Recursive Re-expansion
+```
