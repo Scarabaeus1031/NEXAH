@@ -175,20 +175,18 @@ def compute_janus(t: Array, states: Array, eps: float = 1.0e-8) -> Tuple[Array, 
     janus = numerator / denominator
     return states[1:-1], janus
 
-
 def compute_curvature(states: Array, eps: float = 1.0e-8) -> Array:
     r1 = states[1:-1] - states[:-2]
     r2 = states[2:] - states[1:-1]
 
-       cross = np.cross(r1, r2)
+    cross = np.cross(r1, r2)
     numerator = np.linalg.norm(cross, axis=1)
 
     speed = np.linalg.norm(r1, axis=1)
     denominator = speed**3 + eps
 
     return numerator / denominator
-
-
+    
 def compute_spine_distance(states: Array) -> Array:
     """
     Distance to the central transport axis (x=0 plane).
