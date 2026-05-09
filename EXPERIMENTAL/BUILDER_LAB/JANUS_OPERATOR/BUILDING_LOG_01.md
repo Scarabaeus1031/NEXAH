@@ -2162,3 +2162,397 @@ through random basin escape.
 It reorganizes through shell-mediated,
 spine-compressed coherence transport.
 ```
+# 🔷 EXP-15 — Transition Orientation Atlas
+
+Script:
+`scripts/janus_transition_orientation_atlas.py`
+
+Outputs:
+
+- `outputs/janus_transition_orientation_atlas.png`
+- `outputs/janus_orientation_vectors.png`
+- `outputs/janus_orientation_phase_space.png`
+
+---
+
+## Transition Orientation Atlas
+
+![Transition Orientation Atlas](outputs/janus_transition_orientation_atlas.png)
+
+---
+
+## Orientation Vectors
+
+![Orientation Vectors](outputs/janus_orientation_vectors.png)
+
+---
+
+## Orientation Phase Space
+
+![Orientation Phase Space](outputs/janus_orientation_phase_space.png)
+
+---
+
+## Numerical Results
+
+```text
+Lorenz:
+r = -0.346318
+overlap = 0.086601
+orientation angle = 165.960°
+
+Rossler:
+r = -0.087169
+overlap = 0.194215
+orientation angle = 114.172°
+
+Halvorsen:
+r = 0.317538
+overlap = 0.069444
+orientation angle = 12.336°
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+Different dynamical systems occupy
+distinct regions inside JANUS transition-orientation space.
+```
+
+---
+
+## Orientation Space Definition
+
+The orientation space is defined by:
+
+```text
+x = correlation(JANUS, log-curvature)
+y = overlap(low-JANUS, high-curvature)
+```
+
+Interpretation:
+
+- negative x → anti-coupled transition structure
+- positive x → co-coupled transition structure
+- high y → localized transition concentration
+
+---
+
+## Observation
+
+The systems do NOT collapse
+onto a single shared region.
+
+Instead:
+
+- Lorenz occupies a strong anti-coupled regime
+- Rossler occupies a near-tangential transport regime
+- Halvorsen occupies a positive-coupling regime
+
+The resulting geometry forms:
+
+- separated orientation clusters
+- structured transition families
+- persistent directional asymmetry
+
+---
+
+## Lorenz Structure
+
+Lorenz exhibits:
+
+- strong negative coupling
+- concentrated transition overlap
+- large orientation angle
+
+This suggests:
+
+```text
+transition structure is dominated
+by switching-driven coherence inversion.
+```
+
+The geometry resembles:
+
+- compressed switching corridors
+- lobe inversion dynamics
+- anti-coupled transition routing
+
+---
+
+## Rossler Structure
+
+Rossler exhibits:
+
+- weak correlation magnitude
+- elevated overlap fraction
+- intermediate orientation angle
+
+This indicates:
+
+```text
+transport-like transition organization
+without strong coherence inversion.
+```
+
+The resulting structure appears:
+
+- tangential
+- gliding
+- continuously deforming
+
+rather than sharply switching.
+
+---
+
+## Halvorsen Structure
+
+Halvorsen exhibits:
+
+- positive JANUS-curvature coupling
+- low overlap concentration
+- near-axis alignment
+
+This suggests:
+
+```text
+distributed transition fragmentation
+rather than localized switching corridors.
+```
+
+The geometry appears:
+
+- diffuse
+- fragmented
+- positively coupled
+
+instead of anti-coupled.
+
+---
+
+## Orientation Vector Geometry
+
+The orientation-vector plot reveals:
+
+- persistent asymmetry
+- directional clustering
+- separated transition axes
+
+Importantly:
+
+```text
+the systems organize into
+distinct directional sectors.
+```
+
+This behavior resembles:
+
+- dynamical orientation classes
+- transition fingerprints
+- geometric flow families
+
+---
+
+## Phase-Space Observation
+
+The JANUS phase-space plots reveal:
+
+- structured recurrence bands
+- bounded transition corridors
+- persistent alignment geometry
+
+The systems exhibit visibly different:
+
+- transition compression
+- coherence dispersion
+- switching organization
+
+despite being analyzed with identical diagnostics.
+
+---
+
+## Structural Interpretation
+
+The experiment suggests:
+
+```text
+JANUS transition organization
+may behave as a system-class observable.
+```
+
+Rather than measuring:
+
+- local instability only
+- geometric divergence only
+- or entropy only
+
+JANUS appears to encode:
+
+- transition orientation
+- coherence routing
+- curvature organization
+- switching geometry
+
+inside a shared diagnostic space.
+
+---
+
+# 🔷 EXP-16 — Parameter Stability Scan
+
+Script:
+`scripts/janus_parameter_stability_scan.py`
+
+Outputs:
+
+- `outputs/janus_parameter_stability_scan.png`
+- `outputs/janus_parameter_orientation_paths.png`
+- `outputs/janus_parameter_summary.txt`
+
+---
+
+## Parameter Stability Scan
+
+![Parameter Stability Scan](outputs/janus_parameter_stability_scan.png)
+
+---
+
+## Orientation Paths
+
+![Orientation Paths](outputs/janus_parameter_orientation_paths.png)
+
+---
+
+## Numerical Results
+
+```text
+Lorenz:
+angle mean/std:
+160.120127 / 18.191895
+
+Rossler:
+angle mean/std:
+110.859779 / 21.194637
+
+Halvorsen:
+positive-coupling regime preserved
+across stable parameter region
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+The transition-orientation geometry
+remains partially stable under parameter variation.
+```
+
+---
+
+## Observation
+
+The systems do NOT move randomly
+through orientation space.
+
+Instead:
+
+- Lorenz remains inside the anti-coupled sector
+- Rossler remains inside the transport sector
+- Halvorsen remains inside the positive-coupling sector
+
+The resulting trajectories form:
+
+- continuous orientation paths
+- parameter-dependent deformation curves
+- persistent transition families
+
+---
+
+## Lorenz Path
+
+Lorenz remains strongly anti-correlated
+throughout the rho sweep.
+
+Observed behavior:
+
+- overlap gradually increases
+- orientation angle remains high
+- transition structure stays left-oriented
+
+This suggests:
+
+```text
+the Lorenz switching geometry
+is structurally persistent.
+```
+
+---
+
+## Rossler Path
+
+Rossler exhibits:
+
+- moderate drift
+- near-zero correlation behavior
+- persistent overlap structure
+
+The orientation path behaves like:
+
+- a transport manifold
+- a tangential coherence corridor
+- a continuously deforming transition sheet
+
+---
+
+## Halvorsen Path
+
+Halvorsen remains positively coupled
+throughout the stable parameter region.
+
+At larger parameter values:
+
+```text
+overlap collapses toward zero
+while positive coupling persists.
+```
+
+This is highly significant.
+
+It suggests:
+
+- distributed curvature coupling
+- loss of localized transition corridors
+- persistence of global organization
+
+without concentrated switching zones.
+
+---
+
+## Structural Interpretation
+
+The orientation trajectories strongly suggest:
+
+```text
+JANUS transition geometry
+is not dominated by random parameter drift.
+```
+
+Instead:
+
+- systems preserve orientation identity
+- transition organization remains class-dependent
+- coherence geometry deforms continuously
+
+rather than collapsing chaotically.
+
+---
+
+# 🔥 Updated Working Insight
+
+```text
+Nonlinear systems may occupy
+persistent transition-orientation regions
+inside a shared coherence-curvature geometry.
+```
