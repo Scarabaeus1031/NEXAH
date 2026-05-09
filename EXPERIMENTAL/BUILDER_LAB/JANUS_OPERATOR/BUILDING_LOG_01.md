@@ -593,14 +593,21 @@ Script:
 
 Outputs:
 
-- `outputs/janus_noise_heatmap.png`
+- `outputs/janus_multiscale_overlay.png`
+- `outputs/janus_scale_heatmap.png`
 - `outputs/janus_scale_variance.png`
+
+---
+
+## Multi-Scale Overlay
+
+![Multi-Scale Overlay](outputs/janus_multiscale_overlay.png)
 
 ---
 
 ## Multi-Scale Heatmap
 
-![Multi-Scale Heatmap](outputs/janus_noise_heatmap.png)
+![Multi-Scale Heatmap](outputs/janus_scale_heatmap.png)
 
 ---
 
@@ -718,15 +725,15 @@ Script:
 
 Outputs:
 
-- `outputs/janus_frequency_spectrum.png`
+- `outputs/janus_fft_spectrum.png`
 - `outputs/janus_power_spectrum.png`
-- `outputs/janus_dominant_frequencies.png`
+- `outputs/janus_frequency_peaks.png`
 
 ---
 
-## JANUS Frequency Spectrum
+## JANUS FFT Spectrum
 
-![JANUS Frequency Spectrum](outputs/janus_frequency_spectrum.png)
+![JANUS FFT Spectrum](outputs/janus_fft_spectrum.png)
 
 ---
 
@@ -738,7 +745,7 @@ Outputs:
 
 ## Dominant Frequency Peaks
 
-![Dominant Frequency Peaks](outputs/janus_dominant_frequencies.png)
+![Dominant Frequency Peaks](outputs/janus_frequency_peaks.png)
 
 ---
 
@@ -833,7 +840,7 @@ Script:
 Outputs:
 
 - `outputs/janus_phase_difference.png`
-- `outputs/janus_phase_locking_distribution.png`
+- `outputs/janus_phase_locking.png`
 - `outputs/janus_phase_space.png`
 
 ---
@@ -844,9 +851,9 @@ Outputs:
 
 ---
 
-## Phase Locking Distribution
+## Phase Locking
 
-![Phase Locking Distribution](outputs/janus_phase_locking_distribution.png)
+![Phase Locking](outputs/janus_phase_locking.png)
 
 ---
 
