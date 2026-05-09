@@ -1,152 +1,234 @@
 # 🧠 NEXAH — Core Concept Map
 
-This document defines the **core conceptual structure** of NEXAH.
+NEXAH studies how structure emerges from dynamics,
+how transitions become organized,
+and how navigation becomes possible inside structured fields.
 
-It connects the main ideas of the research layer into a **single coherent system view**  
-and serves as the primary entry point into the framework.
+This document connects the major conceptual layers
+of the NEXAH research framework into a unified system view.
 
 ---
 
 # 🧭 Overview
 
-NEXAH models systems not as sequences of states,  
-but as motion within **structured dynamical fields**.
+NEXAH does not interpret systems
+as isolated sequences of states.
+
+Instead, it studies motion within structured dynamical geometry:
 
 ```text
-dynamics → field → structure → constraints → transitions → phase → navigation
+dynamics
+→ flow
+→ structure
+→ coherence
+→ transitions
+→ connectivity
+→ topology
+→ navigation
 ```
 
 ---
 
-## 🔷 Unified Transition Architecture (Cross-System View)
+# 🌌 Structural Navigation Perspective
 
-![Unified Architecture](./FIGURES/main/unified_transition_architecture.png)
+![Interactive Navigation Map](./FOUNDATION/visuals/interactive_navigation_map.png)
 
-This diagram summarizes the **full NEXAH pipeline across systems**, showing:
+This visualization summarizes the current operational perspective of NEXAH:
 
-- how discrete dynamics generate transitions  
-- how transitions form structure  
-- how phase embeds motion  
-- how flow and topology emerge  
-- how synchronization arises as a global effect  
+- density structure
+- gates
+- gradient fields
+- navigable trajectories
+- structural grammar
+- admissible movement
+
+It represents the transition from:
+
+```text
+raw dynamics
+→ structured geometry
+→ navigable topology
+```
 
 ---
 
-## 🔷 Visual Structural Pipeline
+# 🔷 Unified Transition Architecture (Cross-System View)
 
-This pipeline summarizes the full structural reduction from continuous dynamics to emergent topology.
+![Unified Architecture](./FIGURES/main/unified_transition_architecture.png)
 
-![Framework](./FIGURES/main/Fig_01.png)
+This diagram summarizes the larger NEXAH pipeline across systems.
+
+It illustrates:
+
+- how dynamics generate structure
+- how transitions emerge
+- how phase embeds motion
+- how topology forms
+- how synchronization appears globally
+
+---
+
+# 🔷 Structural Pipeline
+
+The NEXAH framework currently operates through the following conceptual reduction:
+
+```text
+Dynamics
+→ Flow Field
+→ Density Structure
+→ Coherence
+→ Gates
+→ Transition Geometry
+→ Connectivity
+→ Emergent Topology
+→ Navigation
+```
 
 ---
 
 # 🔷 Core Concept Stack
 
-The NEXAH framework consists of interacting conceptual layers:
+The NEXAH framework consists of interacting conceptual layers.
 
 ---
 
-## 1. 🌀 Field (Structure from Dynamics)
+# 1. 🌀 Field (Structure from Dynamics)
 
 → CORE_CONCEPTS/field_model.md
 
 > Structure emerges directly from system dynamics.
 
-Key ideas:
+Core ideas:
 
-- trajectories → density → flow  
-- structure emerges from aggregation  
-- field encodes motion tendencies  
-
-### Interpretation
-
-System = trajectory inside structured field
+- trajectories → density → flow
+- aggregation produces structure
+- fields encode motion tendencies
+- geometry emerges from repeated dynamics
 
 ---
 
-## 2. 🧪 Vessel (Constraint & Containment)
+## Interpretation
+
+```text
+System = trajectory inside structured field
+```
+
+---
+
+# 2. 🧪 Vessel (Constraint & Containment)
 
 → CORE_CONCEPTS/vessel_geometry.md
 
-> Structure only exists where it is contained.
+> Structure only persists where motion is constrained.
 
-Key ideas:
+Core ideas:
 
-- boundary defines viable region  
-- interior enables recurrence  
-- interface enables structure formation  
-- capacity limits complexity  
-
-### Interpretation
-
-Field defines possibility  
-Vessel defines realizable structure
+- boundaries define viable regions
+- interfaces enable transitions
+- containment enables recurrence
+- capacity limits complexity
 
 ---
 
-## 3. 🔁 Multi-Layer Interaction (System Composition)
+## Interpretation
+
+```text
+Field defines possibility.
+Vessel defines realizable structure.
+```
+
+---
+
+# 3. 🔁 Multi-Layer Interaction (System Composition)
 
 → CORE_CONCEPTS/multi_layer_interaction.md
 
 > Systems may consist of multiple interacting dynamical layers.
 
-Key ideas:
+Core ideas:
 
-- regimes are not isolated  
-- dynamics emerges from interaction  
-- cross-layer coupling  
-- phase-shifted responses  
-
-### Interpretation
-
-System = coupled multi-layer dynamics
+- regimes are coupled
+- interaction generates emergent behavior
+- phase-shifted responses occur across layers
+- global behavior emerges from composition
 
 ---
 
-## 4. 🧩 Transition Geometry (Aperture System)
+## Interpretation
+
+```text
+System = interacting structural layers
+```
+
+---
+
+# 4. 🧩 Transition Geometry (Aperture System)
 
 → CORE_CONCEPTS/aperture_geometry_system.md
 
-> Transitions occur through structured geometric pathways.
+> Transitions occur through structured geometric corridors.
 
-Transitions occur at:
+Transitions emerge in regions of:
 
-- low-density regions  
-- low-coherence zones  
-- regions of competing flow  
+- low density
+- low coherence
+- competing flow directions
+- unstable directional alignment
 
-Key ideas:
+---
 
-- density → ridge → aperture → gate  
-- transitions cluster in specific regions  
-- low-density corridors enable movement  
-- minimal skeleton captures structure  
+## Transition Structure
 
-### Interpretation
+```text
+density
+→ ridge
+→ aperture
+→ gate
+→ transition corridor
+```
 
-Transitions = geometry-constrained movement
+---
+
+## Interpretation
+
+```text
+Transitions are geometry-constrained movement.
+```
+
+---
 
 ![Extraction](./FIGURES/main/Fig_02.png)
 
 ---
 
-## 🔁 From Geometry to Activation
+# 🔁 Geometry → Activation
 
-Geometric structure defines *where* transitions can occur.  
-Phase dynamics determines *when* they occur.
+Geometry defines:
+
+```text
+where transitions are possible
+```
+
+Phase dynamics defines:
+
+```text
+when transitions activate
+```
 
 ---
 
-### 🧪 Extension: Parameter-Driven Transition Activation
+# 🧪 Parameter-Driven Activation
 
-In addition to intrinsic system dynamics,  
-transition activation can also be induced externally  
-through structured parameter motion.
+Transitions may also be externally induced
+through parameter-space motion.
 
-Observed in fractal systems (Julia / Mandelbrot):
+Observed in fractal systems:
 
 ```text
-c(t) → structure evolution → observable Δ → transition
+c(t)
+→ structural evolution
+→ observable Δ
+→ transition activation
 ```
 
 Empirical relation:
@@ -163,247 +245,303 @@ P(transition) = f(Δ, context)
 
 where:
 
-- Δ = observable structural change  
-- context = global parameter-space position  
+- Δ = observable structural change
+- context = global parameter-space structure
 
 ---
 
-### 🧠 Interpretation
-
-- geometry still defines **where transitions are possible**  
-- phase/mismatch defines **when they activate (intrinsic systems)**  
-- parameter motion defines **when they are externally triggered**  
-
----
-
-### 🧭 Extended Activation View
+## Interpretation
 
 ```text
-intrinsic:   phase → mismatch → transition
-external:    parameter motion → Δ → transition
+Geometry constrains transitions.
+
+Mismatch or parameter motion activates them.
 ```
 
 ---
 
-### ⚠️ Status
-
-- empirically observed  
-- consistent with core mechanism  
-- not yet generalized across systems
-  
----
-
-## 5. 🧭 Phase Dynamics & Alignment (Causal Layer)
+# 5. 🧭 Phase Dynamics & Alignment (Causal Layer)
 
 → FINDINGS/TRANSITION_PHASE_DYNAMICS/
 
-> Transitions are not triggered by instability alone,  
-> but by misalignment in phase dynamics.
+> Transitions are caused by loss of phase coherence,
+not instability alone.
 
-Key ideas:
+---
 
-- phase = intrinsic system progression (φ)  
-- ω = phase velocity (dφ/dt)  
-- mismatch = deviation from expected phase evolution  
-- drift = persistent directional transport  
+## Core Variables
 
-### Observations (Validation)
+| Variable | Meaning |
+|---|---|
+| φ | phase |
+| ω | phase velocity |
+| ω̂ | expected phase velocity |
+| M | phase mismatch |
 
-- transitions occur when:
+---
+
+## Observations
+
+Transitions occur when:
 
 ```text
 phase mismatch >> 0
 ```
 
-- NOT when instability is maximal  
+NOT when instability is maximal.
 
-- angular structure emerges in transition events:
+Observed transition events exhibit:
 
-  dominant modes: [4, 32, 34, 2, 0]
+- angular structure
+- directional asymmetry
+- coherent drift
+- winding behavior
 
-### Interpretation
-
-Transitions = breakdown of rotational consistency
-
----
-
-### Control Implication
-
-Control is phase-dependent and direction-sensitive.
+Dominant modes observed empirically:
 
 ```text
-phase alignment alone is insufficient
-```
-
-Effective control requires:
-
-```text
-correct directional alignment relative to system phase dynamics
+[4, 32, 34, 2, 0]
 ```
 
 ---
 
-### Extended System View
-
-Instability → potential for transition  
-Phase mismatch → activation of transition  
-Control direction → determines stabilization or amplification  
-
----
-
----
-
-### 🔬 Control Directionality (Validated Result)
-
-Empirical observation:
+## Interpretation
 
 ```text
-aligned control  → increases drift and transition activity  
-inverted control → reduces drift but increases transitions  
-damped control   → suppresses events but retains instability  
-inverse control  → minimizes drift AND suppresses transitions  
+Transitions emerge from breakdown
+of rotational consistency.
 ```
 
 ---
 
-### 🔑 Key Insight
+# 🌌 Winding & Emergent Topology
+
+Observed across multiple systems:
 
 ```text
-Control effectiveness depends on direction, not magnitude.
+local phase drift
+→ accumulated winding
+→ emergent topology
+```
+
+Persistent winding indicates:
+
+- cyclic organization
+- directional asymmetry
+- long-term coherence
+- structural transport
+
+---
+
+## Core Principle
+
+```text
+Topology emerges from accumulated structured motion.
 ```
 
 ---
 
-### Interpretation
+# 🔷 Emergent Topology & Connectivity
 
-Stabilization occurs only when control is applied **phase-opposed**
-to the intrinsic system dynamics.
+→ FOUNDATION/topology_structure.md
+
+![Topology Connectivity](./FOUNDATION/visuals/NEXAH_TOPOLOGY_FROM_STRUCTURAL_CONNECTIVITY.png)
+
+NEXAH treats topology as an emergent property of:
+
+- transition connectivity
+- coherent motion
+- admissible structural paths
+- global navigation constraints
+
+Topology is not imposed externally.
+
+It emerges from:
+
+```text
+connectivity between structured regions
+```
 
 ---
 
-### Updated Principle
+## Interpretation
 
-A system transitions not when it becomes unstable,
-
-but when its phase dynamics lose coherence  
-relative to its expected evolution.
+```text
+Topology is a property of allowed motion,
+not merely geometric space.
+```
 
 ---
 
-## 6. 🔗 Structural Operators (Theory → Field Mapping)
+# 🔬 Fractal Transition Validation
+
+→ VALIDATION/fractal_tests/
+
+Fractal transition experiments demonstrated:
+
+- transitions are localized
+- Δ alone is insufficient
+- transitions occupy structured regions
+- parameter-space geometry matters
+
+Observed relation:
+
+```text
+P(transition)
+=
+f(Δ, distance)
+```
+
+---
+
+## Key Insight
+
+```text
+Transitions emerge from interaction between:
+
+local instability
++
+global structural context
+```
+
+---
+
+# 6. 🔗 Structural Operators (Theory → Field Mapping)
 
 → CORE_CONCEPTS/theory_to_field_mapping.md
 
-> Minimal operators formalize observed structure.
+Minimal operators formalize observed structure.
 
-Core operators:
+---
 
-- Γ → closure → basins  
-- Δ → transitions → channels  
-- Ω → stabilization → convergence  
+## Core Operators
 
-### Interpretation
+| Operator | Meaning |
+|---|---|
+| Γ | closure / basin structure |
+| Δ | transition activation |
+| Ω | stabilization / convergence |
 
-structure → geometry → field → behavior
+---
+
+## Interpretation
+
+```text
+structure
+→ geometry
+→ field
+→ behavior
+```
 
 ---
 
 # 🔁 Unified System Flow
 
 ```text
-Dynamics  
-↓  
-Field (structure emerges)  
-↓  
-Vessel (structure is constrained)  
-↓  
-Layer interaction (structure evolves)  
-↓  
-Transition geometry (movement becomes structured)  
-↓  
-Phase dynamics (alignment / mismatch emerges)  
-↓  
-Operators (structure is formalized)  
-↓  
-Navigation (structure is used)
+Dynamics
+↓
+Field
+↓
+Structure
+↓
+Coherence
+↓
+Transition Geometry
+↓
+Connectivity
+↓
+Topology
+↓
+Navigation
 ```
 
 ---
 
 # 🔬 Stability & Transition (Unified View)
 
-**Stability:**
+## Stability
 
-- alignment with flow  
-- high-density regions  
-- structural containment  
-- phase coherence  
+- alignment with flow
+- high-density regions
+- structural containment
+- phase coherence
 
-**Instability:**
+---
 
-- misalignment  
-- low density  
-- competing flow directions  
+## Instability
 
-**Transition:**
+- directional misalignment
+- low density
+- competing flow directions
+- mismatch accumulation
 
-- movement through structured corridors  
-- triggered by phase mismatch  
+---
 
-Quantitative validation of transition structure:
+## Transition
+
+- movement through structured corridors
+- activation through mismatch
+- traversal across connectivity boundaries
+
+---
 
 ![Quantitative](./FIGURES/main/Fig_03.png)
 
 ---
 
-# 🧭 Control Perspective
+# 🧭 Navigation Perspective
 
-Control is not external forcing.
+NEXAH does not treat control as external forcing.
 
-It is:
+Control is interpreted as:
 
-- alignment with structure  
-- phase-dependent intervention  
-- directionally correct control relative to system dynamics  
-- mismatch suppression  
-- guided movement through transitions  
+- structural alignment
+- geometry-aware intervention
+- phase-sensitive navigation
+- mismatch suppression
+- admissible directional movement
 
 ---
 
 # 🧠 Central Principle
 
-> Systems are not defined by isolated states,  
-> but by the structure that constrains their motion.
+> Systems are not defined by isolated states,
+> but by the structured geometry that constrains their motion.
 
 ---
 
 # 🔗 Relation to System Architecture
 
 ```text
-RESEARCH (Concepts)  
-↓  
-DISCOVERY ENGINE (Extraction)  
-↓  
-FIELD_LAYER (Representation)  
-↓  
-NAVIGATION (Control)
+RESEARCH
+↓
+DISCOVERY ENGINE
+↓
+FIELD LAYER
+↓
+TOPOLOGY
+↓
+NAVIGATION
 ```
 
 ---
 
 # ⚠️ Scope
 
-This map is:
+This framework is currently:
 
-- a conceptual integration layer  
-- grounded in empirical observations  
-- partially formalized  
+```text
+empirical
+semi-formal
+geometry-oriented
+navigation-centered
+```
 
-It is not:
+It is NOT yet:
 
-- a complete theory  
-- a proven mathematical system  
-- a universal claim  
+- a complete mathematical theory
+- a universal physical framework
+- formally proven
 
 ---
 
@@ -411,25 +549,43 @@ It is not:
 
 This document serves as:
 
-- the entry point into the research layer  
-- a map of all core ideas  
-- a bridge between concept and implementation  
+- the conceptual integration layer
+- the entry point into the research stack
+- the bridge between theory and implementation
+- the unification map across modules
 
 ---
 
 # 🔥 Final Insight
 
-System evolution is not random.
+```text
+Dynamics generate structure.
 
-It moves through a structured space  
-that defines what motion is possible.
+Structure generates constraints.
 
-Transitions occur when phase coherence breaks.
+Constraints generate transitions.
 
-Control succeeds when alignment is restored
-in both phase and direction.
+Transitions generate connectivity.
+
+Connectivity generates topology.
+
+Topology enables navigation.
+```
 
 ---
 
-**NEXAH Core Concept Map**  
+# 🧭 Final Perspective
+
+```text
+Systems do not evolve randomly.
+
+They move through structured geometry,
+lose coherence,
+cross transition corridors,
+and reorganize into new dynamical regimes.
+```
+
+---
+
+**NEXAH — Core Concept Map**  
 Thomas K. R. Hofmann · 2026
