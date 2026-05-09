@@ -83,6 +83,39 @@ rather than a finalized mathematical model.
 
 ---
 
+# 🔥 Updated Experimental Perspective
+
+The recent JANUS experimental series significantly extends
+the original geometric intuition.
+
+The system now exhibits evidence for:
+
+- shell-layer organization
+- transition spines
+- coherence corridors
+- phase quadrants
+- delayed recurrence structure
+- breathing-like transport organization
+
+Most importantly:
+
+```text
+transition structure appears organized
+BEFORE large-scale geometric reconfiguration occurs
+```
+
+This does NOT establish a new physical law.
+
+However:
+
+```text
+the directional geometry appears structured,
+persistent and reproducible
+across multiple computational experiments
+```
+
+---
+
 # 🌊 From Dynamics to Geometry
 
 Within NEXAH:
@@ -222,6 +255,115 @@ Possible behavior:
 - irreversible local geometry
 
 Interpretation remains exploratory.
+
+---
+
+# 🔷 Recursive Phase Geometry
+
+Recent experiments suggest that transition organization
+may itself decompose into internal directional regimes.
+
+The current experimental phase decomposition includes:
+
+```text
+Q1 — Expansion
+Q2 — Compression
+Q3 — Memory / Echo
+Q4 — Transition / Gate
+```
+
+This creates a possible recursive geometry inside the field itself.
+
+---
+
+# 🌀 Recursive Phase Quadrants
+
+![Recursive Phase Quadrants](outputs/janus_recursive_phase_quadrants.png)
+
+*Directional organization of the Lorenz attractor into recursive JANUS transport quadrants.*
+
+The observed geometry resembles:
+
+- breathing-like flow transport
+- shell-mediated transition corridors
+- nested orbital structures
+- central compression throats
+- coherence gating regions
+
+Most importantly:
+
+```text
+the transition region appears highly organized,
+not randomly diffusive
+```
+
+---
+
+# 🧭 Janus Phase Quadrant Map
+
+![Phase Quadrant Map](outputs/janus_phase_quadrant_map.png)
+
+*Quadrant organization inside JANUS coherence / breathing space.*
+
+The resulting structure resembles:
+
+- a compressed central aperture
+- bifurcating transport channels
+- nested directional layers
+- mirrored transition geometry
+
+The center behaves less like:
+
+```text
+random turbulence
+```
+
+and more like:
+
+```text
+a structured transition passage
+```
+
+This interpretation remains exploratory.
+
+---
+
+# 🔥 Aperture / Gate Interpretation
+
+One of the strongest emerging visual structures
+is the appearance of a compressed central transition region.
+
+This region behaves like:
+
+```text
+a directional aperture
+```
+
+inside the coherence geometry.
+
+Observed properties include:
+
+- shell crossings
+- coherence collapse
+- geometric compression
+- transport redirection
+- phase inversion
+- re-expansion after crossing
+
+Importantly:
+
+```text
+the transition center is NOT maximally disordered
+```
+
+Instead:
+
+```text
+it appears geometrically constrained
+```
+
+This is one of the most surprising observations
+of the current JANUS series.
 
 ---
 
@@ -373,6 +515,9 @@ Possible visualizations include:
 - asymmetry surfaces
 - coherence-density overlays
 - trajectory-colored Janus maps
+- shell-transition geometry
+- recursive phase decomposition
+- aperture/gate visualization
 
 Potential systems:
 
@@ -454,6 +599,19 @@ and whether transitions correspond
 to breakdowns of directional coherence.
 ```
 
+The newest experiments further suggest:
+
+```text
+transition geometry may organize through:
+
+- shells
+- spines
+- breathing transport
+- recursive phase quadrants
+- compressed apertures
+- coherence-gated corridors
+```
+
 ---
 
 # 🧭 Current Status
@@ -463,10 +621,16 @@ formal geometry:
 early-stage
 
 computational visualization:
-starting
+active
 
 cross-system testing:
-planned
+ongoing
+
+transition geometry:
+emerging
+
+recursive phase analysis:
+active
 
 theoretical interpretation:
 exploratory
