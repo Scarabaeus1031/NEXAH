@@ -1,0 +1,59 @@
+JANUS transition orientation atlas
+==================================
+
+Interpretation:
+Orientation is defined in a 2D diagnostic space:
+x = JANUS vs log-curvature correlation
+y = low-JANUS / high-curvature overlap fraction
+
+Negative x indicates anti-coupling.
+Positive x indicates co-coupling.
+High y indicates localized transition-candidate overlap.
+
+Lorenz
+------
+samples: 7649
+JANUS mean: 0.770698
+JANUS std: 0.109296
+curvature mean: 0.099436
+JANUS vs log-curvature r: -0.346318
+low-JANUS count: 612
+high-curvature count: 612
+overlap count: 53
+overlap fraction: 0.086601
+transition orientation angle: 165.960359 degrees
+
+Rossler
+-------
+samples: 9065
+JANUS mean: 0.843869
+JANUS std: 0.107078
+curvature mean: 0.188590
+JANUS vs log-curvature r: -0.087169
+low-JANUS count: 726
+high-curvature count: 726
+overlap count: 141
+overlap fraction: 0.194215
+transition orientation angle: 114.171786 degrees
+
+Halvorsen
+---------
+samples: 7199
+JANUS mean: 0.740199
+JANUS std: 0.102165
+curvature mean: 0.200379
+JANUS vs log-curvature r: 0.317538
+low-JANUS count: 576
+high-curvature count: 576
+overlap count: 40
+overlap fraction: 0.069444
+transition orientation angle: 12.336144 degrees
+
+Working reading:
+- Lorenz should occupy a negative-coupling switching region.
+- Rossler should occupy a near-tangential transport region.
+- Halvorsen may occupy an inverted fragmented-coupling region.
+
+If these orientations remain stable under parameter variation,
+JANUS can be treated as a system-class diagnostic,
+not only a Lorenz-specific coherence observable.
