@@ -1,41 +1,81 @@
-# NEXAH — Structural Theorems
+# 🔷 NEXAH — Structural Theorems
 
 Status: SEMI-FORMAL  
-Scope: Cross-system (Halvorsen, Lorenz, IEEE, …)
+Scope: Cross-system (Lorenz, Rössler, Duffing, IEEE-inspired systems, …)
 
 ---
 
-## 🧠 Overview
+# 🧠 Overview
 
-This document defines **structural theorems** within the NEXAH framework.
+This document defines the current structural theorems
+within the NEXAH framework.
 
-They formalize principles governing:
+The theorems formalize operational principles governing:
 
 - stability  
+- coherence  
 - transitions  
-- field-aligned dynamics  
+- gate formation  
+- structural navigation  
 - controllability  
+- emergent topology  
 
-⚠️ These statements are:
+---
+
+# ⚠️ Important
+
+These theorems are currently:
 
 - empirically supported  
+- visually validated  
 - structurally consistent  
-- not formally proven  
+- semi-formal  
+
+They are NOT yet:
+
+- mathematically proven  
+- universally generalized  
+- physically fundamental  
 
 They are:
 
-> **testable structural propositions**
+> testable structural propositions
+> derived from observed system behavior.
 
 ---
 
-## 🔬 Core Statement
+# 🔑 Central Statement
 
 ```text
-Stability emerges from coherence within a geometric field.
+Stability emerges from coherent motion within structured geometry.
 
-Collapse occurs when coherence is lost
-and the system leaves its structured trajectory.
+Transitions emerge when coherence weakens
+and trajectories traverse low-structure interface regions.
 ```
+
+---
+
+# 🌌 Structural Overview
+
+![NEXAH System Atlas](./visuals/NEXAH_SYSTEM_ATLAS.png)
+
+---
+
+## Interpretation
+
+The current theorem layer connects:
+
+```text
+flow
+→ density
+→ coherence
+→ gates
+→ transitions
+→ navigation
+→ topology
+```
+
+into a unified structural framework.
 
 ---
 
@@ -43,39 +83,99 @@ and the system leaves its structured trajectory.
 
 ---
 
-## **Theorem 1 — Relational Structure Theorem**
+# 🔷 Theorem 1 — Relational Structure Theorem
 
-### Statement
+## Statement
 
-A system’s behavior is determined by its relational structure.
+A system’s behavior is governed by relational structure.
 
-### Formal Form
+---
+
+## Formal Form
 
 $$
 S \equiv (E, R)
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
 Relations constrain dynamics.
+
 Geometry emerges from structure.
 ```
 
 ---
 
-## **Theorem 2 — Frame Preservation Theorem**
+# 🔷 Theorem 2 — Frame Preservation Theorem
 
-### Statement
+## Statement
 
 Admissible transformations preserve structural consistency.
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
 Valid representations preserve geometry.
-Structure is invariant under admissible frames.
+
+Structure remains invariant under admissible frames.
 ```
+
+---
+
+# 🔷 Theorem 3 — Density Organization Theorem
+
+## Statement
+
+Repeated motion generates persistent density structure:
+
+$$
+\rho(s)
+$$
+
+---
+
+## Interpretation
+
+```text
+Stable regions emerge through repeated occupancy.
+```
+
+High density regions correspond to:
+
+- coherent basins  
+- structural persistence  
+- stable navigation corridors  
+
+---
+
+# 🔷 Theorem 4 — Structural Gradient Theorem
+
+## Statement
+
+Density gradients induce directional drift:
+
+$$
+\nabla \rho(s)
+$$
+
+---
+
+## Interpretation
+
+```text
+Systems drift along structural gradients.
+```
+
+The gradient field organizes:
+
+- navigation  
+- transition corridors  
+- structural flow direction  
 
 ---
 
@@ -83,58 +183,105 @@ Structure is invariant under admissible frames.
 
 ---
 
-## **Theorem 3 — Coherence Stability Theorem**
+# 🔷 Theorem 5 — Coherence Stability Theorem
 
-### Definition
+## Definition
 
 $$
 C(s) =
-\frac{\dot{s} \cdot F(s)}{\|\dot{s}\| \cdot \|F(s)\|}
+\frac{
+\dot{s} \cdot F(s)
+}{
+\|\dot{s}\| \cdot \|F(s)\|
+}
 $$
 
-### Statement
+---
+
+## Statement
 
 $$
-C(s) \approx 1 \Rightarrow \text{stable trajectory}
+C(s) \approx 1
+\Rightarrow
+\text{stable trajectory}
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-Stability = directional alignment with the field.
+Stability corresponds to directional alignment with the field.
 ```
 
 ---
 
-## **Theorem 4 — Coherence Collapse Theorem**
+# 🔷 Theorem 6 — Coherence Collapse Theorem
 
-### Statement
+## Statement
 
 $$
-C(s) < C_{\text{crit}} \Rightarrow \text{loss of stability}
+C(s) < C_{\text{crit}}
+\Rightarrow
+\text{loss of structural stability}
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-Misalignment leads to departure from structured flow.
+Misalignment causes departure from coherent structure.
 ```
 
 ---
 
-## **Theorem 5 — Loop Stabilization Theorem**
+# 🔷 Theorem 7 — Loop Stabilization Theorem
 
-### Statement
+## Statement
 
-Stable behavior corresponds to closed or quasi-closed trajectories.
+Stable behavior corresponds to closed
+or quasi-closed trajectory organization.
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-Loops → stability  
-Spirals → transition  
+Loops → stability
+
+Spirals → transition buildup
+
 Open drift → instability
 ```
+
+---
+
+# 🔷 Theorem 8 — Residence Persistence Theorem
+
+## Statement
+
+Regions with high residence structure:
+
+$$
+R(s)
+$$
+
+exhibit stronger structural persistence.
+
+---
+
+## Interpretation
+
+```text
+Persistence stabilizes coherent motion.
+```
+
+Low residence regions correlate with:
+
+- drift  
+- gate formation  
+- transition activation  
 
 ---
 
@@ -142,17 +289,23 @@ Open drift → instability
 
 ---
 
-## **Theorem 6 — Regime Transition Theorem**
+# 🔷 Theorem 9 — Regime Transition Theorem
 
-### Statement
+## Statement
 
-Regime transitions occur through structured regions:
+Transitions occur through structured interface regions:
 
 $$
-A \rightarrow M_{\text{transition}} \rightarrow B
+A
+\rightarrow
+M_{\text{transition}}
+\rightarrow
+B
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
 Transitions are extended geometric processes.
@@ -160,15 +313,19 @@ Transitions are extended geometric processes.
 
 ---
 
-## **Theorem 7 — Interface Transition Theorem**
+# 🔷 Theorem 10 — Interface Transition Theorem
 
-### Statement
+## Statement
 
 $$
-C(s) \approx 0 \Rightarrow \text{transition region}
+C(s) \approx 0
+\Rightarrow
+\text{transition region}
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
 Loss of coherence defines transition zones.
@@ -176,40 +333,129 @@ Loss of coherence defines transition zones.
 
 ---
 
-## **Theorem 8 — Gate Intersection Theorem**
+# 🔷 Theorem 11 — Gate Formation Theorem
 
-### Condition
+## Statement
+
+Gate regions emerge where:
+
+- density weakens  
+- coherence weakens  
+- directional competition increases  
+
+---
+
+## Gate Operator
 
 $$
-F_1(s) \neq F_2(s)
+G(s)
+=
+(1-\hat{\rho})
+(1-\hat{C})
+(1-\hat{R})
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-Competing flow directions create instability interfaces (gates).
+Gates are structural weak points.
 ```
 
 ---
 
-## **Theorem 9 — Greyspace Transition Theorem**
+# 🔷 Theorem 12 — Structural Tension Theorem
 
-### Definition
+## Statement
 
-$$
-G(s) = \frac{1}{\rho(s)}
-$$
-
-### Statement
+Transition probability increases
+with accumulated structural tension:
 
 $$
-\rho(s) \to 0 \Rightarrow \text{transition corridor}
+T(s)
+=
+w_1 A(s)
++
+w_2 D(s)
++
+w_3 G(s)
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-Low density regions weaken structure and enable transitions.
+Transitions emerge through accumulated structural pressure.
+```
+
+---
+
+# 🔷 Theorem 13 — Greyspace Transition Theorem
+
+## Statement
+
+Low-density regions weaken structural constraints:
+
+$$
+\rho(s) \to 0
+\Rightarrow
+\text{transition corridor}
+$$
+
+---
+
+## Interpretation
+
+```text
+Greyspace enables structural reconfiguration.
+```
+
+---
+
+# 🔷 Theorem 14 — Mismatch Transition Theorem
+
+## Statement
+
+Transitions correlate more strongly with mismatch:
+
+$$
+M(t)
+=
+|\omega(t)-\hat{\omega}(t)|
+$$
+
+than with instability magnitude alone.
+
+---
+
+## Interpretation
+
+```text
+Transitions are triggered by loss of phase consistency.
+```
+
+---
+
+# 🔷 Theorem 15 — Structural Change Theorem
+
+## Statement
+
+Observable structural change:
+
+$$
+\Delta(t)
+$$
+
+acts as a measurable transition proxy.
+
+---
+
+## Interpretation
+
+```text
+Structural change reflects transition activation.
 ```
 
 ---
@@ -218,53 +464,100 @@ Low density regions weaken structure and enable transitions.
 
 ---
 
-## **Theorem 10 — Directional Flow Theorem**
+# 🔷 Theorem 16 — Directional Flow Theorem
 
-### Statement
+## Statement
 
 Flow decomposes into directional components:
 
 $$
-F = F^{+} \cup F^{0} \cup F^{-}
+F
+=
+F^{+}
+\cup
+F^{0}
+\cup
+F^{-}
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
 Motion is directionally structured.
-Transitions occur at directional boundaries.
+
+Transitions occur at directional interfaces.
 ```
 
 ---
 
-## **Theorem 11 — Risk Field Theorem**
+# 🔷 Theorem 17 — Janus Coupling Theorem
 
-### Definition
+## Definition
+
+$$
+J(s)
+=
+F_{\text{forward}}(s)
++
+F_{\text{backward}}(s)
+$$
+
+---
+
+## Interpretation
+
+```text
+Local structure contains coupled directional organization.
+```
+
+The Janus field explores:
+
+- forward dynamics  
+- backward constraints  
+- interface coupling  
+
+---
+
+# 🔷 Theorem 18 — Risk Field Theorem
+
+## Statement
+
+Transition likelihood forms a continuous field:
 
 $$
 P(\text{IOTA} \mid s)
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-Instability is a continuous spatial field.
+Instability is spatially organized,
+not randomly distributed.
 ```
 
 ---
 
-## **Theorem 12 — Structure vs Optimality Theorem**
+# 🔷 Theorem 19 — Structure vs Optimality Theorem
 
-### Statement
+## Statement
 
 $$
-\min P(\text{IOTA}) \neq \text{structure-consistent path}
+\min P(\text{IOTA})
+\neq
+\text{structure-consistent path}
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-Systems prioritize structural consistency over minimal risk.
+Systems prioritize structural consistency
+over purely minimal risk.
 ```
 
 ---
@@ -273,136 +566,181 @@ Systems prioritize structural consistency over minimal risk.
 
 ---
 
-## **Theorem 13 — Geometric Navigation Theorem**
+# 🔷 Theorem 20 — Geometric Navigation Theorem
 
-### Statement
+## Statement
 
-$$
-\dot{s} = F(s) + u(s)
-$$
-
-### Interpretation
-
-```text
-Motion = natural flow + control.
-```
-
----
-
-## **Theorem 14 — Transition Control Theorem**
-
-### Statement
+System motion is field navigation:
 
 $$
-P(B_i \rightarrow B_j \mid u) \neq P(B_i \rightarrow B_j)
-$$
-
-### Interpretation
-
-```text
-Control reshapes transition probabilities.
-```
-
----
-
-## **Theorem 15 — Phase Sensitivity Theorem**
-
-### Statement
-
-Control effectiveness depends on phase alignment.
-
-### Interpretation
-
-```text
-Same control yields different outcomes depending on phase.
-```
-
----
-
-## **Theorem 16 — NEXAH Kernel Theorem**
-
-### Statement
-
-System evolution is navigation in a structured field.
-
-### Formal Form
-
-$$
-\dot{s} =
+\dot{s}
+=
 F(s)
 +
 u(s)
 $$
 
-with:
+---
+
+## Interpretation
+
+```text
+Motion combines intrinsic flow and structural control.
+```
+
+---
+
+# 🔷 Theorem 21 — Transition Control Theorem
+
+## Statement
 
 $$
-u(s) =
+P(B_i \rightarrow B_j \mid u)
+\neq
+P(B_i \rightarrow B_j)
+$$
+
+---
+
+## Interpretation
+
+```text
+Control reshapes transition geometry.
+```
+
+---
+
+# 🔷 Theorem 22 — Phase Sensitivity Theorem
+
+## Statement
+
+Control effectiveness depends on phase alignment.
+
+---
+
+## Interpretation
+
+```text
+Identical control inputs can produce different outcomes
+depending on phase structure.
+```
+
+---
+
+# 🔷 Theorem 23 — Structural Navigation Theorem
+
+## Statement
+
+Effective navigation combines:
+
+$$
+u(s)
+=
 -\nabla P(\text{IOTA})
 +
 \nabla \rho
 +
 u_{\pi}
 +
-u_{\text{sheet}}
-+
 u_{\text{gate}}
 $$
 
-### Interpretation
+---
+
+## Interpretation
 
 ```text
-System evolution = structured navigation.
+Navigation combines:
+
+avoidance of instability
++
+attraction toward coherent structure
 ```
 
 ---
 
-# 🔥 Unified Insight
+# 🔷 Theorem 24 — NEXAH Kernel Theorem
+
+## Statement
+
+System evolution becomes navigation
+within structured geometry.
+
+---
+
+## Interpretation
 
 ```text
-Stability =
-alignment with flow + high density
+Dynamics generate navigable manifolds.
 
-Instability =
-misalignment + low density + competing flows
+Control operates through structural alignment,
+not force suppression.
+```
 
-Transition =
-movement through structured interface regions
+---
+
+# 🌌 Unified Structural Insight
+
+```text
+Stability:
+→ coherent flow
+→ density persistence
+→ structural alignment
+
+Instability:
+→ mismatch
+→ drift
+→ competing flow directions
+
+Transition:
+→ traversal through structured interface regions
+
+Navigation:
+→ geometry-guided motion
 ```
 
 ---
 
 # 🚀 Application Perspective
 
-These theorems enable:
+The current theorem layer enables:
 
 - instability detection  
-- transition prediction  
-- field-based control  
+- transition estimation  
+- structure-aware control  
+- gate analysis  
 - trajectory navigation  
+- topology extraction  
+- cross-system comparison  
 
 ---
 
-# 🔬 Status
+# 🔬 Current Status
 
-- empirically supported  
-- visually validated  
-- structurally consistent  
-- not formally proven  
+```diff
++ empirically supported
++ visually validated
++ operationally reproducible
++ structurally consistent
+- not mathematically complete
+- not formally proven
+```
 
 ---
 
 # 🧠 Final Statement
 
 ```text
-Systems do not fail randomly.
+Systems do not transition randomly.
 
 They lose coherence,
-leave structured regions,
-and transition into new regimes.
+accumulate structural tension,
+and move through navigable interface geometry
+into new regimes.
 ```
 
 ---
 
-© Thomas K. R. Hofmann  
-NEXAH — 2026
+**NEXAH — Structural Theorems**  
+Thomas K. R. Hofmann · 2026  
+Version: v0.9.0-pre
