@@ -109,10 +109,12 @@ Observed trajectories emerge from:
 Stability is defined through directional alignment:
 
 $$
-C(s)
-=
-\frac{\dot{s} \cdot F(s)}
-{\|\dot{s}\| \cdot \|F(s)\|}
+C(s) =
+\frac{
+\dot{s} \cdot F(s)
+}{
+\|\dot{s}\| \cdot \|F(s)\|
+}
 $$
 
 ---
