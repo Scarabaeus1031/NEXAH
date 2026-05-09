@@ -1,6 +1,4 @@
-# 🪞 janus_geometry.md
-
-# JANUS GEOMETRY — Directional Structure in Dynamical Fields
+# 🪞JANUS GEOMETRY — Directional Structure in Dynamical Fields
 
 > Exploratory geometric interpretation of bidirectional flow coherence inside reconstructed dynamical systems.
 
