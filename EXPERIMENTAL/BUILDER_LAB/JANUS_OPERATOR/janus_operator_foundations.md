@@ -435,6 +435,44 @@ Primary candidate systems:
 
 # 🔷 Relationship to Existing Operator Theory
 
+# 🌌 Foundations Map
+
+![Janus Operator Foundations Map](visualizations/janus_operator_foundations_map.png)
+
+*The Janus Operator Foundations Map connects existing operator-theoretic approaches (Koopman, Perron–Frobenius, DMD, coherent sets) with the NEXAH interpretation layer of directional coherence, transition geometry and phase-sensitive navigation.*
+
+The visualization illustrates:
+
+- forward/backward directional structure
+- local coherence overlap
+- transition-sensitive regions
+- directional asymmetry
+- computational realization
+- relationship to transition gates
+- integration with existing dynamical systems theory
+
+The map should be understood as:
+
+```text
+a geometric interpretation layer
+built on top of existing systems science
+```
+
+rather than a replacement for classical operator theory.
+
+It acts as a conceptual bridge between:
+
+```text
+operator theory
+↔ local field geometry
+↔ transition diagnostics
+↔ navigational structure
+```
+
+inside reconstructed dynamical systems.
+
+---
+
 The idea of combining forward and backward dynamics is well established in operator-theoretic approaches to dynamical systems.
 
 Conceptually related areas include:
