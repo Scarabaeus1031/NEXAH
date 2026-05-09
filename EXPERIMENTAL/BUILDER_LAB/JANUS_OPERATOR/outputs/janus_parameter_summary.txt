@@ -1,0 +1,65 @@
+JANUS parameter stability scan
+================================
+
+Goal:
+Test whether JANUS transition orientation remains stable
+under system-parameter variation.
+
+Lorenz
+------
+r mean: -0.284998
+r std: 0.112933
+overlap mean: 0.067694
+overlap std: 0.040563
+angle mean: 160.120127
+angle std: 18.191895
+
+parameter, samples, janus_mean, janus_std, curvature_mean, r, overlap_fraction, orientation_angle
+22.000000, 7649, 0.747267, 0.095565, 7.591750, -0.012473, 0.022876, 118.602148
+24.000000, 7649, 0.767370, 0.108801, 0.126900, -0.337102, 0.009804, 178.334138
+26.000000, 7649, 0.772565, 0.110884, 0.103298, -0.359482, 0.042484, 173.260035
+28.000000, 7649, 0.770698, 0.109296, 0.099436, -0.346318, 0.086601, 165.960359
+30.000000, 7649, 0.769450, 0.108000, 0.098121, -0.330679, 0.089869, 164.795848
+32.000000, 7649, 0.768358, 0.106171, 0.095534, -0.312817, 0.089869, 163.971141
+35.000000, 7649, 0.767104, 0.104798, 0.088527, -0.296117, 0.132353, 155.917219
+
+Rossler
+-------
+r mean: -0.051554
+r std: 0.048647
+overlap mean: 0.134454
+overlap std: 0.043290
+angle mean: 110.859779
+angle std: 21.194637
+
+parameter, samples, janus_mean, janus_std, curvature_mean, r, overlap_fraction, orientation_angle
+4.500000, 8499, 0.822475, 0.108920, 0.195015, 0.046734, 0.117647, 68.334983
+5.000000, 8499, 0.832035, 0.107571, 0.189062, -0.021200, 0.198529, 96.095276
+5.700000, 8499, 0.845531, 0.106998, 0.195008, -0.092459, 0.202941, 114.493837
+6.200000, 8499, 0.844802, 0.107109, 0.196021, -0.044378, 0.120588, 110.204149
+6.800000, 8499, 0.856929, 0.104959, 0.238045, -0.092190, 0.116176, 128.433124
+7.500000, 8499, 0.849778, 0.105480, 0.206773, -0.054875, 0.089706, 121.454934
+8.000000, 8499, 0.853360, 0.105455, 0.230761, -0.102514, 0.095588, 137.002149
+
+Halvorsen
+---------
+r mean: nan
+r std: nan
+overlap mean: nan
+overlap std: nan
+angle mean: nan
+angle std: nan
+
+parameter, samples, janus_mean, janus_std, curvature_mean, r, overlap_fraction, orientation_angle
+1.100000, 0, nan, nan, nan, nan, nan, nan
+1.200000, 0, nan, nan, nan, nan, nan, nan
+1.300000, 7199, 0.739657, 0.099262, 0.214594, 0.288373, 0.022569, 4.475119
+1.400000, 7199, 0.740199, 0.102165, 0.200379, 0.317538, 0.069444, 12.336144
+1.500000, 7199, 0.742329, 0.105616, 0.201912, 0.418979, 0.123264, 16.393899
+1.600000, 7199, 0.744468, 0.107612, 0.186195, 0.333095, 0.000000, 0.000000
+1.700000, 7199, 0.760385, 0.113345, 0.168950, 0.446076, 0.000000, 0.000000
+
+Working interpretation:
+- Stable orientation paths indicate system-class persistence.
+- Drifting paths indicate parameter-driven regime changes.
+- Orientation flips indicate a structural transition in JANUS-curvature coupling.
