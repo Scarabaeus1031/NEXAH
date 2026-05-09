@@ -1,0 +1,63 @@
+JANUS cross-system generalization experiment
+===========================================
+
+Systems:
+- Lorenz: switching-dominated reference
+- Rossler: spiral / transport-dominated
+- Halvorsen: fragmented / distributed stress test
+
+
+Lorenz
+------
+samples: 7649
+JANUS mean: 0.771833
+JANUS std: 0.109550
+JANUS min: 0.572721
+JANUS max: 0.997818
+curvature mean: 0.095084
+JANUS vs log-curvature r: -0.329467
+low-JANUS count: 612
+high-curvature count: 612
+overlap count: 39
+overlap fraction: 0.063725
+
+Rossler
+-------
+samples: 10624
+JANUS mean: 0.843943
+JANUS std: 0.106604
+JANUS min: 0.576319
+JANUS max: 0.999900
+curvature mean: 0.185975
+JANUS vs log-curvature r: -0.122088
+low-JANUS count: 850
+high-curvature count: 850
+overlap count: 188
+overlap fraction: 0.221176
+
+Halvorsen
+---------
+samples: 6799
+JANUS mean: 0.740353
+JANUS std: 0.102987
+JANUS min: 0.575146
+JANUS max: 0.998459
+curvature mean: 0.201148
+JANUS vs log-curvature r: 0.353394
+low-JANUS count: 544
+high-curvature count: 544
+overlap count: 44
+overlap fraction: 0.080882
+
+Interpretation:
+JANUS is tested here as a cross-system coherence observable.
+The goal is not identical visual geometry across systems.
+The goal is persistence of extractable transition structure.
+
+Working reading:
+- Lorenz should show concentrated switching corridors.
+- Rossler should show spiral / transport coherence.
+- Halvorsen should show fragmented distributed transition regions.
+
+If all three show non-random JANUS organization,
+JANUS is not only a Lorenz-specific observable.
