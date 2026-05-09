@@ -1,0 +1,20 @@
+JANUS axis geometry & breathing modes
+================================================
+
+Goal:
+Investigate global transport geometry.
+
+axis crossings: 250
+mean radius: 9.800102
+radius std: 6.945754
+mean breathing velocity: 0.216204
+mean spine distance: 2.502598
+
+Working interpretation:
+- transport geometry appears organized around a central switching axis
+- repeated compression / expansion cycles are visible
+- axis crossings cluster near coherence deformation regions
+- the resulting structure resembles an open-8 transport geometry
+
+This experiment studies global breathing organization,
+not only local coherence statistics.
