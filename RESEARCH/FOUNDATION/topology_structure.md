@@ -1,4 +1,3 @@
-```markdown
 # 🧠 NEXAH — Topology from Structural Connectivity
 
 Status: SEMI-FORMAL  
@@ -363,4 +362,4 @@ and how structure persists across the field.
 
 **NEXAH — Topology from Structural Connectivity**  
 Thomas K. R. Hofmann · 2026
-```
+
