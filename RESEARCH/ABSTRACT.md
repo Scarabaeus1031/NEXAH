@@ -82,11 +82,7 @@ with phase mismatch than with instability magnitude alone.
 
 Mismatch is defined operationally as:
 
-$$
-M(t)
-=
-|\omega(t)-\hat{\omega}(t)|
-$$
+$$M(t) = |\omega(t)-\hat{\omega}(t)|$$
 
 where:
 
