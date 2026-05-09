@@ -1,0 +1,57 @@
+JANUS universal orientation manifold
+================================================
+
+Goal:
+Project several JANUS structural observables
+into a shared orientation manifold.
+
+Explained PCA variance:
+PC1 = 0.598081, PC2 = 0.401919
+
+Lorenz
+------
+samples: 10199.000000
+janus_mean: 0.770712
+janus_std: 0.109374
+curvature_mean: 0.100414
+curvature_corr: -0.348840
+overlap_fraction: 0.084559
+shell_crossings: 3386.000000
+axis_crossings: 54.000000
+spine_distance_mean: 6.456378
+breathing_velocity_mean: 0.671919
+orientation_angle: 166.374301
+
+Rossler
+-------
+samples: 8499.000000
+janus_mean: 0.845531
+janus_std: 0.106998
+curvature_mean: 0.195008
+curvature_corr: -0.092459
+overlap_fraction: 0.202941
+shell_crossings: 693.000000
+axis_crossings: 44.000000
+spine_distance_mean: 4.115977
+breathing_velocity_mean: 0.029070
+orientation_angle: 114.493837
+
+Halvorsen
+---------
+samples: 7999.000000
+janus_mean: 0.740118
+janus_std: 0.102327
+curvature_mean: 0.200664
+curvature_corr: 0.320198
+overlap_fraction: 0.071875
+shell_crossings: 1742.000000
+axis_crossings: 91.000000
+spine_distance_mean: 4.589750
+breathing_velocity_mean: 0.179103
+orientation_angle: 12.651497
+
+Working interpretation:
+- systems may organize into stable orientation families
+- shell crossings and axis crossings appear coupled
+- curvature coupling contributes to global geometry
+- transport structure may define a universal manifold
