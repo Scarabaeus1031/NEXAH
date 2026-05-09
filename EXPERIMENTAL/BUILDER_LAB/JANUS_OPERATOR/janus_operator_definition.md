@@ -1,5 +1,3 @@
-# 🪞 janus_definition.md
-
 # JANUS OPERATOR — Formal Definition
 
 > Exploratory bidirectional flow-coherence operator for reconstructed dynamical fields.
