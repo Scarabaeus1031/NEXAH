@@ -64,7 +64,8 @@ class Config:
     seed: int = 7
 
 
-OUTPUT_DIR = Path("outputs")
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = BASE_DIR / "outputs"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
