@@ -17,7 +17,6 @@
 
 # Script
 
-```python
 # EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/scripts/janus_attractor_memory.py
 
 import numpy as np
