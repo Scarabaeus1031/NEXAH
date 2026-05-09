@@ -160,9 +160,9 @@ def simulate_system(cfg: SweepConfig, value: float) -> Tuple[Array, Array]:
     )
 
     if not sol.success:
-    print(
-        f"[warning] {cfg.system} parameter={value:g} "
-        f"integration unstable: {sol.message}"
+        print(
+            f"[warning] {cfg.system} parameter={value:g} "
+            f"integration unstable: {sol.message}"
     )
     return np.array([]), np.empty((0, 3))
 
@@ -200,27 +200,30 @@ def compute_curvature(states: Array, eps: float = 1.0e-8) -> Array:
 
     return numerator / denominator
 
-
-def analyze_parameter(cfg: SweepConfig, value: float) -> Dict[str, float]:
+tedef analyze_parameter(cfg: SweepConfig, value: float) -> Dict[str, float]:
     t, states = simulate_system(cfg, value)
-if len(t) < 10 or len(states) < 10:
-    return {
-        "parameter": float(value),
-        "samples": 0.0,
-        "janus_mean": np.nan,
-        "janus_std": np.nan,
-        "curvature_mean": np.nan,
-        "r": np.nan,
-        "overlap_fraction": np.nan,
-        "orientation_angle": np.nan,
-    }
+
+    if len(t) < 10 or len(states) < 10:
+        return {
+            "parameter": float(value),
+            "samples": 0.0,
+            "janus_mean": np.nan,
+            "janus_std": np.nan,
+            "curvature_mean": np.nan,
+            "r": np.nan,
+            "overlap_fraction": np.nan,
+            "orientation_angle": np.nan,
+        }
+
     _, janus = compute_janus(t, states)
+
     curvature = compute_curvature(states)
     curvature = curvature[: len(janus)]
 
     log_curv = np.log10(curvature + 1.0e-8)
 
     n = min(len(janus), len(log_curv))
+
     janus = janus[:n]
     log_curv = log_curv[:n]
     curvature = curvature[:n]
@@ -235,11 +238,13 @@ if len(t) < 10 or len(states) < 10:
 
     low_mask = janus <= low_threshold
     high_mask = log_curv >= high_threshold
+
     overlap_mask = low_mask & high_mask
 
     overlap_fraction = np.sum(overlap_mask) / max(np.sum(low_mask), 1)
 
     angle = np.degrees(np.arctan2(overlap_fraction, r))
+
     if angle > 180:
         angle -= 360
 
@@ -253,8 +258,6 @@ if len(t) < 10 or len(states) < 10:
         "overlap_fraction": float(overlap_fraction),
         "orientation_angle": float(angle),
     }
-
-
 # ------------------------------------------------------------
 # Plotting
 # ------------------------------------------------------------
