@@ -1,3 +1,5 @@
+# 🪞 janus_geometry.md
+
 # JANUS GEOMETRY — Directional Structure in Dynamical Fields
 
 > Exploratory geometric interpretation of bidirectional flow coherence inside reconstructed dynamical systems.
@@ -32,6 +34,54 @@ and that:
 this asymmetry may become geometrically visible
 near transitions, gates and instability corridors
 ```
+
+---
+
+# 🗺️ Janus Geometry Map
+
+![Janus Geometry Map](visualizations/janus_geometry_map.png)
+
+*Conceptual geometry map of bidirectional flow coherence inside reconstructed dynamical fields.*
+
+The visualization illustrates three proposed directional regimes:
+
+```text
+1. Coherent Bidirectional Flow
+→ high forward/backward overlap
+→ stable local geometry
+
+2. Janus Transition Corridor
+→ directional asymmetry peak
+→ transition activation region
+
+3. Directional Fragmentation
+→ coherence collapse
+→ drift and instability structure
+```
+
+The central red corridor represents the proposed:
+
+```text
+Janus Peak
+```
+
+where:
+
+- local directional compatibility weakens
+- phase mismatch accumulates
+- transition probability increases
+- instability corridors emerge
+
+The map is conceptual and exploratory.
+
+It serves as:
+
+```text
+a navigational visualization
+of directional coherence geometry
+```
+
+rather than a finalized mathematical model.
 
 ---
 
