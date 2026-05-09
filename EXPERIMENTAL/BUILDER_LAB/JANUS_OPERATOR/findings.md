@@ -633,3 +633,292 @@ to transition through fully random geometric diffusion.
 Instead they repeatedly reorganize through
 structured coherence geometry.
 ```
+
+# 🔷 FINDING F-14 — Recursive Orientation Geometry Persists Across Scales
+
+Observed in:
+
+- EXP-17
+
+---
+
+## Observation
+
+Recursive JANUS analysis reveals:
+
+- nested orientation manifolds
+- self-similar transport geometry
+- recursive breathing organization
+- scale-stable coherence corridors
+
+The recursive structures persist across scales:
+
+```text
+128
+256
+512
+1024
+2048
+```
+
+Importantly:
+
+```text
+the recursive organization survives smoothing.
+```
+
+The resulting geometry exhibits:
+
+- persistent recurrence bands
+- recursive variance organization
+- nested orbital transport layers
+- stable corridor alignment
+
+---
+
+## Open-8 Recursive Geometry
+
+The recursive transport geometry repeatedly forms:
+
+- mirrored lobe structures
+- central compression funnels
+- nested transfer corridors
+- recursive spine organization
+
+The resulting geometry resembles:
+
+```text
+recursive Open-8 transport manifolds
+```
+
+rather than diffuse chaotic spreading.
+
+---
+
+## Important Observation
+
+The recursive structure does NOT collapse
+under aggregation.
+
+Instead:
+
+- fast oscillations compress
+- large-scale transport persists
+- orientation structure reorganizes hierarchically
+
+This strongly suggests:
+
+```text
+JANUS organization is mesoscopic,
+not microscopic.
+```
+
+---
+
+## Structural Interpretation
+
+The experiment suggests:
+
+```text
+transition geometry itself
+is recursively organized.
+```
+
+The observed structures resemble:
+
+- recursive coherence scaffolds
+- breathing transport manifolds
+- nested transition corridors
+- self-similar routing geometry
+
+---
+
+# 🔷 FINDING F-15 — JANUS Transport Separates Into Recursive Phase Regimes
+
+Observed in:
+
+- EXP-18
+
+---
+
+## Observation
+
+JANUS transport decomposes into
+four distinct recursive phase regimes:
+
+| Quadrant | Regime |
+|---|---|
+| Q1 | Expansion |
+| Q2 | Compression |
+| Q3 | Memory / Echo |
+| Q4 | Transition / Gate |
+
+Observed occupation:
+
+```text
+Expansion:
+57.1%
+
+Compression:
+1.45%
+
+Memory / Echo:
+18.0%
+
+Transition / Gate:
+23.4%
+```
+
+---
+
+## Important Observation
+
+The phase regimes are NOT uniformly distributed.
+
+Instead:
+
+- expansion dominates orbital transport
+- compression localizes near transfer throats
+- memory forms recursive recurrence corridors
+- gate structure aligns with shell crossings
+
+This strongly suggests:
+
+```text
+transport is phase-organized.
+```
+
+---
+
+## Compression Structure
+
+Compression is extremely sparse:
+
+```text
+Q2 ≈ 1.45%
+```
+
+Yet compression regions repeatedly appear near:
+
+- shell crossings
+- transfer throats
+- transition spines
+- coherence minima
+
+This suggests:
+
+```text
+compression may act
+as a geometric trigger phase.
+```
+
+---
+
+## Memory / Echo Structure
+
+The memory regime exhibits:
+
+- delayed recurrence structure
+- recursive transport traces
+- coherence-return manifolds
+- persistent echo corridors
+
+Importantly:
+
+```text
+memory remains spatially localized.
+```
+
+The resulting geometry resembles:
+
+- attractor echoes
+- recursive return routing
+- delayed transport locking
+
+---
+
+## Transition / Gate Structure
+
+Transition/gate regions align strongly with:
+
+- shell boundaries
+- low-coherence corridors
+- transport crossings
+- recursive transition preparation zones
+
+The density maps reveal:
+
+```text
+transition occupation concentrates
+inside specific shell regions.
+```
+
+This supports earlier observations involving:
+
+- shell-mediated transfer
+- transition-spine compression
+- corridor-guided switching
+
+---
+
+## Structural Interpretation
+
+The experiment strongly suggests:
+
+```text
+JANUS transport behaves
+as a recursive phase-partitioned system.
+```
+
+The resulting transport organization resembles:
+
+```text
+Expansion
+→ Compression
+→ Memory / Echo
+→ Gate Transition
+→ Recursive Re-expansion
+```
+
+rather than unconstrained chaotic diffusion.
+
+---
+
+# 🔷 Updated Working Meta-Observation
+
+Across all experiments,
+a deeper structural pattern now appears:
+
+```text
+transition organization itself
+appears recursively layered.
+```
+
+Repeated recursive motifs now include:
+
+- nested shells
+- recursive corridors
+- breathing manifolds
+- transition spines
+- phase-partitioned routing
+- memory echoes
+- gate-aligned transport
+- self-similar recurrence geometry
+
+---
+
+# 🔷 Updated Working Insight
+
+```text
+The observed systems do not appear
+to reorganize through purely random transition dynamics.
+
+Instead they repeatedly exhibit:
+
+- recursive coherence organization
+- shell-mediated transport
+- compressed transition routing
+- phase-structured transport geometry
+- self-similar orientation persistence
+- recursive breathing manifolds
+```
