@@ -1,4 +1,4 @@
-# NEXAH Research Vision (v5 — Field, Phase & Causal Structure)
+# NEXAH Research Vision (v6 — Structured Dynamics, Phase & Navigation)
 
 NEXAH is a research framework for analyzing and navigating transitions in complex dynamical systems.
 
@@ -8,9 +8,9 @@ It identifies **structure within system dynamics** and enables **causal interact
 
 # 🧭 Conceptual Overview
 
-![Validation Summary](./VALIDATION/visuals/nexah_validation_summary_visual.png)
+![Interactive Navigation Map](./FOUNDATION/visuals/interactive_navigation_map.png)
 
-*Empirical validation summary of structure, transitions, and control behavior.*
+*Integrated structural navigation view across flow, topology, transitions, and coherence.*
 
 ---
 
@@ -21,7 +21,15 @@ It identifies **structure within system dynamics** and enables **causal interact
 The NEXAH framework reduces dynamical systems to a structural pipeline:
 
 ```text
-Flow → Sheets → Regimes & Gates → Transitions → Connectivity → Topology
+Flow
+→ Sheets
+→ Regimes & Gates
+→ Connectivity
+→ Topology
+→ Phase Dynamics
+→ Mismatch
+→ Transition
+→ Control(direction)
 ```
 
 Structure is not imposed — it is extracted from trajectory data.
@@ -30,8 +38,8 @@ Structure is not imposed — it is extracted from trajectory data.
 
 # 🔷 Core Hypothesis
 
-> Complex systems evolve within **structured fields**  
-> and transition when **phase coherence breaks**.
+> Complex systems evolve within structured fields  
+> and transition when locally coherent phase evolution breaks down.
 
 ---
 
@@ -41,9 +49,9 @@ Structure is not imposed — it is extracted from trajectory data.
 
 Observed structure:
 
-- systems evolve within a **density + flow field**  
-- stable regions form **basins (regimes)**  
-- transitions occur through **gates (intersections)**  
+- systems evolve within a **density + flow field**
+- stable regions form **basins (regimes)**
+- transitions occur through **gates (intersections)**
 - phase dynamics determine **when transitions activate**
 
 This empirical structure corresponds to the extracted sheet, gate, and transition layers:
@@ -66,12 +74,19 @@ AND are triggered by phase mismatch.
 # 🧠 Structural Interpretation
 
 ```text
-field → structure → geometry → phase → mismatch → transition → control(direction)
+field
+→ structure
+→ geometry
+→ phase
+→ mismatch
+→ transition
+        ↑
+   control(direction)
 ```
 
 This defines a **two-layer mechanism**:
 
-- geometry defines *where transitions are possible*  
+- geometry defines *where transitions are possible*
 - phase dynamics defines *when transitions occur*
 
 ---
@@ -80,11 +95,11 @@ This defines a **two-layer mechanism**:
 
 Across systems:
 
-- coherent regions (basins)  
-- anisotropic motion (preferred directions)  
-- layered dynamics (flow sheets)  
-- structured transitions (non-random)  
-- phase-dependent activation of transitions  
+- coherent regions (basins)
+- anisotropic motion (preferred directions)
+- layered dynamics (flow sheets)
+- structured transitions (non-random)
+- phase-dependent activation of transitions
 
 ---
 
@@ -95,7 +110,8 @@ Across systems:
 Observed:
 
 ```text
-IOTA (instability activation metric) ⇔ phase mismatch >> 0
+IOTA (instability activation metric)
+⇔ phase mismatch >> 0
 ```
 
 NOT:
@@ -109,11 +125,11 @@ IOTA ⇔ instability
 ## 🧠 Interpretation
 
 ```text
-instability = potential  
+instability = potential
 phase mismatch = trigger
 ```
 
-This establishes **phase as the causal activation variable**.
+This establishes **phase mismatch as the operational activation variable**.
 
 ---
 
@@ -146,10 +162,17 @@ alignment AND direction relative to phase dynamics
 Empirical observation:
 
 ```text
-aligned control  → increases drift and transitions  
-inverted control → reduces drift but increases events  
-damped control   → suppresses events but retains instability  
-inverse control  → minimizes drift AND suppresses transitions  
+aligned control
+→ increases drift and transitions
+
+inverted control
+→ reduces drift but increases events
+
+damped control
+→ suppresses events but retains instability
+
+inverse control
+→ minimizes drift AND suppresses transitions
 ```
 
 ---
@@ -157,7 +180,8 @@ inverse control  → minimizes drift AND suppresses transitions
 ## 🔑 Key Insight
 
 ```text
-Control effectiveness depends on direction, not magnitude.
+Control effectiveness depends on direction,
+not magnitude alone.
 ```
 
 ---
@@ -173,15 +197,11 @@ Stabilization occurs only when control is applied
 
 System state:
 
-$$
-s = (r, \theta)
-$$
+$$ s=(r,\theta) $$
 
 Dynamics:
 
-$$
-\dot{s} = F(s)
-$$
+$$ \dot{s}=F(s) $$
 
 ---
 
@@ -189,30 +209,21 @@ $$
 
 Phase:
 
-$$
-\phi = \arctan2(y, x)
-$$
+$$ \phi=\arctan2(y,x) $$
 
 Phase velocity:
 
-$$
-\omega = \frac{d\phi}{dt}
-$$
+$$ \omega=\frac{d\phi}{dt} $$
 
 Mismatch:
 
-$$
-\Delta_\phi = |\omega - \text{expected}(\omega)|
-$$
+$$ M(t)=|\omega(t)-\hat{\omega}(t)| $$
 
 ---
 
 # 🔷 Coherence
 
-$$
-C(s) =
-\frac{\dot{s} \cdot F(s)}{\|\dot{s}\| \, \|F(s)\|}
-$$
+$$ C(s)=\frac{\dot{s}\cdot F(s)}{\|\dot{s}\|\,\|F(s)\|} $$
 
 ---
 
@@ -226,6 +237,31 @@ avoid unstable divergence
 
 ---
 
+# 🌌 Emergent Topology Perspective
+
+NEXAH interprets topology
+as an emergent consequence of structured motion.
+
+Topology is not externally imposed.
+
+It emerges from:
+
+- transition connectivity
+- coherent motion
+- accumulated winding
+- admissible directional structure
+
+---
+
+## 🔑 Topological Principle
+
+```text
+Topology emerges from structured connectivity,
+not merely geometric embedding.
+```
+
+---
+
 # 🧠 Unified System Interpretation
 
 ```text
@@ -233,30 +269,36 @@ System =
 trajectory in structured field
 ```
 
-### Stability
+---
 
-- alignment with flow  
-- high-density regions  
-- structural containment  
-- phase coherence  
+## Stability
 
-### Instability
+- alignment with flow
+- high-density regions
+- structural containment
+- phase coherence
 
-- misalignment  
-- low density  
-- competing flow  
+---
 
-### Transition
+## Instability
 
-- geometry-defined  
+- misalignment
+- low density
+- competing flow
+
+---
+
+## Transition
+
+- geometry-defined
 - phase-triggered (mismatch)
 
 ---
 
 # ⚠️ Current Limitation
 
-- phase-aligned control improves trajectories  
-- BUT can increase transition activity if misaligned  
+- phase-aligned control improves trajectories
+- BUT can increase transition activity if misaligned
 
 Missing:
 
@@ -269,23 +311,23 @@ correct directional alignment of control
 # 🔧 Next Step
 
 ```text
-s = f(φ, instability)
+s=f(\phi,instability)
 ```
 
 Expected:
 
-- reduce mismatch peaks  
-- suppress transitions  
-- preserve structure  
+- reduce mismatch peaks
+- suppress transitions
+- preserve structure
 
 ---
 
 # 🔬 Status
 
-- empirically validated  
-- cross-system confirmed  
-- causally interpretable  
-- partially controllable  
+- empirically validated
+- cross-system confirmed
+- causally interpretable
+- partially controllable
 
 ---
 
@@ -294,7 +336,7 @@ Expected:
 ```text
 Systems do not fail randomly.
 
-They transition when phase coherence breaks
+They transition when locally coherent phase evolution breaks
 within a structured dynamical field.
 
 Control succeeds when alignment is restored
