@@ -593,21 +593,14 @@ Script:
 
 Outputs:
 
-- `outputs/janus_multiscale_overlay.png`
-- `outputs/janus_multiscale_heatmap.png`
+- `outputs/janus_noise_heatmap.png`
 - `outputs/janus_scale_variance.png`
-
----
-
-## Multi-Scale Overlay
-
-![Multi-Scale Overlay](outputs/janus_multiscale_overlay.png)
 
 ---
 
 ## Multi-Scale Heatmap
 
-![Multi-Scale Heatmap](outputs/janus_multiscale_heatmap.png)
+![Multi-Scale Heatmap](outputs/janus_noise_heatmap.png)
 
 ---
 
@@ -698,7 +691,7 @@ Observed behavior resembles:
 
 ## Visual Observation
 
-The overlay visualization shows:
+The visualization shows:
 
 - coherent resonance bands
 - nested oscillation families
@@ -727,7 +720,7 @@ Outputs:
 
 - `outputs/janus_frequency_spectrum.png`
 - `outputs/janus_power_spectrum.png`
-- `outputs/janus_frequency_peaks.png`
+- `outputs/janus_dominant_frequencies.png`
 
 ---
 
@@ -745,7 +738,7 @@ Outputs:
 
 ## Dominant Frequency Peaks
 
-![Dominant Frequency Peaks](outputs/janus_frequency_peaks.png)
+![Dominant Frequency Peaks](outputs/janus_dominant_frequencies.png)
 
 ---
 
@@ -835,7 +828,7 @@ not simple oscillation frequency.
 # 🔷 EXP-8 — Phase Synchronization Analysis
 
 Script:
-`scripts/janus_phase_synchonization.py`
+`scripts/janus_phase_synchronization.py`
 
 Outputs:
 
