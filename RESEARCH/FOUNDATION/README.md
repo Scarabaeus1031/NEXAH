@@ -14,7 +14,7 @@ It establishes that the observed structures, transition dynamics, and control me
 
 # 🧭 Overview
 
-![NEXAH Validation Summary](./nexah_validation_summary_visual.png)
+![NEXAH Validation Summary](../nexah_validation_summary_visual.png)
 
 *Integrated validation overview across all levels: structure → transitions → control → causality.*
 
