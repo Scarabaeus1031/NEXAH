@@ -1,21 +1,19 @@
 # EXPERIMENT 10 — JANUS ATTRACTOR MEMORY
-
 ## Goal
+#Test whether JANUS coherence contains:
 
-Test whether JANUS coherence contains:
+#- temporal persistence
+#- memory traces
+#- delayed self-similarity
+#- attractor retention
+#- recurrence structure
 
-- temporal persistence
-- memory traces
-- delayed self-similarity
-- attractor retention
-- recurrence structure
+#The question is:
 
-The question is:
+#> Does JANUS only react locally,
+#> or does it preserve long-range dynamical memory?
 
-> Does JANUS only react locally,
-> or does it preserve long-range dynamical memory?
-
----
+#---
 
 # Script
 
