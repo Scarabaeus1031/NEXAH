@@ -1,0 +1,27 @@
+JANUS shell crossing experiment
+==============================
+
+samples: 10498
+shells: 5
+
+shell edges:
+edge 0: 0.620704
+edge 1: 0.681231
+edge 2: 0.740513
+edge 3: 0.790938
+edge 4: 0.846033
+edge 5: 0.998006
+
+shell crossings: 2850
+strong shell crossings: 285
+basin transfers: 43
+
+transfer near any shell crossing (±25 samples): 1.000000
+transfer near strong shell crossing (±25 samples): 0.581395
+
+shell occupation counts:
+shell 0: 2100
+shell 1: 2099
+shell 2: 2100
+shell 3: 2099
+shell 4: 2100

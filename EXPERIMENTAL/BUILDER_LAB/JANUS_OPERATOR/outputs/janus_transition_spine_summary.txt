@@ -1,0 +1,20 @@
+JANUS transition spine analysis
+================================
+
+samples: 11998
+transfer events: 50
+
+mean JANUS coherence: 0.778020
+min JANUS coherence: 0.680447
+max JANUS coherence: 0.949914
+
+max radial spread: 8.002376
+min radial spread: 0.877562
+
+peak transition velocity index: -20
+peak transition velocity: 1.556460
+
+Interpretation:
+The transition spine estimates the dominant geometric corridor through which basin exchange occurs.
+Low spread regions indicate stable transfer alignment.
+High spread regions indicate transition decompression / branching.
