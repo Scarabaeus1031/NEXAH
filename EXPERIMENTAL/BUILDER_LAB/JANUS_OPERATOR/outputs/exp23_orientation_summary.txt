@@ -1,0 +1,39 @@
+EXP-23 — JANUS aperture orientation angles
+================================================
+
+Goal:
+Measure angular organization of aperture gate candidates.
+
+Global statistics:
+samples: 11899
+gate candidates: 60
+mean aperture score: 0.580389
+max aperture score: 1.000000
+
+Angle statistics:
+all angle mean: 90.125381
+all angle std: 46.424821
+gate angle mean: 85.214968
+gate angle std: 43.264258
+
+Reference angle scan:
+30.000000 deg: 0.059937
+45.000000 deg: 0.302292
+51.830000 deg: 0.218542
+52.000000 deg: 0.215463
+60.000000 deg: 0.075691
+72.000000 deg: 0.001726
+90.000000 deg: 0.000000
+108.000000 deg: 0.004712
+120.000000 deg: 0.140275
+144.000000 deg: 0.102866
+
+Best reference alignment:
+45.000000 deg
+score: 0.302292
+
+Working interpretation:
+- aperture gate candidates show measurable angle structure
+- gate points do not occupy the Lorenz geometry uniformly
+- angular preference may indicate orientation-calibrated gate structure
+- this remains exploratory and requires surrogate comparison
