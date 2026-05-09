@@ -1,0 +1,28 @@
+JANUS recursive orientation geometry
+================================================
+
+Scales analyzed:
+- 128
+- 256
+- 512
+- 1024
+- 2048
+
+Observations:
+
+- recursive coherence structure persists across scales
+- breathing geometry survives smoothing
+- orientation manifolds exhibit self-similar clustering
+- Open-8 transport geometry remains visible recursively
+- compression / expansion corridors reorganize hierarchically
+
+Working interpretation:
+
+JANUS appears to organize through recursive transport geometry,
+not only through local coherence oscillation.
+
+The resulting structure resembles:
+- recursive phase manifolds
+- breathing attractor scaffolds
+- nested transport corridors
+- self-similar transition geometry
