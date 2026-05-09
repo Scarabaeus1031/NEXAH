@@ -160,7 +160,11 @@ def simulate_system(cfg: SweepConfig, value: float) -> Tuple[Array, Array]:
     )
 
     if not sol.success:
-        raise RuntimeError(f"{cfg.system} integration failed: {sol.message}")
+    print(
+        f"[warning] {cfg.system} parameter={value:g} "
+        f"integration unstable: {sol.message}"
+    )
+    return np.array([]), np.empty((0, 3))
 
     t = sol.t
     states = sol.y.T
@@ -199,7 +203,17 @@ def compute_curvature(states: Array, eps: float = 1.0e-8) -> Array:
 
 def analyze_parameter(cfg: SweepConfig, value: float) -> Dict[str, float]:
     t, states = simulate_system(cfg, value)
-
+if len(t) < 10 or len(states) < 10:
+    return {
+        "parameter": float(value),
+        "samples": 0.0,
+        "janus_mean": np.nan,
+        "janus_std": np.nan,
+        "curvature_mean": np.nan,
+        "r": np.nan,
+        "overlap_fraction": np.nan,
+        "orientation_angle": np.nan,
+    }
     _, janus = compute_janus(t, states)
     curvature = compute_curvature(states)
     curvature = curvature[: len(janus)]
