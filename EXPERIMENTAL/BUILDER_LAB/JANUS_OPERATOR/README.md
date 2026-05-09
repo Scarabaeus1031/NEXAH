@@ -1,134 +1,324 @@
-# 🪞 JANUS_OPERATOR — Bidirectional Flow Coherence Experiments
+# 🪞 JANUS_OPERATOR — Transition Geometry & Directional Coherence in Dynamical Fields
 
-> Experimental NEXAH submodule for exploring forward/backward flow coherence in dynamical systems.
+> Experimental NEXAH submodule for investigating directional coherence, transition geometry and recursive transport structure inside nonlinear dynamical systems.
 
-> Status: exploratory research module — early-stage mathematical and computational investigation.
-
----
-
-# 🧠 Overview
-
-The JANUS_OPERATOR module investigates whether transition regions in dynamical systems may correspond to localized breakdowns — or concentration peaks — of bidirectional flow coherence.
-
-The central idea is simple:
-
-```text
-Instead of analyzing only forward evolution,
-we compare forward and backward local flow structure.
-```
-
-This creates a bidirectional structural diagnostic:
-
-```text
-forward flow
-↔ backward flow
-→ local coherence structure
-```
-
-The module explores whether:
-
-- transition gates
-- instability corridors
-- phase mismatch regions
-- synchronization breakdowns
-
-can be detected through local asymmetry between forward and backward field behavior.
+> Status: exploratory computational research framework — active geometry & transition analysis layer.
 
 ---
 
-# 🧭 Motivation
+# 🌌 Core Perspective
 
-Many dynamical systems exhibit regions where:
-
-- trajectories diverge rapidly
-- coherence degrades
-- phase drift accumulates
-- transitions become likely
-- reversibility weakens locally
-
-The JANUS_OPERATOR explores whether these regions can be characterized through a local forward/backward overlap structure.
-
-The goal is NOT to propose a new physical theory.
-
-The goal is to develop:
+The JANUS_OPERATOR framework investigates a simple but unusual question:
 
 ```text
-a structural diagnostic for transition geometry
-inside reconstructed dynamical fields
+What happens if we compare
+forward and backward local flow structure
+inside dynamical systems?
+```
+
+Instead of analyzing only:
+
+```text
+state evolution
+```
+
+the framework studies:
+
+```text
+directional compatibility
+inside reconstructed flow geometry
+```
+
+The emerging idea is that:
+
+```text
+transitions may correspond
+to local breakdowns
+of directional coherence.
 ```
 
 ---
 
-# 🔬 Core Concept
+# 🔥 Major Shift of the Framework
+
+The original JANUS experiments began as:
+
+```text
+coherence measurements
+inside dynamical systems
+```
+
+The newer experiments now increasingly suggest:
+
+```text
+JANUS may reveal
+transition geometry itself.
+```
+
+The focus has shifted from:
+
+- local coherence only
+- instability indicators only
+- asymmetry measurements only
+
+toward:
+
+```text
+the geometric organization
+through which transitions occur
+```
+
+inside nonlinear systems.
+
+---
+
+# 🧠 Central Working Question
+
+The current core question is:
+
+```text
+Do nonlinear systems transition
+through unconstrained chaos,
+or through structured geometric pathways?
+```
+
+The experimental series increasingly suggests:
+
+```text
+transition dynamics repeatedly reorganize
+through constrained directional geometry.
+```
+
+This remains exploratory,
+but computationally reproducible.
+
+---
+
+# 🗺️ Current Structural Picture
+
+The current experiments repeatedly reveal structures resembling:
+
+- transition corridors
+- shell layers
+- compressed spines
+- recursive apertures
+- breathing manifolds
+- gate-like bottlenecks
+- recursive phase partitions
+- directional transport channels
+
+The resulting geometry increasingly resembles:
+
+```text
+structured transport topology
+```
+
+rather than:
+
+```text
+fully random diffusion.
+```
+
+---
+
+# 🌊 JANUS Core Concept
 
 Given a reconstructed trajectory field:
 
 ```text
-φ(x, t)
+φ(x,t)
 ```
 
-we define:
+the framework constructs:
 
 ```text
-forward local flow
-backward local flow
-bidirectional overlap
+forward local structure
+backward local structure
+directional overlap geometry
 ```
 
-and investigate:
+The core JANUS observable is:
 
 ```text
-where local symmetry breaks
-where transition probability increases
-where structural drift accumulates
+local compatibility
+between forward and backward flow organization
 ```
 
 ---
 
-# 🪞 Janus Operator (Conceptual Form)
+# 🪞 Conceptual Janus Operator
 
 Forward field:
 
-```text
-F_forward(x)
+```math
+F_{\mathrm{forward}}(x)
 ```
 
 Backward field:
 
-```text
-F_backward(x)
+```math
+F_{\mathrm{backward}}(x)
 ```
 
-Bidirectional overlap:
+Directional overlap:
 
-```text
-J(x) = F_forward(x) ⊙ F_backward(x)
+```math
+\mathcal{J}(x)
+=
+F_{\mathrm{forward}}(x)
+\odot
+F_{\mathrm{backward}}(x)
 ```
 
-Normalized Janus intensity:
+Normalized coherence field:
+
+```math
+J(x)
+=
+\frac{
+\|
+\mathcal{J}(x)
+\|
+}{
+\|
+F_{\mathrm{forward}}(x)
+\|
+\cdot
+\|
+F_{\mathrm{backward}}(x)
+\|
++
+\varepsilon
+}
+```
+
+Interpretation:
 
 ```text
 high J(x)
-→ coherent bidirectional structure
+→ coherent directional organization
 
 low J(x)
-→ directional asymmetry / structural drift
+→ directional asymmetry / transition sensitivity
 ```
 
-Alternative interpretations are also explored:
+---
+
+# 🌌 Emerging Transition Geometry
+
+The newer experiments now reveal several recurring geometric motifs.
+
+These include:
+
+---
+
+## 🔷 Transition Corridors
+
+Observed structures resemble:
+
+- narrow transfer channels
+- directional bottlenecks
+- coherence thinning regions
+- structured transition routing
+
+---
+
+## 🔷 Shell Geometry
+
+The system repeatedly organizes into:
+
+- coherence shells
+- shell crossings
+- nested transport layers
+- shell-mediated transitions
+
+---
+
+## 🔷 Transition Spines
+
+Observed transfer behavior repeatedly exhibits:
 
 ```text
-localized reversibility
-transition coherence
-flow symmetry
-directional mismatch
+compression
+→ transfer
+→ re-expansion
+```
+
+The transition center behaves like:
+
+- a geometric throat
+- a transport spine
+- a constrained exchange manifold
+
+---
+
+## 🔷 Recursive Geometry
+
+Recursive experiments reveal:
+
+- self-similar transport organization
+- recursive shell layering
+- nested phase corridors
+- recursive breathing geometry
+
+---
+
+## 🔷 Phase Quadrants
+
+Recent experiments decompose flow into:
+
+| Quadrant | Interpretation |
+|---|---|
+| Q1 | Expansion |
+| Q2 | Compression |
+| Q3 | Memory / Echo |
+| Q4 | Transition / Gate |
+
+This introduces:
+
+```text
+recursive transition phase geometry
+```
+
+as an additional structural layer.
+
+---
+
+# 🔥 Key Current Observation
+
+One of the strongest emerging findings:
+
+```text
+transition preparation appears
+before visible geometric reconfiguration.
+```
+
+Observed repeatedly:
+
+```text
+directional coherence weakens first
+while the system may still appear locally stable.
+```
+
+This is extremely important conceptually.
+
+Because the framework studies NOT only:
+
+```text
+magnitude of instability
+```
+
+but increasingly:
+
+```text
+compatibility of directional organization.
 ```
 
 ---
 
 # 🌊 Relationship to NEXAH
 
-The JANUS_OPERATOR integrates naturally into the broader NEXAH framework:
+The JANUS_OPERATOR integrates into the broader NEXAH framework:
 
 ```text
 Dynamics
@@ -136,237 +326,207 @@ Dynamics
 → Transition Geometry
 → Phase Mismatch
 → Janus Coherence
+→ Transition Routing
 → Navigation Structure
 ```
 
-Within NEXAH terminology:
+Within this interpretation:
 
-- transition gates may correspond to Janus asymmetry regions
-- mismatch may correlate with local coherence breakdown
-- navigation may depend on directional field consistency
-
----
-
-# 🧪 Current Research Questions
-
-This module currently investigates:
-
-```text
-Do transition regions exhibit measurable
-forward/backward asymmetry?
-```
-
-```text
-Can Janus peaks predict transition gates?
-```
-
-```text
-Does phase mismatch correlate
-with Janus coherence collapse?
-```
-
-```text
-Are Janus structures persistent
-across multiple dynamical systems?
-```
+- shell crossings behave like preparation layers
+- transition spines behave like routing corridors
+- recursive gates behave like directional apertures
+- coherence collapse behaves like transition activation
 
 ---
 
-# 🔬 Planned Experiments
+# 🧪 Current Experimental Series
+
+The JANUS experimental series currently includes:
+
+| Experiment | Focus |
+|---|---|
+| EXP-1 | Lorenz coherence field |
+| EXP-2 | JANUS vs FTLE |
+| EXP-3 | switching prediction |
+| EXP-4 | curvature coupling |
+| EXP-5 | temporal lead/lag |
+| EXP-6 | multi-scale analysis |
+| EXP-7 | frequency decomposition |
+| EXP-8 | phase synchronization |
+| EXP-9 | noise robustness |
+| EXP-10 | recurrence geometry |
+| EXP-11 | basin transfer prediction |
+| EXP-12 | local flow entropy |
+| EXP-13 | shell crossing geometry |
+| EXP-14 | transition spine geometry |
+| EXP-15 | transition orientation atlas |
+| EXP-16 | parameter stability scan |
+| EXP-17 | axis geometry & breathing modes |
+| EXP-18 | universal orientation manifold |
+| EXP-19 | recursive orientation geometry |
+| EXP-20 | recursive phase quadrants |
 
 ---
 
-## 1. Lorenz Janus Field
+# 📂 Key Documentation
 
-Goal:
+The module now includes several foundational documents:
+
+| File | Purpose |
+|---|---|
+| `README.md` | module overview |
+| `JANUS_OPERATOR_FOUNDATIONS.md` | semi-formal operator foundations |
+| `janus_geometry.md` | directional geometry interpretation |
+| `janus_vs_transition_gates.md` | transition-gate framework |
+| `FINDINGS.md` | distilled experimental findings |
+| `BUILDING_LOG_01.md` | chronological experimental record |
+
+---
+
+# 🗺️ Visual Geometry Layer
+
+The module now includes several visual geometry systems:
+
+- transition atlases
+- orientation manifolds
+- recursive phase maps
+- shell-density geometry
+- coherence overlays
+- breathing manifolds
+- transition spines
+- recursive gate structures
+
+The resulting visual structures repeatedly resemble:
 
 ```text
-visualize local Janus intensity
-across Lorenz transition structure
-```
-
-Investigates:
-
-- gate regions
-- instability corridors
-- local reversibility
-- transition concentration
-
-Output examples:
-
-```text
-3D Janus heatmaps
-transition overlays
-trajectory-colored coherence fields
+transport topology
+inside nonlinear flow geometry.
 ```
 
 ---
 
-## 2. Kuramoto Janus Synchronization
+# 🌌 Relation to Existing Theory
 
-Goal:
+The framework is conceptually related to:
+
+- Koopman operator theory
+- Perron–Frobenius operators
+- coherent set analysis
+- transition path theory
+- FTLE structure
+- dynamical transport geometry
+
+However, JANUS differs by emphasizing:
 
 ```text
-test Janus behavior
-inside synchronization transitions
+local directional compatibility geometry
 ```
 
-Investigates:
+rather than only:
 
-- phase locking
-- drift accumulation
-- synchronization collapse
-- coherence asymmetry
+- global operator structure
+- spectral decomposition
+- local divergence magnitude
 
 ---
 
-## 3. Cross-System Validation
+# 🔥 Current Working Insight
 
-Future systems:
-
-- Rössler
-- Duffing
-- Halvorsen
-- fractal parameter systems
-
-Goal:
+The strongest current interpretation is:
 
 ```text
-determine whether Janus structure
-is system-specific or persistent
+nonlinear systems do not appear
+to transition through fully random geometric diffusion.
+
+Instead they repeatedly reorganize through:
+
+- directional coherence structure
+- shell-mediated transport
+- recursive phase geometry
+- compressed transition corridors
+- and localized gate-like manifolds.
 ```
 
 ---
 
 # ⚠️ Important Clarification
 
-This module is exploratory.
-
-It is NOT:
+The JANUS framework currently is:
 
 ```text
-❌ a new physical theory
-❌ a claim about quantum mechanics
-❌ a cosmological model
-❌ a finalized mathematical formalism
+✔ exploratory
+✔ computational
+✔ geometrically interpretable
+✔ experimentally testable
+✔ cross-system analyzable
 ```
 
-The module currently focuses on:
+It is NOT currently:
 
 ```text
-✔ dynamical systems
-✔ local field structure
-✔ transition geometry
-✔ directional coherence
-✔ computational diagnostics
+❌ a finalized mathematical theory
+❌ a new physical law
+❌ a quantum framework
+❌ a proof of hidden order
+❌ a replacement for classical dynamics
 ```
 
----
-
-# 🌌 Conceptual Inspirations
-
-The name "Janus" references:
+The framework should currently be understood as:
 
 ```text
-two-directional structure
-forward/backward observation
-dual-faced geometry
+an exploratory geometry layer
+for studying transition organization
+inside reconstructed dynamical systems.
 ```
-
-Potential conceptual bridges are explored cautiously with:
-
-- reversibility analysis
-- time-symmetric systems
-- transport geometry
-- flow topology
-- transition-field structure
-
-These comparisons are heuristic only.
-
----
-
-# 📂 Module Structure
-
-```text
-JANUS_OPERATOR/
-├── README.md
-├── janus_definition.md
-├── janus_geometry.md
-├── janus_vs_transition_gates.md
-├── janus_lorenz_experiment.py
-├── janus_kuramoto_experiment.py
-├── visualizations/
-├── outputs/
-└── notes/
-```
-
----
-
-# 📊 Expected Outputs
-
-The module aims to generate:
-
-- Janus field heatmaps
-- bidirectional coherence maps
-- transition overlays
-- asymmetry scans
-- trajectory-color visualizations
-- cross-system comparisons
-
----
-
-# 🧠 Working Hypothesis
-
-A possible emerging interpretation:
-
-```text
-Transition regions may correspond
-to localized breakdowns of
-forward/backward flow coherence.
-```
-
-This hypothesis remains experimental.
 
 ---
 
 # 🧭 Current Status
 
 ```text
-mathematical formulation:
-early-stage
+formalization:
+semi-formal exploratory stage
 
-computational experiments:
+transition geometry:
+active development
+
+recursive geometry:
 starting
 
 cross-system validation:
-not yet complete
+ongoing
+
+navigation integration:
+partial
+
+visualization framework:
+advanced exploratory phase
 
 theoretical interpretation:
-exploratory
+open
 ```
 
 ---
 
-# 🔬 Philosophy
+# 🌌 Philosophy
 
-The JANUS_OPERATOR is intended as:
+The purpose of JANUS is NOT to eliminate chaos.
 
-```text
-a structural lens
-for observing directional organization
-inside dynamical systems
-```
-
-The focus is not on proving metaphysical claims.
-
-The focus is:
+The purpose is to investigate whether:
 
 ```text
-geometry
-coherence
-transitions
-flow structure
+chaotic systems may still contain
+structured transition geometry
 ```
+
+that becomes visible through:
+
+- directional coherence
+- recursive transport structure
+- shell-mediated organization
+- geometric transition routing
+
+inside reconstructed dynamical fields.
 
 ---
 
