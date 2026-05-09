@@ -347,13 +347,7 @@ Gate regions emerge where:
 
 ## Gate Operator
 
-$$
-G(s)
-=
-(1-\hat{\rho})
-(1-\hat{C})
-(1-\hat{R})
-$$
+$$G(s) = (1-\hat{\rho})(1-\hat{C})(1-\hat{R})$$
 
 ---
 
@@ -372,15 +366,7 @@ Gates are structural weak points.
 Transition probability increases
 with accumulated structural tension:
 
-$$
-T(s)
-=
-w_1 A(s)
-+
-w_2 D(s)
-+
-w_3 G(s)
-$$
+$$T(s) = w_1 A(s) + w_2 D(s) + w_3 G(s)$$
 
 ---
 
@@ -420,11 +406,7 @@ Greyspace enables structural reconfiguration.
 
 Transitions correlate more strongly with mismatch:
 
-$$
-M(t)
-=
-|\omega(t)-\hat{\omega}(t)|
-$$
+$$M(t) = |\omega(t)-\hat{\omega}(t)|$$
 
 than with instability magnitude alone.
 
@@ -470,15 +452,7 @@ Structural change reflects transition activation.
 
 Flow decomposes into directional components:
 
-$$
-F
-=
-F^{+}
-\cup
-F^{0}
-\cup
-F^{-}
-$$
+$$F = F^{+} \cup F^{0} \cup F^{-}$$
 
 ---
 
@@ -496,13 +470,7 @@ Transitions occur at directional interfaces.
 
 ## Definition
 
-$$
-J(s)
-=
-F_{\text{forward}}(s)
-+
-F_{\text{backward}}(s)
-$$
+$$J(s) = F_{\mathrm{forward}}(s) + F_{\mathrm{backward}}(s)$$
 
 ---
 
@@ -572,13 +540,7 @@ over purely minimal risk.
 
 System motion is field navigation:
 
-$$
-\dot{s}
-=
-F(s)
-+
-u(s)
-$$
+$$\dot{s} = F(s) + u(s)$$
 
 ---
 
@@ -633,17 +595,7 @@ depending on phase structure.
 
 Effective navigation combines:
 
-$$
-u(s)
-=
--\nabla P(\text{IOTA})
-+
-\nabla \rho
-+
-u_{\pi}
-+
-u_{\text{gate}}
-$$
+$$u(s) = -\nabla P(\mathrm{IOTA}) + \nabla \rho + u_{\pi} + u_{\mathrm{gate}}$$
 
 ---
 
