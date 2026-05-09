@@ -1378,3 +1378,142 @@ phase synchronization,
 multi-scale structure,
 and attractor recurrence networks.
 ```
+
+# 🔷 EXP-11 — Basin Transfer Prediction
+
+Script:
+`scripts/janus_basin_transfer_prediction.py`
+
+Outputs:
+
+- `outputs/janus_basin_transfer_overlay.png`
+- `outputs/janus_basin_transfer_density.png`
+- `outputs/janus_basin_transfer_timeseries.png`
+- `outputs/janus_basin_transfer_phase.png`
+
+---
+
+## Basin Transfer Overlay
+
+![Basin Transfer Overlay](outputs/janus_basin_transfer_overlay.png)
+
+---
+
+## Basin Transfer Density
+
+![Basin Transfer Density](outputs/janus_basin_transfer_density.png)
+
+---
+
+## Basin Transfer Timeseries
+
+![Basin Transfer Timeseries](outputs/janus_basin_transfer_timeseries.png)
+
+---
+
+## Basin Transfer Phase Structure
+
+![Basin Transfer Phase Structure](outputs/janus_basin_transfer_phase.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 10498
+switch events: 36
+
+mean transfer coherence:
+0.777478
+
+minimum transfer coherence:
+0.665113
+
+maximum transfer coherence:
+0.955109
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+Basin transfer events are not randomly distributed.
+
+They concentrate along a narrow central transition corridor.
+```
+
+---
+
+## Observation
+
+The basin-transfer overlay shows:
+
+- a central vertical switching axis
+- red transfer events concentrated near the inter-lobe corridor
+- structured X-like geometry around the switching region
+- coherence compression near the transfer zone
+
+The transfer events appear near the middle throat between the two Lorenz lobes.
+
+---
+
+## Phase Structure
+
+The phase plot reveals:
+
+- nested coherence loops
+- inner and outer orbital families
+- stretched transition ellipses
+- inside-out switching geometry
+
+This suggests that transfer is not a single jump event,
+but part of a structured coherence-cycle deformation.
+
+---
+
+## Timeseries Structure
+
+The averaged transfer profile shows:
+
+```text
+approach → coherence deformation → transfer → re-locking
+```
+
+The black mean curve behaves like a deformed transfer manifold rather than a flat statistical average.
+
+---
+
+## Structural Interpretation
+
+The system appears to switch through:
+
+- a narrow central corridor
+- discrete flip zones
+- coherence compression regions
+- phase-space loop transitions
+
+This supports the working interpretation:
+
+```text
+JANUS basin transfer is guided by structured coherence geometry.
+```
+
+---
+
+## Relation to Previous Experiments
+
+EXP-11 strengthens earlier findings:
+
+- EXP-3 showed switching clusters
+- EXP-5 showed temporal lead/lag structure
+- EXP-10 showed recurrence memory
+- EXP-11 now localizes transfer events geometrically
+
+Together these suggest:
+
+```text
+transitions are organized by recurring coherence corridors,
+not by random basin crossing.
+```
+
