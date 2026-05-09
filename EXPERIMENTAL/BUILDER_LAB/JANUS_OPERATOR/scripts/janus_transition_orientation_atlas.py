@@ -126,10 +126,10 @@ SYSTEMS = [
 # ------------------------------------------------------------
 # Core computation
 # ------------------------------------------------------------
-
 def simulate_system(cfg: SystemConfig) -> Tuple[Array, Array]:
     n_steps = int(cfg.t_max / cfg.dt)
     t_eval = np.linspace(0.0, cfg.t_max, n_steps + 1)
+
     sol = solve_ivp(
         fun=cfg.rhs,
         t_span=(0.0, cfg.t_max),
@@ -148,7 +148,6 @@ def simulate_system(cfg: SystemConfig) -> Tuple[Array, Array]:
 
     start = int(len(t) * cfg.transient_fraction)
     return t[start:], states[start:]
-
 
 def compute_janus(t: Array, states: Array, eps: float = 1.0e-8) -> Tuple[Array, Array]:
     dt_f = (t[2:] - t[1:-1])[:, None]
