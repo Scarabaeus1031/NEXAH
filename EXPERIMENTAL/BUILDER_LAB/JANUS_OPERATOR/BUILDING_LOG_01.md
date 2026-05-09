@@ -1517,3 +1517,648 @@ transitions are organized by recurring coherence corridors,
 not by random basin crossing.
 ```
 
+# 🔷 EXP-12 — Local Flow Entropy Analysis
+
+Script:
+`scripts/janus_local_flow_entropy.py`
+
+Outputs:
+
+- `outputs/janus_local_flow_entropy_map.png`
+- `outputs/janus_entropy_scatter.png`
+- `outputs/janus_entropy_timeseries.png`
+- `outputs/janus_entropy_joint_density.png`
+
+---
+
+## Local Flow Entropy Map
+
+![Local Flow Entropy Map](outputs/janus_local_flow_entropy_map.png)
+
+---
+
+## JANUS vs Local Entropy
+
+![JANUS vs Local Entropy](outputs/janus_entropy_scatter.png)
+
+---
+
+## JANUS and Entropy Timeseries
+
+![JANUS and Entropy Timeseries](outputs/janus_entropy_timeseries.png)
+
+---
+
+## JANUS–Entropy Joint Density
+
+![JANUS–Entropy Joint Density](outputs/janus_entropy_joint_density.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 10498
+valid entropy cells: 191
+
+mean JANUS:
+0.771001
+
+mean entropy:
+0.100948
+
+correlation JANUS vs entropy:
+0.420090
+
+low-JANUS / high-entropy overlap fraction:
+0.000000
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS coherence and local flow entropy
+are positively structured,
+but not equivalent.
+```
+
+---
+
+## Observation
+
+The entropy map reveals:
+
+- localized entropy excitation regions
+- narrow directional entropy corridors
+- sparse entropy branching
+- strong concentration near the transition spine
+
+Importantly:
+
+```text
+high entropy does NOT spread uniformly
+through phase space.
+```
+
+Instead:
+
+- entropy concentrates along directional transition paths
+- the central corridor behaves like an excitation spine
+- peripheral regions remain comparatively stable
+
+---
+
+## Scatter Structure
+
+The entropy scatter reveals:
+
+- structured vertical clustering
+- multiple coherence families
+- discrete entropy bands
+
+Most importantly:
+
+```text
+entropy does not rise continuously.
+```
+
+Instead:
+
+- preferred excitation levels emerge
+- coherence states appear quantized into regimes
+- several regions remain entropy-silent
+
+The large horizontal zero-band is especially significant.
+
+It indicates:
+
+```text
+many coherence states exhibit
+nearly zero local directional entropy.
+```
+
+This strongly suggests:
+
+- stable flow-locking
+- persistent directional routing
+- coherence-preserving transport
+
+rather than unrestricted chaotic diffusion.
+
+---
+
+## Timeseries Observation
+
+The entropy timeseries shows:
+
+- narrow excitation spikes
+- highly localized activation windows
+- strong intermittency
+
+The JANUS coherence field itself remains comparatively smooth.
+
+This indicates:
+
+```text
+entropy appears as punctuated excitation,
+not as continuous disorder.
+```
+
+---
+
+## Joint Density Structure
+
+The joint density map reveals:
+
+- several sparse excitation islands
+- wide low-entropy occupancy regions
+- structured coherence–entropy layering
+
+Two large low-density gaps appear between major excitation bands.
+
+This is highly important.
+
+Why?
+
+Because random turbulence would tend toward:
+
+- continuous occupancy
+- smooth diffusion
+- dense filling behavior
+
+Instead:
+
+```text
+the system leaves persistent forbidden regions.
+```
+
+This suggests:
+
+- coherence barriers
+- preferred transport corridors
+- regime-separated excitation geometry
+
+---
+
+## Structural Interpretation
+
+The experiment strongly suggests:
+
+```text
+JANUS coherence organizes
+where entropy may localize.
+```
+
+Notably:
+
+- entropy spikes align with narrow transition corridors
+- coherence remains globally ordered
+- local excitation occurs without total geometric collapse
+
+This behavior resembles:
+
+- controlled excitation transport
+- structured instability routing
+- localized phase injection
+
+rather than fully chaotic breakdown.
+
+---
+
+## Relation to Previous Experiments
+
+EXP-12 extends earlier findings substantially:
+
+- EXP-4 showed curvature anti-correlation
+- EXP-5 showed temporal ordering
+- EXP-10 showed recurrence geometry
+- EXP-11 localized transfer corridors
+- EXP-12 now identifies localized entropy routing
+
+Together these imply:
+
+```text
+transition dynamics are geometrically organized,
+while entropy appears only along constrained transport channels.
+```
+
+---
+
+# 🔷 EXP-13 — Shell Crossing Geometry
+
+Script:
+`scripts/janus_shell_crossing.py`
+
+Outputs:
+
+- `outputs/janus_shell_crossing_overlay.png`
+- `outputs/janus_shell_crossing_phase.png`
+- `outputs/janus_shell_crossing_timeseries.png`
+- `outputs/janus_shell_crossing_density.png`
+
+---
+
+## Shell Crossing Overlay
+
+![Shell Crossing Overlay](outputs/janus_shell_crossing_overlay.png)
+
+---
+
+## Shell Crossing Phase Map
+
+![Shell Crossing Phase Map](outputs/janus_shell_crossing_phase.png)
+
+---
+
+## Shell Crossing Timeseries
+
+![Shell Crossing Timeseries](outputs/janus_shell_crossing_timeseries.png)
+
+---
+
+## Shell Occupation vs Crossing Density
+
+![Shell Occupation vs Crossing Density](outputs/janus_shell_crossing_density.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 10498
+
+shell crossings:
+2850
+
+strong shell crossings:
+285
+
+basin transfers:
+43
+
+transfer near any shell crossing:
+1.000000
+
+transfer near strong shell crossing:
+0.581395
+```
+
+---
+
+## Shell Edges
+
+```text
+edge 0: 0.620704
+edge 1: 0.681231
+edge 2: 0.740513
+edge 3: 0.790938
+edge 4: 0.846033
+edge 5: 0.998006
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+All basin-transfer events occur near JANUS shell crossings.
+```
+
+---
+
+## Observation
+
+The shell-crossing overlay reveals:
+
+- layered coherence shells
+- structured shell-transition corridors
+- strong crossing clusters
+- transfer localization near shell boundaries
+
+The strongest shell crossings appear concentrated:
+
+- near inter-lobe switching regions
+- near outer orbital compression zones
+- near coherence gradient boundaries
+
+---
+
+## Phase Structure
+
+The phase map reveals:
+
+- distinct shell families
+- nested orbital layers
+- stretched diagonal coherence bands
+- discrete crossing manifolds
+
+The shell crossings do NOT occur randomly.
+
+Instead:
+
+```text
+crossings align along preferred
+phase-space transport corridors.
+```
+
+---
+
+## Timeseries Structure
+
+The shell timeseries shows:
+
+- repeated shell oscillation cycles
+- coherence-layer traversal
+- clustered crossing bursts
+
+Importantly:
+
+```text
+transfer events appear only
+after specific shell sequences occur.
+```
+
+This suggests:
+
+- shell traversal order matters
+- coherence-layer progression is structured
+- transitions require geometric preparation
+
+---
+
+## Structural Interpretation
+
+The experiment strongly suggests:
+
+```text
+JANUS coherence organizes into
+discrete shell layers.
+```
+
+Basin transfers then occur through:
+
+- shell-boundary crossings
+- coherence-threshold traversal
+- structured transition corridors
+
+Most importantly:
+
+```text
+basin transfer is not free motion.
+
+It is shell-mediated.
+```
+
+---
+
+## Density Observation
+
+The occupation histogram reveals:
+
+- nearly uniform shell occupancy
+- non-uniform crossing density
+
+This is extremely important.
+
+Why?
+
+Because the shells themselves were constructed evenly.
+
+Yet:
+
+```text
+crossings preferentially accumulate
+inside specific shell regions.
+```
+
+This indicates:
+
+- preferred transition shells
+- structured transport bands
+- non-random coherence routing
+
+---
+
+# 🔷 EXP-14 — Transition Spine Geometry
+
+Script:
+`scripts/janus_transition_spine.py`
+
+Outputs:
+
+- `outputs/janus_transition_spine_overlay.png`
+- `outputs/janus_transition_spine_phase.png`
+- `outputs/janus_transition_spine_timeseries.png`
+- `outputs/janus_transition_spine_density.png`
+
+---
+
+## Transition Spine Overlay
+
+![Transition Spine Overlay](outputs/janus_transition_spine_overlay.png)
+
+---
+
+## Transition Spine Phase Structure
+
+![Transition Spine Phase Structure](outputs/janus_transition_spine_phase.png)
+
+---
+
+## Transition Spine Timeseries
+
+![Transition Spine Timeseries](outputs/janus_transition_spine_timeseries.png)
+
+---
+
+## Transition Spine Spread
+
+![Transition Spine Spread](outputs/janus_transition_spine_density.png)
+
+---
+
+## Numerical Results
+
+```text
+samples: 11998
+
+transfer events:
+50
+
+mean JANUS coherence:
+0.778020
+
+min JANUS coherence:
+0.680447
+
+max JANUS coherence:
+0.949914
+
+max radial spread:
+8.002376
+
+min radial spread:
+0.877562
+
+peak transition velocity index:
+-20
+
+peak transition velocity:
+1.556460
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+Basin transfer follows a compressed
+transition spine through phase space.
+```
+
+---
+
+## Observation
+
+The transition-spine overlay reveals:
+
+- a dominant geometric transfer corridor
+- asymmetrical lobe organization
+- coherence compression near the crossing center
+- structured transfer curvature
+
+The spine behaves like:
+
+```text
+a preferred transport manifold
+between the two Lorenz basins.
+```
+
+---
+
+## Spine Geometry
+
+The transition spine forms:
+
+- two asymmetrical orbital families
+- a compressed central throat
+- stretched outer transition arcs
+
+The resulting structure resembles:
+
+- inside-out orbital inversion
+- lobe exchange geometry
+- coherence-guided transfer routing
+
+Importantly:
+
+```text
+the transition does not diffuse broadly.
+```
+
+Instead:
+
+- trajectories compress toward a narrow corridor
+- crossing occurs through a highly organized center
+- transfer then re-expands into the opposite lobe
+
+---
+
+## Phase Structure
+
+The phase structure reveals:
+
+- highly ordered transition alignment
+- near-diagonal coherence transport
+- strong local continuity
+
+The highlighted maximal transition velocity region appears near:
+
+```text
+relative lag ≈ -20
+```
+
+This is highly significant.
+
+It indicates:
+
+```text
+strong geometric reorganization occurs
+BEFORE the visible crossing center.
+```
+
+---
+
+## Spread Dynamics
+
+The radial spread profile shows:
+
+- pre-transfer decompression
+- central compression
+- post-transfer re-expansion
+
+Most importantly:
+
+```text
+the actual crossing center
+is one of the most geometrically compressed regions.
+```
+
+This strongly suggests:
+
+- transfer coherence locking
+- constrained transition routing
+- organized geometric exchange
+
+rather than maximal local chaos.
+
+---
+
+## Structural Interpretation
+
+The experiment suggests:
+
+```text
+Basin transfer occurs through
+a dynamically compressed transition spine.
+```
+
+The transfer process appears to involve:
+
+1. shell traversal
+2. coherence compression
+3. spine alignment
+4. lobe exchange
+5. geometric re-expansion
+
+---
+
+## Relation to Previous Experiments
+
+EXP-14 integrates several earlier observations:
+
+- EXP-5 showed temporal lead/lag ordering
+- EXP-10 showed recurrence geometry
+- EXP-11 localized transfer corridors
+- EXP-13 identified shell-mediated switching
+
+EXP-14 now reveals:
+
+```text
+the geometric backbone
+through which the transfer itself occurs.
+```
+
+---
+
+# 🔥 Updated Working Insight
+
+```text
+The JANUS system does not transition
+through random basin escape.
+
+It reorganizes through shell-mediated,
+spine-compressed coherence transport.
+```
