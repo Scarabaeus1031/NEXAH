@@ -10,6 +10,7 @@ It serves as:
 - the structural alphabet of NEXAH  
 - the bridge between concepts and equations  
 - the shared notation layer across modules  
+- the semantic interface between dynamics, structure, and navigation  
 
 ---
 
@@ -31,6 +32,54 @@ currently used to describe these relationships.
 
 ---
 
+# 🧭 Structural Grammar Overview
+
+![NEXAH Structural Grammar](./visuals/NEXAH_STRUCTURAL_GRAMMAR_MAP.png)
+
+---
+
+## Interpretation
+
+The structural grammar map visualizes how:
+
+```text
+dynamics
+→ structure
+→ coherence
+→ transitions
+→ navigation
+```
+
+emerge as interconnected layers.
+
+It acts as the current operational atlas of the NEXAH variable system.
+
+---
+
+# 🌌 System Atlas
+
+![NEXAH System Atlas](./visuals/NEXAH_SYSTEM_ATLAS.png)
+
+---
+
+## Interpretation
+
+The atlas connects:
+
+- flow fields  
+- density structures  
+- gates  
+- transition manifolds  
+- navigation paths  
+- control mechanisms  
+
+into a unified operational geometry.
+
+It represents the current large-scale structural overview
+of the NEXAH framework.
+
+---
+
 # 🧩 Core Variables
 
 | Variable | Meaning | Role |
@@ -40,8 +89,11 @@ currently used to describe these relationships.
 | $F(x)$ | flow field | intrinsic system dynamics |
 | $A(x)$ | acceleration / change dynamics | variation of motion |
 | $\rho(x)$ | density field | occupancy / structural persistence |
+| $\nabla \rho(x)$ | density gradient | structural drift direction |
 | $C(x)$ | coherence | alignment with local flow |
+| $R(x)$ | residence structure | local persistence behavior |
 | $G(x)$ | gate score | transition susceptibility |
+| $T(x)$ | transition tension | transition activation field |
 | $J(x)$ | Janus field | coupled directional structure |
 | $M(t)$ | mismatch | deviation from expected evolution |
 | $I(t)$ | instability magnitude | local dynamical intensity |
@@ -182,7 +234,52 @@ Low density:
 
 ---
 
-# 🔷 6. Coherence
+# 🔷 6. Structural Gradient
+
+## Definition
+
+$$
+\nabla \rho(x)
+=
+\left(
+\frac{\partial \rho}{\partial x_1},
+\dots,
+\frac{\partial \rho}{\partial x_n}
+\right)
+$$
+
+---
+
+## Interpretation
+
+```text
+∇ρ(x) defines the local structural drift direction.
+```
+
+It represents:
+
+- directional pull between structures  
+- density flow  
+- regime drift  
+- transition corridors  
+
+---
+
+## Operational Meaning
+
+```text
+Systems tend to drift along structural gradients.
+```
+
+The gradient field acts as:
+
+- a navigation bias  
+- a transition indicator  
+- a structural flow layer  
+
+---
+
+# 🔷 7. Coherence
 
 ## Definition
 
@@ -211,7 +308,39 @@ Meaning:
 
 ---
 
-# 🔷 7. Gate Score
+# 🔷 8. Residence Structure
+
+## Definition
+
+$$
+R(x)
+=
+\text{local persistence measure}
+$$
+
+---
+
+## Interpretation
+
+```text
+R(x) estimates how strongly trajectories remain locally bound.
+```
+
+High residence:
+
+- stable basin behavior  
+- persistent occupancy  
+- local structural retention  
+
+Low residence:
+
+- rapid drift  
+- transition tendency  
+- weak local attachment  
+
+---
+
+# 🔷 9. Gate Score
 
 ## Definition
 
@@ -235,6 +364,7 @@ High $G(x)$ indicates:
 
 - low density  
 - low coherence  
+- weak residence structure  
 - structural breakdown  
 
 ---
@@ -249,7 +379,45 @@ It represents structural weakness.
 
 ---
 
-# 🔷 8. Janus Field
+# 🔷 10. Transition Tension
+
+## Definition
+
+$$
+T(x)
+=
+w_1 A(x)
++
+w_2 D(x)
++
+w_3 G(x)
+$$
+
+---
+
+## Interpretation
+
+```text
+T(x) represents accumulated transition pressure.
+```
+
+It combines:
+
+- dynamical change  
+- structural drift  
+- gate susceptibility  
+
+---
+
+## Operational Meaning
+
+```text
+Transitions emerge when structural tension accumulates.
+```
+
+---
+
+# 🔷 11. Janus Field
 
 ## Definition
 
@@ -287,7 +455,7 @@ exploratory / partially formalized
 
 ---
 
-# 🔷 9. Phase
+# 🔷 12. Phase
 
 ## Definition
 
@@ -307,7 +475,7 @@ Phase measures rotational progression through system structure.
 
 ---
 
-# 🔷 10. Phase Velocity
+# 🔷 13. Phase Velocity
 
 ## Definition
 
@@ -327,7 +495,7 @@ $$
 
 ---
 
-# 🔷 11. Expected Phase Velocity
+# 🔷 14. Expected Phase Velocity
 
 ## Definition
 
@@ -347,7 +515,7 @@ $$
 
 ---
 
-# 🔷 12. Mismatch
+# 🔷 15. Mismatch
 
 ## Definition
 
@@ -376,7 +544,7 @@ Mismatch measures deviation from locally consistent evolution.
 
 ---
 
-# 🔷 13. Instability Magnitude
+# 🔷 16. Instability Magnitude
 
 ## Definition
 
@@ -397,7 +565,7 @@ not transition activation itself.
 
 ---
 
-# 🔷 14. Structural Change
+# 🔷 17. Structural Change
 
 ## Definition
 
@@ -418,7 +586,7 @@ for transition activity.
 
 ---
 
-# 🔷 15. Control Signal
+# 🔷 18. Control Signal
 
 ## Definition
 
@@ -444,14 +612,14 @@ NEXAH control is:
 
 ---
 
-# 🔷 16. Transition Probability
+# 🔷 19. Transition Probability
 
 ## Definition
 
 $$
 P(\text{IOTA})
 =
-f(M(t), G(x), \Delta(t))
+f(M(t), G(x), \Delta(t), T(x))
 $$
 
 ---
@@ -474,11 +642,14 @@ x
 → motion
 → flow
 → density
+→ structural gradients
 → coherence
 → mismatch
 → gates
+→ transition tension
 → transitions
 → control
+→ navigation
 ```
 
 ---
@@ -488,14 +659,30 @@ x
 ## Geometry Layer
 
 ```text
-x, F(x), ρ(x), C(x), G(x)
+x, F(x), ρ(x), ∇ρ(x), C(x), R(x), G(x)
 ```
 
 Defines:
 
 - structure  
 - flow  
+- persistence  
 - transition regions  
+
+---
+
+## Transition Layer
+
+```text
+A(x), T(x), Δ(t), M(t)
+```
+
+Defines:
+
+- drift buildup  
+- transition pressure  
+- mismatch accumulation  
+- regime activation  
 
 ---
 
@@ -523,6 +710,7 @@ Defines:
 
 - directional intervention  
 - coupled navigation structure  
+- admissible navigation  
 
 ---
 
@@ -564,10 +752,26 @@ describing how systems move through structured dynamics.
 
 ---
 
+# 🔬 Current Direction
+
+The current NEXAH foundation suggests:
+
+```text
+Dynamics generate structure.
+
+Structure generates constraints.
+
+Constraints generate transitions.
+
+Transitions generate navigable geometry.
+```
+
+---
+
 **NEXAH — Core Variable Map**  
 Thomas K. R. Hofmann · 2026
 
-
+---
 
 # Status
 
