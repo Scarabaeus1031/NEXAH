@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
-```
-JANUS_OPERATOR / Experiment 15
-Cross-System Generalization
+#JANUS_OPERATOR / Experiment 15
+#Cross-System Generalization
+#
+#Test whether JANUS coherence extracts comparable structural signatures
+#across different nonlinear dynamical systems:
 
-Test whether JANUS coherence extracts comparable structural signatures
-across different nonlinear dynamical systems:
+#    Lorenz      -> switching-dominated
+#    Rossler     -> spiral / transport-dominated
+#    Halvorsen   -> fragmented / distributed
 
-    Lorenz      -> switching-dominated
-    Rossler     -> spiral / transport-dominated
-    Halvorsen   -> fragmented / distributed
+#Outputs:
+ #   outputs/janus_cross_system_overview.png
+ #   outputs/janus_cross_system_metrics.png
+#    outputs/janus_cross_system_summary.txt
 
-Outputs:
-    outputs/janus_cross_system_overview.png
-    outputs/janus_cross_system_metrics.png
-    outputs/janus_cross_system_summary.txt
-```
 
 from __future__ import annotations
 
