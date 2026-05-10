@@ -120,25 +120,25 @@ Outputs:
 
 ## Aperture Score Timeseries
 
-![Aperture Score Timeseries](outputs/janus_aperture_score_timeseries.png)
+![Aperture Score Timeseries](./outputs/janus_aperture_score_timeseries.png)
 
 ---
 
 ## Aperture Geometry Overlay
 
-![Aperture Geometry Overlay](outputs/janus_aperture_geometry_overlay.png)
+![Aperture Geometry Overlay](./outputs/janus_aperture_geometry_overlay.png)
 
 ---
 
 ## Phase Quadrant Map
 
-![Phase Quadrant Map EXP-21](outputs/janus_phase_quadrant_map_exp21.png)
+![Phase Quadrant Map EXP-21](./outputs/janus_phase_quadrant_map_exp21.png)
 
 ---
 
 ## Aperture Density
 
-![Aperture Density](outputs/janus_aperture_density.png)
+![Aperture Density](./outputs/janus_aperture_density.png)
 
 ---
 
