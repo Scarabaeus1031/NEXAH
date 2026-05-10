@@ -408,10 +408,7 @@ beyond intrinsic system dynamics.
 
 Observed:
 
-$$
-P(\text{transition})
-=
-f(\Delta, C)
+$$P(\text{transition}) = f(\Delta, C)
 $$
 
 where:
