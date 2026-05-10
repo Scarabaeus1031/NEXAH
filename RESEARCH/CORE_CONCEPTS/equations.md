@@ -70,9 +70,7 @@ trajectory
 We consider a continuous dynamical system:
 
 $$
-\dot{x}(t)
-=
-F(x(t)),
+\dot{x}(t) = F(x(t)),
 \qquad
 x(t) \in \mathbb{R}^n
 $$
@@ -90,9 +88,7 @@ $$
 Phase is defined through projection onto a local 2D subspace:
 
 $$
-\phi(t)
-=
-\arctan2\bigl(x_2(t),x_1(t)\bigr)
+\phi(t) = \arctan2(x_2(t), x_1(t))
 $$
 
 Interpretation:
@@ -110,9 +106,7 @@ capturing local cyclical structure.
 Temporal phase evolution:
 
 $$
-\omega(t)
-=
-\frac{d\phi(t)}{dt}
+\omega(t) = \frac{d\phi(t)}{dt}
 $$
 
 Discrete approximation:
@@ -120,11 +114,7 @@ Discrete approximation:
 $$
 \omega(t)
 \approx
-\frac{
-\phi(t+\Delta t)-\phi(t)
-}{
-\Delta t
-}
+\frac{\phi(t+\Delta t)-\phi(t)}{\Delta t}
 $$
 
 ---
@@ -134,9 +124,7 @@ $$
 Define local expected phase behavior:
 
 $$
-\hat{\omega}(t)
-=
-\mathcal{E}[\omega](t)
+\hat{\omega}(t) = \mathcal{E}[\omega](t)
 $$
 
 where:
@@ -159,11 +147,7 @@ locally coherent expected phase evolution
 Core NEXAH quantity:
 
 $$
-M(t)
-=
-\left|
-\omega(t)-\hat{\omega}(t)
-\right|
+M(t) = |\omega(t)-\hat{\omega}(t)|
 $$
 
 Interpretation:
@@ -207,11 +191,7 @@ phase mismatch
 Local dynamical magnitude:
 
 $$
-I(t)
-=
-\left\|
-\dot{x}(t)
-\right\|
+I(t) = \|\dot{x}(t)\|
 $$
 
 Interpretation:
@@ -234,17 +214,13 @@ NOT transition organization.
 Transition probability:
 
 $$
-P(\text{IOTA at } t)
-=
-f\bigl(M(t)\bigr)
+P(\text{IOTA at } t) = f(M(t))
 $$
 
 with:
 
 $$
-\frac{dP}{dM}
->
-0
+\frac{dP}{dM} > 0
 $$
 
 ---
@@ -256,7 +232,7 @@ Operationally:
 $$
 \text{IOTA}
 \Longleftrightarrow
-M(t)>\tau
+M(t) > \tau
 $$
 
 where:
@@ -270,17 +246,13 @@ where:
 Empirical observation:
 
 $$
-\text{IOTA}
-\not\sim
-I(t)
+\text{IOTA} \not\sim I(t)
 $$
 
 but:
 
 $$
-\text{IOTA}
-\sim
-M(t)
+\text{IOTA} \sim M(t)
 $$
 
 Interpretation:
@@ -327,17 +299,11 @@ $$
 J(x)
 =
 \frac{
-\left\|
-\mathcal{J}(x)
-\right\|
+\|\mathcal{J}(x)\|
 }{
-\left\|
-F_{\mathrm{forward}}(x)
-\right\|
+\|F_{\mathrm{forward}}(x)\|
 \cdot
-\left\|
-F_{\mathrm{backward}}(x)
-\right\|
+\|F_{\mathrm{backward}}(x)\|
 +
 \varepsilon
 }
@@ -346,9 +312,7 @@ $$
 with:
 
 $$
-\varepsilon
-\ll
-1
+\varepsilon \ll 1
 $$
 
 for numerical stability.
@@ -410,9 +374,7 @@ produces structures resembling:
 Operational aperture score:
 
 $$
-A(x)
-=
-1-J(x)
+A(x) = 1 - J(x)
 $$
 
 Interpretation:
@@ -440,11 +402,7 @@ Phase-space partition:
 $$
 Q(t)
 =
-\mathcal{Q}
-\bigl(
-\phi(t),
-\dot{\phi}(t)
-\bigr)
+\mathcal{Q}(\phi(t), \dot{\phi}(t))
 $$
 
 Interpretation:
@@ -472,9 +430,7 @@ Empirical interpretation:
 Directional orientation field:
 
 $$
-\Theta(x)
-=
-\arg\bigl(F(x)\bigr)
+\Theta(x) = \arg(F(x))
 $$
 
 Bias alignment score:
@@ -482,9 +438,9 @@ Bias alignment score:
 $$
 B(x)
 =
-\cos\Bigl(
+\cos(
 \Theta(x)-\Theta_{\mathrm{root}}
-\Bigr)
+)
 $$
 
 Interpretation:
@@ -503,12 +459,7 @@ Current unified operational picture:
 $$
 \mathcal{X}(t)
 =
-\bigl(
-M(t),
-J(x),
-A(x),
-B(x)
-\bigr)
+(M(t), J(x), A(x), B(x))
 $$
 
 Transition probability:
@@ -516,7 +467,7 @@ Transition probability:
 $$
 P(\text{IOTA})
 =
-f\bigl(\mathcal{X}(t)\bigr)
+f(\mathcal{X}(t))
 $$
 
 ---
@@ -546,17 +497,13 @@ Minimal directional control:
 $$
 s(t)
 =
-d
-\cdot
-s^*\bigl(\phi(t)\bigr)
+d \cdot s^*(\phi(t))
 $$
 
 where:
 
 $$
-d
-\in
-\{-1,+1\}
+d \in \{-1,+1\}
 $$
 
 ---
@@ -568,13 +515,12 @@ Extended control model:
 $$
 s(t)
 =
-f
-\Bigl(
+f(
 \phi(t),
 I(t),
 J(x),
 B(x)
-\Bigr)
+)
 $$
 
 Interpretation:
@@ -623,11 +569,11 @@ Updated mismatch:
 $$
 M(t)
 =
-\left|
+|
 \omega_{\mathrm{eff}}(t)
 -
 \hat{\omega}(t)
-\right|
+|
 $$
 
 ---
@@ -671,7 +617,7 @@ $$
 M(t)
 &
 \text{phase-defined systems}
-\\[6pt]
+\\
 \Delta(t)
 &
 \text{structure-defined systems}
@@ -683,7 +629,7 @@ Generalized transition probability:
 $$
 P(\text{IOTA})
 =
-f\bigl(\mathcal{X}(t)\bigr)
+f(\mathcal{X}(t))
 $$
 
 ---
