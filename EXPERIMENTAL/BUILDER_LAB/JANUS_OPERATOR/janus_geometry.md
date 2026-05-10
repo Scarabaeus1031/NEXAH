@@ -1029,7 +1029,7 @@ inside explicit Julia-set geometry.
 
 ## EXP-31 — Julia Navigation Coupling
 
-![EXP-31 Julia Navigation Coupling](exp31_julia_navigation_coupling.png)
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
 
 *Direct coupling between JANUS navigation probes and nonlinear Julia transport geometry.*
 
