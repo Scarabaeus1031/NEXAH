@@ -1,42 +1,49 @@
-# NEXAH: Phase-Driven Transition Structure in Dynamical Systems
+# 🧠 NEXAH: Phase-Driven Transition Geometry in Dynamical Systems
 
 ## Abstract
 
-NEXAH is a geometry-oriented framework for analyzing transitions  
-in complex dynamical systems.
+NEXAH is a geometry-oriented framework for reconstructing, analyzing,
+and navigating transitions in complex dynamical systems.
 
-Rather than treating systems as isolated sequences of states,  
-NEXAH reconstructs dynamics as structured fields,  
-within which motion is constrained by:
+Rather than treating systems as isolated sequences of states,
+NEXAH interprets dynamics as motion inside structured transport geometry,
+within which trajectories become constrained by:
 
-- flow geometry  
-- density structure  
-- transition pathways  
-- coherence  
-- and directional topology  
+- flow organization
+- density structure
+- directional coherence
+- transport corridors
+- aperture geometry
+- recursive transition pathways
+- and emergent topology
 
-Across multiple investigated systems  
-(Lorenz, Rössler, Halvorsen, Kuramoto, and parameter-driven fractal systems),  
-we observe that transitions are not random events.
+Across multiple investigated systems
+—including Lorenz, Rössler, Halvorsen, Duffing, Kuramoto,
+and parameter-driven fractal systems—
+we observe that transitions are not uniformly random events.
 
-Instead, transitions consistently emerge within:
+Instead, transitions repeatedly emerge inside:
 
 ```text
-structured regions of the reconstructed field
+structured regions of reconstructed dynamical geometry
 ```
 
-A central empirical result is that transition activation  
-correlates more strongly with phase mismatch  
-than with instability magnitude alone.
+A central empirical observation of the framework
+is that transition activation correlates more strongly
+with phase mismatch than with instability magnitude alone.
 
-Mismatch is defined operationally as:
+Mismatch is operationally defined as:
 
-$$ M(t)=|\omega(t)-\hat{\omega}(t)| $$
+$$
+M(t)
+=
+|\omega(t)-\hat{\omega}(t)|
+$$
 
-where observed phase evolution deviates  
-from locally expected structural behavior.
+where observed phase evolution deviates
+from locally expected structural evolution.
 
-Experimental results suggest:
+Experimental observations suggest:
 
 ```text
 high mismatch
@@ -45,27 +52,37 @@ high mismatch
 
 across multiple investigated systems.
 
-Extending this perspective,  
-control experiments further indicate that stabilization depends not only on alignment,  
+Recent extensions further indicate that transitions may also correlate with:
+
+- directional coherence decay
+- aperture activation
+- recursive orientation asymmetry
+- shell-crossing transport geometry
+- and transport bottlenecks inside reconstructed fields
+
+Extending this perspective,
+control experiments suggest that stabilization depends not only on alignment,
 but on directional interaction relative to intrinsic system dynamics.
 
 Observed behavior includes:
 
-- phase-aligned control amplifying transitions  
-- damping reducing drift but not necessarily suppressing events  
-- phase-opposed control reducing both drift and transition activity  
+- phase-aligned control amplifying transitions
+- damping reducing drift without suppressing events
+- inverse directional control reducing both drift and transition activity
 
-This leads to the operational mechanism:
+This produces the operational mechanism:
 
 ```text
 phase
 → mismatch
-→ transition
+→ directional coherence
+→ transition geometry
+→ transition activation
         ↑
    control(direction)
 ```
 
-NEXAH therefore reframes dynamical analysis from:
+NEXAH therefore reframes nonlinear analysis from:
 
 ```text
 state prediction
@@ -75,51 +92,56 @@ toward:
 
 ```text
 structure-aware navigation
+inside evolving transport geometry
 ```
-
-inside evolving dynamical geometry.
 
 ---
 
 # 1. Introduction
 
-Understanding transitions in dynamical systems  
+Understanding transitions in nonlinear dynamical systems
 is central to:
 
-- stability analysis  
-- control design  
-- failure prediction  
-- synchronization analysis  
-- adaptive navigation  
+- stability analysis
+- synchronization theory
+- adaptive control
+- transport phenomena
+- failure prediction
+- navigation inside evolving systems
 
-Traditional approaches typically focus on:
+Classical approaches often focus on:
 
-- instability thresholds  
-- eigenvalue spectra  
-- local linearization  
-- equilibrium behavior  
+- equilibrium analysis
+- local linearization
+- eigenvalue spectra
+- instability thresholds
+- Lyapunov structure
 
-However, these approaches often do not explain:
+While powerful,
+these approaches do not always explain:
 
-- where transitions occur  
-- why they activate  
-- how structure constrains motion  
-- how control interacts with system geometry  
+- where transitions localize
+- why activation occurs at specific regions
+- how geometry constrains motion
+- why directional asymmetry emerges
+- how stabilization depends on transport organization
 
-NEXAH introduces a different operational perspective:
+NEXAH introduces an alternative operational perspective:
 
 ```text
-systems are trajectories inside structured dynamical fields
+systems are trajectories
+inside structured dynamical geometry
 ```
 
 Within this interpretation:
 
-- geometry constrains motion  
-- density organizes persistence  
-- coherence stabilizes trajectories  
-- mismatch activates transitions  
-- topology emerges from connectivity  
-- control becomes directional navigation  
+- geometry constrains motion
+- density organizes persistence
+- coherence stabilizes trajectories
+- mismatch activates transitions
+- apertures organize routing
+- topology emerges from connectivity
+- control becomes directional navigation
 
 ---
 
@@ -132,12 +154,67 @@ The framework attempts to transform:
 ```text
 dynamics
 → structure
-→ transitions
+→ transition geometry
+→ connectivity
 → topology
 → navigation
 ```
 
-into an operational geometry of system behavior.
+into an operational reconstruction architecture.
+
+---
+
+# 🪞 JANUS Transition Geometry
+
+![JANUS Orientation Atlas](./CORE_CONCEPTS/JANUS_OPERATOR/outputs/janus_transition_orientation_atlas.png)
+
+Recent JANUS experiments extend the framework
+toward directional transport reconstruction.
+
+Observed structures include:
+
+- directional transport corridors
+- recursive orientation manifolds
+- aperture bottlenecks
+- shell-crossing structures
+- transport asymmetries
+- orientation bias regions
+
+These structures appear repeatedly
+across reconstructed systems
+and may indicate that transitions organize around:
+
+```text
+coherence thinning regions
+inside directional transport geometry
+```
+
+rather than isotropic instability alone.
+
+---
+
+# 🌌 Fractal Transition Geometry
+
+![Fractal Transition Structure](./VALIDATION/fractal_tests/results/julia_transition_regions.png)
+
+To investigate whether transition structure extends
+beyond intrinsic system dynamics,
+NEXAH was applied to parameter-driven fractal systems.
+
+Observed behavior suggests that:
+
+- parameter motion induces structured transitions
+- transition activation occupies bounded regions
+- local structural change alone is insufficient
+- global parameter-space geometry constrains activation
+
+This indicates that transition geometry may also exist inside:
+
+```text
+parameter-space transport structure
+```
+
+rather than only state-space evolution.
 
 ---
 
@@ -147,117 +224,227 @@ The current NEXAH pipeline can be summarized as:
 
 ```text
 dynamics
-→ density
-→ structure
+→ flow reconstruction
+→ density structure
 → coherence
-→ transitions
-→ phase
+→ aperture geometry
+→ phase dynamics
+→ mismatch
+→ transition routing
 → topology
 → navigation
 ```
 
 ---
 
-## 2.1 Field Representation
+# 2.1 Field Representation
 
-Trajectories are reconstructed as structured fields:
+Trajectories are reconstructed
+as structured dynamical fields:
 
 ```text
 x(t)
 → flow
 → density
 → coherence
-→ transition geometry
+→ transport geometry
 ```
 
-with local system evolution:
+with local evolution:
 
-$$ \dot{x}(t)=F(x(t)) $$
+$$\dot{x}(t)
+=
+F(x(t))
+$$
 
 where:
 
-- $x(t)$ = local system state  
-- $F(x)$ = reconstructed flow field  
+- $x(t)$ = local system state
+- $F(x)$ = reconstructed flow field
 
 ---
 
-## 2.2 Density Structure
+# 2.2 Density Structure
 
 A density field is estimated from trajectories:
 
-$$ \rho(x)=\mathrm{KDE}(\{x_t\}) $$
+$$\rho(x)
+=
+\mathrm{KDE}(\{x_t\})
+$$
 
 Interpretation:
 
-- high density → persistent structure  
-- low density → transition corridors  
+- high density → persistent structure
+- low density → transition corridors
 
 ---
 
-## 2.3 Coherence
+# 2.3 Directional Coherence
 
-Directional alignment is measured via:
+Directional alignment is estimated through:
 
-$$ C(x)=\frac{\dot{x}\cdot F(x)}{\|\dot{x}\|\cdot\|F(x)\|} $$
+$$C(x)
+=
+\frac{
+\dot{x}\cdot F(x)
+}{
+\|\dot{x}\|
+\,
+\|F(x)\|
+}
+$$
 
 Interpretation:
 
 ```text
 high coherence
-→ structurally aligned motion
+→ structurally aligned transport
 
 low coherence
-→ transition-prone regions
+→ transition-sensitive regions
 ```
 
 ---
 
-## 2.4 Phase Dynamics
+# 2.4 Phase Dynamics
 
 Phase is defined operationally as:
 
-$$ \phi(t)=\arctan2(x_2(t),x_1(t)) $$
+$$\phi(t)
+=
+\arctan2(x_2(t),x_1(t))
+$$
 
 Phase velocity:
 
-$$ \omega(t)=\frac{d\phi(t)}{dt} $$
+$$\omega(t)
+=
+\frac{d\phi(t)}{dt}
+$$
 
 Expected phase evolution:
 
-$$ \hat{\omega}(t)=\mathcal{E}[\omega](t) $$
+$$\hat{\omega}(t)
+=
+\mathcal{E}[\omega](t)
+$$
 
 where:
 
-- $\mathcal{E}$ = local expectation operator  
+- $\mathcal{E}$ = local expectation operator
 
 ---
 
-## 2.5 Phase Mismatch
+# 2.5 Phase Mismatch
 
 Mismatch is defined as:
 
-$$ M(t)=|\omega(t)-\hat{\omega}(t)| $$
+$$M(t)
+=
+|\omega(t)-\hat{\omega}(t)|
+$$
 
 Interpretation:
 
 ```text
 mismatch measures deviation
-from locally coherent evolution
+from locally coherent phase evolution
 ```
 
 ---
 
-## 2.6 Transition Detection
+# 2.6 Directional JANUS Geometry
 
-Transition activation (IOTA events) is operationally associated with:
+Forward transport:
+
+$$F_{\mathrm{forward}}(x)
+$$
+
+Backward transport:
+
+$$F_{\mathrm{backward}}(x)
+$$
+
+Directional overlap operator:
+
+$$\mathcal{J}(x)
+=
+F_{\mathrm{forward}}(x)
+\odot
+F_{\mathrm{backward}}(x)
+$$
+
+Normalized directional coherence:
+
+$$J(x)
+=
+\frac{
+\|
+\mathcal{J}(x)
+\|
+}{
+\|
+F_{\mathrm{forward}}(x)
+\|
+\,
+\|
+F_{\mathrm{backward}}(x)
+\|
++\varepsilon
+}
+$$
+
+---
+
+# 2.7 Aperture Geometry
+
+Aperture score:
+
+$$A(x)
+=
+1-J(x)
+$$
+
+Interpretation:
 
 ```text
-large mismatch regions
+high aperture score
+→ coherence thinning
+→ transport bottleneck
+→ transition-prone geometry
 ```
 
-Approximate threshold form:
+---
 
-$$ M(t)>\tau $$
+# 2.8 Orientation Bias Geometry
+
+Directional orientation field:
+
+$$\Theta(x)
+=
+\arg(F(x))
+$$
+
+Bias alignment score:
+
+$$B(x)
+=
+\cos(
+\Theta(x)
+-
+\Theta_{\mathrm{root}}
+)
+$$
+
+Interpretation:
+
+```text
+transport may align
+along preferred directional roots
+```
+
+inside reconstructed geometry.
 
 ---
 
@@ -265,27 +452,29 @@ $$ M(t)>\tau $$
 
 ---
 
-## 3.1 Cross-System Observations
+# 3.1 Cross-System Structural Observations
 
 Consistent structural behavior was observed across:
 
-- Lorenz  
-- Rössler  
-- Halvorsen  
-- Duffing  
-- Kuramoto  
+- Lorenz
+- Rössler
+- Halvorsen
+- Duffing
+- Kuramoto
+- Julia systems
 
 Observed patterns include:
 
-- persistent phase evolution  
-- structured drift behavior  
-- geometric transition corridors  
-- coherent transition regions  
-- directional asymmetry  
+- coherent phase evolution
+- directional asymmetry
+- structured drift behavior
+- transport corridors
+- shell-crossing geometry
+- recursive orientation organization
 
 ---
 
-## 3.2 Transition Geometry
+# 3.2 Transition Geometry
 
 Transitions do not appear uniformly distributed.
 
@@ -297,19 +486,30 @@ low-coherence
 directionally competing regions
 ```
 
-This suggests that transition structure is geometric rather than random.
+often near:
+
+- apertures
+- bottlenecks
+- shell intersections
+- recursive transport boundaries
+
+This suggests that transition organization
+is geometric rather than random.
 
 ---
 
-## 3.3 Directional Control Experiments
+# 3.3 Directional Control Experiments
 
 Control was applied relative to phase structure:
 
-$$ s(t)=f(\phi(t),d) $$
+$$s(t)
+=
+f(\phi(t),d)
+$$
 
 with:
 
-- $d$ = directional orientation  
+- $d$ = directional orientation
 
 Observed behavior:
 
@@ -325,7 +525,7 @@ inverse control
 
 ---
 
-## Key Observation
+# 🔑 Key Observation
 
 Control effectiveness depends on:
 
@@ -337,89 +537,55 @@ rather than magnitude alone.
 
 ---
 
-# 3.4 Parameter-Driven Transition Extension (Fractal Systems)
+# 3.4 Parameter-Driven Fractal Extension
 
-To investigate whether transition structure extends beyond intrinsic system dynamics,  
-the framework was applied to parameter-driven fractal systems.
+For parameter-driven systems:
 
----
+$$c(t)\in\mathbb{C}
+$$
 
-## Setup
+with Julia evolution:
 
-A parameter trajectory is defined:
+$$
+z_{n+1}
+=
+z_n^2+c(t)
+$$
 
-$$ c(t)\in\mathbb{C} $$
+A structural observable is defined:
 
-with corresponding Julia dynamics:
+$$\Delta(t)
+=
+\text{frame-to-frame structural difference}
+$$
 
-$$ z_{n+1}=z_n^2+c(t) $$
+Transitions appear to depend on both:
 
-For each step,  
-a structural observable is computed:
+- local structural change
+- global parameter-space context
 
-$$ \Delta(t)=\text{frame-to-frame structural difference} $$
+Observed relation:
 
-Additionally,  
-a global parameter-space metric is introduced:
-
-$$ distance(c) $$
-
-representing distance relative to the Mandelbrot boundary.
-
----
-
-## Empirical Result
-
-Transitions were not determined by $\Delta$ alone.
-
-Instead:
-
-$$ P(\text{transition})=f(\Delta,distance) $$
+$$P(\text{transition})
+=
+f(\Delta,distance)
+$$
 
 ---
 
-## Observations
-
-Observed empirically:
-
-- $\Delta$ peaks are frequent but often reversible  
-- true transitions are relatively rare  
-- transitions cluster within bounded regions of parameter space  
-
-Approximate observed transition region:
+# 🔥 Key Fractal Observation
 
 ```text
-Δ ≈ 10–20
-distance ≈ 60–85
+local structural change alone
+is insufficient for transition activation
 ```
 
----
-
-## Interpretation
-
-- $\Delta$ measures local structural variation  
-- $distance$ encodes global structural context  
-- transitions emerge only when both align  
-
----
-
-## Relation to Core Mechanism
-
-This extends the core NEXAH mechanism:
+Transitions require:
 
 ```text
-phase
-→ mismatch
-→ transition
-```
-
-into:
-
-```text
-parameter motion
-→ observable Δ
-→ structural mismatch
-→ transition
+local mismatch
++
+global structural context
 ```
 
 ---
@@ -432,6 +598,8 @@ The current operational mechanism of NEXAH can be summarized as:
 field
 → coherence
 → mismatch
+→ aperture activation
+→ directional breakdown
 → transition
         ↑
    control(direction)
@@ -439,31 +607,35 @@ field
 
 Interpretation:
 
-- instability defines potential  
-- mismatch activates transitions  
-- control direction modifies system response  
+- instability defines dynamical potential
+- mismatch activates transitions
+- coherence constrains transport
+- apertures localize transition geometry
+- directional control modifies system response
 
 ---
 
 # 5. Emergent Topology Perspective
 
-NEXAH interprets topology  
-as an emergent consequence of structured motion.
+NEXAH interprets topology
+as an emergent consequence
+of structured transport organization.
 
-Topology arises through:
+Topology emerges through:
 
-- transition connectivity  
-- coherent trajectories  
-- accumulated winding  
-- admissible directional paths  
+- transition connectivity
+- coherent trajectories
+- accumulated winding
+- directional asymmetry
+- admissible transport paths
 
 ---
 
-## Core Principle
+# 🔑 Topological Principle
 
 ```text
-Topology emerges from structured connectivity,
-not merely geometric embedding.
+topology emerges from structured connectivity
+inside constrained motion geometry
 ```
 
 ---
@@ -472,7 +644,7 @@ not merely geometric embedding.
 
 ---
 
-## 6.1 Conceptual Shift
+# 6.1 Conceptual Shift
 
 NEXAH proposes a shift:
 
@@ -486,38 +658,43 @@ Toward:
 
 ```text
 structure-aware navigation
+inside transport geometry
 ```
 
 ---
 
-## 6.2 Relation to Existing Approaches
+# 6.2 Relation to Existing Approaches
 
-The observed behavior is broadly consistent with:
+The observed behavior is broadly compatible with:
 
-- phase dynamics  
-- synchronization theory  
-- nonlinear control systems  
-- geometric dynamical systems  
+- phase dynamics
+- synchronization theory
+- nonlinear control
+- transport systems
+- geometric dynamics
+- topology-aware reconstruction
 
-However, the framework extends these approaches by:
+The framework extends these approaches by:
 
-- embedding control within field geometry  
-- introducing mismatch as an operational trigger  
-- treating topology as emergent connectivity  
-- interpreting stabilization directionally  
+- embedding transitions within geometry
+- introducing mismatch as activation structure
+- reconstructing directional transport coherence
+- treating topology as emergent connectivity
+- interpreting control directionally
 
 ---
 
-## 6.3 Operational Interpretation
+# 6.3 Operational Interpretation
 
 Within the current framework:
 
-- fields encode motion tendencies  
-- density encodes persistence  
-- coherence measures alignment  
-- mismatch measures structural deviation  
-- transitions occur through constrained corridors  
-- control becomes geometry-aware navigation  
+- fields encode transport tendencies
+- density encodes persistence
+- coherence measures directional consistency
+- mismatch measures structural deviation
+- apertures organize transition routing
+- topology emerges from connectivity
+- control becomes geometry-aware navigation
 
 ---
 
@@ -525,12 +702,13 @@ Within the current framework:
 
 The current NEXAH framework suggests that:
 
-- dynamical systems generate structured geometry  
-- transitions emerge through mismatch  
-- topology emerges from connectivity  
-- control effectiveness depends on directional alignment  
+- nonlinear systems generate structured geometry
+- transitions emerge through coherence breakdown
+- mismatch activates transition pathways
+- topology emerges from transport connectivity
+- control effectiveness depends on directional interaction
 
-This leads to the operational principle:
+This produces the operational principle:
 
 ```text
 control does not suppress dynamics
@@ -540,7 +718,7 @@ it modifies motion relative to structure
 
 ---
 
-# ⚠️ Status
+# ⚠️ Current Status
 
 The framework is currently:
 
@@ -549,24 +727,39 @@ empirical
 semi-formal
 cross-system consistent
 geometry-oriented
+navigation-centered
 ```
 
 It is NOT yet:
 
-- formally proven  
-- mathematically closed  
-- universally validated  
+- formally proven
+- mathematically closed
+- universally generalized
+
+The framework should therefore be interpreted as:
+
+```text
+an exploratory transition-geometry architecture
+```
+
+for investigating structure,
+transport,
+and navigation
+inside nonlinear systems.
 
 ---
 
 # 🔥 Final Perspective
 
 ```text
-Complex systems may not transition randomly.
+complex systems may not transition randomly.
 
-They may move through structured regions
-that constrain trajectories,
-transition pathways,
+they may move through structured transport geometry
+that constrains:
+
+motion,
+transitions,
+connectivity,
 and stabilization behavior.
 ```
 
@@ -574,16 +767,18 @@ and stabilization behavior.
 
 # Keywords
 
-dynamical systems,  
-phase dynamics,  
-transition structure,  
-topology,  
-geometry,  
-coherence,  
-field reconstruction,  
-control,  
-navigation,  
-mismatch dynamics
+dynamical systems,
+phase dynamics,
+transition geometry,
+transport structure,
+topology,
+coherence,
+field reconstruction,
+control,
+navigation,
+mismatch dynamics,
+nonlinear systems,
+transport geometry
 
 ---
 
