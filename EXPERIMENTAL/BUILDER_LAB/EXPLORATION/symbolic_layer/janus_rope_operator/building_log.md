@@ -347,7 +347,7 @@ Outputs:
 
 ## Dual Layer Transport
 
-![Dual Layer Transport](outputs/exp03_dual_layer_transport.png)
+![Dual Layer Transport](./outputs/EXP_03/exp03_dual_layer_transport.png)
 
 The dual-layer transport visual illustrates the complex layered transport geometry, with distinct zones representing different phases of the transport mechanism.
 
@@ -355,7 +355,7 @@ The dual-layer transport visual illustrates the complex layered transport geomet
 
 ## Hysteresis Routing
 
-![Hysteresis Routing](outputs/exp03_hysteresis_routing.png)
+![Hysteresis Routing](./outputs/EXP_03/exp03_hysteresis_routing.png)
 
 This visual reveals the routing dynamics under hysteresis, emphasizing how transport flows are affected by prior states and feedback loops.
 
@@ -363,7 +363,7 @@ This visual reveals the routing dynamics under hysteresis, emphasizing how trans
 
 ## Layer Sync Scan
 
-![Layer Sync Scan](outputs/exp03_layer_sync_scan.png)
+![Layer Sync Scan](./outputs/EXP_03/exp03_layer_sync_scan.png)
 
 The layer synchronization scan visualizes the phase alignment between different layers, showing how the layers interact over time.
 
@@ -371,7 +371,7 @@ The layer synchronization scan visualizes the phase alignment between different 
 
 ## Return Crescent
 
-![Return Crescent](outputs/exp03_return_crescent.png)
+![Return Crescent](./outputs/EXP_03/exp03_return_crescent.png)
 
 The return crescent highlights the cyclical nature of the system, showing how the transport structures oscillate and fold back on themselves.
 
@@ -379,7 +379,7 @@ The return crescent highlights the cyclical nature of the system, showing how th
 
 ## Transport Density
 
-![Transport Density](outputs/exp03_transport_density.png)
+![Transport Density](./outputs/EXP_03/exp03_transport_density.png)
 
 Transport density reveals the areas of highest activity and congestion in the system, showing where transport corridors are most densely packed.
 
