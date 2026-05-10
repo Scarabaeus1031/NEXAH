@@ -136,10 +136,7 @@ than with instability magnitude alone.
 
 Mismatch is operationally defined as:
 
-$$
-M(t)
-=
-|\omega(t)-\hat{\omega}(t)|
+$$M(t) = |\omega(t)-\hat{\omega}(t)|
 $$
 
 where:
@@ -169,33 +166,12 @@ appears increasingly relevant.
 
 Directional coherence is reconstructed through:
 
-$$
-\mathcal{J}(x)
-=
-F_{\mathrm{forward}}(x)
-\odot
-F_{\mathrm{backward}}(x)
+$$\mathcal{J}(x) = F_{\mathrm{forward}}(x) \odot F_{\mathrm{backward}}(x)
 $$
 
 with normalized coherence:
 
-$$
-J(x)
-=
-\frac{
-\|
-\mathcal{J}(x)
-\|
-}{
-\|
-F_{\mathrm{forward}}(x)
-\|
-\,
-\|
-F_{\mathrm{backward}}(x)
-\|
-+\varepsilon
-}
+$$J(x) = \frac{ \| \mathcal{J}(x) \| }{ \| F_{\mathrm{forward}}(x) \| \, \| F_{\mathrm{backward}}(x) \| +\varepsilon }
 $$
 
 Exploratory evidence suggests:
