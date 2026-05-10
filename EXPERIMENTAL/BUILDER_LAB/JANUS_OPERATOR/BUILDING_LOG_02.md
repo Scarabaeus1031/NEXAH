@@ -1859,19 +1859,19 @@ Outputs:
 
 ## Prediction Stability Matrix
 
-![EXP-29 Stability Matrix](./outputs/exp29_prediction_stability_matrix.png)
+![EXP-29 Stability Matrix](outputs/exp29_prediction_stability_matrix.png)
 
 ---
 
 ## Prediction Path Persistence
 
-![EXP-29 Path Persistence](./outputs/exp29_prediction_path_persistence.png)
+![EXP-29 Path Persistence](outputs/exp29_prediction_path_persistence.png)
 
 ---
 
 ## Forecast Noise Scan
 
-![EXP-29 Forecast Noise Scan](./outputs/exp29_prediction_noise_scan.png)
+![EXP-29 Forecast Noise Scan](outputs/exp29_prediction_noise_scan.png)
 
 ---
 
