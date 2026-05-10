@@ -1,36 +1,86 @@
 # 🧠 NEXAH — Research Frontiers
 
-## 🧭 Purpose
+---
 
-This document outlines the major open questions, unresolved formalizations and future research directions of the NEXAH framework.
+# 🧭 Purpose
 
-It serves to:
+This document outlines the major open problems,
+unresolved formalizations,
+and future research directions
+of the NEXAH framework.
 
-- clarify current limitations
-- identify theoretical gaps
+Its role is to:
+
 - separate empirical observations from interpretation
-- guide future mathematical and computational development
+- identify unresolved mathematical gaps
+- define validation boundaries
+- guide future theoretical development
+- clarify which components are exploratory
 
 ---
 
-# 🔷 Context
+# ⚠️ Scientific Position
 
-The current NEXAH framework already demonstrates:
+NEXAH currently represents:
+
+```text
+an exploratory geometric systems framework
+```
+
+It is NOT:
+
+- a finalized theory
+- a replacement for existing mathematics
+- a proof of universal physical laws
+
+---
+
+# 🔷 Current Status of the Framework
+
+The current framework already demonstrates:
 
 - trajectory-driven structure extraction
 - coherent regime identification
-- transition region emergence
-- geometry-aware navigation
-- phase mismatch correlations
-- reproducible visual patterns across systems
+- transition geometry reconstruction
+- mismatch-based transition correlation
+- directional coherence organization
+- aperture and shell structures
+- recursive phase geometry
+- cross-system visual consistency
 
 However:
 
 ```text
-empirical consistency ≠ formal proof
+empirical reproducibility
+≠
+formal proof
 ```
 
-Many mechanisms remain exploratory and require rigorous validation.
+---
+
+# 🧠 Current Core Hypothesis
+
+The central emerging hypothesis is:
+
+```text
+nonlinear systems transition through
+structured coherence geometry
+rather than unconstrained randomness alone.
+```
+
+---
+
+# 🔁 Current Operational Chain
+
+```text
+trajectory
+→ structure
+→ phase
+→ mismatch
+→ directional coherence
+→ transition geometry
+→ navigation/control
+```
 
 ---
 
@@ -39,62 +89,61 @@ Many mechanisms remain exploratory and require rigorous validation.
 Current interpretation:
 
 ```text
-C(x) ≈ alignment between local motion
-       and surrounding flow structure
+C(x)
+≈
+alignment between local motion
+and surrounding transport organization
 ```
 
 ---
 
-## Problem
+## Current Problem
 
-Coherence is currently:
+Coherence remains:
 
 - representation-dependent
 - partially heuristic
-- sensitive to projection choices
+- sensitive to projection choice
+- difficult to define invariantly
 
 ---
 
 ## Open Questions
 
-How can:
+Can coherence be defined:
 
-```text
-C(x)
-```
-
-be defined:
-
-- coordinate-independently
-- robustly under noise
-- consistently across systems
-- independently of visualization artifacts
+- coordinate-independently?
+- robustly under noise?
+- across heterogeneous systems?
+- without visualization dependence?
 
 ---
 
-## Research Direction
+## Research Directions
 
-Potential connections:
+Potential links:
 
-- tangent bundle alignment
-- local entropy reduction
 - transport coherence
+- tangent bundle alignment
 - Koopman eigenstructures
-- directional information flow
+- information flow
+- local entropy reduction
+- geometric transport operators
 
 ---
 
-# 🔬 2. Mathematical Properties of the Gate Operator
+# 🔬 2. Mathematical Structure of the Gate Operator
 
-Current formulation:
+Current operational form:
 
-$$
-G(x) \propto
-W_\rho(x)\,
-W_C(x)\,
-W_R(x)\,
-W_{\nabla}(x)
-$$
+```math
+G(x)
+\propto
+W_\rho(x)
+W_C(x)
+W_R(x)
+W_\nabla(x)
+```
 
 where:
 
@@ -105,41 +154,152 @@ where:
 
 ---
 
-## Open Questions
+## Open Problems
 
-Properties of:
-
-$$
-G(x)
-$$
-
-remain unresolved:
+Properties remain unresolved:
 
 - continuity
 - differentiability
 - invariance
-- scaling behavior
-- stability under perturbation
+- scaling laws
+- perturbation stability
+- convergence behavior
 
 ---
 
-## Fundamental Question
+## Central Question
 
 Can gates be interpreted as:
 
-- generalized separatrices
-- transition manifolds
-- probabilistic switching boundaries
-- geometric singularity regions
+- generalized separatrices?
+- transition manifolds?
+- probabilistic switching boundaries?
+- coherence fracture regions?
+- transport bottlenecks?
 
 ---
 
-# 🔬 3. Relation to Classical Stability Theory
+# 🔬 3. Directional Coherence Geometry (JANUS)
+
+The JANUS operator introduced:
+
+```math
+J(x)
+=
+\text{directional coherence}
+```
+
+representing overlap between:
+
+- forward organization
+- backward organization
+
+---
+
+## Open Questions
+
+Unresolved issues include:
+
+- rigorous definition of backward flow
+- relation to irreversible systems
+- interpretation in dissipative dynamics
+- compatibility with transport theory
+- relation to path-space geometry
+
+---
+
+## Current Hypothesis
+
+```text
+directional coherence
+organizes transition geometry
+```
+
+rather than merely reflecting instability.
+
+---
+
+# 🔬 4. Aperture Geometry
+
+Recent experiments revealed structures resembling:
+
+- gates
+- apertures
+- transport throats
+- shell crossings
+- directional fractures
+
+---
+
+## Open Questions
+
+Are apertures:
+
+- emergent transport bottlenecks?
+- coherence minima?
+- local topological defects?
+- transition interfaces?
+- artifacts of projection geometry?
+
+---
+
+## Research Direction
+
+Potential links:
+
+- Morse theory
+- transport topology
+- manifold fracture geometry
+- geometric flow decomposition
+
+---
+
+# 🔬 5. Orientation Bias Geometry
+
+Emerging observations suggest:
+
+```text
+transport exhibits preferred orientation structure
+```
+
+including:
+
+- root-aligned transport
+- recursive directional attraction
+- persistent orientation axes
+
+---
+
+## Open Questions
+
+Can orientation bias be formalized as:
+
+- anisotropic transport geometry?
+- coherence attractors?
+- directional manifold alignment?
+- geometric transport preference?
+
+---
+
+## Current Limitation
+
+Orientation structure is currently:
+
+- visually reproducible
+- experimentally suggestive
+
+but not mathematically formalized.
+
+---
+
+# 🔬 6. Relation to Classical Stability Theory
 
 Observed empirically:
 
 ```text
-low G(x) ↔ stable structure
+low G(x)
+↔
+stable organization
 ```
 
 ---
@@ -148,85 +308,143 @@ low G(x) ↔ stable structure
 
 Can NEXAH quantities relate formally to:
 
-- Lyapunov functions
-- basin stability
+- Lyapunov theory
 - invariant measures
+- basin stability
 - ergodic stability
 - attractor persistence
 
 ---
 
-## Research Direction
+## Important Clarification
 
-Possible interpretation:
+NEXAH currently provides:
 
 ```text
-G(x) may function as
-a geometric instability proxy
+geometric instability indicators
 ```
 
-rather than a classical stability proof.
+NOT formal stability proofs.
 
 ---
 
-# 🔬 4. Relation to Invariant Structures
+# 🔬 7. Relation to Invariant Structures
 
 Observed:
 
 ```text
-density ridges resemble structured manifolds
+density ridges resemble coherent manifolds
 ```
 
 ---
 
 ## Open Questions
 
-Are ridge structures approximations of:
+Are reconstructed structures approximations of:
 
-- invariant manifolds
-- slow manifolds
-- transport structures
-- foliations
-- transition surfaces
+- invariant manifolds?
+- slow manifolds?
+- transport structures?
+- foliations?
+- transition surfaces?
 
 ---
 
-## Research Direction
+## Possible Integration
 
-Potential integration with:
+Potential relation to:
 
 - Koopman operator theory
 - diffusion geometry
-- topological data analysis
 - manifold learning
+- topological data analysis
+- spectral embeddings
 
 ---
 
-# 🔬 5. High-Dimensional Scaling
+# 🔬 8. Multi-Layer Interaction
+
+Recent observations suggest systems may behave like:
+
+```text
+interacting coherence layers
+```
+
+rather than single homogeneous flows.
+
+---
+
+## Observed Signals
+
+- delayed coupling
+- recursive transport
+- phase offsets
+- temporal asymmetry
+- coherence propagation
+
+---
+
+## Open Questions
+
+Can layered organization be:
+
+- decomposed explicitly?
+- reconstructed mathematically?
+- experimentally isolated?
+- related to temporal scales?
+
+---
+
+# 🔬 9. Recursive Phase Geometry
+
+Observed recursive quadrant structure:
+
+| Quadrant | Interpretation |
+|---|---|
+| Q1 | Expansion |
+| Q2 | Compression |
+| Q3 | Memory |
+| Q4 | Transition |
+
+---
+
+## Open Questions
+
+Does recursive phase geometry represent:
+
+- organizational recursion?
+- transport memory?
+- phase-space topology?
+- symbolic decomposition artifact?
+
+---
+
+# 🔬 10. High-Dimensional Scaling
 
 Current limitation:
 
 ```text
-KDE-based density estimation scales poorly
+KDE-based reconstruction
+scales poorly in high dimensions.
 ```
 
 ---
 
 ## Open Questions
 
-Can structure extraction be extended using:
+Can structure extraction scale using:
 
 - neural density models
-- latent representations
-- diffusion models
+- latent geometry
 - graph embeddings
-- learned geometric fields
+- learned transport fields
+- diffusion representations
 
 ---
 
-## Critical Challenge
+## Critical Problem
 
-Do extracted structures remain:
+Do reconstructed structures remain:
 
 ```text
 stable under dimensionality reduction?
@@ -234,83 +452,79 @@ stable under dimensionality reduction?
 
 ---
 
-# 🔬 6. Probabilistic Interpretation
+# 🔬 11. Probabilistic Interpretation
 
 Observed:
 
 ```text
-G(x) behaves similarly to transition likelihood
+G(x)
+behaves similarly to transition likelihood.
 ```
 
 ---
 
 ## Open Questions
 
-Can NEXAH quantities be interpreted as:
+Can NEXAH quantities represent:
 
-- hazard functions
-- transition probabilities
-- stochastic switching kernels
-- probabilistic flow barriers
+- hazard functions?
+- switching probabilities?
+- stochastic transport barriers?
+- probabilistic transition geometry?
 
 ---
 
-## Possible Direction
+## Potential Mathematical Links
 
-Linking:
-
-```text
-geometry ↔ probability
-```
-
-through:
-
-- Fokker–Planck formulations
+- Fokker–Planck systems
 - stochastic dynamics
 - diffusion operators
+- probabilistic flow theory
 
 ---
 
-# 🔬 7. Geometry-Based Control
+# 🔬 12. Geometry-Based Control
 
-Current control concept:
+Current conceptual control:
 
-$$
-u(x) =
+```math
+u(x)
+=
 -\lambda \nabla G(x)
-+\mu \nabla \rho(x)
-$$
++
+\mu \nabla \rho(x)
+```
 
 ---
 
 ## Open Questions
 
-Can NEXAH control provide:
+Can geometry-aware control provide:
 
-- stability guarantees
-- controllability conditions
-- robustness bounds
-- transition suppression guarantees
+- stability guarantees?
+- controllability conditions?
+- robustness bounds?
+- transition suppression guarantees?
 
 ---
 
-## Research Direction
+## Possible Directions
 
-Possible connection to:
+Connections to:
 
-- model predictive control
-- geometric control
+- geometric control theory
 - navigation functions
 - feedback stabilization
+- model predictive control
 
 ---
 
-# 🔬 8. Learning Structural Fields
+# 🔬 13. Learning Structural Geometry
 
 Current approach:
 
 ```text
-structure reconstructed from trajectories
+geometry reconstructed from trajectories
 ```
 
 ---
@@ -319,27 +533,26 @@ structure reconstructed from trajectories
 
 Can systems learn:
 
-- $G(x)$ directly
-- latent geometry
-- transition fields
-- structural topology
+- transition fields?
+- aperture geometry?
+- latent coherence structure?
+- directional transport manifolds?
 
-from partial observations?
+directly from partial observations?
 
 ---
 
-## Research Direction
+## Possible Integrations
 
-Potential integration with:
-
-- neural operators
 - graph neural networks
-- world models
+- neural operators
 - representation learning
+- world models
+- latent dynamical systems
 
 ---
 
-# 🔬 9. Physical Interpretation
+# 🔬 14. Physical Interpretation
 
 Current interpretation:
 
@@ -353,194 +566,31 @@ dynamics induce emergent geometry
 
 Can this connect meaningfully to:
 
-- energy landscapes
-- transport phenomena
-- field theory
-- statistical physics
-- PDE systems
+- transport physics?
+- statistical mechanics?
+- energy landscapes?
+- PDE systems?
+- field-theoretic descriptions?
 
 ---
 
-## Important Limitation
+## Important Clarification
 
 NEXAH currently:
 
 ```text
-does NOT derive from known physical laws
-```
-
-and should not be interpreted as a replacement for established theory.
-
----
-
-# 🔬 10. Bidirectional / Janus Structure
-
-Current exploratory concept:
-
-```markdown
-\[
-F_J(x) = F_{\mathrm{forward}}(x) + F_{\mathrm{backward}}(x)
-\]
+does NOT derive from established physical laws.
 ```
 
 ---
 
-## Open Questions
-
-- rigorous definition of backward flow
-- compatibility with irreversible systems
-- connection to reversible dynamics
-- interpretation within Koopman theory
-
----
-
-## Research Direction
-
-Potential relation to:
-
-- bidirectional inference
-- time-symmetric structure
-- path-space geometry
-
----
-
-# 🔬 11. Temporal Structure of Transitions
-
-Observed:
-
-- transitions cluster temporally
-- switching is non-uniform
-- transition intensity varies dynamically
-
----
-
-## Open Questions
-
-What governs:
-
-$$
-\kappa(t)
-$$
-
-the temporal activation of transitions?
-
----
-
-## Possible Questions
-
-- are there scaling laws?
-- phase-locking mechanisms?
-- transition precursors?
-- persistence statistics?
-
----
-
-# 🔬 12. Structural Quantity Separation
-
-Current quantities:
-
-```text
-ρ(x)   → occupancy / density
-C(x)   → coherence / alignment
-R(x)   → rotational structure
-∇ρ(x)  → structural gradients
-G(x)   → transition susceptibility
-```
-
----
-
-## Core Problem
-
-These quantities are:
-
-- empirically meaningful
-- visually consistent
-
-but not yet theoretically unified.
-
----
-
-## Open Question
-
-Can:
-
-$$
-G(x)
-$$
-
-be derived from a principled geometric framework?
-
----
-
-## Important Clarification
-
-```text
-G(x) is NOT simply the inverse of coherence.
-```
-
-Instead:
-
-```text
-coherence describes aligned motion
-
-while
-
-G(x) describes structural collapse potential
-```
-
----
-
-# 🔬 13. Visual Grammar & Cross-Domain Mapping
-
-NEXAH increasingly explores whether different scientific visual systems may encode related structural concepts.
-
-Examples include:
-
-- phase space
-- cartography
-- topology
-- information geometry
-- category theory
-- network representations
-- causal diagrams
-
----
-
-## Open Question
-
-Can:
-
-```text
-different visual languages
-share common navigational structure?
-```
-
----
-
-## Important Clarification
-
-This does NOT imply:
-
-```text
-all systems are identical
-```
-
-Only that:
-
-```text
-different representations
-may expose comparable structural patterns
-```
-
----
-
-# 🔬 14. Transition Geometry in Fractal Systems
+# 🔬 15. Fractal Transition Geometry
 
 Experimental observations suggest:
 
 ```text
-parameter motion
-can induce structured transition behavior
+parameter evolution
+can induce structured transition organization
 ```
 
 in systems such as:
@@ -552,75 +602,190 @@ in systems such as:
 
 ## Open Questions
 
-- does parameter space possess gate-like structure?
-- are transitions geometrically constrained?
-- can fractal bifurcations be interpreted structurally?
+Does parameter space itself possess:
+
+- aperture geometry?
+- gate structures?
+- directional organization?
+- coherence manifolds?
 
 ---
 
-# ⚠️ Current Status
+# 🔬 16. Cross-Domain Visual Grammar
 
-NEXAH currently provides:
-
-- empirical observations
-- reproducible visual structure
-- coherent geometric interpretation
-- exploratory navigation concepts
-- early control experiments
-
-But lacks:
-
-- rigorous proofs
-- unified mathematical formalization
-- large-scale validation
-- theoretical guarantees
-- production-level scalability
-
----
-
-# 🧭 Scientific Position
-
-NEXAH should currently be interpreted as:
+NEXAH increasingly explores whether:
 
 ```text
-an exploratory geometric systems framework
+different scientific visual systems
+share common navigational structure
 ```
-
-not as:
-
-- a final theory
-- a replacement for existing mathematics
-- proof of universal laws
 
 ---
 
-# 🚀 Long-Term Research Direction
+## Candidate Domains
+
+- topology
+- phase space
+- information geometry
+- networks
+- causal diagrams
+- transport maps
+- category structures
+
+---
+
+## Important Clarification
+
+This does NOT imply:
+
+```text
+all systems are equivalent
+```
+
+Only that:
+
+```text
+distinct representations
+may expose related structural organization.
+```
+
+---
+
+# 🔬 17. Unified Structural Framework
+
+Current quantities include:
+
+```text
+ρ(x)
+→ density
+
+C(x)
+→ coherence
+
+J(x)
+→ directional coherence
+
+A(x)
+→ aperture structure
+
+M(t)
+→ phase mismatch
+
+B(x)
+→ orientation bias
+```
+
+---
+
+## Open Problem
+
+These quantities are:
+
+- empirically meaningful
+- visually reproducible
+- operationally useful
+
+but not yet unified
+within a single mathematical framework.
+
+---
+
+# 🔬 Central Open Question
+
+Can NEXAH ultimately be formalized as:
+
+```text
+a coherent transition geometry framework
+```
+
+combining:
+
+- structure
+- phase
+- transport
+- coherence
+- directional organization
+- navigation
+
+inside nonlinear systems?
+
+---
+
+# ⚠️ Current Limitations
+
+NEXAH currently lacks:
+
+- rigorous proofs
+- unified formalization
+- analytical guarantees
+- large-scale validation
+- high-dimensional scalability
+- formal operator theory
+
+---
+
+# 🚀 Long-Term Research Directions
 
 Potential future directions include:
 
 1. Formal mathematical grounding
-2. Large-scale empirical validation
-3. High-dimensional scaling
-4. Structure-aware control systems
-5. Cross-domain representation theory
-6. Geometry-probability integration
-7. Scientific collaboration and external testing
+2. Operator-level formalization
+3. Geometry-aware control theory
+4. High-dimensional reconstruction
+5. Transition probability geometry
+6. Directional transport theory
+7. Cross-domain structural mapping
+8. Scientific collaboration & replication
 
 ---
 
-# 🧠 Final Perspective
+# 🌌 Current Perspective
 
 ```text
 NEXAH is not a finished theory.
 
-It is an exploratory attempt to investigate whether
-geometry emerging from dynamics
-can help explain transitions, stability
-and navigation in complex systems.
+It is an exploratory attempt to investigate
+whether geometry emerging from dynamics
+can explain transitions, coherence,
+stability, and navigation
+inside complex systems.
+```
+
+---
+
+# 🧠 Final Insight
+
+```text
+The strongest evidence currently suggests
+that nonlinear transitions are structured,
+organized,
+and geometrically constrained
+far more than previously assumed.
+```
+
+---
+
+# 🧭 Status
+
+```text
+empirical structure:
+strong
+
+cross-system consistency:
+strong exploratory support
+
+formal mathematical grounding:
+incomplete
+
+operator formalization:
+emerging
+
+scientific maturity:
+early-stage exploratory framework
 ```
 
 ---
 
 **NEXAH — Research Frontiers**  
+Transition Geometry · Coherence · Directional Structure · Navigation  
 Thomas K. R. Hofmann · 2026
-
