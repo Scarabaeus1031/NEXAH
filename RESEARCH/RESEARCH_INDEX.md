@@ -894,9 +894,7 @@ beyond intrinsic system dynamics.
 Observed:
 
 ```text
-P(transition)
-=
-f(Δ, distance)
+P(transition) = f(Δ, distance)
 ```
 
 where:
