@@ -789,7 +789,7 @@ Outputs:
 
 ## Local Drift Vector Field
 
-![Local Drift Vector Field](./outputs/EXP_07/exp07_local_drift_vector_field.png)
+![Local Drift Vector Field](../outputs/EXP_07/exp07_local_drift_vector_field.png)
 
 The local drift vector field visualizes the drift patterns across the transport system, showing the directional flows and interactions between transport elements.
 
@@ -797,7 +797,7 @@ The local drift vector field visualizes the drift patterns across the transport 
 
 ## Residue Flow Lattice
 
-![Residue Flow Lattice](./outputs/EXP_07/exp07_residue_flow_lattice.png)
+![Residue Flow Lattice](../outputs/EXP_07/exp07_residue_flow_lattice.png)
 
 This visual shows the underlying lattice structure of the residue flow, emphasizing areas of high interaction and local drift field generation.
 
@@ -805,7 +805,7 @@ This visual shows the underlying lattice structure of the residue flow, emphasiz
 
 ## Residue Drift Strength
 
-![Residue Drift Strength](./outputs/EXP_07/exp07_residue_drift_strength.png)
+![Residue Drift Strength](../outputs/EXP_07/exp07_residue_drift_strength.png)
 
 The residue drift strength chart shows the relative strength of drift currents across different parts of the system, identifying regions with the most significant influence on transport.
 
@@ -813,7 +813,7 @@ The residue drift strength chart shows the relative strength of drift currents a
 
 ## Transport Corridors
 
-![Transport Corridors](./outputs/EXP_07/exp07_transport_corridors.png)
+![Transport Corridors](../outputs/EXP_07/exp07_transport_corridors.png)
 
 The transport corridors diagram illustrates the most consistent paths of transport, revealing high-density flow areas and stable routing patterns.
 
@@ -821,7 +821,7 @@ The transport corridors diagram illustrates the most consistent paths of transpo
 
 ## Modular Vortex Reconstruction
 
-![Modular Vortex Reconstruction](./outputs/EXP_07/exp07_modular_vortex_reconstruction.png)
+![Modular Vortex Reconstruction](../outputs/EXP_07/exp07_modular_vortex_reconstruction.png)
 
 This final visual reconstructs the modular vortex structure that emerges from the drift field, showing the interaction between vortices and the transport corridors in a dynamic way.
 
