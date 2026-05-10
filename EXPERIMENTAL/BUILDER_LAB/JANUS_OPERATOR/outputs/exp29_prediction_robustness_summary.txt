@@ -1,0 +1,118 @@
+EXP-29 — Prediction Stability Test
+================================================
+
+Goal:
+Test whether predictive JANUS basin routing remains stable under perturbation.
+
+baseline path: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+noise level: 0
+--------------------------------
+path: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+path similarity to baseline: 1.000000
+entropy:
+  node 0: 0.881291
+  node 1: -0.000000
+  node 2: 0.000000
+  node 3: -0.000000
+transition probability matrix:
+  0.000 0.700 0.000 0.300
+  0.000 1.000 0.000 0.000
+  0.000 0.000 0.000 0.000
+  0.000 0.000 1.000 0.000
+
+noise level: 0.0005
+--------------------------------
+path: [0, 3]
+path similarity to baseline: 0.500000
+entropy:
+  node 0: -0.000000
+  node 1: -0.000000
+  node 2: 1.526235
+  node 3: 0.000000
+transition probability matrix:
+  0.000 0.000 0.000 1.000
+  0.000 1.000 0.000 0.000
+  0.000 0.462 0.231 0.308
+  0.000 0.000 0.000 0.000
+
+noise level: 0.001
+--------------------------------
+path: [0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0]
+path similarity to baseline: 0.076923
+entropy:
+  node 0: -0.000000
+  node 1: 0.954434
+  node 2: 0.811278
+  node 3: -0.000000
+transition probability matrix:
+  0.000 0.000 1.000 0.000
+  0.000 0.000 0.625 0.375
+  0.750 0.000 0.250 0.000
+  0.000 0.000 0.000 1.000
+
+noise level: 0.0025
+--------------------------------
+path: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+path similarity to baseline: 0.076923
+entropy:
+  node 0: -0.000000
+  node 1: 0.985228
+  node 2: -0.000000
+  node 3: -0.000000
+transition probability matrix:
+  1.000 0.000 0.000 0.000
+  0.000 0.571 0.429 0.000
+  0.000 0.000 0.000 1.000
+  0.000 1.000 0.000 0.000
+
+noise level: 0.005
+--------------------------------
+path: [0, 1]
+path similarity to baseline: 1.000000
+entropy:
+  node 0: 1.459148
+  node 1: 0.000000
+  node 2: 1.251629
+  node 3: 0.543564
+transition probability matrix:
+  0.000 0.500 0.167 0.333
+  0.000 0.000 0.000 0.000
+  0.167 0.000 0.167 0.667
+  0.125 0.000 0.000 0.875
+
+noise level: 0.01
+--------------------------------
+path: [0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+path similarity to baseline: 0.076923
+entropy:
+  node 0: 0.811278
+  node 1: 0.970951
+  node 2: 0.000000
+  node 3: -0.000000
+transition probability matrix:
+  0.000 0.250 0.000 0.750
+  0.000 0.400 0.000 0.600
+  0.000 0.000 0.000 0.000
+  0.000 0.000 0.000 1.000
+
+noise level: 0.025
+--------------------------------
+path: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+path similarity to baseline: 0.076923
+entropy:
+  node 0: -0.000000
+  node 1: -0.000000
+  node 2: 1.309297
+  node 3: 0.721928
+transition probability matrix:
+  1.000 0.000 0.000 0.000
+  1.000 0.000 0.000 0.000
+  0.636 0.182 0.000 0.182
+  0.800 0.000 0.000 0.200
+
+Working interpretation:
+- stable predicted paths indicate robust transport routing
+- unstable paths indicate noise-sensitive gate decision structure
+- entropy changes identify fragile routing nodes
+- exploratory only

@@ -1,0 +1,94 @@
+EXP-30 — Basin Intervention / Controlled Steering
+========================================================
+
+Goal:
+Test whether JANUS aperture routing can be shifted through controlled directional bias.
+
+intervention angle: 45.000 deg
+
+baseline path: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+intervention strength: -0.300
+------------------------------------
+path: [0]
+path similarity to baseline: 1.000000
+matrix shift from baseline: 1.738522
+transition probability matrix:
+  0.000 0.000 0.000 0.000
+  0.000 0.250 0.750 0.000
+  0.000 0.571 0.286 0.143
+  0.000 0.667 0.333 0.000
+
+intervention strength: -0.150
+------------------------------------
+path: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+path similarity to baseline: 0.076923
+matrix shift from baseline: 2.359378
+transition probability matrix:
+  1.000 0.000 0.000 0.000
+  0.167 0.167 0.000 0.667
+  0.000 0.100 0.000 0.900
+  0.000 0.000 0.000 1.000
+
+intervention strength: -0.075
+------------------------------------
+path: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+path similarity to baseline: 1.000000
+matrix shift from baseline: 1.012372
+transition probability matrix:
+  0.071 0.571 0.000 0.357
+  0.000 1.000 0.000 0.000
+  0.000 0.000 0.000 0.000
+  0.000 0.000 0.000 0.000
+
+intervention strength: +0.000
+------------------------------------
+path: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+path similarity to baseline: 1.000000
+matrix shift from baseline: 0.000000
+transition probability matrix:
+  0.000 0.700 0.000 0.300
+  0.000 1.000 0.000 0.000
+  0.000 0.000 0.000 0.000
+  0.000 0.000 1.000 0.000
+
+intervention strength: +0.075
+------------------------------------
+path: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+path similarity to baseline: 1.000000
+matrix shift from baseline: 0.141421
+transition probability matrix:
+  0.000 0.600 0.000 0.400
+  0.000 1.000 0.000 0.000
+  0.000 0.000 0.000 0.000
+  0.000 0.000 1.000 0.000
+
+intervention strength: +0.150
+------------------------------------
+path: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+path similarity to baseline: 1.000000
+matrix shift from baseline: 0.513761
+transition probability matrix:
+  0.000 0.556 0.000 0.444
+  0.000 1.000 0.000 0.000
+  0.000 0.000 0.000 0.000
+  0.000 0.333 0.667 0.000
+
+intervention strength: +0.300
+------------------------------------
+path: [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+path similarity to baseline: 0.076923
+matrix shift from baseline: 1.789815
+transition probability matrix:
+  0.188 0.188 0.500 0.125
+  0.000 0.000 0.000 0.000
+  0.250 0.000 0.750 0.000
+  0.000 0.000 0.000 0.000
+
+Working interpretation:
+- if small directional bias changes routing, gates are steerable
+- stable paths indicate rigid transport corridors
+- path flips indicate intervention-sensitive decision zones
+- this is an exploratory control diagnostic, not proof of control theory
+
+Exploratory only.
