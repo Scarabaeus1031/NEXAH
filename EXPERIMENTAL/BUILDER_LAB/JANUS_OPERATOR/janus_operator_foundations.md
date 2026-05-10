@@ -41,6 +41,9 @@ but to introduce an additional geometric layer for studying:
 - shell organization
 - transition compression
 - recursive phase structure
+- transport routing
+- basin navigation
+- predictive transition organization
 
 inside structured dynamical systems.
 
@@ -50,18 +53,18 @@ inside structured dynamical systems.
 
 Let:
 
-```math
-\phi(x,t)
-```
+$begin:math:display$
+\\phi\(x\,t\)
+$end:math:display$
 
 denote a trajectory or reconstructed flow field
 within a dynamical system.
 
 Assume:
 
-```math
-x \in \mathbb{R}^n
-```
+$begin:math:display$
+x \\in \\mathbb\{R\}\^n
+$end:math:display$
 
 with continuous local evolution.
 
@@ -71,16 +74,9 @@ with continuous local evolution.
 
 Classical forward evolution is defined as:
 
-```math
-F_{\mathrm{forward}}(x)
-=
-\lim_{\Delta t \to 0^+}
-\frac{
-\phi(x,t+\Delta t)-\phi(x,t)
-}{
-\Delta t
-}
-```
+$begin:math:display$
+F\_\{\\mathrm\{forward\}\}\(x\)\=\\lim\_\{\\Delta t \\to 0\^\+\}\\frac\{\\phi\(x\,t\+\\Delta t\)\-\\phi\(x\,t\)\}\{\\Delta t\}
+$end:math:display$
 
 Interpretation:
 
@@ -94,16 +90,9 @@ local instantaneous forward flow
 
 Time-reversed local evolution is defined as:
 
-```math
-F_{\mathrm{backward}}(x)
-=
-\lim_{\Delta t \to 0^+}
-\frac{
-\phi(x,t)-\phi(x,t-\Delta t)
-}{
-\Delta t
-}
-```
+$begin:math:display$
+F\_\{\\mathrm\{backward\}\}\(x\)\=\\lim\_\{\\Delta t \\to 0\^\+\}\\frac\{\\phi\(x\,t\)\-\\phi\(x\,t\-\\Delta t\)\}\{\\Delta t\}
+$end:math:display$
 
 Interpretation:
 
@@ -117,13 +106,9 @@ local reconstructed backward flow
 
 The Janus Operator combines both directional fields:
 
-```math
-\mathcal{J}(x)
-=
-F_{\mathrm{forward}}(x)
-\odot
-F_{\mathrm{backward}}(x)
-```
+$begin:math:display$
+\\mathcal\{J\}\(x\)\=F\_\{\\mathrm\{forward\}\}\(x\)\\odot F\_\{\\mathrm\{backward\}\}\(x\)
+$end:math:display$
 
 where:
 
@@ -147,31 +132,15 @@ depending on the experiment.
 
 A normalized Janus intensity field may be defined as:
 
-```math
-J(x)
-=
-\frac{
-\|
-\mathcal{J}(x)
-\|
-}{
-\|
-F_{\mathrm{forward}}(x)
-\|
-\cdot
-\|
-F_{\mathrm{backward}}(x)
-\|
-+
-\varepsilon
-}
-```
+$begin:math:display$
+J\(x\)\=\\frac\{\\\|\\mathcal\{J\}\(x\)\\\|\}\{\\\|F\_\{\\mathrm\{forward\}\}\(x\)\\\|\\cdot\\\|F\_\{\\mathrm\{backward\}\}\(x\)\\\|\+\\varepsilon\}
+$end:math:display$
 
 with:
 
-```math
-\varepsilon = 10^{-8}
-```
+$begin:math:display$
+\\varepsilon \= 10\^\{\-8\}
+$end:math:display$
 
 used for numerical stabilization.
 
@@ -199,9 +168,9 @@ inside reconstructed flow geometry.
 
 High values:
 
-```math
-J(x) \approx 1
-```
+$begin:math:display$
+J\(x\) \\approx 1
+$end:math:display$
 
 may indicate:
 
@@ -210,6 +179,8 @@ may indicate:
 - persistent flow structure
 - bidirectional compatibility
 - low structural mismatch
+- stable transport corridors
+- persistent routing compatibility
 
 Conceptually:
 
@@ -223,9 +194,9 @@ Janus-coherent regions
 
 Low values:
 
-```math
-J(x) \approx 0
-```
+$begin:math:display$
+J\(x\) \\approx 0
+$end:math:display$
 
 may indicate:
 
@@ -234,6 +205,8 @@ may indicate:
 - phase drift accumulation
 - transition sensitivity
 - gate activation regions
+- routing instability
+- transport fragmentation
 
 Conceptually:
 
@@ -318,43 +291,38 @@ This interpretation remains exploratory.
 
 An idealized symmetric region satisfies:
 
-```math
-F_{\mathrm{forward}}(x)
-\approx
-F_{\mathrm{backward}}(x)
-```
+$begin:math:display$
+F\_\{\\mathrm\{forward\}\}\(x\)\\approx F\_\{\\mathrm\{backward\}\}\(x\)
+$end:math:display$
 
 leading to:
 
-```math
-J(x) \rightarrow 1
-```
+$begin:math:display$
+J\(x\) \\rightarrow 1
+$end:math:display$
 
 Regions with strong drift or transition activation may satisfy:
 
-```math
-F_{\mathrm{forward}}(x)
-\not\approx
-F_{\mathrm{backward}}(x)
-```
+$begin:math:display$
+F\_\{\\mathrm\{forward\}\}\(x\)\\not\\approx F\_\{\\mathrm\{backward\}\}\(x\)
+$end:math:display$
 
 leading to:
 
-```math
-J(x) \rightarrow 0
-```
+$begin:math:display$
+J\(x\) \\rightarrow 0
+$end:math:display$
 
 ---
 
 # 🌌 Time Symmetry
 
-The Janus field is conceptually time-symmetric in the sense that it compares both directional organizations simultaneously:
+The Janus field is conceptually time-symmetric
+in the sense that it compares both directional organizations simultaneously:
 
-```math
-\mathcal{J}(x,t)
-=
-\mathcal{J}(x,-t)
-```
+$begin:math:display$
+\\mathcal\{J\}\(x\,t\)\=\\mathcal\{J\}\(x\,\-t\)
+$end:math:display$
 
 This does NOT imply:
 
@@ -394,6 +362,8 @@ These quadrants emerge from combinations of:
 - shell-crossing structure
 - delayed recurrence memory
 - axis-distance geometry
+- routing persistence
+- transition accessibility
 
 ---
 
@@ -410,6 +380,7 @@ The resulting geometry resembles:
 - coherence compression
 - transition apertures
 - directional exchange corridors
+- layered routing membranes
 
 Importantly:
 
@@ -448,6 +419,8 @@ Observed properties include:
 - transport inversion
 - re-expansion after crossing
 - directional branching
+- routing bifurcation
+- basin exchange concentration
 
 The geometry visually resembles:
 
@@ -482,6 +455,7 @@ The Janus framework introduces a possible additional field layer:
 Dynamics
 → Transition Geometry
 → Janus Geometry
+→ Routing Geometry
 ```
 
 where:
@@ -504,6 +478,115 @@ Instead it complements them through:
 ```text
 directional structural comparison
 ```
+
+---
+
+# 🌌 Mandelbrot / Julia Embedding Perspective
+
+One of the strongest emerging observations
+of the recent JANUS experiments
+is the appearance of transport-like organization
+inside genuine nonlinear fractal geometry.
+
+The EXP-31 coupling experiment revealed that:
+
+```text
+JANUS-style transport corridors
+can become visibly embedded
+inside explicit Julia dynamics.
+```
+
+This is important because the resulting geometry exhibits:
+
+- shell-like outer membranes
+- spiral transition seams
+- diagonal routing corridors
+- nested basin chambers
+- contour-mediated drift fields
+- localized coupling zones
+
+Most strikingly:
+
+```text
+the outer field itself
+appears geometrically active
+```
+
+rather than empty background structure.
+
+The fractal geometry behaves visually like:
+
+```text
+a continuous navigation landscape
+```
+
+containing:
+
+- transport gradients
+- transition membranes
+- directional seams
+- embedded routing channels
+
+---
+
+## Julia Navigation Embedding
+
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
+
+*Embedded JANUS-style navigation structure inside nonlinear Julia-set geometry.*
+
+Observed parameter:
+
+```text
+c = -0.750 + 0.100i
+```
+
+The resulting geometry reveals:
+
+- dual-lobe transport structure
+- spiral gate regions
+- coupled basin membranes
+- nested contour fields
+- edge-sensitive transition routing
+
+Several transport probes partially align with:
+
+- contour gradients
+- spiral seams
+- membrane boundaries
+- transition corridors
+
+This creates the appearance of:
+
+```text
+embedded transport infrastructure
+inside fractal dynamics
+```
+
+rather than isolated chaotic trajectories.
+
+---
+
+## Structural Importance
+
+The Mandelbrot / Julia coupling experiments
+do NOT establish equivalence between:
+
+- JANUS transport
+- fractal mathematics
+- or physical transport systems
+
+However, they strongly suggest that:
+
+```text
+transition organization
+may remain geometrically meaningful
+even inside highly nonlinear parameter spaces.
+```
+
+This is currently one of the strongest
+visual-geometric observations
+of the JANUS series.
 
 ---
 
@@ -540,6 +623,9 @@ Observed structures include:
 - corridor concentration
 - transition spines
 - orbital compression regions
+- transport membranes
+- routing seams
+- layered exchange corridors
 
 The strongest current observation:
 
@@ -621,6 +707,10 @@ Potential applications include:
 - shell-crossing analysis
 - recursive phase decomposition
 - transition-aperture detection
+- basin-routing reconstruction
+- predictive transport analysis
+- steering diagnostics
+- fractal transport embedding
 
 Primary candidate systems:
 
@@ -649,6 +739,9 @@ The visualization now additionally integrates:
 - memory recurrence structure
 - orientation sectors
 - coherence spines
+- routing geometry
+- basin transport organization
+- predictive transition structure
 
 The map should be understood as:
 
@@ -661,7 +754,8 @@ rather than a replacement for classical operator theory.
 
 ---
 
-The idea of combining forward and backward dynamics is well established in operator-theoretic approaches to dynamical systems.
+The idea of combining forward and backward dynamics
+is well established in operator-theoretic approaches to dynamical systems.
 
 Conceptually related areas include:
 
@@ -698,6 +792,8 @@ transition gates
 directional asymmetry
 coherence collapse
 recursive transport structure
+routing geometry
+basin navigation
 ```
 
 inside reconstructed fields.
@@ -789,6 +885,9 @@ transition organization may involve:
 - transition apertures
 - directional compression
 - structured exchange corridors
+- routing geometry
+- predictive basin organization
+- nonlinear transport embedding
 ```
 
 ---
@@ -814,8 +913,17 @@ active
 transition-aperture analysis:
 active
 
+routing geometry:
+emerging
+
+predictive transport:
+experimental
+
+fractal embedding:
+experimental
+
 navigation integration:
-planned
+active exploratory phase
 ```
 
 ---
