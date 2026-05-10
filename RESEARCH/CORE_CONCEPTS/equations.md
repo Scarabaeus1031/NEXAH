@@ -397,10 +397,7 @@ Recent decomposition:
 
 Phase-space partition:
 
-$$
-Q(t)
-=
-\mathcal{Q}(\phi(t), \dot{\phi}(t))
+$$Q(t) = \mathcal{Q}(\phi(t), \dot{\phi}(t))
 $$
 
 Interpretation:
