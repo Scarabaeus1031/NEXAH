@@ -123,12 +123,13 @@ $$
 
 Define local expected phase behavior:
 
-$$\hat{\omega}(t) = \mathcal{E}[\omega](t) 
-$$
+```math
+\hat{\omega}(t) = \mathcal{E}[\omega](t)
+```
 
 where:
 
-- $\mathcal{E}$ = local expectation operator
+- `\mathcal{E}` = local expectation operator
 - moving average
 - kernel smoothing
 - local low-pass reconstruction
@@ -270,25 +271,25 @@ JANUS introduces directional compatibility geometry.
 
 Forward local flow:
 
-$$
+```math
 F_{\mathrm{forward}}(x)
-$$
+```
 
 Backward local flow:
 
-$$
+```math
 F_{\mathrm{backward}}(x)
-$$
+```
 
 Directional overlap operator:
 
-$$
+```math
 \mathcal{J}(x)
 =
 F_{\mathrm{forward}}(x)
 \odot
 F_{\mathrm{backward}}(x)
-$$
+```
 
 ---
 
