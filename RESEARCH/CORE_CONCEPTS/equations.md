@@ -32,7 +32,7 @@ This document is:
 
 It is:
 
-> a minimal operational equation system for describing
+> a minimal operational equation system for describing  
 > transition organization inside nonlinear systems.
 
 ---
@@ -70,8 +70,10 @@ trajectory
 We consider a continuous dynamical system:
 
 $$
-\dot{x}(t) = F(x(t)),
-\quad
+\dot{x}(t)
+=
+F(x(t)),
+\qquad
 x(t) \in \mathbb{R}^n
 $$
 
@@ -88,7 +90,9 @@ $$
 Phase is defined through projection onto a local 2D subspace:
 
 $$
-\phi(t) = \arctan2(x_2(t), x_1(t))
+\phi(t)
+=
+\arctan2\bigl(x_2(t),x_1(t)\bigr)
 $$
 
 Interpretation:
@@ -106,7 +110,9 @@ capturing local cyclical structure.
 Temporal phase evolution:
 
 $$
-\omega(t) = \frac{d\phi(t)}{dt}
+\omega(t)
+=
+\frac{d\phi(t)}{dt}
 $$
 
 Discrete approximation:
@@ -127,7 +133,11 @@ $$
 
 Define local expected phase behavior:
 
-$$\hat{\omega}(t) = \mathcal{E}[\omega](t)$$
+$$
+\hat{\omega}(t)
+=
+\mathcal{E}[\omega](t)
+$$
 
 where:
 
@@ -151,7 +161,9 @@ Core NEXAH quantity:
 $$
 M(t)
 =
-|\omega(t)-\hat{\omega}(t)|
+\left|
+\omega(t)-\hat{\omega}(t)
+\right|
 $$
 
 Interpretation:
@@ -197,7 +209,9 @@ Local dynamical magnitude:
 $$
 I(t)
 =
-\|\dot{x}(t)\|
+\left\|
+\dot{x}(t)
+\right\|
 $$
 
 Interpretation:
@@ -222,13 +236,15 @@ Transition probability:
 $$
 P(\text{IOTA at } t)
 =
-f(M(t))
+f\bigl(M(t)\bigr)
 $$
 
 with:
 
 $$
-\frac{dP}{dM} > 0
+\frac{dP}{dM}
+>
+0
 $$
 
 ---
@@ -240,7 +256,7 @@ Operationally:
 $$
 \text{IOTA}
 \Longleftrightarrow
-M(t) > \tau
+M(t)>\tau
 $$
 
 where:
@@ -311,17 +327,17 @@ $$
 J(x)
 =
 \frac{
-\|
+\left\|
 \mathcal{J}(x)
-\|
+\right\|
 }{
-\|
+\left\|
 F_{\mathrm{forward}}(x)
-\|
+\right\|
 \cdot
-\|
+\left\|
 F_{\mathrm{backward}}(x)
-\|
+\right\|
 +
 \varepsilon
 }
@@ -330,7 +346,9 @@ $$
 with:
 
 $$
-\varepsilon \ll 1
+\varepsilon
+\ll
+1
 $$
 
 for numerical stability.
@@ -358,9 +376,9 @@ Current JANUS hypothesis:
 $$
 P(\text{IOTA})
 \uparrow
-\quad
+\qquad
 \text{as}
-\quad
+\qquad
 J(x)
 \downarrow
 $$
@@ -394,7 +412,7 @@ Operational aperture score:
 $$
 A(x)
 =
-1 - J(x)
+1-J(x)
 $$
 
 Interpretation:
@@ -422,7 +440,11 @@ Phase-space partition:
 $$
 Q(t)
 =
-\mathcal{Q}(\phi(t), \dot{\phi}(t))
+\mathcal{Q}
+\bigl(
+\phi(t),
+\dot{\phi}(t)
+\bigr)
 $$
 
 Interpretation:
@@ -452,7 +474,7 @@ Directional orientation field:
 $$
 \Theta(x)
 =
-\arg(F(x))
+\arg\bigl(F(x)\bigr)
 $$
 
 Bias alignment score:
@@ -460,7 +482,9 @@ Bias alignment score:
 $$
 B(x)
 =
-\cos(\Theta(x)-\Theta_{\mathrm{root}})
+\cos\Bigl(
+\Theta(x)-\Theta_{\mathrm{root}}
+\Bigr)
 $$
 
 Interpretation:
@@ -479,7 +503,12 @@ Current unified operational picture:
 $$
 \mathcal{X}(t)
 =
-(M(t), J(x), A(x), B(x))
+\bigl(
+M(t),
+J(x),
+A(x),
+B(x)
+\bigr)
 $$
 
 Transition probability:
@@ -487,7 +516,7 @@ Transition probability:
 $$
 P(\text{IOTA})
 =
-f(\mathcal{X}(t))
+f\bigl(\mathcal{X}(t)\bigr)
 $$
 
 ---
@@ -517,13 +546,17 @@ Minimal directional control:
 $$
 s(t)
 =
-d \cdot s^*(\phi(t))
+d
+\cdot
+s^*\bigl(\phi(t)\bigr)
 $$
 
 where:
 
 $$
-d \in \{-1,+1\}
+d
+\in
+\{-1,+1\}
 $$
 
 ---
@@ -535,12 +568,13 @@ Extended control model:
 $$
 s(t)
 =
-f(
+f
+\Bigl(
 \phi(t),
 I(t),
 J(x),
 B(x)
-)
+\Bigr)
 $$
 
 Interpretation:
@@ -589,11 +623,11 @@ Updated mismatch:
 $$
 M(t)
 =
-|
+\left|
 \omega_{\mathrm{eff}}(t)
 -
 \hat{\omega}(t)
-|
+\right|
 $$
 
 ---
@@ -637,7 +671,7 @@ $$
 M(t)
 &
 \text{phase-defined systems}
-\\
+\\[6pt]
 \Delta(t)
 &
 \text{structure-defined systems}
@@ -649,7 +683,7 @@ Generalized transition probability:
 $$
 P(\text{IOTA})
 =
-f(\mathcal{X}(t))
+f\bigl(\mathcal{X}(t)\bigr)
 $$
 
 ---
