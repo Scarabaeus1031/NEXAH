@@ -489,10 +489,7 @@ raw instability magnitude alone.
 
 Minimal directional control:
 
-$$
-s(t)
-=
-d \cdot s^*(\phi(t))
+$$s(t) = d \cdot s^*(\phi(t))
 $$
 
 where:
@@ -507,10 +504,7 @@ $$
 
 Extended control model:
 
-$$
-s(t)
-=
-f(
+$$s(t) = f(
 \phi(t),
 I(t),
 J(x),
