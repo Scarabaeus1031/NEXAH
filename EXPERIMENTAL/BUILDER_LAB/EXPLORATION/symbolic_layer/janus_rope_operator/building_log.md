@@ -824,6 +824,7 @@ The transport corridors diagram illustrates the most consistent paths of transpo
 ![Modular Vortex Reconstruction](./outputs/EXP_07/exp07_modular_vortex_reconstruction.png)
 
 This final visual reconstructs the modular vortex structure that emerges from the drift field, showing the interaction between vortices and the transport corridors in a dynamic way.
+
 ---
 
 ## Numerical Results
