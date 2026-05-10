@@ -1,0 +1,35 @@
+EXP-24 — Surrogate Orientation Test
+================================================
+
+original
+--------------------------------
+gate count: 60
+threshold : 0.000000
+best angle: 60.000
+best score: 0.869851
+
+time_shuffle
+--------------------------------
+gate count: 60
+threshold : 0.000000
+best angle: 60.000
+best score: 0.359175
+
+coord_shuffle
+--------------------------------
+gate count: 60
+threshold : 0.000000
+best angle: 144.000
+best score: 0.206500
+
+phase_scramble
+--------------------------------
+gate count: 60
+threshold : 0.000000
+best angle: 120.000
+best score: 0.145450
+
+Working interpretation:
+- compare whether diagonal structure survives surrogate destruction
+- if original geometry differs strongly from surrogates,
+  aperture organization is less likely to be random
