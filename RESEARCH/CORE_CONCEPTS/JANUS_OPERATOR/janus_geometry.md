@@ -400,6 +400,115 @@ directional structural comparison
 
 ---
 
+# 🌌 Mandelbrot / Julia Embedding Perspective
+
+One of the strongest emerging observations
+of the recent JANUS experiments
+is the appearance of transport-like organization
+inside genuine nonlinear fractal geometry.
+
+The EXP-31 coupling experiment revealed that:
+
+```text
+JANUS-style transport corridors
+can become visibly embedded
+inside explicit Julia dynamics.
+```
+
+This is important because the resulting geometry exhibits:
+
+- shell-like outer membranes
+- spiral transition seams
+- diagonal routing corridors
+- nested basin chambers
+- contour-mediated drift fields
+- localized coupling zones
+
+Most strikingly:
+
+```text
+the outer field itself
+appears geometrically active
+```
+
+rather than empty background structure.
+
+The fractal geometry behaves visually like:
+
+```text
+a continuous navigation landscape
+```
+
+containing:
+
+- transport gradients
+- transition membranes
+- directional seams
+- embedded routing channels
+
+---
+
+## Julia Navigation Embedding
+
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
+
+*Embedded JANUS-style navigation structure inside nonlinear Julia-set geometry.*
+
+Observed parameter:
+
+```text
+c = -0.750 + 0.100i
+```
+
+The resulting geometry reveals:
+
+- dual-lobe transport structure
+- spiral gate regions
+- coupled basin membranes
+- nested contour fields
+- edge-sensitive transition routing
+
+Several transport probes partially align with:
+
+- contour gradients
+- spiral seams
+- membrane boundaries
+- transition corridors
+
+This creates the appearance of:
+
+```text
+embedded transport infrastructure
+inside fractal dynamics
+```
+
+rather than isolated chaotic trajectories.
+
+---
+
+## Structural Importance
+
+The Mandelbrot / Julia coupling experiments
+do NOT establish equivalence between:
+
+- JANUS transport
+- fractal mathematics
+- or physical transport systems
+
+However, they strongly suggest that:
+
+```text
+transition organization
+may remain geometrically meaningful
+even inside highly nonlinear parameter spaces.
+```
+
+This is currently one of the strongest
+visual-geometric observations
+of the JANUS series.
+
+---
+
 # 🧠 Geometric Interpretation of Transition Gates
 
 A major working hypothesis of the module:
@@ -636,6 +745,477 @@ theoretical interpretation:
 exploratory
 ```
 
+---
+
+# 🔥 Updated Experimental Perspective
+
+The recent JANUS experimental series significantly extends
+the original geometric intuition.
+
+The system now exhibits evidence for:
+
+- shell-layer organization
+- transition spines
+- coherence corridors
+- phase quadrants
+- delayed recurrence structure
+- breathing-like transport organization
+- aperture-localized transition access
+- directed basin routing
+- predictive transport persistence
+- perturbation bifurcation structure
+- steerable basin transport
+- nonlinear fractal coupling
+
+Most importantly:
+
+```text
+transition structure appears organized
+BEFORE large-scale geometric reconfiguration occurs
+```
+
+and increasingly behaves like:
+
+```text
+a structured transport infrastructure
+embedded inside continuous nonlinear dynamics
+```
+
+This does NOT establish a new physical law.
+
+However:
+
+```text
+the directional geometry appears structured,
+persistent,
+multi-scale,
+and computationally reproducible
+across multiple experimental layers
+```
+
+---
+
+# 🔷 Directed Basin Geometry
+
+Recent JANUS experiments suggest that
+transition organization may reconstruct naturally
+into basin-routing geometry.
+
+Instead of purely continuous diffusion,
+the observed transport increasingly exhibits:
+
+- localized routing nodes
+- corridor-mediated exchange
+- entropy-separated transport regions
+- directed navigation structure
+- predictive routing persistence
+
+---
+
+# 🕸️ Basin Transport Geometry
+
+![EXP-26 Basin Graph Overlay](outputs/exp26_aperture_graph_overlay.png)
+
+*Reconstructed basin-routing geometry inside JANUS aperture transport structure.*
+
+The resulting geometry resembles:
+
+- directed transport channels
+- asymmetric exchange corridors
+- clustered basin families
+- constrained transition routing
+- hidden transport-node organization
+
+Importantly:
+
+```text
+continuous chaotic flow
+appears capable of reconstructing
+into graph-like routing structure
+```
+
+rather than remaining fully diffuse.
+
+---
+
+# 🧭 Directed Navigation Geometry
+
+![EXP-27 Navigation Paths](outputs/exp27_navigation_paths.png)
+
+*Directed navigation reconstruction inside JANUS transport geometry.*
+
+The observed navigation structure separates into:
+
+### Stable routing anchors
+
+and
+
+### probabilistic transition regions.
+
+The resulting geometry exhibits:
+
+- deterministic corridors
+- unstable routing branches
+- entropy-separated transport
+- asymmetric navigation flow
+- persistent directional exchange
+
+This strongly suggests:
+
+```text
+transport accessibility
+is geometrically constrained
+rather than uniformly distributed
+```
+
+---
+
+# 🔮 Predictive Routing Geometry
+
+Recent experiments further suggest that
+JANUS routing possesses short-horizon predictive structure.
+
+---
+
+## Predictive Basin Routing
+
+![EXP-28 Prediction Paths](outputs/exp28_prediction_paths.png)
+
+---
+
+## Predictive Transition Map
+
+![EXP-28 Transition Map](outputs/exp28_prediction_transition_map.png)
+
+---
+
+## Predictive Confidence Structure
+
+![EXP-28 Prediction Confidence](outputs/exp28_prediction_confidence.png)
+
+The predictive routing geometry reveals:
+
+- persistent future corridor occupation
+- stable routing convergence
+- asymmetric basin preference
+- suppressed reverse transport
+- repeated node fixation
+
+The resulting structure behaves less like:
+
+```text
+random future diffusion
+```
+
+and more like:
+
+```text
+constrained transport evolution
+inside structured routing geometry
+```
+
+---
+
+# ⚡ Perturbation Bifurcation Geometry
+
+Recent perturbation experiments reveal that
+JANUS routing organization does NOT degrade smoothly.
+
+Instead the system exhibits:
+
+- stability plateaus
+- abrupt routing collapse
+- bifurcation-like switching
+- localized instability thresholds
+
+---
+
+## Prediction Stability Map
+
+![EXP-29 Stability Map](outputs/exp29_prediction_stability_map.png)
+
+---
+
+## Path Persistence
+
+![EXP-29 Path Persistence](outputs/exp29_path_persistence.png)
+
+---
+
+## Forecast Noise Scan
+
+![EXP-29 Noise Scan](outputs/exp29_forecast_noise_scan.png)
+
+The resulting geometry resembles:
+
+```text
+critical transport thresholds
+inside routing space
+```
+
+rather than continuous degradation.
+
+Most importantly:
+
+```text
+some routing corridors remain stable
+while neighboring regions collapse abruptly
+```
+
+This suggests:
+
+```text
+transport fragility localizes geometrically.
+```
+
+---
+
+# 🧲 Controlled Steering Geometry
+
+The newest experiments further suggest that
+JANUS routing may be partially steerable.
+
+---
+
+## Basin Steering Overlay
+
+![EXP-30 Basin Steering](outputs/exp30_basin_steering_map.png)
+
+---
+
+## Intervention Paths
+
+![EXP-30 Intervention Paths](outputs/exp30_intervention_paths.png)
+
+---
+
+## Transport Shift Matrix
+
+![EXP-30 Shift Matrix](outputs/exp30_transport_shift_matrix.png)
+
+The observed steering behavior includes:
+
+- stable corridor locking
+- directional routing response
+- abrupt basin reassignment
+- intervention-sensitive transition zones
+- mirrored steering deformation
+
+The geometry behaves less like:
+
+```text
+passive chaotic diffusion
+```
+
+and more like:
+
+```text
+a controllable transport membrane
+```
+
+inside the reconstructed field structure.
+
+---
+
+# 🌌 Fractal Navigation Geometry
+
+One of the strongest recent observations
+is the emergence of nonlinear fractal coupling.
+
+The JANUS navigation structure can now be embedded
+inside explicit Julia-set geometry.
+
+---
+
+## EXP-31 — Julia Navigation Coupling
+
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
+
+*Direct coupling between JANUS navigation probes and nonlinear Julia transport geometry.*
+
+Observed parameter:
+
+```text
+c = -0.750 + 0.100i
+```
+
+The resulting geometry exhibits:
+
+- dual-lobe basin organization
+- spiral transition corridors
+- shell-like contour membranes
+- nested transport envelopes
+- edge-sensitive routing seams
+- diagonal exchange pathways
+
+Most importantly:
+
+```text
+the surrounding field is NOT visually empty
+```
+
+Instead it behaves like:
+
+```text
+a continuous navigation potential landscape
+```
+
+containing:
+
+- transport gradients
+- transition membranes
+- layered contour shells
+- embedded routing corridors
+
+---
+
+# 🌀 Spiral Corridor Geometry
+
+The internal Julia geometry reveals:
+
+- spiral gate structures
+- rotational routing pull
+- nested transition seams
+- branching transport corridors
+- membrane-like basin separation
+
+The navigation probes partially align with:
+
+- contour gradients
+- spiral seams
+- edge-sensitive corridors
+- local transport channels
+
+This suggests:
+
+```text
+navigation accessibility
+depends strongly
+on underlying nonlinear geometry
+```
+
+---
+
+# 🔷 Expanded Janus Geometry Interpretation
+
+The original JANUS framework focused primarily on:
+
+```text
+directional coherence collapse
+```
+
+The newer experiments now suggest
+a broader geometric picture involving:
+
+```text
+localized transport organization
+```
+
+including:
+
+- shell-mediated routing
+- graph-organized basin exchange
+- entropy-separated transport anchors
+- predictive corridor persistence
+- perturbation bifurcation thresholds
+- steerable transport response
+- nonlinear fractal embedding
+
+---
+
+# 🔭 Emerging Geometric Picture
+
+Across the current experimental series,
+transition organization increasingly resembles:
+
+```text
+a layered transport infrastructure
+```
+
+with:
+
+- apertures
+- corridors
+- routing membranes
+- transport anchors
+- basin exchange channels
+- spiral transition seams
+- recursive transport layers
+- nonlinear navigation fields
+
+rather than:
+
+```text
+fully diffuse chaotic transition dynamics
+```
+
+---
+
+# 🧠 Updated Working Summary
+
+A compressed interpretation:
+
+```text
+Janus Geometry studies
+how directional transport structure
+organizes locally inside dynamical systems,
+and whether transitions emerge through:
+
+- coherence collapse
+- aperture localization
+- corridor routing
+- recursive transport organization
+- predictive basin structure
+- nonlinear geometric embedding
+```
+
+The newest experiments further suggest:
+
+```text
+transition geometry may organize through:
+
+- shells
+- spines
+- apertures
+- routing corridors
+- entropy-separated nodes
+- bifurcation thresholds
+- steerable basin exchange
+- fractal transport geometry
+```
+
+---
+
+# 🧭 Updated Current Status
+
+```text
+formal geometry:
+early-stage
+
+computational visualization:
+active
+
+cross-system testing:
+ongoing
+
+transition geometry:
+strongly emerging
+
+recursive phase analysis:
+active
+
+routing geometry:
+emerging
+
+predictive transport:
+experimental
+
+fractal embedding:
+experimental
+
+theoretical interpretation:
+exploratory
+```
 ---
 
 Thomas K. R. Hofmann · NEXAH · 2026

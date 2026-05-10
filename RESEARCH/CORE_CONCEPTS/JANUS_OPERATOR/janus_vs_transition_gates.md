@@ -22,6 +22,8 @@ Traditional approaches often associate transitions with:
 - Lyapunov divergence
 - threshold crossing
 - energy accumulation
+- stochastic amplification
+- attractor deformation
 
 The JANUS framework introduces an additional possibility:
 
@@ -79,6 +81,9 @@ Possible characteristics include:
 - trajectory divergence
 - local topology change
 - boundary crossing
+- transport rerouting
+- basin switching
+- directional compression
 
 These gates are already studied through:
 
@@ -87,6 +92,9 @@ These gates are already studied through:
 - field density
 - mismatch analysis
 - coherence structure
+- routing overlays
+- entropy analysis
+- graph reconstruction
 
 ---
 
@@ -148,7 +156,7 @@ regions of energetic instability
 
 # 🌌 Janus Gate Geometry
 
-The proposed geometry:
+The proposed geometry distinguishes several conceptual transport regimes.
 
 ---
 
@@ -160,14 +168,13 @@ Characteristics:
 - coherent local overlap
 - low directional asymmetry
 - persistent field organization
+- stable routing persistence
 
 Conceptually:
 
-```math
-F_{\mathrm{forward}}
-\approx
-F_{\mathrm{backward}}
-```
+$begin:math:display$
+F\_\{\\mathrm\{forward\}\}\\approx F\_\{\\mathrm\{backward\}\}
+$end:math:display$
 
 Interpretation:
 
@@ -186,14 +193,15 @@ Characteristics:
 - overlap degradation
 - coherence thinning
 - phase drift concentration
+- transport branching
+- routing instability
+- shell-crossing concentration
 
 Conceptually:
 
-```math
-F_{\mathrm{forward}}
-\not\approx
-F_{\mathrm{backward}}
-```
+$begin:math:display$
+F\_\{\\mathrm\{forward\}\}\\not\\approx F\_\{\\mathrm\{backward\}\}
+$end:math:display$
 
 Interpretation:
 
@@ -211,6 +219,8 @@ Characteristics:
 - incoherent drift
 - unstable local geometry
 - directional fragmentation
+- routing diffusion
+- transport scattering
 
 Interpretation:
 
@@ -266,6 +276,7 @@ Primary systems:
 - Kuramoto
 - Rössler
 - Duffing
+- Julia-set transport systems
 
 Possible methods:
 
@@ -274,6 +285,9 @@ Possible methods:
 - directional similarity fields
 - transition overlay heatmaps
 - coherence-gradient scans
+- basin graph reconstruction
+- predictive routing analysis
+- entropy mapping
 
 ---
 
@@ -287,6 +301,10 @@ Potential outputs include:
 - coherence-collapse surfaces
 - trajectory-colored gate scans
 - phase mismatch comparisons
+- basin-routing graphs
+- predictive transition matrices
+- steering-response overlays
+- fractal transport embeddings
 
 ---
 
@@ -338,6 +356,9 @@ Several later experiments reveal structures resembling:
 - recursive phase partitioning
 - coherence apertures
 - nested transfer manifolds
+- basin-routing infrastructure
+- entropy-separated navigation zones
+- predictive corridor persistence
 
 The observed geometries repeatedly resemble:
 
@@ -405,7 +426,7 @@ may occur before visible instability peaks emerge.
 
 # 🔷 Emergence of Transition Corridors
 
-Across EXP-11 → EXP-20,
+Across EXP-11 → EXP-31,
 multiple recurring structures emerged:
 
 - shell crossings
@@ -415,6 +436,9 @@ multiple recurring structures emerged:
 - compressed corridors
 - orientation sectors
 - breathing transport manifolds
+- routing basins
+- predictive corridors
+- fractal transition membranes
 
 Several transition events appear localized near:
 
@@ -443,6 +467,8 @@ Several visualizations reveal geometries resembling:
 - breathing cylinders
 - recursive shells
 - yin-yang-like transport structures
+- corridor membranes
+- routing seams
 
 Particularly important observations include:
 
@@ -468,9 +494,99 @@ but visually and computationally reproducible.
 
 ---
 
+# 🌀 Predictive Basin Routing
+
+Recent experiments further suggest that
+transition geometry may support:
+
+```text
+short-horizon predictive routing behavior.
+```
+
+The system now exhibits:
+
+- stable routing corridors
+- entropy-separated node classes
+- asymmetric basin exchange
+- probabilistic navigation regions
+- perturbation-sensitive transport flips
+
+Several routing paths converge toward:
+
+```text
+persistent transport channels
+```
+
+rather than diffusing randomly.
+
+This is one of the strongest current indicators that:
+
+```text
+transition organization may possess
+hidden transport structure.
+```
+
+---
+
+# 🌌 Fractal / Julia Embedding
+
+One of the strongest recent observations
+is the embedding of JANUS-style transport organization
+inside explicit nonlinear fractal geometry.
+
+The EXP-31 Julia coupling experiments reveal:
+
+- dual-lobe transport chambers
+- spiral transition seams
+- contour-mediated routing
+- shell-like outer membranes
+- embedded navigation corridors
+
+Most strikingly:
+
+```text
+the outer fractal field itself
+appears geometrically active
+```
+
+rather than empty background structure.
+
+---
+
+## Julia Navigation Embedding
+
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
+
+*Embedded JANUS-style routing geometry inside nonlinear Julia dynamics.*
+
+Observed parameter:
+
+```text
+c = -0.750 + 0.100i
+```
+
+The resulting geometry exhibits:
+
+- spiral routing pull
+- nested contour fields
+- edge-sensitive coupling
+- membrane-like basin transport
+- localized transition seams
+
+The resulting structure resembles:
+
+```text
+embedded transport infrastructure
+inside nonlinear fractal dynamics
+```
+
+rather than isolated chaotic scattering.
+
+---
+
 # 🔄 Recursive Phase Geometry
 
-The recursive experiments (EXP-17 → EXP-20)
+The recursive experiments (EXP-17 → EXP-31)
 introduce an additional important extension:
 
 ```text
@@ -485,6 +601,7 @@ Observed recursive motifs include:
 - nested phase manifolds
 - breathing transport scaffolds
 - quadrant decomposition geometry
+- predictive routing layers
 
 The resulting structures resemble:
 
@@ -551,6 +668,8 @@ Within this interpretation:
 - shell crossings behave like transition preparation layers
 - transition spines behave like routing corridors
 - recursive gates behave like directional apertures
+- entropy nodes behave like decision regions
+- predictive corridors behave like transport attractors
 
 This naturally connects JANUS
 to the broader NEXAH navigation framework.
@@ -577,6 +696,8 @@ Repeated motifs now include:
 - orientation sectors
 - recursive gate geometry
 - directional bottlenecks
+- predictive routing corridors
+- fractal transport membranes
 
 ---
 
@@ -605,6 +726,8 @@ Potential relationships:
 | phase drift | local directional mismatch |
 | gate structure | overlap-collapse corridor |
 | stable basin | coherent directional field |
+| routing node | transport anchor |
+| entropy region | probabilistic gate zone |
 
 ---
 
@@ -637,6 +760,7 @@ This could potentially explain:
 - hidden instability corridors
 - delayed regime collapse
 - soft transition activation
+- predictive transport preparation
 
 This remains hypothetical.
 
@@ -674,6 +798,8 @@ Potential implications:
 - gate avoidance
 - directional stabilization
 - coherence-preserving control
+- predictive basin steering
+- transport intervention analysis
 
 ---
 
@@ -720,6 +846,19 @@ creating directional asymmetry corridors
 inside reconstructed dynamical fields.
 ```
 
+The newest experiments further suggest that:
+
+```text
+transition geometry may additionally organize through:
+
+- shell-mediated routing
+- recursive transport structure
+- entropy-separated navigation
+- predictive basin persistence
+- steerable transition corridors
+- nonlinear fractal embedding
+```
+
 ---
 
 # 🧭 Current Status
@@ -738,10 +877,19 @@ cross-system testing:
 ongoing
 
 recursive geometry analysis:
-starting
+active
 
 transition-topology interpretation:
 emerging
+
+routing geometry:
+emerging
+
+predictive transport analysis:
+active
+
+fractal embedding:
+experimental
 
 navigation integration:
 partial
