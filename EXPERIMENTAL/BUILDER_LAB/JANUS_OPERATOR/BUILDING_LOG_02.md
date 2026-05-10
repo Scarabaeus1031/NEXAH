@@ -1660,14 +1660,13 @@ transition infrastructure reconstruction.
 # 🔷 EXP-28 — Predictive Basin Routing
 
 Script:
-`scripts_2/janus_predictive_basin_routing.py`
+`scripts_2/janus_predictive_gate_transition_forecast.py`
 
 Outputs:
 
-- `outputs/exp28_prediction_probability_matrix.png`
+- `outputs/exp28_prediction_transition_map.png`
 - `outputs/exp28_prediction_paths.png`
-- `outputs/exp28_prediction_entropy.png`
-- `outputs/exp28_predictive_transport_overlay.png`
+- `outputs/exp28_prediction_confidence.png`
 - `outputs/exp28_prediction_summary.txt`
 
 ---
@@ -1678,21 +1677,15 @@ Outputs:
 
 ---
 
-## Prediction Probability Matrix
+## Prediction Transition Map
 
-![EXP-28 Probability Matrix](outputs/exp28_prediction_probability_matrix.png)
-
----
-
-## Predictive Transition Entropy
-
-![EXP-28 Prediction Entropy](outputs/exp28_prediction_entropy.png)
+![EXP-28 Transition Map](outputs/exp28_prediction_transition_map.png)
 
 ---
 
-## Predictive Transport Overlay
+## Prediction Confidence
 
-![EXP-28 Predictive Overlay](outputs/exp28_predictive_transport_overlay.png)
+![EXP-28 Prediction Confidence](outputs/exp28_prediction_confidence.png)
 
 ---
 
@@ -1714,6 +1707,8 @@ high
 dominant routing node:
 1
 ```
+
+---
 
 # 🔥 Key Result
 
@@ -1770,9 +1765,9 @@ is partially constrained.
 
 ---
 
-## Probability Matrix Observation
+## Transition Map Observation
 
-The predictive transition matrix shows:
+The predictive transition map shows:
 
 - highly asymmetric routing
 - dominant transport edges
@@ -1788,9 +1783,9 @@ rather than diffuse exploration.
 
 ---
 
-## Entropy Observation
+## Confidence Structure Observation
 
-The entropy structure remains separated into:
+The confidence structure remains separated into:
 
 ### low-entropy transport anchors
 
@@ -1846,32 +1841,32 @@ inside JANUS basin transport geometry.
 # 🔷 EXP-29 — Prediction Stability Under Perturbation
 
 Script:
-`scripts_2/janus_prediction_stability_scan.py`
+`scripts_2/anus_prediction_stability_test.py`
 
 Outputs:
 
-- `outputs/exp29_prediction_noise_scan.png`
-- `outputs/exp29_prediction_path_persistence.png`
-- `outputs/exp29_prediction_stability_matrix.png`
-- `outputs/exp29_prediction_summary.txt`
+- `outputs/exp29_prediction_stability_map.png`
+- `outputs/exp29_path_persistence.png`
+- `outputs/exp29_forecast_noise_scan.png`
+- `outputs/exp29_prediction_robustness_summary.txt`
 
 ---
 
 ## Prediction Stability Matrix
 
-![EXP-29 Stability Matrix](outputs/exp29_prediction_stability_matrix.png)
+![EXP-29 Stability Matrix](outputs/exp29_prediction_stability_map.png)
 
 ---
 
 ## Prediction Path Persistence
 
-![EXP-29 Path Persistence](outputs/exp29_prediction_path_persistence.png)
+![EXP-29 Path Persistence](outputs/exp29_path_persistence.png)
 
 ---
 
 ## Forecast Noise Scan
 
-![EXP-29 Forecast Noise Scan](outputs/exp29_prediction_noise_scan.png)
+![EXP-29 Forecast Noise Scan](outputs/exp29_forecast_noise_scan.png)
 
 ---
 
@@ -2034,9 +2029,9 @@ Script:
 Outputs:
 
 - `outputs/exp30_transport_shift_matrix.png`
-- `outputs/exp30_intervention_path_shift.png`
-- `outputs/exp30_control_response_curve.png`
-- `outputs/exp30_basin_steering_overlay.png`
+- `outputs/exp30_intervention_paths.png`
+- `outputs/exp30_control_response.png`
+- `outputs/exp30_basin_steering_map.png`
 - `outputs/exp30_intervention_summary.txt`
 
 ---
@@ -2047,21 +2042,21 @@ Outputs:
 
 ---
 
-## Intervention Path Shift
+## Intervention Paths
 
-![EXP-30 Path Shift](outputs/exp30_intervention_path_shift.png)
-
----
-
-## Control Response Curve
-
-![EXP-30 Control Response](outputs/exp30_control_response_curve.png)
+![EXP-30 Intervention Paths](outputs/exp30_intervention_paths.png)
 
 ---
 
-## Basin Steering Overlay
+## Control Response
 
-![EXP-30 Steering Overlay](outputs/exp30_basin_steering_overlay.png)
+![EXP-30 Control Response](outputs/exp30_control_response.png)
+
+---
+
+## Basin Steering Map
+
+![EXP-30 Steering Map](outputs/exp30_basin_steering_map.png)
 
 ---
 
