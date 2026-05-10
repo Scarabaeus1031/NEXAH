@@ -1,350 +1,522 @@
-# NEXAH Research Vision (v6 — Structured Dynamics, Phase & Navigation)
+# 🧠 NEXAH — Research Vision  
+## Structured Dynamics · Transition Geometry · Directional Navigation
 
-NEXAH is a research framework for analyzing and navigating transitions in complex dynamical systems.
+NEXAH is a research framework for reconstructing, analyzing,
+and navigating transitions inside complex dynamical systems.
 
-It identifies **structure within system dynamics** and enables **causal interaction** through alignment with that structure.
+The framework investigates whether nonlinear systems possess:
+
+- latent geometric organization
+- directional transport structure
+- recursive transition pathways
+- coherence-dependent activation dynamics
+- emergent navigable topology
+
+derived directly from observed system motion.
+
+Rather than treating dynamics
+as isolated state evolution,
+NEXAH studies systems as:
+
+```text
+structured dynamical geometry
+```
+
+inside which motion becomes constrained,
+channeled,
+and directionally organized.
 
 ---
 
-# 🧭 Conceptual Overview
+# 🧭 Conceptual Navigation View
 
 ![Interactive Navigation Map](./FOUNDATION/visuals/interactive_navigation_map.png)
 
-*Integrated structural navigation view across flow, topology, transitions, and coherence.*
+*Integrated structural navigation perspective across flow, topology, coherence, apertures, and directional transport.*
 
 ---
 
-# 🔷 Structural Framework
+# 🌌 Core Structural Perspective
 
-![Structural Framework](./FIGURES/main/Fig_01.png)
+NEXAH currently explores the hypothesis that:
 
-The NEXAH framework reduces dynamical systems to a structural pipeline:
+> nonlinear systems transition
+> through structured coherence geometry
+> rather than unconstrained randomness.
+
+The framework attempts to transform:
+
+```text
+dynamics
+→ structure
+→ coherence
+→ transition geometry
+→ connectivity
+→ topology
+→ navigation
+```
+
+into an operational reconstruction architecture.
+
+---
+
+# 🔷 Unified Structural Framework
+
+![Unified Architecture](./FIGURES/main/unified_transition_architecture.png)
+
+The current NEXAH framework reduces nonlinear systems
+into a layered structural pipeline:
 
 ```text
 Flow
-→ Sheets
-→ Regimes & Gates
-→ Connectivity
-→ Topology
-→ Phase Dynamics
+→ Density Structure
+→ Coherence
+→ Directional Transport
+→ Apertures & Gates
+→ Phase Geometry
 → Mismatch
-→ Transition
-→ Control(direction)
+→ Transition Routing
+→ Connectivity
+→ Emergent Topology
+→ Navigation & Control
 ```
 
-Structure is not imposed — it is extracted from trajectory data.
+Structure is not imposed externally.
+
+It is reconstructed empirically
+from trajectory organization.
 
 ---
 
-# 🔷 Core Hypothesis
+# 🪞 JANUS Transition Geometry
 
-> Complex systems evolve within structured fields  
-> and transition when locally coherent phase evolution breaks down.
+![JANUS Orientation Atlas](./CORE_CONCEPTS/JANUS_OPERATOR/outputs/janus_transition_orientation_atlas.png)
+
+The JANUS layer extends NEXAH
+toward directional transport reconstruction.
+
+It investigates whether transitions organize around:
+
+- directional overlap fields
+- recursive transport manifolds
+- shell crossings
+- aperture corridors
+- orientation bias geometry
+- transport bottlenecks
+- coherence thinning regions
+
+Experimental reconstructions suggest that:
+
+```text
+transition organization correlates with
+breakdown of directional coherence
+```
+
+particularly near:
+
+- apertures
+- shell intersections
+- recursive orientation boundaries
+- transport asymmetries
 
 ---
 
-# 🔷 Transition Geometry + Phase Dynamics
+# 🔁 Core Transition Hypothesis
+
+NEXAH proposes:
+
+> transitions become increasingly probable
+> when locally coherent organization breaks down
+> relative to expected structural evolution.
+
+This breakdown appears observable through:
+
+- phase mismatch
+- coherence decay
+- directional asymmetry
+- aperture activation
+- recursive transport fragmentation
+
+---
+
+# 🔬 Transition Geometry + Phase Dynamics
 
 ![Gate Resonance](./VALIDATION/causality/gate_resonance_scan_multirun.png)
 
-Observed structure:
+Observed structure suggests:
 
-- systems evolve within a **density + flow field**
-- stable regions form **basins (regimes)**
-- transitions occur through **gates (intersections)**
-- phase dynamics determine **when transitions activate**
+- systems evolve inside density + flow geometry
+- coherent regions form persistent basins
+- transitions localize within structured corridors
+- phase dynamics determine activation timing
+- directional organization constrains admissible movement
 
-This empirical structure corresponds to the extracted sheet, gate, and transition layers:
-
-![Extraction](./FIGURES/main/Fig_02.png)
-
----
-
-## 🔑 Key Insight
+This produces an operational two-layer interpretation:
 
 ```text
-Transitions are not random.
+geometry
+→ defines where transitions are possible
 
-They follow geometrically constrained pathways
-AND are triggered by phase mismatch.
+phase dynamics
+→ defines when transitions activate
 ```
 
 ---
 
-# 🧠 Structural Interpretation
-
-```text
-field
-→ structure
-→ geometry
-→ phase
-→ mismatch
-→ transition
-        ↑
-   control(direction)
-```
-
-This defines a **two-layer mechanism**:
-
-- geometry defines *where transitions are possible*
-- phase dynamics defines *when transitions occur*
-
----
-
-# 🔬 Structural Observations
-
-Across systems:
-
-- coherent regions (basins)
-- anisotropic motion (preferred directions)
-- layered dynamics (flow sheets)
-- structured transitions (non-random)
-- phase-dependent activation of transitions
-
----
-
-# 🔬 Causal Mechanism (Validated)
+# 🔥 Central Empirical Observation
 
 ![Phase Mismatch](./VALIDATION/causality/results/phase_mismatch_iota.png)
 
-Observed:
+Current experiments repeatedly suggest:
 
 ```text
-IOTA (instability activation metric)
-⇔ phase mismatch >> 0
+IOTA activation
+⇔ mismatch >> 0
 ```
 
 NOT:
 
 ```text
-IOTA ⇔ instability
+IOTA ⇔ instability magnitude alone
 ```
+
+Mismatch is operationally defined as:
+
+$$
+M(t)
+=
+|\omega(t)-\hat{\omega}(t)|
+$$
+
+where:
+
+- $\omega(t)$ = observed phase velocity
+- $\hat{\omega}(t)$ = expected local phase evolution
 
 ---
 
-## 🧠 Interpretation
+# 🧠 Interpretation
 
 ```text
-instability = potential
-phase mismatch = trigger
+instability
+→ dynamical potential
+
+mismatch
+→ transition activation mechanism
 ```
 
-This establishes **phase mismatch as the operational activation variable**.
+This reframes instability
+as insufficient by itself
+to explain transition organization.
 
 ---
 
-# 🧭 Control Principle
+# 🌊 Directional Coherence Extension
+
+The JANUS layer introduces directional transport coherence.
+
+Forward local transport:
+
+$$
+F_{\mathrm{forward}}(x)
+$$
+
+Backward local transport:
+
+$$
+F_{\mathrm{backward}}(x)
+$$
+
+Directional overlap reconstruction:
+
+$$
+\mathcal{J}(x)
+=
+F_{\mathrm{forward}}(x)
+\odot
+F_{\mathrm{backward}}(x)
+$$
+
+Normalized coherence:
+
+$$
+J(x)
+=
+\frac{
+\|
+\mathcal{J}(x)
+\|
+}{
+\|
+F_{\mathrm{forward}}(x)
+\|
+\,
+\|
+F_{\mathrm{backward}}(x)
+\|
++\varepsilon
+}
+$$
+
+Exploratory observations suggest:
+
+```text
+high coherence
+→ persistent transport organization
+
+low coherence
+→ transition-sensitive geometry
+```
+
+---
+
+# 🪞 Orientation Bias Geometry
+
+Recent exploratory reconstructions indicate that
+transport may exhibit preferred directional organization.
+
+Observed features include:
+
+- asymmetric transport alignment
+- recursive directional roots
+- rotational orientation bias
+- persistent directional pull regions
+
+Operationally:
+
+$$
+\Theta(x)
+=
+\arg(F(x))
+$$
+
+with orientation alignment:
+
+$$
+B(x)
+=
+\cos(
+\Theta(x)
+-
+\Theta_{\mathrm{root}}
+)
+$$
+
+Interpretation:
+
+```text
+transport may organize around
+persistent orientation attractors
+```
+
+rather than isotropic flow.
+
+---
+
+# 🧭 Directional Control Principle
 
 ![Phase Gate Control](./VALIDATION/causality/results/phase_gate_v2_activation.png)
 
-Control is not magnitude-based.
+NEXAH does not interpret stabilization
+as simple magnitude suppression.
 
-It is:
-
-```text
-phase-dependent AND direction-sensitive intervention
-```
-
----
-
-## 🔑 Control Law
+Instead, stabilization appears increasingly dependent on:
 
 ```text
-Control effectiveness depends on:
-
-alignment AND direction relative to phase dynamics
+phase alignment
++
+directional coherence
++
+geometry-aware interaction
 ```
 
----
-
-## 🔬 Control Directionality (Validated Result)
-
-Empirical observation:
+Experimental observations suggest:
 
 ```text
 aligned control
-→ increases drift and transitions
+→ may amplify transitions
 
-inverted control
-→ reduces drift but increases events
-
-damped control
-→ suppresses events but retains instability
-
-inverse control
-→ minimizes drift AND suppresses transitions
+inverse directional control
+→ may reduce drift and suppress transitions
 ```
 
 ---
 
-## 🔑 Key Insight
+# 🔬 Operational Control Perspective
 
-```text
-Control effectiveness depends on direction,
-not magnitude alone.
-```
+Control effectiveness appears increasingly related to:
 
----
+- directional alignment
+- phase opposition
+- transport coherence preservation
+- mismatch minimization
+- geometry-aware steering
 
-## 🧠 Interpretation
-
-Stabilization occurs only when control is applied
-**phase-opposed to intrinsic system dynamics**.
-
----
-
-# 🔷 Field-Based System View
-
-System state:
-
-$$ s=(r,\theta) $$
-
-Dynamics:
-
-$$ \dot{s}=F(s) $$
-
----
-
-# 🔷 Phase Dynamics Extension
-
-Phase:
-
-$$ \phi=\arctan2(y,x) $$
-
-Phase velocity:
-
-$$ \omega=\frac{d\phi}{dt} $$
-
-Mismatch:
-
-$$ M(t)=|\omega(t)-\hat{\omega}(t)| $$
-
----
-
-# 🔷 Coherence
-
-$$ C(s)=\frac{\dot{s}\cdot F(s)}{\|\dot{s}\|\,\|F(s)\|} $$
-
----
-
-# 🔷 Navigation Principle
-
-```text
-navigate along structure
-minimize mismatch
-avoid unstable divergence
-```
+rather than raw damping magnitude alone.
 
 ---
 
 # 🌌 Emergent Topology Perspective
 
 NEXAH interprets topology
-as an emergent consequence of structured motion.
+as an emergent consequence
+of structured transport organization.
 
 Topology is not externally imposed.
 
-It emerges from:
+Instead, it emerges from:
 
-- transition connectivity
 - coherent motion
+- transition connectivity
 - accumulated winding
-- admissible directional structure
+- recursive directional structure
+- admissible transport paths
 
 ---
 
 ## 🔑 Topological Principle
 
 ```text
-Topology emerges from structured connectivity,
-not merely geometric embedding.
+topology emerges from structured connectivity
+inside constrained motion geometry
 ```
 
 ---
 
 # 🧠 Unified System Interpretation
 
+Within the current framework:
+
 ```text
-System =
-trajectory in structured field
+system
+=
+trajectory inside structured transport geometry
 ```
 
 ---
 
 ## Stability
 
-- alignment with flow
-- high-density regions
-- structural containment
-- phase coherence
+Associated with:
+
+- high coherence
+- persistent transport structure
+- directional consistency
+- basin containment
+- phase alignment
 
 ---
 
 ## Instability
 
-- misalignment
-- low density
-- competing flow
+Associated with:
+
+- directional fragmentation
+- coherence thinning
+- transport asymmetry
+- mismatch accumulation
 
 ---
 
 ## Transition
 
-- geometry-defined
-- phase-triggered (mismatch)
+Associated with:
+
+- aperture geometry
+- shell crossings
+- mismatch activation
+- directional breakdown
+- recursive transport reorganization
 
 ---
 
-# ⚠️ Current Limitation
+# 🔷 Current Operational Direction
 
-- phase-aligned control improves trajectories
-- BUT can increase transition activity if misaligned
-
-Missing:
+NEXAH is increasingly evolving toward:
 
 ```text
-correct directional alignment of control
+transition geometry reconstruction
+```
+
+rather than classical state prediction alone.
+
+The framework now focuses on reconstructing:
+
+- admissible transport pathways
+- directional organization
+- transition-sensitive geometry
+- recursive coherence structure
+- navigable dynamical topology
+
+---
+
+# ⚠️ Current Scope
+
+NEXAH is currently:
+
+```text
+empirical
+semi-formal
+geometry-oriented
+navigation-centered
+transition-focused
+```
+
+It is NOT yet:
+
+- a closed mathematical theory
+- a universal physical model
+- analytically complete
+- fully generalized
+
+The framework should therefore be interpreted as:
+
+```text
+an exploratory transition-geometry research architecture
+```
+
+for investigating structure and navigation
+inside nonlinear systems.
+
+---
+
+# 🔥 Current Structural Insight
+
+```text
+systems may not transition randomly.
+
+they may move through structured coherence geometry
+that constrains:
+
+transport,
+transitions,
+connectivity,
+and stabilization behavior.
 ```
 
 ---
 
-# 🔧 Next Step
+# 🧠 Final Perspective
+
+NEXAH explores whether nonlinear systems possess:
+
+- latent transport structure
+- recursive transition geometry
+- directional coherence organization
+- admissible motion topology
+
+that can be reconstructed directly
+from observed dynamics.
+
+The long-term goal is not merely prediction,
+but:
 
 ```text
-s=f(\phi,instability)
-```
-
-Expected:
-
-- reduce mismatch peaks
-- suppress transitions
-- preserve structure
-
----
-
-# 🔬 Status
-
-- empirically validated
-- cross-system confirmed
-- causally interpretable
-- partially controllable
-
----
-
-# 🧭 Final Insight
-
-```text
-Systems do not fail randomly.
-
-They transition when locally coherent phase evolution breaks
-within a structured dynamical field.
-
-Control succeeds when alignment is restored
-
-in both phase and direction.
+understanding how systems become navigable.
 ```
 
 ---
 
-© Thomas K. R. Hofmann  
-NEXAH — 2026
+**NEXAH Research Vision**  
+Transition Geometry · Directional Coherence · Emergent Navigation  
+Thomas K. R. Hofmann · 2026
