@@ -922,3 +922,508 @@ Instead they repeatedly exhibit:
 - self-similar orientation persistence
 - recursive breathing manifolds
 ```
+
+# 🔷 FINDING F-16 — Aperture Gates Are Spatially Localized
+
+Observed in:
+
+- EXP-21
+
+---
+
+## Observation
+
+JANUS aperture activation does NOT distribute uniformly
+through phase space.
+
+Instead:
+
+- gate candidates localize into narrow corridors
+- aperture bursts remain sparse
+- high-score regions cluster geometrically
+- transition access appears spatially constrained
+
+Observed structures include:
+
+- diagonal gate strands
+- transition corridors
+- spine-adjacent activation
+- shell-boundary access regions
+- clustered aperture bursts
+
+---
+
+## Important Observation
+
+Only a small subset of samples
+exhibit strong aperture activation:
+
+```text
+60 gate candidates
+from 12000 samples
+```
+
+This strongly suggests:
+
+```text
+transition accessibility
+is selective,
+not continuously active.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+localized transition access infrastructure
+```
+
+than:
+
+```text
+uniform transition diffusion.
+```
+
+---
+
+# 🔷 FINDING F-17 — Aperture Geometry Is Orientation-Sensitive
+
+Observed in:
+
+- EXP-23
+- EXP-24
+
+---
+
+## Observation
+
+Aperture gate candidates exhibit
+strong directional organization.
+
+The orientation structure is NOT uniform.
+
+Instead:
+
+- diagonal sectors dominate
+- orthogonal crossing is suppressed
+- gate families cluster into preferred angles
+- asymmetric lobe organization persists
+
+Observed alignment structure includes:
+
+```text
+45°
+51.83°
+52°
+60°
+120°
+144°
+```
+
+while:
+
+```text
+90°
+```
+
+remains strongly suppressed.
+
+---
+
+## Important Observation
+
+The strongest measured alignment occurs near:
+
+```text
+45°
+```
+
+while orthogonal alignment approaches:
+
+```text
+0.000000
+```
+
+This suggests:
+
+```text
+gate transport prefers diagonal routing
+rather than orthogonal crossing.
+```
+
+---
+
+## Structural Interpretation
+
+The aperture system behaves more like:
+
+```text
+an orientation-sensitive transport geometry
+```
+
+than:
+
+```text
+an isotropic transition process.
+```
+
+---
+
+# 🔷 FINDING F-18 — Aperture Geometry Survives Surrogate Destruction
+
+Observed in:
+
+- EXP-24
+
+---
+
+## Observation
+
+The original JANUS aperture geometry
+retains substantially stronger directional coherence
+than multiple surrogate systems.
+
+Compared surrogate systems include:
+
+- time-shuffled trajectories
+- coordinate-shuffled trajectories
+- phase-scrambled trajectories
+
+The original system preserves:
+
+- coherent directional peaks
+- stable angular concentration
+- localized gate organization
+- diagonal transport structure
+
+while surrogates exhibit:
+
+- fragmented orientation
+- diffuse angle occupation
+- weaker resonance structure
+- unstable directional preference
+
+---
+
+## Important Observation
+
+Original resonance score:
+
+```text
+0.869851
+```
+
+Surrogate resonance scores remain substantially lower.
+
+This suggests:
+
+```text
+the observed gate geometry
+is not fully explained
+by random angle accumulation.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+persistent directional transport organization
+```
+
+than:
+
+```text
+randomized angular scattering.
+```
+
+---
+
+# 🔷 FINDING F-19 — Aperture Geometry Persists Across Multiple Scales
+
+Observed in:
+
+- EXP-25
+
+---
+
+## Observation
+
+JANUS aperture gate organization
+survives recursive smoothing
+and multi-scale reconstruction.
+
+Persistent structures include:
+
+- diagonal transport corridors
+- nodal gate clusters
+- layered transport shells
+- perforated transition regions
+- stable hotspot basins
+
+The geometry remains visible across scales:
+
+```text
+1
+2
+4
+8
+16
+32
+64
+```
+
+---
+
+## Important Observation
+
+The aperture variance remains bounded
+without catastrophic collapse.
+
+Observed variance range:
+
+```text
+0.017686 → 0.039232
+```
+
+Meanwhile:
+
+- gate candidates remain stable
+- hotspot regions persist
+- transition corridors remain localized
+
+This strongly suggests:
+
+```text
+gate organization is scale-persistent.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+hierarchical transport infrastructure
+```
+
+than:
+
+```text
+small-scale transition noise.
+```
+
+---
+
+# 🔷 FINDING F-20 — Basin Transport Reconstructs Into Directed Graph Geometry
+
+Observed in:
+
+- EXP-26
+
+---
+
+## Observation
+
+JANUS aperture transport reconstructs naturally
+into a directed graph-like basin organization.
+
+The reconstructed system exhibits:
+
+- transport nodes
+- asymmetric routing
+- directed transition edges
+- clustered basin families
+- corridor-mediated exchange
+
+Observed transition matrix:
+
+```text
+0 2 0 2
+0 0 3 3
+0 0 0 3
+4 4 0 0
+```
+
+The matrix is strongly asymmetric.
+
+---
+
+## Important Observation
+
+Transport organization does NOT behave
+like symmetric diffusion.
+
+Instead:
+
+- preferred channels emerge
+- return paths are suppressed
+- routing remains directional
+- exchange corridors persist geometrically
+
+This suggests:
+
+```text
+continuous chaotic flow
+may conceal hidden transport graphs.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+graph-mediated basin transport
+```
+
+than:
+
+```text
+unstructured basin mixing.
+```
+
+---
+
+# 🔷 FINDING F-21 — Directed Basin Navigation Emerges
+
+Observed in:
+
+- EXP-27
+
+---
+
+## Observation
+
+JANUS transport organization supports
+directed navigation-like routing behavior.
+
+The reconstructed basin system exhibits:
+
+- deterministic nodes
+- probabilistic routing nodes
+- entropy-separated transport regions
+- directed navigation paths
+- structured routing asymmetry
+
+Observed navigation path:
+
+```text
+[0, 2, 0, 2, 1, 0, 2, 1, 3]
+```
+
+Observed transition probability matrix:
+
+```text
+0.000 0.000 1.000 0.000
+0.500 0.000 0.000 0.500
+0.600 0.400 0.000 0.000
+0.000 0.000 0.000 0.000
+```
+
+---
+
+## Important Observation
+
+The node entropy separates into:
+
+### Low-entropy nodes
+
+```text
+node 0
+node 3
+```
+
+These behave like:
+
+- deterministic routing anchors
+- stable transport channels
+- source/sink regions
+
+---
+
+### High-entropy nodes
+
+```text
+node 1
+node 2
+```
+
+These behave like:
+
+- probabilistic exchange zones
+- unstable routing regions
+- branching gate structures
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+directed transport infrastructure
+```
+
+than:
+
+```text
+fully random transition diffusion.
+```
+
+The observed system now exhibits:
+
+- routing asymmetry
+- entropy-separated nodes
+- directed navigation structure
+- basin transport organization
+- corridor-mediated exchange geometry
+
+---
+
+# 🔷 Updated Working Meta-Observation
+
+Across EXP-21 to EXP-27,
+a new organizational layer emerges:
+
+```text
+transition geometry itself
+appears reconstructable
+as transport infrastructure.
+```
+
+Repeated structural motifs now include:
+
+- aperture corridors
+- orientation-sensitive gates
+- diagonal routing structure
+- surrogate-stable geometry
+- scale-persistent transport layers
+- basin transport graphs
+- entropy-separated routing nodes
+- directed navigation paths
+
+---
+
+# 🔷 Updated Working Insight
+
+```text
+The observed systems do not appear
+to reorganize through fully diffuse transition dynamics.
+
+Instead they repeatedly exhibit:
+
+- aperture-localized transition access
+- orientation-sensitive routing
+- scale-persistent gate geometry
+- graph-mediated basin transport
+- entropy-structured navigation
+- directed transition infrastructure
+```
