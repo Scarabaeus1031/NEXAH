@@ -1,0 +1,20 @@
+EXP-26 — Aperture Basin Graph Reconstruction
+================================================
+
+gate candidates: 60
+graph nodes: 4
+
+Transition matrix:
+
+   0    2    0    2
+   0    0    3    3
+   0    0    0    3
+   4    4    0    0
+
+Working interpretation:
+- aperture gates may organize into clustered transport nodes
+- transition edges suggest non-random routing
+- basin transfer may occur through graph-mediated corridors
+- hidden transport geometry may exist beneath continuous flow
+
+Exploratory only.
