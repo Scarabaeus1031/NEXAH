@@ -1232,15 +1232,15 @@ Outputs:
 
 ---
 
-## Aperture Transport Flow
+## Aperture Transition Network
 
-![EXP-26 Aperture Transport Flow](outputs/exp26_aperture_transport_flow.png)
+![EXP-26 Transition Network](outputs/exp26_gate_transition_network.png)
 
 ---
 
-## Transition Adjacency Matrix
+## Basin Graph Overlay
 
-![EXP-26 Transition Matrix](outputs/exp26_transition_adjacency_matrix.png)
+![EXP-26 Basin Graph Overlay](outputs/exp26_aperture_graph_overlay.png)
 
 ---
 
