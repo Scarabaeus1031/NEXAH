@@ -2,7 +2,7 @@
 
 > Experimental NEXAH submodule for investigating directional coherence, transition geometry and recursive transport structure inside nonlinear dynamical systems.
 
-> Status: exploratory computational research framework — active geometry & transition analysis layer.
+> Status: semi-formal exploratory geometry & transport-analysis framework.
 
 ---
 
@@ -16,24 +16,33 @@ forward and backward local flow structure
 inside dynamical systems?
 ```
 
-Instead of analyzing only:
+Traditional dynamical systems analysis often studies:
 
 ```text
 state evolution
 ```
 
-the framework studies:
+or:
 
 ```text
-directional compatibility
-inside reconstructed flow geometry
+state → next state
 ```
 
-The emerging idea is that:
+The JANUS framework instead studies:
+
+```text
+local compatibility
+between forward and backward
+directional organization
+```
+
+inside reconstructed flow geometry.
+
+The emerging hypothesis is:
 
 ```text
 transitions may correspond
-to local breakdowns
+to localized breakdowns
 of directional coherence.
 ```
 
@@ -41,25 +50,25 @@ of directional coherence.
 
 # 🔥 Major Shift of the Framework
 
-The original JANUS experiments began as:
+The earliest JANUS experiments primarily behaved like:
 
 ```text
 coherence measurements
 inside dynamical systems
 ```
 
-The newer experiments now increasingly suggest:
+The newer experiments increasingly suggest something deeper:
 
 ```text
 JANUS may reveal
 transition geometry itself.
 ```
 
-The focus has shifted from:
+The focus has shifted away from only:
 
-- local coherence only
-- instability indicators only
-- asymmetry measurements only
+- coherence magnitude
+- instability indication
+- asymmetry measurement
 
 toward:
 
@@ -96,7 +105,7 @@ but computationally reproducible.
 
 # 🗺️ Current Structural Picture
 
-The current experiments repeatedly reveal structures resembling:
+The experiments repeatedly reveal structures resembling:
 
 - transition corridors
 - shell layers
@@ -105,7 +114,9 @@ The current experiments repeatedly reveal structures resembling:
 - breathing manifolds
 - gate-like bottlenecks
 - recursive phase partitions
-- directional transport channels
+- directed transport channels
+- entropy-separated routing zones
+- graph-mediated basin exchange
 
 The resulting geometry increasingly resembles:
 
@@ -125,9 +136,9 @@ fully random diffusion.
 
 Given a reconstructed trajectory field:
 
-```text
-φ(x,t)
-```
+$begin:math:display$
+\\phi\(x\,t\)
+$end:math:display$
 
 the framework constructs:
 
@@ -150,47 +161,27 @@ between forward and backward flow organization
 
 Forward field:
 
-```math
-F_{\mathrm{forward}}(x)
-```
+$begin:math:display$
+F\_\{\\mathrm\{forward\}\}\(x\)
+$end:math:display$
 
 Backward field:
 
-```math
-F_{\mathrm{backward}}(x)
-```
+$begin:math:display$
+F\_\{\\mathrm\{backward\}\}\(x\)
+$end:math:display$
 
 Directional overlap:
 
-```math
-\mathcal{J}(x)
-=
-F_{\mathrm{forward}}(x)
-\odot
-F_{\mathrm{backward}}(x)
-```
+$begin:math:display$
+\\mathcal\{J\}\(x\)\=F\_\{\\mathrm\{forward\}\}\(x\)\\odot F\_\{\\mathrm\{backward\}\}\(x\)
+$end:math:display$
 
 Normalized coherence field:
 
-```math
-J(x)
-=
-\frac{
-\|
-\mathcal{J}(x)
-\|
-}{
-\|
-F_{\mathrm{forward}}(x)
-\|
-\cdot
-\|
-F_{\mathrm{backward}}(x)
-\|
-+
-\varepsilon
-}
-```
+$begin:math:display$
+J\(x\)\=\\frac\{\\\|\\mathcal\{J\}\(x\)\\\|\}\{\\\|F\_\{\\mathrm\{forward\}\}\(x\)\\\|\\cdot\\\|F\_\{\\mathrm\{backward\}\}\(x\)\\\|\+\\varepsilon\}
+$end:math:display$
 
 Interpretation:
 
@@ -220,6 +211,7 @@ Observed structures resemble:
 - directional bottlenecks
 - coherence thinning regions
 - structured transition routing
+- diagonal transport pathways
 
 ---
 
@@ -231,6 +223,7 @@ The system repeatedly organizes into:
 - shell crossings
 - nested transport layers
 - shell-mediated transitions
+- layered transport membranes
 
 ---
 
@@ -249,6 +242,7 @@ The transition center behaves like:
 - a geometric throat
 - a transport spine
 - a constrained exchange manifold
+- a routing aperture
 
 ---
 
@@ -260,6 +254,7 @@ Recursive experiments reveal:
 - recursive shell layering
 - nested phase corridors
 - recursive breathing geometry
+- hierarchical transition routing
 
 ---
 
@@ -284,35 +279,156 @@ as an additional structural layer.
 
 ---
 
-# 🔥 Key Current Observation
+# 🔥 Aperture Geometry & Directional Gates
 
-One of the strongest emerging findings:
+One of the strongest newer findings
+is the appearance of compressed transition apertures.
 
-```text
-transition preparation appears
-before visible geometric reconfiguration.
-```
+Observed structures repeatedly resemble:
 
-Observed repeatedly:
+- directional gates
+- coherence throats
+- rotational apertures
+- diagonal exchange seams
+- transport bottlenecks
 
-```text
-directional coherence weakens first
-while the system may still appear locally stable.
-```
-
-This is extremely important conceptually.
-
-Because the framework studies NOT only:
+The experiments suggest that:
 
 ```text
-magnitude of instability
+transition accessibility
+is spatially localized
+rather than continuously distributed.
 ```
 
-but increasingly:
+Observed gate properties include:
+
+- sparse activation
+- corridor concentration
+- orientation preference
+- shell-boundary localization
+- transport redirection
+
+---
+
+# 🧭 Orientation Structure
+
+The newer experiments additionally reveal:
 
 ```text
-compatibility of directional organization.
+orientation-sensitive transport geometry
 ```
+
+Observed preferred alignment sectors include:
+
+```text
+45°
+52°
+60°
+120°
+144°
+```
+
+while:
+
+```text
+90°
+```
+
+is repeatedly suppressed.
+
+This suggests that transport organization may prefer:
+
+```text
+diagonal routing
+rather than orthogonal crossing.
+```
+
+---
+
+# 🌊 Basin Transport Geometry
+
+Recent experiments further suggest that
+JANUS organization naturally reconstructs into:
+
+- transport-node graphs
+- basin-routing systems
+- entropy-separated regions
+- predictive transport corridors
+- directional steering geometry
+
+Observed structures include:
+
+- deterministic routing anchors
+- probabilistic gate zones
+- asymmetric basin exchange
+- graph-mediated transport
+- corridor locking
+
+This increasingly resembles:
+
+```text
+hidden transport infrastructure
+inside continuous nonlinear flow
+```
+
+rather than unconstrained diffusion.
+
+---
+
+# 🌌 Fractal / Julia Coupling
+
+One of the strongest recent observations
+is the appearance of JANUS-style transport organization
+inside explicit nonlinear fractal geometry.
+
+The EXP-31 coupling experiment revealed:
+
+- shell-like outer membranes
+- spiral transition seams
+- diagonal routing corridors
+- contour-mediated drift fields
+- localized coupling zones
+- embedded transport structure
+
+Most strikingly:
+
+```text
+the outer field itself
+appears geometrically active
+```
+
+rather than empty background structure.
+
+---
+
+## Julia Navigation Coupling
+
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
+
+*Embedded JANUS-style navigation structure inside nonlinear Julia-set geometry.*
+
+Observed parameter:
+
+```text
+c = -0.750 + 0.100i
+```
+
+The resulting geometry reveals:
+
+- dual-lobe transport structure
+- spiral gate regions
+- coupled basin membranes
+- nested contour fields
+- edge-sensitive transition routing
+
+This creates the appearance of:
+
+```text
+embedded transport infrastructure
+inside nonlinear fractal dynamics
+```
+
+rather than isolated chaotic trajectories.
 
 ---
 
@@ -336,6 +452,7 @@ Within this interpretation:
 - transition spines behave like routing corridors
 - recursive gates behave like directional apertures
 - coherence collapse behaves like transition activation
+- routing graphs behave like transport infrastructure
 
 ---
 
@@ -362,9 +479,20 @@ The JANUS experimental series currently includes:
 | EXP-15 | transition orientation atlas |
 | EXP-16 | parameter stability scan |
 | EXP-17 | axis geometry & breathing modes |
-| EXP-18 | universal orientation manifold |
-| EXP-19 | recursive orientation geometry |
+| EXP-18 | recursive orientation geometry |
+| EXP-19 | recursive transport organization |
 | EXP-20 | recursive phase quadrants |
+| EXP-21 | aperture gate localization |
+| EXP-22 | Lorenz ⇄ Julia parameter coupling |
+| EXP-23 | aperture orientation analysis |
+| EXP-24 | surrogate orientation validation |
+| EXP-25 | multi-scale aperture persistence |
+| EXP-26 | basin graph reconstruction |
+| EXP-27 | directed basin navigation |
+| EXP-28 | predictive basin routing |
+| EXP-29 | perturbation stability scan |
+| EXP-30 | controlled basin steering |
+| EXP-31 | Julia navigation embedding |
 
 ---
 
@@ -379,13 +507,14 @@ The module now includes several foundational documents:
 | `janus_geometry.md` | directional geometry interpretation |
 | `janus_vs_transition_gates.md` | transition-gate framework |
 | `FINDINGS.md` | distilled experimental findings |
-| `BUILDING_LOG_01.md` | chronological experimental record |
+| `BUILDING_LOG_01.md` | experimental chronology I |
+| `BUILDING_LOG_02.md` | aperture / routing / fractal phase |
 
 ---
 
 # 🗺️ Visual Geometry Layer
 
-The module now includes several visual geometry systems:
+The module now includes multiple visual geometry systems:
 
 - transition atlases
 - orientation manifolds
@@ -395,6 +524,10 @@ The module now includes several visual geometry systems:
 - breathing manifolds
 - transition spines
 - recursive gate structures
+- basin-routing graphs
+- predictive transport overlays
+- steering-response maps
+- fractal navigation embeddings
 
 The resulting visual structures repeatedly resemble:
 
@@ -415,6 +548,7 @@ The framework is conceptually related to:
 - transition path theory
 - FTLE structure
 - dynamical transport geometry
+- forward/backward DMD methods
 
 However, JANUS differs by emphasizing:
 
@@ -426,7 +560,8 @@ rather than only:
 
 - global operator structure
 - spectral decomposition
-- local divergence magnitude
+- divergence magnitude
+- attractor occupancy
 
 ---
 
@@ -444,7 +579,10 @@ Instead they repeatedly reorganize through:
 - shell-mediated transport
 - recursive phase geometry
 - compressed transition corridors
-- and localized gate-like manifolds.
+- aperture-like gate systems
+- graph-mediated routing
+- predictive basin organization
+- nonlinear fractal embedding
 ```
 
 ---
@@ -459,6 +597,7 @@ The JANUS framework currently is:
 ✔ geometrically interpretable
 ✔ experimentally testable
 ✔ cross-system analyzable
+✔ semi-formal
 ```
 
 It is NOT currently:
@@ -467,8 +606,9 @@ It is NOT currently:
 ❌ a finalized mathematical theory
 ❌ a new physical law
 ❌ a quantum framework
-❌ a proof of hidden order
-❌ a replacement for classical dynamics
+❌ proof of hidden order
+❌ replacement for classical dynamics
+❌ experimentally universal
 ```
 
 The framework should currently be understood as:
@@ -491,13 +631,25 @@ transition geometry:
 active development
 
 recursive geometry:
-starting
+active
+
+aperture analysis:
+active
+
+routing reconstruction:
+active
+
+predictive transport:
+active
+
+fractal coupling:
+experimental
 
 cross-system validation:
 ongoing
 
 navigation integration:
-partial
+planned
 
 visualization framework:
 advanced exploratory phase
@@ -524,7 +676,9 @@ that becomes visible through:
 - directional coherence
 - recursive transport structure
 - shell-mediated organization
-- geometric transition routing
+- transport apertures
+- graph-mediated routing
+- geometric transition corridors
 
 inside reconstructed dynamical fields.
 
