@@ -15,7 +15,7 @@ Core question:
 
 Outputs
 -------
-EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/outputs/
+RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/outputs/
     janus_recurrence_matrix.png
     janus_delayed_correlation.png
     janus_memory_decay.png

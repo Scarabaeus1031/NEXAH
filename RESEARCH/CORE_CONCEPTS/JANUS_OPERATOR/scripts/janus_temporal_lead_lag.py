@@ -28,7 +28,7 @@ from scipy.stats import pearsonr
 # CONFIG
 # ============================================================
 
-OUTPUT_DIR = "EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/outputs"
+OUTPUT_DIR = "RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 MAX_LAG = 200

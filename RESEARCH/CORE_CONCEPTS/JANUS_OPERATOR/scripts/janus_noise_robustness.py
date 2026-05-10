@@ -18,7 +18,7 @@ It does not claim a new physical law.
 
 Outputs
 -------
-EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/outputs/
+RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/outputs/
     janus_noise_signal_overlay.png
     janus_noise_correlation_decay.png
     janus_noise_distribution_shift.png

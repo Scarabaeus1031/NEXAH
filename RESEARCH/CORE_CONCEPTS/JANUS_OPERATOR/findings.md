@@ -4,7 +4,7 @@ System:
 `JANUS_OPERATOR`
 
 Location:
-`EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/`
+`RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/`
 
 Status:
 Experimental / Exploratory

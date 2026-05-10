@@ -18,7 +18,7 @@ It does not claim a new physical law.
 
 Outputs
 -------
-EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/outputs/
+RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/outputs/
     janus_curvature_overlay.png
     janus_curvature_scatter.png
     janus_curvature_density.png

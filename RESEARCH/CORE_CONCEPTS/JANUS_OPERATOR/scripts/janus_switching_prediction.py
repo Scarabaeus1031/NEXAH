@@ -18,7 +18,7 @@ It does not claim a new physical law.
 
 Outputs
 -------
-EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/outputs/
+RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/outputs/
     janus_switching_timeseries.png
     janus_switching_events.png
     janus_switching_phase_overlay.png

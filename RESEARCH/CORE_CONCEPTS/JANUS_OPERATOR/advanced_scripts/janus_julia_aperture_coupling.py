@@ -26,7 +26,7 @@ from mpl_toolkits.mplot3d import Axes3D
 # OUTPUT DIRECTORY
 # ============================================================
 
-OUTPUT_DIR = "EXPERIMENTAL/BUILDER_LAB/JANUS_OPERATOR/outputs/"
+OUTPUT_DIR = "RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/outputs/"
 
 # ============================================================
 # LORENZ SYSTEM
