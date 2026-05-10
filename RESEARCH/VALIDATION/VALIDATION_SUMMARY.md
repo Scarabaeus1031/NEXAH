@@ -9,7 +9,8 @@ The validation layer investigates whether:
 ```text
 transition structure,
 phase mismatch,
-and directional control behavior
+directional control behavior,
+and transport geometry
 persist reproducibly
 across fundamentally different systems.
 ```
@@ -23,6 +24,8 @@ The goal is to determine whether observed structural behavior is:
 - geometry-consistent
 - cross-system persistent
 - causally interpretable
+- recursively structured
+- transport-organized
 
 ---
 
@@ -40,6 +43,9 @@ NEXAH currently validates:
 - phase mismatch dynamics
 - directional control behavior
 - parameter-driven transition systems
+- recursive transport organization
+- predictive routing geometry
+- fractal embedding behavior
 
 The framework currently investigates whether:
 
@@ -233,6 +239,27 @@ identify operational transition mechanism
 
 ---
 
+# 🌀 LEVEL 8 — JANUS Transport Geometry (Experimental)
+
+Validated:
+
+- recursive transport persistence
+- surrogate robustness
+- predictive basin routing
+- graph-mediated transport organization
+- directional steering
+- fractal embedding geometry
+
+Goal:
+
+```text
+investigate whether transition structure
+can be reconstructed as
+transport and navigation geometry
+```
+
+---
+
 # 🔬 Validation Scope
 
 Current primary systems include:
@@ -242,20 +269,21 @@ Current primary systems include:
 - Duffing
 - Kuramoto
 - parameter-driven fractal systems
+- JANUS transport systems
 
 ---
 
 # 🧪 1. Multi-Run Validation (Lorenz)
 
 **Script:** `run_lorenz_multirun_validation.py`  
-**Runs:** 10  
+**Runs:** 10
 
 ---
 
 ## Results
 
-- Mean endpoint distance: **9.7892**  
-- Std deviation: **5.9301**  
+- Mean endpoint distance: **9.7892**
+- Std deviation: **5.9301**
 - Attractor stability: **MEDIUM**
 
 ---
@@ -684,9 +712,7 @@ Julia / Mandelbrot parameter trajectories.
 ## Structural Observable
 
 $$
-\Delta(t)
-=
-\text{frame-to-frame structural difference}
+\Delta(t)=\text{frame-to-frame structural difference}
 $$
 
 ---
@@ -694,9 +720,7 @@ $$
 ## Core Relation
 
 $$
-P(\text{transition})
-=
-f(\Delta, distance)
+P(\text{transition})=f(\Delta,distance)
 $$
 
 ---
@@ -729,6 +753,181 @@ parameter motion
 
 ---
 
+# 🌀 13. JANUS Recursive Transport Geometry
+
+## Module
+
+```text
+RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/
+```
+
+---
+
+## Purpose
+
+Investigate whether transition organization
+can be reconstructed as:
+
+- recursive transport geometry
+- coherence routing
+- basin infrastructure
+- orientation-sensitive navigation
+- transport-layer organization
+
+---
+
+## Observed Structural Motifs
+
+Repeatedly observed across EXP-01 → EXP-31:
+
+- shell structures
+- recursive corridors
+- transition spines
+- coherence minima
+- aperture gates
+- transport anchors
+- directed basin routing
+- entropy-separated nodes
+- nonlinear routing layers
+
+---
+
+## Core Observation
+
+```text
+transition organization appears structured
+before visible large-scale reconfiguration occurs
+```
+
+---
+
+## Recursive Geometry
+
+Observed behavior includes:
+
+- nested shell organization
+- breathing manifolds
+- recursive transport persistence
+- scale-stable routing structure
+
+Observed scales:
+
+```text
+128
+256
+512
+1024
+2048
+```
+
+---
+
+## Surrogate Robustness
+
+Compared against:
+
+- shuffled trajectories
+- phase-scrambled systems
+- coordinate-randomized systems
+
+Observed result:
+
+```text
+original transport geometry
+retains substantially stronger
+directional coherence
+than surrogate systems
+```
+
+---
+
+## Predictive Basin Routing
+
+Observed behavior includes:
+
+- stable routing anchors
+- corridor persistence
+- bifurcation-sensitive switching
+- perturbation-triggered reorganization
+
+Important observation:
+
+```text
+future routing does not diffuse uniformly
+through all available basin states
+```
+
+---
+
+## Directional Steering
+
+Directional intervention produces:
+
+- corridor switching
+- routing inversion
+- node reassignment
+- transport deformation
+
+This suggests:
+
+```text
+transport geometry is partially steerable
+through localized directional intervention
+```
+
+---
+
+## Fractal Embedding
+
+Observed embedding into:
+
+- Julia dynamics
+- Mandelbrot boundary geometry
+- nonlinear contour systems
+- spiral transition seams
+
+Observed structures include:
+
+- shell-mediated transport
+- contour-guided routing
+- localized navigation accessibility
+- nonlinear transition embedding
+
+---
+
+## Structural Interpretation
+
+The resulting organization behaves more like:
+
+- recursive routing infrastructure
+- constrained transport geometry
+- orientation-sensitive navigation
+- graph-mediated basin exchange
+
+than:
+
+- unconstrained chaotic diffusion
+
+---
+
+## Current Status
+
+JANUS currently represents:
+
+```text
+experimental
+semi-formal
+reproducible transport geometry analysis
+```
+
+It is NOT yet:
+
+- mathematically closed
+- universally generalized
+- fully validated across arbitrary systems
+
+---
+
 # 🔬 What is CURRENTLY strongly supported?
 
 ## ✅ Strong Empirical Support
@@ -740,6 +939,8 @@ parameter motion
 - mismatch-transition correlation
 - directional control asymmetry
 - geometric transition localization
+- recursive transport persistence
+- surrogate-resistant routing geometry
 
 ---
 
@@ -751,6 +952,8 @@ parameter motion
 - universal control kernels
 - generalized transition geometry
 - parameter-space universality
+- universal transport manifolds
+- predictive routing formalization
 
 ---
 
@@ -762,7 +965,8 @@ The validation layer currently supports the interpretation that:
 transition structure
 is reproducible,
 geometry-dependent,
-and phase-sensitive
+phase-sensitive,
+and partially transport-organized
 across multiple classes
 of dynamical systems
 ```
@@ -784,8 +988,9 @@ is not achieved
 by reducing instability alone
 
 but by aligning control
-with intrinsic phase structure
-and directional system geometry
+with intrinsic phase structure,
+directional geometry,
+and coherent transport organization
 ```
 
 ---
@@ -800,6 +1005,7 @@ cross-system consistent
 geometry-oriented
 semi-formal
 causally suggestive
+transport-structured
 ```
 
 It is NOT yet:
@@ -818,10 +1024,16 @@ The validation layer suggests that
 complex systems may transition
 through structured dynamical geometry
 rather than unconstrained randomness.
+
+The JANUS extension further suggests
+that transition organization itself
+may exhibit recursive transport structure,
+routing persistence,
+and constrained navigation geometry.
 ```
 
 ---
 
 **NEXAH Validation Layer**  
-Empirical Transition & Control Validation Framework  
+Empirical Transition, Control & Transport Geometry Framework  
 Thomas K. R. Hofmann · 2026
