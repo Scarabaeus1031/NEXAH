@@ -1,0 +1,62 @@
+EXP-25 — JANUS multi-scale aperture geometry
+================================================
+
+Goal:
+Test whether aperture gate structure persists across smoothing scales.
+
+Scale statistics:
+
+scale: 1
+  gate candidates: 60
+  threshold: 0.884638
+  mean aperture: 0.466512
+  max aperture: 1.000000
+  aperture variance: 0.030323
+
+scale: 2
+  gate candidates: 60
+  threshold: 0.887437
+  mean aperture: 0.468969
+  max aperture: 1.000000
+  aperture variance: 0.030217
+
+scale: 4
+  gate candidates: 60
+  threshold: 0.904815
+  mean aperture: 0.483365
+  max aperture: 1.000000
+  aperture variance: 0.031029
+
+scale: 8
+  gate candidates: 60
+  threshold: 0.883322
+  mean aperture: 0.490178
+  max aperture: 1.000000
+  aperture variance: 0.029138
+
+scale: 16
+  gate candidates: 60
+  threshold: 0.936537
+  mean aperture: 0.548039
+  max aperture: 1.000000
+  aperture variance: 0.031184
+
+scale: 32
+  gate candidates: 60
+  threshold: 0.910453
+  mean aperture: 0.510461
+  max aperture: 1.000000
+  aperture variance: 0.039232
+
+scale: 64
+  gate candidates: 60
+  threshold: 0.969994
+  mean aperture: 0.648931
+  max aperture: 1.000000
+  aperture variance: 0.017686
+
+Working interpretation:
+- persistent gate locations across scale indicate robust aperture geometry
+- scale collapse would indicate noise-level gate artifacts
+- multi-scale density highlights recurring transition corridors
+- this remains exploratory and should be compared with surrogate controls
