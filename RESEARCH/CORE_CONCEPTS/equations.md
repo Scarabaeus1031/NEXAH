@@ -1,51 +1,78 @@
-## 🧭 Role in NEXAH
+# 🧠 NEXAH — Core Equations & Transition Geometry Layer
 
-This document defines the **minimal operational layer**  
-linking empirical observations to formal structure.
+This document defines the **minimal operational equation framework**  
+underlying the NEXAH transition-geometry architecture.
 
-It translates:
+It formalizes relationships between:
 
-```text
-validation → measurable quantities → control-relevant structure
-```
+- phase dynamics
+- mismatch
+- instability
+- directional coherence
+- transition activation
+- transport geometry
+- control interaction
 
----
+The framework is grounded in:
 
-# 🧮 NEXAH — Core Equations
-
-This document defines the **minimal operational mathematical structure**  
-underlying the NEXAH framework.
-
-It formalizes the relationship between:
-
-- phase dynamics  
-- mismatch  
-- transitions  
-- control  
-
-All quantities are derived from empirical system behavior.
+- empirical observations
+- cross-system validation
+- reconstructed dynamical geometry
+- exploratory JANUS transition analysis
 
 ---
 
 # ⚠️ Scope
 
-This is:
+This document is:
 
-- not a complete theory  
-- not a formal proof  
+- not a finalized mathematical theory
+- not a proof of universality
+- not a physical field law
 
 It is:
 
-> a **minimal, empirically grounded equation system**
+> a minimal operational equation system for describing
+> transition organization inside nonlinear systems.
 
 ---
 
-# 🧭 1. Dynamical System
+# 🧭 Role in NEXAH
+
+This layer connects:
+
+```text
+validation
+→ measurable quantities
+→ geometric interpretation
+→ transition structure
+→ navigation/control
+```
+
+---
+
+# 🔁 Core NEXAH Pipeline
+
+```text
+trajectory
+→ phase
+→ mismatch
+→ directional coherence
+→ transition geometry
+→ routing structure
+→ navigation
+```
+
+---
+
+# 🧮 1. Dynamical System
 
 We consider a continuous dynamical system:
 
 $$
-\dot{x}(t) = F(x(t)), \quad x(t) \in \mathbb{R}^n
+\dot{x}(t) = F(x(t)),
+\quad
+x(t) \in \mathbb{R}^n
 $$
 
 with trajectory:
@@ -58,19 +85,25 @@ $$
 
 # 🌀 2. Phase Definition
 
-Phase is defined via a projection onto a 2D subspace:
+Phase is defined through projection onto a local 2D subspace:
 
 $$
 \phi(t) = \arctan2(x_2(t), x_1(t))
 $$
 
-This defines a **scalar coordinate capturing rotational progression**.
+Interpretation:
+
+```text
+scalar rotational progression coordinate
+```
+
+capturing local cyclical structure.
 
 ---
 
 # 🔁 3. Phase Velocity
 
-Temporal derivative:
+Temporal phase evolution:
 
 $$
 \omega(t) = \frac{d\phi(t)}{dt}
@@ -79,95 +112,121 @@ $$
 Discrete approximation:
 
 $$
-\omega(t) \approx \frac{\phi(t+\Delta t) - \phi(t)}{\Delta t}
+\omega(t)
+\approx
+\frac{
+\phi(t+\Delta t)-\phi(t)
+}{
+\Delta t
+}
 $$
 
 ---
 
 # 🧩 4. Expected Phase Dynamics
 
-Define a local expectation operator:
+Define local expected phase behavior:
 
 $$
-\hat{\omega}(t) = \mathcal{E}[\omega](t)
+\hat{\omega}(t)
+=
+\mathcal{E}[\omega](t)
 $$
 
 where:
 
-- $\mathcal{E}$ is a local smoothing operator  
-- e.g. moving average, kernel smoothing, or low-pass filter  
+- $\mathcal{E}$ = local expectation operator
+- moving average
+- kernel smoothing
+- local low-pass reconstruction
 
 Interpretation:
 
 ```text
-ω̂(t) represents expected phase evolution under local consistency
+locally coherent expected phase evolution
 ```
 
 ---
 
 # ⚠️ 5. Phase Mismatch
 
-Core quantity:
+Core NEXAH quantity:
 
 $$
-M(t) = |\omega(t) - \hat{\omega}(t)|
-$$
-
-Interpretation:
-
-```text
-M(t) small → coherent phase evolution  
-M(t) large → disruption of phase consistency
-```
-
----
-
-## 🔬 Physical Interpretation (Phase Consistency)
-
-In nonlinear physical systems:
-
-```text
-Phase alignment → constructive accumulation  
-Phase mismatch → oscillatory or inefficient interaction  
-```
-
-If phases are not aligned, energy transfer does not accumulate but oscillates or cancels out  [oai_citation:0‡RP Photonics](https://www.rp-photonics.com/phase_matching.html?utm_source=chatgpt.com)  
-
----
-
-## 🧠 Transfer to NEXAH
-
-```text
-coherent phase → stable structural evolution  
-phase mismatch → breakdown of consistency  
-→ transition region
-```
-
----
-
-# 🔥 6. Instability Measure
-
-Define local dynamical magnitude:
-
-$$
-I(t) = \|\dot{x}(t)\|
+M(t)
+=
+|\omega(t)-\hat{\omega}(t)|
 $$
 
 Interpretation:
 
 ```text
-I(t) measures local dynamical intensity (energy scale),
-not structural consistency
+small M(t)
+→ coherent phase evolution
+
+large M(t)
+→ breakdown of local phase consistency
 ```
 
 ---
 
-# ⚡ 7. Transition Events (IOTA)
+# 🧠 Physical Analogy (Heuristic)
 
-Define transition activation probabilistically:
+In many nonlinear oscillatory systems:
+
+```text
+phase alignment
+→ constructive accumulation
+
+phase mismatch
+→ cancellation / disruption
+```
+
+NEXAH transfers this idea structurally:
+
+```text
+coherent phase
+→ stable organization
+
+phase mismatch
+→ transition preparation
+```
+
+---
+
+# 🔥 6. Dynamical Intensity
+
+Local dynamical magnitude:
 
 $$
-P(\text{IOTA at } t) = f(M(t))
+I(t)
+=
+\|\dot{x}(t)\|
+$$
+
+Interpretation:
+
+```text
+local dynamical intensity scale
+```
+
+Important:
+
+```text
+I(t) measures activity,
+NOT transition organization.
+```
+
+---
+
+# ⚡ 7. Transition Activation (IOTA)
+
+Transition probability:
+
+$$
+P(\text{IOTA at } t)
+=
+f(M(t))
 $$
 
 with:
@@ -178,317 +237,517 @@ $$
 
 ---
 
-## Threshold Approximation (Operational)
+# 🔬 Threshold Approximation
+
+Operationally:
 
 $$
-\text{IOTA} \Longleftrightarrow M(t) > \tau
+\text{IOTA}
+\Longleftrightarrow
+M(t) > \tau
 $$
+
+where:
+
+- $\tau$ = empirical mismatch threshold
 
 ---
 
-# 🔬 8. Conditional Transition Law
+# 🔥 8. Core Transition Result
 
 Empirical observation:
 
 $$
-P(\text{IOTA} \mid M) \uparrow \quad \text{as } M \uparrow
-$$
-
----
-
-# 🧠 9. Interpretation of Mismatch
-
-```text
-M(t) = deviation from locally consistent phase evolution
-```
-
----
-
-# 🎯 10. Control Law (Phase-Based)
-
-$$
-s(t) = d \cdot s^*(\phi(t))
-$$
-
----
-
-# ⚠️ Limitation
-
-Phase-only control is insufficient to suppress transitions.
-
----
-
-# 🚀 11. Extended Control Law
-
-$$
-s(t) = f(\phi(t), I(t))
-$$
-
----
-
-# 🔧 12. Control Objective
-
-$$
-\min M(t)
-$$
-
-Equivalent:
-
-$$
-\omega(t) \rightarrow \hat{\omega}(t)
-$$
-
----
-
-# 🧭 13. Control Effectiveness
-
-```text
-effective control ⇔ M(t) small
-```
-
----
-
-# 🔁 14. Transition Mechanism (Core Result)
-
-Empirical result:
-
-```text
-Transitions are not driven by instability alone
-```
-
-Formally:
-
-$$
-\text{IOTA} \not\sim I(t)
+\text{IOTA}
+\not\sim
+I(t)
 $$
 
 but:
 
 $$
-\text{IOTA} \sim M(t)
-$$
-
----
-
-# 🧬 15. Geometric Interpretation
-
-```text
-Stability:
-→ M ≈ 0 (coherent phase structure)
-
-Instability:
-→ I large (high dynamical magnitude)
-
-Transition:
-→ M large (loss of phase consistency)
-```
-
----
-
-# 🔄 16. Angular Structure (Empirical)
-
-$$
-k \in \{4, 32, 34, 2, 0\}
-$$
-
-```text
-Transitions exhibit structured angular signatures
-```
-
----
-
-# 🔑 System Summary
-
-```text
-φ → ω → ω̂ → M → transition probability
-            ↑
-         control
-```
-
----
-
-![Core Dynamical Variables](./visuals/nexah_phase_mismatch_control_mechanism.png)
-
----
-
-# 🔥 Central Insight
-
-```text
-Transitions are caused by phase mismatch,
-not by instability magnitude alone
-```
-
----
-
-# 🚀 Operational Principle
-
-```text
-Control aligns phase dynamics,
-rather than suppressing system energy
-```
-
----
-
-# 🔬 17. Control Directionality (Extension)
-
-$$
-s(t) = s^*(\phi(t), d)
-$$
-
-with:
-
-- $d \in \{-1, +1\}$
-
----
-
-## 🔁 Directional Effect
-
-```text
-aligned (+1)   → increases transitions  
-inverted (-1)  → reduces drift, may increase mismatch  
-damped         → partial suppression  
-inverse        → minimizes mismatch and transitions
-```
-
----
-
-# 🧪 18. Parameter-Driven Transition Extension (Fractal Systems)
-
-To test whether the transition mechanism extends beyond intrinsic system dynamics,  
-we introduce an observable derived from structural evolution:
-
-$$
-\Delta(t) = \text{frame-to-frame structural difference}
-$$
-
----
-
-## 🔗 Relation to Mismatch
-
-Empirical observation:
-
-$$
-\Delta(t) \approx M(t)
+\text{IOTA}
+\sim
+M(t)
 $$
 
 Interpretation:
 
 ```text
-Δ(t) acts as an observable proxy for phase mismatch
-when phase is not explicitly defined
+transitions are not triggered
+by instability magnitude alone,
+but by loss of phase consistency.
 ```
 
 ---
 
-## 🌐 Extended Transition Law
+# 🧭 9. Directional Coherence (JANUS Extension)
 
-For parameter-driven systems:
+JANUS introduces directional compatibility geometry.
+
+Forward local flow:
 
 $$
-P(\text{IOTA}) = f(\Delta(t), C(t))
+F_{\mathrm{forward}}(x)
+$$
+
+Backward local flow:
+
+$$
+F_{\mathrm{backward}}(x)
+$$
+
+Directional overlap operator:
+
+$$
+\mathcal{J}(x)
+=
+F_{\mathrm{forward}}(x)
+\odot
+F_{\mathrm{backward}}(x)
+$$
+
+---
+
+# 🪞 10. Normalized Janus Coherence
+
+$$
+J(x)
+=
+\frac{
+\|
+\mathcal{J}(x)
+\|
+}{
+\|
+F_{\mathrm{forward}}(x)
+\|
+\cdot
+\|
+F_{\mathrm{backward}}(x)
+\|
++
+\varepsilon
+}
+$$
+
+with:
+
+$$
+\varepsilon \ll 1
+$$
+
+for numerical stability.
+
+---
+
+# 🔬 Interpretation of JANUS Coherence
+
+```text
+high J(x)
+→ directional agreement
+→ coherent transport organization
+
+low J(x)
+→ directional asymmetry
+→ transition-sensitive geometry
+```
+
+---
+
+# 🌊 11. Transition Geometry Hypothesis
+
+Current JANUS hypothesis:
+
+$$
+P(\text{IOTA})
+\uparrow
+\quad
+\text{as}
+\quad
+J(x)
+\downarrow
+$$
+
+Interpretation:
+
+```text
+transition probability increases
+as directional coherence weakens.
+```
+
+---
+
+# 🔷 12. Aperture Geometry
+
+Empirical geometry layer:
+
+```text
+localized coherence thinning
+```
+
+produces structures resembling:
+
+- gates
+- apertures
+- bottlenecks
+- directional throats
+
+Operational aperture score:
+
+$$
+A(x)
+=
+1 - J(x)
+$$
+
+Interpretation:
+
+```text
+high aperture score
+→ transition-prone geometry
+```
+
+---
+
+# 🔁 13. Recursive Phase Geometry
+
+Recent decomposition:
+
+| Quadrant | Interpretation |
+|---|---|
+| Q1 | Expansion |
+| Q2 | Compression |
+| Q3 | Memory |
+| Q4 | Transition |
+
+Phase-space partition:
+
+$$
+Q(t)
+=
+\mathcal{Q}(\phi(t), \dot{\phi}(t))
+$$
+
+Interpretation:
+
+```text
+phase structure organizes transition geometry
+```
+
+---
+
+# 🧠 14. Orientation Bias Geometry
+
+Emerging exploratory structure:
+
+```text
+orientation bias fields
+```
+
+Empirical interpretation:
+
+- transport exhibits preferred directions
+- flow aligns along coherence roots
+- transitions organize along directional attractors
+
+Directional orientation field:
+
+$$
+\Theta(x)
+=
+\arg(F(x))
+$$
+
+Bias alignment score:
+
+$$
+B(x)
+=
+\cos(\Theta(x)-\Theta_{\mathrm{root}})
+$$
+
+Interpretation:
+
+```text
+high B(x)
+→ alignment with dominant orientation geometry
+```
+
+---
+
+# 🔁 15. Unified Transition Structure
+
+Current unified operational picture:
+
+$$
+\mathcal{X}(t)
+=
+(M(t), J(x), A(x), B(x))
+$$
+
+Transition probability:
+
+$$
+P(\text{IOTA})
+=
+f(\mathcal{X}(t))
+$$
+
+---
+
+# 🔬 Interpretation
+
+Transitions increasingly correlate with:
+
+- mismatch
+- directional breakdown
+- aperture activation
+- orientation asymmetry
+- recursive phase geometry
+
+rather than:
+
+```text
+raw instability magnitude alone.
+```
+
+---
+
+# 🎯 16. Control Law (Phase-Based)
+
+Minimal directional control:
+
+$$
+s(t)
+=
+d \cdot s^*(\phi(t))
 $$
 
 where:
 
-- $\Delta(t)$ = local structural change  
-- $C(t)$ = global context (e.g. parameter-space position)
+$$
+d \in \{-1,+1\}
+$$
 
 ---
 
-## 🧠 Interpretation
+# 🔧 17. Extended Directional Control
+
+Extended control model:
+
+$$
+s(t)
+=
+f(
+\phi(t),
+I(t),
+J(x),
+B(x)
+)
+$$
+
+Interpretation:
 
 ```text
-Intrinsic systems:
-M(t) → transition
-
-Parameter-driven systems:
-Δ(t) → transition
-```
-
-with:
-
-```text
-Δ(t) ≈ M(t)
+control becomes geometry-aware
+instead of purely energy-suppressive.
 ```
 
 ---
 
-## 🔁 Unified View
+# 🚀 18. Control Objective
+
+Primary objective:
 
 $$
-P(\text{IOTA}) = f(\mathcal{X}(t))
+\min M(t)
 $$
 
-with:
+Extended objective:
 
 $$
-\mathcal{X}(t) =
+\max J(x)
+$$
+
+Equivalent interpretation:
+
+```text
+maintain coherent directional organization.
+```
+
+---
+
+# 🧠 19. Effective Phase Dynamics
+
+Effective phase evolution under control:
+
+$$
+\omega_{\mathrm{eff}}(t)
+=
+\omega(t)-s(t)
+$$
+
+Updated mismatch:
+
+$$
+M(t)
+=
+|
+\omega_{\mathrm{eff}}(t)
+-
+\hat{\omega}(t)
+|
+$$
+
+---
+
+# 🌐 20. Fractal / Structural Extension
+
+For parameter-driven systems:
+
+$$
+\Delta(t)
+=
+\text{local structural change}
+$$
+
+Empirical observation:
+
+$$
+\Delta(t)
+\approx
+M(t)
+$$
+
+Interpretation:
+
+```text
+structural change behaves
+as a mismatch proxy
+when phase is not directly observable.
+```
+
+---
+
+# 🔁 21. Unified Transition Law
+
+Unified transition observable:
+
+$$
+\mathcal{X}(t)
+=
 \begin{cases}
-M(t) & \text{(phase-defined systems)} \\
-\Delta(t) & \text{(structure-defined systems)}
+M(t)
+&
+\text{phase-defined systems}
+\\
+\Delta(t)
+&
+\text{structure-defined systems}
 \end{cases}
 $$
 
+Generalized transition probability:
+
+$$
+P(\text{IOTA})
+=
+f(\mathcal{X}(t))
+$$
+
 ---
 
-## ⚠️ Status
-
-- empirically observed  
-- consistent with mismatch-based transition mechanism  
-- not yet generalized across systems  
-
----
-
-## 🔑 Extended Insight
+# 🧠 22. Central Structural Principle
 
 ```text
-Transitions are triggered by mismatch,
-
-whether measured via:
-- phase deviation (M)
-- structural change (Δ)
+Transitions are caused by
+breakdown of coherent organization,
+not by instability magnitude alone.
 ```
 
 ---
 
-## 🧠 Interpretation
-
-$$
-\omega_{\text{eff}}(t) = \omega(t) - s(t)
-$$
-
-$$
-M(t) = |\omega_{\text{eff}}(t) - \hat{\omega}(t)|
-$$
-
----
-
-## 🔑 Extended Control Objective
+# 🔑 Current Operational Insight
 
 ```text
-Minimize mismatch via directional alignment
+Geometry defines
+where transitions can occur.
+
+Mismatch defines
+when transitions activate.
+
+Directional coherence defines
+how transitions organize.
 ```
 
 ---
 
-## 🚀 Updated Principle
+# 🔗 Relation to Other NEXAH Modules
 
-```text
-Control does not reduce instability.
+## → field_model.md
 
-Control modifies phase dynamics through directional interaction
-```
+- structured dynamical fields
+
+## → aperture_geometry.md
+
+- gate regions
+- shell crossings
+- transport apertures
+
+## → JANUS_OPERATOR/
+
+- directional coherence geometry
+- recursive transport structure
+- orientation manifolds
+
+## → VALIDATION/
+
+- empirical support layer
+
+---
+
+# ⚠️ Current Limitations
+
+- empirical framework
+- incomplete formalization
+- dependent on reconstruction quality
+- limited analytical derivation
+- operator formalism still emerging
 
 ---
 
 # 🧭 Status
 
-- empirically validated  
-- cross-system consistent  
-- causally supported  
+```text
+phase mismatch:
+empirically validated
+
+directional coherence:
+experimental but reproducible
+
+transition geometry:
+active exploratory phase
+
+orientation geometry:
+emerging
+
+cross-system consistency:
+strong exploratory evidence
+```
 
 ---
 
-**NEXAH Core Equation Layer**  
-Minimal Phase–Mismatch–Control Framework  
+# 🌌 Current Interpretation
+
+```text
+nonlinear systems appear to transition
+through structured coherence geometry
+rather than unconstrained randomness.
+```
+
+---
+
+**NEXAH Equation Layer**  
+Minimal Transition–Geometry–Mismatch Framework  
 Thomas K. R. Hofmann · 2026
