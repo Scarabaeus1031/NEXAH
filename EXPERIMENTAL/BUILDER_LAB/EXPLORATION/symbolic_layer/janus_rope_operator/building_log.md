@@ -576,7 +576,7 @@ Outputs:
 
 ## Angle Distribution
 
-![Angle Distribution](outputs/exp05_angle_distribution.png)
+![Angle Distribution](./outputs/EXP_05/exp05_angle_distribution.png)
 
 The angle distribution chart shows how the splinter apertures spread across different angular zones, with some angular ranges showing higher densities.
 
@@ -584,7 +584,7 @@ The angle distribution chart shows how the splinter apertures spread across diff
 
 ## Forbidden Splinter Density
 
-![Forbidden Splinter Density](outputs/exp05_forbidden_splinter_density.png)
+![Forbidden Splinter Density](./outputs/EXP_05/exp05_forbidden_splinter_density.png)
 
 This visual shows the forbidden density zones, where transport is suppressed due to prime-based drift behavior.
 
@@ -592,7 +592,7 @@ This visual shows the forbidden density zones, where transport is suppressed due
 
 ## Snap Persistence Scan
 
-![Snap Persistence Scan](outputs/exp05_snap_persistence_scan.png)
+![Snap Persistence Scan](./outputs/EXP_05/exp05_snap_persistence_scan.png)
 
 The snap persistence scan shows the persistence of specific splinter gates over time, suggesting stable regions where gates remain active.
 
@@ -600,7 +600,7 @@ The snap persistence scan shows the persistence of specific splinter gates over 
 
 ## Splinter Field
 
-![Splinter Field](outputs/exp05_splinter_field.png)
+![Splinter Field](./outputs/EXP_05/exp05_splinter_field.png)
 
 The splinter field visualizes the areas of high activity and flow within the transport system, revealing the interaction between gate formation and phase transitions.
 
@@ -608,7 +608,7 @@ The splinter field visualizes the areas of high activity and flow within the tra
 
 ## Splinter Gate Overlay
 
-![Splinter Gate Overlay](outputs/exp05_splinter_gate_overlay.png)
+![Splinter Gate Overlay](./outputs/EXP_05/exp05_splinter_gate_overlay.png)
 
 The splinter gate overlay highlights the areas where gate candidates overlap with existing transport corridors, revealing patterns of gate formation and interaction.
 
