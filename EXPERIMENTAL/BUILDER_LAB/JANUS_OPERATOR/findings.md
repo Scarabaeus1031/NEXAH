@@ -1427,3 +1427,377 @@ Instead they repeatedly exhibit:
 - entropy-structured navigation
 - directed transition infrastructure
 ```
+# 🔷 FINDING F-22 — Predictive Basin Routing Persists Over Short Horizons
+
+Observed in:
+
+- EXP-28
+
+---
+
+## Observation
+
+JANUS basin transport exhibits
+predictively stable routing behavior
+across short future horizons.
+
+Observed predictive structure includes:
+
+- stable routing persistence
+- repeated basin convergence
+- dominant routing anchors
+- asymmetric future transport
+- corridor-constrained evolution
+
+Observed baseline path:
+
+```text
+[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+```
+
+The routing rapidly converges toward:
+
+```text
+node 1
+```
+
+which behaves like:
+
+- a stable transport attractor
+- a persistent routing anchor
+- a low-divergence basin destination
+
+---
+
+## Important Observation
+
+The predictive transport does NOT diffuse
+uniformly across all available nodes.
+
+Instead:
+
+- future routing collapses into stable channels
+- several nodes exhibit persistent occupation
+- reverse transport remains suppressed
+- prediction paths remain geometrically constrained
+
+This suggests:
+
+```text
+future transition organization
+is partially structured
+rather than fully stochastic.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+short-horizon transport prediction
+inside structured routing corridors
+```
+
+than:
+
+```text
+unconstrained future diffusion.
+```
+
+---
+
+# 🔷 FINDING F-23 — Predictive Routing Exhibits Stability Plateaus And Bifurcation Thresholds
+
+Observed in:
+
+- EXP-29
+
+---
+
+## Observation
+
+Predictive JANUS routing remains stable
+under some perturbation regimes,
+while abruptly reorganizing under others.
+
+The transport organization exhibits:
+
+- stability plateaus
+- abrupt routing flips
+- node trapping
+- oscillatory transport states
+- perturbation-triggered corridor switching
+
+Observed perturbation levels:
+
+```text
+0
+0.0005
+0.001
+0.0025
+0.005
+0.01
+0.025
+```
+
+---
+
+## Important Observation
+
+The degradation is NOT smooth.
+
+Instead:
+
+- some perturbations preserve the original path
+- some perturbations completely reorganize routing
+- instability localizes around specific thresholds
+
+Observed stable regions include:
+
+```text
+noise = 0
+noise = 0.005
+```
+
+Observed unstable regions include:
+
+```text
+noise = 0.001
+noise = 0.01
+```
+
+This strongly suggests:
+
+```text
+transport geometry contains
+critical routing thresholds.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+a bifurcation-sensitive transport system
+```
+
+than:
+
+```text
+a continuously degrading random process.
+```
+
+---
+
+# 🔷 FINDING F-24 — Basin Routing Is Partially Steerable
+
+Observed in:
+
+- EXP-30
+
+---
+
+## Observation
+
+JANUS basin routing responds systematically
+to directional intervention biases.
+
+Observed intervention behavior includes:
+
+- stable transport locking
+- abrupt basin reassignment
+- corridor switching
+- directional routing deformation
+- intervention-sensitive gate zones
+
+Observed intervention strengths:
+
+```text
+-0.300
+-0.150
+-0.075
+ 0.000
++0.075
++0.150
++0.300
+```
+
+---
+
+## Important Observation
+
+Weak interventions often preserve
+the original routing corridor.
+
+Stronger interventions produce:
+
+- routing inversion
+- node reassignment
+- alternate corridor occupation
+- basin-family switching
+
+Example transitions include:
+
+```text
+node 1 → node 2
+```
+
+and:
+
+```text
+stable routing → trapped routing
+```
+
+This strongly suggests:
+
+```text
+transport geometry contains
+directionally steerable decision regions.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+a controllable routing membrane
+```
+
+than:
+
+```text
+a passive chaotic transport field.
+```
+
+---
+
+# 🔷 FINDING F-25 — JANUS Navigation Structure Couples To Nonlinear Fractal Geometry
+
+Observed in:
+
+- EXP-22
+- EXP-31
+
+---
+
+## Observation
+
+JANUS transport organization
+can be embedded inside
+nonlinear fractal dynamical geometry.
+
+Observed coupled structures include:
+
+- dual-lobe basin organization
+- spiral transition corridors
+- shell-like contour membranes
+- nested routing envelopes
+- edge-sensitive navigation regions
+- diagonal exchange pathways
+
+Observed Julia parameter:
+
+```text
+c = -0.750 + 0.100i
+```
+
+---
+
+## Important Observation
+
+The coupled geometry preserves
+multiple earlier JANUS signatures:
+
+- diagonal transport preference
+- corridor-mediated exchange
+- shell-layer organization
+- suppressed orthogonal crossing
+- localized transition access
+
+The navigation probes do NOT distribute uniformly.
+
+Instead they selectively couple into:
+
+- spiral seams
+- contour boundaries
+- basin-transition regions
+- local transport corridors
+
+This suggests:
+
+```text
+navigation accessibility
+depends on underlying nonlinear geometry.
+```
+
+---
+
+## Structural Interpretation
+
+The resulting geometry behaves more like:
+
+```text
+embedded transport infrastructure
+inside nonlinear fractal dynamics
+```
+
+than:
+
+```text
+independent random trajectory motion.
+```
+
+---
+
+# 🔷 Updated Working Meta-Observation
+
+Across EXP-28 to EXP-31,
+the JANUS framework extends beyond:
+
+```text
+transition detection
+```
+
+toward:
+
+```text
+transport prediction,
+routing stability,
+intervention response,
+and nonlinear geometric embedding.
+```
+
+Repeated higher-order motifs now include:
+
+- predictive routing corridors
+- entropy-separated transport anchors
+- perturbation bifurcation thresholds
+- steerable basin transitions
+- fractal transport embedding
+- contour-mediated routing
+- spiral transition seams
+- nonlinear navigation geometry
+
+---
+
+# 🔷 Updated Working Insight
+
+```text
+The observed systems do not appear
+to evolve through fully unconstrained transition diffusion.
+
+Instead they repeatedly exhibit:
+
+- predictive transport persistence
+- perturbation-sensitive routing thresholds
+- partially steerable basin organization
+- nonlinear corridor embedding
+- fractal transition geometry
+- structured navigation accessibility
+```
