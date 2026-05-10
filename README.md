@@ -12,6 +12,37 @@
 
 ---
 
+# 🌐 Orientation Layer for Complex Systems
+
+NEXAH does not attempt to replace existing scientific models.
+
+Instead, it explores whether:
+
+```text
+different systems
+may share navigable structural patterns
+```
+
+across:
+
+- dynamics
+- topology
+- synchronization
+- control
+- geometry
+- phase behavior
+- transition organization
+
+The framework acts as:
+
+```text
+a navigation grammar across structured dynamics
+```
+
+rather than a universal theory of everything.
+
+---
+
 # 🧭 Quick Navigation
 
 | File | Purpose |
@@ -23,6 +54,50 @@
 | [RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md) | Research navigation |
 
 > 👉 New to NEXAH? Start with: [START_HERE.md](START_HERE.md)
+
+---
+
+# 🌌 Why NEXAH Exists
+
+![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
+
+*NEXAH maps structural relationships across dynamical systems, representations, and scientific domains.*
+
+Modern systems generate enormous amounts of information,
+but often provide little orientation.
+
+Different disciplines construct highly specialized models:
+
+- dynamical systems
+- control theory
+- synchronization theory
+- network science
+- AI / ML systems
+- geometry & topology
+- statistical systems
+- information theory
+
+These models are powerful,
+but often difficult to compare,
+connect,
+or navigate together.
+
+NEXAH investigates whether structure itself can become:
+
+```text
+observable
+comparable
+navigable
+```
+
+through:
+
+- field reconstruction
+- transition geometry
+- coherence analysis
+- phase dynamics
+- topology extraction
+- geometry-aware navigation
 
 ---
 
@@ -94,11 +169,11 @@ theoretical
 → conceptual extensions under investigation
 ```
 
-NEXAH distinguishes explicitly between:
+NEXAH explicitly distinguishes between:
 
 - empirical findings
 - exploratory hypotheses
-- and conceptual/theoretical extensions
+- conceptual/theoretical extensions
 
 ---
 
@@ -106,40 +181,7 @@ NEXAH distinguishes explicitly between:
 
 ![NEXAH Core System](ARCHITECTURE/archive/NEXAH_Regime_Atlas.png)
 
-*NEXAH connects continuous dynamics with discrete transition structure across representations and regimes.*
-
----
-
-# 🌐 Why NEXAH Exists
-
-Modern systems generate enormous amounts of information,
-but often provide little orientation.
-
-Different disciplines construct highly specialized models of reality:
-
-- dynamical systems
-- control theory
-- synchronization theory
-- network science
-- AI / RL systems
-- geometry & topology
-- statistical systems
-- information theory
-
-Yet these representations are often difficult to compare,
-connect, or navigate together.
-
-NEXAH explores whether structure itself can become:
-
-```text
-observable
-navigable
-geometrically interpretable
-```
-
-through field reconstruction,
-transition analysis,
-and phase-aware structural modeling.
+*NEXAH connects continuous dynamics with transition structure, coherence, geometry, and navigation.*
 
 ---
 
@@ -208,7 +250,7 @@ relative to intrinsic phase dynamics
 
 ---
 
-# 🧪 Research Layer
+# 🔬 Research Layer
 
 📂 [`RESEARCH/`](RESEARCH/)
 
@@ -310,6 +352,39 @@ This suggests that transition structure may extend beyond intrinsic system dynam
 
 ---
 
+# 🤝 What NEXAH Needs
+
+NEXAH is not intended to be developed by a single discipline.
+
+The framework increasingly requires collaboration across:
+
+- dynamical systems
+- topology & geometry
+- synchronization research
+- control theory
+- scientific visualization
+- machine learning
+- statistical physics
+- scientific computing
+- complex systems research
+
+NEXAH is currently strongest in:
+
+```text
+structure discovery
+field reconstruction
+transition geometry
+phase dynamics
+navigation concepts
+```
+
+Future progress likely depends on specialists helping formalize,
+validate,
+scale,
+and connect the framework across domains.
+
+---
+
 # 🌀 Visual Exploration
 
 👉 [VISUAL_GALLERY.md](VISUAL_GALLERY.md)
@@ -405,6 +480,32 @@ Interpretation:
 ✔ probabilistic transition modeling  
 ✔ cross-system comparisons  
 ✔ parameter-driven transition analysis
+
+---
+
+# ⚠️ Scientific Position
+
+NEXAH currently provides:
+
+- empirical observations
+- reproducible transition structures
+- geometry-oriented interpretations
+- exploratory control concepts
+- semi-formal structural models
+
+It does NOT yet provide:
+
+- universal proofs
+- closed mathematical formalization
+- generalized physical laws
+- production-grade guarantees
+
+The framework should currently be interpreted as:
+
+```text
+an exploratory research architecture
+for structured dynamics and transition analysis
+```
 
 ---
 
