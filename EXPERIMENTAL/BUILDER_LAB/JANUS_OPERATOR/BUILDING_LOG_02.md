@@ -1674,25 +1674,25 @@ Outputs:
 
 ## Predictive Basin Routing
 
-![EXP-28 Prediction Paths](./outputs/exp28_prediction_paths.png)
+![EXP-28 Prediction Paths](outputs/exp28_prediction_paths.png)
 
 ---
 
 ## Prediction Probability Matrix
 
-![EXP-28 Probability Matrix](./outputs/exp28_prediction_probability_matrix.png)
+![EXP-28 Probability Matrix](outputs/exp28_prediction_probability_matrix.png)
 
 ---
 
 ## Predictive Transition Entropy
 
-![EXP-28 Prediction Entropy](./outputs/exp28_prediction_entropy.png)
+![EXP-28 Prediction Entropy](outputs/exp28_prediction_entropy.png)
 
 ---
 
 ## Predictive Transport Overlay
 
-![EXP-28 Predictive Overlay](./outputs/exp28_predictive_transport_overlay.png)
+![EXP-28 Predictive Overlay](outputs/exp28_predictive_transport_overlay.png)
 
 ---
 
@@ -2043,25 +2043,25 @@ Outputs:
 
 ## Transport Shift Matrix
 
-![EXP-30 Shift Matrix](./outputs/exp30_transport_shift_matrix.png)
+![EXP-30 Shift Matrix](outputs/exp30_transport_shift_matrix.png)
 
 ---
 
 ## Intervention Path Shift
 
-![EXP-30 Path Shift](./outputs/exp30_intervention_path_shift.png)
+![EXP-30 Path Shift](outputs/exp30_intervention_path_shift.png)
 
 ---
 
 ## Control Response Curve
 
-![EXP-30 Control Response](./outputs/exp30_control_response_curve.png)
+![EXP-30 Control Response](outputs/exp30_control_response_curve.png)
 
 ---
 
 ## Basin Steering Overlay
 
-![EXP-30 Steering Overlay](./outputs/exp30_basin_steering_overlay.png)
+![EXP-30 Steering Overlay](outputs/exp30_basin_steering_overlay.png)
 
 ---
 
@@ -2245,13 +2245,13 @@ Outputs:
 
 ## Julia Navigation Coupling
 
-![EXP-31 Julia Navigation Coupling](./outputs/exp31_julia_navigation_coupling.png)
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
 
 ---
 
 ## Zoom Regions / Local Coupling Zones
 
-![EXP-31 Zoom Regions](./outputs/exp31_julia_navigation_zoom_regions.png)
+![EXP-31 Zoom Regions](outputs/exp31_julia_navigation_zoom_regions.png)
 
 ---
 
