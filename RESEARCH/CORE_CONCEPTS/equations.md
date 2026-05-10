@@ -446,16 +446,12 @@ high B(x)
 
 Current unified operational picture:
 
-$$\mathcal{X}(t)
-=
-(M(t), J(x), A(x), B(x))
+$$\mathcal{X}(t) = (M(t), J(x), A(x), B(x))
 $$
 
 Transition probability:
 
-$$P(\text{IOTA})
-=
-f(\mathcal{X}(t))
+$$P(\text{IOTA}) = f(\mathcal{X}(t))
 $$
 
 ---
@@ -487,8 +483,7 @@ $$
 
 where:
 
-$$
-d \in \{-1,+1\}
+$$ d \in \{-1,+1\}
 $$
 
 ---
@@ -497,12 +492,7 @@ $$
 
 Extended control model:
 
-$$s(t) = f(
-\phi(t),
-I(t),
-J(x),
-B(x)
-)
+$$s(t) = f( \phi(t), I(t), J(x), B(x) )
 $$
 
 Interpretation:
@@ -518,14 +508,12 @@ instead of purely energy-suppressive.
 
 Primary objective:
 
-$$
-\min M(t)
+$$\min M(t)
 $$
 
 Extended objective:
 
-$$
-\max J(x)
+$$\max J(x)
 $$
 
 Equivalent interpretation:
@@ -540,22 +528,12 @@ maintain coherent directional organization.
 
 Effective phase evolution under control:
 
-$$
-\omega_{\mathrm{eff}}(t)
-=
-\omega(t)-s(t)
+$$\omega_{\mathrm{eff}}(t) = \omega(t)-s(t)
 $$
 
 Updated mismatch:
 
-$$
-M(t)
-=
-|
-\omega_{\mathrm{eff}}(t)
--
-\hat{\omega}(t)
-|
+$$M(t) = | \omega_{\mathrm{eff}}(t) - \hat{\omega}(t) |
 $$
 
 ---
@@ -564,18 +542,12 @@ $$
 
 For parameter-driven systems:
 
-$$
-\Delta(t)
-=
-\text{local structural change}
+$$\Delta(t) = \text{local structural change}
 $$
 
 Empirical observation:
 
-$$
-\Delta(t)
-\approx
-M(t)
+$$\Delta(t) \approx M(t)
 $$
 
 Interpretation:
@@ -592,11 +564,7 @@ when phase is not directly observable.
 
 Unified transition observable:
 
-$$
-\mathcal{X}(t)
-=
-\begin{cases}
-M(t)
+$$ \mathcal{X}(t) = \begin{cases} M(t)
 &
 \text{phase-defined systems}
 \\
@@ -608,10 +576,7 @@ $$
 
 Generalized transition probability:
 
-$$
-P(\text{IOTA})
-=
-f(\mathcal{X}(t))
+$$P(\text{IOTA}) = f(\mathcal{X}(t))
 $$
 
 ---
