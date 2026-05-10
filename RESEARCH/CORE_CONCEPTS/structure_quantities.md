@@ -1,27 +1,57 @@
 # 🧩 NEXAH — Structural Quantities
 
-## 🧭 Purpose
+---
 
-This document defines the **core structural quantities** of the NEXAH framework.
+# 🧭 Purpose
 
-These quantities describe how structure emerges from trajectories and how
-transition-relevant regions can be identified.
+This document defines the core structural quantities used in the NEXAH framework.
 
-They extend the phase-based formulation (`equations.md`) with **spatial structure**.
+These quantities describe how:
+
+- structure emerges from trajectories
+- coherence organizes transport
+- transition regions form
+- geometry constrains movement
+- instability localizes into gates and corridors
+
+This layer extends:
+
+- `equations.md`
+- `field_model.md`
+- `aperture_geometry.md`
+
+with an operational spatial-geometry formulation.
 
 ---
 
 # ⚠️ Scope
 
-This is:
+This framework is:
 
-- empirically grounded  
-- partially formalized  
+- empirically grounded
+- operationally useful
+- partially formalized
 
 It is NOT:
 
-- a complete geometric theory  
-- a proven manifold construction  
+- a complete geometric theory
+- a rigorous manifold derivation
+- a proven universal framework
+
+---
+
+# 🔁 Structural Pipeline
+
+```text
+trajectory
+→ density
+→ flow
+→ coherence
+→ mismatch
+→ aperture geometry
+→ transition routing
+→ navigation
+```
 
 ---
 
@@ -29,21 +59,25 @@ It is NOT:
 
 Given trajectory samples:
 
-$$
-\{x(t_i)\}_{i=1}^N
-$$
+```math
+\{x(t_i)\}_{i=1}^{N}
+```
 
-we define the density field:
+define the density field:
 
-$$
-\rho(x) = \mathrm{KDE}(x)
-$$
+```math
+\rho(x)
+=
+\mathrm{KDE}(x)
+```
 
 or more generally:
 
-$$
-\rho(x) \approx \text{empirical state density}
-$$
+```math
+\rho(x)
+\approx
+\text{empirical state density}
+```
 
 ---
 
@@ -53,27 +87,43 @@ $$
 ρ(x) measures where the system spends time.
 ```
 
-- high ρ → stable regions (regimes)  
-- low ρ → transition corridors  
+Observed behavior:
+
+```text
+high ρ
+→ stable coherent regions
+
+low ρ
+→ transition corridors
+→ shell boundaries
+→ transport apertures
+```
 
 ---
 
 # 🔷 2. Density Gradient
 
-$$
+Density gradient:
+
+```math
 \nabla \rho(x)
-$$
+```
 
 ---
 
 ## Interpretation
 
 ```text
-∇ρ(x) defines the direction of increasing structural stability.
+∇ρ(x)
+defines the direction
+of increasing structural stability.
 ```
 
-- points toward dense regions  
-- used as a navigation / stabilization signal  
+Observed properties:
+
+- points toward coherent basins
+- aligns with stabilization flow
+- acts as geometric guidance signal
 
 ---
 
@@ -81,239 +131,528 @@ $$
 
 Given system dynamics:
 
-$$
+```math
 \dot{x} = F(x)
-$$
+```
+
+define the local flow field:
+
+```math
+F(x)
+```
 
 ---
 
 ## Interpretation
 
 ```text
-F(x) describes how the system moves.
+F(x)
+describes how the system moves locally.
 ```
+
+Observed:
+
+- directional transport organization
+- coherent circulation patterns
+- recursive motion structure
 
 ---
 
-# 🔷 4. Coherence
+# 🔷 4. Local Coherence
 
-Define coherence as alignment between trajectory and flow:
+Define local coherence as alignment between observed motion and flow geometry:
 
-$$
-C(x) =
-\frac{\dot{x}(t) \cdot F(x)}{\|\dot{x}(t)\| \, \|F(x)\|}
-$$
+```math
+C(x)
+=
+\frac{
+\dot{x}(t)\cdot F(x)
+}{
+\|\dot{x}(t)\|
+\,
+\|F(x)\|
+}
+```
 
 ---
 
 ## Interpretation
 
 ```text
-C(x) ≈ 1 → motion aligned with flow (stable)
+high C(x)
+→ motion aligned with flow geometry
 
-C(x) low → directional conflict / instability
+low C(x)
+→ directional conflict
+→ coherence weakening
 ```
 
 ---
 
-# 🔷 5. Normalized Quantities
+## Observed Role
 
-To combine structural measures, define:
+Coherence acts as:
 
-$$
-\hat{\rho}(x), \quad \hat{C}(x), \quad \hat{R}(x)
-$$
-
-as normalized versions in $[0,1]$.
-
-Where:
-
-- $\hat{\rho}$ → normalized density  
-- $\hat{C}$ → normalized coherence  
-- $\hat{R}$ → optional residual / noise / variance measure  
+- structural consistency measure
+- transport alignment indicator
+- local organization metric
 
 ---
 
-# 🔷 6. Gate Function
+# 🔷 5. Directional JANUS Coherence
 
-Define:
+JANUS extends coherence into directional transport geometry.
 
-$$
-G(x) = (1 - \hat{\rho}(x))(1 - \hat{C}(x))(1 - \hat{R}(x))
-$$
+Forward local flow:
+
+```math
+F_{\mathrm{forward}}(x)
+```
+
+Backward local flow:
+
+```math
+F_{\mathrm{backward}}(x)
+```
+
+Directional overlap operator:
+
+```math
+\mathcal{J}(x)
+=
+F_{\mathrm{forward}}(x)
+\odot
+F_{\mathrm{backward}}(x)
+```
+
+---
+
+## Normalized JANUS Coherence
+
+```math
+J(x)
+=
+\frac{
+\|\mathcal{J}(x)\|
+}{
+\|F_{\mathrm{forward}}(x)\|
+\cdot
+\|F_{\mathrm{backward}}(x)\|
++
+\varepsilon
+}
+```
+
+with:
+
+```math
+\varepsilon \ll 1
+```
+
+for numerical stability.
 
 ---
 
 ## Interpretation
 
 ```text
-G(x) measures structural transition likelihood.
-```
+high J(x)
+→ directional agreement
+→ coherent transport organization
 
-- high G → transition region  
-- low G → stable region  
-
----
-
-## Important Distinction
-
-```text
-ρ(x), C(x) → describe structure
-
-G(x) → highlights breakdown of structure
+low J(x)
+→ transport asymmetry
+→ transition-sensitive geometry
 ```
 
 ---
 
-# 🔷 7. Relation Between C(x) and G(x)
+# 🔷 6. Normalized Structural Quantities
 
-Conceptually:
+To combine structural measures, define normalized quantities:
 
-```text
-C high → coherent regime
-
-C low → breakdown of alignment
-        → contributes to G
+```math
+\hat{\rho}(x),
+\quad
+\hat{C}(x),
+\quad
+\hat{J}(x),
+\quad
+\hat{R}(x)
 ```
 
-BUT:
+where:
+
+- `ρ̂(x)` → normalized density
+- `Ĉ(x)` → normalized local coherence
+- `Ĵ(x)` → normalized directional coherence
+- `R̂(x)` → residual / noise / variance estimate
+
+All normalized into:
 
 ```text
-G is NOT simply inverse(C)
-
-G combines multiple failure modes:
-- low density
-- low coherence
-- residual instability
-```
-
----
-
-## Insight
-
-```text
-C(x) describes "being inside structure"
-
-G(x) describes "leaving structure"
+[0,1]
 ```
 
 ---
 
-# 🔷 8. Regimes
+# 🔷 7. Gate Function
 
-Define regime regions:
+Define operational transition field:
 
-$$
-\mathcal{R} = \{ x \mid \rho(x) \text{ high}, \; C(x) \text{ high} \}
-$$
+```math
+G(x)
+=
+(1-\hat{\rho}(x))
+(1-\hat{C}(x))
+(1-\hat{J}(x))
+(1-\hat{R}(x))
+```
 
 ---
 
 ## Interpretation
 
 ```text
-Regimes = coherent, stable regions of motion
+G(x)
+measures structural transition likelihood.
+```
+
+Observed:
+
+```text
+high G(x)
+→ transition corridors
+→ gates
+→ apertures
+→ shell crossings
+
+low G(x)
+→ coherent stable regions
 ```
 
 ---
 
-# 🔷 9. Transition Regions (Gates)
+# 🔷 8. Aperture Geometry
 
-Define:
+Define aperture score:
 
-$$
-\mathcal{G} = \{ x \mid G(x) \text{ high} \}
-$$
+```math
+A(x)
+=
+1-J(x)
+```
 
 ---
 
 ## Interpretation
 
 ```text
-Gates = regions where transitions occur
+high aperture score
+→ directional thinning
+→ transition bottlenecks
+```
+
+Observed structures:
+
+- transport throats
+- shell boundaries
+- coherence corridors
+- transition spines
+
+---
+
+# 🔷 9. Orientation Geometry
+
+Define orientation field:
+
+```math
+\Theta(x)
+=
+\arg(F(x))
 ```
 
 ---
 
-# 🔷 10. Structural Flow Decomposition
+## Root Alignment
 
-System behavior can be decomposed into:
+Define orientation bias score:
+
+```math
+B(x)
+=
+\cos(
+\Theta(x)
+-
+\Theta_{\mathrm{root}}
+)
+```
+
+---
+
+## Interpretation
 
 ```text
-ρ(x) → where system resides
+high B(x)
+→ alignment with dominant transport orientation
+```
 
-F(x) → how system moves
+Observed exploratory behavior:
 
-C(x) → how consistent motion is
+- directional pull structures
+- root-aligned transport
+- orientation clustering
+- coherence axis formation
 
-G(x) → where structure breaks
+---
+
+# 🔷 10. Structural Regimes
+
+Define coherent regime regions:
+
+```math
+\mathcal{R}
+=
+\{
+x
+\mid
+\rho(x)\ \text{high},
+\;
+C(x)\ \text{high},
+\;
+J(x)\ \text{high}
+\}
 ```
 
 ---
 
-# 🔷 11. Link to Phase Dynamics
+## Interpretation
+
+```text
+regimes
+=
+stable coherent transport regions
+```
+
+---
+
+# 🔷 11. Transition Regions (Gates)
+
+Define gate regions:
+
+```math
+\mathcal{G}
+=
+\{
+x
+\mid
+G(x)\ \text{high}
+\}
+```
+
+---
+
+## Interpretation
+
+```text
+gates
+=
+localized transition geometry
+```
+
+Observed:
+
+- shell crossings
+- transition corridors
+- compression regions
+- directional apertures
+
+---
+
+# 🔷 12. Recursive Phase Geometry
+
+Observed recursive decomposition:
+
+| Quadrant | Interpretation |
+|---|---|
+| Q1 | Expansion |
+| Q2 | Compression |
+| Q3 | Memory |
+| Q4 | Transition |
+
+---
+
+## Phase Partition
+
+```math
+Q(t)
+=
+\mathcal{Q}(\phi(t),\dot{\phi}(t))
+```
+
+---
+
+## Interpretation
+
+```text
+phase structure recursively organizes transport geometry
+```
+
+---
+
+# 🔷 13. Structural Flow Decomposition
+
+System behavior decomposes into:
+
+```text
+ρ(x)
+→ where system resides
+
+F(x)
+→ how system moves
+
+C(x)
+→ local consistency
+
+J(x)
+→ directional transport coherence
+
+A(x)
+→ aperture geometry
+
+G(x)
+→ transition organization
+```
+
+---
+
+# 🔷 14. Link to Phase Dynamics
 
 From `equations.md`:
 
-- phase mismatch:
-  $$
-  M(t)
-  $$
+Phase mismatch:
+
+```math
+M(t)
+=
+|\omega(t)-\hat{\omega}(t)|
+```
 
 ---
 
 ## Combined Interpretation
 
 ```text
-G(x) → spatial transition potential
+G(x)
+→ spatial transition potential
 
-M(t) → temporal activation trigger
+M(t)
+→ temporal transition activation
 ```
 
 ---
 
-## Core Mechanism
+# 🔷 15. Unified Transition Mechanism
+
+Operational interpretation:
 
 ```text
 transition occurs when:
 
-system enters high G(x)
+system enters
+high G(x)
+
 AND
-M(t) becomes large
+
+phase mismatch
+M(t)
+becomes large
 ```
 
 ---
 
-# 🔷 12. Navigation Interpretation
+# 🔷 16. Navigation Interpretation
 
-Control uses:
+Navigation uses:
 
-$$
-\nabla \rho(x), \quad G(x)
-$$
-
----
-
-## Conceptual Control Law
-
-```text
-move toward high ρ(x)
-avoid high G(x)
-align phase dynamics
+```math
+\nabla \rho(x),
+\quad
+G(x),
+\quad
+J(x),
+\quad
+B(x)
 ```
 
 ---
 
-# 🔷 13. Summary
+## Conceptual Navigation Rule
 
 ```text
-ρ(x) → structure (where)
+move toward:
+high density
+high coherence
 
-F(x) → dynamics (how)
+avoid:
+high aperture
+high gate activation
+```
 
-C(x) → coherence (consistency)
+---
 
-G(x) → transition field (breakdown)
+# 🔷 17. Directional Transport Geometry
+
+Observed transport organization:
+
+```text
+systems do not transition randomly.
+```
+
+Transitions appear constrained by:
+
+- coherence corridors
+- shell geometry
+- orientation bias
+- recursive phase organization
+
+---
+
+## Interpretation
+
+```text
+transition geometry acts
+like a navigable transport network
+inside the field.
+```
+
+---
+
+# 🔷 18. Unified Structural Vector
+
+Define combined structural state:
+
+```math
+\mathcal{S}(x)
+=
+(
+\rho,
+C,
+J,
+A,
+B,
+G
+)
+```
+
+---
+
+## Interpretation
+
+```text
+𝒮(x)
+describes the local structural state
+of the dynamical field.
 ```
 
 ---
@@ -321,16 +660,94 @@ G(x) → transition field (breakdown)
 # 🔥 Final Insight
 
 ```text
-Structure is not defined explicitly.
+Structure is not imposed externally.
 
-It emerges from density and flow.
+It emerges from:
 
-Transitions occur where structure weakens,
-and are activated when phase coherence breaks.
+- density
+- flow
+- coherence
+- directional organization
+- recursive phase geometry
+```
+
+Transitions occur where:
+
+```text
+coherence weakens,
+directional symmetry breaks,
+and aperture geometry forms.
+```
+
+---
+
+# 🌌 Current Interpretation
+
+```text
+nonlinear systems appear to organize motion
+through structured coherence geometry
+rather than unconstrained randomness.
+```
+
+---
+
+# 🔗 Relation to Other Modules
+
+## → equations.md
+
+- phase mismatch framework
+
+## → field_model.md
+
+- field interpretation layer
+
+## → aperture_geometry.md
+
+- gate & corridor structures
+
+## → theory_to_field_mapping.md
+
+- operator-level interpretation
+
+## → JANUS_OPERATOR/
+
+- directional coherence geometry
+- recursive transport structures
+- orientation manifolds
+
+---
+
+# ⚠️ Current Limitations
+
+- empirical framework
+- reconstruction-dependent
+- incomplete formalization
+- orientation geometry exploratory
+- transport manifolds not rigorously derived
+
+---
+
+# 🧭 Status
+
+```text
+density structure:
+validated
+
+coherence geometry:
+strong exploratory evidence
+
+directional JANUS coherence:
+experimental but reproducible
+
+aperture geometry:
+emerging framework
+
+orientation bias:
+early-stage exploratory
 ```
 
 ---
 
 **NEXAH Structural Quantities Layer**  
-Spatial Structure & Transition Field Definition  
+Spatial Structure · Coherence · Aperture Geometry · Transition Organization  
 Thomas K. R. Hofmann · 2026
