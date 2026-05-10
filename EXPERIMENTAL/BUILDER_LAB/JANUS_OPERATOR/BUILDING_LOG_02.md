@@ -765,4 +765,907 @@ fractal-map compatible,
 and orientation-selective.
 ```
 
+---
+
+# 🔷 EXP-24 — Surrogate Orientation Test
+
+Script:
+`scripts_2/janus_surrogate_orientation_test.py`
+
+Outputs:
+
+- `outputs/exp24_surrogate_angle_distribution.png`
+- `outputs/exp24_surrogate_resonance_scan.png`
+- `outputs/exp24_surrogate_orientation_summary.txt`
+
+---
+
+## Surrogate Angle Distribution
+
+![EXP-24 Surrogate Angle Distribution](outputs/exp24_surrogate_angle_distribution.png)
+
+---
+
+## Reference Angle Resonance Scan
+
+![EXP-24 Resonance Scan](outputs/exp24_surrogate_resonance_scan.png)
+
+---
+
+## Numerical Results
+
+```text
+original
+--------------------------------
+gate count: 60
+best angle: 60.000
+best score: 0.869851
+
+time_shuffle
+--------------------------------
+best angle: 60.000
+best score: 0.359175
+
+coord_shuffle
+--------------------------------
+best angle: 144.000
+best score: 0.206500
+
+phase_scramble
+--------------------------------
+best angle: 120.000
+best score: 0.145450
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+The original JANUS aperture geometry
+survives surrogate destruction
+with significantly stronger directional coherence.
+```
+
+---
+
+## Observation
+
+EXP-24 tests whether the previously observed
+orientation-angle structure remains visible
+after destroying temporal or geometric coherence.
+
+Several surrogate systems were generated:
+
+- time-shuffled trajectories
+- coordinate-shuffled trajectories
+- phase-scrambled trajectories
+
+The goal was to determine whether:
+
+```text
+the diagonal gate organization
+is a genuine structural feature
+or merely random angle accumulation.
+```
+
+---
+
+## Original vs Surrogates
+
+The original system shows:
+
+```text
+best score:
+0.869851
+```
+
+This is substantially larger than all surrogate systems.
+
+The surrogates exhibit:
+
+- fragmented angle occupation
+- diffuse orientation structure
+- reduced resonance peaks
+- unstable angle preference
+
+while the original retains:
+
+- concentrated diagonal structure
+- coherent angle alignment
+- localized gate families
+- persistent orientation corridors
+
+---
+
+## Fine Structure vs Collapsed Structure
+
+The two visuals reveal an important distinction.
+
+The angle distribution plot acts as:
+
+```text
+fine-scale orientation anatomy
+```
+
+while the resonance scan acts as:
+
+```text
+coarse structural projection.
+```
+
+The first visual preserves local angular texture.
+
+The second compresses the geometry into:
+
+- dominant transport angles
+- resonance peaks
+- global orientation preference
+
+Together they suggest that:
+
+```text
+JANUS gate organization survives
+dimensional reduction.
+```
+
+---
+
+## Suppressed Orthogonal Axis
+
+The surrogate systems partially fill many angles.
+
+However, the original system still suppresses:
+
+```text
+90° orthogonal alignment.
+```
+
+This reinforces the earlier observation from EXP-23:
+
+```text
+gate transport prefers diagonal routing
+rather than orthogonal crossing.
+```
+
+---
+
+## 60° Dominance
+
+The strongest original resonance occurs near:
+
+```text
+60°
+```
+
+This is notable because:
+
+- 60°
+- 120°
+- 144°
+
+all appear repeatedly in the broader gate structure.
+
+The surrogates partially reproduce fragments of these angles,
+but not the coherent concentration seen in the original system.
+
+This suggests that:
+
+```text
+orientation structure is not purely random,
+even if some angular families remain geometrically accessible.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-24 suggests:
+
+```text
+JANUS aperture geometry possesses
+non-random directional organization.
+```
+
+The directional gate structure appears to survive:
+
+- temporal scrambling
+- coordinate destruction
+- phase randomization
+
+better than expected from random transport organization.
+
+---
+
+## Relation to Previous Experiments
+
+EXP-24 builds on:
+
+- EXP-21 aperture localization
+- EXP-22 fractal parameter mapping
+- EXP-23 orientation-angle structure
+
+The new contribution is:
+
+```text
+surrogate validation of gate orientation coherence.
+```
+
+---
+
+# 🔷 EXP-25 — Multi-Scale Aperture Geometry
+
+Script:
+`scripts_2/janus_multiscale_aperture_geometry.py`
+
+Outputs:
+
+- `outputs/exp25_multiscale_aperture_map.png`
+- `outputs/exp25_aperture_scale_variance.png`
+- `outputs/exp25_persistent_gate_overlay.png`
+- `outputs/exp25_multiscale_gate_density.png`
+- `outputs/exp25_multiscale_aperture_summary.txt`
+
+---
+
+## Persistent Gate Overlay
+
+![EXP-25 Persistent Gate Overlay](outputs/exp25_persistent_gate_overlay.png)
+
+---
+
+## Multi-Scale Gate Density
+
+![EXP-25 Gate Density](outputs/exp25_multiscale_gate_density.png)
+
+---
+
+## Multi-Scale Aperture Map
+
+![EXP-25 Aperture Map](outputs/exp25_multiscale_aperture_map.png)
+
+---
+
+## Aperture Scale Statistics
+
+![EXP-25 Scale Statistics](outputs/exp25_aperture_scale_variance.png)
+
+---
+
+## Numerical Results
+
+```text
+scales:
+1, 2, 4, 8, 16, 32, 64
+
+gate candidates:
+60 (persistent across all scales)
+
+mean aperture range:
+0.466512 → 0.648931
+
+variance range:
+0.017686 → 0.039232
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS aperture gate structure
+persists across multiple smoothing scales.
+```
+
+---
+
+## Observation
+
+EXP-25 investigates whether aperture gate organization
+collapses under scale transformation.
+
+Instead of disappearing,
+the gate geometry remains remarkably stable.
+
+The strongest structures survive across:
+
+- fine local scales
+- intermediate smoothing
+- coarse structural averaging
+
+This suggests that:
+
+```text
+gate organization is not a small-scale noise artifact.
+```
+
+---
+
+## Persistent Gate Overlay
+
+The persistent overlay reveals:
+
+- highly stable gate corridors
+- repeated diagonal activation
+- mirrored lobe organization
+- stable lower transport clusters
+- persistent upper attractor nodes
+
+The visual resembles:
+
+```text
+a layered transport membrane
+```
+
+or:
+
+```text
+a perforated transition envelope.
+```
+
+---
+
+## Multi-Scale Density Structure
+
+The density visualization is especially important.
+
+The structure does not smear uniformly under scaling.
+
+Instead, it condenses into:
+
+- recurring nodal regions
+- stable diagonal pathways
+- isolated hotspot basins
+- aperture accumulation corridors
+
+The brightest regions remain localized.
+
+This implies:
+
+```text
+transport accessibility is concentrated,
+not diffuse.
+```
+
+---
+
+## Scale Statistics Observation
+
+The scale statistics show:
+
+- stable mean aperture values
+- persistent maximum activation
+- relatively narrow variance band
+- no catastrophic collapse
+
+The system exhibits:
+
+```text
+structural persistence under smoothing.
+```
+
+The variance values cluster near:
+
+```text
+0.03
+```
+
+with only a few excursions.
+
+This may indicate:
+
+- stable geometric compression
+- bounded transport deformation
+- scale-consistent aperture organization
+
+---
+
+## Layered Geometry Interpretation
+
+Several visuals reveal a recurring layered structure:
+
+- outer transport shells
+- internal void corridors
+- diagonal channel bands
+- perforated gate regions
+- clustered basin membranes
+
+The repeated appearance of these layers
+across different reconstruction systems
+suggests that:
+
+```text
+JANUS aperture geometry may be hierarchical.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-25 suggests:
+
+```text
+JANUS gate structures survive
+multi-scale reconstruction.
+```
+
+The aperture geometry appears to possess:
+
+1. scale persistence
+2. diagonal transport continuity
+3. localized gate density
+4. layered transition membranes
+5. perforated basin organization
+
+---
+
+## Relation to Previous Experiments
+
+EXP-25 builds on:
+
+- EXP-21 aperture gate detection
+- EXP-22 parameter-space mapping
+- EXP-23 orientation analysis
+- EXP-24 surrogate validation
+
+The new contribution is:
+
+```text
+multi-scale persistence testing
+of JANUS aperture geometry.
+```
+
+---
+
+# 🔷 EXP-26 — Aperture Basin Graph Reconstruction
+
+Script:
+`scripts_2/janus_aperture_basin_graph.py`
+
+Outputs:
+
+- `outputs/exp26_aperture_transport_flow.png`
+- `outputs/exp26_transition_adjacency_matrix.png`
+- `outputs/exp26_transition_network.png`
+- `outputs/exp26_basin_graph_overlay.png`
+- `outputs/exp26_basin_graph_summary.txt`
+
+---
+
+## Aperture Transport Flow
+
+![EXP-26 Aperture Transport Flow](outputs/exp26_aperture_transport_flow.png)
+
+---
+
+## Transition Adjacency Matrix
+
+![EXP-26 Transition Matrix](outputs/exp26_transition_adjacency_matrix.png)
+
+---
+
+## Aperture Transition Network
+
+![EXP-26 Transition Network](outputs/exp26_transition_network.png)
+
+---
+
+## Basin Graph Overlay
+
+![EXP-26 Basin Graph Overlay](outputs/exp26_basin_graph_overlay.png)
+
+---
+
+## Numerical Results
+
+```text
+gate candidates:
+60
+
+graph nodes:
+4
+
+transition matrix:
+
+0 2 0 2
+0 0 3 3
+0 0 0 3
+4 4 0 0
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS aperture gates organize into
+directed transport-node structures.
+```
+
+---
+
+## Observation
+
+EXP-26 reconstructs aperture gate organization
+as a graph-like transport system.
+
+Instead of treating gates as isolated points,
+the experiment clusters them into:
+
+- transport nodes
+- basin families
+- routing groups
+- transition corridors
+
+The resulting organization is highly structured.
+
+---
+
+## Basin Geometry
+
+The reconstructed graph reveals four dominant regions:
+
+- upper-left basin
+- upper-right basin
+- lower-left basin
+- lower-right basin
+
+These regions form:
+
+```text
+a large-scale hourglass / envelope geometry.
+```
+
+The central vertical axis remains relatively sparse,
+while the transport structure develops diagonally.
+
+This continues the earlier observations from:
+
+- EXP-21
+- EXP-23
+- EXP-25
+
+where orthogonal crossing remained suppressed.
+
+---
+
+## Transition Matrix Observation
+
+The transition matrix is strongly asymmetric.
+
+Several transitions appear directional.
+
+This is important because it suggests:
+
+```text
+transport routing
+rather than symmetric diffusion.
+```
+
+The graph contains:
+
+- preferred channels
+- suppressed return routes
+- clustered transfer patterns
+- directional basin exchange
+
+---
+
+## Network Geometry Observation
+
+The transition network reveals:
+
+- diagonal cross-links
+- mirrored upper basins
+- asymmetric lower transport structure
+- directed exchange corridors
+
+The geometry resembles:
+
+```text
+a transport routing layer
+embedded inside the attractor.
+```
+
+---
+
+## Basin Overlay Observation
+
+The basin reconstruction overlay shows that:
+
+- gate candidates cluster tightly
+- the graph centers align with persistent density zones
+- transport nodes occupy stable geometric positions
+- transitions occur between separated gate families
+
+This suggests that:
+
+```text
+continuous flow may conceal
+a hidden discrete transport structure.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-26 suggests:
+
+```text
+JANUS aperture geometry may support
+graph-mediated basin transport.
+```
+
+The system now exhibits:
+
+1. localized gate clusters
+2. directed transport structure
+3. asymmetric routing
+4. persistent basin nodes
+5. corridor-like transfer geometry
+
+---
+
+## Relation to Previous Experiments
+
+EXP-26 builds on:
+
+- EXP-21 aperture localization
+- EXP-23 directional gate alignment
+- EXP-24 surrogate validation
+- EXP-25 multi-scale persistence
+
+The new contribution is:
+
+```text
+graph reconstruction
+of JANUS aperture transport organization.
+```
+
+---
+
+# 🔷 EXP-27 — Directed Basin Navigation
+
+Script:
+`scripts_2/janus_directed_basin_navigation.py`
+
+Outputs:
+
+- `outputs/exp27_navigation_decision_map.png`
+- `outputs/exp27_transition_entropy.png`
+- `outputs/exp27_navigation_paths.png`
+- `outputs/exp27_navigation_summary.txt`
+
+---
+
+## Basin Routing Probability Map
+
+![EXP-27 Routing Probability](outputs/exp27_navigation_decision_map.png)
+
+---
+
+## Transition Entropy
+
+![EXP-27 Transition Entropy](outputs/exp27_transition_entropy.png)
+
+---
+
+## Directed Basin Navigation
+
+![EXP-27 Navigation Paths](outputs/exp27_navigation_paths.png)
+
+---
+
+## Numerical Results
+
+```text
+gate candidates:
+60
+
+graph nodes:
+4
+
+Transition probability matrix:
+
+0.000 0.000 1.000 0.000
+0.500 0.000 0.000 0.500
+0.600 0.400 0.000 0.000
+0.000 0.000 0.000 0.000
+
+navigation path:
+[0, 2, 0, 2, 1, 0, 2, 1, 3]
+```
+
+---
+
+## Transition Entropy
+
+```text
+node 0: -0.000000
+node 1: 1.000000
+node 2: 0.970951
+node 3: 0.000000
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS aperture transport exhibits
+directed basin navigation behavior.
+```
+
+---
+
+## Observation
+
+EXP-27 extends the basin graph reconstruction
+into explicit navigation analysis.
+
+The experiment reveals that:
+
+- some nodes behave deterministically
+- some nodes behave probabilistically
+- routing entropy varies strongly
+- transport paths become directional
+
+This is one of the strongest structural results so far.
+
+---
+
+## Deterministic vs Unstable Nodes
+
+Node 0 exhibits:
+
+```text
+fully deterministic routing
+```
+
+toward node 2.
+
+Meanwhile nodes 1 and 2 exhibit:
+
+- branching behavior
+- probabilistic transfer
+- unstable routing choices
+- elevated transition entropy
+
+This creates a distinction between:
+
+```text
+stable transport corridors
+```
+
+and:
+
+```text
+decision-like gate regions.
+```
+
+---
+
+## Entropy Structure
+
+The entropy map reveals two classes of nodes:
+
+### Low-entropy nodes
+
+```text
+node 0
+node 3
+```
+
+These behave as:
+
+- stable transport anchors
+- deterministic routing channels
+- sink/source regions
+
+---
+
+### High-entropy nodes
+
+```text
+node 1
+node 2
+```
+
+These behave as:
+
+- unstable routing zones
+- probabilistic gate switches
+- transport branching regions
+
+---
+
+## Directed Navigation Geometry
+
+The navigation overlay shows:
+
+- long diagonal transport edges
+- mirrored upper transport basins
+- unstable central exchange
+- directional lower routing
+
+The resulting structure resembles:
+
+```text
+a hidden routing infrastructure
+inside continuous chaotic flow.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-27 suggests:
+
+```text
+JANUS transport geometry may support
+directional basin navigation.
+```
+
+The observed structure now includes:
+
+1. basin clustering
+2. directed routing
+3. probabilistic transfer
+4. entropy-separated node classes
+5. transport-path reconstruction
+
+---
+
+## Relation to Previous Experiments
+
+EXP-27 builds on:
+
+- EXP-24 surrogate validation
+- EXP-25 multi-scale persistence
+- EXP-26 graph reconstruction
+
+The new contribution is:
+
+```text
+directed navigation analysis
+inside JANUS basin transport geometry.
+```
+
+---
+
+# 🔥 Updated Working Insight — LOG_02
+
+```text
+JANUS transition geometry appears to organize
+into persistent transport corridors,
+orientation-selective gate structures,
+and directed basin-routing systems.
+```
+
+Across EXP-21 to EXP-27:
+
+```text
+gate structures remain:
+
+- sparse
+- localized
+- diagonal
+- scale-persistent
+- surrogate-resistant
+- graph-organized
+- directionally navigable
+- entropy-structured
+```
+
+The emerging picture is no longer merely:
+
+```text
+coherence collapse detection
+```
+
+but increasingly:
+
+```text
+transition infrastructure reconstruction.
+```
 
