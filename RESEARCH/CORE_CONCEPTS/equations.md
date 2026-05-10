@@ -424,17 +424,12 @@ Empirical interpretation:
 
 Directional orientation field:
 
-$$
-\Theta(x) = \arg(F(x))
+$$\Theta(x) = \arg(F(x))
 $$
 
 Bias alignment score:
 
-$$
-B(x)
-=
-\cos(
-\Theta(x)-\Theta_{\mathrm{root}}
+$$B(x) = \cos( \Theta(x)-\Theta_{\mathrm{root}}
 )
 $$
 
@@ -451,16 +446,14 @@ high B(x)
 
 Current unified operational picture:
 
-$$
-\mathcal{X}(t)
+$$\mathcal{X}(t)
 =
 (M(t), J(x), A(x), B(x))
 $$
 
 Transition probability:
 
-$$
-P(\text{IOTA})
+$$P(\text{IOTA})
 =
 f(\mathcal{X}(t))
 $$
