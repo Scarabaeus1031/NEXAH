@@ -295,9 +295,7 @@ F_{\mathrm{backward}}(x)
 
 # 🪞 10. Normalized Janus Coherence
 
-$$
-J(x)
-=
+$$J(x) =
 \frac{
 \|\mathcal{J}(x)\|
 }{
