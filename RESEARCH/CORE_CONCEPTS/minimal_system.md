@@ -1,180 +1,545 @@
 # 🧮 NEXAH — Minimal System
 
-This document defines the **minimal operational structure**  
-of the NEXAH framework.
+---
 
-It captures the irreducible mechanism underlying:
+# 🧭 Overview
 
-> phase → mismatch → transition → control
+This document defines the minimal operational structure
+underlying the NEXAH framework.
+
+It captures the irreducible mechanism linking:
+
+```text
+phase
+→ mismatch
+→ transition
+→ control
+```
+
+and represents the smallest coherent formulation
+currently supported by empirical validation.
+
+---
+
+# ⚠️ Scope
+
+This framework is:
+
+- minimal
+- operational
+- empirically grounded
+
+It is NOT:
+
+- a complete physical theory
+- a proof of universality
+- a finalized mathematical formalism
+
+It is:
+
+> a compact transition framework
+> describing how nonlinear systems organize
+> and activate structural change.
 
 ---
 
 # 🧭 Role in NEXAH
 
-This document defines the **irreducible operational core**  
-of the NEXAH framework.
+This document provides the irreducible operational core
+of the NEXAH architecture.
 
-It provides the minimal link between:
+It connects:
 
 ```text
-validation → structure → control
+validation
+→ measurable quantities
+→ transition activation
+→ control interaction
 ```
 
 ---
 
+# 🔁 Position Inside NEXAH
+
 ```text
-FOUNDATION     → defines assumptions
+FOUNDATION
+→ assumptions
 
-CORE_CONCEPTS  → defines operational structure  ← (this document)
+CORE_CONCEPTS
+→ operational mechanism   ← (this document)
 
-VALIDATION     → confirms empirical behavior
+VALIDATION
+→ empirical confirmation
 
-SYSTEM         → implements control and navigation
+FIELD_LAYER
+→ geometric representation
+
+NAVIGATION
+→ movement and control
 ```
 
 ---
 
-This document represents the **smallest complete description**  
-of the NEXAH mechanism.
----
+# 🧠 Minimal Structural Principle
 
-# 🧭 System Definition
+The minimal NEXAH hypothesis is:
 
-State:
-
-$$
-x(t) \in \mathbb{R}^n
-$$
-
-Dynamics:
-
-$$
-\dot{x} = F(x)
-$$
+```text
+nonlinear transitions are governed primarily
+by breakdown of coherent phase organization,
+not by instability magnitude alone.
+```
 
 ---
 
-# 🌀 Phase
+# 🧮 1. Dynamical System
 
-Phase is defined as a projection:
+We consider a continuous nonlinear system:
 
-$$
-\phi(t) = \arctan2(x_2, x_1)
-$$
+```math
+\dot{x}(t)
+=
+F(x(t))
+```
+
+with state:
+
+```math
+x(t)
+\in
+\mathbb{R}^n
+```
 
 ---
 
-# 🔁 Phase Velocity
+# 🌀 2. Phase Representation
 
-$$
-\omega(t) = \frac{d\phi}{dt}
-$$
+Phase is defined through a local projection:
+
+```math
+\phi(t)
+=
+\arctan2(x_2(t),x_1(t))
+```
 
 ---
 
-# 🧩 Expected Phase
+## Interpretation
 
-$$
-\hat{\omega}(t) = \mathcal{E}[\omega](t)
-$$
+```text
+φ(t)
+describes rotational progression
+through system state space.
+```
+
+---
+
+# 🔁 3. Phase Velocity
+
+Temporal phase evolution:
+
+```math
+\omega(t)
+=
+\frac{d\phi(t)}{dt}
+```
+
+Discrete approximation:
+
+```math
+\omega(t)
+\approx
+\frac{
+\phi(t+\Delta t)-\phi(t)
+}{
+\Delta t
+}
+```
+
+---
+
+# 🧩 4. Expected Phase Evolution
+
+Define local expected phase behavior:
+
+```math
+\hat{\omega}(t)
+=
+\mathcal{E}[\omega](t)
+```
 
 where:
 
-- $\mathcal{E}$ = local expectation operator  
-- e.g. smoothing, local averaging  
+```text
+\mathcal{E}
+=
+local expectation operator
+```
+
+Examples:
+
+- smoothing
+- moving average
+- local low-pass filtering
+- local reconstruction
 
 ---
 
-# ⚠️ Mismatch
+## Interpretation
 
-Core quantity:
+```text
+ω̂(t)
+represents locally coherent
+expected phase evolution.
+```
 
-$$
-M(t) = |\omega(t) - \hat{\omega}(t)|
-$$
+---
+
+# ⚠️ 5. Phase Mismatch
+
+Core NEXAH quantity:
+
+```math
+M(t)
+=
+|
+\omega(t)-\hat{\omega}(t)
+|
+```
+
+---
+
+## Interpretation
+
+```text
+small M(t)
+→ coherent evolution
+
+large M(t)
+→ breakdown of phase consistency
+```
+
+---
+
+# 🔥 6. Dynamical Intensity
+
+Define local dynamical magnitude:
+
+```math
+I(t)
+=
+\|\dot{x}(t)\|
+```
+
+---
+
+## Interpretation
+
+```text
+I(t)
+measures activity scale,
+NOT transition organization.
+```
+
+Important distinction:
+
+```text
+high activity
+≠
+transition activation
+```
+
+---
+
+# ⚡ 7. Transition Law
+
+Minimal operational rule:
+
+```math
+\text{transition}
+\Longleftrightarrow
+M(t) > \tau
+```
+
+where:
+
+```text
+\tau
+=
+empirical mismatch threshold
+```
+
+---
+
+# 🔬 Core Empirical Result
+
+Observed across validated systems:
+
+```math
+\text{transition}
+\not\sim
+I(t)
+```
+
+but:
+
+```math
+\text{transition}
+\sim
+M(t)
+```
+
+---
+
+## Interpretation
+
+```text
+transitions are driven
+by loss of coherent phase organization,
+not by instability magnitude alone.
+```
+
+---
+
+# 🧭 8. Structural Interpretation
+
+Minimal interpretation chain:
+
+```text
+phase
+→ expected evolution
+→ mismatch
+→ transition activation
+```
+
+---
+
+## Meaning
+
+```text
+phase
+→ intrinsic progression
+
+expected phase
+→ locally coherent prediction
+
+mismatch
+→ deviation from coherent organization
+
+transition
+→ structural reconfiguration
+```
+
+---
+
+# 🔷 9. Minimal Directional Extension
+
+The JANUS experiments suggest that transitions
+also possess directional structure.
+
+Minimal directional quantity:
+
+```math
+J(x)
+=
+\text{directional coherence}
+```
 
 Interpretation:
 
 ```text
-M small → coherent phase evolution  
-M large → breakdown of phase consistency
+high J(x)
+→ coherent transport organization
+
+low J(x)
+→ directional breakdown
 ```
 
 ---
 
-# ⚡ Instability
+# 🔬 Minimal Transition Geometry Hypothesis
 
-$$
-I(t) = \|\dot{x}(t)\|
-$$
+Observed tendency:
 
-Interpretation:
+```math
+P(\text{transition})
+\uparrow
+\quad
+\text{as}
+\quad
+J(x)
+\downarrow
+```
+
+---
+
+## Interpretation
 
 ```text
-I high → large dynamical magnitude  
-I low → weak system motion
+phase mismatch determines activation
+
+directional coherence shapes organization
 ```
 
 ---
 
-# 🔥 Transition Law
+# 🎯 10. Control Law
 
-```text
-transition ⇔ M(t) large
-```
+Minimal control interaction:
 
-Transitions are not directly driven by instability.
-
----
-
-# 🧠 Core Result
-
-```text
-transition ≠ function of instability
-
-transition ≈ function of mismatch
+```math
+s(t)
+=
+f(
+\phi(t),
+I(t)
+)
 ```
 
 ---
 
-# 🎯 Control
+# 🔧 Extended Geometry-Aware Control
 
-Control is defined as:
+Directional extension:
 
-$$
-s(t) = f(\phi(t), I(t))
-$$
+```math
+s(t)
+=
+f(
+\phi(t),
+I(t),
+J(x)
+)
+```
 
-Objective:
+---
 
-$$
+## Control Objective
+
+Primary objective:
+
+```math
 \min M(t)
-$$
+```
 
----
+Directional extension:
 
-# 🔁 System Flow
-
-```text
-φ → ω → ω̂ → M → transition
-                     ↑
-                  control
+```math
+\max J(x)
 ```
 
 ---
 
-# 🔬 Interpretation
+## Interpretation
 
 ```text
-phase → intrinsic system progression
+control restores coherent organization
+rather than suppressing raw activity.
+```
 
-expected phase → local structural prediction
+---
 
-mismatch → deviation from expected evolution
+# 🔁 11. Minimal System Flow
 
-transition → activation of structural change
+```text
+φ
+→ ω
+→ ω̂
+→ M
+→ transition
+```
 
-control → restoration of alignment
+Extended form:
+
+```text
+φ
+→ mismatch
+→ directional coherence
+→ transition geometry
+→ navigation/control
+```
+
+---
+
+# 🔬 12. Minimal Structural Mechanism
+
+The current minimal operational mechanism is:
+
+```text
+coherent phase evolution
+→ stable structure
+
+phase mismatch
+→ transition preparation
+
+directional breakdown
+→ transition organization
+```
+
+---
+
+# 🌌 13. Current Interpretation
+
+```text
+nonlinear systems appear to transition
+through breakdown of coherent organization
+rather than unconstrained instability.
+```
+
+---
+
+# 🔗 Relation to Other Modules
+
+## → equations.md
+
+- full operational framework
+
+## → field_model.md
+
+- field interpretation layer
+
+## → structure_quantities.md
+
+- spatial quantities
+
+## → aperture_geometry.md
+
+- gate structures
+
+## → vessel_geometry.md
+
+- containment & persistence
+
+## → JANUS_OPERATOR/
+
+- directional coherence geometry
+
+---
+
+# ⚠️ Current Limitations
+
+- empirical framework
+- simplified phase representation
+- reconstruction-dependent
+- directional layer still exploratory
+- incomplete analytical derivation
+
+---
+
+# 🧭 Status
+
+```text
+phase mismatch:
+empirically validated
+
+minimal transition mechanism:
+strong support
+
+directional coherence:
+experimental but reproducible
+
+cross-system consistency:
+strong exploratory evidence
 ```
 
 ---
@@ -182,39 +547,31 @@ control → restoration of alignment
 # 🔑 Central Insight
 
 ```text
-Systems transition when phase coherence breaks,
-not when instability is maximal.
+systems transition
+when coherent organization breaks,
+not merely when activity becomes large.
 ```
 
 ---
 
-# ⚠️ Scope
-
-This model is:
-
-- minimal  
-- empirically grounded  
-- operational  
-
-It is not:
-
-- a complete theory  
-- a formal proof  
-- a universal claim  
-
----
-
-# 🚀 Relation to Full System
+# 🚀 Operational Principle
 
 ```text
-minimal_system.md → irreducible mechanism
+stability
+=
+maintained coherent organization
 
-equations.md → full operational formulation
+transition
+=
+breakdown of coherence
 
-field_model.md → structural interpretation
+control
+=
+restoration of alignment
 ```
 
 ---
 
-**NEXAH Minimal System**  
-Core Concepts Layer · 2026
+**NEXAH Minimal System Layer**  
+Minimal Transition–Mismatch–Coherence Framework  
+Thomas K. R. Hofmann · 2026
