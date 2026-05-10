@@ -347,7 +347,7 @@ Outputs:
 
 ## Dual Layer Transport
 
-![Dual Layer Transport](outputs/exp03_dual_layer_transport.png)
+![Dual Layer Transport](./outputs/EXP_03/exp03_dual_layer_transport.png)
 
 The dual-layer transport visual illustrates the complex layered transport geometry, with distinct zones representing different phases of the transport mechanism.
 
@@ -355,7 +355,7 @@ The dual-layer transport visual illustrates the complex layered transport geomet
 
 ## Hysteresis Routing
 
-![Hysteresis Routing](outputs/exp03_hysteresis_routing.png)
+![Hysteresis Routing](./outputs/EXP_03/exp03_hysteresis_routing.png)
 
 This visual reveals the routing dynamics under hysteresis, emphasizing how transport flows are affected by prior states and feedback loops.
 
@@ -363,7 +363,7 @@ This visual reveals the routing dynamics under hysteresis, emphasizing how trans
 
 ## Layer Sync Scan
 
-![Layer Sync Scan](outputs/exp03_layer_sync_scan.png)
+![Layer Sync Scan](./outputs/EXP_03/exp03_layer_sync_scan.png)
 
 The layer synchronization scan visualizes the phase alignment between different layers, showing how the layers interact over time.
 
@@ -371,7 +371,7 @@ The layer synchronization scan visualizes the phase alignment between different 
 
 ## Return Crescent
 
-![Return Crescent](outputs/exp03_return_crescent.png)
+![Return Crescent](./outputs/EXP_03/exp03_return_crescent.png)
 
 The return crescent highlights the cyclical nature of the system, showing how the transport structures oscillate and fold back on themselves.
 
@@ -379,7 +379,7 @@ The return crescent highlights the cyclical nature of the system, showing how th
 
 ## Transport Density
 
-![Transport Density](outputs/exp03_transport_density.png)
+![Transport Density](./outputs/EXP_03/exp03_transport_density.png)
 
 Transport density reveals the areas of highest activity and congestion in the system, showing where transport corridors are most densely packed.
 
@@ -576,7 +576,7 @@ Outputs:
 
 ## Angle Distribution
 
-![Angle Distribution](outputs/exp05_angle_distribution.png)
+![Angle Distribution](./outputs/EXP_05/exp05_angle_distribution.png)
 
 The angle distribution chart shows how the splinter apertures spread across different angular zones, with some angular ranges showing higher densities.
 
@@ -584,7 +584,7 @@ The angle distribution chart shows how the splinter apertures spread across diff
 
 ## Forbidden Splinter Density
 
-![Forbidden Splinter Density](outputs/exp05_forbidden_splinter_density.png)
+![Forbidden Splinter Density](./outputs/EXP_05/exp05_forbidden_splinter_density.png)
 
 This visual shows the forbidden density zones, where transport is suppressed due to prime-based drift behavior.
 
@@ -592,7 +592,7 @@ This visual shows the forbidden density zones, where transport is suppressed due
 
 ## Snap Persistence Scan
 
-![Snap Persistence Scan](outputs/exp05_snap_persistence_scan.png)
+![Snap Persistence Scan](./outputs/EXP_05/exp05_snap_persistence_scan.png)
 
 The snap persistence scan shows the persistence of specific splinter gates over time, suggesting stable regions where gates remain active.
 
@@ -600,7 +600,7 @@ The snap persistence scan shows the persistence of specific splinter gates over 
 
 ## Splinter Field
 
-![Splinter Field](outputs/exp05_splinter_field.png)
+![Splinter Field](./outputs/EXP_05/exp05_splinter_field.png)
 
 The splinter field visualizes the areas of high activity and flow within the transport system, revealing the interaction between gate formation and phase transitions.
 
@@ -608,7 +608,7 @@ The splinter field visualizes the areas of high activity and flow within the tra
 
 ## Splinter Gate Overlay
 
-![Splinter Gate Overlay](outputs/exp05_splinter_gate_overlay.png)
+![Splinter Gate Overlay](./outputs/EXP_05/exp05_splinter_gate_overlay.png)
 
 The splinter gate overlay highlights the areas where gate candidates overlap with existing transport corridors, revealing patterns of gate formation and interaction.
 
@@ -641,7 +641,7 @@ Outputs:
 
 ## Rope Residue Projection Mod23
 
-![Rope Residue Projection Mod23](outputs/exp06_rope_residue_projection_mod23.png)
+![Rope Residue Projection Mod23](./outputs/EXP_06/exp06_rope_residue_projection_mod23.png)
 
 This visual shows the projection of rope residues in modular 23, highlighting the interaction between different phase-driven ropes and their residues.
 
@@ -649,7 +649,7 @@ This visual shows the projection of rope residues in modular 23, highlighting th
 
 ## Transition Decomposition Mod23
 
-![Transition Decomposition Mod23](outputs/exp06_transition_decomposition_mod23.png)
+![Transition Decomposition Mod23](./outputs/EXP_06/exp06_transition_decomposition_mod23.png)
 
 The transition decomposition for mod 23 visualizes the relationship between different transition states and their impact on the transport structure.
 
@@ -657,7 +657,7 @@ The transition decomposition for mod 23 visualizes the relationship between diff
 
 ## Dominant Cycle Core Mod23
 
-![Dominant Cycle Core Mod23](outputs/exp06_dominant_cycle_core_mod23.png)
+![Dominant Cycle Core Mod23](./outputs/EXP_06/exp06_dominant_cycle_core_mod23.png)
 
 The dominant cycle core visual shows how dominant cycles emerge from modular prime transition graphs, suggesting stable cycles within the larger system.
 
@@ -665,7 +665,7 @@ The dominant cycle core visual shows how dominant cycles emerge from modular pri
 
 ## Prime Mod Cycle Comparison
 
-![Prime Mod Cycle Comparison](outputs/exp06_prime_mod_cycle_comparison.png)
+![Prime Mod Cycle Comparison](./outputs/EXP_06/exp06_prime_mod_cycle_comparison.png)
 
 The prime modular cycle comparison chart shows how different modular primes affect the cycle length and energy distribution, revealing the importance of prime offsets in system stability.
 
@@ -673,10 +673,9 @@ The prime modular cycle comparison chart shows how different modular primes affe
 
 ## Splinter Residue Hitmap
 
-![Splinter Residue Hitmap](outputs/exp06_splinter_residue_hitmap.png)
+![Splinter Residue Hitmap](./outputs/EXP_06/exp06_splinter_residue_hitmap.png)
 
 The splinter residue hitmap shows how the residues interact with the splinter apertures, revealing the spatial distribution of residues within the transport field.
-
 ---
 
 ## Numerical Results
@@ -790,7 +789,7 @@ Outputs:
 
 ## Local Drift Vector Field
 
-![Local Drift Vector Field](outputs/exp07_local_drift_vector_field.png)
+![Local Drift Vector Field](../outputs/EXP_07/exp07_local_drift_vector_field.png)
 
 The local drift vector field visualizes the drift patterns across the transport system, showing the directional flows and interactions between transport elements.
 
@@ -798,7 +797,7 @@ The local drift vector field visualizes the drift patterns across the transport 
 
 ## Residue Flow Lattice
 
-![Residue Flow Lattice](outputs/exp07_residue_flow_lattice.png)
+![Residue Flow Lattice](../outputs/EXP_07/exp07_residue_flow_lattice.png)
 
 This visual shows the underlying lattice structure of the residue flow, emphasizing areas of high interaction and local drift field generation.
 
@@ -806,7 +805,7 @@ This visual shows the underlying lattice structure of the residue flow, emphasiz
 
 ## Residue Drift Strength
 
-![Residue Drift Strength](outputs/exp07_residue_drift_strength.png)
+![Residue Drift Strength](../outputs/EXP_07/exp07_residue_drift_strength.png)
 
 The residue drift strength chart shows the relative strength of drift currents across different parts of the system, identifying regions with the most significant influence on transport.
 
@@ -814,7 +813,7 @@ The residue drift strength chart shows the relative strength of drift currents a
 
 ## Transport Corridors
 
-![Transport Corridors](outputs/exp07_transport_corridors.png)
+![Transport Corridors](../outputs/EXP_07/exp07_transport_corridors.png)
 
 The transport corridors diagram illustrates the most consistent paths of transport, revealing high-density flow areas and stable routing patterns.
 
@@ -822,7 +821,7 @@ The transport corridors diagram illustrates the most consistent paths of transpo
 
 ## Modular Vortex Reconstruction
 
-![Modular Vortex Reconstruction](outputs/exp07_modular_vortex_reconstruction.png)
+![Modular Vortex Reconstruction](../outputs/EXP_07/exp07_modular_vortex_reconstruction.png)
 
 This final visual reconstructs the modular vortex structure that emerges from the drift field, showing the interaction between vortices and the transport corridors in a dynamic way.
 
