@@ -1,49 +1,103 @@
 # 🧠 NEXAH — Core Concepts Layer
 
-This module defines the **conceptual backbone** of the NEXAH framework.
+This module defines the conceptual and operational backbone
+of the NEXAH framework.
 
-It translates empirical observations and validation results  
-into a **coherent system of structural and operational concepts**.
+It translates:
+
+```text
+empirical observations
+→ measurable structure
+→ geometric interpretation
+→ transition organization
+→ navigation/control concepts
+```
+
+across the current NEXAH research architecture.
 
 ---
 
-## 🧠 Fundamental Mechanism
+# 🌌 Core Transition Geometry
+
+![JANUS Transition Geometry](./JANUS_OPERATOR/outputs/janus_transition_orientation_atlas.png)
+
+The JANUS transition atlas reconstructs directional transport organization
+inside nonlinear systems.
+
+Observed structures include:
+
+- transition corridors
+- aperture regions
+- directional coherence fields
+- shell crossings
+- recursive transport organization
+- orientation bias geometry
+
+---
+
+# 🧠 Fundamental Transition Mechanism
 
 ![NEXAH Core Mechanism](./visuals/nexah_phase_mismatch_control_mechanism.png)
 
-This diagram captures the **minimal causal layer** underlying NEXAH:
+This diagram captures the minimal operational mechanism
+currently underlying the NEXAH framework:
 
-- phase (φ)  
-- phase velocity (ω)  
-- expected phase (ω̂)  
-- mismatch (M)  
-- instability (I)  
-- control (s)  
+- phase (`φ`)
+- phase velocity (`ω`)
+- expected phase (`ω̂`)
+- mismatch (`M`)
+- instability (`I`)
+- control interaction (`s`)
 
-→ together forming the **causal structure governing transitions**
+Together these quantities define:
+
+```text
+how transitions activate
+inside nonlinear systems.
+```
 
 ---
 
 # 🧭 Role in NEXAH
 
 ```text
-FOUNDATION → minimal structure (axioms)
+FOUNDATION
+→ minimal assumptions
 
-CORE_CONCEPTS → operational meaning
+CORE_CONCEPTS
+→ operational meaning & structure
 
-VALIDATION → empirical verification
+VALIDATION
+→ empirical verification
 
-SYSTEM → implementation
+FIELD_LAYER
+→ geometric reconstruction
+
+NAVIGATION
+→ control & routing
 ```
 
 ---
 
-# 🔴 Core Principle
+# 🔴 Core Scientific Principle
 
 ```text
-Concepts are not speculative.
+concepts are derived
+from reproducible system behavior,
+not from purely speculative construction.
+```
 
-They are derived from validated system behavior.
+---
+
+# 🔁 Central NEXAH Pipeline
+
+```text
+trajectory
+→ phase
+→ mismatch
+→ directional coherence
+→ transition geometry
+→ navigation/control
 ```
 
 ---
@@ -52,121 +106,223 @@ They are derived from validated system behavior.
 
 ---
 
-## 🧮 Minimal System & Equations
+# 🧮 Minimal System & Equations
 
 → `minimal_system.md`  
 → `equations.md`
 
-Defines the **operational core of NEXAH** at two levels:
+Defines the operational core of NEXAH
+at two levels:
 
-- `minimal_system.md` → minimal, irreducible structure  
-- `equations.md` → full operational formulation  
-
-Core variables:
-
-- φ (phase)  
-- ω (phase velocity)  
-- ω̂ (expected phase)  
-- M (mismatch)  
-- I (instability)  
-- s (control)  
-
-👉 **Together, these define the causal mechanism of transitions**
+| File | Role |
+|---|---|
+| `minimal_system.md` | irreducible transition mechanism |
+| `equations.md` | extended operational framework |
 
 ---
 
-## 🌀 Field Model
+## Core Variables
+
+| Quantity | Meaning |
+|---|---|
+| `φ` | phase |
+| `ω` | phase velocity |
+| `ω̂` | expected phase evolution |
+| `M` | mismatch |
+| `I` | instability magnitude |
+| `J(x)` | directional coherence |
+| `A(x)` | aperture structure |
+| `B(x)` | orientation bias |
+
+---
+
+## Core Mechanism
+
+```text
+mismatch
+→ activates transitions
+
+directional coherence
+→ organizes transitions
+```
+
+---
+
+# 🌀 Field Model
 
 → `field_model.md`
 
-Describes systems as:
+Describes nonlinear systems as:
 
-- continuous flow fields  
-- density structures  
-- rotational dynamics  
-
-👉 Role: **interpreting dynamics as structured fields**
+- continuous transport fields
+- structured density organization
+- coherence geometries
+- directional flow structures
 
 ---
 
-## 🧪 Vessel Geometry
+## Role
+
+```text
+interprets dynamics
+as emergent geometric organization
+```
+
+---
+
+# 🧪 Vessel Geometry
 
 → `vessel_geometry.md`
 
 Defines:
 
-- containment  
-- boundaries  
-- structural persistence  
-
-👉 Role: **constraints under which structure can exist**
+- containment
+- persistence
+- structural boundaries
+- transition interfaces
 
 ---
 
-## 🔁 Multi-Layer Interaction
+## Role
+
+```text
+describes conditions
+under which structure persists
+```
+
+---
+
+# 🔁 Multi-Layer Interaction
 
 → `multi_layer_interaction.md`
 
-Hypothesis:
+Explores the hypothesis that systems may contain:
 
-- systems may consist of interacting dynamical components  
+```text
+multiple interacting organizational layers
+```
 
-👉 Role: **explains emergent complexity through coupling**
+including:
+
+- transport organization
+- phase organization
+- recursive coherence structure
 
 ---
 
-## 🧩 Aperture Geometry
+# 🧩 Aperture Geometry
 
 → `aperture_geometry.md`
 
-Pipeline:
+Transition pipeline:
 
 ```text
-trajectory → density → ridge → aperture → gate
+trajectory
+→ density
+→ coherence thinning
+→ aperture
+→ transition gate
 ```
-
-👉 Role: **geometric structure of transitions**
 
 ---
 
-## 🔗 Theory → Field Mapping
+## Role
+
+```text
+describes geometric organization
+of transition regions
+```
+
+---
+
+# 🪞 JANUS Operator
+
+→ `JANUS_OPERATOR/`
+
+Defines the current directional geometry layer.
+
+Includes:
+
+- directional coherence
+- forward/backward transport overlap
+- recursive orientation geometry
+- shell crossing analysis
+- transport aperture reconstruction
+- orientation bias fields
+
+---
+
+## Key Concept
+
+```math
+J(x)
+=
+\text{directional coherence}
+```
+
+---
+
+## Role
+
+```text
+reconstructs transition organization
+inside nonlinear transport structure
+```
+
+---
+
+# 🔗 Theory → Field Mapping
 
 → `theory_to_field_mapping.md`
 
-Maps:
+Maps abstract operators:
 
-- Γ (closure)  
-- Δ (transition)  
-- Ω (stabilization)  
+- `Γ` → closure
+- `Δ` → transition
+- `Ω` → stabilization
 
-to:
+onto:
 
-- field behavior  
-- geometry  
-- dynamics  
-
-👉 Role: **bridge between abstract operators and observed structure**
+- transport geometry
+- field structure
+- transition organization
+- control behavior
 
 ---
 
-# 🧠 Concept Hierarchy
+## Role
 
 ```text
+bridge between abstract operators
+and empirical dynamical structure
+```
+
+---
+
+# 🧠 Structural Hierarchy
+
+```text
+minimal_system.md
+    ↓
+defines irreducible mechanism
+
+↓
+
 equations.md
     ↓
-defines measurable behavior
+extends operational structure
 
 ↓
 
 field_model.md
     ↓
-interprets dynamics as structure
+interprets dynamics geometrically
 
 ↓
 
-vessel / aperture / multi-layer
+vessel / aperture / JANUS / multi-layer
     ↓
-describe how structure manifests
+describe organization of transitions
 
 ↓
 
@@ -179,83 +335,91 @@ connects to abstract representation
 
 # 🔬 What is ACTUALLY fundamental?
 
-👉 Only this:
+At the current stage,
+the empirically strongest quantities are:
 
 ```text
-φ, ω, ω̂, M, I, s
+φ
+ω
+ω̂
+M
+I
 ```
 
-Everything else is:
-
-- interpretation  
-- abstraction  
-- geometric representation  
-
----
-
-# 🔷 Causal Interpretation
-
-The system can be described as:
+with emerging extensions:
 
 ```text
-φ → ω → ω̂ → M → transition probability
-            ↑
-         control
-```
-
-Meaning:
-
-- φ defines intrinsic progression  
-- ω defines local motion  
-- ω̂ defines expected evolution  
-- M defines structural deviation (mismatch)  
-- control modifies phase evolution  
-
----
-
-## 🔑 Central Mechanism
-
-```text
-Instability ≠ transition
-
-Mismatch ⇒ transition activation
+J(x)
+A(x)
+B(x)
 ```
 
 ---
 
-## 🔁 Full Interpretation
+# 🔷 Current Operational Interpretation
 
 ```text
-instability → potential (energy scale)
+phase
+→ intrinsic progression
 
-mismatch → trigger (structural)
+mismatch
+→ coherence breakdown
 
-control → alignment (phase correction)
+directional coherence
+→ transport organization
+
+aperture geometry
+→ transition localization
+
+control
+→ restoration of coherent organization
 ```
 
 ---
 
-# 🔬 Physical Consistency (Phase Perspective)
-
-In nonlinear physical systems:
+# 🔑 Central Transition Principle
 
 ```text
-phase alignment → constructive accumulation  
-phase mismatch → oscillatory or inefficient interaction  
+instability
+≠
+transition
 ```
 
-If phase relations are not consistent, energy transfer becomes unstable or reversible instead of directional  [oai_citation:0‡RP Photonics](https://www.rp-photonics.com/phase_matching.html?utm_source=chatgpt.com)  
+Instead:
+
+```text
+transition
+≈
+breakdown of coherent organization
+```
 
 ---
 
-## 🧠 Interpretation for NEXAH
+# 🔁 Current Geometric Interpretation
 
 ```text
-coherent phase → stable structure
+Geometry defines
+where transitions can occur.
 
-phase mismatch → loss of consistency
-               → transition region
+Mismatch defines
+when transitions activate.
+
+Directional coherence defines
+how transitions organize.
 ```
+
+---
+
+# 🌊 Transport Geometry Perspective
+
+The current NEXAH interpretation increasingly suggests:
+
+```text
+nonlinear systems possess
+structured transport organization
+```
+
+rather than purely unconstrained chaotic motion.
 
 ---
 
@@ -263,27 +427,43 @@ phase mismatch → loss of consistency
 
 This module is:
 
-- empirically grounded  
-- partially formalized  
-- structurally consistent  
+- empirically grounded
+- operationally useful
+- structurally consistent
+- partially formalized
 
 It is NOT:
 
-- a complete theory  
-- a proven mathematical system  
-- a universal claim  
+- a finalized theory
+- a universal law
+- a completed mathematical framework
 
 ---
 
 # 🔥 Core Insight
 
 ```text
-The system is not defined by states.
+systems are not defined
+only by states or trajectories.
 
-It is defined by:
+they are increasingly describable through:
 
-phase dynamics
-and mismatch structure
+coherence
+geometry
+phase organization
+and transition structure
+```
+
+---
+
+# 🚀 Current Research Direction
+
+```text
+concept
+→ reconstruction
+→ formalization
+→ operator theory
+→ geometry-aware navigation
 ```
 
 ---
@@ -292,24 +472,31 @@ and mismatch structure
 
 CORE_CONCEPTS is:
 
-- not raw data  
-- not final theory  
+- not raw simulation output
+- not a finalized scientific theory
 
 It is:
 
-> the **operational language of NEXAH**
+> the operational language
+> of the current NEXAH framework.
 
 ---
 
-# 🚀 Direction
+# 🌌 Current Perspective
 
-Next evolution:
+NEXAH currently explores whether:
 
 ```text
-concept → formalization → theory → publication
+geometry emerging from dynamics
+can explain transitions,
+coherence,
+stability,
+and navigation
+inside nonlinear systems.
 ```
 
 ---
 
-**NEXAH Core Concepts Layer**  
+**NEXAH — Core Concepts Layer**  
+Transition Geometry · Coherence · Directional Structure · Navigation  
 Thomas K. R. Hofmann · 2026
