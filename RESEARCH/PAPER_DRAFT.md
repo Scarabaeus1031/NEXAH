@@ -192,7 +192,7 @@ rather than isotropic instability alone.
 
 # 🌌 Fractal Transition Geometry
 
-![Fractal Transition Structure](./VALIDATION/fractal_tests/results/julia_transition_regions.png)
+![Mandelbrot Transition Overlay](./VALIDATION/fractal_tests/scripts/outputs/mandelbrot_peaks_overlay.png)
 
 To investigate whether transition structure extends
 beyond intrinsic system dynamics,
