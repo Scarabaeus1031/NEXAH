@@ -2,24 +2,30 @@
 
 This module contains the full empirical validation suite of the NEXAH framework.
 
-It establishes that the observed structures, transition dynamics, and control mechanisms are:
+It establishes that the observed structures, transition dynamics, transport geometry, and control mechanisms are:
 
 - reproducible  
 - noise-robust  
 - partition-invariant  
 - cross-system consistent  
 - causally interpretable  
+- geometrically localized  
+- recursively organized  
 
 ---
 
 # 🧭 Validation Overview (Visual Summary)
 
 ![NEXAH Validation Summary](./visuals/nexah_validation_summary_visual.png)
+
 ```text
-This figure represents the compression of ~180+ validation artifacts into a single structural representation.
+This figure represents the compression of ~180+ validation artifacts
+into a single structural representation.
 ```
 
-**Figure — NEXAH Validation Overview**
+---
+
+## 🧠 Figure — NEXAH Validation Overview
 
 This diagram summarizes the full validation stack across:
 
@@ -28,38 +34,57 @@ This diagram summarizes the full validation stack across:
 - partition invariance  
 - cross-system consistency  
 - control and causality  
-- phase dynamics and angular structure  
+- phase dynamics  
+- directional control structure  
+- transport geometry  
+- recursive transition organization  
 
-It integrates all experimental results into a single structural view, linking:
+It integrates the current validation ecosystem into a unified structural map linking:
 
 - empirical observations  
 - geometric interpretation  
+- transition organization  
 - control mechanisms  
+- navigation behavior  
 
-The figure serves as a **map of the validation space**, not just a collection of results.
+The figure functions as:
+
+```text
+a map of the validation space
+rather than a simple result collection
+```
 
 ---
 
-## 🧠 System-Level Structure (Kuramoto FIELD_LAYER)
+# 🧠 System-Level Structure (Kuramoto FIELD_LAYER)
 
 ![Kuramoto Field Structure](./systems/kuramoto/figures/NEXAH_kuramoto_field_structure_v2.png)
 
-**Figure — Kuramoto FIELD_LAYER Structure**
+---
+
+## Figure — Kuramoto FIELD_LAYER Structure
 
 This figure shows the extracted field structure of the Kuramoto system.
 
-Key insight:
+Key observations:
 
 - synchronization structure is geometrically organized  
-- internal phase drift emerges *within* the synchronized regime  
-- transition activity is embedded inside the field  
+- internal phase drift emerges *inside* synchronized regimes  
+- transition activity persists within globally ordered states  
+- coherence and instability coexist spatially  
 
-This is the clearest measurable instance of:
+This currently represents the clearest measurable validation of:
 
+```text
 global organization ≠ internal stability
+```
 
-The Kuramoto system serves as the primary reference system  
-for FIELD_LAYER structure validation.
+The Kuramoto system serves as a primary reference model for:
+
+- FIELD_LAYER extraction  
+- synchronization geometry  
+- phase-structured instability  
+- coherence transport behavior  
 
 ---
 
@@ -67,412 +92,632 @@ for FIELD_LAYER structure validation.
 
 The VALIDATION layer bridges theory and empirical behavior.
 
-It answers three core questions:
+It investigates whether:
 
-text 1. Does the structure persist under variation? 2. Is the structure independent of representation? 3. Can the structure be causally influenced? 
+```text
+transition dynamics,
+phase mismatch,
+and transport organization
+persist reproducibly
+across different systems
+and representations.
+```
+
+The validation layer addresses three primary questions:
+
+```text
+1. Does the structure persist under variation?
+
+2. Is the structure independent of representation?
+
+3. Can the structure be causally influenced?
+```
 
 ---
 
 # 🧪 Validation Scope
 
-The validation is organized across multiple levels:
+The validation stack is organized across multiple empirical levels.
 
 ---
 
-## LEVEL 1 — Reproducibility
+# ✅ LEVEL 1 — Reproducibility
 
-- Multi-run simulations  
-- Sensitivity to initial conditions  
+Validated:
+
+- multi-run simulations  
+- bounded attractor persistence  
+- transition consistency  
+- trajectory stability  
 
 Result:
-- Chaotic divergence occurs locally  
-- Global structure remains stable  
+
+```text
+local divergence occurs,
+but global geometric structure persists
+```
 
 ---
 
-## LEVEL 2 — Noise Robustness
+# ✅ LEVEL 2 — Noise Robustness
 
-- Additive noise on trajectories  
-- Noise on transition matrices  
+Validated:
+
+- additive trajectory noise  
+- noisy transition matrices  
+- perturbation robustness  
+- geometry persistence under disturbance  
 
 Result:
-- No structural collapse  
-- Transition dynamics remain stable  
+
+```text
+transition organization remains stable
+despite perturbation
+```
 
 ---
 
-## LEVEL 3 — Partition Invariance
+# ✅ LEVEL 3 — Partition Invariance
+
+Validated:
 
 - KMeans  
 - PCA + KMeans  
 - Random Projection + KMeans  
-- DBSCAN (analysis of limits)
+- DBSCAN comparison  
 
 Result:
-- Transition structure is independent of discretization  
-- No stable discrete clustering → continuous geometry  
+
+```text
+transition structure is not tied
+to a specific discretization method
+```
+
+Additional observation:
+
+```text
+DBSCAN collapses toward continuous geometry
+rather than stable discrete states
+```
 
 ---
 
-## LEVEL 4 — Cross-System Validation
+# ✅ LEVEL 4 — Cross-System Validation
 
 Validated systems:
 
 - Lorenz  
 - Rössler  
 - Duffing  
+- Kuramoto  
 
-Result:
-- Similar transition structures across systems  
-- Not system-specific  
+Observed result:
+
+```text
+qualitatively different systems
+still exhibit highly similar
+transition organization
+```
+
+This suggests:
+
+```text
+transition structure is geometry-driven,
+not equation-specific
+```
 
 ---
 
-### 🌀 Fractal Systems (Mandelbrot / Julia)
+# 🌀 Fractal Systems (Mandelbrot / Julia)
 
-NEXAH was applied to fractal systems to analyze **parameter-induced transitions**.
+NEXAH was extended to parameter-driven fractal systems
+to investigate externally induced transitions.
 
 Key observation:
 
 ```text
-parameter motion → induces mismatch → triggers transitions
+parameter motion
+→ structural mismatch
+→ transition activation
 ```
 
-This extends the framework beyond intrinsic system dynamics  
-to **externally driven transition structures**.
-
-Empirical result:
+This extends the framework from:
 
 ```text
-Δ(t) ≈ M(t)
-
-observable mismatch proxy
+intrinsic state-space dynamics
 ```
 
-→ fractal systems provide the first measurable validation  
-of the transition law.
+toward:
 
-### 🔬 Fractal Transition Validation (Extension)
+```text
+externally driven transition geometry
+```
+
+---
+
+# 🔬 Fractal Transition Validation (Extension)
 
 ![Fractal Transition Validation](./visuals/Nexah-Fractal_Transition_Validation.png)
 
 ```text
-Parameter-driven transitions validated via fractal systems (Mandelbrot / Julia).
+Parameter-driven transitions validated
+via Mandelbrot / Julia systems.
 ```
 
-**Figure — Fractal Transition Validation Framework**
+---
 
-This figure extends the NEXAH validation layer to **parameter-driven systems**.
+## Figure — Fractal Transition Validation Framework
 
-It shows:
+This figure extends the NEXAH validation layer into:
 
-- the full mechanism pipeline  
-  (parameter space → trajectory → structure evolution → observable Δ → mismatch → transition law)
+- nonlinear parameter dynamics  
+- trajectory-driven mismatch formation  
+- externally induced transition structure  
 
-- and the corresponding **empirical validation layer**, including:
-  - reproducibility of Δ(t) spikes  
-  - stable transition thresholds  
-  - robustness across resolutions  
-  - dependence on parameter trajectories  
-  - correlation between Δ and mismatch  
+The validation stack includes:
 
-Key result:
+- reproducibility of Δ(t) spikes  
+- bounded transition regions  
+- resolution robustness  
+- parameter sensitivity  
+- mismatch-transition correlation  
+
+---
+
+## Core Relation
+
+$$
+P(\text{transition}) = f(\Delta, distance)
+$$
+
+---
+
+## Key Observation
 
 ```text
-Transitions are not only intrinsic to system dynamics —
-they can be induced through structured parameter motion.
+Transitions are not only intrinsic
+to system dynamics.
+
+They can also be induced
+through structured parameter motion.
 ```
 
-This provides the first **externally controllable validation case**  
-of the NEXAH transition law:
+This currently represents the first:
 
 ```text
-Δ(t) ≈ M(t)
-P(transition) = f(M)
+externally controllable validation case
+of the NEXAH transition law
 ```
-
-→ Fractal systems act as a **controlled testbed for transition induction**
 
 ---
 
-> ⚠️ **Experimental Status**
->
-> The fractal validation represents an **extension of the validation layer**, not a fully validated system-level result.
->
-> - validated internally (consistent results) ✔  
-> - not yet cross-system tested ✘  
-> - not yet integrated into control framework ✘  
+## Experimental Status
+
+> ⚠️ Experimental Extension
+
+Current status:
+
+- internally reproducible ✔  
+- empirically consistent ✔  
+- not yet cross-system generalized ✘  
+- not yet integrated into full control framework ✘  
 
 ---
 
-### 🔍 Empirical Extension (Δ–Distance Transition Field)
+# 🌊 LEVEL 5 — Field-Level Structure
 
-A detailed empirical analysis was performed in:
+Validated:
 
-```
-RESEARCH/VALIDATION/fractal_tests/
-```
+- instability fields  
+- transition fields  
+- navigation geometry  
+- flow reconstruction  
 
-Key result:
+Observed result:
 
 ```text
-P(transition) = f(Δ, distance)
+transitions occur in structured regions
+of continuous flow geometry
 ```
+
+The extracted fields reveal:
+
+- coherent regions  
+- directional channels  
+- transition corridors  
+- instability concentration zones  
+- navigable geometric structure  
 
 ---
 
-### 📊 Observed Transition Structure
+# ⚡ LEVEL 6 — Control & Causality
 
-- Δ peaks are frequent but mostly reversible  
-- transitions are rare (~2–3%)  
-- transitions occur only within a bounded region:
+Validated:
+
+- gate interventions  
+- target reachability  
+- resonance scans  
+- time-to-target measurements  
+- directional control behavior  
+- mismatch-control interaction  
+
+Observed result:
 
 ```text
-Δ ≈ 10–20
-distance ≈ 60–85
+system behavior can be modified
+without altering system equations
 ```
 
----
-
-### 📈 Empirical Evidence
-
-![Transition Map](fractal_tests/scripts/outputs/transition_map_continuous.png)
-
-![Transition Field](fractal_tests/scripts/outputs/transition_heatmap_continuous.png)
-
-![Boundary Fit](fractal_tests/scripts/outputs/transition_field_fit.png)
-
----
-
-### 🧠 Interpretation (Minimal)
-
-- Δ = local structural change  
-- distance = global parameter-space position  
-- transition occurs only when both align  
-
----
-
-### 🧭 Relation to Core Validation
-
-This extension is consistent with:
+Additional observation:
 
 ```text
-Transitions occur in structured regions ✔
-Structure is non-random ✔
-```
-
-but differs in:
-
-```text
-parameter-space driven (external) vs state-space driven (intrinsic)
+control effectiveness is:
+- non-linear
+- phase-dependent
+- direction-sensitive
 ```
 
 ---
 
-### 📌 Conclusion (Extension)
+# 🔥 LEVEL 7 — Phase Dynamics & Transition Mechanism
 
-```text
-Transition structure can be induced through structured parameter motion,
-not only intrinsic system dynamics.
-```
+Validated:
 
----
-
-→ Full experimental breakdown:
-
-`RESEARCH/VALIDATION/fractal_tests/README.md`
-
----
-## LEVEL 5 — Field-Level Structure
-
-- Instability field  
-- Transition field  
-- Navigation field  
-
-Result:
-- Transitions occur in structured regions of the flow  
-- System behavior is geometrically organized  
-
----
-
-## LEVEL 6 — Control & Causality
-
-- Gate-based interventions  
-- Target reach experiments  
-- Time-to-target measurements  
-- Resonance scans  
-- phase-aligned vs phase-opposed control comparison  
-
-Result:
-
-- System behavior can be influenced  
-- Control effectiveness is non-linear, phase-dependent, and direction-sensitive  
-- naive phase alignment can destabilize the system  
-
----
-
-## LEVEL 7 — Phase Dynamics & Causal Mechanism
-
-- Phase velocity analysis  
-- Phase mismatch detection  
-- Control law extraction  
+- phase velocity analysis  
+- mismatch extraction  
+- control-law estimation  
 - IOTA event correlation  
+- phase-lock behavior  
+- inverse-control stabilization  
 
 ---
 
-### 🧠 Mechanism Overview
+## 🧠 Mechanism Overview
 
 ![Phase Mismatch Control Mechanism](../CORE_CONCEPTS/visuals/nexah_phase_mismatch_control_mechanism.png)
 
-This diagram summarizes the causal mechanism observed in NEXAH:
+---
+
+## Observed Mechanism
+
+Definitions:
 
 - φ → phase  
 - ω → phase velocity  
-- ω̂ → expected phase dynamics  
+- ω̂ → expected phase evolution  
 - M = |ω − ω̂| → mismatch  
 - I → instability  
 - s(φ, I) → control  
 
 ---
 
-## Result
+## Core Result
 
 ```text
-Transitions are not caused by instability alone.
+Transitions are NOT caused
+by instability magnitude alone.
 
-They occur when:
-phase dynamics and control are misaligned.
+They emerge when:
+phase dynamics and control
+become directionally misaligned.
 ```
+
 ---
 
-## LEVEL 8 — Angular Structure (IOTA Symmetry)
+# 🧭 LEVEL 8 — Angular Structure & Directionality
 
-- Angular distribution of transition events  
-- Fourier spectrum of phase structure  
+Validated:
+
+- angular transition distributions  
+- Fourier spectra  
+- directional asymmetry  
+- harmonic modulation structure  
 
 Observed dominant modes:
 
-text [4, 32, 34, 2, 0] 
+```text
+[4, 32, 34, 2, 0]
+```
 
-Result:
-- Transitions exhibit non-uniform angular structure  
-- Evidence of underlying geometric constraints  
+---
+
+## Result
+
+Observed behavior:
+
+- transitions are angularly non-uniform  
+- preferred directional sectors exist  
+- harmonic modulation appears stable  
+
+BUT:
+
+```text
+angular structure modulates transitions
+
+it does NOT define
+the transition mechanism itself
+```
+
+---
+
+# 🌀 LEVEL 9 — JANUS Transport Geometry (Experimental)
+
+Validated experimentally across:
+
+- recursive routing experiments  
+- surrogate destruction tests  
+- aperture-gate geometry  
+- predictive basin transport  
+- directional steering tests  
+- fractal embedding systems  
+
+---
+
+## Observed Structures
+
+Repeatedly observed motifs include:
+
+- recursive shell organization  
+- transition corridors  
+- transport spines  
+- aperture gates  
+- directed basin routing  
+- entropy-separated transport nodes  
+- predictive routing anchors  
+- fractal transport embedding  
+
+---
+
+## Key Observation
+
+```text
+transition organization appears structured
+before visible large-scale reconfiguration occurs
+```
+
+---
+
+## Recursive Geometry
+
+Observed across scales:
+
+```text
+128
+256
+512
+1024
+2048
+```
+
+The recursive organization survives:
+
+- smoothing  
+- aggregation  
+- perturbation  
+- surrogate destruction  
+
+---
+
+## Surrogate Validation
+
+Compared against:
+
+- shuffled trajectories  
+- phase-randomized systems  
+- coordinate-randomized systems  
+
+Observed result:
+
+```text
+original systems preserve
+substantially stronger
+directional transport coherence
+than surrogates
+```
+
+---
+
+## Predictive Basin Routing
+
+Observed behavior includes:
+
+- corridor persistence  
+- routing anchors  
+- perturbation-sensitive switching  
+- constrained future transport  
+
+This suggests:
+
+```text
+future transport organization
+is partially structured
+rather than fully stochastic
+```
+
+---
+
+## Directional Steering
+
+Directional interventions produce:
+
+- routing inversion  
+- basin reassignment  
+- corridor switching  
+- transport deformation  
+
+This suggests:
+
+```text
+transport geometry
+is partially steerable
+through localized intervention
+```
+
+---
+
+## Fractal Embedding
+
+JANUS transport structures persist within:
+
+- Julia systems  
+- Mandelbrot boundaries  
+- nonlinear contour manifolds  
+- spiral transport seams  
+
+Observed structures include:
+
+- shell-mediated transport  
+- contour-guided routing  
+- localized transition access  
+- embedded navigation corridors  
+
+---
+
+## Structural Interpretation
+
+The resulting organization behaves more like:
+
+```text
+recursive transport infrastructure
+```
+
+than:
+
+```text
+unstructured chaotic diffusion
+```
+
+---
+
+## Experimental Status
+
+Current status:
+
+```text
+experimental
+semi-formal
+empirically reproducible
+```
+
+NOT yet:
+
+- mathematically closed  
+- universally generalized  
+- fully system-independent  
 
 ---
 
 # 🔑 Core Findings
 
-text 1. Transition dynamics are stable across runs, noise, and systems 2. Structure is independent of representation and partitioning 3. Transitions occur in geometrically defined regions 4. Control is possible without modifying system equations 5. Transition events are linked to phase mismatch 
+```text
+1. Transition dynamics are reproducible
+   across runs, systems, and perturbations
+
+2. Transition organization is independent
+   of partitioning and representation
+
+3. Transitions occur inside structured
+   geometric regions of the flow
+
+4. Control can influence transition structure
+   without modifying system equations
+
+5. Transition activation correlates strongly
+   with phase mismatch
+
+6. Control effectiveness depends on
+   directional alignment
+
+7. Transport organization exhibits
+   recursive geometric persistence
+```
 
 ---
 
 # 🧠 Key Principle
-```text
-Chaotic systems are not controlled by reducing instability.
 
-They are controlled by aligning control direction
-with the intrinsic phase structure of the system.
+```text
+Chaotic systems are not controlled
+by reducing instability alone.
+
+They are influenced by aligning control
+with intrinsic phase structure,
+directional geometry,
+and coherent transport organization.
 ```
 
 ---
 
-# ⚠️ Current Limitation
+# ⚠️ Current Limitations
 
-- Phase-aligned control improves trajectory structure  
-- BUT can increase transition activity if misaligned  
+Current limitations include:
 
-Missing component:
+- incomplete mathematical closure  
+- no universal proof of transition law  
+- limited real-world validation  
+- incomplete adaptive control framework  
+- no generalized transport formalism  
+
+Additional observation:
 
 ```text
-correct directional alignment of control
+phase alignment alone
+can destabilize the system
+if directional mismatch persists
 ```
+
 ---
 
-# 🔧 Next Step
+# 🔧 Next Steps
 
-Proposed control law:
+Planned extensions include:
 
-text s = f(φ, instability) 
+```text
+s = f(φ, instability)
+```
 
-Expected effect:
+Goals:
 
 - reduce mismatch peaks  
 - suppress transition events  
-- maintain geometric alignment  
+- preserve geometric alignment  
+- validate adaptive control  
+- extend to larger real-world systems  
+- formalize transport geometry  
 
----
-
-## LEVEL 9 — Control Directionality (Critical Result)
-
-- Phase-aligned control test  
-- Inverted control test  
-- Damped control  
-- Phase-opposed (inverse) control  
-
-Result:
-
-```text
-aligned  → increases drift and events
-invert   → reduces drift but increases transitions
-damped   → suppresses events but keeps instability
-inverse  → minimizes drift AND suppresses events
-```
-
----
-
-## 🔑 Key Observation
-
-```text
-Control effectiveness depends on direction, not magnitude.
-```
-
----
-
-## 🔥 Critical Insight
-
-```text
-Stabilization occurs only when control is phase-opposed
-to the intrinsic system dynamics.
-```
-
----
-
-## Implication
-
-- Phase alignment alone is insufficient  
-- Instability suppression alone is insufficient  
-
-Only:
-
-```text
-phase-opposed control → structural stabilization
-```
 ---
 
 # 📂 Structure
 
 ```text
 VALIDATION/
-├── lorenz/              # baseline validation (multi-run, noise, transitions)
-├── rossler/             # cross-system validation
-├── duffing/             # additional system validation
-├── cross_validation/    # system comparison
-├── causality/           # control, mismatch, phase dynamics
-├── results/             # generated figures and summaries 
+├── lorenz/                # baseline validation
+├── rossler/               # cross-system validation
+├── duffing/               # additional validation
+├── systems/               # structured validation systems
+├── cross_system/          # system comparison
+├── causality/             # control & mismatch analysis
+├── fractal_tests/         # parameter-driven systems
+├── visuals/               # validation overview visuals
+├── results/               # generated figures
+└── VALIDATION_SUMMARY.md  # full empirical report
 ```
+
 ---
 
 # 📊 Output
 
-The module produces:
+The validation layer produces:
 
-- trajectory overlays  
 - transition matrices  
+- field reconstructions  
+- trajectory overlays  
 - sensitivity maps  
-- field visualizations  
-- control response plots  
-- phase dynamics analysis  
-- angular symmetry spectra  
+- control-response plots  
+- mismatch diagnostics  
+- angular spectra  
+- recursive transport visualizations  
+- fractal transition fields  
 
 All results are reproducible via scripts in this directory.
 
@@ -480,30 +725,58 @@ All results are reproducible via scripts in this directory.
 
 # 🧭 Status
 
-diff + Structural validation: COMPLETE + Cross-system validation: COMPLETE + Control validation: COMPLETE + Causal mechanism: IDENTIFIED - Full transition suppression: NOT YET ACHIEVED 
+```diff
++ Structural validation: COMPLETE
++ Cross-system validation: COMPLETE
++ Noise robustness validation: COMPLETE
++ Control validation: COMPLETE
++ Mismatch mechanism: IDENTIFIED
++ Recursive transport geometry: EXPERIMENTALLY OBSERVED
+
+- Full adaptive suppression: NOT YET ACHIEVED
+- Universal transition law: NOT YET PROVEN
+- General transport formalism: INCOMPLETE
+```
 
 ---
 
 # 📌 Conclusion
 
-The validation demonstrates that:
+The validation layer demonstrates that:
 
-- observed structures are real and robust  
+- observed structures are empirically real and robust  
 - transition dynamics are intrinsic to flow geometry  
-- control operates through phase structure AND directional alignment, not force  
+- mismatch strongly correlates with transition activation  
+- control operates through directional phase alignment  
+- transport organization exhibits recursive structure  
 
----
+The current evidence supports the interpretation that:
+
+```text
+complex systems transition through
+structured dynamical geometry
+rather than unconstrained randomness
+```
+
+The JANUS extension further suggests:
+
+```text
+transition organization itself
+may exhibit recursive transport geometry,
+routing persistence,
+and constrained navigation behavior
+```
 
 ---
 
 # 📄 Full Validation Report
 
-For detailed results, metrics, and experiment descriptions:
+For detailed metrics, scripts, experiments, and validation analysis:
 
 → [VALIDATION_SUMMARY.md](./VALIDATION_SUMMARY.md)
 
 ---
 
-NEXAH Validation Layer  
-Empirical Structure & Control Verification  
+**NEXAH Validation Layer**  
+Empirical Structure, Transition & Transport Validation Framework  
 © Thomas K. R. Hofmann · 2026
