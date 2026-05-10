@@ -2238,15 +2238,21 @@ Outputs:
 
 ---
 
-## Julia Navigation Coupling
+# 🔷 EXP-31 — Julia Navigation Coupling
 
-![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
+Script:
+`scripts_2/exp_31_julia_navigation_coupling.py`
+
+Outputs:
+
+- `outputs/exp31_julia_navigation_coupling.png`
+- `outputs/exp31_julia_navigation_summary.txt`
 
 ---
 
-## Zoom Regions / Local Coupling Zones
+## Julia Navigation Coupling
 
-![EXP-31 Zoom Regions](outputs/exp31_julia_navigation_zoom_regions.png)
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
 
 ---
 
