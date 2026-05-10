@@ -2,27 +2,104 @@
 
 ## 🔷 Purpose
 
-This module contains the conceptual, structural, empirical, and semi-formal research foundation of NEXAH.
+This module contains the conceptual,
+structural,
+empirical,
+and semi-formal research foundation of NEXAH.
 
-It is not a finished theory.
+It is not a finalized theory.
 
-It is a continuously evolving research framework built through:
+It is a continuously evolving research architecture developed through:
 
 ```text
 observation
 → structure extraction
 → validation
 → consolidation
+→ transition reconstruction
 → navigation
 ```
 
-NEXAH investigates how complex systems generate:
+NEXAH investigates how nonlinear systems generate:
 
 - structured dynamics
-- coherent motion
+- coherent transport
 - transition geometry
+- directional asymmetry
 - phase-dependent activation
-- and direction-sensitive control behavior
+- aperture structures
+- recursive connectivity
+- and navigable topology
+
+---
+
+# 🌌 Structural Navigation Perspective
+
+![Interactive Navigation Map](./FOUNDATION/visuals/interactive_navigation_map.png)
+
+This visualization summarizes the current operational perspective of NEXAH:
+
+- structured fields
+- density regions
+- transition corridors
+- shell crossings
+- transport bottlenecks
+- directional coherence
+- admissible trajectories
+- emergent topology
+
+---
+
+# 🪞 JANUS Transition Geometry
+
+![JANUS Orientation Atlas](./CORE_CONCEPTS/JANUS_OPERATOR/outputs/janus_transition_orientation_atlas.png)
+
+The JANUS layer extends NEXAH
+toward directional transport reconstruction.
+
+Current experiments investigate:
+
+- forward/backward transport coherence
+- recursive orientation manifolds
+- aperture geometry
+- shell crossings
+- transport bottlenecks
+- directional bias geometry
+- coherence thinning regions
+
+Observed structures suggest that transitions organize around:
+
+```text
+directional transport geometry
+```
+
+rather than isotropic instability alone.
+
+---
+
+# 🌌 Fractal Transition Extension
+
+![Fractal Transition Validation](./VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
+
+The framework was extended
+to parameter-driven fractal systems.
+
+Observed:
+
+```text
+parameter motion
+→ structural mismatch
+→ transition activation
+```
+
+with transitions occupying:
+
+```text
+bounded regions
+inside parameter-space geometry
+```
+
+rather than occurring uniformly.
 
 ---
 
@@ -36,19 +113,20 @@ NEXAH investigates how complex systems generate:
 | `RESEARCH_VISION.md` | Conceptual overview and structural interpretation |
 | `ABSTRACT.md` | Compact research summary |
 | `PAPER_DRAFT.md` | Current integrated paper draft |
-| `CORE_CONCEPT_MAP.md` | Visual concept architecture |
+| `CORE_CONCEPT_MAP.md` | Unified conceptual architecture |
 
 ---
 
-# 🌌 Core Perspective
+# 🔷 Core Perspective
 
-NEXAH does not primarily model isolated system states.
+NEXAH does not primarily model isolated states.
 
 Instead:
 
 ```text
-systems are interpreted as trajectories
-inside structured dynamical fields
+systems are interpreted
+as trajectories inside
+structured transport geometry
 ```
 
 Within this interpretation:
@@ -57,6 +135,7 @@ Within this interpretation:
 - density organizes persistence
 - coherence stabilizes trajectories
 - mismatch activates transitions
+- apertures organize routing
 - topology emerges from connectivity
 - control becomes directional navigation
 
@@ -72,6 +151,8 @@ field
 → geometry
 → phase
 → mismatch
+→ directional coherence
+→ aperture activation
 → transition
         ↑
    control(direction)
@@ -80,14 +161,23 @@ field
 This introduces a two-layer interpretation:
 
 ```text
-geometry determines where transitions are possible
+geometry determines
+where transitions are possible
 
-phase dynamics determines when transitions activate
+phase dynamics determines
+when transitions activate
+```
+
+while directional coherence influences:
+
+```text
+how transitions organize
+inside transport geometry
 ```
 
 ---
 
-# 🔥 Core Empirical Result
+# 🔥 Core Empirical Observation
 
 Across multiple investigated systems:
 
@@ -108,18 +198,28 @@ than with instability magnitude alone
 
 Operational mismatch definition:
 
-$$ M(t)=|\omega(t)-\hat{\omega}(t)| $$
+$$
+M(t)
+=
+|\omega(t)-\hat{\omega}(t)|
+$$
 
 ---
 
 # 🔑 Structural Interpretation
 
 ```text
-instability = potential
-mismatch = trigger
+instability
+→ dynamical potential
+
+mismatch
+→ transition activation
+
+directional coherence
+→ transport organization
 ```
 
-This distinction is currently one of the central validated observations within the framework.
+This distinction is currently one of the central validated observations inside the framework.
 
 ---
 
@@ -133,7 +233,7 @@ BUILDER LAB
 (structure extraction & validation)
 
 → CORE SYSTEM
-(stabilized mechanisms)
+(stabilized operational mechanisms)
 
 → DEMONSTRATOR / APPLICATIONS
 (execution & testing)
@@ -150,7 +250,7 @@ without empirical validation.
 
 Validation is not optional.
 
-It defines what is operationally considered real inside the system.
+It determines what is operationally considered meaningful inside the system.
 
 ---
 
@@ -159,10 +259,11 @@ It defines what is operationally considered real inside the system.
 The Research Layer is responsible for:
 
 - extracting structure from observed dynamics
+- reconstructing transition geometry
 - formalizing emerging concepts
-- separating hypothesis from validated result
+- separating hypothesis from validated observation
 - organizing empirical evidence
-- connecting observations across systems
+- connecting behavior across systems
 - guiding future formalization
 - preventing interpretation drift
 
@@ -178,7 +279,8 @@ This module is:
 
 It is:
 
-> an empirically grounded framework for discovering structured behavior in dynamical systems
+> an empirically grounded framework for discovering
+> structured transition behavior inside nonlinear systems
 
 ---
 
@@ -207,15 +309,16 @@ Recommended progression:
 
 → `FOUNDATION/`
 
-Defines the minimal assumptions of the framework.
+Defines the minimal structural assumptions of the framework.
 
 Contains:
 
 - axioms
-- definitions
-- structural assumptions
+- structural variables
 - topology primitives
+- coherence assumptions
 - variable mappings
+- foundational geometry
 
 Role:
 
@@ -233,7 +336,7 @@ Defines the operational architecture of NEXAH.
 
 Includes:
 
-- field representation
+- field reconstruction
 - density structure
 - coherence
 - vessel geometry
@@ -242,12 +345,28 @@ Includes:
 - structural quantities
 - multi-layer interaction
 - theory-to-field mapping
+- JANUS directional geometry
 
-Role:
+---
 
-```text
-conceptual backbone of the framework
-```
+## 🔷 JANUS_OPERATOR
+
+→ `CORE_CONCEPTS/JANUS_OPERATOR/`
+
+One of the central exploratory research modules.
+
+Current investigations include:
+
+- directional transport coherence
+- aperture geometry
+- shell crossings
+- recursive orientation geometry
+- transport manifolds
+- navigation pathways
+- transition routing
+- orientation bias fields
+
+This layer represents the current frontier of transition-geometry reconstruction inside NEXAH.
 
 ---
 
@@ -266,32 +385,10 @@ Validated properties currently include:
 - partition invariance
 - cross-system consistency
 - phase-transition correlation
-- directional control behavior
+- directional control effects
 - mismatch activation
-- causal control effects
-
----
-
-## 🔷 Fractal Transition Extension
-
-![Fractal Transition Validation](./VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
-
-The framework was extended to parameter-driven fractal systems.
-
-Observed:
-
-```text
-parameter motion
-→ structural mismatch
-→ transition activation
-```
-
-Operational relation:
-
-$$ \Delta(t)\approx M(t) $$
-
-This extends NEXAH beyond intrinsic dynamics
-toward externally induced transition structure.
+- transport asymmetry
+- transition geometry persistence
 
 ---
 
@@ -306,10 +403,11 @@ Includes:
 - transition geometry
 - phase dynamics
 - drift structure
-- coherence behavior
+- coherence organization
 - control directionality
 - topology emergence
-- structural transition laws
+- transport asymmetry
+- recursive transition structure
 
 ---
 
@@ -322,10 +420,11 @@ One of the central active research layers.
 Investigates:
 
 - phase as structural coordinate
-- winding behavior
-- transition activation
-- cross-system phase consistency
-- phase drift
+- mismatch activation
+- winding accumulation
+- rotational asymmetry
+- transition timing
+- cross-system phase structure
 - emergent topology
 
 ---
@@ -334,16 +433,16 @@ Investigates:
 
 → `FINDINGS/PRIME_MODULAR_RESONANCE/`
 
-Extended structural investigations on:
+Exploratory structural mathematics layer.
 
-- modular flow systems
-- transition circulation
+Investigates:
+
+- modular flow organization
 - resonance structures
-- topology signatures
-- spectral flow behavior
-- winding and vortex geometry
-
-This currently acts as an exploratory structural mathematics extension layer.
+- transport circulation
+- spectral geometry
+- winding behavior
+- recursive vortex organization
 
 ---
 
@@ -355,12 +454,13 @@ Cross-domain interpretation layer.
 
 Contains:
 
-- Lorenz
-- Rössler
-- Halvorsen
+- Lorenz systems
+- Rössler systems
+- Halvorsen systems
 - fractal systems
 - engineering scenarios
-- decision-system examples
+- synchronization cases
+- navigation examples
 
 Role:
 
@@ -375,20 +475,24 @@ into interpretable domains
 
 → `FIGURES/`
 
-Visual backbone of the framework.
+Visual synthesis layer of the framework.
 
 Contains:
 
 - structural diagrams
-- transition geometry
+- transition atlases
+- aperture geometry
+- topology maps
 - phase mismatch figures
-- unified architecture visuals
 - paper-ready figures
+- transport geometry visuals
 
 Role:
 
 ```text
-visual synthesis of the framework
+visual integration of structure,
+geometry,
+and interpretation
 ```
 
 ---
@@ -403,8 +507,9 @@ Bridges empirical observations toward:
 
 - operator systems
 - abstract representations
-- field mappings
-- future formalization
+- transport mappings
+- geometric formalization
+- future analytical closure
 
 ---
 
@@ -416,10 +521,12 @@ Future formalization path.
 
 Current directions include:
 
-- Koopman connections
-- operator formalization
+- Koopman structures
+- operator geometry
 - mismatch-transition models
+- transport manifolds
 - topology/operator bridges
+- directional coherence formalization
 
 Role:
 
@@ -433,7 +540,7 @@ bridge toward mathematical closure
 
 → `NOTES/`
 
-Exploratory observations and informal research thoughts.
+Exploratory observations and informal research developments.
 
 ---
 
@@ -444,7 +551,7 @@ Exploratory observations and informal research thoughts.
 Evolution of the framework across versions.
 
 Tracks conceptual development from early prototypes
-toward structured architecture.
+toward structured transition geometry.
 
 ---
 
@@ -458,12 +565,13 @@ Contains:
 - experimental operators
 - raw transition experiments
 - legacy gate logic
+- early geometry reconstruction
 
 ⚠️ Experimental only — not canonical.
 
 ---
 
-# 🔬 CURRENT KEY IDEAS
+# 🔬 CURRENT CORE IDEAS
 
 The following are currently interpreted as:
 
@@ -477,19 +585,21 @@ NOT finalized theory.
 
 ## 1. Structure over state
 
-System behavior is structured rather than random.
+System behavior appears structurally organized rather than random.
 
 ---
 
 ## 2. Stability is geometric
 
-Stability corresponds to coherent regions of structured flow.
+Stability corresponds to coherent regions of structured transport.
 
 ---
 
 ## 3. Transitions are spatially organized
 
-Transitions occur through extended regions and corridors,
+Transitions emerge through corridors,
+bottlenecks,
+and transport apertures,
 not isolated points.
 
 ---
@@ -505,35 +615,46 @@ mismatch
 
 ---
 
-## 5. Control is directional
+## 5. Directional coherence matters
+
+Transport organization appears constrained by:
+
+- directional overlap
+- recursive orientation structure
+- coherence preservation
+- orientation asymmetry
+
+---
+
+## 6. Control is directional
 
 Control effectiveness depends on:
 
 ```text
-direction relative to intrinsic phase dynamics
+direction relative to intrinsic dynamics
 ```
 
 Observed empirically:
 
 - aligned control amplifies transitions
-- inverse control suppresses transitions
+- inverse directional control suppresses transitions
 
 ---
 
-## 6. Topology emerges from connectivity
+## 7. Topology emerges from connectivity
 
-Topology is interpreted as an emergent property of:
+Topology appears as an emergent property of:
 
-- coherent motion
+- coherent transport
 - transition connectivity
 - winding structure
-- admissible trajectories
+- admissible motion pathways
 
 ---
 
-## 7. Navigation replaces prediction
+## 8. Navigation replaces prediction
 
-NEXAH shifts focus from:
+NEXAH increasingly shifts focus from:
 
 ```text
 predicting isolated states
@@ -542,18 +663,19 @@ predicting isolated states
 toward:
 
 ```text
-navigating structured dynamical geometry
+navigating structured transport geometry
 ```
 
 ---
 
-## 8. Cross-system structural similarity
+## 9. Cross-system structural similarity
 
-Different systems appear to exhibit:
+Different nonlinear systems appear to exhibit:
 
-- similar transition organization
-- similar mismatch behavior
-- similar coherence structures
+- comparable transition organization
+- comparable mismatch behavior
+- related coherence geometry
+- recurring transport structures
 
 This remains under active investigation.
 
@@ -561,7 +683,7 @@ This remains under active investigation.
 
 # 🔗 RELATION TO IMPLEMENTATION
 
-The Research Layer itself is not executable.
+The Research Layer itself is not directly executable.
 
 Implementation and experimentation occur in:
 
@@ -576,14 +698,15 @@ Implementation and experimentation occur in:
 Ongoing development includes:
 
 - stronger phase formalization
-- transition geometry quantification
+- transport geometry quantification
+- aperture reconstruction
 - directional control integration
-- topology extraction
+- recursive topology extraction
 - cross-system universality tests
 - fractal transition extensions
-- causal structure analysis
 - operator formalization
 - navigation-layer stabilization
+- directional manifold reconstruction
 
 ---
 
@@ -597,7 +720,11 @@ The Research Layer is:
 
 It is:
 
-> a structured research architecture for discovering, validating, and navigating dynamical structure
+> a structured research architecture for discovering,
+> validating,
+> reconstructing,
+> and navigating transition geometry
+> inside nonlinear systems
 
 ---
 
@@ -606,11 +733,13 @@ It is:
 ```text
 We are not imposing structure onto systems.
 
-We are extracting the structure
+We are reconstructing
+the transport geometry
 that system dynamics are forced to follow.
 ```
 
 ---
 
 **NEXAH Research Layer**  
+Transition Geometry · Directional Coherence · Emergent Navigation  
 Thomas K. R. Hofmann · 2026
