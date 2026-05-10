@@ -91,10 +91,7 @@ than with instability magnitude alone.
 
 Operational mismatch definition:
 
-$$
-M(t)
-=
-|\omega(t)-\hat{\omega}(t)|
+$$M(t) = |\omega(t)-\hat{\omega}(t)|
 $$
 
 Interpretation:
