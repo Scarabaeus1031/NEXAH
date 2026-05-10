@@ -1,35 +1,100 @@
-# 🧠 NEXAH — Aperture Geometry System (Exploratory)
+# 🧠 NEXAH — Aperture Geometry System
 
-This document describes a **visual and structural pipeline**  
-for extracting transition structure from dynamical systems.
+> Exploratory structural pipeline for revealing transition corridors, gates, shells and navigation geometry in nonlinear dynamical systems.
 
-It is based on empirical observations and validation experiments  
-developed during NEXAH research.
+Status:  
+
+`Exploratory / Empirically Supported / Linked to JANUS_OPERATOR`
 
 ---
 
-## ⚠️ Scope
+# 🧭 Purpose
+
+This document describes the Aperture Geometry layer inside NEXAH.
+
+It explains how dynamical systems can be analyzed as:
+
+```text
+
+trajectory
+
+→ density
+
+→ field
+
+→ instability
+
+→ gate
+
+→ phase mismatch
+
+→ transition
+
+→ navigation
+
+```
+
+The central idea is:
+
+```text
+
+transitions do not occur everywhere equally.
+
+They appear to concentrate inside
+
+structured geometric corridors,
+
+apertures and gate regions.
+
+```
+
+---
+
+# ⚠️ Scope
 
 This is:
 
-- not a physical theory  
-- not a formal mathematical framework  
-- not a claim of universality  
+- not a physical law
+
+- not a completed mathematical theory
+
+- not a universal claim
 
 It is:
 
-> a practical system for revealing structure, transitions,  
-> and organization in complex dynamics
+```text
+
+a practical geometry layer
+
+for detecting and interpreting
+
+transition structure in complex dynamics.
+
+```
 
 ---
 
 # 🔁 Pipeline Overview
 
 ```text
-Trajectory → Field → Instability → Gate → Phase → Mismatch → Transition
+
+Trajectory
+
+→ Density
+
+→ Field Structure
+
+→ Instability Geometry
+
+→ Gate / Aperture
+
+→ Phase Mismatch
+
+→ Transition
+
+→ Navigation / Control
+
 ```
- 
-Each step reveals one layer of the same underlying system.
 
 ---
 
@@ -37,15 +102,25 @@ Each step reveals one layer of the same underlying system.
 
 ![Trajectory Overlay](../VALIDATION/lorenz/results/trajectory_overlay.png)
 
-### Idea
+Individual trajectories may appear chaotic.
 
-- Individual trajectories appear chaotic  
-- Aggregating them reveals density patterns  
+But aggregated motion reveals:
 
-### Insight
+- density basins
 
-> Structure does not appear in single paths  
-> but in **collective behavior**
+- preferred regions
+
+- repeated corridors
+
+- non-uniform occupation
+
+```text
+
+Structure does not appear clearly in one path.
+
+It appears through collective motion.
+
+```
 
 ---
 
@@ -53,85 +128,127 @@ Each step reveals one layer of the same underlying system.
 
 ![Instability Field](../VALIDATION/lorenz/results/instability_field.png)
 
-### Idea
+Density shows where the system spends time.
 
-- Density shows where the system spends time  
-- Structural fields reveal how the system moves  
+Structural fields show how the system moves.
 
-### Insight
+```text
 
-> Density tells us where  
-> Structure tells us how the system moves
+Density tells us where.
+
+Structure tells us how.
+
+```
 
 ---
 
-# 🧩 3. Field Geometry — Hidden Structure
+# 🧩 3. Field Geometry — Hidden Transition Structure
 
 ![Transition Field](../VALIDATION/lorenz/results/transition_field.png)
 
-### Idea
+The reconstructed field reveals that motion is not diffuse.
 
-- Flow organizes into structured regions  
-- What appears local is part of a global geometry  
+It organizes into:
 
-### Insight
+- corridors
 
-> Observed channels reflect deeper geometric structure
+- shells
+
+- gradients
+
+- transition lanes
+
+- compressed exchange regions
+
+```text
+
+Observed channels reflect deeper geometric structure.
+
+```
 
 ---
 
-# 🧩 4. Gate Regions — Transition Points
+# 🧩 4. Gate Regions — Localized Transition Points
 
 ![Gate Region](../VALIDATION/causality/results/gate_region.png)
 
-### Idea
+Gate regions are localized areas where transition probability rises.
 
-- Instability peaks identify transition regions  
-- These are localized but structurally constrained  
+They behave like:
 
-### Insight
+- structural bottlenecks
 
-> Transitions occur at **specific structural locations**, not randomly
+- transition apertures
+
+- instability corridors
+
+- routing points between regimes
+
+```text
+
+Transitions occur at specific structural locations,
+
+not randomly across the whole field.
+
+```
 
 ---
 
-# 🧩 5. Phase Mismatch — Trigger Mechanism
+# 🧩 5. Phase Mismatch — Activation Timing
 
 ![Phase Mismatch](../VALIDATION/causality/results/phase_mismatch_iota.png)
 
-### Idea
+Aperture geometry helps identify where transitions can occur.
 
-- Phase evolves along the trajectory  
-- Expected motion defines a baseline  
-- Deviations create mismatch  
+Phase mismatch helps identify when they activate.
 
-### Key Quantity
+Key quantity:
 
 ```text
+
 mismatch = |ω - smooth(ω)|
+
 ```
 
-### Insight
+Interpretation:
 
-> Phase mismatch determines **when transitions activate**
+```text
+
+Geometry defines possible transition access.
+
+Phase mismatch triggers actual transition activation.
+
+```
 
 ---
 
-# 🧩 6. Phase-Gated Control — Selective Activation
+# 🧩 6. Phase-Gated Control — Sparse Activation
 
 ![Phase Gate Mismatch](../VALIDATION/causality/results/phase_gate_v2_mismatch.png)
 
 ![Phase Gate Activation](../VALIDATION/causality/results/phase_gate_v2_activation.png)
 
-### Idea
+Control should not be continuous.
 
-- Control should not be continuous  
-- Activation is tied to mismatch peaks  
-- Cooldown prevents over-triggering  
+The experiments suggest that effective intervention is:
 
-### Insight
+- sparse
 
-> Effective control is sparse, phase-aware, and state-dependent
+- phase-aware
+
+- gate-localized
+
+- cooldown-limited
+
+- state-dependent
+
+```text
+
+Control succeeds when intervention is aligned
+
+with intrinsic phase and gate geometry.
+
+```
 
 ---
 
@@ -139,52 +256,229 @@ mismatch = |ω - smooth(ω)|
 
 ![Cross-System Transition](../VALIDATION/cross_system/cross_system_transition_matrices.png)
 
-### Idea
+Different systems show related transition structures.
 
-- Different systems exhibit similar transition structures  
-- Geometry is not system-specific  
+This suggests that aperture geometry may describe a broader class of transition behavior.
 
-### Insight
+Current tested systems include:
 
-> Structure persists across systems  
-> → geometry-driven, not equation-driven
+- Lorenz
+
+- Rössler
+
+- Halvorsen
+
+- Kuramoto
+
+- fractal systems
+
+- control validation runs
+
+```text
+
+The geometry is not merely equation-specific.
+
+It appears as a reusable transition-analysis layer.
+
+```
 
 ---
 
-# 🧠 Core Principle
+# 🌀 JANUS Extension — Orientation Bias Geometry
+
+Recent JANUS Operator experiments extend
+
+the aperture geometry framework from
+
+localized transition detection toward
+
+directionally organized transition geometry.
+
+Observed structures include:
+
+- transition spines
+
+- shell crossing layers
+
+- recursive quadrants
+
+- basin transfer gates
+
+- orientation bias manifolds
+
+- coherence corridors
+
+These structures suggest that transitions
+
+are not purely local instability events,
+
+but occur along organized geometric pathways.
+
+The JANUS Operator measures local coherence
+
+between forward and backward flow structure,
+
+revealing preferred transition directions
+
+and transport asymmetries.
+
+---
+
+# 🪞 Relation to JANUS_OPERATOR
+
+The JANUS_OPERATOR module extends aperture geometry by asking:
 
 ```text
+
+Do transition gates correspond to
+
+localized breakdowns of directional coherence?
+
+```
+
+JANUS compares:
+
+```text
+
+forward local flow
+
+↔ backward local flow
+
+```
+
+and studies whether transitions appear where this local directional coherence weakens.
+
+See:
+
+```text
+
+JANUS_OPERATOR/
+
+JANUS_OPERATOR/README.md
+
+JANUS_OPERATOR/janus_operator_foundations.md
+
+JANUS_OPERATOR/janus_geometry.md
+
+JANUS_OPERATOR/janus_vs_transition_gates.md
+
+JANUS_OPERATOR/findings.md
+
+```
+
+---
+
+# 🔷 Aperture Geometry vs JANUS Geometry
+
+| Layer | Question | Output |
+
+|---|---|---|
+
+| Aperture Geometry | Where can transitions occur? | gates, corridors, shells |
+
+| Phase Mismatch | When do transitions activate? | mismatch peaks |
+
+| JANUS Geometry | How does directional coherence break? | forward/backward asymmetry |
+
+| Navigation Layer | How can systems move through gates? | routing, prediction, steering |
+
+Together:
+
+```text
+
+Aperture Geometry detects transition access.
+
+JANUS explains directional coherence breakdown.
+
+Navigation uses this structure for routing.
+
+```
+
+---
+
+# 🔥 Updated Core Principle
+
+```text
+
 Geometry defines where transitions can occur.
 
 Phase mismatch defines when they activate.
 
-Control succeeds when intervention is aligned
-with the intrinsic phase structure.
+JANUS coherence reveals how directional structure destabilizes.
+
+Navigation uses these structures to predict or steer transitions.
+
 ```
 
 ---
 
-# 🔬 Interpretation
+# 🌌 Current Structural Picture
+
+The current NEXAH/JANUS experiments suggest repeated motifs:
+
+- shells
+
+- spines
+
+- apertures
+
+- transition corridors
+
+- coherence gates
+
+- directional bottlenecks
+
+- basin-transfer nodes
+
+- recursive phase quadrants
+
+- predictive routing paths
+
+- steerable transition structures
+
+The emerging interpretation is:
 
 ```text
-trajectory → density → field → instability → gate → phase → mismatch → transition
+
+transition dynamics are not fully diffuse.
+
+They appear to organize through
+
+structured geometric infrastructure.
+
 ```
-
----
-
-# 🔬 Key Insight
-
-> Structure defines possible transitions.  
-> Phase dynamics determine actual transitions.
 
 ---
 
 # 🚧 Limitations
 
-- primarily validated on Lorenz-style systems  
-- dependent on projection and observable choice  
-- phase model is empirical  
-- full transition suppression not yet achieved  
+Current limitations:
+
+- still exploratory
+
+- projection-dependent
+
+- not yet formalized as a theorem
+
+- validation is empirical
+
+- system coverage is growing but incomplete
+
+- quantitative comparison to established methods remains necessary
+
+NEXAH does not yet claim:
+
+```text
+
+universality
+
+new physics
+
+complete predictability
+
+formal transition laws
+
+```
 
 ---
 
@@ -192,36 +486,65 @@ trajectory → density → field → instability → gate → phase → mismatch
 
 ## → field_model.md
 
-- systems as structured dynamical fields  
+Systems as structured dynamical fields.
+
+## → structure_quantities.md
+
+Core measurable quantities.
 
 ## → theory_to_field_mapping.md
 
-- operators (Γ, Δ, Ω) mapped to structure  
+Mapping operators to field geometry.
+
+## → JANUS_OPERATOR/
+
+Directional coherence, transition gates and navigation geometry.
 
 ## → ../VALIDATION/
 
-- empirical validation layer  
-- contains all supporting experiments  
+Empirical validation layer.
 
-## → ../VALIDATION/validation_summary.md
+## → ../VALIDATION/causality/
 
-- full validation report  
+Phase-gated intervention and causal control tests.
 
 ---
 
 # 🚀 Role in NEXAH
 
-### DISCOVERY ENGINE
-- structure extraction  
-- gate detection  
+## DISCOVERY ENGINE
 
-### FIELD_LAYER
-- geometric representation  
-- phase-aware structure  
+- structure extraction
 
-### NAVIGATION
-- movement between regimes  
-- control via phase alignment  
+- gate detection
+
+- aperture localization
+
+## FIELD LAYER
+
+- geometric representation
+
+- shell/corridor mapping
+
+- transition-field reconstruction
+
+## JANUS LAYER
+
+- forward/backward coherence comparison
+
+- directional asymmetry detection
+
+- transition-gate interpretation
+
+## NAVIGATION LAYER
+
+- regime movement
+
+- routing prediction
+
+- sparse intervention
+
+- controlled steering
 
 ---
 
@@ -229,28 +552,50 @@ trajectory → density → field → instability → gate → phase → mismatch
 
 The Aperture Geometry System is:
 
-- a visual + structural pipeline  
-- a transition detection framework  
-- a bridge between dynamics and control  
+```text
 
-It is not:
+a transition-structure detection layer
 
-- a theory of physics  
-- a universal model  
+inside NEXAH.
 
-It is:
+```
 
-> a working system for revealing hidden structure and transition triggers
+It connects:
+
+```text
+
+dynamics
+
+→ geometry
+
+→ gates
+
+→ phase activation
+
+→ directional coherence
+
+→ navigation
+
+```
+
+Its current role is to make hidden transition organization visible.
 
 ---
 
 ## Status
 
 Exploratory  
+
 Empirically supported  
-Causally extended (phase dynamics)
+
+Causally extended  
+
+Transition-geometry linked  
+
+JANUS-extended
 
 ---
 
 **NEXAH Research Layer**  
-From dynamics → to structure → to phase → to transition  
+
+From dynamics → to structure → to aperture → to transition → to navigation
