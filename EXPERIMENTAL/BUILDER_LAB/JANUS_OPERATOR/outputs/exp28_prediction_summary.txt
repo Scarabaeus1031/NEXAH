@@ -1,0 +1,26 @@
+EXP-28 — Predictive Basin Navigation
+================================================
+
+Transition probability matrix:
+
+0.000 0.700 0.000 0.300
+0.000 1.000 0.000 0.000
+0.000 0.000 0.000 0.000
+0.000 0.000 1.000 0.000
+
+predicted navigation path:
+[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+Node entropy:
+node 0: 0.881291
+node 1: -0.000000
+node 2: 0.000000
+node 3: -0.000000
+
+Working interpretation:
+- JANUS gates may contain predictive transport structure
+- low entropy nodes may act as routing anchors
+- high entropy nodes may act as transition decision zones
+- transport corridors may permit short-horizon forecasting
+
+Exploratory only.
