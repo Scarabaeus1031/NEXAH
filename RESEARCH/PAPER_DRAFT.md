@@ -34,10 +34,7 @@ with phase mismatch than with instability magnitude alone.
 
 Mismatch is operationally defined as:
 
-$$
-M(t)
-=
-|\omega(t)-\hat{\omega}(t)|
+$$M(t) = |\omega(t)-\hat{\omega}(t)|
 $$
 
 where observed phase evolution deviates
@@ -252,9 +249,7 @@ x(t)
 
 with local evolution:
 
-$$\dot{x}(t)
-=
-F(x(t))
+$$\dot{x}(t) = F(x(t))
 $$
 
 where:
@@ -268,9 +263,7 @@ where:
 
 A density field is estimated from trajectories:
 
-$$\rho(x)
-=
-\mathrm{KDE}(\{x_t\})
+$$\rho(x) = \mathrm{KDE}(\{x_t\})
 $$
 
 Interpretation:
@@ -284,15 +277,7 @@ Interpretation:
 
 Directional alignment is estimated through:
 
-$$C(x)
-=
-\frac{
-\dot{x}\cdot F(x)
-}{
-\|\dot{x}\|
-\,
-\|F(x)\|
-}
+$$C(x) = \frac{ \dot{x}\cdot F(x) }{ \|\dot{x}\| \, \|F(x)\| }
 $$
 
 Interpretation:
@@ -311,23 +296,17 @@ low coherence
 
 Phase is defined operationally as:
 
-$$\phi(t)
-=
-\arctan2(x_2(t),x_1(t))
+$$\phi(t) = \arctan2(x_2(t),x_1(t))
 $$
 
 Phase velocity:
 
-$$\omega(t)
-=
-\frac{d\phi(t)}{dt}
+$$\omega(t) = \frac{d\phi(t)}{dt}
 $$
 
 Expected phase evolution:
 
-$$\hat{\omega}(t)
-=
-\mathcal{E}[\omega](t)
+$$\hat{\omega}(t) = \mathcal{E}[\omega](t)
 $$
 
 where:
@@ -340,9 +319,7 @@ where:
 
 Mismatch is defined as:
 
-$$M(t)
-=
-|\omega(t)-\hat{\omega}(t)|
+$$M(t) = |\omega(t)-\hat{\omega}(t)|
 $$
 
 Interpretation:
@@ -368,31 +345,13 @@ $$
 
 Directional overlap operator:
 
-$$\mathcal{J}(x)
-=
-F_{\mathrm{forward}}(x)
-\odot
-F_{\mathrm{backward}}(x)
+$$\mathcal{J}(x) = F_{\mathrm{forward}}(x) \odot F_{\mathrm{backward}}(x)
 $$
 
 Normalized directional coherence:
 
-$$J(x)
-=
-\frac{
-\|
-\mathcal{J}(x)
-\|
-}{
-\|
-F_{\mathrm{forward}}(x)
-\|
-\,
-\|
-F_{\mathrm{backward}}(x)
-\|
-+\varepsilon
-}
+$$J(x) = \frac{ \| \mathcal{J}(x) \| }{ \| F_{\mathrm{forward}}(x) \| \, \| F_{\mathrm{backward}}(x) \|
++\varepsilon }
 $$
 
 ---
@@ -401,9 +360,7 @@ $$
 
 Aperture score:
 
-$$A(x)
-=
-1-J(x)
+$$A(x) = 1-J(x)
 $$
 
 Interpretation:
@@ -421,20 +378,12 @@ high aperture score
 
 Directional orientation field:
 
-$$\Theta(x)
-=
-\arg(F(x))
+$$\Theta(x) = \arg(F(x))
 $$
 
 Bias alignment score:
 
-$$B(x)
-=
-\cos(
-\Theta(x)
--
-\Theta_{\mathrm{root}}
-)
+$$B(x) = \cos( \Theta(x) - \Theta_{\mathrm{root}} )
 $$
 
 Interpretation:
@@ -546,17 +495,12 @@ $$
 
 with Julia evolution:
 
-$$
-z_{n+1}
-=
-z_n^2+c(t)
+$$ z_{n+1} = z_n^2+c(t)
 $$
 
 A structural observable is defined:
 
-$$\Delta(t)
-=
-\text{frame-to-frame structural difference}
+$$\Delta(t) = \text{frame-to-frame structural difference}
 $$
 
 Transitions appear to depend on both:
@@ -566,9 +510,7 @@ Transitions appear to depend on both:
 
 Observed relation:
 
-$$P(\text{transition})
-=
-f(\Delta,distance)
+$$P(\text{transition}) = f(\Delta,distance)
 $$
 
 ---
