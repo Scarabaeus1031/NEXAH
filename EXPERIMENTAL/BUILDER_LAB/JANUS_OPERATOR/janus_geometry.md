@@ -400,6 +400,115 @@ directional structural comparison
 
 ---
 
+# 🌌 Mandelbrot / Julia Embedding Perspective
+
+One of the strongest emerging observations
+of the recent JANUS experiments
+is the appearance of transport-like organization
+inside genuine nonlinear fractal geometry.
+
+The EXP-31 coupling experiment revealed that:
+
+```text
+JANUS-style transport corridors
+can become visibly embedded
+inside explicit Julia dynamics.
+```
+
+This is important because the resulting geometry exhibits:
+
+- shell-like outer membranes
+- spiral transition seams
+- diagonal routing corridors
+- nested basin chambers
+- contour-mediated drift fields
+- localized coupling zones
+
+Most strikingly:
+
+```text
+the outer field itself
+appears geometrically active
+```
+
+rather than empty background structure.
+
+The fractal geometry behaves visually like:
+
+```text
+a continuous navigation landscape
+```
+
+containing:
+
+- transport gradients
+- transition membranes
+- directional seams
+- embedded routing channels
+
+---
+
+## Julia Navigation Embedding
+
+![EXP-31 Julia Navigation Coupling](exp_31_julia_navigation_coupling.png)
+
+*Embedded JANUS-style navigation structure inside nonlinear Julia-set geometry.*
+
+Observed parameter:
+
+```text
+c = -0.750 + 0.100i
+```
+
+The resulting geometry reveals:
+
+- dual-lobe transport structure
+- spiral gate regions
+- coupled basin membranes
+- nested contour fields
+- edge-sensitive transition routing
+
+Several transport probes partially align with:
+
+- contour gradients
+- spiral seams
+- membrane boundaries
+- transition corridors
+
+This creates the appearance of:
+
+```text
+embedded transport infrastructure
+inside fractal dynamics
+```
+
+rather than isolated chaotic trajectories.
+
+---
+
+## Structural Importance
+
+The Mandelbrot / Julia coupling experiments
+do NOT establish equivalence between:
+
+- JANUS transport
+- fractal mathematics
+- or physical transport systems
+
+However, they strongly suggest that:
+
+```text
+transition organization
+may remain geometrically meaningful
+even inside highly nonlinear parameter spaces.
+```
+
+This is currently one of the strongest
+visual-geometric observations
+of the JANUS series.
+
+---
+
 # 🧠 Geometric Interpretation of Transition Gates
 
 A major working hypothesis of the module:
