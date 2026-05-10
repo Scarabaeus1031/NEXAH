@@ -1244,18 +1244,6 @@ Outputs:
 
 ---
 
-## Aperture Transition Network
-
-![EXP-26 Transition Network](outputs/exp26_transition_network.png)
-
----
-
-## Basin Graph Overlay
-
-![EXP-26 Basin Graph Overlay](outputs/exp26_basin_graph_overlay.png)
-
----
-
 ## Numerical Results
 
 ```text
