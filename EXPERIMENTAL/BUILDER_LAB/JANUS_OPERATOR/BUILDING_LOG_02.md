@@ -114,7 +114,7 @@ Outputs:
 
 ## Aperture Gate Candidates
 
-![JANUS Aperture Gate Candidates](outputs/janus_aperture_gate_candidates.png)
+![JANUS Aperture Gate Candidates](./outputs/janus_aperture_gate_candidates.png)
 
 ---
 
