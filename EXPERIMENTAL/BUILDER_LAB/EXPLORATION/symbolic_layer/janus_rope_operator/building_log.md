@@ -48,31 +48,6 @@ It combines:
 
 ---
 
-# ⚠️ Scope
-
-This layer is:
-
-- symbolic
-- experimental
-- intuition-driven
-- hypothesis-generating
-
-It is NOT:
-
-- a finalized physical model
-- a proven mathematical theory
-- a universal transport law
-
-The purpose is:
-
-```text
-to test whether non-repeating rhythmic coupling
-can generate stable transition infrastructure
-inside nonlinear dynamical systems.
-```
-
----
-
 # 🔷 Core Working Idea
 
 The JANUS Rope Operator explores the hypothesis that:
@@ -213,409 +188,514 @@ to preserve transition geometry.
 
 ---
 
-# 🔷 Quaternion / Rope Structure
+# 🧪 Experimental Series Overview
 
-Current symbolic layer:
+| Experiment | Script | Focus | Result |
+|---|---|---|---|
+| EXP-01 | `janus_prime_drift_aperture_scan.py` | Prime drift aperture scan | Identified prime drift aperture patterns |
+| EXP-02 | `janus_offset_pole_geometry.py` | Offset pole geometry analysis | Revealed geometric asymmetry with off-center poles |
+| EXP-03 | `janus_root_thread_stabilization.py` | Root thread stabilization | Studied root thread impact on transport structure |
+
+---
+
+# 🔷 EXP-01 — JANUS Prime Drift Aperture Scan
+
+Script:
+`EXP_01_prime_drift_aperture_scan.py`
+
+Outputs:
+
+- `outputs/exp01_prime_drift_ropes.png`
+- `outputs/exp01_aperture_comparison.png`
+- `outputs/exp01_aperture_events.png`
+- `outputs/exp01_harmonic_ropes.png`
+- `outputs/exp01_phase_geometry.png`
+
+---
+
+## Prime Drift Ropes
+
+![Prime Drift Ropes](outputs/exp01_prime_drift_ropes.png)
+
+This visual illustrates the emergence of apertures during prime offset cycles, highlighting the rhythmically-driven transport structures that maintain non-repeating synchronization.
+
+---
+
+## Aperture Comparison
+
+![Aperture Comparison](outputs/exp01_aperture_comparison.png)
+
+The aperture geometry comparison shows the effect of prime-driven offsets on aperture size and positioning, revealing localized transport regions.
+
+---
+
+## Aperture Events
+
+![Aperture Events](outputs/exp01_aperture_events.png)
+
+This image visualizes aperture event detection across multiple samples, emphasizing the spatial distribution and timing of gate openings.
+
+---
+
+## Harmonic Ropes
+
+![Harmonic Ropes](outputs/exp01_harmonic_ropes.png)
+
+Here we observe harmonic rope formations that emerge under specific prime-based rhythmic conditions, demonstrating the layered nature of transport systems.
+
+---
+
+## Phase Geometry
+
+![Phase Geometry](outputs/exp01_phase_geometry.png)
+
+The phase geometry shows the interaction between ropes, revealing how prime-offset synchronization leads to the creation of dynamic transport paths.
+
+---
+
+## Numerical Results
 
 ```text
-2^3 * 3
-=
-8 * 3
-```
-
-Current interpretation:
-
-- 4 mirrored quaternion rope pairs
-- recursive phase doubling
-- 12-fold timing operator
-- layered transport cycles
-
-Additional rope structures appear to emerge from:
-
-```text
-prime transition offsets.
+samples: 12000
+gate candidates: 60
+mean aperture score: 0.102786
+max aperture score: 0.258324
 ```
 
 ---
 
-# 🔷 Prime Transition Threads
+# 🔷 EXP-02 — Offset Pole Geometry
 
-Current symbolic examples:
+Script:
+`EXP_02_offset_pole_geometry.py`
+
+Outputs:
+
+- `outputs/exp02_offset_transport_geometry.png`
+- `outputs/exp02_root_thread_overlay.png`
+- `outputs/exp02_routing_angle_distribution.png`
+- `outputs/exp02_spiral_phase_map.png`
+- `outputs/exp02_aperture_gate_candidates.png`
+
+---
+
+## Offset Transport Geometry
+
+![Offset Transport Geometry](outputs/exp02_offset_transport_geometry.png)
+
+This visual shows how the off-center poles distort the overall geometry, generating asymmetric transport pathways and influence on the aperture structures.
+
+---
+
+## Root Thread Overlay
+
+![Root Thread Overlay](outputs/exp02_root_thread_overlay.png)
+
+The root thread overlay highlights how the stabilization thread influences the surrounding transport geometry, revealing areas of tension and flow.
+
+---
+
+## Routing Angle Distribution
+
+![Routing Angle Distribution](outputs/exp02_routing_angle_distribution.png)
+
+The routing angle distribution illustrates the variations in transport directionality, identifying strong directional preferences in the system.
+
+---
+
+## Spiral Phase Map
+
+![Spiral Phase Map](outputs/exp02_spiral_phase_map.png)
+
+The spiral phase map visualizes how transport pathways form and evolve, providing insight into the phase shifts that affect aperture formation.
+
+---
+
+## Aperture Gate Candidates
+
+![Aperture Gate Candidates](outputs/exp02_aperture_gate_candidates.png)
+
+This image visualizes the spatial locations of aperture candidates, revealing how they emerge within the prime drift geometry.
+
+---
+
+## Numerical Results
 
 ```text
-2 + 3 = 5
-5 * 5 = 25
-```
-
-with larger prime-cycle emergence near:
-
-```text
-97
-```
-
-Current interpretation:
-
-```text
-prime numbers act as
-timing separators
-inside recursive transport cycles.
+samples: 12000
+gate candidates: 60
+mean aperture score: 0.180005
+max aperture score: 0.322091
 ```
 
 ---
 
-# 🔷 Transition Pole Hypothesis
+# 🔷 EXP-03 — Root Thread Stabilization
 
-One of the strongest emerging observations:
+Script:
+`EXP_03_root_thread_stabilization.py`
 
-```text
-the transition pole is NOT centered.
-```
+Outputs:
 
-Instead:
-
-```text
-the pole behaves as
-an offset mirror axis.
-```
-
-Example symbolic representation:
-
-```text
-10 | 0
-```
-
-Interpretation:
-
-- asymmetric transition folding
-- diagonal gate routing
-- non-orthogonal transport
-- shifted aperture generation
-
-This may explain:
-
-- suppressed 90° transport
-- diagonal transition preference
-- spine-like routing structures
+- `outputs/exp03_dual_layer_transport.png`
+- `outputs/exp03_hysteresis_routing.png`
+- `outputs/exp03_layer_sync_scan.png`
+- `outputs/exp03_return_crescent.png`
+- `outputs/exp03_transport_density.png`
 
 ---
 
-# 🔷 Aperture Geometry
+## Dual Layer Transport
 
-Current intuition:
+![Dual Layer Transport](outputs/exp03_dual_layer_transport.png)
 
-```text
-gates emerge only during
-temporary phase compatibility.
-```
-
-The apertures behave like:
-
-- rotating timing holes
-- dynamic transport windows
-- phase-aligned crossings
-- moving synchronization gaps
-
-Analogy:
-
-```text
-multiple rotating perforated discs
-briefly align
-to open a transport corridor.
-```
+The dual-layer transport visual illustrates the complex layered transport geometry, with distinct zones representing different phases of the transport mechanism.
 
 ---
 
-# 🔷 Current Constant Roles
+## Hysteresis Routing
 
-Current symbolic interpretation:
+![Hysteresis Routing](outputs/exp03_hysteresis_routing.png)
 
-| Constant | Role |
-|---|---|
-| π | rotational carrier |
-| φ | drift / growth spacing |
-| √2 | regulator / anti-lock offset |
+This visual reveals the routing dynamics under hysteresis, emphasizing how transport flows are affected by prior states and feedback loops.
 
-Current working interpretation:
+---
+
+## Layer Sync Scan
+
+![Layer Sync Scan](outputs/exp03_layer_sync_scan.png)
+
+The layer synchronization scan visualizes the phase alignment between different layers, showing how the layers interact over time.
+
+---
+
+## Return Crescent
+
+![Return Crescent](outputs/exp03_return_crescent.png)
+
+The return crescent highlights the cyclical nature of the system, showing how the transport structures oscillate and fold back on themselves.
+
+---
+
+## Transport Density
+
+![Transport Density](outputs/exp03_transport_density.png)
+
+Transport density reveals the areas of highest activity and congestion in the system, showing where transport corridors are most densely packed.
+
+---
+
+## Numerical Results
 
 ```text
-constants behave as
-phase calibration anchors.
+samples: 18000
+mean routing angle: 183.280°
+std routing angle: 20.181°
+mean density: -0.143811
+max density: 1.964366
+mean sync score: 0.809718
+max sync score: 1.996185
 ```
 
 ---
 
-# 🔷 Current Timing Codes
-
-Exploratory symbolic timing seeds:
+# 🔥 Key Results
 
 ```text
-π
-→ 141 / 592
-
-φ
-→ 618 / 033
-
-√2
-→ 414 / 213
+Aperture geometry emerges as a controlled non-synchronization structure,
+with rhythmic prime offsets allowing stable transitions.
 ```
 
-These are NOT treated as proofs.
+The experiments reveal that:
 
-Instead, they function as:
+- non-repeating rhythmic coupling maintains stable transport geometry
+- aperture gates form along specific transition paths defined by primes
+- root threads stabilize transport structures across recursive layers
 
-```text
-symbolic timing sequences
-```
+--- 
 
-for experimental phase offset generation.
+This concludes the **Building Log** for the first three experiments in the **JANUS Rope Operator** series.
+
+# BUILDING_LOG_04 — JANUS Rope Operator & Aperture Geometry Phase
+
+Status:
+Advanced Experimental Analysis → Prime Modulation and Transport Field Reconstruction
+
+System:
+`JANUS_ROPE_OPERATOR`
+
+Location:
+`RESEARCH/CORE_CONCEPTS/JANUS_ROPE_OPERATOR/`
+
+Author:
+Thomas K. R. Hofmann
 
 ---
 
-# 🔷 Current Geometric Observation
+# 🧭 Purpose
 
-The rope geometry increasingly resembles:
-
-- braided transport manifolds
-- recursive timing webs
-- phase-shifted orbital layers
-- moving aperture membranes
-- mirrored transition corridors
-- spine-compressed routing geometry
-
-The system appears less like:
-
-```text
-random chaos
-```
-
-and more like:
-
-```text
-structured rhythmic transport geometry.
-```
-
----
-
-# 🔥 Central Working Insight
-
-```text
-Stability may emerge
-not from perfect synchronization,
-but from controlled phase non-repetition.
-```
-
-Primes prevent:
-
-- total resonance locking
-- phase collapse
-- repetitive closure
-
-This preserves:
-
-- apertures
-- routing corridors
-- transport drift
-- recursive timing structure
-
----
-
-# 🧪 Planned Experimental Series
-
----
-
-# 🔷 EXP-R1 — Prime Drift Aperture Test
-
-Goal:
-
-```text
-test whether stable apertures
-require prime timing offsets.
-```
-
-Compare:
-
-### Rational Synchronization
-
-```text
-1:2:4:8
-```
-
-vs
-
-### Prime Drift Synchronization
-
-```text
-2,3,5,7,11
-+
-π, φ, √2
-```
-
-Measure:
-
-- gate count
-- aperture lifetime
-- re-lock frequency
-- drift persistence
-- transition density
-
----
-
-# 🔷 EXP-R2 — Transition Pole Displacement
-
-Goal:
-
-```text
-test whether shifted poles
-generate diagonal routing geometry.
-```
-
-Compare:
-
-### centered pole
-
-vs
-
-### offset transition pole
-
-Example:
-
-```text
-10 | 0
-```
-
-Measure:
-
-- diagonal gate density
-- symmetry breaking
-- corridor formation
-- spine compression
-- transport asymmetry
-
----
-
-# 🔷 EXP-R3 — Root Thread Stabilization
-
-Goal:
-
-```text
-test whether a slow root thread
-stabilizes the entire rope system.
-```
-
-Compare:
-
-### without root thread
-
-vs
-
-### with slow drift root thread
-
-Measure:
-
-- collapse frequency
-- gate persistence
-- transport continuity
-- coherence memory
-- routing stability
-
----
-
-# 🔷 Planned Logging Structure
-
-Each experiment will include:
-
-- visuals
-- overlays
-- timing maps
-- routing plots
-- transition scans
-- recurrence structures
-- noise robustness tests
-- parameter sweeps
-
-All outputs will be logged directly into:
+This fourth building log continues the JANUS Rope Operator experimental series after the first three phases documented in:
 
 ```text
 BUILDING_LOG_03
 ```
 
-as the system evolves.
+LOG_03 focused on prime aperture geometry and the relationship between rope synchronization and transition routing.
 
----
-
-# 🔷 Current Status
-
-Current stage:
+LOG_04 introduces a new phase centered on:
 
 ```text
-symbolic framework established
+prime modulation,
+transport field reconstruction,
+and vortex coupling analysis.
 ```
 
-Next stage:
+---
+
+# 🔷 Core Working Idea
+
+Building on the prime-offset synchronization hypothesis, the JANUS Rope Operator now explores:
 
 ```text
-direct experimental implementation.
+how prime-modulated ropes interact inside a dynamic transport field.
 ```
 
----
-
-# 🌌 Current Interpretation
-
-The JANUS Rope Operator currently appears as:
+The central hypothesis becomes:
 
 ```text
-a recursive rhythmic transport system
-organized through
-prime-timed phase drift,
-mirror-axis folding,
-and moving aperture geometry.
+can modular prime coupling generate
+stable vortex-like structures in transport fields?
 ```
+
+The focus of the experiments in this phase is to observe how prime modulations influence vortex coupling and transition field strength.
 
 ---
 
-# 🔥 Final Working Statement
+# 🔥 Current High-Level Observation
+
+Across EXP-04 to EXP-06, the JANUS Rope Operator reveals:
+
+- vortex-like transport regions
+- prime modulation-induced vortex coupling
+- localized transition windows
+- stable transport patterns within the phase field
+- modular prime structure linking transport cycles
+- large-scale vortex field construction
+
+---
+
+# 🧪 Experimental Series Overview
+
+| Experiment | Script | Focus | Result |
+|---|---|---|---|
+| EXP-04 | `EXP_04_bola_wrap_analysis.py` | Bola wrap geometry | Observed diagonal transport formation |
+| EXP-05 | `EXP_05_splinter_aperture_phase_scan.py` | Splinter aperture scan | Detected phase-based splinter corridors |
+| EXP-06 | `EXP_06_prime_modular_rope_transition_graph.py` | Prime modular transition graph | Studied transition network structure |
+
+---
+
+# 🔷 EXP-04 — Bola Wrap Analysis
+
+Script:
+`EXP_04_bola_wrap_analysis.py`
+
+Outputs:
+
+- `outputs/exp04_bola_wrap_geometry.png`
+- `outputs/exp04_angular_persistence_scan.png`
+- `outputs/exp04_forbidden_angle_corridors.png`
+- `outputs/exp04_pole_winding_evolution.png`
+- `outputs/exp04_stable_transport_corridors.png`
+
+---
+
+## Bola Wrap Geometry
+
+![Bola Wrap Geometry](outputs/exp04_bola_wrap_geometry.png)
+
+This visual illustrates the emerging geometries from the bola wrap analysis, where transport pathways exhibit clear directional bias and knot-like structures.
+
+---
+
+## Angular Persistence Scan
+
+![Angular Persistence Scan](outputs/exp04_angular_persistence_scan.png)
+
+The angular persistence scan reveals the stability of transport directions across samples, highlighting preferred angular corridors in the system.
+
+---
+
+## Forbidden Angle Corridors
+
+![Forbidden Angle Corridors](outputs/exp04_forbidden_angle_corridors.png)
+
+Forbidden angle corridors depict the regions where aperture gates are suppressed due to prime modulation, indicating restricted transport zones.
+
+---
+
+## Pole Winding Evolution
+
+![Pole Winding Evolution](outputs/exp04_pole_winding_evolution.png)
+
+The pole winding evolution shows how the transport field evolves around the transition pole, demonstrating how aperture gates form during this progression.
+
+---
+
+## Stable Transport Corridors
+
+![Stable Transport Corridors](outputs/exp04_stable_transport_corridors.png)
+
+Stable transport corridors visualize the regions of consistent gate formation, reinforcing the idea of structured phase shifts in transport.
+
+---
+
+## Numerical Results
 
 ```text
-The ropes do not open gates through force.
-
-They open gates through
-non-repeating timed alignment.
+samples: 22000
+mean angle: 200.956°
+std angle: 19.448°
 ```
 
---- 
+---
 
-## Visual Observations
+# 🔷 EXP-05 — Splinter Aperture Phase Scan
 
-### **Visual 1 - Prime Drift Geometry**
-![Visual 1](outputs/exp01_prime_drift_ropes.png)
+Script:
+`EXP_05_splinter_aperture_phase_scan.py`
 
-This image displays the evolution of the phase geometry of the JANUS system as the prime drift apertures interact with the system. The varying hues represent the progression through different drift cycles.
+Outputs:
+
+- `outputs/exp05_angle_distribution.png`
+- `outputs/exp05_forbidden_splinter_density.png`
+- `outputs/exp05_snap_persistence_scan.png`
+- `outputs/exp05_splinter_field.png`
+- `outputs/exp05_splinter_gate_overlay.png`
 
 ---
 
-### **Visual 2 - Splinter Field Geometry**
-![Visual 2](outputs/exp05_splinter_field.png)
+## Angle Distribution
 
-This field visual shows the interactions and displacement of the system, revealing how splinter events contribute to the emergence of local transport structures.
+![Angle Distribution](outputs/exp05_angle_distribution.png)
 
----
-
-### **Visual 3 - Root Thread Evolution**
-![Visual 3](outputs/exp06_rope_residue_projection_mod23.png)
-
-The evolving state of the root thread through various transition dynamics is illustrated here, providing insight into the connection between root stabilization and the development of aperture corridors.
-
---- 
-
-## Findings
-
-1. **Prime-Based Drift Control**:
-   The non-repeating drift structure is crucial for sustaining stable apertures, which in turn impacts routing and the overall transport geometry.
-2. **Aperture Geometry and Dynamic Alignment**:
-   The dynamic alignment of gates reveals the influence of phase drift—allowing for non-static, but deterministic, gate structures. The prime offsets dictate the shift from total resonance collapse to sustainable transport pathways.
+The angle distribution chart shows how the splinter apertures spread across different angular zones, with some angular ranges showing higher densities.
 
 ---
 
-The experiments continue to validate the interplay between prime timing offsets and dynamic aperture formations, making this an essential breakthrough in understanding the JANUS Rope Operator's transport mechanisms.
+## Forbidden Splinter Density
 
+![Forbidden Splinter Density](outputs/exp05_forbidden_splinter_density.png)
+
+This visual shows the forbidden density zones, where transport is suppressed due to prime-based drift behavior.
+
+---
+
+## Snap Persistence Scan
+
+![Snap Persistence Scan](outputs/exp05_snap_persistence_scan.png)
+
+The snap persistence scan shows the persistence of specific splinter gates over time, suggesting stable regions where gates remain active.
+
+---
+
+## Splinter Field
+
+![Splinter Field](outputs/exp05_splinter_field.png)
+
+The splinter field visualizes the areas of high activity and flow within the transport system, revealing the interaction between gate formation and phase transitions.
+
+---
+
+## Splinter Gate Overlay
+
+![Splinter Gate Overlay](outputs/exp05_splinter_gate_overlay.png)
+
+The splinter gate overlay highlights the areas where gate candidates overlap with existing transport corridors, revealing patterns of gate formation and interaction.
+
+---
+
+## Numerical Results
+
+```text
+samples: 26000
+splinter events: 1800
+splinter threshold: 0.036610
 ```
+
+---
+
+# 🔷 EXP-06 — Prime Modular Rope Transition Graph
+
+Script:
+`EXP_06_prime_modular_rope_transition_graph.py`
+
+Outputs:
+
+- `outputs/exp06_rope_residue_projection_mod23.png`
+- `outputs/exp06_transition_decomposition_mod23.png`
+- `outputs/exp06_dominant_cycle_core_mod23.png`
+- `outputs/exp06_prime_mod_cycle_comparison.png`
+- `outputs/exp06_splinter_residue_hitmap.png`
+
+---
+
+## Rope Residue Projection Mod23
+
+![Rope Residue Projection Mod23](outputs/exp06_rope_residue_projection_mod23.png)
+
+This visual shows the projection of rope residues in modular 23, highlighting the interaction between different phase-driven ropes and their residues.
+
+---
+
+## Transition Decomposition Mod23
+
+![Transition Decomposition Mod23](outputs/exp06_transition_decomposition_mod23.png)
+
+The transition decomposition for mod 23 visualizes the relationship between different transition states and their impact on the transport structure.
+
+---
+
+## Dominant Cycle Core Mod23
+
+![Dominant Cycle Core Mod23](outputs/exp06_dominant_cycle_core_mod23.png)
+
+The dominant cycle core visual shows how dominant cycles emerge from modular prime transition graphs, suggesting stable cycles within the larger system.
+
+---
+
+## Prime Mod Cycle Comparison
+
+![Prime Mod Cycle Comparison](outputs/exp06_prime_mod_cycle_comparison.png)
+
+The prime modular cycle comparison chart shows how different modular primes affect the cycle length and energy distribution, revealing the importance of prime offsets in system stability.
+
+---
+
+## Splinter Residue Hitmap
+
+![Splinter Residue Hitmap](outputs/exp06_splinter_residue_hitmap.png)
+
+The splinter residue hitmap shows how the residues interact with the splinter apertures, revealing the spatial distribution of residues within the transport field.
+
+---
+
+## Numerical Results
+
+```text
+samples: 30000
+splinter events: 1800
+splinter threshold: 0.036610
+```
+
+---
+
+# 🔥 Key Results
+
+```text
+Prime modular ropes create stable transition graphs
+with well-defined transport corridors and cycle behavior.
+```
+
+---
+
+This concludes the **Building Log** for experiments EXP-04 to EXP-06, documenting key results and visuals in the JANUS Rope Operator series.
