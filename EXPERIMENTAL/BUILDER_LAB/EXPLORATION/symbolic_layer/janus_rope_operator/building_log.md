@@ -699,3 +699,159 @@ with well-defined transport corridors and cycle behavior.
 ---
 
 This concludes the **Building Log** for experiments EXP-04 to EXP-06, documenting key results and visuals in the JANUS Rope Operator series.
+
+# BUILDING_LOG_05 — JANUS Drift Field Reconstruction
+
+Status:
+Advanced Experimental Analysis → Drift Field and Vortex Reconstruction
+
+System:
+`JANUS_ROPE_OPERATOR`
+
+Location:
+`RESEARCH/CORE_CONCEPTS/JANUS_ROPE_OPERATOR/`
+
+Author:
+Thomas Hofmann
+
+---
+
+# 🧭 Purpose
+
+This fifth building log continues the JANUS Rope Operator experimental series after the previous phases documented in:
+
+```text
+BUILDING_LOG_04
+```
+
+LOG_04 focused on prime modulated rope behavior, transition field reconstruction, and vortex coupling.
+
+LOG_05 introduces a new phase centered on:
+
+```text
+drift field reconstruction,
+vortex core coupling,
+and transition pole interaction.
+```
+
+---
+
+# 🔷 Core Working Idea
+
+Building on the findings from the previous experiments, the JANUS Rope Operator is now explored within the context of drift field reconstruction and vortex core analysis.
+
+The central hypothesis becomes:
+
+```text
+can we reconstruct the underlying drift field
+and map vortex coupling inside the transport system?
+```
+
+The focus of the experiments in this phase is to observe how drift fields emerge and how vortex-like structures form under various transition parameters.
+
+---
+
+# 🔥 Current High-Level Observation
+
+Across EXP-07, JANUS Rope Operator reveals:
+
+- drifting field generation
+- vortex core stabilization
+- localized transport corridors
+- multi-phase coupling of drift fields
+- global transport mapping and vortex interaction
+
+This is exploratory but has already shown consistent vortex-like behavior and transport interaction.
+
+---
+
+# 🧪 Experimental Series Overview
+
+| Experiment | Script | Focus | Result |
+|---|---|---|---|
+| EXP-07 | `EXP_07_drift_field_reconstruction.py` | Drift field reconstruction | Drift and vortex coupling observed |
+
+---
+
+# 🔷 EXP-07 — Drift Field Reconstruction
+
+Script:
+`EXP_07_drift_field_reconstruction.py`
+
+Outputs:
+
+- `outputs/exp07_local_drift_vector_field.png`
+- `outputs/exp07_residue_flow_lattice.png`
+- `outputs/exp07_residue_drift_strength.png`
+- `outputs/exp07_transport_corridors.png`
+- `outputs/exp07_modular_vortex_reconstruction.png`
+
+---
+
+## Local Drift Vector Field
+
+![Local Drift Vector Field](outputs/exp07_local_drift_vector_field.png)
+
+The local drift vector field visualizes the drift patterns across the transport system, showing the directional flows and interactions between transport elements.
+
+---
+
+## Residue Flow Lattice
+
+![Residue Flow Lattice](outputs/exp07_residue_flow_lattice.png)
+
+This visual shows the underlying lattice structure of the residue flow, emphasizing areas of high interaction and local drift field generation.
+
+---
+
+## Residue Drift Strength
+
+![Residue Drift Strength](outputs/exp07_residue_drift_strength.png)
+
+The residue drift strength chart shows the relative strength of drift currents across different parts of the system, identifying regions with the most significant influence on transport.
+
+---
+
+## Transport Corridors
+
+![Transport Corridors](outputs/exp07_transport_corridors.png)
+
+The transport corridors diagram illustrates the most consistent paths of transport, revealing high-density flow areas and stable routing patterns.
+
+---
+
+## Modular Vortex Reconstruction
+
+![Modular Vortex Reconstruction](outputs/exp07_modular_vortex_reconstruction.png)
+
+This final visual reconstructs the modular vortex structure that emerges from the drift field, showing the interaction between vortices and the transport corridors in a dynamic way.
+
+---
+
+## Numerical Results
+
+```text
+samples: 32000
+modulus: 23
+
+strongest drift states:
+state 7: strength=0.24449
+state 8: strength=0.13809
+state 12: strength=0.06749
+state 9: strength=0.06226
+state 11: strength=0.04966
+state 14: strength=0.04846
+```
+
+---
+
+# 🔥 Key Results
+
+```text
+The drift field reconstruction shows strong vortex-like coupling
+with localized transport corridors emerging from the interaction of drift fields.
+```
+
+---
+
+This concludes the **Building Log** for **EXP-07** — Drift Field Reconstruction in the JANUS Rope Operator series. The experiment revealed the intricate interaction of drift fields and vortex structures within the transport system.
