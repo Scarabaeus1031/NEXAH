@@ -123,7 +123,7 @@ $$
 
 Define local expected phase behavior:
 
-$$\hat{\omega}(t) = \mathcal{E}[\omega](t)$$
+$$\hat{\omega}(t) = \mathcal{E}[\omega](t) $$
 
 where:
 
