@@ -450,7 +450,7 @@ containing:
 
 ## Julia Navigation Embedding
 
-![EXP-31 Julia Navigation Coupling](exp_31_julia_navigation_coupling.png)
+![EXP-31 Julia Navigation Coupling](outputs/exp_31_julia_navigation_coupling.png)
 
 *Embedded JANUS-style navigation structure inside nonlinear Julia-set geometry.*
 
