@@ -15,6 +15,46 @@ It highlights the strongest visual evidence across the current NEXAH ecosystem.
 
 ---
 
+# 🧭 Structural Orientation Layer
+
+![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
+
+This visual summarizes the larger orientation philosophy behind NEXAH.
+
+It frames the framework not as a replacement for existing disciplines,
+but as:
+
+```text
+a navigation grammar across complex systems
+```
+
+The visual connects:
+
+- dynamical systems
+- topology
+- control theory
+- synchronization
+- information geometry
+- network theory
+- AI / ML
+- cartography
+- neuroscience
+- complex systems research
+
+through a shared structural-navigation perspective.
+
+---
+
+## 🔑 Core Perspective
+
+```text
+Specialists build the engines.
+
+NEXAH maps the terrain between them.
+```
+
+---
+
 # 🧠 How to Read This Gallery
 
 Each section represents one major visual layer of NEXAH:
@@ -75,6 +115,71 @@ rather than isolated state evolution.
 ![NEXAH Regime Atlas](ARCHITECTURE/archive/NEXAH_Regime_Atlas.png)
 
 High-level conceptual map connecting dynamics, synchronization, geometry, transitions, control, and mathematical representations.
+
+---
+
+# 🪞 JANUS — Directional Geometry Layer
+
+One of the newest emerging visual layers inside NEXAH investigates:
+
+```text
+directional coherence
+recursive transport geometry
+aperture structures
+and bidirectional organization
+```
+
+rather than only local instability.
+
+This JANUS layer studies how systems organize movement through:
+
+- directional overlap
+- transport asymmetry
+- recursive routing structure
+- coherence shells
+- transition apertures
+- orientation manifolds
+
+---
+
+## 🔷 JANUS Perspective
+
+```text
+forward flow
++
+backward compatibility
+→ directional coherence geometry
+```
+
+---
+
+## 🔑 Emerging Interpretation
+
+Transitions may not simply occur where systems become unstable.
+
+They may emerge where:
+
+```text
+directional coherence collapses
+```
+
+inside structured transport geometry.
+
+---
+
+## 🌌 JANUS Role Inside NEXAH
+
+```text
+field
+→ coherence
+→ directional structure
+→ apertures
+→ recursive routing
+→ transition geometry
+```
+
+This layer is still exploratory,
+but increasingly important inside the framework.
 
 ---
 
