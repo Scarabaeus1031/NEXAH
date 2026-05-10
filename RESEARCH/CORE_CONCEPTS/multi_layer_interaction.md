@@ -1,228 +1,555 @@
 # 🧠 NEXAH — Multi-Layer Interaction (Exploratory)
 
-This document describes an **emerging hypothesis** within NEXAH:
+---
 
-> dynamical systems may exhibit behavior consistent with  
-> **multiple interacting dynamical layers**
+# 🧭 Overview
+
+This document describes an emerging hypothesis within NEXAH:
+
+> nonlinear dynamical systems may exhibit behavior
+> consistent with multiple interacting dynamical layers.
+
+The hypothesis emerged from:
+
+- phase mismatch observations
+- delayed structural coupling
+- directional transition geometry
+- recursive transport organization
+- JANUS coherence reconstruction
 
 ---
 
-## ⚠️ Scope
+# ⚠️ Scope
 
-This is:
+This document is:
 
-- an exploratory hypothesis  
-- not a formal model  
-- not fully validated across systems  
+- exploratory
+- empirically motivated
+- partially supported through validation experiments
+
+It is NOT:
+
+- a finalized theory
+- a proof of layered dynamics
+- a physical ontology
 
 It is:
 
-> an interpretation of observed phenomena  
-> that cannot be fully explained by a single-layer field
+> an operational interpretation of observed behavior
+> that appears difficult to explain
+> through a single homogeneous dynamical field alone.
 
 ---
 
-## 🧭 Context in NEXAH
+# 🧭 Role in NEXAH
+
+This layer extends the field interpretation toward:
 
 ```text
-FIELD → geometry + flow
-VESSEL → containment
-PHASE → activation
-MULTI-LAYER → interaction between dynamic components
+multiple interacting organizational structures
+```
+
+inside nonlinear systems.
+
+---
+
+# 🔁 Position Inside NEXAH
+
+```text
+FIELD
+→ geometry + flow
+
+VESSEL
+→ containment + persistence
+
+PHASE
+→ activation timing
+
+JANUS
+→ directional coherence
+
+MULTI_LAYER
+→ interacting dynamical organization
 ```
 
 ---
 
-## 🔁 Motivation (From Validation)
+# 🔬 Motivation from Validation
 
-Observed in VALIDATION:
+Across multiple experiments, the following observations emerged:
 
-- delayed response patterns  
-- phase-shifted dynamics  
-- mismatch-driven transitions  
-- divergence–curl coupling with delay  
-
----
-
-## 🔬 Empirical Signal
-
-From field analysis:
-
-```text
-div(t) ≈ curl(t - τ)
-curl(t) ≈ div(t + τ)
-```
-
-From phase dynamics:
-
-```text
-mismatch = |ω - smooth(ω)|
-```
-
-Observed:
-
-- transitions occur when mismatch peaks  
-- behavior exhibits temporal delay and phase shifts  
+- delayed responses
+- phase-shifted coupling
+- directional asymmetry
+- recursive transition organization
+- coherence breakdown propagation
+- transport lag structures
 
 ---
 
-## 🧩 Core Hypothesis
+# 🔁 Delayed Structural Coupling
+
+Observed empirically:
+
+```math
+\mathrm{div}(t)
+\approx
+\mathrm{curl}(t-\tau)
+```
+
+and:
+
+```math
+\mathrm{curl}(t)
+\approx
+\mathrm{div}(t+\tau)
+```
+
+with:
+
+```math
+\tau
+=
+system-dependent delay
+```
+
+---
+
+## Interpretation
+
+Expansion and rotational organization appear:
+
+- phase shifted
+- temporally displaced
+- dynamically coupled
+
+rather than instantaneously synchronized.
+
+---
+
+# 🌀 Phase Mismatch Signal
+
+Observed mismatch quantity:
+
+```math
+M(t)
+=
+|
+\omega(t)-\hat{\omega}(t)
+|
+```
+
+Transitions consistently align with:
+
+```text
+mismatch amplification
+```
+
+rather than raw instability magnitude.
+
+---
+
+# 🧠 Core Hypothesis
 
 Instead of:
 
 ```text
-system → single dynamical layer
+system
+→ single homogeneous dynamical layer
 ```
 
-we consider:
+NEXAH explores:
 
 ```text
-system → multiple interacting dynamical components
+system
+→ interacting organizational components
 ```
 
-These components may:
-
-- operate on different temporal scales  
-- exhibit distinct dynamics  
-- interact through shared constraints  
+which together generate the observable dynamics.
 
 ---
 
-## 🔁 Interaction Hypothesis
+# 🔷 Working Layer Interpretation
 
-> Observed system behavior results from  
-> **coupling between partially independent dynamic processes**
+Current exploratory decomposition:
 
-This explains:
-
-- delayed system responses  
-- phase offsets  
-- non-local transition behavior  
-
----
-
-## 🧠 Interpretation
-
-The system behaves as if:
-
-```text
-observed field = projection of interacting layers
-```
-
-Each layer contributes:
-
-- structure (geometry)  
-- motion (flow)  
-- timing (phase)  
+| Layer | Candidate Role |
+|---|---|
+| Structural Layer | basin organization |
+| Flow Layer | directional transport |
+| Phase Layer | timing & synchronization |
+| Transition Layer | mismatch activation |
+| Coherence Layer | directional compatibility |
+| Memory Layer | persistence / recurrence |
 
 ---
 
-## 🔗 Relation to Field Model
+# 🔁 Interaction Hypothesis
 
-Field model:
-
-```text
-field = geometry + flow + instability
-```
-
-Multi-layer extension:
+Observed system behavior may result from:
 
 ```text
-field ≈ superposition of interacting components
+interaction between partially independent
+but dynamically coupled organizational layers
 ```
 
 ---
 
-## 🔗 Relation to Phase Dynamics
+## Possible Consequences
 
-![Phase Mismatch](../VALIDATION/causality/results/phase_mismatch_iota.png)
+This may explain:
 
-Observed:
-
-- phase mismatch drives transitions  
-- mismatch reflects deviation between expected and actual dynamics  
+- delayed response patterns
+- transition anticipation
+- directional asymmetry
+- recursive phase geometry
+- shell crossings
+- aperture structures
+- transport corridors
 
 ---
 
-## Insight
+# 🌊 Field Projection Interpretation
+
+The observed field may represent:
 
 ```text
-Phase mismatch may result from
-interaction between underlying layers
+projection of interacting hidden organization layers
+```
+
+rather than a single isolated geometry.
+
+---
+
+# 🔬 Extended Field Interpretation
+
+Original field model:
+
+```text
+field
+=
+geometry + flow + instability
+```
+
+Extended interpretation:
+
+```text
+field
+≈
+superposition of interacting
+organizational dynamics
 ```
 
 ---
 
-## 🔗 Relation to Vessel Geometry
+# 🪞 Relation to JANUS Geometry
 
-- vessel → spatial containment  
-- interface → transition region  
+JANUS experiments revealed:
 
-Multi-layer view:
-
-> interfaces may represent **interaction zones between layers**
+- directional overlap structures
+- coherence thinning
+- recursive transport organization
+- aperture geometries
+- orientation bias fields
 
 ---
 
-## 🔬 Conceptual Model
+## Interpretation
 
-We may think of:
+Directional coherence may emerge from:
 
 ```text
-Layer A → structural dynamics
-Layer B → rotational / phase dynamics
-Layer C → instability / transition activation
+interaction between multiple transport organizations
+```
+
+rather than from a single flow structure.
+
+---
+
+# 🔷 Aperture Geometry Interpretation
+
+Aperture regions may correspond to:
+
+```text
+zones of weakened coherence
+between interacting layers
+```
+
+producing:
+
+- gates
+- transport throats
+- shell crossings
+- directional fractures
+
+---
+
+# 🔁 Recursive Phase Geometry
+
+Observed recursive quadrant organization:
+
+| Quadrant | Interpretation |
+|---|---|
+| Q1 | Expansion |
+| Q2 | Compression |
+| Q3 | Memory |
+| Q4 | Transition |
+
+---
+
+## Interpretation
+
+Recursive phase organization may reflect:
+
+```text
+interaction between distinct
+organizational processes
+```
+
+operating on different scales.
+
+---
+
+# 🧠 Orientation Bias Interpretation
+
+Recent exploratory observations suggest:
+
+```text
+transport exhibits preferred directional organization
+```
+
+including:
+
+- root-aligned flow
+- orientation pull structures
+- recursive directional attraction
+
+---
+
+## Interpretation
+
+Orientation bias may represent:
+
+```text
+persistent coherence alignment
+across interacting layers
+```
+
+---
+
+# 🔬 Conceptual Layer Model
+
+Current working intuition:
+
+```text
+Layer A
+→ structural containment
+
+Layer B
+→ directional transport
+
+Layer C
+→ phase synchronization
+
+Layer D
+→ transition activation
+
+Layer E
+→ recursive memory persistence
 ```
 
 Observed behavior:
 
 ```text
-system output = interaction(A, B, C)
+system output
+=
+interaction(A,B,C,D,E)
 ```
 
 ---
 
-## 💡 Working Intuition
+# 🔁 Temporal Scale Hypothesis
 
-> The system does not evolve within a single structure,  
-> but within a **coupled system of interacting dynamics**
+Different layers may operate on:
 
----
-
-## ⚠️ Limitations
-
-- no formal definition of "layer"  
-- no decomposition method yet  
-- not explicitly measurable  
-- may be an emergent artifact of projection  
+- different temporal scales
+- different persistence horizons
+- different coherence regimes
 
 ---
 
-## 🚀 Next Questions
-
-- can layers be identified via phase separation?  
-- can delay (τ) be measured robustly?  
-- can interaction be modeled explicitly?  
-- does this improve control performance?  
-
----
-
-## 🧠 Key Insight
+## Example
 
 ```text
-Observed complexity may not come from chaos alone,
+fast layer
+→ local oscillation
 
-but from interaction between structured dynamical components.
+slow layer
+→ basin organization
+
+very slow layer
+→ global directional drift
 ```
 
 ---
 
-## Status
+# 🌌 Working Intuition
 
-Exploratory  
-Empirically motivated (phase + delay observations)  
-Not yet formally validated  
+The system behaves less like:
+
+```text
+single chaotic object
+```
+
+and more like:
+
+```text
+coupled organizational geometry
+```
+
+with interacting structural processes.
 
 ---
 
-© NEXAH · Research Layer
+# 🔬 Potential Mathematical Direction
+
+Future decomposition may involve:
+
+```math
+F(x,t)
+=
+\sum_i
+F_i(x,t)
+```
+
+where:
+
+```text
+F_i
+=
+layer-specific organizational dynamics
+```
+
+---
+
+# ⚠️ Important Limitation
+
+Currently:
+
+- no rigorous layer decomposition exists
+- layers are not independently measurable
+- interpretation remains exploratory
+- observed structure may partially result from projection artifacts
+
+---
+
+# 🔗 Relation to Other Modules
+
+## → field_model.md
+
+- continuous field interpretation
+
+## → equations.md
+
+- mismatch dynamics
+
+## → structure_quantities.md
+
+- spatial organization measures
+
+## → vessel_geometry.md
+
+- containment & persistence
+
+## → aperture_geometry.md
+
+- transition gates
+
+## → JANUS_OPERATOR/
+
+- directional coherence geometry
+
+---
+
+# 🚀 Next Questions
+
+Key open problems:
+
+```text
+can layers be separated explicitly?
+
+can coherence transport be quantified?
+
+can delay structures be reconstructed robustly?
+
+can layered interaction improve navigation/control?
+```
+
+---
+
+# 🔥 Central Insight
+
+```text
+observed complexity may emerge
+from interaction between structured
+organizational processes,
+not from randomness alone.
+```
+
+---
+
+# 🌌 Current Interpretation
+
+```text
+nonlinear systems may behave as
+interacting coherence geometries
+rather than isolated chaotic flows.
+```
+
+---
+
+# 🧭 Status
+
+```text
+phase mismatch:
+empirically validated
+
+delay structures:
+reproducible
+
+directional coherence:
+experimental but strong
+
+multi-layer interpretation:
+exploratory
+
+formal decomposition:
+not yet achieved
+```
+
+---
+
+# 🧠 Final Summary
+
+The Multi-Layer Interaction hypothesis proposes:
+
+```text
+complex system behavior emerges
+through interaction between partially independent
+organizational dynamics
+```
+
+which together generate:
+
+- geometry
+- flow
+- transitions
+- coherence
+- persistence
+- navigation structure
+
+---
+
+**NEXAH Research Layer**  
+Multi-Layer Transition & Coherence Interpretation  
+Thomas K. R. Hofmann · 2026
