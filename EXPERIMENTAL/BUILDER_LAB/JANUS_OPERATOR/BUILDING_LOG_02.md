@@ -1657,3 +1657,831 @@ but increasingly:
 transition infrastructure reconstruction.
 ```
 
+# 🔷 EXP-28 — Predictive Basin Routing
+
+Script:
+`scripts_2/janus_predictive_gate_transition_forecast.py`
+
+Outputs:
+
+- `outputs/exp28_prediction_transition_map.png`
+- `outputs/exp28_prediction_paths.png`
+- `outputs/exp28_prediction_confidence.png`
+- `outputs/exp28_prediction_summary.txt`
+
+---
+
+## Predictive Basin Routing
+
+![EXP-28 Prediction Paths](outputs/exp28_prediction_paths.png)
+
+---
+
+## Prediction Transition Map
+
+![EXP-28 Transition Map](outputs/exp28_prediction_transition_map.png)
+
+---
+
+## Prediction Confidence
+
+![EXP-28 Prediction Confidence](outputs/exp28_prediction_confidence.png)
+
+---
+
+## Numerical Results
+
+```text
+graph nodes:
+4
+
+prediction horizon:
+12
+
+baseline path:
+[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+prediction stability:
+high
+
+dominant routing node:
+1
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS basin transport exhibits
+predictively stable routing corridors.
+```
+
+---
+
+## Observation
+
+EXP-28 extends directed navigation into:
+
+```text
+predictive transport reconstruction.
+```
+
+The experiment tests whether basin-routing behavior
+remains coherent over future prediction steps.
+
+The resulting structure is highly organized.
+
+Several transport regions show:
+
+- persistent future routing
+- stable attractor commitment
+- repeated basin convergence
+- coherent prediction corridors
+
+---
+
+## Prediction Path Observation
+
+The prediction paths reveal:
+
+- long coherent routing persistence
+- stable basin attraction
+- repeated node fixation
+- suppressed random switching
+
+Several predicted paths collapse toward:
+
+```text
+persistent transport channels.
+```
+
+This suggests that:
+
+```text
+future transport organization
+is partially constrained.
+```
+
+---
+
+## Transition Map Observation
+
+The predictive transition map shows:
+
+- highly asymmetric routing
+- dominant transport edges
+- suppressed reverse exchange
+- persistent basin preference
+
+The strongest routing structure appears as:
+
+```text
+stable corridor occupation
+rather than diffuse exploration.
+```
+
+---
+
+## Confidence Structure Observation
+
+The confidence structure remains separated into:
+
+### low-entropy transport anchors
+
+and
+
+### high-entropy transition zones.
+
+This continues the earlier distinction from EXP-27:
+
+```text
+stable corridors
+vs
+decision-like routing regions.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-28 suggests:
+
+```text
+JANUS basin geometry supports
+short-horizon predictive routing structure.
+```
+
+The transport organization now exhibits:
+
+1. predictive basin persistence
+2. stable routing corridors
+3. asymmetric future transport
+4. entropy-separated navigation zones
+5. constrained transition evolution
+
+---
+
+## Relation to Previous Experiments
+
+EXP-28 builds on:
+
+- EXP-26 graph reconstruction
+- EXP-27 directed navigation
+
+The new contribution is:
+
+```text
+predictive routing persistence
+inside JANUS basin transport geometry.
+```
+
+---
+
+# 🔷 EXP-29 — Prediction Stability Under Perturbation
+
+Script:
+`scripts_2/anus_prediction_stability_test.py`
+
+Outputs:
+
+- `outputs/exp29_prediction_stability_map.png`
+- `outputs/exp29_path_persistence.png`
+- `outputs/exp29_forecast_noise_scan.png`
+- `outputs/exp29_prediction_robustness_summary.txt`
+
+---
+
+## Prediction Stability Matrix
+
+![EXP-29 Stability Matrix](outputs/exp29_prediction_stability_map.png)
+
+---
+
+## Prediction Path Persistence
+
+![EXP-29 Path Persistence](outputs/exp29_path_persistence.png)
+
+---
+
+## Forecast Noise Scan
+
+![EXP-29 Forecast Noise Scan](outputs/exp29_forecast_noise_scan.png)
+
+---
+
+## Numerical Results
+
+```text
+baseline path:
+[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+tested noise levels:
+0
+0.0005
+0.001
+0.0025
+0.005
+0.01
+0.025
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+Predictive JANUS routing exhibits
+distinct stability plateaus
+and abrupt transport regime shifts.
+```
+
+---
+
+## Observation
+
+EXP-29 investigates whether predictive basin routing
+remains stable under increasing perturbation.
+
+The result is strongly structured.
+
+Small perturbations do NOT produce smooth degradation.
+
+Instead, the system exhibits:
+
+- stable prediction plateaus
+- sudden routing flips
+- transport bifurcation behavior
+- abrupt basin-lock transitions
+
+---
+
+## Stability Plateau Observation
+
+Several perturbation regions preserve:
+
+```text
+near-identical transport routing.
+```
+
+This indicates that:
+
+```text
+some transport corridors are robust
+against local perturbation.
+```
+
+The strongest persistence appears around:
+
+```text
+noise = 0
+noise = 0.005
+```
+
+where the original routing structure survives.
+
+---
+
+## Abrupt Transition Observation
+
+Other perturbation levels trigger:
+
+- complete routing collapse
+- basin switching
+- oscillatory transport
+- node trapping
+
+Especially near:
+
+```text
+noise = 0.001
+noise = 0.01
+```
+
+the transport geometry reorganizes abruptly.
+
+This resembles:
+
+```text
+routing bifurcation thresholds.
+```
+
+---
+
+## Entropy Structure
+
+The entropy scans reveal:
+
+- selective instability
+- local routing sensitivity
+- node-specific collapse regions
+- preserved deterministic channels
+
+This suggests that:
+
+```text
+transport fragility is localized,
+not globally distributed.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-29 suggests:
+
+```text
+JANUS predictive routing contains
+critical stability thresholds.
+```
+
+The transport system now exhibits:
+
+1. perturbation-resistant corridors
+2. abrupt routing bifurcations
+3. localized instability zones
+4. noise-sensitive gate switching
+5. transport persistence plateaus
+
+---
+
+## Relation to Previous Experiments
+
+EXP-29 builds on:
+
+- EXP-27 directed navigation
+- EXP-28 predictive routing
+
+The new contribution is:
+
+```text
+perturbation stability analysis
+of predictive JANUS transport geometry.
+```
+
+---
+
+# 🔷 EXP-30 — Basin Intervention / Controlled Steering
+
+Script:
+`scripts_2/janus_basin_intervention_steering.py`
+
+Outputs:
+
+- `outputs/exp30_transport_shift_matrix.png`
+- `outputs/exp30_intervention_paths.png`
+- `outputs/exp30_control_response.png`
+- `outputs/exp30_basin_steering_map.png`
+- `outputs/exp30_intervention_summary.txt`
+
+---
+
+## Transport Shift Matrix
+
+![EXP-30 Shift Matrix](outputs/exp30_transport_shift_matrix.png)
+
+---
+
+## Intervention Paths
+
+![EXP-30 Intervention Paths](outputs/exp30_intervention_paths.png)
+
+---
+
+## Control Response
+
+![EXP-30 Control Response](outputs/exp30_control_response.png)
+
+---
+
+## Basin Steering Map
+
+![EXP-30 Steering Map](outputs/exp30_basin_steering_map.png)
+
+---
+
+## Numerical Results
+
+```text
+intervention angle:
+45°
+
+baseline path:
+[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+tested intervention strengths:
+-0.300
+-0.150
+-0.075
+ 0.000
++0.075
++0.150
++0.300
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS transport routing can be
+directionally steered through
+controlled basin intervention.
+```
+
+---
+
+## Observation
+
+EXP-30 extends predictive routing into:
+
+```text
+active transport steering.
+```
+
+The experiment applies directional intervention biases
+to determine whether basin routing can be shifted.
+
+The resulting transport response is highly structured.
+
+Small interventions preserve the dominant routing corridor.
+
+Larger interventions produce:
+
+- basin flips
+- transport reassignment
+- routing inversion
+- corridor switching
+
+---
+
+## Stable Corridor Observation
+
+Moderate intervention strengths preserve:
+
+```text
+the original routing channel.
+```
+
+This indicates:
+
+```text
+stable transport locking.
+```
+
+The system resists weak steering attempts.
+
+---
+
+## Basin Flip Observation
+
+At stronger intervention strengths:
+
+```text
+routing abruptly changes basin family.
+```
+
+Examples include:
+
+- collapse into node 0
+- transition toward node 2
+- complete corridor reassignment
+
+This suggests:
+
+```text
+gate structure contains steerable decision zones.
+```
+
+---
+
+## Shift Matrix Observation
+
+The transport shift matrix reveals:
+
+- asymmetric steering sensitivity
+- selective corridor displacement
+- directional response bands
+- localized transport instability
+
+The strongest shifts occur near:
+
+```text
+large positive / negative interventions.
+```
+
+---
+
+## Steering Geometry Observation
+
+The steering overlay shows:
+
+- persistent diagonal transport
+- clustered gate displacement
+- mirrored steering response
+- structured basin migration
+
+The geometry resembles:
+
+```text
+a controllable transport membrane.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-30 suggests:
+
+```text
+JANUS basin routing is not only observable,
+but partially steerable.
+```
+
+The system now exhibits:
+
+1. stable transport locking
+2. directional steering response
+3. abrupt basin reassignment
+4. intervention-sensitive gate zones
+5. controlled routing deformation
+
+---
+
+## Relation to Previous Experiments
+
+EXP-30 builds on:
+
+- EXP-27 directed navigation
+- EXP-28 predictive routing
+- EXP-29 perturbation stability
+
+The new contribution is:
+
+```text
+controlled steering analysis
+inside JANUS transport geometry.
+```
+
+---
+
+# 🔷 EXP-31 — Julia Navigation Coupling
+
+Script:
+`scripts_2/exp_31_julia_navigation_coupling.py`
+
+Outputs:
+
+- `outputs/exp31_julia_navigation_coupling.png`
+- `outputs/exp31_julia_navigation_zoom_regions.png`
+- `outputs/exp31_julia_navigation_summary.txt`
+
+---
+
+# 🔷 EXP-31 — Julia Navigation Coupling
+
+Script:
+`scripts_2/exp_31_julia_navigation_coupling.py`
+
+Outputs:
+
+- `outputs/exp31_julia_navigation_coupling.png`
+- `outputs/exp31_julia_navigation_summary.txt`
+
+---
+
+## Julia Navigation Coupling
+
+![EXP-31 Julia Navigation Coupling](outputs/exp31_julia_navigation_coupling.png)
+
+---
+
+## Numerical Results
+
+```text
+parameter:
+c = -0.750 + 0.100i
+
+navigation probes:
+multiple coupled trajectories
+
+dominant geometry:
+dual-lobe corridor structure
+```
+
+---
+
+# 🔥 Key Result
+
+```text
+JANUS navigation structure can be embedded
+inside a genuine nonlinear fractal
+transition geometry.
+```
+
+---
+
+## Observation
+
+EXP-31 introduces explicit coupling between:
+
+```text
+JANUS navigation logic
+```
+
+and:
+
+```text
+Julia-set dynamical structure.
+```
+
+Unlike EXP-22,
+which mapped aperture gates into parameter-space projections,
+EXP-31 places navigation probes directly inside:
+
+```text
+a nonlinear fractal dynamical field.
+```
+
+The resulting geometry is remarkably coherent.
+
+---
+
+## Fractal Corridor Observation
+
+The Julia geometry reveals:
+
+- dual basin organization
+- spiral transition corridors
+- membrane-like outer shells
+- nested transport envelopes
+- diagonal transition channels
+
+The navigation probes couple selectively into:
+
+- local basin structures
+- transition seams
+- spiral gate regions
+- edge-sensitive corridors
+
+This creates the appearance of:
+
+```text
+embedded transport infrastructure
+inside fractal dynamics.
+```
+
+---
+
+## Outer Field Observation
+
+One of the strongest results is the visibility
+of the external field geometry.
+
+The surrounding outer regions form:
+
+- layered contour shells
+- continuous gradient envelopes
+- large-scale drift fields
+- embedded transition membranes
+
+The field is not visually empty.
+
+Instead, it behaves like:
+
+```text
+a global navigation potential landscape.
+```
+
+---
+
+## Spiral Gate Observation
+
+The internal spiral regions exhibit:
+
+- rotational transport pull
+- local transition vortices
+- branching corridor deformation
+- nested routing seams
+
+The navigation trajectories partially align
+with these regions.
+
+This suggests:
+
+```text
+navigation may couple
+to underlying dynamical gradients.
+```
+
+---
+
+## Dual-Basin Geometry
+
+The central structure resembles:
+
+- mirrored lobe transport
+- coupled basin chambers
+- diagonal exchange pathways
+- central transition membranes
+
+The geometry strongly echoes previous JANUS observations:
+
+- diagonal transport preference
+- suppressed orthogonal crossing
+- corridor-like exchange
+- shell-mediated routing
+
+Now these patterns appear inside:
+
+```text
+a true nonlinear fractal system.
+```
+
+---
+
+## Local Coupling Zones
+
+The zoom regions reveal:
+
+- localized probe attachment
+- partial corridor locking
+- edge-sensitive drift
+- transition-boundary sensitivity
+
+Different probes exhibit:
+
+- stable embedding
+- weak coupling
+- redirected drift
+- partial gate overlap
+
+This implies that:
+
+```text
+local transport accessibility
+depends on geometric placement.
+```
+
+---
+
+## Structural Interpretation
+
+EXP-31 suggests:
+
+```text
+JANUS navigation structure may be expressible
+inside nonlinear fractal transport geometry.
+```
+
+The system now exhibits:
+
+1. fractal basin embedding
+2. contour-mediated drift structure
+3. spiral transition corridors
+4. localized navigation coupling
+5. shell-like transport membranes
+6. embedded dynamical routing geometry
+
+---
+
+## Relation to Previous Experiments
+
+EXP-31 builds on:
+
+- EXP-22 fractal parameter mapping
+- EXP-26 graph reconstruction
+- EXP-27 directed navigation
+- EXP-30 basin steering
+
+The new contribution is:
+
+```text
+direct navigation coupling
+inside explicit fractal dynamics.
+```
+
+---
+
+# 🔥 Updated Working Insight — LOG_02
+
+```text
+JANUS transition geometry now exhibits:
+
+- aperture localization
+- orientation-selective gates
+- surrogate-resistant structure
+- multi-scale persistence
+- graph-organized transport
+- predictive routing
+- perturbation bifurcation
+- steerable basin transport
+- nonlinear fractal coupling
+```
+
+The emerging picture increasingly resembles:
+
+```text
+a structured transport infrastructure
+embedded inside continuous nonlinear dynamics.
+```
