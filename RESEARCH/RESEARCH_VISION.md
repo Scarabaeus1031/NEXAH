@@ -182,10 +182,7 @@ IOTA ⇔ instability magnitude alone
 
 Mismatch is operationally defined as:
 
-$$
-M(t)
-=
-|\omega(t)-\hat{\omega}(t)|
+$$M(t) = |\omega(t)-\hat{\omega}(t)|
 $$
 
 where:
@@ -217,45 +214,22 @@ The JANUS layer introduces directional transport coherence.
 
 Forward local transport:
 
-$$
-F_{\mathrm{forward}}(x)
+$$F_{\mathrm{forward}}(x)
 $$
 
 Backward local transport:
 
-$$
-F_{\mathrm{backward}}(x)
+$$F_{\mathrm{backward}}(x)
 $$
 
 Directional overlap reconstruction:
 
-$$
-\mathcal{J}(x)
-=
-F_{\mathrm{forward}}(x)
-\odot
-F_{\mathrm{backward}}(x)
+$$\mathcal{J}(x) = F_{\mathrm{forward}}(x) \odot F_{\mathrm{backward}}(x)
 $$
 
 Normalized coherence:
 
-$$
-J(x)
-=
-\frac{
-\|
-\mathcal{J}(x)
-\|
-}{
-\|
-F_{\mathrm{forward}}(x)
-\|
-\,
-\|
-F_{\mathrm{backward}}(x)
-\|
-+\varepsilon
-}
+$$J(x) = \frac{ \| \mathcal{J}(x) \| }{ \| F_{\mathrm{forward}}(x) \| \, \| F_{\mathrm{backward}}(x) \| +\varepsilon }
 $$
 
 Exploratory observations suggest:
@@ -284,22 +258,12 @@ Observed features include:
 
 Operationally:
 
-$$
-\Theta(x)
-=
-\arg(F(x))
+$$\Theta(x) = \arg(F(x))
 $$
 
 with orientation alignment:
 
-$$
-B(x)
-=
-\cos(
-\Theta(x)
--
-\Theta_{\mathrm{root}}
-)
+$$B(x) = \cos( \Theta(x) - \Theta_{\mathrm{root}} )
 $$
 
 Interpretation:
