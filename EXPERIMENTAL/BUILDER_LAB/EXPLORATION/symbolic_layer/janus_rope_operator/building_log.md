@@ -1,4 +1,4 @@
-# BUILDING_LOG_03 — JANUS Rope Operator & Prime Aperture Geometry
+# BUILDING_LOG_01 — JANUS Rope Operator & Prime Aperture Geometry
 
 Status:
 Exploratory Symbolic Layer → Experimental Transition Dynamics
