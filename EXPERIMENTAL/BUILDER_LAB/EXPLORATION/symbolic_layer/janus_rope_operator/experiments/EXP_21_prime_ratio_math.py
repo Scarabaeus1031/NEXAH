@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameter
+t = np.linspace(0, 2 * np.pi, 1000)  # Zeit oder Phase
+A0 = 1  # Maximale Amplitude
+
+# Prime Verhältnisse
+P1 = 3 / 5
+P2 = 3 / 1
+
+# Wellenfunktionen
+A1 = A0 * np.sin(P1 * t)
+A2 = A0 * np.sin(P2 * t)
+
+# Berechnung des Cross-Correlation (zur Bestimmung der Synchronisation)
+correlation = np.correlate(A1, A2, mode='full')
+
+# Schnittpunkte finden
+crossing_points = np.where(np.diff(np.sign(correlation)))[0]
+
+# Visualisierung der Wellen
+plt.figure(figsize=(10, 6))
+plt.plot(t, A1, label='Prime Ratio 3:5')
+plt.plot(t, A2, label='Prime Ratio 3:1')
+plt.scatter(t[crossing_points], A1[crossing_points], color='red', label='Kreuzungspunkte', zorder=5)
+plt.title('Prime Modulation und Phase Synchronisation (3:5, 3:1)')
+plt.xlabel('Phase')
+plt.ylabel('Amplitude')
+plt.legend()
+plt.show()
