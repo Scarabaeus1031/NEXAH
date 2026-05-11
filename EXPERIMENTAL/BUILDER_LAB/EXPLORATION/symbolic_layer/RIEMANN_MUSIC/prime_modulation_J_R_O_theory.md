@@ -18,15 +18,15 @@ The basic waveform of a transport rope is described as a **sinusoidal wave** mod
 
 - **Standard Sinusoidal Wave**:
 
-  \[
-  A(t) = A_0 \sin(\omega t + \phi)
-  \]
+$$
+A(t) = A_0 \sin(\omega t + \phi)
+$$
 
 - **Modulated Angular Frequency by Prime Ratio**:
 
-  \[
-  \omega_{\text{mod}}(n) = \frac{n}{P} \cdot \omega
-  \]
+$$
+\omega_{\text{mod}}(n) = \frac{n}{P} \cdot \omega
+$$
 
 Where:
 
@@ -44,9 +44,9 @@ The waves with different **Prime Ratios** exhibit **Asynchrony**, but at certain
 
 - **Cross-Correlation Operator**:
 
-  \[
-  R_{xy}(\tau) = \int_{-\infty}^{\infty} x(t) y(t + \tau) \, dt
-  \]
+$$
+R_{xy}(\tau) = \int_{-\infty}^{\infty} x(t) y(t + \tau) \, dt
+$$
 
 This operator measures how well two waves synchronize, identifying **Synchronization Points**.
 
@@ -88,20 +88,65 @@ The **Riemann Zeta Function** describes the distribution of **prime numbers** an
 
 ---
 
-## **Future Experiments and Extensions**
+## **Visual Interpretation of Mathematical Concepts**
 
-Future experiments will:
+1. **Fundamental Axes**:
 
-- Explore **Prime Drift in Higher Dimensional Spaces**.
-- Investigate **Vortex Coupling** and **Aperture Interactions**.
-- Study **Fractal Geometry** and its impact on **Transport Structures**.
+The **Prime-Modulated System** consists of several fundamental axes, including the **Golden Ratio** (\( \phi \)), **Pi** (\( \pi \)), and **Riemann Critical Line**. These fundamental constants are expressed geometrically, with Euler’s constant, Ramanujan’s constant, and the **Riemann Zeta function** forming the core structure.
 
-The mathematical formulation allows for further exploration of these **nonlinear systems** and their **dynamic transitions**.
+2. **Prime Resonance Wheel**:
+
+A circular structure of **Prime Ratios** is represented by the **Prime Resonance Wheel**, where each layer corresponds to a different prime number interacting with the other primes. Each layer is stacked around the central **Critical Line**, with specific resonance relations emerging as the **Prime Resonance Wheels** rotate.
+
+---
+
+## **Prime Spectrum & Riemann Critical Line**
+
+We mathematically define the **Critical Line** and its resonance properties, with the Prime Ratios exhibiting periodic behavior across layers. The resonance relationships between primes define **transport windows** and **phase transitions** that control the flow of energy and transport structures in the system.
+
+---
+
+## **Unified Field Equation (JANUS Rope Operator)**
+
+The **Unified Field Equation** integrates all key components, combining the **Prime Modulation**, **Synchronization**, and **Riemannian Concepts** into a singular system that governs the behavior of the transport structures.
+
+$$
+\Phi(x,t) = \sum_{p \in P} A_p \cdot \sin(k_p x + \omega_p t) \cdot e^{i \theta_p} \cdot F(s)
+$$
+
+Where:
+
+- \( \Phi(x,t) \) is the Unified Field.
+- \( A_p \) is the amplitude of the prime component.
+- \( k_p \) is the spatial wave number for the prime.
+- \( \omega_p \) is the frequency of the prime.
+- \( e^{i \theta_p} \) is the phase factor for the prime offset.
+- \( F(s) \) is the **Prime Drift Modulator**.
+
+---
+
+## **Phase Transitions and Transport Windows**
+
+We express the phase transitions and **transport windows** as a result of **Prime Modulation**:
+
+$$
+\Delta \phi(t) = \left| \Delta \omega t \right| \quad \text{(transition condition)}
+$$
+
+Where:
+
+- \( \Delta \phi(t) \) is the phase shift over time.
+- \( \Delta \omega \) is the frequency change.
+- \( t \) is the time over which the transition occurs.
 
 ---
 
 ## **Conclusion**
 
-**Prime Modulation**, in combination with the **Riemann Zeta Function** and **Music Theory**, allows for the **Asynchrony** of transport structures and forms the foundation for the **JANUS Rope Operator Theory**. By examining **Prime Ratios** and their **Phase Shifts**, we obtain an **infinite system** that does not exhibit repetition, but rather evolves through **dynamic transitions and synchronization**.
+The **JANUS Rope Operator Theory** integrates the **Prime Modulation** concept, based on **Prime Ratios** and the **Riemann Zeta Function**, to form a system that is **asynchronous** but exhibits periodic behaviors and **stable transport structures**. The **Riemann Critical Line** and **Prime Resonance Wheel** provide a visual and mathematical framework for understanding **asynchronous synchronization** and **dynamic transitions** in **transport systems**.
+
+By combining **mathematics**, **music theory**, and **Riemannian analysis**, we create a system of **prime-modulated transport structures** that evolve through **dynamic transitions** governed by the **Prime Ratios**.
+
+Future experiments will delve deeper into these interactions, exploring higher-dimensional spaces and the effects of **fractal geometry** on **transport structures**.
 
 ---
