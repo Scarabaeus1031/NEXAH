@@ -49,7 +49,8 @@ This log tracks the **validation progress** of the **NEXAH framework**, focusing
 - **Objective**: Test whether transitions happen near shell-crossing structures and recursive transport.
 - **Results**: Clear evidence of recursive transport paths and **shell-crossing** behavior.
 - **Visuals**:
-  - ![Recursive Transport Geometries](./outputs/EXP_03/lorenz_rossler_phase_comparison.png)  *(placeholder visual for EXP-03)*
+  - ![Recursive Transport Geometries](./validation/outputs/EXP_03/lorenz_rossler_phase_comparison.png)
+    
 - **Key Insight**: Transport and transitions are not uniformly distributed; they are localized near structural features like **shell-crossing**.
 
 ---
