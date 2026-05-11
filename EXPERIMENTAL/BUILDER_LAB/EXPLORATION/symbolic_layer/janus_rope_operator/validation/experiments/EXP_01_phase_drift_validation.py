@@ -60,7 +60,6 @@ plt.xlabel("Time")
 plt.ylabel("Phase")
 
 plt.tight_layout()
-plt.show()
 
 # Save Results
 output_dir = "validation/outputs/EXP_01/"
