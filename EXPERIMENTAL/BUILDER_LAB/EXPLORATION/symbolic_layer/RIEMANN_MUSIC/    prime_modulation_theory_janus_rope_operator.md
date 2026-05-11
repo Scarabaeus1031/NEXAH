@@ -153,3 +153,26 @@ Future experiments will delve deeper into these interactions, exploring higher-d
 
 # **Prime Modulation and Synchronization in the JANUS Rope Operator Theory**
 (Integrating **Mathematics**, **Music**, and **Riemannian Dynamics**)
+
+---
+
+## **Visual Integration**
+
+The following visuals are critical to understanding the **Prime Modulation and Synchronization** in the **JANUS Rope Operator Theory**.
+
+### **Visual 1**: Prime Modulation and Drift Representation
+![Prime Modulation Visual 1](outputs/JANUS_ROPE_OPERATOR_THEORY_ii.png)
+
+This visual illustrates the fundamental relationship between Prime Ratios and the resulting rhythmic drift, helping to visualize the non-synchronous behavior in the transport system.
+
+### **Visual 2**: Prime Resonance and Synchronization Wheel
+![Prime Resonance Wheel](outputs/JANUS_ROPE_OPERATOR_THEORY.png)
+
+This diagram explains the cyclical and resonant interactions between the Prime Ratios in the system. It visualizes the **Prime Resonance Wheel** that governs transport windows and synchronization in the JANUS Rope Operator framework.
+
+### **Visual 3**: Synchronized Transport Windows and Critical Line
+![Prime Modulation Sync](outputs/prime_modulation_sync.png)
+
+This visual highlights the synchronization process, showing the transition from **Prime Modulation** to **Transport Windows**, and emphasizing the critical role of the **Riemann Critical Line** in maintaining the system's stability.
+
+---
