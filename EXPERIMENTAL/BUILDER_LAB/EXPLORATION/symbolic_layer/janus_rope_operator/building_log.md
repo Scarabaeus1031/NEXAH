@@ -852,9 +852,9 @@ with localized transport corridors emerging from the interaction of drift fields
 ```
 
 ---
-
 This concludes the **Building Log** for **EXP-07** — Drift Field Reconstruction in the JANUS Rope Operator series. The experiment revealed the intricate interaction of drift fields and vortex structures within the transport system.
 
+---
 
 # BUILDING_LOG_08 — JANUS Rope Operator & Aperture Geometry Phase (EXP-08)
 
