@@ -25,9 +25,11 @@ X0 = [1, 0, 0]
 # Systemintegration
 solution = odeint(rossler_system, X0, t, args=(a, b, c))
 
-# Berechnung der Kohärenz
+# Berechnung der Kohärenz (jetzt für jedes Zeitintervall)
 def calculate_coherence(system_solution):
-    coherence = np.dot(system_solution[:, 0], system_solution[:, 1]) / (np.linalg.norm(system_solution[:, 0]) * np.linalg.norm(system_solution[:, 1]))
+    coherence = np.zeros(len(system_solution))  # Array für Kohärenz
+    for i in range(len(system_solution)):
+        coherence[i] = np.dot(system_solution[i, 0], system_solution[i, 1]) / (np.linalg.norm(system_solution[i, 0]) * np.linalg.norm(system_solution[i, 1]))
     return coherence
 
 # Berechnung der Kohärenz für das Rössler-System
