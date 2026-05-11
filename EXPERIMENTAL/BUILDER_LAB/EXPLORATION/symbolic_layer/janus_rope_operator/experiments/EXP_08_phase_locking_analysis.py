@@ -1,124 +1,365 @@
-# ============================================================
-# EXP_08 — Phase Locking Analysis
-# JANUS Rope Operator / Phase Synchronization
-#
-# Goal:
-# Analyze phase synchronization and locking behavior in modular transport systems.
-#
-# Outputs:
-# 1. Phase Locking Visualization
-# 2. Phase Drift and Synchronization Diagram
-# 3. Phase Deviation Heatmap
-#
-# Author: NEXAH / JANUS Exploration
-# ============================================================
-
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.ndimage import gaussian_filter
 from collections import defaultdict
+import os
 
 # ============================================================
 # PARAMETERS
 # ============================================================
 
-N = 32000  # Number of samples
-DT = 0.0125  # Time step
+N = 32000
+DT = 0.0125
 
-MODULUS = 23  # Modulus for state space
+MODULUS = 23
 
-# Phase locking and drift parameters
-f1 = 2.0  # Frequency 1
-f2 = 3.0  # Frequency 2
-f3 = 5.0  # Frequency 3
-f4 = 7.0  # Frequency 4
+WINDOW = 8
+
+np.random.seed(7)
 
 # ============================================================
-# JANUS ROPE FIELD — Phase Drift and Synchronization
+# JANUS ROPE FIELD
 # ============================================================
 
-# Generate the time series for the transport system
 t = np.arange(N) * DT
 
-# Layered frequency components for the x and y transport paths
+# layered frequencies
+f1 = 2.0
+f2 = 3.0
+f3 = 5.0
+f4 = 7.0
+
+# coupled rope field
 x = (
-    0.45*np.sin(f1*t) + 
-    0.28*np.sin(f2*t + 0.6) + 
-    0.15*np.sin(f3*t + 1.4)
+    0.45*np.sin(f1*t)
+    + 0.28*np.sin(f2*t + 0.6)
+    + 0.15*np.sin(f3*t + 1.4)
 )
 
 y = (
-    0.52*np.cos(f2*t) + 
-    0.25*np.cos(f3*t + 0.3) + 
-    0.14*np.sin(f4*t + 1.1)
+    0.52*np.cos(f2*t)
+    + 0.25*np.cos(f3*t + 0.3)
+    + 0.14*np.sin(f4*t + 1.1)
 )
 
 # ============================================================
-# PHASE SYNCHRONIZATION AND LOCKING
+# OFFSET POLE
 # ============================================================
 
-# Calculate phase angles for the x and y transport paths
-phase_x = np.angle(np.exp(1j * np.angle(np.cumsum(x))))  # Phase for x
-phase_y = np.angle(np.exp(1j * np.angle(np.cumsum(y))))  # Phase for y
+pole = np.array([1.0, 0.0])
 
-# Calculate the phase difference between x and y
-phase_diff = np.unwrap(phase_x - phase_y)
+dx = x - pole[0]
+dy = y - pole[1]
 
-# Measure the phase locking index (PLI) based on phase difference
-PLI = np.abs(np.mean(np.exp(1j * phase_diff)))
+angles = np.degrees(np.arctan2(dy, dx)) % 360
 
 # ============================================================
-# VISUALIZATION 1 — Phase Locking
+# RESIDUE STATES
 # ============================================================
 
-fig, ax = plt.subplots(figsize=(10, 6))
+states = np.floor(
+    (angles / 360.0) * MODULUS
+).astype(int)
 
-ax.plot(t, phase_diff, color='blue', label="Phase Difference")
-ax.set_title('EXP_08 — Phase Locking Analysis', fontsize=18)
-ax.set_xlabel('Time (s)', fontsize=14)
-ax.set_ylabel('Phase Difference (radians)', fontsize=14)
-ax.legend()
+states = np.clip(states, 0, MODULUS-1)
 
-# Save the figure
-phase_locking_filepath = "outputs/EXP_08/exp08_phase_locking.png"
+# ============================================================
+# DRIFT VECTOR RECONSTRUCTION
+# ============================================================
+
+# average local motion per residue state
+
+drift_vectors = defaultdict(list)
+
+for i in range(N - WINDOW):
+
+    s = states[i]
+
+    px = x[i]
+    py = y[i]
+
+    qx = x[i + WINDOW]
+    qy = y[i + WINDOW]
+
+    vx = qx - px
+    vy = qy - py
+
+    drift_vectors[s].append((vx, vy))
+
+# average vectors
+
+mean_vectors = {}
+
+for s in range(MODULUS):
+
+    arr = np.array(drift_vectors[s])
+
+    if len(arr) > 0:
+        mean_vectors[s] = arr.mean(axis=0)
+    else:
+        mean_vectors[s] = np.array([0, 0])
+
+# ============================================================
+# RESIDUE CENTERS
+# ============================================================
+
+centers = {}
+
+for s in range(MODULUS):
+
+    mask = states == s
+
+    if np.sum(mask) > 0:
+        centers[s] = (
+            x[mask].mean(),
+            y[mask].mean()
+        )
+    else:
+        centers[s] = (0, 0)
+
+# ============================================================
+# DRIFT STRENGTH
+# ============================================================
+
+strength = np.zeros(MODULUS)
+
+for s in range(MODULUS):
+
+    vx, vy = mean_vectors[s]
+
+    strength[s] = np.sqrt(vx**2 + vy**2)
+
+# ============================================================
+# OUTPUT FOLDER CREATION
+# ============================================================
+output_dir = "outputs/EXP_08"
+os.makedirs(output_dir, exist_ok=True)
+
+# ============================================================
+# VISUAL 1
+# LOCAL DRIFT VECTOR FIELD
+# ============================================================
+
+fig, ax = plt.subplots(figsize=(10,10))
+
+ax.scatter(x, y, s=1, alpha=0.05, color='gray')
+
+for s in range(MODULUS):
+
+    cx, cy = centers[s]
+    vx, vy = mean_vectors[s]
+
+    ax.arrow(
+        cx, cy,
+        vx*8,
+        vy*8,
+        color=plt.cm.plasma(strength[s]/strength.max()),
+        width=0.003,
+        head_width=0.03,
+        alpha=0.95
+    )
+
+    ax.text(cx, cy, str(s), fontsize=8)
+
+ax.scatter(
+    pole[0],
+    pole[1],
+    marker='x',
+    s=400,
+    linewidths=4,
+    color='tab:blue'
+)
+
+ax.set_title(
+    "EXP_08 — Local Drift Vector Field",
+    fontsize=22
+)
+
+ax.set_aspect('equal')
+
 plt.tight_layout()
+phase_locking_filepath = f"{output_dir}/exp08_phase_locking.png"
 plt.savefig(phase_locking_filepath, dpi=300)
 
 # ============================================================
-# VISUALIZATION 2 — Phase Drift and Synchronization Diagram
+# VISUAL 2
+# PHASE DRIFT SYNC
 # ============================================================
 
-fig, ax = plt.subplots(figsize=(10, 10))
+fig, ax = plt.subplots(figsize=(10,10))
 
-ax.scatter(x, y, c=phase_diff, cmap='plasma', alpha=0.75, s=10)
-ax.set_title('EXP_08 — Phase Drift and Synchronization', fontsize=18)
-ax.set_xlabel('X Transport', fontsize=14)
-ax.set_ylabel('Y Transport', fontsize=14)
+ax.scatter(x, y, s=3, alpha=0.1, color='gray')
 
-# Save the figure
-phase_sync_filepath = "outputs/EXP_08/exp08_phase_drift_sync.png"
+for s in range(MODULUS):
+
+    cx, cy = centers[s]
+    vx, vy = mean_vectors[s]
+
+    ax.arrow(
+        cx, cy,
+        vx*10,
+        vy*10,
+        color=plt.cm.viridis(strength[s]/strength.max()),
+        width=0.005,
+        head_width=0.05,
+        alpha=0.75
+    )
+
+ax.set_title(
+    "EXP_08 — Phase Drift Synchronization",
+    fontsize=22
+)
+
+ax.set_aspect('equal')
+
 plt.tight_layout()
+phase_sync_filepath = f"{output_dir}/exp08_phase_drift_sync.png"
 plt.savefig(phase_sync_filepath, dpi=300)
 
 # ============================================================
-# VISUALIZATION 3 — Phase Deviation Heatmap
+# VISUAL 3
+# PHASE DEVIATION HEATMAP
 # ============================================================
 
-fig, ax = plt.subplots(figsize=(12, 4))
+fig, ax = plt.subplots(figsize=(12,4))
 
-# Create a heatmap of phase differences across the system
-heatmap = np.reshape(phase_diff, (int(np.sqrt(N)), int(np.sqrt(N))))
+heat = strength.reshape(1,-1)
 
-# Apply Gaussian filtering for smoothness
-heatmap = gaussian_filter(heatmap, sigma=2)
+ax.imshow(
+    heat,
+    cmap='magma',
+    aspect='auto'
+)
 
-ax.imshow(heatmap, cmap='magma', aspect='auto')
-ax.set_title('EXP_08 — Phase Deviation Heatmap', fontsize=18)
+ax.set_xticks(np.arange(MODULUS))
+ax.set_yticks([])
 
-# Save the figure
-phase_deviation_filepath = "outputs/EXP_08/exp08_phase_deviation_heatmap.png"
+ax.set_title(
+    "EXP_08 — Phase Deviation Heatmap",
+    fontsize=22
+)
+
 plt.tight_layout()
+phase_deviation_filepath = f"{output_dir}/exp08_phase_deviation_heatmap.png"
 plt.savefig(phase_deviation_filepath, dpi=300)
+
+# ============================================================
+# VISUAL 4
+# TRANSPORT CORRIDOR OVERLAY
+# ============================================================
+
+fig, ax = plt.subplots(figsize=(10,10))
+
+ax.scatter(
+    x,
+    y,
+    c=states,
+    cmap='tab20',
+    s=3,
+    alpha=0.25
+)
+
+top_states = np.argsort(strength)[-6:]
+
+for s in top_states:
+
+    mask = states == s
+
+    ax.scatter(
+        x[mask],
+        y[mask],
+        s=8,
+        alpha=0.7,
+        label=f"state {s}"
+    )
+
+ax.scatter(
+    pole[0],
+    pole[1],
+    marker='x',
+    s=350,
+    linewidths=4,
+    color='tab:blue'
+)
+
+ax.legend()
+
+ax.set_title(
+    "EXP_08 — Transport Corridor Overlay",
+    fontsize=22
+)
+
+ax.set_aspect('equal')
+
+plt.tight_layout()
+transport_corridors_filepath = f"{output_dir}/exp08_transport_corridors.png"
+plt.savefig(transport_corridors_filepath, dpi=300)
+
+# ============================================================
+# VISUAL 5
+# MODULAR VORTEX RECONSTRUCTION
+# ============================================================
+
+grid_n = 200
+
+gx = np.linspace(-1.2, 1.2, grid_n)
+gy = np.linspace(-1.4, 0.6, grid_n)
+
+GX, GY = np.meshgrid(gx, gy)
+
+VX = np.zeros_like(GX)
+VY = np.zeros_like(GY)
+
+for s in range(MODULUS):
+
+    cx, cy = centers[s]
+    vx, vy = mean_vectors[s]
+
+    dist2 = (GX - cx)**2 + (GY - cy)**2
+
+    weight = np.exp(-dist2 / 0.05)
+
+    VX += vx * weight
+    VY += vy * weight
+
+speed = np.sqrt(VX**2 + VY**2)
+
+speed = gaussian_filter(speed, sigma=1.0)
+
+fig, ax = plt.subplots(figsize=(12,10))
+
+ax.streamplot(
+    gx,
+    gy,
+    VX,
+    VY,
+    color=speed,
+    cmap='plasma',
+    density=2.2,
+    linewidth=1.5
+)
+
+ax.scatter(
+    pole[0],
+    pole[1],
+    marker='x',
+    s=450,
+    linewidths=5,
+    color='cyan'
+)
+
+ax.set_title(
+    "EXP_08 — Modular Vortex Reconstruction",
+    fontsize=24
+)
+
+ax.set_xlim(-1.2, 1.2)
+ax.set_ylim(-1.4, 0.6)
+
+ax.set_aspect('equal')
+
+plt.tight_layout()
+modular_vortex_filepath = f"{output_dir}/exp08_modular_vortex_reconstruction.png"
+plt.savefig(modular_vortex_filepath, dpi=300)
 
 # ============================================================
 # SUMMARY
@@ -130,15 +371,25 @@ print("===================================\n")
 
 print(f"Samples: {N}")
 print(f"Modulus: {MODULUS}")
-print(f"Phase Locking Index (PLI): {PLI:.5f}")
+
+print("\nStrongest drift states:")
+print("-----------------------------------")
+
+for s in top_states[::-1]:
+    print(
+        f"state {s}: "
+        f"strength={strength[s]:.5f}"
+    )
 
 print("\nGenerated visuals:")
 print("-----------------------------------")
 
 files = [
-    phase_locking_filepath,
-    phase_sync_filepath,
-    phase_deviation_filepath
+    "exp08_phase_locking.png",
+    "exp08_phase_drift_sync.png",
+    "exp08_phase_deviation_heatmap.png",
+    "exp08_transport_corridors.png",
+    "exp08_modular_vortex_reconstruction.png"
 ]
 
 for f in files:
