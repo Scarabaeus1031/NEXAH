@@ -150,3 +150,6 @@ By combining **mathematics**, **music theory**, and **Riemannian analysis**, we 
 Future experiments will delve deeper into these interactions, exploring higher-dimensional spaces and the effects of **fractal geometry** on **transport structures**.
 
 ---
+
+# **Prime Modulation and Synchronization in the JANUS Rope Operator Theory**
+(Integrating **Mathematics**, **Music**, and **Riemannian Dynamics**)
