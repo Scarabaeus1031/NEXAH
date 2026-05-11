@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -28,8 +29,11 @@ plt.ylabel("Amplitude")
 plt.legend()
 plt.grid(True)
 
-# Save the plot
+# Create output directory if it doesn't exist
 output_dir = "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/janus_rope_operator/experiments/EXP_16/"
+os.makedirs(output_dir, exist_ok=True)  # Create the directory if it doesn't exist
+
+# Save the plot
 output_file = f"{output_dir}vortex_prime_modulation_3_5.png"
 plt.savefig(output_file)
 
