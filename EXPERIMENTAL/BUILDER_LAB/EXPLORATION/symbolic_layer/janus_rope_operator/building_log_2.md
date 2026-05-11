@@ -371,7 +371,7 @@ Outputs:
 
 ## Nizzr Prime Modulation
 
-![Nizzr Prime Modulation](./outputs/outputs_log_2/nizzr_prime_modulation.png)
+![Nizzr Prime Modulation](./outputs/outputs_log_2/EXP_18_nizzr_prime_modulation_sync.png)
 
 This image shows the Nizzr prime modulation in action, demonstrating complex transport dynamics influenced by modular prime drift.
 
