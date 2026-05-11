@@ -176,3 +176,7 @@ This diagram explains the cyclical and resonant interactions between the Prime R
 This visual highlights the synchronization process, showing the transition from **Prime Modulation** to **Transport Windows**, and emphasizing the critical role of the **Riemann Critical Line** in maintaining the system's stability.
 
 ---
+
+Status: Ongoing Exploration
+Version: 1.0
+Author: Thomas K. R. Hofmann · May 2026
