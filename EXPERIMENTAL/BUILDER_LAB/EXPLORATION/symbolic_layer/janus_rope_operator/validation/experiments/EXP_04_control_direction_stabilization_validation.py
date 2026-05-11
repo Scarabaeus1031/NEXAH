@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
+import os
 
 # Parameter für das Rössler-System (oder anderes System)
 a = 0.2
@@ -51,8 +52,11 @@ ax[1].set_ylabel('Coherence')
 
 plt.tight_layout()
 
+# Output directory setup
+output_dir = "/Users/tho2020/Documents/GitHub/NEXAH/EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/janus_rope_operator/validation/outputs/EXP_04/"
+os.makedirs(output_dir, exist_ok=True)
+
 # Speichern der Visualisierungen
-output_dir = "output_directory_here/"
 plt.savefig(f"{output_dir}rossler_system_coherence.png")
 
 # Anzeigen der Ergebnisse
