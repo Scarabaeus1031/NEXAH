@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
+import os
 
 # Parameter für das Lorenz-System (oder ein anderes System für Vergleich)
 sigma = 10
@@ -56,8 +57,11 @@ ax[1].set_ylabel('Mismatch')
 
 plt.tight_layout()
 
+# Sicherstellen, dass der Ordner existiert
+output_dir = "EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/janus_rope_operator/validation/outputs/EXP_02/"
+os.makedirs(output_dir, exist_ok=True)
+
 # Speichern der Visualisierungen
-output_dir = "output_directory_here/"
 plt.savefig(f"{output_dir}lorenz_system_mismatch.png")
 
 # Anzeigen der Ergebnisse
