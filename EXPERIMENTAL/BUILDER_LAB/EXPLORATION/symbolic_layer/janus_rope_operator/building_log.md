@@ -854,3 +854,186 @@ with localized transport corridors emerging from the interaction of drift fields
 ---
 
 This concludes the **Building Log** for **EXP-07** — Drift Field Reconstruction in the JANUS Rope Operator series. The experiment revealed the intricate interaction of drift fields and vortex structures within the transport system.
+
+
+# BUILDING_LOG_08 — JANUS Rope Operator & Aperture Geometry Phase (EXP-08)
+
+Status:
+Experimental Analysis → Phase Locking & Aperture Dynamics
+
+System:
+`JANUS_ROPE_OPERATOR`
+
+Location:
+`RESEARCH/CORE_CONCEPTS/JANUS_ROPE_OPERATOR/`
+
+Author:
+Thomas K. R. Hofmann
+
+---
+
+# 🧭 Purpose
+
+This building log continues the JANUS Rope Operator experimental series after EXP-07 and focuses on the analysis of phase-locking behaviors and the dynamic formation of apertures within the transport system.
+
+The focus of this phase is:
+
+```text
+exploring how synchronization patterns emerge
+through dynamic coupling of transport elements
+and the role of prime-modulated drift.
+```
+
+---
+
+# 🔷 Core Working Idea
+
+The JANUS Rope Operator explores the hypothesis that:
+
+```text
+stable transport structures emerge through the coupling of phase-locking behaviors,
+which regulate aperture formation and dynamic routing.
+```
+
+The primary geometric structures we are investigating:
+
+- dynamic aperture formation
+- phase synchronization and locking
+- transport elements' drift modulation
+- aperture-based selective routing
+
+---
+
+# 🔷 EXP-08 — Phase Locking Analysis
+
+Script:
+`EXP_08_phase_locking_analysis.py`
+
+Outputs:
+
+- `outputs/EXP_08/exp08_phase_deviation_heatmap.png`
+- `outputs/EXP_08/exp08_phase_drift_sync.png`
+- `outputs/EXP_08/exp08_phase_locking.png`
+- `outputs/EXP_08/exp08_transport_corridors.png`
+
+---
+
+## Phase Deviation Heatmap
+
+![Phase Deviation Heatmap](outputs/EXP_08/exp08_phase_deviation_heatmap.png)
+
+This visual illustrates the deviation in phase synchronization across different transport pathways, highlighting the regions where phase misalignment is most prominent.
+
+---
+
+## Phase Drift Sync
+
+![Phase Drift Sync](outputs/EXP_08/exp08_phase_drift_sync.png)
+
+The phase drift sync visual tracks the synchronization of phase drift between different transport structures, showing areas of coherent movement and divergence.
+
+---
+
+## Phase Locking
+
+![Phase Locking](outputs/EXP_08/exp08_phase_locking.png)
+
+Phase locking illustrates the stable alignment of transport paths over time, showing how different segments of the system remain synchronized under the influence of prime-offset rhythms.
+
+---
+
+## Transport Corridors
+
+![Transport Corridors](outputs/EXP_08/exp08_transport_corridors.png)
+
+Transport corridors show the consistent, high-density paths within the system, highlighting the major routes that form as a result of synchronized phase-locking behavior.
+
+---
+
+# 🔷 Key Results
+
+```text
+Phase locking plays a significant role in organizing transport geometry,
+where aperture formation and selective routing emerge from phase synchronization
+and prime-modulated drift.
+```
+
+---
+
+# BUILDING_LOG_09 — Mandelbrot-Julia Phase Transition Analysis (EXP-09)
+
+Status:
+Advanced Exploration → Mandelbrot-Julia Transition Mapping
+
+System:
+`JANUS_ROPE_OPERATOR`
+
+Location:
+`RESEARCH/CORE_CONCEPTS/JANUS_ROPE_OPERATOR/`
+
+Author:
+Thomas K. R. Hofmann
+
+---
+
+# 🧭 Purpose
+
+This building log introduces the results from EXP-09, where we integrated the Mandelbrot and Julia sets as part of the transition mapping within the JANUS framework.
+
+The experiment focuses on:
+
+```text
+mapping phase transitions and drift behavior using Mandelbrot and Julia sets
+to investigate how dynamic phase structures relate to stable transport corridors.
+```
+
+---
+
+# 🔷 Core Working Idea
+
+We hypothesize that:
+
+```text
+the transition dynamics in JANUS are influenced by underlying fractal systems,
+where phase synchronization and transport geometry align with the fractal boundary behavior
+of Mandelbrot and Julia sets.
+```
+
+This experiment explores:
+
+- the relationship between phase-locking and fractal boundaries
+- how the dynamic evolution of transport pathways mirrors fractal structures
+- using Mandelbrot and Julia sets to track phase transitions in the system
+
+---
+
+# 🔷 EXP-09 — Mandelbrot-Julia Phase Transition Analysis
+
+Script:
+`EXP_09_mandelbrot_julia_phases.py`
+
+Outputs:
+
+- `outputs/EXP_09/EXP_09_mandelbrot_julia_transition.png`
+
+---
+
+## Mandelbrot-Julia Transition
+
+![Mandelbrot-Julia Transition](outputs/EXP_09/EXP_09_mandelbrot_julia_transition.png)
+
+This visual represents the transition behavior between Mandelbrot and Julia sets, highlighting the phase shifts and transition zones where transport paths evolve.
+
+---
+
+# 🔷 Key Results
+
+```text
+The Mandelbrot-Julia transition mapping reveals the intricate relationship
+between fractal geometry and transport dynamics, illustrating how phase transitions
+influence the stability of transport corridors.
+```
+
+--- 
+
+This concludes the **Building Log** for **EXP-08** and **EXP-09** within the JANUS Rope Operator series. We now observe how phase-locking and fractal systems influence transport behavior, providing a deeper understanding of the underlying geometric structures.
