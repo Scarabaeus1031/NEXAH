@@ -205,6 +205,7 @@ to preserve transition geometry.
 | EXP-20 | `EXP_20_prime_modulation_sync.py` | Prime Modulation Sync | Examining synchronization in transport systems |
 
 ---
+
 # 🔷 EXP-10 — Vortex Interaction
 
 Script:  
@@ -231,13 +232,13 @@ Script:
 
 Outputs:
 
-- `outputs/outputs_log_2/prime_modulation_vortex_coupling.png`
+- `outputs/outputs_log_2/vortex_prime_modulation.png`
 
 ---
 
 ## Prime Modulation Vortex Coupling
 
-![Prime Modulation Vortex Coupling](./outputs/outputs_log_2/prime_modulation_vortex_coupling.png)
+![Prime Modulation Vortex Coupling](./outputs/outputs_log_2/vortex_prime_modulation.png)
 
 This visual illustrates the coupling of vortices with prime modulation, showing the influence of prime-offset drift on vortex dynamics.
 
@@ -250,13 +251,13 @@ Script:
 
 Outputs:
 
-- `outputs/outputs_log_2/mandelbrot_vortex_interaction.png`
+- `outputs/outputs_log_2/mandelbrot_lagrange_interaction.png`
 
 ---
 
 ## Mandelbrot Vortex Interaction
 
-![Mandelbrot Vortex Interaction](./outputs/outputs_log_2/mandelbrot_vortex_interaction.png)
+![Mandelbrot Vortex Interaction](./outputs/outputs_log_2/mandelbrot_lagrange_interaction.png)
 
 This visual shows the interaction of Mandelbrot structures with vortex dynamics, revealing how phase synchronization aligns transport pathways.
 
@@ -269,13 +270,13 @@ Script:
 
 Outputs:
 
-- `outputs/outputs_log_2/vortex_mandelbrot_interaction.png`
+- `outputs/outputs_log_2/mandelbrot_lagrange_interaction_2.png`
 
 ---
 
 ## Vortex Mandelbrot Interaction
 
-![Vortex Mandelbrot Interaction](./outputs/outputs_log_2/vortex_mandelbrot_interaction.png)
+![Vortex Mandelbrot Interaction](./outputs/outputs_log_2/mandelbrot_lagrange_interaction_2.png)
 
 This visual highlights the overlap of Mandelbrot and vortex dynamics, showing the intersection of fractal geometry and transport pathways.
 
@@ -326,13 +327,13 @@ Script:
 
 Outputs:
 
-- `outputs/outputs_log_2/prime_modulation_phase_sync.png`
+- `outputs/outputs_log_2/prime_modulation_sync.png`
 
 ---
 
 ## Prime Modulation Phase Sync
 
-![Prime Modulation Phase Sync](./outputs/outputs_log_2/prime_modulation_phase_sync.png)
+![Prime Modulation Phase Sync](./outputs/outputs_log_2/prime_modulation_sync.png)
 
 This visual explores the phase synchronization between prime modulated systems, illustrating the effects of 3:5 prime modulation on transport systems.
 
@@ -345,13 +346,13 @@ Script:
 
 Outputs:
 
-- `outputs/outputs_log_2/prime_ratio_6_synchronization.png`
+- `outputs/outputs_log_2/prime_modulation_sync.png`
 
 ---
 
 ## Prime Ratio Synchronization
 
-![Prime Ratio Synchronization](./outputs/outputs_log_2/prime_ratio_6_synchronization.png)
+![Prime Ratio Synchronization](./outputs/outputs_log_2/prime_modulation_sync.png)
 
 This visual examines synchronization patterns for the 6:1 prime ratio, showing the interaction between different transport pathways.
 
@@ -383,13 +384,13 @@ Script:
 
 Outputs:
 
-- `outputs/outputs_log_2/prime_modulation_phase_sync.png`
+- `outputs/outputs_log_2/prime_modulation_sync.png`
 
 ---
 
 ## Prime Modulation Phase Sync
 
-![Prime Modulation Phase Sync](./outputs/outputs_log_2/prime_modulation_phase_sync.png)
+![Prime Modulation Phase Sync](./outputs/outputs_log_2/prime_modulation_sync.png)
 
 This visual highlights phase shifts and synchronization patterns within the system, showing the effects of prime modulation on phase behavior.
 
