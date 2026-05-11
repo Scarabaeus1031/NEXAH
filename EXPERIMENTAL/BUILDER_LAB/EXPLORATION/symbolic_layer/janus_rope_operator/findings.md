@@ -484,3 +484,70 @@ to transition through fully random geometric diffusion.
 Instead they repeatedly reorganize through
 structured coherence geometry.
 ```
+
+---
+
+# 🔷 FINDING F-14 — Phase Locking and Transport Apertures
+
+Observed in:
+
+- EXP-08
+
+---
+
+## Observation
+
+Phase locking patterns and aperture formation are strongly linked. The transport system stabilizes through rhythmic locking and controlled aperture openings.
+
+---
+
+## Key Observation
+
+```text
+The interaction between phase-locking and prime offsets
+creates dynamic transport corridors.
+```
+
+---
+
+# 🔷 FINDING F-15 — Mandelbrot-Julia Transition Mapping
+
+Observed in:
+
+- EXP-09
+
+---
+
+## Observation
+
+The Mandelbrot-Julia transition reveals how fractal geometry maps onto transport pathways. Specific regions in the fractal boundary are aligned with stable transport zones.
+
+---
+
+## Key Observation
+
+```text
+Fractal structures reveal underlying transport organization,
+where transitions in the Mandelbrot set correspond to dynamic apertures in the transport system.
+```
+
+---
+
+# 🔷 Updated Meta-Observation
+
+The most consistent pattern observed across experiments is:
+
+```text
+Transport dynamics are governed by the interaction between rhythmic locking,
+fractal transitions, and prime-modulated drift, creating stable transport corridors and aperture structures.
+```
+
+---
+
+# 🔷 Current Insights
+
+```text
+The observed systems exhibit a structured, self-organizing behavior
+that emerges from phase synchronization and prime-offset modulation,
+suggesting that transport pathways are dynamically sculpted by the interaction of non-synchronized elements.
+```
