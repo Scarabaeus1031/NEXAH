@@ -40,7 +40,6 @@ This log tracks the **validation progress** of the **NEXAH framework**, focusing
   - Phase Mismatch between **Lorenz** and **Rössler** systems: **2.1115645486484715**
 - **Visuals**:
   - ![Lorenz-Rössler Phase Comparison](./outputs/EXP_02/lorenz_rossler_phase_comparison.png)
-  - ![Lorenz System Mismatch](./outputs/EXP_02/lorenz_system_mismatch.png)
 - **Key Insight**: Instability correlates with phase shifts, supporting the theory that phase mismatch triggers transitions.
 
 ---
