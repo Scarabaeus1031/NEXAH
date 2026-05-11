@@ -42,6 +42,7 @@ Each experiment will focus on one of the following systems and their correspondi
 - **Rössler**: Observing the formation of transition corridors through mismatch analysis.
 - **Halvorsen**: Measuring how recursive transport dynamics evolve during transition events.
 - **Fractal Systems**: Evaluating whether transition structures exist within parameter space (parameter-driven fractals).
+- **Sonnensystem-Experimente**: Untersuchung der **Lagrange-Punkte** (insbesondere Lagrange 6 und 7) und deren Auswirkungen auf die **Aperture-Geometrie** und **Phasenverschiebung** im Sonnensystem.
 
 ## 🔷 Data Analysis and Reporting
 
@@ -51,18 +52,20 @@ For each experiment, the following data will be recorded:
 - **Coherence metrics**: Tracking coherence levels before and after transition events.
 - **Mismatch values**: Quantifying phase mismatch across time steps.
 - **Transport pathways**: Visual representations of transport corridors and aperture formations.
+- **Sonnensystem Simulation**: Analyse von Lagrange 6/7 und deren Einfluss auf die Transitionsgeometrie.
 
 ## 🔷 Expected Outcomes
 
-The goal of this validation process is to confirm whether the **NEXAH framework** provides accurate predictions and reconstructions of transition geometries, consistent with the experimental data. If successful, the findings will provide support for the theory that nonlinear systems experience structured transitions driven by phase misalignment, directional coherence, and dynamic geometry.
+The goal of this validation process is to confirm whether the **NEXAH framework** provides accurate predictions and reconstructions of transition geometries, consistent with the experimental data. If successful, the findings will provide support for the theory that nonlinear systems experience structured transitions driven by phase misalignment, directional coherence, and dynamic geometry. The **Sonnensystem-Validierung** wird dabei als Testfeld für die Erweiterung des NEXAH-Systems dienen.
 
 ## 🔷 Next Steps
 
 - **Experiment 1**: Run **Phase-Drift Hypothesis Validation** experiment with Lorenz and Rössler systems.
 - **Experiment 2**: Test **Aperture Formation** and **Prime-Offsets** on real and simulated data.
 - **Experiment 3**: Track **Transition Geometry** and validate coherence decay's role in transition activation.
+- **Experiment 4**: Simulate **Lagrange 6/7** positions and observe their impact on transition activation and aperture geometry within the **Sonnensystem**.
 
 ---
 
 **Author**: Thomas K. R. Hofmann  
-**Date**: May 2026  
+**Date**: May 2026
