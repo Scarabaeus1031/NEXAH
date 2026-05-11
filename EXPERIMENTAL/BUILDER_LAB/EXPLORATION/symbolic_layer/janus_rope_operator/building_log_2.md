@@ -416,5 +416,3 @@ This image examines the synchronization effects across different transport chann
 ---
 
 This concludes the **Building Log** for experiments EXP-10 to EXP-20 in the **JANUS Rope Operator** series.
-
----
