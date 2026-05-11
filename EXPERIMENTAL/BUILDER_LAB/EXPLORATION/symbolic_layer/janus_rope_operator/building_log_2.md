@@ -1,4 +1,4 @@
-# BUILDING_LOG_02 — JANUS Rope Operator & Prime Aperture Geometry
+# BUILDING_LOG_03 — JANUS Rope Operator & Prime Aperture Geometry
 
 Status:  
 Exploratory Symbolic Layer → Experimental Transition Dynamics
@@ -238,7 +238,7 @@ Outputs:
 
 ## Prime Modulation Vortex Coupling
 
-![Prime Modulation Vortex Coupling](outputs/exp11_prime_modulation_vortex_coupling.png)
+![Prime Modulation Vortex Coupling](./outputs/exp11_prime_modulation_vortex_coupling.png)
 
 This visual illustrates the coupling of vortices with prime modulation, showing the influence of prime-offset drift on vortex dynamics.
 
@@ -257,7 +257,7 @@ Outputs:
 
 ## Mandelbrot Vortex Interaction
 
-![Mandelbrot Vortex Interaction](outputs/exp12_mandelbrot_vortex_interaction.png)
+![Mandelbrot Vortex Interaction](./outputs/exp12_mandelbrot_vortex_interaction.png)
 
 This visual shows the interaction of Mandelbrot structures with vortex dynamics, revealing how phase synchronization aligns transport pathways.
 
@@ -276,7 +276,7 @@ Outputs:
 
 ## Vortex Mandelbrot Interaction
 
-![Vortex Mandelbrot Interaction](outputs/exp13_vortex_mandelbrot_interaction.png)
+![Vortex Mandelbrot Interaction](./outputs/exp13_vortex_mandelbrot_interaction.png)
 
 This visual highlights the overlap of Mandelbrot and vortex dynamics, showing the intersection of fractal geometry and transport pathways.
 
@@ -295,7 +295,7 @@ Outputs:
 
 ## Lagrange Constant Marker
 
-![Lagrange Constant Marker](outputs/exp14_lagrange_constant_marker.png)
+![Lagrange Constant Marker](./outputs/exp14_lagrange_constant_marker.png)
 
 This image visualizes the constant marker at Lagrange points, tracking the interactions between phase offsets and transport structures.
 
@@ -314,7 +314,7 @@ Outputs:
 
 ## Vortex Prime Modulation Lagrange
 
-![Vortex Prime Modulation Lagrange](outputs/exp15_vortex_prime_modulation_lagrange.png)
+![Vortex Prime Modulation Lagrange](./outputs/exp15_vortex_prime_modulation_lagrange.png)
 
 This visual illustrates the coupling of vortex and prime-modulated Lagrange points, showing the influence of prime drift on vortex dynamics.
 
@@ -333,7 +333,7 @@ Outputs:
 
 ## Prime Modulation Phase Sync
 
-![Prime Modulation Phase Sync](outputs/exp16_prime_modulation_phase_sync.png)
+![Prime Modulation Phase Sync](./outputs/exp16_prime_modulation_phase_sync.png)
 
 This visual explores the phase synchronization between prime modulated systems, illustrating the effects of 3:5 prime modulation on transport systems.
 
@@ -352,7 +352,7 @@ Outputs:
 
 ## Prime Ratio Synchronization
 
-![Prime Ratio Synchronization](outputs/exp17_prime_ratio_6_synchronization.png)
+![Prime Ratio Synchronization](./outputs/exp17_prime_ratio_6_synchronization.png)
 
 This visual examines synchronization patterns for the 6:1 prime ratio, showing the interaction between different transport pathways.
 
@@ -371,7 +371,7 @@ Outputs:
 
 ## Nizzr Prime Modulation
 
-![Nizzr Prime Modulation](outputs/exp18_nizzr_prime_modulation.png)
+![Nizzr Prime Modulation](./outputs/exp18_nizzr_prime_modulation.png)
 
 This image shows the Nizzr prime modulation in action, demonstrating complex transport dynamics influenced by modular prime drift.
 
@@ -390,7 +390,7 @@ Outputs:
 
 ## Prime Modulation Phase Sync
 
-![Prime Modulation Phase Sync](outputs/exp19_prime_modulation_phase_sync.png)
+![Prime Modulation Phase Sync](./outputs/exp19_prime_modulation_phase_sync.png)
 
 This visual highlights phase shifts and synchronization patterns within the system, showing the effects of prime modulation on phase behavior.
 
@@ -409,7 +409,7 @@ Outputs:
 
 ## Prime Modulation Sync
 
-![Prime Modulation Sync](outputs/exp20_prime_modulation_sync.png)
+![Prime Modulation Sync](./outputs/exp20_prime_modulation_sync.png)
 
 This image examines the synchronization effects across different transport channels, revealing the impact of prime modulation on transport stability.
 
