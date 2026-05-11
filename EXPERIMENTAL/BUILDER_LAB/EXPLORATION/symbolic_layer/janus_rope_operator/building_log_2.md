@@ -219,7 +219,7 @@ Outputs:
 
 ## Vortex Interaction
 
-![Vortex Interaction](outputs/exp10_vortex_interaction.png)
+![Vortex Interaction](./outputs/exp10_vortex_interaction.png)
 
 This visual shows the interaction of vortices at Lagrange points, revealing how prime modulation affects transport dynamics and vortex coupling.
 
