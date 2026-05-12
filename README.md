@@ -44,8 +44,6 @@ rather than a universal theory of everything.
 ---
 # 🧭 Quick Navigation
 
-# 🧭 Quick Navigation
-
 | File / Folder                                      | Description                                              | Priority |
 |----------------------------------------------------|----------------------------------------------------------|----------|
 | **[START_HERE.md](START_HERE.md)**                | Recommended entry point                                 | ★★★★★    |
