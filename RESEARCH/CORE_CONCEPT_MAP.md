@@ -1,18 +1,18 @@
 # 🧠 NEXAH — Core Concept Map
 
-NEXAH investigates how structure emerges from dynamics,
-how transitions become geometrically organized,
+NEXAH investigates how structure emerges from dynamics,  
+how transitions become geometrically organized,  
 and how navigation becomes possible inside nonlinear systems.
 
-This document integrates the major conceptual layers
-of the NEXAH research framework
+This document integrates the major conceptual layers  
+of the NEXAH research framework  
 into a unified operational system view.
 
 ---
 
 # 🌌 Core Research Perspective
 
-NEXAH does not interpret systems
+NEXAH does not interpret systems  
 as isolated sequences of states.
 
 Instead, it studies motion inside structured dynamical geometry:
@@ -77,7 +77,7 @@ It illustrates:
 
 ![JANUS Orientation Atlas](./CORE_CONCEPTS/JANUS_OPERATOR/outputs/janus_transition_orientation_atlas.png)
 
-The JANUS layer introduces:
+The **JANUS** layer introduces:
 
 - directional coherence
 - forward/backward flow compatibility
@@ -86,8 +86,8 @@ The JANUS layer introduces:
 - recursive transition organization
 - orientation bias structure
 
-This currently represents
-the deepest geometric reconstruction layer
+This currently represents  
+the deepest geometric reconstruction layer  
 inside the NEXAH framework.
 
 ---
@@ -279,7 +279,7 @@ when transitions activate
 
 # 🧪 Parameter-Driven Transition Activation
 
-Transitions may also emerge
+Transitions may also emerge  
 through parameter-space motion.
 
 Observed in fractal systems:
@@ -477,8 +477,8 @@ from accumulated structured motion
 
 ![Topology Connectivity](./FOUNDATION/visuals/NEXAH_TOPOLOGY_FROM_STRUCTURAL_CONNECTIVITY.png)
 
-NEXAH interprets topology
-as an emergent consequence
+NEXAH interprets topology  
+as an emergent consequence  
 of structured connectivity.
 
 Topology appears to arise from:
@@ -639,7 +639,7 @@ Associated with:
 
 # 🧭 Navigation Perspective
 
-NEXAH does not interpret control
+NEXAH does not interpret control  
 as external forcing alone.
 
 Control is increasingly interpreted as:
@@ -654,9 +654,9 @@ Control is increasingly interpreted as:
 
 # 🧠 Central Principle
 
-> Systems are not defined
-> by isolated states,
-> but by the structured geometry
+> Systems are not defined  
+> by isolated states,  
+> but by the structured geometry  
 > constraining their motion.
 
 ---
@@ -734,9 +734,9 @@ topology enables navigation
 ```text
 systems do not evolve randomly.
 
-they move through structured geometry,
-lose coherence,
-cross transition corridors,
+they move through structured geometry,  
+lose coherence,  
+cross transition corridors,  
 and reorganize into new dynamical regimes.
 ```
 
@@ -751,7 +751,7 @@ NEXAH currently explores whether nonlinear systems possess:
 - directional transition structure
 - navigable topology
 
-that can be reconstructed empirically
+that can be reconstructed empirically  
 from observed dynamics.
 
 ---
