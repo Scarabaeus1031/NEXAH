@@ -2,8 +2,18 @@
 
 ![NEXAH Peak Preview](./ARCHITECTURE/archive/Peak_Preview_visual_2.png)
 
+> **Most systems are modeled. Very few are navigated.**
+
 NEXAH is an open-ended cartography tool for complex dynamical systems.  
-It explores whether different scientific maps can be translated and made navigable through shared geometric structure, phase coherence, and transition corridors.
+It asks whether the different maps that science draws — from physics and mathematics to engineering and biology — can be translated into one shared, navigable geometric language.
+
+Instead of replacing existing models, NEXAH investigates the **common structural terrain** beneath them: field geometry, phase coherence, transition corridors, and directional navigation.
+
+![Status](https://img.shields.io/badge/status-research--active-orange)
+![Validation](https://img.shields.io/badge/validation-in%20progress-yellow)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License](https://img.shields.io/badge/license-Apache%202.0-green)
+![Focus](https://img.shields.io/badge/focus-complex%20systems-lightgrey)
 
 ![Status](https://img.shields.io/badge/status-research--active-orange)
 ![Validation](https://img.shields.io/badge/validation-in%20progress-yellow)
