@@ -331,8 +331,8 @@ Recent JANUS experiments decompose transitions into:
 |---|---|
 | Q1 | Expansion |
 | Q2 | Compression |
-| Q3 | Memory / Echo |
-| Q4 | Transition / Gate |
+| Q3 | Memory |
+| Q4 | Transition |
 
 This creates:
 
