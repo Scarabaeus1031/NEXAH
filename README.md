@@ -58,6 +58,22 @@ rather than a universal theory of everything.
 
 ---
 
+# 🔥 Highlight: Janus Operator
+
+**The most distinctive contribution of NEXAH** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
+
+```text
+High directional coherence   → stable coherent motion
+Low directional coherence    → transition sensitivity / aperture
+```
+
+This reveals that transitions are not random, but occur through structured geometric pathways (corridors, shell crossings, spines, recursive apertures).
+
+→ **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
+(math, code, visuals & validation experiments)
+
+---
+
 # 🌌 Why NEXAH Exists
 
 ![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
