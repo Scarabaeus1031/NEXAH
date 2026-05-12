@@ -136,7 +136,9 @@ fully random diffusion.
 
 Given a reconstructed trajectory field:
 
-$begin:math:display$ \\phi\(x\,t\) $end:math:display$
+$$
+\phi(x,t)
+$$
 
 the framework constructs:
 
@@ -159,27 +161,27 @@ between forward and backward flow organization
 
 Forward field:
 
-$begin:math:display$
-F\_\{\\mathrm\{forward\}\}\(x\)
-$end:math:display$
+$$
+F_{\mathrm{forward}}(x)
+$$
 
 Backward field:
 
-$begin:math:display$
-F\_\{\\mathrm\{backward\}\}\(x\)
-$end:math:display$
+$$
+F_{\mathrm{backward}}(x)
+$$
 
 Directional overlap:
 
-$begin:math:display$
-\\mathcal\{J\}\(x\)\=F\_\{\\mathrm\{forward\}\}\(x\)\\odot F\_\{\\mathrm\{backward\}\}\(x\)
-$end:math:display$
+$$
+\mathcal{J}(x) = F_{\mathrm{forward}}(x) \odot F_{\mathrm{backward}}(x)
+$$
 
 Normalized coherence field:
 
-$begin:math:display$
-J\(x\)\=\\frac\{\\\|\\mathcal\{J\}\(x\)\\\|\}\{\\\|F\_\{\\mathrm\{forward\}\}\(x\)\\\|\\cdot\\\|F\_\{\\mathrm\{backward\}\}\(x\)\\\|\+\\varepsilon\}
-$end:math:display$
+$$
+J(x) = \frac{\|\mathcal{J}(x)\|}{\|F_{\mathrm{forward}}(x)\| \cdot \|F_{\mathrm{backward}}(x)\| + \epsilon}
+$$
 
 Interpretation:
 
