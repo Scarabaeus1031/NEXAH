@@ -45,7 +45,7 @@ rather than a universal theory of everything.
 
 # 🧭 Quick Navigation
 
-| File | Purpose |
+| File |  |
 |---|---|
 | [START_HERE.md](START_HERE.md) | Recommended entry point |
 | [VISUAL_GALLERY.md](VISUAL_GALLERY.md) | Main visual showcase |
@@ -417,7 +417,7 @@ NEXAH also contains a cross-domain translation layer connecting:
 - synchronization theory
 - physics-oriented interpretations
 
-Purpose:
+:
 
 ```text
 translation between structural representations
