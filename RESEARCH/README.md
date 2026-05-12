@@ -129,25 +129,19 @@ These documents should be read sequentially based on your familiarity with the r
 
 # 🔷 Core Perspective
 
-NEXAH does not primarily model isolated states.
-
-Instead:
-
-```text
-systems are interpreted
-as trajectories inside
-structured transport geometry
-```
+NEXAH does not primarily model isolated states but instead interprets system behavior as trajectories within structured transport geometry.
 
 Within this interpretation:
 
-- geometry constrains motion
-- density organizes persistence
-- coherence stabilizes trajectories
-- mismatch activates transitions
-- apertures organize routing
-- topology emerges from connectivity
-- control becomes directional navigation
+* Geometry constrains the possible motion paths, defining the boundaries within which the system evolves.
+* Density organizes the persistence of states, highlighting areas where the system stabilizes or persists over time.
+* Coherence ensures stability, keeping trajectories aligned with the system’s inherent structure.
+* Mismatch activates transitions, serving as a trigger when expected structural evolution deviates.
+* Apertures help organize routing, determining how transitions navigate through the system’s boundaries.
+* Topology emerges from the connectivity between system components, creating an organized network of states and transitions.
+* Control becomes directional navigation, guiding the system through these pathways and geometries.
+
+In summary, these elements work together to form a cohesive structure that guides the behavior of nonlinear systems.
 
 ---
 
@@ -168,22 +162,21 @@ field
    control(direction)
 ```
 
-This introduces a two-layer interpretation:
+🔷 Core Perspective
 
-```text
-geometry determines
-where transitions are possible
+NEXAH does not primarily model isolated states but instead interprets system behavior as trajectories within structured transport geometry.
 
-phase dynamics determines
-when transitions activate
-```
+Within this interpretation:
 
-while directional coherence influences:
+* Geometry constrains the possible motion paths, defining the boundaries within which the system evolves.
+* Density organizes the persistence of states, highlighting areas where the system stabilizes or persists over time.
+* Coherence ensures stability, keeping trajectories aligned with the system’s inherent structure.
+* Mismatch activates transitions, serving as a trigger when expected structural evolution deviates.
+* Apertures help organize routing, determining how transitions navigate through the system’s boundaries.
+* Topology emerges from the connectivity between system components, creating an organized network of states and transitions.
+* Control becomes directional navigation, guiding the system through these pathways and geometries.
 
-```text
-how transitions organize
-inside transport geometry
-```
+In summary, these elements work together to form a cohesive structure that guides the behavior of nonlinear systems.
 
 ---
 
