@@ -106,6 +106,22 @@ mismatch
 
 ---
 
+# 🔥 Highlight: Janus Operator
+**One of the strongest and most distinctive contributions** of NEXAH.
+
+The Janus Operator compares forward and backward local flow directions at each point in the reconstructed field to detect directional coherence and transition apertures.
+
+```text
+High Janus coherence  → stable coherent motion
+Low Janus coherence   → directional mismatch → transition gate / aperture
+```
+
+→ **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
+(math, code, visuals & validation experiments)
+
+
+--- 
+
 # ⚠️ CURRENT STATUS
 
 NEXAH currently contains:
@@ -824,23 +840,19 @@ Raw Dynamics / Simulation
         ↓
 Structure Extraction
         ↓
-Field Reconstruction
-(FIELD_LAYER)
+Field Reconstruction (FIELD_LAYER)
         ↓
-Transition Geometry
-(NEXAH_CORE)
+Transition Geometry + Janus Operator
         ↓
 Phase / Coherence Analysis
         ↓
-Validation & Exploration
-(RESEARCH)
+Validation & Exploration (RESEARCH)
         ↓
 Directional Control Experiments
         ↓
 Exploratory Navigation
         ↓
-Kernel Integration
-(nexah/)
+Kernel Integration (nexah/)
 ```
 
 ---
