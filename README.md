@@ -42,18 +42,21 @@ a navigation grammar across structured dynamics
 rather than a universal theory of everything.
 
 ---
-
 # 🧭 Quick Navigation
 
-| File |  |
-|---|---|
-| [START_HERE.md](START_HERE.md) | Recommended entry point |
-| [VISUAL_GALLERY.md](VISUAL_GALLERY.md) | Main visual showcase |
-| [REPOSITORY_MAP.md](REPOSITORY_MAP.md) | Full repository structure |
-| [MANIFESTO.md](MANIFESTO.md) | Research philosophy & interpretation |
-| [RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md) | Research navigation |
+| File / Ordner                          | Beschreibung                                      | Priorität |
+|----------------------------------------|---------------------------------------------------|-----------|
+| **[START_HERE.md](START_HERE.md)**    | Recommended entry point für Neueinsteiger        | ★★★★★    |
+| **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** | Haupt-Visuelle Showcase (stärkster Einstieg)    | ★★★★★    |
+| **[REPOSITORY_MAP.md](REPOSITORY_MAP.md)** | Komplette Repository-Struktur                    | ★★★★     |
+| **[MANIFESTO.md](MANIFESTO.md)**       | Forschungsphilosophie & Interpretation           | ★★★★     |
+| **[RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md)** | Research Navigation & Überblick                 | ★★★★★    |
+| **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** | **Reproduzierbarer Core + Demos** (zum Ausprobieren) | ★★★★★    |
+| **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** | Janus Operator – zentraler konzeptioneller Beitrag | ★★★★★    |
+| **[RESEARCH/RESEARCH_VISION.md](RESEARCH/RESEARCH_VISION.md)** | Gesamte Forschungs-Vision                        | ★★★★     |
+| **[RESEARCH/CORE_CONCEPT_MAP.md](RESEARCH/CORE_CONCEPT_MAP.md)** | Konzept-Map & Zusammenhänge                     | ★★★★     |
 
-> 👉 New to NEXAH? Start with: [START_HERE.md](START_HERE.md)
+> 👉 **New to NEXAH?** Starte mit **START_HERE.md** → **VISUAL_GALLERY.md** → **PROTO_CORE/NEXAH_DEMONSTRATOR/**
 
 ---
 
@@ -428,21 +431,20 @@ across scientific domains
 
 # 🧪 Demonstrator (Reproducible Core)
 
-📂 [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)
+📂 [`PROTO_CORE/NEXAH_DEMONSTRATOR/`](PROTO_CORE/NEXAH_DEMONSTRATOR/)
 
 The demonstrator provides a minimal reproducible implementation of the core NEXAH pipeline.
 
-It includes:
+it includes:
 
-- field reconstruction
-- transition extraction
-- instability fields
-- gate analysis
-- navigation experiments
-- geometry-aware trajectory analysis
+field reconstruction
+transition extraction
+instability fields
+gate analysis
+navigation experiments
+geometry-aware trajectory analysis
 
 👉 Recommended starting point for experimentation.
-
 ---
 
 # 🔷 System Perspective
