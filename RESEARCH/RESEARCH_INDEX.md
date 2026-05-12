@@ -114,7 +114,7 @@ Navigation & Control
 
 # 1. FOUNDATION
 
-→ minimal structural grammar
+→ minimal assumptions and structural grammar
 
 Purpose:
 
@@ -123,8 +123,6 @@ Purpose:
 - define coherence concepts
 - define topology emergence
 - define navigation foundations
-
----
 
 ## Core Files
 
@@ -135,8 +133,6 @@ FOUNDATION/core_variable_map.md
 FOUNDATION/topology_structure.md
 FOUNDATION/structural_theorems.md
 ```
-
----
 
 ## Core Role
 
@@ -161,8 +157,6 @@ Defines:
 - directional coherence
 - JANUS transition organization
 
----
-
 ## Core Files
 
 ```text
@@ -174,8 +168,6 @@ CORE_CONCEPTS/vessel_geometry.md
 CORE_CONCEPTS/theory_to_field_mapping.md
 CORE_CONCEPTS/JANUS_OPERATOR/
 ```
-
----
 
 ## Core Role
 
@@ -198,8 +190,6 @@ Demonstrates:
 - transition localization
 - directional transport behavior
 - phase-dependent transition activation
-
----
 
 ## Key Findings
 
@@ -230,8 +220,6 @@ Introduces:
 - recursive phase organization
 - directional transition activation
 
----
-
 ## Core Perspective
 
 ```text
@@ -257,8 +245,6 @@ This layer introduces:
 - transition manifolds
 - orientation bias geometry
 
----
-
 ## Core Insight
 
 ```text
@@ -279,8 +265,6 @@ Purpose:
 - extract invariant observations
 - summarize validated behavior
 - isolate system-independent structure
-
----
 
 ## Role
 
@@ -304,8 +288,6 @@ Includes:
 - IEEE-inspired systems
 - parameter-driven fractal systems
 
----
-
 ## Role
 
 ```text
@@ -327,8 +309,6 @@ Contains:
 - aperture structures
 - navigation visuals
 - orientation manifolds
-
----
 
 ## Role
 
@@ -355,8 +335,6 @@ Includes exploratory work involving:
 - bidirectional dynamics
 - generalized navigation frameworks
 
----
-
 ## Status
 
 ```text
@@ -379,8 +357,6 @@ Topology appears to emerge from:
 - recursive transport organization
 - accumulated winding structure
 
----
-
 ## Core Principle
 
 ```text
@@ -402,7 +378,7 @@ beyond intrinsic system dynamics.
 
 ---
 
-# Fractal Transition Geometry
+## Fractal Transition Geometry
 
 → `VALIDATION/fractal_tests/`
 
@@ -415,8 +391,6 @@ where:
 
 - $\Delta$ = local structural change
 - $C$ = global contextual geometry
-
----
 
 ## Observation
 
@@ -454,7 +428,7 @@ THEORETICAL_EXTENSIONS
 
 ---
 
-# 🔑 Current Operational Perspective
+# 🔑 Core Perspective
 
 NEXAH is not currently a single predictive model.
 
@@ -470,8 +444,6 @@ structure inside nonlinear systems
 ---
 
 # 🚀 Primary Entry Points
-
----
 
 ## Structural Foundations
 
@@ -529,7 +501,7 @@ FIGURES/README.md
 
 ---
 
-# 🔥 Current Structural Insight
+# 🔥 Current Operational Insight
 
 The current framework increasingly suggests:
 
@@ -570,60 +542,7 @@ It is NOT yet:
 
 ---
 
-# 🧠 Scientific Position
-
-NEXAH should currently be interpreted as:
-
-```text
-an exploratory framework
-for reconstructing
-transition organization
-inside nonlinear systems
-```
-
-rather than:
-
-- a replacement for existing mathematics
-- a universal physical law
-- a completed theory
-
----
-
-# 🌌 Current Interpretation
-
-The framework increasingly explores whether:
-
-```text
-nonlinear systems possess
-structured transport geometry
-```
-
-that governs:
-
-- transitions
-- coherence
-- routing
-- topology
-- admissible motion paths
-
----
-
-# 🚀 Long-Term Research Direction
-
-Potential future directions include:
-
-1. formal mathematical grounding
-2. geometry-aware control systems
-3. transport topology reconstruction
-4. high-dimensional scaling
-5. operator formalization
-6. topology–probability integration
-7. external scientific collaboration
-8. generalized navigation systems
-
----
-
-# 🧭 Final Perspective
+# 🧠 Final Perspective
 
 ```text
 NEXAH studies how systems
@@ -634,7 +553,6 @@ It does not seek to suppress complexity.
 It investigates how motion organizes itself
 into coherent geometry,
 transition structure,
-directional transport,
 and admissible pathways.
 ```
 
@@ -642,421 +560,4 @@ and admissible pathways.
 
 **NEXAH — Research Navigation Index**  
 Transition Geometry · Coherence · Directional Structure · Navigation  
-Thomas K. R. Hofmann · 2026
-- structured fields
-- density regions
-- transition corridors
-- gates
-- directional flow
-- navigable trajectories
-- topology through connectivity
-
----
-
-# 🔁 Core Research Pipeline
-
-The current NEXAH stack operates approximately as:
-
-```text
-Dynamics
-↓
-Flow Reconstruction
-↓
-Density Structure
-↓
-Coherence
-↓
-Transition Geometry
-↓
-Phase Dynamics
-↓
-Connectivity
-↓
-Emergent Topology
-↓
-Navigation & Control
-```
-
----
-
-# 🧭 Recommended Reading Path
-
-## 1. FOUNDATION
-
-→ minimal assumptions and structural grammar
-
-Start here for:
-
-- axioms
-- structural variables
-- coherence
-- topology
-- navigation primitives
-
-Core files:
-
-```text
-FOUNDATION/README.md
-FOUNDATION/core_variable_map.md
-FOUNDATION/axioms.md
-FOUNDATION/structural_theorems.md
-FOUNDATION/topology_structure.md
-```
-
----
-
-## 2. CORE_CONCEPTS
-
-→ operational interpretation layer
-
-Defines:
-
-- field structure
-- transition geometry
-- equations
-- phase mismatch
-- structural operators
-- multi-layer dynamics
-
-Purpose:
-
-```text
-translate observations into operational structure
-```
-
----
-
-## 3. VALIDATION
-
-→ empirical verification layer
-
-Demonstrates:
-
-- reproducibility
-- noise robustness
-- cross-system consistency
-- transition geometry
-- directional control behavior
-
-Core findings include:
-
-```text
-transitions are not driven by instability alone
-```
-
-and:
-
-```text
-control effectiveness depends on phase direction
-```
-
----
-
-## 4. TRANSITION & PHASE DYNAMICS
-
-→ causal transition layer
-
-Introduces:
-
-- phase mismatch
-- drift
-- winding
-- rotational asymmetry
-- transition activation
-- directional control effects
-
-Core perspective:
-
-```text
-phase mismatch activates transitions
-```
-
-rather than instability magnitude alone.
-
----
-
-## 5. FINDINGS
-
-→ compressed structural principles
-
-Purpose:
-
-- identify invariant behavior
-- summarize validated observations
-- extract system-independent structure
-
-This layer contains the distilled operational insights of NEXAH.
-
----
-
-## 6. APPLIED_CASES
-
-→ real and simulated systems
-
-Includes:
-
-- Lorenz
-- Halvorsen
-- Rössler
-- Duffing
-- IEEE-inspired systems
-
-Purpose:
-
-```text
-demonstrate operational behavior
-inside concrete systems
-```
-
----
-
-## 7. FIGURES
-
-→ visual synthesis layer
-
-Contains:
-
-- system maps
-- transition geometry
-- topology diagrams
-- navigation visuals
-- structural atlases
-
-Purpose:
-
-```text
-connect structure,
-data,
-and interpretation
-```
-
----
-
-## 8. THEORETICAL_EXTENSIONS
-
-→ future formalization layer
-
-Includes exploratory work related to:
-
-- operators
-- topology
-- Koopman structures
-- spectral interpretations
-- generalized navigation frameworks
-
-Status:
-
-```text
-exploratory / semi-formal
-```
-
----
-
-# 🌌 Emergent Topology Layer
-
-NEXAH interprets topology
-as an emergent consequence of structured motion.
-
-Topology arises from:
-
-- transition connectivity
-- coherent trajectories
-- accumulated winding
-- admissible directional movement
-
----
-
-## Core Principle
-
-```text
-Topology is not imposed externally.
-
-It emerges from structured connectivity.
-```
-
----
-
-![Topology Structure](./FOUNDATION/visuals/NEXAH_TOPOLOGY_FROM_STRUCTURAL_CONNECTIVITY.png)
-
----
-
-# 🧪 Experimental Extensions
-
-Some modules extend the framework
-beyond intrinsic system dynamics.
-
----
-
-## Fractal Transition Validation
-
-→ VALIDATION/fractal_tests/
-
-Observed:
-
-```text
-P(transition) = f(Δ, distance)
-```
-
-where:
-
-- Δ = local structural change
-- distance = global parameter-space context
-
----
-
-## Key Observation
-
-```text
-Δ peak ≠ transition
-```
-
-Meaning:
-
-- local instability alone is insufficient
-- transitions require structural context
-
----
-
-# 🔁 Logical Dependency Structure
-
-```text
-FOUNDATION
-↓
-CORE_CONCEPTS
-↓
-VALIDATION
-↓
-TRANSITION & PHASE
-↓
-FINDINGS
-↓
-APPLIED_CASES
-↓
-FIGURES
-↓
-THEORETICAL_EXTENSIONS
-```
-
----
-
-# 🔑 Core Perspective
-
-NEXAH is not a single predictive model.
-
-It is:
-
-```text
-a framework for discovering,
-mapping,
-and navigating
-structure inside dynamical systems
-```
-
----
-
-# 🚀 Primary Entry Points
-
-## Conceptual Integration
-
-```text
-CORE_CONCEPT_MAP.md
-```
-
----
-
-## Structural Grammar
-
-```text
-FOUNDATION/README.md
-```
-
----
-
-## Empirical Validation
-
-```text
-VALIDATION/README.md
-```
-
----
-
-## Transition & Phase Dynamics
-
-```text
-FINDINGS/TRANSITION_PHASE_DYNAMICS/
-```
-
----
-
-## Fractal Transition Experiments
-
-```text
-VALIDATION/fractal_tests/
-```
-
----
-
-## Visual Navigation Layer
-
-```text
-FIGURES/README.md
-```
-
----
-
-# 🔥 Current Operational Insight
-
-The current framework suggests:
-
-```text
-Dynamics generate structure.
-
-Structure generates coherence.
-
-Loss of coherence generates transitions.
-
-Transitions generate connectivity.
-
-Connectivity generates topology.
-
-Topology enables navigation.
-```
-
----
-
-# ⚠️ Scope
-
-NEXAH is currently:
-
-```text
-empirical
-semi-formal
-geometry-oriented
-navigation-centered
-```
-
-It is NOT yet:
-
-- a complete mathematical theory
-- universally validated
-- formally closed
-
----
-
-# 🧠 Final Perspective
-
-```text
-NEXAH studies how systems become structurally navigable.
-
-It does not seek to suppress complexity.
-
-It seeks to understand how motion organizes itself
-into coherent geometry,
-transition structure,
-and admissible paths.
-```
-
----
-
-**NEXAH — Research Navigation Index**  
 Thomas K. R. Hofmann · 2026
