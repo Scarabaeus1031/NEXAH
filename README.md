@@ -44,19 +44,19 @@ rather than a universal theory of everything.
 ---
 # 🧭 Quick Navigation
 
-| File / Ordner                          | Beschreibung                                      | Priorität |
-|----------------------------------------|---------------------------------------------------|-----------|
-| **[START_HERE.md](START_HERE.md)**    | Recommended entry point für Neueinsteiger        | ★★★★★    |
-| **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** | Haupt-Visuelle Showcase (stärkster Einstieg)    | ★★★★★    |
-| **[REPOSITORY_MAP.md](REPOSITORY_MAP.md)** | Komplette Repository-Struktur                    | ★★★★     |
-| **[MANIFESTO.md](MANIFESTO.md)**       | Forschungsphilosophie & Interpretation           | ★★★★     |
-| **[RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md)** | Research Navigation & Überblick                 | ★★★★★    |
-| **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** | **Reproduzierbarer Core + Demos** (zum Ausprobieren) | ★★★★★    |
-| **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** | Janus Operator – zentraler konzeptioneller Beitrag | ★★★★★    |
-| **[RESEARCH/RESEARCH_VISION.md](RESEARCH/RESEARCH_VISION.md)** | Gesamte Forschungs-Vision                        | ★★★★     |
-| **[RESEARCH/CORE_CONCEPT_MAP.md](RESEARCH/CORE_CONCEPT_MAP.md)** | Konzept-Map & Zusammenhänge                     | ★★★★     |
+# 🧭 Quick Navigation
 
-> 👉 **New to NEXAH?** Starte mit **START_HERE.md** → **VISUAL_GALLERY.md** → **PROTO_CORE/NEXAH_DEMONSTRATOR/**
+| File / Folder                                      | Description                                              | Priority |
+|----------------------------------------------------|----------------------------------------------------------|----------|
+| **[START_HERE.md](START_HERE.md)**                | Recommended entry point                                 | ★★★★★    |
+| **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)**        | Main visual showcase                                    | ★★★★★    |
+| **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** | Reproducible demonstrator (hands-on)               | ★★★★★    |
+| **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** | Janus Operator (key contribution)                 | ★★★★★    |
+| **[RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md)** | Research navigation                                | ★★★★     |
+| **[REPOSITORY_MAP.md](REPOSITORY_MAP.md)**        | Full repository structure                               | ★★★★     |
+| **[MANIFESTO.md](MANIFESTO.md)**                   | Research philosophy                                     | ★★★★     |
+
+> 👉 **New to NEXAH?** Start here: **START_HERE.md** → **VISUAL_GALLERY.md** → **PROTO_CORE/NEXAH_DEMONSTRATOR/**
 
 ---
 
