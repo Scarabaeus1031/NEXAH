@@ -1,106 +1,103 @@
-# 🌌 JANUS Model — Directional Transition Geometry in Dynamical Systems
+# 🌌 **JANUS Model — Transition Geometry in Dynamical Systems**
 
-> Exploratory NEXAH research model for understanding how nonlinear systems organize transitions through directional coherence, transport geometry, and recursive flow structure.
+> **Exploratory Research Model**: Understanding how nonlinear systems organize transitions through directional coherence, transport geometry, and recursive flow structure.
 
 ---
 
-# ⚠️ Scope
+### ⚠️ **Scope**
 
 The JANUS model is currently:
 
-- exploratory
-- computational
-- empirically motivated
-- geometry-oriented
-- cross-system investigational
+- **Exploratory**
+- **Computational**
+- **Empirically Motivated**
+- **Geometry-Oriented**
+- **Cross-System Investigational**
 
 It is NOT currently:
 
-- a finalized mathematical theory
-- a physical law
-- a replacement for dynamical systems theory
-- a proof of hidden order
-- a universal transition formalism
+- A **finalized** mathematical theory
+- A **physical law**
+- A replacement for **dynamical systems theory**
+- A **proof of hidden order**
+- A **universal transition formalism**
 
-The framework should currently be understood as:
+This framework should be understood as:
 
-> a structural interpretation layer for studying how transitions organize inside nonlinear systems.
+> **A structural interpretation layer** for studying how transitions organize in nonlinear systems.
 
 ---
 
-# 🧠 Core Idea
+### 🧠 **Core Idea**
 
 The central idea of JANUS is:
 
 ```text
-nonlinear systems may not transition
-through unconstrained randomness,
-but through structured directional geometry.
+Nonlinear systems may not transition through unconstrained randomness, but through structured directional geometry.
 ```
 
-Instead of analyzing only:
+Instead of focusing only on:
 
-- trajectories
-- instability magnitude
+- Trajectories
+- Instability magnitude
 - Lyapunov growth
-- local divergence
+- Local divergence
 
-JANUS studies:
+JANUS explores:
 
 ```text
-compatibility of directional organization
-inside reconstructed flow geometry.
+The compatibility of directional organization inside reconstructed flow geometry.
 ```
 
 ---
 
-# 🔁 Fundamental Shift
+### 🔁 **Fundamental Shift**
 
 Classical analysis often focuses on:
 
 ```text
-state evolution
+State evolution
 ```
 
-JANUS instead focuses on:
+JANUS, however, emphasizes:
 
 ```text
-transition organization.
+Transition organization.
 ```
 
 This introduces a shift from:
 
 | Classical Focus | JANUS Focus |
 |---|---|
-| trajectories | transition geometry |
-| local instability | directional coherence |
-| divergence | flow compatibility |
-| chaos magnitude | transition routing |
-| state evolution | transport structure |
+| Trajectories | Transition geometry |
+| Local instability | Directional coherence |
+| Divergence | Flow compatibility |
+| Chaos magnitude | Transition routing |
+| State evolution | Transport structure |
 
 ---
 
-# 🌊 Core Structural Principle
+### 🌊 **Core Structural Principle**
 
 JANUS proposes that systems exhibit:
 
 ```text
-directional coherence structure
+Directional coherence structure
 ```
 
 which organizes:
 
-- transport
-- transitions
-- switching
-- regime exchange
-- instability preparation
+- Transport
+- Transitions
+- Switching
+- Regime exchange
+- Instability preparation
 
-inside the geometry of the flow itself.
+Within the geometry of the flow itself.
 
 ---
 
-# 🪞 Directional Coherence
+### 🪞 **Directional Coherence**
 
 Given a reconstructed dynamical field:
 
@@ -111,221 +108,83 @@ Given a reconstructed dynamical field:
 JANUS compares:
 
 ```text
-forward local organization
+Forward local organization
 ```
 
 against:
 
 ```text
-backward local organization
+Backward local organization
 ```
 
-to evaluate:
+To evaluate:
 
 ```text
-directional compatibility.
+Directional compatibility.
 ```
 
 ---
 
-# 🧩 Conceptual Janus Operator
+### 🔷 **Transition Geometry**
 
-Forward structure:
-
-```math
-F_{\mathrm{forward}}(x)
-```
-
-Backward structure:
-
-```math
-F_{\mathrm{backward}}(x)
-```
-
-Directional overlap:
-
-```math
-\mathcal{J}(x)
-=
-F_{\mathrm{forward}}(x)
-\odot
-F_{\mathrm{backward}}(x)
-```
-
-Normalized coherence:
-
-```math
-J(x)
-=
-\frac{
-\|
-\mathcal{J}(x)
-\|
-}{
-\|
-F_{\mathrm{forward}}(x)
-\|
-\cdot
-\|
-F_{\mathrm{backward}}(x)
-\|
-+
-\varepsilon
-}
-```
-
-Interpretation:
+JANUS’ primary observation is:
 
 ```text
-high J(x)
-→ directional agreement
-
-low J(x)
-→ transition-sensitive geometry
-```
-
----
-
-# 🧭 Transition Geometry
-
-The strongest emerging observation is:
-
-```text
-transitions repeatedly localize
-inside geometric structures.
+Transitions repeatedly localize inside geometric structures.
 ```
 
 Observed structures include:
 
-- transition corridors
-- gate-like apertures
-- shell crossings
-- transport spines
-- recursive manifolds
-- compression zones
-- directional bottlenecks
-- coherence fractures
+- Transition corridors
+- Gate-like apertures
+- Shell crossings
+- Transport spines
+- Recursive manifolds
+- Compression zones
+- Directional bottlenecks
+- Coherence fractures
 
 ---
 
-# 🔷 Aperture Geometry
+### 🔷 **Aperture Geometry**
 
-Transitions frequently appear through:
-
-```text
-localized coherence thinning
-```
-
-forming structures resembling:
-
-- gates
-- openings
-- bottlenecks
-- directional throats
-
-These regions behave like:
+Transitions emerge through:
 
 ```text
-transport apertures
-inside the flow geometry.
+Localized coherence thinning
 ```
+
+Creating structures resembling:
+
+- Gates
+- Openings
+- Bottlenecks
+- Directional throats
+
+These act as **transport apertures** within the flow geometry.
 
 ---
 
-# 🔷 Shell Structures
+### 🔷 **Recursive Geometry**
 
-Many systems organize into:
+JANUS reveals:
 
-- nested shells
-- layered transport zones
-- coherence membranes
-- shell-mediated transitions
+- Self-similar transport organization
+- Nested shell systems
+- Recursive aperture patterns
+- Repeating directional motifs
 
-Observed behavior suggests:
+This suggests that:
 
 ```text
-transitions often occur
-between shell boundaries.
+Transition geometry itself may recursively organize across scales.
 ```
 
 ---
 
-# 🔷 Transition Spines
+### 🔁 **Recursive Phase Geometry**
 
-Several experiments reveal:
-
-```text
-compression
-→ transfer
-→ re-expansion
-```
-
-The transition center behaves like:
-
-- a spine
-- a throat
-- a routing axis
-- a constrained exchange channel
-
----
-
-# 🔷 Recursive Geometry
-
-Recursive analysis reveals:
-
-- self-similar transport organization
-- nested shell systems
-- recursive aperture patterns
-- repeating directional motifs
-
-This suggests:
-
-```text
-transition geometry itself
-may recursively organize across scales.
-```
-
----
-
-# 🧠 Orientation Bias Geometry
-
-One of the newest emerging structures is:
-
-```text
-orientation bias geometry.
-```
-
-Observed behavior suggests:
-
-- transitions exhibit preferred directional pulling
-- coherence aligns along dominant roots
-- transport follows orientation attractors
-- systems exhibit directional asymmetry
-
-Current exploratory interpretation:
-
-```text
-certain regions behave like
-directional pull anchors.
-```
-
-Experimental roots currently suggest:
-
-```text
-root-12
-root-13
-```
-
-as strong orientation organizers.
-
-This layer is currently exploratory
-but repeatedly observable in geometry overlays.
-
----
-
-# 🔁 Recursive Phase Geometry
-
-Recent JANUS experiments decompose transitions into:
+JANUS experiments decompose transitions into:
 
 | Quadrant | Interpretation |
 |---|---|
@@ -334,245 +193,176 @@ Recent JANUS experiments decompose transitions into:
 | Q3 | Memory |
 | Q4 | Transition |
 
-This creates:
+This leads to:
 
 ```text
-recursive phase-space geometry
+Recursive phase-space geometry
 ```
 
-where transitions become:
+Where transitions become:
 
-- phase-dependent
-- orientation-sensitive
-- recursively layered
+- Phase-dependent
+- Orientation-sensitive
+- Recursively layered
 
 ---
 
-# 🌊 Transition Preparation
+### 🌊 **Transition Preparation**
 
-One of the strongest recurring observations:
-
-```text
-directional coherence weakens
-before visible geometric transition occurs.
-```
-
-This implies:
+A recurring observation is:
 
 ```text
-transition preparation
-precedes transition activation.
+Directional coherence weakens before visible geometric transition occurs.
 ```
 
-This is highly important conceptually.
-
-Because JANUS studies not only:
+This suggests:
 
 ```text
-how unstable a system becomes
+Transition preparation precedes activation.
 ```
 
-but increasingly:
+This highlights a conceptual shift: 
 
-```text
-how directional organization destabilizes.
-```
+> Not only understanding **how unstable** a system becomes but also **how directional organization destabilizes.**
 
 ---
 
-# 🧠 Navigation Interpretation
+### 🧭 **Navigation Interpretation**
 
-A major consequence of the JANUS framework is:
+JANUS introduces a navigable geometry, allowing for:
 
-```text
-transition geometry becomes navigable.
-```
-
-This introduces the possibility of:
-
-- directional steering
-- basin routing
-- transition prediction
-- geometry-aligned intervention
-- coherence-preserving navigation
+- Directional steering
+- Basin routing
+- Transition prediction
+- Geometry-aligned intervention
+- Coherence-preserving navigation
 
 ---
 
-# 🔮 Predictive Layer
+### 🔮 **Predictive Layer**
 
-Recent experiments increasingly suggest:
+Experiments suggest that future transitions correlate with:
 
-```text
-future transitions correlate with:
-```
+- Coherence decay
+- Orientation fractures
+- Shell thinning
+- Aperture activation
+- Directional asymmetry buildup
 
-- coherence decay
-- orientation fractures
-- shell thinning
-- aperture activation
-- directional asymmetry buildup
-
-This introduces:
+This leads to:
 
 ```text
-predictive transition geometry.
+Predictive transition geometry.
 ```
 
 ---
 
-# 🔗 Relation to NEXAH
+### 🔗 **Relation to NEXAH**
 
-Within NEXAH, JANUS acts as:
-
-```text
-transition geometry layer
-```
-
-inside the broader pipeline:
+JANUS operates as a **transition geometry layer** within the broader NEXAH framework, contributing to:
 
 ```text
-Dynamics
-→ Flow Reconstruction
-→ Field Geometry
-→ Phase Structure
-→ Directional Coherence
-→ Transition Routing
-→ Navigation
+Dynamics → Flow Reconstruction → Field Geometry → Phase Structure → Directional Coherence → Transition Routing → Navigation
 ```
 
 ---
 
-# 🔬 Relation to Existing Theory
+### 🔬 **Relation to Existing Theory**
 
-JANUS is conceptually related to:
-
-- Koopman operator theory
-- Perron–Frobenius operators
-- coherent set analysis
-- transition path theory
-- FTLE analysis
-- transport geometry
-- phase-space topology
-
-However, JANUS differs by emphasizing:
+While JANUS is conceptually related to various existing theories such as **Koopman operators** and **Perron-Frobenius operators**, it differs by focusing on:
 
 ```text
-local directional compatibility geometry
+Local directional compatibility geometry
 ```
 
-instead of only:
+Instead of relying solely on:
 
-- spectral decomposition
-- divergence magnitude
-- global operators
-- state-space partitioning
-
----
-
-# ⚠️ Current Limitations
-
-The framework remains:
-
-- exploratory
-- geometry-driven
-- computationally empirical
-
-Current limitations include:
-
-- incomplete formalization
-- dependence on reconstruction choices
-- parameter sensitivity
-- interpretation ambiguity
-- lack of closed-form operator theory
-- limited real-world deployment
+- Spectral decomposition
+- Divergence magnitude
+- Global operators
 
 ---
 
-# 🚀 Current Development Directions
+### ⚠️ **Current Limitations**
 
-Active research areas include:
+Currently, JANUS remains:
 
-- recursive transport geometry
-- predictive transition routing
-- orientation bias fields
-- basin steering
-- multiscale coherence
-- navigation manifolds
-- operator formalization
-- control integration
+- **Exploratory**
+- **Geometry-driven**
+- **Computationally empirical**
+
+Limitations include:
+
+- Incomplete formalization
+- Dependence on reconstruction choices
+- Parameter sensitivity
+- Interpretation ambiguity
+- Lack of closed-form operator theory
+- Limited real-world deployment
 
 ---
 
-# 🧠 Current Working Interpretation
+### 🚀 **Current Development Directions**
+
+Research focuses on:
+
+- Recursive transport geometry
+- Predictive transition routing
+- Orientation bias fields
+- Basin steering
+- Multiscale coherence
+- Navigation manifolds
+- Operator formalization
+- Control integration
+
+---
+
+### 🧠 **Working Interpretation**
 
 The strongest current interpretation is:
 
 ```text
-nonlinear systems do not appear
-to transition through purely random diffusion.
-
-Instead they repeatedly reorganize through:
-
-- directional coherence
-- shell-mediated transport
-- recursive phase geometry
-- orientation bias
-- localized apertures
-- and constrained transition corridors.
+Nonlinear systems do not transition through purely random diffusion.
 ```
+
+Instead, they reorganize through:
+
+- Directional coherence
+- Shell-mediated transport
+- Recursive phase geometry
+- Orientation bias
+- Localized apertures
+- Constrained transition corridors
 
 ---
 
-# 🌌 Philosophy
+### 🌌 **Philosophy**
 
-The purpose of JANUS is NOT to eliminate chaos.
+JANUS does not aim to **eliminate chaos**. 
 
-The purpose is to investigate whether:
+Instead, it explores whether **chaotic systems** contain **structured transition geometry** that becomes visible through:
+
+- Directional coherence
+- Recursive transport organization
+- Shell-mediated structure
+- Orientation geometry
+- Phase-aligned flow analysis
+
+---
+
+### 🧭 **Status**
 
 ```text
-chaotic systems may still contain
-structured transition geometry
-```
-
-that becomes visible through:
-
-- directional coherence
-- recursive transport organization
-- shell-mediated structure
-- orientation geometry
-- and phase-aligned flow analysis.
-
----
-
-# 🧭 Status
-
-```text
-formalization:
-exploratory semi-formal stage
-
-transition geometry:
-advanced exploratory phase
-
-recursive geometry:
-active
-
-orientation geometry:
-early-stage emerging layer
-
-cross-system validation:
-ongoing
-
-navigation integration:
-partial
-
-predictive framework:
-experimental
-
-real-world integration:
-future work
+Formalization: Exploratory semi-formal stage
+Transition geometry: Advanced exploratory phase
+Recursive geometry: Active
+Orientation geometry: Early-stage emerging layer
+Cross-system validation: Ongoing
+Navigation integration: Partial
+Predictive framework: Experimental
+Real-world integration: Future work
 ```
 
 ---
 
-Thomas K. R. Hofmann  
-NEXAH Research · 2026
+Feel free to copy this into your documents as needed. This should now be in the correct format to preserve the structure within the code block.
