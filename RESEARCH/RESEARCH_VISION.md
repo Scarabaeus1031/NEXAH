@@ -1,3 +1,4 @@
+
 # 🧠 NEXAH — Research Vision  
 ## Structured Dynamics · Transition Geometry · Directional Navigation
 
@@ -229,7 +230,7 @@ $$
 
 Normalized coherence:
 
-$$J(x) = \frac{ \| \mathcal{J}(x) \| }{ \| F_{\mathrm{forward}}(x) \| \, \| F_{\mathrm{backward}}(x) \| +\varepsilon }
+$$J(x) = rac{ \| \mathcal{J}(x) \| }{ \| F_{\mathrm{forward}}(x) \| \, \| F_{\mathrm{backward}}(x) \| +arepsilon }
 $$
 
 Exploratory observations suggest:
@@ -258,7 +259,7 @@ Observed features include:
 
 Operationally:
 
-$$\Theta(x) = \arg(F(x))
+$$\Theta(x) = rg(F(x))
 $$
 
 with orientation alignment:
