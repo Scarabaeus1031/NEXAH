@@ -136,9 +136,7 @@ fully random diffusion.
 
 Given a reconstructed trajectory field:
 
-$begin:math:display$
-\\phi\(x\,t\)
-$end:math:display$
+$begin:math:display$ \\phi\(x\,t\) $end:math:display$
 
 the framework constructs:
 
