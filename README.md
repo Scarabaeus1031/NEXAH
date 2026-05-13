@@ -15,12 +15,6 @@ Instead of replacing existing models, NEXAH investigates the **common structural
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 ![Focus](https://img.shields.io/badge/focus-complex%20systems-lightgrey)
 
-![Status](https://img.shields.io/badge/status-research--active-orange)
-![Validation](https://img.shields.io/badge/validation-in%20progress-yellow)
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![License](https://img.shields.io/badge/license-Apache%202.0-green)
-![Focus](https://img.shields.io/badge/focus-complex%20systems-lightgrey)
-
 > A field-oriented research framework for analyzing transitions, coherence, and navigation in complex dynamical systems.
 
 > **Status:** Active exploratory research framework — empirical validation, phase-transition analysis, and kernel integration in progress.
