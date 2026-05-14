@@ -259,10 +259,10 @@ $$\mathbf r_p(t) = \begin{pmatrix} A_p\sin(p\omega t+\phi_p) \\ B_p\cos(p\omega 
 
 where:
 
-- \(A_p, B_p\) = amplitudes
-- \(\omega\) = base frequency
-- \(\phi_p\) = phase offset
-- \(v\) = propagation velocity
+- **Aₚ, Bₚ** = amplitudes
+- **ω** = base frequency
+- **φₚ** = phase offset
+- **v** = propagation velocity
 
 These trajectories generate:
 
@@ -301,8 +301,8 @@ $$0 \le R(t)\le1$$
 
 Interpretation:
 
-- \(R \approx 1\) → synchronized regime
-- \(R \approx 0\) → incoherent regime
+- **R ≈ 1** → synchronized regime
+- **R ≈ 0** → incoherent regime
 
 The coherence field acts as a transport-density measure inside the resonance geometry.
 
