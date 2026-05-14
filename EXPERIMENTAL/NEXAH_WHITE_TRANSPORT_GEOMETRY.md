@@ -259,10 +259,10 @@ $$\mathbf r_p(t) = \begin{pmatrix} A_p\sin(p\omega t+\phi_p) \\ B_p\cos(p\omega 
 
 where:
 
-- $begin:math:text$ A\_p\,B\_p$end:math:text$ = amplitudes
-- $begin:math:text$ \\omega$end:math:text$ = base frequency
-- $begin:math:text$ \\phi\_p$end:math:text$ = phase offset
-- $begin:math:text$ v$end:math:text$ = propagation velocity
+$begin:math:text$ A\_p\,B\_p$end:math:text$ = amplitudes
+$begin:math:text$ \\omega$end:math:text$ = base frequency
+$begin:math:text$ \\phi\_p$end:math:text$ = phase offset
+$begin:math:text$ v$end:math:text$ = propagation velocity
 
 These trajectories generate:
 
