@@ -122,8 +122,8 @@ $$
 
 where:
 
-- $begin:math:text$M$end:math:text$ = global manifold
-- $begin:math:text$\\mathcal O$end:math:text$ = observer slice / projected regime
+- **M** = global manifold
+- **𝒪** = observer slice / projected regime
 
 The observed geometry is therefore:
 
