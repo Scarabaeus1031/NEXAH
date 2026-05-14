@@ -264,6 +264,8 @@ where:
 - **φₚ** = phase offset
 - **v** = propagation velocity
 
+---  
+
 These trajectories generate:
 
 - linked transport structures
