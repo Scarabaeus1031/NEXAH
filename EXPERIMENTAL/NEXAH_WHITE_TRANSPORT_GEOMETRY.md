@@ -226,23 +226,15 @@ inside the transport manifold.
 
 At each point:
 
-$$
-x \in M
-$$
+$$x \in M$$
 
 a local orientation basis exists:
 
-$$
-\mathcal F_x
-=
-\{e_1(x), e_2(x), e_3(x)\}
-$$
+$$\mathcal F_x = \{e_1(x), e_2(x), e_3(x)\}$$
 
 Transport through the field changes orientation continuously:
 
-$$
-\nabla_t e_i(x) \neq 0
-$$
+$$\nabla_t e_i(x) \neq 0$$
 
 This resembles:
 
@@ -259,9 +251,7 @@ The Tube therefore behaves as a coherence-preserving transport fiber.
 
 Four resonance families propagate through the field:
 
-$$
-p \in \{2,3,5,7\}
-$$
+$$p \in \{2,3,5,7\}$$
 
 General helical trajectory:
 
