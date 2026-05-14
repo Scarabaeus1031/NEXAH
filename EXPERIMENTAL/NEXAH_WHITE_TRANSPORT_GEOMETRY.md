@@ -96,7 +96,6 @@ NEXAH_WHITE_TRANSPORT_GEOMETRY/
 └── papers/
     └── nexah_white_transport_geometry_draft.md
 ```
-
 # 1. Global Manifold Structure
 
 We assume an underlying connected manifold:
