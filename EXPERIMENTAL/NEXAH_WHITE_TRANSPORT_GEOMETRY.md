@@ -267,10 +267,10 @@ $$
 
 where:
 
-- $begin:math:text$A\_p\,B\_p$end:math:text$ = amplitudes
-- $begin:math:text$\\omega$end:math:text$ = base frequency
-- $begin:math:text$\\phi\_p$end:math:text$ = phase offset
-- $begin:math:text$v$end:math:text$ = propagation velocity
+- $begin:math:text$ A\_p\,B\_p$end:math:text$ = amplitudes
+- $begin:math:text$ \\omega$end:math:text$ = base frequency
+- $begin:math:text$ \\phi\_p$end:math:text$ = phase offset
+- $begin:math:text$ v$end:math:text$ = propagation velocity
 
 These trajectories generate:
 
@@ -297,29 +297,15 @@ rather than fully chaotic.
 
 Pairwise coherence:
 
-$$
-C_{pq}(t)
-=
-\cos(\phi_p(t)-\phi_q(t))
-$$
+$$C_{pq}(t) = \cos(\phi_p(t)-\phi_q(t))$$
 
 Global coherence order parameter:
 
-$$
-R(t)
-=
-\left|
-\frac1N
-\sum_{p\in\{2,3,5,7\}}
-e^{i\phi_p(t)}
-\right|
-$$
+$$R(t) = \left| \frac1N \sum_{p\in\{2,3,5,7\}} e^{i\phi_p(t)} \right|$$
 
 with:
 
-$$
-0 \le R(t)\le1
-$$
+$$0 \le R(t)\le1$$
 
 Interpretation:
 
