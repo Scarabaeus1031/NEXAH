@@ -255,15 +255,7 @@ $$p \in \{2,3,5,7\}$$
 
 General helical trajectory:
 
-$$
-\mathbf r_p(t)
-=
-\begin{pmatrix}
-A_p\sin(p\omega t+\phi_p) \\
-B_p\cos(p\omega t) \\
-vt
-\end{pmatrix}
-$$
+$$\mathbf r_p(t) = \begin{pmatrix} A_p\sin(p\omega t+\phi_p) \\ B_p\cos(p\omega t) \\ vt \end{pmatrix}$$
 
 where:
 
