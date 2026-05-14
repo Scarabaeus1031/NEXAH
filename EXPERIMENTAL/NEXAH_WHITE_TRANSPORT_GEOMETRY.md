@@ -194,13 +194,7 @@ Local transport orientation is modeled using quaternion dynamics.
 
 Quaternion state:
 
-$$
-q(t)
-=
-\cos\left(\frac{\theta(t)}{2}\right)
-+
-\sin\left(\frac{\theta(t)}{2}\right)\mathbf u
-$$
+$$q(t) = \cos\left(\frac{\theta(t)}{2}\right) + \sin\left(\frac{\theta(t)}{2}\right)\mathbf u$$
 
 where:
 
@@ -209,19 +203,11 @@ where:
 
 Orientation evolution:
 
-$$
-\dot q(t)
-=
-\frac12 \Omega(t) q(t)
-$$
+$$\dot q(t) = \frac12 \Omega(t) q(t)$$
 
 with:
 
-$$
-\Omega(t)
-=
-\omega_x i + \omega_y j + \omega_z k
-$$
+$$\Omega(t) = \omega_x i + \omega_y j + \omega_z k$$
 
 This defines continuously evolving local transport frames.
 
