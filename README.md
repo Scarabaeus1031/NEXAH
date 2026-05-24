@@ -4,10 +4,11 @@
 
 > **Most systems are modeled. Very few are navigated.**
 
-NEXAH is an open-ended cartography tool for complex dynamical systems.  
-It asks whether the different maps that science draws — from physics and mathematics to engineering and biology — can be translated into one shared, navigable geometric language.
+NEXAH is an open-ended cartography framework for exploring structural relationships across complex dynamical systems.
 
-Instead of replacing existing models, NEXAH investigates the **common structural terrain** beneath them: field geometry, phase coherence, transition corridors, and directional navigation.
+It investigates whether different scientific representations — from dynamical systems and control theory to topology and synchronization — may share partially comparable geometric and navigational patterns.
+
+Instead of replacing existing models, NEXAH explores recurring structural relationships across them: field geometry, phase coherence, transition corridors, and directional navigation.
 
 ![Status](https://img.shields.io/badge/status-research--active-orange)
 ![Validation](https://img.shields.io/badge/validation-in%20progress-yellow)
@@ -27,7 +28,7 @@ NEXAH does not attempt to replace existing scientific models.
 
 Instead, it explores whether:
 
-```text
+```txt
 different systems
 may share navigable structural patterns
 ```
@@ -44,24 +45,26 @@ across:
 
 The framework acts as:
 
-```text
-a navigation grammar across structured dynamics
+```txt
+an exploratory navigation grammar
+for structured dynamics
 ```
 
 rather than a universal theory of everything.
 
 ---
+
 # 🧭 Quick Navigation
 
-| File / Folder                                      | Description                                              | Priority |
-|----------------------------------------------------|----------------------------------------------------------|----------|
-| **[START_HERE.md](START_HERE.md)**                | Recommended entry point                                 | ★★★★★    |
-| **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)**        | Main visual showcase                                    | ★★★★★    |
-| **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** | Reproducible demonstrator (hands-on)               | ★★★★★    |
-| **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** | Janus Operator (key contribution)                 | ★★★★★    |
-| **[RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md)** | Research navigation                                | ★★★★     |
-| **[REPOSITORY_MAP.md](REPOSITORY_MAP.md)**        | Full repository structure                               | ★★★★     |
-| **[MANIFESTO.md](MANIFESTO.md)**                   | Research philosophy                                     | ★★★★     |
+| File / Folder | Description | Priority |
+|---|---|---|
+| **[START_HERE.md](START_HERE.md)** | Recommended entry point | ★★★★★ |
+| **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** | Main visual showcase | ★★★★★ |
+| **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** | Reproducible demonstrator (hands-on) | ★★★★★ |
+| **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** | Janus Operator (experimental mechanism) | ★★★★★ |
+| **[RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md)** | Research navigation | ★★★★ |
+| **[REPOSITORY_MAP.md](REPOSITORY_MAP.md)** | Full repository structure | ★★★★ |
+| **[MANIFESTO.md](MANIFESTO.md)** | Research philosophy | ★★★★ |
 
 > 👉 **New to NEXAH?** Start here: **START_HERE.md** → **VISUAL_GALLERY.md** → **PROTO_CORE/NEXAH_DEMONSTRATOR/**
 
@@ -69,14 +72,14 @@ rather than a universal theory of everything.
 
 # 🔥 Highlight: Janus Operator
 
-**One of the central exploratory mechanisms** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
+**One of the central exploratory mechanisms within NEXAH** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
 
-```text
+```txt
 High directional coherence   → stable coherent motion
 Low directional coherence    → transition sensitivity / aperture
 ```
 
-This reveals that transitions are not random, but occur through structured geometric pathways (corridors, shell crossings, spines, recursive apertures).
+Observed results suggest that transitions often cluster within structured geometric regions (corridors, shell crossings, spines, recursive apertures).
 
 → **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
 (math, code, visuals & validation experiments)
@@ -110,7 +113,7 @@ or navigate together.
 
 NEXAH investigates whether structure itself can become:
 
-```text
+```txt
 observable
 comparable
 navigable
@@ -123,7 +126,8 @@ through:
 - coherence analysis
 - phase dynamics
 - topology extraction
-- geometry-aware navigation
+- geometry-oriented navigation
+- comparative visualization
 
 ---
 
@@ -131,7 +135,7 @@ through:
 
 NEXAH investigates whether complex systems can be interpreted as:
 
-```text
+```txt
 motion within structured dynamical fields
 ```
 
@@ -141,7 +145,7 @@ The framework explores how:
 
 - structure constrains motion
 - coherence stabilizes trajectories
-- mismatch activates transitions
+- mismatch correlates with transitions
 - geometry shapes instability
 - control interacts directionally with phase dynamics
 
@@ -157,24 +161,24 @@ The framework explores how:
 
 ## 🔑 Current Core Observation
 
-Experimental results across multiple investigated systems suggest:
+Current experimental observations across multiple investigated systems suggest:
 
-```text
-Transitions correlate more strongly with
+```txt
+Transitions may correlate more strongly with
 phase mismatch
 than with instability magnitude alone.
 ```
 
 Operational interpretation:
 
-```text
+```txt
 instability = potential
 mismatch = trigger
 ```
 
-This leads to the current working mechanism:
+This leads to the current working interpretation:
 
-```text
+```txt
 field → coherence → mismatch → transition
                     ↑
              control(direction)
@@ -184,7 +188,7 @@ field → coherence → mismatch → transition
 
 # 🔬 Interpretation Levels
 
-```text
+```txt
 validated
 → reproducible empirical observations
 
@@ -215,13 +219,13 @@ NEXAH explicitly distinguishes between:
 
 Traditional approaches often model:
 
-```text
+```txt
 state → next state
 ```
 
 NEXAH instead investigates:
 
-```text
+```txt
 trajectory → field → structure → transition geometry
 ```
 
@@ -229,7 +233,7 @@ Within this interpretation:
 
 - stability corresponds to coherent structural flow
 - instability emerges through mismatch and drift
-- transitions occur across constrained geometric regions
+- transitions often occur across constrained geometric regions
 - control acts relative to intrinsic system dynamics
 
 This reframes:
@@ -248,14 +252,14 @@ as properties of motion within evolving field geometry.
 
 Recent experiments suggest:
 
-```text
+```txt
 phase mismatch
-may act as a transition activation variable
+may behave like a transition activation variable
 ```
 
 Observed behavior includes:
 
-```text
+```txt
 aligned control
 → amplifies drift and transitions
 
@@ -268,7 +272,7 @@ inverse control
 
 This introduces a directional interpretation of control:
 
-```text
+```txt
 control effectiveness depends on:
 alignment AND direction
 relative to intrinsic phase dynamics
@@ -291,6 +295,7 @@ It contains:
 - synchronization studies
 - fractal transition systems
 - geometry extraction
+- comparative visualization
 - cross-system comparisons
 - theoretical extensions
 
@@ -343,12 +348,10 @@ Observed patterns include:
 
 Current observations suggest:
 
-```text
-Transitions are not uniformly random.
-
-They cluster within structured regions
-associated with mismatch, drift,
-and competing flow geometry.
+```txt
+Observed transitions often cluster
+within structured regions associated with
+mismatch, drift, and competing flow geometry.
 ```
 
 ---
@@ -359,12 +362,12 @@ and competing flow geometry.
 
 ![Fractal Transition Validation](RESEARCH/VALIDATION/visuals/Nexah-Fractal_Transition_Validation.png)
 
-NEXAH was extended to parameter-driven fractal systems
+NEXAH was experimentally extended to parameter-driven fractal systems
 (Julia / Mandelbrot trajectories).
 
 Observed interpretation:
 
-```text
+```txt
 parameter motion
 → structural change (Δ)
 → transition activation
@@ -396,11 +399,12 @@ The framework increasingly requires collaboration across:
 
 NEXAH is currently strongest in:
 
-```text
+```txt
 structure discovery
 field reconstruction
 transition geometry
 phase dynamics
+comparative visualization
 navigation concepts
 ```
 
@@ -443,9 +447,9 @@ NEXAH also contains a cross-domain translation layer connecting:
 - synchronization theory
 - physics-oriented interpretations
 
-:
+through:
 
-```text
+```txt
 translation between structural representations
 across scientific domains
 ```
@@ -458,23 +462,24 @@ across scientific domains
 
 The demonstrator provides a minimal reproducible implementation of the core NEXAH pipeline.
 
-it includes:
+It includes:
 
-field reconstruction
-transition extraction
-instability fields
-gate analysis
-navigation experiments
-geometry-aware trajectory analysis
+- field reconstruction
+- transition extraction
+- instability fields
+- gate analysis
+- navigation experiments
+- geometry-aware trajectory analysis
 
 👉 Recommended starting point for experimentation.
+
 ---
 
 # 🔷 System Perspective
 
 NEXAH currently connects:
 
-```text
+```txt
 Field
 ↔ Geometry
 ↔ Phase
@@ -488,7 +493,7 @@ Interpretation:
 - field → defines admissible motion
 - geometry → constrains trajectories
 - phase → influences activation timing
-- mismatch → activates transitions
+- mismatch → correlates with transitions
 - control → modifies structural evolution
 - navigation → explores movement through structure
 
@@ -503,6 +508,7 @@ Interpretation:
 ✔ directional control experiments  
 ✔ regime visualization  
 ✔ probabilistic transition modeling  
+✔ comparative visualization  
 ✔ cross-system comparisons  
 ✔ parameter-driven transition analysis
 
@@ -525,11 +531,15 @@ It does NOT yet provide:
 - generalized physical laws
 - production-grade guarantees
 
-The framework should currently be interpreted as:
+NEXAH should currently be interpreted primarily as:
 
-```text
-an exploratory research architecture
-for structured dynamics and transition analysis
+```txt
+an exploratory systems-cartography framework
+
+a comparative visualization environment
+
+and a research-oriented navigation layer
+for complex dynamical systems
 ```
 
 ---
@@ -547,7 +557,7 @@ for structured dynamics and transition analysis
 
 # 📦 Repository Overview
 
-```text
+```txt
 ARCHITECTURE/         → architecture & integration logic
 NEXAH_CORE/           → transition & field logic
 FIELD_LAYER/          → continuous geometry layer
@@ -585,7 +595,7 @@ python run_nexah_demo.py
 
 # ⚡ Core Insight
 
-```text
+```txt
 Stability may not simply be a scalar quantity.
 
 It may emerge as coherent motion
@@ -596,13 +606,13 @@ within structured dynamical geometry.
 
 # 🧭 Final Perspective
 
-```text
+```txt
 Complex systems may not transition randomly.
 
 They may move through structured regions
 that constrain trajectories,
 transition pathways,
-and stabilization behavior.
+and potential stabilization behavior.
 ```
 
 ---
