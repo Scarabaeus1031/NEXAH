@@ -69,7 +69,7 @@ rather than a universal theory of everything.
 
 # 🔥 Highlight: Janus Operator
 
-**The most distinctive contribution of NEXAH** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
+**One of the central exploratory mechanisms** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
 
 ```text
 High directional coherence   → stable coherent motion
