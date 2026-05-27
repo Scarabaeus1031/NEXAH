@@ -1,6 +1,6 @@
 # 🚀 START HERE — NEXAH
 
-![![Transition-Aware Navigation](./outputs/demos/images/nexah_transition_navigation_v13.gif)
+[![Transition-Aware Navigation](./outputs/demos/images/nexah_transition_navigation_v13.gif)
 
 ---
 
