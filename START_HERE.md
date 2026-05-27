@@ -58,7 +58,7 @@ continuous dynamics + discrete structure
 Run the demonstrator:
 
 ```bash
-python NEXAH_DEMONSTRATOR/scripts/run_demo.py
+python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/run_demo.py
 ```
 
 ---
@@ -68,7 +68,7 @@ python NEXAH_DEMONSTRATOR/scripts/run_demo.py
 Run the transition-aware navigation:
 
 ```bash
-python NEXAH_DEMONSTRATOR/scripts/hero/run_transition_navigation_v13.py
+python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/hero/run_transition_navigation_v13.py
 ```
 
 ---
