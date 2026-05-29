@@ -1,0 +1,7 @@
+EXP_02 CORRIDOR ACQUISITION
+========================================
+
+Mean distance uncontrolled: 7.798415
+Mean distance guided: 0.335602
+Distance reduction: 95.70%
+Acquisition step: 27
