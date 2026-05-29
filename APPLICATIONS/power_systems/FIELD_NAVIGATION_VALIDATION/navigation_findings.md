@@ -468,7 +468,7 @@ but cannot fully avoid collapse when the corridor itself intersects the hazardou
 
 ### Navigation Behaviour
 
-![Risk Navigation](outputs/exp05_navigation.png)
+![Risk Navigation](./outputs/EXP_05_RISK_AWARE_NAVIGATION/exp05_navigation.png)
 
 The guided trajectory actively avoids the collapse basin while the uncontrolled trajectory enters the hazardous region.
 
@@ -476,7 +476,7 @@ The guided trajectory actively avoids the collapse basin while the uncontrolled 
 
 ### Collapse Distance
 
-![Collapse Distance](outputs/exp05_collapse_distance.png)
+![Collapse Distance](./outputs/EXP_05_RISK_AWARE_NAVIGATION/exp05_collapse_distance.png)
 
 The guided trajectory maintains a significantly larger distance from the collapse basin throughout the experiment.
 
@@ -484,7 +484,7 @@ The guided trajectory maintains a significantly larger distance from the collaps
 
 ### Repulsion Force Activation
 
-![Repulsion Force](outputs/exp05_repulsion_force.png)
+![Repulsion Force](./outputs/EXP_05_RISK_AWARE_NAVIGATION/exp05_repulsion_force.png)
 
 Repulsion forces activate automatically when collapse risk exceeds the safety threshold.
 
@@ -598,7 +598,7 @@ Visuals
 
 ### Visual 1 — IEEE39 Network Structure
 
-![IEEE39 Network Structure](exp06_network_structure.png)
+![IEEE39 Network Structure](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_network_structure.png)
 
 Raw IEEE39 topology.
 
@@ -606,7 +606,7 @@ Raw IEEE39 topology.
 
 ### Visual 2 — Louvain Communities
 
-![Louvain Communities](exp06_louvain_communities.png)
+![Louvain Communities](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_louvain_communities.png)
 
 Four natural communities detected.
 
@@ -614,18 +614,17 @@ Four natural communities detected.
 
 ### Visual 3 — Spectral Modularity Sweep
 
-![Spectral Modularity Sweep](exp06_spectral_modularity_sweep.png)
+![Spectral Modularity Sweep](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_spectral_modularity_sweep.png)
 
-Peak modularity occurs at k = 4
+Peak modularity occurs at k = 4.
 
 ---
 
 ### Visual 4 — Spectral Communities
 
-![Spectral Communities](exp06_spectral_communities.png)
+![Spectral Communities](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_spectral_communities.png)
 
 Independent confirmation of the four-community decomposition.
-
 ---
 
 ========================================================
