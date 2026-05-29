@@ -134,3 +134,79 @@ function as navigational objects rather than passive observations.
 ## Status
 
 ✅ Passed
+
+
+# EXP_03 — Corridor Retention
+
+## Corridor Retention
+
+![Retention Trajectory](outputs/EXP_03_CORRIDOR_RETENTION/exp03_corridor_retention.png)
+
+---
+
+## Distance Recovery After Disturbances
+
+![Distance Recovery](outputs/EXP_03_CORRIDOR_RETENTION/exp03_distance_recovery.png)
+
+---
+
+## Recovery Statistics
+
+![Recovery Statistics](outputs/EXP_03_CORRIDOR_RETENTION/exp03_recovery_statistics.png)
+
+---
+
+## Summary Dashboard
+
+![Summary Dashboard](outputs/EXP_03_CORRIDOR_RETENTION/exp03_summary_dashboard.png)
+
+---
+
+## Results
+
+Mean distance:
+
+**0.353**
+
+Maximum distance:
+
+**4.173**
+
+Corridor occupancy:
+
+**86.29 %**
+
+Mean recovery time:
+
+**10.67 steps**
+
+---
+
+## Interpretation
+
+Three external disturbances were injected into the trajectory.
+
+After each disturbance:
+
+- the trajectory left the corridor
+- the controller detected the deviation
+- the trajectory re-entered the corridor
+- stable navigation resumed
+
+The system maintained corridor occupancy of more than 86%.
+
+---
+
+## Key Finding
+
+The reconstructed field can be used not only for corridor acquisition but also for corridor retention and recovery.
+
+This demonstrates that field-guided navigation remains functional under repeated disturbances.
+
+---
+
+## Status
+
+✅ Passed
+
+
