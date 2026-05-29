@@ -1,0 +1,9 @@
+EXP_04B COLLAPSE AVOIDANCE STRESS TEST
+========================================
+
+Collapse entries uncontrolled: 1
+Collapse entries guided: 1
+Minimum collapse distance uncontrolled: 0.362149
+Minimum collapse distance guided: 0.480038
+Risk reduction: 24.56%
+Avoidance success: NO
