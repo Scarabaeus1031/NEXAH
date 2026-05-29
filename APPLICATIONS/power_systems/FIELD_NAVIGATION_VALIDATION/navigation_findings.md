@@ -262,4 +262,133 @@ approximately 50%.
 ✅ Passed
 
 
+# EXP_04B — Collapse Avoidance Stress Test
 
+## Result
+
+A stress-test scenario was created where the collapse basin intersects the natural navigation corridor.
+
+Observed:
+
+- Collapse entries (uncontrolled): 1
+- Collapse entries (guided): 1
+
+Minimum collapse distance:
+
+- uncontrolled: 0.362
+- guided: 0.480
+
+Risk reduction:
+
+**24.56 %**
+
+Avoidance success:
+
+❌ NO
+
+---
+
+## Navigation
+
+![Navigation](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_navigation.png)
+
+The collapse basin was intentionally positioned directly on the natural corridor.
+
+The guided controller follows the corridor successfully but is ultimately forced through the hazardous region.
+
+---
+
+## Collapse Distance
+
+![Collapse Distance](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_collapse_distance.png)
+
+The guided controller consistently maintains a larger distance from the collapse basin than the uncontrolled trajectory.
+
+However, the safety margin eventually becomes insufficient due to corridor-basin overlap.
+
+---
+
+## Collapse Entries
+
+![Collapse Entries](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_basin_entries.png)
+
+Both trajectories eventually enter the collapse basin.
+
+```text
+Uncontrolled: 1 entry
+Guided:       1 entry
+```
+
+---
+
+## Summary Dashboard
+
+![Summary](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_summary_dashboard.png)
+
+---
+
+## Interpretation
+
+This experiment reveals an important limitation of pure corridor-following navigation.
+
+The controller successfully follows the reconstructed field structure.
+
+However:
+
+```text
+Corridor Following
+≠
+Guaranteed Collapse Avoidance
+```
+
+when
+
+```text
+Corridor ∩ Collapse Basin ≠ ∅
+```
+
+In this configuration the safest path is no longer identical to the natural corridor.
+
+---
+
+## Scientific Finding
+
+EXP_04B provides the first indication that field navigation requires a second decision layer:
+
+```text
+Corridor Attraction
++
+Hazard Repulsion
+```
+
+or more generally:
+
+```text
+Field Navigation
++
+Risk-Aware Navigation
+```
+
+---
+
+## Implication for Next Phase
+
+EXP_04B directly motivates:
+
+```text
+EXP_05 — Risk-Aware Navigation
+```
+
+where navigation is no longer based solely on corridor attraction but also incorporates collapse-risk information.
+
+---
+
+## Status
+
+⚠️ Partial Success
+
+The controller reduces collapse proximity and lowers risk by:
+
+**24.56 %**
+
+but cannot fully avoid collapse when the corridor itself intersects the hazardous region.
