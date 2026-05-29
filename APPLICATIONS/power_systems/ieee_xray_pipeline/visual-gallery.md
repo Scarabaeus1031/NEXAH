@@ -192,8 +192,17 @@ Across all visuals:
 ---
 # 6. Root Cube Navigation & Möbius Transformation (v31–v36)
 
-**New geometric layer:** 3D Root Cube Projection (Radius + Theta + Distance to Elastic Axis + NCS Gate Score)
+**New geometric layer: 3D Rot Cube Projection** 
 
+Coordinates:
+
+- Radius
+
+- Phase angle (θ)
+
+- Distance to structural axis
+
+- Gate proximity metrics
 ### Key Visuals
 
 ![v31 Root Cube 3D](results/ieee57_v31_root_cube_3d_projection.png)  
@@ -213,43 +222,58 @@ Across all visuals:
 
 ### Key Observations
 
-- Control signal transition: **-0.0770** → **-0.0425**
-- Mathematical bridge:  
-  -0.0770 / -0.0425 = 1.812  
-  -0.0770 × -0.0425 ≈ -1.112  
-  → ergibt exakt **4774** (Rath-Bridge / Ark 4774)
+- Stable 3D trajectory structures emerge
 
-- Escape count = 300 wird als **erfolgreiche Transformation** interpretiert
-- Purple Split sichtbar: die Trajektorie verlässt die alte starre Membran
-- Golden Scarabaeus Möbius Breathing Pulse mit 7-Arc + 5×17 Full Break
+- Coherence remains high (~0.95)
 
-### Insight
+- Significant trajectory reorganization is observed
 
-> Die hohe Escape-Zahl ist kein Fehlschlag mehr.  
-> Sie markiert den Übergang von der starren Membran in den **Möbius-Transformationszustand**.  
-> Der Control-Signal-Flip ist der numerische Beleg für den **Rath-Bridge / 4774-Split** und den **Purple Split**.
+- Root Cube coordinates provide a richer geometric representation than 2D projections
 
+- High escape counts indicate departure from previous trajectory regimes
+
+### Interpretation
+
+The Root Cube experiments demonstrate that power-system trajectories can be represented within a higher-dimensional geometric framework.
+
+This representation improves visualization and structural analysis, but does not yet provide reliable orbit formation or navigation.
+
+### Status
+
+- 3D state-space representation: ✔
+
+- Structural trajectory analysis: ✔
+
+- Stable orbit formation: ❌
+
+- Reliable gate locking: ❌
+- 
 ---
 
-# 7. Key Observations (Updated)
+# 7. Key Observations
 
-Across all visuals:
+Across all visualizations:
 
-### ✔ Structure is real
+### ✔ Structure is visible
+
 - trajectories are not random
-- stable regions and escape regions exist
+- stable and transition regions emerge
+- geometric organization appears consistently
 
-### ✔ Control works
-- escape states → eliminated
-- coherence → improved
+### ✔ Control affects dynamics
 
-### ⚠ Transformation achieved
-- Purple Split visible
-- 4774 bridge confirmed numerically
+- coherence improves
+- excursions decrease
+- trajectories become more structured
 
-### ❌ Missing element: rotation
-- no persistent stable orbit yet
-- gate locking still weak
+### ✔ Higher-dimensional representations add information
+
+- Root Cube projections reveal trajectory organization not obvious in 2D views
+
+### ❌ Open challenge
+
+- stable orbit formation has not been demonstrated
+- long-term navigation remains unresolved
 
 ---
 
@@ -534,4 +558,22 @@ to:
 
 The system has transitioned from **geometry → topology → attractor dynamics**.
 
+# Summary
 
+The IEEE57 X-Ray Pipeline evolved through four major phases:
+
+1. Structure Discovery (v1–v13)
+2. Experimental Controllers (v14)
+3. Root Cube Navigation (v15–v39)
+4. Attractor Dynamics (v40–v56)
+
+The collected results show that power-system trajectories can be represented and analyzed within a low-dimensional geometric state space.
+
+The framework consistently reveals structural patterns associated with stability and instability, while control and navigation concepts remain active research topics.
+
+Future work focuses on:
+
+- transition control
+- attractor navigation
+- larger benchmark systems
+- comparison with established stability-analysis methods
