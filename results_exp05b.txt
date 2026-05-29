@@ -1,0 +1,8 @@
+EXP_05B MULTI BASIN NAVIGATION
+========================================
+
+Collapse entries uncontrolled: 1
+Collapse entries guided: 0
+Minimum basin distance: 2.316416
+Mean risk: 0.105854
+Navigation success: YES
