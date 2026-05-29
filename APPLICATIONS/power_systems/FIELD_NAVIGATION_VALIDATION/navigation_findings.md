@@ -496,17 +496,15 @@ Repulsion forces activate automatically when collapse risk exceeds the safety th
 
 Combined overview of navigation behaviour, collapse distance evolution and avoidance performance.
 
-
-# EXP_06 + EXP_07 FINDINGS
-# IEEE39 TOPOLOGY ↔ DYNAMICS VALIDATION
-# NEXAH FIELD NAVIGATION PROGRAM
-
 ---
-### EXP_06 — IEEE39 COMMUNITY DETECTION
+### EXP_06 + EXP_07 FINDINGS
+### IEEE39 TOPOLOGY ↔ DYNAMICS VALIDATION
+### NEXAH FIELD NAVIGATION PROGRAM
 ---
+# EXP_06 — IEEE39 COMMUNITY DETECTION
+
 
 Objective
---------------------------------------------------------
 
 Identify natural topological communities
 within the IEEE39 network.
@@ -774,49 +772,43 @@ Real IEEE39 Basin Validation Pending
 
 Visuals
 --------------------------------------------------------
+## Visual Evidence
 
-[### Visual 5 — Community → Basin Overlay
+### Visual 5 — Community → Basin Overlay
 
-![Community Basin Overlay](exp07_community_basin_overlay.png)
+![Community Basin Overlay](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_community_basin_overlay.png)
 
 Overlay between community membership and basin assignment.
 
----
-
 Observation:
 
-Communities show dominant
-basin occupancy.
+Communities show dominant basin occupancy patterns.
 
 ---
 
 ### Visual 6 — Dynamical Basin Assignment
 
-![Dynamical Basin Assignment](exp07_basin_map.png)
+![Dynamical Basin Assignment](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_basin_map.png)
 
-Stable, transition and collapse regions projected onto the graph.
+Stable, transition, and collapse basins projected onto the network.
+
+The basin map reveals that multiple communities are predominantly associated with a single dynamical regime.
 
 ---
 
 ### Visual 7 — Community ↔ Basin Alignment Matrix
 
-![Community Basin Alignment](exp07_alignment_matrix.png)
-
-Alignment between graph communities and basin occupancy.
-
-Community ↔ Basin Alignment Matrix
+![Community Basin Alignment](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_alignment_matrix.png)
 
 Strong diagonal structure.
 
-Most communities map predominantly
-into a single dynamical basin.
+Most communities map predominantly into a single dynamical basin.
 
 Community 3:
 
     purity = 1.000
 
-showing a nearly perfect correspondence
-between graph topology and dynamical behavior.
+showing a nearly perfect correspondence between graph topology and dynamical behavior.
 
 Community 2:
 
@@ -824,20 +816,17 @@ Community 2:
 
 showing the weakest alignment.
 
-This community appears to span
-multiple basins and may contain
-transition states, corridor nodes,
-or gate-like structures linking
-different dynamical regimes.
+This community appears to span multiple basins and may contain transition states, corridor nodes, or gate-like structures linking different dynamical regimes.
 
-The result suggests that
-communities and basins are related,
-but not identical.
+The result suggests that communities and basins are related, but not identical.
 
-Graph topology captures part of the
-dynamical structure, while basin
-membership contains additional
-state-space information.
+Graph topology captures part of the dynamical structure, while basin membership contains additional state-space information.
+
+This community appears to span multiple basins and may contain transition states, corridor nodes, or gate-like structures linking different dynamical regimes.
+
+The result suggests that communities and basins are related, but not identical.
+
+Graph topology captures part of the dynamical structure, while basin membership contains additional state-space information.
 
 ========================================================
 COMBINED CONCLUSION
@@ -889,54 +878,3 @@ question following EXP_06
 and EXP_07.
 
 
-
-
-## Visuals
-
-
-
-### Visual 2 — Louvain Communities
-
-![Louvain Communities](exp06_louvain_communities.png)
-
-Four natural communities detected.
-
----
-
-### Visual 3 — Spectral Modularity Sweep
-
-![Spectral Modularity Sweep](exp06_spectral_modularity_sweep.png)
-
-Peak modularity occurs at k = 4.
-
----
-
-### Visual 4 — Spectral Communities
-
-![Spectral Communities](exp06_spectral_communities.png)
-
-Independent confirmation of the four-community decomposition.
-
----
-
-### Visual 5 — Community → Basin Overlay
-
-![Community Basin Overlay](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_community_basin_overlay.png)
-
-Overlay between community membership and basin assignment.
-
----
-
-### Visual 6 — Dynamical Basin Assignment
-
-![Dynamical Basin Assignment](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_basin_map.png)
-
-Stable, transition and collapse regions projected onto the graph.
-
----
-
-### Visual 7 — Community ↔ Basin Alignment Matrix
-
-![Community Basin Alignment](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_alignment_matrix.png)
-
-Alignment between graph communities and basin occupancy.
