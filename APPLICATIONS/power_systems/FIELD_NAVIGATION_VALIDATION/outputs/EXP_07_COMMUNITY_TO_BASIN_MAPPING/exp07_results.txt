@@ -1,0 +1,12 @@
+EXP_07 COMMUNITY TO BASIN MAPPING
+========================================
+
+Louvain communities: 4
+Modularity: 0.463277
+Mean basin purity: 0.809375
+NMI: 0.412767
+
+Community 0 purity: 0.8000
+Community 1 purity: 0.7500
+Community 2 purity: 0.6875
+Community 3 purity: 1.0000
