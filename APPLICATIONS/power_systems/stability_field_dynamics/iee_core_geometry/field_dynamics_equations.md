@@ -51,7 +51,7 @@ where $C(t)$ denotes the contraction function.
 
 The drift evolution follows
 
-$$ \dot{dc} = \Big( \alpha_{\mathrm{flow}} f_{\mathrm{field}} + \beta_{\mathrm{swirl}} f_{\mathrm{vdp}} + \gamma_{\mathrm{memory}} _{\mathrm{kuramoto}} + \delta_{\mathrm{resonance}} f_{\mathrm{compass}} + f_{\mathrm{winding}} + f_{\mathrm{iota}} + f_{\mathrm{janus}} + f_{\mathrm{lyapunov}} \Big) \cdot I(\phi) \cdot S(t)$$
+$$\dot{dc} = \left( \alpha_{\mathrm{flow}} f_{\mathrm{field}} + \beta_{\mathrm{swirl}} f_{\mathrm{vdp}} + \gamma_{\mathrm{memory}} f_{\mathrm{kuramoto}} + \delta_{\mathrm{resonance}} f_{\mathrm{compass}} + f_{\mathrm{winding}} + f_{\mathrm{iota}} + f_{\mathrm{janus}} + f_{\mathrm{lyapunov}} \right) I(\phi)\,S(t)$$
 
 where
 
