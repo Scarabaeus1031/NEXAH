@@ -12,9 +12,10 @@ The project is currently organized into three major areas:
 
 | Folder | Description |
 |----------|-------------|
-| [CORE](./CORE/) | Core NEXAH architecture and reusable system components |
-| [EXPERIMENTS](./EXPERIMENTS/) | Validation studies, hypothesis testing, and research experiments |
-| [OUTPUTS](./OUTPUTS/) | Generated figures, animations, plots, reports, and exported results |
+| [ieee_test_cases](./ieee_test_cases/) | Core validation environment containing experiments, analysis pipelines, state-field extraction, navigation research, and controller development across IEEE benchmark systems. |
+| [ieee_application](./ieee_application/) | Application layer demonstrating practical NEXAH workflows, tutorials, loaders, and power-grid navigation examples. |
+| [ieee_core_geometry](./ieee_core_geometry/) | Geometric and field-theoretic research environment containing stability-field construction, resonance maps, regime dynamics, scaling studies, and visualization frameworks. |
+| [data](./data/) | Supporting datasets, generated inputs, and auxiliary resources used throughout the framework. |
 
 ---
 
@@ -31,7 +32,20 @@ Contains:
 - NEXAH Kernel
 - Navigation and control logic
 
-➡️ Open: [CORE](./CORE/)
+# 🧩 IEEE Test Cases
+
+Primary validation environment for NEXAH.
+
+Contains:
+
+- Benchmark power systems
+- State-field extraction
+- Controller development
+- Navigation studies
+- Experimental validation
+- Generated results
+
+➡️ Open: [ieee_test_cases](./ieee_test_cases/)
 
 ---
 
@@ -48,7 +62,19 @@ Current experiment series:
 | EXP_03 | Shell Crossing & Recursive Transport |
 | EXP_04 | Control Direction & Stabilization |
 
-➡️ Open: [EXPERIMENTS](./EXPERIMENTS/)
+# ⚙️ IEEE Applications
+
+Application layer for practical usage.
+
+Contains:
+
+- Tutorials
+- Example workflows
+- Data loaders
+- Stability analysis scripts
+- Navigation demonstrations
+
+➡️ Open: [ieee_application](./ieee_application/)
 
 ---
 
@@ -65,22 +91,40 @@ Examples:
 - Validation plots
 - Experimental reports
 
-➡️ Open: [OUTPUTS](./OUTPUTS/)
+# 🌌 IEEE Core Geometry
+
+Field geometry and theoretical research.
+
+Contains:
+
+- Stability fields
+- Resonance maps
+- Scaling studies
+- ODE investigations
+- Geometric field analysis
+
+➡️ Open: [ieee_core_geometry](./ieee_core_geometry/)
 
 ---
 
 # 🏗 NEXAH Architecture
 
 ```text
-ARCHY
-   ↓
+Power System
+      ↓
+ARCHY Simulation
+      ↓
 Discovery Engine
-   ↓
+      ↓
 Field Layer
-   ↓
+      ↓
 State Graph
-   ↓
+      ↓
 NEXAH Kernel
+      ↓
+Navigation
+      ↓
+Intervention
 ```
 
 ---
