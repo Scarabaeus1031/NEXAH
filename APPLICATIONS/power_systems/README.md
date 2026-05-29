@@ -21,6 +21,14 @@ The framework focuses on:
 
 ---
 
+## 🌌 Power Systems Architecture
+
+![Power Systems Architecture](stability_field_dynamics/Stability%20Field%20Dynamics.png)
+
+The NEXAH power-systems stack is organized into complementary layers ranging from validation and feature extraction to field construction, navigation, and intervention research.
+
+---
+
 ## Module Structure
 
 ### Validation Layer
@@ -55,15 +63,104 @@ Scaling experiments across large grid models.
 
 ---
 
+### Stability Field Dynamics
+
+Main research environment for:
+
+- stability-field construction
+- collapse geometry
+- transition detection
+- field navigation
+- intervention research
+- IEEE benchmark validation
+
+Contains:
+
+- IEEE test cases
+- application demonstrations
+- core geometry research
+- scaling studies
+- controller development
+- navigation experiments
+
+📂 stability_field_dynamics/
+
+---
+
 ## Recommended Reading Path
+
+### New Users
 
 1. Validation Layer
 2. IEEE9
 3. IEEE X-Ray Pipeline
-4. IEEE X
+
+### NEXAH Research Path
+
+1. Stability Field Dynamics
+2. IEEE Test Cases
+3. IEEE Applications
+4. IEEE Core Geometry
+5. Scaling Studies
 
 ---
 
 ## Core Principle
 
-simulation → structure → field → geometry → dynamics → regimes
+```text
+simulation
+    ↓
+structure
+    ↓
+field
+    ↓
+geometry
+    ↓
+dynamics
+    ↓
+regimes
+    ↓
+navigation
+    ↓
+intervention
+```
+
+---
+
+## Current Focus Areas
+
+- Stability Geometry
+- Collapse Prediction
+- Field Construction
+- Transition Detection
+- Navigation Logic
+- Active Field Control
+- Large-Scale IEEE Validation
+
+---
+
+## NEXAH Vision
+
+The long-term objective is to move beyond passive monitoring:
+
+```text
+Simulation
+    ↓
+Observation
+```
+
+toward:
+
+```text
+Simulation
+    ↓
+Structure Discovery
+    ↓
+Field Construction
+    ↓
+Navigation
+    ↓
+Intervention
+```
+
+for real-world power-system stability management.
