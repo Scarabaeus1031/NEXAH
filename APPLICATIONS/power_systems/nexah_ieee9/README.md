@@ -59,7 +59,7 @@ nexah_ieee9/
 ---
 
 ## 📚 Core Components
-```
+
 | Component | Purpose |
 |------------|----------|
 | main.py | end-to-end NEXAH pipeline execution |
@@ -69,7 +69,7 @@ nexah_ieee9/
 | nexah_controller_evolution.md | controller evolution history |
 | results_summary.md | experimental findings |
 | run_log.md | development history |
-```
+
 
 ---
 
@@ -98,9 +98,8 @@ The repository therefore contains both:
 - architecture evolution documents
 - complete development history
 
-```
-The IEEE9 system serves as the conceptual precursor to the larger IEEE57 X-Ray Pipeline.
-```
+**The IEEE9 system serves as the conceptual precursor to the larger IEEE57 X-Ray Pipeline.**
+
 ---
 
 ## 🧭 Version Map (Controller Evolution)
@@ -109,7 +108,7 @@ The IEEE9 system serves as the conceptual precursor to the larger IEEE57 X-Ray P
 |--------|--------|------------|
 | v6 | ✅ public | stable closed-loop control (reproducible) |
 | v7–v9 | 🧪 experimental | dynamical system behavior |
-| v10–v11 | 🧪 internal | field geometry & early navigation |
+| v10–v11 | 🧪 research | field geometry & early navigation |
 
 👉 **v6 is the current reproducible reference**  
 👉 later versions represent ongoing development toward full navigation
@@ -299,4 +298,3 @@ Key concepts first developed here:
 - multi-agent navigation concepts
 
 Many of these ideas were later extended and tested at larger scale in the IEEE57 X-Ray Pipeline.
-```
