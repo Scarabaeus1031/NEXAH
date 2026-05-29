@@ -383,6 +383,76 @@ where navigation is no longer based solely on corridor attraction but also incor
 
 ---
 
+# EXP_05 — Risk-Aware Navigation
+
+## Objective
+
+Evaluate whether a risk-aware NEXAH controller can actively avoid collapse regions by modifying its trajectory before entering a critical basin.
+
+This experiment extends EXP_04B by introducing a dynamic repulsion mechanism that reacts to increasing collapse risk.
+
+---
+
+## Hypothesis
+
+If collapse basins can be detected as geometric risk regions, then a risk-aware controller should:
+
+1. detect proximity to collapse,
+2. activate avoidance forces,
+3. redirect trajectory,
+4. maintain a larger safety distance,
+5. avoid basin entry.
+
+---
+
+## Results
+
+| Metric | Uncontrolled | Risk-Aware Guided |
+|----------|----------|----------|
+| Collapse Entries | 1 | 0 |
+| Minimum Collapse Distance | 0.188310 | 2.970839 |
+| Avoidance Success | NO | YES |
+
+---
+
+## Key Observation
+
+The uncontrolled trajectory crossed the collapse boundary and entered the collapse basin.
+
+The risk-aware controller detected the approaching basin and activated a repulsion force that redirected the trajectory away from the collapse region.
+
+No collapse basin entry occurred during guided navigation.
+
+---
+
+## Interpretation
+
+This experiment demonstrates active geometric navigation rather than passive corridor following.
+
+The controller does not simply remain on the nominal path.
+
+Instead it:
+
+- monitors collapse proximity,
+- estimates risk,
+- temporarily leaves the corridor,
+- avoids the hazardous region,
+- returns to a safe navigation regime.
+
+This behaviour is consistent with the NEXAH concept of field-aware navigation.
+
+---
+
+## Conclusion
+
+EXP_05 provides the first successful demonstration of:
+
+- collapse-aware trajectory modification,
+- dynamic risk avoidance,
+- active navigation within a stability landscape.
+
+The experiment supports the hypothesis that geometric risk information can be used to improve navigation through complex dynamical environments.
+
 ## Status
 
 ⚠️ Partial Success
@@ -392,3 +462,38 @@ The controller reduces collapse proximity and lowers risk by:
 **24.56 %**
 
 but cannot fully avoid collapse when the corridor itself intersects the hazardous region.
+
+
+## Visual Evidence
+
+### Navigation Behaviour
+
+![Risk Navigation](outputs/exp05_navigation.png)
+
+The guided trajectory actively avoids the collapse basin while the uncontrolled trajectory enters the hazardous region.
+
+---
+
+### Collapse Distance
+
+![Collapse Distance](outputs/exp05_collapse_distance.png)
+
+The guided trajectory maintains a significantly larger distance from the collapse basin throughout the experiment.
+
+---
+
+### Repulsion Force Activation
+
+![Repulsion Force](outputs/exp05_repulsion_force.png)
+
+Repulsion forces activate automatically when collapse risk exceeds the safety threshold.
+
+---
+
+### Summary Dashboard
+
+![Dashboard](outputs/exp05_summary_dashboard.png)
+
+Combined overview of navigation behaviour, collapse distance evolution and avoidance performance.
+
+
