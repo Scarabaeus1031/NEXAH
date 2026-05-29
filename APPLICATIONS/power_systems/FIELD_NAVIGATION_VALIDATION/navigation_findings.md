@@ -492,7 +492,7 @@ Repulsion forces activate automatically when collapse risk exceeds the safety th
 
 ### Summary Dashboard
 
-![Dashboard](outputs/exp05_summary_dashboard.png)
+![Dashboard](./outputs/EXP_05_RISK_AWARE_NAVIGATION/exp05_summary_dashboard.png)
 
 Combined overview of navigation behaviour, collapse distance evolution and avoidance performance.
 
@@ -501,9 +501,9 @@ Combined overview of navigation behaviour, collapse distance evolution and avoid
 # IEEE39 TOPOLOGY ↔ DYNAMICS VALIDATION
 # NEXAH FIELD NAVIGATION PROGRAM
 
-========================================================
-EXP_06 — IEEE39 COMMUNITY DETECTION
-========================================================
+---
+### EXP_06 — IEEE39 COMMUNITY DETECTION
+---
 
 Objective
 --------------------------------------------------------
