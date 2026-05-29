@@ -46,6 +46,9 @@ nexah_ieee9/
 ├── visualization/     # plotting and animations
 ├── results/           # experimental outputs
 
+├── main.py            # main NEXAH pipeline entry point
+├── nexah_solver_v2.py # closed-loop physics coupling layer
+
 ├── architecture.md
 ├── architecture_v12.md
 ├── nexah_controller_evolution.md
@@ -55,15 +58,18 @@ nexah_ieee9/
 
 ---
 
-## 📚 Documentation
-
-| Document | Purpose |
-|-----------|----------|
-| architecture.md | NEXAH IEEE9 field-navigation architecture (v11) |
-| architecture_v12.md | multi-agent navigation extension |
-| nexah_controller_evolution.md | controller development history |
-| results_summary.md | experimental results and findings |
-| run_log.md | chronological development history |
+## 📚 Core Components
+```
+| Component | Purpose |
+|------------|----------|
+| main.py | end-to-end NEXAH pipeline execution |
+| nexah_solver_v2.py | closed-loop physics-aware solver |
+| architecture.md | NEXAH IEEE9 field-navigation architecture |
+| architecture_v12.md | multi-agent navigation architecture |
+| nexah_controller_evolution.md | controller evolution history |
+| results_summary.md | experimental findings |
+| run_log.md | development history |
+```
 
 ---
 
