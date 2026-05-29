@@ -1,0 +1,13 @@
+EXP_06 IEEE39 COMMUNITY DETECTION
+========================================
+
+Louvain communities: 4
+Louvain modularity: 0.463277
+Best spectral k: 4
+Best spectral modularity: 0.463277
+
+Community sizes:
+Community 0: 15 nodes
+Community 1: 4 nodes
+Community 2: 16 nodes
+Community 3: 4 nodes
