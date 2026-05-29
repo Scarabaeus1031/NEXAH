@@ -1,0 +1,9 @@
+EXP_04 COLLAPSE AVOIDANCE
+========================================
+
+Collapse entries uncontrolled: 0
+Collapse entries guided: 0
+Minimum collapse distance uncontrolled: 1.843636
+Minimum collapse distance guided: 2.774747
+Risk reduction: 50.50%
+Avoidance success: YES
