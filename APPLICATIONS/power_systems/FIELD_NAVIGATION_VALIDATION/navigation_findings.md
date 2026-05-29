@@ -922,7 +922,7 @@ Independent confirmation of the four-community decomposition.
 
 ### Visual 5 — Community → Basin Overlay
 
-![Community Basin Overlay](exp07_community_basin_overlay.png)
+![Community Basin Overlay](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_community_basin_overlay.png)
 
 Overlay between community membership and basin assignment.
 
@@ -930,7 +930,7 @@ Overlay between community membership and basin assignment.
 
 ### Visual 6 — Dynamical Basin Assignment
 
-![Dynamical Basin Assignment](exp07_basin_map.png)
+![Dynamical Basin Assignment](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_basin_map.png)
 
 Stable, transition and collapse regions projected onto the graph.
 
@@ -938,6 +938,6 @@ Stable, transition and collapse regions projected onto the graph.
 
 ### Visual 7 — Community ↔ Basin Alignment Matrix
 
-![Community Basin Alignment](exp07_alignment_matrix.png)
+![Community Basin Alignment](./outputs/EXP_07_COMMUNITY_TO_BASIN_MAPPING/exp07_alignment_matrix.png)
 
 Alignment between graph communities and basin occupancy.
