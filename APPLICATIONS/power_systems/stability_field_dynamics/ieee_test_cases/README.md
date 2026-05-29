@@ -1,30 +1,55 @@
-# ⚡ Stability Field Dynamics — IEEE Systems
+# ⚡ Stability Field Dynamics — Structure Discovery Layer of NEXAH
 
-> A geometric + dynamical + topological framework for predicting system collapse  
-> using structure, flow, and manifold alignment.
+> A geometric + dynamical + topological framework for discovering structure,
+> constructing fields, and understanding instability transitions in complex power systems.
 
 ---
 
 ## 🚀 What this is
 
-This module reframes classical power system stability as a **low-dimensional structural problem**:
+This module represents the primary **structure-discovery environment** of the NEXAH framework.
 
-- **Geometry** → collapse manifold  
-- **Dynamics** → flow + acceleration  
-- **Topology** → branching + multi-state collapse  
+It reframes classical power-system stability as a low-dimensional structural problem:
+
+- **Geometry** → collapse manifold
+- **Dynamics** → flow + acceleration
+- **Topology** → branching + multi-state collapse
+- **Fields** → navigable stability landscapes
+- **Transitions** → regime-change detection
 
 The key shift:
 
-→ from high-dimensional simulation  
+→ from high-dimensional simulation
+
 → to low-dimensional structural representation
 
 Validated on:
 
-- IEEE 9  
-- IEEE 14  
-- IEEE 30  
-- IEEE 57  
-- IEEE 118  
+- IEEE 9
+- IEEE 14
+- IEEE 30
+- IEEE 57
+- IEEE 118
+
+and extended through scaling studies toward:
+
+- IEEE 300
+- IEEE 1354
+- IEEE 9241 (PEGASE)
+
+---
+
+# 🌍 Evolution of the Framework
+
+The work evolved through several major stages:
+
+| Phase | Focus |
+|---------|---------|
+| V43–V52 | Structure Discovery |
+| V53–V69 | Field Dynamics |
+| Scaling Studies | IEEE 118 → 9241 |
+| Core Geometry | Stability Field Construction |
+| NEXAH Operator | Navigation & Regime Dynamics |
 
 ---
 
@@ -32,64 +57,62 @@ Validated on:
 
 👉 Start here: [START_HERE.md](START_HERE.md)
 
-### Recommended reading path
+### Recommended Reading Path
 
-1. `results_summary.md` → empirical findings  
-2. `theory_stability_field.md` → conceptual model  
-3. `method_pipeline.md` → how everything is computed  
-4. `logs/` → full discovery trace  
+1. `results_summary.md`
+2. `theory_stability_field.md`
+3. `method_pipeline.md`
+4. `discussion.md`
+5. `logs/`
 
 ---
 
-## 🧭 How to Use This Repository
-## 📚 Documentation Index
+# 📚 Documentation Index
 
 This module is structured into a set of focused documents:
 
 | File | Purpose |
-|------|--------|
-| `START_HERE.md` | guided entry point (recommended first step) |
-| `results_summary.md` | empirical findings across IEEE systems |
-| `theory_stability_field.md` | conceptual and mathematical framework |
-| `method_pipeline.md` | computational pipeline and implementation logic |
-| `introduction.md` | broader context and motivation |
-| `abstract.md` | condensed research overview |
-| `discussion.md` | interpretation and implications |
-| `limitations.md` | known limitations and open questions |
-| `logs/` | full research and discovery trace |
-
----
-
-### Suggested Reading Order
-
-1. START_HERE.md  
-2. results_summary.md  
-3. theory_stability_field.md  
-4. method_pipeline.md  
-5. discussion.md
+|------|----------|
+| `START_HERE.md` | Guided entry point |
+| `results_summary.md` | Empirical findings |
+| `theory_stability_field.md` | Conceptual framework |
+| `method_pipeline.md` | Computational pipeline |
+| `introduction.md` | Context and motivation |
+| `abstract.md` | Condensed research overview |
+| `discussion.md` | Interpretation and implications |
+| `limitations.md` | Known limitations |
+| `logs/` | Full discovery history |
 
 ---
 
 ## 🧠 Core Discovery
 
-> Collapse is not triggered —  
-> it is the result of structural alignment and subsequent loss of coherence.
+> Collapse is not triggered.
+>
+> It emerges through structural alignment,
+> coherence loss,
+> and geometric transition.
 
 Systems evolve toward:
 
-→ a **low-dimensional manifold**  
-→ align along a **collapse boundary (rift)**  
-→ then **leave the structure**
+→ a low-dimensional manifold
+
+→ align along a collapse boundary (rift)
+
+→ eventually leave the structure
 
 ---
 
-## ⚡ What you can do here
+## ⚡ What You Can Do Here
 
-- reproduce collapse dynamics from IEEE systems  
-- extract the collapse manifold  
-- identify the collapse boundary (rift)  
-- measure stability as distance to structure  
-- visualize collapse as geometry  
+- reproduce collapse dynamics from IEEE systems
+- extract collapse manifolds
+- identify collapse boundaries (rifts)
+- measure stability as distance to structure
+- construct flow fields
+- analyze transition geometry
+- investigate scaling behavior
+- build navigable stability representations
 
 ---
 
@@ -97,11 +120,17 @@ Systems evolve toward:
 
 System evolution:
 
-→ aligns with manifold  
-→ moves along rift  
-→ deviates (distance ↑)  
-→ branches  
-→ collapses  
+→ aligns with manifold
+
+→ moves along rift
+
+→ deviates (distance ↑)
+
+→ fragments
+
+→ branches
+
+→ collapses
 
 ![Collapse Geometry](outputs/ieee14_v52_residual_vs_distance.png)
 
@@ -110,12 +139,13 @@ System evolution:
 ## 🔬 Key Concepts
 
 | Concept | Meaning |
-|--------|--------|
-| Manifold | collapse attractor in phase space |
-| Rift | zero-residual boundary |
-| Distance | stability metric |
-| Residual | deviation from structure |
-| Topology | branching collapse states |
+|----------|----------|
+| Manifold | Collapse attractor in phase space |
+| Rift | Structural transition boundary |
+| Distance | Stability metric |
+| Residual | Deviation from structure |
+| Field | Local flow representation |
+| Topology | Branching collapse states |
 
 ---
 
@@ -123,76 +153,75 @@ System evolution:
 
 ## Geometry → Dynamics → Topology
 
-- Geometry → manifold  
-- Field → flow dynamics  
-- Dynamics → recurrence  
-- Structure → resonance  
-- Boundary → rift  
-- Metric → distance  
-- Topology → branching  
+- Geometry → manifold
+- Field → flow dynamics
+- Dynamics → recurrence
+- Structure → resonance
+- Boundary → rift
+- Metric → distance
+- Topology → branching
 
 ---
 
-## 🔗 From Structure to Navigation
+# 🔗 From Structure to Navigation
 
-The structural analysis in:
+The structural analysis performed in this module reveals:
 
-→ [stability_field_dynamics](stability_field_dynamics/ieee_test_cases/README.md)
+- collapse manifolds
+- rift boundaries
+- stability distance metrics
+- vector flow fields
+- transition corridors
 
-reveals:
+These structures define the geometry of stability.
 
-- collapse manifold  
-- rift boundary  
-- stability distance  
-- flow field  
+NEXAH then uses this geometry to:
 
-These structures define the **geometry of stability**.
+→ construct navigable stability fields
 
----
+→ identify safe trajectories
 
-NEXAH uses this geometry to:
-
-→ construct a **navigable stability field**
-
-→ define **safe trajectories**
-
-→ enable **control as movement within structure**
-
----
+→ support future intervention strategies
 
 In this sense:
 
-→ structure becomes field  
-→ field becomes navigation  
+→ structure becomes field
+
+→ field becomes navigation
+
 → navigation becomes control
 
 ---
 
-## Collapse Manifold
+# Collapse Manifold
 
 All systems converge toward:
 
+```text
 (c, dc, d²c) → (1, 1, α)
+```
 
-→ **low-dimensional attractor manifold**
+forming a low-dimensional attractor manifold.
 
-**Properties:**
+### Properties
 
-- stable under perturbations  
-- invariant across systems  
-- topology-independent  
+- robust under perturbations
+- approximately invariant across tested systems
+- topology-independent
 
 ---
 
 ## Manifold Equation
 
-d²c ≈ a · c^p · (dc)^q  
+```text
+d²c ≈ a · c^p · (dc)^q
+```
 
-**Interpretation:**
+Interpretation:
 
-- dc → dominant driver  
-- c → modulation  
-- d²c → emergent instability  
+- dc → dominant driver
+- c → modulation
+- d²c → emergent instability
 
 ---
 
@@ -200,101 +229,100 @@ d²c ≈ a · c^p · (dc)^q
 
 Defined by:
 
-residual ≈ 0  
+```text
+residual ≈ 0
+```
 
 Represents:
 
-- structural alignment  
-- collapse corridor  
+- structural alignment
+- transition corridor
+- collapse boundary
 
 ---
 
 ## Stability Distance
 
+```text
 distance = min || (c, dc) − rift ||
+```
 
-- small → stable  
-- large → unstable  
+- small → stable
+- large → unstable
 
 ---
 
 ## Collapse Strength
 
-collapse_strength ≈ |residual| × τ  
+```text
+collapse_strength ≈ |residual| × τ
+```
 
-→ local instability intensity  
+→ local instability intensity
 
 ---
 
 # 📊 Results Summary
 
-## Universal Behavior
+## Structural Consistency
 
-> The collapse process is structurally identical across systems.
+Across all tested systems:
 
-- identical manifold structure  
-- identical collapse geometry  
-- identical clustering behavior  
+- similar manifold structure
+- similar collapse geometry
+- similar clustering behavior
 
 ---
 
 ## Scaling Law
 
 | System | p | q |
-|--------|---|---|
-| IEEE9 / 14 | ~0.44 | ~0.97 |
-| IEEE30 / 57 / 118 | ~0.31 | ~0.89 |
-
-→ parameters converge  
-
----
-
-## Collapse Geometry
-
-Projection into:
-
-(distance, residual)
-
-reveals:
-
-| Region | Meaning |
-|--------|--------|
-| Core | stable |
-| Triangle | deformation |
-| Polygon | branching |
-| Extremes | collapse |
-
----
-
-## Cluster Structure
-
-- stable cluster  
-- pre-collapse cluster  
-- transition noise  
-
-→ identical across systems  
+|----------|------|------|
+| IEEE 9 / 14 | ~0.44 | ~0.97 |
+| IEEE 30 / 57 / 118 | ~0.31 | ~0.89 |
 
 ---
 
 ## Structural Transition Sequence
 
-1. coherence  
-2. fragmentation  
-3. branching  
-4. instability amplification  
-5. collapse  
+1. coherence
+2. fragmentation
+3. branching
+4. instability amplification
+5. collapse
 
 ---
 
 ## Universal Collapse Signature
 
-- curvature peak  
-- divergence spike  
-- fragmentation growth  
-- manifold alignment  
-- distance expansion  
+- curvature peak
+- divergence spike
+- fragmentation growth
+- manifold alignment
+- distance expansion
 
-→ scale-invariant precursor  
+---
+
+# 🌍 Scaling Validation
+
+Recent studies extended the framework toward large-scale systems.
+
+Validated systems:
+
+| System | Status |
+|----------|----------|
+| IEEE 118 | ✅ |
+| IEEE 300 | ✅ |
+| IEEE 1354 | ✅ |
+| IEEE 9241 PEGASE | ✅ |
+
+See:
+
+➡️ `../iee_core_geometry/ieee_scaling/`
+
+Key observation:
+
+> Transition detection remains approximately consistent across tested network scales.
 
 ---
 
@@ -302,42 +330,43 @@ reveals:
 
 ## Vector Field Representation
 
-F(c, dc) → local flow direction  
+```text
+F(c, dc) → local flow direction
+```
 
-→ trajectories follow structured flow  
+Trajectories follow structured flow regions.
 
 ---
 
 ## Key Insight
 
-- dc → projection of flow  
-- d²c → change of flow  
-- manifold → preferred paths  
+- dc → projection of flow
+- d²c → change of flow
+- manifold → preferred paths
 
 ---
 
 ## Geodesic Interpretation
 
-System follows:
+System trajectories approximately follow:
 
-→ minimal-energy paths in field  
+→ minimal-energy paths inside the stability field
 
 ---
 
 ## GH Corridor
 
-→ coherent flow channel  
+A coherent flow channel characterized by:
 
-- aligned directions  
-- stable propagation  
+- aligned directions
+- stable propagation
+- reduced divergence
 
 ---
 
 ## Collapse (Field View)
 
-Collapse occurs when:
-
-→ trajectories enter divergence regions  
+Collapse occurs when trajectories enter divergence-dominated regions and leave coherent field structures.
 
 ---
 
@@ -365,50 +394,77 @@ Collapse occurs when:
 
 ---
 
-# 🌐 Fundamental Discovery
+# 🏗 Relationship to NEXAH
 
-> Collapse is governed by a universal low-dimensional structure.
+This module represents the discovery layer of the NEXAH architecture.
 
----
+```text
+Simulation
+      ↓
+Structure Discovery
+      ↓
+Field Construction
+      ↓
+NEXAH Operator
+      ↓
+Navigation
+      ↓
+Intervention
+```
 
-## 🧠 Theoretical Insight
+Related modules:
 
-> Stability = alignment with structure  
-> Collapse = loss of alignment  
+- `iee_core_geometry/`
+- `ieee_application/`
 
----
-
-# 🧭 Final Insight
-
-> Systems do not fail suddenly.  
->  
-> They lose coherence, fragment, and leave  
-> the structure that sustains them.
 ---
 
 # 📂 Repository Structure
 
-## Module Navigation
-```
+```text
 APPLICATIONS/power_systems/stability_field_dynamics/
 └── ieee_test_cases/
-    ├── core/                  → definitions, adapters, coupling metrics
-    ├── pipeline/              → feature extraction and field construction
-    ├── experiments/           → main reproducible IEEE pipeline (V31–V52)
-    ├── analysis/              → advanced analysis (V53–V69, scaling, flow, off-manifold)
-    ├── controller_lab/        → active field control, navigation, operator dynamics
-    ├── outputs/               → plots, CSVs, visualizations
-    ├── logs/                  → structured discovery history
+    ├── core/
+    ├── pipeline/
+    ├── experiments/
+    ├── analysis/
+    ├── controller_lab/
+    ├── outputs/
+    ├── logs/
     ├── results_summary.md
     ├── theory_stability_field.md
     ├── method_pipeline.md
     ├── README.md
     └── START_HERE.md
 ```
+
 ---
 
-# 🔥 Core Insight
+# 🎯 Current Interpretation
 
-The equations describe what happens.  
+The Stability Field Dynamics layer discovers structure.
 
-The field determines that it happens.
+The IEEE Core Geometry layer constructs the field.
+
+The NEXAH Operator acts within that field.
+
+Together they form the current foundation of the NEXAH framework:
+
+```text
+Simulation
+→ Structure Discovery
+→ Field Construction
+→ Navigation
+→ Intervention
+```
+
+---
+
+# 🧠 Final Insight
+
+> Systems do not fail suddenly.
+>
+> They lose coherence,
+> fragment,
+> and eventually leave
+> the structure that sustains them.
