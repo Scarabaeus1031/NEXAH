@@ -1,0 +1,9 @@
+EXP_05 RISK AWARE NAVIGATION
+========================================
+
+Collapse entries uncontrolled: 1
+Collapse entries guided: 0
+Minimum collapse distance uncontrolled: 0.188310
+Minimum collapse distance guided: 2.970839
+Risk reduction: 1477.63%
+Avoidance success: YES
