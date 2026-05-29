@@ -1,129 +1,157 @@
-# NEXAH – Scaling Validation on IEEE Power Systems
+# NEXAH – Stability Field Dynamics on IEEE Power Systems
 
-**Module:** power_systems / stability_field_dynamics / iee_scaling  
-**Status:** April 2026  
+Module: APPLICATIONS/power_systems/stability_field_dynamics
+
+Status: Experimental Validation Phase
 
 ---
 
 ## Overview
 
-This module evaluates the performance of the NEXAH framework on **large-scale IEEE benchmark power systems**, ranging from:
+This module investigates whether instability in large-scale power systems can be detected as a geometric transition phenomenon before classical voltage-collapse indicators become visible.
 
-- 118-bus  
-- 300-bus  
-- 1354-bus  
-- 9241-bus (PEGASE)  
+The work is based on the NEXAH framework, which represents system evolution as a stability field and analyzes transitions through structural dynamics rather than scalar voltage measurements alone.
 
-The goal is to assess:
+The current validation includes:
 
-- early detection of instability  
-- consistency across network sizes  
-- robustness of the underlying field-based representation  
+- IEEE 118-Bus
+- IEEE 300-Bus
+- IEEE 1354-Bus
+- IEEE 9241-Bus (PEGASE)
 
 ---
 
-## Core Result
+## Repository Structure
 
-Across all tested networks, NEXAH detects an instability transition **significantly earlier** than classical voltage-based collapse indicators.
+```text
+│ stability_field_dynamics/
+├── iee_core_geometry/
+├── field_dynamics_equations.md
+├── nexah_operator.md │
+└── implementation_matrix.md │
+├── iee_scaling/ │
+├── ieee118/ │
+├── ieee300/ │
+├── ieee1354/ │
+├── ieee9241/ │
+├── animations/ │
+└── frames/ │
+└── README.md 
+```
+---
 
-| Network              | Detection Time (NEXAH) | Classical Collapse | Lead Time |
-|----------------------|------------------------|-------------------|-----------|
-| IEEE 118-Bus         | ~36 s                  | later             | ~40 s     |
-| IEEE 300-Bus         | ~36 s                  | later             | ~40 s     |
-| IEEE 1354-Bus        | ~36 s                  | later             | ~40 s     |
-| IEEE 9241-Bus        | ~36 s                  | later             | ~40 s     |
+## Mathematical Foundation
 
-**Observation:**
-- detection occurs consistently before voltage collapse  
-- timing remains approximately stable across system sizes  
+The framework combines several dynamical components into a unified field representation:
+
+- Field Force
+- Van der Pol Dynamics
+- Kuramoto Synchronization
+- Compass Modulation
+- Winding Number Detection
+- Iota Ring Dynamics
+- Janus Reversal Operator
+- Lyapunov Rhythm Modulation
+
+The mathematical definitions are documented in:
+
+- iee_core_geometry/field_dynamics_equations.md
+- iee_core_geometry/nexah_operator.md
 
 ---
 
-## Interpretation
+## Central Hypothesis
 
-The detected transition corresponds to a **structural regime change** in the system dynamics:
+NEXAH assumes that approaching instability manifests as a structural transition inside a stability field.
 
-- loss of coherence in system evolution  
-- emergence of directional instability in the field representation  
-- breakdown of stable orbit regions  
+Instead of observing only voltage collapse,
 
-This transition precedes the classical voltage collapse curve.
+$$V(t) \rightarrow V_{collapse}$$
 
----
+the framework searches for geometric signatures that appear before collapse becomes visible in conventional metrics.
 
-## Mechanism (Conceptual)
+Examples include:
 
-NEXAH operates on a **field-based representation of system dynamics**:
-
-1. system state is embedded in a geometric field  
-2. stability is represented as spatial structure  
-3. transitions occur via **topological change**, not scalar threshold  
-
-Detection is based on:
-
-- structural drift in the field  
-- loss of phase coherence  
-- emergence of directional flow patterns  
+- loss of coherence
+- directional drift formation
+- winding-number accumulation
+- attractor deformation
+- phase-regime transitions
 
 ---
 
-## Important Note on Timing Consistency
+## Scaling Validation
 
-The near-constant detection time (~36 s) across networks suggests:
+The primary objective of this module is to evaluate whether these transition signatures remain observable across network scales.
 
-- a shared dynamical scaling behavior  
-- or a normalization effect within the model  
+| Network | Status |
+|----------|----------|
+| IEEE118 | validated |
+| IEEE300 | validated |
+| IEEE1354 | validated |
+| IEEE9241 | validated |
 
-This requires further investigation and validation.
+Observed transition times remain approximately consistent across tested systems.
+
+This observation motivates the hypothesis that the detected transition corresponds to a structural property of the dynamics rather than a system-size-dependent artifact.
 
 ---
 
-## Reproducibility
+## Current Findings
 
-All simulations were performed using:
+The current experiments indicate:
 
-- identical model configuration  
-- consistent parameter settings  
-- identical ramp / load increase scenario  
+- transition detection occurs before classical collapse indicators
+- similar transition structures appear across network sizes
+- field geometry remains interpretable at larger scales
+- directional instability emerges before voltage collapse
+
+These findings remain preliminary and require further statistical validation.
 
 ---
 
 ## Visual Results
 
-![IEEE 300-Bus](ieee_scaling/NEXAH_MicDrop_IEEE300_Final.png)
+Example outputs generated during the scaling experiments:
 
-![IEEE 9241-Bus](ieee_scaling/ieee9241_real_tunable_v12.7_4panel_iota_ring.png)
+- IEEE118 field evolution
+- IEEE300 transition geometry
+- IEEE1354 scaling validation
+- IEEE9241 PEGASE experiments
+
+The repository contains both static visualizations and animation sequences used during analysis.
 
 ---
 
 ## Limitations
 
-- current evaluation is scenario-specific (single ramp type)  
-- sensitivity to parameter variations not fully explored  
-- statistical validation across multiple runs still pending  
+Current results should be interpreted as exploratory.
+
+Open questions include:
+
+- parameter sensitivity
+- scenario dependence
+- robustness under stochastic disturbances
+- comparison with established early-warning indicators
+- statistical significance across repeated runs
 
 ---
 
 ## Next Steps
 
-- multi-scenario validation  
-- sensitivity analysis  
-- comparison with alternative early-warning indicators  
-- formal definition of transition metric  
+Planned validation work:
+
+1. Multi-scenario testing
+2. Parameter sensitivity analysis
+3. Monte Carlo validation
+4. Transition metric formalization
+5. Comparison against classical stability indicators
+6. Navigation experiments using the NEXAH Operator
 
 ---
 
 ## Conclusion
 
-NEXAH demonstrates:
+The experiments suggest that instability may be observable as a geometric transition process before classical voltage-collapse metrics become critical.
 
-- consistent early detection of instability  
-- scalability across large networks  
-- a fundamentally different perspective on collapse dynamics  
-
-The results suggest that:
-
-> instability is a **geometric transition phenomenon**,  
-> not only a scalar voltage event.
-
-Further validation is required to establish robustness and generality.
+The purpose of this repository is to investigate that hypothesis systematically across increasingly large benchmark power systems.
