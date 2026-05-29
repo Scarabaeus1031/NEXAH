@@ -29,15 +29,7 @@ Together, these components form the dynamical basis of the NEXAH Operator.
 
 The system state is represented by
 
-$$
-\mathbf{x}
-=
-\begin{bmatrix}
-c \\
-dc \\
-\phi
-\end{bmatrix}
-$$
+$$\mathbf{x} =\begin{bmatrix} c \\ dc \\ \phi \end{bmatrix}$$
 
 where
 
