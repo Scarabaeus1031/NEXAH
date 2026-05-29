@@ -497,3 +497,447 @@ Repulsion forces activate automatically when collapse risk exceeds the safety th
 Combined overview of navigation behaviour, collapse distance evolution and avoidance performance.
 
 
+# EXP_06 + EXP_07 FINDINGS
+# IEEE39 TOPOLOGY ↔ DYNAMICS VALIDATION
+# NEXAH FIELD NAVIGATION PROGRAM
+
+========================================================
+EXP_06 — IEEE39 COMMUNITY DETECTION
+========================================================
+
+Objective
+--------------------------------------------------------
+
+Identify natural topological communities
+within the IEEE39 network.
+
+Methods
+
+• Louvain Community Detection
+• Spectral Clustering
+• Modularity Analysis
+
+Results
+--------------------------------------------------------
+
+Louvain Communities:
+
+4
+
+Community Sizes:
+
+Community 0 : 15 nodes
+Community 1 : 16 nodes
+Community 2 : 4 nodes
+Community 3 : 4 nodes
+
+Louvain Modularity:
+
+Q = 0.463277
+
+Best Spectral k:
+
+k = 4
+
+Spectral Modularity:
+
+Q = 0.463277
+
+Findings
+--------------------------------------------------------
+
+The IEEE39 network exhibits a clear
+non-random modular structure.
+
+Both Louvain and Spectral clustering
+converge to the same solution:
+
+    4 communities
+
+The agreement between independent
+methods suggests a robust partition.
+
+Interpretation
+--------------------------------------------------------
+
+The network naturally decomposes into
+four topological regions.
+
+No assumptions regarding:
+
+    3
+    7
+    13
+
+were imposed.
+
+The structure emerged directly
+from the graph itself.
+
+Scientific Assessment
+--------------------------------------------------------
+
+Community structure is present.
+
+The modularity value:
+
+    Q = 0.463
+
+is sufficiently high to indicate
+meaningful clustering.
+
+Status
+--------------------------------------------------------
+
+COMMUNITY STRUCTURE DETECTED
+
+Validation: PASSED
+
+Visuals
+--------------------------------------------------------
+
+### Visual 1 — IEEE39 Network Structure
+
+![IEEE39 Network Structure](exp06_network_structure.png)
+
+Raw IEEE39 topology.
+
+---
+
+### Visual 2 — Louvain Communities
+
+![Louvain Communities](exp06_louvain_communities.png)
+
+Four natural communities detected.
+
+---
+
+### Visual 3 — Spectral Modularity Sweep
+
+![Spectral Modularity Sweep](exp06_spectral_modularity_sweep.png)
+
+Peak modularity occurs at k = 4
+
+---
+
+### Visual 4 — Spectral Communities
+
+![Spectral Communities](exp06_spectral_communities.png)
+
+Independent confirmation of the four-community decomposition.
+
+---
+
+========================================================
+EXP_07 — COMMUNITY TO BASIN MAPPING
+========================================================
+
+Objective
+--------------------------------------------------------
+
+Investigate whether graph communities
+correspond to dynamical stability basins.
+
+Question:
+
+    Communities ≟ Basins ?
+
+Results
+--------------------------------------------------------
+
+Louvain Communities:
+
+4
+
+Modularity:
+
+Q = 0.463277
+
+Mean Basin Purity:
+
+0.809375
+
+Normalized Mutual Information:
+
+0.412767
+
+Community Purity:
+
+Community 0 : 0.8000
+Community 1 : 0.7500
+Community 2 : 0.6875
+Community 3 : 1.0000
+
+Findings
+--------------------------------------------------------
+
+Communities and basins show
+non-random alignment.
+
+Community 3 maps completely
+to a single basin.
+
+Community 0 and Community 1
+show strong basin dominance.
+
+Community 2 displays the
+weakest alignment.
+
+Interpretation
+--------------------------------------------------------
+
+Community 2 is the most interesting
+community in the experiment.
+
+Possible explanations:
+
+1.
+
+Boundary Region
+
+A community positioned
+between two basins.
+
+
+2.
+
+Gate Region
+
+A structural bridge through
+which transitions occur.
+
+
+3.
+
+Transport Corridor
+
+A region that participates
+in multiple stability regimes.
+
+
+The result is consistent with
+earlier navigation experiments:
+
+    EXP_05
+    EXP_05B
+
+where corridor-based navigation
+was observed.
+
+Scientific Assessment
+--------------------------------------------------------
+
+Mean Basin Purity:
+
+    0.809
+
+indicates strong correspondence.
+
+NMI:
+
+    0.413
+
+indicates measurable shared
+information between topology
+and basin assignment.
+
+The result supports the hypothesis:
+
+    Topology
+         ↕
+    Dynamics
+
+may be coupled.
+
+Important Limitation
+--------------------------------------------------------
+
+This experiment uses synthetic basin
+assignments for pipeline validation.
+
+Therefore:
+
+    NOT YET
+
+evidence that IEEE39 physical
+stability basins correspond to
+the detected communities.
+
+Real basin extraction remains
+required.
+
+Status
+--------------------------------------------------------
+
+PIPELINE VALIDATED
+
+Real IEEE39 Basin Validation Pending
+
+Visuals
+--------------------------------------------------------
+
+[### Visual 5 — Community → Basin Overlay
+
+![Community Basin Overlay](exp07_community_basin_overlay.png)
+
+Overlay between community membership and basin assignment.
+
+---
+
+Observation:
+
+Communities show dominant
+basin occupancy.
+
+---
+
+### Visual 6 — Dynamical Basin Assignment
+
+![Dynamical Basin Assignment](exp07_basin_map.png)
+
+Stable, transition and collapse regions projected onto the graph.
+
+---
+
+### Visual 7 — Community ↔ Basin Alignment Matrix
+
+![Community Basin Alignment](exp07_alignment_matrix.png)
+
+Alignment between graph communities and basin occupancy.
+
+Community ↔ Basin Alignment Matrix
+
+Strong diagonal structure.
+
+Most communities map predominantly
+into a single dynamical basin.
+
+Community 3:
+
+    purity = 1.000
+
+showing a nearly perfect correspondence
+between graph topology and dynamical behavior.
+
+Community 2:
+
+    purity = 0.6875
+
+showing the weakest alignment.
+
+This community appears to span
+multiple basins and may contain
+transition states, corridor nodes,
+or gate-like structures linking
+different dynamical regimes.
+
+The result suggests that
+communities and basins are related,
+but not identical.
+
+Graph topology captures part of the
+dynamical structure, while basin
+membership contains additional
+state-space information.
+
+========================================================
+COMBINED CONCLUSION
+========================================================
+
+EXP_06 established:
+
+    IEEE39 contains
+    4 natural communities.
+
+EXP_07 established:
+
+    Communities and basins
+    are not randomly related.
+
+Current evidence suggests:
+
+    Communities may contain
+    dynamical information.
+
+The strongest candidate for future
+investigation is:
+
+    Community 2
+
+which may represent:
+
+    Basin Boundary
+    Gate Region
+    Transport Corridor
+
+Next Step
+--------------------------------------------------------
+
+EXP_07B_REAL_IEEE39_BASIN_MAPPING
+
+Question:
+
+    Are communities actually
+    stability basins?
+
+or
+
+    Are communities gates
+    between stability basins?
+
+This remains the central open
+question following EXP_06
+and EXP_07.
+
+
+
+
+## Visuals
+
+
+
+### Visual 2 — Louvain Communities
+
+![Louvain Communities](exp06_louvain_communities.png)
+
+Four natural communities detected.
+
+---
+
+### Visual 3 — Spectral Modularity Sweep
+
+![Spectral Modularity Sweep](exp06_spectral_modularity_sweep.png)
+
+Peak modularity occurs at k = 4.
+
+---
+
+### Visual 4 — Spectral Communities
+
+![Spectral Communities](exp06_spectral_communities.png)
+
+Independent confirmation of the four-community decomposition.
+
+---
+
+### Visual 5 — Community → Basin Overlay
+
+![Community Basin Overlay](exp07_community_basin_overlay.png)
+
+Overlay between community membership and basin assignment.
+
+---
+
+### Visual 6 — Dynamical Basin Assignment
+
+![Dynamical Basin Assignment](exp07_basin_map.png)
+
+Stable, transition and collapse regions projected onto the graph.
+
+---
+
+### Visual 7 — Community ↔ Basin Alignment Matrix
+
+![Community Basin Alignment](exp07_alignment_matrix.png)
+
+Alignment between graph communities and basin occupancy.
