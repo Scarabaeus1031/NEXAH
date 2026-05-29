@@ -45,72 +45,27 @@ where
 
 The field evolution is defined by
 
-$$
-\dot{c}
-=
-dc \cdot C(t)
-$$
+$$\dot{c} = dc \cdot C(t)$$
 
 where $C(t)$ denotes the contraction function.
 
 The drift evolution follows
 
-$$
-\dot{dc}
-=
-\Big(
-\alpha_{\mathrm{flow}} f_{\mathrm{field}}
-+
-\beta_{\mathrm{swirl}} f_{\mathrm{vdp}}
-+
-\gamma_{\mathrm{memory}} f_{\mathrm{kuramoto}}
-+
-\delta_{\mathrm{resonance}} f_{\mathrm{compass}}
-+
-f_{\mathrm{winding}}
-+
-f_{\mathrm{iota}}
-+
-f_{\mathrm{janus}}
-+
-f_{\mathrm{lyapunov}}
-\Big)
-\cdot I(\phi)
-\cdot S(t)
-$$
+$$ \dot{dc} = \Big( \alpha_{\mathrm{flow}} f_{\mathrm{field}} + \beta_{\mathrm{swirl}} f_{\mathrm{vdp}} + \gamma_{\mathrm{memory}} _{\mathrm{kuramoto}} + \delta_{\mathrm{resonance}} f_{\mathrm{compass}} + f_{\mathrm{winding}} + f_{\mathrm{iota}} + f_{\mathrm{janus}} + f_{\mathrm{lyapunov}} \Big) \cdot I(\phi) \cdot S(t)$$
 
 where
 
-$$
-S(t)
-=
-\mathrm{slow\_start}(t)
-$$
+$$S(t) = \mathrm{slow\_start}(t)$$
 
 and
 
-$$
-I(\phi)
-$$
+$$I(\phi)$$
 
 is the regulator function.
 
 The phase regulator evolves according to
 
-$$
-\dot{\phi}
-=
-g
-\Big(
-dc,
-\phi,
-\mathrm{resonance},
-\mathrm{winding},
-\mathrm{iota},
-\mathrm{janus},
-\mathrm{lyapunov}
-\Big)
-$$
+$$\dot{\phi} = g \Big( dc, \phi, \mathrm{resonance}, \mathrm{winding}, \mathrm{iota}, \mathrm{janus}, \mathrm{lyapunov} \Big)$$
 
 ---
 
@@ -120,13 +75,7 @@ $$
 
 The field force provides the large-scale flow structure and acts as the primary attractor component.
 
-$$
-f_{\mathrm{field}}
-=
-\sigma (dc-c)
-+
-\rho c (1-\phi)
-$$
+$$f_{\mathrm{field}} = \sigma (dc-c) + \rho c (1-\phi)$$
 
 ---
 
@@ -134,11 +83,7 @@ $$
 
 The Van der Pol component introduces nonlinear oscillatory amplification.
 
-$$
-f_{\mathrm{vdp}}
-=
-\beta \, dc \,(1-c^2)
-$$
+$$f_{\mathrm{vdp}} = \beta \, dc \,(1-c^2)$$
 
 ---
 
@@ -146,24 +91,11 @@ $$
 
 The synchronization term measures collective phase alignment.
 
-$$
-f_{\mathrm{kuramoto}}
-=
-\sum_{i=0}^{4}
-K(Q)
-\sin
-\left(
-\frac{2\pi(\phi-i)}{5}
-\right)
-$$
+$$f_{\mathrm{kuramoto}} = \sum_{i=0}^{4} K(Q) \sin \left( \frac{2\pi(\phi-i)}{5} \right)$$
 
 with
 
-$$
-K(Q)
-=
-1+\alpha Q
-$$
+$$K(Q) = 1+\alpha Q$$
 
 ---
 
@@ -171,13 +103,7 @@ $$
 
 The compass operator introduces directional rotational guidance.
 
-$$
-f_{\mathrm{compass}}
-=
-\gamma
-\sin(\omega t+\phi\delta)
-\cos(\omega t+1.618\,\phi\delta)
-$$
+$$f_{\mathrm{compass}} = \gamma \sin(\omega t+\phi\delta) \cos(\omega t+1.618\,\phi\delta)$$
 
 ---
 
@@ -185,12 +111,7 @@ $$
 
 The resonance term couples phase dynamics to irrational-frequency modulation.
 
-$$
-\mathrm{resonance}
-=
-\eta
-\sin(\phi\pi\sqrt{2})
-$$
+$$\mathrm{resonance} = \eta \sin(\phi\pi\sqrt{2})$$
 
 ---
 
@@ -198,13 +119,7 @@ $$
 
 The winding-number term acts as a topological transition detector.
 
-$$
-f_{\mathrm{winding}}
-=
-\kappa
-\cdot
-W
-$$
+$$f_{\mathrm{winding}} = \kappa \cdot W $$
 
 where $W$ denotes the current winding number.
 
@@ -214,13 +129,4 @@ where $W$ denotes the current winding number.
 
 The Iota ring introduces periodic field modulation.
 
-$$
-f_{\mathrm{iota}}
-=
-0.35
-\sin
-\left(
-2\pi
-\frac{t-36}{19}
-\right)
-$$
+$$f_{\mathrm{iota}} = 0.35 \sin \left( 2\pi \frac{t-36}{19} \right)$$
