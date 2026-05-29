@@ -214,25 +214,25 @@ This demonstrates that field-guided navigation remains functional under repeated
 
 ## Navigation
 
-![Navigation](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_navigation.png)
+![Navigation](./outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_navigation.png)
 
 ---
 
 ## Collapse Distance
 
-![Distance](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_distance.png)
+![Distance](./outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_distance.png)
 
 ---
 
 ## Collapse Risk
 
-![Risk](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_risk.png)
+![Risk](./outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_risk.png)
 
 ---
 
 ## Summary Dashboard
 
-![Summary](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_summary_dashboard.png)
+![Summary](./outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_summary_dashboard.png)
 
 ## Result
 
@@ -290,7 +290,7 @@ Avoidance success:
 
 ## Navigation
 
-![Navigation](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_navigation.png)
+![Navigation](./outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_navigation.png)
 
 The collapse basin was intentionally positioned directly on the natural corridor.
 
@@ -300,7 +300,7 @@ The guided controller follows the corridor successfully but is ultimately forced
 
 ## Collapse Distance
 
-![Collapse Distance](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_collapse_distance.png)
+![Collapse Distance](./outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_collapse_distance.png)
 
 The guided controller consistently maintains a larger distance from the collapse basin than the uncontrolled trajectory.
 
@@ -310,7 +310,7 @@ However, the safety margin eventually becomes insufficient due to corridor-basin
 
 ## Collapse Entries
 
-![Collapse Entries](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_basin_entries.png)
+![Collapse Entries](./outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_basin_entries.png)
 
 Both trajectories eventually enter the collapse basin.
 
@@ -323,7 +323,7 @@ Guided:       1 entry
 
 ## Summary Dashboard
 
-![Summary](../../outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_summary_dashboard.png)
+![Summary](./outputs/EXP_04B_COLLAPSE_AVOIDANCE_STRESS_TEST/exp04b_summary_dashboard.png)
 
 ---
 
