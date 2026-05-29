@@ -1,0 +1,7 @@
+EXP_03 CORRIDOR RETENTION
+========================================
+
+Mean distance: 0.352557
+Max distance: 4.173012
+Corridor occupancy: 86.29%
+Mean recovery time: 10.67
