@@ -210,3 +210,56 @@ This demonstrates that field-guided navigation remains functional under repeated
 ✅ Passed
 
 
+# EXP_04 — Collapse Avoidance
+
+## Navigation
+
+![Navigation](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_navigation.png)
+
+---
+
+## Collapse Distance
+
+![Distance](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_distance.png)
+
+---
+
+## Collapse Risk
+
+![Risk](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_collapse_risk.png)
+
+---
+
+## Summary Dashboard
+
+![Summary](../outputs/EXP_04_COLLAPSE_AVOIDANCE/exp04_summary_dashboard.png)
+
+## Result
+
+Observed:
+
+- Collapse entries (uncontrolled): 0
+- Collapse entries (guided): 0
+- Minimum collapse distance (uncontrolled): 1.844
+- Minimum collapse distance (guided): 2.775
+
+Risk reduction:
+
+**50.50 %**
+
+## Interpretation
+
+The field-guided controller maintained a significantly larger
+distance from the collapse basin than the uncontrolled
+trajectory.
+
+While neither trajectory entered the collapse region,
+the guided controller increased safety margins by
+approximately 50%.
+
+## Status
+
+✅ Passed
+
+
+
