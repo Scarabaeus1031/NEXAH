@@ -68,3 +68,69 @@ Instability is not merely detectable.
 
 It is navigable.
 ```
+# EXP_02 — Corridor Acquisition
+
+![EXP02 Summary](outputs/EXP_02_CORRIDOR_ACQUISITION/exp02_summary_dashboard.png)
+
+## Result
+
+A field-guided controller successfully acquired a stability corridor from a distant initial condition.
+
+Observed:
+
+- Mean distance (uncontrolled): 7.798
+- Mean distance (guided): 0.336
+- Distance reduction: 95.70 %
+- Acquisition step: 27
+
+---
+
+## Corridor Acquisition
+
+![Corridor Acquisition](outputs/EXP_02_CORRIDOR_ACQUISITION/exp02_corridor_acquisition.png)
+
+The guided trajectory starts far from the corridor,
+approaches the structure, acquires it, and subsequently
+follows the corridor.
+
+---
+
+## Distance Evolution
+
+![Distance Evolution](outputs/EXP_02_CORRIDOR_ACQUISITION/exp02_distance_evolution.png)
+
+The acquisition process becomes visible as a rapid
+reduction in distance to the corridor, followed by
+stable tracking.
+
+---
+
+## Distance Field Navigation
+
+![Distance Field](outputs/EXP_02_CORRIDOR_ACQUISITION/exp02_distance_field.png)
+
+The reconstructed corridor acts as a navigational
+structure embedded within a stability-distance field.
+
+The guided trajectory converges toward the minimum-distance
+region and remains attached to the corridor.
+
+---
+
+## Interpretation
+
+The controller successfully:
+
+1. detected the corridor
+2. approached the corridor
+3. acquired the corridor
+4. remained attached to the corridor
+
+This demonstrates that reconstructed field structures can
+function as navigational objects rather than passive observations.
+
+---
+
+## Status
+
+✅ Passed
