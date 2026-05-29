@@ -30,13 +30,85 @@ Simulation → Features → Manifold → Field → Risk → Policy → Control �
 
 ---
 
+## 📂 Repository Structure
+
+```text
+nexah_ieee9/
+├── analysis/          # prediction and risk estimation
+├── context/           # channel and field detection
+├── control/           # intervention mechanisms
+├── controller/        # controller evolution (v6–v11)
+├── data/              # IEEE9 test system definitions
+├── decision/          # policies and state decisions
+├── features/          # coherence and structural metrics
+├── overlay/           # manifold and residual analysis
+├── simulation/        # power-flow solvers
+├── visualization/     # plotting and animations
+├── results/           # experimental outputs
+
+├── main.py            # main NEXAH pipeline entry point
+├── nexah_solver_v2.py # closed-loop physics coupling layer
+
+├── architecture.md
+├── architecture_v12.md
+├── nexah_controller_evolution.md
+├── results_summary.md
+└── run_log.md
+```
+
+---
+
+## 📚 Core Components
+
+| Component | Purpose |
+|------------|----------|
+| main.py | end-to-end NEXAH pipeline execution |
+| nexah_solver_v2.py | closed-loop physics-aware solver |
+| architecture.md | NEXAH IEEE9 field-navigation architecture |
+| architecture_v12.md | multi-agent navigation architecture |
+| nexah_controller_evolution.md | controller evolution history |
+| results_summary.md | experimental findings |
+| run_log.md | development history |
+
+
+---
+
+## 🔬 Research Progression
+
+The IEEE9 system represents the first complete NEXAH development chain:
+
+```text
+Detection
+    ↓
+Prediction
+    ↓
+Adaptive Control
+    ↓
+Field Extraction
+    ↓
+Geometry Analysis
+    ↓
+Navigation
+```
+
+The repository therefore contains both:
+
+- reproducible controller implementations
+- experimental navigation research
+- architecture evolution documents
+- complete development history
+
+**The IEEE9 system serves as the conceptual precursor to the larger IEEE57 X-Ray Pipeline.**
+
+---
+
 ## 🧭 Version Map (Controller Evolution)
 
 | Version | Status | Description |
 |--------|--------|------------|
 | v6 | ✅ public | stable closed-loop control (reproducible) |
 | v7–v9 | 🧪 experimental | dynamical system behavior |
-| v10–v11 | 🧪 internal | field geometry & early navigation |
+| v10–v11 | 🧪 research | field geometry & early navigation |
 
 👉 **v6 is the current reproducible reference**  
 👉 later versions represent ongoing development toward full navigation
@@ -186,11 +258,43 @@ PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieee9/controller/nexah_clos
 
 ---
 
-# 🔥 Key Result
+# 🔥 Key Results
 
-A complex physical system can be:
+The IEEE9 project demonstrated that a power system can be:
 
-- mapped into a field  
-- understood geometrically  
-- controlled via trajectory shaping  
-- pushed toward optimal safe operation  
+- mapped into a stability field
+- analyzed geometrically
+- controlled through trajectory shaping
+- navigated relative to structural boundaries
+
+---
+
+# 🧭 Development Status
+
+| Layer | Status |
+|---------|---------|
+| Detection | ✅ |
+| Prediction | ✅ |
+| Adaptive Control | ✅ |
+| Closed Loop Control | ✅ |
+| Field Extraction | ✅ |
+| Geometry Analysis | ✅ |
+| Navigation Prototype | ✅ |
+| Multi-Agent Architecture | 🧪 |
+| Real Grid Deployment | ⚙️ |
+
+---
+
+# 🚀 Position within NEXAH
+
+IEEE9 represents the foundational NEXAH research platform.
+
+Key concepts first developed here:
+
+- stability fields
+- risk geometry
+- field navigation
+- trajectory-aware control
+- multi-agent navigation concepts
+
+Many of these ideas were later extended and tested at larger scale in the IEEE57 X-Ray Pipeline.
