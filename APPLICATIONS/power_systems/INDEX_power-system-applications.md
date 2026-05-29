@@ -1,301 +1,301 @@
 # ⚡ NEXAH — Power Systems Applications
 
-This section contains the **applied NEXAH framework for power system dynamics**,  
-including experimental pipelines, system-level validation, and early-stage control experiments.
+Geometry-Based Stability Analysis, Regime Detection, and Navigation in Electrical Power Networks
 
 ---
 
-# 🧭 Overview
+# Overview
 
-NEXAH introduces a geometry-based perspective on power system stability:
+This section contains the power-system application layer of the NEXAH framework.
 
-> **Stability is modeled as a trajectory evolving within a structured dynamical field.**
+NEXAH approaches power system stability from a structural and geometric perspective. Rather than interpreting instability solely as a threshold violation, the framework models power-system dynamics as trajectories evolving within a structured state space.
 
-Instead of treating instability as a threshold violation, the system is interpreted as:
-
-- a continuous dynamical process  
-- evolving across structured regions (regimes)  
-- with transitions between stable and unstable behavior  
+The objective is to reconstruct the underlying dynamical organization of the system and identify transitions between operating regimes before conventional collapse indicators emerge.
 
 ---
 
-# ⚙️ Technical Context (Condensed)
+# Concept
 
-- **Simulation basis:** AC power flow / dynamic simulations (pandapower)  
-- **Input signals:** voltage magnitude and derived temporal features  
-- **Feature space:** coherence, drift, acceleration, residual structure, distance metrics, phase  
-- **Representation:** low-dimensional geometric state space  
-- **Derived objects:**
-  - flow field (vector field)
-  - risk landscape
-  - regime structure  
+Classical stability assessment typically relies on scalar indicators such as:
+
+- voltage magnitude
+- frequency deviation
+- threshold violations
+- reserve margins
+
+NEXAH extends this perspective by analyzing:
+
+- trajectory evolution
+- state-space geometry
+- flow-field structure
+- regime transitions
+- stability landscapes
+
+The central hypothesis is:
+
+> Instability is not a single event.  
+> Instability is a transition through a structured dynamical landscape.
 
 ---
 
-# 🔁 Core Transformation
+# System Architecture
+
+The power-system framework consists of four major layers.
 
 ```text
-Simulation → Features → State Embedding → Field → Risk → Analysis / Control
+    Simulation
+        ↓ 
+Feature Extraction     
+        ↓ 
+Geometric Representation
+        ↓ 
+    Validation
+        ↓ 
+Navigation & Control Experiments 
 ```
+---
 
-Goal:
+## 1. Feature Extraction Layer
 
-- ❌ detect collapse after it occurs  
-- ✅ **analyze and anticipate structural regime transitions**
+Power-system simulations are transformed into a structured state representation.
+
+Typical features include:
+
+- voltage magnitude
+- drift
+- acceleration
+- coherence measures
+- residual structure
+- phase variables
+- geometric distance metrics
+
+The resulting feature vectors provide the basis for state-space reconstruction.
 
 ---
 
-# 🧠 System Architecture
+## 2. Geometric Representation Layer
 
-NEXAH consists of three conceptual layers:
+The extracted dynamics are embedded into a low-dimensional state space.
 
----
+This layer constructs:
 
-### 1. Extraction Layer
-- simulation → feature generation  
-- transformation into structured state representation  
+- geometric state spaces
+- flow fields
+- risk landscapes
+- regime structures
 
----
-
-### 2. Representation Layer
-- construction of geometric state space  
-- flow field and risk landscape  
+The resulting representations allow system behavior to be interpreted geometrically rather than through isolated signals.
 
 ---
 
-### 3. Navigation / Application Layer (Experimental)
-- trajectory analysis  
-- early-stage control strategies  
-- stability navigation experiments  
+## 3. Validation Layer
+
+The Validation Layer provides quantitative evidence for the framework.
+
+Its purpose is to determine whether geometric representations reveal information that is not directly visible in classical measurements.
+
+Key questions include:
+
+- Can instability be detected earlier?
+- Can transitions be identified structurally?
+- Can system motion reveal approaching collapse?
+
+The validation framework includes:
+
+- event-shape analysis
+- curvature-based detection
+- trajectory reconstruction
+- motion-space analysis
+- IEEE collapse experiments
 
 ---
 
-# 🧪 🔥 Validation Layer (CRITICAL BRIDGE)
+## 4. Navigation and Control Layer
 
-📂 `VALIDATION_LAYER/`
+The final layer investigates whether reconstructed state-space geometry can be used for intervention and stabilization.
 
-This layer provides **quantitative and structural validation** of the NEXAH approach.
+Current experiments explore:
 
----
+- trajectory steering
+- regime avoidance
+- risk-aware navigation
+- adaptive intervention strategies
 
-## Purpose
-
-To test whether NEXAH can:
-
-```text
-detect instability earlier
-and/or
-reveal structural behavior not visible in classical signals
-```
+These capabilities remain experimental and are not intended as production-ready control methods.
 
 ---
 
-## Key Mechanism
+# Repository Structure
 
-```text
-signal → event → shape → geometry → motion
-```
+## Validation Layer
 
----
+📂 VALIDATION_LAYER/
 
-## Core Concepts
+Provides quantitative validation and supporting evidence.
 
-- curvature-based event detection  
-- event shape extraction  
-- shape space (PCA embedding)  
-- motion metrics (speed, angle)  
-- trajectory-based instability detection  
+Contents include:
 
----
-
-## Key Findings
-
-- early warning up to ~40–50 time units (IEEE collapse cases)  
-- instability appears as **geometric drift**, not threshold crossing  
-- motion in shape space reveals **transition dynamics**  
-- angle-based signals provide **earlier detection than magnitude-based signals**
+- reproducible experiments
+- statistical analysis
+- validation reports
+- structural findings
 
 ---
 
-## Outputs
+## IEEE X-Ray Pipeline
 
-- reproducible experiment pipeline  
-- statistical validation  
-- IEEE system validation (collapse sweep)  
-- figure map and structured reports  
+📂 ieee_xray_pipeline/
 
----
+Core feature extraction and geometric reconstruction pipeline.
 
-## References
+Responsibilities:
 
-- `VALIDATION_LAYER/reports/validation_report_v3.md`  
-- `VALIDATION_LAYER/reports/validated_findings.md`  
-- `VALIDATION_LAYER/experiments/`  
+- state-space construction
+- manifold generation
+- structural analysis
+- flow-field reconstruction
 
 ---
 
-# 📦 Module Structure
+## NEXAH IEEE9
 
----
+📂 nexah_ieee9/
 
-## 🔬 1. IEEE X-Ray Pipeline
+Reference implementation and minimal reproducible navigation system.
 
-📂 `ieee_xray_pipeline/`
-
-**Role:**
-Core **extraction and representation pipeline**
-
-**Purpose:**
-Transforms classical simulations into a **low-dimensional geometric state space**
-
-**Includes:**
-- feature extraction  
-- manifold construction  
-- structural analysis  
-- experimental controller designs  
-
-**Status:**
-- Detection: ✅ functional  
-- Control: 🧪 experimental  
-
-👉 Entry point:  
-`ieee_xray_pipeline/README.md`
-
----
-
-## ⚡ 2. NEXAH IEEE9 — Reference System
-
-📂 `nexah_ieee9/`
-
-**Role:**
-First **reproducible closed-loop prototype**
-
-**Purpose:**
 Demonstrates:
 
-- field reconstruction  
-- risk modeling  
-- trajectory-based intervention  
-
-**Key property:**
-👉 Minimal working system with reproducible behavior
-
-**Status:**
-- v6: ✅ stable baseline  
-- later versions: 🧪 experimental  
-
-👉 Entry point:  
-`nexah_ieee9/README.md`
+- field reconstruction
+- risk modeling
+- trajectory-based intervention
+- closed-loop experiments
 
 ---
 
-## 🌍 3. NEXAH IEEE X — Scaling Experiments
+## NEXAH IEEE X
 
-📂 `nexah_ieeeX/`
+📂 nexah_ieeeX/
 
-**Role:**
-System-level validation across increasing grid size
+Scaling studies across increasingly large grid models.
 
-**Systems:**
-- IEEE 118  
-- IEEE 300  
-- IEEE 1354  
+Current systems include:
+
+- IEEE 118
+- IEEE 300
+- IEEE 1354
 - IEEE 9241 (PEGASE)
 
-**Focus:**
-- structural consistency across scales  
-- emergence of nonlinear dynamics  
-- behavior under increasing complexity  
+Primary focus:
 
-**Observed:**
-- stable behavior at large scale  
-- increased sensitivity in nonlinear regimes  
-
-👉 Entry point:  
-`nexah_ieeeX/README.md`
+- scalability
+- structural consistency
+- regime behavior across complexity levels
 
 ---
 
-# 🔁 Relationship Between Modules
+# Key Observations
 
+Across current experiments several recurring patterns emerge.
+
+### Geometric Drift
+
+Instability often appears as gradual movement through state space before collapse becomes visible in voltage signals.
+
+---
+
+### Regime Structure
+
+System trajectories organize into distinct regions associated with different operating conditions.
+
+---
+
+### Flow Organization
+
+State evolution exhibits coherent directional behavior that can be represented as a flow field.
+
+---
+
+### Transition Corridors
+
+Regime changes frequently occur through identifiable transition pathways rather than abrupt state jumps.
+
+---
+
+### Early Warning Potential
+
+Several IEEE collapse experiments demonstrate measurable lead times between geometric transition indicators and classical collapse thresholds.
+
+---
+
+# Current Status
+
+### Stable Components
+
+- simulation pipelines
+- feature extraction
+- state reconstruction
+- geometric embedding
+- validation framework
+
+### Experimental Components
+
+- navigation algorithms
+- intervention strategies
+- trajectory steering
+- closed-loop stabilization
+
+---
+
+# Limitations
+
+Current limitations include:
+
+- limited real-world validation
+- incomplete sensitivity analysis
+- ongoing benchmarking against classical methods
+- no probabilistic confidence framework
+- no guaranteed control-theoretic stability proofs
+
+Consequently, the framework should currently be regarded as an experimental research platform.
+
+---
+
+# Research Direction
+
+Ongoing development focuses on:
+
+- large-scale validation
+- robustness analysis
+- uncertainty quantification
+- regime-aware forecasting
+- trajectory-based stabilization methods
+- integration with real-world grid data
+
+---
+
+# NEXAH Principle
 ```text
-ieee_xray_pipeline
-    ↓ (feature extraction + embedding)
-
-VALIDATION_LAYER
-    ↓ (structural validation + evidence)
-
-nexah_ieee9
-    ↓ (minimal working system)
-
-nexah_ieeeX
-    ↓ (scaling & system-level validation)
+text simulation     
+      ↓ 
+  structure
+      ↓ 
+    field
+      ↓ 
+    geometry
+      ↓ 
+    dynamics     
+      ↓ 
+    regimes 
 ```
+---
+
+# Positioning
+
+NEXAH is a research framework for discovering, representing, and navigating the geometric structure of power-system dynamics.
+
+The goal is not merely to detect instability after it occurs, but to understand how systems move through stability landscapes and how regime transitions emerge.
 
 ---
 
-# 🚀 Recommended Entry Path
-
-1. **Start with IEEE9**  
-   → understand core mechanism  
-
-2. **Run Validation Layer**  
-   → verify structural behavior + early warning  
-
-3. **Explore X-Ray Pipeline**  
-   → understand feature extraction  
-
-4. **Move to IEEE X**  
-   → analyze scaling behavior  
-
----
-
-# ⚠️ Current Limitations
-
-- control remains experimental (no stability guarantees)  
-- sensitivity to parameters not fully explored  
-- limited validation on real-world datasets  
-- benchmarking vs classical methods ongoing  
-
----
-
-# 🧭 Direction
-
-Ongoing work focuses on:
-
-- quantitative validation vs classical stability methods  
-- robustness across noise and perturbations  
-- improved mapping to physical grid variables  
-- development of reliable control strategies  
-
----
-
-# 🌀 NEXAH Principle
-
-```text
-simulation → structure → field → geometry → dynamics → regimes
-```
-
----
-
-# 🧠 Positioning
-
-This framework is currently **experimental** and aims to:
-
-- provide structural insight into power system dynamics  
-- explore geometry-based representations  
-- evaluate early-stage navigation concepts  
-
-It is **not yet a production-ready control system**.
-
----
-
-# ⚡ NEXAH
-
-```text
-From simulation → to structure  
-From structure → to field  
-From field → to motion  
-From motion → to instability  
-From instability → to navigation
-```
+Thomas K. R. Hofmann  
+NEXAH Framework · 2026
