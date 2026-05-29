@@ -20,6 +20,14 @@ Current focus areas include:
 
 ---
 
+## 🌌 NEXAH Framework Architecture
+
+![Stability Field Dynamics](Stability%20Field%20Dynamics.png)
+
+The NEXAH framework transforms raw power-system simulations into navigable stability fields that enable transition detection, regime analysis, and future intervention strategies.
+
+---
+
 ## 📂 Main Components
 
 | Folder | Description |
