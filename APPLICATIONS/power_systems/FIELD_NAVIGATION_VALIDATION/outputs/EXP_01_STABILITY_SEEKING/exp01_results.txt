@@ -1,0 +1,6 @@
+EXP_01 STABILITY SEEKING
+========================================
+
+Mean distance uncontrolled: 2.997128
+Mean distance guided: 0.705436
+Distance reduction: 76.46%
