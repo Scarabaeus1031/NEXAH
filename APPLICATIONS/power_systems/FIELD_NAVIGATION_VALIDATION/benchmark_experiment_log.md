@@ -242,3 +242,213 @@ Next Experiment:
 ```text
 EXP_22 — PARTIAL KNOWLEDGE BENCHMARK
 ```
+
+# EXP_22 — PARTIAL KNOWLEDGE BENCHMARK
+
+## Objective
+
+One of the central questions for real-world deployment is:
+
+> How much of the field must be known before navigation becomes reliable?
+
+Previous experiments assumed that the navigation layer had access to the full discovered field geometry.
+
+EXP_22 tests a more realistic scenario:
+
+- incomplete field knowledge
+- partially observed state spaces
+- limited mapping coverage
+- early-stage exploration
+
+The experiment measures navigation performance while progressively revealing larger fractions of the discovered field.
+
+---
+
+## Method
+
+Navigation was tested using the same left-to-right target navigation setup used in EXP_19.
+
+The known field fraction was varied:
+
+- Random baseline
+- 25% known
+- 50% known
+- 75% known
+- 100% known
+
+For each scenario:
+
+- navigation success was measured
+- average arrival steps were recorded
+- visible field geometry was visualized
+
+---
+
+## Results
+
+| Knowledge Level | Success Rate | Average Steps |
+|-----------------|-------------|--------------|
+| Random          | 0.0080 | 99.93 |
+| 25%             | 0.0000 | 100.00 |
+| 50%             | 0.0000 | 100.00 |
+| 75%             | 1.0000 | 36.18 |
+| 100%            | 1.0000 | 27.54 |
+
+---
+
+## Visual Analysis
+
+### Known Field Coverage
+
+![EXP_22 Known Field Examples](visuals/exp22_known_field_examples.png)
+
+**File:**
+
+`exp22_known_field_examples.png`
+
+The geometry reveals a clear transition:
+
+- 25% knowledge shows isolated local fragments
+- 50% knowledge shows larger connected regions
+- 75% knowledge begins to expose the global transport structure
+- 100% knowledge reveals the complete navigation field
+
+A striking observation is that navigation does **not** improve gradually.
+
+Instead, it exhibits a threshold-like transition.
+
+---
+
+### Success vs Knowledge
+
+![EXP_22 Success vs Knowledge](visuals/exp22_success_vs_knowledge.png)
+
+**File:**
+
+`exp22_success_vs_knowledge.png`
+
+Navigation remains effectively impossible at:
+
+- Random
+- 25%
+- 50%
+
+but suddenly becomes fully reliable at:
+
+- 75%
+- 100%
+
+This suggests the existence of a critical field-knowledge threshold.
+
+---
+
+### Steps vs Knowledge
+
+![EXP_22 Steps vs Knowledge](visuals/exp22_steps_vs_knowledge.png)
+
+**File:**
+
+`exp22_steps_vs_knowledge.png`
+
+Once the field becomes sufficiently known:
+
+- success jumps to 100%
+- travel cost drops dramatically
+
+Average navigation effort decreases from:
+
+```text
+100 steps
+↓
+36 steps
+↓
+28 steps
+```
+
+as field knowledge increases.
+
+---
+
+## Key Finding
+
+EXP_22 reveals that:
+
+> Navigation requires only partial field knowledge,
+> but a minimum global structure must be visible.
+
+The transition is not linear.
+
+Instead, the experiment shows a clear phase change:
+
+```text
+Below threshold:
+No navigation
+
+Above threshold:
+Reliable navigation
+```
+
+---
+
+## Interpretation
+
+The discovered field appears to contain a global transport geometry.
+
+Local fragments alone are insufficient.
+
+However, once enough of the field becomes visible, the navigation layer can reconstruct effective movement corridors.
+
+This behavior resembles:
+
+- percolation transitions
+- connectivity thresholds
+- phase transitions in network accessibility
+
+rather than conventional local search.
+
+---
+
+## Engineering Relevance
+
+For real systems this is highly significant.
+
+A controller may not need:
+
+- full system observability
+- complete state-space reconstruction
+- exhaustive mapping
+
+Instead, only enough field structure may be required to expose the dominant transport geometry.
+
+Potential applications include:
+
+- power-grid stabilization
+- autonomous planning
+- infrastructure resilience
+- network routing
+- adaptive control systems
+
+---
+
+## Conclusion
+
+EXP_22 provides the first benchmark evidence that:
+
+> Successful NEXAH navigation emerges once field knowledge exceeds a critical threshold.
+
+The transition occurs between:
+
+```text
+50% known
+and
+75% known
+```
+
+within the current field geometry.
+
+This motivates the next benchmark experiment:
+
+**EXP_22B — Knowledge Threshold Scan**
+
+which will determine the critical navigation threshold with significantly higher resolution.
+
