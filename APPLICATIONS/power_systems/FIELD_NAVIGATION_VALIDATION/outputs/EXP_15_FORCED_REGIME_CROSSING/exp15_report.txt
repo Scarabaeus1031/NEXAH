@@ -1,0 +1,29 @@
+
+EXP_15 FORCED REGIME CROSSING
+========================================
+
+States:
+540
+
+Mean Critical Distance:
+10.150269
+
+Median Critical Distance:
+9.648241
+
+Gate Nodes:
+[33, 81, 184, 250, 498, 502]
+
+Interpretation
+----------------------------------------
+
+Critical distance measures
+how much displacement is required
+to force a state across the
+discovered gate-axis.
+
+Small values indicate
+high regime sensitivity.
+
+Large values indicate
+deep basin stability.
