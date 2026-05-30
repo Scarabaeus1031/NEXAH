@@ -930,7 +930,7 @@ This structure emerged repeatedly in EXP_09–EXP_16.
 
 ## Visual 2 — Corridor Ablation Impact
 
-![Corridor Impact](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_corridor_ablation_impact.png)
+![Corridor Impact](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_corridor_impact.png)
 
 Observation:
 
@@ -950,7 +950,7 @@ No measurable transport penalty occurs.
 
 ## Visual 3 — Connectivity After Corridor Removal
 
-![Connectivity](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_connectivity_after_removal.png)
+![Connectivity](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_connectivity.png)
 
 Observation:
 
@@ -970,7 +970,7 @@ No fragmentation occurs.
 
 ## Visual 4 — Largest Surviving Component
 
-![Largest Component](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_largest_surviving_component.png)
+![Largest Component](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_largest_component.png)
 
 Observation:
 
