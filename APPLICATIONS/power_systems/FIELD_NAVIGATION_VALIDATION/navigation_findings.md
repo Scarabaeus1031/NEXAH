@@ -596,7 +596,7 @@ Visuals
 
 ### Visual 1 — IEEE39 Network Structure
 
-![IEEE39 Network Structure](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_network_structure.png)
+![IEEE39 Network Structure](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_ieee39_network.png)
 
 Raw IEEE39 topology.
 
@@ -612,7 +612,7 @@ Four natural communities detected.
 
 ### Visual 3 — Spectral Modularity Sweep
 
-![Spectral Modularity Sweep](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_spectral_modularity_sweep.png)
+![Spectral Modularity Sweep](./outputs/EXP_06_IEEE39_COMMUNITY_DETECTION/exp06_modularity_comparison.png)
 
 Peak modularity occurs at k = 4.
 
