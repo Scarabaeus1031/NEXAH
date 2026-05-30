@@ -1,0 +1,8 @@
+EXP_19 TARGET REGION NAVIGATION
+========================================
+
+Random Success: 0.0000
+NEXAH Success : 0.2360
+Random Steps  : 100.0000
+NEXAH Steps   : 83.9920
+Navigation Gain: 236000000.0000
