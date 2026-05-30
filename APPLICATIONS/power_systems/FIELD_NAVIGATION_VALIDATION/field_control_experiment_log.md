@@ -1435,3 +1435,182 @@ Field Control & Intervention
 
 EXP_18B completed successfully.
 ```
+
+# EXP_19 — TARGET REGION NAVIGATION
+
+## Goal
+
+Can NEXAH intentionally navigate from one regime basin
+toward a distant target region?
+
+Unlike previous experiments, the objective is no longer
+to cross a boundary, but to reach a predefined region
+inside another part of the field.
+
+This represents the first direct test of:
+
+Field Navigation → Goal-Oriented Motion
+
+---
+
+## Results
+
+### Navigation Success
+
+![EXP_19 Navigation Success](outputs/EXP_19_TARGET_REGION_NAVIGATION/exp19_navigation_success.png)
+
+Random exploration failed completely.
+
+NEXAH navigation achieved a measurable success rate.
+
+| Method | Success Rate |
+|----------|----------|
+| Random | 0.000 |
+| NEXAH | 0.236 |
+
+---
+
+### Arrival Efficiency
+
+![EXP_19 Arrival Steps](outputs/EXP_19_TARGET_REGION_NAVIGATION/exp19_arrival_steps.png)
+
+NEXAH not only reached the target region more often,
+but also required fewer steps.
+
+| Method | Average Steps |
+|----------|----------|
+| Random | 100.0 |
+| NEXAH | 83.99 |
+
+---
+
+## Target Region Geometry
+
+![EXP_19 Target Regions](outputs/EXP_19_TARGET_REGION_NAVIGATION/exp19_region_map.png)
+
+The field separates naturally into several spatial groups.
+
+### Left Region
+
+Orange nodes.
+
+Represents the origin basin.
+
+### Right Region
+
+Green nodes.
+
+Represents the navigation target.
+
+### Intermediate Field
+
+Blue nodes.
+
+Acts as a transition geometry connecting
+otherwise separated regimes.
+
+---
+
+## Interpretation
+
+EXP_19 is the first experiment demonstrating
+goal-directed motion inside the discovered field.
+
+Previous experiments established:
+
+- transport exists
+- gates exist
+- navigation corridors exist
+- steering improves transitions
+
+EXP_19 extends this further:
+
+A target region can be specified
+and reached through field-aware navigation.
+
+---
+
+## Key Observation
+
+Random exploration achieved:
+
+```text
+0 % success
+```
+
+NEXAH navigation achieved:
+
+```text
+23.6 % success
+```
+
+This difference is significant because
+the target region is not trivially reachable.
+
+If the target were easy to reach,
+random exploration would also show
+non-zero success.
+
+Instead we observe:
+
+```text
+Random = 0 %
+NEXAH  = 23.6 %
+```
+
+suggesting that navigation exploits
+real geometric structure inside the field.
+
+---
+
+## Structural Interpretation
+
+The PCA field now reveals several distinct regions:
+
+```text
+LEFT BASIN
+    ↓
+TRANSITION FIELD
+    ↓
+TARGET REGION
+    ↓
+OUTER FIELD
+```
+
+NEXAH successfully traverses this structure,
+while random motion remains trapped
+inside the origin basin.
+
+---
+
+## Conclusion
+
+EXP_19 provides the first direct evidence that
+field geometry can be used for targeted navigation
+between dynamically separated regions.
+
+The experiment demonstrates that:
+
+- navigation can be goal-oriented
+- field structure improves reachability
+- random exploration fails
+- NEXAH identifies usable transport geometry
+
+This represents the first operational demonstration
+of the NEXAH Navigation Layer.
+
+---
+
+## Status
+
+```text
+EXP_14  Transport Discovery           ✓
+EXP_15  Gate Discovery                ✓
+EXP_16  Regime Steering               ✓
+EXP_17  Single Gate Ablation          ✓
+EXP_18  Corridor Ablation             ✓
+EXP_18B Gate Usage Mapping            ✓
+EXP_19  Target Region Navigation      ✓
+```
+
+Field Control Phase remains active.
