@@ -1614,3 +1614,69 @@ EXP_19  Target Region Navigation      ✓
 ```
 
 Field Control Phase remains active.
+
+## EXP_20 — Navigation vs Shortest Path
+
+### Objective
+
+Compare NEXAH field-based navigation against classical shortest-path routing.
+
+The experiment evaluates whether field geometry alone can reproduce the performance of globally optimized graph navigation.
+
+---
+
+### Results
+
+| Metric | Shortest Path | NEXAH |
+|----------|----------|----------|
+| Success Rate | 99.6% | 98.8% |
+| Average Path Length | 16.26 | 15.12 |
+
+---
+
+### Visuals
+
+![Navigation Success](outputs/EXP_20_NAVIGATION_VS_SHORTEST_PATH/exp20_navigation_success.png)
+
+*Comparison of successful arrivals.*
+
+![Path Efficiency](outputs/EXP_20_NAVIGATION_VS_SHORTEST_PATH/exp20_path_efficiency.png)
+
+*Average path length comparison.*
+
+![Navigation Field](outputs/EXP_20_NAVIGATION_VS_SHORTEST_PATH/exp20_navigation_field.png)
+
+*Field geometry used during navigation.*
+
+---
+
+### Findings
+
+The shortest-path baseline achieves a success rate of 99.6%.
+
+NEXAH field navigation achieves a nearly identical success rate of 98.8%.
+
+The observed difference is minimal.
+
+More importantly, NEXAH produces slightly shorter successful trajectories:
+
+- Shortest Path: 16.26 average nodes
+- NEXAH: 15.12 average nodes
+
+This indicates that navigation emerges directly from the geometry of the field rather than requiring explicit global shortest-path computation.
+
+---
+
+### Interpretation
+
+The experiment demonstrates that the discovered field contains sufficient structural information to support navigation.
+
+NEXAH does not perform a global graph search.
+
+Instead, navigation is generated through local geometric decisions within the field.
+
+Despite this limitation, performance remains nearly identical to classical shortest-path routing.
+
+This suggests that the field itself encodes navigable transport structure.
+
+EXP_20 therefore provides evidence that the NEXAH field is not merely a visualization layer but acts as a functional navigation substrate.
