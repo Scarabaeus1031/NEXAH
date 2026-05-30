@@ -1,0 +1,7 @@
+EXP_24 OUT OF DISTRIBUTION NAVIGATION
+========================================
+
+Known Nodes  : 399
+Hidden Nodes : 102
+Success Rate : 1.0000
+Average Steps: 27.7500
