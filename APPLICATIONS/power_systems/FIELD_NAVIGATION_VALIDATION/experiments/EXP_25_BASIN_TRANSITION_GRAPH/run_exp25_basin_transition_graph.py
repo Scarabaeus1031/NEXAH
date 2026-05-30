@@ -381,7 +381,7 @@ transition_table = transition_table.sort_values(
 
 transition_table.to_csv(
     os.path.join(
-        OUTPUTtransition_table.to_csv
+        OUTPUT_DIR
         "exp25_transition_table.csv"
 ),
     index=False
