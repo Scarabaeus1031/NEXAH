@@ -1168,3 +1168,275 @@ The combination of:
 - attractor basins (EXP_24E)
 
 now forms a coherent navigation hierarchy and strongly supports the interpretation of the discovered field as a structured dynamical landscape suitable for navigation and regime analysis.
+
+## Findings
+
+### EXP_25 — Basin Transition Graph
+
+This experiment investigated how the attractor basins discovered in EXP_24E are connected to each other.
+
+Rather than analyzing individual states, we elevated the representation to a higher structural level:
+
+```text
+State
+   ↓
+Attractor Basin
+   ↓
+Transition Network
+```
+
+The resulting graph forms the first NEXAH State-Space Atlas.
+
+---
+
+### Experimental Results
+
+Field Statistics:
+
+- States: 540
+- Basins: 18
+- Graph Edges: 3938
+- Cross-Basin Edges: 701
+- Basin Transitions: 29
+
+The field is therefore not fragmented into isolated regions.
+
+Instead, attractor basins are connected through a sparse but highly structured transition network.
+
+---
+
+### Emergence of a Basin Atlas
+
+The transition network reveals that basins organize into a navigable topology.
+
+Instead of:
+
+```text
+Random Cloud
+```
+
+the field exhibits:
+
+```text
+Territory
+   ↓
+Boundary
+   ↓
+Transition
+   ↓
+Territory
+```
+
+Each basin acts as a dynamic region, while transition edges define the routes between them.
+
+This is the first direct evidence that the latent field contains a higher-order navigation structure.
+
+---
+
+### Two Distinct Geometric Regimes
+
+The transition network reveals a clear asymmetry.
+
+#### Left Branch
+
+A nearly linear chain emerges:
+
+```text
+4
+↓
+15
+↓
+10
+↓
+6
+↓
+3
+↓
+0
+```
+
+This resembles:
+
+- large-scale territories
+- long transport corridors
+- hierarchical progression
+
+The left branch behaves like a macro-regime structure.
+
+---
+
+#### Right Crown
+
+The right side exhibits a denser local network:
+
+```text
+1
+2
+7
+9
+...
+```
+
+with multiple competing transition routes.
+
+This resembles:
+
+- local navigation
+- regime switching
+- fragmented stability territories
+
+The crown region therefore contains significantly richer local structure.
+
+---
+
+### Transition Strength
+
+Edge thickness represents:
+
+```text
+Transition Count
+```
+
+which measures how many graph connections cross from one basin into another.
+
+Therefore:
+
+```text
+Thicker Edge
+=
+Higher Transition Capacity
+```
+
+The strongest corridors appear between:
+
+```text
+0 ↔ 3
+3 ↔ 6
+2 ↔ 9
+1 ↔ 7
+```
+
+These corridors likely represent the primary transport routes of the latent field.
+
+---
+
+### Hierarchical Structure
+
+Combining all findings now yields:
+
+```text
+Geometry
+    ↓
+Curvature
+    ↓
+Gates
+    ↓
+Basins
+    ↓
+Transition Network
+```
+
+This hierarchy emerged experimentally and was not imposed by the analysis.
+
+---
+
+### Relationship to Previous Experiments
+
+EXP_24C revealed:
+
+```text
+Shape
+```
+
+EXP_24D revealed:
+
+```text
+Gates
+```
+
+EXP_24E revealed:
+
+```text
+Territories
+```
+
+EXP_25 reveals:
+
+```text
+Roads
+```
+
+The latent manifold is therefore no longer interpretable as a static embedding.
+
+It now exhibits:
+
+- geometry
+- bottlenecks
+- attractor territories
+- transition corridors
+- transport topology
+
+forming a structured navigable state-space.
+
+---
+
+### Interpretation
+
+The field can now be interpreted as a connected landscape:
+
+```text
+States
+   ↓
+Basins
+   ↓
+Transition Corridors
+   ↓
+Atlas
+```
+
+The resulting structure resembles:
+
+- watershed systems
+- transportation networks
+- regime landscapes
+- topological atlases
+
+rather than a conventional machine-learning embedding.
+
+---
+
+### Visual Evidence
+
+#### Basin Transition Network
+
+![EXP_25 Basin Transition Network](./outputs/EXP_25_BASIN_TRANSITION_GRAPH/exp25_basin_transition_network.png)
+
+Nodes represent attractor basins.
+
+Node size corresponds to basin size.
+
+Edge thickness corresponds to transition strength between basins.
+
+The network reveals a clear distinction between the linear left branch and the densely connected right crown.
+
+---
+
+### Key Observation
+
+For the first time, the latent field can be interpreted as a true navigation topology:
+
+```text
+State
+   ↓
+Basin
+   ↓
+Transition Corridor
+   ↓
+Basin
+```
+
+The discovered field is therefore not merely a geometric embedding.
+
+It behaves as a structured atlas containing identifiable territories and transport routes.
+
+This constitutes the first experimental realization of a NEXAH State-Space Navigation Map.
