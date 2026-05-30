@@ -1680,3 +1680,57 @@ Despite this limitation, performance remains nearly identical to classical short
 This suggests that the field itself encodes navigable transport structure.
 
 EXP_20 therefore provides evidence that the NEXAH field is not merely a visualization layer but acts as a functional navigation substrate.
+
+## EXP_21 — Blocked Field Navigation
+
+### Objective
+
+Test whether NEXAH navigation remains functional after
+removing a region of the discovered field.
+
+A central cluster of field states was removed and
+navigation was repeated between distant regions.
+
+### Results
+
+| Metric | Original | Blocked |
+|----------|----------|----------|
+| Success Rate | 1.000 | 1.000 |
+| Average Steps | 26.01 | 25.48 |
+| Removed Nodes | - | 22 |
+| Remaining Nodes | 501 | 479 |
+
+### Visuals
+
+![Blocked Field](outputs/EXP_21_BLOCKED_FIELD_NAVIGATION/exp21_blocked_field.png)
+
+![Navigation Success](outputs/EXP_21_BLOCKED_FIELD_NAVIGATION/exp21_navigation_success.png)
+
+![Arrival Steps](outputs/EXP_21_BLOCKED_FIELD_NAVIGATION/exp21_arrival_steps.png)
+
+### Findings
+
+Removing a local field region did not reduce navigation
+performance.
+
+The success rate remained at 100%.
+
+Average travel distance decreased slightly after removal.
+
+This indicates that the removed nodes were not part of a
+critical transport backbone.
+
+The discovered field therefore contains structural
+redundancy and alternative routes.
+
+### Conclusion
+
+EXP_21 provides the first evidence that NEXAH navigation
+is robust against local field damage.
+
+Navigation survives partial field degradation without
+loss of reachability.
+
+This is consistent with the hypothesis that transport
+is carried by a distributed field structure rather than
+a single fragile corridor.
