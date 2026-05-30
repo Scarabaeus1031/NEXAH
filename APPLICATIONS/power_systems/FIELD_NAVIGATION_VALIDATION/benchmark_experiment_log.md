@@ -300,7 +300,7 @@ For each scenario:
 
 ### Known Field Coverage
 
-![EXP_22 Known Field Examples](visuals/exp22_known_field_examples.png)
+![EXP_22 Known Field Examples](./outputs/EXP_22_PARTIAL_KNOWLEDGE_BENCHMARK/exp22_known_field_examples.png)
 
 **File:**
 
