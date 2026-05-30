@@ -1,0 +1,6 @@
+EXP_31 TRANSITION PREDICTION
+========================================
+
+States: 540
+Basins: 18
+Top Transition Candidates: 40
