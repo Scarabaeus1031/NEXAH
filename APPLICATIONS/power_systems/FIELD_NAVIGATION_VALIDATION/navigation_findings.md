@@ -1343,3 +1343,154 @@ This is the first direct test of
 field-based navigation using
 real power-system dynamics.
 
+# EXP_09B — GATE IMPORTANCE
+
+## Objective
+
+Determine which gate nodes contribute most to field-navigation efficiency.
+
+Method:
+
+1. Remove one gate at a time
+2. Recompute optimal navigation
+3. Measure transport-cost increase
+4. Rank gates by contribution
+
+---
+
+## Results
+
+Gate Nodes:
+
+    6
+
+Baseline Gate Path:
+
+    94.0497
+
+---
+
+### Gate Ranking
+
+| Gate Node | Impact |
+|------------|---------:|
+| 81  | 5.6377 |
+| 498 | 4.6685 |
+| 502 | 4.6685 |
+| 33  | 3.3897 |
+| 184 | 0.0000 |
+| 250 | 0.0000 |
+
+---
+
+## Findings
+
+Not all gates contribute equally.
+
+The field appears to contain a hierarchy of transport structures.
+
+Four gates actively support navigation:
+
+    81
+    498
+    502
+    33
+
+while
+
+    184
+    250
+
+have negligible influence on transport cost.
+
+---
+
+## Dominant Gate
+
+Most Important Gate:
+
+    81
+
+Impact:
+
+    +5.64
+
+Removing Gate 81 produces the largest increase in navigation cost.
+
+This identifies Gate 81 as the primary transport bottleneck discovered so far.
+
+---
+
+## Structural Observation
+
+Two gates exhibit identical impact:
+
+    498
+    502
+
+Both increase navigation cost by:
+
+    +4.668
+
+suggesting a highly symmetric transport pair.
+
+These nodes may represent a duplicated bridge or twin corridor structure within the field.
+
+---
+
+## Interpretation
+
+The gate system is not random.
+
+The importance ranking suggests the existence of a transport backbone:
+
+    502
+      ↓
+    498
+      ↓
+     81
+      ↓
+     33
+
+This axis corresponds closely to the gate-localization results from EXP_09C.
+
+---
+
+## Scientific Assessment
+
+EXP_09B demonstrates that:
+
+    Some gates matter.
+    Others do not.
+
+Therefore:
+
+    Gate Detection
+            +
+    Navigation Impact
+
+are strongly correlated.
+
+This is evidence for a genuine transport skeleton embedded in the reconstructed field.
+
+---
+
+## Status
+
+GATE HIERARCHY DETECTED
+
+Validation: PASSED
+
+---
+
+## Visual Evidence
+
+### Visual 1 — Gate Importance Ranking
+
+![Gate Importance](./outputs/EXP_09B_GATE_IMPORTANCE/exp09b_gate_importance.png)
+
+Navigation-cost increase after removal of individual gate nodes.
+
+Higher values indicate stronger contribution to field transport.
+
+Gate 81 emerges as the dominant transport bottleneck, followed by the twin gate pair 498 and 502.
