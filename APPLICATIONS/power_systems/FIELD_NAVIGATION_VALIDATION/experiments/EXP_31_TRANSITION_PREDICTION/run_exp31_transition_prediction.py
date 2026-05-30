@@ -60,7 +60,10 @@ print(f"Output -> {OUTPUT_DIR}")
 # Load
 # ============================================================
 
-states_file = INPUT_DIR / "state_features.csv"
+states_file = (
+    INPUT_DIR
+    / "exp08_field_states.csv"
+)
 
 df = pd.read_csv(states_file)
 
