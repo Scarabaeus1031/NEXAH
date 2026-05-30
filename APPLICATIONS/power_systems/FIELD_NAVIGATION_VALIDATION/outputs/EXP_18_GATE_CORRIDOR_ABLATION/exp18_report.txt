@@ -1,0 +1,34 @@
+
+EXP_18 GATE CORRIDOR ABLATION
+========================================
+
+States:
+540
+
+Baseline Length:
+35.652360
+
+Baseline Nodes:
+13
+
+Gate Corridor:
+[33, 81, 498, 502]
+
+Interpretation
+----------------------------------------
+
+EXP_17 removed gates individually.
+
+EXP_18 removes entire
+transport segments.
+
+Questions:
+
+Does connectivity collapse?
+
+Does navigation cost increase?
+
+Does the field fragment?
+
+This is the first direct test
+of corridor-level causality.
