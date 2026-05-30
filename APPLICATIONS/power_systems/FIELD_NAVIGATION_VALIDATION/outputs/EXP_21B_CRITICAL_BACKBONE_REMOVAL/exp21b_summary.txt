@@ -1,0 +1,10 @@
+EXP_21B CRITICAL BACKBONE REMOVAL
+========================================
+
+Baseline Success: 1.0000
+Baseline Steps  : 27.6060
+
+scenario  removed_nodes  success_rate  avg_steps  remaining_nodes
+Top_1pct              5           1.0     27.728              496
+Top_3pct             15           1.0     32.792              486
+Top_5pct             25           1.0     32.566              476
