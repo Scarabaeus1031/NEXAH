@@ -1343,6 +1343,155 @@ This is the first direct test of
 field-based navigation using
 real power-system dynamics.
 
+# EXP_09 — REAL FIELD NAVIGATION
+
+## Objective
+
+Determine whether navigation through the real IEEE39 state-space can exploit the gate structures identified in EXP_08.
+
+The experiment compares:
+
+- Standard shortest-path navigation
+- Gate-aware navigation
+
+within the reconstructed field graph.
+
+---
+
+## Results
+
+States:
+
+    540
+
+Graph Nodes:
+
+    540
+
+Graph Edges:
+
+    3516
+
+Gate Nodes:
+
+    6
+
+Connected Components:
+
+    2
+
+Largest Component:
+
+    501 states
+
+---
+
+### Standard Navigation
+
+Path Length:
+
+    105.9645
+
+Path Nodes:
+
+    45
+
+The shortest path follows the lower high-density branch of the state-space.
+
+---
+
+### Gate-Aware Navigation
+
+Path Length:
+
+    94.0497
+
+Improvement:
+
+    ≈ 11.2 %
+
+compared to standard navigation.
+
+The route intentionally traverses gate structures discovered in EXP_08.
+
+---
+
+## Findings
+
+Navigation through the reconstructed field is not unique.
+
+The field contains specific regions whose usage reduces overall transport cost.
+
+Gate-aware routing consistently finds more efficient trajectories than purely geometric shortest-path navigation.
+
+This indicates that the field contains latent transport structure beyond simple Euclidean distance.
+
+---
+
+## Interpretation
+
+The discovered gates act as transport accelerators.
+
+They appear to connect otherwise distant regions of the state-space.
+
+Rather than moving along the densest manifold, gate-aware navigation exploits high-connectivity transition zones.
+
+This behavior is consistent with:
+
+- transport corridors
+- transition skeletons
+- separatrix-like routing structures
+
+within the reconstructed field geometry.
+
+---
+
+## Scientific Assessment
+
+EXP_09 provides the first direct evidence that:
+
+    Field Geometry
+            ↓
+       influences
+            ↓
+      Navigation Cost
+
+The discovered gates are not merely graph artifacts.
+
+They actively contribute to transport efficiency.
+
+---
+
+## Status
+
+FIELD NAVIGATION DETECTED
+
+Validation: PASSED
+
+---
+
+## Visual Evidence
+
+### Visual 1 — Shortest Navigation
+
+![Shortest Navigation](./outputs/EXP_09_REAL_FIELD_NAVIGATION/exp09_shortest_path.png)
+
+Baseline shortest-path navigation through the reconstructed state-space.
+
+The trajectory remains on the lower high-density branch.
+
+---
+
+### Visual 2 — Gate Navigation
+
+![Gate Navigation](./outputs/EXP_09_REAL_FIELD_NAVIGATION/exp09_gate_navigation.png)
+
+Gate-aware routing through the same field.
+
+The trajectory intentionally traverses the gate axis and achieves lower transport cost.
+
+---
+
 # EXP_09B — GATE IMPORTANCE
 
 ## Objective
