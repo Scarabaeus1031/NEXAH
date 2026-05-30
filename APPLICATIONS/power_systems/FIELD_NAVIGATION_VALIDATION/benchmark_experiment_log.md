@@ -1800,3 +1800,297 @@ Transition Dynamics
 ```
 
 which investigates how trajectories actually move through the atlas and whether preferred transition flows exist between territories.
+
+## Findings
+
+### EXP_27 — Transition Dynamics & Traffic Flow
+
+This experiment investigated whether all basin connections contribute equally to navigation, or whether a small subset of routes dominates movement through the latent field.
+
+Instead of merely detecting basin connectivity (EXP_25) or shortest navigation paths (EXP_26), EXP_27 measures actual route usage across the basin atlas.
+
+Result:
+
+- 18 basins detected
+- 29 atlas roads identified
+- 540 latent states analyzed
+- Strong traffic concentration on a small number of roads
+
+The field therefore behaves neither as a random network nor as a uniformly connected graph.
+
+Instead, navigation naturally concentrates onto preferred transport corridors.
+
+---
+
+### Emergence of a Road Hierarchy
+
+Route usage is highly uneven.
+
+Several roads carry significantly more traffic than others:
+
+```text
+0 -> 3   : 60
+3 -> 6   : 57
+
+2 -> 9   : 42
+7 -> 13  : 42
+
+11 -> 14 : 40
+
+9 -> 16  : 35
+
+1 -> 14  : 31
+1 -> 17  : 31
+
+8 -> 13  : 30
+6 -> 10  : 30
+```
+
+This reveals a clear hierarchy:
+
+```text
+Local Roads
+      ↓
+Regional Roads
+      ↓
+Highways
+```
+
+Not all basin transitions are equally important.
+
+A small number of routes dominate navigation through the atlas.
+
+---
+
+### Backbone Transport Corridor
+
+The strongest roads form a continuous transport chain:
+
+```text
+4
+↓
+15
+↓
+10
+↓
+6
+↓
+3
+↓
+0
+```
+
+This structure behaves like a backbone corridor spanning the entire latent manifold.
+
+Rather than isolated basins, the field contains a large-scale transport route connecting distant territories.
+
+This is the first evidence that the discovered field possesses macroscopic navigation structure.
+
+---
+
+### Traffic Concentration
+
+The road-usage distribution reveals an important asymmetry.
+
+Most roads carry relatively little traffic.
+
+Only a handful act as major transport channels.
+
+Conceptually:
+
+```text
+Many roads
+↓
+
+Few highways
+```
+
+The latent field therefore exhibits transport concentration.
+
+This resembles:
+
+- transportation networks
+- river systems
+- airline route maps
+- flow bottlenecks in dynamical systems
+
+Navigation naturally collapses onto preferred pathways.
+
+---
+
+### Directionality Structure
+
+The transition matrix reveals several dominant directional channels.
+
+The strongest transitions cluster into a small subset of basin pairs.
+
+Notable concentrations occur around:
+
+```text
+60
+57
+
+42
+42
+
+40
+
+35
+```
+
+Rather than a diffuse transition landscape, the atlas exhibits directed transport corridors.
+
+This suggests that movement through the field is constrained by underlying geometric structure.
+
+---
+
+### Local Loops and Alternative Routes
+
+The crown region exhibits a different behavior.
+
+Unlike the linear backbone corridor, several basin groups form local loop structures:
+
+```text
+1
+/ \
+8—13
+```
+
+and related small subnetworks.
+
+These regions provide:
+
+- alternative paths
+- local circulation
+- route redundancy
+
+The crown therefore behaves more like an urban street network, whereas the left branch behaves like a long-distance highway.
+
+---
+
+### Relationship to Previous Experiments
+
+EXP_24E established:
+
+```text
+Basins
+↓
+Attractors
+```
+
+EXP_25 established:
+
+```text
+Basins
+↓
+Roads
+```
+
+EXP_26 established:
+
+```text
+Roads
+↓
+Navigation
+```
+
+EXP_27 extends the hierarchy further:
+
+```text
+Basins
+↓
+Roads
+↓
+Navigation
+↓
+Traffic
+```
+
+The field now contains not only territories and routes, but also measurable transport dynamics.
+
+---
+
+### Interpretation of the Atlas
+
+Combining EXP_24E through EXP_27 now reveals:
+
+```text
+EXP_24E
+Territories
+
+EXP_25
+Road Network
+
+EXP_26
+Navigation Atlas
+
+EXP_27
+Traffic Dynamics
+```
+
+The latent manifold can therefore be interpreted as a structured transportation landscape.
+
+It exhibits:
+
+- attractor territories
+- transition roads
+- navigation corridors
+- dominant highways
+- local loop systems
+- traffic concentration
+
+Together these features form a coherent navigation architecture.
+
+---
+
+### Visual Evidence
+
+#### Dominant Routes
+
+![EXP_27 Dominant Routes](./outputs/EXP_27_TRANSITION_DYNAMICS/exp27_dominant_routes.png)
+
+A small subset of roads dominates movement through the atlas and forms a large-scale transport backbone.
+
+---
+
+#### Road Usage Distribution
+
+![EXP_27 Road Usage](./outputs/EXP_27_TRANSITION_DYNAMICS/exp27_road_usage_distribution.png)
+
+Traffic is highly concentrated onto a limited number of major routes.
+
+---
+
+#### Transition Directionality
+
+![EXP_27 Directionality](./outputs/EXP_27_TRANSITION_DYNAMICS/exp27_transition_directionality.png)
+
+The strongest transitions cluster into distinct directional channels rather than spreading uniformly across the atlas.
+
+---
+
+#### Transition Flow Map
+
+![EXP_27 Flow Map](./outputs/EXP_27_TRANSITION_DYNAMICS/exp27_transition_flow_map.png)
+
+The basin atlas exhibits both long-distance backbone corridors and local loop structures, creating a multi-scale navigation system.
+
+---
+
+### Key Observation
+
+For the first time, the latent field exhibits a complete transport hierarchy:
+
+```text
+Territories
+     ↓
+Roads
+     ↓
+Navigation
+     ↓
+Traffic
+```
+
+The discovered field is therefore not merely a geometric embedding.
+
+It behaves as a structured transportation network whose routes, bottlenecks and highways emerge directly from the latent geometry.
