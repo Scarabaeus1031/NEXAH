@@ -322,3 +322,157 @@ print(
     "\nTransitions:",
     len(transition_table)
 )
+# ------------------------------------------------------------
+# Basin Transition Matrix
+# ------------------------------------------------------------
+
+transition_matrix = np.zeros(
+    (n_basins, n_basins),
+    dtype=int
+)
+
+for u, v in G.edges():
+
+    bu = node_basin[u]
+    bv = node_basin[v]
+
+    if bu != bv:
+
+        transition_matrix[bu, bv] += 1
+        transition_matrix[bv, bu] += 1
+
+cross_basin_edges = int(
+    transition_matrix.sum() / 2
+)
+
+print(
+    "Cross-basin edges:",
+    cross_basin_edges
+)
+
+# ------------------------------------------------------------
+# Transition Table
+# ------------------------------------------------------------
+
+rows = []
+
+for i in range(n_basins):
+
+    for j in range(i + 1, n_basins):
+
+        count = transition_matrix[i, j]
+
+        if count > 0:
+
+            rows.append({
+                "source_basin": i,
+                "target_basin": j,
+                "transition_count": int(count),
+                "source_size": int(basin_sizes[i]),
+                "target_size": int(basin_sizes[j])
+            })
+
+transition_table = pd.DataFrame(rows)
+
+transition_table = transition_table.sort_values(
+    "transition_count",
+    ascending=False
+)
+
+transition_table.to_csv(
+    os.path.join(
+        OUTPUTtransition_table.to_csv(
+    os.path.join(
+        OUTPUT_DIR,
+        "exp25_transition_table.csv"
+    ),
+    index=False
+)
+
+print(
+    "\nTransitions:",
+    len(transition_table)
+)
+
+# ------------------------------------------------------------
+# Visual 1
+# Basin Transition Network
+# ------------------------------------------------------------
+
+BG = nx.Graph()
+
+for b in range(n_basins):
+
+    BG.add_node(
+        b,
+        size=int(basin_sizes[b])
+    )
+
+for _, row in transition_table.iterrows():
+
+    BG.add_edge(
+        int(row["source_basin"]),
+        int(row["target_basin"]),
+        weight=int(
+            row["transition_count"]
+        )
+    )
+
+plt.figure(
+    figsize=(10, 8)
+)
+
+pos = {
+    b: basin_centroids[b]
+    for b in BG.nodes()
+}
+
+edge_widths = [
+    0.5 + BG[u][v]["weight"] * 0.08
+    for u, v in BG.edges()
+]
+
+nx.draw_networkx_edges(
+    BG,
+    pos,
+    width=edge_widths,
+    alpha=0.35
+)
+
+nx.draw_networkx_nodes(
+    BG,
+    pos,
+    node_size=[
+        100 + basin_sizes[b] * 8
+        for b in BG.nodes()
+    ],
+    alpha=0.9
+)
+
+nx.draw_networkx_labels(
+    BG,
+    pos,
+    font_size=8
+)
+
+plt.title(
+    "EXP_25 Basin Transition Network"
+)
+
+plt.axis("off")
+
+plt.tight_layout()
+
+plt.savefig(
+    os.path.join(
+        OUTPUT_DIR,
+        "exp25_basin_transition_network.png"
+    ),
+    dpi=300
+)
+
+plt.close()
+
+print(
+    "Saved: exp25_basin_transition_network.png"
+)
