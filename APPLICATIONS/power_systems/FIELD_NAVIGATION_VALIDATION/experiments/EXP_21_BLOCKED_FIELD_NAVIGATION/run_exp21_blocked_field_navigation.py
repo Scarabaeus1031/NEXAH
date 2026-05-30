@@ -1,22 +1,14 @@
 # ============================================================
 # EXP_21 — BLOCKED FIELD NAVIGATION
 #
-# Question:
-# Can NEXAH still navigate successfully when parts
-# of the discovered field are removed?
+# Can NEXAH still navigate when parts of the
+# discovered field are removed?
 #
-# We compare:
-#   1. Original field
-#   2. Damaged field
-#
-# Output:
-#   exp21_navigation_success.png
-#   exp21_arrival_steps.png
-#   exp21_blocked_field.png
-#   exp21_summary.txt
+# NEXAH Validation Program
 # ============================================================
 
-import os
+from pathlib import Path
+
 import random
 import numpy as np
 import pandas as pd
@@ -25,42 +17,53 @@ import matplotlib.pyplot as plt
 
 from sklearn.neighbors import NearestNeighbors
 
-# ------------------------------------------------------------
+# ============================================================
 # Paths
-# ------------------------------------------------------------
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parents[2]
 
 INPUT_DIR = (
-    "APPLICATIONS/power_systems/"
-    "FIELD_NAVIGATION_VALIDATION/outputs/"
-    "EXP_08_REAL_FIELD_GEOMETRY"
+    BASE_DIR
+    / "outputs"
+    / "EXP_08_REAL_FIELD_GEOMETRY"
 )
 
 OUTPUT_DIR = (
-    "APPLICATIONS/power_systems/"
-    "FIELD_NAVIGATION_VALIDATION/outputs/"
-    "EXP_21_BLOCKED_FIELD_NAVIGATION"
+    BASE_DIR
+    / "outputs"
+    / "EXP_21_BLOCKED_FIELD_NAVIGATION"
 )
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+OUTPUT_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
-print("\nInput  ->", os.path.abspath(INPUT_DIR))
-print("Output ->", os.path.abspath(OUTPUT_DIR))
+print()
+print(f"Input  -> {INPUT_DIR}")
+print(f"Output -> {OUTPUT_DIR}")
+print()
 
-# ------------------------------------------------------------
-# Load states
-# ------------------------------------------------------------
+# ============================================================
+# Load Data
+# ============================================================
 
 df = pd.read_csv(
-    os.path.join(INPUT_DIR, "exp08_field_states.csv")
+    INPUT_DIR / "exp08_field_states.csv"
 )
 
-coords = df[["x", "y"]].values
+coords = df[
+    ["pca_x", "pca_y"]
+].values
 
-print("\nLoaded states:", len(coords))
+print(
+    f"Loaded states: {len(coords)}"
+)
 
-# ------------------------------------------------------------
-# Build graph
-# ------------------------------------------------------------
+# ============================================================
+# Build kNN Graph
+# ============================================================
 
 K = 8
 
@@ -76,45 +79,82 @@ for i in range(len(coords)):
     G.add_node(i)
 
 for i in range(len(coords)):
-    for j, d in zip(indices[i][1:], distances[i][1:]):
-        G.add_edge(i, j, weight=float(d))
+
+    for j, d in zip(
+        indices[i][1:],
+        distances[i][1:]
+    ):
+
+        G.add_edge(
+            i,
+            j,
+            weight=float(d)
+        )
 
 largest_component = max(
     nx.connected_components(G),
     key=len
 )
 
-G = G.subgraph(largest_component).copy()
+G = G.subgraph(
+    largest_component
+).copy()
 
-print("Graph nodes:", G.number_of_nodes())
-print("Graph edges:", G.number_of_edges())
+print(
+    f"Graph nodes: {G.number_of_nodes()}"
+)
 
-# ------------------------------------------------------------
-# Define damaged region
-# ------------------------------------------------------------
+print(
+    f"Graph edges: {G.number_of_edges()}"
+)
 
-nodes = np.array(list(G.nodes()))
+# ============================================================
+# Create Damage Region
+# ============================================================
+
+nodes = np.array(
+    list(G.nodes())
+)
 
 xs = coords[nodes, 0]
 ys = coords[nodes, 1]
 
-# central field region
+# ------------------------------------------------------------
+# Adaptive central corridor damage
+# ------------------------------------------------------------
+
+x_min = np.percentile(xs, 35)
+x_max = np.percentile(xs, 65)
+
+y_min = np.percentile(ys, 35)
+y_max = np.percentile(ys, 65)
 
 blocked_mask = (
-    (xs > -5)
-    & (xs < 25)
-    & (ys > -2)
-    & (ys < 12)
+    (xs > x_min)
+    & (xs < x_max)
+    & (ys > y_min)
+    & (ys < y_max)
 )
 
-blocked_nodes = nodes[blocked_mask]
+blocked_nodes = nodes[
+    blocked_mask
+]
 
-print("\nBlocked nodes:", len(blocked_nodes))
+print()
+print(
+    f"Blocked nodes: {len(blocked_nodes)}"
+)
 
 G_blocked = G.copy()
-G_blocked.remove_nodes_from(blocked_nodes)
 
-# largest surviving component
+G_blocked.remove_nodes_from(
+    blocked_nodes
+)
+
+if G_blocked.number_of_nodes() == 0:
+    raise RuntimeError(
+        "Blocked graph became empty."
+    )
 
 largest_after = max(
     nx.connected_components(G_blocked),
@@ -126,22 +166,31 @@ G_blocked = G_blocked.subgraph(
 ).copy()
 
 print(
-    "Remaining nodes:",
-    G_blocked.number_of_nodes()
+    f"Remaining nodes: {G_blocked.number_of_nodes()}"
 )
 
-# ------------------------------------------------------------
-# Region definitions
-# ------------------------------------------------------------
+# ============================================================
+# Define Left / Right Regions
+# ============================================================
+
+left_threshold = np.percentile(
+    coords[:, 0],
+    20
+)
+
+right_threshold = np.percentile(
+    coords[:, 0],
+    80
+)
 
 left_region = [
     n for n in G.nodes()
-    if coords[n, 0] < -25
+    if coords[n, 0] < left_threshold
 ]
 
 right_region = [
     n for n in G.nodes()
-    if coords[n, 0] > 40
+    if coords[n, 0] > right_threshold
 ]
 
 left_region_blocked = [
@@ -154,37 +203,53 @@ right_region_blocked = [
     if n in G_blocked
 ]
 
-print("Left region :", len(left_region_blocked))
-print("Right region:", len(right_region_blocked))
+print(
+    f"Left region : {len(left_region_blocked)}"
+)
 
-# ------------------------------------------------------------
-# Navigation function
-# ------------------------------------------------------------
+print(
+    f"Right region: {len(right_region_blocked)}"
+)
 
-def field_navigation(graph, start, targets, max_steps=100):
+# ============================================================
+# Navigation
+# ============================================================
+
+def field_navigation(
+    graph,
+    start,
+    targets,
+    max_steps=100
+):
+
+    if len(targets) == 0:
+        return False, max_steps
 
     current = start
+
     visited = {current}
+
+    target_center = np.mean(
+        coords[list(targets)],
+        axis=0
+    )
 
     for step in range(max_steps):
 
         if current in targets:
             return True, step
 
-        nbrs = list(graph.neighbors(current))
-
-        if not nbrs:
-            break
-
-        target_center = np.mean(
-            coords[list(targets)],
-            axis=0
+        neighbors = list(
+            graph.neighbors(current)
         )
 
-        best = None
+        if len(neighbors) == 0:
+            return False, max_steps
+
+        best_node = None
         best_score = np.inf
 
-        for n in nbrs:
+        for n in neighbors:
 
             if n in visited:
                 continue
@@ -194,183 +259,238 @@ def field_navigation(graph, start, targets, max_steps=100):
             )
 
             if score < best_score:
+
                 best_score = score
-                best = n
+                best_node = n
 
-        if best is None:
-            break
+        if best_node is None:
+            return False, max_steps
 
-        current = best
+        current = best_node
+
         visited.add(current)
 
     return False, max_steps
 
-# ------------------------------------------------------------
+# ============================================================
 # Trials
-# ------------------------------------------------------------
+# ============================================================
+
+random.seed(42)
+np.random.seed(42)
 
 N = 500
 
 success_original = 0
-steps_original = []
-
 success_blocked = 0
+
+steps_original = []
 steps_blocked = []
+
+# ------------------------------------------------------------
+# Original Field
+# ------------------------------------------------------------
 
 for _ in range(N):
 
-    s = random.choice(left_region)
+    start = random.choice(
+        left_region
+    )
 
-    ok, st = field_navigation(
+    ok, steps = field_navigation(
         G,
-        s,
+        start,
         set(right_region)
     )
 
     success_original += int(ok)
-    steps_original.append(st)
+
+    steps_original.append(steps)
+
+# ------------------------------------------------------------
+# Damaged Field
+# ------------------------------------------------------------
 
 for _ in range(N):
 
-    if not left_region_blocked:
+    if (
+        len(left_region_blocked) == 0
+        or len(right_region_blocked) == 0
+    ):
         break
 
-    s = random.choice(
+    start = random.choice(
         left_region_blocked
     )
 
-    ok, st = field_navigation(
+    ok, steps = field_navigation(
         G_blocked,
-        s,
+        start,
         set(right_region_blocked)
     )
 
     success_blocked += int(ok)
-    steps_blocked.append(st)
 
-# ------------------------------------------------------------
+    steps_blocked.append(steps)
+
+# ============================================================
 # Metrics
-# ------------------------------------------------------------
+# ============================================================
 
-orig_rate = success_original / N
-
-blocked_rate = (
-    success_blocked /
-    max(1, len(steps_blocked))
+orig_rate = (
+    success_original / N
 )
 
-orig_steps = np.mean(steps_original)
+blocked_rate = (
+    success_blocked
+    / max(1, len(steps_blocked))
+)
 
-blocked_steps = np.mean(steps_blocked)
+orig_steps = np.mean(
+    steps_original
+)
 
-print("\nOriginal Success:", round(orig_rate, 4))
-print("Blocked Success :", round(blocked_rate, 4))
+blocked_steps = (
+    np.mean(steps_blocked)
+    if len(steps_blocked) > 0
+    else np.nan
+)
 
-print("Original Steps :", round(orig_steps, 4))
-print("Blocked Steps  :", round(blocked_steps, 4))
+print()
+print(
+    f"Original Success: {orig_rate:.4f}"
+)
 
-# ------------------------------------------------------------
+print(
+    f"Blocked Success : {blocked_rate:.4f}"
+)
+
+print()
+
+print(
+    f"Original Steps : {orig_steps:.4f}"
+)
+
+print(
+    f"Blocked Steps  : {blocked_steps:.4f}"
+)
+
+# ============================================================
 # Plot 1
-# ------------------------------------------------------------
+# ============================================================
 
-plt.figure(figsize=(7, 5))
+plt.figure(
+    figsize=(7, 5)
+)
 
 plt.bar(
     ["Original", "Blocked"],
     [orig_rate, blocked_rate]
 )
 
-plt.ylabel("Success Rate")
-plt.title("EXP_21 — Navigation Success")
+plt.ylabel(
+    "Success Rate"
+)
+
+plt.title(
+    "EXP_21 Navigation Success"
+)
 
 plt.tight_layout()
 
 plt.savefig(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp21_navigation_success.png"
-    ),
+    OUTPUT_DIR
+    / "exp21_navigation_success.png",
     dpi=300
 )
 
 plt.close()
 
-# ------------------------------------------------------------
+# ============================================================
 # Plot 2
-# ------------------------------------------------------------
+# ============================================================
 
-plt.figure(figsize=(7, 5))
+plt.figure(
+    figsize=(7, 5)
+)
 
 plt.bar(
     ["Original", "Blocked"],
     [orig_steps, blocked_steps]
 )
 
-plt.ylabel("Average Steps")
-plt.title("EXP_21 — Arrival Steps")
+plt.ylabel(
+    "Average Steps"
+)
+
+plt.title(
+    "EXP_21 Arrival Steps"
+)
 
 plt.tight_layout()
 
 plt.savefig(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp21_arrival_steps.png"
-    ),
+    OUTPUT_DIR
+    / "exp21_arrival_steps.png",
     dpi=300
 )
 
 plt.close()
 
-# ------------------------------------------------------------
+# ============================================================
 # Plot 3
-# ------------------------------------------------------------
+# ============================================================
 
-plt.figure(figsize=(9, 7))
+plt.figure(
+    figsize=(9, 7)
+)
 
 plt.scatter(
     coords[:, 0],
     coords[:, 1],
     s=20,
-    alpha=0.25
+    alpha=0.25,
+    label="Field"
 )
 
-plt.scatter(
-    coords[blocked_nodes, 0],
-    coords[blocked_nodes, 1],
-    s=30
-)
+if len(blocked_nodes) > 0:
+
+    plt.scatter(
+        coords[blocked_nodes, 0],
+        coords[blocked_nodes, 1],
+        s=30,
+        label="Blocked"
+    )
+
+plt.legend()
 
 plt.title(
-    "EXP_21 — Blocked Field Region"
+    "EXP_21 Blocked Field Region"
 )
 
 plt.tight_layout()
 
 plt.savefig(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp21_blocked_field.png"
-    ),
+    OUTPUT_DIR
+    / "exp21_blocked_field.png",
     dpi=300
 )
 
 plt.close()
 
-# ------------------------------------------------------------
+# ============================================================
 # Summary
-# ------------------------------------------------------------
+# ============================================================
 
 with open(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp21_summary.txt"
-    ),
+    OUTPUT_DIR / "exp21_summary.txt",
     "w"
 ) as f:
 
     f.write(
         "EXP_21 BLOCKED FIELD NAVIGATION\n"
     )
+
     f.write(
         "========================================\n\n"
     )
@@ -378,6 +498,7 @@ with open(
     f.write(
         f"Original Success: {orig_rate:.4f}\n"
     )
+
     f.write(
         f"Blocked Success : {blocked_rate:.4f}\n"
     )
@@ -385,8 +506,19 @@ with open(
     f.write(
         f"Original Steps  : {orig_steps:.4f}\n"
     )
+
     f.write(
         f"Blocked Steps   : {blocked_steps:.4f}\n"
     )
 
-print("\nEXP_21 completed.")
+    f.write(
+        f"Blocked Nodes   : {len(blocked_nodes)}\n"
+    )
+
+    f.write(
+        f"Remaining Nodes : {G_blocked.number_of_nodes()}\n"
+    )
+
+print()
+print("EXP_21 completed.")
+print()
