@@ -1440,3 +1440,363 @@ The discovered field is therefore not merely a geometric embedding.
 It behaves as a structured atlas containing identifiable territories and transport routes.
 
 This constitutes the first experimental realization of a NEXAH State-Space Navigation Map.
+
+## Findings
+
+### EXP_26 — Basin Navigation & Atlas Routing
+
+This experiment extended EXP_25 by transforming the basin transition graph into a navigable atlas.
+
+Instead of asking:
+
+```text
+Which basins exist?
+```
+
+EXP_26 asks:
+
+```text
+How can one travel between basins?
+```
+
+The result is the first basin-level navigation model inside the discovered latent field.
+
+---
+
+### Atlas Statistics
+
+```text
+States:          540
+Basins:           18
+Atlas Edges:      29
+Shortest Paths:  153
+```
+
+Navigation between attractor territories is therefore not arbitrary.
+
+A structured routing network exists.
+
+---
+
+### Navigation Hubs Emerge
+
+Betweenness analysis identifies several dominant routing basins.
+
+Top hubs:
+
+```text
+Basin 0 : 0.4412
+Basin 2 : 0.3824
+Basin 3 : 0.3824
+Basin 1 : 0.3162
+Basin 6 : 0.3088
+Basin 9 : 0.3088
+```
+
+These basins act as:
+
+```text
+Transit Junctions
+```
+
+rather than simple attractor regions.
+
+Many shortest paths pass through them.
+
+---
+
+### Atlas Backbone Structure
+
+The basin network is not fully connected in a random fashion.
+
+Instead a dominant backbone appears:
+
+```text
+4
+↓
+15
+↓
+10
+↓
+6
+↓
+3
+↓
+0
+```
+
+which then branches into the crown region.
+
+This suggests:
+
+```text
+Peripheral Basin
+      ↓
+Transition Corridor
+      ↓
+Core Hub
+      ↓
+Crown Territories
+```
+
+The atlas therefore exhibits a hierarchical transport structure.
+
+---
+
+### Evidence for a Structural Break
+
+A particularly important observation appears in the navigation routes.
+
+The J-manifold is not behaving as one continuous territory.
+
+Instead:
+
+```text
+Left Arm
+     ↓
+Transition Zone
+     ↓
+Crown Region
+```
+
+appears separated by a narrow transport bottleneck.
+
+This reproduces earlier findings from:
+
+```text
+EXP_24D
+```
+
+where gate structures and bottlenecks emerged.
+
+The navigation atlas therefore supports the hypothesis that the latent field contains genuine transition corridors.
+
+---
+
+### Peripheral Escape Territory
+
+One basin stands apart:
+
+```text
+Basin 4
+```
+
+Navigation from Basin 4 requires traversal through:
+
+```text
+4
+↓
+15
+↓
+10
+↓
+6
+↓
+3
+↓
+0
+```
+
+before reaching the remainder of the field.
+
+This basin behaves more like:
+
+```text
+Outpost
+Peripheral Territory
+Escape Region
+```
+
+than a central member of the manifold.
+
+---
+
+### Distance Matrix Structure
+
+The basin distance matrix reveals non-random organization.
+
+Several observations emerge:
+
+- compact basin clusters
+- cluster-of-cluster organization
+- diagonal transport structure
+- central high-connectivity blocks
+
+The matrix suggests that basin organization occurs on multiple scales.
+
+Instead of:
+
+```text
+Basins
+```
+
+the field appears to contain:
+
+```text
+Basins
+    ↓
+Groups
+    ↓
+Meta-Groups
+```
+
+This resembles the modular structures previously observed in:
+
+```text
+EXP_13A
+Prime Overlay Structures
+```
+
+where local resonance islands organized into larger coherent regions.
+
+---
+
+### Navigation Routes
+
+The shortest-path overlay demonstrates that navigation follows preferred corridors.
+
+Routes do not spread uniformly.
+
+Instead they repeatedly reuse:
+
+```text
+0
+2
+3
+6
+9
+```
+
+as transport hubs.
+
+This indicates:
+
+```text
+preferred motion channels
+```
+
+inside the latent geometry.
+
+The field therefore behaves more like a transportation network than a simple embedding.
+
+---
+
+### Relationship to Previous Experiments
+
+EXP_24E discovered:
+
+```text
+Attractors
+Basins
+Territories
+```
+
+EXP_25 discovered:
+
+```text
+Connections
+Between Territories
+```
+
+EXP_26 now reveals:
+
+```text
+Navigation
+Through Territories
+```
+
+Together they form:
+
+```text
+Field
+ ↓
+Basins
+ ↓
+Transition Network
+ ↓
+Atlas
+ ↓
+Navigation
+```
+
+---
+
+### Visual Evidence
+
+#### Atlas Backbone
+
+![EXP_26 Atlas Backbone](./outputs/EXP_26_BASIN_NAVIGATION/exp26_atlas_backbone.png)
+
+The basin atlas exhibits a dominant transport backbone with peripheral and central regions.
+
+---
+
+#### Basin Distance Matrix
+
+![EXP_26 Distance Matrix](./outputs/EXP_26_BASIN_NAVIGATION/exp26_distance_matrix.png)
+
+The matrix reveals modular organization, cluster structure and transport hierarchy.
+
+---
+
+#### Navigation Routes
+
+![EXP_26 Navigation Routes](./outputs/EXP_26_BASIN_NAVIGATION/exp26_navigation_routes.png)
+
+Shortest-path routing follows preferred corridors rather than arbitrary movement.
+
+---
+
+### Key Observation
+
+For the first time the latent field can be interpreted as a navigable atlas:
+
+```text
+Geometry
+   ↓
+Gates
+   ↓
+Basins
+   ↓
+Atlas
+   ↓
+Navigation
+```
+
+The discovered structure now possesses:
+
+- geometry
+- bottlenecks
+- attractors
+- territories
+- transport routes
+
+which together form the first operational NEXAH navigation landscape.
+
+---
+
+### Current NEXAH Status
+
+```text
+EXP_24D
+Field has Gates
+
+EXP_24E
+Field has Territories
+
+EXP_25
+Territories are Connected
+
+EXP_26
+Territories are Navigable
+```
+
+The next logical step becomes:
+
+```text
+EXP_27
+
+Transition Dynamics
+```
+
+which investigates how trajectories actually move through the atlas and whether preferred transition flows exist between territories.
