@@ -1,0 +1,33 @@
+
+EXP_09B GATE IMPORTANCE
+========================================
+
+Gate Nodes:
+6
+
+Baseline Gate Path:
+94.049676
+
+Most Important Gate:
+81
+
+Impact:
+5.637679871570256
+
+Interpretation
+----------------------------------------
+
+Higher impact means:
+
+Removing the gate increases
+navigation cost.
+
+Very high impact suggests:
+
+    bottleneck
+
+    corridor controller
+
+    transport bridge
+
+Potential NEXAH Gate Candidate.
