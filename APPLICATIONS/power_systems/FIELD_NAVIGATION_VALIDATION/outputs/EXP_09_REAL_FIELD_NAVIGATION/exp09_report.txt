@@ -1,0 +1,15 @@
+
+EXP_09 REAL FIELD NAVIGATION
+========================================
+
+States:
+540
+
+Gate Nodes:
+6
+
+Shortest Path Length:
+105.964532
+
+Gate Path Length:
+94.049676
