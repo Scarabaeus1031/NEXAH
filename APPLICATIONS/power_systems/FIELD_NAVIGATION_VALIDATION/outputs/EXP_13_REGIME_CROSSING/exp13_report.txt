@@ -1,0 +1,34 @@
+
+EXP_13 REGIME CROSSING VALIDATION
+========================================
+
+States:
+540
+
+LEFT States:
+164
+
+RIGHT States:
+376
+
+Crossings:
+219
+
+Interpretation
+----------------------------------------
+
+This experiment measures how frequently
+samples switch sides relative to the
+gate-axis:
+
+502 -> 498 -> 81 -> 33
+
+Because EXP_08 consists of Monte-Carlo
+samples, crossing counts should be
+interpreted as crossing density rather
+than true temporal transitions.
+
+A concentration of crossings near the
+axis supports the hypothesis that the
+gate corridor approximates a regime
+boundary.
