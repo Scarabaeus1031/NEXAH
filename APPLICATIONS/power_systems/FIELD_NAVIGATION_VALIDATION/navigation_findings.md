@@ -625,9 +625,7 @@ Peak modularity occurs at k = 4.
 Independent confirmation of the four-community decomposition.
 ---
 
-========================================================
-EXP_07 — COMMUNITY TO BASIN MAPPING
-========================================================
+### EXP_07 — COMMUNITY TO BASIN MAPPING
 
 Objective
 --------------------------------------------------------
@@ -828,9 +826,9 @@ The result suggests that communities and basins are related, but not identical.
 
 Graph topology captures part of the dynamical structure, while basin membership contains additional state-space information.
 
-============================
-COMBINED CONCLUSION
-============================
+---
+
+### COMBINED CONCLUSION
 
 EXP_06 established:
 
