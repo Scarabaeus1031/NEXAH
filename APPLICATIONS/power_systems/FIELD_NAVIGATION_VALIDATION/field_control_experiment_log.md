@@ -1175,3 +1175,263 @@ SUPPORTED
 Next:
 EXP_18B — Gate Usage Mapping
 ```
+## EXP_18B — GATE USAGE MAPPING
+
+### Objective
+
+After EXP_17 and EXP_18 showed that removing individual gates or even the entire gate corridor does not collapse the navigation graph, a new question emerged:
+
+> Are the gates actually being used by optimal navigation paths?
+
+EXP_18B therefore measures corridor participation directly.
+
+Instead of removing structures, we observe how shortest paths naturally move through the discovered field.
+
+---
+
+### Method
+
+For 1000 randomly selected start–goal pairs:
+
+1. Compute the shortest navigation path.
+2. Check whether the path traverses any of the corridor gates:
+
+```text
+33
+81
+498
+502
+```
+
+3. Count gate usage frequencies.
+4. Measure overall corridor participation.
+5. Construct a field-wide path usage heatmap.
+
+---
+
+### Results
+
+#### Gate Usage Frequency
+
+| Gate | Usage Frequency |
+|--------|--------:|
+| 33 | 11.4 % |
+| 81 | 0.4 % |
+| 498 | 2.1 % |
+| 502 | 0.3 % |
+
+Total corridor participation:
+
+```text
+13.7 %
+```
+
+Only 13.7% of all shortest paths traverse at least one corridor gate.
+
+---
+
+### Visual — Gate Usage Frequency
+
+![](outputs/EXP_18B_GATE_USAGE_MAPPING/exp18b_gate_usage_frequency.png)
+
+---
+
+### Visual — Corridor Participation
+
+![](outputs/EXP_18B_GATE_USAGE_MAPPING/exp18b_corridor_participation.png)
+
+---
+
+### Visual — Field Usage Heatmap
+
+![](outputs/EXP_18B_GATE_USAGE_MAPPING/exp18b_field_usage_heatmap.png)
+
+---
+
+## Key Finding 1
+
+### The corridor is not a dominant transport backbone
+
+The original corridor hypothesis predicted:
+
+```text
+Many shortest paths
+should naturally route through
+33 → 81 → 498 → 502
+```
+
+This was not observed.
+
+Most shortest paths bypass the corridor entirely.
+
+---
+
+## Key Finding 2
+
+### Gate hierarchy emerges
+
+The gates are not equally important.
+
+Observed usage:
+
+```text
+Gate 33  -> 11.4 %
+Gate 498 ->  2.1 %
+Gate 81  ->  0.4 %
+Gate 502 ->  0.3 %
+```
+
+This reveals a strong asymmetry.
+
+The gate system appears hierarchical rather than uniform.
+
+Possible interpretation:
+
+```text
+Primary Gate:
+33
+
+Secondary Gate:
+498
+
+Minor Gates:
+81
+502
+```
+
+---
+
+## Key Finding 3
+
+### The heatmap reveals regional transport
+
+The most important observation is not the gate statistics.
+
+It is the heatmap.
+
+The dominant transport activity does not concentrate on the four gate nodes.
+
+Instead, elevated path usage appears across the broader central transition region.
+
+The field therefore seems to organize navigation through:
+
+```text
+Region Transport
+```
+
+rather than
+
+```text
+Node Transport
+```
+
+---
+
+## Structural Interpretation
+
+The field appears to contain:
+
+```text
+Dark Region A
+
+      ↓
+
+Transition Region
+
+      ↓
+
+Dark Region B
+```
+
+Navigation preferentially flows through the transition region as a whole.
+
+The gates are markers within that region rather than unique transport bottlenecks.
+
+---
+
+## Relation to Previous Experiments
+
+### EXP_17
+
+```text
+Single Gate Removal
+```
+
+Result:
+
+```text
+No significant impact
+```
+
+---
+
+### EXP_18
+
+```text
+Corridor Removal
+```
+
+Result:
+
+```text
+No fragmentation
+No path-length increase
+```
+
+---
+
+### EXP_18B
+
+```text
+Usage Mapping
+```
+
+Result:
+
+```text
+Limited gate participation
+
+Strong regional transport structure
+```
+
+---
+
+## Conclusion
+
+EXP_18B shifts the working hypothesis from:
+
+```text
+Gate Navigation
+```
+
+toward:
+
+```text
+Region-Based Navigation
+```
+
+The discovered gates do not form a dominant transport backbone.
+
+Instead, they appear to be embedded within a larger transition region that carries most of the field's navigational structure.
+
+This suggests that future control experiments should focus on:
+
+```text
+Transition Regions
+
+instead of
+
+Individual Gate Nodes
+```
+
+---
+
+### Status
+
+```text
+Phase C
+
+Field Control & Intervention
+
+EXP_18B completed successfully.
+```
