@@ -1,0 +1,11 @@
+EXP_18B GATE USAGE MAPPING
+========================================
+
+Valid Paths: 1000
+
+Gate 33: 0.1140
+Gate 81: 0.0040
+Gate 498: 0.0210
+Gate 502: 0.0030
+
+Corridor Usage: 0.1370
