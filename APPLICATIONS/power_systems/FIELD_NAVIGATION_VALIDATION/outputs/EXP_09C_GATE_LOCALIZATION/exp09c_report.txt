@@ -1,0 +1,30 @@
+
+EXP_09C GATE LOCALIZATION
+========================================
+
+Gate Nodes:
+6
+
+Gate List:
+[33, 81, 184, 250, 498, 502]
+
+Closest Gate Pair:
+498
+<-> 
+502
+
+Distance:
+8.246010
+
+Purpose
+----------------------------------------
+
+Determine whether gate nodes:
+
+1. Cluster together
+
+2. Form corridor structures
+
+3. Occupy transition regions
+
+4. Connect distinct field regimes
