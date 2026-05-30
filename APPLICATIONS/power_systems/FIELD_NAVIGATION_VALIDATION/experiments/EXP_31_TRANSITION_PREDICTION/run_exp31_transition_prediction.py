@@ -36,16 +36,16 @@ from sklearn.neighbors import NearestNeighbors
 # Paths
 # ============================================================
 
-ROOT = Path(__file__).resolve().parents[3]
+FIELD_ROOT = Path(__file__).resolve().parents[2]
 
 INPUT_DIR = (
-    ROOT
+    FIELD_ROOT
     / "outputs"
     / "EXP_08_REAL_FIELD_GEOMETRY"
 )
 
 OUTPUT_DIR = (
-    ROOT
+    FIELD_ROOT
     / "outputs"
     / "EXP_31_TRANSITION_PREDICTION"
 )
