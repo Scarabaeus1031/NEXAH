@@ -1,0 +1,22 @@
+EXP_24E LATENT ATTRACTOR & BASIN DETECTION
+========================================
+
+States: 540
+Attractors: 18
+
+Largest Basins
+Node 10 : 72
+Node 85 : 53
+Node 29 : 52
+Node 318 : 40
+Node 361 : 36
+Node 263 : 35
+Node 239 : 32
+Node 65 : 30
+Node 167 : 27
+Node 422 : 26
+Node 93 : 24
+Node 476 : 24
+Node 454 : 19
+Node 483 : 16
+Node 466 : 15
