@@ -1,0 +1,40 @@
+
+EXP_17 GATE ABLATION CONTROL
+========================================
+
+States:
+540
+
+Baseline Path Length:
+35.652360
+
+Gate Nodes:
+[33, 81, 184, 250, 498, 502]
+
+Most Critical Gate:
+33
+
+Impact:
+0.000000
+
+Interpretation
+----------------------------------------
+
+Ablation removes one gate
+at a time and recomputes
+navigation performance.
+
+Large impact indicates:
+
+    causal importance
+
+for transport.
+
+Small impact indicates:
+
+    redundant structure
+
+or secondary importance.
+
+This is the first direct
+causal test of gate function.
