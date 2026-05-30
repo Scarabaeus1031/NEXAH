@@ -2741,3 +2741,293 @@ Gate Discovery
 and prepares the next stage:
 
 EXP_15 — Forced Regime Crossing
+
+
+# EXP_15 — FORCED REGIME CROSSING
+
+## Objective
+
+EXP_11–EXP_14 suggested that the discovered gate axis separates two distinct operating regimes and behaves as a transition corridor rather than a simple geometric divider.
+
+EXP_15 investigates how much displacement is required to force a state across this boundary.
+
+---
+
+## Input
+
+Source:
+
+```text
+EXP_08_REAL_FIELD_GEOMETRY
+```
+
+Gate Nodes:
+
+```text
+33
+81
+184
+250
+498
+502
+```
+
+Output:
+
+```text
+outputs/EXP_15_FORCED_REGIME_CROSSING
+```
+
+---
+
+## Key Metrics
+
+```text
+States: 540
+
+Mean Critical Distance:
+10.150269
+
+Median Critical Distance:
+9.648241
+```
+
+---
+
+# Visual Analysis
+
+---
+
+## Visual 1 — Critical Distance Histogram
+
+![EXP_15 Critical Distance Histogram](outputs/EXP_15_FORCED_REGIME_CROSSING/exp15_critical_distance_histogram.png)
+
+### Observation
+
+The distribution spans a broad range of displacement values.
+
+There is no dominant peak near zero.
+
+### Interpretation
+
+```text
+Most states are not sitting
+directly on the transition boundary.
+
+Most states occupy stable
+regions of the field.
+```
+
+This suggests that the reconstructed geometry contains genuine basin depth.
+
+States generally require a measurable perturbation before a regime transition becomes possible.
+
+---
+
+## Visual 2 — Crossing Map
+
+![EXP_15 Crossing Map](outputs/EXP_15_FORCED_REGIME_CROSSING/exp15_crossing_map.png)
+
+Color scale:
+
+```text
+Dark Purple  → Small displacement required
+
+Yellow       → Large displacement required
+```
+
+### Observation
+
+A low-distance corridor appears around the gate structure.
+
+Critical distance increases progressively as states move away from the corridor.
+
+### Interpretation
+
+```text
+Near Gate:
+High Sensitivity
+
+Far From Gate:
+High Stability
+```
+
+This is precisely what would be expected from a transition region embedded inside a larger stability landscape.
+
+The gate does not behave like a line.
+
+It behaves like a finite-width passage.
+
+---
+
+## Visual 3 — Crossing Probability
+
+![EXP_15 Crossing Probability](outputs/EXP_15_FORCED_REGIME_CROSSING/exp15_crossing_probability.png)
+
+### Observation
+
+Crossing probability increases smoothly with applied displacement.
+
+The curve shows:
+
+```text
+Small Push
+    ↓
+Low Crossing Probability
+
+Large Push
+    ↓
+Higher Crossing Probability
+```
+
+### Interpretation
+
+No sharp threshold exists.
+
+Instead we observe a gradual transition.
+
+This strongly suggests:
+
+```text
+Regime A
+    ⇄
+Transition Corridor
+    ⇄
+Regime B
+```
+
+rather than
+
+```text
+Regime A | Regime B
+```
+
+The gate therefore possesses spatial width and internal structure.
+
+---
+
+## Visual 4 — Gate Sensitivity
+
+![EXP_15 Gate Sensitivity](outputs/EXP_15_FORCED_REGIME_CROSSING/exp15_gate_sensitivity.png)
+
+### Observation
+
+All gate nodes show similar average distances.
+
+No node stands out as an isolated crossing trigger.
+
+### Interpretation
+
+```text
+Distributed Gate
+
+not
+
+Single Trigger Point
+```
+
+The transition mechanism appears to be collective.
+
+The entire gate corridor participates in the crossing process.
+
+---
+
+# Findings
+
+EXP_15 extends the results of EXP_11–EXP_14 by quantifying the displacement required to induce a regime transition.
+
+Key observations:
+
+```text
+Mean Critical Distance:
+10.15
+
+Median Critical Distance:
+9.65
+```
+
+The measured values indicate that transitions require finite movement through state space.
+
+The discovered gate therefore behaves as:
+
+```text
+A Structured Transition Corridor
+```
+
+rather than:
+
+```text
+A Simple Geometric Divider
+```
+
+---
+
+## Relation To Previous Experiments
+
+### EXP_11
+
+```text
+Detected regime separation.
+```
+
+### EXP_12
+
+```text
+Confirmed basin structure.
+```
+
+### EXP_13
+
+```text
+Detected crossing corridor.
+```
+
+### EXP_14
+
+```text
+Observed navigation interaction
+with the corridor.
+```
+
+### EXP_15
+
+```text
+Measured how much displacement
+is required to force a crossing.
+```
+
+---
+
+# Conclusion
+
+Current evidence consistently supports the existence of a finite-width transition corridor embedded within the reconstructed NEXAH field geometry.
+
+The gate exhibits:
+
+```text
+Geometry
++
+Width
++
+Sensitivity Gradient
++
+Distributed Structure
+```
+
+rather than behaving as a simple binary boundary.
+
+---
+
+## Status
+
+```text
+Gate Corridor Hypothesis
+
+SUPPORTED
+
+EXP_11 ✓
+EXP_12 ✓
+EXP_13 ✓
+EXP_14 ✓
+EXP_15 ✓
+```
