@@ -1,0 +1,9 @@
+EXP_21 BLOCKED FIELD NAVIGATION
+========================================
+
+Original Success: 1.0000
+Blocked Success : 1.0000
+Original Steps  : 26.0120
+Blocked Steps   : 25.4780
+Blocked Nodes   : 22
+Remaining Nodes : 479
