@@ -550,3 +550,190 @@ The field behaves similarly to a resilient resonant structure:
 - navigation continues to exploit the surviving structural organization.
 
 This is an important benchmark result because real-world systems rarely provide perfectly accurate state information. NEXAH appears capable of operating successfully within such imperfect environments.
+
+# EXP_24 — OUT-OF-DISTRIBUTION NAVIGATION
+
+## Objective
+
+Evaluate whether NEXAH can successfully navigate toward target regions that were not fully represented in the known field during construction.
+
+Unlike previous experiments, a significant portion of the latent state space is intentionally hidden before navigation begins.
+
+The question is:
+
+> Can NEXAH discover a valid transport route into previously unseen regions of the state manifold?
+
+---
+
+## Experimental Setup
+
+Dataset:
+
+```text
+EXP_08_REAL_FIELD_GEOMETRY
+```
+
+Field Graph:
+
+```text
+Nodes: 501
+Edges: 2417
+```
+
+OOD Split:
+
+```text
+Known Nodes  : 399
+Hidden Nodes : 102
+```
+
+Navigation Regions:
+
+```text
+Start Nodes  : 158
+Target Nodes : 25
+```
+
+The hidden nodes were excluded from the navigation model during field construction.
+
+Navigation therefore occurs using only the known portion of the latent geometry.
+
+---
+
+## Results
+
+```text
+Success Rate : 1.0000
+Average Steps: 27.7500
+```
+
+---
+
+## Interpretation
+
+NEXAH successfully reached the target region despite approximately 20% of the latent field being hidden during construction.
+
+This indicates that navigation does not rely on memorizing individual states.
+
+Instead, transport appears to emerge from the underlying geometry of the field itself.
+
+The result suggests that NEXAH can extrapolate beyond observed regions and continue following latent transport structures into previously unseen portions of state space.
+
+---
+
+## Geometric Observation
+
+The PCA representation already suggested that the field forms a highly structured manifold rather than a diffuse cloud.
+
+EXP_24 confirms that navigation remains functional even when portions of this manifold are removed from the navigation model.
+
+This behavior is consistent with a transport geometry rather than a lookup-based search strategy.
+
+---
+
+## Visualizations
+
+### OOD Split
+
+![EXP_24 OOD Split](./outputs/EXP_24_OUT_OF_DISTRIBUTION_NAVIGATION/exp24_ood_split.png)
+
+The hidden region (blue) was excluded from the navigation model.
+
+The known region (orange) was used for field construction.
+
+Navigation remains successful despite the partial removal of latent state information.
+
+---
+
+### OOD Navigation Success
+
+![EXP_24 Success](./outputs/EXP_24_OUT_OF_DISTRIBUTION_NAVIGATION/exp24_success.png)
+
+Navigation success remains at 100%.
+
+---
+
+## Latent Geometry Follow-Up (EXP_24C)
+
+To investigate why OOD navigation remains successful, a latent geometry analysis was performed.
+
+### PCA 2D
+
+![EXP_24C PCA 2D](./outputs/EXP_24C_LATENT_GEOMETRY_INSPECTION/exp24c_pca2d.png)
+
+The latent state space forms a continuous horn-like manifold rather than a diffuse point cloud.
+
+---
+
+### PCA 3D
+
+![EXP_24C PCA 3D](./outputs/EXP_24C_LATENT_GEOMETRY_INSPECTION/exp24c_pca3d.png)
+
+The manifold remains visible in three dimensions.
+
+Several elevated branches emerge from the dominant transport structure, suggesting the presence of rare operating regimes.
+
+---
+
+### t-SNE Projection
+
+![EXP_24C t-SNE](./outputs/EXP_24C_LATENT_GEOMETRY_INSPECTION/exp24c_tsne2d.png)
+
+The t-SNE embedding confirms that the manifold is not a PCA artifact.
+
+The field remains connected and exhibits a clear transport topology with identifiable branches and transition regions.
+
+---
+
+## EXP_24C Summary
+
+```text
+States: 540
+Features: 9
+PCA 2D explained variance: 0.8459
+```
+
+The first two principal components explain approximately:
+
+```text
+84.59%
+```
+
+of the total variance.
+
+This indicates that the discovered state space possesses an unexpectedly low-dimensional structure.
+
+---
+
+## Key Finding
+
+EXP_24 demonstrates that NEXAH navigation generalizes beyond observed regions of the latent field.
+
+EXP_24C further shows that this capability is supported by a coherent transport manifold rather than a collection of disconnected operating points.
+
+The latent geometry appears to contain identifiable corridors, branches, and transition structures that can potentially be used for stability analysis, control, and regime discovery.
+
+---
+
+## Status
+
+```text
+PASS
+```
+
+OOD navigation successfully validated.
+
+Next:
+
+```text
+EXP_24D_LATENT_CURVATURE_ANALYSIS
+```
+
+Goal:
+
+```text
+Locate gates
+Locate bottlenecks
+Locate escape routes
+Locate transport corridors
+```
