@@ -828,9 +828,9 @@ The result suggests that communities and basins are related, but not identical.
 
 Graph topology captures part of the dynamical structure, while basin membership contains additional state-space information.
 
-========================================================
+============================
 COMBINED CONCLUSION
-========================================================
+============================
 
 EXP_06 established:
 
