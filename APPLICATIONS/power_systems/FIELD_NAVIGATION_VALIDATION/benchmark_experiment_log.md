@@ -321,7 +321,7 @@ Instead, it exhibits a threshold-like transition.
 
 ### Success vs Knowledge
 
-![EXP_22 Success vs Knowledge](visuals/exp22_success_vs_knowledge.png)
+![EXP_22 Success vs Knowledge](outputs/EXP_22_PARTIAL_KNOWLEDGE_BENCHMARK/exp22_success_vs_knowledge.png)
 
 **File:**
 
@@ -344,7 +344,9 @@ This suggests the existence of a critical field-knowledge threshold.
 
 ### Steps vs Knowledge
 
-![EXP_22 Steps vs Knowledge](visuals/exp22_steps_vs_knowledge.png)
+
+
+![EXP_22 Steps vs Knowledge](./outputs/EXP_22_PARTIAL_KNOWLEDGE_BENCHMARK/exp22_steps_vs_knowledge.png)
 
 **File:**
 
