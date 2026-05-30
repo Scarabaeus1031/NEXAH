@@ -1,0 +1,244 @@
+# NEXAH Benchmark Suite
+
+## Purpose
+
+The previous validation phases established the existence, geometry, navigability, and controllability of the reconstructed NEXAH field.
+
+These results are documented in:
+
+- `navigation_experiment_log.md`
+- `field_control_experiment_log.md`
+
+Together, these experiments demonstrated:
+
+```text
+Dynamics
+    ↓
+Field Geometry
+    ↓
+Navigation
+    ↓
+Control
+```
+
+The objective of the benchmark phase is different.
+
+The benchmark phase does not ask:
+
+    Does the field exist?
+
+or
+
+    Can the field navigate?
+
+These questions have already been investigated.
+
+Instead, the benchmark phase asks:
+
+    Is NEXAH useful?
+
+and
+
+    Does NEXAH provide measurable advantages
+    compared to existing methods?
+
+---
+
+# Previous Validation Phases
+
+## Phase A — Field Discovery
+
+Document:
+
+```text
+navigation_experiment_log.md
+```
+
+Main Results:
+
+- Real field geometry detected
+- Transport corridors detected
+- Gate structures detected
+- Separatrix candidates detected
+- Regime boundaries identified
+- Regime transition corridors identified
+- Gate-based navigation demonstrated
+
+Core conclusion:
+
+```text
+The reconstructed state-space
+is not random.
+
+It forms a navigable field.
+```
+
+---
+
+## Phase B — Field Control
+
+Document:
+
+```text
+field_control_experiment_log.md
+```
+
+Main Results:
+
+- Targeted regime steering
+- Gate-aware navigation
+- Region-to-region navigation
+- Navigation efficiency analysis
+- Robustness testing
+- Backbone resilience analysis
+
+Core conclusion:
+
+```text
+The field can be used
+for directed intervention.
+
+Navigation is controllable.
+```
+
+---
+
+# Phase C — Benchmark Validation
+
+Document:
+
+```text
+benchmark_experiment_log.md
+```
+
+Objective:
+
+Evaluate NEXAH against engineering-relevant criteria.
+
+Focus:
+
+- Navigation efficiency
+- Robustness
+- Fault tolerance
+- Partial information
+- Dynamic failures
+- Prediction capability
+- Control performance
+- Real-world applicability
+
+The benchmark phase represents the transition from:
+
+```text
+Scientific Discovery
+```
+
+to
+
+```text
+Engineering Validation
+```
+
+---
+
+# Benchmark Roadmap
+
+## EXP_22 — Partial Knowledge Benchmark
+
+Question:
+
+```text
+Can NEXAH navigate effectively
+when only part of the field
+is known?
+```
+
+Comparison:
+
+- Classical shortest-path methods
+- NEXAH field navigation
+
+under incomplete information.
+
+---
+
+## EXP_23 — Dynamic Failure Benchmark
+
+Question:
+
+```text
+Can NEXAH maintain navigation
+while the field changes
+during operation?
+```
+
+---
+
+## EXP_24 — Prediction Benchmark
+
+Question:
+
+```text
+Can field geometry provide
+early-warning information
+before regime transitions occur?
+```
+
+---
+
+## EXP_25 — Control Benchmark
+
+Question:
+
+```text
+Can NEXAH actively move
+a system toward a desired
+operating region?
+```
+
+---
+
+# Benchmark Philosophy
+
+The benchmark phase is intentionally conservative.
+
+The goal is not to prove NEXAH correct.
+
+The goal is to test whether NEXAH provides measurable engineering value.
+
+Success will be evaluated using:
+
+- quantitative comparisons
+- reproducible experiments
+- baseline methods
+- robustness metrics
+- control performance
+
+Only improvements that survive direct comparison against established methods will be considered meaningful.
+
+---
+
+# Current Status
+
+Field Discovery:
+
+```text
+COMPLETE
+```
+
+Field Control:
+
+```text
+ACTIVE
+```
+
+Benchmark Validation:
+
+```text
+STARTING
+```
+
+Next Experiment:
+
+```text
+EXP_22 — PARTIAL KNOWLEDGE BENCHMARK
+```
