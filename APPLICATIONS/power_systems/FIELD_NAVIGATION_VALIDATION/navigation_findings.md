@@ -1643,3 +1643,303 @@ Navigation-cost increase after removal of individual gate nodes.
 Higher values indicate stronger contribution to field transport.
 
 Gate 81 emerges as the dominant transport bottleneck, followed by the twin gate pair 498 and 502.
+
+
+## EXP_10 — FLOW FIELD RECONSTRUCTION
+
+### Objective
+
+Reconstruct the continuous transport geometry of the IEEE39 state-space and determine whether the gate structures discovered in EXP_08–09 are embedded within coherent flow structures.
+
+---
+
+## Core Results
+
+States analyzed:
+
+- 540 converged IEEE39 operating states
+
+Detected gates:
+
+- 6 gate nodes
+
+Mean flow magnitude:
+
+- 1.447
+
+Maximum flow magnitude:
+
+- 15.065
+
+Mean flow alignment:
+
+- 0.275
+
+Maximum flow alignment:
+
+- 0.917
+
+---
+
+## Finding 1 — The State Space Contains Coherent Flow Geometry
+
+The reconstructed vector field is not random.
+
+Several regions exhibit:
+
+- coherent drift directions
+- parallel transport vectors
+- corridor-like motion
+- locally aligned transport structures
+
+This suggests that the Monte-Carlo operating states organize into a continuous transport manifold rather than a collection of isolated operating points.
+
+---
+
+### Visual
+
+![](exp10_flow_vectors.png)
+
+Observation:
+
+Multiple regions exhibit locally aligned vector bundles.
+
+Examples:
+
+- upper-right horizontal transport channel
+- upper-right vertical transport ramp
+- lower curved transport arc
+- central transition corridor
+
+---
+
+## Finding 2 — Transport Corridors Emerge Naturally
+
+The transport structure visual reveals several dominant motion directions.
+
+Most visible are:
+
+### Corridor A
+
+Upper-right horizontal channel
+
+Approximate direction:
+
+←
+
+Large number of vectors align along the same transport axis.
+
+---
+
+### Corridor B
+
+Upper-right vertical ramp
+
+Approximate direction:
+
+↓
+
+Strong coherent transport connecting higher and lower field regions.
+
+---
+
+### Corridor C
+
+Lower curved transport arc
+
+Approximate direction:
+
+following the lower field boundary
+
+This region behaves like a guided transport band.
+
+States move predominantly along the arc rather than across it.
+
+---
+
+### Visual
+
+![](exp10_transport_structure.png)
+
+---
+
+## Finding 3 — Gate Nodes Sit On Flow Structures
+
+Gate positions were originally discovered purely from graph topology:
+
+- betweenness centrality
+- navigation bottlenecks
+- shortest-path importance
+
+EXP_10 independently reconstructs the local flow geometry.
+
+Result:
+
+The same gate nodes appear on highly structured transport regions.
+
+This provides an independent validation of the gate hypothesis.
+
+---
+
+### Visual
+
+![](exp10_gate_flow_overlay.png)
+
+---
+
+## Finding 4 — Twin Gate System (498–502)
+
+Gate pair:
+
+498 ↔ 502
+
+remains the closest gate pair discovered so far.
+
+Distance:
+
+8.246
+
+Flow alignment:
+
+- Gate 498 = 0.843
+- Gate 502 = 0.852
+
+Interpretation:
+
+These nodes do not behave as isolated gates.
+
+Instead they appear to form a shared transport structure.
+
+Potential interpretation:
+
+- twin gate
+- dual transport portal
+- corridor entrance pair
+
+---
+
+## Finding 5 — Gate 184 Is The Most Aligned Gate
+
+Flow alignment:
+
+0.879
+
+This is among the highest values observed.
+
+Interpretation:
+
+Gate 184 lies directly on a dominant transport stream.
+
+It behaves less like a bottleneck and more like a major transport conduit.
+
+---
+
+## Finding 6 — Gate 33 Behaves Differently
+
+Flow alignment:
+
+-0.039
+
+Near zero.
+
+Interpretation:
+
+Local transport directions around Gate 33 are inconsistent.
+
+Neighboring vectors point in multiple directions.
+
+This suggests:
+
+- switching region
+- transition zone
+- possible separatrix candidate
+
+rather than a simple transport corridor.
+
+---
+
+## Emerging Gate Axis
+
+Current gate ordering in PCA space:
+
+502
+↓
+498
+↓
+81
+↓
+33
+
+with
+
+184
+
+acting as a secondary transport structure.
+
+---
+
+## Relation To Previous Experiments
+
+EXP_08 established:
+
+- density regions
+- bottlenecks
+- gate candidates
+
+EXP_09 established:
+
+- navigation through gates
+- ~11 % navigation improvement
+
+EXP_09B established:
+
+- gate importance hierarchy
+
+EXP_09C established:
+
+- gate localization
+- twin gate pair (498–502)
+
+EXP_10 establishes:
+
+- continuous flow geometry
+- transport corridors
+- flow-aligned gate structures
+
+This is the first experiment showing agreement between:
+
+1. graph topology
+2. transport dynamics
+3. gate localization
+
+within the same IEEE39 state-space.
+
+---
+
+## NEXAH Interpretation
+
+EXP_10 provides the first evidence that the IEEE39 state-space may be represented as:
+
+- a transport field
+- with coherent flow channels
+- containing localized gate structures
+- suitable for field-based navigation
+
+rather than requiring navigation directly on the original network graph.
+
+Status:
+
+✓ Transport corridors detected
+
+✓ Flow-aligned gates detected
+
+✓ Twin gate structure detected
+
+✓ Candidate separatrix region detected
+
+Next step:
+
+EXP_11 — Basin / Regime Structure Discovery
+
+
+
