@@ -1,0 +1,7 @@
+EXP_24C LATENT GEOMETRY INSPECTION
+========================================
+
+States: 540
+Features: 9
+PCA 2D variance: 0.8459
+UMAP available: False
