@@ -1,0 +1,40 @@
+
+EXP_12 REGIME TRANSITION CROSSING
+========================================
+
+States:
+540
+
+Gate Axis:
+502 -> 498 -> 81 -> 33
+
+LEFT States:
+164
+
+RIGHT States:
+376
+
+Strongest Regime Difference:
+angle_span
+
+Effect Size:
+-2.577055
+
+Difference Right Minus Left:
+-24.917756
+
+Interpretation
+----------------------------------------
+
+This experiment tests whether the gate-axis
+separation discovered in EXP_11 corresponds
+to measurable physical regime differences.
+
+A non-zero effect size indicates that the
+two sides of the gate axis are not merely
+geometrically separated, but differ in
+operating characteristics.
+
+Large effects suggest that the gate axis
+may correspond to a transition boundary
+between power-system regimes.
