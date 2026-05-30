@@ -1,0 +1,7 @@
+EXP_20 NAVIGATION VS SHORTEST PATH
+========================================
+
+Shortest Success: 0.9960
+NEXAH Success   : 0.9880
+Shortest Length : 16.2590
+NEXAH Length    : 15.1194
