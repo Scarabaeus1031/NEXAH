@@ -1,0 +1,18 @@
+EXP_26 BASIN NAVIGATION
+========================
+
+Basins: 18
+Atlas Edges: 29
+Shortest Paths: 153
+
+Top Navigation Hubs
+Basin 0 : 0.4412
+Basin 2 : 0.3824
+Basin 3 : 0.3824
+Basin 1 : 0.3162
+Basin 6 : 0.3088
+Basin 9 : 0.3088
+Basin 13 : 0.2647
+Basin 14 : 0.2426
+Basin 7 : 0.2206
+Basin 10 : 0.2206
