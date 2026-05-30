@@ -1,0 +1,29 @@
+
+EXP_10 FLOW FIELD RECONSTRUCTION
+========================================
+
+States:
+540
+
+Gate Nodes:
+6
+
+Mean Flow Magnitude:
+1.447312
+
+Max Flow Magnitude:
+15.065486
+
+Mean Flow Alignment:
+0.274873
+
+Max Flow Alignment:
+0.916755
+
+Purpose
+----------------------------------------
+
+Determine whether the reconstructed
+IEEE39 state-space contains coherent
+flow structures and whether gate nodes
+sit on transport-aligned regions.
