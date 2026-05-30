@@ -875,4 +875,186 @@ This remains the central open
 question following EXP_06
 and EXP_07.
 
+========================================================
+EXP_07B — REAL IEEE39 BASIN MAPPING
+========================================================
 
+Objective
+--------------------------------------------------------
+
+Test whether graph communities in the
+real IEEE39 network correspond to
+dynamically discovered stability basins.
+
+Data:
+
+    pandapower.networks.case39()
+
+Method
+--------------------------------------------------------
+
+1. Louvain community detection
+   on the real IEEE39 topology
+
+2. Monte-Carlo load perturbations
+
+3. AC power-flow simulation
+
+4. PCA state-space embedding
+
+5. DBSCAN basin discovery
+
+Results
+--------------------------------------------------------
+
+IEEE39 buses:
+
+    39
+
+Louvain communities:
+
+    5
+
+Graph modularity:
+
+    0.619802
+
+Monte-Carlo runs:
+
+    1200
+
+Converged:
+
+    540
+
+Failed:
+
+    660
+
+Detected state clusters:
+
+    0
+
+## Visual Evidence
+
+### Visual 1 — Real IEEE39 State Space
+
+![Real IEEE39 State Space](./outputs/EXP_07B_REAL_IEEE39_BASIN_MAPPING/exp07b_real_state_map.png)
+
+PCA embedding of all converged IEEE39 operating states obtained from real Monte-Carlo power-flow simulations.
+
+Observation:
+
+No clearly separated clusters emerge.
+
+Instead, the state space forms a continuous geometric structure with multiple dense regions connected through broad transition zones.
+
+This behaviour is more consistent with a stability manifold or navigable field than with isolated stability basins.
+
+Key Result:
+
+DBSCAN detected
+
+    0 clusters
+
+indicating that the real IEEE39 operating space does not naturally decompose into discrete basin regions under the tested perturbations.
+
+---
+
+Findings
+--------------------------------------------------------
+
+No clearly separated dynamical basins
+were detected.
+
+DBSCAN failed to identify stable
+cluster structures in the state space.
+
+The converged operating points form
+a continuous geometric structure
+rather than isolated attractor regions.
+
+This is the first experiment using
+real IEEE39 power-flow dynamics.
+
+Interpretation
+--------------------------------------------------------
+
+The observed state space appears
+to behave more like a continuous
+stability manifold than a collection
+of discrete basins.
+
+This suggests:
+
+    Stability Landscape
+            >
+    Basin Partitioning
+
+The system may contain:
+
+    • transition corridors
+    • regime manifolds
+    • gate regions
+    • transport structures
+
+rather than isolated stability basins.
+
+Scientific Assessment
+--------------------------------------------------------
+
+EXP_07 supported a relationship between
+communities and synthetic basin labels.
+
+EXP_07B does NOT provide evidence for
+real basin decomposition.
+
+Instead, the experiment suggests that
+real IEEE39 dynamics may occupy a
+continuous state-space geometry.
+
+This result is scientifically valuable.
+
+Negative results are important because
+they eliminate unsupported hypotheses.
+
+Current Status
+--------------------------------------------------------
+
+COMMUNITY ↔ BASIN EQUIVALENCE
+
+NOT VERIFIED
+
+Evidence for continuous state-space
+geometry:
+
+SUPPORTED
+
+Next Question
+--------------------------------------------------------
+
+Do real IEEE39 operating states form
+
+    discrete basins
+
+or
+
+    navigable manifolds ?
+
+This becomes the central question
+for the next experiment generation.
+
+Status
+--------------------------------------------------------
+
+REAL IEEE39 VALIDATION
+
+PARTIALLY SUCCESSFUL
+
+Basin hypothesis:
+    NOT CONFIRMED
+
+Field geometry hypothesis:
+    PROMISING
+
+    
