@@ -1,0 +1,30 @@
+
+
+EXP_16 TARGETED REGIME STEERING
+
+========================================
+
+States:
+
+540
+
+Random Success:
+
+0.448148
+
+Gate Success:
+
+0.564815
+
+Random Effort:
+
+15.974074
+
+Gate Effort:
+
+14.516667
+
+Control Gain:
+
+1.100395
+
