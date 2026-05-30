@@ -617,7 +617,7 @@ for every gate.
 
 ### Gate Removal Impact
 
-![Gate Impact](./outputs/EXP_17_GATE_ABLATION_CONTROL/exp17_gate_impact.png)
+![Gate Impact](./outputs/EXP_17_GATE_ABLATION_CONTROL/exp17_connectivity_impact.png)
 
 Observation:
 
@@ -627,7 +627,7 @@ No measurable increase in navigation cost occurs when any single gate is removed
 
 ### Connectivity After Removal
 
-![Connectivity](./outputs/EXP_17_GATE_ABLATION_CONTROL/exp17_connectivity.png)
+![Connectivity](./outputs/EXP_17_GATE_ABLATION_CONTROL/exp17_gate_locations.png)
 
 Observation:
 
