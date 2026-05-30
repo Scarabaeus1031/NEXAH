@@ -511,3 +511,268 @@ Basin Exit Forecasting
 Core Question:
 
 Can movement within the atlas predict when a state is about to leave its current stability territory?
+
+# Finding 12 — Basin Exit Risk Is Geometrically Structured
+
+EXP_30 — Basin Exit Forecasting
+
+The next question after atlas discovery was:
+
+```text
+Can the atlas identify states that are likely
+to leave their current operating region?
+```
+
+EXP_30 introduced the concept of:
+
+```text
+Basin Exit Risk
+```
+
+using local density, neighborhood structure,
+and proximity to competing basin regions.
+
+The objective was not to predict the exact future state.
+
+The objective was to determine whether certain atlas regions
+systematically exhibit elevated transition potential.
+
+---
+
+## Result
+
+Exit risk is not randomly distributed throughout the atlas.
+
+Instead, elevated risk concentrates in specific geometric regions.
+
+Observed pattern:
+
+```text
+Atlas Position
+        ↓
+Local Density
+        ↓
+Exit Risk
+```
+
+States near dense manifold cores exhibit low exit risk.
+
+States near sparse regions and transition sectors exhibit elevated risk.
+
+This suggests that future transitions may be partially forecastable from geometric position alone.
+
+---
+
+## Visual Evidence
+
+![Density vs Exit Risk](./outputs/EXP_30_BASIN_EXIT_FORECASTING/exp30_density_vs_risk.png)
+
+A strong inverse relationship emerges:
+
+```text
+Density ↑
+Exit Risk ↓
+```
+
+High-density operating regions behave as geometric stability reservoirs.
+
+Low-density regions exhibit substantially higher exit risk.
+
+---
+
+# Finding 12.1 — Exit Risk Concentrates Along Specific Atlas Regions
+
+The spatial risk map reveals that elevated exit probability
+is not uniformly distributed.
+
+Instead, risk accumulates along recognizable portions
+of the atlas geometry.
+
+---
+
+## Visual Evidence
+
+![Exit Risk Map](./outputs/EXP_30_BASIN_EXIT_FORECASTING/exp30_exit_risk_map.png)
+
+High-risk states appear preferentially along:
+
+- upper crown regions
+- transition sectors
+- low-density outer branches
+
+while the dense right-hand basin cluster remains comparatively stable.
+
+This indicates that atlas topology influences transition likelihood.
+
+---
+
+# Finding 12.2 — Basin Boundaries Become Observable
+
+A second analysis examined the distance of each state
+to neighboring basin structures.
+
+The goal was to identify geometric boundary regions.
+
+---
+
+## Visual Evidence
+
+![Boundary Candidates](./outputs/EXP_30_BASIN_EXIT_FORECASTING/exp30_boundary_candidates.png)
+
+The resulting map reveals distinct boundary zones.
+
+These zones are concentrated around:
+
+- branch intersections
+- curvature changes
+- sparse transition corridors
+
+rather than being distributed randomly throughout the manifold.
+
+---
+
+# Finding 12.3 — Exit Candidates Form Structured Clusters
+
+The highest-risk states were extracted and visualized separately.
+
+If exit dynamics were random, these candidates would appear scattered.
+
+Instead, they form coherent geometric groups.
+
+---
+
+## Visual Evidence
+
+![Exit Candidates](./outputs/EXP_30_BASIN_EXIT_FORECASTING/exp30_exit_candidates.png)
+
+Several candidate clusters emerge:
+
+```text
+Upper Crown Region
+```
+
+appears as the dominant exit zone.
+
+Additional candidate groups appear near:
+
+- branch junctions
+- curvature transitions
+- outer manifold sectors
+
+This suggests that exits occur through preferred geometric corridors.
+
+---
+
+# Geometric Interpretation
+
+EXP_30 reinforces a recurring observation across the atlas program.
+
+The IEEE39 operating manifold behaves less like:
+
+```text
+Random State Cloud
+```
+
+and more like:
+
+```text
+Structured Transport Geometry
+```
+
+with:
+
+- stable cores
+- transition corridors
+- geometric boundaries
+- preferred exit sectors
+
+The highest-risk states are concentrated near these structural features.
+
+---
+
+# Engineering Interpretation
+
+For a grid operator the result can be interpreted as:
+
+```text
+Current State
+        ↓
+Atlas Position
+        ↓
+Exit Risk Estimate
+```
+
+rather than:
+
+```text
+Current State
+        ↓
+Unknown Future
+```
+
+This introduces the possibility of:
+
+- transition forecasting
+- instability surveillance
+- early warning indicators
+- geometry-based operational monitoring
+
+without requiring a full dynamic simulation of future trajectories.
+
+---
+
+# EXP_30 Conclusion
+
+EXP_30 provides the first evidence that:
+
+```text
+Future transition likelihood
+is encoded in atlas geometry.
+```
+
+The atlas is therefore not merely a map of where states exist.
+
+It also contains information about:
+
+```text
+Which states are likely
+to leave their current basin.
+```
+
+This establishes the foundation for:
+
+```text
+EXP_31
+Transition Prediction
+```
+
+where the next question becomes:
+
+```text
+If a state exits,
+
+where does it go?
+```
+
+---
+
+## Current Status
+
+```text
+Dynamics
+    ↓
+Geometry
+    ↓
+Transport
+    ↓
+Basins
+    ↓
+Exit Risk
+```
+
+SUPPORTED
+
+EXP_30
+```
+
+
