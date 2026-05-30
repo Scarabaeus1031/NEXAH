@@ -1236,7 +1236,7 @@ Visual Evidence
 
 ### Visual 1 — Real IEEE39 State Space
 
-![Real State Space](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_state_space.png)
+![Real State Space](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_real_state_space.png)
 
 PCA embedding of all converged IEEE39 operating states.
 
@@ -1250,7 +1250,7 @@ a diffuse cloud.
 
 ### Visual 2 — Density Structure
 
-![Density Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_density_structure.png)
+![Density Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_density_map.png)
 
 Local state density estimated
 from k-nearest-neighbor distances.
@@ -1267,7 +1267,7 @@ occupancy zones.
 
 ### Visual 3 — Transport Structure
 
-![Transport Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_transport_structure.png)
+![Transport Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_betweenness_map.png)
 
 Betweenness centrality projected
 onto the field geometry.
