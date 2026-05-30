@@ -1696,9 +1696,9 @@ This suggests that the Monte-Carlo operating states organize into a continuous t
 
 ---
 
-### Visual
+### Visual 1 — Flow Vectors
 
-![](exp10_flow_vectors.png)
+![Flow Vectors](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_flow_vectors.png)
 
 Observation:
 
@@ -1757,9 +1757,9 @@ States move predominantly along the arc rather than across it.
 
 ---
 
-### Visual
+### Visual 3 — Transport Structure
 
-![](exp10_transport_structure.png)
+![Transport Structure](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_transport_structure.png)
 
 ---
 
@@ -1781,9 +1781,9 @@ This provides an independent validation of the gate hypothesis.
 
 ---
 
-### Visual
+### Visual 2 — Gate Flow Overlay
 
-![](exp10_gate_flow_overlay.png)
+![Gate Flow Overlay](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_gate_flow_overlay.png)
 
 ---
 
@@ -1942,4 +1942,276 @@ Next step:
 EXP_11 — Basin / Regime Structure Discovery
 
 
+# EXP_11 — SEPARATRIX VALIDATION
 
+## Objective
+
+Determine whether the gate chain discovered in EXP_09–09C behaves like a genuine transport boundary within the reconstructed IEEE39 field geometry.
+
+Hypothesis:
+
+A chain of high-centrality gate nodes should approximate a separatrix-like structure that divides the state-space into regions with different transport behavior.
+
+---
+
+## Input
+
+Source:
+
+outputs/EXP_08_REAL_FIELD_GEOMETRY/
+
+Key Inputs:
+
+- exp08_field_states.csv
+- Gate nodes from EXP_09 / EXP_09C
+
+Gate Axis:
+
+502 → 498 → 81 → 33
+
+---
+
+## Method
+
+### Step 1
+
+Construct gate axis from the four dominant transport gates:
+
+502 → 498 → 81 → 33
+
+---
+
+### Step 2
+
+Use the axis as a geometric divider.
+
+For every state:
+
+- determine which side of the axis it lies on
+- classify as LEFT or RIGHT
+
+---
+
+### Step 3
+
+Project reconstructed flow vectors onto the gate axis.
+
+Measure:
+
+- transport alignment
+- average directional agreement
+
+for both sides separately.
+
+---
+
+## Results
+
+### State Distribution
+
+Left Side States:
+
+164
+
+Right Side States:
+
+376
+
+---
+
+### Flow Alignment
+
+Mean Left Alignment:
+
+-0.077827
+
+Mean Right Alignment:
+
++0.074975
+
+---
+
+### Alignment Gap
+
+0.152802
+
+---
+
+## Interpretation
+
+The sign of the mean alignment changes across the gate axis:
+
+LEFT SIDE:
+
+negative transport alignment
+
+RIGHT SIDE:
+
+positive transport alignment
+
+This indicates that the dominant transport direction differs on opposite sides of the gate chain.
+
+The gate axis therefore behaves as a transport divider rather than a simple geometric feature.
+
+---
+
+## Key Observation
+
+Three independent findings now support the gate structure:
+
+### EXP_09
+
+Gate-aware navigation improves transport efficiency.
+
+Result:
+
+~11% shorter navigation cost
+
+---
+
+### EXP_09B
+
+Individual gate removal increases navigation cost.
+
+Most important gate:
+
+81
+
+Impact:
+
+5.64
+
+---
+
+### EXP_09C
+
+Gate nodes form a coherent transport corridor.
+
+Axis:
+
+502 → 498 → 81 → 33
+
+---
+
+### EXP_11
+
+The same gate corridor divides the field into regions with opposite mean transport alignment.
+
+Result:
+
+Alignment Gap = 0.1528
+
+---
+
+## Candidate Interpretation
+
+The gate axis
+
+502 → 498 → 81 → 33
+
+appears to approximate a transport separatrix of the reconstructed IEEE39 field.
+
+Evidence:
+
+- navigation optimization
+- gate criticality
+- corridor localization
+- flow direction sign change
+
+---
+
+# Visuals
+
+### Visual 1 — Side Classification
+
+![Side Classification](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_side_classification.png)
+
+Shows:
+
+- geometric partition of the state-space
+- LEFT and RIGHT side assignment
+- gate-axis overlay
+
+Purpose:
+
+Verify that the gate chain produces a meaningful spatial division.
+
+---
+
+### Visual 2 — Separatrix Score
+
+![Separatrix Score](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_separatrix_score.png)
+
+Shows:
+
+- alignment gap metric
+
+Result:
+
+0.1528
+
+Purpose:
+
+Quantify directional transport separation.
+
+---
+
+### Visual 3 — Gate Axis
+
+![Gate Axis](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_gate_axis.png)
+
+Shows:
+
+Gate corridor
+
+502 → 498 → 81 → 33
+
+Purpose:
+
+Visualize the dominant transport backbone discovered in EXP_09–09C.
+
+---
+
+### Visual 4 — Flow Direction Split
+
+![Flow Direction Split](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_flow_direction_split.png)
+
+Shows:
+
+Flow alignment relative to the gate axis.
+
+Colors:
+
+- red = positive alignment
+- blue = negative alignment
+
+Purpose:
+
+Reveal directional transport separation across the field.
+
+This is the strongest visual indication of separatrix-like behavior observed so far.
+
+---
+
+## Conclusion
+
+EXP_11 provides the first direct evidence that the gate corridor discovered in previous experiments is not merely a collection of central nodes.
+
+Instead, the corridor acts as a transport boundary that separates regions exhibiting opposite transport tendencies.
+
+The gate chain
+
+502 → 498 → 81 → 33
+
+is therefore a strong candidate for a separatrix-like structure within the reconstructed IEEE39 field geometry.
+
+This result connects:
+
+Field Geometry
+→ Transport Structure
+→ Navigation Efficiency
+→ Regime Separation
+
+and forms the foundation for the next phase:
+
+EXP_12 — Regime Transition Crossing.
