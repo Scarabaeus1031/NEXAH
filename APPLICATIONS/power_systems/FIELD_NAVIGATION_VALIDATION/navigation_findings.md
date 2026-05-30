@@ -2555,3 +2555,189 @@ Flow Structure
 → Transition Corridor
 
 This constitutes the first complete geometric-to-physical validation chain within the FIELD_NAVIGATION_VALIDATION framework.
+
+# EXP_14 — Regime Navigation Validation
+
+## Objective
+
+After identifying:
+
+- transport gates (EXP_08–10),
+- a candidate separatrix (EXP_11),
+- physically distinct operating regimes (EXP_12),
+- and regime-crossing density near the gate axis (EXP_13),
+
+the goal of EXP_14 was to determine whether the reconstructed flow field exhibits navigational behavior relative to the discovered gate corridor.
+
+Specifically:
+
+> Do system states move toward the gate structure, away from it, or cross between regimes?
+
+---
+
+## Results
+
+States analyzed:
+
+540
+
+Detected regime switches:
+
+7
+
+Flow movement:
+
+Toward Gate : 272
+
+Away Gate : 268
+
+Mean distance change:
+
+-0.132296
+
+---
+
+## Key Observation
+
+Although movement toward and away from the gate corridor is nearly balanced, only a very small number of states actually cross the regime boundary.
+
+7 / 540 ≈ 1.3 %
+
+This suggests:
+
+- the gate corridor is not freely traversable,
+- the identified regimes remain dynamically stable,
+- transitions occur only within a narrow neighborhood around the gate axis.
+
+---
+
+## Interpretation
+
+The reconstructed field behaves less like a fully connected state-space and more like a system containing:
+
+Regime A
+↕
+Gate Corridor
+↕
+Regime B
+
+States may drift toward the gate structure, but only a small subset crosses into the opposite regime.
+
+This behavior is consistent with:
+
+- attractor-like regime organization,
+- transport-limited transitions,
+- structured navigation pathways.
+
+---
+
+# Visual Evidence
+
+## Gate Attraction Distribution
+
+The distribution of distance changes relative to the gate axis.
+
+![Gate Attraction](./outputs/EXP_14_REGIME_NAVIGATION_VALIDATION/exp14_gate_attraction.png)
+
+### Observation
+
+- Mean distance change is slightly negative.
+- More trajectories move toward the gate than expected from a purely random field.
+- Several strong attraction events exist.
+- The gate corridor acts as a weak attractor.
+
+---
+
+## Navigation Paths
+
+Local flow vectors reconstructed from nearest-neighbor transport estimates.
+
+![Navigation Paths](./outputs/EXP_14_REGIME_NAVIGATION_VALIDATION/exp14_navigation_paths.png)
+
+### Observation
+
+- Local motion is structured.
+- Multiple coherent flow directions are visible.
+- The gate axis lies inside an active transport region.
+- Transport is not purely random.
+
+---
+
+## Regime Switch Locations
+
+Locations where trajectories switch sides relative to the gate axis.
+
+![Regime Switches](./outputs/EXP_14_REGIME_NAVIGATION_VALIDATION/exp14_regime_switches.png)
+
+### Observation
+
+- Only seven regime switches occur.
+- Nearly all switches appear directly adjacent to the gate corridor.
+- No large-scale mixing of the two regimes is observed.
+
+This is exactly what would be expected if the gate axis approximates a genuine transition boundary.
+
+---
+
+## Transition Statistics
+
+Overall navigation statistics.
+
+![Transition Statistics](./outputs/EXP_14_REGIME_NAVIGATION_VALIDATION/exp14_transition_statistics.png)
+
+### Observation
+
+Toward Gate : 272
+
+Away Gate : 268
+
+Switches : 7
+
+The field continuously explores the gate region while preserving regime stability.
+
+---
+
+## NEXAH Interpretation
+
+EXP_14 suggests that the reconstructed IEEE39 field contains:
+
+- stable operating basins,
+- a structured gate corridor,
+- limited regime permeability,
+- navigable transport geometry.
+
+The gate axis behaves less like a simple separator and more like a dynamical valve between operating modes.
+
+A useful analogy is:
+
+Mode A
+↕
+Gate Corridor
+↕
+Mode B
+
+where most trajectories approach the gate, but only a small subset successfully transition between regimes.
+
+---
+
+## Conclusion
+
+EXP_14 provides the first evidence that the reconstructed IEEE39 field may contain navigable regime structure.
+
+The discovered gate corridor:
+
+- attracts nearby trajectories,
+- remains dynamically stable,
+- permits only limited transitions,
+- and behaves as a candidate navigation interface between operating regimes.
+
+Together with EXP_11–13, this establishes:
+
+Gate Discovery
+→ Separatrix Detection
+→ Regime Identification
+→ Regime Navigation
+
+and prepares the next stage:
+
+EXP_15 — Forced Regime Crossing
