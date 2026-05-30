@@ -737,3 +737,192 @@ Locate bottlenecks
 Locate escape routes
 Locate transport corridors
 ```
+
+## EXP_24D — LATENT CURVATURE ANALYSIS
+
+### Objective
+
+The goal of EXP_24D was to investigate whether the latent geometry discovered by NEXAH contains identifiable structural bottlenecks, transition gates, curvature maxima, and potential escape directions.
+
+Rather than testing navigation performance directly, this experiment analyzes the internal geometry of the discovered field itself.
+
+---
+
+### Method
+
+Starting from the latent state space extracted in EXP_08, we:
+
+1. Constructed a k-nearest-neighbor graph in latent space.
+2. Computed node betweenness centrality.
+3. Estimated local curvature along the latent manifold.
+4. Identified high-curvature transition regions.
+5. Detected candidate gate nodes.
+6. Estimated local escape vectors around these gates.
+
+The experiment therefore focuses on:
+
+- Geometry
+- Topology
+- Transport structure
+
+instead of navigation outcomes.
+
+---
+
+### Results
+
+```text
+States:              540
+Graph Nodes:         540
+PCA Variance:        0.8459
+
+Top Gate Candidates: 20
+```
+
+The latent manifold exhibits a highly structured topology that resembles a curved "J-shaped" or "horn-shaped" geometry.
+
+Unlike earlier interpretations, the field does not appear to consist of two mirrored halves.
+
+Instead, the structure is more consistent with:
+
+```text
+Branch
+  ↓
+Neck
+  ↓
+Reservoir
+```
+
+or
+
+```text
+Stem
+  ↓
+Transition Gate
+  ↓
+Basin
+```
+
+---
+
+### Curvature Analysis
+
+![EXP_24D Curvature Map](./outputs/EXP_24D_LATENT_CURVATURE_ANALYSIS/exp24d_curvature_map.png)
+
+The highest curvature regions are concentrated along:
+
+- the thin outer branch,
+- the transition corridor,
+- and the upper crown structure.
+
+The dense reservoir region on the right side exhibits comparatively low curvature.
+
+This suggests that most geometric deformation occurs during transport into the basin rather than inside the basin itself.
+
+---
+
+### Bottleneck Analysis
+
+![EXP_24D Bottlenecks](./outputs/EXP_24D_LATENT_CURVATURE_ANALYSIS/exp24d_bottlenecks.png)
+
+Betweenness centrality is strongly concentrated near the neck of the structure.
+
+The most important transport nodes are not located within the largest cluster but instead sit at the transition region connecting the stem and reservoir.
+
+This indicates the presence of genuine transport bottlenecks.
+
+---
+
+### Gate Candidate Detection
+
+![EXP_24D Gate Candidates](./outputs/EXP_24D_LATENT_CURVATURE_ANALYSIS/exp24d_gate_candidates.png)
+
+The detected gate candidates cluster almost exclusively around:
+
+```text
+Stem ↔ Basin transitions
+```
+
+rather than inside the basin itself.
+
+This is a significant observation.
+
+A gate is therefore not characterized by local density but by structural necessity:
+
+many trajectories must pass through these regions.
+
+---
+
+### Escape Direction Analysis
+
+![EXP_24D Escape Directions](./outputs/EXP_24D_LATENT_CURVATURE_ANALYSIS/exp24d_escape_vectors.png)
+
+Local escape vectors reveal that:
+
+- outer regions exhibit strong outward directions,
+- highly curved regions show directional divergence,
+- bottleneck zones remain comparatively constrained.
+
+The neck behaves more like a transport corridor than an escape region.
+
+---
+
+### Interpretation
+
+EXP_24D provides the strongest evidence so far that the discovered NEXAH field possesses an internal anatomical structure.
+
+Multiple independent indicators now converge on the same locations:
+
+```text
+Curvature Peaks
+        +
+Betweenness Peaks
+        +
+Gate Candidates
+        +
+Transport Corridors
+```
+
+This convergence suggests that the latent geometry is not a visualization artifact but reflects genuine structural organization within the discovered state space.
+
+---
+
+### Main Finding
+
+The latent manifold appears to contain:
+
+```text
+Reservoir Regions
+Transport Corridors
+Structural Gates
+Geometric Bottlenecks
+Potential Escape Zones
+```
+
+which emerge consistently across several independent analyses.
+
+The field therefore behaves less like an unstructured cloud of operating points and more like a navigable geometric landscape with identifiable internal anatomy.
+
+---
+
+### Consequence
+
+The next logical step is no longer:
+
+```text
+Can we navigate the field?
+```
+
+but instead:
+
+```text
+What is the topology of the basin?
+Where are the attractors?
+Where are the exits?
+```
+
+This motivates the next experiment:
+
+```text
+EXP_24E — LATENT ATTRACTOR & BASIN DETECTION
+```
