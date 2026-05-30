@@ -1696,9 +1696,9 @@ This suggests that the Monte-Carlo operating states organize into a continuous t
 
 ---
 
-### Visual
+### Visual 1 — Flow Vectors
 
-![](exp10_flow_vectors.png)
+![Flow Vectors](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_flow_vectors.png)
 
 Observation:
 
@@ -1757,9 +1757,9 @@ States move predominantly along the arc rather than across it.
 
 ---
 
-### Visual
+### Visual 3 — Transport Structure
 
-![](exp10_transport_structure.png)
+![Transport Structure](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_transport_structure.png)
 
 ---
 
@@ -1781,9 +1781,9 @@ This provides an independent validation of the gate hypothesis.
 
 ---
 
-### Visual
+### Visual 2 — Gate Flow Overlay
 
-![GATE FLOW OVERLAY](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_gate_flow_overlay.png)
+![Gate Flow Overlay](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_gate_flow_overlay.png)
 
 ---
 
@@ -2124,7 +2124,7 @@ Evidence:
 
 ### Visual 1 — Side Classification
 
-![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_side_classification.png)
+![Side Classification](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_side_classification.png)
 
 Shows:
 
@@ -2140,7 +2140,7 @@ Verify that the gate chain produces a meaningful spatial division.
 
 ### Visual 2 — Separatrix Score
 
-![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_separatrix_score.png)
+![Separatrix Score](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_separatrix_score.png)
 
 Shows:
 
@@ -2158,7 +2158,7 @@ Quantify directional transport separation.
 
 ### Visual 3 — Gate Axis
 
-![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_gate_axis.png)
+![Gate Axis](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_gate_axis.png)
 
 Shows:
 
@@ -2174,7 +2174,7 @@ Visualize the dominant transport backbone discovered in EXP_09–09C.
 
 ### Visual 4 — Flow Direction Split
 
-![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_flow_direction_split.png)
+![Flow Direction Split](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_flow_direction_split.png)
 
 Shows:
 
