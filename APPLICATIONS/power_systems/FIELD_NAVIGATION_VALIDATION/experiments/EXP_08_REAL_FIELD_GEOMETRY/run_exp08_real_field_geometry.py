@@ -321,3 +321,183 @@ print(
     f"Largest component size: "
     f"{len(largest_component)}"
 )
+# ============================================================
+# Visual 1
+# Real State Space
+# ============================================================
+
+plt.figure(figsize=(10, 8))
+
+plt.scatter(
+    Z[:, 0],
+    Z[:, 1],
+    s=25,
+    alpha=0.8
+)
+
+plt.title(
+    "EXP_08 — Real IEEE39 State Space"
+)
+
+plt.xlabel("PCA 1")
+plt.ylabel("PCA 2")
+
+plt.tight_layout()
+
+plt.savefig(
+    OUTPUT_DIR / "exp08_real_state_space.png",
+    dpi=300
+)
+
+plt.close()
+
+
+# ============================================================
+# Visual 2
+# Density Map
+# ============================================================
+
+plt.figure(figsize=(10, 8))
+
+plt.scatter(
+    Z[:, 0],
+    Z[:, 1],
+    c=local_density,
+    cmap="viridis",
+    s=30
+)
+
+plt.colorbar(label="Density")
+
+plt.title(
+    "EXP_08 — Density Structure"
+)
+
+plt.xlabel("PCA 1")
+plt.ylabel("PCA 2")
+
+plt.tight_layout()
+
+plt.savefig(
+    OUTPUT_DIR / "exp08_density_map.png",
+    dpi=300
+)
+
+plt.close()
+
+
+# ============================================================
+# Visual 3
+# Betweenness Map
+# ============================================================
+
+plt.figure(figsize=(10, 8))
+
+plt.scatter(
+    Z[:, 0],
+    Z[:, 1],
+    c=betweenness,
+    cmap="plasma",
+    s=30
+)
+
+plt.colorbar(label="Betweenness")
+
+plt.title(
+    "EXP_08 — Transport Structure"
+)
+
+plt.xlabel("PCA 1")
+plt.ylabel("PCA 2")
+
+plt.tight_layout()
+
+plt.savefig(
+    OUTPUT_DIR / "exp08_betweenness_map.png",
+    dpi=300
+)
+
+plt.close()
+
+
+# ============================================================
+# Visual 4
+# Gate Candidates
+# ============================================================
+
+plt.figure(figsize=(10, 8))
+
+plt.scatter(
+    Z[:, 0],
+    Z[:, 1],
+    color="lightgray",
+    s=20,
+    alpha=0.5
+)
+
+plt.scatter(
+    Z[gate_nodes, 0],
+    Z[gate_nodes, 1],
+    color="red",
+    s=120,
+    label="Gate Candidates"
+)
+
+plt.legend()
+
+plt.title(
+    "EXP_08 — Gate Candidates"
+)
+
+plt.xlabel("PCA 1")
+plt.ylabel("PCA 2")
+
+plt.tight_layout()
+
+plt.savefig(
+    OUTPUT_DIR / "exp08_gate_candidates.png",
+    dpi=300
+)
+
+plt.close()
+
+
+# ============================================================
+# Save Tables
+# ============================================================
+
+df.to_csv(
+    OUTPUT_DIR / "exp08_field_states.csv",
+    index=False
+)
+
+report = f"""
+EXP_08 REAL FIELD GEOMETRY
+========================================
+
+Converged runs: {len(df)}
+
+kNN nodes: {G_field.number_of_nodes()}
+kNN edges: {G_field.number_of_edges()}
+
+Connected components: {len(components)}
+Largest component size: {len(largest_component)}
+
+Gate candidates: {len(gate_nodes)}
+
+Mean density:
+{local_density.mean():.6f}
+
+Mean betweenness:
+{betweenness.mean():.6f}
+"""
+
+with open(
+    OUTPUT_DIR / "exp08_report.txt",
+    "w"
+) as f:
+    f.write(report)
+
+print()
+print("EXP_08 completed.")
+print()
