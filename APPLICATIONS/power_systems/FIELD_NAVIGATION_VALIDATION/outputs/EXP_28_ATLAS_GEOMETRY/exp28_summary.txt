@@ -1,0 +1,8 @@
+EXP_28 ATLAS GEOMETRY
+=====================
+
+Basins: 18
+PC1 variance: 0.8785
+PC2 variance: 0.1215
+Mean radius: 2.5320
+Radius std: 1.4956
