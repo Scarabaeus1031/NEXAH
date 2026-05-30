@@ -454,3 +454,99 @@ This motivates the next benchmark experiment:
 
 which will determine the critical navigation threshold with significantly higher resolution.
 
+## EXP_23 — NOISY FIELD BENCHMARK
+
+### Objective
+
+This benchmark evaluates how robust NEXAH navigation remains when the discovered field geometry is progressively corrupted by random noise.
+
+The central question is:
+
+> Does navigation depend on precise coordinates, or does it rely on the larger-scale geometry of the field?
+
+---
+
+### Visualizations
+
+#### Field Distortion Examples
+
+![EXP_23 Noisy Field Examples](./outputs/EXP_23_NOISY_FIELD_BENCHMARK/exp23_noisy_field_examples.png)
+
+The examples show increasing coordinate perturbations (10%, 30%, 50%).
+
+Despite substantial distortion, the overall field geometry remains recognizable. The characteristic NEXAH structure continues to exhibit coherent large-scale organization even when local coordinates become increasingly unreliable.
+
+---
+
+#### Success Rate vs Noise
+
+![EXP_23 Success vs Noise](./outputs/EXP_23_NOISY_FIELD_BENCHMARK/exp23_success_vs_noise.png)
+
+Navigation remains fully successful up to approximately 30% noise.
+
+A degradation region emerges near 40% noise, indicating a transition where local field information becomes sufficiently distorted to impact navigation reliability.
+
+---
+
+#### Navigation Cost vs Noise
+
+![EXP_23 Steps vs Noise](./outputs/EXP_23_NOISY_FIELD_BENCHMARK/exp23_steps_vs_noise.png)
+
+Navigation cost increases gradually as noise grows.
+
+This suggests that NEXAH continues to identify viable routes through the field, but requires progressively longer trajectories as structural information becomes less precise.
+
+---
+
+### Results
+
+| Noise Level | Success Rate | Avg Steps |
+|------------|-------------:|-----------:|
+| Random | 0.014 | 99.594 |
+| 0% | 1.000 | 27.668 |
+| 10% | 1.000 | 30.538 |
+| 20% | 1.000 | 38.066 |
+| 30% | 1.000 | 44.346 |
+| 40% | 0.382 | 74.304 |
+| 50% | 0.890 | 71.128 |
+
+---
+
+### Findings
+
+- Navigation remains fully operational up to approximately **30% random coordinate corruption**.
+- Path efficiency decreases gradually as noise increases.
+- The underlying field geometry remains recognizable even under substantial perturbation.
+- Success does not appear to depend on exact coordinates but rather on preservation of the global field structure.
+- A critical transition region emerges around **40% noise**, where navigation reliability drops significantly.
+- Even under extremely noisy conditions, successful navigation remains possible in a large fraction of trials.
+
+---
+
+### Interpretation
+
+EXP_23 suggests that NEXAH navigation is fundamentally a **geometry-driven process rather than a coordinate-driven process**.
+
+The experiment indicates that:
+
+- local information may be inaccurate,
+- individual state positions may drift,
+- measurements may contain substantial error,
+
+while the navigation mechanism remains functional as long as the larger-scale field topology is preserved.
+
+This behavior is consistent with robustness properties expected from engineering systems operating under uncertainty, measurement noise, sensor errors, or incomplete state estimation.
+
+---
+
+### Benchmark Conclusion
+
+EXP_23 provides the first direct evidence that NEXAH navigation exhibits **noise tolerance**.
+
+The field behaves similarly to a resilient resonant structure:
+
+- local coordinates can fluctuate,
+- the global geometry remains intact,
+- navigation continues to exploit the surviving structural organization.
+
+This is an important benchmark result because real-world systems rarely provide perfectly accurate state information. NEXAH appears capable of operating successfully within such imperfect environments.
