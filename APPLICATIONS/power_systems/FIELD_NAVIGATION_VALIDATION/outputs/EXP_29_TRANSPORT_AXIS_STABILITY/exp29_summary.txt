@@ -1,0 +1,9 @@
+EXP_29 TRANSPORT AXIS STABILITY
+========================================
+
+States: 540
+PCA Variance: 0.8459
+
+Axis vs Loading: 0.2226
+Axis vs Angle Span: 0.1557
+Axis vs Voltage Std: -0.0630
