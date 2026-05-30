@@ -1,0 +1,30 @@
+
+EXP_14 REGIME NAVIGATION VALIDATION
+========================================
+
+States:
+540
+
+Regime Switches:
+7
+
+Toward Gate:
+272
+
+Away From Gate:
+268
+
+Mean Distance Change:
+-0.132296
+
+Interpretation
+----------------------------------------
+
+If more states move toward the gate
+than away from it, the reconstructed
+flow field exhibits gate attraction.
+
+If regime switches occur near the
+gate corridor, the gate structure
+acts as a transport interface
+between operating regimes.
