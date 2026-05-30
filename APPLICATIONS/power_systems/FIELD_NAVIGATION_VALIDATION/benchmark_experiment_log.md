@@ -926,3 +926,245 @@ This motivates the next experiment:
 ```text
 EXP_24E — LATENT ATTRACTOR & BASIN DETECTION
 ```
+# Findings
+
+## EXP_24E — Latent Attractor & Basin Detection
+
+This experiment investigated whether the discovered latent field contains identifiable attractors and basin structures. Instead of treating the field as a continuous cloud, we followed local flow directions and measured where trajectories naturally converge.
+
+### Result
+
+- 540 latent states analyzed
+- 18 attractors detected
+- Largest basin contains 72 states
+- Basin sizes range from 12–72 states
+- Attractors are distributed across the entire latent manifold
+
+The discovered geometry is therefore not a single equilibrium landscape. Instead, the field is partitioned into multiple dynamic territories, each possessing its own local attractor.
+
+---
+
+## Basin Structure Emerges
+
+The basin map reveals that the latent manifold decomposes into distinct regions.
+
+Rather than observing one dominant sink, the field organizes itself into:
+
+- Left-arm basins
+- Transition-zone basins
+- Crown-region basins
+
+This indicates that navigation does not converge toward a universal endpoint.
+
+Instead:
+
+```text
+State
+  ↓
+Basin
+  ↓
+Attractor
+```
+
+Each region possesses its own local stability center.
+
+The latent field therefore behaves more like a landscape of valleys than a single funnel.
+
+---
+
+## Attractor Distribution
+
+The attractor map shows attractors distributed along the entire J-shaped manifold.
+
+Two observations stand out:
+
+1. Large attractors dominate the extended left branch.
+2. Smaller attractors cluster in the highly curved crown region.
+
+This suggests:
+
+```text
+Left side:
+large coherent territories
+
+Right side:
+fragmented local regimes
+```
+
+The right-side crown appears to contain significantly richer local structure.
+
+---
+
+## Basin Flow Structure
+
+The basin flow visualization reveals directed convergence patterns.
+
+Many local trajectories collapse into common sink points:
+
+```text
+States
+  ↓
+Local flows
+  ↓
+Shared attractor
+```
+
+This resembles:
+
+- watershed systems
+- potential wells
+- stability basins in nonlinear dynamics
+
+The latent field therefore contains identifiable dynamic routing behavior rather than static clustering.
+
+---
+
+## Relationship to EXP_24D
+
+EXP_24D identified:
+
+- bottlenecks
+- gate nodes
+- curvature maxima
+
+EXP_24E extends this result.
+
+The newly detected attractors frequently appear near:
+
+- high-curvature regions
+- transition zones
+- previously identified gate structures
+
+This suggests that:
+
+```text
+Curvature
+    ↓
+Gate
+    ↓
+Basin
+    ↓
+Attractor
+```
+
+may represent a recurring hierarchy inside the latent geometry.
+
+---
+
+## Interpretation of the J-Manifold
+
+Combining EXP_24C, EXP_24D and EXP_24E now reveals a coherent picture:
+
+```text
+EXP_24C
+Field has shape
+
+EXP_24D
+Field has gates
+
+EXP_24E
+Field has territories
+```
+
+The latent manifold is no longer interpretable as a simple embedding.
+
+It exhibits:
+
+- geometry
+- bottlenecks
+- convergence regions
+- attractor territories
+
+which together form a navigable dynamic landscape.
+
+---
+
+## Additional Observation — Territory Structure
+
+A particularly notable result is that the basin boundaries appear aligned with the large-scale geometry of the manifold.
+
+The extended left arm contains only a few large basins, whereas the crown region decomposes into many smaller territories.
+
+This suggests:
+
+```text
+Left branch
+=
+coherent transport corridor
+
+Crown region
+=
+high-resolution regime structure
+```
+
+The field therefore appears to possess both global organization and local specialization simultaneously.
+
+---
+
+## Visual Evidence
+
+### Attractor Locations
+
+![EXP_24E Attractors](./outputs/EXP_24E_LATENT_ATTRACTOR_BASIN_DETECTION/exp24e_attractors.png)
+
+Attractors are distributed across the manifold and define the centers of local dynamic territories.
+
+---
+
+### Basin Map
+
+![EXP_24E Basin Map](./outputs/EXP_24E_LATENT_ATTRACTOR_BASIN_DETECTION/exp24e_basin_map.png)
+
+Distinct color regions reveal the territorial decomposition of the latent field into multiple attractor basins.
+
+---
+
+### Basin Size Distribution
+
+![EXP_24E Basin Sizes](./outputs/EXP_24E_LATENT_ATTRACTOR_BASIN_DETECTION/exp24e_basin_sizes.png)
+
+Basin sizes are non-uniform, indicating hierarchical organization and dominant attractor regions.
+
+---
+
+### Basin Flow Structure
+
+![EXP_24E Basin Flow Structure](./outputs/EXP_24E_LATENT_ATTRACTOR_BASIN_DETECTION/exp24e_basin_flow_structure.png)
+
+Local state trajectories converge into attractor centers, revealing directed flow organization inside the latent manifold.
+
+---
+
+## Key Observation
+
+For the first time, the latent field can be interpreted as a structured dynamic territory map:
+
+```text
+Geometry
+   ↓
+Curvature
+   ↓
+Gates
+   ↓
+Basins
+   ↓
+Attractors
+```
+
+This hierarchy strongly suggests that the discovered field is not merely an embedding artifact but encodes genuine navigation structure.
+
+---
+
+## Conclusion
+
+EXP_24E provides the first direct evidence that the discovered latent field possesses internal territorial organization.
+
+Rather than forming a single equilibrium structure, the manifold decomposes into multiple attractor-centered regions connected through transport corridors and transition zones.
+
+The combination of:
+
+- latent geometry (EXP_24C)
+- gate structures (EXP_24D)
+- attractor basins (EXP_24E)
+
+now forms a coherent navigation hierarchy and strongly supports the interpretation of the discovered field as a structured dynamical landscape suitable for navigation and regime analysis.
