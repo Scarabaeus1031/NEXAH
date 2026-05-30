@@ -1734,3 +1734,174 @@ loss of reachability.
 This is consistent with the hypothesis that transport
 is carried by a distributed field structure rather than
 a single fragile corridor.
+
+# EXP_21B — CRITICAL BACKBONE REMOVAL
+
+## Objective
+
+Test whether NEXAH navigation depends on a small set of critical backbone nodes.
+
+Instead of removing a random field region (EXP_21), this experiment removes the nodes with the highest betweenness centrality — the nodes that carry the largest fraction of transport paths through the field.
+
+The question is:
+
+> Does navigation collapse if the most important transport hubs disappear?
+
+---
+
+## Method
+
+Starting from the largest connected component discovered in EXP_08:
+
+- Compute graph betweenness centrality
+- Rank all nodes by transport importance
+- Remove:
+
+| Scenario | Removed Nodes |
+|-----------|-----------:|
+| Top_1pct | 5 |
+| Top_3pct | 15 |
+| Top_5pct | 25 |
+
+For each damaged graph:
+
+- Navigate from Left Region → Right Region
+- Run 500 navigation trials
+- Measure:
+  - success rate
+  - average arrival steps
+  - remaining graph size
+
+---
+
+## Results
+
+### Baseline
+
+| Metric | Value |
+|----------|----------:|
+| Success Rate | 1.0000 |
+| Average Steps | 27.606 |
+
+---
+
+### Backbone Removal
+
+| Scenario | Removed Nodes | Success Rate | Avg Steps | Remaining Nodes |
+|-----------|-----------:|-----------:|-----------:|-----------:|
+| Top_1pct | 5 | 1.0000 | 27.728 | 496 |
+| Top_3pct | 15 | 1.0000 | 32.792 | 486 |
+| Top_5pct | 25 | 1.0000 | 32.566 | 476 |
+
+---
+
+## Visual Evidence
+
+### Critical Backbone Nodes
+
+![EXP_21B Critical Backbone Nodes](exp21b_backbone_nodes.png)
+
+The removed nodes are concentrated in the transport corridor connecting major field regions.
+
+These are exactly the locations expected to possess high graph-flow importance.
+
+---
+
+### Surviving Backbone
+
+![EXP_21B Surviving Backbone](exp21b_component_size.png)
+
+Even after removing up to 25 of the most important transport nodes:
+
+- the graph remains connected
+- the main component survives
+- only a small fraction of total states is lost
+
+---
+
+### Navigation Success
+
+![EXP_21B Backbone Removal Success](exp21b_success.png)
+
+Navigation success remains:
+
+```text
+100 %
+```
+
+for all removal scenarios.
+
+No navigation collapse is observed.
+
+---
+
+### Navigation Cost
+
+![EXP_21B Navigation Cost](exp21b_steps.png)
+
+Path cost increases:
+
+```text
+27.6 → 32.8 steps
+```
+
+approximately:
+
+```text
++18 %
+```
+
+but successful arrival remains unchanged.
+
+---
+
+## Finding
+
+The NEXAH field does not depend on a single transport backbone.
+
+Removing the most important graph hubs:
+
+- does not disconnect the field
+- does not destroy navigation
+- does not reduce success probability
+
+Instead, the field automatically discovers alternative routes.
+
+Observed behavior:
+
+```text
+Backbone removed
+→ transport reroutes
+
+Backbone removed
+→ success unchanged
+
+Backbone removed
+→ moderate cost increase
+```
+
+---
+
+## Interpretation
+
+This result indicates that the discovered field possesses:
+
+- transport redundancy
+- multiple parallel corridors
+- distributed routing capability
+
+rather than a single critical pathway.
+
+The field therefore behaves more like a resilient transport landscape than a fragile shortest-path network.
+
+---
+
+## EXP_21B Conclusion
+
+Critical transport hubs can be removed without destroying navigation.
+
+The discovered field exhibits strong structural resilience and maintains full navigability despite targeted attacks on its highest-betweenness backbone nodes.
+
+This provides direct evidence that navigation emerges from distributed field geometry rather than dependence on a small set of critical graph bottlenecks.
+
+
