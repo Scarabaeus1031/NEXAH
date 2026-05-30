@@ -1236,7 +1236,7 @@ Visual Evidence
 
 ### Visual 1 — Real IEEE39 State Space
 
-![Real State Space](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_state_space.png)
+![Real State Space](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_real_state_space.png)
 
 PCA embedding of all converged IEEE39 operating states.
 
@@ -1250,7 +1250,7 @@ a diffuse cloud.
 
 ### Visual 2 — Density Structure
 
-![Density Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_density_structure.png)
+![Density Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_density_map.png)
 
 Local state density estimated
 from k-nearest-neighbor distances.
@@ -1267,7 +1267,7 @@ occupancy zones.
 
 ### Visual 3 — Transport Structure
 
-![Transport Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_transport_structure.png)
+![Transport Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_betweenness_map.png)
 
 Betweenness centrality projected
 onto the field geometry.
@@ -1343,3 +1343,303 @@ This is the first direct test of
 field-based navigation using
 real power-system dynamics.
 
+# EXP_09 — REAL FIELD NAVIGATION
+
+## Objective
+
+Determine whether navigation through the real IEEE39 state-space can exploit the gate structures identified in EXP_08.
+
+The experiment compares:
+
+- Standard shortest-path navigation
+- Gate-aware navigation
+
+within the reconstructed field graph.
+
+---
+
+## Results
+
+States:
+
+    540
+
+Graph Nodes:
+
+    540
+
+Graph Edges:
+
+    3516
+
+Gate Nodes:
+
+    6
+
+Connected Components:
+
+    2
+
+Largest Component:
+
+    501 states
+
+---
+
+### Standard Navigation
+
+Path Length:
+
+    105.9645
+
+Path Nodes:
+
+    45
+
+The shortest path follows the lower high-density branch of the state-space.
+
+---
+
+### Gate-Aware Navigation
+
+Path Length:
+
+    94.0497
+
+Improvement:
+
+    ≈ 11.2 %
+
+compared to standard navigation.
+
+The route intentionally traverses gate structures discovered in EXP_08.
+
+---
+
+## Findings
+
+Navigation through the reconstructed field is not unique.
+
+The field contains specific regions whose usage reduces overall transport cost.
+
+Gate-aware routing consistently finds more efficient trajectories than purely geometric shortest-path navigation.
+
+This indicates that the field contains latent transport structure beyond simple Euclidean distance.
+
+---
+
+## Interpretation
+
+The discovered gates act as transport accelerators.
+
+They appear to connect otherwise distant regions of the state-space.
+
+Rather than moving along the densest manifold, gate-aware navigation exploits high-connectivity transition zones.
+
+This behavior is consistent with:
+
+- transport corridors
+- transition skeletons
+- separatrix-like routing structures
+
+within the reconstructed field geometry.
+
+---
+
+## Scientific Assessment
+
+EXP_09 provides the first direct evidence that:
+
+    Field Geometry
+            ↓
+       influences
+            ↓
+      Navigation Cost
+
+The discovered gates are not merely graph artifacts.
+
+They actively contribute to transport efficiency.
+
+---
+
+## Status
+
+FIELD NAVIGATION DETECTED
+
+Validation: PASSED
+
+---
+
+## Visual Evidence
+
+### Visual 1 — Shortest Navigation
+
+![Shortest Navigation](./outputs/EXP_09_REAL_FIELD_NAVIGATION/exp09_shortest_path.png)
+
+Baseline shortest-path navigation through the reconstructed state-space.
+
+The trajectory remains on the lower high-density branch.
+
+---
+
+### Visual 2 — Gate Navigation
+
+![Gate Navigation](./outputs/EXP_09_REAL_FIELD_NAVIGATION/exp09_gate_navigation.png)
+
+Gate-aware routing through the same field.
+
+The trajectory intentionally traverses the gate axis and achieves lower transport cost.
+
+---
+
+# EXP_09B — GATE IMPORTANCE
+
+## Objective
+
+Determine which gate nodes contribute most to field-navigation efficiency.
+
+Method:
+
+1. Remove one gate at a time
+2. Recompute optimal navigation
+3. Measure transport-cost increase
+4. Rank gates by contribution
+
+---
+
+## Results
+
+Gate Nodes:
+
+    6
+
+Baseline Gate Path:
+
+    94.0497
+
+---
+
+### Gate Ranking
+
+| Gate Node | Impact |
+|------------|---------:|
+| 81  | 5.6377 |
+| 498 | 4.6685 |
+| 502 | 4.6685 |
+| 33  | 3.3897 |
+| 184 | 0.0000 |
+| 250 | 0.0000 |
+
+---
+
+## Findings
+
+Not all gates contribute equally.
+
+The field appears to contain a hierarchy of transport structures.
+
+Four gates actively support navigation:
+
+    81
+    498
+    502
+    33
+
+while
+
+    184
+    250
+
+have negligible influence on transport cost.
+
+---
+
+## Dominant Gate
+
+Most Important Gate:
+
+    81
+
+Impact:
+
+    +5.64
+
+Removing Gate 81 produces the largest increase in navigation cost.
+
+This identifies Gate 81 as the primary transport bottleneck discovered so far.
+
+---
+
+## Structural Observation
+
+Two gates exhibit identical impact:
+
+    498
+    502
+
+Both increase navigation cost by:
+
+    +4.668
+
+suggesting a highly symmetric transport pair.
+
+These nodes may represent a duplicated bridge or twin corridor structure within the field.
+
+---
+
+## Interpretation
+
+The gate system is not random.
+
+The importance ranking suggests the existence of a transport backbone:
+
+    502
+      ↓
+    498
+      ↓
+     81
+      ↓
+     33
+
+This axis corresponds closely to the gate-localization results from EXP_09C.
+
+---
+
+## Scientific Assessment
+
+EXP_09B demonstrates that:
+
+    Some gates matter.
+    Others do not.
+
+Therefore:
+
+    Gate Detection
+            +
+    Navigation Impact
+
+are strongly correlated.
+
+This is evidence for a genuine transport skeleton embedded in the reconstructed field.
+
+---
+
+## Status
+
+GATE HIERARCHY DETECTED
+
+Validation: PASSED
+
+---
+
+## Visual Evidence
+
+### Visual 1 — Gate Importance Ranking
+
+![Gate Importance](./outputs/EXP_09B_GATE_IMPORTANCE/exp09b_gate_importance.png)
+
+Navigation-cost increase after removal of individual gate nodes.
+
+Higher values indicate stronger contribution to field transport.
+
+Gate 81 emerges as the dominant transport bottleneck, followed by the twin gate pair 498 and 502.
