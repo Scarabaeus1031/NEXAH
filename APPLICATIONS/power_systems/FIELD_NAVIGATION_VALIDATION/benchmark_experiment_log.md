@@ -2094,3 +2094,268 @@ Traffic
 The discovered field is therefore not merely a geometric embedding.
 
 It behaves as a structured transportation network whose routes, bottlenecks and highways emerge directly from the latent geometry.
+
+## Findings
+
+### EXP_28 — Atlas Geometry
+
+This experiment tested whether the basin atlas discovered in EXP_25–EXP_27 possesses a measurable global geometry.
+
+Instead of only asking whether basins are connected or navigable, EXP_28 asks:
+
+```text
+Does the atlas itself have shape?
+```
+
+The answer is yes.
+
+---
+
+### Quantitative Results
+
+```text
+Basins:       18
+
+PC1 variance: 0.8785
+PC2 variance: 0.1215
+
+Mean radius:  2.5320
+Radius std:   1.4956
+```
+
+The dominant result is the strong PC1 component.
+
+```text
+PC1 = 87.85 %
+PC2 = 12.15 %
+```
+
+This means that almost the entire basin-atlas geometry is organized along one dominant principal axis.
+
+---
+
+### Principal Geometry
+
+The atlas is not isotropic.
+
+It is not a random basin cloud.
+
+It is also not a clean ring.
+
+Instead, the atlas appears to consist of:
+
+```text
+Approach Corridor
+      ↓
+Gateway Hub
+      ↓
+Core Basin Cluster
+      ↓
+Secondary Wings / Loops
+```
+
+The left side forms a nearly linear corridor:
+
+```text
+4 → 15 → 10 → 6 → 3
+```
+
+while the right side forms a denser basin cluster:
+
+```text
+0, 1, 2, 5, 7, 8, 9, 11, 12, 13, 14, 16, 17
+```
+
+This confirms that the long left branch observed in earlier experiments is not merely visual noise. It is part of the dominant atlas geometry.
+
+---
+
+### Basin 0 as Gateway
+
+Basin 0 remains structurally important.
+
+Across EXP_26, EXP_27 and EXP_28 it appears as:
+
+```text
+Navigation Hub
+Traffic Hub
+Geometric Gateway
+```
+
+It lies close to the transition between the left approach corridor and the dense right-side basin cluster.
+
+This supports the interpretation that Basin 0 acts as a transfer basin between large-scale regions of the atlas.
+
+---
+
+### Ring Fit Result
+
+The ring fit does not support a perfect circular shell.
+
+```text
+Mean radius = 2.5320
+Radius std  = 1.4956
+```
+
+The radius variation is large.
+
+Therefore the atlas is better described as:
+
+```text
+Core + Tail
+```
+
+or:
+
+```text
+Ring-like Cluster + Approach Corridor
+```
+
+rather than a clean ring.
+
+The right basin cluster is partially captured by the oval fit, but the left branch lies outside the ring-like structure.
+
+---
+
+### Symmetry Projection
+
+The symmetry projection reveals several strong basin excursions along the dominant axis.
+
+Important projected groups include:
+
+```text
+4, 15, 10
+```
+
+as the extended left corridor, and:
+
+```text
+5, 12, 16
+```
+
+as lower right-side basin structures.
+
+The result suggests a multi-wing organization rather than a homogeneous field.
+
+The atlas behaves like a structured transport spine with attached local basin groups.
+
+---
+
+### Transport Axis Overlay
+
+The transport-axis overlay is the strongest visual confirmation.
+
+It shows simultaneously:
+
+- the continuous state cloud
+- basin centers
+- basin sizes
+- transition roads
+- the dominant atlas axis
+
+The dominant axis cuts through the atlas rather than simply passing through the geometric center.
+
+This suggests that navigation is governed by a preferred transport direction, not by uniform diffusion.
+
+---
+
+## Visuals
+
+### Geometric Modes
+
+![](../../outputs/EXP_28_ATLAS_GEOMETRY/exp28_geometric_modes.png)
+
+PC1 explains 87.85% of basin-atlas geometry, showing that one dominant geometric mode controls the atlas structure.
+
+---
+
+### Principal Geometry Axes
+
+![](../../outputs/EXP_28_ATLAS_GEOMETRY/exp28_principal_axis.png)
+
+The atlas separates into a left approach corridor and a right basin cluster. PC1 captures the dominant transport spine.
+
+---
+
+### Ring Fit
+
+![](../../outputs/EXP_28_ATLAS_GEOMETRY/exp28_ring_fit.png)
+
+The ring fit captures part of the right cluster but fails to explain the extended left corridor. The atlas is not a clean ring.
+
+---
+
+### Symmetry Projection
+
+![](../../outputs/EXP_28_ATLAS_GEOMETRY/exp28_symmetry_map.png)
+
+The projection reveals strong asymmetric excursions and wing-like basin groups along the main axis.
+
+---
+
+### Transport Axis Overlay
+
+![](../../outputs/EXP_28_ATLAS_GEOMETRY/exp28_transport_axis_overlay.png)
+
+The dominant transport axis cuts through the atlas and aligns with the major navigation structure discovered in EXP_25–EXP_27.
+
+---
+
+### Relationship to Previous Experiments
+
+```text
+EXP_24E
+Basins and attractor territories
+
+EXP_25
+Basin transition network
+
+EXP_26
+Basin-level navigation atlas
+
+EXP_27
+Traffic flow and dominant roads
+
+EXP_28
+Global atlas geometry
+```
+
+EXP_28 confirms that the basin atlas is not merely a graph.
+
+It has measurable geometry.
+
+---
+
+### Additional Structural Observations
+
+The dominant geometry appears remarkably stable across multiple projections.
+
+Several recurring motifs emerge:
+
+- A long corridor structure on the left.
+- A dense basin crown on the right.
+- A central gateway region around Basin 0.
+- Wing-like excursions around the dominant transport spine.
+- Multiple local basin clusters attached to a common backbone.
+
+The atlas therefore resembles a transport architecture rather than a random collection of attractor regions.
+
+---
+
+### Key Observation
+
+The NEXAH basin atlas is best interpreted as:
+
+```text
+Dominant Transport Spine
+        ↓
+Gateway Basin
+        ↓
+Dense Basin Crown
+        ↓
+Secondary Loops / Wings
+```
+
+The dominant PC1 geometry, the traffic corridors from EXP_27 and the navigation hubs from EXP_26 all point toward the same structure.
+
+This is the strongest evidence so far that the discovered field contains a real navigable geometry rather than only a visual embedding.
