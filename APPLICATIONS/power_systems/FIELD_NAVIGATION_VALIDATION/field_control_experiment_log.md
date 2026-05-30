@@ -817,3 +817,361 @@ SUPPORTED
 Next:
 EXP_18 — Gate Corridor Ablation
 ```
+# EXP_18 — GATE CORRIDOR ABLATION
+
+## Objective
+
+EXP_17 demonstrated that removing individual gate nodes does not significantly affect transport within the reconstructed IEEE39 field.
+
+EXP_18 extends this analysis by removing entire gate-corridor segments.
+
+Question:
+
+```text
+Does the transport corridor itself
+constitute a critical structure?
+
+or
+
+Is the field robust against
+corridor-level removal?
+```
+
+---
+
+## Input
+
+Source:
+
+```text
+EXP_08_REAL_FIELD_GEOMETRY
+```
+
+Gate Corridor:
+
+```text
+33 → 81 → 498 → 502
+```
+
+---
+
+## Results
+
+States:
+
+```text
+540
+```
+
+Baseline Path Length:
+
+```text
+35.652360
+```
+
+Baseline Path Nodes:
+
+```text
+13
+```
+
+Baseline Path:
+
+```text
+[200, 212, 76, 381, 223, 115,
+ 479, 487, 241, 139, 9, 38, 181]
+```
+
+---
+
+## Corridor Removal Scenarios
+
+Tested:
+
+```text
+Gate_33_81
+
+Gate_81_498
+
+Gate_498_502
+
+Main_Corridor
+
+All_Gates
+```
+
+---
+
+# Visual Evidence
+
+## Visual 1 — Gate Corridor
+
+![Gate Corridor](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_gate_corridor.png)
+
+Observation:
+
+The corridor occupies a coherent region of the reconstructed field.
+
+The dominant gate chain is:
+
+```text
+502
+ ↓
+498
+ ↓
+ 81
+ ↓
+ 33
+```
+
+This structure emerged repeatedly in EXP_09–EXP_16.
+
+---
+
+## Visual 2 — Corridor Ablation Impact
+
+![Corridor Impact](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_corridor_ablation_impact.png)
+
+Observation:
+
+```text
+Path Length Increase ≈ 0
+```
+
+for all tested corridor-removal scenarios.
+
+Interpretation:
+
+The selected navigation path remains unaffected.
+
+No measurable transport penalty occurs.
+
+---
+
+## Visual 3 — Connectivity After Corridor Removal
+
+![Connectivity](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_connectivity_after_removal.png)
+
+Observation:
+
+```text
+Connected Components = 1
+```
+
+for every removal scenario.
+
+Interpretation:
+
+The reconstructed field remains globally connected.
+
+No fragmentation occurs.
+
+---
+
+## Visual 4 — Largest Surviving Component
+
+![Largest Component](./outputs/EXP_18_GATE_CORRIDOR_ABLATION/exp18_largest_surviving_component.png)
+
+Observation:
+
+Largest component sizes remain:
+
+```text
+499
+499
+499
+497
+495
+```
+
+even after complete gate removal.
+
+Interpretation:
+
+The field loses only the removed nodes themselves.
+
+The global structure survives.
+
+---
+
+# Findings
+
+EXP_18 does not support a single-corridor dependency model.
+
+Removing:
+
+```text
+33
+81
+498
+502
+```
+
+does not destroy transport connectivity.
+
+The reconstructed field remains:
+
+```text
+Connected
+Navigable
+Structurally Stable
+```
+
+---
+
+## Important Interpretation
+
+This result does NOT imply:
+
+```text
+Gates are irrelevant.
+```
+
+Instead it suggests:
+
+```text
+The field possesses
+transport redundancy.
+```
+
+Alternative routes remain available.
+
+The discovered corridor behaves more like:
+
+```text
+Preferred Transport Route
+```
+
+than:
+
+```text
+Mandatory Transport Route
+```
+
+---
+
+## Relation To Previous Experiments
+
+EXP_09:
+
+```text
+Gate-aware navigation
+improves transport efficiency.
+```
+
+EXP_09B:
+
+```text
+Certain gates
+increase navigation quality.
+```
+
+EXP_11–15:
+
+```text
+The corridor aligns with
+regime transitions.
+```
+
+EXP_16:
+
+```text
+Targeted steering toward
+the corridor improves control.
+```
+
+EXP_18:
+
+```text
+Removing the corridor
+does not destroy the field.
+```
+
+---
+
+## Scientific Assessment
+
+Current evidence suggests:
+
+```text
+Gate Corridor
+
+=
+Useful
+
+≠
+
+Required
+```
+
+The corridor appears to represent a favored transport structure embedded inside a larger robust field geometry.
+
+---
+
+## New Question
+
+EXP_18 naturally motivates:
+
+```text
+EXP_18B
+Gate Usage Mapping
+```
+
+Question:
+
+```text
+Which trajectories
+actually depend on
+the corridor?
+```
+
+Rather than testing:
+
+```text
+Can the corridor be removed?
+```
+
+the next step becomes:
+
+```text
+Who uses the corridor?
+```
+
+---
+
+## Conclusion
+
+EXP_18 demonstrates that the reconstructed IEEE39 field is resilient against corridor-level ablation.
+
+The gate corridor appears to be a preferred transport pathway rather than a single point of failure.
+
+This shifts the interpretation of the gate structure from:
+
+```text
+Critical Backbone
+```
+
+toward:
+
+```text
+Preferred Navigation Channel
+```
+
+inside a highly redundant transport field.
+
+---
+
+## Status
+
+```text
+Mandatory Corridor Hypothesis
+
+NOT SUPPORTED
+
+Transport Redundancy
+
+SUPPORTED
+
+Next:
+EXP_18B — Gate Usage Mapping
+```
