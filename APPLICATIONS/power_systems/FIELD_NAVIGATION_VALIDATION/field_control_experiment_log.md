@@ -1799,7 +1799,7 @@ For each damaged graph:
 
 ### Critical Backbone Nodes
 
-![EXP_21B Critical Backbone Nodes](exp21b_backbone_nodes.png)
+![EXP_21B Critical Backbone Nodes](./outputs/EXP_21B_CRITICAL_BACKBONE_REMOVAL/exp21b_backbone_nodes.png)
 
 The removed nodes are concentrated in the transport corridor connecting major field regions.
 
@@ -1809,7 +1809,7 @@ These are exactly the locations expected to possess high graph-flow importance.
 
 ### Surviving Backbone
 
-![EXP_21B Surviving Backbone](exp21b_component_size.png)
+![EXP_21B Surviving Backbone](./outputs/EXP_21B_CRITICAL_BACKBONE_REMOVAL/exp21b_component_size.png)
 
 Even after removing up to 25 of the most important transport nodes:
 
@@ -1821,7 +1821,7 @@ Even after removing up to 25 of the most important transport nodes:
 
 ### Navigation Success
 
-![EXP_21B Backbone Removal Success](exp21b_success.png)
+![EXP_21B Backbone Removal Success](./outputs/EXP_21B_CRITICAL_BACKBONE_REMOVAL/exp21b_success.png)
 
 Navigation success remains:
 
@@ -1837,7 +1837,7 @@ No navigation collapse is observed.
 
 ### Navigation Cost
 
-![EXP_21B Navigation Cost](exp21b_steps.png)
+![EXP_21B Navigation Cost](./outputs/EXP_21B_CRITICAL_BACKBONE_REMOVAL/exp21b_steps.png)
 
 Path cost increases:
 
