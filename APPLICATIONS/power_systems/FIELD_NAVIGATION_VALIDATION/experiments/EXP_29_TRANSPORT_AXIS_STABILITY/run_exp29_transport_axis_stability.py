@@ -5,26 +5,6 @@
 # Does distance from the dominant transport axis
 # correlate with operating stress?
 #
-# Hypothesis:
-#
-# States located far from the atlas transport axis
-# exhibit higher stress indicators:
-#
-# - angle_span
-# - max_loading
-# - voltage variability
-#
-# Inputs:
-#   EXP_08_REAL_FIELD_GEOMETRY / exp08_field_states.csv
-#
-# Outputs:
-#   exp29_axis_distance_distribution.png
-#   exp29_axis_vs_loading.png
-#   exp29_axis_vs_angle_span.png
-#   exp29_axis_vs_voltage_std.png
-#   exp29_axis_stability_map.png
-#   exp29_summary.txt
-#
 # ============================================================
 
 import os
@@ -60,7 +40,7 @@ print("\nInput  ->", os.path.abspath(INPUT_DIR))
 print("Output ->", os.path.abspath(OUTPUT_DIR))
 
 # ------------------------------------------------------------
-# Load States
+# Load Data
 # ------------------------------------------------------------
 
 df = pd.read_csv(
@@ -116,42 +96,23 @@ print(
     round(variance, 4)
 )
 
-# ------------------------------------------------------------
-# Transport Axis
-# ------------------------------------------------------------
-
-center = coords.mean(
-    axis=0
+print(
+    "PC1 variance:",
+    round(
+        pca.explained_variance_ratio_[0],
+        4
+    )
 )
 
-pc1 = pca.components_[0]
-
 # ------------------------------------------------------------
-# Distance To Transport Axis
+# Transport Axis Distance
 # ------------------------------------------------------------
 
-axis_distances = []
+# PC1 = x-axis
+# PC2 = deviation from transport axis
 
-for p in coords:
-
-    v = p - center
-
-    projection = (
-        np.dot(v, pc1)
-    ) * pc1
-
-    orthogonal = (
-        v - projection
-    )
-
-    axis_distances.append(
-        np.linalg.norm(
-            orthogonal
-        )
-    )
-
-axis_distances = np.array(
-    axis_distances
+axis_distances = np.abs(
+    coords[:, 1]
 )
 
 df["axis_distance"] = (
@@ -177,9 +138,7 @@ corr_voltage = np.corrcoef(
     df["std_vm"]
 )[0, 1]
 
-print(
-    "\nCorrelation Results"
-)
+print("\nCorrelation Results")
 
 print(
     "axis vs loading:",
@@ -198,7 +157,7 @@ print(
 
 # ------------------------------------------------------------
 # Visual 1
-# Axis Distance Distribution
+# Distance Distribution
 # ------------------------------------------------------------
 
 plt.figure(
@@ -372,22 +331,21 @@ plt.colorbar(
     label="Axis Distance"
 )
 
-scale = 8
-
-plt.plot(
-    [
-        center[0] - pc1[0] * scale,
-        center[0] + pc1[0] * scale
-    ],
-    [
-        center[1] - pc1[1] * scale,
-        center[1] + pc1[1] * scale
-    ],
-    linewidth=4
+plt.axhline(
+    y=0,
+    linewidth=3
 )
 
 plt.title(
     "EXP_29 Transport Axis Stability Map"
+)
+
+plt.xlabel(
+    "PC1"
+)
+
+plt.ylabel(
+    "PC2"
 )
 
 plt.tight_layout()
@@ -419,7 +377,7 @@ with open(
     )
 
     f.write(
-        "================================\n\n"
+        "========================================\n\n"
     )
 
     f.write(
@@ -442,6 +400,4 @@ with open(
         f"Axis vs Voltage Std: {corr_voltage:.4f}\n"
     )
 
-print(
-    "\nEXP_29 completed."
-)
+print("\nEXP_29 completed.")
