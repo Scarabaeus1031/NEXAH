@@ -137,16 +137,49 @@ print(
 
 
 # ============================================================
+# Connected Components
+# ============================================================
+
+components = list(
+    nx.connected_components(G)
+)
+
+print(
+    f"Connected components: "
+    f"{len(components)}"
+)
+
+largest_component = max(
+    components,
+    key=len
+)
+
+largest_component = np.array(
+    list(largest_component)
+)
+
+print(
+    f"Largest component size: "
+    f"{len(largest_component)}"
+)
+
+
+# ============================================================
 # Start / Goal Selection
 # ============================================================
 
-start_idx = np.argmin(
-    Z[:, 0]
-)
+component_x = Z[
+    largest_component,
+    0
+]
 
-goal_idx = np.argmax(
-    Z[:, 0]
-)
+start_idx = largest_component[
+    np.argmin(component_x)
+]
+
+goal_idx = largest_component[
+    np.argmax(component_x)
+]
 
 print(
     f"Start node: {start_idx}"
@@ -156,6 +189,11 @@ print(
     f"Goal node: {goal_idx}"
 )
 
+assert nx.has_path(
+    G,
+    start_idx,
+    goal_idx
+)
 
 # ============================================================
 # Shortest Path
@@ -179,6 +217,10 @@ print(
     f"{shortest_length:.4f}"
 )
 
+print(
+    f"Shortest path nodes: "
+    f"{len(shortest_path)}"
+)
 
 # ============================================================
 # Gate-Aware Graph
@@ -400,3 +442,20 @@ with open(
 print()
 print("EXP_09 completed.")
 print()
+
+report = f"""
+EXP_09 REAL FIELD NAVIGATION
+========================================
+
+States:
+{len(Z)}
+
+Gate Nodes:
+{len(gate_nodes)}
+
+Shortest Path Length:
+{shortest_length:.6f}
+
+Gate Path Length:
+{gate_length:.6f}
+"""
