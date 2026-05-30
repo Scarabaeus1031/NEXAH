@@ -1,0 +1,19 @@
+
+EXP_08 REAL FIELD GEOMETRY
+========================================
+
+Converged runs: 540
+
+kNN nodes: 540
+kNN edges: 3516
+
+Connected components: 2
+Largest component size: 501
+
+Gate candidates: 6
+
+Mean density:
+0.451359
+
+Mean betweenness:
+0.013343
