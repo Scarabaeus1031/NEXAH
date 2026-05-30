@@ -534,3 +534,286 @@ DETECTED
 
 Validation: PASSED
 ```
+# EXP_17 — Gate Ablation Control
+
+## Objective
+
+EXP_17 investigates whether the individual gate nodes discovered during the navigation phase are causally required for field transport.
+
+Previous experiments established:
+
+- EXP_08 → Gate candidates
+- EXP_09 → Gate-aware navigation
+- EXP_09B → Gate importance ranking
+- EXP_10 → Flow-aligned gate structures
+- EXP_11–15 → Regime boundary and transition corridor
+
+The remaining question:
+
+Can transport efficiency be disrupted by removing a gate?
+
+---
+
+## Method
+
+For each detected gate:
+
+```text
+33
+81
+184
+250
+498
+502
+```
+
+the node was removed from the reconstructed field graph.
+
+After removal:
+
+1. Connectivity was recomputed
+2. Shortest-path navigation was recalculated
+3. Transport cost increase was measured
+4. Component fragmentation was evaluated
+
+---
+
+## Results
+
+Baseline Path Length:
+
+```text
+35.6524
+```
+
+Baseline Path Nodes:
+
+```text
+13
+```
+
+Gate Removal Results:
+
+| Gate | Connected | Impact |
+|--------|--------|--------:|
+| 33  | YES | 0.000 |
+| 81  | YES | 0.000 |
+| 184 | YES | 0.000 |
+| 250 | YES | 0.000 |
+| 498 | YES | 0.000 |
+| 502 | YES | 0.000 |
+
+Largest Component After Removal:
+
+```text
+500 states
+```
+
+for every gate.
+
+---
+
+## Visual Evidence
+
+### Gate Removal Impact
+
+![Gate Impact](./outputs/EXP_17_GATE_ABLATION_CONTROL/exp17_gate_impact.png)
+
+Observation:
+
+No measurable increase in navigation cost occurs when any single gate is removed.
+
+---
+
+### Connectivity After Removal
+
+![Connectivity](./outputs/EXP_17_GATE_ABLATION_CONTROL/exp17_connectivity.png)
+
+Observation:
+
+The reconstructed field remains fully connected.
+
+No fragmentation occurs.
+
+---
+
+### Largest Component Size
+
+![Largest Component](./outputs/EXP_17_GATE_ABLATION_CONTROL/exp17_largest_component.png)
+
+Observation:
+
+Removing any single gate reduces the largest component only by the removed node itself.
+
+The transport structure survives.
+
+---
+
+## Interpretation
+
+At first glance this appears surprising.
+
+Earlier experiments suggested:
+
+```text
+Gate Discovery
+→ Navigation Improvement
+→ Transport Importance
+```
+
+However EXP_17 reveals a deeper property:
+
+```text
+The transport system is redundant.
+```
+
+The field does not depend on a single critical node.
+
+Alternative transport routes remain available.
+
+---
+
+## Key Insight
+
+EXP_17 does NOT invalidate the gate hypothesis.
+
+Instead it changes its interpretation.
+
+The discovered gates behave less like:
+
+```text
+Single Critical Switches
+```
+
+and more like:
+
+```text
+Distributed Transport Structures
+```
+
+or
+
+```text
+Transport Corridors
+```
+
+This is consistent with EXP_15:
+
+```text
+Distributed Gate
+not
+Single Trigger Point
+```
+
+---
+
+## Scientific Assessment
+
+EXP_17 provides evidence that:
+
+```text
+Individual Gates
+≠
+Single Point Failure
+```
+
+The reconstructed field exhibits structural robustness.
+
+Transport functionality persists despite removal of any one gate.
+
+---
+
+## Relation To Previous Experiments
+
+EXP_09B suggested:
+
+```text
+Gate 81
+```
+
+was the most important gate.
+
+EXP_17 shows:
+
+```text
+Removing Gate 81 alone
+is insufficient
+to destroy transport.
+```
+
+This implies that the previously discovered gate hierarchy may actually reflect:
+
+```text
+Corridor Importance
+```
+
+rather than
+
+```text
+Node Importance
+```
+
+---
+
+## New Hypothesis
+
+EXP_17 directly motivates:
+
+```text
+EXP_18 — Gate Corridor Ablation
+```
+
+Question:
+
+```text
+If individual gates do not matter,
+
+does the corridor matter?
+```
+
+Rather than removing:
+
+    81
+
+remove:
+
+    33 → 81 → 498 → 502
+
+and test whether transport degrades.
+
+---
+
+## Conclusion
+
+EXP_17 demonstrates that the reconstructed IEEE39 field is resilient against individual gate removal.
+
+The result supports a transition from:
+
+```text
+Node-Centric Transport
+```
+
+toward:
+
+```text
+Corridor-Centric Transport
+```
+
+and marks the first indication that the true causal structure may be distributed across the gate corridor itself rather than concentrated within individual nodes.
+
+---
+
+## Status
+
+```text
+Single-Gate Failure Hypothesis
+
+NOT SUPPORTED
+
+Transport Robustness
+
+SUPPORTED
+
+Next:
+EXP_18 — Gate Corridor Ablation
+```
