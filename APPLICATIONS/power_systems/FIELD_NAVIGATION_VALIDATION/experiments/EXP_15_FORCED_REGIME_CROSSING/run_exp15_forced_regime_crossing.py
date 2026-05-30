@@ -1,235 +1,275 @@
-# ============================================================
-# EXP_15 — FORCED REGIME CROSSING
-#
-# Goal:
-# Measure how much displacement across the gate-axis
-# is required to force a regime transition.
-#
-# Output:
-#   exp15_crossing_probability.png
-#   exp15_crossing_map.png
-#   exp15_critical_distance_histogram.png
-#   exp15_gate_sensitivity.png
-#   exp15_summary.txt
-#
-# ============================================================
+"""
+run_exp15_forced_regime_crossing.py
 
-import os
+EXP_15 — FORCED REGIME CROSSING
+
+Goal
+-----
+Determine how much displacement is required
+to force a state across the discovered gate-axis.
+
+Uses:
+- EXP_08 field geometry
+- EXP_09B gate ranking
+- EXP_09C gate localization
+
+NEXAH Validation Program
+2026
+"""
+
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# ------------------------------------------------------------
-# PATHS
-# ------------------------------------------------------------
 
-BASE_DIR = os.path.abspath(
-    os.path.join(
-        os.path.dirname(__file__),
-        "..",
-        ".."
-    )
+# ============================================================
+# Paths
+# ============================================================
+
+BASE_DIR = Path(__file__).resolve().parents[2]
+
+INPUT_DIR = (
+    BASE_DIR
+    / "outputs"
+    / "EXP_08_REAL_FIELD_GEOMETRY"
 )
 
-INPUT_DIR = os.path.join(
-    BASE_DIR,
-    "outputs",
-    "EXP_08_REAL_FIELD_GEOMETRY"
+OUTPUT_DIR = (
+    BASE_DIR
+    / "outputs"
+    / "EXP_15_FORCED_REGIME_CROSSING"
 )
 
-OUTPUT_DIR = os.path.join(
-    BASE_DIR,
-    "outputs",
-    "EXP_15_FORCED_REGIME_CROSSING"
+OUTPUT_DIR.mkdir(
+    parents=True,
+    exist_ok=True
 )
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+print()
+print(f"Input  -> {INPUT_DIR}")
+print(f"Output -> {OUTPUT_DIR}")
+print()
 
-print(f"\nInput  -> {INPUT_DIR}")
-print(f"Output -> {OUTPUT_DIR}\n")
 
-# ------------------------------------------------------------
-# LOAD
-# ------------------------------------------------------------
+# ============================================================
+# Load Data
+# ============================================================
 
 df = pd.read_csv(
-    os.path.join(
-        INPUT_DIR,
-        "field_geometry_dataset.csv"
-    )
+    INPUT_DIR / "exp08_field_states.csv"
 )
 
-print("Loaded states:", len(df))
+print(
+    f"Loaded states: {len(df)}"
+)
 
-# ------------------------------------------------------------
-# GATE AXIS
-# ------------------------------------------------------------
+Z = df[
+    ["pca_x", "pca_y"]
+].values
+
+
+# ============================================================
+# Gate Nodes
+# ============================================================
+
+gate_ids = [
+    33,
+    81,
+    184,
+    250,
+    498,
+    502
+]
 
 gate_points = np.array([
-    [-11.0, 17.7],   # 502
-    [-18.0, 14.0],   # 498
-    [  0.0,  8.9],   # 81
-    [ 15.0, -1.5]    # 33
+    df.loc[
+        g,
+        ["pca_x", "pca_y"]
+    ].values.astype(float)
+    for g in gate_ids
 ])
 
-# ------------------------------------------------------------
-# DISTANCE TO POLYLINE
-# ------------------------------------------------------------
-
-def signed_distance_to_axis(point, polyline):
-
-    best_dist = np.inf
-    best_sign = 1.0
-
-    p = np.asarray(point)
-
-    for i in range(len(polyline)-1):
-
-        a = polyline[i]
-        b = polyline[i+1]
-
-        ab = b - a
-        ap = p - a
-
-        t = np.dot(ap, ab) / np.dot(ab, ab)
-        t = np.clip(t, 0, 1)
-
-        proj = a + t * ab
-
-        dvec = p - proj
-        dist = np.linalg.norm(dvec)
-
-        if dist < best_dist:
-
-            best_dist = dist
-
-            cross = (
-                ab[0] * ap[1]
-                -
-                ab[1] * ap[0]
-            )
-
-            best_sign = np.sign(cross)
-
-    return best_sign * best_dist
+print()
+print("Gate Nodes:")
+print(gate_ids)
+print()
 
 
-# ------------------------------------------------------------
-# CLASSIFY REGIME
-# ------------------------------------------------------------
+# ============================================================
+# Gate Axis
+# ============================================================
 
-distances = []
+A = gate_points[4]     # 498
+B = gate_points[0]     # 33
 
-for _, row in df.iterrows():
+axis = B - A
 
-    distances.append(
-        signed_distance_to_axis(
-            [row["pca_x"], row["pca_y"]],
-            gate_points
-        )
-    )
-
-df["signed_distance"] = distances
-
-# ------------------------------------------------------------
-# PERTURBATION TEST
-# ------------------------------------------------------------
-
-eps_values = np.linspace(
-    0.1,
-    10.0,
-    40
+axis_norm = np.linalg.norm(
+    axis
 )
 
-crossing_prob = []
+axis_unit = (
+    axis / axis_norm
+)
+
+normal = np.array([
+    -axis_unit[1],
+     axis_unit[0]
+])
+
+
+# ============================================================
+# Signed Distance
+# ============================================================
+
+signed_dist = []
+
+for p in Z:
+
+    rel = p - A
+
+    d = (
+        axis_unit[0] * rel[1]
+        -
+        axis_unit[1] * rel[0]
+    )
+
+    signed_dist.append(d)
+
+signed_dist = np.array(
+    signed_dist
+)
+
+df["signed_distance"] = (
+    signed_dist
+)
+
+
+# ============================================================
+# Crossing Search
+# ============================================================
+
+eps_values = np.linspace(
+    0.0,
+    20.0,
+    200
+)
 
 critical_distance = []
 
-crossing_count_map = np.zeros(len(df))
-
-for idx, row in df.iterrows():
-
-    d0 = row["signed_distance"]
+for d0 in signed_dist:
 
     found = False
 
     for eps in eps_values:
 
-        d_new = d0 - np.sign(d0) * eps
+        if d0 > 0:
+
+            d_new = d0 - eps
+
+        else:
+
+            d_new = d0 + eps
 
         if np.sign(d_new) != np.sign(d0):
 
-            critical_distance.append(eps)
-
-            crossing_count_map[idx] += 1
+            critical_distance.append(
+                eps
+            )
 
             found = True
             break
 
     if not found:
 
-        critical_distance.append(np.nan)
+        critical_distance.append(
+            np.nan
+        )
 
-# ------------------------------------------------------------
-# CROSSING PROBABILITY
-# ------------------------------------------------------------
+critical_distance = np.array(
+    critical_distance
+)
+
+df["critical_distance"] = (
+    critical_distance
+)
+
+
+# ============================================================
+# Crossing Probability Curve
+# ============================================================
+
+crossing_probability = []
 
 for eps in eps_values:
 
-    crossings = 0
+    crossed = 0
 
-    for d0 in df["signed_distance"]:
+    for d0 in signed_dist:
 
-        d_new = d0 - np.sign(d0) * eps
+        if abs(d0) <= eps:
 
-        if np.sign(d_new) != np.sign(d0):
-            crossings += 1
+            crossed += 1
 
-    crossing_prob.append(
-        crossings / len(df)
+    crossing_probability.append(
+        crossed / len(signed_dist)
     )
 
-# ------------------------------------------------------------
-# VISUAL 1
-# ------------------------------------------------------------
 
-plt.figure(figsize=(8,5))
+# ============================================================
+# Visual 1
+# ============================================================
+
+plt.figure(
+    figsize=(8,5)
+)
 
 plt.plot(
     eps_values,
-    crossing_prob,
-    linewidth=2
+    crossing_probability,
+    linewidth=3
 )
 
-plt.xlabel("Perturbation Size")
-plt.ylabel("Crossing Probability")
-plt.title("EXP_15 — Crossing Probability")
+plt.xlabel(
+    "Forced Displacement"
+)
+
+plt.ylabel(
+    "Crossing Probability"
+)
+
+plt.title(
+    "EXP_15 — Crossing Probability"
+)
 
 plt.tight_layout()
 
 plt.savefig(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp15_crossing_probability.png"
-    )
+    OUTPUT_DIR /
+    "exp15_crossing_probability.png",
+    dpi=300
 )
 
 plt.close()
 
-# ------------------------------------------------------------
-# VISUAL 2
-# ------------------------------------------------------------
 
-plt.figure(figsize=(10,8))
+# ============================================================
+# Visual 2
+# ============================================================
+
+plt.figure(
+    figsize=(10,8)
+)
 
 plt.scatter(
     df["pca_x"],
     df["pca_y"],
     c=np.nan_to_num(
         critical_distance,
-        nan=10
+        nan=20
     ),
-    cmap="viridis",
     s=25
 )
 
@@ -240,8 +280,13 @@ plt.colorbar(
 plt.plot(
     gate_points[:,0],
     gate_points[:,1],
-    color="red",
     linewidth=3
+)
+
+plt.scatter(
+    gate_points[:,0],
+    gate_points[:,1],
+    s=150
 )
 
 plt.title(
@@ -251,28 +296,31 @@ plt.title(
 plt.tight_layout()
 
 plt.savefig(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp15_crossing_map.png"
-    )
+    OUTPUT_DIR /
+    "exp15_crossing_map.png",
+    dpi=300
 )
 
 plt.close()
 
-# ------------------------------------------------------------
-# VISUAL 3
-# ------------------------------------------------------------
 
-plt.figure(figsize=(8,5))
+# ============================================================
+# Visual 3
+# ============================================================
 
-vals = [
-    x for x in critical_distance
-    if not np.isnan(x)
+plt.figure(
+    figsize=(8,5)
+)
+
+vals = critical_distance[
+    ~np.isnan(
+        critical_distance
+    )
 ]
 
 plt.hist(
     vals,
-    bins=20
+    bins=30
 )
 
 plt.xlabel(
@@ -290,52 +338,48 @@ plt.title(
 plt.tight_layout()
 
 plt.savefig(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp15_critical_distance_histogram.png"
-    )
+    OUTPUT_DIR /
+    "exp15_critical_distance_histogram.png",
+    dpi=300
 )
 
 plt.close()
 
-# ------------------------------------------------------------
-# VISUAL 4
-# ------------------------------------------------------------
 
-segment_sensitivity = []
+# ============================================================
+# Visual 4
+# ============================================================
 
-for i in range(len(gate_points)-1):
+segment_scores = []
 
-    a = gate_points[i]
-    b = gate_points[i+1]
+for gp in gate_points:
 
-    mid = (a+b)/2
-
-    local = []
-
-    for _, row in df.iterrows():
-
-        d = np.linalg.norm(
-            np.array(
-                [row["pca_x"], row["pca_y"]]
-            ) - mid
-        )
-
-        local.append(d)
-
-    segment_sensitivity.append(
-        np.mean(local)
+    dist = np.linalg.norm(
+        Z - gp,
+        axis=1
     )
 
-plt.figure(figsize=(8,5))
+    segment_scores.append(
+        np.mean(dist)
+    )
 
-plt.bar(
-    np.arange(len(segment_sensitivity)),
-    segment_sensitivity
+plt.figure(
+    figsize=(8,5)
 )
 
-plt.xlabel("Gate Segment")
-plt.ylabel("Mean Distance")
+plt.bar(
+    range(len(gate_points)),
+    segment_scores
+)
+
+plt.xlabel(
+    "Gate Node Index"
+)
+
+plt.ylabel(
+    "Mean Distance"
+)
+
 plt.title(
     "EXP_15 — Gate Sensitivity"
 )
@@ -343,45 +387,109 @@ plt.title(
 plt.tight_layout()
 
 plt.savefig(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp15_gate_sensitivity.png"
-    )
+    OUTPUT_DIR /
+    "exp15_gate_sensitivity.png",
+    dpi=300
 )
 
 plt.close()
 
-# ------------------------------------------------------------
-# SUMMARY
-# ------------------------------------------------------------
+
+# ============================================================
+# Metrics
+# ============================================================
+
+mean_cd = float(
+    np.nanmean(
+        critical_distance
+    )
+)
+
+median_cd = float(
+    np.nanmedian(
+        critical_distance
+    )
+)
+
+metrics = pd.DataFrame({
+
+    "metric": [
+
+        "states",
+        "mean_critical_distance",
+        "median_critical_distance"
+
+    ],
+
+    "value": [
+
+        len(df),
+        mean_cd,
+        median_cd
+
+    ]
+})
+
+metrics.to_csv(
+    OUTPUT_DIR /
+    "exp15_metrics.csv",
+    index=False
+)
+
+
+# ============================================================
+# Report
+# ============================================================
+
+report = f"""
+EXP_15 FORCED REGIME CROSSING
+========================================
+
+States:
+{len(df)}
+
+Mean Critical Distance:
+{mean_cd:.6f}
+
+Median Critical Distance:
+{median_cd:.6f}
+
+Gate Nodes:
+{gate_ids}
+
+Interpretation
+----------------------------------------
+
+Critical distance measures
+how much displacement is required
+to force a state across the
+discovered gate-axis.
+
+Small values indicate
+high regime sensitivity.
+
+Large values indicate
+deep basin stability.
+"""
 
 with open(
-    os.path.join(
-        OUTPUT_DIR,
-        "exp15_summary.txt"
-    ),
+    OUTPUT_DIR /
+    "exp15_report.txt",
     "w"
 ) as f:
 
-    f.write(
-        "EXP_15 FORCED REGIME CROSSING\n"
-    )
-    f.write(
-        "========================================\n\n"
-    )
+    f.write(report)
 
-    f.write(
-        f"States:\n{len(df)}\n\n"
-    )
+print()
+print("EXP_15 completed.")
+print()
 
-    f.write(
-        f"Mean Critical Distance:\n"
-        f"{np.nanmean(critical_distance):.6f}\n\n"
-    )
+print(
+    f"Mean Critical Distance: "
+    f"{mean_cd:.4f}"
+)
 
-    f.write(
-        f"Median Critical Distance:\n"
-        f"{np.nanmedian(critical_distance):.6f}\n\n"
-    )
-
-print("\nEXP_15 completed.\n")
+print(
+    f"Median Critical Distance: "
+    f"{median_cd:.4f}"
+)
