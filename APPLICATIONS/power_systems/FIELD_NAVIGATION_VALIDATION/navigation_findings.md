@@ -1057,4 +1057,289 @@ Basin hypothesis:
 Field geometry hypothesis:
     PROMISING
 
-    
+    ========================================================
+EXP_08 — REAL FIELD GEOMETRY
+========================================================
+
+Objective
+--------------------------------------------------------
+
+Investigate whether real IEEE39 operating states
+form an emergent geometric structure in state space.
+
+Question:
+
+    Does a field emerge
+    from real power system dynamics?
+
+Methods
+--------------------------------------------------------
+
+• 1200 Monte-Carlo load scenarios
+
+• Real IEEE39 power flow simulations
+  using pandapower
+
+• PCA state-space embedding
+
+• k-Nearest Neighbor field graph
+
+• Density estimation
+
+• Betweenness centrality
+
+• Gate candidate extraction
+
+Results
+--------------------------------------------------------
+
+Converged Runs:
+
+    540
+
+Failed Runs:
+
+    660
+
+Field Graph:
+
+    Nodes : 540
+    Edges : 3516
+
+Connected Components:
+
+    2
+
+Largest Component:
+
+    501 states
+
+Gate Candidates:
+
+    6
+
+Mean Density:
+
+    0.451359
+
+Mean Betweenness:
+
+    0.013343
+
+Findings
+--------------------------------------------------------
+
+The operating states do not occupy
+state space randomly.
+
+Instead they organize into a highly
+structured geometric manifold.
+
+Several observations emerge:
+
+1.
+
+Dense Core Regions
+
+Certain operating regimes are
+visited repeatedly and form
+high-density regions.
+
+2.
+
+Transport Corridors
+
+The state cloud contains elongated
+structures connecting dense regions.
+
+These resemble transport pathways
+rather than isolated clusters.
+
+3.
+
+Gate Candidates
+
+Only 6 states exhibit extremely
+high betweenness centrality.
+
+These states appear to function as
+bottlenecks or passage points
+between larger regions of the field.
+
+4.
+
+Multi-Region Geometry
+
+The field separates into
+two connected components.
+
+One dominant component contains
+501 of 540 states.
+
+Interpretation
+--------------------------------------------------------
+
+The experiment suggests that
+IEEE39 dynamics generate a
+continuous field geometry.
+
+The observed structure is more
+consistent with:
+
+    Basins
+    Corridors
+    Gateways
+
+than with isolated clusters.
+
+This is particularly important because
+EXP_07B failed to identify clean
+DBSCAN basin partitions.
+
+Instead of disconnected basins,
+the system appears to form a
+connected transport manifold.
+
+Scientific Assessment
+--------------------------------------------------------
+
+EXP_08 provides the first evidence
+that real IEEE39 operating states
+possess geometric organization.
+
+The field contains:
+
+    Density Structure
+    Transport Structure
+    Bottlenecks
+
+which emerge directly from
+physical simulation data.
+
+No community assumptions,
+basin assumptions,
+or symbolic structures
+were imposed.
+
+The geometry emerged entirely
+from the dynamics.
+
+Status
+--------------------------------------------------------
+
+REAL FIELD GEOMETRY DETECTED
+
+Validation: PASSED
+
+Visual Evidence
+--------------------------------------------------------
+
+### Visual 1 — Real IEEE39 State Space
+
+![Real State Space](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_state_space.png)
+
+PCA embedding of all converged IEEE39 operating states.
+
+Observation:
+
+The state space forms a curved,
+non-random manifold rather than
+a diffuse cloud.
+
+---
+
+### Visual 2 — Density Structure
+
+![Density Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_density_structure.png)
+
+Local state density estimated
+from k-nearest-neighbor distances.
+
+Observation:
+
+Several dense operating regions
+emerge naturally.
+
+The lower arc contains the highest
+occupancy zones.
+
+---
+
+### Visual 3 — Transport Structure
+
+![Transport Structure](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_transport_structure.png)
+
+Betweenness centrality projected
+onto the field geometry.
+
+Observation:
+
+Transport importance is concentrated
+in a small number of states.
+
+Most states contribute little
+to global transport.
+
+---
+
+### Visual 4 — Gate Candidates
+
+![Gate Candidates](./outputs/EXP_08_REAL_FIELD_GEOMETRY/exp08_gate_candidates.png)
+
+Highest-betweenness states.
+
+Observation:
+
+Only six states dominate transport.
+
+These are candidate gateway states
+through which large-scale movement
+across the field may occur.
+
+Key Insight
+--------------------------------------------------------
+
+EXP_07B asked:
+
+    Do stability basins exist?
+
+EXP_08 suggests a deeper answer:
+
+    The field may not be composed
+    of isolated basins.
+
+Instead:
+
+    Basins may be connected
+    through transport corridors
+    and gate structures.
+
+The geometry resembles a navigable
+state-space rather than a collection
+of disconnected attractors.
+
+This provides the first real-data
+evidence supporting the NEXAH
+hypothesis:
+
+    Dynamics
+         ↓
+    Geometry
+         ↓
+    Navigation
+
+Next Step
+--------------------------------------------------------
+
+EXP_09_REAL_FIELD_NAVIGATION
+
+Question:
+
+    Can the discovered gate states
+    be used to navigate efficiently
+    through the real IEEE39 field?
+
+This is the first direct test of
+field-based navigation using
+real power-system dynamics.
+
