@@ -1,0 +1,36 @@
+
+EXP_11 SEPARATRIX VALIDATION
+========================================
+
+States:
+540
+
+Left Side States:
+164
+
+Right Side States:
+376
+
+Mean Left Alignment:
+-0.077827
+
+Mean Right Alignment:
+0.074975
+
+Alignment Gap:
+0.152802
+
+Interpretation
+----------------------------------------
+
+Large alignment gap:
+
+    candidate separatrix
+
+Small alignment gap:
+
+    transport corridor
+
+Gate axis tested:
+
+502 → 498 → 81 → 33
