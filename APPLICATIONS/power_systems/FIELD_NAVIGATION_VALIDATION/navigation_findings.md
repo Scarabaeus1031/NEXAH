@@ -2403,3 +2403,155 @@ is no longer supported only by geometry or transport behavior.
 EXP_12 demonstrates that the axis separates operating states with substantially different electrical characteristics.
 
 This provides the first evidence that NEXAH-discovered gate structures may correspond to real regime boundaries inside IEEE39 state-space.
+
+## Findings — EXP_13_REGIME_CROSSING
+
+### Objective
+
+Validate whether the gate-axis discovered in EXP_11 and physically validated in EXP_12 behaves as a meaningful transition region rather than an arbitrary geometric divider.
+
+Gate Axis:
+
+502 → 498 → 81 → 33
+
+---
+
+### Key Results
+
+States:
+540
+
+LEFT States:
+164
+
+RIGHT States:
+376
+
+Detected Crossings:
+219
+
+---
+
+### Interpretation
+
+EXP_13 confirms that the gate-axis does not behave like an isolated mathematical line.
+
+Instead, the surrounding state-space forms a broad transition region where states can appear on both sides of the axis.
+
+This suggests:
+
+- The gate-axis acts as a regime boundary.
+- The boundary possesses finite width.
+- The transition is distributed over a corridor rather than concentrated on a single PCA curve.
+- The field geometry is consistent with a separatrix band.
+
+This behaviour is significantly more realistic than a perfectly sharp separation surface and resembles transition regions observed in many nonlinear dynamical systems.
+
+---
+
+### Visual Analysis
+
+#### 1. Crossing Locations
+
+![Crossing Locations](./outputs/EXP_13_REGIME_CROSSING/exp13_crossing_locations.png)
+
+The detected crossing points are distributed along the entire gate corridor.
+
+Observation:
+
+- Crossings cluster around the gate structure.
+- Crossings are not concentrated at a single point.
+- The corridor appears spatially extended.
+
+Interpretation:
+
+The regime transition occupies a finite-width region in field space.
+
+---
+
+#### 2. Crossing Timeline
+
+![Crossing Timeline](./outputs/EXP_13_REGIME_CROSSING/exp13_crossing_timeline.png)
+
+Important:
+
+The x-axis represents sample order rather than physical time.
+
+Therefore:
+
+- This plot should not be interpreted as a true temporal switching process.
+- It visualizes crossing density across the Monte-Carlo ensemble.
+
+Interpretation:
+
+The large number of sign changes indicates that states populate both sides of the transition corridor.
+
+---
+
+#### 3. Distance To Gate Axis
+
+![Distance Histogram](./outputs/EXP_13_REGIME_CROSSING/exp13_distance_histogram.png)
+
+Observation:
+
+- Signed distances populate both sides of zero.
+- No empty gap exists around the axis.
+- State density extends continuously through the transition zone.
+
+Interpretation:
+
+The gate-axis sits inside an occupied transition region rather than between disconnected clusters.
+
+---
+
+#### 4. Regime Sequence
+
+![Regime Sequence](./outputs/EXP_13_REGIME_CROSSING/exp13_regime_sequence.png)
+
+Important:
+
+This plot reflects sample ordering only.
+
+It is not a trajectory.
+
+Interpretation:
+
+The alternation between LEFT and RIGHT states demonstrates that both regimes coexist throughout the explored operating space.
+
+---
+
+### Scientific Conclusion
+
+EXP_13 does not primarily prove temporal regime switching.
+
+Instead it demonstrates that:
+
+- The gate-axis discovered in EXP_11 is embedded in a populated state-space corridor.
+- The regime split identified in EXP_12 is not an artifact of PCA geometry.
+- The transition region possesses measurable width.
+- The system exhibits a separatrix band rather than a separatrix line.
+
+---
+
+### Relation To Previous Experiments
+
+EXP_10:
+- Revealed coherent transport structures and gate-aligned flow directions.
+
+EXP_11:
+- Identified a candidate separatrix.
+
+EXP_12:
+- Demonstrated strong physical regime differences across the separatrix.
+
+EXP_13:
+- Shows that the separatrix forms an extended transition corridor occupied by real operating states.
+
+Resulting chain:
+
+Flow Structure
+→ Separatrix
+→ Physical Regime Difference
+→ Transition Corridor
+
+This constitutes the first complete geometric-to-physical validation chain within the FIELD_NAVIGATION_VALIDATION framework.
