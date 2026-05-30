@@ -76,7 +76,8 @@ That question has been answered.
 The new questions become:
 
 ```text
-Can we predict motion inside the atlas?  Can we detect dangerous transitions?  Can we guide trajectories?  Can we control movement between regions? 
+Can we predict motion inside the atlas?  Can we detect dangerous transitions?
+Can we guide trajectories?  Can we control movement between regions? 
 ```
 
 Phase D therefore shifts from discovery toward operational utility.
