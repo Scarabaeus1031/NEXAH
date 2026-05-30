@@ -383,7 +383,7 @@ transition_table.to_csv(
     os.path.join(
         OUTPUT_DIR
         "exp25_transition_table.csv"
-),
+    ),
     index=False
 )
 
