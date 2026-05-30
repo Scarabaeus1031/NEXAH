@@ -2215,3 +2215,191 @@ Field Geometry
 and forms the foundation for the next phase:
 
 EXP_12 — Regime Transition Crossing.
+
+## Findings — EXP_12 Regime Transition Crossing
+
+### Key Result
+
+EXP_12 tested whether the gate-axis discovered in EXP_11 corresponds to a genuine operating-regime boundary.
+
+The result is strongly positive.
+
+The gate-axis
+
+502 → 498 → 81 → 33
+
+does not merely separate geometry within PCA space.
+
+It separates distinct power-system operating conditions.
+
+---
+
+### Regime Split
+
+The gate-axis divides the IEEE39 state-space into two large regions:
+
+#### LEFT Regime
+
+Characteristics:
+
+- higher angle spread
+- higher mean loading
+- higher maximum loading
+- larger voltage variability
+- broader operating range
+
+Interpretation:
+
+A more dynamically stressed operating regime.
+
+#### RIGHT Regime
+
+Characteristics:
+
+- higher minimum voltage
+- higher mean voltage
+- higher density
+- lower loading
+- smaller angle spread
+
+Interpretation:
+
+A more compact and stable operating regime.
+
+---
+
+### Strongest Physical Separation
+
+The strongest regime discriminator is:
+
+| Metric | Effect Size |
+|----------|-----------:|
+| angle_span | -2.577 |
+
+This is an extremely large effect size.
+
+Additional strong regime indicators:
+
+| Metric | Effect Size |
+|----------|-----------:|
+| mean_loading | -2.471 |
+| max_loading | -2.382 |
+| mean_vm | +1.546 |
+| std_vm | -1.472 |
+| min_vm | +1.441 |
+| density | +1.405 |
+
+---
+
+### Physical Interpretation
+
+The discovered gate-axis behaves like a regime boundary.
+
+Crossing the axis corresponds to systematic changes in:
+
+- voltage structure
+- loading structure
+- angle dynamics
+- state-space density
+
+This suggests that the gate-axis may approximate a real transition surface inside the IEEE39 operating landscape.
+
+---
+
+### Relation to Previous Experiments
+
+EXP_09:
+- Gate-aware navigation discovered transport-critical nodes.
+
+EXP_09B:
+- Gate importance identified dominant transport bottlenecks.
+- Node 81 emerged as the strongest gate.
+
+EXP_09C:
+- Gate localization revealed a coherent gate corridor:
+  502 → 498 → 81 → 33
+
+EXP_10:
+- Flow reconstruction showed coherent transport structures.
+- Gate nodes were located on transport-aligned regions.
+
+EXP_11:
+- The gate-axis produced a measurable flow-direction split.
+- Alignment gap = 0.1528
+
+EXP_12:
+- The same gate-axis separates physically distinct operating regimes.
+
+This is the strongest validation of the gate-axis hypothesis so far.
+
+---
+
+### Visual Evidence
+
+#### Regime Split by Gate Axis
+
+![](./outputs/EXP_12_REGIME_TRANSITION_CROSSING/exp12_side_regimes.png)
+
+The gate-axis divides the state-space into two large operating regions.
+
+---
+
+#### Flow Direction Split
+
+![](./outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_flow_direction_split.png)
+
+The same axis already separated flow directions in EXP_11.
+
+---
+
+#### Angle Span Separation
+
+![](./outputs/EXP_12_REGIME_TRANSITION_CROSSING/exp12_angle_split.png)
+
+The strongest regime difference observed.
+
+---
+
+#### Maximum Line Loading Split
+
+![](./outputs/EXP_12_REGIME_TRANSITION_CROSSING/exp12_loading_split.png)
+
+The LEFT regime operates under substantially higher loading stress.
+
+---
+
+#### Global Load Scale Split
+
+![](./outputs/EXP_12_REGIME_TRANSITION_CROSSING/exp12_load_scale_split.png)
+
+System-wide loading differs across the gate-axis.
+
+---
+
+#### Minimum Voltage Split
+
+![](./outputs/EXP_12_REGIME_TRANSITION_CROSSING/exp12_voltage_split.png)
+
+Voltage quality differs significantly between regimes.
+
+---
+
+#### Effect Size Ranking
+
+![](./outputs/EXP_12_REGIME_TRANSITION_CROSSING/exp12_effect_size_ranking.png)
+
+Summary of all regime-separating metrics.
+
+---
+
+### Conclusion
+
+The gate-axis
+
+502 → 498 → 81 → 33
+
+is no longer supported only by geometry or transport behavior.
+
+EXP_12 demonstrates that the axis separates operating states with substantially different electrical characteristics.
+
+This provides the first evidence that NEXAH-discovered gate structures may correspond to real regime boundaries inside IEEE39 state-space.
