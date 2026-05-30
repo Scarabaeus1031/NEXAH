@@ -1783,7 +1783,7 @@ This provides an independent validation of the gate hypothesis.
 
 ### Visual
 
-![](exp10_gate_flow_overlay.png)
+![GATE FLOW OVERLAY](./outputs/EXP_10_FLOW_FIELD_RECONSTRUCTION/exp10_gate_flow_overlay.png)
 
 ---
 
@@ -2122,9 +2122,9 @@ Evidence:
 
 # Visuals
 
-## Visual 1
+### Visual 1 — Side Classification
 
-outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_side_classification.png
+![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_side_classification.png)
 
 Shows:
 
@@ -2138,9 +2138,9 @@ Verify that the gate chain produces a meaningful spatial division.
 
 ---
 
-## Visual 2
+### Visual 2 — Separatrix Score
 
-outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_separatrix_score.png
+![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_separatrix_score.png)
 
 Shows:
 
@@ -2156,9 +2156,9 @@ Quantify directional transport separation.
 
 ---
 
-## Visual 3
+### Visual 3 — Gate Axis
 
-outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_gate_axis.png
+![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_gate_axis.png)
 
 Shows:
 
@@ -2172,9 +2172,9 @@ Visualize the dominant transport backbone discovered in EXP_09–09C.
 
 ---
 
-## Visual 4
+### Visual 4 — Flow Direction Split
 
-outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_flow_direction_split.png
+![](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_11_SEPARATRIX_VALIDATION/exp11_flow_direction_split.png)
 
 Shows:
 
