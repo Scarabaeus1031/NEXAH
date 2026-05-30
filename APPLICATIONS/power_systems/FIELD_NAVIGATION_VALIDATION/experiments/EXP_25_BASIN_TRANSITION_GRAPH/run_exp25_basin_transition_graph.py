@@ -259,3 +259,66 @@ for b in range(n_basins):
         coords[members]
         .mean(axis=0)
     )
+# ------------------------------------------------------------
+# Basin Transition Matrix
+# ------------------------------------------------------------
+
+transition_matrix = np.zeros(
+    (n_basins, n_basins),
+    dtype=int
+)
+
+for u, v in G.edges():
+
+    bu = node_basin[u]
+    bv = node_basin[v]
+
+    if bu != bv:
+
+        transition_matrix[bu, bv] += 1
+        transition_matrix[bv, bu] += 1
+
+print(
+    "Cross-basin edges:",
+    transition_matrix.sum() // 2
+)
+
+# ------------------------------------------------------------
+# Transition Table
+# ------------------------------------------------------------
+
+rows = []
+
+for i in range(n_basins):
+    for j in range(i + 1, n_basins):
+
+        if transition_matrix[i, j] > 0:
+
+            rows.append({
+                "source_basin": i,
+                "target_basin": j,
+                "transition_count":
+                    int(
+                        transition_matrix[i, j]
+                    )
+            })
+
+transition_table = pd.DataFrame(rows)
+
+transition_table = transition_table.sort_values(
+    "transition_count",
+    ascending=False
+)
+
+transition_table.to_csv(
+    os.path.join(
+        OUTPUT_DIR,
+        "exp25_transition_table.csv"
+    ),
+    index=False
+)
+
+print(
+    "\nTransitions:",
+    len(transition_table)
+)
