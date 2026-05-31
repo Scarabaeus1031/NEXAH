@@ -1728,3 +1728,234 @@ to
 - recovery cost estimation (EXP_34)
 
 The Atlas can now estimate not only where a state should move, but also how difficult that movement may be.
+
+---
+# EXP_35 — RECOVERY CORRIDOR DISCOVERY
+
+## Objective
+
+Identify whether warning and critical atlas states possess natural recovery directions that lead back toward stable operating regions.
+
+The central question is:
+
+Can the atlas reveal local recovery corridors that guide unstable states toward safety?
+
+---
+
+## Motivation
+
+Previous experiments established:
+
+- atlas geometry exists
+- transport directions exist
+- warning states can be detected
+- control effort can be estimated
+
+The next step is determining whether unstable regions contain identifiable recovery pathways.
+
+If such pathways exist, the atlas becomes more than a warning system.
+
+It becomes a navigation system.
+
+---
+
+## Method
+
+Using the EXP_08 field geometry:
+
+text State Space      ↓ PCA Atlas      ↓ Warning Classification      ↓ Nearest Stable Region Search      ↓ Recovery Corridor Extraction 
+
+For every WARNING and CRITICAL state:
+
+1. locate nearby SAFE states
+2. identify the closest recovery target
+3. construct a recovery vector
+4. measure recovery path length
+5. aggregate recovery trajectories into a corridor network
+
+---
+
+## Results
+
+States: 540
+
+Basins: 18
+
+PCA Variance: 84.59%
+
+Recovery Paths: 71
+
+Mean Corridor Length:
+
+0.6507
+
+Max Corridor Length:
+
+1.3250
+
+Min Corridor Length:
+
+0.2028
+
+---
+
+## Main Observation
+
+Recovery trajectories are not random.
+
+Most recovery paths are short and localized.
+
+Instead of requiring large-scale movement through the atlas, unstable states typically possess nearby recovery directions leading back toward stable regions.
+
+This suggests that the atlas contains local stability gradients.
+
+---
+
+## Corridor Structure
+
+Recovery pathways repeatedly converge through a limited set of atlas regions.
+
+The resulting corridor density map reveals recurring recovery funnels rather than uniformly distributed recovery routes.
+
+This indicates that some regions act as preferred recovery gateways.
+
+Interestingly, the recovery vectors do not reveal a new geometric object.
+
+Instead, they repeatedly trace structures that have already appeared throughout the atlas-discovery phase.
+
+The same regions previously identified through transport analysis, residual structures, curl layers, separatrix extraction, and rift detection reappear as preferred recovery regions.
+
+---
+
+## Relationship To Previous Findings
+
+EXP_35 connects naturally with:
+
+- EXP_29 Basin Structure
+- EXP_30 Transition Prediction
+- EXP_31 Trajectory Forecasting
+- EXP_32 Early Warning Index
+- EXP_33 Navigation Direction Estimation
+- EXP_34 Control Effort Estimation
+
+The recovery corridors frequently align with previously observed transport structures:
+
+- transport spine
+- basin boundaries
+- rift structures
+- separatrix regions
+- curl-driven flow directions
+
+This supports the hypothesis that these features are different manifestations of the same underlying atlas geometry.
+
+---
+
+## Interpretation
+
+The atlas behaves less like a collection of isolated operating points and more like a continuous stability landscape.
+
+Warning states appear to possess natural return directions toward nearby stable regions.
+
+Observed behavior follows the pattern:
+
+text Warning State       ↓ Recovery Corridor       ↓ Safe Region 
+
+suggesting the existence of local stability gradients embedded within the atlas.
+
+The most surprising result is that recovery rarely requires long-range transport.
+
+The atlas appears to favor small corrective motions rather than large relocations.
+
+In practical terms:
+
+text You do not need to leave the atlas region.  You only need to move back onto the stable side of the local geometry. 
+
+This observation is remarkably consistent with earlier findings involving:
+
+- residual boundaries
+- curl ridges
+- separatrix structures
+- rift extraction
+- collapse boundaries
+
+which all suggested the existence of narrow transition regions separating stability from instability.
+
+---
+
+## Engineering Implication
+
+The result indicates that recovery actions may not require large-scale state relocation.
+
+Instead, operators may only need to apply relatively small corrections that move the system back onto a nearby stable corridor.
+
+This is potentially important for real-time operational guidance.
+
+Rather than searching globally for corrective actions, the atlas suggests that stabilization may be achieved through local navigation along embedded recovery directions.
+
+---
+
+## Conclusion
+
+EXP_35 provides evidence that the atlas contains identifiable recovery corridors.
+
+These corridors form localized pathways connecting unstable operating regions back to stable territories.
+
+Recovery pathways concentrate through recurring corridor funnels and repeatedly align with previously discovered atlas structures.
+
+The result strengthens the view that the atlas is not merely descriptive but contains navigable structure capable of supporting future control and stabilization strategies.
+
+EXP_35 therefore represents the first direct evidence that the atlas contains not only warning information but also embedded recovery guidance.
+
+
+## Visuals
+
+### Recovery Corridor Network
+![](./outputs/EXP_35_RECOVERY_CORRIDOR_DISCOVERY/exp35_corridor_network.png)
+
+Shows basin centers and the extracted recovery-vector network connecting warning regions toward nearby stable territories.
+
+The visualization highlights that recovery actions are generally local rather than global atlas transitions.
+
+---
+
+### Recovery Corridors
+![](./outputs/EXP_35_RECOVERY_CORRIDOR_DISCOVERY/exp35_recovery_corridors.png)
+
+Atlas-wide visualization of all identified recovery pathways overlaid on the PCA field geometry.
+
+Most recovery vectors remain short and converge toward nearby safe operating regions, suggesting local stability gradients within the atlas.
+
+The recovered pathways repeatedly align with structures previously associated with transport corridors, separatrix layers, and atlas transition regions.
+
+---
+
+### Recovery Path Length Distribution
+![](./outputs/EXP_35_RECOVERY_CORRIDOR_DISCOVERY/exp35_recovery_path_lengths.png)
+
+Distribution of recovery distances required to return from warning states toward safe operating regions.
+
+The majority of recovery paths cluster around moderate corridor lengths, while only a small number require larger corrective movement.
+
+This supports the interpretation that stabilization is primarily a local operation.
+
+---
+
+### Corridor Density Map
+![](./outputs/EXP_35_RECOVERY_CORRIDOR_DISCOVERY/exp35_corridor_density.png)
+
+Density map of recovery-corridor usage across the atlas.
+
+Several recurring recovery funnels emerge, indicating preferred stabilization routes and frequently used recovery gateways.
+
+These high-density regions appear to coincide with previously observed transport structures and atlas bottlenecks.
+
+---
+
+### Safe Arrivals
+![](./outputs/EXP_35_RECOVERY_CORRIDOR_DISCOVERY/exp35_safe_arrivals.png)
+
+Recovery origins (warning and critical states) and their corresponding safe destination states.
+
+The figure illustrates that most recovery actions involve short-range movement toward nearby stable territories rather than long-distance transport across the atlas.
+
+The pattern suggests that unstable states already contain nearby recovery opportunities embedded within the atlas geometry itself.
