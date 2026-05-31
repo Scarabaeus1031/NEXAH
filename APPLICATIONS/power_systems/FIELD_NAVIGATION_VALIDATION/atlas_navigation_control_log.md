@@ -1402,3 +1402,237 @@ The experiment therefore provides the first operational Early Warning Layer for 
 
 EXP_32 establishes the foundation for future predictive navigation experiments in which instability is not merely detected but actively avoided through field-guided control.
 
+# Findings — EXP_33 Control Vector Discovery
+
+## Objective
+
+EXP_33 extends the transition forecasting framework of EXP_31 and the warning system of EXP_32 by introducing a geometric recovery mechanism.
+
+The central question was:
+
+> If a state is already approaching instability, in which direction should it move in order to return toward a stable region of the atlas?
+
+Instead of merely identifying dangerous regions, EXP_33 attempts to compute local recovery vectors that point back toward stable basin cores.
+
+---
+
+## Key Result
+
+The experiment demonstrates that recovery directions emerge naturally from atlas geometry.
+
+States classified as WARNING or CRITICAL do not produce random correction vectors.
+
+Instead, they converge toward identifiable local attractor centers.
+
+This suggests that the NEXAH Atlas contains embedded control information and can provide navigation guidance in addition to structural analysis.
+
+---
+
+## Visual Analysis
+
+### 1. Recovery Vectors
+
+![EXP_33 Recovery Vectors](./outputs/EXP_33_CONTROL_VECTOR_DISCOVERY/exp33_recovery_vectors.png)
+
+This visualization reveals a network of local recovery flows.
+
+Several observations stand out:
+
+- recovery vectors converge toward nearby basin centers
+- vector orientations are highly structured
+- multiple local convergence regions emerge
+- vector bundles resemble radial attraction fields
+
+The black crosses increasingly resemble local attractors rather than simple clustering centroids.
+
+A notable feature is the appearance of fan-like vector structures that resemble the branching geometries observed previously in:
+
+- EXP_31 Transition Prediction
+- Prime Grid structures
+- Atlas transport channels
+
+The recovery process therefore appears organized around geometric flow paths rather than arbitrary correction directions.
+
+---
+
+### 2. Recovery Targets
+
+![EXP_33 Recovery Targets](./outputs/EXP_33_CONTROL_VECTOR_DISCOVERY/exp33_recovery_targets.png)
+
+The atlas geometry expands significantly when target destinations are visualized.
+
+Compared to previous experiments:
+
+- the familiar "J-shaped" structure becomes stretched
+- local territories become more distinct
+- individual basin systems appear as semi-independent coordinate regions
+
+The visualization suggests that the atlas may contain multiple local navigation systems embedded inside a larger global geometry.
+
+Instead of one universal coordinate system, the atlas behaves more like a collection of connected local domains.
+
+---
+
+### 3. Control Vector Field
+
+![EXP_33 Control Vector Field](./outputs/EXP_33_CONTROL_VECTOR_DISCOVERY/exp33_control_vector_field.png)
+
+This is arguably the strongest result of the experiment.
+
+The visualization combines:
+
+- warning levels
+- recovery vectors
+- basin centers
+
+into a single geometric map.
+
+One particularly striking observation is the region near:
+
+```text
+PC1 ≈ 2
+PC2 ≈ 0
+```
+
+This area exhibits:
+
+- dense green states
+- very low warning levels
+- almost no significant recovery vectors
+
+The atlas effectively indicates:
+
+> No corrective action required.
+
+This region behaves like a naturally stable core.
+
+In contrast, outer regions generate increasingly strong recovery directions toward local basin centers.
+
+---
+
+### 4. Recovery Vector Length Distribution
+
+![EXP_33 Vector Length Distribution](./outputs/EXP_33_CONTROL_VECTOR_DISCOVERY/exp33_vector_length_distribution.png)
+
+Most recovery vectors fall within:
+
+```text
+0.2 – 0.6
+```
+
+Only a small number exceed:
+
+```text
+0.8
+```
+
+or
+
+```text
+1.0
+```
+
+Interpretation:
+
+- most unstable states remain relatively close to safety
+- only a small subset requires major corrective action
+- recovery appears achievable through local movement rather than large-scale relocation
+
+This suggests that instability often develops gradually and can potentially be corrected before a major transition occurs.
+
+---
+
+### 5. Warning Recovery Overlay
+
+![EXP_33 Warning Recovery Overlay](./outputs/EXP_33_CONTROL_VECTOR_DISCOVERY/exp33_warning_recovery_overlay.png)
+
+This visualization combines the findings of EXP_31, EXP_32 and EXP_33.
+
+The most important observation is:
+
+Recovery vectors generally point inward toward local stable regions.
+
+They do not typically indicate:
+
+- long-distance jumps
+- basin switching
+- global relocation
+
+Instead they suggest:
+
+```text
+local return
+toward local stability
+```
+
+This behavior resembles restoring forces in dynamical systems.
+
+The atlas therefore appears capable of providing not only warning signals but also geometric recovery recommendations.
+
+---
+
+## Quantitative Summary
+
+```text
+States: 540
+Basins: 18
+
+SAFE:      108
+WATCH:     361
+WARNING:    63
+CRITICAL:    8
+
+Control Candidates: 71
+
+Mean Recovery Length: 0.3777
+Max Recovery Length: 1.3686
+```
+
+---
+
+## Interpretation
+
+EXP_31 demonstrated:
+
+> Where transitions are likely to occur.
+
+EXP_32 demonstrated:
+
+> When a state begins approaching danger.
+
+EXP_33 demonstrates:
+
+> How a state can move back toward stability.
+
+This represents the first experiment in which the atlas generates actionable recovery directions.
+
+The geometry is no longer purely descriptive.
+
+It becomes navigational.
+
+---
+
+## Conclusion
+
+EXP_33 provides the first evidence that the NEXAH Atlas contains an intrinsic control layer.
+
+The resulting vector fields suggest that:
+
+- basin cores act as local attractors
+- unstable states possess identifiable recovery directions
+- recovery paths emerge directly from atlas geometry
+- stability can potentially be navigated rather than merely observed
+
+The atlas therefore behaves less like a static clustering space and increasingly like a navigable dynamical field.
+
+This marks an important transition from:
+
+```text
+Structure Discovery
+        →
+Field Navigation
+        →
+Geometric Control
+```
+
+within the NEXAH framework.
