@@ -26,7 +26,7 @@ The framework has been validated across IEEE benchmark systems and demonstrates 
 ## 🌌 Stability Field Dynamics
 
 ![Stability Field Dynamics](FIELD_NAVIGATION_VALIDATION/outputs/diagrams/Stability_Field_Dynamics.png)
-
+ 
 NEXAH transforms dynamical simulations into navigable stability fields.
 
 ```text
