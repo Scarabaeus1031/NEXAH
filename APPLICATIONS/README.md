@@ -1,294 +1,275 @@
-# NEXAH — Demonstrations of Structured Dynamics  
-**Structural Analysis and Regime Navigation in Complex Systems**
+# NEXAH — Demonstrations of Structured Dynamics
+
+### Discovering Navigable Structure in Complex Systems
 
 ---
 
 ## 🧭 Overview
 
-This directory contains **validated demonstrations and early applications**  
-of the NEXAH framework.
+This directory contains validated demonstrations and real-world applications of the NEXAH framework.
 
-NEXAH provides a unified approach to analyzing complex systems through:
+NEXAH investigates whether complex dynamical systems organize into discoverable and navigable state-space structures.
 
-→ structure  
-→ flow  
-→ geometry  
-→ regime transitions  
+Rather than treating system behavior as isolated events, NEXAH reveals coherent dynamical atlases consisting of:
 
-Instead of focusing on isolated events (e.g. collapse), NEXAH studies how systems evolve within:
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates & Bottlenecks
+- Recovery Anchors
+- Control Pathways
 
-> **structured dynamical landscapes**
-
----
-
-## 🚀 Core Principle
-
-Classical system analysis:
-
-→ detects instability as a discrete event  
-
-NEXAH:
-
-→ interprets instability as a **continuous transition between regimes**
+The objective is to transform system analysis from observation toward navigation and intervention.
 
 ---
 
-# 🧪 🔥 Validation Layer (CRITICAL)
+## 🌌 Core Principle
 
-📂 `power_systems/VALIDATION_LAYER/`
+Traditional analysis often focuses on events:
 
-The Validation Layer provides **quantitative and structural evidence**  
-for the NEXAH approach.
+text state → instability → collapse 
 
----
-
-## Purpose
-
-To test whether NEXAH can:
+NEXAH focuses on structure:
 
 ```text
-detect instability earlier
-and/or
-reveal structural behavior beyond classical signals
+   dynamics
+       ↓
+    structure
+       ↓
+     field
+       ↓
+     atlas
+       ↓
+   navigation
+       ↓
+   prediction
+       ↓
+   recovery
+       ↓
+    control 
 ```
 
 ---
 
-## Key Mechanism
+## ⚡ Current Application Status
+
+NEXAH Power Systems Current Status
+
+The current power-system validation demonstrates that operating states organize into coherent geometric structures rather than random state clouds.
+
+Discovered structures include:
+
+- Basin Territories
+- Transport Networks
+- Transition Corridors
+- Gates & Bottlenecks
+- Recovery Regions
+- Atlas-Guided Control Infrastructure
+
+---
+
+# 🧪 Validation Layer
+
+📂 power_systems/VALIDATION_LAYER/
+
+The Validation Layer provides quantitative evidence for the NEXAH approach.
+
+Purpose:
 
 ```text
-signal → event → shape → geometry → motion
+Can latent structure be detected?  Can transitions be anticipated?  Can system motion be interpreted geometrically? 
 ```
 
+
+Key Findings:
+
+- Early-warning behavior appears before collapse
+- Instability emerges as geometric drift
+- Structural indicators outperform simple threshold observations
+- Transition dynamics become measurable
+
 ---
 
-## Verified Results
+# 🌀 Dynamical Systems — Core Reference (Lorenz)
 
-- early warning up to **40–50 time units** (IEEE collapse scenarios)  
-- instability appears as **geometric drift**, not threshold crossing  
-- motion-based metrics (angle, speed) reveal **transition dynamics**  
-- statistical validation confirms reliability (~86% detection rate)
+Lorenz Core
 
----
+The Lorenz system serves as the minimal reference implementation of the NEXAH framework.
 
-## Interpretation
+It demonstrates the complete transformation pipeline:
 
 ```text
-Instability is not a point.
-
-It is a movement through structure.
+   Dynamics
+       ↓
+   Structure
+       ↓
+    Geometry
+       ↓
+     Signal
+       ↓
+     Behavior 
 ```
 
----
 
-## References
+Key Insights:
 
-- `power_systems/VALIDATION_LAYER/reports/validation_report_v3.md`  
-- `power_systems/VALIDATION_LAYER/reports/validated_findings.md`  
+- Chaotic systems exhibit latent structure
+- Transitions occur within specific regions
+- Motion follows repeatable pathways
+- Structure emerges directly from dynamics
 
----
+Entry Point:
 
-# 🌀 1. Dynamical Systems — Core Reference (Lorenz)
-
-![Lorenz Core](core_demos/lorenz/outputs/lorenz_nexah_v12_final.png)
-
-The Lorenz system serves as the **reference implementation** of the NEXAH framework.
-
-It demonstrates the core transformation pipeline:
-
-```text
-Dynamics → Structure → Geometry → Signal → Behavior
-```
+core_demos/lorenz/README.md
 
 ---
 
-## 🧠 Key Insights
+# ⚡ Power Systems — Atlas Discovery
 
-From the Lorenz module:
+📂 power_systems/
 
-- chaotic systems exhibit **latent structure**
-- trajectories form **repeatable patterns**
-- transitions occur in **specific regions**
-- signals emerge directly from local dynamics  
-- behavior becomes **geometry-aware** rather than reactive  
+The power-system application layer is currently the most advanced NEXAH validation environment.
 
----
+Research areas include:
 
-## 🧭 Entry Point
-
-👉 `core_demos/lorenz/README.md`
-
----
-
-## 🧠 Interpretation
-
-> The Lorenz system is a **minimal working example** of NEXAH:
->
-> a system where dynamics and structure can be observed in a unified way.
+- Stability Field Construction
+- Atlas Discovery
+- Transition Prediction
+- Recovery Navigation
+- Atlas-Guided Control
+- IEEE Benchmark Validation
 
 ---
 
-# ⚡ 2. Power Systems — Structural Stability Analysis
+## Main Results
 
-![NEXAH Overview](power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling/ieee300_transition_detection.png)
+The discovered state space contains:
 
-*Structural transition behavior in large-scale power system dynamics.*
+- 18 Basin Territories
+- Structured Transport Corridors
+- High-Traffic Backbone Networks
+- Gates and Bottlenecks
+- Recovery Anchors
+- Predictive Navigation Infrastructure
 
-![NEXAH Pipeline](power_systems/nexah_ieeeX/results/run_ieee300_20260413_015843/paper_figure.png)
+The resulting atlas supports:
 
-*Field-based analysis pipeline and resulting system structure.*
-
----
-
-## 🔬 Highlight Results
-
-### ⚡ Early Warning — IEEE Collapse Sweep
-
-![IEEE Collapse Sweep](power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_009_ieee_collapse_sweep/figure_03.png)
-
-**Observation:**
-- collapse under high load stress (~60–75)  
-- NEXAH warning significantly earlier (~20–25)  
-
-**Result:**
-
-```text
-Lead time ≈ 40–50 time units
-```
+- Transition Prediction
+- Trajectory Forecasting
+- Early Warning
+- Recovery Guidance
+- Control Planning
 
 ---
 
-### 🌀 Geometric Instability — Continuous Shape Flow
+# 🔬 Current Capabilities
 
-![Continuous Shape Flow](power_systems/VALIDATION_LAYER/outputs/pipeline_20260429_012000/run_006_continuous_shape_flow/figure_02.png)
-
-**Observation:**
-- angle spikes precede collapse  
-- speed increases later  
-
-**Interpretation:**
-
-```text
-Instability emerges as directional change in system motion
-```
-
----
-
-## 🔍 Observations
-
-- system trajectories exhibit **structured organization**  
-- collapse appears as a **boundary in state space**  
-- system evolution follows **flow-like dynamics**  
-- qualitative patterns persist across different network sizes  
+| Capability | Status |
+|------------|---------|
+| Structure Discovery | ✅ |
+| Basin Detection | ✅ |
+| Atlas Construction | ✅ |
+| Navigation | ✅ |
+| Transition Prediction | ✅ |
+| Early Warning | ✅ |
+| Recovery Guidance | ✅ |
+| Control Framework | ✅ |
+| Real-Time Deployment | 🚧 |
 
 ---
 
-## 🧠 Interpretation
+# 🔵 Adapter Layer
 
-> Power system stability can be interpreted as a  
-> **trajectory within a structured dynamical landscape**
-
----
-
-⚠️ These results are based on controlled simulations  
-and should be interpreted as **validated structural behavior**, not final operational guarantees.
-
----
-
-## ⚙️ Current Capabilities
-
-- structural analysis of IEEE test systems  
-- trajectory-based stability interpretation  
-- experimental regime transition detection  
-- scaling up to **9241-bus systems**  
-
----
-
-## ⚠️ Important Note
-
-- early detection performance is **scenario-dependent**  
-- no universal guarantee of lead time  
-- validation on real-world data is ongoing  
-
----
-
-## 🧭 Entry Points
-
-| Purpose | Path |
-|--------|------|
-| Quick results | `power_systems/nexah_ieeeX/` |
-| Full overview | `power_systems/` |
-| Minimal pipeline | `power_systems/nexah_ieee9/` |
-| Structural theory | `power_systems/stability_field_dynamics/` |
-| Geometric analysis | `power_systems/ieee_xray_pipeline/` |
-| Validation (critical) | `power_systems/VALIDATION_LAYER/` |
-
----
-
-## ⚡ Run Example
-
-```bash
-PYTHONPATH=. python APPLICATIONS/power_systems/nexah_ieeeX/decision/main_ieee300.py
-```
-
----
-
-# 🧩 3. Structural Theory — Collapse Geometry
-
-![Collapse Geometry](power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee14_v52_residual_vs_distance.png)
-
----
-
-## 🧠 Interpretation
-
-> Collapse is not a singular failure event,  
-> but a **geometric transition within system structure**
-
----
-
-# 🔵 4. Adapter Layer — System Integration
-
-```text
-System → Adapter → State Graph → NEXAH → Analysis
-```
+text System     ↓ Adapter     ↓ State Graph     ↓ NEXAH     ↓ Analysis 
 
 Supported domains:
 
-- power systems  
-- dynamical systems  
-- synthetic environments  
+- Power Systems
+- Dynamical Systems
+- Synthetic Environments
+- Future Complex-System Applications
 
-👉 `adapters/README.md`
+Entry Point:
+
+adapters/README.md
 
 ---
 
 # 🧠 Unified Insight
 
-Across all modules:
+Across all applications studied so far:
 
-> Systems evolve along structured trajectories.  
-> Instability emerges as a **transition between regimes**, not a single event.
+> Systems do not evolve randomly through state space.
+
+Instead, they move through structured dynamical landscapes containing regions, pathways, boundaries, and preferred transitions.
+
+NEXAH attempts to reveal and utilize that structure.
 
 ---
 
 # 🧭 Navigation Guide
 
 | Goal | Start Here |
-|------|-----------|
-| Understand the framework | `core_demos/lorenz/` |
-| Explore validation | `power_systems/VALIDATION_LAYER/` |
-| Explore large-scale systems | `power_systems/nexah_ieeeX/` |
-| Run minimal example | `power_systems/nexah_ieee9/` |
-| Study structure | `power_systems/stability_field_dynamics/` |
+|--------|--------|
+| Understand NEXAH | core_demos/lorenz/ |
+| Explore Validation | power_systems/VALIDATION_LAYER/ |
+| Explore Power Systems | power_systems/ |
+| Study Atlas Discovery | power_systems/FIELD_NAVIGATION_VALIDATION/ |
+| Review Prediction & Recovery | power_systems/FIELD_NAVIGATION_VALIDATION/outputs/ |
+
+---
+
+# 🌍 Future Applications
+
+Potential application areas include:
+
+- Electrical Power Systems
+- Industrial Process Control
+- Energy Networks
+- Ecosystem Dynamics
+- Transportation Systems
+- Autonomous Agents
+- General Complex Dynamical Systems
+
+---
+
+# 🤝 Collaboration
+
+NEXAH is currently an independent research effort.
+
+Researchers, engineers, power-system experts, control theorists, and complex-systems practitioners interested in:
+
+- stability analysis
+- dynamical systems
+- state-space geometry
+- navigation and control
+- IEEE benchmark validation
+
+are warmly invited to explore the repository, reproduce results, challenge assumptions, and contribute ideas.
+
+Progress will ultimately depend on open discussion, independent validation, and real-world testing.
 
 ---
 
 # 🌀 NEXAH
 
 ```text
-dynamics → structure → flow → geometry → regimes → navigation
+    dynamics
+       ↓
+   structure
+       ↓
+     flow
+       ↓
+   geometry
+       ↓
+     atlas
+       ↓
+  navigation
+       ↓
+   prediction
+       ↓
+    recovery
+       ↓
+    control 
 ```
-
----
-
-**Thomas K. R. Hofmann · NEXAH**
+Structure reveals. Navigation guides. Control protects.
