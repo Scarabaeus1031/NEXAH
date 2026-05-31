@@ -1,3 +1,35 @@
+"""
+
+ATLAS NAVIGATION CONTROLLER V1
+
+Historical prototype developed prior to
+
+EXP_29–EXP_36 Atlas Operations.
+
+Implements a risk-driven state machine based on:
+
+- risk
+
+- residual
+
+- distance to separatrix
+
+The controller predates:
+
+- Basin Discovery
+
+- Recovery Corridors
+
+- Recovery Anchors
+
+- Atlas-Guided Control
+
+and serves as the conceptual precursor
+
+to future atlas-native controllers.
+
+"""
+
 from enum import Enum, auto
 from dataclasses import dataclass
 

@@ -1,189 +1,271 @@
-# 🧭 FIELD NAVIGATION VALIDATION
+# NEXAH State Navigation
 
-## Overview
+### Discovering Navigable Structure in Complex Dynamical Systems
 
-This module validates the central NEXAH hypothesis that reconstructed stability structures are not only observable but also navigable.
+NEXAH is a framework for discovering, mapping, and navigating latent stability structures in complex dynamical systems.
 
-Previous validation stages established that:
+Instead of treating system behavior as a collection of isolated operating points, NEXAH reveals a structured state-space atlas consisting of:
 
-- instability emerges as structure
-- transition regions exist
-- collapse follows geometric pathways
-- stability fields can be reconstructed
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates & Bottlenecks
+- Recovery Anchors
+- Control Pathways
 
-The next question is:
-
-> Can trajectories be guided within these structures?
-
-This repository investigates whether navigation through reconstructed stability fields provides measurable advantages over purely reactive control strategies.
+The framework has been validated on IEEE benchmark power systems and demonstrates that operating states organize into coherent geometric structures rather than random state clouds.
 
 ---
 
-# Scientific Context
+# Stability Field Dynamics
 
-The NEXAH validation program currently consists of three stages:
+![Stability Field Dynamics](outputs/diagrams/Stability_Field_Dynamics.png)
+
+NEXAH transforms raw dynamical simulations into navigable stability fields.
+
+The workflow consists of:
 
 ```text
-PHASE I Validation Layer  signal → event → shape → geometry → transition region 
-```
-```text
-PHASE II Stability Field Dynamics  geometry → manifold → rift → distance → field → topology 
-```
-```text
-PHASE III Field Navigation Validation  field → navigation → guidance → stabilization 
-```
----
-
-# Core Question
-
-Classical controllers react to instability.
-
-NEXAH proposes:
-
-> Stability structures can be used as navigational objects.
-
-Instead of asking:
-
-text Has collapse started? 
-
-the framework asks:
-
-text Where is the system moving? 
-
-and
-
-```text
-Can the trajectory be redirected before collapse occurs? 
+System Simulation
+      ↓
+Structure Discovery
+      ↓
+Stability Field Construction
+      ↓
+Atlas Generation
+      ↓
+Navigation
+      ↓
+Intervention
 ```
 
----
-
-# Navigation Concept
-
-The reconstructed field contains:
-
-- manifolds
-- corridors
-- rift structures
-- stability gradients
-- transition regions
-
-These structures define a navigable geometry.
-
-text state → field position → navigation decision → trajectory correction 
+The objective is not only to observe system behavior, but to discover actionable structure that enables prediction, navigation, recovery, and control.
 
 ---
 
-# Validation Objectives
+# Experimental Progression
 
-This module evaluates:
+The NEXAH validation program currently consists of four major phases.
 
-## N1 — Corridor Detection
-
-Can coherent flow corridors be identified reliably?
-
----
-
-## N2 — Navigation Consistency
-
-Do similar trajectories follow similar navigational pathways?
+| Phase | Focus |
+|---------|---------|
+| EXP_01 – EXP_08 | Foundation & Structure Discovery |
+| EXP_09 – EXP_15 | Navigation Discovery |
+| EXP_16 – EXP_21 | Validation |
+| EXP_22 – EXP_36 | Atlas Operations & Control |
 
 ---
 
-## N3 — Stability Seeking
+# Current Status
 
-Can navigation reduce distance to stable structures?
+![Current Status](outputs/diagrams/NEXAH_STATE_NAVIGATION-CURRENT_STATUS_(EXP_01-EXP_24E).png)
+
+Key questions addressed:
+
+✅ Does structure exist?
+
+✅ Can structure be mapped?
+
+✅ Can structure be navigated?
+
+✅ Is navigation robust?
+
+✅ Do basin territories exist?
+
+✅ Can transitions be predicted?
+
+✅ Can recovery be guided?
 
 ---
 
-## N4 — Collapse Avoidance
+# Atlas Discovery
 
-Can trajectories be redirected away from collapse regions?
+![Atlas Discovery](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and_STRUCTURAL_ORGANIZATION.png)
+
+Main Result:
+
+The operating states do not form a random cloud in state space.
+ 
+Instead they organize into a structured atlas containing:
+
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates
+- Bottlenecks
+- Recovery Regions
 
 ---
 
-## N5 — Controller Comparison
+# Atlas Geometry
 
-Does field-aware navigation outperform reactive control approaches?
+![Atlas Geometry](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_GEOMETRY_and_STRUCTURAL_ORGANIZATION.png)
+
+Key Findings:
+
+- 18 Basin Territories
+- Dominant Transport Axis
+- Strong Principal Geometry Mode
+- Hook / J-Manifold Structure
+- Non-Random Organization
+- Large-Scale Structural Constraints
 
 ---
 
-# Experimental Scope
+# Transport Backbone
 
-Current validation focuses on:
+![Transport Backbone](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_TRANSPORT_NETWORK_and_TRANSITION_DYNAMICS.png)
 
-- IEEE 9
-- IEEE 14
-- IEEE 30
-- IEEE 57
-- IEEE 118
+The atlas is connected through a sparse transport backbone.
 
-using reconstructed NEXAH stability fields.
+Observations:
+
+- Small number of high-capacity corridors
+- Strong transition concentration
+- Hub basins emerge naturally
+- System flow is highly structured
+
+---
+
+# Atlas Operations
+
+![Atlas Operations](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_OPERATIONS_PREDICTION_EARLYWARNING_and_RECOVERY(EXP_29-EXP_36).png)
+
+
+NEXAH enables:
+
+- Transition Prediction
+- Trajectory Forecasting
+- Early Warning Detection
+- Recovery Corridor Navigation
+- Recovery Anchor Targeting
+
+Results:
+
+- Transition prediction > 92%
+- Multi-step forecasting > 88%
+- Structured recovery pathways identified
+
+---
+# Atlas Guided Control
+
+![Atlas Guided Control](outputs/diagrams/NEXAH_STATE_NAVIGATION-CONTROL_FRAMEWORK_TOWARD_ATLAS-GUIDED_SYSTEM_CONTROL.png)
+
+The discovered atlas becomes operational infrastructure.
+
+Control Loop:
+
+1. Locate Current State
+2. Assess Risk
+3. Determine Navigation Direction
+4. Select Recovery Path
+5. Target Recovery Anchor
+6. Apply Control Action
+7. Update Atlas Position
+
+---
+
+# Core Contributions
+
+NEXAH demonstrates that:
+
+- State-space geometry is discoverable.
+- Operating regions form basin territories.
+- Transport corridors organize transitions.
+- Gates and bottlenecks constrain motion.
+- Future transitions can be predicted.
+- Recovery pathways emerge naturally.
+- Atlas-guided control becomes possible.
 
 ---
 
 # Repository Structure
 
 ```text
-FIELD_NAVIGATION_VALIDATION/
-├── README.md
-├── navigation_findings.md
-├── navigation_figure_map.md │
-├── experiments/
-├── outputs/
-├── reports/
-└── scripts/ 
+APPLICATIONS/
+└── power_systems/
+    └── FIELD_NAVIGATION_VALIDATION/
+        ├── experiments/
+        ├── outputs/
+        ├── diagrams/
+        ├── reports/
+        └── README.md
 ```
----
-
-# Expected Outputs
-
-Examples include:
-
-- corridor maps
-- navigation trajectories
-- stability-distance evolution
-- trajectory redirection tests
-- collapse avoidance experiments
-- controller comparison studies
 
 ---
 
-# Validation Criteria
+# Current Development Status
 
-Navigation is considered successful if:
-
-- stability distance decreases
-- trajectories remain inside coherent corridors
-- transition regions are avoided
-- collapse likelihood is reduced
-- recovery pathways emerge
+| Capability | Status |
+|------------|---------|
+| Structure Discovery | ✅ |
+| Navigation | ✅ |
+| Basin Detection | ✅ |
+| Transition Prediction | ✅ |
+| Early Warning | ✅ |
+| Recovery | ✅ |
+| Control Framework | ✅ |
+| Real-Time Deployment | 🚧 |
 
 ---
 
-# Central Hypothesis
+# Vision
+
+NEXAH aims to transform complex-system operation from reactive monitoring toward:
 
 ```text
-Instability is not merely detectable.  It is navigable. 
+Observation
+      ↓
+Structure Discovery
+      ↓
+Navigation
+      ↓
+Prediction
+      ↓
+Recovery
+      ↓
+Control
 ```
----
 
-# Long-Term Goal
-
-The final objective of the NEXAH power-system program is:
-
-text Simulation → Structure Discovery → Navigation → Intervention 
-
-where stability becomes an actively navigated property of the system.
+A navigable stability atlas enables resilient, predictive, and self-guiding system operation.
 
 ---
 
-# NEXAH
+# Collaboration & Validation
 
-```text
-structure → field → navigation → stabilization 
-```
+NEXAH is currently being validated on IEEE benchmark systems and synthetic large-scale dynamical environments.
+
+The next stage of development focuses on independent validation, external datasets, and real-world operational environments.
+
+We welcome collaboration with:
+
+- Power System Researchers
+- Grid Operators
+- Control Engineers
+- Complex Systems Scientists
+- Stability & Resilience Researchers
+- Digital Twin Developers
+- Infrastructure Operators
+
+Areas of interest include:
+
+- External benchmark validation
+- Large-scale system studies
+- Real-time monitoring applications
+- Early warning systems
+- Atlas-guided control strategies
+- Navigation and recovery under uncertainty
+
+Researchers and practitioners interested in testing, evaluating, or extending the NEXAH framework are encouraged to open an issue or contact the project team.
+
+The goal is to evaluate whether navigable state-space structure represents a general principle across complex dynamical systems.
+
 ---
 
-Thomas K. R. Hofmann
-NEXAH Framework · 2026
+# Citation
+
+If you use NEXAH in academic work, please cite the repository and associated documentation.
+
+---
+
+**Structure reveals. Navigation guides. Control protects.**
