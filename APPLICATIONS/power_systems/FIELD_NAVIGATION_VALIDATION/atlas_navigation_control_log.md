@@ -774,5 +774,301 @@ SUPPORTED
 
 EXP_30
 ```
+# Finding 3 — Transition Prediction Becomes Possible
+
+## EXP_31 — Transition Prediction
+
+Previous experiments established:
+
+```text
+Atlas
+→ Basins
+→ Transport Corridors
+→ Exit Risk
+```
+
+EXP_31 investigated the next question:
+
+```text
+If a state leaves its current basin,
+
+where will it most likely go?
+```
+
+The experiment combined:
+
+- basin geometry
+- local density
+- exit risk estimation
+- nearest foreign basin detection
+
+to construct the first transition forecast layer of the NEXAH Atlas.
+
+---
+
+## Key Result
+
+The atlas does not suggest arbitrary transitions.
+
+Instead, high-risk states exhibit preferred transition targets.
+
+Observed structure:
+
+```text
+State
+    ↓
+Exit Candidate
+    ↓
+Preferred Basin
+```
+
+rather than
+
+```text
+State
+    ↓
+Any Basin
+```
+
+This is the first evidence that transition forecasting may be possible directly from atlas geometry.
+
+---
+
+## Visual Evidence
+
+### Predicted Transition States
+
+![Predicted Transition States](./outputs/EXP_31_TRANSITION_PREDICTION/exp31_predicted_transition_map.png)
+
+High-risk transition candidates concentrate in specific atlas regions.
+
+The distribution is not uniform.
+
+Several candidate groups appear along coherent upper-field structures.
+
+A particularly notable feature is the emergence of a continuous yellow-orange-red band.
+
+This suggests that transition candidates may organize along a geometric risk gradient rather than appearing randomly across the atlas.
+
+---
+
+### Transition Target Map
+
+![Transition Target Map](./outputs/EXP_31_TRANSITION_PREDICTION/exp31_transition_target_map.png)
+
+The atlas separates into distinct territorial regions.
+
+Cluster centers act as geometric attractors or regional centers.
+
+The resulting map resembles a collection of operating territories connected through potential transition routes.
+
+Several territories appear highly compact and self-organized.
+
+The right-most orange territory stands out as a particularly isolated operating region with its own internal structure.
+
+---
+
+### Transition Matrix
+
+![Transition Matrix](./outputs/EXP_31_TRANSITION_PREDICTION/exp31_transition_matrix.png)
+
+The transition matrix is sparse.
+
+Most basin pairs exhibit no predicted transitions.
+
+Instead, a limited number of dominant channels emerge.
+
+Result:
+
+```text
+Transition behavior
+is structured
+rather than random.
+```
+
+Several basin pairs appear to act as preferred transition destinations.
+
+The strongest channels concentrate into a small subset of basin-to-basin routes, suggesting the emergence of preferred transport pathways across the atlas.
+
+---
+
+### Exit → Target Overlay
+
+![Exit To Target Overlay](./outputs/EXP_31_TRANSITION_PREDICTION/exp31_exit_to_target_overlay.png)
+
+The transition overlay reveals directed transport geometry.
+
+Exit candidates connect to preferred target basins through coherent transition bundles.
+
+Observed features:
+
+- fan structures
+- branching patterns
+- V-shaped transition corridors
+- converging transport bundles
+
+The resulting geometry resembles a transport network rather than isolated basin regions.
+
+Several transition bundles appear repeatedly.
+
+The geometry resembles branching transport fibers or directed field channels.
+
+This structure is remarkably similar to transport motifs previously observed in gate corridors, transition boundaries and Prime Grid style transport overlays.
+
+---
+
+## Atlas Interpretation
+
+EXP_30 identified:
+
+```text
+Who is likely to leave?
+```
+
+EXP_31 adds:
+
+```text
+Where is it likely to go?
+```
+
+This represents a fundamental shift.
+
+The atlas evolves from a descriptive map into a predictive map.
+
+---
+
+## Transition Territories
+
+Several basin regions behave as:
+
+```text
+receivers
+```
+
+while others behave as:
+
+```text
+sources
+```
+
+The transition matrix suggests that some destinations attract disproportionate transition flow.
+
+This indicates the emergence of higher-level atlas organization beyond simple basin membership.
+
+The atlas is beginning to reveal:
+
+```text
+Territories
+    ↓
+Corridors
+    ↓
+Transition Cities
+    ↓
+Preferred Destinations
+```
+
+rather than a flat collection of disconnected operating states.
+
+---
+
+## Engineering Interpretation
+
+For power-system operators, the result is important because instability may not be random.
+
+Instead:
+
+```text
+Operating Region A
+        ↓
+Preferred Transition Corridor
+        ↓
+Operating Region B
+```
+
+may exist.
+
+If validated, future experiments could provide:
+
+- basin-exit forecasting
+- regime-transition prediction
+- early-warning indicators
+- intervention planning
+- return-to-safe-region navigation
+
+---
+
+## Why EXP_31 Matters
+
+EXP_31 is the first experiment that attempts to predict motion on the atlas.
+
+Previous experiments discovered structure.
+
+This experiment begins to infer future movement.
+
+Conceptually:
+
+```text
+EXP_30
+Who is at risk?
+```
+
+became
+
+```text
+EXP_31
+Where will it go?
+```
+
+This is the first step from:
+
+```text
+Atlas Discovery
+```
+
+toward
+
+```text
+Atlas Navigation
+```
+
+and eventually
+
+```text
+Atlas Control.
+```
+
+---
+
+## Conclusion
+
+EXP_31 provides the first transition forecasting layer of the NEXAH Atlas.
+
+The experiment suggests:
+
+```text
+Atlas Geometry
+        ↓
+Exit Risk
+        ↓
+Transition Targets
+```
+
+which moves the framework beyond atlas discovery toward predictive navigation.
+
+This result establishes the foundation for:
+
+```text
+EXP_32 — Early Warning
+EXP_33 — Control Vector Discovery
+EXP_34 — Return-To-Safe-Basin Navigation
+```
+
+Current interpretation:
+
+```text
+The atlas not only contains places.
+
+It also contains preferred futures.
+```
 
 
