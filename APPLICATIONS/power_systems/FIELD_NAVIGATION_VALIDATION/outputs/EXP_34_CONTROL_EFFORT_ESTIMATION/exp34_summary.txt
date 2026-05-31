@@ -1,0 +1,14 @@
+EXP_34 CONTROL EFFORT ESTIMATION
+========================================
+
+States: 540
+Basins: 18
+PCA Variance: 0.8459
+
+LOW: 431
+MEDIUM: 95
+HIGH: 10
+EXTREME: 4
+
+Mean Control Effort: 0.1727
+Max Control Effort: 1.0000
