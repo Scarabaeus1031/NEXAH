@@ -1,0 +1,15 @@
+EXP_33 CONTROL VECTOR DISCOVERY
+========================================
+
+States: 540
+Basins: 18
+PCA Variance: 0.8459
+
+SAFE: 108
+WATCH: 361
+WARNING: 63
+CRITICAL: 8
+
+Control Candidates: 71
+Mean Recovery Length: 0.3777
+Max Recovery Length: 1.3686
