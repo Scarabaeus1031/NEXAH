@@ -1102,7 +1102,7 @@ The objective is to identify states that are still inside a basin but already ex
 
 ### `exp32_warning_map.png`
 
-![EXP_32 Early Warning Map](visuals/exp32_warning_map.png)
+![EXP_32 Early Warning Map](./outputs/EXP_32_EARLY_WARNING/exp32_warning_map.png)
 
 ---
 
@@ -1151,7 +1151,7 @@ The Early Warning Index therefore behaves like a geometric distance-to-instabili
 
 ### `exp32_warning_vs_axis_distance.png`
 
-![EXP_32 Warning vs Axis Distance](visuals/exp32_warning_vs_axis_distance.png)
+![EXP_32 Warning vs Axis Distance](./outputs/EXP_32_EARLY_WARNING/exp32_warning_vs_axis_distance.png)
 
 ---
 
@@ -1193,7 +1193,7 @@ The farther a state drifts from the dominant transport corridor, the more unstab
 
 ### `exp32_warning_vs_basin_distance.png`
 
-![EXP_32 Warning vs Basin Distance](visuals/exp32_warning_vs_basin_distance.png)
+![EXP_32 Warning vs Basin Distance](./outputs/EXP_32_EARLY_WARNING/exp32_warning_vs_basin_distance.png)
 
 ---
 
@@ -1231,7 +1231,7 @@ The atlas therefore reconstructs a meaningful stability topology.
 
 ### `exp32_warning_vs_density.png`
 
-![EXP_32 Warning vs Density](visuals/exp32_warning_vs_density.png)
+![EXP_32 Warning vs Density](./outputs/EXP_32_EARLY_WARNING/exp32_warning_vs_density.png)
 
 ---
 
@@ -1278,7 +1278,7 @@ The atlas consistently associates low-density territory with elevated instabilit
 
 ### `exp32_warning_classes.png`
 
-![EXP_32 Warning Classes](visuals/exp32_warning_classes.png)
+![EXP_32 Warning Classes](./outputs/EXP_32_EARLY_WARNING/exp32_warning_classes.png)
 
 ---
 
