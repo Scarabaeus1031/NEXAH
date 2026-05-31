@@ -19,9 +19,7 @@ The framework has been validated on IEEE benchmark power systems and demonstrate
 
 # Stability Field Dynamics
 
-<p align="center">
-<img src="APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/Stability_Field_Dynamics.png" width="100%">
-</p>
+![Stability Field Dynamics](outputs/diagrams/Stability_Field_Dynamics.png)
 
 NEXAH transforms raw dynamical simulations into navigable stability fields.
 
@@ -82,9 +80,7 @@ Key questions addressed:
 
 # Atlas Discovery
 
-<p align="center">
-<img src="APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and__STRUCTURAL_ORGANIZATION.png" width="100%">
-</p>
+![Atlas Discovery](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and__STRUCTURAL_ORGANIZATION.png)
 
 Main Result:
 
@@ -103,9 +99,7 @@ Instead they organize into a structured atlas containing:
 
 # Atlas Geometry
 
-<p align="center">
-<img src="APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_GEOMETRY_and_STRUCTURAL_ORGANIZATION.png" width="100%">
-</p>
+![Atlas Geometry](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_GEOMETRY_and_STRUCTURAL_ORGANIZATION.png)
 
 Key Findings:
 
@@ -120,9 +114,7 @@ Key Findings:
 
 # Transport Backbone
 
-<p align="center">
-<img src="APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_TRANSPORT_NETWORK_and_TRANSITION_DYNAMICS.png" width="100%">
-</p>
+![Transport Backbone](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_TRANSPORT_NETWORK_and_TRANSITION_DYNAMICS.png)
 
 The atlas is connected through a sparse transport backbone.
 
@@ -137,9 +129,8 @@ Observations:
 
 # Atlas Operations
 
-<p align="center">
-<img src="APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_OPERATIONS_PREDICTION_EARLYWARNING_and_RECOVERY(EXP_29-EXP_36).png" width="100%">
-</p>
+![Atlas Operations](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_OPERATIONS_PREDICTION_EARLYWARNING_and_RECOVERY(EXP_29-EXP_36).png)
+
 
 NEXAH enables:
 
@@ -156,12 +147,9 @@ Results:
 - Structured recovery pathways identified
 
 ---
+# Atlas Guided Control
 
-# Atlas-Guided Control Framework
-
-<p align="center">
-<img src="APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-CONTROL FRAMEWORK TOWARD ATLAS-GUIDED SYSTEM CONTROL.png" width="100%">
-</p>
+![Atlas Guided Control](outputs/diagrams/NEXAH_STATE_NAVIGATION-CONTROL_FRAMEWORK_TOWARD_ATLAS-GUIDED_SYSTEM_CONTROL.png)
 
 The discovered atlas becomes operational infrastructure.
 
