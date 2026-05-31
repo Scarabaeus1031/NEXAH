@@ -1673,7 +1673,7 @@ These states are concentrated near sparse regions of the Atlas and near basin tr
 
 The spatial distribution suggests that recovery becomes increasingly expensive when states drift away from dense attractor regions.
 
-![EXP_34 High Cost Regions](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_high_cost_regions.png)
+![EXP_34 High Cost Regions](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_vs_vector_length.png)
 
 ---
 
@@ -1685,7 +1685,7 @@ States located farther from basin centers require increasingly large corrective 
 
 This relationship indicates that geometric distance inside the Atlas is a useful proxy for intervention cost.
 
-![EXP_34 Recovery Length vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_effort_vs_length.png)
+![EXP_34 Recovery Length vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_vs_warning.png)
 
 ---
 
@@ -1699,7 +1699,7 @@ Several states exhibit comparable warning scores but substantially different rec
 
 This suggests that warning measures proximity to instability, whereas effort measures the cost of returning to safety.
 
-![EXP_34 Warning vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_effort_vs_warning.png)
+![EXP_34 Warning vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_high_cost_regions.png)
 
 ---
 
