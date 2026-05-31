@@ -60,9 +60,7 @@ The NEXAH validation program currently consists of four major phases.
 
 # Current Status
 
-<p align="center">
-<img src="APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-CURRENT_STATUS_(EXP_01-EXP_24E).png" width="100%">
-</p>
+![Current Status](outputs/diagrams/NEXAH_STATE_NAVIGATION-CURRENT_STATUS_(EXP_01-EXP_24E).png)
 
 Key questions addressed:
 
