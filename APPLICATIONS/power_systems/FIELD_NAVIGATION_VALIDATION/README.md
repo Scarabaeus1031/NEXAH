@@ -80,7 +80,7 @@ Key questions addressed:
 
 # Atlas Discovery
 
-![Atlas Discovery](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and__STRUCTURAL_ORGANIZATION.png)
+![Atlas Discovery](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and_STRUCTURAL_ORGANIZATION.png)
 
 Main Result:
 
