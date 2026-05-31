@@ -302,7 +302,6 @@ danger_points = danger_states[
     ["pc1", "pc2"]
 ].values
 
-
 # ============================================================
 # Nearest Safe Arrival
 # ============================================================
@@ -315,8 +314,7 @@ nn_safe.fit(
     safe_points
 )
 
-dist,
-idx = nn_safe.kneighbors(
+dist, idx = nn_safe.kneighbors(
     danger_points
 )
 
@@ -335,7 +333,6 @@ danger_states["arrival_y"] = (
 danger_states["arrival_dist"] = (
     dist.flatten()
 )
-
 
 # ============================================================
 # Recovery Anchor Discovery
