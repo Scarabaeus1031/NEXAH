@@ -38,7 +38,7 @@ from sklearn.preprocessing import MinMaxScaler
 # Paths
 # ============================================================
 
-ROOT = Path(__file__).resolve().parents[3]
+FIELD_ROOT = Path(__file__).resolve().parents[2]
 
 INPUT_DIR = (
     ROOT
@@ -62,11 +62,12 @@ print(f"Output -> {OUTPUT_DIR}")
 # Locate State File
 # ============================================================
 
-candidate_files = [
-    "state_features.csv",
-    "ieee39_state_features.csv",
-    "atlas_states.csv",
-]
+states_file = (
+    INPUT_DIR
+    / "exp08_field_states.csv"
+)
+
+df = pd.read_csv(states_file)
 
 states_file = None
 
@@ -97,18 +98,16 @@ print(f"Loaded states: {len(df)}")
 # Feature Selection
 # ============================================================
 
-exclude = [
-    "PC1",
-    "PC2",
-    "density",
-    "exit_risk",
-    "warning_index",
-]
-
 features = [
-    c for c in df.columns
-    if np.issubdtype(df[c].dtype, np.number)
-    and c not in exclude
+    "global_scale",
+    "min_vm",
+    "mean_vm",
+    "std_vm",
+    "angle_span",
+    "max_loading",
+    "mean_loading",
+    "density",
+    "betweenness"
 ]
 
 X = df[features].values
