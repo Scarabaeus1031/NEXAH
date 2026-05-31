@@ -85,7 +85,7 @@ Key questions addressed:
 Main Result:
 
 The operating states do not form a random cloud in state space.
-
+ 
 Instead they organize into a structured atlas containing:
 
 - Basin Territories
