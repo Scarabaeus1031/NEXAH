@@ -53,7 +53,7 @@ NEXAH focuses on structure:
 
 ## ⚡ Current Application Status
 
-NEXAH Power Systems Current Status
+![NEXAH Power Systems Current Status](power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
 
 The current power-system validation demonstrates that operating states organize into coherent geometric structures rather than random state clouds.
 
