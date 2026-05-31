@@ -1636,3 +1636,102 @@ Geometric Control
 ```
 
 within the NEXAH framework.
+
+## Findings
+
+### Control effort is highly non-uniform
+
+The recovery effort distribution is strongly skewed.
+
+Most states require only small corrections to return toward a basin center, while a small subset of states requires disproportionately large recovery actions.
+
+This indicates that the NEXAH Atlas is not uniformly controllable.
+
+Instead, recovery difficulty varies significantly across field regions.
+
+---
+
+### Stable core regions remain inexpensive
+
+The majority of states fall into the LOW effort category.
+
+These states are located near dense basin interiors and require only short recovery vectors.
+
+This suggests that stable regions possess natural self-correcting geometry.
+
+Small interventions appear sufficient to maintain stability once the system remains inside a basin core.
+
+![EXP_34 Control Effort Map](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_map.png)
+
+---
+
+### High-cost regions emerge near field boundaries
+
+A small number of states exhibit significantly larger control effort.
+
+These states are concentrated near sparse regions of the Atlas and near basin transition structures.
+
+The spatial distribution suggests that recovery becomes increasingly expensive when states drift away from dense attractor regions.
+
+![EXP_34 High Cost Regions](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_high_cost_regions.png)
+
+---
+
+### Recovery distance and effort are strongly correlated
+
+Control effort increases almost monotonically with recovery vector length.
+
+States located farther from basin centers require increasingly large corrective actions.
+
+This relationship indicates that geometric distance inside the Atlas is a useful proxy for intervention cost.
+
+![EXP_34 Recovery Length vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_effort_vs_length.png)
+
+---
+
+### Warning and effort are linked but not identical
+
+States with higher warning indices generally require greater control effort.
+
+However, warning alone does not fully determine intervention cost.
+
+Several states exhibit comparable warning scores but substantially different recovery effort.
+
+This suggests that warning measures proximity to instability, whereas effort measures the cost of returning to safety.
+
+![EXP_34 Warning vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_effort_vs_warning.png)
+
+---
+
+### Evidence for control barriers
+
+The high-cost regions form coherent structures rather than random outliers.
+
+These structures coincide with transition regions previously identified through:
+
+- Early Warning Geometry (EXP_32)
+- Recovery Vector Discovery (EXP_33)
+- Rift / Separatrix extraction (V48–V52)
+
+This suggests the presence of geometric control barriers inside the field.
+
+Crossing these barriers may require substantially greater intervention than motion within a basin.
+
+---
+
+### Atlas interpretation
+
+The NEXAH Atlas now contains three complementary layers:
+
+1. Warning Layer (EXP_32)
+   - Detects approach toward instability.
+
+2. Recovery Layer (EXP_33)
+   - Estimates the direction of return toward safety.
+
+3. Control Layer (EXP_34)
+   - Estimates the cost of executing that return.
+
+Together these layers transform the Atlas from a descriptive stability map into an actionable navigation framework capable of estimating both recovery direction and intervention difficulty.
+
+
