@@ -51,7 +51,7 @@ The objective is not only to observe system behavior but to discover actionable 
 
 ## Atlas Operations Overview
 
-![Atlas Operations](FIELD_NAVIGATION_VALIDATION/outputs/diagrams/s/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
+![Atlas Operations](FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
 
 The latest validation phase demonstrates that the discovered atlas can be used operationally for:
 
