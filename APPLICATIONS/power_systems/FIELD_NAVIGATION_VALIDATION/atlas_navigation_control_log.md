@@ -1650,88 +1650,81 @@ This indicates that the NEXAH Atlas is not uniformly controllable.
 Instead, recovery difficulty varies significantly across field regions.
 
 ---
+## Findings
 
-### Stable core regions remain inexpensive
+### Recovery cost is highly uneven
 
-The majority of states fall into the LOW effort category.
+Most states require only small corrective actions.
 
-These states are located near dense basin interiors and require only short recovery vectors.
+The control effort distribution is strongly right-skewed, indicating that recovery is inexpensive for the majority of the Atlas while a small subset of states requires disproportionately large intervention.
 
-This suggests that stable regions possess natural self-correcting geometry.
+This suggests that the field contains naturally recoverable regions as well as structurally expensive recovery zones.
 
-Small interventions appear sufficient to maintain stability once the system remains inside a basin core.
+![EXP_34 Control Effort Distribution](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_distribution.png)
+
+---
+
+### Stable basin interiors remain inexpensive
+
+Most low-effort states are concentrated near dense basin cores.
+
+These regions appear naturally self-correcting and require only minimal intervention to return toward stability.
 
 ![EXP_34 Control Effort Map](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_map.png)
 
 ---
 
-### High-cost regions emerge near field boundaries
-
-A small number of states exhibit significantly larger control effort.
-
-These states are concentrated near sparse regions of the Atlas and near basin transition structures.
-
-The spatial distribution suggests that recovery becomes increasingly expensive when states drift away from dense attractor regions.
-
-![EXP_34 High Cost Regions](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_vs_vector_length.png)
-
----
-
-### Recovery distance and effort are strongly correlated
+### Recovery distance is a strong predictor of effort
 
 Control effort increases almost monotonically with recovery vector length.
 
-States located farther from basin centers require increasingly large corrective actions.
+States farther away from basin centers require progressively larger corrective actions.
 
-This relationship indicates that geometric distance inside the Atlas is a useful proxy for intervention cost.
+This relationship suggests that geometric distance inside the Atlas can serve as a first-order estimate of intervention cost.
 
-![EXP_34 Recovery Length vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_vs_warning.png)
-
----
-
-### Warning and effort are linked but not identical
-
-States with higher warning indices generally require greater control effort.
-
-However, warning alone does not fully determine intervention cost.
-
-Several states exhibit comparable warning scores but substantially different recovery effort.
-
-This suggests that warning measures proximity to instability, whereas effort measures the cost of returning to safety.
-
-![EXP_34 Warning vs Effort](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_high_cost_regions.png)
+![EXP_34 Control Effort vs Vector Length](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_vs_vector_length.png)
 
 ---
 
-### Evidence for control barriers
+### Warning and effort are related but not identical
 
-The high-cost regions form coherent structures rather than random outliers.
+Higher warning scores generally correspond to larger recovery effort.
 
-These structures coincide with transition regions previously identified through:
+However, states with similar warning levels can still require substantially different interventions.
 
-- Early Warning Geometry (EXP_32)
-- Recovery Vector Discovery (EXP_33)
-- Rift / Separatrix extraction (V48–V52)
+This indicates that warning measures proximity to instability, whereas effort measures the cost of returning to safety.
 
-This suggests the presence of geometric control barriers inside the field.
+![EXP_34 Control Effort vs Warning](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_control_effort_vs_warning.png)
 
-Crossing these barriers may require substantially greater intervention than motion within a basin.
+---
+
+### High-cost regions form coherent geometric structures
+
+The most expensive states are not randomly distributed.
+
+Instead, they cluster along specific regions of the Atlas, suggesting the existence of geometric recovery barriers.
+
+These structures closely resemble transition zones previously identified in:
+
+- V48–V52 (Curl / Residual / Rift studies)
+- EXP_32 (Early Warning Geometry)
+- EXP_33 (Recovery Vector Discovery)
+
+This convergence suggests that multiple independent analyses are highlighting the same underlying transition geometry.
+
+![EXP_34 High Cost Regions](./outputs/EXP_34_CONTROL_EFFORT_ESTIMATION/exp34_high_cost_regions.png)
 
 ---
 
 ### Atlas interpretation
 
-The NEXAH Atlas now contains three complementary layers:
+EXP_34 extends the NEXAH navigation framework from:
 
-1. Warning Layer (EXP_32)
-   - Detects approach toward instability.
+- instability detection (EXP_32)
+- recovery direction estimation (EXP_33)
 
-2. Recovery Layer (EXP_33)
-   - Estimates the direction of return toward safety.
+to
 
-3. Control Layer (EXP_34)
-   - Estimates the cost of executing that return.
+- recovery cost estimation (EXP_34)
 
-Together these layers transform the Atlas from a descriptive stability map into an actionable navigation framework capable of estimating both recovery direction and intervention difficulty.
-
-
+The Atlas can now estimate not only where a state should move, but also how difficult that movement may be.
