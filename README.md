@@ -354,6 +354,35 @@ within structured regions associated with
 mismatch, drift, and competing flow geometry.
 ```
 
+# ⚡ Power-System Validation
+
+One of the most advanced validation environments within NEXAH currently focuses on electrical power systems.
+
+Using IEEE benchmark networks, NEXAH was applied to investigate whether operating states organize into navigable state-space structures.
+
+Results suggest the emergence of:
+
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates & Bottlenecks
+- Recovery Anchors
+- Atlas-Guided Control Pathways
+
+![NEXAH Power Systems Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
+
+Current experiments demonstrate:
+
+- atlas discovery
+- transition prediction
+- recovery navigation
+- early warning
+- atlas-guided control concepts
+
+→ See:
+
+`APPLICATIONS/power_systems/README.md`
+
 ---
 
 # 🔬 Fractal Transition Extension
