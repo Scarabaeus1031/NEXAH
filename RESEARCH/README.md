@@ -737,7 +737,45 @@ We are reconstructing
 the transport geometry
 that system dynamics are forced to follow.
 ```
+# ⚡ Emerging Atlas Perspective
 
+Recent validation work suggests that transition geometry may represent only one layer of a larger structural organization.
+
+Across multiple experiments, state-space reconstruction increasingly reveals:
+
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates & Bottlenecks
+- Recovery Regions
+- Recovery Anchors
+
+This has led to an emerging interpretation of NEXAH as an atlas-discovery framework rather than solely a transition-analysis framework.
+
+Within this perspective:
+
+```text
+ trajectory
+     ↓
+   field
+     ↓
+  geometry
+     ↓
+   atlas
+     ↓
+ navigation
+     ↓
+  recovery
+     ↓
+   control 
+```
+
+
+The atlas perspective remains under active investigation.
+
+Whether similar navigable atlas structures emerge across broader classes of nonlinear systems remains an open research question.
+
+Current large-scale validation is being conducted within the Power Systems application layer.
 ---
 
 **NEXAH Research Layer**  
