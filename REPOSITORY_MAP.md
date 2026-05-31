@@ -6,9 +6,7 @@
 
 # 🧠 What NEXAH Is
 
-NEXAH is a:
-
-> geometry-oriented research framework for discovering, reconstructing, and navigating structure inside complex dynamical systems.
+NEXAH is a geometry-oriented research framework for discovering, reconstructing, and navigating structure inside complex dynamical systems.
 
 The framework investigates how systems generate:
 
@@ -20,7 +18,16 @@ The framework investigates how systems generate:
 - synchronization structures
 - transport geometry
 - topology through connectivity
-- and navigable dynamical organization
+- navigable dynamical organization
+
+Recent validation efforts further suggest that complex systems may organize into navigable state-space atlases containing:
+
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates & Bottlenecks
+- Recovery Regions
+- Recovery Anchors
 
 ---
 
@@ -30,11 +37,12 @@ The framework investigates how systems generate:
 raw dynamics
 → structure extraction
 → field reconstruction
-→ geometric interpretation
-→ phase analysis
-→ transition activation
-→ topology emergence
-→ exploratory navigation
+→ transition geometry
+→ atlas reconstruction
+→ prediction
+→ recovery
+→ navigation
+→ control
 ```
 
 ---
@@ -55,6 +63,7 @@ Within this interpretation:
 - mismatch activates transitions
 - apertures organize routing
 - topology emerges from connectivity
+- atlases organize system behavior
 - control becomes directional navigation
 
 ---
@@ -78,10 +87,46 @@ field
 
 ---
 
+# ⚡ Emerging Atlas Layer
+
+Recent experiments indicate that transition geometry may represent only one layer of a larger organizational structure.
+
+Current atlas-oriented reconstruction investigates:
+
+```text
+field
+→ geometry
+→ atlas
+→ basins
+→ corridors
+→ recovery
+→ navigation
+→ control
+```
+
+Observed atlas elements include:
+
+- Basin Territories
+- Transport Networks
+- Transition Corridors
+- Gates & Bottlenecks
+- Recovery Corridors
+- Recovery Anchors
+- Atlas-Guided Control Concepts
+
+Current large-scale validation is being conducted in:
+
+```text
+APPLICATIONS/power_systems/
+```
+
+through the Field Navigation Validation program.
+
+---
+
 # 🔑 Current Core Observation
 
-Across investigated systems,
-transition activation correlates more strongly with:
+Across investigated systems, transition activation correlates more strongly with:
 
 ```text
 phase mismatch
@@ -91,8 +136,7 @@ than with instability magnitude alone.
 
 Operational mismatch definition:
 
-$$M(t) = |\omega(t)-\hat{\omega}(t)|
-$$
+$$M(t)=|\omega(t)-\hat{\omega}(t)|$$
 
 Interpretation:
 
@@ -103,6 +147,27 @@ instability
 mismatch
 → activation trigger
 ```
+
+---
+
+# 🔥 Highlight: Janus Operator
+
+One of the strongest and most distinctive contributions of NEXAH.
+
+The Janus Operator compares forward and backward local flow directions at each point in the reconstructed field to detect directional coherence and transition apertures.
+
+```text
+High Janus coherence  → stable coherent motion
+
+Low Janus coherence   → directional mismatch
+                         → transition gate / aperture
+```
+
+→ RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/
+
+(math, code, visuals & validation experiments)
+
+---
 
 ---
 
