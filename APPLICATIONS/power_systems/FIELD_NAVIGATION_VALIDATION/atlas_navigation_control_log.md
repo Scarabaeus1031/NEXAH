@@ -1070,5 +1070,335 @@ The atlas not only contains places.
 
 It also contains preferred futures.
 ```
+# EXP_32 — EARLY WARNING
+## Geometric Precursors of Basin Exit Events
 
+---
+
+## Objective
+
+After identifying:
+
+- Basin Structures (EXP_24E)
+- Transport Geometry (EXP_28)
+- Exit Candidates (EXP_30)
+- Transition Targets (EXP_31)
+
+the next question becomes:
+
+> Can the atlas detect an approaching transition before the transition occurs?
+
+EXP_32 introduces the first geometric **Early Warning Index (EWI)**.
+
+The objective is to identify states that are still inside a basin but already exhibit structural signs of instability.
+
+---
+
+# Visual Overview
+
+---
+
+## Visual 1
+
+### `exp32_warning_map.png`
+
+![EXP_32 Early Warning Map](visuals/exp32_warning_map.png)
+
+---
+
+### Observation
+
+The warning field is not randomly distributed.
+
+A highly structured geometry appears:
+
+- a lower curved body
+- an upper cloud-like layer
+- increasing warning values toward outer regions
+
+The lower structure resembles a large:
+
+```text
+C-shape
+```
+
+while a second cloud floats above it.
+
+The highest warning values emerge at the outer edges of these structures.
+
+---
+
+### Interpretation
+
+The atlas appears to contain a natural stability hierarchy:
+
+```text
+Core
+→ Stable
+
+Outer Shell
+→ Less Stable
+
+Edge Regions
+→ Critical
+```
+
+The Early Warning Index therefore behaves like a geometric distance-to-instability measure.
+
+---
+
+## Visual 2
+
+### `exp32_warning_vs_axis_distance.png`
+
+![EXP_32 Warning vs Axis Distance](visuals/exp32_warning_vs_axis_distance.png)
+
+---
+
+### Observation
+
+A remarkably coherent trend emerges.
+
+The cloud forms a jet-like structure:
+
+```text
+lower left
+      →
+          upper right
+```
+
+Warning increases almost monotonically with transport-axis distance.
+
+---
+
+### Interpretation
+
+This suggests that the transport axis discovered in previous experiments is not merely a projection artifact.
+
+Instead:
+
+```text
+Distance from Transport Axis
+↑
+
+Warning Index
+↑
+```
+
+The farther a state drifts from the dominant transport corridor, the more unstable it becomes.
+
+---
+
+## Visual 3
+
+### `exp32_warning_vs_basin_distance.png`
+
+![EXP_32 Warning vs Basin Distance](visuals/exp32_warning_vs_basin_distance.png)
+
+---
+
+### Observation
+
+This is one of the strongest relationships observed so far.
+
+The point cloud forms an almost linear progression.
+
+States near basin centers show low warning values.
+
+States near basin boundaries show high warning values.
+
+---
+
+### Interpretation
+
+This is precisely the behavior expected from a true stability basin:
+
+```text
+Center
+=
+Stable
+
+Boundary
+=
+Unstable
+```
+
+The atlas therefore reconstructs a meaningful stability topology.
+
+---
+
+## Visual 4
+
+### `exp32_warning_vs_density.png`
+
+![EXP_32 Warning vs Density](visuals/exp32_warning_vs_density.png)
+
+---
+
+### Observation
+
+A near-perfect inversion appears.
+
+This figure behaves as a mirror image of Visual 3.
+
+---
+
+### Relationship
+
+```text
+High Density
+=
+Low Warning
+
+Low Density
+=
+High Warning
+```
+
+or:
+
+```text
+Density ↓
+Warning ↑
+```
+
+---
+
+### Interpretation
+
+This reproduces the same behavior already observed in EXP_30.
+
+Sparse regions are transition-prone regions.
+
+The atlas consistently associates low-density territory with elevated instability.
+
+---
+
+## Visual 5
+
+### `exp32_warning_classes.png`
+
+![EXP_32 Warning Classes](visuals/exp32_warning_classes.png)
+
+---
+
+### Distribution
+
+```text
+SAFE      :  53
+WATCH     : 359
+WARNING   : 119
+CRITICAL  :   9
+```
+
+---
+
+### Observation
+
+The overwhelming majority of states remain inside normal operating regions.
+
+Only a very small number of states enter the critical regime.
+
+---
+
+### Interpretation
+
+The warning hierarchy forms a continuous progression:
+
+```text
+SAFE
+  ↓
+WATCH
+  ↓
+WARNING
+  ↓
+CRITICAL
+```
+
+rather than isolated categories.
+
+This is consistent with a gradual approach toward basin boundaries.
+
+---
+
+# Structural Findings
+
+---
+
+## Finding 1
+
+The Early Warning Index is not random.
+
+It produces a coherent geometric field across the atlas.
+
+---
+
+## Finding 2
+
+Warning increases with:
+
+```text
+Transport Axis Distance
+```
+
+---
+
+## Finding 3
+
+Warning increases with:
+
+```text
+Basin Distance
+```
+
+---
+
+## Finding 4
+
+Warning increases as:
+
+```text
+Density decreases
+```
+
+---
+
+## Finding 5
+
+The warning field reproduces the same outer-shell structures previously observed in:
+
+- EXP_30 Basin Exit Forecasting
+- EXP_31 Transition Prediction
+
+---
+
+## Finding 6
+
+Three independent indicators now point toward the same instability geometry:
+
+```text
+Exit Risk
+Transition Prediction
+Early Warning
+```
+
+This is the first appearance of a consistent multi-layer instability field inside the NEXAH Atlas.
+
+---
+
+# Conclusion
+
+EXP_32 demonstrates that geometric precursors of regime transitions can be detected directly from atlas structure.
+
+The strongest warning states occupy:
+
+- low-density regions
+- large basin-distance regions
+- large transport-axis-distance regions
+
+Only 9 of 540 states are classified as CRITICAL, suggesting that instability is concentrated in a small number of highly structured regions.
+
+The experiment therefore provides the first operational Early Warning Layer for the NEXAH framework.
+
+EXP_32 establishes the foundation for future predictive navigation experiments in which instability is not merely detected but actively avoided through field-guided control.
 
