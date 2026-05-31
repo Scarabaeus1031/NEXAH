@@ -1,0 +1,10 @@
+EXP_32 EARLY WARNING
+========================================
+
+States: 540
+Basins: 18
+
+SAFE: 53
+WATCH: 359
+WARNING: 119
+CRITICAL: 9
