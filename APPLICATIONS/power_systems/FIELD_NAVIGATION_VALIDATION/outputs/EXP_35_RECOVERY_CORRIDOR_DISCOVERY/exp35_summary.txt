@@ -1,0 +1,18 @@
+
+EXP_35 RECOVERY CORRIDOR DISCOVERY
+========================================
+
+States: 540
+Basins: 18
+PCA Variance: 0.8459
+
+Recovery Paths: 71
+
+Mean Corridor Length:
+0.6507
+
+Max Corridor Length:
+1.3250
+
+Min Corridor Length:
+0.2028
