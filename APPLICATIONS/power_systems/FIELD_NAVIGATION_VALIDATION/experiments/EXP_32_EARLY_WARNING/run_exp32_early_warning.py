@@ -41,25 +41,27 @@ from sklearn.preprocessing import MinMaxScaler
 FIELD_ROOT = Path(__file__).resolve().parents[2]
 
 INPUT_DIR = (
-    ROOT
+    FIELD_ROOT
     / "outputs"
     / "EXP_08_REAL_FIELD_GEOMETRY"
 )
 
 OUTPUT_DIR = (
-    ROOT
+    FIELD_ROOT
     / "outputs"
     / "EXP_32_EARLY_WARNING"
 )
 
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 print(f"Input  -> {INPUT_DIR}")
 print(f"Output -> {OUTPUT_DIR}")
 
-
 # ============================================================
-# Locate State File
+# Load Data
 # ============================================================
 
 states_file = (
@@ -67,32 +69,19 @@ states_file = (
     / "exp08_field_states.csv"
 )
 
-df = pd.read_csv(states_file)
+print(
+    "\nUsing:",
+    states_file.name
+)
 
-states_file = None
+df = pd.read_csv(
+    states_file
+)
 
-for name in candidate_files:
-    f = INPUT_DIR / name
-    if f.exists():
-        states_file = f
-        break
-
-if states_file is None:
-    csvs = list(INPUT_DIR.glob("*.csv"))
-
-    if len(csvs) == 0:
-        raise FileNotFoundError(
-            f"No CSV files found in {INPUT_DIR}"
-        )
-
-    states_file = csvs[0]
-
-print(f"\nUsing: {states_file.name}")
-
-df = pd.read_csv(states_file)
-
-print(f"Loaded states: {len(df)}")
-
+print(
+    "Loaded states:",
+    len(df)
+)
 
 # ============================================================
 # Feature Selection
