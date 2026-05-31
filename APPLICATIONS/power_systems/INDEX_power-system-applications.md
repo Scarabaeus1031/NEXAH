@@ -1,6 +1,6 @@
 # ⚡ NEXAH — Power Systems Applications
 
-Geometry-Based Stability Analysis, Regime Detection, and Navigation in Electrical Power Networks
+### Atlas-Guided Stability Analysis, Prediction, Recovery and Control for Electrical Power Networks
 
 ---
 
@@ -8,137 +8,107 @@ Geometry-Based Stability Analysis, Regime Detection, and Navigation in Electrica
 
 This section contains the power-system application layer of the NEXAH framework.
 
-NEXAH approaches power system stability from a structural and geometric perspective. Rather than interpreting instability solely as a threshold violation, the framework models power-system dynamics as trajectories evolving within a structured state space.
+NEXAH investigates whether power-system dynamics organize into discoverable and navigable state-space structures.
 
-The objective is to reconstruct the underlying dynamical organization of the system and identify transitions between operating regimes before conventional collapse indicators emerge.
+Rather than treating operating conditions as isolated measurements, the framework reconstructs a geometric atlas of system behavior from dynamical trajectories.
+
+The resulting atlas reveals:
+
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates & Bottlenecks
+- Recovery Anchors
+- Control Pathways
+
+The long-term objective is to transform stability analysis from observation toward prediction, navigation, recovery, and control.
 
 ---
 
-# Concept
+# Current Validation Status
 
-Classical stability assessment typically relies on scalar indicators such as:
+Large-scale validation has been conducted using IEEE benchmark power systems.
 
-- voltage magnitude
-- frequency deviation
-- threshold violations
-- reserve margins
+Current atlas-discovery results demonstrate:
+
+- 540 analyzed operating states
+- 18 identified basin territories
+- Structured transport backbone
+- Persistent gate and bottleneck regions
+- Transition prediction > 92%
+- Multi-step trajectory forecasting > 88%
+- Recovery corridor identification
+- Atlas-guided control framework
+
+These findings suggest that power-system state spaces exhibit coherent geometric organization rather than random operating-state distributions.
+
+---
+
+# Conceptual Framework
+
+Traditional approaches often focus on:
+
+- voltage violations
+- frequency deviations
+- stability margins
+- contingency events
 
 NEXAH extends this perspective by analyzing:
 
 - trajectory evolution
 - state-space geometry
-- flow-field structure
-- regime transitions
-- stability landscapes
+- transport structure
+- basin organization
+- transition pathways
+- recovery dynamics
 
-The central hypothesis is:
+The central working hypothesis is:
 
-> Instability is not a single event.  
+> Instability is not merely a threshold crossing.
+>
 > Instability is a transition through a structured dynamical landscape.
 
 ---
 
-# System Architecture
+# Stability Field Dynamics
 
-The power-system framework consists of four major layers.
+The NEXAH workflow transforms simulations into navigable stability fields.
 
 ```text
-    Simulation
-        ↓ 
-Feature Extraction     
-        ↓ 
-Geometric Representation
-        ↓ 
-    Validation
-        ↓ 
-Navigation & Control Experiments 
+ System Simulation
+         ↓
+ State Collection
+         ↓
+ Structure Discovery
+         ↓
+ Atlas Construction
+         ↓
+     Prediction
+         ↓
+     Recovery
+         ↓
+      Control 
 ```
----
 
-## 1. Feature Extraction Layer
 
-Power-system simulations are transformed into a structured state representation.
-
-Typical features include:
-
-- voltage magnitude
-- drift
-- acceleration
-- coherence measures
-- residual structure
-- phase variables
-- geometric distance metrics
-
-The resulting feature vectors provide the basis for state-space reconstruction.
+The resulting atlas serves as a structural representation of system behavior.
 
 ---
 
-## 2. Geometric Representation Layer
-
-The extracted dynamics are embedded into a low-dimensional state space.
-
-This layer constructs:
-
-- geometric state spaces
-- flow fields
-- risk landscapes
-- regime structures
-
-The resulting representations allow system behavior to be interpreted geometrically rather than through isolated signals.
-
----
-
-## 3. Validation Layer
-
-The Validation Layer provides quantitative evidence for the framework.
-
-Its purpose is to determine whether geometric representations reveal information that is not directly visible in classical measurements.
-
-Key questions include:
-
-- Can instability be detected earlier?
-- Can transitions be identified structurally?
-- Can system motion reveal approaching collapse?
-
-The validation framework includes:
-
-- event-shape analysis
-- curvature-based detection
-- trajectory reconstruction
-- motion-space analysis
-- IEEE collapse experiments
-
----
-
-## 4. Navigation and Control Layer
-
-The final layer investigates whether reconstructed state-space geometry can be used for intervention and stabilization.
-
-Current experiments explore:
-
-- trajectory steering
-- regime avoidance
-- risk-aware navigation
-- adaptive intervention strategies
-
-These capabilities remain experimental and are not intended as production-ready control methods.
-
----
-
-# Repository Structure
+# Major Components
 
 ## Validation Layer
 
 📂 VALIDATION_LAYER/
 
-Provides quantitative validation and supporting evidence.
+Provides quantitative evidence and benchmarking.
 
-Contents include:
+Includes:
 
-- reproducible experiments
-- statistical analysis
-- validation reports
-- structural findings
+- collapse experiments
+- robustness studies
+- statistical evaluation
+- structural validation
 
 ---
 
@@ -146,103 +116,135 @@ Contents include:
 
 📂 ieee_xray_pipeline/
 
-Core feature extraction and geometric reconstruction pipeline.
+Responsible for:
 
-Responsibilities:
-
-- state-space construction
+- feature extraction
+- state reconstruction
 - manifold generation
-- structural analysis
-- flow-field reconstruction
+- flow-field analysis
 
 ---
 
-## NEXAH IEEE9
+## IEEE9 Demonstrator
 
 📂 nexah_ieee9/
 
-Reference implementation and minimal reproducible navigation system.
+Minimal reproducible implementation.
 
 Demonstrates:
 
-- field reconstruction
-- risk modeling
-- trajectory-based intervention
-- closed-loop experiments
+- state-space reconstruction
+- field construction
+- navigation experiments
+- intervention concepts
 
 ---
 
-## NEXAH IEEE X
+## IEEE Scaling Studies
 
 📂 nexah_ieeeX/
 
-Scaling studies across increasingly large grid models.
-
-Current systems include:
+Scaling validation across:
 
 - IEEE 118
 - IEEE 300
 - IEEE 1354
 - IEEE 9241 (PEGASE)
 
-Primary focus:
+Focus:
 
 - scalability
 - structural consistency
-- regime behavior across complexity levels
+- cross-system robustness
+
+---
+
+## Field Navigation Validation
+
+📂 FIELD_NAVIGATION_VALIDATION/
+
+Current flagship validation program.
+
+Contains:
+
+- atlas discovery
+- basin detection
+- transport-network analysis
+- prediction experiments
+- recovery studies
+- atlas-guided control framework
 
 ---
 
 # Key Observations
 
-Across current experiments several recurring patterns emerge.
+## Basin Territories
 
-### Geometric Drift
-
-Instability often appears as gradual movement through state space before collapse becomes visible in voltage signals.
+Operating states organize into distinct territories with common attractors.
 
 ---
 
-### Regime Structure
+## Transport Corridors
 
-System trajectories organize into distinct regions associated with different operating conditions.
-
----
-
-### Flow Organization
-
-State evolution exhibits coherent directional behavior that can be represented as a flow field.
+Transitions occur through preferred pathways rather than arbitrary motion.
 
 ---
 
-### Transition Corridors
+## Gates & Bottlenecks
 
-Regime changes frequently occur through identifiable transition pathways rather than abrupt state jumps.
-
----
-
-### Early Warning Potential
-
-Several IEEE collapse experiments demonstrate measurable lead times between geometric transition indicators and classical collapse thresholds.
+Specific regions regulate movement between operating regimes.
 
 ---
 
-# Current Status
+## Recovery Structure
 
-### Stable Components
+Disturbed states exhibit structured return pathways toward preferred stabilization regions.
 
-- simulation pipelines
-- feature extraction
-- state reconstruction
-- geometric embedding
-- validation framework
+---
 
-### Experimental Components
+## Predictive Navigation
 
-- navigation algorithms
-- intervention strategies
-- trajectory steering
-- closed-loop stabilization
+Atlas geometry enables forecasting of future state evolution.
+
+---
+
+## Control Infrastructure
+
+Atlas-derived information provides a foundation for future geometry-aware intervention strategies.
+
+---
+
+# Current Capabilities
+
+| Capability | Status |
+|------------|---------|
+| Structure Discovery | ✅ |
+| Basin Detection | ✅ |
+| Atlas Construction | ✅ |
+| Navigation | ✅ |
+| Transition Prediction | ✅ |
+| Early Warning | ✅ |
+| Recovery Guidance | ✅ |
+| Control Framework | ✅ |
+| Real-Time Deployment | 🚧 |
+
+---
+
+# Potential Relevance Beyond Power Systems
+
+Although current large-scale validation has focused primarily on IEEE benchmark power systems, the underlying methodology is not power-system specific.
+
+Future investigations may explore applications in:
+
+- Industrial Process Control
+- Transportation Systems
+- Ecological Systems
+- Autonomous Agents
+- Climate & Energy Networks
+- Multi-Agent Systems
+- General Complex Dynamical Systems
+
+Whether similar navigable atlas structures emerge in these domains remains an open research question.
 
 ---
 
@@ -251,51 +253,55 @@ Several IEEE collapse experiments demonstrate measurable lead times between geom
 Current limitations include:
 
 - limited real-world validation
-- incomplete sensitivity analysis
-- ongoing benchmarking against classical methods
-- no probabilistic confidence framework
-- no guaranteed control-theoretic stability proofs
+- ongoing benchmarking efforts
+- incomplete uncertainty quantification
+- no operational deployment studies yet
+- no formal control-theoretic guarantees
 
-Consequently, the framework should currently be regarded as an experimental research platform.
+Accordingly, NEXAH should currently be interpreted as an experimental research framework.
 
 ---
 
 # Research Direction
 
-Ongoing development focuses on:
+Current development focuses on:
 
-- large-scale validation
+- larger benchmark systems
 - robustness analysis
 - uncertainty quantification
-- regime-aware forecasting
-- trajectory-based stabilization methods
-- integration with real-world grid data
+- real-world datasets
+- atlas-guided intervention
+- operational deployment studies
 
 ---
 
 # NEXAH Principle
+
 ```text
-text simulation     
-      ↓ 
-  structure
-      ↓ 
-    field
-      ↓ 
-    geometry
-      ↓ 
-    dynamics     
-      ↓ 
-    regimes 
+    simulation
+       ↓
+    structure
+       ↓
+     field
+       ↓
+     atlas
+       ↓
+    prediction
+       ↓
+     recovery
+       ↓
+     control 
 ```
+
 ---
 
 # Positioning
 
 NEXAH is a research framework for discovering, representing, and navigating the geometric structure of power-system dynamics.
 
-The goal is not merely to detect instability after it occurs, but to understand how systems move through stability landscapes and how regime transitions emerge.
+Its central objective is not merely to detect instability after it occurs, but to reveal how operating states organize, how transitions emerge, and how navigation through stability landscapes may become possible.
 
 ---
 
-Thomas K. R. Hofmann  
+Thomas K. R. Hofmann
 NEXAH Framework · 2026
