@@ -231,6 +231,37 @@ A navigable stability atlas enables resilient, predictive, and self-guiding syst
 
 ---
 
+# Collaboration & Validation
+
+NEXAH is currently being validated on IEEE benchmark systems and synthetic large-scale dynamical environments.
+
+The next stage of development focuses on independent validation, external datasets, and real-world operational environments.
+
+We welcome collaboration with:
+
+- Power System Researchers
+- Grid Operators
+- Control Engineers
+- Complex Systems Scientists
+- Stability & Resilience Researchers
+- Digital Twin Developers
+- Infrastructure Operators
+
+Areas of interest include:
+
+- External benchmark validation
+- Large-scale system studies
+- Real-time monitoring applications
+- Early warning systems
+- Atlas-guided control strategies
+- Navigation and recovery under uncertainty
+
+Researchers and practitioners interested in testing, evaluating, or extending the NEXAH framework are encouraged to open an issue or contact the project team.
+
+The goal is to evaluate whether navigable state-space structure represents a general principle across complex dynamical systems.
+
+---
+
 # Citation
 
 If you use NEXAH in academic work, please cite the repository and associated documentation.
