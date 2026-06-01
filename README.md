@@ -162,26 +162,28 @@ Current experiments demonstrate:
 
 *NEXAH maps structural relationships across dynamical systems, representations, and scientific domains.*
 
-Modern systems generate enormous amounts of information,
-but often provide little orientation.
+Modern science produces increasingly accurate models of complex systems.
 
-Different disciplines construct highly specialized models:
+Yet many systems remain difficult to compare, interpret, and navigate across scales and disciplines.
+
+NEXAH was created to explore a complementary question:
+
+```txt
+Can complex dynamics be transformed
+into navigable structure?
+```
+
+The framework investigates whether recurring organizational patterns can be discovered across different domains, including:
 
 - dynamical systems
 - control theory
-- synchronization theory
+- synchronization
 - network science
-- AI / ML systems
-- geometry & topology
+- topology & geometry
 - statistical systems
-- information theory
+- machine learning
 
-These models are powerful,
-but often difficult to compare,
-connect,
-or navigate together.
-
-NEXAH investigates whether structure itself can become:
+Rather than focusing only on prediction, NEXAH explores whether structure itself can become:
 
 ```txt
 observable
@@ -194,10 +196,12 @@ through:
 - field reconstruction
 - transition geometry
 - coherence analysis
-- phase dynamics
 - topology extraction
+- atlas reconstruction
 - geometry-oriented navigation
 - comparative visualization
+
+At its core, NEXAH is an attempt to develop better maps for understanding complex dynamics.
 
 ---
 
