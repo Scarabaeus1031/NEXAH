@@ -83,20 +83,6 @@ rather than a universal theory of everything.
 
 ---
 
-# 🔥 Highlight: Janus Operator
-
-**One of the central exploratory mechanisms within NEXAH** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
-
-```txt
-High directional coherence   → stable coherent motion
-Low directional coherence    → transition sensitivity / aperture
-```
-
-Observed results suggest that transitions often cluster within structured geometric regions (corridors, shell crossings, spines, recursive apertures).
-
-→ **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
-(math, code, visuals & validation experiments)
-
 # 🗺️ The Cartography Perspective
 
 NEXAH can be understood as a cartography laboratory for complex systems.
@@ -135,6 +121,38 @@ The focus is on orientation.
 On making structure visible.
 
 On turning complexity into navigable terrain.
+
+---
+
+
+# ⚡ Power-System Validation
+
+One of the most advanced validation environments within NEXAH currently focuses on electrical power systems.
+
+Using IEEE benchmark networks, NEXAH was applied to investigate whether operating states organize into navigable state-space structures.
+
+Results suggest the emergence of:
+
+- Basin Territories
+- Attractors
+- Transport Corridors
+- Gates & Bottlenecks
+- Recovery Anchors
+- Atlas-Guided Control Pathways
+
+![NEXAH Power Systems Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
+
+Current experiments demonstrate:
+
+- atlas discovery
+- transition prediction
+- recovery navigation
+- early warning
+- atlas-guided control concepts
+
+→ See:
+
+`APPLICATIONS/power_systems/README.md`
 
 ---
 
@@ -206,8 +224,23 @@ Current research explores how:
 - mismatch correlates with transitions
 - geometry organizes instability
 - control interacts with field dynamics
-
+  
 ---
+
+# 🔥 Highlight: Janus Operator
+
+**One of the central exploratory mechanisms within NEXAH** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
+
+```txt
+High directional coherence   → stable coherent motion
+Low directional coherence    → transition sensitivity / aperture
+```
+
+Observed results suggest that transitions often cluster within structured geometric regions (corridors, shell crossings, spines, recursive apertures).
+
+→ **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
+(math, code, visuals & validation experiments)
+
 
 # 🔥 Current Working Model
 
@@ -377,35 +410,6 @@ Observed transitions often cluster
 within structured regions associated with
 mismatch, drift, and competing flow geometry.
 ```
-
-# ⚡ Power-System Validation
-
-One of the most advanced validation environments within NEXAH currently focuses on electrical power systems.
-
-Using IEEE benchmark networks, NEXAH was applied to investigate whether operating states organize into navigable state-space structures.
-
-Results suggest the emergence of:
-
-- Basin Territories
-- Attractors
-- Transport Corridors
-- Gates & Bottlenecks
-- Recovery Anchors
-- Atlas-Guided Control Pathways
-
-![NEXAH Power Systems Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
-
-Current experiments demonstrate:
-
-- atlas discovery
-- transition prediction
-- recovery navigation
-- early warning
-- atlas-guided control concepts
-
-→ See:
-
-`APPLICATIONS/power_systems/README.md`
 
 ---
 
