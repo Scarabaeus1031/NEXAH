@@ -181,62 +181,107 @@ through:
 - geometry-oriented navigation
 - comparative visualization
 
-# 🧠 Central Research Direction
+---
 
-NEXAH investigates whether complex systems can be interpreted as:
+# 🧠 Core Research Perspective
+
+NEXAH investigates whether complex systems can be understood as:
 
 ```txt
 motion within structured dynamical fields
 ```
 
-rather than isolated state transitions.
+rather than as isolated state transitions.
 
-The framework explores how:
+The central cartographic question is:
+
+```txt
+Can dynamic systems be mapped as navigable territories?
+```
+
+Current research explores how:
 
 - structure constrains motion
 - coherence stabilizes trajectories
 - mismatch correlates with transitions
-- geometry shapes instability
-- control interacts directionally with phase dynamics
+- geometry organizes instability
+- control interacts with field dynamics
 
 ---
 
-# 🔥 Core Mechanism
+# 🔥 Current Working Model
 
 ![NEXAH Transition Activation Framework](RESEARCH/FIGURES/main/nexah_transition_activation_framework.png)
 
-*Phase-driven transition geometry inside structured dynamical fields.*
-
----
-
-## 🔑 Current Core Observation
-
-Current experimental observations across multiple investigated systems suggest:
+Current observations across multiple investigated systems suggest:
 
 ```txt
-Transitions may correlate more strongly with
-phase mismatch
-than with instability magnitude alone.
+field
+→ structure
+→ coherence
+→ mismatch
+→ transition
+          ↑
+   control(direction)
 ```
 
 Operational interpretation:
 
 ```txt
 instability = potential
-mismatch = trigger
+mismatch   = trigger
 ```
 
-This leads to the current working interpretation:
+A recurring observation is that transitions often correlate more strongly with:
 
 ```txt
-field → coherence → mismatch → transition
-                    ↑
-             control(direction)
+phase mismatch
 ```
+
+than with instability magnitude alone.
+
+---
+
+# 🌐 Structural Interpretation
+
+Traditional approaches often focus on:
+
+```txt
+state → next state
+```
+
+NEXAH instead investigates:
+
+```txt
+trajectory
+→ field
+→ structure
+→ transition geometry
+→ navigation
+```
+
+Within this interpretation:
+
+- stability corresponds to coherent flow
+- instability emerges through drift and mismatch
+- transitions occur within structured regions
+- control acts relative to intrinsic system geometry
+
+This reframes:
+
+- stability
+- transitions
+- synchronization
+- navigation
+- intervention
+
+as properties of motion within evolving field structure.
 
 ---
 
 # 🔬 Interpretation Levels
+
+NEXAH explicitly distinguishes between:
 
 ```txt
 validated
@@ -249,84 +294,13 @@ theoretical
 → conceptual extensions under investigation
 ```
 
-NEXAH explicitly distinguishes between:
+The repository separates:
 
 - empirical findings
 - exploratory hypotheses
-- conceptual/theoretical extensions
+- theoretical extensions
 
----
-
-# 🌐 Conceptual Architecture
-
-![NEXAH Core System](ARCHITECTURE/archive/NEXAH_Regime_Atlas.png)
-
-*NEXAH connects continuous dynamics with transition structure, coherence, geometry, and navigation.*
-
----
-
-# 🧠 Structural Perspective
-
-Traditional approaches often model:
-
-```txt
-state → next state
-```
-
-NEXAH instead investigates:
-
-```txt
-trajectory → field → structure → transition geometry
-```
-
-Within this interpretation:
-
-- stability corresponds to coherent structural flow
-- instability emerges through mismatch and drift
-- transitions often occur across constrained geometric regions
-- control acts relative to intrinsic system dynamics
-
-This reframes:
-
-- stability
-- transitions
-- synchronization
-- navigation
-- and intervention
-
-as properties of motion within evolving field geometry.
-
----
-
-# 🔁 Phase & Directional Control
-
-Recent experiments suggest:
-
-```txt
-phase mismatch
-may behave like a transition activation variable
-```
-
-Observed behavior includes:
-
-```txt
-aligned control
-→ amplifies drift and transitions
-
-opposed control
-→ suppresses transitions
-
-inverse control
-→ stabilizes low-drift regions
-```
-
-This introduces a directional interpretation of control:
-
-```txt
-control effectiveness depends on:
-alignment AND direction
-relative to intrinsic phase dynamics
-```
+throughout the research process.
 
 ---
 
