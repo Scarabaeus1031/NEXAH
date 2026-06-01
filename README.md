@@ -227,20 +227,6 @@ Current research explores how:
   
 ---
 
-# 🔥 Highlight: Janus Operator
-
-**One of the central exploratory mechanisms within NEXAH** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
-
-```txt
-High directional coherence   → stable coherent motion
-Low directional coherence    → transition sensitivity / aperture
-```
-
-Observed results suggest that transitions often cluster within structured geometric regions (corridors, shell crossings, spines, recursive apertures).
-
-→ **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
-(math, code, visuals & validation experiments)
-
 
 # 🔥 Current Working Model
 
@@ -334,6 +320,22 @@ The repository separates:
 - theoretical extensions
 
 throughout the research process.
+
+---
+
+# 🔥 Highlight: Janus Operator
+
+**One of the central exploratory mechanisms within NEXAH** is the **Janus Operator** — a geometry-based method that compares forward and backward local flow structure at every point in the reconstructed field.
+
+```txt
+High directional coherence   → stable coherent motion
+Low directional coherence    → transition sensitivity / aperture
+```
+
+Observed results suggest that transitions often cluster within structured geometric regions (corridors, shell crossings, spines, recursive apertures).
+
+→ **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
+(math, code, visuals & validation experiments)
 
 ---
 
