@@ -201,7 +201,7 @@ through:
 - geometry-oriented navigation
 - comparative visualization
 
-At its core, NEXAH is an attempt to develop better maps for understanding complex dynamics.
+**At its core, NEXAH is an attempt to develop better maps for understanding complex dynamics.**
 
 ---
 
