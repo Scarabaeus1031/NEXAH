@@ -1,0 +1,5 @@
+EXP_37B MULTI-SYSTEM ATLAS DISCOVERY V3
+==================================================
+
+IEEE9: classes=1, entropy=-0.000, effective=1.000
+IEEE300: classes=3, entropy=1.093, effective=2.132
