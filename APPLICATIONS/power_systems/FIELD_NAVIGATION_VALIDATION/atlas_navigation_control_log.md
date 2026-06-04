@@ -2381,3 +2381,53 @@ Proportional Complexity Growth
 ```
 
 The result remains preliminary but represents the first quantitative indication that atlas organization may behave as a system-independent invariant.
+
+# Finding 21 — Basin Structure Remains Small Across Systems
+
+EXP_37B V4 introduces a first basin-extraction layer on top of the operational state sequences.
+
+Instead of counting raw warning labels, the experiment identifies recurring state territories using temporal window embeddings and clustering.
+
+Observed results:
+
+| System | Basins | Entropy | Effective Basins |
+|----------|----------|----------|----------|
+| IEEE9 | 4 | 1.630 | 3.095 |
+| IEEE300 | 3 | 0.906 | 1.873 |
+
+Despite a substantial increase in network size:
+
+```text
+IEEE9
+→ 9 buses
+
+IEEE300
+→ 300 buses
+```
+
+the extracted basin structure remains remarkably compact.
+
+The larger network does not generate a proportional increase in basin count.
+
+Observed behavior therefore supports:
+
+```text
+Network Size ↑
+
+does not imply
+
+Basin Count ↑
+```
+
+The effective number of operational territories remains close to O(1).
+
+This suggests that power-system operation may collapse into a small number of dominant behavioral regions even when the underlying network becomes substantially larger.
+
+At present this result should be interpreted as preliminary because basin extraction is performed on operational-state sequences rather than full atlas geometry.
+
+Nevertheless, the finding is consistent with previous observations from:
+
+- EXP_37C Atlas Universality
+- EXP_37D Atlas Invariant Analysis
+
+which both indicated that atlas complexity grows far more slowly than network size.
