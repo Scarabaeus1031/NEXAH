@@ -1959,3 +1959,325 @@ Recovery origins (warning and critical states) and their corresponding safe dest
 The figure illustrates that most recovery actions involve short-range movement toward nearby stable territories rather than long-distance transport across the atlas.
 
 The pattern suggests that unstable states already contain nearby recovery opportunities embedded within the atlas geometry itself.
+
+# Finding 17 — Atlas Structures Generalize Across Power-System Scales
+
+## EXP_37B — Multi-System Atlas Discovery
+
+### Objective
+
+All previous atlas experiments focused on a single benchmark system.
+
+The central question of EXP_37B was:
+
+```text
+Is the atlas unique to IEEE39,
+
+or does atlas organization emerge
+in fundamentally different power systems?
+```
+
+To investigate this question, atlas extraction was performed on multiple independently generated system datasets.
+
+The first successful cross-system comparison included:
+
+- IEEE9
+- IEEE300
+
+representing strongly different network scales.
+
+---
+
+## Key Result
+
+Atlas organization emerges in both systems.
+
+The extracted state structures do not collapse into a single operating regime.
+
+Instead both systems exhibit:
+
+- multiple operating classes
+- persistent state territories
+- measurable atlas coverage
+- non-trivial occupancy distributions
+
+---
+
+## Quantitative Summary
+
+```text
+IEEE9
+
+States:          2400
+Atlas Classes:      4
+
+IEEE300
+
+States:           360
+Atlas Classes:      3
+```
+
+Despite the large difference in network size, both systems organize into a small number of persistent operating regimes.
+
+---
+
+## Visual Evidence
+
+### Atlas Coverage
+
+![EXP_37B Atlas Coverage](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_coverage.png)
+
+Atlas coverage remains measurable in both systems.
+
+The resulting structures occupy a finite collection of operating territories rather than collapsing into a single state.
+
+---
+
+### State Count
+
+![EXP_37B State Count](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_state_count.png)
+
+The datasets differ substantially in size.
+
+However, atlas organization appears in both cases.
+
+---
+
+### Unique State Classes
+
+![EXP_37B Unique States](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_unique_states.png)
+
+Both systems exhibit a small number of persistent operating classes.
+
+This suggests that atlas formation may not depend strongly on system size.
+
+---
+
+## Interpretation
+
+The most important result of EXP_37B is not the exact number of classes.
+
+The important result is:
+
+```text
+Atlas organization
+appears in more than one system.
+```
+
+The atlas therefore becomes a candidate system-level phenomenon rather than a benchmark-specific artifact.
+
+---
+
+## Conclusion
+
+EXP_37B provides the first evidence that atlas structures are not unique to IEEE39-style systems.
+
+Atlas organization emerges in both small and large networks, suggesting that operating-state geometry may be a generic property of power-system dynamics.
+
+---
+
+# Finding 18 — Atlas Universality Receives Initial Support
+
+## EXP_37C — Atlas Universality Validation
+
+### Objective
+
+After establishing atlas organization in multiple systems, the next question becomes:
+
+```text
+Do these atlases exhibit
+common structural properties?
+```
+
+EXP_37C evaluates whether different systems satisfy a common set of atlas criteria.
+
+---
+
+## Universality Metrics
+
+For each system:
+
+- state diversity
+- atlas coverage
+- entropy
+- dominant-state fraction
+- minimum sample support
+
+were evaluated.
+
+A universality score was assigned based on these criteria.
+
+---
+
+## Results
+
+### IEEE9
+
+```text
+States:               2400
+Classes:                 4
+Entropy:             1.655
+Dominant Fraction:   0.556
+
+Universality Score: 5 / 5
+```
+
+### IEEE300
+
+```text
+States:                360
+Classes:                 3
+Entropy:             0.840
+Dominant Fraction:   0.792
+
+Universality Score: 5 / 5
+```
+
+---
+
+## Visual Evidence
+
+### Universality Score
+
+![EXP_37C Universality Score](./outputs/EXP_37C_ATLAS_UNIVERSALITY_VALIDATION/exp37c_score.png)
+
+Both systems achieve maximal universality scores.
+
+This indicates that atlas organization satisfies the same structural criteria despite large differences in scale.
+
+---
+
+### State Entropy
+
+![EXP_37C State Entropy](./outputs/EXP_37C_ATLAS_UNIVERSALITY_VALIDATION/exp37c_entropy.png)
+
+Both systems exhibit positive entropy.
+
+The atlases therefore contain genuine operating diversity rather than a single dominant state.
+
+---
+
+### Atlas Coverage
+
+![EXP_37C Atlas Coverage](./outputs/EXP_37C_ATLAS_UNIVERSALITY_VALIDATION/exp37c_coverage.png)
+
+Coverage remains finite across both systems, indicating persistent multi-regime structure.
+
+---
+
+### Universality Dashboard
+
+![EXP_37C Dashboard](./outputs/EXP_37C_ATLAS_UNIVERSALITY_VALIDATION/exp37c_universality_dashboard.png)
+
+The dashboard summarizes the cross-system comparison and highlights the common structural properties shared by both atlases.
+
+---
+
+## Interpretation
+
+EXP_37B demonstrated:
+
+```text
+Atlas exists in multiple systems.
+```
+
+EXP_37C adds:
+
+```text
+These atlases exhibit
+similar structural characteristics.
+```
+
+This is the first direct evidence supporting the hypothesis that atlas formation may represent a generic feature of power-system dynamics.
+
+---
+
+## Status After EXP_37C
+
+Supported:
+
+✓ Atlas organization exists in IEEE39
+
+✓ Atlas organization exists in IEEE9
+
+✓ Atlas organization exists in IEEE300
+
+✓ Multiple operating territories emerge
+
+✓ Non-zero entropy emerges
+
+✓ Common atlas metrics emerge
+
+✓ Universality scores remain high
+
+Not Yet Proven:
+
+□ Scaling laws
+
+□ Atlas invariants
+
+□ Universality across IEEE118
+
+□ Universality across IEEE1354
+
+□ Universality across PEGASE systems
+
+□ Universality across non-power-system domains
+
+---
+
+## Conclusion
+
+EXP_37C represents the first universality test of the NEXAH Atlas framework.
+
+The results suggest that atlas formation is not restricted to a single benchmark network.
+
+Current evidence supports the emerging hypothesis:
+
+```text
+Dynamics
+    ↓
+Geometry
+    ↓
+Transport
+    ↓
+Atlas
+```
+
+may represent a generic organizational principle of complex power-system state spaces.
+
+---
+
+## Strategic Shift
+
+Prior to EXP_37B and EXP_37C the central question was:
+
+```text
+Does an atlas exist?
+```
+
+The current evidence now shifts the research direction toward:
+
+```text
+What properties
+remain invariant
+across all atlases?
+```
+
+This marks the transition from:
+
+```text
+Atlas Discovery
+```
+
+toward:
+
+```text
+Atlas Universality
+```
+
+and establishes the foundation for the next stage:
+
+```text
+EXP_37D — Atlas Invariant Analysis
+```
