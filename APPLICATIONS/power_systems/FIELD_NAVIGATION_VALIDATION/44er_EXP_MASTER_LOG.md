@@ -624,4 +624,166 @@ This represents a major step toward Atlas-based navigation and intervention.
 
 ---
 
+---
+
+# EXP_44H — Atlas Flow Reconstruction
+
+## Goal
+
+Reconstruct local transport vectors directly from the Atlas State Graph.
+
+## Results
+
+### Nodes
+
+540
+
+### Edges
+
+2700
+
+### Flow Vectors
+
+540
+
+### Mean Velocity
+
+0.171132
+
+### Maximum Velocity
+
+3.676558
+
+### Global Flow Coherence
+
+0.041307
+
+## Key Findings
+
+The Atlas State Graph can be converted into a continuous transport field.
+
+The resulting flow field exhibits:
+
+- coherent transport corridors
+- directional transport structure
+- identifiable backbone flow
+- non-random velocity organization
+
+## Significance
+
+This experiment establishes the first continuous flow representation of the Atlas.
+
+Pipeline:
+
+Graph → Flow
+
+---
+
+---
+
+# EXP_44H.1 — Flow Coherence Mapping
+
+## Goal
+
+Measure local transport coherence throughout the reconstructed Atlas Flow Field.
+
+## Results
+
+### Mean Local Coherence
+
+0.728172
+
+### Median Local Coherence
+
+0.779233
+
+### Maximum Local Coherence
+
+0.999313
+
+## Key Findings
+
+Despite low global directional alignment, the Atlas contains highly coherent local transport regions.
+
+Most Atlas nodes participate in strongly aligned local transport structures.
+
+## Significance
+
+The Atlas contains structured transport geometry rather than random flow directions.
+
+Pipeline:
+
+Graph → Flow → Coherence
+
+---
+
+---
+
+# EXP_44H.2 — Coherent Domain Extraction
+
+## Goal
+
+Extract coherent transport domains from Atlas Flow Coherence structure.
+
+## Results
+
+### Coherence Threshold
+
+0.80
+
+### Total Nodes
+
+540
+
+### Coherent Nodes
+
+302
+
+### Domains Found
+
+17
+
+### Largest Domain
+
+232
+
+## Visuals
+
+### Coherent Domains
+
+![Coherent Domains](outputs/EXP_44H2_COHERENT_DOMAIN_EXTRACTION/exp44h2_domain_map.png)
+
+### Domain Sizes
+
+![Domain Sizes](outputs/EXP_44H2_COHERENT_DOMAIN_EXTRACTION/exp44h2_domain_sizes.png)
+
+## Key Findings
+
+A dominant coherent transport domain was identified.
+
+Largest domain:
+
+232 nodes
+
+representing approximately 76.8% of all coherent nodes.
+
+The dominant domain follows the principal Atlas transport structure previously observed in:
+
+- EXP_24C
+- EXP_24D
+- EXP_24E
+
+Smaller domains appear near transport boundaries, peripheral regions, and transition zones.
+
+## Significance
+
+This experiment provides the first automatic segmentation of the Atlas into coherent transport regions.
+
+Pipeline:
+
+Graph → Flow → Coherence → Domains
+
+---
+
+
 
