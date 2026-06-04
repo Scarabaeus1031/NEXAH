@@ -1,0 +1,12 @@
+EXP_44A TRAJECTORY ASSET DISCOVERY
+==================================================
+
+Assets Discovered: 291
+Candidates: 51
+
+IEEE9: 1 candidates
+IEEE39: 3 candidates
+IEEE300: 1 candidates
+
+Recommended Next Step:
+EXP_44B ATLAS-KOOPMAN CROSS VALIDATION
