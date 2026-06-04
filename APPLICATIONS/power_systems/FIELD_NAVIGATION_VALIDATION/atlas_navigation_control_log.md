@@ -2856,7 +2856,7 @@ SAFE
 
 ### Real Warning-State Transition Network
 
-![EXP_39C Real Transition Network](./outputs/EXP_39C_REAL_TRANSITION_NETWORK_EXTRACTION/exp39c_transition_network.png)
+![EXP_39C Real Transition Network](../outputs/EXP_39C_REAL_TRANSITION_NETWORK_EXTRACTION/exp39c_transition_network.png)
 
 The resulting network shows that historical warning states do not behave as isolated categories.
 
@@ -2941,7 +2941,7 @@ SAFE dominates, while WARNING appears as a comparatively narrow transition band.
 
 ### Sequence Type Classification
 
-![EXP_39C2 Sequence Types](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_sequence_type_counts.png)
+![EXP_39C2 Sequence Types](../outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_sequence_type_counts.png)
 
 All 24 historical state files belong to the same warning-label sequence class.
 
@@ -2949,7 +2949,7 @@ All 24 historical state files belong to the same warning-label sequence class.
 
 ### Global State Distribution
 
-![EXP_39C2 Global State Distribution](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_global_state_distribution.png)
+![EXP_39C2 Global State Distribution](../outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_global_state_distribution.png)
 
 SAFE acts as the dominant reservoir state, while WARNING appears much less frequently than CRITICAL or COLLAPSED.
 
@@ -2957,7 +2957,7 @@ SAFE acts as the dominant reservoir state, while WARNING appears much less frequ
 
 ### Transition Rate By Run
 
-![EXP_39C2 Transition Rate By Run](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_transition_rate_by_run.png)
+![EXP_39C2 Transition Rate By Run](../outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_transition_rate_by_run.png)
 
 The transition-rate structure is not continuous.
 
@@ -3025,7 +3025,7 @@ The runs cluster into several discrete bands rather than forming a smooth contin
 
 ### Transition Rate Regimes
 
-![EXP_39C2 Transition Rate By Run](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_transition_rate_by_run.png)
+![EXP_39C2 Transition Rate By Run](../outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_transition_rate_by_run.png)
 
 The visual suggests the existence of operational activity layers.
 
