@@ -1553,19 +1553,19 @@ The discovered highway structure represents the dominant transport backbone of t
 
 ### Atlas Transport Skeleton
 
-![Atlas Transport Skeleton](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_transport_skeleton.png)
+![Atlas Transport Skeleton](outputs/EXP_44Q_TRANSPORT_SKELETON_EXTRACTION/exp44q_transport_skeleton.png)
 
 ### Skeleton Compression Curve
 
-![Skeleton Compression Curve](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_skeleton_compression.png)
+![Skeleton Compression Curve](outputs/EXP_44Q_TRANSPORT_SKELETON_EXTRACTION/exp44q_skeleton_compression.png)
 
 ### Navigation Preservation
 
-![Navigation Preservation](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_navigation_preservation.png)
+![Navigation Preservation](outputs/EXP_44Q_TRANSPORT_SKELETON_EXTRACTION/exp44q_navigation_preservation.png)
 
 ### Edge Importance Ranking
 
-![Edge Importance Ranking](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_edge_importance.png)
+![Edge Importance Ranking](outputs/EXP_44Q_TRANSPORT_SKELETON_EXTRACTION/exp44q_edge_importance.png)
 
 ---
 
