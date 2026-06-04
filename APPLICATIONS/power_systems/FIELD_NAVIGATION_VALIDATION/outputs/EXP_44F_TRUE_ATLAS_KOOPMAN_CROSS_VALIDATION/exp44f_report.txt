@@ -1,0 +1,38 @@
+
+EXP_44F TRUE ATLAS-KOOPMAN CROSS VALIDATION
+==================================================
+
+Nodes
+------
+540
+
+Edges
+------
+2700
+
+Atlas Spectral Radius
+---------------------
+5.000000
+
+Koopman Spectral Radius
+-----------------------
+1.000000
+
+Alignment Score
+---------------
+0.417256
+
+Interpretation
+--------------
+Alignment close to +1
+
+=> Atlas spectrum strongly agrees
+   with Koopman dynamics.
+
+Alignment near 0
+
+=> weak correspondence.
+
+Alignment negative
+
+=> incompatible dominant modes.
