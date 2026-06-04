@@ -2502,7 +2502,7 @@ Figure: EXP_37F Atlas Scaling Matrix
 
 The scaling matrix summarizes all observed atlas metrics.
 
-![EXP_37F Scaling Matrix](visuals/exp37f_scaling_heatmap.png)
+![EXP_37F Compression Ratio](../outputs/EXP_37F_ATLAS_SCALING_ANALYSIS/exp37f_compression_ratio.png)
 
 Several trends become immediately visible:
 
@@ -2583,7 +2583,7 @@ Future validation using IEEE14, IEEE30, IEEE39, IEEE57, IEEE118, IEEE1354 and PE
 
 Figure: EXP_37F Scaling Matrix
 
-![EXP_37F Scaling Matrix](visuals/exp37f_scaling_heatmap.png)
+![EXP_37F Scaling Matrix](../outputs/EXP_37F_ATLAS_SCALING_ANALYSIS/exp37f_scaling_heatmap.png)
 
 The scaling matrix provides a compact overview of the simultaneous movement of all atlas metrics and visually highlights the emergence of coherent atlas compression across system scales.
 
