@@ -175,6 +175,22 @@ print()
 print("Nodes:", G.number_of_nodes())
 print("Edges:", G.number_of_edges())
 
+# ==========================================================
+# SAVE GRAPH
+# ==========================================================
+
+graphml_file = (
+    OUTPUT
+    / "atlas_state_graph.graphml"
+)
+
+nx.write_graphml(
+    G,
+    graphml_file
+)
+
+print()
+print("Saved:", graphml_file)
 
 # ==========================================================
 # NODE TABLE
