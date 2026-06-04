@@ -1,0 +1,32 @@
+
+EXP_44G ATLAS PREDICTIVE VALIDATION
+==================================================
+
+Nodes
+------
+540
+
+Edges
+------
+2700
+
+MAE
+---
+0.826703
+
+RMSE
+----
+1.085318
+
+Prediction Accuracy
+-------------------
+0.479543
+
+Interpretation
+--------------
+Atlas neighbors were used to predict
+local state geometry.
+
+High accuracy indicates that Atlas
+structure contains predictive
+information about future states.
