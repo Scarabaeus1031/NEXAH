@@ -1,0 +1,48 @@
+
+EXP_44J NAVIGATION ENGINE
+==================================================
+
+Domains
+-------
+17
+
+Routes Tested
+-------------
+113
+
+Mean Hop Count
+--------------
+13.115
+
+Shortest Route
+--------------
+1
+
+Longest Route
+-------------
+28
+
+Interpretation
+--------------
+The Atlas was used as an actual navigation
+system between coherent transport domains.
+
+Navigation routes were computed directly
+through Atlas geometry.
+
+This is the first operational navigation
+experiment of the EXP_44 campaign.
+
+Pipeline
+
+Graph
+ ->
+Flow
+ ->
+Coherence
+ ->
+Domains
+ ->
+Geodesic Transport
+ ->
+Navigation Engine
