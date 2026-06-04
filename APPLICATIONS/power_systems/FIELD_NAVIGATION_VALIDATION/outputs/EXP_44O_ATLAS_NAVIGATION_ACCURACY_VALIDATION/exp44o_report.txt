@@ -1,0 +1,31 @@
+
+EXP_44O ATLAS NAVIGATION ACCURACY VALIDATION
+==================================================
+
+Domain Pairs
+------------
+136
+
+Mean Navigation Gain
+--------------------
+0.930693
+
+Mean Efficiency
+---------------
+14.889538
+
+Best Efficiency
+---------------
+28.750000
+
+Interpretation
+--------------
+Atlas navigation routes were compared
+against random-walk transport.
+
+Efficiency > 1 indicates that Atlas
+navigation outperforms random transport.
+
+This experiment provides the first
+quantitative validation of Atlas-guided
+navigation.
