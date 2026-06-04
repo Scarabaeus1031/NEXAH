@@ -99,7 +99,7 @@ Instead they organize into a structured atlas containing:
 
 # Atlas Geometry
 
-![Atlas Geometry](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_GEOMETRY_and_STRUCTURAL_ORGANIZATION.png)
+![Atlas Geometry](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and_STRUCTURAL_ORGANIZATION.png)
 
 Key Findings:
 
@@ -162,6 +162,101 @@ Control Loop:
 5. Target Recovery Anchor
 6. Apply Control Action
 7. Update Atlas Position
+
+---
+
+# Historical Dynamics Reconstruction
+
+![Historical Dynamics Reconstruction](outputs/diagrams/NEXAH_STATE_NAVIGATION-HISTORICAL_DYNAMICS_RECONSTRUCTION_NEXAH_STATE_NAVIGATION.png)
+
+EXP_38–EXP_40 investigated whether atlas structure can be reconstructed from historical repository artifacts without rerunning the original simulation pipeline.
+
+Recovered layers include:
+
+- State Classification
+- Basin Evidence
+- Atlas Organization
+- Field Geometry
+- Warning-State Dynamics
+- Early Warning Structure
+
+Key findings:
+
+- 24 historical state archives recovered
+- measurable warning-state dynamics discovered
+- warning states precede collapse events
+- mean warning lead time: 81.35 state steps
+- maximum warning lead time: 96 state steps
+
+Observed progression:
+
+```text
+SAFE
+ ↓
+WARNING
+ ↓
+CRITICAL
+ ↓
+COLLAPSED
+```
+
+rather than:
+
+```text
+SAFE
+ ↓
+COLLAPSED
+```
+
+This demonstrates that instability develops through structured intermediate regimes rather than abrupt transitions.
+
+---
+
+# Recovery Archetypes & Oscillation Dynamics
+
+![Recovery Archetypes & Oscillation Dynamics](outputs/diagrams/NEXAH_STATE_NAVIGATION-RECOVERY_ARCHETYPES-OSCILLATION_DYNAMICS.png)
+
+EXP_41–EXP_43 investigated the internal dynamics of historical warning-state archives.
+
+Recovered structures include:
+
+- degradation chains
+- recovery archetypes
+- oscillatory state behavior
+
+Key observations:
+
+## Recovery Archetypes
+
+Historical trajectories repeatedly converge toward similar stabilization pathways.
+
+Recovery therefore appears structured rather than random.
+
+## Oscillation Dynamics
+
+Dominant oscillation:
+
+```text
+SAFE ↔ CRITICAL
+```
+
+Additional oscillations:
+
+```text
+SAFE ↔ WARNING
+WARNING ↔ CRITICAL
+SAFE ↔ COLLAPSED
+```
+
+These results suggest that instability often develops through repeated excursions between neighboring regimes.
+
+The atlas therefore contains:
+
+- warning dynamics,
+- recovery dynamics,
+- oscillatory dynamics,
+
+that remain recoverable from historical state archives.
 
 ---
 
