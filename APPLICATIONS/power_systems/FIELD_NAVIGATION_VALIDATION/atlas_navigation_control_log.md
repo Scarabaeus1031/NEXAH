@@ -2587,4 +2587,142 @@ Figure: EXP_37F Scaling Matrix
 
 The scaling matrix provides a compact overview of the simultaneous movement of all atlas metrics and visually highlights the emergence of coherent atlas compression across system scales.
 
+# Finding 24 — IEEE39 Atlas Reconstruction Is Feasible From Historical Assets
+
+EXP_38A–EXP_38D investigated whether an IEEE39 atlas can be reconstructed from previously generated NEXAH artifacts without requiring a new simulation campaign.
+
+A repository-wide asset harvest identified historical IEEE39 structures associated with:
+
+- state classification,
+- basin detection,
+- atlas organization,
+- field geometry.
+
+EXP_38B recovered 26 relevant IEEE39 assets.
+
+Category summary:
+
+| Category | Assets |
+|----------|---------|
+| Field | 9 |
+| Geometry | 8 |
+| Atlas | 5 |
+| Basin | 2 |
+| States | 2 |
+
+The recovered assets provide evidence that a substantial portion of the IEEE39 atlas pipeline already exists inside the repository.
+
+---
+
+## Capability Audit
+
+EXP_38C evaluated reconstruction readiness across all major atlas layers.
+
+| Layer | Status |
+|---------|---------|
+| Atlas Structure | READY |
+| Basin Detection | READY |
+| State Classification | READY |
+| Field Geometry | READY |
+| Transition Network | MISSING |
+| PCA Geometry | MISSING |
+| Early Warning | MISSING |
+| Recovery Layer | MISSING |
+
+Result:
+
+```text
+4 / 8 layers available
+```
+
+corresponding to:
+
+```text
+Atlas Reconstruction Readiness = 50%
+```
+
+---
+
+## Reconstruction Assessment
+
+EXP_38D combined the recovered assets into a reconstruction feasibility analysis.
+
+The available layers correspond exactly to the foundational atlas stack:
+
+```text
+States
+↓
+Basins
+↓
+Atlas
+↓
+Field Geometry
+```
+
+while the missing layers belong primarily to navigation and control:
+
+```text
+Transition Network
+↓
+Early Warning
+↓
+Recovery
+```
+
+The analysis therefore indicates that atlas discovery itself is already supported by historical IEEE39 data.
+
+---
+
+## Estimated Atlas Structure
+
+Using the available basin assets, EXP_38D estimates:
+
+```text
+IEEE39 Atlas:
+3–4 dominant basins
+```
+
+which is consistent with observations previously reported for:
+
+- IEEE9
+- IEEE300
+
+and therefore does not contradict the emerging atlas-compression hypothesis.
+
+---
+
+## Visual Evidence
+
+### IEEE39 Capability Audit
+
+![EXP_38C Capability Audit](./outputs/EXP_38C_IEEE39_ATLAS_CAPABILITY_AUDIT/exp38c_capability_audit.png)
+
+The audit shows that the foundational atlas layers are available while navigation-oriented layers remain missing.
+
+---
+
+### IEEE39 Reconstruction Dashboard
+
+![EXP_38D Reconstruction Dashboard](./outputs/EXP_38D_IEEE39_ATLAS_RECONSTRUCTION/exp38d_reconstruction_dashboard.png)
+
+The dashboard summarizes overall atlas reconstruction readiness.
+
+---
+
+### IEEE39 Layer Availability
+
+![EXP_38D Layer Availability](./outputs/EXP_38D_IEEE39_ATLAS_RECONSTRUCTION/exp38d_layer_availability.png)
+
+Four of eight atlas layers are currently recoverable from historical assets.
+
+---
+
+## Conclusion
+
+Current evidence suggests that IEEE39 already contains sufficient historical structure to support partial atlas reconstruction.
+
+The missing information is concentrated in transition, warning and recovery layers rather than in atlas discovery itself.
+
+This result strengthens the broader hypothesis that atlas structures emerge consistently across power-system scales and may be recoverable even from incomplete historical datasets.
+
 
