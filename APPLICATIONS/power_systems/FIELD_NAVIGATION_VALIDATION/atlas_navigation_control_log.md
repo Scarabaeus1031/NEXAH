@@ -3497,5 +3497,271 @@ as an emergent property of historical NEXAH state dynamics.
 
 ---
 
+# Finding 30 — Historical Dynamics Are Dominated By Oscillatory Recovery Behavior
+
+## EXP_43 — State Oscillation Discovery
+
+Previous experiments suggested that warning-state dynamics might follow a degradation chain:
+
+```text
+SAFE
+↓
+WARNING
+↓
+CRITICAL
+↓
+COLLAPSED
+```
+
+EXP_43 investigated a different possibility:
+
+```text
+Do historical warning-state archives contain
+recurrent oscillatory behavior?
+```
+
+The objective was to identify repeated:
+
+```text
+A → B → A
+```
+
+patterns and reconstruct the dominant oscillation structure of the historical NEXAH repository.
+
+---
+
+## Results
+
+```text
+Runs Processed: 24
+
+Unique Oscillations: 8
+
+Mean Loop Length: 9.84
+
+Max Loop Length: 19
+```
+
+Top oscillations:
+
+```text
+SAFE ↔ CRITICAL : 172
+
+SAFE ↔ WARNING : 52
+
+CRITICAL ↔ SAFE : 28
+
+CRITICAL ↔ WARNING : 15
+```
+
+---
+
+## Visual Evidence
+
+### Oscillation Network
+
+![](./outputs/EXP_43_STATE_OSCILLATION_DISCOVERY/exp43_state_oscillation_network.png)
+
+The oscillation network reveals a remarkably strong central structure.
+
+Rather than a simple degradation hierarchy, the recovered warning-state dynamics organize around a dominant oscillatory core.
+
+The strongest connection by far is:
+
+```text
+SAFE ↔ CRITICAL
+```
+
+Several observations emerge immediately:
+
+- SAFE acts as the central hub state
+- CRITICAL acts as the dominant oscillation partner
+- WARNING occupies a secondary buffer role
+- COLLAPSED remains weakly connected
+
+The resulting geometry resembles a recovery-centered network rather than a one-directional failure chain.
+
+A particularly notable observation is the visual emergence of a:
+
+```text
+SAFE ↔ CRITICAL
+```
+
+core surrounded by weaker peripheral transitions.
+
+---
+
+### Loop Length Distribution
+
+![](./outputs/EXP_43_STATE_OSCILLATION_DISCOVERY/exp43_loop_length_distribution.png)
+
+The loop-length distribution reveals oscillations across multiple temporal scales.
+
+Observed statistics:
+
+```text
+Mean Length = 9.84
+
+Max Length = 19
+```
+
+The distribution is not monotonic.
+
+Instead several elevated regions appear.
+
+Notable concentrations emerge near:
+
+```text
+Length ≈ 2–3
+
+Length ≈ 10–11
+
+Length ≈ 18–19
+```
+
+while the remaining distribution gradually decreases between these peaks.
+
+This suggests that the historical warning-state system may contain multiple oscillation modes operating at different characteristic timescales.
+
+The resulting structure appears organized rather than random.
+
+---
+
+### Oscillation Frequencies
+
+![](./outputs/EXP_43_STATE_OSCILLATION_DISCOVERY/exp43_oscillation_frequency.png)
+
+The oscillation-frequency analysis reveals a highly asymmetric hierarchy.
+
+Observed frequencies:
+
+```text
+SAFE ↔ CRITICAL : 172
+
+SAFE ↔ WARNING : 52
+
+CRITICAL ↔ SAFE : 28
+
+CRITICAL ↔ WARNING : 15
+```
+
+The dominant SAFE ↔ CRITICAL oscillation exceeds all other recovered oscillation modes by a substantial margin.
+
+A second notable observation is:
+
+```text
+SAFE ↔ COLLAPSED
+
+COLLAPSED ↔ SAFE
+```
+
+appear at nearly identical frequency.
+
+This symmetry suggests that collapse behaves less like a terminal absorbing state and more like a rare but reversible operating regime within the recovered historical dynamics.
+
+---
+
+## Interpretation
+
+EXP_43 fundamentally changes the interpretation of the historical warning layer.
+
+Previous findings supported:
+
+```text
+SAFE
+↓
+WARNING
+↓
+CRITICAL
+↓
+COLLAPSED
+```
+
+as a possible degradation sequence.
+
+The oscillation analysis instead supports:
+
+```text
+SAFE
+↕
+CRITICAL
+```
+
+as the dominant historical dynamic.
+
+The recovered system repeatedly returns toward SAFE states after excursions into CRITICAL regions.
+
+This behavior is more consistent with:
+
+```text
+Recovery Dynamics
+```
+
+than with:
+
+```text
+Monotonic Failure Dynamics
+```
+
+The historical warning-state archive therefore appears to contain evidence for a persistent oscillatory recovery layer.
+
+---
+
+## Conclusion
+
+EXP_43 provides the first repository-scale evidence that historical NEXAH warning-state dynamics are dominated by oscillatory behavior.
+
+The dominant oscillation:
+
+```text
+SAFE ↔ CRITICAL
+```
+
+appears far more frequently than any linear degradation pathway.
+
+The recovered dynamics suggest that:
+
+```text
+SAFE
+```
+
+acts as a central attractor state,
+
+while:
+
+```text
+CRITICAL
+```
+
+acts as the primary oscillatory partner.
+
+The result establishes the first evidence for a:
+
+```text
+Historical Oscillation Layer
+```
+
+inside the NEXAH warning-state archive.
+
+---
+
+## Current Interpretation
+
+```text
+Warning Layer
+        ↓
+
+Recovery Layer
+        ↓
+
+Oscillation Layer
+```
+
+SUPPORTED
+
+EXP_43
+```
+---
+
 
 
