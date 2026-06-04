@@ -50,11 +50,10 @@ import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[4]
 
-SEARCH_ROOT = ROOT / "APPLICATIONS" / "power_systems"
+SEARCH_ROOT = ROOT / "power_systems"
 
 OUTPUT_DIR = (
     ROOT
-    / "APPLICATIONS"
     / "power_systems"
     / "FIELD_NAVIGATION_VALIDATION"
     / "outputs"
@@ -108,6 +107,11 @@ print(f"State files discovered: {len(state_files)}")
 if not state_files:
     raise RuntimeError("No states.txt files found.")
 
+print()
+print("Checking search path:")
+print(SEARCH_ROOT)
+print("Exists:", SEARCH_ROOT.exists())
+print()
 
 # --------------------------------------------------
 # GLOBAL COLLECTIONS
