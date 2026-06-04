@@ -1,0 +1,49 @@
+
+EXP_44L DOMAIN SUPERGRAPH CONSTRUCTION
+==================================================
+
+Domains
+-------
+17
+
+Edges
+-----
+113
+
+Density
+-------
+0.8309
+
+Connected Components
+--------------------
+1
+
+Top Betweenness Domain
+----------------------
+16
+
+Betweenness
+-----------
+0.105556
+
+Interpretation
+--------------
+The coherent Atlas domains were elevated
+into a higher-order transport graph.
+
+This experiment represents the first
+Atlas Supergraph.
+
+Pipeline
+
+Graph
+ ->
+Flow
+ ->
+Coherence
+ ->
+Domains
+ ->
+Geodesic Transport
+ ->
+Domain Supergraph
