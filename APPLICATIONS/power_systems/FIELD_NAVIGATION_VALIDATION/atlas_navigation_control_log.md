@@ -2281,3 +2281,103 @@ and establishes the foundation for the next stage:
 ```text
 EXP_37D — Atlas Invariant Analysis
 ```
+
+## Visual Evidence
+
+### Atlas Invariant Matrix
+
+![EXP_37D Atlas Invariants](./outputs/EXP_37D_ATLAS_INVARIANT_ANALYSIS/exp37d_invariant_heatmap.png)
+
+The invariant matrix summarizes all atlas metrics extracted from the currently available benchmark systems.
+
+Several observations emerge immediately:
+
+- network size differs by more than an order of magnitude
+- atlas class count remains small
+- entropy remains finite
+- effective diversity remains low
+- dominant operating regimes persist
+
+Most importantly, the atlas metrics do not scale proportionally with network size.
+
+The heatmap therefore provides a first visual indication that atlas structure may be governed by a small number of large-scale operating territories rather than by the dimensionality of the underlying network.
+
+The result remains preliminary because only two systems currently contain atlas measurements.
+
+However, both systems exhibit the same qualitative behavior:
+
+```text
+Large State Space
+        ↓
+Atlas Compression
+        ↓
+Few Operational Territories
+```
+
+This pattern is consistent with the emerging hypothesis that atlas organization behaves as a low-dimensional invariant of power-system operation.
+
+## Visual Evidence
+
+### Effective Atlas Diversity
+
+![EXP_37D Effective Diversity](./outputs/EXP_37D_ATLAS_INVARIANT_ANALYSIS/exp37d_effective_states.png)
+
+A particularly important result is the effective number of operational states.
+
+Although thousands of raw observations are available, the resulting atlas diversity remains extremely small:
+
+```text
+IEEE9
+2400 observations
+→ 2.62 effective states
+
+IEEE300
+360 observations
+→ 1.51 effective states
+```
+
+This indicates substantial compression of the operational state space.
+
+Rather than occupying a large number of equally probable operating regimes, both systems concentrate into a small number of dominant atlas territories.
+
+The result suggests that atlas complexity may be determined primarily by large-scale operating structure rather than by network size itself.
+
+## Finding 20.1 — Evidence For Atlas Compression
+
+Across both benchmark systems the number of observed operating points is large:
+
+```text
+IEEE9
+→ 2400 states
+
+IEEE300
+→ 360 states
+```
+
+Yet the effective operational diversity remains close to:
+
+```text
+O(1)
+```
+
+This suggests that power-system operation may compress naturally into a small number of dominant atlas territories.
+
+Current evidence therefore supports:
+
+```text
+Raw State Space
+        ↓
+Atlas Compression
+        ↓
+Operational Territories
+```
+
+rather than
+
+```text
+Raw State Space
+        ↓
+Proportional Complexity Growth
+```
+
+The result remains preliminary but represents the first quantitative indication that atlas organization may behave as a system-independent invariant.
