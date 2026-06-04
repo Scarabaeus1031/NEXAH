@@ -3069,5 +3069,182 @@ Atlas Navigation
 
 and may represent the next recoverable layer in the Phase-D hierarchy.
 
+---
+
+# Finding 28 — Historical Warning Signals Precede Collapse Events
+
+## EXP_40 — Early Warning Reconstruction
+
+EXP_40 reconstructed warning-to-collapse dynamics from
+24 archived NEXAH state sequences.
+
+A total of:
+
+- 15 unique transitions
+- 21 collapse pathways
+
+were recovered.
+
+The dominant transition remains:
+
+```text
+SAFE → SAFE
+```
+
+indicating that stable operating behavior acts as the
+primary reservoir state.
+
+More importantly:
+
+warning states appear substantially earlier than
+collapse events.
+
+Observed lead times:
+
+```text
+Mean   = 81.35
+Median = 92
+Max    = 96
+```
+
+This suggests that warning states are not merely
+collapse labels.
+
+Instead they appear to function as genuine precursor states.
+
+The result provides the first repository-scale evidence
+that historical NEXAH runs contain measurable early-warning
+information prior to collapse behavior.
+
+---
+
+## Visual Evidence
+
+### Historical Early Warning Dashboard
+
+![](./outputs/EXP_40_EARLY_WARNING_RECONSTRUCTION/exp40_early_warning_dashboard.png)
+
+The dashboard summarizes:
+
+- dominant transition frequencies
+- collapse pathway statistics
+- warning lead-time distribution
+- global state activity
+
+Several observations emerge immediately:
+
+- SAFE acts as the dominant reservoir state
+- COLLAPSED acts as an absorbing state
+- warning lead times cluster near the end of the sequence window
+- collapse events are preceded by structured intermediate states
+
+The lead-time distribution is particularly important because it suggests that warning signals appear long before collapse is observed.
+
+---
+
+### State Pathway Matrix
+
+![](./outputs/EXP_40_EARLY_WARNING_RECONSTRUCTION/exp40_state_pathway_matrix.png)
+
+The reconstructed transition matrix reveals a non-random state topology.
+
+Observed structure:
+
+```text
+SAFE
+↓
+WARNING
+↓
+CRITICAL
+↓
+COLLAPSED
+```
+
+rather than:
+
+```text
+SAFE
+↓
+COLLAPSED
+```
+
+Several features stand out:
+
+- SAFE strongly self-reinforces
+- WARNING connects both to SAFE and CRITICAL
+- CRITICAL acts as a transition gateway
+- COLLAPSED behaves as a terminal absorbing regime
+
+The resulting matrix resembles a hierarchical degradation chain rather than a collection of independent warning labels.
+
+---
+
+## Interpretation
+
+EXP_40 suggests that instability develops through
+structured intermediate regimes.
+
+The reconstructed warning states behave as genuine
+precursor states rather than simple post-failure labels.
+
+Observed progression:
+
+```text
+Stable Operation
+        ↓
+Warning Regime
+        ↓
+Critical Regime
+        ↓
+Collapse Regime
+```
+
+This is consistent with earlier findings from:
+
+- EXP_30 Basin Exit Forecasting
+- EXP_31 Transition Prediction
+- EXP_32 Early Warning
+- EXP_39C Historical Transition Reconstruction
+
+all of which suggested that transitions occur through
+organized pathways rather than abrupt state changes.
+
+---
+
+## Conclusion
+
+EXP_40 provides the first historical reconstruction of
+warning-to-collapse dynamics from archived NEXAH runs.
+
+The recovered lead times indicate that warning signals
+appear substantially before collapse events.
+
+Current evidence therefore supports:
+
+```text
+SAFE
+    ↓
+WARNING
+    ↓
+CRITICAL
+    ↓
+COLLAPSED
+```
+
+rather than:
+
+```text
+SAFE
+    ↓
+COLLAPSED
+```
+
+The result strengthens the hypothesis that instability
+evolves through measurable intermediate regimes and that
+historical NEXAH archives already contain an operational
+early-warning layer.
+
+---
+
 
 
