@@ -122,20 +122,36 @@ supergraph = supergraph.loc[common, common]
 
 
 # ============================================================
+# ============================================================
 # FLATTEN MATRICES
 # ============================================================
 
 T = transport.values.astype(float)
 S = supergraph.values.astype(float)
 
-mask = ~np.eye(
+# remove diagonal
+
+diag_mask = ~np.eye(
     T.shape[0],
     dtype=bool
 )
 
-t_vals = T[mask]
-s_vals = S[mask]
+t_vals = T[diag_mask]
+s_vals = S[diag_mask]
 
+# remove NaN / Inf pairs
+
+valid_mask = (
+    np.isfinite(t_vals)
+    &
+    np.isfinite(s_vals)
+)
+
+t_vals = t_vals[valid_mask]
+s_vals = s_vals[valid_mask]
+
+print("Valid Comparisons:", len(t_vals))
+print()
 
 # ============================================================
 # CORRELATIONS
@@ -152,7 +168,9 @@ spearman_corr, spearman_p = spearmanr(
 )
 
 frobenius = np.linalg.norm(
-    T - S
+    np.nan_to_num(T)
+    -
+    np.nan_to_num(S)
 )
 
 print("Pearson  :", pearson_corr)
@@ -168,8 +186,14 @@ print()
 
 plt.figure(figsize=(10, 8))
 
+difference_matrix = (
+    np.nan_to_num(T)
+    -
+    np.nan_to_num(S)
+)
+
 plt.imshow(
-    T - S,
+    difference_matrix,
     aspect="auto"
 )
 
@@ -231,10 +255,13 @@ plt.close()
 # SHADOW OVERLAY
 # ============================================================
 
+T_clean = np.nan_to_num(T)
+S_clean = np.nan_to_num(S)
+
 overlay = (
-    T / np.nanmax(T)
+    T_clean / np.nanmax(T_clean)
     +
-    S / np.nanmax(S)
+    S_clean / np.nanmax(S_clean)
 )
 
 plt.figure(figsize=(10, 8))
