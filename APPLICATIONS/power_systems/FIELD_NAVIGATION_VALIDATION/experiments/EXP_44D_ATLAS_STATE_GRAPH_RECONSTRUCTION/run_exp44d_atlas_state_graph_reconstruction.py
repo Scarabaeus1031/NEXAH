@@ -46,31 +46,32 @@ from sklearn.preprocessing import StandardScaler
 # PATHS
 # ==========================================================
 
-ROOT = (
+POWER_ROOT = (
     Path(__file__)
     .resolve()
-    .parents[4]
+    .parents[2]
 )
 
+OUTPUT_DIR = (
+    POWER_ROOT
+    / "FIELD_NAVIGATION_VALIDATION"
+    / "outputs"
+    / "EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION"
+)
+
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
 DATASET = (
-    ROOT
+    POWER_ROOT
     / "FIELD_NAVIGATION_VALIDATION"
     / "outputs"
     / "EXP_34_CONTROL_EFFORT_ESTIMATION"
     / "exp34_control_effort_table.csv"
 )
 
-OUTPUT = (
-    ROOT
-    / "FIELD_NAVIGATION_VALIDATION"
-    / "outputs"
-    / "EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION"
-)
-
-OUTPUT.mkdir(parents=True, exist_ok=True)
-
-print(f"Dataset -> {DATASET}")
-print(f"Output  -> {OUTPUT}")
+print("Dataset ->", DATASET)
+print("Exists  ->", DATASET.exists())
+print("Output  ->", OUTPUT_DIR)
 
 
 # ==========================================================
