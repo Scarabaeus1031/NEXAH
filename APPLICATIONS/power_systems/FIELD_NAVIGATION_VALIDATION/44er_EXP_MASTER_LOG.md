@@ -384,3 +384,244 @@ Measure shortest transport routes through Atlas space.
 Perform real navigation using Atlas-derived transport geometry.
 
 These experiments will investigate whether the reconstructed Atlas can support transport estimation, navigation, and intervention within dynamical systems.
+
+---
+
+---
+
+# EXP_44H — Atlas Flow Reconstruction
+
+## Goal
+
+Recover local transport vectors directly from the reconstructed Atlas graph.
+
+The central question was:
+
+> Can Atlas connectivity be converted into a continuous transport field?
+
+## Results
+
+### Nodes
+
+540
+
+### Edges
+
+2700
+
+### Flow Vectors
+
+540
+
+### Mean Velocity
+
+0.171132
+
+### Maximum Velocity
+
+3.676558
+
+### Global Flow Coherence
+
+0.041307
+
+### Dominant Direction
+
+-40.038°
+
+## Visuals
+
+### Atlas Flow Field
+
+![Atlas Flow Field](outputs/EXP_44H_ATLAS_FLOW_RECONSTRUCTION/exp44h_flow_field.png)
+
+### Transport Backbone
+
+![Transport Backbone](outputs/EXP_44H_ATLAS_FLOW_RECONSTRUCTION/exp44h_transport_backbone.png)
+
+### Velocity Magnitude
+
+![Velocity Magnitude](outputs/EXP_44H_ATLAS_FLOW_RECONSTRUCTION/exp44h_velocity_magnitude.png)
+
+## Interpretation
+
+Local graph transport structure was converted into a continuous vector field.
+
+The Atlas is now represented as:
+
+State Graph
+↓
+Flow Field
+↓
+Navigation Geometry
+
+A surprisingly low global coherence value was observed:
+
+0.041
+
+Initially this suggested weak global organization.
+
+However, follow-up analysis revealed a different explanation.
+
+## Significance
+
+This experiment established the first direct flow-field reconstruction from Atlas geometry.
+
+The Atlas is no longer represented merely as a graph.
+
+It now possesses measurable transport directions.
+
+---
+
+# EXP_44H.1 — Flow Coherence Map
+
+## Goal
+
+Determine whether the low global coherence observed in EXP_44H originates from random transport or from multiple coherent transport domains.
+
+## Results
+
+### Nodes
+
+540
+
+### Mean Local Coherence
+
+0.728172
+
+### Median Local Coherence
+
+0.779233
+
+### Maximum Local Coherence
+
+0.999313
+
+## Visuals
+
+### Flow Coherence Map
+
+![Flow Coherence Map](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_flow_coherence_map.png)
+
+### Coherence Distribution
+
+![Coherence Distribution](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_coherence_histogram.png)
+
+## Key Findings
+
+The Atlas does not exhibit globally aligned transport.
+
+Instead it decomposes into highly coherent local transport regions.
+
+Observed coherence statistics:
+
+- Mean ≈ 0.728
+- Median ≈ 0.779
+- Maximum ≈ 0.999
+
+The coherence distribution is strongly concentrated toward high values.
+
+This indicates that transport directions are locally organized rather than random.
+
+## Interpretation
+
+EXP_44H suggested:
+
+Graph
+↓
+Flow
+
+EXP_44H.1 reveals:
+
+Graph
+↓
+Flow
+↓
+Coherent Domains
+
+The low global coherence is therefore not evidence of disorder.
+
+Instead it reflects the coexistence of multiple coherent transport regions with different preferred directions.
+
+## Unexpected Observation
+
+The median local coherence:
+
+0.779233
+
+is numerically very close to the previously observed resonance marker:
+
+0.779
+
+appearing in earlier Grey Elevator / Triton analyses.
+
+No causal interpretation is claimed.
+
+The correspondence is recorded as an observational note for future investigation.
+
+## Significance
+
+This experiment represents the first direct evidence that the Atlas contains coherent transport domains.
+
+The reconstructed Atlas behaves as a structured transport landscape rather than a random state cloud.
+
+This is arguably the strongest result obtained so far in the EXP_44 campaign.
+
+---
+
+# Updated Campaign Summary
+
+The EXP_44 campaign has now demonstrated:
+
+1. Atlas reconstruction from observed states.
+
+2. Atlas state graph extraction.
+
+3. Spectral organization of Atlas geometry.
+
+4. Measurable correspondence with Koopman dynamics.
+
+5. Predictive capability of Atlas neighborhoods.
+
+6. Flow-field reconstruction from graph geometry.
+
+7. Discovery of coherent transport domains.
+
+The Atlas now exists simultaneously as:
+
+State Cloud
+↓
+State Graph
+↓
+Spectral Object
+↓
+Flow Field
+↓
+Coherent Transport Landscape
+
+This represents a major step toward Atlas-based navigation and intervention.
+
+---
+
+# Updated Main Numerical Results
+
+| Metric | Value |
+|----------|----------:|
+| States | 540 |
+| Edges | 2700 |
+| Backbone Nodes | 27 |
+| Communities | 14 |
+| Spectral Radius | 5.000000 |
+| Fiedler Value | 0.015415 |
+| Atlas–Koopman Alignment | 0.417256 |
+| Predictive Accuracy | 0.479543 |
+| MAE | 0.826703 |
+| RMSE | 1.085318 |
+| Global Flow Coherence | 0.041307 |
+| Mean Local Coherence | 0.728172 |
+| Median Local Coherence | 0.779233 |
+| Maximum Local Coherence | 0.999313 |
+
+---
+
+
