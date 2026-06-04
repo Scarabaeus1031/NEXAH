@@ -1,0 +1,5 @@
+EXP_37B V4 MULTI-SYSTEM BASIN EXTRACTION
+==================================================
+
+IEEE300: basins=3, entropy=0.906, effective=1.873
+IEEE9: basins=4, entropy=1.630, effective=3.095
