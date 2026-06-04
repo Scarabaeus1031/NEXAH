@@ -2025,7 +2025,7 @@ Despite the large difference in network size, both systems organize into a small
 
 ### Atlas Coverage
 
-![EXP_37B Atlas Coverage](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_coverage.png)
+![EXP_37B Atlas Coverage](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_atlas_coverage.png)
 
 Atlas coverage remains measurable in both systems.
 
@@ -2035,7 +2035,7 @@ The resulting structures occupy a finite collection of operating territories rat
 
 ### State Count
 
-![EXP_37B State Count](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_state_count.png)
+![EXP_37B State Count](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_state_distribution.png)
 
 The datasets differ substantially in size.
 
@@ -2045,7 +2045,7 @@ However, atlas organization appears in both cases.
 
 ### Unique State Classes
 
-![EXP_37B Unique States](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_unique_states.png)
+![EXP_37B Unique States](./outputs/EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2/exp37b_v2_system_comparison.png)
 
 Both systems exhibit a small number of persistent operating classes.
 
