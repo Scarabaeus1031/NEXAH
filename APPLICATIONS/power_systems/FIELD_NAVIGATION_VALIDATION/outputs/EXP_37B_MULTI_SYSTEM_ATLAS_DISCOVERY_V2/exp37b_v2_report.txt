@@ -1,0 +1,7 @@
+EXP_37B MULTI SYSTEM ATLAS DISCOVERY V2
+======================================
+
+Systems analyzed: 2
+
+IEEE9: 2400 states, 4 classes
+IEEE300: 360 states, 3 classes
