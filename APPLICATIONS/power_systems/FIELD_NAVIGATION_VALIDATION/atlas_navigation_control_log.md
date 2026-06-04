@@ -2431,3 +2431,160 @@ Nevertheless, the finding is consistent with previous observations from:
 - EXP_37D Atlas Invariant Analysis
 
 which both indicated that atlas complexity grows far more slowly than network size.
+
+# Finding 22 — Atlas Compression Increases With Network Size
+
+EXP_37F investigates how atlas complexity scales with network size.
+
+Current results:
+
+| System | Buses | Effective Basins |
+|----------|----------|----------|
+| IEEE9 | 9 | 3.095 |
+| IEEE300 | 300 | 1.873 |
+
+A compression metric was introduced:
+
+```text
+Compression Ratio
+=
+Bus Count
+/
+Effective Basins
+```
+
+Observed values:
+
+| System | Compression |
+|----------|----------|
+| IEEE9 | 2.91 |
+| IEEE300 | 160.14 |
+
+The larger system exhibits dramatically stronger compression.
+
+Despite increasing network size by more than:
+
+```text
+33×
+```
+
+the effective atlas diversity decreases.
+
+This behavior suggests that large power systems may operate within a surprisingly small number of dominant behavioral territories.
+
+Current evidence therefore supports:
+
+```text
+Network Size ↑
+
+Atlas Compression ↑
+```
+
+rather than:
+
+```text
+Network Size ↑
+
+Atlas Complexity ↑
+```
+
+The result remains preliminary because only two benchmark systems currently contribute to the scaling analysis.
+
+Nevertheless, the observed trend is consistent with previous findings from:
+
+- EXP_37C Atlas Universality
+- EXP_37D Atlas Invariant Analysis
+- EXP_37B V4 Basin Extraction
+
+all of which suggest that operational dynamics collapse into a small number of dominant atlas regions.
+
+Figure: EXP_37F Atlas Scaling Matrix
+
+The scaling matrix summarizes all observed atlas metrics.
+
+![EXP_37F Scaling Matrix](visuals/exp37f_scaling_heatmap.png)
+
+Several trends become immediately visible:
+
+- Bus count increases by more than 33×.
+- Basin count decreases from 4 to 3.
+- Basin entropy decreases from 1.63 to 0.91.
+- Effective basin count decreases from 3.10 to 1.87.
+- Compression ratio increases from 2.91 to 160.14.
+
+The matrix therefore provides a compact visualization of atlas compression across system scales.
+
+# Finding 23 — Atlas Metrics Move Coherently Across System Scales
+
+EXP_37F reveals that multiple atlas metrics change together as network size increases.
+
+Observed comparison:
+
+| Metric | IEEE9 | IEEE300 |
+|----------|----------|----------|
+| Basins | 4 | 3 |
+| Entropy | 1.630 | 0.906 |
+| Effective Basins | 3.095 | 1.873 |
+| Compression Ratio | 2.91 | 160.14 |
+
+The important observation is that all diversity-related metrics decrease simultaneously:
+
+```text
+Basins ↓
+
+Entropy ↓
+
+Effective Basins ↓
+```
+
+while compression increases strongly:
+
+```text
+Compression ↑
+```
+
+This collective behavior suggests that the observed compression is not driven by a single metric.
+
+Instead, multiple independent atlas descriptors point toward the same structural trend.
+
+If only basin count decreased, the effect could be explained as a statistical artifact.
+
+However, the simultaneous reduction of:
+
+- basin count,
+- entropy,
+- effective basin diversity,
+
+indicates that the underlying operational state space itself becomes increasingly concentrated.
+
+The result therefore supports the hypothesis that large power-system dynamics collapse into a limited set of dominant operational territories.
+
+Current evidence suggests:
+
+```text
+Network Size ↑
+
+Diversity ↓
+
+Compression ↑
+```
+
+rather than:
+
+```text
+Network Size ↑
+
+Behavioral Diversity ↑
+```
+
+The finding remains preliminary because only two benchmark systems currently contribute to the scaling dataset.
+
+Future validation using IEEE14, IEEE30, IEEE39, IEEE57, IEEE118, IEEE1354 and PEGASE9241 will determine whether this coherent trend persists across a broader range of system sizes.
+
+Figure: EXP_37F Scaling Matrix
+
+![EXP_37F Scaling Matrix](visuals/exp37f_scaling_heatmap.png)
+
+The scaling matrix provides a compact overview of the simultaneous movement of all atlas metrics and visually highlights the emergence of coherent atlas compression across system scales.
+
+
