@@ -785,5 +785,275 @@ Graph → Flow → Coherence → Domains
 
 ---
 
+---
 
+# EXP_44H — Atlas Flow Reconstruction
+
+## Goal
+
+Recover local transport vectors directly from the reconstructed Atlas graph.
+
+## Results
+
+## Visuals
+
+### Atlas Flow Field
+
+![Atlas Flow Field](outputs/EXP_44H_ATLAS_FLOW_RECONSTRUCTION/exp44h_flow_field.png)
+
+### Transport Backbone
+
+![Transport Backbone](outputs/EXP_44H_ATLAS_FLOW_RECONSTRUCTION/exp44h_transport_backbone.png)
+
+### Velocity Magnitude
+
+![Velocity Magnitude](outputs/EXP_44H_ATLAS_FLOW_RECONSTRUCTION/exp44h_velocity_magnitude.png)
+
+### Nodes
+
+540
+
+### Edges
+
+2700
+
+### Flow Vectors
+
+540
+
+### Mean Velocity
+
+0.171132
+
+### Maximum Velocity
+
+3.676558
+
+### Global Flow Coherence
+
+0.041307
+
+### Dominant Direction
+
+-40.038°
+
+## Key Findings
+
+The Atlas graph was successfully transformed into a continuous flow representation.
+
+Although global coherence is low, transport vectors reveal clear local directional organization.
+
+## Significance
+
+This experiment established the first flow-field representation of the NEXAH Atlas.
+
+Pipeline:
+
+Graph → Flow
+
+---
+
+# EXP_44H.1 — Flow Coherence Map
+
+## Goal
+
+Measure local transport coherence across the Atlas flow field.
+
+## Results
+
+## Visuals
+
+### Flow Coherence Map
+
+![Flow Coherence Map](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_coherence_map.png)
+
+### Coherence Distribution
+
+![Coherence Distribution](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_coherence_distribution.png)
+
+### Mean Coherence
+
+0.728172
+
+### Median Coherence
+
+0.779233
+
+### Maximum Coherence
+
+0.999313
+
+## Key Findings
+
+Local coherence is dramatically higher than global coherence.
+
+The Atlas is not globally aligned but contains strongly coherent transport neighborhoods.
+
+## Significance
+
+Demonstrated that transport organization exists on local scales and revealed the first coherent flow structures.
+
+Pipeline:
+
+Graph → Flow → Coherence
+
+---
+
+# EXP_44H.2 — Coherent Domain Extraction
+
+## Goal
+
+Automatically identify coherent transport domains within the Atlas.
+
+## Results
+
+## Visuals
+
+### Coherent Domains
+
+![Coherent Domains](outputs/EXP_44H2_COHERENT_DOMAIN_EXTRACTION/exp44h2_coherent_domains.png)
+
+### Domain Sizes
+
+![Domain Sizes](outputs/EXP_44H2_COHERENT_DOMAIN_EXTRACTION/exp44h2_domain_sizes.png)
+
+### Total Nodes
+
+540
+
+### Domain Nodes
+
+302
+
+### Coherence Threshold
+
+0.80
+
+### Domains Found
+
+17
+
+### Largest Domain
+
+232 Nodes
+
+## Key Findings
+
+High-coherence regions self-organize into distinct transport domains.
+
+The Atlas is naturally segmented into coherent transport regions.
+
+## Significance
+
+First automatic partitioning of Atlas transport space.
+
+Pipeline:
+
+Graph → Flow → Coherence → Domains
+
+---
+
+# EXP_44I — Atlas Geodesic Transport
+
+## Goal
+
+Measure shortest transport routes between coherent Atlas domains.
+
+## Results
+
+## Visuals
+
+### Domain Geodesic Anchors
+
+![Domain Geodesic Anchors](outputs/EXP_44I_ATLAS_GEODESIC_TRANSPORT/exp44i_domain_anchors.png)
+
+The domain-anchor map reveals a separation between:
+
+- central transport domains
+- peripheral domains
+- remote coherent regions
+
+Several domains occupy extreme positions in Atlas space and may represent transport boundaries or remote stability regimes.
+
+### Domain Transport Matrix
+
+![Domain Transport Matrix](outputs/EXP_44I_ATLAS_GEODESIC_TRANSPORT/exp44i_transport_matrix.png)
+
+## Visual Interpretation
+
+The transport matrix reveals a structured geodesic organization.
+
+Observed features include:
+
+- near-diagonal local transport corridors
+- long-range domain connections
+- partially disconnected domain sectors
+- non-uniform transport distances
+
+The matrix suggests that Atlas transport is not random but organized around a small number of dominant transport pathways.
+
+### Domains
+
+17
+
+### Routes
+
+113
+
+### Mean Geodesic Length
+
+14.115
+
+### Shortest Route
+
+2
+
+### Longest Route
+
+29
+
+## Key Findings
+
+Coherent domains are connected by a navigable transport structure.
+
+Approximately 83% of all possible domain-domain connections exist.
+
+The Atlas therefore contains a measurable transport metric.
+
+## Significance
+
+This experiment establishes the first geodesic transport geometry of the Atlas.
+
+Pipeline:
+
+Graph → Flow → Coherence → Domains → Geodesic Transport
+
+---
+
+# Updated Campaign Summary
+
+The EXP_44 campaign successfully demonstrated:
+
+1. Atlas reconstruction from observed state data.
+2. State graph extraction.
+3. Spectral organization of Atlas geometry.
+4. Measurable correspondence with Koopman dynamics.
+5. Predictive capability of Atlas neighborhoods.
+6. Flow-field reconstruction from Atlas structure.
+7. Local transport coherence discovery.
+8. Automatic coherent-domain segmentation.
+9. Geodesic transport between coherent Atlas regions.
+
+The Atlas is no longer merely a state-space representation.
+
+The Atlas now exhibits:
+
+- Graph Structure
+- Spectral Structure
+- Predictive Structure
+- Flow Structure
+- Domain Structure
+- Transport Structure
+
+The reconstructed Atlas behaves as a navigable dynamical object.
 
