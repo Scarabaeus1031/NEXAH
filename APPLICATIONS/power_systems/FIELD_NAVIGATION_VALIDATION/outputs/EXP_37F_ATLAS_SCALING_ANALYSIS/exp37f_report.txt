@@ -1,0 +1,9 @@
+EXP_37F ATLAS SCALING ANALYSIS
+==================================================
+
+Systems analyzed: 2
+
+Estimated Scaling Exponent α = -0.1432
+
+IEEE300: buses=300, basins=3, entropy=0.906, effective=1.873, compression=160.142
+IEEE9: buses=9, basins=4, entropy=1.630, effective=3.095, compression=2.908
