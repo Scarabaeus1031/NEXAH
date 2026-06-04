@@ -1,0 +1,36 @@
+
+EXP_44H.1 FLOW COHERENCE MAP
+==================================================
+
+Nodes
+------
+540
+
+Mean Coherence
+--------------
+0.728172
+
+Median Coherence
+----------------
+0.779233
+
+Maximum Coherence
+-----------------
+0.999313
+
+Interpretation
+--------------
+Coherence near 1
+indicates locally aligned transport.
+
+Coherence near 0
+indicates conflicting flow directions.
+
+This experiment maps where transport
+corridors emerge inside the Atlas.
+
+44H:
+Graph -> Flow
+
+44H.1:
+Flow -> Coherence Structure
