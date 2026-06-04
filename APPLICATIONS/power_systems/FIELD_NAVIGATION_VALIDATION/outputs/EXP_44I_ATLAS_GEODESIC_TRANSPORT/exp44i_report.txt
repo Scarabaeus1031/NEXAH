@@ -1,0 +1,43 @@
+
+EXP_44I ATLAS GEODESIC TRANSPORT
+==================================================
+
+Domains
+-------
+17
+
+Routes
+------
+113
+
+Mean Geodesic Length
+--------------------
+14.115
+
+Shortest Route
+--------------
+2
+
+Longest Route
+-------------
+29
+
+Interpretation
+--------------
+Shortest graph routes were computed
+between coherent Atlas domains.
+
+This experiment establishes the first
+Atlas transport metric.
+
+Pipeline
+
+Graph
+ ->
+Flow
+ ->
+Coherence
+ ->
+Domains
+ ->
+Geodesic Transport
