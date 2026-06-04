@@ -1311,3 +1311,95 @@ This marks the first Atlas-level compression:
 
 The Domain Supergraph is therefore a compact transport architecture of the reconstructed Atlas.
 
+## Observation — Atlas Shadow Matrix
+
+An overlay comparison between the EXP_44I Domain Transport Matrix and the EXP_44L Domain Supergraph Matrix reveals a remarkably similar global structure.
+
+Several features appear to persist:
+
+- transport corridors
+- high-distance regions
+- void stripes
+- boundary domains
+- apex-domain structures
+
+At present it is unclear whether this similarity arises purely from the construction pipeline or reflects a deeper transport-topology invariance.
+
+This observation is therefore recorded for future validation.
+
+A dedicated follow-up experiment may be required.
+
+---
+
+---
+
+# Atlas Structural Observations
+
+The following observations emerged during the EXP_44 campaign but are not yet considered validated experimental results.
+
+They are recorded as structural phenomena for future investigation.
+
+---
+
+## Atlas Shadow Matrix
+
+### Visual
+
+![Atlas Shadow Matrix](outputs/diagrams/Atlas_Shadow_Matrix.png)
+
+### Observation
+
+An overlay comparison between the EXP_44I Domain Transport Matrix and the EXP_44L Domain Supergraph Matrix reveals a remarkably similar global structure.
+
+Several large-scale features appear to persist across both representations:
+
+- transport corridors
+- high-distance regions
+- void stripes
+- boundary domains
+- apex-domain structures
+
+The similarity is visually strong enough that both matrices can be overlaid with only minor differences.
+
+### Interpretation
+
+At present it remains unclear whether the observed similarity is:
+
+1. a direct consequence of the EXP_44L construction pipeline,
+
+2. a partially preserved transport geometry,
+
+or
+
+3. evidence of a deeper transport-topology invariance within the Atlas.
+
+No causal interpretation is currently claimed.
+
+### Significance
+
+The observation suggests that major transport structures may survive compression from:
+
+540 Atlas States
+
+↓
+
+17 Coherent Domains
+
+without substantial loss of global transport organization.
+
+If confirmed by future experiments, this would imply that coherent domains preserve much of the large-scale transport architecture of the original Atlas.
+
+### Status
+
+Observation only.
+
+Future validation required.
+
+Potential follow-up:
+
+EXP_44M — Transport Topology Invariance Validation
+
+---
+
+
+
