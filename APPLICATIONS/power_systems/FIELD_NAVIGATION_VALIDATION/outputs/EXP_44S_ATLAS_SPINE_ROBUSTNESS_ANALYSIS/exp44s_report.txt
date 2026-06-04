@@ -1,0 +1,37 @@
+
+EXP_44S ATLAS SPINE ROBUSTNESS ANALYSIS
+==================================================
+
+Spine Nodes
+-----------
+17
+
+Spine Edges
+-----------
+19
+
+Baseline Navigation
+-------------------
+0.301552
+
+Collapse Threshold
+------------------
+5
+
+Interpretation
+--------------
+This experiment evaluates how robust
+the Atlas Spine remains under targeted
+removal of critical transport links.
+
+Pipeline
+
+Atlas Spine
+ ->
+Targeted Edge Removal
+ ->
+Connectivity Analysis
+ ->
+Navigation Analysis
+ ->
+Robustness Profile
