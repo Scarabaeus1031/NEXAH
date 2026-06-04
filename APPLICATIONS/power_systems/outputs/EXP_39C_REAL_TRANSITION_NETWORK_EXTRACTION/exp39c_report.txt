@@ -1,0 +1,18 @@
+
+EXP_39C REAL TRANSITION NETWORK EXTRACTION
+==================================================
+
+Runs Processed: 24
+
+Unique States: 4
+
+Unique Transitions: 11
+
+Most Common Transition:
+SAFE -> CRITICAL (236)
+
+Most Connected State:
+SAFE
+
+Transition Density:
+0.9167
