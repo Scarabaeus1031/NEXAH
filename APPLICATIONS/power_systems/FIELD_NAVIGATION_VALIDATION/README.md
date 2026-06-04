@@ -75,7 +75,7 @@ Key questions addressed:
 ✅ Can transitions be predicted?
 
 ✅ Can recovery be guided?
-
+ 
 ---
 
 # Atlas Discovery
