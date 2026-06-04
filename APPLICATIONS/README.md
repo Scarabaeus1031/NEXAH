@@ -60,11 +60,121 @@ The current power-system validation demonstrates that operating states organize 
 Discovered structures include:
 
 - Basin Territories
+
 - Transport Networks
+
 - Transition Corridors
+
 - Gates & Bottlenecks
+
 - Recovery Regions
+
 - Atlas-Guided Control Infrastructure
+
+Recent experiments further demonstrate that atlas structure can be reconstructed from historical operational archives.
+
+NEXAH now supports both:
+
+- Atlas Discovery from simulations
+
+- Atlas Reconstruction from historical state archives
+
+This extends the framework beyond navigation and control toward long-term dynamical memory and historical atlas reconstruction.
+
+---
+
+# 🕰 Historical Dynamics Reconstruction
+
+![Historical Dynamics Reconstruction](power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-HISTORICAL_DYNAMICS_RECONSTRUCTION_NEXAH_STATE_NAVIGATION.png)
+
+EXP_38–EXP_40 investigated whether atlas structures can be reconstructed from previously generated repository artifacts.
+
+Recovered structures include:
+
+- State Classification
+- Basin Evidence
+- Atlas Organization
+- Field Geometry
+- Warning-State Dynamics
+- Early-Warning Layers
+
+Key findings:
+
+- 24 historical state archives recovered
+- measurable warning-state transition networks discovered
+- warning states consistently precede collapse events
+- mean warning lead time: 81.35 state steps
+- maximum warning lead time: 96 state steps
+
+Observed progression:
+
+```text
+SAFE
+ ↓
+WARNING
+ ↓
+CRITICAL
+ ↓
+COLLAPSED
+```
+
+rather than:
+
+```text
+SAFE
+ ↓
+COLLAPSED
+```
+
+These results suggest that instability develops through structured intermediate regimes rather than abrupt transitions.
+
+---
+
+# 🔄 Recovery Archetypes & Oscillation Dynamics
+
+![Recovery Archetypes & Oscillation Dynamics](power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-RECOVERY_ARCHETYPES-OSCILLATION_DYNAMICS.png)
+
+EXP_41–EXP_43 investigated the internal dynamics of historical warning-state archives.
+
+Recovered structures include:
+
+- degradation chains
+- recovery archetypes
+- oscillatory dynamics
+
+Key observations:
+
+### Recovery Archetypes
+
+Historical trajectories repeatedly converge toward similar stabilization pathways.
+
+Recovery therefore appears structured rather than random.
+
+### Oscillation Dynamics
+
+Dominant oscillation:
+
+```text
+SAFE ↔ CRITICAL
+```
+
+Additional oscillations:
+
+```text
+SAFE ↔ WARNING
+WARNING ↔ CRITICAL
+SAFE ↔ COLLAPSED
+```
+
+These findings suggest that instability often develops through repeated excursions between neighboring regimes.
+
+The atlas therefore contains:
+
+- warning dynamics
+- recovery dynamics
+- oscillatory dynamics
+
+that remain recoverable from historical archives.
 
 ---
 
@@ -162,8 +272,6 @@ The resulting atlas supports:
 
 ---
 
-# 🔬 Current Capabilities
-
 | Capability | Status |
 |------------|---------|
 | Structure Discovery | ✅ |
@@ -174,8 +282,10 @@ The resulting atlas supports:
 | Early Warning | ✅ |
 | Recovery Guidance | ✅ |
 | Control Framework | ✅ |
+| Historical Reconstruction | ✅ |
+| Recovery Archetypes | ✅ |
+| Oscillation Dynamics | ✅ |
 | Real-Time Deployment | 🚧 |
-
 ---
 
 # 🔵 Adapter Layer
@@ -254,22 +364,27 @@ Progress will ultimately depend on open discussion, independent validation, and 
 # 🌀 NEXAH
 
 ```text
-    dynamics
-       ↓
-   structure
-       ↓
-     flow
-       ↓
-   geometry
-       ↓
-     atlas
-       ↓
-  navigation
-       ↓
-   prediction
-       ↓
-    recovery
-       ↓
-    control 
+  dynamics
+↓
+structure
+↓
+field
+↓
+geometry
+↓
+atlas
+↓
+prediction
+↓
+navigation
+↓
+recovery
+↓
+control
+↓
+reconstruction
 ```
-Structure reveals. Navigation guides. Control protects.
+Structure reveals.
+Navigation guides.
+Control protects.
+Reconstruction remembers.
