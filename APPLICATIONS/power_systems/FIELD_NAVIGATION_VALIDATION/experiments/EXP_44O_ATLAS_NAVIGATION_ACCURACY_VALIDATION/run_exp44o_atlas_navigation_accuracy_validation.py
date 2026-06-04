@@ -392,6 +392,20 @@ plt.savefig(
 
 plt.close()
 
+# ============================================================
+# SAVE EFFICIENCY MATRIX
+# ============================================================
+
+efficiency_df = pd.DataFrame(
+    pivot,
+    index=nodes,
+    columns=nodes
+)
+
+efficiency_df.to_csv(
+    OUTDIR / "exp44o_efficiency_matrix.csv"
+)
+
 report = f"""
 EXP_44O ATLAS NAVIGATION ACCURACY VALIDATION
 ==================================================
