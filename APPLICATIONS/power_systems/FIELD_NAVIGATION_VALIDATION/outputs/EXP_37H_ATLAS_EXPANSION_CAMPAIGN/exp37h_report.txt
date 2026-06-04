@@ -1,0 +1,8 @@
+EXP_37H ATLAS EXPANSION CAMPAIGN
+==================================================
+
+Systems discovered: 9
+Systems completed: 2
+
+IEEE9: buses=9, basins=4, entropy=1.655, effective=3.150
+IEEE300: buses=300, basins=3, entropy=0.840, effective=1.790
