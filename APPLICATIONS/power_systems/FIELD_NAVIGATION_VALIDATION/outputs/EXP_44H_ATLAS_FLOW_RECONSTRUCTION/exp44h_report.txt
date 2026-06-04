@@ -1,0 +1,47 @@
+
+EXP_44H ATLAS FLOW RECONSTRUCTION
+==================================================
+
+Nodes
+------
+540
+
+Edges
+------
+2700
+
+Flow Vectors
+------------
+540
+
+Mean Velocity
+-------------
+0.171132
+
+Maximum Velocity
+----------------
+3.676558
+
+Flow Coherence
+--------------
+0.041307
+
+Dominant Direction (deg)
+------------------------
+-40.038280
+
+Interpretation
+--------------
+Local graph transport structure was
+converted into a continuous vector field.
+
+The Atlas is now represented as:
+
+State Graph
+      ↓
+Flow Field
+      ↓
+Navigation Geometry
+
+This is the first direct flow reconstruction
+experiment within the EXP_44 campaign.
