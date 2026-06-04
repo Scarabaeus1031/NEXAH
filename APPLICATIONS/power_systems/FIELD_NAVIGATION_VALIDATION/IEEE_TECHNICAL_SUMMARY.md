@@ -1,226 +1,283 @@
-# IEEE Technical Summary
+# NEXAH Power Systems
 
-## NEXAH State Navigation Framework
+## Atlas-Guided Stability Analysis, Navigation and Control
 
-### Discovering Navigable Structure in Complex Dynamical Systems
+### Technical Summary (EXP_01 – EXP_43)
 
----
-
-## Abstract
-
-NEXAH is a framework for discovering latent geometric organization within complex dynamical systems.
-
-Rather than treating operating states as isolated observations in high-dimensional space, NEXAH constructs a navigable state-space atlas from system trajectories. The resulting atlas reveals basin territories, transport corridors, gates, bottlenecks, recovery regions, and control pathways.
-
-The framework has been evaluated on IEEE benchmark power systems and demonstrates that operating states organize into coherent geometric structures rather than random state clouds. These structures support prediction, navigation, recovery planning, and atlas-guided control.
+Thomas Hofmann
 
 ---
 
-## Motivation
+# Abstract
 
-Modern infrastructure systems generate large amounts of operational data, yet system behavior is typically analyzed through local measurements, stability indicators, and operating limits.
+NEXAH is a framework for discovering, reconstructing and navigating latent stability structure in complex dynamical systems.
 
-NEXAH investigates a different question:
+Using IEEE power-system benchmarks, NEXAH converts high-dimensional operating trajectories into a structured state-space atlas consisting of:
 
-Does the global state-space itself possess navigable structure?
+- operating states,
+- basin territories,
+- attractors,
+- transport corridors,
+- gates and bottlenecks,
+- recovery pathways.
 
-If such structure exists, it may provide a foundation for:
+The framework evolved through four major stages:
 
-- Early warning detection
-- Transition forecasting
-- Recovery planning
-- Control guidance
-- Resilience enhancement
+1. Structure Discovery
+2. Navigation & Operations
+3. Atlas-Guided Control
+4. Historical Dynamics Reconstruction
 
----
-
-## Framework Overview
-
-The NEXAH workflow consists of six stages:
-
-text System Simulation         ↓ State Collection         ↓ Structure Discovery         ↓ Atlas Construction         ↓ Navigation Layer         ↓ Control Layer 
-
-The objective is to transform raw system trajectories into an operational map of stability and transition behavior.
+Across EXP_01–EXP_43, the results demonstrate that stability organization is not random but forms a coherent and navigable atlas.
 
 ---
 
-## Experimental Validation
+# Core Figures
 
-Validation was performed using IEEE benchmark power systems.
+## Figure 1 — Current NEXAH Status
 
-The experimental program includes:
+![NEXAH Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_vii.png)
 
-| Phase | Objective |
-|---------|---------|
-| EXP_01 – EXP_08 | Structure Discovery |
-| EXP_09 – EXP_15 | Navigation Discovery |
-| EXP_16 – EXP_21 | Validation |
-| EXP_22 – EXP_29 | Atlas Anatomy |
-| EXP_30 – EXP_36 | Prediction, Recovery & Control |
-
-Across the complete validation sequence, 540 operating states were analyzed.
+This figure summarizes the complete evolution of the NEXAH framework from structure discovery to atlas-guided control and historical reconstruction.
 
 ---
 
-## Atlas Discovery
+## Figure 2 — Historical Dynamics Reconstruction
 
-The discovered state-space does not form a random cloud.
+![Historical Dynamics Reconstruction](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-HISTORICAL_DYNAMICS_RECONSTRUCTION_NEXAH_STATE_NAVIGATION.png)
 
-Instead, the operating states organize into:
-
-- Basin Territories
-- Attractors
-- Transport Corridors
-- Gates
-- Bottlenecks
-- Recovery Regions
-
-The resulting geometry exhibits:
-
-- Continuous manifold structure
-- Strong dominant transport axis
-- Persistent basin organization
-- Structured transition pathways
+This figure summarizes EXP_38–EXP_40 and demonstrates that historical repository artifacts preserve recoverable atlas structure, warning-state dynamics and early-warning behavior.
 
 ---
 
-## Atlas Geometry
+## Figure 3 — Recovery Archetypes & Oscillation Dynamics
 
-Principal component analysis reveals a dominant geometric mode.
+![Recovery Archetypes and Oscillation Dynamics](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-RECOVERY_ARCHETYPES-OSCILLATION DYNAMICS.png)
 
-Observed characteristics include:
-
-- Strong anisotropic organization
-- Hook / J-shaped manifold geometry
-- Clustered basin territories
-- Persistent transport backbone
-
-The geometry remains stable across perturbation and robustness experiments.
+This figure summarizes EXP_41–EXP_43 and visualizes degradation chains, recovery archetypes and oscillatory state dynamics recovered from historical archives.
 
 ---
 
-## Transport Network
+# Phase I — Atlas Discovery (EXP_01–EXP_28)
 
-Transition analysis reveals a sparse transport backbone connecting basin territories.
+The first research phase established the existence of a latent stability atlas.
 
-Key observations:
+Key findings:
 
-- Transition traffic is highly non-uniform
-- Small numbers of corridors carry most system flow
-- Hub basins emerge naturally
-- Gate regions regulate movement between territories
+- 540 operating states identified
+- 18 basin territories discovered
+- 18 attractors recovered
+- dominant transport structure detected
+- gates and bottlenecks located
+- non-random geometric organization confirmed
 
-These structures form the navigational infrastructure of the atlas.
+The resulting state space exhibits:
 
----
+- coherent basin territories
+- transport corridors
+- constrained motion pathways
+- persistent geometric organization
 
-## Prediction Results
-
-Using atlas structure alone, NEXAH demonstrates:
-
-| Capability | Result |
-|------------|---------|
-| Basin Transition Prediction | >92% |
-| Multi-Step Trajectory Forecasting | >88% |
-| Recovery Corridor Identification | Successful |
-| Recovery Anchor Detection | Successful |
-
-The atlas therefore supports predictive navigation rather than purely descriptive analysis.
+Rather than forming a random cloud, system states organize into a structured atlas.
 
 ---
 
-## Atlas-Guided Recovery
+# Phase II — Atlas Operations (EXP_29–EXP_36)
 
-Recovery experiments indicate that disturbed states do not return randomly.
+The second phase investigated whether the atlas can be used operationally.
 
-Instead:
+Results include:
 
-- Recovery corridors emerge naturally.
-- Multiple trajectories converge toward common recovery anchors.
-- Stabilization regions can be identified prior to intervention.
+- basin transition prediction
+- multi-step trajectory forecasting
+- early-warning field construction
+- recovery corridor discovery
+- recovery anchor identification
+- atlas-guided control concepts
 
-These findings suggest that recovery behavior itself possesses discoverable structure.
+Representative results:
 
----
+- transition prediction > 92%
+- trajectory forecasting > 88%
+- recovery guidance > 85%
 
-## Atlas-Guided Control
+These experiments demonstrate that the atlas is not merely descriptive.
 
-The final validation phase introduces a control framework based on atlas navigation.
-
-The proposed control loop consists of:
-
-1. State Localization
-2. Risk Assessment
-3. Navigation Direction Selection
-4. Recovery Path Selection
-5. Recovery Anchor Targeting
-6. Control Application
-7. Continuous Update
-
-The framework aims to minimize intervention effort by leveraging natural system geometry.
+It becomes actionable.
 
 ---
 
-## Current Status
+# Phase III — Historical Reconstruction (EXP_38–EXP_43)
 
-Validated capabilities include:
+The most recent phase investigated whether atlas structure can be recovered from historical repository artifacts.
 
-- Structure Discovery
-- Basin Detection
-- Navigation
-- Transition Prediction
-- Early Warning
-- Recovery Planning
-- Atlas-Guided Control Framework
+The objective was to determine whether structural information persists after original simulations are no longer available.
 
-Current work focuses on:
+Recovered layers:
 
-- Larger benchmark systems
-- Higher-dimensional embeddings
-- Cross-domain validation
-- Real-time deployment studies
+- state classification
+- basin evidence
+- atlas organization
+- field geometry
+- warning-state dynamics
+- degradation chains
+- recovery archetypes
+- oscillatory behavior
 
----
-
-## Limitations
-
-Current results are based primarily on benchmark power-system environments.
-
-Further work is required to determine:
-
-- Generality across other complex systems
-- Scalability to large industrial networks
-- Real-time operational feasibility
-- Integration with existing control architectures
-
-Independent validation is considered essential.
+The reconstruction audit recovered 24 historical state archives and demonstrated that meaningful dynamical structure remains observable.
 
 ---
 
-## Invitation for Independent Evaluation
+# Historical Dynamics Findings
 
-NEXAH is presented as an experimental framework for discovering navigable state-space structure.
+## Early-Warning Dynamics (EXP_40)
 
-Researchers, laboratories, utilities, and industrial partners are invited to:
+Historical state sequences reveal measurable warning-to-collapse behavior.
 
-- Reproduce the experiments
-- Evaluate the methodology
-- Test independent datasets
-- Compare against existing approaches
-- Assess operational relevance
+Observed hierarchy:
 
-Constructive criticism, replication studies, and collaborative validation efforts are strongly encouraged.
+SAFE
+↓
+WARNING
+↓
+CRITICAL
+↓
+COLLAPSED
 
-The central research question remains:
+rather than:
 
-Do navigable state-space atlases represent a general organizing principle of complex dynamical systems?
+SAFE
+↓
+COLLAPSED
+
+Mean warning lead time:
+
+81.35 state steps
+
+Maximum lead time:
+
+96 state steps
+
+This provides repository-scale evidence that warning states function as precursor regimes rather than collapse labels.
 
 ---
 
-## Repository
+## Recovery Archetypes (EXP_42)
 
-https://github.com/Scarabaeus1031/NEXAH
+Historical trajectories contain recurring recovery structures.
+
+The system repeatedly revisits characteristic stabilization pathways.
+
+This suggests that recovery is not random.
+
+Instead, the atlas contains preferred routes back toward stable operating regions.
 
 ---
 
-NEXAH: Discover Structure. Navigate Stability. Enable Control.
+## Oscillation Dynamics (EXP_43)
+
+Historical archives also reveal oscillatory state behavior.
+
+Dominant oscillation:
+
+SAFE ↔ CRITICAL
+
+Other oscillatory structures:
+
+- SAFE ↔ WARNING
+- WARNING ↔ CRITICAL
+- SAFE ↔ COLLAPSED
+
+The results indicate that instability often develops through repeated excursions between neighboring regimes rather than monotonic degradation.
+
+---
+
+# Scientific Interpretation
+
+EXP_38–EXP_43 introduce a new result:
+
+**Atlas Recoverability**
+
+The atlas is not only observable during active simulation.
+
+It leaves persistent structural traces that remain recoverable from incomplete historical artifacts.
+
+This suggests that atlas organization reflects genuine system structure rather than a fragile artifact of a specific experiment.
+
+The resulting progression becomes:
+
+Discovery
+↓
+Navigation
+↓
+Control
+↓
+Reconstruction
+
+---
+
+# Current Status
+
+The NEXAH framework currently demonstrates:
+
+✓ Structure Discovery
+
+✓ Basin Detection
+
+✓ Transport Analysis
+
+✓ Navigation
+
+✓ Transition Prediction
+
+✓ Early Warning
+
+✓ Recovery Navigation
+
+✓ Recovery Anchors
+
+✓ Atlas-Guided Control Concepts
+
+✓ Historical Dynamics Reconstruction
+
+✓ Recovery Archetype Discovery
+
+✓ Oscillation Analysis
+
+---
+
+# Remaining Open Questions
+
+Several major challenges remain:
+
+- external validation
+- independent replication
+- larger benchmark systems
+- real-world operational datasets
+- real-time deployment
+- atlas-guided intervention
+
+The central question is no longer:
+
+"Does the atlas exist?"
+
+The central question is now:
+
+"Can atlas-guided decision making improve the operation of real systems?"
+
+---
+
+# Conclusion
+
+Across EXP_01–EXP_43, NEXAH provides evidence that power-system operating states organize into a structured, navigable and partially recoverable stability atlas.
+
+The atlas supports:
+
+- discovery,
+- prediction,
+- recovery,
+- navigation,
+- control concepts,
+- historical reconstruction.
+
+The next stage is external validation and deployment on previously unseen systems.
