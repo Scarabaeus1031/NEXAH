@@ -2725,4 +2725,349 @@ The missing information is concentrated in transition, warning and recovery laye
 
 This result strengthens the broader hypothesis that atlas structures emerge consistently across power-system scales and may be recoverable even from incomplete historical datasets.
 
+---
+
+# Finding 25 — Historical Atlas Structures Persist Beyond Original Experiments
+
+EXP_38A–EXP_38D investigated whether IEEE39 atlas structure can be recovered from historical repository assets without rerunning the original simulation pipeline.
+
+The reconstruction audit recovered evidence for:
+
+- state classification
+- basin detection
+- atlas organization
+- field geometry
+
+EXP_38B identified 26 relevant IEEE39 assets.
+
+| Category | Assets |
+|----------|---------|
+| Field | 9 |
+| Geometry | 8 |
+| Atlas | 5 |
+| Basin | 2 |
+| States | 2 |
+
+EXP_38C and EXP_38D showed that the foundational atlas layers remain recoverable:
+
+```text
+States
+↓
+Basins
+↓
+Atlas Structure
+↓
+Field Geometry
+```
+
+while the missing layers belong primarily to navigation and control:
+
+```text
+Transition Network
+PCA Geometry
+Early Warning
+Recovery Layer
+```
+
+The resulting reconstruction readiness is:
+
+```text
+4 / 8 layers
+=
+50%
+```
+
+## Visual Evidence
+
+### IEEE39 Capability Audit
+
+![EXP_38C Capability Audit](./outputs/EXP_38C_IEEE39_ATLAS_CAPABILITY_AUDIT/exp38c_capability_audit.png)
+
+### IEEE39 Reconstruction Dashboard
+
+![EXP_38D Reconstruction Dashboard](./outputs/EXP_38D_IEEE39_ATLAS_RECONSTRUCTION/exp38d_reconstruction_dashboard.png)
+
+### IEEE39 Layer Availability
+
+![EXP_38D Layer Availability](./outputs/EXP_38D_IEEE39_ATLAS_RECONSTRUCTION/exp38d_layer_availability.png)
+
+## Conclusion
+
+EXP_38 introduces the concept of:
+
+```text
+Atlas Recoverability
+```
+
+The atlas is not only observable during active experiments.
+
+It also leaves persistent structural traces that can be reconstructed from incomplete historical artifacts.
+
+This strengthens the hypothesis that atlas organization is a robust structural feature rather than a fragile artifact of one experiment run.
+
+---
+
+# Finding 26 — Historical Warning-State Dynamics Form A Real Transition Network
+
+EXP_39C extracted real transition structure from archived `states.txt` files.
+
+Unlike EXP_39, which operated on basin-inventory files, EXP_39C used historical state sequences directly.
+
+Across 24 historical runs, the recovered state system contains four operational classes:
+
+```text
+SAFE
+WARNING
+CRITICAL
+COLLAPSED
+```
+
+Observed metrics:
+
+```text
+Runs Processed: 24
+
+Unique States: 4
+
+Unique Transitions: 11
+
+Transition Density: 0.9167
+```
+
+The most common transition was:
+
+```text
+SAFE → CRITICAL
+```
+
+with:
+
+```text
+236 occurrences
+```
+
+The most connected state was:
+
+```text
+SAFE
+```
+
+## Visual Evidence
+
+### Real Warning-State Transition Network
+
+![EXP_39C Real Transition Network](./outputs/EXP_39C_REAL_TRANSITION_NETWORK_EXTRACTION/exp39c_transition_network.png)
+
+The resulting network shows that historical warning states do not behave as isolated categories.
+
+Instead, they form a dense directed transition topology.
+
+## Interpretation
+
+EXP_39C does not yet recover true basin-to-basin atlas dynamics.
+
+Instead, it reconstructs a historical warning-state transition layer.
+
+This is still important because it demonstrates that archived NEXAH runs contain real temporal dynamics, not only static state labels.
+
+## Conclusion
+
+EXP_39C provides the first repository-scale evidence that historical NEXAH state archives contain measurable transition structure.
+
+The recovered layer represents:
+
+```text
+Warning-State Dynamics
+```
+
+rather than:
+
+```text
+Atlas Basin Dynamics
+```
+
+but it establishes the first dynamic bridge between raw state monitoring and future atlas-level transition analysis.
+
+---
+
+# Finding 27 — Historical Runs Contain Warning-State Sequences, Not Basin Sequences
+
+EXP_39C2 performed a forensic audit of all discovered `states.txt` files.
+
+The objective was to determine what EXP_39C had actually reconstructed.
+
+Result:
+
+```text
+State files discovered: 24
+
+State files analyzed: 24
+```
+
+All analyzed files were classified as:
+
+```text
+warning_label_sequence
+```
+
+No files were classified as:
+
+```text
+basin_label_sequence
+
+numeric_state_sequence
+
+trajectory_sequence
+```
+
+This confirms that EXP_39C reconstructed warning-state dynamics, not true atlas-basin dynamics.
+
+## Global State Distribution
+
+Observed counts:
+
+| State | Count |
+|--------|--------|
+| SAFE | 1401 |
+| COLLAPSED | 683 |
+| CRITICAL | 476 |
+| WARNING | 200 |
+
+The distribution is highly asymmetric.
+
+SAFE dominates, while WARNING appears as a comparatively narrow transition band.
+
+## Visual Evidence
+
+### Sequence Type Classification
+
+![EXP_39C2 Sequence Types](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_sequence_type_counts.png)
+
+All 24 historical state files belong to the same warning-label sequence class.
+
+---
+
+### Global State Distribution
+
+![EXP_39C2 Global State Distribution](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_global_state_distribution.png)
+
+SAFE acts as the dominant reservoir state, while WARNING appears much less frequently than CRITICAL or COLLAPSED.
+
+---
+
+### Transition Rate By Run
+
+![EXP_39C2 Transition Rate By Run](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_transition_rate_by_run.png)
+
+The transition-rate structure is not continuous.
+
+Instead, the runs appear to organize into several discrete activity regimes.
+
+## Interpretation
+
+EXP_39C2 establishes an important boundary:
+
+```text
+Recovered:
+Warning-State Dynamics
+
+Not Yet Recovered:
+True Basin-Level Atlas Dynamics
+```
+
+The experiment therefore clarifies that the historical repository currently contains a dynamic warning layer, while the basin-transition layer remains missing.
+
+## Conclusion
+
+EXP_39C2 converts EXP_39C from a possible basin-transition result into a well-defined warning-dynamics result.
+
+This is a valuable negative result.
+
+It shows exactly what has been recovered and what remains missing.
+
+The next required layer for full Phase-D completion is:
+
+```text
+Basin-Level Transition Histories
+```
+
+or alternatively:
+
+```text
+Run-Regime Discovery
+```
+
+based on the observed transition-rate archetypes.
+
+---
+
+# Finding 27.1 — Evidence For Layered Operational Regimes
+
+The transition-rate analysis reveals that historical runs do not form a continuous spectrum of dynamical activity.
+
+Instead, several distinct activity levels emerge:
+
+```text
+High Transition
+
+Medium Transition
+
+Low Transition
+
+Near Static
+```
+
+This structure is visible directly in the transition-rate distribution.
+
+The runs cluster into several discrete bands rather than forming a smooth continuum.
+
+## Visual Evidence
+
+### Transition Rate Regimes
+
+![EXP_39C2 Transition Rate By Run](./outputs/EXP_39C2_STATE_SEQUENCE_FORENSICS/exp39c2_transition_rate_by_run.png)
+
+The visual suggests the existence of operational activity layers.
+
+Several runs occupy similar transition-rate plateaus, producing an apparent staircase-like structure.
+
+## Interpretation
+
+This suggests that the historical archive may already contain evidence of higher-level operational regimes.
+
+Importantly, these regimes emerge without using basin information.
+
+They arise solely from transition statistics.
+
+The result suggests:
+
+```text
+State Sequences
+        ↓
+Transition Activity
+        ↓
+Operational Regimes
+```
+
+may represent an intermediate layer between warning-state dynamics and full atlas-basin dynamics.
+
+## Conclusion
+
+EXP_39C2 provides the first evidence that historical NEXAH runs may organize into discrete dynamical activity regimes.
+
+If validated, this layer could provide a bridge toward:
+
+```text
+Warning Dynamics
+        ↓
+Operational Regimes
+        ↓
+Atlas Basin Dynamics
+        ↓
+Atlas Navigation
+```
+
+and may represent the next recoverable layer in the Phase-D hierarchy.
+
+
 
