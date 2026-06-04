@@ -1545,4 +1545,151 @@ The discovered highway structure represents the dominant transport backbone of t
 
 ---
 
+---
+
+# EXP_44Q — Atlas Transport Skeleton
+
+## Visuals
+
+### Atlas Transport Skeleton
+
+![Atlas Transport Skeleton](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_transport_skeleton.png)
+
+### Skeleton Compression Curve
+
+![Skeleton Compression Curve](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_skeleton_compression.png)
+
+### Navigation Preservation
+
+![Navigation Preservation](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_navigation_preservation.png)
+
+### Edge Importance Ranking
+
+![Edge Importance Ranking](outputs/EXP_44Q_ATLAS_TRANSPORT_SKELETON_EXTRACTION/exp44q_edge_importance.png)
+
+---
+
+## Key Findings
+
+The Atlas Domain Supergraph admits an additional level of structural compression through transport-skeleton extraction.
+
+Starting from:
+
+- 17 coherent transport domains
+- 113 transport connections
+
+a sparse transport skeleton containing:
+
+- 17 domains
+- 40 transport links
+
+was extracted.
+
+This corresponds to:
+
+- Edge Compression Ratio = 2.83
+- Connectivity Preservation = 100%
+- Navigation Preservation = 70.3%
+
+despite removal of nearly two-thirds of all transport links.
+
+---
+
+## Structural Observation
+
+The resulting skeleton is not uniformly distributed.
+
+Instead, transport organization appears concentrated around a small collection of highly connected domains.
+
+Several domains exhibit substantially higher transport participation than the surrounding network, suggesting the emergence of a transport core.
+
+The skeleton therefore appears to possess a hierarchical organization:
+
+Transport Skeleton
+
+↓
+
+Core Domains
+
+↓
+
+Secondary Transport Layer
+
+↓
+
+Peripheral Domains
+
+---
+
+## Edge Importance Structure
+
+Betweenness ranking reveals a small set of highly important transport links.
+
+The edge-importance distribution displays:
+
+- a steep initial decay
+- followed by a long low-importance tail
+
+This behavior is consistent with backbone-like transport architectures observed in many real-world networks.
+
+The majority of navigation capability appears to be carried by a relatively small subset of transport connections.
+
+---
+
+## Compression Behavior
+
+Progressive edge-removal analysis demonstrates a smooth degradation of navigation performance.
+
+Navigation preservation decreases approximately continuously as transport links are removed.
+
+No abrupt collapse threshold was observed.
+
+This suggests that Atlas transport remains partially distributed even after skeletonization.
+
+The Atlas therefore appears to combine:
+
+- transport redundancy
+- hierarchical organization
+- backbone structure
+
+within the same network.
+
+---
+
+## Interpretation
+
+The results indicate that Atlas transport architecture can be represented through at least four structural levels:
+
+State Graph
+
+↓
+
+Coherent Domains
+
+↓
+
+Domain Supergraph
+
+↓
+
+Transport Skeleton
+
+The Transport Skeleton represents the most compressed transport architecture discovered so far within the reconstructed Atlas.
+
+---
+
+## Status
+
+Validated structural result.
+
+Future work:
+
+EXP_44R — Atlas Spine Identification
+
+Objective:
+
+Identify the minimal subset of domains and transport links responsible for maintaining global Atlas navigability.
+
+---
+
 
