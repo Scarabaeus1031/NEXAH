@@ -1,0 +1,31 @@
+
+EXP_44M TRANSPORT TOPOLOGY PRESERVATION
+==================================================
+
+Domains
+-------
+17
+
+Pearson Correlation
+-------------------
+1.000000
+
+Spearman Correlation
+--------------------
+1.000000
+
+Frobenius Distance
+------------------
+0.000000
+
+Interpretation
+--------------
+The Domain Transport Matrix from EXP_44I
+was compared against the Domain Supergraph
+Matrix from EXP_44L.
+
+This experiment evaluates whether transport
+topology survives domain-level compression.
+
+Atlas Shadow Matrix hypothesis:
+under investigation.
