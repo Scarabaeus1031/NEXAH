@@ -140,7 +140,7 @@ Results suggest the emergence of:
 - Recovery Anchors
 - Atlas-Guided Control Pathways
 
-![NEXAH Power Systems Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
+![NEXAH Power Systems Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUSvii.png)
 
 Current experiments demonstrate:
 
