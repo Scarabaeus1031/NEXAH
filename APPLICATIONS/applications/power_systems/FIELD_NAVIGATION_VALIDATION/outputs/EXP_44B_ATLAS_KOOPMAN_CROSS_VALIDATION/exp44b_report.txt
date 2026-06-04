@@ -1,0 +1,29 @@
+
+EXP_44B ATLAS-KOOPMAN CROSS VALIDATION
+==================================================
+
+Dataset
+--------
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/EXP_39B_TRANSITION_DATA_AUDIT/exp39b_top_candidates.csv
+
+Shape
+--------
+Rows    : 67
+Columns : 2
+
+Koopman Modes
+--------
+Count : 2
+
+Forecast
+--------
+RMSE : 9.623441
+
+Interpretation
+--------
+EXP_44B compares atlas-derived structure
+against Koopman operator structure.
+
+This is the first operator-theoretic
+cross-validation experiment in the
+NEXAH Power Systems program.
