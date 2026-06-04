@@ -125,13 +125,21 @@ EXP_34 Control Effort Estimation
 
 ## Key Outputs
 
-### Files
+# EXP_44D — Atlas State Graph Reconstruction
 
-- outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/atlas_state_graph.graphml
-- outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/exp44d_state_graph.png
-- outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/exp44d_backbone_structure.png
-- outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/exp44d_degree_distribution.png
-- outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/exp44d_basin_connectivity.png
+## Visuals
+
+### Atlas State Graph
+
+![Atlas State Graph](outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/exp44d_state_graph.png)
+
+### Backbone Structure
+
+![Backbone Structure](outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/exp44d_backbone_structure.png)
+
+### Basin Connectivity
+
+![Basin Connectivity](outputs/EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION/exp44d_basin_connectivity.png)
 
 ## Key Findings
 
@@ -184,11 +192,21 @@ Determine whether the Atlas graph possesses meaningful spectral structure.
 
 ### Files
 
-- outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_adjacency_spectrum.png
-- outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_laplacian_spectrum.png
-- outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_fiedler_vector.png
-- outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_community_structure.png
-- outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_spectral_gap.png
+# EXP_44E — Graph Spectrum Analysis
+
+## Visuals
+
+### Community Structure
+
+![Community Structure](outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_community_structure.png)
+
+### Fiedler Vector
+
+![Fiedler Vector](outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_fiedler_vector.png)
+
+### Spectral Gap
+
+![Spectral Gap](outputs/EXP_44E_GRAPH_SPECTRUM_ANALYSIS/exp44e_spectral_gap.png)
 
 ## Key Findings
 
@@ -229,10 +247,17 @@ Directly compare Atlas spectral structure against Koopman spectral structure.
 
 ## Key Outputs
 
-### Files
+# EXP_44F — True Atlas–Koopman Cross Validation
 
-- outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_spectral_alignment.png
-- outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_atlas_vs_koopman_spectrum.png
+## Visuals
+
+### Atlas vs Koopman Spectrum
+
+![Atlas vs Koopman Spectrum](outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_atlas_vs_koopman_spectrum.png)
+
+### Spectral Alignment
+
+![Spectral Alignment](outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_spectral_alignment.png)
 
 ## Interpretation
 
@@ -272,11 +297,22 @@ Determine whether Atlas geometry contains predictive information.
 
 ## Key Outputs
 
-### Files
+# EXP_44G — Atlas Predictive Validation
 
-- outputs/EXP_44G_ATLAS_PREDICTIVE_VALIDATION/exp44g_prediction_accuracy.png
-- outputs/EXP_44G_ATLAS_PREDICTIVE_VALIDATION/exp44g_prediction_error_distribution.png
-- outputs/EXP_44G_ATLAS_PREDICTIVE_VALIDATION/exp44g_atlas_prediction.png
+## Visuals
+
+### Prediction Accuracy
+
+![Prediction Accuracy](outputs/EXP_44G_ATLAS_PREDICTIVE_VALIDATION/exp44g_prediction_accuracy.png)
+
+### Error Distribution
+
+![Prediction Error Distribution](outputs/EXP_44G_ATLAS_PREDICTIVE_VALIDATION/exp44g_prediction_error_distribution.png)
+
+### Prediction Scatter
+
+![Prediction Scatter](outputs/EXP_44G_ATLAS_PREDICTIVE_VALIDATION/exp44g_prediction_scatter.png)
+
 
 ## Interpretation
 
