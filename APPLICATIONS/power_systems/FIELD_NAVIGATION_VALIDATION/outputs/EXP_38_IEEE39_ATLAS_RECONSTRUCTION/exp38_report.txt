@@ -1,0 +1,23 @@
+EXP_38 IEEE39 ATLAS RECONSTRUCTION
+==================================================
+
+Assets discovered: 2383
+
+Category Summary
+----------------
+
+atlas: 92
+basin: 52
+transition: 51
+field: 2358
+geometry: 1378
+pca: 4
+
+Gap Analysis
+------------
+
+states: FOUND
+atlas: FOUND
+basins: FOUND
+transition: FOUND
+pca: FOUND
