@@ -1,0 +1,39 @@
+
+EXP_44E GRAPH SPECTRUM ANALYSIS
+==================================================
+
+Nodes
+------
+540
+
+Edges
+------
+2700
+
+Spectral Radius
+---------------
+5.000000
+
+Fiedler Value
+-------------
+0.015415
+
+Communities
+-----------
+14
+
+Interpretation
+--------------
+Graph spectrum analysis reveals:
+
+- dominant graph modes
+- transport geometry
+- community structure
+- connectivity strength
+
+This experiment prepares the direct
+comparison between:
+
+Atlas Spectrum
+and
+Koopman Spectrum.
