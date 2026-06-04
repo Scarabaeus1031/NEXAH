@@ -865,11 +865,11 @@ Measure local transport coherence across the Atlas flow field.
 
 ### Flow Coherence Map
 
-![Flow Coherence Map](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_coherence_map.png)
+![Flow Coherence Map](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_flow_coherence_map.png)
 
 ### Coherence Distribution
 
-![Coherence Distribution](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_coherence_distribution.png)
+![Coherence Distribution](outputs/EXP_44H1_FLOW_COHERENCE_MAP/exp44h1_coherence_histogram.png)
 
 ### Mean Coherence
 
@@ -911,7 +911,7 @@ Automatically identify coherent transport domains within the Atlas.
 
 ### Coherent Domains
 
-![Coherent Domains](outputs/EXP_44H2_COHERENT_DOMAIN_EXTRACTION/exp44h2_coherent_domains.png)
+![Coherent Domains](outputs/EXP_44H2_COHERENT_DOMAIN_EXTRACTION/exp44h2_domain_map.png)
 
 ### Domain Sizes
 
