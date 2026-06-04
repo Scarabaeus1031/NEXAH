@@ -3,5 +3,5 @@ EXP_37C ATLAS UNIVERSALITY VALIDATION
 
 Systems analyzed: 2
 
-IEEE9: Score=0/5, Classes=0, Entropy=0.000
-IEEE300: Score=0/5, Classes=0, Entropy=0.000
+IEEE9: Score=5/5, Classes=4, Entropy=1.655
+IEEE300: Score=5/5, Classes=3, Entropy=0.840
