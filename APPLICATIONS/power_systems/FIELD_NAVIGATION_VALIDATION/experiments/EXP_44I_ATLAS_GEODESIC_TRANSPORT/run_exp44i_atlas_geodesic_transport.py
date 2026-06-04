@@ -123,8 +123,8 @@ print()
 # PCA COORDINATES
 # ============================================================
 
-pc1 = df["pc1"].values
-pc2 = df["pc2"].values
+pc1 = df["PC1"].values
+pc2 = df["PC2"].values
 
 coords = np.column_stack([pc1, pc2])
 
