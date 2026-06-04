@@ -1,4 +1,18 @@
-# run_exp37c_atlas_universality_validation.py
+# ============================================================
+# EXP_37C_ATLAS_UNIVERSALITY_VALIDATION
+#
+# Goal:
+# Validate whether atlas structures exhibit
+# consistent organization across discovered systems.
+#
+# Input:
+# EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2
+#
+# Output:
+# EXP_37C_ATLAS_UNIVERSALITY_VALIDATION
+#
+# Thomas Hofmann / NEXAH
+# ============================================================
 
 from pathlib import Path
 from collections import Counter
@@ -8,7 +22,17 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+# ============================================================
+# Paths
+# ============================================================
+
 ROOT = Path(__file__).resolve().parents[2]
+
+INPUT_DIR = (
+    ROOT /
+    "outputs" /
+    "EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2"
+)
 
 OUTDIR = (
     ROOT /
@@ -16,37 +40,56 @@ OUTDIR = (
     "EXP_37C_ATLAS_UNIVERSALITY_VALIDATION"
 )
 
-OUTDIR.mkdir(parents=True, exist_ok=True)
+OUTDIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
-print(f"Output -> {OUTDIR}")
+print("Input  ->", INPUT_DIR)
+print("Output ->", OUTDIR)
 
+
+# ============================================================
+# Systems
+# ============================================================
 
 SYSTEMS = {
     "IEEE9":
-        ROOT.parents[1] /
-        "nexah_ieee9" /
-        "results" /
-        "states.txt",
+        INPUT_DIR /
+        "ieee9_atlas.csv",
 
     "IEEE300":
-        ROOT.parents[1] /
-        "nexah_ieeeX" /
-        "results" /
-        "run_ieee300_20260413_015843" /
-        "states.txt",
+        INPUT_DIR /
+        "ieee300_atlas.csv",
 }
 
 
+# ============================================================
+# Helpers
+# ============================================================
+
 def load_states(path):
+
     if not path.exists():
         return []
 
-    with open(path, "r") as f:
-        return [
-            line.strip()
-            for line in f
-            if line.strip()
-        ]
+    df = pd.read_csv(path)
+
+    if "state" in df.columns:
+        return (
+            df["state"]
+            .astype(str)
+            .tolist()
+        )
+
+    if "class" in df.columns:
+        return (
+            df["class"]
+            .astype(str)
+            .tolist()
+        )
+
+    return []
 
 
 def entropy(states):
@@ -64,9 +107,15 @@ def entropy(states):
     p /= p.sum()
 
     return float(
-        -np.sum(p * np.log2(p))
+        -np.sum(
+            p * np.log2(p)
+        )
     )
 
+
+# ============================================================
+# Analysis
+# ============================================================
 
 rows = []
 
@@ -79,9 +128,10 @@ for system, file_path in SYSTEMS.items():
 
     states = load_states(file_path)
 
-    if len(states) == 0:
+    print("File:", file_path.name)
+    print("Loaded:", len(states))
 
-        print("No states found.")
+    if len(states) == 0:
 
         rows.append({
             "system": system,
@@ -101,7 +151,10 @@ for system, file_path in SYSTEMS.items():
 
     unique_states = len(counts)
 
-    coverage = unique_states / total_states
+    coverage = (
+        unique_states /
+        total_states
+    )
 
     ent = entropy(states)
 
@@ -115,7 +168,7 @@ for system, file_path in SYSTEMS.items():
     if unique_states >= 3:
         score += 1
 
-    if coverage > 0:
+    if unique_states >= 2:
         score += 1
 
     if ent > 0:
@@ -137,27 +190,55 @@ for system, file_path in SYSTEMS.items():
         "universality_score": score
     })
 
-    print(f"States: {total_states}")
-    print(f"Classes: {unique_states}")
-    print(f"Entropy: {ent:.3f}")
-    print(f"Dominant Fraction: {dominant_fraction:.3f}")
-    print(f"Score: {score}/5")
+    print(
+        f"States: {total_states}"
+    )
 
+    print(
+        f"Classes: {unique_states}"
+    )
+
+    print(
+        f"Entropy: {ent:.3f}"
+    )
+
+    print(
+        f"Dominant Fraction: {dominant_fraction:.3f}"
+    )
+
+    print(
+        f"Score: {score}/5"
+    )
+
+
+# ============================================================
+# Save Table
+# ============================================================
 
 df = pd.DataFrame(rows)
 
-csv_file = OUTDIR / "exp37c_universality_table.csv"
-df.to_csv(csv_file, index=False)
+csv_file = (
+    OUTDIR /
+    "exp37c_universality_table.csv"
+)
+
+df.to_csv(
+    csv_file,
+    index=False
+)
 
 print()
 print("Saved:", csv_file)
 
 
-# --------------------------------------------------
+# ============================================================
+# Visual 1
 # Universality Score
-# --------------------------------------------------
+# ============================================================
 
-plt.figure(figsize=(8,5))
+plt.figure(
+    figsize=(8, 5)
+)
 
 plt.bar(
     df["system"],
@@ -165,7 +246,10 @@ plt.bar(
 )
 
 plt.ylabel("Score")
-plt.title("EXP_37C Universality Score")
+
+plt.title(
+    "EXP_37C Universality Score"
+)
 
 plt.tight_layout()
 
@@ -178,11 +262,14 @@ plt.savefig(
 plt.close()
 
 
-# --------------------------------------------------
+# ============================================================
+# Visual 2
 # Entropy
-# --------------------------------------------------
+# ============================================================
 
-plt.figure(figsize=(8,5))
+plt.figure(
+    figsize=(8, 5)
+)
 
 plt.bar(
     df["system"],
@@ -190,7 +277,10 @@ plt.bar(
 )
 
 plt.ylabel("Entropy")
-plt.title("EXP_37C State Entropy")
+
+plt.title(
+    "EXP_37C State Entropy"
+)
 
 plt.tight_layout()
 
@@ -203,11 +293,14 @@ plt.savefig(
 plt.close()
 
 
-# --------------------------------------------------
+# ============================================================
+# Visual 3
 # Coverage
-# --------------------------------------------------
+# ============================================================
 
-plt.figure(figsize=(8,5))
+plt.figure(
+    figsize=(8, 5)
+)
 
 plt.bar(
     df["system"],
@@ -215,7 +308,10 @@ plt.bar(
 )
 
 plt.ylabel("Coverage")
-plt.title("EXP_37C Atlas Coverage")
+
+plt.title(
+    "EXP_37C Atlas Coverage"
+)
 
 plt.tight_layout()
 
@@ -228,12 +324,13 @@ plt.savefig(
 plt.close()
 
 
-# --------------------------------------------------
+# ============================================================
+# Visual 4
 # Dashboard
-# --------------------------------------------------
+# ============================================================
 
 fig = plt.figure(
-    figsize=(10,6)
+    figsize=(10, 6)
 )
 
 plt.axis("off")
@@ -273,9 +370,9 @@ plt.savefig(
 plt.close()
 
 
-# --------------------------------------------------
+# ============================================================
 # Report
-# --------------------------------------------------
+# ============================================================
 
 report = []
 
@@ -301,10 +398,18 @@ for _, row in df.iterrows():
         f"Entropy={row['entropy']:.3f}"
     )
 
-report_file = OUTDIR / "exp37c_report.txt"
+report_file = (
+    OUTDIR /
+    "exp37c_report.txt"
+)
 
-with open(report_file, "w") as f:
-    f.write("\n".join(report))
+with open(
+    report_file,
+    "w"
+) as f:
+    f.write(
+        "\n".join(report)
+    )
 
 print("Saved:", report_file)
 
