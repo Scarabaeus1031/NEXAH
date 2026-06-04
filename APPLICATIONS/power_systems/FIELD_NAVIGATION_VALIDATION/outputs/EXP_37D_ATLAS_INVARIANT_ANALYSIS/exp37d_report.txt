@@ -1,0 +1,5 @@
+EXP_37D ATLAS INVARIANT ANALYSIS
+========================================
+
+IEEE9: classes=4, entropy=1.655, coverage=0.001667, effective_states=2.617
+IEEE300: classes=3, entropy=0.840, coverage=0.008333, effective_states=1.511
