@@ -1,0 +1,25 @@
+EXP_43 STATE OSCILLATION DISCOVERY
+=========================================
+
+Runs Processed: 24
+
+Unique Oscillations: 8
+
+Top Oscillations
+-------------------------
+SAFE ↔ CRITICAL: 172
+SAFE ↔ WARNING: 52
+CRITICAL ↔ SAFE: 28
+CRITICAL ↔ WARNING: 15
+WARNING ↔ SAFE: 10
+SAFE ↔ COLLAPSED: 9
+COLLAPSED ↔ SAFE: 9
+WARNING ↔ CRITICAL: 3
+
+Loop Statistics
+-------------------------
+Mean Length: 9.84
+Max Length: 19
+
+Interpretation
+EXP_43 searches for recurrent oscillatory behavior inside historical warning-state dynamics.
