@@ -1,0 +1,16 @@
+EXP_44C ATLAS TRAJECTORY RECONSTRUCTION
+============================================================
+
+Assets Discovered: 295
+Trajectory Candidates: 25
+READY Datasets: 3
+
+Systems
+------------------------------
+unknown: 19
+IEEE39: 4
+IEEE9: 1
+IEEE300: 1
+
+Recommended Next Step:
+EXP_44D TRUE ATLAS-KOOPMAN CROSS VALIDATION
