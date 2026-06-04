@@ -31,15 +31,15 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from sklearn.neighbors import NearestNeighbors
 
-
 # ============================================================
-# PATHS
+# PATH DISCOVERY
 # ============================================================
 
-POWER_ROOT = (
-    Path(__file__)
-    .resolve()
-    .parents[4]
+CURRENT = Path(__file__).resolve()
+
+POWER_ROOT = next(
+    p for p in CURRENT.parents
+    if p.name == "power_systems"
 )
 
 GRAPH_PATH = (
