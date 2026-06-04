@@ -1,0 +1,34 @@
+
+EXP_44D ATLAS STATE GRAPH RECONSTRUCTION
+==================================================
+
+States
+------
+540
+
+Edges
+-----
+2700
+
+Backbone Nodes
+--------------
+27
+
+Features Used
+-------------
+PC1, PC2, warning_index, exit_risk, recovery_length, control_effort, basin_distance, axis_distance
+
+Interpretation
+--------------
+Atlas states were transformed into a
+directed nearest-neighbor graph.
+
+The resulting graph provides the first
+graph-theoretic representation of the
+NEXAH Atlas and enables future:
+
+- transition reconstruction
+- transport analysis
+- spectral analysis
+- Koopman comparison
+- navigation experiments
