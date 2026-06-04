@@ -36,7 +36,7 @@ Across EXP_01–EXP_43, the results demonstrate that stability organization is n
 
 ## Figure 1 — Current NEXAH Status
 
-![NEXAH Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_vii.png)
+![NEXAH Current Status](./outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_vii.png)
 
 This figure summarizes the complete evolution of the NEXAH framework from structure discovery to atlas-guided control and historical reconstruction.
 
@@ -44,7 +44,7 @@ This figure summarizes the complete evolution of the NEXAH framework from struct
 
 ## Figure 2 — Historical Dynamics Reconstruction
 
-![Historical Dynamics Reconstruction](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-HISTORICAL_DYNAMICS_RECONSTRUCTION_NEXAH_STATE_NAVIGATION.png)
+![Historical Dynamics Reconstruction](./outputs/diagrams/NEXAH_STATE_NAVIGATION-HISTORICAL_DYNAMICS_RECONSTRUCTION_NEXAH_STATE_NAVIGATION.png)
 
 This figure summarizes EXP_38–EXP_40 and demonstrates that historical repository artifacts preserve recoverable atlas structure, warning-state dynamics and early-warning behavior.
 
