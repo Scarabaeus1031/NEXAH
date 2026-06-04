@@ -1,0 +1,45 @@
+
+EXP_44H.2 COHERENT DOMAIN EXTRACTION
+==================================================
+
+Coherence Threshold
+-------------------
+0.80
+
+Total Nodes
+-----------
+540
+
+Domain Nodes
+------------
+302
+
+Domains Found
+-------------
+17
+
+Largest Domain
+--------------
+232
+
+Interpretation
+--------------
+Nodes with local coherence above the threshold
+were extracted from the Atlas Flow Field.
+
+Connected coherent regions were then identified
+as transport domains.
+
+This experiment represents the first automatic
+segmentation of the Atlas into coherent
+transport structures.
+
+Pipeline
+
+Graph
+  ->
+Flow
+  ->
+Coherence
+  ->
+Domains
