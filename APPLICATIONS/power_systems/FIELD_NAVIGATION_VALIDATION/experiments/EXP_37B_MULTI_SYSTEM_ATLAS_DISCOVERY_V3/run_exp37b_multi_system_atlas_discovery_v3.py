@@ -3,7 +3,7 @@
 #
 # Phase E — Atlas Universality
 #
-# Harvest atlas structures from all available IEEE systems
+# Aggregate atlas metrics from EXP_37B V2 outputs
 #
 # Thomas Hofmann / NEXAH
 # ============================================================
@@ -20,6 +20,12 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
 
+INPUT_DIR = (
+    ROOT
+    / "outputs"
+    / "EXP_37B_MULTI_SYSTEM_ATLAS_DISCOVERY_V2"
+)
+
 OUTDIR = (
     ROOT
     / "outputs"
@@ -31,101 +37,33 @@ OUTDIR.mkdir(
     exist_ok=True
 )
 
+print("Input  ->", INPUT_DIR)
 print("Output ->", OUTDIR)
 
 # ============================================================
-# Candidate Atlas Files
+# Atlas Files From V2
 # ============================================================
 
-SYSTEMS = {
-
+ATLAS_FILES = {
     "IEEE9":
-        ROOT.parent /
-        "nexah_ieee9" /
-        "results" /
-        "states.txt",
-
-    "IEEE14":
-        ROOT.parent /
-        "nexah_ieee14" /
-        "results" /
-        "states.txt",
-
-    "IEEE30":
-        ROOT.parent /
-        "nexah_ieee30" /
-        "results" /
-        "states.txt",
-
-    "IEEE39":
-        ROOT.parent /
-        "nexah_ieee39" /
-        "results" /
-        "states.txt",
-
-    "IEEE57":
-        ROOT.parent /
-        "nexah_ieee57" /
-        "results" /
-        "states.txt",
-
-    "IEEE118":
-        ROOT.parent /
-        "nexah_ieee118" /
-        "results" /
-        "states.txt",
+        INPUT_DIR / "ieee9_atlas.csv",
 
     "IEEE300":
-        ROOT.parent /
-        "nexah_ieeeX" /
-        "results" /
-        "run_ieee300_20260413_015843" /
-        "states.txt",
-
-    "IEEE1354":
-        ROOT.parent /
-        "nexah_ieee1354" /
-        "results" /
-        "states.txt",
-
-    "PEGASE9241":
-        ROOT.parent /
-        "nexah_pegase9241" /
-        "results" /
-        "states.txt"
+        INPUT_DIR / "ieee300_atlas.csv",
 }
 
 # ============================================================
-# Helpers
+# Entropy
 # ============================================================
 
-def load_states(path):
+def entropy_from_counts(counts):
 
-    if not path.exists():
-        return []
-
-    with open(path, "r") as f:
-
-        return [
-            line.strip()
-            for line in f
-            if line.strip()
-        ]
-
-
-def entropy(states):
-
-    if len(states) == 0:
-        return 0.0
-
-    counts = Counter(states)
-
-    p = np.array(
-        list(counts.values()),
+    counts = np.array(
+        counts,
         dtype=float
     )
 
-    p /= p.sum()
+    p = counts / counts.sum()
 
     return float(
         -np.sum(
@@ -133,40 +71,43 @@ def entropy(states):
         )
     )
 
-
 # ============================================================
 # Discovery
 # ============================================================
 
 summary_rows = []
 
-for system, path in SYSTEMS.items():
+for system, csv_file in ATLAS_FILES.items():
 
     print()
     print("=" * 50)
     print(system)
     print("=" * 50)
 
-    states = load_states(path)
+    if not csv_file.exists():
 
-    if len(states) == 0:
-
-        print("No atlas found.")
-
+        print("Atlas file missing.")
         continue
 
-    counts = Counter(states)
+    atlas = pd.read_csv(csv_file)
 
-    total_states = len(states)
+    if len(atlas) == 0:
 
-    unique_states = len(counts)
+        print("Atlas file empty.")
+        continue
+
+    counts = atlas["count"].values
+
+    total_states = int(counts.sum())
+
+    unique_states = len(atlas)
 
     dominant_fraction = (
-        max(counts.values())
+        counts.max()
         / total_states
     )
 
-    ent = entropy(states)
+    ent = entropy_from_counts(counts)
 
     effective_states = (
         2 ** ent
@@ -176,26 +117,10 @@ for system, path in SYSTEMS.items():
         unique_states * ent
     )
 
-    atlas_df = pd.DataFrame({
-
-        "state":
-            list(counts.keys()),
-
-        "count":
-            list(counts.values())
-    })
-
-    atlas_file = (
-        OUTDIR /
-        f"{system.lower()}_atlas.csv"
-    )
-
-    atlas_df.to_csv(
-        atlas_file,
-        index=False
-    )
-
-    print("Saved:", atlas_file.name)
+    print(f"Rows: {total_states}")
+    print(f"Classes: {unique_states}")
+    print(f"Entropy: {ent:.3f}")
+    print(f"Effective States: {effective_states:.3f}")
 
     summary_rows.append({
 
