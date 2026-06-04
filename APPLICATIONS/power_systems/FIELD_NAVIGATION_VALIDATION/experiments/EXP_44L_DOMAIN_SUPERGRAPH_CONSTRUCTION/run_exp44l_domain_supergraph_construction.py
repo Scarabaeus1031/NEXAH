@@ -93,9 +93,24 @@ transport = pd.read_csv(
     index_col=0
 )
 
-domain_ids = transport.index.astype(int).tolist()
+# ------------------------------------------------
+# normalize matrix labels
+# rows = int
+# cols = int
+# ------------------------------------------------
+
+transport.index = transport.index.astype(int)
+transport.columns = transport.columns.astype(int)
+
+domain_ids = sorted(
+    transport.index.tolist()
+)
 
 print("Domains:", len(domain_ids))
+print()
+
+print("Transport Index Type  :", transport.index.dtype)
+print("Transport Column Type :", transport.columns.dtype)
 print()
 
 
@@ -123,17 +138,14 @@ for i in domain_ids:
         if j <= i:
             continue
 
-        try:
-            dist = transport.loc[i, j]
-        except KeyError:
-            dist = transport.loc[str(i), str(j)]
+        dist = transport.loc[i, j]
 
         if pd.isna(dist):
             continue
 
         G.add_edge(
-            int(i),
-            int(j),
+            i,
+            j,
             weight=float(dist)
         )
 
