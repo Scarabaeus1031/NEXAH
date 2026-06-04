@@ -1,0 +1,71 @@
+
+EXP_44N ATLAS COMPRESSION VALIDATION
+==================================================
+
+State Nodes
+-----------
+540
+
+Supergraph Nodes
+----------------
+17
+
+Compression Ratio
+-----------------
+31.76
+
+State Edges
+-----------
+2700
+
+Supergraph Edges
+----------------
+113
+
+Edge Compression Ratio
+----------------------
+23.89
+
+State Density
+-------------
+0.009276
+
+Supergraph Density
+------------------
+0.830882
+
+Largest Domain
+--------------
+232
+
+Largest Domain Share
+--------------------
+0.7682
+
+State Components
+----------------
+1
+
+Supergraph Components
+---------------------
+1
+
+Interpretation
+--------------
+This experiment evaluates whether
+coherent-domain compression preserves
+large-scale Atlas structure.
+
+The Atlas was compressed from
+540 states into
+17 coherent domains.
+
+Pipeline
+
+State Graph
+ ->
+Coherent Domains
+ ->
+Domain Supergraph
+ ->
+Compression Validation
