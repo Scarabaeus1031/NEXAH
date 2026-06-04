@@ -49,9 +49,9 @@ The objective is not only to observe system behavior but to discover actionable 
 
 ---
 
-## Atlas Operations Overview
+## Atlas Operations & Historical Dynamics
 
-![Atlas Operations](FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS.png)
+![Atlas Operations](FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_vii.png)
 
 The latest validation phase demonstrates that the discovered atlas can be used operationally for:
 
@@ -62,13 +62,117 @@ The latest validation phase demonstrates that the discovered atlas can be used o
 - Recovery Anchor Identification
 - Atlas-Guided Control
 
+In addition, the most recent experiments demonstrate that atlas structure can be reconstructed from historical operational archives.
+
+NEXAH now supports both:
+
+- Atlas Discovery from simulations
+- Atlas Reconstruction from historical operational data
+
 This transforms the atlas from a descriptive model into an operational decision-support framework.
+
+---
+
+## Historical Dynamics Reconstruction
+
+![Historical Dynamics Reconstruction](FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-HISTORICAL_DYNAMICS_RECONSTRUCTION_NEXAH_STATE_NAVIGATION.png)
+
+EXP_38–EXP_40 investigated whether atlas structure can be reconstructed from historical repository artifacts without rerunning the original simulation pipeline.
+
+Recovered layers include:
+
+- State Classification
+- Basin Evidence
+- Atlas Organization
+- Field Geometry
+- Warning-State Dynamics
+- Early Warning Structure
+
+Key findings:
+
+- 24 historical state archives recovered
+- measurable warning-state dynamics discovered
+- warning states precede collapse events
+- mean warning lead time: 81.35 state steps
+- maximum warning lead time: 96 state steps
+
+Observed progression:
+
+```text
+SAFE
+ ↓
+WARNING
+ ↓
+CRITICAL
+ ↓
+COLLAPSED
+```
+
+rather than:
+
+```text
+SAFE
+ ↓
+COLLAPSED
+```
+
+The results indicate that instability develops through structured intermediate regimes rather than abrupt transitions.
+
+---
+
+## Recovery Archetypes & Oscillation Dynamics
+
+![Recovery Archetypes & Oscillation Dynamics](FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-RECOVERY_ARCHETYPES-OSCILLATION_DYNAMICS.png)
+
+EXP_41–EXP_43 investigated the internal dynamics of historical warning-state archives.
+
+Recovered structures include:
+
+- degradation chains
+- recovery archetypes
+- oscillatory dynamics
+
+Key observations:
+
+### Recovery Archetypes
+
+Historical trajectories repeatedly converge toward similar stabilization pathways.
+
+Recovery therefore appears structured rather than random.
+
+### Oscillation Dynamics
+
+Dominant oscillation:
+
+```text
+SAFE ↔ CRITICAL
+```
+
+Additional oscillations:
+
+```text
+SAFE ↔ WARNING
+WARNING ↔ CRITICAL
+SAFE ↔ COLLAPSED
+```
+
+These findings suggest that instability often develops through repeated excursions between neighboring regimes.
+
+The atlas therefore contains:
+
+- warning dynamics
+- recovery dynamics
+- oscillatory dynamics
+
+that remain recoverable from historical archives.
 
 ---
 
 ## Experimental Status
 
-The NEXAH Power Systems program currently contains more than 36 validation experiments.
+The NEXAH Power Systems program currently contains more than 43 validation and reconstruction experiments.
+
+The most recent phase extends NEXAH beyond atlas discovery and operations toward historical dynamics reconstruction, recovery archetype discovery, and oscillation analysis.
 
 | Phase | Focus |
 |---------|---------|
@@ -77,6 +181,7 @@ The NEXAH Power Systems program currently contains more than 36 validation exper
 | EXP_16 – EXP_21 | Validation |
 | EXP_22 – EXP_29 | Atlas Anatomy |
 | EXP_30 – EXP_36 | Prediction, Recovery & Control |
+| EXP_38 – EXP_43 | Historical Dynamics Reconstruction |
 
 Current results demonstrate:
 
@@ -93,6 +198,14 @@ Current results demonstrate:
 ✅ Recovery Anchor Discovery
 
 ✅ Atlas-Guided Control Framework
+
+✅ Historical Atlas Reconstruction
+
+✅ Early-Warning Dynamics Reconstruction
+
+✅ Recovery Archetype Discovery
+
+✅ Oscillation Dynamics Discovery
 
 ---
 
@@ -161,13 +274,20 @@ Geometry
       ↓
 Basins
       ↓
-Navigation
+Atlas
       ↓
 Prediction
       ↓
 Recovery
       ↓
 Control
+
+
+Historical Archives
+      ↓
+Reconstruction
+      ↓
+Atlas
 ```
 
 ---
@@ -194,6 +314,9 @@ Control
 | Early Warning | ✅ |
 | Recovery Navigation | ✅ |
 | Atlas-Guided Control | ✅ |
+| Historical Reconstruction | ✅ |
+| Recovery Archetypes | ✅ |
+| Oscillation Analysis | ✅ |
 | External Validation | 🟡 |
 | Real-Time Operator Trials | 🟡 |
 
@@ -237,6 +360,8 @@ Observation
       ↓
 Structure Discovery
       ↓
+Atlas Construction
+      ↓
 Prediction
       ↓
 Navigation
@@ -244,6 +369,10 @@ Navigation
 Recovery
       ↓
 Control
+      ↓
+Historical Reconstruction
+      ↓
+Atlas Memory
 ```
 
 for resilient and adaptive power-system operation.
