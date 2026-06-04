@@ -1,0 +1,27 @@
+EXP_38D IEEE39 ATLAS RECONSTRUCTION
+==================================================
+
+Available Layers: 4
+Total Layers: 8
+Readiness: 50.0%
+
+Layer Status
+------------
+Atlas Structure: READY
+Basin Detection: READY
+State Classification: READY
+Field Geometry: READY
+Transition Network: MISSING
+PCA Geometry: MISSING
+Early Warning: MISSING
+Recovery Layer: MISSING
+
+Estimated Basin Range
+---------------------
+IEEE39: 3-4 basins
+
+Interpretation
+--------------
+Static atlas reconstruction is possible.
+Transition and PCA layers remain unavailable.
+IEEE39 can be integrated into future atlas scaling studies once state-level data is recovered.
