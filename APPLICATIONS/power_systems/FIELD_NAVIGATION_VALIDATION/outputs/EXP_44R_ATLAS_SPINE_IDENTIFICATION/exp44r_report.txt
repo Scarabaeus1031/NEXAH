@@ -1,0 +1,43 @@
+
+EXP_44R ATLAS SPINE IDENTIFICATION
+==================================================
+
+Original Skeleton Edges
+-----------------------
+40
+
+Spine Edges
+-----------
+19
+
+Compression Ratio
+-----------------
+2.11
+
+Navigation Preservation
+-----------------------
+0.826966
+
+Connected Components
+--------------------
+1
+
+Interpretation
+--------------
+The Atlas Spine represents the minimal
+set of transport links carrying the
+largest fraction of Atlas navigability.
+
+Pipeline
+
+Domain Supergraph
+ ->
+Transport Skeleton
+ ->
+Edge Impact Analysis
+ ->
+Atlas Spine
+
+The experiment identifies the critical
+transport backbone of the reconstructed
+Atlas.
