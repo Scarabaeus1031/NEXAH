@@ -39,39 +39,65 @@ import networkx as nx
 # CONFIG
 # --------------------------------------------------
 
+from pathlib import Path
+
 ROOT = (
     Path(__file__)
     .resolve()
     .parents[4]
 )
 
-REPO = ROOT / "APPLICATIONS" / "power_systems"
+# ROOT zeigt bereits auf:
+# .../NEXAH/APPLICATIONS
+
+REPO = ROOT / "power_systems"
 
 OUTDIR = (
     ROOT
-    / "APPLICATIONS"
     / "power_systems"
     / "FIELD_NAVIGATION_VALIDATION"
     / "outputs"
     / "EXP_42_RECOVERY_ARCHETYPE_DISCOVERY"
 )
 
-OUTDIR.mkdir(parents=True, exist_ok=True)
+OUTDIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 print(f"Repository -> {REPO}")
 print(f"Output     -> {OUTDIR}")
+
+print("\nChecking search path:")
+print(REPO)
+print("Exists:", REPO.exists())
 
 
 # --------------------------------------------------
 # FIND STATES FILES
 # --------------------------------------------------
 
-state_files = list(REPO.rglob("states.txt"))
+state_files = sorted(
+    REPO.rglob("states.txt")
+)
 
-print(f"\nState files discovered: {len(state_files)}")
+print(
+    f"\nState files discovered: {len(state_files)}"
+)
 
 if not state_files:
-    raise RuntimeError("No states.txt files found.")
+
+    print("\nAvailable directories:")
+
+    try:
+        for p in REPO.iterdir():
+            print(" -", p.name)
+    except Exception:
+        pass
+
+    raise RuntimeError(
+        "No states.txt files found."
+    )
 
 
 # --------------------------------------------------
