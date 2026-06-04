@@ -24,7 +24,7 @@ from networkx.algorithms.community import greedy_modularity_communities
 POWER_ROOT = (
     Path(__file__)
     .resolve()
-    .parents[4]
+    .parents[3]
 )
 
 OUTPUT_DIR = (
@@ -46,8 +46,11 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 GRAPH_FILE = INPUT_DIR / "atlas_state_graph.graphml"
 
 print()
+print("POWER_ROOT ->", POWER_ROOT)
+print()
 print("Graph  ->", GRAPH_FILE)
 print("Exists ->", GRAPH_FILE.exists())
+print()
 print("Output ->", OUTPUT_DIR)
 print()
 
