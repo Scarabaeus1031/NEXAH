@@ -123,16 +123,17 @@ for i in domain_ids:
         if j <= i:
             continue
 
-        dist = transport.loc[str(i), str(j)] \
-            if str(i) in transport.index.astype(str) \
-            else transport.loc[i, j]
+        try:
+            dist = transport.loc[i, j]
+        except KeyError:
+            dist = transport.loc[str(i), str(j)]
 
         if pd.isna(dist):
             continue
 
         G.add_edge(
-            i,
-            j,
+            int(i),
+            int(j),
             weight=float(dist)
         )
 
