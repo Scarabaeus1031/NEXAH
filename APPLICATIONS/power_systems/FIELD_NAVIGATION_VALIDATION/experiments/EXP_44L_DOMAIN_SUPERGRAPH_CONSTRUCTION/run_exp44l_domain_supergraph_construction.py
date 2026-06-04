@@ -290,6 +290,24 @@ matrix = nx.to_numpy_array(
     weight="weight"
 )
 
+# ============================================================
+# SAVE MATRIX FOR EXP_44M
+# ============================================================
+
+matrix_df = pd.DataFrame(
+    matrix,
+    index=list(G.nodes()),
+    columns=list(G.nodes())
+)
+
+matrix_df.to_csv(
+    OUTDIR / "exp44l_supergraph_matrix.csv"
+)
+
+# ============================================================
+# PLOT MATRIX
+# ============================================================
+
 plt.imshow(
     matrix,
     aspect="auto"
