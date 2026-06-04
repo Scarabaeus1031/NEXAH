@@ -1,0 +1,26 @@
+
+EXP_41 WARNING CHAIN VALIDATION
+==================================================
+
+Runs Processed: 24
+
+Chain Counts
+--------------------
+SAFE_COLLAPSED: 17
+SAFE_CRITICAL_SAFE: 16
+WARNING_CRITICAL: 17
+CRITICAL_COLLAPSED: 4
+
+Warning Survival
+--------------------
+WARNING -> SAFE: 0.500
+WARNING -> CRITICAL: 0.210
+
+Critical Survival
+--------------------
+CRITICAL -> SAFE: 0.486
+CRITICAL -> COLLAPSED: 0.008
+
+Interpretation
+--------------
+EXP_41 validates whether historical warning-state sequences form a structured degradation chain.
