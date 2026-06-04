@@ -41,38 +41,71 @@ import matplotlib.pyplot as plt
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import StandardScaler
 
-
 # ==========================================================
+
 # PATHS
+
 # ==========================================================
 
 POWER_ROOT = (
+
     Path(__file__)
+
     .resolve()
-    .parents[2]
-)
 
-OUTPUT_DIR = (
-    POWER_ROOT
-    / "FIELD_NAVIGATION_VALIDATION"
-    / "outputs"
-    / "EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION"
-)
+    .parents[3]
 
-OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+)
 
 DATASET = (
+
     POWER_ROOT
+
     / "FIELD_NAVIGATION_VALIDATION"
+
     / "outputs"
+
     / "EXP_34_CONTROL_EFFORT_ESTIMATION"
+
     / "exp34_control_effort_table.csv"
+
 )
 
-print("Dataset ->", DATASET)
-print("Exists  ->", DATASET.exists())
-print("Output  ->", OUTPUT_DIR)
+OUTPUT = (
 
+    POWER_ROOT
+
+    / "FIELD_NAVIGATION_VALIDATION"
+
+    / "outputs"
+
+    / "EXP_44D_ATLAS_STATE_GRAPH_RECONSTRUCTION"
+
+)
+
+OUTPUT.mkdir(
+
+    parents=True,
+
+    exist_ok=True
+
+)
+
+print()
+
+print("POWER_ROOT ->", POWER_ROOT)
+
+print()
+
+print("Dataset ->", DATASET)
+
+print("Exists  ->", DATASET.exists())
+
+print()
+
+print("Output  ->", OUTPUT)
+
+print()
 
 # ==========================================================
 # LOAD DATA
