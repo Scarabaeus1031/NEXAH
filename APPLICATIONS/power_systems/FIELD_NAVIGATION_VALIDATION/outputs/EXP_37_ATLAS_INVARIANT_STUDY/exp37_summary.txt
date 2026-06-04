@@ -1,0 +1,16 @@
+EXP_37 ATLAS INVARIANT STUDY
+===========================
+
+Objective:
+Investigate whether atlas structures persist across multiple IEEE benchmark systems.
+
+Questions:
+- Do basins persist?
+- Do gates persist?
+- Do transport corridors persist?
+- Does a backbone emerge?
+- Does recovery structure emerge?
+
+Current status:
+IEEE39 populated.
+Remaining systems pending extraction.
