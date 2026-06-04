@@ -251,13 +251,13 @@ Directly compare Atlas spectral structure against Koopman spectral structure.
 
 ## Visuals
 
-### Atlas vs Koopman Spectrum
+### Spectrum Comparison
 
-![Atlas vs Koopman Spectrum](outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_atlas_vs_koopman_spectrum.png)
+![Spectrum Comparison](outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_spectrum_comparison.png)
 
-### Spectral Alignment
+### Alignment Scatter
 
-![Spectral Alignment](outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_spectral_alignment.png)
+![Alignment Scatter](outputs/EXP_44F_TRUE_ATLAS_KOOPMAN_CROSS_VALIDATION/exp44f_alignment_scatter.png)
 
 ## Interpretation
 
