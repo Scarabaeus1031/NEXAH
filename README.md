@@ -152,7 +152,42 @@ Current experiments demonstrate:
 
 → See:
 
-`APPLICATIONS/power_systems/README.md`
+→ See:
+
+[`APPLICATIONS/power_systems/README.md`](APPLICATIONS/power_systems/README.md)
+
+---
+
+### Recent Power-System Milestones
+
+Recent experiments extended the framework beyond atlas discovery toward operational navigation and historical dynamics reconstruction.
+
+Highlights include:
+
+- Atlas Discovery (EXP_01–EXP_29)
+- Transition Prediction (EXP_30–EXP_31)
+- Early Warning Detection (EXP_32)
+- Recovery Navigation (EXP_33–EXP_35)
+- Atlas Universality Studies (EXP_37B–EXP_37F)
+- Historical Atlas Reconstruction (EXP_38–EXP_40)
+- Recovery Archetype Discovery (EXP_41–EXP_42)
+- Oscillation Dynamics Analysis (EXP_43)
+
+Current evidence supports:
+
+```text
+Atlas Discovery
+        ↓
+Prediction
+        ↓
+Recovery
+        ↓
+Control
+        ↓
+Reconstruction
+```
+
+The power-system application currently represents the most mature validation environment within NEXAH.
 
 ---
 
@@ -574,7 +609,10 @@ Interpretation:
 ✔ comparative visualization  
 ✔ cross-system comparisons  
 ✔ parameter-driven transition analysis
-
+✔ atlas reconstruction from historical archives
+✔ warning-state transition analysis
+✔ recovery archetype discovery
+✔ oscillation dynamics analysis
 ---
 
 # ⚠️ Scientific Position
