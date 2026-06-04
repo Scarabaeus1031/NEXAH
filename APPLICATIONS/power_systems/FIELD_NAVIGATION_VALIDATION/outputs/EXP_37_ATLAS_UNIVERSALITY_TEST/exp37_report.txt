@@ -1,0 +1,23 @@
+EXP_37 ATLAS UNIVERSALITY TEST
+=============================
+
+Systems analyzed: 9
+
+Structures evaluated:
+- basins
+- gates
+- corridors
+- backbone
+- recovery
+
+basins: 1/9 systems
+gates: 1/9 systems
+corridors: 1/9 systems
+backbone: 1/9 systems
+recovery: 1/9 systems
+
+Mean Universality Score: 0.56/5
+
+Current Status:
+IEEE39 populated.
+Remaining systems pending atlas extraction.
