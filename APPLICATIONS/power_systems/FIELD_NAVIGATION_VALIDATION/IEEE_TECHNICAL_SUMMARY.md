@@ -52,7 +52,7 @@ This figure summarizes EXP_38–EXP_40 and demonstrates that historical reposito
 
 ## Figure 3 — Recovery Archetypes & Oscillation Dynamics
 
-![Recovery Archetypes and Oscillation Dynamics](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-RECOVERY_ARCHETYPES-OSCILLATION DYNAMICS.png)
+![Recovery Archetypes and Oscillation Dynamics](./outputs/diagrams/NEXAH_STATE_NAVIGATION-RECOVERY_ARCHETYPES-OSCILLATION_DYNAMICS.png)
 
 This figure summarizes EXP_41–EXP_43 and visualizes degradation chains, recovery archetypes and oscillatory state dynamics recovered from historical archives.
 
