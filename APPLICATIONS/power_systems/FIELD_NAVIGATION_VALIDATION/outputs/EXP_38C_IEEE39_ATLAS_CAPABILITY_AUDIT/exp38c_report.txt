@@ -1,0 +1,23 @@
+EXP_38C IEEE39 ATLAS CAPABILITY AUDIT
+==================================================
+
+Ready Layers: 4
+Partial Layers: 0
+Missing Layers: 4
+
+Layer Status
+------------
+Atlas Structure: READY
+Basin Detection: READY
+State Classification: READY
+Transition Network: MISSING
+PCA Geometry: MISSING
+Field Geometry: READY
+Early Warning: MISSING
+Recovery Layer: MISSING
+
+Interpretation
+--------------
+READY   -> reconstruction possible
+PARTIAL -> reconstruction possible with gaps
+MISSING -> missing source assets
