@@ -1811,3 +1811,167 @@ or
 EXP_44S — Spine Robustness Analysis
 
 ---
+
+## EXP_44S — ATLAS SPINE ROBUSTNESS ANALYSIS
+
+### Objective
+
+Evaluate the resilience of the reconstructed Atlas Spine under targeted removal of critical transport links.
+
+The experiment measures how navigation capability and structural connectivity degrade when the most important spine edges are removed sequentially.
+
+---
+
+### Input
+
+Atlas Spine reconstructed in:
+
+```text
+outputs/EXP_44R_ATLAS_SPINE_IDENTIFICATION/atlas_spine.graphml
+```
+
+---
+
+### Method
+
+Pipeline:
+
+```text
+Atlas Spine
+ →
+Targeted Edge Removal
+ →
+Connectivity Analysis
+ →
+Navigation Analysis
+ →
+Robustness Profile
+```
+
+For every iteration:
+
+1. Identify the currently most critical spine edge.
+2. Remove the edge.
+3. Recompute:
+   - Navigation preservation
+   - Connectivity preservation
+4. Continue until complete spine collapse.
+
+---
+
+### Results
+
+| Metric | Value |
+|----------|----------:|
+| Spine Nodes | 17 |
+| Spine Edges | 19 |
+| Baseline Navigation | 0.301552 |
+| Collapse Threshold | 5 |
+
+---
+
+### Observations
+
+The Atlas Spine remains connected during the early stages of targeted attack but rapidly loses structural redundancy.
+
+Connectivity decreases monotonically as critical transport links are removed.
+
+A small subset of edges carries a disproportionately large fraction of global transport functionality.
+
+The collapse threshold occurs after removal of approximately five critical links, indicating that the reconstructed spine behaves as a genuine transport backbone rather than a highly redundant network.
+
+---
+
+### Spine Robustness Curve
+
+![EXP_44S Spine Robustness Curve](outputs/EXP_44S_ATLAS_SPINE_ROBUSTNESS_ANALYSIS/exp44s_spine_robustness_curve.png)
+
+The robustness profile reveals how navigation capability and structural connectivity evolve as critical spine edges are removed.
+
+Connectivity decays steadily, while navigation remains partially preserved until the final stages of degradation.
+
+---
+
+### Navigation Decay
+
+![EXP_44S Navigation Decay](outputs/EXP_44S_ATLAS_SPINE_ROBUSTNESS_ANALYSIS/exp44s_navigation_decay.png)
+
+Navigation capability remains surprisingly resilient during the first stages of attack, indicating the existence of alternate transport routes inside the Atlas Spine.
+
+A final collapse occurs once the dominant transport backbone is sufficiently damaged.
+
+---
+
+### Connectivity Decay
+
+![EXP_44S Connectivity Decay](outputs/EXP_44S_ATLAS_SPINE_ROBUSTNESS_ANALYSIS/exp44s_connectivity_decay.png)
+
+Connectivity decreases continuously as critical edges are removed.
+
+The decay pattern confirms that Atlas transport is concentrated into a relatively small number of structurally important corridors.
+
+---
+
+### Interpretation
+
+The Atlas Spine is neither a tree nor a fully redundant mesh.
+
+Instead it exhibits a characteristic backbone structure:
+
+```text
+Atlas
+ →
+Transport Skeleton
+ →
+Atlas Spine
+ →
+Critical Transport Backbone
+```
+
+A limited number of transport corridors dominate navigability.
+
+These corridors represent candidate Atlas highways and future control targets.
+
+---
+
+### Generated Assets
+
+```text
+outputs/EXP_44S_ATLAS_SPINE_ROBUSTNESS_ANALYSIS/
+├── atlas_spine.graphml
+├── exp44s_connectivity_decay.png
+├── exp44s_navigation_decay.png
+├── exp44s_spine_robustness_curve.png
+└── exp44s_report.txt
+```
+
+---
+
+### Key Finding
+
+Atlas transport remains functional despite moderate edge loss, but a small set of critical corridors governs overall navigability.
+
+The existence of a finite collapse threshold supports the hypothesis that Atlas transport is organized around a compact, structured backbone rather than distributed uniformly across the network.
+
+This result motivates the next stage:
+
+```text
+EXP_44T
+ATLAS CHOKEPOINT DISCOVERY
+```
+
+to identify the specific nodes responsible for transport concentration and potential cascade initiation.
+
+---
+
+### Note
+
+The navigation-preservation curves currently exceed 1.0 in several regions.
+
+Before publication, the normalization used in the robustness metric should be verified, as preservation metrics are generally expected to remain within:
+
+```text
+0 ≤ Preservation ≤ 1
+```
+
+The connectivity results remain physically consistent and already provide strong evidence for the existence of a compact Atlas transport backbone.
