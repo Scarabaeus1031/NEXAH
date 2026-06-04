@@ -1465,15 +1465,15 @@ Domain 14
 
 ### Atlas Highway Matrix
 
-![Atlas Highway Matrix](outputs/EXP_44P_ATLAS_HIGHWAY_EXTRACTION/exp44p_highway_matrix.png)
+![Atlas Highway Matrix](outputs/EXP_44P_ATLAS_HIGHWAY_DETECTION/exp44p_highway_matrix.png)
 
 ### Atlas Highway Network
 
-![Atlas Highway Network](outputs/EXP_44P_ATLAS_HIGHWAY_EXTRACTION/exp44p_highway_network.png)
+![Atlas Highway Network](outputs/EXP_44P_ATLAS_HIGHWAY_DETECTION/exp44p_highway_network.png)
 
-### Strongest Atlas Highways
+### Strongest Highway Ranking
 
-![Strongest Atlas Highways](outputs/EXP_44P_ATLAS_HIGHWAY_EXTRACTION/exp44p_highway_ranking.png)
+![Strongest Highway Ranking](outputs/EXP_44P_ATLAS_HIGHWAY_DETECTION/exp44p_highway_ranking.png)
 
 ## Key Findings
 
