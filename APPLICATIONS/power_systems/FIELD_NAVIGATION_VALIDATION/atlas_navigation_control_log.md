@@ -3246,5 +3246,256 @@ early-warning layer.
 
 ---
 
+# Finding 29 — Recovery Pathways Dominate Historical Warning Dynamics
+
+## EXP_41 — Warning Chain Validation
+
+### Objective
+
+EXP_40 demonstrated that warning states frequently appear before collapse events.
+
+However, a critical question remained:
+
+```text
+Do warning states usually continue toward collapse,
+
+or do they recover?
+```
+
+EXP_41 reconstructs historical warning-state chains from archived NEXAH state sequences.
+
+The objective is to determine whether degradation follows a persistent collapse pathway or whether recovery dominates the observed dynamics.
+
+---
+
+## Key Result
+
+Historical warning dynamics are dominated by recovery rather than collapse.
+
+Observed probabilities:
+
+```text
+WARNING → SAFE      50.0%
+WARNING → CRITICAL  21.0%
+
+CRITICAL → SAFE     48.6%
+CRITICAL → COLLAPSED 0.8%
+```
+
+The most common outcome of both WARNING and CRITICAL states is a return toward SAFE operation.
+
+---
+
+## Visual Evidence
+
+### Degradation Flow
+
+![](./outputs/EXP_41_WARNING_CHAIN_VALIDATION/exp41_degradation_sankey.png)
+
+The degradation-flow diagram provides the strongest evidence of the experiment.
+
+Observed behavior:
+
+```text
+WARNING → SAFE
+```
+
+is substantially more common than:
+
+```text
+WARNING → COLLAPSED
+```
+
+Likewise:
+
+```text
+CRITICAL → SAFE
+```
+
+dominates:
+
+```text
+CRITICAL → COLLAPSED
+```
+
+The overwhelming majority of warning-chain activity flows back toward safe operation rather than toward collapse.
+
+---
+
+### Warning Chain Network
+
+![](./outputs/EXP_41_WARNING_CHAIN_VALIDATION/exp41_chain_network.png)
+
+The reconstructed network reveals a highly connected warning-state system.
+
+Several features emerge:
+
+- SAFE possesses strong self-persistence
+- WARNING contains recovery pathways
+- CRITICAL contains recovery pathways
+- COLLAPSED behaves largely as a terminal state
+
+Most importantly:
+
+```text
+SAFE
+↔
+WARNING
+
+SAFE
+↔
+CRITICAL
+```
+
+appear as recurring bidirectional relationships.
+
+The network therefore behaves more like a recovery ecosystem than a one-way degradation chain.
+
+---
+
+### Chain Frequency
+
+![](./outputs/EXP_41_WARNING_CHAIN_VALIDATION/exp41_chain_frequency.png)
+
+Observed chain counts:
+
+```text
+SAFE_COLLAPSED      = 17
+SAFE_CRITICAL_SAFE = 16
+WARNING_CRITICAL   = 17
+CRITICAL_COLLAPSED = 4
+```
+
+A particularly important observation is:
+
+```text
+SAFE_CRITICAL_SAFE
+```
+
+appears almost as frequently as:
+
+```text
+WARNING_CRITICAL
+```
+
+while:
+
+```text
+CRITICAL_COLLAPSED
+```
+
+is comparatively rare.
+
+This indicates that many critical excursions recover rather than collapse.
+
+---
+
+## Interpretation
+
+Prior to EXP_41, the working hypothesis resembled:
+
+```text
+SAFE
+↓
+WARNING
+↓
+CRITICAL
+↓
+COLLAPSED
+```
+
+The reconstructed historical dynamics suggest a different structure:
+
+```text
+          SAFE
+         ↗   ↘
+
+   WARNING   CRITICAL
+
+         ↘   ↗
+          SAFE
+
+             ↓
+        occasional
+             ↓
+
+        COLLAPSED
+```
+
+The warning-state system therefore appears to be governed primarily by recovery loops.
+
+---
+
+## Atlas Interpretation
+
+EXP_40 demonstrated:
+
+```text
+Warning states appear before collapse.
+```
+
+EXP_41 refines this conclusion:
+
+```text
+Warning states alone
+do not imply collapse.
+```
+
+Instead:
+
+```text
+Warning
+↓
+Recovery
+```
+
+appears substantially more common than:
+
+```text
+Warning
+↓
+Collapse
+```
+
+This behavior is consistent with:
+
+- EXP_32 Early Warning
+- EXP_33 Control Vectors
+- EXP_35 Recovery Corridors
+
+all of which suggested the existence of embedded recovery structure inside the atlas.
+
+---
+
+## Conclusion
+
+EXP_41 provides the first repository-scale evidence that historical warning dynamics are dominated by recovery pathways.
+
+The observed warning-state system behaves less like a degradation chain and more like a recovery network.
+
+Current evidence supports:
+
+```text
+SAFE
+↔
+WARNING
+
+SAFE
+↔
+CRITICAL
+```
+
+as dominant dynamics, while direct collapse transitions remain comparatively rare.
+
+This establishes the first evidence for:
+
+```text
+Recovery Dominance
+```
+
+as an emergent property of historical NEXAH state dynamics.
+
+---
+
 
 
