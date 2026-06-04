@@ -1,0 +1,43 @@
+EXP_39B TRANSITION DATA AUDIT
+==================================================
+
+Assets Found: 67
+
+Keyword Counts
+--------------
+state: 26
+states: 25
+trajectory: 0
+trajectories: 0
+transition: 6
+transitions: 1
+history: 0
+sequence: 0
+timeline: 0
+controller: 7
+replay: 0
+action: 31
+actions: 31
+
+Top Candidate Files
+-------------------
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_v5_closed_loop_steering_20260413_220034/controller_actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_v4_closed_loop_20260413_215300/controller_actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/controller_runs/controller_replay_20260413_214411/controller_actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/states.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_223816/actions_adaptive.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_222218/actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_222218/states.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_223817/actions_base.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_223817/actions_adaptive.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_223817/states.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_212535/actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_212535/states.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_194115/states.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_202739/actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_202739/states.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_223816/actions_base.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_223816/states.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieee9/results/run_20260412_200703/actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieeeX/results/run_ieee300_20260413_015347/actions.txt
+/Users/tho2020/Documents/GitHub/NEXAH/APPLICATIONS/power_systems/nexah_ieeeX/results/run_ieee300_20260413_015347/states.txt
