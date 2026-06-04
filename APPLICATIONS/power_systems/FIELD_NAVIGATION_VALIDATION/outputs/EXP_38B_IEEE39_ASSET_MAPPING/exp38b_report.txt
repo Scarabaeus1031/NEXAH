@@ -1,0 +1,20 @@
+EXP_38B IEEE39 ASSET MAPPING
+==================================================
+
+Assets Found: 26
+
+Category Counts
+----------------
+field: 9
+geometry: 8
+atlas: 5
+basin: 2
+states: 2
+
+Reconstruction Readiness
+------------------------
+states: YES
+atlas: YES
+basin: YES
+transition: NO
+pca: NO
