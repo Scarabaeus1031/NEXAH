@@ -1,0 +1,21 @@
+
+EXP_40 EARLY WARNING RECONSTRUCTION
+==================================================
+
+Runs Processed: 24
+
+Unique Transitions: 15
+Collapse Pathways: 21
+
+Most Common Transition:
+SAFE -> SAFE (1042)
+
+Warning Lead Times
+------------------
+Mean: 81.35
+Median: 92.00
+Max: 96
+
+Interpretation
+--------------
+EXP_40 reconstructs historical warning-to-collapse behavior from archived NEXAH state sequences.
