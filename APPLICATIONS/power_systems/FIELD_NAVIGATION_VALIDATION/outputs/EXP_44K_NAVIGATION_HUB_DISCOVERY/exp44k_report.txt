@@ -1,0 +1,46 @@
+
+EXP_44K NAVIGATION HUB DISCOVERY
+==================================================
+
+Domains
+-------
+17
+
+Navigation Routes
+-----------------
+113
+
+Top Hub Domain
+--------------
+1
+
+Top Hub Score
+-------------
+0.000
+
+Interpretation
+--------------
+Navigation routes were analyzed to identify
+Atlas transport hubs.
+
+Hub score measures how often a domain acts
+as a transit corridor between other domains.
+
+This experiment reveals the first Atlas
+navigation backbone.
+
+Pipeline
+
+Graph
+ ->
+Flow
+ ->
+Coherence
+ ->
+Domains
+ ->
+Geodesic Transport
+ ->
+Navigation
+ ->
+Hub Discovery
