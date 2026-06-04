@@ -1,0 +1,40 @@
+
+EXP_44Q TRANSPORT SKELETON EXTRACTION
+==================================================
+
+Original Edges
+--------------
+113
+
+Skeleton Edges
+--------------
+40
+
+Compression Ratio
+-----------------
+2.83
+
+Navigation Preservation
+------------------------
+0.702819
+
+Connected Components
+--------------------
+1
+
+Interpretation
+--------------
+A sparse transport skeleton was extracted
+from the Atlas Domain Supergraph.
+
+Pipeline
+
+Domain Supergraph
+ ->
+Highway Network
+ ->
+Transport Skeleton
+
+The experiment evaluates whether Atlas
+navigation can be preserved under
+aggressive transport compression.
