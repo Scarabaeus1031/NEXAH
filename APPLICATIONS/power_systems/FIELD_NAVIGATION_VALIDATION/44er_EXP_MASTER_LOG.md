@@ -1057,3 +1057,257 @@ The Atlas now exhibits:
 
 The reconstructed Atlas behaves as a navigable dynamical object.
 
+---
+
+---
+
+# EXP_44J — Navigation Engine
+
+## Goal
+
+Use the reconstructed Atlas as an operational navigation engine between coherent transport domains.
+
+## Results
+
+### Domains
+
+17
+
+### Routes Tested
+
+113
+
+### Mean Hop Count
+
+13.115
+
+### Shortest Route
+
+1
+
+### Longest Route
+
+28
+
+## Visuals
+
+### Navigation Domain Anchors
+
+![Navigation Domain Anchors](outputs/EXP_44J_NAVIGATION_ENGINE/exp44j_navigation_map.png)
+
+### Best Navigation Routes
+
+![Best Navigation Routes](outputs/EXP_44J_NAVIGATION_ENGINE/exp44j_best_routes.png)
+
+## Key Findings
+
+The Atlas can be used as an operational navigation structure.
+
+Coherent transport domains are connected through navigable routes that can be traversed directly using Atlas geometry.
+
+A total of 113 valid navigation routes were identified between coherent domains.
+
+The observed navigation structure exhibits:
+
+- short local transport corridors
+- medium-range transport pathways
+- long-range domain connections
+- hierarchical route organization
+
+The distribution of route lengths is not uniform.
+
+Several route-length plateaus appear, suggesting preferred transport scales within Atlas space.
+
+This stair-like organization suggests that Atlas navigation may occur through discrete transport layers rather than through a continuous distance spectrum.
+
+## Significance
+
+This experiment represents the first successful operational use of the Atlas as a navigation engine.
+
+The Atlas is no longer only a reconstructed structure.
+
+It now supports routing between coherent dynamical regions.
+
+Pipeline:
+
+Graph → Flow → Coherence → Domains → Geodesic Transport → Navigation
+
+---
+
+# EXP_44K — Navigation Hub Discovery
+
+## Goal
+
+Identify whether navigation routes pass through dominant intermediate domain hubs.
+
+## Results
+
+### Domains
+
+17
+
+### Navigation Routes
+
+113
+
+### Top Hub Score
+
+0.000
+
+## Key Findings
+
+No dominant intermediate hub was detected on the current navigation-route representation.
+
+All domain transit counts were zero.
+
+This indicates that the navigation data from EXP_44J does not yet encode intermediate domain transitions explicitly.
+
+## Interpretation
+
+EXP_44K did not reveal a hub-dominated navigation backbone.
+
+Instead, it suggested that the correct level for hub analysis is not the raw route-anchor level, but the higher-order domain-network level.
+
+## Significance
+
+EXP_44K served as a diagnostic experiment.
+
+It motivated the construction of a Domain Supergraph in EXP_44L.
+
+---
+
+# EXP_44L — Domain Supergraph Construction
+
+## Goal
+
+Elevate coherent Atlas domains into a higher-order transport network and investigate the large-scale topology of Atlas transport.
+
+## Results
+
+### Domains
+
+17
+
+### Edges
+
+113
+
+### Density
+
+0.8309
+
+### Connected Components
+
+1
+
+### Top Betweenness Domain
+
+16
+
+### Betweenness
+
+0.105556
+
+## Visuals
+
+### Domain Supergraph
+
+![Domain Supergraph](outputs/EXP_44L_DOMAIN_SUPERGRAPH_CONSTRUCTION/exp44l_supergraph_map.png)
+
+### Betweenness Centrality
+
+![Betweenness Centrality](outputs/EXP_44L_DOMAIN_SUPERGRAPH_CONSTRUCTION/exp44l_domain_centrality_ranking.png)
+
+### Supergraph Matrix
+
+![Supergraph Matrix](outputs/EXP_44L_DOMAIN_SUPERGRAPH_CONSTRUCTION/exp44l_supergraph_matrix.png)
+
+## Key Findings
+
+The coherent transport domains can be elevated into a higher-order network.
+
+The resulting Domain Supergraph is highly connected:
+
+- 17 domains
+- 113 transport edges
+- density ≈ 83%
+- a single connected component
+
+The Atlas therefore possesses a global transport topology.
+
+The most important transport mediator is Domain 16.
+
+Observed betweenness centrality:
+
+0.105556
+
+indicating that Domain 16 acts as a bridge between otherwise distant transport regions.
+
+## Structural Observation
+
+The Supergraph visualization reveals a remarkable geometric organization.
+
+Two overlapping pyramidal transport structures appear to emerge:
+
+- a lower transport pyramid anchored around the central transport domains
+- an upper transport pyramid anchored around Domains 4 and 15
+
+The two structures intersect through the central Atlas transport region.
+
+This produces a crossed transport geometry resembling two interlocking transport hierarchies.
+
+No causal interpretation is claimed.
+
+The pattern is recorded as a structural observation for follow-up analysis.
+
+## Significance
+
+This experiment establishes the first Atlas Domain Supergraph.
+
+The Atlas now exists simultaneously as:
+
+State Cloud  
+↓  
+State Graph  
+↓  
+Flow Field  
+↓  
+Coherent Domains  
+↓  
+Transport Network  
+↓  
+Domain Supergraph  
+
+This represents the first higher-order transport representation of the reconstructed Atlas.
+
+Pipeline:
+
+Graph → Flow → Coherence → Domains → Geodesic Transport → Domain Supergraph
+
+---
+
+# Note on GraphML Output
+
+The `.graphml` file generated by EXP_44L is not HTML.
+
+It is a GraphML representation of the Domain Supergraph.
+
+In this file:
+
+- nodes represent coherent Atlas domains
+- edges represent geodesic transport connections
+- edge weight represents transport distance
+- node size represents domain size
+- node coherence represents mean domain coherence
+- pc1 and pc2 represent domain position in Atlas space
+
+EXP_44D produced a state graph with 540 state nodes.
+
+EXP_44L compresses this into a higher-order domain graph with 17 meta-nodes.
+
+This marks the first Atlas-level compression:
+
+540 states → 17 coherent transport domains
+
+The Domain Supergraph is therefore a compact transport architecture of the reconstructed Atlas.
+
