@@ -1401,5 +1401,115 @@ EXP_44M — Transport Topology Invariance Validation
 
 ---
 
+## Key Findings
 
+The Atlas admits a highly compressed representation through coherent-domain aggregation.
+
+Compression reduced:
+
+- 540 state nodes to 17 domains
+- 2700 edges to 113 transport links
+
+while preserving:
+
+- global connectivity
+- transport accessibility
+- dominant spectral organization
+
+Degree-distribution comparison suggests that the Domain Supergraph retains the primary connectivity structure of the original Atlas.
+
+Spectral comparison indicates that large-scale transport geometry is preserved while higher-order local detail is compressed.
+
+A dominant coherent domain containing 232 nodes was identified, representing approximately 76.8% of all coherent-domain nodes.
+
+This suggests a hierarchical Atlas organization consisting of:
+
+State Graph
+→ Coherent Domains
+→ Transport Skeleton
+→ Navigation Layer
+
+## Visuals
+
+### Degree Distribution Comparison
+
+![Degree Distribution Comparison](outputs/EXP_44N_ATLAS_COMPRESSION_VALIDATION/exp44n_degree_distribution_comparison.png)
+
+The Domain Supergraph degree distribution remains concentrated within the dominant connectivity regime of the original Atlas graph.
+
+This suggests that coherent-domain compression preserves the primary transport backbone rather than generating an artificial network structure.
+
+---
+
+### Spectral Comparison
+
+![Spectral Comparison](outputs/EXP_44N_ATLAS_COMPRESSION_VALIDATION/exp44n_spectral_comparison.png)
+
+The dominant spectral modes remain visible after compression.
+
+Higher-order modes are progressively removed, indicating that the Supergraph preserves large-scale transport geometry while filtering local structural detail.
+
+---
+
+### Domain Size Distribution
+
+![Domain Size Distribution](outputs/EXP_44N_ATLAS_COMPRESSION_VALIDATION/exp44n_domain_size_distribution.png)
+
+A dominant coherent transport domain containing 232 nodes was identified.
+
+The remaining domains form a collection of smaller satellite structures surrounding the primary transport basin.
+
+This suggests a strongly hierarchical Atlas organization.
+
+---
+
+### Compression Summary
+
+![Compression Summary](outputs/EXP_44N_ATLAS_COMPRESSION_VALIDATION/exp44n_compression_summary.png)
+
+The Atlas was compressed from:
+
+- 540 state nodes
+- 2700 edges
+
+to:
+
+- 17 coherent domains
+- 113 transport links
+
+while preserving global connectivity.
+
+The resulting compression ratio exceeds 30:1 at the node level.
+
+## Key Findings
+
+The Atlas admits a highly compressed representation through coherent-domain aggregation.
+
+Compression reduced:
+
+- 540 state nodes to 17 domains
+- 2700 edges to 113 transport links
+
+while preserving:
+
+- global connectivity
+- transport accessibility
+- dominant spectral organization
+
+Degree-distribution comparison suggests that the Domain Supergraph retains the primary connectivity structure of the original Atlas.
+
+Spectral comparison indicates that large-scale transport geometry is preserved while higher-order local detail is compressed.
+
+A dominant coherent domain containing 232 nodes was identified, representing approximately 76.8% of all coherent-domain nodes.
+
+This suggests a hierarchical Atlas organization consisting of:
+
+State Graph
+→ Coherent Domains
+→ Transport Skeleton
+→ Navigation Layer
+
+The combined results of EXP_44M and EXP_44N indicate that the Atlas transport topology survives coherent-domain compression with no measurable loss of large-scale structure.
+
+---
 
