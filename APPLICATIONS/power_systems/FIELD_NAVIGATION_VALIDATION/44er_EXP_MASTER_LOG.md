@@ -1692,4 +1692,122 @@ Identify the minimal subset of domains and transport links responsible for maint
 
 ---
 
+---
 
+# EXP_44R — Atlas Spine Identification
+
+## Visuals
+
+### Atlas Spine
+
+![Atlas Spine](outputs/EXP_44R_ATLAS_SPINE_IDENTIFICATION/exp44r_spine_network.png)
+
+The Atlas Spine represents the minimal transport backbone extracted from the Atlas Transport Skeleton.
+
+Only the transport links with the highest navigation impact were retained.
+
+The resulting structure remains fully connected while substantially reducing network complexity.
+
+---
+
+### Edge Removal Impact Ranking
+
+![Edge Removal Impact Ranking](outputs/EXP_44R_ATLAS_SPINE_IDENTIFICATION/exp44r_edge_loss_ranking.png)
+
+Navigation loss was measured after removing each skeleton edge individually.
+
+A small number of edges dominate Atlas navigability.
+
+The strongest impact was observed for:
+
+- 9 ↔ 17
+- 10 ↔ 11
+- 6 ↔ 13
+- 1 ↔ 13
+
+indicating that navigation is concentrated along a limited set of critical transport links.
+
+---
+
+### Critical Spine Edges
+
+![Critical Spine Edges](outputs/EXP_44R_ATLAS_SPINE_IDENTIFICATION/exp44r_top_spine_edges.png)
+
+The dominant navigation-carrying edges form the core Atlas Spine.
+
+These links represent the highest-impact transport routes discovered within the compressed Atlas architecture.
+
+Several previously identified navigation hubs remain visible:
+
+- Domain 13
+- Domain 16
+- Domain 9
+
+suggesting that the spine emerges naturally around the principal transport centers discovered in EXP_44L and EXP_44Q.
+
+---
+
+## Key Findings
+
+The Atlas Skeleton was further reduced into a minimal navigation backbone.
+
+Compression reduced:
+
+- 40 Skeleton Edges
+- to 19 Spine Edges
+
+while preserving:
+
+- global connectivity
+- connected navigation structure
+- approximately 82.7% of skeleton navigability
+
+The resulting Spine reveals a highly concentrated transport architecture.
+
+Navigation is not uniformly distributed across the Atlas.
+
+Instead, a relatively small subset of transport links carries the majority of navigational functionality.
+
+Three domains emerge repeatedly as transport-critical structures:
+
+- Domain 13
+- Domain 16
+- Domain 9
+
+These domains act as primary routing centers connecting multiple regions of the Atlas.
+
+The strongest individual transport dependency was identified on:
+
+Domain 9 ↔ Domain 17
+
+whose removal produced the largest navigation degradation.
+
+---
+
+## Structural Interpretation
+
+The combined results of EXP_44L, EXP_44Q and EXP_44R suggest a hierarchical transport architecture:
+
+State Graph
+→ Coherent Domains
+→ Domain Supergraph
+→ Transport Skeleton
+→ Atlas Spine
+
+This hierarchy progressively removes local structural detail while preserving the dominant transport organization of the Atlas.
+
+The Atlas Spine therefore represents the deepest transport backbone identified so far within the reconstructed Atlas.
+
+## Status
+
+Validated structural result.
+
+Potential follow-up:
+
+EXP_44S — Atlas Chokepoint Validation
+
+or
+
+EXP_44S — Spine Robustness Analysis
+
+---
