@@ -92,6 +92,46 @@ Key questions addressed:
 
 ---
 
+# Theoretical Positioning
+
+NEXAH was developed independently from existing operator-theoretic and spectral reconstruction methods.
+
+To better understand its relationship to established dynamical-systems frameworks, additional theoretical analyses were performed.
+
+In particular, EXP_44F (Atlas–Koopman Cross Validation) revealed measurable alignment between:
+
+- reconstructed Atlas organization,
+- coherent transport domains,
+- and Koopman-derived spectral structure.
+
+Observed correspondences include:
+
+```text
+Koopman Mode Regions
+          ↔
+Atlas Domains
+
+Spectral Boundaries
+          ↔
+Atlas Gates
+
+Mode Switching
+          ↔
+Atlas Basin Transitions
+```
+
+The significance is not that NEXAH uses Koopman methods.
+
+The significance is that independent reconstruction approaches appear to recover related large-scale dynamical organization.
+
+This suggests that Atlas structure may reflect genuine system dynamics rather than a reconstruction artifact.
+
+Additional discussion is available in:
+
+- docs/mathematical_foundations.md
+- docs/theoretical_positioning.md
+
+---
 # Atlas Discovery
 
 ![Atlas Discovery](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and_STRUCTURAL_ORGANIZATION.png)
