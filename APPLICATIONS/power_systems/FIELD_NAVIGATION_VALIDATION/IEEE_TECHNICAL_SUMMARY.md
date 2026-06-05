@@ -269,6 +269,34 @@ The NEXAH framework currently demonstrates:
 
 ---
 
+# Theoretical Positioning
+
+A central question throughout the NEXAH validation program has been whether the recovered Atlas structure reflects genuine system dynamics or merely a reconstruction artifact.
+
+To address this question, NEXAH was compared against established dynamical-systems methodologies, including operator-theoretic approaches related to Koopman analysis.
+
+Notably, EXP_44F (Atlas–Koopman Cross Validation) revealed measurable alignment between independently reconstructed Atlas structures and Koopman-derived dynamical organization.
+
+Observed correspondences include:
+
+text Koopman Coherent Regions             ↔ Atlas Domains  Koopman Spectral Boundaries             ↔ Atlas Gates  Mode Switching Events             ↔ Atlas Basin Transitions  Slow Dynamical Manifolds             ↔ Atlas Transport Structure 
+
+The significance is not that NEXAH implements Koopman theory.
+
+Rather, independent reconstruction methodologies appear to recover related large-scale organizational features of the underlying dynamics.
+
+This observation provides preliminary evidence that the Atlas may represent an intrinsic property of system behavior rather than a framework-specific artifact.
+
+Further discussion is provided in:
+
+- docs/mathematical_foundations.md
+- docs/theoretical_positioning.md
+ :::  Und noch etwas:  In deinem aktuellen Technical Summary fehlt EXP_44F komplett.  Ich würde in der Phasen-Tabelle sogar ergänzen: text
+| EXP_44A – EXP_44P | Cross Validation & Structural Audits |
+| EXP_44Q – EXP_44S | Transport Architecture Discovery |
+
+---
+
 # Remaining Open Questions
 
 Several major challenges remain:
