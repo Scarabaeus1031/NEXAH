@@ -21,14 +21,15 @@ Using IEEE power-system benchmarks, NEXAH converts high-dimensional operating tr
 - gates and bottlenecks,
 - recovery pathways.
 
-The framework evolved through four major stages:
+The framework evolved through five major stages:
 
 1. Structure Discovery
 2. Navigation & Operations
 3. Atlas-Guided Control
 4. Historical Dynamics Reconstruction
+5. Transport Architecture Discovery
 
-Across EXP_01–EXP_43, the results demonstrate that stability organization is not random but forms a coherent and navigable atlas.
+Across EXP_01–EXP_44S, the results demonstrate that stability organization is not random but forms a coherent, navigable and structurally organized atlas.
 
 ---
 
@@ -256,6 +257,16 @@ The NEXAH framework currently demonstrates:
 
 ✓ Oscillation Analysis
 
+✓ Transport Skeleton Extraction
+
+✓ Atlas Spine Identification
+
+✓ Transport Robustness Analysis
+
+✓ Collapse Threshold Detection
+
+✓ Critical Corridor Ranking
+
 ---
 
 # Remaining Open Questions
@@ -278,21 +289,6 @@ The central question is now:
 "Can atlas-guided decision making improve the operation of real systems?"
 
 ---
-
-# Conclusion
-
-Across EXP_01–EXP_43, NEXAH provides evidence that power-system operating states organize into a structured, navigable and partially recoverable stability atlas.
-
-The atlas supports:
-
-- discovery,
-- prediction,
-- recovery,
-- navigation,
-- control concepts,
-- historical reconstruction.
-
-The next stage is external validation and deployment on previously unseen systems.
 
 # Phase IV — Transport Architecture (EXP_44Q–EXP_44S)
 
@@ -335,7 +331,7 @@ Results:
 
 The atlas transport system is therefore not uniformly distributed.
 
-A relatively small transport backbone dominates movement across the atlas.
+A relatively small transport backbone carries the majority of atlas navigability.
 
 ### Atlas Spine Robustness (EXP_44S)
 
@@ -367,4 +363,20 @@ This figure summarizes EXP_44S.
 
 It visualizes transport robustness, collapse thresholds and vulnerability concentration inside the atlas transport architecture.
 
+---
+
+# Conclusion
+
+Across EXP_01–EXP_43, NEXAH provides evidence that power-system operating states organize into a structured, navigable and partially recoverable stability atlas.
+
+The atlas supports:
+
+- discovery,
+- prediction,
+- recovery,
+- navigation,
+- control concepts,
+- historical reconstruction.
+
+The next stage is external validation and deployment on previously unseen systems.
 
