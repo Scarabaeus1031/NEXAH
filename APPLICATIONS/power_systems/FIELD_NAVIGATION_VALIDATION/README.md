@@ -416,18 +416,23 @@ A new result of the current phase is that atlas transport is compressible into a
 
 Current Frontier
 
-EXP_44T — Atlas Chokepoint Discovery
-EXP_44U — Atlas Node Criticality Analysis
-EXP_44V — Cascade Gate Detection
-EXP_44W — Vulnerability Mapping
+EXP_44T  Atlas Chokepoint Discovery
+EXP_44U  Atlas Node Criticality Analysis
+EXP_44V  Cascade Gate Detection
+EXP_44W  Vulnerability Mapping
 
-The next frontier is atlas-guided intervention:
+Future Direction
 
-- chokepoint discovery,
-- node criticality analysis,
-- cascade gate detection,
-- vulnerability mapping,
-- real-world deployment.
+Transport Architecture
+        ↓
+Critical Nodes
+        ↓
+Cascade Gates
+        ↓
+Intervention Targets
+        ↓
+Atlas-Guided Control
+
 
 The central question is no longer:
 
