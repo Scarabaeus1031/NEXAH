@@ -279,7 +279,23 @@ Notably, EXP_44F (Atlas–Koopman Cross Validation) revealed measurable alignmen
 
 Observed correspondences include:
 
-text Koopman Coherent Regions             ↔ Atlas Domains  Koopman Spectral Boundaries             ↔ Atlas Gates  Mode Switching Events             ↔ Atlas Basin Transitions  Slow Dynamical Manifolds             ↔ Atlas Transport Structure 
+```text
+Koopman Coherent Regions
+            ↔
+Atlas Domains
+
+Koopman Spectral Boundaries
+            ↔
+Atlas Gates
+
+Mode Switching Events
+            ↔
+Atlas Basin Transitions
+
+Slow Dynamical Manifolds
+            ↔
+Atlas Transport Structure
+```
 
 The significance is not that NEXAH implements Koopman theory.
 
@@ -287,14 +303,13 @@ Rather, independent reconstruction methodologies appear to recover related large
 
 This observation provides preliminary evidence that the Atlas may represent an intrinsic property of system behavior rather than a framework-specific artifact.
 
+EXP_44F therefore represents an important theoretical bridge between NEXAH and established dynamical-systems analysis.
+
 Further discussion is provided in:
 
-- docs/mathematical_foundations.md
-- docs/theoretical_positioning.md
- :::  Und noch etwas:  In deinem aktuellen Technical Summary fehlt EXP_44F komplett.  Ich würde in der Phasen-Tabelle sogar ergänzen: text
-| EXP_44A – EXP_44P | Cross Validation & Structural Audits |
-| EXP_44Q – EXP_44S | Transport Architecture Discovery |
-
+- `docs/mathematical_foundations.md`
+- `docs/theoretical_positioning.md`
+  
 ---
 
 # Remaining Open Questions
