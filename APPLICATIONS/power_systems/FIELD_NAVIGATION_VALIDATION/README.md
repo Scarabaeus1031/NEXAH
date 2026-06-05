@@ -13,7 +13,7 @@ Instead of treating system behavior as a collection of isolated operating points
 - Recovery Anchors
 - Control Pathways
 
-The framework has been validated on IEEE benchmark power systems and demonstrates that operating states organize into coherent geometric structures rather than random state clouds.
+The framework has been validated on IEEE benchmark power systems and demonstrates that operating states organize into coherent geometric and transport structures rather than random state clouds.
 
 ---
 
@@ -45,7 +45,7 @@ The objective is not only to observe system behavior, but to discover actionable
 
 # Experimental Progression
 
-The NEXAH validation program currently consists of five major phases.
+The NEXAH validation program currently consists of six major phases.
 
 | Phase | Focus |
 |---------|---------|
@@ -87,6 +87,8 @@ Key questions addressed:
 ✅ Can collapse thresholds be measured?
 
 ✅ Can transport vulnerabilities be localized?
+
+✅ Can transport architecture be reconstructed?
 
 ---
 
@@ -303,7 +305,7 @@ Key results:
 
 - 17 spine nodes
 - 19 spine edges
-- collapse threshold ≈ 5 critical links
+- first observed collapse threshold ≈ 5 critical links
 - finite vulnerability structure
 
 The results demonstrate that atlas transport is concentrated into a limited number of critical corridors.
@@ -362,6 +364,7 @@ APPLICATIONS/
 | Transport Skeleton Extraction | ✅ |
 | Atlas Spine Identification | ✅ |
 | Transport Robustness Analysis | ✅ |
+| Transport Vulnerability Analysis | ✅ |
 | Control Framework | ✅ |
 | Real-Time Deployment | 🚧 |
 
@@ -373,15 +376,17 @@ NEXAH aims to transform complex-system operation from reactive monitoring toward
 
 ```text
 Observation
-      ↓
+     ↓
 Structure Discovery
-      ↓
+     ↓
 Navigation
-      ↓
+     ↓
 Prediction
-      ↓
+     ↓
 Recovery
-      ↓
+     ↓
+Transport Architecture
+     ↓
 Control
 ```
 
@@ -406,6 +411,15 @@ The framework now supports:
 The atlas is no longer only observable.
 
 It can be reconstructed, navigated, compressed into transport skeletons, reduced to transport spines, and analyzed for robustness.
+
+A new result of the current phase is that atlas transport is compressible into a sparse skeleton and a dominant transport spine while retaining a large fraction of navigability.
+
+Current Frontier
+
+EXP_44T — Atlas Chokepoint Discovery
+EXP_44U — Atlas Node Criticality Analysis
+EXP_44V — Cascade Gate Detection
+EXP_44W — Vulnerability Mapping
 
 The next frontier is atlas-guided intervention:
 
