@@ -45,7 +45,7 @@ The objective is not only to observe system behavior, but to discover actionable
 
 # Experimental Progression
 
-The NEXAH validation program currently consists of four major phases.
+The NEXAH validation program currently consists of five major phases.
 
 | Phase | Focus |
 |---------|---------|
@@ -53,12 +53,14 @@ The NEXAH validation program currently consists of four major phases.
 | EXP_09 – EXP_15 | Navigation Discovery |
 | EXP_16 – EXP_21 | Validation |
 | EXP_22 – EXP_36 | Atlas Operations & Control |
+| EXP_38 – EXP_43 | Historical Dynamics Reconstruction |
+| EXP_44Q – EXP_44S | Transport Architecture Discovery |
 
 ---
 
 # Current Status
 
-![Current Status](outputs/diagrams/NEXAH_STATE_NAVIGATION-CURRENT_STATUS_(EXP_01-EXP_24E).png)
+![Current Status](outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_VIII.png)
 
 Key questions addressed:
 
@@ -75,7 +77,17 @@ Key questions addressed:
 ✅ Can transitions be predicted?
 
 ✅ Can recovery be guided?
- 
+
+✅ Can transport skeletons be extracted?
+
+✅ Can dominant transport spines be identified?
+
+✅ Are transport corridors robust?
+
+✅ Can collapse thresholds be measured?
+
+✅ Can transport vulnerabilities be localized?
+
 ---
 
 # Atlas Discovery
@@ -260,6 +272,46 @@ that remain recoverable from historical state archives.
 
 ---
 
+# Transport Architecture Discovery
+
+![Atlas Transport Anatomy](outputs/diagrams/POSTER_9_ATLAS_TRANSPORT_ANATOMY.png)
+
+EXP_44Q–EXP_44R introduced a new layer of atlas analysis:
+
+Transport Architecture.
+
+Instead of studying basin geometry alone, NEXAH reconstructs the transport infrastructure connecting basin territories.
+
+Recovered structures include:
+
+- Transport Skeletons
+- Atlas Spines
+- Critical Corridors
+- Transport Hierarchies
+
+The resulting transport graph represents the first explicit connectivity model of atlas navigation.
+
+---
+
+# Atlas Robustness & Vulnerability
+
+![Atlas Robustness & Vulnerability](outputs/diagrams/POSTER_10_ATLAS_ROBUSTNESS_and_VULNERABILITY.png)
+
+EXP_44S investigated the robustness of the Atlas Spine under targeted attack.
+
+Key results:
+
+- 17 spine nodes
+- 19 spine edges
+- collapse threshold ≈ 5 critical links
+- finite vulnerability structure
+
+The results demonstrate that atlas transport is concentrated into a limited number of critical corridors.
+
+This establishes the first measurable transport vulnerability layer inside the NEXAH atlas.
+
+---
+
 # Core Contributions
 
 NEXAH demonstrates that:
@@ -271,7 +323,12 @@ NEXAH demonstrates that:
 - Future transitions can be predicted.
 - Recovery pathways emerge naturally.
 - Atlas-guided control becomes possible.
-
+- Transport skeletons can be reconstructed.
+- Atlas transport spines can be identified.
+- Critical corridors dominate navigability.
+- Transport vulnerability is measurable.
+- Collapse thresholds emerge naturally.
+  
 ---
 
 # Repository Structure
@@ -299,6 +356,12 @@ APPLICATIONS/
 | Transition Prediction | ✅ |
 | Early Warning | ✅ |
 | Recovery | ✅ |
+| Historical Reconstruction | ✅ |
+| Recovery Archetypes | ✅ |
+| Oscillation Analysis | ✅ |
+| Transport Skeleton Extraction | ✅ |
+| Atlas Spine Identification | ✅ |
+| Transport Robustness Analysis | ✅ |
 | Control Framework | ✅ |
 | Real-Time Deployment | 🚧 |
 
@@ -323,6 +386,42 @@ Control
 ```
 
 A navigable stability atlas enables resilient, predictive, and self-guiding system operation.
+
+---
+
+# Conclusion
+
+Across EXP_01–EXP_44S, NEXAH demonstrates that power-system operating states organize into a structured, navigable and recoverable stability atlas.
+
+The framework now supports:
+
+- structure discovery,
+- navigation,
+- prediction,
+- recovery,
+- historical reconstruction,
+- transport architecture discovery,
+- vulnerability analysis.
+
+The atlas is no longer only observable.
+
+It can be reconstructed, navigated, compressed into transport skeletons, reduced to transport spines, and analyzed for robustness.
+
+The next frontier is atlas-guided intervention:
+
+- chokepoint discovery,
+- node criticality analysis,
+- cascade gate detection,
+- vulnerability mapping,
+- real-world deployment.
+
+The central question is no longer:
+
+"Does the atlas exist?"
+
+The central question is now:
+
+"Can atlas-guided decision making improve the operation of real systems?"
 
 ---
 
