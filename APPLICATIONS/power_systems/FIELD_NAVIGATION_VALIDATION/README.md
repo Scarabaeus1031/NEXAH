@@ -412,14 +412,14 @@ The atlas is no longer only observable.
 
 It can be reconstructed, navigated, compressed into transport skeletons, reduced to transport spines, and analyzed for robustness.
 
-A new result of the current phase is that atlas transport is compressible into a sparse skeleton and a dominant transport spine while retaining a large fraction of navigability.
+A new result of the current phase is that atlas transport can be compressed into a sparse transport skeleton and a dominant transport spine while preserving most large-scale navigability.
 
 Current Frontier
 
-EXP_44T  Atlas Chokepoint Discovery
-EXP_44U  Atlas Node Criticality Analysis
-EXP_44V  Cascade Gate Detection
-EXP_44W  Vulnerability Mapping
+• EXP_44T — Atlas Chokepoint Discovery
+• EXP_44U — Atlas Node Criticality Analysis
+• EXP_44V — Cascade Gate Detection
+• EXP_44W — Vulnerability Mapping
 
 Future Direction
 
