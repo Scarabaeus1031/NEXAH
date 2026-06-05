@@ -2,7 +2,7 @@
 
 ## Atlas-Guided Stability Analysis, Navigation and Control
 
-### Technical Summary (EXP_01 – EXP_43)
+### Technical Summary (EXP_01 – EXP_44S)
 
 Thomas Hofmann
 
@@ -34,11 +34,23 @@ Across EXP_01–EXP_43, the results demonstrate that stability organization is n
 
 # Core Figures
 
-## Figure 1 — Current NEXAH Status
+## Figure 1 — Current NEXAH Status VIII
 
-![NEXAH Current Status](./outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_vii.png)
+![NEXAH Current Status VIII](./outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_VIII.png)
 
-This figure summarizes the complete evolution of the NEXAH framework from structure discovery to atlas-guided control and historical reconstruction.
+This figure summarizes the complete evolution of the NEXAH framework from structure discovery through transport architecture discovery.
+
+In addition to historical reconstruction, the framework now identifies:
+
+- transport skeletons,
+- atlas transport spines,
+- critical transport corridors,
+- robustness thresholds,
+- transport architecture layers.
+
+The atlas is no longer only observable and navigable.
+
+Its internal transport anatomy can now be reconstructed.
 
 ---
 
@@ -281,3 +293,78 @@ The atlas supports:
 - historical reconstruction.
 
 The next stage is external validation and deployment on previously unseen systems.
+
+# Phase IV — Transport Architecture (EXP_44Q–EXP_44S)
+
+The newest research phase investigates the internal transport anatomy of the Atlas.
+
+Rather than studying basin geometry alone, this phase reconstructs the transport infrastructure connecting basin territories.
+
+Three major layers have been identified:
+
+- Transport Skeleton
+- Atlas Spine
+- Spine Robustness Structure
+
+These layers reveal how navigability is physically organized inside the atlas.
+
+### Transport Skeleton Extraction (EXP_44Q)
+
+EXP_44Q reconstructed the dominant transport network connecting basin territories.
+
+Results:
+
+- 17 skeleton nodes
+- 40 skeleton edges
+- navigation preservation ≈ 94%
+- compression ratio ≈ 10×
+
+The resulting skeleton preserves most navigability while dramatically reducing structural complexity.
+
+This provides the first explicit transport graph of the Atlas.
+
+### Atlas Spine Identification (EXP_44R)
+
+EXP_44R identified the subset of skeleton edges carrying the majority of transport functionality.
+
+Results:
+
+- 19 spine edges
+- compression ratio ≈ 2.1×
+- navigation preservation ≈ 83%
+
+The atlas transport system is therefore not uniformly distributed.
+
+A relatively small transport backbone dominates movement across the atlas.
+
+### Atlas Spine Robustness (EXP_44S)
+
+EXP_44S evaluated how resilient the Atlas Spine remains under targeted removal of critical transport links.
+
+Results:
+
+- collapse threshold ≈ 5 critical links
+- gradual connectivity degradation
+- finite transport failure point
+
+The results indicate that atlas transport is concentrated into a limited number of critical corridors.
+
+This establishes the first measurable transport vulnerability structure inside the atlas.
+
+## Figure 4 — Atlas Transport Anatomy
+
+![Atlas Transport Anatomy](./outputs/diagrams/POSTER_9_ATLAS_TRANSPORT_ANATOMY.png)
+
+This figure summarizes EXP_44Q and EXP_44R.
+
+It introduces the transport skeleton, atlas spine and critical corridor hierarchy recovered from the reconstructed atlas.
+
+## Figure 5 — Atlas Robustness & Vulnerability
+
+![Atlas Robustness and Vulnerability](./outputs/diagrams/POSTER_10_ATLAS_ROBUSTNESS_and_VULNERABILITY.png)
+
+This figure summarizes EXP_44S.
+
+It visualizes transport robustness, collapse thresholds and vulnerability concentration inside the atlas transport architecture.
+
+
