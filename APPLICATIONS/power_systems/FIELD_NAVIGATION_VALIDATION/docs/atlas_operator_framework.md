@@ -336,8 +336,6 @@ Navigable Atlas
 
 # Figure 2 — Atlas Reconstruction Pipeline
 
-![Atlas Guided Operations Framework](../outputs/diagrams/# Figure 2 — Atlas-Guided Operations Framework
-
 ![Atlas-Guided Operations Framework](../outputs/diagrams/NEXAH_POWER_SYSTEMS-ATLAS-GUIDED-OPERATIONS_FRAMEWORK.png)
 
 This figure illustrates the operational interpretation of Atlas reconstruction.
