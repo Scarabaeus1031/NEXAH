@@ -62,6 +62,7 @@ The NEXAH validation program currently consists of six major phases.
 
 ![Current Status](outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_VIII.png)
 
+
 Key questions addressed:
 
 ✅ Does structure exist?
@@ -90,6 +91,41 @@ Key questions addressed:
 
 ✅ Can transport architecture be reconstructed?
 
+---
+
+# Architecture Stack
+
+![NEXAH Architecture Stack](outputs/diagrams/architecture_stack.png)
+
+The NEXAH framework has evolved beyond a collection of experiments.
+
+Current development is organized as a layered architecture:
+
+Meta-Geometry
+
+↓
+
+Atlas Operators
+
+↓
+
+Atlas Reconstruction
+
+↓
+
+Navigation & Control
+
+↓
+
+Applications
+
+This architecture provides a conceptual bridge between mathematical foundations, reconstruction algorithms and real-world deployment.
+
+Further details are available in:
+
+- docs/architecture_stack.md
+- docs/atlas_operator_framework.md
+  
 ---
 
 # Theoretical Positioning
@@ -132,6 +168,32 @@ Additional discussion is available in:
 - docs/theoretical_positioning.md
 
 ---
+
+# Atlas Operator Framework
+
+![NEXAH Operator Framework](outputs/diagrams/NEXAH_OPERATOR_FRAMEWORK_ATLAS_FORMATION_AND_NAVIGATION.png)
+
+To provide a compact description of the reconstruction process, NEXAH introduces an operator hierarchy:
+
+Q → S → P → J → H → N
+
+where:
+
+- Q defines admissible operating space,
+- S initializes system state,
+- P partitions state space,
+- J reconstructs transition structure,
+- H reconstructs transport geometry,
+- N reconstructs the Atlas itself.
+
+The operator framework serves as a mathematical abstraction of the experimental reconstruction pipeline.
+
+Further discussion is available in:
+
+- docs/atlas_operator_framework.md
+
+---
+
 # Atlas Discovery
 
 ![Atlas Discovery](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and_STRUCTURAL_ORGANIZATION.png)
@@ -376,14 +438,25 @@ NEXAH demonstrates that:
 # Repository Structure
 
 ```text
-APPLICATIONS/
-└── power_systems/
-    └── FIELD_NAVIGATION_VALIDATION/
-        ├── experiments/
-        ├── outputs/
-        ├── diagrams/
-        ├── reports/
-        └── README.md
+# Repository Structure
+
+```text
+FIELD_NAVIGATION_VALIDATION/
+
+├── README.md
+├── IEEE_TECHNICAL_SUMMARY.md
+
+├── docs/
+│   ├── architecture_stack.md
+│   ├── atlas_operator_framework.md
+│   ├── mathematical_foundations.md
+│   └── theoretical_positioning.md
+
+├── experiments/
+├── outputs/
+│   └── diagrams/
+
+└── reports/
 ```
 
 ---
@@ -406,6 +479,10 @@ APPLICATIONS/
 | Transport Robustness Analysis | ✅ |
 | Transport Vulnerability Analysis | ✅ |
 | Control Framework | ✅ |
+| Architecture Stack | ✅ |
+| Atlas Operator Framework | ✅ |
+| Mathematical Foundations | ✅ |
+| Theoretical Positioning | ✅ |
 | Real-Time Deployment | 🚧 |
 
 ---
@@ -415,18 +492,22 @@ APPLICATIONS/
 NEXAH aims to transform complex-system operation from reactive monitoring toward:
 
 ```text
-Observation
-     ↓
+Meta Geometry
+↓
+Atlas Operators
+↓
 Structure Discovery
-     ↓
+↓
+Atlas Reconstruction
+↓
 Navigation
-     ↓
+↓
 Prediction
-     ↓
+↓
 Recovery
-     ↓
+↓
 Transport Architecture
-     ↓
+↓
 Control
 ```
 
