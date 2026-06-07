@@ -14,6 +14,13 @@ The objective of this document is not to claim superiority over existing approac
 
 Instead, the goal is to position NEXAH relative to established fields of research and identify areas of overlap, compatibility and potential contribution.
 
+Related documents:
+
+- [NEXAH Architecture Stack](./architecture_stack.md)
+- [Atlas Operator Framework](./atlas_operator_framework.md)
+- [Mathematical Foundations](./mathematical_foundations.md)
+- [IEEE Technical Summary](../IEEE_TECHNICAL_SUMMARY.md)
+
 ---
 
 # Central Question
