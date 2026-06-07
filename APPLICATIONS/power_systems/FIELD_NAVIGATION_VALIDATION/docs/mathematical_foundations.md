@@ -37,6 +37,38 @@ Rather than treating trajectories as isolated observations, NEXAH assumes that t
 
 ---
 
+# Atlas Operator Perspective
+
+The reconstruction hierarchy discovered throughout the NEXAH validation program can also be interpreted as a hierarchy of operators.
+
+Rather than viewing Atlas reconstruction as a sequence of empirical processing steps alone, the framework may be represented through a compact operator chain:
+
+Q → S → P → J → H → N
+
+where:
+
+Q(x) : admissible operating space
+
+S(x) : initial state formation
+
+P(x) : coherent domain partitioning
+
+J(x) : transition and gate reconstruction
+
+H(x) : transport geometry reconstruction
+
+N(x) : Atlas reconstruction
+
+The operator hierarchy should be interpreted as a conceptual abstraction of the reconstruction process rather than a fully formalized mathematical operator algebra.
+
+The purpose of the hierarchy is to provide a compact language linking observations, transport geometry and Atlas formation.
+
+A detailed discussion is provided in:
+
+docs/atlas_operator_framework.md
+
+---
+
 # Relationship to Classical Dynamical Systems
 
 Classical dynamical systems theory studies:
@@ -245,11 +277,97 @@ EXP_44Q–EXP_44S demonstrate that transport architecture can be studied using n
 
 # Current Mathematical Picture
 
-The current NEXAH reconstruction hierarchy is:
+The current NEXAH reconstruction hierarchy may be represented in two equivalent forms.
 
-text Trajectory Data         ↓ State Graph         ↓ Flow Reconstruction         ↓ Coherent Domains         ↓ Geodesic Transport         ↓ Domain Supergraph         ↓ Transport Skeleton         ↓ Atlas Spine         ↓ Robustness Structure 
+Empirical reconstruction hierarchy:
 
-This hierarchy emerged empirically during the experimental campaign.
+Trajectory Data
+
+↓
+
+State Graph
+
+↓
+
+Flow Reconstruction
+
+↓
+
+Coherent Domains
+
+↓
+
+Geodesic Transport
+
+↓
+
+Domain Supergraph
+
+↓
+
+Transport Skeleton
+
+↓
+
+Atlas Spine
+
+↓
+
+Robustness Structure
+
+Operator abstraction:
+
+Q
+
+↓
+
+S
+
+↓
+
+P
+
+↓
+
+J
+
+↓
+
+H
+
+↓
+
+N
+
+The first hierarchy emerged directly from experiments.
+
+The second hierarchy represents an abstraction of the same reconstruction process through conceptual operators.
+
+---
+
+# Toward an Operator-Theoretic Interpretation
+
+The introduction of the Atlas Operator Framework raises an important theoretical question.
+
+Can Atlas reconstruction be formulated as a genuine operator hierarchy acting on admissible state spaces?
+
+Current results support a conceptual interpretation:
+
+Q → S → P → J → H → N
+
+However, the precise mathematical properties of these operators remain largely unexplored.
+
+Open questions include:
+
+- operator composition
+- existence of fixed points
+- operator stability
+- commutativity and non-commutativity
+- relationship to Koopman operators
+- relationship to transport operators
+- existence of universal Atlas operators
+
+These questions define a possible future mathematical foundation for NEXAH.
 
 ---
 
