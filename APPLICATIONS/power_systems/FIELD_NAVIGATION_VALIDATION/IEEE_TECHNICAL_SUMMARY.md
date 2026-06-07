@@ -31,6 +31,15 @@ The framework evolved through five major stages:
 
 Across EXP_01–EXP_44S, the results demonstrate that stability organization is not random but forms a coherent, navigable and structurally organized atlas.
 
+# Framework Documents
+
+For theoretical background and framework architecture see:
+
+- [NEXAH Architecture Stack](./docs/architecture_stack.md)
+- [Atlas Operator Framework](./docs/atlas_operator_framework.md)
+- [Mathematical Foundations](./docs/mathematical_foundations.md)
+- [Theoretical Positioning](./docs/theoretical_positioning.md)
+
 ---
 
 # Core Figures
