@@ -65,7 +65,7 @@ Instead, the operator hierarchy provides a compact language for describing Atlas
 
 # Figure 1 — NEXAH Operator Framework
 
-![NEXAH Operator Framework](../outputs/diagrams/NEXAH_OPERATOR_FRAMEWORK_ATLAS_FORMATION_AND_NAVIGATION.jpeg)
+![NEXAH Operator Framework](../outputs/diagrams/NEXAH_POWER_SYSTEMS-ATLAS-GUIDED-OPERATIONS_FRAMEWORK.png)
 
 The figure summarizes the proposed operator hierarchy
 
