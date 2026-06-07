@@ -65,7 +65,7 @@ Instead, the operator hierarchy provides a compact language for describing Atlas
 
 # Figure 1 — NEXAH Operator Framework
 
-![NEXAH Operator Framework](../outputs/NEXAH_OPERATOR_FRAMEWORK_IEEE_APPLICATION.png)
+![NEXAH Operator Framework](../outputs/diagrams/NEXAH_OPERATOR_FRAMEWORK_IEEE_APPLICATION.png)
 
 The figure summarizes the proposed operator hierarchy
 
@@ -336,7 +336,7 @@ Navigable Atlas
 
 # Figure 2 — Atlas Reconstruction Pipeline
 
-![Atlas Reconstruction Pipeline](../outputs/diagrams/NEXAH_POWER_SYSTEMS_ATLAS_GUIDED_OPERATIONS_FRAMEWORK.png)
+![Atlas Guided Operations Framework](../outputs/diagrams/NEXAH_POWER_SYSTEMS_ATLAS_GUIDED_OPERATIONS_FRAMEWORK.png)
 
 This figure illustrates the operational interpretation of Atlas reconstruction.
 
