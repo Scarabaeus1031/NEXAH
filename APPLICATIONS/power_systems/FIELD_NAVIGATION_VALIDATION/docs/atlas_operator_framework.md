@@ -65,6 +65,16 @@ Instead, the operator hierarchy provides a compact language for describing Atlas
 
 # Figure 1 — NEXAH Operator Framework
 
+![NEXAH Operator Framework](../outputs/diagrams/NEXAH_OPERATOR_FRAMEWORK_IEEE_APPLICATION.png)
+
+The figure summarizes the proposed operator hierarchy
+
+Q → S → P → J → H → N
+
+and illustrates how the Atlas reconstruction process can be mapped onto IEEE benchmark power systems.
+
+The operator chain transforms an admissible operating space into a navigable stability atlas.
+
 NEXAH Operator Framework
 
 The figure summarizes the complete operator hierarchy emerging from the NEXAH validation program.
@@ -323,6 +333,16 @@ Atlas Spine
 ↓
 
 Navigable Atlas
+
+# Figure 2 — Atlas Reconstruction Pipeline
+
+![Atlas Reconstruction Pipeline](../outputs/diagrams/NEXAH_POWER_SYSTEMS_ATLAS_GUIDED_OPERATIONS_FRAMEWORK.png)
+
+This figure illustrates the operational interpretation of Atlas reconstruction.
+
+The framework progresses from field awareness and structure extraction toward navigation, intervention and continuous adaptation.
+
+The operator hierarchy introduced in this document can be interpreted as the mathematical abstraction underlying this operational workflow.
 
 Operator representation:
 
