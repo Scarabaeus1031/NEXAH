@@ -81,6 +81,12 @@ The figure summarizes the complete operator hierarchy emerging from the NEXAH va
 
 The operator chain describes how admissible state space is transformed into a reconstructed and navigable Atlas.
 
+See also:
+
+- [NEXAH Architecture Stack](./architecture_stack.md)
+- [Mathematical Foundations](./mathematical_foundations.md)
+- [Theoretical Positioning](./theoretical_positioning.md)
+
 ---
 
 # Motivation
