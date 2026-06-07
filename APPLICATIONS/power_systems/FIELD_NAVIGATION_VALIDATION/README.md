@@ -123,8 +123,24 @@ This architecture provides a conceptual bridge between mathematical foundations,
 
 Further details are available in:
 
-- docs/architecture_stack.md
-- docs/atlas_operator_framework.md
+# Framework Documentation
+
+The current NEXAH framework is documented through five complementary layers:
+
+- [Architecture Stack](docs/architecture_stack.md)  
+  Overall framework architecture from Meta-Geometry to Applications.
+
+- [Atlas Operator Framework](docs/atlas_operator_framework.md)  
+  Operator hierarchy Q → S → P → J → H → N.
+
+- [Mathematical Foundations](docs/mathematical_foundations.md)  
+  Atlas reconstruction, transport geometry and compression hierarchy.
+
+- [Theoretical Positioning](docs/theoretical_positioning.md)  
+  Relationship to Dynamical Systems, Koopman Theory, Network Science and Control.
+
+- [IEEE Technical Summary](IEEE_TECHNICAL_SUMMARY.md)  
+  Summary of experimental validation across EXP_01–EXP_44S.
   
 ---
 
