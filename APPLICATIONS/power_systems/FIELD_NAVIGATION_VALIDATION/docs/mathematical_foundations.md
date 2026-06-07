@@ -25,6 +25,13 @@ The resulting structures include:
 
 This document positions NEXAH relative to established mathematical frameworks and summarizes the current theoretical foundations emerging from the EXP_01–EXP_44 experimental campaign.
 
+Related documents:
+
+- [NEXAH Architecture Stack](./architecture_stack.md)
+- [Atlas Operator Framework](./atlas_operator_framework.md)
+- [Theoretical Positioning](./theoretical_positioning.md)
+- [IEEE Technical Summary](../IEEE_TECHNICAL_SUMMARY.md)
+
 ---
 
 # Core Hypothesis
