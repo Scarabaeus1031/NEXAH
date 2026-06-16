@@ -1,6 +1,6 @@
 # Why NEXAH Exists
 
-![NEXAH Navigation Layer](ARCHITECTURE/archive/NEXAH_NAVIGATION_LAYER.png)
+![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
 
 > Specialists build the engines.
 >
@@ -132,7 +132,7 @@ It is the observatory.
 
 Explore the Atlas:
 
-👉 https://www.are.na/nexah-scarabaeus1031/channels
+👉 **[Explore the NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)**
 
 Together they form:
 
