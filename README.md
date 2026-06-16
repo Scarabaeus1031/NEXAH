@@ -73,6 +73,7 @@ rather than a universal theory of everything.
 |---|---|---|
 | **[START_HERE.md](START_HERE.md)** | Recommended entry point | ★★★★★ |
 | **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** | Main visual showcase | ★★★★★ |
+| **[NEXAH Atlas (Are.na)](https://www.are.na/nexah-scarabaeus1031/channels)** | Visual research environment | ★★★★ |
 | **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** | Reproducible demonstrator (hands-on) | ★★★★★ |
 | **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** | Janus Operator (experimental mechanism) | ★★★★★ |
 | **[RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md)** | Research navigation | ★★★★ |
@@ -529,6 +530,28 @@ The repository contains a large visual ecosystem including:
 - modular flow structures
 - fractal transition animations
 - topology and winding structures
+
+---
+
+# 🌍 NEXAH Atlas (Companion Exploration Space)
+
+The GitHub repository contains the computational, experimental, and validation layers of NEXAH.
+
+The companion Atlas on Are.na contains the visual, conceptual, and cartographic layers that support the broader research direction.
+
+Topics include:
+
+- complex systems cartography
+- orientation theory
+- transition geometry
+- visual field studies
+- atlas construction
+- historical and interdisciplinary references
+
+
+The companion visual atlas can be explored here:
+
+### 👉 [Explore the NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)
 
 ---
 
