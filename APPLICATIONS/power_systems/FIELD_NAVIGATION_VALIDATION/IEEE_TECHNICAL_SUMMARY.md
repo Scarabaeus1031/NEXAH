@@ -342,6 +342,32 @@ The central question is now:
 
 ---
 
+# External Scientific Feedback & Future Validation Directions
+
+Initial discussions with researchers in dynamical systems and complex systems have highlighted several established research directions that may provide useful comparison frameworks for future validation.
+
+Particularly relevant themes include:
+
+- Transition-State Theory
+- Transfer Operators
+- Koopman-based Dynamical Analysis
+- Coherent Set Detection
+- Dynamical Transport Networks
+
+These approaches investigate related questions concerning:
+
+- transport organization,
+- transition pathways,
+- coherent dynamical regions,
+- bottlenecks,
+- and large-scale state-space structure.
+
+Future work will examine whether independently reconstructed structures obtained through these methodologies exhibit measurable correspondence with Atlas domains, gates, transport corridors, and critical transport backbones.
+
+Such comparisons may help determine whether Atlas structures reflect intrinsic system organization or arise from reconstruction-specific procedures.
+
+---
+
 # Phase IV — Transport Architecture (EXP_44Q–EXP_44S)
 
 The newest research phase investigates the internal transport anatomy of the Atlas.
