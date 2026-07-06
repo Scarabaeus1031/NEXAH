@@ -227,12 +227,6 @@ Instead they organize into a structured atlas containing:
 - Bottlenecks
 - Recovery Regions
 
----
-
-# Atlas Geometry
-
-![Atlas Geometry](outputs/diagrams/NEXAH_STATE_NAVIGATION-ATLAS_DISCOVER_and_STRUCTURAL_ORGANIZATION.png)
-
 Key Findings:
 
 - 18 Basin Territories
