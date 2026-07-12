@@ -1,450 +1,185 @@
-# ⚡ NEXAH — Experimental Systems
+# 🧪 NEXAH — Experimental Index
 
-This directory contains the **experimental and exploratory layers** of the NEXAH ecosystem.
+This directory preserves active laboratories, exploratory prototypes, and
+historical development lineages of NEXAH.
 
-It includes:
-
-- theoretical foundations
-- prototype architectures
-- exploratory simulations
-- navigation systems
-- conceptual abstractions
-- experimental engines
-- builder environments
+It is a workspace for investigation, not a second operational core. Content in
+this directory may be incomplete, duplicated, speculative, or superseded by
+material in `RESEARCH/`, `PROTO_CORE/`, `ARCHITECTURE/`, or `APPLICATIONS/`.
 
 ---
 
-# 🧠 Purpose
+## 🧭 How to Read This Directory
 
-The `EXPERIMENTAL/` layer serves as:
+Each area is assigned one of four working statuses:
 
-> the active exploration space of NEXAH
+- **Active Lab** — a current, bounded experimental investigation
+- **Experimental System** — runnable or partially runnable prototypes that
+  require review before reuse
+- **Historical Reference** — conceptually useful earlier architecture or theory
+- **Archive** — preserved development history; not a current entry point
 
-It bridges:
-
-```text
-theory
-→ experimentation
-→ prototype systems
-→ future integration
-```
-
----
-
-# 🧭 Structure Overview
-
-```text
-EXPERIMENTAL/
-│
-├── FRAMEWORK/
-├── BUILDER_LAB/
-└── ...
-```
+Experimental results are not automatically validated findings. Promotion into
+another repository layer requires a clear claim, reproducible evidence, and an
+explicit destination.
 
 ---
 
-# 🌐 FRAMEWORK/
+## 🗺️ Directory Map
 
-```text
-EXPERIMENTAL/FRAMEWORK/
-```
+| Area | What it contains | Status | Recommended use |
+|---|---|---|---|
+| **[OBSERVER_GEOMETRY_LAB/](OBSERVER_GEOMETRY_LAB/)** | Observer-relative geometry, projections, transport structures, and visual experiments | **Active Lab** | Best current experimental entry point |
+| **[BUILDER_LAB/](BUILDER_LAB/)** | Demos, simulation engines, discovery work, exploration notes, and several archived systems | **Experimental System / Archive mix** | Enter through the guided map below |
+| **[FRAMEWORK/](FRAMEWORK/)** | Earlier META → ARCHY → MESO → NEXAH → MEVA conceptual architecture | **Historical Reference** | Consult for conceptual lineage, not current implementation state |
 
-Theoretical and conceptual foundation layer.
-
-Contains:
-
-- original NEXAH abstractions
-- mathematical intuition
-- coherence models
-- regime concepts
-- field-based interpretations
-- historical architecture layers
-
-The FRAMEWORK explains:
-
-> why geometry, coherence, and navigation emerge from dynamics.
+The empty root `scripts/` and `visuals/` directories are not current entry
+points.
 
 ---
 
-⚠️ Note:
+## 👁️ Active Lab: Observer Geometry
 
-Many operational and empirically validated components
-have since migrated into:
+**[OBSERVER_GEOMETRY_LAB/](OBSERVER_GEOMETRY_LAB/)** is the most clearly bounded
+laboratory in this directory. It investigates:
 
-- RESEARCH/
-- PROTO_CORE/
-- NEXAH_CORE/
+- local and global representations
+- observer-relative projection
+- transport corridors and reinjection structures
+- manifold slicing and orientation axes
+- Mandelbrot–Julia contact visualizations
 
-The FRAMEWORK now primarily serves as the conceptual
-and historical foundation layer of NEXAH.
-
----
-
-## 🧠 Core Concepts
-
-The FRAMEWORK introduces:
-
-```text
-trajectory
-→ field
-→ coherence
-→ risk
-→ transitions
-→ navigation
-```
-
-Key ideas include:
-
-- coherence fields
-- geometric stability
-- regime transitions
-- field-aware control
-- navigation through structured dynamics
+The lab includes its own README, documentation, scripts, and selected visuals.
+Its claims remain exploratory and have not been promoted into the validated
+Research layer.
 
 ---
 
-## 🔬 Mathematical Foundation
-
-Core equations:
-
-```math
-\dot{x} = F(x)
-```
-
-Coherence metric:
-
-```math
-C(x)
-=
-\frac{
-\dot{x}\cdot F(x)
-}{
-||\dot{x}||\,||F(x)||
-}
-```
-
-Risk field:
-
-```math
-R(x)=1-C(x)
-```
-
-This reframes stability as:
-
-> coherent motion within structured fields.
-
----
-
-## 🎥 FRAMEWORK Visuals
-
-See:
-
-👉 `FRAMEWORK/FRAMEWORK_visual_gallery.md`
-
-Includes:
-
-- coherence landscapes
-- risk geometry
-- transition regions
-- navigation structures
-- field emergence diagrams
-
----
-
-# ⚡ BUILDER_LAB/
-
-```text
-EXPERIMENTAL/BUILDER_LAB/
-```
-
-The active experimental sandbox of NEXAH.
-
-This is the primary environment for:
-
-- simulations
-- experiments
-- navigation systems
-- prototype engines
-- interactive demonstrations
-- cascade dynamics
-- multi-system exploration
-
----
-
-# 🧪 Builder Lab Purpose
-
-The Builder Lab explores systems as:
-
-> navigable structures instead of static states.
-
-It allows experimentation with:
-
-- regime dynamics
-- transition structures
-- state graphs
-- cascading failures
-- infrastructure systems
-- navigation policies
-- multi-agent dynamics
-
----
-
-# 🧱 Builder Lab Architecture
-
-```text
-CORE
-→ DYNAMICS_ENGINE
-→ RUNTIME
-→ NAVIGATION
-→ ENGINES
-→ VISUALIZATION
-```
-
----
-
-## 🔹 CORE
-
-Mathematical foundation layer:
-
-- lattices
-- operators
-- state graphs
-- convergence systems
-- regime operators
-
----
-
-## 🔹 DYNAMICS_ENGINE
-
-Structure extraction layer:
-
-- basin detection
-- phase transition analysis
-- topology construction
-- flow field analysis
-- regime extraction
-
----
-
-## 🔹 NAVIGATION
-
-Navigation through:
-
-```text
-state
-→ regime
-→ transition
-→ action
-```
-
-Includes:
-
-- policy systems
-- control experiments
-- navigation kernels
-- adaptive movement systems
-
----
-
-## 🔹 ENGINES
-
-Application systems:
-
-- energy grids
-- infrastructure networks
-- cascading failures
-- planetary-scale systems
-- multi-system simulations
-
----
-
-## 🔹 VISUALIZATION
-
-Visual interpretation layer:
-
-- stability landscapes
-- trajectory plots
-- cascade visualizations
-- topology maps
-- flow structures
-
----
-
-# 🎥 Builder Lab Visuals
-
-## 🌐 System Navigation Framework
-
-![System Navigation](BUILDER_LAB/visuals/NEXAH_SYSTEM_NAVIGATION_FRAMEWORK.png)
-
-*Navigation through structured state-space systems.*
-
----
-
-## ⚡ Energy Grid Simulation
-
-![Energy Grid](BUILDER_LAB/visuals/NEXAH_DEMO_ENERGY_GRID_SIMULATION.png)
-
-*Experimental infrastructure stabilization and cascade modeling.*
-
----
-
-## 🌍 Applications Map
-
-![Applications Map](BUILDER_LAB/visuals/NEXAH_APPLICATIONS_MAP.png)
-
-*Potential application domains for NEXAH navigation systems.*
-
----
-
-## 🧠 Builder Lab Architecture
-
-![Builder Architecture](BUILDER_LAB/visuals/NEXAH_BUILDER_LAB_MAP.png)
-
-*Relationship between simulation, structure extraction, navigation, and visualization.*
-
----
-
-## 🔥 Cascade Simulation
-
-![Cascade Simulation](BUILDER_LAB/visuals/nexah_cascade.gif)
-
-*Propagation dynamics across connected systems.*
-
----
-
-## 🧭 System Navigation
-
-![System Walk](BUILDER_LAB/visuals/nexah_system_walk.gif)
-
-*Navigation through evolving regime landscapes.*
-
----
-
-# 🚀 Running Builder Lab
-
-From repository root:
+## ⚙️ Builder Lab: Guided Map
+
+`BUILDER_LAB/` contains most of the directory's material and should not be read
+as one coherent runtime. It combines several development generations.
+
+| Builder Lab area | Role | Current interpretation |
+|---|---|---|
+| **[demos/](BUILDER_LAB/demos/)** | Small state-graph and navigation demonstrations | Test before presenting as user tools |
+| **[engines/](BUILDER_LAB/engines/)** | Synthetic infrastructure, cascade, planetary, and multi-system simulators | Application prototypes, not validated applications |
+| **[systems/](BUILDER_LAB/systems/)** | Example system definitions | Inputs for Builder Lab experiments |
+| **[dashboards/](BUILDER_LAB/dashboards/)** and **[visualizers/](BUILDER_LAB/visualizers/)** | Experimental interfaces and renderers | Prototype tooling |
+| **[DISCOVERY_ENGINE/](BUILDER_LAB/DISCOVERY_ENGINE/)** | Early transition, resilience, field, and law-discovery experiments | Historical experimental lineage with promotion candidates |
+| **[EXPLORATION/](BUILDER_LAB/EXPLORATION/)** | Control notes, symbolic work, fragments, older portals, and experimental scripts | Mixed research notebook; review item by item |
+| **[proto_models/](BUILDER_LAB/proto_models/)** | Oval-membrane and time-knot conceptual models | Early concept models |
+| **[ARCHIVE_KERNEL/](BUILDER_LAB/ARCHIVE_KERNEL/)** | Earlier field, navigation, and kernel variants | Archive |
+| **[ARCHIVE_ENGINE/](BUILDER_LAB/ARCHIVE_ENGINE/)** | Large historical engine, research, navigation, and output tree | Frozen development archive |
+
+The existing
+**[Builder Lab Inventory](BUILDER_LAB/BUILDER_LAB_INVENTORY_INDEX.md)** is a
+historical map. It contains useful observations, but some paths and maturity
+labels no longer match the repository. Use it as an audit source rather than a
+current specification.
+
+### Experimental entry commands
+
+The following entry points exist, but still require a dedicated runtime and
+dependency check:
 
 ```bash
 python EXPERIMENTAL/BUILDER_LAB/run_builder_lab.py
-```
-
-Run demos:
-
-```bash
-python EXPERIMENTAL/BUILDER_LAB/demos/nexah_demo.py
-
-python EXPERIMENTAL/BUILDER_LAB/demos/nexah_explorer.py
-
-python EXPERIMENTAL/BUILDER_LAB/demos/nexah_graph_simulation.py
-```
-
----
-
-# 🧭 CLI Navigation
-
-```bash
-python EXPERIMENTAL/BUILDER_LAB/nexah_cli.py demo
-
-python EXPERIMENTAL/BUILDER_LAB/nexah_cli.py explorer
-
 python EXPERIMENTAL/BUILDER_LAB/nexah_cli.py systems-list
+python EXPERIMENTAL/BUILDER_LAB/demos/nexah_demo.py
 ```
+
+For the verified repository quickstart, use the
+**[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** instead.
 
 ---
 
-# 📚 Inventory & Internal Structure
+## 🌐 Historical Framework
 
-Detailed inventory:
+**[FRAMEWORK/](FRAMEWORK/)** documents an earlier layered model:
 
-👉 `BUILDER_LAB/BUILDER_LAB_INVENTORY_INDEX.md`
+```text
+META → ARCHY → MESO → NEXAH → MEVA
+```
 
-Includes:
-
-- architecture mapping
-- module inventory
-- system roles
-- integration observations
-- future consolidation targets
+It provides conceptual background for coherence, risk fields, regimes,
+transition geometry, and navigation. These layers are not the current software
+architecture. For the implemented repository view, see the
+**[Architecture Index](../ARCHITECTURE/)** and
+**[System State](../ARCHITECTURE/SYSTEM_STATE.md)**.
 
 ---
 
-# ⚠️ Current Status
+## 🚦 Promotion Queue
 
-The EXPERIMENTAL layer contains:
+The following items appear worth reviewing outside the archive. Inclusion here
+means **candidate for assessment**, not accepted result.
 
-```text
-✔ active exploration systems
-✔ prototype architectures
-✔ navigation experiments
-✔ conceptual extensions
-✔ visualization systems
-```
+| Candidate | Possible destination | Required review |
+|---|---|---|
+| **[Discovery Observations](BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md)** | `RESEARCH/FINDINGS/` | Separate observations from interpretation and link reproducible runs |
+| **[Symmetry Graph result summary](BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/RESULT_SUMMARY_Symmetry_Graph_Experiment.md)** | `RESEARCH/FINDINGS/` | Verify code, data, metrics, and current terminology |
+| **[Structured Oscillator Networks](BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/structured_oscillator_networks/)** | `RESEARCH/FINDINGS/` or `RESEARCH/CONCEPTS/` | Determine whether it contains evidence or only a model proposal |
+| **[Stability-driven Multi-Agent System](BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/nexah_stability_driven_multi_agent_system/)** | `RESEARCH/FINDINGS/` | Reproduce the experiment and qualify the stability claim |
+| **[Control Sensitivity Field](BUILDER_LAB/EXPLORATION/experimental/01_control/control_sensitivity_field.md)** | `RESEARCH/CONCEPTS/` or `ARCHITECTURE/METHODS.md` | Formalize definitions and establish relationship to current control prototypes |
+| **[IEEE Mapping Module](BUILDER_LAB/EXPLORATION/experimental/03_mapping/ieee_mapping_module.md)** | `APPLICATIONS/power_systems/` | Compare with current IEEE application work and avoid duplication |
+| **[Oval Membrane Field](BUILDER_LAB/proto_models/oval_membrane_field/)** | `RESEARCH/CONCEPTS/` | Decide whether the model yields testable hypotheses |
+| **[Time Knot Field](BUILDER_LAB/proto_models/time_knot_field/)** | `RESEARCH/CONCEPTS/` | Separate mathematical proposal from metaphorical interpretation |
+| **[Builder Lab demos](BUILDER_LAB/demos/)** | `APPLICATIONS/` index | Test dependencies, outputs, and user value before exposing them as tools |
+| **[Observer Geometry Lab](OBSERVER_GEOMETRY_LAB/)** | Remain here; later link from Research | Define validation questions before any promotion |
 
-But also:
-
-```text
-⚠ fragmented structures
-⚠ incomplete kernel integration
-⚠ partially isolated subsystems
-⚠ experimental abstractions
-```
+Promotion should normally copy or rewrite the smallest relevant unit and retain
+a source link. Moving an entire historical tree would erase useful context and
+carry obsolete assumptions into current documentation.
 
 ---
 
-# 🧠 Relation to Main NEXAH System
+## 📏 Promotion Criteria
 
-The experimental layer supports:
+Before experimental material becomes a current finding, method, or application,
+check that it has:
+
+1. a precise question or claim
+2. a runnable or otherwise inspectable method
+3. identifiable inputs and generated outputs
+4. limitations and failed cases
+5. terminology consistent with the current Gate and transition interpretation
+6. a clear owner directory: Research, Proto Core, Architecture, or Applications
+
+If these conditions are not met, the material should remain here and be indexed
+as an experiment or historical reference.
+
+---
+
+## 🔗 Current Repository Layers
 
 ```text
+EXPERIMENTAL
+→ generates prototypes, hypotheses, and exploratory evidence
+
 RESEARCH
-→ FRAMEWORK
-→ PROTO_CORE
-→ NAVIGATION
-→ VALIDATION
+→ frames questions, records findings, and organizes validation
+
+PROTO_CORE
+→ develops and exposes reference implementations
+
+ARCHITECTURE
+→ explains system relationships and implementation maturity
+
+APPLICATIONS
+→ presents system-specific tools and studies
 ```
 
-It acts as:
+Related entry points:
 
-> the evolutionary laboratory of NEXAH.
-
----
-
-# 🔥 Important Clarification
-
-The systems inside `EXPERIMENTAL/` are:
-
-```text
-not finalized
-not production-ready
-not fully unified
-```
-
-Instead, they represent:
-
-> an active structural discovery environment.
+- **[Repository Map](../REPOSITORY_MAP.md)**
+- **[Research Portal](../RESEARCH/README.md)**
+- **[Proto Core Index](../PROTO_CORE/README.md)**
+- **[Architecture Index](../ARCHITECTURE/README.md)**
+- **[Applications Index](../APPLICATIONS/README.md)**
 
 ---
 
-# 🧠 Final Insight
+**NEXAH Experimental**
 
-The experimental systems reveal a central NEXAH observation:
-
-```text
-systems evolve through structured regions,
-not through random state changes.
-```
-
-Navigation, control, and stability emerge from this geometry.
-
----
-
-# 🧭 Final Orientation
-
-The `EXPERIMENTAL/` layer should currently be understood as:
-
-> the exploratory and conceptual ecosystem of NEXAH —
-> where theory, geometry, simulation, and navigation are actively developed.
-
----
-
-**Thomas K. R. Hofmann · NEXAH · 2026**
+Active Labs · Prototype Systems · Historical Lineages · Promotion Candidates
