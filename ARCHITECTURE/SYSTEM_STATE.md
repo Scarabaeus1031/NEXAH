@@ -10,6 +10,7 @@ Related references:
 - **[Verified Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**
 - **[Validation Portal](../RESEARCH/VALIDATION/)**
 - **[Applications Index](../APPLICATIONS/README.md)**
+- **[Orientation Layer Bauplan](orientation_layer/)**
 
 ---
 
@@ -45,6 +46,21 @@ But:
 ❗ limited statistical evaluation
 ❗ not yet unified into a stable runtime kernel
 ```
+
+## Software consolidation status
+
+The installable package now contains three deliberately separated elements:
+
+```text
+frozen v0.7 state-space backend
+→ typed v0.7 backend adapter
+→ OrientationState and OrientationReport contracts
+```
+
+The adapter preserves local cluster scope, source-to-embedding alignment,
+provenance, and unknown uncertainty. This is an implemented software boundary,
+not yet a complete Orientation Core: evidence-bound report generation,
+Demonstrator validation, memory, and execution remain open work.
 
 ---
 

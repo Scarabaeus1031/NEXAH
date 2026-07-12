@@ -17,7 +17,10 @@ tests must verify them.
    between established concepts and actual implementation.
 4. **[DECISIONS/0001-janus-identities.md](DECISIONS/0001-janus-identities.md)** —
    separation of JANUS, Janus Bridge, and the scientific operator.
-5. **[archive/README.md](archive/README.md)** — rules for historical designs.
+5. **[ADAPTER_LANDSCAPE.md](ADAPTER_LANDSCAPE.md)** — existing adapter lines,
+   preservation decisions, and their relationship to WP2.
+6. **[archive/README.md](archive/README.md)** — rules for historical designs.
+
 
 ## Architecture at a glance
 
@@ -46,4 +49,3 @@ or reinterpreted as the complete Orientation Core.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.
-

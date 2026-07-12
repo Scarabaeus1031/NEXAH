@@ -43,6 +43,10 @@ Acceptance:
 
 ## WP2 — v0.7 backend adapter
 
+Status: implemented and verified. The adapter produces a scoped
+`OrientationState`, typed empirical transitions, explicit embedding alignment,
+and evidence carrying the unchanged v0.7 limitations.
+
 Work:
 
 - wrap the package without changing its internal scientific meaning
