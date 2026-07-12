@@ -1,92 +1,36 @@
-# 🚀 NEXAH — Demo Applications
+# 🎬 NEXAH — Application Demos
 
-This directory contains **curated demonstration pipelines** built with the NEXAH framework.
+This directory contains compact, application-level demonstration pipelines.
 
-Each demo shows how NEXAH transforms a system into:
+The current tracked demo is:
 
-```text
-dynamics → structure → geometry → navigation
+## 🌀 Lorenz Geometry Demo
+
+→ **[lorenz_demo/](lorenz_demo/)**
+
+It explores:
+
+- chaotic attractor geometry
+- FTLE transport structures
+- separatrix and filament extraction
+- Lyapunov visualization
+- higher-dimensional projection
+
+From the repository root:
+
+```bash
+python APPLICATIONS/demos/lorenz_demo/run_demo.py
 ```
 
-The goal:
+This is a visual research demo. The canonical verified NEXAH entry remains the
+**[NEXAH Demonstrator](../../PROTO_CORE/NEXAH_DEMONSTRATOR/)**.
 
-> provide **immediate, visual understanding** of NEXAH capabilities
-
----
-
-## 🧭 Available Demos
-
-### 🌀 Lorenz System — Chaos Navigation
-
-👉 `lorenz_demo/`
-
-- chaotic attractor → structured geometry  
-- FTLE transport barriers  
-- separatrix detection  
-- navigation pathways  
-
-✔ intuitive system  
-✔ strong visual output  
-✔ entry point for new users  
+Power-system demonstrations are maintained separately under
+**[APPLICATIONS/power_systems/](../power_systems/)**; there is currently no
+tracked `demos/ieee_demo` pipeline in this directory.
 
 ---
 
-### ⚡ IEEE Power Grid — Real-World Stability
+**Status:** Runnable Lorenz demonstration
 
-👉 `ieee_demo/`
-
-- real AC power flow  
-- stability field reconstruction  
-- early collapse detection  
-- navigation-based control  
-
-✔ real-world validation  
-✔ large-scale systems  
-✔ predictive control  
-
----
-
-## 🧠 Concept
-
-Each demo follows the same idea:
-
-- extract structure  
-- reconstruct geometry  
-- identify risk  
-- enable navigation  
-
----
-
-## 🚀 How to Start
-
-Choose a demo:
-
-```text
-cd APPLICATIONS/demos/lorenz_demo
-```
-
-Then run:
-
-```text
-python run_demo.py
-```
-
----
-
-## 🧠 Key Insight
-
-NEXAH does not simulate systems.
-
-It:
-
-- maps their structure  
-- reveals their geometry  
-- enables navigation within them  
-
----
-
-## 🌀 NEXAH
-
-From dynamics → structure  
-From structure → geometry  
-From geometry → navigation  
+**Role:** Compact visual application example

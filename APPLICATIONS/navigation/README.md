@@ -1,10 +1,11 @@
-cat > APPLICATIONS/navigation/README.md << 'EOF'
 # NEXAH Navigation
+
+> **Status: Legacy / experimental navigation prototype.** This area preserves
+> an earlier Mod-77 and IEEE9-oriented navigation line. It is executable
+> research material, not the canonical or fully integrated NEXAH navigator.
 
 This directory contains the **navigation layer** of the NEXAH framework.  
 It translates structural insights (field geometry, resonance grids, emergent exponents) into practical, executable navigation for complex dynamic systems — with a strong focus on power system stability.
-
-## Directory Structure
 
 ## Directory Structure
 
@@ -33,10 +34,10 @@ APPLICATIONS/navigation/
 
 ## Quick Start
 
-Run the current IEEE9 prototype:
+From the repository root, run the IEEE9-style prototype:
 
 ```bash
-python integration/ieee9_navigation.py
+python APPLICATIONS/navigation/integration/ieee9_navigation.py
 ```
 
 **Expected output includes:**
@@ -49,17 +50,17 @@ python integration/ieee9_navigation.py
 
 ## Current Status (April 2026)
 
-- ✅ Working Mod-77 state space with voltage mapping  
-- ✅ Drift quantization and Phi-Split detection  
-- ✅ Basic IEEE9-like trajectory navigation  
-- ⏳ Integration with the older `run_navigation_demo.py` still pending  
-- ⏳ Full visualization pipeline and real IEEE test cases in progress  
+- Mod-77 state-space prototype implemented
+- Drift quantization and Phi-Split detection implemented
+- Basic IEEE9-like trajectory example available
+- Integration with the older `run_navigation_demo.py` remains incomplete
+- Comparison with current power-system pipelines remains open
 
 ## Next Steps
 
 1. Clean up remaining internal imports in core files (`scaling_exponent.py`, `visualization.py`)
 2. Connect `run_navigation_demo.py` (risk-aware policy) with the new Mod-77 grid
-3. Add support for real IEEE benchmark systems (IEEE9 → IEEE118 → IEEE300)
+3. Compare against maintained IEEE benchmark pipelines (IEEE9 → IEEE118 → IEEE300)
 4. Implement Meta-Layer scaling and Fibonacci Root Shrinking
 5. Create comprehensive visualization of trajectories in the resonance grid
 

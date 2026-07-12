@@ -22,7 +22,7 @@ The models form a clear progression of complexity:
 
 ### 🔹 1. Stability Landscape (Core)
 
-👉 `../core/STABILITY_LANDSCAPE/`
+👉 `STABILITY_LANDSCAPE/`
 
 The foundational concept of NEXAH.
 

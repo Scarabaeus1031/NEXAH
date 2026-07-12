@@ -1,390 +1,283 @@
-# NEXAH — Demonstrations of Structured Dynamics
+# 🌍 NEXAH — Applications
 
-### Discovering Navigable Structure in Complex Systems
+The Applications Layer is where NEXAH methods meet concrete systems.
 
----
+It contains runnable demonstrations, system-specific research programs,
+integration tools, conceptual models, and experimental navigation prototypes.
+These are not finished products. They are working environments for asking:
 
-## 🧭 Overview
-
-This directory contains validated demonstrations and real-world applications of the NEXAH framework.
-
-NEXAH investigates whether complex dynamical systems organize into discoverable and navigable state-space structures.
-
-Rather than treating system behavior as isolated events, NEXAH reveals coherent dynamical atlases consisting of:
-
-- Basin Territories
-- Attractors
-- Transport Corridors
-- Gates & Bottlenecks
-- Recovery Anchors
-- Control Pathways
-
-The objective is to transform system analysis from observation toward navigation and intervention.
+> Which parts of a dynamical system can be reconstructed, compared, and
+> navigated using structural field methods?
 
 ---
 
-## 🌌 Core Principle
+## 🧭 What “Application” Means Here
 
-Traditional analysis often focuses on events:
+In NEXAH, an application can be:
 
-text state → instability → collapse 
+- a **runnable tool** that produces an analysis or visualization
+- a **reference system** used to test a method
+- an **applied research program** with experiments and evidence
+- an **adapter** that translates another system into a NEXAH representation
+- an **experimental prototype** exploring a possible future capability
+- a **conceptual model** describing how a class of systems might be represented
 
-NEXAH focuses on structure:
+The status of each area matters. A runnable script is not automatically a
+validated method, and a promising experiment is not automatically a deployable
+application.
+
+---
+
+## 🚀 Start Here
+
+| You want to… | Start with |
+|---|---|
+| Run the verified visual reference pipeline | **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
+| Explore a compact Lorenz application | **[demos/lorenz_demo/](demos/lorenz_demo/)** |
+| Study Lorenz field and geometry analysis | **[dynamical_systems/lorenz/](dynamical_systems/lorenz/)** |
+| Compare a different chaotic flow | **[dynamical_systems/halvorsen/](dynamical_systems/halvorsen/)** |
+| Explore the most developed applied program | **[power_systems/](power_systems/)** |
+| Connect another system to NEXAH | **[adapters/](adapters/)** |
+| Inspect experimental navigation tools | **[navigation/](navigation/)** |
+| Understand the conceptual model families | **[models/dynamical_models/](models/dynamical_models/)** |
+
+If you are completely new to NEXAH, begin with the repository
+**[START_HERE](../START_HERE.md)** before entering an application program.
+
+---
+
+## 🗂️ Application Map
+
+| Area | What it offers | Current status |
+|---|---|---|
+| **[Power Systems](power_systems/)** | IEEE benchmark studies, stability fields, atlas discovery, prediction, recovery, and control experiments | Active applied research |
+| **[Lorenz Research](dynamical_systems/lorenz/)** | Density, FTLE, Lyapunov, separatrix, regime, and navigation analysis | Active reference system |
+| **[Halvorsen Research](dynamical_systems/halvorsen/)** | Distributed transport, transition graphs, residue models, reachability, and policy experiments | Experimental research |
+| **[Lorenz Demo](demos/lorenz_demo/)** | Compact visual pipeline for geometry and transport structures | Runnable demonstration |
+| **[Lorenz Core Demos](core_demos/lorenz/)** | Historical progression from pattern detection to navigation and meta-control | Reference / legacy series |
+| **[Adapters](adapters/)** | Interfaces and examples for Lorenz, Kuramoto, grids, traffic, and supply chains | Experimental integration layer |
+| **[Navigation](navigation/)** | Mod-77, drift quantization, Phi-Split, and IEEE9 navigation prototypes | Legacy / experimental prototype |
+| **[Dynamical Models](models/dynamical_models/)** | Stability, gradient, drift, and regime model documents | Theoretical reference |
+| **[Datasets](datasets/)** | Synthetic JSON system descriptions | Reference data; documentation incomplete |
+| **[Archive](archive/)** | Superseded prototypes and former root demos | Archived |
+
+---
+
+## ⚡ Power Systems
+
+**[APPLICATIONS/power_systems/](power_systems/)** is currently the most
+developed applied research program in NEXAH.
+
+It investigates whether simulated and benchmark power-system states can be
+organized into structural representations containing:
+
+- operating regions and basin-like territories
+- transition corridors
+- warning and critical regimes
+- recovery pathways
+- candidate anchors and bottlenecks
+- atlas-guided intervention concepts
+
+Primary environments include:
+
+| Environment | Role |
+|---|---|
+| **[FIELD_NAVIGATION_VALIDATION/](power_systems/FIELD_NAVIGATION_VALIDATION/)** | Main atlas, prediction, recovery, and reconstruction experiment series |
+| **[VALIDATION_LAYER/](power_systems/VALIDATION_LAYER/)** | Quantitative indicators and validation experiments |
+| **[ieee_xray_pipeline/](power_systems/ieee_xray_pipeline/)** | Feature and geometry reconstruction pipeline |
+| **[nexah_ieee9/](power_systems/nexah_ieee9/)** | Compact IEEE9 navigation and control environment |
+| **[nexah_ieeeX/](power_systems/nexah_ieeeX/)** | Scaling studies across larger IEEE benchmark networks |
+| **[stability_field_dynamics/](power_systems/stability_field_dynamics/)** | Broad stability-field and IEEE experiment archive |
+
+Current questions include:
+
+- Do warning regimes appear before simulated collapse?
+- Which structural indicators remain stable across IEEE network sizes?
+- Can recovery trajectories be grouped into recurring archetypes?
+- How much of an atlas can be reconstructed from historical simulation artifacts?
+- Which proposed control actions survive comparison with established
+  power-system methods?
+- What changes when repository experiments are tested against operational data?
+
+This work uses IEEE benchmark models and repository-generated simulation
+archives. It should not yet be interpreted as operational grid validation or a
+production control system.
+
+For detail, use the **[Power Systems README](power_systems/README.md)** and
+**[Power Systems Index](power_systems/INDEX_power-system-applications.md)**.
+
+---
+
+## 🌀 Dynamical Systems
+
+The **[Dynamical Systems](dynamical_systems/)** area provides reference systems
+for developing and comparing NEXAH methods.
+
+### Lorenz
+
+**[dynamical_systems/lorenz/](dynamical_systems/lorenz/)** contains the broadest
+non-power-system analysis environment:
+
+- attractor and density reconstruction
+- FTLE and Lyapunov analysis
+- filament and separatrix extraction
+- regime and switching maps
+- flow-field visualization
+- exploratory navigation
+
+Lorenz is the main reference system for recognizable switching behavior and
+well-known chaotic geometry.
+
+### Halvorsen
+
+**[dynamical_systems/halvorsen/](dynamical_systems/halvorsen/)** provides a
+contrasting flow geometry with distributed rotational transport. It contains:
+
+- transition and coarse-graining experiments
+- graph connectivity and reachability
+- candidate gate and policy studies
+- residue-flow comparisons
+- Lorenz/Halvorsen visual comparisons
+
+The comparison asks which observed NEXAH structures depend on the system and
+which recur across different representations.
+
+---
+
+## 🎬 Demonstrations
+
+NEXAH currently has several demo layers with different roles:
+
+| Demo | Role |
+|---|---|
+| **[PROTO_CORE/NEXAH_DEMONSTRATOR](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** | Canonical, verified hands-on entry |
+| **[demos/lorenz_demo](demos/lorenz_demo/)** | Compact application-level Lorenz visualization |
+| **[core_demos/lorenz](core_demos/lorenz/)** | Historical development series and visual archive |
+
+The existence of several Lorenz areas reflects the development history. New
+users should choose the canonical demonstrator first.
+
+---
+
+## 🔌 Adapters and Integration
+
+The **[Adapter Layer](adapters/)** explores a minimal translation boundary
+between an external system and a structural NEXAH representation.
+
+Examples currently cover:
+
+- Lorenz
+- Kuramoto
+- power-grid abstractions
+- supply chains
+- traffic systems
+- synthetic energy grids
+
+These adapters are useful prototypes and starting points for contributors.
+They are not yet a stable public integration API.
+
+Questions for this layer:
+
+- What is the minimum information a system must expose?
+- Which state, transition, phase, or graph representation is appropriate?
+- Can different domains share one adapter contract without losing essential
+  dynamics?
+- How should uncertainty and measurement noise enter the representation?
+
+---
+
+## 🧭 Experimental Navigation
+
+The **[navigation/](navigation/)** directory contains an earlier experimental
+navigation line based on Mod-77 state spaces, drift quantization, Phi-Split
+events, and an IEEE9-style prototype.
+
+It is preserved because it contains executable ideas and useful research
+questions. It is not the canonical NEXAH navigation layer and is not integrated
+with every current application.
+
+---
+
+## 🧠 Models and Synthetic Data
+
+The **[Dynamical Models](models/dynamical_models/)** documents describe a
+conceptual progression:
 
 ```text
-   dynamics
-       ↓
-    structure
-       ↓
-     field
-       ↓
-     atlas
-       ↓
-   navigation
-       ↓
-   prediction
-       ↓
-   recovery
-       ↓
-    control 
+stability landscape
+→ gradient dynamics
+→ drift dynamics
+→ regime transitions
 ```
 
----
-
-## ⚡ Current Application Status
-
-![NEXAH Power Systems Current Status](power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_vii.png)
-
-The current power-system validation demonstrates that operating states organize into coherent geometric structures rather than random state clouds.
-
-Discovered structures include:
-
-- Basin Territories
-
-- Transport Networks
-
-- Transition Corridors
-
-- Gates & Bottlenecks
-
-- Recovery Regions
-
-- Atlas-Guided Control Infrastructure
-
-Recent experiments further demonstrate that atlas structure can be reconstructed from historical operational archives.
-
-NEXAH now supports both:
-
-- Atlas Discovery from simulations
-
-- Atlas Reconstruction from historical state archives
-
-This extends the framework beyond navigation and control toward long-term dynamical memory and historical atlas reconstruction.
+The **[datasets/](datasets/)** directory contains synthetic JSON descriptions
+for energy grids, supply chains, ecosystems, and server clusters. These files
+are reference material from earlier application experiments; their schemas and
+consumers are not yet documented consistently.
 
 ---
 
-# 🕰 Historical Dynamics Reconstruction
+## 🧪 What Users Can Work On
 
-![Historical Dynamics Reconstruction](power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-HISTORICAL_DYNAMICS_RECONSTRUCTION_NEXAH_STATE_NAVIGATION.png)
+This layer intentionally exposes open work. Useful contributions include:
 
-EXP_38–EXP_40 investigated whether atlas structures can be reconstructed from previously generated repository artifacts.
+- reproducing an experiment in a clean environment
+- comparing structural indicators against standard baselines
+- connecting a new system through an adapter
+- documenting a synthetic dataset and its schema
+- testing Lorenz-derived methods on another dynamical system
+- evaluating IEEE results with power-system expertise
+- replacing simulated archives with appropriate operational or public data
+- separating representation artifacts from system-invariant behavior
+- improving statistical treatment and uncertainty reporting
 
-Recovered structures include:
-
-- State Classification
-- Basin Evidence
-- Atlas Organization
-- Field Geometry
-- Warning-State Dynamics
-- Early-Warning Layers
-
-Key findings:
-
-- 24 historical state archives recovered
-- measurable warning-state transition networks discovered
-- warning states consistently precede collapse events
-- mean warning lead time: 81.35 state steps
-- maximum warning lead time: 96 state steps
-
-Observed progression:
-
-```text
-SAFE
- ↓
-WARNING
- ↓
-CRITICAL
- ↓
-COLLAPSED
-```
-
-rather than:
-
-```text
-SAFE
- ↓
-COLLAPSED
-```
-
-These results suggest that instability develops through structured intermediate regimes rather than abrupt transitions.
+The goal is not to present every question as solved. The goal is to make the
+current tools, evidence, and open problems inspectable.
 
 ---
 
-# 🔄 Recovery Archetypes & Oscillation Dynamics
+## 📊 Status Language
 
-![Recovery Archetypes & Oscillation Dynamics](power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_STATE_NAVIGATION-RECOVERY_ARCHETYPES-OSCILLATION_DYNAMICS.png)
+| Status | Meaning |
+|---|---|
+| **Runnable demonstration** | A documented script or pipeline can be executed |
+| **Active applied research** | Ongoing system-specific experiments and evidence |
+| **Experimental** | Promising implementation with limited validation |
+| **Theoretical** | Conceptual model or proposed mechanism |
+| **Legacy / reference** | Historical work retained for context or reuse |
+| **Archived** | Superseded material outside the current entry path |
 
-EXP_41–EXP_43 investigated the internal dynamics of historical warning-state archives.
-
-Recovered structures include:
-
-- degradation chains
-- recovery archetypes
-- oscillatory dynamics
-
-Key observations:
-
-### Recovery Archetypes
-
-Historical trajectories repeatedly converge toward similar stabilization pathways.
-
-Recovery therefore appears structured rather than random.
-
-### Oscillation Dynamics
-
-Dominant oscillation:
-
-```text
-SAFE ↔ CRITICAL
-```
-
-Additional oscillations:
-
-```text
-SAFE ↔ WARNING
-WARNING ↔ CRITICAL
-SAFE ↔ COLLAPSED
-```
-
-These findings suggest that instability often develops through repeated excursions between neighboring regimes.
-
-The atlas therefore contains:
-
-- warning dynamics
-- recovery dynamics
-- oscillatory dynamics
-
-that remain recoverable from historical archives.
+Runnable does not mean validated. Experimental does not mean ineffective. The
+labels tell readers what kind of evidence and maintenance level to expect.
 
 ---
 
-# 🧪 Validation Layer
+## ⚠️ Current Boundaries
 
-📂 power_systems/VALIDATION_LAYER/
+The Applications Layer does not yet provide:
 
-The Validation Layer provides quantitative evidence for the NEXAH approach.
+- a unified application API
+- production deployment guarantees
+- comprehensive real-world operational validation
+- one reproducibility command for every historical experiment
+- stable interfaces across all adapters and navigation prototypes
+- independent validation of the major application claims
 
-Purpose:
-
-```text
-Can latent structure be detected?  Can transitions be anticipated?  Can system motion be interpreted geometrically? 
-```
-
-
-Key Findings:
-
-- Early-warning behavior appears before collapse
-- Instability emerges as geometric drift
-- Structural indicators outperform simple threshold observations
-- Transition dynamics become measurable
+These are collaboration opportunities, not hidden assumptions.
 
 ---
 
-# 🌀 Dynamical Systems — Core Reference (Lorenz)
+## 🔗 Related Entry Points
 
-Lorenz Core
-
-The Lorenz system serves as the minimal reference implementation of the NEXAH framework.
-
-It demonstrates the complete transformation pipeline:
-
-```text
-   Dynamics
-       ↓
-   Structure
-       ↓
-    Geometry
-       ↓
-     Signal
-       ↓
-     Behavior 
-```
-
-
-Key Insights:
-
-- Chaotic systems exhibit latent structure
-- Transitions occur within specific regions
-- Motion follows repeatable pathways
-- Structure emerges directly from dynamics
-
-Entry Point:
-
-core_demos/lorenz/README.md
+- **[Repository Overview](../README.md)**
+- **[Research Portal](../RESEARCH/README.md)**
+- **[Validation Portal](../RESEARCH/VALIDATION/README.md)**
+- **[Findings Portal](../RESEARCH/FINDINGS/README.md)**
+- **[Architecture](../ARCHITECTURE/README.md)**
+- **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**
 
 ---
 
-# ⚡ Power Systems — Atlas Discovery
+**NEXAH Applications**
 
-📂 power_systems/
-
-The power-system application layer is currently the most advanced NEXAH validation environment.
-
-Research areas include:
-
-- Stability Field Construction
-- Atlas Discovery
-- Transition Prediction
-- Recovery Navigation
-- Atlas-Guided Control
-- IEEE Benchmark Validation
-
----
-
-## Main Results
-
-The discovered state space contains:
-
-- 18 Basin Territories
-- Structured Transport Corridors
-- High-Traffic Backbone Networks
-- Gates and Bottlenecks
-- Recovery Anchors
-- Predictive Navigation Infrastructure
-
-The resulting atlas supports:
-
-- Transition Prediction
-- Trajectory Forecasting
-- Early Warning
-- Recovery Guidance
-- Control Planning
-
----
-
-| Capability | Status |
-|------------|---------|
-| Structure Discovery | ✅ |
-| Basin Detection | ✅ |
-| Atlas Construction | ✅ |
-| Navigation | ✅ |
-| Transition Prediction | ✅ |
-| Early Warning | ✅ |
-| Recovery Guidance | ✅ |
-| Control Framework | ✅ |
-| Historical Reconstruction | ✅ |
-| Recovery Archetypes | ✅ |
-| Oscillation Dynamics | ✅ |
-| Real-Time Deployment | 🚧 |
----
-
-# 🔵 Adapter Layer
-
-text System     ↓ Adapter     ↓ State Graph     ↓ NEXAH     ↓ Analysis 
-
-Supported domains:
-
-- Power Systems
-- Dynamical Systems
-- Synthetic Environments
-- Future Complex-System Applications
-
-Entry Point:
-
-adapters/README.md
-
----
-
-# 🧠 Unified Insight
-
-Across all applications studied so far:
-
-> Systems do not evolve randomly through state space.
-
-Instead, they move through structured dynamical landscapes containing regions, pathways, boundaries, and preferred transitions.
-
-NEXAH attempts to reveal and utilize that structure.
-
----
-
-# 🧭 Navigation Guide
-
-| Goal | Start Here |
-|--------|--------|
-| Understand NEXAH | core_demos/lorenz/ |
-| Explore Validation | power_systems/VALIDATION_LAYER/ |
-| Explore Power Systems | power_systems/ |
-| Study Atlas Discovery | power_systems/FIELD_NAVIGATION_VALIDATION/ |
-| Review Prediction & Recovery | power_systems/FIELD_NAVIGATION_VALIDATION/outputs/ |
-
----
-
-# 🌍 Future Applications
-
-Potential application areas include:
-
-- Electrical Power Systems
-- Industrial Process Control
-- Energy Networks
-- Ecosystem Dynamics
-- Transportation Systems
-- Autonomous Agents
-- General Complex Dynamical Systems
-
----
-
-# 🤝 Collaboration
-
-NEXAH is currently an independent research effort.
-
-Researchers, engineers, power-system experts, control theorists, and complex-systems practitioners interested in:
-
-- stability analysis
-- dynamical systems
-- state-space geometry
-- navigation and control
-- IEEE benchmark validation
-
-are warmly invited to explore the repository, reproduce results, challenge assumptions, and contribute ideas.
-
-Progress will ultimately depend on open discussion, independent validation, and real-world testing.
-
----
-
-# 🌀 NEXAH
-
-```text
-  dynamics
-↓
-structure
-↓
-field
-↓
-geometry
-↓
-atlas
-↓
-prediction
-↓
-navigation
-↓
-recovery
-↓
-control
-↓
-reconstruction
-```
-Structure reveals.
-Navigation guides.
-Control protects.
-Reconstruction remembers.
+Systems · Tools · Evidence · Open Questions
