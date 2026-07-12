@@ -1,401 +1,224 @@
-# ⚙️ PROTO_CORE — Experimental Structural Engine
+# ⚙️ NEXAH — Proto Core
 
-> Core experimental layer of the NEXAH framework.
+`PROTO_CORE` contains reference implementations, experimental method layers,
+and the development history from which several current NEXAH applications
+emerged.
 
-PROTO_CORE contains the active structural engine behind:
-
-- field reconstruction
-- transition geometry
-- navigation behavior
-- phase dynamics
-- control experiments
-- stability field extraction
-
-It is the primary development environment where:
-
-```text
-raw dynamics
-→ structure extraction
-→ transition geometry
-→ navigation behavior
-→ control logic
-```
-
-are explored and iteratively expanded.
+It is not one unified software core. Its three areas have different roles and
+different levels of readiness.
 
 ---
 
-# 🧠 Purpose of PROTO_CORE
+## 🚀 Start Here
 
-PROTO_CORE is not a finalized framework.
+| You want to… | Start with |
+|---|---|
+| Run the verified reference pipeline | **[NEXAH_DEMONSTRATOR/](NEXAH_DEMONSTRATOR/)** |
+| Study field reconstruction methods | **[FIELD_LAYER/](FIELD_LAYER/)** |
+| Trace the IEEE gate/control development sequence | **[NEXAH_CORE/](NEXAH_CORE/)** |
+| Browse the visual development history | **[visual_gallery.md](visual_gallery.md)** |
 
-It is:
-
-> an active experimental architecture for discovering and validating geometric structure in dynamical systems.
-
-The directory combines:
-
-- implemented experimental systems
-- structural reconstruction methods
-- navigation experiments
-- empirical validation
-- evolving control logic
-- prototype field abstractions
+New users should begin with the Demonstrator. `FIELD_LAYER` and `NEXAH_CORE`
+are research environments rather than stable public APIs.
 
 ---
 
-# 🧭 Core Structure
+## 🗂️ Structure and Status
 
 ```text
 PROTO_CORE/
-├── FIELD_LAYER/
-├── NEXAH_CORE/
-└── NEXAH_DEMONSTRATOR/
+├── NEXAH_DEMONSTRATOR/   active verified reference tool
+├── FIELD_LAYER/          experimental methods laboratory
+└── NEXAH_CORE/           legacy/experimental development lineage
 ```
+
+| Area | Primary role | Status |
+|---|---|---|
+| **[NEXAH_DEMONSTRATOR](NEXAH_DEMONSTRATOR/)** | Onboarding, reproducible visual pipeline, structural reference | Active and verified |
+| **[FIELD_LAYER](FIELD_LAYER/)** | Field reconstruction, decomposition, geometry, and navigation methods | Experimental Method Lab |
+| **[NEXAH_CORE](NEXAH_CORE/)** | Versioned IEEE-oriented gate, transition, and control experiments | Legacy / experimental lineage |
+
+These labels indicate maintenance and evidence level. “Legacy” does not mean
+irrelevant; it means the material is preserved as development history rather
+than presented as the current canonical implementation.
 
 ---
 
-# 🌊 FIELD_LAYER/
+## 🧪 NEXAH Demonstrator
 
-```text
-PROTO_CORE/FIELD_LAYER/
+The **[NEXAH Demonstrator](NEXAH_DEMONSTRATOR/)** is the canonical executable
+entry to Proto Core.
+
+It combines:
+
+- trajectory simulation
+- field and transition-structure reconstruction
+- a continuous instability field
+- discrete structural transitions
+- navigation behavior
+- generated figures and animation
+
+From the repository root:
+
+```bash
+python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/run_demo.py
 ```
 
-Continuous geometric and field representation layer.
+This complete sequence has been verified with Python 3.12. See the
+**[Demonstrator README](NEXAH_DEMONSTRATOR/README.md)** for expected outputs and
+scientific limitations.
 
-This subsystem reconstructs:
-
-- density fields
-- flow structure
-- ridge geometry
-- basin boundaries
-- transition topology
-- directional flow structure
-
-Core transformation:
-
-```text
-trajectory
-→ density
-→ geometry
-→ navigable field structure
-```
+The Demonstrator is both a reference implementation and a small application of
+NEXAH methods. It remains in `PROTO_CORE` because its primary purpose is to
+expose the structural pipeline rather than a domain-specific user workflow.
 
 ---
 
-## 🔬 Major Components
+## 🌊 Field Layer
 
-### FIELD_DECOMPOSITION/
+The **[FIELD_LAYER](FIELD_LAYER/)** is an experimental methods laboratory for
+turning trajectories into continuous and discrete structural representations.
 
-Experimental reconstruction system for:
+Research areas include:
 
-- manifold extraction
-- field decomposition
-- orbit structure
-- separatrix analysis
+- density and flow reconstruction
+- gradient/rotation decomposition
+- boundary and separatrix analysis
 - Lyapunov overlays
-- transport maps
-- transition geometry
+- regime and transport maps
+- transition concentration regions
+- exploratory navigation and field control
 
-Contains:
+Major subareas:
+
+| Area | Role |
+|---|---|
+| **[FIELD_DECOMPOSITION/](FIELD_LAYER/FIELD_DECOMPOSITION/)** | Versioned field, boundary, transport, and regime experiments |
+| **[NAVIGATION_ENGINE/](FIELD_LAYER/NAVIGATION_ENGINE/)** | Experimental geometry-aware navigation and control |
+| **[LEGACY/](FIELD_LAYER/LEGACY/)** | Earlier equations, findings, and formulations |
+
+`FIELD_LAYER` contains reusable method ideas, but they are not consolidated
+into a stable library interface.
+
+---
+
+## 🔶 NEXAH Core Development Lineage
+
+The **[NEXAH_CORE](NEXAH_CORE/)** directory records an extended sequence of
+IEEE-oriented experiments, ranging from early gate detection to phase-aligned
+navigation.
+
+The script history includes work on:
+
+- phase and transition localization
+- sheet tracking
+- transition density fields
+- basin identity and transition matrices
+- memory-guided and policy control
+- stability and barrier fields
+- flow-aligned channels
+- gate-aware navigation
+
+Most of this history appears as successive `ieee_gate_detection_v*` scripts.
+The sequence is valuable for tracing how concepts developed, but it is not a
+single current engine and does not expose a unified API.
+
+Current applied power-system work lives in
+**[APPLICATIONS/power_systems/](../APPLICATIONS/power_systems/)**.
+
+---
+
+## 🔁 Relationship to the Rest of NEXAH
 
 ```text
-outputs/
-scripts/
-visual_gallery.md
-README.md
+RESEARCH
+→ concepts, validation, and findings
+
+PROTO_CORE
+→ reference implementations and experimental methods
+
+APPLICATIONS
+→ system-specific tools and applied research programs
+
+nexah/
+→ minimal installable Python package
 ```
 
----
+The boundaries are intentionally permeable:
 
-### NAVIGATION_ENGINE/
+- the Demonstrator is also an application
+- Field Layer methods support both research and applications
+- NEXAH Core contains early applied IEEE experiments
+- successful prototypes can migrate into maintained application programs or
+  the installable package
 
-Experimental navigation and control layer.
-
-Includes:
-
-- ridge-following behavior
-- gate-aware motion
-- adaptive navigation
-- transition steering
-- regime locking
-- observer-guided control
-- field shaping
-- control energy mapping
-
-This layer explores:
-
-```text
-navigation within learned geometry
-```
-
-rather than traditional state control.
+Files should be interpreted according to their documented status, not only
+their directory name.
 
 ---
 
-# 🔶 NEXAH_CORE/
+## 🧭 Is Proto Core an Applications Area?
 
-```text
-PROTO_CORE/NEXAH_CORE/
-```
+Partly:
 
-Primary transition and instability engine.
+| Area | Application role |
+|---|---|
+| Demonstrator | Yes — runnable reference application |
+| Field Layer | Primarily methods used to build applications |
+| NEXAH Core | Applied experiment history, especially for IEEE systems |
 
-Implements:
-
-- gate detection
-- transition fields
-- basin dynamics
-- phase-space localization
-- trajectory steering
-- structure-aware control
-- adaptive transition control
-
-This is the central experimental system layer.
+`APPLICATIONS/` remains the curated entry for domain-specific workflows.
+`PROTO_CORE/` explains and preserves the methods and implementation lineage
+behind those workflows.
 
 ---
 
-## 🔥 Key Experimental Themes
+## 🛠️ What Contributors Can Work On
 
-### Transition Geometry
+Useful contributions include:
 
-Transitions are treated as:
+- reproducing a Field Layer experiment in a clean environment
+- extracting reusable functions from versioned scripts
+- comparing an older NEXAH Core result with the maintained Power Systems work
+- separating representation artifacts from robust field structure
+- adding quantitative evaluation to visual observations
+- consolidating navigation methods behind a small interface
+- documenting which historical experiment superseded another
+- promoting a stable method into the installable `nexah` package
 
-```text
-structured geometric regions
-```
-
-rather than isolated threshold events.
-
----
-
-### Basin Dynamics
-
-The system reconstructs:
-
-- basin identities
-- basin transitions
-- basin memory
-- transition probabilities
-- transition resonance
+The open architecture is intentional: Proto Core shows both what works and what
+still needs consolidation.
 
 ---
 
-### Structure-Aware Control
+## ⚠️ Current Boundaries
 
-Recent experiments explore:
+Proto Core does not currently provide:
 
-```text
-phase-aligned control
-phase-opposed stabilization
-gate-aware trajectory steering
-```
+- a unified runtime across all three areas
+- one stable public API
+- a single reproducibility command for historical experiments
+- production control guarantees
+- complete statistical validation of all visual findings
+- a direct replacement for established domain methods
 
-Core insight:
-
-> effective stabilization emerges from alignment with system geometry.
-
----
-
-## 📊 Key Output Systems
-
-```text
-outputs/ieee_gates/
-```
-
-Contains hundreds of generated experiments including:
-
-- transition maps
-- control trajectories
-- gate fields
-- ridge extraction
-- basin memory systems
-- adaptive control layers
-- learned flow fields
-- stability landscapes
+The verified Demonstrator is the supported entry. Everything beyond it should
+be treated as experimental, historical, or method-level research according to
+its local documentation.
 
 ---
 
-## 🌊 Example — Learned Structure Field
+## 🔗 Related Entry Points
 
-![Structure-Aware Target Field](NEXAH_CORE/outputs/ieee_gates/v37_structure_field.png)
-
-*Control emerges from alignment with system geometry rather than external forcing.*
-
----
-
-## 🌊 Example — Navigation Geometry
-
-![Navigation Geometry](FIELD_LAYER/NAVIGATION_ENGINE/outputs/plots/v37_full_navigation.png)
-
-*System trajectories move along structured admissible flow paths.*
+- **[Repository Overview](../README.md)**
+- **[Applications Index](../APPLICATIONS/README.md)**
+- **[Research Portal](../RESEARCH/README.md)**
+- **[Validation Portal](../RESEARCH/VALIDATION/README.md)**
+- **[Architecture](../ARCHITECTURE/README.md)**
+- **[Installable Package](../nexah/README.md)**
 
 ---
 
-# 🧪 NEXAH_DEMONSTRATOR/
+**NEXAH Proto Core**
 
-```text
-PROTO_CORE/NEXAH_DEMONSTRATOR/
-```
-
-Minimal reproducible implementation of the NEXAH structural pipeline.
-
-Designed as:
-
-- demonstration system
-- reproducible reference layer
-- onboarding environment
-- visualization showcase
-
----
-
-## Includes
-
-- transition structure extraction
-- gate operator logic
-- navigation kernel
-- Kuramoto synchronization examples
-- manifold navigation
-- unified gate operators
-- cross-system demonstrations
-
----
-
-## 🎞 Visual Systems
-
-The demonstrator contains:
-
-```text
-visuals/
-├── core/
-├── hero/
-├── navigation/
-├── kuramoto/
-├── structure/
-├── unified/
-└── cross_system/
-```
-
-Including:
-
-- animated transition dynamics
-- gate geometry
-- synchronization fields
-- manifold navigation
-- multi-agent structure
-- regime transition overlays
-
----
-
-## 🔥 Hero Visualization
-
-![Transition Navigation](NEXAH_DEMONSTRATOR/visuals/hero/nexah_transition_navigation_v13.gif)
-
-*Geometry-aware transition navigation across structured dynamical regions.*
-
----
-
-# 🧠 Conceptual Architecture
-
-PROTO_CORE explores the hypothesis that:
-
-```text
-complex systems evolve within structured geometric fields
-```
-
-where:
-
-- stability is spatial
-- transitions are geometric
-- phase dynamics trigger shifts
-- control depends on directional alignment
-
----
-
-# 🔬 Current Status
-
-PROTO_CORE currently contains:
-
-```text
-✔ active experimental systems
-✔ reproducible demonstrations
-✔ large empirical output layers
-✔ geometric transition models
-✔ navigation experiments
-✔ structure-aware control experiments
-```
-
-But also:
-
-```text
-❗ evolving architecture
-❗ incomplete kernel integration
-❗ exploratory abstractions
-❗ partially unified interfaces
-❗ ongoing validation work
-```
-
----
-
-# 🧭 Recommended Exploration Path
-
-## 🔹 New Visitors
-
-Start here:
-
-```text
-NEXAH_DEMONSTRATOR/
-```
-
-Then explore:
-
-```text
-FIELD_LAYER/
-NEXAH_CORE/
-```
-
----
-
-## 🔹 Researchers
-
-Focus on:
-
-```text
-FIELD_LAYER/FIELD_DECOMPOSITION/
-NEXAH_CORE/outputs/
-```
-
----
-
-## 🔹 Developers
-
-Focus on:
-
-```text
-scripts/
-outputs/
-navigation systems
-control systems
-```
-
----
-
-# ⚡ Central Insight
-
-```text
-Stability is not merely a value.
-
-It is a geometric region inside a structured field.
-```
-
----
-
-# 🧭 Final Orientation
-
-PROTO_CORE should currently be understood as:
-
-> an experimental structural engine for discovering geometry, transitions, and navigable structure in dynamical systems.
-
----
-
-**Thomas K. R. Hofmann · NEXAH · 2026**
+Reference Tool · Method Lab · Development Lineage

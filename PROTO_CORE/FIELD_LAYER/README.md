@@ -1,5 +1,10 @@
 # 🧭 NEXAH — Field Layer
 
+> **Status: Experimental Method Lab.** This directory contains versioned field
+> reconstruction, decomposition, navigation, and control experiments. It is a
+> source of methods and evidence, not a stable library or unified application.
+> Start with the **[Proto Core Index](../README.md)** for orientation.
+
 ![Lyapunov Map](FIELD_DECOMPOSITION/outputs/v8_0_lyapunov_map/v8_0_lyapunov_map.png)
 
 ---
@@ -12,11 +17,11 @@ NEXAH transforms complex dynamical systems into:
 - navigable trajectories  
 - stability-aware geometries  
 
-It reveals:
+It investigates:
 
 → where systems move  
 → where they can move  
-→ and where they must converge  
+→ and where convergence is observed in tested representations
 
 ---
 
@@ -30,9 +35,8 @@ where motion, transitions, and convergence become directly observable.
 ## 🔥 Core Insight
 
 ```text
-The system does not offer choices.
-It defines paths.
-Those paths define outcomes.
+The tested representations contain persistent paths.
+Those paths constrain observed outcomes.
 ```
 
 ---
@@ -368,7 +372,7 @@ New structural elements:
 
 - Basins → stable long-term behavior  
 - Separatrix → boundary between regimes  
-- Gates → minimal-cost transition points  
+- Gate field → candidate local-instability regions, not direct transition events
 
 👉 Control operates **on these structures**
 
@@ -376,7 +380,7 @@ New structural elements:
 
 ## 🔹 Visual Example (Core Transition Structure)
 
-![Separatrix](../ARCHITECTURE/CORE/control_layer/outputs/demo/nexah_separatrix_extraction.png)
+![Separatrix](../../ARCHITECTURE/CORE/control_layer/outputs/demo/nexah_separatrix_extraction.png)
 
 → boundaries define where control is possible
 
@@ -384,7 +388,7 @@ New structural elements:
 
 ## 🔹 Gate Dynamics
 
-![Gate Tracking](../ARCHITECTURE/CORE/control_layer/outputs/demo/nexah_gate_tracking.png)
+![Gate Tracking](../../ARCHITECTURE/CORE/control_layer/outputs/demo/nexah_gate_tracking.png)
 
 → transitions are dynamic  
 → control must adapt in time  
@@ -407,4 +411,3 @@ New structural elements:
 > The FIELD_LAYER is no longer passive.  
 >  
 > It becomes a **control-aware dynamical system representation**.
-

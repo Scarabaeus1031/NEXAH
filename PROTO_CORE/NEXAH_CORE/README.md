@@ -1,10 +1,16 @@
 # 🧭 NEXAH — Field-Based Stability Navigation & Control
 
+> **Status: Legacy / experimental development lineage.** This directory
+> preserves the versioned IEEE-oriented experiments that developed many NEXAH
+> gate, transition, basin, and control concepts. It is not the current
+> installable core, a unified engine, or a stable public API. Begin with the
+> **[Proto Core Index](../README.md)** for current orientation.
+
 ---
 
-## 🌍 What is NEXAH?
+## 🌍 What This Development Line Explores
 
-NEXAH is a system for:
+The experiments investigate methods for:
 
 ```text
 detecting, understanding, predicting, and controlling
@@ -15,20 +21,21 @@ transitions in complex dynamical systems
 
 ## 🧠 Core Idea
 
-A system does not fail randomly.
+The working hypothesis is that instability is not uniformly distributed in the
+chosen state-space representation.
 
 ```text
 It moves through a structured state space
 and becomes unstable only in specific regions.
 ```
 
-NEXAH maps this space and enables:
+The script sequence explores:
 
 ```text
 → early detection of instability  
 → structural understanding  
 → prediction of transitions  
-→ active control of system behavior  
+→ experimental intervention in simulated behavior
 ```
 
 ---
@@ -354,7 +361,7 @@ v55 → resonance-aligned control
 
 ---
 
-## 🌍 Applications
+## 🌍 Candidate Domains
 
 - power grid stability  
 - financial systems  
@@ -364,28 +371,27 @@ v55 → resonance-aligned control
 
 ---
 
-## 🚀 Status
+## 🚀 Historical Implementation Status
 
-```text
-✔ Field model
-✔ Transition detection
-✔ Structural analysis
-✔ Navigation
-✔ Transition prediction
-✔ Transition control
+Versioned experiments exist for:
 
-→ Next: constrained optimal control (v56+)
-```
+- field and structural models
+- transition and basin representations
+- navigation heuristics
+- prediction and control concepts
+- gate and phase-aligned navigation
+
+These experiments require consolidation and comparison with the maintained
+Power Systems application before they can be treated as current capabilities.
 
 ---
 
 ## 🧠 Final Statement
 
 ```text
-We are not analyzing signals.
-
-We are modeling and controlling
-a structured dynamical field.
+This development line explores how signals can be represented
+as structured fields and how simulated trajectories
+respond to structure-aware interventions.
 ```
 
 ---
