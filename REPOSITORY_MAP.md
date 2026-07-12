@@ -874,30 +874,6 @@ generated experiment layer
 
 ---
 
-# ✅ 11. tests/
-
-```text
-tests/
-```
-
-Testing and consistency layer.
-
-Contains:
-
-- integration checks
-- consistency tests
-- validation scripts
-- experimental verification tools
-
-Current status:
-
-```text
-growing
-not yet comprehensive
-```
-
----
-
 # 🔥 Current System Flow
 
 ```text
@@ -1002,7 +978,6 @@ Focus on:
 NEXAH_CORE/
 FIELD_LAYER/
 nexah/
-tests/
 ```
 
 ---
