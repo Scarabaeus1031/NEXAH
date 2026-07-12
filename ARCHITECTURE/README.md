@@ -1,464 +1,262 @@
-# 🧭 NEXAH Architecture
+# 🏗️ NEXAH — Architecture
 
-This document defines the **current architecture and system state of NEXAH**.
+This directory explains how the current NEXAH repository is organized, how its
+conceptual layers relate, and which parts are actually implemented.
 
-It is the single source for:
+NEXAH does not yet have one unified runtime architecture. The architecture is a
+combination of:
 
-- system structure  
-- architectural capabilities  
-- implementation mapping  
-- current development frontier  
+- a conceptual research pipeline
+- a verified reference demonstrator
+- experimental method and application modules
+- a minimal installable Python package
+- historical development lineages
 
 ---
 
-# 🧠 Core Idea
+## 🧭 Start Here
 
-NEXAH is a structural navigation framework for complex dynamical systems.
+| Question | Document |
+|---|---|
+| What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
+| Which computational methods are used? | **[METHODS.md](METHODS.md)** |
+| How do repository areas relate? | Continue with this page |
+| What can I run now? | **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
+| Where is the empirical evidence? | **[Validation Portal](../RESEARCH/VALIDATION/)** |
 
-It transforms:
+`SYSTEM_STATE.md` is the source of truth for implementation maturity and known
+limitations. Conceptual diagrams should not be read as proof that every layer
+exists as an integrated software component.
+
+---
+
+## 🧠 Conceptual Architecture
+
+The working NEXAH research pipeline is:
 
 ```text
-dynamics → structure → field → geometry → stability → constraint → control → navigation
+dynamics
+→ structure extraction
+→ field reconstruction
+→ geometric interpretation
+→ stability and transition analysis
+→ experimental control
+→ exploratory navigation
 ```
 
-The goal is not only to analyze systems, but to:
-
-> **enable structured navigation within dynamical fields under intrinsic constraints**
-
----
-
-# 🏗 System Architecture
-
-## Core Stack (Updated)
+An extended research model also investigates constraint behavior:
 
 ```text
-System → Structure → Field → Geometry → Stability → Constraint → Control → Navigation
+geometry
+→ observed admissible motion
+→ candidate constraints
+→ structure-aware intervention
 ```
 
-| Layer | Function |
-|------|---------|
-| Structure | Extracts system dynamics and regimes |
-| Field | Represents dynamics as continuous structured fields |
-| Geometry | Reveals basins, channels, separatrices |
-| Stability | Measures convergence, sensitivity, and local instability |
-| Constraint | Defines what motion is physically possible |
-| Control | Interacts with trajectories within constraints |
-| Navigation | Executes movement through field structure |
+This constraint layer is a hypothesis derived from experiments in which local
+perturbations were absorbed and trajectories returned toward recurring
+structure. It is not yet a formal manifold model or an implemented standalone
+layer.
+
+![NEXAH Architecture Flow](<archive/NEXAH_Architecture_Flow(Updated).png>)
+
+The diagram is a conceptual map of the intended relationships. Some labels
+reflect earlier development phases and do not correspond directly to current
+root directories.
 
 ---
 
-## 🧭 Architecture Flow
-
-![NEXAH Architecture Flow](archive/NEXAH_Architecture_Flow(Updated).png)
-
----
-
-### 🧠 Interpretation
-
-This diagram shows the **full operational pipeline of NEXAH** as it currently exists.
-
-It integrates all layers:
+## 🛠️ Implemented Repository Architecture
 
 ```text
-Structure → Field → Geometry → Stability → Constraint → Control → Navigation
+NEXAH/
+├── nexah/                          minimal installable package and CLI
+├── PROTO_CORE/
+│   ├── NEXAH_DEMONSTRATOR/         verified reference pipeline
+│   ├── FIELD_LAYER/                experimental methods laboratory
+│   └── NEXAH_CORE/                 legacy development lineage
+├── ARCHITECTURE/CORE/
+│   ├── field_reconstruction/       experimental reconstruction studies
+│   └── control_layer/              experimental control prototypes
+├── RESEARCH/                       concepts, validation, and findings
+├── APPLICATIONS/                   system-specific tools and studies
+└── EXPERIMENTAL/                   labs and historical prototypes
 ```
 
----
-
-### 🔷 Key Elements
-
-#### 1. Discovery → Field Reconstruction
-- raw system dynamics are transformed into:
-  - flow fields  
-  - density fields  
-  - energy landscapes  
-
-→ **data becomes structure**
+There are no current root modules named `ARCHY`, `DISCOVERY_ENGINE`,
+`FIELD_LAYER`, or `NAVIGATOR`. Those names describe earlier or conceptual
+components and should be interpreted through the current paths above.
 
 ---
 
-#### 2. Field Layer → Geometry + Stability
-- extraction of:
-  - basins  
-  - channels  
-  - separatrices  
-  - Lyapunov stability  
+## 📊 Component Status
 
-→ **structure becomes interpretable geometry**
-
----
-
-#### 3. Transition Geometry
-- system decomposes into:
-  - basins (states)  
-  - gates (transition corridors)  
-
-→ **motion is structured, not random**
+| Component | Current implementation | Status |
+|---|---|---|
+| Trajectory analysis | Demonstrator, package, research scripts | Implemented in multiple forms |
+| Transition representation | Demonstrator and experimental pipelines | Empirical / demonstrator-level |
+| Field reconstruction | Proto Core and Architecture prototypes | Experimental |
+| Gate Operator | Demonstrator and historical experiments | Implemented as local-instability measure |
+| Geometry extraction | Field and application scripts | Experimental, representation-dependent |
+| Control | Prototype scripts and application experiments | Experimental |
+| Navigation | Demonstrator and several prototype lines | Exploratory |
+| Constraint layer | Observed absorption/re-alignment behavior | Theoretical interpretation of experiments |
+| Unified runtime kernel | Not available | Open work |
+| Stable cross-module API | Not available | Open work |
 
 ---
 
-#### 4. Constraint Layer (CRITICAL NEW INSIGHT)
+## 🧪 Verified Reference Path
 
-This is the key addition:
+The most reliable end-to-end implementation is the
+**[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**:
 
 ```text
-Not all geometrically possible motion is allowed.
+trajectory simulation
+→ transition structure
+→ continuous instability field
+→ navigation behavior
+→ generated outputs
 ```
 
-Observed behavior:
+The Demonstrator establishes a shared reference for discussing implementation
+behavior. It does not validate every broader architectural claim.
+
+---
+
+## 🌊 Experimental Architecture Modules
+
+### Field Reconstruction
+
+**[ARCHITECTURE/CORE/field_reconstruction/](CORE/field_reconstruction/)**
+contains visual and computational studies of:
+
+- trajectory-to-field reconstruction
+- boundaries and stability masks
+- flow channels
+- frame and noise sensitivity
+- target-guided navigation prototypes
+
+Its strongest architectural contribution is the explicit distinction between
+well-supported regions and interpolation-dominated regions.
+
+### Control Layer
+
+**[ARCHITECTURE/CORE/control_layer/](CORE/control_layer/)** contains prototypes
+for:
+
+- basin and separatrix extraction
+- gate-field analysis
+- trajectory steering
+- gate tracking and routing
+- adaptive and multi-agent navigation
+
+These scripts demonstrate possible interactions with reconstructed geometry.
+They do not establish general controllability or a production control layer.
+
+---
+
+## 🪞 Current Gate Interpretation
+
+Later Demonstrator experiments refined the Gate Operator interpretation:
 
 ```text
-perturbation → deviation → absorption → return
+Gate Operator G(x)
+→ continuous local-instability field
+
+Structural transition
+→ discrete change in a trajectory-derived representation
 ```
 
-Meaning:
-
-→ the system evolves on a **constrained manifold**
-
----
-
-#### 5. Control Layer
-- operates **within constraints**, not against them  
-- aligns with:
-  - flow  
-  - geometry  
-  - transition structure  
+High instability can interact with transition behavior, but the Gate Operator
+does not directly detect transition events. Architecture and method documents
+should use this corrected distinction.
 
 ---
 
-#### 6. Navigation
-- executes movement through:
-  - valid channels  
-  - accessible gates  
-  - stability-compatible paths  
-
----
-
-### 🔁 Feedback Loops (IMPORTANT)
-
-The diagram includes two loops:
-
-#### Adaptive Feedback
-- system learns from navigation + outcome  
-
-#### Model Refinement
-- updates:
-  - field  
-  - geometry  
-  - transition structure  
-
----
-
-### 🔥 Core Insight
+## 🔁 Relationship Between Repository Layers
 
 ```text
-Navigation does not create structure.
+RESEARCH
+→ asks questions, validates observations, and records findings
 
-It follows constraints that already exist in the field.
+PROTO_CORE
+→ exposes reference implementations and method development
+
+ARCHITECTURE
+→ explains relationships, implementation status, and system boundaries
+
+APPLICATIONS
+→ applies methods to concrete systems and user workflows
+
+nexah/
+→ provides the minimal installable package and CLI
 ```
 
----
-
-### 🧭 Final Reading
-
-The system is best understood as:
-
-```text
-a constrained flow system
-with structured transitions
-and geometry-driven navigation
-```
+The architecture is therefore repository-wide. `ARCHITECTURE/CORE` is only one
+experimental implementation area, not the complete NEXAH runtime.
 
 ---
 
-This diagram replaces the previous simplified flowchart  
-and represents the **current ground truth architecture of NEXAH**.
+## 📏 Methods and Evidence
+
+The **[Methods document](METHODS.md)** describes implemented techniques,
+experimental heuristics, and theoretical interpretations. Individual methods
+must be read together with their status and evidence path.
+
+Primary evidence and application layers:
+
+- **[Validation](../RESEARCH/VALIDATION/)**
+- **[Findings](../RESEARCH/FINDINGS/)**
+- **[Applications](../APPLICATIONS/)**
+- **[Power Systems](../APPLICATIONS/power_systems/)**
+
+IEEE work currently uses benchmark models and repository-generated simulation
+archives. It is not yet operational grid validation.
 
 ---
 
-# 🔧 Implementation Mapping
+## ⚠️ Current Architectural Boundaries
 
-```text
-ARCHY (Simulation)
-→ DISCOVERY_ENGINE
-→ ARCHITECTURE/CORE/field_reconstruction
-→ FIELD_LAYER
-→ Transition Geometry
-→ Constraint Layer (emergent)
-→ ARCHITECTURE/CORE/control_layer
-→ NAVIGATOR
-```
+NEXAH does not yet provide:
 
----
+- one integrated implementation of the complete conceptual pipeline
+- a formal constraint or manifold layer
+- generalized transition detection across domains
+- validated system-independent control
+- stable APIs between research, methods, and applications
+- comprehensive independent reproduction
+- production deployment guarantees
 
-# 🔧 Core Components
+These gaps are explicit architecture work, not hidden implementation claims.
 
 ---
 
-## 1. Structure Layer
+## 🛣️ Development Priorities
 
-- vector field F(x)  
-- attractors and basins  
-- regime boundaries  
-- trajectory evolution  
+Useful architecture work includes:
 
----
-
-## 🌊 2. Field Reconstruction (CORE)
-
-Location:
-
-```text
-ARCHITECTURE/CORE/field_reconstruction
-```
-
-Builds the system representation from data:
-
-- density fields  
-- flow fields  
-- stability estimates  
-- boundary candidates  
-
-👉 transition from **data → structure**
+- consolidating a minimal runtime interface
+- separating reusable methods from versioned experiments
+- defining data contracts between field, transition, and application layers
+- attaching quantitative evidence to architectural claims
+- formalizing what “constraint” means operationally
+- comparing navigation prototypes under shared metrics
+- promoting stable methods into the installable package
 
 ---
 
-## 🌊 3. Field Layer
+## 🔗 Related Entry Points
 
-Location:
-
-```text
-FIELD_LAYER/
-```
-
-Transforms structure into a **continuous field representation**.
-
-### Components
-
-#### Probability Field
-- density estimation  
-- transition region detection  
-
-#### Energy Landscape
-
-```text
-E(x) = -log(p(x))
-```
+- **[System State](SYSTEM_STATE.md)**
+- **[Methods](METHODS.md)**
+- **[Proto Core Index](../PROTO_CORE/README.md)**
+- **[Applications Index](../APPLICATIONS/README.md)**
+- **[Research Portal](../RESEARCH/README.md)**
+- **[Repository Map](../REPOSITORY_MAP.md)**
 
 ---
 
-### 🌀 Field Decomposition
+**NEXAH Architecture**
 
-```text
-dx/dt ≈ -∇V(x) + R(x)
-```
-
-> Dynamics = attraction + rotation
-
----
-
-## 🎯 4. Geometry Layer
-
-- basins  
-- channels  
-- separatrices  
-- transition corridors  
-
----
-
-## 🔶 5. Stability Layer
-
-- Lyapunov field  
-- stability gradients  
-- proto-gates  
-
----
-
-## 🔒 6. Constraint Layer (NEW CORE)
-
-This layer reflects a **critical discovery from experimental results**.
-
-### Observation
-
-```text
-control → deviation → absorption → return
-```
-
-### Key Property
-
-```text
-The system preserves its manifold.
-```
-
-### Interpretation
-
-- motion is constrained to structured regions  
-- transitions cannot be forced arbitrarily  
-- internal perturbations are absorbed  
-
-### Implication
-
-```text
-Control does not override the system.
-
-It must operate within its constraints.
-```
-
----
-
-## 🎮 7. Control Layer (REVISED)
-
-Location:
-
-```text
-ARCHITECTURE/CORE/control_layer
-```
-
-### Updated Role
-
-Control is NOT free-form trajectory shaping.
-
-It is:
-
-```text
-constraint-aware interaction with system geometry
-```
-
-### Capabilities
-
-- trajectory alignment  
-- gate targeting  
-- flow-aligned perturbation  
-- local trajectory deformation  
-
-### Limitation (CRITICAL)
-
-```text
-Control cannot break system constraints.
-```
-
----
-
-## 🧭 8. Navigation Layer
-
-Location:
-
-```text
-NAVIGATOR/
-```
-
-Navigation executes motion:
-
-- follows geometry  
-- respects stability  
-- respects constraints  
-
----
-
-### Updated Principle
-
-```text
-Navigation = movement inside allowed geometry
-```
-
----
-
-# 🚀 Current Capability
-
-NEXAH supports:
-
-- structure extraction  
-- field reconstruction  
-- geometry extraction  
-- stability mapping  
-- constraint detection (implicit)  
-- gate detection  
-- constrained control  
-- navigation  
-
----
-
-# 📊 Implementation Status
-
-| Component | Status |
-|----------|--------|
-| Structure Extraction | ✓ |
-| Field Reconstruction | ✓ |
-| Field Layer | ✓ |
-| Geometry Extraction | ✓ |
-| Stability Layer | ✓ |
-| Constraint Layer | ✓ (emergent) |
-| Control Layer | ✓ (revised) |
-| Navigation Engine | ✓ |
-| Unified Kernel | ☐ |
-
----
-
-# 🔥 Architectural Shift (UPDATED)
-
-From:
-
-```text
-analysis → control → navigation
-```
-
-To:
-
-```text
-structure → field → geometry → stability → constraint → control → navigation
-```
-
----
-
-# 🧭 System Interpretation
-
-The system operates as:
-
-- structure defines geometry  
-- geometry defines stability  
-- stability defines constraints  
-- constraints define possible motion  
-- control interacts within constraints  
-- navigation executes allowed motion  
-
----
-
-# ⚡ Core Law
-
-```text
-The system evolves on a constrained manifold.
-```
-
----
-
-# 🌍 Application Domains
-
-- chaotic systems (Lorenz)  
-- power systems (IEEE)  
-- network dynamics  
-- multi-agent systems  
-
----
-
-# 🚀 Next Development Targets
-
-- unified navigation kernel  
-- explicit constraint formalization  
-- stochastic robustness  
-- real-world validation (IEEE)  
-
----
-
-# 🔥 Final Insight
-
-```text
-You are not controlling the system.
-
-You are navigating the geometry
-that the system allows.
-```
-
----
-
-NEXAH Architecture  
-Updated system definition · 2026
+Conceptual Pipeline · Implemented Modules · Experimental Boundaries

@@ -1,6 +1,11 @@
 # ⚡ NEXAH — Control Layer Module  
 > From navigation → to intervention → to controlled system dynamics
 
+> **Status: Experimental control and navigation prototype suite.** The scripts
+> demonstrate trajectory deformation and geometry-aware routing in selected
+> simulations. They do not establish general controllability or a production
+> control architecture.
+
 ---
 
 ## 🧠 Overview
@@ -25,7 +30,8 @@ understanding system behavior
 
 ## 🔬 Core Idea
 
-A system is not only navigable — it is controllable.
+The prototypes investigate whether selected simulated trajectories are
+navigable and partially influenceable.
 
 However, control is not arbitrary.
 
@@ -62,7 +68,7 @@ This enforces:
 
 - probabilistic consistency  
 - closed flow dynamics  
-- physically meaningful transitions  
+- normalized probabilistic transitions
 - stable and controllable system behavior  
 
 ---
@@ -106,11 +112,10 @@ It is a prerequisite for:
 
 ```text
 control_layer/
-├── steering/
-├── constraints/
-├── optimization/
-├── simulations/
-├── scripts/
+├── scripts/          # prototype experiments
+├── outputs/demo/     # selected generated visuals
+├── README.md
+└── building_log.md
 ```
 
 ---
@@ -153,14 +158,14 @@ Field → Geometry → Graph → Control → Navigation
 
 ---
 
-### 🔹 Gate Dynamics (Structured Transitions)
+### 🔹 Gate-Field Dynamics
 
 ![Gate Tracking](outputs/demo/nexah_gate_tracking.png)
 
 🧠  
-→ transitions occur through structured regions (gates)  
+→ the prototype tracks changing local-instability regions
 → these regions are dynamic, not fixed  
-→ control depends on *when and where* transitions are crossed  
+→ discrete transitions require separate trajectory-based detection
 
 ---
 
@@ -243,9 +248,9 @@ Control = trajectory shaping inside structured state space
 
 ## 🔁 Transition-Aware Control
 
-Control acts primarily at:
+The prototypes test control near:
 
-- transition regions (gates)  
+- candidate instability regions (gate field)
 - boundary layers (separatrix)  
 - low-density corridors (instability zones)  
 
@@ -273,10 +278,10 @@ Control acts primarily at:
 
 ## ⚠️ Current Status
 
-✔ trajectory steering (prototype)  
-✔ gate-aware control (early stage)  
-✔ basin-level targeting  
-✔ structure-aware interventions  
+- trajectory-steering prototypes available
+- gate-field-aware experiments available
+- basin-level targeting explored
+- structure-aware interventions explored
 
 ---
 
@@ -291,11 +296,11 @@ Control acts primarily at:
 
 ## 🧭 Interpretation
 
-The Control Layer transforms NEXAH from:
+The Control Layer investigates a possible transition from:
 
 ```text
 analysis framework
-→ intervention-capable system
+→ intervention-oriented prototype
 ```
 
 ---
@@ -304,7 +309,7 @@ analysis framework
 
 - integrate unified control kernel  
 - connect control to transition graph explicitly  
-- validate on real-world systems (IEEE, multi-agent)  
+- compare on IEEE benchmark and multi-agent simulations
 
 ---
 

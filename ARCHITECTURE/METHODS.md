@@ -1,5 +1,16 @@
 # NEXAH — Methods
 
+> **Status: Mixed method catalogue.** This document combines implemented
+> computations, experimental heuristics, and theoretical interpretations. It
+> is not a specification of one integrated runtime. See
+> **[SYSTEM_STATE.md](SYSTEM_STATE.md)** for current implementation maturity.
+
+Status labels used below:
+
+- **Implemented** — code exists in a current reference or prototype module
+- **Experimental** — implemented in limited scripts or systems
+- **Theoretical** — interpretation requiring further formalization
+
 This document describes the computational methods used in NEXAH  
 to extract structure, transitions, stability, and control behavior from dynamical systems.
 
@@ -20,7 +31,7 @@ NEXAH reconstructs system structure in six stages:
 
 ---
 
-# 1. Input Data
+# 1. Input Data — Implemented
 
 NEXAH operates on time-series data of dynamical systems:
 
@@ -31,7 +42,7 @@ $$
 Examples:
 
 - Lorenz system (synthetic)  
-- IEEE power grid models (real-world simulation)  
+- IEEE benchmark power-grid simulations
 
 The system does not require:
 
@@ -41,7 +52,7 @@ The system does not require:
 
 ---
 
-# 2. Field Reconstruction
+# 2. Field Reconstruction — Implemented / Experimental
 
 The system state trajectory is transformed into a continuous field representation.
 
@@ -85,7 +96,7 @@ Transitions correspond to movements across energy gradients.
 
 ---
 
-# 3. Geometric Structure Extraction
+# 3. Geometric Structure Extraction — Experimental
 
 The reconstructed field is used to extract geometric structure.
 
@@ -123,7 +134,7 @@ $$
 \nabla \times F(x)
 $$
 
-Observation:
+Observation in a historical experiment:
 
 - rotational structure dominates in transition regions  
 - coupled with divergence dynamics  
@@ -157,17 +168,15 @@ $$
 \tau \approx 15
 $$
 
-This suggests a delayed feedback between expansion and rotation.
+This suggests a candidate delayed relationship in that setup. The value is not
+yet established as a cross-system parameter.
 
 ---
 
-# 4. Transition Detection
+# 4. Transition Detection — Experimental
 
-Transitions are not defined by thresholds on system variables.
-
-Instead, they are identified as:
-
-> **geometric events within the reconstructed field**
+Candidate transitions are derived from trajectory representations rather than
+from one universal threshold. The exact definition depends on the experiment.
 
 Criteria:
 
@@ -176,11 +185,13 @@ Criteria:
 - crossing of low-density regions (greyspace)  
 - alignment with separatrix structures  
 
-These signals are combined into a transition score.
+These signals can be combined into experimental transition scores. In the
+verified Demonstrator, discrete transitions are identified separately from the
+continuous Gate instability field.
 
 ---
 
-# 5. Stability Representation
+# 5. Stability Representation — Experimental Interpretation
 
 Stability is not a scalar value.
 
@@ -198,7 +209,7 @@ No explicit binary classification is used.
 
 ---
 
-# 6. Transition Geometry & Basin Graph
+# 6. Transition Geometry & Basin Graph — Experimental
 
 Beyond continuous fields, NEXAH extracts a **discrete transition structure**.
 
@@ -226,15 +237,12 @@ Estimated from observed trajectory transitions.
 
 ---
 
-## 6.3 Gate Detection
+## 6.3 Gate and Instability Analysis
 
-Transitions do not occur uniformly.
+The Gate Operator identifies candidate regions of local structural instability.
+It does not directly identify discrete transition events.
 
-They occur through structured regions:
-
-> **Gates = directional transition corridors**
-
-Detection signals:
+Related analysis signals include:
 
 - local stability weakening (Lyapunov peaks)  
 - boundary curvature  
@@ -248,24 +256,24 @@ The system is represented as a graph:
 
 ```text
 Nodes: basins
-Edges: feasible transitions (gates)
+Edges: observed or modeled transitions
 ```
 
 Constraints:
 
-- only adjacent basins are reachable  
-- transition probabilities are structured  
+- adjacency is representation-dependent
+- observed transition probabilities can be non-uniform
 
 ---
 
-# 7. Control Methods
+# 7. Control Methods — Experimental
 
 NEXAH introduces **active interaction with transition structure**,  
 but not unconstrained control.
 
 ## 7.1 Control Objective
 
-Control is formulated as influencing transition behavior:
+One experimental formulation influences transition behavior:
 
 $$
 \max P(B_{source} \rightarrow B_{target})
@@ -312,7 +320,7 @@ However, propagation is constrained by field geometry.
 
 # 🔒 7.5 Constraint Behavior (Experimental Update)
 
-Recent experimental results (Builder Lab, runs 033–040) refine the control model.
+Historical Builder Lab runs 033–040 motivate a candidate constraint model.
 
 ## Observation
 
@@ -342,7 +350,8 @@ Control interacts with a constraint structure.
 
 ## Structural Model
 
-The system evolves on an implicit manifold:
+One theoretical interpretation is that the system evolves on an implicit
+manifold:
 
 ```text
 x(t) ∈ M
@@ -362,11 +371,11 @@ u(x) → arbitrary trajectory change
 
 ---
 
-## Key Result
+## Working Interpretation
 
 ```text
-The system is navigable,
-but not freely controllable from within.
+The tested trajectories exhibit constrained responses
+and do not support arbitrary redirection.
 ```
 
 ---
@@ -381,7 +390,7 @@ Align with the geometry that permits them.
 
 ---
 
-# 8. Navigation Methods
+# 8. Navigation Methods — Experimental
 
 Navigation treats the system as a **structured movement problem**.
 
@@ -448,7 +457,7 @@ Navigation operates on:
 
 ---
 
-# 9. Early Transition Detection (IEEE Systems)
+# 9. Early Transition Indicators (IEEE Benchmark Experiments)
 
 In power system experiments:
 
@@ -460,17 +469,19 @@ Detection point:
 
 - first structural deviation from stable manifold  
 
-Baseline:
+Historical comparison baseline:
 
 - classical voltage threshold detection  
 
-Result:
+Observed result:
 
-> NEXAH detects transitions earlier (empirical observation)
+> Structural indicators preceded the selected voltage-threshold event in the
+> investigated simulations. Broader comparison with established methods remains
+> open.
 
 ---
 
-# 10. Robustness Evaluation
+# 10. Robustness Evaluation — Implemented in Selected Experiments
 
 ## 10.1 Noise Injection
 
@@ -486,7 +497,7 @@ Result:
 
 ---
 
-## 10.3 Cross-System Validation
+## 10.3 Limited Cross-System Comparison
 
 Tested on:
 
@@ -495,7 +506,7 @@ Tested on:
 
 Observation:
 
-- structure persists across systems  
+- selected structural patterns recur in the tested representations
 
 ---
 

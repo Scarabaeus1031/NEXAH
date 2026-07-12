@@ -3,6 +3,14 @@
 > This document reflects the **current implemented and empirically observed state of NEXAH**,  
 > not an idealized or finalized architecture.
 
+Related references:
+
+- **[Architecture Index](README.md)**
+- **[Methods Catalogue](METHODS.md)**
+- **[Verified Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**
+- **[Validation Portal](../RESEARCH/VALIDATION/)**
+- **[Applications Index](../APPLICATIONS/README.md)**
+
 ---
 
 # 🧭 System Overview
@@ -256,8 +264,8 @@ within structured regions of state space.
 
 ### IEEE Systems
 
-✔ field reconstruction operational  
-🟡 structural interpretation possible  
+- field-reconstruction and application scripts available
+- structural interpretation explored on IEEE benchmark simulations
 
 ---
 
@@ -265,7 +273,7 @@ within structured regions of state space.
 
 ```text
 ❗ exploratory
-❗ limited real-world validation
+❗ no broad operational grid validation
 ```
 
 ---
@@ -367,5 +375,5 @@ and independent investigation.
 
 ---
 
-Last Updated: May 2026  
+Last Reviewed: July 12, 2026
 © Thomas K. R. Hofmann

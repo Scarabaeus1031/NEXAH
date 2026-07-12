@@ -1,6 +1,10 @@
 # ⚡ NEXAH — Field Reconstruction Module  
 > From trajectory data → to structure → to field geometry → to navigation
 
+> **Status: Experimental field-reconstruction and visual-method study.** The
+> module contains runnable prototypes and generated evidence, but no stable API
+> or generalized reconstruction guarantee.
+
 ---
 
 ## 🧠 Overview
@@ -21,7 +25,8 @@ This module marks the transition from:
 
 A system is not just a trajectory.
 
-It exists within a structured field — but this field is only **partially observable and locally reliable**.
+It can be represented through a reconstructed field — but this representation
+is only **partially observable and locally reliable**.
 
 This module reconstructs:
 
@@ -231,12 +236,12 @@ Outside trajectory support:
 
 ---
 
-### 5. Stable Field Exists
+### 5. Stable Features Can Be Extracted
 
 Invariant regions:
 
 - persist across transformations  
-- represent **reliable system geometry**  
+- provide **more reliable geometry candidates within the tested representation**
 
 ---
 
@@ -257,11 +262,11 @@ Between stable and unstable regions:
 
 ---
 
-### 8. Navigation Becomes Possible
+### 8. Navigation Can Be Prototyped
 
-- trajectories can be guided  
-- stable paths exist  
-- system can be steered through structure  
+- simulated trajectories can be guided
+- candidate stable paths can be extracted
+- structure-aware steering can be explored
 
 ---
 
@@ -318,7 +323,7 @@ Meaning:
 
 > Not all observed structure is real.  
 >  
-> But invariant structure reveals the true system geometry —  
+> But invariant structure provides a stronger candidate for system geometry —
 >  
 > and within it, motion becomes navigable.
 
@@ -326,8 +331,8 @@ Meaning:
 
 ## ⚙️ Status
 
-Experimental → emerging method  
-Transitioning toward FIELD_LAYER integration (navigation + control)
+Experimental visual and computational method study
+Candidate source for future FIELD_LAYER consolidation
 
 ---
 
