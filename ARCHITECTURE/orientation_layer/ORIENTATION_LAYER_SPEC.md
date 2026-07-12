@@ -1,6 +1,6 @@
 # Orientation Layer Specification
 
-Status: normative baseline; WP0–WP4 implemented, episodic learning open
+Status: normative baseline; WP0–WP5 initial implementation complete
 Scope: contracts and component boundaries, not a claim of implementation
 
 ## Purpose
@@ -73,6 +73,11 @@ external to the core, and must receive explicit authorization and safeguards.
 
 Observed outcomes may become provenance-preserving episodes. Learning must be
 auditable and reversible; the MVP does not silently mutate backend models.
+
+The initial episodic implementation stores immutable State–Report–Outcome
+records in an append-only log. Similarity retrieval uses declared,
+permutation-invariant v0.7 signature heuristics and returns explicit Episode
+references. It is retrieval-based context, not model training or policy learning.
 
 ## Core contracts
 

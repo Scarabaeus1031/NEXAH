@@ -58,7 +58,8 @@ nexah/
 │   ├── evidence.py                 provenance and uncertainty
 │   ├── state.py                    OrientationState input contract
 │   ├── report.py                   OrientationReport output contract
-│   └── generator.py                evidence-bound report generation
+│   ├── generator.py                evidence-bound report generation
+│   └── memory.py                   episodes, retrieval, append-only storage
 ├── README.md                       package scope and entry point
 └── docs/
     ├── CORE_V07_REFERENCE.md       historical v0.7 behavior reference
@@ -77,7 +78,15 @@ uncertainty is reported as unknown rather than invented. Report generation
 is implemented by `OrientationReportGenerator`; it reports local position,
 representation-level change, empirical graph reachability, missing information,
 assumptions, evidence, and uncertainty. Demonstrator validation, episodic
-storage, and learning remain later work.
+storage, and retrieval are now implemented as a transparent initial loop:
+outcomes remain externally observed, similarity is explicitly heuristic, and
+retrieval never mutates the backend. Decision support and execution remain later
+work.
+
+The first three-family memory benchmark is recorded under
+`validation/memory_generalization/`: 11 of 12 synthetic clean, noisy, and
+parameter-shifted queries retrieve the expected family, with a documented
+Kuramoto-to-Lorenz confusion under parameter shift.
 
 See the **[Orientation Layer Bauplan](../ARCHITECTURE/orientation_layer/)**.
 

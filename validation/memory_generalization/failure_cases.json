@@ -1,0 +1,28 @@
+[
+  {
+    "id": "synthetic-family-benchmark",
+    "severity": "boundary",
+    "description": "All trajectories are deterministic synthetic fixtures; the benchmark does not establish real-world memory semantics."
+  },
+  {
+    "id": "single-reference-per-family",
+    "severity": "boundary",
+    "description": "Each family has one stored reference, so within-family outcome diversity and episode density are not evaluated."
+  },
+  {
+    "id": "heuristic-uncalibrated-similarity",
+    "severity": "known",
+    "description": "Similarity scores are weighted v0.7 signature heuristics, not calibrated probabilities or semantic equivalence."
+  },
+  {
+    "id": "cross-family-confusion",
+    "severity": "observed",
+    "description": "One of twelve queries ranked a different system family first: the parameter-shifted Kuramoto query was ranked as Lorenz.",
+    "queries": ["kuramoto:parameter_shift→lorenz"]
+  },
+  {
+    "id": "low-retrieval-separation",
+    "severity": "observed",
+    "description": "At least one expected-family score is separated from the best alternative by less than 0.05 or is ranked below it."
+  }
+]

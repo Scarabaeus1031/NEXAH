@@ -12,6 +12,14 @@ from .generator import (
     ReportGenerationError,
     generate_orientation_report,
 )
+from .memory import (
+    Episode,
+    EpisodeStore,
+    EpisodeStoreError,
+    JsonlEpisodeStore,
+    attach_similar_episodes,
+    orientation_similarity,
+)
 from .primitives import (
     Constraint,
     Context,
@@ -41,11 +49,15 @@ __all__ = [
     "Constraint",
     "Context",
     "EpisodeRef",
+    "Episode",
+    "EpisodeStore",
+    "EpisodeStoreError",
     "Evidence",
     "EvidenceKind",
     "Goal",
     "MapRef",
     "MapScope",
+    "JsonlEpisodeStore",
     "Observation",
     "Observer",
     "OperatorRef",
@@ -68,4 +80,6 @@ __all__ = [
     "Uncertainty",
     "UncertaintyKind",
     "generate_orientation_report",
+    "attach_similar_episodes",
+    "orientation_similarity",
 ]

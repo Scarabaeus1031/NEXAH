@@ -52,6 +52,10 @@ class OrientationState(ContractModel):
             [item.evidence_id for item in self.evidence],
             "evidence IDs",
         )
+        _require_unique(
+            [item.episode_id for item in self.episodes],
+            "episode IDs",
+        )
         if self.map is not None:
             if self.map.representation_id != self.representation.representation_id:
                 raise ValueError("map and representation IDs must match")
@@ -62,4 +66,3 @@ class OrientationState(ContractModel):
 def _require_unique(values: list[str], label: str) -> None:
     if len(values) != len(set(values)):
         raise ValueError(f"{label} must be unique")
-

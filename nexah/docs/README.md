@@ -8,8 +8,9 @@ These documents describe or record the minimal `nexah` package.
   evidence, and known limitations of the v0.7 baseline.
 - **[VALIDATION_STRATEGY.md](VALIDATION_STRATEGY.md)** — validation strategy and
   open validation work.
+- **[EPISODIC_MEMORY.md](EPISODIC_MEMORY.md)** — episode contract, append-only
+  storage, similarity semantics, and boundaries.
 - **[archive/](archive/)** — development logs and historical status reports.
 
 The normative plan for the next Orientation Layer is maintained under
 **[ARCHITECTURE/orientation_layer/](../../ARCHITECTURE/orientation_layer/)**.
-

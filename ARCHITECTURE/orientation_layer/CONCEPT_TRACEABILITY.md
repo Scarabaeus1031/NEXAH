@@ -14,7 +14,7 @@ from being treated as interchangeable.
 | Demonstrator | End-to-end reference behavior | Canonical Lorenz proxy connected through `validation/orientation_mvp/` | Reproducible proxy validation | Add external and cross-system evidence |
 | Field reconstruction | Trajectory-to-field experimental methods | Proto Core and Architecture experiments | Experimental | Keep evidence and boundaries explicit |
 | Orientation Report | Evidence-linked decision-support output | Contract, generator, and `nexah orient` CLI | Implemented for v0.7 backend | Validate against Demonstrator and baseline |
-| Episodic Memory | Outcome-linked storage and retrieval | Not implemented | Later | Prototype after MVP validation |
+| Episodic Memory | Outcome-linked storage and retrieval | Store, signature retrieval, immutable attachment, three-family benchmark | Synthetic validation with one observed failure | Add denser episode histories and real sequences |
 | Autonomous execution | Acting on external systems | Not part of current core | Out of MVP | Define separately if justified |
 
 ## Status vocabulary

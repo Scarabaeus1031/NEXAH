@@ -1,0 +1,406 @@
+{
+  "validation_id": "memory-generalization-v1",
+  "preregistered_design": {
+    "families": [
+      "lorenz",
+      "rossler",
+      "kuramoto"
+    ],
+    "reference_episodes_per_family": 1,
+    "samples_per_trajectory": 2500,
+    "conditions": [
+      "clean",
+      "noise_0.01",
+      "noise_0.05",
+      "parameter_shift"
+    ],
+    "shared_context_domain": "synthetic-dynamical-system",
+    "v07_config": {
+      "n_clusters": 6,
+      "window": 10,
+      "random_state": 42
+    },
+    "top1_chance_baseline": 0.3333333333333333,
+    "parameters_tuned_on_results": false
+  },
+  "aggregate": {
+    "queries": 12,
+    "correct_top1": 11,
+    "top1_accuracy": 0.9166666666666666,
+    "chance_baseline": 0.3333333333333333,
+    "mean_margin": 0.07973762430900973,
+    "minimum_margin": -0.18717303385872575,
+    "by_condition": {
+      "clean": {
+        "queries": 3,
+        "top1_accuracy": 1.0,
+        "mean_margin": 0.12138354004784864,
+        "minimum_margin": 0.06638879694490563
+      },
+      "noise_0.01": {
+        "queries": 3,
+        "top1_accuracy": 1.0,
+        "mean_margin": 0.11038452356939239,
+        "minimum_margin": 0.06598959218348599
+      },
+      "noise_0.05": {
+        "queries": 3,
+        "top1_accuracy": 1.0,
+        "mean_margin": 0.11090341923682472,
+        "minimum_margin": 0.06501275535260176
+      },
+      "parameter_shift": {
+        "queries": 3,
+        "top1_accuracy": 0.6666666666666666,
+        "mean_margin": -0.023720985618026862,
+        "minimum_margin": -0.18717303385872575
+      }
+    }
+  },
+  "queries": [
+    {
+      "family": "lorenz",
+      "condition": "clean",
+      "predicted_family": "lorenz",
+      "correct": true,
+      "expected_similarity": 1.0,
+      "best_other_similarity": 0.9336112030550944,
+      "margin": 0.06638879694490563,
+      "ranking": [
+        {
+          "family": "lorenz",
+          "similarity": 1.0,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.9336112030550944,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.7686269737462653,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "lorenz",
+      "condition": "noise_0.01",
+      "predicted_family": "lorenz",
+      "correct": true,
+      "expected_similarity": 0.9996379415014226,
+      "best_other_similarity": 0.9336483493179366,
+      "margin": 0.06598959218348599,
+      "ranking": [
+        {
+          "family": "lorenz",
+          "similarity": 0.9996379415014226,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.9336483493179366,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.7686107978040474,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "lorenz",
+      "condition": "noise_0.05",
+      "predicted_family": "lorenz",
+      "correct": true,
+      "expected_similarity": 0.9989494672868094,
+      "best_other_similarity": 0.9336381112213641,
+      "margin": 0.06531135606544536,
+      "ranking": [
+        {
+          "family": "lorenz",
+          "similarity": 0.9989494672868094,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.9336381112213641,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.768584347370554,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "rossler",
+      "condition": "clean",
+      "predicted_family": "rossler",
+      "correct": true,
+      "expected_similarity": 1.0,
+      "best_other_similarity": 0.9336112030550944,
+      "margin": 0.06638879694490563,
+      "ranking": [
+        {
+          "family": "rossler",
+          "similarity": 1.0,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "lorenz",
+          "similarity": 0.9336112030550944,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.7372813769837404,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "rossler",
+      "condition": "noise_0.01",
+      "predicted_family": "rossler",
+      "correct": true,
+      "expected_similarity": 0.9998698095422243,
+      "best_other_similarity": 0.9336104134125796,
+      "margin": 0.06625939612964471,
+      "ranking": [
+        {
+          "family": "rossler",
+          "similarity": 0.9998698095422243,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "lorenz",
+          "similarity": 0.9336104134125796,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.7372810783087155,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "rossler",
+      "condition": "noise_0.05",
+      "predicted_family": "rossler",
+      "correct": true,
+      "expected_similarity": 0.998766639593971,
+      "best_other_similarity": 0.9337538842413693,
+      "margin": 0.06501275535260176,
+      "ranking": [
+        {
+          "family": "rossler",
+          "similarity": 0.998766639593971,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "lorenz",
+          "similarity": 0.9337538842413693,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.737435640627942,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "kuramoto",
+      "condition": "clean",
+      "predicted_family": "kuramoto",
+      "correct": true,
+      "expected_similarity": 1.0,
+      "best_other_similarity": 0.7686269737462653,
+      "margin": 0.23137302625373468,
+      "ranking": [
+        {
+          "family": "kuramoto",
+          "similarity": 1.0,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "lorenz",
+          "similarity": 0.7686269737462653,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.7372813769837404,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "kuramoto",
+      "condition": "noise_0.01",
+      "predicted_family": "kuramoto",
+      "correct": true,
+      "expected_similarity": 0.9569402537678384,
+      "best_other_similarity": 0.7580356713727919,
+      "margin": 0.1989045823950465,
+      "ranking": [
+        {
+          "family": "kuramoto",
+          "similarity": 0.9569402537678384,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "lorenz",
+          "similarity": 0.7580356713727919,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.7296589055300016,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "kuramoto",
+      "condition": "noise_0.05",
+      "predicted_family": "kuramoto",
+      "correct": true,
+      "expected_similarity": 0.9616942214565316,
+      "best_other_similarity": 0.7593080751641046,
+      "margin": 0.20238614629242702,
+      "ranking": [
+        {
+          "family": "kuramoto",
+          "similarity": 0.9616942214565316,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "lorenz",
+          "similarity": 0.7593080751641046,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.730778783121561,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "lorenz",
+      "condition": "parameter_shift",
+      "predicted_family": "lorenz",
+      "correct": true,
+      "expected_similarity": 0.984845604519496,
+      "best_other_similarity": 0.9350570941047096,
+      "margin": 0.04978851041478638,
+      "ranking": [
+        {
+          "family": "lorenz",
+          "similarity": 0.984845604519496,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.9350570941047096,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.7718236655176245,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "rossler",
+      "condition": "parameter_shift",
+      "predicted_family": "rossler",
+      "correct": true,
+      "expected_similarity": 0.999804810643274,
+      "best_other_similarity": 0.9335832440534152,
+      "margin": 0.06622156658985878,
+      "ranking": [
+        {
+          "family": "rossler",
+          "similarity": 0.999804810643274,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "lorenz",
+          "similarity": 0.9335832440534152,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.7372507476704849,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    },
+    {
+      "family": "kuramoto",
+      "condition": "parameter_shift",
+      "predicted_family": "lorenz",
+      "correct": false,
+      "expected_similarity": 0.7236199641655282,
+      "best_other_similarity": 0.910792998024254,
+      "margin": -0.18717303385872575,
+      "ranking": [
+        {
+          "family": "lorenz",
+          "similarity": 0.910792998024254,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "rossler",
+          "similarity": 0.8827241850638963,
+          "method": "v07-signature-permutation-invariant-v1"
+        },
+        {
+          "family": "kuramoto",
+          "similarity": 0.7236199641655282,
+          "method": "v07-signature-permutation-invariant-v1"
+        }
+      ]
+    }
+  ],
+  "store_history_records": 3,
+  "failure_cases": [
+    {
+      "id": "synthetic-family-benchmark",
+      "severity": "boundary",
+      "description": "All trajectories are deterministic synthetic fixtures; the benchmark does not establish real-world memory semantics."
+    },
+    {
+      "id": "single-reference-per-family",
+      "severity": "boundary",
+      "description": "Each family has one stored reference, so within-family outcome diversity and episode density are not evaluated."
+    },
+    {
+      "id": "heuristic-uncalibrated-similarity",
+      "severity": "known",
+      "description": "Similarity scores are weighted v0.7 signature heuristics, not calibrated probabilities or semantic equivalence."
+    },
+    {
+      "id": "cross-family-confusion",
+      "severity": "observed",
+      "description": "1 of 12 queries ranked a different system family first.",
+      "queries": [
+        "kuramoto:parameter_shift\u2192lorenz"
+      ]
+    },
+    {
+      "id": "low-retrieval-separation",
+      "severity": "observed",
+      "description": "At least one expected-family score is separated from the best alternative by less than 0.05 or is ranked below it."
+    }
+  ],
+  "interpretation": "This validates heuristic retrieval discrimination for three deterministic synthetic families. It does not establish semantic memory, calibrated similarity, or real-world generality."
+}

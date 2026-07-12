@@ -64,8 +64,12 @@ position, representation-level changes, graph reachability, assumptions, and
 missing information without claiming causal feasibility. This is an implemented
 vertical software path, not yet a validated complete Orientation Core:
 the canonical Demonstrator path now has a reproducible proxy validation and
-declared null baseline, while external regime validation, memory, and execution
-remain open work.
+declared null baseline. An initial append-only episodic layer can now preserve
+State–Report–Outcome records and retrieve similar v0.7 signatures without
+mutating the backend. A synthetic Lorenz–Rössler–Kuramoto benchmark retrieves
+the expected family in 11 of 12 clean, noisy, and parameter-shifted queries;
+parameter-shifted Kuramoto is confused with Lorenz. External regime validation,
+calibrated memory semantics, decision support, and execution remain open work.
 
 ---
 

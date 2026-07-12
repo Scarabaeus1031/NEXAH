@@ -83,6 +83,7 @@ htmlcov/
 # Reproducible Orientation MVP run artifacts are generated locally. Compact
 # canonical metrics and failure cases are committed under validation/ instead.
 /outputs/orientation_mvp/
+/outputs/memory_generalization/
 
 # --- CORE VISUALS ---
 !DISCOVERY_ENGINE/outputs/

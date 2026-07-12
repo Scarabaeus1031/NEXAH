@@ -99,6 +99,10 @@ Acceptance:
 
 ## WP5 — Episodic learning
 
+Status: implemented and verified as an initial transparent memory loop. Episodes
+link State, Report, and externally observed Outcome; append-only JSONL history is
+inspectable and reversible, and similarity retrieval does not mutate the backend.
+
 Work:
 
 - store outcome-linked episodes
@@ -110,6 +114,13 @@ Acceptance:
 - provenance survives storage and retrieval
 - updates are inspectable and reversible
 - no silent backend mutation occurs
+
+## Post-MVP Plateau A — Memory generalization
+
+Status: implemented as `memory-generalization-v1`. Three deterministic system
+families are tested under clean, noisy, and parameter-shifted queries with a
+shared context domain. The canonical result is 11/12 correct Top-1 retrievals;
+parameter-shifted Kuramoto is confused with Lorenz and remains documented.
 
 ## Later, outside the MVP
 
