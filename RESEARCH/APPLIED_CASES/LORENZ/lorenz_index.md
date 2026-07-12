@@ -1,101 +1,45 @@
-# 🧭 NEXAH — Lorenz Index
+# 🧭 NEXAH — Lorenz Repository Index
 
-## 🧠 Purpose
+Lorenz is used across NEXAH as a synthetic dynamical-system benchmark,
+development example, and source of exploratory method studies. The repository
+contains several independent Lorenz lineages; they should not be interpreted as
+one fully validated pipeline.
 
-This document provides a complete navigation map
-to all Lorenz-related components within the NEXAH repository.
+## Current Entry Points
 
----
+| Area | Role | Status |
+|---|---|---|
+| **[Validation](../../VALIDATION/lorenz/)** | Multi-run and noise experiments | Current validation material |
+| **[Dynamical-systems application](../../../APPLICATIONS/dynamical_systems/lorenz/)** | Lorenz-specific analysis modules | Application experiments |
+| **[Core demos](../../../APPLICATIONS/core_demos/lorenz/)** | Density, fields, regimes, navigation, and control demos | Experimental demo collection |
+| **[Minimal Lorenz demo](../../../APPLICATIONS/demos/lorenz_demo/)** | Small user-facing example | Application demo |
+| **[Discovery Engine](../../../EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/)** | Historical V4–V22 development series | Experimental lineage |
+| **[Discovery observations](../../../EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md)** | Evidence-aware interpretation of V4–V22 | Historical observation record |
 
-# 📂 1. Validation Layer
+## Recommended Reading Path
 
-text RESEARCH/VALIDATION/lorenz/ 
+1. Start with the current validation results in `RESEARCH/VALIDATION/lorenz/`.
+2. Use the application and demo directories for current runnable investigations.
+3. Consult the Discovery Engine to understand how earlier probability, field,
+   operator, and lag ideas developed.
+4. Treat generated visuals as experiment artifacts, not standalone validation.
 
-- multi-run validation  
-- noise robustness  
-- transition stability  
+## Interpretation Boundary
 
----
+The Lorenz system is valuable because its dynamics are known, inexpensive to
+simulate, and structurally rich. Success on Lorenz can demonstrate that code or
+a representation behaves as designed in a synthetic setting. It does not by
+itself establish:
 
-# 🧪 2. Discovery Engine Outputs
+- cross-system generality
+- physical equivalence to power-system dynamics
+- predictive superiority
+- operational control capability
+- validation of every NEXAH mechanism
 
-text BUILDER_LAB/DISCOVERY_ENGINE/outputs/ 
-
-Key visuals:
-
-- lorenz_v6_transitions.png  
-- lorenz_v7_manifold.png  
-- lorenz_v8_manifold.png  
-
----
-
-# 🌊 3. Dynamical System Analysis
-
-text APPLICATIONS/dynamical_systems/lorenz/ 
-
-Submodules:
-
-- attractor/ → density, filament, field  
-- regimes/ → basin, separatrix, transition channels  
-- analysis/ → Lyapunov, FTLE, flow fields  
-- navigation/ → trajectory control and steering  
-
----
-
-# 🧭 4. Navigation & Control
-
-text APPLICATIONS/core_demos/lorenz/navigation/ 
-
-- goal navigation  
-- policy control  
-- multi-target steering  
+Power-system work has its own benchmark simulations and evidence paths under
+**[APPLICATIONS/power_systems/](../../../APPLICATIONS/power_systems/)**.
 
 ---
 
-# 🧠 5. Meta Control & Experiments
-
-text APPLICATIONS/core_demos/lorenz/meta/ 
-
-- adaptive control  
-- learning control  
-- switching behavior  
-
----
-
-# 🔗 6. Cross-Domain Applications
-
-text APPLICATIONS/power_systems/stability_field_dynamics/ 
-
-- Lorenz-inspired resonance mappings  
-- transfer to real-world systems (IEEE grids)  
-
----
-
-# 📊 7. Output Visualizations
-
-text APPLICATIONS/core_demos/lorenz/outputs/ 
-
-Contains:
-
-- density maps  
-- transition channels  
-- basin structures  
-- navigation paths  
-- control visualizations  
-
----
-
-# 🧠 Interpretation
-
-text Lorenz is not just a demo system.  It is the primary experimental backbone of the NEXAH framework. 
-
----
-
-# 🔥 Final Insight
-
-text All core NEXAH mechanisms have been empirically developed and validated on the Lorenz system. 
-
----
-
-NEXAH Lorenz Index  
-Navigation Layer · 2026
+**Last reviewed:** July 12, 2026

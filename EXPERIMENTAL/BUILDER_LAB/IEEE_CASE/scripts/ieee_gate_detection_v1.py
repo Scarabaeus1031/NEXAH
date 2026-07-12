@@ -2,13 +2,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # --------------------------------------------------
-# NEXAH Gate Detection v1
+# Historical synthetic coherence-threshold prototype
 #
-# Regime transitions occur at loss of coherence,
-# not randomly in time.
+# Despite the historical filename, this script does not use an IEEE
+# power-system model or the current NEXAH Gate Operator.
 #
 # Pipeline:
-# Signal → Coherence → Gate → Structure
+# Synthetic signal → lag-one autocorrelation → threshold candidates
 # --------------------------------------------------
 
 np.random.seed(42)
@@ -57,7 +57,7 @@ for i in range(window, len(x)):
 C = np.convolve(C, np.ones(10)/10, mode='same')
 
 # --------------------------------------------------
-# 4. GATE DETECTION
+# 4. LOW-AUTOCORRELATION CANDIDATES
 # --------------------------------------------------
 epsilon = 0.1
 
@@ -110,7 +110,7 @@ axes[2].fill_between(t, 0, 1, where=C > 0.3, alpha=0.1)
 axes[2].fill_between(t, 0, 1, where=C < 0.3, alpha=0.05)
 
 axes[2].set_ylim(0, 1)
-axes[2].set_title("Gate Detection")
+axes[2].set_title("Threshold Candidates")
 axes[2].set_xlabel("time")
 axes[2].set_yticks([])
 axes[2].grid(True, alpha=0.3)
@@ -121,7 +121,7 @@ axes[2].grid(True, alpha=0.3)
 fig.text(
     0.5,
     -0.05,
-    "Regime transitions occur at loss of coherence, not randomly in time.",
+    "Candidate points where the smoothed lag-one autocorrelation is near zero.",
     ha="center",
     fontsize=10
 )
@@ -138,6 +138,6 @@ plt.show()
 # 8. RESULTS BLOCK
 # --------------------------------------------------
 print("---- RESULTS ----")
-print(f"Gates detected: {len(gate_times)}")
-print(f"Gate times: {np.round(gate_times, 2)}")
-print(f"Mean |C| at gates: {np.mean(np.abs(C[gate_indices])):.4f}")
+print(f"Candidates detected: {len(gate_times)}")
+print(f"Candidate times: {np.round(gate_times, 2)}")
+print(f"Mean |C| at candidates: {np.mean(np.abs(C[gate_indices])):.4f}")

@@ -117,12 +117,12 @@ means **candidate for assessment**, not accepted result.
 
 | Candidate | Possible destination | Required review |
 |---|---|---|
-| **[Discovery Observations](BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md)** | `RESEARCH/FINDINGS/` | Separate observations from interpretation and link reproducible runs |
+| **[Discovery Observations](BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md)** | Remain experimental | Reviewed July 12, 2026; V22 needs controlled reproduction before Findings promotion |
 | **[Symmetry Graph result summary](BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/RESULT_SUMMARY_Symmetry_Graph_Experiment.md)** | `RESEARCH/FINDINGS/` | Verify code, data, metrics, and current terminology |
 | **[Structured Oscillator Networks](BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/structured_oscillator_networks/)** | `RESEARCH/FINDINGS/` or `RESEARCH/CONCEPTS/` | Determine whether it contains evidence or only a model proposal |
 | **[Stability-driven Multi-Agent System](BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/nexah_stability_driven_multi_agent_system/)** | `RESEARCH/FINDINGS/` | Reproduce the experiment and qualify the stability claim |
 | **[Control Sensitivity Field](BUILDER_LAB/EXPLORATION/experimental/01_control/control_sensitivity_field.md)** | `RESEARCH/CONCEPTS/` or `ARCHITECTURE/METHODS.md` | Formalize definitions and establish relationship to current control prototypes |
-| **[IEEE Mapping Module](BUILDER_LAB/EXPLORATION/experimental/03_mapping/ieee_mapping_module.md)** | `APPLICATIONS/power_systems/` | Compare with current IEEE application work and avoid duplication |
+| **[IEEE Mapping Module](BUILDER_LAB/EXPLORATION/experimental/03_mapping/ieee_mapping_module.md)** | Remain historical | Reviewed July 12, 2026; conceptual analogies are superseded by current power-system experiments |
 | **[Oval Membrane Field](BUILDER_LAB/proto_models/oval_membrane_field/)** | `RESEARCH/CONCEPTS/` | Decide whether the model yields testable hypotheses |
 | **[Time Knot Field](BUILDER_LAB/proto_models/time_knot_field/)** | `RESEARCH/CONCEPTS/` | Separate mathematical proposal from metaphorical interpretation |
 | **[Builder Lab demos](BUILDER_LAB/demos/)** | `APPLICATIONS/` index | Test dependencies, outputs, and user value before exposing them as tools |

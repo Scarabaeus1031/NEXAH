@@ -95,12 +95,16 @@ use of operational data.
 
 ## 🚦 Promotion Priorities
 
-Three candidates deserve the next focused reviews:
+The first two candidates were reviewed on July 12, 2026:
 
-1. **Discovery observations** — assess whether specific observations can be
-   reproduced and rewritten as qualified entries in `RESEARCH/FINDINGS/`.
-2. **IEEE mapping note** — compare it with the current power-systems application
-   and retain only non-duplicated, testable material.
+1. **Discovery observations** — remain experimental. The strongest next study
+   is a controlled V22 lag reproduction; no current statement was promoted to
+   `RESEARCH/FINDINGS/`.
+2. **IEEE mapping note and IEEE_CASE script** — remain historical. The note is
+   conceptual, while the script uses a synthetic scalar signal rather than an
+   IEEE network. Neither should be copied into the current power application.
+The next optional candidate is:
+
 3. **Minimal state-graph demo** — decide whether its educational value justifies
    a small experimental-tool link from `APPLICATIONS/`; it should not be
    presented as a power-grid application in its current form.

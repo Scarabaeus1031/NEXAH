@@ -145,14 +145,20 @@ Compare these with `APPLICATIONS/power_systems/` before copying anything.
 
 ## 🚦 Recommended Sequence
 
-1. Review and reproduce the Discovery observations.
-2. Compare the two IEEE fragments with the current power-system application.
-3. Decide whether to retain and repair the visual state-graph demos.
-4. If retained, add an isolated experimental dependency definition and stable
+Completed review decisions:
+
+- Discovery observations remain experimental pending a controlled V22 study.
+- The IEEE fragments remain historical and should not be merged into the
+  current power-system application.
+
+Optional next work:
+
+1. Decide whether to retain and repair the visual state-graph demos.
+2. If retained, add an isolated experimental dependency definition and stable
    output paths.
-5. Reconstruct archived Symmetry Graph or multi-agent studies only when they
+3. Reconstruct archived Symmetry Graph or multi-agent studies only when they
    support an active research question.
-6. Leave `ARCHIVE_ENGINE` and `ARCHIVE_KERNEL` frozen until a specific artifact
+4. Leave `ARCHIVE_ENGINE` and `ARCHIVE_KERNEL` frozen until a specific artifact
    is requested.
 
 ---

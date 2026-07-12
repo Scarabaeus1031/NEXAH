@@ -1,6 +1,14 @@
 # 🧠 NEXAH — IEEE Mapping Module (Experimental)
 ### (Mapping Field-Based Dynamics to Power System Stability)
 
+> **Historical conceptual note.** This document proposes analogies; it does not
+> implement a computational mapping or validate equivalence with IEEE stability
+> quantities. Several source paths and claims reflect an earlier NEXAH
+> architecture. Current benchmark work lives in
+> **[APPLICATIONS/power_systems/](../../../../../APPLICATIONS/power_systems/)**.
+> Retain this file as design history and verify every mapping against the current
+> application and established power-system definitions before reuse.
+
 ---
 
 # 🧭 Purpose
