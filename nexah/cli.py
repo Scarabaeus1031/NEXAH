@@ -4,20 +4,29 @@ NEXAH CLI (v0.7 – Navigation + Plotting)
 Features:
 - analyze time series
 - compare systems
+- generate evidence-bound Orientation Reports
 - target-based navigation
 - regime plotting
 
 Example:
     nexah analyze data.csv --plot
     nexah analyze data.csv --target 0 --plot
+    nexah orient data.csv --recorded-at 2026-07-13T08:00:00+00:00
 """
 
 import argparse
 import numpy as np
 import json
 import os
+from datetime import datetime
 import matplotlib.pyplot as plt
+from nexah.backends import V07BackendAdapter
 from nexah.core import NEXAH
+from nexah.orientation import (
+    Context,
+    Provenance,
+    generate_orientation_report,
+)
 
 
 # =========================
@@ -39,6 +48,16 @@ def save_output(result, path):
         print(f"[INFO] Saved output to {path}")
     except Exception as e:
         print(f"[ERROR] Could not save file: {e}")
+
+
+def parse_timestamp(value):
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError as error:
+        raise argparse.ArgumentTypeError("timestamp must be ISO 8601") from error
+    if parsed.tzinfo is None:
+        raise argparse.ArgumentTypeError("timestamp must include a timezone")
+    return parsed
 
 
 # =========================
@@ -114,6 +133,36 @@ def compare_command(args):
         print(json.dumps(result, indent=2, default=str))
 
 
+def orient_command(args):
+    data = load_csv(args.file)
+    if data is None:
+        return
+
+    adapter = V07BackendAdapter(
+        n_clusters=args.clusters,
+        window=args.window,
+        random_state=args.seed,
+        normalize=not args.no_normalize,
+    )
+    adapted = adapter.adapt(
+        data,
+        analysis_id=args.analysis_id or os.path.splitext(os.path.basename(args.file))[0],
+        provenance=Provenance(
+            source=args.file,
+            method="CSV loaded by NEXAH CLI",
+            recorded_at=args.recorded_at,
+            record_id=args.analysis_id,
+        ),
+        context=Context(domain=args.domain),
+    )
+    report = generate_orientation_report(adapted).to_dict()
+
+    if args.out:
+        save_output(report, args.out)
+    else:
+        print(json.dumps(report, indent=2))
+
+
 # =========================
 # CLI
 # =========================
@@ -143,12 +192,28 @@ def main():
     compare_parser.add_argument("--no-normalize", action="store_true")
     compare_parser.add_argument("--out")
 
+    # ORIENT
+    orient_parser = subparsers.add_parser(
+        "orient", description="Generate an evidence-bound Orientation Report"
+    )
+    orient_parser.add_argument("file")
+    orient_parser.add_argument("--recorded-at", type=parse_timestamp, required=True)
+    orient_parser.add_argument("--analysis-id")
+    orient_parser.add_argument("--domain", default="unspecified")
+    orient_parser.add_argument("--clusters", type=int, default=4)
+    orient_parser.add_argument("--window", type=int, default=5)
+    orient_parser.add_argument("--seed", type=int, default=42)
+    orient_parser.add_argument("--no-normalize", action="store_true")
+    orient_parser.add_argument("--out")
+
     args = parser.parse_args()
 
     if args.command == "analyze":
         analyze_command(args)
     elif args.command == "compare":
         compare_command(args)
+    elif args.command == "orient":
+        orient_command(args)
     else:
         parser.print_help()
 

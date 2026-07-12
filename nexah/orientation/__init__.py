@@ -7,6 +7,11 @@ from .evidence import (
     Uncertainty,
     UncertaintyKind,
 )
+from .generator import (
+    OrientationReportGenerator,
+    ReportGenerationError,
+    generate_orientation_report,
+)
 from .primitives import (
     Constraint,
     Context,
@@ -47,10 +52,12 @@ __all__ = [
     "Option",
     "OptionStatus",
     "OrientationReport",
+    "OrientationReportGenerator",
     "OrientationState",
     "Outcome",
     "Provenance",
     "ReferenceFrame",
+    "ReportGenerationError",
     "Regime",
     "RepresentationRef",
     "ScopedIdentifier",
@@ -60,4 +67,5 @@ __all__ = [
     "Transition",
     "Uncertainty",
     "UncertaintyKind",
+    "generate_orientation_report",
 ]

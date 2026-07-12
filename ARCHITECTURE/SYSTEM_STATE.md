@@ -54,12 +54,15 @@ The installable package now contains three deliberately separated elements:
 ```text
 frozen v0.7 state-space backend
 → typed v0.7 backend adapter
-→ OrientationState and OrientationReport contracts
+→ OrientationState
+→ evidence-bound OrientationReport generator
 ```
 
 The adapter preserves local cluster scope, source-to-embedding alignment,
-provenance, and unknown uncertainty. This is an implemented software boundary,
-not yet a complete Orientation Core: evidence-bound report generation,
+provenance, and unknown uncertainty. The first report generator describes local
+position, representation-level changes, graph reachability, assumptions, and
+missing information without claiming causal feasibility. This is an implemented
+vertical software path, not yet a validated complete Orientation Core:
 Demonstrator validation, memory, and execution remain open work.
 
 ---

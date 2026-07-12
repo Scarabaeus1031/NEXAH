@@ -1,6 +1,6 @@
 # Orientation Layer Specification
 
-Status: normative planning baseline; WP1 contracts implemented
+Status: normative baseline; WP0–WP3 implemented, Demonstrator validation open
 Scope: contracts and component boundaries, not a claim of implementation
 
 ## Purpose
@@ -60,6 +60,10 @@ Reports:
 - missing information and assumptions
 - evidence references and uncertainty
 
+The first generator is implemented for typed backend results. Its option fields
+describe reachability in the observed directed transition graph; they do not
+claim physical feasibility, causal intervention, or optimal action.
+
 ### Decision support and execution
 
 Decision support compares options and explains trade-offs. Execution is opt-in,
@@ -73,8 +77,8 @@ auditable and reversible; the MVP does not silently mutate backend models.
 ## Core contracts
 
 The field names below define the intended information boundary. Their initial
-Python contracts are implemented in `nexah/orientation/`; backend population of
-those contracts begins in WP2.
+Python contracts are implemented in `nexah/orientation/`; the v0.7 adapter now
+populates them with explicitly scoped backend evidence.
 
 ```text
 OrientationState

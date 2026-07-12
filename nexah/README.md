@@ -30,6 +30,9 @@ From the repository root:
 python -m pip install -e .
 nexah analyze data.csv
 nexah compare a.csv b.csv
+nexah orient data.csv \
+  --recorded-at 2026-07-13T08:00:00+00:00 \
+  --domain example
 ```
 
 Python API:
@@ -54,7 +57,8 @@ nexah/
 │   ├── primitives.py               scoped operational vocabulary
 │   ├── evidence.py                 provenance and uncertainty
 │   ├── state.py                    OrientationState input contract
-│   └── report.py                   OrientationReport output contract
+│   ├── report.py                   OrientationReport output contract
+│   └── generator.py                evidence-bound report generation
 ├── README.md                       package scope and entry point
 └── docs/
     ├── CORE_V07_REFERENCE.md       historical v0.7 behavior reference
@@ -69,8 +73,11 @@ context, goals, constraints, provenance, evidence, uncertainty,
 `OrientationState`, and `OrientationReport`. `nexah/backends/v07.py` now wraps
 the frozen baseline and translates its output without silently assigning
 broader semantics: state IDs remain local, index alignment is explicit, and
-uncertainty is reported as unknown rather than invented. Report generation,
-episodic storage, and learning remain later work.
+uncertainty is reported as unknown rather than invented. Report generation
+is implemented by `OrientationReportGenerator`; it reports local position,
+representation-level change, empirical graph reachability, missing information,
+assumptions, evidence, and uncertainty. Demonstrator validation, episodic
+storage, and learning remain later work.
 
 See the **[Orientation Layer Bauplan](../ARCHITECTURE/orientation_layer/)**.
 

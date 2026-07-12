@@ -136,6 +136,7 @@ class V07BackendAdapter:
                 "embedded_samples": alignment.embedded_samples,
                 "alignment_anchor": alignment.anchor,
                 "final_source_sample_used": alignment.final_source_sample_used,
+                "timestamps_provided": timestamps is not None,
             },
         )
         map_ref = MapRef(

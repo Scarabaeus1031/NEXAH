@@ -62,6 +62,10 @@ Acceptance:
 
 ## WP3 — Orientation report generation
 
+Status: implemented and verified for the v0.7 backend result. Reports expose
+local position, representation-level change, empirical graph reachability,
+missing information, assumptions, evidence, and uncalibrated uncertainty.
+
 Work:
 
 - generate position, change, regime, option, evidence, and uncertainty sections
