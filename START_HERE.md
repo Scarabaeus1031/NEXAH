@@ -100,8 +100,8 @@ transitions occurring within that structure
 
 👉 Start here:
 
-- [`NEXAH_DEMONSTRATOR/`](NEXAH_DEMONSTRATOR/)  
-- [`NEXAH_DEMONSTRATOR/README.md`](NEXAH_DEMONSTRATOR/README.md)
+- [`PROTO_CORE/NEXAH_DEMONSTRATOR/`](PROTO_CORE/NEXAH_DEMONSTRATOR/)
+- [`PROTO_CORE/NEXAH_DEMONSTRATOR/README.md`](PROTO_CORE/NEXAH_DEMONSTRATOR/README.md)
 
 This contains a **clean, reproducible implementation** of:
 
