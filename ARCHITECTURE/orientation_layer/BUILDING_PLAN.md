@@ -25,6 +25,9 @@ Acceptance:
 
 ## WP1 — Orientation language and contracts
 
+Status: implemented and verified. The contracts are backend-independent; WP2
+will populate them from the v0.7 baseline.
+
 Work:
 
 - define typed primitives

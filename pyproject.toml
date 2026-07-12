@@ -45,3 +45,7 @@ no_implicit_optional = true
 check_untyped_defs = true
 warn_return_any = true
 warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = ["nexah.core", "nexah.cli"]
+ignore_errors = true

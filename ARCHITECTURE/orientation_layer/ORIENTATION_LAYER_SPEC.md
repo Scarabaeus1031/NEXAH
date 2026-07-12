@@ -1,6 +1,6 @@
 # Orientation Layer Specification
 
-Status: planning baseline  
+Status: normative planning baseline; WP1 contracts implemented
 Scope: contracts and component boundaries, not a claim of implementation
 
 ## Purpose
@@ -72,8 +72,9 @@ auditable and reversible; the MVP does not silently mutate backend models.
 
 ## Core contracts
 
-Illustrative field names below define the intended information boundary. Exact
-Python types are established during WP1.
+The field names below define the intended information boundary. Their initial
+Python contracts are implemented in `nexah/orientation/`; backend population of
+those contracts begins in WP2.
 
 ```text
 OrientationState
@@ -144,4 +145,3 @@ recorded failure cases.
 - a simulation of biological brain structures
 - a general meaning engine
 - production control guarantees
-

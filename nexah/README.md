@@ -48,6 +48,11 @@ nexah/
 ├── __init__.py
 ├── core.py                         current computational baseline
 ├── cli.py                          command-line adapter
+├── orientation/                    typed Orientation Layer contracts
+│   ├── primitives.py               scoped operational vocabulary
+│   ├── evidence.py                 provenance and uncertainty
+│   ├── state.py                    OrientationState input contract
+│   └── report.py                   OrientationReport output contract
 ├── README.md                       package scope and entry point
 └── docs/
     ├── CORE_V07_REFERENCE.md       historical v0.7 behavior reference
@@ -57,10 +62,11 @@ nexah/
 
 ## Orientation Layer
 
-The planned layer will wrap this backend through explicit typed contracts. It
-will add context, goals, constraints, provenance, evidence, uncertainty,
-orientation reports, and later episodic memory. The backend remains a
-characterized baseline rather than silently acquiring broader semantics.
+The first contract layer is implemented under `nexah/orientation/`. It defines
+context, goals, constraints, provenance, evidence, uncertainty,
+`OrientationState`, and `OrientationReport` without coupling them to v0.7. The
+next adapter layer will wrap the backend without silently assigning broader
+semantics to its outputs. Episodic storage and learning remain later work.
 
 See the **[Orientation Layer Bauplan](../ARCHITECTURE/orientation_layer/)**.
 
