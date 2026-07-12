@@ -1,0 +1,27 @@
+[
+  {
+    "id": "constructed-reference-not-ground-truth",
+    "severity": "boundary",
+    "description": "Reference transitions are changes in radial bins constructed by the Demonstrator, not externally observed dynamical regimes."
+  },
+  {
+    "id": "sheet-count-upper-bound-bin",
+    "severity": "confirmed",
+    "description": "requested_sheets=6 produced 7 labels [0, 1, 2, 3, 4, 5, 6] because the maximum radius enters an additional np.digitize boundary bin."
+  },
+  {
+    "id": "state-identities-not-aligned",
+    "severity": "boundary",
+    "description": "v0.7 KMeans cluster IDs and Demonstrator radial-sheet IDs do not share semantics; validation compares event timing only."
+  },
+  {
+    "id": "overlapping-window-dependence",
+    "severity": "known",
+    "description": "v0.7 embedded windows overlap and may affect persistence and change timing."
+  },
+  {
+    "id": "event-class-imbalance",
+    "severity": "metric",
+    "description": "Transition samples are sparse enough that the no-change baseline has higher exact sample accuracy despite zero event recall; event precision, recall, and F1 are the relevant comparison metrics."
+  }
+]

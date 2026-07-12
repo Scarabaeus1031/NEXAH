@@ -1,185 +1,175 @@
+"""Generate the canonical Lorenz sheet-transition Demonstrator artifacts."""
+
+from __future__ import annotations
+
+from pathlib import Path
+from typing import Any
+
 import numpy as np
-import matplotlib.pyplot as plt
-import os
+from numpy.typing import NDArray
 
-# ============================================================
-# OUTPUT SETUP
-# ============================================================
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(BASE_DIR, "..", "visuals", "structure")
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = BASE_DIR.parent / "visuals" / "structure"
+FloatArray = NDArray[np.float64]
+IntArray = NDArray[np.int64]
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-print(f"📁 Output directory: {OUTPUT_DIR}")
+def lorenz(
+    x: float,
+    y: float,
+    z: float,
+    s: float = 10.0,
+    r: float = 28.0,
+    b: float = 2.667,
+) -> tuple[float, float, float]:
+    return s * (y - x), x * (r - z) - y, x * y - b * z
 
-# ============================================================
-# SYSTEM (Lorenz)
-# ============================================================
 
-def lorenz(x, y, z, s=10, r=28, b=2.667):
-    return s*(y-x), x*(r-z)-y, x*y - b*z
+def simulate(steps: int = 8000, dt: float = 0.01) -> tuple[FloatArray, ...]:
+    """Run the deterministic Euler-integrated Lorenz reference trajectory."""
 
-def simulate(steps=8000, dt=0.01):
-    xs = np.zeros(steps)
-    ys = np.zeros(steps)
-    zs = np.zeros(steps)
-
+    xs = np.zeros(steps, dtype=np.float64)
+    ys = np.zeros(steps, dtype=np.float64)
+    zs = np.zeros(steps, dtype=np.float64)
     xs[0], ys[0], zs[0] = (0.1, 0.0, 0.0)
 
-    for i in range(steps - 1):
-        dx, dy, dz = lorenz(xs[i], ys[i], zs[i])
-        xs[i+1] = xs[i] + dx*dt
-        ys[i+1] = ys[i] + dy*dt
-        zs[i+1] = zs[i] + dz*dt
+    for index in range(steps - 1):
+        dx, dy, dz = lorenz(xs[index], ys[index], zs[index])
+        xs[index + 1] = xs[index] + dx * dt
+        ys[index + 1] = ys[index] + dy * dt
+        zs[index + 1] = zs[index] + dz * dt
 
     return xs, ys, zs
 
-# ============================================================
-# SHEET STRUCTURE
-# ============================================================
 
-def compute_sheets(xs, ys, num_sheets=6):
-    r = np.sqrt(xs**2 + ys**2)
+def compute_sheets(xs: FloatArray, ys: FloatArray, num_sheets: int = 6) -> IntArray:
+    """Return the historical radial-bin sheet labels used by the Demonstrator."""
 
-    bins = np.linspace(r.min(), r.max(), num_sheets + 1)
-    sheet_idx = np.digitize(r, bins) - 1
+    radius = np.sqrt(xs**2 + ys**2)
+    bins = np.linspace(radius.min(), radius.max(), num_sheets + 1)
+    return np.asarray(np.digitize(radius, bins) - 1, dtype=np.int64)
 
-    return sheet_idx
 
-def compute_transition_matrix(sheets):
+def compute_transition_matrix(sheets: IntArray) -> tuple[FloatArray, FloatArray]:
     n_states = len(np.unique(sheets))
-    T = np.zeros((n_states, n_states))
+    counts = np.zeros((n_states, n_states), dtype=np.float64)
 
-    for t in range(1, len(sheets)):
-        i = int(sheets[t-1])
-        j = int(sheets[t])
+    for index in range(1, len(sheets)):
+        source = int(sheets[index - 1])
+        target = int(sheets[index])
+        counts[source, target] += 1
 
-        T[i, j] += 1
+    probabilities = counts / (counts.sum(axis=1, keepdims=True) + 1e-9)
+    return counts, probabilities
 
-    P = T / (T.sum(axis=1, keepdims=True) + 1e-9)
 
-    return T, P
+def generate_transition_data(
+    *,
+    steps: int = 8000,
+    dt: float = 0.01,
+    num_sheets: int = 6,
+) -> dict[str, Any]:
+    """Create the canonical in-memory reference used by plots and validation."""
 
-# ============================================================
-# MAIN
-# ============================================================
+    xs, ys, zs = simulate(steps=steps, dt=dt)
+    trajectory = np.column_stack((xs, ys, zs))
+    sheets = compute_sheets(xs, ys, num_sheets=num_sheets)
+    transition_events = np.zeros(len(sheets), dtype=bool)
+    transition_events[1:] = sheets[1:] != sheets[:-1]
+    counts, probabilities = compute_transition_matrix(sheets)
+    return {
+        "trajectory": trajectory,
+        "sheets": sheets,
+        "transition_events": transition_events,
+        "transition_matrix": counts,
+        "transition_matrix_prob": probabilities,
+        "config": {"steps": steps, "dt": dt, "num_sheets_requested": num_sheets},
+    }
 
-print("Running Transition Structure Analysis")
 
-# simulate system
-xs, ys, zs = simulate()
+def save_transition_outputs(
+    data: dict[str, Any], output_dir: Path = OUTPUT_DIR
+) -> None:
+    """Write the historical plots and arrays plus the raw reference trajectory."""
 
-# compute sheets
-sheets = compute_sheets(xs, ys, num_sheets=6)
+    import matplotlib.pyplot as plt
 
-# transitions
-transitions = np.zeros(len(sheets), dtype=bool)
-transitions[1:] = sheets[1:] != sheets[:-1]
+    output_dir.mkdir(parents=True, exist_ok=True)
+    trajectory = data["trajectory"]
+    sheets = data["sheets"]
+    transition_events = data["transition_events"]
+    probabilities = data["transition_matrix_prob"]
 
-# transition matrix
-T, P = compute_transition_matrix(sheets)
+    plt.figure(figsize=(16, 4))
+    plt.plot(sheets, label="sheet index", alpha=0.7)
+    plt.scatter(
+        np.where(transition_events)[0],
+        sheets[transition_events],
+        color="red",
+        s=10,
+        label="transitions",
+    )
+    plt.title("Transition Structure — Sheet Dynamics")
+    plt.xlabel("time")
+    plt.ylabel("sheet")
+    plt.legend()
+    plt.tight_layout()
+    path = output_dir / "transition_structure_timeseries.png"
+    plt.savefig(path, dpi=200)
+    plt.close()
+    print(f"✅ Saved: {path}")
 
-# ============================================================
-# PRINT RESULTS
-# ============================================================
+    plt.figure(figsize=(6, 5))
+    plt.imshow(probabilities, cmap="viridis")
+    plt.colorbar(label="P(i → j)")
+    plt.title("Transition Matrix (Sheet Structure)")
+    plt.xlabel("to state")
+    plt.ylabel("from state")
+    plt.tight_layout()
+    path = output_dir / "transition_structure_matrix.png"
+    plt.savefig(path, dpi=200)
+    plt.close()
+    print(f"✅ Saved: {path}")
 
-print("\n--- Transition Structure ---")
-print(f"Total transitions: {np.sum(transitions)}")
-print(f"Number of states: {len(np.unique(sheets))}")
+    plt.figure(figsize=(6, 6))
+    scatter = plt.scatter(
+        trajectory[:, 0],
+        trajectory[:, 1],
+        c=sheets,
+        cmap="tab10",
+        s=2,
+    )
+    plt.colorbar(scatter, label="sheet index")
+    plt.title("Phase Space Partition (Sheets)")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.tight_layout()
+    path = output_dir / "transition_structure_phase.png"
+    plt.savefig(path, dpi=200)
+    plt.close()
+    print(f"✅ Saved: {path}")
 
-print("\nTransition Matrix (probabilities):")
-print(P)
+    np.save(output_dir / "transition_trajectory.npy", trajectory)
+    np.save(output_dir / "transition_sheets.npy", sheets)
+    np.save(output_dir / "transition_matrix.npy", data["transition_matrix"])
+    np.save(output_dir / "transition_matrix_prob.npy", probabilities)
+    print("💾 Saved data")
 
-# ============================================================
-# VISUAL 1 — SHEET TRAJECTORY
-# ============================================================
 
-plt.figure(figsize=(16, 4))
+def main() -> None:
+    print(f"📁 Output directory: {OUTPUT_DIR}")
+    print("Running Transition Structure Analysis")
+    data = generate_transition_data()
+    sheets = data["sheets"]
+    print("\n--- Transition Structure ---")
+    print(f"Total transitions: {int(np.sum(data['transition_events']))}")
+    print(f"Number of states: {len(np.unique(sheets))}")
+    print("\nTransition Matrix (probabilities):")
+    print(data["transition_matrix_prob"])
+    save_transition_outputs(data)
+    print("\n✅ Transition Structure complete")
 
-plt.plot(sheets, label="sheet index", alpha=0.7)
 
-plt.scatter(
-    np.where(transitions)[0],
-    sheets[transitions],
-    color="red",
-    s=10,
-    label="transitions"
-)
-
-plt.title("Transition Structure — Sheet Dynamics")
-plt.xlabel("time")
-plt.ylabel("sheet")
-plt.legend()
-
-plt.tight_layout()
-
-path1 = os.path.join(OUTPUT_DIR, "transition_structure_timeseries.png")
-plt.savefig(path1, dpi=200)
-plt.close()
-
-print(f"✅ Saved: {path1}")
-
-# ============================================================
-# VISUAL 2 — TRANSITION MATRIX
-# ============================================================
-
-plt.figure(figsize=(6, 5))
-
-plt.imshow(P, cmap="viridis")
-plt.colorbar(label="P(i → j)")
-
-plt.title("Transition Matrix (Sheet Structure)")
-plt.xlabel("to state")
-plt.ylabel("from state")
-
-plt.tight_layout()
-
-path2 = os.path.join(OUTPUT_DIR, "transition_structure_matrix.png")
-plt.savefig(path2, dpi=200)
-plt.close()
-
-print(f"✅ Saved: {path2}")
-
-# ============================================================
-# VISUAL 3 — STATE SPACE COLORED BY SHEETS
-# ============================================================
-
-plt.figure(figsize=(6, 6))
-
-scatter = plt.scatter(
-    xs, ys,
-    c=sheets,
-    cmap="tab10",
-    s=2
-)
-
-plt.colorbar(scatter, label="sheet index")
-
-plt.title("Phase Space Partition (Sheets)")
-plt.xlabel("x")
-plt.ylabel("y")
-
-plt.tight_layout()
-
-path3 = os.path.join(OUTPUT_DIR, "transition_structure_phase.png")
-plt.savefig(path3, dpi=200)
-plt.close()
-
-print(f"✅ Saved: {path3}")
-
-# ============================================================
-# SAVE DATA
-# ============================================================
-
-np.save(os.path.join(OUTPUT_DIR, "transition_sheets.npy"), sheets)
-np.save(os.path.join(OUTPUT_DIR, "transition_matrix.npy"), T)
-np.save(os.path.join(OUTPUT_DIR, "transition_matrix_prob.npy"), P)
-
-print("💾 Saved data")
-
-# ============================================================
-# DONE
-# ============================================================
-
-print("\n✅ Transition Structure complete")
+if __name__ == "__main__":
+    main()

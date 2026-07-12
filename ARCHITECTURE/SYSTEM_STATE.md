@@ -63,7 +63,9 @@ provenance, and unknown uncertainty. The first report generator describes local
 position, representation-level changes, graph reachability, assumptions, and
 missing information without claiming causal feasibility. This is an implemented
 vertical software path, not yet a validated complete Orientation Core:
-Demonstrator validation, memory, and execution remain open work.
+the canonical Demonstrator path now has a reproducible proxy validation and
+declared null baseline, while external regime validation, memory, and execution
+remain open work.
 
 ---
 

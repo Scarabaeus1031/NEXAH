@@ -1,6 +1,6 @@
 # Orientation Layer Specification
 
-Status: normative baseline; WP0–WP3 implemented, Demonstrator validation open
+Status: normative baseline; WP0–WP4 implemented, episodic learning open
 Scope: contracts and component boundaries, not a claim of implementation
 
 ## Purpose

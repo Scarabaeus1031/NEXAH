@@ -232,7 +232,7 @@ an empirical, code-driven exploration of structure in dynamics
 ```text
 scripts/
     run_demo.py                 → canonical entry point
-    generate_transition_structure.py
+    generate_transition_structure.py → importable reference-data generator
     kernel/                     → continuous gate and navigation layer
     hero/                       → transition-aware navigation
 
@@ -282,8 +282,16 @@ visuals/structure/transition_structure_matrix.png
 visuals/structure/transition_structure_phase.png
 visuals/structure/transition_matrix.npy
 visuals/structure/transition_matrix_prob.npy
+visuals/structure/transition_trajectory.npy
 visuals/hero/nexah_transition_navigation_v13.gif
 ```
+
+`generate_transition_data()` exposes the deterministic Lorenz trajectory,
+constructed radial-sheet labels, transition events, and matrices directly for
+tests and downstream validation. The historical sheet construction is preserved
+unchanged: requesting six sheets currently yields seven observed labels because
+the maximum radius enters an additional `np.digitize` boundary bin. This is a
+recorded Demonstrator limitation, not an externally validated regime model.
 
 ---
 

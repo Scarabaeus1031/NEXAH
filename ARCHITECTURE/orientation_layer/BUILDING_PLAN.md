@@ -80,6 +80,11 @@ Acceptance:
 
 ## WP4 — Demonstrator validation
 
+Status: implemented as `orientation-mvp-validation-v1`. The canonical Lorenz
+Demonstrator produces a report, declared null-baseline comparison, repeated
+byte-identical outputs, and committed failure cases. The reference is explicitly
+a constructed radial-sheet proxy, not external ground truth.
+
 Work:
 
 - connect one verified Demonstrator path
