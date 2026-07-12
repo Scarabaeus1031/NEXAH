@@ -719,14 +719,14 @@ for complex dynamical systems
 # 📦 Repository Overview
 
 ```txt
-ARCHITECTURE/         → architecture & integration logic
-NEXAH_CORE/           → transition & field logic
-FIELD_LAYER/          → continuous geometry layer
-RESEARCH/             → validation, findings, theory
-NEXAH_DEMONSTRATOR/   → reproducible reference system
-APPLICATIONS/         → applied systems & experiments
-VISUAL_GALLERY.md     → visual ecosystem
-REPOSITORY_MAP.md     → repository structure
+ARCHITECTURE/                         → architecture & integration logic
+PROTO_CORE/NEXAH_CORE/                → transition & field logic
+PROTO_CORE/FIELD_LAYER/               → continuous geometry layer
+RESEARCH/                             → validation, findings, theory
+PROTO_CORE/NEXAH_DEMONSTRATOR/        → reproducible reference system
+APPLICATIONS/                         → applied systems & experiments
+VISUAL_GALLERY.md                     → visual ecosystem
+REPOSITORY_MAP.md                     → repository structure
 ```
 
 ---

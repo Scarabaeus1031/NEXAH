@@ -231,34 +231,69 @@ an empirical, code-driven exploration of structure in dynamics
 
 ```text
 scripts/
-    run_experiment_*.py
-
-output_results/
-    generated data + plots
+    run_demo.py                 → canonical entry point
+    generate_transition_structure.py
+    kernel/                     → continuous gate and navigation layer
+    hero/                       → transition-aware navigation
 
 visuals/
-    curated figures (Demonstrator)
+    generated data, plots, and curated figures
 ```
 
 ---
 
 ## ▶️ How to Run
 
-Example:
+Requirements:
+
+- Python 3.10 or newer
+- dependencies installed through the repository package
+
+Follow the installation steps in the repository **[Quick Start](../../README.md#-quick-start)**.
+
+Then, from the repository root, run:
 
 ```bash
-python scripts/run_experiment_3_5_transition_matrix.py
-python scripts/run_experiment_3_6_gate_field_from_transition_matrix.py
+python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/run_demo.py
+```
+
+This command executes three stages:
+
+```text
+1. Transition Structure → discrete sheets and transition matrices
+2. Navigation Kernel    → continuous gate-aware field behavior
+3. Hero Animation       → transition-aware navigation
+```
+
+The run is complete when the terminal reports:
+
+```text
+✅ All steps completed.
+```
+
+The complete Quick Start was verified with Python 3.12. Generated figures and
+data are written below `PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/`.
+
+Primary outputs:
+
+```text
+visuals/structure/transition_structure_timeseries.png
+visuals/structure/transition_structure_matrix.png
+visuals/structure/transition_structure_phase.png
+visuals/structure/transition_matrix.npy
+visuals/structure/transition_matrix_prob.npy
+visuals/hero/nexah_transition_navigation_v13.gif
 ```
 
 ---
 
 ## 📊 Key Outputs
 
-- Gate field visualizations  
-- Sheet partition plots  
-- Transition matrices  
-- Time-series of structural switching  
+- Gate-field and navigation visualizations
+- Sheet-partition plots
+- transition count and probability matrices
+- time series of structural switching
+- transition-aware navigation animation
 
 ---
 

@@ -8,18 +8,18 @@
 
 At first, it looks like chaos.
 
-But it isn’t.
+But chaotic behavior is not necessarily unstructured.
 
 ---
 
 ## 🧠 Look again
 
-- the system is not random  
-- it repeatedly follows structured pathways  
-- transitions occur in specific regions  
-- red points mark **actual structural transitions**
+- the observed behavior is not purely random
+- trajectories repeatedly follow structured pathways
+- detected transitions cluster in specific regions
+- red points mark **detected structural transitions**
 
-👉 this is **structured behavior inside a dynamical system**
+👉 this is **observed structure inside a dynamical system**
 
 ---
 
@@ -75,7 +75,7 @@ python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/hero/run_transition_navigation_v13.
 
 ## 🧠 What just happened
 
-You are not simulating chaos.
+You are simulating a chaotic system — and observing structure within its dynamics.
 
 You are observing:
 
@@ -89,10 +89,10 @@ transitions occurring within that structure
 
 ## 💡 What this shows
 
-- dynamical systems exhibit geometric structure  
-- transitions are not random events  
-- behavior follows constrained pathways  
-- system evolution can be understood via geometry  
+- investigated trajectories exhibit geometric structure
+- detected transitions are not uniformly distributed
+- behavior follows recurring pathways
+- system evolution can be analyzed through geometry
 
 ---
 
@@ -131,6 +131,6 @@ NEXAH turns dynamical systems into:
 
 ## 🧠 If you remember one thing
 
-> The system is not random.  
-> It follows structure —  
-> and that structure can be reconstructed.
+> The observed behavior is not purely unstructured.
+> It exhibits recurring organization —
+> and that organization can be reconstructed.
