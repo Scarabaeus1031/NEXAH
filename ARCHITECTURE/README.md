@@ -20,6 +20,7 @@ combination of:
 |---|---|
 | What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
 | Which computational methods are used? | **[METHODS.md](METHODS.md)** |
+| What is the next concrete architecture plan? | **[Orientation Layer](orientation_layer/)** |
 | How do repository areas relate? | Continue with this page |
 | What can I run now? | **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
 | Where is the empirical evidence? | **[Validation Portal](../RESEARCH/VALIDATION/)** |
@@ -234,6 +235,12 @@ These gaps are explicit architecture work, not hidden implementation claims.
 
 ## 🛣️ Development Priorities
 
+The active consolidation plan is the
+**[Orientation Layer Bauplan](orientation_layer/)**. It defines typed contracts,
+a characterized v0.7 backend adapter, evidence-aware orientation reports, and a
+bounded validation path. Its specifications supersede broad capability diagrams
+as implementation guidance.
+
 Useful architecture work includes:
 
 - consolidating a minimal runtime interface
@@ -250,6 +257,7 @@ Useful architecture work includes:
 
 - **[System State](SYSTEM_STATE.md)**
 - **[Methods](METHODS.md)**
+- **[Orientation Layer Bauplan](orientation_layer/)**
 - **[Proto Core Index](../PROTO_CORE/README.md)**
 - **[Applications Index](../APPLICATIONS/README.md)**
 - **[Research Portal](../RESEARCH/README.md)**
