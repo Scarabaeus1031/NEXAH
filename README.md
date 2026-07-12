@@ -84,6 +84,43 @@ rather than a universal theory of everything.
 
 ---
 
+# 🚀 Quick Start
+
+The recommended hands-on entry is the visual NEXAH Demonstrator.
+
+From the repository root:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
+python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/run_demo.py
+```
+
+On Windows, activate the environment with:
+
+```powershell
+.venv\Scripts\activate
+```
+
+The demonstrator runs the core sequence:
+
+```text
+field → transition structure → navigation behavior
+```
+
+and writes its generated figures and data to:
+
+```text
+PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/
+```
+
+For the guided visual explanation, read **[START_HERE.md](START_HERE.md)**.
+
+For the small command-line analysis kernel, run `nexah --help` after installation.
+
+---
+
 # 🗺️ The Cartography Perspective
 
 NEXAH can be understood as a cartography laboratory for complex systems.
@@ -694,14 +731,16 @@ REPOSITORY_MAP.md     → repository structure
 
 ---
 
-# 🚀 Quick Start
+# 🚀 Running NEXAH
+
+Use the **[Quick Start](#-quick-start)** near the top of this page for the
+recommended visual demonstrator.
+
+The separate minimal CLI kernel supports time-series analysis and comparison:
 
 ```bash
-pip install -e .
-# or
-pip install -r requirements.txt
-
-python run_nexah_demo.py
+nexah analyze sin.csv
+nexah compare sin.csv noisy.csv
 ```
 
 ---

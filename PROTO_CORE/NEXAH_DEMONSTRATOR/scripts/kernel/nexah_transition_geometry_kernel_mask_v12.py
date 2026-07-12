@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import gaussian_kde
+import os
 
 # ============================================================
 # SYSTEM (Lorenz)
@@ -161,8 +162,16 @@ plt.suptitle(
 
 plt.tight_layout()
 
+output_path = os.path.abspath(os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "..",
+    "visuals",
+    "nexah_swarm_navigation_v12.png"
+))
+
 plt.savefig(
-    "NEXAH_DEMONSTRATOR/visuals/nexah_swarm_navigation_v12.png",
+    output_path,
     dpi=300,
     bbox_inches='tight'
 )
