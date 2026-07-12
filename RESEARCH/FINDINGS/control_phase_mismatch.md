@@ -1,6 +1,7 @@
 # 🔁 NEXAH — Control via Phase Mismatch & Direction
 
-This document isolates the **causal control mechanism** observed in NEXAH.
+This document records a **directional control mechanism observed in one
+Kuramoto-derived experimental setup**.
 
 It extends structural findings by identifying:
 
@@ -84,7 +85,7 @@ inverse    → drift: 0.0165, events: 0
 
 ---
 
-# 🔥 Core Result
+# 🔥 Experimental Result
 
 ```text
 Instability is phase-aligned.
@@ -218,7 +219,7 @@ reducing magnitude alone
 
 # 🔬 Status
 
-- empirically validated (Kuramoto)  
+- empirically observed in the tested Kuramoto setup
 - consistent with phase mismatch theory  
 - not yet generalized across all systems  
 
@@ -240,11 +241,11 @@ Extend directional control to:
 # 🔥 Final Insight
 
 ```text
-Transitions are triggered by phase mismatch.
+Transition events correlate with phase mismatch in the tested setup.
 
 Control acts through direction.
 
-Stability emerges when both are aligned.
+The inverse-control variant reduced both measured drift and event count.
 ```
 
 ---

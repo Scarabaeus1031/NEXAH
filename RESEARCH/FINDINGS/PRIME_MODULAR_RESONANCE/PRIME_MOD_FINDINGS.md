@@ -1,6 +1,11 @@
 # 🧠 NEXAH — Prime Modular Resonance  
 ## Unified Findings
 
+> **Status: Experimental findings.** Non-uniform transitions and recurrent
+> graph structure are supported by repository experiments. Entropy and drift
+> scaling statements are provisional until normalization, null models, and
+> metric definitions are made consistent across scripts.
+
 ---
 
 ## 🔷 Objective
@@ -46,7 +51,7 @@ The system was analyzed via:
 - drift estimation  
 - multi-mod comparison  
 
-All results were validated against:
+Experiments include comparisons against:
 
 - random sequences  
 - shuffled primes  
@@ -171,7 +176,7 @@ Compared to random:
 - entropy ↓  
 - cycles ↑  
 
-→ confirms:
+→ indicates under the implemented controls:
 
 > structure is intrinsic, not sampling artifact
 
@@ -338,13 +343,13 @@ We identify three layers:
 
 # 🔷 STATUS
 
-✔ reproducible  
-✔ multi-mod validated  
-✔ statistically confirmed  
-✔ structurally consistent  
-✔ geometrically interpretable  
+- scripts and outputs available
+- multiple moduli explored
+- deviations from selected null models observed
+- structural interpretations remain experimental
+- entropy and drift trends require reconciliation
 
-→ ready for formalization phase
+→ candidate for stricter statistical and mathematical analysis
 
 ---
 

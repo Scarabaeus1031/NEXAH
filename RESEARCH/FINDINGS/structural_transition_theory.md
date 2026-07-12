@@ -1,5 +1,8 @@
 # 🔬 NEXAH — Structural Transition Theory
 
+> **Status: Theoretical working model.** This document combines empirical
+> observations with proposed mechanisms. It is not a validated general theory.
+
 ## 🧭 Purpose
 
 This document formulates the **core structural hypothesis of NEXAH**:
@@ -42,7 +45,7 @@ with trajectory:
 
 $$
 x(t)
-```
+$$
 
 ---
 
@@ -81,7 +84,7 @@ $$
 G(x) = (1 - \hat{\rho})(1 - \hat{C})(1 - \hat{R})
 $$
 
-→ indicator of transition regions
+→ indicator of local structural instability
 
 ---
 
@@ -89,11 +92,11 @@ $$
 
 $$
 \phi(x) = \arctan2(y, x)
-```
+$$
 
 $$
 \omega(x) = \frac{d\phi}{dt}
-```
+$$
 
 ---
 
@@ -101,7 +104,7 @@ $$
 
 $$
 \Delta_\phi(x) = |\omega(x) - \mathbb{E}[\omega(x)]|
-```
+$$
 
 ---
 
@@ -136,7 +139,7 @@ Sheets = local flow manifolds (empirical)
 - flow conflict  
 
 ```text
-Gates = transition-enabling regions
+Gates = candidate instability regions
 ```
 
 ---
@@ -183,7 +186,7 @@ instability alone ⇒ transition
 
 ```text
 Instability = potential  
-Phase mismatch = activation
+Phase mismatch = candidate activation signal
 ```
 
 ---
@@ -227,14 +230,14 @@ $$
 F(x)
 - \lambda \nabla G(x)
 + \mu \nabla \rho(x)
-```
+$$
 
 ---
 
 ## 🔹 Interpretation
 
 - follow flow  
-- avoid gates  
+- account for instability regions
 - remain in coherent regions  
 
 ---
@@ -249,7 +252,7 @@ control effectiveness ∝ phase alignment
 
 # 🔷 7. Empirical Support
 
-Validated in:
+Investigated in:
 
 - Lorenz  
 - Rössler  

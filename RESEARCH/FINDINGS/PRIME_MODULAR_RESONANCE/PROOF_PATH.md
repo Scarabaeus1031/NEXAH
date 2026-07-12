@@ -61,14 +61,14 @@ Flow ≈ cycles + drift
 
 ### Mapping
 
-- state space: $begin:math:text$ \\mathbb\{Z\}\_m $end:math:text$
-- transition matrix: $begin:math:text$ T $end:math:text$
+- state space: $\mathbb{Z}_m$
+- transition matrix: $T$
 
 ---
 
 ### Questions
 
-- Is $begin:math:text$ T $end:math:text$ ergodic?
+- Is $T$ ergodic?
 - Does a unique stationary distribution exist?
 - What is the mixing time?
 
@@ -84,7 +84,7 @@ Flow ≈ cycles + drift
 
 ### What to prove
 
-> $begin:math:text$ T $end:math:text$ differs significantly from uniform random transition matrices.
+> $T$ differs significantly from uniform random transition matrices.
 
 ---
 
@@ -92,7 +92,7 @@ Flow ≈ cycles + drift
 
 ### Mapping
 
-- directed weighted graph from $begin:math:text$ T $end:math:text$
+- directed weighted graph from $T$
 
 ---
 
@@ -106,7 +106,7 @@ Flow ≈ cycles + drift
 
 ### Possible direction
 
-> Show that the spectrum of $begin:math:text$ T $end:math:text$ deviates from random graph spectra.
+> Show that the spectrum of $T$ deviates from random graph spectra.
 
 ---
 
@@ -129,7 +129,7 @@ This is likely the **deepest connection**.
 Primes are not random:
 
 - gaps are structured  
-- distribution mod $begin:math:text$ m $end:math:text$ is constrained  
+- distribution modulo $m$ is constrained
 
 ---
 
@@ -195,7 +195,7 @@ as a discrete dynamical system.
 
 ### Mapping
 
-- walk on finite group $begin:math:text$ \\mathbb\{Z\}\_m $end:math:text$
+- walk on the finite group $\mathbb{Z}_m$
 
 ---
 
@@ -295,7 +295,7 @@ Every flow can be decomposed into:
 
 Example:
 
-- random transitions on $begin:math:text$ \\mathbb\{Z\}\_m $end:math:text$  
+- random transitions on $\mathbb{Z}_m$
 - or shuffled prime sequence  
 
 ---
@@ -424,9 +424,9 @@ which creates a bridge between:
 
 # 🔷 Status
 
-✔ experimentally solid  
-✔ mathematically plausible  
-✔ multiple formal paths exist  
+- experimental evidence available
+- mathematically plausible directions identified
+- entropy, drift, and null-model definitions still require consolidation
 
 → requires targeted proof work
 

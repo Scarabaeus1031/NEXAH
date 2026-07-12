@@ -1,7 +1,8 @@
 # NEXAH — Dynamical Unification (Lorenz ↔ Halvorsen ↔ Control)
 
-**Status:** ACTIVE  
-**Scope:** Cross-System Structural Insight  
+**Status:** THEORETICAL SYNTHESIS
+
+**Scope:** Cross-system interpretation based on limited empirical comparisons
 
 ---
 
@@ -110,7 +111,7 @@ trajectory in field
 ## 🔷 3. Critical Insight
 
 ```text
-Transition structure is invariant
+Related transition features recur
 even when flow geometry changes.
 ```
 
@@ -147,8 +148,8 @@ Across all systems:
 ## Result
 
 ```text
-Phase provides a universal coordinate
-for transition structure.
+The chosen phase representation provides a shared
+comparative coordinate for the tested systems.
 ```
 
 ---
@@ -341,7 +342,7 @@ through structured transitions.
 
 ---
 
-# ⚡ 10. Real System Validation (IEEE)
+# ⚡ 10. IEEE Benchmark Application
 
 ---
 
@@ -356,7 +357,8 @@ through structured transitions.
 ## Result
 
 ```text
-Prediction lead time > classical models
+Structural warning signals precede collapse
+in the investigated benchmark simulations
 ```
 
 ---
@@ -374,14 +376,14 @@ It predicts transition into instability.
 # 🔷 11. Master Insight
 
 ```text
-All systems share:
+The investigated systems share selected representations involving:
 
 - field structure
 - regime decomposition
 - transition geometry
 - phase organization
 
-Differences are only:
+Observed differences include:
 
 - distribution of transitions
 - strength of gates
@@ -394,14 +396,14 @@ Differences are only:
 # 🧠 Final Statement
 
 ```text
-Chaos is not random.
+Chaotic behavior can contain recurring organization.
 
-It is structured motion
+In the investigated representations it appears as motion
 across regimes
 connected by transitions
 and organized by phase.
 
-NEXAH reveals and controls this structure.
+NEXAH attempts to reconstruct and influence this structure.
 ```
 
 ---

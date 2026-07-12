@@ -226,7 +226,7 @@
 ### mod_drift_scaling
 ![drift](analysis/output/plots/mod_drift_scaling.png)
 
-- Insight: drift increases with modulus  
+- Insight: modulus-dependent drift; the trend depends on the selected drift metric and remains unresolved
 
 ---
 

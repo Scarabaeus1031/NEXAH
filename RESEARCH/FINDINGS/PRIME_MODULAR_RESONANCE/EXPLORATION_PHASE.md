@@ -142,62 +142,68 @@ without introducing any continuous field.
 ```math
 c_n = (7 a_n + \delta) \bmod 17
 ```
-`
-	•	mod 7 → local structure
-	•	mod 17 → stabilizing layer
-⸻
+
+- mod 7 → local structure
+- mod 17 → proposed stabilizing layer
+
+---
 
 ### Experiment 03 — Mod-60 Anchor System
-```bash
+
+```text
 [43, 37, 23, 17]
 ```
-`
-	•	defines structured residue corridors
-	•	acts as angular partition system
 
-⸻
+- defines candidate structured residue corridors
+- acts as an angular partition system
+
+---
 
 ### Experiment 04 — Spectral Analysis
-`
-	•	FFT
-	•	autocorrelation
-	•	spiral projections
+
+- FFT
+- autocorrelation
+- spiral projections
 
 Used to detect periodic structure in residue dynamics.
 
-⸻
+---
 
 ### Experiment 05 — Mirror Chains
 
 Examples:
-```bash
+
+```text
 73 ↔ 37  
 137 ↔ 731
 ```
-	•	potential structural shortcuts in graph space
 
-⸻
+- potential structural shortcuts in graph space
+
+---
 
 ### Experiment 06 — Transition Graph Topology
 
 **🖼 Clean Transition Graph**
 
-Interpretation
-	•	weighted edges reveal preferred transitions
-	•	asymmetric connectivity
-	•	non-uniform state interaction
+Interpretation:
 
-⸻
+- weighted edges reveal preferred transitions
+- asymmetric connectivity
+- non-uniform state interaction
+
+---
 
 ### Null Models
 
 All results are compared against:
-	•	random integers
-	•	random odd integers
-	•	shuffled primes
-	•	valid residue-class controls
 
-⸻
+- random integers
+- random odd integers
+- shuffled primes
+- valid residue-class controls
+
+---
 
 ### Caution
 
@@ -206,40 +212,39 @@ This experiment is exploratory.
 No physical interpretation is assumed.
 All results are computational and comparative.
 
-⸻
+---
 
 ### Key Insight
 
 Prime modular residue systems exhibit structured transition behavior
 that becomes visible as:
-	•	coherent geometry
-	•	cyclic motifs
-	•	flow-like dynamics
-	•	emergent transport behavior
+
+- coherent geometry
+- cyclic motifs
+- flow-like dynamics
+- emergent transport behavior
 
 under geometric embedding.
 
-⸻
+---
 
 ### Next Steps
-`
-	•	statistical validation
-	•	multi-mod coupling (7 × 11 × 13)
-	•	spectral refinement (FFT)
-	•	topology metrics (graph theory)
-	•	drift / transport quantification
-	•	extension to mod 11, mod 13
 
-⸻
+- statistical validation
+- multi-mod coupling (7 × 11 × 13)
+- spectral refinement (FFT)
+- topology metrics (graph theory)
+- drift / transport quantification
+- extension to mod 11 and mod 13
+
+---
 
 ### Status
 
-✔ reproducible
-✔ visualized
-✔ structurally consistent
-✔ dynamically extended
-✔ ready for publication / discussion
+- historical scripts and visuals preserved
+- exploratory comparisons documented
+- metrics and null models require consolidation before formal publication claims
 
-⸻
+---
 
 Scarabæus1033 · NEXAH Research Layer

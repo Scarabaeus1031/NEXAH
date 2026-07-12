@@ -1,5 +1,10 @@
 # 🧠 NEXAH — Core Findings
 
+> **Status: Legacy synthesis.** This document preserves the broad findings
+> model assembled in early May 2026. Some interpretations were refined by later
+> validation and demonstrator experiments. Use the current
+> **[Findings Portal](README.md)** for claim status and corrections.
+
 This document summarizes the **core empirical findings** derived from the FIELD_LAYER development (V1–V40)  
 and extended through **cross-system experiments (Lorenz, Halvorsen, power systems)**  
 and the **phase dynamics extension layer**.
@@ -130,7 +135,7 @@ Across all systems:
 
 ## Result
 
-> Phase emerges as a **universal coordinate of transition structure**
+> Phase provides a **shared comparative coordinate in the tested representations**
 
 ---
 
@@ -319,7 +324,7 @@ Control = modifying transition structure
 
 ---
 
-# 🔬 14. Real-World Validation
+# 🔬 14. IEEE Benchmark Application
 
 ## Observation (Power Systems)
 
@@ -328,7 +333,7 @@ Control = modifying transition structure
 
 ## Result
 
-> NEXAH detects **pre-failure transition structure**
+> The investigated IEEE benchmark simulations contain **pre-failure structural signals**
 
 ---
 
@@ -352,7 +357,7 @@ we observe:
 
 ## Result
 
-> Transition-induced phase structure is **system-invariant (empirical)**
+> Related phase-derived patterns recur across the tested system representations
 
 ---
 
@@ -384,7 +389,7 @@ Kuramoto:
 
 ## Result
 
-> Systems differ in **flow expression**, not in structure
+> The tested systems differ in flow expression while sharing selected comparative features
 
 ---
 
@@ -412,11 +417,15 @@ Residue models:
 
 ## Result
 
-> Gates are **transition channels**
+> The Gate Operator highlights **continuous local instability regions**
+
+Later demonstrator experiments show that the Gate Operator does not directly
+detect transition events. Discrete structural changes require a separate
+trajectory-derived transition representation.
 
 ---
 
-# 🔷 19. No True Decision Points
+# 🔷 19. Branching in the Tested Representations
 
 ## Observation
 
@@ -425,7 +434,8 @@ Residue models:
 
 ## Result
 
-> System defines **paths, not choices**
+> These experiments emphasize persistent paths; they do not establish that
+> branching or decision-like structure is absent in general
 
 ---
 
@@ -471,14 +481,15 @@ They represent:
 # 🔥 Core Insight
 
 ```text
-Systems do not differ in structure.
-
-They differ in how flow is distributed
-and how phase organizes that flow.
+The investigated systems share selected structural features,
+while differing in flow distribution
+and in how the chosen phase coordinate organizes that flow.
 ```
 
 ---
 
-**Status:** Core Findings (Phase-Extended)  
-**Basis:** FIELD_LAYER + Cross-System + Phase Dynamics  
-**Confidence:** High (structural consistency), ongoing validation  
+**Status:** Legacy synthesis (Phase-Extended)
+
+**Basis:** FIELD_LAYER + Cross-System + Phase Dynamics
+
+**Confidence:** Mixed empirical and experimental evidence; ongoing validation

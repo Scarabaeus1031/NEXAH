@@ -80,10 +80,9 @@ Thus, phase acts as a **unifying coordinate** across systems.
 
 ## Key Insight
 
-Phase dynamics are not system-specific.
-
-They arise from the structure of transitions,
-rather than from the underlying system formulation.
+Related phase-derived patterns occur in the tested system representations.
+Whether they arise from a shared transition mechanism rather than from the
+chosen projections remains open.
 
 ---
 

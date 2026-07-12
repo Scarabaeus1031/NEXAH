@@ -3,8 +3,8 @@
 ## Statement
 
 Phase structure, drift, and winding behavior
-emerge from transition dynamics,
-independent of the specific system formulation.
+may emerge from transition dynamics across
+different system formulations and chosen representations.
 
 This has been observed across:
 
@@ -70,7 +70,7 @@ Systems can be analyzed through a shared representation:
 → drift μ_Δθ  
 → winding w(t)
 
-This provides a system-independent lens
+This provides a shared comparative lens
 for analyzing transition-driven behavior.
 
 ---

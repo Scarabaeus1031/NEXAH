@@ -20,9 +20,9 @@ It serves as a **bridge layer** between:
 The goal is to test the hypothesis:
 
 ```text
-Phase structure, drift, and topology
-are not system-specific,
-but emerge from transition dynamics.
+Related phase-derived measures may expose
+recurring directional structure
+across different system representations.
 ```
 
 ---
@@ -216,10 +216,10 @@ It does NOT:
 
 ## 🚀 Status
 
-✔ cross-system validated (initial)  
-✔ discrete ↔ continuous bridge established  
-✔ phase dynamics consistently observed  
-✔ ready for integration into core framework  
+- experimental cross-system comparison completed
+- discrete and continuous representations compared
+- phase-derived drift and winding observed in tested systems
+- broader generalization and formalization remain open
 
 ---
 

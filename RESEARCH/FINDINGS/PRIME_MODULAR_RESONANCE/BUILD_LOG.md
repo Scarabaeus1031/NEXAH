@@ -1,5 +1,9 @@
 # 🧭 PRIME MODULAR RESONANCE — BUILD LOG
 
+> **Status: Historical development log.** Entries record observations as they
+> appeared during exploration. They are not consolidated claim statements;
+> later documents identify unresolved entropy and drift-metric differences.
+
 ## 2026-03-23 → 2026-03-24
 Initial exploration phase — emergence of structured modular flow dynamics
 

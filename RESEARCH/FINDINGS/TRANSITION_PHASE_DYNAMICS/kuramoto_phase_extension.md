@@ -63,7 +63,7 @@ This represents a highly ordered phase regime.
 
 The Kuramoto model demonstrates that:
 
-- phase can act as a sufficient coordinate for system dynamics  
+- collective phase can act as an effective coordinate in the synchronized regime
 - complex multi-component systems reduce to phase evolution  
 - synchronization corresponds to maximal phase coherence  
 
@@ -75,7 +75,7 @@ Synchronization is a limit case of phase-driven structure.
 
 At high coupling:
 
-→ phase fully captures system behavior  
+→ collective phase captures the dominant synchronized behavior
 → transition dynamics collapse into coherent motion  
 
 ---

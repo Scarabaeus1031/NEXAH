@@ -1,6 +1,11 @@
 # 🧠 PRIME MODULAR RESONANCE  
 ### Structured Dynamics in Prime Residue Systems
 
+> **Status: Experimental extension.** The repository contains extensive code
+> and generated evidence for non-uniform transition structure. Claims about how
+> entropy or drift scale with modulus remain unresolved because historical
+> experiments used different normalizations and drift metrics.
+
 ---
 
 ![Prime Modular Resonance — System Overview](analysis/output/plots/PRIME_MODULAR_RESONANCE_SYSTEM_OVERVIEW.png)
@@ -164,17 +169,18 @@ Recommended candidates:
 
 ## 🔷 Project Structure
 
-prime_modular_resonance/
+PRIME_MODULAR_RESONANCE/
 
 ├── analysis/  
-│   ├── scripts  
+│   ├── Python analysis scripts
 │   ├── output/plots/  
 │   ├── output/curated/  
 
 ├── BUILD_LOG.md  
-├── EXPERIMENT_INDEX.md  
+├── EXPLORATION_PHASE.md
 ├── PRIME_MODULAR_RESONANCE_THEORY.md  
-├── PRIME_MOD_FINDINGS.md  
+├── PRIME_MOD_FINDINGS.md
+└── PROOF_PATH.md
 
 ---
 
@@ -196,11 +202,12 @@ It does **not** claim:
 
 ## 🔷 Status
 
-✔ reproducible  
-✔ multi-mod validated  
-✔ cycle-core identified  
-✔ drift confirmed  
-✔ structure vs randomness established  
+- scripts and generated artifacts available
+- multiple moduli explored
+- cycle-core structure observed
+- directional metrics observed
+- comparisons with implemented null models available
+- entropy and drift scaling require metric reconciliation
 
 ---
 

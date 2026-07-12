@@ -13,8 +13,14 @@ Initial observations showed:
 - emergence of flow-like behavior
 - presence of cycles and drift
 
-These observations led to the formal structure described below.# 🧠 NEXAH — Prime Modular Resonance  
+These observations led to the formal structure described below.
+
+# 🧠 NEXAH — Prime Modular Resonance
 ## Unified Theory & Empirical Structure
+
+> **Status: Semi-formal experimental interpretation.** This document does not
+> provide a unified mathematical theory. Historical entropy and drift-scaling
+> claims use inconsistent metrics and require reconciliation.
 
 ---
 
@@ -105,7 +111,7 @@ Instead:
 
 ### Observation
 
-- $begin:math:text$ T\_\{i\,j\} \\neq \\frac\{1\}\{m\} $end:math:text$  
+- $T_{i,j} \neq \frac{1}{m}$
 - specific transitions dominate  
 
 ---
@@ -165,7 +171,7 @@ d(i) = \sum_j (j - i \bmod m)\, T_{i,j}
 
 ### Observation
 
-- $begin:math:text$ d\(i\) \\neq 0 $end:math:text$  
+- $d(i) \neq 0$
 - drift direction is consistent  
 
 ---
@@ -285,7 +291,7 @@ Flow ≈ Cycle Structure + Drift
 
 ### Observation
 
-- drift decreases with $begin:math:text$ m $end:math:text$  
+- the drift trend depends on the selected metric and remains unresolved
 - cycle structure persists  
 
 ---
@@ -294,8 +300,7 @@ Flow ≈ Cycle Structure + Drift
 
 Two regimes:
 
-- small $begin:math:text$ m $end:math:text$ → transport-dominated  
-- large $begin:math:text$ m $end:math:text$ → structure-dominated  
+- possible transport- and recurrence-dominated regimes require metric reconciliation
 
 ---
 
@@ -322,7 +327,7 @@ Compared to null models:
 The system can be modeled as:
 
 - finite state space  
-- transition operator $begin:math:text$ T $end:math:text$  
+- transition operator $T$
 - induced dynamics  
 
 ---
@@ -333,7 +338,7 @@ The system can be modeled as:
 
 ### A — Non-Uniformity
 
-> $begin:math:text$ T $end:math:text$ deviates significantly from random transition matrices.
+> $T$ deviates significantly from the implemented random-transition controls.
 
 ---
 
@@ -404,12 +409,12 @@ Discrete asymmetry → flow → structure → geometry
 
 # 🔷 20. Status
 
-✔ reproducible  
-✔ multi-mod confirmed  
-✔ statistically robust  
-✔ structurally consistent  
+- computational evidence available
+- multiple moduli explored
+- recurrent and asymmetric structure observed
+- statistical definitions require consolidation
 
-→ ready for formal analysis  
+→ candidate for formal analysis
 
 ---
 

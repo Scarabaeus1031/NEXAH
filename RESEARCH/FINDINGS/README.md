@@ -1,344 +1,215 @@
-# ⚡ NEXAH — Findings (Overview)
+# ⚡ NEXAH — Findings Portal
 
-This section summarizes the **core empirical findings** of the NEXAH framework.
+This directory collects observations, interpretations, and working hypotheses
+derived from NEXAH experiments.
 
-It provides a **high-level entry point** into the structural behavior observed  
-in dynamical systems.
-
----
-
-## ⚠️ Scope
-
-This document is a **summary**, not the full result set.
-
-For structured findings at different levels:
-
-→ [core_findings.md](./core_findings.md)  
-→ [dynamical_unification.md](./dynamical_unification.md)  
-→ [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)  
-→ [../NEXAH_CORE/findings.md](../../NEXAH_CORE/findings.md)
-→ [control_phase_mismatch.md](./control_phase_mismatch.md)
-
----
-
-# 🧠 Core Idea
-
-NEXAH shows that:
-
-> complex dynamical systems can be reconstructed as  
-> **structured fields with geometry, flow, and convergence behavior**
-
-This enables a shift from:
-
-- state-based analysis  
-- threshold-based control  
-
-to:
-
-> **trajectory-aware navigation within a structured field**
-
----
-
-# 🔷 Cross-System Insight
-
-→ [dynamical_unification.md](./dynamical_unification.md)
-
-Different systems (Lorenz, Halvorsen) exhibit different flow geometries,  
-but share the same **transition structure**.
-
----
-
-# 🔷 Discrete System Insight
-
-→ [PRIME_MODULAR_RESONANCE/](./PRIME_MODULAR_RESONANCE/)
-
-Prime residue sequences (mod m) generate:
-
-- non-uniform transition structure  
-- emergent phase dynamics  
-- persistent rotational behavior  
-- directional drift across states  
-
-Key observation:
-
-> Even purely discrete systems induce **continuous-like structure, flow, and topology**  
-> when interpreted through transition dynamics.
-
----
-
-# 🔷 Phase Dynamics Insight
-
-→ [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)
-
-A new layer introduces **phase as a structural coordinate** across systems.
-
-Defined as:
+The Findings Layer sits between empirical validation and conceptual
+formalization:
 
 ```text
-θ(t) = atan2(y, x)
+experiments
+→ validation
+→ findings
+→ core concepts
+→ theoretical extensions
 ```
 
-Observed in:
-
-- Lorenz  
-- Rössler  
-- Halvorsen  
-- Kuramoto  
-
-We observe:
-
-- continuous phase evolution  
-- directional drift (Δθ ≠ 0)  
-- winding accumulation  
-- plateau regions (low phase velocity)  
-- structured Δθ distributions  
+It is a research synthesis layer, not a catalogue of universally established
+results.
 
 ---
 
-## 🧭 Structural Role of Phase
+## 🧭 Start Here
 
-Phase reveals hidden structure:
+| Goal | Entry point |
+|---|---|
+| Review the broad historical synthesis | **[core_findings.md](core_findings.md)** |
+| Compare Lorenz, Halvorsen, and Kuramoto interpretations | **[dynamical_unification.md](dynamical_unification.md)** |
+| Explore phase, drift, and winding | **[TRANSITION_PHASE_DYNAMICS/](TRANSITION_PHASE_DYNAMICS/)** |
+| Inspect the directional-control experiment | **[control_phase_mismatch.md](control_phase_mismatch.md)** |
+| Explore discrete prime-modular systems | **[PRIME_MODULAR_RESONANCE/](PRIME_MODULAR_RESONANCE/)** |
+| Read the working transition model | **[structural_transition_theory.md](structural_transition_theory.md)** |
+| Inspect the underlying validation archive | **[../VALIDATION/](../VALIDATION/)** |
 
-- phase = **local coordinate on the structure**
-- Δθ = **local motion**
-- drift (μ_Δθ) = **directional transport**
-- winding = **global topology**
-- plateaus = **transition slow zones (gate candidates)**
-
----
-
-## 🔬 Key Observation
-
-> Phase structure emerges independently of system type.
-
-Now observed in:
-
-- continuous systems  
-- discrete systems  
-- collective systems (Kuramoto)
-
----
-
-## 🧭 Structural Implication
-
-This extends the NEXAH hypothesis:
+Recommended path:
 
 ```text
-Structure is not dependent on system type.
-It emerges from transition dynamics.
-```
-
-Now observed in:
-
-- continuous dynamical systems (Lorenz, Halvorsen, power grids)  
-- discrete systems (prime modular transitions)  
-- collective synchronization systems (Kuramoto)
-
----
-
-# 🔷 Control & Causal Mechanism
-
-→ [control_phase_mismatch.md](./control_phase_mismatch.md)
-
-A new layer introduces **directional control based on phase structure**.
-
-Observed:
-
-- transitions are triggered by **phase mismatch**  
-- control effectiveness depends on **direction relative to phase drift**  
-
-Key result:
-
-```text
-alignment   → amplifies instability  
-opposition  → suppresses instability
-```
-
-This reveals a second structural layer:
-
-```text
-Stability is not achieved by reducing magnitude,
-but by opposing phase-aligned instability direction.
-```
-
-#🔑 Control Insight
-
-```text
-Stability is not achieved by reducing magnitude,
-but by opposing phase-aligned instability direction.
+Validation Portal
+→ Findings Portal
+→ Transition Phase Dynamics
+→ Control or Prime Modular extension
+→ Structural Transition Theory
 ```
 
 ---
 
-# 🧭 Structural Unification (Visual Summary)
+## 🧠 Status Language
 
-![Dynamical Unification](./visuals/nexah_dynamical_unification_diagram.png)
+| Status | Meaning |
+|---|---|
+| **Empirical** | Supported by concrete repository experiments and results |
+| **Experimental** | Observed in a limited setup but not sufficiently generalized |
+| **Theoretical** | Interpretation or proposed mechanism requiring further evidence |
+| **Legacy** | Historical synthesis that may predate later corrections |
 
-**Interpretation:**
-
-- Flow geometry differs across systems  
-- Transition structure remains invariant  
-- Phase organizes motion within that structure  
-- Control operates on structure, not trajectories  
-
----
-
-# 🔁 Phase Structure (Cross-System View)
-
-![Phase Field Master](./TRANSITION_PHASE_DYNAMICS/figures/master/phase_field_master_visual.png)
-
-**Interpretation:**
-
-- phase evolves smoothly even in chaotic systems  
-- drift direction persists  
-- plateau regions mark slow transition zones  
-- Δθ is structured, not random  
+These labels describe the evidence level of a claim, not the importance of the
+research direction.
 
 ---
 
-# 🔬 What was observed
+## 📊 Findings Map
 
-Across multiple systems (continuous + discrete):
+| Finding | Evidence | Current interpretation | Status |
+|---|---|---|---|
+| Detected transitions concentrate in structured regions | Lorenz and related validation experiments | Transition behavior is spatially organized in the investigated representations | Empirical |
+| Phase-derived metrics show drift and accumulation | Lorenz, Rössler, Halvorsen, Kuramoto, modular systems | A shared comparative coordinate can expose directional organization | Experimental cross-system finding |
+| Directional intervention changes drift and event counts | Kuramoto-derived control experiment | Control response depends on the tested phase-direction relation | Empirical in one setup; not generalized |
+| Continuous trajectories admit clustered transition representations | Demonstrator and field experiments | Discrete structure can summarize continuous motion | Empirical representation result |
+| Prime residue transitions differ from implemented null models | Prime Modular Resonance experiments | Discrete transition asymmetry can produce recurrence and flow-like embeddings | Experimental extension |
+| Winding summarizes accumulated projected phase | Phase-dynamics experiments | Candidate global structural signature; not a proof of state-space topology | Empirical metric with theoretical interpretation |
+| JANUS exposes directional coherence structure | JANUS experiments | Candidate aperture and transport geometry | Experimental / semi-formal |
 
-- transitions are **not discrete events**, but structured processes  
-- transition regions form **geometric channels**  
-- continuous dynamics collapse into **discrete state structures**  
-- discrete systems generate **continuous-like flow behavior**  
-- system motion follows an **implicit structural constraint**  
-- systems converge toward **stable structural configurations**  
-- phase evolves with **drift, winding, and plateau structure**  
-- synchronization emerges as **phase alignment (Kuramoto)**  
-
----
-
-# 🚀 Why this matters
-
-This changes how complex systems can be understood and controlled.
-
-Instead of:
-
-- detecting failure  
-- reacting to instability  
-
-NEXAH enables:
-
-> understanding where the system is  
-> and **steering how it moves**
+For detailed scripts, limitations, and evidence trails, use the
+**[Validation Portal](../VALIDATION/README.md)**.
 
 ---
 
-# 🧭 Core Perspective
+## 🔬 Current Empirical Core
 
-Classical question:
+Across investigated systems, the most defensible shared observation is:
 
-→ *Is the system stable?*
+> Detected transitions and directional changes are not uniformly distributed
+> in the chosen representations; they concentrate around recurring structural
+> regions and pathways.
 
-NEXAH asks:
+This supports continued study of:
 
-> **Where is the system in its structure — and where is it going?**
+- transition concentration regions
+- directional flow organization
+- phase-derived drift and mismatch
+- recurrence and transport graphs
+- geometry-aware navigation
 
----
-
-# 🔗 Visual Example (Real System)
-
-![Off-Manifold Flow](../../APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/ieee118_v69_off_manifold_flow.png)
-
-This is a trajectory from a real IEEE power grid model.
-
-NEXAH reconstructs the local field structure, revealing:
-
-- transition regions  
-- directional flow  
-- stability constraints  
+It does not by itself establish a universal transition law.
 
 ---
 
-# 🧠 Key Insight
+## 🪞 Corrected Gate Interpretation
 
-> Complex systems are not random.  
->  
-> They evolve within **structured dynamical fields**  
-> that constrain motion, transitions, and outcomes.
-
----
-
-# 🧪 Testable Hypotheses
-
-The findings presented here can be formulated as testable statements:
-
----
-
-## H1 — Transition Structure
+Earlier Findings documents sometimes describe the Gate Operator as a direct
+transition detector. Later demonstrator experiments refined this interpretation:
 
 ```text
-Transitions in dynamical systems occupy extended regions
-with internal structure, not isolated points.
+Gate Operator
+→ continuous local instability field
+
+Detected structural transition
+→ discrete change in the trajectory-derived representation
 ```
+
+High gate values can interact with transitions, but they do not identify
+transition events on their own. The current reference is the
+**[Demonstrator finding](../../PROTO_CORE/NEXAH_DEMONSTRATOR/NEXAH_STRUCTURAL_FINDINGS.md)**.
 
 ---
 
-## H2 — Phase Universality
+## 🔁 Transition Phase Dynamics
+
+The **[Transition Phase Dynamics](TRANSITION_PHASE_DYNAMICS/)** program compares
+phase-derived measures across continuous, discrete, and coupled systems.
+
+The strongest observation is that a chosen phase representation can yield:
+
+- asymmetric increment distributions
+- persistent mean drift
+- accumulated winding
+- plateaus and changes in phase velocity
+
+The phase coordinate is projection-dependent outside intrinsically phase-based
+systems such as Kuramoto. It should therefore be treated as a comparative
+analysis coordinate, not yet as a universal physical variable.
+
+---
+
+## 🎮 Directional Control Finding
+
+The **[control experiment](control_phase_mismatch.md)** reports substantially
+different drift and event counts under aligned, damped, inverted, and inverse
+control variants.
+
+This supports the empirical claim that control direction matters in the tested
+setup. It does not yet demonstrate a general causal control law across Lorenz,
+Rössler, Halvorsen, or real power systems.
+
+---
+
+## 🔢 Prime Modular Resonance
+
+The **[Prime Modular Resonance](PRIME_MODULAR_RESONANCE/)** program studies
+transition graphs produced by consecutive prime residues modulo `m`.
+
+Supported within the implemented experiments:
+
+- non-uniform empirical transition matrices
+- recurrent cycles and connected graph structure
+- modulus-dependent directional asymmetry
+- differences from selected random and shuffled controls
+- flow-like geometry under explicit angular embedding
+
+Important unresolved issue:
+
+> Entropy and drift trends are described inconsistently across historical
+> documents because multiple normalizations and drift metrics were used.
+
+Until those metrics and null models are reconciled, claims about entropy or
+drift increasing or decreasing with modulus remain unresolved.
+
+---
+
+## 🌍 Power-System Interpretation
+
+Power-system findings currently derive primarily from IEEE benchmark models and
+repository-generated simulation archives.
+
+They should be described as:
 
 ```text
-A phase coordinate θ(t) can be defined across systems,
-and exhibits drift, winding, and structured increments Δθ.
+validation on IEEE benchmark power-system models
 ```
 
----
-
-## H3 — Structure Invariance
-
-```text
-Transition structure is invariant across system types,
-despite differences in flow geometry.
-```
+rather than independent real-world operational validation. See the
+**[Power Systems application](../../APPLICATIONS/power_systems/)** for the
+current applied research program.
 
 ---
 
-## H4 — Discrete–Continuous Bridge
+## ⚠️ Known Boundaries
 
-```text
-Discrete transition systems induce continuous-like
-flow, phase, and topology when interpreted structurally.
-```
+The Findings Layer does not yet establish:
 
----
+- a universal phase coordinate
+- system-independent transition invariance
+- winding as a proof of global topology
+- the Gate Operator as a direct transition detector
+- a generalized causal control law
+- superiority over classical power-system methods
+- a closed theory of prime modular dynamics
 
-## H5 — Control Principle
-
-```text
-Control performance improves when aligned with
-transition structure, compared to state-based control.
-```
-
----
-
-## Status
-
-- empirically observed  
-- partially validated  
-- not yet formally proven  
+These remain hypotheses, experimental extensions, or targets for future
+formalization.
 
 ---
 
-# 🔬 Next Steps
+## 🔗 Related Entry Points
 
-### Core empirical findings  
-→ [core_findings.md](./core_findings.md)
-
-### Cross-system structure (Lorenz ↔ Halvorsen)  
-→ [dynamical_unification.md](./dynamical_unification.md)
-
-### Phase dynamics layer  
-→ [TRANSITION_PHASE_DYNAMICS/](./TRANSITION_PHASE_DYNAMICS/)
-
-### Discrete transition systems  
-→ [PRIME_MODULAR_RESONANCE/](./PRIME_MODULAR_RESONANCE/)
-
-### Full system architecture / kernel  
-→ [../../NEXAH_CORE/findings.md](../../NEXAH_CORE/findings.md)
+- **[Research Portal](../README.md)**
+- **[Validation Portal](../VALIDATION/README.md)**
+- **[Core Concepts](../CORE_CONCEPTS/README.md)**
+- **[NEXAH Demonstrator](../../PROTO_CORE/NEXAH_DEMONSTRATOR/)**
+- **[Power Systems](../../APPLICATIONS/power_systems/)**
 
 ---
 
-**Status:** Summary  
-**Role:** Entry point to empirical findings
+**NEXAH Findings Portal**
+
+Observation · Evidence · Interpretation · Open Questions

@@ -2,9 +2,8 @@
 
 ## Core Statement
 
-Phase, drift, and topology are not system-specific properties.
-
-They emerge from transition dynamics.
+Related phase-derived drift and winding measures recur across the tested
+representations. Their system-independent meaning remains a hypothesis.
 
 ---
 
@@ -68,7 +67,7 @@ Flow
 
 ## Interpretation
 
-Phase acts as a universal coordinate on transition-induced structure.
+The chosen phase representation acts as a shared comparative coordinate.
 
 Drift reflects structural asymmetry.
 
@@ -121,14 +120,14 @@ Complex systems can be understood as:
 → phase-organized transition structures  
 → with emergent drift, flow, and topology  
 
-independent of system type.
+across the tested system types and projections.
 
 ---
 
 ## Status
 
 - empirical  
-- cross-system validated (initial)  
+- initial cross-system evidence
 - requires formalization  
 
 ---

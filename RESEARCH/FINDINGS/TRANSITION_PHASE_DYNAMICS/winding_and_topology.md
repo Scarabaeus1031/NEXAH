@@ -67,7 +67,7 @@ phase drift induces winding.
 
 ## Topological Interpretation
 
-Winding encodes a **topological signature** of the system:
+Winding provides a **candidate topological signature of the projected trajectory**:
 
 - persistent winding → cyclic / rotational structure  
 - stable direction → global asymmetry  
@@ -75,8 +75,9 @@ Winding encodes a **topological signature** of the system:
 
 Importantly:
 
-Topology is not imposed externally,
-but emerges from the accumulation of local transitions.
+The observed winding is induced by the chosen phase projection and accumulated
+local motion. Additional analysis is required before inferring the topology of
+the full state space.
 
 ---
 
@@ -88,7 +89,7 @@ It encodes:
 
 → global rotation  
 → accumulated transport  
-→ emergent topology
+→ candidate global structural signature
 
 ---
 
@@ -116,9 +117,9 @@ This relation shows that:
 
 ## Implication
 
-Statistical properties of Δθ fully determine
-the large-scale behavior of the system.
+Under the stated stationarity approximation, statistical properties of Δθ
+determine the large-scale behavior of this winding observable.
 
 Thus:
 
-local transition asymmetry ⇒ global topological structure
+local projected asymmetry ⇒ accumulated winding structure
