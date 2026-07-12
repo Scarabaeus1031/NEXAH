@@ -1,376 +1,176 @@
-# 🧭 BUILDER_LAB INVENTORY INDEX
+# 🧭 NEXAH Builder Lab — Current Inventory
 
-Internal system map of the NEXAH Builder Lab.
+This inventory maps the Builder Lab as it exists in the repository. It replaces
+the earlier conceptual six-layer map, which referenced directories and maturity
+levels that no longer matched the filesystem.
 
-Purpose:
-- prevent loss of components  
-- maintain structural clarity  
-- enable fast navigation + extension  
-
----
-
-# 🧠 SYSTEM OVERVIEW
-
-The Builder Lab consists of **6 functional layers**:
-
-```
-1. CORE                → mathematical foundation
-2. DYNAMICS_ENGINE     → structure discovery
-3. RUNTIME             → execution layer
-4. NAVIGATION          → system movement logic
-5. ENGINES             → real-world system models
-6. VISUALIZATION       → rendering + analysis
-```
+> **Audit date:** July 12, 2026
+>
+> **Scope:** structure, entry points, dependencies, and promotion relevance
+>
+> **Not assessed:** scientific validity of every archived experiment
 
 ---
 
-# 1️⃣ CORE (Mathematical System Layer)
+## 📊 Inventory Summary
 
-📁 `core/`
+The Builder Lab contains roughly 2,300 files and occupies about 341 MB. Most of
+that volume is historical material and generated imagery:
 
-**Purpose:**  
-Abstract structure system (lattices, operators, order systems)
+- `ARCHIVE_ENGINE/`: approximately 175 MB
+- `EXPLORATION/`: approximately 115 MB
+- `DISCOVERY_ENGINE/`: approximately 30 MB
+- `visuals/`: approximately 20 MB
 
-**Key Components:**
-- `lattice.py` → base structure
-- `poset.py` → partial order systems
-- `fixpoint_lattice.py` → convergence structures
-- `closure_operator.py` → closure dynamics
-- `interior_operator.py` → dual to closure
-- `regime_operator.py` → regime classification logic
-- `state_graph.py` → system graph abstraction
-
-**Status:**  
-✔️ stable foundation  
-⚠️ underused in higher layers
+The top-level Builder Lab is therefore an archive-heavy laboratory, not one
+software package.
 
 ---
 
-# 2️⃣ DYNAMICS_ENGINE (Structure Discovery Layer)
+## 🗺️ Area Classification
 
-📁 `DYNAMICS_ENGINE/`
-
-**Purpose:**  
-Extract structure from simulation
-
-**Key Systems:**
-- `basin_detector.py` → attractor detection  
-- `phase_transition_detector.py` → regime changes  
-- `flow_field.py` → vector field dynamics  
-- `topology_builder.py` → graph structure extraction  
-- `loop_detector.py` → cyclic behavior  
-- `meta_field.py` → higher-order structure  
-
-**Pipelines:**
-- `real_pipeline.py`
-- `phase_map.py`
-
-**Outputs:**
-📁 `outputs/json/` → system grids  
-📁 `outputs/visuals/` → topology visuals  
-
-**Status:**  
-🔥 core innovation layer  
-⚠️ complex, needs consolidation
+| Area | Contents | Status | Action |
+|---|---|---|---|
+| `demos/` | Three state-graph demos | Mixed: one verified, two dependency-blocked | Keep; review separately |
+| `engines/` | Cascade, infrastructure, planetary, and system generators | Experimental prototypes | Keep; do not market as validated applications |
+| `models/` | `NexahSystem` graph/visualization template | Experimental shared code | Repair only if visual demos are retained |
+| `systems/` | Energy-grid, climate, and supply-chain JSON examples | Synthetic examples | Keep with prototype engines |
+| `dashboards/` | Matplotlib/network interfaces | Experimental UI prototypes | Dependency and runtime audit needed |
+| `visualizers/` | Graph, cascade, planetary renderers | Experimental visual tooling | Dependency and output-path audit needed |
+| `data/` | Timeline and planetary-network JSON | Example/generated data | Identify provenance before reuse |
+| `global_systems/` | Synthetic global/infrastructure definitions | Experimental inputs | Keep with engines |
+| `DISCOVERY_ENGINE/` | Resilience, phase, field, law-discovery, and validation experiments | Historical experimental lineage | Review observations for Research promotion |
+| `EXPLORATION/` | Current fragments, symbolic studies, experimental notes, and older portals | Mixed notebook/archive | Curate item by item |
+| `proto_models/` | Oval-membrane and time-knot models | Concept proposals | Require testable definitions before promotion |
+| `ARCHIVE_KERNEL/` | Field, navigation, and experimental kernel generations | Archive | Preserve; no current entry-point claims |
+| `ARCHIVE_ENGINE/` | Engine, kernel, research, navigation, outputs, and nested archives | Archive | Preserve as a historical lineage |
+| `legacy/` | Legacy index | Archive metadata | Retain if it improves traceability |
+| `IEEE_CASE/` | One early IEEE gate-detection script and empty visuals directory | Historical experiment fragment | Compare against current power-system work |
+| `tests/` | Three manual scripts for old paths | Stale | Do not treat as current automated tests |
+| `visuals/` | Selected diagrams, outputs, GIFs, and one plotting script | Mixed generated evidence | Index selected artifacts; avoid broad claims |
 
 ---
 
-# 3️⃣ RUNTIME (Execution Layer)
+## 🕳️ Empty Top-Level Placeholders
 
-📁 `runtime/`
+The following directories exist but contain no tracked working material:
 
-**Purpose:**  
-Run simulations + orchestrate system execution
-
-**Key Components:**
-- `simulation_engine.py`
-- `system_runner.py`
-
-**Status:**  
-✔️ functional  
-⚠️ could become unified execution API
-
----
-
-# 4️⃣ NAVIGATION (Implicit Layer)
-
-📁 spread across system
-
-**Purpose:**  
-Movement through system state space
-
-**Found in:**
-- `nexah_engine.py`
-- `kernel_bridge.py`
-- `run_agent.py`
-- `run_agent_ii.py`
-
-**Concept:**
-```
-state → regime → transition → navigation action
+```text
+analysis/
+app/
+core/
+docs/
+meta/
+navigation/
 ```
 
-**Status:**  
-🔥 strategic core  
-⚠️ not fully unified yet
+They are remnants or placeholders, not functional architectural layers. Removal
+can be considered later, but is not required for preserving the current audit.
 
 ---
 
-# 5️⃣ ENGINES (Application Layer)
+## ▶️ Entry-Point Audit
 
-📁 `engines/`
+### Verified
 
-**Purpose:**  
-Real-world system simulations
-
-**Systems:**
-- `nexah_capacity_cascade_engine.py`
-- `nexah_global_cascade_simulator.py`
-- `nexah_earth_simulator.py`
-- `nexah_infrastructure_simulator.py`
-- `nexah_multisystem_engine.py`
-
-**Connected Data:**
-📁 `systems/`  
-📁 `global_systems/`
-
-**Examples:**
-- energy grids  
-- supply chains  
-- planetary infrastructure  
-
-**Status:**  
-🔥 high application value  
-⚠️ needs validation layer
-
----
-
-# 6️⃣ VISUALIZATION (Interpretation Layer)
-
-📁 `visualization/`  
-📁 `visualizers/`  
-📁 `visuals/`
-
-**Purpose:**  
-Make system structure visible
-
-**Types:**
-- stability landscapes  
-- trajectory plots  
-- cascade visualizations  
-- multi-agent simulations  
-
-**Key Files:**
-- `stability_surface_3d.py`
-- `trajectory_on_surface.py`
-- `dynamic_risk_landscape.py`
-- `nexah_visualizer.py`
-
-**Status:**  
-🔥 very strong  
-⚠️ partially fragmented
-
----
-
-# 7️⃣ RESONANCE (Experimental Numeric Layer)
-
-📁 `resonance/`
-
-**Purpose:**  
-Prime grids + spectral structure experiments
-
-**Key Components:**
-- `prime_number_lattice_with_symmetry.py`
-- `resonance_field_map.py`
-- `resonance_band_tracker.py`
-
-**Status:**  
-⚠️ experimental  
-❗ not integrated into main pipeline
-
----
-
-# 8️⃣ VORTEX_CHIMERA (Defect / Instability Layer)
-
-📁 `vortex_chimera/`
-
-**Purpose:**  
-Analyze defects, instabilities, anomalies
-
-**Key Components:**
-- `defect_worldline_tracker.py`
-- `cross_layer_defect_propagation.py`
-- `triad_defect_correlation.py`
-
-**Status:**  
-🔥 highly interesting  
-⚠️ currently isolated
-
----
-
-# 9️⃣ EXPLORATION (Research + Archive Layer)
-
-📁 `EXPLORATION/`
-
-**Purpose:**
-- research notes  
-- architecture evolution  
-- symbolic layer  
-- experimental ideas  
-
-**Important Subsections:**
-- `archive/` → past architecture states  
-- `symbolic_layer/` → theoretical extensions  
-- `experimental/` → early kernels  
-
-**Status:**
-⚠️ mixed:
-- some critical insights  
-- some obsolete material  
-
-👉 **REVIEW REQUIRED**
-
----
-
-# 🔟 DEMOS (Entry Layer)
-
-📁 `demos/`
-
-**Purpose:**  
-User-facing system entry
-
-**Key Files:**
-- `nexah_demo.py`
-- `nexah_explorer.py`
-- `nexah_graph_simulation.py`
-
-**Status:**  
-✔️ working  
-🔥 best onboarding entry
-
----
-
-# 11️⃣ CLI & CONTROL
-
-📁 root
-
-- `nexah_cli.py` → system interface  
-- `run_builder_lab.py` → master runner  
-
----
-
-# 12️⃣ PROTO MODELS
-
-📁 `proto_models/`
-
-**Purpose:**  
-Conceptual system blueprints
-
-Examples:
-- `oval_membrane_field`
-- `time_knot_field`
-
-**Status:**
-🔥 important conceptual layer  
-⚠️ not integrated yet
-
----
-
-# ⚠️ CRITICAL OBSERVATIONS
-
-## 1. Fragmentation
-
-Navigation logic, discovery, and runtime are split.
-
-👉 needs **unified kernel**
-
----
-
-## 2. Hidden Value in Archive
-
-`EXPLORATION/archive/` likely contains:
-
-- early architecture decisions  
-- important conceptual breakthroughs  
-
-👉 should be partially reintegrated
-
----
-
-## 3. Underused CORE
-
-Mathematical layer exists but is not fully exploited.
-
-👉 potential for strong formalization
-
----
-
-## 4. Parallel Worlds
-
-You currently have:
-
-- physics-style system (resonance)
-- system-engineering layer (engines)
-- symbolic layer (exploration)
-
-👉 not yet unified
-
----
-
-# 🧠 RECOMMENDED NEXT STEPS
-
-## 1. Define Kernel
-
-Unify:
-
-```
-CORE + DYNAMICS + NAVIGATION → NEXAH_KERNEL
+```bash
+python EXPERIMENTAL/BUILDER_LAB/demos/nexah_demo.py
+python EXPERIMENTAL/BUILDER_LAB/nexah_cli.py systems-list
 ```
 
+Both commands completed successfully in the repository environment on the audit
+date. The demo uses only the standard library; the CLI command only enumerates
+JSON filenames.
+
+### Blocked or inconsistent
+
+| Component | Finding |
+|---|---|
+| `demos/nexah_explorer.py` | Fails without undeclared `networkx` and `imageio` dependencies |
+| `demos/nexah_graph_simulation.py` | Uses the same undeclared dependencies and interactive plotting |
+| `run_builder_lab.py` | Calls the blocked visual demos and is therefore not a verified suite |
+| `nexah_cli.py simulate` | Points to `auto_system_loader.py` at the wrong level |
+| `engines/auto_system_loader.py` | Imports `system_template` and resolves `systems/` relative to `engines/`, while both live elsewhere |
+| `tests/test_*.py` | Import obsolete `FRAMEWORK` modules and `APPLICATIONS/examples/energy_grid.json` |
+
+### Dependency boundary
+
+The main repository declares NumPy, Matplotlib, scikit-learn, and pandas. Builder
+Lab scripts additionally use:
+
+- `networkx`
+- `imageio`
+- `cartopy` in geographic prototypes
+
+If these experiments are revived, define their dependencies separately instead
+of silently expanding the stable package requirements.
+
 ---
 
-## 2. Clean Separation
+## 🧠 Valuable Content by Destination
 
+### Candidate for `RESEARCH/FINDINGS/`
+
+- `DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md`
+- archived Symmetry Graph result summary
+- archived structured-oscillator study
+- archived stability-driven multi-agent study
+
+Each requires reproduction and scientific qualification before promotion.
+
+### Candidate for `RESEARCH/CONCEPTS/`
+
+- `EXPLORATION/experimental/01_control/control_sensitivity_field.md`
+- `proto_models/oval_membrane_field/`
+- `proto_models/time_knot_field/`
+
+These currently read as proposals or interpretations, not established methods.
+
+### Candidate for `APPLICATIONS/`
+
+- the minimal state-graph demo, as an explicitly synthetic educational tool
+- selected engines only after runtime, dependency, and domain-claim review
+
+The energy-grid naming in the demo is illustrative and does not make it an IEEE
+or operational power-system application.
+
+### Candidate for comparison with existing power-system work
+
+- `IEEE_CASE/scripts/ieee_gate_detection_v1.py`
+- `EXPLORATION/experimental/03_mapping/ieee_mapping_module.md`
+
+Compare these with `APPLICATIONS/power_systems/` before copying anything.
+
+---
+
+## 🚦 Recommended Sequence
+
+1. Review and reproduce the Discovery observations.
+2. Compare the two IEEE fragments with the current power-system application.
+3. Decide whether to retain and repair the visual state-graph demos.
+4. If retained, add an isolated experimental dependency definition and stable
+   output paths.
+5. Reconstruct archived Symmetry Graph or multi-agent studies only when they
+   support an active research question.
+6. Leave `ARCHIVE_ENGINE` and `ARCHIVE_KERNEL` frozen until a specific artifact
+   is requested.
+
+---
+
+## ⚠️ Interpretation Boundary
+
+The Builder Lab documents how NEXAH evolved through many representations. It
+does not demonstrate that all these representations form one integrated kernel.
+
+The useful task is selective recovery:
+
+```text
+archived experiment
+→ reproducible question
+→ qualified result
+→ current repository destination
 ```
-BUILDER_LAB/
-    core/
-    kernel/
-    engines/
-    demos/
-    archive/
-```
 
----
-
-## 3. Archive Strategy
-
-Move:
-
-- outdated exploration → `/archive/deprecated/`
-- important ideas → `/archive/core_insights/`
-
----
-
-## 4. Integration Targets
-
-High priority modules to integrate:
-
-- vortex_chimera
-- resonance
-- proto_models
-
----
-
-# 🧠 FINAL INSIGHT
-
-Right now, Builder Lab is not chaos.
-
-It is:
-
-> a **compressed system evolution history**
-
-Your job now is not to build more.
-
-It is to:
-
-> **reveal the structure that is already there**
+For broader routing, return to the
+**[Experimental Index](../README.md)** or the
+**[Builder Lab README](README.md)**.
