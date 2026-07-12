@@ -54,7 +54,7 @@ nexah compare a.csv b.csv
 
 ### 5. Visualize Regimes
 
-python plot_regimes.py
+nexah analyze data.csv --plot
 
 ---
 
@@ -90,7 +90,7 @@ nexah.analyze_many(list_of_trajectories)
 
 - nexah.py → main kernel (ALL core logic)
 - nexah_cli.py → command-line interface
-- plot_regimes.py → visualization tool
+- nexah CLI → optional regime plotting with `analyze --plot`
 
 ---
 
@@ -249,8 +249,9 @@ nexah compare a.csv b.csv
 
 ### Regime Plot
 
-File:
-plot_regimes.py
+Command:
+
+`nexah analyze data.csv --plot`
 
 Features:
 

@@ -1,1065 +1,261 @@
 # 🧭 NEXAH — Repository Map
 
-![NEXAH Navigation Grammar](./ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
+This document maps the current repository structure and identifies the
+recommended entry point for each type of reader.
+
+NEXAH is an active research ecosystem for reconstructing and navigating
+structure inside complex dynamical systems. The repository contains a small
+Python package, reproducible demonstrators, application programs, research
+evidence, and historical experimental environments.
 
 ---
 
-# 🧠 What NEXAH Is
+## 🚀 Start Here
 
-NEXAH is a geometry-oriented research framework for discovering, reconstructing, and navigating structure inside complex dynamical systems.
+| Goal | Entry point |
+|---|---|
+| Understand the central idea | **[START_HERE.md](START_HERE.md)** |
+| Get the full overview | **[README.md](README.md)** |
+| Run the reference demonstration | **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
+| Explore the visual work | **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** |
+| Enter the research archive | **[RESEARCH/README.md](RESEARCH/README.md)** |
+| Inspect the current architecture | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
+| Explore the most developed application | **[APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)** |
 
-The framework investigates how systems generate:
-
-- structured flow behavior
-- coherent regions
-- transition corridors
-- directional asymmetry
-- phase-dependent activation
-- synchronization structures
-- transport geometry
-- topology through connectivity
-- navigable dynamical organization
-
-Recent validation efforts further suggest that complex systems may organize into navigable state-space atlases containing:
-
-- Basin Territories
-- Attractors
-- Transport Corridors
-- Gates & Bottlenecks
-- Recovery Regions
-- Recovery Anchors
-
----
-
-# 🔷 Core Transformation
+Recommended first path:
 
 ```text
-raw dynamics
-→ structure extraction
-→ field reconstruction
-→ transition geometry
-→ atlas reconstruction
-→ prediction
-→ recovery
-→ navigation
-→ control
+START_HERE
+→ README
+→ NEXAH_DEMONSTRATOR
+→ RESEARCH or APPLICATIONS
 ```
 
 ---
 
-# 🌌 Central Interpretation
-
-NEXAH treats systems as:
+## 🗂️ Top-Level Structure
 
 ```text
-trajectories inside structured dynamical fields
+NEXAH/
+├── ARCHITECTURE/       current architecture and system state
+├── PROTO_CORE/         reference implementations and field layers
+├── nexah/              installable minimal Python package
+├── RESEARCH/           concepts, evidence, findings, and theory
+├── APPLICATIONS/       demonstrations and applied validation
+├── EXPERIMENTAL/       active labs, prototypes, and historical systems
+├── outputs/            selected generated repository-level artifacts
+├── README.md           repository overview
+├── START_HERE.md       guided visual introduction
+└── VISUAL_GALLERY.md   curated visual entry point
 ```
 
-Within this interpretation:
-
-- geometry constrains motion
-- density organizes persistence
-- coherence stabilizes trajectories
-- mismatch activates transitions
-- apertures organize routing
-- topology emerges from connectivity
-- atlases organize system behavior
-- control becomes directional navigation
-
----
-
-# 🔥 Central Mechanism
-
-The current operational mechanism can be summarized as:
+The conceptual flow across these areas is approximately:
 
 ```text
-field
-→ structure
-→ geometry
-→ phase
-→ mismatch
-→ directional coherence
-→ aperture activation
-→ transition
-        ↑
-   control(direction)
+research questions
+→ experimental exploration
+→ reference implementation
+→ validation and findings
+→ applied systems
 ```
 
 ---
 
-# ⚡ Emerging Atlas Layer
+## 🏗️ ARCHITECTURE/
 
-Recent experiments indicate that transition geometry may represent only one layer of a larger organizational structure.
+**[ARCHITECTURE/](ARCHITECTURE/)** describes the current system model,
+component relationships, methods, and implementation frontier.
 
-Current atlas-oriented reconstruction investigates:
+Key documents:
 
-```text
-field
-→ geometry
-→ atlas
-→ basins
-→ corridors
-→ recovery
-→ navigation
-→ control
-```
+- **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** — conceptual architecture
+- **[ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)** — current implemented state and limitations
+- **[ARCHITECTURE/METHODS.md](ARCHITECTURE/METHODS.md)** — methods overview
 
-Observed atlas elements include:
-
-- Basin Territories
-- Transport Networks
-- Transition Corridors
-- Gates & Bottlenecks
-- Recovery Corridors
-- Recovery Anchors
-- Atlas-Guided Control Concepts
-
-Current large-scale validation is being conducted in:
-
-```text
-APPLICATIONS/power_systems/
-```
-
-through the Field Navigation Validation program.
+The `archive/` subdirectory preserves earlier diagrams and architectural
+snapshots. It is reference material, not the current implementation map.
 
 ---
 
-# 🔑 Current Core Observation
+## 🧪 PROTO_CORE/
 
-Across investigated systems, transition activation correlates more strongly with:
+**[PROTO_CORE/](PROTO_CORE/)** contains the main reference implementations.
 
-```text
-phase mismatch
-```
+| Area | Role |
+|---|---|
+| **[NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** | Canonical hands-on demonstration |
+| **[NEXAH_CORE/](PROTO_CORE/NEXAH_CORE/)** | Experimental transition and structural mechanisms |
+| **[FIELD_LAYER/](PROTO_CORE/FIELD_LAYER/)** | Continuous field reconstruction and navigation geometry |
 
-than with instability magnitude alone.
-
-Operational mismatch definition:
-
-$$M(t)=|\omega(t)-\hat{\omega}(t)|$$
-
-Interpretation:
-
-```text
-instability
-→ potential
-
-mismatch
-→ activation trigger
-```
+The demonstrator is the preferred executable entry. `NEXAH_CORE` and
+`FIELD_LAYER` contain broader prototype material and should be read as research
+implementations rather than a stable public API.
 
 ---
 
-# 🔥 Highlight: Janus Operator
+## 📦 nexah/
 
-One of the strongest and most distinctive contributions of NEXAH.
+**[nexah/](nexah/)** is the installable Python package configured by
+`pyproject.toml`.
 
-The Janus Operator compares forward and backward local flow directions at each point in the reconstructed field to detect directional coherence and transition apertures.
+It currently provides:
 
-```text
-High Janus coherence  → stable coherent motion
+- trajectory preprocessing and embedding
+- clustered regime representation
+- transition and stability summaries
+- simple structural comparison
+- exploratory navigation and intervention heuristics
+- the `nexah` command-line interface
 
-Low Janus coherence   → directional mismatch
-                         → transition gate / aperture
-```
-
-→ RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/
-
-(math, code, visuals & validation experiments)
-
----
+This package is a minimal operational kernel. It does not yet integrate every
+research mechanism found in `PROTO_CORE`, `RESEARCH`, or `APPLICATIONS`.
 
 ---
 
-# 🔥 Highlight: Janus Operator
-**One of the strongest and most distinctive contributions** of NEXAH.
+## 🔬 RESEARCH/
 
-The Janus Operator compares forward and backward local flow directions at each point in the reconstructed field to detect directional coherence and transition apertures.
+**[RESEARCH/](RESEARCH/)** is the conceptual and empirical research archive.
 
-```text
-High Janus coherence  → stable coherent motion
-Low Janus coherence   → directional mismatch → transition gate / aperture
-```
+Recommended entry:
 
-→ **[RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)**  
-(math, code, visuals & validation experiments)
+- **[RESEARCH/README.md](RESEARCH/README.md)** — concise research portal
+- **[RESEARCH/RESEARCH_INDEX.md](RESEARCH/RESEARCH_INDEX.md)** — detailed navigation
+- **[RESEARCH/ABSTRACT.md](RESEARCH/ABSTRACT.md)** — compact research summary
+- **[RESEARCH/CORE_CONCEPT_MAP.md](RESEARCH/CORE_CONCEPT_MAP.md)** — concept relationships
 
+Main areas:
 
---- 
+| Area | Role |
+|---|---|
+| **[FOUNDATION/](RESEARCH/FOUNDATION/)** | Structural assumptions and vocabulary |
+| **[CORE_CONCEPTS/](RESEARCH/CORE_CONCEPTS/)** | Field, phase, mismatch, geometry, and JANUS |
+| **[VALIDATION/](RESEARCH/VALIDATION/)** | Empirical and cross-system validation |
+| **[FINDINGS/](RESEARCH/FINDINGS/)** | Condensed observations |
+| **[APPLIED_CASES/](RESEARCH/APPLIED_CASES/)** | System-specific research cases |
+| **[FIGURES/](RESEARCH/FIGURES/)** | Curated research and paper figures |
+| **[THEORETICAL_EXTENSIONS/](RESEARCH/THEORETICAL_EXTENSIONS/)** | Exploratory formalization |
+| **[NEXAH_TRANSLATIONS/](RESEARCH/NEXAH_TRANSLATIONS/)** | Connections to adjacent disciplines |
 
-# ⚠️ CURRENT STATUS
-
-NEXAH currently contains:
-
-```text
-✔ implemented experimental systems
-✔ reproducible validation pipelines
-✔ field reconstruction layers
-✔ transition-geometry extraction
-✔ synchronization analysis
-✔ phase-dynamics investigations
-✔ empirical cross-system comparisons
-✔ exploratory control experiments
-✔ fractal transition extensions
-✔ active theoretical development
-✔ transport geometry exploration
-✔ directional coherence studies
-```
-
-The repository also still contains:
-
-```text
-❗ incomplete runtime integration
-❗ evolving architectural abstractions
-❗ partially unified APIs
-❗ experimental exploratory modules
-❗ ongoing theoretical refinement
-❗ limited real-world deployment validation
-❗ semi-formal mathematical structure
-❗ unfinished operator formalization
-```
-
-NEXAH should therefore currently be understood as:
-
-> an active research ecosystem rather than a finalized framework
+`NEXAH_DEVELOPMENT/`, `HISTORY/`, and `NOTES/` contain legacy development,
+historical context, and non-canonical working material.
 
 ---
 
-# 📦 Repository Structure
+## 🌍 APPLICATIONS/
+
+**[APPLICATIONS/](APPLICATIONS/)** contains concrete demonstrations and applied
+research programs.
+
+Main entry points:
+
+- **[APPLICATIONS/README.md](APPLICATIONS/README.md)** — application overview
+- **[APPLICATIONS/core_demos/lorenz/](APPLICATIONS/core_demos/lorenz/)** — compact Lorenz reference
+- **[APPLICATIONS/dynamical_systems/](APPLICATIONS/dynamical_systems/)** — nonlinear-system studies
+- **[APPLICATIONS/navigation/](APPLICATIONS/navigation/)** — navigation experiments
+- **[APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)** — most developed applied validation program
+
+The power-systems branch includes field reconstruction, IEEE benchmark work,
+atlas discovery, transition prediction, recovery analysis, and exploratory
+atlas-guided control.
+
+`APPLICATIONS/archive/` preserves superseded and historical application demos.
 
 ---
 
-# 🔷 1. ARCHITECTURE/
+## 🧪 EXPERIMENTAL/
 
-```text
-ARCHITECTURE/
-```
+**[EXPERIMENTAL/](EXPERIMENTAL/)** is the exploration and prototype layer.
 
-Defines the implemented system architecture and integration logic.
+| Area | Role | Status |
+|---|---|---|
+| **[BUILDER_LAB/](EXPERIMENTAL/BUILDER_LAB/)** | Broad system-building and simulation environment | Experimental / historical mix |
+| **[FRAMEWORK/](EXPERIMENTAL/FRAMEWORK/)** | Earlier conceptual framework | Reference / legacy |
+| **[OBSERVER_GEOMETRY_LAB/](EXPERIMENTAL/OBSERVER_GEOMETRY_LAB/)** | Observer-relative and local/global geometry | Active exploration |
 
-Contains:
-
-- execution flow
-- layer interaction
-- runtime organization
-- integration state
-- component relationships
-
-Key files:
-
-```text
-ARCHITECTURE/README.md
-ARCHITECTURE/SYSTEM_STATE.md
-```
-
-Purpose:
-
-```text
-repository-wide architectural orientation
-```
+This area intentionally contains competing ideas, versioned scripts, and
+unfinished mechanisms. New users should begin with the demonstrator or research
+portal before entering these labs.
 
 ---
 
-# 🧪 2. NEXAH_DEMONSTRATOR/
+## 📊 outputs/
 
-```text
-NEXAH_DEMONSTRATOR/
-```
+**[outputs/](outputs/)** contains selected generated artifacts used by root
+documentation and demonstrations.
 
-Minimal reproducible implementation of the NEXAH pipeline.
-
-Contains:
-
-- trajectory processing
-- field reconstruction
-- transition extraction
-- gate analysis
-- navigation demonstrations
-- simplified experiments
-
-Purpose:
-
-```text
-minimal operational entry point
-```
-
-Recommended for:
-
-- first-time visitors
-- demonstrations
-- tutorials
-- rapid experimentation
+Most experiment-specific results live next to their producing research or
+application module. Output files are evidence and presentation artifacts, not
+the primary implementation source.
 
 ---
 
-# 🔶 3. NEXAH_CORE/
+## 🧭 Navigation by Reader
+
+### New visitor
 
 ```text
-NEXAH_CORE/
-```
-
-Primary transition-analysis and structural-analysis layer.
-
-Contains:
-
-- basin structures
-- transition geometry
-- gate logic
-- instability analysis
-- coherence analysis
-- directional control experiments
-- navigation-oriented mechanisms
-
-Purpose:
-
-```text
-core experimental systems layer
-```
-
----
-
-# 🌊 4. FIELD_LAYER/
-
-```text
-FIELD_LAYER/
-```
-
-Continuous geometric field representation layer.
-
-One of the central ideas of NEXAH:
-
-```text
-dynamics
-→ field
-→ geometry
-→ structure
-```
-
-Contains:
-
-- flow reconstruction
-- density fields
-- separatrix analysis
-- transport geometry
-- basin organization
-- navigation fields
-- coherence representations
-- aperture structures
-
-Purpose:
-
-```text
-continuous geometric interpretation of dynamics
-```
-
----
-
-# 📦 5. nexah/
-
-```text
-nexah/
-```
-
-Early unified runtime kernel.
-
-Status:
-
-```text
-experimental / evolving
-```
-
-Contains:
-
-- runtime abstractions
-- navigation interfaces
-- unified APIs
-- integration experiments
-- future kernel architecture
-
-Purpose:
-
-```text
-future integration layer
-```
-
----
-
-# 🔬 6. RESEARCH/
-
-```text
-RESEARCH/
-```
-
-Primary conceptual, empirical, validation, and semi-formal layer.
-
-This is currently the largest and most active part of the repository.
-
-Contains:
-
-- conceptual architecture
-- validation systems
-- findings
-- phase dynamics
-- synchronization studies
-- transition geometry
-- fractal transition systems
-- modular resonance exploration
-- directional geometry
-- transport reconstruction
-- theoretical extensions
-- historical development
-
-Key files:
-
-```text
-RESEARCH/RESEARCH_INDEX.md
-RESEARCH/RESEARCH_VISION.md
-RESEARCH/CORE_CONCEPT_MAP.md
-RESEARCH/PAPER_DRAFT.md
-RESEARCH/ABSTRACT.md
-```
-
----
-
-# 🧠 Major RESEARCH Sections
-
-```text
-RESEARCH/
-├── APPLIED_CASES/
-├── CORE_CONCEPTS/
-├── FIGURES/
-├── FINDINGS/
-├── FOUNDATION/
-├── HISTORY/
-├── NEXAH_DEVELOPMENT/
-├── NEXAH_TRANSLATIONS/
-├── NOTES/
-├── SYSTEM_MODELS/
-├── THEORETICAL_EXTENSIONS/
-└── VALIDATION/
-```
-
----
-
-# 🔷 APPLIED_CASES/
-
-```text
-RESEARCH/APPLIED_CASES/
-```
-
-System-specific demonstrations and applications.
-
-Includes:
-
-- Lorenz systems
-- Rössler systems
-- Halvorsen systems
-- Duffing systems
-- fractal transition systems
-- comparative dynamical analysis
-- scenario modeling
-- worked examples
-
----
-
-## Important Subsection
-
-```text
-RESEARCH/APPLIED_CASES/FRACTAL_SYSTEMS/
-```
-
-Contains:
-
-- Julia/Mandelbrot transitions
-- phase mismatch systems
-- fractal transition pathways
-- animated transition experiments
-- topology-change analysis
-- parameter-driven transition systems
-
----
-
-# 🧩 CORE_CONCEPTS/
-
-```text
-RESEARCH/CORE_CONCEPTS/
-```
-
-Defines the conceptual architecture of NEXAH.
-
-Contains:
-
-- field models
-- geometry concepts
-- structural quantities
-- vessel/aperture geometry
-- theory-to-field mapping
-- minimal systems
-- mechanism diagrams
-- phase dynamics
-- coherence structures
-- directional transport models
-
-Purpose:
-
-```text
-conceptual backbone of the framework
-```
-
----
-
-# 🔥 FINDINGS/
-
-```text
-RESEARCH/FINDINGS/
-```
-
-Primary empirical findings layer.
-
-Contains:
-
-- structural observations
-- transition dynamics
-- phase findings
-- synchronization structure
-- modular resonance exploration
-- transition geometry analysis
-- cross-system comparisons
-
----
-
-## Major Subsection
-
-```text
-RESEARCH/FINDINGS/TRANSITION_PHASE_DYNAMICS/
-```
-
-Investigates:
-
-- phase drift
-- synchronization structure
-- winding behavior
-- plateau formation
-- angular geometry
-- cross-system phase behavior
-- topology emergence
-
----
-
-## PRIME_MODULAR_RESONANCE/
-
-```text
-RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/
-```
-
-Exploratory structural mathematics extension.
-
-Includes:
-
-- toroidal flow systems
-- spectral structures
-- modular transition geometry
-- vortex-like resonance fields
-- winding analysis
-- modular flow topology
-
-⚠️ Experimental and exploratory.
-
-Not currently considered part of the validated core framework.
-
----
-
-# 🧩 FOUNDATION/
-
-```text
-RESEARCH/FOUNDATION/
-```
-
-Minimal formal grounding layer.
-
-Contains:
-
-- axioms
-- definitions
-- structural assumptions
-- topology structures
-- variable mappings
-- structural theorems
-
-Purpose:
-
-```text
-formal conceptual grounding
-```
-
----
-
-# 🧪 VALIDATION/
-
-```text
-RESEARCH/VALIDATION/
-```
-
-The empirical backbone of the repository.
-
-This layer contains the strongest reproducibility
-and robustness work currently implemented.
-
-Includes:
-
-- noise robustness
-- partition invariance
-- transition sensitivity
-- cross-system comparison
-- synchronization analysis
-- phase mismatch experiments
-- control experiments
-- causality studies
-- fractal transition validation
-- DBSCAN validation
-- Lyapunov-linked experiments
-
----
-
-## Major Validation Sections
-
-```text
-RESEARCH/VALIDATION/
-├── causality/
-├── cross_system/
-├── cross_validation/
-├── duffing/
-├── fractal/
-├── fractal_tests/
-├── lorenz/
-├── rossler/
-└── systems/
-```
-
----
-
-# 🔷 systems/kuramoto/
-
-One of the largest active validation systems.
-
-Contains:
-
-- synchronization sweeps
-- Lyapunov estimation
-- regime boundaries
-- event-rate analysis
-- drift geometry
-- phase clouds
-- PCA projections
-- transition-rate experiments
-- phase-boundary analysis
-
-Versions:
-
-```text
-kuramoto_v3 → kuramoto_v8
-```
-
-represent the progressive evolution
-of the synchronization-analysis framework.
-
----
-
-# 🧠 SYSTEM_MODELS/
-
-```text
-RESEARCH/SYSTEM_MODELS/
-```
-
-Semi-formal modeling layer.
-
-Bridges empirical findings toward:
-
-- operator systems
-- abstract mappings
-- structured state representations
-- future formalization paths
-
-Purpose:
-
-```text
-bridge toward mathematical formalization
-```
-
----
-
-# 🔬 THEORETICAL_EXTENSIONS/
-
-```text
-RESEARCH/THEORETICAL_EXTENSIONS/
-```
-
-Future formalization and extension layer.
-
-Includes:
-
-- Koopman bridges
-- operator formalization
-- mismatch-transition models
-- topology/operator connections
-
-Purpose:
-
-```text
-future theoretical expansion
-```
-
----
-
-# 🌍 NEXAH_TRANSLATIONS/
-
-```text
-RESEARCH/NEXAH_TRANSLATIONS/
-```
-
-Cross-domain translation layer.
-
-Includes:
-
-- control theory framing
-- ML/RL interpretations
-- physics-oriented framing
-- visual explanations
-- domain mapping
-
-Purpose:
-
-```text
-cross-disciplinary accessibility
-```
-
----
-
-# 🧪 NEXAH_DEVELOPMENT/
-
-```text
-RESEARCH/NEXAH_DEVELOPMENT/
-```
-
-Exploratory development and experimentation layer.
-
-Contains:
-
-- gate operators
-- experimental mechanisms
-- transition matrices
-- sheet-aware systems
-- prototype transition logic
-
-Purpose:
-
-```text
-early-stage mechanism experimentation
-```
-
----
-
-# 📝 NOTES/
-
-```text
-RESEARCH/NOTES/
-```
-
-Informal observations and exploratory research notes.
-
----
-
-# 🕰️ HISTORY/
-
-```text
-RESEARCH/HISTORY/
-```
-
-Tracks conceptual evolution across framework versions.
-
----
-
-# 🧪 7. BUILDER_LAB/
-
-```text
-BUILDER_LAB/
-```
-
-Rapid experimentation sandbox.
-
-Used for:
-
-- unstable concepts
-- prototype systems
-- visualization experiments
-- unfinished tools
-- exploratory mechanisms
-
-Status:
-
-```text
-highly experimental
-```
-
----
-
-# 🌍 8. APPLICATIONS/
-
-```text
-APPLICATIONS/
-```
-
-Application-oriented systems.
-
-Contains:
-
-- IEEE power-grid experiments
-- applied transition systems
-- structure-extraction demonstrations
-- real-world-inspired experiments
-
-Purpose:
-
-```text
-bridge toward practical applications
-```
-
----
-
-# 🧠 9. FRAMEWORK/
-
-```text
-FRAMEWORK/
-```
-
-High-level conceptual abstraction layer.
-
-Contains:
-
-- ARCHY concepts
-- meta-framework ideas
-- simulation abstractions
-- higher-order interpretations
-
-Status:
-
-```text
-conceptual / exploratory
-```
-
----
-
-# 📊 10. outputs/
-
-```text
-outputs/
-```
-
-Generated experiment artifacts.
-
-Includes:
-
-- figures
-- GIFs
-- transition maps
-- metrics
-- visualizations
-- exported results
-
-Purpose:
-
-```text
-generated experiment layer
-```
-
----
-
-# 🔥 Current System Flow
-
-```text
-Raw Dynamics / Simulation
-        ↓
-Structure Extraction
-        ↓
-Field Reconstruction (FIELD_LAYER)
-        ↓
-Transition Geometry + Janus Operator
-        ↓
-Phase / Coherence Analysis
-        ↓
-Validation & Exploration (RESEARCH)
-        ↓
-Directional Control Experiments
-        ↓
-Exploratory Navigation
-        ↓
-Kernel Integration (nexah/)
-```
-
----
-
-# 🌌 Visual Ecosystem
-
-The repository contains an extensive visual ecosystem including:
-
-- transition maps
-- synchronization diagrams
-- phase-field projections
-- Lyapunov scans
-- modular flow structures
-- fractal transition animations
-- toroidal flow geometry
-- navigation fields
-- instability visualizations
-- mismatch activation plots
-
-Main visual entry points:
-
-```text
-visual_gallery.md
-RESEARCH/FIGURES/
-RESEARCH/VALIDATION/visuals/
-```
-
----
-
-# 🧭 Recommended Navigation
-
----
-
-## 🔹 For New Visitors
-
-Start with:
-
-```text
-README.md
 START_HERE.md
-MANIFESTO.md
-visual_gallery.md
+→ README.md
+→ VISUAL_GALLERY.md
+→ PROTO_CORE/NEXAH_DEMONSTRATOR/
 ```
 
-Then continue with:
+### Researcher
 
 ```text
-NEXAH_DEMONSTRATOR/
-ARCHITECTURE/
-RESEARCH/RESEARCH_INDEX.md
+RESEARCH/README.md
+→ RESEARCH/ABSTRACT.md
+→ RESEARCH/CORE_CONCEPT_MAP.md
+→ RESEARCH/VALIDATION/
+→ RESEARCH/FINDINGS/
+```
+
+### Developer
+
+```text
+ARCHITECTURE/SYSTEM_STATE.md
+→ nexah/
+→ PROTO_CORE/NEXAH_DEMONSTRATOR/
+→ PROTO_CORE/NEXAH_CORE/
+→ PROTO_CORE/FIELD_LAYER/
+```
+
+### Applied-systems reader
+
+```text
+APPLICATIONS/README.md
+→ APPLICATIONS/power_systems/README.md
+→ APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/
+```
+
+### Experimental exploration
+
+```text
+EXPERIMENTAL/README.md
+→ EXPERIMENTAL/BUILDER_LAB/
+or
+→ EXPERIMENTAL/OBSERVER_GEOMETRY_LAB/
 ```
 
 ---
 
-## 🔹 For Researchers
+## ⚠️ Status and Scope
 
-Focus on:
+NEXAH currently combines:
 
-```text
-RESEARCH/
-RESEARCH/VALIDATION/
-RESEARCH/FINDINGS/
-RESEARCH/CORE_CONCEPTS/
-```
+- implemented demonstrations
+- empirical and visual research
+- partially reproducible validation pipelines
+- exploratory navigation and control mechanisms
+- semi-formal theory under active development
+- historical prototypes and archived experiments
 
-Especially:
-
-```text
-TRANSITION_PHASE_DYNAMICS/
-systems/kuramoto/
-fractal_tests/
-JANUS_OPERATOR/
-```
+It is not yet a unified production framework or a finalized scientific theory.
+Local documents distinguish results as empirical, experimental, theoretical,
+or legacy where possible.
 
 ---
 
-## 🔹 For Developers
+**NEXAH Repository Map**
 
-Focus on:
-
-```text
-NEXAH_CORE/
-FIELD_LAYER/
-nexah/
-```
-
----
-
-## 🔹 For Experimental Exploration
-
-Explore:
-
-```text
-BUILDER_LAB/
-FRAMEWORK/
-RESEARCH/FINDINGS/
-RESEARCH/NEXAH_DEVELOPMENT/
-```
-
----
-
-# 🧠 Central Observation
-
-Across tested systems,
-observed dynamics repeatedly exhibit:
-
-```text
-persistent geometric organization
-localized transition structures
-phase-linked activation behavior
-structured instability regions
-field-like organization
-coherent transition pathways
-recursive directional structure
-```
-
-These recurring observations motivate the broader NEXAH research direction.
-
----
-
-# ⚠️ Scope Clarification
-
-NEXAH currently is:
-
-```text
-✔ an active exploratory research framework
-✔ computationally implemented
-✔ empirically grounded
-✔ supported by reproducible validation
-✔ extensible across multiple systems
-✔ capable of generating structured field representations
-✔ capable of transition-geometry reconstruction
-```
-
-NEXAH is NOT yet:
-
-```text
-❌ a finalized scientific theory
-❌ a universal formalism
-❌ a completed navigation kernel
-❌ fully validated across real-world domains
-❌ mathematically closed
-❌ production-ready
-```
-
----
-
-# 🧭 Final Orientation
-
-NEXAH should currently be understood as:
-
-> a structured research ecosystem for discovering,
-> comparing,
-> reconstructing,
-> and navigating geometry inside complex dynamical systems.
-
----
-
-# 🔥 Final Insight
-
-```text
-We are not replacing the engines.
-
-We are mapping the terrain between them.
-```
-
----
-
-**Thomas K. R. Hofmann · NEXAH · 2026**
+Architecture · Demonstration · Research · Validation · Applications
