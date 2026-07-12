@@ -1,5 +1,12 @@
 # NEXAH Core Specification (v0.7 – Frozen Kernel)
 
+> **Historical behavior reference.** This document preserves the terminology
+> of the v0.7 freeze. For the verified software scope, characterized legacy
+> semantics, and evidence boundary, use
+> **[BASELINE_STATUS.md](BASELINE_STATUS.md)**. In particular, stochastic target
+> analysis is not deterministic, local cluster IDs are not persistent, and
+> navigation/control outputs are heuristics rather than causal guarantees.
+
 ## Overview
 
 NEXAH is a minimal system for analyzing and navigating dynamical behavior in time series data.

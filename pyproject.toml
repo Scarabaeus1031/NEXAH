@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nexah"
-version = "0.5.0"
+version = "0.7.0"
 description = "NEXAH – Structural Field & Navigation Framework for Dynamical Systems"
 authors = [
     { name = "Thomas Hofmann" }
@@ -18,9 +18,17 @@ dependencies = [
     "pandas>=2.0"
 ]
 
-# 👉 DAS ist der entscheidende CLI-Eintrag
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4",
+]
+
 [project.scripts]
 nexah = "nexah.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -5,6 +5,9 @@ does not begin by silently expanding the meaning of earlier components.
 
 ## WP0 — Reality baseline
 
+Status: implemented in the v0.7 freeze; final verification is recorded in the
+package baseline status and characterization suite.
+
 Work:
 
 - align package, CLI, and documentation version labels
@@ -107,4 +110,3 @@ authorization models.
 - one Demonstrator produces an Orientation Report
 - baseline comparison and failure cases are published
 - execution remains opt-in and outside the core
-

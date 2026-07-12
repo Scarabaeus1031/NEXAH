@@ -1,14 +1,7 @@
-"""
-NEXAH — Minimal Kernel Package (v0.7)
-
-This package exposes the core NEXAH kernel:
-
-- NEXAH (main class)
-- CLI interface
-
-All experimental modules have been moved to BUILDER_LAB.
-"""
+"""NEXAH v0.7 — minimal local state-space analysis backend."""
 
 from .core import NEXAH
 
-__all__ = ["NEXAH"]
+__version__ = "0.7.0"
+
+__all__ = ["NEXAH", "__version__"]

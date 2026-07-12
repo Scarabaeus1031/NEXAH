@@ -1,231 +1,97 @@
-# 🧭 NEXAH — Validation Strategy
+# NEXAH v0.7 Validation Strategy
 
-## 🧠 Purpose
+## Purpose
 
-This document defines the **validation strategy of NEXAH**  
-and clarifies the distinction between:
+Validation is claim-specific. A successful execution is evidence that software
+runs on an input; it is not by itself evidence that inferred regimes are true,
+that a mechanism is causal, or that an intervention will work in a real system.
 
-```text
-application validation
-vs
-mechanism validation
-```
+## Validation levels
 
----
+### 1. Software characterization
 
-# 🔷 1. Two Layers of Validation
+Questions:
 
-NEXAH operates on two fundamentally different validation levels:
+- Does the implementation produce stable, documented outputs?
+- Are transition rows normalized?
+- Are indices, seeds, and failure modes understood?
+- Can a clean environment reproduce the run?
 
----
+Evidence:
 
-## 🔧 (A) Kernel Validation — Application Layer
+- automated characterization tests
+- pinned package and environment versions
+- deterministic fixtures where the algorithm is deterministic
+- recorded stochastic seeds and call conditions where it is not
 
-The NEXAH kernel is validated as a **functional system**.
+Current status: covered for the bounded behaviors listed in
+**[BASELINE_STATUS.md](BASELINE_STATUS.md)**. Coverage is not yet comprehensive
+for invalid inputs, numerical edge cases, or all stochastic branches.
 
-It demonstrates:
+### 2. Representation validation
 
-- structure extraction from time series  
-- transition modeling  
-- regime detection  
-- navigation capability  
-- intervention estimation  
+Questions:
 
-Validation evidence:
+- Does the window embedding preserve the information relevant to the task?
+- Are clusters stable under seeds, parameters, noise, and resampling?
+- Does overlapping-window dependence distort persistence estimates?
 
-- synthetic signals  
-- noisy signals  
-- structural shifts  
-- real-world data (e.g. BTC-USD)
+Evidence required:
 
----
+- sensitivity analysis
+- alternative embeddings and clustering baselines
+- stability metrics with uncertainty
+- explicit raw-to-embedded index alignment
 
-### Interpretation
+Current status: open research and engineering work.
 
-```text
-The system works as an engine.
-```
+### 3. Task validation
 
-This corresponds to:
+Questions:
 
-```text
-engineering validation
-```
+- Do reported regimes or transitions match declared ground truth?
+- Does navigation outperform simple baselines under a defined objective?
+- Are warnings earlier and more accurate than comparison methods?
 
----
+Evidence required:
 
-## 🧠 (B) Mechanism Validation — Research Layer
+- labeled synthetic benchmarks and/or defensible domain labels
+- predefined metrics
+- baseline comparisons and ablations
+- held-out evaluation and failure cases
 
-The research layer validates the **underlying mechanism**:
+Current status: bounded experiments exist elsewhere in the repository; no
+package-wide general validation claim is made.
 
-```text
-phase → mismatch → transition → control
-```
+### 4. Mechanism and intervention validation
 
-Key hypothesis:
+Questions:
 
-```text
-Transitions are triggered by phase mismatch,
-not by instability magnitude alone.
-```
+- Is a proposed mechanism causally identified?
+- Does an intervention change the physical or simulated system as predicted?
+- Does the result generalize across conditions and systems?
 
----
+Evidence required:
 
-### Required Evidence
+- controlled interventions
+- causal alternatives and confound analysis
+- repeated and cross-system experiments
+- domain-appropriate safety and uncertainty treatment
 
-To validate this mechanism, the following is required:
+Current status: research hypothesis, not established by v0.7.
 
-- controlled experiments  
-- reproducibility across runs  
-- system-independent behavior  
-- isolation of causal variables  
+## Release gate for the frozen baseline
 
----
+v0.7 is considered characterized when:
 
-### Interpretation
+- package, module, and CLI version labels agree
+- the characterization suite passes in the declared environment
+- known legacy semantics are documented
+- documentation distinguishes execution, task validation, and causal evidence
+- no production, universal, or causal capability is implied
 
-```text
-The mechanism explains WHY the system works.
-```
+## Next validation step
 
-This corresponds to:
-
-```text
-scientific validation
-```
-
----
-
-# ⚠️ Critical Distinction
-
-```text
-A working system does NOT imply a correct mechanism.
-```
-
-A model may produce useful results  
-even if the underlying explanation is incomplete or incorrect.
-
-Scientific validity requires:
-
-```text
-reproducibility + causal isolation
-```
-
- [oai_citation:0‡Wikipedia](https://en.wikipedia.org/wiki/Reproducibility?utm_source=chatgpt.com)
-
----
-
-# 🔷 2. Current Status
-
-## Kernel (v0.7)
-
-✔ stable  
-✔ interpretable  
-✔ reproducible execution  
-✔ validated on real data  
-
----
-
-## Mechanism
-
-✔ empirically observed  
-✔ partially validated (phase, mismatch, control)  
-
-❗ not yet fully proven  
-
----
-
-# 🔷 3. Strategic Position
-
-NEXAH is currently:
-
-```text
-a validated ENGINE
-+
-an emerging THEORY
-```
-
----
-
-# 🔷 4. Validation Roadmap
-
-## Step 1 — Reproducibility
-
-- repeat experiments (multi-run)  
-- verify stability of metrics  
-
----
-
-## Step 2 — Mechanism Isolation
-
-- compare:
-  - instability vs transition  
-  - mismatch vs transition  
-
----
-
-## Step 3 — Control Validation
-
-- aligned vs inverse control  
-- measure:
-  - drift  
-  - transition frequency  
-
----
-
-## Step 4 — Cross-System Tests
-
-- Lorenz  
-- Rössler  
-- Kuramoto  
-- real-world systems  
-
----
-
-# 🔷 5. Final Goal
-
-To demonstrate:
-
-```text
-structure exists
-AND
-structure can be causally manipulated
-```
-
----
-
-# 🔥 Core Insight
-
-```text
-The kernel proves that structure can be used.
-
-The research must prove why structure exists.
-```
-
----
-
-# 🧭 Final Statement
-
-NEXAH does not rely on a single validation mode.
-
-It combines:
-
-```text
-application success
-+
-mechanism validation
-```
-
-to establish both:
-
-```text
-usefulness
-and
-scientific credibility
-```
-
----
-
-**NEXAH Validation Strategy**  
-Kernel ↔ Research Bridge  
-Thomas K. R. Hofmann · 2026
+The Orientation Layer MVP should use one verified Demonstrator path and produce
+an evidence-linked `OrientationReport`. Its evaluation must include a declared
+baseline, provenance, uncertainty, and recorded failure cases.

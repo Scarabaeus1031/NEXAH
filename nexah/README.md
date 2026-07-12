@@ -66,7 +66,7 @@ See the **[Orientation Layer Bauplan](../ARCHITECTURE/orientation_layer/)**.
 
 ## Version note
 
-Historical documents use “v0.7 frozen kernel,” while package metadata and some
-CLI text contain other version labels. Version alignment is an explicit first
-work package in the implementation plan; this README does not claim that it has
-already been resolved.
+Package metadata, the public module version, and CLI documentation use `0.7.0`.
+Historical reports retain their original labels. See
+**[BASELINE_STATUS.md](docs/BASELINE_STATUS.md)** for the characterized behavior,
+test boundary, and known limitations of this freeze.

@@ -1,5 +1,5 @@
 """
-NEXAH CLI (v0.8 – Navigation + Plotting)
+NEXAH CLI (v0.7 – Navigation + Plotting)
 
 Features:
 - analyze time series
