@@ -126,11 +126,13 @@ Outcome relevance.
 
 ## Phase III / Post-MVP Plateau B — Adapter ecosystem and domain testing
 
-Status: next active phase. Plateau A is closed in
-`PLATEAU_A_CLOSURE.md`. Define a small adapter protocol around independent data
-sources, domain context, representation features, and traceable outcomes. New
-adapters must preserve the Orientation contracts and receive their own
-validation; they must not encode domain identity as a similarity shortcut.
+Status: active. Plateau A is closed in `PLATEAU_A_CLOSURE.md`. The repository
+adapter inventory has been classified, and the minimal serializable
+`SourceAdapter`/`SourceBatch` contract plus `ArraySourceAdapter` and the
+schema-driven `TableSourceAdapter` reference paths are implemented and tested.
+Next is a separately validated IEEE/pandapower source adapter. New adapters
+must preserve the Orientation contracts and must not encode the expected result
+as a similarity shortcut.
 
 ## Later, outside the MVP
 

@@ -19,9 +19,11 @@ tests must verify them.
    separation of JANUS, Janus Bridge, and the scientific operator.
 5. **[ADAPTER_LANDSCAPE.md](ADAPTER_LANDSCAPE.md)** — existing adapter lines,
    preservation decisions, and their relationship to WP2.
-6. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
+6. **[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)** — Phase III
+   source boundary, invariants, leakage rules, and acceptance evidence.
+7. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
    Memory V2 evidence, scientific boundaries, and the Phase III gate.
-7. **[archive/README.md](archive/README.md)** — rules for historical designs.
+8. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance

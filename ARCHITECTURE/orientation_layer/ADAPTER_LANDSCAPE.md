@@ -1,6 +1,6 @@
 # Adapter Landscape
 
-Status: repository audit before WP2
+Status: audited; Phase III source boundary implemented
 
 This inventory preserves earlier adapter work without treating every historical
 interface as part of the new Orientation Layer. Existing adapters remain in
@@ -56,6 +56,34 @@ Execution adapter (later)
 `nexah/backends/` contains typed computational backend adapters for the current
 package contracts.
 
+`nexah/sources/` now contains the Phase III source contract and two strict
+reference implementations. `ArraySourceAdapter` translates finite ordered
+numeric observations into a serializable `SourceBatch`. `TableSourceAdapter`
+adds explicit DataFrame column, unit, and timestamp selection while excluding
+undeclared columns. Neither performs regime, graph, navigation, risk, or action
+inference.
+
+## Phase III disposition
+
+| Existing line | Disposition | Reason |
+|---|---|---|
+| `LorenzAdapter` and graph demos | Preserve as legacy integration fixtures | They simulate and construct graphs rather than only ingesting data |
+| Static domain graph adapters | Preserve as UI/report fixtures | Their states are authored examples, not observed source batches |
+| `PhaseSpaceAdapter` | Defer reconstruction | Broken import and representation-specific responsibility |
+| `base_adapter_vii` | Defer to execution phase | Environment actions and rewards exceed source scope |
+| IEEE physical adapter | Candidate after generic table adapter | Closest existing source role, but tied to optional pandapower and domain assumptions |
+| IEEE topology/regime adapters | Domain representation candidates | They mix physical topology with predefined states or regimes |
+| CSV-reading research scripts | Feed through `TableSourceAdapter` case by case | The generic schema now exists; individual datasets still need declared columns and provenance |
+
+The implemented contract is specified in
+**[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)**.
+
+The existing IEEE physical function returns one row per bus. That is an entity
+snapshot, not a temporal trajectory. Phase III therefore records its row axis
+explicitly and will not feed it directly into v0.7 as if buses were time steps.
+The first IEEE integration must choose and validate either an entity-compatible
+representation backend or an explicit ordered load/time campaign.
+
 ## Preservation rules
 
 1. Existing adapter code is not moved or renamed during WP2.
@@ -67,4 +95,3 @@ package contracts.
    not be promoted to validated facts.
 5. The first current backend is `V07BackendAdapter`. Legacy graph and
    Demonstrator adapters are separate later decisions.
-

@@ -10,6 +10,8 @@ These documents describe or record the minimal `nexah` package.
   open validation work.
 - **[EPISODIC_MEMORY.md](EPISODIC_MEMORY.md)** — episode contract, append-only
   storage, similarity semantics, and boundaries.
+- **[Source Adapter Contract](../../ARCHITECTURE/orientation_layer/SOURCE_ADAPTER_CONTRACT.md)**
+  — Phase III input boundary, strict reference policy, and role separation.
 - **[archive/](archive/)** — development logs and historical status reports.
 
 The normative plan for the next Orientation Layer is maintained under
