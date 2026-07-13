@@ -3,6 +3,16 @@
 Status: completed with an explicit scientific boundary  
 Canonical evidence: `validation/ieee_scaling_pattern_v2/`
 
+Documentation state: V3  
+Software kernel: v0.7
+
+## Visual closure record
+
+![NEXAH V3 Phase III validation closure](visuals/nexah-v3-phase-iii-validation-closure-page-6.png)
+
+V3 names the documented research and validation state after H–K. It does not
+rename the frozen v0.7 computational kernel.
+
 ## Completed path
 
 ```text

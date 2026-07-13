@@ -112,5 +112,12 @@ Read **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** and
 governing result. Broader adapters are later ecosystem expansion; decision and
 execution remain separate future layers.
 
+### Status page 6 — V3 validation closure
+
+![NEXAH V3 Phase III validation closure](visuals/nexah-v3-phase-iii-validation-closure-page-6.png)
+
+Here, V3 denotes the documentation and validation state after H–K. The frozen
+software kernel remains v0.7.
+
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.
