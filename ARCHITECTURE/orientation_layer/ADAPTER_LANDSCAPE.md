@@ -1,6 +1,6 @@
 # Adapter Landscape
 
-Status: audited; Phase III complete; V3 graph source boundary implemented
+Status: audited; Phase III complete; Phase IV graph-native application implemented
 
 This inventory preserves earlier adapter work without treating every historical
 interface as part of the new Orientation Layer. Existing adapters remain in
@@ -19,7 +19,7 @@ place until a specific migration is justified.
 | IEEE metric mapping | Electrical arrays → NEXAH-style summary metrics | Experimental function | Feature backend candidate |
 | IEEE physical adapter | IEEE case and load scale → physical signal arrays | Importable when pandapower is available | Domain source adapter |
 | Experimental bridges | Research object → research object | Numerous historical, task-specific scripts | Research history; review individually |
-| Directed graph source | Declared nodes and edges → entity-indexed adjacency `SourceBatch` | Implemented and tested in V3 | Source for a future graph representation backend |
+| Directed graph source | Declared nodes and edges → entity-indexed adjacency `SourceBatch` | Implemented and tested in V3 | Feeds Network Orientation V1 through `GraphRepresentationBackend` |
 
 ## Verified audit observations
 
@@ -100,9 +100,12 @@ integration. See **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)**.
    not copied wholesale into the package.
 4. Heuristic regimes, risk labels, and actions retain their provenance and must
    not be promoted to validated facts.
-5. The first current backend is `V07BackendAdapter`. Legacy graph and
-   Demonstrator adapters are separate later decisions.
+5. `V07BackendAdapter` remains the frozen temporal backend;
+   `GraphRepresentationBackend` is the separate graph-native backend. Legacy
+   graph classes are not silently substituted for either contract.
 
 The broader V3 audit, including BTC, ARCHY, coupled-system, PhaseSpaceAdapter,
 and Discovery Engine findings, is recorded in
 **[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)**.
+The implemented graph application and its evidence boundary are recorded in
+**[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)**.

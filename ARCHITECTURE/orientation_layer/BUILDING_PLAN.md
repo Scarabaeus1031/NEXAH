@@ -159,6 +159,21 @@ Connectors, persistent global maps, planners, execution services, agents, and
 domain deployment remain later layers. They require their own validation and
 authorization models.
 
+## Phase IV — Network Orientation Application
+
+Status: Network Orientation V1 implemented and canonically tested.
+
+The directed graph source now feeds a graph-native persistent representation,
+structural report, and snapshot comparison. Supply Chain is the illustrative
+development fixture; Ecosystem Food Web is the held-out illustrative fixture.
+The unchanged application demonstrates contract portability, not real-world
+domain generalization.
+
+The edge-removal workflow is a transparent training context for learning how a
+declared map changes. It is not a controller, causal simulator, or intervention
+recommendation. The next plateau is read-only multi-perspective learning probes
+and observed graph/event evidence.
+
 ## MVP definition of done
 
 - v0.7 behavior is characterized without overclaiming

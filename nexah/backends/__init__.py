@@ -7,11 +7,21 @@ from .base import (
     EmbeddingAlignment,
 )
 from .v07 import V07BackendAdapter
+from .graph import (
+    GraphAnalysis,
+    GraphBackendResult,
+    GraphEdge,
+    GraphRepresentationBackend,
+)
 
 __all__ = [
     "BackendAdapter",
     "BackendAdapterError",
     "BackendResult",
     "EmbeddingAlignment",
+    "GraphAnalysis",
+    "GraphBackendResult",
+    "GraphEdge",
+    "GraphRepresentationBackend",
     "V07BackendAdapter",
 ]

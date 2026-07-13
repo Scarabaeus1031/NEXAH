@@ -31,7 +31,9 @@ tests must verify them.
    baseline, scientific boundary, and the H–L continuation path.
 11. **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** — completed H–K path,
     held-out result, and the boundary of validity.
-12. **[archive/README.md](archive/README.md)** — rules for historical designs.
+12. **[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)** —
+    graph-native application, structural comparison, and held-out fixture gate.
+13. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance
@@ -128,6 +130,16 @@ software kernel remains v0.7.
 This page is the practical user view: accepted inputs, working capabilities,
 outputs, current use cases, access modes, and the explicit boundary between
 available research tooling and later decision or execution layers.
+
+## Current status — Phase IV Network Orientation V1
+
+The graph source now feeds a graph-native representation backend rather than
+the temporal v0.7 engine. Supply Chain and held-out Ecosystem fixtures exercise
+the same typed path, and an explicit edge-removal scenario records structural
+sensitivity without claiming causal control.
+
+Read **[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)** and
+**[Network Orientation V1 validation](../../validation/network_orientation_v1/)**.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

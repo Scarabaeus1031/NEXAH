@@ -1,6 +1,6 @@
 # Adapter Ecosystem V3 — Repository Audit and Promotion Map
 
-Status: typed source foundation expanded; legacy and experimental lines audited
+Status: typed source foundation expanded; first graph-native application complete
 
 ## Current typed source boundary
 
@@ -73,8 +73,8 @@ promote “universal law” or control modules by directory name.
 
 | Existing asset | V3 disposition | Required next evidence |
 |---|---|---|
-| Supply-chain topology JSON | Typed graph source fixture | graph representation backend; observed event sequence |
-| Ecosystem food-web JSON | Typed graph source fixture | empirical topology/provenance; dynamic observations |
+| Supply-chain topology JSON | Network Orientation development fixture | observed event sequence and external topology provenance |
+| Ecosystem food-web JSON | Held-out illustrative contract fixture | empirical topology/provenance; dynamic observations |
 | Legacy Lorenz adapter | Preserve as integration history | current contracts already use the stronger Demonstrator path |
 | BTC result JSON | Preserve as historical output | raw versioned data, acquisition provenance, frozen evaluation |
 | ARCHY supply simulation | Experimental generator | seed control, headless output contract, calibration boundary |
@@ -82,17 +82,17 @@ promote “universal law” or control modules by directory name.
 | PhaseSpaceAdapter | Representation concept | typed graph backend and tests |
 | Discovery Engine | Research archive / method inventory | method-by-method reconstruction and validation |
 
-## Next executable plateau
+## Completed graph-native plateau
 
 ```text
 GraphSourceAdapter
-→ typed graph representation backend
+→ GraphRepresentationBackend
 → OrientationState without temporal reinterpretation
-→ illustrative supply-chain report
-→ observed event or topology dataset
-→ held-out domain validation
+→ illustrative supply-chain report and comparison
+→ held-out ecosystem contract test
 ```
 
-The current graph batch must not be passed silently into the temporal v0.7
-backend. Its rows are entities, not time steps. The next bridge must preserve
-that distinction and derive graph semantics explicitly.
+This path is implemented as Network Orientation V1. The graph batch is never
+passed into the temporal v0.7 backend: its rows are entities, not time steps.
+The next evidence step is an observed event or topology dataset. The next
+architectural step is a set of read-only multi-perspective learning probes.

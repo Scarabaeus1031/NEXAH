@@ -33,6 +33,7 @@ application.
 | You want to… | Start with |
 |---|---|
 | Run the verified visual reference pipeline | **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
+| Orient a declared network and compare its structure | **[network_orientation/](network_orientation/)** |
 | Explore a compact Lorenz application | **[demos/lorenz_demo/](demos/lorenz_demo/)** |
 | Study Lorenz field and geometry analysis | **[dynamical_systems/lorenz/](dynamical_systems/lorenz/)** |
 | Compare a different chaotic flow | **[dynamical_systems/halvorsen/](dynamical_systems/halvorsen/)** |
@@ -50,6 +51,7 @@ If you are completely new to NEXAH, begin with the repository
 
 | Area | What it offers | Current status |
 |---|---|---|
+| **[Network Orientation](network_orientation/)** | Typed graph topology, reachability, structural comparison, Supply Chain and held-out Ecosystem fixtures | Verified illustrative application |
 | **[Power Systems](power_systems/)** | IEEE benchmark studies, stability fields, atlas discovery, prediction, recovery, and control experiments | Active applied research |
 | **[Lorenz Research](dynamical_systems/lorenz/)** | Density, FTLE, Lyapunov, separatrix, regime, and navigation analysis | Active reference system |
 | **[Halvorsen Research](dynamical_systems/halvorsen/)** | Distributed transport, transition graphs, residue models, reachability, and policy experiments | Experimental research |
@@ -105,6 +107,20 @@ production control system.
 
 For detail, use the **[Power Systems README](power_systems/README.md)** and
 **[Power Systems Index](power_systems/INDEX_power-system-applications.md)**.
+
+---
+
+## 🕸️ Network Orientation
+
+**[Network Orientation V1](network_orientation/)** is the first maintained,
+graph-native application of the typed Orientation Layer. It turns declared
+nodes and directed edges into an evidence-bound structural report containing
+paths, reachability, components, bottlenecks, missing information, and explicit
+uncertainty.
+
+Its Supply Chain and Ecosystem inputs are illustrative fixtures. Their authored
+regime, risk, action, and shock fields are excluded. The application is designed
+for learning how maps and paths change, not for issuing control commands.
 
 ---
 
@@ -211,9 +227,11 @@ stability landscape
 ```
 
 The **[datasets/](datasets/)** directory contains synthetic JSON descriptions
-for energy grids, supply chains, ecosystems, and server clusters. These files
-are reference material from earlier application experiments; their schemas and
-consumers are not yet documented consistently.
+for energy grids, supply chains, ecosystems, and server clusters. The shared
+`nodes`/`edges` subset used by the Supply Chain and Ecosystem fixtures now has a
+typed consumer in **[Network Orientation V1](network_orientation/)**. Other
+metadata and datasets remain historical reference material with inconsistent
+schemas.
 
 ---
 

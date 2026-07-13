@@ -105,7 +105,7 @@ failures, and exclusion of authored regime/action metadata from the source
 matrix. The repository supply-chain and ecosystem graphs serve only as
 illustrative topology fixtures.
 
-## Current domain adapters and next bridge
+## Current domain adapters and graph bridge
 
 The generic array and table boundaries are validated. The IEEE/pandapower
 source adapter now emits the same `SourceBatch` contract through separate entity
@@ -115,6 +115,8 @@ optional dependency, and failure behavior are documented in
 attribution, continuation, and held-out validation path is complete.
 
 The graph source boundary now preserves declared topology without interpreting
-entity rows as time. The next bridge is a typed graph representation backend,
-not a silent pass through the temporal v0.7 engine. See
-**[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)**.
+entity rows as time. `GraphRepresentationBackend` now provides the typed graph
+bridge and feeds Network Orientation V1; it does not pass the batch through the
+temporal v0.7 engine. The next evidence step is independently sourced topology
+or event data. See **[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)** and
+**[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)**.

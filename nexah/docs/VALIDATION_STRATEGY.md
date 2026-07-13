@@ -93,10 +93,15 @@ v0.7 is considered characterized when:
 - documentation distinguishes execution, task validation, and causal evidence
 - no production, universal, or causal capability is implied
 
-## Next validation step
+## Current and next validation step
 
-The original Orientation Layer Demonstrator gate and the Phase III power-system
-gate are complete. The next validation should combine the V3 directed-graph
-source with a graph-native representation backend, first on explicit fixtures
-and then on independently sourced topology or event data. Authored supply-chain
-regimes and actions must not be used as ground truth without separate evidence.
+The original Orientation Layer Demonstrator gate, the Phase III power-system
+gate, and the Phase IV illustrative Network Orientation gate are complete. The
+graph-native backend is tested first on the Supply Chain development fixture
+and then unchanged on the held-out Ecosystem fixture. This establishes typed
+contract portability, not real-world generalization.
+
+The next graph validation requires independently sourced topology or event
+data, explicit acquisition provenance, and an outcome-linked question. Authored
+supply-chain or ecosystem regimes and actions must not be used as ground truth
+without separate evidence.

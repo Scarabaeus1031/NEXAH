@@ -1,0 +1,75 @@
+{
+  "development_fixture": {
+    "blocked_count": 0,
+    "domain": "supply-chain",
+    "focus_critical_edges": [
+      [
+        "normal_operation",
+        "supplier_delay"
+      ],
+      [
+        "supplier_delay",
+        "production_slowdown"
+      ],
+      [
+        "production_slowdown",
+        "distribution_backlog"
+      ],
+      [
+        "distribution_backlog",
+        "system_disruption"
+      ]
+    ],
+    "reachable_count": 4,
+    "target_path": [
+      "normal_operation",
+      "supplier_delay",
+      "production_slowdown",
+      "distribution_backlog",
+      "system_disruption"
+    ],
+    "weak_articulation_points": [
+      "distribution_backlog",
+      "production_slowdown",
+      "supplier_delay"
+    ]
+  },
+  "held_out_fixture": {
+    "blocked_count": 0,
+    "domain": "ecosystem",
+    "focus_critical_edge_count": 4,
+    "reachable_count": 4,
+    "target_path": [
+      "balanced_ecosystem",
+      "herbivore_increase",
+      "plant_depletion",
+      "predator_decline",
+      "ecosystem_collapse"
+    ]
+  },
+  "not_supported": [
+    "real-world supply-chain or ecosystem generalization",
+    "generalization to a topologically distinct graph family",
+    "stability, risk, or causal intervention claims",
+    "autonomous control"
+  ],
+  "recorded_at": "2026-07-13T22:45:00+00:00",
+  "supported": [
+    "deterministic topology analysis of declared directed graphs",
+    "domain-blind contract reuse across two illustrative fixtures",
+    "focus-relative reachability and structural sensitivity comparison"
+  ],
+  "training_scenario": {
+    "interpretation": "structural sensitivity, not causal response",
+    "newly_unreachable": [
+      "distribution_backlog",
+      "system_disruption"
+    ],
+    "removed_edge": [
+      "production_slowdown",
+      "distribution_backlog"
+    ],
+    "target_path": null
+  },
+  "validation_id": "network-orientation-v1"
+}
