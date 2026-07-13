@@ -117,10 +117,19 @@ Acceptance:
 
 ## Post-MVP Plateau A — Memory generalization
 
-Status: implemented as `memory-generalization-v1`. Three deterministic system
-families are tested under clean, noisy, and parameter-shifted queries with a
-shared context domain. The canonical result is 11/12 correct Top-1 retrievals;
-parameter-shifted Kuramoto is confused with Lorenz and remains documented.
+Status: V1 and V2 are implemented as separate frozen benchmarks. V1 records
+11/12 Top-1 retrievals from one reference per family. V2 uses five references
+per family, separates method selection from a held-out test, and reaches 6/6
+held-out Top-1 with the selected sequence profile. Its minimum margin is only
+0.003172 and its objective remains synthetic family retrieval, not semantic
+Outcome relevance.
+
+## Post-MVP Plateau B — Adapter ecosystem
+
+Status: next. Define a small adapter protocol around independent data sources,
+domain context, representation features, and traceable outcomes. New adapters
+must preserve the Orientation contracts and receive their own validation; they
+must not encode domain identity as a similarity shortcut.
 
 ## Later, outside the MVP
 

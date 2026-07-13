@@ -1,0 +1,1199 @@
+{
+  "validation_id": "memory-generalization-v2",
+  "design": {
+    "families": [
+      "lorenz",
+      "rossler",
+      "kuramoto"
+    ],
+    "reference_episodes_per_family": 5,
+    "reference_episodes": 15,
+    "validation_queries": 6,
+    "held_out_test_queries": 6,
+    "samples_per_trajectory": 1500,
+    "shared_context_domain": "synthetic-dynamical-system",
+    "methods": [
+      "current_signature",
+      "sequence_profile",
+      "hybrid_50_50"
+    ],
+    "selection_rule": "maximum validation Top-1 accuracy, then MRR, then simpler predeclared method order",
+    "test_used_for_selection": false,
+    "v07_config": {
+      "n_clusters": 6,
+      "window": 10,
+      "random_state": 42
+    },
+    "chance_top1": 0.3333333333333333,
+    "chance_recall_at_3": 0.7362637362637363
+  },
+  "store": {
+    "active_episodes": 15,
+    "history_records": 15,
+    "episode_ids": [
+      "reference-kuramoto-k_1.4_seed_3",
+      "reference-kuramoto-k_1.8_seed_5",
+      "reference-kuramoto-k_2.2_seed_7",
+      "reference-kuramoto-k_2.6_seed_9",
+      "reference-kuramoto-k_3_seed_11",
+      "reference-lorenz-rho_24",
+      "reference-lorenz-rho_26",
+      "reference-lorenz-rho_28",
+      "reference-lorenz-rho_30",
+      "reference-lorenz-rho_32",
+      "reference-rossler-c_4.8",
+      "reference-rossler-c_5.2",
+      "reference-rossler-c_5.7",
+      "reference-rossler-c_6.2",
+      "reference-rossler-c_6.6"
+    ]
+  },
+  "validation_by_method": {
+    "current_signature": {
+      "queries": 6,
+      "top1_accuracy": 0.8333333333333334,
+      "recall_at_3": 0.8333333333333334,
+      "mean_reciprocal_rank": 0.8541666666666666,
+      "mean_margin": 0.055646379454425375,
+      "minimum_margin": -0.009625043497731745,
+      "details": [
+        {
+          "query_id": "validation-lorenz-rho_25",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.011530666478228646,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_30",
+              "family": "lorenz",
+              "score": 0.9888989211881738
+            },
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9846119224965446
+            },
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9842997833904237
+            }
+          ]
+        },
+        {
+          "query_id": "validation-lorenz-rho_29_noise",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0075647336478894545,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9865852440579217
+            },
+            {
+              "reference_id": "reference-lorenz-rho_30",
+              "family": "lorenz",
+              "score": 0.9850942815676074
+            },
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9835716446965952
+            }
+          ]
+        },
+        {
+          "query_id": "validation-rossler-c_5",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.05083669205464503,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9993458894348453
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9991412696463036
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9990796562228204
+            }
+          ]
+        },
+        {
+          "query_id": "validation-rossler-c_6_noise",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.05035646209153255,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9989387911932115
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9989046771192966
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9988431517761747
+            }
+          ]
+        },
+        {
+          "query_id": "validation-kuramoto-k_1.6",
+          "family": "kuramoto",
+          "predicted_family": "lorenz",
+          "correct": false,
+          "first_correct_rank": 8,
+          "margin": -0.009625043497731745,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_26",
+              "family": "lorenz",
+              "score": 0.9418451719065353
+            },
+            {
+              "reference_id": "reference-rossler-c_6.6",
+              "family": "rossler",
+              "score": 0.9352960306764717
+            },
+            {
+              "reference_id": "reference-rossler-c_6.2",
+              "family": "rossler",
+              "score": 0.9352952340979127
+            }
+          ]
+        },
+        {
+          "query_id": "validation-kuramoto-k_2.4_noise",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.2232147659519883,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_2.6_seed_9",
+              "family": "kuramoto",
+              "score": 0.9806909532976766
+            },
+            {
+              "reference_id": "reference-kuramoto-k_2.2_seed_7",
+              "family": "kuramoto",
+              "score": 0.9616989069374563
+            },
+            {
+              "reference_id": "reference-kuramoto-k_3_seed_11",
+              "family": "kuramoto",
+              "score": 0.9588154403253746
+            }
+          ]
+        }
+      ]
+    },
+    "sequence_profile": {
+      "queries": 6,
+      "top1_accuracy": 1.0,
+      "recall_at_3": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "mean_margin": 0.053166331961501036,
+      "minimum_margin": 0.0019078493626276671,
+      "details": [
+        {
+          "query_id": "validation-lorenz-rho_25",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.004352221564093539,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9989027909390308
+            },
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9988031847827619
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.9973198914826973
+            }
+          ]
+        },
+        {
+          "query_id": "validation-lorenz-rho_29_noise",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0019078493626276671,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.998632889673207
+            },
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9983167013440394
+            },
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9979831594867202
+            }
+          ]
+        },
+        {
+          "query_id": "validation-rossler-c_5",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0031718185303222235,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "query_id": "validation-rossler-c_6_noise",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0031718185303222235,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "query_id": "validation-kuramoto-k_1.6",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0031718185303222235,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_1.8_seed_5",
+              "family": "kuramoto",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9968281814696778
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9968281814696778
+            }
+          ]
+        },
+        {
+          "query_id": "validation-kuramoto-k_2.4_noise",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.30322246525131835,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_2.6_seed_9",
+              "family": "kuramoto",
+              "score": 0.9966945307692878
+            },
+            {
+              "reference_id": "reference-kuramoto-k_3_seed_11",
+              "family": "kuramoto",
+              "score": 0.9948785997506387
+            },
+            {
+              "reference_id": "reference-kuramoto-k_2.2_seed_7",
+              "family": "kuramoto",
+              "score": 0.9883922430015565
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid_50_50": {
+      "queries": 6,
+      "top1_accuracy": 0.8333333333333334,
+      "recall_at_3": 0.8333333333333334,
+      "mean_reciprocal_rank": 0.8611111111111112,
+      "mean_margin": 0.05640177661633711,
+      "minimum_margin": -0.0014359647404026399,
+      "details": [
+        {
+          "query_id": "validation-lorenz-rho_25",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.005797944675346556,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9917573567177878
+            },
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9915514840865928
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.9907133342310346
+            }
+          ]
+        },
+        {
+          "query_id": "validation-lorenz-rho_29_noise",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.004578197340674661,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9924509727009805
+            },
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9907774020916578
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.9907351998903781
+            }
+          ]
+        },
+        {
+          "query_id": "validation-rossler-c_5",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0313209855894474,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9996729447174226
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9995706348231518
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9995398281114102
+            }
+          ]
+        },
+        {
+          "query_id": "validation-rossler-c_6_noise",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.03108087060789111,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9994693955966057
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9994523385596483
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9994215758880873
+            }
+          ]
+        },
+        {
+          "query_id": "validation-kuramoto-k_1.6",
+          "family": "kuramoto",
+          "predicted_family": "rossler",
+          "correct": false,
+          "first_correct_rank": 6,
+          "margin": -0.0014359647404026399,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_6.6",
+              "family": "rossler",
+              "score": 0.9660621060730747
+            },
+            {
+              "reference_id": "reference-rossler-c_6.2",
+              "family": "rossler",
+              "score": 0.9660617077837952
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9660350264756961
+            }
+          ]
+        },
+        {
+          "query_id": "validation-kuramoto-k_2.4_noise",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.26706862622506555,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_2.6_seed_9",
+              "family": "kuramoto",
+              "score": 0.9886927420334822
+            },
+            {
+              "reference_id": "reference-kuramoto-k_3_seed_11",
+              "family": "kuramoto",
+              "score": 0.9768470200380066
+            },
+            {
+              "reference_id": "reference-kuramoto-k_2.2_seed_7",
+              "family": "kuramoto",
+              "score": 0.9750455749695064
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "selected_method": "sequence_profile",
+  "held_out_test_selected_method": {
+    "queries": 6,
+    "top1_accuracy": 1.0,
+    "recall_at_3": 1.0,
+    "mean_reciprocal_rank": 1.0,
+    "mean_margin": 0.05367167643590955,
+    "minimum_margin": 0.0031718185303222235,
+    "details": [
+      {
+        "query_id": "test-lorenz-rho_27_noise",
+        "family": "lorenz",
+        "predicted_family": "lorenz",
+        "correct": true,
+        "first_correct_rank": 1,
+        "margin": 0.0052718239050367766,
+        "top3": [
+          {
+            "reference_id": "reference-lorenz-rho_32",
+            "family": "lorenz",
+            "score": 0.9993538843515537
+          },
+          {
+            "reference_id": "reference-lorenz-rho_28",
+            "family": "lorenz",
+            "score": 0.9990196491957221
+          },
+          {
+            "reference_id": "reference-lorenz-rho_24",
+            "family": "lorenz",
+            "score": 0.9968487704172071
+          }
+        ]
+      },
+      {
+        "query_id": "test-lorenz-rho_31",
+        "family": "lorenz",
+        "predicted_family": "lorenz",
+        "correct": true,
+        "first_correct_rank": 1,
+        "margin": 0.0037139801766057357,
+        "top3": [
+          {
+            "reference_id": "reference-lorenz-rho_28",
+            "family": "lorenz",
+            "score": 0.9993806829680658
+          },
+          {
+            "reference_id": "reference-lorenz-rho_32",
+            "family": "lorenz",
+            "score": 0.9990464298893301
+          },
+          {
+            "reference_id": "reference-lorenz-rho_24",
+            "family": "lorenz",
+            "score": 0.99806700632579
+          }
+        ]
+      },
+      {
+        "query_id": "test-rossler-c_5.4_noise",
+        "family": "rossler",
+        "predicted_family": "rossler",
+        "correct": true,
+        "first_correct_rank": 1,
+        "margin": 0.0031718185303222235,
+        "top3": [
+          {
+            "reference_id": "reference-rossler-c_4.8",
+            "family": "rossler",
+            "score": 1.0
+          },
+          {
+            "reference_id": "reference-rossler-c_5.2",
+            "family": "rossler",
+            "score": 1.0
+          },
+          {
+            "reference_id": "reference-rossler-c_5.7",
+            "family": "rossler",
+            "score": 1.0
+          }
+        ]
+      },
+      {
+        "query_id": "test-rossler-c_6.4",
+        "family": "rossler",
+        "predicted_family": "rossler",
+        "correct": true,
+        "first_correct_rank": 1,
+        "margin": 0.0031718185303222235,
+        "top3": [
+          {
+            "reference_id": "reference-rossler-c_4.8",
+            "family": "rossler",
+            "score": 1.0
+          },
+          {
+            "reference_id": "reference-rossler-c_5.2",
+            "family": "rossler",
+            "score": 1.0
+          },
+          {
+            "reference_id": "reference-rossler-c_5.7",
+            "family": "rossler",
+            "score": 1.0
+          }
+        ]
+      },
+      {
+        "query_id": "test-kuramoto-k_2_seed_17",
+        "family": "kuramoto",
+        "predicted_family": "kuramoto",
+        "correct": true,
+        "first_correct_rank": 1,
+        "margin": 0.0031718185303222235,
+        "top3": [
+          {
+            "reference_id": "reference-kuramoto-k_1.8_seed_5",
+            "family": "kuramoto",
+            "score": 1.0
+          },
+          {
+            "reference_id": "reference-rossler-c_4.8",
+            "family": "rossler",
+            "score": 0.9968281814696778
+          },
+          {
+            "reference_id": "reference-rossler-c_5.2",
+            "family": "rossler",
+            "score": 0.9968281814696778
+          }
+        ]
+      },
+      {
+        "query_id": "test-kuramoto-k_2.8_seed_19_noise",
+        "family": "kuramoto",
+        "predicted_family": "kuramoto",
+        "correct": true,
+        "first_correct_rank": 1,
+        "margin": 0.3035287989428481,
+        "top3": [
+          {
+            "reference_id": "reference-kuramoto-k_2.6_seed_9",
+            "family": "kuramoto",
+            "score": 0.9976056425345176
+          },
+          {
+            "reference_id": "reference-kuramoto-k_3_seed_11",
+            "family": "kuramoto",
+            "score": 0.9957863930219687
+          },
+          {
+            "reference_id": "reference-kuramoto-k_2.2_seed_7",
+            "family": "kuramoto",
+            "score": 0.9892882323653773
+          }
+        ]
+      }
+    ]
+  },
+  "held_out_test_all_methods": {
+    "current_signature": {
+      "queries": 6,
+      "top1_accuracy": 1.0,
+      "recall_at_3": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "mean_margin": 0.06935379334889451,
+      "minimum_margin": 0.014388615528684423,
+      "details": [
+        {
+          "query_id": "test-lorenz-rho_27_noise",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.02490968926845516,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9936571460052377
+            },
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9850528917858434
+            },
+            {
+              "reference_id": "reference-lorenz-rho_30",
+              "family": "lorenz",
+              "score": 0.9819233850046203
+            }
+          ]
+        },
+        {
+          "query_id": "test-lorenz-rho_31",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.014388615528684423,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9892969658189306
+            },
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.980828997452572
+            },
+            {
+              "reference_id": "reference-lorenz-rho_30",
+              "family": "lorenz",
+              "score": 0.9805145514699549
+            }
+          ]
+        },
+        {
+          "query_id": "test-rossler-c_5.4_noise",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.050784769314391354,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9994103154179486
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9992056060417123
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9991439626212988
+            }
+          ]
+        },
+        {
+          "query_id": "test-rossler-c_6.4",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.05068666411291822,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9992720769927881
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9991538314728778
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9990922186293791
+            }
+          ]
+        },
+        {
+          "query_id": "test-kuramoto-k_2_seed_17",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.061063129298331464,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_1.8_seed_5",
+              "family": "kuramoto",
+              "score": 0.9887354927694562
+            },
+            {
+              "reference_id": "reference-lorenz-rho_26",
+              "family": "lorenz",
+              "score": 0.9276723634711247
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.9183631722414007
+            }
+          ]
+        },
+        {
+          "query_id": "test-kuramoto-k_2.8_seed_19_noise",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.2142898925705864,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_2.6_seed_9",
+              "family": "kuramoto",
+              "score": 0.9743843756594797
+            },
+            {
+              "reference_id": "reference-kuramoto-k_3_seed_11",
+              "family": "kuramoto",
+              "score": 0.9699648591930878
+            },
+            {
+              "reference_id": "reference-kuramoto-k_2.2_seed_7",
+              "family": "kuramoto",
+              "score": 0.9568654559585235
+            }
+          ]
+        }
+      ]
+    },
+    "sequence_profile": {
+      "queries": 6,
+      "top1_accuracy": 1.0,
+      "recall_at_3": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "mean_margin": 0.05367167643590955,
+      "minimum_margin": 0.0031718185303222235,
+      "details": [
+        {
+          "query_id": "test-lorenz-rho_27_noise",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0052718239050367766,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9993538843515537
+            },
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9990196491957221
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.9968487704172071
+            }
+          ]
+        },
+        {
+          "query_id": "test-lorenz-rho_31",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0037139801766057357,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9993806829680658
+            },
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9990464298893301
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.99806700632579
+            }
+          ]
+        },
+        {
+          "query_id": "test-rossler-c_5.4_noise",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0031718185303222235,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "query_id": "test-rossler-c_6.4",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0031718185303222235,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 1.0
+            }
+          ]
+        },
+        {
+          "query_id": "test-kuramoto-k_2_seed_17",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0031718185303222235,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_1.8_seed_5",
+              "family": "kuramoto",
+              "score": 1.0
+            },
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9968281814696778
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9968281814696778
+            }
+          ]
+        },
+        {
+          "query_id": "test-kuramoto-k_2.8_seed_19_noise",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.3035287989428481,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_2.6_seed_9",
+              "family": "kuramoto",
+              "score": 0.9976056425345176
+            },
+            {
+              "reference_id": "reference-kuramoto-k_3_seed_11",
+              "family": "kuramoto",
+              "score": 0.9957863930219687
+            },
+            {
+              "reference_id": "reference-kuramoto-k_2.2_seed_7",
+              "family": "kuramoto",
+              "score": 0.9892882323653773
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid_50_50": {
+      "queries": 6,
+      "top1_accuracy": 1.0,
+      "recall_at_3": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "mean_margin": 0.0645381675272552,
+      "minimum_margin": 0.008884171313277234,
+      "details": [
+        {
+          "query_id": "test-lorenz-rho_27_noise",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.014923639008830092,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.9963383976004798
+            },
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9922033880686986
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.986265660098701
+            }
+          ]
+        },
+        {
+          "query_id": "test-lorenz-rho_31",
+          "family": "lorenz",
+          "predicted_family": "lorenz",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.008884171313277234,
+          "top3": [
+            {
+              "reference_id": "reference-lorenz-rho_32",
+              "family": "lorenz",
+              "score": 0.9941716978541304
+            },
+            {
+              "reference_id": "reference-lorenz-rho_28",
+              "family": "lorenz",
+              "score": 0.990104840210319
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.9881149642054334
+            }
+          ]
+        },
+        {
+          "query_id": "test-rossler-c_5.4_noise",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.03129502421932051,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.9997051577089743
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9996028030208561
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9995719813106494
+            }
+          ]
+        },
+        {
+          "query_id": "test-rossler-c_6.4",
+          "family": "rossler",
+          "predicted_family": "rossler",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.031245971618584,
+          "top3": [
+            {
+              "reference_id": "reference-rossler-c_4.8",
+              "family": "rossler",
+              "score": 0.999636038496394
+            },
+            {
+              "reference_id": "reference-rossler-c_5.2",
+              "family": "rossler",
+              "score": 0.9995769157364389
+            },
+            {
+              "reference_id": "reference-rossler-c_5.7",
+              "family": "rossler",
+              "score": 0.9995461093146896
+            }
+          ]
+        },
+        {
+          "query_id": "test-kuramoto-k_2_seed_17",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.0383470448442903,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_1.8_seed_5",
+              "family": "kuramoto",
+              "score": 0.994367746384728
+            },
+            {
+              "reference_id": "reference-lorenz-rho_26",
+              "family": "lorenz",
+              "score": 0.9560207015404377
+            },
+            {
+              "reference_id": "reference-lorenz-rho_24",
+              "family": "lorenz",
+              "score": 0.9503792269249189
+            }
+          ]
+        },
+        {
+          "query_id": "test-kuramoto-k_2.8_seed_19_noise",
+          "family": "kuramoto",
+          "predicted_family": "kuramoto",
+          "correct": true,
+          "first_correct_rank": 1,
+          "margin": 0.26253315415922907,
+          "top3": [
+            {
+              "reference_id": "reference-kuramoto-k_2.6_seed_9",
+              "family": "kuramoto",
+              "score": 0.9859950090969987
+            },
+            {
+              "reference_id": "reference-kuramoto-k_3_seed_11",
+              "family": "kuramoto",
+              "score": 0.9828756261075282
+            },
+            {
+              "reference_id": "reference-kuramoto-k_2.2_seed_7",
+              "family": "kuramoto",
+              "score": 0.9730768441619504
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "failure_cases": [
+    {
+      "id": "synthetic-only",
+      "severity": "boundary",
+      "description": "V2 contains only deterministic synthetic systems."
+    },
+    {
+      "id": "family-label-objective",
+      "severity": "boundary",
+      "description": "The target is system-family retrieval, not outcome relevance or semantic similarity."
+    },
+    {
+      "id": "validation-only-sequence-proxy",
+      "severity": "boundary",
+      "description": "The sequence profile uses the exposed v0.7 instability sequence; raw cluster labels are not part of the public backend contract."
+    },
+    {
+      "id": "held-out-low-margin",
+      "severity": "observed",
+      "description": "At least one held-out retrieval margin is below 0.05."
+    }
+  ],
+  "interpretation": "V2 tests family-level retrieval from a denser synthetic memory. It does not validate semantic outcome relevance or real-world memory."
+}

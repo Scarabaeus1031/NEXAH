@@ -96,3 +96,10 @@ The first multi-system benchmark is documented under
 Across Lorenz, Rössler, and Kuramoto it retrieves the expected family for 11 of
 12 clean, noisy, and parameter-shifted queries. The parameter-shifted Kuramoto
 case is misclassified as Lorenz and remains an explicit failure case.
+
+The versioned follow-up is documented under
+**[validation/memory_generalization_v2/](../../validation/memory_generalization_v2/)**.
+It stores five references per family and uses separate validation and held-out
+test queries. Its selected method retrieves all six held-out families, but the
+minimum margin is only 0.003172. V2 therefore closes the synthetic multi-episode
+fixture, not the questions of semantic Outcome relevance or real-world memory.

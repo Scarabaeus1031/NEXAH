@@ -9,11 +9,16 @@ from numpy.typing import NDArray
 FloatArray = NDArray[np.float64]
 
 
-def lorenz(*, rho: float = 28.0, samples: int = 2500) -> FloatArray:
+def lorenz(
+    *,
+    rho: float = 28.0,
+    samples: int = 2500,
+    initial: tuple[float, float, float] = (0.1, 0.0, 0.0),
+) -> FloatArray:
     steps = samples + 1000
     dt = 0.01
     trajectory = np.zeros((steps, 3), dtype=np.float64)
-    trajectory[0] = (0.1, 0.0, 0.0)
+    trajectory[0] = initial
     sigma, beta = 10.0, 2.667
     for index in range(steps - 1):
         x, y, z = trajectory[index]
@@ -24,11 +29,16 @@ def lorenz(*, rho: float = 28.0, samples: int = 2500) -> FloatArray:
     return trajectory[-samples:]
 
 
-def rossler(*, c: float = 5.7, samples: int = 2500) -> FloatArray:
+def rossler(
+    *,
+    c: float = 5.7,
+    samples: int = 2500,
+    initial: tuple[float, float, float] = (0.1, 0.0, 0.0),
+) -> FloatArray:
     steps = samples + 1000
     dt = 0.01
     trajectory = np.zeros((steps, 3), dtype=np.float64)
-    trajectory[0] = (0.1, 0.0, 0.0)
+    trajectory[0] = initial
     a, b = 0.2, 0.2
     for index in range(steps - 1):
         x, y, z = trajectory[index]
@@ -78,4 +88,3 @@ def add_relative_noise(
     safe_scale = np.where(scale > 0.0, scale, 1.0)
     noise = rng.normal(0.0, fraction, trajectory.shape) * safe_scale
     return np.asarray(trajectory + noise, dtype=np.float64)
-

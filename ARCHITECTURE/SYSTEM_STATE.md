@@ -62,14 +62,16 @@ The adapter preserves local cluster scope, source-to-embedding alignment,
 provenance, and unknown uncertainty. The first report generator describes local
 position, representation-level changes, graph reachability, assumptions, and
 missing information without claiming causal feasibility. This is an implemented
-vertical software path, not yet a validated complete Orientation Core:
-the canonical Demonstrator path now has a reproducible proxy validation and
-declared null baseline. An initial append-only episodic layer can now preserve
+vertical software path, not yet a validated complete Orientation Core. The
+canonical Demonstrator path has a reproducible proxy validation and declared
+null baseline. An initial append-only episodic layer can preserve
 State–Report–Outcome records and retrieve similar v0.7 signatures without
-mutating the backend. A synthetic Lorenz–Rössler–Kuramoto benchmark retrieves
-the expected family in 11 of 12 clean, noisy, and parameter-shifted queries;
-parameter-shifted Kuramoto is confused with Lorenz. External regime validation,
-calibrated memory semantics, decision support, and execution remain open work.
+mutating the backend. V1 retrieves the expected Lorenz–Rössler–Kuramoto family
+in 11 of 12 queries. V2 stores five references per family, separates selection
+from a held-out test, and retrieves all six held-out families; its minimum
+margin of 0.003172 remains weak. External regime validation, adapter-level
+domains, calibrated memory semantics, decision support, and execution remain
+open work.
 
 ---
 

@@ -84,6 +84,7 @@ htmlcov/
 # canonical metrics and failure cases are committed under validation/ instead.
 /outputs/orientation_mvp/
 /outputs/memory_generalization/
+/outputs/memory_generalization_v2/
 
 # --- CORE VISUALS ---
 !DISCOVERY_ENGINE/outputs/
