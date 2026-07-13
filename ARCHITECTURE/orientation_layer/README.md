@@ -19,7 +19,9 @@ tests must verify them.
    separation of JANUS, Janus Bridge, and the scientific operator.
 5. **[ADAPTER_LANDSCAPE.md](ADAPTER_LANDSCAPE.md)** — existing adapter lines,
    preservation decisions, and their relationship to WP2.
-6. **[archive/README.md](archive/README.md)** — rules for historical designs.
+6. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
+   Memory V2 evidence, scientific boundaries, and the Phase III gate.
+7. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance
@@ -46,6 +48,25 @@ or reinterpreted as the complete Orientation Core.
 ### Page 2 — Implementation plan
 
 ![NEXAH Orientation Layer implementation plan](visuals/orientation-layer-implementation-plan.png)
+
+## Current status — Plateau A closure
+
+The following two pages record the implemented state after Memory
+Generalization V2. They are status summaries, not substitutes for the linked
+specifications, tests, and canonical result files.
+
+### Status page 1 — Orientation Core and episodic path
+
+![NEXAH Orientation Core status after Memory V2](visuals/orientation-core-memory-v2-status-page-1.png)
+
+### Status page 2 — Memory V2 validation and Phase III gate
+
+![NEXAH Memory Generalization V2 validation](visuals/memory-generalization-v2-validation-page-2.png)
+
+The corresponding textual record is
+**[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)**. Phase III begins with the
+adapter contract and domain validation; it does not expand the frozen V1 or V2
+claims retrospectively.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

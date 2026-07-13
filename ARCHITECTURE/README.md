@@ -21,6 +21,7 @@ combination of:
 | What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
 | Which computational methods are used? | **[METHODS.md](METHODS.md)** |
 | What is the next concrete architecture plan? | **[Orientation Layer](orientation_layer/)** |
+| What has been completed before Phase III? | **[Plateau A Closure](orientation_layer/PLATEAU_A_CLOSURE.md)** |
 | How do repository areas relate? | Continue with this page |
 | What can I run now? | **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
 | Where is the empirical evidence? | **[Validation Portal](../RESEARCH/VALIDATION/)** |

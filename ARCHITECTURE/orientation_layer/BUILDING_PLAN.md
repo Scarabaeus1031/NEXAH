@@ -124,12 +124,13 @@ held-out Top-1 with the selected sequence profile. Its minimum margin is only
 0.003172 and its objective remains synthetic family retrieval, not semantic
 Outcome relevance.
 
-## Post-MVP Plateau B — Adapter ecosystem
+## Phase III / Post-MVP Plateau B — Adapter ecosystem and domain testing
 
-Status: next. Define a small adapter protocol around independent data sources,
-domain context, representation features, and traceable outcomes. New adapters
-must preserve the Orientation contracts and receive their own validation; they
-must not encode domain identity as a similarity shortcut.
+Status: next active phase. Plateau A is closed in
+`PLATEAU_A_CLOSURE.md`. Define a small adapter protocol around independent data
+sources, domain context, representation features, and traceable outcomes. New
+adapters must preserve the Orientation contracts and receive their own
+validation; they must not encode domain identity as a similarity shortcut.
 
 ## Later, outside the MVP
 

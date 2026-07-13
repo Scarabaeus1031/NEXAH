@@ -43,6 +43,13 @@ The validation split selected `sequence_profile`. It achieved 6/6 Top-1 and
 `0.003172`, so this is evidence of correct family retrieval in this fixture,
 not evidence of robust semantic memory.
 
+## Visual summary
+
+![Memory Generalization V2 validation overview](../../ARCHITECTURE/orientation_layer/visuals/memory-generalization-v2-validation-page-2.png)
+
+The image is explanatory. The canonical JSON and validation record govern the
+reported values and scientific interpretation.
+
 ## Run
 
 ```bash
