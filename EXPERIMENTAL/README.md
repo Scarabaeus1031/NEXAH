@@ -74,9 +74,56 @@ as one coherent runtime. It combines several development generations.
 
 The existing
 **[Builder Lab Inventory](BUILDER_LAB/BUILDER_LAB_INVENTORY_INDEX.md)** is a
-historical map. It contains useful observations, but some paths and maturity
-labels no longer match the repository. Use it as an audit source rather than a
-current specification.
+current structural audit dated July 12, 2026. It records entry-point checks,
+dependency boundaries, archive weight, and promotion candidates. It is an
+inventory rather than a software specification.
+
+### Historical development lineages
+
+The archive contains several earlier attempts to turn the NEXAH idea into a
+kernel or application system. They are useful for understanding how the current
+architecture emerged. Their presence does not make them part of the maintained
+runtime.
+
+| Lineage | Start here | What is actually present | Current relevance |
+|---|---|---|---|
+| **Early kernel shell** | **[Archived Kernel README](BUILDER_LAB/ARCHIVE_ENGINE/archived/kernel/README.md)** and **[NexahKernel](BUILDER_LAB/ARCHIVE_ENGINE/archived/kernel/nexah_kernel.py)** | A layered graph → regime landscape → navigation → action architecture; parts of the navigation implementation remain placeholders | Preserves the early system decomposition |
+| **Discrete Navigation Kernel v2** | **[Navigation README](BUILDER_LAB/ARCHIVE_KERNEL/v2_navigation/navigation/README.md)** and **[navigator.py](BUILDER_LAB/ARCHIVE_KERNEL/v2_navigation/navigation/navigator.py)** | Executable graph lookahead, risk-distance scoring, and next-state selection using supplied regimes and risk targets | Useful algorithmic reference; labels and scores require independent evidence before reuse |
+| **Field and Dynamics Engine** | **[Dynamics Engine README](BUILDER_LAB/ARCHIVE_ENGINE/DYNAMICS_ENGINE/README.md)** | Flow, basin, topology, transition, phase-map, and meta-field experiments across many development levels | Hypothesis and method archive; not the current orientation backend |
+| **Stability-driven multi-agent study** | **[Experiment README](BUILDER_LAB/ARCHIVE_ENGINE/archived/research/experiments/nexah_stability_driven_multi_agent_system/README.md)** | A multi-agent research concept and visual centered on stability-seeking exploration | Reconstruct only for a specific testable question; current evidence is insufficient for a finding |
+| **Prototype agent runner** | **[agent_run_demo.py](BUILDER_LAB/ARCHIVE_ENGINE/agent_run_demo.py)** and **[NexahAgent](BUILDER_LAB/ARCHIVE_ENGINE/archived/agent/nexah_agent.py)** | Grid-landscape exploration, a reward-based learning prototype, and a separate skeletal agent loop | Reference for experimental orchestration, not an integrated agent layer |
+| **Discovery Engine** | **[Discovery Engine README](BUILDER_LAB/DISCOVERY_ENGINE/README.md)** and **[Discovery Observations](BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md)** | Resilience, transition, field, phase, and symbolic-law experiments | Selected observations may be reproduced; universal-law language is not a validated capability |
+| **META–ARCHY–MESO framework** | **[Historical Framework](FRAMEWORK/)** | Earlier conceptual layers connecting purpose, structure, dynamics, navigation, and action | Conceptual lineage only; the current contracts use a different architecture |
+
+Two related reference areas now live outside `EXPERIMENTAL/`:
+
+- **[Dynamical model hierarchy](../APPLICATIONS/models/dynamical_models/README.md)**
+  documents the conceptual progression from stability landscapes through
+  gradient and drift dynamics to regime systems.
+- **[Control Layer](../ARCHITECTURE/CORE/control_layer/README.md)** preserves
+  executable synthetic gate, field, routing, and multi-agent prototypes. Its
+  own status explicitly limits them to experimental trajectory-deformation and
+  geometry-aware routing studies.
+
+### What the lineage contributed
+
+Across these generations, one architecture repeatedly reappears:
+
+```text
+system observations
+→ representation
+→ structure or landscape
+→ states and transitions
+→ orientation and navigation
+→ optional intervention
+```
+
+The maintained **[Orientation Layer](../ARCHITECTURE/orientation_layer/)** keeps
+this structural direction while adding typed contracts, provenance,
+uncertainty, reproducibility, evidence gates, and a strict boundary between
+orientation and execution. Historical components should therefore be treated
+as design history or candidates for bounded reconstruction, not imported as a
+second kernel.
 
 ### Experimental entry commands
 

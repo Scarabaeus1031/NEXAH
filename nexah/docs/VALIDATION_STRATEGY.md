@@ -43,7 +43,9 @@ Evidence required:
 - stability metrics with uncertainty
 - explicit raw-to-embedded index alignment
 
-Current status: open research and engineering work.
+Current status: raw-to-embedded alignment is characterized; bounded proxy,
+memory, IEEE attribution, continuation, and resolution-sensitivity experiments
+exist. General representation stability across domains remains open.
 
 ### 3. Task validation
 
@@ -60,8 +62,9 @@ Evidence required:
 - baseline comparisons and ablations
 - held-out evaluation and failure cases
 
-Current status: bounded experiments exist elsewhere in the repository; no
-package-wide general validation claim is made.
+Current status: bounded canonical validations now cover the Lorenz Demonstrator,
+Memory V1/V2, IEEE Orientation V1, and IEEE Scaling Pattern V1/V2. These remain
+claim-specific; no package-wide general validation claim is made.
 
 ### 4. Mechanism and intervention validation
 
@@ -92,6 +95,8 @@ v0.7 is considered characterized when:
 
 ## Next validation step
 
-The Orientation Layer MVP should use one verified Demonstrator path and produce
-an evidence-linked `OrientationReport`. Its evaluation must include a declared
-baseline, provenance, uncertainty, and recorded failure cases.
+The original Orientation Layer Demonstrator gate and the Phase III power-system
+gate are complete. The next validation should combine the V3 directed-graph
+source with a graph-native representation backend, first on explicit fixtures
+and then on independently sourced topology or event data. Authored supply-chain
+regimes and actions must not be used as ground truth without separate evidence.

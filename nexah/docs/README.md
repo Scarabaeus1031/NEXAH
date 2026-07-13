@@ -12,6 +12,8 @@ These documents describe or record the minimal `nexah` package.
   storage, similarity semantics, and boundaries.
 - **[Source Adapter Contract](../../ARCHITECTURE/orientation_layer/SOURCE_ADAPTER_CONTRACT.md)**
   — Phase III input boundary, strict reference policy, and role separation.
+- **[Adapter Ecosystem V3](../../ARCHITECTURE/orientation_layer/ADAPTER_ECOSYSTEM_V3.md)**
+  — typed array, table, graph, and IEEE sources plus the legacy promotion audit.
 - **[IEEE Orientation Validation V1](../../validation/ieee_orientation_v1/)** —
   coupled pandapower source, scoped report, entity attribution, and held-out
   domain validation.

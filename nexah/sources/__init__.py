@@ -10,6 +10,7 @@ from .base import (
     SourceQuality,
 )
 from .table import TableSchema, TableSourceAdapter
+from .graph import GraphSchema, GraphSourceAdapter
 from .ieee import (
     IEEECoupledCampaign,
     IEEEPandapowerAdapter,
@@ -27,6 +28,8 @@ __all__ = [
     "SourceQuality",
     "TableSchema",
     "TableSourceAdapter",
+    "GraphSchema",
+    "GraphSourceAdapter",
     "IEEECoupledCampaign",
     "IEEEPandapowerAdapter",
     "IEEEPhysicalSnapshot",

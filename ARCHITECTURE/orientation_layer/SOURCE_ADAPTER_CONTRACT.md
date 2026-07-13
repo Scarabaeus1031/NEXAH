@@ -21,6 +21,9 @@ The implementations are under `nexah/sources/`. `ArraySourceAdapter` provides
 the minimal reference path for finite NumPy-compatible trajectories.
 `TableSourceAdapter` selects explicitly declared DataFrame columns through a
 serializable `TableSchema`; undeclared columns do not enter the batch.
+`GraphSourceAdapter` encodes explicitly declared nodes and directed edges as an
+entity-indexed adjacency batch. Undeclared regimes, risks, actions, shocks, and
+evaluation labels do not enter its matrix.
 
 ## `SourceBatch`
 
@@ -96,11 +99,22 @@ validation harness.
 column order, units and timestamps, exclusion of undeclared evaluation labels,
 and visible schema, numeric, and temporal failures.
 
-## Next adapter
+`tests/sources/test_graph_source_adapter.py` verifies directed and weighted
+adjacency, stable node identity, JSON round trips, explicit invalid graph
+failures, and exclusion of authored regime/action metadata from the source
+matrix. The repository supply-chain and ecosystem graphs serve only as
+illustrative topology fixtures.
+
+## Current domain adapters and next bridge
 
 The generic array and table boundaries are validated. The IEEE/pandapower
 source adapter now emits the same `SourceBatch` contract through separate entity
 and ordered-campaign views; its physical variables, units, load construction,
 optional dependency, and failure behavior are documented in
-**[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)**. The next step is the
-scoped campaign-to-v0.7 Orientation run.
+**[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)**. Its scoped Orientation,
+attribution, continuation, and held-out validation path is complete.
+
+The graph source boundary now preserves declared topology without interpreting
+entity rows as time. The next bridge is a typed graph representation backend,
+not a silent pass through the temporal v0.7 engine. See
+**[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)**.

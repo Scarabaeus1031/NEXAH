@@ -21,15 +21,17 @@ tests must verify them.
    preservation decisions, and their relationship to WP2.
 6. **[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)** — Phase III
    source boundary, invariants, leakage rules, and acceptance evidence.
-7. **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)** — coupled entity and
+7. **[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)** — current typed
+   sources, preserved legacy work, and the promotion path for new domains.
+8. **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)** — coupled entity and
    load-campaign views, physical variables, failure policy, and D–F roadmap.
-8. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
+9. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
    Memory V2 evidence, scientific boundaries, and the Phase III gate.
-9. **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)** — current A–G
+10. **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)** — current A–G
    baseline, scientific boundary, and the H–L continuation path.
-10. **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** — completed H–K path,
+11. **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** — completed H–K path,
     held-out result, and the boundary of validity.
-11. **[archive/README.md](archive/README.md)** — rules for historical designs.
+12. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance

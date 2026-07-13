@@ -1,6 +1,6 @@
 # Adapter Landscape
 
-Status: audited; Phase III source boundary implemented
+Status: audited; Phase III complete; V3 graph source boundary implemented
 
 This inventory preserves earlier adapter work without treating every historical
 interface as part of the new Orientation Layer. Existing adapters remain in
@@ -19,6 +19,7 @@ place until a specific migration is justified.
 | IEEE metric mapping | Electrical arrays → NEXAH-style summary metrics | Experimental function | Feature backend candidate |
 | IEEE physical adapter | IEEE case and load scale → physical signal arrays | Importable when pandapower is available | Domain source adapter |
 | Experimental bridges | Research object → research object | Numerous historical, task-specific scripts | Research history; review individually |
+| Directed graph source | Declared nodes and edges → entity-indexed adjacency `SourceBatch` | Implemented and tested in V3 | Source for a future graph representation backend |
 
 ## Verified audit observations
 
@@ -56,12 +57,17 @@ Execution adapter (later)
 `nexah/backends/` contains typed computational backend adapters for the current
 package contracts.
 
-`nexah/sources/` now contains the Phase III source contract and two strict
+`nexah/sources/` now contains the source contract and strict
 reference implementations. `ArraySourceAdapter` translates finite ordered
 numeric observations into a serializable `SourceBatch`. `TableSourceAdapter`
 adds explicit DataFrame column, unit, and timestamp selection while excluding
 undeclared columns. Neither performs regime, graph, navigation, risk, or action
 inference.
+
+`GraphSourceAdapter` adds a non-temporal topology boundary. It encodes only
+declared nodes, directed edges, and optional weights as an entity-indexed
+adjacency batch. It excludes authored regimes, risks, actions, shocks, and
+other undeclared graph metadata.
 
 ## Phase III disposition
 
@@ -74,6 +80,7 @@ inference.
 | IEEE physical adapter | Reimplemented behind the coupled source contract | Raw bus/line physics retained; fabricated collapse arrays and heuristic loops removed |
 | IEEE topology/regime adapters | Domain representation candidates | They mix physical topology with predefined states or regimes |
 | CSV-reading research scripts | Feed through `TableSourceAdapter` case by case | The generic schema now exists; individual datasets still need declared columns and provenance |
+| Supply-chain and ecosystem JSON graphs | Feed through `GraphSourceAdapter` as illustrative topology | Shared nodes/edges schema is usable; labels and actions are authored, not observed evidence |
 
 The implemented contract is specified in
 **[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)**.
@@ -95,3 +102,7 @@ integration. See **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)**.
    not be promoted to validated facts.
 5. The first current backend is `V07BackendAdapter`. Legacy graph and
    Demonstrator adapters are separate later decisions.
+
+The broader V3 audit, including BTC, ARCHY, coupled-system, PhaseSpaceAdapter,
+and Discovery Engine findings, is recorded in
+**[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)**.
