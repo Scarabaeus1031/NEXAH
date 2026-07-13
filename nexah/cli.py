@@ -26,7 +26,9 @@ from nexah.backends import V07BackendAdapter
 from nexah.applications import (
     NetworkOrientationApplication,
     remove_declared_edge,
+    render_network_learning_text,
     render_network_orientation_text,
+    run_network_probe_suite,
 )
 from nexah.core import NEXAH
 from nexah.orientation import (
@@ -235,11 +237,16 @@ def orient_network_command(args):
         focus=args.focus,
         target=args.target,
     )
-    payload = result.to_dict()
+    learning = run_network_probe_suite(result) if args.probes else None
+    payload = learning.to_dict() if learning is not None else result.to_dict()
     if args.out:
         save_output(payload, args.out)
     elif args.format == "text":
-        print(render_network_orientation_text(result))
+        print(
+            render_network_learning_text(learning)
+            if learning is not None
+            else render_network_orientation_text(result)
+        )
     else:
         print(json.dumps(payload, indent=2))
 
@@ -313,6 +320,11 @@ def main():
         help="generate an explicit structural training scenario from the input",
     )
     network_parser.add_argument("--format", choices=("json", "text"), default="json")
+    network_parser.add_argument(
+        "--probes",
+        action="store_true",
+        help="add five read-only learning perspectives (V2 wrapper)",
+    )
     network_parser.add_argument("--out")
 
     args = parser.parse_args()

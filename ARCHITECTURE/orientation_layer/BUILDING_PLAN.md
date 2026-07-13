@@ -161,7 +161,7 @@ authorization models.
 
 ## Phase IV — Network Orientation Application
 
-Status: Network Orientation V1 implemented and canonically tested.
+Status: Network Orientation V2 implemented and canonically tested.
 
 The directed graph source now feeds a graph-native persistent representation,
 structural report, and snapshot comparison. Supply Chain is the illustrative
@@ -170,9 +170,12 @@ The unchanged application demonstrates contract portability, not real-world
 domain generalization.
 
 The edge-removal workflow is a transparent training context for learning how a
-declared map changes. It is not a controller, causal simulator, or intervention
-recommendation. The next plateau is read-only multi-perspective learning probes
-and observed graph/event evidence.
+declared map changes. Five typed read-only probes now preserve reachability,
+bottleneck, perturbation, evidence, and criticism perspectives in one
+non-voting synthesis. V2 additionally covers a branched/cyclic graph with an
+isolated area. It is not a controller, causal simulator, or intervention
+recommendation. The next plateau requires observed graph/event evidence and a
+genuinely observed outcome.
 
 ## MVP definition of done
 

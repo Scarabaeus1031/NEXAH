@@ -43,6 +43,15 @@ from .primitives import (
     Transition,
 )
 from .report import OrientationReport
+from .probes import (
+    FindingStance,
+    ProbeAgreement,
+    ProbeContradiction,
+    ProbeFinding,
+    ProbeResult,
+    ProbeSynthesis,
+    synthesize_probe_results,
+)
 from .state import OrientationState
 
 __all__ = [
@@ -66,6 +75,12 @@ __all__ = [
     "OrientationReport",
     "OrientationReportGenerator",
     "OrientationState",
+    "FindingStance",
+    "ProbeAgreement",
+    "ProbeContradiction",
+    "ProbeFinding",
+    "ProbeResult",
+    "ProbeSynthesis",
     "Outcome",
     "Provenance",
     "ReferenceFrame",
@@ -82,4 +97,5 @@ __all__ = [
     "generate_orientation_report",
     "attach_similar_episodes",
     "orientation_similarity",
+    "synthesize_probe_results",
 ]

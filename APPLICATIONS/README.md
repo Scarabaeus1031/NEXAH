@@ -51,7 +51,7 @@ If you are completely new to NEXAH, begin with the repository
 
 | Area | What it offers | Current status |
 |---|---|---|
-| **[Network Orientation](network_orientation/)** | Typed graph topology, reachability, structural comparison, Supply Chain and held-out Ecosystem fixtures | Verified illustrative application |
+| **[Network Orientation](network_orientation/)** | Typed graph topology, reachability, structural comparison, five read-only probes, and V1/V2 fixtures | Verified illustrative application |
 | **[Power Systems](power_systems/)** | IEEE benchmark studies, stability fields, atlas discovery, prediction, recovery, and control experiments | Active applied research |
 | **[Lorenz Research](dynamical_systems/lorenz/)** | Density, FTLE, Lyapunov, separatrix, regime, and navigation analysis | Active reference system |
 | **[Halvorsen Research](dynamical_systems/halvorsen/)** | Distributed transport, transition graphs, residue models, reachability, and policy experiments | Experimental research |
@@ -112,7 +112,7 @@ For detail, use the **[Power Systems README](power_systems/README.md)** and
 
 ## 🕸️ Network Orientation
 
-**[Network Orientation V1](network_orientation/)** is the first maintained,
+**[Network Orientation](network_orientation/)** is the first maintained,
 graph-native application of the typed Orientation Layer. It turns declared
 nodes and directed edges into an evidence-bound structural report containing
 paths, reachability, components, bottlenecks, missing information, and explicit

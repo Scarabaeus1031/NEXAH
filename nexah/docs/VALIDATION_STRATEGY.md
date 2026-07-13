@@ -96,10 +96,13 @@ v0.7 is considered characterized when:
 ## Current and next validation step
 
 The original Orientation Layer Demonstrator gate, the Phase III power-system
-gate, and the Phase IV illustrative Network Orientation gate are complete. The
+gate, and the Phase IV Network Orientation V1 and V2 illustrative gates are
+complete. The
 graph-native backend is tested first on the Supply Chain development fixture
-and then unchanged on the held-out Ecosystem fixture. This establishes typed
-contract portability, not real-world generalization.
+and then unchanged on the held-out Ecosystem fixture. V2 adds five read-only
+perspectives and a distinct branched/cyclic synthetic fixture. This establishes
+typed contract portability and broader topology coverage, not real-world
+generalization or an observed learning outcome.
 
 The next graph validation requires independently sourced topology or event
 data, explicit acquisition provenance, and an outcome-linked question. Authored

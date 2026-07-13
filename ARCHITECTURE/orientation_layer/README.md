@@ -131,15 +131,21 @@ This page is the practical user view: accepted inputs, working capabilities,
 outputs, current use cases, access modes, and the explicit boundary between
 available research tooling and later decision or execution layers.
 
-## Current status — Phase IV Network Orientation V1
+## Current status — Phase IV Network Orientation V2
 
 The graph source now feeds a graph-native representation backend rather than
 the temporal v0.7 engine. Supply Chain and held-out Ecosystem fixtures exercise
 the same typed path, and an explicit edge-removal scenario records structural
 sensitivity without claiming causal control.
 
+V2 adds five read-only analytical perspectives and a transparent synthesis.
+Agreements and contradictions remain visible; there is no majority-vote truth,
+backend mutation, fabricated outcome, or execution authority. A distinct
+branched/cyclic fixture broadens synthetic topology coverage.
+
 Read **[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)** and
-**[Network Orientation V1 validation](../../validation/network_orientation_v1/)**.
+the frozen **[V1 validation](../../validation/network_orientation_v1/)** plus
+the additive **[V2 validation](../../validation/network_orientation_v2/)**.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

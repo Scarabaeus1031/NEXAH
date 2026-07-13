@@ -76,6 +76,24 @@ validity, or supply-chain validity.
 Canonical evidence and reproduction instructions live in
 **[validation/network_orientation_v1](../../validation/network_orientation_v1/)**.
 
+## V2 — Multi-perspective learning
+
+Add `--probes` to wrap the V1 orientation in five read-only perspectives:
+
+```bash
+nexah orient-network APPLICATIONS/datasets/supply_chain.json \
+  --focus normal_operation \
+  --target system_disruption \
+  --recorded-at 2026-07-13T22:45:00+00:00 \
+  --probes
+```
+
+The probes examine reachability, bottlenecks, declared perturbations, evidence,
+and claim boundaries. They preserve agreement and contradiction without voting
+and have no execution authority. See the additive
+**[V2 validation](../../validation/network_orientation_v2/)** for the distinct
+branched/cyclic fixture.
+
 ## Learning direction
 
 The Phase IV objective is orientation through experience:
@@ -84,7 +102,7 @@ The Phase IV objective is orientation through experience:
 observe → map → compare → remember → refine orientation
 ```
 
-Later multi-perspective probes may contribute reachability, bottleneck,
-perturbation, evidence, and critique views to the same state. They remain
-read-only analytical perspectives. Autonomous execution is not the objective
-of this application.
+Multi-perspective probes now contribute reachability, bottleneck, perturbation,
+evidence, and critique views to the same result. Episodic storage still waits
+for a genuinely observed outcome. Autonomous execution is not the objective of
+this application.

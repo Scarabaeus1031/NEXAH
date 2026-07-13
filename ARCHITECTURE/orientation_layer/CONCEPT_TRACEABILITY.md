@@ -17,6 +17,7 @@ from being treated as interchangeable.
 | Episodic Memory | Outcome-linked storage and retrieval | Store, sequence-profile retrieval, immutable attachment, multi-episode benchmark | Memory V2 held-out synthetic validation complete | Add real outcome sequences and semantic relevance tests |
 | Source Adapter Ecosystem | Evidence-preserving transport into representation layers | Array, table, directed graph, and coupled IEEE/Pandapower sources | Typed foundation implemented and tested | Add observed non-power graph data |
 | Graph Representation Backend | Persistent declared node identity and descriptive directed topology | `GraphRepresentationBackend`, `GraphAnalysis`, and Network Orientation V1 | Illustrative application and held-out contract gate complete | Validate with observed topology and event sequences |
+| Multi-perspective Orientation Probes | Independent read-only views over one orientation result | Five network probes, explicit agreement/contradiction synthesis, and V2 topology gate | Implemented and illustratively validated | Add independently acquired topology and observed outcomes |
 | Autonomous execution | Acting on external systems | Not part of current core | Out of MVP | Define separately if justified |
 
 ## Status vocabulary

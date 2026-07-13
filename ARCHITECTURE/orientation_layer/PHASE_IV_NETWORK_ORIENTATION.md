@@ -1,6 +1,6 @@
 # Phase IV — Network Orientation Application
 
-Status: V1 implementation and illustrative validation complete
+Status: V2 read-only learning probes and illustrative validation complete
 
 ## Objective
 
@@ -109,7 +109,49 @@ Not supported:
 
 ## Next plateau — Multi-perspective learning probes
 
-The next extension may add independent read-only probes for reachability,
-bottlenecks, perturbations, evidence quality, and claim criticism. Each probe
-must emit traceable evidence into the same orientation context. Their purpose
-is collective learning and better maps, not command authority.
+### Work package F — Probe contract
+
+Implemented in `nexah/orientation/probes.py`. A `ProbeResult` binds one named
+perspective to a representation, evidence references, assumptions, missing
+information, uncertainty, and provenance. `read_only=False` is rejected at the
+contract boundary.
+
+### Work package G — Five network perspectives
+
+Implemented in `nexah/applications/network_probes.py`:
+
+- reachability and paths
+- structural bottlenecks
+- declared snapshot perturbation
+- evidence and provenance
+- claim-boundary criticism
+
+These are deterministic analytical perspectives, not autonomous agents or
+domain authorities.
+
+### Work package H — Transparent synthesis
+
+All findings remain inspectable. Two probes taking the same stance on the same
+narrowly named subject create an agreement record. Support/challenge conflict
+creates a contradiction record. The synthesis does not vote, silently resolve
+disagreement, or mutate the graph.
+
+`NetworkLearningContext` deliberately records `outcome_recorded=False`.
+Episodic memory requires a later observed `Outcome`; a declared training
+scenario is not converted into one.
+
+### Work package I — V2 topology validation
+
+The canonical V2 record is in
+**[validation/network_orientation_v2](../../validation/network_orientation_v2/)**.
+It preserves V1 and adds a synthetic graph with two branches, a merge, a
+directed cycle, a target leaf, and an isolated node. Removing the one declared
+edge to the target makes only that target newly unreachable. This demonstrates
+broader deterministic topology coverage, not real-world generalization.
+
+## Next evidence plateau
+
+Phase IV's software and illustrative gates are complete. The next increase in
+claim strength requires independently acquired graph or event data, explicit
+source-completeness evidence, and a genuinely observed outcome. The direction
+remains learning, training, and improved orientation—not control authority.

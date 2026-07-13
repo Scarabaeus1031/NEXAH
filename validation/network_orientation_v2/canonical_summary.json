@@ -1,0 +1,125 @@
+{
+  "cross_domain_contract_reuse": {
+    "ecosystem_probe_count": 5,
+    "ecosystem_target_reachable": true,
+    "supply_chain_probe_count": 5,
+    "supply_chain_target_reachable": true
+  },
+  "distinct_topology_fixture": {
+    "blocked_nodes": [
+      "isolated"
+    ],
+    "edges": 8,
+    "nodes": 8,
+    "reachable_nodes": [
+      "branch_a",
+      "branch_b",
+      "loop_1",
+      "loop_2",
+      "merge",
+      "target"
+    ],
+    "strong_components": [
+      [
+        "branch_a"
+      ],
+      [
+        "branch_b"
+      ],
+      [
+        "isolated"
+      ],
+      [
+        "loop_1",
+        "loop_2",
+        "merge"
+      ],
+      [
+        "start"
+      ],
+      [
+        "target"
+      ]
+    ],
+    "target_path": [
+      "start",
+      "branch_a",
+      "merge",
+      "loop_1",
+      "loop_2",
+      "target"
+    ],
+    "weak_articulation_points": [
+      "loop_2",
+      "merge"
+    ],
+    "weak_components": [
+      [
+        "branch_a",
+        "branch_b",
+        "loop_1",
+        "loop_2",
+        "merge",
+        "start",
+        "target"
+      ],
+      [
+        "isolated"
+      ]
+    ]
+  },
+  "not_supported": [
+    "observed learning outcome or episodic memory update",
+    "calibrated uncertainty or empirical source completeness",
+    "real-world cross-domain generalization",
+    "causal intervention, stability, risk, or control",
+    "autonomous or multi-agent execution"
+  ],
+  "probe_contract": {
+    "aggregation": "preserve-all-findings-no-majority-vote",
+    "all_read_only": true,
+    "outcome_recorded": false,
+    "probe_count": 5,
+    "probe_ids": [
+      "network-reachability-probe-v1",
+      "network-bottleneck-probe-v1",
+      "network-perturbation-probe-v1",
+      "network-evidence-probe-v1",
+      "network-claim-critic-probe-v1"
+    ]
+  },
+  "recorded_at": "2026-07-13T22:45:00+00:00",
+  "supported": [
+    "five typed read-only perspectives over one network orientation",
+    "transparent agreement and contradiction collation without voting",
+    "deterministic analysis of a branch, directed cycle, and isolated node",
+    "structural sensitivity when one declared edge is removed",
+    "software contract reuse across three illustrative domains or fixtures"
+  ],
+  "training_scenario": {
+    "contradictions": 0,
+    "newly_unreachable": [
+      "target"
+    ],
+    "probe_agreements": [
+      {
+        "probe_ids": [
+          "network-perturbation-probe-v1",
+          "network-reachability-probe-v1"
+        ],
+        "stance": "challenged",
+        "subject": "target-reachability"
+      }
+    ],
+    "removed_edge": [
+      "loop_2",
+      "target"
+    ],
+    "target_path": null
+  },
+  "validation_id": "network-orientation-v2",
+  "version_boundary": {
+    "v1": "frozen and unchanged",
+    "v2": "read-only probes plus topologically distinct synthetic fixture"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    "start",
+    "branch_a",
+    "branch_b",
+    "merge",
+    "loop_1",
+    "loop_2",
+    "target",
+    "isolated"
+  ],
+  "edges": [
+    {"from": "start", "to": "branch_a"},
+    {"from": "start", "to": "branch_b"},
+    {"from": "branch_a", "to": "merge"},
+    {"from": "branch_b", "to": "merge"},
+    {"from": "merge", "to": "loop_1"},
+    {"from": "loop_1", "to": "loop_2"},
+    {"from": "loop_2", "to": "merge"},
+    {"from": "loop_2", "to": "target"}
+  ]
+}
