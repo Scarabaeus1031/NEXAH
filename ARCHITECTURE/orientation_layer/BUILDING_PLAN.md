@@ -177,6 +177,23 @@ isolated area. It is not a controller, causal simulator, or intervention
 recommendation. The next plateau requires observed graph/event evidence and a
 genuinely observed outcome.
 
+## Phase V — IEEE Geometry Case and Research Testkit
+
+Status: planned; scope frozen in
+`PHASE_V_IEEE_GEOMETRY_TESTKIT.md`.
+
+Phase V turns the strongest existing benchmark line into a reproducible public
+case without relabeling simulation as operational evidence. It adds a frozen
+case manifest, typed geometry frames over ordered IEEE load campaigns, minimal
+failure-aware geometry operators, five read-only IEEE probes, and an outcome
+firewall.
+
+The public deliverable has three entry depths: a 90-second map, a ten-minute
+runnable case, and a full research path. The generic evidence testkit lives in
+`testkit/observed_evidence/`. Real observed measurements and outcome-linked
+learning are the later evidence plateau, not a hidden Phase V completion
+condition.
+
 ## MVP definition of done
 
 - v0.7 behavior is characterized without overclaiming

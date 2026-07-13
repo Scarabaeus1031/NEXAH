@@ -107,6 +107,9 @@ production control system.
 
 For detail, use the **[Power Systems README](power_systems/README.md)** and
 **[Power Systems Index](power_systems/INDEX_power-system-applications.md)**.
+The next maintained public-use path is the
+**[IEEE Geometry Showcase Plan](power_systems/IEEE_GEOMETRY_SHOWCASE_PLAN.md)**,
+governed by the Phase V evidence and outcome testkit.
 
 ---
 

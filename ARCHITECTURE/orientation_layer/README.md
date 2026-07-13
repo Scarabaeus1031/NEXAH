@@ -33,7 +33,10 @@ tests must verify them.
     held-out result, and the boundary of validity.
 12. **[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)** —
     graph-native application, structural comparison, and held-out fixture gate.
-13. **[archive/README.md](archive/README.md)** — rules for historical designs.
+13. **[PHASE_V_IEEE_GEOMETRY_TESTKIT.md](PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** —
+    IEEE geometry case, evidence firewall, public showcase, and external-data
+    bridge.
+14. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance
@@ -164,6 +167,16 @@ This is the practical user view of accepted graph inputs, working structural
 capabilities, outputs, training uses, the learning loop, and its boundaries.
 In particular, a declared scenario is not an observed outcome and therefore
 does not update episodic memory.
+
+## Next implementation plateau — Phase V
+
+Phase V is the
+**[IEEE Geometry Case and Research Testkit](PHASE_V_IEEE_GEOMETRY_TESTKIT.md)**.
+It turns the strongest benchmark line into a reproducible 90-second overview,
+ten-minute runnable case, and full research path. The generic
+**[Observed-Evidence Testkit](../../testkit/observed_evidence/README.md)** keeps
+benchmark computation, declared scenarios, measurements, and observed outcomes
+technically distinct.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

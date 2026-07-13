@@ -21,6 +21,7 @@ evidence, and historical experimental environments.
 | Enter the research archive | **[RESEARCH/README.md](RESEARCH/README.md)** |
 | Inspect the current architecture | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
 | Explore the most developed application | **[APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)** |
+| Inspect evidence and outcome gates | **[testkit/README.md](testkit/README.md)** |
 
 Recommended first path:
 
@@ -43,6 +44,7 @@ NEXAH/
 ├── RESEARCH/           concepts, evidence, findings, and theory
 ├── APPLICATIONS/       demonstrations and applied validation
 ├── EXPERIMENTAL/       active labs, prototypes, and historical systems
+├── testkit/            reusable evidence and outcome validation gates
 ├── outputs/            selected generated repository-level artifacts
 ├── README.md           repository overview
 ├── START_HERE.md       guided visual introduction
@@ -157,6 +159,11 @@ Main entry points:
 The power-systems branch includes field reconstruction, IEEE benchmark work,
 atlas discovery, transition prediction, recovery analysis, and exploratory
 atlas-guided control.
+
+The current public-use plan is
+**[IEEE_GEOMETRY_SHOWCASE_PLAN.md](APPLICATIONS/power_systems/IEEE_GEOMETRY_SHOWCASE_PLAN.md)**.
+It translates the historical Tube concept into a parameterized IEEE state
+family with explicit benchmark, simulation, observation, and outcome labels.
 
 `APPLICATIONS/archive/` preserves superseded and historical application demos.
 

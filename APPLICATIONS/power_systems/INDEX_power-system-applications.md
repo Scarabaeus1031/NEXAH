@@ -2,6 +2,19 @@
 
 ### Atlas-Guided Stability Analysis, Prediction, Recovery and Control for Electrical Power Networks
 
+## Current maintained entry
+
+- **[IEEE Geometry Showcase Plan](IEEE_GEOMETRY_SHOWCASE_PLAN.md)** — Phase V
+  public-use path and translation of the Tube concept into testable geometry.
+- **[Phase V specification](../../ARCHITECTURE/orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** —
+  work packages, outcome firewall, validation ladder, and definition of done.
+- **[Observed-Evidence Testkit](../../testkit/observed_evidence/README.md)** —
+  distinction between benchmark, computation, observation, scenario, and
+  observed outcome.
+
+The entries below include both current evidence and historical experimental
+programs. Their presence is not itself a validation or production claim.
+
 ---
 
 # Overview
