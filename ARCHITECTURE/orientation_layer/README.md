@@ -147,5 +147,23 @@ Read **[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)** and
 the frozen **[V1 validation](../../validation/network_orientation_v1/)** plus
 the additive **[V2 validation](../../validation/network_orientation_v2/)**.
 
+### Status page 8 — V4 Phase IV closure
+
+![NEXAH V4 Phase IV Network Orientation closure](visuals/nexah-v4-phase-iv-network-orientation-closure-page-8.png)
+
+This is the scientific closure record for work packages A–I: graph-native
+representation, structural reports, comparison, five read-only perspectives,
+transparent synthesis, and the distinct-topology V2 gate. V4 denotes the
+documentation and research milestone; the software kernel remains v0.7.
+
+### Status page 9 — V4 capability map
+
+![NEXAH V4 Network Orientation capability map](visuals/nexah-v4-network-orientation-capability-map-page-9.png)
+
+This is the practical user view of accepted graph inputs, working structural
+capabilities, outputs, training uses, the learning loop, and its boundaries.
+In particular, a declared scenario is not an observed outcome and therefore
+does not update episodic memory.
+
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.
