@@ -1,6 +1,6 @@
 # IEEE / Pandapower Coupled Source Adapter
 
-Status: C–F implemented, tested, and canonically validated
+Status: C–K implemented, tested, and canonically validated
 
 The adapter implements one physical simulation source with two explicitly
 different views. It does not treat bus identity as time and does not assign
@@ -128,3 +128,20 @@ constant lead is derivative-edge and resolution sensitive. IEEE-300 and
 PEGASE-9241 fail at the global lower scan bound and remain untested under this
 design. The repository must not describe the V1 result as a validated universal
 precursor.
+
+## H–K continuation and held-out gate
+
+**[IEEE Scaling Pattern V2](../../validation/ieee_scaling_pattern_v2/)** begins
+at each case's native `lambda = 1.0` point, separates upward and downward
+branches, and refines bracketed upward convergence boundaries to width
+`<= 0.005`. It then applies a predeclared local-polynomial, prominence,
+boundary-distance, and resolution test before evaluating PEGASE-9241 unchanged.
+
+All eight native baselines converge. No sufficiently sampled development case
+passes the edge-independent precursor criteria. IEEE-300 and held-out
+PEGASE-9241 have too few coarse converged points before their upper boundaries
+for the frozen seven-point method. PEGASE-9241 therefore closes the gate as a
+`boundary_of_validity`, not as cross-scale precursor support.
+
+This is independent-point parameter continuation, not a
+continuation-power-flow calculation or a certified voltage-stability boundary.

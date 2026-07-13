@@ -126,7 +126,8 @@ Outcome relevance.
 
 ## Phase III / Post-MVP Plateau B — Adapter ecosystem and domain testing
 
-Status: active. Plateau A is closed in `PLATEAU_A_CLOSURE.md`. The repository
+Status: completed with an explicit boundary of validity. Plateau A is closed in
+`PLATEAU_A_CLOSURE.md`. The repository
 adapter inventory has been classified, and the minimal serializable
 `SourceAdapter`/`SourceBatch` contract plus `ArraySourceAdapter` and the
 schema-driven `TableSourceAdapter` reference paths are implemented and tested.
@@ -144,9 +145,13 @@ boundary acceleration, but the constant apparent lead is tied to derivative
 edge exclusion and changes under downsampling. IEEE-300 and PEGASE-9241 require
 a new baseline-anchored continuation benchmark; V1 remains frozen.
 
-The A–G working baseline and the H–L continuation are versioned in
-`PHASE_III_STATUS_V2_9.md`. The next executable package is H; v2.9 does not mark
-Phase III complete.
+The A–G working baseline and the then-planned H–L continuation are versioned in
+`PHASE_III_STATUS_V2_9.md`. H–K are now implemented and evaluated in
+`ieee-scaling-pattern-v2`: all upward boundaries are resolved, no development
+case passes the frozen edge-independent precursor criteria, and held-out
+PEGASE-9241 closes as a documented boundary of validity. The governing record
+is `PHASE_III_CLOSURE.md`. L is later ecosystem expansion rather than a missing
+closure condition.
 
 ## Later, outside the MVP
 

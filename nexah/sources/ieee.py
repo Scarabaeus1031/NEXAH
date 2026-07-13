@@ -162,6 +162,27 @@ class IEEEPandapowerAdapter:
             context=context,
         )
 
+    def run_snapshot(
+        self,
+        load_scale: float,
+        *,
+        scenario_id: str,
+        provenance: Provenance,
+        context: Context,
+    ) -> IEEEPhysicalSnapshot:
+        """Solve one declared load point without fabricating failed physics."""
+
+        require_text(scenario_id, "scenario_id")
+        scale = float(load_scale)
+        if not isfinite(scale) or scale <= 0.0:
+            raise IEEESourceAdapterError("load scale must be finite and positive")
+        return self._run_snapshot(
+            load_scale=scale,
+            scenario_id=scenario_id,
+            provenance=provenance,
+            context=context,
+        )
+
     def iter_snapshots(
         self,
         load_scales: Sequence[float],
@@ -181,7 +202,7 @@ class IEEEPandapowerAdapter:
         if any(current <= previous for previous, current in zip(scales, scales[1:])):
             raise IEEESourceAdapterError("load scales must be strictly increasing")
         for index, load_scale in enumerate(scales):
-            yield self._run_snapshot(
+            yield self.run_snapshot(
                 load_scale=load_scale,
                 scenario_id=f"{campaign_id}:load-{index:03d}",
                 provenance=provenance,

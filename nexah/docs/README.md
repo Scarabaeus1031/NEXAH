@@ -18,6 +18,9 @@ These documents describe or record the minimal `nexah` package.
 - **[IEEE Scaling Pattern V1](../../validation/ieee_scaling_pattern_v1/)** —
   physical reconstruction and critical audit of the historical cross-scale
   curvature hypothesis through PEGASE-9241.
+- **[IEEE Scaling Pattern V2](../../validation/ieee_scaling_pattern_v2/)** —
+  baseline-anchored branches, refined convergence boundaries, edge-independent
+  pattern test, and PEGASE-9241 held-out gate.
 - **[archive/](archive/)** — development logs and historical status reports.
 
 The normative plan for the next Orientation Layer is maintained under

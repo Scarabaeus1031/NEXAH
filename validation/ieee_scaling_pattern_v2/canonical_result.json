@@ -1,0 +1,3187 @@
+{
+  "validation_id": "ieee-scaling-pattern-v2",
+  "frozen_design": {
+    "baseline_scale": 1.0,
+    "development_cases": [
+      "ieee9",
+      "ieee14",
+      "ieee30",
+      "ieee57",
+      "ieee118",
+      "ieee300",
+      "pegase1354"
+    ],
+    "held_out_case": "pegase9241",
+    "upward_range": [
+      1.0,
+      5.0
+    ],
+    "downward_range": [
+      1.0,
+      0.2
+    ],
+    "upward_step": 0.025,
+    "downward_step": 0.05,
+    "independent_point_solves": true,
+    "continuation_power_flow_claimed": false,
+    "boundary_tolerance": 0.005,
+    "maximum_refinements": 8,
+    "metric": "historical V32 c_struct from physical arrays",
+    "derivative": {
+      "method": "local polynomial second derivative",
+      "window": 7,
+      "degree": 3
+    },
+    "peak_acceptance": {
+      "minimum_boundary_steps": 4.0,
+      "minimum_relative_prominence": 0.1,
+      "maximum_resolution_shift_steps": 2.0
+    },
+    "resolution_check": "repeat on every second converged point",
+    "monotone_null": "quadratic curve must not produce an accepted peak",
+    "parameters_tuned_on_held_out_case": false,
+    "fabricated_failed_physics": false
+  },
+  "development_cases": [
+    {
+      "case_id": "ieee9",
+      "role": "method_development",
+      "baseline_converged": true,
+      "upward": {
+        "direction": "upward",
+        "boundary_status": "bracketed",
+        "attempted_points": 52,
+        "converged_points": 51,
+        "last_converged_scale": 2.25,
+        "first_failed_scale": 2.275,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000392660452999,
+            "failure": null
+          },
+          {
+            "load_scale": 1.025,
+            "converged": true,
+            "metric": 0.000411300901293,
+            "failure": null
+          },
+          {
+            "load_scale": 1.05,
+            "converged": true,
+            "metric": 0.000432009996256,
+            "failure": null
+          },
+          {
+            "load_scale": 1.075,
+            "converged": true,
+            "metric": 0.000455010847161,
+            "failure": null
+          },
+          {
+            "load_scale": 1.1,
+            "converged": true,
+            "metric": 0.000480570336954,
+            "failure": null
+          },
+          {
+            "load_scale": 1.125,
+            "converged": true,
+            "metric": 0.000509002259332,
+            "failure": null
+          },
+          {
+            "load_scale": 1.15,
+            "converged": true,
+            "metric": 0.000540670334676,
+            "failure": null
+          },
+          {
+            "load_scale": 1.175,
+            "converged": true,
+            "metric": 0.000575990973636,
+            "failure": null
+          },
+          {
+            "load_scale": 1.2,
+            "converged": true,
+            "metric": 0.000615435715855,
+            "failure": null
+          },
+          {
+            "load_scale": 1.225,
+            "converged": true,
+            "metric": 0.000659533340754,
+            "failure": null
+          },
+          {
+            "load_scale": 1.25,
+            "converged": true,
+            "metric": 0.000708871723038,
+            "failure": null
+          },
+          {
+            "load_scale": 1.275,
+            "converged": true,
+            "metric": 0.000764099578948,
+            "failure": null
+          },
+          {
+            "load_scale": 1.3,
+            "converged": true,
+            "metric": 0.000825928310353,
+            "failure": null
+          },
+          {
+            "load_scale": 1.325,
+            "converged": true,
+            "metric": 0.000845732573374,
+            "failure": null
+          },
+          {
+            "load_scale": 1.35,
+            "converged": true,
+            "metric": 0.000856922351482,
+            "failure": null
+          },
+          {
+            "load_scale": 1.375,
+            "converged": true,
+            "metric": 0.000872730656135,
+            "failure": null
+          },
+          {
+            "load_scale": 1.4,
+            "converged": true,
+            "metric": 0.000893016860261,
+            "failure": null
+          },
+          {
+            "load_scale": 1.425,
+            "converged": true,
+            "metric": 0.000917691335659,
+            "failure": null
+          },
+          {
+            "load_scale": 1.45,
+            "converged": true,
+            "metric": 0.000946708075459,
+            "failure": null
+          },
+          {
+            "load_scale": 1.475,
+            "converged": true,
+            "metric": 0.000980059689009,
+            "failure": null
+          },
+          {
+            "load_scale": 1.5,
+            "converged": true,
+            "metric": 0.00101777416754,
+            "failure": null
+          },
+          {
+            "load_scale": 1.525,
+            "converged": true,
+            "metric": 0.00105991299951,
+            "failure": null
+          },
+          {
+            "load_scale": 1.55,
+            "converged": true,
+            "metric": 0.00110657035009,
+            "failure": null
+          },
+          {
+            "load_scale": 1.575,
+            "converged": true,
+            "metric": 0.00115787312308,
+            "failure": null
+          },
+          {
+            "load_scale": 1.6,
+            "converged": true,
+            "metric": 0.00121398180422,
+            "failure": null
+          },
+          {
+            "load_scale": 1.625,
+            "converged": true,
+            "metric": 0.00127509204995,
+            "failure": null
+          },
+          {
+            "load_scale": 1.65,
+            "converged": true,
+            "metric": 0.00134143886311,
+            "failure": null
+          },
+          {
+            "load_scale": 1.675,
+            "converged": true,
+            "metric": 0.00141329333398,
+            "failure": null
+          },
+          {
+            "load_scale": 1.7,
+            "converged": true,
+            "metric": 0.00149097558326,
+            "failure": null
+          },
+          {
+            "load_scale": 1.725,
+            "converged": true,
+            "metric": 0.00157485465283,
+            "failure": null
+          },
+          {
+            "load_scale": 1.75,
+            "converged": true,
+            "metric": 0.00166535640033,
+            "failure": null
+          },
+          {
+            "load_scale": 1.775,
+            "converged": true,
+            "metric": 0.00176297181351,
+            "failure": null
+          },
+          {
+            "load_scale": 1.8,
+            "converged": true,
+            "metric": 0.00186826737424,
+            "failure": null
+          },
+          {
+            "load_scale": 1.825,
+            "converged": true,
+            "metric": 0.00198189789466,
+            "failure": null
+          },
+          {
+            "load_scale": 1.85,
+            "converged": true,
+            "metric": 0.00210462211978,
+            "failure": null
+          },
+          {
+            "load_scale": 1.875,
+            "converged": true,
+            "metric": 0.00223732048952,
+            "failure": null
+          },
+          {
+            "load_scale": 1.9,
+            "converged": true,
+            "metric": 0.00238100958769,
+            "failure": null
+          },
+          {
+            "load_scale": 1.925,
+            "converged": true,
+            "metric": 0.00253681234172,
+            "failure": null
+          },
+          {
+            "load_scale": 1.95,
+            "converged": true,
+            "metric": 0.00270603682083,
+            "failure": null
+          },
+          {
+            "load_scale": 1.975,
+            "converged": true,
+            "metric": 0.00289552813111,
+            "failure": null
+          },
+          {
+            "load_scale": 2.0,
+            "converged": true,
+            "metric": 0.00310154623254,
+            "failure": null
+          },
+          {
+            "load_scale": 2.025,
+            "converged": true,
+            "metric": 0.00332780608882,
+            "failure": null
+          },
+          {
+            "load_scale": 2.05,
+            "converged": true,
+            "metric": 0.00357809769092,
+            "failure": null
+          },
+          {
+            "load_scale": 2.075,
+            "converged": true,
+            "metric": 0.00385728052664,
+            "failure": null
+          },
+          {
+            "load_scale": 2.1,
+            "converged": true,
+            "metric": 0.00417194078742,
+            "failure": null
+          },
+          {
+            "load_scale": 2.125,
+            "converged": true,
+            "metric": 0.0045331773401,
+            "failure": null
+          },
+          {
+            "load_scale": 2.15,
+            "converged": true,
+            "metric": 0.00495730994337,
+            "failure": null
+          },
+          {
+            "load_scale": 2.175,
+            "converged": true,
+            "metric": 0.00546605767218,
+            "failure": null
+          },
+          {
+            "load_scale": 2.2,
+            "converged": true,
+            "metric": 0.00610481697459,
+            "failure": null
+          },
+          {
+            "load_scale": 2.225,
+            "converged": true,
+            "metric": 0.00698295260534,
+            "failure": null
+          },
+          {
+            "load_scale": 2.25,
+            "converged": true,
+            "metric": 0.00863909731582,
+            "failure": null
+          },
+          {
+            "load_scale": 2.275,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "downward": {
+        "direction": "downward",
+        "boundary_status": "right_censored",
+        "attempted_points": 17,
+        "converged_points": 17,
+        "last_converged_scale": 0.2,
+        "first_failed_scale": null,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000392660452999,
+            "failure": null
+          },
+          {
+            "load_scale": 0.95,
+            "converged": true,
+            "metric": 0.00036089375315,
+            "failure": null
+          },
+          {
+            "load_scale": 0.9,
+            "converged": true,
+            "metric": 0.000335693395669,
+            "failure": null
+          },
+          {
+            "load_scale": 0.85,
+            "converged": true,
+            "metric": 0.000316611710852,
+            "failure": null
+          },
+          {
+            "load_scale": 0.8,
+            "converged": true,
+            "metric": 0.000303909284169,
+            "failure": null
+          },
+          {
+            "load_scale": 0.75,
+            "converged": true,
+            "metric": 0.000301591135441,
+            "failure": null
+          },
+          {
+            "load_scale": 0.7,
+            "converged": true,
+            "metric": 0.000310524449124,
+            "failure": null
+          },
+          {
+            "load_scale": 0.65,
+            "converged": true,
+            "metric": 0.00032604506306,
+            "failure": null
+          },
+          {
+            "load_scale": 0.6,
+            "converged": true,
+            "metric": 0.000348054343927,
+            "failure": null
+          },
+          {
+            "load_scale": 0.55,
+            "converged": true,
+            "metric": 0.000377117233824,
+            "failure": null
+          },
+          {
+            "load_scale": 0.5,
+            "converged": true,
+            "metric": 0.000414287153728,
+            "failure": null
+          },
+          {
+            "load_scale": 0.45,
+            "converged": true,
+            "metric": 0.000460468385111,
+            "failure": null
+          },
+          {
+            "load_scale": 0.4,
+            "converged": true,
+            "metric": 0.000516478075176,
+            "failure": null
+          },
+          {
+            "load_scale": 0.35,
+            "converged": true,
+            "metric": 0.000583317119931,
+            "failure": null
+          },
+          {
+            "load_scale": 0.3,
+            "converged": true,
+            "metric": 0.000662025469674,
+            "failure": null
+          },
+          {
+            "load_scale": 0.25,
+            "converged": true,
+            "metric": 0.000753686418797,
+            "failure": null
+          },
+          {
+            "load_scale": 0.2,
+            "converged": true,
+            "metric": 0.000859448345524,
+            "failure": null
+          }
+        ]
+      },
+      "refined_boundary": {
+        "last_converged_scale": 2.253125,
+        "first_failed_scale": 2.25625,
+        "interval_width": 0.003125,
+        "tolerance": 0.005,
+        "evaluations": 3
+      },
+      "pattern_test": {
+        "classification": "boundary_acceleration_only",
+        "reason": "no stable interior peak under frozen criteria",
+        "candidate": {
+          "load_scale": 1.225,
+          "curvature": 0.00845476363632,
+          "prominence": 0.00430735220395,
+          "relative_prominence": 0.0125567219112,
+          "boundary_distance": 1.028125,
+          "boundary_distance_steps": 41.125,
+          "passes_prominence": false,
+          "passes_distance": true
+        },
+        "downsampled_candidate": null,
+        "resolution_stable": false
+      }
+    },
+    {
+      "case_id": "ieee14",
+      "role": "method_development",
+      "baseline_converged": true,
+      "upward": {
+        "direction": "upward",
+        "boundary_status": "bracketed",
+        "attempted_points": 122,
+        "converged_points": 121,
+        "last_converged_scale": 4.0,
+        "first_failed_scale": 4.025,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000348989708089,
+            "failure": null
+          },
+          {
+            "load_scale": 1.025,
+            "converged": true,
+            "metric": 0.000360151542329,
+            "failure": null
+          },
+          {
+            "load_scale": 1.05,
+            "converged": true,
+            "metric": 0.000371629199508,
+            "failure": null
+          },
+          {
+            "load_scale": 1.075,
+            "converged": true,
+            "metric": 0.000383439505824,
+            "failure": null
+          },
+          {
+            "load_scale": 1.1,
+            "converged": true,
+            "metric": 0.000395599188209,
+            "failure": null
+          },
+          {
+            "load_scale": 1.125,
+            "converged": true,
+            "metric": 0.000408124854242,
+            "failure": null
+          },
+          {
+            "load_scale": 1.15,
+            "converged": true,
+            "metric": 0.000421032974951,
+            "failure": null
+          },
+          {
+            "load_scale": 1.175,
+            "converged": true,
+            "metric": 0.00043433987066,
+            "failure": null
+          },
+          {
+            "load_scale": 1.2,
+            "converged": true,
+            "metric": 0.000448061699926,
+            "failure": null
+          },
+          {
+            "load_scale": 1.225,
+            "converged": true,
+            "metric": 0.000462214451626,
+            "failure": null
+          },
+          {
+            "load_scale": 1.25,
+            "converged": true,
+            "metric": 0.000476813940143,
+            "failure": null
+          },
+          {
+            "load_scale": 1.275,
+            "converged": true,
+            "metric": 0.000491875803598,
+            "failure": null
+          },
+          {
+            "load_scale": 1.3,
+            "converged": true,
+            "metric": 0.000507415505022,
+            "failure": null
+          },
+          {
+            "load_scale": 1.325,
+            "converged": true,
+            "metric": 0.000523448336327,
+            "failure": null
+          },
+          {
+            "load_scale": 1.35,
+            "converged": true,
+            "metric": 0.000539989424911,
+            "failure": null
+          },
+          {
+            "load_scale": 1.375,
+            "converged": true,
+            "metric": 0.00055705374272,
+            "failure": null
+          },
+          {
+            "load_scale": 1.4,
+            "converged": true,
+            "metric": 0.000574656117559,
+            "failure": null
+          },
+          {
+            "load_scale": 1.425,
+            "converged": true,
+            "metric": 0.000592811246468,
+            "failure": null
+          },
+          {
+            "load_scale": 1.45,
+            "converged": true,
+            "metric": 0.000611533710923,
+            "failure": null
+          },
+          {
+            "load_scale": 1.475,
+            "converged": true,
+            "metric": 0.000630837993698,
+            "failure": null
+          },
+          {
+            "load_scale": 1.5,
+            "converged": true,
+            "metric": 0.000650738497155,
+            "failure": null
+          },
+          {
+            "load_scale": 1.525,
+            "converged": true,
+            "metric": 0.000671249562795,
+            "failure": null
+          },
+          {
+            "load_scale": 1.55,
+            "converged": true,
+            "metric": 0.000692385491895,
+            "failure": null
+          },
+          {
+            "load_scale": 1.575,
+            "converged": true,
+            "metric": 0.000714160567055,
+            "failure": null
+          },
+          {
+            "load_scale": 1.6,
+            "converged": true,
+            "metric": 0.000736589074533,
+            "failure": null
+          },
+          {
+            "load_scale": 1.625,
+            "converged": true,
+            "metric": 0.000759685327234,
+            "failure": null
+          },
+          {
+            "load_scale": 1.65,
+            "converged": true,
+            "metric": 0.000783463688232,
+            "failure": null
+          },
+          {
+            "load_scale": 1.675,
+            "converged": true,
+            "metric": 0.000807938594764,
+            "failure": null
+          },
+          {
+            "load_scale": 1.7,
+            "converged": true,
+            "metric": 0.000833124582597,
+            "failure": null
+          },
+          {
+            "load_scale": 1.725,
+            "converged": true,
+            "metric": 0.000859036310725,
+            "failure": null
+          },
+          {
+            "load_scale": 1.75,
+            "converged": true,
+            "metric": 0.00088568858636,
+            "failure": null
+          },
+          {
+            "load_scale": 1.775,
+            "converged": true,
+            "metric": 0.000913096390191,
+            "failure": null
+          },
+          {
+            "load_scale": 1.8,
+            "converged": true,
+            "metric": 0.000941274901899,
+            "failure": null
+          },
+          {
+            "load_scale": 1.825,
+            "converged": true,
+            "metric": 0.000970239525941,
+            "failure": null
+          },
+          {
+            "load_scale": 1.85,
+            "converged": true,
+            "metric": 0.00100000591762,
+            "failure": null
+          },
+          {
+            "load_scale": 1.875,
+            "converged": true,
+            "metric": 0.00103059000948,
+            "failure": null
+          },
+          {
+            "load_scale": 1.9,
+            "converged": true,
+            "metric": 0.001062008038,
+            "failure": null
+          },
+          {
+            "load_scale": 1.925,
+            "converged": true,
+            "metric": 0.00109427657083,
+            "failure": null
+          },
+          {
+            "load_scale": 1.95,
+            "converged": true,
+            "metric": 0.00112741253434,
+            "failure": null
+          },
+          {
+            "load_scale": 1.975,
+            "converged": true,
+            "metric": 0.00116143324181,
+            "failure": null
+          },
+          {
+            "load_scale": 2.0,
+            "converged": true,
+            "metric": 0.00119635642225,
+            "failure": null
+          },
+          {
+            "load_scale": 2.025,
+            "converged": true,
+            "metric": 0.00123220024987,
+            "failure": null
+          },
+          {
+            "load_scale": 2.05,
+            "converged": true,
+            "metric": 0.00126898337443,
+            "failure": null
+          },
+          {
+            "load_scale": 2.075,
+            "converged": true,
+            "metric": 0.00130672495245,
+            "failure": null
+          },
+          {
+            "load_scale": 2.1,
+            "converged": true,
+            "metric": 0.00134544467953,
+            "failure": null
+          },
+          {
+            "load_scale": 2.125,
+            "converged": true,
+            "metric": 0.00138516282373,
+            "failure": null
+          },
+          {
+            "load_scale": 2.15,
+            "converged": true,
+            "metric": 0.00142590026033,
+            "failure": null
+          },
+          {
+            "load_scale": 2.175,
+            "converged": true,
+            "metric": 0.00146767850802,
+            "failure": null
+          },
+          {
+            "load_scale": 2.2,
+            "converged": true,
+            "metric": 0.0015105197666,
+            "failure": null
+          },
+          {
+            "load_scale": 2.225,
+            "converged": true,
+            "metric": 0.00155444695659,
+            "failure": null
+          },
+          {
+            "load_scale": 2.25,
+            "converged": true,
+            "metric": 0.00159948376063,
+            "failure": null
+          },
+          {
+            "load_scale": 2.275,
+            "converged": true,
+            "metric": 0.00164565466712,
+            "failure": null
+          },
+          {
+            "load_scale": 2.3,
+            "converged": true,
+            "metric": 0.00169298501619,
+            "failure": null
+          },
+          {
+            "load_scale": 2.325,
+            "converged": true,
+            "metric": 0.00174150104825,
+            "failure": null
+          },
+          {
+            "load_scale": 2.35,
+            "converged": true,
+            "metric": 0.00179122995531,
+            "failure": null
+          },
+          {
+            "load_scale": 2.375,
+            "converged": true,
+            "metric": 0.00184219993552,
+            "failure": null
+          },
+          {
+            "load_scale": 2.4,
+            "converged": true,
+            "metric": 0.00189444025096,
+            "failure": null
+          },
+          {
+            "load_scale": 2.425,
+            "converged": true,
+            "metric": 0.00194798128929,
+            "failure": null
+          },
+          {
+            "load_scale": 2.45,
+            "converged": true,
+            "metric": 0.00200285462935,
+            "failure": null
+          },
+          {
+            "load_scale": 2.475,
+            "converged": true,
+            "metric": 0.0020590931113,
+            "failure": null
+          },
+          {
+            "load_scale": 2.5,
+            "converged": true,
+            "metric": 0.00211673091158,
+            "failure": null
+          },
+          {
+            "load_scale": 2.525,
+            "converged": true,
+            "metric": 0.00217580362331,
+            "failure": null
+          },
+          {
+            "load_scale": 2.55,
+            "converged": true,
+            "metric": 0.00223634834246,
+            "failure": null
+          },
+          {
+            "load_scale": 2.575,
+            "converged": true,
+            "metric": 0.00229840376053,
+            "failure": null
+          },
+          {
+            "load_scale": 2.6,
+            "converged": true,
+            "metric": 0.00236201026438,
+            "failure": null
+          },
+          {
+            "load_scale": 2.625,
+            "converged": true,
+            "metric": 0.00242721297534,
+            "failure": null
+          },
+          {
+            "load_scale": 2.65,
+            "converged": true,
+            "metric": 0.00249405069845,
+            "failure": null
+          },
+          {
+            "load_scale": 2.675,
+            "converged": true,
+            "metric": 0.00256257206723,
+            "failure": null
+          },
+          {
+            "load_scale": 2.7,
+            "converged": true,
+            "metric": 0.00263282543714,
+            "failure": null
+          },
+          {
+            "load_scale": 2.725,
+            "converged": true,
+            "metric": 0.00270486149645,
+            "failure": null
+          },
+          {
+            "load_scale": 2.75,
+            "converged": true,
+            "metric": 0.00277873342761,
+            "failure": null
+          },
+          {
+            "load_scale": 2.775,
+            "converged": true,
+            "metric": 0.00285449708311,
+            "failure": null
+          },
+          {
+            "load_scale": 2.8,
+            "converged": true,
+            "metric": 0.00293221117745,
+            "failure": null
+          },
+          {
+            "load_scale": 2.825,
+            "converged": true,
+            "metric": 0.00301193749692,
+            "failure": null
+          },
+          {
+            "load_scale": 2.85,
+            "converged": true,
+            "metric": 0.00309374112953,
+            "failure": null
+          },
+          {
+            "load_scale": 2.875,
+            "converged": true,
+            "metric": 0.00317769071731,
+            "failure": null
+          },
+          {
+            "load_scale": 2.9,
+            "converged": true,
+            "metric": 0.00326385873387,
+            "failure": null
+          },
+          {
+            "load_scale": 2.925,
+            "converged": true,
+            "metric": 0.00335232179026,
+            "failure": null
+          },
+          {
+            "load_scale": 2.95,
+            "converged": true,
+            "metric": 0.00344316097294,
+            "failure": null
+          },
+          {
+            "load_scale": 2.975,
+            "converged": true,
+            "metric": 0.00353646221783,
+            "failure": null
+          },
+          {
+            "load_scale": 3.0,
+            "converged": true,
+            "metric": 0.00363231672561,
+            "failure": null
+          },
+          {
+            "load_scale": 3.025,
+            "converged": true,
+            "metric": 0.00373082142364,
+            "failure": null
+          },
+          {
+            "load_scale": 3.05,
+            "converged": true,
+            "metric": 0.00383207948141,
+            "failure": null
+          },
+          {
+            "load_scale": 3.075,
+            "converged": true,
+            "metric": 0.00393620088695,
+            "failure": null
+          },
+          {
+            "load_scale": 3.1,
+            "converged": true,
+            "metric": 0.00404330309363,
+            "failure": null
+          },
+          {
+            "load_scale": 3.125,
+            "converged": true,
+            "metric": 0.00415351174789,
+            "failure": null
+          },
+          {
+            "load_scale": 3.15,
+            "converged": true,
+            "metric": 0.00426696151074,
+            "failure": null
+          },
+          {
+            "load_scale": 3.175,
+            "converged": true,
+            "metric": 0.00438379698831,
+            "failure": null
+          },
+          {
+            "load_scale": 3.2,
+            "converged": true,
+            "metric": 0.00450417378949,
+            "failure": null
+          },
+          {
+            "load_scale": 3.225,
+            "converged": true,
+            "metric": 0.00462825973285,
+            "failure": null
+          },
+          {
+            "load_scale": 3.25,
+            "converged": true,
+            "metric": 0.0047562362291,
+            "failure": null
+          },
+          {
+            "load_scale": 3.275,
+            "converged": true,
+            "metric": 0.0048882998716,
+            "failure": null
+          },
+          {
+            "load_scale": 3.3,
+            "converged": true,
+            "metric": 0.00502466427442,
+            "failure": null
+          },
+          {
+            "load_scale": 3.325,
+            "converged": true,
+            "metric": 0.00516556220673,
+            "failure": null
+          },
+          {
+            "load_scale": 3.35,
+            "converged": true,
+            "metric": 0.00531124808408,
+            "failure": null
+          },
+          {
+            "load_scale": 3.375,
+            "converged": true,
+            "metric": 0.00546200089239,
+            "failure": null
+          },
+          {
+            "load_scale": 3.4,
+            "converged": true,
+            "metric": 0.00561812764016,
+            "failure": null
+          },
+          {
+            "load_scale": 3.425,
+            "converged": true,
+            "metric": 0.00577996746034,
+            "failure": null
+          },
+          {
+            "load_scale": 3.45,
+            "converged": true,
+            "metric": 0.00594789651789,
+            "failure": null
+          },
+          {
+            "load_scale": 3.475,
+            "converged": true,
+            "metric": 0.00612233392514,
+            "failure": null
+          },
+          {
+            "load_scale": 3.5,
+            "converged": true,
+            "metric": 0.00630374892996,
+            "failure": null
+          },
+          {
+            "load_scale": 3.525,
+            "converged": true,
+            "metric": 0.00649266972804,
+            "failure": null
+          },
+          {
+            "load_scale": 3.55,
+            "converged": true,
+            "metric": 0.00668969437109,
+            "failure": null
+          },
+          {
+            "load_scale": 3.575,
+            "converged": true,
+            "metric": 0.00689550441363,
+            "failure": null
+          },
+          {
+            "load_scale": 3.6,
+            "converged": true,
+            "metric": 0.00711088218676,
+            "failure": null
+          },
+          {
+            "load_scale": 3.625,
+            "converged": true,
+            "metric": 0.0073367329487,
+            "failure": null
+          },
+          {
+            "load_scale": 3.65,
+            "converged": true,
+            "metric": 0.00757411370234,
+            "failure": null
+          },
+          {
+            "load_scale": 3.675,
+            "converged": true,
+            "metric": 0.00782428281271,
+            "failure": null
+          },
+          {
+            "load_scale": 3.7,
+            "converged": true,
+            "metric": 0.00808871350544,
+            "failure": null
+          },
+          {
+            "load_scale": 3.725,
+            "converged": true,
+            "metric": 0.00836921526518,
+            "failure": null
+          },
+          {
+            "load_scale": 3.75,
+            "converged": true,
+            "metric": 0.00866800451735,
+            "failure": null
+          },
+          {
+            "load_scale": 3.775,
+            "converged": true,
+            "metric": 0.00898785800388,
+            "failure": null
+          },
+          {
+            "load_scale": 3.8,
+            "converged": true,
+            "metric": 0.00933233372137,
+            "failure": null
+          },
+          {
+            "load_scale": 3.825,
+            "converged": true,
+            "metric": 0.00970611834079,
+            "failure": null
+          },
+          {
+            "load_scale": 3.85,
+            "converged": true,
+            "metric": 0.0101156027635,
+            "failure": null
+          },
+          {
+            "load_scale": 3.875,
+            "converged": true,
+            "metric": 0.0105699009182,
+            "failure": null
+          },
+          {
+            "load_scale": 3.9,
+            "converged": true,
+            "metric": 0.0110828174524,
+            "failure": null
+          },
+          {
+            "load_scale": 3.925,
+            "converged": true,
+            "metric": 0.0116771351622,
+            "failure": null
+          },
+          {
+            "load_scale": 3.95,
+            "converged": true,
+            "metric": 0.012395896226,
+            "failure": null
+          },
+          {
+            "load_scale": 3.975,
+            "converged": true,
+            "metric": 0.0133427170574,
+            "failure": null
+          },
+          {
+            "load_scale": 4.0,
+            "converged": true,
+            "metric": 0.0150326828159,
+            "failure": null
+          },
+          {
+            "load_scale": 4.025,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "downward": {
+        "direction": "downward",
+        "boundary_status": "right_censored",
+        "attempted_points": 17,
+        "converged_points": 17,
+        "last_converged_scale": 0.2,
+        "first_failed_scale": null,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000348989708089,
+            "failure": null
+          },
+          {
+            "load_scale": 0.95,
+            "converged": true,
+            "metric": 0.000327545846608,
+            "failure": null
+          },
+          {
+            "load_scale": 0.9,
+            "converged": true,
+            "metric": 0.000307161946068,
+            "failure": null
+          },
+          {
+            "load_scale": 0.85,
+            "converged": true,
+            "metric": 0.000287702437633,
+            "failure": null
+          },
+          {
+            "load_scale": 0.8,
+            "converged": true,
+            "metric": 0.000269032844783,
+            "failure": null
+          },
+          {
+            "load_scale": 0.75,
+            "converged": true,
+            "metric": 0.000251020808846,
+            "failure": null
+          },
+          {
+            "load_scale": 0.7,
+            "converged": true,
+            "metric": 0.000233537082189,
+            "failure": null
+          },
+          {
+            "load_scale": 0.65,
+            "converged": true,
+            "metric": 0.00021645641363,
+            "failure": null
+          },
+          {
+            "load_scale": 0.6,
+            "converged": true,
+            "metric": 0.000199658232858,
+            "failure": null
+          },
+          {
+            "load_scale": 0.55,
+            "converged": true,
+            "metric": 0.000183026997672,
+            "failure": null
+          },
+          {
+            "load_scale": 0.5,
+            "converged": true,
+            "metric": 0.000166451956619,
+            "failure": null
+          },
+          {
+            "load_scale": 0.45,
+            "converged": true,
+            "metric": 0.000149825782821,
+            "failure": null
+          },
+          {
+            "load_scale": 0.4,
+            "converged": true,
+            "metric": 0.00013304069145,
+            "failure": null
+          },
+          {
+            "load_scale": 0.35,
+            "converged": true,
+            "metric": 0.00011597797689,
+            "failure": null
+          },
+          {
+            "load_scale": 0.3,
+            "converged": true,
+            "metric": 9.8476598081e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.25,
+            "converged": true,
+            "metric": 8.02022702823e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.2,
+            "converged": true,
+            "metric": 6.11099483429e-05,
+            "failure": null
+          }
+        ]
+      },
+      "refined_boundary": {
+        "last_converged_scale": 4.003125,
+        "first_failed_scale": 4.00625,
+        "interval_width": 0.003125,
+        "tolerance": 0.005,
+        "evaluations": 3
+      },
+      "pattern_test": {
+        "classification": "boundary_acceleration_only",
+        "reason": "no stable interior peak under frozen criteria",
+        "candidate": null,
+        "downsampled_candidate": null,
+        "resolution_stable": false
+      }
+    },
+    {
+      "case_id": "ieee30",
+      "role": "method_development",
+      "baseline_converged": true,
+      "upward": {
+        "direction": "upward",
+        "boundary_status": "bracketed",
+        "attempted_points": 108,
+        "converged_points": 107,
+        "last_converged_scale": 3.65,
+        "first_failed_scale": 3.675,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 6.10356235097e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.025,
+            "converged": true,
+            "metric": 6.94101979095e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.05,
+            "converged": true,
+            "metric": 7.87729257285e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.075,
+            "converged": true,
+            "metric": 8.20289173331e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.1,
+            "converged": true,
+            "metric": 8.5203499632e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.125,
+            "converged": true,
+            "metric": 8.89029905319e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.15,
+            "converged": true,
+            "metric": 9.31183726318e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.175,
+            "converged": true,
+            "metric": 9.782231034e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.2,
+            "converged": true,
+            "metric": 0.000102948701373,
+            "failure": null
+          },
+          {
+            "load_scale": 1.225,
+            "converged": true,
+            "metric": 0.000108478710105,
+            "failure": null
+          },
+          {
+            "load_scale": 1.25,
+            "converged": true,
+            "metric": 0.000114399573754,
+            "failure": null
+          },
+          {
+            "load_scale": 1.275,
+            "converged": true,
+            "metric": 0.000120704635825,
+            "failure": null
+          },
+          {
+            "load_scale": 1.3,
+            "converged": true,
+            "metric": 0.00012740544487,
+            "failure": null
+          },
+          {
+            "load_scale": 1.325,
+            "converged": true,
+            "metric": 0.000134521865332,
+            "failure": null
+          },
+          {
+            "load_scale": 1.35,
+            "converged": true,
+            "metric": 0.000142012316355,
+            "failure": null
+          },
+          {
+            "load_scale": 1.375,
+            "converged": true,
+            "metric": 0.000149868440373,
+            "failure": null
+          },
+          {
+            "load_scale": 1.4,
+            "converged": true,
+            "metric": 0.000158114994336,
+            "failure": null
+          },
+          {
+            "load_scale": 1.425,
+            "converged": true,
+            "metric": 0.0001667371959,
+            "failure": null
+          },
+          {
+            "load_scale": 1.45,
+            "converged": true,
+            "metric": 0.000175720988991,
+            "failure": null
+          },
+          {
+            "load_scale": 1.475,
+            "converged": true,
+            "metric": 0.000185067210057,
+            "failure": null
+          },
+          {
+            "load_scale": 1.5,
+            "converged": true,
+            "metric": 0.00019477675461,
+            "failure": null
+          },
+          {
+            "load_scale": 1.525,
+            "converged": true,
+            "metric": 0.000204870434998,
+            "failure": null
+          },
+          {
+            "load_scale": 1.55,
+            "converged": true,
+            "metric": 0.000215365322662,
+            "failure": null
+          },
+          {
+            "load_scale": 1.575,
+            "converged": true,
+            "metric": 0.000226210463926,
+            "failure": null
+          },
+          {
+            "load_scale": 1.6,
+            "converged": true,
+            "metric": 0.000237402211925,
+            "failure": null
+          },
+          {
+            "load_scale": 1.625,
+            "converged": true,
+            "metric": 0.000249297329122,
+            "failure": null
+          },
+          {
+            "load_scale": 1.65,
+            "converged": true,
+            "metric": 0.00026173957966,
+            "failure": null
+          },
+          {
+            "load_scale": 1.675,
+            "converged": true,
+            "metric": 0.000274620584868,
+            "failure": null
+          },
+          {
+            "load_scale": 1.7,
+            "converged": true,
+            "metric": 0.000287886503258,
+            "failure": null
+          },
+          {
+            "load_scale": 1.725,
+            "converged": true,
+            "metric": 0.000301566644946,
+            "failure": null
+          },
+          {
+            "load_scale": 1.75,
+            "converged": true,
+            "metric": 0.000315677518644,
+            "failure": null
+          },
+          {
+            "load_scale": 1.775,
+            "converged": true,
+            "metric": 0.00033023221739,
+            "failure": null
+          },
+          {
+            "load_scale": 1.8,
+            "converged": true,
+            "metric": 0.000345242611616,
+            "failure": null
+          },
+          {
+            "load_scale": 1.825,
+            "converged": true,
+            "metric": 0.000360720145669,
+            "failure": null
+          },
+          {
+            "load_scale": 1.85,
+            "converged": true,
+            "metric": 0.000376676200161,
+            "failure": null
+          },
+          {
+            "load_scale": 1.875,
+            "converged": true,
+            "metric": 0.000393122283822,
+            "failure": null
+          },
+          {
+            "load_scale": 1.9,
+            "converged": true,
+            "metric": 0.00041007014811,
+            "failure": null
+          },
+          {
+            "load_scale": 1.925,
+            "converged": true,
+            "metric": 0.000427531863355,
+            "failure": null
+          },
+          {
+            "load_scale": 1.95,
+            "converged": true,
+            "metric": 0.000445519874557,
+            "failure": null
+          },
+          {
+            "load_scale": 1.975,
+            "converged": true,
+            "metric": 0.000464047046068,
+            "failure": null
+          },
+          {
+            "load_scale": 2.0,
+            "converged": true,
+            "metric": 0.00048312670022,
+            "failure": null
+          },
+          {
+            "load_scale": 2.025,
+            "converged": true,
+            "metric": 0.000502772652842,
+            "failure": null
+          },
+          {
+            "load_scale": 2.05,
+            "converged": true,
+            "metric": 0.000522999247477,
+            "failure": null
+          },
+          {
+            "load_scale": 2.075,
+            "converged": true,
+            "metric": 0.000543821389504,
+            "failure": null
+          },
+          {
+            "load_scale": 2.1,
+            "converged": true,
+            "metric": 0.000565254580976,
+            "failure": null
+          },
+          {
+            "load_scale": 2.125,
+            "converged": true,
+            "metric": 0.000587314956783,
+            "failure": null
+          },
+          {
+            "load_scale": 2.15,
+            "converged": true,
+            "metric": 0.000610019322643,
+            "failure": null
+          },
+          {
+            "load_scale": 2.175,
+            "converged": true,
+            "metric": 0.000633385195323,
+            "failure": null
+          },
+          {
+            "load_scale": 2.2,
+            "converged": true,
+            "metric": 0.000657430845459,
+            "failure": null
+          },
+          {
+            "load_scale": 2.225,
+            "converged": true,
+            "metric": 0.000682175343353,
+            "failure": null
+          },
+          {
+            "load_scale": 2.25,
+            "converged": true,
+            "metric": 0.000707645555517,
+            "failure": null
+          },
+          {
+            "load_scale": 2.275,
+            "converged": true,
+            "metric": 0.000733857594072,
+            "failure": null
+          },
+          {
+            "load_scale": 2.3,
+            "converged": true,
+            "metric": 0.000760829957733,
+            "failure": null
+          },
+          {
+            "load_scale": 2.325,
+            "converged": true,
+            "metric": 0.000788586935833,
+            "failure": null
+          },
+          {
+            "load_scale": 2.35,
+            "converged": true,
+            "metric": 0.00081715244165,
+            "failure": null
+          },
+          {
+            "load_scale": 2.375,
+            "converged": true,
+            "metric": 0.000846551549993,
+            "failure": null
+          },
+          {
+            "load_scale": 2.4,
+            "converged": true,
+            "metric": 0.000876810575229,
+            "failure": null
+          },
+          {
+            "load_scale": 2.425,
+            "converged": true,
+            "metric": 0.000907957155637,
+            "failure": null
+          },
+          {
+            "load_scale": 2.45,
+            "converged": true,
+            "metric": 0.000940020344437,
+            "failure": null
+          },
+          {
+            "load_scale": 2.475,
+            "converged": true,
+            "metric": 0.000973030707686,
+            "failure": null
+          },
+          {
+            "load_scale": 2.5,
+            "converged": true,
+            "metric": 0.00100702042881,
+            "failure": null
+          },
+          {
+            "load_scale": 2.525,
+            "converged": true,
+            "metric": 0.00104202341871,
+            "failure": null
+          },
+          {
+            "load_scale": 2.55,
+            "converged": true,
+            "metric": 0.00107807542839,
+            "failure": null
+          },
+          {
+            "load_scale": 2.575,
+            "converged": true,
+            "metric": 0.00111521415655,
+            "failure": null
+          },
+          {
+            "load_scale": 2.6,
+            "converged": true,
+            "metric": 0.00115347933285,
+            "failure": null
+          },
+          {
+            "load_scale": 2.625,
+            "converged": true,
+            "metric": 0.00119291272277,
+            "failure": null
+          },
+          {
+            "load_scale": 2.65,
+            "converged": true,
+            "metric": 0.00123355787271,
+            "failure": null
+          },
+          {
+            "load_scale": 2.675,
+            "converged": true,
+            "metric": 0.00127545875064,
+            "failure": null
+          },
+          {
+            "load_scale": 2.7,
+            "converged": true,
+            "metric": 0.0013186482206,
+            "failure": null
+          },
+          {
+            "load_scale": 2.725,
+            "converged": true,
+            "metric": 0.00136332542112,
+            "failure": null
+          },
+          {
+            "load_scale": 2.75,
+            "converged": true,
+            "metric": 0.00140944454804,
+            "failure": null
+          },
+          {
+            "load_scale": 2.775,
+            "converged": true,
+            "metric": 0.00145703728717,
+            "failure": null
+          },
+          {
+            "load_scale": 2.8,
+            "converged": true,
+            "metric": 0.00150617670739,
+            "failure": null
+          },
+          {
+            "load_scale": 2.825,
+            "converged": true,
+            "metric": 0.00155693251538,
+            "failure": null
+          },
+          {
+            "load_scale": 2.85,
+            "converged": true,
+            "metric": 0.00160936361022,
+            "failure": null
+          },
+          {
+            "load_scale": 2.875,
+            "converged": true,
+            "metric": 0.00166370914155,
+            "failure": null
+          },
+          {
+            "load_scale": 2.9,
+            "converged": true,
+            "metric": 0.00171999249833,
+            "failure": null
+          },
+          {
+            "load_scale": 2.925,
+            "converged": true,
+            "metric": 0.00177823770276,
+            "failure": null
+          },
+          {
+            "load_scale": 2.95,
+            "converged": true,
+            "metric": 0.00183856444648,
+            "failure": null
+          },
+          {
+            "load_scale": 2.975,
+            "converged": true,
+            "metric": 0.00190109336854,
+            "failure": null
+          },
+          {
+            "load_scale": 3.0,
+            "converged": true,
+            "metric": 0.00196595381722,
+            "failure": null
+          },
+          {
+            "load_scale": 3.025,
+            "converged": true,
+            "metric": 0.00203328661095,
+            "failure": null
+          },
+          {
+            "load_scale": 3.05,
+            "converged": true,
+            "metric": 0.0021032461886,
+            "failure": null
+          },
+          {
+            "load_scale": 3.075,
+            "converged": true,
+            "metric": 0.00217600283257,
+            "failure": null
+          },
+          {
+            "load_scale": 3.1,
+            "converged": true,
+            "metric": 0.00225174519733,
+            "failure": null
+          },
+          {
+            "load_scale": 3.125,
+            "converged": true,
+            "metric": 0.00233068329357,
+            "failure": null
+          },
+          {
+            "load_scale": 3.15,
+            "converged": true,
+            "metric": 0.00241305207667,
+            "failure": null
+          },
+          {
+            "load_scale": 3.175,
+            "converged": true,
+            "metric": 0.00249911581777,
+            "failure": null
+          },
+          {
+            "load_scale": 3.2,
+            "converged": true,
+            "metric": 0.00258917348665,
+            "failure": null
+          },
+          {
+            "load_scale": 3.225,
+            "converged": true,
+            "metric": 0.00268356545095,
+            "failure": null
+          },
+          {
+            "load_scale": 3.25,
+            "converged": true,
+            "metric": 0.00278271140167,
+            "failure": null
+          },
+          {
+            "load_scale": 3.275,
+            "converged": true,
+            "metric": 0.00288720192373,
+            "failure": null
+          },
+          {
+            "load_scale": 3.3,
+            "converged": true,
+            "metric": 0.00299741669162,
+            "failure": null
+          },
+          {
+            "load_scale": 3.325,
+            "converged": true,
+            "metric": 0.00311396348421,
+            "failure": null
+          },
+          {
+            "load_scale": 3.35,
+            "converged": true,
+            "metric": 0.00323758135566,
+            "failure": null
+          },
+          {
+            "load_scale": 3.375,
+            "converged": true,
+            "metric": 0.00336913747639,
+            "failure": null
+          },
+          {
+            "load_scale": 3.4,
+            "converged": true,
+            "metric": 0.00350992373046,
+            "failure": null
+          },
+          {
+            "load_scale": 3.425,
+            "converged": true,
+            "metric": 0.00366159089177,
+            "failure": null
+          },
+          {
+            "load_scale": 3.45,
+            "converged": true,
+            "metric": 0.00382546496659,
+            "failure": null
+          },
+          {
+            "load_scale": 3.475,
+            "converged": true,
+            "metric": 0.0040038961449,
+            "failure": null
+          },
+          {
+            "load_scale": 3.5,
+            "converged": true,
+            "metric": 0.00420003765684,
+            "failure": null
+          },
+          {
+            "load_scale": 3.525,
+            "converged": true,
+            "metric": 0.00441834419764,
+            "failure": null
+          },
+          {
+            "load_scale": 3.55,
+            "converged": true,
+            "metric": 0.00466549358698,
+            "failure": null
+          },
+          {
+            "load_scale": 3.575,
+            "converged": true,
+            "metric": 0.00495234645162,
+            "failure": null
+          },
+          {
+            "load_scale": 3.6,
+            "converged": true,
+            "metric": 0.00529897480381,
+            "failure": null
+          },
+          {
+            "load_scale": 3.625,
+            "converged": true,
+            "metric": 0.00575145772326,
+            "failure": null
+          },
+          {
+            "load_scale": 3.65,
+            "converged": true,
+            "metric": 0.00649829828023,
+            "failure": null
+          },
+          {
+            "load_scale": 3.675,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "downward": {
+        "direction": "downward",
+        "boundary_status": "right_censored",
+        "attempted_points": 17,
+        "converged_points": 17,
+        "last_converged_scale": 0.2,
+        "first_failed_scale": null,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 6.10356235097e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.95,
+            "converged": true,
+            "metric": 4.78472513074e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.9,
+            "converged": true,
+            "metric": 3.89402889544e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.85,
+            "converged": true,
+            "metric": 3.36999708729e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.8,
+            "converged": true,
+            "metric": 3.09374912711e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.75,
+            "converged": true,
+            "metric": 3.03112994722e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.7,
+            "converged": true,
+            "metric": 3.10783016396e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.65,
+            "converged": true,
+            "metric": 3.26477314073e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.6,
+            "converged": true,
+            "metric": 3.46868907467e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.55,
+            "converged": true,
+            "metric": 3.73156360992e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.5,
+            "converged": true,
+            "metric": 4.0483381055e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.45,
+            "converged": true,
+            "metric": 4.19883150329e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.4,
+            "converged": true,
+            "metric": 4.01618998107e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.35,
+            "converged": true,
+            "metric": 3.9140383146e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.3,
+            "converged": true,
+            "metric": 3.88387329779e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.25,
+            "converged": true,
+            "metric": 3.9305349018e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.2,
+            "converged": true,
+            "metric": 4.06156650396e-05,
+            "failure": null
+          }
+        ]
+      },
+      "refined_boundary": {
+        "last_converged_scale": 3.65625,
+        "first_failed_scale": 3.659375,
+        "interval_width": 0.003125,
+        "tolerance": 0.005,
+        "evaluations": 3
+      },
+      "pattern_test": {
+        "classification": "boundary_acceleration_only",
+        "reason": "no stable interior peak under frozen criteria",
+        "candidate": {
+          "load_scale": 1.625,
+          "curvature": 0.000824550032512,
+          "prominence": 0.000156358409944,
+          "relative_prominence": 0.00108327495976,
+          "boundary_distance": 2.03125,
+          "boundary_distance_steps": 81.25,
+          "passes_prominence": false,
+          "passes_distance": true
+        },
+        "downsampled_candidate": {
+          "load_scale": 1.65,
+          "curvature": 0.000735927304176,
+          "prominence": 1.91236758071e-05,
+          "relative_prominence": 0.000313435747064,
+          "boundary_distance": 2.00625,
+          "boundary_distance_steps": 40.125,
+          "passes_prominence": false,
+          "passes_distance": true
+        },
+        "resolution_stable": true
+      }
+    },
+    {
+      "case_id": "ieee57",
+      "role": "method_development",
+      "baseline_converged": true,
+      "upward": {
+        "direction": "upward",
+        "boundary_status": "bracketed",
+        "attempted_points": 19,
+        "converged_points": 18,
+        "last_converged_scale": 1.425,
+        "first_failed_scale": 1.45,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000686948044109,
+            "failure": null
+          },
+          {
+            "load_scale": 1.025,
+            "converged": true,
+            "metric": 0.000707392583073,
+            "failure": null
+          },
+          {
+            "load_scale": 1.05,
+            "converged": true,
+            "metric": 0.00073318029889,
+            "failure": null
+          },
+          {
+            "load_scale": 1.075,
+            "converged": true,
+            "metric": 0.000763763600243,
+            "failure": null
+          },
+          {
+            "load_scale": 1.1,
+            "converged": true,
+            "metric": 0.000798901112051,
+            "failure": null
+          },
+          {
+            "load_scale": 1.125,
+            "converged": true,
+            "metric": 0.000838241365743,
+            "failure": null
+          },
+          {
+            "load_scale": 1.15,
+            "converged": true,
+            "metric": 0.000882548161494,
+            "failure": null
+          },
+          {
+            "load_scale": 1.175,
+            "converged": true,
+            "metric": 0.000931297056075,
+            "failure": null
+          },
+          {
+            "load_scale": 1.2,
+            "converged": true,
+            "metric": 0.000985098323717,
+            "failure": null
+          },
+          {
+            "load_scale": 1.225,
+            "converged": true,
+            "metric": 0.00104429190458,
+            "failure": null
+          },
+          {
+            "load_scale": 1.25,
+            "converged": true,
+            "metric": 0.0011094417583,
+            "failure": null
+          },
+          {
+            "load_scale": 1.275,
+            "converged": true,
+            "metric": 0.00118152297435,
+            "failure": null
+          },
+          {
+            "load_scale": 1.3,
+            "converged": true,
+            "metric": 0.00126137443222,
+            "failure": null
+          },
+          {
+            "load_scale": 1.325,
+            "converged": true,
+            "metric": 0.00135057530103,
+            "failure": null
+          },
+          {
+            "load_scale": 1.35,
+            "converged": true,
+            "metric": 0.00145156937337,
+            "failure": null
+          },
+          {
+            "load_scale": 1.375,
+            "converged": true,
+            "metric": 0.00156845497842,
+            "failure": null
+          },
+          {
+            "load_scale": 1.4,
+            "converged": true,
+            "metric": 0.00170919734596,
+            "failure": null
+          },
+          {
+            "load_scale": 1.425,
+            "converged": true,
+            "metric": 0.00189530944496,
+            "failure": null
+          },
+          {
+            "load_scale": 1.45,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "downward": {
+        "direction": "downward",
+        "boundary_status": "right_censored",
+        "attempted_points": 17,
+        "converged_points": 17,
+        "last_converged_scale": 0.2,
+        "first_failed_scale": null,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000686948044109,
+            "failure": null
+          },
+          {
+            "load_scale": 0.95,
+            "converged": true,
+            "metric": 0.000665303942195,
+            "failure": null
+          },
+          {
+            "load_scale": 0.9,
+            "converged": true,
+            "metric": 0.000560786898735,
+            "failure": null
+          },
+          {
+            "load_scale": 0.85,
+            "converged": true,
+            "metric": 0.00041443242743,
+            "failure": null
+          },
+          {
+            "load_scale": 0.8,
+            "converged": true,
+            "metric": 0.000316881834536,
+            "failure": null
+          },
+          {
+            "load_scale": 0.75,
+            "converged": true,
+            "metric": 0.000259110696788,
+            "failure": null
+          },
+          {
+            "load_scale": 0.7,
+            "converged": true,
+            "metric": 0.000230972309162,
+            "failure": null
+          },
+          {
+            "load_scale": 0.65,
+            "converged": true,
+            "metric": 0.000227194530779,
+            "failure": null
+          },
+          {
+            "load_scale": 0.6,
+            "converged": true,
+            "metric": 0.000245909045497,
+            "failure": null
+          },
+          {
+            "load_scale": 0.55,
+            "converged": true,
+            "metric": 0.00027615017318,
+            "failure": null
+          },
+          {
+            "load_scale": 0.5,
+            "converged": true,
+            "metric": 0.000314400081223,
+            "failure": null
+          },
+          {
+            "load_scale": 0.45,
+            "converged": true,
+            "metric": 0.00036041622216,
+            "failure": null
+          },
+          {
+            "load_scale": 0.4,
+            "converged": true,
+            "metric": 0.000412796697326,
+            "failure": null
+          },
+          {
+            "load_scale": 0.35,
+            "converged": true,
+            "metric": 0.000470979612319,
+            "failure": null
+          },
+          {
+            "load_scale": 0.3,
+            "converged": true,
+            "metric": 0.000534830634735,
+            "failure": null
+          },
+          {
+            "load_scale": 0.25,
+            "converged": true,
+            "metric": 0.000541594690633,
+            "failure": null
+          },
+          {
+            "load_scale": 0.2,
+            "converged": true,
+            "metric": 0.000530815066691,
+            "failure": null
+          }
+        ]
+      },
+      "refined_boundary": {
+        "last_converged_scale": 1.446875,
+        "first_failed_scale": 1.45,
+        "interval_width": 0.003125,
+        "tolerance": 0.005,
+        "evaluations": 3
+      },
+      "pattern_test": {
+        "classification": "boundary_acceleration_only",
+        "reason": "no stable interior peak under frozen criteria",
+        "candidate": null,
+        "downsampled_candidate": null,
+        "resolution_stable": false
+      }
+    },
+    {
+      "case_id": "ieee118",
+      "role": "method_development",
+      "baseline_converged": true,
+      "upward": {
+        "direction": "upward",
+        "boundary_status": "bracketed",
+        "attempted_points": 34,
+        "converged_points": 33,
+        "last_converged_scale": 1.8,
+        "first_failed_scale": 1.825,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000332857102354,
+            "failure": null
+          },
+          {
+            "load_scale": 1.025,
+            "converged": true,
+            "metric": 0.000363801751896,
+            "failure": null
+          },
+          {
+            "load_scale": 1.05,
+            "converged": true,
+            "metric": 0.000400340835,
+            "failure": null
+          },
+          {
+            "load_scale": 1.075,
+            "converged": true,
+            "metric": 0.000442552782068,
+            "failure": null
+          },
+          {
+            "load_scale": 1.1,
+            "converged": true,
+            "metric": 0.000490662914505,
+            "failure": null
+          },
+          {
+            "load_scale": 1.125,
+            "converged": true,
+            "metric": 0.000527996760295,
+            "failure": null
+          },
+          {
+            "load_scale": 1.15,
+            "converged": true,
+            "metric": 0.000530346421498,
+            "failure": null
+          },
+          {
+            "load_scale": 1.175,
+            "converged": true,
+            "metric": 0.000522020177755,
+            "failure": null
+          },
+          {
+            "load_scale": 1.2,
+            "converged": true,
+            "metric": 0.000517959992732,
+            "failure": null
+          },
+          {
+            "load_scale": 1.225,
+            "converged": true,
+            "metric": 0.000517301192368,
+            "failure": null
+          },
+          {
+            "load_scale": 1.25,
+            "converged": true,
+            "metric": 0.000519568580107,
+            "failure": null
+          },
+          {
+            "load_scale": 1.275,
+            "converged": true,
+            "metric": 0.00052448180127,
+            "failure": null
+          },
+          {
+            "load_scale": 1.3,
+            "converged": true,
+            "metric": 0.000531552894518,
+            "failure": null
+          },
+          {
+            "load_scale": 1.325,
+            "converged": true,
+            "metric": 0.000540518258119,
+            "failure": null
+          },
+          {
+            "load_scale": 1.35,
+            "converged": true,
+            "metric": 0.000551391495514,
+            "failure": null
+          },
+          {
+            "load_scale": 1.375,
+            "converged": true,
+            "metric": 0.000564218084267,
+            "failure": null
+          },
+          {
+            "load_scale": 1.4,
+            "converged": true,
+            "metric": 0.000578631764165,
+            "failure": null
+          },
+          {
+            "load_scale": 1.425,
+            "converged": true,
+            "metric": 0.000594676718186,
+            "failure": null
+          },
+          {
+            "load_scale": 1.45,
+            "converged": true,
+            "metric": 0.000612473689723,
+            "failure": null
+          },
+          {
+            "load_scale": 1.475,
+            "converged": true,
+            "metric": 0.000632194260917,
+            "failure": null
+          },
+          {
+            "load_scale": 1.5,
+            "converged": true,
+            "metric": 0.000653822223649,
+            "failure": null
+          },
+          {
+            "load_scale": 1.525,
+            "converged": true,
+            "metric": 0.000677483570729,
+            "failure": null
+          },
+          {
+            "load_scale": 1.55,
+            "converged": true,
+            "metric": 0.000703378299328,
+            "failure": null
+          },
+          {
+            "load_scale": 1.575,
+            "converged": true,
+            "metric": 0.000731773628037,
+            "failure": null
+          },
+          {
+            "load_scale": 1.6,
+            "converged": true,
+            "metric": 0.000763021141468,
+            "failure": null
+          },
+          {
+            "load_scale": 1.625,
+            "converged": true,
+            "metric": 0.000797488145268,
+            "failure": null
+          },
+          {
+            "load_scale": 1.65,
+            "converged": true,
+            "metric": 0.00083572779841,
+            "failure": null
+          },
+          {
+            "load_scale": 1.675,
+            "converged": true,
+            "metric": 0.000878491521986,
+            "failure": null
+          },
+          {
+            "load_scale": 1.7,
+            "converged": true,
+            "metric": 0.000926674028515,
+            "failure": null
+          },
+          {
+            "load_scale": 1.725,
+            "converged": true,
+            "metric": 0.000981752051551,
+            "failure": null
+          },
+          {
+            "load_scale": 1.75,
+            "converged": true,
+            "metric": 0.00104598188906,
+            "failure": null
+          },
+          {
+            "load_scale": 1.775,
+            "converged": true,
+            "metric": 0.00112351473214,
+            "failure": null
+          },
+          {
+            "load_scale": 1.8,
+            "converged": true,
+            "metric": 0.00122478402993,
+            "failure": null
+          },
+          {
+            "load_scale": 1.825,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "downward": {
+        "direction": "downward",
+        "boundary_status": "right_censored",
+        "attempted_points": 17,
+        "converged_points": 17,
+        "last_converged_scale": 0.2,
+        "first_failed_scale": null,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000332857102354,
+            "failure": null
+          },
+          {
+            "load_scale": 0.95,
+            "converged": true,
+            "metric": 0.000286295827462,
+            "failure": null
+          },
+          {
+            "load_scale": 0.9,
+            "converged": true,
+            "metric": 0.000258748230267,
+            "failure": null
+          },
+          {
+            "load_scale": 0.85,
+            "converged": true,
+            "metric": 0.000248717723577,
+            "failure": null
+          },
+          {
+            "load_scale": 0.8,
+            "converged": true,
+            "metric": 0.000255237242711,
+            "failure": null
+          },
+          {
+            "load_scale": 0.75,
+            "converged": true,
+            "metric": 0.000277087480828,
+            "failure": null
+          },
+          {
+            "load_scale": 0.7,
+            "converged": true,
+            "metric": 0.000314138822398,
+            "failure": null
+          },
+          {
+            "load_scale": 0.65,
+            "converged": true,
+            "metric": 0.000365979684743,
+            "failure": null
+          },
+          {
+            "load_scale": 0.6,
+            "converged": true,
+            "metric": 0.000431661997475,
+            "failure": null
+          },
+          {
+            "load_scale": 0.55,
+            "converged": true,
+            "metric": 0.000494848059169,
+            "failure": null
+          },
+          {
+            "load_scale": 0.5,
+            "converged": true,
+            "metric": 0.000516397082061,
+            "failure": null
+          },
+          {
+            "load_scale": 0.45,
+            "converged": true,
+            "metric": 0.000528880191577,
+            "failure": null
+          },
+          {
+            "load_scale": 0.4,
+            "converged": true,
+            "metric": 0.000528161547956,
+            "failure": null
+          },
+          {
+            "load_scale": 0.35,
+            "converged": true,
+            "metric": 0.000534631554479,
+            "failure": null
+          },
+          {
+            "load_scale": 0.3,
+            "converged": true,
+            "metric": 0.000546792567157,
+            "failure": null
+          },
+          {
+            "load_scale": 0.25,
+            "converged": true,
+            "metric": 0.000563584535647,
+            "failure": null
+          },
+          {
+            "load_scale": 0.2,
+            "converged": true,
+            "metric": 0.000584342935945,
+            "failure": null
+          }
+        ]
+      },
+      "refined_boundary": {
+        "last_converged_scale": 1.8125,
+        "first_failed_scale": 1.815625,
+        "interval_width": 0.003125,
+        "tolerance": 0.005,
+        "evaluations": 3
+      },
+      "pattern_test": {
+        "classification": "boundary_acceleration_only",
+        "reason": "no stable interior peak under frozen criteria",
+        "candidate": {
+          "load_scale": 1.225,
+          "curvature": 0.0048649939845,
+          "prominence": 0.00210876041632,
+          "relative_prominence": 0.0948653400128,
+          "boundary_distance": 0.5875,
+          "boundary_distance_steps": 23.5,
+          "passes_prominence": false,
+          "passes_distance": true
+        },
+        "downsampled_candidate": {
+          "load_scale": 1.3,
+          "curvature": 0.0035715119159,
+          "prominence": 0.000632352060576,
+          "relative_prominence": 0.0676805576223,
+          "boundary_distance": 0.5125,
+          "boundary_distance_steps": 10.25,
+          "passes_prominence": false,
+          "passes_distance": true
+        },
+        "resolution_stable": true
+      }
+    },
+    {
+      "case_id": "ieee300",
+      "role": "method_development",
+      "baseline_converged": true,
+      "upward": {
+        "direction": "upward",
+        "boundary_status": "bracketed",
+        "attempted_points": 3,
+        "converged_points": 2,
+        "last_converged_scale": 1.025,
+        "first_failed_scale": 1.05,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000580628904759,
+            "failure": null
+          },
+          {
+            "load_scale": 1.025,
+            "converged": true,
+            "metric": 0.000913760510258,
+            "failure": null
+          },
+          {
+            "load_scale": 1.05,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "downward": {
+        "direction": "downward",
+        "boundary_status": "bracketed",
+        "attempted_points": 3,
+        "converged_points": 2,
+        "last_converged_scale": 0.95,
+        "first_failed_scale": 0.9,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 0.000580628904759,
+            "failure": null
+          },
+          {
+            "load_scale": 0.95,
+            "converged": true,
+            "metric": 0.00106583548288,
+            "failure": null
+          },
+          {
+            "load_scale": 0.9,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "refined_boundary": {
+        "last_converged_scale": 1.03125,
+        "first_failed_scale": 1.034375,
+        "interval_width": 0.003125,
+        "tolerance": 0.005,
+        "evaluations": 3
+      },
+      "pattern_test": {
+        "classification": "not_testable",
+        "reason": "requires a bracketed boundary and sufficient converged points",
+        "candidate": null,
+        "downsampled_candidate": null
+      }
+    },
+    {
+      "case_id": "pegase1354",
+      "role": "method_development",
+      "baseline_converged": true,
+      "upward": {
+        "direction": "upward",
+        "boundary_status": "bracketed",
+        "attempted_points": 14,
+        "converged_points": 13,
+        "last_converged_scale": 1.3,
+        "first_failed_scale": 1.325,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 8.97304212425e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.025,
+            "converged": true,
+            "metric": 9.47887556804e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 1.05,
+            "converged": true,
+            "metric": 0.000105140149373,
+            "failure": null
+          },
+          {
+            "load_scale": 1.075,
+            "converged": true,
+            "metric": 0.000119741109815,
+            "failure": null
+          },
+          {
+            "load_scale": 1.1,
+            "converged": true,
+            "metric": 0.000138286902806,
+            "failure": null
+          },
+          {
+            "load_scale": 1.125,
+            "converged": true,
+            "metric": 0.000161265482466,
+            "failure": null
+          },
+          {
+            "load_scale": 1.15,
+            "converged": true,
+            "metric": 0.000182330563968,
+            "failure": null
+          },
+          {
+            "load_scale": 1.175,
+            "converged": true,
+            "metric": 0.000193771042403,
+            "failure": null
+          },
+          {
+            "load_scale": 1.2,
+            "converged": true,
+            "metric": 0.000211719798794,
+            "failure": null
+          },
+          {
+            "load_scale": 1.225,
+            "converged": true,
+            "metric": 0.00023758703454,
+            "failure": null
+          },
+          {
+            "load_scale": 1.25,
+            "converged": true,
+            "metric": 0.00028762060758,
+            "failure": null
+          },
+          {
+            "load_scale": 1.275,
+            "converged": true,
+            "metric": 0.000508613719109,
+            "failure": null
+          },
+          {
+            "load_scale": 1.3,
+            "converged": true,
+            "metric": 0.00137250002234,
+            "failure": null
+          },
+          {
+            "load_scale": 1.325,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "downward": {
+        "direction": "downward",
+        "boundary_status": "bracketed",
+        "attempted_points": 12,
+        "converged_points": 11,
+        "last_converged_scale": 0.5,
+        "first_failed_scale": 0.45,
+        "points": [
+          {
+            "load_scale": 1.0,
+            "converged": true,
+            "metric": 8.97304212425e-05,
+            "failure": null
+          },
+          {
+            "load_scale": 0.95,
+            "converged": true,
+            "metric": 0.000106536864218,
+            "failure": null
+          },
+          {
+            "load_scale": 0.9,
+            "converged": true,
+            "metric": 0.000157905924538,
+            "failure": null
+          },
+          {
+            "load_scale": 0.85,
+            "converged": true,
+            "metric": 0.000142714675768,
+            "failure": null
+          },
+          {
+            "load_scale": 0.8,
+            "converged": true,
+            "metric": 0.000137009255592,
+            "failure": null
+          },
+          {
+            "load_scale": 0.75,
+            "converged": true,
+            "metric": 0.000147138689652,
+            "failure": null
+          },
+          {
+            "load_scale": 0.7,
+            "converged": true,
+            "metric": 0.000168358960005,
+            "failure": null
+          },
+          {
+            "load_scale": 0.65,
+            "converged": true,
+            "metric": 0.000201830006248,
+            "failure": null
+          },
+          {
+            "load_scale": 0.6,
+            "converged": true,
+            "metric": 0.000252234543189,
+            "failure": null
+          },
+          {
+            "load_scale": 0.55,
+            "converged": true,
+            "metric": 0.000329954981578,
+            "failure": null
+          },
+          {
+            "load_scale": 0.5,
+            "converged": true,
+            "metric": 0.00133006880735,
+            "failure": null
+          },
+          {
+            "load_scale": 0.45,
+            "converged": false,
+            "metric": null,
+            "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+          }
+        ]
+      },
+      "refined_boundary": {
+        "last_converged_scale": 1.30625,
+        "first_failed_scale": 1.309375,
+        "interval_width": 0.003125,
+        "tolerance": 0.005,
+        "evaluations": 3
+      },
+      "pattern_test": {
+        "classification": "boundary_acceleration_only",
+        "reason": "no stable interior peak under frozen criteria",
+        "candidate": null,
+        "downsampled_candidate": null,
+        "resolution_stable": false
+      }
+    }
+  ],
+  "held_out_case": {
+    "case_id": "pegase9241",
+    "role": "held_out_scale",
+    "baseline_converged": true,
+    "upward": {
+      "direction": "upward",
+      "boundary_status": "bracketed",
+      "attempted_points": 4,
+      "converged_points": 3,
+      "last_converged_scale": 1.05,
+      "first_failed_scale": 1.075,
+      "points": [
+        {
+          "load_scale": 1.0,
+          "converged": true,
+          "metric": 0.000223657203584,
+          "failure": null
+        },
+        {
+          "load_scale": 1.025,
+          "converged": true,
+          "metric": 0.000223837169,
+          "failure": null
+        },
+        {
+          "load_scale": 1.05,
+          "converged": true,
+          "metric": 0.000462103771442,
+          "failure": null
+        },
+        {
+          "load_scale": 1.075,
+          "converged": false,
+          "metric": null,
+          "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+        }
+      ]
+    },
+    "downward": {
+      "direction": "downward",
+      "boundary_status": "bracketed",
+      "attempted_points": 5,
+      "converged_points": 4,
+      "last_converged_scale": 0.85,
+      "first_failed_scale": 0.8,
+      "points": [
+        {
+          "load_scale": 1.0,
+          "converged": true,
+          "metric": 0.000223657203584,
+          "failure": null
+        },
+        {
+          "load_scale": 0.95,
+          "converged": true,
+          "metric": 0.000360394341858,
+          "failure": null
+        },
+        {
+          "load_scale": 0.9,
+          "converged": true,
+          "metric": 0.000414475691254,
+          "failure": null
+        },
+        {
+          "load_scale": 0.85,
+          "converged": true,
+          "metric": 0.00035812594599,
+          "failure": null
+        },
+        {
+          "load_scale": 0.8,
+          "converged": false,
+          "metric": null,
+          "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!"
+        }
+      ]
+    },
+    "refined_boundary": {
+      "last_converged_scale": 1.06875,
+      "first_failed_scale": 1.071875,
+      "interval_width": 0.003125,
+      "tolerance": 0.005,
+      "evaluations": 3
+    },
+    "pattern_test": {
+      "classification": "not_testable",
+      "reason": "requires a bracketed boundary and sufficient converged points",
+      "candidate": null,
+      "downsampled_candidate": null
+    }
+  },
+  "aggregate": {
+    "development_cases": 7,
+    "development_upward_boundaries": 7,
+    "development_candidate_precursors": 0,
+    "development_boundary_acceleration_only": 6,
+    "held_out_gate": {
+      "executed": true,
+      "criteria": {
+        "baseline_converged": true,
+        "branch_or_explicit_failure": true,
+        "no_parameter_retuning": true,
+        "same_metric_definition": true,
+        "uncertainty_and_limits_recorded": true
+      },
+      "outcome": "boundary_of_validity",
+      "pattern_classification": "not_testable"
+    }
+  },
+  "interpretation": "V2 tests whether the historical curvature behavior contains a stable interior feature independent of derivative-edge selection. It is not causal or control validation."
+}

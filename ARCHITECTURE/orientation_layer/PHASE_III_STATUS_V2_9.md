@@ -4,6 +4,10 @@ Status date: 2026-07-13
 Scope: Adapter ecosystem and IEEE/Pandapower domain validation  
 Classification: versioned working baseline, not a software release
 
+> Historical status note: H–K have since been completed. See
+> **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** for the governing closure
+> result. This file remains the pre-H visual and planning baseline.
+
 ## What v2.9 records
 
 Phase III has completed work packages A–G:
@@ -37,7 +41,7 @@ continuation design before they can test that question.
 Exact counts and result values are governed by the canonical files under
 `validation/`, not by the explanatory diagrams.
 
-## Remaining Phase III work
+## Work planned at the v2.9 baseline
 
 ### H — Baseline-anchored continuation
 

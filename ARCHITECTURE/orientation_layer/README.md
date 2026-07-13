@@ -27,7 +27,9 @@ tests must verify them.
    Memory V2 evidence, scientific boundaries, and the Phase III gate.
 9. **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)** — current A–G
    baseline, scientific boundary, and the H–L continuation path.
-10. **[archive/README.md](archive/README.md)** — rules for historical designs.
+10. **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** — completed H–K path,
+    held-out result, and the boundary of validity.
+11. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance
@@ -74,7 +76,7 @@ The corresponding textual record is
 adapter contract and domain validation; it does not expand the frozen V1 or V2
 claims retrospectively.
 
-## Current status — Phase III v2.9 working baseline
+## Phase III evidence history
 
 Phase III work packages A–G are implemented. The following pages record the
 adapter-to-orientation path, the current scientific boundary, and the planned
@@ -95,7 +97,20 @@ software release or a claim that Phase III is complete.
 
 The corresponding textual record is
 **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)**. The next executable
-work package is H, baseline-anchored load continuation.
+work package at that recorded point was H, baseline-anchored load continuation.
+
+## Current status — Phase III closed
+
+H–K are now implemented and canonically evaluated. All eight cases converge at
+their native baseline, all upward convergence boundaries are bracketed and
+refined, and no development case supports the stronger edge-independent
+precursor claim. The unchanged PEGASE-9241 gate returns an explicit boundary of
+validity because its branch is too short for the frozen seven-point method.
+
+Read **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** and
+**[IEEE Scaling Pattern V2](../../validation/ieee_scaling_pattern_v2/)** for the
+governing result. Broader adapters are later ecosystem expansion; decision and
+execution remain separate future layers.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.
