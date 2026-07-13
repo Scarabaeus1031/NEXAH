@@ -98,8 +98,9 @@ and visible schema, numeric, and temporal failures.
 
 ## Next adapter
 
-The generic array and table boundaries are now validated. The next candidate is
-the IEEE/pandapower source adapter. It must emit the same `SourceBatch` contract
-and document its selected physical variables, units, load-case construction,
-optional dependency, and failure behavior. Power-system assumptions must remain
-identifiable rather than becoming implicit core behavior.
+The generic array and table boundaries are validated. The IEEE/pandapower
+source adapter now emits the same `SourceBatch` contract through separate entity
+and ordered-campaign views; its physical variables, units, load construction,
+optional dependency, and failure behavior are documented in
+**[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)**. The next step is the
+scoped campaign-to-v0.7 Orientation run.

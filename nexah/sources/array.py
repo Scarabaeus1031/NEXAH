@@ -38,6 +38,7 @@ class ArraySourceAdapter:
         feature_names: Sequence[str] | None = None,
         units: Sequence[str | None] | None = None,
         row_axis: SourceAxis = SourceAxis.ORDERED_SAMPLE,
+        row_ids: Sequence[str] | None = None,
     ) -> SourceBatch:
         require_text(batch_id, "batch_id")
         try:
@@ -88,6 +89,15 @@ class ArraySourceAdapter:
             ):
                 raise SourceAdapterError("timestamps must be strictly increasing")
 
+        declared_row_ids = tuple(row_ids or ())
+        if declared_row_ids:
+            if len(declared_row_ids) != values.shape[0]:
+                raise SourceAdapterError("row_ids must match source rows")
+            for row_id in declared_row_ids:
+                require_text(row_id, "row_id")
+            if len(declared_row_ids) != len(set(declared_row_ids)):
+                raise SourceAdapterError("row_ids must be unique")
+
         features = tuple(
             SourceFeature(name=name, unit=unit)
             for name, unit in zip(names, declared_units)
@@ -110,4 +120,5 @@ class ArraySourceAdapter:
                 else (),
             ),
             row_axis=row_axis,
+            row_ids=declared_row_ids,
         )

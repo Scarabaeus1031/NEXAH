@@ -10,6 +10,12 @@ from .base import (
     SourceQuality,
 )
 from .table import TableSchema, TableSourceAdapter
+from .ieee import (
+    IEEECoupledCampaign,
+    IEEEPandapowerAdapter,
+    IEEEPhysicalSnapshot,
+    IEEESourceAdapterError,
+)
 
 __all__ = [
     "ArraySourceAdapter",
@@ -21,4 +27,8 @@ __all__ = [
     "SourceQuality",
     "TableSchema",
     "TableSourceAdapter",
+    "IEEECoupledCampaign",
+    "IEEEPandapowerAdapter",
+    "IEEEPhysicalSnapshot",
+    "IEEESourceAdapterError",
 ]

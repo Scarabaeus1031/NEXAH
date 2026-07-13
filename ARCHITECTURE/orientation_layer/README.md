@@ -21,9 +21,11 @@ tests must verify them.
    preservation decisions, and their relationship to WP2.
 6. **[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)** — Phase III
    source boundary, invariants, leakage rules, and acceptance evidence.
-7. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
+7. **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)** — coupled entity and
+   load-campaign views, physical variables, failure policy, and D–F roadmap.
+8. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
    Memory V2 evidence, scientific boundaries, and the Phase III gate.
-8. **[archive/README.md](archive/README.md)** — rules for historical designs.
+9. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance

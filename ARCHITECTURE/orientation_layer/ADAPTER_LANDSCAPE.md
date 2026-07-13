@@ -71,7 +71,7 @@ inference.
 | Static domain graph adapters | Preserve as UI/report fixtures | Their states are authored examples, not observed source batches |
 | `PhaseSpaceAdapter` | Defer reconstruction | Broken import and representation-specific responsibility |
 | `base_adapter_vii` | Defer to execution phase | Environment actions and rewards exceed source scope |
-| IEEE physical adapter | Candidate after generic table adapter | Closest existing source role, but tied to optional pandapower and domain assumptions |
+| IEEE physical adapter | Reimplemented behind the coupled source contract | Raw bus/line physics retained; fabricated collapse arrays and heuristic loops removed |
 | IEEE topology/regime adapters | Domain representation candidates | They mix physical topology with predefined states or regimes |
 | CSV-reading research scripts | Feed through `TableSourceAdapter` case by case | The generic schema now exists; individual datasets still need declared columns and provenance |
 
@@ -79,10 +79,10 @@ The implemented contract is specified in
 **[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)**.
 
 The existing IEEE physical function returns one row per bus. That is an entity
-snapshot, not a temporal trajectory. Phase III therefore records its row axis
-explicitly and will not feed it directly into v0.7 as if buses were time steps.
-The first IEEE integration must choose and validate either an entity-compatible
-representation backend or an explicit ordered load/time campaign.
+snapshot, not a temporal trajectory. `IEEEPandapowerAdapter` now records bus and
+line snapshots with the entity axis and couples them to an explicitly ordered
+load-scale campaign. Only the campaign view is eligible for the first v0.7
+integration. See **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)**.
 
 ## Preservation rules
 

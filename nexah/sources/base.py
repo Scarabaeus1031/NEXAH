@@ -85,6 +85,7 @@ class SourceBatch(ContractModel):
     provenance: Provenance
     quality: SourceQuality
     row_axis: SourceAxis = SourceAxis.ORDERED_SAMPLE
+    row_ids: tuple[str, ...] = ()
     timestamps: tuple[datetime, ...] = ()
     schema_version: str = "1.0"
 
@@ -103,6 +104,13 @@ class SourceBatch(ContractModel):
             raise ValueError("SourceBatch values must be finite")
         if self.quality.output_rows != len(self.values):
             raise ValueError("quality output_rows must match SourceBatch rows")
+        if self.row_ids:
+            if len(self.row_ids) != len(self.values):
+                raise ValueError("row_ids must match SourceBatch rows")
+            for row_id in self.row_ids:
+                require_text(row_id, "row_id")
+            if len(self.row_ids) != len(set(self.row_ids)):
+                raise ValueError("row_ids must be unique")
         names = [feature.name for feature in self.features]
         if len(names) != len(set(names)):
             raise ValueError("source feature names must be unique")

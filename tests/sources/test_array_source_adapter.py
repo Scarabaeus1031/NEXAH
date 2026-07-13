@@ -41,6 +41,7 @@ def test_array_adapter_preserves_values_semantics_and_provenance() -> None:
         feature_names=("voltage", "angle"),
         units=("pu", "rad"),
         row_axis=SourceAxis.TIME,
+        row_ids=("sample-0", "sample-1", "sample-2"),
     )
 
     assert batch.batch_id == "batch-001"
@@ -51,6 +52,7 @@ def test_array_adapter_preserves_values_semantics_and_provenance() -> None:
     assert np.array_equal(batch.to_numpy(), values)
     assert batch.timestamps == timestamps
     assert batch.row_axis is SourceAxis.TIME
+    assert batch.row_ids == ("sample-0", "sample-1", "sample-2")
     assert batch.quality.transformations == ()
 
 
