@@ -89,6 +89,10 @@ software release or a claim that Phase III is complete.
 
 ![NEXAH Phase III v2.9 continuation](visuals/phase-iii-v2.9-continuation-page-4.png)
 
+### Status page 5 — What NEXAH can do today
+
+![NEXAH v2.9 orientation skeleton status](visuals/nexah-v2.9-skeleton-status-page-5.png)
+
 The corresponding textual record is
 **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)**. The next executable
 work package is H, baseline-anchored load continuation.

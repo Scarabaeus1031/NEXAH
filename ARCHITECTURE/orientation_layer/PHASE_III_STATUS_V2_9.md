@@ -75,5 +75,9 @@ trajectory, event-stream, tabular-sequence, or domain-specific sources.
 
 ![NEXAH Phase III v2.9 continuation](visuals/phase-iii-v2.9-continuation-page-4.png)
 
+### Page 5 — Plain-language capability state
+
+![NEXAH v2.9 orientation skeleton status](visuals/nexah-v2.9-skeleton-status-page-5.png)
+
 The visuals explain this baseline. Normative specifications, tests, and
 canonical validation records remain authoritative.
