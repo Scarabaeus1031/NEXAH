@@ -13,6 +13,14 @@ Software kernel: v0.7
 V3 names the documented research and validation state after H–K. It does not
 rename the frozen v0.7 computational kernel.
 
+## Practical capability record
+
+![NEXAH V3 capability map](visuals/nexah-v3-capability-map-page-7.png)
+
+The capability map translates the closure evidence into the current user-facing
+scope: what enters the layer, what it can produce, what can be done with it now,
+and what remains outside the validated system.
+
 ## Completed path
 
 ```text

@@ -119,5 +119,13 @@ execution remain separate future layers.
 Here, V3 denotes the documentation and validation state after H–K. The frozen
 software kernel remains v0.7.
 
+### Status page 7 — V3 capability map
+
+![NEXAH V3 capability map](visuals/nexah-v3-capability-map-page-7.png)
+
+This page is the practical user view: accepted inputs, working capabilities,
+outputs, current use cases, access modes, and the explicit boundary between
+available research tooling and later decision or execution layers.
+
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.
