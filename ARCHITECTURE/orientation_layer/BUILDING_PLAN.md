@@ -144,6 +144,10 @@ boundary acceleration, but the constant apparent lead is tied to derivative
 edge exclusion and changes under downsampling. IEEE-300 and PEGASE-9241 require
 a new baseline-anchored continuation benchmark; V1 remains frozen.
 
+The A–G working baseline and the H–L continuation are versioned in
+`PHASE_III_STATUS_V2_9.md`. The next executable package is H; v2.9 does not mark
+Phase III complete.
+
 ## Later, outside the MVP
 
 Connectors, persistent global maps, planners, execution services, agents, and

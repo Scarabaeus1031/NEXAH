@@ -25,7 +25,9 @@ tests must verify them.
    load-campaign views, physical variables, failure policy, and D–F roadmap.
 8. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
    Memory V2 evidence, scientific boundaries, and the Phase III gate.
-9. **[archive/README.md](archive/README.md)** — rules for historical designs.
+9. **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)** — current A–G
+   baseline, scientific boundary, and the H–L continuation path.
+10. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance
@@ -71,6 +73,25 @@ The corresponding textual record is
 **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)**. Phase III begins with the
 adapter contract and domain validation; it does not expand the frozen V1 or V2
 claims retrospectively.
+
+## Current status — Phase III v2.9 working baseline
+
+Phase III work packages A–G are implemented. The following pages record the
+adapter-to-orientation path, the current scientific boundary, and the planned
+H–L continuation. Version 2.9 names this documentation baseline; it is not a
+software release or a claim that Phase III is complete.
+
+### Status page 3 — Adapter ecosystem and IEEE validation
+
+![NEXAH Phase III v2.9 status](visuals/phase-iii-v2.9-status-page-3.png)
+
+### Status page 4 — Continuation and completion path
+
+![NEXAH Phase III v2.9 continuation](visuals/phase-iii-v2.9-continuation-page-4.png)
+
+The corresponding textual record is
+**[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)**. The next executable
+work package is H, baseline-anchored load continuation.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.
