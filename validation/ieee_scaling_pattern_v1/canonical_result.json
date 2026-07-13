@@ -1,0 +1,2917 @@
+{
+  "validation_id": "ieee-scaling-pattern-v1",
+  "frozen_design": {
+    "case_roles": {
+      "ieee9": "historical_reference",
+      "ieee14": "historical_reference",
+      "ieee30": "historical_reference",
+      "ieee57": "extension",
+      "ieee118": "extension",
+      "ieee300": "extension",
+      "pegase1354": "held_out_scale",
+      "pegase9241": "held_out_scale"
+    },
+    "load_scales": [
+      0.6,
+      0.6221105527638191,
+      0.6442211055276381,
+      0.6663316582914572,
+      0.6884422110552764,
+      0.7105527638190955,
+      0.7326633165829146,
+      0.7547738693467336,
+      0.7768844221105528,
+      0.7989949748743719,
+      0.8211055276381909,
+      0.84321608040201,
+      0.8653266331658291,
+      0.8874371859296483,
+      0.9095477386934674,
+      0.9316582914572864,
+      0.9537688442211055,
+      0.9758793969849247,
+      0.9979899497487437,
+      1.020100502512563,
+      1.042211055276382,
+      1.064321608040201,
+      1.0864321608040202,
+      1.1085427135678392,
+      1.1306532663316582,
+      1.1527638190954774,
+      1.1748743718592967,
+      1.1969849246231155,
+      1.2190954773869347,
+      1.241206030150754,
+      1.2633165829145727,
+      1.285427135678392,
+      1.3075376884422112,
+      1.3296482412060302,
+      1.3517587939698492,
+      1.3738693467336685,
+      1.3959798994974875,
+      1.4180904522613065,
+      1.4402010050251257,
+      1.4623115577889447,
+      1.4844221105527637,
+      1.506532663316583,
+      1.5286432160804022,
+      1.550753768844221,
+      1.5728643216080402,
+      1.5949748743718595,
+      1.6170854271356783,
+      1.6391959798994975,
+      1.6613065326633167,
+      1.6834170854271355,
+      1.7055276381909548,
+      1.727638190954774,
+      1.7497487437185932,
+      1.771859296482412,
+      1.7939698492462313,
+      1.8160804020100505,
+      1.8381909547738693,
+      1.8603015075376885,
+      1.8824120603015078,
+      1.9045226130653266,
+      1.9266331658291458,
+      1.948743718592965,
+      1.9708542713567838,
+      1.992964824120603,
+      2.0150753768844223,
+      2.037185929648241,
+      2.0592964824120603,
+      2.0814070351758795,
+      2.103517587939699,
+      2.1256281407035176,
+      2.147738693467337,
+      2.169849246231156,
+      2.191959798994975,
+      2.214070351758794,
+      2.2361809045226133,
+      2.258291457286432,
+      2.2804020100502513,
+      2.3025125628140706,
+      2.3246231155778894,
+      2.3467336683417086,
+      2.368844221105528,
+      2.3909547738693466,
+      2.413065326633166,
+      2.435175879396985,
+      2.4572864321608043,
+      2.479396984924623,
+      2.5015075376884424,
+      2.5236180904522616,
+      2.5457286432160804,
+      2.5678391959798996,
+      2.589949748743719,
+      2.612060301507538,
+      2.634170854271357,
+      2.656281407035176,
+      2.6783919597989954,
+      2.700502512562814,
+      2.7226130653266334,
+      2.7447236180904526,
+      2.7668341708542714,
+      2.7889447236180906,
+      2.81105527638191,
+      2.8331658291457287,
+      2.855276381909548,
+      2.877386934673367,
+      2.8994974874371864,
+      2.921608040201005,
+      2.9437185929648244,
+      2.9658291457286436,
+      2.9879396984924624,
+      3.0100502512562817,
+      3.032160804020101,
+      3.0542713567839197,
+      3.076381909547739,
+      3.098492462311558,
+      3.120603015075377,
+      3.142713567839196,
+      3.1648241206030154,
+      3.1869346733668342,
+      3.2090452261306535,
+      3.2311557788944727,
+      3.2532663316582915,
+      3.2753768844221107,
+      3.29748743718593,
+      3.319597989949749,
+      3.341708542713568,
+      3.3638190954773872,
+      3.3859296482412065,
+      3.4080402010050252,
+      3.4301507537688445,
+      3.4522613065326637,
+      3.4743718592964825,
+      3.4964824120603017,
+      3.518592964824121,
+      3.5407035175879398,
+      3.562814070351759,
+      3.5849246231155782,
+      3.6070351758793975,
+      3.6291457286432163,
+      3.6512562814070355,
+      3.6733668341708547,
+      3.6954773869346735,
+      3.7175879396984928,
+      3.739698492462312,
+      3.761809045226131,
+      3.78391959798995,
+      3.8060301507537693,
+      3.828140703517588,
+      3.8502512562814073,
+      3.8723618090452265,
+      3.8944723618090453,
+      3.9165829145728646,
+      3.938693467336684,
+      3.9608040201005026,
+      3.982914572864322,
+      4.005025125628141,
+      4.02713567839196,
+      4.049246231155779,
+      4.071356783919598,
+      4.093467336683418,
+      4.115577889447236,
+      4.137688442211055,
+      4.159798994974874,
+      4.181909547738694,
+      4.204020100502513,
+      4.226130653266332,
+      4.24824120603015,
+      4.27035175879397,
+      4.292462311557789,
+      4.314572864321608,
+      4.336683417085427,
+      4.358793969849247,
+      4.380904522613066,
+      4.403015075376884,
+      4.425125628140703,
+      4.447236180904523,
+      4.469346733668342,
+      4.491457286432161,
+      4.51356783919598,
+      4.535678391959799,
+      4.557788944723618,
+      4.579899497487437,
+      4.602010050251256,
+      4.624120603015076,
+      4.646231155778894,
+      4.668341708542713,
+      4.6904522613065325,
+      4.712562814070352,
+      4.734673366834171,
+      4.75678391959799,
+      4.7788944723618085,
+      4.801005025125628,
+      4.823115577889447,
+      4.845226130653266,
+      4.8673366834170855,
+      4.889447236180905,
+      4.911557788944724,
+      4.933668341708542,
+      4.9557788944723615,
+      4.977889447236181,
+      5.0
+    ],
+    "metric": "std(theta_rad)*std(clip(1-vm_pu,-1,1))*mean(normalized_loop_signal)",
+    "derivative": "numpy.gradient twice over load scale",
+    "peak": "maximum signed second derivative",
+    "interior_edge_exclusion": 2,
+    "resolution_sensitivity": "every second dense sample",
+    "maximum_load_scale": 5.0,
+    "stop_after_first_nonconvergence": true,
+    "fabricated_failed_physics": false,
+    "parameters_tuned_on_results": false
+  },
+  "cases": [
+    {
+      "case_id": "ieee9",
+      "planned_samples": 200,
+      "attempted_samples": 76,
+      "converged_samples": 75,
+      "collapse_load_scale": 2.258291457286432,
+      "boundary_status": "observed_after_converged_prefix",
+      "curvature_status": "estimated",
+      "historical_peak_load_scale": 2.214070351758794,
+      "historical_lead": 0.04422110552763803,
+      "interior_peak_load_scale": 2.191959798994975,
+      "interior_lead": 0.06633165829145726,
+      "interior_peak_offset_from_last_converged_sample": 2,
+      "interior_peak_at_exclusion_boundary": true,
+      "downsampled_interior_peak_load_scale": 2.147738693467337,
+      "downsampled_interior_lead": 0.11055276381909529,
+      "resolution_peak_shift": 0.04422110552763803,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": true,
+          "c_struct": 0.000348054343927085
+        },
+        {
+          "load_scale": 0.6221105527638191,
+          "converged": true,
+          "c_struct": 0.00033749445035288463
+        },
+        {
+          "load_scale": 0.6442211055276381,
+          "converged": true,
+          "c_struct": 0.00032825027576617263
+        },
+        {
+          "load_scale": 0.6663316582914572,
+          "converged": true,
+          "c_struct": 0.00032027664530003154
+        },
+        {
+          "load_scale": 0.6884422110552764,
+          "converged": true,
+          "c_struct": 0.0003135475190498526
+        },
+        {
+          "load_scale": 0.7105527638190955,
+          "converged": true,
+          "c_struct": 0.00030806486679851126
+        },
+        {
+          "load_scale": 0.7326633165829146,
+          "converged": true,
+          "c_struct": 0.0003038776353728374
+        },
+        {
+          "load_scale": 0.7547738693467336,
+          "converged": true,
+          "c_struct": 0.00030113725338346285
+        },
+        {
+          "load_scale": 0.7768844221105528,
+          "converged": true,
+          "c_struct": 0.0003007972556113914
+        },
+        {
+          "load_scale": 0.7989949748743719,
+          "converged": true,
+          "c_struct": 0.0003037279609025944
+        },
+        {
+          "load_scale": 0.8211055276381909,
+          "converged": true,
+          "c_struct": 0.0003084299166718134
+        },
+        {
+          "load_scale": 0.84321608040201,
+          "converged": true,
+          "c_struct": 0.00031449653093452453
+        },
+        {
+          "load_scale": 0.8653266331658291,
+          "converged": true,
+          "c_struct": 0.0003218129778688699
+        },
+        {
+          "load_scale": 0.8874371859296483,
+          "converged": true,
+          "c_struct": 0.0003303280073325183
+        },
+        {
+          "load_scale": 0.9095477386934674,
+          "converged": true,
+          "c_struct": 0.000340027186711183
+        },
+        {
+          "load_scale": 0.9316582914572864,
+          "converged": true,
+          "c_struct": 0.00035092287449123787
+        },
+        {
+          "load_scale": 0.9537688442211055,
+          "converged": true,
+          "c_struct": 0.00036305013507545344
+        },
+        {
+          "load_scale": 0.9758793969849247,
+          "converged": true,
+          "c_struct": 0.00037646528534218573
+        },
+        {
+          "load_scale": 0.9979899497487437,
+          "converged": true,
+          "c_struct": 0.000391245808031365
+        },
+        {
+          "load_scale": 1.020100502512563,
+          "converged": true,
+          "c_struct": 0.0004074910552674671
+        },
+        {
+          "load_scale": 1.042211055276382,
+          "converged": true,
+          "c_struct": 0.0004253234357922204
+        },
+        {
+          "load_scale": 1.064321608040201,
+          "converged": true,
+          "c_struct": 0.0004448898972525815
+        },
+        {
+          "load_scale": 1.0864321608040202,
+          "converged": true,
+          "c_struct": 0.00046636357063623815
+        },
+        {
+          "load_scale": 1.1085427135678392,
+          "converged": true,
+          "c_struct": 0.0004899454735082157
+        },
+        {
+          "load_scale": 1.1306532663316582,
+          "converged": true,
+          "c_struct": 0.0005158661882502406
+        },
+        {
+          "load_scale": 1.1527638190954774,
+          "converged": true,
+          "c_struct": 0.0005443874490982581
+        },
+        {
+          "load_scale": 1.1748743718592967,
+          "converged": true,
+          "c_struct": 0.0005758035914850937
+        },
+        {
+          "load_scale": 1.1969849246231155,
+          "converged": true,
+          "c_struct": 0.0006104428406273298
+        },
+        {
+          "load_scale": 1.2190954773869347,
+          "converged": true,
+          "c_struct": 0.0006486684432020002
+        },
+        {
+          "load_scale": 1.241206030150754,
+          "converged": true,
+          "c_struct": 0.0006908796746349119
+        },
+        {
+          "load_scale": 1.2633165829145727,
+          "converged": true,
+          "c_struct": 0.0007375127822928396
+        },
+        {
+          "load_scale": 1.285427135678392,
+          "converged": true,
+          "c_struct": 0.0007890419487191063
+        },
+        {
+          "load_scale": 1.3075376884422112,
+          "converged": true,
+          "c_struct": 0.0008407612835585973
+        },
+        {
+          "load_scale": 1.3296482412060302,
+          "converged": true,
+          "c_struct": 0.0008474552367693709
+        },
+        {
+          "load_scale": 1.3517587939698492,
+          "converged": true,
+          "c_struct": 0.0008578854205843055
+        },
+        {
+          "load_scale": 1.3738693467336685,
+          "converged": true,
+          "c_struct": 0.0008719181710762019
+        },
+        {
+          "load_scale": 1.3959798994974875,
+          "converged": true,
+          "c_struct": 0.0008894568823857991
+        },
+        {
+          "load_scale": 1.4180904522613065,
+          "converged": true,
+          "c_struct": 0.0009104363263084409
+        },
+        {
+          "load_scale": 1.4402010050251257,
+          "converged": true,
+          "c_struct": 0.0009348185257260974
+        },
+        {
+          "load_scale": 1.4623115577889447,
+          "converged": true,
+          "c_struct": 0.0009625898130964851
+        },
+        {
+          "load_scale": 1.4844221105527637,
+          "converged": true,
+          "c_struct": 0.0009937588011977505
+        },
+        {
+          "load_scale": 1.506532663316583,
+          "converged": true,
+          "c_struct": 0.0010283550661402917
+        },
+        {
+          "load_scale": 1.5286432160804022,
+          "converged": true,
+          "c_struct": 0.0010664283989216742
+        },
+        {
+          "load_scale": 1.550753768844221,
+          "converged": true,
+          "c_struct": 0.0011080485259057854
+        },
+        {
+          "load_scale": 1.5728643216080402,
+          "converged": true,
+          "c_struct": 0.001153305233640763
+        },
+        {
+          "load_scale": 1.5949748743718595,
+          "converged": true,
+          "c_struct": 0.001202308861730748
+        },
+        {
+          "load_scale": 1.6170854271356783,
+          "converged": true,
+          "c_struct": 0.0012551911509460208
+        },
+        {
+          "load_scale": 1.6391959798994975,
+          "converged": true,
+          "c_struct": 0.0013121064540274976
+        },
+        {
+          "load_scale": 1.6613065326633167,
+          "converged": true,
+          "c_struct": 0.0013732355002323607
+        },
+        {
+          "load_scale": 1.6834170854271355,
+          "converged": true,
+          "c_struct": 0.0014387796418091647
+        },
+        {
+          "load_scale": 1.7055276381909548,
+          "converged": true,
+          "c_struct": 0.0015089741188585525
+        },
+        {
+          "load_scale": 1.727638190954774,
+          "converged": true,
+          "c_struct": 0.001584084555462882
+        },
+        {
+          "load_scale": 1.7497487437185932,
+          "converged": true,
+          "c_struct": 0.0016644123286243084
+        },
+        {
+          "load_scale": 1.771859296482412,
+          "converged": true,
+          "c_struct": 0.0017502992237913655
+        },
+        {
+          "load_scale": 1.7939698492462313,
+          "converged": true,
+          "c_struct": 0.001842133090977143
+        },
+        {
+          "load_scale": 1.8160804020100505,
+          "converged": true,
+          "c_struct": 0.0019403546839491216
+        },
+        {
+          "load_scale": 1.8381909547738693,
+          "converged": true,
+          "c_struct": 0.0020454658299911047
+        },
+        {
+          "load_scale": 1.8603015075376885,
+          "converged": true,
+          "c_struct": 0.0021580388510146955
+        },
+        {
+          "load_scale": 1.8824120603015078,
+          "converged": true,
+          "c_struct": 0.0022787261765694023
+        },
+        {
+          "load_scale": 1.9045226130653266,
+          "converged": true,
+          "c_struct": 0.002408264505448785
+        },
+        {
+          "load_scale": 1.9266331658291458,
+          "converged": true,
+          "c_struct": 0.0025474369269965977
+        },
+        {
+          "load_scale": 1.948743718592965,
+          "converged": true,
+          "c_struct": 0.002696742354129833
+        },
+        {
+          "load_scale": 1.9708542713567838,
+          "converged": true,
+          "c_struct": 0.002863086844504323
+        },
+        {
+          "load_scale": 1.992964824120603,
+          "converged": true,
+          "c_struct": 0.0030416711232594674
+        },
+        {
+          "load_scale": 2.0150753768844223,
+          "converged": true,
+          "c_struct": 0.003235337098075353
+        },
+        {
+          "load_scale": 2.037185929648241,
+          "converged": true,
+          "c_struct": 0.0034465360606189665
+        },
+        {
+          "load_scale": 2.0592964824120603,
+          "converged": true,
+          "c_struct": 0.0036782343397697053
+        },
+        {
+          "load_scale": 2.0814070351758795,
+          "converged": true,
+          "c_struct": 0.003934226507172045
+        },
+        {
+          "load_scale": 2.103517587939699,
+          "converged": true,
+          "c_struct": 0.004219558231652316
+        },
+        {
+          "load_scale": 2.1256281407035176,
+          "converged": true,
+          "c_struct": 0.004543016451736245
+        },
+        {
+          "load_scale": 2.147738693467337,
+          "converged": true,
+          "c_struct": 0.004915923765418775
+        },
+        {
+          "load_scale": 2.169849246231156,
+          "converged": true,
+          "c_struct": 0.005352590225302775
+        },
+        {
+          "load_scale": 2.191959798994975,
+          "converged": true,
+          "c_struct": 0.005880764388652641
+        },
+        {
+          "load_scale": 2.214070351758794,
+          "converged": true,
+          "c_struct": 0.006556468877464258
+        },
+        {
+          "load_scale": 2.2361809045226133,
+          "converged": true,
+          "c_struct": 0.007535881650549211
+        },
+        {
+          "load_scale": 2.258291457286432,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    },
+    {
+      "case_id": "ieee14",
+      "planned_samples": 200,
+      "attempted_samples": 155,
+      "converged_samples": 154,
+      "collapse_load_scale": 4.005025125628141,
+      "boundary_status": "observed_after_converged_prefix",
+      "curvature_status": "estimated",
+      "historical_peak_load_scale": 3.9608040201005026,
+      "historical_lead": 0.04422110552763803,
+      "interior_peak_load_scale": 3.938693467336684,
+      "interior_lead": 0.06633165829145682,
+      "interior_peak_offset_from_last_converged_sample": 2,
+      "interior_peak_at_exclusion_boundary": true,
+      "downsampled_interior_peak_load_scale": 3.8723618090452265,
+      "downsampled_interior_lead": 0.13266331658291408,
+      "resolution_peak_shift": 0.06633165829145726,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": true,
+          "c_struct": 0.00019965823285822616
+        },
+        {
+          "load_scale": 0.6221105527638191,
+          "converged": true,
+          "c_struct": 0.00020705925120767974
+        },
+        {
+          "load_scale": 0.6442211055276381,
+          "converged": true,
+          "c_struct": 0.00021450271886485419
+        },
+        {
+          "load_scale": 0.6663316582914572,
+          "converged": true,
+          "c_struct": 0.00022199869812644402
+        },
+        {
+          "load_scale": 0.6884422110552764,
+          "converged": true,
+          "c_struct": 0.0002295574468945973
+        },
+        {
+          "load_scale": 0.7105527638190955,
+          "converged": true,
+          "c_struct": 0.0002371894152069643
+        },
+        {
+          "load_scale": 0.7326633165829146,
+          "converged": true,
+          "c_struct": 0.00024490523841443957
+        },
+        {
+          "load_scale": 0.7547738693467336,
+          "converged": true,
+          "c_struct": 0.00025271572768805834
+        },
+        {
+          "load_scale": 0.7768844221105528,
+          "converged": true,
+          "c_struct": 0.0002606318583782915
+        },
+        {
+          "load_scale": 0.7989949748743719,
+          "converged": true,
+          "c_struct": 0.0002686647566460109
+        },
+        {
+          "load_scale": 0.8211055276381909,
+          "converged": true,
+          "c_struct": 0.0002768256847161423
+        },
+        {
+          "load_scale": 0.84321608040201,
+          "converged": true,
+          "c_struct": 0.0002851260250598869
+        },
+        {
+          "load_scale": 0.8653266331658291,
+          "converged": true,
+          "c_struct": 0.00029357726378145626
+        },
+        {
+          "load_scale": 0.8874371859296483,
+          "converged": true,
+          "c_struct": 0.00030219097346449
+        },
+        {
+          "load_scale": 0.9095477386934674,
+          "converged": true,
+          "c_struct": 0.0003109787957182561
+        },
+        {
+          "load_scale": 0.9316582914572864,
+          "converged": true,
+          "c_struct": 0.00031995242365146854
+        },
+        {
+          "load_scale": 0.9537688442211055,
+          "converged": true,
+          "c_struct": 0.0003291235844902373
+        },
+        {
+          "load_scale": 0.9758793969849247,
+          "converged": true,
+          "c_struct": 0.0003385040225452542
+        },
+        {
+          "load_scale": 0.9979899497487437,
+          "converged": true,
+          "c_struct": 0.0003481054827208229
+        },
+        {
+          "load_scale": 1.020100502512563,
+          "converged": true,
+          "c_struct": 0.0003579396947445826
+        },
+        {
+          "load_scale": 1.042211055276382,
+          "converged": true,
+          "c_struct": 0.00036801835828110044
+        },
+        {
+          "load_scale": 1.064321608040201,
+          "converged": true,
+          "c_struct": 0.000378353129075682
+        },
+        {
+          "load_scale": 1.0864321608040202,
+          "converged": true,
+          "c_struct": 0.00038895560625605915
+        },
+        {
+          "load_scale": 1.1085427135678392,
+          "converged": true,
+          "c_struct": 0.00039983732090013904
+        },
+        {
+          "load_scale": 1.1306532663316582,
+          "converged": true,
+          "c_struct": 0.00041100972595760354
+        },
+        {
+          "load_scale": 1.1527638190954774,
+          "converged": true,
+          "c_struct": 0.00042248418759237885
+        },
+        {
+          "load_scale": 1.1748743718592967,
+          "converged": true,
+          "c_struct": 0.00043427197799243266
+        },
+        {
+          "load_scale": 1.1969849246231155,
+          "converged": true,
+          "c_struct": 0.0004463842696731615
+        },
+        {
+          "load_scale": 1.2190954773869347,
+          "converged": true,
+          "c_struct": 0.0004588321312813802
+        },
+        {
+          "load_scale": 1.241206030150754,
+          "converged": true,
+          "c_struct": 0.0004716265248889893
+        },
+        {
+          "load_scale": 1.2633165829145727,
+          "converged": true,
+          "c_struct": 0.0004847783047489106
+        },
+        {
+          "load_scale": 1.285427135678392,
+          "converged": true,
+          "c_struct": 0.000498298217471314
+        },
+        {
+          "load_scale": 1.3075376884422112,
+          "converged": true,
+          "c_struct": 0.0005121969035653529
+        },
+        {
+          "load_scale": 1.3296482412060302,
+          "converged": true,
+          "c_struct": 0.0005264849002812264
+        },
+        {
+          "load_scale": 1.3517587939698492,
+          "converged": true,
+          "c_struct": 0.0005411726456787376
+        },
+        {
+          "load_scale": 1.3738693467336685,
+          "converged": true,
+          "c_struct": 0.0005562704838422254
+        },
+        {
+          "load_scale": 1.3959798994974875,
+          "converged": true,
+          "c_struct": 0.0005717886711573342
+        },
+        {
+          "load_scale": 1.4180904522613065,
+          "converged": true,
+          "c_struct": 0.0005877373835626989
+        },
+        {
+          "load_scale": 1.4402010050251257,
+          "converged": true,
+          "c_struct": 0.0006041267246888719
+        },
+        {
+          "load_scale": 1.4623115577889447,
+          "converged": true,
+          "c_struct": 0.0006209667347977538
+        },
+        {
+          "load_scale": 1.4844221105527637,
+          "converged": true,
+          "c_struct": 0.0006382674004380634
+        },
+        {
+          "load_scale": 1.506532663316583,
+          "converged": true,
+          "c_struct": 0.0006560386647358919
+        },
+        {
+          "load_scale": 1.5286432160804022,
+          "converged": true,
+          "c_struct": 0.0006742904382437523
+        },
+        {
+          "load_scale": 1.550753768844221,
+          "converged": true,
+          "c_struct": 0.0006930326102770617
+        },
+        {
+          "load_scale": 1.5728643216080402,
+          "converged": true,
+          "c_struct": 0.0007122750606723805
+        },
+        {
+          "load_scale": 1.5949748743718595,
+          "converged": true,
+          "c_struct": 0.0007320276719086988
+        },
+        {
+          "load_scale": 1.6170854271356783,
+          "converged": true,
+          "c_struct": 0.0007523003415389344
+        },
+        {
+          "load_scale": 1.6391959798994975,
+          "converged": true,
+          "c_struct": 0.0007731029948861014
+        },
+        {
+          "load_scale": 1.6613065326633167,
+          "converged": true,
+          "c_struct": 0.000794445597965011
+        },
+        {
+          "load_scale": 1.6834170854271355,
+          "converged": true,
+          "c_struct": 0.0008163381705971162
+        },
+        {
+          "load_scale": 1.7055276381909548,
+          "converged": true,
+          "c_struct": 0.0008387907996927304
+        },
+        {
+          "load_scale": 1.727638190954774,
+          "converged": true,
+          "c_struct": 0.0008618136526809982
+        },
+        {
+          "load_scale": 1.7497487437185932,
+          "converged": true,
+          "c_struct": 0.0008854169910740863
+        },
+        {
+          "load_scale": 1.771859296482412,
+          "converged": true,
+          "c_struct": 0.0009096111841578515
+        },
+        {
+          "load_scale": 1.7939698492462313,
+          "converged": true,
+          "c_struct": 0.000934406722806689
+        },
+        {
+          "load_scale": 1.8160804020100505,
+          "converged": true,
+          "c_struct": 0.0009598142334252178
+        },
+        {
+          "load_scale": 1.8381909547738693,
+          "converged": true,
+          "c_struct": 0.0009858444920246082
+        },
+        {
+          "load_scale": 1.8603015075376885,
+          "converged": true,
+          "c_struct": 0.0010125084384455243
+        },
+        {
+          "load_scale": 1.8824120603015078,
+          "converged": true,
+          "c_struct": 0.0010398171907442968
+        },
+        {
+          "load_scale": 1.9045226130653266,
+          "converged": true,
+          "c_struct": 0.001067782059762489
+        },
+        {
+          "load_scale": 1.9266331658291458,
+          "converged": true,
+          "c_struct": 0.001096414563904342
+        },
+        {
+          "load_scale": 1.948743718592965,
+          "converged": true,
+          "c_struct": 0.0011257264441497596
+        },
+        {
+          "load_scale": 1.9708542713567838,
+          "converged": true,
+          "c_struct": 0.001155729679334164
+        },
+        {
+          "load_scale": 1.992964824120603,
+          "converged": true,
+          "c_struct": 0.0011864365017298505
+        },
+        {
+          "load_scale": 2.0150753768844223,
+          "converged": true,
+          "c_struct": 0.0012178594129668176
+        },
+        {
+          "load_scale": 2.037185929648241,
+          "converged": true,
+          "c_struct": 0.0012500112003341072
+        },
+        {
+          "load_scale": 2.0592964824120603,
+          "converged": true,
+          "c_struct": 0.0012829049535060906
+        },
+        {
+          "load_scale": 2.0814070351758795,
+          "converged": true,
+          "c_struct": 0.0013165540817415562
+        },
+        {
+          "load_scale": 2.103517587939699,
+          "converged": true,
+          "c_struct": 0.0013509723316063556
+        },
+        {
+          "load_scale": 2.1256281407035176,
+          "converged": true,
+          "c_struct": 0.0013861738052743922
+        },
+        {
+          "load_scale": 2.147738693467337,
+          "converged": true,
+          "c_struct": 0.0014221729794653359
+        },
+        {
+          "load_scale": 2.169849246231156,
+          "converged": true,
+          "c_struct": 0.0014589847250808937
+        },
+        {
+          "load_scale": 2.191959798994975,
+          "converged": true,
+          "c_struct": 0.0014966243276063962
+        },
+        {
+          "load_scale": 2.214070351758794,
+          "converged": true,
+          "c_struct": 0.0015351075083482172
+        },
+        {
+          "load_scale": 2.2361809045226133,
+          "converged": true,
+          "c_struct": 0.0015744504465829753
+        },
+        {
+          "load_scale": 2.258291457286432,
+          "converged": true,
+          "c_struct": 0.0016146698026994074
+        },
+        {
+          "load_scale": 2.2804020100502513,
+          "converged": true,
+          "c_struct": 0.0016557827424196635
+        },
+        {
+          "load_scale": 2.3025125628140706,
+          "converged": true,
+          "c_struct": 0.0016978069621930863
+        },
+        {
+          "load_scale": 2.3246231155778894,
+          "converged": true,
+          "c_struct": 0.0017407607158626862
+        },
+        {
+          "load_scale": 2.3467336683417086,
+          "converged": true,
+          "c_struct": 0.001784662842711549
+        },
+        {
+          "load_scale": 2.368844221105528,
+          "converged": true,
+          "c_struct": 0.0018295327970054643
+        },
+        {
+          "load_scale": 2.3909547738693466,
+          "converged": true,
+          "c_struct": 0.0018753906791571797
+        },
+        {
+          "load_scale": 2.413065326633166,
+          "converged": true,
+          "c_struct": 0.0019222572686474987
+        },
+        {
+          "load_scale": 2.435175879396985,
+          "converged": true,
+          "c_struct": 0.0019701540588502172
+        },
+        {
+          "load_scale": 2.4572864321608043,
+          "converged": true,
+          "c_struct": 0.0020191032939205385
+        },
+        {
+          "load_scale": 2.479396984924623,
+          "converged": true,
+          "c_struct": 0.002069128007920025
+        },
+        {
+          "load_scale": 2.5015075376884424,
+          "converged": true,
+          "c_struct": 0.0021202520663672095
+        },
+        {
+          "load_scale": 2.5236180904522616,
+          "converged": true,
+          "c_struct": 0.0021725002104197705
+        },
+        {
+          "load_scale": 2.5457286432160804,
+          "converged": true,
+          "c_struct": 0.0022258981039134347
+        },
+        {
+          "load_scale": 2.5678391959798996,
+          "converged": true,
+          "c_struct": 0.002280472383504447
+        },
+        {
+          "load_scale": 2.589949748743719,
+          "converged": true,
+          "c_struct": 0.0023362507121855733
+        },
+        {
+          "load_scale": 2.612060301507538,
+          "converged": true,
+          "c_struct": 0.0023932645149440045
+        },
+        {
+          "load_scale": 2.634170854271357,
+          "converged": true,
+          "c_struct": 0.002451538773132396
+        },
+        {
+          "load_scale": 2.656281407035176,
+          "converged": true,
+          "c_struct": 0.002511106894998779
+        },
+        {
+          "load_scale": 2.6783919597989954,
+          "converged": true,
+          "c_struct": 0.0025720012755071587
+        },
+        {
+          "load_scale": 2.700502512562814,
+          "converged": true,
+          "c_struct": 0.0026342556679431663
+        },
+        {
+          "load_scale": 2.7226130653266334,
+          "converged": true,
+          "c_struct": 0.002697905265504422
+        },
+        {
+          "load_scale": 2.7447236180904526,
+          "converged": true,
+          "c_struct": 0.002762986789192329
+        },
+        {
+          "load_scale": 2.7668341708542714,
+          "converged": true,
+          "c_struct": 0.0028295385826213985
+        },
+        {
+          "load_scale": 2.7889447236180906,
+          "converged": true,
+          "c_struct": 0.0028976007144342606
+        },
+        {
+          "load_scale": 2.81105527638191,
+          "converged": true,
+          "c_struct": 0.0029672150890914612
+        },
+        {
+          "load_scale": 2.8331658291457287,
+          "converged": true,
+          "c_struct": 0.0030384255668979682
+        },
+        {
+          "load_scale": 2.855276381909548,
+          "converged": true,
+          "c_struct": 0.003111278094234412
+        },
+        {
+          "load_scale": 2.877386934673367,
+          "converged": true,
+          "c_struct": 0.003185820845081936
+        },
+        {
+          "load_scale": 2.8994974874371864,
+          "converged": true,
+          "c_struct": 0.0032621043750695944
+        },
+        {
+          "load_scale": 2.921608040201005,
+          "converged": true,
+          "c_struct": 0.0033401817894328375
+        },
+        {
+          "load_scale": 2.9437185929648244,
+          "converged": true,
+          "c_struct": 0.003420108926457048
+        },
+        {
+          "load_scale": 2.9658291457286436,
+          "converged": true,
+          "c_struct": 0.0035019445581942954
+        },
+        {
+          "load_scale": 2.9879396984924624,
+          "converged": true,
+          "c_struct": 0.00358575061048989
+        },
+        {
+          "load_scale": 3.0100502512562817,
+          "converged": true,
+          "c_struct": 0.003671592404644778
+        },
+        {
+          "load_scale": 3.032160804020101,
+          "converged": true,
+          "c_struct": 0.0037595389233777074
+        },
+        {
+          "load_scale": 3.0542713567839197,
+          "converged": true,
+          "c_struct": 0.0038496631041473003
+        },
+        {
+          "load_scale": 3.076381909547739,
+          "converged": true,
+          "c_struct": 0.003942042163359237
+        },
+        {
+          "load_scale": 3.098492462311558,
+          "converged": true,
+          "c_struct": 0.004036757955533519
+        },
+        {
+          "load_scale": 3.120603015075377,
+          "converged": true,
+          "c_struct": 0.0041338973721566155
+        },
+        {
+          "load_scale": 3.142713567839196,
+          "converged": true,
+          "c_struct": 0.004233552785717464
+        },
+        {
+          "load_scale": 3.1648241206030154,
+          "converged": true,
+          "c_struct": 0.004335822545348422
+        },
+        {
+          "load_scale": 3.1869346733668342,
+          "converged": true,
+          "c_struct": 0.004440811531600058
+        },
+        {
+          "load_scale": 3.2090452261306535,
+          "converged": true,
+          "c_struct": 0.004548631779211034
+        },
+        {
+          "load_scale": 3.2311557788944727,
+          "converged": true,
+          "c_struct": 0.004659403178347387
+        },
+        {
+          "load_scale": 3.2532663316582915,
+          "converged": true,
+          "c_struct": 0.004773254266747093
+        },
+        {
+          "load_scale": 3.2753768844221107,
+          "converged": true,
+          "c_struct": 0.00489032312760362
+        },
+        {
+          "load_scale": 3.29748743718593,
+          "converged": true,
+          "c_struct": 0.005010758410969462
+        },
+        {
+          "load_scale": 3.319597989949749,
+          "converged": true,
+          "c_struct": 0.00513472050010595
+        },
+        {
+          "load_scale": 3.341708542713568,
+          "converged": true,
+          "c_struct": 0.005262382848739559
+        },
+        {
+          "load_scale": 3.3638190954773872,
+          "converged": true,
+          "c_struct": 0.00539393352086352
+        },
+        {
+          "load_scale": 3.3859296482412065,
+          "converged": true,
+          "c_struct": 0.005529576971886608
+        },
+        {
+          "load_scale": 3.4080402010050252,
+          "converged": true,
+          "c_struct": 0.005669536119026562
+        },
+        {
+          "load_scale": 3.4301507537688445,
+          "converged": true,
+          "c_struct": 0.005814054760499304
+        },
+        {
+          "load_scale": 3.4522613065326637,
+          "converged": true,
+          "c_struct": 0.005963400418097353
+        },
+        {
+          "load_scale": 3.4743718592964825,
+          "converged": true,
+          "c_struct": 0.006117867697355788
+        },
+        {
+          "load_scale": 3.4964824120603017,
+          "converged": true,
+          "c_struct": 0.006277782285293711
+        },
+        {
+          "load_scale": 3.518592964824121,
+          "converged": true,
+          "c_struct": 0.006443505740002263
+        },
+        {
+          "load_scale": 3.5407035175879398,
+          "converged": true,
+          "c_struct": 0.006615441272432959
+        },
+        {
+          "load_scale": 3.562814070351759,
+          "converged": true,
+          "c_struct": 0.0067940407834330245
+        },
+        {
+          "load_scale": 3.5849246231155782,
+          "converged": true,
+          "c_struct": 0.006979813505477696
+        },
+        {
+          "load_scale": 3.6070351758793975,
+          "converged": true,
+          "c_struct": 0.007173336719327458
+        },
+        {
+          "load_scale": 3.6291457286432163,
+          "converged": true,
+          "c_struct": 0.007375269187269848
+        },
+        {
+          "load_scale": 3.6512562814070355,
+          "converged": true,
+          "c_struct": 0.007586368192048038
+        },
+        {
+          "load_scale": 3.6733668341708547,
+          "converged": true,
+          "c_struct": 0.007807522555734464
+        },
+        {
+          "load_scale": 3.6954773869346735,
+          "converged": true,
+          "c_struct": 0.008039743486318135
+        },
+        {
+          "load_scale": 3.7175879396984928,
+          "converged": true,
+          "c_struct": 0.008284253348320681
+        },
+        {
+          "load_scale": 3.739698492462312,
+          "converged": true,
+          "c_struct": 0.008542506893780041
+        },
+        {
+          "load_scale": 3.761809045226131,
+          "converged": true,
+          "c_struct": 0.008816269967650643
+        },
+        {
+          "load_scale": 3.78391959798995,
+          "converged": true,
+          "c_struct": 0.009107721454086332
+        },
+        {
+          "load_scale": 3.8060301507537693,
+          "converged": true,
+          "c_struct": 0.00941960267613421
+        },
+        {
+          "load_scale": 3.828140703517588,
+          "converged": true,
+          "c_struct": 0.009755444408751325
+        },
+        {
+          "load_scale": 3.8502512562814073,
+          "converged": true,
+          "c_struct": 0.010119927328692841
+        },
+        {
+          "load_scale": 3.8723618090452265,
+          "converged": true,
+          "c_struct": 0.010519486447981256
+        },
+        {
+          "load_scale": 3.8944723618090453,
+          "converged": true,
+          "c_struct": 0.010963397894221079
+        },
+        {
+          "load_scale": 3.9165829145728646,
+          "converged": true,
+          "c_struct": 0.011465922295916075
+        },
+        {
+          "load_scale": 3.938693467336684,
+          "converged": true,
+          "c_struct": 0.01205115206662856
+        },
+        {
+          "load_scale": 3.9608040201005026,
+          "converged": true,
+          "c_struct": 0.012766234285402616
+        },
+        {
+          "load_scale": 3.982914572864322,
+          "converged": true,
+          "c_struct": 0.013734169529113337
+        },
+        {
+          "load_scale": 4.005025125628141,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    },
+    {
+      "case_id": "ieee30",
+      "planned_samples": 200,
+      "attempted_samples": 140,
+      "converged_samples": 139,
+      "collapse_load_scale": 3.6733668341708547,
+      "boundary_status": "observed_after_converged_prefix",
+      "curvature_status": "estimated",
+      "historical_peak_load_scale": 3.6291457286432163,
+      "historical_lead": 0.04422110552763847,
+      "interior_peak_load_scale": 3.6070351758793975,
+      "interior_lead": 0.06633165829145726,
+      "interior_peak_offset_from_last_converged_sample": 2,
+      "interior_peak_at_exclusion_boundary": true,
+      "downsampled_interior_peak_load_scale": 3.562814070351759,
+      "downsampled_interior_lead": 0.11055276381909573,
+      "resolution_peak_shift": 0.04422110552763847,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": true,
+          "c_struct": 3.468689074671754e-05
+        },
+        {
+          "load_scale": 0.6221105527638191,
+          "converged": true,
+          "c_struct": 3.374396202520952e-05
+        },
+        {
+          "load_scale": 0.6442211055276381,
+          "converged": true,
+          "c_struct": 3.2863706111781466e-05
+        },
+        {
+          "load_scale": 0.6663316582914572,
+          "converged": true,
+          "c_struct": 3.207312534695866e-05
+        },
+        {
+          "load_scale": 0.6884422110552764,
+          "converged": true,
+          "c_struct": 3.13897110472734e-05
+        },
+        {
+          "load_scale": 0.7105527638190955,
+          "converged": true,
+          "c_struct": 3.084380749575067e-05
+        },
+        {
+          "load_scale": 0.7326633165829146,
+          "converged": true,
+          "c_struct": 3.0468349062131247e-05
+        },
+        {
+          "load_scale": 0.7547738693467336,
+          "converged": true,
+          "c_struct": 3.029285875897343e-05
+        },
+        {
+          "load_scale": 0.7768844221105528,
+          "converged": true,
+          "c_struct": 3.0428068827110844e-05
+        },
+        {
+          "load_scale": 0.7989949748743719,
+          "converged": true,
+          "c_struct": 3.090492733948685e-05
+        },
+        {
+          "load_scale": 0.8211055276381909,
+          "converged": true,
+          "c_struct": 3.183292766049246e-05
+        },
+        {
+          "load_scale": 0.84321608040201,
+          "converged": true,
+          "c_struct": 3.319618123821333e-05
+        },
+        {
+          "load_scale": 0.8653266331658291,
+          "converged": true,
+          "c_struct": 3.4996175759098575e-05
+        },
+        {
+          "load_scale": 0.8874371859296483,
+          "converged": true,
+          "c_struct": 3.732327590217981e-05
+        },
+        {
+          "load_scale": 0.9095477386934674,
+          "converged": true,
+          "c_struct": 4.029937699983026e-05
+        },
+        {
+          "load_scale": 0.9316582914572864,
+          "converged": true,
+          "c_struct": 4.4076982693179606e-05
+        },
+        {
+          "load_scale": 0.9537688442211055,
+          "converged": true,
+          "c_struct": 4.8688328211007883e-05
+        },
+        {
+          "load_scale": 0.9758793969849247,
+          "converged": true,
+          "c_struct": 5.4084760037082416e-05
+        },
+        {
+          "load_scale": 0.9979899497487437,
+          "converged": true,
+          "c_struct": 6.041298300900515e-05
+        },
+        {
+          "load_scale": 1.020100502512563,
+          "converged": true,
+          "c_struct": 6.768413464550247e-05
+        },
+        {
+          "load_scale": 1.042211055276382,
+          "converged": true,
+          "c_struct": 7.578715470913405e-05
+        },
+        {
+          "load_scale": 1.064321608040201,
+          "converged": true,
+          "c_struct": 8.084820103013359e-05
+        },
+        {
+          "load_scale": 1.0864321608040202,
+          "converged": true,
+          "c_struct": 8.341183488131436e-05
+        },
+        {
+          "load_scale": 1.1085427135678392,
+          "converged": true,
+          "c_struct": 8.641128577005638e-05
+        },
+        {
+          "load_scale": 1.1306532663316582,
+          "converged": true,
+          "c_struct": 8.980719647893481e-05
+        },
+        {
+          "load_scale": 1.1527638190954774,
+          "converged": true,
+          "c_struct": 9.361689961274247e-05
+        },
+        {
+          "load_scale": 1.1748743718592967,
+          "converged": true,
+          "c_struct": 9.779759781083564e-05
+        },
+        {
+          "load_scale": 1.1969849246231155,
+          "converged": true,
+          "c_struct": 0.00010230872611563456
+        },
+        {
+          "load_scale": 1.2190954773869347,
+          "converged": true,
+          "c_struct": 0.00010713699226439684
+        },
+        {
+          "load_scale": 1.241206030150754,
+          "converged": true,
+          "c_struct": 0.00011227285634645658
+        },
+        {
+          "load_scale": 1.2633165829145727,
+          "converged": true,
+          "c_struct": 0.00011771034795088189
+        },
+        {
+          "load_scale": 1.285427135678392,
+          "converged": true,
+          "c_struct": 0.00012344827980395644
+        },
+        {
+          "load_scale": 1.3075376884422112,
+          "converged": true,
+          "c_struct": 0.00012951068030713468
+        },
+        {
+          "load_scale": 1.3296482412060302,
+          "converged": true,
+          "c_struct": 0.00013588662880928068
+        },
+        {
+          "load_scale": 1.3517587939698492,
+          "converged": true,
+          "c_struct": 0.00014255310464705493
+        },
+        {
+          "load_scale": 1.3738693467336685,
+          "converged": true,
+          "c_struct": 0.0001495052978731914
+        },
+        {
+          "load_scale": 1.3959798994974875,
+          "converged": true,
+          "c_struct": 0.00015676223002912995
+        },
+        {
+          "load_scale": 1.4180904522613065,
+          "converged": true,
+          "c_struct": 0.00016431804171638783
+        },
+        {
+          "load_scale": 1.4402010050251257,
+          "converged": true,
+          "c_struct": 0.00017215656930457537
+        },
+        {
+          "load_scale": 1.4623115577889447,
+          "converged": true,
+          "c_struct": 0.0001802782952468519
+        },
+        {
+          "load_scale": 1.4844221105527637,
+          "converged": true,
+          "c_struct": 0.00018868388993185402
+        },
+        {
+          "load_scale": 1.506532663316583,
+          "converged": true,
+          "c_struct": 0.0001973738424385568
+        },
+        {
+          "load_scale": 1.5286432160804022,
+          "converged": true,
+          "c_struct": 0.00020637730426606543
+        },
+        {
+          "load_scale": 1.550753768844221,
+          "converged": true,
+          "c_struct": 0.00021568732047816912
+        },
+        {
+          "load_scale": 1.5728643216080402,
+          "converged": true,
+          "c_struct": 0.00022527129691336345
+        },
+        {
+          "load_scale": 1.5949748743718595,
+          "converged": true,
+          "c_struct": 0.00023505328096491717
+        },
+        {
+          "load_scale": 1.6170854271356783,
+          "converged": true,
+          "c_struct": 0.0002455155741905852
+        },
+        {
+          "load_scale": 1.6391959798994975,
+          "converged": true,
+          "c_struct": 0.00025626916517270597
+        },
+        {
+          "load_scale": 1.6613065326633167,
+          "converged": true,
+          "c_struct": 0.00026752076665176886
+        },
+        {
+          "load_scale": 1.6834170854271355,
+          "converged": true,
+          "c_struct": 0.00027904206500194997
+        },
+        {
+          "load_scale": 1.7055276381909548,
+          "converged": true,
+          "c_struct": 0.0002908749227211013
+        },
+        {
+          "load_scale": 1.727638190954774,
+          "converged": true,
+          "c_struct": 0.00030303515925436485
+        },
+        {
+          "load_scale": 1.7497487437185932,
+          "converged": true,
+          "c_struct": 0.0003155335134813435
+        },
+        {
+          "load_scale": 1.771859296482412,
+          "converged": true,
+          "c_struct": 0.0003283789480069666
+        },
+        {
+          "load_scale": 1.7939698492462313,
+          "converged": true,
+          "c_struct": 0.00034157969507156124
+        },
+        {
+          "load_scale": 1.8160804020100505,
+          "converged": true,
+          "c_struct": 0.00035514369463532597
+        },
+        {
+          "load_scale": 1.8381909547738693,
+          "converged": true,
+          "c_struct": 0.00036907881138884685
+        },
+        {
+          "load_scale": 1.8603015075376885,
+          "converged": true,
+          "c_struct": 0.00038339295593289174
+        },
+        {
+          "load_scale": 1.8824120603015078,
+          "converged": true,
+          "c_struct": 0.0003980941593143768
+        },
+        {
+          "load_scale": 1.9045226130653266,
+          "converged": true,
+          "c_struct": 0.00041319062295080766
+        },
+        {
+          "load_scale": 1.9266331658291458,
+          "converged": true,
+          "c_struct": 0.0004286907548155747
+        },
+        {
+          "load_scale": 1.948743718592965,
+          "converged": true,
+          "c_struct": 0.0004446031976683321
+        },
+        {
+          "load_scale": 1.9708542713567838,
+          "converged": true,
+          "c_struct": 0.00046093685260268583
+        },
+        {
+          "load_scale": 1.992964824120603,
+          "converged": true,
+          "c_struct": 0.0004777008998609494
+        },
+        {
+          "load_scale": 2.0150753768844223,
+          "converged": true,
+          "c_struct": 0.0004949048181335465
+        },
+        {
+          "load_scale": 2.037185929648241,
+          "converged": true,
+          "c_struct": 0.000512558403138185
+        },
+        {
+          "load_scale": 2.0592964824120603,
+          "converged": true,
+          "c_struct": 0.0005306717860207326
+        },
+        {
+          "load_scale": 2.0814070351758795,
+          "converged": true,
+          "c_struct": 0.0005492554519659695
+        },
+        {
+          "load_scale": 2.103517587939699,
+          "converged": true,
+          "c_struct": 0.0005683202593092905
+        },
+        {
+          "load_scale": 2.1256281407035176,
+          "converged": true,
+          "c_struct": 0.0005878774593804686
+        },
+        {
+          "load_scale": 2.147738693467337,
+          "converged": true,
+          "c_struct": 0.0006079387172722005
+        },
+        {
+          "load_scale": 2.169849246231156,
+          "converged": true,
+          "c_struct": 0.000628516133703999
+        },
+        {
+          "load_scale": 2.191959798994975,
+          "converged": true,
+          "c_struct": 0.0006496222681385444
+        },
+        {
+          "load_scale": 2.214070351758794,
+          "converged": true,
+          "c_struct": 0.0006712701633018856
+        },
+        {
+          "load_scale": 2.2361809045226133,
+          "converged": true,
+          "c_struct": 0.0006934763721481133
+        },
+        {
+          "load_scale": 2.258291457286432,
+          "converged": true,
+          "c_struct": 0.0007162553475252269
+        },
+        {
+          "load_scale": 2.2804020100502513,
+          "converged": true,
+          "c_struct": 0.0007396205060407798
+        },
+        {
+          "load_scale": 2.3025125628140706,
+          "converged": true,
+          "c_struct": 0.0007635837508065648
+        },
+        {
+          "load_scale": 2.3246231155778894,
+          "converged": true,
+          "c_struct": 0.000788162547852481
+        },
+        {
+          "load_scale": 2.3467336683417086,
+          "converged": true,
+          "c_struct": 0.0008133734722279531
+        },
+        {
+          "load_scale": 2.368844221105528,
+          "converged": true,
+          "c_struct": 0.000839233808830778
+        },
+        {
+          "load_scale": 2.3909547738693466,
+          "converged": true,
+          "c_struct": 0.0008657615943817544
+        },
+        {
+          "load_scale": 2.413065326633166,
+          "converged": true,
+          "c_struct": 0.0008929756623977591
+        },
+        {
+          "load_scale": 2.435175879396985,
+          "converged": true,
+          "c_struct": 0.0009208956913281089
+        },
+        {
+          "load_scale": 2.4572864321608043,
+          "converged": true,
+          "c_struct": 0.0009495422559663567
+        },
+        {
+          "load_scale": 2.479396984924623,
+          "converged": true,
+          "c_struct": 0.0009789368821410958
+        },
+        {
+          "load_scale": 2.5015075376884424,
+          "converged": true,
+          "c_struct": 0.0010091021044738567
+        },
+        {
+          "load_scale": 2.5236180904522616,
+          "converged": true,
+          "c_struct": 0.0010400615265635915
+        },
+        {
+          "load_scale": 2.5457286432160804,
+          "converged": true,
+          "c_struct": 0.0010718398820853104
+        },
+        {
+          "load_scale": 2.5678391959798996,
+          "converged": true,
+          "c_struct": 0.0011044630934197983
+        },
+        {
+          "load_scale": 2.589949748743719,
+          "converged": true,
+          "c_struct": 0.0011379583201278208
+        },
+        {
+          "load_scale": 2.612060301507538,
+          "converged": true,
+          "c_struct": 0.0011723539785995882
+        },
+        {
+          "load_scale": 2.634170854271357,
+          "converged": true,
+          "c_struct": 0.0012076796818739461
+        },
+        {
+          "load_scale": 2.656281407035176,
+          "converged": true,
+          "c_struct": 0.0012439659308810193
+        },
+        {
+          "load_scale": 2.6783919597989954,
+          "converged": true,
+          "c_struct": 0.0012812427784067665
+        },
+        {
+          "load_scale": 2.700502512562814,
+          "converged": true,
+          "c_struct": 0.0013195292902315524
+        },
+        {
+          "load_scale": 2.7226130653266334,
+          "converged": true,
+          "c_struct": 0.0013589959721391433
+        },
+        {
+          "load_scale": 2.7447236180904526,
+          "converged": true,
+          "c_struct": 0.0013995908054087207
+        },
+        {
+          "load_scale": 2.7668341708542714,
+          "converged": true,
+          "c_struct": 0.0014413252605484038
+        },
+        {
+          "load_scale": 2.7889447236180906,
+          "converged": true,
+          "c_struct": 0.0014842514559152771
+        },
+        {
+          "load_scale": 2.81105527638191,
+          "converged": true,
+          "c_struct": 0.0015284181020103085
+        },
+        {
+          "load_scale": 2.8331658291457287,
+          "converged": true,
+          "c_struct": 0.0015738722471252825
+        },
+        {
+          "load_scale": 2.855276381909548,
+          "converged": true,
+          "c_struct": 0.0016206405874386466
+        },
+        {
+          "load_scale": 2.877386934673367,
+          "converged": true,
+          "c_struct": 0.0016690019668985903
+        },
+        {
+          "load_scale": 2.8994974874371864,
+          "converged": true,
+          "c_struct": 0.0017188422723730193
+        },
+        {
+          "load_scale": 2.921608040201005,
+          "converged": true,
+          "c_struct": 0.0017702156412790506
+        },
+        {
+          "load_scale": 2.9437185929648244,
+          "converged": true,
+          "c_struct": 0.0018232046838795677
+        },
+        {
+          "load_scale": 2.9658291457286436,
+          "converged": true,
+          "c_struct": 0.0018778919240030022
+        },
+        {
+          "load_scale": 2.9879396984924624,
+          "converged": true,
+          "c_struct": 0.0019343646752523448
+        },
+        {
+          "load_scale": 3.0100502512562817,
+          "converged": true,
+          "c_struct": 0.001992716756894442
+        },
+        {
+          "load_scale": 3.032160804020101,
+          "converged": true,
+          "c_struct": 0.00205304969690425
+        },
+        {
+          "load_scale": 3.0542713567839197,
+          "converged": true,
+          "c_struct": 0.002115473883494351
+        },
+        {
+          "load_scale": 3.076381909547739,
+          "converged": true,
+          "c_struct": 0.0021801098104132265
+        },
+        {
+          "load_scale": 3.098492462311558,
+          "converged": true,
+          "c_struct": 0.0022470894913647964
+        },
+        {
+          "load_scale": 3.120603015075377,
+          "converged": true,
+          "c_struct": 0.002316558103921569
+        },
+        {
+          "load_scale": 3.142713567839196,
+          "converged": true,
+          "c_struct": 0.002388675926111971
+        },
+        {
+          "load_scale": 3.1648241206030154,
+          "converged": true,
+          "c_struct": 0.0024636206404920905
+        },
+        {
+          "load_scale": 3.1869346733668342,
+          "converged": true,
+          "c_struct": 0.0025415900991171032
+        },
+        {
+          "load_scale": 3.2090452261306535,
+          "converged": true,
+          "c_struct": 0.00262280566903108
+        },
+        {
+          "load_scale": 3.2311557788944727,
+          "converged": true,
+          "c_struct": 0.0027075163135394597
+        },
+        {
+          "load_scale": 3.2532663316582915,
+          "converged": true,
+          "c_struct": 0.002796058239916056
+        },
+        {
+          "load_scale": 3.2753768844221107,
+          "converged": true,
+          "c_struct": 0.0028888194652123018
+        },
+        {
+          "load_scale": 3.29748743718593,
+          "converged": true,
+          "c_struct": 0.002986064984857776
+        },
+        {
+          "load_scale": 3.319597989949749,
+          "converged": true,
+          "c_struct": 0.0030882082888080194
+        },
+        {
+          "load_scale": 3.341708542713568,
+          "converged": true,
+          "c_struct": 0.003195748090183356
+        },
+        {
+          "load_scale": 3.3638190954773872,
+          "converged": true,
+          "c_struct": 0.003309259127092031
+        },
+        {
+          "load_scale": 3.3859296482412065,
+          "converged": true,
+          "c_struct": 0.003429374478785866
+        },
+        {
+          "load_scale": 3.4080402010050252,
+          "converged": true,
+          "c_struct": 0.003557488652919351
+        },
+        {
+          "load_scale": 3.4301507537688445,
+          "converged": true,
+          "c_struct": 0.003694287098190997
+        },
+        {
+          "load_scale": 3.4522613065326637,
+          "converged": true,
+          "c_struct": 0.003840965376211308
+        },
+        {
+          "load_scale": 3.4743718592964825,
+          "converged": true,
+          "c_struct": 0.003999211402605848
+        },
+        {
+          "load_scale": 3.4964824120603017,
+          "converged": true,
+          "c_struct": 0.004171220468073429
+        },
+        {
+          "load_scale": 3.518592964824121,
+          "converged": true,
+          "c_struct": 0.004359965753357855
+        },
+        {
+          "load_scale": 3.5407035175879398,
+          "converged": true,
+          "c_struct": 0.004569657661115609
+        },
+        {
+          "load_scale": 3.562814070351759,
+          "converged": true,
+          "c_struct": 0.004806615726744225
+        },
+        {
+          "load_scale": 3.5849246231155782,
+          "converged": true,
+          "c_struct": 0.005081156116571548
+        },
+        {
+          "load_scale": 3.6070351758793975,
+          "converged": true,
+          "c_struct": 0.005412309833840904
+        },
+        {
+          "load_scale": 3.6291457286432163,
+          "converged": true,
+          "c_struct": 0.005844119060076766
+        },
+        {
+          "load_scale": 3.6512562814070355,
+          "converged": true,
+          "c_struct": 0.0065598467360809916
+        },
+        {
+          "load_scale": 3.6733668341708547,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    },
+    {
+      "case_id": "ieee57",
+      "planned_samples": 200,
+      "attempted_samples": 40,
+      "converged_samples": 39,
+      "collapse_load_scale": 1.4623115577889447,
+      "boundary_status": "observed_after_converged_prefix",
+      "curvature_status": "estimated",
+      "historical_peak_load_scale": 1.4180904522613065,
+      "historical_lead": 0.04422110552763825,
+      "interior_peak_load_scale": 1.3959798994974875,
+      "interior_lead": 0.06633165829145726,
+      "interior_peak_offset_from_last_converged_sample": 2,
+      "interior_peak_at_exclusion_boundary": true,
+      "downsampled_interior_peak_load_scale": 1.3517587939698492,
+      "downsampled_interior_lead": 0.11055276381909551,
+      "resolution_peak_shift": 0.04422110552763825,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": true,
+          "c_struct": 0.0002459090454965016
+        },
+        {
+          "load_scale": 0.6221105527638191,
+          "converged": true,
+          "c_struct": 0.00023582254821516004
+        },
+        {
+          "load_scale": 0.6442211055276381,
+          "converged": true,
+          "c_struct": 0.0002286014538931543
+        },
+        {
+          "load_scale": 0.6663316582914572,
+          "converged": true,
+          "c_struct": 0.00022510837107870215
+        },
+        {
+          "load_scale": 0.6884422110552764,
+          "converged": true,
+          "c_struct": 0.00022725261277553496
+        },
+        {
+          "load_scale": 0.7105527638190955,
+          "converged": true,
+          "c_struct": 0.00023481730913397199
+        },
+        {
+          "load_scale": 0.7326633165829146,
+          "converged": true,
+          "c_struct": 0.0002464729188932177
+        },
+        {
+          "load_scale": 0.7547738693467336,
+          "converged": true,
+          "c_struct": 0.0002631220292898479
+        },
+        {
+          "load_scale": 0.7768844221105528,
+          "converged": true,
+          "c_struct": 0.0002850373652389214
+        },
+        {
+          "load_scale": 0.7989949748743719,
+          "converged": true,
+          "c_struct": 0.00031527505453573986
+        },
+        {
+          "load_scale": 0.8211055276381909,
+          "converged": true,
+          "c_struct": 0.0003530291331943761
+        },
+        {
+          "load_scale": 0.84321608040201,
+          "converged": true,
+          "c_struct": 0.00039865533783226253
+        },
+        {
+          "load_scale": 0.8653266331658291,
+          "converged": true,
+          "c_struct": 0.0004533568183364923
+        },
+        {
+          "load_scale": 0.8874371859296483,
+          "converged": true,
+          "c_struct": 0.0005185906256782623
+        },
+        {
+          "load_scale": 0.9095477386934674,
+          "converged": true,
+          "c_struct": 0.0005953502485630828
+        },
+        {
+          "load_scale": 0.9316582914572864,
+          "converged": true,
+          "c_struct": 0.0006653366057769402
+        },
+        {
+          "load_scale": 0.9537688442211055,
+          "converged": true,
+          "c_struct": 0.0006658704549594987
+        },
+        {
+          "load_scale": 0.9758793969849247,
+          "converged": true,
+          "c_struct": 0.0006728816031772501
+        },
+        {
+          "load_scale": 0.9979899497487437,
+          "converged": true,
+          "c_struct": 0.0006855538524336421
+        },
+        {
+          "load_scale": 1.020100502512563,
+          "converged": true,
+          "c_struct": 0.0007029265019776165
+        },
+        {
+          "load_scale": 1.042211055276382,
+          "converged": true,
+          "c_struct": 0.0007246240185806223
+        },
+        {
+          "load_scale": 1.064321608040201,
+          "converged": true,
+          "c_struct": 0.0007500954812263019
+        },
+        {
+          "load_scale": 1.0864321608040202,
+          "converged": true,
+          "c_struct": 0.0007792971482791169
+        },
+        {
+          "load_scale": 1.1085427135678392,
+          "converged": true,
+          "c_struct": 0.0008118883771298341
+        },
+        {
+          "load_scale": 1.1306532663316582,
+          "converged": true,
+          "c_struct": 0.0008478882403677006
+        },
+        {
+          "load_scale": 1.1527638190954774,
+          "converged": true,
+          "c_struct": 0.0008877174425122482
+        },
+        {
+          "load_scale": 1.1748743718592967,
+          "converged": true,
+          "c_struct": 0.0009310405989801399
+        },
+        {
+          "load_scale": 1.1969849246231155,
+          "converged": true,
+          "c_struct": 0.0009783270245976234
+        },
+        {
+          "load_scale": 1.2190954773869347,
+          "converged": true,
+          "c_struct": 0.0010298066433351548
+        },
+        {
+          "load_scale": 1.241206030150754,
+          "converged": true,
+          "c_struct": 0.0010857411729830444
+        },
+        {
+          "load_scale": 1.2633165829145727,
+          "converged": true,
+          "c_struct": 0.001146929175761493
+        },
+        {
+          "load_scale": 1.285427135678392,
+          "converged": true,
+          "c_struct": 0.001213807517282244
+        },
+        {
+          "load_scale": 1.3075376884422112,
+          "converged": true,
+          "c_struct": 0.001287194079410048
+        },
+        {
+          "load_scale": 1.3296482412060302,
+          "converged": true,
+          "c_struct": 0.0013683675455203638
+        },
+        {
+          "load_scale": 1.3517587939698492,
+          "converged": true,
+          "c_struct": 0.0014592098231474887
+        },
+        {
+          "load_scale": 1.3738693467336685,
+          "converged": true,
+          "c_struct": 0.001562736974192315
+        },
+        {
+          "load_scale": 1.3959798994974875,
+          "converged": true,
+          "c_struct": 0.0016843910869463125
+        },
+        {
+          "load_scale": 1.4180904522613065,
+          "converged": true,
+          "c_struct": 0.0018363978850352354
+        },
+        {
+          "load_scale": 1.4402010050251257,
+          "converged": true,
+          "c_struct": 0.002068342705954574
+        },
+        {
+          "load_scale": 1.4623115577889447,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    },
+    {
+      "case_id": "ieee118",
+      "planned_samples": 200,
+      "attempted_samples": 56,
+      "converged_samples": 55,
+      "collapse_load_scale": 1.8160804020100505,
+      "boundary_status": "observed_after_converged_prefix",
+      "curvature_status": "estimated",
+      "historical_peak_load_scale": 1.7497487437185932,
+      "historical_lead": 0.06633165829145726,
+      "interior_peak_load_scale": 1.7497487437185932,
+      "interior_lead": 0.06633165829145726,
+      "interior_peak_offset_from_last_converged_sample": 2,
+      "interior_peak_at_exclusion_boundary": true,
+      "downsampled_interior_peak_load_scale": 1.7055276381909548,
+      "downsampled_interior_lead": 0.11055276381909573,
+      "resolution_peak_shift": 0.04422110552763847,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": true,
+          "c_struct": 0.00043166199747543755
+        },
+        {
+          "load_scale": 0.6221105527638191,
+          "converged": true,
+          "c_struct": 0.00040085623743412943
+        },
+        {
+          "load_scale": 0.6442211055276381,
+          "converged": true,
+          "c_struct": 0.00037285679159457783
+        },
+        {
+          "load_scale": 0.6663316582914572,
+          "converged": true,
+          "c_struct": 0.00034753024558785276
+        },
+        {
+          "load_scale": 0.6884422110552764,
+          "converged": true,
+          "c_struct": 0.0003248958265072528
+        },
+        {
+          "load_scale": 0.7105527638190955,
+          "converged": true,
+          "c_struct": 0.00030496947439531875
+        },
+        {
+          "load_scale": 0.7326633165829146,
+          "converged": true,
+          "c_struct": 0.00028807766275808255
+        },
+        {
+          "load_scale": 0.7547738693467336,
+          "converged": true,
+          "c_struct": 0.00027433679069016614
+        },
+        {
+          "load_scale": 0.7768844221105528,
+          "converged": true,
+          "c_struct": 0.00026337769762782196
+        },
+        {
+          "load_scale": 0.7989949748743719,
+          "converged": true,
+          "c_struct": 0.0002555227718361475
+        },
+        {
+          "load_scale": 0.8211055276381909,
+          "converged": true,
+          "c_struct": 0.00025058024367698135
+        },
+        {
+          "load_scale": 0.84321608040201,
+          "converged": true,
+          "c_struct": 0.00024867100520201667
+        },
+        {
+          "load_scale": 0.8653266331658291,
+          "converged": true,
+          "c_struct": 0.00024999386910323497
+        },
+        {
+          "load_scale": 0.8874371859296483,
+          "converged": true,
+          "c_struct": 0.00025469151266490036
+        },
+        {
+          "load_scale": 0.9095477386934674,
+          "converged": true,
+          "c_struct": 0.00026255325429464405
+        },
+        {
+          "load_scale": 0.9316582914572864,
+          "converged": true,
+          "c_struct": 0.0002739958414536739
+        },
+        {
+          "load_scale": 0.9537688442211055,
+          "converged": true,
+          "c_struct": 0.00028913100910386077
+        },
+        {
+          "load_scale": 0.9758793969849247,
+          "converged": true,
+          "c_struct": 0.00030795518897571106
+        },
+        {
+          "load_scale": 0.9979899497487437,
+          "converged": true,
+          "c_struct": 0.0003306037639178148
+        },
+        {
+          "load_scale": 1.020100502512563,
+          "converged": true,
+          "c_struct": 0.00035732584381982876
+        },
+        {
+          "load_scale": 1.042211055276382,
+          "converged": true,
+          "c_struct": 0.0003883517443674978
+        },
+        {
+          "load_scale": 1.064321608040201,
+          "converged": true,
+          "c_struct": 0.00042382864030875844
+        },
+        {
+          "load_scale": 1.0864321608040202,
+          "converged": true,
+          "c_struct": 0.00046378977394454077
+        },
+        {
+          "load_scale": 1.1085427135678392,
+          "converged": true,
+          "c_struct": 0.0005085268806032203
+        },
+        {
+          "load_scale": 1.1306532663316582,
+          "converged": true,
+          "c_struct": 0.0005335624990919982
+        },
+        {
+          "load_scale": 1.1527638190954774,
+          "converged": true,
+          "c_struct": 0.0005291838344421974
+        },
+        {
+          "load_scale": 1.1748743718592967,
+          "converged": true,
+          "c_struct": 0.0005220505959323641
+        },
+        {
+          "load_scale": 1.1969849246231155,
+          "converged": true,
+          "c_struct": 0.0005182570278244615
+        },
+        {
+          "load_scale": 1.2190954773869347,
+          "converged": true,
+          "c_struct": 0.0005171787377072245
+        },
+        {
+          "load_scale": 1.241206030150754,
+          "converged": true,
+          "c_struct": 0.0005184773085102573
+        },
+        {
+          "load_scale": 1.2633165829145727,
+          "converged": true,
+          "c_struct": 0.000521830623650247
+        },
+        {
+          "load_scale": 1.285427135678392,
+          "converged": true,
+          "c_struct": 0.0005271997183618563
+        },
+        {
+          "load_scale": 1.3075376884422112,
+          "converged": true,
+          "c_struct": 0.0005340631997594533
+        },
+        {
+          "load_scale": 1.3296482412060302,
+          "converged": true,
+          "c_struct": 0.0005423913584934425
+        },
+        {
+          "load_scale": 1.3517587939698492,
+          "converged": true,
+          "c_struct": 0.000552248781721706
+        },
+        {
+          "load_scale": 1.3738693467336685,
+          "converged": true,
+          "c_struct": 0.0005636052415975069
+        },
+        {
+          "load_scale": 1.3959798994974875,
+          "converged": true,
+          "c_struct": 0.0005762024077471539
+        },
+        {
+          "load_scale": 1.4180904522613065,
+          "converged": true,
+          "c_struct": 0.0005900793915725624
+        },
+        {
+          "load_scale": 1.4402010050251257,
+          "converged": true,
+          "c_struct": 0.0006052776935024603
+        },
+        {
+          "load_scale": 1.4623115577889447,
+          "converged": true,
+          "c_struct": 0.0006219357696686974
+        },
+        {
+          "load_scale": 1.4844221105527637,
+          "converged": true,
+          "c_struct": 0.0006401172546518895
+        },
+        {
+          "load_scale": 1.506532663316583,
+          "converged": true,
+          "c_struct": 0.0006598021546307634
+        },
+        {
+          "load_scale": 1.5286432160804022,
+          "converged": true,
+          "c_struct": 0.0006811124016275667
+        },
+        {
+          "load_scale": 1.550753768844221,
+          "converged": true,
+          "c_struct": 0.0007041965581008789
+        },
+        {
+          "load_scale": 1.5728643216080402,
+          "converged": true,
+          "c_struct": 0.0007292416875002049
+        },
+        {
+          "load_scale": 1.5949748743718595,
+          "converged": true,
+          "c_struct": 0.0007564959923472529
+        },
+        {
+          "load_scale": 1.6170854271356783,
+          "converged": true,
+          "c_struct": 0.0007861995467990918
+        },
+        {
+          "load_scale": 1.6391959798994975,
+          "converged": true,
+          "c_struct": 0.0008186786667681452
+        },
+        {
+          "load_scale": 1.6613065326633167,
+          "converged": true,
+          "c_struct": 0.000854459701497118
+        },
+        {
+          "load_scale": 1.6834170854271355,
+          "converged": true,
+          "c_struct": 0.000894050070332025
+        },
+        {
+          "load_scale": 1.7055276381909548,
+          "converged": true,
+          "c_struct": 0.0009382000254009507
+        },
+        {
+          "load_scale": 1.727638190954774,
+          "converged": true,
+          "c_struct": 0.0009880479119160808
+        },
+        {
+          "load_scale": 1.7497487437185932,
+          "converged": true,
+          "c_struct": 0.0010452781970641568
+        },
+        {
+          "load_scale": 1.771859296482412,
+          "converged": true,
+          "c_struct": 0.0011128133334795949
+        },
+        {
+          "load_scale": 1.7939698492462313,
+          "converged": true,
+          "c_struct": 0.0011968768016972454
+        },
+        {
+          "load_scale": 1.8160804020100505,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    },
+    {
+      "case_id": "ieee300",
+      "planned_samples": 200,
+      "attempted_samples": 1,
+      "converged_samples": 0,
+      "collapse_load_scale": 0.6,
+      "boundary_status": "lower_bound_nonconverged",
+      "curvature_status": "insufficient_converged_samples",
+      "historical_peak_load_scale": null,
+      "historical_lead": null,
+      "interior_peak_load_scale": null,
+      "interior_lead": null,
+      "interior_peak_offset_from_last_converged_sample": null,
+      "interior_peak_at_exclusion_boundary": false,
+      "downsampled_interior_peak_load_scale": null,
+      "downsampled_interior_lead": null,
+      "resolution_peak_shift": null,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    },
+    {
+      "case_id": "pegase1354",
+      "planned_samples": 200,
+      "attempted_samples": 34,
+      "converged_samples": 33,
+      "collapse_load_scale": 1.3296482412060302,
+      "boundary_status": "observed_after_converged_prefix",
+      "curvature_status": "estimated",
+      "historical_peak_load_scale": 1.285427135678392,
+      "historical_lead": 0.04422110552763825,
+      "interior_peak_load_scale": 1.2633165829145727,
+      "interior_lead": 0.06633165829145748,
+      "interior_peak_offset_from_last_converged_sample": 2,
+      "interior_peak_at_exclusion_boundary": true,
+      "downsampled_interior_peak_load_scale": 1.2190954773869347,
+      "downsampled_interior_lead": 0.11055276381909551,
+      "resolution_peak_shift": 0.04422110552763803,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": true,
+          "c_struct": 0.0002522345431888793
+        },
+        {
+          "load_scale": 0.6221105527638191,
+          "converged": true,
+          "c_struct": 0.0002273830488961951
+        },
+        {
+          "load_scale": 0.6442211055276381,
+          "converged": true,
+          "c_struct": 0.0002066628723405962
+        },
+        {
+          "load_scale": 0.6663316582914572,
+          "converged": true,
+          "c_struct": 0.00018932928427483568
+        },
+        {
+          "load_scale": 0.6884422110552764,
+          "converged": true,
+          "c_struct": 0.00017488024426988688
+        },
+        {
+          "load_scale": 0.7105527638190955,
+          "converged": true,
+          "c_struct": 0.00016296250617587834
+        },
+        {
+          "load_scale": 0.7326633165829146,
+          "converged": true,
+          "c_struct": 0.00015327102127594752
+        },
+        {
+          "load_scale": 0.7547738693467336,
+          "converged": true,
+          "c_struct": 0.00014567387976671862
+        },
+        {
+          "load_scale": 0.7768844221105528,
+          "converged": true,
+          "c_struct": 0.0001402006236018906
+        },
+        {
+          "load_scale": 0.7989949748743719,
+          "converged": true,
+          "c_struct": 0.00013708723724093985
+        },
+        {
+          "load_scale": 0.8211055276381909,
+          "converged": true,
+          "c_struct": 0.00013689422818162497
+        },
+        {
+          "load_scale": 0.84321608040201,
+          "converged": true,
+          "c_struct": 0.00014054998659506545
+        },
+        {
+          "load_scale": 0.8653266331658291,
+          "converged": true,
+          "c_struct": 0.00015011837653492515
+        },
+        {
+          "load_scale": 0.8874371859296483,
+          "converged": true,
+          "c_struct": 0.00016973755184657234
+        },
+        {
+          "load_scale": 0.9095477386934674,
+          "converged": true,
+          "c_struct": 0.00014745037227159892
+        },
+        {
+          "load_scale": 0.9316582914572864,
+          "converged": true,
+          "c_struct": 0.000128050909114271
+        },
+        {
+          "load_scale": 0.9537688442211055,
+          "converged": true,
+          "c_struct": 0.00010338717006676066
+        },
+        {
+          "load_scale": 0.9758793969849247,
+          "converged": true,
+          "c_struct": 9.193687162971199e-05
+        },
+        {
+          "load_scale": 0.9979899497487437,
+          "converged": true,
+          "c_struct": 8.960861332115642e-05
+        },
+        {
+          "load_scale": 1.020100502512563,
+          "converged": true,
+          "c_struct": 9.332449674247841e-05
+        },
+        {
+          "load_scale": 1.042211055276382,
+          "converged": true,
+          "c_struct": 0.00010142342827266278
+        },
+        {
+          "load_scale": 1.064321608040201,
+          "converged": true,
+          "c_struct": 0.00011302722530480459
+        },
+        {
+          "load_scale": 1.0864321608040202,
+          "converged": true,
+          "c_struct": 0.00012772021231995722
+        },
+        {
+          "load_scale": 1.1085427135678392,
+          "converged": true,
+          "c_struct": 0.00014559394598926537
+        },
+        {
+          "load_scale": 1.1306532663316582,
+          "converged": true,
+          "c_struct": 0.00016717696628835307
+        },
+        {
+          "load_scale": 1.1527638190954774,
+          "converged": true,
+          "c_struct": 0.0001832957731629828
+        },
+        {
+          "load_scale": 1.1748743718592967,
+          "converged": true,
+          "c_struct": 0.00019369800188946261
+        },
+        {
+          "load_scale": 1.1969849246231155,
+          "converged": true,
+          "c_struct": 0.00020917470872541943
+        },
+        {
+          "load_scale": 1.2190954773869347,
+          "converged": true,
+          "c_struct": 0.0002306384432049752
+        },
+        {
+          "load_scale": 1.241206030150754,
+          "converged": true,
+          "c_struct": 0.0002599303965841117
+        },
+        {
+          "load_scale": 1.2633165829145727,
+          "converged": true,
+          "c_struct": 0.00038720020187070004
+        },
+        {
+          "load_scale": 1.285427135678392,
+          "converged": true,
+          "c_struct": 0.0006641341498251036
+        },
+        {
+          "load_scale": 1.3075376884422112,
+          "converged": true,
+          "c_struct": 0.0018335312861734894
+        },
+        {
+          "load_scale": 1.3296482412060302,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    },
+    {
+      "case_id": "pegase9241",
+      "planned_samples": 200,
+      "attempted_samples": 1,
+      "converged_samples": 0,
+      "collapse_load_scale": 0.6,
+      "boundary_status": "lower_bound_nonconverged",
+      "curvature_status": "insufficient_converged_samples",
+      "historical_peak_load_scale": null,
+      "historical_lead": null,
+      "interior_peak_load_scale": null,
+      "interior_lead": null,
+      "interior_peak_offset_from_last_converged_sample": null,
+      "interior_peak_at_exclusion_boundary": false,
+      "downsampled_interior_peak_load_scale": null,
+      "downsampled_interior_lead": null,
+      "resolution_peak_shift": null,
+      "curve": [
+        {
+          "load_scale": 0.6,
+          "converged": false,
+          "c_struct": null
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "cases": 8,
+    "boundaries_after_converged_prefix": 6,
+    "lower_scan_bound_nonconvergence": 2,
+    "right_censored": 0,
+    "interior_peaks_at_exclusion_boundary": 6,
+    "historical_positive_leads": 6,
+    "interior_positive_leads": 6,
+    "historical_lead_mean": 0.04790619765494138,
+    "historical_lead_cv": 0.17200522903844503,
+    "interior_lead_mean": 0.06633165829145722,
+    "interior_lead_cv": 3.0052740766325757e-15
+  },
+  "interpretation": "Physical reconstruction of a historical curvature hypothesis; not an early-warning, causal, or control validation."
+}

@@ -118,3 +118,13 @@ IEEE-9 covers both observed physical threshold crossings within one load step;
 held-out IEEE-14 misses its voltage crossing under the same fixed tolerance.
 Entity salience attribution matches 11 of 12 checks. This closes the first D–F
 path without establishing dynamic prediction or causality.
+
+## Scaling-pattern reconstruction
+
+The historical curvature hypothesis has been reconstructed across eight network
+sizes under **[validation/ieee_scaling_pattern_v1/](../../validation/ieee_scaling_pattern_v1/)**.
+Boundary acceleration is observable through PEGASE-1354, but the apparent
+constant lead is derivative-edge and resolution sensitive. IEEE-300 and
+PEGASE-9241 fail at the global lower scan bound and remain untested under this
+design. The repository must not describe the V1 result as a validated universal
+precursor.

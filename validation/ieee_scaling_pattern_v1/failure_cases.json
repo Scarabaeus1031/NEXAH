@@ -1,0 +1,36 @@
+{
+  "validation_id": "ieee-scaling-pattern-v1",
+  "failure_cases": [
+    {
+      "id": "interior-peak-at-exclusion-boundary",
+      "severity": "observed",
+      "affected_cases": 6,
+      "interpretable_cases": 6,
+      "interpretation": "Every interior peak is selected at the first point allowed by the two-sample derivative-edge exclusion."
+    },
+    {
+      "id": "resolution-sensitive-lead",
+      "severity": "observed",
+      "interpretation": "Downsampling moves peak position and increases measured lead, so lead distance is not resolution invariant."
+    },
+    {
+      "id": "ieee300-lower-bound-nonconvergence",
+      "severity": "design_failure",
+      "case_id": "ieee300",
+      "load_scale": 0.6,
+      "interpretation": "The global scan starts with a failed solve and cannot define an upper collapse boundary or precursor curve."
+    },
+    {
+      "id": "pegase9241-lower-bound-nonconvergence",
+      "severity": "design_failure",
+      "case_id": "pegase9241",
+      "load_scale": 0.6,
+      "interpretation": "The held-out PEGASE-9241 scan has no converged prefix; the historical pattern is not testable under V1."
+    },
+    {
+      "id": "historical-evidence-contamination",
+      "severity": "historical_boundary",
+      "interpretation": "Earlier scaling lines used random fallback arrays, added drift/noise, or reused designed trigger functions; those outputs are not canonical evidence for this reconstruction."
+    }
+  ]
+}

@@ -138,6 +138,12 @@ is 2/3 and attribution overlap is 11/12; the IEEE-14 miss remains documented.
 New adapters must preserve the Orientation contracts and must not encode the
 expected result as a similarity shortcut.
 
+The historical scaling hypothesis has also been reconstructed through
+PEGASE-9241 as `ieee-scaling-pattern-v1`. Six systems through PEGASE-1354 show
+boundary acceleration, but the constant apparent lead is tied to derivative
+edge exclusion and changes under downsampling. IEEE-300 and PEGASE-9241 require
+a new baseline-anchored continuation benchmark; V1 remains frozen.
+
 ## Later, outside the MVP
 
 Connectors, persistent global maps, planners, execution services, agents, and

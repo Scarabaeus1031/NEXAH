@@ -60,5 +60,7 @@ def test_reduced_scaling_validation_is_reproducible_and_collapse_aware() -> None
     assert case["collapse_load_scale"] is not None
     assert case["historical_peak_load_scale"] is not None
     assert case["interior_peak_load_scale"] is not None
-    assert len(case["curve"]) == len(scales)
+    assert case["planned_samples"] == len(scales)
+    assert case["attempted_samples"] < len(scales)
+    assert len(case["curve"]) == case["attempted_samples"]
     assert any(not row["converged"] for row in case["curve"])

@@ -54,7 +54,11 @@ def run_validation(
         )
         for case_id in case_ids
     ]
-    observed = [case for case in cases if case["collapse_load_scale"] is not None]
+    observed = [
+        case
+        for case in cases
+        if case["boundary_status"] == "observed_after_converged_prefix"
+    ]
     historical_leads = [
         float(case["historical_lead"])
         for case in observed
@@ -80,14 +84,25 @@ def run_validation(
             "interior_edge_exclusion": 2,
             "resolution_sensitivity": "every second dense sample",
             "maximum_load_scale": float(load_scales[-1]),
+            "stop_after_first_nonconvergence": True,
             "fabricated_failed_physics": False,
             "parameters_tuned_on_results": False,
         },
         "cases": cases,
         "aggregate": {
             "cases": len(cases),
-            "collapse_observed": len(observed),
-            "right_censored": len(cases) - len(observed),
+            "boundaries_after_converged_prefix": len(observed),
+            "lower_scan_bound_nonconvergence": sum(
+                case["boundary_status"] == "lower_bound_nonconverged"
+                for case in cases
+            ),
+            "right_censored": sum(
+                case["boundary_status"] == "right_censored" for case in cases
+            ),
+            "interior_peaks_at_exclusion_boundary": sum(
+                bool(case["interior_peak_at_exclusion_boundary"])
+                for case in observed
+            ),
             "historical_positive_leads": sum(value > 0.0 for value in historical_leads),
             "interior_positive_leads": sum(value > 0.0 for value in interior_leads),
             "historical_lead_mean": _mean_or_none(historical_leads),
@@ -136,7 +151,7 @@ def _evaluate_case(
                     "c_struct": None,
                 }
             )
-            continue
+            break
         rows.append(
             {
                 "load_scale": snapshot.load_scale,
@@ -169,11 +184,24 @@ def _evaluate_case(
         if down_derivatives is not None
         else None
     )
+    interior_offset = (
+        len(load) - 1 - int(np.argmin(np.abs(load - interior_peak)))
+        if interior_peak is not None
+        else None
+    )
+    if first_failure is None:
+        boundary_status = "right_censored"
+    elif not prefix:
+        boundary_status = "lower_bound_nonconverged"
+    else:
+        boundary_status = "observed_after_converged_prefix"
     return {
         "case_id": case_id,
-        "requested_samples": len(rows),
+        "planned_samples": len(load_scales),
+        "attempted_samples": len(rows),
         "converged_samples": sum(bool(row["converged"]) for row in rows),
         "collapse_load_scale": first_failure,
+        "boundary_status": boundary_status,
         "curvature_status": "estimated"
         if derivatives is not None
         else "insufficient_converged_samples",
@@ -181,6 +209,8 @@ def _evaluate_case(
         "historical_lead": _lead(first_failure, historical_peak),
         "interior_peak_load_scale": interior_peak,
         "interior_lead": _lead(first_failure, interior_peak),
+        "interior_peak_offset_from_last_converged_sample": interior_offset,
+        "interior_peak_at_exclusion_boundary": interior_offset == 2,
         "downsampled_interior_peak_load_scale": down_peak,
         "downsampled_interior_lead": _lead(first_failure, down_peak),
         "resolution_peak_shift": abs(interior_peak - down_peak)
@@ -270,8 +300,10 @@ def _write_outputs(result: dict[str, Any], output_dir: Path) -> None:
 | Metric | Result |
 |---|---:|
 | Cases | {aggregate['cases']} |
-| Collapse observed | {aggregate['collapse_observed']} |
+| Boundaries after converged prefix | {aggregate['boundaries_after_converged_prefix']} |
+| Lower-bound nonconvergence | {aggregate['lower_scan_bound_nonconvergence']} |
 | Right-censored | {aggregate['right_censored']} |
+| Interior peaks at exclusion boundary | {aggregate['interior_peaks_at_exclusion_boundary']} |
 | Historical positive leads | {aggregate['historical_positive_leads']} |
 | Interior positive leads | {aggregate['interior_positive_leads']} |
 | Historical lead mean | {aggregate['historical_lead_mean']} |
