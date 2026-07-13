@@ -86,6 +86,7 @@ htmlcov/
 /outputs/memory_generalization/
 /outputs/memory_generalization_v2/
 /outputs/ieee_orientation_v1/
+/outputs/ieee_scaling_pattern_v1/
 
 # --- CORE VISUALS ---
 !DISCOVERY_ENGINE/outputs/

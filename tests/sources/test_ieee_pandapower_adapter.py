@@ -131,3 +131,9 @@ def test_failed_snapshot_cannot_smuggle_fabricated_physics() -> None:
 def test_unknown_ieee_case_fails_visibly() -> None:
     with pytest.raises(IEEESourceAdapterError, match="unsupported IEEE case"):
         IEEEPandapowerAdapter(case_id="ieee999")
+
+
+def test_scaling_case_names_are_available_without_eager_network_loading() -> None:
+    assert IEEEPandapowerAdapter(case_id="ieee300").case_id == "ieee300"
+    assert IEEEPandapowerAdapter(case_id="pegase1354").case_id == "pegase1354"
+    assert IEEEPandapowerAdapter(case_id="pegase9241").case_id == "pegase9241"

@@ -74,6 +74,9 @@ which no scenario converges fails entirely.
 - IEEE 30-bus
 - IEEE 57-bus
 - IEEE 118-bus
+- IEEE 300-bus
+- PEGASE 1354-bus
+- PEGASE 9241-bus
 
 Pandapower is loaded lazily and remains an explicit optional runtime dependency
 of this adapter line.

@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 import importlib
 from math import isfinite
+from collections.abc import Iterator
 from typing import Any, Sequence
 
 import numpy as np
@@ -92,6 +93,9 @@ class IEEEPandapowerAdapter:
         "ieee30": "case30",
         "ieee57": "case57",
         "ieee118": "case118",
+        "ieee300": "case300",
+        "pegase1354": "case1354pegase",
+        "pegase9241": "case9241pegase",
     }
 
     def __init__(self, *, case_id: str = "ieee14") -> None:
@@ -114,23 +118,13 @@ class IEEEPandapowerAdapter:
         provenance: Provenance,
         context: Context,
     ) -> IEEECoupledCampaign:
-        require_text(campaign_id, "campaign_id")
-        scales = tuple(float(value) for value in load_scales)
-        if len(scales) < 2:
-            raise IEEESourceAdapterError("campaign requires at least two load scales")
-        if any(not isfinite(value) or value <= 0.0 for value in scales):
-            raise IEEESourceAdapterError("load scales must be finite and positive")
-        if any(current <= previous for previous, current in zip(scales, scales[1:])):
-            raise IEEESourceAdapterError("load scales must be strictly increasing")
-
         snapshots = tuple(
-            self._run_snapshot(
-                load_scale=load_scale,
-                scenario_id=f"{campaign_id}:load-{index:03d}",
+            self.iter_snapshots(
+                load_scales,
+                campaign_id=campaign_id,
                 provenance=provenance,
                 context=context,
             )
-            for index, load_scale in enumerate(scales)
         )
         converged = tuple(snapshot for snapshot in snapshots if snapshot.converged)
         if not converged:
@@ -167,6 +161,32 @@ class IEEEPandapowerAdapter:
             provenance=provenance,
             context=context,
         )
+
+    def iter_snapshots(
+        self,
+        load_scales: Sequence[float],
+        *,
+        campaign_id: str,
+        provenance: Provenance,
+        context: Context,
+    ) -> Iterator[IEEEPhysicalSnapshot]:
+        """Yield physical scenarios without retaining a large scaling campaign."""
+
+        require_text(campaign_id, "campaign_id")
+        scales = tuple(float(value) for value in load_scales)
+        if len(scales) < 2:
+            raise IEEESourceAdapterError("campaign requires at least two load scales")
+        if any(not isfinite(value) or value <= 0.0 for value in scales):
+            raise IEEESourceAdapterError("load scales must be finite and positive")
+        if any(current <= previous for previous, current in zip(scales, scales[1:])):
+            raise IEEESourceAdapterError("load scales must be strictly increasing")
+        for index, load_scale in enumerate(scales):
+            yield self._run_snapshot(
+                load_scale=load_scale,
+                scenario_id=f"{campaign_id}:load-{index:03d}",
+                provenance=provenance,
+                context=context,
+            )
 
     def _run_snapshot(
         self,
