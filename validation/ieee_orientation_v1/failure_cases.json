@@ -1,0 +1,33 @@
+{
+  "validation_id": "ieee-orientation-v1",
+  "failure_cases": [
+    {
+      "id": "held-out-ieee14-voltage-alignment",
+      "severity": "observed",
+      "case_id": "ieee14",
+      "physical_reference": "minimum_bus_voltage_below_0.95_pu",
+      "crossing_load_scale": 2.4,
+      "nearest_v07_event_load_scale": 2.1,
+      "distance": 0.3,
+      "tolerance": 0.1,
+      "interpretation": "The held-out voltage crossing is not covered by the frozen event-alignment tolerance."
+    },
+    {
+      "id": "entity-attribution-mismatch",
+      "severity": "observed",
+      "matches": 11,
+      "checks": 12,
+      "interpretation": "One top physical co-change does not identify the corresponding most stressed entity."
+    },
+    {
+      "id": "steady-state-not-dynamics",
+      "severity": "boundary",
+      "interpretation": "The ordered load campaign consists of independent power-flow solutions and cannot validate dynamic prediction."
+    },
+    {
+      "id": "nonconvergence-excluded",
+      "severity": "boundary",
+      "interpretation": "Non-converged scenarios are recorded but cannot enter the finite rectangular v0.7 campaign without an explicit representation for missing physics."
+    }
+  ]
+}

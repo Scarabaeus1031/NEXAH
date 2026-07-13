@@ -130,12 +130,13 @@ Status: active. Plateau A is closed in `PLATEAU_A_CLOSURE.md`. The repository
 adapter inventory has been classified, and the minimal serializable
 `SourceAdapter`/`SourceBatch` contract plus `ArraySourceAdapter` and the
 schema-driven `TableSourceAdapter` reference paths are implemented and tested.
-The coupled `IEEEPandapowerAdapter` now provides separate bus/line entity views
-and an ordered load-campaign view with an explicit non-convergence policy. Next
-is D: feed only the campaign view through v0.7 and generate a reproducible,
-correctly scoped IEEE Orientation Report. New adapters must preserve the
-Orientation contracts and must not encode the expected result as a similarity
-shortcut.
+The coupled `IEEEPandapowerAdapter` provides separate bus/line entity views and
+an ordered load-campaign view with an explicit non-convergence policy. D–F are
+implemented: scoped v0.7 orientation, non-causal entity co-change attribution,
+and a frozen IEEE-9/held-out-IEEE-14 validation. Canonical threshold alignment
+is 2/3 and attribution overlap is 11/12; the IEEE-14 miss remains documented.
+New adapters must preserve the Orientation contracts and must not encode the
+expected result as a similarity shortcut.
 
 ## Later, outside the MVP
 

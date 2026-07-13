@@ -1,0 +1,125 @@
+{
+  "validation_id": "ieee-orientation-v1",
+  "frozen_design": {
+    "case_roles": {
+      "ieee9": "reference",
+      "ieee14": "held_out"
+    },
+    "load_scales": [
+      0.6,
+      0.7,
+      0.7999999999999999,
+      0.8999999999999999,
+      1.0,
+      1.0999999999999999,
+      1.2,
+      1.2999999999999998,
+      1.4,
+      1.5,
+      1.5999999999999999,
+      1.6999999999999997,
+      1.7999999999999998,
+      1.9,
+      2.0,
+      2.0999999999999996,
+      2.1999999999999997,
+      2.3,
+      2.4
+    ],
+    "campaign_axis": "ordered_load_scale_not_time",
+    "independent_steady_state_solutions": true,
+    "v07_config": {
+      "n_clusters": 4,
+      "window": 4,
+      "random_state": 42
+    },
+    "physical_thresholds": {
+      "minimum_bus_voltage_below_pu": 0.95,
+      "maximum_line_loading_at_least_percent": 100.0
+    },
+    "alignment_tolerance_load_scale": 0.1,
+    "nonconvergence_scored_as_numeric_event": false,
+    "parameters_tuned_on_results": false
+  },
+  "cases": [
+    {
+      "case_id": "ieee9",
+      "requested_scenarios": 19,
+      "converged_scenarios": 17,
+      "failed_scenarios": [
+        {
+          "scenario_id": "ieee-orientation-v1-ieee9:load-017",
+          "load_scale": 2.3,
+          "failure_type": "LoadflowNotConverged"
+        },
+        {
+          "scenario_id": "ieee-orientation-v1-ieee9:load-018",
+          "load_scale": 2.4,
+          "failure_type": "LoadflowNotConverged"
+        }
+      ],
+      "first_nonconverged_load_scale": 2.3,
+      "v07_event_count": 3,
+      "v07_event_load_scales": [
+        1.2999999999999998,
+        1.6999999999999997,
+        2.0
+      ],
+      "physical_references": [
+        {
+          "reference_id": "minimum_bus_voltage_below_0.95_pu",
+          "crossing_load_scale": 1.2,
+          "nearest_event_distance": 0.09999999999999987,
+          "covered_within_tolerance": true
+        },
+        {
+          "reference_id": "maximum_line_loading_at_least_100_percent",
+          "crossing_load_scale": 1.5999999999999999,
+          "nearest_event_distance": 0.09999999999999987,
+          "covered_within_tolerance": true
+        }
+      ],
+      "scored_physical_references": 2,
+      "covered_physical_references": 2,
+      "attribution_checks": 6,
+      "attribution_matches": 6,
+      "report_scope_confirmed": true
+    },
+    {
+      "case_id": "ieee14",
+      "requested_scenarios": 19,
+      "converged_scenarios": 19,
+      "failed_scenarios": [],
+      "first_nonconverged_load_scale": null,
+      "v07_event_count": 3,
+      "v07_event_load_scales": [
+        1.2999999999999998,
+        1.6999999999999997,
+        2.0999999999999996
+      ],
+      "physical_references": [
+        {
+          "reference_id": "minimum_bus_voltage_below_0.95_pu",
+          "crossing_load_scale": 2.4,
+          "nearest_event_distance": 0.30000000000000027,
+          "covered_within_tolerance": false
+        }
+      ],
+      "scored_physical_references": 1,
+      "covered_physical_references": 0,
+      "attribution_checks": 6,
+      "attribution_matches": 5,
+      "report_scope_confirmed": true
+    }
+  ],
+  "aggregate": {
+    "scored_physical_references": 3,
+    "covered_physical_references": 2,
+    "threshold_coverage": 0.6666666666666666,
+    "mean_nearest_event_distance": 0.16666666666666666,
+    "attribution_checks": 12,
+    "attribution_matches": 11,
+    "attribution_overlap": 0.9166666666666666
+  },
+  "interpretation": "Alignment and entity co-change validation for ordered independent power-flow solutions; not dynamic prediction or causal attribution."
+}

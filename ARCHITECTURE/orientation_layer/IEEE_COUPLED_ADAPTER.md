@@ -1,6 +1,6 @@
 # IEEE / Pandapower Coupled Source Adapter
 
-Status: C1–C4 implemented and tested
+Status: C–F implemented, tested, and canonically validated
 
 The adapter implements one physical simulation source with two explicitly
 different views. It does not treat bus identity as time and does not assign
@@ -108,3 +108,10 @@ Compare NEXAH outputs against preregistered physical references: convergence,
 voltage limits, line loading, load scale, and existing repository experiments.
 Validation must be separated by case and held-out campaign; it must not tune on
 the final benchmark cases.
+
+Canonical V1 is recorded under
+**[validation/ieee_orientation_v1/](../../validation/ieee_orientation_v1/)**.
+IEEE-9 covers both observed physical threshold crossings within one load step;
+held-out IEEE-14 misses its voltage crossing under the same fixed tolerance.
+Entity salience attribution matches 11 of 12 checks. This closes the first D–F
+path without establishing dynamic prediction or causality.
