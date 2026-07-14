@@ -1,6 +1,6 @@
 # Phase V — IEEE Geometry Case and Research Testkit
 
-Status: planned; normative scope for the next implementation plateau
+Status: in progress; Orientation Brief foundation implemented
 
 ## Objective
 
@@ -20,6 +20,18 @@ IEEE benchmark model
 The purpose is to help another person understand, run, inspect, and question
 the case. The purpose is not to present a benchmark simulation as operational
 grid evidence.
+
+## Foundation — Orientation Brief
+
+The backend-independent
+[`OrientationBrief`](ORIENTATION_BRIEF_CONTRACT.md) contract is implemented
+before IEEE-specific geometry. It turns an Orientation Report plus read-only
+perspectives into a reproducible document containing the question, scope,
+position, findings, disagreement, evidence, limits, and next questions.
+
+Network Orientation is the executable reference path. The IEEE case will use
+the same contract after work packages A–D produce its manifest, geometry frame,
+operators, and probes.
 
 ## Phase boundary
 

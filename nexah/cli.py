@@ -21,10 +21,12 @@ import argparse
 import numpy as np
 import json
 import os
+import shlex
 from datetime import datetime
 from nexah.backends import V07BackendAdapter
 from nexah.applications import (
     NetworkOrientationApplication,
+    build_network_orientation_brief,
     remove_declared_edge,
     render_network_learning_text,
     render_network_orientation_text,
@@ -35,6 +37,7 @@ from nexah.orientation import (
     Context,
     Provenance,
     generate_orientation_report,
+    render_orientation_brief_markdown,
 )
 
 
@@ -67,6 +70,15 @@ def save_output(result, path):
     try:
         with open(path, "w") as f:
             json.dump(result, f, indent=2, default=str)
+        print(f"[INFO] Saved output to {path}")
+    except Exception as e:
+        print(f"[ERROR] Could not save file: {e}")
+
+
+def save_text_output(text, path):
+    try:
+        with open(path, "w", encoding="utf-8") as handle:
+            handle.write(text)
         print(f"[INFO] Saved output to {path}")
     except Exception as e:
         print(f"[ERROR] Could not save file: {e}")
@@ -237,7 +249,47 @@ def orient_network_command(args):
         focus=args.focus,
         target=args.target,
     )
-    learning = run_network_probe_suite(result) if args.probes else None
+    learning = (
+        run_network_probe_suite(result)
+        if args.probes or args.format == "brief"
+        else None
+    )
+    if args.format == "brief":
+        assert learning is not None
+        command_parts = [
+            "nexah",
+            "orient-network",
+            args.file,
+            "--focus",
+            args.focus,
+            "--recorded-at",
+            args.recorded_at.isoformat(),
+            "--domain",
+            args.domain,
+        ]
+        if args.target:
+            command_parts.extend(("--target", args.target))
+        if args.analysis_id:
+            command_parts.extend(("--analysis-id", args.analysis_id))
+        if args.baseline:
+            command_parts.extend(("--baseline", args.baseline))
+        elif args.remove_edge:
+            command_parts.extend(("--remove-edge", *args.remove_edge))
+        command_parts.extend(
+            ("--format", "brief", "--out", "orientation-brief.md")
+        )
+        command = shlex.join(command_parts)
+        brief = build_network_orientation_brief(
+            learning,
+            question=args.question,
+            reproduction_command=command,
+        )
+        rendered = render_orientation_brief_markdown(brief)
+        if args.out:
+            save_text_output(rendered, args.out)
+        else:
+            print(rendered)
+        return
     payload = learning.to_dict() if learning is not None else result.to_dict()
     if args.out:
         save_output(payload, args.out)
@@ -319,7 +371,13 @@ def main():
         metavar=("SOURCE", "TARGET"),
         help="generate an explicit structural training scenario from the input",
     )
-    network_parser.add_argument("--format", choices=("json", "text"), default="json")
+    network_parser.add_argument(
+        "--format", choices=("json", "text", "brief"), default="json"
+    )
+    network_parser.add_argument(
+        "--question",
+        help="human question shown in an Orientation Brief",
+    )
     network_parser.add_argument(
         "--probes",
         action="store_true",

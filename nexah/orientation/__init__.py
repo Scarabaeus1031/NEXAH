@@ -1,5 +1,16 @@
 """Typed contracts for the NEXAH Orientation Layer."""
 
+from .brief import (
+    BriefEvidenceClass,
+    BriefEvidenceStatement,
+    BriefOutcomeStatus,
+    BriefPerspective,
+    BriefReproduction,
+    OrientationBrief,
+    generate_orientation_brief,
+    render_orientation_brief_markdown,
+)
+
 from .evidence import (
     Evidence,
     EvidenceKind,
@@ -55,6 +66,11 @@ from .probes import (
 from .state import OrientationState
 
 __all__ = [
+    "BriefEvidenceClass",
+    "BriefEvidenceStatement",
+    "BriefOutcomeStatus",
+    "BriefPerspective",
+    "BriefReproduction",
     "Constraint",
     "Context",
     "EpisodeRef",
@@ -74,6 +90,7 @@ __all__ = [
     "OptionStatus",
     "OrientationReport",
     "OrientationReportGenerator",
+    "OrientationBrief",
     "OrientationState",
     "FindingStance",
     "ProbeAgreement",
@@ -95,7 +112,9 @@ __all__ = [
     "Uncertainty",
     "UncertaintyKind",
     "generate_orientation_report",
+    "generate_orientation_brief",
     "attach_similar_episodes",
     "orientation_similarity",
     "synthesize_probe_results",
+    "render_orientation_brief_markdown",
 ]

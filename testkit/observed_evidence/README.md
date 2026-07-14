@@ -12,6 +12,11 @@ Its governing rule is:
 
 > **NO OBSERVED OUTCOME → NO EPISODIC MEMORY UPDATE**
 
+The implemented
+**[Orientation Brief contract](../../ARCHITECTURE/orientation_layer/ORIENTATION_BRIEF_CONTRACT.md)**
+already enforces the outcome-status/episode-reference boundary. The broader
+testkit schemas and external observed-evidence validator remain pending.
+
 ## Evidence classes
 
 | Class | Meaning | Example |

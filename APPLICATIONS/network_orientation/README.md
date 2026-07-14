@@ -47,6 +47,26 @@ nexah orient-network APPLICATIONS/datasets/supply_chain.json \
 The default output is the complete JSON contract. Add `--format text` for a
 compact human-readable report or `--out report.json` to write the JSON result.
 
+## Generate an Orientation Brief
+
+Use `--format brief` for the reusable human-facing synthesis. It runs the five
+read-only perspectives automatically and preserves findings, agreement,
+disagreement, evidence classes, limits, and next questions:
+
+```bash
+nexah orient-network APPLICATIONS/datasets/supply_chain.json \
+  --focus normal_operation \
+  --target system_disruption \
+  --domain supply-chain \
+  --recorded-at 2026-07-13T22:45:00+00:00 \
+  --format brief \
+  --out orientation-brief.md
+```
+
+The brief remains an orientation and learning artifact. With no independently
+observed outcome, it cannot create an episodic-memory update. The normative
+contract is **[ORIENTATION_BRIEF_CONTRACT.md](../../ARCHITECTURE/orientation_layer/ORIENTATION_BRIEF_CONTRACT.md)**.
+
 ## Run a declared training scenario
 
 ```bash

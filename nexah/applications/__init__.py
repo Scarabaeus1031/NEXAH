@@ -9,6 +9,7 @@ from .network_orientation import (
     remove_declared_edge,
     render_network_orientation_text,
 )
+from .network_brief import build_network_orientation_brief
 from .network_probes import (
     BottleneckProbe,
     CriticProbe,
@@ -22,6 +23,7 @@ from .network_probes import (
 
 __all__ = [
     "GraphComparison",
+    "build_network_orientation_brief",
     "NetworkOrientationApplication",
     "NetworkOrientationResult",
     "NetworkLearningContext",

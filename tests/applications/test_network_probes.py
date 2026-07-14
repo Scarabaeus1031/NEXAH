@@ -11,11 +11,20 @@ import sys
 from nexah.applications import (
     NetworkLearningContext,
     NetworkOrientationApplication,
+    build_network_orientation_brief,
     remove_declared_edge,
     render_network_learning_text,
     run_network_probe_suite,
 )
-from nexah.orientation import Context, FindingStance, Provenance
+from nexah.orientation import (
+    BriefEvidenceClass,
+    BriefOutcomeStatus,
+    Context,
+    FindingStance,
+    OrientationBrief,
+    Provenance,
+    render_orientation_brief_markdown,
+)
 
 
 ROOT = Path(__file__).parents[2]
@@ -112,3 +121,57 @@ def test_cli_can_emit_v2_probe_wrapper() -> None:
     assert payload["application_id"] == "network-orientation-v2-probes"
     assert len(payload["synthesis"]["probe_results"]) == 5
     assert payload["outcome_recorded"] is False
+
+
+def test_network_brief_preserves_perspectives_and_outcome_firewall() -> None:
+    brief = build_network_orientation_brief(run_network_probe_suite(_result()))
+    restored = OrientationBrief.from_dict(
+        json.loads(json.dumps(brief.to_dict()))
+    )
+
+    assert restored == brief
+    assert len(brief.perspectives) == 5
+    assert brief.outcome_status is BriefOutcomeStatus.NOT_RECORDED
+    assert brief.episode_id is None
+    assert {
+        statement.evidence_class for statement in brief.evidence
+    } >= {
+        BriefEvidenceClass.DECLARED_INPUT,
+        BriefEvidenceClass.COMPUTED_RESULT,
+        BriefEvidenceClass.NOT_SUPPORTED,
+    }
+    markdown = render_orientation_brief_markdown(brief)
+    assert "## Perspectives" in markdown
+    assert "NO OBSERVED OUTCOME → NO EPISODIC MEMORY UPDATE" in markdown
+
+
+def test_cli_can_emit_orientation_brief_markdown() -> None:
+    source = ROOT / "APPLICATIONS" / "datasets" / "supply_chain.json"
+    completed = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "nexah.cli",
+            "orient-network",
+            str(source),
+            "--focus",
+            "normal_operation",
+            "--target",
+            "system_disruption",
+            "--recorded-at",
+            "2026-07-13T22:45:00+00:00",
+            "--format",
+            "brief",
+            "--question",
+            "What can this declared map support?",
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    assert completed.stdout.startswith("# Network Orientation Brief")
+    assert "What can this declared map support?" in completed.stdout
+    assert "## What should we ask next?" in completed.stdout
+    assert "NO OBSERVED OUTCOME → NO EPISODIC MEMORY UPDATE" in completed.stdout

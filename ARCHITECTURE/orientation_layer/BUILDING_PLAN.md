@@ -179,8 +179,9 @@ genuinely observed outcome.
 
 ## Phase V — IEEE Geometry Case and Research Testkit
 
-Status: planned; scope frozen in
-`PHASE_V_IEEE_GEOMETRY_TESTKIT.md`.
+Status: in progress; scope frozen in `PHASE_V_IEEE_GEOMETRY_TESTKIT.md`. The
+backend-independent Orientation Brief contract, Markdown renderer, Network
+reference binding, and CLI path are implemented and tested.
 
 Phase V turns the strongest existing benchmark line into a reproducible public
 case without relabeling simulation as operational evidence. It adds a frozen
@@ -193,6 +194,11 @@ runnable case, and a full research path. The generic evidence testkit lives in
 `testkit/observed_evidence/`. Real observed measurements and outcome-linked
 learning are the later evidence plateau, not a hidden Phase V completion
 condition.
+
+The Orientation Brief is the first completed Phase V foundation. It preserves
+multiple perspectives and their disagreements, exposes evidence roles and next
+questions, and enforces that a scenario without an observed outcome cannot
+reference an episodic-memory update.
 
 ## MVP definition of done
 

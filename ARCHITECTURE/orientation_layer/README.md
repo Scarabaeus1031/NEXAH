@@ -36,7 +36,10 @@ tests must verify them.
 13. **[PHASE_V_IEEE_GEOMETRY_TESTKIT.md](PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** —
     IEEE geometry case, evidence firewall, public showcase, and external-data
     bridge.
-14. **[archive/README.md](archive/README.md)** — rules for historical designs.
+14. **[ORIENTATION_BRIEF_CONTRACT.md](ORIENTATION_BRIEF_CONTRACT.md)** — typed
+    human-facing synthesis, evidence classes, outcome firewall, and runnable
+    reference path.
+15. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance
@@ -177,6 +180,12 @@ ten-minute runnable case, and full research path. The generic
 **[Observed-Evidence Testkit](../../testkit/observed_evidence/README.md)** keeps
 benchmark computation, declared scenarios, measurements, and observed outcomes
 technically distinct.
+
+The first Phase V foundation is already implemented: the backend-independent
+**[Orientation Brief contract](ORIENTATION_BRIEF_CONTRACT.md)** turns a report
+and multiple read-only perspectives into a reproducible human-facing document.
+The current Network Orientation path is its reference implementation; the IEEE
+case will populate the same contract rather than inventing another report type.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.
