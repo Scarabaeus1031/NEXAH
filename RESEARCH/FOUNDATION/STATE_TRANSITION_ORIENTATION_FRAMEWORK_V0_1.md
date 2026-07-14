@@ -23,6 +23,13 @@ A candidate description is:
 > An evidence-bound framework for contextual orientation over heterogeneous
 > state-transition systems with explicit boundaries.
 
+The candidate central statement is:
+
+> **Orientation is a context-dependent evaluation of which statements about
+> position, change, paths, and boundaries are supported by a declared
+> representation, its evidence, assumptions, and uncertainty—and which
+> statements remain unsupported.**
+
 This note defines a minimal object language for investigating that possibility.
 It does not make the language part of the public kernel API.
 
@@ -280,6 +287,21 @@ The report may contain:
 The evaluation may be partial or return insufficiency. It does not guarantee an
 answer, prescribe an action, or convert a scenario into an observed outcome.
 
+Equivalently, the report can be viewed schematically as preserving three
+classes of result:
+
+\[
+\mathcal O(\mathcal N,q)
+\longrightarrow
+\bigl(\text{supported statements},\text{unsupported statements},
+\text{boundaries}\bigr).
+\]
+
+Support remains relative to the declared representation, context, query,
+evidence, assumptions, uncertainty, and validity scope. Structural reachability
+must not be silently promoted to physical feasibility, causal influence,
+recommended action, or an observed outcome.
+
 ## 10. Candidate contribution
 
 No individual component is proposed as new. The candidate contribution is their
@@ -353,4 +375,3 @@ The following are candidates for later architectural evaluation only:
 No candidate in this list is approved by this note. Adoption requires review of
 usefulness, compatibility, invariants, migration cost, and existing mathematical
 terminology. A binding decision, if justified, belongs in a later ADR.
-

@@ -144,8 +144,22 @@ orientation = evaluation(
 )
 ```
 
+The central architectural statement is:
+
+> **Orientation is a context-dependent evaluation of which statements about
+> position, change, paths, and boundaries are supported by a declared
+> representation, its evidence, assumptions, and uncertainty—and which
+> statements remain unsupported.**
+
+Here, *supported* is always scoped to the current representation, context,
+query, evidence, assumptions, uncertainty, and declared validity boundary. It
+does not mean universally true.
+
 The output is an inspectable `OrientationReport`, not an oracle, controller, or
 universal orientation coordinate.
+
+Structural reachability is therefore not automatically equivalent to physical
+feasibility, causal influence, recommended action, or an observed outcome.
 
 ## Does an implicit Transition Space exist?
 
@@ -261,4 +275,3 @@ precise.
 - [`../../nexah/backends/`](../../nexah/backends/)
 - [`../../nexah/power_systems/`](../../nexah/power_systems/)
 - [`../../validation/`](../../validation/)
-

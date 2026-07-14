@@ -35,9 +35,13 @@ from nexah.applications import (
 from nexah.core import NEXAH
 from nexah.power_systems import (
     IEEEGeometryCaseManifest,
+    IEEEGeometryCampaign,
+    IEEEStandardizationModel,
+    analyze_ieee_geometry,
     build_ieee_geometry_campaign,
     check_manifest_adapter_protocol,
     check_manifest_environment,
+    fit_ieee_standardization,
 )
 from nexah.sources import IEEEPandapowerAdapter
 from nexah.orientation import (
@@ -374,6 +378,37 @@ def build_ieee_frames_command(args):
         print(json.dumps(payload, indent=2))
 
 
+def analyze_ieee_geometry_command(args):
+    """Apply only the operators frozen by the Phase V case manifest."""
+
+    manifest_source = load_json_object(args.manifest)
+    frames_source = load_json_object(args.frames)
+    if manifest_source is None or frames_source is None:
+        return
+    manifest = IEEEGeometryCaseManifest.from_dict(manifest_source)
+    campaign = IEEEGeometryCampaign.from_dict(frames_source)
+
+    if args.model:
+        model_source = load_json_object(args.model)
+        if model_source is None:
+            return
+        if "standardization_model" in model_source:
+            model_source = model_source["standardization_model"]
+        model = IEEEStandardizationModel.from_dict(model_source)
+    else:
+        model = fit_ieee_standardization(campaign, manifest)
+
+    analysis = analyze_ieee_geometry(campaign, manifest, model)
+    payload = {
+        "standardization_model": model.to_dict(),
+        "analysis": analysis.to_dict(),
+    }
+    if args.out:
+        save_output(payload, args.out)
+    else:
+        print(json.dumps(payload, indent=2))
+
+
 # =========================
 # CLI
 # =========================
@@ -476,6 +511,24 @@ def main():
     frames_parser.add_argument("--campaign-id")
     frames_parser.add_argument("--out")
 
+    # ANALYZE IEEE GEOMETRY
+    geometry_parser = subparsers.add_parser(
+        "analyze-ieee-geometry",
+        description=(
+            "Apply manifest-frozen geometry operators to ordered IEEE frames"
+        ),
+    )
+    geometry_parser.add_argument("manifest")
+    geometry_parser.add_argument("frames")
+    geometry_parser.add_argument(
+        "--model",
+        help=(
+            "previous development output or direct standardization model; "
+            "required when applying the frozen model to an evaluation case"
+        ),
+    )
+    geometry_parser.add_argument("--out")
+
     args = parser.parse_args()
 
     if args.command == "analyze":
@@ -490,6 +543,8 @@ def main():
         validate_ieee_manifest_command(args)
     elif args.command == "build-ieee-frames":
         build_ieee_frames_command(args)
+    elif args.command == "analyze-ieee-geometry":
+        analyze_ieee_geometry_command(args)
     else:
         parser.print_help()
 

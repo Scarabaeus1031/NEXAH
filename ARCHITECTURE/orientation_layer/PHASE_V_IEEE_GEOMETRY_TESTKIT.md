@@ -1,6 +1,6 @@
 # Phase V — IEEE Geometry Case and Research Testkit
 
-Status: in progress; Orientation Brief and Work Packages A–B implemented
+Status: in progress; Orientation Brief and Work Packages A–C implemented
 
 ## Objective
 
@@ -129,6 +129,12 @@ reinterpret ordered load scale as time.
 
 ## Work package C — Minimal geometry operators
 
+Status: implemented in `nexah.power_systems.ieee_geometry_operators`. The
+development-fitted standardization model and every measurement are typed,
+serializable, provenance-carrying, and explicitly failure-aware. The committed
+IEEE-9 result is linked from the
+[`ieee_geometry_v1` case README](../../APPLICATIONS/power_systems/ieee_geometry_v1/README.md).
+
 Begin with inspectable measurements:
 
 - adjacent-state displacement
@@ -137,7 +143,11 @@ Begin with inspectable measurements:
 - direction change between adjacent displacements
 - local discrete curvature where enough samples exist
 - distance to the last converged sample
-- agreement and disagreement between declared projections
+
+Agreement and disagreement between declared projections remains deliberately
+unimplemented: the manifest identifies the projections but does not yet freeze
+a comparison metric. Adding one after inspecting the development geometry would
+silently enlarge the protocol.
 
 Operators must return explicit insufficiency when sampling, alignment, or scale
 does not support a value. No prime-number gates, fixed angular apertures,

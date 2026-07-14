@@ -1,10 +1,9 @@
 # IEEE Geometry V1 — Frozen Case Protocol
 
-Status: Phase V work package A / step 5.3 and work package B / step 5.4
-implemented
+Status: Phase V work packages A–C / steps 5.3–5.5 implemented
 
-This directory freezes the first NEXAH IEEE Geometry experiment before the new
-geometry operators are implemented or evaluated.
+This directory contains the frozen protocol, physical development frames, and
+the first inspectable geometry analysis for the NEXAH IEEE Geometry case.
 
 The canonical [`case_manifest.json`](case_manifest.json) declares:
 
@@ -65,6 +64,43 @@ The artifact is
 [`development_frames.json`](development_frames.json). Its topology identifier
 describes the adapter-visible bus/line schema under the frozen case and software
 version; it is not asserted to be a complete electrical topology model.
+
+## Analyze the development geometry
+
+```bash
+nexah analyze-ieee-geometry \
+  APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json \
+  APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json \
+  --out APPLICATIONS/power_systems/ieee_geometry_v1/development_geometry.json
+```
+
+The command fits the manifest-declared population standardization on the
+IEEE-9 development campaign and applies the six frozen operators:
+
+- adjacent displacement
+- normalized local drift along the ordered load-scale parameter
+- cumulative path length
+- direction change
+- local discrete curvature
+- sampled distance from a solver failure to the last converged frame
+
+The canonical result is
+[`development_geometry.json`](development_geometry.json). It contains 19
+projected positions, 18 adjacent relations, 17 centered turn records, and two
+explicit solver-boundary records. The contiguous measured path ends at the
+last converged position before the first failure; no path is drawn through or
+across missing physical states.
+
+These are geometric measurements of a benchmark computation along a declared
+parameter campaign. They are not time derivatives, certified voltage-stability
+limits, causal effects, or control recommendations. Projection agreement is not
+computed yet because the frozen manifest declares projection views but does not
+declare a comparison metric between representations. NEXAH leaves that result
+absent instead of selecting an undeclared metric after seeing the data.
+
+For the later frozen IEEE-14 gate, the development model must be supplied
+unchanged with `--model development_geometry.json`. The evaluation result must
+not be used to refit that model.
 
 ## Evidence boundary
 
