@@ -179,7 +179,8 @@ genuinely observed outcome.
 
 ## Phase V — IEEE Geometry Case and Research Testkit
 
-Status: in progress; scope frozen in `PHASE_V_IEEE_GEOMETRY_TESTKIT.md`. The
+Status: complete; scope and closure are recorded in
+`PHASE_V_IEEE_GEOMETRY_TESTKIT.md`. The
 backend-independent Orientation Brief contract, Markdown renderer, Network
 reference binding, and CLI path are implemented and tested. Work Package A is
 also complete: the typed IEEE Geometry V1 manifest freezes IEEE-9 development,
@@ -198,6 +199,16 @@ a later, scope-compatible, independently declared outcome with no evidence or
 method-selection leakage can authorize the guarded episodic-memory write path.
 Positive, negative, and indeterminate fixtures plus a machine-readable CLI
 make the boundary reproducible.
+Work Package F is complete as well: the locked IEEE-14 campaign is rebuilt from
+the manifest and evaluated with the unchanged IEEE-9 standardization model.
+All canonical artifacts replay exactly, two validation runs are byte-identical,
+and the manifest claim audit remains closed around benchmark computation. The
+evaluation grid contains 19 converged positions and no sampled solver boundary;
+that absence is retained as a boundary of evidence rather than extrapolated.
+Work Package G publishes three entry depths and four byte-reproducible figures
+from the canonical JSON record. Work Package H documents admission of a future
+observed source through an evidence bridge, checklist, and closed template.
+No external dataset or observed outcome was invented to satisfy closure.
 
 Phase V turns the strongest existing benchmark line into a reproducible public
 case without relabeling simulation as operational evidence. It adds a frozen
@@ -205,11 +216,11 @@ case manifest, typed geometry frames over ordered IEEE load campaigns, minimal
 failure-aware geometry operators, five read-only IEEE probes, and an outcome
 firewall.
 
-The public deliverable has three entry depths: a 90-second map, a ten-minute
-runnable case, and a full research path. The generic evidence testkit lives in
-`testkit/observed_evidence/`. Real observed measurements and outcome-linked
-learning are the later evidence plateau, not a hidden Phase V completion
-condition.
+The public deliverable has three published entry depths: a 90-second map, a
+ten-minute runnable case, and a full research path. The generic evidence
+testkit lives in `testkit/observed_evidence/`. Real observed measurements and
+outcome-linked learning are the later evidence plateau, not a hidden Phase V
+completion condition.
 
 The Orientation Brief is the first completed Phase V foundation. It preserves
 multiple perspectives and their disagreements, exposes evidence roles and next

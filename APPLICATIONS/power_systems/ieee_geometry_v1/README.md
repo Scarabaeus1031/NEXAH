@@ -1,6 +1,6 @@
 # IEEE Geometry V1 — Frozen Case Protocol
 
-Status: Phase V work packages A–D / steps 5.3–5.6 implemented
+Status: Phase V work packages A–H complete; frozen IEEE-14 gate passed
 
 This directory contains the frozen protocol, physical development frames, and
 the first inspectable geometry analysis for the NEXAH IEEE Geometry case.
@@ -135,6 +135,53 @@ The brief locates the last converged sampled position at load scale 2.2,
 reports the first solver failure at 2.3, and makes the evidence boundary part of
 the result. The probes do not vote, execute, recommend control, or update
 episodic memory.
+
+## Run the frozen IEEE-14 evaluation
+
+The evaluation uses the committed IEEE-9 model unchanged:
+
+```bash
+nexah build-ieee-frames \
+  APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json \
+  --case ieee14 \
+  --recorded-at 2026-07-14T18:00:00+00:00 \
+  --out APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_frames.json
+
+nexah analyze-ieee-geometry \
+  APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json \
+  APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_frames.json \
+  --model APPLICATIONS/power_systems/ieee_geometry_v1/development_geometry.json \
+  --out APPLICATIONS/power_systems/ieee_geometry_v1/evaluation_geometry.json
+```
+
+Canonical evaluation artifacts:
+
+- [`evaluation_frames.json`](evaluation_frames.json)
+- [`evaluation_geometry.json`](evaluation_geometry.json)
+- [`evaluation_orientation.json`](evaluation_orientation.json)
+- [`evaluation_orientation_brief.json`](evaluation_orientation_brief.json)
+- [`evaluation_orientation_brief.md`](evaluation_orientation_brief.md)
+
+All 19 IEEE-14 positions converge on the frozen grid. The unchanged method
+therefore returns 18 adjacent measurements and 17 centered turn measurements,
+but no sampled solver-boundary record. It does not infer a physical boundary
+from that absence.
+
+The complete WP-F replay, checksums, seven-level validation ladder, and claim
+audit are in
+[`validation/ieee_geometry_v1/`](../../../validation/ieee_geometry_v1/README.md).
+
+## Enter through the public showcase
+
+The [`showcase/`](showcase/README.md) provides a 90-second map, a ten-minute
+runnable case, a full research path, and four reproducible scientific figures.
+Every figure is generated from the canonical JSON records above.
+
+The later path from benchmark computation to timestamped external evidence is
+specified by the
+[`Observed-Evidence Bridge`](../../../testkit/observed_evidence/OBSERVED_EVIDENCE_BRIDGE.md).
+Its admission template remains closed until a real source, license, provenance,
+measurements, and independently observed outcome are available.
 
 ## Evidence boundary
 

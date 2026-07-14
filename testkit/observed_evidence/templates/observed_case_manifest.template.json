@@ -1,0 +1,76 @@
+{
+  "template_status": "not_evidence",
+  "schema_version": "1.0-template",
+  "case_id": "replace-with-versioned-case-id",
+  "research_question": "replace-with-predeclared-question",
+  "supported_claims": [],
+  "prohibited_claims": [],
+  "source": {
+    "owner": "replace-with-source-owner",
+    "stable_identifier": "replace-with-source-id-or-uri",
+    "acquisition_method": "replace-with-method",
+    "acquired_at": null,
+    "license": "review-required",
+    "redistribution_allowed": false,
+    "access_class": "not-reviewed",
+    "raw_sha256": null,
+    "dataset_version": "replace-with-version",
+    "correction_policy": "replace-with-policy"
+  },
+  "scope": {
+    "domain": "replace-with-domain",
+    "topology_or_schema_id": "replace-with-versioned-identity",
+    "entity_alignment_method": "replace-with-method",
+    "event_timezone": "replace-with-IANA-timezone"
+  },
+  "observations": {
+    "status": "not_acquired",
+    "required_fields": [
+      "observation_id",
+      "source_record_id",
+      "observed_at",
+      "recorded_at",
+      "entity_id",
+      "variable",
+      "unit",
+      "value",
+      "quality_flags",
+      "provenance",
+      "uncertainty"
+    ],
+    "missingness_policy": "reject-silent-imputation",
+    "transformations": [],
+    "exclusions": []
+  },
+  "evaluation_freeze": {
+    "development_scope": "replace-before-acquisition",
+    "evaluation_scope": "replace-before-inspection",
+    "method_selection_cutoff": null,
+    "orientation_cutoff": null,
+    "metrics": [],
+    "stopping_rules": [],
+    "insufficiency_policy": "return-insufficient-or-indeterminate"
+  },
+  "outcome_plan": {
+    "status": "not_acquired",
+    "definition": "replace-before-evaluation",
+    "observation_window": "replace-before-evaluation",
+    "independent_source_required": true,
+    "source_relation_basis_required": true,
+    "method_selection_basis_required": true
+  },
+  "privacy_and_governance": {
+    "contains_sensitive_data": "unknown",
+    "redaction_plan": "review-required",
+    "retention_policy": "review-required",
+    "authorized_roles": [],
+    "domain_review": "required",
+    "legal_or_ethics_review": "as-applicable"
+  },
+  "firewall": {
+    "required_check_count": 6,
+    "current_disposition": "indeterminate",
+    "episode_update_allowed": false,
+    "reason": "Template only; no observations or independent outcome acquired."
+  }
+}

@@ -34,6 +34,11 @@ def build_ieee_geometry_orientation_brief(
         and context.report.position.label is not None
         else "No converged sampled position is available"
     )
+    transfer_question = (
+        "Which new case should test the next prospectively frozen revision?"
+        if analysis.case_role == "locked_evaluation"
+        else "Does the frozen method transfer to IEEE-14 without parameter retuning?"
+    )
     return generate_orientation_brief(
         context.report,
         context.synthesis,
@@ -48,7 +53,7 @@ def build_ieee_geometry_orientation_brief(
         ),
         position=position,
         next_questions=(
-            "Does the frozen method transfer to IEEE-14 without parameter retuning?",
+            transfer_question,
             "How do the geometric measurements compare with established power-system measures?",
             "Which prospectively declared metric should compare alternative projections?",
             "What observed measurements and outcomes would be required for external evaluation?",

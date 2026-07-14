@@ -1,7 +1,7 @@
 # NEXAH Observed-Evidence Testkit
 
 Status: Phase V outcome firewall implemented and tested; wider observed-evidence
-bridge remains planned
+bridge documented; no external dataset admitted
 
 ## Purpose
 
@@ -171,3 +171,15 @@ REPRODUCTION COMMAND
 
 This makes the limits part of the invitation: users can see what works, what is
 open, and where a contribution would matter.
+
+## External-source bridge
+
+The **[Observed-Evidence Bridge](OBSERVED_EVIDENCE_BRIDGE.md)** now documents
+the later path from acquisition and licensing through semantic alignment,
+evaluation freeze, orientation cutoff, independent outcome, firewall, and
+guarded memory admission. Use its [checklist](ADMISSION_CHECKLIST.md) and
+[manifest template](templates/observed_case_manifest.template.json) when a
+specific external source is proposed.
+
+This closes the Phase V interface documentation. It does not claim that a real
+measurement source or independently observed outcome has already been admitted.

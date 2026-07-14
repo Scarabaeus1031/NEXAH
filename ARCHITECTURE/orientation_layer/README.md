@@ -174,9 +174,9 @@ capabilities, outputs, training uses, the learning loop, and its boundaries.
 In particular, a declared scenario is not an observed outcome and therefore
 does not update episodic memory.
 
-## Next implementation plateau — Phase V
+## Completed plateau — Phase V
 
-Phase V is the
+Phase V is closed as the
 **[IEEE Geometry Case and Research Testkit](PHASE_V_IEEE_GEOMETRY_TESTKIT.md)**.
 It turns the strongest benchmark line into a reproducible 90-second overview,
 ten-minute runnable case, and full research path. The generic
@@ -184,12 +184,12 @@ ten-minute runnable case, and full research path. The generic
 benchmark computation, declared scenarios, measurements, and observed outcomes
 technically distinct.
 
-The first Phase V foundation is already implemented: the backend-independent
+The backend-independent
 **[Orientation Brief contract](ORIENTATION_BRIEF_CONTRACT.md)** turns a report
 and multiple read-only perspectives into a reproducible human-facing document.
-The current Network Orientation path is its reference implementation; the IEEE
-case will populate the same contract rather than inventing another report type.
-Work Package A is also frozen in the
+The Network Orientation path remains its reference implementation; the IEEE
+case populates the same contract rather than inventing another report type.
+Work Package A is frozen in the
 **[IEEE Geometry V1 case protocol](../../APPLICATIONS/power_systems/ieee_geometry_v1/README.md)**:
 IEEE-9 is used for development and IEEE-14 is locked for the unchanged Phase V
 evaluation path.
@@ -200,6 +200,20 @@ evidence-bound Orientation Brief. Work Package E adds the executable
 **[Observed-Evidence outcome firewall](../../testkit/observed_evidence/README.md)**:
 scenario and computation records remain useful artifacts but cannot authorize
 episodic-memory learning. Only a fully passed observed-outcome record can do so.
+
+Work Package F now closes the frozen evaluation gate. The
+**[IEEE Geometry V1 validation](../../validation/ieee_geometry_v1/README.md)**
+rebuilds IEEE-14, applies the unchanged IEEE-9 model, reproduces the complete
+artifact chain byte-for-byte, and audits the manifest claims. Its positive
+technical result does not widen the evidence class: it remains benchmark
+computation with unknown calibrated uncertainty and no observed outcome.
+
+Work Package G publishes the
+**[90-second, ten-minute, and research entry paths](../../APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)**
+plus four reproducible figures derived from canonical JSON. Work Package H
+publishes the **[Observed-Evidence Bridge](../../testkit/observed_evidence/OBSERVED_EVIDENCE_BRIDGE.md)**,
+admission checklist, and a deliberately closed manifest template. No external
+measurement dataset was admitted merely to close the phase.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

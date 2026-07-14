@@ -1,0 +1,169 @@
+{
+  "checks": [
+    {
+      "check_id": "environment-lock",
+      "detail": "Frozen package versions match the manifest.",
+      "passed": true
+    },
+    {
+      "check_id": "adapter-protocol",
+      "detail": "Adapter variables and units match the manifest.",
+      "passed": true
+    },
+    {
+      "check_id": "development-freeze",
+      "detail": "The committed IEEE-9 model and geometry reproduce exactly.",
+      "passed": true
+    },
+    {
+      "check_id": "no-evaluation-refit",
+      "detail": "IEEE-14 uses the unchanged model fitted on IEEE-9.",
+      "passed": true
+    },
+    {
+      "check_id": "evaluation-source-replay",
+      "detail": "The fresh IEEE-14 source campaign matches the canonical frames.",
+      "passed": true
+    },
+    {
+      "check_id": "evaluation-geometry-replay",
+      "detail": "Frozen geometry output matches the canonical evaluation.",
+      "passed": true
+    },
+    {
+      "check_id": "evaluation-report-replay",
+      "detail": "Five probes and the Orientation Report reproduce exactly.",
+      "passed": true
+    },
+    {
+      "check_id": "evaluation-brief-replay",
+      "detail": "JSON and Markdown briefs derive from the same typed result.",
+      "passed": true
+    },
+    {
+      "check_id": "failure-preservation",
+      "detail": "The two IEEE-9 failure fixtures remain explicit and contain no fabricated physics; the same policy applies to IEEE-14.",
+      "passed": true
+    },
+    {
+      "check_id": "outcome-boundary",
+      "detail": "Benchmark computation remains outside episodic memory.",
+      "passed": true
+    }
+  ],
+  "claim_audit": {
+    "prohibited": [
+      {
+        "claim": "The load axis is elapsed time or an observed operational trajectory.",
+        "status": "explicitly_excluded"
+      },
+      {
+        "claim": "Pandapower non-convergence is a certified physical voltage-stability boundary.",
+        "status": "explicitly_excluded"
+      },
+      {
+        "claim": "A geometric change is a causal precursor, failure probability, or control recommendation.",
+        "status": "explicitly_excluded"
+      },
+      {
+        "claim": "IEEE benchmark behavior establishes real-world grid generalization.",
+        "status": "explicitly_excluded"
+      },
+      {
+        "claim": "The tube metaphor is a physical tube, globally smooth manifold, or universal field.",
+        "status": "explicitly_excluded"
+      },
+      {
+        "claim": "The evaluation case is historically untouched.",
+        "status": "explicitly_excluded"
+      },
+      {
+        "claim": "A benchmark computation is an observed outcome eligible for episodic memory.",
+        "status": "explicitly_excluded"
+      }
+    ],
+    "supported": [
+      {
+        "claim": "The declared adapter and solver produce reproducible benchmark computations under the locked environment.",
+        "status": "supported_within_manifest"
+      },
+      {
+        "claim": "Predeclared projections expose different aspects of the same ordered IEEE load campaign.",
+        "status": "supported_within_manifest"
+      },
+      {
+        "claim": "The listed discrete geometry operators can describe local change or explicit insufficiency on the sampled campaign.",
+        "status": "supported_within_manifest"
+      },
+      {
+        "claim": "The frozen method can be applied to IEEE-14 without Phase V parameter retuning after evaluation begins.",
+        "status": "supported_within_manifest"
+      }
+    ]
+  },
+  "development_result": {
+    "converged_frames": 17,
+    "declared_frames": 19,
+    "failed_frames": 2,
+    "failed_load_scales": [
+      2.3,
+      2.4
+    ],
+    "failure_values_fabricated": false
+  },
+  "evaluation_result": {
+    "available_steps": 18,
+    "available_turns": 17,
+    "boundary_interpretation": "No sampled solver boundary is observed on the frozen IEEE-14 grid.",
+    "brief_sha256": "37fa06f10d3795672eb32a1ea30b6b29228ded30c34985ec9777c817dc739198",
+    "converged_frames": 19,
+    "declared_frames": 19,
+    "failed_frames": 0,
+    "failed_load_scales": [],
+    "frames_sha256": "467530b81c9347a1ce0fe5e5ac501dde2c540686eadd5b9de454e773d9e59219",
+    "geometry_sha256": "ab49aae70f94fa0a29d7660f4d5ae55a0d21df6ca7aa8cb2e445dcf189f72729",
+    "insufficient_steps": 0,
+    "insufficient_turns": 0,
+    "orientation_sha256": "2faa1fc7445bc11003add6bc3ed926570a15989cdaca6fdae38fc842d1fdad2b",
+    "solver_boundaries": 0,
+    "total_path_length": 5.55378709510072
+  },
+  "freeze": {
+    "development_campaign": "phase-v-ieee-geometry-v1-ieee9",
+    "development_case": "ieee9",
+    "development_model_sha256": "f30503ec0cef5a0e4e5fa0ef1d452dd752bc9dec915f3f6734784ab53c3060c3",
+    "evaluation_case": "ieee14",
+    "evaluation_role": "locked_evaluation",
+    "manifest_id": "phase-v-ieee-geometry-v1",
+    "manifest_sha256": "ce2de3967ff44d35357b3f6d9d8a3a99d430ef666e6e7e34602d254762273008",
+    "operator_ids": [
+      "adjacent-displacement-v1",
+      "normalized-local-drift-v1",
+      "campaign-path-length-v1",
+      "direction-change-v1",
+      "discrete-curvature-v1",
+      "distance-to-last-converged-v1"
+    ],
+    "parameter_retuning": false
+  },
+  "gate_passed": true,
+  "limitations": [
+    "The campaign axis is ordered load scale, not elapsed time.",
+    "No solver failure occurs on the frozen IEEE-14 grid, so no sampled boundary is inferred.",
+    "Uncertainty is uncalibrated and remains explicitly unknown.",
+    "The result is benchmark computation, not operational-grid evidence.",
+    "No causal, predictive, control, or real-world generalization claim is made.",
+    "No observed outcome exists; episodic-memory update remains prohibited."
+  ],
+  "recorded_at": "2026-07-14T18:00:00+00:00",
+  "validation_id": "phase-v-ieee-geometry-v1",
+  "validation_ladder": [
+    "deterministic operator fixtures",
+    "manually inspectable IEEE-9 development campaign",
+    "shared implementation across development and evaluation roles",
+    "explicit failure and insufficient-result preservation",
+    "IEEE-14 frozen evaluation without parameter retuning",
+    "byte-reproducible machine-readable summary",
+    "manifest-bound supported and prohibited claim audit"
+  ]
+}

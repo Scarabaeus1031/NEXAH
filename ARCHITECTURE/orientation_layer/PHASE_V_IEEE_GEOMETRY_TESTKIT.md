@@ -1,6 +1,6 @@
 # Phase V — IEEE Geometry Case and Research Testkit
 
-Status: in progress; Orientation Brief and Work Packages A–D implemented
+Status: complete; Orientation Brief and Work Packages A–H implemented
 
 ## Objective
 
@@ -202,6 +202,8 @@ software can prove from the record alone.
 
 ## Work package F — Validation ladder
 
+Status: **implemented; frozen IEEE-14 gate passed**
+
 1. deterministic unit fixtures for every geometry operator
 2. one small IEEE development case with manually checkable values
 3. multi-case campaign comparison without case-specific branches
@@ -212,21 +214,40 @@ software can prove from the record alone.
 
 Negative and indeterminate results remain first-class outputs.
 
+The canonical runner is
+[`validation/ieee_geometry_v1/run_validation.py`](../../validation/ieee_geometry_v1/run_validation.py).
+It reproduces the IEEE-9 development model, rebuilds IEEE-14 from the source,
+applies the unchanged model, reproduces geometry, five probes, and both brief
+formats, and audits every manifest claim. Two independent executions are
+byte-identical.
+
+IEEE-14 converges at all 19 frozen load positions. Thus 18 adjacent and 17
+centered measurements are available, while no sampled solver boundary is
+observed. WP F records that absence without extrapolating beyond the grid.
+
 ## Work package G — Public showcase set
 
-Produce three entry depths from the same canonical artifacts:
+Status: **implemented and reproducible** in the
+[`IEEE Geometry V1 public showcase`](../../APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md).
+
+Three entry depths use the same canonical artifacts:
 
 - **90-second map** — what goes in, what is computed, and where evidence stops
 - **10-minute runnable case** — one command, compact report, and four figures
 - **research path** — methods, manifests, failures, evaluation, and open work
 
-All showcase figures must be generated from versioned outputs. Promotional
-visuals may explain the hypothesis, but they do not override the canonical
-record.
+The four committed scientific figures are regenerated from versioned JSON and
+tested for byte identity. Promotional visuals may explain the hypothesis, but
+they do not override the canonical record.
 
 ## Work package H — Observed-evidence bridge
 
-Document how a later operational or public measurement source would enter the
+Status: **documented; no external dataset admitted**. The
+[`Observed-Evidence Bridge`](../../testkit/observed_evidence/OBSERVED_EVIDENCE_BRIDGE.md),
+[`Admission Checklist`](../../testkit/observed_evidence/ADMISSION_CHECKLIST.md),
+and deliberately closed
+[`manifest template`](../../testkit/observed_evidence/templates/observed_case_manifest.template.json)
+specify how a later operational or public measurement source would enter the
 same contracts:
 
 - acquisition and license
@@ -237,8 +258,10 @@ same contracts:
 - privacy and redaction
 - train/evaluation separation
 
-This bridge is a Phase V deliverable. A real observed dataset is a later
-evidence milestone and must not be fabricated to complete the benchmark case.
+The template begins as `not_evidence`, with observations and outcomes not
+acquired and episodic-memory updates disabled. A real observed dataset is a
+later evidence milestone and was not fabricated to complete the benchmark
+case.
 
 ## Definition of done
 
@@ -253,6 +276,10 @@ Phase V closes when:
 - the 90-second, 10-minute, and research entry paths are published
 - benchmark, simulation, observation, and outcome language remain distinct
 - no scenario enters episodic memory as observed experience
+
+All conditions above are satisfied. Phase V is closed at the benchmark and
+repository-usability level defined by this document; it does not claim
+operational validation.
 
 ## Beyond Phase V
 
