@@ -1,8 +1,13 @@
 # `nexah` — Minimal State-Space Backend
 
 This directory contains the installable Python package and command-line
-interface. It is the current computational baseline for the planned NEXAH
+interface. It is the computational baseline inside the implemented NEXAH
 Orientation Layer; it is not the complete orientation architecture.
+
+If you want to use the kernel rather than inspect its internal package layout,
+begin with **[Start with the NEXAH Kernel](START_HERE.md)**. Its companion
+**[Safety and Misuse Boundaries](SAFETY_AND_MISUSE.md)** defines where
+orientation ends and controlled operational capability would begin.
 
 ## What the package currently does
 

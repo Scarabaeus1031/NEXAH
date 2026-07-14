@@ -183,6 +183,16 @@ specified by the
 Its admission template remains closed until a real source, license, provenance,
 measurements, and independently observed outcome are available.
 
+## Phase V documentation visuals
+
+- [V5 Phase V closure record](../../../ARCHITECTURE/orientation_layer/visuals/nexah-v5-phase-v-ieee-geometry-closure-page-10.png)
+- [V5 IEEE Geometry capability map](../../../ARCHITECTURE/orientation_layer/visuals/nexah-v5-ieee-geometry-capability-map-page-11.png)
+
+The closure record explains what was completed and verified. The capability
+map explains what another user can run, inspect, and learn from today. Both are
+explanatory summaries; the manifest, canonical artifacts, validation record,
+and normative architecture documents remain authoritative.
+
 ## Evidence boundary
 
 This is a benchmark protocol, not an operational-grid case:

@@ -7,6 +7,11 @@ software layer built around evidence and uncertainty.
 The text specifications are normative. The diagrams summarize them; code and
 tests must verify them.
 
+Users who want to run the kernel rather than study its construction should
+begin with **[Start with the NEXAH Kernel](../../nexah/START_HERE.md)**. The
+public authority and dual-use boundary is defined in
+**[Safety and Misuse Boundaries](../../nexah/SAFETY_AND_MISUSE.md)**.
+
 ## Read in this order
 
 1. **[ORIENTATION_LAYER_SPEC.md](ORIENTATION_LAYER_SPEC.md)** — scope,
@@ -214,6 +219,25 @@ plus four reproducible figures derived from canonical JSON. Work Package H
 publishes the **[Observed-Evidence Bridge](../../testkit/observed_evidence/OBSERVED_EVIDENCE_BRIDGE.md)**,
 admission checklist, and a deliberately closed manifest template. No external
 measurement dataset was admitted merely to close the phase.
+
+### Status page 10 — V5 Phase V closure
+
+![NEXAH V5 Phase V IEEE Geometry and Testkit closure](visuals/nexah-v5-phase-v-ieee-geometry-closure-page-10.png)
+
+This is the Phase V closure record for work packages A–H: the frozen case
+protocol, typed geometry frames, six failure-aware operators, five read-only
+perspectives, outcome firewall, unchanged IEEE-14 evaluation, public showcase,
+and observed-evidence bridge. It records 197 passing repository tests at
+closure and zero observed-outcome memory updates.
+
+### Status page 11 — V5 IEEE Geometry capability map
+
+![NEXAH V5 IEEE Geometry capability map](visuals/nexah-v5-ieee-geometry-capability-map-page-11.png)
+
+This is the practical user view of accepted benchmark inputs, the working
+geometry pipeline, inspectable outputs, runnable entry paths, and the exact
+capability boundary. Benchmark computation remains distinct from operational
+measurement, and orientation remains distinct from control.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

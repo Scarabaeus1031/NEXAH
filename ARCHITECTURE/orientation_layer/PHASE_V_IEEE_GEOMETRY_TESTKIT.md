@@ -281,6 +281,13 @@ All conditions above are satisfied. Phase V is closed at the benchmark and
 repository-usability level defined by this document; it does not claim
 operational validation.
 
+The closure is summarized visually in the
+[`V5 closure record`](visuals/nexah-v5-phase-v-ieee-geometry-closure-page-10.png)
+and the practical
+[`V5 capability map`](visuals/nexah-v5-ieee-geometry-capability-map-page-11.png).
+These posters are explanatory; the contracts and canonical records remain
+normative.
+
 ## Beyond Phase V
 
 The next evidence plateau applies the testkit to timestamped external

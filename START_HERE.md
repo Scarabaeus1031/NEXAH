@@ -115,6 +115,7 @@ This contains a **clean, reproducible implementation** of:
 ## 🧭 Where to go next
 
 - 👉 Overview → [README.md](README.md)  
+- 👉 Use the current kernel → [nexah/START_HERE.md](nexah/START_HERE.md)
 - 👉 Architecture → [ARCHITECTURE/README.md](ARCHITECTURE/README.md)  
 - 👉 Methods → [ARCHITECTURE/METHODS.md](ARCHITECTURE/METHODS.md)  
 - 👉 Visuals → [VISUAL_GALLERY.md](VISUAL_GALLERY.md)  
