@@ -6,6 +6,19 @@ and how navigation becomes possible inside structured fields.
 
 This directory contains the current foundational layer of the NEXAH framework.
 
+## Current framework note
+
+**[Evidence-Bound Orientation over Heterogeneous State–Transition Systems —
+Mathematical Framework Note v0.1](STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md)**
+defines candidate objects for representation-indexed states, typed transitions,
+paths, boundaries, evidence, uncertainty, representation maps, and contextual
+orientation.
+
+The note is non-normative. It does not claim mathematical novelty, a universal
+geometry, or approved kernel contracts. Its corresponding static repository
+assessment is the
+**[State–Transition–Orientation Architecture Review](../../ARCHITECTURE/orientation_layer/STATE_TRANSITION_ORIENTATION_REVIEW.md)**.
+
 It defines:
 
 - the structural variable system  

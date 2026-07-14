@@ -15,31 +15,34 @@ tests must verify them.
    criteria.
 3. **[CONCEPT_TRACEABILITY.md](CONCEPT_TRACEABILITY.md)** — relationship
    between established concepts and actual implementation.
-4. **[DECISIONS/0001-janus-identities.md](DECISIONS/0001-janus-identities.md)** —
+4. **[STATE_TRANSITION_ORIENTATION_REVIEW.md](STATE_TRANSITION_ORIENTATION_REVIEW.md)** —
+   V5 architecture review of states, transition relations, ordered paths,
+   boundaries, and contextual orientation.
+5. **[DECISIONS/0001-janus-identities.md](DECISIONS/0001-janus-identities.md)** —
    separation of JANUS, Janus Bridge, and the scientific operator.
-5. **[ADAPTER_LANDSCAPE.md](ADAPTER_LANDSCAPE.md)** — existing adapter lines,
+6. **[ADAPTER_LANDSCAPE.md](ADAPTER_LANDSCAPE.md)** — existing adapter lines,
    preservation decisions, and their relationship to WP2.
-6. **[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)** — Phase III
+7. **[SOURCE_ADAPTER_CONTRACT.md](SOURCE_ADAPTER_CONTRACT.md)** — Phase III
    source boundary, invariants, leakage rules, and acceptance evidence.
-7. **[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)** — current typed
+8. **[ADAPTER_ECOSYSTEM_V3.md](ADAPTER_ECOSYSTEM_V3.md)** — current typed
    sources, preserved legacy work, and the promotion path for new domains.
-8. **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)** — coupled entity and
+9. **[IEEE_COUPLED_ADAPTER.md](IEEE_COUPLED_ADAPTER.md)** — coupled entity and
    load-campaign views, physical variables, failure policy, and D–F roadmap.
-9. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
+10. **[PLATEAU_A_CLOSURE.md](PLATEAU_A_CLOSURE.md)** — implemented status,
    Memory V2 evidence, scientific boundaries, and the Phase III gate.
-10. **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)** — current A–G
+11. **[PHASE_III_STATUS_V2_9.md](PHASE_III_STATUS_V2_9.md)** — current A–G
    baseline, scientific boundary, and the H–L continuation path.
-11. **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** — completed H–K path,
+12. **[PHASE_III_CLOSURE.md](PHASE_III_CLOSURE.md)** — completed H–K path,
     held-out result, and the boundary of validity.
-12. **[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)** —
+13. **[PHASE_IV_NETWORK_ORIENTATION.md](PHASE_IV_NETWORK_ORIENTATION.md)** —
     graph-native application, structural comparison, and held-out fixture gate.
-13. **[PHASE_V_IEEE_GEOMETRY_TESTKIT.md](PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** —
+14. **[PHASE_V_IEEE_GEOMETRY_TESTKIT.md](PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** —
     IEEE geometry case, evidence firewall, public showcase, and external-data
     bridge.
-14. **[ORIENTATION_BRIEF_CONTRACT.md](ORIENTATION_BRIEF_CONTRACT.md)** — typed
+15. **[ORIENTATION_BRIEF_CONTRACT.md](ORIENTATION_BRIEF_CONTRACT.md)** — typed
     human-facing synthesis, evidence classes, outcome firewall, and runnable
     reference path.
-15. **[archive/README.md](archive/README.md)** — rules for historical designs.
+16. **[archive/README.md](archive/README.md)** — rules for historical designs.
 
 
 ## Architecture at a glance
