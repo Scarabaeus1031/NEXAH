@@ -332,7 +332,7 @@ Recommended research path:
 The **[Janus Operator](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** is a central
 exploratory mechanism in NEXAH.
 
-![Janus Geometry Map — directional coherence in dynamical fields](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/visualizations/janus_geometry_map.png)
+![Janus Geometry Map — directional coherence in dynamical fields](assets/readme/janus-geometry-map.webp)
 
 It compares forward and backward local flow structure within a reconstructed
 representation:
