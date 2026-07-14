@@ -1,5 +1,7 @@
 # NEXAH — The Orientation Laboratory
 
+**Understanding before action.**
+
 ![NEXAH Orientation Laboratory — structure emerging into an open field of orientation](assets/readme/nexah-orientation-laboratory-hero.webp)
 
 > **Mapping structure. Preserving evidence. Supporting orientation.**
@@ -10,8 +12,7 @@ NEXAH is an open research laboratory and software project for
 It turns declared observations into inspectable representations of states,
 relationships, transitions, paths, boundaries, and uncertainty.
 
-NEXAH supports understanding before action. It is not an oracle, a causal
-authority, or an autonomous controller.
+It is not an oracle, a causal authority, or an autonomous controller.
 
 ```text
 observe → represent → map → compare → orient → explain → learn
@@ -33,6 +34,8 @@ observe → represent → map → compare → orient → explain → learn
 ---
 
 ## 🧭 Start Here
+
+**New here? Start in under 10 minutes.**
 
 | I want to… | Start here |
 |---|---|
@@ -133,6 +136,10 @@ construction, transition structure, and geometry-aware navigation.
 
 ---
 
+![NEXAH orientation cycle — observe, represent, map, compare, orient, explain and learn](assets/readme/nexah-orientation-cycle.webp)
+
+---
+
 ## 🧪 Applications
 
 ### Network Orientation
@@ -175,6 +182,39 @@ It provides:
 
 This is benchmark and simulation evidence. It is not operational-grid
 measurement, a voltage-stability certificate, or a production controller.
+
+---
+
+## 🌀 Visual Atlas
+
+![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
+
+The repository contains the computational, documentary, and empirical layers of
+NEXAH. The companion **[NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)**
+contains visual essays, system atlases, research notebooks, and orientation
+paths.
+
+Current Atlas entry points include:
+
+- Core Orientation
+- The Visitor’s Guide
+- The Operator’s Handbook
+- System Atlases
+- historical NEXAH Atlas volumes
+- Design Orientation
+
+The two surfaces have different roles:
+
+```text
+GitHub
+→ code, methods, evidence, status, reproducibility
+
+Are.na
+→ visual orientation, editorial sequence, conceptual exploration
+```
+
+The long-term goal is not to make them identical, but to connect them through
+explicit mappings between repository modules and Atlas channels.
 
 ---
 
@@ -292,6 +332,8 @@ Recommended research path:
 The **[Janus Operator](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** is a central
 exploratory mechanism in NEXAH.
 
+![Janus Geometry Map — directional coherence in dynamical fields](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/visualizations/janus_geometry_map.png)
+
 It compares forward and backward local flow structure within a reconstructed
 representation:
 
@@ -313,7 +355,7 @@ transition law.
 
 ---
 
-## 🧱 Repository Layers
+## 🧱 Architecture Overview
 
 NEXAH now has a maintained Orientation Kernel and applications, while the
 repository remains a broader research ecosystem rather than one runtime for
@@ -429,39 +471,6 @@ The authoritative maturity overview is
 
 ---
 
-## 🌀 Visual Atlas
-
-![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
-
-The repository contains the computational, documentary, and empirical layers of
-NEXAH. The companion **[NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)**
-contains visual essays, system atlases, research notebooks, and orientation
-paths.
-
-Current Atlas entry points include:
-
-- Core Orientation
-- The Visitor’s Guide
-- The Operator’s Handbook
-- System Atlases
-- historical NEXAH Atlas volumes
-- Design Orientation
-
-The two surfaces have different roles:
-
-```text
-GitHub
-→ code, methods, evidence, status, reproducibility
-
-Are.na
-→ visual orientation, editorial sequence, conceptual exploration
-```
-
-The long-term goal is not to make them identical, but to connect them through
-explicit mappings between repository modules and Atlas channels.
-
----
-
 ## 🤝 How to Explore and Contribute
 
 NEXAH benefits from collaboration across:
@@ -499,28 +508,18 @@ Good starting points:
 
 ## ⚡ Final Perspective
 
-NEXAH begins with a possibility:
+**Orientation begins with observation.**
 
-```text
-Complex systems may not transition randomly.
+Explore the Demonstrator.
 
-Their trajectories may pass through structured regions
-that shape transition pathways,
-recovery possibilities,
-and potential intervention behavior.
-```
+Inspect the evidence.
 
-The repository does not treat that possibility as settled theory. It turns it
-into visualizations, implementations, benchmarks, and questions that can be
-inspected.
+Question the map.
 
-Run the demonstrator. Follow the evidence. Compare representations. Challenge
-the maps.
-
-The goal is not certainty.
-
-The goal is orientation within complexity.
+Build your own orientation.
 
 ---
 
-**Thomas K. R. Hofmann · NEXAH · 2026**
+**Thomas K. R. Hofmann**
+
+NEXAH Orientation Laboratory · 2026
