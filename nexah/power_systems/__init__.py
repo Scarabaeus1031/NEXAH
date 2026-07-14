@@ -41,6 +41,17 @@ from .ieee_geometry_operators import (
     analyze_ieee_geometry,
     fit_ieee_standardization,
 )
+from .ieee_geometry_probes import (
+    IEEEBoundaryProbe,
+    IEEEClaimCriticProbe,
+    IEEEEvidenceProbe,
+    IEEEGeometryLearningContext,
+    IEEEGeometryProbe,
+    IEEEPhysicalStateProbe,
+    build_ieee_geometry_orientation_report,
+    run_ieee_geometry_probe_suite,
+)
+from .ieee_geometry_brief import build_ieee_geometry_orientation_brief
 from .ieee_orientation import (
     EntityDelta,
     IEEEAttributionEvent,
@@ -63,6 +74,8 @@ __all__ = [
     "IEEEGeometryFrameError",
     "IEEEGeometryOperatorError",
     "IEEEGeometryOperatorDefinition",
+    "IEEEGeometryLearningContext",
+    "IEEEGeometryProbe",
     "IEEEGeometryStep",
     "IEEEGeometryTurn",
     "IEEEGeometryValueStatus",
@@ -74,6 +87,10 @@ __all__ = [
     "IEEEFeatureVector",
     "IEEEFrameStatus",
     "IEEEProjectedFrame",
+    "IEEEPhysicalStateProbe",
+    "IEEEBoundaryProbe",
+    "IEEEEvidenceProbe",
+    "IEEEClaimCriticProbe",
     "IEEESolverBoundaryDistance",
     "IEEEStandardizationModel",
     "ManifestEnvironmentCheck",
@@ -82,10 +99,13 @@ __all__ = [
     "attribute_ieee_changes",
     "analyze_ieee_geometry",
     "build_ieee_geometry_campaign",
+    "build_ieee_geometry_orientation_brief",
+    "build_ieee_geometry_orientation_report",
     "check_manifest_adapter_protocol",
     "check_manifest_environment",
     "fit_ieee_standardization",
     "orient_ieee_campaign",
+    "run_ieee_geometry_probe_suite",
     "refine_boundary",
     "scan_branch",
 ]

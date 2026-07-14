@@ -1,6 +1,6 @@
 # Phase V — IEEE Geometry Case and Research Testkit
 
-Status: in progress; Orientation Brief and Work Packages A–C implemented
+Status: in progress; Orientation Brief and Work Packages A–D implemented
 
 ## Objective
 
@@ -155,6 +155,13 @@ universal return law, or control semantics are assumed.
 
 ## Work package D — IEEE orientation probes
 
+Status: implemented in `nexah.power_systems.ieee_geometry_probes` and
+`nexah.power_systems.ieee_geometry_brief`. All five perspectives are read-only,
+share the manifest-bound campaign identity, retain full findings and limits,
+and feed one typed Orientation Report and Orientation Brief. Canonical IEEE-9
+JSON and Markdown products are published in the
+[`ieee_geometry_v1` case directory](../../APPLICATIONS/power_systems/ieee_geometry_v1/README.md).
+
 Use the Phase IV read-only pattern:
 
 1. **Physical-State Probe** — variables, limits, convergence, and missing data.
@@ -169,17 +176,29 @@ not vote, execute, or mutate a simulation.
 
 ## Work package E — Outcome firewall
 
+Status: **implemented and tested**
+
 The testkit must distinguish three record types:
 
 | Record | Example | May create an episode? |
 |---|---|---:|
 | `ScenarioRecord` | declared load increase or line removal | No |
-| `ComputationResult` | Pandapower convergence, voltage, or flow | No |
-| `ObservedOutcome` | independently sourced event after orientation | Yes |
+| `ComputationResultRecord` | Pandapower convergence, voltage, or flow | No |
+| `ObservedOutcomeRecord` | independently sourced event after orientation | Only after all checks pass |
 
 Only an `ObservedOutcome` with valid temporal order, provenance, and scope may
 enter the episodic-memory path. Benchmark computations remain canonical
 validation records.
+
+The implementation lives in `nexah/orientation/outcome_firewall.py`. It binds
+the candidate to an `OrientationEvidenceEnvelope`, evaluates six explicit
+checks, and returns accepted, rejected, or indeterminate without upgrading the
+record's evidence class. `put_episode_if_authorized(...)` is the guarded memory
+write path. Versioned positive and negative fixtures plus a CLI entry live in
+`testkit/observed_evidence/`.
+
+Source independence remains a declaration with recorded basis, not something
+software can prove from the record alone.
 
 ## Work package F — Validation ladder
 

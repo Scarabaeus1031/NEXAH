@@ -188,7 +188,16 @@ environment versions, claims, non-claims, and the outcome boundary.
 Work Package B is complete as well: manifest-bound IEEE Geometry Frames retain
 raw system summaries, bus and line entity views, units, provenance, qualitative
 unknown uncertainty, stable adapter-visible topology identity, and failed
-positions without fabricated physics. Geometry operators are not yet applied.
+positions without fabricated physics. Work Package C supplies the six frozen,
+failure-aware geometry operators and their canonical IEEE-9 development result.
+Work Package D supplies five read-only IEEE perspectives, one evidence-bound
+Orientation Report, and JSON/Markdown Orientation Briefs from the same result.
+Work Package E is complete: typed scenario, computation-result, and
+observed-outcome records feed a deterministic six-check outcome firewall. Only
+a later, scope-compatible, independently declared outcome with no evidence or
+method-selection leakage can authorize the guarded episodic-memory write path.
+Positive, negative, and indeterminate fixtures plus a machine-readable CLI
+make the boundary reproducible.
 
 Phase V turns the strongest existing benchmark line into a reproducible public
 case without relabeling simulation as operational evidence. It adds a frozen

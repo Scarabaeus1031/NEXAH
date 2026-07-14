@@ -1,0 +1,17 @@
+{
+  "record_id": "scenario-fixture-001",
+  "scope": "fixture-system-001",
+  "declared_at": "2026-07-14T09:30:00+00:00",
+  "baseline_reference": "baseline-fixture-001",
+  "change": "Remove the declared connection node-a -> node-b.",
+  "reason": "Exercise structural sensitivity without claiming an event occurred.",
+  "provenance": {
+    "source": "testkit fixture",
+    "method": "authored scenario",
+    "recorded_at": "2026-07-14T09:30:00+00:00",
+    "record_id": "scenario-provenance-fixture-001",
+    "metadata": {}
+  },
+  "record_type": "scenario",
+  "schema_version": "1.0"
+}

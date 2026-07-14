@@ -38,15 +38,20 @@ from nexah.power_systems import (
     IEEEGeometryCampaign,
     IEEEStandardizationModel,
     analyze_ieee_geometry,
+    build_ieee_geometry_orientation_brief,
     build_ieee_geometry_campaign,
     check_manifest_adapter_protocol,
     check_manifest_environment,
     fit_ieee_standardization,
+    run_ieee_geometry_probe_suite,
 )
 from nexah.sources import IEEEPandapowerAdapter
 from nexah.orientation import (
     Context,
+    OrientationEvidenceEnvelope,
     Provenance,
+    evaluate_outcome_firewall,
+    evidence_record_from_dict,
     generate_orientation_report,
     render_orientation_brief_markdown,
 )
@@ -399,10 +404,50 @@ def analyze_ieee_geometry_command(args):
         model = fit_ieee_standardization(campaign, manifest)
 
     analysis = analyze_ieee_geometry(campaign, manifest, model)
-    payload = {
-        "standardization_model": model.to_dict(),
-        "analysis": analysis.to_dict(),
-    }
+    if args.format == "analysis":
+        payload = {
+            "standardization_model": model.to_dict(),
+            "analysis": analysis.to_dict(),
+        }
+    else:
+        context = run_ieee_geometry_probe_suite(campaign, analysis, manifest)
+        if args.format == "report":
+            payload = context.report.to_dict()
+        elif args.format == "probes":
+            payload = context.to_dict()
+        else:
+            brief = build_ieee_geometry_orientation_brief(
+                context,
+                manifest,
+                question=args.question,
+            )
+            if args.format == "brief":
+                rendered = render_orientation_brief_markdown(brief)
+                if args.out:
+                    save_text_output(rendered, args.out)
+                else:
+                    print(rendered)
+                return
+            payload = brief.to_dict()
+    if args.out:
+        save_output(payload, args.out)
+    else:
+        print(json.dumps(payload, indent=2))
+
+
+def validate_outcome_firewall_command(args):
+    envelope_source = load_json_object(args.envelope)
+    record_source = load_json_object(args.record)
+    if envelope_source is None or record_source is None:
+        return
+    envelope = OrientationEvidenceEnvelope.from_dict(envelope_source)
+    record = evidence_record_from_dict(record_source)
+    result = evaluate_outcome_firewall(
+        envelope,
+        record,
+        evaluated_at=args.evaluated_at,
+    )
+    payload = result.to_dict()
     if args.out:
         save_output(payload, args.out)
     else:
@@ -527,7 +572,32 @@ def main():
             "required when applying the frozen model to an evaluation case"
         ),
     )
+    geometry_parser.add_argument(
+        "--format",
+        choices=("analysis", "report", "probes", "brief", "brief-json"),
+        default="analysis",
+    )
+    geometry_parser.add_argument(
+        "--question",
+        help="human question shown in an IEEE Geometry Orientation Brief",
+    )
     geometry_parser.add_argument("--out")
+
+    # VALIDATE OUTCOME FIREWALL
+    firewall_parser = subparsers.add_parser(
+        "validate-outcome-firewall",
+        description=(
+            "Classify an evidence record and evaluate episodic-memory eligibility"
+        ),
+    )
+    firewall_parser.add_argument("envelope")
+    firewall_parser.add_argument("record")
+    firewall_parser.add_argument(
+        "--evaluated-at",
+        type=parse_timestamp,
+        required=True,
+    )
+    firewall_parser.add_argument("--out")
 
     args = parser.parse_args()
 
@@ -545,6 +615,8 @@ def main():
         build_ieee_frames_command(args)
     elif args.command == "analyze-ieee-geometry":
         analyze_ieee_geometry_command(args)
+    elif args.command == "validate-outcome-firewall":
+        validate_outcome_firewall_command(args)
     else:
         parser.print_help()
 

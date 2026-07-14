@@ -1,6 +1,6 @@
 # IEEE Geometry V1 — Frozen Case Protocol
 
-Status: Phase V work packages A–C / steps 5.3–5.5 implemented
+Status: Phase V work packages A–D / steps 5.3–5.6 implemented
 
 This directory contains the frozen protocol, physical development frames, and
 the first inspectable geometry analysis for the NEXAH IEEE Geometry case.
@@ -101,6 +101,40 @@ absent instead of selecting an undeclared metric after seeing the data.
 For the later frozen IEEE-14 gate, the development model must be supplied
 unchanged with `--model development_geometry.json`. The evaluation result must
 not be used to refit that model.
+
+## Read the Development Orientation Brief
+
+Work Package D applies five read-only perspectives to the same canonical
+frames and geometry:
+
+1. physical state and solver-visible variables
+2. sampled geometry
+3. solver boundary and resolution
+4. provenance, uncertainty, and evaluation leakage
+5. claim-boundary criticism
+
+Generate the human-readable brief:
+
+```bash
+nexah analyze-ieee-geometry \
+  APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json \
+  APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json \
+  --format brief
+```
+
+Canonical artifacts:
+
+- [`development_orientation.json`](development_orientation.json) — complete
+  report, five probe results, preserved agreement, and limitations
+- [`development_orientation_brief.json`](development_orientation_brief.json) —
+  compact typed human-facing product
+- [`development_orientation_brief.md`](development_orientation_brief.md) —
+  Markdown rendering of that same typed brief
+
+The brief locates the last converged sampled position at load scale 2.2,
+reports the first solver failure at 2.3, and makes the evidence boundary part of
+the result. The probes do not vote, execute, recommend control, or update
+episodic memory.
 
 ## Evidence boundary
 

@@ -1,0 +1,228 @@
+{
+  "brief_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief",
+  "title": "IEEE Geometry Orientation Brief \u2014 ieee9",
+  "question": "Across a predeclared ordered load campaign, which changes remain visible across declared physical projections, where do those projections agree or disagree, and where does the numerical evidence stop?",
+  "scope": "The ieee9 method_development benchmark campaign, its manifest-bound physical frames, frozen standardized projection, and descriptive geometry operators. The scope excludes elapsed-time dynamics, certified stability limits, causal inference, and control.",
+  "position": "last converged sampled position at load scale 2.2",
+  "changes": [
+    "17 of 19 physical frames converged.",
+    "16 of 18 adjacent relations support frozen geometry measurements.",
+    "The first recorded solver failure is at load scale 2.3."
+  ],
+  "perspectives": [
+    {
+      "perspective_id": "ieee-physical-state-probe-v1",
+      "title": "physical state and solver-visible variables",
+      "question": "What does the physical state and solver-visible variables perspective show?",
+      "findings": [
+        "[observed] The declared ieee9 campaign contains 17 converged physical frame(s) and 2 explicit failed frame(s) across 19 ordered load-scale positions.",
+        "[observed] At the last converged sampled position \u03bb=2.2, bus voltage magnitude spans 0.728933\u20131 pu and maximum declared line loading is 240.171 percent."
+      ],
+      "limitations": [],
+      "evidence_ids": [
+        "phase-v-ieee-geometry-v1-ieee9:geometry-analysis",
+        "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+        "phase-v-ieee-geometry-v1-ieee9:standardization"
+      ]
+    },
+    {
+      "perspective_id": "ieee-geometry-probe-v1",
+      "title": "sampled geometry along the declared load parameter",
+      "question": "What does the sampled geometry along the declared load parameter perspective show?",
+      "findings": [
+        "[observed] The frozen operators return 16 available adjacent measurement(s) and 15 available centered direction/curvature measurement(s).",
+        "[observed] The largest sampled normalized local drift is 16.3197 between \u03bb=2.1 and \u03bb=2.2.",
+        "[observed] The largest sampled discrete curvature is 2.60395 at campaign index 2.",
+        "[unknown] No agreement or disagreement between declared projections is computed because the frozen protocol declares no comparison metric."
+      ],
+      "limitations": [
+        "A prospectively declared cross-projection comparison metric"
+      ],
+      "evidence_ids": [
+        "phase-v-ieee-geometry-v1-ieee9:geometry-analysis",
+        "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+        "phase-v-ieee-geometry-v1-ieee9:standardization"
+      ]
+    },
+    {
+      "perspective_id": "ieee-boundary-probe-v1",
+      "title": "solver boundary and sampling resolution",
+      "question": "What does the solver boundary and sampling resolution perspective show?",
+      "findings": [
+        "[observed] The first explicit solver failure occurs at \u03bb=2.3, following the last converged sample at \u03bb=2.2; the sampled load-scale gap is 0.1.",
+        "[limitation] Pandapower non-convergence and its sampled bracket do not certify a physical voltage-stability boundary."
+      ],
+      "limitations": [
+        "Pandapower non-convergence and its sampled bracket do not certify a physical voltage-stability boundary.",
+        "A declared boundary-refinement protocol beyond the frozen grid",
+        "Independent physical stability evidence"
+      ],
+      "evidence_ids": [
+        "phase-v-ieee-geometry-v1-ieee9:geometry-analysis",
+        "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+        "phase-v-ieee-geometry-v1-ieee9:standardization"
+      ]
+    },
+    {
+      "perspective_id": "ieee-evidence-probe-v1",
+      "title": "provenance, uncertainty, and evaluation leakage",
+      "question": "What does the provenance, uncertainty, and evaluation leakage perspective show?",
+      "findings": [
+        "[supported] Manifest phase-v-ieee-geometry-v1, campaign phase-v-ieee-geometry-v1-ieee9, geometry analysis, and the standardization fitted on ieee9 retain explicit identities and provenance.",
+        "[limitation] Uncertainty remains unknown; no calibrated physical or probabilistic uncertainty is attached.",
+        "[limitation] The input is benchmark-model evidence and the result is a computation; no independently observed outcome is recorded."
+      ],
+      "limitations": [
+        "Uncertainty remains unknown; no calibrated physical or probabilistic uncertainty is attached.",
+        "The input is benchmark-model evidence and the result is a computation; no independently observed outcome is recorded.",
+        "Calibrated uncertainty",
+        "Independent operational measurements and observed outcomes"
+      ],
+      "evidence_ids": [
+        "phase-v-ieee-geometry-v1-ieee9:geometry-analysis",
+        "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+        "phase-v-ieee-geometry-v1-ieee9:standardization"
+      ]
+    },
+    {
+      "perspective_id": "ieee-claim-critic-probe-v1",
+      "title": "claim-boundary criticism",
+      "question": "What does the claim-boundary criticism perspective show?",
+      "findings": [
+        "[limitation] The frozen manifest prohibits this interpretation: The load axis is elapsed time or an observed operational trajectory.",
+        "[limitation] The frozen manifest prohibits this interpretation: Pandapower non-convergence is a certified physical voltage-stability boundary.",
+        "[limitation] The frozen manifest prohibits this interpretation: A geometric change is a causal precursor, failure probability, or control recommendation.",
+        "[limitation] The frozen manifest prohibits this interpretation: IEEE benchmark behavior establishes real-world grid generalization.",
+        "[limitation] The frozen manifest prohibits this interpretation: The tube metaphor is a physical tube, globally smooth manifold, or universal field.",
+        "[limitation] The frozen manifest prohibits this interpretation: The evaluation case is historically untouched.",
+        "[limitation] The frozen manifest prohibits this interpretation: A benchmark computation is an observed outcome eligible for episodic memory."
+      ],
+      "limitations": [
+        "The frozen manifest prohibits this interpretation: The load axis is elapsed time or an observed operational trajectory.",
+        "The frozen manifest prohibits this interpretation: Pandapower non-convergence is a certified physical voltage-stability boundary.",
+        "The frozen manifest prohibits this interpretation: A geometric change is a causal precursor, failure probability, or control recommendation.",
+        "The frozen manifest prohibits this interpretation: IEEE benchmark behavior establishes real-world grid generalization.",
+        "The frozen manifest prohibits this interpretation: The tube metaphor is a physical tube, globally smooth manifold, or universal field.",
+        "The frozen manifest prohibits this interpretation: The evaluation case is historically untouched.",
+        "The frozen manifest prohibits this interpretation: A benchmark computation is an observed outcome eligible for episodic memory.",
+        "External validation and observed outcomes for claims beyond the manifest"
+      ],
+      "evidence_ids": [
+        "phase-v-ieee-geometry-v1-ieee9:geometry-analysis",
+        "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+        "phase-v-ieee-geometry-v1-ieee9:standardization"
+      ]
+    }
+  ],
+  "agreements": [
+    "observed-outcome: limitation by ieee-claim-critic-probe-v1, ieee-evidence-probe-v1",
+    "physical-stability-boundary: limitation by ieee-boundary-probe-v1, ieee-claim-critic-probe-v1"
+  ],
+  "contradictions": [],
+  "evidence": [
+    {
+      "statement_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief:input",
+      "evidence_class": "benchmark_model",
+      "statement": "The input is an IEEE/Pandapower benchmark model evaluated through a frozen computational protocol; it is not an operational-grid measurement.",
+      "references": [
+        "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+        "phase-v-ieee-geometry-v1-ieee9:standardization",
+        "phase-v-ieee-geometry-v1-ieee9:geometry-analysis"
+      ]
+    },
+    {
+      "statement_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief:computed",
+      "evidence_class": "computed_result",
+      "statement": "The Orientation Report and probe findings are computed from the declared input under the recorded methods.",
+      "references": [
+        "phase-v-ieee-geometry-v1-ieee9:geometry-analysis",
+        "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+        "phase-v-ieee-geometry-v1-ieee9:standardization"
+      ]
+    },
+    {
+      "statement_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief:assumption:1",
+      "evidence_class": "assumption",
+      "statement": "The campaign axis is ordered load scale, not elapsed time.",
+      "references": []
+    },
+    {
+      "statement_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief:assumption:2",
+      "evidence_class": "assumption",
+      "statement": "Frames are independent Pandapower steady-state benchmark computations.",
+      "references": []
+    },
+    {
+      "statement_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief:assumption:3",
+      "evidence_class": "assumption",
+      "statement": "Solver non-convergence is a numerical result, not a certified physical limit.",
+      "references": []
+    },
+    {
+      "statement_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief:assumption:4",
+      "evidence_class": "assumption",
+      "statement": "Geometry values describe the frozen standardized projection only.",
+      "references": []
+    },
+    {
+      "statement_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief:outcome",
+      "evidence_class": "not_supported",
+      "statement": "No independently observed outcome is attached; episodic memory must not be updated from this brief.",
+      "references": []
+    }
+  ],
+  "boundaries": [
+    "Pandapower non-convergence and its sampled bracket do not certify a physical voltage-stability boundary.",
+    "Uncertainty remains unknown; no calibrated physical or probabilistic uncertainty is attached.",
+    "The input is benchmark-model evidence and the result is a computation; no independently observed outcome is recorded.",
+    "The frozen manifest prohibits this interpretation: The load axis is elapsed time or an observed operational trajectory.",
+    "The frozen manifest prohibits this interpretation: Pandapower non-convergence is a certified physical voltage-stability boundary.",
+    "The frozen manifest prohibits this interpretation: A geometric change is a causal precursor, failure probability, or control recommendation.",
+    "The frozen manifest prohibits this interpretation: IEEE benchmark behavior establishes real-world grid generalization.",
+    "The frozen manifest prohibits this interpretation: The tube metaphor is a physical tube, globally smooth manifold, or universal field.",
+    "The frozen manifest prohibits this interpretation: The evaluation case is historically untouched.",
+    "The frozen manifest prohibits this interpretation: A benchmark computation is an observed outcome eligible for episodic memory.",
+    "The brief supports orientation and question formation, not autonomous action or control."
+  ],
+  "missing_information": [
+    "Dynamic trajectories between independently solved load cases",
+    "A prospectively declared cross-projection comparison metric",
+    "Calibrated physical or probabilistic uncertainty",
+    "Independent operational measurements and observed outcomes"
+  ],
+  "assumptions": [
+    "The campaign axis is ordered load scale, not elapsed time.",
+    "Frames are independent Pandapower steady-state benchmark computations.",
+    "Solver non-convergence is a numerical result, not a certified physical limit.",
+    "Geometry values describe the frozen standardized projection only."
+  ],
+  "next_questions": [
+    "Does the frozen method transfer to IEEE-14 without parameter retuning?",
+    "How do the geometric measurements compare with established power-system measures?",
+    "Which prospectively declared metric should compare alternative projections?",
+    "What observed measurements and outcomes would be required for external evaluation?"
+  ],
+  "outcome_status": "computation_only",
+  "reproduction": {
+    "command": "nexah analyze-ieee-geometry <manifest.json> <frames.json> --format brief",
+    "artifacts": [
+      "geometry-analysis.json",
+      "orientation-brief.json",
+      "orientation-brief.md"
+    ],
+    "deterministic": true
+  },
+  "timestamp": "2026-07-14T14:00:00+00:00",
+  "provenance": {
+    "source": "pandapower.networks.case9",
+    "method": "orientation-brief-generator-v1",
+    "recorded_at": "2026-07-14T14:00:00+00:00",
+    "record_id": "phase-v-ieee-geometry-v1-ieee9:orientation-brief",
+    "metadata": {
+      "representation_id": "phase-v-ieee-geometry-v1-ieee9",
+      "probe_count": 5
+    }
+  },
+  "episode_id": null,
+  "schema_version": "1.0"
+}

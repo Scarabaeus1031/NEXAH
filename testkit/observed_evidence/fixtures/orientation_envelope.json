@@ -1,0 +1,21 @@
+{
+  "orientation_id": "orientation-fixture-001",
+  "scope": "fixture-system-001",
+  "orientation_timestamp": "2026-07-14T10:00:00+00:00",
+  "report_evidence_ids": [
+    "evidence-input-001",
+    "evidence-method-001"
+  ],
+  "available_evidence_ids": [
+    "evidence-input-001",
+    "evidence-method-001"
+  ],
+  "provenance": {
+    "source": "testkit fixture",
+    "method": "declared orientation evidence envelope",
+    "recorded_at": "2026-07-14T10:00:00+00:00",
+    "record_id": "orientation-envelope-fixture-001",
+    "metadata": {}
+  },
+  "schema_version": "1.0"
+}

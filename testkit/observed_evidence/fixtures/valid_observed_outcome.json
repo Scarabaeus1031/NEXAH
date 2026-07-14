@@ -1,0 +1,27 @@
+{
+  "record_id": "outcome-fixture-001",
+  "orientation_id": "orientation-fixture-001",
+  "scope": "fixture-system-001",
+  "observed_at": "2026-07-14T11:00:00+00:00",
+  "description": "An independently recorded observation made after orientation.",
+  "source_relation": "independent",
+  "source_relation_basis": "Recorded by the declared external observer, not emitted by the tested method.",
+  "method_selection_relation": "not_used",
+  "method_selection_basis": "Method and parameters were frozen before this record was acquired.",
+  "uncertainty": {
+    "kind": "unknown",
+    "value": null,
+    "basis": "No calibrated measurement uncertainty is asserted by this fixture.",
+    "lower": null,
+    "upper": null
+  },
+  "provenance": {
+    "source": "independent testkit observer",
+    "method": "post-orientation observation",
+    "recorded_at": "2026-07-14T11:00:00+00:00",
+    "record_id": "outcome-provenance-fixture-001",
+    "metadata": {}
+  },
+  "record_type": "observed_outcome",
+  "schema_version": "1.0"
+}

@@ -1,0 +1,32 @@
+{
+  "record_id": "computation-fixture-001",
+  "scope": "fixture-system-001",
+  "computed_at": "2026-07-14T10:05:00+00:00",
+  "input_references": [
+    "evidence-input-001",
+    "configuration-fixture-001"
+  ],
+  "configuration_reference": "configuration-fixture-001",
+  "status": "success",
+  "output_checksums": {
+    "result.json": "sha256:fixture-computation-result-001"
+  },
+  "numerical_warnings": [],
+  "uncertainty": {
+    "kind": "unknown",
+    "value": null,
+    "basis": "Fixture records software behavior only.",
+    "lower": null,
+    "upper": null
+  },
+  "provenance": {
+    "source": "testkit fixture",
+    "method": "deterministic benchmark computation",
+    "recorded_at": "2026-07-14T10:05:00+00:00",
+    "record_id": "computation-provenance-fixture-001",
+    "metadata": {}
+  },
+  "deterministic_seed": 7,
+  "record_type": "computation_result",
+  "schema_version": "1.0"
+}

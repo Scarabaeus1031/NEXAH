@@ -194,5 +194,12 @@ Work Package A is also frozen in the
 IEEE-9 is used for development and IEEE-14 is locked for the unchanged Phase V
 evaluation path.
 
+Work Packages B–D now carry the case from manifest-bound physical frames
+through frozen geometry operators and five non-voting probes into one
+evidence-bound Orientation Brief. Work Package E adds the executable
+**[Observed-Evidence outcome firewall](../../testkit/observed_evidence/README.md)**:
+scenario and computation records remain useful artifacts but cannot authorize
+episodic-memory learning. Only a fully passed observed-outcome record can do so.
+
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

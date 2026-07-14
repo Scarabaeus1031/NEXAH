@@ -1,0 +1,27 @@
+{
+  "record_id": "outcome-fixture-before-orientation",
+  "orientation_id": "orientation-fixture-001",
+  "scope": "fixture-system-001",
+  "observed_at": "2026-07-14T09:59:00+00:00",
+  "description": "A record acquired before the orientation was produced.",
+  "source_relation": "independent",
+  "source_relation_basis": "The source is distinct, but temporal order is invalid.",
+  "method_selection_relation": "not_used",
+  "method_selection_basis": "The record was not used for method selection.",
+  "uncertainty": {
+    "kind": "unknown",
+    "value": null,
+    "basis": "Fixture uncertainty is not calibrated.",
+    "lower": null,
+    "upper": null
+  },
+  "provenance": {
+    "source": "independent testkit observer",
+    "method": "pre-orientation observation",
+    "recorded_at": "2026-07-14T09:59:00+00:00",
+    "record_id": "outcome-provenance-before-orientation",
+    "metadata": {}
+  },
+  "record_type": "observed_outcome",
+  "schema_version": "1.0"
+}
