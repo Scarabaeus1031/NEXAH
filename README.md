@@ -1,108 +1,84 @@
-# ⚡ NEXAH — The Orientation Laboratory
+# NEXAH — The Orientation Laboratory
 
-![NEXAH Peak Preview](./ARCHITECTURE/archive/Peak_Preview_visual_2.png)
+![NEXAH Orientation Laboratory — structure emerging into an open field of orientation](assets/readme/nexah-orientation-laboratory-hero.webp)
 
-> Mapping structure. Preserving evidence. Supporting orientation.
+> **Mapping structure. Preserving evidence. Supporting orientation.**
 
-NEXAH is an open research and software laboratory for evidence-bound
-orientation in complex systems.
+NEXAH is an open research laboratory and software project for
+**evidence-bound orientation in complex systems**.
 
 It turns declared observations into inspectable representations of states,
-relationships, transitions, paths, boundaries, and uncertainty. The current
-kernel helps a user ask:
+relationships, transitions, paths, boundaries, and uncertainty.
 
-- Where am I in the supplied representation?
-- What is reachable, blocked, changed, or missing?
-- Which relationships and boundaries are supported by the evidence?
-- Which conclusions remain unjustified?
-- What should be examined next?
+NEXAH supports understanding before action. It is not an oracle, a causal
+authority, or an autonomous controller.
 
 ```text
 observe → represent → map → compare → orient → explain → learn
 ```
 
-NEXAH began as a cartography laboratory. Cartography remains its method for
-making structure visible; orientation is what those maps are for.
-
-> **Cartography constructs the map. Orientation asks what may legitimately be
-> inferred and done from a declared position, context, and evidence state.**
-
-NEXAH does not replace established scientific models, decide what reality
-means, or autonomously control a system. It supports inspection and learning
-before consequential decisions or actions.
-
 ![Status](https://img.shields.io/badge/status-research--active-orange)
-![Validation](https://img.shields.io/badge/validation-in%20progress-yellow)
+![Kernel](https://img.shields.io/badge/kernel-v0.7-blue)
+![Phase](https://img.shields.io/badge/phase%20V-complete-green)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
-![Focus](https://img.shields.io/badge/focus-orientation%20in%20complex%20systems-lightgrey)
 
-> **Status:** The typed Orientation Layer, Network Orientation application,
-> IEEE Geometry V1 benchmark case, episodic-memory boundary, validation paths,
-> and public showcase are implemented. Real-world operational validation,
-> calibrated uncertainty, causal intervention, and autonomous execution are not
-> claimed.
+> **Current state:** The typed Orientation Layer, Network Orientation,
+> IEEE Geometry V1, evidence-bound reporting, episodic-memory safeguards,
+> canonical validation paths, and public showcase are implemented.
+>
+> Real-world operational validation, calibrated uncertainty, causal
+> intervention, and autonomous execution are not claimed.
 
 ---
 
-## 🧭 Quick Navigation
+## 🧭 Start Here
 
-| Goal | Entry point |
+| I want to… | Start here |
 |---|---|
-| Understand the central idea | **[START_HERE.md](START_HERE.md)** |
 | Use the current kernel | **[NEXAH Kernel Start](nexah/START_HERE.md)** |
-| Run the reference demonstration | **[NEXAH Demonstrator](PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
-| Explore the visual work | **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** |
-| Enter the research layer | **[RESEARCH/README.md](RESEARCH/README.md)** |
-| Explore tools and applications | **[APPLICATIONS/README.md](APPLICATIONS/README.md)** |
-| Inspect implementation maturity | **[ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)** |
-| Understand the full repository | **[REPOSITORY_MAP.md](REPOSITORY_MAP.md)** |
-| Browse experimental lineages | **[EXPERIMENTAL/README.md](EXPERIMENTAL/README.md)** |
-| Review safety and misuse boundaries | **[Kernel Safety](nexah/SAFETY_AND_MISUSE.md)** |
-| Enter the visual Atlas | **[NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)** |
+| Run an application | **[Network Orientation](APPLICATIONS/network_orientation/README.md)** · **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)** |
+| Understand the research | **[Research Portal](RESEARCH/README.md)** |
+| Inspect maturity and boundaries | **[Architecture & System State](ARCHITECTURE/SYSTEM_STATE.md)** |
+| Browse the full repository | **[Repository Map](REPOSITORY_MAP.md)** |
 
 Recommended first path:
 
 ```text
-NEXAH Kernel Start
-→ choose Network Orientation or IEEE Geometry
+choose a question
 → run a canonical case
-→ inspect evidence and limits
-→ enter Research or Architecture when needed
+→ inspect the Orientation Report
+→ examine evidence and limits
+→ continue into Research or Architecture
 ```
 
 ---
 
-## 🧭 What the Kernel Can Do Today
+## 🧭 What NEXAH Can Do Today
 
-The installable `nexah` package and maintained applications provide:
+The current kernel transforms ordered observations and declared relationships
+into inspectable orientation artifacts.
 
-| Capability | Current output |
-|---|---|
-| Ordered numerical trajectories | local state representation, empirical transitions, scoped analysis |
-| Directed networks | reachability, paths, components, dead ends, bottlenecks, structural comparison |
-| IEEE/Pandapower campaigns | typed physical frames, sampled geometry, turning and boundary records |
-| Multiple perspectives | five read-only probes with agreement and disagreement preserved |
-| Explanation | typed Orientation Reports and human-readable Orientation Briefs |
-| Reproducibility | frozen manifests, canonical artifacts, validation records, replayable workflows |
-| Episodic context | append-only storage and retrieval after explicit evidence admission |
+| Input | Current capability | Output |
+|---|---|---|
+| Numerical trajectories | local representation and empirical transition analysis | scoped state and transition map |
+| Directed networks | reachability, paths, components and bottlenecks | Network Orientation Report |
+| IEEE/Pandapower campaigns | sampled path geometry and solver-visible boundaries | IEEE Geometry Orientation Brief |
+| Multiple perspectives | five read-only evidence probes | agreements, disagreements and limits |
+| Admitted outcomes | append-only episodic storage and retrieval | prior contextual episodes |
+| Frozen experiments | deterministic replay and claim audit | validation record |
 
-Two maintained user-facing applications demonstrate the current kernel:
+Every result remains scoped to its input representation, context, provenance,
+method, and evidence class.
 
-- **[Network Orientation](APPLICATIONS/network_orientation/README.md)** reads
-  and compares declared graph structure from an explicit focus.
-- **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)**
-  reads ordered benchmark campaigns through a frozen geometry and evidence
-  protocol.
-
-For the complete user surface, begin with
-**[Start with the NEXAH Kernel](nexah/START_HERE.md)**.
+Passing a software contract does not automatically establish scientific,
+causal, or operational validity in a new domain.
 
 ---
 
-## 🚀 Quick Start — Use the Kernel
+## 🚀 Quick Start
 
-From the repository root:
+Install the current research kernel:
 
 ```bash
 python -m venv .venv
@@ -110,13 +86,13 @@ source .venv/bin/activate
 python -m pip install -e .
 ```
 
-On Windows, activate the environment with:
+On Windows:
 
 ```powershell
 .venv\Scripts\activate
 ```
 
-Orient the illustrative supply-chain graph:
+### Orient a declared network
 
 ```bash
 nexah orient-network APPLICATIONS/datasets/supply_chain.json \
@@ -127,197 +103,139 @@ nexah orient-network APPLICATIONS/datasets/supply_chain.json \
   --format brief
 ```
 
-Replay the frozen IEEE Geometry evaluation:
+This produces an evidence-bound report of the supplied graph: reachable and
+blocked nodes, declared paths, structural sensitivities, missing information,
+limitations, and next questions.
+
+It does not establish a real supply-chain risk or issue an intervention.
+
+### Replay the frozen IEEE Geometry case
 
 ```bash
 python validation/ieee_geometry_v1/run_validation.py
 ```
 
-These paths produce inspectable reports and validation artifacts. They do not
-issue commands to a real system or turn a scenario into observed experience.
+This rebuilds the frozen IEEE-14 benchmark evaluation, applies the unchanged
+IEEE-9 development method, reproduces the canonical artifacts, and audits the
+declared claim boundary.
 
-The visual reference Demonstrator remains available as a complementary entry:
+For the guided entry, use the
+**[10-minute IEEE Geometry walkthrough](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/QUICKSTART_10_MINUTES.md)**.
+
+### Run the visual reference Demonstrator
 
 ```bash
 python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/run_demo.py
 ```
 
-It runs the compact sequence:
-
-```text
-trajectory
-→ field representation
-→ transition structure
-→ instability field
-→ navigation behavior
-```
-
-Generated figures and data are written to:
-
-```text
-PROTO_CORE/NEXAH_DEMONSTRATOR/visuals/
-```
-
-For the conceptual introduction, read **[START_HERE.md](START_HERE.md)**. For
-the current kernel surface, read **[nexah/START_HERE.md](nexah/START_HERE.md)**
-or run `nexah --help` after installation.
+The Demonstrator remains the preferred visual introduction to field
+construction, transition structure, and geometry-aware navigation.
 
 ---
 
-## 🗺️ From Cartography to Orientation
+## 🧪 Applications
 
-Modern science produces increasingly accurate models, simulations, predictions,
-and measurements. NEXAH explores a complementary question:
+### Network Orientation
 
-```text
-Can the structures generated by those models
-be mapped, compared, and navigated?
-```
+**[Network Orientation](APPLICATIONS/network_orientation/README.md)** reads a
+declared directed graph from an explicit focus.
 
-The framework looks for organization across:
+It can report:
 
-- dynamics and topology
-- coherence and synchronization
-- fields and geometric representations
-- regimes and transitions
-- intervention and control
-- local and global observation
+- reachable and blocked nodes
+- shortest declared paths
+- components and dead ends
+- articulation points and sensitive edges
+- structural differences between two snapshots
+- five read-only perspectives
+- evidence, uncertainty, and claim boundaries
 
-This is not a claim that all systems share one universal law. It is an
-investigation into whether useful structural descriptions can travel between
-representations and domains.
+Typical exploratory domains include dependency graphs, supply chains,
+infrastructure maps, knowledge systems, and ecological networks.
 
-The repository therefore acts as a laboratory in which mapping techniques are:
+The current fixtures demonstrate technical contract portability. They do not
+establish real-world domain validity.
 
-```text
-proposed
-→ implemented
-→ visualized
-→ challenged
-→ compared
-→ promoted or archived
-```
+### IEEE Geometry V1
 
-Cartography is therefore a representation practice inside the broader
-Orientation Laboratory. The emphasis is not merely producing a map, but making
-complex behavior visible enough to inspect, compare, question, and learn from
-without hiding the map's evidential limits.
+**[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)**
+reads ordered power-system benchmark campaigns.
+
+It provides:
+
+- typed physical frames
+- bus and line provenance
+- sampled displacement and drift
+- direction and curvature records
+- solver-visible boundaries
+- five evidence probes
+- Orientation Briefs
+- frozen IEEE-9 to IEEE-14 evaluation
+- reproducible scientific figures
+
+This is benchmark and simulation evidence. It is not operational-grid
+measurement, a voltage-stability certificate, or a production controller.
 
 ---
 
 ## 🛡️ Evidence and Authority Boundary
 
-Orientation is dual-use. A map of paths and bottlenecks can support resilience
-and learning, but the same map can expose targets or optimize disruption.
+Orientation is dual-use.
+
+A map of paths, bottlenecks, and sensitive relationships can support protection
+and learning. The same map can expose targets or optimize disruption.
+
 NEXAH therefore separates:
 
 ```text
-orientation ≠ recommendation ≠ authorization ≠ execution ≠ outcome
+orientation
+≠ recommendation
+≠ authorization
+≠ execution
+≠ observed outcome
 ```
 
-The current public kernel has no execution authority. Its probes are read-only,
-its reports preserve uncertainty and disagreement, and simulations or declared
-scenarios cannot silently become observed experience.
+The current public kernel:
+
+- has no execution authority
+- uses read-only probes
+- preserves disagreement rather than voting a truth
+- reports unknown uncertainty as unknown
+- keeps simulation, scenario, observation, and outcome distinct
+- does not silently convert structural sensitivity into a target or command
 
 > **NO OBSERVED OUTCOME → NO EPISODIC MEMORY UPDATE**
 
-Real infrastructure, personal data, health, finance, security, and autonomous
-systems require additional evidence, governance, access control, and explicit
-authorization. Read the normative
-**[Safety and Misuse Boundaries](nexah/SAFETY_AND_MISUSE.md)** before connecting
-a sensitive or operational source.
+Before connecting sensitive, personal, or operational data, read the normative
+**[Safety and Misuse Boundaries](nexah/SAFETY_AND_MISUSE.md)**.
 
 ---
 
-## 🔥 Current Research Model
+## 🗺️ From Cartography to Orientation
 
-![NEXAH Transition Activation Framework](RESEARCH/FIGURES/main/nexah_transition_activation_framework.png)
+NEXAH began as a cartography laboratory.
 
-NEXAH investigates systems as motion within structured dynamical
-representations. A current working hypothesis is:
+Cartography remains its method for reconstructing and communicating structure.
+Orientation is the broader purpose of those maps.
 
-```text
-field
-→ structure
-→ coherence
-→ mismatch
-→ transition
-          ↑
-   control(direction)
-```
+> **Cartography constructs the map. Orientation asks what may legitimately be
+> inferred from a declared position, representation, context, evidence state,
+> uncertainty, and boundary structure.**
 
-Experimental interpretation:
+NEXAH investigates whether complex systems can be represented as navigable
+structures containing:
 
-```text
-instability = candidate transition potential
-mismatch    = possible activation factor
-```
+- states and transitions
+- paths and corridors
+- components and relationships
+- basins and attractors
+- boundaries and bottlenecks
+- evidence gaps and unresolved regions
 
-Some investigated representations indicate that labeled transitions can be
-associated with drift, phase mismatch, or competing local flow geometry rather
-than instability magnitude alone. This comparison remains system- and
-representation-dependent.
+This is not a claim that all systems share one geometry or universal law.
 
-The working vocabulary includes:
-
-- **trajectory** — observed or simulated system evolution
-- **field** — a reconstructed continuous representation
-- **coherence** — local alignment within a chosen representation
-- **Gate Operator** — a continuous local-instability field
-- **transition** — a separate discrete event derived from trajectory structure
-- **navigation** — experimental movement relative to reconstructed geometry
-
-The Gate Operator does not directly detect discrete transitions. This
-distinction is part of the current reference architecture.
-
-For the implementation boundary and method status, see:
-
-- **[Architecture Index](ARCHITECTURE/README.md)**
-- **[System State](ARCHITECTURE/SYSTEM_STATE.md)**
-- **[Methods Catalogue](ARCHITECTURE/METHODS.md)**
-
----
-
-## ⚡ Power-System Benchmark Application
-
-The maintained **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)**
-case is the most complete system-specific application of the current
-Orientation Layer. It turns ordered IEEE/Pandapower benchmark campaigns into:
-
-- typed physical frames with bus and line provenance
-- sampled displacement, drift, direction, and curvature records
-- explicit solver-visible boundaries and missing states
-- five read-only perspectives
-- an evidence-bound Orientation Brief
-- a frozen IEEE-9 development to IEEE-14 evaluation path
-- byte-reproducible validation and public figures
-
-![NEXAH Power Systems Current Status](APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/outputs/diagrams/NEXAH_POWER_SYSTEMS_CURRENT_STATUS_vii.png)
-
-The broader Power Systems program also retains experiments in:
-
-- field and atlas construction
-- IEEE benchmark comparison
-- transition prediction
-- early-warning analysis
-- recovery navigation
-- reconstruction from stored simulation artifacts
-- exploratory atlas-guided control
-
-These older and experimental lines span structure discovery, navigation,
-prediction, recovery, and archive reconstruction. They provide hypotheses and
-historical context; they do not inherit the maintained V1 case's validation
-status.
-
-Its current boundary is equally important:
-
-> This is benchmark and simulation research. It is not broad operational-grid
-> validation, a production controller, or a deployed decision-support system.
-
-For a runnable entry, use the
-**[IEEE Geometry Showcase](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)**.
-For the broader archive and research program, use the
-**[Power Systems README](APPLICATIONS/power_systems/README.md)**.
+It is an open investigation into which structural descriptions remain useful,
+reproducible, and honest across representations and domains.
 
 ---
 
