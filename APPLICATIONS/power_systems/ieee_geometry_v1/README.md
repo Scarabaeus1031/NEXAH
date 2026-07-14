@@ -1,6 +1,7 @@
 # IEEE Geometry V1 — Frozen Case Protocol
 
-Status: Phase V work package A / step 5.3 implemented
+Status: Phase V work package A / step 5.3 and work package B / step 5.4
+implemented
 
 This directory freezes the first NEXAH IEEE Geometry experiment before the new
 geometry operators are implemented or evaluated.
@@ -32,6 +33,38 @@ nexah validate-ieee-manifest \
 
 The command validates the typed protocol and reports whether the current Python,
 NumPy, pandas, Pandapower, and SciPy versions match the frozen environment.
+
+## Build the development frames
+
+```bash
+nexah build-ieee-frames \
+  APPLICATIONS/power_systems/ieee_geometry_v1/case_manifest.json \
+  --case ieee9 \
+  --recorded-at 2026-07-14T14:00:00+00:00 \
+  --out APPLICATIONS/power_systems/ieee_geometry_v1/development_frames.json
+```
+
+The committed artifact contains immutable physical frames, raw system features,
+bus and line entity views, declared projection identities, adapter-visible
+topology identity, provenance, unknown rather than fabricated uncertainty, and
+explicit failed positions. It intentionally contains no normalized geometry,
+drift, path length, direction change, or curvature. Those belong to Work Package
+C.
+
+Canonical development result:
+
+| Record | Value |
+|---|---:|
+| Declared frames | 19 |
+| Converged physical frames | 17 |
+| Explicit failed frames | 2 |
+| Failed load scales | 2.3, 2.4 |
+| Geometry values computed | 0 |
+
+The artifact is
+[`development_frames.json`](development_frames.json). Its topology identifier
+describes the adapter-visible bus/line schema under the frozen case and software
+version; it is not asserted to be a complete electrical topology model.
 
 ## Evidence boundary
 

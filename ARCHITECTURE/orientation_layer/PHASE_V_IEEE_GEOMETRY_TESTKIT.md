@@ -1,6 +1,6 @@
 # Phase V — IEEE Geometry Case and Research Testkit
 
-Status: in progress; Orientation Brief and Work Package A implemented
+Status: in progress; Orientation Brief and Work Packages A–B implemented
 
 ## Objective
 
@@ -96,7 +96,7 @@ Create a machine-readable case manifest before implementing new geometry:
 - benchmark case and exact source version
 - campaign parameter and ordered values
 - variables, units, and missing-value policy
-- development cases and untouched evaluation case
+- development case and prospectively locked evaluation case
 - predeclared projections and operators
 - target claims and explicit non-claims
 - environment and deterministic configuration
@@ -105,6 +105,13 @@ Previously inspected PEGASE-9241 is not a fresh held-out case for a new Phase V
 method. A new evaluation case or a predeclared resampling protocol is required.
 
 ## Work package B — Typed geometry frames
+
+Status: implemented in `nexah.power_systems.ieee_geometry`. The canonical
+IEEE-9 development artifact contains 19 immutable frames: 17 converged physical
+frames and two explicit failed frames at load scales 2.3 and 2.4. The stable
+topology hash identifies the adapter-visible bus/line schema within the locked
+Pandapower case; it is not a claim that the adapter exposes every possible
+physical network element.
 
 Implement a minimal `IEEEGeometryFrame` around existing coupled snapshots. It
 must contain:

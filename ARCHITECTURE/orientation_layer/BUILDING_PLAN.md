@@ -185,6 +185,10 @@ reference binding, and CLI path are implemented and tested. Work Package A is
 also complete: the typed IEEE Geometry V1 manifest freezes IEEE-9 development,
 IEEE-14 evaluation, variables, projections, operators, solver settings,
 environment versions, claims, non-claims, and the outcome boundary.
+Work Package B is complete as well: manifest-bound IEEE Geometry Frames retain
+raw system summaries, bus and line entity views, units, provenance, qualitative
+unknown uncertainty, stable adapter-visible topology identity, and failed
+positions without fabricated physics. Geometry operators are not yet applied.
 
 Phase V turns the strongest existing benchmark line into a reproducible public
 case without relabeling simulation as operational evidence. It adds a frozen

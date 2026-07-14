@@ -35,9 +35,11 @@ from nexah.applications import (
 from nexah.core import NEXAH
 from nexah.power_systems import (
     IEEEGeometryCaseManifest,
+    build_ieee_geometry_campaign,
     check_manifest_adapter_protocol,
     check_manifest_environment,
 )
+from nexah.sources import IEEEPandapowerAdapter
 from nexah.orientation import (
     Context,
     Provenance,
@@ -335,6 +337,43 @@ def validate_ieee_manifest_command(args):
     print(json.dumps(payload, indent=2))
 
 
+def build_ieee_frames_command(args):
+    source = load_json_object(args.manifest)
+    if source is None:
+        return
+    manifest = IEEEGeometryCaseManifest.from_dict(source)
+    try:
+        case = next(item for item in manifest.cases if item.case_id == args.case)
+    except StopIteration as error:
+        raise ValueError(f"case {args.case!r} is not declared by the manifest") from error
+    campaign_id = args.campaign_id or f"{manifest.manifest_id}-{case.case_id}"
+    campaign = IEEEPandapowerAdapter(case_id=case.case_id).run_campaign(
+        case.load_scales,
+        campaign_id=campaign_id,
+        provenance=Provenance(
+            source=case.source_loader,
+            method="frozen independent Newton-Raphson load-scale campaign",
+            recorded_at=args.recorded_at,
+            record_id=campaign_id,
+            metadata={"manifest_id": manifest.manifest_id},
+        ),
+        context=Context(
+            domain="power-system",
+            values={
+                "evidence_class": manifest.evidence_class,
+                "case_role": case.role,
+                "campaign_axis": manifest.campaign_axis,
+            },
+        ),
+    )
+    geometry = build_ieee_geometry_campaign(campaign, manifest)
+    payload = geometry.to_dict()
+    if args.out:
+        save_output(payload, args.out)
+    else:
+        print(json.dumps(payload, indent=2))
+
+
 # =========================
 # CLI
 # =========================
@@ -426,6 +465,17 @@ def main():
     )
     manifest_parser.add_argument("file")
 
+    # BUILD IEEE GEOMETRY FRAMES
+    frames_parser = subparsers.add_parser(
+        "build-ieee-frames",
+        description="Build manifest-bound physical frames without geometry claims",
+    )
+    frames_parser.add_argument("manifest")
+    frames_parser.add_argument("--case", required=True)
+    frames_parser.add_argument("--recorded-at", type=parse_timestamp, required=True)
+    frames_parser.add_argument("--campaign-id")
+    frames_parser.add_argument("--out")
+
     args = parser.parse_args()
 
     if args.command == "analyze":
@@ -438,6 +488,8 @@ def main():
         orient_network_command(args)
     elif args.command == "validate-ieee-manifest":
         validate_ieee_manifest_command(args)
+    elif args.command == "build-ieee-frames":
+        build_ieee_frames_command(args)
     else:
         parser.print_help()
 

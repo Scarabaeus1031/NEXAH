@@ -1,0 +1,3928 @@
+{
+  "manifest_id": "phase-v-ieee-geometry-v1",
+  "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+  "case_id": "ieee9",
+  "case_role": "method_development",
+  "campaign_axis": "ordered_load_scale_not_time",
+  "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+  "frames": [
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-000:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 0,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 0.6,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-000:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              52.39454268399078,
+              -11.443537316759844
+            ],
+            [
+              0.9999999999999999,
+              18.977493575168396,
+              -163.0,
+              3.128548579524363
+            ],
+            [
+              1.0,
+              13.850095322661158,
+              -85.0,
+              18.895866463540756
+            ],
+            [
+              0.9938668321836355,
+              1.740082086999755,
+              0.0,
+              0.0
+            ],
+            [
+              0.9931310219221238,
+              3.1065685972088954,
+              54.0,
+              18.0
+            ],
+            [
+              1.012299166467833,
+              11.029727853410868,
+              0.0,
+              0.0
+            ],
+            [
+              1.0046106430434616,
+              10.86045864687375,
+              60.0,
+              21.0
+            ],
+            [
+              1.0071211569196197,
+              13.171828670278709,
+              0.0,
+              0.0
+            ],
+            [
+              0.9793529600400099,
+              3.255307697146881,
+              75.0,
+              30.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-000:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              21.45187227030619,
+              -52.39454268399078,
+              11.44353731675983
+            ],
+            [
+              11.194784883543392,
+              -24.543876682030735,
+              -2.168109316403841
+            ],
+            [
+              55.033524135028664,
+              -78.65301825577758,
+              -5.163521829359669
+            ],
+            [
+              29.024996448286455,
+              84.99999999999739,
+              -18.895866463540774
+            ],
+            [
+              12.051945927172312,
+              3.8391376713527574,
+              -3.43614677014204
+            ],
+            [
+              22.734360536149634,
+              -56.1687156975259,
+              -3.247451492838281
+            ],
+            [
+              65.21200848458764,
+              -162.99999999999366,
+              19.740290964657135
+            ],
+            [
+              42.51675567815978,
+              106.56403495643829,
+              -10.176161635683158
+            ],
+            [
+              16.180576817800386,
+              27.972351431181288,
+              -28.05341312322234
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9793529600400099,
+          0.9989313089529648,
+          0.008969444194181806,
+          18.977493575168396,
+          65.21200848458764,
+          241.39454268399078,
+          91.02441504306512
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-000:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-001:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 1,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 0.7,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-001:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              21.578516730275567,
+              -12.07404518997599
+            ],
+            [
+              1.0000000000000002,
+              16.688641312297037,
+              -163.0,
+              -0.6478400848361616
+            ],
+            [
+              0.9999999999999998,
+              11.620688960800521,
+              -85.0,
+              15.673625660758887
+            ],
+            [
+              0.9931231307084263,
+              0.7170921124038351,
+              0.0,
+              0.0
+            ],
+            [
+              0.9897354642027145,
+              1.356677773733766,
+              62.99999999999999,
+              21.0
+            ],
+            [
+              1.0104132248285647,
+              8.795052992787264,
+              0.0,
+              0.0
+            ],
+            [
+              1.000306713690581,
+              8.348279496117842,
+              70.0,
+              24.5
+            ],
+            [
+              1.0047730487343927,
+              10.869362046347954,
+              0.0,
+              0.0
+            ],
+            [
+              0.9750442586709966,
+              1.3887275951990892,
+              87.5,
+              35.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-001:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              9.89072253399803,
+              -21.578516730275567,
+              12.074045189975777
+            ],
+            [
+              6.957137481204547,
+              -10.867094114714547,
+              -2.06017925118715
+            ],
+            [
+              51.67556578532726,
+              -73.89311124522912,
+              -7.67060608949556
+            ],
+            [
+              28.81099817267464,
+              84.99999999999584,
+              -15.673625660759008
+            ],
+            [
+              14.22274890581324,
+              8.89427927383256,
+              -1.5575979784868696
+            ],
+            [
+              24.627189328842473,
+              -61.12461759877661,
+              -5.092484759012608
+            ],
+            [
+              65.20051496332874,
+              -162.99999999998514,
+              15.95804722564544
+            ],
+            [
+              40.58040368375533,
+              101.55752455592412,
+              -8.767116021556916
+            ],
+            [
+              13.19034665915023,
+              10.774208236879169,
+              -30.29401440988799
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9750442586709966,
+          0.997043982315075,
+          0.009592300184836236,
+          16.688641312297037,
+          65.20051496332874,
+          242.07851673027557,
+          96.17362566075889
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-001:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-002:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 2,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 0.8,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-002:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -9.413698456281107,
+              -14.350754677633404
+            ],
+            [
+              0.9999999999999999,
+              14.379478720094761,
+              -163.0,
+              -4.82388115771937
+            ],
+            [
+              1.0,
+              9.369556835350714,
+              -85.0,
+              12.071186438802556
+            ],
+            [
+              0.9917487883396423,
+              -0.31326067809043606,
+              0.0,
+              0.0
+            ],
+            [
+              0.9856821365520211,
+              -0.4098297124329076,
+              72.0,
+              24.0
+            ],
+            [
+              1.0083047674457157,
+              6.538007394437969,
+              0.0,
+              0.0
+            ],
+            [
+              0.9957216923253979,
+              5.810012802380893,
+              80.0,
+              28.0
+            ],
+            [
+              1.0021765083831111,
+              8.545070014534696,
+              0.0,
+              0.0
+            ],
+            [
+              0.9700119145382943,
+              -0.4964653894296393,
+              100.0,
+              40.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-002:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              6.8651220346723205,
+              9.413698456281107,
+              14.350754677633176
+            ],
+            [
+              5.658020182820549,
+              2.9005546782155176,
+              -1.7648548571665628
+            ],
+            [
+              48.265917183649556,
+              -69.10713275144711,
+              -10.360891444090184
+            ],
+            [
+              28.617619945369626,
+              84.99999999999042,
+              -12.071186438802496
+            ],
+            [
+              16.90555438503908,
+              13.955964085315106,
+              0.3954079900680434
+            ],
+            [
+              26.6916944919805,
+              -66.08104674882465,
+              -6.933030533938062
+            ],
+            [
+              65.22854568902689,
+              -162.99999999995606,
+              11.79628748566158
+            ],
+            [
+              38.70767590651035,
+              96.54456927047293,
+              -7.031715711723518
+            ],
+            [
+              13.590968121909144,
+              -6.447297032131548,
+              -32.32174576658855
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9700119145382943,
+          0.9948495341760203,
+          0.01067517140653146,
+          14.8759441095244,
+          65.22854568902689,
+          252.0,
+          104.07118643880256
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-002:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-003:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 3,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 0.9,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-003:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -40.58854919967197,
+              -18.32547935772375
+            ],
+            [
+              1.0,
+              12.042343408240022,
+              -163.0,
+              -9.419457760801777
+            ],
+            [
+              1.0,
+              7.089148840273085,
+              -85.00000000000003,
+              8.07069738356654
+            ],
+            [
+              0.9897206897401385,
+              -1.3535565095049382,
+              0.0,
+              0.0
+            ],
+            [
+              0.9809410037921773,
+              -2.198929061105892,
+              81.0,
+              27.0
+            ],
+            [
+              1.0059633496947353,
+              4.251003471475943,
+              0.0,
+              0.0
+            ],
+            [
+              0.990840661814565,
+              3.23747065678963,
+              90.0,
+              31.5
+            ],
+            [
+              0.9993191942966985,
+              6.1911944565250066,
+              0.0,
+              0.0
+            ],
+            [
+              0.9642199335410344,
+              -2.4068918745894736,
+              112.5,
+              45.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-003:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              17.81349385078413,
+              40.58854919967197,
+              18.32547935772368
+            ],
+            [
+              8.826234695723203,
+              16.76371363348997,
+              -1.2761611614270463
+            ],
+            [
+              44.80403550344341,
+              -64.29230521054869,
+              -13.239162825308071
+            ],
+            [
+              28.460764720444075,
+              84.99999999997236,
+              -8.070697383566445
+            ],
+            [
+              19.917609291343492,
+              19.025942069937486,
+              2.425717519094893
+            ],
+            [
+              28.894923504685792,
+              -71.03650060183672,
+              -8.768756498713817
+            ],
+            [
+              65.30877574655322,
+              -162.99999999985477,
+              7.241621104485851
+            ],
+            [
+              37.11621965721709,
+              91.52642389486347,
+              -4.958653892617521
+            ],
+            [
+              17.23623889229506,
+              -23.692028127663885,
+              -34.13197398520458
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9642199335410344,
+          0.9923338703199277,
+          0.012202528541311201,
+          14.449235282829495,
+          65.30877574655322,
+          283.5,
+          111.57069738356654
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-003:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-004:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 4,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.0,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-004:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -71.95470158111685,
+              -24.06895774664548
+            ],
+            [
+              1.0000000000000002,
+              9.6687411272709,
+              -163.0,
+              -14.460119515851602
+            ],
+            [
+              1.0000000000000002,
+              4.771073237902751,
+              -85.0,
+              3.649025542676668
+            ],
+            [
+              0.9870068524067375,
+              -2.406643919211978,
+              0.0,
+              0.0
+            ],
+            [
+              0.9754721770987566,
+              -4.017264326071865,
+              90.0,
+              30.0
+            ],
+            [
+              1.0033754364577536,
+              1.9256016875710975,
+              0.0,
+              0.0
+            ],
+            [
+              0.9856448817330974,
+              0.6215445561818055,
+              100.0,
+              35.0
+            ],
+            [
+              0.9961852458185345,
+              3.799120193409044,
+              0.0,
+              0.0
+            ],
+            [
+              0.9576210404662128,
+              -4.349933575374151,
+              125.0,
+              50.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-004:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              30.34941530016632,
+              71.95470158111685,
+              24.06895774664531
+            ],
+            [
+              13.728971151035536,
+              30.72828027499003,
+              -0.5858508207565158
+            ],
+            [
+              42.12848528922875,
+              -59.44531444295211,
+              -16.312049495860023
+            ],
+            [
+              28.359429917862755,
+              84.99999999990918,
+              -3.6490255426766787
+            ],
+            [
+              23.1544839470714,
+              24.10613416631184,
+              4.536791176784493
+            ],
+            [
+              31.136974595206702,
+              -75.98935222082825,
+              -10.59923756135088
+            ],
+            [
+              65.4560555563808,
+              -162.9999999995021,
+              2.2761898943050447
+            ],
+            [
+              35.60690767482404,
+              86.50443565319435,
+              -2.5324293654106302
+            ],
+            [
+              22.700496619454373,
+              -40.96011311718949,
+              -35.7180169924683
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9576210404662128,
+          0.9894784037756769,
+          0.014150350011589218,
+          14.01867470264505,
+          65.4560555563808,
+          315.0,
+          118.64902554267667
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-004:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-005:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 5,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.1,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-005:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -103.52350751277422,
+              -31.674665211049202
+            ],
+            [
+              0.9999999999999998,
+              7.249013293761465,
+              -163.00000000000003,
+              -19.97834954289823
+            ],
+            [
+              1.0,
+              2.4057664287592373,
+              -85.0,
+              -1.2233969991962113
+            ],
+            [
+              0.9835646056294438,
+              -3.4757425714197434,
+              0.0,
+              0.0
+            ],
+            [
+              0.9692237654680957,
+              -5.872411815833222,
+              99.00000000000001,
+              33.0
+            ],
+            [
+              1.0005237272437826,
+              -0.44782203432363377,
+              0.0,
+              0.0
+            ],
+            [
+              0.9801109279788977,
+              -2.048149293043224,
+              110.00000000000001,
+              38.5
+            ],
+            [
+              0.992754496635935,
+              1.359036562877403,
+              0.0,
+              0.0
+            ],
+            [
+              0.950154128094993,
+              -6.334032476804507,
+              137.49999999999997,
+              55.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-005:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              43.30432038303675,
+              103.52350751277422,
+              31.67466521104916
+            ],
+            [
+              19.156607715342396,
+              44.80169859723645,
+              0.31704088714561385
+            ],
+            [
+              39.87509490722999,
+              -54.56215607295713,
+              -19.588382126939038
+            ],
+            [
+              28.336267887567633,
+              84.9999999996851,
+              1.2233969991962703
+            ],
+            [
+              26.558754507321847,
+              29.19870489781873,
+              6.732832156915649
+            ],
+            [
+              33.41898069032053,
+              -80.93778675742979,
+              -12.423931566358236
+            ],
+            [
+              65.68790993770295,
+              -162.9999999982843,
+              -3.1232655117114554
+            ],
+            [
+              34.20535011953656,
+              81.48010120287543,
+              0.2675356328338212
+            ],
+            [
+              29.06784766754265,
+              -58.25197483878247,
+              -37.07077556109725
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.950154128094993,
+          0.9862590723390164,
+          0.016502318706690035,
+          13.58304577056597,
+          65.68790993770295,
+          346.5,
+          126.5
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-005:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-006:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 6,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.2,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-006:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -135.30968446300966,
+              -41.264376769562716
+            ],
+            [
+              1.0,
+              4.771889431125777,
+              -163.0,
+              -26.015389923978432
+            ],
+            [
+              0.9999999999999999,
+              -0.01795227925987526,
+              -85.0,
+              -6.584238368451565
+            ],
+            [
+              0.9793379191823538,
+              -4.564581045949565,
+              0.0,
+              0.0
+            ],
+            [
+              0.9621287527663718,
+              -7.773235505341514,
+              108.0,
+              36.0
+            ],
+            [
+              0.9973861818284968,
+              -2.8805249339921604,
+              0.0,
+              0.0
+            ],
+            [
+              0.9742094625341073,
+              -4.783748215707994,
+              120.0,
+              42.0
+            ],
+            [
+              0.9890013414650312,
+              -1.14051866035692,
+              0.0,
+              0.0
+            ],
+            [
+              0.941740557360032,
+              -8.369095879733441,
+              150.0,
+              60.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-006:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              56.584746353991086,
+              135.30968446300966,
+              41.26437676956266
+            ],
+            [
+              24.85119832117374,
+              58.9933793909061,
+              1.4468479259106815
+            ],
+            [
+              37.9305952322968,
+              -49.63791890376319,
+              -23.079713694079267
+            ],
+            [
+              28.41821050489334,
+              84.99999999889073,
+              6.584238368451582
+            ],
+            [
+              30.09971278910658,
+              34.30616009371986,
+              9.018967385816799
+            ],
+            [
+              35.74288940732478,
+              -85.87971631381237,
+              -14.242144062552825
+            ],
+            [
+              66.02520792665352,
+              -162.99999999414152,
+              -8.986764604611759
+            ],
+            [
+              32.94518162958337,
+              76.45514317539086,
+              3.468187104991931
+            ],
+            [
+              35.96105322330455,
+              -75.56838215057103,
+              -38.17819212242502
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.941740557360032,
+          0.9826449127929325,
+          0.01925697131362256,
+          13.140985310859218,
+          66.02520792665352,
+          378.0,
+          138.0
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-006:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-007:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 7,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.3,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-007:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -167.3323165134653,
+              -52.9963516421013
+            ],
+            [
+              1.0,
+              2.223858771600415,
+              -163.0,
+              -32.623910068452346
+            ],
+            [
+              0.9999999999999999,
+              -2.5135063568074667,
+              -85.0,
+              -12.481702661558245
+            ],
+            [
+              0.9742534557006828,
+              -5.677589188267502,
+              0.0,
+              0.0
+            ],
+            [
+              0.9541004062428149,
+              -9.730386884821808,
+              117.0,
+              39.0
+            ],
+            [
+              0.9939345950511889,
+              -5.386028046438049,
+              0.0,
+              0.0
+            ],
+            [
+              0.9679034458120237,
+              -7.599814885904307,
+              130.0,
+              45.5
+            ],
+            [
+              0.9848930793973456,
+              -3.713300079249821,
+              0.0,
+              0.0
+            ],
+            [
+              0.9322787183888298,
+              -10.467067866192265,
+              162.5,
+              65.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-007:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              70.2096488379031,
+              167.3323165134653,
+              52.99635164210122
+            ],
+            [
+              30.75356774578269,
+              73.31531377427696,
+              2.822233782296011
+            ],
+            [
+              36.397446200885916,
+              -44.666471066574154,
+              -26.801084747356562
+            ],
+            [
+              28.637180379253714,
+              84.9999999960813,
+              12.481702661558169
+            ],
+            [
+              33.76239451535934,
+              39.431484492849016,
+              11.401507389289897
+            ],
+            [
+              38.111483412303365,
+              -90.81266007193352,
+              -16.05297622987135
+            ],
+            [
+              66.49309077093629,
+              -162.9999999802015,
+              -15.353085379889714
+            ],
+            [
+              31.870021815202033,
+              71.43161842290458,
+              7.104747899882634
+            ],
+            [
+              43.23744875686856,
+              -92.91053110283599,
+              -39.024453726100276
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9322787183888298,
+          0.9785959667325428,
+          0.022429723460153636,
+          12.69092663779268,
+          70.2096488379031,
+          409.5,
+          149.5
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-007:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-008:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 8,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.4,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-008:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -199.61636156057833,
+              -67.07763160222697
+            ],
+            [
+              1.0000000000000002,
+              -0.41174998352386527,
+              -162.99999999999997,
+              -39.87200497702071
+            ],
+            [
+              0.9999999999999999,
+              -5.097478706322422,
+              -85.0,
+              -18.978178904994536
+            ],
+            [
+              0.9682146147532553,
+              -6.820177930292308,
+              0.0,
+              0.0
+            ],
+            [
+              0.9450253689140048,
+              -11.75703780459371,
+              125.99999999999999,
+              42.0
+            ],
+            [
+              0.9901324617431403,
+              -7.981040254987377,
+              0.0,
+              0.0
+            ],
+            [
+              0.9611454714682888,
+              -10.514320918442786,
+              140.0,
+              49.0
+            ],
+            [
+              0.9803874315546287,
+              -6.376293491757189,
+              0.0,
+              0.0
+            ],
+            [
+              0.9216358387420863,
+              -12.642769725588733,
+              175.0,
+              70.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-008:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              84.23405531165842,
+              199.61636156057833,
+              67.0776316022268
+            ],
+            [
+              36.86115891149931,
+              87.78299246286338,
+              4.467634058267597
+            ],
+            [
+              35.400969400796285,
+              -39.63999036543413,
+              -30.77217076512478
+            ],
+            [
+              29.030962919290133,
+              84.99999998612324,
+              18.97817890499461
+            ],
+            [
+              37.541992025234485,
+              44.5783443534201,
+              13.888329190712414
+            ],
+            [
+              40.52848407772345,
+              -95.73356733053791,
+              -17.855245757033348
+            ],
+            [
+              67.12230837411487,
+              -162.99999993343206,
+              -22.272769502529197
+            ],
+            [
+              31.035562913929223,
+              66.41207879321446,
+              11.223600005020327
+            ],
+            [
+              50.85339107870943,
+              -110.28017186700013,
+              -39.58879744174554
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9216358387420863,
+          0.9740601319083783,
+          0.02605393397077482,
+          12.642769725588733,
+          84.23405531165842,
+          441.0,
+          161.0
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-008:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-009:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 9,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.5,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-009:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -232.19499615349451,
+              -83.78312443012526
+            ],
+            [
+              1.0000000000000002,
+              -3.1561785315926345,
+              -163.0,
+              -47.84939603939297
+            ],
+            [
+              1.0,
+              -7.7910161721520055,
+              -85.0,
+              -26.155895724617608
+            ],
+            [
+              0.9610922546597066,
+              -7.9991649142801755,
+              0.0,
+              0.0
+            ],
+            [
+              0.9347529153982662,
+              -13.870004162860731,
+              135.0,
+              45.0
+            ],
+            [
+              0.985931668076404,
+              -10.686874261620513,
+              0.0,
+              0.0
+            ],
+            [
+              0.9538736516688089,
+              -13.55015270841207,
+              150.0,
+              52.5
+            ],
+            [
+              0.9754286912730215,
+              -9.1511545538481,
+              0.0,
+              0.0
+            ],
+            [
+              0.9096352169215737,
+              -14.91519257172304,
+              187.5,
+              75.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-009:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              98.73935643135978,
+              232.19499615349451,
+              83.7831244301251
+            ],
+            [
+              43.19704110215958,
+              102.4168322490713,
+              6.4154922225242395
+            ],
+            [
+              35.084230207357265,
+              -34.54823341709885,
+              -35.0190574569549
+            ],
+            [
+              29.644431503949736,
+              84.99999995043764,
+              26.155895724617412
+            ],
+            [
+              41.441264961253914,
+              49.75140021222693,
+              16.489460914264072
+            ],
+            [
+              42.99875858610201,
+              -100.63854311288712,
+              -19.6473621592612
+            ],
+            [
+              67.95123501814587,
+              -162.9999997752646,
+              -29.812793146848627
+            ],
+            [
+              30.511583082086947,
+              61.399822145846905,
+              15.886781890354985
+            ],
+            [
+              58.81575340169587,
+              -127.67980937015562,
+              -39.84366559371888
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.9096352169215737,
+          0.9689682664441978,
+          0.030183475089003885,
+          14.91519257172304,
+          98.73935643135978,
+          472.5,
+          172.5
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-009:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-010:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 10,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.6,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-010:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -265.1134270138232,
+              -103.48653459775079
+            ],
+            [
+              1.0,
+              -6.037513302856856,
+              -163.0,
+              -56.67749069877112
+            ],
+            [
+              0.9999999999999999,
+              -10.622094955087833,
+              -85.0,
+              -34.12608423893022
+            ],
+            [
+              0.9527095957884705,
+              -9.223455861816479,
+              0.0,
+              0.0
+            ],
+            [
+              0.9230774834376055,
+              -16.09155963194487,
+              144.0,
+              48.0
+            ],
+            [
+              0.9812671301844755,
+              -13.531730568647,
+              0.0,
+              0.0
+            ],
+            [
+              0.9460049699550027,
+              -16.737538091225538,
+              160.0,
+              56.0
+            ],
+            [
+              0.9699414784747651,
+              -12.066529827745523,
+              0.0,
+              0.0
+            ],
+            [
+              0.8960354127819877,
+              -17.309590337799825,
+              200.0,
+              80.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-010:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              113.83819536592401,
+              265.1134270138232,
+              103.48653459775073
+            ],
+            [
+              49.80370446489584,
+              117.24449106574976,
+              8.709876468047892
+            ],
+            [
+              35.597371382673174,
+              -29.377342448593033,
+              -39.577108284273905
+            ],
+            [
+              30.53156762510986,
+              84.99999981963244,
+              34.12608423893017
+            ],
+            [
+              45.469832723182954,
+              54.95681609167254,
+              19.21801627022448
+            ],
+            [
+              45.528680078221086,
+              -105.5223988161609,
+              -21.427120960559368
+            ],
+            [
+              69.0290810607232,
+              -162.99999922895825,
+              -38.06415463592768
+            ],
+            [
+              30.383811528133524,
+              56.39930638690386,
+              21.179321435870797
+            ],
+            [
+              67.16666133935095,
+              -145.1130279418599,
+              -39.751734392962696
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.8960354127819877,
+          0.9632262300691453,
+          0.03489858049200885,
+          17.309590337799825,
+          113.83819536592401,
+          504.0,
+          184.0
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-010:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-011:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 11,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.7,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-011:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -298.4355347617731,
+              -126.7137399949899
+            ],
+            [
+              0.9999999999999999,
+              -9.094607701845886,
+              -163.0,
+              -66.5268026535879
+            ],
+            [
+              1.0,
+              -13.629426051485034,
+              -85.00000000000006,
+              -43.04480369714514
+            ],
+            [
+              0.942816053744285,
+              -10.505209598304527,
+              0.0,
+              0.0
+            ],
+            [
+              0.9097084158669908,
+              -18.452564209686216,
+              153.0,
+              51.0
+            ],
+            [
+              0.9760475342961337,
+              -16.55463498658648,
+              0.0,
+              0.0
+            ],
+            [
+              0.9374238243920859,
+              -20.118226187324442,
+              170.0,
+              59.5
+            ],
+            [
+              0.963819924299397,
+              -15.162059952417593,
+              0.0,
+              0.0
+            ],
+            [
+              0.8804940230232758,
+              -19.861105436209503,
+              212.5,
+              85.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-011:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              129.6889449796317,
+              298.4355347617731,
+              126.71373999498974
+            ],
+            [
+              56.74620359515687,
+              132.30494966505626,
+              11.412682721294289
+            ],
+            [
+              37.086625393543635,
+              -24.10775049496177,
+              -44.4959226032114
+            ],
+            [
+              31.75925958646727,
+              84.99999999999972,
+              43.04480369714497
+            ],
+            [
+              49.64508183775346,
+              60.203159482071804,
+              22.091795870109742
+            ],
+            [
+              48.12674834592049,
+              -110.37786265174766,
+              -23.19133672658444
+            ],
+            [
+              70.42137797153207,
+              -162.99999999999872,
+              -47.15504298401969
+            ],
+            [
+              30.756340714337032,
+              51.41689072276033,
+              27.222014804914455
+            ],
+            [
+              75.98388385112652,
+              -162.58521145064714,
+              -39.26089261847072
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.8804940230232758,
+          0.956701086180241,
+          0.04031760741737829,
+          20.118226187324442,
+          129.6889449796317,
+          535.5,
+          195.5
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-011:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-012:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 12,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.8,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-012:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -332.25597040751376,
+              -154.24086305586914
+            ],
+            [
+              1.0000000000000002,
+              -12.384322006964377,
+              -163.0,
+              -77.6489481815911
+            ],
+            [
+              1.0000000000000002,
+              -16.86966218081244,
+              -85.00000000000006,
+              -53.142023189991136
+            ],
+            [
+              0.9310390149468877,
+              -11.861972173860064,
+              0.0,
+              0.0
+            ],
+            [
+              0.8942141683228464,
+              -20.998242183047036,
+              162.0,
+              54.0
+            ],
+            [
+              0.970138320474218,
+              -19.812704508322987,
+              0.0,
+              0.0
+            ],
+            [
+              0.9279610469527416,
+              -23.753192277399773,
+              180.0,
+              63.0
+            ],
+            [
+              0.956907805808598,
+              -18.49576820079226,
+              0.0,
+              0.0
+            ],
+            [
+              0.8625009040001562,
+              -22.621477578154305,
+              225.0,
+              90.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-012:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              146.52468663411307,
+              332.25597040751376,
+              154.2408630558691
+            ],
+            [
+              64.12325212032538,
+              147.65577899079332,
+              14.615077887084983
+            ],
+            [
+              39.69523758366073,
+              -18.710331715843733,
+              -49.848310194954806
+            ],
+            [
+              33.41502428004566,
+              84.99999999999417,
+              53.14202318999115
+            ],
+            [
+              53.995138297069,
+              65.50304290289179,
+              25.136168775367445
+            ],
+            [
+              50.80470251940405,
+              -115.1940947098617,
+              -24.935170201651943
+            ],
+            [
+              72.22006275677121,
+              -162.9999999999779,
+              -57.274973710528556
+            ],
+            [
+              31.757250629952903,
+              46.46220437545241,
+              34.194909038121864
+            ],
+            [
+              85.39376726905384,
+              -180.1042698208926,
+              -38.29483479249741
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.8625009040001562,
+          0.9491956956117164,
+          0.04662001573594251,
+          23.753192277399773,
+          146.52468663411307,
+          567.0,
+          207.0
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-012:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-013:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 13,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 1.9,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-013:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -366.725724251127,
+              -187.298199369196
+            ],
+            [
+              1.0000000000000002,
+              -15.996624483497586,
+              -163.00000000000006,
+              -90.4436063684872
+            ],
+            [
+              0.9999999999999998,
+              -20.43242029327913,
+              -85.0,
+              -64.78221573310952
+            ],
+            [
+              0.9167830662810518,
+              -13.321084888040904,
+              0.0,
+              0.0
+            ],
+            [
+              0.8759058039758779,
+              -23.800230920143044,
+              171.0,
+              57.0
+            ],
+            [
+              0.9633262279394559,
+              -23.396292651942627,
+              0.0,
+              0.0
+            ],
+            [
+              0.9173502237995379,
+              -27.738686544335525,
+              190.0,
+              66.5
+            ],
+            [
+              0.948956973791164,
+              -22.159472959181315,
+              0.0,
+              0.0
+            ],
+            [
+              0.841237628257933,
+              -25.673114132570145,
+              237.5,
+              95.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-013:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              164.71472177772316,
+              366.725724251127,
+              187.2981993691958
+            ],
+            [
+              72.09303832464691,
+              163.38884449398753,
+              18.461031027877013
+            ],
+            [
+              43.593934336160316,
+              -13.138179438075952,
+              -55.74907500484741
+            ],
+            [
+              35.62417324618415,
+              84.99999999986096,
+              64.7822157331095
+            ],
+            [
+              58.566027845212865,
+              70.87669024313816,
+              28.390076267460376
+            ],
+            [
+              53.57971435062795,
+              -119.95351328580298,
+              -26.650659463082576
+            ],
+            [
+              74.5643839191652,
+              -162.99999999951456,
+              -68.72545266049971
+            ],
+            [
+              33.555815984252476,
+              41.55116471937596,
+              42.38681455236487
+            ],
+            [
+              95.60550489774361,
+              -197.68329378515836,
+              -36.734218741584996
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.841237628257933,
+          0.9403955471161134,
+          0.05409563812876776,
+          27.738686544335525,
+          164.71472177772316,
+          598.5,
+          218.5
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-013:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-014:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 14,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 2.0,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-014:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -402.11339373808784,
+              -228.05894555134074
+            ],
+            [
+              0.9999999999999999,
+              -20.09101379113264,
+              -162.99999999999994,
+              -105.6194634823679
+            ],
+            [
+              1.0,
+              -24.476492515796316,
+              -85.0,
+              -78.60976138425036
+            ],
+            [
+              0.8989875626712504,
+              -14.9302164681622,
+              0.0,
+              0.0
+            ],
+            [
+              0.8535566623369255,
+              -26.985640665184395,
+              180.0,
+              60.0
+            ],
+            [
+              0.9552342170797032,
+              -27.46549523080905,
+              0.0,
+              0.0
+            ],
+            [
+              0.9051231106211025,
+              -32.24488365838387,
+              200.0,
+              70.0
+            ],
+            [
+              0.9395274302304737,
+              -26.31595883450829,
+              0.0,
+              0.0
+            ],
+            [
+              0.8152381749782943,
+              -29.16316198781319,
+              250.0,
+              100.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-014:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              184.91341284808922,
+              402.11339373808784,
+              228.05894555134068
+            ],
+            [
+              80.93663757081401,
+              179.66767997224017,
+              23.20358167568277
+            ],
+            [
+              49.069957172298274,
+              -7.306655075385763,
+              -62.39965519862699
+            ],
+            [
+              38.592593682292716,
+              84.99999999559029,
+              78.60976138425029
+            ],
+            [
+              63.43946026647167,
+              76.36063058526992,
+              31.920266116387584
+            ],
+            [
+              56.47934518042463,
+              -124.62393834528571,
+              -28.323135692963824
+            ],
+            [
+              77.69115374259854,
+              -162.99999998557576,
+              -82.04166906886738
+            ],
+            [
+              36.41440035431719,
+              36.71342481662228,
+              52.31462071224251
+            ],
+            [
+              106.99769830585527,
+              -215.34574175590728,
+              -34.37149491940362
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.8152381749782943,
+          0.9297407953241943,
+          0.06326436964961613,
+          32.24488365838387,
+          184.91341284808922,
+          630.0,
+          230.0
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-014:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-015:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 15,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 2.1,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-015:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -438.99611685370064,
+              -281.1525848883685
+            ],
+            [
+              1.0000000000000002,
+              -25.010009498382303,
+              -163.0,
+              -124.6952262254747
+            ],
+            [
+              0.9999999999999998,
+              -29.342584483201612,
+              -85.0,
+              -96.00007297165405
+            ],
+            [
+              0.8753725588013128,
+              -16.789830725038595,
+              0.0,
+              0.0
+            ],
+            [
+              0.8245306726068498,
+              -30.827564131172878,
+              189.0,
+              63.0
+            ],
+            [
+              0.9450575077268883,
+              -32.3638035204971,
+              0.0,
+              0.0
+            ],
+            [
+              0.8902855586252796,
+              -37.63612382097773,
+              210.0,
+              73.5
+            ],
+            [
+              0.9276762752153153,
+              -31.314799273147187,
+              0.0,
+              0.0
+            ],
+            [
+              0.7813272803337263,
+              -33.41023734147893,
+              262.5,
+              105.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-015:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              208.52409610480453,
+              438.99611685370064,
+              281.15258488836844
+            ],
+            [
+              91.25602622436996,
+              196.84440725213443,
+              29.37781121858778
+            ],
+            [
+              56.78661389045101,
+              -1.0303181484587434,
+              -70.22589967791693
+            ],
+            [
+              42.74083913729342,
+              84.99999976986679,
+              96.00007297165399
+            ],
+            [
+              68.78853520814185,
+              82.03553533710559,
+              35.86524524061179
+            ],
+            [
+              59.55579944232383,
+              -129.1333295716004,
+              -29.91974757100367
+            ],
+            [
+              82.0905833437806,
+              -162.99999928632468,
+              -98.37153921874713
+            ],
+            [
+              40.86462165965439,
+              32.01653761281494,
+              65.09635469330756
+            ],
+            [
+              120.39220464351325,
+              -233.14212131307806,
+              -30.773235227513794
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.7813272803337263,
+          0.916027761478819,
+          0.07525059466102234,
+          37.63612382097773,
+          208.52409610480453,
+          661.5,
+          241.5
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-015:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-016:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 16,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 2.2,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "converged",
+      "entity_views": [
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-016:buses",
+          "entity_scope": "bus",
+          "entity_ids": [
+            "bus:0",
+            "bus:1",
+            "bus:2",
+            "bus:3",
+            "bus:4",
+            "bus:5",
+            "bus:6",
+            "bus:7",
+            "bus:8"
+          ],
+          "variable_names": [
+            "vm_pu",
+            "va_degree",
+            "p_mw",
+            "q_mvar"
+          ],
+          "units": [
+            "pu",
+            "degree",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              1.0,
+              0.0,
+              -479.2768607095062,
+              -361.6731376761175
+            ],
+            [
+              0.9999999999999999,
+              -31.88415728130211,
+              -163.0,
+              -152.66849135962178
+            ],
+            [
+              0.9999999999999997,
+              -36.15362215164312,
+              -85.0,
+              -121.45242739350601
+            ],
+            [
+              0.8384285069097145,
+              -19.224047714185318,
+              0.0,
+              0.0
+            ],
+            [
+              0.780149370696911,
+              -36.22713152593915,
+              198.00000000000003,
+              66.0
+            ],
+            [
+              0.9301634909334041,
+              -39.223263704585484,
+              0.0,
+              0.0
+            ],
+            [
+              0.8696002309270795,
+              -45.11073983296861,
+              220.00000000000003,
+              77.0
+            ],
+            [
+              0.9103007521328462,
+              -38.30979311680267,
+              0.0,
+              0.0
+            ],
+            [
+              0.7289326835692247,
+              -39.47717844286367,
+              274.99999999999994,
+              110.0
+            ]
+          ]
+        },
+        {
+          "view_id": "phase-v-ieee-geometry-v1-ieee9:load-016:lines",
+          "entity_scope": "line",
+          "entity_ids": [
+            "line:0:0-3",
+            "line:1:3-4",
+            "line:2:4-5",
+            "line:3:2-5",
+            "line:4:5-6",
+            "line:5:6-7",
+            "line:6:7-1",
+            "line:7:7-8",
+            "line:8:8-3"
+          ],
+          "variable_names": [
+            "loading_percent",
+            "p_from_mw",
+            "q_from_mvar"
+          ],
+          "units": [
+            "percent",
+            "MW",
+            "MVAr"
+          ],
+          "values": [
+            [
+              240.17119485168675,
+              479.2768607095062,
+              361.67313767611745
+            ],
+            [
+              105.02633663306979,
+              216.08494709661318,
+              38.7072257926502
+            ],
+            [
+              69.09043747240736,
+              6.319325361712629,
+              -80.60395486985308
+            ],
+            [
+              49.41400174731883,
+              84.99999999048153,
+              121.45242739350586
+            ],
+            [
+              75.17419858007895,
+              88.17992705819847,
+              40.66784449398416
+            ],
+            [
+              62.95432642567553,
+              -133.22940281889788,
+              -31.326288810744806
+            ],
+            [
+              89.33233971624878,
+              -162.99999997192666,
+              -121.49557370657757
+            ],
+            [
+              48.662362268015926,
+              27.70122930943888,
+              84.44766910452557
+            ],
+            [
+              138.52362696427664,
+              -251.23803072008485,
+              -24.563894875305195
+            ]
+          ]
+        }
+      ],
+      "system_features": {
+        "feature_names": [
+          "minimum_bus_voltage",
+          "mean_bus_voltage",
+          "bus_voltage_std",
+          "bus_angle_range",
+          "maximum_line_loading",
+          "total_bus_consumption_p",
+          "total_bus_consumption_q"
+        ],
+        "units": [
+          "pu",
+          "pu",
+          "pu",
+          "degree",
+          "percent",
+          "MW",
+          "MVAr"
+        ],
+        "values": [
+          0.7289326835692247,
+          0.8952861150187977,
+          0.09378423824661179,
+          45.11073983296861,
+          240.17119485168675,
+          693.0,
+          253.0
+        ]
+      },
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": null,
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-016:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-017:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 17,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 2.3,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "failed",
+      "entity_views": [],
+      "system_features": null,
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!",
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-017:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    },
+    {
+      "frame_id": "phase-v-ieee-geometry-v1-ieee9:load-018:geometry-frame",
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "campaign_id": "phase-v-ieee-geometry-v1-ieee9",
+      "case_id": "ieee9",
+      "case_role": "method_development",
+      "campaign_index": 18,
+      "campaign_axis": "ordered_load_scale_not_time",
+      "load_scale": 2.4,
+      "topology_id": "sha256:d1d806460559ba8dc60a6bd510cc2174ebf7c98116da7446abdb34dd1f76a69e",
+      "status": "failed",
+      "entity_views": [],
+      "system_features": null,
+      "declared_projection_ids": [
+        "system-summary-standardized-v1",
+        "bus-voltage-profile-v1",
+        "bus-angle-profile-v1",
+        "line-loading-profile-v1",
+        "load-axis-status-v1"
+      ],
+      "failure": "LoadflowNotConverged: Power Flow nr did not converge after 30 iterations!",
+      "provenance": {
+        "source": "pandapower.networks.case9",
+        "method": "manifest-bound IEEE geometry frame builder v1",
+        "recorded_at": "2026-07-14T14:00:00+00:00",
+        "record_id": "phase-v-ieee-geometry-v1-ieee9:load-018:geometry-frame",
+        "metadata": {
+          "source_record_id": "phase-v-ieee-geometry-v1-ieee9",
+          "manifest_id": "phase-v-ieee-geometry-v1"
+        }
+      },
+      "uncertainty": {
+        "kind": "unknown",
+        "value": null,
+        "basis": "No calibrated physical or probabilistic uncertainty is available; the frame records deterministic benchmark computation and solver status.",
+        "lower": null,
+        "upper": null
+      },
+      "evidence_class": "benchmark_model",
+      "schema_version": "1.0"
+    }
+  ],
+  "provenance": {
+    "source": "pandapower.networks.case9",
+    "method": "manifest-bound IEEE geometry frame builder v1",
+    "recorded_at": "2026-07-14T14:00:00+00:00",
+    "record_id": "phase-v-ieee-geometry-v1-ieee9:geometry-frames",
+    "metadata": {
+      "manifest_id": "phase-v-ieee-geometry-v1",
+      "source_record_id": "phase-v-ieee-geometry-v1-ieee9"
+    }
+  },
+  "schema_version": "1.0"
+}
