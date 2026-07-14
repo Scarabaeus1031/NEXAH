@@ -175,3 +175,34 @@ def test_cli_can_emit_orientation_brief_markdown() -> None:
     assert "What can this declared map support?" in completed.stdout
     assert "## What should we ask next?" in completed.stdout
     assert "NO OBSERVED OUTCOME → NO EPISODIC MEMORY UPDATE" in completed.stdout
+
+
+def test_cli_can_emit_orientation_brief_json() -> None:
+    source = ROOT / "APPLICATIONS" / "datasets" / "supply_chain.json"
+    completed = subprocess.run(
+        [
+            sys.executable,
+            "-m",
+            "nexah.cli",
+            "orient-network",
+            str(source),
+            "--focus",
+            "normal_operation",
+            "--target",
+            "system_disruption",
+            "--recorded-at",
+            "2026-07-13T22:45:00+00:00",
+            "--format",
+            "brief-json",
+        ],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+
+    payload = json.loads(completed.stdout)
+    assert payload["schema_version"] == "1.0"
+    assert payload["outcome_status"] == "not_recorded"
+    assert len(payload["perspectives"]) == 5
+    assert payload["episode_id"] is None

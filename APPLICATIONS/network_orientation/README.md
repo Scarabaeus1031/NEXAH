@@ -67,6 +67,11 @@ The brief remains an orientation and learning artifact. With no independently
 observed outcome, it cannot create an episodic-memory update. The normative
 contract is **[ORIENTATION_BRIEF_CONTRACT.md](../../ARCHITECTURE/orientation_layer/ORIENTATION_BRIEF_CONTRACT.md)**.
 
+A committed human-readable example and its equivalent machine contract are in
+**[showcase/supply_chain_scenario](showcase/supply_chain_scenario/README.md)**.
+Use `--format brief-json` when an integration needs the typed brief rather than
+rendered Markdown.
+
 ## Run a declared training scenario
 
 ```bash

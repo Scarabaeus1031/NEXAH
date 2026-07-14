@@ -1,0 +1,193 @@
+{
+  "brief_id": "supply_chain:declared-graph:orientation-brief",
+  "title": "Network Orientation Brief \u2014 normal_operation",
+  "question": "From normal_operation, what is structurally reachable, what has changed, and where does the evidence stop?",
+  "scope": "The supplied directed graph and any explicitly declared comparison snapshot. The brief describes structure; it does not establish domain completeness, causal effects, or control authority.",
+  "position": "focus: normal_operation; target: system_disruption",
+  "changes": [
+    "The comparison contains 0 added and 1 removed directed edge(s).",
+    "Newly unreachable from the declared focus: distribution_backlog, system_disruption.",
+    "Shortest declared paths changed for 2 node(s)."
+  ],
+  "perspectives": [
+    {
+      "perspective_id": "network-reachability-probe-v1",
+      "title": "directed reachability and paths",
+      "question": "What does the directed reachability and paths perspective show?",
+      "findings": [
+        "[observed] From normal_operation, 2 node(s) are reachable and 2 are blocked in the supplied directed graph.",
+        "[challenged] Target system_disruption has no declared directed path from normal_operation in this snapshot."
+      ],
+      "limitations": [],
+      "evidence_ids": [
+        "supply_chain:declared-graph-observation"
+      ]
+    },
+    {
+      "perspective_id": "network-bottleneck-probe-v1",
+      "title": "structural bottlenecks",
+      "question": "What does the structural bottlenecks perspective show?",
+      "findings": [
+        "[observed] Weak articulation points: distribution_backlog, production_slowdown, supplier_delay; focus-relative critical edges: normal_operation->supplier_delay, supplier_delay->production_slowdown."
+      ],
+      "limitations": [
+        "Evidence that topological bottlenecks are operational bottlenecks"
+      ],
+      "evidence_ids": [
+        "supply_chain:declared-graph-observation"
+      ]
+    },
+    {
+      "perspective_id": "network-perturbation-probe-v1",
+      "title": "declared snapshot comparison",
+      "question": "What does the declared snapshot comparison perspective show?",
+      "findings": [
+        "[observed] The declared comparison has 0 added, 1 removed, and 0 reweighted edge(s); 2 node(s) became unreachable.",
+        "[challenged] The target is unreachable in the current declared snapshot."
+      ],
+      "limitations": [
+        "Observed outcomes following the declared structural difference"
+      ],
+      "evidence_ids": [
+        "supply_chain:baseline:declared-graph-observation",
+        "supply_chain:declared-graph-observation"
+      ]
+    },
+    {
+      "perspective_id": "network-evidence-probe-v1",
+      "title": "provenance, evidence, and uncertainty",
+      "question": "What does the provenance, evidence, and uncertainty perspective show?",
+      "findings": [
+        "[supported] The report exposes 1 current evidence reference(s) and explicit provenance.",
+        "[limitation] No independent evidence establishes that the declared graph is a complete model of the external domain."
+      ],
+      "limitations": [
+        "No independent evidence establishes that the declared graph is a complete model of the external domain.",
+        "Independent source-completeness and measurement evidence"
+      ],
+      "evidence_ids": [
+        "supply_chain:declared-graph-observation"
+      ]
+    },
+    {
+      "perspective_id": "network-claim-critic-probe-v1",
+      "title": "claim-boundary criticism",
+      "question": "What does the claim-boundary criticism perspective show?",
+      "findings": [
+        "[limitation] Graph topology alone does not establish stability.",
+        "[limitation] Snapshot comparison does not establish causal effect.",
+        "[limitation] Illustrative fixtures do not establish real-world generalization.",
+        "[limitation] This result provides no execution authority."
+      ],
+      "limitations": [
+        "Graph topology alone does not establish stability.",
+        "Snapshot comparison does not establish causal effect.",
+        "Illustrative fixtures do not establish real-world generalization.",
+        "This result provides no execution authority.",
+        "Observed outcomes, external validation, and an authorization model for any later action"
+      ],
+      "evidence_ids": [
+        "supply_chain:declared-graph-observation"
+      ]
+    }
+  ],
+  "agreements": [
+    "target-reachability: challenged by network-perturbation-probe-v1, network-reachability-probe-v1"
+  ],
+  "contradictions": [],
+  "evidence": [
+    {
+      "statement_id": "supply_chain:declared-graph:orientation-brief:input",
+      "evidence_class": "declared_input",
+      "statement": "The source is a declared graph snapshot or training scenario. It is not treated as an independently observed outcome.",
+      "references": [
+        "supply_chain:declared-graph-observation"
+      ]
+    },
+    {
+      "statement_id": "supply_chain:declared-graph:orientation-brief:computed",
+      "evidence_class": "computed_result",
+      "statement": "The Orientation Report and probe findings are computed from the declared input under the recorded methods.",
+      "references": [
+        "supply_chain:baseline:declared-graph-observation",
+        "supply_chain:declared-graph-observation"
+      ]
+    },
+    {
+      "statement_id": "supply_chain:declared-graph:orientation-brief:assumption:1",
+      "evidence_class": "assumption",
+      "statement": "Every non-zero adjacency entry is treated as one declared directed edge.",
+      "references": []
+    },
+    {
+      "statement_id": "supply_chain:declared-graph:orientation-brief:assumption:2",
+      "evidence_class": "assumption",
+      "statement": "Missing edges mean absent from this source, not impossible in reality.",
+      "references": []
+    },
+    {
+      "statement_id": "supply_chain:declared-graph:orientation-brief:assumption:3",
+      "evidence_class": "assumption",
+      "statement": "Reachability and bottlenecks are structural descriptions, not stability scores.",
+      "references": []
+    },
+    {
+      "statement_id": "supply_chain:declared-graph:orientation-brief:assumption:4",
+      "evidence_class": "assumption",
+      "statement": "Snapshot comparison is a learning context, not proof of causal response.",
+      "references": []
+    },
+    {
+      "statement_id": "supply_chain:declared-graph:orientation-brief:outcome",
+      "evidence_class": "not_supported",
+      "statement": "No independently observed outcome is attached; episodic memory must not be updated from this brief.",
+      "references": []
+    }
+  ],
+  "boundaries": [
+    "No independent evidence establishes that the declared graph is a complete model of the external domain.",
+    "Graph topology alone does not establish stability.",
+    "Snapshot comparison does not establish causal effect.",
+    "Illustrative fixtures do not establish real-world generalization.",
+    "This result provides no execution authority.",
+    "The brief supports orientation and question formation, not autonomous action or control."
+  ],
+  "missing_information": [
+    "Independent evidence that the declared graph is complete",
+    "Domain semantics and measurement uncertainty for nodes and edges",
+    "Observed outcomes linking structural changes to system behavior",
+    "Causal evidence for any intervention or training effect"
+  ],
+  "assumptions": [
+    "Every non-zero adjacency entry is treated as one declared directed edge.",
+    "Missing edges mean absent from this source, not impossible in reality.",
+    "Reachability and bottlenecks are structural descriptions, not stability scores.",
+    "Snapshot comparison is a learning context, not proof of causal response."
+  ],
+  "next_questions": [
+    "Is the supplied graph complete for the question being asked?",
+    "Which measurements or domain semantics support its nodes and edges?",
+    "Which independently observed outcomes could evaluate this orientation?"
+  ],
+  "outcome_status": "not_recorded",
+  "reproduction": {
+    "command": "nexah orient-network APPLICATIONS/datasets/supply_chain.json --focus normal_operation --recorded-at 2026-07-13T22:45:00+00:00 --domain supply-chain --target system_disruption --remove-edge production_slowdown distribution_backlog --format brief --out orientation-brief.md",
+    "artifacts": [
+      "orientation-brief.md"
+    ],
+    "deterministic": true
+  },
+  "timestamp": "2026-07-13T22:45:00+00:00",
+  "provenance": {
+    "source": "APPLICATIONS/datasets/supply_chain.json",
+    "method": "orientation-brief-generator-v1",
+    "recorded_at": "2026-07-13T22:45:00+00:00",
+    "record_id": "supply_chain:declared-graph:orientation-brief",
+    "metadata": {
+      "representation_id": "supply_chain:declared-graph",
+      "probe_count": 5
+    }
+  },
+  "episode_id": null,
+  "schema_version": "1.0"
+}

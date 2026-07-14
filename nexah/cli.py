@@ -251,10 +251,10 @@ def orient_network_command(args):
     )
     learning = (
         run_network_probe_suite(result)
-        if args.probes or args.format == "brief"
+        if args.probes or args.format in ("brief", "brief-json")
         else None
     )
-    if args.format == "brief":
+    if args.format in ("brief", "brief-json"):
         assert learning is not None
         command_parts = [
             "nexah",
@@ -284,11 +284,18 @@ def orient_network_command(args):
             question=args.question,
             reproduction_command=command,
         )
-        rendered = render_orientation_brief_markdown(brief)
-        if args.out:
-            save_text_output(rendered, args.out)
+        if args.format == "brief-json":
+            payload = brief.to_dict()
+            if args.out:
+                save_output(payload, args.out)
+            else:
+                print(json.dumps(payload, indent=2))
         else:
-            print(rendered)
+            rendered = render_orientation_brief_markdown(brief)
+            if args.out:
+                save_text_output(rendered, args.out)
+            else:
+                print(rendered)
         return
     payload = learning.to_dict() if learning is not None else result.to_dict()
     if args.out:
@@ -372,7 +379,9 @@ def main():
         help="generate an explicit structural training scenario from the input",
     )
     network_parser.add_argument(
-        "--format", choices=("json", "text", "brief"), default="json"
+        "--format",
+        choices=("json", "text", "brief", "brief-json"),
+        default="json",
     )
     network_parser.add_argument(
         "--question",
