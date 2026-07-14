@@ -3,7 +3,8 @@
 ### Atlas-Guided Stability Analysis, Navigation and Control for Electrical Power Networks
 
 > **Current maintained development entry:**
-> **[IEEE Geometry Showcase Plan](IEEE_GEOMETRY_SHOWCASE_PLAN.md)** and
+> **[IEEE Geometry V1 frozen protocol](ieee_geometry_v1/README.md)**,
+> **[IEEE Geometry Showcase Plan](IEEE_GEOMETRY_SHOWCASE_PLAN.md)**, and
 > **[Phase V specification](../../ARCHITECTURE/orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)**.
 > Phase V treats IEEE/Pandapower as reproducible benchmark computation, not as
 > observed operational-grid evidence. The broader material below records a

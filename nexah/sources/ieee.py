@@ -27,6 +27,12 @@ class IEEESourceAdapterError(SourceAdapterError):
     """Raised when an IEEE source campaign cannot be represented honestly."""
 
 
+PANDAPOWER_ALGORITHM = "nr"
+PANDAPOWER_MAX_ITERATION = 30
+PANDAPOWER_TOLERANCE_MVA = 1e-6
+PANDAPOWER_INITIALIZATION = "auto"
+
+
 @dataclass(frozen=True, slots=True, kw_only=True)
 class IEEEPhysicalSnapshot(ContractModel):
     """One load case with separate bus and line entity views."""
@@ -109,6 +115,12 @@ class IEEEPandapowerAdapter:
     @property
     def adapter_id(self) -> str:
         return "pandapower-ieee-coupled-source-v1"
+
+    @classmethod
+    def supported_case_loaders(cls) -> dict[str, str]:
+        """Return a copy of the public case-to-loader contract."""
+
+        return dict(cls._CASE_LOADERS)
 
     def run_campaign(
         self,
@@ -225,10 +237,10 @@ class IEEEPandapowerAdapter:
         try:
             pp.runpp(
                 net,
-                algorithm="nr",
-                max_iteration=30,
-                tolerance_mva=1e-6,
-                init="auto",
+                algorithm=PANDAPOWER_ALGORITHM,
+                max_iteration=PANDAPOWER_MAX_ITERATION,
+                tolerance_mva=PANDAPOWER_TOLERANCE_MVA,
+                init=PANDAPOWER_INITIALIZATION,
             )
         except Exception as error:
             return IEEEPhysicalSnapshot(

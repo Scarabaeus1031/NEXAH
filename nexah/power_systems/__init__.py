@@ -1,21 +1,4 @@
-"""Power-system domain pipelines built on the generic Orientation contracts."""
-
-from .ieee_orientation import (
-    EntityDelta,
-    IEEEAttributionEvent,
-    IEEEOrientationRun,
-    attribute_ieee_changes,
-    orient_ieee_campaign,
-)
-
-__all__ = [
-    "EntityDelta",
-    "IEEEAttributionEvent",
-    "IEEEOrientationRun",
-    "attribute_ieee_changes",
-    "orient_ieee_campaign",
-]
-"""Power-system-specific orientation and validation helpers."""
+"""Power-system pipelines built on the generic Orientation contracts."""
 
 from .continuation import (
     BranchDirection,
@@ -25,12 +8,46 @@ from .continuation import (
     refine_boundary,
     scan_branch,
 )
+from .ieee_manifest import (
+    IEEECaseDefinition,
+    IEEEGeometryCaseManifest,
+    IEEEGeometryOperatorDefinition,
+    IEEEProjectionDefinition,
+    IEEESolverProtocol,
+    IEEEVariableDefinition,
+    ManifestEnvironmentCheck,
+    SoftwareLock,
+    check_manifest_adapter_protocol,
+    check_manifest_environment,
+)
+from .ieee_orientation import (
+    EntityDelta,
+    IEEEAttributionEvent,
+    IEEEOrientationRun,
+    attribute_ieee_changes,
+    orient_ieee_campaign,
+)
 
 __all__ = [
     "BranchDirection",
     "ContinuationBranch",
     "ContinuationPoint",
+    "EntityDelta",
+    "IEEEAttributionEvent",
+    "IEEECaseDefinition",
+    "IEEEGeometryCaseManifest",
+    "IEEEGeometryOperatorDefinition",
+    "IEEEOrientationRun",
+    "IEEEProjectionDefinition",
+    "IEEESolverProtocol",
+    "IEEEVariableDefinition",
+    "ManifestEnvironmentCheck",
     "RefinedBoundary",
+    "SoftwareLock",
+    "attribute_ieee_changes",
+    "check_manifest_adapter_protocol",
+    "check_manifest_environment",
+    "orient_ieee_campaign",
     "refine_boundary",
     "scan_branch",
 ]

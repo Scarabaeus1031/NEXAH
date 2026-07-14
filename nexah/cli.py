@@ -33,6 +33,11 @@ from nexah.applications import (
     run_network_probe_suite,
 )
 from nexah.core import NEXAH
+from nexah.power_systems import (
+    IEEEGeometryCaseManifest,
+    check_manifest_adapter_protocol,
+    check_manifest_environment,
+)
 from nexah.orientation import (
     Context,
     Provenance,
@@ -310,6 +315,26 @@ def orient_network_command(args):
         print(json.dumps(payload, indent=2))
 
 
+def validate_ieee_manifest_command(args):
+    source = load_json_object(args.file)
+    if source is None:
+        return
+    manifest = IEEEGeometryCaseManifest.from_dict(source)
+    environment = check_manifest_environment(manifest)
+    protocol_mismatches = check_manifest_adapter_protocol(manifest)
+    payload = {
+        "manifest_id": manifest.manifest_id,
+        "schema_valid": True,
+        "environment": environment.to_dict(),
+        "adapter_protocol_compatible": not protocol_mismatches,
+        "adapter_protocol_mismatches": protocol_mismatches,
+        "case_roles": {case.case_id: case.role for case in manifest.cases},
+        "outcome_status": manifest.outcome_status,
+        "episode_update_allowed": manifest.episode_update_allowed,
+    }
+    print(json.dumps(payload, indent=2))
+
+
 # =========================
 # CLI
 # =========================
@@ -394,6 +419,13 @@ def main():
     )
     network_parser.add_argument("--out")
 
+    # VALIDATE IEEE MANIFEST
+    manifest_parser = subparsers.add_parser(
+        "validate-ieee-manifest",
+        description="Validate a frozen Phase V IEEE geometry case protocol",
+    )
+    manifest_parser.add_argument("file")
+
     args = parser.parse_args()
 
     if args.command == "analyze":
@@ -404,6 +436,8 @@ def main():
         orient_command(args)
     elif args.command == "orient-network":
         orient_network_command(args)
+    elif args.command == "validate-ieee-manifest":
+        validate_ieee_manifest_command(args)
     else:
         parser.print_help()
 

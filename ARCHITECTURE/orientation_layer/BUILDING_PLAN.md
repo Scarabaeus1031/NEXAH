@@ -181,7 +181,10 @@ genuinely observed outcome.
 
 Status: in progress; scope frozen in `PHASE_V_IEEE_GEOMETRY_TESTKIT.md`. The
 backend-independent Orientation Brief contract, Markdown renderer, Network
-reference binding, and CLI path are implemented and tested.
+reference binding, and CLI path are implemented and tested. Work Package A is
+also complete: the typed IEEE Geometry V1 manifest freezes IEEE-9 development,
+IEEE-14 evaluation, variables, projections, operators, solver settings,
+environment versions, claims, non-claims, and the outcome boundary.
 
 Phase V turns the strongest existing benchmark line into a reproducible public
 case without relabeling simulation as operational evidence. It adds a frozen

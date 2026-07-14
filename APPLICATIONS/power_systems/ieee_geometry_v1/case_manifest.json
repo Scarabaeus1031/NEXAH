@@ -1,0 +1,136 @@
+{
+  "manifest_id": "phase-v-ieee-geometry-v1",
+  "research_question": "Across a predeclared ordered load campaign, which changes remain visible across declared physical projections, where do those projections agree or disagree, and where does the numerical evidence stop?",
+  "evidence_class": "benchmark_model",
+  "adapter_id": "pandapower-ieee-coupled-source-v1",
+  "campaign_axis": "ordered_load_scale_not_time",
+  "axis_is_time": false,
+  "python_exact_version": "3.12.7",
+  "software_locks": [
+    {"package": "numpy", "exact_version": "1.26.4"},
+    {"package": "pandas", "exact_version": "2.3.3"},
+    {"package": "pandapower", "exact_version": "3.4.0"},
+    {"package": "scipy", "exact_version": "1.13.1"}
+  ],
+  "solver": {
+    "algorithm": "nr",
+    "max_iteration": 30,
+    "tolerance_mva": 1e-06,
+    "initialization": "auto",
+    "independent_points": true
+  },
+  "cases": [
+    {
+      "case_id": "ieee9",
+      "source_loader": "pandapower.networks.case9",
+      "role": "method_development",
+      "load_scales": [0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4],
+      "historically_inspected": true,
+      "role_locked_before_geometry_results": true,
+      "selection_note": "Small manually inspectable development case. Previously used in Phase III; available for implementation checks and method development."
+    },
+    {
+      "case_id": "ieee14",
+      "source_loader": "pandapower.networks.case14",
+      "role": "locked_evaluation",
+      "load_scales": [0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4],
+      "historically_inspected": true,
+      "role_locked_before_geometry_results": true,
+      "selection_note": "Prospective evaluation role for the new geometry method. Previously used by other Phase III methods, so it is not claimed to be historically untouched. No Phase V geometry parameter may be changed after its result is inspected."
+    }
+  ],
+  "variables": [
+    {"name": "load_scale", "entity_scope": "system", "unit": "ratio", "source_field": "declared campaign parameter", "missing_policy": "reject non-finite, non-positive, duplicate, or unordered values"},
+    {"name": "minimum_bus_voltage", "entity_scope": "system_summary", "unit": "pu", "source_field": "minimum of res_bus.vm_pu", "missing_policy": "unavailable when the power flow does not converge"},
+    {"name": "mean_bus_voltage", "entity_scope": "system_summary", "unit": "pu", "source_field": "mean of res_bus.vm_pu", "missing_policy": "unavailable when the power flow does not converge"},
+    {"name": "bus_voltage_std", "entity_scope": "system_summary", "unit": "pu", "source_field": "standard deviation of res_bus.vm_pu", "missing_policy": "unavailable when the power flow does not converge"},
+    {"name": "bus_angle_range", "entity_scope": "system_summary", "unit": "degree", "source_field": "max(res_bus.va_degree) - min(res_bus.va_degree)", "missing_policy": "unavailable when the power flow does not converge"},
+    {"name": "maximum_line_loading", "entity_scope": "system_summary", "unit": "percent", "source_field": "maximum of res_line.loading_percent", "missing_policy": "unavailable when the power flow does not converge"},
+    {"name": "total_bus_consumption_p", "entity_scope": "system_summary", "unit": "MW", "source_field": "sum of positive res_bus.p_mw", "missing_policy": "unavailable when the power flow does not converge"},
+    {"name": "total_bus_consumption_q", "entity_scope": "system_summary", "unit": "MVAr", "source_field": "sum of positive res_bus.q_mvar", "missing_policy": "unavailable when the power flow does not converge"},
+    {"name": "vm_pu", "entity_scope": "bus", "unit": "pu", "source_field": "res_bus.vm_pu", "missing_policy": "preserve failed snapshot without fabricated bus values"},
+    {"name": "va_degree", "entity_scope": "bus", "unit": "degree", "source_field": "res_bus.va_degree in the pandapower solver reference", "missing_policy": "preserve failed snapshot without fabricated bus values"},
+    {"name": "p_mw", "entity_scope": "bus", "unit": "MW", "source_field": "res_bus.p_mw", "missing_policy": "preserve failed snapshot without fabricated bus values"},
+    {"name": "q_mvar", "entity_scope": "bus", "unit": "MVAr", "source_field": "res_bus.q_mvar", "missing_policy": "preserve failed snapshot without fabricated bus values"},
+    {"name": "loading_percent", "entity_scope": "line", "unit": "percent", "source_field": "res_line.loading_percent", "missing_policy": "preserve failed snapshot without fabricated line values"},
+    {"name": "p_from_mw", "entity_scope": "line", "unit": "MW", "source_field": "res_line.p_from_mw", "missing_policy": "preserve failed snapshot without fabricated line values"},
+    {"name": "q_from_mvar", "entity_scope": "line", "unit": "MVAr", "source_field": "res_line.q_from_mvar", "missing_policy": "preserve failed snapshot without fabricated line values"}
+  ],
+  "projections": [
+    {
+      "projection_id": "system-summary-standardized-v1",
+      "inputs": ["minimum_bus_voltage", "mean_bus_voltage", "bus_voltage_std", "bus_angle_range", "maximum_line_loading", "total_bus_consumption_p", "total_bus_consumption_q"],
+      "entity_alignment": "one system row per converged load scale",
+      "normalization": "z-score using IEEE-9 development means and population standard deviations; zero-variance feature is an explicit insufficiency",
+      "fit_scope": "fit on IEEE-9 only; freeze and apply unchanged to IEEE-14",
+      "information_loss": "removes bus and line identity and compresses each solved network to seven aggregate features"
+    },
+    {
+      "projection_id": "bus-voltage-profile-v1",
+      "inputs": ["vm_pu"],
+      "entity_alignment": "stable pandapower bus index within each case",
+      "normalization": "none; preserve per-unit values",
+      "fit_scope": "case-local profile; dimensions are not compared directly across cases",
+      "information_loss": "omits angles, injections, line flows, and topology beyond ordered bus identity"
+    },
+    {
+      "projection_id": "bus-angle-profile-v1",
+      "inputs": ["va_degree"],
+      "entity_alignment": "stable pandapower bus index within each case",
+      "normalization": "none; retain the solver angle reference",
+      "fit_scope": "case-local profile; dimensions are not compared directly across cases",
+      "information_loss": "omits voltage magnitude, injections, line flows, and alternate angle references"
+    },
+    {
+      "projection_id": "line-loading-profile-v1",
+      "inputs": ["loading_percent"],
+      "entity_alignment": "stable pandapower line index and from-to bus identity within each case",
+      "normalization": "none; preserve percent loading",
+      "fit_scope": "case-local profile; dimensions are not compared directly across cases",
+      "information_loss": "omits line direction of power flow, bus state, and non-line branch elements"
+    },
+    {
+      "projection_id": "load-axis-status-v1",
+      "inputs": ["load_scale"],
+      "entity_alignment": "declared scenario order including explicit failed snapshots",
+      "normalization": "none",
+      "fit_scope": "shared across both cases",
+      "information_loss": "contains only campaign position and solver availability, not physical state"
+    }
+  ],
+  "operators": [
+    {"operator_id": "adjacent-displacement-v1", "projection_id": "system-summary-standardized-v1", "minimum_points": 2, "formula": "d_i = ||z_i - z_(i-1)||_2", "insufficiency_policy": "return insufficient when either point is failed, unaligned, or contains a zero-variance projection feature"},
+    {"operator_id": "normalized-local-drift-v1", "projection_id": "system-summary-standardized-v1", "minimum_points": 2, "formula": "v_i = d_i / (lambda_i - lambda_(i-1))", "insufficiency_policy": "return insufficient for missing points or non-positive axis spacing"},
+    {"operator_id": "campaign-path-length-v1", "projection_id": "system-summary-standardized-v1", "minimum_points": 2, "formula": "L_k = sum(i=1..k) ||z_i - z_(i-1)||_2 over the contiguous converged segment", "insufficiency_policy": "stop the segment at a failed or missing point; do not bridge gaps"},
+    {"operator_id": "direction-change-v1", "projection_id": "system-summary-standardized-v1", "minimum_points": 3, "formula": "theta_i = arccos(clip(dot(delta_prev, delta_next) / (||delta_prev|| ||delta_next||), -1, 1))", "insufficiency_policy": "return insufficient when either displacement norm is zero or any of three points is unavailable"},
+    {"operator_id": "discrete-curvature-v1", "projection_id": "system-summary-standardized-v1", "minimum_points": 3, "formula": "kappa_i = theta_i / (0.5 * (||delta_prev|| + ||delta_next||))", "insufficiency_policy": "return insufficient when direction change or local arc-length denominator is unavailable"},
+    {"operator_id": "distance-to-last-converged-v1", "projection_id": "load-axis-status-v1", "minimum_points": 2, "formula": "delta_lambda_fail = lambda_failed - lambda_last_converged", "insufficiency_policy": "return not-applicable until a failed point follows a converged point"}
+  ],
+  "supported_claims": [
+    "The declared adapter and solver produce reproducible benchmark computations under the locked environment.",
+    "Predeclared projections expose different aspects of the same ordered IEEE load campaign.",
+    "The listed discrete geometry operators can describe local change or explicit insufficiency on the sampled campaign.",
+    "The frozen method can be applied to IEEE-14 without Phase V parameter retuning after evaluation begins."
+  ],
+  "prohibited_claims": [
+    "The load axis is elapsed time or an observed operational trajectory.",
+    "Pandapower non-convergence is a certified physical voltage-stability boundary.",
+    "A geometric change is a causal precursor, failure probability, or control recommendation.",
+    "IEEE benchmark behavior establishes real-world grid generalization.",
+    "The tube metaphor is a physical tube, globally smooth manifold, or universal field.",
+    "The evaluation case is historically untouched.",
+    "A benchmark computation is an observed outcome eligible for episodic memory."
+  ],
+  "evaluation_rules": [
+    "Develop operator code and thresholds using IEEE-9 only.",
+    "Freeze projection definitions, normalization statistics, operator formulas, thresholds, and failure policy before inspecting Phase V IEEE-14 geometry outputs.",
+    "Apply identical code and configuration to IEEE-14 without case-specific branches or retuning.",
+    "Report success, failure, and indeterminate or insufficient results as first-class outcomes.",
+    "Preserve every non-converged snapshot and never fabricate physical values.",
+    "Generate JSON, Markdown, and figures from the same canonical run.",
+    "A later revised method requires a new manifest version and a new evaluation protocol."
+  ],
+  "outcome_status": "not_observed",
+  "episode_update_allowed": false,
+  "schema_version": "1.0"
+}

@@ -4,6 +4,9 @@
 
 ## Current maintained entry
 
+- **[IEEE Geometry V1 frozen protocol](ieee_geometry_v1/README.md)** — typed
+  IEEE-9 development/IEEE-14 evaluation manifest, exact environment, declared
+  projections and operators, claims, non-claims, and validation command.
 - **[IEEE Geometry Showcase Plan](IEEE_GEOMETRY_SHOWCASE_PLAN.md)** — Phase V
   public-use path and translation of the Tube concept into testable geometry.
 - **[Phase V specification](../../ARCHITECTURE/orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** —

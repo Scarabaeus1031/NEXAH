@@ -186,6 +186,10 @@ The first Phase V foundation is already implemented: the backend-independent
 and multiple read-only perspectives into a reproducible human-facing document.
 The current Network Orientation path is its reference implementation; the IEEE
 case will populate the same contract rather than inventing another report type.
+Work Package A is also frozen in the
+**[IEEE Geometry V1 case protocol](../../APPLICATIONS/power_systems/ieee_geometry_v1/README.md)**:
+IEEE-9 is used for development and IEEE-14 is locked for the unchanged Phase V
+evaluation path.
 
 Visuals are explanatory artifacts. If a diagram and a normative text disagree,
 the normative text governs until the discrepancy is reviewed.

@@ -1,6 +1,6 @@
 # Phase V — IEEE Geometry Case and Research Testkit
 
-Status: in progress; Orientation Brief foundation implemented
+Status: in progress; Orientation Brief and Work Package A implemented
 
 ## Objective
 
@@ -83,6 +83,13 @@ sample. Every projection must declare its variables, units, normalization,
 scope, and information loss.
 
 ## Work package A — Case protocol and freeze
+
+Status: implemented as the typed
+[`IEEEGeometryCaseManifest`](../../APPLICATIONS/power_systems/ieee_geometry_v1/README.md).
+IEEE-9 is the development case and IEEE-14 is the prospectively locked Phase V
+evaluation case. Both were used historically, so the manifest explicitly avoids
+calling IEEE-14 globally untouched. The lock applies to the new geometry method
+from this manifest forward.
 
 Create a machine-readable case manifest before implementing new geometry:
 
