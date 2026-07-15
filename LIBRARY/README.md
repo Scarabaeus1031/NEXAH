@@ -2,6 +2,12 @@
 
 **A human-readable visual library with a small canonical layer for orientation.**
 
+> **The Library comes first. The Kernel learns from the Library—not the other
+> way around.**
+
+The Library is the human interface of NEXAH. The Registry provides stable
+identity. The Kernel derives orientation from both.
+
 `LIBRARY/` connects the visual NEXAH Library on Are.na with the research,
 implementation, validation, and Orientation Kernel layers in this repository.
 
@@ -13,6 +19,22 @@ The project begins from a simple principle:
 The Library is therefore not a database export and not a mirror of Are.na. It
 is a curated architecture for stable identity, meaningful relationships, and
 future navigation across NEXAH works.
+
+```text
+                 NEXAH
+
+          Human Orientation
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+     Are.na              GitHub
+        │                   │
+        └──── Canonical Registry ────┐
+                                     │
+                              Orientation Kernel
+                                     │
+                         Reading Paths · Search · Graphs
+```
 
 ## Why this layer exists
 
@@ -41,6 +63,9 @@ The long-term goal is a Library that supports both:
 - human exploration through entry works, series, maps, and reading paths;
 - machine-supported orientation through stable identity, controlled Operators,
   curated relationships, Editions, and provenance.
+
+The Registry is intentionally small. Most knowledge remains inside the Works
+themselves rather than being duplicated as metadata.
 
 The intended relationship is:
 
@@ -274,6 +299,6 @@ approved phase.
 ## Project success criterion
 
 The project succeeds when a person can understand and navigate the Library
-without the Kernel, while the Kernel can explain exactly which registered
-identity, Edition, Operator, relationship, and source informed a derived path
-or recommendation.
+without the Kernel, while the Kernel can explain every recommendation, path, or
+relationship through stable identities, curated metadata, and explicit
+provenance.
