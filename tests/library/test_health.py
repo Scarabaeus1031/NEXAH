@@ -2,14 +2,14 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import yaml
-
 from nexah.library.health import build_health, render_health_text
+from nexah.library.operations import OperationError
 from nexah.library.registry import Registry
 from nexah.library.snapshot import (
     build_source_snapshot,
     sequence_fingerprint,
     visible_channel_connections,
+    write_source_snapshot,
 )
 
 
@@ -89,6 +89,18 @@ class HealthAndSnapshotTests(unittest.TestCase):
         ]
         self.assertNotEqual(sequence_fingerprint(first), sequence_fingerprint(list(reversed(first))))
         self.assertEqual([], visible_channel_connections(first))
+
+    def test_verified_snapshot_cannot_be_overwritten(self):
+        snapshot = build_source_snapshot(
+            self.registry,
+            FakeSnapshotClient(),
+            observed_at="2026-07-15T12:00:00+00:00",
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "arena-test.yaml"
+            write_source_snapshot(snapshot, path)
+            with self.assertRaises(OperationError):
+                write_source_snapshot(snapshot, path)
 
 
 if __name__ == "__main__":

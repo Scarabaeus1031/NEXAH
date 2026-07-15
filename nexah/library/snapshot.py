@@ -8,7 +8,7 @@ from typing import Any
 
 from .arena import ArenaClient
 from .discovery import build_discovery
-from .operations import dump_yaml
+from .operations import OperationError, dump_yaml
 from .registry import Registry
 
 
@@ -99,5 +99,9 @@ def build_source_snapshot(
 
 
 def write_source_snapshot(snapshot: dict[str, Any], path: Path) -> None:
+    if path.exists():
+        raise OperationError(
+            f"Refusing to overwrite verified Source Snapshot {path}; choose a new path"
+        )
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(dump_yaml(snapshot), encoding="utf-8")

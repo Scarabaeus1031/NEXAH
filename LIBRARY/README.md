@@ -130,7 +130,7 @@ The Kernel may read the Registry to produce:
 Kernel inference is always an overlay. It may propose metadata or Concept
 occurrences, but it may not silently overwrite canonical human-reviewed data.
 
-## Current status — Phase VI pilot
+## Current status — Phase VII Living Library
 
 The current pilot contains:
 
@@ -156,6 +156,41 @@ The ten pilot Works are:
 
 These records are a work-level pilot, not a claim that the complete Are.na
 Library has already been classified.
+
+## Living Library Operations
+
+Phase VII adds small reporting tools for one human editor. They expose structural
+failures and editorial warnings without making editorial decisions.
+
+Local-only commands:
+
+```bash
+python -m nexah.library health
+python -m nexah.library reader-regression
+python -m nexah.library series-validate
+python -m nexah.library cleanup-status
+python -m nexah.library release-check
+```
+
+Snapshot-based and public read-only commands:
+
+```bash
+python -m nexah.library source-snapshot
+python -m nexah.library traversability --all
+python -m nexah.library editorial-diff --all
+python -m nexah.library editorial-diff NX-000002
+python -m nexah.library editorial-diff arena:5404576
+```
+
+`source-snapshot` and `traversability` observe public Are.na state. Editorial
+Diff compares a verified Source Snapshot with current public observations.
+Missing links, unresolved Series, and pending cleanup are warnings; invalid
+Registry data, collapsed Proposal isolation, Reader regression changes, or a
+write-enabled connector are failures.
+
+No operational command writes to Are.na. `cleanup-status` cannot update its
+queue. Proposal data remains non-canonical unless a human editor later approves
+an explicit Registry change.
 
 ## What the project does not do
 

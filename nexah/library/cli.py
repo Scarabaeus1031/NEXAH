@@ -16,6 +16,7 @@ from .kernel import OrientationQueries, graph_to_mermaid
 from .operations import OperationError, default_review_root, dump_yaml
 from .reader import ReaderOverlay, ReaderOverlayError
 from .regression import run_reader_regression, render_reader_regression_text
+from .release import build_release_check, render_release_text
 from .registry import Registry, RegistryError
 from .snapshot import build_source_snapshot, write_source_snapshot
 from .series import render_series_text, validate_series
@@ -111,6 +112,12 @@ def build_parser() -> argparse.ArgumentParser:
     cleanup = sub.add_parser("cleanup-status", help="Report the local manual cleanup queue")
     cleanup.add_argument("--format", choices=["text", "yaml"], default="text")
     cleanup.add_argument("--review-root", type=Path)
+
+    release = sub.add_parser(
+        "release-check", help="Run aggregate local Living Library validators"
+    )
+    release.add_argument("--format", choices=["text", "yaml"], default="text")
+    release.add_argument("--review-root", type=Path)
     return parser
 
 
@@ -249,6 +256,11 @@ def main(argv: list[str] | None = None) -> int:
             report = cleanup_status(review_root=args.review_root)
             print(dump_yaml(report) if args.format == "yaml" else render_cleanup_text(report))
             return 0 if report["status"] == "pass" else 1
+
+        if args.command == "release-check":
+            report = build_release_check(registry, review_root=args.review_root)
+            print(dump_yaml(report) if args.format == "yaml" else render_release_text(report))
+            return 0 if report["result"] != "fail" else 1
 
         queries = OrientationQueries(registry)
         if args.command == "reading-path":
