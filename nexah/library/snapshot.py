@@ -48,7 +48,11 @@ def build_source_snapshot(
 ) -> dict[str, Any]:
     registry.require_valid()
     checked = observed_at or datetime.now(timezone.utc).isoformat(timespec="seconds")
-    channels = client.get_user_channels(user_slug)
+    channels = [
+        channel
+        for channel in client.get_user_channels(user_slug)
+        if channel.get("visibility") != "private"
+    ]
     discovery = build_discovery(registry, channels, user_slug=user_slug)
     records: list[dict[str, Any]] = []
     for channel in discovery["channels"]:

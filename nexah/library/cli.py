@@ -11,6 +11,16 @@ from .arena import ArenaClient, ArenaError, compare_all, compare_entity
 from .cleanup import cleanup_status, render_cleanup_text
 from .discovery import build_discovery, write_discovery_files
 from .editorial import render_editorial_diff_text, run_editorial_diff
+from .editorial_writer import (
+    BATCH_01_ACTIONS,
+    ArenaEditorialClient,
+    ArenaSandboxClient,
+    apply_editorial_plan,
+    build_editorial_plan,
+    run_batch_aftercare,
+    run_sandbox,
+    run_sandbox_aftercare,
+)
 from .health import build_health, render_health_text
 from .kernel import OrientationQueries, graph_to_mermaid
 from .operations import OperationError, default_review_root, dump_yaml
@@ -118,6 +128,23 @@ def build_parser() -> argparse.ArgumentParser:
     )
     release.add_argument("--format", choices=["text", "yaml"], default="text")
     release.add_argument("--review-root", type=Path)
+
+    writer = sub.add_parser(
+        "editorial-write", help="Plan or apply accepted Are.na editorial Actions"
+    )
+    writer.add_argument("--batch", choices=["BATCH-01"], default="BATCH-01")
+    writer.add_argument("--apply", action="store_true")
+    writer.add_argument("--plan-id")
+    writer.add_argument("--format", choices=["json", "yaml"], default="json")
+    writer.add_argument("--review-root", type=Path)
+    writer.add_argument("--report", type=Path)
+
+    sandbox = sub.add_parser(
+        "editorial-sandbox", help="Run the isolated private Are.na write test"
+    )
+    sandbox.add_argument("--apply", action="store_true")
+    sandbox.add_argument("--target-channel", type=int, default=5404615)
+    sandbox.add_argument("--format", choices=["json", "yaml"], default="json")
     return parser
 
 
@@ -261,6 +288,89 @@ def main(argv: list[str] | None = None) -> int:
             report = build_release_check(registry, review_root=args.review_root)
             print(dump_yaml(report) if args.format == "yaml" else render_release_text(report))
             return 0 if report["result"] != "fail" else 1
+
+        if args.command == "editorial-write":
+            if args.apply and not args.plan_id:
+                raise OperationError("--apply requires the approved --plan-id from a Dry Run")
+            if not args.apply and args.plan_id:
+                raise OperationError("--plan-id is only valid together with --apply")
+            actions = list(BATCH_01_ACTIONS)
+            reader_client = ArenaClient()
+            plan = build_editorial_plan(
+                actions,
+                reader_client,
+                review_root=args.review_root,
+            )
+            if not args.apply:
+                print(
+                    dump_yaml(plan)
+                    if args.format == "yaml"
+                    else json.dumps(plan, ensure_ascii=False, indent=2)
+                )
+                return 0
+            writer_client = ArenaEditorialClient.from_environment()
+            authenticated_reader = ArenaClient(token=writer_client.token)
+            before = run_traversability(
+                authenticated_reader,
+                review_root=args.review_root,
+            )
+            applied = apply_editorial_plan(
+                plan,
+                authenticated_reader,
+                writer_client,
+                approved_plan_id=args.plan_id,
+            )
+            verification = run_batch_aftercare(
+                registry,
+                applied,
+                authenticated_reader,
+                before,
+                review_root=args.review_root,
+                report_path=args.report,
+            )
+            print(
+                dump_yaml(verification)
+                if args.format == "yaml"
+                else json.dumps(verification, ensure_ascii=False, indent=2)
+            )
+            return 0 if not verification["errors"] else 1
+
+        if args.command == "editorial-sandbox":
+            if not args.apply:
+                result = {
+                    "mode": "dry_run",
+                    "sandbox": "NEXAH API SANDBOX",
+                    "visibility": "private",
+                    "tests": [
+                        "create_text_block",
+                        "verify",
+                        "delete_test_block",
+                        "create_channel_connection",
+                        "move_to_top",
+                        "verify",
+                        "remove_test_connection",
+                    ],
+                    "mutations_performed": 0,
+                }
+            else:
+                sandbox_client = ArenaSandboxClient.from_environment()
+                sandbox_result = run_sandbox(
+                    ArenaClient(token=sandbox_client.token),
+                    sandbox_client,
+                    target_channel_id=args.target_channel,
+                )
+                result = {
+                    **sandbox_result,
+                    "aftercare": run_sandbox_aftercare(
+                        registry, ArenaClient(token=sandbox_client.token)
+                    ),
+                }
+            print(
+                dump_yaml(result)
+                if args.format == "yaml"
+                else json.dumps(result, ensure_ascii=False, indent=2)
+            )
+            return 0
 
         queries = OrientationQueries(registry)
         if args.command == "reading-path":

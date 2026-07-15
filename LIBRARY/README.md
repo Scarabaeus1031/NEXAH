@@ -130,7 +130,7 @@ The Kernel may read the Registry to produce:
 Kernel inference is always an overlay. It may propose metadata or Concept
 occurrences, but it may not silently overwrite canonical human-reviewed data.
 
-## Current status — Phase VII Living Library
+## Current status — Phase IX Editorial Writer
 
 The current pilot contains:
 
@@ -139,6 +139,7 @@ The current pilot contains:
 - **17 controlled Core Operators** with definitions and source Works;
 - **Library Architecture v1.0**;
 - a strictly read-only Are.na comparison client;
+- a separate, approval-gated Are.na Editorial Writer;
 - initial Reading Path, Operator, graph, and recommendation queries.
 
 The ten pilot Works are:
@@ -188,16 +189,54 @@ Missing links, unresolved Series, and pending cleanup are warnings; invalid
 Registry data, collapsed Proposal isolation, Reader regression changes, or a
 write-enabled connector are failures.
 
-No operational command writes to Are.na. `cleanup-status` cannot update its
-queue. Proposal data remains non-canonical unless a human editor later approves
-an explicit Registry change.
+All Living Library reporting commands remain read-only. `cleanup-status` cannot
+update its queue. The separate Phase IX Writer can execute only accepted Queue
+Actions through an explicit Dry Run, matching Plan ID, `--apply`, write token,
+and live fingerprint verification. Proposal data remains non-canonical unless a
+human editor later approves an explicit Registry change.
+
+## Phase IX Editorial Writer
+
+The Writer is not a synchronizer or importer. It never changes the Registry,
+identities, Operators, Proposal state, visibility, ownership, titles, or the
+Action Queue. The original `arena.py` connector remains GET-only.
+
+Batch 0 is an isolated API capability test in a private Channel:
+
+```bash
+python -m nexah.library editorial-sandbox
+python -m nexah.library editorial-sandbox --apply
+```
+
+Batch 1 is always planned before it can be applied:
+
+```bash
+python -m nexah.library editorial-write --batch BATCH-01
+python -m nexah.library editorial-write --batch BATCH-01 \
+  --apply --plan-id <approved-plan-id>
+```
+
+Only Queue Actions with `review_state: accepted` are eligible. `pending`,
+`deferred`, `rejected`, and `completed` Actions are reported as ignored. Batch 1
+is restricted to `ACQ-001`, `ACQ-002`, `ACQ-006`, and `ACQ-013`.
+
+The token is read only from the process environment:
+
+```bash
+export ARENA_WRITE_TOKEN="..."
+```
+
+Never place the token in this repository, YAML, a command argument, or a report.
+See [Phase IX Editorial Writer](review/PHASE_IX_EDITORIAL_WRITER.md) for the
+complete operational contract.
 
 ## What the project does not do
 
 The current Library layer does not:
 
-- write to Are.na;
-- rename, sort, connect, or delete channels;
+- synchronize or import content into Are.na;
+- autonomously decide or approve Are.na changes;
+- rename or delete production Channels;
 - import every Are.na block into GitHub;
 - treat Are.na IDs as intellectual identity;
 - infer scientific validity from publication status;
@@ -205,7 +244,8 @@ The current Library layer does not:
 - require page-level semantic annotation;
 - replace the visual sequence with a graph.
 
-The Are.na connector contains GET operations only.
+The canonical Are.na connector contains GET operations only. Phase IX writes are
+isolated in `editorial_writer.py` and cannot mutate canonical Library data.
 
 ## Architecture
 
@@ -253,6 +293,7 @@ LIBRARY/
 
 nexah/library/
 ├── arena.py       read-only Are.na client and comparison
+├── editorial_writer.py  explicit editorial plans and guarded writes
 ├── registry.py    YAML loading and validation
 ├── kernel.py      derived paths, queries, graphs, and recommendations
 └── cli.py         command-line interface
@@ -276,8 +317,9 @@ Human-reviewed Registry
 Derived paths, queries, graphs, and suggestions
 ```
 
-Changes flow into canonical Registry data only after human review. No reverse
-write path to Are.na exists in the current implementation.
+Canonical Registry changes still flow only through human review. The separate
+Editorial Writer acts in the other direction only for accepted operational
+Queue Actions; it cannot alter Registry or Kernel state.
 
 ## Commands
 

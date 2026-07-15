@@ -82,6 +82,26 @@ class HealthAndSnapshotTests(unittest.TestCase):
         )
         self.assertEqual("read_only", snapshot["source"]["write_policy"])
 
+    def test_snapshot_excludes_private_channels_from_authenticated_inventory(self):
+        class Client(FakeSnapshotClient):
+            def get_user_channels(self, user_slug):
+                return super().get_user_channels(user_slug) + [
+                    {
+                        "id": 999,
+                        "type": "Channel",
+                        "slug": "nexah-api-sandbox",
+                        "title": "NEXAH API SANDBOX",
+                        "description": None,
+                        "counts": {"contents": 0},
+                        "owner": {"slug": user_slug},
+                        "visibility": "private",
+                        "updated_at": "2026-07-16T00:00:00Z",
+                    }
+                ]
+
+        snapshot = build_source_snapshot(self.registry, Client(), observed_at="now")
+        self.assertEqual([5442781], [item["arena_channel_id"] for item in snapshot["channels"]])
+
     def test_sequence_fingerprint_changes_with_observed_order(self):
         first = [
             {"id": 1, "type": "Image", "connection": {"position": 1}},

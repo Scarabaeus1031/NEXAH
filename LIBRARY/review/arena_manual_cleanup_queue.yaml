@@ -18,6 +18,12 @@ items:
     proposed_manual_action: Keep START clearly named and add a visible profile or Library orientation link where available.
     evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-01
     automatic_write_authorized: false
+    writer:
+      kind: top_sequence
+      entries:
+        - {order: 10, kind: text, value: "Choose a path"}
+        - {order: 20, kind: text, value: "Beginner →"}
+        - {order: 30, kind: channel, target_channel_id: 5404615, target_title: "THE VISITOR’S GUIDE"}
   - id: ACQ-002
     priority: P0
     review_state: pending
@@ -28,6 +34,18 @@ items:
     proposed_manual_action: Add an orientation group linking Language Book, Geometria Nova, Language Atlas, and Operator’s Handbook; mark Language Book as the beginner continuation.
     evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-03
     automatic_write_authorized: false
+    writer:
+      kind: top_sequence
+      entries:
+        - {order: 10, kind: text, value: "Choose your next step"}
+        - {order: 20, kind: text, value: "Beginner →"}
+        - {order: 30, kind: channel, target_channel_id: 5421517, target_title: "THE LANGUAGE BOOK"}
+        - {order: 40, kind: text, value: "Foundation →"}
+        - {order: 50, kind: channel, target_channel_id: 5442781, target_title: "GEOMETRIA NOVA"}
+        - {order: 60, kind: text, value: "Atlas →"}
+        - {order: 70, kind: channel, target_channel_id: 5426966, target_title: "THE LANGUAGE ATLAS"}
+        - {order: 80, kind: text, value: "Practice →"}
+        - {order: 90, kind: channel, target_channel_id: 5391199, target_title: "THE OPERATOR’S HANDBOOK"}
   - id: ACQ-003
     priority: P1
     review_state: pending
@@ -68,6 +86,11 @@ items:
     proposed_manual_action: "Add Builder Path → THE OPERATOR without replacing the beginner entrance."
     evidence_source: TRAVERSABILITY_AUDIT.md#RJ-02
     automatic_write_authorized: false
+    writer:
+      kind: top_sequence
+      entries:
+        - {order: 40, kind: text, value: "Builder Path →"}
+        - {order: 50, kind: channel, target_channel_id: 5442721, target_title: "THE OPERATOR"}
   - id: ACQ-007
     priority: P1
     review_state: pending
@@ -138,6 +161,9 @@ items:
     proposed_manual_action: Remove only the stray fragment after confirming the intended final sentence.
     evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-07
     automatic_write_authorized: false
+    writer:
+      kind: description_remove_exact
+      remove_exact: "Ich finde, das passt inzwischen sehr gut zur gesamten Reihe:"
   - id: ACQ-014
     priority: P1
     review_state: pending
