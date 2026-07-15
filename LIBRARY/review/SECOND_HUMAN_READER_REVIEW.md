@@ -45,7 +45,7 @@ precedes Geometria; score order no longer controls the answer.
 **Remaining friction:** only START → Visitor’s Guide is directly clickable on
 public Are.na.
 
-**Human decision:** ☐ accept · ☐ revise · ☐ defer
+**Human decision:** ☒ accept · ☐ revise · ☐ defer
 
 ## UQ-02 — I am interested in water. Which three books should I read?
 
@@ -79,7 +79,7 @@ an ordered three-Work answer without pretending all three are canonical.
 **Remaining friction:** neither next-volume transition is clickable; Morphology
 also contains confirmed editorial residue.
 
-**Human decision:** ☐ accept · ☐ revise · ☐ defer
+**Human decision:** ☒ accept · ☐ revise · ☐ defer
 
 ## UQ-03 — I know GEOMETRIA NOVA. What comes next?
 
@@ -113,7 +113,7 @@ order; Librarybook moves to the final position.
 **Remaining friction:** these are useful conceptual branches, not direct public
 links from Geometria Nova.
 
-**Human decision:** ☐ accept · ☐ revise · ☐ defer
+**Human decision:** ☒ accept · ☐ revise · ☐ defer
 
 ## UQ-04 — Show every Work using Transition.
 
@@ -176,7 +176,7 @@ they are not confirmed Operator occurrences.
 **Remaining friction:** the two Mathematica IV Channels require a later identity
 decision; no decision is made here.
 
-**Human decision:** ☐ accept · ☐ revise · ☐ defer
+**Human decision:** ☒ accept · ☐ revise · ☐ defer
 
 ## UQ-05 — I am interested in navigation. Which Series should I follow?
 
@@ -210,7 +210,7 @@ instead of only a generic Series lookup.
 **Remaining friction:** the editorial sequence is not yet a directly walkable
 public path.
 
-**Human decision:** ☐ accept · ☐ revise · ☐ defer
+**Human decision:** ☒ accept · ☐ revise · ☐ defer
 
 ## UQ-06 — I do not know what I am looking for. Surprise me.
 
@@ -243,10 +243,20 @@ score-maximized results.
 **Remaining friction:** discovery is editorially useful but does not yet explain
 how to return to a stable reading path afterward.
 
-**Human decision:** ☐ accept · ☐ revise · ☐ defer
+**Human decision:** ☒ accept · ☐ revise · ☐ defer
 
-## Review checkpoint
+## Accepted Reader Policy checkpoint
 
-The implementation is ready for one human editor to decide whether the six
-answers feel useful. Acceptance here would approve Reader Policy behavior—not
-Proposal identities, new Registry records, or Are.na changes.
+All six Reader Policies were explicitly accepted by the human editor on
+2026-07-15. This approves their Reader behavior, ordering, and explanations.
+
+It does **not** approve:
+
+- Proposal identities;
+- Registry growth or new Entity IDs;
+- new Operator assignments;
+- Series identities or Series IDs;
+- Are.na modifications.
+
+This checkpoint is the editorial gateway into Phase VII. Canonical authority
+remains human-controlled, and all unresolved Proposal decisions remain open.

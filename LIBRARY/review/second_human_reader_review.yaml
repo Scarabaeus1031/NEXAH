@@ -1,12 +1,25 @@
 schema_version: "1.0"
 review_stage: second_human_reader_review
-review_status: awaiting_human_decision
+review_status: accepted
+accepted_at: "2026-07-15"
 policy:
   fixed_question_set: [UQ-01, UQ-02, UQ-03, UQ-04, UQ-05, UQ-06]
   writes_to_arena: false
   allocates_ids: false
   modifies_registry: false
   allowed_human_decisions: [accept, revise, defer]
+  accepted_scope:
+    - reader_behavior
+    - reader_ordering
+    - reader_explanations
+  excluded_scope:
+    - proposal_identities
+    - registry_growth
+    - new_entity_ids
+    - operator_assignments
+    - series_identities
+    - series_ids
+    - arena_modifications
 questions:
   - id: UQ-01
     reader_question: I am new. Which five Works should I read?
@@ -25,7 +38,7 @@ questions:
       source: LIBRARY/review/reader_journey_review.yaml
     changed_from_canonical_baseline: Exactly five Works in pedagogical order; no score ordering.
     remaining_reader_friction: Only START to Visitor’s Guide is directly clickable.
-    human_decision: null
+    human_decision: accept
   - id: UQ-02
     reader_question: I am interested in water. Which three books should I read?
     reader_mode:
@@ -41,7 +54,7 @@ questions:
       source: LIBRARY/review/editorial_sequence_review.yaml
     changed_from_canonical_baseline: Unsupported query becomes a three-Work ordered answer with visible Proposal state.
     remaining_reader_friction: The next-volume links are missing; Morphology has editorial residue.
-    human_decision: null
+    human_decision: accept
   - id: UQ-03
     reader_question: I know GEOMETRIA NOVA. What comes next?
     reader_mode:
@@ -59,7 +72,7 @@ questions:
       source: LIBRARY/review/reader_journey_review.yaml
     changed_from_canonical_baseline: Librarybook moves from first to last; branch labels become explicit.
     remaining_reader_friction: The branches are not direct public links from Geometria Nova.
-    human_decision: null
+    human_decision: accept
   - id: UQ-04
     reader_question: Show every Work using Transition.
     reader_mode:
@@ -111,7 +124,7 @@ questions:
       state_note: Inferred matches are not confirmed Operator occurrences.
     changed_from_canonical_baseline: Adds 24 discoverable candidates without changing the eight canonical references.
     remaining_reader_friction: Two distinct Mathematica IV Channels share a title; identity remains unresolved.
-    human_decision: null
+    human_decision: accept
   - id: UQ-05
     reader_question: I am interested in navigation. Which Series should I follow?
     reader_mode:
@@ -133,7 +146,7 @@ questions:
       sources: [LIBRARY/review/editorial_sequence_review.yaml, LIBRARY/review/reader_journey_review.yaml]
     changed_from_canonical_baseline: Adds a thematic Series entrance and distinguishes companions from members.
     remaining_reader_friction: The four-volume sequence is not a direct public walking path.
-    human_decision: null
+    human_decision: accept
   - id: UQ-06
     reader_question: I do not know what I am looking for. Surprise me.
     reader_mode:
@@ -149,4 +162,4 @@ questions:
       source: LIBRARY/review/reader_journey_review.yaml
     changed_from_canonical_baseline: Unsupported discovery query becomes deterministic and intentionally diverse.
     remaining_reader_friction: The answer does not yet route the reader back into a stable path.
-    human_decision: null
+    human_decision: accept
