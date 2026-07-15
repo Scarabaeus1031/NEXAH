@@ -170,10 +170,6 @@ class ArenaSandboxClient(ArenaEditorialClient):
     def remove_test_connection(self, connection_id: int) -> dict[str, Any]:
         return self._sandbox_request("DELETE", f"connections/{connection_id}")
 
-    def delete_test_block(self, block_id: int) -> dict[str, Any]:
-        return self._sandbox_request("DELETE", f"blocks/{block_id}")
-
-
 def _queue_items(root: Path) -> tuple[dict[str, Any], dict[str, dict[str, Any]]]:
     queue = load_yaml(root / "arena_manual_cleanup_queue.yaml")
     if queue.get("policy", {}).get("command_may_update_queue") is not False:
@@ -570,18 +566,35 @@ def run_sandbox(
     created = _response_data(client.create_text_block(sandbox_id, SANDBOX_TEST_TEXT))
     created_id = created.get("id")
     after_create = reader.get_contents(sandbox_id)
-    if not any(item.get("id") == created_id for item in after_create):
+    created_items = [item for item in after_create if item.get("id") == created_id]
+    if len(created_items) != 1:
         raise OperationError("Sandbox text block verification failed")
-    journal.append({"operation": "create_text_block", "verified": True})
+    journal.append(
+        {
+            "operation": "create_text_block",
+            "block_id": created_id,
+            "connection_id": _connection_id(created_items[0]),
+            "verified": True,
+        }
+    )
     expected = sequence_fingerprint(after_create)
 
     if sequence_fingerprint(reader.get_contents(sandbox_id)) != expected:
         raise OperationError("Sandbox fingerprint changed before text cleanup")
-    client.delete_test_block(created_id)
+    client.remove_test_connection(_connection_id(created_items[0]))
     after_delete = reader.get_contents(sandbox_id)
     if any(item.get("id") == created_id for item in after_delete):
         raise OperationError("Sandbox test block cleanup failed")
-    journal.append({"operation": "delete_test_block", "verified": True, "sandbox_only": True})
+    journal.append(
+        {
+            "operation": "remove_test_block_connection",
+            "block_id": created_id,
+            "connection_id": _connection_id(created_items[0]),
+            "verified": True,
+            "sandbox_only": True,
+            "api_semantics": "Are.na removes a Block from a Channel by destroying its Connection",
+        }
+    )
     expected = sequence_fingerprint(after_delete)
 
     if sequence_fingerprint(reader.get_contents(sandbox_id)) != expected:
@@ -595,7 +608,13 @@ def run_sandbox(
     target = _find_entry(
         after_connection, {"kind": "channel", "target_channel_id": target_channel_id}
     )
-    journal.append({"operation": "create_channel_connection", "verified": True})
+    journal.append(
+        {
+            "operation": "create_channel_connection",
+            "connection_id": connection_id,
+            "verified": True,
+        }
+    )
     expected = sequence_fingerprint(after_connection)
 
     if sequence_fingerprint(reader.get_contents(sandbox_id)) != expected:
@@ -604,7 +623,13 @@ def run_sandbox(
     after_move = reader.get_contents(sandbox_id)
     if not after_move or after_move[0].get("id") != target_channel_id:
         raise OperationError("Sandbox move-to-top verification failed")
-    journal.append({"operation": "move_connection", "verified": True})
+    journal.append(
+        {
+            "operation": "move_connection",
+            "connection_id": connection_id,
+            "verified": True,
+        }
+    )
     expected = sequence_fingerprint(after_move)
 
     if sequence_fingerprint(reader.get_contents(sandbox_id)) != expected:
@@ -613,7 +638,14 @@ def run_sandbox(
     after_remove = reader.get_contents(sandbox_id)
     if any(item.get("id") == target_channel_id for item in after_remove):
         raise OperationError("Sandbox test connection cleanup failed")
-    journal.append({"operation": "remove_test_connection", "verified": True, "sandbox_only": True})
+    journal.append(
+        {
+            "operation": "remove_test_connection",
+            "connection_id": connection_id,
+            "verified": True,
+            "sandbox_only": True,
+        }
+    )
 
     return {
         "schema_version": "1.0",

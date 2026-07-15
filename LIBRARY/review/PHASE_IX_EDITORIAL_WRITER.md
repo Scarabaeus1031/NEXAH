@@ -41,9 +41,11 @@ Traversability · Editorial Diff · Health · Release Check
 The production client exposes no Delete, Rename, Visibility, Ownership,
 Registry, ID, Operator, Proposal, Canonical, or Queue operations.
 
-The private Batch 0 harness has two additional cleanup calls: delete its test
-block and remove its test connection. They are isolated in `ArenaSandboxClient`
-and are never used by the production apply path.
+The private Batch 0 harness has two additional cleanup calls: remove its
+test-block Connection and remove its test Channel Connection. Are.na models
+removal from a Channel as destruction of the Connection, not deletion of the
+reusable Block itself. These calls are isolated in `ArenaSandboxClient` and are
+never used by the production apply path.
 
 ## Preconditions
 
@@ -92,7 +94,7 @@ The command creates or reuses the private `NEXAH API SANDBOX`, then tests:
 
 1. create text block;
 2. verify;
-3. delete test block;
+3. remove the test block from the Sandbox by destroying its Connection;
 4. create Channel connection;
 5. move connection to the visual top;
 6. verify;

@@ -108,14 +108,6 @@ class CoupledWriter:
 
 
 class CoupledSandboxWriter(CoupledWriter):
-    def delete_test_block(self, block_id):
-        for channel_id, values in self.reader.contents.items():
-            self.reader.contents[channel_id] = [
-                item for item in values if item.get("id") != block_id
-            ]
-            self.reader._normalize(channel_id)
-        return {}
-
     def remove_test_connection(self, connection_id):
         for channel_id, values in self.reader.contents.items():
             self.reader.contents[channel_id] = [

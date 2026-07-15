@@ -344,7 +344,7 @@ def main(argv: list[str] | None = None) -> int:
                     "tests": [
                         "create_text_block",
                         "verify",
-                        "delete_test_block",
+                        "remove_test_block_connection",
                         "create_channel_connection",
                         "move_to_top",
                         "verify",
