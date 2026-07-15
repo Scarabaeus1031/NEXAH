@@ -1,0 +1,107 @@
+schema_version: "1.0"
+phase: VIII
+plan_status: awaiting_human_approval
+direct_arena_write_authorized: false
+source_queue: arena_manual_cleanup_queue.yaml
+policy:
+  architecture_changes: false
+  registry_changes: false
+  id_allocation: false
+  proposal_promotion: false
+  operator_changes: false
+  automatic_writes: false
+batches:
+  - id: P8-B01
+    title: P0 entrance and cleanup
+    approval_required: true
+    actions:
+      - cleanup_id: ACQ-001
+        source_channel: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
+        operation: add_reader_first_orientation_section
+        labels:
+          - {label: "Beginner →", target_arena_channel_id: 5404615, target_title: "THE VISITOR’S GUIDE", connection_state: already_present}
+          - {cleanup_id: ACQ-006, label: "Builder Path →", target_arena_channel_id: 5442721, target_title: "THE OPERATOR", connection_state: missing}
+          - {recommendation_id: P8-R00A, label: "Research →", target_arena_channel_id: 5415765, target_title: "FIELD ATLAS I — WATER", connection_state: missing, separate_approval_required: true}
+          - {recommendation_id: P8-R00B, label: "Atlases →", target_arena_channel_id: 5181972, target_title: "02 — NEXAH · SYSTEM ATLASES", connection_state: missing, separate_approval_required: true}
+        placement: before the existing exploratory field
+        preserve: retain existing Works and place mixed connections under Explore further
+        verification: four reader choices visible before exploratory connections
+      - cleanup_id: ACQ-002
+        source_channel: {arena_channel_id: 5404615, title: "THE VISITOR’S GUIDE"}
+        operation: add_choose_your_next_step_section
+        labels:
+          - {label: "Beginner →", target_arena_channel_id: 5421517, target_title: "THE LANGUAGE BOOK"}
+          - {label: "Foundation →", target_arena_channel_id: 5442781, target_title: "GEOMETRIA NOVA"}
+          - {label: "Atlas →", target_arena_channel_id: 5426966, target_title: "THE LANGUAGE ATLAS"}
+          - {label: "Practice →", target_arena_channel_id: 5391199, target_title: "THE OPERATOR’S HANDBOOK"}
+        placement: after the Guide’s orientation content
+        verification: all four targets appear as direct Channel connections
+      - cleanup_id: ACQ-013
+        source_channel: {arena_channel_id: 5386781, title: "FIELD ATLAS III — MORPHOLOGY"}
+        operation: remove_confirmed_editorial_residue
+        remove_exact: "Ich finde, das passt inzwischen sehr gut zur gesamten Reihe:"
+        preserve: all preceding description text
+        verification: exact fragment absent and description otherwise unchanged
+  - id: P8-B02
+    title: P1 Beginner Journey
+    approval_required: true
+    actions:
+      - {cleanup_id: ACQ-003, source_arena_channel_id: 5421517, label: "Continue →", target_arena_channel_id: 5442781, target_title: "GEOMETRIA NOVA"}
+      - {cleanup_id: ACQ-004, source_arena_channel_id: 5442781, label: "Continue →", target_arena_channel_id: 5426966, target_title: "THE LANGUAGE ATLAS"}
+      - {cleanup_id: ACQ-005, source_arena_channel_id: 5426966, label: "Practice →", target_arena_channel_id: 5391199, target_title: "THE OPERATOR’S HANDBOOK"}
+    verification: Beginner live Traversability reports 5 of 5 present
+  - id: P8-B03
+    title: P1 Builder Journey
+    approval_required: true
+    dependency: ACQ-006 is executed with the START entrance in P8-B01
+    actions:
+      - {cleanup_id: ACQ-007, source_arena_channel_id: 5442721, label: "Continue →", target_arena_channel_id: 5393574, target_title: "THE OPERATOR MAP"}
+      - {cleanup_id: ACQ-008, source_arena_channel_id: 5393574, label: "Continue →", target_arena_channel_id: 5391199, target_title: "THE OPERATOR’S HANDBOOK"}
+      - {cleanup_id: ACQ-009, source_arena_channel_id: 5391199, label: "Continue →", target_arena_channel_id: 5386766, target_title: "THE CARTOGRAPHY LABORATORY"}
+      - {cleanup_id: ACQ-010, source_arena_channel_id: 5386766, label: "Continue →", target_arena_channel_id: 5413103, target_title: "LIBRARYBOOK"}
+    optional_reference_branch:
+      approval_required: true
+      source_arena_channel_id: 5391199
+      label: "Reference →"
+      target_arena_channel_id: 5442697
+      target_title: "THE OPERATOR LIBRARY"
+    verification: Builder live Traversability reports 5 of 5 present
+  - id: P8-B04
+    title: P1 Research Journey
+    approval_required: true
+    actions:
+      - {cleanup_id: ACQ-011, source_arena_channel_id: 5415765, label: "Next Volume →", target_arena_channel_id: 5404576, target_title: "FIELD ATLAS II — THE ARCHITECTURE OF AGENCY"}
+      - {cleanup_id: ACQ-012, source_arena_channel_id: 5404576, label: "Next Volume →", target_arena_channel_id: 5386781, target_title: "FIELD ATLAS III — MORPHOLOGY"}
+      - {cleanup_id: ACQ-014, source_arena_channel_id: 5386781, label: "Bridge →", target_arena_channel_id: 5217666, target_title: "NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION"}
+      - {cleanup_id: ACQ-015, source_arena_channel_id: 5217666, label: "Continue →", target_arena_channel_id: 5203312, target_title: "NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY"}
+      - {cleanup_id: ACQ-016, source_arena_channel_id: 5203312, label: "Continue →", target_arena_channel_id: 5442532, target_title: "THE LIVING EQUATION — An Atlas of Orientation"}
+    verification: Research live Traversability reports 5 of 5 present
+optional_recommendations:
+  approval_required: true
+  queue_state: not_added
+  items:
+    - id: P8-R00A
+      title: Add Research entrance from START to Field Atlas I
+      reason: It makes the accepted Research Journey discoverable from the primary entrance.
+    - id: P8-R00B
+      title: Add Atlases entrance from START to System Atlases
+      reason: It separates open atlas exploration from the three linear Reader Journeys.
+    - id: P8-R01
+      title: Add reader exits to FIELD GUIDE
+      reason: The research index currently has no direct Channel connections.
+    - id: P8-R02
+      title: Add Reference exits to PERSPECTIVES & REFERENCES
+      reason: The reference room currently has no direct Channel connections.
+    - id: P8-R03
+      title: Express confirmed Language, Orientation, Human Journey, and XV core order
+      reason: Confirmed Series order is not publicly walkable.
+    - id: P8-R04
+      title: Present Whiteboard members as an unordered gallery
+      reason: The Series is not yet approved as a public sequence.
+post_edit_checks:
+  - capture a new immutable Source Snapshot
+  - run Traversability for the edited journey
+  - run Editorial Diff against the prior snapshot
+  - verify no unintended title, description, sequence, or availability change
+  - update ACQ review state only through explicit repository review
+  - run Health and Release Check
