@@ -1,0 +1,820 @@
+schema_version: '1.0'
+review_stage: B1_family_review
+review_status: human_confirmed
+confirmed_on: '2026-07-15'
+confirmed_principle: Family describes what an Entity is in the Library. It does not describe how complete,
+  polished, or important the Entity is.
+source_discovery_generated_at: '2026-07-15T16:50:58+00:00'
+source_user_slug: nexah-scarabaeus1031
+canonical_registry_entities: 10
+proposal_policy:
+  allocates_ids: false
+  modifies_canonical_registry: false
+  kernel_load_mode: explicit_overlay_only
+  human_confirmation_required: true
+family_rules:
+  work: A bounded authored sequence that can be understood as one publication.
+  environment: An open, ongoing space for research, experiments, or laboratory activity.
+  navigation: An entry, index, collection, series hub, or reference layer that routes among works.
+  asset: Reusable supporting material rather than a publication or navigational layer.
+  unresolved: Used only when the family cannot yet be responsibly proposed.
+summary:
+  total_channels: 71
+  canonical_records: 10
+  proposed_records: 61
+  family_counts:
+    environment: 3
+    navigation: 8
+    work: 60
+  flagged_for_family_review: 6
+records:
+- arena_channel_id: 5397157
+  arena_slug: the-inner-child-_-a-perspective
+  current_title: ' THE INNER CHILD _ A Perspective'
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-inner-child-_-a-perspective
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345856
+  arena_slug: the-cathedral-of-resonance-whiteboard-series
+  current_title: ' 🧭 THE CATHEDRAL OF RESONANCE — WHITEBOARD SERIES'
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-cathedral-of-resonance-whiteboard-series
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: moderate
+  rationale: Thematic whiteboard sequence; confirm bounded Work versus Series Hub.
+  review_flags:
+  - work_vs_series_hub
+  human_decision: confirmed
+- arena_channel_id: 5216585
+  arena_slug: 00-field-guide
+  current_title: 00 — 🜂 FIELD GUIDE
+  public_url: https://www.are.na/nexah-scarabaeus1031/00-field-guide
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: high
+  rationale: Explicit entry map and reading guide for the wider ecosystem.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5217666
+  arena_slug: 00-nexah-atlas-the-operational-geometry-of-transition
+  current_title: 00 — 🜂 NEXAH ATLAS  The Operational Geometry of Transition
+  public_url: https://www.are.na/nexah-scarabaeus1031/00-nexah-atlas-the-operational-geometry-of-transition
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5178452
+  arena_slug: 01-nexah-start-core-orientation
+  current_title: '01 - NEXAH · START · CORE ORIENTATION  '
+  public_url: https://www.are.na/nexah-scarabaeus1031/01-nexah-start-core-orientation
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: high
+  rationale: Explicitly described as the main entrance to the project.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5181972
+  arena_slug: 02-nexah-system-atlases
+  current_title: 02 — NEXAH · SYSTEM ATLASES
+  public_url: https://www.are.na/nexah-scarabaeus1031/02-nexah-system-atlases
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: high
+  rationale: Organizes system atlases across domains rather than presenting one bounded work.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5179271
+  arena_slug: 03-nexah-field-studies-visual-experiments
+  current_title: 03 — NEXAH · FIELD STUDIES & VISUAL EXPERIMENTS
+  public_url: https://www.are.na/nexah-scarabaeus1031/03-nexah-field-studies-visual-experiments
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: environment
+  confidence: high
+  rationale: Open area for raw field studies, simulations, and visual experiments.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5181922
+  arena_slug: 05-nexah-hopf-tube-white-series
+  current_title: 05 — NEXAH · HOPF TUBE · WHITE SERIES
+  public_url: https://www.are.na/nexah-scarabaeus1031/05-nexah-hopf-tube-white-series
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: environment
+  confidence: high
+  rationale: Exploratory and explicitly not final HOPF TUBE research series.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5182051
+  arena_slug: 06-nexah-perspectives-references
+  current_title: 06 — NEXAH · PERSPECTIVES & REFERENCES
+  public_url: https://www.are.na/nexah-scarabaeus1031/06-nexah-perspectives-references
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: high
+  rationale: Reference and perspectives area for broader context and future directions.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5369070
+  arena_slug: beyond-information
+  current_title: BEYOND INFORMATION
+  public_url: https://www.are.na/nexah-scarabaeus1031/beyond-information
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5415765
+  arena_slug: field-atlas-i-water
+  current_title: 'Field Atlas I —     Water '
+  public_url: https://www.are.na/nexah-scarabaeus1031/field-atlas-i-water
+  registered_entity_id: NX-000006
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5404576
+  arena_slug: field-atlas-ii-the-architecture-of-agency
+  current_title: 'FIELD ATLAS II The Architecture of Agency '
+  public_url: https://www.are.na/nexah-scarabaeus1031/field-atlas-ii-the-architecture-of-agency
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5386781
+  arena_slug: field-atlas-iii-morphology
+  current_title: 'FIELD ATLAS III — MORPHOLOGY '
+  public_url: https://www.are.na/nexah-scarabaeus1031/field-atlas-iii-morphology
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5442781
+  arena_slug: geometria-nova
+  current_title: 'GEOMETRIA NOVA '
+  public_url: https://www.are.na/nexah-scarabaeus1031/geometria-nova
+  registered_entity_id: NX-000002
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5397188
+  arena_slug: inner-world-liwceeh2psk
+  current_title: INNER WORLD
+  public_url: https://www.are.na/nexah-scarabaeus1031/inner-world-liwceeh2psk
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Bounded thirteen-chapter Field Guide orienting the observer.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5246418
+  arena_slug: leonardo-translations-the-room-that-looks-back
+  current_title: Leonardo Translations  The Room That Looks Back
+  public_url: https://www.are.na/nexah-scarabaeus1031/leonardo-translations-the-room-that-looks-back
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5386751
+  arena_slug: logarithmic-universe-5-movements-of-reality
+  current_title: 'LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY '
+  public_url: https://www.are.na/nexah-scarabaeus1031/logarithmic-universe-5-movements-of-reality
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Bounded visual essay with a five-movement editorial journey.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5305692
+  arena_slug: nexah-_-design-orientation
+  current_title: 'NEXAH _ DESIGN ORIENTATION '
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-_-design-orientation
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5221525
+  arena_slug: nexah-arena-the-relational-field
+  current_title: NEXAH ARENA °° The Relational Field
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-arena-the-relational-field
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: moderate
+  rationale: Relational-field overview may be a thematic work or an ecosystem collection.
+  review_flags:
+  - family_boundary_review
+  human_decision: confirmed
+- arena_channel_id: 5344975
+  arena_slug: nexah-atlas-a-cartography-of-perspectives
+  current_title: NEXAH ATLAS  - A Cartography of Perspectives
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-atlas-a-cartography-of-perspectives
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5203312
+  arena_slug: nexah-mathematica-i-prime-residue-geometry
+  current_title: NEXAH MATHEMATICA I - Prime Residue Geometry
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-i-prime-residue-geometry
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5203387
+  arena_slug: nexah-mathematica-ii-drift-fields-recursive-structures
+  current_title: NEXAH MATHEMATICA II  -  Drift Fields & Recursive Structures
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-ii-drift-fields-recursive-structures
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5203476
+  arena_slug: nexah-mathematica-iii-recursive-operators-structural-navigation
+  current_title: NEXAH MATHEMATICA III  Recursive Operators & Structural Navigation
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-iii-recursive-operators-structural-navigation
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5203499
+  arena_slug: nexah-mathematica-iv-unified-transition-fields-basin-architectures
+  current_title: NEXAH MATHEMATICA IV  Unified Transition Fields & Basin Architectures
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-iv-unified-transition-fields-basin-architectures
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: moderate
+  rationale: Bounded visual sequence, but title conflicts with another distinct Channel.
+  review_flags:
+  - duplicate_title_distinct_contents
+  - identity_review_required
+  human_decision: confirmed
+- arena_channel_id: 5203528
+  arena_slug: nexah-mathematica-iv-unified-transition-fields-basin-architectures-2axd19e9tmc
+  current_title: NEXAH MATHEMATICA IV  Unified Transition Fields & Basin Architectures
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-iv-unified-transition-fields-basin-architectures-2axd19e9tmc
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: moderate
+  rationale: Bounded visual sequence, but title conflicts with another distinct Channel.
+  review_flags:
+  - duplicate_title_distinct_contents
+  - identity_review_required
+  human_decision: confirmed
+- arena_channel_id: 5218362
+  arena_slug: nexah-xv-atlas-two-sides-of-one-medal
+  current_title: NEXAH XV ATLAS  - Two Sides of One Medal
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-atlas-two-sides-of-one-medal
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5246392
+  arena_slug: nexah-xv-atlas-relational-cartography-of-human-reality
+  current_title: NEXAH XV ATLAS Relational Cartography of Human Reality
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-atlas-relational-cartography-of-human-reality
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5201262
+  arena_slug: nexah-xv-atlas-volume-i-observation-flow-transition
+  current_title: 'NEXAH XV ATLAS — Volume I: Observation, Flow & Transition'
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-atlas-volume-i-observation-flow-transition
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5201307
+  arena_slug: nexah-xv-atlas-volume-ii-structure-operators-observer-geometry
+  current_title: 'NEXAH XV ATLAS — Volume II: Structure, Operators & Observer Geometry'
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-atlas-volume-ii-structure-operators-observer-geometry
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5203074
+  arena_slug: nexah-xv-complexa-cartographies-of-transition
+  current_title: NEXAH XV COMPLEXA — Cartographies of Transition
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-complexa-cartographies-of-transition
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5216699
+  arena_slug: nexah-maps-of-human-reality
+  current_title: NEXAH — 🌍  Maps of Human Reality
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-maps-of-human-reality
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5415716
+  arena_slug: orientation-atlas-vol-i
+  current_title: 'Orientation Atlas Vol.I '
+  public_url: https://www.are.na/nexah-scarabaeus1031/orientation-atlas-vol-i
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5415690
+  arena_slug: orientation-design-vol-ii
+  current_title: Orientation Design Vol. II
+  public_url: https://www.are.na/nexah-scarabaeus1031/orientation-design-vol-ii
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5416617
+  arena_slug: orientation-science
+  current_title: ORIENTATION SCIENCE
+  public_url: https://www.are.na/nexah-scarabaeus1031/orientation-science
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5309625
+  arena_slug: orientation-theory-vol-iii
+  current_title: Orientation Theory Vol.III
+  public_url: https://www.are.na/nexah-scarabaeus1031/orientation-theory-vol-iii
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345285
+  arena_slug: series-i-nexah-whiteboard-series
+  current_title: Series I 🧭 NEXAH WHITEBOARD SERIES
+  public_url: https://www.are.na/nexah-scarabaeus1031/series-i-nexah-whiteboard-series
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: high
+  rationale: Explicit collection and series hub for multiple visual whiteboards.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5293283
+  arena_slug: the-architecture-of-becoming
+  current_title: The Architecture of Becoming 🦋
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-architecture-of-becoming
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5250350
+  arena_slug: the-architecture-of-orientation-vol-iv
+  current_title: THE ARCHITECTURE OF ORIENTATION Vol.IV
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-architecture-of-orientation-vol-iv
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5407292
+  arena_slug: the-atlas-of-atlases
+  current_title: THE ATLAS OF ATLASES
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-atlas-of-atlases
+  registered_entity_id: NX-000009
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5386766
+  arena_slug: the-cartography-laboratory
+  current_title: 'THE CARTOGRAPHY LABORATORY '
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-cartography-laboratory
+  registered_entity_id: NX-000007
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags:
+  - canonical_work_describes_research_environment
+  human_decision: confirmed
+- arena_channel_id: 5279287
+  arena_slug: the-essence-atlas
+  current_title: THE ESSENCE ATLAS
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-essence-atlas
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5426966
+  arena_slug: the-language-atlas
+  current_title: THE LANGUAGE ATLAS
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-language-atlas
+  registered_entity_id: NX-000005
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5421517
+  arena_slug: the-language-book
+  current_title: THE LANGUAGE BOOK
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-language-book
+  registered_entity_id: NX-000004
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5426953
+  arena_slug: the-language-book-ii
+  current_title: THE LANGUAGE BOOK II
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-language-book-ii
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5426957
+  arena_slug: the-language-book-iii
+  current_title: THE LANGUAGE BOOK III
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-language-book-iii
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5442532
+  arena_slug: the-living-equation-an-atlas-of-orientation
+  current_title: THE LIVING EQUATION — An Atlas of Orientation
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-living-equation-an-atlas-of-orientation
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5442721
+  arena_slug: the-operator-xkoop3mjgcs
+  current_title: THE OPERATOR
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-operator-xkoop3mjgcs
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5442697
+  arena_slug: the-operator-library
+  current_title: THE OPERATOR LIBRARY
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-operator-library
+  registered_entity_id: NX-000008
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5393574
+  arena_slug: the-operator-map
+  current_title: THE OPERATOR MAP
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-operator-map
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5391199
+  arena_slug: the-operator-s-handbook
+  current_title: THE OPERATOR’S HANDBOOK
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-operator-s-handbook
+  registered_entity_id: NX-000003
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5404615
+  arena_slug: the-visitor-s-guide
+  current_title: THE VISITOR’S GUIDE
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-visitor-s-guide
+  registered_entity_id: NX-000001
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5404597
+  arena_slug: the-wonder-handbook-_-for-human-children
+  current_title: THE WONDER HANDBOOK _ For Human Children.
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-wonder-handbook-_-for-human-children
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345145
+  arena_slug: vol-i-be-kind-be-awefull-belong
+  current_title: VOL. I —  Be Kind. Be Awefull. Belong.
+  public_url: https://www.are.na/nexah-scarabaeus1031/vol-i-be-kind-be-awefull-belong
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345129
+  arena_slug: vol-ii-pathfinders
+  current_title: 'VOL. II —  PATHFINDERS '
+  public_url: https://www.are.na/nexah-scarabaeus1031/vol-ii-pathfinders
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345076
+  arena_slug: vol-iv-threads-of-you
+  current_title: VOL. IV — THREADS OF YOU
+  public_url: https://www.are.na/nexah-scarabaeus1031/vol-iv-threads-of-you
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345108
+  arena_slug: volume-iii-clear-mind
+  current_title: VOLUME III  —  CLEAR MIND
+  public_url: https://www.are.na/nexah-scarabaeus1031/volume-iii-clear-mind
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345064
+  arena_slug: volume-v-many-maps-one-world
+  current_title: VOLUME V — MANY MAPS. ONE WORLD.
+  public_url: https://www.are.na/nexah-scarabaeus1031/volume-v-many-maps-one-world
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5203608
+  arena_slug: structural-echoes-of-nexah
+  current_title: °° — Structural Echoes of NEXAH
+  public_url: https://www.are.na/nexah-scarabaeus1031/structural-echoes-of-nexah
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: high
+  rationale: Living reference collection of external structural correspondences.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5413103
+  arena_slug: librarybook
+  current_title: 'Λ  LIBRARYBOOK '
+  public_url: https://www.are.na/nexah-scarabaeus1031/librarybook
+  registered_entity_id: NX-000010
+  family_state: canonical
+  proposed_object_family: work
+  confidence: canonical
+  rationale: Existing canonical Registry classification; unchanged in B1.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345606
+  arena_slug: nexah-ecosystem-introducing-the-codex
+  current_title: ◈ NEXAH ECOSYSTEM — Introducing the Codex
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-ecosystem-introducing-the-codex
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345794
+  arena_slug: nexah-field-guides-structure-navigation-complex-systems
+  current_title: ◈ NEXAH FIELD GUIDES  — Structure, Navigation & Complex Systems
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-field-guides-structure-navigation-complex-systems
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: navigation
+  confidence: high
+  rationale: Explicit growing collection of atlases, whiteboards, and field manuals.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345822
+  arena_slug: odyssey-2-4-the-journey-through-worlds-observers
+  current_title: ◈ ODYSSEY 2°4° — The Journey Through Worlds & Observers
+  public_url: https://www.are.na/nexah-scarabaeus1031/odyssey-2-4-the-journey-through-worlds-observers
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5228606
+  arena_slug: map-atlas-a-visual-history-of-human-orientation
+  current_title: ✦ MAP ATLAS ✦  ⟡ A Visual History of Human Orientation ⟡
+  public_url: https://www.are.na/nexah-scarabaeus1031/map-atlas-a-visual-history-of-human-orientation
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5224059
+  arena_slug: odyssee-2040-the-return-atlas
+  current_title: ✦ ODYSSEE 2040 ✦  ⟡ THE RETURN ATLAS ⟡
+  public_url: https://www.are.na/nexah-scarabaeus1031/odyssee-2040-the-return-atlas
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5347685
+  arena_slug: new-release-odyssey-2040-many-maps-one-world-a-story-about-perspective-a-call-to-participate
+  current_title: '✨ New Release ODYSSEY 2040  MANY MAPS. ONE WORLD.  A Story About Perspective.  A Call
+    To Participate '
+  public_url: https://www.are.na/nexah-scarabaeus1031/new-release-odyssey-2040-many-maps-one-world-a-story-about-perspective-a-call-to-participate
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345722
+  arena_slug: nexah-landscapes-maps-for-orientation-meaning-navigation
+  current_title: 🌍 NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-landscapes-maps-for-orientation-meaning-navigation
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5181006
+  arena_slug: 04-nexah-janus-dynamic-field
+  current_title: 🜂 04 — NEXAH · JANUS DYNAMIC FIELD
+  public_url: https://www.are.na/nexah-scarabaeus1031/04-nexah-janus-dynamic-field
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: environment
+  confidence: high
+  rationale: Ongoing JANUS operator research field rather than a finalized publication.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345336
+  arena_slug: designing-orientation-whiteboard-series
+  current_title: 🧭 DESIGNING ORIENTATION  — WHITEBOARD SERIES
+  public_url: https://www.are.na/nexah-scarabaeus1031/designing-orientation-whiteboard-series
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345353
+  arena_slug: nexah-pathfinder-whiteboard-series
+  current_title: 🧭 NEXAH PATHFINDER  — WHITEBOARD SERIES
+  public_url: https://www.are.na/nexah-scarabaeus1031/nexah-pathfinder-whiteboard-series
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345385
+  arena_slug: the-dual-spine-prime-orientation-whiteboard-series
+  current_title: 🧭 THE DUAL SPINE  - Prime Orientation  — WHITEBOARD SERIES
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-dual-spine-prime-orientation-whiteboard-series
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: high
+  rationale: Channel presents a bounded authored sequence rather than an open hub or research space.
+  review_flags: []
+  human_decision: confirmed
+- arena_channel_id: 5345838
+  arena_slug: the-landings-whiteboard-series
+  current_title: 🧭 THE LANDINGS  — WHITEBOARD SERIES
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-landings-whiteboard-series
+  registered_entity_id: null
+  family_state: proposed
+  proposed_object_family: work
+  confidence: moderate
+  rationale: Thematic whiteboard collection; confirm bounded Work versus Series Hub.
+  review_flags:
+  - work_vs_series_hub
+  human_decision: confirmed

@@ -1,13 +1,13 @@
-generated_at: '2026-07-15T11:12:48+00:00'
+generated_at: '2026-07-15T16:50:58+00:00'
 user_slug: nexah-scarabaeus1031
 scope: public_channels_visible_to_the_read_only_client
 summary:
   total_public_channels: 71
   already_registered: 10
-  probable_new_entities: 59
-  needs_review: 2
+  probable_new_entities: 61
+  needs_review: 0
   exact_title_duplicate_groups: 1
-  title_cleanup_candidates: 34
+  title_cleanup_candidates: 33
   possible_series_groups: 4
 channels:
 - arena_channel_id: 5397157
@@ -368,16 +368,26 @@ channels:
 - arena_channel_id: 5397188
   arena_slug: inner-world-liwceeh2psk
   current_title: INNER WORLD
-  current_description: ''
+  current_description: 'Before we navigate the world, we navigate ourselves.
+
+    Every perception begins with attention. Every memory shapes the present. Every belief filters experience.
+    Every language opens one path while hiding another.
+
+    THE INNER WORLD is a visual field guide to the architecture of consciousness. Through thirteen chapters,
+    it explores the inner landscapes from which meaning, resonance and orientation emerge.
+
+    It does not offer techniques or diagnoses. It offers another lens—one that invites careful observation
+    of the maps through which reality is experienced.
+
+    The landscape is within. The journey begins there.'
   member_count: 16
   created_at: '2026-07-03T18:07:02Z'
-  updated_at: '2026-07-03T18:07:58Z'
+  updated_at: '2026-07-15T16:46:37Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/inner-world-liwceeh2psk
   registered_entity_id: null
-  discovery_state: needs_review
-  signals:
-  - missing_description
+  discovery_state: candidate_entity
+  signals: []
 - arena_channel_id: 5246418
   arena_slug: leonardo-translations-the-room-that-looks-back
   current_title: Leonardo Translations  The Room That Looks Back
@@ -407,18 +417,27 @@ channels:
 - arena_channel_id: 5386751
   arena_slug: logarithmic-universe-5-movements-of-reality
   current_title: 'LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY '
-  current_description: ''
+  current_description: 'Inspired by Pablo Carlos Budassi''s "Observable Universe", this visual essay explores
+    what happens when the observable universe is viewed not as a static object, but as a living field
+    of orientation.
+
+    Beginning with a familiar map of the cosmos, the journey gradually turns the perspective. The universe
+    becomes a flow, the flow becomes a field, and the field becomes a language of relationships.
+
+    The book does not propose a finished cosmological theory. It presents a visual framework for thinking
+    about resonance, transformation, coherence and experience across multiple scales.
+
+    Rather than providing answers, it invites readers to experiment with another way of seeing.'
   member_count: 23
   created_at: '2026-07-01T22:31:09Z'
-  updated_at: '2026-07-10T22:47:22Z'
+  updated_at: '2026-07-15T16:42:48Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/logarithmic-universe-5-movements-of-reality
   registered_entity_id: null
-  discovery_state: needs_review
+  discovery_state: candidate_entity
   signals:
   - surrounding_whitespace
   - repeated_spacing
-  - missing_description
 - arena_channel_id: 5305692
   arena_slug: nexah-_-design-orientation
   current_title: 'NEXAH _ DESIGN ORIENTATION '

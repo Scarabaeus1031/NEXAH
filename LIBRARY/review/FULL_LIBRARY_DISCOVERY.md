@@ -2,7 +2,8 @@
 
 **Phase VI · Pass A · Read-only inventory**
 
-Generated: `2026-07-15T11:12:48+00:00`  
+Generated: `2026-07-15T16:50:58+00:00`
+
 Are.na user: `nexah-scarabaeus1031`
 
 This report is a discovery artifact, not a canonical classification. No new
@@ -12,10 +13,10 @@ Registry identities are allocated here and no Are.na data was changed.
 
 - Public Channels visible to the client: **71**
 - Already registered Pilot Works: **10**
-- Probable new Entity candidates: **59**
-- Channels requiring early manual review: **2**
+- Probable new Entity candidates: **61**
+- Channels requiring early manual review: **0**
 - Exact normalized-title duplicate groups: **1**
-- Title or metadata cleanup candidates: **34**
+- Title or metadata cleanup candidates: **33**
 - Possible Series groups from title signals: **4**
 
 `candidate_entity` means only that the Channel has a description and more than
@@ -80,9 +81,8 @@ performed during Discovery.
 | 5404576 | FIELD ATLAS II The Architecture of Agency  | surrounding_whitespace |
 | 5386781 | FIELD ATLAS III — MORPHOLOGY  | surrounding_whitespace |
 | 5442781 | GEOMETRIA NOVA  | surrounding_whitespace |
-| 5397188 | INNER WORLD | missing_description |
 | 5246418 | Leonardo Translations  The Room That Looks Back | repeated_spacing |
-| 5386751 | LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY  | surrounding_whitespace, repeated_spacing, missing_description |
+| 5386751 | LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY  | surrounding_whitespace, repeated_spacing |
 | 5305692 | NEXAH _ DESIGN ORIENTATION  | surrounding_whitespace, underscore_title |
 | 5344975 | NEXAH ATLAS  - A Cartography of Perspectives | repeated_spacing |
 | 5203387 | NEXAH MATHEMATICA II  -  Drift Fields & Recursive Structures | repeated_spacing |
@@ -125,9 +125,9 @@ performed during Discovery.
 | 5404576 | [FIELD ATLAS II The Architecture of Agency ](https://www.are.na/nexah-scarabaeus1031/field-atlas-ii-the-architecture-of-agency) | 36 | closed | — | candidate_entity | 2026-07-10T22:48:40Z |
 | 5386781 | [FIELD ATLAS III — MORPHOLOGY ](https://www.are.na/nexah-scarabaeus1031/field-atlas-iii-morphology) | 21 | closed | — | candidate_entity | 2026-07-10T22:47:52Z |
 | 5442781 | [GEOMETRIA NOVA ](https://www.are.na/nexah-scarabaeus1031/geometria-nova) | 26 | closed | NX-000002 | registered | 2026-07-15T01:35:23Z |
-| 5397188 | [INNER WORLD](https://www.are.na/nexah-scarabaeus1031/inner-world-liwceeh2psk) | 16 | closed | — | needs_review | 2026-07-03T18:07:58Z |
+| 5397188 | [INNER WORLD](https://www.are.na/nexah-scarabaeus1031/inner-world-liwceeh2psk) | 16 | closed | — | candidate_entity | 2026-07-15T16:46:37Z |
 | 5246418 | [Leonardo Translations  The Room That Looks Back](https://www.are.na/nexah-scarabaeus1031/leonardo-translations-the-room-that-looks-back) | 16 | closed | — | candidate_entity | 2026-06-25T22:01:33Z |
-| 5386751 | [LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY ](https://www.are.na/nexah-scarabaeus1031/logarithmic-universe-5-movements-of-reality) | 23 | closed | — | needs_review | 2026-07-10T22:47:22Z |
+| 5386751 | [LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY ](https://www.are.na/nexah-scarabaeus1031/logarithmic-universe-5-movements-of-reality) | 23 | closed | — | candidate_entity | 2026-07-15T16:42:48Z |
 | 5305692 | [NEXAH _ DESIGN ORIENTATION ](https://www.are.na/nexah-scarabaeus1031/nexah-_-design-orientation) | 13 | closed | — | candidate_entity | 2026-07-08T00:09:07Z |
 | 5221525 | [NEXAH ARENA °° The Relational Field](https://www.are.na/nexah-scarabaeus1031/nexah-arena-the-relational-field) | 36 | closed | — | candidate_entity | 2026-05-25T22:31:06Z |
 | 5344975 | [NEXAH ATLAS  - A Cartography of Perspectives](https://www.are.na/nexah-scarabaeus1031/nexah-atlas-a-cartography-of-perspectives) | 36 | closed | — | candidate_entity | 2026-06-23T00:07:27Z |
