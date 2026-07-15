@@ -1,0 +1,36 @@
+schema_version: "1.0"
+review_stage: kernel_reader_baseline
+scope: canonical_registry_only
+status: evaluated
+policy:
+  allocates_ids: false
+  modifies_registry: false
+  loads_proposals: false
+  requires_provenance: true
+results:
+  - question_id: UQ-01
+    state: partial
+    observation: "Returns seven Works; the first four are strong, but the fifth is THE OPERATOR LIBRARY."
+    current_result_ids: [NX-000001, NX-000002, NX-000004, NX-000005, NX-000008, NX-000003, NX-000009]
+  - question_id: UQ-02
+    state: unsupported
+    observation: "No confirmed Series query or Proposal overlay for Field Atlas II–III."
+  - question_id: UQ-03
+    state: partial
+    observation: "Recommendations are explained, but LIBRARYBOOK ranks before the learning branch."
+    current_result_ids: [NX-000010, NX-000003, NX-000005, NX-000007, NX-000004]
+  - question_id: UQ-04
+    state: canonical_pass
+    operator_id: NX-OP-0005
+    current_result_ids: [NX-000002, NX-000003, NX-000004, NX-000005, NX-000006, NX-000007, NX-000008, NX-000009]
+  - question_id: UQ-05
+    state: unsupported
+    observation: "No Series-level reader query exists in the current Kernel."
+  - question_id: UQ-06
+    state: unsupported
+    observation: "No curatorial-slot or diversity policy exists for discovery without a search term."
+journeys:
+  beginner: partial
+  builder: not_evaluable_without_proposal_overlay
+  research: not_evaluable_without_proposal_overlay
+next_capability: explicit_reader_aware_proposal_overlay

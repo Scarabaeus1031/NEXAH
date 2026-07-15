@@ -1,0 +1,395 @@
+schema_version: '1.0'
+review_stage: reader_journey_human_tests
+review_status: proposed
+source_classification: full_library_classification.yaml
+policy:
+  human_first: true
+  kernel_is_evaluator_not_authority: true
+  allocates_ids: false
+  modifies_registry: false
+  writes_to_arena: false
+  proposal_results_must_be_labeled: true
+  every_answer_requires_provenance: true
+answer_modes:
+  reader:
+    visible_output: A short curated answer without scores, Operator IDs, or provenance detail.
+    default_limit: 5
+    internal_explanation_required: true
+  explain:
+    visible_output: Reasons, Operators, Series, relations, canonical/proposal state, and provenance.
+    on_request: true
+journeys:
+- id: RJ-01
+  name: Beginner Test
+  audience: newcomer
+  prompt: I do not know NEXAH. Where do I begin?
+  hypothesis: Move from entrance and human guide, through language into the foundation model, then toward map and
+    practice.
+  friction_points:
+  - START is not visible as the first entry on the public Channels landing page.
+  - THE VISITOR’S GUIDE explains the Library Rooms but does not provide clickable onward links to the next Works.
+  - The journey contains six steps because START is Navigation; the remaining five are Works.
+  review_state: reader_test_pending
+  steps:
+  - position: 1
+    arena_channel_id: 5178452
+    registered_entity_id: null
+    title: 01 — NEXAH · START · CORE ORIENTATION
+    object_family: navigation
+    classification_state: proposed
+    library_function: entry
+  - position: 2
+    arena_channel_id: 5404615
+    registered_entity_id: NX-000001
+    title: THE VISITOR’S GUIDE
+    object_family: work
+    classification_state: canonical
+    library_function: entry
+  - position: 3
+    arena_channel_id: 5421517
+    registered_entity_id: NX-000004
+    title: THE LANGUAGE BOOK
+    object_family: work
+    classification_state: canonical
+    library_function: learning
+  - position: 4
+    arena_channel_id: 5442781
+    registered_entity_id: NX-000002
+    title: GEOMETRIA NOVA
+    object_family: work
+    classification_state: canonical
+    library_function: foundation
+  - position: 5
+    arena_channel_id: 5426966
+    registered_entity_id: NX-000005
+    title: THE LANGUAGE ATLAS
+    object_family: work
+    classification_state: canonical
+    library_function: navigation
+  - position: 6
+    arena_channel_id: 5391199
+    registered_entity_id: NX-000003
+    title: THE OPERATOR’S HANDBOOK
+    object_family: work
+    classification_state: canonical
+    library_function: practice
+  alternative_steps: []
+  reader_observations: []
+- id: RJ-02
+  name: Builder Test
+  audience: builder
+  prompt: I want to understand how NEXAH is constructed.
+  hypothesis: Move from project entrance, to operator foundation, to visual map, to practice, to documented laboratory
+    and synthesis.
+  friction_points:
+  - THE OPERATOR is still a Proposal Work and has no canonical identity.
+  - THE OPERATOR LIBRARY remains outside the main builder path until its role as destination or reference layer
+    is tested.
+  - LIBRARYBOOK is working and may overwhelm a reader if introduced before repository context is clear.
+  review_state: reader_test_pending
+  steps:
+  - position: 1
+    arena_channel_id: 5178452
+    registered_entity_id: null
+    title: 01 — NEXAH · START · CORE ORIENTATION
+    object_family: navigation
+    classification_state: proposed
+    library_function: entry
+  - position: 2
+    arena_channel_id: 5442721
+    registered_entity_id: null
+    title: THE OPERATOR
+    object_family: work
+    classification_state: proposed
+    library_function: foundation
+  - position: 3
+    arena_channel_id: 5393574
+    registered_entity_id: null
+    title: THE OPERATOR MAP
+    object_family: work
+    classification_state: proposed
+    library_function: reference
+  - position: 4
+    arena_channel_id: 5391199
+    registered_entity_id: NX-000003
+    title: THE OPERATOR’S HANDBOOK
+    object_family: work
+    classification_state: canonical
+    library_function: practice
+  - position: 5
+    arena_channel_id: 5386766
+    registered_entity_id: NX-000007
+    title: THE CARTOGRAPHY LABORATORY
+    object_family: work
+    classification_state: canonical
+    library_function: documentation
+  - position: 6
+    arena_channel_id: 5413103
+    registered_entity_id: NX-000010
+    title: LIBRARYBOOK
+    object_family: work
+    classification_state: canonical
+    library_function: synthesis
+  alternative_steps: []
+  reader_observations: []
+- id: RJ-03
+  name: Research Test
+  audience: researcher
+  prompt: I want to follow a research path from water into structural orientation.
+  hypothesis: Move through the Field Atlas sequence, then test a mathematical research atlas, then a synthesizing
+    orientation atlas.
+  friction_points:
+  - The live walkthrough confirmed that morphology to prime residue geometry is conceptually abrupt.
+  - NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION should be tested as an explicit bridge.
+  - NEXAH MATHEMATICA I is a Proposal and its relation to Field Atlas III is not yet curated.
+  - THE LIVING EQUATION may be a synthesis destination, but this has not been tested by a reader.
+  review_state: reader_test_pending
+  steps:
+  - position: 1
+    arena_channel_id: 5415765
+    registered_entity_id: NX-000006
+    title: FIELD ATLAS I — WATER
+    object_family: work
+    classification_state: canonical
+    library_function: research
+  - position: 2
+    arena_channel_id: 5404576
+    registered_entity_id: null
+    title: FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  - position: 3
+    arena_channel_id: 5386781
+    registered_entity_id: null
+    title: FIELD ATLAS III — MORPHOLOGY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  - position: 4
+    arena_channel_id: 5203312
+    registered_entity_id: null
+    title: NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  - position: 5
+    arena_channel_id: 5442532
+    registered_entity_id: null
+    title: THE LIVING EQUATION — An Atlas of Orientation
+    object_family: work
+    classification_state: proposed
+    library_function: synthesis
+  alternative_steps:
+  - position: 1
+    arena_channel_id: 5415765
+    registered_entity_id: NX-000006
+    title: FIELD ATLAS I — WATER
+    object_family: work
+    classification_state: canonical
+    library_function: research
+  - position: 2
+    arena_channel_id: 5404576
+    registered_entity_id: null
+    title: FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  - position: 3
+    arena_channel_id: 5386781
+    registered_entity_id: null
+    title: FIELD ATLAS III — MORPHOLOGY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  - position: 4
+    arena_channel_id: 5217666
+    registered_entity_id: null
+    title: NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION
+    object_family: work
+    classification_state: proposed
+    library_function: foundation
+  - position: 5
+    arena_channel_id: 5203312
+    registered_entity_id: null
+    title: NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  - position: 6
+    arena_channel_id: 5442532
+    registered_entity_id: null
+    title: THE LIVING EQUATION — An Atlas of Orientation
+    object_family: work
+    classification_state: proposed
+    library_function: synthesis
+  reader_observations: []
+reader_questions:
+- id: UQ-01
+  prompt: I am new. Which five Works should I read?
+  policy: Return Works only. START may explain the route but must not consume one of the five Work slots.
+  evidence_required:
+  - library_function
+  - publication_status
+  - curated_path
+  expected_results:
+  - arena_channel_id: 5404615
+    registered_entity_id: NX-000001
+    title: THE VISITOR’S GUIDE
+    object_family: work
+    classification_state: canonical
+    library_function: entry
+  - arena_channel_id: 5442781
+    registered_entity_id: NX-000002
+    title: GEOMETRIA NOVA
+    object_family: work
+    classification_state: canonical
+    library_function: foundation
+  - arena_channel_id: 5421517
+    registered_entity_id: NX-000004
+    title: THE LANGUAGE BOOK
+    object_family: work
+    classification_state: canonical
+    library_function: learning
+  - arena_channel_id: 5426966
+    registered_entity_id: NX-000005
+    title: THE LANGUAGE ATLAS
+    object_family: work
+    classification_state: canonical
+    library_function: navigation
+  - arena_channel_id: 5391199
+    registered_entity_id: NX-000003
+    title: THE OPERATOR’S HANDBOOK
+    object_family: work
+    classification_state: canonical
+    library_function: practice
+  test_state: pending
+- id: UQ-02
+  prompt: I am interested in water. Which three books should I read?
+  policy: Use the confirmed Field Atlas editorial sequence and explain that only the first title is literally about
+    water.
+  evidence_required:
+  - confirmed_series
+  - sequence_position
+  - form
+  expected_results:
+  - arena_channel_id: 5415765
+    registered_entity_id: NX-000006
+    title: FIELD ATLAS I — WATER
+    object_family: work
+    classification_state: canonical
+    library_function: research
+  - arena_channel_id: 5404576
+    registered_entity_id: null
+    title: FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  - arena_channel_id: 5386781
+    registered_entity_id: null
+    title: FIELD ATLAS III — MORPHOLOGY
+    object_family: work
+    classification_state: proposed
+    library_function: research
+  test_state: pending
+- id: UQ-03
+  prompt: I know GEOMETRIA NOVA. What comes next?
+  policy: Offer learning, practice, and navigation branches rather than pretending there is one mandatory next book.
+  evidence_required:
+  - library_function
+  - canonical_relation
+  - explanation
+  expected_results:
+  - arena_channel_id: 5421517
+    registered_entity_id: NX-000004
+    title: THE LANGUAGE BOOK
+    object_family: work
+    classification_state: canonical
+    library_function: learning
+  - arena_channel_id: 5391199
+    registered_entity_id: NX-000003
+    title: THE OPERATOR’S HANDBOOK
+    object_family: work
+    classification_state: canonical
+    library_function: practice
+  - arena_channel_id: 5426966
+    registered_entity_id: NX-000005
+    title: THE LANGUAGE ATLAS
+    object_family: work
+    classification_state: canonical
+    library_function: navigation
+  test_state: pending
+- id: UQ-04
+  prompt: Show every Work using Transition.
+  policy: Return confirmed Operator references as canonical results. Keep description-derived Proposal candidates
+    separate and visibly inferred.
+  evidence_required:
+  - operator_id
+  - provenance
+  - canonical_or_inferred
+  expected_results: []
+  test_state: pending
+- id: UQ-05
+  prompt: I am interested in navigation. Which Series should I follow?
+  expected_series:
+  - Orientation Architecture
+  expected_companions:
+  - arena_channel_id: 5426966
+    registered_entity_id: NX-000005
+    title: THE LANGUAGE ATLAS
+    object_family: work
+    classification_state: canonical
+    library_function: navigation
+  - arena_channel_id: 5407292
+    registered_entity_id: NX-000009
+    title: THE ATLAS OF ATLASES
+    object_family: work
+    classification_state: canonical
+    library_function: meta_navigation
+  policy: 'Answer as a thematic starting point: Orientation Architecture, plus THE LANGUAGE ATLAS and THE ATLAS
+    OF ATLASES as complementary maps.'
+  evidence_required:
+  - confirmed_series
+  - library_function
+  - sequence
+  test_state: pending
+- id: UQ-06
+  prompt: I do not know what I am looking for. Surprise me.
+  policy: Curate one visual Work, one Field Atlas, one Handbook, and one unexpected connection. Prefer variety over
+    score maximization.
+  evidence_required:
+  - curatorial_slot
+  - diversity
+  - canonical_or_proposal
+  expected_results:
+  - arena_channel_id: 5442532
+    registered_entity_id: null
+    title: THE LIVING EQUATION — An Atlas of Orientation
+    object_family: work
+    classification_state: proposed
+    library_function: synthesis
+  - arena_channel_id: 5415765
+    registered_entity_id: NX-000006
+    title: FIELD ATLAS I — WATER
+    object_family: work
+    classification_state: canonical
+    library_function: research
+  - arena_channel_id: 5391199
+    registered_entity_id: NX-000003
+    title: THE OPERATOR’S HANDBOOK
+    object_family: work
+    classification_state: canonical
+    library_function: practice
+  - arena_channel_id: 5397188
+    registered_entity_id: null
+    title: THE INNER WORLD
+    object_family: work
+    classification_state: proposed
+    library_function: learning
+  test_state: pending
+success_criteria:
+- A reader understands why each next step is offered.
+- Navigation Entities and Works are not confused.
+- The same Library can orient newcomer, builder, and researcher differently.
+- Canonical facts and Proposal hypotheses remain visibly separate.
+- The Kernel can explain every result through curated metadata or explicit provenance.

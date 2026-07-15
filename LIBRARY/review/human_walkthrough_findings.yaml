@@ -1,0 +1,49 @@
+schema_version: "1.0"
+review_stage: human_walkthrough
+surface: public_arena_web_interface
+status: observed
+policy:
+  writes_to_arena: false
+  allocates_ids: false
+  modifies_registry: false
+findings:
+  - id: HW-01
+    area: discovery
+    severity: high
+    observation: "The public Channels landing page did not privilege START; recently updated Works appeared first."
+    implication: intended_entry_not_visible
+  - id: HW-02
+    area: beginner_path
+    severity: pass
+    observation: "START contains a visible Channel connection to THE VISITOR’S GUIDE."
+  - id: HW-03
+    area: beginner_path
+    severity: high
+    observation: "THE VISITOR’S GUIDE explains Library Rooms but exposes no clickable onward Channel links to the proposed next Works."
+    implication: conceptual_path_not_traversable
+  - id: HW-04
+    area: beginner_path
+    severity: moderate
+    observation: "THE LANGUAGE BOOK provides a simpler vocabulary and reading method than GEOMETRIA NOVA."
+    proposed_test_order: [language_book, geometria_nova]
+  - id: HW-05
+    area: builder_path
+    severity: moderate
+    observation: "THE OPERATOR MAP behaves as a visual bridge between THE OPERATOR and THE OPERATOR’S HANDBOOK."
+    proposed_test_order: [operator, operator_map, operator_handbook, operator_library]
+  - id: HW-06
+    area: research_path
+    severity: high
+    observation: "FIELD ATLAS III to NEXAH MATHEMATICA I is an abrupt jump from cross-domain morphology to prime residue geometry."
+    bridge_candidate_arena_channel_id: 5217666
+  - id: HW-07
+    area: editorial_cleanup
+    severity: moderate
+    arena_channel_id: 5386781
+    observation: "The Morphology description ends with a German editorial fragment."
+    action: manual_arena_review
+reader_policy_findings:
+  beginner_order: [start, visitors_guide, language_book, geometria_nova, language_atlas, operator_handbook]
+  builder_order: [start, operator, operator_map, operator_handbook, cartography_laboratory, librarybook]
+  research_requires_bridge_test: true
+  raw_score_is_not_reader_order: true

@@ -1,0 +1,1401 @@
+schema_version: '1.0'
+review_stage: B2_full_proposal_classification
+review_status: proposed
+source_family_review: full_library_family_review.yaml
+source_family_review_status: human_confirmed
+proposal_policy:
+  allocates_ids: false
+  modifies_canonical_registry: false
+  loads_as_canonical: false
+  kernel_load_mode: explicit_overlay_only
+  human_confirmation_required: true
+controlled_vocabularies:
+  type_by_family:
+    navigation:
+    - collection
+    - entry
+    - index
+    - reading_path
+    - reference_library
+    - series
+    environment:
+    - research_environment
+    work:
+    - atlas
+    - book
+    - guide
+    - research_report
+    - visual_essay
+    - work
+  library_function:
+  - archive
+  - documentation
+  - entry
+  - foundation
+  - learning
+  - meta_navigation
+  - navigation
+  - practice
+  - reference
+  - research
+  - synthesis
+  form_policy: Forms may be proposed as explicit B2 extensions; they are never silently canonicalized.
+field_meanings:
+  object_family: What the Entity is in the Library.
+  type: Its structural kind.
+  form: Its editorial or visual form.
+  library_function: Its reader-facing purpose.
+  publication_status: Whether the source is working, published, or archived.
+  revision_state: Registry review state; all unconfirmed proposals remain review.
+  content_maturity: Exploratory, developing, or stable; independent of Family.
+  series: A proposed editorial grouping, never inferred as identity.
+summary:
+  total_records: 71
+  canonical_records: 10
+  proposed_records: 61
+  family_counts:
+    environment: 3
+    navigation: 8
+    work: 60
+  type_counts:
+    atlas: 27
+    book: 17
+    collection: 2
+    entry: 2
+    guide: 7
+    index: 1
+    reference_library: 2
+    research_environment: 3
+    research_report: 2
+    series: 1
+    visual_essay: 2
+    work: 5
+  publication_status_counts:
+    published: 60
+    working: 11
+  flagged_records: 32
+review_packages:
+  A_navigation_and_environments: human_confirmed
+  B_series: pending
+  C_standalone_works: pending
+  D_exceptions: pending
+unresolved_vocabulary_extensions:
+  type: {}
+  library_function: {}
+records:
+- arena_channel_id: 5397157
+  arena_slug: the-inner-child-_-a-perspective
+  current_title: ' THE INNER CHILD _ A Perspective'
+  proposed_canonical_title: THE INNER CHILD — A PERSPECTIVE
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_essay
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5345856
+  arena_slug: the-cathedral-of-resonance-whiteboard-series
+  current_title: ' 🧭 THE CATHEDRAL OF RESONANCE — WHITEBOARD SERIES'
+  proposed_canonical_title: 🧭 THE CATHEDRAL OF RESONANCE — WHITEBOARD SERIES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: work
+  form: whiteboard
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH Whiteboard Series
+  confidence: moderate
+  review_flags:
+  - whiteboard_work_confirmed
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5216585
+  arena_slug: 00-field-guide
+  current_title: 00 — 🜂 FIELD GUIDE
+  proposed_canonical_title: 00 — 🜂 FIELD GUIDE
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: entry
+  form: field_guide
+  library_function: entry
+  publication_status: published
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5217666
+  arena_slug: 00-nexah-atlas-the-operational-geometry-of-transition
+  current_title: 00 — 🜂 NEXAH ATLAS  The Operational Geometry of Transition
+  proposed_canonical_title: NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: foundation
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5178452
+  arena_slug: 01-nexah-start-core-orientation
+  current_title: '01 - NEXAH · START · CORE ORIENTATION  '
+  proposed_canonical_title: 01 — NEXAH · START · CORE ORIENTATION
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: entry
+  form: library_entry
+  library_function: entry
+  publication_status: published
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5181972
+  arena_slug: 02-nexah-system-atlases
+  current_title: 02 — NEXAH · SYSTEM ATLASES
+  proposed_canonical_title: 02 — NEXAH · SYSTEM ATLASES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: collection
+  form: atlas_index
+  library_function: navigation
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5179271
+  arena_slug: 03-nexah-field-studies-visual-experiments
+  current_title: 03 — NEXAH · FIELD STUDIES & VISUAL EXPERIMENTS
+  proposed_canonical_title: 03 — NEXAH · FIELD STUDIES & VISUAL EXPERIMENTS
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: environment
+  type: research_environment
+  form: experiment_archive
+  library_function: research
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5181922
+  arena_slug: 05-nexah-hopf-tube-white-series
+  current_title: 05 — NEXAH · HOPF TUBE · WHITE SERIES
+  proposed_canonical_title: 05 — NEXAH · HOPF TUBE · WHITE SERIES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: environment
+  type: research_environment
+  form: whiteboard_series
+  library_function: research
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5182051
+  arena_slug: 06-nexah-perspectives-references
+  current_title: 06 — NEXAH · PERSPECTIVES & REFERENCES
+  proposed_canonical_title: 06 — NEXAH · PERSPECTIVES & REFERENCES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: reference_library
+  form: reference_index
+  library_function: reference
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5369070
+  arena_slug: beyond-information
+  current_title: BEYOND INFORMATION
+  proposed_canonical_title: BEYOND INFORMATION
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_essay
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5415765
+  arena_slug: field-atlas-i-water
+  current_title: 'Field Atlas I —     Water '
+  proposed_canonical_title: FIELD ATLAS I — WATER
+  registered_entity_id: NX-000006
+  classification_state: canonical
+  object_family: work
+  type: atlas
+  form: field_atlas
+  library_function: research
+  publication_status: published
+  revision_state: approved
+  content_maturity: exploratory
+  series: Field Atlas Series
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5404576
+  arena_slug: field-atlas-ii-the-architecture-of-agency
+  current_title: 'FIELD ATLAS II The Architecture of Agency '
+  proposed_canonical_title: FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: field_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: Field Atlas Series
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5386781
+  arena_slug: field-atlas-iii-morphology
+  current_title: 'FIELD ATLAS III — MORPHOLOGY '
+  proposed_canonical_title: FIELD ATLAS III — MORPHOLOGY
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: field_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: Field Atlas Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5442781
+  arena_slug: geometria-nova
+  current_title: 'GEOMETRIA NOVA '
+  proposed_canonical_title: GEOMETRIA NOVA
+  registered_entity_id: NX-000002
+  classification_state: canonical
+  object_family: work
+  type: book
+  form: foundation_book
+  library_function: foundation
+  publication_status: published
+  revision_state: approved
+  content_maturity: stable
+  series: null
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5397188
+  arena_slug: inner-world-liwceeh2psk
+  current_title: INNER WORLD
+  proposed_canonical_title: THE INNER WORLD
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: guide
+  form: field_guide
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5246418
+  arena_slug: leonardo-translations-the-room-that-looks-back
+  current_title: Leonardo Translations  The Room That Looks Back
+  proposed_canonical_title: LEONARDO TRANSLATIONS — THE ROOM THAT LOOKS BACK
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: visual_essay
+  form: visual_essay
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Leonardo Translations
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5386751
+  arena_slug: logarithmic-universe-5-movements-of-reality
+  current_title: 'LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY '
+  proposed_canonical_title: LOGARITHMIC UNIVERSE — FIVE MOVEMENTS OF REALITY
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: visual_essay
+  form: visual_essay
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5305692
+  arena_slug: nexah-_-design-orientation
+  current_title: 'NEXAH _ DESIGN ORIENTATION '
+  proposed_canonical_title: NEXAH — DESIGNING ORIENTATION
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: guide
+  form: design_guide
+  library_function: practice
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5221525
+  arena_slug: nexah-arena-the-relational-field
+  current_title: NEXAH ARENA °° The Relational Field
+  proposed_canonical_title: NEXAH ARENA °° The Relational Field
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: index
+  form: relational_map
+  library_function: meta_navigation
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5344975
+  arena_slug: nexah-atlas-a-cartography-of-perspectives
+  current_title: NEXAH ATLAS  - A Cartography of Perspectives
+  proposed_canonical_title: NEXAH ATLAS — A CARTOGRAPHY OF PERSPECTIVES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: visual_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5203312
+  arena_slug: nexah-mathematica-i-prime-residue-geometry
+  current_title: NEXAH MATHEMATICA I - Prime Residue Geometry
+  proposed_canonical_title: NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5203387
+  arena_slug: nexah-mathematica-ii-drift-fields-recursive-structures
+  current_title: NEXAH MATHEMATICA II  -  Drift Fields & Recursive Structures
+  proposed_canonical_title: NEXAH MATHEMATICA II — DRIFT FIELDS & RECURSIVE STRUCTURES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5203476
+  arena_slug: nexah-mathematica-iii-recursive-operators-structural-navigation
+  current_title: NEXAH MATHEMATICA III  Recursive Operators & Structural Navigation
+  proposed_canonical_title: NEXAH MATHEMATICA III — RECURSIVE OPERATORS & STRUCTURAL NAVIGATION
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5203499
+  arena_slug: nexah-mathematica-iv-unified-transition-fields-basin-architectures
+  current_title: NEXAH MATHEMATICA IV  Unified Transition Fields & Basin Architectures
+  proposed_canonical_title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  review_flags:
+  - identity_review_required
+  - duplicate_title_distinct_contents
+  - title_content_alignment_review
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5203528
+  arena_slug: nexah-mathematica-iv-unified-transition-fields-basin-architectures-2axd19e9tmc
+  current_title: NEXAH MATHEMATICA IV  Unified Transition Fields & Basin Architectures
+  proposed_canonical_title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  review_flags:
+  - identity_review_required
+  - duplicate_title_distinct_contents
+  - title_content_alignment_review
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5218362
+  arena_slug: nexah-xv-atlas-two-sides-of-one-medal
+  current_title: NEXAH XV ATLAS  - Two Sides of One Medal
+  proposed_canonical_title: NEXAH XV ATLAS — TWO SIDES OF ONE MEDAL
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: visual_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH XV Atlas
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5246392
+  arena_slug: nexah-xv-atlas-relational-cartography-of-human-reality
+  current_title: NEXAH XV ATLAS Relational Cartography of Human Reality
+  proposed_canonical_title: NEXAH XV ATLAS — RELATIONAL CARTOGRAPHY OF HUMAN REALITY
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: relational_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH XV Atlas
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5201262
+  arena_slug: nexah-xv-atlas-volume-i-observation-flow-transition
+  current_title: 'NEXAH XV ATLAS — Volume I: Observation, Flow & Transition'
+  proposed_canonical_title: 'NEXAH XV ATLAS — Volume I: Observation, Flow & Transition'
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH XV Atlas
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5201307
+  arena_slug: nexah-xv-atlas-volume-ii-structure-operators-observer-geometry
+  current_title: 'NEXAH XV ATLAS — Volume II: Structure, Operators & Observer Geometry'
+  proposed_canonical_title: 'NEXAH XV ATLAS — Volume II: Structure, Operators & Observer Geometry'
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH XV Atlas
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5203074
+  arena_slug: nexah-xv-complexa-cartographies-of-transition
+  current_title: NEXAH XV COMPLEXA — Cartographies of Transition
+  proposed_canonical_title: NEXAH XV COMPLEXA — Cartographies of Transition
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: living_atlas
+  library_function: research
+  publication_status: working
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH XV Atlas
+  confidence: moderate
+  review_flags:
+  - working_living_atlas
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5216699
+  arena_slug: nexah-maps-of-human-reality
+  current_title: NEXAH — 🌍  Maps of Human Reality
+  proposed_canonical_title: NEXAH — MAPS OF HUMAN REALITY
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: visual_atlas
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5415716
+  arena_slug: orientation-atlas-vol-i
+  current_title: 'Orientation Atlas Vol.I '
+  proposed_canonical_title: ORIENTATION ATLAS — VOLUME I
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: orientation_atlas
+  library_function: entry
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Orientation Architecture
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5415690
+  arena_slug: orientation-design-vol-ii
+  current_title: Orientation Design Vol. II
+  proposed_canonical_title: ORIENTATION DESIGN — VOLUME II
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: guide
+  form: design_guide
+  library_function: practice
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Orientation Architecture
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5416617
+  arena_slug: orientation-science
+  current_title: ORIENTATION SCIENCE
+  proposed_canonical_title: ORIENTATION SCIENCE
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: research_report
+  form: prospectus
+  library_function: foundation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5309625
+  arena_slug: orientation-theory-vol-iii
+  current_title: Orientation Theory Vol.III
+  proposed_canonical_title: ORIENTATION THEORY — VOLUME III
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: theory_book
+  library_function: foundation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Orientation Architecture
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345285
+  arena_slug: series-i-nexah-whiteboard-series
+  current_title: Series I 🧭 NEXAH WHITEBOARD SERIES
+  proposed_canonical_title: NEXAH WHITEBOARD SERIES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: series
+  form: whiteboard_index
+  library_function: navigation
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: NEXAH Whiteboard Series
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5293283
+  arena_slug: the-architecture-of-becoming
+  current_title: The Architecture of Becoming 🦋
+  proposed_canonical_title: The Architecture of Becoming 🦋
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: visual_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5250350
+  arena_slug: the-architecture-of-orientation-vol-iv
+  current_title: THE ARCHITECTURE OF ORIENTATION Vol.IV
+  proposed_canonical_title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: architecture_book
+  library_function: synthesis
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Orientation Architecture
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5407292
+  arena_slug: the-atlas-of-atlases
+  current_title: THE ATLAS OF ATLASES
+  proposed_canonical_title: THE ATLAS OF ATLASES
+  registered_entity_id: NX-000009
+  classification_state: canonical
+  object_family: work
+  type: atlas
+  form: meta_atlas
+  library_function: meta_navigation
+  publication_status: published
+  revision_state: approved
+  content_maturity: developing
+  series: null
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5386766
+  arena_slug: the-cartography-laboratory
+  current_title: 'THE CARTOGRAPHY LABORATORY '
+  proposed_canonical_title: THE CARTOGRAPHY LABORATORY
+  registered_entity_id: NX-000007
+  classification_state: canonical
+  object_family: work
+  type: research_report
+  form: laboratory_report
+  library_function: documentation
+  publication_status: published
+  revision_state: approved
+  content_maturity: exploratory
+  series: NEXAH Laboratory Reports
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5279287
+  arena_slug: the-essence-atlas
+  current_title: THE ESSENCE ATLAS
+  proposed_canonical_title: THE ESSENCE ATLAS
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: visual_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Odyssey 2040
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5426966
+  arena_slug: the-language-atlas
+  current_title: THE LANGUAGE ATLAS
+  proposed_canonical_title: THE LANGUAGE ATLAS
+  registered_entity_id: NX-000005
+  classification_state: canonical
+  object_family: work
+  type: atlas
+  form: language_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: approved
+  content_maturity: stable
+  series: null
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5421517
+  arena_slug: the-language-book
+  current_title: THE LANGUAGE BOOK
+  proposed_canonical_title: THE LANGUAGE BOOK
+  registered_entity_id: NX-000004
+  classification_state: canonical
+  object_family: work
+  type: book
+  form: textbook
+  library_function: learning
+  publication_status: published
+  revision_state: approved
+  content_maturity: stable
+  series: The Language Series
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5426953
+  arena_slug: the-language-book-ii
+  current_title: THE LANGUAGE BOOK II
+  proposed_canonical_title: THE LANGUAGE BOOK II
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: textbook
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Language Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5426957
+  arena_slug: the-language-book-iii
+  current_title: THE LANGUAGE BOOK III
+  proposed_canonical_title: THE LANGUAGE BOOK III
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: textbook
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Language Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5442532
+  arena_slug: the-living-equation-an-atlas-of-orientation
+  current_title: THE LIVING EQUATION — An Atlas of Orientation
+  proposed_canonical_title: THE LIVING EQUATION — An Atlas of Orientation
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: orientation_atlas
+  library_function: synthesis
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5442721
+  arena_slug: the-operator-xkoop3mjgcs
+  current_title: THE OPERATOR
+  proposed_canonical_title: THE OPERATOR
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: foundation_book
+  library_function: foundation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Operator Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5442697
+  arena_slug: the-operator-library
+  current_title: THE OPERATOR LIBRARY
+  proposed_canonical_title: THE OPERATOR LIBRARY
+  registered_entity_id: NX-000008
+  classification_state: canonical
+  object_family: work
+  type: guide
+  form: reference_guide
+  library_function: reference
+  publication_status: published
+  revision_state: approved
+  content_maturity: developing
+  series: null
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5393574
+  arena_slug: the-operator-map
+  current_title: THE OPERATOR MAP
+  proposed_canonical_title: THE OPERATOR MAP
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: guide
+  form: field_guide
+  library_function: reference
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Operator Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5391199
+  arena_slug: the-operator-s-handbook
+  current_title: THE OPERATOR’S HANDBOOK
+  proposed_canonical_title: THE OPERATOR’S HANDBOOK
+  registered_entity_id: NX-000003
+  classification_state: canonical
+  object_family: work
+  type: book
+  form: handbook
+  library_function: practice
+  publication_status: published
+  revision_state: approved
+  content_maturity: stable
+  series: null
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5404615
+  arena_slug: the-visitor-s-guide
+  current_title: THE VISITOR’S GUIDE
+  proposed_canonical_title: THE VISITOR’S GUIDE
+  registered_entity_id: NX-000001
+  classification_state: canonical
+  object_family: work
+  type: guide
+  form: visitor_guide
+  library_function: entry
+  publication_status: published
+  revision_state: approved
+  content_maturity: stable
+  series: null
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5404597
+  arena_slug: the-wonder-handbook-_-for-human-children
+  current_title: THE WONDER HANDBOOK _ For Human Children.
+  proposed_canonical_title: THE WONDER HANDBOOK — FOR HUMAN CHILDREN
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: handbook
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5345145
+  arena_slug: vol-i-be-kind-be-awefull-belong
+  current_title: VOL. I —  Be Kind. Be Awefull. Belong.
+  proposed_canonical_title: VOLUME I — BE KIND. BE AWEFULL. BELONG.
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_book
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Human Journey
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345129
+  arena_slug: vol-ii-pathfinders
+  current_title: 'VOL. II —  PATHFINDERS '
+  proposed_canonical_title: VOLUME II — PATHFINDERS
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_book
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Human Journey
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345076
+  arena_slug: vol-iv-threads-of-you
+  current_title: VOL. IV — THREADS OF YOU
+  proposed_canonical_title: VOLUME IV — THREADS OF YOU
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_book
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Human Journey
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345108
+  arena_slug: volume-iii-clear-mind
+  current_title: VOLUME III  —  CLEAR MIND
+  proposed_canonical_title: VOLUME III — CLEAR MIND
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: guide
+  form: field_guide
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Human Journey
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345064
+  arena_slug: volume-v-many-maps-one-world
+  current_title: VOLUME V — MANY MAPS. ONE WORLD.
+  proposed_canonical_title: VOLUME V — MANY MAPS. ONE WORLD.
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_compendium
+  library_function: synthesis
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Human Journey
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5203608
+  arena_slug: structural-echoes-of-nexah
+  current_title: °° — Structural Echoes of NEXAH
+  proposed_canonical_title: °° — Structural Echoes of NEXAH
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: reference_library
+  form: visual_reference
+  library_function: reference
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5413103
+  arena_slug: librarybook
+  current_title: 'Λ  LIBRARYBOOK '
+  proposed_canonical_title: LIBRARYBOOK
+  registered_entity_id: NX-000010
+  classification_state: canonical
+  object_family: work
+  type: book
+  form: compendium
+  library_function: synthesis
+  publication_status: working
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: canonical
+  review_flags: []
+  human_decision: confirmed
+  review_package: canonical_reference
+- arena_channel_id: 5345606
+  arena_slug: nexah-ecosystem-introducing-the-codex
+  current_title: ◈ NEXAH ECOSYSTEM — Introducing the Codex
+  proposed_canonical_title: ◈ NEXAH ECOSYSTEM — Introducing the Codex
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: system_map
+  library_function: meta_navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5345794
+  arena_slug: nexah-field-guides-structure-navigation-complex-systems
+  current_title: ◈ NEXAH FIELD GUIDES  — Structure, Navigation & Complex Systems
+  proposed_canonical_title: NEXAH FIELD GUIDES — STRUCTURE, NAVIGATION & COMPLEX SYSTEMS
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: navigation
+  type: collection
+  form: field_guide_index
+  library_function: navigation
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: NEXAH Field Guides
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5345822
+  arena_slug: odyssey-2-4-the-journey-through-worlds-observers
+  current_title: ◈ ODYSSEY 2°4° — The Journey Through Worlds & Observers
+  proposed_canonical_title: ◈ ODYSSEY 2°4° — The Journey Through Worlds & Observers
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: narrative_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Odyssey 2040
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5228606
+  arena_slug: map-atlas-a-visual-history-of-human-orientation
+  current_title: ✦ MAP ATLAS ✦  ⟡ A Visual History of Human Orientation ⟡
+  proposed_canonical_title: ✦ MAP ATLAS ✦ ⟡ A Visual History of Human Orientation ⟡
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: historical_atlas
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5224059
+  arena_slug: odyssee-2040-the-return-atlas
+  current_title: ✦ ODYSSEE 2040 ✦  ⟡ THE RETURN ATLAS ⟡
+  proposed_canonical_title: ✦ ODYSSEE 2040 ✦ ⟡ THE RETURN ATLAS ⟡
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: cinematic_field_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Odyssey 2040
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5347685
+  arena_slug: new-release-odyssey-2040-many-maps-one-world-a-story-about-perspective-a-call-to-participate
+  current_title: '✨ New Release ODYSSEY 2040  MANY MAPS. ONE WORLD.  A Story About Perspective.  A Call To Participate '
+  proposed_canonical_title: ODYSSEY 2040 — MANY MAPS. ONE WORLD.
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_book
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Odyssey 2040
+  confidence: moderate
+  review_flags:
+  - temporary_release_title
+  - canonical_title_review
+  - canonical_title_proposal
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345722
+  arena_slug: nexah-landscapes-maps-for-orientation-meaning-navigation
+  current_title: 🌍 NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation
+  proposed_canonical_title: 🌍 NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: landscape_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: C_standalone_works
+- arena_channel_id: 5181006
+  arena_slug: 04-nexah-janus-dynamic-field
+  current_title: 🜂 04 — NEXAH · JANUS DYNAMIC FIELD
+  proposed_canonical_title: 04 — NEXAH · JANUS DYNAMIC FIELD
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: environment
+  type: research_environment
+  form: operator_laboratory
+  library_function: research
+  publication_status: working
+  revision_state: review
+  content_maturity: null
+  series: null
+  confidence: moderate
+  review_flags:
+  - canonical_title_proposal
+  human_decision: confirmed
+  review_package: A_navigation_and_environments
+- arena_channel_id: 5345336
+  arena_slug: designing-orientation-whiteboard-series
+  current_title: 🧭 DESIGNING ORIENTATION  — WHITEBOARD SERIES
+  proposed_canonical_title: 🧭 DESIGNING ORIENTATION — WHITEBOARD SERIES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: work
+  form: whiteboard
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH Whiteboard Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345353
+  arena_slug: nexah-pathfinder-whiteboard-series
+  current_title: 🧭 NEXAH PATHFINDER  — WHITEBOARD SERIES
+  proposed_canonical_title: 🧭 NEXAH PATHFINDER — WHITEBOARD SERIES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: work
+  form: whiteboard
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH Whiteboard Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345385
+  arena_slug: the-dual-spine-prime-orientation-whiteboard-series
+  current_title: 🧭 THE DUAL SPINE  - Prime Orientation  — WHITEBOARD SERIES
+  proposed_canonical_title: 🧭 THE DUAL SPINE - Prime Orientation — WHITEBOARD SERIES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: work
+  form: whiteboard
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH Whiteboard Series
+  confidence: high
+  review_flags: []
+  human_decision: pending
+  review_package: B_series
+- arena_channel_id: 5345838
+  arena_slug: the-landings-whiteboard-series
+  current_title: 🧭 THE LANDINGS  — WHITEBOARD SERIES
+  proposed_canonical_title: 🧭 THE LANDINGS — WHITEBOARD SERIES
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: work
+  form: whiteboard
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH Whiteboard Series
+  confidence: moderate
+  review_flags:
+  - whiteboard_work_confirmed
+  human_decision: pending
+  review_package: B_series

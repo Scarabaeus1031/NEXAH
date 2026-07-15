@@ -1,0 +1,376 @@
+schema_version: '1.0'
+review_stage: B2c_editorial_sequence_review
+review_status: proposed
+source_classification: full_library_classification.yaml
+policy:
+  allocates_ids: false
+  modifies_registry: false
+  writes_to_arena: false
+  sequence_is_identity: false
+  human_confirmation_required: true
+summary:
+  series_under_review: 9
+  linear_high_confidence: 4
+  groups_with_unresolved_members: 3
+  channels_in_editorial_review: 40
+  confirmed_series: 4
+series:
+- series: The Language Series
+  review_state: confirmed
+  sequence_mode: linear
+  confidence: high
+  navigation_hub: null
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5421517
+    registered_entity_id: NX-000004
+    title: THE LANGUAGE BOOK
+    classification_state: canonical
+  - position: 2
+    role: member
+    arena_channel_id: 5426953
+    registered_entity_id: null
+    title: THE LANGUAGE BOOK II
+    classification_state: proposed
+  - position: 3
+    role: member
+    arena_channel_id: 5426957
+    registered_entity_id: null
+    title: THE LANGUAGE BOOK III
+    classification_state: proposed
+  alternative_ordered_members: []
+  unresolved_members: []
+  associated_members:
+  - position: null
+    role: associated_not_in_sequence
+    arena_channel_id: 5426966
+    registered_entity_id: NX-000005
+    title: THE LANGUAGE ATLAS
+    classification_state: canonical
+  editorial_note: The Language Atlas is associated navigation, not a numbered volume.
+- series: Field Atlas Series
+  review_state: confirmed
+  sequence_mode: linear
+  confidence: high
+  navigation_hub: null
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5415765
+    registered_entity_id: NX-000006
+    title: FIELD ATLAS I — WATER
+    classification_state: canonical
+  - position: 2
+    role: member
+    arena_channel_id: 5404576
+    registered_entity_id: null
+    title: FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+    classification_state: proposed
+  - position: 3
+    role: member
+    arena_channel_id: 5386781
+    registered_entity_id: null
+    title: FIELD ATLAS III — MORPHOLOGY
+    classification_state: proposed
+  alternative_ordered_members: []
+  unresolved_members: []
+  associated_members: []
+  editorial_note: Explicit volume order I–III.
+- series: Orientation Architecture
+  review_state: confirmed
+  sequence_mode: linear
+  confidence: high
+  navigation_hub: null
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5415716
+    registered_entity_id: null
+    title: ORIENTATION ATLAS — VOLUME I
+    classification_state: proposed
+  - position: 2
+    role: member
+    arena_channel_id: 5415690
+    registered_entity_id: null
+    title: ORIENTATION DESIGN — VOLUME II
+    classification_state: proposed
+  - position: 3
+    role: member
+    arena_channel_id: 5309625
+    registered_entity_id: null
+    title: ORIENTATION THEORY — VOLUME III
+    classification_state: proposed
+  - position: 4
+    role: member
+    arena_channel_id: 5250350
+    registered_entity_id: null
+    title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+    classification_state: proposed
+  alternative_ordered_members: []
+  unresolved_members: []
+  associated_members: []
+  editorial_note: 'Explicit volume order: Atlas, Design, Theory, Architecture.'
+- series: The Human Journey
+  review_state: confirmed
+  sequence_mode: linear
+  confidence: high
+  navigation_hub: null
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5345145
+    registered_entity_id: null
+    title: VOLUME I — BE KIND. BE AWEFULL. BELONG.
+    classification_state: proposed
+  - position: 2
+    role: member
+    arena_channel_id: 5345129
+    registered_entity_id: null
+    title: VOLUME II — PATHFINDERS
+    classification_state: proposed
+  - position: 3
+    role: member
+    arena_channel_id: 5345108
+    registered_entity_id: null
+    title: VOLUME III — CLEAR MIND
+    classification_state: proposed
+  - position: 4
+    role: member
+    arena_channel_id: 5345076
+    registered_entity_id: null
+    title: VOLUME IV — THREADS OF YOU
+    classification_state: proposed
+  - position: 5
+    role: member
+    arena_channel_id: 5345064
+    registered_entity_id: null
+    title: VOLUME V — MANY MAPS. ONE WORLD.
+    classification_state: proposed
+  alternative_ordered_members: []
+  unresolved_members: []
+  associated_members: []
+  editorial_note: Explicit volume order I–V; editorial continuity still requires human review.
+- series: Operator Series
+  review_state: reader_test_required
+  sequence_mode: curated_linear
+  confidence: moderate
+  navigation_hub: null
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5442721
+    registered_entity_id: null
+    title: THE OPERATOR
+    classification_state: proposed
+  - position: 2
+    role: member
+    arena_channel_id: 5391199
+    registered_entity_id: NX-000003
+    title: THE OPERATOR’S HANDBOOK
+    classification_state: canonical
+  - position: 3
+    role: member
+    arena_channel_id: 5442697
+    registered_entity_id: NX-000008
+    title: THE OPERATOR LIBRARY
+    classification_state: canonical
+  - position: 4
+    role: member
+    arena_channel_id: 5393574
+    registered_entity_id: null
+    title: THE OPERATOR MAP
+    classification_state: proposed
+  alternative_ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5442721
+    registered_entity_id: null
+    title: THE OPERATOR
+    classification_state: proposed
+  - position: 2
+    role: member
+    arena_channel_id: 5393574
+    registered_entity_id: null
+    title: THE OPERATOR MAP
+    classification_state: proposed
+  - position: 3
+    role: member
+    arena_channel_id: 5391199
+    registered_entity_id: NX-000003
+    title: THE OPERATOR’S HANDBOOK
+    classification_state: canonical
+  - position: 4
+    role: member
+    arena_channel_id: 5442697
+    registered_entity_id: NX-000008
+    title: THE OPERATOR LIBRARY
+    classification_state: canonical
+  unresolved_members: []
+  associated_members: []
+  editorial_note: 'Two reader paths must be tested: Operator → Handbook → Library → Map, or Operator → Map → Handbook
+    → Library.'
+- series: Odyssey 2040
+  review_state: deferred_growing_universe
+  sequence_mode: unordered_growing_universe
+  confidence: low
+  navigation_hub: null
+  ordered_members: []
+  alternative_ordered_members: []
+  unresolved_members:
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5345822
+    registered_entity_id: null
+    title: ◈ ODYSSEY 2°4° — The Journey Through Worlds & Observers
+    classification_state: proposed
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5279287
+    registered_entity_id: null
+    title: THE ESSENCE ATLAS
+    classification_state: proposed
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5224059
+    registered_entity_id: null
+    title: ✦ ODYSSEE 2040 ✦ ⟡ THE RETURN ATLAS ⟡
+    classification_state: proposed
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5347685
+    registered_entity_id: null
+    title: ODYSSEY 2040 — MANY MAPS. ONE WORLD.
+    classification_state: proposed
+  associated_members: []
+  editorial_note: No sequence is proposed. Odyssey remains an explicitly growing editorial universe.
+- series: NEXAH Whiteboard Series
+  review_state: reader_test_required
+  sequence_mode: hub_and_curated_path
+  confidence: low
+  navigation_hub:
+    position: null
+    role: navigation_hub
+    arena_channel_id: 5345285
+    registered_entity_id: null
+    title: NEXAH WHITEBOARD SERIES
+    classification_state: proposed
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5345336
+    registered_entity_id: null
+    title: 🧭 DESIGNING ORIENTATION — WHITEBOARD SERIES
+    classification_state: proposed
+  - position: 2
+    role: member
+    arena_channel_id: 5345353
+    registered_entity_id: null
+    title: 🧭 NEXAH PATHFINDER — WHITEBOARD SERIES
+    classification_state: proposed
+  - position: 3
+    role: member
+    arena_channel_id: 5345385
+    registered_entity_id: null
+    title: 🧭 THE DUAL SPINE - Prime Orientation — WHITEBOARD SERIES
+    classification_state: proposed
+  - position: 4
+    role: member
+    arena_channel_id: 5345838
+    registered_entity_id: null
+    title: 🧭 THE LANDINGS — WHITEBOARD SERIES
+    classification_state: proposed
+  - position: 5
+    role: member
+    arena_channel_id: 5345856
+    registered_entity_id: null
+    title: 🧭 THE CATHEDRAL OF RESONANCE — WHITEBOARD SERIES
+    classification_state: proposed
+  alternative_ordered_members: []
+  unresolved_members: []
+  associated_members: []
+  editorial_note: The master Channel is a Navigation hub; Work order is a proposed reading path, not chronology.
+- series: NEXAH Mathematica
+  review_state: pending_identity_review
+  sequence_mode: linear_with_unresolved_slot
+  confidence: moderate
+  navigation_hub: null
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5203312
+    registered_entity_id: null
+    title: NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY
+    classification_state: proposed
+  - position: 2
+    role: member
+    arena_channel_id: 5203387
+    registered_entity_id: null
+    title: NEXAH MATHEMATICA II — DRIFT FIELDS & RECURSIVE STRUCTURES
+    classification_state: proposed
+  - position: 3
+    role: member
+    arena_channel_id: 5203476
+    registered_entity_id: null
+    title: NEXAH MATHEMATICA III — RECURSIVE OPERATORS & STRUCTURAL NAVIGATION
+    classification_state: proposed
+  alternative_ordered_members: []
+  unresolved_members:
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5203499
+    registered_entity_id: null
+    title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+    classification_state: proposed
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5203528
+    registered_entity_id: null
+    title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+    classification_state: proposed
+  associated_members: []
+  editorial_note: Both distinct IV candidates remain unordered and identity-free until title/content review.
+- series: NEXAH XV Atlas
+  review_state: core_confirmed_satellites_deferred
+  sequence_mode: ordered_core_with_unordered_satellites
+  confidence: low
+  navigation_hub: null
+  ordered_members:
+  - position: 1
+    role: member
+    arena_channel_id: 5201262
+    registered_entity_id: null
+    title: 'NEXAH XV ATLAS — Volume I: Observation, Flow & Transition'
+    classification_state: proposed
+  - position: 2
+    role: member
+    arena_channel_id: 5201307
+    registered_entity_id: null
+    title: 'NEXAH XV ATLAS — Volume II: Structure, Operators & Observer Geometry'
+    classification_state: proposed
+  alternative_ordered_members: []
+  unresolved_members:
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5218362
+    registered_entity_id: null
+    title: NEXAH XV ATLAS — TWO SIDES OF ONE MEDAL
+    classification_state: proposed
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5246392
+    registered_entity_id: null
+    title: NEXAH XV ATLAS — RELATIONAL CARTOGRAPHY OF HUMAN REALITY
+    classification_state: proposed
+  - position: null
+    role: unresolved_placement
+    arena_channel_id: 5203074
+    registered_entity_id: null
+    title: NEXAH XV COMPLEXA — Cartographies of Transition
+    classification_state: proposed
+  associated_members: []
+  editorial_note: Volumes I–II form the ordered core; placement of the other three Works is unresolved.
+deferred_single_member_series:
+- series: Leonardo Translations
+  arena_channel_id: 5246418
+  reason: Only one current Work; no sequence decision is needed yet.
