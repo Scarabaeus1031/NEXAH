@@ -1,0 +1,10 @@
+id: NX-OP-0005
+object_family: concept
+type: operator
+preferred_name: Transition
+definition: "Describes movement or transformation between distinguishable states, configurations, or regions."
+vocabulary_status: core
+aliases: [transition, transformation]
+source_works: [NX-000002, NX-000003, NX-000004, NX-000005, NX-000006, NX-000007, NX-000008, NX-000009]
+related_concepts: [NX-OP-0006, NX-OP-0013, NX-OP-0014]
+last_verified: "2026-07-15"

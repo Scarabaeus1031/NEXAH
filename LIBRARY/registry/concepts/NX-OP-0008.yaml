@@ -1,0 +1,10 @@
+id: NX-OP-0008
+object_family: concept
+type: operator
+preferred_name: Bridge
+definition: "Establishes a traversable relation between separated regions, representations, domains, or scales."
+vocabulary_status: core
+aliases: [bridge, connection]
+source_works: [NX-000003, NX-000008]
+related_concepts: [NX-OP-0006, NX-OP-0011, NX-OP-0017]
+last_verified: "2026-07-15"

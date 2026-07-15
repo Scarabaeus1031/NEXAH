@@ -1,0 +1,10 @@
+id: NX-OP-0012
+object_family: concept
+type: operator
+preferred_name: Projection
+definition: "Maps structure from one frame, dimension, or representation into another, with possible preservation and loss."
+vocabulary_status: core
+aliases: [projection, mapping]
+source_works: [NX-000002, NX-000003, NX-000005, NX-000007, NX-000010]
+related_concepts: [NX-OP-0002, NX-OP-0003, NX-OP-0017]
+last_verified: "2026-07-15"

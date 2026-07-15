@@ -1,0 +1,28 @@
+id: NX-000001
+canonical_title: "THE VISITOR’S GUIDE"
+object_family: work
+type: guide
+form: visitor_guide
+library_function: entry
+publication_status: published
+current_edition: NX-000001-E01
+summary: "A human introduction to the NEXAH Library and its paths of exploration."
+audience: [newcomer, general]
+language: en
+core_operator_refs: [NX-OP-0003, NX-OP-0010, NX-OP-0011, NX-OP-0015]
+relations:
+  - {type: recommended_next, target: NX-000002}
+  - {type: recommended_next, target: NX-000004}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/the-visitor-s-guide"
+external_ids:
+  arena_channel_id: 5404615
+  arena_slug: the-visitor-s-guide
+edition:
+  edition_id: NX-000001-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: stable
+  structure_mode: linear
+  member_count: 49
+  source_updated_at: "2026-07-15T01:36:09Z"
+last_verified: "2026-07-15"

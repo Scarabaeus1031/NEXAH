@@ -1,0 +1,31 @@
+id: NX-000010
+canonical_title: "LIBRARYBOOK"
+display_title: "Λ LIBRARYBOOK"
+object_family: work
+type: book
+form: compendium
+library_function: synthesis
+publication_status: working
+current_edition: NX-000010-E01
+summary: "A large exploratory compendium of maps, operators, notebooks, field guides, and visual investigations."
+audience: [practitioner, researcher, builder]
+language: en
+core_operator_refs: [NX-OP-0009, NX-OP-0010, NX-OP-0011, NX-OP-0012, NX-OP-0015, NX-OP-0016, NX-OP-0017]
+relations:
+  - {type: synthesizes, target: NX-000002}
+  - {type: synthesizes, target: NX-000003}
+  - {type: synthesizes, target: NX-000005}
+  - {type: synthesizes, target: NX-000007}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/librarybook"
+external_ids:
+  arena_channel_id: 5413103
+  arena_slug: librarybook
+edition:
+  edition_id: NX-000010-E01
+  version: "0.1"
+  revision_state: review
+  content_maturity: developing
+  structure_mode: guided_non_linear
+  member_count: 176
+  source_updated_at: "2026-07-10T22:52:09Z"
+last_verified: "2026-07-15"

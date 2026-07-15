@@ -1,0 +1,26 @@
+id: NX-000002
+canonical_title: "GEOMETRIA NOVA"
+object_family: work
+type: book
+form: foundation_book
+library_function: foundation
+publication_status: published
+current_edition: NX-000002-E01
+summary: "The conceptual foundation of NEXAH, moving from geometric relations to orientation, knowledge, and the observer."
+audience: [learner, researcher, builder]
+language: en
+core_operator_refs: [NX-OP-0002, NX-OP-0003, NX-OP-0005, NX-OP-0009, NX-OP-0010, NX-OP-0011, NX-OP-0012, NX-OP-0017]
+relations: []
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/geometria-nova"
+external_ids:
+  arena_channel_id: 5442781
+  arena_slug: geometria-nova
+edition:
+  edition_id: NX-000002-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: stable
+  structure_mode: linear
+  member_count: 26
+  source_updated_at: "2026-07-15T01:35:23Z"
+last_verified: "2026-07-15"

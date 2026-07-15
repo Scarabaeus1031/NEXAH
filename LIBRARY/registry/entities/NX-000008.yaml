@@ -1,0 +1,28 @@
+id: NX-000008
+canonical_title: "THE OPERATOR LIBRARY"
+object_family: work
+type: guide
+form: reference_guide
+library_function: reference
+publication_status: published
+current_edition: NX-000008-E01
+summary: "A published reference guide introducing the Operator Library and its recurring relational language."
+audience: [newcomer, learner, practitioner]
+language: en
+core_operator_refs: [NX-OP-0003, NX-OP-0005, NX-OP-0010, NX-OP-0011]
+relations:
+  - {type: references, target: NX-000003}
+  - {type: recommended_next, target: NX-000003}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/the-operator-library"
+external_ids:
+  arena_channel_id: 5442697
+  arena_slug: the-operator-library
+edition:
+  edition_id: NX-000008-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: developing
+  structure_mode: linear
+  member_count: 21
+  source_updated_at: "2026-07-15T00:04:01Z"
+last_verified: "2026-07-15"

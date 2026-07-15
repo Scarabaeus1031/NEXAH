@@ -1,0 +1,10 @@
+id: NX-OP-0016
+object_family: concept
+type: operator
+preferred_name: Janus
+definition: "Couples opposed or complementary views, directions, or states at a shared interface."
+vocabulary_status: core
+aliases: [janus, dual_view]
+source_works: [NX-000007, NX-000010]
+related_concepts: [NX-OP-0003, NX-OP-0005, NX-OP-0012]
+last_verified: "2026-07-15"

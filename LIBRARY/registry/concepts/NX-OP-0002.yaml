@@ -1,0 +1,10 @@
+id: NX-OP-0002
+object_family: concept
+type: operator
+preferred_name: Aperture
+definition: "Creates a selective opening or frame through which part of a field becomes perceivable."
+vocabulary_status: core
+aliases: [aperture, opening]
+source_works: [NX-000002]
+related_concepts: [NX-OP-0003, NX-OP-0006, NX-OP-0012]
+last_verified: "2026-07-15"

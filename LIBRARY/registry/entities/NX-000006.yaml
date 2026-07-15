@@ -1,0 +1,29 @@
+id: NX-000006
+canonical_title: "FIELD ATLAS I — WATER"
+object_family: work
+type: atlas
+form: field_atlas
+library_function: research
+publication_status: published
+current_edition: NX-000006-E01
+summary: "An applied field atlas that maps water as a landscape of configurations and transitions."
+audience: [researcher, practitioner]
+language: en
+series: "Field Atlas Series"
+core_operator_refs: [NX-OP-0005, NX-OP-0009, NX-OP-0013, NX-OP-0014, NX-OP-0017]
+relations:
+  - {type: applies, target: NX-000002}
+  - {type: applies, target: NX-000003}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/field-atlas-i-water"
+external_ids:
+  arena_channel_id: 5415765
+  arena_slug: field-atlas-i-water
+edition:
+  edition_id: NX-000006-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: exploratory
+  structure_mode: guided_non_linear
+  member_count: 13
+  source_updated_at: "2026-07-10T22:49:01Z"
+last_verified: "2026-07-15"

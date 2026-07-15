@@ -1,0 +1,10 @@
+id: NX-OP-0006
+object_family: concept
+type: operator
+preferred_name: Boundary
+definition: "Distinguishes regions, states, or domains and establishes conditions for separation or passage."
+vocabulary_status: core
+aliases: [boundary, interface]
+source_works: [NX-000003, NX-000004]
+related_concepts: [NX-OP-0002, NX-OP-0008, NX-OP-0009]
+last_verified: "2026-07-15"

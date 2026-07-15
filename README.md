@@ -43,6 +43,7 @@ observe → represent → map → compare → orient → explain → learn
 | Run an application | **[Network Orientation](APPLICATIONS/network_orientation/README.md)** · **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)** |
 | Understand the research | **[Research Portal](RESEARCH/README.md)** |
 | Inspect maturity and boundaries | **[Architecture & System State](ARCHITECTURE/SYSTEM_STATE.md)** |
+| Browse the canonical visual-library registry | **[NEXAH Library](LIBRARY/README.md)** |
 | Browse the full repository | **[Repository Map](REPOSITORY_MAP.md)** |
 
 Recommended first path:
@@ -193,6 +194,9 @@ The repository contains the computational, documentary, and empirical layers of
 NEXAH. The companion **[NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)**
 contains visual essays, system atlases, research notebooks, and orientation
 paths.
+
+The **[canonical Library Registry](LIBRARY/README.md)** assigns stable identity,
+classification, Edition state, controlled Operators, and curated relationships.
 
 Current Atlas entry points include:
 

@@ -1,0 +1,10 @@
+id: NX-OP-0001
+object_family: concept
+type: operator
+preferred_name: Circle
+definition: "Organizes relations around a center, an extent, and the possibility of return."
+vocabulary_status: core
+aliases: [circle, circularity]
+source_works: [NX-000002, NX-000003]
+related_concepts: [NX-OP-0006, NX-OP-0009]
+last_verified: "2026-07-15"

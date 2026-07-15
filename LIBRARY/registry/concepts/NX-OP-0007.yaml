@@ -1,0 +1,10 @@
+id: NX-OP-0007
+object_family: concept
+type: operator
+preferred_name: Memory
+definition: "Preserves or reintroduces prior states so that earlier configurations can constrain present orientation."
+vocabulary_status: core
+aliases: [memory, trace]
+source_works: [NX-000003, NX-000005, NX-000010]
+related_concepts: [NX-OP-0005, NX-OP-0010, NX-OP-0015]
+last_verified: "2026-07-15"

@@ -1,0 +1,10 @@
+id: NX-OP-0004
+object_family: concept
+type: operator
+preferred_name: Needle
+definition: "Indicates direction by responding to a field, reference, or difference."
+vocabulary_status: core
+aliases: [needle, pointer]
+source_works: [NX-000003]
+related_concepts: [NX-OP-0014, NX-OP-0015]
+last_verified: "2026-07-15"

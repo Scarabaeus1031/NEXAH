@@ -1,0 +1,28 @@
+id: NX-000009
+canonical_title: "THE ATLAS OF ATLASES"
+object_family: work
+type: atlas
+form: meta_atlas
+library_function: meta_navigation
+publication_status: published
+current_edition: NX-000009-E01
+summary: "A meta-atlas connecting complementary perspectives on orientation, design, relation, and transformation."
+audience: [general, learner, researcher]
+language: en
+core_operator_refs: [NX-OP-0003, NX-OP-0005, NX-OP-0010, NX-OP-0011, NX-OP-0015]
+relations:
+  - {type: synthesizes, target: NX-000005}
+  - {type: synthesizes, target: NX-000006}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/the-atlas-of-atlases"
+external_ids:
+  arena_channel_id: 5407292
+  arena_slug: the-atlas-of-atlases
+edition:
+  edition_id: NX-000009-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: developing
+  structure_mode: guided_non_linear
+  member_count: 18
+  source_updated_at: "2026-07-10T22:51:04Z"
+last_verified: "2026-07-15"

@@ -83,6 +83,7 @@ NEXAH/
 │   └── control_layer/              experimental control prototypes
 ├── RESEARCH/                       concepts, validation, and findings
 ├── APPLICATIONS/                   system-specific tools and studies
+├── LIBRARY/                        canonical visual-library registry
 ├── testkit/                        reusable evidence and outcome gates
 └── EXPERIMENTAL/                   labs and historical prototypes
 ```
@@ -192,6 +193,9 @@ ARCHITECTURE
 
 APPLICATIONS
 → applies methods to concrete systems and user workflows
+
+LIBRARY
+→ connects stable identity and classification to the visual Are.na corpus
 
 nexah/
 → provides the minimal installable package and CLI

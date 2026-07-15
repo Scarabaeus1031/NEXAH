@@ -1,0 +1,10 @@
+id: NX-OP-0010
+object_family: concept
+type: operator
+preferred_name: Orientation
+definition: "Establishes an actionable relation among an observer, a field, reference structures, and possible movement."
+vocabulary_status: core
+aliases: [orientation, orienting]
+source_works: [NX-000001, NX-000002, NX-000003, NX-000004, NX-000005, NX-000007, NX-000008, NX-000009, NX-000010]
+related_concepts: [NX-OP-0003, NX-OP-0009, NX-OP-0015]
+last_verified: "2026-07-15"

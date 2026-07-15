@@ -1,0 +1,10 @@
+id: NX-OP-0014
+object_family: concept
+type: operator
+preferred_name: Gradient
+definition: "Expresses an ordered difference across a field that supplies direction or a tendency toward transition."
+vocabulary_status: core
+aliases: [gradient, slope]
+source_works: [NX-000005, NX-000006]
+related_concepts: [NX-OP-0004, NX-OP-0005, NX-OP-0009]
+last_verified: "2026-07-15"

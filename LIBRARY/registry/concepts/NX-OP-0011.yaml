@@ -1,0 +1,10 @@
+id: NX-OP-0011
+object_family: concept
+type: operator
+preferred_name: Relation
+definition: "Establishes connection, difference, or dependency through which entities acquire context and meaning."
+vocabulary_status: core
+aliases: [relation, relationship]
+source_works: [NX-000001, NX-000002, NX-000004, NX-000008, NX-000009, NX-000010]
+related_concepts: [NX-OP-0008, NX-OP-0009, NX-OP-0010]
+last_verified: "2026-07-15"

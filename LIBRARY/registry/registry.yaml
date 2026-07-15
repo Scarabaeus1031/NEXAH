@@ -1,0 +1,29 @@
+schema_version: "1.0"
+registry_version: "0.1.0"
+status: pilot
+entity_count: 10
+concept_count: 17
+last_allocated_entity_id: NX-000010
+last_allocated_operator_id: NX-OP-0017
+authority:
+  registry:
+    - stable_identity
+    - canonical_classification
+    - current_edition_resolution
+    - curated_relationships
+    - controlled_operator_references
+  arena:
+    - visual_publication
+    - channel_description
+    - visual_sequence
+  github:
+    - code
+    - technical_specifications
+    - validation
+  kernel:
+    - derived_queries
+    - inferred_occurrences
+    - analytical_outputs
+write_policy:
+  arena: read_only
+  kernel_may_overwrite_canonical_metadata: false

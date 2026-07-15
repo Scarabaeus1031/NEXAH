@@ -1,0 +1,30 @@
+id: NX-000007
+canonical_title: "THE CARTOGRAPHY LABORATORY"
+object_family: work
+type: research_report
+form: laboratory_report
+library_function: documentation
+publication_status: published
+current_edition: NX-000007-E01
+summary: "A published report documenting the research architecture, experiments, and open questions of the NEXAH Cartography Laboratory."
+audience: [researcher, builder]
+language: en
+series: "NEXAH Laboratory Reports"
+core_operator_refs: [NX-OP-0005, NX-OP-0010, NX-OP-0012, NX-OP-0015, NX-OP-0016]
+relations:
+  - {type: references, target: NX-000002}
+repository_paths:
+  - "https://github.com/Scarabaeus1031/NEXAH"
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/the-cartography-laboratory"
+external_ids:
+  arena_channel_id: 5386766
+  arena_slug: the-cartography-laboratory
+edition:
+  edition_id: NX-000007-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: exploratory
+  structure_mode: linear
+  member_count: 34
+  source_updated_at: "2026-07-10T22:50:30Z"
+last_verified: "2026-07-15"

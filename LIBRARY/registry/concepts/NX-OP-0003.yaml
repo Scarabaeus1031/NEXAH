@@ -1,0 +1,10 @@
+id: NX-OP-0003
+object_family: concept
+type: operator
+preferred_name: Observer
+definition: "Establishes a situated act of selection through which a field is perceived and represented."
+vocabulary_status: core
+aliases: [observer, observation]
+source_works: [NX-000001, NX-000002, NX-000003, NX-000008, NX-000009]
+related_concepts: [NX-OP-0002, NX-OP-0010, NX-OP-0012]
+last_verified: "2026-07-15"

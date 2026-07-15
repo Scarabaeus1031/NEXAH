@@ -20,6 +20,7 @@ evidence, and historical experimental environments.
 | Explore the visual work | **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** |
 | Enter the research archive | **[RESEARCH/README.md](RESEARCH/README.md)** |
 | Inspect the current architecture | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
+| Browse the canonical visual-library registry | **[LIBRARY/README.md](LIBRARY/README.md)** |
 | Explore the most developed application | **[APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)** |
 | Inspect evidence and outcome gates | **[testkit/README.md](testkit/README.md)** |
 
@@ -44,6 +45,7 @@ NEXAH/
 ├── RESEARCH/           concepts, evidence, findings, and theory
 ├── APPLICATIONS/       demonstrations and applied validation
 ├── EXPERIMENTAL/       active labs, prototypes, and historical systems
+├── LIBRARY/            Are.na identity, classification, and Operator registry
 ├── testkit/            reusable evidence and outcome validation gates
 ├── outputs/            selected generated repository-level artifacts
 ├── README.md           repository overview
@@ -60,6 +62,18 @@ research questions
 → validation and findings
 → applied systems
 ```
+
+---
+
+## 📚 LIBRARY/
+
+**[LIBRARY/](LIBRARY/)** contains the canonical, human-reviewable bridge to the
+visual NEXAH Library on Are.na. It holds stable Entity IDs, Editions, controlled
+Operator Concepts, and curated relationships for the initial ten-work pilot.
+
+Are.na remains authoritative for visual content and editorial sequence. The
+Registry is authoritative for NEXAH identity and classification. Executable
+read-only queries live in `nexah/library/`.
 
 ---
 

@@ -1,0 +1,10 @@
+id: NX-OP-0015
+object_family: concept
+type: operator
+preferred_name: Navigation
+definition: "Selects and adjusts a path through a field by using references, differences, and feedback."
+vocabulary_status: core
+aliases: [navigation, pathfinding]
+source_works: [NX-000001, NX-000005, NX-000007, NX-000009, NX-000010]
+related_concepts: [NX-OP-0004, NX-OP-0010, NX-OP-0017]
+last_verified: "2026-07-15"

@@ -1,0 +1,27 @@
+id: NX-000003
+canonical_title: "THE OPERATOR’S HANDBOOK"
+object_family: work
+type: book
+form: handbook
+library_function: practice
+publication_status: published
+current_edition: NX-000003-E01
+summary: "A sequential visual handbook for recognizing and applying recurring operations across domains."
+audience: [learner, practitioner, builder]
+language: en
+core_operator_refs: [NX-OP-0003, NX-OP-0005, NX-OP-0006, NX-OP-0010, NX-OP-0012, NX-OP-0013]
+relations:
+  - {type: derives_from, target: NX-000002}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/the-operator-s-handbook"
+external_ids:
+  arena_channel_id: 5391199
+  arena_slug: the-operator-s-handbook
+edition:
+  edition_id: NX-000003-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: stable
+  structure_mode: linear
+  member_count: 59
+  source_updated_at: "2026-07-15T01:35:51Z"
+last_verified: "2026-07-15"

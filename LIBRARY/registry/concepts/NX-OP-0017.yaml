@@ -1,0 +1,10 @@
+id: NX-OP-0017
+object_family: concept
+type: operator
+preferred_name: Scale
+definition: "Establishes the observational or structural level at which relations and transformations are represented."
+vocabulary_status: core
+aliases: [scale, level]
+source_works: [NX-000002, NX-000006, NX-000010]
+related_concepts: [NX-OP-0008, NX-OP-0012, NX-OP-0015]
+last_verified: "2026-07-15"

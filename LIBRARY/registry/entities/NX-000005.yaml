@@ -1,0 +1,28 @@
+id: NX-000005
+canonical_title: "THE LANGUAGE ATLAS"
+object_family: work
+type: atlas
+form: language_atlas
+library_function: navigation
+publication_status: published
+current_edition: NX-000005-E01
+summary: "A guided atlas for mapping fields, perspectives, operators, and paths through the NEXAH visual language."
+audience: [learner, practitioner]
+language: en
+core_operator_refs: [NX-OP-0005, NX-OP-0009, NX-OP-0010, NX-OP-0012, NX-OP-0013, NX-OP-0014, NX-OP-0015]
+relations:
+  - {type: maps, target: NX-000004}
+  - {type: derives_from, target: NX-000002}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/the-language-atlas"
+external_ids:
+  arena_channel_id: 5426966
+  arena_slug: the-language-atlas
+edition:
+  edition_id: NX-000005-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: stable
+  structure_mode: guided_non_linear
+  member_count: 35
+  source_updated_at: "2026-07-10T22:58:22Z"
+last_verified: "2026-07-15"

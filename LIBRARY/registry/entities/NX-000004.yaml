@@ -1,0 +1,29 @@
+id: NX-000004
+canonical_title: "THE LANGUAGE BOOK"
+object_family: work
+type: book
+form: textbook
+library_function: learning
+publication_status: published
+current_edition: NX-000004-E01
+summary: "An introductory textbook for learning the visual language of change, relations, and orientation."
+audience: [newcomer, learner]
+language: en
+series: "The Language Series"
+core_operator_refs: [NX-OP-0005, NX-OP-0006, NX-OP-0010, NX-OP-0011]
+relations:
+  - {type: derives_from, target: NX-000002}
+  - {type: recommended_next, target: NX-000005}
+canonical_url: "https://www.are.na/nexah-scarabaeus1031/the-language-book"
+external_ids:
+  arena_channel_id: 5421517
+  arena_slug: the-language-book
+edition:
+  edition_id: NX-000004-E01
+  version: "1.0"
+  revision_state: approved
+  content_maturity: stable
+  structure_mode: linear
+  member_count: 33
+  source_updated_at: "2026-07-10T00:15:55Z"
+last_verified: "2026-07-15"
