@@ -1,0 +1,43 @@
+schema_version: "1.0"
+report_type: library_health
+status: pass_with_editorial_warnings
+as_of: "2026-07-15T21:22:36+00:00"
+registry_version: 0.1.0
+review_version: second_human_reader_review/1.0
+snapshot: arena-2026-07-15.yaml
+live_check: false
+registry:
+  valid: true
+  entities: 10
+  operators: 17
+proposal_isolation:
+  state: explicit_only
+  proposal_records: 61
+reader_orientation:
+  accepted_questions: [UQ-01, UQ-02, UQ-03, UQ-04, UQ-05, UQ-06]
+  failures: []
+traversability:
+  journeys: 3
+  transitions: 15
+  clickable_present: 1
+  clickable_missing: 14
+series:
+  confirmed: 4
+  unresolved: 5
+  unresolved_names:
+    - Operator Series
+    - Odyssey 2040
+    - NEXAH Whiteboard Series
+    - NEXAH Mathematica
+    - NEXAH XV Atlas
+cleanup:
+  status: unavailable
+safety:
+  arena_write_policy: read_only
+  arena_write_methods: []
+  id_allocation: unchanged
+warnings:
+  - 14 curated transitions are not directly clickable
+  - 5 Series remain editorially unresolved
+  - structured cleanup queue unavailable
+failures: []

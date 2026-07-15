@@ -3,14 +3,18 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from .arena import ArenaClient, ArenaError, compare_all, compare_entity
 from .discovery import build_discovery, write_discovery_files
+from .health import build_health, render_health_text
 from .kernel import OrientationQueries, graph_to_mermaid
+from .operations import OperationError, default_review_root, dump_yaml
 from .reader import ReaderOverlay, ReaderOverlayError
 from .registry import Registry, RegistryError
+from .snapshot import build_source_snapshot, write_source_snapshot
 
 
 def _json(value: Any) -> None:
@@ -55,6 +59,17 @@ def build_parser() -> argparse.ArgumentParser:
     reader.add_argument("question", choices=[f"UQ-{value:02d}" for value in range(1, 7)])
     reader.add_argument("--mode", choices=["reader", "explain"], default="reader")
     reader.add_argument("--review-root", type=Path)
+
+    health = sub.add_parser("health", help="Report local Living Library health")
+    health.add_argument("--format", choices=["text", "yaml"], default="text")
+    health.add_argument("--strict", action="store_true")
+    health.add_argument("--review-root", type=Path)
+
+    snapshot = sub.add_parser(
+        "source-snapshot", help="Capture a read-only public Are.na source snapshot"
+    )
+    snapshot.add_argument("--user", default="nexah-scarabaeus1031")
+    snapshot.add_argument("--output", type=Path)
     return parser
 
 
@@ -120,6 +135,26 @@ def main(argv: list[str] | None = None) -> int:
             _json(overlay.answer(args.question, mode=args.mode))
             return 0
 
+        if args.command == "health":
+            report = build_health(registry, review_root=args.review_root)
+            print(dump_yaml(report) if args.format == "yaml" else render_health_text(report))
+            return 1 if args.strict and report["failures"] else 0
+
+        if args.command == "source-snapshot":
+            checked = datetime.now(timezone.utc).isoformat(timespec="seconds")
+            snapshot = build_source_snapshot(
+                registry,
+                ArenaClient.from_environment(),
+                user_slug=args.user,
+                observed_at=checked,
+            )
+            output = args.output or (
+                default_review_root() / "source_snapshots" / f"arena-{checked[:10]}.yaml"
+            )
+            write_source_snapshot(snapshot, output)
+            _json({"snapshot": str(output), "summary": snapshot["summary"]})
+            return 0
+
         queries = OrientationQueries(registry)
         if args.command == "reading-path":
             _json(queries.reading_path(args.audience))
@@ -141,6 +176,6 @@ def main(argv: list[str] | None = None) -> int:
                 ]
             )
         return 0
-    except (RegistryError, ArenaError, ReaderOverlayError) as exc:
+    except (RegistryError, ArenaError, ReaderOverlayError, OperationError) as exc:
         print(str(exc), file=sys.stderr)
         return 2
