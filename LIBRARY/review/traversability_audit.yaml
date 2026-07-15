@@ -1,0 +1,134 @@
+schema_version: "1.0"
+review_stage: reader_orientation_traversability
+review_status: observed
+observed_at: "2026-07-15"
+surface: public_arena_channel_contents
+policy:
+  writes_to_arena: false
+  allocates_ids: false
+  modifies_registry: false
+  clickable_means: direct_public_channel_connection
+summary:
+  journeys: 3
+  transitions: 15
+  clickable_present: 1
+  clickable_missing: 14
+evidence:
+  method: read_only_arena_api_and_public_interface_walkthrough
+  api: "GET https://api.are.na/v3/channels/{channel_id}/contents"
+  prior_walkthrough: LIBRARY/review/HUMAN_WALKTHROUGH_FINDINGS.md
+journeys:
+  - id: RJ-01
+    name: Beginner
+    transitions:
+      - from: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
+        to: {arena_channel_id: 5404615, title: "THE VISITOR’S GUIDE"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: present
+        visible_link_source: public Channel connection in START
+        reader_friction: none_at_transition
+        recommended_manual_action: retain_and_label_as_primary_entry
+      - from: {arena_channel_id: 5404615, title: "THE VISITOR’S GUIDE"}
+        to: {arena_channel_id: 5421517, title: "THE LANGUAGE BOOK"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: reader_must_return_to_search
+        recommended_manual_action: add_manual_continue_channel_connection
+      - from: {arena_channel_id: 5421517, title: "THE LANGUAGE BOOK"}
+        to: {arena_channel_id: 5442781, title: "GEOMETRIA NOVA"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: pedagogical_sequence_is_not_walkable
+        recommended_manual_action: add_manual_continue_channel_connection
+      - from: {arena_channel_id: 5442781, title: "GEOMETRIA NOVA"}
+        to: {arena_channel_id: 5426966, title: "THE LANGUAGE ATLAS"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: conceptual_model_does_not_route_to_visual_map
+        recommended_manual_action: add_manual_continue_channel_connection
+      - from: {arena_channel_id: 5426966, title: "THE LANGUAGE ATLAS"}
+        to: {arena_channel_id: 5391199, title: "THE OPERATOR’S HANDBOOK"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: visual_map_does_not_route_to_practice
+        recommended_manual_action: add_manual_continue_channel_connection
+  - id: RJ-02
+    name: Builder
+    transitions:
+      - from: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
+        to: {arena_channel_id: 5442721, title: "THE OPERATOR"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: builder_entry_is_not_directly_walkable
+        recommended_manual_action: add_manual_builder_path_channel_connection
+      - from: {arena_channel_id: 5442721, title: "THE OPERATOR"}
+        to: {arena_channel_id: 5393574, title: "THE OPERATOR MAP"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: foundation_does_not_route_to_bridge_map
+        recommended_manual_action: add_manual_continue_channel_connection
+      - from: {arena_channel_id: 5393574, title: "THE OPERATOR MAP"}
+        to: {arena_channel_id: 5391199, title: "THE OPERATOR’S HANDBOOK"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: bridge_map_does_not_route_to_practice
+        recommended_manual_action: add_manual_continue_channel_connection
+      - from: {arena_channel_id: 5391199, title: "THE OPERATOR’S HANDBOOK"}
+        to: {arena_channel_id: 5386766, title: "THE CARTOGRAPHY LABORATORY"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: practice_does_not_route_to_documented_laboratory
+        recommended_manual_action: add_manual_continue_channel_connection
+      - from: {arena_channel_id: 5386766, title: "THE CARTOGRAPHY LABORATORY"}
+        to: {arena_channel_id: 5413103, title: "LIBRARYBOOK"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: laboratory_does_not_route_to_synthesis
+        recommended_manual_action: add_manual_continue_channel_connection
+  - id: RJ-03
+    name: Research
+    transitions:
+      - from: {arena_channel_id: 5415765, title: "FIELD ATLAS I — WATER"}
+        to: {arena_channel_id: 5404576, title: "FIELD ATLAS II — THE ARCHITECTURE OF AGENCY"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: confirmed_series_order_is_not_walkable
+        recommended_manual_action: add_manual_next_volume_channel_connection
+      - from: {arena_channel_id: 5404576, title: "FIELD ATLAS II — THE ARCHITECTURE OF AGENCY"}
+        to: {arena_channel_id: 5386781, title: "FIELD ATLAS III — MORPHOLOGY"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: confirmed_series_order_is_not_walkable
+        recommended_manual_action: add_manual_next_volume_channel_connection
+      - from: {arena_channel_id: 5386781, title: "FIELD ATLAS III — MORPHOLOGY"}
+        to: {arena_channel_id: 5217666, title: "NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION"}
+        conceptual_status: confirmed_bridge_hypothesis
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: morphology_to_formal_geometry_bridge_is_invisible
+        recommended_manual_action: add_manual_bridge_channel_connection
+      - from: {arena_channel_id: 5217666, title: "NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION"}
+        to: {arena_channel_id: 5203312, title: "NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: bridge_work_does_not_route_to_formal_research
+        recommended_manual_action: add_manual_continue_channel_connection
+      - from: {arena_channel_id: 5203312, title: "NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY"}
+        to: {arena_channel_id: 5442532, title: "THE LIVING EQUATION — An Atlas of Orientation"}
+        conceptual_status: confirmed_curated_path
+        clickable_status: missing
+        visible_link_source: none_observed
+        reader_friction: formal_research_does_not_route_to_synthesis
+        recommended_manual_action: add_manual_continue_channel_connection

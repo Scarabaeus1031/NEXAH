@@ -12,6 +12,65 @@ from .registry import Registry, project_root
 QUESTION_IDS = {f"UQ-{value:02d}" for value in range(1, 7)}
 MODES = {"reader", "explain"}
 
+ORIENTATIONS = {
+    "UQ-01": "A good place to begin:",
+    "UQ-02": "Follow water from a concrete field study into wider patterns:",
+    "UQ-03": "There is no single required sequel; choose the branch that helps you next:",
+    "UQ-04": "Transition appears in two different evidence groups:",
+    "UQ-05": "Begin with one thematic Series, then use two companion maps:",
+    "UQ-06": "A small, deliberate cross-section of the Library:",
+}
+
+ROLES = {
+    "UQ-01": ["Starting point", "Vocabulary", "Foundation", "Visual map", "Practice"],
+    "UQ-02": ["Water", "Agency", "Morphology"],
+    "UQ-03": [
+        "Learn the language",
+        "Practice the operators",
+        "Navigate the map",
+        "See the laboratory",
+        "Enter the synthesis",
+    ],
+    "UQ-06": ["Visual Work", "Field Atlas", "Handbook", "Unexpected connection"],
+}
+
+ADDITIONS = {
+    "entry": "A human-scale entrance to the Library and its way of reading.",
+    "learning": "The vocabulary and visual grammar used by later Works.",
+    "foundation": "A foundation model that connects the Library’s recurring concepts.",
+    "navigation": "A visual map for moving between concepts and scales.",
+    "practice": "A practical way to recognize and apply recurring operations.",
+    "research": "A research perspective grounded in a specific field or transition.",
+    "reference": "A stable reference map that can be revisited while building.",
+    "documentation": "A view into the Library’s documented research environment.",
+    "synthesis": "A wider synthesis that connects several Library branches.",
+    "meta_navigation": "A map of how different atlases and navigation layers relate.",
+}
+
+WHY_THIS = {
+    "Starting point": "It explains how to enter and explore the Library.",
+    "Vocabulary": "It introduces the vocabulary used by later Works.",
+    "Foundation": "It gathers that vocabulary into a larger foundation model.",
+    "Visual map": "It turns the language into a navigable visual structure.",
+    "Practice": "It helps the reader apply the recurring operations.",
+    "Water": "It is the Library’s direct field study of water.",
+    "Agency": "It continues the confirmed Field Atlas sequence beyond water.",
+    "Morphology": "It follows the Field Atlas sequence into recurring forms across systems.",
+    "Learn the language": "It provides a learning branch after the dense foundation model.",
+    "Practice the operators": "It provides a practical branch after the foundation model.",
+    "Navigate the map": "It provides a visual navigation branch after the foundation model.",
+    "See the laboratory": "It shows the documented environment in which the system is developed.",
+    "Enter the synthesis": "It offers the large synthesis without making it the first sequel.",
+    "Confirmed Operator reference": "Transition is explicitly assigned to this Work in the Registry.",
+    "Description match": "The public description contains the word Transition.",
+    "Primary thematic Series": "It is the confirmed editorial sequence centered on orientation.",
+    "Companion Work": "It offers a complementary map for the navigation theme.",
+    "Visual Work": "It opens discovery through a visual synthesis.",
+    "Field Atlas": "It grounds discovery in a specific field study.",
+    "Handbook": "It adds a practical Work to the selection.",
+    "Unexpected connection": "It changes scale from external maps to the inner observer.",
+}
+
 
 class ReaderOverlayError(RuntimeError):
     pass
@@ -85,8 +144,12 @@ class ReaderOverlay:
         if len(self.records) != len(self.classification.get("records", [])):
             raise ReaderOverlayError("Duplicate Arena IDs in Proposal classification")
         for record in self.records.values():
-            if record["classification_state"] == "proposed" and record.get("registered_entity_id"):
-                raise ReaderOverlayError("Proposal record may not resolve to a canonical NEXAH ID")
+            if record["classification_state"] == "proposed" and record.get(
+                "registered_entity_id"
+            ):
+                raise ReaderOverlayError(
+                    "Proposal record may not resolve to a canonical NEXAH ID"
+                )
 
     def answer(self, question_id: str, *, mode: str = "reader") -> dict[str, Any]:
         if question_id not in QUESTION_IDS:
@@ -100,33 +163,30 @@ class ReaderOverlay:
             items = self._navigation_items(question, mode)
         else:
             items = self._configured_items(question, mode)
-        if question_id == "UQ-01":
-            if len(items) != 5 or any(item.get("object_family") == "navigation" for item in items):
-                raise ReaderOverlayError("UQ-01 must return exactly five Works")
+        if question_id == "UQ-01" and len(items) != 5:
+            raise ReaderOverlayError("UQ-01 must return exactly five Works")
+        positioned = [{"position": index, **item} for index, item in enumerate(items, 1)]
         return {
             "question_id": question_id,
             "prompt": question["prompt"],
             "mode": mode,
-            "items": [{"position": index, **item} for index, item in enumerate(items, 1)],
-            "notice": self._notice(items),
+            "orientation": ORIENTATIONS[question_id],
+            "items": positioned,
+            "groups": self._groups(question_id, positioned),
+            "notice": self._notice(positioned),
         }
 
-    def _configured_items(self, question: dict[str, Any], mode: str) -> list[dict[str, Any]]:
-        slots = {
-            "UQ-01": ["entry", "learning", "foundation", "navigation", "practice"],
-            "UQ-02": ["field", "field", "field"],
-            "UQ-03": ["learn", "practice", "navigate", "document", "synthesize"],
-            "UQ-06": ["visual", "field_atlas", "handbook", "unexpected"],
-        }.get(question["id"], [])
+    def _configured_items(
+        self, question: dict[str, Any], mode: str
+    ) -> list[dict[str, Any]]:
+        roles = ROLES.get(question["id"], [])
         return [
             self._entity_item(
                 self.records[result["arena_channel_id"]],
                 mode=mode,
-                note=self._note(
-                    question["id"], index, slots[index] if index < len(slots) else None
-                ),
+                guidance=self._guidance(question["id"], index),
+                role=roles[index] if index < len(roles) else "Recommendation",
                 evidence=self._configured_evidence(question, result),
-                curatorial_slot=slots[index] if index < len(slots) else None,
             )
             for index, result in enumerate(question.get("expected_results", []))
         ]
@@ -137,7 +197,8 @@ class ReaderOverlay:
             self._canonical_item(
                 entity,
                 mode=mode,
-                note="Transition is explicitly curated for this Work.",
+                role="Confirmed Operator reference",
+                guidance="Transition is explicitly curated for this Work.",
                 evidence=[
                     {
                         "class": "canonical_operator_reference",
@@ -145,22 +206,31 @@ class ReaderOverlay:
                         "operator_id": operator_id,
                     }
                 ],
+                group="Canonical Operator references",
             )
-            for entity in sorted(self.registry.entities.values(), key=lambda value: value["id"])
+            for entity in sorted(
+                self.registry.entities.values(), key=lambda value: value["id"]
+            )
             if operator_id in entity.get("core_operator_refs", [])
         ]
         inferred: list[dict[str, Any]] = []
         for channel_id, record in sorted(self.records.items()):
-            if record["classification_state"] != "proposed" or record["object_family"] != "work":
+            if (
+                record["classification_state"] != "proposed"
+                or record["object_family"] != "work"
+            ):
                 continue
-            description = self.discovery_records.get(channel_id, {}).get("current_description", "")
+            description = self.discovery_records.get(channel_id, {}).get(
+                "current_description", ""
+            )
             if not re.search(r"\btransition(?:s|al)?\b", description, re.I):
                 continue
             inferred.append(
                 self._entity_item(
                     record,
                     mode=mode,
-                    note=(
+                    role="Description match",
+                    guidance=(
                         "Its public description mentions Transition; Operator use is not "
                         "yet confirmed."
                     ),
@@ -172,48 +242,58 @@ class ReaderOverlay:
                         }
                     ],
                     state="inferred",
+                    group="Inferred description matches",
                 )
             )
         return canonical + inferred
 
-    def _navigation_items(self, question: dict[str, Any], mode: str) -> list[dict[str, Any]]:
+    def _navigation_items(
+        self, question: dict[str, Any], mode: str
+    ) -> list[dict[str, Any]]:
         series_name = question["expected_series"][0]
         series = next(
             value for value in self.editorial["series"] if value["series"] == series_name
         )
         if series["review_state"] != "confirmed":
             raise ReaderOverlayError(f"Series {series_name} is not human-confirmed")
-        series_item: dict[str, Any] = {
-            "title": series_name,
-            "state": "proposal",
-            "object_family": "navigation",
-            "note": "Begin with its confirmed four-volume sequence.",
-        }
-        if mode == "explain":
-            series_item.update(
-                {
-                    "reference": f"series:{series_name}",
-                    "evidence": [
-                        {
-                            "class": "confirmed_series",
-                            "source": "LIBRARY/review/editorial_sequence_review.yaml",
-                            "review_state": series["review_state"],
-                        }
-                    ],
-                    "sequence": [member["title"] for member in series["ordered_members"]],
-                }
-            )
+        evidence = [
+            {
+                "class": "confirmed_series",
+                "source": "LIBRARY/review/editorial_sequence_review.yaml",
+                "review_state": series["review_state"],
+            }
+        ]
+        series_item = self._format_item(
+            title=series_name,
+            state="proposal",
+            role="Primary thematic Series",
+            guidance="Begin with its confirmed four-volume orientation sequence.",
+            mode=mode,
+            function="navigation",
+            evidence=evidence,
+            reference=f"series:{series_name}",
+            technical={
+                "type": "series",
+                "form": "editorial_sequence",
+                "function": "navigation",
+                "publication_status": "proposed",
+            },
+            sequence=[member["title"] for member in series["ordered_members"]],
+            group="Primary thematic Series",
+        )
         companions = [
             self._entity_item(
                 self.records[result["arena_channel_id"]],
                 mode=mode,
-                note="Use this as a complementary navigation map.",
+                role="Companion Work",
+                guidance="Use this as a complementary navigation map.",
                 evidence=[
                     {
                         "class": "curated_reader_companion",
                         "source": "LIBRARY/review/reader_journey_review.yaml",
                     }
                 ],
+                group="Companion Works",
             )
             for result in question.get("expected_companions", [])
         ]
@@ -224,66 +304,125 @@ class ReaderOverlay:
         entity: dict[str, Any],
         *,
         mode: str,
-        note: str,
+        role: str,
+        guidance: str,
         evidence: list[dict[str, Any]],
+        group: str | None = None,
     ) -> dict[str, Any]:
-        item = {
-            "title": entity["canonical_title"],
-            "state": "canonical",
-            "object_family": entity["object_family"],
-            "note": note,
-        }
-        if mode == "explain":
-            item.update(
-                {
-                    "reference": entity["id"],
-                    "type": entity["type"],
-                    "form": entity["form"],
-                    "library_function": entity["library_function"],
-                    "publication_status": entity["publication_status"],
-                    "evidence": evidence,
-                }
-            )
-        return item
+        return self._format_item(
+            title=entity["canonical_title"],
+            state="canonical",
+            role=role,
+            guidance=guidance,
+            mode=mode,
+            function=entity["library_function"],
+            evidence=evidence,
+            reference=entity["id"],
+            technical={
+                "type": entity["type"],
+                "form": entity["form"],
+                "function": entity["library_function"],
+                "publication_status": entity["publication_status"],
+            },
+            group=group,
+        )
 
     def _entity_item(
         self,
         record: dict[str, Any],
         *,
         mode: str,
-        note: str,
+        role: str,
+        guidance: str,
         evidence: list[dict[str, Any]],
         state: str | None = None,
-        curatorial_slot: str | None = None,
+        group: str | None = None,
     ) -> dict[str, Any]:
         if record["classification_state"] == "canonical":
             entity = self.registry.entity(record["registered_entity_id"])
-            item = self._canonical_item(entity, mode=mode, note=note, evidence=evidence)
-        else:
-            item = {
-                "title": record["proposed_canonical_title"],
-                "state": state or "proposal",
-                "object_family": record["object_family"],
-                "note": note,
+            return self._canonical_item(
+                entity,
+                mode=mode,
+                role=role,
+                guidance=guidance,
+                evidence=evidence,
+                group=group,
+            )
+        return self._format_item(
+            title=record["proposed_canonical_title"],
+            state=state or "proposal",
+            role=role,
+            guidance=guidance,
+            mode=mode,
+            function=record["library_function"],
+            evidence=evidence,
+            reference=f"arena:{record['arena_channel_id']}",
+            technical={
+                "type": record["type"],
+                "form": record["form"],
+                "function": record["library_function"],
+                "publication_status": record["publication_status"],
+            },
+            group=group,
+        )
+
+    @staticmethod
+    def _format_item(
+        *,
+        title: str,
+        state: str,
+        role: str,
+        guidance: str,
+        mode: str,
+        function: str,
+        evidence: list[dict[str, Any]],
+        reference: str,
+        technical: dict[str, Any],
+        group: str | None = None,
+        sequence: list[str] | None = None,
+    ) -> dict[str, Any]:
+        item: dict[str, Any] = {
+            "title": title,
+            "state": state,
+            "role": role,
+            "guidance": guidance,
+        }
+        if group:
+            item["section"] = group
+        if mode == "explain":
+            source_labels = {
+                "curated_reader_journey": "human-confirmed Reader Journey",
+                "canonical_operator_reference": "Canonical Operator Registry",
+                "inferred_description_match": "public description match",
+                "confirmed_series": "human-confirmed editorial sequence",
+                "curated_reader_companion": "human-curated thematic companion",
             }
-            if mode == "explain":
-                item.update(
-                    {
-                        "reference": f"arena:{record['arena_channel_id']}",
-                        "type": record["type"],
-                        "form": record["form"],
-                        "library_function": record["library_function"],
-                        "publication_status": record["publication_status"],
-                        "evidence": evidence,
-                    }
-                )
-        if curatorial_slot:
-            item["curatorial_slot"] = curatorial_slot
+            primary_class = evidence[0]["class"]
+            item.update(
+                {
+                    "explanation": {
+                        "why_this_work": WHY_THIS.get(
+                            role, "It has a distinct editorial purpose in this answer."
+                        ),
+                        "what_it_adds": ADDITIONS.get(
+                            function, "A distinct perspective within the curated path."
+                        ),
+                        "why_here": guidance,
+                        "state_note": ReaderOverlay._state_note(state),
+                        "recommendation_source": source_labels.get(
+                            primary_class, primary_class.replace("_", " ")
+                        ),
+                    },
+                    "technical": {"reference": reference, **technical},
+                    "evidence": evidence,
+                }
+            )
+            if sequence is not None:
+                item["editorial_sequence"] = sequence
         return item
 
     def _configured_evidence(
-        self,
-        question: dict[str, Any], result: dict[str, Any]
+        self, question: dict[str, Any], result: dict[str, Any]
     ) -> list[dict[str, Any]]:
         evidence = [
             {
@@ -317,12 +456,12 @@ class ReaderOverlay:
         return evidence
 
     @staticmethod
-    def _note(question_id: str, index: int, slot: str | None) -> str:
-        notes = {
+    def _guidance(question_id: str, index: int) -> str:
+        guidance = {
             "UQ-01": [
-                "Begin with how the Library can be navigated.",
-                "Learn the vocabulary before entering the complete model.",
-                "See how the vocabulary becomes a foundation model.",
+                "Learn how the Library is meant to be explored.",
+                "Acquire the basic vocabulary before entering the larger model.",
+                "See how that vocabulary becomes a foundation model.",
                 "Move from concepts into a visual map.",
                 "Turn the language into observable practice.",
             ],
@@ -332,21 +471,55 @@ class ReaderOverlay:
                 "Compare recurring morphology across systems.",
             ],
             "UQ-03": [
-                "Learn the language used by the model.",
+                "Return to the language if the foundation model feels dense.",
                 "Practice the recurring operations.",
                 "Navigate the model as a visual map.",
                 "See how the research environment is documented.",
-                "Enter the large working synthesis only after the earlier branches.",
+                "Enter the large working synthesis after the earlier branches.",
             ],
             "UQ-06": [
-                "A visual synthesis of orientation.",
-                "A grounded Field Atlas beginning with water.",
-                "A practical companion for recurring operations.",
-                "An unexpected turn toward the observer’s inner landscape.",
+                "Begin with a visual synthesis of orientation.",
+                "Ground the selection in a Field Atlas about water.",
+                "Keep a practical companion for recurring operations.",
+                "Turn unexpectedly toward the observer’s inner landscape.",
             ],
         }
-        values = notes.get(question_id, [])
-        return values[index] if index < len(values) else (slot or "Curated result.")
+        values = guidance.get(question_id, [])
+        return values[index] if index < len(values) else "Follow this curated result."
+
+    @staticmethod
+    def _state_note(state: str) -> str:
+        return {
+            "canonical": "This Work has a stable identity in the Canonical Registry.",
+            "proposal": "This is a reviewed Proposal and has no canonical NEXAH identity.",
+            "inferred": (
+                "This is a description match, not a confirmed Operator annotation."
+            ),
+        }[state]
+
+    @staticmethod
+    def _groups(question_id: str, items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        if question_id == "UQ-04":
+            definitions = [
+                "Canonical Operator references",
+                "Inferred description matches",
+            ]
+        elif question_id == "UQ-05":
+            definitions = [
+                "Primary thematic Series",
+                "Companion Works",
+            ]
+        else:
+            return []
+        return [
+            {
+                "label": label,
+                "positions": [
+                    item["position"] for item in items if item.get("section") == label
+                ],
+            }
+            for label in definitions
+        ]
 
     @staticmethod
     def _notice(items: list[dict[str, Any]]) -> str | None:

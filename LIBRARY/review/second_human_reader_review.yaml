@@ -1,0 +1,152 @@
+schema_version: "1.0"
+review_stage: second_human_reader_review
+review_status: awaiting_human_decision
+policy:
+  fixed_question_set: [UQ-01, UQ-02, UQ-03, UQ-04, UQ-05, UQ-06]
+  writes_to_arena: false
+  allocates_ids: false
+  modifies_registry: false
+  allowed_human_decisions: [accept, revise, defer]
+questions:
+  - id: UQ-01
+    reader_question: I am new. Which five Works should I read?
+    reader_mode:
+      orientation: "A good place to begin:"
+      items:
+        - {title: "THE VISITOR’S GUIDE", state: canonical, role: Starting point, guidance: Learn how the Library is meant to be explored.}
+        - {title: "THE LANGUAGE BOOK", state: canonical, role: Vocabulary, guidance: Acquire the basic vocabulary before entering the larger model.}
+        - {title: "GEOMETRIA NOVA", state: canonical, role: Foundation, guidance: See how that vocabulary becomes a foundation model.}
+        - {title: "THE LANGUAGE ATLAS", state: canonical, role: Visual map, guidance: Move from concepts into a visual map.}
+        - {title: "THE OPERATOR’S HANDBOOK", state: canonical, role: Practice, guidance: Turn the language into observable practice.}
+    explain_mode:
+      why_this_answer: Human-confirmed Beginner Journey with START excluded from the five-Work count.
+      placement_logic: entry → learning → foundation → navigation → practice
+      evidence_class: curated_reader_journey
+      source: LIBRARY/review/reader_journey_review.yaml
+    changed_from_canonical_baseline: Exactly five Works in pedagogical order; no score ordering.
+    remaining_reader_friction: Only START to Visitor’s Guide is directly clickable.
+    human_decision: null
+  - id: UQ-02
+    reader_question: I am interested in water. Which three books should I read?
+    reader_mode:
+      orientation: "Follow water from a concrete field study into wider patterns:"
+      items:
+        - {title: "FIELD ATLAS I — WATER", state: canonical, role: Water, guidance: Begin with water as a landscape of transition.}
+        - {title: "FIELD ATLAS II — THE ARCHITECTURE OF AGENCY", state: proposal, role: Agency, guidance: Continue from material transition into agency.}
+        - {title: "FIELD ATLAS III — MORPHOLOGY", state: proposal, role: Morphology, guidance: Compare recurring morphology across systems.}
+    explain_mode:
+      why_this_answer: The confirmed Field Atlas sequence broadens from water into agency and morphology.
+      state_note: Only Volume I is canonical; Volumes II and III remain Proposals.
+      evidence_class: confirmed_series
+      source: LIBRARY/review/editorial_sequence_review.yaml
+    changed_from_canonical_baseline: Unsupported query becomes a three-Work ordered answer with visible Proposal state.
+    remaining_reader_friction: The next-volume links are missing; Morphology has editorial residue.
+    human_decision: null
+  - id: UQ-03
+    reader_question: I know GEOMETRIA NOVA. What comes next?
+    reader_mode:
+      orientation: "There is no single required sequel; choose the branch that helps you next:"
+      items:
+        - {title: "THE LANGUAGE BOOK", state: canonical, role: Learn the language, guidance: Return to the language if the foundation model feels dense.}
+        - {title: "THE OPERATOR’S HANDBOOK", state: canonical, role: Practice the operators, guidance: Practice the recurring operations.}
+        - {title: "THE LANGUAGE ATLAS", state: canonical, role: Navigate the map, guidance: Navigate the model as a visual map.}
+        - {title: "THE CARTOGRAPHY LABORATORY", state: canonical, role: See the laboratory, guidance: See how the research environment is documented.}
+        - {title: "LIBRARYBOOK", state: canonical, role: Enter the synthesis, guidance: Enter the large working synthesis after the earlier branches.}
+    explain_mode:
+      why_this_answer: Meaningful reader branches replace one mandatory sequel and raw score ranking.
+      placement_logic: learning and practice before documentation and synthesis
+      evidence_class: curated_reader_journey
+      source: LIBRARY/review/reader_journey_review.yaml
+    changed_from_canonical_baseline: Librarybook moves from first to last; branch labels become explicit.
+    remaining_reader_friction: The branches are not direct public links from Geometria Nova.
+    human_decision: null
+  - id: UQ-04
+    reader_question: Show every Work using Transition.
+    reader_mode:
+      orientation: "Transition appears in two different evidence groups:"
+      groups:
+        - label: Canonical Operator references
+          state: canonical
+          count: 8
+          titles:
+            - GEOMETRIA NOVA
+            - THE OPERATOR’S HANDBOOK
+            - THE LANGUAGE BOOK
+            - THE LANGUAGE ATLAS
+            - FIELD ATLAS I — WATER
+            - THE CARTOGRAPHY LABORATORY
+            - THE OPERATOR LIBRARY
+            - THE ATLAS OF ATLASES
+        - label: Inferred description matches
+          state: inferred
+          count: 24
+          titles:
+            - "NEXAH XV ATLAS — Volume I: Observation, Flow & Transition"
+            - "NEXAH XV ATLAS — Volume II: Structure, Operators & Observer Geometry"
+            - NEXAH XV COMPLEXA — Cartographies of Transition
+            - NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY
+            - NEXAH MATHEMATICA II — DRIFT FIELDS & RECURSIVE STRUCTURES
+            - NEXAH MATHEMATICA III — RECURSIVE OPERATORS & STRUCTURAL NAVIGATION
+            - NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+            - NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+            - NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION
+            - NEXAH XV ATLAS — TWO SIDES OF ONE MEDAL
+            - NEXAH XV ATLAS — RELATIONAL CARTOGRAPHY OF HUMAN REALITY
+            - LEONARDO TRANSLATIONS — THE ROOM THAT LOOKS BACK
+            - VOLUME V — MANY MAPS. ONE WORLD.
+            - VOLUME II — PATHFINDERS
+            - DESIGNING ORIENTATION — WHITEBOARD SERIES
+            - NEXAH PATHFINDER — WHITEBOARD SERIES
+            - THE DUAL SPINE — Prime Orientation — WHITEBOARD SERIES
+            - NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation
+            - ODYSSEY 2°4° — The Journey Through Worlds & Observers
+            - THE CATHEDRAL OF RESONANCE — WHITEBOARD SERIES
+            - FIELD ATLAS III — MORPHOLOGY
+            - FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+            - THE LANGUAGE BOOK II
+            - THE OPERATOR
+    explain_mode:
+      canonical_evidence: {class: canonical_operator_reference, source: LIBRARY/registry/entities}
+      inferred_evidence: {class: inferred_description_match, source: LIBRARY/review/full_library_discovery.yaml}
+      state_note: Inferred matches are not confirmed Operator occurrences.
+    changed_from_canonical_baseline: Adds 24 discoverable candidates without changing the eight canonical references.
+    remaining_reader_friction: Two distinct Mathematica IV Channels share a title; identity remains unresolved.
+    human_decision: null
+  - id: UQ-05
+    reader_question: I am interested in navigation. Which Series should I follow?
+    reader_mode:
+      orientation: "Begin with one thematic Series, then use two companion maps:"
+      items:
+        - title: Orientation Architecture
+          state: proposal
+          role: Primary thematic Series
+          editorial_sequence:
+            - ORIENTATION ATLAS — VOLUME I
+            - ORIENTATION DESIGN — VOLUME II
+            - ORIENTATION THEORY — VOLUME III
+            - THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+        - {title: "THE LANGUAGE ATLAS", state: canonical, role: Companion Work}
+        - {title: "THE ATLAS OF ATLASES", state: canonical, role: Companion Work}
+    explain_mode:
+      why_this_answer: A confirmed editorial sequence provides the thematic entrance; canonical atlases remain companions.
+      evidence_classes: [confirmed_series, curated_reader_companion]
+      sources: [LIBRARY/review/editorial_sequence_review.yaml, LIBRARY/review/reader_journey_review.yaml]
+    changed_from_canonical_baseline: Adds a thematic Series entrance and distinguishes companions from members.
+    remaining_reader_friction: The four-volume sequence is not a direct public walking path.
+    human_decision: null
+  - id: UQ-06
+    reader_question: I do not know what I am looking for. Surprise me.
+    reader_mode:
+      orientation: "A small, deliberate cross-section of the Library:"
+      items:
+        - {title: "THE LIVING EQUATION — An Atlas of Orientation", state: proposal, role: Visual Work}
+        - {title: "FIELD ATLAS I — WATER", state: canonical, role: Field Atlas}
+        - {title: "THE OPERATOR’S HANDBOOK", state: canonical, role: Handbook}
+        - {title: "THE INNER WORLD", state: proposal, role: Unexpected connection}
+    explain_mode:
+      why_this_answer: Four fixed diversity roles create a reproducible cross-section rather than a random answer.
+      evidence_classes: [curated_reader_journey, curated_diversity_slot]
+      source: LIBRARY/review/reader_journey_review.yaml
+    changed_from_canonical_baseline: Unsupported discovery query becomes deterministic and intentionally diverse.
+    remaining_reader_friction: The answer does not yet route the reader back into a stable path.
+    human_decision: null
