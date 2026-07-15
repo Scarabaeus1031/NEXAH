@@ -8,7 +8,9 @@ from pathlib import Path
 from typing import Any
 
 from .arena import ArenaClient, ArenaError, compare_all, compare_entity
+from .cleanup import cleanup_status, render_cleanup_text
 from .discovery import build_discovery, write_discovery_files
+from .editorial import render_editorial_diff_text, run_editorial_diff
 from .health import build_health, render_health_text
 from .kernel import OrientationQueries, graph_to_mermaid
 from .operations import OperationError, default_review_root, dump_yaml
@@ -97,6 +99,18 @@ def build_parser() -> argparse.ArgumentParser:
     series = sub.add_parser("series-validate", help="Validate editorial Series structure")
     series.add_argument("--format", choices=["text", "yaml"], default="text")
     series.add_argument("--review-root", type=Path)
+
+    editorial = sub.add_parser(
+        "editorial-diff", help="Compare live public state with the verified snapshot"
+    )
+    editorial.add_argument("selector", nargs="?")
+    editorial.add_argument("--all", action="store_true")
+    editorial.add_argument("--format", choices=["text", "yaml"], default="text")
+    editorial.add_argument("--review-root", type=Path)
+
+    cleanup = sub.add_parser("cleanup-status", help="Report the local manual cleanup queue")
+    cleanup.add_argument("--format", choices=["text", "yaml"], default="text")
+    cleanup.add_argument("--review-root", type=Path)
     return parser
 
 
@@ -212,6 +226,29 @@ def main(argv: list[str] | None = None) -> int:
             report = validate_series(review_root=args.review_root)
             print(dump_yaml(report) if args.format == "yaml" else render_series_text(report))
             return 0 if report["status"] != "fail" else 1
+
+        if args.command == "editorial-diff":
+            if args.all == bool(args.selector):
+                raise OperationError(
+                    "editorial-diff requires exactly one selector or --all"
+                )
+            report = run_editorial_diff(
+                registry,
+                ArenaClient.from_environment(),
+                selector=None if args.all else args.selector,
+                review_root=args.review_root,
+            )
+            print(
+                dump_yaml(report)
+                if args.format == "yaml"
+                else render_editorial_diff_text(report)
+            )
+            return 0
+
+        if args.command == "cleanup-status":
+            report = cleanup_status(review_root=args.review_root)
+            print(dump_yaml(report) if args.format == "yaml" else render_cleanup_text(report))
+            return 0 if report["status"] == "pass" else 1
 
         queries = OrientationQueries(registry)
         if args.command == "reading-path":

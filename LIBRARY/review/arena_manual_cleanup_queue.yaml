@@ -1,0 +1,170 @@
+schema_version: "1.0"
+review_stage: phase_vii_manual_cleanup
+write_policy: read_only
+allowed_review_states: [pending, accepted, completed, deferred, rejected]
+policy:
+  stable_local_ids: true
+  renumbering_allowed: false
+  command_may_update_queue: false
+  automatic_arena_write_authorized: false
+items:
+  - id: ACQ-001
+    priority: P0
+    review_state: pending
+    action_type: entry_visibility
+    affected_channel: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
+    observed_problem: START is not privileged on the public Channels landing page.
+    reader_impact: A newcomer may never find the designed entrance.
+    proposed_manual_action: Keep START clearly named and add a visible profile or Library orientation link where available.
+    evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-01
+    automatic_write_authorized: false
+  - id: ACQ-002
+    priority: P0
+    review_state: pending
+    action_type: orientation_links
+    affected_channel: {arena_channel_id: 5404615, title: "THE VISITOR’S GUIDE"}
+    observed_problem: The Guide explains Library Rooms but contains no onward Channel connections.
+    reader_impact: It describes a route the reader cannot walk.
+    proposed_manual_action: Add an orientation group linking Language Book, Geometria Nova, Language Atlas, and Operator’s Handbook; mark Language Book as the beginner continuation.
+    evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-03
+    automatic_write_authorized: false
+  - id: ACQ-003
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5421517, title: "THE LANGUAGE BOOK"}
+    observed_problem: No direct transition to Geometria Nova.
+    reader_impact: The confirmed learning sequence breaks after vocabulary.
+    proposed_manual_action: "Add Continue → GEOMETRIA NOVA."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-01
+    automatic_write_authorized: false
+  - id: ACQ-004
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5442781, title: "GEOMETRIA NOVA"}
+    observed_problem: No direct transition to Language Atlas.
+    reader_impact: The foundation model does not lead into its visual map.
+    proposed_manual_action: "Add Continue → THE LANGUAGE ATLAS."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-01
+    automatic_write_authorized: false
+  - id: ACQ-005
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5426966, title: "THE LANGUAGE ATLAS"}
+    observed_problem: No direct transition to Operator’s Handbook.
+    reader_impact: The reader cannot move from navigation into practice.
+    proposed_manual_action: "Add Continue → THE OPERATOR’S HANDBOOK."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-01
+    automatic_write_authorized: false
+  - id: ACQ-006
+    priority: P1
+    review_state: pending
+    action_type: builder_entry_link
+    affected_channel: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
+    observed_problem: No Builder-path connection to Operator.
+    reader_impact: Builders have no visible thematic entrance.
+    proposed_manual_action: "Add Builder Path → THE OPERATOR without replacing the beginner entrance."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-02
+    automatic_write_authorized: false
+  - id: ACQ-007
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5442721, title: "THE OPERATOR"}
+    observed_problem: No direct transition to Operator Map.
+    reader_impact: The accessible visual bridge is hidden.
+    proposed_manual_action: "Add Continue → THE OPERATOR MAP."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-02
+    automatic_write_authorized: false
+  - id: ACQ-008
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5393574, title: "THE OPERATOR MAP"}
+    observed_problem: No direct transition to Operator’s Handbook.
+    reader_impact: The Map behaves like an endpoint instead of a bridge.
+    proposed_manual_action: "Add Continue → THE OPERATOR’S HANDBOOK."
+    evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-05
+    automatic_write_authorized: false
+  - id: ACQ-009
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5391199, title: "THE OPERATOR’S HANDBOOK"}
+    observed_problem: No main-path transition to Cartography Laboratory.
+    reader_impact: Practice does not lead into the documented research environment.
+    proposed_manual_action: "Add Continue → THE CARTOGRAPHY LABORATORY; retain Operator Library as a reference branch."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-02
+    automatic_write_authorized: false
+  - id: ACQ-010
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5386766, title: "THE CARTOGRAPHY LABORATORY"}
+    observed_problem: No transition to Librarybook.
+    reader_impact: The laboratory does not lead into the large synthesis.
+    proposed_manual_action: "Add Continue → LIBRARYBOOK with a working-synthesis note."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-02
+    automatic_write_authorized: false
+  - id: ACQ-011
+    priority: P1
+    review_state: pending
+    action_type: next_volume_link
+    affected_channel: {arena_channel_id: 5415765, title: "FIELD ATLAS I — WATER"}
+    observed_problem: No direct link to Volume II.
+    reader_impact: The confirmed Series order is not walkable.
+    proposed_manual_action: "Add Next Volume → FIELD ATLAS II."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-03
+    automatic_write_authorized: false
+  - id: ACQ-012
+    priority: P1
+    review_state: pending
+    action_type: next_volume_link
+    affected_channel: {arena_channel_id: 5404576, title: "FIELD ATLAS II — THE ARCHITECTURE OF AGENCY"}
+    observed_problem: No direct link to Volume III.
+    reader_impact: The confirmed Series order is not walkable.
+    proposed_manual_action: "Add Next Volume → FIELD ATLAS III."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-03
+    automatic_write_authorized: false
+  - id: ACQ-013
+    priority: P0
+    review_state: pending
+    action_type: description_cleanup
+    affected_channel: {arena_channel_id: 5386781, title: "FIELD ATLAS III — MORPHOLOGY"}
+    observed_problem: "The description ends with: Ich finde, das passt inzwischen sehr gut zur gesamten Reihe:"
+    reader_impact: Editorial residue interrupts the public Work.
+    proposed_manual_action: Remove only the stray fragment after confirming the intended final sentence.
+    evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-07
+    automatic_write_authorized: false
+  - id: ACQ-014
+    priority: P1
+    review_state: pending
+    action_type: bridge_link
+    affected_channel: {arena_channel_id: 5386781, title: "FIELD ATLAS III — MORPHOLOGY"}
+    observed_problem: No link to Operational Geometry.
+    reader_impact: The bridge from morphology into formal geometry is invisible.
+    proposed_manual_action: "Add Bridge → NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION."
+    evidence_source: HUMAN_WALKTHROUGH_FINDINGS.md#HW-06
+    automatic_write_authorized: false
+  - id: ACQ-015
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5217666, title: "NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION"}
+    observed_problem: No link to Mathematica I.
+    reader_impact: The bridge Work does not complete the domain transition.
+    proposed_manual_action: "Add Continue → NEXAH MATHEMATICA I."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-03
+    automatic_write_authorized: false
+  - id: ACQ-016
+    priority: P1
+    review_state: pending
+    action_type: continue_link
+    affected_channel: {arena_channel_id: 5203312, title: "NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY"}
+    observed_problem: No link to Living Equation.
+    reader_impact: Formal research does not route toward the synthesis destination.
+    proposed_manual_action: "Add Continue → THE LIVING EQUATION."
+    evidence_source: TRAVERSABILITY_AUDIT.md#RJ-03
+    automatic_write_authorized: false

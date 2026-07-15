@@ -19,14 +19,14 @@ Result: **PASS WITH EDITORIAL WARNINGS**
 - Snapshot: 71 public Channels, verified `2026-07-15T21:22:36+00:00`
 - Traversability: 1 of 15 curated transitions directly clickable
 - Series: 4 confirmed, 5 editorially unresolved
-- Structured cleanup queue: not yet available
+- Structured cleanup queue: 16 total, 16 open (3 P0, 13 P1)
 
 ## Editorial warnings
 
 1. Fourteen curated transitions are not directly clickable.
 2. Operator Series, Odyssey 2040, NEXAH Whiteboard Series, NEXAH Mathematica,
    and NEXAH XV Atlas remain editorially unresolved.
-3. Cleanup actions still need stable local keys and structured review states.
+3. Sixteen manual cleanup actions remain open.
 
 Warnings do not fail strict Health. Invalid Registry data, collapsed Proposal
 isolation, failed Reader Policies, changed fixed counts, or an Are.na write path

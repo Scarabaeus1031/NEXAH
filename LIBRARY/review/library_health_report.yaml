@@ -31,7 +31,18 @@ series:
     - NEXAH Mathematica
     - NEXAH XV Atlas
 cleanup:
-  status: unavailable
+  total: 16
+  open: 16
+  by_state:
+    accepted: 0
+    completed: 0
+    deferred: 0
+    pending: 16
+    rejected: 0
+  by_priority:
+    P0: 3
+    P1: 13
+    P2: 0
 safety:
   arena_write_policy: read_only
   arena_write_methods: []
@@ -39,5 +50,5 @@ safety:
 warnings:
   - 14 curated transitions are not directly clickable
   - 5 Series remain editorially unresolved
-  - structured cleanup queue unavailable
+  - 16 manual cleanup actions remain open
 failures: []

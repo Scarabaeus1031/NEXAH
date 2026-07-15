@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any
 
 from .arena import ArenaClient
+from .cleanup import cleanup_status
 from .operations import default_review_root, latest_snapshot, load_yaml
 from .reader import ReaderOverlay, ReaderOverlayError
 from .regression import run_reader_regression
@@ -100,18 +101,18 @@ def build_health(
             failures.append("source snapshot does not declare read_only observation")
 
     cleanup_path = root / "arena_manual_cleanup_queue.yaml"
-    cleanup = load_yaml(cleanup_path) if cleanup_path.exists() else None
-    if cleanup is None:
+    if not cleanup_path.exists():
         warnings.append("structured cleanup queue unavailable")
         cleanup_summary: dict[str, Any] = {"status": "unavailable"}
     else:
-        items = cleanup.get("items", [])
-        open_items = [
-            item for item in items if item.get("review_state") in {"pending", "accepted"}
-        ]
-        cleanup_summary = {"total": len(items), "open": len(open_items)}
-        if open_items:
-            warnings.append(f"{len(open_items)} manual cleanup actions remain open")
+        cleanup_report = cleanup_status(review_root=root)
+        if cleanup_report["errors"]:
+            failures.extend(f"Cleanup: {value}" for value in cleanup_report["errors"])
+        cleanup_summary = cleanup_report["summary"]
+        if cleanup_summary["open"]:
+            warnings.append(
+                f"{cleanup_summary['open']} manual cleanup actions remain open"
+            )
 
     arena_methods = {
         name for name in dir(ArenaClient) if not name.startswith("_") and callable(getattr(ArenaClient, name))
