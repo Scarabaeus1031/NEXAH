@@ -43,6 +43,13 @@ def _markdown_value(item: dict[str, Any], field: str) -> str:
 
 
 def _channel_description(channel: dict[str, Any]) -> str:
+    value = channel.get("description")
+    if isinstance(value, dict):
+        return str(value.get("plain") or value.get("markdown") or "").strip()
+    return str(value or "").strip()
+
+
+def _channel_description_markdown(channel: dict[str, Any]) -> str:
     return _markdown_value(channel, "description")
 
 
@@ -390,7 +397,7 @@ def build_editorial_plan(
         if live_channel.get("id") != channel_id:
             raise OperationError(f"Channel {channel_id} is unavailable")
         _assert_channel_matches_snapshot(live_channel, baseline, channel_id)
-        current = _channel_description(live_channel)
+        current = _channel_description_markdown(live_channel)
         fragment = operation["remove_exact"]
         if current.count(fragment) != 1:
             raise OperationError(
@@ -487,7 +494,7 @@ def apply_editorial_plan(
                 writer.move_connection(_connection_id(item), operation["movement"])
             elif kind == "update_description":
                 live = _response_data(reader.get_channel(channel_id))
-                if _channel_description(live) != operation["before"]:
+                if _channel_description_markdown(live) != operation["before"]:
                     raise OperationError(
                         f"Channel {channel_id} description changed before mutation; aborting"
                     )
@@ -498,7 +505,9 @@ def apply_editorial_plan(
             after_contents = reader.get_contents(channel_id)
             after_fingerprint = sequence_fingerprint(after_contents)
             if kind == "update_description":
-                verified = _channel_description(_response_data(reader.get_channel(channel_id)))
+                verified = _channel_description_markdown(
+                    _response_data(reader.get_channel(channel_id))
+                )
                 if verified != operation["after"]:
                     raise OperationError(f"Channel {channel_id} description verification failed")
                 if after_fingerprint != before_fingerprint:

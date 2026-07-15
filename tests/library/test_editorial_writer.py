@@ -268,6 +268,20 @@ class EditorialWriterTests(unittest.TestCase):
         with self.assertRaisesRegex(OperationError, "metadata changed"):
             build_editorial_plan(["ACQ-001"], self.reader(base), review_root=self.root)
 
+    def test_snapshot_plain_description_matches_live_markdown_rendering(self):
+        base = self.write_sources()
+        snapshot_path = self.root / "source_snapshots" / "arena-test.yaml"
+        snapshot = yaml.safe_load(snapshot_path.read_text(encoding="utf-8"))
+        snapshot["channels"][0]["description"] = "START"
+        snapshot_path.write_text(yaml.safe_dump(snapshot), encoding="utf-8")
+        reader = self.reader(base)
+        reader.channels[1]["description"] = {
+            "markdown": "**START**",
+            "plain": "START",
+        }
+        plan = build_editorial_plan(["ACQ-001"], reader, review_root=self.root)
+        self.assertEqual(["ACQ-001"], plan["accepted_actions"])
+
     def test_dry_run_is_stable_and_does_not_mutate(self):
         base = self.write_sources()
         reader = self.reader(base)
