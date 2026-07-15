@@ -16,6 +16,8 @@ from .reader import ReaderOverlay, ReaderOverlayError
 from .regression import run_reader_regression, render_reader_regression_text
 from .registry import Registry, RegistryError
 from .snapshot import build_source_snapshot, write_source_snapshot
+from .series import render_series_text, validate_series
+from .traversability import render_traversability_text, run_traversability
 
 
 def _json(value: Any) -> None:
@@ -80,6 +82,21 @@ def build_parser() -> argparse.ArgumentParser:
     )
     regression.add_argument("--format", choices=["text", "yaml"], default="text")
     regression.add_argument("--review-root", type=Path)
+
+    traversability = sub.add_parser(
+        "traversability", help="Inspect direct public Are.na journey transitions"
+    )
+    traversal_target = traversability.add_mutually_exclusive_group()
+    traversal_target.add_argument(
+        "--journey", choices=["beginner", "builder", "research"]
+    )
+    traversal_target.add_argument("--all", action="store_true")
+    traversability.add_argument("--format", choices=["text", "yaml"], default="text")
+    traversability.add_argument("--review-root", type=Path)
+
+    series = sub.add_parser("series-validate", help="Validate editorial Series structure")
+    series.add_argument("--format", choices=["text", "yaml"], default="text")
+    series.add_argument("--review-root", type=Path)
     return parser
 
 
@@ -177,6 +194,24 @@ def main(argv: list[str] | None = None) -> int:
                 else render_reader_regression_text(report)
             )
             return 0 if report["status"] == "pass" else 1
+
+        if args.command == "traversability":
+            report = run_traversability(
+                ArenaClient.from_environment(),
+                review_root=args.review_root,
+                journey=args.journey,
+            )
+            print(
+                dump_yaml(report)
+                if args.format == "yaml"
+                else render_traversability_text(report)
+            )
+            return 0
+
+        if args.command == "series-validate":
+            report = validate_series(review_root=args.review_root)
+            print(dump_yaml(report) if args.format == "yaml" else render_series_text(report))
+            return 0 if report["status"] != "fail" else 1
 
         queries = OrientationQueries(registry)
         if args.command == "reading-path":

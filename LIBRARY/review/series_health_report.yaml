@@ -1,0 +1,76 @@
+schema_version: "1.0"
+report_type: series_health
+status: pass_with_editorial_warnings
+summary:
+  total: 9
+  confirmed: 4
+  warnings: 17
+  failures: 0
+series:
+  - series: The Language Series
+    review_state: confirmed
+    sequence_mode: linear
+    status: pass
+    ordered_members: 3
+    unresolved_members: 0
+    associated_members: 1
+  - series: Field Atlas Series
+    review_state: confirmed
+    sequence_mode: linear
+    status: pass
+    ordered_members: 3
+    unresolved_members: 0
+    associated_members: 0
+  - series: Orientation Architecture
+    review_state: confirmed
+    sequence_mode: linear
+    status: warning
+    ordered_members: 4
+    unresolved_members: 0
+    warnings:
+      - four public/editorial title mismatches
+  - series: The Human Journey
+    review_state: confirmed
+    sequence_mode: linear
+    status: warning
+    ordered_members: 5
+    unresolved_members: 0
+    warnings:
+      - three public/editorial title mismatches
+  - series: Operator Series
+    review_state: reader_test_required
+    sequence_mode: curated_linear
+    status: warning
+    ordered_members: 4
+    unresolved_members: 0
+  - series: Odyssey 2040
+    review_state: deferred_growing_universe
+    sequence_mode: unordered_growing_universe
+    status: warning
+    ordered_members: 0
+    unresolved_members: 4
+    notes:
+      - intentionally unordered; no sequence enforced
+  - series: NEXAH Whiteboard Series
+    review_state: reader_test_required
+    sequence_mode: hub_and_curated_path
+    status: warning
+    ordered_members: 5
+    unresolved_members: 0
+  - series: NEXAH Mathematica
+    review_state: pending_identity_review
+    sequence_mode: linear_with_unresolved_slot
+    status: warning
+    ordered_members: 3
+    unresolved_members: 2
+    warnings:
+      - two distinct Mathematica IV Channels remain unresolved
+  - series: NEXAH XV Atlas
+    review_state: core_confirmed_satellites_deferred
+    sequence_mode: ordered_core_with_unordered_satellites
+    status: warning
+    ordered_members: 2
+    unresolved_members: 3
+    notes:
+      - ordered core 2; unordered satellites 3
+failures: []

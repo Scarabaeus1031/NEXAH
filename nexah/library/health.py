@@ -7,6 +7,7 @@ from .arena import ArenaClient
 from .operations import default_review_root, latest_snapshot, load_yaml
 from .reader import ReaderOverlay, ReaderOverlayError
 from .regression import run_reader_regression
+from .series import validate_series
 from .registry import Registry, RegistryError
 
 
@@ -75,10 +76,12 @@ def build_health(
     if missing_links:
         warnings.append(f"{missing_links} curated transitions are not directly clickable")
 
-    editorial = load_yaml(root / "editorial_sequence_review.yaml")
-    series = editorial.get("series", [])
-    confirmed_series = [item for item in series if item.get("review_state") == "confirmed"]
-    unresolved_series = [item for item in series if item.get("review_state") != "confirmed"]
+    series_report = validate_series(review_root=root)
+    if series_report["failures"]:
+        failures.extend(f"Series: {value}" for value in series_report["failures"])
+    unresolved_series = [
+        item for item in series_report["series"] if item["review_state"] != "confirmed"
+    ]
     if unresolved_series:
         warnings.append(f"{len(unresolved_series)} Series remain editorially unresolved")
 
@@ -140,9 +143,10 @@ def build_health(
         },
         "traversability": traversal_summary,
         "series": {
-            "confirmed": len(confirmed_series),
+            "confirmed": series_report["summary"]["confirmed"],
             "unresolved": len(unresolved_series),
-            "unresolved_names": [item.get("series") for item in unresolved_series],
+            "unresolved_names": [item["series"] for item in unresolved_series],
+            "validation_status": series_report["status"],
         },
         "cleanup": cleanup_summary,
         "safety": {
