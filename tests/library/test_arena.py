@@ -1,7 +1,8 @@
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
-from nexah.library.arena import compare_entity
+from nexah.library.arena import ArenaClient, compare_entity
 from nexah.library.registry import Registry
 
 
@@ -43,6 +44,29 @@ class ArenaComparisonTests(unittest.TestCase):
         self.assertEqual("stale", result["state"])
         self.assertEqual("member_count", result["differences"][0]["field"])
         self.assertIs(client.get_channel.__func__, original.__func__)
+
+    def test_user_channel_inventory_reads_every_page_and_filters_types(self):
+        pages = [
+            {
+                "data": [
+                    {"id": 1, "type": "Channel"},
+                    {"id": 2, "type": "Block"},
+                ],
+                "meta": {"has_more_pages": True},
+            },
+            {
+                "data": [{"id": 3, "type": "Channel"}],
+                "meta": {"has_more_pages": False},
+            },
+        ]
+        client = ArenaClient()
+        with patch.object(ArenaClient, "_get", side_effect=pages) as get:
+            channels = client.get_user_channels("nexah", per=100, delay=0)
+
+        self.assertEqual([1, 3], [channel["id"] for channel in channels])
+        self.assertEqual(2, get.call_count)
+        self.assertEqual(1, get.call_args_list[0].args[1]["page"])
+        self.assertEqual(2, get.call_args_list[1].args[1]["page"])
 
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .arena import ArenaClient, ArenaError, compare_all, compare_entity
+from .discovery import build_discovery, write_discovery_files
 from .kernel import OrientationQueries, graph_to_mermaid
 from .registry import Registry, RegistryError
 
@@ -27,6 +28,11 @@ def build_parser() -> argparse.ArgumentParser:
     target.add_argument("--all", action="store_true")
     target.add_argument("--entity")
     compare.add_argument("--include-sequence", action="store_true")
+
+    discover = sub.add_parser("discover", help="Build a read-only public Channel inventory")
+    discover.add_argument("--user", default="nexah-scarabaeus1031")
+    discover.add_argument("--report", type=Path)
+    discover.add_argument("--inventory", type=Path)
 
     path = sub.add_parser("reading-path", help="Build a conservative registry-backed reading path")
     path.add_argument("--audience")
@@ -73,6 +79,32 @@ def main(argv: list[str] | None = None) -> int:
                 )
             )
             _json(result)
+            return 0
+
+        if args.command == "discover":
+            if bool(args.report) != bool(args.inventory):
+                raise RegistryError("discover requires both --report and --inventory, or neither")
+            client = ArenaClient.from_environment()
+            discovery = build_discovery(
+                registry,
+                client.get_user_channels(args.user),
+                user_slug=args.user,
+            )
+            if args.report and args.inventory:
+                write_discovery_files(
+                    discovery,
+                    report_path=args.report,
+                    inventory_path=args.inventory,
+                )
+                _json(
+                    {
+                        "summary": discovery["summary"],
+                        "report": str(args.report),
+                        "inventory": str(args.inventory),
+                    }
+                )
+            else:
+                _json({"summary": discovery["summary"], "channels": discovery["channels"]})
             return 0
 
         queries = OrientationQueries(registry)

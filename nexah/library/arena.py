@@ -49,6 +49,35 @@ class ArenaClient:
     def get_channel(self, channel_id_or_slug: str | int) -> dict[str, Any]:
         return self._get(f"channels/{quote(str(channel_id_or_slug), safe='')}")
 
+    def get_user_channels(
+        self,
+        user_id_or_slug: str | int,
+        *,
+        per: int = 24,
+        max_pages: int = 50,
+        delay: float = 0.25,
+    ) -> list[dict[str, Any]]:
+        """Read the public Channel inventory exposed by a user's contents."""
+        channels: list[dict[str, Any]] = []
+        page = 1
+        while page <= max_pages:
+            payload = self._get(
+                f"users/{quote(str(user_id_or_slug), safe='')}/contents",
+                {
+                    "page": page,
+                    "per": min(per, 100),
+                    "type": "Channel",
+                    "sort": "updated_at_desc",
+                },
+            )
+            channels.extend(item for item in payload.get("data", []) if item.get("type") == "Channel")
+            meta = payload.get("meta", {})
+            if not meta.get("has_more_pages"):
+                return channels
+            page += 1
+            time.sleep(delay)
+        raise ArenaError(f"Stopped after {max_pages} pages while reading user {user_id_or_slug}")
+
     def get_contents(
         self,
         channel_id_or_slug: str | int,
