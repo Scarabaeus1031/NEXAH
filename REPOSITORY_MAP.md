@@ -20,6 +20,7 @@ evidence, and historical experimental environments.
 | Explore the visual work | **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** |
 | Enter the research archive | **[RESEARCH/README.md](RESEARCH/README.md)** |
 | Inspect the current architecture | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
+| Understand the editorial-orientation architecture | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Browse the canonical visual-library registry | **[LIBRARY/README.md](LIBRARY/README.md)** |
 | Explore the most developed application | **[APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)** |
 | Inspect evidence and outcome gates | **[testkit/README.md](testkit/README.md)** |
@@ -39,6 +40,7 @@ START_HERE
 
 ```text
 NEXAH/
+├── EDITORIAL_OPERATING_SYSTEM/ reusable editorial-orientation architecture
 ├── ARCHITECTURE/       current architecture and system state
 ├── PROTO_CORE/         reference implementations and field layers
 ├── nexah/              installable minimal Python package
@@ -62,6 +64,25 @@ research questions
 → validation and findings
 → applied systems
 ```
+
+---
+
+## 🧭 EDITORIAL_OPERATING_SYSTEM/
+
+**[EDITORIAL_OPERATING_SYSTEM/](EDITORIAL_OPERATING_SYSTEM/)** describes the
+reusable coordination layer joining editorial knowledge, reader context,
+orientation, human governance, controlled execution, and verification.
+
+The Orientation Kernel is its reasoning core. The NEXAH Living Library is its
+first reference implementation. Potential Wikipedia, museum, education,
+research, enterprise, and personal-AI integrations remain application patterns
+until an adapter, working demonstration, and domain-appropriate validation
+exist.
+
+Its main README carries the coherent architectural narrative. A separate
+system-boundary document records changing implementation facts, while dated
+visual snapshots preserve historical states without presenting them as current
+forever.
 
 ---
 

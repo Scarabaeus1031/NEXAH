@@ -43,6 +43,7 @@ observe → represent → map → compare → orient → explain → learn
 | Run an application | **[Network Orientation](APPLICATIONS/network_orientation/README.md)** · **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)** |
 | Understand the research | **[Research Portal](RESEARCH/README.md)** |
 | Inspect maturity and boundaries | **[Architecture & System State](ARCHITECTURE/SYSTEM_STATE.md)** |
+| Understand the editorial-orientation architecture | **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Browse the canonical visual-library registry | **[NEXAH Library](LIBRARY/README.md)** |
 | Browse the full repository | **[Repository Map](REPOSITORY_MAP.md)** |
 
