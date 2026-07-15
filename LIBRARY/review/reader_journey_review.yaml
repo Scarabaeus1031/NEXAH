@@ -239,18 +239,18 @@ reader_questions:
     object_family: work
     classification_state: canonical
     library_function: entry
-  - arena_channel_id: 5442781
-    registered_entity_id: NX-000002
-    title: GEOMETRIA NOVA
-    object_family: work
-    classification_state: canonical
-    library_function: foundation
   - arena_channel_id: 5421517
     registered_entity_id: NX-000004
     title: THE LANGUAGE BOOK
     object_family: work
     classification_state: canonical
     library_function: learning
+  - arena_channel_id: 5442781
+    registered_entity_id: NX-000002
+    title: GEOMETRIA NOVA
+    object_family: work
+    classification_state: canonical
+    library_function: foundation
   - arena_channel_id: 5426966
     registered_entity_id: NX-000005
     title: THE LANGUAGE ATLAS
@@ -318,6 +318,18 @@ reader_questions:
     object_family: work
     classification_state: canonical
     library_function: navigation
+  - arena_channel_id: 5386766
+    registered_entity_id: NX-000007
+    title: THE CARTOGRAPHY LABORATORY
+    object_family: work
+    classification_state: canonical
+    library_function: documentation
+  - arena_channel_id: 5413103
+    registered_entity_id: NX-000010
+    title: LIBRARYBOOK
+    object_family: work
+    classification_state: canonical
+    library_function: synthesis
   test_state: pending
 - id: UQ-04
   prompt: Show every Work using Transition.

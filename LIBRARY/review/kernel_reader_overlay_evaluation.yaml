@@ -1,0 +1,51 @@
+schema_version: "1.0"
+review_stage: kernel_reader_overlay_evaluation
+scope: UQ-01_through_UQ-06
+status: ready_for_second_human_review
+policy:
+  allocates_ids: false
+  modifies_registry: false
+  writes_to_arena: false
+  proposal_load_mode: explicit_only
+  inferred_is_canonical: false
+results:
+  - question_id: UQ-01
+    baseline: partial
+    overlay: pass
+    result_count: 5
+    states: {canonical: 5, proposal: 0, inferred: 0}
+  - question_id: UQ-02
+    baseline: unsupported
+    overlay: pass_with_proposals
+    result_count: 3
+    states: {canonical: 1, proposal: 2, inferred: 0}
+  - question_id: UQ-03
+    baseline: partial
+    overlay: pass
+    result_count: 5
+    states: {canonical: 5, proposal: 0, inferred: 0}
+  - question_id: UQ-04
+    baseline: canonical_pass
+    overlay: pass_with_inference_boundary
+    result_count: 32
+    states: {canonical: 8, proposal: 0, inferred: 24}
+  - question_id: UQ-05
+    baseline: unsupported
+    overlay: pass_with_proposal_series
+    result_count: 3
+    states: {canonical: 2, proposal: 1, inferred: 0}
+  - question_id: UQ-06
+    baseline: unsupported
+    overlay: pass_with_curated_diversity
+    result_count: 4
+    states: {canonical: 2, proposal: 2, inferred: 0}
+mode_contract:
+  reader:
+    scores_visible: false
+    provenance_detail_visible: false
+    state_visible: true
+  explain:
+    scores_visible: false
+    evidence_visible: true
+    provenance_visible: true
+next_step: second_human_reader_review

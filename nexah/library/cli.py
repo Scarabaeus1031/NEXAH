@@ -9,6 +9,7 @@ from typing import Any
 from .arena import ArenaClient, ArenaError, compare_all, compare_entity
 from .discovery import build_discovery, write_discovery_files
 from .kernel import OrientationQueries, graph_to_mermaid
+from .reader import ReaderOverlay, ReaderOverlayError
 from .registry import Registry, RegistryError
 
 
@@ -47,6 +48,13 @@ def build_parser() -> argparse.ArgumentParser:
     recommend = sub.add_parser("recommend", help="Recommend related registered works")
     recommend.add_argument("entity")
     recommend.add_argument("--limit", type=int, default=5)
+
+    reader = sub.add_parser(
+        "reader-question", help="Answer one of the six reviewed Reader questions"
+    )
+    reader.add_argument("question", choices=[f"UQ-{value:02d}" for value in range(1, 7)])
+    reader.add_argument("--mode", choices=["reader", "explain"], default="reader")
+    reader.add_argument("--review-root", type=Path)
     return parser
 
 
@@ -107,6 +115,11 @@ def main(argv: list[str] | None = None) -> int:
                 _json({"summary": discovery["summary"], "channels": discovery["channels"]})
             return 0
 
+        if args.command == "reader-question":
+            overlay = ReaderOverlay.load(registry, args.review_root)
+            _json(overlay.answer(args.question, mode=args.mode))
+            return 0
+
         queries = OrientationQueries(registry)
         if args.command == "reading-path":
             _json(queries.reading_path(args.audience))
@@ -128,6 +141,6 @@ def main(argv: list[str] | None = None) -> int:
                 ]
             )
         return 0
-    except (RegistryError, ArenaError) as exc:
+    except (RegistryError, ArenaError, ReaderOverlayError) as exc:
         print(str(exc), file=sys.stderr)
         return 2

@@ -80,8 +80,8 @@ Return Works only. START may explain the route but must not consume one of the f
 Expected orientation set:
 
 - THE VISITOR’S GUIDE — `NX-000001`
-- GEOMETRIA NOVA — `NX-000002`
 - THE LANGUAGE BOOK — `NX-000004`
+- GEOMETRIA NOVA — `NX-000002`
 - THE LANGUAGE ATLAS — `NX-000005`
 - THE OPERATOR’S HANDBOOK — `NX-000003`
 
@@ -108,6 +108,8 @@ Expected orientation set:
 - THE LANGUAGE BOOK — `NX-000004`
 - THE OPERATOR’S HANDBOOK — `NX-000003`
 - THE LANGUAGE ATLAS — `NX-000005`
+- THE CARTOGRAPHY LABORATORY — `NX-000007`
+- LIBRARYBOOK — `NX-000010`
 
 Required evidence: `library_function`, `canonical_relation`, `explanation`
 
