@@ -14,11 +14,12 @@ implementation. Human editorial authority remains the governing layer.
 > meaningful next steps through curated knowledge while preserving provenance,
 > responsibility, and the ability to explain why a path was offered.
 
-![NEXAH Editorial Operating System — complete architecture and implementation boundary](visuals/snapshots/2026-07-16_pre_batch_1/editorial_operating_system.png)
+![NEXAH system blueprint and verified results — from Orientation Kernel to Living Library](visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)
 
-> **Status of this visual:** editorial track Phase IX, before public Batch 1.
-> Quantities and implementation states shown in the image are a dated snapshot,
-> not timeless architectural claims. See
+> **Status of this whiteboard:** editorial track Phase IX, before public Batch
+> 1. It summarizes the built path, verified Library results, human governance,
+> and the current evidence boundary. Quantities and implementation states shown
+> in the image are a dated snapshot, not timeless architectural claims. See
 > [System Boundary and Status](SYSTEM_BOUNDARY_AND_STATUS.md) for the maintained
 > textual record.
 
@@ -124,11 +125,12 @@ Snapshot · Diff · Health · Release Check
 
 ## Visual index
 
-The seven visuals serve different purposes. They should not be interpreted as
-seven independent specifications.
+The eight visuals serve different purposes. They should not be interpreted as
+eight independent specifications.
 
 | Visual | Role | Status |
 |---|---|---|
+| [System Blueprint and Verified Results](visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png) | Compact whiteboard of the built path, evidence, governance, and current boundary | Dated reference snapshot |
 | [Editorial Operating System](visuals/snapshots/2026-07-16_pre_batch_1/editorial_operating_system.png) | Complete architecture, implementation boundary, and Phase IX status | Dated reference snapshot |
 | [Editorial Knowledge Engine](visuals/architecture/editorial_knowledge_engine.png) | Editorial structure, Reader Policies, journeys, governance, and Library experience | Architecture overview |
 | [Editorial Execution Engine](visuals/architecture/editorial_execution_engine.png) | Controlled path from editorial decision to verified public navigation | Architecture overview |

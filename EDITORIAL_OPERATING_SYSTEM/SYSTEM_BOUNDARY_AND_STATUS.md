@@ -1,7 +1,7 @@
 # NEXAH Editorial Operating System — System Boundary and Status
 
 **Status date:** 2026-07-16  
-**Visual snapshot:** pre-Batch 1  
+**Visual snapshot:** pre-Batch 1 — [System Blueprint and Verified Results](visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)
 **Authority:** repository state and explicit human editorial decisions
 
 This document separates the reusable Editorial Operating System concept from

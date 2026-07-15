@@ -19,6 +19,8 @@ combination of:
 | Question | Document |
 |---|---|
 | What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
+| How do editorial knowledge, orientation, governance, and execution connect? | **[Editorial Operating System](../EDITORIAL_OPERATING_SYSTEM/README.md)** |
+| Is there a compact visual blueprint? | **[System Blueprint and Verified Results](../EDITORIAL_OPERATING_SYSTEM/visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)** |
 | Which computational methods are used? | **[METHODS.md](METHODS.md)** |
 | What is the next concrete architecture plan? | **[Orientation Layer](orientation_layer/)** |
 | What is the current Phase V plan? | **[IEEE Geometry Testkit](orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** |
@@ -30,6 +32,34 @@ combination of:
 `SYSTEM_STATE.md` is the source of truth for implementation maturity and known
 limitations. Conceptual diagrams should not be read as proof that every layer
 exists as an integrated software component.
+
+---
+
+## 🧭 Project-Wide Editorial Architecture
+
+The **[NEXAH Editorial Operating System](../EDITORIAL_OPERATING_SYSTEM/README.md)**
+describes the project-wide coordination layer connecting editorial knowledge,
+reader context, the Orientation Kernel, human authority, controlled public
+execution, and verification.
+
+Its dated
+**[System Blueprint and Verified Results](../EDITORIAL_OPERATING_SYSTEM/visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)**
+provides the compact visual summary:
+
+```text
+Are.na + GitHub
+→ Registry + Proposal
+→ Reader Policies + Journeys
+→ Orient + Explain
+→ Human Approval
+→ Safe Write
+→ Snapshot + Diff
+```
+
+The image is a whiteboard summary and evidence snapshot, not a substitute for
+`SYSTEM_STATE.md`, the frozen Library Architecture, or validation artifacts.
+The binary lives once under `EDITORIAL_OPERATING_SYSTEM/`; this Architecture
+portal links to it rather than maintaining a duplicate copy.
 
 ---
 
@@ -73,6 +103,7 @@ root directories.
 
 ```text
 NEXAH/
+├── EDITORIAL_OPERATING_SYSTEM/ project-wide editorial-orientation architecture
 ├── nexah/                          minimal installable package and CLI
 ├── PROTO_CORE/
 │   ├── NEXAH_DEMONSTRATOR/         verified reference pipeline
@@ -190,6 +221,9 @@ PROTO_CORE
 
 ARCHITECTURE
 → explains relationships, implementation status, and system boundaries
+
+EDITORIAL_OPERATING_SYSTEM
+→ coordinates editorial knowledge, reader orientation, governance, and execution
 
 APPLICATIONS
 → applies methods to concrete systems and user workflows
