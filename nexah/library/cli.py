@@ -13,6 +13,7 @@ from .health import build_health, render_health_text
 from .kernel import OrientationQueries, graph_to_mermaid
 from .operations import OperationError, default_review_root, dump_yaml
 from .reader import ReaderOverlay, ReaderOverlayError
+from .regression import run_reader_regression, render_reader_regression_text
 from .registry import Registry, RegistryError
 from .snapshot import build_source_snapshot, write_source_snapshot
 
@@ -70,6 +71,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     snapshot.add_argument("--user", default="nexah-scarabaeus1031")
     snapshot.add_argument("--output", type=Path)
+
+    regression = sub.add_parser(
+        "reader-regression", help="Verify the six accepted Reader Policies"
+    )
+    regression.add_argument(
+        "--question", choices=[f"UQ-{value:02d}" for value in range(1, 7)]
+    )
+    regression.add_argument("--format", choices=["text", "yaml"], default="text")
+    regression.add_argument("--review-root", type=Path)
     return parser
 
 
@@ -154,6 +164,19 @@ def main(argv: list[str] | None = None) -> int:
             write_source_snapshot(snapshot, output)
             _json({"snapshot": str(output), "summary": snapshot["summary"]})
             return 0
+
+        if args.command == "reader-regression":
+            report = run_reader_regression(
+                registry,
+                review_root=args.review_root,
+                question_id=args.question,
+            )
+            print(
+                dump_yaml(report)
+                if args.format == "yaml"
+                else render_reader_regression_text(report)
+            )
+            return 0 if report["status"] == "pass" else 1
 
         queries = OrientationQueries(registry)
         if args.command == "reading-path":

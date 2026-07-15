@@ -6,6 +6,7 @@ from typing import Any
 from .arena import ArenaClient
 from .operations import default_review_root, latest_snapshot, load_yaml
 from .reader import ReaderOverlay, ReaderOverlayError
+from .regression import run_reader_regression
 from .registry import Registry, RegistryError
 
 
@@ -56,6 +57,14 @@ def build_health(
         for question_id in sorted(overlay.questions):
             overlay.answer(question_id, mode="reader")
             overlay.answer(question_id, mode="explain")
+        regression = run_reader_regression(registry, review_root=root)
+        if regression["status"] != "pass":
+            reader_failures.extend(
+                error
+                for question in regression["questions"]
+                for error in question["errors"]
+            )
+            failures.append("accepted Reader regression changed")
     except (ReaderOverlayError, RegistryError) as exc:
         reader_failures.append(str(exc))
         failures.append(f"Reader Policy failed: {exc}")
