@@ -295,6 +295,12 @@ These are review proposals, not graph edges.
 
 ## Human decisions required
 
+![Transition Geometry Checkpoint — Five Findings to Preserve](../../../visuals/vision/transition_geometry_checkpoint.png)
+
+> **EDITORIAL CHECKPOINT · NON-CANONICAL.** This visual records the five
+> governing findings of the family review. The fourth statement remains a
+> hypothesis; the checkpoint creates no identities or graph edges.
+
 | Decision | Recommendation | Effect |
 |---|---|---|
 | X1-TG-01 · Family candidate | accept Transition Geometry as a proposal family | permits dossier work; creates no identity |
