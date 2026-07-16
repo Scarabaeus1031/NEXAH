@@ -1,0 +1,187 @@
+schema_version: 0.1-proposal
+phase: X1
+status: human_review_required
+canonical: false
+candidate_key: concept:janus
+preferred_name: JANUS
+existing_identity:
+  ref: NX-OP-0016
+  type: controlled_operator
+  changed: false
+identity_boundary:
+  broader_concept_question: open
+  proposed_kind: conceptual_principle
+  specificity: high
+  maturity: developing
+  separate_concept_id: deferred
+reader_definition:
+  value: >-
+    JANUS is the principle that one situation may require complementary
+    perspectives whose relation must be preserved rather than collapsed into a
+    single view.
+  status: proposal_for_human_review
+definition_layers:
+  - layer_key: janus:definition:controlled-operator
+    layer: controlled_operator
+    status: authoritative_in_operator_scope
+    source: LIBRARY/registry/concepts/NX-OP-0016.yaml
+    locator: definition
+    summary: >-
+      Couples opposed or complementary views, directions, or states at a shared
+      interface.
+  - layer_key: janus:definition:architecture-principle
+    layer: architecture
+    status: accepted_architecture
+    source: ARCHITECTURE/orientation_layer/ORIENTATION_LAYER_SPEC.md
+    locator: JANUS separation
+    summary: >-
+      One reality may require complementary perspectives; JANUS is not an
+      algorithm.
+  - layer_key: janus:definition:bridge
+    layer: architecture
+    status: planned_distinct_realization
+    source: ARCHITECTURE/orientation_layer/DECISIONS/0001-janus-identities.md
+    locator: Decision item 2
+    summary: Translation between representations of one situation.
+  - layer_key: janus:definition:directional-coherence
+    layer: research
+    status: experimental_distinct_realization
+    source: RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/README.md
+    locator: JANUS Core Concept and Conceptual Janus Operator
+    summary: >-
+      Local compatibility between forward and backward organization inside
+      reconstructed flow geometry.
+  - layer_key: janus:definition:historical-gatekeeper
+    layer: historical
+    status: lineage_only
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_8_LUNAR_FORCE/AGENTUM_MIRRORIUM/agentum_gatekeeper_fields.md
+    locator: lines 25-37 and 66-70
+    summary: Two-faced passage point and polarity-transfer symbol.
+  - layer_key: janus:definition:historical-visual
+    layer: historical
+    status: lineage_only
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_1_MATHEMATICA/Hermetic_Pythagoras_Model/GEOMETRIA NOVA – Part V · Ether & Spine/visual-gallery.md
+    locator: lines 28-43
+    summary: >-
+      Visual family using dual-field overlays, quaternionic projection,
+      rotational coupling, pulses, and stair structures.
+occurrences:
+  - occurrence_key: x1:janus:01
+    source_type: operator_record
+    source: LIBRARY/registry/concepts/NX-OP-0016.yaml
+    locator: definition
+    occurrence_role: defines
+    occurrence_verification: verified
+    assertion_origin: human_authored
+    claim_support: {value: not_assessed, scope: controlled editorial Operator definition}
+  - occurrence_key: x1:janus:02
+    source_type: architecture_decision
+    source: ARCHITECTURE/orientation_layer/DECISIONS/0001-janus-identities.md
+    locator: Decision
+    occurrence_role: distinguishes
+    occurrence_verification: verified
+    assertion_origin: accepted_architecture
+    claim_support: {value: supported_within_scope, scope: repository identity boundary}
+  - occurrence_key: x1:janus:03
+    source_type: foundation_note
+    source: RESEARCH/FOUNDATION/STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md
+    locator: section 7, JANUS and round-trip consistency
+    occurrence_role: constrains
+    occurrence_verification: verified
+    assertion_origin: human_authored
+    claim_support: {value: supported_within_scope, scope: evidence-bound framework boundary}
+  - occurrence_key: x1:janus:04
+    source_type: research_framework
+    source: RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/README.md
+    locator: JANUS Core Concept and Important Clarification
+    occurrence_role: develops
+    occurrence_verification: verified
+    assertion_origin: human_authored
+    claim_support: {value: exploratory, scope: reconstructed directional-coherence geometry}
+  - occurrence_key: x1:janus:05
+    source_type: research_findings
+    source: RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/findings.md
+    locator: Purpose, Important Limitation, and Current Open Questions
+    occurrence_role: tests
+    occurrence_verification: verified
+    assertion_origin: human_authored
+    claim_support: {value: exploratory, scope: repository-reported computational experiments}
+  - occurrence_key: x1:janus:06
+    source_type: historical_archive
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_8_LUNAR_FORCE/AGENTUM_MIRRORIUM/agentum_gatekeeper_fields.md
+    locator: lines 25-37 and 66-70
+    occurrence_role: precedes
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support: {value: not_assessed, scope: mythic and symbolic interpretation}
+  - occurrence_key: x1:janus:07
+    source_type: historical_archive
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_1_MATHEMATICA/Hermetic_Pythagoras_Model/GEOMETRIA NOVA – Part V · Ether & Spine/visual-gallery.md
+    locator: lines 28-43
+    occurrence_role: visualizes
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support: {value: not_assessed, scope: visual lineage}
+proposed_relations:
+  - {subject: concept:janus, relation: has_controlled_expression, object: NX-OP-0016, status: review}
+  - {subject: concept:janus, relation: inspires, object: Janus Bridge, status: review}
+  - {subject: concept:janus, relation: inspires, object: Janus Directional Coherence Operator, status: review}
+  - {subject: concept:janus, relation: related_operator, object: NX-OP-0003, label: Observer, status: review}
+  - {subject: concept:janus, relation: related_operator, object: NX-OP-0005, label: Transition, status: review}
+  - {subject: concept:janus, relation: related_operator, object: NX-OP-0006, label: Boundary, status: review}
+  - {subject: concept:janus, relation: related_operator, object: NX-OP-0008, label: Bridge, status: review}
+  - {subject: concept:janus, relation: related_operator, object: NX-OP-0011, label: Relation, status: review}
+  - {subject: concept:janus, relation: related_operator, object: NX-OP-0012, label: Projection, status: review}
+exclusions:
+  - generic duality, opposition, reversal, or symmetry without a preserved relation
+  - automatic inverse or reverse graph edge
+  - identity equivalence with Janus Bridge
+  - identity equivalence with Janus Directional Coherence Operator
+  - physical law, quantum framework, universal geometry, or causal mechanism
+  - automatic inheritance of historical symbolic or visual claims
+open_questions:
+  - What makes perspectives complementary rather than merely different?
+  - Must JANUS involve a shared interface?
+  - Is information loss essential or Bridge-specific?
+  - When does bidirectional analysis instantiate JANUS?
+  - Which invariants should a future Janus Bridge preserve?
+  - Should a broader Concept eventually receive an identity separate from NX-OP-0016?
+  - Which research findings survive independent baselines and domain tests?
+human_decisions_required:
+  - decision_id: X1-JANUS-01
+    question: Accept JANUS as a broader Concept proposal candidate?
+    recommendation: accept
+  - decision_id: X1-JANUS-02
+    question: Accept the proposed reader definition as the working explanation?
+    recommendation: accept_with_review
+  - decision_id: X1-JANUS-03
+    question: Preserve the accepted three-way separation?
+    recommendation: accept
+  - decision_id: X1-JANUS-04
+    question: Retain historical formulations as contextual lineage only?
+    recommendation: accept
+  - decision_id: X1-JANUS-05
+    question: Allocate a separate Concept ID now?
+    recommendation: defer
+  - decision_id: X1-JANUS-06
+    question: Expose JANUS through a Kernel Concept overlay now?
+    recommendation: defer_until_five_dossiers_reviewed
+recommendation:
+  outcome: proceed_without_identity_allocation
+  rationale: >-
+    JANUS is sufficiently specific and provenance-rich for an X1 Concept
+    proposal, but permanent Operator-Concept identity policy should be decided
+    only after all five dossiers expose the shared modeling requirements.
+warnings:
+  - This dossier does not change NX-OP-0016 or any Registry record.
+  - Proposed relations are not graph edges.
+  - X1 did not independently rerun or validate the complete JANUS experimental series.
+  - Historical occurrence establishes lineage, not validity.

@@ -79,6 +79,8 @@ repository's stricter observed-evidence and Outcome Firewall semantics.
 | [Phase X0 Summary](review/PHASE_X0_SUMMARY.md) | Inventory, risks, five X1 recommendations, and readiness decision |
 | [Cross-Repository Provenance Review](review/cross_repository/CROSS_REPOSITORY_PROVENANCE_REVIEW.md) · [YAML](review/cross_repository/cross_repository_occurrences.yaml) | Pinned historical evidence from NEXAH-CODEX and Scarabaeus v1.0 |
 | [Concept Lineage Deltas](review/cross_repository/CONCEPT_LINEAGE_DELTAS.md) | Effects of historical evidence on the five X1 dossiers |
+| [X1 Dossier Template](dossiers/DOSSIER_TEMPLATE.md) | Shared human-review boundary for the five reference dossiers |
+| [JANUS Concept Dossier](dossiers/JANUS_DOSSIER.md) · [YAML](dossiers/janus.yaml) | First X1 reference dossier; human review required |
 
 ## Relationship to the Editorial Operating System
 
