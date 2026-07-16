@@ -1,220 +1,363 @@
-# Why NEXAH Exists
+# NEXAH Manifesto
 
-![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
+**Understanding before action. Orientation before certainty.**
 
-> Specialists build the engines.
+![NEXAH — The Orientation Laboratory](assets/readme/nexah-orientation-laboratory-hero.webp)
+
+> Reality is richer than any single representation.
 >
-> NEXAH maps the terrain between them.
+> NEXAH exists to make the relationships and transitions between
+> representations navigable.
 
-Modern science has become extraordinarily powerful.
+## NEXAH in One Sentence
 
-Every discipline develops increasingly precise models, simulations, methods, and languages for understanding specific aspects of reality.
+**NEXAH is a human-oriented, evidence-bound orientation infrastructure that
+investigates whether recurring transition patterns can be compared across
+bounded representations of complex systems—and makes their relationships
+navigable without collapsing them into a single explanation.**
 
-Physics studies interactions.
+In shorter form:
 
-Control theory studies regulation.
+> NEXAH is a computational orientation laboratory.
 
-Network science studies connectivity.
+It brings research, visual inquiry, software, editorial structure, validation,
+and human judgment into one inspectable environment.
 
-Machine learning studies representation.
-
-Dynamical systems theory studies motion and stability.
-
-Each field builds remarkable engines.
-
-Yet navigating between them often remains difficult.
-
-NEXAH was created to explore a simple question:
-
-```text
-Can complex systems be understood
-through shared navigable structure?
-```
-
-Not by replacing existing models.
-
-Not by proposing a universal theory.
-
-But by developing maps that help us orient ourselves within complexity.
+It does not claim a privileged view from outside the systems it studies.
 
 ---
 
-# The Cartographic Perspective
+## Why NEXAH Exists
 
-Most scientific frameworks focus on:
+Modern knowledge is powerful and fragmented.
+
+Every discipline develops its own observations, models, methods, languages,
+and standards of evidence. These representations make particular structures
+visible. They also leave other structures outside their frame.
+
+The difficulty is not only that knowledge is incomplete.
+
+The difficulty is that moving responsibly between different descriptions of a
+system is itself a problem.
+
+NEXAH therefore asks:
 
 ```text
-equations
-models
-simulations
-predictions
+How can different representations be held together,
+compared without being conflated,
+and used to support human orientation?
 ```
 
-NEXAH explores a complementary layer:
+We do not try to reduce the world to one theory.
 
-```text
-orientation
-translation
-navigation
-comparison
-```
-
-The project investigates whether systems can be viewed as terrains containing:
-
-- basins
-- attractors
-- corridors
-- gates
-- bottlenecks
-- recovery regions
-- transport pathways
-
-and whether these structures can become visible, comparable, and navigable.
+We try to make transitions between different descriptions of the world
+navigable.
 
 ---
 
-# What NEXAH Is
+## One Field, Many Representations
 
-NEXAH is:
+A measurement is not the measured system.
 
-- a cartography laboratory for complex systems
-- an exploratory navigation grammar
-- a research environment for structure discovery
-- a visual and computational mapping framework
-- a bridge between scientific domains
+A model is not the phenomenon.
 
-The project combines:
+A map is not the territory.
 
-- simulation
-- dynamical systems
-- geometry
-- topology
-- visualization
-- control concepts
-- computational experimentation
+A graph, equation, simulation, story, image, atlas, and field report may all
+describe aspects of the same situation while preserving different structures
+and omitting different details.
 
-Its central intuition is:
+NEXAH treats every representation as bounded:
+
+- produced from a particular orientation
+- constructed for a particular purpose
+- supported by particular evidence
+- limited by particular assumptions
+- open to comparison, revision, and replacement
+
+Partiality does not make every representation equally valid.
+
+Validity depends on context, method, evidence, and purpose. Contradictions,
+failures, missing information, and uncertainty must remain visible.
+
+---
+
+## The Orientation Laboratory
+
+NEXAH is best understood as a computational research laboratory for
+evidence-bound orientation.
+
+Its recurring movement is:
 
 ```text
-Structure may be as important as prediction.
+observe
+→ represent
+→ map
+→ compare
+→ reflect
+→ orient
+→ explain
+→ review
+→ learn
+```
+
+The laboratory investigates patterns such as:
+
+- states and transitions
+- boundaries and apertures
+- paths and bottlenecks
+- basins and recovery regions
+- agreement and mismatch
+- stability and change
+- local structure across different scales and representations
+
+These are research lenses, not universal laws.
+
+Repeated forms are invitations to investigate. They are not proofs of a single
+underlying ontology.
+
+---
+
+## Orientation Emerges Between Representations
+
+NEXAH does not assume that understanding resides inside one final map.
+
+It investigates what becomes visible when several bounded representations are
+held in relation:
+
+```text
+representation plurality
+→ comparison
+→ tension or resonance
+→ reflection
+→ reorientation
+→ revised representation
+```
+
+This is the space between maps, models, disciplines, states, and moments.
+
+The purpose is not to erase their differences. The differences are often the
+most informative part.
+
+> The representation makes knowledge visible.
+>
+> The transition between representations makes new understanding possible.
+
+Orientation is therefore not a final answer. It is a situated capacity to see:
+
+- where we are
+- what representation we are using
+- what it reveals and omits
+- how it relates to other representations
+- what paths remain available
+- what evidence supports the next step
+
+---
+
+## Four Integrated Forms
+
+NEXAH currently expresses this purpose through four complementary forms.
+
+### The Research Laboratory
+
+Code, experiments, models, validation records, and reproducible demonstrations
+investigate what can be supported.
+
+### The Living Library
+
+Books, atlases, whiteboards, field reports, and curated reader paths allow
+people to encounter the work without requiring the software.
+
+The Library comes first as a human space. The Kernel learns from the Library,
+not the other way around.
+
+### The Orientation Kernel
+
+Typed representations, read-only perspectives, orientation reports, and
+evidence boundaries make structure and limitations inspectable.
+
+The Kernel supports orientation. It does not authorize action.
+
+### The Editorial Operating System
+
+Stable identities, proposals, policies, sequences, provenance, snapshots,
+diffs, review, and controlled writing preserve human editorial intent.
+
+It is an editorial coordination architecture—not a technical operating system
+and not an autonomous publisher.
+
+Together these forms create an integrated research artifact:
+
+```text
+research creates evidence
+library creates encounter
+kernel creates inspectable orientation
+editorial governance preserves responsibility
 ```
 
 ---
 
-# GitHub & The Atlas
+## Human Authority
 
-NEXAH currently exists in two complementary forms.
+NEXAH is human-oriented and human-governed.
 
-## GitHub Repository
+The system may organize evidence, resolve reviewed contracts, trace
+relationships, compare representations, and explain why a path was presented.
 
-The repository contains:
+It must not silently decide:
 
-- code
-- experiments
-- validation studies
-- reproducible demonstrations
-- technical documentation
+- what is canon
+- what a concept ultimately means
+- which claim is true
+- which action is authorized
+- which uncertainty may be ignored
 
-It is the laboratory.
+Editorial decisions remain explicit. Public changes remain reviewable.
+Proposals remain distinguishable from confirmed records. Inference remains
+distinguishable from evidence.
 
-## NEXAH Atlas (Are.na)
+The purpose of explanation is not to manufacture certainty.
 
-The Atlas contains:
-
-- visual essays
-- conceptual maps
-- field studies
-- cartographic experiments
-- interdisciplinary references
-- orientation frameworks
-
-It is the observatory.
-
-Explore the Atlas:
-
-👉 **[Explore the NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)**
-
-Together they form:
-
-```text
-Laboratory
-+
-Atlas
-
-Experiment
-+
-Orientation
-
-Validation
-+
-Exploration
-```
+It is to make the grounds, limits, and consequences of orientation visible.
 
 ---
 
-# What NEXAH Is Not
+## Evidence Before Claims
+
+NEXAH separates:
+
+```text
+declared scenario
+≠ computed result
+≠ observed outcome
+≠ causal explanation
+≠ authorized action
+```
+
+Every serious claim should remain connected to:
+
+- its source
+- its representation
+- its method
+- its context
+- its uncertainty
+- its validation state
+- its known limits
+
+Technical success is not automatically scientific validity.
+
+Similarity is not identity.
+
+Recurrence is not universality.
+
+Navigability is not truth.
+
+Orientation comes before action because action requires responsibilities that a
+map alone cannot carry.
+
+---
+
+## What NEXAH Is Not
 
 NEXAH is not:
 
+- an encyclopedia of final answers
+- a general-purpose knowledge graph
+- a belief system or closed doctrine
 - a theory of everything
-- a replacement for existing science
-- a completed mathematical framework
-- proof of universal laws
+- a replacement for specialist science
+- a completed mathematical foundation
+- a technical operating system
+- an oracle, autonomous agent, or controller
+- proof that comparable forms share one universal cause
 
-Many parts remain:
+NEXAH remains open, provisional, inspectable, and reversible.
 
-- exploratory
-- experimental
-- heuristic
-- incomplete
-
-The framework should be interpreted as an evolving research ecosystem.
+Where evidence ends, the claim must end.
 
 ---
 
-# Open Invitation
+## The Open Invitation
 
-NEXAH is shared openly.
+NEXAH is shared as a research artifact and an invitation.
 
-Not as doctrine.
+Researchers, engineers, artists, designers, librarians, educators, system
+thinkers, and curious readers are welcome to:
 
-Not as ownership.
+- inspect the representations
+- reproduce the experiments
+- challenge the categories
+- identify counterexamples
+- question the sequences
+- test the transitions
+- improve the maps
+- expose unsupported claims
+- propose other ways of seeing
 
-But as an invitation.
+The aim is not agreement with NEXAH.
 
-Researchers, engineers, designers, scientists, system thinkers and explorers are welcome to test, challenge, reinterpret, validate, criticize and extend the ideas presented here.
-
-If parts of the framework prove useful, they should evolve beyond the original author.
+The aim is better orientation.
 
 ---
 
-# Closing Perspective
+## The Commitment
 
-The central question of NEXAH is not:
+NEXAH commits to:
 
-```text
-Can we build another model?
-```
+- preserving evidence and provenance
+- keeping uncertainty visible
+- separating observation from interpretation
+- distinguishing proposals from confirmed records
+- making explanations inspectable
+- retaining human editorial authority
+- treating failures and contradictions as information
+- revising maps when evidence changes
 
-The question is:
+The repository, Library, and Kernel will continue to evolve.
+
+This commitment should remain stable:
+
+> We do not know everything.
+>
+> We seek to understand where we are, what our maps can support, and how we can
+> move responsibly toward the next question.
+
+---
+
+## Closing Perspective
+
+The central question of NEXAH is no longer only:
 
 ```text
 Can we build better maps?
 ```
 
-Maps that help us navigate transition.
+It is also:
 
-Maps that reveal structure.
+```text
+Can we make the relationships and transitions
+between maps understandable, explainable, and navigable?
+```
 
-Maps that make complexity more visible.
+NEXAH does not promise the final destination.
 
-Maps that help us orient ourselves within motion.
+It works to make the field, the current orientation, the available paths, and
+the boundaries of knowledge more visible.
 
----
-
-"We map what moves."
+> One field. Many representations. Open transitions.
+>
+> Understanding before action.
 
 Thomas K. R. Hofmann
+
 NEXAH · 2026
 
 contact@nexah.com
+
+---
+
+For the current implementation state, see
+**[Architecture & System State](ARCHITECTURE/SYSTEM_STATE.md)**. For the public
+visual body of work, see the
+**[NEXAH Library](LIBRARY/README.md)**. For the editorial architecture, see the
+**[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)**.

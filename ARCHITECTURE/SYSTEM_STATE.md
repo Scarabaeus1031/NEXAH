@@ -3,6 +3,10 @@
 > This document reflects the **current implemented and empirically observed state of NEXAH**,  
 > not an idealized or finalized architecture.
 
+**Text review:** July 17, 2026
+
+**Visual snapshot:** July 16, 2026
+
 Related references:
 
 - **[Architecture Index](README.md)**
@@ -14,9 +18,27 @@ Related references:
 
 ---
 
+![What is NEXAH today? — repository snapshot dated July 16, 2026](visuals/current/what-is-nexah-2026-07-16.png)
+
+> **Dated evidence snapshot.** Counts, status labels, supported observations,
+> bottlenecks, and next steps in this image record the repository as reviewed on
+> July 16, 2026. They are not permanent architectural claims. This document and
+> the underlying validation artifacts remain authoritative when later changes
+> make the image historical.
+
+---
+
 # 🧭 System Overview
 
-NEXAH is currently a:
+At repository level, NEXAH is currently best described as:
+
+> **a computational orientation laboratory for evidence-bound orientation**
+
+It integrates a research environment, visual Atlas-Library, Orientation
+Kernel, validation paths, and human-governed editorial workflow. These forms
+share principles and evidence boundaries, but they are not one unified runtime.
+
+At implemented software level, the current core remains a:
 
 > **field-based structural analysis framework  
 > with exploratory navigation capabilities for dynamical systems**
@@ -361,7 +383,12 @@ within structured regions of state space.
 
 # 🧭 12. System Positioning
 
-NEXAH is currently:
+Repository-wide, NEXAH is currently:
+
+> a **computational orientation laboratory integrating research, visual
+> inquiry, evidence-bound software, and human editorial governance**
+
+Its implemented computational capability is currently:
 
 > a **structure extraction and exploratory navigation framework under active validation**
 
@@ -402,5 +429,5 @@ and independent investigation.
 
 ---
 
-Last Reviewed: July 12, 2026
+Last Reviewed: July 17, 2026
 © Thomas K. R. Hofmann

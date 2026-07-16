@@ -1,16 +1,25 @@
 # 🏗️ NEXAH — Architecture
 
 This directory explains how the current NEXAH repository is organized, how its
-conceptual layers relate, and which parts are actually implemented.
+research, Library, Kernel, and editorial layers relate, and which parts are
+actually implemented.
 
-NEXAH does not yet have one unified runtime architecture. The architecture is a
-combination of:
+At repository level, NEXAH is organized as a **computational orientation
+laboratory for evidence-bound orientation**. It does not yet have one unified
+runtime architecture. Its current architecture combines:
 
-- a conceptual research pipeline
-- a verified reference demonstrator
+- a computational research laboratory and conceptual research pipeline
+- a Living Library for human exploration
+- an evidence-bound Orientation Kernel and verified reference paths
+- an Editorial Operating System for identity, governance, and controlled writes
 - experimental method and application modules
-- a minimal installable Python package
 - historical development lineages
+
+![NEXAH — The Orientation Laboratory](visuals/current/orientation-laboratory.png)
+
+> **Current architecture overview.** This visual explains the repository-wide
+> relationship between the working forms of NEXAH. It is an orientation map,
+> not evidence that every depicted capability exists as one integrated runtime.
 
 ---
 
@@ -19,6 +28,7 @@ combination of:
 | Question | Document |
 |---|---|
 | What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
+| Which visuals describe current state or research models? | **[Architecture Visuals](visuals/README.md)** |
 | How do editorial knowledge, orientation, governance, and execution connect? | **[Editorial Operating System](../EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | How are reviewed Concept answers reproduced without inference? | **[Editorial Explanation Layer — Plateau X2](../EDITORIAL_OPERATING_SYSTEM/EDITORIAL_EXPLANATION_LAYER_STATUS.md)** |
 | Is there a compact visual blueprint? | **[System Blueprint and Verified Results](../EDITORIAL_OPERATING_SYSTEM/visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)** |
@@ -33,6 +43,43 @@ combination of:
 `SYSTEM_STATE.md` is the source of truth for implementation maturity and known
 limitations. Conceptual diagrams should not be read as proof that every layer
 exists as an integrated software component.
+
+---
+
+## 🧭 Repository-Wide Orientation Architecture
+
+The stable architectural frame is not a single pipeline or application. It is
+the coordination of four complementary working forms:
+
+```text
+RESEARCH LABORATORY
+→ creates observations, methods, experiments, and bounded evidence
+
+LIVING LIBRARY
+→ creates human encounter, editorial sequence, and navigable Works
+
+ORIENTATION KERNEL
+→ creates inspectable representations, paths, reports, and explanations
+
+EDITORIAL OPERATING SYSTEM
+→ preserves identity, provenance, review, governance, and controlled execution
+```
+
+Their shared orientation movement is:
+
+```text
+observe
+→ represent
+→ compare
+→ reflect
+→ orient
+→ explain
+→ human review
+```
+
+This architecture does not combine all representations into one account. It
+keeps their evidence, context, and boundaries visible while making their
+relationships and possible transitions easier to navigate.
 
 ---
 
@@ -83,6 +130,13 @@ implement a production Concept Graph.
 
 ## 🧠 Conceptual Architecture
 
+![NEXAH Orientation Layer — concave-mirror research model](visuals/research-models/orientation-layer-concave-mirror.png)
+
+> **Research model.** The concave-mirror visual presents a hypothesis about
+> orientation emerging through comparison and reflection across bounded
+> representations. It is not a canonical ontology, a hierarchy of truth, or a
+> claim that every discipline can be reduced to one stack.
+
 The working NEXAH research pipeline is:
 
 ```text
@@ -109,11 +163,11 @@ perturbations were absorbed and trajectories returned toward recurring
 structure. It is not yet a formal manifold model or an implemented standalone
 layer.
 
-![NEXAH Architecture Flow](<archive/NEXAH_Architecture_Flow(Updated).png>)
+![Historical NEXAH Architecture Flow](<archive/NEXAH_Architecture_Flow(Updated).png>)
 
-The diagram is a conceptual map of the intended relationships. Some labels
-reflect earlier development phases and do not correspond directly to current
-root directories.
+This historical diagram is retained as a conceptual map of an earlier
+development stage. Some labels do not correspond directly to current root
+directories.
 
 ---
 
@@ -315,6 +369,7 @@ Useful architecture work includes:
 ## 🔗 Related Entry Points
 
 - **[System State](SYSTEM_STATE.md)**
+- **[Architecture Visuals](visuals/README.md)**
 - **[Methods](METHODS.md)**
 - **[Orientation Layer Bauplan](orientation_layer/)**
 - **[Proto Core Index](../PROTO_CORE/README.md)**
