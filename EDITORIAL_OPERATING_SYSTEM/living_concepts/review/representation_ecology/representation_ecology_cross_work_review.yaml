@@ -1,0 +1,307 @@
+schema_version: "0.1"
+review:
+  pass_id: X3-RPT-01
+  title: Representation Ecology Cross-Work Review
+  date: 2026-07-16
+  status: completed_for_human_review
+  authority: non_canonical_editorial_research
+  objective: >-
+    Determine whether independent NEXAH Works repeatedly hold bounded
+    representations in relation, compare and reflect upon them, and use that
+    process to reorient the observer or produce a new representation.
+  independence_condition: >-
+    The review does not assume that Plate exists and does not require the word
+    Plate for any positive classification.
+
+working_hypothesis:
+  stages:
+    - bounded_representation
+    - co_presence_of_multiple_representations
+    - comparison
+    - reflection
+    - reorientation
+    - new_representation
+  result: supported_as_strong_subpattern_not_universal_sequence
+
+questions:
+  Q1: Are there identifiable bounded representations?
+  Q2: Are multiple representations intentionally held simultaneously?
+  Q3: Does the Work encourage comparison, tension, contradiction, resonance, or reflection between them?
+  Q4: Does this process change the observer's orientation rather than merely transmit information?
+  Q5: Does a new representation emerge rather than only a conclusion?
+  Q6: Could the explanatory structure function without introducing the word Plate?
+
+classification_vocabulary:
+  - strong_recurrence
+  - partial_recurrence
+  - alternative_pattern
+  - book_specific_device
+  - unsupported
+  - forced_interpretation
+
+method:
+  sources:
+    - current_repository_text
+    - prior_evidence_reviews
+    - full_public_library_discovery
+    - verified_source_snapshot
+    - get_only_scan_of_71_public_arena_channels
+    - direct_visual_inspection_of_selected_original_boards
+  safeguards:
+    - no_classification_from_layout_alone
+    - shared_blocks_not_counted_as_independent_occurrences
+    - proposal_status_preserved
+    - unresolved_titles_not_silently_substituted
+
+evidence_matrix:
+  - item: THE LENS
+    identity:
+      kind: visual_index_inside_work
+      parent: "Lambda LIBRARYBOOK"
+      arena_channel_id: 5413103
+      arena_block_id: 47683518
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: partial, Q5: partial, Q6: yes}
+    classification: partial_recurrence
+    evidence:
+      - eight bounded sections organize one relation through many perspectives
+      - the index states that truth emerges in the intersection
+    limit: The index presents a synthesis but does not clearly dramatize a new representation emerging through reader reflection.
+
+  - item: THE OPERATOR'S HANDBOOK
+    identity:
+      kind: canonical_work
+      registry_id: NX-000003
+      arena_channel_id: 5391199
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: yes, Q5: yes, Q6: yes}
+    classification: strong_recurrence
+    evidence:
+      - chapters repeat Arrival, Contrast, Projection, Connection, and Observation
+      - one operation is held across geometry, architecture, nature, perception, mathematics, and design
+      - boards explicitly ask what each projection loses and reveals
+      - the final Observation remains a question rather than a fixed answer
+    limit: The repeated chapter device is especially explicit here and cannot by itself prove a library-wide invariant.
+
+  - item: THE WONDER OPERATOR
+    identity:
+      kind: unresolved_requested_identity
+      arena_channel_id: null
+      arena_block_id: null
+    answers: {Q1: unknown, Q2: unknown, Q3: unknown, Q4: unknown, Q5: unknown, Q6: unknown}
+    classification: unsupported
+    evidence: []
+    limit: No exact public Channel, public block title, or repository text occurrence was found; adjacent Wonder material was not substituted.
+
+  - item: NEXAH - DESIGNING ORIENTATION
+    identity:
+      kind: proposal_work
+      arena_channel_id: 5305692
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: yes, Q5: yes, Q6: yes}
+    classification: strong_recurrence
+    evidence:
+      - historical maps and model types are compared as partial orientations
+      - models, data, structure, maps, orientation, and action remain distinguishable
+      - conflicting perspectives enter an iterative Observe-Connect-Translate-Orient-Navigate-Act-Learn cycle
+      - experimental views are integrated into a new Atlas while the remaining territory stays explicit
+    limit: Some boards show an already-curated process rather than the reader's actual cognitive transition.
+
+  - item: Series I - NEXAH WHITEBOARD SERIES
+    identity:
+      kind: proposal_series
+      arena_channel_id: 5345285
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: yes, Q5: yes, Q6: yes}
+    classification: strong_recurrence
+    evidence:
+      - each board is bounded while explicitly belonging to a non-linear living web
+      - The Inbetween holds World A and World B together and locates emergence in their intersection
+      - Exchange states that both sides are transformed
+      - Reference and Observer show the current point of relation changing noise into a map
+      - Map is described as simplified, useful, partial, changeable, and updateable
+    limit: The series contains several related devices; they should not be collapsed into one hidden ontology.
+
+  - item: Research Architecture - The Living Stack
+    identity:
+      kind: shared_system_map
+      arena_block_id: 46464275
+    answers: {Q1: yes, Q2: yes, Q3: partial, Q4: partial, Q5: no, Q6: yes}
+    classification: alternative_pattern
+    evidence:
+      - eleven research and navigation layers are held together
+      - Are.na and GitHub are related through a Whiteboard integration layer
+    limit: The artifact primarily inventories and routes components; it does not show reflection producing a new representation.
+
+  - item: THE SPACE BETWEEN
+    identity:
+      kind: whiteboard
+      arena_channel_id: 5345336
+      arena_block_id: 47227648
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: yes, Q5: partial, Q6: yes}
+    classification: partial_recurrence
+    evidence:
+      - local, global, and universal levels are held in relation
+      - meaning is located in transitions, comparisons, and relations between levels
+    limit: The resulting output is often meaning or orientation, not demonstrably a new representation.
+
+  - item: THE BUCKET OF KNOWLEDGE
+    identity:
+      kind: whiteboard
+      arena_channel_id: 5345336
+      arena_block_id: 47227642
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: yes, Q5: partial, Q6: yes}
+    classification: partial_recurrence
+    evidence:
+      - reality, data, information, observation, and experience remain bounded levels
+      - local, global, and universal views are compared and connected
+      - the engine compares, clusters, connects, and abstracts
+      - the bucket is explicitly not the water
+    limit: Wisdom or action is an orienting output, but not necessarily a newly formed representation.
+
+  - item: THE ARCHITECTURE OF ORIENTATION - Volume IV
+    identity:
+      kind: proposal_work
+      arena_channel_id: 5250350
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: yes, Q5: yes, Q6: yes}
+    classification: strong_recurrence
+    evidence:
+      - disciplinary views such as cybernetics, dynamical systems, and complexity remain distinct
+      - historical models are compared with a NEXAH perspective
+      - Where NEXAH Lives and the Atlas create a translation layer between disciplines
+      - integration is offered without claiming a unified theory
+    limit: Further adjacent-sequence study would strengthen the evidence for reader memory across the complete Work.
+
+  - item: NEXAH ECOSYSTEM
+    identity:
+      kind: proposal_work
+      arena_channel_id: 5345606
+    answers: {Q1: yes, Q2: yes, Q3: partial, Q4: partial, Q5: partial, Q6: yes}
+    classification: partial_recurrence
+    evidence:
+      - tables, geometries, relation equations, cycles, spirals, mappings, and state graphs coexist
+      - multiple system descriptions are integrated into one framework
+    limit: Many boards present an already-completed synthesis, so the reflective transition and emergence of a new representation are not consistently visible.
+
+  - item: THE WONDER HANDBOOK
+    role: adjacent_counterexample_not_substitute
+    identity:
+      kind: proposal_work
+      arena_channel_id: 5404597
+    answers: {Q1: yes, Q2: no, Q3: partial, Q4: yes, Q5: no, Q6: yes}
+    classification: alternative_pattern
+    evidence:
+      - questions, atmosphere, curiosity, kindness, imagination, and belonging reorient the reader
+      - the Work functions as a visual journey rather than a comparative representation system
+    limit: Representations mostly succeed one another; co-presence and emergence of a new representation are not required for its effect.
+
+  - item: THE OPERATOR MAP
+    role: additional_check
+    identity:
+      kind: proposal_work
+    answers: {Q1: yes, Q2: yes, Q3: yes, Q4: yes, Q5: partial, Q6: yes}
+    classification: partial_recurrence
+    evidence:
+      - visual summaries compress chapters into navigable images
+      - maps are presented as alternative projections of the same landscape
+      - readers are invited to compare freely and return often
+    limit: The emergence of a new representation remains implicit.
+
+recurrence_counts:
+  strong_recurrence: 4
+  partial_recurrence: 5
+  alternative_pattern: 2
+  book_specific_device: 0
+  unsupported: 1
+  forced_interpretation: 0
+  total_observations: 12
+
+cross_work_synthesis:
+  recurring_architecture_exists: true
+  universal_library_dramaturgy: false
+  strongest_supported_label: Representation Ecology
+  bounded_definition: >-
+    Independent representations remain partial, coexist with other views, and
+    become orienting through curated relations between them.
+  subordinate_pattern:
+    label: reflective representation cycle
+    status: research_phrase_only
+    stages:
+      - representation_plurality
+      - comparison_or_translation
+      - observer_reflection
+      - reorientation
+      - revised_or_new_representation
+  least_consistent_stage: new_representation
+  note: >-
+    Several Works produce a question, action, meaning, wisdom, or conclusion
+    rather than a demonstrably new representation.
+
+candidate_evaluation:
+  - candidate: Representation Ecology
+    fit: Includes co-present partial views, their relations, and both static and transforming cases.
+    decision: recommend_as_non_canonical_research_label
+  - candidate: Representation Spiral
+    fit: Captures iterative return and changed orientation.
+    decision: promising_subpattern_only
+    reason: Simultaneity and memory are not yet consistent enough across the corpus.
+  - candidate: Editorial Representation Rhythm
+    fit: Accurately describes repeated chapter and board dramaturgy.
+    decision: too_narrow_for_system_maps
+  - candidate: Plate Ecology
+    fit: Adds a term not required to detect the recurrence.
+    decision: do_not_recommend
+  - candidate: Editorial Transition Geometry
+    fit: Captures boundaries and transformation.
+    decision: do_not_recommend
+    reason: It overlaps existing Transition Geometry and excludes narrative cases.
+  - candidate: other
+    value: reflective representation cycle
+    decision: retain_as_subordinate_review_phrase
+  - candidate: none
+    decision: reject
+    reason: Four independent Work families show strong recurrence.
+
+counterexamples:
+  - claim: Co-presence is sufficient evidence.
+    result: rejected
+    evidence: Research Architecture holds many layers together but primarily inventories and routes them.
+  - claim: Reflection is sufficient evidence.
+    result: rejected
+    evidence: THE WONDER HANDBOOK reorients through narrative and questions without simultaneous comparative views.
+  - claim: A synthesis image proves emergence.
+    result: rejected
+    evidence: NEXAH ECOSYSTEM frequently presents already-completed synthesis.
+  - claim: Similar titles may share evidence.
+    result: rejected
+    evidence: THE WONDER OPERATOR remains unresolved and was not replaced by adjacent Wonder material.
+
+uncertainty:
+  - Selected original boards do not replace a page-by-page reader study of every Work.
+  - Reader reorientation is inferred only where comparison, choice, update, return, or transfer is explicit.
+  - A new question, action, meaning, or insight is not automatically a new representation.
+  - Simultaneous memory and later synthesis remain a hypothesis rather than a demonstrated invariant.
+  - Shared public artifacts do not count as multiple independent occurrences.
+
+editorial_recommendation:
+  decision: retain_for_bounded_non_canonical_research
+  recommended_label: Representation Ecology
+  do_not_promote:
+    - Plate
+    - Representation Ecology
+    - reflective representation cycle
+  next_possible_review: >-
+    Reconstruct complete adjacent sequences from the four strong Work families
+    and test memory, simultaneity, and emergence of a genuinely new
+    representation.
+
+exclusions:
+  registry_modified: false
+  kernel_modified: false
+  operators_modified: false
+  living_concepts_modified: false
+  overlay_modified: false
+  architecture_modified: false
+  arena_modified: false
+  identities_allocated: false
+  canonical_definitions_created: false
+
+artifacts:
+  - REPRESENTATION_ECOLOGY_CROSS_WORK_REVIEW.md
+  - representation_ecology_cross_work_review.yaml
