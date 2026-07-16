@@ -1,0 +1,92 @@
+# Living Concepts — Minimal Concept Overlay v0.1
+
+**Status:** review only · non-canonical  
+**Load policy:** manual evaluation only  
+**Kernel integration:** not implemented
+
+The Minimal Concept Overlay tests whether reviewed Concept-family knowledge can
+be represented in a small, machine-readable form without turning editorial
+synthesis into canonical graph truth.
+
+The overlay is deliberately not placed in the Registry and is not loaded by
+the Orientation Kernel. It has no writer and no Are.na mutation path.
+
+## What it contains
+
+```text
+reviewed handle
+    ├── reader profile or authority reference
+    ├── evidence occurrences
+    ├── review-only relation proposals
+    ├── human-curated paths
+    └── Reader / Explain answer contracts
+```
+
+Version 0.1 is limited to seven handles:
+
+- Transition Geometry;
+- JANUS;
+- Aperture;
+- Inbetween;
+- Boundary;
+- Transition;
+- Balance.
+
+Aperture, Boundary, and Transition bind to existing controlled Operators. The
+binding does not create broader Concept identities. The other handles are
+local review keys only.
+
+## Authority order
+
+The overlay preserves source authority rather than flattening it:
+
+1. existing controlled Operator records remain authoritative for Operator
+   definitions;
+2. accepted Architecture constrains identity and claim boundaries;
+3. reviewed dossiers and family reviews provide editorial synthesis;
+4. Works provide authored definitions, examples, and visual language;
+5. Research and Validation provide only their explicitly scoped support;
+6. historical sources provide lineage, not current authority.
+
+## Relation and path boundary
+
+Relations use `status: review_only`. Paths use `status: curated`. Neither is a
+canonical graph edge.
+
+An occurrence proves that a source contains a statement or visual
+formulation. It does not validate the substantive claim. Every occurrence
+therefore records its assertion origin and claim-support boundary.
+
+## Reader and Explain contracts
+
+Question bindings do not contain a general inference engine. They identify the
+smallest reviewed evidence bundle needed to reproduce the six accepted
+Concept-family answers.
+
+- Reader Mode uses the short `reader_answer` and an optional curated route.
+- Explain Mode adds provenance, identity separation, and uncertainty through
+  `explain_disclosures`.
+
+The contract is successful only if it reproduces the human baseline without
+allocating identities, inventing relations, or hiding uncertainty.
+
+## Files
+
+- [Concept Overlay v0.1](concept_overlay_v0_1.yaml)
+- [Evaluation Report](../review/transition_geometry/CONCEPT_OVERLAY_V0_1_EVALUATION.md)
+- Structural validator: `tests/living_concepts/test_concept_overlay_v0_1.py`
+
+## Explicit exclusions
+
+Version 0.1 does not:
+
+- allocate `NX-C-...` identities;
+- amend the Canonical Registry or controlled Operator vocabulary;
+- implement a production Concept Graph;
+- add Kernel commands or runtime loading;
+- infer relations from co-occurrence;
+- extract text from Works automatically;
+- write to Are.na;
+- promote Balance into one Concept;
+- promote `Region → Boundary → Transition → Closure` into an invariant.
+

@@ -1,0 +1,433 @@
+schema_version: 0.1-proposal
+overlay_id: living-concepts-transition-geometry-pilot-v0.1
+phase: X1
+status: human_review_required
+canonical: false
+load_policy: manual_evaluation_only
+created_at: '2026-07-16'
+authority:
+  modifies_registry: false
+  allocates_identities: false
+  modifies_operators: false
+  creates_canonical_graph_edges: false
+  modifies_kernel: false
+  writes_to_arena: false
+  inference_from_cooccurrence: prohibited
+model:
+  concept_handle: local_review_reference_or_existing_operator_profile
+  occurrence: documentary_evidence_not_claim_validation
+  relation: typed_review_proposal_with_provenance
+  path: human_curated_documentary_route
+  question_binding: reviewed_answer_contract_not_general_inference
+
+concepts:
+  - handle: concept:transition-geometry
+    preferred_name: Transition Geometry
+    kind: concept_family
+    identity_state: local_review_handle
+    review_state: reviewed_proposal
+    maturity: coherent
+    reader_definition: >-
+      NEXAH's way of describing the structured in-between: the relations,
+      boundaries, apertures, paths, and constraints through which one state
+      may become another.
+    definition_status: human_approved_reader_baseline_noncanonical
+    review_source: EDITORIAL_OPERATING_SYSTEM/living_concepts/review/transition_geometry/TRANSITION_GEOMETRY_FAMILY_REVIEW.md
+    boundaries:
+      - declared_representation_not_reality
+      - representation_independent_transition_space_not_supported
+      - visual_recurrence_does_not_establish_invariant
+
+  - handle: concept:janus
+    preferred_name: JANUS
+    kind: concept
+    identity_state: local_review_handle_with_existing_operator_expression
+    review_state: proposal
+    maturity: coherent
+    reader_definition: >-
+      The principle that one situation may require complementary perspectives
+      whose relation must be preserved rather than collapsed into a single
+      view.
+    definition_status: proposal_from_dossier
+    existing_operator_ref: NX-OP-0016
+    review_source: EDITORIAL_OPERATING_SYSTEM/living_concepts/dossiers/JANUS_DOSSIER.md
+    boundaries:
+      - principle_is_distinct_from_controlled_operator
+      - janus_bridge_is_planned_and_distinct
+      - directional_coherence_operator_is_experimental_and_method_specific
+
+  - handle: concept:aperture
+    preferred_name: Aperture
+    kind: existing_operator_profile
+    identity_state: bound_to_existing_operator
+    review_state: controlled_operator_authoritative
+    maturity: core_operator_with_broader_research_profile
+    existing_operator_ref: NX-OP-0002
+    definition_ref: LIBRARY/registry/concepts/NX-OP-0002.yaml
+    profile_note: >-
+      The controlled selective-opening definition remains authoritative.
+      Research additionally examines where transitions can occur without
+      making access identical to activation or directional organization.
+    research_source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md
+    boundaries:
+      - no_new_concept_identity
+      - access_is_distinct_from_activation
+      - work_taxonomies_do_not_expand_operator_registry
+
+  - handle: concept:inbetween
+    preferred_name: Inbetween
+    kind: concept_lead
+    identity_state: local_review_handle
+    review_state: path_supported_not_identity_reviewed
+    maturity: developing
+    reader_definition: >-
+      The represented relational space in which separation, threshold,
+      passage, and reconfiguration become inspectable.
+    definition_status: editorial_synthesis_for_path_test
+    review_source: EDITORIAL_OPERATING_SYSTEM/living_concepts/review/transition_geometry/TRANSITION_GEOMETRY_FAMILY_REVIEW.md
+    boundaries:
+      - no_canonical_definition
+      - no_concept_identity
+      - meaning_is_distributed_across_works
+
+  - handle: concept:boundary
+    preferred_name: Boundary
+    kind: existing_operator_profile
+    identity_state: bound_to_existing_operator
+    review_state: controlled_operator_authoritative
+    maturity: core_operator
+    existing_operator_ref: NX-OP-0006
+    definition_ref: LIBRARY/registry/concepts/NX-OP-0006.yaml
+    boundaries:
+      - no_new_concept_identity
+      - solver_sampling_structural_passage_and_validity_boundaries_are_not_equivalent
+
+  - handle: concept:transition
+    preferred_name: Transition
+    kind: existing_operator_profile
+    identity_state: bound_to_existing_operator
+    review_state: controlled_operator_authoritative
+    maturity: core_operator
+    existing_operator_ref: NX-OP-0005
+    definition_ref: LIBRARY/registry/concepts/NX-OP-0005.yaml
+    boundaries:
+      - no_new_concept_identity
+      - transition_operator_is_narrower_than_transition_geometry_family
+
+  - handle: concept:balance
+    preferred_name: Balance
+    kind: concept_family_lead
+    identity_state: local_review_handle
+    review_state: reviewed_non_unified
+    maturity: multiple_related_models
+    reader_definition: >-
+      Different directions, forces, or forms of motion may remain in a viable
+      relation without one simply erasing the other; current NEXAH sources use
+      several related Balance models rather than one fixed geometry.
+    definition_status: comparison_summary_not_canonical_definition
+    review_source: EDITORIAL_OPERATING_SYSTEM/living_concepts/review/geometry_of_balance/GEOMETRY_OF_BALANCE_EVIDENCE_REVIEW.md
+    boundaries:
+      - no_single_balance_concept
+      - balance_is_not_identical_to_equilibrium
+      - balance_is_not_identical_to_stability_closure_coherence_or_resonance
+      - figure_eight_and_olgo_are_realizations_or_motifs_not_definitions
+
+occurrences:
+  - occurrence_id: OCC-TG-001
+    concept: concept:transition-geometry
+    source: arena:5386766
+    locator: blocks 47505996, 47505991, 47505990
+    role: develops
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: authored_conceptual_synthesis
+  - occurrence_id: OCC-TG-002
+    concept: concept:transition-geometry
+    source: ARCHITECTURE/orientation_layer/STATE_TRANSITION_ORIENTATION_REVIEW.md
+    locator: representation and boundary review
+    role: constrains
+    verification: verified
+    assertion_origin: accepted_architecture
+    claim_support: supported_architectural_boundary
+  - occurrence_id: OCC-JANUS-001
+    concept: concept:janus
+    source: EDITORIAL_OPERATING_SYSTEM/living_concepts/dossiers/JANUS_DOSSIER.md
+    locator: identity boundary and definition layers
+    role: defines
+    verification: verified
+    assertion_origin: human_editorial_review
+    claim_support: reviewed_conceptual_synthesis
+  - occurrence_id: OCC-APT-001
+    concept: concept:aperture
+    source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md
+    locator: aperture geometry
+    role: develops
+    verification: verified
+    assertion_origin: human_authored_research
+    claim_support: supported_within_declared_research_scope
+  - occurrence_id: OCC-APT-002
+    concept: concept:aperture
+    source: arena:5442721
+    locator: block 47930445
+    role: visualizes
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: authored_visual_explanation
+  - occurrence_id: OCC-INB-001
+    concept: concept:inbetween
+    source: arena:5345285
+    locator: block 47227437
+    role: defines
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: authored_whiteboard_statement
+  - occurrence_id: OCC-INB-002
+    concept: concept:inbetween
+    source: arena:5345336
+    locator: blocks 47227648, 47227661
+    role: develops
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: authored_whiteboard_statement
+  - occurrence_id: OCC-INB-003
+    concept: concept:inbetween
+    source: arena:5345385
+    locator: blocks 47227898, 47227912, 47227916
+    role: develops
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: authored_whiteboard_statement
+  - occurrence_id: OCC-BND-001
+    concept: concept:boundary
+    source: arena:5442697
+    locator: block 47930279
+    role: develops
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: authored_process_taxonomy
+  - occurrence_id: OCC-TRN-001
+    concept: concept:transition
+    source: arena:5345285
+    locator: blocks 47227435, 47227434
+    role: develops
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: authored_whiteboard_sequence
+  - occurrence_id: OCC-BAL-001
+    concept: concept:balance
+    source: arena:5345385
+    locator: block 47227898
+    role: defines
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: relational_balance_work_model
+  - occurrence_id: OCC-BAL-002
+    concept: concept:balance
+    source: arena:5413103
+    locator: block 47683506
+    role: develops
+    verification: verified
+    assertion_origin: human_authored_work
+    claim_support: directional_balance_work_model
+  - occurrence_id: OCC-BAL-003
+    concept: concept:balance
+    source: EDITORIAL_OPERATING_SYSTEM/living_concepts/review/geometry_of_balance/GEOMETRY_OF_BALANCE_EVIDENCE_REVIEW.md
+    locator: evidence classes and required distinctions
+    role: reviews
+    verification: verified
+    assertion_origin: human_editorial_review
+    claim_support: multiple_related_models
+
+relations:
+  - relation_id: REL-TG-JANUS-001
+    subject: concept:transition-geometry
+    predicate: interpreted_by
+    object: concept:janus
+    status: review_only
+    evidence_refs: [OCC-TG-001, OCC-JANUS-001]
+    qualification: >-
+      JANUS preserves complementary views at a passage; it is not identical to
+      Transition Geometry.
+  - relation_id: REL-TG-APT-001
+    subject: concept:transition-geometry
+    predicate: broader_family_for
+    object: concept:aperture
+    status: review_only
+    evidence_refs: [OCC-TG-002, OCC-APT-001]
+    qualification: >-
+      Aperture Geometry addresses access within scoped representations and
+      remains distinct from transition activation.
+
+paths:
+  - path_id: PATH-INBETWEEN-001
+    preferred_name: Inbetween Development Path
+    status: curated
+    canonical_relation: false
+    focus: concept:inbetween
+    steps:
+      - {kind: work, ref: 'arena:5442781', label: GEOMETRIA NOVA, purpose: shared_language}
+      - {kind: page, ref: 'arena:5345285#47227437', label: THE INBETWEEN, purpose: names_relational_space}
+      - {kind: page, ref: 'arena:5345285#47227435', label: THE THRESHOLD, purpose: selection_and_passage}
+      - {kind: page, ref: 'arena:5345285#47227434', label: THE JANUS GATE, purpose: preserves_both_sides}
+      - {kind: page, ref: 'arena:5345336#47227648', label: THE SPACE BETWEEN, purpose: develops_between_levels}
+      - {kind: page, ref: 'arena:5345385#47227898', label: THE RELATION TUBE, purpose: relational_form}
+      - {kind: page, ref: 'arena:5345385#47227916', label: APERTURE = TRANSFORMATIONSRAUM, purpose: filtering_and_path_formation}
+      - {kind: work, ref: 'arena:5386766', label: THE CARTOGRAPHY LABORATORY, purpose: triad_synthesis}
+    evidence_refs: [OCC-INB-001, OCC-INB-002, OCC-INB-003, OCC-TG-001]
+
+  - path_id: PATH-BOUNDARY-TRANSITION-001
+    preferred_name: Boundary to Transition Path
+    status: curated
+    canonical_relation: false
+    focus: concept:transition-geometry
+    semantic_steps:
+      - concept:difference
+      - concept:boundary
+      - concept:aperture
+      - concept:threshold
+      - concept:inbetween
+      - concept:transition
+      - outcome:new_state_return_or_block
+    source_route:
+      - {ref: 'arena:5442697#47930279', label: THE EVOLUTION OF AN OPERATOR}
+      - {ref: 'arena:5345285#47227435', label: THE THRESHOLD}
+      - {ref: 'arena:5345285#47227434', label: THE JANUS GATE}
+      - {ref: 'arena:5386766', label: THE CARTOGRAPHY LABORATORY}
+    evidence_refs: [OCC-BND-001, OCC-TRN-001, OCC-TG-001]
+    boundaries:
+      - not_a_deterministic_state_machine
+      - region_boundary_transition_closure_remains_a_hypothesis
+
+  - path_id: PATH-APERTURE-READING-001
+    preferred_name: Aperture Geometry Reading Path
+    status: curated
+    canonical_relation: false
+    focus: concept:aperture
+    steps:
+      - {kind: page, ref: 'arena:5442721#47930445', label: FROM APERTURE TO ORIENTATION, purpose: visual_entrance}
+      - {kind: work, ref: 'arena:5345285', label: NEXAH WHITEBOARD SERIES, purpose: human_scale_sequence}
+      - {kind: page, ref: 'arena:5345385#47227916', label: APERTURE = TRANSFORMATIONSRAUM, purpose: transformation_space}
+      - {kind: work, ref: 'arena:5386766', label: THE CARTOGRAPHY LABORATORY, purpose: family_synthesis}
+      - {kind: work, ref: 'arena:5217666', label: OPERATIONAL GEOMETRY OF TRANSITION, purpose: extended_visual_atlas}
+      - {kind: research, ref: RESEARCH/CORE_CONCEPTS/aperture_geometry.md, label: APERTURE GEOMETRY, purpose: research_boundary}
+    evidence_refs: [OCC-APT-001, OCC-APT-002, OCC-INB-001, OCC-INB-003, OCC-TG-001]
+
+question_bindings:
+  - question_id: CFQ-01
+    question: What is Transition Geometry?
+    focus: concept:transition-geometry
+    basis:
+      concept_refs: [concept:transition-geometry]
+      occurrence_refs: [OCC-TG-001, OCC-TG-002]
+      relation_refs: []
+      path_refs: []
+    expected_result: pass
+    reader_answer: >-
+      Transition Geometry is NEXAH's way of describing the structured
+      in-between through declared relations, boundaries, apertures, paths, and
+      constraints. It is a family of representations, not one universal space.
+    explain_disclosures:
+      - declared_representation_not_reality
+      - representation_independent_transition_space_not_supported
+
+  - question_id: CFQ-02
+    question: How is JANUS related to Transition Geometry?
+    focus: concept:janus
+    basis:
+      concept_refs: [concept:transition-geometry, concept:janus]
+      occurrence_refs: [OCC-TG-001, OCC-JANUS-001]
+      relation_refs: [REL-TG-JANUS-001]
+      path_refs: []
+    expected_result: pass
+    reader_answer: >-
+      Transition Geometry describes a possible passage. JANUS helps inspect
+      that passage from complementary sides without collapsing them into one
+      view. They are related but distinct roles.
+    explain_disclosures:
+      - relation_is_review_only
+      - janus_identity_layers_remain_distinct
+
+  - question_id: CFQ-03
+    question: Where is the Inbetween developed?
+    focus: concept:inbetween
+    basis:
+      concept_refs: [concept:inbetween, concept:transition-geometry]
+      occurrence_refs: [OCC-INB-001, OCC-INB-002, OCC-INB-003, OCC-TG-001]
+      relation_refs: []
+      path_refs: [PATH-INBETWEEN-001]
+    expected_result: pass_with_editorial_synthesis
+    reader_answer: >-
+      Follow the idea from GEOMETRIA NOVA through THE INBETWEEN, THE THRESHOLD,
+      THE JANUS GATE, THE SPACE BETWEEN, THE RELATION TUBE, APERTURE =
+      TRANSFORMATIONSRAUM, and THE CARTOGRAPHY LABORATORY.
+    explain_disclosures:
+      - route_is_human_curated
+      - no_canonical_inbetween_identity
+
+  - question_id: CFQ-04
+    question: Show me the path from Boundary to Transition.
+    focus: concept:transition-geometry
+    basis:
+      concept_refs: [concept:boundary, concept:aperture, concept:inbetween, concept:transition]
+      occurrence_refs: [OCC-BND-001, OCC-TRN-001, OCC-TG-001]
+      relation_refs: []
+      path_refs: [PATH-BOUNDARY-TRANSITION-001]
+    expected_result: pass_with_editorial_synthesis
+    reader_answer: >-
+      Difference leads to Boundary, then Opening or Aperture, Threshold,
+      Inbetween or Passage, Transition, and finally a New State, Return, or
+      Block.
+    explain_disclosures:
+      - path_is_human_curated_not_a_graph_edge
+      - path_is_not_a_deterministic_state_machine
+      - core_recurrence_remains_a_hypothesis
+
+  - question_id: CFQ-05
+    question: Which Works explain Aperture Geometry?
+    focus: concept:aperture
+    basis:
+      concept_refs: [concept:aperture]
+      occurrence_refs: [OCC-APT-001, OCC-APT-002, OCC-INB-001, OCC-INB-003, OCC-TG-001]
+      relation_refs: [REL-TG-APT-001]
+      path_refs: [PATH-APERTURE-READING-001]
+    expected_result: pass
+    reader_answer: >-
+      Begin with THE OPERATOR, continue through the Whiteboards and THE DUAL
+      SPINE, then use THE CARTOGRAPHY LABORATORY and OPERATIONAL GEOMETRY OF
+      TRANSITION; use the Aperture Geometry Research note for the stricter
+      evidence boundary.
+    explain_disclosures:
+      - operator_record_remains_authoritative
+      - work_explanation_is_distinct_from_research_support
+
+  - question_id: CFQ-06
+    question: What does Balance mean in NEXAH?
+    focus: concept:balance
+    basis:
+      concept_refs: [concept:balance]
+      occurrence_refs: [OCC-BAL-001, OCC-BAL-002, OCC-BAL-003]
+      relation_refs: []
+      path_refs: []
+    expected_result: pass_with_concept_boundary
+    reader_answer: >-
+      Balance is not one fixed NEXAH geometry. It describes several related
+      ways in which different tendencies remain in a viable relation without
+      one simply erasing the other.
+    explain_disclosures:
+      - outcome_is_multiple_related_models
+      - no_balance_concept_identity_or_graph_edge
+      - balance_remains_distinct_from_adjacent_terms
+
+baseline_comparison:
+  source: EDITORIAL_OPERATING_SYSTEM/living_concepts/review/transition_geometry/transition_geometry_concept_family_test.yaml
+  question_ids: [CFQ-01, CFQ-02, CFQ-03, CFQ-04, CFQ-05, CFQ-06]
+  required_match_fields:
+    - expected_result
+    - reader_answer_present
+    - explain_disclosures_present
+    - evidence_bundle_resolves
+recommendation:
+  outcome: evaluate_before_kernel_integration
+  next_if_approved: read_only_adapter_design
+  identities_and_graph_edges: deferred
+
