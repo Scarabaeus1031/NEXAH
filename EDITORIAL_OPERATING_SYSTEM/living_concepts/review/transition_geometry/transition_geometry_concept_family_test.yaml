@@ -1,0 +1,200 @@
+schema_version: 0.1-proposal
+phase: X1
+review_type: concept_family_reader_explain_test
+status: human_review_required
+canonical: false
+evaluated_at: '2026-07-16'
+scope:
+  family: concept:transition-geometry
+  related_review_handles:
+    - concept:janus
+    - concept:balance-geometry
+  questions: 6
+authority:
+  modifies_registry: false
+  allocates_identities: false
+  modifies_operators: false
+  creates_graph_edges: false
+  modifies_kernel: false
+  writes_to_arena: false
+answer_modes:
+  reader:
+    purpose: concise_human_orientation
+    exposes_internal_ids: false
+  explain:
+    purpose: disclose_editorial_synthesis_provenance_uncertainty_and_identity_boundaries
+evaluation_dimensions:
+  - clarity
+  - evidence
+  - identity_separation
+  - provenance
+  - uncertainty
+  - navigation
+result_states:
+  pass: direct_reviewed_evidence_supports_answer_and_route
+  pass_with_editorial_synthesis: sequence_is_human_curated_not_a_stored_relation
+  pass_with_concept_boundary: answer_succeeds_by_refusing_premature_concept_unification
+tests:
+  - id: CFQ-01
+    question: What is Transition Geometry?
+    result: pass
+    reader_answer: >-
+      Transition Geometry is NEXAH's way of describing the structured
+      in-between: the relations, boundaries, apertures, paths, and constraints
+      through which one state may become another. It is a family of declared
+      representations, not one universal space.
+    reader_route:
+      - {title: THE CARTOGRAPHY LABORATORY, arena_channel_id: 5386766}
+      - {title: GEOMETRIA NOVA, arena_channel_id: 5442781}
+      - {title: OPERATIONAL GEOMETRY OF TRANSITION, arena_channel_id: 5217666}
+    explain_disclosures:
+      - geometry_is_a_declared_relational_representation
+      - representation_independent_transition_space_not_supported
+      - work_equations_are_not_automatically_implemented_methods
+    evidence:
+      - EDITORIAL_OPERATING_SYSTEM/living_concepts/review/transition_geometry/TRANSITION_GEOMETRY_FAMILY_REVIEW.md
+      - ARCHITECTURE/orientation_layer/STATE_TRANSITION_ORIENTATION_REVIEW.md
+      - ARCHITECTURE/METHODS.md
+  - id: CFQ-02
+    question: How is JANUS related to Transition Geometry?
+    result: pass
+    reader_answer: >-
+      Transition Geometry describes a possible passage. JANUS helps inspect
+      that passage from complementary sides without collapsing them into one
+      view. JANUS, Atlas Reconstruction, and Geometry of Transition remain
+      distinct roles.
+    reader_route:
+      - EDITORIAL_OPERATING_SYSTEM/living_concepts/dossiers/JANUS_DOSSIER.md
+      - {title: THE CARTOGRAPHY LABORATORY, arena_channel_id: 5386766}
+    explain_disclosures:
+      - relation_is_review_proposal_not_graph_edge
+      - janus_principle_is_distinct_from_NX-OP-0016
+      - janus_bridge_is_planned_and_distinct
+      - directional_coherence_operator_is_experimental_and_method_specific
+    evidence:
+      - EDITORIAL_OPERATING_SYSTEM/living_concepts/dossiers/JANUS_DOSSIER.md
+      - ARCHITECTURE/orientation_layer/DECISIONS/0001-janus-identities.md
+      - arena:5386766#47505996
+  - id: CFQ-03
+    question: Where is the Inbetween developed?
+    result: pass_with_editorial_synthesis
+    reader_route:
+      - {title: GEOMETRIA NOVA, arena_channel_id: 5442781, role: language}
+      - {title: THE INBETWEEN, arena_channel_id: 5345285, arena_block_id: 47227437}
+      - {title: THE THRESHOLD, arena_channel_id: 5345285, arena_block_id: 47227435}
+      - {title: THE JANUS GATE, arena_channel_id: 5345285, arena_block_id: 47227434}
+      - {title: THE SPACE BETWEEN, arena_channel_id: 5345336, arena_block_id: 47227648}
+      - {title: THE RELATION TUBE, arena_channel_id: 5345385, arena_block_id: 47227898}
+      - {title: APERTURE = TRANSFORMATIONSRAUM, arena_channel_id: 5345385, arena_block_id: 47227916}
+      - {title: THE CARTOGRAPHY LABORATORY, arena_channel_id: 5386766, role: synthesis}
+    explain_disclosures:
+      - no_canonical_inbetween_identity
+      - route_is_curated_from_verified_occurrences
+      - durable_concept_path_requires_human_approval
+  - id: CFQ-04
+    question: Show me the path from Boundary to Transition.
+    result: pass_with_editorial_synthesis
+    reader_path:
+      - difference
+      - boundary
+      - opening_or_aperture
+      - threshold
+      - inbetween_or_passage
+      - transition
+      - new_state_return_or_block
+    source_routes:
+      - source: arena:5442697#47930279
+        title: THE OPERATOR LIBRARY — The Evolution of an Operator
+      - source: arena:5345285
+        title: THE INBETWEEN / THE THRESHOLD / THE JANUS GATE
+      - source: arena:5386766
+        title: THE CARTOGRAPHY LABORATORY
+    related_controlled_operators:
+      - NX-OP-0006
+      - NX-OP-0002
+      - NX-OP-0005
+      - NX-OP-0008
+      - NX-OP-0011
+    explain_disclosures:
+      - path_is_not_a_canonical_graph_relation
+      - path_is_not_a_deterministic_state_machine
+      - region_boundary_transition_closure_remains_a_hypothesis
+      - boundary_types_remain_heterogeneous
+  - id: CFQ-05
+    question: Which Works explain Aperture Geometry?
+    result: pass
+    reader_route:
+      - title: THE OPERATOR — From Aperture to Orientation
+        arena_channel_id: 5442721
+        arena_block_id: 47930445
+      - title: NEXAH WHITEBOARD SERIES — Inbetween / Threshold / Janus Gate
+        arena_channel_id: 5345285
+      - title: THE DUAL SPINE — Aperture = Transformationsraum
+        arena_channel_id: 5345385
+        arena_block_id: 47227916
+      - title: THE CARTOGRAPHY LABORATORY
+        arena_channel_id: 5386766
+      - title: OPERATIONAL GEOMETRY OF TRANSITION
+        arena_channel_id: 5217666
+    research_boundary:
+      source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md
+      distinction: access_geometry_is_distinct_from_directional_organization_and_activation
+    existing_operator: NX-OP-0002
+    explain_disclosures:
+      - work_level_explanation_is_distinct_from_research_authority
+      - work_taxonomies_do_not_expand_operator_registry
+  - id: CFQ-06
+    question: What does Balance mean in NEXAH?
+    result: pass_with_concept_boundary
+    reader_answer: >-
+      Balance is not one fixed NEXAH geometry. It usually means that different
+      directions, forces, or forms of motion remain in a viable relation
+      without one simply erasing the other. Figure-eight, paired JANUS axes,
+      Relation Tube, and OLGO are related models, not one canonical Concept.
+    reader_route:
+      - {title: THE DUAL SPINE, arena_channel_id: 5345385, role: relational_balance}
+      - {title: LIBRARYBOOK, arena_channel_id: 5413103, role: directional_balance}
+      - {title: THE OPERATOR LIBRARY, arena_channel_id: 5442697, role: regulatory_balance}
+      - {title: GEOMETRIA NOVA, arena_channel_id: 5442781, role: figure_eight_visual_family}
+    explain_disclosures:
+      - outcome_is_multiple_related_models
+      - balance_is_distinct_from_equilibrium_stability_closure_coherence_and_resonance
+      - no_concept_id_registry_record_graph_edge_or_census_entry
+    evidence:
+      - EDITORIAL_OPERATING_SYSTEM/living_concepts/review/geometry_of_balance/GEOMETRY_OF_BALANCE_EVIDENCE_REVIEW.md
+aggregate:
+  questions_total: 6
+  reader_answers_clear: 6
+  explain_answers_with_provenance: 6
+  direct_pass: 3
+  editorial_synthesis_pass: 2
+  concept_boundary_pass: 1
+  requires_new_identity: 0
+  requires_graph_edge: 0
+  requires_registry_change: 0
+  requires_kernel_change: 0
+  requires_arena_write: 0
+finding: >-
+  The reviewed Concept-family evidence can already orient readers and explain
+  its reasoning. Two paths remain explicitly human-curated and one answer is
+  valuable because it refuses premature Concept unification.
+current_limitation: >-
+  The test is a human-authored review artifact. The current Kernel does not
+  derive these answers from a Concept overlay.
+human_decisions_required:
+  - {decision_id: X1-CFT-01, question: 'Accept the six Reader answers?', recommendation: accept}
+  - {decision_id: X1-CFT-02, question: 'Accept the Explain disclosures?', recommendation: accept}
+  - {decision_id: X1-CFT-03, question: 'Accept the Inbetween route as a curated path?', recommendation: accept}
+  - {decision_id: X1-CFT-04, question: 'Accept the Boundary-to-Transition route as a curated path?', recommendation: accept}
+  - {decision_id: X1-CFT-05, question: 'Accept the Aperture route?', recommendation: accept}
+  - {decision_id: X1-CFT-06, question: 'Accept the Balance answer with multiple_related_models?', recommendation: accept}
+  - {decision_id: X1-CFT-07, question: 'Allocate Concept IDs or graph edges now?', recommendation: defer}
+  - {decision_id: X1-CFT-08, question: 'Integrate with the Kernel now?', recommendation: defer_pending_overlay_design_and_human_approval}
+recommendation:
+  outcome: accept_as_first_concept_family_reader_explain_baseline
+  next_bounded_step: minimal_concept_overlay_v0_1_proposal
+  kernel_integration: deferred
+warnings:
+  - Curated paths are not canonical graph relations.
+  - Occurrence proves an authored statement exists; it does not validate its scientific claim.
+  - No IDs, graph edges, Operators, Registry records, Kernel behavior, or Are.na content are changed.
