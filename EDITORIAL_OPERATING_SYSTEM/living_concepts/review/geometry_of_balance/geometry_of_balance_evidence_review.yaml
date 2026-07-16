@@ -1,0 +1,234 @@
+schema_version: 0.1-proposal
+phase: X1
+review_type: bounded_evidence_review
+status: human_review_required
+canonical: false
+observed_at: '2026-07-16'
+human_lead:
+  key: concept:balance-geometry
+  preferred_name: Geometry of Balance
+  present_in_concept_census: false
+  allocate_identity: false
+decision:
+  outcome: multiple_related_models
+  coherent_current_concept: false
+  visual_motif_only: false
+  rationale: >-
+    One historical source uses the exact name, while current Works and
+    experiments describe several related but non-equivalent forms of balance.
+authority:
+  modifies_registry: false
+  modifies_operators: false
+  creates_graph_edges: false
+  modifies_kernel: false
+  writes_to_arena: false
+provisional_shared_thread:
+  value: >-
+    Balance describes a maintained relation between non-identical tendencies
+    in which neither side is simply erased and the combined behavior remains
+    within a viable or intelligible pattern.
+  status: editorial_comparison_not_definition
+models:
+  - key: resonant_drift_balance
+    balances: [symbolic_potential, rotation, thermal_drift]
+    persistence: narrow_oscillatory_band_or_lock
+    geometry: [mirrored_lattice, membrane]
+    evidence_status: historical_speculative_model
+  - key: relational_balance
+    balances: [structure, motion, relation]
+    persistence: navigable_present
+    geometry: [tube, basin, bridge]
+    evidence_status: strong_work_level_formulation
+  - key: directional_balance
+    balances: [paired_directions_of_change]
+    persistence: coordinated_orientation
+    geometry: [axes, hinges, coupled_planes]
+    evidence_status: strong_work_level_synthesis
+  - key: regulatory_balance
+    balances: [deviation, recentering]
+    persistence: regulated_process
+    geometry: [shells, triad, return]
+    evidence_status: work_taxonomy_plus_experimental_olgo
+  - key: figure_eight_balance
+    balances: [counter_directed_loops]
+    persistence: exchange_and_return
+    geometry: [lemniscate, crossing_body]
+    evidence_status: recurring_visual_family
+  - key: dynamic_compensation
+    balances: [expansion, contraction]
+    persistence: bounded_motion
+    geometry: [loops, alternating_flow]
+    evidence_status: legacy_experimental_interpretation
+  - key: equilibrium_balance
+    balances: [forces_or_potential]
+    persistence: stable_state
+    geometry: [minimum, fixed_point, attractor]
+    evidence_status: conventional_scoped_dynamical_meaning
+historical_definition:
+  repository_ref: historical:nexah-codex
+  pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+  source: >-
+    SYSTEM_X_NEXAH_GRAND_CODEX_URF/NEXUS I — AEQUATIO ∞ QAEON/I ·
+    RESONANT SYMMETRY — Drift Equilibrium Fields.md
+  locator: GEOMETRY OF BALANCE
+  occurrence_role: defines_historical_model
+  occurrence_verification: verified_at_pinned_commit
+  assertion_origin: human_authored_historical
+  claim_support:
+    value: not_supported_as_current_science
+    scope: symbolic_thermodynamic_model
+  summary: >-
+    A mirrored resonant symmetry field whose asserted balance produces
+    oscillation within a narrow drift band.
+public_work_occurrences:
+  - occurrence_key: balance:work:relation-tube
+    source: arena:5345385
+    locator: block 47227898, observed position 7
+    title: WHITEBOARD E - THE RELATION TUBE
+    role: direct_relational_balance_formulation
+    verification: visually_verified
+    claim_support: authored_whiteboard_model
+  - occurrence_key: balance:work:dynamic-engine
+    source: arena:5413103
+    locator: block 47683506, observed position 73
+    title: THE DYNAMIC ENGINE FROM DIRECTIONS TO DYNAMICS ONE GEOMETRY • MANY EQUATIONS • ONE BALANCE
+    role: direct_directional_balance_synthesis
+    verification: visually_verified
+    claim_support: authored_visual_framework
+  - occurrence_key: balance:work:olgo
+    source: arena:5442697
+    locator: block 47930298, observed position 18
+    title: THE OPERATOR GEOMETRY OF TRANSITION
+    role: assigns_balance_to_olgo_regulation
+    verification: visually_verified
+    claim_support: authored_taxonomy_prototype
+  - occurrence_key: balance:work:figure-eight
+    source: arena:5442781
+    locator: block 47931465, observed position 18
+    title: PART II DYNAMIC GEOMETRY _ II
+    role: figure_eight_balance_motif
+    verification: visually_verified
+    claim_support: visual_semantics_only
+  - occurrence_key: balance:work:operator-views
+    source: arena:5442721
+    locator: block 47930464, observed position 20
+    title: 5 FUNDAMENTAL VIEWS
+    role: complementary_direction_context
+    verification: visually_verified
+    claim_support: related_context_not_definition
+experimental_occurrences:
+  - occurrence_key: balance:experiment:time-knot
+    source: EXPERIMENTAL/BUILDER_LAB/proto_models/time_knot_field/core_idea.md
+    locator: Central Hypothesis and Status
+    role: figure_eight_dual_loop_proto_model
+    verification: verified
+    claim_support: explicitly_proto_model
+  - occurrence_key: balance:experiment:olgo
+    source: EXPERIMENTAL/BUILDER_LAB/EXPLORATION/symbolic_layer/resonance/OLGO_RESONANCE_MODEL.md
+    locator: Core Definition through Structural Meaning
+    role: resonance_band_realization
+    verification: verified
+    claim_support: experimental_higher_construct
+  - occurrence_key: balance:experiment:dynamic-compensation
+    source: APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/logs/log_iv_navigation.md
+    locator: Entry 77 — Balanced Flow & Oscillatory Field Dynamics
+    role: develops_dynamic_compensation_model
+    verification: verified
+    claim_support: legacy_discovery_log_not_canonical_validation
+distinctions:
+  equilibrium:
+    definition: stable state or configuration with vanishing or minimal net change
+    relation_to_balance: possible_special_case_not_synonym
+  stability:
+    definition: persistence or viable spatial and dynamical structure
+    relation_to_balance: possible_result_or_association_not_synonym
+  closure:
+    definition: return recurrence containment or identity persistence
+    relation_to_balance: possible_result_not_synonym
+    warning: governance_closure_is_a_separate_usage
+  coherence:
+    definition: alignment between observed motion and declared flow geometry
+    relation_to_balance: alignment_measure_not_synonym
+  resonance:
+    definition: heterogeneous family including phase coupling recurrence program names and metaphor
+    relation_to_balance: possible_mechanism_not_synonym
+figure_eight_boundary:
+  status: visual_family_not_concept_identity
+  may_represent:
+    - counter_directed_loops
+    - crossing_topology
+    - return_cycle
+    - lorenz_like_trajectory
+    - dual_loop_metaphor
+    - ornamental_infinity_sign
+  balance_inference_without_source_context: prohibited
+negative_evidence:
+  exact_public_arena_title_found: false
+  public_channels_reviewed: 71
+  concept_census_candidate_found: false
+  exclusions:
+    - ordinary_life_balance
+    - personal_discipline
+    - accounting_balance
+    - generic_balanced_partition
+    - parameter_tuning
+    - bilateral_or_symmetric_image_without_definition
+future_scoped_labels:
+  status: analytical_aids_only
+  values:
+    - relational_balance
+    - directional_balance
+    - dynamic_compensation
+    - resonant_balance
+    - equilibrium_condition
+reader_answer:
+  value: >-
+    Balance is not one fixed NEXAH geometry. Across the Library it usually
+    means that different directions, forces, or forms of motion remain in a
+    viable relation without one simply erasing the other. Some Works show this
+    as a figure-eight, paired JANUS axes, a Relation Tube, or OLGO regulation.
+    These are related models, not yet one canonical Concept.
+  status: proposal_after_human_approval
+human_decisions_required:
+  - decision_id: X1-BAL-01
+    question: Accept the historical exact phrase as genuine lineage?
+    recommendation: accept
+  - decision_id: X1-BAL-02
+    question: Accept multiple_related_models as the review outcome?
+    recommendation: accept
+  - decision_id: X1-BAL-03
+    question: Accept the shared thread only as editorial comparison?
+    recommendation: accept
+  - decision_id: X1-BAL-04
+    question: Preserve the distinction between balance and equilibrium?
+    recommendation: accept
+  - decision_id: X1-BAL-05
+    question: Preserve distinctions from stability closure coherence and resonance?
+    recommendation: accept
+  - decision_id: X1-BAL-06
+    question: Treat the figure-eight as a visual family rather than a Concept?
+    recommendation: accept
+  - decision_id: X1-BAL-07
+    question: Treat OLGO only as an experimental realization?
+    recommendation: accept
+  - decision_id: X1-BAL-08
+    question: Prevent legacy IEEE claims from inheriting canonical validation?
+    recommendation: accept
+  - decision_id: X1-BAL-09
+    question: Allocate a new Concept identity now?
+    recommendation: defer
+  - decision_id: X1-BAL-10
+    question: Permit a reviewed explanatory Reader answer without graph traversal?
+    recommendation: accept_after_human_approval
+recommendation:
+  promote_concept: false
+  preserve_lineage: true
+  preserve_family_resemblance: true
+  kernel_graph_exposure: false
+  reader_explanation_after_approval: true
+warnings:
+  - Historical occurrence establishes lineage not present scientific validity.
+  - Visual recurrence establishes a motif not an invariant.
+  - OLGO is an experimental higher construct not a controlled Operator.
+  - Legacy IEEE discovery logs are not canonical IEEE Geometry V1 validation.
+  - No Registry Operator Concept ID graph or Are.na state is changed.
