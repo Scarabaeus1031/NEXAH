@@ -1,0 +1,204 @@
+schema_version: 0.1-proposal
+phase: X1
+review_type: concept_family_review
+status: human_review_required
+canonical: false
+observed_at: '2026-07-16'
+candidate:
+  key: concept:transition-geometry
+  preferred_name: Transition Geometry
+  proposed_kind: concept_family
+  maturity: coherent
+  specificity: high
+  allocate_identity: false
+authority:
+  modifies_registry: false
+  modifies_operators: false
+  creates_graph_edges: false
+  modifies_kernel: false
+  writes_to_arena: false
+reader_definition:
+  value: >-
+    Transition Geometry is NEXAH's way of describing the structured
+    in-between: the relations, boundaries, apertures, paths, and constraints
+    through which one state may become another.
+  status: proposal_for_human_review
+governing_boundary:
+  geometry_is: a declared relational representation
+  geometry_is_not: the represented reality itself
+  universal_transition_space: not_supported
+  supported_scope: >-
+    A family of representation-specific states, relations, paths, fields,
+    graphs, campaigns, episodes, and explicit boundaries.
+role_model:
+  - role: transition_geometry
+    function: describes_the_structured_inbetween
+  - role: atlas_reconstruction
+    function: maps_basins_corridors_gates_bottlenecks_recovery_and_anchors
+  - role: janus
+    function: preserves_and_evaluates_complementary_sides_of_a_passage
+family_members:
+  - key: state_geometry
+    question: What states or regimes are represented?
+    forms: [region, basin, attractor, frame]
+    review_state: coherent_family_member
+  - key: relation_geometry
+    question: What is connected to what?
+    forms: [edge, tube, bridge, network, coupling]
+    review_state: coherent_family_member
+  - key: flow_geometry
+    question: How does movement develop?
+    forms: [field, gradient, drift, corridor, vortex]
+    review_state: coherent_in_scoped_representations
+  - key: boundary_geometry
+    question: What distinguishes or limits a region?
+    forms: [membrane, cut, horizon, constraint]
+    review_state: coherent_but_boundary_types_must_remain_distinct
+  - key: aperture_geometry
+    question: Where can passage occur?
+    forms: [gate, opening, threshold, bottleneck]
+    review_state: strong_research_and_work_evidence
+  - key: observer_geometry
+    question: What becomes visible from a declared view?
+    forms: [projection, slice, scale, reference, blind_spot]
+    review_state: coherent_conceptual_family_member
+  - key: recovery_geometry
+    question: How can a system return or restabilize?
+    forms: [anchor, return_path, resilient_region]
+    review_state: authored_atlas_layer_support_varies
+  - key: resonance_geometry
+    question: How do oscillations or relations align?
+    forms: [wave, phase, loop, coherence]
+    review_state: strong_work_vocabulary_broad_physical_claims_unverified
+  - key: balance_geometry
+    question: How are complementary directions held in relation?
+    forms: [figure_eight, counterflow, hinge, dynamic_balance]
+    review_state: human_lead_definition_required
+whiteboard_sequence:
+  - the_inbetween
+  - the_threshold
+  - the_janus_gate
+  - new_configuration
+core_recurrence_hypothesis:
+  sequence: [region, boundary, transition, closure]
+  status: explicit_working_hypothesis
+  invariant: not_established
+  source:
+    arena_channel_id: 5345838
+    arena_block_id: 47230035
+balance_geometry_lead:
+  exact_public_block_title_found: false
+  status: distributed_motif_and_human_lead
+  evidence:
+    - source: arena:5442781
+      locator: block 47931465
+      note: Figure-eight described as balance of opposites.
+    - source: arena:5442721
+      locator: block 47930464
+      note: Complementary directional views.
+    - source: arena:5442697
+      locator: block 47930298
+      note: Olgo described as regulation or balance.
+    - source: arena:5345385
+      locator: block 47227898
+      note: Relation Tube describes dynamic balance and drift.
+    - source: arena:5413103
+      locator: block 47683506
+      note: One geometry, many equations, one balance.
+  questions:
+    - Is balance equilibrium, compensation, counterflow, coherence, or adaptive regulation?
+    - Is balance a property of a state, relation, path, or observer frame?
+    - What distinguishes balance from closure, stability, and resonance?
+source_groups:
+  primary_works:
+    - {title: GEOMETRIA NOVA, arena_channel_id: 5442781, role: grammar}
+    - {title: THE OPERATOR, arena_channel_id: 5442721, role: perspective_and_transformation}
+    - {title: THE OPERATOR LIBRARY, arena_channel_id: 5442697, role: form_and_process_taxonomy}
+    - {title: THE CARTOGRAPHY LABORATORY, arena_channel_id: 5386766, role: triad_synthesis}
+    - {title: OPERATIONAL GEOMETRY OF TRANSITION, arena_channel_id: 5217666, role: visual_atlas}
+  whiteboards:
+    - {title: NEXAH WHITEBOARD SERIES, arena_channel_id: 5345285}
+    - {title: DESIGNING ORIENTATION, arena_channel_id: 5345336}
+    - {title: THE DUAL SPINE, arena_channel_id: 5345385}
+    - {title: THE LANDINGS, arena_channel_id: 5345838}
+    - {title: THE CATHEDRAL OF RESONANCE, arena_channel_id: 5345856}
+  repository_sources:
+    - source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md
+      role: scoped_definition_and_access_activation_distinction
+    - source: ARCHITECTURE/METHODS.md
+      role: experimental_transition_geometry_and_basin_graph
+    - source: ARCHITECTURE/orientation_layer/STATE_TRANSITION_ORIENTATION_REVIEW.md
+      role: representation_and_boundary_constraints
+    - source: RESEARCH/FOUNDATION/STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md
+      role: evidence_bound_framework
+claim_support:
+  supported_within_scope:
+    - representation_specific_states_and_transition_relations
+    - ordered_paths_and_trajectory_families
+    - explicit_heterogeneous_boundaries
+    - aperture_access_and_transition_activation_distinction
+    - experimental_basin_graphs_and_gate_regions
+  not_established:
+    - representation_independent_transition_space
+    - one_topology_for_all_boundary_types
+    - universal_cross_domain_transition_geometry
+    - equivalence_of_work_equations_and_implemented_algorithms
+    - cross_domain_causal_control_or_calibrated_prediction
+    - validity_from_visual_recurrence_alone
+relation_proposals:
+  - {subject: concept:transition-geometry, relation: broader_family_for, object: concept:aperture, status: review_only}
+  - {subject: concept:transition-geometry, relation: interpreted_by, object: concept:janus, status: review_only}
+  - {subject: concept:transition-geometry, relation: mapped_through, object: concept:atlas-reconstruction, status: review_only}
+  - {subject: concept:transition-geometry, relation: related_operator, object: NX-OP-0005, status: review_only}
+  - {subject: concept:transition-geometry, relation: related_operator, object: NX-OP-0006, status: review_only}
+  - {subject: concept:transition-geometry, relation: related_operator, object: NX-OP-0003, status: review_only}
+  - {subject: concept:transition-geometry, relation: related_operator, object: NX-OP-0011, status: review_only}
+  - {subject: concept:transition-geometry, relation: related_operator, object: NX-OP-0012, status: review_only}
+  - {subject: concept:transition-geometry, relation: related_operator, object: NX-OP-0017, status: review_only}
+  - {subject: concept:transition-geometry, relation: possible_family_member, object: concept:balance-geometry, status: human_lead_only}
+risks:
+  - geometry_inflation
+  - category_collapse
+  - universalization
+  - equation_laundering
+  - operator_registry_collision
+  - observer_erasure
+  - boundary_conflation
+human_decisions_required:
+  - decision_id: X1-TG-01
+    question: Accept Transition Geometry as a proposal family?
+    recommendation: accept
+  - decision_id: X1-TG-02
+    question: Accept the proposed reader definition?
+    recommendation: accept_with_review
+  - decision_id: X1-TG-03
+    question: Preserve the three distinct roles?
+    recommendation: accept
+  - decision_id: X1-TG-04
+    question: Treat one universal transition space as established?
+    recommendation: reject
+  - decision_id: X1-TG-05
+    question: Keep named geometries as provisional editorial families?
+    recommendation: accept
+  - decision_id: X1-TG-06
+    question: Promote Balance Geometry now?
+    recommendation: defer_and_review_evidence
+  - decision_id: X1-TG-07
+    question: Promote Region-Boundary-Transition-Closure to an invariant?
+    recommendation: reject_and_retain_as_hypothesis
+  - decision_id: X1-TG-08
+    question: Merge Work taxonomies into the controlled Operator Registry?
+    recommendation: reject
+  - decision_id: X1-TG-09
+    question: Preserve public page claims as authored statements with provenance?
+    recommendation: accept
+  - decision_id: X1-TG-10
+    question: Expose this family through the Kernel now?
+    recommendation: defer
+recommendation:
+  outcome: proceed_without_identity_allocation
+  next_bounded_task: geometry_of_balance_evidence_review
+warnings:
+  - Occurrence verifies an authored page, not its scientific claim.
+  - No IDs, graph edges, Operators, Registry records, or Are.na content are changed.
+  - Work-level equations and validation statements require separate provenance.

@@ -82,6 +82,7 @@ repository's stricter observed-evidence and Outcome Firewall semantics.
 | [X1 Dossier Template](dossiers/DOSSIER_TEMPLATE.md) | Shared human-review boundary for the five reference dossiers |
 | [JANUS Concept Dossier](dossiers/JANUS_DOSSIER.md) · [YAML](dossiers/janus.yaml) | First X1 reference dossier; human review required |
 | [JANUS Visual Evidence Review](dossiers/visual_evidence/JANUS_VISUAL_EVIDENCE_REVIEW.md) · [YAML](dossiers/visual_evidence/janus_visual_occurrences.yaml) | Bounded review of book pages, atlas posters, IEEE artifacts, and the Penta/Hexagonal human lead |
+| [Transition Geometry Family Review](review/transition_geometry/TRANSITION_GEOMETRY_FAMILY_REVIEW.md) · [YAML](review/transition_geometry/transition_geometry_family_review.yaml) | Family review across GEOMETRIA NOVA, Operator Works, Cartography Laboratory, Operational Geometry, Whiteboards, Research, and Architecture |
 
 ## Relationship to the Editorial Operating System
 
