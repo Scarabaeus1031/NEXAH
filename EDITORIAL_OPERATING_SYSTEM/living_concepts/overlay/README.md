@@ -1,12 +1,19 @@
 # Living Concepts — Minimal Concept Overlay v0.1
 
-**Status:** review only · non-canonical  
+**Status:** editorial baseline accepted · non-canonical
 **Load policy:** manual evaluation only  
 **Kernel integration:** not implemented
 
-The Minimal Concept Overlay tests whether reviewed Concept-family knowledge can
+The Minimal Concept Overlay records the accepted editorial baseline for
+whether reviewed Concept-family knowledge can
 be represented in a small, machine-readable form without turning editorial
 synthesis into canonical graph truth.
+
+Acceptance covers the schema, seven reviewed handles, documentary
+occurrences, review-only relations, curated paths, Reader and Explain answer
+contracts, and the six-question baseline evaluation. It does not approve
+permanent identities, Registry integration, graph truth, inference, general
+Kernel loading, or Are.na mutation.
 
 The overlay is deliberately not placed in the Registry and is not loaded by
 the Orientation Kernel. It has no writer and no Are.na mutation path.
@@ -90,3 +97,19 @@ Version 0.1 does not:
 - promote Balance into one Concept;
 - promote `Region → Boundary → Transition → Closure` into an invariant.
 
+## Current system state
+
+```text
+Overlay v0.1                 Editorial baseline accepted
+Read-only Answer Adapter     Not yet implemented
+Production Concept Graph     Not implemented
+General Kernel integration   Deferred
+```
+
+The distinctions are explicit:
+
+```text
+Concept Overlay              ≠ Concept Graph
+Concept Answer Adapter       ≠ General Reasoning Engine
+Accepted Editorial Baseline  ≠ Canonical Knowledge
+```

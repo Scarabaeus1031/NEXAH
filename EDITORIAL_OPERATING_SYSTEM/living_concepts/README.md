@@ -1,8 +1,9 @@
 # NEXAH Living Concepts
 
-**Status:** Phase X · Pass X0.5 · review only
+**Status:** Phase X2 · Overlay v0.1 editorial baseline accepted
 **Authority:** non-canonical proposal artifacts  
 **Production Concept Graph:** not implemented
+**General Kernel integration:** deferred
 
 The NEXAH Living Library organizes Works. Living Concepts investigates the
 intellectual layer that develops through Works, Research, Validation, and
@@ -97,3 +98,16 @@ and evidence.
 
 No artifact in this directory overrides the Registry, a Work, a scientific
 validation record, or a human editorial decision.
+
+## Current implementation boundary
+
+```text
+Overlay v0.1                 Editorial baseline accepted
+Read-only Answer Adapter     Not yet implemented
+Production Concept Graph     Not implemented
+General Kernel integration   Deferred
+```
+
+Concept Overlay is not a Concept Graph. An accepted editorial baseline is not
+canonical knowledge. Any future Answer Adapter remains distinct from a general
+reasoning engine.

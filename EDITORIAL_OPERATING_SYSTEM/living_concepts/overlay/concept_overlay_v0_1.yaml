@@ -1,10 +1,30 @@
 schema_version: 0.1-proposal
 overlay_id: living-concepts-transition-geometry-pilot-v0.1
 phase: X1
-status: human_review_required
+status: editorial_baseline_accepted
 canonical: false
 load_policy: manual_evaluation_only
 created_at: '2026-07-16'
+editorial_acceptance:
+  state: accepted_baseline
+  accepted_at: '2026-07-16'
+  accepted_scope:
+    - overlay_schema
+    - reviewed_concept_handles
+    - documentary_occurrences
+    - review_only_relations
+    - curated_paths
+    - reader_answer_contracts
+    - explain_answer_contracts
+    - six_question_baseline_evaluation
+  explicitly_excluded:
+    - canonical_concept_identity
+    - registry_integration
+    - operator_mutation
+    - graph_truth
+    - automatic_inference
+    - general_kernel_runtime_integration
+    - arena_mutation
 authority:
   modifies_registry: false
   allocates_identities: false
@@ -430,4 +450,3 @@ recommendation:
   outcome: evaluate_before_kernel_integration
   next_if_approved: read_only_adapter_design
   identities_and_graph_edges: deferred
-

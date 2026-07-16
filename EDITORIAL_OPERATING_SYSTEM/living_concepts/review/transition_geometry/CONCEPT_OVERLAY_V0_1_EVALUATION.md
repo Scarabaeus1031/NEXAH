@@ -1,7 +1,7 @@
 # Minimal Concept Overlay v0.1 — Evaluation
 
 **Phase:** X1 · machine-readable pilot  
-**Status:** human review required · non-canonical  
+**Status:** editorial baseline accepted · non-canonical
 **Baseline:** Transition Geometry Concept-Family Test  
 **Runtime:** not integrated
 
@@ -11,6 +11,11 @@ The Minimal Concept Overlay v0.1 reproduces the structure required by all six
 accepted Reader/Explain answers without adding a permanent Concept identity,
 canonical graph edge, Registry mutation, Operator mutation, Kernel behavior,
 or Are.na write.
+
+The editorial decisions `X1-OVL-01` through `X1-OVL-07` were accepted on
+2026-07-16. `X1-OVL-08`, general Kernel integration, remains deferred. This
+status transition changes no definition, occurrence, relation, path, or answer
+contract.
 
 The overlay contains:
 
@@ -121,4 +126,3 @@ If accepted, the next bounded phase is not graph expansion. It is a design
 review for a **read-only Concept Overlay adapter** that can answer only the six
 pilot questions, always return provenance, and fail closed on unknown or
 unreviewed questions.
-
