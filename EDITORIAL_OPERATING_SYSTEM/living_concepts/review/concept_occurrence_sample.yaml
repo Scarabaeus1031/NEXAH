@@ -1,0 +1,173 @@
+schema_version: '0.1-proposal'
+phase: X0
+status: non_canonical_review
+sample_policy:
+  candidate_count: 5
+  minimum_occurrences_per_candidate: 3
+  verified_occurrence_count: 15
+  semantic_completeness_claimed: false
+candidates:
+  - candidate_key: concept:janus
+    preferred_name: JANUS
+    structural_case: existing Operator with possible broader Concept
+    existing_operator_ref: NX-OP-0016
+    occurrences:
+      - occurrence_key: sample:janus:01
+        source_type: operator_record
+        source: LIBRARY/registry/concepts/NX-OP-0016.yaml
+        locator: definition
+        occurrence_role: defines
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: not_assessed, scope: controlled editorial Operator definition}
+        note: Defines the current authoritative Operator, not the full JANUS research lineage.
+      - occurrence_key: sample:janus:02
+        source_type: repository_document
+        source: RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/README.md
+        locator: JANUS Core Concept and Conceptual Janus Operator
+        occurrence_role: develops
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: exploratory, scope: reconstructed flow geometry and JANUS experiments}
+        note: Develops forward/backward directional compatibility as a research observable.
+      - occurrence_key: sample:janus:03
+        source_type: repository_document
+        source: RESEARCH/FOUNDATION/STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md
+        locator: section 7, JANUS and round-trip consistency
+        occurrence_role: contrasts
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: supported_within_scope, scope: repository architecture boundary}
+        note: Separates principle, Bridge, and Directional Coherence analysis and rejects conflation.
+  - candidate_key: concept:aperture
+    preferred_name: Aperture
+    structural_case: existing Operator with strong research formalization
+    existing_operator_ref: NX-OP-0002
+    occurrences:
+      - occurrence_key: sample:aperture:01
+        source_type: operator_record
+        source: LIBRARY/registry/concepts/NX-OP-0002.yaml
+        locator: definition
+        occurrence_role: defines
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: not_assessed, scope: controlled editorial Operator definition}
+        note: Defines selective opening or frame.
+      - occurrence_key: sample:aperture:02
+        source_type: repository_document
+        source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md
+        locator: Purpose, Scope, and Gate Regions
+        occurrence_role: develops
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: supported_within_scope, scope: repository transition-analysis experiments}
+        note: Extends Aperture into localized transition access and gate geometry without claiming a universal law.
+      - occurrence_key: sample:aperture:03
+        source_type: arena_source_snapshot
+        source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml
+        locator: THE LANGUAGE ATLAS description, "Every map is an aperture"
+        occurrence_role: visualizes
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: not_assessed, scope: public editorial description}
+        note: Pedagogical and metaphorical use; not scientific support for Aperture Geometry.
+  - candidate_key: concept:vessel
+    preferred_name: Vessel
+    structural_case: non-Operator Research Concept
+    existing_operator_ref: null
+    occurrences:
+      - occurrence_key: sample:vessel:01
+        source_type: repository_document
+        source: RESEARCH/CORE_CONCEPTS/vessel_geometry.md
+        locator: Working Definition
+        occurrence_role: defines
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: exploratory, scope: structural persistence framework}
+        note: Defines containment, recurrence, coherent transport, stable topology, and recursive directional organization.
+      - occurrence_key: sample:vessel:02
+        source_type: repository_document
+        source: RESEARCH/CORE_CONCEPT_MAP.md
+        locator: Vessel — Containment and Persistence
+        occurrence_role: discusses
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: exploratory, scope: integrated research perspective}
+        note: Positions Vessel between Field possibility and persistent structure.
+      - occurrence_key: sample:vessel:03
+        source_type: repository_document
+        source: RESEARCH/CORE_CONCEPTS/README.md
+        locator: Vessel Geometry
+        occurrence_role: develops
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: exploratory, scope: Core Concepts architecture}
+        note: Connects containment, persistence, boundaries, and transition interfaces.
+  - candidate_key: concept:resonance
+    preferred_name: Resonance
+    structural_case: widely distributed Library and Research Concept
+    existing_operator_ref: null
+    occurrences:
+      - occurrence_key: sample:resonance:01
+        source_type: arena_source_snapshot
+        source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml
+        locator: THE CATHEDRAL OF RESONANCE description
+        occurrence_role: develops
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: not_assessed, scope: public editorial description}
+        note: Connects resonance with emergence, observation, memory, and feedback without a fixed theory.
+      - occurrence_key: sample:resonance:02
+        source_type: repository_document
+        source: RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/README.md
+        locator: Overview and Key Findings
+        occurrence_role: tests
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: exploratory, scope: prime-residue transition experiments}
+        note: Uses Resonance as a program name for structured discrete transition behavior; unresolved scaling claims remain explicit.
+      - occurrence_key: sample:resonance:03
+        source_type: arena_source_snapshot
+        source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml
+        locator: LOGARITHMIC UNIVERSE description
+        occurrence_role: discusses
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: not_assessed, scope: visual essay description}
+        note: Uses resonance across scales as an exploratory visual framework, not a cosmological theory.
+  - candidate_key: concept:living-equation
+    preferred_name: Living Equation
+    structural_case: Work-title and possible Concept identity overlap
+    existing_operator_ref: null
+    occurrences:
+      - occurrence_key: sample:living-equation:01
+        source_type: arena_source_snapshot
+        source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml
+        locator: arena_channel_id 5442532 title and description
+        occurrence_role: discusses
+        occurrence_verification: verified
+        assertion_origin: human_authored
+        claim_support: {value: not_assessed, scope: public Work description}
+        note: Verifies the Work and its synthesis intent; does not define an independent Concept.
+      - occurrence_key: sample:living-equation:02
+        source_type: classification_record
+        source: LIBRARY/review/full_library_classification.yaml
+        locator: arena_channel_id 5442532
+        occurrence_role: mentions
+        occurrence_verification: verified
+        assertion_origin: editorial_proposal
+        claim_support: {value: not_assessed, scope: proposal classification}
+        note: Classifies the Work as a proposed orientation atlas and synthesis; allocates no identity.
+      - occurrence_key: sample:living-equation:03
+        source_type: reader_review
+        source: LIBRARY/review/reader_journey_review.yaml
+        locator: RJ-03 Research Test, final step
+        occurrence_role: applies
+        occurrence_verification: verified
+        assertion_origin: editorial_proposal
+        claim_support: {value: not_assessed, scope: proposed Reader Journey}
+        note: Tests the Work as a synthesis destination; this is not evidence of a separate Concept.
+warnings:
+  - Occurrence verification confirms source presence, not scientific truth.
+  - The sample is intentionally incomplete and does not annotate every occurrence.
+  - No Concept identity or relation is canonical.

@@ -1,0 +1,510 @@
+schema_version: '0.1-proposal'
+phase: X0
+status: non_canonical_review
+generated_at: '2026-07-16'
+authority:
+  allocates_ids: false
+  modifies_registry: false
+  modifies_operators: false
+  modifies_kernel: false
+  writes_to_arena: false
+method:
+  stage_a: raw lexical gathering from approved repository text
+  stage_b: human evidence review of retained candidates
+  caution: Raw counts include lexical false positives and are not measures of meaning.
+inventory:
+  candidate_terms_discovered: 47
+  retained_for_review: 39
+  excluded_likely_keywords: 8
+  existing_operator_matches: 17
+  distinct_nexah_definition_candidates: 25
+  discovery_provenance_only: 4
+  inadequate_definition_provenance: 8
+  claim_support_not_assessed: 9
+  historical_or_speculative: 6
+  ambiguous_work_title_concept_cases: 3
+candidates:
+  - candidate_key: concept:circle
+    preferred_name: Circle
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0001}
+    broader_concept_question: {value: open, rationale: Geometric and return-cycle usage may exceed the controlled operation.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Conventional form with a distinct relational and return-oriented Operator definition.}
+    raw_text_file_count: 10
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0001.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0001.yaml}
+    claim_support: {value: not_assessed, scope: editorial_operator_definition}
+  - candidate_key: concept:aperture
+    preferred_name: Aperture
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0002}
+    broader_concept_question: {value: likely, rationale: Research develops aperture geometry beyond selective framing.}
+    maturity: coherent
+    nexah_specificity: {value: high, rationale: NEXAH links selective opening, transition access, gate geometry, and perception.}
+    raw_text_file_count: 46
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md, locator: Purpose and Scope, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md}
+    claim_support: {value: supported_within_scope, scope: repository transition-analysis experiments}
+  - candidate_key: concept:observer
+    preferred_name: Observer
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0003}
+    broader_concept_question: {value: open, rationale: Library usage includes perception and situated meaning beyond the controlled operation.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Situated selection is explicit, but the term is also conventional.}
+    raw_text_file_count: 5
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0003.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0003.yaml}
+    claim_support: {value: not_assessed, scope: editorial_operator_definition}
+  - candidate_key: concept:needle
+    preferred_name: Needle
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0004}
+    broader_concept_question: {value: not_indicated, rationale: Reviewed scope provides little broader research usage.}
+    maturity: unclear
+    nexah_specificity: {value: moderate, rationale: Directional pointer meaning is controlled but sparsely evidenced outside the Registry.}
+    raw_text_file_count: 1
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0004.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0004.yaml}
+    claim_support: {value: not_assessed, scope: editorial_operator_definition}
+  - candidate_key: concept:transition
+    preferred_name: Transition
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0005}
+    broader_concept_question: {value: likely, rationale: Research separates transition event, geometry, activation, and transformation.}
+    maturity: coherent
+    nexah_specificity: {value: high, rationale: Central cross-layer idea with explicit structural and evidence boundaries.}
+    raw_text_file_count: 251
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPT_MAP.md, locator: Unified Transition Architecture, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0005.yaml}
+    claim_support: {value: supported_within_scope, scope: typed and experimental transition representations}
+  - candidate_key: concept:boundary
+    preferred_name: Boundary
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0006}
+    broader_concept_question: {value: open, rationale: Scientific, representational, and editorial boundaries are distinct usages.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Conventional term extended through passage and evidence-boundary semantics.}
+    raw_text_file_count: 31
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0006.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0006.yaml}
+    claim_support: {value: not_assessed, scope: mixed editorial and scientific usage}
+  - candidate_key: concept:memory
+    preferred_name: Memory
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0007}
+    broader_concept_question: {value: likely, rationale: Library memory, episodic memory, and conceptual trace are not identical.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Prior-state constraint has a controlled meaning alongside broader Library usage.}
+    raw_text_file_count: 32
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0007.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0007.yaml}
+    claim_support: {value: not_assessed, scope: editorial_operator_definition}
+  - candidate_key: concept:bridge
+    preferred_name: Bridge
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0008}
+    broader_concept_question: {value: likely, rationale: Reader, representation, and conceptual bridges have related but scoped meanings.}
+    maturity: developing
+    nexah_specificity: {value: high, rationale: Traversable transition between representations and knowledge states is central to NEXAH.}
+    raw_text_file_count: 12
+    discovery_provenance: [{source: RESEARCH/FOUNDATION/STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md, locator: section 7, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0008.yaml}
+    claim_support: {value: exploratory, scope: representation and reader architecture}
+  - candidate_key: concept:field
+    preferred_name: Field
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0009}
+    broader_concept_question: {value: likely, rationale: Relational, reconstructed, physical, and metaphorical fields require separation.}
+    maturity: coherent
+    nexah_specificity: {value: high, rationale: Distributed relational possibility and reconstructed flow geometry recur across the framework.}
+    raw_text_file_count: 100
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/field_model.md, locator: conceptual foundation, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/field_model.md}
+    claim_support: {value: supported_within_scope, scope: reconstructed simulation fields}
+  - candidate_key: concept:orientation
+    preferred_name: Orientation
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0010}
+    broader_concept_question: {value: likely, rationale: Operator, Kernel capability, reader experience, and project principle overlap.}
+    maturity: coherent
+    nexah_specificity: {value: high, rationale: Situated relation among observer, field, reference, and possible movement defines the project.}
+    raw_text_file_count: 38
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0010.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0010.yaml}
+    claim_support: {value: supported_within_scope, scope: implemented Library and Kernel behavior}
+  - candidate_key: concept:relation
+    preferred_name: Relation
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0011}
+    broader_concept_question: {value: likely, rationale: Relation is both a controlled operation and a foundational theory term.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Conventional term with explicit context- and meaning-forming use.}
+    raw_text_file_count: 67
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0011.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0011.yaml}
+    claim_support: {value: not_assessed, scope: editorial_operator_definition}
+  - candidate_key: concept:projection
+    preferred_name: Projection
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0012}
+    broader_concept_question: {value: likely, rationale: Mathematical projection and representation translation require scoped definitions.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Preservation and information loss make the usage more specific than generic mapping.}
+    raw_text_file_count: 59
+    discovery_provenance: [{source: RESEARCH/FOUNDATION/STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md, locator: representation mapping contract, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0012.yaml}
+    claim_support: {value: supported_within_scope, scope: typed representation contracts}
+  - candidate_key: concept:fold
+    preferred_name: Fold
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0013}
+    broader_concept_question: {value: open, rationale: Geometric, editorial, and metaphorical folding are not yet reconciled.}
+    maturity: emerging
+    nexah_specificity: {value: moderate, rationale: Adjacency transformation is specific, but Research provenance is dispersed.}
+    raw_text_file_count: 45
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0013.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0013.yaml}
+    claim_support: {value: not_assessed, scope: editorial_operator_definition}
+  - candidate_key: concept:gradient
+    preferred_name: Gradient
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0014}
+    broader_concept_question: {value: open, rationale: Mathematical gradient and editorial difference-gradient must remain scoped.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Conventional quantity extended into directional transition language.}
+    raw_text_file_count: 68
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0014.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0014.yaml}
+    claim_support: {value: supported_within_scope, scope: scoped mathematical and field representations}
+  - candidate_key: concept:navigation
+    preferred_name: Navigation
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0015}
+    broader_concept_question: {value: likely, rationale: Graph, field, reader, and editorial navigation are distinct applications.}
+    maturity: coherent
+    nexah_specificity: {value: high, rationale: Path selection using references, differences, and feedback is a core cross-layer pattern.}
+    raw_text_file_count: 47
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0015.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0015.yaml}
+    claim_support: {value: supported_within_scope, scope: implemented graph and Library navigation}
+  - candidate_key: concept:janus
+    preferred_name: JANUS
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0016}
+    broader_concept_question: {value: open, rationale: Complementary perspective, bridge, and directional-coherence research are explicitly separated.}
+    maturity: developing
+    nexah_specificity: {value: high, rationale: Framework-specific family of complementary and directional interpretations.}
+    raw_text_file_count: 96
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/README.md, locator: JANUS Core Concept, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/FOUNDATION/STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md}
+    claim_support: {value: exploratory, scope: JANUS transition-geometry experiments}
+  - candidate_key: concept:scale
+    preferred_name: Scale
+    group: existing_operator
+    review_state: candidate
+    existing_operator: {value: true, operator_ref: NX-OP-0017}
+    broader_concept_question: {value: open, rationale: Observational, structural, temporal, and publication scales may diverge.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Conventional term with explicit representational-level function.}
+    raw_text_file_count: 45
+    discovery_provenance: [{source: LIBRARY/registry/concepts/NX-OP-0017.yaml, locator: definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: LIBRARY/registry/concepts/NX-OP-0017.yaml}
+    claim_support: {value: not_assessed, scope: editorial_operator_definition}
+  - candidate_key: concept:vessel
+    preferred_name: Vessel
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Candidate is not represented by an Operator.}
+    maturity: developing
+    nexah_specificity: {value: high, rationale: Structural containment and persistence framework has a stated NEXAH definition.}
+    raw_text_file_count: 5
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/vessel_geometry.md, locator: Working Definition, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/vessel_geometry.md}
+    claim_support: {value: exploratory, scope: reconstructed dynamical systems}
+  - candidate_key: concept:transition-geometry
+    preferred_name: Transition Geometry
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Related to Transition but not equivalent to its Operator definition.}
+    maturity: coherent
+    nexah_specificity: {value: high, rationale: Distinguishes where transitions are structurally accessible from when they activate.}
+    raw_text_file_count: 41
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md, locator: Pipeline Overview and Gate Regions, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/aperture_geometry.md}
+    claim_support: {value: supported_within_scope, scope: repository simulation and reconstruction studies}
+  - candidate_key: concept:phase
+    preferred_name: Phase
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: coherent
+    nexah_specificity: {value: moderate, rationale: Conventional scientific quantity used in a specific transition-activation architecture.}
+    raw_text_file_count: 125
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/minimal_system.md, locator: core variables and transition mechanism, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/equations.md}
+    claim_support: {value: supported_within_scope, scope: tested phase-based fixtures}
+  - candidate_key: concept:mismatch
+    preferred_name: Mismatch
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: coherent
+    nexah_specificity: {value: high, rationale: Explicit difference between current and expected phase evolution used for activation analysis.}
+    raw_text_file_count: 45
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/minimal_system.md, locator: mismatch mechanism, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/equations.md}
+    claim_support: {value: validated_within_scope, scope: selected repository validation fixtures}
+  - candidate_key: concept:coherence
+    preferred_name: Coherence
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Conventional family of measures with directional and structural NEXAH extensions.}
+    raw_text_file_count: 63
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/structure_quantities.md, locator: coherence definitions, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/structure_quantities.md}
+    claim_support: {value: supported_within_scope, scope: reconstruction-dependent experiments}
+  - candidate_key: concept:multi-layer-interaction
+    preferred_name: Multi-Layer Interaction
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: emerging
+    nexah_specificity: {value: high, rationale: Explicit framework hypothesis for interacting organizational layers.}
+    raw_text_file_count: 4
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/multi_layer_interaction.md, locator: core hypothesis, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/multi_layer_interaction.md}
+    claim_support: {value: exploratory, scope: repository interpretations and experiments}
+  - candidate_key: concept:topology
+    preferred_name: Topology
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Standard term used for connectivity emerging from reconstructed structure.}
+    raw_text_file_count: 33
+    discovery_provenance: [{source: RESEARCH/FOUNDATION/topology_structure.md, locator: topology structure, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: RESEARCH/FOUNDATION/topology_structure.md}
+    claim_support: {value: exploratory, scope: representation-dependent topology studies}
+  - candidate_key: concept:directional-coherence
+    preferred_name: Directional Coherence
+    group: strong_research
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: open, rationale: Closely coupled to JANUS but not identical to Janus Operator identity.}
+    maturity: developing
+    nexah_specificity: {value: high, rationale: Forward/backward compatibility and orientation bias are framework-specific.}
+    raw_text_file_count: 29
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/README.md, locator: Core Perspective, occurrence_verification: verified}]
+    definition_provenance: {quality: strong, source: RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/README.md}
+    claim_support: {value: exploratory, scope: JANUS experiments}
+  - candidate_key: concept:resonance
+    preferred_name: Resonance
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: unclear
+    nexah_specificity: {value: moderate, rationale: Recurs across Library and mathematical research with several non-equivalent meanings.}
+    raw_text_file_count: 18
+    discovery_provenance: [{source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml, locator: THE CATHEDRAL OF RESONANCE description, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: RESEARCH/FINDINGS/PRIME_MODULAR_RESONANCE/README.md}
+    claim_support: {value: exploratory, scope: multiple incompatible or developing usages}
+  - candidate_key: concept:agency
+    preferred_name: Agency
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: emerging
+    nexah_specificity: {value: unclear, rationale: Strong Work-title presence but insufficient reviewed definition.}
+    raw_text_file_count: 3
+    discovery_provenance: [{source: LIBRARY/review/reader_journey_review.yaml, locator: FIELD ATLAS II title, occurrence_verification: verified}]
+    definition_provenance: {quality: weak, source: LIBRARY/review/full_library_discovery.yaml}
+    claim_support: {value: not_assessed, scope: library_work_description}
+  - candidate_key: concept:morphology
+    preferred_name: Morphology
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: emerging
+    nexah_specificity: {value: unclear, rationale: Work-title and descriptive usage dominate the reviewed scope.}
+    raw_text_file_count: 3
+    discovery_provenance: [{source: LIBRARY/review/reader_journey_review.yaml, locator: FIELD ATLAS III title, occurrence_verification: verified}]
+    definition_provenance: {quality: weak, source: LIBRARY/review/full_library_discovery.yaml}
+    claim_support: {value: not_assessed, scope: library_work_description}
+  - candidate_key: concept:meaning
+    preferred_name: Meaning
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: developing
+    nexah_specificity: {value: moderate, rationale: Relation-dependent meaning recurs, but sources remain pedagogical and broad.}
+    raw_text_file_count: 27
+    discovery_provenance: [{source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml, locator: Library and Whiteboard descriptions, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml}
+    claim_support: {value: not_assessed, scope: editorial_library_descriptions}
+  - candidate_key: concept:perspective
+    preferred_name: Perspective
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: open, rationale: May specialize Observer or Projection but evidence is not curated.}
+    maturity: emerging
+    nexah_specificity: {value: moderate, rationale: Multiple-perspective orientation is recurrent but conventionally named.}
+    raw_text_file_count: 19
+    discovery_provenance: [{source: LIBRARY/review/full_library_classification.yaml, locator: perspective Works and navigation channel, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: LIBRARY/review/full_library_discovery.yaml}
+    claim_support: {value: not_assessed, scope: editorial_library_descriptions}
+  - candidate_key: concept:whole
+    preferred_name: Whole
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: unclear
+    nexah_specificity: {value: low, rationale: Insufficient evidence of a stable framework-specific meaning.}
+    raw_text_file_count: 3
+    discovery_provenance: [{source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml, locator: Work descriptions, occurrence_verification: verified}]
+    definition_provenance: {quality: absent, source: null}
+    claim_support: {value: not_assessed, scope: lexical_occurrence_only}
+  - candidate_key: concept:stack
+    preferred_name: Stack
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: No existing Operator.}
+    maturity: unclear
+    nexah_specificity: {value: low, rationale: Most hits are code operations or generic research-stack language.}
+    raw_text_file_count: 33
+    discovery_provenance: [{source: RESEARCH/CORE_CONCEPT_MAP.md, locator: Core Concept Stack heading, occurrence_verification: verified}]
+    definition_provenance: {quality: absent, source: null}
+    claim_support: {value: not_assessed, scope: lexical_and_organizational_usage}
+    warnings: [Raw frequency is inflated by numpy stack operations., No stable NEXAH Concept definition found.]
+  - candidate_key: concept:living-equation
+    preferred_name: Living Equation
+    group: library_wide
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: open, rationale: Work title is verified; independent Concept identity is unresolved.}
+    maturity: unclear
+    nexah_specificity: {value: moderate, rationale: Title suggests synthesis, but reviewed sources do not define a separate Concept.}
+    raw_text_file_count: 3
+    discovery_provenance: [{source: LIBRARY/review/source_snapshots/arena-2026-07-15T224634+0000.yaml, locator: arena_channel_id 5442532, occurrence_verification: verified}]
+    definition_provenance: {quality: absent, source: null}
+    claim_support: {value: not_assessed, scope: work_title_and_description}
+    warnings: [Work identity must not be converted into Concept identity.]
+  - candidate_key: concept:risk-field
+    preferred_name: Risk Field
+    group: historical_speculative
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Historical representation.}
+    maturity: historical
+    nexah_specificity: {value: moderate, rationale: Early selected-event and landscape representation in Discovery Engine.}
+    raw_text_file_count: 3
+    discovery_provenance: [{source: EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/README.md, locator: Core Pipeline, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/landscape/risk_landscape.py}
+    claim_support: {value: exploratory, scope: historical Lorenz representations}
+  - candidate_key: concept:resilience-architecture
+    preferred_name: Resilience Architecture
+    group: historical_speculative
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Historical hypothesis family.}
+    maturity: historical
+    nexah_specificity: {value: moderate, rationale: Bound to authored resilience scores and graph generators.}
+    raw_text_file_count: 5
+    discovery_provenance: [{source: EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/docs/ENGINE_RESULTS_SUMMARY.md, locator: Overview, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/docs/ENGINE_RESULTS_SUMMARY.md}
+    claim_support: {value: not_supported, scope: universal architecture claims}
+  - candidate_key: concept:architecture-dna
+    preferred_name: Architecture DNA
+    group: historical_speculative
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Historical metaphor.}
+    maturity: historical
+    nexah_specificity: {value: moderate, rationale: Name for selected graph statistics in archived experiments.}
+    raw_text_file_count: 0
+    discovery_provenance: [{source: EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/docs/ENGINE_RESULTS_SUMMARY.md, locator: Architecture DNA, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: EXPERIMENTAL/BUILDER_LAB/ARCHIVE_ENGINE/docs/ENGINE_RESULTS_SUMMARY.md}
+    claim_support: {value: exploratory, scope: historical generated graph fixtures}
+  - candidate_key: concept:universal-law
+    preferred_name: Universal Law
+    group: historical_speculative
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Deprecated historical claim language.}
+    maturity: historical
+    nexah_specificity: {value: low, rationale: Claim category rather than a stable Concept.}
+    raw_text_file_count: 6
+    discovery_provenance: [{source: EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md, locator: Promotion Decision, occurrence_verification: verified}]
+    definition_provenance: {quality: absent, source: null}
+    claim_support: {value: not_supported, scope: cross-system universality}
+    warnings: [Retained only to preserve corrected claim lineage.]
+  - candidate_key: concept:energy-landscape
+    preferred_name: Energy Landscape
+    group: historical_speculative
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Historical mathematical analogy.}
+    maturity: historical
+    nexah_specificity: {value: moderate, rationale: Density transformed by negative logarithm in selected experiments.}
+    raw_text_file_count: 6
+    discovery_provenance: [{source: EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md, locator: Probability and Effective-Energy Representations, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md}
+    claim_support: {value: exploratory, scope: chosen density estimate; not physical energy}
+  - candidate_key: concept:probability-field
+    preferred_name: Probability Field
+    group: historical_speculative
+    review_state: candidate
+    existing_operator: {value: false, operator_ref: null}
+    broader_concept_question: {value: not_applicable, rationale: Historical numerical representation.}
+    maturity: historical
+    nexah_specificity: {value: moderate, rationale: Local probability-like representation of selected events.}
+    raw_text_file_count: 8
+    discovery_provenance: [{source: EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md, locator: Probability and Effective-Energy Representations, occurrence_verification: verified}]
+    definition_provenance: {quality: partial, source: EXPERIMENTAL/BUILDER_LAB/DISCOVERY_ENGINE/DISCOVERY_OBSERVATIONS.md}
+    claim_support: {value: exploratory, scope: historical selected-event density}
+excluded_likely_keywords:
+  - {term: water, reason: Domain and Work subject; no independent Concept definition established in X0.}
+  - {term: nonlinear systems, reason: Conventional scientific domain label.}
+  - {term: geometry, reason: Broad conventional term; narrower Geometry candidates require separate review.}
+  - {term: visualization, reason: Method and media label.}
+  - {term: learning, reason: Broad activity and audience term.}
+  - {term: field study, reason: Work form and editorial category.}
+  - {term: visual map, reason: Form and descriptive phrase.}
+  - {term: books, reason: Documentary object category rather than Concept.}
+warnings:
+  - No permanent Concept IDs have been allocated.
+  - All relations, aliases, maturity values, and broader Concept questions remain proposals.
+  - Raw lexical counts include code identifiers and conventional scientific usage.

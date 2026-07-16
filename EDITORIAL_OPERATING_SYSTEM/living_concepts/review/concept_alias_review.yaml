@@ -1,0 +1,83 @@
+schema_version: '0.1-proposal'
+phase: X0
+status: non_canonical_review
+policy:
+  automatic_merge: false
+  allocates_ids: false
+groups:
+  - group_key: alias:field
+    preferred_candidate: Field
+    proposals:
+      - {term: field, assessment: exact_synonym, context: controlled Operator}
+      - {term: relational field, assessment: contextual_variant, context: editorial relation space}
+      - {term: field model, assessment: related_but_distinct, context: research representation}
+      - {term: Field Layer, assessment: related_but_distinct, context: repository module}
+      - {term: physical field, assessment: homonym, context: scientific domain}
+    decision: keep_separate_pending_scope_review
+  - group_key: alias:aperture
+    preferred_candidate: Aperture
+    proposals:
+      - {term: aperture, assessment: exact_synonym, context: controlled Operator}
+      - {term: opening, assessment: likely_synonym, context: Operator alias}
+      - {term: aperture geometry, assessment: related_but_distinct, context: research framework}
+      - {term: transition aperture, assessment: contextual_variant, context: transition access}
+      - {term: gate geometry, assessment: related_but_distinct, context: localized activation region}
+    decision: do_not_collapse_operator_and_geometry
+  - group_key: alias:janus
+    preferred_candidate: JANUS
+    proposals:
+      - {term: Janus, assessment: exact_synonym, context: preferred name capitalization}
+      - {term: JANUS Operator, assessment: contextual_variant, context: existing NX-OP-0016}
+      - {term: JANUS Directional Geometry, assessment: related_but_distinct, context: research layer}
+      - {term: Janus Directional Coherence Operator, assessment: related_but_distinct, context: scientific local-flow analysis}
+      - {term: Janus Bridge, assessment: related_but_distinct, context: representation translation}
+      - {term: Janus Dynamic Field, assessment: unclear, context: Are.na research environment}
+    decision: preserve_explicit_repository_separation
+  - group_key: alias:stack
+    preferred_candidate: Stack
+    proposals:
+      - {term: stack, assessment: unclear, context: candidate term}
+      - {term: research stack, assessment: related_but_distinct, context: repository organization}
+      - {term: core concept stack, assessment: related_but_distinct, context: document section}
+      - {term: layer stack, assessment: unclear, context: visual architecture}
+      - {term: numpy.stack, assessment: homonym, context: code operation}
+    decision: insufficient_definition_do_not_merge
+  - group_key: alias:living-equation
+    preferred_candidate: Living Equation
+    proposals:
+      - {term: Living Equation, assessment: unclear, context: proposed Concept name}
+      - {term: THE LIVING EQUATION, assessment: homonym, context: Work title}
+      - {term: THE LIVING EQUATION — An Atlas of Orientation, assessment: homonym, context: full Work title}
+    decision: preserve_work_concept_separation
+  - group_key: alias:orientation
+    preferred_candidate: Orientation
+    proposals:
+      - {term: orientation, assessment: exact_synonym, context: controlled Operator}
+      - {term: orienting, assessment: likely_synonym, context: Operator alias}
+      - {term: Orientation Layer, assessment: related_but_distinct, context: architecture}
+      - {term: orientation field, assessment: related_but_distinct, context: research representation}
+      - {term: reader orientation, assessment: contextual_variant, context: Library experience}
+    decision: keep_scoped_variants
+  - group_key: alias:resonance
+    preferred_candidate: Resonance
+    proposals:
+      - {term: resonance, assessment: unclear, context: broad candidate}
+      - {term: resonance geometry, assessment: contextual_variant, context: visual and structural language}
+      - {term: prime modular resonance, assessment: related_but_distinct, context: discrete research program}
+      - {term: resonance locking, assessment: related_but_distinct, context: JANUS Rope experiments}
+      - {term: coherence, assessment: related_but_distinct, context: alignment measure; not a synonym}
+    decision: requires_dossier_before_alias_decision
+  - group_key: alias:transition
+    preferred_candidate: Transition
+    proposals:
+      - {term: transition, assessment: exact_synonym, context: controlled Operator}
+      - {term: transformation, assessment: contextual_variant, context: Operator alias}
+      - {term: transition geometry, assessment: related_but_distinct, context: structural access}
+      - {term: phase transition, assessment: related_but_distinct, context: scientific event class}
+      - {term: transition corridor, assessment: related_but_distinct, context: geometric feature}
+    decision: preserve_event_operation_and_geometry
+warnings:
+  - Work titles and Concept names may coexist without shared identity.
+  - Repository module names are not aliases for Concepts.
+  - Conventional scientific homonyms require explicit scope.
+  - No alias proposal is approved or canonical.

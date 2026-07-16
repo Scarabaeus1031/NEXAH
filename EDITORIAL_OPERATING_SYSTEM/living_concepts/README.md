@@ -1,0 +1,90 @@
+# NEXAH Living Concepts
+
+**Status:** Phase X · Pass X0 · review only  
+**Authority:** non-canonical proposal artifacts  
+**Production Concept Graph:** not implemented
+
+The NEXAH Living Library organizes Works. Living Concepts investigates the
+intellectual layer that develops through Works, Research, Validation, and
+historical experiments.
+
+> The system may identify that a term exists. It may not decide what that term
+> means.
+
+![NEXAH Living Concept Graph — illustrative vision, not implemented](../visuals/vision/living_concept_graph.png)
+
+> **VISION · ILLUSTRATIVE MODEL · NOT YET IMPLEMENTED.** Labels, definitions,
+> appearances, maturity states, and relations in this image are examples. They
+> are not canonical Concept records or verified scientific claims.
+
+## Why this layer exists
+
+Works are authored documentary objects. Concepts are ideas whose meaning may
+develop across many documentary sources. Operators are controlled active
+principles used to interpret, transform, organize, or navigate relations.
+
+```text
+Work or Research source
+        ↓ documents
+Concept Occurrence
+        ↓ provides provenance for
+Concept candidate
+        ↓ may reference
+Controlled Operator
+        ↓ may later support
+Concept Profile · Concept Path · Explain Mode
+```
+
+A Work does not own a Concept. A verified occurrence proves that a source
+contains an assertion; it does not prove that the assertion is scientifically
+observed or validated.
+
+## Pass X0 boundary
+
+X0 creates a census and evidence review. It does not:
+
+- allocate `NX-C-...` identities;
+- change the Canonical Registry or its 17 Operator records;
+- change Library Architecture v1.0;
+- modify Reader Policies, Editorial Sequences, Kernel behavior, or the Writer;
+- write to Are.na;
+- merge aliases automatically;
+- turn recurrence, frequency, or inference into canonical meaning;
+- reactivate autonomous theory-discovery or universal-law claims.
+
+All candidates use local proposal keys such as `concept:janus`. These keys are
+review handles only and have no permanent identity authority.
+
+## Evidence separation
+
+X0 records three different questions:
+
+1. **Discovery provenance** — where was the term found?
+2. **Definition provenance** — where is its particular meaning explained?
+3. **Claim support** — what evidence supports the substantive assertion?
+
+Occurrence verification (`verified`, `partially_verified`, `unverified`) is
+kept separate from assertion origin and claim support. This preserves the
+repository's stricter observed-evidence and Outcome Firewall semantics.
+
+## Review artifacts
+
+| Artifact | Purpose |
+|---|---|
+| [Concept Census](review/CONCEPT_CENSUS.md) · [YAML](review/concept_census.yaml) | Candidate inventory and exclusions |
+| [Alias Review](review/CONCEPT_ALIAS_REVIEW.md) · [YAML](review/concept_alias_review.yaml) | Proposed alias groups and merge warnings |
+| [Occurrence Sample](review/CONCEPT_OCCURRENCE_SAMPLE.md) · [YAML](review/concept_occurrence_sample.yaml) | Five cases and 15 verified occurrences |
+| [Discovery Engine Lineage](review/DISCOVERY_ENGINE_LINEAGE_REVIEW.md) | Historical observations, hypotheses, and corrected overclaims |
+| [Concept Model Proposal](review/CONCEPT_MODEL_PROPOSAL.md) | Non-canonical model findings for later review |
+| [Phase X0 Summary](review/PHASE_X0_SUMMARY.md) | Inventory, risks, five X1 recommendations, and readiness decision |
+
+## Relationship to the Editorial Operating System
+
+Living Concepts is a proposed knowledge layer within the
+[Editorial Operating System](../README.md). The Living Library is a major
+source, but not the owner of the Concept layer: Research, Validation,
+historical experiments, and future Applications may also provide occurrences
+and evidence.
+
+No artifact in this directory overrides the Registry, a Work, a scientific
+validation record, or a human editorial decision.

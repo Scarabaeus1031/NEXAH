@@ -125,8 +125,8 @@ Snapshot · Diff · Health · Release Check
 
 ## Visual index
 
-The eight visuals serve different purposes. They should not be interpreted as
-eight independent specifications.
+The nine visuals serve different purposes. They should not be interpreted as
+nine independent specifications.
 
 | Visual | Role | Status |
 |---|---|---|
@@ -137,7 +137,12 @@ eight independent specifications.
 | [Living Library](visuals/architecture/living_library.png) | First reference implementation and its reader questions | Reference implementation |
 | [Editorial Orientation Engine](visuals/vision/editorial_orientation_engine.png) | General learning and orientation model across possible domains | Vision; not a complete implementation claim |
 | [The Moment of Orientation](visuals/vision/moment_of_orientation.png) | Human experience from confusion to a meaningful next step | Conceptual vision |
+| [Living Concept Graph](visuals/vision/living_concept_graph.png) | Proposed layer for navigating definitions, occurrences, relations, evolution, and open questions across Works | Vision; X0 review only, not implemented |
 | [Library Kernel Innovation Path](visuals/history/library_kernel_innovation_path.png) | The conceptual transition from books to a Living Library operating system | Historical development snapshot |
+
+The Phase X [Living Concepts review](living_concepts/README.md) investigates
+whether recurring NEXAH ideas warrant a provenance-bound Concept layer. It does
+not allocate Concept identities or implement the graph shown in the vision.
 
 ## Potential application patterns
 
