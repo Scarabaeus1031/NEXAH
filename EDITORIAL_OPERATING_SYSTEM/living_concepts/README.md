@@ -1,6 +1,6 @@
 # NEXAH Living Concepts
 
-**Status:** Phase X · Pass X0 · review only  
+**Status:** Phase X · Pass X0.5 · review only
 **Authority:** non-canonical proposal artifacts  
 **Production Concept Graph:** not implemented
 
@@ -77,6 +77,8 @@ repository's stricter observed-evidence and Outcome Firewall semantics.
 | [Discovery Engine Lineage](review/DISCOVERY_ENGINE_LINEAGE_REVIEW.md) | Historical observations, hypotheses, and corrected overclaims |
 | [Concept Model Proposal](review/CONCEPT_MODEL_PROPOSAL.md) | Non-canonical model findings for later review |
 | [Phase X0 Summary](review/PHASE_X0_SUMMARY.md) | Inventory, risks, five X1 recommendations, and readiness decision |
+| [Cross-Repository Provenance Review](review/cross_repository/CROSS_REPOSITORY_PROVENANCE_REVIEW.md) · [YAML](review/cross_repository/cross_repository_occurrences.yaml) | Pinned historical evidence from NEXAH-CODEX and Scarabaeus v1.0 |
+| [Concept Lineage Deltas](review/cross_repository/CONCEPT_LINEAGE_DELTAS.md) | Effects of historical evidence on the five X1 dossiers |
 
 ## Relationship to the Editorial Operating System
 

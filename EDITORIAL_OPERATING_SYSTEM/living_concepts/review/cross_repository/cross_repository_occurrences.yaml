@@ -1,0 +1,354 @@
+schema_version: 0.1-proposal
+phase: X0.5
+status: non_canonical_review
+scope_date: '2026-07-16'
+purpose: >-
+  Add historical and experimental provenance to the completed X0 Concept
+  Census without changing its inventory, identities, or authority.
+baseline:
+  x0_census_unchanged: true
+  concept_ids_allocated: false
+  registry_changed: false
+  operator_registry_changed: false
+  kernel_changed: false
+  architecture_v1_changed: false
+source_repositories:
+  - source_key: historical:nexah-codex
+    repository_name: NEXAH-CODEX
+    local_path_observed: /Users/tho2020/Documents/GitHub/NEXAH-CODEX
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    repository_status: frozen_historical_archive
+    declared_status_source: README.md
+    worktree_state_at_review: dirty_preexisting
+    history_state_at_review: main_ahead_4351_behind_168
+    evidence_roles:
+      - discovery_provenance
+      - definition_history
+      - terminology_evolution
+      - historical_claim_boundary
+    scientific_authority: none_assigned
+    mutation_policy: read_only
+  - source_key: historical:scarabaeus-system-v1
+    repository_name: Scarabaeus1033-System-v1.0
+    local_path_observed: /Users/tho2020/Documents/GitHub/Scarabaeus1033-System-v1.0
+    pinned_commit: c5d030482a13082fededc42a60e04de2c503a111
+    pinned_tag: v1.0
+    repository_status: historical_experimental_framework
+    declared_status_source: MANIFEST.md
+    worktree_state_at_review: untracked_ds_store_only
+    evidence_roles:
+      - discovery_provenance
+      - experimental_motivation
+      - terminology_lineage
+    scientific_authority: none_assigned
+    mutation_policy: read_only
+search_review:
+  method: case_insensitive_literal_match_in_tracked_text
+  file_types: [md, yaml, yml, txt]
+  semantic_completeness_claimed: false
+  counts_are: matched_lines_not_independent_occurrences
+  terms:
+    - term: JANUS
+      nexah_codex_matched_lines: 14
+      scarabaeus_v1_matched_lines: 0
+    - term: Aperture
+      nexah_codex_matched_lines: 6
+      scarabaeus_v1_matched_lines: 0
+    - term: Vessel
+      nexah_codex_matched_lines: 11
+      scarabaeus_v1_matched_lines: 0
+    - term: Resonance
+      nexah_codex_matched_lines: 5826
+      scarabaeus_v1_matched_lines: 10
+    - term: Living Equation
+      nexah_codex_matched_lines: 0
+      scarabaeus_v1_matched_lines: 0
+    - term: Stack
+      nexah_codex_matched_lines: 34
+      scarabaeus_v1_matched_lines: 0
+    - term: Observer
+      nexah_codex_matched_lines: 529
+      scarabaeus_v1_matched_lines: 0
+    - term: Transition
+      nexah_codex_matched_lines: 933
+      scarabaeus_v1_matched_lines: 0
+    - term: Field
+      nexah_codex_matched_lines: 5769
+      scarabaeus_v1_matched_lines: 2
+    - term: Bridge
+      nexah_codex_matched_lines: 595
+      scarabaeus_v1_matched_lines: 0
+    - term: Fold
+      nexah_codex_matched_lines: 1361
+      scarabaeus_v1_matched_lines: 0
+    - term: Scale
+      nexah_codex_matched_lines: 213
+      scarabaeus_v1_matched_lines: 0
+occurrences:
+  - occurrence_key: crossrepo:janus:01
+    candidate_key: concept:janus
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_8_LUNAR_FORCE/AGENTUM_MIRRORIUM/agentum_gatekeeper_fields.md
+    locator: lines 25-37 and 66-70
+    occurrence_role: precedes
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: mythic and symbolic gatekeeper interpretation
+    independence: distinct_historical_formulation
+    note: >-
+      Presents Janus as a two-faced passage point and polarity-transfer symbol;
+      it does not define the current controlled JANUS Operator.
+  - occurrence_key: crossrepo:janus:02
+    candidate_key: concept:janus
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_1_MATHEMATICA/Hermetic_Pythagoras_Model/GEOMETRIA NOVA – Part V · Ether & Spine/visual-gallery.md
+    locator: lines 28-43
+    occurrence_role: visualizes
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: visual gallery descriptions
+    independence: same_repository_related_lineage
+    note: >-
+      Documents a Janus visual series associated with dual fields, rotational
+      coupling, pulses, and stair structures.
+  - occurrence_key: crossrepo:aperture:01
+    candidate_key: concept:aperture
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_8_LUNAR_FORCE/TEHTHY_THE_SECRET_THREAD_OF_THE_MOONS/Moon_Phase_Valve_Logic.md
+    locator: lines 3-18
+    occurrence_role: precedes
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: unsupported_in_reviewed_source
+      scope: proposed lunar-neutrino valve dynamics
+    independence: distinct_historical_formulation
+    note: >-
+      Uses field aperture as part of an explicitly introduced hypothesis. The
+      passage supplies lineage, not evidence for the physical assertion.
+  - occurrence_key: crossrepo:vessel:01
+    candidate_key: concept:vessel
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_1_MATHEMATICA/CODEX MATHEMATICS/Hermetic Pythargoras Model/hermetic_foundations.md
+    locator: lines 5-15
+    occurrence_role: mentions
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: hermetic analogy
+    independence: lexical_only_for_current_concept
+    note: >-
+      Uses vessels metaphorically for geometric models. It is not an earlier
+      definition of the current Vessel research candidate.
+  - occurrence_key: crossrepo:resonance:01
+    candidate_key: concept:resonance
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: NEXAH_GLOSSARY_DUAL.md
+    locator: lines 30-44
+    occurrence_role: defines_historical_usage
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: historical controlled glossary
+    independence: distinct_historical_definition
+    earliest_file_history_observed:
+      commit: 52b8a1ee00c7ab47d0a79670668051a876b96155
+      authored_at: '2025-10-13T23:20:23+02:00'
+      qualification: earliest addition or rename found for this tracked path
+    note: >-
+      Defines Resonance Field as coupling among frequency, form, and number and
+      demonstrates that several narrower resonance meanings already coexisted.
+  - occurrence_key: crossrepo:resonance:02
+    candidate_key: concept:resonance
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: README_EXTENDED.md
+    locator: lines 18-30
+    occurrence_role: claims
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: unsupported_in_reviewed_source
+      scope: cross-scale measurable pattern-stability claim
+    independence: same_repository_claim_variant
+    earliest_file_history_observed:
+      commit: 411730e718063d402bdbe04d67177b59218829c0
+      authored_at: '2025-10-13T22:35:04+02:00'
+      qualification: earliest addition found for this tracked path
+    note: >-
+      The file makes a broad scientific claim but supplies no validation in the
+      reviewed passage. It is retained as claim-boundary evidence only.
+  - occurrence_key: crossrepo:resonance:03
+    candidate_key: concept:resonance
+    repository_ref: historical:scarabaeus-system-v1
+    pinned_commit: c5d030482a13082fededc42a60e04de2c503a111
+    source: MANIFEST.md
+    locator: lines 5-21 and 25-32
+    occurrence_role: motivates
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: project vision and module inventory
+    independence: earlier_project_framework_not_independent_validation
+    note: >-
+      Establishes resonance as an early organizing theme spanning geometry,
+      time, temperature, materials, and symbolic logic.
+  - occurrence_key: crossrepo:resonance:04
+    candidate_key: concept:resonance
+    repository_ref: historical:scarabaeus-system-v1
+    pinned_commit: c5d030482a13082fededc42a60e04de2c503a111
+    source: MODULES/lunar-kern-framework.md
+    locator: lines 47-64
+    occurrence_role: proposes_experiment
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: protocol_or_results_not_found_in_reviewed_source
+      scope: analog thermal resonance module
+    independence: project_lineage_not_independent_validation
+    note: >-
+      Describes proposed analog work with temperature, pendulums, water vapor,
+      and aluminum; no measurements or validation results appear in the file.
+  - occurrence_key: crossrepo:stack:01
+    candidate_key: concept:stack
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: SYSTEM_1_MATHEMATICA/CODEX MATHEMATICS/Spiral Logic — Harmonic Fields, Prime Resonance & Rotational Flow.md
+    locator: lines 46-58
+    occurrence_role: mentions
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: module application list
+    independence: lexical_only_for_current_concept
+    note: >-
+      Frequency stack is a descriptive compound rather than a distinct Concept
+      definition; this does not overturn the X0 exclusion from X1.
+  - occurrence_key: crossrepo:observer:01
+    candidate_key: concept:observer
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: NEXAH_GLOSSARY_DUAL.md
+    locator: line 44
+    occurrence_role: relates_historically
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: symbolic Tessarec Field definition
+    independence: distinct_historical_relation
+    note: >-
+      Relates observer and geometry inside a symbolic field definition; it does
+      not validate observer-dependent physical effects.
+  - occurrence_key: crossrepo:transition:01
+    candidate_key: concept:transition
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: NEXAH_GLOSSARY_DUAL.md
+    locator: line 39
+    occurrence_role: defines_historical_usage
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: unsupported_in_reviewed_source
+      scope: historical Universal Transition Structure assertion
+    independence: distinct_historical_definition
+    note: >-
+      Records an earlier universalizing transition formulation that must not be
+      merged with the current controlled Transition Operator.
+  - occurrence_key: crossrepo:field:01
+    candidate_key: concept:field
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: NEXAH_GLOSSARY_DUAL.md
+    locator: lines 34-44
+    occurrence_role: develops_historical_vocabulary
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: mixed_unassessed_and_unsupported
+      scope: symbolic and physical field language
+    independence: vocabulary_cluster
+    note: >-
+      Demonstrates multiple incompatible or differently scoped field usages;
+      occurrence density cannot establish one Concept identity.
+  - occurrence_key: crossrepo:bridge:01
+    candidate_key: concept:bridge
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: NEXAH_GLOSSARY_DUAL.md
+    locator: line 42
+    occurrence_role: applies_historical_usage
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: Language-Field Interface glossary entry
+    independence: related_historical_usage
+    note: Uses bridge relationally between language, symbolism, and field topology.
+  - occurrence_key: crossrepo:fold:01
+    candidate_key: concept:fold
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: NEXAH-CODEX MODULE REGISTRY.md
+    locator: lines 15-33 and 55-65
+    occurrence_role: inventories_historical_usage
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: not_assessed
+      scope: module titles and descriptions
+    independence: vocabulary_cluster
+    note: >-
+      Fold and folding appear across module names and symbolic descriptions;
+      the register does not establish a single Concept definition.
+  - occurrence_key: crossrepo:scale:01
+    candidate_key: concept:scale
+    repository_ref: historical:nexah-codex
+    pinned_commit: cc1962237940867becb7beb7d4d9fb9f6b613253
+    source: README_EXTENDED.md
+    locator: lines 27-30
+    occurrence_role: claims
+    occurrence_verification: verified_at_pinned_commit
+    assertion_origin: human_authored_historical
+    claim_support:
+      value: unsupported_in_reviewed_source
+      scope: recurrence of harmonic constants across scale and medium
+    independence: claim_boundary_only
+    note: >-
+      Preserves a historical cross-scale assertion for review; it supplies no
+      evidence that current Scale usage should inherit the claim.
+negative_findings:
+  - term: Living Equation
+    repositories_checked:
+      - historical:nexah-codex
+      - historical:scarabaeus-system-v1
+    matched_lines: 0
+    interpretation: >-
+      No tracked-text match was found at the pinned commits. This supports the
+      current Work-title boundary but does not prove absolute origin.
+  - term: Stack
+    interpretation: >-
+      Historical matches are predominantly descriptive compounds, layout terms,
+      or technical uses. No independent historical Concept definition was found
+      in the reviewed sample.
+warnings:
+  - Historical occurrence establishes chronology at most, never scientific validity.
+  - Matched-line counts are discovery aids and must not be treated as semantic frequency.
+  - Reused or derived text across repositories is not independent confirmation.
+  - A dirty source worktree was observed but not modified; only tracked content at the pinned commit is cited.
+  - Earliest file-history observations are repository-local and do not establish the first creation of an idea.
+  - No record in this file is canonical.
