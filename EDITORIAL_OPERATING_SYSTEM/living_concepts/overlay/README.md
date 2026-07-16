@@ -101,7 +101,7 @@ Version 0.1 does not:
 
 ```text
 Overlay v0.1                 Editorial baseline accepted
-Read-only Answer Adapter     Not yet implemented
+Read-only Answer Adapter     Pilot implemented for six accepted questions
 Production Concept Graph     Not implemented
 General Kernel integration   Deferred
 ```
@@ -113,3 +113,28 @@ Concept Overlay              ≠ Concept Graph
 Concept Answer Adapter       ≠ General Reasoning Engine
 Accepted Editorial Baseline  ≠ Canonical Knowledge
 ```
+
+## Read-only Concept Answer Adapter
+
+The Phase X2 pilot resolves only `CFQ-01` through `CFQ-06` from the accepted
+question contracts. It does not interpret arbitrary questions.
+
+```bash
+python -m nexah.living_concepts answer CFQ-01 --mode reader
+python -m nexah.living_concepts answer CFQ-01 --mode explain
+```
+
+An accepted Overlay path may also be supplied explicitly:
+
+```bash
+python -m nexah.living_concepts answer CFQ-01 \
+  --overlay EDITORIAL_OPERATING_SYSTEM/living_concepts/overlay/concept_overlay_v0_1.yaml \
+  --mode explain
+```
+
+There are no write options. Unknown questions return `state: unsupported`.
+
+Additional artifacts:
+
+- [Accepted Answer Baseline](concept_overlay_v0_1_expected_answers.yaml)
+- [Adapter Evaluation](../review/transition_geometry/CONCEPT_OVERLAY_ADAPTER_V0_1_EVALUATION.md)

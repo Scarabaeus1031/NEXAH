@@ -86,6 +86,7 @@ repository's stricter observed-evidence and Outcome Firewall semantics.
 | [Transition Geometry Family Review](review/transition_geometry/TRANSITION_GEOMETRY_FAMILY_REVIEW.md) · [YAML](review/transition_geometry/transition_geometry_family_review.yaml) | Family review across GEOMETRIA NOVA, Operator Works, Cartography Laboratory, Operational Geometry, Whiteboards, Research, and Architecture |
 | [Transition Geometry Concept-Family Test](review/transition_geometry/TRANSITION_GEOMETRY_CONCEPT_FAMILY_TEST.md) · [YAML](review/transition_geometry/transition_geometry_concept_family_test.yaml) | Six Reader/Explain questions testing definitions, curated Concept Paths, provenance, and uncertainty without graph implementation |
 | [Minimal Concept Overlay v0.1](overlay/README.md) · [YAML](overlay/concept_overlay_v0_1.yaml) · [Evaluation](review/transition_geometry/CONCEPT_OVERLAY_V0_1_EVALUATION.md) | Seven-handle, review-only machine-readable pilot reproducing the six Concept-family answers without Kernel integration |
+| [Read-only Concept Answer Adapter v0.1](review/transition_geometry/CONCEPT_OVERLAY_ADAPTER_V0_1_EVALUATION.md) · [YAML](review/transition_geometry/concept_overlay_adapter_v0_1_evaluation.yaml) · [Expected Answers](overlay/concept_overlay_v0_1_expected_answers.yaml) | Explicit six-question Reader/Explain contract resolver; separate from the Kernel and incapable of inference or writes |
 | [Geometry of Balance Evidence Review](review/geometry_of_balance/GEOMETRY_OF_BALANCE_EVIDENCE_REVIEW.md) · [YAML](review/geometry_of_balance/geometry_of_balance_evidence_review.yaml) | Bounded decision between one Concept, multiple Balance models, and visual motif; includes frozen historical lineage |
 
 ## Relationship to the Editorial Operating System
@@ -103,7 +104,7 @@ validation record, or a human editorial decision.
 
 ```text
 Overlay v0.1                 Editorial baseline accepted
-Read-only Answer Adapter     Not yet implemented
+Read-only Answer Adapter     Pilot implemented for six accepted questions
 Production Concept Graph     Not implemented
 General Kernel integration   Deferred
 ```
@@ -111,3 +112,6 @@ General Kernel integration   Deferred
 Concept Overlay is not a Concept Graph. An accepted editorial baseline is not
 canonical knowledge. Any future Answer Adapter remains distinct from a general
 reasoning engine.
+
+The Adapter is invoked explicitly with `python -m nexah.living_concepts`; it is
+not part of the default Library Reader CLI or Kernel initialization.

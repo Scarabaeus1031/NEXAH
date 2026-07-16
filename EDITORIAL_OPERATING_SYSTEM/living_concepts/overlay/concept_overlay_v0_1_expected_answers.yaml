@@ -1,0 +1,202 @@
+schema_version: 0.1-accepted-baseline
+overlay_id: living-concepts-transition-geometry-pilot-v0.1
+status: accepted_adapter_regression_baseline
+canonical: false
+questions:
+  - question_key: CFQ-01
+    authority_class: reviewed_editorial_synthesis
+    reader:
+      state: answered
+      answer: >-
+        Transition Geometry is NEXAH's way of describing the structured
+        in-between through declared relations, boundaries, apertures, paths,
+        and constraints. It is a family of representations, not one universal
+        space.
+      status_note: Editorially reviewed in the accepted non-canonical Overlay baseline.
+      paths: []
+    explain:
+      concept_handles: [concept:transition-geometry]
+      operator_bindings: []
+      occurrence_ids: [OCC-TG-001, OCC-TG-002]
+      claim_support:
+        - authored_conceptual_synthesis
+        - supported_architectural_boundary
+      relations: []
+      paths: []
+      disclosures:
+        - declared_representation_not_reality
+        - representation_independent_transition_space_not_supported
+
+  - question_key: CFQ-02
+    authority_class: reviewed_editorial_synthesis
+    reader:
+      state: answered
+      answer: >-
+        Transition Geometry describes a possible passage. JANUS helps inspect
+        that passage from complementary sides without collapsing them into one
+        view. They are related but distinct roles.
+      status_note: Editorially reviewed in the accepted non-canonical Overlay baseline.
+      paths: []
+    explain:
+      concept_handles: [concept:transition-geometry, concept:janus]
+      operator_bindings:
+        - {handle: concept:janus, operator_ref: NX-OP-0016}
+      occurrence_ids: [OCC-TG-001, OCC-JANUS-001]
+      claim_support:
+        - authored_conceptual_synthesis
+        - reviewed_conceptual_synthesis
+      relations:
+        - {relation_id: REL-TG-JANUS-001, status: review_only}
+      paths: []
+      disclosures:
+        - relation_is_review_only
+        - janus_identity_layers_remain_distinct
+
+  - question_key: CFQ-03
+    authority_class: curated_path
+    reader:
+      state: answered
+      answer: >-
+        Follow the idea from GEOMETRIA NOVA through THE INBETWEEN, THE
+        THRESHOLD, THE JANUS GATE, THE SPACE BETWEEN, THE RELATION TUBE,
+        APERTURE = TRANSFORMATIONSRAUM, and THE CARTOGRAPHY LABORATORY.
+      status_note: >-
+        This route is human-curated editorial guidance, not a canonical graph
+        relation.
+      paths:
+        - name: Inbetween Development Path
+          status: curated
+          labels:
+            - GEOMETRIA NOVA
+            - THE INBETWEEN
+            - THE THRESHOLD
+            - THE JANUS GATE
+            - THE SPACE BETWEEN
+            - THE RELATION TUBE
+            - APERTURE = TRANSFORMATIONSRAUM
+            - THE CARTOGRAPHY LABORATORY
+    explain:
+      concept_handles: [concept:inbetween, concept:transition-geometry]
+      operator_bindings: []
+      occurrence_ids: [OCC-INB-001, OCC-INB-002, OCC-INB-003, OCC-TG-001]
+      claim_support:
+        - authored_whiteboard_statement
+        - authored_whiteboard_statement
+        - authored_whiteboard_statement
+        - authored_conceptual_synthesis
+      relations: []
+      paths:
+        - {path_id: PATH-INBETWEEN-001, status: curated, canonical_relation: false}
+      disclosures:
+        - route_is_human_curated
+        - no_canonical_inbetween_identity
+
+  - question_key: CFQ-04
+    authority_class: curated_path
+    reader:
+      state: answered
+      answer: >-
+        Difference leads to Boundary, then Opening or Aperture, Threshold,
+        Inbetween or Passage, Transition, and finally a New State, Return, or
+        Block.
+      status_note: >-
+        This route is human-curated editorial guidance, not a canonical graph
+        relation.
+      paths:
+        - name: Boundary to Transition Path
+          status: curated
+          labels:
+            - Difference
+            - Boundary
+            - Aperture
+            - Threshold
+            - Inbetween
+            - Transition
+            - New State Return Or Block
+    explain:
+      concept_handles:
+        - concept:boundary
+        - concept:aperture
+        - concept:inbetween
+        - concept:transition
+      operator_bindings:
+        - {handle: concept:boundary, operator_ref: NX-OP-0006}
+        - {handle: concept:aperture, operator_ref: NX-OP-0002}
+        - {handle: concept:transition, operator_ref: NX-OP-0005}
+      occurrence_ids: [OCC-BND-001, OCC-TRN-001, OCC-TG-001]
+      claim_support:
+        - authored_process_taxonomy
+        - authored_whiteboard_sequence
+        - authored_conceptual_synthesis
+      relations: []
+      paths:
+        - {path_id: PATH-BOUNDARY-TRANSITION-001, status: curated, canonical_relation: false}
+      disclosures:
+        - path_is_human_curated_not_a_graph_edge
+        - path_is_not_a_deterministic_state_machine
+        - core_recurrence_remains_a_hypothesis
+
+  - question_key: CFQ-05
+    authority_class: operator_authority
+    reader:
+      state: answered
+      answer: >-
+        Begin with THE OPERATOR, continue through the Whiteboards and THE DUAL
+        SPINE, then use THE CARTOGRAPHY LABORATORY and OPERATIONAL GEOMETRY OF
+        TRANSITION; use the Aperture Geometry Research note for the stricter
+        evidence boundary.
+      status_note: Editorially reviewed in the accepted non-canonical Overlay baseline.
+      paths:
+        - name: Aperture Geometry Reading Path
+          status: curated
+          labels:
+            - FROM APERTURE TO ORIENTATION
+            - NEXAH WHITEBOARD SERIES
+            - APERTURE = TRANSFORMATIONSRAUM
+            - THE CARTOGRAPHY LABORATORY
+            - OPERATIONAL GEOMETRY OF TRANSITION
+            - APERTURE GEOMETRY
+    explain:
+      concept_handles: [concept:aperture]
+      operator_bindings:
+        - {handle: concept:aperture, operator_ref: NX-OP-0002}
+      occurrence_ids: [OCC-APT-001, OCC-APT-002, OCC-INB-001, OCC-INB-003, OCC-TG-001]
+      claim_support:
+        - supported_within_declared_research_scope
+        - authored_visual_explanation
+        - authored_whiteboard_statement
+        - authored_whiteboard_statement
+        - authored_conceptual_synthesis
+      relations:
+        - {relation_id: REL-TG-APT-001, status: review_only}
+      paths:
+        - {path_id: PATH-APERTURE-READING-001, status: curated, canonical_relation: false}
+      disclosures:
+        - operator_record_remains_authoritative
+        - work_explanation_is_distinct_from_research_support
+
+  - question_key: CFQ-06
+    authority_class: multiple_related_models
+    reader:
+      state: answered
+      answer: >-
+        Balance is not one fixed NEXAH geometry. It describes several related
+        ways in which different tendencies remain in a viable relation without
+        one simply erasing the other.
+      status_note: The related Balance models remain intentionally uncollapsed.
+      paths: []
+    explain:
+      concept_handles: [concept:balance]
+      operator_bindings: []
+      occurrence_ids: [OCC-BAL-001, OCC-BAL-002, OCC-BAL-003]
+      claim_support:
+        - relational_balance_work_model
+        - directional_balance_work_model
+        - multiple_related_models
+      relations: []
+      paths: []
+      disclosures:
+        - outcome_is_multiple_related_models
+        - no_balance_concept_identity_or_graph_edge
+        - balance_remains_distinct_from_adjacent_terms
+

@@ -1,0 +1,82 @@
+schema_version: 0.1-evaluation
+phase: X2
+evaluation_type: read_only_concept_answer_adapter
+status: human_review_required
+evaluated_at: '2026-07-16'
+overlay:
+  overlay_id: living-concepts-transition-geometry-pilot-v0.1
+  status: editorial_baseline_accepted
+  canonical: false
+  load_policy: manual_evaluation_only
+adapter:
+  package: nexah.living_concepts
+  mode: exact_contract_resolution
+  supported_question_keys: [CFQ-01, CFQ-02, CFQ-03, CFQ-04, CFQ-05, CFQ-06]
+  supported_modes: [reader, explain]
+  unknown_question_state: unsupported
+  mutation_capability: false
+  default_kernel_integration: false
+  arbitrary_natural_language: false
+  fuzzy_matching: false
+  semantic_search: false
+  graph_traversal: false
+  hidden_inference: false
+baseline_regression:
+  source: EDITORIAL_OPERATING_SYSTEM/living_concepts/overlay/concept_overlay_v0_1_expected_answers.yaml
+  questions_total: 6
+  reader_contracts_reproduced: 6
+  explain_contracts_reproduced: 6
+  stable_ordering: pass
+  required_disclosures: pass
+  result: pass
+authority_classes:
+  CFQ-01: reviewed_editorial_synthesis
+  CFQ-02: reviewed_editorial_synthesis
+  CFQ-03: curated_path
+  CFQ-04: curated_path
+  CFQ-05: operator_authority
+  CFQ-06: multiple_related_models
+  unknown: unsupported
+boundaries:
+  reader_hides_internal_provenance: pass
+  explain_preserves_provenance: pass
+  explain_preserves_uncertainty: pass
+  curated_paths_not_graph_edges: pass
+  review_relations_not_canonical: pass
+  operator_and_concept_identity_separated: pass
+  balance_multiple_related_models: pass
+  overlay_unchanged_after_load: pass
+negative_tests:
+  canonical_overlay: rejected
+  permanent_concept_identity: rejected
+  unaccepted_overlay: rejected
+  duplicate_concept_handles: rejected
+  duplicate_question_bindings: rejected
+  unknown_operator_reference: rejected
+  canonical_relation: rejected
+  path_without_curated_status: rejected
+  missing_explain_disclosures: rejected
+  missing_occurrence_provenance: rejected
+  mutation_permission: rejected
+  claim_support_escalation: rejected
+  balance_collapsed: rejected
+repository_invariants:
+  canonical_entities: 10
+  controlled_operators: 17
+  new_nx_c_identities: 0
+  canonical_concept_edges: 0
+  kernel_default_runtime_changes: 0
+  arena_writes: 0
+  editorial_writer_changes: 0
+human_decisions_required:
+  - {decision_id: X2-ADP-01, subject: overlay_loader, recommendation: accept}
+  - {decision_id: X2-ADP-02, subject: validation_boundary, recommendation: accept}
+  - {decision_id: X2-ADP-03, subject: reader_contract_reproduction, recommendation: accept}
+  - {decision_id: X2-ADP-04, subject: explain_contract_reproduction, recommendation: accept}
+  - {decision_id: X2-ADP-05, subject: unsupported_question_behavior, recommendation: accept}
+  - {decision_id: X2-ADP-06, subject: baseline_regression, recommendation: accept}
+  - {decision_id: X2-ADP-07, subject: adapter_kernel_separation, recommendation: accept}
+  - {decision_id: X2-ADP-08, subject: general_kernel_integration, recommendation: defer}
+smallest_justified_next_step: human_review_of_read_only_adapter
+conclusion: READY FOR HUMAN REVIEW OF READ-ONLY CONCEPT ADAPTER
+
