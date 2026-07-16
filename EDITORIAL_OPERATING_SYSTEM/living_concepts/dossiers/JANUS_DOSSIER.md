@@ -43,6 +43,8 @@ physical uses.
 | Architecture principle | One reality may require complementary perspectives; JANUS is not an algorithm. | Accepted Orientation Layer separation |
 | Planned Bridge | Translation between representations of one situation, with domain, information loss, provenance, uncertainty, and failure behavior. | Accepted architectural concept; not implemented as JANUS itself |
 | Scientific Operator | Compares forward and backward local-flow organization inside reconstructed trajectory geometry. | Semi-formal experimental Research; method-specific |
+| Work-level perspective principle | Every orientation includes and excludes; changing reference, angle, scale, or selection changes the map and reveals different structure. | Authored LIBRARYBOOK formulation; conceptual, not a scientific law |
+| Domain-transition formulation | Reconstructs gates, boundaries, crossings, bottlenecks, and admissible transitions between domains. | Application framework; broader than the scientific Operator and not validated by IEEE Geometry V1 |
 | Historical archetype | Two-faced passage point, gatekeeper, and polarity-transfer symbol. | Historical symbolic lineage only |
 | Historical visual family | Dual-field overlays, quaternionic projections, rotational coupling, and pulse or stair structures. | Historical visual lineage only |
 
@@ -79,9 +81,14 @@ the conceptual principle, not the Bridge contract or scientific calculation.
 | Evidence-bound framework | `RESEARCH/FOUNDATION/STATE_TRANSITION_ORIENTATION_FRAMEWORK_V0_1.md` | constrains | a round trip is a research candidate, not an inverse or definition of JANUS |
 | Research framework | `RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/README.md` | develops | directional-coherence geometry remains semi-formal and experimental |
 | Experimental findings | `RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/findings.md` | tests | repository-reported exploratory observations; no universality, law, formal invariant, or causal claim |
+| Work-level definition | Are.na · LIBRARYBOOK · block `47683743` | defines | double perspective, inclusion/exclusion, blind spot, and projection shifts; authored concept statement |
+| Application framework | `APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/docs/atlas_operator_framework.md` | applies | domain transitions, gates, crossings, and admissible passage; not canonical IEEE Geometry V1 |
+| Legacy IEEE experiment | Are.na · JANUS Dynamic Field · block `46188464` and historical IEEE scaling scripts | experiments | JANUS-labelled IEEE benchmark prototype; not operational-grid evidence |
 
 The historical sources are pinned and classified in the X0.5
 [Cross-Repository Provenance Review](../review/cross_repository/CROSS_REPOSITORY_PROVENANCE_REVIEW.md).
+The selected book pages, atlas posters, IEEE artifacts, and Penta/Hexagonal
+human lead are assessed in the [Visual Evidence Review](visual_evidence/JANUS_VISUAL_EVIDENCE_REVIEW.md).
 
 ## Claim-support assessment
 
@@ -93,6 +100,10 @@ The historical sources are pinned and classified in the X0.5
   Operator as experimental.
 - The research corpus contains reproducible scripts, outputs, working
   hypotheses, findings, and explicit limitations.
+- LIBRARYBOOK contains a direct Work-level formulation of JANUS as double
+  perspective, inclusion/exclusion, and the blind spot produced by every view.
+- The repository contains legacy JANUS-labelled IEEE experiments, but the
+  current IEEE Geometry V1 validation does not validate JANUS.
 
 ### Not established by this dossier
 
@@ -104,6 +115,9 @@ The historical sources are pinned and classified in the X0.5
   path methods;
 - a physical interpretation of the broader JANUS principle;
 - implementation or validation of the Janus Bridge.
+- the cross-domain validation claims printed on the Cartography Laboratory
+  JANUS poster;
+- a JANUS relation to the Penta/Hexagonal transition-space experiments.
 
 X1 reviews documentary evidence. It does not rerun or independently validate
 the complete experimental series.
@@ -123,6 +137,7 @@ These are review proposals, not graph edges.
 | JANUS | related Operator | Bridge `NX-OP-0008` | translation may connect representations while preserving their difference |
 | JANUS | related Operator | Relation `NX-OP-0011` | the relation between views is central to the proposed reader definition |
 | JANUS | related Operator | Projection `NX-OP-0012` | perspectives may be representation-dependent projections; not always |
+| JANUS | possible research relation | Penta/Hexagonal transition space | human lead only; no graph edge until generative and evidential review |
 
 The existing `related_concepts` values in `NX-OP-0016` are not changed here.
 Their current references resolve to Observer, Transition, and Projection. The
@@ -174,6 +189,12 @@ The answer should disclose:
    `NX-OP-0016`, or should a layered profile remain attached to the Operator?
 7. Which historical visual formulations remain useful for human explanation?
 8. Which Research findings survive independent baselines and domain tests?
+9. Should the LIBRARYBOOK double-perspective formulation become the primary
+   reader entry, with the scientific Operator presented as one realization?
+10. Which claims on the Cartography Laboratory JANUS page need editorial
+    correction or explicit provenance before public reuse?
+11. Is the Penta/Hexagonal lineage a representation of transition, a separate
+    geometry family, or a genuine JANUS realization?
 
 ## Human decisions required
 
@@ -185,6 +206,7 @@ The answer should disclose:
 | X1-JANUS-04 · Historical lineage | retain as contextual evidence | keeps genealogy visible without inheriting claims |
 | X1-JANUS-05 · New Concept ID | defer | avoids duplicate JANUS identities before model review |
 | X1-JANUS-06 · Kernel overlay | defer until all five dossiers are reviewed | prevents a single dossier from defining the Concept system |
+| X1-JANUS-V01–V05 · Visual evidence decisions | accept as recommended in the Visual Evidence Review | incorporates Work and application evidence without promoting adjacent visuals into graph facts |
 
 ## Recommendation
 

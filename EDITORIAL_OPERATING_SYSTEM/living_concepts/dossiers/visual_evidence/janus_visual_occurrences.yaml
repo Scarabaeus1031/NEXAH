@@ -1,0 +1,133 @@
+schema_version: 0.1-proposal
+phase: X1_visual_evidence
+reviewed: 2026-07-16
+status: human_review_required
+canonical: false
+concept_candidate: concept:janus
+scope:
+  arena_blocks_reviewed: 15
+  local_visuals_reviewed: 4
+  arena_mutations: 0
+evidence_rule: >-
+  A verified visual occurrence proves that the visual contains an editorial
+  assertion. It does not prove the scientific truth of that assertion.
+direct_occurrences:
+  - occurrence_key: x1:janus:visual:01
+    source_type: arena_image_block
+    arena_channel_id: 5181006
+    arena_block_id: 46188353
+    observed_position: 1
+    title: JANUS_OPERATOR_FOUNDATIONS_MAP_V2 2
+    meaning_layer: directional_coherence_operator
+    occurrence_verification: visually_verified
+    claim_support: exploratory
+  - occurrence_key: x1:janus:visual:02
+    source_type: arena_image_block
+    arena_channel_id: 5181006
+    arena_block_id: 46175761
+    observed_position: 31
+    title: janus_geometry_map 2
+    meaning_layer: transition_corridor
+    occurrence_verification: visually_verified
+    claim_support: illustrative_synthesis
+    warning: Mathematical labels require definition-level cross-check.
+  - occurrence_key: x1:janus:visual:03
+    source_type: arena_image_block
+    arena_channel_id: 5181006
+    arena_block_id: 46164459
+    observed_position: 13
+    title: janus_aperture_geometry_overlay
+    meaning_layer: aperture_experiment
+    occurrence_verification: visually_verified
+    claim_support: exploratory_plot
+  - occurrence_key: x1:janus:visual:04
+    source_type: arena_image_block
+    arena_channel_id: 5181006
+    arena_block_id: 46190595
+    observed_position: 9
+    title: nexah_janus_navigation_v14
+    meaning_layer: navigation_experiment
+    occurrence_verification: visually_verified
+    claim_support: not_established_by_visual
+  - occurrence_key: x1:janus:visual:05
+    source_type: arena_image_block
+    arena_channel_id: 5181006
+    arena_block_id: 46188464
+    observed_position: 2
+    title: ieee300_real_tunable_v13.9_janus_lyapunov
+    meaning_layer: legacy_ieee_application
+    occurrence_verification: visually_verified
+    claim_support: legacy_experimental
+    warning: Not canonical IEEE Geometry V1 or operational-grid evidence.
+  - occurrence_key: x1:janus:visual:06
+    source_type: arena_image_block
+    arena_channel_id: 5181006
+    arena_block_id: 46184192
+    observed_position: 28
+    title: JANUS ROPE OPERATOR - CURRENT MAP OF DISCOVERY (EXTENDED)
+    meaning_layer: speculative_synthesis
+    occurrence_verification: visually_verified
+    claim_support: research_vision_only
+  - occurrence_key: x1:janus:visual:07
+    source_type: arena_image_block
+    arena_channel_id: 5203312
+    arena_block_id: 46365909
+    observed_position: 11
+    title: NEXAH MATHEMATICA 66 VOLUME I - PRIME RESIDUE GEOMETRY_MASTERINDEX
+    meaning_layer: mathematical_atlas_index
+    occurrence_verification: visually_verified
+    claim_support: editorial_placement_only
+  - occurrence_key: x1:janus:visual:08
+    source_type: arena_image_block
+    arena_channel_id: 5386766
+    arena_block_id: 47505993
+    observed_position: 17
+    title: 10 THE JANUS OPERATOR
+    meaning_layer: work_level_transition_synthesis
+    occurrence_verification: visually_verified
+    claim_support: mixed
+    warning: Cross-domain validation claims require separate evidence.
+  - occurrence_key: x1:janus:visual:09
+    source_type: arena_image_block
+    arena_channel_id: 5413103
+    arena_block_id: 47683743
+    observed_position: 159
+    title: 02 JANUS
+    meaning_layer: double_perspective_principle
+    occurrence_verification: visually_verified
+    claim_support: authored_work_definition
+related_context:
+  - {arena_channel_id: 5203312, arena_block_id: 46366046, observed_position: 8, relation_candidate: transition_handover_context}
+  - {arena_channel_id: 5203312, arena_block_id: 46366194, observed_position: 1, relation_candidate: evidence_boundary_context}
+  - {arena_channel_id: 5203387, arena_block_id: 46366553, observed_position: 12, relation_candidate: transition_handover_context}
+  - {arena_channel_id: 5203387, arena_block_id: 46366731, observed_position: 9, relation_candidate: crossing_boundary_context}
+  - {arena_channel_id: 5203387, arena_block_id: 46366699, observed_position: 2, relation_candidate: regime_transition_context}
+  - {arena_channel_id: 5386766, arena_block_id: 47505990, observed_position: 15, relation_candidate: transition_geometry_context}
+human_leads:
+  - lead_key: human_lead:penta-hexagonal-transition-space
+    status: retain_without_graph_relation
+    textual_source: APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/logs/log_iv_navigation.md
+    locator: Entries 100 and 101
+    local_visuals:
+      - APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/analysis_export/rift_extraction/v16_4_dual_pentagon.png
+      - APPLICATIONS/power_systems/ieee_xray_pipeline/results/v44_hexagon_loop_3d.png
+      - APPLICATIONS/power_systems/ieee_xray_pipeline/results/v56_hexa_topology.png
+      - APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/resonance_maps/penta_im_hepta_master_v4.8.png
+    rationale: >-
+      The lineage is adjacent to JANUS themes of two states, seams, transfer,
+      and branching, but the reviewed visuals do not establish a JANUS identity
+      or a reproducible pentagon-to-hexagon relation.
+ieee_boundary:
+  legacy_janus_application: APPLICATIONS/power_systems/stability_field_dynamics/iee_core_geometry/ieee_scaling
+  domain_transition_framework: APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/docs/atlas_operator_framework.md
+  canonical_validation: VALIDATION/ieee_geometry_v1
+  conclusion: >-
+    Legacy JANUS-labelled IEEE experiments and the broad Atlas Janus formulation
+    are documentary application evidence. Canonical IEEE Geometry V1 does not
+    validate JANUS and remains benchmark-computation evidence only.
+human_decisions_required:
+  - {decision_id: X1-JANUS-V01, recommendation: accept}
+  - {decision_id: X1-JANUS-V02, recommendation: accept}
+  - {decision_id: X1-JANUS-V03, recommendation: accept}
+  - {decision_id: X1-JANUS-V04, recommendation: accept}
+  - {decision_id: X1-JANUS-V05, recommendation: accept}

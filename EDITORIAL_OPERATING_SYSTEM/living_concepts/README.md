@@ -81,6 +81,7 @@ repository's stricter observed-evidence and Outcome Firewall semantics.
 | [Concept Lineage Deltas](review/cross_repository/CONCEPT_LINEAGE_DELTAS.md) | Effects of historical evidence on the five X1 dossiers |
 | [X1 Dossier Template](dossiers/DOSSIER_TEMPLATE.md) | Shared human-review boundary for the five reference dossiers |
 | [JANUS Concept Dossier](dossiers/JANUS_DOSSIER.md) · [YAML](dossiers/janus.yaml) | First X1 reference dossier; human review required |
+| [JANUS Visual Evidence Review](dossiers/visual_evidence/JANUS_VISUAL_EVIDENCE_REVIEW.md) · [YAML](dossiers/visual_evidence/janus_visual_occurrences.yaml) | Bounded review of book pages, atlas posters, IEEE artifacts, and the Penta/Hexagonal human lead |
 
 ## Relationship to the Editorial Operating System
 

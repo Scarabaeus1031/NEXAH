@@ -51,6 +51,22 @@ definition_layers:
     summary: >-
       Local compatibility between forward and backward organization inside
       reconstructed flow geometry.
+  - layer_key: janus:definition:work-double-perspective
+    layer: authored_work
+    status: direct_work_level_definition
+    source: arena:5413103
+    locator: block 47683743, observed position 159
+    summary: >-
+      Every orientation includes and excludes; every view creates a blind spot,
+      and shifts in reference, angle, scale, or selection reveal other structure.
+  - layer_key: janus:definition:domain-transition
+    layer: application_framework
+    status: documentary_application_evidence
+    source: APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/docs/atlas_operator_framework.md
+    locator: J(x) — Janus Operator
+    summary: >-
+      Reconstructs gates, boundaries, crossings, bottlenecks, and admissible
+      transitions between domains.
   - layer_key: janus:definition:historical-gatekeeper
     layer: historical
     status: lineage_only
@@ -130,6 +146,30 @@ occurrences:
     occurrence_verification: verified_at_pinned_commit
     assertion_origin: human_authored_historical
     claim_support: {value: not_assessed, scope: visual lineage}
+  - occurrence_key: x1:janus:08
+    source_type: authored_work_visual
+    source: arena:5413103
+    locator: block 47683743, observed position 159
+    occurrence_role: defines
+    occurrence_verification: visually_verified
+    assertion_origin: human_authored_work
+    claim_support: {value: supported_within_scope, scope: Work-level conceptual formulation}
+  - occurrence_key: x1:janus:09
+    source_type: application_framework
+    source: APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/docs/atlas_operator_framework.md
+    locator: J(x) — Janus Operator
+    occurrence_role: applies
+    occurrence_verification: verified
+    assertion_origin: human_authored_research
+    claim_support: {value: documentary_application_evidence, scope: domain-transition framework}
+  - occurrence_key: x1:janus:10
+    source_type: legacy_experimental_visual
+    source: arena:5181006
+    locator: block 46188464, observed position 2
+    occurrence_role: experiments
+    occurrence_verification: visually_verified
+    assertion_origin: computational_experiment
+    claim_support: {value: legacy_experimental, scope: IEEE benchmark prototype, not operational-grid evidence}
 proposed_relations:
   - {subject: concept:janus, relation: has_controlled_expression, object: NX-OP-0016, status: review}
   - {subject: concept:janus, relation: inspires, object: Janus Bridge, status: review}
@@ -155,6 +195,9 @@ open_questions:
   - Which invariants should a future Janus Bridge preserve?
   - Should a broader Concept eventually receive an identity separate from NX-OP-0016?
   - Which research findings survive independent baselines and domain tests?
+  - Should the Work-level double-perspective formulation become the primary reader entry?
+  - Which Cartography Laboratory validation claims require correction or provenance?
+  - Is Penta/Hexagonal transition space related to JANUS or a distinct geometry family?
 human_decisions_required:
   - decision_id: X1-JANUS-01
     question: Accept JANUS as a broader Concept proposal candidate?
@@ -174,6 +217,21 @@ human_decisions_required:
   - decision_id: X1-JANUS-06
     question: Expose JANUS through a Kernel Concept overlay now?
     recommendation: defer_until_five_dossiers_reviewed
+  - decision_id: X1-JANUS-V01
+    question: Accept the LIBRARYBOOK double-perspective page as a direct Work-level definition source?
+    recommendation: accept
+  - decision_id: X1-JANUS-V02
+    question: Treat the Cartography cross-domain validation panel as unsupported pending source evidence?
+    recommendation: accept
+  - decision_id: X1-JANUS-V03
+    question: Separate legacy IEEE JANUS experiments from canonical IEEE Geometry V1?
+    recommendation: accept
+  - decision_id: X1-JANUS-V04
+    question: Keep Mathematica crossing and regime pages as related context rather than direct occurrences?
+    recommendation: accept
+  - decision_id: X1-JANUS-V05
+    question: Retain Penta/Hexagonal space as a human lead without a graph relation?
+    recommendation: accept
 recommendation:
   outcome: proceed_without_identity_allocation
   rationale: >-
@@ -185,3 +243,6 @@ warnings:
   - Proposed relations are not graph edges.
   - X1 did not independently rerun or validate the complete JANUS experimental series.
   - Historical occurrence establishes lineage, not validity.
+  - Visual occurrence establishes an authored assertion, not scientific validity.
+  - Canonical IEEE Geometry V1 does not validate JANUS.
+  - Penta/Hexagonal transition space remains a human lead without a graph edge.
