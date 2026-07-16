@@ -9,6 +9,16 @@ The NEXAH Living Library organizes Works. Living Concepts investigates the
 intellectual layer that develops through Works, Research, Validation, and
 historical experiments.
 
+The current [Editorial Explanation Layer plateau](../EDITORIAL_EXPLANATION_LAYER_STATUS.md)
+documents how the accepted Overlay and read-only Adapter turn six reviewed
+Concept answers into reproducible Reader/Explain contracts.
+
+![NEXAH Editorial Explanation Layer](../visuals/architecture/editorial_explanation_layer.png)
+
+> **CURRENT X2 ARCHITECTURE.** Contract resolution is implemented. The three
+> audience renditions shown in the visual are a proposed next test, not a
+> current Adapter capability.
+
 > The system may identify that a term exists. It may not decide what that term
 > means.
 

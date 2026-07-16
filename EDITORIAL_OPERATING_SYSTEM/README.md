@@ -23,6 +23,11 @@ implementation. Human editorial authority remains the governing layer.
 > [System Boundary and Status](SYSTEM_BOUNDARY_AND_STATUS.md) for the maintained
 > textual record.
 
+The newer [Editorial Explanation Layer plateau](EDITORIAL_EXPLANATION_LAYER_STATUS.md)
+documents the Phase X2 transition from reviewed Living Concepts to accepted,
+machine-readable Answer Contracts and a strictly read-only six-question
+Adapter.
+
 ## The system at a glance
 
 ```text
@@ -41,7 +46,7 @@ Human approval
 Controlled execution and verification
 ```
 
-Five responsibilities remain deliberately distinct:
+Six responsibilities remain deliberately distinct:
 
 1. **Editorial Knowledge Engine** — stable identities, curated structure,
    Reader Policies, journeys, sequences, Operators, evidence, and provenance.
@@ -54,6 +59,9 @@ Five responsibilities remain deliberately distinct:
    verification, snapshots, diff, and release checks.
 5. **Human Editorial Authority** — curates, decides, reviews, approves, and
    remains responsible for every canonical or public editorial decision.
+6. **Editorial Explanation Layer** — preserves reviewed Concept answers as
+   reproducible Reader/Explain contracts without inferring new meaning or
+   creating canonical Concept authority.
 
 ## First reference implementation
 
@@ -125,8 +133,8 @@ Snapshot · Diff · Health · Release Check
 
 ## Visual index
 
-The nine visuals serve different purposes. They should not be interpreted as
-nine independent specifications.
+The ten visuals serve different purposes. They should not be interpreted as
+ten independent specifications.
 
 | Visual | Role | Status |
 |---|---|---|
@@ -134,15 +142,17 @@ nine independent specifications.
 | [Editorial Operating System](visuals/snapshots/2026-07-16_pre_batch_1/editorial_operating_system.png) | Complete architecture, implementation boundary, and Phase IX status | Dated reference snapshot |
 | [Editorial Knowledge Engine](visuals/architecture/editorial_knowledge_engine.png) | Editorial structure, Reader Policies, journeys, governance, and Library experience | Architecture overview |
 | [Editorial Execution Engine](visuals/architecture/editorial_execution_engine.png) | Controlled path from editorial decision to verified public navigation | Architecture overview |
+| [Editorial Explanation Layer](visuals/architecture/editorial_explanation_layer.png) | Implemented X2 path from reviewed knowledge through accepted Answer Contracts to Reader/Explain output | Current architecture; audience renditions are the next proposal |
 | [Living Library](visuals/architecture/living_library.png) | First reference implementation and its reader questions | Reference implementation |
 | [Editorial Orientation Engine](visuals/vision/editorial_orientation_engine.png) | General learning and orientation model across possible domains | Vision; not a complete implementation claim |
 | [The Moment of Orientation](visuals/vision/moment_of_orientation.png) | Human experience from confusion to a meaningful next step | Conceptual vision |
 | [Living Concept Graph](visuals/vision/living_concept_graph.png) | Proposed layer for navigating definitions, occurrences, relations, evolution, and open questions across Works | Vision; X0 review only, not implemented |
 | [Library Kernel Innovation Path](visuals/history/library_kernel_innovation_path.png) | The conceptual transition from books to a Living Library operating system | Historical development snapshot |
 
-The Phase X [Living Concepts review](living_concepts/README.md) investigates
-whether recurring NEXAH ideas warrant a provenance-bound Concept layer. It does
-not allocate Concept identities or implement the graph shown in the vision.
+The Phase X [Living Concepts layer](living_concepts/README.md) now includes an
+accepted non-canonical Overlay baseline and a read-only six-question Answer
+Adapter. It does not allocate Concept identities, implement the graph shown in
+the vision, or join the default Kernel runtime.
 
 ## Potential application patterns
 
@@ -173,7 +183,8 @@ across them.
 ## Current boundary
 
 The current repository demonstrates a governed Living Library, reader-oriented
-navigation, an Orientation Kernel, and a guarded editorial execution path.
+navigation, an Orientation Kernel, a guarded editorial execution path, and a
+read-only pilot for reproducible Editorial Knowledge Contracts.
 
 It does not currently claim autonomous path optimization, individual learner
 profiles, automatic editorial authority, or completed Wikipedia, museum,

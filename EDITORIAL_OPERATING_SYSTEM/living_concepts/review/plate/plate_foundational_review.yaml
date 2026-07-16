@@ -1,0 +1,196 @@
+schema_version: "0.1"
+review:
+  phase: X3
+  title: Plate Foundational Review
+  review_handle: plate-pattern-x3
+  date: "2026-07-16"
+  status: completed_for_human_review
+  authority: editorial_review_only
+  canonical: false
+  identity_allocated: false
+
+visual_artifact:
+  path: EDITORIAL_OPERATING_SYSTEM/visuals/vision/the_geometry_between_plates.png
+  title: The Geometry Between Plates
+  subtitle: A Spiral Architecture of Understanding
+  status: x3_working_hypothesis
+  canonical: false
+  creates_architecture: false
+
+research_question: >-
+  Does Plate emerge naturally from the existing NEXAH body of work, or is it
+  merely a new metaphor?
+
+working_hypothesis: >-
+  A Plate may be a bounded representation produced by observing a larger field
+  from a particular orientation.
+
+finding:
+  outcome: implicit_editorial_representational_pattern
+  natural_emergence: supported_with_limits
+  strongest_classification:
+    - editorial_pattern
+    - visual_grammar
+  secondary_classification:
+    - explanatory_metaphor
+  unsupported_classification:
+    - canonical_concept
+    - operator
+    - orientation_primitive
+    - universal_representation_type
+  confidence: medium_high
+  rationale: >-
+    Plate is already present in Library Architecture and several Works give it
+    a bounded, projective, perspectival, sequential, or navigational function.
+    The repository does not establish it as the form of every representation
+    or as a new executable primitive.
+
+review_only_formulation: >-
+  A Plate is a bounded human-facing representation of a larger field,
+  produced through a declared or implied selection, perspective, projection,
+  and scale, and arranged to support comparison, reflection, explanation, or
+  transition.
+
+direct_evidence:
+  - source: LIBRARY/architecture/LIBRARY_ARCHITECTURE_V1.md
+    occurrence: Part / Chapter / Page / Plate
+    role: documentary_unit_beneath_work_edition
+    strength: very_strong
+  - source: LIBRARY/README.md
+    occurrence: Concepts may later reference selected pages or plates
+    role: citable_documentary_unit
+    strength: strong
+  - arena_channel_id: 5393574
+    title: THE OPERATOR MAP
+    role: compressed_navigable_alternative_projection
+    strength: very_strong
+  - arena_channel_id: 5293283
+    title: The Architecture of Becoming
+    role: representational_layer_in_transformation_sequence
+    strength: very_strong
+  - arena_channel_id: 5345722
+    title: NEXAH LANDSCAPES
+    role: perspective_on_shared_orientation_question
+    strength: very_strong
+  - arena_channel_id: 5246392
+    title: NEXAH XV ATLAS Relational Cartography of Human Reality
+    role: interconnected_bounded_atlas_unit
+    strength: strong
+  - arena_channel_id: 5218362
+    title: NEXAH XV ATLAS - Two Sides of One Medal
+    role: visual_language_unit
+    strength: moderate
+  - arena_channel_id: 5221525
+    title: NEXAH ARENA The Relational Field
+    role: visual_atlas_medium
+    strength: weak_to_moderate
+  - arena_channel_id: 5413103
+    title: LIBRARYBOOK
+    role: white_plate_collection_form
+    strength: weak
+  - arena_channel_id: 5224059
+    title: ODYSSEE 2040 - THE RETURN ATLAS
+    role: symbolic_visual_form
+    strength: weak
+
+functional_analogues:
+  - name: declared_geometry
+    relation: makes a relational space inspectable without equating map and situation
+    synonym: false
+  - name: observer_geometry
+    relation: uses projection, slice, scale, reference, and blind spot
+    synonym: false
+  - name: technical_cross_section
+    relation: declared view with explicit scope and information loss
+    synonym: false
+  - name: represented_orientation_state
+    relation: local to observer, context, reference frame, and evidence
+    synonym: false
+  - name: answer_contract
+    relation: governs a bounded explanation and its evidence
+    synonym: false
+
+historical_lineage:
+  repository: NEXAH-CODEX
+  occurrences:
+    - Scientific Plates
+    - reference plate for cathedral orientation
+    - prime resonance plate
+    - didactic plate
+    - mathematical plate
+  assessment: visual_documentary_lineage_only
+  canonical_authority: none
+
+operator_overlap:
+  - operator_id: NX-OP-0002
+    name: Aperture
+    distinction: selective opening, not resulting presentation
+  - operator_id: NX-OP-0003
+    name: Observer
+    distinction: situated act of selection, not resulting presentation
+  - operator_id: NX-OP-0006
+    name: Boundary
+    distinction: delimitation, not resulting presentation
+  - operator_id: NX-OP-0012
+    name: Projection
+    distinction: mapping operation with preservation and loss
+  - operator_id: NX-OP-0017
+    name: Scale
+    distinction: representational level, not resulting presentation
+
+distinctions:
+  not_assumed_to_be:
+    - object
+    - field_itself
+    - ultimate_reality
+    - permanent_ontology
+    - page_synonym
+    - map_synonym
+    - projection_synonym
+    - answer_contract_synonym
+  may_function_as:
+    - bounded_view
+    - situated_perspective
+    - editorial_projection
+    - visual_compression
+    - sequential_reflection_unit
+
+required_question_answers:
+  implicit_occurrence: yes
+  shared_visual_idea: partial_and_evidence_dependent
+  geometry_concept_explanation_bridge: possible_editorial_bridge_only
+  clarifies_architecture: only_as_bounded_editorial_pattern
+  merely_renames_existing_ideas: true_when_used_without_distinctions
+  operator_conflict: high_if_promoted_as_operator
+
+excluded_collisions:
+  - casimir_plates
+  - tectonic_plates
+  - mechanical_or_solar_base_plates
+  - unlabeled_layout_panels
+
+evidence_limits:
+  - untranscribed_visual_pixels_not_treated_as_semantic_evidence
+  - source_descriptions_do_not_establish_one_formal_definition
+  - visual_recurrence_does_not_prove_concept_identity
+  - historical_sources_have_no_current_canonical_authority
+
+recommendation:
+  decision: bounded_phase_x3_research_proposal
+  concept_acceptance: false
+  operator_proposal: false
+  architecture_change: false
+  proposed_tests:
+    - distinguish_plate_from_page_image_map_and_panel
+    - record_field_viewpoint_boundary_scale_purpose_and_next_relation_in_small_sample
+    - test_whether_the_distinction_improves_reader_understanding
+  fallback: retain_as_literary_and_visual_term
+
+mutations:
+  registry: none
+  overlay: none
+  kernel: none
+  operators: none
+  architecture: none
+  arena: none
+  identities: none

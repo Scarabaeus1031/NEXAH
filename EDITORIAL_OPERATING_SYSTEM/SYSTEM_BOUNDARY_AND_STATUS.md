@@ -9,14 +9,15 @@ capabilities that are actually implemented and verified in the repository.
 It is intentionally factual and may be updated more frequently than the main
 [README](README.md).
 
-## Two development tracks
+## Three development tracks
 
-NEXAH currently uses two phase histories for different scopes:
+NEXAH currently uses three phase histories for different scopes:
 
 | Track | Current marker | Meaning |
 |---|---|---|
 | Orientation Kernel and technical architecture | Kernel v0.7; technical Phase V complete | Typed orientation, network orientation, evidence-bound reporting, validation paths, and related kernel work |
 | NEXAH Library editorial track | Phase IX | Governed editorial execution for the Living Library |
+| Living Concepts and explanation track | Phase X2 | Accepted non-canonical Concept Overlay and read-only six-question Answer Adapter |
 
 The numbering is not interchangeable. “Phase IX” does not mean that every
 technical or domain application is implemented.
@@ -38,6 +39,9 @@ technical or domain application is implemented.
 | Batch 0 sandbox | Verified | [`LIBRARY/review/BATCH_00_SANDBOX_VERIFICATION.md`](../LIBRARY/review/BATCH_00_SANDBOX_VERIFICATION.md) |
 | Batch 1 action selection | Four actions explicitly accepted | [`LIBRARY/review/arena_manual_cleanup_queue.yaml`](../LIBRARY/review/arena_manual_cleanup_queue.yaml) |
 | Batch 1 public application | Not yet evidenced in the repository at this snapshot | Verification report absent |
+| Living Concepts Overlay v0.1 | Editorial baseline accepted; non-canonical | [`living_concepts/overlay/`](living_concepts/overlay/) |
+| Concept Answer Adapter v0.1 | Implemented read-only pilot for CFQ-01–CFQ-06 | [`../nexah/living_concepts/`](../nexah/living_concepts/) |
+| Editorial Explanation Layer | Implemented as a bounded pilot; ready for human review | [`EDITORIAL_EXPLANATION_LAYER_STATUS.md`](EDITORIAL_EXPLANATION_LAYER_STATUS.md) |
 
 ## Current Library figures
 
@@ -113,7 +117,11 @@ The current system does not claim:
   integrations;
 - scientific or operational validity merely because a structural contract or
   software test passes;
-- replacement of human editors, librarians, teachers, researchers, or readers.
+- replacement of human editors, librarians, teachers, researchers, or readers;
+- a production Concept Graph or canonical Concept identities;
+- arbitrary Concept questions, semantic search, or inferred explanations;
+- audience-aware Beginner, Advanced, or Research renditions;
+- general Kernel integration of the Concept Overlay.
 
 The application patterns shown in the visuals remain a design horizon until an
 adapter, dataset, working demonstration, and domain-appropriate validation

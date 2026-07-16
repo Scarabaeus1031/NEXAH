@@ -20,6 +20,7 @@ combination of:
 |---|---|
 | What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
 | How do editorial knowledge, orientation, governance, and execution connect? | **[Editorial Operating System](../EDITORIAL_OPERATING_SYSTEM/README.md)** |
+| How are reviewed Concept answers reproduced without inference? | **[Editorial Explanation Layer — Plateau X2](../EDITORIAL_OPERATING_SYSTEM/EDITORIAL_EXPLANATION_LAYER_STATUS.md)** |
 | Is there a compact visual blueprint? | **[System Blueprint and Verified Results](../EDITORIAL_OPERATING_SYSTEM/visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)** |
 | Which computational methods are used? | **[METHODS.md](METHODS.md)** |
 | What is the next concrete architecture plan? | **[Orientation Layer](orientation_layer/)** |
@@ -60,6 +61,23 @@ The image is a whiteboard summary and evidence snapshot, not a substitute for
 `SYSTEM_STATE.md`, the frozen Library Architecture, or validation artifacts.
 The binary lives once under `EDITORIAL_OPERATING_SYSTEM/`; this Architecture
 portal links to it rather than maintaining a duplicate copy.
+
+Phase X2 adds a bounded explanation architecture:
+
+```text
+Works
+→ Living Concepts
+→ accepted Editorial Knowledge Contracts
+→ read-only Concept Answer Adapter
+→ Reader or Explain response
+```
+
+See the maintained
+**[Editorial Explanation Layer status](../EDITORIAL_OPERATING_SYSTEM/EDITORIAL_EXPLANATION_LAYER_STATUS.md)**
+and its
+**[current architecture visual](../EDITORIAL_OPERATING_SYSTEM/visuals/architecture/editorial_explanation_layer.png)**.
+This remains separate from the default Orientation Kernel runtime and does not
+implement a production Concept Graph.
 
 ---
 
