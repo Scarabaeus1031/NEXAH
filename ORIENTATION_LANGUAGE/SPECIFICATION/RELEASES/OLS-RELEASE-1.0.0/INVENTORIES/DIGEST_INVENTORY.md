@@ -1,0 +1,20 @@
+# SHA-256 Digest Inventory
+
+Release: `OLS-RELEASE-1.0.0`  
+Algorithm: SHA-256  
+Inventory version: `1.0.0`
+
+| Document ID | Canonical SHA-256 | Approved candidate comparison |
+| --- | --- | --- |
+| `OLS-0` | `4be9c059362e10cb7b8d29f75225bc05c9458af1b453ed0d5a64c30b4d30f157` | Match |
+| `OLS-1` | `fe1e71aed19be46fe62c99219c599ec470c1becebce1e3b6ab0fcc5230a2c7dc` | Match |
+| `OLS-2` | `77358857c7eaea1db36e501d2a53bfa194a5f264b6608fb88d38ca000028ede7` | Match |
+| `OLS-3` | `a06a15a291c3cbdb2206ec658442ec4c02ed0ee76a796896a7de1a3e94cb836d` | Match |
+| `OLS-4` | `c1ed8f5b224829b03d19d1326fbfb6fc6f0f8d66a627ef741e7df0a32f6bfba4` | Match |
+| `OLS-5` | `726136a423d0e3f2ad21b5d775c3132303d9b1733cee34058f90b7e223440aed` | Match |
+| `OLS-6` | `05d8a8937d76f599c14302f15ac331998f6a26c6aabdfcfcaf7fda0feaf93454` | Match |
+| `OLS-I` | `0c40e2db39c09ccbcf96bba941ee54259eeb6219b731780b6b3770b754cb13ab` | Match |
+
+`DOCUMENT_SHA256SUMS` is the machine-verifiable rendering of this inventory. `PACKAGE_SHA256SUMS` covers the complete assembled package except the checksum file itself. The detached manifest digest is also published in `RELEASE_MANIFEST.sha256`.
+
+The digest is over raw file bytes. Reformatting, newline conversion, metadata insertion, or any other byte change produces a different artifact and is outside this release.

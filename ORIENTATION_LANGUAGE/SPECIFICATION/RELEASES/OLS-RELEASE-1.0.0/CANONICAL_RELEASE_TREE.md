@@ -1,0 +1,33 @@
+# Canonical Release Tree
+
+Release: `OLS-RELEASE-1.0.0`
+
+```text
+OLS-RELEASE-1.0.0/
+├── RELEASE_MANIFEST.md
+├── RELEASE_MANIFEST.sha256
+├── DOCUMENT_SHA256SUMS
+├── PACKAGE_SHA256SUMS
+├── RELEASE_NOTES.md
+├── PUBLICATION_SUMMARY.md
+├── CANONICAL_RELEASE_TREE.md
+├── DOCUMENTS/
+│   ├── OLS-0_SPECIFICATION_CONVENTIONS_AND_SUITE_OVERVIEW_V1.0.md
+│   ├── OLS-1_UNIVERSAL_BASE_LANGUAGE_V1.0.md
+│   ├── OLS-2_DECLARATIONS_AND_OPERATOR_CONTRACTS_V1.0.md
+│   ├── OLS-3_SEMANTIC_PROFILES_AND_COMPOSITION_V1.0.md
+│   ├── OLS-4_DERIVATIONS_AND_SEMANTIC_TRANSITIONS_V1.0.md
+│   ├── OLS-5_CONFORMANCE_AND_TESTING_V1.0.md
+│   ├── OLS-6_EXTENSIONS_VERSIONING_AND_GOVERNANCE_V1.0.md
+│   └── OLS-I_INFORMATIVE_COMPANION_V1.0.md
+├── INVENTORIES/
+│   ├── PUBLICATION_INVENTORY.md
+│   ├── DIGEST_INVENTORY.md
+│   ├── DEPENDENCY_REPORT.md
+│   └── REGISTRY_REPORT.md
+└── REVIEW/
+    ├── RELEASE_VERIFICATION_REPORT.md
+    └── INDEPENDENT_RELEASE_REVIEW.md
+```
+
+The `DOCUMENTS/` directory is the canonical specification artifact set. All other files are release-control artifacts. Repository migration can relocate this tree but cannot replace manifest identity or digest verification.

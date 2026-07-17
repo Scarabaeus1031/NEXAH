@@ -1,0 +1,38 @@
+# Canonical Path Report
+
+Release: `OLS-RELEASE-1.0.0`
+
+## Release root
+
+`ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/`
+
+## Canonical control paths
+
+| Identity | Permanent canonical path |
+| --- | --- |
+| Release Manifest | `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/RELEASE_MANIFEST.md` |
+| Manifest digest | `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/RELEASE_MANIFEST.sha256` |
+| Document digest inventory | `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/DOCUMENT_SHA256SUMS` |
+| Package digest inventory | `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/PACKAGE_SHA256SUMS` |
+| Publication Summary | `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/PUBLICATION_SUMMARY.md` |
+| Canonical Release Tree | `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/CANONICAL_RELEASE_TREE.md` |
+
+## Canonical document paths
+
+| Document ID | Permanent canonical path | Count in permanent specification/companion namespace |
+| --- | --- | ---: |
+| `OLS-0` | `.../DOCUMENTS/OLS-0_SPECIFICATION_CONVENTIONS_AND_SUITE_OVERVIEW_V1.0.md` | 1 |
+| `OLS-1` | `.../DOCUMENTS/OLS-1_UNIVERSAL_BASE_LANGUAGE_V1.0.md` | 1 |
+| `OLS-2` | `.../DOCUMENTS/OLS-2_DECLARATIONS_AND_OPERATOR_CONTRACTS_V1.0.md` | 1 |
+| `OLS-3` | `.../DOCUMENTS/OLS-3_SEMANTIC_PROFILES_AND_COMPOSITION_V1.0.md` | 1 |
+| `OLS-4` | `.../DOCUMENTS/OLS-4_DERIVATIONS_AND_SEMANTIC_TRANSITIONS_V1.0.md` | 1 |
+| `OLS-5` | `.../DOCUMENTS/OLS-5_CONFORMANCE_AND_TESTING_V1.0.md` | 1 |
+| `OLS-6` | `.../DOCUMENTS/OLS-6_EXTENSIONS_VERSIONING_AND_GOVERNANCE_V1.0.md` | 1 |
+| `OLS-I` | `.../DOCUMENTS/OLS-I_INFORMATIVE_COMPANION_V1.0.md` | 1 |
+
+In this table, `...` expands to `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0`.
+
+## Navigation aliases
+
+`SPECIFICATION/OLS-0/` through `OLS-6/`, `COMPANION/OLS-I/`, and `REGISTRIES/RELEASE_MANIFEST/` are human-facing entry points. They contain links, not duplicate release artifacts, and do not acquire independent publication identity.
+

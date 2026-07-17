@@ -43,6 +43,7 @@ observe → represent → map → compare → orient → explain → learn
 | Use the current kernel | **[NEXAH Kernel Start](nexah/START_HERE.md)** |
 | Run an application | **[Network Orientation](APPLICATIONS/network_orientation/README.md)** · **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)** |
 | Understand the research | **[Research Portal](RESEARCH/README.md)** |
+| Read the published Orientation Language | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** · **[OLS-RELEASE-1.0.0](ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/PUBLICATION_SUMMARY.md)** |
 | Inspect maturity and boundaries | **[Architecture & System State](ARCHITECTURE/SYSTEM_STATE.md)** |
 | Understand the editorial-orientation architecture | **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Browse the canonical visual-library registry | **[NEXAH Library](LIBRARY/README.md)** |
@@ -526,6 +527,7 @@ Good starting points:
 - **Purpose and principles:** [MANIFESTO.md](MANIFESTO.md)
 - **Kernel user:** [nexah/START_HERE.md](nexah/START_HERE.md)
 - **Researcher:** [RESEARCH/README.md](RESEARCH/README.md)
+- **Specification reader:** [ORIENTATION_LANGUAGE/README.md](ORIENTATION_LANGUAGE/README.md)
 - **Developer:** [ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)
 - **Library reader or editor:** [LIBRARY/README.md](LIBRARY/README.md)
 - **Editorial-system reviewer:** [EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)

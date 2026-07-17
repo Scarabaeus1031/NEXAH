@@ -19,6 +19,7 @@ evidence, and historical experimental environments.
 | Run the reference demonstration | **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
 | Explore the visual work | **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** |
 | Enter the research archive | **[RESEARCH/README.md](RESEARCH/README.md)** |
+| Read the published Orientation Language | **[ORIENTATION_LANGUAGE/README.md](ORIENTATION_LANGUAGE/README.md)** |
 | Inspect the current architecture | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
 | Understand the editorial-orientation architecture | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Browse the canonical visual-library registry | **[LIBRARY/README.md](LIBRARY/README.md)** |
@@ -41,6 +42,7 @@ START_HERE
 ```text
 NEXAH/
 ├── EDITORIAL_OPERATING_SYSTEM/ reusable editorial-orientation architecture
+├── ORIENTATION_LANGUAGE/ published OLS suite and semantic authority
 ├── ARCHITECTURE/       current architecture and system state
 ├── PROTO_CORE/         reference implementations and field layers
 ├── nexah/              installable minimal Python package
@@ -60,10 +62,25 @@ The conceptual flow across these areas is approximately:
 ```text
 research questions
 → experimental exploration
+→ declared Orientation Language
 → reference implementation
 → validation and findings
 → applied systems
 ```
+
+---
+
+## 🧭 ORIENTATION_LANGUAGE/
+
+**[ORIENTATION_LANGUAGE/](ORIENTATION_LANGUAGE/)** is the canonical subsystem
+entry point for the published Orientation Language Specification. The current
+immutable publication is
+**[OLS-RELEASE-1.0.0](ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/PUBLICATION_SUMMARY.md)**.
+
+Research may inform the language, but it does not define released semantics.
+The Library communicates orientation, applications select declared semantics,
+and implementations execute or support them without becoming semantic
+authority.
 
 ---
 
