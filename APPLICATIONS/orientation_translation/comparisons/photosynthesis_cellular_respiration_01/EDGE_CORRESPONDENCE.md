@@ -1,0 +1,20 @@
+# Edge Correspondence
+
+Candidate edges were reviewed only after the identity and role registers. Graph position and transitive paths were excluded.
+
+| ID | Pilot 01 edge / statement | Pilot 02 edge / statement | Endpoint identity | Direction and local roles | Support / scale | Exclusions | Result | Unsupported implication |
+|---|---|---|---|---|---|---|---|---|
+| EC-01 | E21 Electron transport → Proton gradient | CR-E18 ETC → Proton gradient | both endpoints partial identities | same direction; consequence vs coupling step | direct/direct; membrane mechanism | different chains, membranes, components | **Partial correspondence** | one shared mechanism or equal gradient |
+| EC-02 | E22 ATP → ATP synthase, supporting representation | CR-E21 ATP synthase → ATP, ATP production | endpoints scoped identities | opposite graph direction and different predicates | direct/direct; molecular/membrane | P01 edge means explanatory support, not ATP causing synthase | **Asymmetric relation** | reciprocity or inverse causality |
+| EC-03 | E07 Photosynthesis → ATP | CR-E03 Cellular respiration → ATP | ATP scoped; source endpoints distinct | same target, distinct production contexts | direct/direct; process→molecule | amounts, mechanisms, yields | **Functional analogy only** | shared source node or equivalent output relation |
+| EC-04 | E11 Photosynthesis → Oxygen, byproduct | CR-E22 ETC → Oxygen, terminal acceptor | oxygen scoped; source endpoints distinct | target is same but predicates oppose local roles | direct/direct; molecular | neither reverse edge; no closure | **No meaningful correspondence** | oxygen proves process complementarity |
+| EC-05 | E02 Photosynthesis → Water, prerequisite | CR-E23 Oxygen → Waste products, water formation | water partial; source endpoints distinct | input versus product formation | direct/direct; molecular | P02 water is bundled | **Asymmetric relation** | water establishes an inverse pair |
+| EC-06 | E13 Photosynthesis → Cellular respiration, neighboring representation | no admitted CR-N01 → Photosynthesis; CR-R01 rejects local node | both subjects scoped identities | P01 one-directional neighbor; P02 candidate/rejection | P01 direct; P02 narrow mention, not admitted | exact opposition, symmetry, cycle | **Asymmetric relation** | reverse or reciprocal edge exists |
+| EC-07 | E27 Carbohydrates → Cellular metabolism | CR-E04 ATP → Cellular work | occupants functional analogy only | both move from molecular product/carrier to cellular context | direct/direct; molecular→cellular | different endpoints and predicates | **Functional analogy only** | metabolism equals work or edge identity |
+| EC-08 | E28 Cellular respiration → Mitochondria | CR-E16 CAC → Matrix plus CR-E19 ETC → Inner membrane | respiration scoped; locations only functionally analogous | one broad location edge vs two process-specific location edges | direct/direct; process/pathway→organelle/subcompartment | eukaryotic scope and prokaryotic exceptions | **Partial correspondence** | mitochondrion is one undifferentiated location |
+| EC-09 | E03 Photosynthesis → CO2, prerequisite | CR-E15 CAC → Waste products containing CO2 | CO2 partial; source endpoints distinct | input vs bundled output | direct/direct; molecular | no exact CR CO2 node | **Asymmetric relation** | closed carbon cycle or edge reciprocity |
+| EC-10 | E08 Photosynthesis → NADPH | CR-E14 CAC → reduced carriers | carrier endpoints partial; source endpoints distinct | production relations in different mechanisms | direct/direct; molecular | NADPH ≠ NADH/FADH2 | **Functional analogy only** | carrier identity or equal energetic role |
+
+## Finding
+
+No candidate met the standard for a confirmed edge correspondence. Three are partial correspondences, four are asymmetric relations, three are functional analogies or no-match outcomes. The strongest partial result is the locally supported electron-transport → proton-gradient pattern, but the endpoint referents are only partially identical and the instantiated mechanisms remain distinct.
