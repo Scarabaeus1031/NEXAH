@@ -130,7 +130,32 @@ The Kernel may read the Registry to produce:
 Kernel inference is always an overlay. It may propose metadata or Concept
 occurrences, but it may not silently overwrite canonical human-reviewed data.
 
-## Current status — Phase IX Editorial Writer
+## From Library to Reproducible Explanation
+
+![NEXAH Editorial Explanation Layer — from reviewed knowledge to reproducible explanation](../EDITORIAL_OPERATING_SYSTEM/visuals/architecture/editorial_explanation_layer.png)
+
+The Library provides the human-authored Works and editorial context from which
+bounded Concept reviews and Answer Contracts may be developed. The separate
+**[Editorial Explanation Layer](../EDITORIAL_OPERATING_SYSTEM/EDITORIAL_EXPLANATION_LAYER_STATUS.md)**
+can reproduce an accepted, human-reviewed answer through a read-only Adapter.
+
+```text
+Works
+→ Living Concept review
+→ accepted Editorial Knowledge Contract
+→ read-only resolution
+→ Reader or Explain response
+```
+
+This does not make the Library a Knowledge Graph and does not grant the Adapter
+authority to infer new meaning. A contract preserves its question, reviewed
+answer, evidence, uncertainty, and boundaries. The audience may change; the
+evidence and claim boundary may not.
+
+The audience-specific renditions shown in the visual remain a bounded design
+question. They are not part of the current X2 implementation.
+
+## Current status — Living Library, Editorial Writer, and X2 pilot
 
 The current pilot contains:
 
@@ -140,7 +165,8 @@ The current pilot contains:
 - **Library Architecture v1.0**;
 - a strictly read-only Are.na comparison client;
 - a separate, approval-gated Are.na Editorial Writer;
-- initial Reading Path, Operator, graph, and recommendation queries.
+- initial Reading Path, Operator, graph, and recommendation queries;
+- six accepted pilot Answer Contracts and a read-only Concept Answer Adapter.
 
 The ten pilot Works are:
 
@@ -370,8 +396,9 @@ The next work should remain focused on the ten-work pilot:
 8. introduce page-level structure only for selected core or large Works after
    the work-level model is stable.
 
-Write-back or automated reorganization of Are.na remains a later, separately
-approved phase.
+Any Are.na write remains a separately approved, plan-bound operation through
+the guarded Editorial Writer. Automated reorganization remains outside the
+Library architecture.
 
 ## Project success criterion
 

@@ -39,6 +39,7 @@ observe → represent → map → compare → orient → explain → learn
 
 | I want to… | Start here |
 |---|---|
+| Understand why NEXAH exists | **[NEXAH Manifesto](MANIFESTO.md)** |
 | Use the current kernel | **[NEXAH Kernel Start](nexah/START_HERE.md)** |
 | Run an application | **[Network Orientation](APPLICATIONS/network_orientation/README.md)** · **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)** |
 | Understand the research | **[Research Portal](RESEARCH/README.md)** |
@@ -56,6 +57,23 @@ choose a question
 → examine evidence and limits
 → continue into Research or Architecture
 ```
+
+---
+
+## 🧭 Infrastructure at a Glance
+
+![NEXAH Infrastructure — research, orientation, Library, editorial governance, applications, and evidence](assets/readme/nexah-infrastructure.png)
+
+NEXAH is repository-wide infrastructure for investigating and navigating
+relationships between bounded representations. The visual shows how research,
+the Orientation Kernel, the Library, editorial governance, applications, the
+Demonstrator, and cross-cutting evidence infrastructure relate.
+
+> **Architecture map, not a capability claim.** The top-level components are
+> present in the repository at different maturity levels. Items explicitly
+> shown as emerging paths are examples and future directions, not implemented
+> production capabilities. See **[System State](ARCHITECTURE/SYSTEM_STATE.md)**
+> for current evidence and boundaries.
 
 ---
 
@@ -371,11 +389,14 @@ NEXAH/
 ├── START_HERE.md                 guided conceptual entry
 ├── VISUAL_GALLERY.md             curated visual entry
 ├── nexah/                        kernel start, contracts, package, CLI, safety
+├── EDITORIAL_OPERATING_SYSTEM/   explanation, governance, and safe execution
+├── LIBRARY/                      canonical visual-library architecture
 ├── PROTO_CORE/                   reference and prototype implementations
 ├── RESEARCH/                     questions, evidence, and findings
 ├── APPLICATIONS/                 tools and system-specific programs
 ├── ARCHITECTURE/                 relationships and maturity mapping
 ├── EXPERIMENTAL/                 active labs and historical lineages
+├── testkit/                      evidence and outcome gates
 └── REPOSITORY_MAP.md             complete navigation map
 ```
 
@@ -502,9 +523,12 @@ Useful contributions include:
 Good starting points:
 
 - **New visitor:** [START_HERE.md](START_HERE.md)
+- **Purpose and principles:** [MANIFESTO.md](MANIFESTO.md)
 - **Kernel user:** [nexah/START_HERE.md](nexah/START_HERE.md)
 - **Researcher:** [RESEARCH/README.md](RESEARCH/README.md)
 - **Developer:** [ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)
+- **Library reader or editor:** [LIBRARY/README.md](LIBRARY/README.md)
+- **Editorial-system reviewer:** [EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)
 - **Applied-systems reader:** [APPLICATIONS/README.md](APPLICATIONS/README.md)
 - **Experimental explorer:** [EXPERIMENTAL/README.md](EXPERIMENTAL/README.md)
 - **Safety reviewer:** [nexah/SAFETY_AND_MISUSE.md](nexah/SAFETY_AND_MISUSE.md)
