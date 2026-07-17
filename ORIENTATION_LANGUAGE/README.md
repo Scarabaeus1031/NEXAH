@@ -6,6 +6,13 @@ Orientation Language is the NEXAH subsystem that specifies how bounded orientati
 
 This directory is the public entry point for the subsystem. The canonical Version 1.0 publication is [OLS-RELEASE-1.0.0](SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/PUBLICATION_SUMMARY.md). Its manifest, documents, inventories, checksums, notes, and release reviews are preserved as one immutable release unit.
 
+![Orientation Language ecosystem from architecture authority through the specification suite and non-normative realizations to illustrative real-world uses](VISUALS/CANONICAL/orientation-language-ecosystem-ols-1.0.0.png)
+
+> **Informative ecosystem overview compatible with
+> `OLS-RELEASE-1.0.0`.** The released specification remains authoritative.
+> Architecture sources, realization patterns, and real-world uses shown here
+> are non-normative. Inclusion does not claim implementation or conformance.
+
 ## Choose a path
 
 | Visitor | Start | Continue |

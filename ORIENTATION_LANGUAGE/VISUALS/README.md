@@ -12,6 +12,25 @@ The local Phase 4A workspace contains five actual Mermaid diagrams across three 
 
 The Phase 1 inventories cite thousands of external visual records, but those binary source assets are not present in this workspace. They were therefore not visually re-evaluated in Phase 4A. Their historical references remain preserved by the corpus extraction.
 
+## Maintained release ecosystem overview
+
+![Orientation Language ecosystem from architecture authority through the specification suite and non-normative realizations to illustrative real-world uses](CANONICAL/orientation-language-ecosystem-ols-1.0.0.png)
+
+| Field | Value |
+| --- | --- |
+| Title | Orientation Language Ecosystem — From Architecture to Real-World Use |
+| Visual role | Informative release ecosystem overview |
+| Status | Informative; non-normative |
+| Compatible release | `OLS-RELEASE-1.0.0` |
+| Source authority | Release Manifest and the eight released OLS documents |
+| Last reviewed | 17 July 2026 |
+| Maintainer | Thomas K. R. Hofmann |
+| Supersession history | Corrected after canonical repository integration; first maintained repository version |
+
+The diagram explains authority boundaries and possible realization paths. It
+does not add semantic authority, claim that the illustrated implementations
+exist, or establish conformance for any implementation or real-world use.
+
 ## Three canonical visual roles
 
 ### 1. Canonical ecosystem diagram
@@ -75,4 +94,3 @@ Every maintained visual should state:
 - maintainer;
 - replacement/supersession history;
 - text alternative.
-
