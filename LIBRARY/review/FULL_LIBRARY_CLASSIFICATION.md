@@ -11,10 +11,10 @@ remaining Channels. It allocates no IDs and cannot load as canonical data.
 
 ## Summary
 
-- Records: **71**
+- Records: **72**
 - Canonical references: **10**
-- Proposals awaiting review: **61**
-- Flagged proposals: **32**
+- Proposals awaiting review: **62**
+- Flagged proposals: **33**
 - IDs allocated: **0**
 
 ## Review packages
@@ -106,6 +106,7 @@ Library Function extension candidates: none
 | 5293283 | The Architecture of Becoming 🦋 | work | atlas | visual_atlas | research | published | developing | — | high | — |
 | 5442532 | THE LIVING EQUATION — An Atlas of Orientation | work | atlas | orientation_atlas | synthesis | published | developing | — | high | — |
 | 5404597 | THE WONDER HANDBOOK — FOR HUMAN CHILDREN | work | book | handbook | learning | published | stable | — | moderate | canonical_title_proposal |
+| 5450904 | THE WONDER OPERATOR | work | book | visual_book | practice | published | developing | — | moderate | series_identity_review_required, operator_identity_not_implied, post_review_designed_exemplar |
 | 5345606 | ◈ NEXAH ECOSYSTEM — Introducing the Codex | work | atlas | system_map | meta_navigation | published | developing | — | high | — |
 | 5228606 | ✦ MAP ATLAS ✦ ⟡ A Visual History of Human Orientation ⟡ | work | atlas | historical_atlas | learning | published | developing | — | high | — |
 | 5345722 | 🌍 NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation | work | atlas | landscape_atlas | navigation | published | developing | — | high | — |
@@ -120,9 +121,13 @@ Library Function extension candidates: none
    moderate for review.
 4. Whiteboard Works retain the human-confirmed `type: work` and
    `form: whiteboard`; their controlled primary Function is proposed as `research`.
+5. `THE WONDER OPERATOR` is a confirmed public Work but remains a Proposal. Its
+   `ODYSSEE 204° — Volume I` label is not silently equated with the deferred
+   `Odyssey 2040` Series, and “Operator” in the title allocates no controlled
+   Operator identity.
 
 ## Canonical reference
 
 The ten existing Entity records are included only as unchanged reference rows in
-the YAML overlay. Human review applies to the 61 proposed records, not to those
+the YAML overlay. Human review applies to the 62 proposed records, not to those
 canonical classifications.

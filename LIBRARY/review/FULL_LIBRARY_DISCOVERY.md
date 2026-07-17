@@ -2,7 +2,7 @@
 
 **Phase VI · Pass A · Read-only inventory**
 
-Generated: `2026-07-15T16:50:58+00:00`
+Generated: `2026-07-17T00:40:59+00:00`
 
 Are.na user: `nexah-scarabaeus1031`
 
@@ -11,9 +11,9 @@ Registry identities are allocated here and no Are.na data was changed.
 
 ## Summary
 
-- Public Channels visible to the client: **71**
+- Public Channels visible to the client: **72**
 - Already registered Pilot Works: **10**
-- Probable new Entity candidates: **61**
+- Probable new Entity candidates: **62**
 - Channels requiring early manual review: **0**
 - Exact normalized-title duplicate groups: **1**
 - Title or metadata cleanup candidates: **33**
@@ -80,7 +80,6 @@ performed during Discovery.
 | 5415765 | Field Atlas I —     Water  | surrounding_whitespace, repeated_spacing |
 | 5404576 | FIELD ATLAS II The Architecture of Agency  | surrounding_whitespace |
 | 5386781 | FIELD ATLAS III — MORPHOLOGY  | surrounding_whitespace |
-| 5442781 | GEOMETRIA NOVA  | surrounding_whitespace |
 | 5246418 | Leonardo Translations  The Room That Looks Back | repeated_spacing |
 | 5386751 | LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY  | surrounding_whitespace, repeated_spacing |
 | 5305692 | NEXAH _ DESIGN ORIENTATION  | surrounding_whitespace, underscore_title |
@@ -93,10 +92,11 @@ performed during Discovery.
 | 5216699 | NEXAH — 🌍  Maps of Human Reality | repeated_spacing |
 | 5415716 | Orientation Atlas Vol.I  | surrounding_whitespace |
 | 5386766 | THE CARTOGRAPHY LABORATORY  | surrounding_whitespace |
-| 5404597 | THE WONDER HANDBOOK _ For Human Children. | underscore_title |
+| 5404615 | THE VISITOR’S GUIDE  | surrounding_whitespace |
+| 5404597 | THE WONDER HANDBOOK _ For Human Children | underscore_title |
 | 5345145 | VOL. I —  Be Kind. Be Awefull. Belong. | repeated_spacing |
 | 5345129 | VOL. II —  PATHFINDERS  | surrounding_whitespace, repeated_spacing |
-| 5345108 | VOLUME III  —  CLEAR MIND | repeated_spacing |
+| 5345108 | VOLUME III  —  CLEAR MIND  | surrounding_whitespace, repeated_spacing |
 | 5413103 | Λ  LIBRARYBOOK  | surrounding_whitespace, repeated_spacing |
 | 5345794 | ◈ NEXAH FIELD GUIDES  — Structure, Navigation & Complex Systems | repeated_spacing |
 | 5228606 | ✦ MAP ATLAS ✦  ⟡ A Visual History of Human Orientation ⟡ | repeated_spacing |
@@ -111,7 +111,7 @@ performed during Discovery.
 
 | Arena ID | Current title | Members | Visibility | Registry | Discovery state | Updated |
 |---:|---|---:|---|---|---|---|
-| 5397157 | [ THE INNER CHILD _ A Perspective](https://www.are.na/nexah-scarabaeus1031/the-inner-child-_-a-perspective) | 34 | closed | — | candidate_entity | 2026-07-15T01:34:58Z |
+| 5397157 | [ THE INNER CHILD _ A Perspective](https://www.are.na/nexah-scarabaeus1031/the-inner-child-_-a-perspective) | 34 | closed | — | candidate_entity | 2026-07-15T22:12:19Z |
 | 5345856 | [ 🧭 THE CATHEDRAL OF RESONANCE — WHITEBOARD SERIES](https://www.are.na/nexah-scarabaeus1031/the-cathedral-of-resonance-whiteboard-series) | 7 | closed | — | candidate_entity | 2026-06-22T23:28:29Z |
 | 5216585 | [00 — 🜂 FIELD GUIDE](https://www.are.na/nexah-scarabaeus1031/00-field-guide) | 22 | closed | — | candidate_entity | 2026-05-24T22:35:39Z |
 | 5217666 | [00 — 🜂 NEXAH ATLAS  The Operational Geometry of Transition](https://www.are.na/nexah-scarabaeus1031/00-nexah-atlas-the-operational-geometry-of-transition) | 19 | closed | — | candidate_entity | 2026-06-01T21:16:02Z |
@@ -124,7 +124,7 @@ performed during Discovery.
 | 5415765 | [Field Atlas I —     Water ](https://www.are.na/nexah-scarabaeus1031/field-atlas-i-water) | 13 | closed | NX-000006 | registered | 2026-07-10T22:49:01Z |
 | 5404576 | [FIELD ATLAS II The Architecture of Agency ](https://www.are.na/nexah-scarabaeus1031/field-atlas-ii-the-architecture-of-agency) | 36 | closed | — | candidate_entity | 2026-07-10T22:48:40Z |
 | 5386781 | [FIELD ATLAS III — MORPHOLOGY ](https://www.are.na/nexah-scarabaeus1031/field-atlas-iii-morphology) | 21 | closed | — | candidate_entity | 2026-07-10T22:47:52Z |
-| 5442781 | [GEOMETRIA NOVA ](https://www.are.na/nexah-scarabaeus1031/geometria-nova) | 26 | closed | NX-000002 | registered | 2026-07-15T01:35:23Z |
+| 5442781 | [GEOMETRIA NOVA](https://www.are.na/nexah-scarabaeus1031/geometria-nova) | 26 | closed | NX-000002 | registered | 2026-07-15T22:12:36Z |
 | 5397188 | [INNER WORLD](https://www.are.na/nexah-scarabaeus1031/inner-world-liwceeh2psk) | 16 | closed | — | candidate_entity | 2026-07-15T16:46:37Z |
 | 5246418 | [Leonardo Translations  The Room That Looks Back](https://www.are.na/nexah-scarabaeus1031/leonardo-translations-the-room-that-looks-back) | 16 | closed | — | candidate_entity | 2026-06-25T22:01:33Z |
 | 5386751 | [LOGARITHMIC UNIVERSE —  5 MOVEMENTS OF REALITY ](https://www.are.na/nexah-scarabaeus1031/logarithmic-universe-5-movements-of-reality) | 23 | closed | — | candidate_entity | 2026-07-15T16:42:48Z |
@@ -160,13 +160,14 @@ performed during Discovery.
 | 5442721 | [THE OPERATOR](https://www.are.na/nexah-scarabaeus1031/the-operator-xkoop3mjgcs) | 25 | closed | — | candidate_entity | 2026-07-15T00:13:45Z |
 | 5442697 | [THE OPERATOR LIBRARY](https://www.are.na/nexah-scarabaeus1031/the-operator-library) | 21 | closed | NX-000008 | registered | 2026-07-15T00:04:01Z |
 | 5393574 | [THE OPERATOR MAP](https://www.are.na/nexah-scarabaeus1031/the-operator-map) | 20 | closed | — | candidate_entity | 2026-07-08T18:43:08Z |
-| 5391199 | [THE OPERATOR’S HANDBOOK](https://www.are.na/nexah-scarabaeus1031/the-operator-s-handbook) | 59 | closed | NX-000003 | registered | 2026-07-15T01:35:51Z |
-| 5404615 | [THE VISITOR’S GUIDE](https://www.are.na/nexah-scarabaeus1031/the-visitor-s-guide) | 49 | closed | NX-000001 | registered | 2026-07-15T01:36:09Z |
-| 5404597 | [THE WONDER HANDBOOK _ For Human Children.](https://www.are.na/nexah-scarabaeus1031/the-wonder-handbook-_-for-human-children) | 35 | closed | — | candidate_entity | 2026-07-15T01:34:15Z |
+| 5391199 | [THE OPERATOR’S HANDBOOK](https://www.are.na/nexah-scarabaeus1031/the-operator-s-handbook) | 59 | closed | NX-000003 | registered | 2026-07-15T22:12:49Z |
+| 5404615 | [THE VISITOR’S GUIDE ](https://www.are.na/nexah-scarabaeus1031/the-visitor-s-guide) | 49 | closed | NX-000001 | registered | 2026-07-16T23:32:29Z |
+| 5404597 | [THE WONDER HANDBOOK _ For Human Children](https://www.are.na/nexah-scarabaeus1031/the-wonder-handbook-_-for-human-children) | 35 | closed | — | candidate_entity | 2026-07-15T22:12:01Z |
+| 5450904 | [THE WONDER OPERATOR](https://www.are.na/nexah-scarabaeus1031/the-wonder-operator) | 129 | closed | — | candidate_entity | 2026-07-16T23:48:04Z |
 | 5345145 | [VOL. I —  Be Kind. Be Awefull. Belong.](https://www.are.na/nexah-scarabaeus1031/vol-i-be-kind-be-awefull-belong) | 13 | closed | — | candidate_entity | 2026-07-01T01:12:31Z |
 | 5345129 | [VOL. II —  PATHFINDERS ](https://www.are.na/nexah-scarabaeus1031/vol-ii-pathfinders) | 17 | closed | — | candidate_entity | 2026-07-01T01:12:14Z |
 | 5345076 | [VOL. IV — THREADS OF YOU](https://www.are.na/nexah-scarabaeus1031/vol-iv-threads-of-you) | 47 | closed | — | candidate_entity | 2026-07-01T01:11:41Z |
-| 5345108 | [VOLUME III  —  CLEAR MIND](https://www.are.na/nexah-scarabaeus1031/volume-iii-clear-mind) | 27 | closed | — | candidate_entity | 2026-07-15T01:34:38Z |
+| 5345108 | [VOLUME III  —  CLEAR MIND ](https://www.are.na/nexah-scarabaeus1031/volume-iii-clear-mind) | 27 | closed | — | candidate_entity | 2026-07-15T22:11:37Z |
 | 5345064 | [VOLUME V — MANY MAPS. ONE WORLD.](https://www.are.na/nexah-scarabaeus1031/volume-v-many-maps-one-world) | 16 | closed | — | candidate_entity | 2026-07-01T01:11:05Z |
 | 5203608 | [°° — Structural Echoes of NEXAH](https://www.are.na/nexah-scarabaeus1031/structural-echoes-of-nexah) | 62 | closed | — | candidate_entity | 2026-07-04T12:24:19Z |
 | 5413103 | [Λ  LIBRARYBOOK ](https://www.are.na/nexah-scarabaeus1031/librarybook) | 176 | closed | NX-000010 | registered | 2026-07-10T22:52:09Z |

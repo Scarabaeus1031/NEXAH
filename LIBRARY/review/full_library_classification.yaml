@@ -50,16 +50,16 @@ field_meanings:
   content_maturity: Exploratory, developing, or stable; independent of Family.
   series: A proposed editorial grouping, never inferred as identity.
 summary:
-  total_records: 71
+  total_records: 72
   canonical_records: 10
-  proposed_records: 61
+  proposed_records: 62
   family_counts:
     environment: 3
     navigation: 8
-    work: 60
+    work: 61
   type_counts:
     atlas: 27
-    book: 17
+    book: 18
     collection: 2
     entry: 2
     guide: 7
@@ -71,9 +71,9 @@ summary:
     visual_essay: 2
     work: 5
   publication_status_counts:
-    published: 60
+    published: 61
     working: 11
-  flagged_records: 32
+  flagged_records: 33
 review_packages:
   A_navigation_and_environments: human_confirmed
   B_series: pending
@@ -1048,6 +1048,31 @@ records:
   - canonical_title_proposal
   human_decision: pending
   review_package: C_standalone_works
+- arena_channel_id: 5450904
+  arena_slug: the-wonder-operator
+  current_title: THE WONDER OPERATOR
+  proposed_canonical_title: THE WONDER OPERATOR
+  registered_entity_id: null
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_book
+  editorial_descriptor: experiential_visual_book
+  library_function: practice
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  series_candidate: ODYSSEE 204°
+  volume_label: Volume I
+  confidence: moderate
+  review_flags:
+  - series_identity_review_required
+  - operator_identity_not_implied
+  - post_review_designed_exemplar
+  human_decision: pending
+  review_package: C_standalone_works
+  source_intake_review: THE_WONDER_OPERATOR_INTAKE_REVIEW.md
 - arena_channel_id: 5345145
   arena_slug: vol-i-be-kind-be-awefull-belong
   current_title: VOL. I —  Be Kind. Be Awefull. Belong.

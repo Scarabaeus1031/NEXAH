@@ -1,10 +1,10 @@
 schema_version: "1.0"
 report_type: library_health
 status: pass_with_editorial_warnings
-as_of: "2026-07-15T21:22:36+00:00"
+as_of: "2026-07-17T00:41:29+00:00"
 registry_version: 0.1.0
 review_version: second_human_reader_review/1.0
-snapshot: arena-2026-07-15.yaml
+snapshot: arena-2026-07-17.yaml
 live_check: false
 registry:
   valid: true
@@ -12,7 +12,7 @@ registry:
   operators: 17
 proposal_isolation:
   state: explicit_only
-  proposal_records: 61
+  proposal_records: 62
 reader_orientation:
   accepted_questions: [UQ-01, UQ-02, UQ-03, UQ-04, UQ-05, UQ-06]
   failures: []

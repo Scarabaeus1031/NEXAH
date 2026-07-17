@@ -1,10 +1,10 @@
-generated_at: '2026-07-15T16:50:58+00:00'
+generated_at: '2026-07-17T00:40:59+00:00'
 user_slug: nexah-scarabaeus1031
 scope: public_channels_visible_to_the_read_only_client
 summary:
-  total_public_channels: 71
+  total_public_channels: 72
   already_registered: 10
-  probable_new_entities: 61
+  probable_new_entities: 62
   needs_review: 0
   exact_title_duplicate_groups: 1
   title_cleanup_candidates: 33
@@ -13,7 +13,7 @@ channels:
 - arena_channel_id: 5397157
   arena_slug: the-inner-child-_-a-perspective
   current_title: ' THE INNER CHILD _ A Perspective'
-  current_description: "Every map begins with a child asking a question.  \nThis collection isn’t about\
+  current_description: "Every map begins with a child asking a question. \nThis collection isn’t about\
     \ nostalgia.  \nIt is about remembering the part of ourselves that looked at the night sky and wondered\
     \ what was out there—and what our place in it might be.\nBefore there were theories, there was curiosity.\
     \ \nBefore there were equations, there was wonder.\nThe images in this channel explore a simple idea:\n\
@@ -33,7 +33,7 @@ channels:
     \ • Education • Design • Storytelling • Hope • Belonging • NEXAH"
   member_count: 34
   created_at: '2026-07-03T17:54:38Z'
-  updated_at: '2026-07-15T01:34:58Z'
+  updated_at: '2026-07-15T22:12:19Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/the-inner-child-_-a-perspective
   registered_entity_id: null
@@ -316,7 +316,7 @@ channels:
   - surrounding_whitespace
 - arena_channel_id: 5442781
   arena_slug: geometria-nova
-  current_title: 'GEOMETRIA NOVA '
+  current_title: GEOMETRIA NOVA
   current_description: 'THE COMPLETE CONTINUUM
 
     The Entire Journey at a Glance
@@ -358,13 +358,12 @@ channels:
     It was an invitation to begin walking.'
   member_count: 26
   created_at: '2026-07-15T00:37:03Z'
-  updated_at: '2026-07-15T01:35:23Z'
+  updated_at: '2026-07-15T22:12:36Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/geometria-nova
   registered_entity_id: NX-000002
   discovery_state: registered
-  signals:
-  - surrounding_whitespace
+  signals: []
 - arena_channel_id: 5397188
   arena_slug: inner-world-liwceeh2psk
   current_title: INNER WORLD
@@ -1448,7 +1447,7 @@ channels:
     \ Transform. Orient. Become."
   member_count: 59
   created_at: '2026-07-02T16:33:02Z'
-  updated_at: '2026-07-15T01:35:51Z'
+  updated_at: '2026-07-15T22:12:49Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/the-operator-s-handbook
   registered_entity_id: NX-000003
@@ -1456,9 +1455,9 @@ channels:
   signals: []
 - arena_channel_id: 5404615
   arena_slug: the-visitor-s-guide
-  current_title: THE VISITOR’S GUIDE
+  current_title: 'THE VISITOR’S GUIDE '
   current_description: "How to Navigate the NEXAH Library\nWhere do you begin when there is no single\
-    \ beginning?  \nThe NEXAH Library is not a sequence of books.\nIt is a connected landscape of ideas,\
+    \ beginning? \nThe NEXAH Library is not a sequence of books.\nIt is a connected landscape of ideas,\
     \ maps, experiments, stories and observations.\nEvery work belongs to a larger field.\nEvery room\
     \ offers a different perspective.\nEvery visitor follows a different path.\nThis guide introduces\
     \ the architecture of the library itself.\nIt explains how the collections relate to one another,\
@@ -1482,15 +1481,16 @@ channels:
     \ • Visual Maps • Navigation • Open Knowledge"
   member_count: 49
   created_at: '2026-07-05T20:02:16Z'
-  updated_at: '2026-07-15T01:36:09Z'
+  updated_at: '2026-07-16T23:32:29Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/the-visitor-s-guide
   registered_entity_id: NX-000001
   discovery_state: registered
-  signals: []
+  signals:
+  - surrounding_whitespace
 - arena_channel_id: 5404597
   arena_slug: the-wonder-handbook-_-for-human-children
-  current_title: THE WONDER HANDBOOK _ For Human Children.
+  current_title: THE WONDER HANDBOOK _ For Human Children
   current_description: "For Human Children.\nSome books answer questions.  \nThis one tries to protect\
     \ them.\nThe Wonder Handbook is a small visual journey about curiosity, kindness, imagination and\
     \ belonging. It reminds us that long before we learned formulas, definitions or opinions, we explored\
@@ -1502,13 +1502,61 @@ channels:
     \ • Kindness • Orientation • Learning • Human Experience"
   member_count: 35
   created_at: '2026-07-05T19:54:16Z'
-  updated_at: '2026-07-15T01:34:15Z'
+  updated_at: '2026-07-15T22:12:01Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/the-wonder-handbook-_-for-human-children
   registered_entity_id: null
   discovery_state: candidate_entity
   signals:
   - underscore_title
+- arena_channel_id: 5450904
+  arena_slug: the-wonder-operator
+  current_title: THE WONDER OPERATOR
+  current_description: 'Scenes from the Living Field
+
+    Wonder is not a talent.
+
+    It is not reserved for children, artists, or scientists.
+
+    It is one of the oldest human capacities—the ability to pause, to notice, and to become fully present
+    to the world again.
+
+    The Wonder Operator is a visual journey through attention, perception, neuroscience, nature, culture,
+    and belonging. Combining cinematic imagery, stories, knowledge plates, reflections, and moments of
+    silence, the book invites readers to experience orientation rather than simply read about it.
+
+    Instead of offering answers, it creates spaces for observation.
+
+    Instead of explaining wonder, it attempts to cultivate the conditions in which wonder can return.
+
+    Built as a sequence of scenes rather than chapters alone, the book moves from the curiosity of childhood
+    through the divided mind, the attention economy, loss of play, art, music, silence, love, culture,
+    and finally toward belonging and the simple act of carrying light into the world.
+
+    Every spread serves a different role.
+
+    Every image opens a door.
+
+    Every quiet page offers a pause.
+
+    Together they form an experience that can be walked like an exhibition, remembered like a story, and
+    revisited like a map.
+
+    This is not a book about escaping reality.
+
+    It is an invitation to see it more clearly.
+
+    Be Kind. Be Awe-Full. Belong.
+
+    ODYSSEE 204° — Volume I'
+  member_count: 129
+  created_at: '2026-07-16T23:24:03Z'
+  updated_at: '2026-07-16T23:48:04Z'
+  visibility: closed
+  public_url: https://www.are.na/nexah-scarabaeus1031/the-wonder-operator
+  registered_entity_id: null
+  discovery_state: candidate_entity
+  signals: []
 - arena_channel_id: 5345145
   arena_slug: vol-i-be-kind-be-awefull-belong
   current_title: VOL. I —  Be Kind. Be Awefull. Belong.
@@ -1599,7 +1647,7 @@ channels:
   signals: []
 - arena_channel_id: 5345108
   arena_slug: volume-iii-clear-mind
-  current_title: VOLUME III  —  CLEAR MIND
+  current_title: 'VOLUME III  —  CLEAR MIND '
   current_description: "VOL. III — CLARITY\nClear Mind\nA guide to seeing clearly in a complex world.\n\
     We live in an age of overwhelming information but limited attention. \nThe challenge is no longer\
     \ access to knowledge. The challenge is orientation.\nClear Mind explores the foundations of clarity:\
@@ -1611,12 +1659,13 @@ channels:
     \ & Discipline\n• Meaningful Action\nSee clearly.\LChoose wisely.\LLive intentionally."
   member_count: 27
   created_at: '2026-06-22T20:51:58Z'
-  updated_at: '2026-07-15T01:34:38Z'
+  updated_at: '2026-07-15T22:11:37Z'
   visibility: closed
   public_url: https://www.are.na/nexah-scarabaeus1031/volume-iii-clear-mind
   registered_entity_id: null
   discovery_state: candidate_entity
   signals:
+  - surrounding_whitespace
   - repeated_spacing
 - arena_channel_id: 5345064
   arena_slug: volume-v-many-maps-one-world

@@ -1,5 +1,11 @@
 # Representation Ecology — Cross-Work Review
 
+> **Historical corpus note:** `THE WONDER OPERATOR` did not exist as a
+> resolvable public Work during this review. A later Work under that exact title
+> is documented separately in
+> **[THE_WONDER_OPERATOR_POST_REVIEW_ADDENDUM.md](THE_WONDER_OPERATOR_POST_REVIEW_ADDENDUM.md)**.
+> The original evidence matrix below remains unchanged.
+
 **Pass:** X3-RPT-01  
 **Status:** completed for human review · non-canonical  
 **Review date:** 2026-07-16  

@@ -1,0 +1,75 @@
+schema_version: '1.0'
+review_id: wonder-operator-intake-2026-07-17
+review_state: proposal_intake
+human_confirmation_required: true
+authority:
+  canonical: false
+  allocates_entity_id: false
+  allocates_operator_id: false
+  modifies_registry: false
+  modifies_arena: false
+source:
+  arena_channel_id: 5450904
+  arena_slug: the-wonder-operator
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/the-wonder-operator
+  title: THE WONDER OPERATOR
+  subtitle: Scenes from the Living Field
+  declared_series_label: ODYSSEE 204°
+  declared_volume: Volume I
+  visibility: closed
+  member_count: 129
+  block_types:
+    Image: 129
+  visible_parent_connections: 0
+  created_at: '2026-07-16T23:24:03Z'
+  updated_at: '2026-07-16T23:48:04Z'
+  snapshot: source_snapshots/arena-2026-07-17.yaml
+  sequence_fingerprint: c8599df6dfdd983a18370e4f4fe5440645b42ef21522e2141865f31daec67e95
+evidence_scope:
+  complete_description_reviewed: true
+  complete_block_title_sequence_reviewed: true
+  representative_pages_reviewed: 10
+  page_by_page_scientific_source_audit: false
+role_title_occurrences:
+  opening: 17
+  story: 11
+  plate: 16
+  reflection: 13
+  transition: 12
+proposal:
+  object_family: work
+  type: book
+  form: visual_book
+  editorial_descriptor: experiential_visual_book
+  library_function: practice
+  publication_status: published
+  content_maturity: developing
+  series: null
+  series_candidate: ODYSSEE 204°
+  volume_label: Volume I
+  confidence:
+    object_family: high
+    type: high
+    form: high
+    library_function: moderate
+    publication_status: high
+    content_maturity: moderate
+    series: unresolved
+boundaries:
+  distinct_from_wonder_handbook: true
+  title_operator_allocates_controlled_operator: false
+  proves_independent_cross_work_recurrence: false
+  qualifies_as_post_review_designed_exemplar: true
+  public_navigation_relation_approved: false
+review_flags:
+- series_identity_review_required
+- operator_identity_not_implied
+- post_review_designed_exemplar
+- block_title_cleanup_candidates
+required_human_decisions:
+- confirm_primary_library_function
+- decide_odyssee_204_degree_relationship_to_odyssey_2040
+- review_relation_to_the_wonder_handbook
+- decide_if_wonder_requires_concept_review
+- keep_operator_review_separate
+- decide_public_navigation_placement
