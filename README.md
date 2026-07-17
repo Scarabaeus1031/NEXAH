@@ -1,108 +1,111 @@
-# NEXAH — The Orientation Laboratory
+# NEXAH — The Orientation Ecosystem
 
 **Understanding before action.**
 
-![NEXAH Orientation Laboratory — structure emerging into an open field of orientation](assets/readme/nexah-orientation-laboratory-hero.webp)
+NEXAH is an **evidence-bound orientation ecosystem**. It brings together
+Research, a canonical Orientation Language, implementations, applications, a
+Living Library, and a human-governed Editorial Operating System.
 
-> **Mapping structure. Preserving evidence. Supporting orientation.**
+Each subsystem has its own responsibility and authority. None replaces another.
+Together they support responsible orientation across complex systems and
+bounded representations.
 
-NEXAH is an open research laboratory and software project for
-**evidence-bound orientation in complex systems**.
+NEXAH is not an oracle, a causal authority, an autonomous controller, or a
+replacement for human judgment.
 
-It turns declared observations into inspectable representations of states,
-relationships, transitions, paths, boundaries, and uncertainty.
-
-It is not an oracle, a causal authority, or an autonomous controller.
+![NEXAH Front Door — six responsibilities in one evidence-bound orientation ecosystem](assets/readme/nexah-orientation-ecosystem-front-door.png)
 
 ```text
-observe → represent → map → compare → orient → explain → learn
+observe → represent → compare → orient → explain → act → improve
 ```
 
 ![Status](https://img.shields.io/badge/status-research--active-orange)
+![OLS](https://img.shields.io/badge/OLS-1.0-green)
 ![Kernel](https://img.shields.io/badge/kernel-v0.7-blue)
-![Phase](https://img.shields.io/badge/phase%20V-complete-green)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
 
-> **Current state:** The typed Orientation Layer, Network Orientation,
-> IEEE Geometry V1, evidence-bound reporting, episodic-memory safeguards,
-> canonical validation paths, and public showcase are implemented.
->
-> Real-world operational validation, calibrated uncertainty, causal
-> intervention, and autonomous execution are not claimed.
+---
+
+## The Ecosystem at a Glance
+
+![NEXAH Orientation Ecosystem — coordinated subsystems, authority boundaries, and visitor paths](assets/readme/nexah-orientation-ecosystem-map.png)
+
+This is an informative repository map, not a capability or conformance claim.
+It shows how the six coordinated subsystems relate while preserving their
+separate responsibilities and authority boundaries.
+
+The canonical semantic authority is the published
+**[Orientation Language Release 1.0](ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/PUBLICATION_SUMMARY.md)**.
+Implementations may realize the language, but conformance must be demonstrated
+explicitly; it is never assumed from proximity, naming, or shared concepts.
 
 ---
 
-## 🧭 Start Here
+## What Exists Today
 
-**New here? Start in under 10 minutes.**
-
-| I want to… | Start here |
+| Subsystem | Current repository state |
 |---|---|
-| Understand why NEXAH exists | **[NEXAH Manifesto](MANIFESTO.md)** |
-| Use the current kernel | **[NEXAH Kernel Start](nexah/START_HERE.md)** |
-| Run an application | **[Network Orientation](APPLICATIONS/network_orientation/README.md)** · **[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)** |
-| Understand the research | **[Research Portal](RESEARCH/README.md)** |
-| Read the published Orientation Language | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** · **[OLS-RELEASE-1.0.0](ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/PUBLICATION_SUMMARY.md)** |
-| Inspect maturity and boundaries | **[Architecture & System State](ARCHITECTURE/SYSTEM_STATE.md)** |
-| Understand the editorial-orientation architecture | **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
-| Browse the canonical visual-library registry | **[NEXAH Library](LIBRARY/README.md)** |
-| Browse the full repository | **[Repository Map](REPOSITORY_MAP.md)** |
+| **Research** | Active research, experiments, validation, findings, and explicit evidence boundaries |
+| **Orientation Language** | Canonical **OLS-RELEASE-1.0.0**: seven normative parts and one informative companion; SHA-256 manifests verified |
+| **Implementations** | Maintained Orientation Kernel v0.7, typed contracts, CLI, reports, replay, and bounded-memory safeguards |
+| **Applications** | Maintained reference applications for Network Orientation and IEEE Geometry V1 |
+| **Living Library** | Canonical Work Registry, curated works, editions, sequences, reader journeys, and Are.na publication layer |
+| **Editorial Operating System** | Human review, editorial policies, explanation contracts, snapshots, diffs, and controlled publication workflows |
 
-Recommended first path:
-
-```text
-choose a question
-→ run a canonical case
-→ inspect the Orientation Report
-→ examine evidence and limits
-→ continue into Research or Architecture
-```
+These areas do not share one maturity label. A canonical specification, a
+maintained implementation, a validated application, an active research result,
+and an editorial decision are different kinds of evidence.
 
 ---
 
-## 🧭 Infrastructure at a Glance
+## Responsibility and Authority Map
 
-![NEXAH Infrastructure — research, orientation, Library, editorial governance, applications, and evidence](assets/readme/nexah-infrastructure.png)
+| Subsystem | Responsibility | Authority | Boundary |
+|---|---|---|---|
+| **[Research](RESEARCH/README.md)** | Produces hypotheses, models, experiments, validation, and findings | Empirical and analytical evidence within a declared scope | Does not define normative OLS semantics or establish universality |
+| **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** | Defines the published language, declarations, profiles, derivations, conformance, extensions, and versioning | The compatible canonical OLS release | Does not execute implementations or establish domain validity |
+| **[Implementations](nexah/README.md)** | Execute declared structures and produce inspectable orientation artifacts | Observable implementation behavior and its verification record | Do not redefine OLS meaning; conformance is explicit, not assumed |
+| **[Applications](APPLICATIONS/README.md)** | Apply methods to declared domains and use cases | Domain-local evidence, policy, and claim boundaries | Do not redefine OLS or generalize beyond admitted evidence |
+| **[Living Library](LIBRARY/README.md)** | Communicates curated knowledge through Works, Editions, sequences, maps, and reader journeys | Editorial identity, classification, context, and sequence | The Library Registry is not an OLS Registry and is not semantic authority |
+| **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** | Governs review, explanation, curation, approval, and controlled editorial execution | Explicit human editorial decisions and their audit trail | Editorial Governance is not Specification Governance and does not infer hidden meaning |
 
-NEXAH is repository-wide infrastructure for investigating and navigating
-relationships between bounded representations. The visual shows how research,
-the Orientation Kernel, the Library, editorial governance, applications, the
-Demonstrator, and cross-cutting evidence infrastructure relate.
+### Critical distinctions
 
-> **Architecture map, not a capability claim.** The top-level components are
-> present in the repository at different maturity levels. Items explicitly
-> shown as emerging paths are examples and future directions, not implemented
-> production capabilities. See **[System State](ARCHITECTURE/SYSTEM_STATE.md)**
-> for current evidence and boundaries.
-
----
-
-## 🧭 What NEXAH Can Do Today
-
-The current kernel transforms ordered observations and declared relationships
-into inspectable orientation artifacts.
-
-| Input | Current capability | Output |
-|---|---|---|
-| Numerical trajectories | local representation and empirical transition analysis | scoped state and transition map |
-| Directed networks | reachability, paths, components and bottlenecks | Network Orientation Report |
-| IEEE/Pandapower campaigns | sampled path geometry and solver-visible boundaries | IEEE Geometry Orientation Brief |
-| Multiple perspectives | five read-only evidence probes | agreements, disagreements and limits |
-| Admitted outcomes | append-only episodic storage and retrieval | prior contextual episodes |
-| Frozen experiments | deterministic replay and claim audit | validation record |
-
-Every result remains scoped to its input representation, context, provenance,
-method, and evidence class.
-
-Passing a software contract does not automatically establish scientific,
-causal, or operational validity in a new domain.
+- **Orientation Language defines semantics. Kernel implementations execute behavior.**
+- **Kernel conformance is explicit—not assumed.**
+- **The Library Registry identifies Works and Editions; OLS registries govern language artifacts.**
+- **Editorial Governance governs curated knowledge and execution; Specification Governance governs OLS.**
+- **Applications use declared semantics but do not redefine them.**
+- **Research may inform every subsystem, but research hypotheses do not become normative merely by being referenced.**
 
 ---
 
-## 🚀 Quick Start
+## Choose Your Entry Point
 
-Install the current research kernel:
+Each path begins with one responsible area rather than requiring visitors to
+understand the entire repository first.
+
+| Visitor | Begin here |
+|---|---|
+| **General visitor** | **[Architecture Overview](ARCHITECTURE/README.md)** |
+| **Specification reader** | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
+| **Software user or developer** | **[Orientation Kernel](nexah/README.md)** |
+| **Researcher** | **[Research Portal](RESEARCH/README.md)** |
+| **Application evaluator** | **[Applications Overview](APPLICATIONS/README.md)** |
+| **Library reader** | **[Living Library](LIBRARY/README.md)** |
+| **Editorial contributor** | **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
+
+For complete directory-level navigation, use the
+**[Repository Map](REPOSITORY_MAP.md)**.
+
+---
+
+## Run the Current Software
+
+The current Python package is a maintained research implementation. Installing
+or running it does not by itself establish OLS conformance or real-world domain
+validity.
 
 ```bash
 python -m venv .venv
@@ -127,11 +130,10 @@ nexah orient-network APPLICATIONS/datasets/supply_chain.json \
   --format brief
 ```
 
-This produces an evidence-bound report of the supplied graph: reachable and
-blocked nodes, declared paths, structural sensitivities, missing information,
-limitations, and next questions.
-
-It does not establish a real supply-chain risk or issue an intervention.
+The report describes the supplied representation: reachable and blocked nodes,
+declared paths, structural sensitivities, missing information, limitations, and
+next questions. It does not establish a real supply-chain risk or authorize an
+intervention.
 
 ### Replay the frozen IEEE Geometry case
 
@@ -139,12 +141,9 @@ It does not establish a real supply-chain risk or issue an intervention.
 python validation/ieee_geometry_v1/run_validation.py
 ```
 
-This rebuilds the frozen IEEE-14 benchmark evaluation, applies the unchanged
-IEEE-9 development method, reproduces the canonical artifacts, and audits the
-declared claim boundary.
-
-For the guided entry, use the
-**[10-minute IEEE Geometry walkthrough](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/QUICKSTART_10_MINUTES.md)**.
+This reproduces the frozen IEEE-14 benchmark evaluation using the unchanged
+IEEE-9 development method and audits the declared claim boundary. See the
+**[10-minute walkthrough](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/QUICKSTART_10_MINUTES.md)**.
 
 ### Run the visual reference Demonstrator
 
@@ -152,104 +151,16 @@ For the guided entry, use the
 python PROTO_CORE/NEXAH_DEMONSTRATOR/scripts/run_demo.py
 ```
 
-The Demonstrator remains the preferred visual introduction to field
-construction, transition structure, and geometry-aware navigation.
+For contracts, CLI usage, system state, and safety boundaries, continue with
+the **[Kernel Start](nexah/START_HERE.md)**.
 
 ---
 
-![NEXAH orientation cycle — observe, represent, map, compare, orient, explain and learn](assets/readme/nexah-orientation-cycle.webp)
+## Evidence, Maturity, and Limits
 
----
-
-## 🧪 Applications
-
-### Network Orientation
-
-**[Network Orientation](APPLICATIONS/network_orientation/README.md)** reads a
-declared directed graph from an explicit focus.
-
-It can report:
-
-- reachable and blocked nodes
-- shortest declared paths
-- components and dead ends
-- articulation points and sensitive edges
-- structural differences between two snapshots
-- five read-only perspectives
-- evidence, uncertainty, and claim boundaries
-
-Typical exploratory domains include dependency graphs, supply chains,
-infrastructure maps, knowledge systems, and ecological networks.
-
-The current fixtures demonstrate technical contract portability. They do not
-establish real-world domain validity.
-
-### IEEE Geometry V1
-
-**[IEEE Geometry V1](APPLICATIONS/power_systems/ieee_geometry_v1/showcase/README.md)**
-reads ordered power-system benchmark campaigns.
-
-It provides:
-
-- typed physical frames
-- bus and line provenance
-- sampled displacement and drift
-- direction and curvature records
-- solver-visible boundaries
-- five evidence probes
-- Orientation Briefs
-- frozen IEEE-9 to IEEE-14 evaluation
-- reproducible scientific figures
-
-This is benchmark and simulation evidence. It is not operational-grid
-measurement, a voltage-stability certificate, or a production controller.
-
----
-
-## 🌀 Visual Atlas
-
-![NEXAH Navigation Grammar](ARCHITECTURE/archive/NEXAH_NAVIGATION_GRAMMAR.png)
-
-The repository contains the computational, documentary, and empirical layers of
-NEXAH. The companion **[NEXAH Atlas on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)**
-contains visual essays, system atlases, research notebooks, and orientation
-paths.
-
-The **[canonical Library Registry](LIBRARY/README.md)** assigns stable identity,
-classification, Edition state, controlled Operators, and curated relationships.
-
-Current Atlas entry points include:
-
-- Core Orientation
-- The Visitor’s Guide
-- The Operator’s Handbook
-- System Atlases
-- historical NEXAH Atlas volumes
-- Design Orientation
-
-The two surfaces have different roles:
-
-```text
-GitHub
-→ code, methods, evidence, status, reproducibility
-
-Are.na
-→ visual orientation, editorial sequence, conceptual exploration
-```
-
-The long-term goal is not to make them identical, but to connect them through
-explicit mappings between repository modules and Atlas channels.
-
----
-
-## 🛡️ Evidence and Authority Boundary
-
-Orientation is dual-use.
-
-A map of paths, bottlenecks, and sensitive relationships can support protection
-and learning. The same map can expose targets or optimize disruption.
-
-NEXAH therefore separates:
+NEXAH preserves the distinction between a representation, an orientation
+result, a recommendation, an authorization, an executed action, and an observed
+outcome.
 
 ```text
 orientation
@@ -259,298 +170,99 @@ orientation
 ≠ observed outcome
 ```
 
-The current public kernel:
+The current implementation and reference applications provide:
 
-- has no execution authority
-- uses read-only probes
-- preserves disagreement rather than voting a truth
-- reports unknown uncertainty as unknown
-- keeps simulation, scenario, observation, and outcome distinct
-- does not silently convert structural sensitivity into a target or command
+- typed, evidence-bound Orientation contracts and reports
+- inspectable Network Orientation over declared graphs
+- a frozen IEEE-9 to IEEE-14 benchmark evaluation
+- explicit provenance, uncertainty, failure, and claim boundaries
+- append-only episodic storage guarded by observed-outcome admission
+- deterministic replay and repository validation paths
+- read-only evidence probes that preserve disagreement and unknowns
+
+The repository does **not** currently claim:
+
+- universal transition laws or a closed mathematical theory
+- automatic OLS conformance for any implementation
+- broad real-world or operational-grid validation
+- calibrated uncertainty across domains
+- causal intervention guarantees
+- autonomous execution authority
+- production readiness or one unified runtime for all historical modules
 
 > **NO OBSERVED OUTCOME → NO EPISODIC MEMORY UPDATE**
 
-Before connecting sensitive, personal, or operational data, read the normative
+Passing a software contract establishes neither scientific validity nor domain
+validity outside its stated evidence scope. The authoritative implementation
+maturity record is **[System State](ARCHITECTURE/SYSTEM_STATE.md)**. Before
+connecting sensitive, personal, or operational data, read
 **[Safety and Misuse Boundaries](nexah/SAFETY_AND_MISUSE.md)**.
 
 ---
 
-## 🗺️ From Cartography to Orientation
+## Repository Map
 
-NEXAH began as a cartography laboratory.
-
-Cartography remains its method for reconstructing and communicating structure.
-Orientation is the broader purpose of those maps.
-
-> **Cartography constructs the map. Orientation asks what may legitimately be
-> inferred from a declared position, representation, context, evidence state,
-> uncertainty, and boundary structure.**
-
-NEXAH investigates whether complex systems can be represented as navigable
-structures containing:
-
-- states and transitions
-- paths and corridors
-- components and relationships
-- basins and attractors
-- boundaries and bottlenecks
-- evidence gaps and unresolved regions
-
-This is not a claim that all systems share one geometry or universal law.
-
-It is an open investigation into which structural descriptions remain useful,
-reproducible, and honest across representations and domains.
-
----
-
-## 🔬 Research and Evidence
-
-The **[Research layer](RESEARCH/README.md)** organizes questions, concepts,
-validation material, findings, and theoretical extensions.
-
-Its major areas are:
-
-| Area | Role |
-|---|---|
-| `FOUNDATION/` | Structural assumptions and vocabulary |
-| `CORE_CONCEPTS/` | Field, phase, mismatch, geometry, and JANUS |
-| `VALIDATION/` | Empirical and cross-system tests |
-| `FINDINGS/` | Condensed observations with scoped claims |
-| `APPLIED_CASES/` | System-specific research indexes and studies |
-| `THEORETICAL_EXTENSIONS/` | Exploratory formalization |
-| `NEXAH_TRANSLATIONS/` | Connections to adjacent disciplines |
-
-Current validation material includes synthetic dynamical systems,
-synchronization models, transition-control experiments, fractal parameter
-studies, and grid-inspired benchmark work.
-
-The repository uses three broad interpretation levels:
-
-```text
-validated
-→ reproducible evidence within a stated scope
-
-experimental
-→ implemented or observed, but not yet generalized
-
-theoretical
-→ conceptual extension requiring further formalization
-```
-
-Historical and exploratory material is retained when it helps reconstruct how a
-method or hypothesis developed. It is not automatically treated as current
-evidence.
-
-Recommended research path:
-
-1. **[Research Portal](RESEARCH/README.md)**
-2. **[Research Abstract](RESEARCH/ABSTRACT.md)**
-3. **[Core Concept Map](RESEARCH/CORE_CONCEPT_MAP.md)**
-4. **[Validation Portal](RESEARCH/VALIDATION/)**
-5. **[Findings](RESEARCH/FINDINGS/)**
-
----
-
-## 🔥 Highlight: Janus Operator
-
-The **[Janus Operator](RESEARCH/CORE_CONCEPTS/JANUS_OPERATOR/)** is a central
-exploratory mechanism in NEXAH.
-
-![Janus Geometry Map — directional coherence in dynamical fields](assets/readme/janus-geometry-map.webp)
-
-It compares forward and backward local flow structure within a reconstructed
-representation:
-
-```text
-high directional coherence
-→ locally aligned motion
-
-low directional coherence
-→ candidate transition sensitivity or aperture
-```
-
-Experiments investigate whether transition samples cluster around structured
-geometric regions such as corridors, shell crossings, spines, or recursive
-apertures.
-
-The Janus directory contains mathematical notes, code, visuals, and validation
-experiments. It remains an experimental mechanism rather than a generalized
-transition law.
-
----
-
-## 🧱 Architecture Overview
-
-NEXAH now has a maintained Orientation Kernel and applications, while the
-repository remains a broader research ecosystem rather than one runtime for
-every historical and experimental module:
+The six coordinated subsystems form the primary repository structure:
 
 ```text
 NEXAH/
+├── RESEARCH/                     hypotheses, experiments, evidence, findings
+├── ORIENTATION_LANGUAGE/         canonical OLS specification and releases
+├── nexah/                        maintained Orientation Kernel implementation
+├── APPLICATIONS/                 domain and use-case realizations
+├── LIBRARY/                      Works, Registry, Editions, and reader journeys
+├── EDITORIAL_OPERATING_SYSTEM/   review, explanation, governance, execution
+│
+├── ARCHITECTURE/                 system relationships, state, and boundaries
+├── PROTO_CORE/                   demonstrators and prototype lineages
+├── EXPERIMENTAL/                 active laboratories and historical work
+├── validation/                   reproducible validation entry points
+├── testkit/                      evidence and observed-outcome gates
+├── assets/                       repository visual assets
 ├── START_HERE.md                 guided conceptual entry
-├── VISUAL_GALLERY.md             curated visual entry
-├── nexah/                        kernel start, contracts, package, CLI, safety
-├── EDITORIAL_OPERATING_SYSTEM/   explanation, governance, and safe execution
-├── LIBRARY/                      canonical visual-library architecture
-├── PROTO_CORE/                   reference and prototype implementations
-├── RESEARCH/                     questions, evidence, and findings
-├── APPLICATIONS/                 tools and system-specific programs
-├── ARCHITECTURE/                 relationships and maturity mapping
-├── EXPERIMENTAL/                 active labs and historical lineages
-├── testkit/                      evidence and outcome gates
-└── REPOSITORY_MAP.md             complete navigation map
+├── MANIFESTO.md                  purpose, principles, and commitments
+└── REPOSITORY_MAP.md             complete directory navigation
 ```
 
-The areas relate approximately as follows:
+Detailed architecture and visual material remains available without dominating
+the front door:
 
-```text
-research question
-→ experimental exploration
-→ reference implementation
-→ validation and findings
-→ system-specific application
-```
-
-This is a development path, not a guarantee that every experiment progresses
-through every stage.
-
-### Kernel
-
-**[nexah/](nexah/START_HERE.md)** contains the current installable kernel,
-typed Orientation contracts, representation backends, reporting, memory,
-domain components, CLI, and safety boundary. This is the preferred entry for
-someone who wants to use the current software.
-
-### Proto Core
-
-**[PROTO_CORE/](PROTO_CORE/)** contains the verified Demonstrator, experimental
-Field Layer, and an older NEXAH Core development lineage. The Demonstrator is
-the preferred visual reference; the other modules are method-development areas.
-
-### Applications
-
-**[APPLICATIONS/](APPLICATIONS/)** presents concrete tools, demonstrations, and
-system-specific studies. “Application” means that a method is applied to a
-particular system or user task; it does not automatically mean production-ready
-software.
-
-### Experimental
-
-**[EXPERIMENTAL/](EXPERIMENTAL/)** preserves active laboratories, prototypes,
-and historical development trees. Its portal distinguishes active labs,
-experimental systems, historical references, archives, and promotion
-candidates.
-
-For the directory-by-directory view, use the
-**[Repository Map](REPOSITORY_MAP.md)**.
+- **[Detailed Architecture](ARCHITECTURE/README.md)**
+- **[Infrastructure and System State](ARCHITECTURE/SYSTEM_STATE.md)**
+- **[Visual Gallery](VISUAL_GALLERY.md)**
+- **[Experimental Portal](EXPERIMENTAL/README.md)**
+- **[Reference and Prototype Implementations](PROTO_CORE/README.md)**
 
 ---
 
-## 📊 Status and Boundaries
+## Contribute
 
-| Area | Current status |
-|---|---|
-| Reference Demonstrator | Verified executable entry |
-| Python package and CLI | Installable research kernel; typed public contracts |
-| Orientation Layer | Implemented from source adapter to report and bounded memory |
-| Network Orientation | Verified illustrative graph application with V1/V2 gates |
-| IEEE Geometry V1 | Phase V complete; frozen IEEE-9/IEEE-14 benchmark path |
-| Orientation Brief | Implemented in JSON and human-readable Markdown |
-| Episodic memory | Append-only and retrieval-capable; observed-outcome firewall required |
-| Observed-evidence bridge | Documented; no external operational dataset admitted |
-| Field reconstruction | Implemented in reference and experimental forms |
-| Transition representation | Demonstrator-level and experiment-dependent |
-| Gate Operator | Implemented as continuous local-instability measure |
-| General geometry extraction | Experimental and representation-dependent |
-| Navigation beyond supplied representations | Exploratory prototypes |
-| Control and execution | Outside the public kernel; no execution authority |
-| Cross-system comparison | Available in selected studies; not generalized |
-| Power systems | Maintained IEEE Geometry case plus extensive experiment archive |
-| Unified runtime for all repository concepts | Not available |
-| Stable API across historical modules | Not available |
-| Production readiness | Not claimed |
+Useful contributions preserve evidence, provenance, boundaries, and ownership.
+Examples include:
 
-NEXAH currently provides:
-
-- a typed, evidence-bound Orientation path
-- maintained graph and IEEE benchmark applications
-- reproducible Orientation Reports and Briefs
-- explicit provenance, uncertainty, failure, and claim boundaries
-- guarded episodic storage and retrieval
-- reproducible reference demonstrations
-- selected scoped empirical and computational observations
-- geometry-oriented interpretations
-- semi-formal structural models
-- a large visual and experimental archive
-
-It does not yet provide:
-
-- universal proofs or generalized physical laws
-- a closed mathematical formalization
-- broad independent reproduction
-- operational-grid validation
-- production deployment guarantees
-- autonomous action or causal intervention guarantees
-- one integrated implementation of every conceptual layer
-
-The authoritative maturity overview is
-**[ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)**.
-
----
-
-## 🤝 How to Explore and Contribute
-
-NEXAH benefits from collaboration across:
-
-- dynamical systems
-- topology and geometry
-- synchronization research
-- control theory
-- network science
-- scientific visualization
-- statistical modeling
-- scientific computing
-
-Useful contributions include:
-
-- reproducing a scoped experiment
-- testing a representation under changed parameters
+- reproducing a scoped experiment or canonical case
+- testing a representation under changed conditions
 - comparing a method with an established baseline
-- formalizing an experimental definition
-- documenting failed or negative results
-- improving a user-facing application
-- connecting visual claims to exact evidence paths
+- documenting negative results or failed assumptions
+- improving an implementation without silently changing semantics
+- validating an application within an explicit domain boundary
+- connecting editorial or visual claims to exact evidence paths
 
-Good starting points:
-
-- **New visitor:** [START_HERE.md](START_HERE.md)
-- **Purpose and principles:** [MANIFESTO.md](MANIFESTO.md)
-- **Kernel user:** [nexah/START_HERE.md](nexah/START_HERE.md)
-- **Researcher:** [RESEARCH/README.md](RESEARCH/README.md)
-- **Specification reader:** [ORIENTATION_LANGUAGE/README.md](ORIENTATION_LANGUAGE/README.md)
-- **Developer:** [ARCHITECTURE/SYSTEM_STATE.md](ARCHITECTURE/SYSTEM_STATE.md)
-- **Library reader or editor:** [LIBRARY/README.md](LIBRARY/README.md)
-- **Editorial-system reviewer:** [EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)
-- **Applied-systems reader:** [APPLICATIONS/README.md](APPLICATIONS/README.md)
-- **Experimental explorer:** [EXPERIMENTAL/README.md](EXPERIMENTAL/README.md)
-- **Safety reviewer:** [nexah/SAFETY_AND_MISUSE.md](nexah/SAFETY_AND_MISUSE.md)
+Choose the responsible subsystem first, then follow its local documentation and
+governance. Architectural status belongs in
+**[Architecture](ARCHITECTURE/README.md)**; normative language work belongs in
+**[Orientation Language](ORIENTATION_LANGUAGE/README.md)**.
 
 ---
 
-## ⚡ Final Perspective
+## Citation and License
 
-**Orientation begins with observation.**
-
-Explore the Demonstrator.
-
-Inspect the evidence.
-
-Question the map.
-
-Build your own orientation.
+NEXAH is released under the **Apache License 2.0**. Individual research records,
+canonical OLS releases, validation artifacts, and Library works may carry more
+specific citation or provenance information in their responsible subsystem.
 
 ---
 
 **Thomas K. R. Hofmann**
 
-NEXAH Orientation Laboratory · 2026
+NEXAH Orientation Ecosystem · 2026
