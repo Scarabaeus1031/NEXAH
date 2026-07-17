@@ -17,10 +17,10 @@ organization.
 - `orientation-laboratory.png` — implementation-oriented secondary overview
 - `what-is-nexah-2026-07-16.png` — immutable, dated status snapshot
 
-The reduced
-[`../../assets/readme/nexah-orientation-ecosystem-front-door.png`](../../assets/readme/nexah-orientation-ecosystem-front-door.png)
-is a public front-door cover rather than a detailed architecture diagram. It
-remains with the Root README assets.
+The
+[`../../assets/readme/nexah-orientation-ecosystem-hero.png`](../../assets/readme/nexah-orientation-ecosystem-hero.png)
+is the public front-door identity rather than a detailed architecture diagram.
+It remains with the Root README assets.
 
 Counts and maturity statements in dated snapshots must not be silently updated.
 A later review should create a new dated file.
