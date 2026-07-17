@@ -23,7 +23,7 @@ problem of orientation.
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
 | Inspect research and evidence | **[Research Portal](RESEARCH/README.md)** |
-| Explore Works, journeys, or editorial practice | **[Living Library](LIBRARY/README.md)** · **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
+| Explore Works, journeys, or editorial practice | **[Public Library on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)** · **[Library Architecture & Registry](LIBRARY/README.md)** · **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Evaluate a domain application | **[Applications](APPLICATIONS/README.md)** |
 
 For the complete directory-level view, use the
