@@ -14,6 +14,9 @@ Related references:
 - **[Verified Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**
 - **[Validation Portal](../RESEARCH/VALIDATION/)**
 - **[Applications Index](../APPLICATIONS/README.md)**
+- **[Orientation Language](../ORIENTATION_LANGUAGE/README.md)**
+- **[Living Library](../LIBRARY/README.md)**
+- **[Editorial Operating System](../EDITORIAL_OPERATING_SYSTEM/README.md)**
 - **[Orientation Layer Bauplan](orientation_layer/)**
 
 ---
@@ -30,13 +33,14 @@ Related references:
 
 # 🧭 System Overview
 
-At repository level, NEXAH is currently best described as:
+At repository level, NEXAH is an **evidence-bound orientation ecosystem** with
+six coordinated subsystems: Research, Orientation Language, Implementations,
+Applications, the Living Library, and the Editorial Operating System.
 
-> **a computational orientation laboratory for evidence-bound orientation**
-
-It integrates a research environment, visual Atlas-Library, Orientation
-Kernel, validation paths, and human-governed editorial workflow. These forms
-share principles and evidence boundaries, but they are not one unified runtime.
+This document has a narrower scope. It records the implemented computational
+state of the Orientation Kernel, reference paths, applications, and validation
+artifacts. It does not assess the normative completeness of OLS 1.0 or replace
+the status records maintained by the Library and Editorial Operating System.
 
 At implemented software level, the current core remains a:
 
@@ -385,8 +389,8 @@ within structured regions of state space.
 
 Repository-wide, NEXAH is currently:
 
-> a **computational orientation laboratory integrating research, visual
-> inquiry, evidence-bound software, and human editorial governance**
+> an **evidence-bound orientation ecosystem with six coordinated and
+> authority-bounded subsystems**
 
 Its implemented computational capability is currently:
 

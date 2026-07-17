@@ -3,10 +3,11 @@
 This document maps the current repository structure and identifies the
 recommended entry point for each type of reader.
 
-NEXAH is an active research ecosystem for reconstructing and navigating
-structure inside complex dynamical systems. The repository contains a small
-Python package, reproducible demonstrators, application programs, research
-evidence, and historical experimental environments.
+NEXAH is an **evidence-bound orientation ecosystem** composed of six coordinated
+subsystems: Research, Orientation Language, Implementations, Applications, the
+Living Library, and the Editorial Operating System. Each has a separate
+responsibility and authority. Supporting architecture, validation, prototype,
+and historical areas make those responsibilities inspectable.
 
 ---
 
@@ -14,25 +15,23 @@ evidence, and historical experimental environments.
 
 | Goal | Entry point |
 |---|---|
-| Understand the central idea | **[START_HERE.md](START_HERE.md)** |
 | Get the full overview | **[README.md](README.md)** |
-| Run the reference demonstration | **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
-| Explore the visual work | **[VISUAL_GALLERY.md](VISUAL_GALLERY.md)** |
-| Enter the research archive | **[RESEARCH/README.md](RESEARCH/README.md)** |
 | Read the published Orientation Language | **[ORIENTATION_LANGUAGE/README.md](ORIENTATION_LANGUAGE/README.md)** |
-| Inspect the current architecture | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
-| Understand the editorial-orientation architecture | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
-| Browse the canonical visual-library registry | **[LIBRARY/README.md](LIBRARY/README.md)** |
-| Explore the most developed application | **[APPLICATIONS/power_systems/](APPLICATIONS/power_systems/)** |
-| Inspect evidence and outcome gates | **[testkit/README.md](testkit/README.md)** |
+| Use or develop the current implementation | **[nexah/README.md](nexah/README.md)** |
+| Enter the research layer | **[RESEARCH/README.md](RESEARCH/README.md)** |
+| Evaluate applications and claims | **[APPLICATIONS/README.md](APPLICATIONS/README.md)** |
+| Explore Works and reader journeys | **[LIBRARY/README.md](LIBRARY/README.md)** |
+| Understand editorial governance | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
+| Inspect architecture and system state | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
+| Run the executable Demonstrator path | **[START_HERE.md](START_HERE.md)** |
 
 Recommended first path:
 
 ```text
-START_HERE
-→ README
-→ NEXAH_DEMONSTRATOR
-→ RESEARCH or APPLICATIONS
+README
+→ choose a responsible subsystem
+→ follow its local entry point
+→ inspect evidence, authority, and boundaries
 ```
 
 ---
@@ -41,32 +40,37 @@ START_HERE
 
 ```text
 NEXAH/
-├── EDITORIAL_OPERATING_SYSTEM/ reusable editorial-orientation architecture
-├── ORIENTATION_LANGUAGE/ published OLS suite and semantic authority
-├── ARCHITECTURE/       current architecture and system state
-├── PROTO_CORE/         reference implementations and field layers
-├── nexah/              installable minimal Python package
-├── RESEARCH/           concepts, evidence, findings, and theory
-├── APPLICATIONS/       demonstrations and applied validation
-├── EXPERIMENTAL/       active labs, prototypes, and historical systems
-├── LIBRARY/            Are.na identity, classification, and Operator registry
-├── testkit/            reusable evidence and outcome validation gates
-├── outputs/            selected generated repository-level artifacts
+├── RESEARCH/                     hypotheses, experiments, evidence, findings
+├── ORIENTATION_LANGUAGE/         canonical OLS specification and releases
+├── nexah/                        maintained Orientation Kernel implementation
+├── APPLICATIONS/                 domain and use-case realizations
+├── LIBRARY/                      Works, Registry, Editions, reader journeys
+├── EDITORIAL_OPERATING_SYSTEM/   review, explanation, governance, execution
+│
+├── ARCHITECTURE/                 relationships, state, methods, boundaries
+├── PROTO_CORE/                   demonstrators and prototype lineages
+├── EXPERIMENTAL/                 active labs and historical systems
+├── testkit/                      evidence and outcome validation gates
+├── outputs/                      selected generated artifacts
 ├── README.md           repository overview
 ├── START_HERE.md       guided visual introduction
 └── VISUAL_GALLERY.md   curated visual entry point
 ```
 
-The conceptual flow across these areas is approximately:
+The six primary areas are coordinated responsibilities, not one linear
+pipeline:
 
 ```text
-research questions
-→ experimental exploration
-→ declared Orientation Language
-→ reference implementation
-→ validation and findings
-→ applied systems
+Research                 → evidence
+Orientation Language     → semantics
+Implementations          → executable behavior
+Applications             → domain use and validation
+Living Library           → editorial communication
+Editorial Operating OS   → governance and controlled execution
 ```
+
+Cross-cutting architecture, provenance, validation, security, and version
+history support all six areas.
 
 ---
 
@@ -250,13 +254,21 @@ the primary implementation source.
 
 ## 🧭 Navigation by Reader
 
-### New visitor
+### General visitor
 
 ```text
-START_HERE.md
-→ README.md
-→ VISUAL_GALLERY.md
-→ PROTO_CORE/NEXAH_DEMONSTRATOR/
+README.md
+→ ARCHITECTURE/README.md
+→ choose one responsible subsystem
+```
+
+### Specification reader
+
+```text
+ORIENTATION_LANGUAGE/README.md
+→ OLS-RELEASE-1.0.0/PUBLICATION_SUMMARY.md
+→ relevant OLS part
+→ conformance and tests
 ```
 
 ### Researcher
@@ -272,19 +284,36 @@ RESEARCH/README.md
 ### Developer
 
 ```text
-ARCHITECTURE/SYSTEM_STATE.md
-→ nexah/
+nexah/README.md
+→ nexah/START_HERE.md
+→ ARCHITECTURE/SYSTEM_STATE.md
 → PROTO_CORE/NEXAH_DEMONSTRATOR/
-→ PROTO_CORE/NEXAH_CORE/
-→ PROTO_CORE/FIELD_LAYER/
 ```
 
-### Applied-systems reader
+### Application evaluator
 
 ```text
 APPLICATIONS/README.md
 → APPLICATIONS/power_systems/README.md
 → APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/
+```
+
+### Library reader
+
+```text
+LIBRARY/README.md
+→ Registry and Works
+→ editorial sequences
+→ reader journeys
+```
+
+### Editorial contributor
+
+```text
+EDITORIAL_OPERATING_SYSTEM/README.md
+→ governance and review
+→ explanation contracts
+→ controlled execution and verification
 ```
 
 ### Experimental exploration
@@ -317,4 +346,4 @@ or legacy where possible.
 
 **NEXAH Repository Map**
 
-Architecture · Demonstration · Research · Validation · Applications
+Research · Language · Implementations · Applications · Library · Editorial OS

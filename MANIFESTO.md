@@ -20,9 +20,9 @@ It investigates whether recurring transition patterns can be compared across
 bounded representations of complex systems without collapsing them into a
 single explanation.
 
-In shorter form:
+In architectural terms:
 
-> NEXAH is a computational orientation laboratory.
+> NEXAH is an evidence-bound orientation ecosystem.
 
 It brings research, visual inquiry, software, editorial structure, validation,
 and human judgment into one inspectable environment.
@@ -180,14 +180,36 @@ conditions for reorientation.
 
 ---
 
-## Four Integrated Forms
+## Six Coordinated Responsibilities
 
-NEXAH currently expresses this purpose through four complementary forms.
+NEXAH currently expresses this purpose through six complementary subsystems.
+Each owns a different responsibility and authority; none replaces another.
 
 ### The Research Laboratory
 
 Code, experiments, models, validation records, and reproducible demonstrations
 investigate what can be supported.
+
+### The Orientation Language
+
+The canonical OLS release defines published semantics, declarations, profiles,
+derivations, conformance, extensions, and versioning. Research may inform the
+language, but released semantics are governed by the specification.
+
+### Implementations
+
+The maintained Orientation Kernel and reference paths execute declared
+structures and produce inspectable behavior. Implementation does not silently
+redefine language semantics, and conformance must be demonstrated explicitly.
+Typed representations, read-only perspectives, orientation reports, and
+evidence boundaries make structure and limitations inspectable. The Kernel
+supports orientation; it does not authorize action.
+
+### Applications
+
+Applications use methods and declared semantics in particular domains. Their
+authority remains local to admitted evidence, policies, validation records, and
+claim boundaries.
 
 ### The Living Library
 
@@ -197,13 +219,6 @@ people to encounter the work without requiring the software.
 The Library comes first as a human space. The Kernel learns from the Library,
 not the other way around.
 
-### The Orientation Kernel
-
-Typed representations, read-only perspectives, orientation reports, and
-evidence boundaries make structure and limitations inspectable.
-
-The Kernel supports orientation. It does not authorize action.
-
 ### The Editorial Operating System
 
 Stable identities, proposals, policies, sequences, provenance, snapshots,
@@ -212,12 +227,14 @@ diffs, review, and controlled writing preserve human editorial intent.
 It is an editorial coordination architecture—not a technical operating system
 and not an autonomous publisher.
 
-Together these forms create an integrated research artifact:
+Together these responsibilities create an integrated orientation ecosystem:
 
 ```text
 research creates evidence
+language defines semantics
+implementations execute behavior
+applications establish domain-local use and evidence
 library creates encounter
-kernel creates inspectable orientation
 editorial governance preserves responsibility
 ```
 
@@ -352,7 +369,7 @@ NEXAH commits to:
 - treating failures and contradictions as information
 - revising maps when evidence changes
 
-The repository, Library, and Kernel will continue to evolve.
+The six subsystems and their shared infrastructure will continue to evolve.
 
 This commitment should remain stable:
 
@@ -405,4 +422,6 @@ For the current implementation state, see
 **[Architecture & System State](ARCHITECTURE/SYSTEM_STATE.md)**. For the public
 visual body of work, see the
 **[NEXAH Library](LIBRARY/README.md)**. For the editorial architecture, see the
-**[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)**.
+**[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)**. For the
+canonical published semantics, see the
+**[Orientation Language](ORIENTATION_LANGUAGE/README.md)**.

@@ -11,8 +11,16 @@ current **[System State](../SYSTEM_STATE.md)**.
 Visuals describing the reviewed repository state or its present architectural
 organization.
 
-- `orientation-laboratory.png` — current repository-wide architecture overview
+- [`../../assets/readme/nexah-orientation-ecosystem-map.png`](../../assets/readme/nexah-orientation-ecosystem-map.png)
+  — primary six-subsystem repository architecture map; stored once with the
+  shared README assets rather than duplicated here
+- `orientation-laboratory.png` — implementation-oriented secondary overview
 - `what-is-nexah-2026-07-16.png` — immutable, dated status snapshot
+
+The reduced
+[`../../assets/readme/nexah-orientation-ecosystem-front-door.png`](../../assets/readme/nexah-orientation-ecosystem-front-door.png)
+is a public front-door cover rather than a detailed architecture diagram. It
+remains with the Root README assets.
 
 Counts and maturity statements in dated snapshots must not be silently updated.
 A later review should create a new dated file.

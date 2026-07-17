@@ -1,25 +1,31 @@
 # 🏗️ NEXAH — Architecture
 
 This directory explains how the current NEXAH repository is organized, how its
-research, Library, Kernel, and editorial layers relate, and which parts are
-actually implemented.
+six coordinated subsystems relate, and which parts are actually implemented.
 
-At repository level, NEXAH is organized as a **computational orientation
-laboratory for evidence-bound orientation**. It does not yet have one unified
-runtime architecture. Its current architecture combines:
+At repository level, NEXAH is an **evidence-bound orientation ecosystem**. It
+does not have one unified runtime architecture. Its current architecture keeps
+six responsibilities distinct:
 
-- a computational research laboratory and conceptual research pipeline
-- a Living Library for human exploration
-- an evidence-bound Orientation Kernel and verified reference paths
-- an Editorial Operating System for identity, governance, and controlled writes
-- experimental method and application modules
-- historical development lineages
+- Research produces hypotheses, models, experiments, and bounded evidence.
+- Orientation Language defines published semantics and conformance rules.
+- Implementations execute declared structures and produce inspectable behavior.
+- Applications apply methods within explicit domain and claim boundaries.
+- The Living Library communicates curated knowledge and reader journeys.
+- The Editorial Operating System preserves human review and controlled execution.
+
+![NEXAH Orientation Ecosystem — coordinated subsystems and authority boundaries](../assets/readme/nexah-orientation-ecosystem-map.png)
+
+> **Primary repository architecture map.** The six subsystems coordinate
+> without sharing one authority. The diagram is informative: it is not a
+> capability claim, an OLS conformance statement, or evidence that every
+> depicted function exists in one integrated runtime.
 
 ![NEXAH — The Orientation Laboratory](visuals/current/orientation-laboratory.png)
 
-> **Current architecture overview.** This visual explains the repository-wide
-> relationship between the working forms of NEXAH. It is an orientation map,
-> not evidence that every depicted capability exists as one integrated runtime.
+> **Implementation-oriented secondary view.** This visual emphasizes research,
+> representation, validation, and human orientation. It remains useful, but it
+> does not replace the six-subsystem responsibility map above.
 
 ---
 
@@ -27,6 +33,8 @@ runtime architecture. Its current architecture combines:
 
 | Question | Document |
 |---|---|
+| Which subsystem owns which responsibility? | **[Repository Front Door](../README.md)** |
+| What is the canonical semantic authority? | **[Orientation Language](../ORIENTATION_LANGUAGE/README.md)** |
 | What is actually implemented? | **[SYSTEM_STATE.md](SYSTEM_STATE.md)** |
 | Which visuals describe current state or research models? | **[Architecture Visuals](visuals/README.md)** |
 | How do editorial knowledge, orientation, governance, and execution connect? | **[Editorial Operating System](../EDITORIAL_OPERATING_SYSTEM/README.md)** |
@@ -34,7 +42,7 @@ runtime architecture. Its current architecture combines:
 | Is there a compact visual blueprint? | **[System Blueprint and Verified Results](../EDITORIAL_OPERATING_SYSTEM/visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)** |
 | Which computational methods are used? | **[METHODS.md](METHODS.md)** |
 | What is the next concrete architecture plan? | **[Orientation Layer](orientation_layer/)** |
-| What is the current Phase V plan? | **[IEEE Geometry Testkit](orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** |
+| Where is the frozen Phase V IEEE Geometry architecture record? | **[IEEE Geometry Testkit](orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** |
 | What has been completed before Phase III? | **[Plateau A Closure](orientation_layer/PLATEAU_A_CLOSURE.md)** |
 | How do repository areas relate? | Continue with this page |
 | What can I run now? | **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)** |
@@ -49,17 +57,23 @@ exists as an integrated software component.
 ## 🧭 Repository-Wide Orientation Architecture
 
 The stable architectural frame is not a single pipeline or application. It is
-the coordination of four complementary working forms:
+the coordination of six complementary responsibilities:
 
 ```text
 RESEARCH LABORATORY
 → creates observations, methods, experiments, and bounded evidence
 
+ORIENTATION LANGUAGE
+→ defines published semantics, declarations, profiles, and conformance
+
+IMPLEMENTATIONS
+→ execute declared structures and create inspectable behavior
+
+APPLICATIONS
+→ apply methods within declared domain and evidence boundaries
+
 LIVING LIBRARY
 → creates human encounter, editorial sequence, and navigable Works
-
-ORIENTATION KERNEL
-→ creates inspectable representations, paths, reports, and explanations
 
 EDITORIAL OPERATING SYSTEM
 → preserves identity, provenance, review, governance, and controlled execution
@@ -175,8 +189,12 @@ directories.
 
 ```text
 NEXAH/
-├── EDITORIAL_OPERATING_SYSTEM/ project-wide editorial-orientation architecture
-├── nexah/                          minimal installable package and CLI
+├── RESEARCH/                       hypotheses, experiments, evidence, findings
+├── ORIENTATION_LANGUAGE/           canonical OLS specification and releases
+├── nexah/                          maintained implementation and CLI
+├── APPLICATIONS/                   domain and use-case realizations
+├── LIBRARY/                        Works, Editions, sequences, reader journeys
+├── EDITORIAL_OPERATING_SYSTEM/     review, explanation, governance, execution
 ├── PROTO_CORE/
 │   ├── NEXAH_DEMONSTRATOR/         verified reference pipeline
 │   ├── FIELD_LAYER/                experimental methods laboratory
@@ -184,9 +202,6 @@ NEXAH/
 ├── ARCHITECTURE/CORE/
 │   ├── field_reconstruction/       experimental reconstruction studies
 │   └── control_layer/              experimental control prototypes
-├── RESEARCH/                       concepts, validation, and findings
-├── APPLICATIONS/                   system-specific tools and studies
-├── LIBRARY/                        canonical visual-library registry
 ├── testkit/                        reusable evidence and outcome gates
 └── EXPERIMENTAL/                   labs and historical prototypes
 ```
@@ -288,23 +303,26 @@ should use this corrected distinction.
 RESEARCH
 → asks questions, validates observations, and records findings
 
-PROTO_CORE
-→ exposes reference implementations and method development
+ORIENTATION_LANGUAGE
+→ defines released semantics without executing implementations
 
-ARCHITECTURE
-→ explains relationships, implementation status, and system boundaries
-
-EDITORIAL_OPERATING_SYSTEM
-→ coordinates editorial knowledge, reader orientation, governance, and execution
+nexah/ + PROTO_CORE
+→ implement declared behavior and expose reference paths
 
 APPLICATIONS
-→ applies methods to concrete systems and user workflows
+→ apply methods to concrete systems and preserve domain boundaries
 
 LIBRARY
-→ connects stable identity and classification to the visual Are.na corpus
+→ connects stable Work identity and editorial sequence to the visual corpus
 
-nexah/
-→ provides the minimal installable package and CLI
+EDITORIAL_OPERATING_SYSTEM
+→ coordinates review, explanation, governance, and controlled execution
+
+PROTO_CORE
+→ also preserves prototype lineages and method development
+
+ARCHITECTURE
+→ explains these relationships, implementation status, and system boundaries
 ```
 
 The architecture is therefore repository-wide. `ARCHITECTURE/CORE` is only one
@@ -369,12 +387,15 @@ Useful architecture work includes:
 ## 🔗 Related Entry Points
 
 - **[System State](SYSTEM_STATE.md)**
+- **[Orientation Language](../ORIENTATION_LANGUAGE/README.md)**
 - **[Architecture Visuals](visuals/README.md)**
 - **[Methods](METHODS.md)**
 - **[Orientation Layer Bauplan](orientation_layer/)**
 - **[Proto Core Index](../PROTO_CORE/README.md)**
 - **[Applications Index](../APPLICATIONS/README.md)**
 - **[Research Portal](../RESEARCH/README.md)**
+- **[Living Library](../LIBRARY/README.md)**
+- **[Editorial Operating System](../EDITORIAL_OPERATING_SYSTEM/README.md)**
 - **[Repository Map](../REPOSITORY_MAP.md)**
 
 ---

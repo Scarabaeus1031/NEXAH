@@ -1,4 +1,9 @@
-# 🚀 START HERE — NEXAH
+# 🚀 START HERE — NEXAH Demonstrator Path
+
+> **Scope:** This is the executable introduction to one current NEXAH
+> implementation path. For the repository-wide Orientation Ecosystem, begin
+> with the **[Root README](README.md)** and choose the subsystem responsible for
+> your interest.
 
 ![Transition-Aware Navigation](./outputs/demos/images/nexah_transition_navigation_v13.gif)
 
@@ -116,6 +121,9 @@ This contains a **clean, reproducible implementation** of:
 
 - 👉 Overview → [README.md](README.md)  
 - 👉 Use the current kernel → [nexah/START_HERE.md](nexah/START_HERE.md)
+- 👉 Read the Orientation Language → [ORIENTATION_LANGUAGE/README.md](ORIENTATION_LANGUAGE/README.md)
+- 👉 Explore the Living Library → [LIBRARY/README.md](LIBRARY/README.md)
+- 👉 Understand editorial governance → [EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)
 - 👉 Architecture → [ARCHITECTURE/README.md](ARCHITECTURE/README.md)  
 - 👉 Methods → [ARCHITECTURE/METHODS.md](ARCHITECTURE/METHODS.md)  
 - 👉 Visuals → [VISUAL_GALLERY.md](VISUAL_GALLERY.md)  
@@ -124,7 +132,7 @@ This contains a **clean, reproducible implementation** of:
 
 ## 🔥 One sentence
 
-NEXAH turns dynamical systems into:
+This Demonstrator turns declared dynamical-system trajectories into:
 
 > **something you can observe, analyze — and navigate**
 
