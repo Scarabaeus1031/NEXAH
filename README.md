@@ -35,14 +35,19 @@ For the complete directory-level view, use the
 
 The six subsystems coordinate without sharing one authority:
 
-| Subsystem | Responsibility | Authority boundary |
-|---|---|---|
-| **[Research](RESEARCH/README.md)** | Produces hypotheses, models, experiments, and evidence | Does not define released semantics or establish universality |
-| **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** | Defines published semantics and conformance rules | Does not execute implementations or establish domain validity |
-| **[Implementations](nexah/README.md)** | Execute declared structures and produce inspectable behavior | Do not redefine semantics; conformance is explicit, never assumed |
-| **[Applications](APPLICATIONS/README.md)** | Apply methods within declared domains and use cases | Do not generalize beyond admitted evidence or redefine the language |
-| **[Living Library](LIBRARY/README.md)** | Communicates curated knowledge through Works and reader journeys | Its Registry governs editorial identity, not OLS semantics |
-| **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** | Preserves human review, explanation, approval, and controlled execution | Editorial Governance does not replace Specification Governance |
+![NEXAH architecture — six coordinated subsystems with equal responsibility](assets/readme/nexah-orientation-ecosystem-front-door.png)
+
+The diagram shows what each subsystem is responsible for. The table records
+where its authority stops:
+
+| Subsystem | Authority boundary |
+|---|---|
+| **[Research](RESEARCH/README.md)** | Does not define released semantics or establish universality |
+| **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** | Does not execute implementations or establish domain validity |
+| **[Implementations](nexah/README.md)** | Do not redefine semantics; conformance is explicit, never assumed |
+| **[Applications](APPLICATIONS/README.md)** | Do not generalize beyond admitted evidence or redefine the language |
+| **[Living Library](LIBRARY/README.md)** | Its Registry governs editorial identity, not OLS semantics |
+| **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** | Editorial Governance does not replace Specification Governance |
 
 The central distinction is simple: **the Orientation Language defines
 semantics; implementations execute behavior; conformance must be demonstrated.**
