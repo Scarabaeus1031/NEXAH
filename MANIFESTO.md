@@ -11,10 +11,14 @@
 
 ## NEXAH in One Sentence
 
-**NEXAH is a human-oriented, evidence-bound orientation infrastructure that
-investigates whether recurring transition patterns can be compared across
-bounded representations of complex systems—and makes their relationships
-navigable without collapsing them into a single explanation.**
+**NEXAH is a human-oriented, editorially governed, evidence-bound orientation
+infrastructure that connects heterogeneous representations, preserves their
+boundaries and provenance, and creates explainable paths between them for human
+judgment.**
+
+It investigates whether recurring transition patterns can be compared across
+bounded representations of complex systems without collapsing them into a
+single explanation.
 
 In shorter form:
 
@@ -74,6 +78,12 @@ NEXAH treats every representation as bounded:
 - supported by particular evidence
 - limited by particular assumptions
 - open to comparison, revision, and replacement
+
+Every representation involves selection. Every selection shapes orientation.
+
+A representation makes some relationships visible and leaves others outside
+its frame. NEXAH therefore treats the choice of representation as an editorial
+and epistemic responsibility.
 
 Partiality does not make every representation equally valid.
 
@@ -154,6 +164,22 @@ Orientation is therefore not a final answer. It is a situated capacity to see:
 
 ---
 
+## Orientation Is Relational
+
+Orientation does not reside in the data, the map, the Kernel, or the reader
+alone.
+
+It emerges from the relationship between a situated observer, a bounded
+representation, a purpose, a context, and the alternatives held in view.
+
+NEXAH can make the conditions for orientation visible. It cannot perform
+understanding on the reader's behalf.
+
+Representations make knowledge visible. Comparison and reflection create the
+conditions for reorientation.
+
+---
+
 ## Four Integrated Forms
 
 NEXAH currently expresses this purpose through four complementary forms.
@@ -219,6 +245,16 @@ distinguishable from evidence.
 The purpose of explanation is not to manufacture certainty.
 
 It is to make the grounds, limits, and consequences of orientation visible.
+
+A reviewed explanation may be rendered differently for a curious beginner, an
+advanced reader, or a researcher.
+
+The audience may change the language, depth, sequence, and point of entry. It
+must not silently change the evidence, provenance, uncertainty, reviewed
+meaning, or claim boundaries.
+
+NEXAH does not infer authority from fluency. An explanation remains accountable
+to its sources.
 
 ---
 
@@ -309,6 +345,9 @@ NEXAH commits to:
 - separating observation from interpretation
 - distinguishing proposals from confirmed records
 - making explanations inspectable
+- preserving meaningful plurality rather than forcing a unified account
+- keeping implemented capability, supported evidence, working hypothesis, and
+  long-term vision visibly distinct
 - retaining human editorial authority
 - treating failures and contradictions as information
 - revising maps when evidence changes
@@ -343,6 +382,12 @@ NEXAH does not promise the final destination.
 
 It works to make the field, the current orientation, the available paths, and
 the boundaries of knowledge more visible.
+
+> We do not replace knowledge.
+>
+> We connect representations without erasing their differences.
+>
+> We create the conditions for responsible human orientation.
 
 > One field. Many representations. Open transitions.
 >
