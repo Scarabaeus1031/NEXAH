@@ -36,7 +36,7 @@ practice. Prefer completed review artifacts over unrestricted visual mining.
 | C-23 | `EDITORIAL_OPERATING_SYSTEM/visuals/architecture/editorial_explanation_layer.png` | architecture visual | explanation | Phase X2 | distinguishes levels, audience paths, implemented/deferred status | visual branching and status evidence |
 | C-24 | `ORIENTATION_LANGUAGE/.../OLS-0_SPECIFICATION_CONVENTIONS_AND_SUITE_OVERVIEW_V1.0.md` | normative specification | Orientation Language | OLS 1.0 | defines authority/status conventions | boundary control only; not recurrence evidence |
 | C-25 | `ORIENTATION_LANGUAGE/.../OLS-1_UNIVERSAL_BASE_LANGUAGE_V1.0.md` | normative specification | Orientation Language | OLS 1.0 | distinguishes normative operators from editorial observations | boundary control only; not visual grammar evidence |
-| C-26 | `DOCUMENTATION_ALIGNMENT_01/STUDY_REPORT.md` | documentation review | repository navigation | 2026-07 | separates architecture, method and application narratives | navigation and ownership evidence |
+| C-26 | `ARCHITECTURE/reviews/documentation_alignment_01/STUDY_REPORT.md` | documentation review | repository navigation | 2026-07 | separates architecture, method and application narratives | navigation and ownership evidence |
 
 Paths beginning with `studies/`, `pilots/`, `comparisons/`, or `reviews/` are
 relative to `APPLICATIONS/orientation_translation/`. The two OLS paths are
@@ -58,4 +58,3 @@ relative to `ORIENTATION_LANGUAGE/SPECIFICATION/RELEASES/OLS-RELEASE-1.0.0/DOCUM
 The corpus supports repository-level recurrence, not independence from the
 NEXAH editorial lineage. Shared authorship, prompts, templates and visual style
 remain confounds.
-

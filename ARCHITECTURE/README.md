@@ -41,6 +41,7 @@ six responsibilities distinct:
 | How are reviewed Concept answers reproduced without inference? | **[Editorial Explanation Layer — Plateau X2](../EDITORIAL_OPERATING_SYSTEM/EDITORIAL_EXPLANATION_LAYER_STATUS.md)** |
 | Is there a compact visual blueprint? | **[System Blueprint and Verified Results](../EDITORIAL_OPERATING_SYSTEM/visuals/snapshots/2026-07-16_pre_batch_1/system_blueprint_and_verified_results.png)** |
 | Which computational methods are used? | **[METHODS.md](METHODS.md)** |
+| Where are completed repository-architecture reviews preserved? | **[Architecture Reviews](reviews/)** |
 | What is the next concrete architecture plan? | **[Orientation Layer](orientation_layer/)** |
 | Where is the frozen Phase V IEEE Geometry architecture record? | **[IEEE Geometry Testkit](orientation_layer/PHASE_V_IEEE_GEOMETRY_TESTKIT.md)** |
 | What has been completed before Phase III? | **[Plateau A Closure](orientation_layer/PLATEAU_A_CLOSURE.md)** |
@@ -215,6 +216,9 @@ NEXAH/
 ├── testkit/                        reusable evidence and outcome gates
 └── EXPERIMENTAL/                   labs and historical prototypes
 ```
+
+Completed reviews that assess repository narrative or placement without
+changing architecture are preserved under [`reviews/`](reviews/).
 
 There are no current root modules named `ARCHY`, `DISCOVERY_ENGINE`,
 `FIELD_LAYER`, or `NAVIGATOR`. Those names describe earlier or conceptual

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "nexah"
 version = "0.7.0"
-description = "NEXAH – Structural Field & Navigation Framework for Dynamical Systems"
+description = "NEXAH — an evidence-bound orientation ecosystem"
 authors = [
     { name = "Thomas Hofmann" }
 ]
@@ -22,6 +22,7 @@ dependencies = [
 [project.optional-dependencies]
 test = [
     "pytest>=7.4",
+    "pandapower>=3.0",
 ]
 
 [project.scripts]

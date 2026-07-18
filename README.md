@@ -19,7 +19,7 @@ problem of orientation.
 
 | I want to… | Begin here |
 |---|---|
-| Understand the idea and principles | **[NEXAH Manifesto](MANIFESTO.md)** |
+| Understand the purpose and principles | **[NEXAH Manifesto](MANIFESTO.md)** · **[Constitution Candidate](GOVERNANCE/constitution_review_01/CONSTITUTION_CANDIDATE_REVISION_01.md)** *(provisional, non-canonical)* |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
 | Inspect research and evidence | **[Research Portal](RESEARCH/README.md)** |
@@ -55,6 +55,10 @@ semantics; implementations execute behavior; conformance must be demonstrated.**
 
 The detailed responsibility and relationship map lives in
 **[Architecture](ARCHITECTURE/README.md)**.
+
+Cross-system constitutional work is preserved in **[Governance](GOVERNANCE/constitution_review_01/README.md)**.
+It is a provisional review area, not a seventh subsystem and not an authority
+over the six responsible subsystems.
 
 ---
 
@@ -145,21 +149,27 @@ NEXAH/
 ```
 
 Supporting architecture, validation, prototype, and historical areas are
-documented in the **[full Repository Map](REPOSITORY_MAP.md)**.
+documented in the **[full Repository Map](REPOSITORY_MAP.md)**. Cross-system
+constitutional review is kept separately under `GOVERNANCE/` without changing
+the six-subsystem architecture.
 
 ---
 
 ## Contributing, Citation, and License
 
-Contributions should begin in the subsystem responsible for the proposed work
-and preserve its local evidence, ownership, provenance, and review rules.
+Begin with the **[Contribution Guide](CONTRIBUTING.md)** and the
+**[Code of Conduct](CODE_OF_CONDUCT.md)**. Contributions should enter through
+the subsystem responsible for the proposed work and preserve its local
+evidence, ownership, provenance, and review rules.
 Architectural status belongs in **[Architecture](ARCHITECTURE/README.md)**;
 normative language work belongs in
 **[Orientation Language](ORIENTATION_LANGUAGE/README.md)**.
 
-NEXAH is released under the **Apache License 2.0**. Canonical releases,
-validation artifacts, research records, and Library Works may provide more
-specific citation or provenance information in their responsible subsystem.
+Software is released under the **[Apache License 2.0](LICENSE)**.
+Documentation and repository research material are released under
+**[CC BY 4.0](LICENSE-DOCS.md)** unless an artifact states a more specific
+license or provenance condition. Citation guidance is maintained in
+**[CITATION.cff](CITATION.cff)**.
 
 ---
 

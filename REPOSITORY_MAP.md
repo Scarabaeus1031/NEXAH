@@ -22,6 +22,7 @@ and historical areas make those responsibilities inspectable.
 | Evaluate applications and claims | **[APPLICATIONS/README.md](APPLICATIONS/README.md)** |
 | Explore Works and reader journeys | **[LIBRARY/README.md](LIBRARY/README.md)** |
 | Understand editorial governance | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
+| Inspect provisional constitutional principles | **[GOVERNANCE/constitution_review_01/README.md](GOVERNANCE/constitution_review_01/README.md)** |
 | Inspect architecture and system state | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
 | Run the executable Demonstrator path | **[START_HERE.md](START_HERE.md)** |
 
@@ -48,13 +49,17 @@ NEXAH/
 ├── EDITORIAL_OPERATING_SYSTEM/   review, explanation, governance, execution
 │
 ├── ARCHITECTURE/                 relationships, state, methods, boundaries
+├── GOVERNANCE/                   cross-system constitutional review
 ├── PROTO_CORE/                   demonstrators and prototype lineages
 ├── EXPERIMENTAL/                 active labs and historical systems
 ├── testkit/                      evidence and outcome validation gates
 ├── outputs/                      selected generated artifacts
 ├── README.md           repository overview
 ├── START_HERE.md       guided visual introduction
-└── VISUAL_GALLERY.md   curated visual entry point
+├── VISUAL_GALLERY.md   current visual index
+├── CONTRIBUTING.md     contribution and subsystem routing
+├── CODE_OF_CONDUCT.md  participation expectations
+└── SECURITY.md         security scope and reporting
 ```
 
 The six primary areas are coordinated responsibilities, not one linear
@@ -70,7 +75,9 @@ Editorial Operating OS   → governance and controlled execution
 ```
 
 Cross-cutting architecture, provenance, validation, security, and version
-history support all six areas.
+history support all six areas. `GOVERNANCE/` records provisional cross-system
+constitutional review; it is not a seventh subsystem and grants no authority
+by repository placement.
 
 ---
 
@@ -132,6 +139,22 @@ Key documents:
 
 The `archive/` subdirectory preserves earlier diagrams and architectural
 snapshots. It is reference material, not the current implementation map.
+
+Completed repository-level architecture reviews are preserved under
+**[ARCHITECTURE/reviews/](ARCHITECTURE/reviews/)** rather than occupying the
+repository root.
+
+---
+
+## ⚖️ GOVERNANCE/
+
+**[GOVERNANCE/](GOVERNANCE/constitution_review_01/README.md)** contains the
+historical reconstruction and provisional candidate for a small NEXAH
+Constitution. The candidate is **non-canonical and pending human review**.
+
+Governance is cross-cutting review material. It does not replace OLS
+Specification Governance, Library or Registry authority, Editorial Governance,
+Architecture decisions, or the responsibility of any primary subsystem.
 
 ---
 
@@ -332,6 +355,17 @@ EDITORIAL_OPERATING_SYSTEM/README.md
 → explanation contracts
 → controlled execution and verification
 ```
+
+### Principles and governance reviewer
+
+```text
+MANIFESTO.md
+→ GOVERNANCE/constitution_review_01/
+→ historical register and evidence map
+→ provisional Constitution Candidate
+```
+
+The candidate does not become canonical by being linked here.
 
 ### Experimental exploration
 

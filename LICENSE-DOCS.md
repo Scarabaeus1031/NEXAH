@@ -17,5 +17,3 @@ Under the condition:
 
 Full license text:
 https://creativecommons.org/licenses/by/4.0/
-
-Add CC BY 4.0 documentation license

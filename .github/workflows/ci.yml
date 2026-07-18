@@ -38,3 +38,22 @@ jobs:
         run: |
           python -m compileall -q nexah
           python -m compileall -q PROTO_CORE/NEXAH_DEMONSTRATOR/scripts
+
+  test-suite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[test]"
+
+      - name: Run repository tests
+        run: python -m pytest -q
