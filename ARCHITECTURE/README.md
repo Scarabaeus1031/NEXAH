@@ -95,6 +95,16 @@ This architecture does not combine all representations into one account. It
 keeps their evidence, context, and boundaries visible while making their
 relationships and possible transitions easier to navigate.
 
+This sequence expresses repository-level orientation vocabulary rather than a
+canonical workflow requirement. The
+**[Orientation Translation](../APPLICATIONS/orientation_translation/)** corpus
+investigates a related published process as non-canonical application and
+methodological evidence. **[Meta Review 01](../APPLICATIONS/orientation_translation/reviews/meta_review_01/META_REVIEW_REPORT.md)**
+and **[Method Archaeology 01](../APPLICATIONS/orientation_translation/studies/method_archaeology_01/STUDY_REPORT.md)**
+preserve template effects, local asymmetries, and untested reader benefit; they
+do not redefine Architecture, Orientation Language semantics, or a mandatory
+method sequence.
+
 ---
 
 ## 🧭 Project-Wide Editorial Architecture

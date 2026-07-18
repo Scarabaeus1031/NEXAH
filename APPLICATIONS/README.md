@@ -38,6 +38,7 @@ application.
 | Study Lorenz field and geometry analysis | **[dynamical_systems/lorenz/](dynamical_systems/lorenz/)** |
 | Compare a different chaotic flow | **[dynamical_systems/halvorsen/](dynamical_systems/halvorsen/)** |
 | Explore the most developed applied program | **[power_systems/](power_systems/)** |
+| Study governed orientation over fixed public knowledge sources | **[Orientation Translation](orientation_translation/)** |
 | Connect another system to NEXAH | **[adapters/](adapters/)** |
 | Inspect experimental navigation tools | **[navigation/](navigation/)** |
 | Understand the conceptual model families | **[models/dynamical_models/](models/dynamical_models/)** |
@@ -52,6 +53,7 @@ If you are completely new to NEXAH, begin with the repository
 | Area | What it offers | Current status |
 |---|---|---|
 | **[Network Orientation](network_orientation/)** | Typed graph topology, reachability, structural comparison, five read-only probes, and V1/V2 fixtures | Verified illustrative application |
+| **[Orientation Translation](orientation_translation/)** | Source-bounded public-knowledge pilots, Reflections, Neighborhoods, comparisons, methodological studies, and reviews | Applied methodological research; reader effect not yet tested |
 | **[Power Systems](power_systems/)** | IEEE benchmark studies, stability fields, atlas discovery, prediction, recovery, and control experiments | Active applied research |
 | **[Lorenz Research](dynamical_systems/lorenz/)** | Density, FTLE, Lyapunov, separatrix, regime, and navigation analysis | Active reference system |
 | **[Halvorsen Research](dynamical_systems/halvorsen/)** | Distributed transport, transition graphs, residue models, reachability, and policy experiments | Experimental research |
@@ -62,6 +64,23 @@ If you are completely new to NEXAH, begin with the repository
 | **[Dynamical Models](models/dynamical_models/)** | Stability, gradient, drift, and regime model documents | Theoretical reference |
 | **[Datasets](datasets/)** | Synthetic JSON system descriptions | Reference data; documentation incomplete |
 | **[Archive](archive/)** | Superseded prototypes and former root demos | Archived |
+
+---
+
+## 🧭 Orientation Translation
+
+**[Orientation Translation](orientation_translation/)** is a non-canonical
+applied research program investigating how fixed public representations can be
+separated, compared, navigated, explained, and bounded while preserving
+provenance and explicit evidence limits.
+
+It remains physically part of Applications, participates conceptually in
+Research, and does not define Orientation Language semantics or Kernel
+behavior. **[Meta Review 01](orientation_translation/reviews/meta_review_01/META_REVIEW_REPORT.md)**
+requires limited review before further use, while **[Method Archaeology
+01](orientation_translation/studies/method_archaeology_01/STUDY_REPORT.md)**
+provides only a provisional candidate-action inventory for future Reader-Test
+design. Reader effect has not yet been established.
 
 ---
 

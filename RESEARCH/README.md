@@ -205,6 +205,22 @@ status: **empirical**, **experimental**, or **theoretical**.
 
 ---
 
+## 🧭 Related Methodological Research
+
+Methodological research also occurs inside bounded application programs.
+**[Orientation Translation](../APPLICATIONS/orientation_translation/)** studies
+how fixed public representations are separated, compared, navigated, explained,
+audited, and stopped. It remains physically owned by Applications; this link
+records conceptual participation in Research rather than directory transfer,
+semantic authority, or canonical Method status.
+
+Its current reviews preserve open questions concerning reader effect,
+analyst-independent reproduction, sequence necessity, and method stability.
+See **[Meta Review 01](../APPLICATIONS/orientation_translation/reviews/meta_review_01/META_REVIEW_REPORT.md)**
+and **[Method Archaeology 01](../APPLICATIONS/orientation_translation/studies/method_archaeology_01/STUDY_REPORT.md)**.
+
+---
+
 ## 🔗 Related Entry Points
 
 - **[Repository overview](../README.md)**

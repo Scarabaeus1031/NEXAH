@@ -25,6 +25,7 @@ problem of orientation.
 | Inspect research and evidence | **[Research Portal](RESEARCH/README.md)** |
 | Explore Works, journeys, or editorial practice | **[Public Library on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)** · **[Library Architecture & Registry](LIBRARY/README.md)** · **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Evaluate a domain application | **[Applications](APPLICATIONS/README.md)** |
+| Inspect Orientation Translation pilots and methodological evidence | **[Applications / Orientation Translation](APPLICATIONS/orientation_translation/)** |
 
 For the complete directory-level view, use the
 **[Repository Map](REPOSITORY_MAP.md)**.

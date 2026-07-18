@@ -207,6 +207,7 @@ research programs.
 Main entry points:
 
 - **[APPLICATIONS/README.md](APPLICATIONS/README.md)** — application overview
+- **[APPLICATIONS/orientation_translation/](APPLICATIONS/orientation_translation/)** — non-canonical application and methodological research program over fixed public knowledge sources
 - **[APPLICATIONS/core_demos/lorenz/](APPLICATIONS/core_demos/lorenz/)** — compact Lorenz reference
 - **[APPLICATIONS/dynamical_systems/](APPLICATIONS/dynamical_systems/)** — nonlinear-system studies
 - **[APPLICATIONS/navigation/](APPLICATIONS/navigation/)** — navigation experiments
@@ -215,6 +216,11 @@ Main entry points:
 The power-systems branch includes field reconstruction, IEEE benchmark work,
 atlas discovery, transition prediction, recovery analysis, and exploratory
 atlas-guided control.
+
+Orientation Translation remains physically part of Applications and includes
+pilots, Reflections, Neighborhoods, comparisons, studies, and reviews. Its
+methodological evidence participates conceptually in Research and Architecture;
+it does not establish a canonical Method.
 
 The current public-use plan is
 **[IEEE_GEOMETRY_SHOWCASE_PLAN.md](APPLICATIONS/power_systems/IEEE_GEOMETRY_SHOWCASE_PLAN.md)**.
@@ -297,6 +303,17 @@ APPLICATIONS/README.md
 → APPLICATIONS/power_systems/README.md
 → APPLICATIONS/power_systems/FIELD_NAVIGATION_VALIDATION/
 ```
+
+For public-knowledge orientation:
+
+```text
+APPLICATIONS/README.md
+→ APPLICATIONS/orientation_translation/
+→ pilots or studies
+→ Meta Review 01
+```
+
+See **[Meta Review 01](APPLICATIONS/orientation_translation/reviews/meta_review_01/META_REVIEW_REPORT.md)**.
 
 ### Library reader
 
