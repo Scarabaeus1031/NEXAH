@@ -4,10 +4,16 @@
 
 - **Status:** non-canonical comparative orientation study
 - **Date:** 2026-07-18
-- **Input:** supplied orientation sketch (editorial input; repository copy pending)
-**Primary question:** Can planetary atmospheres be compared through recurring
-compositional and functional patterns without introducing speculative
-interpretations?
+- **Input:** [supplied orientation sketch](SOURCE_ORIENTATION_SKETCH.png) (editorial input, not evidence)
+- **Primary question:** Can planetary atmospheres be compared through recurring
+  compositional and functional patterns without introducing speculative
+  interpretations?
+
+![Planetary Orientation — original editorial input sketch](SOURCE_ORIENTATION_SKETCH.png)
+
+> **Evidence boundary:** This image is preserved as the original orientation
+> sketch. Its values and connections are reviewed below; inclusion does not
+> validate its scientific claims.
 
 ## Finding
 

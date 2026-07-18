@@ -70,5 +70,9 @@ consensus but is not treated as a measurement dataset.
 
 The supplied visual is registered only as **editorial input**. It is evidence
 of a proposed comparison architecture, not evidence for planetary chemistry.
-The supplied Desktop source path was unavailable during implementation, so no
-repository copy or file hash is claimed by this study.
+The byte-identical repository copy is
+[`SOURCE_ORIENTATION_SKETCH.png`](SOURCE_ORIENTATION_SKETCH.png).
+
+```text
+SHA-256  c4507339fb35e51d693411b7b0ace87baaa99296d9d3956466b40a3175f249e7
+```
