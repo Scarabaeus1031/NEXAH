@@ -1,4 +1,12 @@
-# 🌀 NEXAH Outputs – Visual Gallery
+# NEXAH Legacy Root Outputs — Frozen 2026-07-18
+
+> **Archive notice:** This directory preserves the tracked contents of the
+> former repository-root `outputs/` directory. It is a historical snapshot,
+> not a current visual index, capability statement, validation authority, or
+> runtime output location. Current evidence remains with the subsystem and
+> validation record that owns it.
+
+## Historical description
 
 This directory contains all generated artifacts from the NEXAH system.
 
@@ -171,4 +179,3 @@ Next:
 → navigation (active control)
 → real-world deployment
 ```
-

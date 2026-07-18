@@ -45,6 +45,21 @@ python -m pytest -q
 For implementation-only work, `python -m pip install -e .` installs the current
 runtime dependencies without the validation test extra.
 
+## Contribution licensing
+
+By submitting a contribution for inclusion in NEXAH, you agree that:
+
+- software, tests, configuration, and implementation contributions are
+  provided under the Apache License 2.0;
+- original documentation and research contributions are provided under
+  CC BY 4.0;
+- third-party or source-derived material must retain its original license,
+  attribution, and provenance and must be clearly identified; and
+- you have the right to provide the contribution under the applicable terms.
+
+See the complete [Licensing Scope](LICENSES.md) before contributing mixed or
+externally sourced material.
+
 ## Pull requests
 
 A pull request should explain:

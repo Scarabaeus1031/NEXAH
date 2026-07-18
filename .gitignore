@@ -58,13 +58,18 @@ htmlcov/
 # =========================
 .vscode/
 .idea/
+.codex/
 
 # =========================
 # 🔥 GLOBAL OUTPUT RULE
 # =========================
 
-# ignore ALL outputs by default
+# ignore ALL generated output directories by default
 **/outputs/
+
+# Root output paths are runtime workspaces only. Reviewed evidence belongs
+# beside its owning validation or subsystem record.
+/outputs/
 
 # =========================
 # 🔥 MEDIA POLICY
@@ -77,11 +82,6 @@ htmlcov/
 # ✅ CORE ALLOWLIST
 # =========================
 
-# --- ROOT DEMO ---
-!outputs/
-!outputs/demo/
-!outputs/demo/*.png
-
 # Reproducible Orientation MVP run artifacts are generated locally. Compact
 # canonical metrics and failure cases are committed under validation/ instead.
 /outputs/orientation_mvp/
@@ -91,12 +91,6 @@ htmlcov/
 /outputs/ieee_scaling_pattern_v1/
 
 # --- CORE VISUALS ---
-!DISCOVERY_ENGINE/outputs/
-!DISCOVERY_ENGINE/outputs/**/*.png
-
-!FIELD_LAYER/outputs/
-!FIELD_LAYER/outputs/**/*.png
-
 # --- IEEE ---
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/
 !APPLICATIONS/power_systems/stability_field_dynamics/ieee_test_cases/outputs/*.png
@@ -104,11 +98,6 @@ htmlcov/
 # --- CONTROL ---
 !ARCHITECTURE/CORE/control_layer/outputs/
 !ARCHITECTURE/CORE/control_layer/outputs/**/*.png
-
-# --- DEMONSTRATOR ---
-!NEXAH_DEMONSTRATOR/visuals/
-!NEXAH_DEMONSTRATOR/visuals/**/*.png
-!NEXAH_DEMONSTRATOR/visuals/**/*.gif
 
 # --- APPLICATION VISUALS ---
 !APPLICATIONS/visuals/

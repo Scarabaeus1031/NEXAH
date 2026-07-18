@@ -32,6 +32,7 @@ explicit destination.
 | **[OBSERVER_GEOMETRY_LAB/](OBSERVER_GEOMETRY_LAB/)** | Observer-relative geometry, projections, transport structures, and visual experiments | **Active Lab** | Best current experimental entry point |
 | **[BUILDER_LAB/](BUILDER_LAB/)** | Demos, simulation engines, discovery work, exploration notes, and several archived systems | **Experimental System / Archive mix** | Enter through the guided map below |
 | **[FRAMEWORK/](FRAMEWORK/)** | Earlier META → ARCHY → MESO → NEXAH → MEVA conceptual architecture | **Historical Reference** | Consult for conceptual lineage, not current implementation state |
+| **[Legacy Root Outputs](BUILDER_LAB/legacy/root_outputs_2026-07-18/README.md)** | Frozen generated figures and result files formerly exposed at repository root | **Archive** | Historical inspection only; not current evidence or capability status |
 
 The empty root `scripts/` and `visuals/` directories are not current entry
 points.

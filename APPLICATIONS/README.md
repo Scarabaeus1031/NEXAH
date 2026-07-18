@@ -44,7 +44,7 @@ application.
 | Understand the conceptual model families | **[models/dynamical_models/](models/dynamical_models/)** |
 
 If you are completely new to NEXAH, begin with the repository
-**[START_HERE](../START_HERE.md)** before entering an application program.
+**[front door](../README.md)** before entering an application program.
 
 ---
 

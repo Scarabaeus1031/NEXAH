@@ -24,7 +24,7 @@ and historical areas make those responsibilities inspectable.
 | Understand editorial governance | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Inspect provisional constitutional principles | **[GOVERNANCE/constitution_review_01/README.md](GOVERNANCE/constitution_review_01/README.md)** |
 | Inspect architecture and system state | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
-| Run the executable Demonstrator path | **[START_HERE.md](START_HERE.md)** |
+| Run the executable Demonstrator path | **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/README.md)** |
 
 Recommended first path:
 
@@ -53,10 +53,7 @@ NEXAH/
 ├── PROTO_CORE/                   demonstrators and prototype lineages
 ├── EXPERIMENTAL/                 active labs and historical systems
 ├── testkit/                      evidence and outcome validation gates
-├── outputs/                      selected generated artifacts
 ├── README.md           repository overview
-├── START_HERE.md       guided visual introduction
-├── VISUAL_GALLERY.md   current visual index
 ├── CONTRIBUTING.md     contribution and subsystem routing
 ├── CODE_OF_CONDUCT.md  participation expectations
 └── SECURITY.md         security scope and reporting
@@ -267,17 +264,6 @@ family with explicit benchmark, simulation, observation, and outcome labels.
 This area intentionally contains competing ideas, versioned scripts, and
 unfinished mechanisms. New users should begin with the demonstrator or research
 portal before entering these labs.
-
----
-
-## 📊 outputs/
-
-**[outputs/](outputs/)** contains selected generated artifacts used by root
-documentation and demonstrations.
-
-Most experiment-specific results live next to their producing research or
-application module. Output files are evidence and presentation artifacts, not
-the primary implementation source.
 
 ---
 

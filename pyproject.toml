@@ -9,6 +9,7 @@ description = "NEXAH — an evidence-bound orientation ecosystem"
 authors = [
     { name = "Thomas Hofmann" }
 ]
+license = { file = "LICENSE" }
 requires-python = ">=3.10"
 
 dependencies = [

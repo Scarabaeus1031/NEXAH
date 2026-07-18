@@ -14,6 +14,7 @@
 *.yaml text eol=lf
 *.csv text eol=lf
 *.toml text eol=lf
+*.svg text eol=lf
 
 # =========================
 # BINARY FILES (wichtig für dich!)
@@ -22,7 +23,6 @@
 *.jpg binary
 *.jpeg binary
 *.gif binary
-*.svg binary
 *.pdf binary
 *.zip binary
 *.mp4 binary

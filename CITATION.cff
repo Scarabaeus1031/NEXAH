@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-title: "NEXAH — The Orientation Ecosystem"
-message: "If you use NEXAH software or repository research, please cite this repository and the specific artifact or release used."
+title: "NEXAH — Orientation Kernel and Software Distribution"
+message: "If you use NEXAH software, please cite this repository and the specific version or release used. Research artifacts should additionally be cited according to their local provenance record."
 type: software
 abstract: "An evidence-bound orientation ecosystem combining research, a published Orientation Language, implementations, applications, a Living Library, and human-governed editorial infrastructure."
 authors:

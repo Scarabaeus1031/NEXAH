@@ -224,8 +224,7 @@ and **[Method Archaeology 01](../APPLICATIONS/orientation_translation/studies/me
 ## 🔗 Related Entry Points
 
 - **[Repository overview](../README.md)**
-- **[Start Here](../START_HERE.md)**
-- **[Visual Gallery](../VISUAL_GALLERY.md)**
+- **[Architecture visual guide](../ARCHITECTURE/visuals/README.md)**
 - **[Architecture](../ARCHITECTURE/README.md)**
 - **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**
 - **[Power Systems validation](../APPLICATIONS/power_systems/)**

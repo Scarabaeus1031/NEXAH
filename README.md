@@ -99,8 +99,8 @@ The result is an inspectable report over the supplied representation—not a
 real-world risk judgment or authorization to intervene.
 
 Continue with the **[Kernel Start](nexah/START_HERE.md)**, browse
-**[Applications](APPLICATIONS/README.md)**, or run the executable
-**[Demonstrator Path](START_HERE.md)**.
+**[Applications](APPLICATIONS/README.md)**, or inspect the executable
+**[NEXAH Demonstrator](PROTO_CORE/NEXAH_DEMONSTRATOR/README.md)**.
 
 ---
 
@@ -166,10 +166,10 @@ normative language work belongs in
 **[Orientation Language](ORIENTATION_LANGUAGE/README.md)**.
 
 Software is released under the **[Apache License 2.0](LICENSE)**.
-Documentation and repository research material are released under
-**[CC BY 4.0](LICENSE-DOCS.md)** unless an artifact states a more specific
-license or provenance condition. Citation guidance is maintained in
-**[CITATION.cff](CITATION.cff)**.
+Original NEXAH documentation and repository research material are released
+under **[CC BY 4.0](LICENSE-DOCS.md)**. Third-party and source-derived material
+retains its stated license and provenance. See the complete
+**[Licensing Scope](LICENSES.md)** and **[CITATION.cff](CITATION.cff)**.
 
 ---
 
