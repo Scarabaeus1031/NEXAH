@@ -36,6 +36,11 @@ and maintenance. This review does not replace, interpret, or amend OLS-0.
 The repository-level integration report is
 [NEXAH_CONSTITUTION_REVIEW_REPORT.md](../NEXAH_CONSTITUTION_REVIEW_REPORT.md).
 
+The candidate also references
+[The Wonder Operator companion plate](../visuals/nexah-constitution-wonder-operator-companion-plate-v1.png).
+The image is informative and non-normative. It depicts a human disposition and
+does not add a canonical Operator or architectural component.
+
 ## Explicit non-effects
 
 This review does not modify OLS, the Kernel, Registry, Operator contracts,

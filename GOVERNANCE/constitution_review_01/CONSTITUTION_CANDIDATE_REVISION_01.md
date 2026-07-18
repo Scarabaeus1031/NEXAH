@@ -7,9 +7,31 @@
 
 ## Preamble
 
-This candidate protects the integrity of NEXAH while its representations,
-methods, systems, and publications continue to change. It does not define all
-of NEXAH, replace subsystem authority, or convert research practice into canon.
+The Constitution protects the conditions under which wonder can become shared
+orientation.
+
+We believe that orientation begins before explanation.  
+That understanding grows when different perspectives can be held together
+without being collapsed.  
+That evidence, uncertainty, and human care belong within the same inquiry.  
+That knowledge becomes shareable when its sources, boundaries, and
+transformations remain visible.  
+And that wonder is not the opposite of disciplined inquiry, but one of the
+places from which it begins.
+
+NEXAH does not prescribe what people must believe. It protects a space in which
+they can observe, question, compare, correct, translate, and learn together.
+
+This candidate protects the integrity of that space while NEXAH's
+representations, methods, systems, and publications continue to change. It does
+not define all of NEXAH, replace subsystem authority, or convert research
+practice into canon.
+
+![The Wonder Operator — symbolic Constitution companion plate](../visuals/nexah-constitution-wonder-operator-companion-plate-v1.png)
+
+*Symbolic companion plate — informative and non-normative. “The Wonder
+Operator” represents a human disposition, not a canonical Operator, technical
+component, or new architectural authority.*
 
 ## Article I — Bound before extending
 

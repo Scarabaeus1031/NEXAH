@@ -97,6 +97,11 @@ Ten review artifacts were created in `GOVERNANCE/constitution_review_01/`:
 This integration report was created separately at
 `GOVERNANCE/NEXAH_CONSTITUTION_REVIEW_REPORT.md`.
 
+One informative, non-normative companion visual was added at
+`GOVERNANCE/visuals/nexah-constitution-wonder-operator-companion-plate-v1.png`.
+It does not change the ten-artifact review deliverable and does not define a
+canonical Operator or architectural component.
+
 ## Existing files modified
 
 None.
@@ -116,10 +121,13 @@ None.
 Final verification reported:
 
 ```text
-?? APPLICATIONS/orientation_translation/reviews/program_reflection_01/
-?? GOVERNANCE/
+ M GOVERNANCE/NEXAH_CONSTITUTION_REVIEW_REPORT.md
+ M GOVERNANCE/constitution_review_01/CONSTITUTION_CANDIDATE_REVISION_01.md
+ M GOVERNANCE/constitution_review_01/README.md
+?? GOVERNANCE/visuals/
 ```
 
-The Program Reflection directory was already untracked before this review and
-was not modified. `GOVERNANCE/` contains only the eleven new files listed above.
-No commit and no push were performed.
+The Constitution review files had become tracked before this editorial follow-up.
+This follow-up modified only the candidate preamble, its review navigation, and
+this report, then added the informative companion visual. No commit and no push
+were performed by this follow-up.
