@@ -23,8 +23,11 @@ MODEL SPACE
 REPRESENTATION
 ```
 
-The arrows show how later review questions became possible. They do not make
-later reviews more authoritative than earlier ones.
+The sequence records historical question development. All five instruments
+remain available in parallel; later instruments neither supersede earlier ones
+nor prescribe a required workflow for future reviews.
+
+![NEXAH Review Toolbox — five review instruments with shared safeguards](REVIEW_TOOLBOX.png)
 
 ## Indexed reviews
 
@@ -80,9 +83,10 @@ toolbox only and will not define it.
 
 ## Visual brief
 
-The proposed overview is documented in
-[Review Toolbox Visual Brief](REVIEW_TOOLBOX_VISUAL_BRIEF.md). No overview image
-has been admitted yet.
+The visual above is an overview of the current toolbox. It summarizes but does
+not define the reviews. The
+[Review Toolbox Visual Brief](REVIEW_TOOLBOX_VISUAL_BRIEF.md) records its
+content and authority constraints.
 
 > NEXAH does not add authority when it adds an instrument.
 
