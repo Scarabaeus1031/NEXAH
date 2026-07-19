@@ -1,7 +1,7 @@
 schema_version: "1.0"
 review_stage: reader_orientation_traversability
 review_status: observed
-observed_at: "2026-07-15"
+observed_at: "2026-07-19T15:18:57+00:00"
 surface: public_arena_channel_contents
 policy:
   writes_to_arena: false
@@ -11,8 +11,8 @@ policy:
 summary:
   journeys: 3
   transitions: 15
-  clickable_present: 1
-  clickable_missing: 14
+  clickable_present: 3
+  clickable_missing: 12
 evidence:
   method: read_only_arena_api_and_public_interface_walkthrough
   api: "GET https://api.are.na/v3/channels/{channel_id}/contents"
@@ -25,16 +25,16 @@ journeys:
         to: {arena_channel_id: 5404615, title: "THE VISITOR’S GUIDE"}
         conceptual_status: confirmed_curated_path
         clickable_status: present
-        visible_link_source: public Channel connection in START
+        visible_link_source: public Channel connection in START at position 81
         reader_friction: none_at_transition
         recommended_manual_action: retain_and_label_as_primary_entry
       - from: {arena_channel_id: 5404615, title: "THE VISITOR’S GUIDE"}
         to: {arena_channel_id: 5421517, title: "THE LANGUAGE BOOK"}
         conceptual_status: confirmed_curated_path
-        clickable_status: missing
-        visible_link_source: none_observed
-        reader_friction: reader_must_return_to_search
-        recommended_manual_action: add_manual_continue_channel_connection
+        clickable_status: present
+        visible_link_source: public Channel connection in Visitor’s Guide at position 55
+        reader_friction: none_at_transition
+        recommended_manual_action: retain_as_beginner_continuation
       - from: {arena_channel_id: 5421517, title: "THE LANGUAGE BOOK"}
         to: {arena_channel_id: 5442781, title: "GEOMETRIA NOVA"}
         conceptual_status: confirmed_curated_path
@@ -62,10 +62,10 @@ journeys:
       - from: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
         to: {arena_channel_id: 5442721, title: "THE OPERATOR"}
         conceptual_status: confirmed_curated_path
-        clickable_status: missing
-        visible_link_source: none_observed
-        reader_friction: builder_entry_is_not_directly_walkable
-        recommended_manual_action: add_manual_builder_path_channel_connection
+        clickable_status: present
+        visible_link_source: public Channel connection in START at position 79
+        reader_friction: none_at_transition
+        recommended_manual_action: retain_as_builder_entry
       - from: {arena_channel_id: 5442721, title: "THE OPERATOR"}
         to: {arena_channel_id: 5393574, title: "THE OPERATOR MAP"}
         conceptual_status: confirmed_curated_path

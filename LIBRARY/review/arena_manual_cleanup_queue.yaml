@@ -10,7 +10,9 @@ policy:
 items:
   - id: ACQ-001
     priority: P0
-    review_state: accepted
+    review_state: completed
+    completed_at: "2026-07-19T15:07:36+00:00"
+    completion_evidence: BATCH_01_VERIFICATION.md#executed-actions
     action_type: entry_visibility
     affected_channel: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
     observed_problem: START is not privileged on the public Channels landing page.
@@ -26,7 +28,9 @@ items:
         - {order: 30, kind: channel, target_channel_id: 5404615, target_title: "THE VISITOR’S GUIDE"}
   - id: ACQ-002
     priority: P0
-    review_state: accepted
+    review_state: completed
+    completed_at: "2026-07-19T15:07:36+00:00"
+    completion_evidence: BATCH_01_VERIFICATION.md#executed-actions
     action_type: orientation_links
     affected_channel: {arena_channel_id: 5404615, title: "THE VISITOR’S GUIDE"}
     observed_problem: The Guide explains Library Rooms but contains no onward Channel connections.
@@ -78,7 +82,9 @@ items:
     automatic_write_authorized: false
   - id: ACQ-006
     priority: P1
-    review_state: accepted
+    review_state: completed
+    completed_at: "2026-07-19T15:07:36+00:00"
+    completion_evidence: BATCH_01_VERIFICATION.md#executed-actions
     action_type: builder_entry_link
     affected_channel: {arena_channel_id: 5178452, title: "01 — NEXAH · START · CORE ORIENTATION"}
     observed_problem: No Builder-path connection to Operator.
@@ -153,7 +159,9 @@ items:
     automatic_write_authorized: false
   - id: ACQ-013
     priority: P0
-    review_state: accepted
+    review_state: completed
+    completed_at: "2026-07-19T15:07:36+00:00"
+    completion_evidence: BATCH_01_VERIFICATION.md#executed-actions
     action_type: description_cleanup
     affected_channel: {arena_channel_id: 5386781, title: "FIELD ATLAS III — MORPHOLOGY"}
     observed_problem: "The description ends with: Ich finde, das passt inzwischen sehr gut zur gesamten Reihe:"

@@ -14,7 +14,9 @@ class CleanupStatusTests(unittest.TestCase):
         report = cleanup_status()
         self.assertEqual("pass", report["status"])
         self.assertEqual(16, report["summary"]["total"])
-        self.assertEqual(16, report["summary"]["open"])
+        self.assertEqual(12, report["summary"]["open"])
+        self.assertEqual(4, report["summary"]["by_state"]["completed"])
+        self.assertEqual(12, report["summary"]["by_state"]["pending"])
         self.assertEqual("ACQ-001", report["items"][0]["id"])
         self.assertEqual("ACQ-016", report["items"][-1]["id"])
 
