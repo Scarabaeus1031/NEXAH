@@ -9,6 +9,8 @@ Living Library, and the Editorial Operating System. Each has a separate
 responsibility and authority. Supporting architecture, validation, prototype,
 and historical areas make those responsibilities inspectable.
 
+**Current-state review:** July 19, 2026
+
 ---
 
 ## 🚀 Start Here
@@ -22,6 +24,7 @@ and historical areas make those responsibilities inspectable.
 | Evaluate applications and claims | **[APPLICATIONS/README.md](APPLICATIONS/README.md)** |
 | Explore Works and reader journeys | **[LIBRARY/README.md](LIBRARY/README.md)** |
 | Understand editorial governance | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
+| Inspect non-canonical review instruments | **[Review Toolbox](EDITORIAL_OPERATING_SYSTEM/living_concepts/review/README.md)** |
 | Inspect provisional constitutional principles | **[GOVERNANCE/constitution_review_01/README.md](GOVERNANCE/constitution_review_01/README.md)** |
 | Inspect architecture and system state | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
 | Run the executable Demonstrator path | **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/README.md)** |
@@ -52,8 +55,12 @@ NEXAH/
 ├── GOVERNANCE/                   cross-system constitutional review
 ├── PROTO_CORE/                   demonstrators and prototype lineages
 ├── EXPERIMENTAL/                 active labs and historical systems
-├── testkit/                      evidence and outcome validation gates
+├── validation/                   reproducible validation campaigns and records
+├── tests/                        automated repository verification
+├── testkit/                      observed-evidence and outcome gates
+├── assets/                       maintained public documentation assets
 ├── README.md           repository overview
+├── REPOSITORY_MAP.md   directory and reader navigation
 ├── CONTRIBUTING.md     contribution and subsystem routing
 ├── CODE_OF_CONDUCT.md  participation expectations
 └── SECURITY.md         security scope and reporting
@@ -68,7 +75,7 @@ Orientation Language     → semantics
 Implementations          → executable behavior
 Applications             → domain use and validation
 Living Library           → editorial communication
-Editorial Operating OS   → governance and controlled execution
+Editorial Operating System → governance and controlled execution
 ```
 
 Cross-cutting architecture, provenance, validation, security, and version
@@ -108,6 +115,12 @@ Its main README carries the coherent architectural narrative. A separate
 system-boundary document records changing implementation facts, while dated
 visual snapshots preserve historical states without presenting them as current
 forever.
+
+The non-canonical **[Review Toolbox](EDITORIAL_OPERATING_SYSTEM/living_concepts/review/README.md)**
+indexes five bounded review instruments for recurrence, independence, process,
+model-space, and representation analysis. These reviews preserve
+counterexamples and uncertainty; they do not create Registry, Operator, OLS,
+Kernel, or Architecture authority.
 
 ---
 
@@ -178,15 +191,20 @@ implementations rather than a stable public API.
 
 It currently provides:
 
-- trajectory preprocessing and embedding
-- clustered regime representation
-- transition and stability summaries
-- simple structural comparison
-- exploratory navigation and intervention heuristics
-- the `nexah` command-line interface
+- the frozen v0.7 trajectory and state-space baseline;
+- typed source adapters, Orientation States, evidence-bound reports, and
+  append-only episodic memory;
+- Network Orientation and IEEE Geometry application modules;
+- Living Library queries, health checks, snapshots, traversability reports,
+  and the separately guarded Editorial Writer;
+- a read-only Living Concepts Answer Adapter;
+- the `nexah` command-line interface.
 
-This package is a minimal operational kernel. It does not yet integrate every
-research mechanism found in `PROTO_CORE`, `RESEARCH`, or `APPLICATIONS`.
+The package remains a bounded implementation collection rather than one unified
+runtime for every repository lineage. Its Library and Living Concepts modules
+do not acquire editorial or semantic authority merely by being executable, and
+it does not integrate every research mechanism found in `PROTO_CORE`,
+`RESEARCH`, or `APPLICATIONS`.
 
 ---
 
@@ -242,12 +260,34 @@ pilots, Reflections, Neighborhoods, comparisons, studies, and reviews. Its
 methodological evidence participates conceptually in Research and Architecture;
 it does not establish a canonical Method.
 
+Its maintained local entry point distinguishes pilots, neighborhoods,
+comparisons, reviews, studies, provisional methods, and audited visualization
+packages without presenting them as one maturity ladder.
+
 The current public-use plan is
 **[IEEE_GEOMETRY_SHOWCASE_PLAN.md](APPLICATIONS/power_systems/IEEE_GEOMETRY_SHOWCASE_PLAN.md)**.
 It translates the historical Tube concept into a parameterized IEEE state
 family with explicit benchmark, simulation, observation, and outcome labels.
 
 `APPLICATIONS/archive/` preserves superseded and historical application demos.
+
+---
+
+## ✅ Cross-Cutting Evidence and Verification
+
+These areas support multiple subsystems without becoming additional subsystem
+authorities:
+
+| Area | Role |
+|---|---|
+| **[validation/](validation/)** | Reproducible validation campaigns, canonical results, summaries, and evidence records |
+| **[tests/](tests/)** | Automated tests for the maintained package, applications, Library, Living Concepts, and repository contracts |
+| **[testkit/](testkit/README.md)** | Observed-evidence admission and outcome-boundary instruments |
+| **[assets/](assets/)** | Maintained public documentation visuals used by repository entry points |
+
+Passing tests establishes software consistency within their declared scope. It
+does not establish domain truth, scientific universality, operational safety,
+or authority beyond the owning subsystem.
 
 ---
 
@@ -340,6 +380,14 @@ EDITORIAL_OPERATING_SYSTEM/README.md
 → governance and review
 → explanation contracts
 → controlled execution and verification
+```
+
+For bounded, non-canonical review instruments:
+
+```text
+EDITORIAL_OPERATING_SYSTEM/living_concepts/review/README.md
+→ choose a review function
+→ inspect its evidence, counterexamples, and disposition
 ```
 
 ### Principles and governance reviewer
