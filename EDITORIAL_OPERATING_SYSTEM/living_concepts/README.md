@@ -82,6 +82,7 @@ repository's stricter observed-evidence and Outcome Firewall semantics.
 
 | Artifact | Purpose |
 |---|---|
+| [Review Toolbox](review/README.md) | Entry point for the non-canonical recurrence → independence → process → model-space → representation review sequence; includes questions, dispositions, dependencies, and authority boundaries |
 | [Concept Census](review/CONCEPT_CENSUS.md) · [YAML](review/concept_census.yaml) | Candidate inventory and exclusions |
 | [Alias Review](review/CONCEPT_ALIAS_REVIEW.md) · [YAML](review/concept_alias_review.yaml) | Proposed alias groups and merge warnings |
 | [Occurrence Sample](review/CONCEPT_OCCURRENCE_SAMPLE.md) · [YAML](review/concept_occurrence_sample.yaml) | Five cases and 15 verified occurrences |
