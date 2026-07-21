@@ -26,6 +26,10 @@ not described as publicly complete until its public state is observable.
 - [x] Public remote `main` contains commit
   `6ac32ec481e8932fd388fef1dd2dc2cfd2529117` with the adopted governance
   baseline.
+- [ ] Operations documentation commit
+  `1de5c4b6a4e2804009b0c599624b0f809cc7997f` is published. It is committed
+  locally and one commit ahead of `origin/main`; publishing requires explicit
+  GitHub authorization.
 
 **Package result:** complete.
 
@@ -109,9 +113,9 @@ releasable.
 
 **Core mismatch:** `workspace.yaml` pins
 `9f79bb06210402c40c9ef7d9937ca00d86c092b1`. The connected NEXAH checkout is
-now at `6ac32ec481e8932fd388fef1dd2dc2cfd2529117`. The newer commit contains
-Framework/publication and Governance evolution; it is not automatically an
-approved ORION Core baseline. Operations has not changed the pin.
+now at `1de5c4b6a4e2804009b0c599624b0f809cc7997f`. It is clean, but it differs
+from the approved ORION Core baseline. The newer commits contain publication
+and Governance work; Operations has not changed the pin.
 
 **Package result:** documentation complete; compatibility, license, public
 identity and clean baseline remain blocking.
@@ -125,11 +129,11 @@ identity and clean baseline remain blocking.
 - [x] Software and documentation license scopes are explicit.
 - [x] Release and version history is clarified without changing tags.
 - [x] Local full test suite passes: 302 tests.
-- [x] Public smoke jobs for Python 3.10, 3.11 and 3.12 passed on commit
-  `829c8684947d8798136b4819afc394cd5a829e54`.
+- [x] Public smoke jobs for Python 3.10, 3.11 and 3.12 passed on public commit
+  `6ac32ec481e8932fd388fef1dd2dc2cfd2529117`.
 - [ ] Public full CI suite is green on the current launch candidate. The
-  previous run failed in the repository test step; a new run for
-  `6ac32ec481e8932fd388fef1dd2dc2cfd2529117` is pending verification.
+  repository test job for public commit `6ac32ec…` remains in progress, and
+  local launch commit `1de5c4b6…` has not been authorized for push.
 - [ ] GitHub homepage field is corrected; its current target is stale.
   **GitHub permission required.**
 - [ ] GitHub description and topics reflect the current Framework role.
@@ -205,6 +209,9 @@ remains external.
    its exact Core mismatch and valid resolution paths.
 6. Current, Historical and Archive repository classes are recorded.
 7. No architecture, contract, runtime behavior, evidence or semantics changed.
+8. Local Framework verification passed with 302 tests; Experience verification
+   passed with 53 tests and 195 generated pages; ORION tests passed and its
+   workspace check now reports only the exact Core revision mismatch.
 
 ## Remaining Owner Actions
 
@@ -242,6 +249,8 @@ The owner must confirm:
 - configure remotes and public metadata;
 - correct NEXAH homepage, description and topics;
 - configure public CI and required checks;
+- authorize publication of local Framework commit `1de5c4b6…` (no force-push
+  is required; local `main` is one commit ahead of public `main`);
 - update profile pins and historical repository status;
 - publish approved tags/releases only after their gates pass.
 
@@ -254,7 +263,7 @@ has advanced. Launch remains blocked by:
 
 - unconfirmed licenses for ORION and Experience;
 - missing public ORION and Experience repository identities;
-- unresolved ORION Core compatibility and non-clean ORION baseline;
+- unresolved ORION Core compatibility and unconsolidated ORION baseline;
 - public Framework CI not yet green on the current candidate;
 - stale public GitHub metadata and historical pins;
 - unresolved domain/TLS/hosting state;
