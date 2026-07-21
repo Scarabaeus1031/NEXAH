@@ -75,3 +75,7 @@ Publication readiness is assessed in
 [`OPERATIONS_01_PUBLIC_LAUNCH_PREPARATION.md`](OPERATIONS_01_PUBLIC_LAUNCH_PREPARATION.md).
 Operations reviews apply the Constitution and Governance to continuity and
 publication without acquiring authority over their subjects.
+
+The living operational source of truth for the first public launch is
+[`OPERATIONS_02_LAUNCH_EXECUTION.md`](OPERATIONS_02_LAUNCH_EXECUTION.md). It
+records only verified completion and explicit external or owner blockers.

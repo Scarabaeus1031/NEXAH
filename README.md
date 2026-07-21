@@ -19,6 +19,7 @@ problem of orientation.
 
 | I want to… | Begin here |
 |---|---|
+| Enter the public Experience | **[nexah.de](https://nexah.de)** — public host remains subject to the Operations launch gate |
 | Understand the purpose and principles | **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** · **[Governance Index](GOVERNANCE/README.md)** · **[NEXAH Manifesto](MANIFESTO.md)** |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
@@ -74,6 +75,9 @@ non-canonical historical evidence in
 - **Library and Editorial infrastructure** operate within documented human-governance boundaries.
 
 These are different maturity statements, not one repository-wide certification.
+The existing tags, public releases and current package version are explained in
+**[Release and Version History](RELEASES.md)**; no version in one responsibility
+area versions the entire ecosystem.
 
 ---
 
@@ -168,6 +172,8 @@ evidence, ownership, provenance, and review rules.
 Architectural status belongs in **[Architecture](ARCHITECTURE/README.md)**;
 normative language work belongs in
 **[Orientation Language](ORIENTATION_LANGUAGE/README.md)**.
+Release and tag meanings are recorded in **[Release and Version
+History](RELEASES.md)**.
 
 Software is released under the **[Apache License 2.0](LICENSE)**.
 Original NEXAH documentation and repository research material are released
