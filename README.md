@@ -19,7 +19,7 @@ problem of orientation.
 
 | I want to… | Begin here |
 |---|---|
-| Understand the purpose and principles | **[NEXAH Manifesto](MANIFESTO.md)** · **[Constitution Candidate](GOVERNANCE/constitution_review_01/CONSTITUTION_CANDIDATE_REVISION_01.md)** *(provisional, non-canonical)* |
+| Understand the purpose and principles | **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** · **[Governance Index](GOVERNANCE/README.md)** · **[NEXAH Manifesto](MANIFESTO.md)** |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
 | Inspect research and evidence | **[Research Portal](RESEARCH/README.md)** |
@@ -56,9 +56,12 @@ semantics; implementations execute behavior; conformance must be demonstrated.**
 The detailed responsibility and relationship map lives in
 **[Architecture](ARCHITECTURE/README.md)**.
 
-Cross-system constitutional work is preserved in **[Governance](GOVERNANCE/constitution_review_01/README.md)**.
-It is a provisional review area, not a seventh subsystem and not an authority
-over the six responsible subsystems.
+The adopted **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)**
+is the highest governance document. The six repository subsystems are concrete
+responsibility areas beneath that constitutional baseline; they are not
+additional constitutional Houses. Earlier candidate work remains preserved as
+non-canonical historical evidence in
+**[Constitution Review 01](GOVERNANCE/constitution_review_01/README.md)**.
 
 ---
 
@@ -149,9 +152,10 @@ NEXAH/
 ```
 
 Supporting architecture, validation, prototype, and historical areas are
-documented in the **[full Repository Map](REPOSITORY_MAP.md)**. Cross-system
-constitutional review is kept separately under `GOVERNANCE/` without changing
-the six-subsystem architecture.
+documented in the **[full Repository Map](REPOSITORY_MAP.md)**. The
+**[Governance Index](GOVERNANCE/README.md)** records the authority order from
+Constitution through Governance and Architecture to implementation and derived
+artifacts without changing the six-subsystem architecture.
 
 ---
 

@@ -2,6 +2,12 @@
 
 **A human-readable visual library with a small canonical layer for orientation.**
 
+The adopted **[NEXAH Ecosystem Constitution v1.0](../GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)**
+defines the Library House: Library remembers. This directory is the current
+canonical home of Library Registry identity, Works, Editions and accepted
+publication metadata. Public and Experience projections remain derived from
+that authority.
+
 > **The Library comes first. The Kernel learns from the Library—not the other
 > way around.**
 

@@ -1,5 +1,10 @@
 # NEXAH Constitution Review 01
 
+> **Historical, non-canonical review.** This investigation preceded the adopted
+> [NEXAH Ecosystem Constitution v1.0](../ECOSYSTEM_CONSTITUTION.md). It is
+> preserved as governance evidence and no longer represents the current
+> constitutional entry point.
+
 **Review date:** 18 July 2026  
 **Status:** completed research review  
 **Candidate status:** provisional, non-canonical, pending human review

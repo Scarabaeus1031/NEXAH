@@ -1,5 +1,10 @@
 # NEXAH Constitution Review Report
 
+> **Historical review record.** This report predates the adopted
+> [NEXAH Ecosystem Constitution v1.0](ECOSYSTEM_CONSTITUTION.md). Its candidate
+> and findings remain non-canonical evidence and do not compete with the
+> adopted constitutional baseline.
+
 **Review:** Historical Reconstruction, Current-State Review, and Provisional
 Update 01  
 **Date:** 18 July 2026  

@@ -3,6 +3,12 @@
 This directory explains how the current NEXAH repository is organized, how its
 six coordinated subsystems relate, and which parts are actually implemented.
 
+Architecture is subordinate to the adopted
+**[NEXAH Ecosystem Constitution v1.0](../GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)**
+and its **[Governance Index](../GOVERNANCE/README.md)**. The Constitution defines
+the Houses and their authority; this directory describes concrete structures
+within those boundaries.
+
 At repository level, NEXAH is an **evidence-bound orientation ecosystem**. It
 does not have one unified runtime architecture. Its current architecture keeps
 six responsibilities distinct:
