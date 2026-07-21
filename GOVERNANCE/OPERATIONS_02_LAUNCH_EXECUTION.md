@@ -82,10 +82,11 @@ decision.
   digest.
 - [x] Local `pnpm verify` gate is defined.
 - [x] Experience is consolidated in local publication baseline commit
-  `a1e031cb51978ca1207851cc7f292a4a5c37b115` (executable alpha:
+  `66ea7eb4d0799baffd75392d0d28f3878e72ed50` (executable alpha:
   `28d099c89a109a58385335652c394242ebea278d`).
-- [ ] Repository-wide license is approved and added. **Owner confirmation
-  required; no license is inferred from NEXAH or ORION.**
+- [x] Apache 2.0 software and CC BY 4.0 original-content scopes are approved
+  and recorded.
+- [x] Public repository identity `NEXAH-Experience` is approved.
 - [ ] Public GitHub repository and remote are established. **GitHub permission
   required.**
 - [ ] Immutable ORION input revision is recorded. **Blocked by ORION baseline.**
@@ -105,17 +106,18 @@ releasable.
 - [x] Publication baseline and exact Release Gate conditions are documented.
 - [x] Core mismatch is explained without weakening the Release Gate.
 - [x] ORION remains `0.3.0-dev.0`; no stable release is claimed.
-- [ ] Repository-wide license is approved and added. **Owner confirmation
-  required.**
+- [x] Apache 2.0 software and CC BY 4.0 original-content scopes are approved
+  and recorded.
+- [x] Public repository identity `NEXAH-ORION` is approved.
 - [ ] Public GitHub repository and remote are established. **GitHub permission
   required.**
 - [x] ORION working tree is consolidated into local publication baseline commit
-  `18d8a454842c8f25301ca4d3118f7ad903de55a2` (executable baseline:
+  `b86b641aee2e284da12427e4f77c822a3abd0a27` (executable baseline:
   `0a9c031e3d71b75abd007e12b493acc93d8e4cc8`).
 - [x] Core compatibility is verified against the existing unchanged detached
   pin.
 - [x] Development Release Gate passes in an isolated clean workspace containing
-  ORION `18d8a45…` and Core `9f79bb…`.
+  ORION `b86b641…` and Core `9f79bb…`.
 
 **Core mismatch:** `workspace.yaml` pins
 `9f79bb06210402c40c9ef7d9937ca00d86c092b1`. The connected clean NEXAH
@@ -123,8 +125,9 @@ checkout is on the newer local Operations series. It therefore differs from
 the approved ORION Core baseline. The newer commits contain publication and
 Governance work; Operations has not changed the pin.
 
-**Package result:** local baseline and configured-pin compatibility complete;
-license, public identity and owner adoption remain blocking.
+**Package result:** local baseline, licensing, repository identity and
+configured-pin compatibility complete; public remote and owner adoption remain
+blocking.
 
 ### Package F — Framework Publication
 
@@ -231,18 +234,14 @@ remains external.
 
 The owner must confirm:
 
-1. **License for ORION:** approve a repository-wide code license and any
-   separate documentation/content license.
-2. **License for Experience:** approve a repository-wide code license and any
-   separate editorial/assets license.
-3. **Framework release identity:** name and version of the next public
+1. **Framework release identity:** name and version of the next public
    Framework baseline.
-4. **ORION Core adoption:** approve the successfully verified original
+2. **ORION Core adoption:** approve the successfully verified original
    `9f79bb…` pin for the first publication, or explicitly request qualification
    of a newer NEXAH revision.
-5. **Legal facts:** applicable USt-IdNr./W-IdNr., current register data and
+3. **Legal facts:** applicable USt-IdNr./W-IdNr., current register data and
    whether a data protection officer exists.
-6. **Historical repositories:** approve archive status, historical banners,
+4. **Historical repositories:** approve archive status, historical banners,
    license treatment and removal from profile pins.
 
 ## Remaining External Actions
@@ -277,8 +276,8 @@ The owner must confirm:
 The public Governance baseline is now present and local publication preparation
 has advanced. Launch remains blocked by:
 
-- unconfirmed licenses for ORION and Experience;
-- missing public ORION and Experience repository identities;
+- missing public repositories and remotes for the approved identities
+  `NEXAH-ORION` and `NEXAH-Experience`;
 - owner adoption of the verified ORION/Core pair;
 - public Framework CI not yet green on the current candidate;
 - stale public GitHub metadata and historical pins;

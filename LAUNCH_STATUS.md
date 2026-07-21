@@ -1,8 +1,8 @@
 # NEXAH Launch Status
 
-**Control:** Launch Control 01
+**Control:** Launch Control 02
 
-**Date:** 21 July 2026
+**Date:** 22 July 2026
 
 **Status:** **HOLD — local execution complete; external authority required**
 
@@ -25,14 +25,14 @@ history remains in `GOVERNANCE/OPERATIONS_01_PUBLIC_LAUNCH_PREPARATION.md` and
   `nexah-0.7.0-py3-none-any.whl`, 157918 bytes,
   SHA-256 `41128146de0c84ba20fa81761afd0b09abfc079f9bf00444bd64838663ba76e7`.
 - ORION is consolidated locally. Its complete publication baseline is commit
-  `18d8a454842c8f25301ca4d3118f7ad903de55a2`; executable work entered at
+  `b86b641aee2e284da12427e4f77c822a3abd0a27`; executable work entered at
   `0a9c031e3d71b75abd007e12b493acc93d8e4cc8` and was not changed afterwards.
 - ORION tests pass: 75 tests, one optional Ollama integration test skipped.
-- ORION `18d8a45…` plus unchanged Core pin
+- ORION `b86b641…` plus unchanged Core pin
   `9f79bb06210402c40c9ef7d9937ca00d86c092b1` passes the complete Development
   Release Gate in an isolated clean workspace.
 - Experience is consolidated locally at publication baseline commit
-  `a1e031cb51978ca1207851cc7f292a4a5c37b115`; its executable alpha entered at
+  `66ea7eb4d0799baffd75392d0d28f3878e72ed50`; its executable alpha entered at
   `28d099c89a109a58385335652c394242ebea278d` and was not changed afterwards.
 - Experience verification passes: Astro reports no diagnostics, 53 tests pass,
   195 pages build, and the internal-link check finds no broken links.
@@ -40,22 +40,23 @@ history remains in `GOVERNANCE/OPERATIONS_01_PUBLIC_LAUNCH_PREPARATION.md` and
   are prepared in `docs/DEPLOYMENT_READINESS.md`.
 - Security, contribution, conduct, publication baseline, pull-request guidance
   and reviewable repository metadata are prepared wherever locally possible.
+- Software licensing is fixed as Apache 2.0 for Framework, ORION and
+  Experience. Original documentation, specifications, research, books and
+  visual material remain under CC BY 4.0 where applicable.
+- Public repository identities are approved as `NEXAH`, `NEXAH-ORION` and
+  `NEXAH-Experience`; no repository was renamed or created locally.
 - No architecture, Governance, semantic contract, runtime authority or Core
   pin was changed.
 
 ## Waiting for Owner
 
-1. Approve the repository-wide ORION license and any separate documentation
-   license.
-2. Approve the Experience code license and the license scope for original
-   editorial content and assets.
-3. Assign the next Framework release name and tag. Existing tags remain
+1. Assign the next Framework release name and tag. Existing tags remain
    historical and must not be reused.
-4. Approve publication of ORION with the already verified Core pin `9f79bb…`,
+2. Approve publication of ORION with the already verified Core pin `9f79bb…`,
    or explicitly request a separate qualification of a newer Framework commit.
-5. Confirm whether Haptikdesign GmbH has a publishable USt-IdNr. or W-IdNr. and
+3. Confirm whether Haptikdesign GmbH has a publishable USt-IdNr. or W-IdNr. and
    whether a Datenschutzbeauftragter is appointed.
-6. Confirm historical-repository archive status, licensing, banners and removal
+4. Confirm historical-repository archive status, licensing, banners and removal
    from canonical profile pins.
 
 No other owner decision is currently known.
@@ -82,8 +83,8 @@ No DNS record, hosting endpoint or retention value has been guessed.
 ## Waiting for GitHub
 
 1. Authorize a normal push of local NEXAH `main`; no force-push is required.
-2. Create or confirm the public ORION and Experience repositories, visibility
-   and remotes.
+2. Create public repositories `NEXAH-ORION` and `NEXAH-Experience`, then
+   configure their remotes without renaming either local repository.
 3. Apply the prepared repository descriptions, topics, homepage fields and
    canonical profile pins from each `.github/REPOSITORY_METADATA.md`.
 4. Add public CI after ORION's public immutable URL exists; Experience CI must
@@ -106,7 +107,8 @@ does not replace the required green run on the final candidate.
 
 GO requires exactly these conditions:
 
-- owner decisions above are recorded and legal placeholders are resolved;
+- remaining owner decisions above are recorded and legal placeholders are
+  resolved;
 - local NEXAH commits and the approved ORION and Experience baselines are
   public under their confirmed repository identities and licenses;
 - the owner-approved Framework release candidate has green public CI and an
@@ -122,7 +124,9 @@ verification are no longer launch blockers.
 
 ## Immediate Next Action
 
-**Owner: approve the ORION and Experience licensing scopes.**
+**GitHub owner: create the public `NEXAH-ORION` and `NEXAH-Experience`
+repositories.**
 
-This is the first action because public repository creation, contribution and
-deployment must not proceed with an intentionally unresolved license.
+This is the first action because licensing and repository identities are now
+settled, while remotes, public CI and immutable cross-links depend on those two
+repositories existing.

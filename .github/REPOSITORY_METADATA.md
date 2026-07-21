@@ -14,6 +14,8 @@ Operations projection.
 - **Visibility:** preserve the current public setting.
 - **Primary pin:** yes, after removing historical repositories from canonical
   profile pins.
+- **Community files:** `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`,
+  issue templates and pull-request guidance are prepared.
 
 The description does not claim production readiness, universal validity or
 autonomous decision authority.

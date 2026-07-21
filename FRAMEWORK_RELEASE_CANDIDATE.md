@@ -23,6 +23,12 @@ The candidate publishes the maintained NEXAH Framework repository, including:
 The candidate is not an ecosystem-wide version, ORION release, Experience
 release, production-readiness declaration or universal scientific claim.
 
+Approved publication identities are `NEXAH` for this Framework,
+`NEXAH-ORION` for deterministic navigation and `NEXAH-Experience` for the
+public presentation repository. Software licensing is Apache 2.0; original
+documentation, specifications, research, books and visual material remain
+under CC BY 4.0 where applicable.
+
 ## Compatibility summary
 
 | Surface | Candidate statement |
