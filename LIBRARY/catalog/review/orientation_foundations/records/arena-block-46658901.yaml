@@ -1,0 +1,58 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:46658901
+publication:
+  catalog_key: arena:5250350
+  arena_channel_id: 5250350
+  title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+source_block:
+  arena_block_id: 46658901
+  sequence_index: 19
+  title: 14_THE BRIDGE Between Vision and Validation
+  url: https://www.are.na/block/46658901
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658901/original_f7b9025500d0ef35aeecf02bb361a06a.png?1780347621
+  source_fingerprint: d25aa06462cd40dd8a7b5ba450fba8cc8f018235bb7dca5303229adca227f6d4
+visual_role: transition
+visible_text:
+  transcription_status: partial
+  transcription: The Bridge — Between Vision and Validation.
+research_elements:
+  definitions: []
+  questions: []
+  observations: []
+  hypotheses: []
+  methods:
+  - statement: The page connects vision, structure, validation, understanding, and
+      impact as a bidirectional living process.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658901
+      source_url: https://www.are.na/block/46658901
+      note: null
+    status: publication_assertion
+  models:
+  - statement: Vision → structural language → scientific language → actionable language
+      is presented as a translation bridge.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658901
+      source_url: https://www.are.na/block/46658901
+      note: null
+    status: publication_assertion
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts: []
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: The bridge is an editorial architecture. It does not show that validation
+  has occurred or that translated ideas are true.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

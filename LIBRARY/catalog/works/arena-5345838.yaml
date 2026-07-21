@@ -1,0 +1,322 @@
+schema_version: '0.1'
+catalog_key: arena:5345838
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: 🧭 THE LANDINGS — WHITEBOARD SERIES
+source:
+  arena_channel_id: 5345838
+  arena_slug: the-landings-whiteboard-series
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/the-landings-whiteboard-series
+  live_title: 🧭 THE LANDINGS  — WHITEBOARD SERIES
+  description: 'Notes from the NEXAH Stairway.
+
+    A collection of visual whiteboards exploring recurring patterns, structure, navigation, observation and meaning.
+
+    Each board represents a landing — a temporary viewpoint from which a larger landscape becomes visible.
+
+    The goal is not certainty.
+
+    The goal is deeper understanding and better questions.
+
+    We do not climb toward answers.
+
+    We spiral toward orientation.'
+  visibility: closed
+  state: available
+  member_count: 10
+  created_at: '2026-06-22T23:17:47Z'
+  updated_at: '2026-06-22T23:28:14Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: work
+  form: whiteboard
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH Whiteboard Series
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Whiteboard Series
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 47230039
+  title: THE LANDINGS NOTES FROM THE NEXAH STAIRWAY
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230039/original_c171c2bdb47d4aeb741669bf507a7149.png?1782170363
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzOS9vcmlnaW5hbF9jMTcxYzJiZGI0N2Q0YWViNzQxNjY5YmY1MDdhNzE0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzOS9vcmlnaW5hbF9jMTcxYzJiZGI0N2Q0YWViNzQxNjY5YmY1MDdhNzE0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzOS9vcmlnaW5hbF9jMTcxYzJiZGI0N2Q0YWViNzQxNjY5YmY1MDdhNzE0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzOS9vcmlnaW5hbF9jMTcxYzJiZGI0N2Q0YWViNzQxNjY5YmY1MDdhNzE0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1536
+  height: 1024
+  aspect_ratio: 1.5
+  content_type: image/png
+  filename: c171c2bdb47d4aeb741669bf507a7149.png
+  file_size: 2789382
+  alt_text: null
+structure:
+  block_count: 10
+  titled_block_count: 10
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    question:
+    - sequence_index: 7
+      arena_block_id: 47230027
+      title: WHITEBOARD 6.0 THE THE FINAL QUESTION
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47230039
+  block_type: Image
+  title: THE LANDINGS NOTES FROM THE NEXAH STAIRWAY
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-06-22T23:19:22Z'
+  updated_at: '2026-06-22T23:19:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230039/original_c171c2bdb47d4aeb741669bf507a7149.png?1782170363
+    variants: *id001
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c171c2bdb47d4aeb741669bf507a7149.png
+    file_size: 2789382
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47230035
+  block_type: Image
+  title: NEXAH WHITEBOARD 1.0 WHY DOES THE SAME CORE GEOMETRY REAPPEAR ACROSS ALL SYSTEMS?
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-06-22T23:19:06Z'
+  updated_at: '2026-06-22T23:19:09Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230035/original_5b3ab44eed4f244480087982d321f940.png?1782170347
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNS9vcmlnaW5hbF81YjNhYjQ0ZWVkNGYyNDQ0ODAwODc5ODJkMzIxZjk0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNS9vcmlnaW5hbF81YjNhYjQ0ZWVkNGYyNDQ0ODAwODc5ODJkMzIxZjk0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNS9vcmlnaW5hbF81YjNhYjQ0ZWVkNGYyNDQ0ODAwODc5ODJkMzIxZjk0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNS9vcmlnaW5hbF81YjNhYjQ0ZWVkNGYyNDQ0ODAwODc5ODJkMzIxZjk0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5b3ab44eed4f244480087982d321f940.png
+    file_size: 1593766
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47230034
+  block_type: Image
+  title: NEXAH WHITEBOARD 2.0 FROM AXIOMS TO SYSTEMS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-06-22T23:19:01Z'
+  updated_at: '2026-06-22T23:19:04Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230034/original_daa6d4eebebeb29093ba99782c6eb855.png?1782170342
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNC9vcmlnaW5hbF9kYWE2ZDRlZWJlYmViMjkwOTNiYTk5NzgyYzZlYjg1NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNC9vcmlnaW5hbF9kYWE2ZDRlZWJlYmViMjkwOTNiYTk5NzgyYzZlYjg1NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNC9vcmlnaW5hbF9kYWE2ZDRlZWJlYmViMjkwOTNiYTk5NzgyYzZlYjg1NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzNC9vcmlnaW5hbF9kYWE2ZDRlZWJlYmViMjkwOTNiYTk5NzgyYzZlYjg1NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: daa6d4eebebeb29093ba99782c6eb855.png
+    file_size: 1675338
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47230031
+  block_type: Image
+  title: NEXAH WHITEBOARD 3.0 FROM PRINCIPLES TO NAVIGATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-06-22T23:18:54Z'
+  updated_at: '2026-06-22T23:18:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230031/original_0e30a1066b8d74b834fd2aa1b91816af.png?1782170336
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMS9vcmlnaW5hbF8wZTMwYTEwNjZiOGQ3NGI4MzRmZDJhYTFiOTE4MTZhZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMS9vcmlnaW5hbF8wZTMwYTEwNjZiOGQ3NGI4MzRmZDJhYTFiOTE4MTZhZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMS9vcmlnaW5hbF8wZTMwYTEwNjZiOGQ3NGI4MzRmZDJhYTFiOTE4MTZhZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMS9vcmlnaW5hbF8wZTMwYTEwNjZiOGQ3NGI4MzRmZDJhYTFiOTE4MTZhZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 0e30a1066b8d74b834fd2aa1b91816af.png
+    file_size: 1612315
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47230030
+  block_type: Image
+  title: WHITEBOARD 4.0 WHY DO HUMANS KEEP REDISCOVERING THE SAME PATTERNS?
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-06-22T23:18:52Z'
+  updated_at: '2026-06-22T23:18:56Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230030/original_7f3e7e4d3ef4cc871d8c72d9df6603b2.png?1782170333
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMC9vcmlnaW5hbF83ZjNlN2U0ZDNlZjRjYzg3MWQ4YzcyZDlkZjY2MDNiMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMC9vcmlnaW5hbF83ZjNlN2U0ZDNlZjRjYzg3MWQ4YzcyZDlkZjY2MDNiMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMC9vcmlnaW5hbF83ZjNlN2U0ZDNlZjRjYzg3MWQ4YzcyZDlkZjY2MDNiMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAzMC9vcmlnaW5hbF83ZjNlN2U0ZDNlZjRjYzg3MWQ4YzcyZDlkZjY2MDNiMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7f3e7e4d3ef4cc871d8c72d9df6603b2.png
+    file_size: 1581508
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47230028
+  block_type: Image
+  title: WHITEBOARD 5.0 THE OBSERVER- WHY STRUCTURE EXISTS FOR SOMEONE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-06-22T23:18:49Z'
+  updated_at: '2026-06-22T23:18:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230028/original_39eddd5bb1b372a4a8e987affa04b382.png?1782170331
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyOC9vcmlnaW5hbF8zOWVkZGQ1YmIxYjM3MmE0YThlOTg3YWZmYTA0YjM4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyOC9vcmlnaW5hbF8zOWVkZGQ1YmIxYjM3MmE0YThlOTg3YWZmYTA0YjM4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyOC9vcmlnaW5hbF8zOWVkZGQ1YmIxYjM3MmE0YThlOTg3YWZmYTA0YjM4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyOC9vcmlnaW5hbF8zOWVkZGQ1YmIxYjM3MmE0YThlOTg3YWZmYTA0YjM4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 39eddd5bb1b372a4a8e987affa04b382.png
+    file_size: 1679791
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47230027
+  block_type: Image
+  title: WHITEBOARD 6.0 THE THE FINAL QUESTION
+  description: null
+  page_role: page
+  editorial_roles:
+  - question
+  connection_position: 4
+  created_at: '2026-06-22T23:18:47Z'
+  updated_at: '2026-06-22T23:18:52Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230027/original_3bd87673133b5fb0774a99f5c2d1845d.png?1782170329
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNy9vcmlnaW5hbF8zYmQ4NzY3MzEzM2I1ZmIwNzc0YTk5ZjVjMmQxODQ1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNy9vcmlnaW5hbF8zYmQ4NzY3MzEzM2I1ZmIwNzc0YTk5ZjVjMmQxODQ1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNy9vcmlnaW5hbF8zYmQ4NzY3MzEzM2I1ZmIwNzc0YTk5ZjVjMmQxODQ1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNy9vcmlnaW5hbF8zYmQ4NzY3MzEzM2I1ZmIwNzc0YTk5ZjVjMmQxODQ1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3bd87673133b5fb0774a99f5c2d1845d.png
+    file_size: 2150139
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47230026
+  block_type: Image
+  title: WHITEBOARD 7.0 THE SPIRAL OF UNDERSTANDING
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-06-22T23:18:45Z'
+  updated_at: '2026-06-22T23:18:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230026/original_635ac07e7088f258bf76a0f9eae78c84.png?1782170326
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNi9vcmlnaW5hbF82MzVhYzA3ZTcwODhmMjU4YmY3NmEwZjllYWU3OGM4NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNi9vcmlnaW5hbF82MzVhYzA3ZTcwODhmMjU4YmY3NmEwZjllYWU3OGM4NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNi9vcmlnaW5hbF82MzVhYzA3ZTcwODhmMjU4YmY3NmEwZjllYWU3OGM4NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyNi9vcmlnaW5hbF82MzVhYzA3ZTcwODhmMjU4YmY3NmEwZjllYWU3OGM4NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 635ac07e7088f258bf76a0f9eae78c84.png
+    file_size: 1903056
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47230020
+  block_type: Image
+  title: NEXAH FRAMEWORK OVERVIEW THE STAIRWAY CONTINUES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-06-22T23:18:21Z'
+  updated_at: '2026-06-22T23:18:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230020/original_05fc0682c24045bbe342df7f4ec159e5.png?1782170303
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyMC9vcmlnaW5hbF8wNWZjMDY4MmMyNDA0NWJiZTM0MmRmN2Y0ZWMxNTllNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyMC9vcmlnaW5hbF8wNWZjMDY4MmMyNDA0NWJiZTM0MmRmN2Y0ZWMxNTllNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyMC9vcmlnaW5hbF8wNWZjMDY4MmMyNDA0NWJiZTM0MmRmN2Y0ZWMxNTllNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDAyMC9vcmlnaW5hbF8wNWZjMDY4MmMyNDA0NWJiZTM0MmRmN2Y0ZWMxNTllNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 05fc0682c24045bbe342df7f4ec159e5.png
+    file_size: 2399682
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47230108
+  block_type: Image
+  title: DESIGNING ORIENTATION WHITEBOARD SERIES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-06-22T23:22:05Z'
+  updated_at: '2026-06-22T23:22:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47230108/original_f0298495c4f571f0bc323a316b6e9bc3.png?1782170526
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDEwOC9vcmlnaW5hbF9mMDI5ODQ5NWM0ZjU3MWYwYmMzMjNhMzE2YjZlOWJjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDEwOC9vcmlnaW5hbF9mMDI5ODQ5NWM0ZjU3MWYwYmMzMjNhMzE2YjZlOWJjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDEwOC9vcmlnaW5hbF9mMDI5ODQ5NWM0ZjU3MWYwYmMzMjNhMzE2YjZlOWJjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIzMDEwOC9vcmlnaW5hbF9mMDI5ODQ5NWM0ZjU3MWYwYmMzMjNhMzE2YjZlOWJjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f0298495c4f571f0bc323a316b6e9bc3.png
+    file_size: 2415263
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

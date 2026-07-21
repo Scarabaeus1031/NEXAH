@@ -1,0 +1,631 @@
+schema_version: '0.1'
+catalog_key: arena:5246392
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH XV ATLAS — RELATIONAL CARTOGRAPHY OF HUMAN REALITY
+source:
+  arena_channel_id: 5246392
+  arena_slug: nexah-xv-atlas-relational-cartography-of-human-reality
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-atlas-relational-cartography-of-human-reality
+  live_title: NEXAH XV ATLAS Relational Cartography of Human Reality
+  description: "This atlas explores a simple proposition: \nReality is encountered through relations before it is encountered\
+    \ as objects.\nAcross fifteen interconnected plates, the atlas investigates perception, orientation, transition, navigation,\
+    \ culture, myth and meaning as expressions of relational structure. \nRather than describing a fixed worldview, it proposes\
+    \ a visual language for understanding how humans create orientation within complex realities.\nAn atlas of relations,\
+    \ transitions, fields and becoming."
+  visibility: closed
+  state: available
+  member_count: 20
+  created_at: '2026-05-31T22:36:02Z'
+  updated_at: '2026-06-01T21:14:02Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: relational_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH XV Atlas
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - XV Atlas
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46632935
+  title: NEX AH NEXAH XV • AT LAS•
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632935/original_fb180a747bec8a355bd4267abddddfca.png?1780267391
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjkzNS9vcmlnaW5hbF9mYjE4MGE3NDdiZWM4YTM1NWJkNDI2N2FiZGRkZGZjYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjkzNS9vcmlnaW5hbF9mYjE4MGE3NDdiZWM4YTM1NWJkNDI2N2FiZGRkZGZjYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjkzNS9vcmlnaW5hbF9mYjE4MGE3NDdiZWM4YTM1NWJkNDI2N2FiZGRkZGZjYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjkzNS9vcmlnaW5hbF9mYjE4MGE3NDdiZWM4YTM1NWJkNDI2N2FiZGRkZGZjYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: fb180a747bec8a355bd4267abddddfca.png
+  file_size: 3026956
+  alt_text: null
+structure:
+  block_count: 20
+  titled_block_count: 20
+  title_coverage: 1.0
+  foreword:
+  - sequence_index: 3
+    arena_block_id: 46632860
+    title: NEXAH ATLAS INDEX PLATE FOREWORD & AFTERWORD
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    plate:
+    - sequence_index: 3
+      arena_block_id: 46632860
+      title: NEXAH ATLAS INDEX PLATE FOREWORD & AFTERWORD
+    - sequence_index: 4
+      arena_block_id: 46632855
+      title: PLATE I RELATION PRECEDES MEASUREMENT
+    - sequence_index: 5
+      arena_block_id: 46632854
+      title: PLATE II THE CUT PRECEDES SPACE
+    - sequence_index: 6
+      arena_block_id: 46632853
+      title: PLATE III DEPTH EMERGES THROUGH RELATION
+    - sequence_index: 7
+      arena_block_id: 46632852
+      title: PLATE IV TRANSITION GENERATES WORLDS_ii
+    - sequence_index: 8
+      arena_block_id: 46632851
+      title: PLATE V ORIENTATION PRECEDES GEOMETRY
+    - sequence_index: 9
+      arena_block_id: 46632849
+      title: PLATE VI NAVIGATION EMERGES FROM RELATION
+    - sequence_index: 10
+      arena_block_id: 46632847
+      title: PLATE VII RETURN GENERATES STABILITY
+    - sequence_index: 11
+      arena_block_id: 46632846
+      title: PLATE VIII OPERATORS OF TRANSITION
+    - sequence_index: 12
+      arena_block_id: 46632845
+      title: PLATE IX FIELD NAVIGATION
+    - sequence_index: 13
+      arena_block_id: 46632840
+      title: PLATE X THE RELATIONAL FIELD
+    - sequence_index: 14
+      arena_block_id: 46632838
+      title: PLATE XI THE RELATIONAL HUMAN FIELD
+    - sequence_index: 15
+      arena_block_id: 46632837
+      title: PLATE XII PERCEPTION & DEPTH
+    - sequence_index: 16
+      arena_block_id: 46632835
+      title: PLATE XIII ARCHITECTURES OF ORIENTATION
+    - sequence_index: 17
+      arena_block_id: 46632834
+      title: PLATE XIV MYTHS, STORIES & SYMBOLIC FIELDS
+    - sequence_index: 19
+      arena_block_id: 46632833
+      title: PLATE XV THE MAPS OF MAPS
+    transition:
+    - sequence_index: 7
+      arena_block_id: 46632852
+      title: PLATE IV TRANSITION GENERATES WORLDS_ii
+    - sequence_index: 11
+      arena_block_id: 46632846
+      title: PLATE VIII OPERATORS OF TRANSITION
+    journey:
+    - sequence_index: 18
+      arena_block_id: 46632862
+      title: NEXAH XV ATLAS THE JOURNEY OF ORIENTATION
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46632935
+  block_type: Image
+  title: NEX AH NEXAH XV • AT LAS•
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 20
+  created_at: '2026-05-31T22:43:10Z'
+  updated_at: '2026-05-31T22:43:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632935/original_fb180a747bec8a355bd4267abddddfca.png?1780267391
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: fb180a747bec8a355bd4267abddddfca.png
+    file_size: 3026956
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46632865
+  block_type: Image
+  title: NEXAH XV ATLAS RELATIONAL FIELD ORIENTATION FIELD CLOSURE & CONTOUR Relational Cartography of Human Reality
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-05-31T22:38:17Z'
+  updated_at: '2026-05-31T22:38:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632865/original_fe9de0de10c138125735f6279e7e8c25.png?1780267098
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2NS9vcmlnaW5hbF9mZTlkZTBkZTEwYzEzODEyNTczNWY2Mjc5ZTdlOGMyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2NS9vcmlnaW5hbF9mZTlkZTBkZTEwYzEzODEyNTczNWY2Mjc5ZTdlOGMyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2NS9vcmlnaW5hbF9mZTlkZTBkZTEwYzEzODEyNTczNWY2Mjc5ZTdlOGMyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2NS9vcmlnaW5hbF9mZTlkZTBkZTEwYzEzODEyNTczNWY2Mjc5ZTdlOGMyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: fe9de0de10c138125735f6279e7e8c25.png
+    file_size: 3118296
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46632860
+  block_type: Image
+  title: NEXAH ATLAS INDEX PLATE FOREWORD & AFTERWORD
+  description: null
+  page_role: foreword
+  editorial_roles:
+  - plate
+  connection_position: 18
+  created_at: '2026-05-31T22:37:56Z'
+  updated_at: '2026-05-31T22:38:01Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632860/original_132b74741bbd566e4c38eebf6396b427.png?1780267078
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2MC9vcmlnaW5hbF8xMzJiNzQ3NDFiYmQ1NjZlNGMzOGVlYmY2Mzk2YjQyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2MC9vcmlnaW5hbF8xMzJiNzQ3NDFiYmQ1NjZlNGMzOGVlYmY2Mzk2YjQyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2MC9vcmlnaW5hbF8xMzJiNzQ3NDFiYmQ1NjZlNGMzOGVlYmY2Mzk2YjQyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2MC9vcmlnaW5hbF8xMzJiNzQ3NDFiYmQ1NjZlNGMzOGVlYmY2Mzk2YjQyNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 132b74741bbd566e4c38eebf6396b427.png
+    file_size: 3013472
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46632855
+  block_type: Image
+  title: PLATE I RELATION PRECEDES MEASUREMENT
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 17
+  created_at: '2026-05-31T22:37:49Z'
+  updated_at: '2026-05-31T22:37:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632855/original_283eb75dc003ccf556a88a8ba2b7eb6c.png?1780267070
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NS9vcmlnaW5hbF8yODNlYjc1ZGMwMDNjY2Y1NTZhODhhOGJhMmI3ZWI2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NS9vcmlnaW5hbF8yODNlYjc1ZGMwMDNjY2Y1NTZhODhhOGJhMmI3ZWI2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NS9vcmlnaW5hbF8yODNlYjc1ZGMwMDNjY2Y1NTZhODhhOGJhMmI3ZWI2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NS9vcmlnaW5hbF8yODNlYjc1ZGMwMDNjY2Y1NTZhODhhOGJhMmI3ZWI2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1197
+    height: 1314
+    aspect_ratio: 0.911
+    content_type: image/png
+    filename: 283eb75dc003ccf556a88a8ba2b7eb6c.png
+    file_size: 2162688
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46632854
+  block_type: Image
+  title: PLATE II THE CUT PRECEDES SPACE
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 16
+  created_at: '2026-05-31T22:37:47Z'
+  updated_at: '2026-05-31T22:37:50Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632854/original_8780e7f0d2b8bd9337f455ccee004349.png?1780267068
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NC9vcmlnaW5hbF84NzgwZTdmMGQyYjhiZDkzMzdmNDU1Y2NlZTAwNDM0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NC9vcmlnaW5hbF84NzgwZTdmMGQyYjhiZDkzMzdmNDU1Y2NlZTAwNDM0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NC9vcmlnaW5hbF84NzgwZTdmMGQyYjhiZDkzMzdmNDU1Y2NlZTAwNDM0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1NC9vcmlnaW5hbF84NzgwZTdmMGQyYjhiZDkzMzdmNDU1Y2NlZTAwNDM0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1210
+    height: 1300
+    aspect_ratio: 0.9308
+    content_type: image/png
+    filename: 8780e7f0d2b8bd9337f455ccee004349.png
+    file_size: 2459212
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46632853
+  block_type: Image
+  title: PLATE III DEPTH EMERGES THROUGH RELATION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 15
+  created_at: '2026-05-31T22:37:45Z'
+  updated_at: '2026-05-31T22:37:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632853/original_23c875797741d65e2db76d57675b213e.png?1780267066
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1My9vcmlnaW5hbF8yM2M4NzU3OTc3NDFkNjVlMmRiNzZkNTc2NzViMjEzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1My9vcmlnaW5hbF8yM2M4NzU3OTc3NDFkNjVlMmRiNzZkNTc2NzViMjEzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1My9vcmlnaW5hbF8yM2M4NzU3OTc3NDFkNjVlMmRiNzZkNTc2NzViMjEzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1My9vcmlnaW5hbF8yM2M4NzU3OTc3NDFkNjVlMmRiNzZkNTc2NzViMjEzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1212
+    height: 1298
+    aspect_ratio: 0.9337
+    content_type: image/png
+    filename: 23c875797741d65e2db76d57675b213e.png
+    file_size: 2557317
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46632852
+  block_type: Image
+  title: PLATE IV TRANSITION GENERATES WORLDS_ii
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  - transition
+  connection_position: 14
+  created_at: '2026-05-31T22:37:43Z'
+  updated_at: '2026-05-31T22:37:46Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632852/original_52914be0c39b536c3f64b5939dfb1537.png?1780267064
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1Mi9vcmlnaW5hbF81MjkxNGJlMGMzOWI1MzZjM2Y2NGI1OTM5ZGZiMTUzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1Mi9vcmlnaW5hbF81MjkxNGJlMGMzOWI1MzZjM2Y2NGI1OTM5ZGZiMTUzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1Mi9vcmlnaW5hbF81MjkxNGJlMGMzOWI1MzZjM2Y2NGI1OTM5ZGZiMTUzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1Mi9vcmlnaW5hbF81MjkxNGJlMGMzOWI1MzZjM2Y2NGI1OTM5ZGZiMTUzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1229
+    height: 1280
+    aspect_ratio: 0.9602
+    content_type: image/png
+    filename: 52914be0c39b536c3f64b5939dfb1537.png
+    file_size: 3190629
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46632851
+  block_type: Image
+  title: PLATE V ORIENTATION PRECEDES GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 13
+  created_at: '2026-05-31T22:37:41Z'
+  updated_at: '2026-05-31T22:37:46Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632851/original_18694549784579590432476db3530ee1.png?1780267062
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1MS9vcmlnaW5hbF8xODY5NDU0OTc4NDU3OTU5MDQzMjQ3NmRiMzUzMGVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1MS9vcmlnaW5hbF8xODY5NDU0OTc4NDU3OTU5MDQzMjQ3NmRiMzUzMGVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1MS9vcmlnaW5hbF8xODY5NDU0OTc4NDU3OTU5MDQzMjQ3NmRiMzUzMGVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1MS9vcmlnaW5hbF8xODY5NDU0OTc4NDU3OTU5MDQzMjQ3NmRiMzUzMGVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1201
+    height: 1310
+    aspect_ratio: 0.9168
+    content_type: image/png
+    filename: 18694549784579590432476db3530ee1.png
+    file_size: 2722014
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46632849
+  block_type: Image
+  title: PLATE VI NAVIGATION EMERGES FROM RELATION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 12
+  created_at: '2026-05-31T22:37:38Z'
+  updated_at: '2026-05-31T22:37:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632849/original_d2edd924fbc79915e62f8a15eccf5161.png?1780267060
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0OS9vcmlnaW5hbF9kMmVkZDkyNGZiYzc5OTE1ZTYyZjhhMTVlY2NmNTE2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0OS9vcmlnaW5hbF9kMmVkZDkyNGZiYzc5OTE1ZTYyZjhhMTVlY2NmNTE2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0OS9vcmlnaW5hbF9kMmVkZDkyNGZiYzc5OTE1ZTYyZjhhMTVlY2NmNTE2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0OS9vcmlnaW5hbF9kMmVkZDkyNGZiYzc5OTE1ZTYyZjhhMTVlY2NmNTE2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1218
+    height: 1292
+    aspect_ratio: 0.9427
+    content_type: image/png
+    filename: d2edd924fbc79915e62f8a15eccf5161.png
+    file_size: 2866209
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46632847
+  block_type: Image
+  title: PLATE VII RETURN GENERATES STABILITY
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 11
+  created_at: '2026-05-31T22:37:37Z'
+  updated_at: '2026-05-31T22:37:41Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632847/original_e20fa394f626a03f317d3c97590247f5.png?1780267058
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ny9vcmlnaW5hbF9lMjBmYTM5NGY2MjZhMDNmMzE3ZDNjOTc1OTAyNDdmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ny9vcmlnaW5hbF9lMjBmYTM5NGY2MjZhMDNmMzE3ZDNjOTc1OTAyNDdmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ny9vcmlnaW5hbF9lMjBmYTM5NGY2MjZhMDNmMzE3ZDNjOTc1OTAyNDdmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ny9vcmlnaW5hbF9lMjBmYTM5NGY2MjZhMDNmMzE3ZDNjOTc1OTAyNDdmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1216
+    height: 1294
+    aspect_ratio: 0.9397
+    content_type: image/png
+    filename: e20fa394f626a03f317d3c97590247f5.png
+    file_size: 3017546
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46632846
+  block_type: Image
+  title: PLATE VIII OPERATORS OF TRANSITION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  - transition
+  connection_position: 10
+  created_at: '2026-05-31T22:37:34Z'
+  updated_at: '2026-05-31T22:37:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632846/original_73935ca2c96c54b77615852a7b674ec9.png?1780267055
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ni9vcmlnaW5hbF83MzkzNWNhMmM5NmM1NGI3NzYxNTg1MmE3YjY3NGVjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ni9vcmlnaW5hbF83MzkzNWNhMmM5NmM1NGI3NzYxNTg1MmE3YjY3NGVjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ni9vcmlnaW5hbF83MzkzNWNhMmM5NmM1NGI3NzYxNTg1MmE3YjY3NGVjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0Ni9vcmlnaW5hbF83MzkzNWNhMmM5NmM1NGI3NzYxNTg1MmE3YjY3NGVjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1216
+    height: 1294
+    aspect_ratio: 0.9397
+    content_type: image/png
+    filename: 73935ca2c96c54b77615852a7b674ec9.png
+    file_size: 2795508
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46632845
+  block_type: Image
+  title: PLATE IX FIELD NAVIGATION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 9
+  created_at: '2026-05-31T22:37:21Z'
+  updated_at: '2026-05-31T22:37:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632845/original_4150ba2f61c7b70d1a55879f64a724f5.png?1780267042
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0NS9vcmlnaW5hbF80MTUwYmEyZjYxYzdiNzBkMWE1NTg3OWY2NGE3MjRmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0NS9vcmlnaW5hbF80MTUwYmEyZjYxYzdiNzBkMWE1NTg3OWY2NGE3MjRmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0NS9vcmlnaW5hbF80MTUwYmEyZjYxYzdiNzBkMWE1NTg3OWY2NGE3MjRmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0NS9vcmlnaW5hbF80MTUwYmEyZjYxYzdiNzBkMWE1NTg3OWY2NGE3MjRmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1198
+    height: 1313
+    aspect_ratio: 0.9124
+    content_type: image/png
+    filename: 4150ba2f61c7b70d1a55879f64a724f5.png
+    file_size: 2986741
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46632840
+  block_type: Image
+  title: PLATE X THE RELATIONAL FIELD
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 8
+  created_at: '2026-05-31T22:36:51Z'
+  updated_at: '2026-05-31T22:36:54Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632840/original_b3cd14bcded830e57dbafc4795f5320a.png?1780267012
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0MC9vcmlnaW5hbF9iM2NkMTRiY2RlZDgzMGU1N2RiYWZjNDc5NWY1MzIwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0MC9vcmlnaW5hbF9iM2NkMTRiY2RlZDgzMGU1N2RiYWZjNDc5NWY1MzIwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0MC9vcmlnaW5hbF9iM2NkMTRiY2RlZDgzMGU1N2RiYWZjNDc5NWY1MzIwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg0MC9vcmlnaW5hbF9iM2NkMTRiY2RlZDgzMGU1N2RiYWZjNDc5NWY1MzIwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1199
+    height: 1312
+    aspect_ratio: 0.9139
+    content_type: image/png
+    filename: b3cd14bcded830e57dbafc4795f5320a.png
+    file_size: 2965386
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 46632838
+  block_type: Image
+  title: PLATE XI THE RELATIONAL HUMAN FIELD
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 7
+  created_at: '2026-05-31T22:36:48Z'
+  updated_at: '2026-05-31T22:36:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632838/original_259692d2b5a901e10565a7e6e42be0a0.png?1780267009
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzOC9vcmlnaW5hbF8yNTk2OTJkMmI1YTkwMWUxMDU2NWE3ZTZlNDJiZTBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzOC9vcmlnaW5hbF8yNTk2OTJkMmI1YTkwMWUxMDU2NWE3ZTZlNDJiZTBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzOC9vcmlnaW5hbF8yNTk2OTJkMmI1YTkwMWUxMDU2NWE3ZTZlNDJiZTBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzOC9vcmlnaW5hbF8yNTk2OTJkMmI1YTkwMWUxMDU2NWE3ZTZlNDJiZTBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1178
+    height: 1335
+    aspect_ratio: 0.8824
+    content_type: image/png
+    filename: 259692d2b5a901e10565a7e6e42be0a0.png
+    file_size: 3067096
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 46632837
+  block_type: Image
+  title: PLATE XII PERCEPTION & DEPTH
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 6
+  created_at: '2026-05-31T22:36:46Z'
+  updated_at: '2026-05-31T22:36:50Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632837/original_d34b8a5b61fc22a9e227806124654b2b.png?1780267007
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNy9vcmlnaW5hbF9kMzRiOGE1YjYxZmMyMmE5ZTIyNzgwNjEyNDY1NGIyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNy9vcmlnaW5hbF9kMzRiOGE1YjYxZmMyMmE5ZTIyNzgwNjEyNDY1NGIyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNy9vcmlnaW5hbF9kMzRiOGE1YjYxZmMyMmE5ZTIyNzgwNjEyNDY1NGIyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNy9vcmlnaW5hbF9kMzRiOGE1YjYxZmMyMmE5ZTIyNzgwNjEyNDY1NGIyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1183
+    height: 1329
+    aspect_ratio: 0.8901
+    content_type: image/png
+    filename: d34b8a5b61fc22a9e227806124654b2b.png
+    file_size: 2988101
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 46632835
+  block_type: Image
+  title: PLATE XIII ARCHITECTURES OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 5
+  created_at: '2026-05-31T22:36:44Z'
+  updated_at: '2026-05-31T22:36:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632835/original_8649c4697b96d053ce2f0c5742c54532.png?1780267005
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNS9vcmlnaW5hbF84NjQ5YzQ2OTdiOTZkMDUzY2UyZjBjNTc0MmM1NDUzMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNS9vcmlnaW5hbF84NjQ5YzQ2OTdiOTZkMDUzY2UyZjBjNTc0MmM1NDUzMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNS9vcmlnaW5hbF84NjQ5YzQ2OTdiOTZkMDUzY2UyZjBjNTc0MmM1NDUzMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNS9vcmlnaW5hbF84NjQ5YzQ2OTdiOTZkMDUzY2UyZjBjNTc0MmM1NDUzMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1178
+    height: 1335
+    aspect_ratio: 0.8824
+    content_type: image/png
+    filename: 8649c4697b96d053ce2f0c5742c54532.png
+    file_size: 2970703
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 46632834
+  block_type: Image
+  title: PLATE XIV MYTHS, STORIES & SYMBOLIC FIELDS
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 4
+  created_at: '2026-05-31T22:36:42Z'
+  updated_at: '2026-05-31T22:36:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632834/original_de1009455a90bc818cf32b2e1d50770d.png?1780267004
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNC9vcmlnaW5hbF9kZTEwMDk0NTVhOTBiYzgxOGNmMzJiMmUxZDUwNzcwZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNC9vcmlnaW5hbF9kZTEwMDk0NTVhOTBiYzgxOGNmMzJiMmUxZDUwNzcwZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNC9vcmlnaW5hbF9kZTEwMDk0NTVhOTBiYzgxOGNmMzJiMmUxZDUwNzcwZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzNC9vcmlnaW5hbF9kZTEwMDk0NTVhOTBiYzgxOGNmMzJiMmUxZDUwNzcwZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1180
+    height: 1333
+    aspect_ratio: 0.8852
+    content_type: image/png
+    filename: de1009455a90bc818cf32b2e1d50770d.png
+    file_size: 3040058
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 46632862
+  block_type: Image
+  title: NEXAH XV ATLAS THE JOURNEY OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 3
+  created_at: '2026-05-31T22:38:09Z'
+  updated_at: '2026-05-31T22:38:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632862/original_b6afea92ce7a00a197c39b62053ae2ed.png?1780267091
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2Mi9vcmlnaW5hbF9iNmFmZWE5MmNlN2EwMGExOTdjMzliNjIwNTNhZTJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2Mi9vcmlnaW5hbF9iNmFmZWE5MmNlN2EwMGExOTdjMzliNjIwNTNhZTJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2Mi9vcmlnaW5hbF9iNmFmZWE5MmNlN2EwMGExOTdjMzliNjIwNTNhZTJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg2Mi9vcmlnaW5hbF9iNmFmZWE5MmNlN2EwMGExOTdjMzliNjIwNTNhZTJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1153
+    height: 1364
+    aspect_ratio: 0.8453
+    content_type: image/png
+    filename: b6afea92ce7a00a197c39b62053ae2ed.png
+    file_size: 3255470
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 46632833
+  block_type: Image
+  title: PLATE XV THE MAPS OF MAPS
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 2
+  created_at: '2026-05-31T22:36:41Z'
+  updated_at: '2026-05-31T22:39:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632833/original_265f98356b934afd318248f00ae13580.png?1780267002
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzMy9vcmlnaW5hbF8yNjVmOTgzNTZiOTM0YWZkMzE4MjQ4ZjAwYWUxMzU4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzMy9vcmlnaW5hbF8yNjVmOTgzNTZiOTM0YWZkMzE4MjQ4ZjAwYWUxMzU4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzMy9vcmlnaW5hbF8yNjVmOTgzNTZiOTM0YWZkMzE4MjQ4ZjAwYWUxMzU4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjgzMy9vcmlnaW5hbF8yNjVmOTgzNTZiOTM0YWZkMzE4MjQ4ZjAwYWUxMzU4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1402
+    height: 1122
+    aspect_ratio: 1.2496
+    content_type: image/png
+    filename: 265f98356b934afd318248f00ae13580.png
+    file_size: 3278470
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 46632858
+  block_type: Image
+  title: NEXAH RELATIONAL CARTOGRAPHY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-31T22:37:53Z'
+  updated_at: '2026-05-31T22:43:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46632858/original_7821b50d16b69f7f204218f429b4d7f0.png?1780267074
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1OC9vcmlnaW5hbF83ODIxYjUwZDE2YjY5ZjdmMjA0MjE4ZjQyOWI0ZDdmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1OC9vcmlnaW5hbF83ODIxYjUwZDE2YjY5ZjdmMjA0MjE4ZjQyOWI0ZDdmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1OC9vcmlnaW5hbF83ODIxYjUwZDE2YjY5ZjdmMjA0MjE4ZjQyOWI0ZDdmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMjg1OC9vcmlnaW5hbF83ODIxYjUwZDE2YjY5ZjdmMjA0MjE4ZjQyOWI0ZDdmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 7821b50d16b69f7f204218f429b4d7f0.png
+    file_size: 2481956
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

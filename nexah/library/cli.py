@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .arena import ArenaClient, ArenaError, compare_all, compare_entity
+from .catalog import build_website_catalog, load_catalog_sources, write_website_catalog
 from .cleanup import cleanup_status, render_cleanup_text
 from .discovery import build_discovery, write_discovery_files
 from .editorial import render_editorial_diff_text, run_editorial_diff
@@ -54,6 +55,13 @@ def build_parser() -> argparse.ArgumentParser:
     discover.add_argument("--user", default="nexah-scarabaeus1031")
     discover.add_argument("--report", type=Path)
     discover.add_argument("--inventory", type=Path)
+
+    catalog = sub.add_parser(
+        "website-catalog", help="Capture a noncanonical read-only website catalog of Works"
+    )
+    catalog.add_argument("--classification", type=Path)
+    catalog.add_argument("--overrides", type=Path)
+    catalog.add_argument("--output-dir", type=Path)
 
     path = sub.add_parser("reading-path", help="Build a conservative registry-backed reading path")
     path.add_argument("--audience")
@@ -203,6 +211,30 @@ def main(argv: list[str] | None = None) -> int:
                 )
             else:
                 _json({"summary": discovery["summary"], "channels": discovery["channels"]})
+            return 0
+
+        if args.command == "website-catalog":
+            review_root = default_review_root()
+            classification_path = args.classification or (
+                review_root / "full_library_classification.yaml"
+            )
+            overrides_path = args.overrides or (
+                registry.root.parent / "catalog" / "catalog_overrides.yaml"
+            )
+            output_dir = args.output_dir or (registry.root.parent / "catalog")
+            classification, overrides = load_catalog_sources(
+                classification_path, overrides_path
+            )
+            catalog = build_website_catalog(
+                ArenaClient.from_environment(), classification, overrides=overrides
+            )
+            write_website_catalog(catalog, output_dir)
+            _json(
+                {
+                    "catalog": str(output_dir / "website_catalog.yaml"),
+                    "summary": catalog["summary"],
+                }
+            )
             return 0
 
         if args.command == "reader-question":

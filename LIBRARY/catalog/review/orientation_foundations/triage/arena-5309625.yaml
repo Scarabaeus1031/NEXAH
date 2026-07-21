@@ -1,0 +1,262 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+publication:
+  catalog_key: arena:5309625
+  arena_channel_id: 5309625
+  title: ORIENTATION THEORY — VOLUME III
+  source_url: https://www.are.na/nexah-scarabaeus1031/orientation-theory-vol-iii
+page_count: 21
+pages:
+- page_key: arena-block:47699599
+  arena_block_id: 47699599
+  sequence_index: 1
+  title: NEXAH ORIENTATION THEORYii
+  visual_role: cover
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47699599
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699599/original_4d8a2d22c9789ef5e62f0bed35064a6b.png?1783519875
+  source_fingerprint: 66fdaf7d69ffad396492a41a32fd40c47fe9641e352c6eb257d366bb378a39f1
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47026852
+  arena_block_id: 47026852
+  sequence_index: 2
+  title: NEXAH ORIENTATION THEORY FOR COMPLEX SYSTEMS
+  visual_role: title_page
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47026852
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026852/original_d3b4bea484f96ee9e883ce1e913061f7.png?1781470786
+  source_fingerprint: 52bca0671a144ae89605950307cfe507e0f7803965cdef14e1606d92513c9f0d
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47026825
+  arena_block_id: 47026825
+  sequence_index: 3
+  title: PREFACE OОA PREFACE Why Orientation?
+  visual_role: foreword
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47026825
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026825/original_81e5ebbb991e3b7bf7d85e5bbc865991.png?1781470784
+  source_fingerprint: 6af67f3a1537b9d0e58cbbf88ba99a42da812fba80e5417be643e5e870222f6a
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47026826
+  arena_block_id: 47026826
+  sequence_index: 4
+  title: SERIES GUIDE 00B NEXAH READER'S GUIDE How to Read This Book
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026826
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026826/original_578ed8a38df1f1b225045c1b7048211f.png?1781470783
+  source_fingerprint: 07f03d368bfc10300d0f23e51c0838716810d26db27a73a56f5ad03be31b77f8
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026829
+  arena_block_id: 47026829
+  sequence_index: 5
+  title: 00C NEXAH SERIES OVERVIEW & NAVIGATION INDEX
+  visual_role: model
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026829
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026829/original_cd4b43307ce2d418dd7e61d614f446e1.png?1781470784
+  source_fingerprint: 5046f98967bdf6758b62d202f960d015d0e6fe9258c0e128d30d5e7986eab8dd
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026863
+  arena_block_id: 47026863
+  sequence_index: 6
+  title: 01 WEATHER - NAVIGATION THROUGH MANY MAPS
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026863
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026863/original_f6fe19b146bb0c6491e47a172a9595b1.png?1781470791
+  source_fingerprint: bf3e8f98719d002e64e37c96e48d85e4aeceb853641d8c80e10c44d074d9cc3b
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026862
+  arena_block_id: 47026862
+  sequence_index: 7
+  title: 02 POWER SYSTEMS - NAVIGATION THROUGH MANY MAPS
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026862
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026862/original_d233cee326689629301a3c3cc8a4e0cd.png?1781470791
+  source_fingerprint: 7b0e81097240342f7667ece36a3381ae4443523257b825f4112436bcf17d7aa1
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026859
+  arena_block_id: 47026859
+  sequence_index: 8
+  title: 03 TIME ECOSYSTEMS - MANY CLOCKS, ONE REALITY
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026859
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026859/original_fe5747780a05ae990c8e98fb89fcf689.png?1781470789
+  source_fingerprint: b31f366e02243546d38f87dcf209906b116e3a6dbe2b837e7187c7ab859784a3
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026861
+  arena_block_id: 47026861
+  sequence_index: 9
+  title: 04 THE NEXAH COMPASS - ORIENTING IN MAP ECOSYSTEMS
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026861
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026861/original_f41eeeb50f0c32f30a9d27715c7232ed.png?1781470790
+  source_fingerprint: b7d0844b16377f24ba6b91c26f202ecdd9cd5db94ecc9c5abfbad8c89bb8b1d5
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026858
+  arena_block_id: 47026858
+  sequence_index: 10
+  title: 05_ORIENTATION vs NAVIGATION - THE CAPTAIN PRINCIPLE
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026858
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026858/original_92729e4855d95c4056df8246ffd55902.png?1781470789
+  source_fingerprint: 86b3b75d19aad44e6bf93e0fe0667d1b2f5075c09e2dbc4ea12768366dd6f6e6
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026860
+  arena_block_id: 47026860
+  sequence_index: 11
+  title: 06 THE MAP ECOSYSTEM One World. Many Maps
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026860
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026860/original_b450118e1020cc9d87b7a97049556f64.png?1781470790
+  source_fingerprint: 66cbe3ff800d81f956cd1de6bb8faf45d863baebdfef7e90cba8f41bcb4e035d
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026857
+  arena_block_id: 47026857
+  sequence_index: 12
+  title: 07_THE NEXAH CHRONO-COMPASS Maps. Time. Scale. Orientation.
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026857
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026857/original_847f40864168673bbacb4d86b5db4433.png?1781470789
+  source_fingerprint: a74bcd8ef306c2a6b4d4510a335248b35d61d1bded6eb293ec7e63559423177d
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026853
+  arena_block_id: 47026853
+  sequence_index: 13
+  title: 08_THE NEXAH MAP ORIENTATION FRAMEWORK
+  visual_role: model
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026853
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026853/original_abe6db4059ebfb1e2a9b2c018e8c2db5.png?1781470786
+  source_fingerprint: 095ac6679f69952ac7090637cd59d229141706936393d4703e1897c2189da603
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026850
+  arena_block_id: 47026850
+  sequence_index: 14
+  title: 09_THE THREE FOUNDATIONS OF ORIENTATION
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026850
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026850/original_2698f01ad06359754e97790446241ffb.png?1781470786
+  source_fingerprint: 13eff41d81632470322422d88feb7991c0d613f25492e49ab2ac92ff07b7fd84
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026834
+  arena_block_id: 47026834
+  sequence_index: 15
+  title: 10_NEXAH Toward an Operating System for Complex Worlds
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026834
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026834/original_28cfdaf50c3917bf8d20c7b567cfbba6.png?1781470785
+  source_fingerprint: 17aeeeaa9590cb670c643f37980255c41d419c6614944212fc4670ef64a89c89
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026851
+  arena_block_id: 47026851
+  sequence_index: 16
+  title: 11_THE NEXAH RESEARCH PROGRAM 11 Orientation Theory for Complex Systems
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026851
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026851/original_bb542d6363f3668832ebe8dd89cb5d5f.png?1781470786
+  source_fingerprint: 6c3a212647fd3586258854100d8f0a50526fe655a92005a9d49d88372f0acdfa
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026832
+  arena_block_id: 47026832
+  sequence_index: 17
+  title: 12 TOWARD A NAVIGABLE FUTURE
+  visual_role: conclusion
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026832
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026832/original_8a6d57a4a323ff8541bbcd2ce2383b13.png?1781470785
+  source_fingerprint: 1940039fee4945595d7d1a4358a08046423c6c2339f66bd72a0e3855d61f0119
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47026831
+  arena_block_id: 47026831
+  sequence_index: 18
+  title: APPENDIX A NEXAH GLOSSARY A SHARED LANGUAGE FOR ORIENTATION
+  visual_role: appendix
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47026831
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026831/original_cf745db39c50fc5ef1a4a10bc41bf93e.png?1781470785
+  source_fingerprint: fb908294039b303d00f0ed27c50d69b2c1ac733f8dc856b248b7727823bfc094
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47026833
+  arena_block_id: 47026833
+  sequence_index: 19
+  title: APPENDIX NEXAH EQUATIONS & FORMALISMS B TOWARD A MATHEMATICAL LANGUAGE OF
+    ORIENTATION
+  visual_role: appendix
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47026833
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026833/original_ce099fcff7938313a63f9df14c636962.png?1781470785
+  source_fingerprint: 3474861e14d2039635f2b20d886971b7a1947d9b2275da89cee52fe7e6e23bc8
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47026827
+  arena_block_id: 47026827
+  sequence_index: 20
+  title: APPENDIX C THE NEXAH VISUAL ATLAS A CARTOGRAPHY OF ORIENTATION
+  visual_role: appendix
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47026827
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026827/original_aa115bc213873697f59d5501908b5d4b.png?1781470783
+  source_fingerprint: 51df43579813a553e67eb48296f0774fdc51dd34a729d7cd2a073c1ad78b35fd
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47026824
+  arena_block_id: 47026824
+  sequence_index: 21
+  title: APPENDIX D EVIDENCE & EXPERIMENTS BUILDING EVIDENCE FOR ORIENTATION THEORY
+  visual_role: evidence
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47026824
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026824/original_06e62f1dd8c68e3821e73599ff7793b3.png?1781470783
+  source_fingerprint: 4c2e0a931f5a903a15ff3e81e5707ecde610c22559f1d94bf92ffcdf8db2bac0
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true

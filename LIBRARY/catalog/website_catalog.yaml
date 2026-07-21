@@ -1,0 +1,502 @@
+schema_version: '0.1'
+generated_at: '2026-07-20T20:06:57+00:00'
+status: noncanonical_read_only_overlay
+purpose: Website catalog and future human editorial review
+source_classification: LIBRARY/review/full_library_classification.yaml
+summary:
+  works: 61
+  canonical_records: 10
+  proposal_records: 51
+  with_description: 61
+  with_cover: 61
+  with_foreword: 25
+  with_index: 7
+records:
+- catalog_key: arena:5397157
+  display_title: THE INNER CHILD — A PERSPECTIVE
+  registered_entity_id: null
+  type: book
+  form: visual_essay
+  series: null
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5397157.yaml
+- catalog_key: arena:5345856
+  display_title: 🧭 THE CATHEDRAL OF RESONANCE — WHITEBOARD SERIES
+  registered_entity_id: null
+  type: work
+  form: whiteboard
+  series: NEXAH Whiteboard Series
+  catalog_depth: research_structure
+  record: works/arena-5345856.yaml
+- catalog_key: arena:5217666
+  display_title: NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5217666.yaml
+- catalog_key: arena:5369070
+  display_title: BEYOND INFORMATION
+  registered_entity_id: null
+  type: book
+  form: visual_essay
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5369070.yaml
+- catalog_key: arena:5415765
+  display_title: FIELD ATLAS I — WATER
+  registered_entity_id: NX-000006
+  type: atlas
+  form: field_atlas
+  series: Field Atlas Series
+  catalog_depth: research_structure
+  record: works/arena-5415765.yaml
+- catalog_key: arena:5404576
+  display_title: FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+  registered_entity_id: null
+  type: atlas
+  form: field_atlas
+  series: Field Atlas Series
+  catalog_depth: research_structure
+  record: works/arena-5404576.yaml
+- catalog_key: arena:5386781
+  display_title: FIELD ATLAS III — MORPHOLOGY
+  registered_entity_id: null
+  type: atlas
+  form: field_atlas
+  series: Field Atlas Series
+  catalog_depth: research_structure
+  record: works/arena-5386781.yaml
+- catalog_key: arena:5442781
+  display_title: GEOMETRIA NOVA
+  registered_entity_id: NX-000002
+  type: book
+  form: foundation_book
+  series: null
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5442781.yaml
+- catalog_key: arena:5397188
+  display_title: THE INNER WORLD
+  registered_entity_id: null
+  type: guide
+  form: field_guide
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5397188.yaml
+- catalog_key: arena:5246418
+  display_title: LEONARDO TRANSLATIONS — THE ROOM THAT LOOKS BACK
+  registered_entity_id: null
+  type: visual_essay
+  form: visual_essay
+  series: Leonardo Translations
+  catalog_depth: research_structure
+  record: works/arena-5246418.yaml
+- catalog_key: arena:5386751
+  display_title: LOGARITHMIC UNIVERSE — FIVE MOVEMENTS OF REALITY
+  registered_entity_id: null
+  type: visual_essay
+  form: visual_essay
+  series: null
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5386751.yaml
+- catalog_key: arena:5305692
+  display_title: NEXAH — DESIGNING ORIENTATION
+  registered_entity_id: null
+  type: guide
+  form: design_guide
+  series: null
+  catalog_depth: research_structure
+  record: works/arena-5305692.yaml
+- catalog_key: arena:5344975
+  display_title: NEXAH ATLAS — A CARTOGRAPHY OF PERSPECTIVES
+  registered_entity_id: null
+  type: atlas
+  form: visual_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5344975.yaml
+- catalog_key: arena:5203312
+  display_title: NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: NEXAH Mathematica
+  catalog_depth: research_structure
+  record: works/arena-5203312.yaml
+- catalog_key: arena:5203387
+  display_title: NEXAH MATHEMATICA II — DRIFT FIELDS & RECURSIVE STRUCTURES
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: NEXAH Mathematica
+  catalog_depth: research_structure
+  record: works/arena-5203387.yaml
+- catalog_key: arena:5203476
+  display_title: NEXAH MATHEMATICA III — RECURSIVE OPERATORS & STRUCTURAL NAVIGATION
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: NEXAH Mathematica
+  catalog_depth: research_structure
+  record: works/arena-5203476.yaml
+- catalog_key: arena:5203499
+  display_title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: NEXAH Mathematica
+  catalog_depth: research_structure
+  record: works/arena-5203499.yaml
+- catalog_key: arena:5203528
+  display_title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: NEXAH Mathematica
+  catalog_depth: research_structure
+  record: works/arena-5203528.yaml
+- catalog_key: arena:5218362
+  display_title: NEXAH XV ATLAS — TWO SIDES OF ONE MEDAL
+  registered_entity_id: null
+  type: atlas
+  form: visual_atlas
+  series: NEXAH XV Atlas
+  catalog_depth: research_structure
+  record: works/arena-5218362.yaml
+- catalog_key: arena:5246392
+  display_title: NEXAH XV ATLAS — RELATIONAL CARTOGRAPHY OF HUMAN REALITY
+  registered_entity_id: null
+  type: atlas
+  form: relational_atlas
+  series: NEXAH XV Atlas
+  catalog_depth: research_structure
+  record: works/arena-5246392.yaml
+- catalog_key: arena:5201262
+  display_title: 'NEXAH XV ATLAS — Volume I: Observation, Flow & Transition'
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: NEXAH XV Atlas
+  catalog_depth: research_structure
+  record: works/arena-5201262.yaml
+- catalog_key: arena:5201307
+  display_title: 'NEXAH XV ATLAS — Volume II: Structure, Operators & Observer Geometry'
+  registered_entity_id: null
+  type: atlas
+  form: research_atlas
+  series: NEXAH XV Atlas
+  catalog_depth: research_structure
+  record: works/arena-5201307.yaml
+- catalog_key: arena:5203074
+  display_title: NEXAH XV COMPLEXA — Cartographies of Transition
+  registered_entity_id: null
+  type: atlas
+  form: living_atlas
+  series: NEXAH XV Atlas
+  catalog_depth: research_structure
+  record: works/arena-5203074.yaml
+- catalog_key: arena:5216699
+  display_title: NEXAH — MAPS OF HUMAN REALITY
+  registered_entity_id: null
+  type: atlas
+  form: visual_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5216699.yaml
+- catalog_key: arena:5415716
+  display_title: ORIENTATION ATLAS — VOLUME I
+  registered_entity_id: null
+  type: atlas
+  form: orientation_atlas
+  series: Orientation Architecture
+  catalog_depth: research_structure
+  record: works/arena-5415716.yaml
+- catalog_key: arena:5415690
+  display_title: ORIENTATION DESIGN — VOLUME II
+  registered_entity_id: null
+  type: guide
+  form: design_guide
+  series: Orientation Architecture
+  catalog_depth: research_structure
+  record: works/arena-5415690.yaml
+- catalog_key: arena:5416617
+  display_title: ORIENTATION SCIENCE
+  registered_entity_id: null
+  type: research_report
+  form: prospectus
+  series: null
+  catalog_depth: research_structure
+  record: works/arena-5416617.yaml
+- catalog_key: arena:5309625
+  display_title: ORIENTATION THEORY — VOLUME III
+  registered_entity_id: null
+  type: book
+  form: theory_book
+  series: Orientation Architecture
+  catalog_depth: research_structure
+  record: works/arena-5309625.yaml
+- catalog_key: arena:5293283
+  display_title: The Architecture of Becoming 🦋
+  registered_entity_id: null
+  type: atlas
+  form: visual_atlas
+  series: null
+  catalog_depth: research_structure
+  record: works/arena-5293283.yaml
+- catalog_key: arena:5250350
+  display_title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+  registered_entity_id: null
+  type: book
+  form: architecture_book
+  series: Orientation Architecture
+  catalog_depth: research_structure
+  record: works/arena-5250350.yaml
+- catalog_key: arena:5407292
+  display_title: THE ATLAS OF ATLASES
+  registered_entity_id: NX-000009
+  type: atlas
+  form: meta_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5407292.yaml
+- catalog_key: arena:5386766
+  display_title: THE CARTOGRAPHY LABORATORY
+  registered_entity_id: NX-000007
+  type: research_report
+  form: laboratory_report
+  series: NEXAH Laboratory Reports
+  catalog_depth: research_structure
+  record: works/arena-5386766.yaml
+- catalog_key: arena:5279287
+  display_title: THE ESSENCE ATLAS
+  registered_entity_id: null
+  type: atlas
+  form: visual_atlas
+  series: Odyssey 2040
+  catalog_depth: atlas_structure
+  record: works/arena-5279287.yaml
+- catalog_key: arena:5426966
+  display_title: THE LANGUAGE ATLAS
+  registered_entity_id: NX-000005
+  type: atlas
+  form: language_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5426966.yaml
+- catalog_key: arena:5421517
+  display_title: THE LANGUAGE BOOK
+  registered_entity_id: NX-000004
+  type: book
+  form: textbook
+  series: The Language Series
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5421517.yaml
+- catalog_key: arena:5426953
+  display_title: THE LANGUAGE BOOK II
+  registered_entity_id: null
+  type: book
+  form: textbook
+  series: The Language Series
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5426953.yaml
+- catalog_key: arena:5426957
+  display_title: THE LANGUAGE BOOK III
+  registered_entity_id: null
+  type: book
+  form: textbook
+  series: The Language Series
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5426957.yaml
+- catalog_key: arena:5442532
+  display_title: THE LIVING EQUATION — An Atlas of Orientation
+  registered_entity_id: null
+  type: atlas
+  form: orientation_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5442532.yaml
+- catalog_key: arena:5442721
+  display_title: THE OPERATOR
+  registered_entity_id: null
+  type: book
+  form: foundation_book
+  series: Operator Series
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5442721.yaml
+- catalog_key: arena:5442697
+  display_title: THE OPERATOR LIBRARY
+  registered_entity_id: NX-000008
+  type: guide
+  form: reference_guide
+  series: null
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5442697.yaml
+- catalog_key: arena:5393574
+  display_title: THE OPERATOR MAP
+  registered_entity_id: null
+  type: guide
+  form: field_guide
+  series: Operator Series
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5393574.yaml
+- catalog_key: arena:5391199
+  display_title: THE OPERATOR’S HANDBOOK
+  registered_entity_id: NX-000003
+  type: book
+  form: handbook
+  series: null
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5391199.yaml
+- catalog_key: arena:5404615
+  display_title: THE VISITOR’S GUIDE
+  registered_entity_id: NX-000001
+  type: guide
+  form: visitor_guide
+  series: null
+  catalog_depth: bibliographic
+  record: works/arena-5404615.yaml
+- catalog_key: arena:5404597
+  display_title: THE WONDER HANDBOOK — FOR HUMAN CHILDREN
+  registered_entity_id: null
+  type: book
+  form: handbook
+  series: null
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5404597.yaml
+- catalog_key: arena:5450904
+  display_title: THE WONDER OPERATOR
+  registered_entity_id: null
+  type: book
+  form: visual_book
+  series: null
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5450904.yaml
+- catalog_key: arena:5345145
+  display_title: VOLUME I — BE KIND. BE AWEFULL. BELONG.
+  registered_entity_id: null
+  type: book
+  form: visual_book
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5345145.yaml
+- catalog_key: arena:5345129
+  display_title: VOLUME II — PATHFINDERS
+  registered_entity_id: null
+  type: book
+  form: visual_book
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5345129.yaml
+- catalog_key: arena:5345076
+  display_title: VOLUME IV — THREADS OF YOU
+  registered_entity_id: null
+  type: book
+  form: visual_book
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5345076.yaml
+- catalog_key: arena:5345108
+  display_title: VOLUME III — CLEAR MIND
+  registered_entity_id: null
+  type: guide
+  form: field_guide
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5345108.yaml
+- catalog_key: arena:5345064
+  display_title: VOLUME V — MANY MAPS. ONE WORLD.
+  registered_entity_id: null
+  type: book
+  form: visual_compendium
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5345064.yaml
+- catalog_key: arena:5413103
+  display_title: LIBRARYBOOK
+  registered_entity_id: NX-000010
+  type: book
+  form: compendium
+  series: null
+  catalog_depth: knowledge_work_structure
+  record: works/arena-5413103.yaml
+- catalog_key: arena:5345606
+  display_title: ◈ NEXAH ECOSYSTEM — Introducing the Codex
+  registered_entity_id: null
+  type: atlas
+  form: system_map
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5345606.yaml
+- catalog_key: arena:5345822
+  display_title: ◈ ODYSSEY 2°4° — The Journey Through Worlds & Observers
+  registered_entity_id: null
+  type: atlas
+  form: narrative_atlas
+  series: Odyssey 2040
+  catalog_depth: atlas_structure
+  record: works/arena-5345822.yaml
+- catalog_key: arena:5228606
+  display_title: ✦ MAP ATLAS ✦ ⟡ A Visual History of Human Orientation ⟡
+  registered_entity_id: null
+  type: atlas
+  form: historical_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5228606.yaml
+- catalog_key: arena:5224059
+  display_title: ✦ ODYSSEE 2040 ✦ ⟡ THE RETURN ATLAS ⟡
+  registered_entity_id: null
+  type: atlas
+  form: cinematic_field_atlas
+  series: Odyssey 2040
+  catalog_depth: atlas_structure
+  record: works/arena-5224059.yaml
+- catalog_key: arena:5347685
+  display_title: ODYSSEY 2040 — MANY MAPS. ONE WORLD.
+  registered_entity_id: null
+  type: book
+  form: visual_book
+  series: The Human Journey
+  catalog_depth: bibliographic_and_dramaturgic
+  record: works/arena-5347685.yaml
+- catalog_key: arena:5345722
+  display_title: 🌍 NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation
+  registered_entity_id: null
+  type: atlas
+  form: landscape_atlas
+  series: null
+  catalog_depth: atlas_structure
+  record: works/arena-5345722.yaml
+- catalog_key: arena:5345336
+  display_title: 🧭 DESIGNING ORIENTATION — WHITEBOARD SERIES
+  registered_entity_id: null
+  type: work
+  form: whiteboard
+  series: NEXAH Whiteboard Series
+  catalog_depth: research_structure
+  record: works/arena-5345336.yaml
+- catalog_key: arena:5345353
+  display_title: 🧭 NEXAH PATHFINDER — WHITEBOARD SERIES
+  registered_entity_id: null
+  type: work
+  form: whiteboard
+  series: NEXAH Whiteboard Series
+  catalog_depth: research_structure
+  record: works/arena-5345353.yaml
+- catalog_key: arena:5345385
+  display_title: 🧭 THE DUAL SPINE - Prime Orientation — WHITEBOARD SERIES
+  registered_entity_id: null
+  type: work
+  form: whiteboard
+  series: NEXAH Whiteboard Series
+  catalog_depth: research_structure
+  record: works/arena-5345385.yaml
+- catalog_key: arena:5345838
+  display_title: 🧭 THE LANDINGS — WHITEBOARD SERIES
+  registered_entity_id: null
+  type: work
+  form: whiteboard
+  series: NEXAH Whiteboard Series
+  catalog_depth: research_structure
+  record: works/arena-5345838.yaml

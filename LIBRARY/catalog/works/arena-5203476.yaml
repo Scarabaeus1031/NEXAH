@@ -1,0 +1,321 @@
+schema_version: '0.1'
+catalog_key: arena:5203476
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH MATHEMATICA III — RECURSIVE OPERATORS & STRUCTURAL NAVIGATION
+source:
+  arena_channel_id: 5203476
+  arena_slug: nexah-mathematica-iii-recursive-operators-structural-navigation
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-iii-recursive-operators-structural-navigation
+  live_title: NEXAH MATHEMATICA III  Recursive Operators & Structural Navigation
+  description: 'A visual research atlas exploring recursive operators, navigation geometries, basin topologies, transition
+    corridors, and emergent control structures inside complex modular systems.
+
+    Volume III extends the drift and persistence frameworks of NEXAH MATHEMATICA into active transformation systems — where
+    structures no longer merely persist, but interact, reorganize, and navigate through recursive field dynamics.
+
+    Combining operator theory, recursive topology, transition geometry, evolutionary manifolds, and exploratory cartography
+    across arithmetic and dynamical spaces.'
+  visibility: closed
+  state: available
+  member_count: 10
+  created_at: '2026-05-20T21:54:58Z'
+  updated_at: '2026-05-20T22:39:50Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Mathematica
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46367145
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367145/original_7807afd2f4515a67e063c22def8fde18.png?1779314186
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0NS9vcmlnaW5hbF83ODA3YWZkMmY0NTE1YTY3ZTA2M2MyMmRlZjhmZGUxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0NS9vcmlnaW5hbF83ODA3YWZkMmY0NTE1YTY3ZTA2M2MyMmRlZjhmZGUxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0NS9vcmlnaW5hbF83ODA3YWZkMmY0NTE1YTY3ZTA2M2MyMmRlZjhmZGUxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0NS9vcmlnaW5hbF83ODA3YWZkMmY0NTE1YTY3ZTA2M2MyMmRlZjhmZGUxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: 7807afd2f4515a67e063c22def8fde18.png
+  file_size: 2280274
+  alt_text: null
+structure:
+  block_count: 10
+  titled_block_count: 10
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 6
+      arena_block_id: 46367234
+      title: SERIES_VIII-C-AXIS_AVOIDANCE&TRANSITION_CORRIDORS
+    - sequence_index: 9
+      arena_block_id: 46367208
+      title: GEOMETRIA NOVA - UNIVERSAL TRANSITION GEOMETRY
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46367145
+  block_type: Image
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-05-20T21:56:24Z'
+  updated_at: '2026-05-20T21:56:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367145/original_7807afd2f4515a67e063c22def8fde18.png?1779314186
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 7807afd2f4515a67e063c22def8fde18.png
+    file_size: 2280274
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46367140
+  block_type: Image
+  title: VOLUME I - PRIME RESIDUE GEOMETRY A VISUAL ATLAS OF MODULAR DRIFT, PERSISTENCE, AND ARITHMETIC STRUCTURE MASTER INDEX_white
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-20T21:56:10Z'
+  updated_at: '2026-05-20T21:57:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367140/original_dfb18677c5a61bd872e32e5ebcca71e8.png?1779314172
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0MC9vcmlnaW5hbF9kZmIxODY3N2M1YTYxYmQ4NzJlMzJlNWViY2NhNzFlOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0MC9vcmlnaW5hbF9kZmIxODY3N2M1YTYxYmQ4NzJlMzJlNWViY2NhNzFlOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0MC9vcmlnaW5hbF9kZmIxODY3N2M1YTYxYmQ4NzJlMzJlNWViY2NhNzFlOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE0MC9vcmlnaW5hbF9kZmIxODY3N2M1YTYxYmQ4NzJlMzJlNWViY2NhNzFlOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: dfb18677c5a61bd872e32e5ebcca71e8.png
+    file_size: 1850702
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46367177
+  block_type: Image
+  title: PART_III_POLAR_PRIME_MANIFOLDS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-20T21:57:37Z'
+  updated_at: '2026-05-20T21:58:06Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367177/original_de31f0670119357c301c48dbc941dd07.png?1779314258
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE3Ny9vcmlnaW5hbF9kZTMxZjA2NzAxMTkzNTdjMzAxYzQ4ZGJjOTQxZGQwNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE3Ny9vcmlnaW5hbF9kZTMxZjA2NzAxMTkzNTdjMzAxYzQ4ZGJjOTQxZGQwNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE3Ny9vcmlnaW5hbF9kZTMxZjA2NzAxMTkzNTdjMzAxYzQ4ZGJjOTQxZGQwNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzE3Ny9vcmlnaW5hbF9kZTMxZjA2NzAxMTkzNTdjMzAxYzQ4ZGJjOTQxZGQwNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: de31f0670119357c301c48dbc941dd07.png
+    file_size: 1680763
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46367232
+  block_type: Image
+  title: SERIES_VIII-A-PRIME-vs-INTEGER_DRIFT_GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-20T22:00:59Z'
+  updated_at: '2026-05-20T22:02:55Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367232/original_78762f25117bae893545db62f5974911.png?1779314460
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMi9vcmlnaW5hbF83ODc2MmYyNTExN2JhZTg5MzU0NWRiNjJmNTk3NDkxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMi9vcmlnaW5hbF83ODc2MmYyNTExN2JhZTg5MzU0NWRiNjJmNTk3NDkxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMi9vcmlnaW5hbF83ODc2MmYyNTExN2JhZTg5MzU0NWRiNjJmNTk3NDkxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMi9vcmlnaW5hbF83ODc2MmYyNTExN2JhZTg5MzU0NWRiNjJmNTk3NDkxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 78762f25117bae893545db62f5974911.png
+    file_size: 1647831
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46367237
+  block_type: Image
+  title: SERIES_VIII-B-POLAR_DRIFT_FIELDS&FAMILY_FORMATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-20T22:01:02Z'
+  updated_at: '2026-05-20T22:01:07Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367237/original_3c9462690baa2de99ffdf4d76fa402d7.png?1779314463
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNy9vcmlnaW5hbF8zYzk0NjI2OTBiYWEyZGU5OWZmZGY0ZDc2ZmE0MDJkNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNy9vcmlnaW5hbF8zYzk0NjI2OTBiYWEyZGU5OWZmZGY0ZDc2ZmE0MDJkNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNy9vcmlnaW5hbF8zYzk0NjI2OTBiYWEyZGU5OWZmZGY0ZDc2ZmE0MDJkNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNy9vcmlnaW5hbF8zYzk0NjI2OTBiYWEyZGU5OWZmZGY0ZDc2ZmE0MDJkNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3c9462690baa2de99ffdf4d76fa402d7.png
+    file_size: 1678906
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46367234
+  block_type: Image
+  title: SERIES_VIII-C-AXIS_AVOIDANCE&TRANSITION_CORRIDORS
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 5
+  created_at: '2026-05-20T22:00:59Z'
+  updated_at: '2026-05-20T22:01:06Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367234/original_4ece2ee7b0aac4bb508d42a9ff0b79cd.png?1779314460
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNC9vcmlnaW5hbF80ZWNlMmVlN2IwYWFjNGJiNTA4ZDQyYTlmZjBiNzljZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNC9vcmlnaW5hbF80ZWNlMmVlN2IwYWFjNGJiNTA4ZDQyYTlmZjBiNzljZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNC9vcmlnaW5hbF80ZWNlMmVlN2IwYWFjNGJiNTA4ZDQyYTlmZjBiNzljZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzNC9vcmlnaW5hbF80ZWNlMmVlN2IwYWFjNGJiNTA4ZDQyYTlmZjBiNzljZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 4ece2ee7b0aac4bb508d42a9ff0b79cd.png
+    file_size: 1722295
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46367233
+  block_type: Image
+  title: SERIES_VIII-D-BASIN_GEOMETRY&DRIFT_TOPOLOGY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-20T22:00:59Z'
+  updated_at: '2026-05-20T22:01:04Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367233/original_9770ce031c938cab635f756f4b9be588.png?1779314460
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMy9vcmlnaW5hbF85NzcwY2UwMzFjOTM4Y2FiNjM1Zjc1NmY0YjliZTU4OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMy9vcmlnaW5hbF85NzcwY2UwMzFjOTM4Y2FiNjM1Zjc1NmY0YjliZTU4OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMy9vcmlnaW5hbF85NzcwY2UwMzFjOTM4Y2FiNjM1Zjc1NmY0YjliZTU4OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIzMy9vcmlnaW5hbF85NzcwY2UwMzFjOTM4Y2FiNjM1Zjc1NmY0YjliZTU4OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 9770ce031c938cab635f756f4b9be588.png
+    file_size: 1815089
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46367226
+  block_type: Image
+  title: EXP-31 - JULIA NAVIGATION COUPLING
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-20T22:00:34Z'
+  updated_at: '2026-05-20T22:00:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367226/original_96452f30d468518a6dfa66cbbc5cc794.png?1779314435
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIyNi9vcmlnaW5hbF85NjQ1MmYzMGQ0Njg1MThhNmRmYTY2Y2JiYzVjYzc5NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIyNi9vcmlnaW5hbF85NjQ1MmYzMGQ0Njg1MThhNmRmYTY2Y2JiYzVjYzc5NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIyNi9vcmlnaW5hbF85NjQ1MmYzMGQ0Njg1MThhNmRmYTY2Y2JiYzVjYzc5NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIyNi9vcmlnaW5hbF85NjQ1MmYzMGQ0Njg1MThhNmRmYTY2Y2JiYzVjYzc5NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1254
+    height: 1254
+    aspect_ratio: 1.0
+    content_type: image/png
+    filename: 96452f30d468518a6dfa66cbbc5cc794.png
+    file_size: 1878138
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46367208
+  block_type: Image
+  title: GEOMETRIA NOVA - UNIVERSAL TRANSITION GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 2
+  created_at: '2026-05-20T21:59:26Z'
+  updated_at: '2026-05-20T21:59:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367208/original_6f167b93580d07f4882cdc45f8da76bb.png?1779314367
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIwOC9vcmlnaW5hbF82ZjE2N2I5MzU4MGQwN2Y0ODgyY2RjNDVmOGRhNzZiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIwOC9vcmlnaW5hbF82ZjE2N2I5MzU4MGQwN2Y0ODgyY2RjNDVmOGRhNzZiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIwOC9vcmlnaW5hbF82ZjE2N2I5MzU4MGQwN2Y0ODgyY2RjNDVmOGRhNzZiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIwOC9vcmlnaW5hbF82ZjE2N2I5MzU4MGQwN2Y0ODgyY2RjNDVmOGRhNzZiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6f167b93580d07f4882cdc45f8da76bb.png
+    file_size: 2383127
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46367217
+  block_type: Image
+  title: NEXAH EXPLORATORY FRAMEWORK FOR STRUCTURED TRANSITIONS IN COMPLEX SYSTEMS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-20T22:00:01Z'
+  updated_at: '2026-05-20T22:03:12Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367217/original_3b730377ff9d52bd11720d6c9899d086.png?1779314403
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIxNy9vcmlnaW5hbF8zYjczMDM3N2ZmOWQ1MmJkMTE3MjBkNmM5ODk5ZDA4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIxNy9vcmlnaW5hbF8zYjczMDM3N2ZmOWQ1MmJkMTE3MjBkNmM5ODk5ZDA4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIxNy9vcmlnaW5hbF8zYjczMDM3N2ZmOWQ1MmJkMTE3MjBkNmM5ODk5ZDA4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzIxNy9vcmlnaW5hbF8zYjczMDM3N2ZmOWQ1MmJkMTE3MjBkNmM5ODk5ZDA4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3b730377ff9d52bd11720d6c9899d086.png
+    file_size: 2213091
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

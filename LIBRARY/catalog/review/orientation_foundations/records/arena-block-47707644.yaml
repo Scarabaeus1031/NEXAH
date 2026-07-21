@@ -1,0 +1,108 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47707644
+publication:
+  catalog_key: arena:5416617
+  arena_channel_id: 5416617
+  title: ORIENTATION SCIENCE
+source_block:
+  arena_block_id: 47707644
+  sequence_index: 12
+  title: 07 Transition Geometry
+  url: https://www.are.na/block/47707644
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47707644/original_07ad426bcb57104634161b0690f86eb6.png?1783535926
+  source_fingerprint: 07ea4c42ad944c959a6debe26eff07cd64234d4bf02fb0ccd8b6e83ccb7cc3fe
+visual_role: model
+visible_text:
+  transcription_status: partial
+  transcription: Transition geometry describes the shape of change between states
+    in a complex system. Transitions are not points. They are regions with structure.
+research_elements:
+  definitions:
+  - statement: Transition geometry describes the shape of change between states in
+      a complex system.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: publication_assertion
+  questions: []
+  observations: []
+  hypotheses: []
+  methods: []
+  models:
+  - statement: The page depicts Basin A → corridor → gate → bottleneck → corridor
+      → Basin B.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: publication_assertion
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts:
+  - statement: corridor
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: observed_label
+  - statement: gate
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: observed_label
+  - statement: bottleneck
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: observed_label
+  - statement: basin
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: observed_label
+  - statement: ridge
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: observed_label
+  - statement: transition geometry
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: observed_label
+  operator_candidates: []
+  atlas_objects:
+  - statement: Visual anatomy of a transition
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707644
+      source_url: https://www.are.na/block/47707644
+      note: null
+    status: observed_label
+claim_boundary: The diagram is a publication model. It does not demonstrate that all
+  transitions share this geometry or that the labels are canonical Operators.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

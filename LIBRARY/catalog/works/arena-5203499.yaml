@@ -1,0 +1,287 @@
+schema_version: '0.1'
+catalog_key: arena:5203499
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+source:
+  arena_channel_id: 5203499
+  arena_slug: nexah-mathematica-iv-unified-transition-fields-basin-architectures
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-iv-unified-transition-fields-basin-architectures
+  live_title: NEXAH MATHEMATICA IV  Unified Transition Fields & Basin Architectures
+  description: "A visual atlas exploring unified transition fields, basin architectures, recursive transport systems, and\
+    \ large-scale structural coherence across complex dynamical geometries. \nVolume IV extends the recursive operator systems\
+    \ of NEXAH MATHEMATICA into global transition architectures — where local drift structures merge into coherent navigable\
+    \ fields, basin topologies, and multi-scale transport geometries."
+  visibility: closed
+  state: available
+  member_count: 9
+  created_at: '2026-05-20T22:04:48Z'
+  updated_at: '2026-05-20T22:37:55Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Mathematica
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46367293
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367293/original_faffb46bad5d6eee8ee4a2fe0b4eeff9.png?1779314718
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5My9vcmlnaW5hbF9mYWZmYjQ2YmFkNWQ2ZWVlOGVlNGEyZmUwYjRlZWZmOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5My9vcmlnaW5hbF9mYWZmYjQ2YmFkNWQ2ZWVlOGVlNGEyZmUwYjRlZWZmOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5My9vcmlnaW5hbF9mYWZmYjQ2YmFkNWQ2ZWVlOGVlNGEyZmUwYjRlZWZmOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5My9vcmlnaW5hbF9mYWZmYjQ2YmFkNWQ2ZWVlOGVlNGEyZmUwYjRlZWZmOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: faffb46bad5d6eee8ee4a2fe0b4eeff9.png
+  file_size: 2280274
+  alt_text: null
+structure:
+  block_count: 9
+  titled_block_count: 9
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part:
+  - sequence_index: 4
+    arena_block_id: 46367308
+    title: PART IV CONTROL GEOMETRY
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles: {}
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46367293
+  block_type: Image
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-20T22:05:12Z'
+  updated_at: '2026-05-20T22:06:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367293/original_faffb46bad5d6eee8ee4a2fe0b4eeff9.png?1779314718
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: faffb46bad5d6eee8ee4a2fe0b4eeff9.png
+    file_size: 2280274
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46367295
+  block_type: Image
+  title: VOLUME I - PRIME RESIDUE GEOMETRY A VISUAL ATLAS OF MODULAR DRIFT, PERSISTENCE, AND ARITHMETIC STRUCTURE MASTER INDEX
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-20T22:05:17Z'
+  updated_at: '2026-05-20T22:06:37Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367295/original_f343dc800853b97df28d4c01920b71c2.png?1779314719
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5NS9vcmlnaW5hbF9mMzQzZGM4MDA4NTNiOTdkZjI4ZDRjMDE5MjBiNzFjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5NS9vcmlnaW5hbF9mMzQzZGM4MDA4NTNiOTdkZjI4ZDRjMDE5MjBiNzFjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5NS9vcmlnaW5hbF9mMzQzZGM4MDA4NTNiOTdkZjI4ZDRjMDE5MjBiNzFjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzI5NS9vcmlnaW5hbF9mMzQzZGM4MDA4NTNiOTdkZjI4ZDRjMDE5MjBiNzFjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f343dc800853b97df28d4c01920b71c2.png
+    file_size: 2340399
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46367311
+  block_type: Image
+  title: NEXAH MATHEMATICA VOLUME! - PRIME RESIDUE GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-20T22:06:17Z'
+  updated_at: '2026-05-20T22:06:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367311/original_6f747e1cea58214d54b437fa809d6f8d.png?1779314778
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMxMS9vcmlnaW5hbF82Zjc0N2UxY2VhNTgyMTRkNTRiNDM3ZmE4MDlkNmY4ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMxMS9vcmlnaW5hbF82Zjc0N2UxY2VhNTgyMTRkNTRiNDM3ZmE4MDlkNmY4ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMxMS9vcmlnaW5hbF82Zjc0N2UxY2VhNTgyMTRkNTRiNDM3ZmE4MDlkNmY4ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMxMS9vcmlnaW5hbF82Zjc0N2UxY2VhNTgyMTRkNTRiNDM3ZmE4MDlkNmY4ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6f747e1cea58214d54b437fa809d6f8d.png
+    file_size: 1589868
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46367308
+  block_type: Image
+  title: PART IV CONTROL GEOMETRY
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-20T22:06:05Z'
+  updated_at: '2026-05-20T22:06:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367308/original_15d6ff4efa28d76e40ee1414d606f695.png?1779314766
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMwOC9vcmlnaW5hbF8xNWQ2ZmY0ZWZhMjhkNzZlNDBlZTE0MTRkNjA2ZjY5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMwOC9vcmlnaW5hbF8xNWQ2ZmY0ZWZhMjhkNzZlNDBlZTE0MTRkNjA2ZjY5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMwOC9vcmlnaW5hbF8xNWQ2ZmY0ZWZhMjhkNzZlNDBlZTE0MTRkNjA2ZjY5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzMwOC9vcmlnaW5hbF8xNWQ2ZmY0ZWZhMjhkNzZlNDBlZTE0MTRkNjA2ZjY5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 15d6ff4efa28d76e40ee1414d606f695.png
+    file_size: 1733253
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46367361
+  block_type: Image
+  title: XV OPERATOR SERIES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-20T22:09:24Z'
+  updated_at: '2026-05-20T22:09:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367361/original_dad189f3056c3193dc6317d6655fef59.png?1779314966
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM2MS9vcmlnaW5hbF9kYWQxODlmMzA1NmMzMTkzZGM2MzE3ZDY2NTVmZWY1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM2MS9vcmlnaW5hbF9kYWQxODlmMzA1NmMzMTkzZGM2MzE3ZDY2NTVmZWY1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM2MS9vcmlnaW5hbF9kYWQxODlmMzA1NmMzMTkzZGM2MzE3ZDY2NTVmZWY1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM2MS9vcmlnaW5hbF9kYWQxODlmMzA1NmMzMTkzZGM2MzE3ZDY2NTVmZWY1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: dad189f3056c3193dc6317d6655fef59.png
+    file_size: 2416989
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46367346
+  block_type: Image
+  title: SERIES_XI-CANONICAL_STRUCTURE&MATHEMATICAL_FOUNDATIONS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-20T22:08:37Z'
+  updated_at: '2026-05-20T22:08:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367346/original_48101d2bcf8f78eaa29ef3b46ddedcb7.png?1779314918
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ni9vcmlnaW5hbF80ODEwMWQyYmNmOGY3OGVhYTI5ZWYzYjQ2ZGRlZGNiNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ni9vcmlnaW5hbF80ODEwMWQyYmNmOGY3OGVhYTI5ZWYzYjQ2ZGRlZGNiNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ni9vcmlnaW5hbF80ODEwMWQyYmNmOGY3OGVhYTI5ZWYzYjQ2ZGRlZGNiNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ni9vcmlnaW5hbF80ODEwMWQyYmNmOGY3OGVhYTI5ZWYzYjQ2ZGRlZGNiNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 48101d2bcf8f78eaa29ef3b46ddedcb7.png
+    file_size: 1850409
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46367344
+  block_type: Image
+  title: SERIES_XI-B-MATHEMATICAL_FOUNDATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-20T22:08:35Z'
+  updated_at: '2026-05-20T22:09:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367344/original_fbc920ee6dc817fda16814ae4d14527c.png?1779314917
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NC9vcmlnaW5hbF9mYmM5MjBlZTZkYzgxN2ZkYTE2ODE0YWU0ZDE0NTI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NC9vcmlnaW5hbF9mYmM5MjBlZTZkYzgxN2ZkYTE2ODE0YWU0ZDE0NTI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NC9vcmlnaW5hbF9mYmM5MjBlZTZkYzgxN2ZkYTE2ODE0YWU0ZDE0NTI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NC9vcmlnaW5hbF9mYmM5MjBlZTZkYzgxN2ZkYTE2ODE0YWU0ZDE0NTI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: fbc920ee6dc817fda16814ae4d14527c.png
+    file_size: 1651613
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46367345
+  block_type: Image
+  title: SERIES_XI-C-STRUCTURAL_EVOLUTION_&_RECURSIVE_DRIFT
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-20T22:08:36Z'
+  updated_at: '2026-05-20T22:08:41Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367345/original_6520ff039dd31c7593dc8b86800cba69.png?1779314918
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NS9vcmlnaW5hbF82NTIwZmYwMzlkZDMxYzc1OTNkYzhiODY4MDBjYmE2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NS9vcmlnaW5hbF82NTIwZmYwMzlkZDMxYzc1OTNkYzhiODY4MDBjYmE2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NS9vcmlnaW5hbF82NTIwZmYwMzlkZDMxYzc1OTNkYzhiODY4MDBjYmE2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0NS9vcmlnaW5hbF82NTIwZmYwMzlkZDMxYzc1OTNkYzhiODY4MDBjYmE2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6520ff039dd31c7593dc8b86800cba69.png
+    file_size: 1894680
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46367347
+  block_type: Image
+  title: SERIES XI-D - UNIFIED_TOPOLOGY_&_TRANSPORT_GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-20T22:08:37Z'
+  updated_at: '2026-05-20T22:10:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367347/original_0f93618598645442a7d23622c75d39ac.png?1779314918
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ny9vcmlnaW5hbF8wZjkzNjE4NTk4NjQ1NDQyYTdkMjM2MjJjNzVkMzlhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ny9vcmlnaW5hbF8wZjkzNjE4NTk4NjQ1NDQyYTdkMjM2MjJjNzVkMzlhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ny9vcmlnaW5hbF8wZjkzNjE4NTk4NjQ1NDQyYTdkMjM2MjJjNzVkMzlhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzM0Ny9vcmlnaW5hbF8wZjkzNjE4NTk4NjQ1NDQyYTdkMjM2MjJjNzVkMzlhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 0f93618598645442a7d23622c75d39ac.png
+    file_size: 2000450
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

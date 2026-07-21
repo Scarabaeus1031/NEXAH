@@ -1,0 +1,591 @@
+schema_version: '0.1'
+catalog_key: arena:5386781
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: FIELD ATLAS III — MORPHOLOGY
+source:
+  arena_channel_id: 5386781
+  arena_slug: field-atlas-iii-morphology
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/field-atlas-iii-morphology
+  live_title: 'FIELD ATLAS III — MORPHOLOGY '
+  description: "The third Field Atlas of the NEXAH Operator Library.  \nWhy do similar structures emerge across such different\
+    \ systems?\nField Atlas III explores morphology as a universal language of organization. Rather than comparing materials\
+    \ or disciplines, it compares recurring patterns of transformation—across physics, biology, ecology, medicine, information,\
+    \ and cosmology.\nThe atlas proposes that nature does not primarily repeat objects. It repeats relationships, transitions,\
+    \ and structural processes that appear in many different forms.\nEach visual is a map for recognizing these recurring\
+    \ morphologies: from flames to galaxies, flowers to vortices, neural networks to river deltas. Different substrates. Different\
+    \ physics. One structural language.\nThis volume is not a catalogue of forms. It is an invitation to see the organizational\
+    \ principles that connect seemingly unrelated phenomena and to develop a new perspective for observing complexity.\nObserve.\
+    \ Compare. Recognize. Navigate.\nOrientation Atlas → How do we orient?\nField Atlas I — Water → How do transitions organize\
+    \ matter?\nField Atlas II — Architecture of Agency → How do living systems persist, adapt, and act?\nField Atlas III —\
+    \ Morphology → How do recurring structural patterns appear across nature?"
+  visibility: closed
+  state: available
+  member_count: 21
+  created_at: '2026-07-01T22:47:29Z'
+  updated_at: '2026-07-19T15:07:35Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: field_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: Field Atlas Series
+  confidence: high
+  human_decision: pending
+catalog_depth: research_structure
+cover:
+  arena_block_id: 47701326
+  title: FIELD ATLAS III MORPHOLOGY
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47701326/original_41f2cf84567b50ed3076eb394db184a5.png?1783523090
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMTMyNi9vcmlnaW5hbF80MWYyY2Y4NDU2N2I1MGVkMzA3NmViMzk0ZGIxODRhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMTMyNi9vcmlnaW5hbF80MWYyY2Y4NDU2N2I1MGVkMzA3NmViMzk0ZGIxODRhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMTMyNi9vcmlnaW5hbF80MWYyY2Y4NDU2N2I1MGVkMzA3NmViMzk0ZGIxODRhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMTMyNi9vcmlnaW5hbF80MWYyY2Y4NDU2N2I1MGVkMzA3NmViMzk0ZGIxODRhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1054
+  height: 1492
+  aspect_ratio: 0.7064
+  content_type: image/png
+  filename: 41f2cf84567b50ed3076eb394db184a5.png
+  file_size: 2287313
+  alt_text: null
+structure:
+  block_count: 21
+  titled_block_count: 21
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    plate:
+    - sequence_index: 13
+      arena_block_id: 47506086
+      title: PLATE VII NEXAH MORPHOLOGY THE LANGUAGE OF STRUCTURE
+    transition:
+    - sequence_index: 15
+      arena_block_id: 47506083
+      title: THE TRANSITION CHANNELS
+    journey:
+    - sequence_index: 18
+      arena_block_id: 47506078
+      title: THE JOURNEY FROM POTENTIAL TO RETURN NOT A LINE. NOT A POINT. A LIVING CYCLE.
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47701326
+  block_type: Image
+  title: FIELD ATLAS III MORPHOLOGY
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 21
+  created_at: '2026-07-08T15:04:49Z'
+  updated_at: '2026-07-08T15:04:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47701326/original_41f2cf84567b50ed3076eb394db184a5.png?1783523090
+    variants: *id001
+    width: 1054
+    height: 1492
+    aspect_ratio: 0.7064
+    content_type: image/png
+    filename: 41f2cf84567b50ed3076eb394db184a5.png
+    file_size: 2287313
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47506105
+  block_type: Image
+  title: NEXAH THE ATLAS OF MORPHOLOGY SEEING STRUCTURE BEFORE EXPLANATION.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 20
+  created_at: '2026-07-01T22:48:55Z'
+  updated_at: '2026-07-01T22:48:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506105/original_7e3633ce5b3fd0c3686e4dec6da5e616.png?1782946136
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNS9vcmlnaW5hbF83ZTM2MzNjZTViM2ZkMGMzNjg2ZTRkZWM2ZGE1ZTYxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNS9vcmlnaW5hbF83ZTM2MzNjZTViM2ZkMGMzNjg2ZTRkZWM2ZGE1ZTYxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNS9vcmlnaW5hbF83ZTM2MzNjZTViM2ZkMGMzNjg2ZTRkZWM2ZGE1ZTYxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNS9vcmlnaW5hbF83ZTM2MzNjZTViM2ZkMGMzNjg2ZTRkZWM2ZGE1ZTYxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1535
+    height: 1024
+    aspect_ratio: 1.499
+    content_type: image/png
+    filename: 7e3633ce5b3fd0c3686e4dec6da5e616.png
+    file_size: 2091202
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47506104
+  block_type: Image
+  title: NEXAH The Atlas of Morphology
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-07-01T22:48:53Z'
+  updated_at: '2026-07-01T22:48:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506104/original_a7fe89c7c85eee8096e9e2b9720cff8b.png?1782946134
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNC9vcmlnaW5hbF9hN2ZlODljN2M4NWVlZTgwOTZlOWUyYjk3MjBjZmY4Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNC9vcmlnaW5hbF9hN2ZlODljN2M4NWVlZTgwOTZlOWUyYjk3MjBjZmY4Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNC9vcmlnaW5hbF9hN2ZlODljN2M4NWVlZTgwOTZlOWUyYjk3MjBjZmY4Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwNC9vcmlnaW5hbF9hN2ZlODljN2M4NWVlZTgwOTZlOWUyYjk3MjBjZmY4Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: a7fe89c7c85eee8096e9e2b9720cff8b.png
+    file_size: 2198663
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47506102
+  block_type: Image
+  title: NEXAH MORPHOLOGY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 18
+  created_at: '2026-07-01T22:48:48Z'
+  updated_at: '2026-07-01T22:48:54Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506102/original_ed3e59003f2fbe03fec4c96354a492fb.png?1782946129
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMi9vcmlnaW5hbF9lZDNlNTkwMDNmMmZiZTAzZmVjNGM5NjM1NGE0OTJmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMi9vcmlnaW5hbF9lZDNlNTkwMDNmMmZiZTAzZmVjNGM5NjM1NGE0OTJmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMi9vcmlnaW5hbF9lZDNlNTkwMDNmMmZiZTAzZmVjNGM5NjM1NGE0OTJmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMi9vcmlnaW5hbF9lZDNlNTkwMDNmMmZiZTAzZmVjNGM5NjM1NGE0OTJmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ed3e59003f2fbe03fec4c96354a492fb.png
+    file_size: 2175474
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47506100
+  block_type: Image
+  title: THE I BURNING MEADOW_ii
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-07-01T22:48:45Z'
+  updated_at: '2026-07-01T22:48:50Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506100/original_6e116511679aa2aadcc70b9ed6ea677b.png?1782946126
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMC9vcmlnaW5hbF82ZTExNjUxMTY3OWFhMmFhZGNjNzBiOWVkNmVhNjc3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMC9vcmlnaW5hbF82ZTExNjUxMTY3OWFhMmFhZGNjNzBiOWVkNmVhNjc3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMC9vcmlnaW5hbF82ZTExNjUxMTY3OWFhMmFhZGNjNzBiOWVkNmVhNjc3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjEwMC9vcmlnaW5hbF82ZTExNjUxMTY3OWFhMmFhZGNjNzBiOWVkNmVhNjc3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6e116511679aa2aadcc70b9ed6ea677b.png
+    file_size: 2497482
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47506099
+  block_type: Image
+  title: THE BURNING MEADOW
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-07-01T22:48:42Z'
+  updated_at: '2026-07-01T22:48:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506099/original_c0d9ab2fe97b31fdf701f7bd662dab57.png?1782946124
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OS9vcmlnaW5hbF9jMGQ5YWIyZmU5N2IzMWZkZjcwMWY3YmQ2NjJkYWI1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OS9vcmlnaW5hbF9jMGQ5YWIyZmU5N2IzMWZkZjcwMWY3YmQ2NjJkYWI1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OS9vcmlnaW5hbF9jMGQ5YWIyZmU5N2IzMWZkZjcwMWY3YmQ2NjJkYWI1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OS9vcmlnaW5hbF9jMGQ5YWIyZmU5N2IzMWZkZjcwMWY3YmQ2NjJkYWI1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c0d9ab2fe97b31fdf701f7bd662dab57.png
+    file_size: 2007221
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47506098
+  block_type: Image
+  title: THE ETERNAL FLAME A COMPLETE SYSTEM IN PLAIN SIGHT
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-07-01T22:48:40Z'
+  updated_at: '2026-07-01T22:48:46Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506098/original_aa084006b1a95c33c8a376b6d6f5670c.png?1782946121
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OC9vcmlnaW5hbF9hYTA4NDAwNmIxYTk1YzMzYzhhMzc2YjZkNmY1NjcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OC9vcmlnaW5hbF9hYTA4NDAwNmIxYTk1YzMzYzhhMzc2YjZkNmY1NjcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OC9vcmlnaW5hbF9hYTA4NDAwNmIxYTk1YzMzYzhhMzc2YjZkNmY1NjcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5OC9vcmlnaW5hbF9hYTA4NDAwNmIxYTk1YzMzYzhhMzc2YjZkNmY1NjcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: aa084006b1a95c33c8a376b6d6f5670c.png
+    file_size: 1937198
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47506096
+  block_type: Image
+  title: ONE FLAME. MANY WINDOWS. THE SAME REALITY. MANY PROJECTIONS.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-07-01T22:48:38Z'
+  updated_at: '2026-07-01T22:48:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506096/original_dcfc6ec9c8f26f6ce7c4004f19e1bdbd.png?1782946119
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5Ni9vcmlnaW5hbF9kY2ZjNmVjOWM4ZjI2ZjZjZTdjNDAwNGYxOWUxYmRiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5Ni9vcmlnaW5hbF9kY2ZjNmVjOWM4ZjI2ZjZjZTdjNDAwNGYxOWUxYmRiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5Ni9vcmlnaW5hbF9kY2ZjNmVjOWM4ZjI2ZjZjZTdjNDAwNGYxOWUxYmRiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5Ni9vcmlnaW5hbF9kY2ZjNmVjOWM4ZjI2ZjZjZTdjNDAwNGYxOWUxYmRiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: dcfc6ec9c8f26f6ce7c4004f19e1bdbd.png
+    file_size: 1626784
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47506093
+  block_type: Image
+  title: A_FLAME IS NOT A SHAPE _ IT IS A LIVING STRUCTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-07-01T22:48:35Z'
+  updated_at: '2026-07-01T22:48:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506093/original_7d7728ab74c1dd49fb07abe6737c2190.png?1782946117
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5My9vcmlnaW5hbF83ZDc3MjhhYjc0YzFkZDQ5ZmIwN2FiZTY3MzdjMjE5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5My9vcmlnaW5hbF83ZDc3MjhhYjc0YzFkZDQ5ZmIwN2FiZTY3MzdjMjE5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5My9vcmlnaW5hbF83ZDc3MjhhYjc0YzFkZDQ5ZmIwN2FiZTY3MzdjMjE5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5My9vcmlnaW5hbF83ZDc3MjhhYjc0YzFkZDQ5ZmIwN2FiZTY3MzdjMjE5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7d7728ab74c1dd49fb07abe6737c2190.png
+    file_size: 1820096
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47506091
+  block_type: Image
+  title: ONE MORPHOLOGY. MANY EXPRESSIONS.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-07-01T22:48:32Z'
+  updated_at: '2026-07-01T22:48:36Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506091/original_c305e1031db017cf1e89125d96c2bfe0.png?1782946114
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MS9vcmlnaW5hbF9jMzA1ZTEwMzFkYjAxN2NmMWU4OTEyNWQ5NmMyYmZlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MS9vcmlnaW5hbF9jMzA1ZTEwMzFkYjAxN2NmMWU4OTEyNWQ5NmMyYmZlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MS9vcmlnaW5hbF9jMzA1ZTEwMzFkYjAxN2NmMWU4OTEyNWQ5NmMyYmZlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MS9vcmlnaW5hbF9jMzA1ZTEwMzFkYjAxN2NmMWU4OTEyNWQ5NmMyYmZlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c305e1031db017cf1e89125d96c2bfe0.png
+    file_size: 1613491
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47506090
+  block_type: Image
+  title: ONE MORPHOLOGY. MANY EXPRESSIONS.II
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-07-01T22:48:31Z'
+  updated_at: '2026-07-01T22:48:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506090/original_c643a07474560d0e204092611b07edac.png?1782946112
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MC9vcmlnaW5hbF9jNjQzYTA3NDc0NTYwZDBlMjA0MDkyNjExYjA3ZWRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MC9vcmlnaW5hbF9jNjQzYTA3NDc0NTYwZDBlMjA0MDkyNjExYjA3ZWRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MC9vcmlnaW5hbF9jNjQzYTA3NDc0NTYwZDBlMjA0MDkyNjExYjA3ZWRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA5MC9vcmlnaW5hbF9jNjQzYTA3NDc0NTYwZDBlMjA0MDkyNjExYjA3ZWRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c643a07474560d0e204092611b07edac.png
+    file_size: 1661884
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47506087
+  block_type: Image
+  title: NEXAH MORPHOLOGY THE LANGUAGE OF STRUCTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-07-01T22:48:23Z'
+  updated_at: '2026-07-01T22:48:27Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506087/original_dfb806af878fa9133caec3162f040b04.png?1782946104
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ny9vcmlnaW5hbF9kZmI4MDZhZjg3OGZhOTEzM2NhZWMzMTYyZjA0MGIwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ny9vcmlnaW5hbF9kZmI4MDZhZjg3OGZhOTEzM2NhZWMzMTYyZjA0MGIwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ny9vcmlnaW5hbF9kZmI4MDZhZjg3OGZhOTEzM2NhZWMzMTYyZjA0MGIwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ny9vcmlnaW5hbF9kZmI4MDZhZjg3OGZhOTEzM2NhZWMzMTYyZjA0MGIwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: dfb806af878fa9133caec3162f040b04.png
+    file_size: 2278591
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47506086
+  block_type: Image
+  title: PLATE VII NEXAH MORPHOLOGY THE LANGUAGE OF STRUCTURE
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 9
+  created_at: '2026-07-01T22:48:14Z'
+  updated_at: '2026-07-01T22:48:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506086/original_bb954f1bc97afa84d4a0514b17d0ad62.png?1782946095
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ni9vcmlnaW5hbF9iYjk1NGYxYmM5N2FmYTg0ZDRhMDUxNGIxN2QwYWQ2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ni9vcmlnaW5hbF9iYjk1NGYxYmM5N2FmYTg0ZDRhMDUxNGIxN2QwYWQ2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ni9vcmlnaW5hbF9iYjk1NGYxYmM5N2FmYTg0ZDRhMDUxNGIxN2QwYWQ2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Ni9vcmlnaW5hbF9iYjk1NGYxYmM5N2FmYTg0ZDRhMDUxNGIxN2QwYWQ2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: bb954f1bc97afa84d4a0514b17d0ad62.png
+    file_size: 2234709
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 47506084
+  block_type: Image
+  title: NEXAH THE ATLAS OF MORPHOLOGY ADDENDUM- THE FLAME - MORPHEUS MÖBIUS MEANING MECHANISM
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-07-01T22:48:11Z'
+  updated_at: '2026-07-01T22:48:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506084/original_6c9877fb464758c963d964d728cc0089.png?1782946092
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4NC9vcmlnaW5hbF82Yzk4NzdmYjQ2NDc1OGM5NjNkOTY0ZDcyOGNjMDA4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4NC9vcmlnaW5hbF82Yzk4NzdmYjQ2NDc1OGM5NjNkOTY0ZDcyOGNjMDA4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4NC9vcmlnaW5hbF82Yzk4NzdmYjQ2NDc1OGM5NjNkOTY0ZDcyOGNjMDA4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4NC9vcmlnaW5hbF82Yzk4NzdmYjQ2NDc1OGM5NjNkOTY0ZDcyOGNjMDA4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6c9877fb464758c963d964d728cc0089.png
+    file_size: 2297502
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 47506083
+  block_type: Image
+  title: THE TRANSITION CHANNELS
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 7
+  created_at: '2026-07-01T22:48:08Z'
+  updated_at: '2026-07-01T22:48:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506083/original_bcb4198e71e7a58bdd7733ab8a05c2dd.png?1782946089
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4My9vcmlnaW5hbF9iY2I0MTk4ZTcxZTdhNThiZGQ3NzMzYWI4YTA1YzJkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4My9vcmlnaW5hbF9iY2I0MTk4ZTcxZTdhNThiZGQ3NzMzYWI4YTA1YzJkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4My9vcmlnaW5hbF9iY2I0MTk4ZTcxZTdhNThiZGQ3NzMzYWI4YTA1YzJkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4My9vcmlnaW5hbF9iY2I0MTk4ZTcxZTdhNThiZGQ3NzMzYWI4YTA1YzJkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: bcb4198e71e7a58bdd7733ab8a05c2dd.png
+    file_size: 2343040
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 47506082
+  block_type: Image
+  title: THE ARK NETWORK ~ 3+1 MEANING MECHANISM
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-07-01T22:48:04Z'
+  updated_at: '2026-07-01T22:48:08Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506082/original_de14193a7370ea9b27ae1ea392aec07f.png?1782946085
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Mi9vcmlnaW5hbF9kZTE0MTkzYTczNzBlYTliMjdhZTFlYTM5MmFlYzA3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Mi9vcmlnaW5hbF9kZTE0MTkzYTczNzBlYTliMjdhZTFlYTM5MmFlYzA3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Mi9vcmlnaW5hbF9kZTE0MTkzYTczNzBlYTliMjdhZTFlYTM5MmFlYzA3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4Mi9vcmlnaW5hbF9kZTE0MTkzYTczNzBlYTliMjdhZTFlYTM5MmFlYzA3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: de14193a7370ea9b27ae1ea392aec07f.png
+    file_size: 2754691
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 47506080
+  block_type: Image
+  title: DIE BRÜCKE VON FORM ZU FELD. VON BEOBACHTUNG ZU BEDEUTUNG.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-07-01T22:47:56Z'
+  updated_at: '2026-07-01T22:48:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506080/original_eb6f162c30006e5e0894cb173a198a7d.png?1782946077
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4MC9vcmlnaW5hbF9lYjZmMTYyYzMwMDA2ZTVlMDg5NGNiMTczYTE5OGE3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4MC9vcmlnaW5hbF9lYjZmMTYyYzMwMDA2ZTVlMDg5NGNiMTczYTE5OGE3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4MC9vcmlnaW5hbF9lYjZmMTYyYzMwMDA2ZTVlMDg5NGNiMTczYTE5OGE3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA4MC9vcmlnaW5hbF9lYjZmMTYyYzMwMDA2ZTVlMDg5NGNiMTczYTE5OGE3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: eb6f162c30006e5e0894cb173a198a7d.png
+    file_size: 2212718
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 47506078
+  block_type: Image
+  title: THE JOURNEY FROM POTENTIAL TO RETURN NOT A LINE. NOT A POINT. A LIVING CYCLE.
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 4
+  created_at: '2026-07-01T22:47:49Z'
+  updated_at: '2026-07-14T02:23:23Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506078/original_9a469305ea1deb393d2e0e897ab5be7d.png?1782946071
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3OC9vcmlnaW5hbF85YTQ2OTMwNWVhMWRlYjM5M2QyZTBlODk3YWI1YmU3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3OC9vcmlnaW5hbF85YTQ2OTMwNWVhMWRlYjM5M2QyZTBlODk3YWI1YmU3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3OC9vcmlnaW5hbF85YTQ2OTMwNWVhMWRlYjM5M2QyZTBlODk3YWI1YmU3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3OC9vcmlnaW5hbF85YTQ2OTMwNWVhMWRlYjM5M2QyZTBlODk3YWI1YmU3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 9a469305ea1deb393d2e0e897ab5be7d.png
+    file_size: 2392445
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 47506075
+  block_type: Image
+  title: NEXAH THE ATLAS OF MORPHOLOGY SEEING STRUCTURE BEFORE EXPLANATION.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-07-01T22:47:44Z'
+  updated_at: '2026-07-01T22:47:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506075/original_059c333a5cbb928c273f51fef662f326.png?1782946065
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NS9vcmlnaW5hbF8wNTljMzMzYTVjYmI5MjhjMjczZjUxZmVmNjYyZjMyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NS9vcmlnaW5hbF8wNTljMzMzYTVjYmI5MjhjMjczZjUxZmVmNjYyZjMyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NS9vcmlnaW5hbF8wNTljMzMzYTVjYmI5MjhjMjczZjUxZmVmNjYyZjMyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NS9vcmlnaW5hbF8wNTljMzMzYTVjYmI5MjhjMjczZjUxZmVmNjYyZjMyNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 059c333a5cbb928c273f51fef662f326.png
+    file_size: 2417548
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 47506074
+  block_type: Image
+  title: NEXAH PERSPECTIVE, NOT A PRODUCT..png
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-07-01T22:47:42Z'
+  updated_at: '2026-07-01T22:47:45Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506074/original_2f02c64ff5210c082b1e78bc22ae99e1.png?1782946063
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NC9vcmlnaW5hbF8yZjAyYzY0ZmY1MjEwYzA4MmIxZTc4YmMyMmFlOTllMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NC9vcmlnaW5hbF8yZjAyYzY0ZmY1MjEwYzA4MmIxZTc4YmMyMmFlOTllMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NC9vcmlnaW5hbF8yZjAyYzY0ZmY1MjEwYzA4MmIxZTc4YmMyMmFlOTllMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3NC9vcmlnaW5hbF8yZjAyYzY0ZmY1MjEwYzA4MmIxZTc4YmMyMmFlOTllMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 2f02c64ff5210c082b1e78bc22ae99e1.png
+    file_size: 2541778
+    alt_text: null
+- sequence_index: 21
+  arena_block_id: 47506073
+  block_type: Image
+  title: NEXAH PERSPECTIVE, NOT A PRODUCT.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-07-01T22:47:39Z'
+  updated_at: '2026-07-01T22:47:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47506073/original_7516fe347d58a70b02b2199869151bed.png?1782946060
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3My9vcmlnaW5hbF83NTE2ZmUzNDdkNThhNzBiMDJiMjE5OTg2OTE1MWJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3My9vcmlnaW5hbF83NTE2ZmUzNDdkNThhNzBiMDJiMjE5OTg2OTE1MWJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3My9vcmlnaW5hbF83NTE2ZmUzNDdkNThhNzBiMDJiMjE5OTg2OTE1MWJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzUwNjA3My9vcmlnaW5hbF83NTE2ZmUzNDdkNThhNzBiMDJiMjE5OTg2OTE1MWJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 7516fe347d58a70b02b2199869151bed.png
+    file_size: 2461071
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

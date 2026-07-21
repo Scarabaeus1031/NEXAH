@@ -1,0 +1,58 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47699746
+publication:
+  catalog_key: arena:5415690
+  arena_channel_id: 5415690
+  title: ORIENTATION DESIGN — VOLUME II
+source_block:
+  arena_block_id: 47699746
+  sequence_index: 8
+  title: 04 RESEARCH METHODS
+  url: https://www.are.na/block/47699746
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699746/original_0da97d87ec2db580528430a38cba8f21.png?1783520209
+  source_fingerprint: ce1309349f18f94ac0e4939f90b8ca3db42857c1abb942446197fb686f6e04db
+visual_role: method
+visible_text:
+  transcription_status: partial
+  transcription: Observe → Structure → Represent → Analyze → Validate → Apply.
+research_elements:
+  definitions: []
+  questions: []
+  observations: []
+  hypotheses: []
+  methods:
+  - statement: 'Method stack: Observe, Structure, Represent, Analyze, Validate, Apply.'
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699746
+      source_url: https://www.are.na/block/47699746
+      note: null
+    status: publication_assertion
+  models:
+  - statement: The page groups knowledge cartography, structural analysis, transition
+      mapping, visual modeling, computational models, experimental validation, and
+      atlas construction as method families.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699746
+      source_url: https://www.are.na/block/47699746
+      note: null
+    status: publication_assertion
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts: []
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: The page documents a proposed method stack. It does not show that
+  each family has been implemented or validated in every named domain.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

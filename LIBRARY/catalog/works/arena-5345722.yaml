@@ -1,0 +1,386 @@
+schema_version: '0.1'
+catalog_key: arena:5345722
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: 🌍 NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation
+source:
+  arena_channel_id: 5345722
+  arena_slug: nexah-landscapes-maps-for-orientation-meaning-navigation
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-landscapes-maps-for-orientation-meaning-navigation
+  live_title: 🌍 NEXAH LANDSCAPES — Maps for Orientation, Meaning & Navigation
+  description: "A visual atlas exploring how beings find their way through reality. \nNEXAH Landscapes is a series of large-scale\
+    \ maps that investigate orientation as a universal process. Rather than focusing on prediction, the series explores how\
+    \ perception, meaning, navigation, transition, and return emerge across different scales of life.\nThe maps connect systems\
+    \ thinking, human experience, culture, biology, design, and complex adaptive systems into a shared visual language. Each\
+    \ plate presents a different perspective on the same question:\nHow do we find our way through a changing world?\nFrom\
+    \ the NEXAH Landscape and Geographica maps to the Biographica, Synchronization Atlas, Maps Ecosystem, Matryoshka Atlas,\
+    \ and NEXAH Clock, the series develops a cartography of orientation—where maps are not merely representations of reality,\
+    \ but tools for understanding, decision-making, adaptation, and collective navigation.\nThe project combines conceptual\
+    \ design, systems theory, symbolic cartography, and visual storytelling to create a navigable landscape of ideas.\nThemes\n\
+    Orientation & Navigation\nSystems Thinking\nMeaning & Sense-Making\nMulti-Scale Reality\nHuman & Collective Intelligence\n\
+    Adaptation & Transition\nMaps as Cognitive Tools\nDesign for Understanding\nPart of the broader NEXAH Ecosystem, these\
+    \ works serve as exploratory maps between observation and action, helping transform complexity into orientation.\n“We\
+    \ do not control the field. We learn to navigate it.”"
+  visibility: closed
+  state: available
+  member_count: 13
+  created_at: '2026-06-22T22:39:58Z'
+  updated_at: '2026-06-23T00:06:15Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: landscape_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  human_decision: pending
+catalog_depth: atlas_structure
+cover:
+  arena_block_id: 47229392
+  title: NEXAH LANDSCAPES
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229392/original_2bbd9e9525099e8d4eb4d34c7762ab4f.png?1782168610
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTM5Mi9vcmlnaW5hbF8yYmJkOWU5NTI1MDk5ZThkNGViNGQzNGM3NzYyYWI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTM5Mi9vcmlnaW5hbF8yYmJkOWU5NTI1MDk5ZThkNGViNGQzNGM3NzYyYWI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTM5Mi9vcmlnaW5hbF8yYmJkOWU5NTI1MDk5ZThkNGViNGQzNGM3NzYyYWI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTM5Mi9vcmlnaW5hbF8yYmJkOWU5NTI1MDk5ZThkNGViNGQzNGM3NzYyYWI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1536
+  height: 1024
+  aspect_ratio: 1.5
+  content_type: image/png
+  filename: 2bbd9e9525099e8d4eb4d34c7762ab4f.png
+  file_size: 2938576
+  alt_text: null
+structure:
+  block_count: 13
+  titled_block_count: 13
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles: {}
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47229392
+  block_type: Image
+  title: NEXAH LANDSCAPES
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-06-22T22:50:09Z'
+  updated_at: '2026-06-22T22:50:16Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229392/original_2bbd9e9525099e8d4eb4d34c7762ab4f.png?1782168610
+    variants: *id001
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 2bbd9e9525099e8d4eb4d34c7762ab4f.png
+    file_size: 2938576
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47229261
+  block_type: Image
+  title: NEXAH LANDSCAPE THE WORLD MAP OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-06-22T22:41:17Z'
+  updated_at: '2026-06-22T22:41:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229261/original_7b2054ed517956e85b418e4964f56328.png?1782168078
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MS9vcmlnaW5hbF83YjIwNTRlZDUxNzk1NmU4NWI0MThlNDk2NGY1NjMyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MS9vcmlnaW5hbF83YjIwNTRlZDUxNzk1NmU4NWI0MThlNDk2NGY1NjMyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MS9vcmlnaW5hbF83YjIwNTRlZDUxNzk1NmU4NWI0MThlNDk2NGY1NjMyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MS9vcmlnaW5hbF83YjIwNTRlZDUxNzk1NmU4NWI0MThlNDk2NGY1NjMyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7b2054ed517956e85b418e4964f56328.png
+    file_size: 1542277
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47229260
+  block_type: Image
+  title: NEXAH OVERVIEW THE NEXAH MAP A WORLD MAP OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-06-22T22:41:06Z'
+  updated_at: '2026-06-22T22:41:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229260/original_1110e395c77bee021024a389143c6e16.png?1782168068
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MC9vcmlnaW5hbF8xMTEwZTM5NWM3N2JlZTAyMTAyNGEzODkxNDNjNmUxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MC9vcmlnaW5hbF8xMTEwZTM5NWM3N2JlZTAyMTAyNGEzODkxNDNjNmUxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MC9vcmlnaW5hbF8xMTEwZTM5NWM3N2JlZTAyMTAyNGEzODkxNDNjNmUxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2MC9vcmlnaW5hbF8xMTEwZTM5NWM3N2JlZTAyMTAyNGEzODkxNDNjNmUxNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 1110e395c77bee021024a389143c6e16.png
+    file_size: 1719488
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47229259
+  block_type: Image
+  title: NEXAH GEOGRAPHICA THE WORLD MAP OF AN ORIENATIONA
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-06-22T22:41:03Z'
+  updated_at: '2026-06-22T22:41:07Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229259/original_81e1ea1ace470b101142353ae96f8723.png?1782168064
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1OS9vcmlnaW5hbF84MWUxZWExYWNlNDcwYjEwMTE0MjM1M2FlOTZmODcyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1OS9vcmlnaW5hbF84MWUxZWExYWNlNDcwYjEwMTE0MjM1M2FlOTZmODcyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1OS9vcmlnaW5hbF84MWUxZWExYWNlNDcwYjEwMTE0MjM1M2FlOTZmODcyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1OS9vcmlnaW5hbF84MWUxZWExYWNlNDcwYjEwMTE0MjM1M2FlOTZmODcyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 81e1ea1ace470b101142353ae96f8723.png
+    file_size: 1666687
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47229257
+  block_type: Image
+  title: NEXAH BIOGRAPHICA THE HUMAN AS A LIVING ATLAS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-06-22T22:40:59Z'
+  updated_at: '2026-06-22T22:41:03Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229257/original_7a400d0c72ff33ecfa6518f4949bcba4.png?1782168060
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1Ny9vcmlnaW5hbF83YTQwMGQwYzcyZmYzM2VjZmE2NTE4ZjQ5NDliY2JhNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1Ny9vcmlnaW5hbF83YTQwMGQwYzcyZmYzM2VjZmE2NTE4ZjQ5NDliY2JhNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1Ny9vcmlnaW5hbF83YTQwMGQwYzcyZmYzM2VjZmE2NTE4ZjQ5NDliY2JhNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1Ny9vcmlnaW5hbF83YTQwMGQwYzcyZmYzM2VjZmE2NTE4ZjQ5NDliY2JhNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7a400d0c72ff33ecfa6518f4949bcba4.png
+    file_size: 1925648
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47229255
+  block_type: Image
+  title: NEXAH MAPS ECOSYSTEM THE MAP OF MAPS - ORIENTATION IN A COMPLEX WORLD
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-06-22T22:40:55Z'
+  updated_at: '2026-06-22T22:40:59Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229255/original_d06df70cf8e27c76b18e1cf18eeaedd1.png?1782168056
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NS9vcmlnaW5hbF9kMDZkZjcwY2Y4ZTI3Yzc2YjE4ZTFjZjE4ZWVhZWRkMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NS9vcmlnaW5hbF9kMDZkZjcwY2Y4ZTI3Yzc2YjE4ZTFjZjE4ZWVhZWRkMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NS9vcmlnaW5hbF9kMDZkZjcwY2Y4ZTI3Yzc2YjE4ZTFjZjE4ZWVhZWRkMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NS9vcmlnaW5hbF9kMDZkZjcwY2Y4ZTI3Yzc2YjE4ZTFjZjE4ZWVhZWRkMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d06df70cf8e27c76b18e1cf18eeaedd1.png
+    file_size: 2216413
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47229254
+  block_type: Image
+  title: NEXAH SYNCHRONIZATION ATLAS THE INVISIBLE CONNECTIONS THAT CREATE REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-06-22T22:40:53Z'
+  updated_at: '2026-06-22T22:40:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229254/original_39ad9db56bdc19a09ad365635b1d62e7.png?1782168054
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NC9vcmlnaW5hbF8zOWFkOWRiNTZiZGMxOWEwOWFkMzY1NjM1YjFkNjJlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NC9vcmlnaW5hbF8zOWFkOWRiNTZiZGMxOWEwOWFkMzY1NjM1YjFkNjJlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NC9vcmlnaW5hbF8zOWFkOWRiNTZiZGMxOWEwOWFkMzY1NjM1YjFkNjJlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1NC9vcmlnaW5hbF8zOWFkOWRiNTZiZGMxOWEwOWFkMzY1NjM1YjFkNjJlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 39ad9db56bdc19a09ad365635b1d62e7.png
+    file_size: 2326269
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47229253
+  block_type: Image
+  title: NEXAH ORIENTATION FRAMEWORK NAVIGATING COMPLEXITY THROUGH DYNAMIC MAPS, MULTI-SCALE CONNECTIONS & ADAPTIVE ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-06-22T22:40:51Z'
+  updated_at: '2026-06-22T22:40:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229253/original_2cb949550d921b3f800a58a83b0b7ee1.png?1782168052
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1My9vcmlnaW5hbF8yY2I5NDk1NTBkOTIxYjNmODAwYTU4YTgzYjBiN2VlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1My9vcmlnaW5hbF8yY2I5NDk1NTBkOTIxYjNmODAwYTU4YTgzYjBiN2VlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1My9vcmlnaW5hbF8yY2I5NDk1NTBkOTIxYjNmODAwYTU4YTgzYjBiN2VlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI1My9vcmlnaW5hbF8yY2I5NDk1NTBkOTIxYjNmODAwYTU4YTgzYjBiN2VlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 2cb949550d921b3f800a58a83b0b7ee1.png
+    file_size: 2133678
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47229227
+  block_type: Image
+  title: NEXAH ORIENTATION FRAMEWORK
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-06-22T22:40:41Z'
+  updated_at: '2026-06-22T22:40:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229227/original_d266a8d5d59c3f9e1430e6d373cfc3c5.png?1782168042
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNy9vcmlnaW5hbF9kMjY2YThkNWQ1OWMzZjllMTQzMGU2ZDM3M2NmYzNjNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNy9vcmlnaW5hbF9kMjY2YThkNWQ1OWMzZjllMTQzMGU2ZDM3M2NmYzNjNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNy9vcmlnaW5hbF9kMjY2YThkNWQ1OWMzZjllMTQzMGU2ZDM3M2NmYzNjNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNy9vcmlnaW5hbF9kMjY2YThkNWQ1OWMzZjllMTQzMGU2ZDM3M2NmYzNjNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d266a8d5d59c3f9e1430e6d373cfc3c5.png
+    file_size: 2081225
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47229226
+  block_type: Image
+  title: NEXAH MATRYOSHKA ATLAS v1.0 EVERY DECISION IS LOCAL. EVERY CONSEQUENCE IS GLOBAL.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-06-22T22:40:38Z'
+  updated_at: '2026-06-22T22:40:42Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229226/original_841c07e5fbb810e9180b816207ad391d.png?1782168039
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNi9vcmlnaW5hbF84NDFjMDdlNWZiYjgxMGU5MTgwYjgxNjIwN2FkMzkxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNi9vcmlnaW5hbF84NDFjMDdlNWZiYjgxMGU5MTgwYjgxNjIwN2FkMzkxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNi9vcmlnaW5hbF84NDFjMDdlNWZiYjgxMGU5MTgwYjgxNjIwN2FkMzkxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyNi9vcmlnaW5hbF84NDFjMDdlNWZiYjgxMGU5MTgwYjgxNjIwN2FkMzkxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 841c07e5fbb810e9180b816207ad391d.png
+    file_size: 2446802
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47229222
+  block_type: Image
+  title: THE NEXAH CLOCK
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-06-22T22:40:24Z'
+  updated_at: '2026-06-22T22:42:27Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229222/original_f69e9c96a95abe47a0c9814cb9dd644f.png?1782168025
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMi9vcmlnaW5hbF9mNjllOWM5NmE5NWFiZTQ3YTBjOTgxNGNiOWRkNjQ0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMi9vcmlnaW5hbF9mNjllOWM5NmE5NWFiZTQ3YTBjOTgxNGNiOWRkNjQ0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMi9vcmlnaW5hbF9mNjllOWM5NmE5NWFiZTQ3YTBjOTgxNGNiOWRkNjQ0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMi9vcmlnaW5hbF9mNjllOWM5NmE5NWFiZTQ3YTBjOTgxNGNiOWRkNjQ0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f69e9c96a95abe47a0c9814cb9dd644f.png
+    file_size: 2458555
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47229223
+  block_type: Image
+  title: THE NEXAH CLOCK ORIENTATION IN A DYNAMIC ECOSYSTEM OF MAPS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-06-22T22:40:24Z'
+  updated_at: '2026-06-22T22:40:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229223/original_0c99ba5bd91db19c4356efb4e15db5bd.png?1782168025
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMy9vcmlnaW5hbF8wYzk5YmE1YmQ5MWRiMTljNDM1NmVmYjRlMTVkYjViZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMy9vcmlnaW5hbF8wYzk5YmE1YmQ5MWRiMTljNDM1NmVmYjRlMTVkYjViZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMy9vcmlnaW5hbF8wYzk5YmE1YmQ5MWRiMTljNDM1NmVmYjRlMTVkYjViZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTIyMy9vcmlnaW5hbF8wYzk5YmE1YmQ5MWRiMTljNDM1NmVmYjRlMTVkYjViZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0c99ba5bd91db19c4356efb4e15db5bd.png
+    file_size: 2194762
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47229263
+  block_type: Image
+  title: NEXAH_LANDSCAPE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-06-22T22:41:31Z'
+  updated_at: '2026-06-22T22:50:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229263/original_6c91588561618c327d05a294bd480f39.png?1782168092
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2My9vcmlnaW5hbF82YzkxNTg4NTYxNjE4YzMyN2QwNWEyOTRiZDQ4MGYzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2My9vcmlnaW5hbF82YzkxNTg4NTYxNjE4YzMyN2QwNWEyOTRiZDQ4MGYzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2My9vcmlnaW5hbF82YzkxNTg4NTYxNjE4YzMyN2QwNWEyOTRiZDQ4MGYzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTI2My9vcmlnaW5hbF82YzkxNTg4NTYxNjE4YzMyN2QwNWEyOTRiZDQ4MGYzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6c91588561618c327d05a294bd480f39.png
+    file_size: 3032747
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

@@ -1,0 +1,366 @@
+schema_version: '0.1'
+catalog_key: arena:5203312
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH MATHEMATICA I — PRIME RESIDUE GEOMETRY
+source:
+  arena_channel_id: 5203312
+  arena_slug: nexah-mathematica-i-prime-residue-geometry
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-i-prime-residue-geometry
+  live_title: NEXAH MATHEMATICA I - Prime Residue Geometry
+  description: "A visual research atlas exploring modular residue systems, drift geometries, recursive arithmetic structures,\
+    \ and large-scale transition behavior in prime distributions.\nCombining classical number theory, geometric embeddings,\
+    \ experimental cartography, and recursive visualization frameworks.\nTopics include:\n• prime counting structures\n• modular\
+    \ residue manifolds\n• polar drift fields\n• transition corridors\n• persistence geometries\n• recursive shell dynamics\n\
+    • JANUS transition operators \nNEXAH MATHEMATICA investigates how arithmetic structure organizes into observable geometric\
+    \ behavior across scales."
+  visibility: closed
+  state: available
+  member_count: 12
+  created_at: '2026-05-20T21:01:51Z'
+  updated_at: '2026-05-20T22:39:38Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Mathematica
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46365898
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY_ii
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365898/original_a67ae055af6f77d06720fc3e4febf552.png?1779310925
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTg5OC9vcmlnaW5hbF9hNjdhZTA1NWFmNmY3N2QwNjcyMGZjM2U0ZmViZjU1Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTg5OC9vcmlnaW5hbF9hNjdhZTA1NWFmNmY3N2QwNjcyMGZjM2U0ZmViZjU1Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTg5OC9vcmlnaW5hbF9hNjdhZTA1NWFmNmY3N2QwNjcyMGZjM2U0ZmViZjU1Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTg5OC9vcmlnaW5hbF9hNjdhZTA1NWFmNmY3N2QwNjcyMGZjM2U0ZmViZjU1Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: a67ae055af6f77d06720fc3e4febf552.png
+  file_size: 1721311
+  alt_text: null
+structure:
+  block_count: 12
+  titled_block_count: 12
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part:
+  - sequence_index: 3
+    arena_block_id: 46365919
+    title: PART I  FOUNDATIONS OF PRIME GEOMETRY
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 5
+      arena_block_id: 46366046
+      title: POSTER B - RESIDUE TRANSITION GEOMETRY oF PRIMESii
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46365898
+  block_type: Image
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY_ii
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-20T21:02:04Z'
+  updated_at: '2026-05-20T21:11:25Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365898/original_a67ae055af6f77d06720fc3e4febf552.png?1779310925
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: a67ae055af6f77d06720fc3e4febf552.png
+    file_size: 1721311
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46365909
+  block_type: Image
+  title: NEXAH MATHEMATICA 66 VOLUME I - PRIME RESIDUE GEOMETRY_MASTERINDEX
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-20T21:02:49Z'
+  updated_at: '2026-05-20T21:11:41Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365909/original_da27719fab9726a6f592210280a495dc.png?1779310970
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkwOS9vcmlnaW5hbF9kYTI3NzE5ZmFiOTcyNmE2ZjU5MjIxMDI4MGE0OTVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkwOS9vcmlnaW5hbF9kYTI3NzE5ZmFiOTcyNmE2ZjU5MjIxMDI4MGE0OTVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkwOS9vcmlnaW5hbF9kYTI3NzE5ZmFiOTcyNmE2ZjU5MjIxMDI4MGE0OTVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkwOS9vcmlnaW5hbF9kYTI3NzE5ZmFiOTcyNmE2ZjU5MjIxMDI4MGE0OTVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: da27719fab9726a6f592210280a495dc.png
+    file_size: 1753367
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46365919
+  block_type: Image
+  title: PART I  FOUNDATIONS OF PRIME GEOMETRY
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-05-20T21:03:17Z'
+  updated_at: '2026-05-20T21:11:36Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365919/original_6dc37b860518aa6f76b1f34b6b491a13.png?1779310999
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkxOS9vcmlnaW5hbF82ZGMzN2I4NjA1MThhYTZmNzZiMWYzNGI2YjQ5MWExMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkxOS9vcmlnaW5hbF82ZGMzN2I4NjA1MThhYTZmNzZiMWYzNGI2YjQ5MWExMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkxOS9vcmlnaW5hbF82ZGMzN2I4NjA1MThhYTZmNzZiMWYzNGI2YjQ5MWExMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTkxOS9vcmlnaW5hbF82ZGMzN2I4NjA1MThhYTZmNzZiMWYzNGI2YjQ5MWExMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 6dc37b860518aa6f76b1f34b6b491a13.png
+    file_size: 1494903
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46366170
+  block_type: Image
+  title: POSTER A - CLASSICAL DRIFT GEOMETRY OF PRIMES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-20T21:15:23Z'
+  updated_at: '2026-05-20T21:21:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366170/original_f919c9c24987343594944d571ef9085e.png?1779311725
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE3MC9vcmlnaW5hbF9mOTE5YzljMjQ5ODczNDM1OTQ5NDRkNTcxZWY5MDg1ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE3MC9vcmlnaW5hbF9mOTE5YzljMjQ5ODczNDM1OTQ5NDRkNTcxZWY5MDg1ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE3MC9vcmlnaW5hbF9mOTE5YzljMjQ5ODczNDM1OTQ5NDRkNTcxZWY5MDg1ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE3MC9vcmlnaW5hbF9mOTE5YzljMjQ5ODczNDM1OTQ5NDRkNTcxZWY5MDg1ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f919c9c24987343594944d571ef9085e.png
+    file_size: 1660930
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46366046
+  block_type: Image
+  title: POSTER B - RESIDUE TRANSITION GEOMETRY oF PRIMESii
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 8
+  created_at: '2026-05-20T21:10:33Z'
+  updated_at: '2026-05-20T21:21:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366046/original_545186359b4358cdfbea36f3f2b16544.png?1779311438
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjA0Ni9vcmlnaW5hbF81NDUxODYzNTliNDM1OGNkZmJlYTM2ZjNmMmIxNjU0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjA0Ni9vcmlnaW5hbF81NDUxODYzNTliNDM1OGNkZmJlYTM2ZjNmMmIxNjU0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjA0Ni9vcmlnaW5hbF81NDUxODYzNTliNDM1OGNkZmJlYTM2ZjNmMmIxNjU0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjA0Ni9vcmlnaW5hbF81NDUxODYzNTliNDM1OGNkZmJlYTM2ZjNmMmIxNjU0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 545186359b4358cdfbea36f3f2b16544.png
+    file_size: 1753330
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46366026
+  block_type: Image
+  title: Prime_Exponent_Geometry
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-20T21:09:32Z'
+  updated_at: '2026-05-20T21:21:25Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366026/original_9c230ea428aaf5ace0cfc38d94c2b8fe.png?1779311374
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAyNi9vcmlnaW5hbF85YzIzMGVhNDI4YWFmNWFjZTBjZmMzOGQ5NGMyYjhmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAyNi9vcmlnaW5hbF85YzIzMGVhNDI4YWFmNWFjZTBjZmMzOGQ5NGMyYjhmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAyNi9vcmlnaW5hbF85YzIzMGVhNDI4YWFmNWFjZTBjZmMzOGQ5NGMyYjhmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAyNi9vcmlnaW5hbF85YzIzMGVhNDI4YWFmNWFjZTBjZmMzOGQ5NGMyYjhmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1198
+    height: 1313
+    aspect_ratio: 0.9124
+    content_type: image/png
+    filename: 9c230ea428aaf5ace0cfc38d94c2b8fe.png
+    file_size: 1536092
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46365940
+  block_type: Image
+  title: PRIME_COUNTING_AND_DRIFT_GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-20T21:04:52Z'
+  updated_at: '2026-05-20T21:12:03Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365940/original_3dddba64fab13116058743f884232069.png?1779311093
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk0MC9vcmlnaW5hbF8zZGRkYmE2NGZhYjEzMTE2MDU4NzQzZjg4NDIzMjA2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk0MC9vcmlnaW5hbF8zZGRkYmE2NGZhYjEzMTE2MDU4NzQzZjg4NDIzMjA2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk0MC9vcmlnaW5hbF8zZGRkYmE2NGZhYjEzMTE2MDU4NzQzZjg4NDIzMjA2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk0MC9vcmlnaW5hbF8zZGRkYmE2NGZhYjEzMTE2MDU4NzQzZjg4NDIzMjA2OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 3dddba64fab13116058743f884232069.png
+    file_size: 1541576
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46365956
+  block_type: Image
+  title: I-01 The Prime Counting Function (x)
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-20T21:05:49Z'
+  updated_at: '2026-05-20T21:23:49Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365956/original_b39b01eba466082266a90caa30de1a31.png?1779311150
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk1Ni9vcmlnaW5hbF9iMzliMDFlYmE0NjYwODIyNjZhOTBjYWEzMGRlMWEzMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk1Ni9vcmlnaW5hbF9iMzliMDFlYmE0NjYwODIyNjZhOTBjYWEzMGRlMWEzMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk1Ni9vcmlnaW5hbF9iMzliMDFlYmE0NjYwODIyNjZhOTBjYWEzMGRlMWEzMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk1Ni9vcmlnaW5hbF9iMzliMDFlYmE0NjYwODIyNjZhOTBjYWEzMGRlMWEzMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b39b01eba466082266a90caa30de1a31.png
+    file_size: 1374464
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46366004
+  block_type: Image
+  title: PRIME GEOMETRY- FROM FACTORIZATION SPACE TO PRIME COUNTING
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-20T21:08:06Z'
+  updated_at: '2026-05-20T21:12:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366004/original_49d461736b6d3b5f9cc728dfd1d89f6d.png?1779311287
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAwNC9vcmlnaW5hbF80OWQ0NjE3MzZiNmQzYjVmOWNjNzI4ZGZkMWQ4OWY2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAwNC9vcmlnaW5hbF80OWQ0NjE3MzZiNmQzYjVmOWNjNzI4ZGZkMWQ4OWY2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAwNC9vcmlnaW5hbF80OWQ0NjE3MzZiNmQzYjVmOWNjNzI4ZGZkMWQ4OWY2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjAwNC9vcmlnaW5hbF80OWQ0NjE3MzZiNmQzYjVmOWNjNzI4ZGZkMWQ4OWY2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 49d461736b6d3b5f9cc728dfd1d89f6d.png
+    file_size: 1601030
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46366195
+  block_type: Image
+  title: PRIME RESIDUE GEOMETRY — CORE RESULTS OVERVIEW_ii
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-20T21:17:01Z'
+  updated_at: '2026-05-20T21:17:12Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366195/original_2c110318ebc70179f0fc1e6d05c9ce41.png?1779311822
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NS9vcmlnaW5hbF8yYzExMDMxOGViYzcwMTc5ZjBmYzFlNmQwNWM5Y2U0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NS9vcmlnaW5hbF8yYzExMDMxOGViYzcwMTc5ZjBmYzFlNmQwNWM5Y2U0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NS9vcmlnaW5hbF8yYzExMDMxOGViYzcwMTc5ZjBmYzFlNmQwNWM5Y2U0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NS9vcmlnaW5hbF8yYzExMDMxOGViYzcwMTc5ZjBmYzFlNmQwNWM5Y2U0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 2c110318ebc70179f0fc1e6d05c9ce41.png
+    file_size: 1850220
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46365982
+  block_type: Image
+  title: I-03 Prime Exponent Geometry
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-20T21:06:56Z'
+  updated_at: '2026-05-20T21:22:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365982/original_0760b90f23bfa9c1c5197cd853ca897c.png?1779311216
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk4Mi9vcmlnaW5hbF8wNzYwYjkwZjIzYmZhOWMxYzUxOTdjZDg1M2NhODk3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk4Mi9vcmlnaW5hbF8wNzYwYjkwZjIzYmZhOWMxYzUxOTdjZDg1M2NhODk3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk4Mi9vcmlnaW5hbF8wNzYwYjkwZjIzYmZhOWMxYzUxOTdjZDg1M2NhODk3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTk4Mi9vcmlnaW5hbF8wNzYwYjkwZjIzYmZhOWMxYzUxOTdjZDg1M2NhODk3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0760b90f23bfa9c1c5197cd853ca897c.png
+    file_size: 1492573
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46366194
+  block_type: Image
+  title: PRIME RESIDUE GEOMETRY - CORE RESULTS OVERVIEW
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-20T21:17:01Z'
+  updated_at: '2026-05-20T21:17:16Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366194/original_547205d578b4473c7cfd02eab41595fe.png?1779311822
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NC9vcmlnaW5hbF81NDcyMDVkNTc4YjQ0NzNjN2NmZDAyZWFiNDE1OTVmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NC9vcmlnaW5hbF81NDcyMDVkNTc4YjQ0NzNjN2NmZDAyZWFiNDE1OTVmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NC9vcmlnaW5hbF81NDcyMDVkNTc4YjQ0NzNjN2NmZDAyZWFiNDE1OTVmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjE5NC9vcmlnaW5hbF81NDcyMDVkNTc4YjQ0NzNjN2NmZDAyZWFiNDE1OTVmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 547205d578b4473c7cfd02eab41595fe.png
+    file_size: 1886433
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

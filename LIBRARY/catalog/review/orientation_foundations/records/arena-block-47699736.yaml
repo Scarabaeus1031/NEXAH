@@ -1,0 +1,77 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47699736
+publication:
+  catalog_key: arena:5415690
+  arena_channel_id: 5415690
+  title: ORIENTATION DESIGN — VOLUME II
+source_block:
+  arena_block_id: 47699736
+  sequence_index: 11
+  title: 07 RESEARCH QUESTIONS
+  url: https://www.are.na/block/47699736
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699736/original_8a6a83135b50275bcaed7686ac65b127.png?1783520201
+  source_fingerprint: 8d1ffe6608a2f8d070e70253f341b2db9cdac3f4f0607918fa0cd49e1cb9a871
+visual_role: research_question
+visible_text:
+  transcription_status: partial
+  transcription: We do not start with answers. We start with questions worth asking.
+research_elements:
+  definitions: []
+  questions:
+  - statement: How do complex systems generate themselves?
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699736
+      source_url: https://www.are.na/block/47699736
+      note: null
+    status: publication_assertion
+  - statement: How can orientation be measured, not as output, but as state?
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699736
+      source_url: https://www.are.na/block/47699736
+      note: null
+    status: publication_assertion
+  - statement: How do transitions emerge?
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699736
+      source_url: https://www.are.na/block/47699736
+      note: null
+    status: publication_assertion
+  - statement: How can orientation be evaluated?
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699736
+      source_url: https://www.are.na/block/47699736
+      note: null
+    status: publication_assertion
+  - statement: How can we transfer orientation across domains?
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699736
+      source_url: https://www.are.na/block/47699736
+      note: null
+    status: publication_assertion
+  observations: []
+  hypotheses: []
+  methods: []
+  models: []
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts: []
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: Questions are recorded as an authored research agenda. They are not
+  answered, prioritized, or accepted by this catalog review.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

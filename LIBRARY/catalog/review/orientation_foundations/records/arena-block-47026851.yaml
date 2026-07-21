@@ -1,0 +1,65 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47026851
+publication:
+  catalog_key: arena:5309625
+  arena_channel_id: 5309625
+  title: ORIENTATION THEORY — VOLUME III
+source_block:
+  arena_block_id: 47026851
+  sequence_index: 16
+  title: 11_THE NEXAH RESEARCH PROGRAM 11 Orientation Theory for Complex Systems
+  url: https://www.are.na/block/47026851
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026851/original_bb542d6363f3668832ebe8dd89cb5d5f.png?1781470786
+  source_fingerprint: 6c3a212647fd3586258854100d8f0a50526fe655a92005a9d49d88372f0acdfa
+visual_role: research_question
+visible_text:
+  transcription_status: partial
+  transcription: How can an observer orient within an ecosystem of incomplete maps?
+research_elements:
+  definitions: []
+  questions:
+  - statement: How can an observer orient within an ecosystem of incomplete maps?
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026851
+      source_url: https://www.are.na/block/47026851
+      note: null
+    status: publication_assertion
+  observations: []
+  hypotheses:
+  - statement: The publication proposes that orientation, rather than prediction,
+      is the most important capability for complex systems.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026851
+      source_url: https://www.are.na/block/47026851
+      note: null
+    status: publication_assertion
+  methods: []
+  models:
+  - statement: Eight research pillars cover map discovery, relevance, regimes, scales,
+      map ecosystems, dynamics, human and AI orientation, and navigation.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026851
+      source_url: https://www.are.na/block/47026851
+      note: null
+    status: publication_assertion
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts: []
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: The hypothesis and pillars are the Work's stated research program,
+  not supported findings or canonical system commitments.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

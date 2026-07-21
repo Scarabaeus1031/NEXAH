@@ -155,7 +155,7 @@ evidence and claim boundary may not.
 The audience-specific renditions shown in the visual remain a bounded design
 question. They are not part of the current X2 implementation.
 
-## Current status — Living Library, Editorial Writer, and X2 pilot
+## Current status — Living Library, Website Catalog, Editorial Writer, and X2 pilot
 
 The current pilot contains:
 
@@ -167,6 +167,12 @@ The current pilot contains:
 - a separate, approval-gated Are.na Editorial Writer;
 - initial Reading Path, Operator, graph, and recommendation queries;
 - six accepted pilot Answer Contracts and a read-only Concept Answer Adapter.
+
+The public Library census now also records **61 Work Channels** in a separate,
+non-canonical [Website Catalog](catalog/README.md). The catalog captures all 61
+public descriptions and cover references plus 1,647 ordered, titled Blocks. It
+is a source-keyed website overlay, not an expansion of the ten-Work Canonical
+Registry.
 
 The ten pilot Works are:
 
@@ -181,8 +187,36 @@ The ten pilot Works are:
 9. THE ATLAS OF ATLASES
 10. LIBRARYBOOK
 
-These records are a work-level pilot, not a claim that the complete Are.na
-Library has already been classified.
+These records remain the canonical work-level pilot. The wider public Library
+has been provisionally classified and cataloged, but Proposal Works do not
+become canonical through catalog inclusion.
+
+## Website Catalog
+
+The catalog provides a practical bridge from the visual Are.na Library to a
+future website:
+
+```text
+Public Are.na Work
+→ source description and cover
+→ ordered Block titles
+→ conservative structural roles
+→ website index and editorial shelves
+```
+
+Research Works, atlases, reports, and whiteboards receive structural records.
+Journey Works initially receive bibliographic and dramaturgic metadata only.
+Text rendered inside image pages remains outside this API pass and requires a
+separate, evidence-citing visual review.
+
+Refresh the public GET-only catalog with:
+
+```bash
+python -m nexah.library website-catalog
+```
+
+See the generated [Catalog Status](catalog/CATALOG_STATUS.md) for the complete
+61-Work list and current coverage.
 
 ## Living Library Operations
 

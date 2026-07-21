@@ -1,0 +1,597 @@
+schema_version: '0.1'
+catalog_key: arena:5250350
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+source:
+  arena_channel_id: 5250350
+  arena_slug: the-architecture-of-orientation-vol-iv
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/the-architecture-of-orientation-vol-iv
+  live_title: THE ARCHITECTURE OF ORIENTATION Vol.IV
+  description: "THE ARCHITECTURE OF ORIENTATION \nReality is too vast to grasp at once.    \nSo we build maps. \nSome maps\
+    \ describe territories. \nSome maps describe systems.\nSome maps describe relationships.  \nSome maps describe ourselves.\n\
+    This series traces the architecture behind NEXAH:\nfrom observation to structure,\nfrom structure to navigation,\nfrom\
+    \ navigation to meaning.\nIt connects cybernetics, dynamical systems, complexity science, cognition, cartography, power\
+    \ systems, and visual thinking into a single navigable landscape.\nNot as a unified theory.\nBut as an invitation.\nAn\
+    \ invitation to explore how humans orient themselves within complexity.\nBecause before we can navigate reality,\nwe first\
+    \ need a map.\nAnd before we can build a map,\nwe must learn how to see."
+  visibility: closed
+  state: available
+  member_count: 20
+  created_at: '2026-06-01T20:59:46Z'
+  updated_at: '2026-07-08T15:10:54Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: architecture_book
+  library_function: synthesis
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Orientation Architecture
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Orientation
+catalog_depth: research_structure
+cover:
+  arena_block_id: 47699581
+  title: THE ARCHITECTURE OF ORIENTATION
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47699581/original_f109d03676983f3923a61bf8222c91c6.png?1783519831
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU4MS9vcmlnaW5hbF9mMTA5ZDAzNjc2OTgzZjM5MjNhNjFiZjgyMjJjOTFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU4MS9vcmlnaW5hbF9mMTA5ZDAzNjc2OTgzZjM5MjNhNjFiZjgyMjJjOTFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU4MS9vcmlnaW5hbF9mMTA5ZDAzNjc2OTgzZjM5MjNhNjFiZjgyMjJjOTFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU4MS9vcmlnaW5hbF9mMTA5ZDAzNjc2OTgzZjM5MjNhNjFiZjgyMjJjOTFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: f109d03676983f3923a61bf8222c91c6.png
+  file_size: 2788615
+  alt_text: null
+structure:
+  block_count: 20
+  titled_block_count: 20
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section:
+  - sequence_index: 4
+    arena_block_id: 46658890
+    title: 01 CYBERNETICS & NEXAH
+  - sequence_index: 5
+    arena_block_id: 46658883
+    title: 02_DYNAMICAL SYSTEMS & NEXAH
+  - sequence_index: 6
+    arena_block_id: 46658888
+    title: 03_COMPLEX SYSTEMS & NEXAH
+  - sequence_index: 7
+    arena_block_id: 46658879
+    title: 04_RESILIENCE & NEXAH
+  - sequence_index: 8
+    arena_block_id: 46658881
+    title: 05_NETWORK SCIENCE & NEXAH
+  - sequence_index: 9
+    arena_block_id: 46658887
+    title: 06_COGNITIVE MAPPING & NEXAH
+  - sequence_index: 10
+    arena_block_id: 46658885
+    title: 07_VISUALIZATION & NEXAH
+  - sequence_index: 11
+    arena_block_id: 46658884
+    title: 08_POWER SYSTEMS & NEXAH
+  - sequence_index: 14
+    arena_block_id: 46658897
+    title: 10_THE CARTOGRAPHER
+  - sequence_index: 15
+    arena_block_id: 46658896
+    title: 11_THE LABORATORY NEXAH REPOSITORY
+  - sequence_index: 16
+    arena_block_id: 46658898
+    title: 11_THE LABORATORY THE LABORATORY OF STRUCTURE
+  - sequence_index: 18
+    arena_block_id: 46658899
+    title: 13_THE STUDIO
+  - sequence_index: 19
+    arena_block_id: 46658901
+    title: 14_THE BRIDGE Between Vision and Validation
+  - sequence_index: 20
+    arena_block_id: 46658902
+    title: 15_THE ATLAS THE WHOLE ECOSYSTEM
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 3
+      arena_block_id: 46997013
+      title: NEXAH THE CARTOGRAPHY LABORATORY Maps for Navigating Complexity, Transition and Structure
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47699581
+  block_type: Image
+  title: THE ARCHITECTURE OF ORIENTATION
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 20
+  created_at: '2026-07-08T14:10:30Z'
+  updated_at: '2026-07-08T14:10:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47699581/original_f109d03676983f3923a61bf8222c91c6.png?1783519831
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f109d03676983f3923a61bf8222c91c6.png
+    file_size: 2788615
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46658878
+  block_type: Image
+  title: THE ARCHITECTURE OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-06-01T21:00:02Z'
+  updated_at: '2026-06-01T21:00:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658878/original_49e10ee6d6503fd885fdb0951c0acf8e.png?1780347603
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OC9vcmlnaW5hbF80OWUxMGVlNmQ2NTAzZmQ4ODVmZGIwOTUxYzBhY2Y4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OC9vcmlnaW5hbF80OWUxMGVlNmQ2NTAzZmQ4ODVmZGIwOTUxYzBhY2Y4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OC9vcmlnaW5hbF80OWUxMGVlNmQ2NTAzZmQ4ODVmZGIwOTUxYzBhY2Y4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OC9vcmlnaW5hbF80OWUxMGVlNmQ2NTAzZmQ4ODVmZGIwOTUxYzBhY2Y4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 49e10ee6d6503fd885fdb0951c0acf8e.png
+    file_size: 2646934
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46997013
+  block_type: Image
+  title: NEXAH THE CARTOGRAPHY LABORATORY Maps for Navigating Complexity, Transition and Structure
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 18
+  created_at: '2026-06-13T00:43:10Z'
+  updated_at: '2026-06-13T00:43:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46997013/original_8219a5833e08af498411a2d84121a30c.png?1781311391
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0Njk5NzAxMy9vcmlnaW5hbF84MjE5YTU4MzNlMDhhZjQ5ODQxMWEyZDg0MTIxYTMwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0Njk5NzAxMy9vcmlnaW5hbF84MjE5YTU4MzNlMDhhZjQ5ODQxMWEyZDg0MTIxYTMwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0Njk5NzAxMy9vcmlnaW5hbF84MjE5YTU4MzNlMDhhZjQ5ODQxMWEyZDg0MTIxYTMwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0Njk5NzAxMy9vcmlnaW5hbF84MjE5YTU4MzNlMDhhZjQ5ODQxMWEyZDg0MTIxYTMwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 8219a5833e08af498411a2d84121a30c.png
+    file_size: 2464115
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46658890
+  block_type: Image
+  title: 01 CYBERNETICS & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-06-01T21:00:12Z'
+  updated_at: '2026-06-07T00:37:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658890/original_0ad324efd5e3c112eafb259fd5fb6056.png?1780347614
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MC9vcmlnaW5hbF8wYWQzMjRlZmQ1ZTNjMTEyZWFmYjI1OWZkNWZiNjA1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MC9vcmlnaW5hbF8wYWQzMjRlZmQ1ZTNjMTEyZWFmYjI1OWZkNWZiNjA1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MC9vcmlnaW5hbF8wYWQzMjRlZmQ1ZTNjMTEyZWFmYjI1OWZkNWZiNjA1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MC9vcmlnaW5hbF8wYWQzMjRlZmQ1ZTNjMTEyZWFmYjI1OWZkNWZiNjA1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0ad324efd5e3c112eafb259fd5fb6056.png
+    file_size: 2300314
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46658883
+  block_type: Image
+  title: 02_DYNAMICAL SYSTEMS & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-06-01T21:00:07Z'
+  updated_at: '2026-07-06T20:56:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658883/original_f68cb2098cedd9a24c61165eb6e23f86.png?1780347609
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4My9vcmlnaW5hbF9mNjhjYjIwOThjZWRkOWEyNGM2MTE2NWViNmUyM2Y4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4My9vcmlnaW5hbF9mNjhjYjIwOThjZWRkOWEyNGM2MTE2NWViNmUyM2Y4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4My9vcmlnaW5hbF9mNjhjYjIwOThjZWRkOWEyNGM2MTE2NWViNmUyM2Y4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4My9vcmlnaW5hbF9mNjhjYjIwOThjZWRkOWEyNGM2MTE2NWViNmUyM2Y4Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f68cb2098cedd9a24c61165eb6e23f86.png
+    file_size: 2386073
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46658888
+  block_type: Image
+  title: 03_COMPLEX SYSTEMS & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-06-01T21:00:11Z'
+  updated_at: '2026-06-07T00:38:03Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658888/original_a62a2996fcb7b463d27c944f6fbd2be4.png?1780347613
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4OC9vcmlnaW5hbF9hNjJhMjk5NmZjYjdiNDYzZDI3Yzk0NGY2ZmJkMmJlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4OC9vcmlnaW5hbF9hNjJhMjk5NmZjYjdiNDYzZDI3Yzk0NGY2ZmJkMmJlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4OC9vcmlnaW5hbF9hNjJhMjk5NmZjYjdiNDYzZDI3Yzk0NGY2ZmJkMmJlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4OC9vcmlnaW5hbF9hNjJhMjk5NmZjYjdiNDYzZDI3Yzk0NGY2ZmJkMmJlNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: a62a2996fcb7b463d27c944f6fbd2be4.png
+    file_size: 2335817
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46658879
+  block_type: Image
+  title: 04_RESILIENCE & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-06-01T21:00:03Z'
+  updated_at: '2026-06-07T00:38:29Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658879/original_1f92698bae41f0e142dbf969819ccc37.png?1780347604
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OS9vcmlnaW5hbF8xZjkyNjk4YmFlNDFmMGUxNDJkYmY5Njk4MTljY2MzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OS9vcmlnaW5hbF8xZjkyNjk4YmFlNDFmMGUxNDJkYmY5Njk4MTljY2MzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OS9vcmlnaW5hbF8xZjkyNjk4YmFlNDFmMGUxNDJkYmY5Njk4MTljY2MzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg3OS9vcmlnaW5hbF8xZjkyNjk4YmFlNDFmMGUxNDJkYmY5Njk4MTljY2MzNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 1f92698bae41f0e142dbf969819ccc37.png
+    file_size: 2274353
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46658881
+  block_type: Image
+  title: 05_NETWORK SCIENCE & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-06-01T21:00:04Z'
+  updated_at: '2026-06-07T00:38:19Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658881/original_7763aec727cd7007d61ae351e50b4cef.png?1780347605
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4MS9vcmlnaW5hbF83NzYzYWVjNzI3Y2Q3MDA3ZDYxYWUzNTFlNTBiNGNlZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4MS9vcmlnaW5hbF83NzYzYWVjNzI3Y2Q3MDA3ZDYxYWUzNTFlNTBiNGNlZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4MS9vcmlnaW5hbF83NzYzYWVjNzI3Y2Q3MDA3ZDYxYWUzNTFlNTBiNGNlZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4MS9vcmlnaW5hbF83NzYzYWVjNzI3Y2Q3MDA3ZDYxYWUzNTFlNTBiNGNlZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 7763aec727cd7007d61ae351e50b4cef.png
+    file_size: 2234028
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46658887
+  block_type: Image
+  title: 06_COGNITIVE MAPPING & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-06-01T21:00:10Z'
+  updated_at: '2026-06-21T20:16:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658887/original_975994d15636ca0b536e69ec29d79e9b.png?1780347611
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4Ny9vcmlnaW5hbF85NzU5OTRkMTU2MzZjYTBiNTM2ZTY5ZWMyOWQ3OWU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4Ny9vcmlnaW5hbF85NzU5OTRkMTU2MzZjYTBiNTM2ZTY5ZWMyOWQ3OWU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4Ny9vcmlnaW5hbF85NzU5OTRkMTU2MzZjYTBiNTM2ZTY5ZWMyOWQ3OWU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4Ny9vcmlnaW5hbF85NzU5OTRkMTU2MzZjYTBiNTM2ZTY5ZWMyOWQ3OWU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 975994d15636ca0b536e69ec29d79e9b.png
+    file_size: 2268169
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46658885
+  block_type: Image
+  title: 07_VISUALIZATION & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-06-01T21:00:08Z'
+  updated_at: '2026-06-07T00:38:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658885/original_1b3cef021d28788331aa2b3e0689a71d.png?1780347610
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NS9vcmlnaW5hbF8xYjNjZWYwMjFkMjg3ODgzMzFhYTJiM2UwNjg5YTcxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NS9vcmlnaW5hbF8xYjNjZWYwMjFkMjg3ODgzMzFhYTJiM2UwNjg5YTcxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NS9vcmlnaW5hbF8xYjNjZWYwMjFkMjg3ODgzMzFhYTJiM2UwNjg5YTcxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NS9vcmlnaW5hbF8xYjNjZWYwMjFkMjg3ODgzMzFhYTJiM2UwNjg5YTcxZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 1b3cef021d28788331aa2b3e0689a71d.png
+    file_size: 2268785
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46658884
+  block_type: Image
+  title: 08_POWER SYSTEMS & NEXAH
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-06-01T21:00:08Z'
+  updated_at: '2026-06-07T00:38:41Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658884/original_f91358546f2cce6f221a33dde076231b.png?1780347609
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NC9vcmlnaW5hbF9mOTEzNTg1NDZmMmNjZTZmMjIxYTMzZGRlMDc2MjMxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NC9vcmlnaW5hbF9mOTEzNTg1NDZmMmNjZTZmMjIxYTMzZGRlMDc2MjMxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NC9vcmlnaW5hbF9mOTEzNTg1NDZmMmNjZTZmMjIxYTMzZGRlMDc2MjMxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg4NC9vcmlnaW5hbF9mOTEzNTg1NDZmMmNjZTZmMjIxYTMzZGRlMDc2MjMxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f91358546f2cce6f221a33dde076231b.png
+    file_size: 2176499
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46658894
+  block_type: Image
+  title: WHERE DOES NEXAH LIVE?
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-06-01T21:00:15Z'
+  updated_at: '2026-06-07T00:38:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658894/original_8deb59db15a098fef56415e60335ed99.png?1780347616
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5NC9vcmlnaW5hbF84ZGViNTlkYjE1YTA5OGZlZjU2NDE1ZTYwMzM1ZWQ5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5NC9vcmlnaW5hbF84ZGViNTlkYjE1YTA5OGZlZjU2NDE1ZTYwMzM1ZWQ5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5NC9vcmlnaW5hbF84ZGViNTlkYjE1YTA5OGZlZjU2NDE1ZTYwMzM1ZWQ5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5NC9vcmlnaW5hbF84ZGViNTlkYjE1YTA5OGZlZjU2NDE1ZTYwMzM1ZWQ5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 8deb59db15a098fef56415e60335ed99.png
+    file_size: 2432308
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46658968
+  block_type: Image
+  title: NEXAH THE CARTOGRAPHY LABORATORY_Overview
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-06-01T21:04:00Z'
+  updated_at: '2026-06-13T00:43:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658968/original_6a854c1c9f2a32ed44cac20f81cfa9b8.png?1780347841
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODk2OC9vcmlnaW5hbF82YTg1NGMxYzlmMmEzMmVkNDRjYWMyMGY4MWNmYTliOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODk2OC9vcmlnaW5hbF82YTg1NGMxYzlmMmEzMmVkNDRjYWMyMGY4MWNmYTliOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODk2OC9vcmlnaW5hbF82YTg1NGMxYzlmMmEzMmVkNDRjYWMyMGY4MWNmYTliOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODk2OC9vcmlnaW5hbF82YTg1NGMxYzlmMmEzMmVkNDRjYWMyMGY4MWNmYTliOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6a854c1c9f2a32ed44cac20f81cfa9b8.png
+    file_size: 2770729
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 46658897
+  block_type: Image
+  title: 10_THE CARTOGRAPHER
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-06-01T21:00:16Z'
+  updated_at: '2026-07-05T20:37:12Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658897/original_ea65980d0dbcc076f154676b8591eafd.png?1780347618
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ny9vcmlnaW5hbF9lYTY1OTgwZDBkYmNjMDc2ZjE1NDY3NmI4NTkxZWFmZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ny9vcmlnaW5hbF9lYTY1OTgwZDBkYmNjMDc2ZjE1NDY3NmI4NTkxZWFmZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ny9vcmlnaW5hbF9lYTY1OTgwZDBkYmNjMDc2ZjE1NDY3NmI4NTkxZWFmZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ny9vcmlnaW5hbF9lYTY1OTgwZDBkYmNjMDc2ZjE1NDY3NmI4NTkxZWFmZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ea65980d0dbcc076f154676b8591eafd.png
+    file_size: 2283080
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 46658896
+  block_type: Image
+  title: 11_THE LABORATORY NEXAH REPOSITORY
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-06-01T21:00:16Z'
+  updated_at: '2026-06-02T23:27:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658896/original_02073115f49d78a60631973dd2aea16e.png?1780347617
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ni9vcmlnaW5hbF8wMjA3MzExNWY0OWQ3OGE2MDYzMTk3M2RkMmFlYTE2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ni9vcmlnaW5hbF8wMjA3MzExNWY0OWQ3OGE2MDYzMTk3M2RkMmFlYTE2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ni9vcmlnaW5hbF8wMjA3MzExNWY0OWQ3OGE2MDYzMTk3M2RkMmFlYTE2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5Ni9vcmlnaW5hbF8wMjA3MzExNWY0OWQ3OGE2MDYzMTk3M2RkMmFlYTE2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 02073115f49d78a60631973dd2aea16e.png
+    file_size: 2008742
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 46658898
+  block_type: Image
+  title: 11_THE LABORATORY THE LABORATORY OF STRUCTURE
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-06-01T21:00:17Z'
+  updated_at: '2026-06-02T23:27:54Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658898/original_9316fa735866f0ba8fd81118fd79def3.png?1780347619
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OC9vcmlnaW5hbF85MzE2ZmE3MzU4NjZmMGJhOGZkODExMThmZDc5ZGVmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OC9vcmlnaW5hbF85MzE2ZmE3MzU4NjZmMGJhOGZkODExMThmZDc5ZGVmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OC9vcmlnaW5hbF85MzE2ZmE3MzU4NjZmMGJhOGZkODExMThmZDc5ZGVmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OC9vcmlnaW5hbF85MzE2ZmE3MzU4NjZmMGJhOGZkODExMThmZDc5ZGVmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 9316fa735866f0ba8fd81118fd79def3.png
+    file_size: 2996589
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 46658891
+  block_type: Image
+  title: 'THE MUSEUM NEXAH-CODEX : ARE.NA'
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-06-01T21:00:14Z'
+  updated_at: '2026-06-02T23:27:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658891/original_86ca9c203d31d7c64b410780a7795bc4.png?1780347614
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MS9vcmlnaW5hbF84NmNhOWMyMDNkMzFkN2M2NGI0MTA3ODBhNzc5NWJjNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MS9vcmlnaW5hbF84NmNhOWMyMDNkMzFkN2M2NGI0MTA3ODBhNzc5NWJjNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MS9vcmlnaW5hbF84NmNhOWMyMDNkMzFkN2M2NGI0MTA3ODBhNzc5NWJjNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5MS9vcmlnaW5hbF84NmNhOWMyMDNkMzFkN2M2NGI0MTA3ODBhNzc5NWJjNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 86ca9c203d31d7c64b410780a7795bc4.png
+    file_size: 2169316
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 46658899
+  block_type: Image
+  title: 13_THE STUDIO
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-06-01T21:00:17Z'
+  updated_at: '2026-06-02T23:27:59Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658899/original_ea9bf49493392ec90023acff4a8dc18f.png?1780347620
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OS9vcmlnaW5hbF9lYTliZjQ5NDkzMzkyZWM5MDAyM2FjZmY0YThkYzE4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OS9vcmlnaW5hbF9lYTliZjQ5NDkzMzkyZWM5MDAyM2FjZmY0YThkYzE4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OS9vcmlnaW5hbF9lYTliZjQ5NDkzMzkyZWM5MDAyM2FjZmY0YThkYzE4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODg5OS9vcmlnaW5hbF9lYTliZjQ5NDkzMzkyZWM5MDAyM2FjZmY0YThkYzE4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ea9bf49493392ec90023acff4a8dc18f.png
+    file_size: 2197972
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 46658901
+  block_type: Image
+  title: 14_THE BRIDGE Between Vision and Validation
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-06-01T21:00:18Z'
+  updated_at: '2026-06-02T23:28:01Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658901/original_f7b9025500d0ef35aeecf02bb361a06a.png?1780347621
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMS9vcmlnaW5hbF9mN2I5MDI1NTAwZDBlZjM1YWVlY2YwMmJiMzYxYTA2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMS9vcmlnaW5hbF9mN2I5MDI1NTAwZDBlZjM1YWVlY2YwMmJiMzYxYTA2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMS9vcmlnaW5hbF9mN2I5MDI1NTAwZDBlZjM1YWVlY2YwMmJiMzYxYTA2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMS9vcmlnaW5hbF9mN2I5MDI1NTAwZDBlZjM1YWVlY2YwMmJiMzYxYTA2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f7b9025500d0ef35aeecf02bb361a06a.png
+    file_size: 2194137
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 46658902
+  block_type: Image
+  title: 15_THE ATLAS THE WHOLE ECOSYSTEM
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-06-01T21:00:18Z'
+  updated_at: '2026-06-07T00:37:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46658902/original_0f278c1763cee49e9c09078f40b330a0.png?1780347622
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMi9vcmlnaW5hbF8wZjI3OGMxNzYzY2VlNDllOWMwOTA3OGY0MGIzMzBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMi9vcmlnaW5hbF8wZjI3OGMxNzYzY2VlNDllOWMwOTA3OGY0MGIzMzBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMi9vcmlnaW5hbF8wZjI3OGMxNzYzY2VlNDllOWMwOTA3OGY0MGIzMzBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjY1ODkwMi9vcmlnaW5hbF8wZjI3OGMxNzYzY2VlNDllOWMwOTA3OGY0MGIzMzBhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0f278c1763cee49e9c09078f40b330a0.png
+    file_size: 2147460
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

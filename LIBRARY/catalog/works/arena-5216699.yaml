@@ -1,0 +1,413 @@
+schema_version: '0.1'
+catalog_key: arena:5216699
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH — MAPS OF HUMAN REALITY
+source:
+  arena_channel_id: 5216699
+  arena_slug: nexah-maps-of-human-reality
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-maps-of-human-reality
+  live_title: NEXAH — 🌍  Maps of Human Reality
+  description: "A visual atlas exploring perception, reality, culture, \nscience, consciousness, and navigation through layered\
+    \ maps.  \nFrom human history to systems thinking,\nfrom inner landscapes to civilization-scale structures,\nthis channel\
+    \ collects the orientation layer of NEXAH. \nNot a doctrine.  \nNot a fixed worldview. \nA navigable atlas of perspectives."
+  visibility: closed
+  state: available
+  member_count: 14
+  created_at: '2026-05-24T14:59:29Z'
+  updated_at: '2026-06-25T22:01:48Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: visual_atlas
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: moderate
+  human_decision: pending
+catalog_depth: atlas_structure
+cover:
+  arena_block_id: 46455419
+  title: NEXAH A WORLD OF PERSPECTIVES.
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455419/original_923760f808b9037c7cbda0ac95d273a3.png?1779634846
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxOS9vcmlnaW5hbF85MjM3NjBmODA4YjkwMzdjN2NiZGEwYWM5NWQyNzNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxOS9vcmlnaW5hbF85MjM3NjBmODA4YjkwMzdjN2NiZGEwYWM5NWQyNzNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxOS9vcmlnaW5hbF85MjM3NjBmODA4YjkwMzdjN2NiZGEwYWM5NWQyNzNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxOS9vcmlnaW5hbF85MjM3NjBmODA4YjkwMzdjN2NiZGEwYWM5NWQyNzNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1254
+  height: 1254
+  aspect_ratio: 1.0
+  content_type: image/png
+  filename: 923760f808b9037c7cbda0ac95d273a3.png
+  file_size: 3590089
+  alt_text: null
+structure:
+  block_count: 14
+  titled_block_count: 14
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    journey:
+    - sequence_index: 8
+      arena_block_id: 46455406
+      title: THE HUMAN JOURNEY OF SEEING_IV
+    - sequence_index: 9
+      arena_block_id: 46455405
+      title: THE HUMAN JOURNEY OF SEEING
+    - sequence_index: 11
+      arena_block_id: 46455403
+      title: THE HUMAN JOURNEY OF SEEING_III
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46455419
+  block_type: Image
+  title: NEXAH A WORLD OF PERSPECTIVES.
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-05-24T15:00:45Z'
+  updated_at: '2026-05-24T15:01:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455419/original_923760f808b9037c7cbda0ac95d273a3.png?1779634846
+    variants: *id001
+    width: 1254
+    height: 1254
+    aspect_ratio: 1.0
+    content_type: image/png
+    filename: 923760f808b9037c7cbda0ac95d273a3.png
+    file_size: 3590089
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46455407
+  block_type: Image
+  title: THE HUMAN WORLD MAP
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-24T15:00:27Z'
+  updated_at: '2026-06-01T16:42:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455407/original_1b14890ac3b1a2db3593394a08cd507c.png?1779634828
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNy9vcmlnaW5hbF8xYjE0ODkwYWMzYjFhMmRiMzU5MzM5NGEwOGNkNTA3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNy9vcmlnaW5hbF8xYjE0ODkwYWMzYjFhMmRiMzU5MzM5NGEwOGNkNTA3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNy9vcmlnaW5hbF8xYjE0ODkwYWMzYjFhMmRiMzU5MzM5NGEwOGNkNTA3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNy9vcmlnaW5hbF8xYjE0ODkwYWMzYjFhMmRiMzU5MzM5NGEwOGNkNTA3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 1b14890ac3b1a2db3593394a08cd507c.png
+    file_size: 3152343
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46455416
+  block_type: Image
+  title: VISUAL 1- THE MAP IS NOT THE TERRITORY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-24T15:00:38Z'
+  updated_at: '2026-05-24T15:01:07Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455416/original_870759be34cd9973cfffa7d67c947c20.png?1779634840
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNi9vcmlnaW5hbF84NzA3NTliZTM0Y2Q5OTczY2ZmZmE3ZDY3Yzk0N2MyMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNi9vcmlnaW5hbF84NzA3NTliZTM0Y2Q5OTczY2ZmZmE3ZDY3Yzk0N2MyMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNi9vcmlnaW5hbF84NzA3NTliZTM0Y2Q5OTczY2ZmZmE3ZDY3Yzk0N2MyMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNi9vcmlnaW5hbF84NzA3NTliZTM0Y2Q5OTczY2ZmZmE3ZDY3Yzk0N2MyMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 870759be34cd9973cfffa7d67c947c20.png
+    file_size: 2494535
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46455412
+  block_type: Image
+  title: ART AS PERCEPTION ARCHITECTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-24T15:00:32Z'
+  updated_at: '2026-06-01T16:42:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455412/original_3792aad8e7d40c9647d7231e3834d20c.png?1779634833
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMi9vcmlnaW5hbF8zNzkyYWFkOGU3ZDQwYzk2NDdkNzIzMWUzODM0ZDIwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMi9vcmlnaW5hbF8zNzkyYWFkOGU3ZDQwYzk2NDdkNzIzMWUzODM0ZDIwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMi9vcmlnaW5hbF8zNzkyYWFkOGU3ZDQwYzk2NDdkNzIzMWUzODM0ZDIwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMi9vcmlnaW5hbF8zNzkyYWFkOGU3ZDQwYzk2NDdkNzIzMWUzODM0ZDIwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 3792aad8e7d40c9647d7231e3834d20c.png
+    file_size: 2783442
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46455414
+  block_type: Image
+  title: THE EVOLUTION OF CAPTURING & ENTERING REALITY_Science
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-05-24T15:00:37Z'
+  updated_at: '2026-05-24T15:00:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455414/original_913360acf9cdbfb25fe3a1be454a18c9.png?1779634838
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNC9vcmlnaW5hbF85MTMzNjBhY2Y5Y2RiZmIyNWZlM2ExYmU0NTRhMThjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNC9vcmlnaW5hbF85MTMzNjBhY2Y5Y2RiZmIyNWZlM2ExYmU0NTRhMThjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNC9vcmlnaW5hbF85MTMzNjBhY2Y5Y2RiZmIyNWZlM2ExYmU0NTRhMThjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNC9vcmlnaW5hbF85MTMzNjBhY2Y5Y2RiZmIyNWZlM2ExYmU0NTRhMThjOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 913360acf9cdbfb25fe3a1be454a18c9.png
+    file_size: 2536512
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46455413
+  block_type: Image
+  title: THE EVOLUTION OF CAPTURING & ENTERING REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-24T15:00:33Z'
+  updated_at: '2026-05-24T15:00:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455413/original_8ce4c0c402272017a684b52c5775f421.png?1779634835
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMy9vcmlnaW5hbF84Y2U0YzBjNDAyMjcyMDE3YTY4NGI1MmM1Nzc1ZjQyMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMy9vcmlnaW5hbF84Y2U0YzBjNDAyMjcyMDE3YTY4NGI1MmM1Nzc1ZjQyMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMy9vcmlnaW5hbF84Y2U0YzBjNDAyMjcyMDE3YTY4NGI1MmM1Nzc1ZjQyMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxMy9vcmlnaW5hbF84Y2U0YzBjNDAyMjcyMDE3YTY4NGI1MmM1Nzc1ZjQyMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 8ce4c0c402272017a684b52c5775f421.png
+    file_size: 2457535
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46455409
+  block_type: Image
+  title: INNER MAPS — CONSCIOUSNESS AS NAVIGATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-24T15:00:30Z'
+  updated_at: '2026-05-24T15:00:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455409/original_597d603f15f6c58cd2cf68092decc2ed.png?1779634831
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwOS9vcmlnaW5hbF81OTdkNjAzZjE1ZjZjNThjZDJjZjY4MDkyZGVjYzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwOS9vcmlnaW5hbF81OTdkNjAzZjE1ZjZjNThjZDJjZjY4MDkyZGVjYzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwOS9vcmlnaW5hbF81OTdkNjAzZjE1ZjZjNThjZDJjZjY4MDkyZGVjYzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwOS9vcmlnaW5hbF81OTdkNjAzZjE1ZjZjNThjZDJjZjY4MDkyZGVjYzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 597d603f15f6c58cd2cf68092decc2ed.png
+    file_size: 2544644
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46455406
+  block_type: Image
+  title: THE HUMAN JOURNEY OF SEEING_IV
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 7
+  created_at: '2026-05-24T15:00:25Z'
+  updated_at: '2026-05-24T15:00:29Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455406/original_3f529c6c91c550d02bf7c3c3d1a82d40.png?1779634826
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNi9vcmlnaW5hbF8zZjUyOWM2YzkxYzU1MGQwMmJmN2MzYzNkMWE4MmQ0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNi9vcmlnaW5hbF8zZjUyOWM2YzkxYzU1MGQwMmJmN2MzYzNkMWE4MmQ0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNi9vcmlnaW5hbF8zZjUyOWM2YzkxYzU1MGQwMmJmN2MzYzNkMWE4MmQ0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNi9vcmlnaW5hbF8zZjUyOWM2YzkxYzU1MGQwMmJmN2MzYzNkMWE4MmQ0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 3f529c6c91c550d02bf7c3c3d1a82d40.png
+    file_size: 2793913
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46455405
+  block_type: Image
+  title: THE HUMAN JOURNEY OF SEEING
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 6
+  created_at: '2026-05-24T15:00:23Z'
+  updated_at: '2026-05-24T15:00:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455405/original_80c82c81271ec2e1c9498e62ca74ddf3.png?1779634824
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNS9vcmlnaW5hbF84MGM4MmM4MTI3MWVjMmUxYzk0OThlNjJjYTc0ZGRmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNS9vcmlnaW5hbF84MGM4MmM4MTI3MWVjMmUxYzk0OThlNjJjYTc0ZGRmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNS9vcmlnaW5hbF84MGM4MmM4MTI3MWVjMmUxYzk0OThlNjJjYTc0ZGRmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNS9vcmlnaW5hbF84MGM4MmM4MTI3MWVjMmUxYzk0OThlNjJjYTc0ZGRmMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 80c82c81271ec2e1c9498e62ca74ddf3.png
+    file_size: 2595867
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46455404
+  block_type: Image
+  title: VISUAL 2 - THE FRACTAL MAP OF REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-24T15:00:20Z'
+  updated_at: '2026-05-24T15:00:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455404/original_68062bcce233656111967b110f64589e.png?1779634821
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNC9vcmlnaW5hbF82ODA2MmJjY2UyMzM2NTYxMTE5NjdiMTEwZjY0NTg5ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNC9vcmlnaW5hbF82ODA2MmJjY2UyMzM2NTYxMTE5NjdiMTEwZjY0NTg5ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNC9vcmlnaW5hbF82ODA2MmJjY2UyMzM2NTYxMTE5NjdiMTEwZjY0NTg5ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwNC9vcmlnaW5hbF82ODA2MmJjY2UyMzM2NTYxMTE5NjdiMTEwZjY0NTg5ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 68062bcce233656111967b110f64589e.png
+    file_size: 2469554
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46455403
+  block_type: Image
+  title: THE HUMAN JOURNEY OF SEEING_III
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 4
+  created_at: '2026-05-24T15:00:18Z'
+  updated_at: '2026-05-24T15:00:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455403/original_1ac740990af5242d964997a6ddcaed24.png?1779634819
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMy9vcmlnaW5hbF8xYWM3NDA5OTBhZjUyNDJkOTY0OTk3YTZkZGNhZWQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMy9vcmlnaW5hbF8xYWM3NDA5OTBhZjUyNDJkOTY0OTk3YTZkZGNhZWQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMy9vcmlnaW5hbF8xYWM3NDA5OTBhZjUyNDJkOTY0OTk3YTZkZGNhZWQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMy9vcmlnaW5hbF8xYWM3NDA5OTBhZjUyNDJkOTY0OTk3YTZkZGNhZWQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 1ac740990af5242d964997a6ddcaed24.png
+    file_size: 2825285
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46455402
+  block_type: Image
+  title: MOMENT IN A CONTINUOUS FIELD
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-24T15:00:17Z'
+  updated_at: '2026-05-24T15:00:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455402/original_a1ed31330863a0fdc209a32a20c79edc.png?1779634818
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMi9vcmlnaW5hbF9hMWVkMzEzMzA4NjNhMGZkYzIwOWEzMmEyMGM3OWVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMi9vcmlnaW5hbF9hMWVkMzEzMzA4NjNhMGZkYzIwOWEzMmEyMGM3OWVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMi9vcmlnaW5hbF9hMWVkMzEzMzA4NjNhMGZkYzIwOWEzMmEyMGM3OWVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMi9vcmlnaW5hbF9hMWVkMzEzMzA4NjNhMGZkYzIwOWEzMmEyMGM3OWVkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1402
+    height: 1122
+    aspect_ratio: 1.2496
+    content_type: image/png
+    filename: a1ed31330863a0fdc209a32a20c79edc.png
+    file_size: 2948667
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46455417
+  block_type: Image
+  title: WHAT IS NEXAH?
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-24T15:00:40Z'
+  updated_at: '2026-06-01T16:41:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455417/original_88d463830ac4f6b6a58b77789e93dd24.png?1779634841
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNy9vcmlnaW5hbF84OGQ0NjM4MzBhYzRmNmI2YTU4Yjc3Nzg5ZTkzZGQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNy9vcmlnaW5hbF84OGQ0NjM4MzBhYzRmNmI2YTU4Yjc3Nzg5ZTkzZGQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNy9vcmlnaW5hbF84OGQ0NjM4MzBhYzRmNmI2YTU4Yjc3Nzg5ZTkzZGQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQxNy9vcmlnaW5hbF84OGQ0NjM4MzBhYzRmNmI2YTU4Yjc3Nzg5ZTkzZGQyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1535
+    aspect_ratio: 0.6671
+    content_type: image/png
+    filename: 88d463830ac4f6b6a58b77789e93dd24.png
+    file_size: 2624260
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 46455401
+  block_type: Image
+  title: FROM THE PIONEERS TO NEXAH
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-24T15:00:15Z'
+  updated_at: '2026-05-24T15:00:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46455401/original_10a2c3afc1f1e955cceffc837b0edbc8.png?1779634816
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMS9vcmlnaW5hbF8xMGEyYzNhZmMxZjFlOTU1Y2NlZmZjODM3YjBlZGJjOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMS9vcmlnaW5hbF8xMGEyYzNhZmMxZjFlOTU1Y2NlZmZjODM3YjBlZGJjOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMS9vcmlnaW5hbF8xMGEyYzNhZmMxZjFlOTU1Y2NlZmZjODM3YjBlZGJjOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ1NTQwMS9vcmlnaW5hbF8xMGEyYzNhZmMxZjFlOTU1Y2NlZmZjODM3YjBlZGJjOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 10a2c3afc1f1e955cceffc837b0edbc8.png
+    file_size: 2271091
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

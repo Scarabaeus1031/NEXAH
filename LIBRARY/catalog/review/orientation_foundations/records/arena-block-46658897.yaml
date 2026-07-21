@@ -1,0 +1,85 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:46658897
+publication:
+  catalog_key: arena:5250350
+  arena_channel_id: 5250350
+  title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+source_block:
+  arena_block_id: 46658897
+  sequence_index: 14
+  title: 10_THE CARTOGRAPHER
+  url: https://www.are.na/block/46658897
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658897/original_ea65980d0dbcc076f154676b8591eafd.png?1780347618
+  source_fingerprint: 87a2d2cf73f6a6cdbe7cc17fe4105f1660b32d25d99c49c93761b26714d1b712
+visual_role: method
+visible_text:
+  transcription_status: partial
+  transcription: Observe → Recognize → Translate → Map → Navigate.
+research_elements:
+  definitions:
+  - statement: The cartographer is presented as a perspective, not a person.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658897
+      source_url: https://www.are.na/block/46658897
+      note: null
+    status: publication_assertion
+  questions: []
+  observations: []
+  hypotheses: []
+  methods:
+  - statement: The cartographer's work is depicted as Observe, Recognize, Translate,
+      Map, Navigate.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658897
+      source_url: https://www.are.na/block/46658897
+      note: null
+    status: publication_assertion
+  models: []
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts:
+  - statement: cartographer
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658897
+      source_url: https://www.are.na/block/46658897
+      note: null
+    status: observed_label
+  - statement: observer
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658897
+      source_url: https://www.are.na/block/46658897
+      note: null
+    status: observed_label
+  - statement: translator
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658897
+      source_url: https://www.are.na/block/46658897
+      note: null
+    status: observed_label
+  - statement: navigator
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658897
+      source_url: https://www.are.na/block/46658897
+      note: null
+    status: observed_label
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: This is an editorial role model. It does not create a canonical actor
+  class or Operator sequence.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

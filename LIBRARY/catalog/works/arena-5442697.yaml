@@ -1,0 +1,607 @@
+schema_version: '0.1'
+catalog_key: arena:5442697
+authority: noncanonical_website_catalog
+registered_entity_id: NX-000008
+display_title: THE OPERATOR LIBRARY
+source:
+  arena_channel_id: 5442697
+  arena_slug: the-operator-library
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/the-operator-library
+  live_title: THE OPERATOR LIBRARY
+  description: 'THE OPERATOR LIBRARY is the entry point into the NEXAH collection.
+
+    It introduces a simple idea:
+
+    The world is not a collection of isolated objects, but a network of recurring relationships.
+
+    Across ancient monuments, natural landscapes, architecture, technology and digital interfaces, the same patterns appear
+    again and again. We call these recurring patterns operators.
+
+    This library is an attempt to document that language.
+
+    It begins with fundamental operators, continues through geometry, develops into design, and ultimately returns to reality
+    through Field Reports—where the language is observed in the world itself.
+
+    The purpose is not to explain reality, but to read it more carefully.
+
+    Different scales.
+
+    Different materials.
+
+    Different centuries.
+
+    One language.
+
+    The Operator Library is an invitation to become a better observer.'
+  visibility: closed
+  state: available
+  member_count: 21
+  created_at: '2026-07-15T00:02:44Z'
+  updated_at: '2026-07-15T00:04:01Z'
+editorial:
+  classification_state: canonical
+  object_family: work
+  type: guide
+  form: reference_guide
+  library_function: reference
+  publication_status: published
+  revision_state: approved
+  content_maturity: developing
+  series: null
+  confidence: canonical
+  human_decision: confirmed
+  shelves:
+  - Operator
+catalog_depth: knowledge_work_structure
+cover:
+  arena_block_id: 47930302
+  title: THE OPERATOR LIBRARY
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930302/original_92cc144c276089cf07057ffa46779bab.png?1784073840
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMi9vcmlnaW5hbF85MmNjMTQ0YzI3NjA4OWNmMDcwNTdmZmE0Njc3OWJhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMi9vcmlnaW5hbF85MmNjMTQ0YzI3NjA4OWNmMDcwNTdmZmE0Njc3OWJhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMi9vcmlnaW5hbF85MmNjMTQ0YzI3NjA4OWNmMDcwNTdmZmE0Njc3OWJhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMi9vcmlnaW5hbF85MmNjMTQ0YzI3NjA4OWNmMDcwNTdmZmE0Njc3OWJhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: 92cc144c276089cf07057ffa46779bab.png
+  file_size: 2446633
+  alt_text: null
+structure:
+  block_count: 21
+  titled_block_count: 21
+  title_coverage: 1.0
+  foreword:
+  - sequence_index: 2
+    arena_block_id: 47930301
+    title: FOREWORD
+  index:
+  - sequence_index: 3
+    arena_block_id: 47930300
+    title: INDEX
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 4
+      arena_block_id: 47930298
+      title: THE OPERATOR GEOMETRY OF TRANSITION
+    - sequence_index: 12
+      arena_block_id: 47930286
+      title: BARABAR CAVES - THE GEOMETRY OF LIGHT, SHADOW & TRANSITION
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47930302
+  block_type: Image
+  title: THE OPERATOR LIBRARY
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 21
+  created_at: '2026-07-15T00:03:59Z'
+  updated_at: '2026-07-15T00:21:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930302/original_92cc144c276089cf07057ffa46779bab.png?1784073840
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 92cc144c276089cf07057ffa46779bab.png
+    file_size: 2446633
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47930301
+  block_type: Image
+  title: FOREWORD
+  description: null
+  page_role: foreword
+  editorial_roles: []
+  connection_position: 20
+  created_at: '2026-07-15T00:03:56Z'
+  updated_at: '2026-07-15T00:21:56Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930301/original_8c92523c3f12d3a4babfe189b7936542.png?1784073838
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMS9vcmlnaW5hbF84YzkyNTIzYzNmMTJkM2E0YmFiZmUxODliNzkzNjU0Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMS9vcmlnaW5hbF84YzkyNTIzYzNmMTJkM2E0YmFiZmUxODliNzkzNjU0Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMS9vcmlnaW5hbF84YzkyNTIzYzNmMTJkM2E0YmFiZmUxODliNzkzNjU0Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMS9vcmlnaW5hbF84YzkyNTIzYzNmMTJkM2E0YmFiZmUxODliNzkzNjU0Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 8c92523c3f12d3a4babfe189b7936542.png
+    file_size: 1938839
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47930300
+  block_type: Image
+  title: INDEX
+  description: null
+  page_role: index
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-07-15T00:03:53Z'
+  updated_at: '2026-07-15T00:22:02Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930300/original_f4ef548665f3f6a183f2b2579c6e6a25.png?1784073834
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMC9vcmlnaW5hbF9mNGVmNTQ4NjY1ZjNmNmExODNmMmIyNTc5YzZlNmEyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMC9vcmlnaW5hbF9mNGVmNTQ4NjY1ZjNmNmExODNmMmIyNTc5YzZlNmEyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMC9vcmlnaW5hbF9mNGVmNTQ4NjY1ZjNmNmExODNmMmIyNTc5YzZlNmEyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDMwMC9vcmlnaW5hbF9mNGVmNTQ4NjY1ZjNmNmExODNmMmIyNTc5YzZlNmEyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f4ef548665f3f6a183f2b2579c6e6a25.png
+    file_size: 1897849
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47930298
+  block_type: Image
+  title: THE OPERATOR GEOMETRY OF TRANSITION
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 18
+  created_at: '2026-07-15T00:03:49Z'
+  updated_at: '2026-07-15T00:22:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930298/original_69a0a128435ef157eeb00609e1c856b0.png?1784073830
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5OC9vcmlnaW5hbF82OWEwYTEyODQzNWVmMTU3ZWViMDA2MDllMWM4NTZiMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5OC9vcmlnaW5hbF82OWEwYTEyODQzNWVmMTU3ZWViMDA2MDllMWM4NTZiMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5OC9vcmlnaW5hbF82OWEwYTEyODQzNWVmMTU3ZWViMDA2MDllMWM4NTZiMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5OC9vcmlnaW5hbF82OWEwYTEyODQzNWVmMTU3ZWViMDA2MDllMWM4NTZiMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 69a0a128435ef157eeb00609e1c856b0.png
+    file_size: 2412713
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47930297
+  block_type: Image
+  title: NEXAH GEOMETRY OPERATRO LIBRARY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-07-15T00:03:47Z'
+  updated_at: '2026-07-15T00:22:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930297/original_c3f9a059cfd16c3ad6e5b5abae9198d2.png?1784073828
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ny9vcmlnaW5hbF9jM2Y5YTA1OWNmZDE2YzNhZDZlNWI1YWJhZTkxOThkMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ny9vcmlnaW5hbF9jM2Y5YTA1OWNmZDE2YzNhZDZlNWI1YWJhZTkxOThkMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ny9vcmlnaW5hbF9jM2Y5YTA1OWNmZDE2YzNhZDZlNWI1YWJhZTkxOThkMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ny9vcmlnaW5hbF9jM2Y5YTA1OWNmZDE2YzNhZDZlNWI1YWJhZTkxOThkMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: c3f9a059cfd16c3ad6e5b5abae9198d2.png
+    file_size: 1865156
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47930296
+  block_type: Image
+  title: THE FIRST 12 OPERATORS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-07-15T00:03:44Z'
+  updated_at: '2026-07-15T00:22:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930296/original_290a07d5d1e0c9244f36f814be2fe154.png?1784073826
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ni9vcmlnaW5hbF8yOTBhMDdkNWQxZTBjOTI0NGYzNmY4MTRiZTJmZTE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ni9vcmlnaW5hbF8yOTBhMDdkNWQxZTBjOTI0NGYzNmY4MTRiZTJmZTE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ni9vcmlnaW5hbF8yOTBhMDdkNWQxZTBjOTI0NGYzNmY4MTRiZTJmZTE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5Ni9vcmlnaW5hbF8yOTBhMDdkNWQxZTBjOTI0NGYzNmY4MTRiZTJmZTE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 290a07d5d1e0c9244f36f814be2fe154.png
+    file_size: 2585519
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47930294
+  block_type: Image
+  title: THE GEOMETRY OF OPERATORS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-07-15T00:03:40Z'
+  updated_at: '2026-07-15T00:22:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930294/original_159beb2657718e6c68bd70b0f07fca8f.png?1784073822
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5NC9vcmlnaW5hbF8xNTliZWIyNjU3NzE4ZTZjNjhiZDcwYjBmMDdmY2E4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5NC9vcmlnaW5hbF8xNTliZWIyNjU3NzE4ZTZjNjhiZDcwYjBmMDdmY2E4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5NC9vcmlnaW5hbF8xNTliZWIyNjU3NzE4ZTZjNjhiZDcwYjBmMDdmY2E4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5NC9vcmlnaW5hbF8xNTliZWIyNjU3NzE4ZTZjNjhiZDcwYjBmMDdmY2E4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 159beb2657718e6c68bd70b0f07fca8f.png
+    file_size: 2143683
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47930293
+  block_type: Image
+  title: ATLAS OF OPERATORS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-07-15T00:03:38Z'
+  updated_at: '2026-07-15T00:22:55Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930293/original_f4b5bf26b596ce42d4ba7859761a8251.png?1784073819
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5My9vcmlnaW5hbF9mNGI1YmYyNmI1OTZjZTQyZDRiYTc4NTk3NjFhODI1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5My9vcmlnaW5hbF9mNGI1YmYyNmI1OTZjZTQyZDRiYTc4NTk3NjFhODI1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5My9vcmlnaW5hbF9mNGI1YmYyNmI1OTZjZTQyZDRiYTc4NTk3NjFhODI1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5My9vcmlnaW5hbF9mNGI1YmYyNmI1OTZjZTQyZDRiYTc4NTk3NjFhODI1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f4b5bf26b596ce42d4ba7859761a8251.png
+    file_size: 2215692
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47930290
+  block_type: Image
+  title: OPERATOR STUDOIO
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-07-15T00:03:31Z'
+  updated_at: '2026-07-15T00:23:07Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930290/original_0df57404b2e8dbe60f7a6d740066acfa.png?1784073813
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5MC9vcmlnaW5hbF8wZGY1NzQwNGIyZThkYmU2MGY3YTZkNzQwMDY2YWNmYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5MC9vcmlnaW5hbF8wZGY1NzQwNGIyZThkYmU2MGY3YTZkNzQwMDY2YWNmYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5MC9vcmlnaW5hbF8wZGY1NzQwNGIyZThkYmU2MGY3YTZkNzQwMDY2YWNmYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI5MC9vcmlnaW5hbF8wZGY1NzQwNGIyZThkYmU2MGY3YTZkNzQwMDY2YWNmYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0df57404b2e8dbe60f7a6d740066acfa.png
+    file_size: 1992677
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47930288
+  block_type: Image
+  title: THE WORLD IS WRITTEN IN OPERATORS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-07-15T00:03:22Z'
+  updated_at: '2026-07-15T00:23:22Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930288/original_6ac1c8d666622acfd3f52f1ace444ad0.png?1784073804
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4OC9vcmlnaW5hbF82YWMxYzhkNjY2NjIyYWNmZDNmNTJmMWFjZTQ0NGFkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4OC9vcmlnaW5hbF82YWMxYzhkNjY2NjIyYWNmZDNmNTJmMWFjZTQ0NGFkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4OC9vcmlnaW5hbF82YWMxYzhkNjY2NjIyYWNmZDNmNTJmMWFjZTQ0NGFkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4OC9vcmlnaW5hbF82YWMxYzhkNjY2NjIyYWNmZDNmNTJmMWFjZTQ0NGFkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 6ac1c8d666622acfd3f52f1ace444ad0.png
+    file_size: 1941492
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47930287
+  block_type: Image
+  title: FIELD REPORTS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-07-15T00:03:20Z'
+  updated_at: '2026-07-15T00:23:29Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930287/original_ed5a853dbf2379910176f2965052aece.png?1784073801
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ny9vcmlnaW5hbF9lZDVhODUzZGJmMjM3OTkxMDE3NmYyOTY1MDUyYWVjZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ny9vcmlnaW5hbF9lZDVhODUzZGJmMjM3OTkxMDE3NmYyOTY1MDUyYWVjZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ny9vcmlnaW5hbF9lZDVhODUzZGJmMjM3OTkxMDE3NmYyOTY1MDUyYWVjZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ny9vcmlnaW5hbF9lZDVhODUzZGJmMjM3OTkxMDE3NmYyOTY1MDUyYWVjZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ed5a853dbf2379910176f2965052aece.png
+    file_size: 2611845
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47930286
+  block_type: Image
+  title: BARABAR CAVES - THE GEOMETRY OF LIGHT, SHADOW & TRANSITION
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 10
+  created_at: '2026-07-15T00:03:16Z'
+  updated_at: '2026-07-15T00:23:55Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930286/original_c43e0e9825cf3f23c47bdbd22b79762b.png?1784073798
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ni9vcmlnaW5hbF9jNDNlMGU5ODI1Y2YzZjIzYzQ3YmRiZDIyYjc5NzYyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ni9vcmlnaW5hbF9jNDNlMGU5ODI1Y2YzZjIzYzQ3YmRiZDIyYjc5NzYyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ni9vcmlnaW5hbF9jNDNlMGU5ODI1Y2YzZjIzYzQ3YmRiZDIyYjc5NzYyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Ni9vcmlnaW5hbF9jNDNlMGU5ODI1Y2YzZjIzYzQ3YmRiZDIyYjc5NzYyYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1402
+    height: 1122
+    aspect_ratio: 1.2496
+    content_type: image/png
+    filename: c43e0e9825cf3f23c47bdbd22b79762b.png
+    file_size: 2264640
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47930285
+  block_type: Image
+  title: READING REALITY THROUGH OPERATORS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-07-15T00:03:14Z'
+  updated_at: '2026-07-15T00:24:08Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930285/original_454cb6d9db3aa3093e538d4c1f59c4da.png?1784073796
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NS9vcmlnaW5hbF80NTRjYjZkOWRiM2FhMzA5M2U1MzhkNGMxZjU5YzRkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NS9vcmlnaW5hbF80NTRjYjZkOWRiM2FhMzA5M2U1MzhkNGMxZjU5YzRkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NS9vcmlnaW5hbF80NTRjYjZkOWRiM2FhMzA5M2U1MzhkNGMxZjU5YzRkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NS9vcmlnaW5hbF80NTRjYjZkOWRiM2FhMzA5M2U1MzhkNGMxZjU5YzRkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 454cb6d9db3aa3093e538d4c1f59c4da.png
+    file_size: 2397239
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 47930284
+  block_type: Image
+  title: READING THE MODERN WORLD THROUGH OPERATORS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-07-15T00:03:12Z'
+  updated_at: '2026-07-15T00:24:22Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930284/original_97e47d6e57076476576ee7f997b8d70c.png?1784073794
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NC9vcmlnaW5hbF85N2U0N2Q2ZTU3MDc2NDc2NTc2ZWU3Zjk5N2I4ZDcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NC9vcmlnaW5hbF85N2U0N2Q2ZTU3MDc2NDc2NTc2ZWU3Zjk5N2I4ZDcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NC9vcmlnaW5hbF85N2U0N2Q2ZTU3MDc2NDc2NTc2ZWU3Zjk5N2I4ZDcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4NC9vcmlnaW5hbF85N2U0N2Q2ZTU3MDc2NDc2NTc2ZWU3Zjk5N2I4ZDcwYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1535
+    height: 1024
+    aspect_ratio: 1.499
+    content_type: image/png
+    filename: 97e47d6e57076476576ee7f997b8d70c.png
+    file_size: 2038182
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 47930283
+  block_type: Image
+  title: THE OPERATOR ECOSYSTEM
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-07-15T00:03:09Z'
+  updated_at: '2026-07-15T00:24:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930283/original_e3f747dfddaa0758220447375d2c9c72.png?1784073791
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4My9vcmlnaW5hbF9lM2Y3NDdkZmRkYWEwNzU4MjIwNDQ3Mzc1ZDJjOWM3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4My9vcmlnaW5hbF9lM2Y3NDdkZmRkYWEwNzU4MjIwNDQ3Mzc1ZDJjOWM3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4My9vcmlnaW5hbF9lM2Y3NDdkZmRkYWEwNzU4MjIwNDQ3Mzc1ZDJjOWM3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4My9vcmlnaW5hbF9lM2Y3NDdkZmRkYWEwNzU4MjIwNDQ3Mzc1ZDJjOWM3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: e3f747dfddaa0758220447375d2c9c72.png
+    file_size: 2124091
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 47930282
+  block_type: Image
+  title: HOW TO USE THIS LIBRARY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-07-15T00:03:07Z'
+  updated_at: '2026-07-15T00:24:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930282/original_bbe192e87e1692b541730f5a3ff8046a.png?1784073788
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Mi9vcmlnaW5hbF9iYmUxOTJlODdlMTY5MmI1NDE3MzBmNWEzZmY4MDQ2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Mi9vcmlnaW5hbF9iYmUxOTJlODdlMTY5MmI1NDE3MzBmNWEzZmY4MDQ2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Mi9vcmlnaW5hbF9iYmUxOTJlODdlMTY5MmI1NDE3MzBmNWEzZmY4MDQ2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4Mi9vcmlnaW5hbF9iYmUxOTJlODdlMTY5MmI1NDE3MzBmNWEzZmY4MDQ2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: bbe192e87e1692b541730f5a3ff8046a.png
+    file_size: 2032732
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 47930280
+  block_type: Image
+  title: THE OPERATOR COOKBOOK
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-07-15T00:03:04Z'
+  updated_at: '2026-07-15T00:24:50Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930280/original_1c5f215fea59fa682118d707341c487e.png?1784073785
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4MC9vcmlnaW5hbF8xYzVmMjE1ZmVhNTlmYTY4MjExOGQ3MDczNDFjNDg3ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4MC9vcmlnaW5hbF8xYzVmMjE1ZmVhNTlmYTY4MjExOGQ3MDczNDFjNDg3ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4MC9vcmlnaW5hbF8xYzVmMjE1ZmVhNTlmYTY4MjExOGQ3MDczNDFjNDg3ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI4MC9vcmlnaW5hbF8xYzVmMjE1ZmVhNTlmYTY4MjExOGQ3MDczNDFjNDg3ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 1c5f215fea59fa682118d707341c487e.png
+    file_size: 1972919
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 47930279
+  block_type: Image
+  title: THE EVOLUTION OF AN OPERATOR
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-07-15T00:03:02Z'
+  updated_at: '2026-07-15T00:29:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930279/original_8b00f87ab87572287be4571aa4d25d6b.png?1784073783
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3OS9vcmlnaW5hbF84YjAwZjg3YWI4NzU3MjI4N2JlNDU3MWFhNGQyNWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3OS9vcmlnaW5hbF84YjAwZjg3YWI4NzU3MjI4N2JlNDU3MWFhNGQyNWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3OS9vcmlnaW5hbF84YjAwZjg3YWI4NzU3MjI4N2JlNDU3MWFhNGQyNWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3OS9vcmlnaW5hbF84YjAwZjg3YWI4NzU3MjI4N2JlNDU3MWFhNGQyNWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 8b00f87ab87572287be4571aa4d25d6b.png
+    file_size: 1713253
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 47930277
+  block_type: Image
+  title: THE PERIODIC TABLE OF OPERATOR
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-07-15T00:03:00Z'
+  updated_at: '2026-07-15T00:25:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930277/original_77264bb81e0eabf43e897031208d9cae.png?1784073781
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ny9vcmlnaW5hbF83NzI2NGJiODFlMGVhYmY0M2U4OTcwMzEyMDhkOWNhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ny9vcmlnaW5hbF83NzI2NGJiODFlMGVhYmY0M2U4OTcwMzEyMDhkOWNhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ny9vcmlnaW5hbF83NzI2NGJiODFlMGVhYmY0M2U4OTcwMzEyMDhkOWNhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ny9vcmlnaW5hbF83NzI2NGJiODFlMGVhYmY0M2U4OTcwMzEyMDhkOWNhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 77264bb81e0eabf43e897031208d9cae.png
+    file_size: 1888707
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 47930276
+  block_type: Image
+  title: THE LIBRARY CONTINUES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-07-15T00:02:58Z'
+  updated_at: '2026-07-15T00:25:25Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930276/original_471ca4ffa51a54cdddde48d5db2973da.png?1784073779
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ni9vcmlnaW5hbF80NzFjYTRmZmE1MWE1NGNkZGRkZTQ4ZDVkYjI5NzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ni9vcmlnaW5hbF80NzFjYTRmZmE1MWE1NGNkZGRkZTQ4ZDVkYjI5NzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ni9vcmlnaW5hbF80NzFjYTRmZmE1MWE1NGNkZGRkZTQ4ZDVkYjI5NzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3Ni9vcmlnaW5hbF80NzFjYTRmZmE1MWE1NGNkZGRkZTQ4ZDVkYjI5NzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 471ca4ffa51a54cdddde48d5db2973da.png
+    file_size: 2165092
+    alt_text: null
+- sequence_index: 21
+  arena_block_id: 47930274
+  block_type: Image
+  title: BREATHE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-07-15T00:02:55Z'
+  updated_at: '2026-07-15T00:25:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47930274/original_0ad74ce918b771486f7319f8f40a5d6c.png?1784073776
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3NC9vcmlnaW5hbF8wYWQ3NGNlOTE4Yjc3MTQ4NmY3MzE5ZjhmNDBhNWQ2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3NC9vcmlnaW5hbF8wYWQ3NGNlOTE4Yjc3MTQ4NmY3MzE5ZjhmNDBhNWQ2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3NC9vcmlnaW5hbF8wYWQ3NGNlOTE4Yjc3MTQ4NmY3MzE5ZjhmNDBhNWQ2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzkzMDI3NC9vcmlnaW5hbF8wYWQ3NGNlOTE4Yjc3MTQ4NmY3MzE5ZjhmNDBhNWQ2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0ad74ce918b771486f7319f8f40a5d6c.png
+    file_size: 2447781
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

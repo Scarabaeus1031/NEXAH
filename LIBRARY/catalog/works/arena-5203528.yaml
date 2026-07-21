@@ -1,0 +1,331 @@
+schema_version: '0.1'
+catalog_key: arena:5203528
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH MATHEMATICA IV Unified Transition Fields & Basin Architectures
+source:
+  arena_channel_id: 5203528
+  arena_slug: nexah-mathematica-iv-unified-transition-fields-basin-architectures-2axd19e9tmc
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-iv-unified-transition-fields-basin-architectures-2axd19e9tmc
+  live_title: NEXAH MATHEMATICA IV  Unified Transition Fields & Basin Architectures
+  description: 'A visual research atlas exploring unified transition fields, basin architectures, recursive transport systems,
+    and large-scale structural coherence across complex dynamical geometries.
+
+    Volume IV extends the recursive operator systems of NEXAH MATHEMATICA into global transition architectures — where local
+    drift structures merge into connected geometric manifolds, transport corridors, and persistent structural fields.
+
+    The series investigates how recursive systems stabilize, reorganize, and evolve through basin interactions, topological
+    transport, and emergent geometric coherence.
+
+    Topics include:
+
+    • recursive basin structures
+
+    • transport geometries
+
+    • structural drift evolution
+
+    • transition corridors
+
+    • unified topology fields
+
+    • operator manifolds
+
+    • recursive persistence
+
+    • global coherence systems
+
+    From local transitions emerge global architectures.'
+  visibility: closed
+  state: available
+  member_count: 9
+  created_at: '2026-05-20T22:14:24Z'
+  updated_at: '2026-05-25T02:18:53Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Mathematica
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46367464
+  title: THE_NEXAH_COLLECTION +1
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367464/original_871d129d06c263d998cd7be17d8d1f2e.png?1779315316
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2NC9vcmlnaW5hbF84NzFkMTI5ZDA2YzI2M2Q5OThjZDdiZTE3ZDhkMWYyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2NC9vcmlnaW5hbF84NzFkMTI5ZDA2YzI2M2Q5OThjZDdiZTE3ZDhkMWYyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2NC9vcmlnaW5hbF84NzFkMTI5ZDA2YzI2M2Q5OThjZDdiZTE3ZDhkMWYyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2NC9vcmlnaW5hbF84NzFkMTI5ZDA2YzI2M2Q5OThjZDdiZTE3ZDhkMWYyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1536
+  height: 1024
+  aspect_ratio: 1.5
+  content_type: image/png
+  filename: 871d129d06c263d998cd7be17d8d1f2e.png
+  file_size: 2329772
+  alt_text: null
+structure:
+  block_count: 9
+  titled_block_count: 9
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part:
+  - sequence_index: 2
+    arena_block_id: 46367453
+    title: PART V JANUS DYNAMICS
+  chapter: []
+  numbered_section: []
+  appendix:
+  - sequence_index: 5
+    arena_block_id: 46367454
+    title: APPENDIX A DEFINITIONS & NOTATION
+  - sequence_index: 6
+    arena_block_id: 46367457
+    title: APPENDIX B EXPERIMENTAL METHODOLOGY
+  - sequence_index: 7
+    arena_block_id: 46367455
+    title: APPENDIX D OPEN QUESTIONS
+  - sequence_index: 8
+    arena_block_id: 46367456
+    title: APPENDIX E VISUAL INDEX Cartography of Prime Residue Geometry
+  - sequence_index: 9
+    arena_block_id: 46367458
+    title: APPENDIX F - EXPLORATORY CARTOGRAPHY
+  closing: []
+  editorial_roles:
+    question:
+    - sequence_index: 7
+      arena_block_id: 46367455
+      title: APPENDIX D OPEN QUESTIONS
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46367464
+  block_type: Image
+  title: THE_NEXAH_COLLECTION +1
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-20T22:15:08Z'
+  updated_at: '2026-05-20T22:15:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367464/original_871d129d06c263d998cd7be17d8d1f2e.png?1779315316
+    variants: *id001
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 871d129d06c263d998cd7be17d8d1f2e.png
+    file_size: 2329772
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46367453
+  block_type: Image
+  title: PART V JANUS DYNAMICS
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-20T22:15:00Z'
+  updated_at: '2026-05-20T22:15:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367453/original_eb710feafbe8e55c5d86846d6ef908d0.png?1779315308
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1My9vcmlnaW5hbF9lYjcxMGZlYWZiZThlNTVjNWQ4Njg0NmQ2ZWY5MDhkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1My9vcmlnaW5hbF9lYjcxMGZlYWZiZThlNTVjNWQ4Njg0NmQ2ZWY5MDhkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1My9vcmlnaW5hbF9lYjcxMGZlYWZiZThlNTVjNWQ4Njg0NmQ2ZWY5MDhkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1My9vcmlnaW5hbF9lYjcxMGZlYWZiZThlNTVjNWQ4Njg0NmQ2ZWY5MDhkMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: eb710feafbe8e55c5d86846d6ef908d0.png
+    file_size: 1828633
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46367462
+  block_type: Image
+  title: PRIME_FACTORIZATION_GEOMETRY-STRUCTURE_GRID_AND_GROWTH
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-20T22:15:08Z'
+  updated_at: '2026-05-20T22:16:07Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367462/original_1e92f1edb39cd654902e7ad2e9bf6cbd.png?1779315315
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2Mi9vcmlnaW5hbF8xZTkyZjFlZGIzOWNkNjU0OTAyZTdhZDJlOWJmNmNiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2Mi9vcmlnaW5hbF8xZTkyZjFlZGIzOWNkNjU0OTAyZTdhZDJlOWJmNmNiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2Mi9vcmlnaW5hbF8xZTkyZjFlZGIzOWNkNjU0OTAyZTdhZDJlOWJmNmNiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2Mi9vcmlnaW5hbF8xZTkyZjFlZGIzOWNkNjU0OTAyZTdhZDJlOWJmNmNiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 1e92f1edb39cd654902e7ad2e9bf6cbd.png
+    file_size: 1670856
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46367463
+  block_type: Image
+  title: SERIES IV - Prime-vs-Integer Contrast Geometry
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-20T22:15:08Z'
+  updated_at: '2026-05-20T22:15:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367463/original_08f89dfb3be4d89674bdd9ceba94dd9f.png?1779315316
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2My9vcmlnaW5hbF8wOGY4OWRmYjNiZTRkODk2NzRiZGQ5Y2ViYTk0ZGQ5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2My9vcmlnaW5hbF8wOGY4OWRmYjNiZTRkODk2NzRiZGQ5Y2ViYTk0ZGQ5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2My9vcmlnaW5hbF8wOGY4OWRmYjNiZTRkODk2NzRiZGQ5Y2ViYTk0ZGQ5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ2My9vcmlnaW5hbF8wOGY4OWRmYjNiZTRkODk2NzRiZGQ5Y2ViYTk0ZGQ5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 08f89dfb3be4d89674bdd9ceba94dd9f.png
+    file_size: 1696731
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46367454
+  block_type: Image
+  title: APPENDIX A DEFINITIONS & NOTATION
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-20T22:15:00Z'
+  updated_at: '2026-05-20T22:15:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367454/original_7724535dea54ab07aa222bcc61a85e2c.png?1779315309
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NC9vcmlnaW5hbF83NzI0NTM1ZGVhNTRhYjA3YWEyMjJiY2M2MWE4NWUyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NC9vcmlnaW5hbF83NzI0NTM1ZGVhNTRhYjA3YWEyMjJiY2M2MWE4NWUyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NC9vcmlnaW5hbF83NzI0NTM1ZGVhNTRhYjA3YWEyMjJiY2M2MWE4NWUyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NC9vcmlnaW5hbF83NzI0NTM1ZGVhNTRhYjA3YWEyMjJiY2M2MWE4NWUyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 7724535dea54ab07aa222bcc61a85e2c.png
+    file_size: 1555482
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46367457
+  block_type: Image
+  title: APPENDIX B EXPERIMENTAL METHODOLOGY
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-20T22:15:03Z'
+  updated_at: '2026-05-20T22:15:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367457/original_750ab85491d31983c3c9dc2cbf49ccbc.png?1779315311
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ny9vcmlnaW5hbF83NTBhYjg1NDkxZDMxOTgzYzNjOWRjMmNiZjQ5Y2NiYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ny9vcmlnaW5hbF83NTBhYjg1NDkxZDMxOTgzYzNjOWRjMmNiZjQ5Y2NiYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ny9vcmlnaW5hbF83NTBhYjg1NDkxZDMxOTgzYzNjOWRjMmNiZjQ5Y2NiYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ny9vcmlnaW5hbF83NTBhYjg1NDkxZDMxOTgzYzNjOWRjMmNiZjQ5Y2NiYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 750ab85491d31983c3c9dc2cbf49ccbc.png
+    file_size: 1633115
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46367455
+  block_type: Image
+  title: APPENDIX D OPEN QUESTIONS
+  description: null
+  page_role: appendix
+  editorial_roles:
+  - question
+  connection_position: 3
+  created_at: '2026-05-20T22:15:02Z'
+  updated_at: '2026-05-25T02:18:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367455/original_4aaa6cb67ba7122140c70021754e0751.png?1779315309
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NS9vcmlnaW5hbF80YWFhNmNiNjdiYTcxMjIxNDBjNzAwMjE3NTRlMDc1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NS9vcmlnaW5hbF80YWFhNmNiNjdiYTcxMjIxNDBjNzAwMjE3NTRlMDc1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NS9vcmlnaW5hbF80YWFhNmNiNjdiYTcxMjIxNDBjNzAwMjE3NTRlMDc1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1NS9vcmlnaW5hbF80YWFhNmNiNjdiYTcxMjIxNDBjNzAwMjE3NTRlMDc1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 4aaa6cb67ba7122140c70021754e0751.png
+    file_size: 1774274
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46367456
+  block_type: Image
+  title: APPENDIX E VISUAL INDEX Cartography of Prime Residue Geometry
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-20T22:15:02Z'
+  updated_at: '2026-05-25T02:18:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367456/original_b95ff3fb5fec189244a62c74a58ddbbd.png?1779315310
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ni9vcmlnaW5hbF9iOTVmZjNmYjVmZWMxODkyNDRhNjJjNzRhNThkZGJiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ni9vcmlnaW5hbF9iOTVmZjNmYjVmZWMxODkyNDRhNjJjNzRhNThkZGJiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ni9vcmlnaW5hbF9iOTVmZjNmYjVmZWMxODkyNDRhNjJjNzRhNThkZGJiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1Ni9vcmlnaW5hbF9iOTVmZjNmYjVmZWMxODkyNDRhNjJjNzRhNThkZGJiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: b95ff3fb5fec189244a62c74a58ddbbd.png
+    file_size: 1696947
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46367458
+  block_type: Image
+  title: APPENDIX F - EXPLORATORY CARTOGRAPHY
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-20T22:15:03Z'
+  updated_at: '2026-05-20T22:15:54Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46367458/original_6242757cddde001eff077f21cc57f804.png?1779315311
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1OC9vcmlnaW5hbF82MjQyNzU3Y2RkZGUwMDFlZmYwNzdmMjFjYzU3ZjgwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1OC9vcmlnaW5hbF82MjQyNzU3Y2RkZGUwMDFlZmYwNzdmMjFjYzU3ZjgwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1OC9vcmlnaW5hbF82MjQyNzU3Y2RkZGUwMDFlZmYwNzdmMjFjYzU3ZjgwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NzQ1OC9vcmlnaW5hbF82MjQyNzU3Y2RkZGUwMDFlZmYwNzdmMjFjYzU3ZjgwNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 6242757cddde001eff077f21cc57f804.png
+    file_size: 2484468
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

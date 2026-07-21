@@ -1,0 +1,534 @@
+schema_version: '0.1'
+catalog_key: arena:5345129
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: VOLUME II — PATHFINDERS
+source:
+  arena_channel_id: 5345129
+  arena_slug: vol-ii-pathfinders
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/vol-ii-pathfinders
+  live_title: 'VOL. II —  PATHFINDERS '
+  description: "Every life is a path through uncertainty.  \nThere is no universal map, no single route, and no final destination.\
+    \ Yet across cultures, generations, and personal stories, recurring patterns emerge: departures, challenges, discoveries,\
+    \ losses, returns, and transformations.\nPathfinders explores these universal pathways through stories, symbols, maps,\
+    \ and reflections.\nIt is a book about learning to navigate rather than control, to explore rather than merely arrive.\n\
+    A companion for anyone standing at a crossroads, beginning a journey, or searching for direction.\nThemes\n• Exploration\
+    \ & Navigation\n• Life Transitions\n• Purpose & Direction\n• Growth Through Experience\n• Courage & Uncertainty\n• Choice\
+    \ & Consequence\n• The Hero’s Path\nSeek.\LExplore.\LReturn."
+  visibility: closed
+  state: available
+  member_count: 17
+  created_at: '2026-06-22T20:54:52Z'
+  updated_at: '2026-07-01T01:12:14Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: visual_book
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: stable
+  series: The Human Journey
+  confidence: moderate
+  human_decision: pending
+catalog_depth: bibliographic_and_dramaturgic
+cover:
+  arena_block_id: 47226328
+  title: A NEXAH STORY PATHFINDERS SEEK • EXPLORE • RETURN The Five Directions A Compass for Curious Minds
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226328/original_c5a7281c2539f7c4b54ee2a938a8baff.png?1782161769
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMyOC9vcmlnaW5hbF9jNWE3MjgxYzI1MzlmN2M0YjU0ZWUyYTkzOGE4YmFmZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMyOC9vcmlnaW5hbF9jNWE3MjgxYzI1MzlmN2M0YjU0ZWUyYTkzOGE4YmFmZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMyOC9vcmlnaW5hbF9jNWE3MjgxYzI1MzlmN2M0YjU0ZWUyYTkzOGE4YmFmZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMyOC9vcmlnaW5hbF9jNWE3MjgxYzI1MzlmN2M0YjU0ZWUyYTkzOGE4YmFmZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1254
+  height: 1254
+  aspect_ratio: 1.0
+  content_type: image/png
+  filename: c5a7281c2539f7c4b54ee2a938a8baff.png
+  file_size: 2773025
+  alt_text: null
+structure:
+  block_count: 17
+  titled_block_count: 17
+  title_coverage: 1.0
+  foreword:
+  - sequence_index: 2
+    arena_block_id: 47226317
+    title: FOREWORD BEFORE THE FIRST STEP
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    story:
+    - sequence_index: 1
+      arena_block_id: 47226328
+      title: A NEXAH STORY PATHFINDERS SEEK • EXPLORE • RETURN The Five Directions A Compass for Curious Minds
+    plate:
+    - sequence_index: 4
+      arena_block_id: 47226306
+      title: PLATE I ORIENT Where do I begin?
+    - sequence_index: 5
+      arena_block_id: 47226304
+      title: PLATE II ZENITH
+    - sequence_index: 6
+      arena_block_id: 47226303
+      title: PLATE III THE PATH Which way should I go?
+    - sequence_index: 7
+      arena_block_id: 47226295
+      title: PLATE IV COMPANIONS Who walks beside me?
+    - sequence_index: 8
+      arena_block_id: 47226294
+      title: PLATE V THE UNKNOWN What lies beyond my map?
+    - sequence_index: 10
+      arena_block_id: 47226285
+      title: PLATE VI OCCIDENT What have I learned?
+    - sequence_index: 11
+      arena_block_id: 47226280
+      title: PLATE VII NADIR What keeps me grounded?
+    - sequence_index: 12
+      arena_block_id: 47226271
+      title: PLATE VIII• HERE Who have I become?
+    - sequence_index: 14
+      arena_block_id: 47226267
+      title: FINAL PLATE I K-I-N-D To be or not to be
+    - sequence_index: 15
+      arena_block_id: 47226256
+      title: FINAL PLATE II ASK AGAIN
+    - sequence_index: 16
+      arena_block_id: 47226252
+      title: FINAL PLATE III NIXNEUES
+    question:
+    - sequence_index: 9
+      arena_block_id: 47226290
+      title: A'S & Q'S ANSWERS & QUESTIONS
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47226328
+  block_type: Image
+  title: A NEXAH STORY PATHFINDERS SEEK • EXPLORE • RETURN The Five Directions A Compass for Curious Minds
+  description: null
+  page_role: cover
+  editorial_roles:
+  - story
+  connection_position: 17
+  created_at: '2026-06-22T20:56:07Z'
+  updated_at: '2026-06-22T20:56:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226328/original_c5a7281c2539f7c4b54ee2a938a8baff.png?1782161769
+    variants: *id001
+    width: 1254
+    height: 1254
+    aspect_ratio: 1.0
+    content_type: image/png
+    filename: c5a7281c2539f7c4b54ee2a938a8baff.png
+    file_size: 2773025
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47226317
+  block_type: Image
+  title: FOREWORD BEFORE THE FIRST STEP
+  description: null
+  page_role: foreword
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-06-22T20:55:49Z'
+  updated_at: '2026-06-22T20:55:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226317/original_7c62f2f3c82a9c0113a12c33d8ad86c3.png?1782161751
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxNy9vcmlnaW5hbF83YzYyZjJmM2M4MmE5YzAxMTNhMTJjMzNkOGFkODZjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxNy9vcmlnaW5hbF83YzYyZjJmM2M4MmE5YzAxMTNhMTJjMzNkOGFkODZjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxNy9vcmlnaW5hbF83YzYyZjJmM2M4MmE5YzAxMTNhMTJjMzNkOGFkODZjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxNy9vcmlnaW5hbF83YzYyZjJmM2M4MmE5YzAxMTNhMTJjMzNkOGFkODZjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7c62f2f3c82a9c0113a12c33d8ad86c3.png
+    file_size: 2305786
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47226313
+  block_type: Image
+  title: THE FIVE DIRECTIONS A COMPASS FOR CURIOUS MINDS We do not travel in a straight line.
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-06-22T20:55:47Z'
+  updated_at: '2026-06-22T20:55:52Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226313/original_a9622186657ed9200a31fe2a2cb7a4a0.png?1782161750
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxMy9vcmlnaW5hbF9hOTYyMjE4NjY1N2VkOTIwMGEzMWZlMmEyY2I3YTRhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxMy9vcmlnaW5hbF9hOTYyMjE4NjY1N2VkOTIwMGEzMWZlMmEyY2I3YTRhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxMy9vcmlnaW5hbF9hOTYyMjE4NjY1N2VkOTIwMGEzMWZlMmEyY2I3YTRhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMxMy9vcmlnaW5hbF9hOTYyMjE4NjY1N2VkOTIwMGEzMWZlMmEyY2I3YTRhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: a9622186657ed9200a31fe2a2cb7a4a0.png
+    file_size: 2776762
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47226306
+  block_type: Image
+  title: PLATE I ORIENT Where do I begin?
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 14
+  created_at: '2026-06-22T20:55:45Z'
+  updated_at: '2026-06-22T20:55:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226306/original_40fa9cf56019f4985ea7d8959c5352bb.png?1782161746
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNi9vcmlnaW5hbF80MGZhOWNmNTYwMTlmNDk4NWVhN2Q4OTU5YzUzNTJiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNi9vcmlnaW5hbF80MGZhOWNmNTYwMTlmNDk4NWVhN2Q4OTU5YzUzNTJiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNi9vcmlnaW5hbF80MGZhOWNmNTYwMTlmNDk4NWVhN2Q4OTU5YzUzNTJiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNi9vcmlnaW5hbF80MGZhOWNmNTYwMTlmNDk4NWVhN2Q4OTU5YzUzNTJiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 40fa9cf56019f4985ea7d8959c5352bb.png
+    file_size: 2767118
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47226304
+  block_type: Image
+  title: PLATE II ZENITH
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 13
+  created_at: '2026-06-22T20:55:41Z'
+  updated_at: '2026-06-22T20:55:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226304/original_a8fecac06d2767551754add4404aed56.png?1782161741
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNC9vcmlnaW5hbF9hOGZlY2FjMDZkMjc2NzU1MTc1NGFkZDQ0MDRhZWQ1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNC9vcmlnaW5hbF9hOGZlY2FjMDZkMjc2NzU1MTc1NGFkZDQ0MDRhZWQ1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNC9vcmlnaW5hbF9hOGZlY2FjMDZkMjc2NzU1MTc1NGFkZDQ0MDRhZWQ1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwNC9vcmlnaW5hbF9hOGZlY2FjMDZkMjc2NzU1MTc1NGFkZDQ0MDRhZWQ1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: a8fecac06d2767551754add4404aed56.png
+    file_size: 2972511
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47226303
+  block_type: Image
+  title: PLATE III THE PATH Which way should I go?
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 12
+  created_at: '2026-06-22T20:55:39Z'
+  updated_at: '2026-06-22T20:55:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226303/original_971116698f8cc0f94a3ceee680af9d18.png?1782161741
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwMy9vcmlnaW5hbF85NzExMTY2OThmOGNjMGY5NGEzY2VlZTY4MGFmOWQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwMy9vcmlnaW5hbF85NzExMTY2OThmOGNjMGY5NGEzY2VlZTY4MGFmOWQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwMy9vcmlnaW5hbF85NzExMTY2OThmOGNjMGY5NGEzY2VlZTY4MGFmOWQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjMwMy9vcmlnaW5hbF85NzExMTY2OThmOGNjMGY5NGEzY2VlZTY4MGFmOWQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 971116698f8cc0f94a3ceee680af9d18.png
+    file_size: 3255010
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47226295
+  block_type: Image
+  title: PLATE IV COMPANIONS Who walks beside me?
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 11
+  created_at: '2026-06-22T20:55:36Z'
+  updated_at: '2026-06-22T20:55:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226295/original_0a14264bc3b7abdeb06a5b117221254d.png?1782161737
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NS9vcmlnaW5hbF8wYTE0MjY0YmMzYjdhYmRlYjA2YTViMTE3MjIxMjU0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NS9vcmlnaW5hbF8wYTE0MjY0YmMzYjdhYmRlYjA2YTViMTE3MjIxMjU0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NS9vcmlnaW5hbF8wYTE0MjY0YmMzYjdhYmRlYjA2YTViMTE3MjIxMjU0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NS9vcmlnaW5hbF8wYTE0MjY0YmMzYjdhYmRlYjA2YTViMTE3MjIxMjU0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0a14264bc3b7abdeb06a5b117221254d.png
+    file_size: 3036571
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47226294
+  block_type: Image
+  title: PLATE V THE UNKNOWN What lies beyond my map?
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 10
+  created_at: '2026-06-22T20:55:33Z'
+  updated_at: '2026-06-22T20:55:37Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226294/original_be511947a55ddcd016505a721b9f1176.png?1782161734
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NC9vcmlnaW5hbF9iZTUxMTk0N2E1NWRkY2QwMTY1MDVhNzIxYjlmMTE3Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NC9vcmlnaW5hbF9iZTUxMTk0N2E1NWRkY2QwMTY1MDVhNzIxYjlmMTE3Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NC9vcmlnaW5hbF9iZTUxMTk0N2E1NWRkY2QwMTY1MDVhNzIxYjlmMTE3Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5NC9vcmlnaW5hbF9iZTUxMTk0N2E1NWRkY2QwMTY1MDVhNzIxYjlmMTE3Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: be511947a55ddcd016505a721b9f1176.png
+    file_size: 3231033
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47226290
+  block_type: Image
+  title: A'S & Q'S ANSWERS & QUESTIONS
+  description: null
+  page_role: page
+  editorial_roles:
+  - question
+  connection_position: 9
+  created_at: '2026-06-22T20:55:32Z'
+  updated_at: '2026-06-22T20:55:36Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226290/original_d01f6be2821a406a20585e7c818399de.png?1782161732
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5MC9vcmlnaW5hbF9kMDFmNmJlMjgyMWE0MDZhMjA1ODVlN2M4MTgzOTlkZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5MC9vcmlnaW5hbF9kMDFmNmJlMjgyMWE0MDZhMjA1ODVlN2M4MTgzOTlkZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5MC9vcmlnaW5hbF9kMDFmNmJlMjgyMWE0MDZhMjA1ODVlN2M4MTgzOTlkZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI5MC9vcmlnaW5hbF9kMDFmNmJlMjgyMWE0MDZhMjA1ODVlN2M4MTgzOTlkZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d01f6be2821a406a20585e7c818399de.png
+    file_size: 2514754
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47226285
+  block_type: Image
+  title: PLATE VI OCCIDENT What have I learned?
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 8
+  created_at: '2026-06-22T20:55:26Z'
+  updated_at: '2026-06-22T20:55:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226285/original_f31a229e633eeed06b2dd589c253153f.png?1782161727
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4NS9vcmlnaW5hbF9mMzFhMjI5ZTYzM2VlZWQwNmIyZGQ1ODljMjUzMTUzZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4NS9vcmlnaW5hbF9mMzFhMjI5ZTYzM2VlZWQwNmIyZGQ1ODljMjUzMTUzZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4NS9vcmlnaW5hbF9mMzFhMjI5ZTYzM2VlZWQwNmIyZGQ1ODljMjUzMTUzZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4NS9vcmlnaW5hbF9mMzFhMjI5ZTYzM2VlZWQwNmIyZGQ1ODljMjUzMTUzZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f31a229e633eeed06b2dd589c253153f.png
+    file_size: 2934925
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47226280
+  block_type: Image
+  title: PLATE VII NADIR What keeps me grounded?
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 7
+  created_at: '2026-06-22T20:55:23Z'
+  updated_at: '2026-06-22T20:55:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226280/original_a308e405d6f05e96aaf76c4c246e62b6.png?1782161725
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4MC9vcmlnaW5hbF9hMzA4ZTQwNWQ2ZjA1ZTk2YWFmNzZjNGMyNDZlNjJiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4MC9vcmlnaW5hbF9hMzA4ZTQwNWQ2ZjA1ZTk2YWFmNzZjNGMyNDZlNjJiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4MC9vcmlnaW5hbF9hMzA4ZTQwNWQ2ZjA1ZTk2YWFmNzZjNGMyNDZlNjJiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI4MC9vcmlnaW5hbF9hMzA4ZTQwNWQ2ZjA1ZTk2YWFmNzZjNGMyNDZlNjJiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: a308e405d6f05e96aaf76c4c246e62b6.png
+    file_size: 3057803
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47226271
+  block_type: Image
+  title: PLATE VIII• HERE Who have I become?
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 6
+  created_at: '2026-06-22T20:55:20Z'
+  updated_at: '2026-06-22T20:55:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226271/original_5c4b33c062a33ec7506699c9f3a12908.png?1782161721
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI3MS9vcmlnaW5hbF81YzRiMzNjMDYyYTMzZWM3NTA2Njk5YzlmM2ExMjkwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI3MS9vcmlnaW5hbF81YzRiMzNjMDYyYTMzZWM3NTA2Njk5YzlmM2ExMjkwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI3MS9vcmlnaW5hbF81YzRiMzNjMDYyYTMzZWM3NTA2Njk5YzlmM2ExMjkwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI3MS9vcmlnaW5hbF81YzRiMzNjMDYyYTMzZWM3NTA2Njk5YzlmM2ExMjkwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5c4b33c062a33ec7506699c9f3a12908.png
+    file_size: 2797434
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47226269
+  block_type: Image
+  title: AFTERWORD LIFE VOL IIThe Space Between
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-06-22T20:55:16Z'
+  updated_at: '2026-06-22T20:55:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226269/original_191738806acb39c451235ea5d5f2d574.png?1782161718
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2OS9vcmlnaW5hbF8xOTE3Mzg4MDZhY2IzOWM0NTEyMzVlYTVkNWYyZDU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2OS9vcmlnaW5hbF8xOTE3Mzg4MDZhY2IzOWM0NTEyMzVlYTVkNWYyZDU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2OS9vcmlnaW5hbF8xOTE3Mzg4MDZhY2IzOWM0NTEyMzVlYTVkNWYyZDU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2OS9vcmlnaW5hbF8xOTE3Mzg4MDZhY2IzOWM0NTEyMzVlYTVkNWYyZDU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 191738806acb39c451235ea5d5f2d574.png
+    file_size: 2837399
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 47226267
+  block_type: Image
+  title: FINAL PLATE I K-I-N-D To be or not to be
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 4
+  created_at: '2026-06-22T20:55:14Z'
+  updated_at: '2026-06-22T20:55:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226267/original_38152b28369b0305d5f1957cc17d4143.png?1782161715
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2Ny9vcmlnaW5hbF8zODE1MmIyODM2OWIwMzA1ZDVmMTk1N2NjMTdkNDE0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2Ny9vcmlnaW5hbF8zODE1MmIyODM2OWIwMzA1ZDVmMTk1N2NjMTdkNDE0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2Ny9vcmlnaW5hbF8zODE1MmIyODM2OWIwMzA1ZDVmMTk1N2NjMTdkNDE0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI2Ny9vcmlnaW5hbF8zODE1MmIyODM2OWIwMzA1ZDVmMTk1N2NjMTdkNDE0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 38152b28369b0305d5f1957cc17d4143.png
+    file_size: 2803542
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 47226256
+  block_type: Image
+  title: FINAL PLATE II ASK AGAIN
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 3
+  created_at: '2026-06-22T20:55:09Z'
+  updated_at: '2026-06-22T20:55:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226256/original_ef105b95a3377a26fec3e9e711de1608.png?1782161711
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Ni9vcmlnaW5hbF9lZjEwNWI5NWEzMzc3YTI2ZmVjM2U5ZTcxMWRlMTYwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Ni9vcmlnaW5hbF9lZjEwNWI5NWEzMzc3YTI2ZmVjM2U5ZTcxMWRlMTYwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Ni9vcmlnaW5hbF9lZjEwNWI5NWEzMzc3YTI2ZmVjM2U5ZTcxMWRlMTYwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Ni9vcmlnaW5hbF9lZjEwNWI5NWEzMzc3YTI2ZmVjM2U5ZTcxMWRlMTYwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: ef105b95a3377a26fec3e9e711de1608.png
+    file_size: 2869157
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 47226252
+  block_type: Image
+  title: FINAL PLATE III NIXNEUES
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 2
+  created_at: '2026-06-22T20:55:07Z'
+  updated_at: '2026-06-22T20:55:12Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226252/original_38645484a147aa3fa7a6035e99ee6383.png?1782161710
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Mi9vcmlnaW5hbF8zODY0NTQ4NGExNDdhYTNmYTdhNjAzNWU5OWVlNjM4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Mi9vcmlnaW5hbF8zODY0NTQ4NGExNDdhYTNmYTdhNjAzNWU5OWVlNjM4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Mi9vcmlnaW5hbF8zODY0NTQ4NGExNDdhYTNmYTdhNjAzNWU5OWVlNjM4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI1Mi9vcmlnaW5hbF8zODY0NTQ4NGExNDdhYTNmYTdhNjAzNWU5OWVlNjM4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 38645484a147aa3fa7a6035e99ee6383.png
+    file_size: 2639146
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 47226249
+  block_type: Image
+  title: BEFORE YOU GO
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-06-22T20:55:04Z'
+  updated_at: '2026-06-22T20:55:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47226249/original_e22ca1b9bb055b72ecd42f24d9e5c154.png?1782161707
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI0OS9vcmlnaW5hbF9lMjJjYTFiOWJiMDU1YjcyZWNkNDJmMjRkOWU1YzE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI0OS9vcmlnaW5hbF9lMjJjYTFiOWJiMDU1YjcyZWNkNDJmMjRkOWU1YzE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI0OS9vcmlnaW5hbF9lMjJjYTFiOWJiMDU1YjcyZWNkNDJmMjRkOWU1YzE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNjI0OS9vcmlnaW5hbF9lMjJjYTFiOWJiMDU1YjcyZWNkNDJmMjRkOWU1YzE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: e22ca1b9bb055b72ecd42f24d9e5c154.png
+    file_size: 2675268
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

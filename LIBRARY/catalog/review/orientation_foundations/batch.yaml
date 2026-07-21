@@ -1,0 +1,37 @@
+schema_version: '0.1'
+batch_id: catalog-review-orientation-foundations-a
+authority: noncanonical_catalog_review
+review_state: queued
+source_publications:
+- catalog_key: arena:5416617
+  arena_channel_id: 5416617
+  title: ORIENTATION SCIENCE
+  source_url: https://www.are.na/nexah-scarabaeus1031/orientation-science
+- catalog_key: arena:5415690
+  arena_channel_id: 5415690
+  title: ORIENTATION DESIGN — VOLUME II
+  source_url: https://www.are.na/nexah-scarabaeus1031/orientation-design-vol-ii
+- catalog_key: arena:5309625
+  arena_channel_id: 5309625
+  title: ORIENTATION THEORY — VOLUME III
+  source_url: https://www.are.na/nexah-scarabaeus1031/orientation-theory-vol-iii
+- catalog_key: arena:5250350
+  arena_channel_id: 5250350
+  title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+  source_url: https://www.are.na/nexah-scarabaeus1031/the-architecture-of-orientation-vol-iv
+page_count: 96
+triaged_page_count: 96
+eligible_page_count: 69
+deep_extraction_count: 12
+series_assessment:
+  relationship_status: strongly_implied
+  canonical_series: false
+  evidence: Shared Orientation framing plus explicit Volume II, Volume III, and Volume
+    IV titles; ORIENTATION SCIENCE is a prospectus without a volume number.
+  requires_human_review: true
+mutations:
+  arena: false
+  registry: false
+  proposal: false
+  operator: false
+  kernel: false

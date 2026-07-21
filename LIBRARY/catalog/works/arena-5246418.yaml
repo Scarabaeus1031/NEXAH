@@ -1,0 +1,464 @@
+schema_version: '0.1'
+catalog_key: arena:5246418
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: LEONARDO TRANSLATIONS — THE ROOM THAT LOOKS BACK
+source:
+  arena_channel_id: 5246418
+  arena_slug: leonardo-translations-the-room-that-looks-back
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/leonardo-translations-the-room-that-looks-back
+  live_title: Leonardo Translations  The Room That Looks Back
+  description: 'A visual and conceptual exploration of  Leonardo da Vinci’s perception architectures.
+
+    Rather than treating Leonardo’s paintings as static images, this series examines them as dynamic systems of orientation,
+    light, geometry, shadow, transition and emergence.
+
+    Through visual translations, architectural analysis and relational field models, the project investigates how perception
+    itself is constructed.
+
+    The goal is not to explain Leonardo historically, but to explore the deeper mechanisms of seeing that his works reveal.
+
+    In this sense, Leonardo becomes less a painter of objects and more an engineer of perception.
+
+    The Room That Looks Back serves as the entry point into this journey.'
+  visibility: closed
+  state: available
+  member_count: 16
+  created_at: '2026-05-31T22:52:53Z'
+  updated_at: '2026-06-25T22:01:33Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: visual_essay
+  form: visual_essay
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Leonardo Translations
+  confidence: moderate
+  human_decision: pending
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46633054
+  title: THE ROOM THAT LOOKS BACK
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633054/original_398c402d16b9bf2acd013eeae0d32fd4.png?1780267991
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NC9vcmlnaW5hbF8zOThjNDAyZDE2YjliZjJhY2QwMTNlZWFlMGQzMmZkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NC9vcmlnaW5hbF8zOThjNDAyZDE2YjliZjJhY2QwMTNlZWFlMGQzMmZkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NC9vcmlnaW5hbF8zOThjNDAyZDE2YjliZjJhY2QwMTNlZWFlMGQzMmZkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NC9vcmlnaW5hbF8zOThjNDAyZDE2YjliZjJhY2QwMTNlZWFlMGQzMmZkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: 398c402d16b9bf2acd013eeae0d32fd4.png
+  file_size: 2894475
+  alt_text: null
+structure:
+  block_count: 16
+  titled_block_count: 16
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section:
+  - sequence_index: 10
+    arena_block_id: 46633063
+    title: 08 THE LIGHT ENGINE
+  - sequence_index: 11
+    arena_block_id: 46633064
+    title: 09 THE MOVING RED
+  appendix: []
+  closing: []
+  editorial_roles: {}
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46633054
+  block_type: Image
+  title: THE ROOM THAT LOOKS BACK
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-05-31T22:53:11Z'
+  updated_at: '2026-05-31T22:53:32Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633054/original_398c402d16b9bf2acd013eeae0d32fd4.png?1780267991
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 398c402d16b9bf2acd013eeae0d32fd4.png
+    file_size: 2894475
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46633059
+  block_type: Image
+  title: LEONARDO PAINTING PERCEPTION_BF
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-05-31T22:53:11Z'
+  updated_at: '2026-06-25T22:01:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633059/original_a73b62ccfca3484e666cf2da29f46fdb.png?1780267993
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OS9vcmlnaW5hbF9hNzNiNjJjY2ZjYTM0ODRlNjY2Y2YyZGEyOWY0NmZkYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OS9vcmlnaW5hbF9hNzNiNjJjY2ZjYTM0ODRlNjY2Y2YyZGEyOWY0NmZkYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OS9vcmlnaW5hbF9hNzNiNjJjY2ZjYTM0ODRlNjY2Y2YyZGEyOWY0NmZkYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OS9vcmlnaW5hbF9hNzNiNjJjY2ZjYTM0ODRlNjY2Y2YyZGEyOWY0NmZkYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: a73b62ccfca3484e666cf2da29f46fdb.png
+    file_size: 3327568
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46633067
+  block_type: Image
+  title: LEONARDO TRANSLATIONS * VISUAL 01 + THE APERTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-05-31T22:53:14Z'
+  updated_at: '2026-05-31T22:54:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633067/original_b3a3d0195d065cb72e805a5108a77b06.png?1780267996
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ny9vcmlnaW5hbF9iM2EzZDAxOTVkMDY1Y2I3MmU4MDVhNTEwOGE3N2IwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ny9vcmlnaW5hbF9iM2EzZDAxOTVkMDY1Y2I3MmU4MDVhNTEwOGE3N2IwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ny9vcmlnaW5hbF9iM2EzZDAxOTVkMDY1Y2I3MmU4MDVhNTEwOGE3N2IwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ny9vcmlnaW5hbF9iM2EzZDAxOTVkMDY1Y2I3MmU4MDVhNTEwOGE3N2IwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1402
+    height: 1122
+    aspect_ratio: 1.2496
+    content_type: image/png
+    filename: b3a3d0195d065cb72e805a5108a77b06.png
+    file_size: 2374944
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46633068
+  block_type: Image
+  title: LEONARDO TRANSLATIONS • VISUAL 02 THE SHADOW FIELD
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-31T22:53:15Z'
+  updated_at: '2026-05-31T22:54:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633068/original_a5039d4b9f1ba66865016f7d7f0f7a1b.png?1780267997
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OC9vcmlnaW5hbF9hNTAzOWQ0YjlmMWJhNjY4NjUwMTZmN2Q3ZjBmN2ExYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OC9vcmlnaW5hbF9hNTAzOWQ0YjlmMWJhNjY4NjUwMTZmN2Q3ZjBmN2ExYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OC9vcmlnaW5hbF9hNTAzOWQ0YjlmMWJhNjY4NjUwMTZmN2Q3ZjBmN2ExYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OC9vcmlnaW5hbF9hNTAzOWQ0YjlmMWJhNjY4NjUwMTZmN2Q3ZjBmN2ExYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1402
+    height: 1122
+    aspect_ratio: 1.2496
+    content_type: image/png
+    filename: a5039d4b9f1ba66865016f7d7f0f7a1b.png
+    file_size: 2471524
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46633066
+  block_type: Image
+  title: LEONARDO TRANSLATIONS • VISUAL 03 THE DRIFT
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-31T22:53:14Z'
+  updated_at: '2026-05-31T22:54:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633066/original_6154d105373f82f1906528b8814212a6.png?1780267996
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ni9vcmlnaW5hbF82MTU0ZDEwNTM3M2Y4MmYxOTA2NTI4Yjg4MTQyMTJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ni9vcmlnaW5hbF82MTU0ZDEwNTM3M2Y4MmYxOTA2NTI4Yjg4MTQyMTJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ni9vcmlnaW5hbF82MTU0ZDEwNTM3M2Y4MmYxOTA2NTI4Yjg4MTQyMTJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Ni9vcmlnaW5hbF82MTU0ZDEwNTM3M2Y4MmYxOTA2NTI4Yjg4MTQyMTJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1402
+    height: 1122
+    aspect_ratio: 1.2496
+    content_type: image/png
+    filename: 6154d105373f82f1906528b8814212a6.png
+    file_size: 2461609
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46633065
+  block_type: Image
+  title: LEONARDO TRANSLATIONS VISUAL 03* THE DRIFT
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-31T22:53:14Z'
+  updated_at: '2026-05-31T22:54:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633065/original_5a078e3e5e0877a288596ec50b9d9435.png?1780267995
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NS9vcmlnaW5hbF81YTA3OGUzZTVlMDg3N2EyODg1OTZlYzUwYjlkOTQzNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NS9vcmlnaW5hbF81YTA3OGUzZTVlMDg3N2EyODg1OTZlYzUwYjlkOTQzNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NS9vcmlnaW5hbF81YTA3OGUzZTVlMDg3N2EyODg1OTZlYzUwYjlkOTQzNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NS9vcmlnaW5hbF81YTA3OGUzZTVlMDg3N2EyODg1OTZlYzUwYjlkOTQzNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1672
+    height: 941
+    aspect_ratio: 1.7768
+    content_type: image/png
+    filename: 5a078e3e5e0877a288596ec50b9d9435.png
+    file_size: 2956885
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46633069
+  block_type: Image
+  title: LEONARDO TRANSLATIONS • VISUAL 04 THE RELATIONAL IMAGE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-05-31T22:53:16Z'
+  updated_at: '2026-05-31T22:53:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633069/original_c398a154e1182f5ce0d22efcdde26ff0.png?1780267997
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OS9vcmlnaW5hbF9jMzk4YTE1NGUxMTgyZjVjZTBkMjJlZmNkZGUyNmZmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OS9vcmlnaW5hbF9jMzk4YTE1NGUxMTgyZjVjZTBkMjJlZmNkZGUyNmZmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OS9vcmlnaW5hbF9jMzk4YTE1NGUxMTgyZjVjZTBkMjJlZmNkZGUyNmZmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2OS9vcmlnaW5hbF9jMzk4YTE1NGUxMTgyZjVjZTBkMjJlZmNkZGUyNmZmMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c398a154e1182f5ce0d22efcdde26ff0.png
+    file_size: 2559886
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46633062
+  block_type: Image
+  title: THE LAST SUPPER ROOM - A PERCEPTION ARCHITECTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-31T22:53:14Z'
+  updated_at: '2026-05-31T22:53:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633062/original_7dd0d85493ac8b1cd7e7bbe64ba4df46.png?1780267995
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Mi9vcmlnaW5hbF83ZGQwZDg1NDkzYWM4YjFjZDdlN2JiZTY0YmE0ZGY0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Mi9vcmlnaW5hbF83ZGQwZDg1NDkzYWM4YjFjZDdlN2JiZTY0YmE0ZGY0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Mi9vcmlnaW5hbF83ZGQwZDg1NDkzYWM4YjFjZDdlN2JiZTY0YmE0ZGY0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2Mi9vcmlnaW5hbF83ZGQwZDg1NDkzYWM4YjFjZDdlN2JiZTY0YmE0ZGY0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7dd0d85493ac8b1cd7e7bbe64ba4df46.png
+    file_size: 2470925
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46633055
+  block_type: Image
+  title: THE LIGHT ENGINE HOW LIGHT BUILDS PERCEPTION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-31T22:53:11Z'
+  updated_at: '2026-05-31T22:56:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633055/original_ff95b474950b8228e2c08c1a27cf5a02.png?1780267992
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NS9vcmlnaW5hbF9mZjk1YjQ3NDk1MGI4MjI4ZTJjMDhjMWEyN2NmNWEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NS9vcmlnaW5hbF9mZjk1YjQ3NDk1MGI4MjI4ZTJjMDhjMWEyN2NmNWEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NS9vcmlnaW5hbF9mZjk1YjQ3NDk1MGI4MjI4ZTJjMDhjMWEyN2NmNWEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1NS9vcmlnaW5hbF9mZjk1YjQ3NDk1MGI4MjI4ZTJjMDhjMWEyN2NmNWEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1672
+    height: 941
+    aspect_ratio: 1.7768
+    content_type: image/png
+    filename: ff95b474950b8228e2c08c1a27cf5a02.png
+    file_size: 3002133
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46633063
+  block_type: Image
+  title: 08 THE LIGHT ENGINE
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-31T22:53:14Z'
+  updated_at: '2026-05-31T22:56:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633063/original_c4a0982442fd18491a5f977d0c8114f1.png?1780267995
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2My9vcmlnaW5hbF9jNGEwOTgyNDQyZmQxODQ5MWE1Zjk3N2QwYzgxMTRmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2My9vcmlnaW5hbF9jNGEwOTgyNDQyZmQxODQ5MWE1Zjk3N2QwYzgxMTRmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2My9vcmlnaW5hbF9jNGEwOTgyNDQyZmQxODQ5MWE1Zjk3N2QwYzgxMTRmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2My9vcmlnaW5hbF9jNGEwOTgyNDQyZmQxODQ5MWE1Zjk3N2QwYzgxMTRmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1692
+    height: 930
+    aspect_ratio: 1.8194
+    content_type: image/png
+    filename: c4a0982442fd18491a5f977d0c8114f1.png
+    file_size: 2863315
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46633064
+  block_type: Image
+  title: 09 THE MOVING RED
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-31T22:53:14Z'
+  updated_at: '2026-05-31T22:55:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633064/original_4e2dbd58af6bc55520442ae32a3d7347.png?1780267995
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NC9vcmlnaW5hbF80ZTJkYmQ1OGFmNmJjNTU1MjA0NDJhZTMyYTNkNzM0Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NC9vcmlnaW5hbF80ZTJkYmQ1OGFmNmJjNTU1MjA0NDJhZTMyYTNkNzM0Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NC9vcmlnaW5hbF80ZTJkYmQ1OGFmNmJjNTU1MjA0NDJhZTMyYTNkNzM0Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2NC9vcmlnaW5hbF80ZTJkYmQ1OGFmNmJjNTU1MjA0NDJhZTMyYTNkNzM0Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 4e2dbd58af6bc55520442ae32a3d7347.png
+    file_size: 2702003
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46633058
+  block_type: Image
+  title: LEONARDO PAINTING PERCEPTION_ii
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-31T22:53:11Z'
+  updated_at: '2026-05-31T22:53:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633058/original_1cfd57d414c041078a8f2073a073c17b.png?1780267993
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OC9vcmlnaW5hbF8xY2ZkNTdkNDE0YzA0MTA3OGE4ZjIwNzNhMDczYzE3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OC9vcmlnaW5hbF8xY2ZkNTdkNDE0YzA0MTA3OGE4ZjIwNzNhMDczYzE3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OC9vcmlnaW5hbF8xY2ZkNTdkNDE0YzA0MTA3OGE4ZjIwNzNhMDczYzE3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1OC9vcmlnaW5hbF8xY2ZkNTdkNDE0YzA0MTA3OGE4ZjIwNzNhMDczYzE3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1214
+    height: 1295
+    aspect_ratio: 0.9375
+    content_type: image/png
+    filename: 1cfd57d414c041078a8f2073a073c17b.png
+    file_size: 3262854
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46633057
+  block_type: Image
+  title: THE LAST SUPPER AS A DYNAMIC SYSTEM
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-31T22:53:11Z'
+  updated_at: '2026-05-31T22:53:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633057/original_62da1df1dd0cc5c5a881a41dc11fbb4f.png?1780267991
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ny9vcmlnaW5hbF82MmRhMWRmMWRkMGNjNWM1YTg4MWE0MWRjMTFmYmI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ny9vcmlnaW5hbF82MmRhMWRmMWRkMGNjNWM1YTg4MWE0MWRjMTFmYmI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ny9vcmlnaW5hbF82MmRhMWRmMWRkMGNjNWM1YTg4MWE0MWRjMTFmYmI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ny9vcmlnaW5hbF82MmRhMWRmMWRkMGNjNWM1YTg4MWE0MWRjMTFmYmI0Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1254
+    height: 1254
+    aspect_ratio: 1.0
+    content_type: image/png
+    filename: 62da1df1dd0cc5c5a881a41dc11fbb4f.png
+    file_size: 3150301
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 46633056
+  block_type: Image
+  title: LEONARDO PAINTING PERCEPTION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-31T22:53:11Z'
+  updated_at: '2026-05-31T22:53:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633056/original_4d0622601e4b178c37c3eefaf2d65578.png?1780267992
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ni9vcmlnaW5hbF80ZDA2MjI2MDFlNGIxNzhjMzdjM2VlZmFmMmQ2NTU3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ni9vcmlnaW5hbF80ZDA2MjI2MDFlNGIxNzhjMzdjM2VlZmFmMmQ2NTU3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ni9vcmlnaW5hbF80ZDA2MjI2MDFlNGIxNzhjMzdjM2VlZmFmMmQ2NTU3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA1Ni9vcmlnaW5hbF80ZDA2MjI2MDFlNGIxNzhjMzdjM2VlZmFmMmQ2NTU3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 4d0622601e4b178c37c3eefaf2d65578.png
+    file_size: 3094505
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 46633070
+  block_type: Image
+  title: LEONARDO DA VINCI TRANSLATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-31T22:53:17Z'
+  updated_at: '2026-05-31T22:53:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633070/original_2680155a9e80d9e1c505b04b9390b1fe.png?1780267998
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA3MC9vcmlnaW5hbF8yNjgwMTU1YTllODBkOWUxYzUwNWIwNGI5MzkwYjFmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA3MC9vcmlnaW5hbF8yNjgwMTU1YTllODBkOWUxYzUwNWIwNGI5MzkwYjFmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA3MC9vcmlnaW5hbF8yNjgwMTU1YTllODBkOWUxYzUwNWIwNGI5MzkwYjFmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA3MC9vcmlnaW5hbF8yNjgwMTU1YTllODBkOWUxYzUwNWIwNGI5MzkwYjFmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1197
+    height: 1315
+    aspect_ratio: 0.9103
+    content_type: image/png
+    filename: 2680155a9e80d9e1c505b04b9390b1fe.png
+    file_size: 2870392
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 46633061
+  block_type: Image
+  title: MonaMona
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-31T22:53:12Z'
+  updated_at: '2026-05-31T22:57:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46633061/original_03d3def0c1122d6cefec5849d5d93ad4.jpeg?1780267992
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2MS9vcmlnaW5hbF8wM2QzZGVmMGMxMTIyZDZjZWZlYzU4NDlkNWQ5M2FkNC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo0MDAsImhlaWdodCI6NDAwLCJmaXQiOiJpbnNpZGUiLCJ3aXRob3V0RW5sYXJnZW1lbnQiOnRydWV9LCJ3ZWJwIjp7InF1YWxpdHkiOjc1fSwianBlZyI6eyJxdWFsaXR5Ijo3NX0sInJvdGF0ZSI6bnVsbH19
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2MS9vcmlnaW5hbF8wM2QzZGVmMGMxMTIyZDZjZWZlYzU4NDlkNWQ5M2FkNC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMjAwLCJoZWlnaHQiOjEyMDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2MS9vcmlnaW5hbF8wM2QzZGVmMGMxMTIyZDZjZWZlYzU4NDlkNWQ5M2FkNC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxODAwLCJoZWlnaHQiOjE4MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjYzMzA2MS9vcmlnaW5hbF8wM2QzZGVmMGMxMTIyZDZjZWZlYzU4NDlkNWQ5M2FkNC5qcGVnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxMjAwLCJoZWlnaHQiOjEyMDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    width: 1600
+    height: 914
+    aspect_ratio: 1.7505
+    content_type: image/jpeg
+    filename: 03d3def0c1122d6cefec5849d5d93ad4.jpeg
+    file_size: 486820
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

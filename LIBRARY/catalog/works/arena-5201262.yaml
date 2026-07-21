@@ -1,0 +1,675 @@
+schema_version: '0.1'
+catalog_key: arena:5201262
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: 'NEXAH XV ATLAS — Volume I: Observation, Flow & Transition'
+source:
+  arena_channel_id: 5201262
+  arena_slug: nexah-xv-atlas-volume-i-observation-flow-transition
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-atlas-volume-i-observation-flow-transition
+  live_title: 'NEXAH XV ATLAS — Volume I: Observation, Flow & Transition'
+  description: "An exploratory visual atlas of recurring structures in complex dynamical systems. \nVolume I focuses on: \n\
+    – observation  \n– flow fields \n– transition morphologies\n– resonance structures\n– drift dynamics\n– coherence patterns\
+    \ \n– cartographic interpretation \nThe XV Atlas does not present a final physical theory.\nIt is a comparative and geometric\
+    \ framework for studying how structured transitions appear across scales and domains.\nThese visual studies combine:\n\
+    – systems thinking\n– transport geometry\n– nonlinear dynamics\n– observer-dependent representation\n– speculative scientific\
+    \ cartography\n– visual synthesis\nThis channel documents the foundational layer of the NEXAH XV Atlas:\nwhere movement\
+    \ becomes structure.\n“We do not map certainty.\nWe map movement.”"
+  visibility: closed
+  state: available
+  member_count: 24
+  created_at: '2026-05-20T11:54:25Z'
+  updated_at: '2026-06-01T21:16:15Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH XV Atlas
+  confidence: high
+  human_decision: pending
+  shelves:
+  - XV Atlas
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46350897
+  title: NEXAH XV ATLAS
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350897/original_97e1ff422f3e6b393709184a2e9f945a.png?1779278086
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5Ny9vcmlnaW5hbF85N2UxZmY0MjJmM2U2YjM5MzcwOTE4NGEyZTlmOTQ1YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5Ny9vcmlnaW5hbF85N2UxZmY0MjJmM2U2YjM5MzcwOTE4NGEyZTlmOTQ1YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5Ny9vcmlnaW5hbF85N2UxZmY0MjJmM2U2YjM5MzcwOTE4NGEyZTlmOTQ1YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5Ny9vcmlnaW5hbF85N2UxZmY0MjJmM2U2YjM5MzcwOTE4NGEyZTlmOTQ1YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1054
+  height: 1492
+  aspect_ratio: 0.7064
+  content_type: image/png
+  filename: 97e1ff422f3e6b393709184a2e9f945a.png
+  file_size: 2540642
+  alt_text: null
+structure:
+  block_count: 24
+  titled_block_count: 24
+  title_coverage: 1.0
+  foreword: []
+  index:
+  - sequence_index: 2
+    arena_block_id: 46350905
+    title: 'NEXAH XV ATLAS XV INDEX : TABLE OF CONTENTS'
+  part:
+  - sequence_index: 3
+    arena_block_id: 46350907
+    title: PART I - OBSERVATION & PHENOMENA
+  - sequence_index: 8
+    arena_block_id: 46350908
+    title: PART II - FLOW, DRIFT & TRANSPORT
+  - sequence_index: 24
+    arena_block_id: 46350920
+    title: PART V - THE OPEN ATLAS
+  chapter: []
+  numbered_section:
+  - sequence_index: 13
+    arena_block_id: 5181972
+    title: 02 — NEXAH · SYSTEM ATLASES
+  appendix:
+  - sequence_index: 19
+    arena_block_id: 46350916
+    title: APPENDIX PANEL I HOW TO READ THE ATLAS
+  - sequence_index: 20
+    arena_block_id: 46350914
+    title: APPENDIX PANEL II REAL-WORLD TRANSITIONS
+  - sequence_index: 21
+    arena_block_id: 46350915
+    title: APPENDIX PANEL III FLOW • DRIFT • COHERENCE
+  - sequence_index: 22
+    arena_block_id: 46350917
+    title: APPENDIX PANEL IV OBSERVER & CARTOGRAPHY
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 5
+      arena_block_id: 46350900
+      title: XV-Q3 - MULTI-SCALE TRANSITION CARTOGRAPHY
+    - sequence_index: 11
+      arena_block_id: 46350904
+      title: XV-T - TRANSITION ARCHITECTURES
+    question:
+    - sequence_index: 23
+      arena_block_id: 46350919
+      title: LIMITATIONS & OPEN QUESTIONS
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46350897
+  block_type: Image
+  title: NEXAH XV ATLAS
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 24
+  created_at: '2026-05-20T11:54:45Z'
+  updated_at: '2026-05-20T11:55:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350897/original_97e1ff422f3e6b393709184a2e9f945a.png?1779278086
+    variants: *id001
+    width: 1054
+    height: 1492
+    aspect_ratio: 0.7064
+    content_type: image/png
+    filename: 97e1ff422f3e6b393709184a2e9f945a.png
+    file_size: 2540642
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46350905
+  block_type: Image
+  title: 'NEXAH XV ATLAS XV INDEX : TABLE OF CONTENTS'
+  description: null
+  page_role: index
+  editorial_roles: []
+  connection_position: 23
+  created_at: '2026-05-20T11:54:49Z'
+  updated_at: '2026-05-20T11:58:29Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350905/original_9c89b3b79be0d9b7129d61f5b8783ca8.png?1779278090
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNS9vcmlnaW5hbF85Yzg5YjNiNzliZTBkOWI3MTI5ZDYxZjViODc4M2NhOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNS9vcmlnaW5hbF85Yzg5YjNiNzliZTBkOWI3MTI5ZDYxZjViODc4M2NhOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNS9vcmlnaW5hbF85Yzg5YjNiNzliZTBkOWI3MTI5ZDYxZjViODc4M2NhOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNS9vcmlnaW5hbF85Yzg5YjNiNzliZTBkOWI3MTI5ZDYxZjViODc4M2NhOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1054
+    height: 1492
+    aspect_ratio: 0.7064
+    content_type: image/png
+    filename: 9c89b3b79be0d9b7129d61f5b8783ca8.png
+    file_size: 2580697
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46350907
+  block_type: Image
+  title: PART I - OBSERVATION & PHENOMENA
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 22
+  created_at: '2026-05-20T11:54:50Z'
+  updated_at: '2026-05-20T11:58:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350907/original_0950f16809f8b4de7c66cd9381cb0cac.png?1779278091
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNy9vcmlnaW5hbF8wOTUwZjE2ODA5ZjhiNGRlN2M2NmNkOTM4MWNiMGNhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNy9vcmlnaW5hbF8wOTUwZjE2ODA5ZjhiNGRlN2M2NmNkOTM4MWNiMGNhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNy9vcmlnaW5hbF8wOTUwZjE2ODA5ZjhiNGRlN2M2NmNkOTM4MWNiMGNhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNy9vcmlnaW5hbF8wOTUwZjE2ODA5ZjhiNGRlN2M2NmNkOTM4MWNiMGNhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0950f16809f8b4de7c66cd9381cb0cac.png
+    file_size: 2730691
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46350903
+  block_type: Image
+  title: XV-Q2 - NATURAL OBSERVER GEOMETRIES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 21
+  created_at: '2026-05-20T11:54:49Z'
+  updated_at: '2026-05-20T11:58:16Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350903/original_85a19e97e6110e2509127f58f5589d6b.png?1779278090
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMy9vcmlnaW5hbF84NWExOWU5N2U2MTEwZTI1MDkxMjdmNThmNTU4OWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMy9vcmlnaW5hbF84NWExOWU5N2U2MTEwZTI1MDkxMjdmNThmNTU4OWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMy9vcmlnaW5hbF84NWExOWU5N2U2MTEwZTI1MDkxMjdmNThmNTU4OWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMy9vcmlnaW5hbF84NWExOWU5N2U2MTEwZTI1MDkxMjdmNThmNTU4OWQ2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 85a19e97e6110e2509127f58f5589d6b.png
+    file_size: 2772451
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46350900
+  block_type: Image
+  title: XV-Q3 - MULTI-SCALE TRANSITION CARTOGRAPHY
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 20
+  created_at: '2026-05-20T11:54:46Z'
+  updated_at: '2026-05-20T11:57:52Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350900/original_03d654ae9dfae639de8c4713abc00936.png?1779278087
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMC9vcmlnaW5hbF8wM2Q2NTRhZTlkZmFlNjM5ZGU4YzQ3MTNhYmMwMDkzNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMC9vcmlnaW5hbF8wM2Q2NTRhZTlkZmFlNjM5ZGU4YzQ3MTNhYmMwMDkzNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMC9vcmlnaW5hbF8wM2Q2NTRhZTlkZmFlNjM5ZGU4YzQ3MTNhYmMwMDkzNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMC9vcmlnaW5hbF8wM2Q2NTRhZTlkZmFlNjM5ZGU4YzQ3MTNhYmMwMDkzNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 03d654ae9dfae639de8c4713abc00936.png
+    file_size: 2674201
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46350899
+  block_type: Image
+  title: XV-Q4 - PHASE BOUNDARY MORPHOLOGY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-05-20T11:54:46Z'
+  updated_at: '2026-05-20T11:57:54Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350899/original_20016e997eb2764006b830184bd37a66.png?1779278087
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OS9vcmlnaW5hbF8yMDAxNmU5OTdlYjI3NjQwMDZiODMwMTg0YmQzN2E2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OS9vcmlnaW5hbF8yMDAxNmU5OTdlYjI3NjQwMDZiODMwMTg0YmQzN2E2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OS9vcmlnaW5hbF8yMDAxNmU5OTdlYjI3NjQwMDZiODMwMTg0YmQzN2E2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OS9vcmlnaW5hbF8yMDAxNmU5OTdlYjI3NjQwMDZiODMwMTg0YmQzN2E2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 20016e997eb2764006b830184bd37a66.png
+    file_size: 2614768
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46350898
+  block_type: Image
+  title: XV-Q5 - THE Q-SPACE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 18
+  created_at: '2026-05-20T11:54:45Z'
+  updated_at: '2026-05-20T11:56:08Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350898/original_cd28b2f9f3b63c02f32f9a49f8997225.png?1779278088
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OC9vcmlnaW5hbF9jZDI4YjJmOWYzYjYzYzAyZjMyZjlhNDlmODk5NzIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OC9vcmlnaW5hbF9jZDI4YjJmOWYzYjYzYzAyZjMyZjlhNDlmODk5NzIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OC9vcmlnaW5hbF9jZDI4YjJmOWYzYjYzYzAyZjMyZjlhNDlmODk5NzIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDg5OC9vcmlnaW5hbF9jZDI4YjJmOWYzYjYzYzAyZjMyZjlhNDlmODk5NzIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: cd28b2f9f3b63c02f32f9a49f8997225.png
+    file_size: 2450602
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46350908
+  block_type: Image
+  title: PART II - FLOW, DRIFT & TRANSPORT
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-05-20T11:54:50Z'
+  updated_at: '2026-05-20T11:59:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350908/original_3639fdcf395a6e1cd35e98b4aa470a38.png?1779278091
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOC9vcmlnaW5hbF8zNjM5ZmRjZjM5NWE2ZTFjZDM1ZTk4YjRhYTQ3MGEzOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOC9vcmlnaW5hbF8zNjM5ZmRjZjM5NWE2ZTFjZDM1ZTk4YjRhYTQ3MGEzOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOC9vcmlnaW5hbF8zNjM5ZmRjZjM5NWE2ZTFjZDM1ZTk4YjRhYTQ3MGEzOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOC9vcmlnaW5hbF8zNjM5ZmRjZjM5NWE2ZTFjZDM1ZTk4YjRhYTQ3MGEzOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 3639fdcf395a6e1cd35e98b4aa470a38.png
+    file_size: 3074023
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46350901
+  block_type: Image
+  title: XV-R - REALIZED REGIMES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-05-20T11:54:47Z'
+  updated_at: '2026-05-20T11:56:37Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350901/original_215dcf31b8517320ad5f3186a5e73334.png?1779278088
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMS9vcmlnaW5hbF8yMTVkY2YzMWI4NTE3MzIwYWQ1ZjMxODZhNWU3MzMzNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMS9vcmlnaW5hbF8yMTVkY2YzMWI4NTE3MzIwYWQ1ZjMxODZhNWU3MzMzNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMS9vcmlnaW5hbF8yMTVkY2YzMWI4NTE3MzIwYWQ1ZjMxODZhNWU3MzMzNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMS9vcmlnaW5hbF8yMTVkY2YzMWI4NTE3MzIwYWQ1ZjMxODZhNWU3MzMzNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 215dcf31b8517320ad5f3186a5e73334.png
+    file_size: 2823468
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46350902
+  block_type: Image
+  title: XV-S - STABILIZATION SYSTEMS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-05-20T11:54:48Z'
+  updated_at: '2026-05-20T11:56:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350902/original_f7d19379562c1b37f103f626ebbc70dc.png?1779278089
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMi9vcmlnaW5hbF9mN2QxOTM3OTU2MmMxYjM3ZjEwM2Y2MjZlYmJjNzBkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMi9vcmlnaW5hbF9mN2QxOTM3OTU2MmMxYjM3ZjEwM2Y2MjZlYmJjNzBkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMi9vcmlnaW5hbF9mN2QxOTM3OTU2MmMxYjM3ZjEwM2Y2MjZlYmJjNzBkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwMi9vcmlnaW5hbF9mN2QxOTM3OTU2MmMxYjM3ZjEwM2Y2MjZlYmJjNzBkYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f7d19379562c1b37f103f626ebbc70dc.png
+    file_size: 2619035
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46350904
+  block_type: Image
+  title: XV-T - TRANSITION ARCHITECTURES
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 14
+  created_at: '2026-05-20T11:54:49Z'
+  updated_at: '2026-05-20T11:56:50Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350904/original_5defb2669eb8d63e864a7730ee91cce3.png?1779278090
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNC9vcmlnaW5hbF81ZGVmYjI2NjllYjhkNjNlODY0YTc3MzBlZTkxY2NlMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNC9vcmlnaW5hbF81ZGVmYjI2NjllYjhkNjNlODY0YTc3MzBlZTkxY2NlMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNC9vcmlnaW5hbF81ZGVmYjI2NjllYjhkNjNlODY0YTc3MzBlZTkxY2NlMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNC9vcmlnaW5hbF81ZGVmYjI2NjllYjhkNjNlODY0YTc3MzBlZTkxY2NlMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5defb2669eb8d63e864a7730ee91cce3.png
+    file_size: 2669383
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46350906
+  block_type: Image
+  title: XV-U - UNIVERSAL MOTIFS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-20T11:54:49Z'
+  updated_at: '2026-05-20T11:56:55Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350906/original_c86d057064ddbf9174506881dd24c0d5.png?1779278091
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNi9vcmlnaW5hbF9jODZkMDU3MDY0ZGRiZjkxNzQ1MDY4ODFkZDI0YzBkNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNi9vcmlnaW5hbF9jODZkMDU3MDY0ZGRiZjkxNzQ1MDY4ODFkZDI0YzBkNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNi9vcmlnaW5hbF9jODZkMDU3MDY0ZGRiZjkxNzQ1MDY4ODFkZDI0YzBkNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwNi9vcmlnaW5hbF9jODZkMDU3MDY0ZGRiZjkxNzQ1MDY4ODFkZDI0YzBkNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c86d057064ddbf9174506881dd24c0d5.png
+    file_size: 2576219
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 5181972
+  block_type: Channel
+  title: 02 — NEXAH · SYSTEM ATLASES
+  description: "Different systems. Different scales.     \nSimilar navigation problems.   \nNEXAH explores structural maps\
+    \ across:\nphysics, biology, networks, cognition and dynamics."
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-15T15:07:33Z'
+  updated_at: '2026-06-01T21:16:40Z'
+- sequence_index: 14
+  arena_block_id: 46350911
+  block_type: Image
+  title: XV-V - VECTOR & NAVIGATION FIELDS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-20T11:54:51Z'
+  updated_at: '2026-05-20T12:00:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350911/original_f465569877765229cba1e4ca9220fa8e.png?1779278093
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMS9vcmlnaW5hbF9mNDY1NTY5ODc3NzY1MjI5Y2JhMWU0Y2E5MjIwZmE4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMS9vcmlnaW5hbF9mNDY1NTY5ODc3NzY1MjI5Y2JhMWU0Y2E5MjIwZmE4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMS9vcmlnaW5hbF9mNDY1NTY5ODc3NzY1MjI5Y2JhMWU0Y2E5MjIwZmE4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMS9vcmlnaW5hbF9mNDY1NTY5ODc3NzY1MjI5Y2JhMWU0Y2E5MjIwZmE4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f465569877765229cba1e4ca9220fa8e.png
+    file_size: 2571277
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 46350913
+  block_type: Image
+  title: XV-W - WAVE & RESONANCE SYSTEMS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-05-20T11:54:52Z'
+  updated_at: '2026-05-20T12:02:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350913/original_7eac0f0aa5e1df3f5e624cf3ee60d581.png?1779278093
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMy9vcmlnaW5hbF83ZWFjMGYwYWE1ZTFkZjNmNWU2MjRjZjNlZTYwZDU4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMy9vcmlnaW5hbF83ZWFjMGYwYWE1ZTFkZjNmNWU2MjRjZjNlZTYwZDU4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMy9vcmlnaW5hbF83ZWFjMGYwYWE1ZTFkZjNmNWU2MjRjZjNlZTYwZDU4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMy9vcmlnaW5hbF83ZWFjMGYwYWE1ZTFkZjNmNWU2MjRjZjNlZTYwZDU4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7eac0f0aa5e1df3f5e624cf3ee60d581.png
+    file_size: 2759975
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 46350909
+  block_type: Image
+  title: XV-X - CROSS-SCALE SYNTHESIS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-20T11:54:51Z'
+  updated_at: '2026-05-20T11:57:09Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350909/original_76efe96aa900681b722bfd3d008f9c02.png?1779278092
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOS9vcmlnaW5hbF83NmVmZTk2YWE5MDA2ODFiNzIyYmZkM2QwMDhmOWMwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOS9vcmlnaW5hbF83NmVmZTk2YWE5MDA2ODFiNzIyYmZkM2QwMDhmOWMwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOS9vcmlnaW5hbF83NmVmZTk2YWE5MDA2ODFiNzIyYmZkM2QwMDhmOWMwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkwOS9vcmlnaW5hbF83NmVmZTk2YWE5MDA2ODFiNzIyYmZkM2QwMDhmOWMwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 76efe96aa900681b722bfd3d008f9c02.png
+    file_size: 2765725
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 46350910
+  block_type: Image
+  title: XV- Y - REALITY ATLAS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-20T11:54:51Z'
+  updated_at: '2026-05-20T11:57:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350910/original_dc920437bdfa49d675a7a6abb6d4c3da.png?1779278092
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMC9vcmlnaW5hbF9kYzkyMDQzN2JkZmE0OWQ2NzVhN2E2YWJiNmQ0YzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMC9vcmlnaW5hbF9kYzkyMDQzN2JkZmE0OWQ2NzVhN2E2YWJiNmQ0YzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMC9vcmlnaW5hbF9kYzkyMDQzN2JkZmE0OWQ2NzVhN2E2YWJiNmQ0YzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxMC9vcmlnaW5hbF9kYzkyMDQzN2JkZmE0OWQ2NzVhN2E2YWJiNmQ0YzNkYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: dc920437bdfa49d675a7a6abb6d4c3da.png
+    file_size: 2683880
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 46350918
+  block_type: Image
+  title: XV-Z- NAVIGATION & INTERVENTION SYSTEMS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-20T11:54:54Z'
+  updated_at: '2026-05-20T12:02:03Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350918/original_e972b55dcf18f09ea29012fb0fa773b6.png?1779278095
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOC9vcmlnaW5hbF9lOTcyYjU1ZGNmMThmMDllYTI5MDEyZmIwZmE3NzNiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOC9vcmlnaW5hbF9lOTcyYjU1ZGNmMThmMDllYTI5MDEyZmIwZmE3NzNiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOC9vcmlnaW5hbF9lOTcyYjU1ZGNmMThmMDllYTI5MDEyZmIwZmE3NzNiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOC9vcmlnaW5hbF9lOTcyYjU1ZGNmMThmMDllYTI5MDEyZmIwZmE3NzNiNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: e972b55dcf18f09ea29012fb0fa773b6.png
+    file_size: 2581509
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 46350916
+  block_type: Image
+  title: APPENDIX PANEL I HOW TO READ THE ATLAS
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-20T11:54:53Z'
+  updated_at: '2026-05-20T12:02:50Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350916/original_5c1bb46885944824a2ae0f6a54be3e00.png?1779278094
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNi9vcmlnaW5hbF81YzFiYjQ2ODg1OTQ0ODI0YTJhZTBmNmE1NGJlM2UwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNi9vcmlnaW5hbF81YzFiYjQ2ODg1OTQ0ODI0YTJhZTBmNmE1NGJlM2UwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNi9vcmlnaW5hbF81YzFiYjQ2ODg1OTQ0ODI0YTJhZTBmNmE1NGJlM2UwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNi9vcmlnaW5hbF81YzFiYjQ2ODg1OTQ0ODI0YTJhZTBmNmE1NGJlM2UwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5c1bb46885944824a2ae0f6a54be3e00.png
+    file_size: 2495879
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 46350914
+  block_type: Image
+  title: APPENDIX PANEL II REAL-WORLD TRANSITIONS
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-20T11:54:53Z'
+  updated_at: '2026-05-20T11:57:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350914/original_d8b018a6d7ff41e1c5017ef0892dcd15.png?1779278094
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNC9vcmlnaW5hbF9kOGIwMThhNmQ3ZmY0MWUxYzUwMTdlZjA4OTJkY2QxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNC9vcmlnaW5hbF9kOGIwMThhNmQ3ZmY0MWUxYzUwMTdlZjA4OTJkY2QxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNC9vcmlnaW5hbF9kOGIwMThhNmQ3ZmY0MWUxYzUwMTdlZjA4OTJkY2QxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNC9vcmlnaW5hbF9kOGIwMThhNmQ3ZmY0MWUxYzUwMTdlZjA4OTJkY2QxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d8b018a6d7ff41e1c5017ef0892dcd15.png
+    file_size: 2758911
+    alt_text: null
+- sequence_index: 21
+  arena_block_id: 46350915
+  block_type: Image
+  title: APPENDIX PANEL III FLOW • DRIFT • COHERENCE
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-20T11:54:53Z'
+  updated_at: '2026-05-20T11:57:23Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350915/original_e32f8408aa395ed4153acdfb70695099.png?1779278094
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNS9vcmlnaW5hbF9lMzJmODQwOGFhMzk1ZWQ0MTUzYWNkZmI3MDY5NTA5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNS9vcmlnaW5hbF9lMzJmODQwOGFhMzk1ZWQ0MTUzYWNkZmI3MDY5NTA5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNS9vcmlnaW5hbF9lMzJmODQwOGFhMzk1ZWQ0MTUzYWNkZmI3MDY5NTA5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNS9vcmlnaW5hbF9lMzJmODQwOGFhMzk1ZWQ0MTUzYWNkZmI3MDY5NTA5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: e32f8408aa395ed4153acdfb70695099.png
+    file_size: 2442749
+    alt_text: null
+- sequence_index: 22
+  arena_block_id: 46350917
+  block_type: Image
+  title: APPENDIX PANEL IV OBSERVER & CARTOGRAPHY
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-20T11:54:54Z'
+  updated_at: '2026-05-20T11:57:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350917/original_0c6d74d8cb228b7a43920af92717c56d.png?1779278095
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNy9vcmlnaW5hbF8wYzZkNzRkOGNiMjI4YjdhNDM5MjBhZjkyNzE3YzU2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNy9vcmlnaW5hbF8wYzZkNzRkOGNiMjI4YjdhNDM5MjBhZjkyNzE3YzU2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNy9vcmlnaW5hbF8wYzZkNzRkOGNiMjI4YjdhNDM5MjBhZjkyNzE3YzU2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxNy9vcmlnaW5hbF8wYzZkNzRkOGNiMjI4YjdhNDM5MjBhZjkyNzE3YzU2ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 0c6d74d8cb228b7a43920af92717c56d.png
+    file_size: 2404098
+    alt_text: null
+- sequence_index: 23
+  arena_block_id: 46350919
+  block_type: Image
+  title: LIMITATIONS & OPEN QUESTIONS
+  description: null
+  page_role: page
+  editorial_roles:
+  - question
+  connection_position: 2
+  created_at: '2026-05-20T11:54:54Z'
+  updated_at: '2026-05-20T11:57:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350919/original_1c34f49417b0ca319b718ae7593c4478.png?1779278096
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOS9vcmlnaW5hbF8xYzM0ZjQ5NDE3YjBjYTMxOWI3MThhZTc1OTNjNDQ3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOS9vcmlnaW5hbF8xYzM0ZjQ5NDE3YjBjYTMxOWI3MThhZTc1OTNjNDQ3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOS9vcmlnaW5hbF8xYzM0ZjQ5NDE3YjBjYTMxOWI3MThhZTc1OTNjNDQ3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkxOS9vcmlnaW5hbF8xYzM0ZjQ5NDE3YjBjYTMxOWI3MThhZTc1OTNjNDQ3OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 1c34f49417b0ca319b718ae7593c4478.png
+    file_size: 2322695
+    alt_text: null
+- sequence_index: 24
+  arena_block_id: 46350920
+  block_type: Image
+  title: PART V - THE OPEN ATLAS
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-20T11:54:55Z'
+  updated_at: '2026-05-20T11:55:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46350920/original_91b60009a197a26b022e818015383b80.png?1779278096
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkyMC9vcmlnaW5hbF85MWI2MDAwOWExOTdhMjZiMDIyZTgxODAxNTM4M2I4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkyMC9vcmlnaW5hbF85MWI2MDAwOWExOTdhMjZiMDIyZTgxODAxNTM4M2I4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkyMC9vcmlnaW5hbF85MWI2MDAwOWExOTdhMjZiMDIyZTgxODAxNTM4M2I4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM1MDkyMC9vcmlnaW5hbF85MWI2MDAwOWExOTdhMjZiMDIyZTgxODAxNTM4M2I4MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 91b60009a197a26b022e818015383b80.png
+    file_size: 2845349
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

@@ -1,0 +1,359 @@
+schema_version: '0.1'
+catalog_key: arena:5345822
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: ◈ ODYSSEY 2°4° — The Journey Through Worlds & Observers
+source:
+  arena_channel_id: 5345822
+  arena_slug: odyssey-2-4-the-journey-through-worlds-observers
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/odyssey-2-4-the-journey-through-worlds-observers
+  live_title: ◈ ODYSSEY 2°4° — The Journey Through Worlds & Observers
+  description: 'A visual atlas of relationships, transitions, emergence and return.
+
+    Different perspectives. One reality.
+
+    The map is unfinished. The journey is not. ✦'
+  visibility: closed
+  state: available
+  member_count: 12
+  created_at: '2026-06-22T23:05:57Z'
+  updated_at: '2026-06-23T00:06:37Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: narrative_atlas
+  library_function: navigation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Odyssey 2040
+  confidence: high
+  human_decision: pending
+catalog_depth: atlas_structure
+cover:
+  arena_block_id: 47229687
+  title: THE WEB EVERYTHING TOUCHES EVERYTHING
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229687/original_9d3bef1a6e5b50b1eeac89d859d8a24a.png?1782169616
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4Ny9vcmlnaW5hbF85ZDNiZWYxYTZlNWI1MGIxZWVhYzg5ZDg1OWQ4YTI0YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4Ny9vcmlnaW5hbF85ZDNiZWYxYTZlNWI1MGIxZWVhYzg5ZDg1OWQ4YTI0YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4Ny9vcmlnaW5hbF85ZDNiZWYxYTZlNWI1MGIxZWVhYzg5ZDg1OWQ4YTI0YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4Ny9vcmlnaW5hbF85ZDNiZWYxYTZlNWI1MGIxZWVhYzg5ZDg1OWQ4YTI0YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: 9d3bef1a6e5b50b1eeac89d859d8a24a.png
+  file_size: 2754237
+  alt_text: null
+structure:
+  block_count: 12
+  titled_block_count: 12
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    journey:
+    - sequence_index: 11
+      arena_block_id: 47229661
+      title: ODYSSEY 2°4° THE JOURNEY OF STRUCTURE, WORLDS & OBSERVERS
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47229687
+  block_type: Image
+  title: THE WEB EVERYTHING TOUCHES EVERYTHING
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-06-22T23:06:55Z'
+  updated_at: '2026-06-22T23:06:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229687/original_9d3bef1a6e5b50b1eeac89d859d8a24a.png?1782169616
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 9d3bef1a6e5b50b1eeac89d859d8a24a.png
+    file_size: 2754237
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47229684
+  block_type: Image
+  title: ODYSSEY 2°4° THE UNIFIED FIELD OF REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-06-22T23:06:51Z'
+  updated_at: '2026-06-22T23:06:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229684/original_4262d5c567dae90485a7cd02f1d61896.png?1782169612
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4NC9vcmlnaW5hbF80MjYyZDVjNTY3ZGFlOTA0ODVhN2NkMDJmMWQ2MTg5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4NC9vcmlnaW5hbF80MjYyZDVjNTY3ZGFlOTA0ODVhN2NkMDJmMWQ2MTg5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4NC9vcmlnaW5hbF80MjYyZDVjNTY3ZGFlOTA0ODVhN2NkMDJmMWQ2MTg5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4NC9vcmlnaW5hbF80MjYyZDVjNTY3ZGFlOTA0ODVhN2NkMDJmMWQ2MTg5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 4262d5c567dae90485a7cd02f1d61896.png
+    file_size: 2810431
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47229681
+  block_type: Image
+  title: THEORY OF CONVERGENCE DAS UNIVERSALE PRINZIP- WARUM SYSTEME STABILITÄT ENTSTEHEN
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-06-22T23:06:46Z'
+  updated_at: '2026-06-22T23:06:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229681/original_0298297900cacca65061bb7a2557cb2d.png?1782169607
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4MS9vcmlnaW5hbF8wMjk4Mjk3OTAwY2FjY2E2NTA2MWJiN2EyNTU3Y2IyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4MS9vcmlnaW5hbF8wMjk4Mjk3OTAwY2FjY2E2NTA2MWJiN2EyNTU3Y2IyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4MS9vcmlnaW5hbF8wMjk4Mjk3OTAwY2FjY2E2NTA2MWJiN2EyNTU3Y2IyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY4MS9vcmlnaW5hbF8wMjk4Mjk3OTAwY2FjY2E2NTA2MWJiN2EyNTU3Y2IyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 0298297900cacca65061bb7a2557cb2d.png
+    file_size: 2205451
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47229678
+  block_type: Image
+  title: WORLD FORMATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-06-22T23:06:44Z'
+  updated_at: '2026-06-22T23:06:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229678/original_48d4c05123596a434a95a0bd56f0128c.png?1782169605
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3OC9vcmlnaW5hbF80OGQ0YzA1MTIzNTk2YTQzNGE5NWEwYmQ1NmYwMTI4Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3OC9vcmlnaW5hbF80OGQ0YzA1MTIzNTk2YTQzNGE5NWEwYmQ1NmYwMTI4Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3OC9vcmlnaW5hbF80OGQ0YzA1MTIzNTk2YTQzNGE5NWEwYmQ1NmYwMTI4Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3OC9vcmlnaW5hbF80OGQ0YzA1MTIzNTk2YTQzNGE5NWEwYmQ1NmYwMTI4Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 48d4c05123596a434a95a0bd56f0128c.png
+    file_size: 2150120
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47229677
+  block_type: Image
+  title: NESTED WORLD ARCHITECTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-06-22T23:06:38Z'
+  updated_at: '2026-06-22T23:06:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229677/original_d1ae581d6d5fc58d40a7190e58bc6375.png?1782169600
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Ny9vcmlnaW5hbF9kMWFlNTgxZDZkNWZjNThkNDBhNzE5MGU1OGJjNjM3NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Ny9vcmlnaW5hbF9kMWFlNTgxZDZkNWZjNThkNDBhNzE5MGU1OGJjNjM3NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Ny9vcmlnaW5hbF9kMWFlNTgxZDZkNWZjNThkNDBhNzE5MGU1OGJjNjM3NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Ny9vcmlnaW5hbF9kMWFlNTgxZDZkNWZjNThkNDBhNzE5MGU1OGJjNjM3NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: d1ae581d6d5fc58d40a7190e58bc6375.png
+    file_size: 2335004
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47229673
+  block_type: Image
+  title: NEXAH VISUAL IV NESTED WORLD ARCHITECTURE THE RECURSIVE WORLD ENGINE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-06-22T23:06:31Z'
+  updated_at: '2026-06-22T23:06:36Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229673/original_4c12b190d11c4662ed69cbc010e8034c.png?1782169592
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3My9vcmlnaW5hbF80YzEyYjE5MGQxMWM0NjYyZWQ2OWNiYzAxMGU4MDM0Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3My9vcmlnaW5hbF80YzEyYjE5MGQxMWM0NjYyZWQ2OWNiYzAxMGU4MDM0Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3My9vcmlnaW5hbF80YzEyYjE5MGQxMWM0NjYyZWQ2OWNiYzAxMGU4MDM0Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3My9vcmlnaW5hbF80YzEyYjE5MGQxMWM0NjYyZWQ2OWNiYzAxMGU4MDM0Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 4c12b190d11c4662ed69cbc010e8034c.png
+    file_size: 2400482
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47229672
+  block_type: Image
+  title: NEXAH VISUAL V THE FASCIA OF REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-06-22T23:06:28Z'
+  updated_at: '2026-06-22T23:06:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229672/original_c31780e22ee022830a44bf2e3c71032c.png?1782169589
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Mi9vcmlnaW5hbF9jMzE3ODBlMjJlZTAyMjgzMGE0NGJmMmUzYzcxMDMyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Mi9vcmlnaW5hbF9jMzE3ODBlMjJlZTAyMjgzMGE0NGJmMmUzYzcxMDMyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Mi9vcmlnaW5hbF9jMzE3ODBlMjJlZTAyMjgzMGE0NGJmMmUzYzcxMDMyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY3Mi9vcmlnaW5hbF9jMzE3ODBlMjJlZTAyMjgzMGE0NGJmMmUzYzcxMDMyYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: c31780e22ee022830a44bf2e3c71032c.png
+    file_size: 2575867
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47229669
+  block_type: Image
+  title: NEXAH VISUAL VI THE OBSERVER NETWORK
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-06-22T23:06:25Z'
+  updated_at: '2026-06-22T23:06:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229669/original_abf8adcb36f9b9b30daa0436ce5d7ff8.png?1782169586
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2OS9vcmlnaW5hbF9hYmY4YWRjYjM2ZjliOWIzMGRhYTA0MzZjZTVkN2ZmOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2OS9vcmlnaW5hbF9hYmY4YWRjYjM2ZjliOWIzMGRhYTA0MzZjZTVkN2ZmOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2OS9vcmlnaW5hbF9hYmY4YWRjYjM2ZjliOWIzMGRhYTA0MzZjZTVkN2ZmOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2OS9vcmlnaW5hbF9hYmY4YWRjYjM2ZjliOWIzMGRhYTA0MzZjZTVkN2ZmOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: abf8adcb36f9b9b30daa0436ce5d7ff8.png
+    file_size: 2508059
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47229667
+  block_type: Image
+  title: FROM THE ROUND TO THE SQUARE THE UNIVERSAL TRANSFORMATION OF REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-06-22T23:06:21Z'
+  updated_at: '2026-06-22T23:06:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229667/original_c88622df18943d34212f53b09fe3d27c.png?1782169583
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2Ny9vcmlnaW5hbF9jODg2MjJkZjE4OTQzZDM0MjEyZjUzYjA5ZmUzZDI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2Ny9vcmlnaW5hbF9jODg2MjJkZjE4OTQzZDM0MjEyZjUzYjA5ZmUzZDI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2Ny9vcmlnaW5hbF9jODg2MjJkZjE4OTQzZDM0MjEyZjUzYjA5ZmUzZDI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2Ny9vcmlnaW5hbF9jODg2MjJkZjE4OTQzZDM0MjEyZjUzYjA5ZmUzZDI3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c88622df18943d34212f53b09fe3d27c.png
+    file_size: 2617916
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47229663
+  block_type: Image
+  title: THE UNIFIED FIELD OF REALITY DIFFERENT PERSPECTIVES • ONE REALITY • ONE FUTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-06-22T23:06:16Z'
+  updated_at: '2026-06-22T23:06:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229663/original_c7be6f0158aa4da8fecc7e95b3704a44.png?1782169577
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2My9vcmlnaW5hbF9jN2JlNmYwMTU4YWE0ZGE4ZmVjYzdlOTViMzcwNGE0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2My9vcmlnaW5hbF9jN2JlNmYwMTU4YWE0ZGE4ZmVjYzdlOTViMzcwNGE0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2My9vcmlnaW5hbF9jN2JlNmYwMTU4YWE0ZGE4ZmVjYzdlOTViMzcwNGE0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2My9vcmlnaW5hbF9jN2JlNmYwMTU4YWE0ZGE4ZmVjYzdlOTViMzcwNGE0NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c7be6f0158aa4da8fecc7e95b3704a44.png
+    file_size: 2687553
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47229661
+  block_type: Image
+  title: ODYSSEY 2°4° THE JOURNEY OF STRUCTURE, WORLDS & OBSERVERS
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 2
+  created_at: '2026-06-22T23:06:11Z'
+  updated_at: '2026-06-22T23:06:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229661/original_b0e6636613917cc45bf8602561b6b295.png?1782169573
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2MS9vcmlnaW5hbF9iMGU2NjM2NjEzOTE3Y2M0NWJmODYwMjU2MWI2YjI5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2MS9vcmlnaW5hbF9iMGU2NjM2NjEzOTE3Y2M0NWJmODYwMjU2MWI2YjI5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2MS9vcmlnaW5hbF9iMGU2NjM2NjEzOTE3Y2M0NWJmODYwMjU2MWI2YjI5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY2MS9vcmlnaW5hbF9iMGU2NjM2NjEzOTE3Y2M0NWJmODYwMjU2MWI2YjI5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b0e6636613917cc45bf8602561b6b295.png
+    file_size: 2634910
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47229659
+  block_type: Image
+  title: index_ODYSSEY 2°4° THE UNIFIED FIELD OF REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-06-22T23:06:08Z'
+  updated_at: '2026-06-22T23:06:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47229659/original_7e16c96fc71f1ce512bb12ba071756ee.png?1782169568
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY1OS9vcmlnaW5hbF83ZTE2Yzk2ZmM3MWYxY2U1MTJiYjEyYmEwNzE3NTZlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY1OS9vcmlnaW5hbF83ZTE2Yzk2ZmM3MWYxY2U1MTJiYjEyYmEwNzE3NTZlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY1OS9vcmlnaW5hbF83ZTE2Yzk2ZmM3MWYxY2U1MTJiYjEyYmEwNzE3NTZlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyOTY1OS9vcmlnaW5hbF83ZTE2Yzk2ZmM3MWYxY2U1MTJiYjEyYmEwNzE3NTZlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7e16c96fc71f1ce512bb12ba071756ee.png
+    file_size: 2616255
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

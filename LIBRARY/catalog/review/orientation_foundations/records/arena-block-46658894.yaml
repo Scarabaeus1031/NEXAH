@@ -1,0 +1,73 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:46658894
+publication:
+  catalog_key: arena:5250350
+  arena_channel_id: 5250350
+  title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+source_block:
+  arena_block_id: 46658894
+  sequence_index: 12
+  title: WHERE DOES NEXAH LIVE?
+  url: https://www.are.na/block/46658894
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658894/original_8deb59db15a098fef56415e60335ed99.png?1780347616
+  source_fingerprint: f3ddbe35a2df048e07aa5b387a55b4ed51aef81e6253d731d6bd7f41d030cf23
+visual_role: map
+visible_text:
+  transcription_status: partial
+  transcription: NEXAH explores whether their structures can be mapped, translated
+    and navigated.
+research_elements:
+  definitions: []
+  questions: []
+  observations: []
+  hypotheses: []
+  methods: []
+  models:
+  - statement: The page positions NEXAH between physics, cybernetics, control theory,
+      complexity science, topology, cognitive science, power systems, AI, network
+      science, and systems theory.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658894
+      source_url: https://www.are.na/block/46658894
+      note: null
+    status: publication_assertion
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts: []
+  operator_candidates: []
+  atlas_objects:
+  - statement: Scientific landscape
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658894
+      source_url: https://www.are.na/block/46658894
+      note: null
+    status: observed_label
+  - statement: Cartography stack
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658894
+      source_url: https://www.are.na/block/46658894
+      note: null
+    status: observed_label
+  - statement: Translation layer
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 46658894
+      source_url: https://www.are.na/block/46658894
+      note: null
+    status: observed_label
+claim_boundary: Spatial adjacency in the map expresses editorial positioning, not
+  equivalence, shared mechanism, or disciplinary authority.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

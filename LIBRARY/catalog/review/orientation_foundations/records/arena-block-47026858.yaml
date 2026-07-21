@@ -1,0 +1,92 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47026858
+publication:
+  catalog_key: arena:5309625
+  arena_channel_id: 5309625
+  title: ORIENTATION THEORY — VOLUME III
+source_block:
+  arena_block_id: 47026858
+  sequence_index: 10
+  title: 05_ORIENTATION vs NAVIGATION - THE CAPTAIN PRINCIPLE
+  url: https://www.are.na/block/47026858
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47026858/original_92729e4855d95c4056df8246ffd55902.png?1781470789
+  source_fingerprint: 86b3b75d19aad44e6bf93e0fe0667d1b2f5075c09e2dbc4ea12768366dd6f6e6
+visual_role: model
+visible_text:
+  transcription_status: partial
+  transcription: Navigation follows instructions. Orientation chooses the right instructions.
+research_elements:
+  definitions: []
+  questions: []
+  observations: []
+  hypotheses: []
+  methods: []
+  models:
+  - statement: 'Captain Principle: many maps inform local orientation, decision, and
+      action.'
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026858
+      source_url: https://www.are.na/block/47026858
+      note: null
+    status: publication_assertion
+  evidence_statements: []
+  limitations:
+  - statement: The map is presented as a model and reality as final authority.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026858
+      source_url: https://www.are.na/block/47026858
+      note: null
+    status: publication_assertion
+  open_questions: []
+  concepts:
+  - statement: navigation
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026858
+      source_url: https://www.are.na/block/47026858
+      note: null
+    status: observed_label
+  - statement: orientation
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026858
+      source_url: https://www.are.na/block/47026858
+      note: null
+    status: observed_label
+  - statement: decision
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026858
+      source_url: https://www.are.na/block/47026858
+      note: null
+    status: observed_label
+  - statement: action
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026858
+      source_url: https://www.are.na/block/47026858
+      note: null
+    status: observed_label
+  - statement: context
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47026858
+      source_url: https://www.are.na/block/47026858
+      note: null
+    status: observed_label
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: The captain example is an editorial model. Its transfer to other systems
+  is not independently demonstrated here.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

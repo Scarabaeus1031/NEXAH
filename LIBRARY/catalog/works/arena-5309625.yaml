@@ -1,0 +1,623 @@
+schema_version: '0.1'
+catalog_key: arena:5309625
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: ORIENTATION THEORY — VOLUME III
+source:
+  arena_channel_id: 5309625
+  arena_slug: orientation-theory-vol-iii
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/orientation-theory-vol-iii
+  live_title: Orientation Theory Vol.III
+  description: "NEXAH explores a simple question:  \nHow do finite observers navigate infinite complexity? \nFrom weather\
+    \ systems to power grids, from ecosystems to civilizations, NEXAH investigates how orientation emerges through maps, scales,\
+    \ time, and structure.\nThis space collects visual atlases, research notes, conceptual frameworks, experiments, and evolving\
+    \ theories connected to orientation, emergence, and navigation.\nThe goal is not certainty. \nThe goal is orientation.\n\
+    Many Maps.\nMany Scales.\nMany Times.\nOne Orientation.\nNEXAH."
+  visibility: closed
+  state: available
+  member_count: 21
+  created_at: '2026-06-14T20:59:07Z'
+  updated_at: '2026-07-08T15:11:09Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: book
+  form: theory_book
+  library_function: foundation
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: Orientation Architecture
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Orientation
+catalog_depth: research_structure
+cover:
+  arena_block_id: 47699599
+  title: NEXAH ORIENTATION THEORYii
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47699599/original_4d8a2d22c9789ef5e62f0bed35064a6b.png?1783519875
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU5OS9vcmlnaW5hbF80ZDhhMmQyMmM5Nzg5ZWY1ZTYyZjBiZWQzNTA2NGE2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU5OS9vcmlnaW5hbF80ZDhhMmQyMmM5Nzg5ZWY1ZTYyZjBiZWQzNTA2NGE2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU5OS9vcmlnaW5hbF80ZDhhMmQyMmM5Nzg5ZWY1ZTYyZjBiZWQzNTA2NGE2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzY5OTU5OS9vcmlnaW5hbF80ZDhhMmQyMmM5Nzg5ZWY1ZTYyZjBiZWQzNTA2NGE2Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: 4d8a2d22c9789ef5e62f0bed35064a6b.png
+  file_size: 2458907
+  alt_text: null
+structure:
+  block_count: 21
+  titled_block_count: 21
+  title_coverage: 1.0
+  foreword:
+  - sequence_index: 3
+    arena_block_id: 47026825
+    title: PREFACE OОA PREFACE Why Orientation?
+  index: []
+  part: []
+  chapter: []
+  numbered_section:
+  - sequence_index: 6
+    arena_block_id: 47026863
+    title: 01 WEATHER - NAVIGATION THROUGH MANY MAPS
+  - sequence_index: 7
+    arena_block_id: 47026862
+    title: 02 POWER SYSTEMS - NAVIGATION THROUGH MANY MAPS
+  - sequence_index: 8
+    arena_block_id: 47026859
+    title: 03 TIME ECOSYSTEMS - MANY CLOCKS, ONE REALITY
+  - sequence_index: 9
+    arena_block_id: 47026861
+    title: 04 THE NEXAH COMPASS - ORIENTING IN MAP ECOSYSTEMS
+  - sequence_index: 10
+    arena_block_id: 47026858
+    title: 05_ORIENTATION vs NAVIGATION - THE CAPTAIN PRINCIPLE
+  - sequence_index: 11
+    arena_block_id: 47026860
+    title: 06 THE MAP ECOSYSTEM One World. Many Maps
+  - sequence_index: 12
+    arena_block_id: 47026857
+    title: 07_THE NEXAH CHRONO-COMPASS Maps. Time. Scale. Orientation.
+  - sequence_index: 13
+    arena_block_id: 47026853
+    title: 08_THE NEXAH MAP ORIENTATION FRAMEWORK
+  - sequence_index: 14
+    arena_block_id: 47026850
+    title: 09_THE THREE FOUNDATIONS OF ORIENTATION
+  - sequence_index: 15
+    arena_block_id: 47026834
+    title: 10_NEXAH Toward an Operating System for Complex Worlds
+  - sequence_index: 16
+    arena_block_id: 47026851
+    title: 11_THE NEXAH RESEARCH PROGRAM 11 Orientation Theory for Complex Systems
+  - sequence_index: 17
+    arena_block_id: 47026832
+    title: 12 TOWARD A NAVIGABLE FUTURE
+  appendix:
+  - sequence_index: 18
+    arena_block_id: 47026831
+    title: APPENDIX A NEXAH GLOSSARY A SHARED LANGUAGE FOR ORIENTATION
+  - sequence_index: 19
+    arena_block_id: 47026833
+    title: APPENDIX NEXAH EQUATIONS & FORMALISMS B TOWARD A MATHEMATICAL LANGUAGE OF ORIENTATION
+  - sequence_index: 20
+    arena_block_id: 47026827
+    title: APPENDIX C THE NEXAH VISUAL ATLAS A CARTOGRAPHY OF ORIENTATION
+  - sequence_index: 21
+    arena_block_id: 47026824
+    title: APPENDIX D EVIDENCE & EXPERIMENTS BUILDING EVIDENCE FOR ORIENTATION THEORY
+  closing: []
+  editorial_roles: {}
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47699599
+  block_type: Image
+  title: NEXAH ORIENTATION THEORYii
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 21
+  created_at: '2026-07-08T14:11:14Z'
+  updated_at: '2026-07-08T14:11:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47699599/original_4d8a2d22c9789ef5e62f0bed35064a6b.png?1783519875
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 4d8a2d22c9789ef5e62f0bed35064a6b.png
+    file_size: 2458907
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47026852
+  block_type: Image
+  title: NEXAH ORIENTATION THEORY FOR COMPLEX SYSTEMS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 20
+  created_at: '2026-06-14T20:59:46Z'
+  updated_at: '2026-06-14T20:59:58Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026852/original_d3b4bea484f96ee9e883ce1e913061f7.png?1781470786
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Mi9vcmlnaW5hbF9kM2I0YmVhNDg0Zjk2ZWU5ZTg4M2NlMWU5MTMwNjFmNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Mi9vcmlnaW5hbF9kM2I0YmVhNDg0Zjk2ZWU5ZTg4M2NlMWU5MTMwNjFmNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Mi9vcmlnaW5hbF9kM2I0YmVhNDg0Zjk2ZWU5ZTg4M2NlMWU5MTMwNjFmNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Mi9vcmlnaW5hbF9kM2I0YmVhNDg0Zjk2ZWU5ZTg4M2NlMWU5MTMwNjFmNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: d3b4bea484f96ee9e883ce1e913061f7.png
+    file_size: 2396846
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47026825
+  block_type: Image
+  title: PREFACE OОA PREFACE Why Orientation?
+  description: null
+  page_role: foreword
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-06-14T20:59:42Z'
+  updated_at: '2026-06-14T21:00:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026825/original_81e5ebbb991e3b7bf7d85e5bbc865991.png?1781470784
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNS9vcmlnaW5hbF84MWU1ZWJiYjk5MWUzYjdiZjdkODVlNWJiYzg2NTk5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNS9vcmlnaW5hbF84MWU1ZWJiYjk5MWUzYjdiZjdkODVlNWJiYzg2NTk5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNS9vcmlnaW5hbF84MWU1ZWJiYjk5MWUzYjdiZjdkODVlNWJiYzg2NTk5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNS9vcmlnaW5hbF84MWU1ZWJiYjk5MWUzYjdiZjdkODVlNWJiYzg2NTk5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 81e5ebbb991e3b7bf7d85e5bbc865991.png
+    file_size: 2409427
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47026826
+  block_type: Image
+  title: SERIES GUIDE 00B NEXAH READER'S GUIDE How to Read This Book
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 18
+  created_at: '2026-06-14T20:59:42Z'
+  updated_at: '2026-06-14T21:00:31Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026826/original_578ed8a38df1f1b225045c1b7048211f.png?1781470783
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNi9vcmlnaW5hbF81NzhlZDhhMzhkZjFmMWIyMjUwNDVjMWI3MDQ4MjExZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNi9vcmlnaW5hbF81NzhlZDhhMzhkZjFmMWIyMjUwNDVjMWI3MDQ4MjExZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNi9vcmlnaW5hbF81NzhlZDhhMzhkZjFmMWIyMjUwNDVjMWI3MDQ4MjExZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNi9vcmlnaW5hbF81NzhlZDhhMzhkZjFmMWIyMjUwNDVjMWI3MDQ4MjExZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 578ed8a38df1f1b225045c1b7048211f.png
+    file_size: 1936166
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47026829
+  block_type: Image
+  title: 00C NEXAH SERIES OVERVIEW & NAVIGATION INDEX
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-06-14T20:59:43Z'
+  updated_at: '2026-06-14T21:00:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026829/original_cd4b43307ce2d418dd7e61d614f446e1.png?1781470784
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyOS9vcmlnaW5hbF9jZDRiNDMzMDdjZTJkNDE4ZGQ3ZTYxZDYxNGY0NDZlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyOS9vcmlnaW5hbF9jZDRiNDMzMDdjZTJkNDE4ZGQ3ZTYxZDYxNGY0NDZlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyOS9vcmlnaW5hbF9jZDRiNDMzMDdjZTJkNDE4ZGQ3ZTYxZDYxNGY0NDZlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyOS9vcmlnaW5hbF9jZDRiNDMzMDdjZTJkNDE4ZGQ3ZTYxZDYxNGY0NDZlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: cd4b43307ce2d418dd7e61d614f446e1.png
+    file_size: 2233673
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47026863
+  block_type: Image
+  title: 01 WEATHER - NAVIGATION THROUGH MANY MAPS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-06-14T20:59:50Z'
+  updated_at: '2026-06-14T21:00:19Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026863/original_f6fe19b146bb0c6491e47a172a9595b1.png?1781470791
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2My9vcmlnaW5hbF9mNmZlMTliMTQ2YmIwYzY0OTFlNDdhMTcyYTk1OTViMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2My9vcmlnaW5hbF9mNmZlMTliMTQ2YmIwYzY0OTFlNDdhMTcyYTk1OTViMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2My9vcmlnaW5hbF9mNmZlMTliMTQ2YmIwYzY0OTFlNDdhMTcyYTk1OTViMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2My9vcmlnaW5hbF9mNmZlMTliMTQ2YmIwYzY0OTFlNDdhMTcyYTk1OTViMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: f6fe19b146bb0c6491e47a172a9595b1.png
+    file_size: 2546160
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47026862
+  block_type: Image
+  title: 02 POWER SYSTEMS - NAVIGATION THROUGH MANY MAPS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-06-14T20:59:50Z'
+  updated_at: '2026-06-14T21:00:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026862/original_d233cee326689629301a3c3cc8a4e0cd.png?1781470791
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2Mi9vcmlnaW5hbF9kMjMzY2VlMzI2Njg5NjI5MzAxYTNjM2NjOGE0ZTBjZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2Mi9vcmlnaW5hbF9kMjMzY2VlMzI2Njg5NjI5MzAxYTNjM2NjOGE0ZTBjZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2Mi9vcmlnaW5hbF9kMjMzY2VlMzI2Njg5NjI5MzAxYTNjM2NjOGE0ZTBjZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2Mi9vcmlnaW5hbF9kMjMzY2VlMzI2Njg5NjI5MzAxYTNjM2NjOGE0ZTBjZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: d233cee326689629301a3c3cc8a4e0cd.png
+    file_size: 2415750
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47026859
+  block_type: Image
+  title: 03 TIME ECOSYSTEMS - MANY CLOCKS, ONE REALITY
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-06-14T20:59:48Z'
+  updated_at: '2026-06-14T21:00:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026859/original_fe5747780a05ae990c8e98fb89fcf689.png?1781470789
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OS9vcmlnaW5hbF9mZTU3NDc3ODBhMDVhZTk5MGM4ZTk4ZmI4OWZjZjY4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OS9vcmlnaW5hbF9mZTU3NDc3ODBhMDVhZTk5MGM4ZTk4ZmI4OWZjZjY4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OS9vcmlnaW5hbF9mZTU3NDc3ODBhMDVhZTk5MGM4ZTk4ZmI4OWZjZjY4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OS9vcmlnaW5hbF9mZTU3NDc3ODBhMDVhZTk5MGM4ZTk4ZmI4OWZjZjY4OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: fe5747780a05ae990c8e98fb89fcf689.png
+    file_size: 2243486
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47026861
+  block_type: Image
+  title: 04 THE NEXAH COMPASS - ORIENTING IN MAP ECOSYSTEMS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-06-14T20:59:49Z'
+  updated_at: '2026-06-14T21:00:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026861/original_f41eeeb50f0c32f30a9d27715c7232ed.png?1781470790
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MS9vcmlnaW5hbF9mNDFlZWViNTBmMGMzMmYzMGE5ZDI3NzE1YzcyMzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MS9vcmlnaW5hbF9mNDFlZWViNTBmMGMzMmYzMGE5ZDI3NzE1YzcyMzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MS9vcmlnaW5hbF9mNDFlZWViNTBmMGMzMmYzMGE5ZDI3NzE1YzcyMzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MS9vcmlnaW5hbF9mNDFlZWViNTBmMGMzMmYzMGE5ZDI3NzE1YzcyMzJlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f41eeeb50f0c32f30a9d27715c7232ed.png
+    file_size: 2084184
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47026858
+  block_type: Image
+  title: 05_ORIENTATION vs NAVIGATION - THE CAPTAIN PRINCIPLE
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-06-14T20:59:48Z'
+  updated_at: '2026-06-14T21:00:42Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026858/original_92729e4855d95c4056df8246ffd55902.png?1781470789
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OC9vcmlnaW5hbF85MjcyOWU0ODU1ZDk1YzQwNTZkZjgyNDZmZmQ1NTkwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OC9vcmlnaW5hbF85MjcyOWU0ODU1ZDk1YzQwNTZkZjgyNDZmZmQ1NTkwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OC9vcmlnaW5hbF85MjcyOWU0ODU1ZDk1YzQwNTZkZjgyNDZmZmQ1NTkwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1OC9vcmlnaW5hbF85MjcyOWU0ODU1ZDk1YzQwNTZkZjgyNDZmZmQ1NTkwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 92729e4855d95c4056df8246ffd55902.png
+    file_size: 2240182
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47026860
+  block_type: Image
+  title: 06 THE MAP ECOSYSTEM One World. Many Maps
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-06-14T20:59:48Z'
+  updated_at: '2026-06-14T21:00:16Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026860/original_b450118e1020cc9d87b7a97049556f64.png?1781470790
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MC9vcmlnaW5hbF9iNDUwMTE4ZTEwMjBjYzlkODdiN2E5NzA0OTU1NmY2NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MC9vcmlnaW5hbF9iNDUwMTE4ZTEwMjBjYzlkODdiN2E5NzA0OTU1NmY2NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MC9vcmlnaW5hbF9iNDUwMTE4ZTEwMjBjYzlkODdiN2E5NzA0OTU1NmY2NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg2MC9vcmlnaW5hbF9iNDUwMTE4ZTEwMjBjYzlkODdiN2E5NzA0OTU1NmY2NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: b450118e1020cc9d87b7a97049556f64.png
+    file_size: 2420263
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47026857
+  block_type: Image
+  title: 07_THE NEXAH CHRONO-COMPASS Maps. Time. Scale. Orientation.
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-06-14T20:59:48Z'
+  updated_at: '2026-06-14T21:00:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026857/original_847f40864168673bbacb4d86b5db4433.png?1781470789
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Ny9vcmlnaW5hbF84NDdmNDA4NjQxNjg2NzNiYmFjYjRkODZiNWRiNDQzMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Ny9vcmlnaW5hbF84NDdmNDA4NjQxNjg2NzNiYmFjYjRkODZiNWRiNDQzMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Ny9vcmlnaW5hbF84NDdmNDA4NjQxNjg2NzNiYmFjYjRkODZiNWRiNDQzMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1Ny9vcmlnaW5hbF84NDdmNDA4NjQxNjg2NzNiYmFjYjRkODZiNWRiNDQzMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 847f40864168673bbacb4d86b5db4433.png
+    file_size: 2471661
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47026853
+  block_type: Image
+  title: 08_THE NEXAH MAP ORIENTATION FRAMEWORK
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-06-14T20:59:46Z'
+  updated_at: '2026-06-14T21:00:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026853/original_abe6db4059ebfb1e2a9b2c018e8c2db5.png?1781470786
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1My9vcmlnaW5hbF9hYmU2ZGI0MDU5ZWJmYjFlMmE5YjJjMDE4ZThjMmRiNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1My9vcmlnaW5hbF9hYmU2ZGI0MDU5ZWJmYjFlMmE5YjJjMDE4ZThjMmRiNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1My9vcmlnaW5hbF9hYmU2ZGI0MDU5ZWJmYjFlMmE5YjJjMDE4ZThjMmRiNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1My9vcmlnaW5hbF9hYmU2ZGI0MDU5ZWJmYjFlMmE5YjJjMDE4ZThjMmRiNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: abe6db4059ebfb1e2a9b2c018e8c2db5.png
+    file_size: 2333034
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 47026850
+  block_type: Image
+  title: 09_THE THREE FOUNDATIONS OF ORIENTATION
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-06-14T20:59:45Z'
+  updated_at: '2026-06-14T21:00:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026850/original_2698f01ad06359754e97790446241ffb.png?1781470786
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MC9vcmlnaW5hbF8yNjk4ZjAxYWQwNjM1OTc1NGU5Nzc5MDQ0NjI0MWZmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MC9vcmlnaW5hbF8yNjk4ZjAxYWQwNjM1OTc1NGU5Nzc5MDQ0NjI0MWZmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MC9vcmlnaW5hbF8yNjk4ZjAxYWQwNjM1OTc1NGU5Nzc5MDQ0NjI0MWZmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MC9vcmlnaW5hbF8yNjk4ZjAxYWQwNjM1OTc1NGU5Nzc5MDQ0NjI0MWZmYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 2698f01ad06359754e97790446241ffb.png
+    file_size: 2348514
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 47026834
+  block_type: Image
+  title: 10_NEXAH Toward an Operating System for Complex Worlds
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-06-14T20:59:44Z'
+  updated_at: '2026-06-14T20:59:56Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026834/original_28cfdaf50c3917bf8d20c7b567cfbba6.png?1781470785
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzNC9vcmlnaW5hbF8yOGNmZGFmNTBjMzkxN2JmOGQyMGM3YjU2N2NmYmJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzNC9vcmlnaW5hbF8yOGNmZGFmNTBjMzkxN2JmOGQyMGM3YjU2N2NmYmJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzNC9vcmlnaW5hbF8yOGNmZGFmNTBjMzkxN2JmOGQyMGM3YjU2N2NmYmJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzNC9vcmlnaW5hbF8yOGNmZGFmNTBjMzkxN2JmOGQyMGM3YjU2N2NmYmJhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 28cfdaf50c3917bf8d20c7b567cfbba6.png
+    file_size: 2157465
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 47026851
+  block_type: Image
+  title: 11_THE NEXAH RESEARCH PROGRAM 11 Orientation Theory for Complex Systems
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-06-14T20:59:45Z'
+  updated_at: '2026-06-14T21:01:04Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026851/original_bb542d6363f3668832ebe8dd89cb5d5f.png?1781470786
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MS9vcmlnaW5hbF9iYjU0MmQ2MzYzZjM2Njg4MzJlYmU4ZGQ4OWNiNWQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MS9vcmlnaW5hbF9iYjU0MmQ2MzYzZjM2Njg4MzJlYmU4ZGQ4OWNiNWQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MS9vcmlnaW5hbF9iYjU0MmQ2MzYzZjM2Njg4MzJlYmU4ZGQ4OWNiNWQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjg1MS9vcmlnaW5hbF9iYjU0MmQ2MzYzZjM2Njg4MzJlYmU4ZGQ4OWNiNWQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: bb542d6363f3668832ebe8dd89cb5d5f.png
+    file_size: 2109773
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 47026832
+  block_type: Image
+  title: 12 TOWARD A NAVIGABLE FUTURE
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-06-14T20:59:44Z'
+  updated_at: '2026-06-14T20:59:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026832/original_8a6d57a4a323ff8541bbcd2ce2383b13.png?1781470785
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMi9vcmlnaW5hbF84YTZkNTdhNGEzMjNmZjg1NDFiYmNkMmNlMjM4M2IxMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMi9vcmlnaW5hbF84YTZkNTdhNGEzMjNmZjg1NDFiYmNkMmNlMjM4M2IxMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMi9vcmlnaW5hbF84YTZkNTdhNGEzMjNmZjg1NDFiYmNkMmNlMjM4M2IxMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMi9vcmlnaW5hbF84YTZkNTdhNGEzMjNmZjg1NDFiYmNkMmNlMjM4M2IxMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 8a6d57a4a323ff8541bbcd2ce2383b13.png
+    file_size: 2474946
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 47026831
+  block_type: Image
+  title: APPENDIX A NEXAH GLOSSARY A SHARED LANGUAGE FOR ORIENTATION
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-06-14T20:59:44Z'
+  updated_at: '2026-06-14T20:59:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026831/original_cf745db39c50fc5ef1a4a10bc41bf93e.png?1781470785
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMS9vcmlnaW5hbF9jZjc0NWRiMzljNTBmYzVlZjFhNGExMGJjNDFiZjkzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMS9vcmlnaW5hbF9jZjc0NWRiMzljNTBmYzVlZjFhNGExMGJjNDFiZjkzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMS9vcmlnaW5hbF9jZjc0NWRiMzljNTBmYzVlZjFhNGExMGJjNDFiZjkzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMS9vcmlnaW5hbF9jZjc0NWRiMzljNTBmYzVlZjFhNGExMGJjNDFiZjkzZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: cf745db39c50fc5ef1a4a10bc41bf93e.png
+    file_size: 2074282
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 47026833
+  block_type: Image
+  title: APPENDIX NEXAH EQUATIONS & FORMALISMS B TOWARD A MATHEMATICAL LANGUAGE OF ORIENTATION
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-06-14T20:59:44Z'
+  updated_at: '2026-06-14T21:00:08Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026833/original_ce099fcff7938313a63f9df14c636962.png?1781470785
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMy9vcmlnaW5hbF9jZTA5OWZjZmY3OTM4MzEzYTYzZjlkZjE0YzYzNjk2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMy9vcmlnaW5hbF9jZTA5OWZjZmY3OTM4MzEzYTYzZjlkZjE0YzYzNjk2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMy9vcmlnaW5hbF9jZTA5OWZjZmY3OTM4MzEzYTYzZjlkZjE0YzYzNjk2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgzMy9vcmlnaW5hbF9jZTA5OWZjZmY3OTM4MzEzYTYzZjlkZjE0YzYzNjk2Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ce099fcff7938313a63f9df14c636962.png
+    file_size: 2103687
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 47026827
+  block_type: Image
+  title: APPENDIX C THE NEXAH VISUAL ATLAS A CARTOGRAPHY OF ORIENTATION
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-06-14T20:59:42Z'
+  updated_at: '2026-06-14T20:59:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026827/original_aa115bc213873697f59d5501908b5d4b.png?1781470783
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNy9vcmlnaW5hbF9hYTExNWJjMjEzODczNjk3ZjU5ZDU1MDE5MDhiNWQ0Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNy9vcmlnaW5hbF9hYTExNWJjMjEzODczNjk3ZjU5ZDU1MDE5MDhiNWQ0Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNy9vcmlnaW5hbF9hYTExNWJjMjEzODczNjk3ZjU5ZDU1MDE5MDhiNWQ0Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNy9vcmlnaW5hbF9hYTExNWJjMjEzODczNjk3ZjU5ZDU1MDE5MDhiNWQ0Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: aa115bc213873697f59d5501908b5d4b.png
+    file_size: 2332038
+    alt_text: null
+- sequence_index: 21
+  arena_block_id: 47026824
+  block_type: Image
+  title: APPENDIX D EVIDENCE & EXPERIMENTS BUILDING EVIDENCE FOR ORIENTATION THEORY
+  description: null
+  page_role: appendix
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-06-14T20:59:42Z'
+  updated_at: '2026-06-14T20:59:46Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47026824/original_06e62f1dd8c68e3821e73599ff7793b3.png?1781470783
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNC9vcmlnaW5hbF8wNmU2MmYxZGQ4YzY4ZTM4MjFlNzM1OTlmZjc3OTNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNC9vcmlnaW5hbF8wNmU2MmYxZGQ4YzY4ZTM4MjFlNzM1OTlmZjc3OTNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNC9vcmlnaW5hbF8wNmU2MmYxZGQ4YzY4ZTM4MjFlNzM1OTlmZjc3OTNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzAyNjgyNC9vcmlnaW5hbF8wNmU2MmYxZGQ4YzY4ZTM4MjFlNzM1OTlmZjc3OTNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 06e62f1dd8c68e3821e73599ff7793b3.png
+    file_size: 2157894
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

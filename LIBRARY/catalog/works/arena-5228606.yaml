@@ -1,0 +1,385 @@
+schema_version: '0.1'
+catalog_key: arena:5228606
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: ✦ MAP ATLAS ✦ ⟡ A Visual History of Human Orientation ⟡
+source:
+  arena_channel_id: 5228606
+  arena_slug: map-atlas-a-visual-history-of-human-orientation
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/map-atlas-a-visual-history-of-human-orientation
+  live_title: ✦ MAP ATLAS ✦  ⟡ A Visual History of Human Orientation ⟡
+  description: "A visual atlas exploring how humans navigate reality through maps, systems, symbols, perception, networks\
+    \ and transformation. \nFrom ancient star charts and trade routes\nto cities, infrastructures, consciousness and planetary\
+    \ systems —\nthis project traces the evolution of orientation across scales of human experience.\nMAP ATLAS is not a doctrine.\n\
+    Not a fixed worldview.\nNot a final map.\nIt is an open cartography of perspectives.\nA journey through:\nterritory and\
+    \ relation\nmemory and transformation\nobservation and navigation\nsystems and meaning\nBuilt through visual storytelling,\
+    \ layered diagrams, historical references and speculative cultural cartography.\nWe map to understand.\nWe connect to\
+    \ orient.\nWe navigate becoming.\n⟡ The journey continues. ⟡"
+  visibility: closed
+  state: available
+  member_count: 13
+  created_at: '2026-05-27T10:43:39Z'
+  updated_at: '2026-06-04T18:25:13Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: historical_atlas
+  library_function: learning
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: null
+  confidence: high
+  human_decision: pending
+catalog_depth: atlas_structure
+cover:
+  arena_block_id: 46527637
+  title: '*NEXAH MAP ATLAS'
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527637/original_1f0b0642822a72259f7fb8fe5643d391.png?1779878701
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNy9vcmlnaW5hbF8xZjBiMDY0MjgyMmE3MjI1OWY3ZmI4ZmU1NjQzZDM5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNy9vcmlnaW5hbF8xZjBiMDY0MjgyMmE3MjI1OWY3ZmI4ZmU1NjQzZDM5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNy9vcmlnaW5hbF8xZjBiMDY0MjgyMmE3MjI1OWY3ZmI4ZmU1NjQzZDM5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNy9vcmlnaW5hbF8xZjBiMDY0MjgyMmE3MjI1OWY3ZmI4ZmU1NjQzZDM5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: 1f0b0642822a72259f7fb8fe5643d391.png
+  file_size: 2921692
+  alt_text: null
+structure:
+  block_count: 13
+  titled_block_count: 13
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    journey:
+    - sequence_index: 10
+      arena_block_id: 46527617
+      title: THE HUMAN JOURNEY OF SEEING
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46527637
+  block_type: Image
+  title: '*NEXAH MAP ATLAS'
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-27T10:45:00Z'
+  updated_at: '2026-05-27T10:45:05Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527637/original_1f0b0642822a72259f7fb8fe5643d391.png?1779878701
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 1f0b0642822a72259f7fb8fe5643d391.png
+    file_size: 2921692
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46527635
+  block_type: Image
+  title: MAP ATLAS → INTRODUCTION WHY HUMANS DRAW MAPS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-27T10:44:55Z'
+  updated_at: '2026-05-27T10:44:59Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527635/original_19be2632141fa13b7c80381a5df6d305.png?1779878696
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNS9vcmlnaW5hbF8xOWJlMjYzMjE0MWZhMTNiN2M4MDM4MWE1ZGY2ZDMwNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNS9vcmlnaW5hbF8xOWJlMjYzMjE0MWZhMTNiN2M4MDM4MWE1ZGY2ZDMwNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNS9vcmlnaW5hbF8xOWJlMjYzMjE0MWZhMTNiN2M4MDM4MWE1ZGY2ZDMwNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzNS9vcmlnaW5hbF8xOWJlMjYzMjE0MWZhMTNiN2M4MDM4MWE1ZGY2ZDMwNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 19be2632141fa13b7c80381a5df6d305.png
+    file_size: 2992251
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46527632
+  block_type: Image
+  title: MAP ATLAS 02 - THE EVOLUTION OF MAPS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-27T10:44:52Z'
+  updated_at: '2026-05-27T10:44:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527632/original_3fa4b26b9cc4b9a60cdbb69cf02be229.png?1779878693
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMi9vcmlnaW5hbF8zZmE0YjI2YjljYzRiOWE2MGNkYmI2OWNmMDJiZTIyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMi9vcmlnaW5hbF8zZmE0YjI2YjljYzRiOWE2MGNkYmI2OWNmMDJiZTIyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMi9vcmlnaW5hbF8zZmE0YjI2YjljYzRiOWE2MGNkYmI2OWNmMDJiZTIyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMi9vcmlnaW5hbF8zZmE0YjI2YjljYzRiOWE2MGNkYmI2OWNmMDJiZTIyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 3fa4b26b9cc4b9a60cdbb69cf02be229.png
+    file_size: 2657990
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46527631
+  block_type: Image
+  title: + MAP ATLAS 03 + • THE SKY WAS THE FIRST MAP
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-05-27T10:44:44Z'
+  updated_at: '2026-05-27T10:44:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527631/original_ecb4f984324ebdf6682c5896acedeee1.png?1779878685
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMS9vcmlnaW5hbF9lY2I0Zjk4NDMyNGViZGY2NjgyYzU4OTZhY2VkZWVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMS9vcmlnaW5hbF9lY2I0Zjk4NDMyNGViZGY2NjgyYzU4OTZhY2VkZWVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMS9vcmlnaW5hbF9lY2I0Zjk4NDMyNGViZGY2NjgyYzU4OTZhY2VkZWVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMS9vcmlnaW5hbF9lY2I0Zjk4NDMyNGViZGY2NjgyYzU4OTZhY2VkZWVlMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ecb4f984324ebdf6682c5896acedeee1.png
+    file_size: 2874634
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46527630
+  block_type: Image
+  title: + MAP ATLAS 04 +
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-27T10:44:41Z'
+  updated_at: '2026-05-27T10:44:45Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527630/original_06daaa7d7cf316dfe8fe68df94e08c06.png?1779878682
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMC9vcmlnaW5hbF8wNmRhYWE3ZDdjZjMxNmRmZThmZTY4ZGY5NGUwOGMwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMC9vcmlnaW5hbF8wNmRhYWE3ZDdjZjMxNmRmZThmZTY4ZGY5NGUwOGMwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMC9vcmlnaW5hbF8wNmRhYWE3ZDdjZjMxNmRmZThmZTY4ZGY5NGUwOGMwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYzMC9vcmlnaW5hbF8wNmRhYWE3ZDdjZjMxNmRmZThmZTY4ZGY5NGUwOGMwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 06daaa7d7cf316dfe8fe68df94e08c06.png
+    file_size: 3009645
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46527626
+  block_type: Image
+  title: MAP ATLAS 05 + THE CITY AS INTERFACE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-27T10:44:37Z'
+  updated_at: '2026-05-27T10:44:41Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527626/original_73f14ef597d8209ae2a70a522c5ceff5.png?1779878679
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNi9vcmlnaW5hbF83M2YxNGVmNTk3ZDgyMDlhZTJhNzBhNTIyYzVjZWZmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNi9vcmlnaW5hbF83M2YxNGVmNTk3ZDgyMDlhZTJhNzBhNTIyYzVjZWZmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNi9vcmlnaW5hbF83M2YxNGVmNTk3ZDgyMDlhZTJhNzBhNTIyYzVjZWZmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNi9vcmlnaW5hbF83M2YxNGVmNTk3ZDgyMDlhZTJhNzBhNTIyYzVjZWZmNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 73f14ef597d8209ae2a70a522c5ceff5.png
+    file_size: 3071531
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46527624
+  block_type: Image
+  title: MAP ATLAS 06 + INSTRUMENTS OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-27T10:44:34Z'
+  updated_at: '2026-05-27T10:44:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527624/original_ddb7c9b23c01e9d53bc0a57010917108.png?1779878675
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNC9vcmlnaW5hbF9kZGI3YzliMjNjMDFlOWQ1M2JjMGE1NzAxMDkxNzEwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNC9vcmlnaW5hbF9kZGI3YzliMjNjMDFlOWQ1M2JjMGE1NzAxMDkxNzEwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNC9vcmlnaW5hbF9kZGI3YzliMjNjMDFlOWQ1M2JjMGE1NzAxMDkxNzEwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyNC9vcmlnaW5hbF9kZGI3YzliMjNjMDFlOWQ1M2JjMGE1NzAxMDkxNzEwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ddb7c9b23c01e9d53bc0a57010917108.png
+    file_size: 3061277
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46527622
+  block_type: Image
+  title: + MAP ATLAS 07 + TRADE ROUTES & MEANING NETWORKS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-27T10:44:31Z'
+  updated_at: '2026-05-27T10:44:36Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527622/original_c30459e6b2e9a11d2e1c4a349403ee73.png?1779878672
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyMi9vcmlnaW5hbF9jMzA0NTllNmIyZTlhMTFkMmUxYzRhMzQ5NDAzZWU3My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyMi9vcmlnaW5hbF9jMzA0NTllNmIyZTlhMTFkMmUxYzRhMzQ5NDAzZWU3My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyMi9vcmlnaW5hbF9jMzA0NTllNmIyZTlhMTFkMmUxYzRhMzQ5NDAzZWU3My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYyMi9vcmlnaW5hbF9jMzA0NTllNmIyZTlhMTFkMmUxYzRhMzQ5NDAzZWU3My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: c30459e6b2e9a11d2e1c4a349403ee73.png
+    file_size: 2884566
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46527619
+  block_type: Image
+  title: MAP ATLAS 08 MAPPING TRANSFORMATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-27T10:44:28Z'
+  updated_at: '2026-05-27T10:44:32Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527619/original_b87b2079ecb5d653666571556a308359.png?1779878670
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxOS9vcmlnaW5hbF9iODdiMjA3OWVjYjVkNjUzNjY2NTcxNTU2YTMwODM1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxOS9vcmlnaW5hbF9iODdiMjA3OWVjYjVkNjUzNjY2NTcxNTU2YTMwODM1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxOS9vcmlnaW5hbF9iODdiMjA3OWVjYjVkNjUzNjY2NTcxNTU2YTMwODM1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxOS9vcmlnaW5hbF9iODdiMjA3OWVjYjVkNjUzNjY2NTcxNTU2YTMwODM1OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: b87b2079ecb5d653666571556a308359.png
+    file_size: 2898283
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46527617
+  block_type: Image
+  title: THE HUMAN JOURNEY OF SEEING
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 4
+  created_at: '2026-05-27T10:44:25Z'
+  updated_at: '2026-05-27T10:44:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527617/original_493cb66ee3df1a678e548ef14531da46.png?1779878667
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNy9vcmlnaW5hbF80OTNjYjY2ZWUzZGYxYTY3OGU1NDhlZjE0NTMxZGE0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNy9vcmlnaW5hbF80OTNjYjY2ZWUzZGYxYTY3OGU1NDhlZjE0NTMxZGE0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNy9vcmlnaW5hbF80OTNjYjY2ZWUzZGYxYTY3OGU1NDhlZjE0NTMxZGE0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNy9vcmlnaW5hbF80OTNjYjY2ZWUzZGYxYTY3OGU1NDhlZjE0NTMxZGE0Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 493cb66ee3df1a678e548ef14531da46.png
+    file_size: 2923074
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46527616
+  block_type: Image
+  title: MAP ATLAS 10 + THE NETWORKED PLANET
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-27T10:44:23Z'
+  updated_at: '2026-05-27T10:44:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527616/original_b299b3e00f9525641d2919ba679d23c2.png?1779878664
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNi9vcmlnaW5hbF9iMjk5YjNlMDBmOTUyNTY0MWQyOTE5YmE2NzlkMjNjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNi9vcmlnaW5hbF9iMjk5YjNlMDBmOTUyNTY0MWQyOTE5YmE2NzlkMjNjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNi9vcmlnaW5hbF9iMjk5YjNlMDBmOTUyNTY0MWQyOTE5YmE2NzlkMjNjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNi9vcmlnaW5hbF9iMjk5YjNlMDBmOTUyNTY0MWQyOTE5YmE2NzlkMjNjMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: b299b3e00f9525641d2919ba679d23c2.png
+    file_size: 2814251
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46527614
+  block_type: Image
+  title: MAP ATLAS 11+ THE MAP OF MAPS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-27T10:44:21Z'
+  updated_at: '2026-05-27T10:44:25Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527614/original_cd350420d14c13939b34ca452a519408.png?1779878662
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNC9vcmlnaW5hbF9jZDM1MDQyMGQxNGMxMzkzOWIzNGNhNDUyYTUxOTQwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNC9vcmlnaW5hbF9jZDM1MDQyMGQxNGMxMzkzOWIzNGNhNDUyYTUxOTQwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNC9vcmlnaW5hbF9jZDM1MDQyMGQxNGMxMzkzOWIzNGNhNDUyYTUxOTQwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxNC9vcmlnaW5hbF9jZDM1MDQyMGQxNGMxMzkzOWIzNGNhNDUyYTUxOTQwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: cd350420d14c13939b34ca452a519408.png
+    file_size: 2964616
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46527612
+  block_type: Image
+  title: MAP ATLAS 12 REALITY AS RELATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-27T10:44:19Z'
+  updated_at: '2026-05-27T10:44:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46527612/original_0016e297a585426b4df982a472906c11.png?1779878661
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxMi9vcmlnaW5hbF8wMDE2ZTI5N2E1ODU0MjZiNGRmOTgyYTQ3MjkwNmMxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxMi9vcmlnaW5hbF8wMDE2ZTI5N2E1ODU0MjZiNGRmOTgyYTQ3MjkwNmMxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxMi9vcmlnaW5hbF8wMDE2ZTI5N2E1ODU0MjZiNGRmOTgyYTQ3MjkwNmMxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjUyNzYxMi9vcmlnaW5hbF8wMDE2ZTI5N2E1ODU0MjZiNGRmOTgyYTQ3MjkwNmMxMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 0016e297a585426b4df982a472906c11.png
+    file_size: 2857104
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

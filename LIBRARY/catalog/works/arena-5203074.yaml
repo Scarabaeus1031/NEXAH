@@ -1,0 +1,636 @@
+schema_version: '0.1'
+catalog_key: arena:5203074
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH XV COMPLEXA — Cartographies of Transition
+source:
+  arena_channel_id: 5203074
+  arena_slug: nexah-xv-complexa-cartographies-of-transition
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-complexa-cartographies-of-transition
+  live_title: NEXAH XV COMPLEXA — Cartographies of Transition
+  description: "A living atlas of resonance, observation, flow and transition geometry. \nExploring:\nfractal field architectures\
+    \ \nMandelbrot ↔ Julia dynamics\nobserver geometry\nprojection & stabilization\nrecursive flow systems\nresonance operators\n\
+    transition corridors\nmaterial & phase fields\ntopology of emergence\nThis channel documents the evolving NEXAH visual\
+    \ framework through:\nCOMPLEXA series\nfield studies\noperator maps\ntransition cartographies\nexperimental geometries\n\
+    recursive navigation structures\nNot a final theory.\nA cartographic language for navigating complex dynamical fields.\n\
+    Geometry creates conditions.\LObservation selects paths."
+  visibility: closed
+  state: available
+  member_count: 23
+  created_at: '2026-05-20T19:55:27Z'
+  updated_at: '2026-05-27T14:01:15Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: living_atlas
+  library_function: research
+  publication_status: working
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH XV Atlas
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - XV Atlas
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46364622
+  title: NEXAH COMPLEXA
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364622/original_c33c4ead4c670704c2d7629f075168cc.png?1779307339
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYyMi9vcmlnaW5hbF9jMzNjNGVhZDRjNjcwNzA0YzJkNzYyOWYwNzUxNjhjYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYyMi9vcmlnaW5hbF9jMzNjNGVhZDRjNjcwNzA0YzJkNzYyOWYwNzUxNjhjYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYyMi9vcmlnaW5hbF9jMzNjNGVhZDRjNjcwNzA0YzJkNzYyOWYwNzUxNjhjYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYyMi9vcmlnaW5hbF9jMzNjNGVhZDRjNjcwNzA0YzJkNzYyOWYwNzUxNjhjYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1536
+  height: 1024
+  aspect_ratio: 1.5
+  content_type: image/png
+  filename: c33c4ead4c670704c2d7629f075168cc.png
+  file_size: 2471447
+  alt_text: null
+structure:
+  block_count: 23
+  titled_block_count: 23
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part:
+  - sequence_index: 3
+    arena_block_id: 46364613
+    title: PART I BACKBONE GEOMETRY
+  - sequence_index: 10
+    arena_block_id: 46364574
+    title: PART II DYNAMIC FIELD STRUCTURES
+  - sequence_index: 17
+    arena_block_id: 46364483
+    title: PART III NAVIGATION & STABILIZATION
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 8
+      arena_block_id: 46365093
+      title: RECURSIVE TRANSITION CORRIDORS DRIFT CHANNELS • BOUNDARY TRANSPORT • RECURSIVE GATE DYNAMICS
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46364622
+  block_type: Image
+  title: NEXAH COMPLEXA
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 23
+  created_at: '2026-05-20T20:02:01Z'
+  updated_at: '2026-05-20T20:02:22Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364622/original_c33c4ead4c670704c2d7629f075168cc.png?1779307339
+    variants: *id001
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c33c4ead4c670704c2d7629f075168cc.png
+    file_size: 2471447
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46364619
+  block_type: Image
+  title: SERIES INDEX v1.0
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 22
+  created_at: '2026-05-20T20:01:53Z'
+  updated_at: '2026-05-20T20:02:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364619/original_2e8eda37cc0176c2bface66de8c34d0a.png?1779307335
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxOS9vcmlnaW5hbF8yZThlZGEzN2NjMDE3NmMyYmZhY2U2NmRlOGMzNGQwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxOS9vcmlnaW5hbF8yZThlZGEzN2NjMDE3NmMyYmZhY2U2NmRlOGMzNGQwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxOS9vcmlnaW5hbF8yZThlZGEzN2NjMDE3NmMyYmZhY2U2NmRlOGMzNGQwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxOS9vcmlnaW5hbF8yZThlZGEzN2NjMDE3NmMyYmZhY2U2NmRlOGMzNGQwYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 2e8eda37cc0176c2bface66de8c34d0a.png
+    file_size: 2496801
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46364613
+  block_type: Image
+  title: PART I BACKBONE GEOMETRY
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 21
+  created_at: '2026-05-20T20:01:37Z'
+  updated_at: '2026-05-20T20:02:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364613/original_258d3f2524f1f0135da0201f78229c68.png?1779307332
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxMy9vcmlnaW5hbF8yNThkM2YyNTI0ZjFmMDEzNWRhMDIwMWY3ODIyOWM2OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxMy9vcmlnaW5hbF8yNThkM2YyNTI0ZjFmMDEzNWRhMDIwMWY3ODIyOWM2OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxMy9vcmlnaW5hbF8yNThkM2YyNTI0ZjFmMDEzNWRhMDIwMWY3ODIyOWM2OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDYxMy9vcmlnaW5hbF8yNThkM2YyNTI0ZjFmMDEzNWRhMDIwMWY3ODIyOWM2OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 258d3f2524f1f0135da0201f78229c68.png
+    file_size: 2300762
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46364599
+  block_type: Image
+  title: NEXAH COMPLEXA_A-01 Mandelbrot Backbone Geometry
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 20
+  created_at: '2026-05-20T20:01:12Z'
+  updated_at: '2026-05-20T20:19:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364599/original_fc6b97d1deb405fce8c7f74e5142ddac.png?1779307272
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OS9vcmlnaW5hbF9mYzZiOTdkMWRlYjQwNWZjZThjN2Y3NGU1MTQyZGRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OS9vcmlnaW5hbF9mYzZiOTdkMWRlYjQwNWZjZThjN2Y3NGU1MTQyZGRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OS9vcmlnaW5hbF9mYzZiOTdkMWRlYjQwNWZjZThjN2Y3NGU1MTQyZGRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OS9vcmlnaW5hbF9mYzZiOTdkMWRlYjQwNWZjZThjN2Y3NGU1MTQyZGRhYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: fc6b97d1deb405fce8c7f74e5142ddac.png
+    file_size: 2699648
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46364598
+  block_type: Image
+  title: NEXAH COMPLEXA B-01 • Mandelbrot Backbone Geometry
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-05-20T20:01:10Z'
+  updated_at: '2026-05-20T20:19:22Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364598/original_8785582215e3568c7d70a9ba4affce96.png?1779307271
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OC9vcmlnaW5hbF84Nzg1NTgyMjE1ZTM1NjhjN2Q3MGE5YmE0YWZmY2U5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OC9vcmlnaW5hbF84Nzg1NTgyMjE1ZTM1NjhjN2Q3MGE5YmE0YWZmY2U5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OC9vcmlnaW5hbF84Nzg1NTgyMjE1ZTM1NjhjN2Q3MGE5YmE0YWZmY2U5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU5OC9vcmlnaW5hbF84Nzg1NTgyMjE1ZTM1NjhjN2Q3MGE5YmE0YWZmY2U5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 8785582215e3568c7d70a9ba4affce96.png
+    file_size: 2469739
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46365035
+  block_type: Image
+  title: NEXAH COMPLEXA-02 AXELPMOC HAXEN
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 18
+  created_at: '2026-05-20T20:18:34Z'
+  updated_at: '2026-05-20T20:21:30Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365035/original_78126d5266f2516462ab13033c78538e.png?1779308336
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTAzNS9vcmlnaW5hbF83ODEyNmQ1MjY2ZjI1MTY0NjJhYjEzMDMzYzc4NTM4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTAzNS9vcmlnaW5hbF83ODEyNmQ1MjY2ZjI1MTY0NjJhYjEzMDMzYzc4NTM4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTAzNS9vcmlnaW5hbF83ODEyNmQ1MjY2ZjI1MTY0NjJhYjEzMDMzYzc4NTM4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTAzNS9vcmlnaW5hbF83ODEyNmQ1MjY2ZjI1MTY0NjJhYjEzMDMzYzc4NTM4ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 78126d5266f2516462ab13033c78538e.png
+    file_size: 2758817
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46364584
+  block_type: Image
+  title: NEXAH COMPLEXA-04 ORIENTATION & IOTA RING GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-05-20T20:00:39Z'
+  updated_at: '2026-05-20T20:00:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364584/original_7e2dbef6b7cfcb2fd108422a7a153b5d.png?1779307241
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU4NC9vcmlnaW5hbF83ZTJkYmVmNmI3Y2ZjYjJmZDEwODQyMmE3YTE1M2I1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU4NC9vcmlnaW5hbF83ZTJkYmVmNmI3Y2ZjYjJmZDEwODQyMmE3YTE1M2I1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU4NC9vcmlnaW5hbF83ZTJkYmVmNmI3Y2ZjYjJmZDEwODQyMmE3YTE1M2I1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU4NC9vcmlnaW5hbF83ZTJkYmVmNmI3Y2ZjYjJmZDEwODQyMmE3YTE1M2I1ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7e2dbef6b7cfcb2fd108422a7a153b5d.png
+    file_size: 2053700
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46365093
+  block_type: Image
+  title: RECURSIVE TRANSITION CORRIDORS DRIFT CHANNELS • BOUNDARY TRANSPORT • RECURSIVE GATE DYNAMICS
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 16
+  created_at: '2026-05-20T20:21:20Z'
+  updated_at: '2026-05-20T20:21:45Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46365093/original_6e6aebcd1adc8c37a6f793da03423941.png?1779308481
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTA5My9vcmlnaW5hbF82ZTZhZWJjZDFhZGM4YzM3YTZmNzkzZGEwMzQyMzk0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTA5My9vcmlnaW5hbF82ZTZhZWJjZDFhZGM4YzM3YTZmNzkzZGEwMzQyMzk0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTA5My9vcmlnaW5hbF82ZTZhZWJjZDFhZGM4YzM3YTZmNzkzZGEwMzQyMzk0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NTA5My9vcmlnaW5hbF82ZTZhZWJjZDFhZGM4YzM3YTZmNzkzZGEwMzQyMzk0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6e6aebcd1adc8c37a6f793da03423941.png
+    file_size: 2674254
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46364578
+  block_type: Image
+  title: NEXAH COMPLEXA-05 RESIDUE SHADOW GEOMETRY & SHELL TOPOLOGY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-05-20T20:00:35Z'
+  updated_at: '2026-05-20T20:00:41Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364578/original_2f12a53a1fe6fe05db0c7f28fbe17a1e.png?1779307237
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3OC9vcmlnaW5hbF8yZjEyYTUzYTFmZTZmZTA1ZGIwYzdmMjhmYmUxN2ExZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3OC9vcmlnaW5hbF8yZjEyYTUzYTFmZTZmZTA1ZGIwYzdmMjhmYmUxN2ExZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3OC9vcmlnaW5hbF8yZjEyYTUzYTFmZTZmZTA1ZGIwYzdmMjhmYmUxN2ExZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3OC9vcmlnaW5hbF8yZjEyYTUzYTFmZTZmZTA1ZGIwYzdmMjhmYmUxN2ExZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 2f12a53a1fe6fe05db0c7f28fbe17a1e.png
+    file_size: 1932852
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46364574
+  block_type: Image
+  title: PART II DYNAMIC FIELD STRUCTURES
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-05-20T20:00:29Z'
+  updated_at: '2026-05-20T20:00:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364574/original_0b5e8a2e4b8fdf83c99a4cea29c489cf.png?1779307230
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3NC9vcmlnaW5hbF8wYjVlOGEyZTRiOGZkZjgzYzk5YTRjZWEyOWM0ODljZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3NC9vcmlnaW5hbF8wYjVlOGEyZTRiOGZkZjgzYzk5YTRjZWEyOWM0ODljZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3NC9vcmlnaW5hbF8wYjVlOGEyZTRiOGZkZjgzYzk5YTRjZWEyOWM0ODljZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU3NC9vcmlnaW5hbF8wYjVlOGEyZTRiOGZkZjgzYzk5YTRjZWEyOWM0ODljZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 0b5e8a2e4b8fdf83c99a4cea29c489cf.png
+    file_size: 2471790
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46364568
+  block_type: Image
+  title: NEXAH COMPLEXA-06 • GATE & APERTURE DYNAMICS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-20T20:00:23Z'
+  updated_at: '2026-05-20T20:00:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364568/original_3f4e67f8e1ce92ae3be69373b36a4691.png?1779307224
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU2OC9vcmlnaW5hbF8zZjRlNjdmOGUxY2U5MmFlM2JlNjkzNzNiMzZhNDY5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU2OC9vcmlnaW5hbF8zZjRlNjdmOGUxY2U5MmFlM2JlNjkzNzNiMzZhNDY5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU2OC9vcmlnaW5hbF8zZjRlNjdmOGUxY2U5MmFlM2JlNjkzNzNiMzZhNDY5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDU2OC9vcmlnaW5hbF8zZjRlNjdmOGUxY2U5MmFlM2JlNjkzNzNiMzZhNDY5MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3f4e67f8e1ce92ae3be69373b36a4691.png
+    file_size: 1941746
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46364529
+  block_type: Image
+  title: NEXAH COMPLEXA-07 MATROSCHKA FIELD DYNAMICS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-20T20:00:10Z'
+  updated_at: '2026-05-20T20:00:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364529/original_1df14cca35f07aec814795cca12e83c0.png?1779307212
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDUyOS9vcmlnaW5hbF8xZGYxNGNjYTM1ZjA3YWVjODE0Nzk1Y2NhMTJlODNjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDUyOS9vcmlnaW5hbF8xZGYxNGNjYTM1ZjA3YWVjODE0Nzk1Y2NhMTJlODNjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDUyOS9vcmlnaW5hbF8xZGYxNGNjYTM1ZjA3YWVjODE0Nzk1Y2NhMTJlODNjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDUyOS9vcmlnaW5hbF8xZGYxNGNjYTM1ZjA3YWVjODE0Nzk1Y2NhMTJlODNjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 1df14cca35f07aec814795cca12e83c0.png
+    file_size: 2276064
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46364490
+  block_type: Image
+  title: COMPLEXA-08 MANDELBROT FIELD ARCHITECTURE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-20T19:59:00Z'
+  updated_at: '2026-05-20T19:59:05Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364490/original_b251abf0e9ddd24a3af076ec6dc3ff61.png?1779307141
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ5MC9vcmlnaW5hbF9iMjUxYWJmMGU5ZGRkMjRhM2FmMDc2ZWM2ZGMzZmY2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ5MC9vcmlnaW5hbF9iMjUxYWJmMGU5ZGRkMjRhM2FmMDc2ZWM2ZGMzZmY2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ5MC9vcmlnaW5hbF9iMjUxYWJmMGU5ZGRkMjRhM2FmMDc2ZWM2ZGMzZmY2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ5MC9vcmlnaW5hbF9iMjUxYWJmMGU5ZGRkMjRhM2FmMDc2ZWM2ZGMzZmY2MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b251abf0e9ddd24a3af076ec6dc3ff61.png
+    file_size: 2553305
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 46364487
+  block_type: Image
+  title: NEXAH v9.8 • COMPLEXA-09 • THE NEXAH CYCLE- OBSERVATION → PROJECTION → REALITY → RETURN
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-05-20T19:58:55Z'
+  updated_at: '2026-05-20T19:59:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364487/original_9dbee7feda71db89dfb8d903644eca82.png?1779307136
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ny9vcmlnaW5hbF85ZGJlZTdmZWRhNzFkYjg5ZGZiOGQ5MDM2NDRlY2E4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ny9vcmlnaW5hbF85ZGJlZTdmZWRhNzFkYjg5ZGZiOGQ5MDM2NDRlY2E4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ny9vcmlnaW5hbF85ZGJlZTdmZWRhNzFkYjg5ZGZiOGQ5MDM2NDRlY2E4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ny9vcmlnaW5hbF85ZGJlZTdmZWRhNzFkYjg5ZGZiOGQ5MDM2NDRlY2E4Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 9dbee7feda71db89dfb8d903644eca82.png
+    file_size: 2446013
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 46364486
+  block_type: Image
+  title: NEXAH v9.8 - COMPLEXA-09 THE LIVING MAP- FROM FIELD OF ALL POSSIBILITIES TO OBSERVED REALITY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-20T19:58:54Z'
+  updated_at: '2026-05-20T19:58:59Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364486/original_985a4410791cacf436af4f5eb53d748f.png?1779307136
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ni9vcmlnaW5hbF85ODVhNDQxMDc5MWNhY2Y0MzZhZjRmNWViNTNkNzQ4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ni9vcmlnaW5hbF85ODVhNDQxMDc5MWNhY2Y0MzZhZjRmNWViNTNkNzQ4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ni9vcmlnaW5hbF85ODVhNDQxMDc5MWNhY2Y0MzZhZjRmNWViNTNkNzQ4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4Ni9vcmlnaW5hbF85ODVhNDQxMDc5MWNhY2Y0MzZhZjRmNWViNTNkNzQ4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 985a4410791cacf436af4f5eb53d748f.png
+    file_size: 2417917
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 46364695
+  block_type: Image
+  title: NEXAH COMPLEXA-10 • MATERIAL RESONANCE & TRANSPORT LAYER
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-20T20:04:29Z'
+  updated_at: '2026-05-20T20:04:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364695/original_974eafc383623ba9959c01a0597d9c8f.png?1779307470
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDY5NS9vcmlnaW5hbF85NzRlYWZjMzgzNjIzYmE5OTU5YzAxYTA1OTdkOWM4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDY5NS9vcmlnaW5hbF85NzRlYWZjMzgzNjIzYmE5OTU5YzAxYTA1OTdkOWM4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDY5NS9vcmlnaW5hbF85NzRlYWZjMzgzNjIzYmE5OTU5YzAxYTA1OTdkOWM4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDY5NS9vcmlnaW5hbF85NzRlYWZjMzgzNjIzYmE5OTU5YzAxYTA1OTdkOWM4Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 974eafc383623ba9959c01a0597d9c8f.png
+    file_size: 2453141
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 46364483
+  block_type: Image
+  title: PART III NAVIGATION & STABILIZATION
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-20T19:58:47Z'
+  updated_at: '2026-05-20T19:58:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364483/original_0286b8118e230f900173092de534a4d4.png?1779307128
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4My9vcmlnaW5hbF8wMjg2YjgxMThlMjMwZjkwMDE3MzA5MmRlNTM0YTRkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4My9vcmlnaW5hbF8wMjg2YjgxMThlMjMwZjkwMDE3MzA5MmRlNTM0YTRkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4My9vcmlnaW5hbF8wMjg2YjgxMThlMjMwZjkwMDE3MzA5MmRlNTM0YTRkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ4My9vcmlnaW5hbF8wMjg2YjgxMThlMjMwZjkwMDE3MzA5MmRlNTM0YTRkNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 0286b8118e230f900173092de534a4d4.png
+    file_size: 2234063
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 46364742
+  block_type: Image
+  title: COMPLEXA-11 PRIME RESONANCE CHAINS & CLOSURE GEOMETRY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-20T20:06:15Z'
+  updated_at: '2026-05-20T20:06:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364742/original_6a99ec74a10607e4ca6a4ff3e56cb1bb.png?1779307577
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDc0Mi9vcmlnaW5hbF82YTk5ZWM3NGExMDYwN2U0Y2E2YTRmZjNlNTZjYjFiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDc0Mi9vcmlnaW5hbF82YTk5ZWM3NGExMDYwN2U0Y2E2YTRmZjNlNTZjYjFiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDc0Mi9vcmlnaW5hbF82YTk5ZWM3NGExMDYwN2U0Y2E2YTRmZjNlNTZjYjFiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDc0Mi9vcmlnaW5hbF82YTk5ZWM3NGExMDYwN2U0Y2E2YTRmZjNlNTZjYjFiYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 6a99ec74a10607e4ca6a4ff3e56cb1bb.png
+    file_size: 2613471
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 46364445
+  block_type: Image
+  title: NEXAH COMPLEXA-12 ROOT CLOSURE & FAMILY CLASSIFICATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-20T19:57:07Z'
+  updated_at: '2026-05-20T19:57:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364445/original_375482425c0fee9f02b2f4e63da3be74.png?1779307028
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ0NS9vcmlnaW5hbF8zNzU0ODI0MjVjMGZlZTlmMDJiMmY0ZTYzZGEzYmU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ0NS9vcmlnaW5hbF8zNzU0ODI0MjVjMGZlZTlmMDJiMmY0ZTYzZGEzYmU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ0NS9vcmlnaW5hbF8zNzU0ODI0MjVjMGZlZTlmMDJiMmY0ZTYzZGEzYmU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQ0NS9vcmlnaW5hbF8zNzU0ODI0MjVjMGZlZTlmMDJiMmY0ZTYzZGEzYmU3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 375482425c0fee9f02b2f4e63da3be74.png
+    file_size: 2282294
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 46364430
+  block_type: Image
+  title: NEXAH COMPLEXA-13 | FLOW NAVIGATION & MATERIAL FIELDS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-20T19:56:29Z'
+  updated_at: '2026-05-20T19:56:35Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364430/original_2a5769e9924fae82a336281eecbc0dab.png?1779306991
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQzMC9vcmlnaW5hbF8yYTU3NjllOTkyNGZhZTgyYTMzNjI4MWVlY2JjMGRhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQzMC9vcmlnaW5hbF8yYTU3NjllOTkyNGZhZTgyYTMzNjI4MWVlY2JjMGRhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQzMC9vcmlnaW5hbF8yYTU3NjllOTkyNGZhZTgyYTMzNjI4MWVlY2JjMGRhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQzMC9vcmlnaW5hbF8yYTU3NjllOTkyNGZhZTgyYTMzNjI4MWVlY2JjMGRhYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 2a5769e9924fae82a336281eecbc0dab.png
+    file_size: 2341017
+    alt_text: null
+- sequence_index: 21
+  arena_block_id: 46364429
+  block_type: Image
+  title: NEXAH COMPLEXA-14 | OBSERVER LOCK & STABILIZATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-20T19:56:29Z'
+  updated_at: '2026-05-20T19:56:32Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364429/original_b16769c7a0d1f7a4ce3ed7c39471c483.png?1779306989
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyOS9vcmlnaW5hbF9iMTY3NjljN2EwZDFmN2E0Y2UzZWQ3YzM5NDcxYzQ4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyOS9vcmlnaW5hbF9iMTY3NjljN2EwZDFmN2E0Y2UzZWQ3YzM5NDcxYzQ4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyOS9vcmlnaW5hbF9iMTY3NjljN2EwZDFmN2E0Y2UzZWQ3YzM5NDcxYzQ4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyOS9vcmlnaW5hbF9iMTY3NjljN2EwZDFmN2E0Y2UzZWQ3YzM5NDcxYzQ4My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b16769c7a0d1f7a4ce3ed7c39471c483.png
+    file_size: 2520837
+    alt_text: null
+- sequence_index: 22
+  arena_block_id: 46364427
+  block_type: Image
+  title: NEXAH COMPLEXA-15 MASTER OVERVIEW & FINAL SYNTHESIS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-20T19:56:26Z'
+  updated_at: '2026-05-24T16:36:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364427/original_50bbffa701a998ab2acbf04bbb9a51e9.png?1779306987
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyNy9vcmlnaW5hbF81MGJiZmZhNzAxYTk5OGFiMmFjYmYwNGJiYjlhNTFlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyNy9vcmlnaW5hbF81MGJiZmZhNzAxYTk5OGFiMmFjYmYwNGJiYjlhNTFlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyNy9vcmlnaW5hbF81MGJiZmZhNzAxYTk5OGFiMmFjYmYwNGJiYjlhNTFlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQyNy9vcmlnaW5hbF81MGJiZmZhNzAxYTk5OGFiMmFjYmYwNGJiYjlhNTFlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 50bbffa701a998ab2acbf04bbb9a51e9.png
+    file_size: 2395880
+    alt_text: null
+- sequence_index: 23
+  arena_block_id: 46364417
+  block_type: Image
+  title: THE OBSERVER RETURNS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-20T19:56:08Z'
+  updated_at: '2026-05-20T19:56:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46364417/original_176e437f30f47cd814ccde833bffd060.png?1779306969
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQxNy9vcmlnaW5hbF8xNzZlNDM3ZjMwZjQ3Y2Q4MTRjY2RlODMzYmZmZDA2MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQxNy9vcmlnaW5hbF8xNzZlNDM3ZjMwZjQ3Y2Q4MTRjY2RlODMzYmZmZDA2MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQxNy9vcmlnaW5hbF8xNzZlNDM3ZjMwZjQ3Y2Q4MTRjY2RlODMzYmZmZDA2MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NDQxNy9vcmlnaW5hbF8xNzZlNDM3ZjMwZjQ3Y2Q4MTRjY2RlODMzYmZmZDA2MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 176e437f30f47cd814ccde833bffd060.png
+    file_size: 2352011
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

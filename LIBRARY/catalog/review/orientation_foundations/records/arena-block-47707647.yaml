@@ -1,0 +1,86 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47707647
+publication:
+  catalog_key: arena:5416617
+  arena_channel_id: 5416617
+  title: ORIENTATION SCIENCE
+source_block:
+  arena_block_id: 47707647
+  sequence_index: 10
+  title: 05 What is Orientation?
+  url: https://www.are.na/block/47707647
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47707647/original_ab35be95251116654a73bbece6ef2613.png?1783535928
+  source_fingerprint: da0a36281dbe5a83ddbaaaeb594d93a356b3953141610cb86b9425ed3a333657
+visual_role: definition
+visible_text:
+  transcription_status: partial
+  transcription: Orientation is the structured understanding of position, context,
+    possibilities and direction within a complex system.
+research_elements:
+  definitions:
+  - statement: Orientation is the structured understanding of position, context, possibilities
+      and direction within a complex system.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707647
+      source_url: https://www.are.na/block/47707647
+      note: null
+    status: publication_assertion
+  questions: []
+  observations: []
+  hypotheses: []
+  methods: []
+  models: []
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts:
+  - statement: position
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707647
+      source_url: https://www.are.na/block/47707647
+      note: null
+    status: observed_label
+  - statement: context
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707647
+      source_url: https://www.are.na/block/47707647
+      note: null
+    status: observed_label
+  - statement: possibilities
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707647
+      source_url: https://www.are.na/block/47707647
+      note: null
+    status: observed_label
+  - statement: direction
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707647
+      source_url: https://www.are.na/block/47707647
+      note: null
+    status: observed_label
+  - statement: orientation
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707647
+      source_url: https://www.are.na/block/47707647
+      note: null
+    status: observed_label
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: Records an explicit definition printed by the publication; it does
+  not establish a canonical Concept definition or domain-neutral scientific validity.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

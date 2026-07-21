@@ -1,0 +1,402 @@
+schema_version: '0.1'
+catalog_key: arena:5415765
+authority: noncanonical_website_catalog
+registered_entity_id: NX-000006
+display_title: FIELD ATLAS I — WATER
+source:
+  arena_channel_id: 5415765
+  arena_slug: field-atlas-i-water
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/field-atlas-i-water
+  live_title: 'Field Atlas I —     Water '
+  description: "A Cartography of Transition \nThe first of the Field Atlas Series.\nWater is not presented here as a chemical\
+    \ substance, but as a landscape of transitions.\nThis atlas explores how liquid water organizes itself through configurations,\
+    \ gradients, resonances and changing states. Instead of asking what water is, it asks how patterns emerge, stabilize and\
+    \ transform across scales.\nUsing visual maps, diagrams and field boards, Field Atlas I introduces a cartographic approach\
+    \ to understanding one of nature’s most dynamic systems.\nTopics include:\n• Water as a landscape of transitions\n• HDL\
+    \ / LDL organization\n• Configuration spaces and transition landscapes\n• Geometry, gradients and resonance\n• Cartography\
+    \ as a method for understanding complexity\nPart of the FIELD ATLAS SERIES."
+  visibility: closed
+  state: available
+  member_count: 13
+  created_at: '2026-07-08T14:32:07Z'
+  updated_at: '2026-07-10T22:49:01Z'
+editorial:
+  classification_state: canonical
+  object_family: work
+  type: atlas
+  form: field_atlas
+  library_function: research
+  publication_status: published
+  revision_state: approved
+  content_maturity: exploratory
+  series: Field Atlas Series
+  confidence: canonical
+  human_decision: confirmed
+catalog_depth: research_structure
+cover:
+  arena_block_id: 47700274
+  title: FIELD ATLAS I _ WATER
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700274/original_c11bc6200f2e19853d3c5008384bc04d.png?1783521385
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI3NC9vcmlnaW5hbF9jMTFiYzYyMDBmMmUxOTg1M2QzYzUwMDgzODRiYzA0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI3NC9vcmlnaW5hbF9jMTFiYzYyMDBmMmUxOTg1M2QzYzUwMDgzODRiYzA0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI3NC9vcmlnaW5hbF9jMTFiYzYyMDBmMmUxOTg1M2QzYzUwMDgzODRiYzA0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI3NC9vcmlnaW5hbF9jMTFiYzYyMDBmMmUxOTg1M2QzYzUwMDgzODRiYzA0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1054
+  height: 1492
+  aspect_ratio: 0.7064
+  content_type: image/png
+  filename: c11bc6200f2e19853d3c5008384bc04d.png
+  file_size: 2079918
+  alt_text: null
+structure:
+  block_count: 13
+  titled_block_count: 13
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 4
+      arena_block_id: 47700261
+      title: NEXAH ATLAS OF TRANSITION - BOARD INDEX
+    - sequence_index: 5
+      arena_block_id: 47700259
+      title: NEXAH - ATLAS OF TRANSITION
+    - sequence_index: 7
+      arena_block_id: 47700255
+      title: WATER - A CARTOGRAPHY OF TRANSITION ii
+    - sequence_index: 8
+      arena_block_id: 47700254
+      title: WATER - A CARTOGRAPHY OF TRANSITION
+    - sequence_index: 11
+      arena_block_id: 47700236
+      title: MATERIAL ATLAS - FOUR WINDOWS ON TRANSITION
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47700274
+  block_type: Image
+  title: FIELD ATLAS I _ WATER
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-07-08T14:36:23Z'
+  updated_at: '2026-07-08T14:36:28Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700274/original_c11bc6200f2e19853d3c5008384bc04d.png?1783521385
+    variants: *id001
+    width: 1054
+    height: 1492
+    aspect_ratio: 0.7064
+    content_type: image/png
+    filename: c11bc6200f2e19853d3c5008384bc04d.png
+    file_size: 2079918
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47700266
+  block_type: Image
+  title: FIELD ATLAS II - PART I THE FIELD BEFORE LIFE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-07-08T14:35:58Z'
+  updated_at: '2026-07-08T14:36:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700266/original_db1da01fe25b2aa8e32fa662920c109a.png?1783521359
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2Ni9vcmlnaW5hbF9kYjFkYTAxZmUyNWIyYWE4ZTMyZmE2NjI5MjBjMTA5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2Ni9vcmlnaW5hbF9kYjFkYTAxZmUyNWIyYWE4ZTMyZmE2NjI5MjBjMTA5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2Ni9vcmlnaW5hbF9kYjFkYTAxZmUyNWIyYWE4ZTMyZmE2NjI5MjBjMTA5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2Ni9vcmlnaW5hbF9kYjFkYTAxZmUyNWIyYWE4ZTMyZmE2NjI5MjBjMTA5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: db1da01fe25b2aa8e32fa662920c109a.png
+    file_size: 2249466
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47700268
+  block_type: Image
+  title: 'FIELD ATLAS I TWO FOLDS - ONE SYSTEM • Water (Soft-Fold) • Mercury (Hard-Fold) • Ferrofluid (Field-Fold) • Quartz
+    : Ice (Fro...'
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-07-08T14:36:03Z'
+  updated_at: '2026-07-08T14:36:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700268/original_3cb19f04593d82af3d56f482276f4590.png?1783521365
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2OC9vcmlnaW5hbF8zY2IxOWYwNDU5M2Q4MmFmM2Q1NmY0ODIyNzZmNDU5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2OC9vcmlnaW5hbF8zY2IxOWYwNDU5M2Q4MmFmM2Q1NmY0ODIyNzZmNDU5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2OC9vcmlnaW5hbF8zY2IxOWYwNDU5M2Q4MmFmM2Q1NmY0ODIyNzZmNDU5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2OC9vcmlnaW5hbF8zY2IxOWYwNDU5M2Q4MmFmM2Q1NmY0ODIyNzZmNDU5MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3cb19f04593d82af3d56f482276f4590.png
+    file_size: 2405563
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47700261
+  block_type: Image
+  title: NEXAH ATLAS OF TRANSITION - BOARD INDEX
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 10
+  created_at: '2026-07-08T14:35:52Z'
+  updated_at: '2026-07-08T14:36:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700261/original_d6c2c7f634fe49434283f30a6d5190bd.png?1783521354
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2MS9vcmlnaW5hbF9kNmMyYzdmNjM0ZmU0OTQzNDI4M2YzMGE2ZDUxOTBiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2MS9vcmlnaW5hbF9kNmMyYzdmNjM0ZmU0OTQzNDI4M2YzMGE2ZDUxOTBiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2MS9vcmlnaW5hbF9kNmMyYzdmNjM0ZmU0OTQzNDI4M2YzMGE2ZDUxOTBiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI2MS9vcmlnaW5hbF9kNmMyYzdmNjM0ZmU0OTQzNDI4M2YzMGE2ZDUxOTBiZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d6c2c7f634fe49434283f30a6d5190bd.png
+    file_size: 2004862
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47700259
+  block_type: Image
+  title: NEXAH - ATLAS OF TRANSITION
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 9
+  created_at: '2026-07-08T14:35:50Z'
+  updated_at: '2026-07-08T14:36:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700259/original_872cc6fac2e6e1a603b63672e9a1f91b.png?1783521352
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1OS9vcmlnaW5hbF84NzJjYzZmYWMyZTZlMWE2MDNiNjM2NzJlOWExZjkxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1OS9vcmlnaW5hbF84NzJjYzZmYWMyZTZlMWE2MDNiNjM2NzJlOWExZjkxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1OS9vcmlnaW5hbF84NzJjYzZmYWMyZTZlMWE2MDNiNjM2NzJlOWExZjkxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1OS9vcmlnaW5hbF84NzJjYzZmYWMyZTZlMWE2MDNiNjM2NzJlOWExZjkxYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 872cc6fac2e6e1a603b63672e9a1f91b.png
+    file_size: 2132257
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47700257
+  block_type: Image
+  title: WHITE BOARD I+II
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-07-08T14:35:47Z'
+  updated_at: '2026-07-08T14:36:19Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700257/original_d5d77777ea6e0ebfeab24933c1444c08.png?1783521348
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1Ny9vcmlnaW5hbF9kNWQ3Nzc3N2VhNmUwZWJmZWFiMjQ5MzNjMTQ0NGMwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1Ny9vcmlnaW5hbF9kNWQ3Nzc3N2VhNmUwZWJmZWFiMjQ5MzNjMTQ0NGMwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1Ny9vcmlnaW5hbF9kNWQ3Nzc3N2VhNmUwZWJmZWFiMjQ5MzNjMTQ0NGMwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1Ny9vcmlnaW5hbF9kNWQ3Nzc3N2VhNmUwZWJmZWFiMjQ5MzNjMTQ0NGMwOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d5d77777ea6e0ebfeab24933c1444c08.png
+    file_size: 2251769
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47700255
+  block_type: Image
+  title: WATER - A CARTOGRAPHY OF TRANSITION ii
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 7
+  created_at: '2026-07-08T14:35:44Z'
+  updated_at: '2026-07-08T14:36:16Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700255/original_00ba20b39c033bc767dbc9d0123cbe85.png?1783521345
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NS9vcmlnaW5hbF8wMGJhMjBiMzljMDMzYmM3NjdkYmM5ZDAxMjNjYmU4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NS9vcmlnaW5hbF8wMGJhMjBiMzljMDMzYmM3NjdkYmM5ZDAxMjNjYmU4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NS9vcmlnaW5hbF8wMGJhMjBiMzljMDMzYmM3NjdkYmM5ZDAxMjNjYmU4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NS9vcmlnaW5hbF8wMGJhMjBiMzljMDMzYmM3NjdkYmM5ZDAxMjNjYmU4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 00ba20b39c033bc767dbc9d0123cbe85.png
+    file_size: 1658170
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47700254
+  block_type: Image
+  title: WATER - A CARTOGRAPHY OF TRANSITION
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 6
+  created_at: '2026-07-08T14:35:41Z'
+  updated_at: '2026-07-08T14:36:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700254/original_8fec6f7f2619cc134a2586a26bff4c29.png?1783521342
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NC9vcmlnaW5hbF84ZmVjNmY3ZjI2MTljYzEzNGEyNTg2YTI2YmZmNGMyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NC9vcmlnaW5hbF84ZmVjNmY3ZjI2MTljYzEzNGEyNTg2YTI2YmZmNGMyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NC9vcmlnaW5hbF84ZmVjNmY3ZjI2MTljYzEzNGEyNTg2YTI2YmZmNGMyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1NC9vcmlnaW5hbF84ZmVjNmY3ZjI2MTljYzEzNGEyNTg2YTI2YmZmNGMyOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 8fec6f7f2619cc134a2586a26bff4c29.png
+    file_size: 1587604
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47700250
+  block_type: Image
+  title: WATER ATLAS - THE DUAL LANDSCAPE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-07-08T14:35:39Z'
+  updated_at: '2026-07-08T14:36:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700250/original_43a12bf6f86f82b660edbb0918124d28.png?1783521341
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1MC9vcmlnaW5hbF80M2ExMmJmNmY4NmY4MmI2NjBlZGJiMDkxODEyNGQyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1MC9vcmlnaW5hbF80M2ExMmJmNmY4NmY4MmI2NjBlZGJiMDkxODEyNGQyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1MC9vcmlnaW5hbF80M2ExMmJmNmY4NmY4MmI2NjBlZGJiMDkxODEyNGQyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDI1MC9vcmlnaW5hbF80M2ExMmJmNmY4NmY4MmI2NjBlZGJiMDkxODEyNGQyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 43a12bf6f86f82b660edbb0918124d28.png
+    file_size: 2016220
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47700238
+  block_type: Image
+  title: WATER ATLAS - THE DUAL LANDSCAPE OF H20
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-07-08T14:35:36Z'
+  updated_at: '2026-07-08T14:36:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700238/original_8380dbf326dc52d4d418ba126b126339.png?1783521337
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzOC9vcmlnaW5hbF84MzgwZGJmMzI2ZGM1MmQ0ZDQxOGJhMTI2YjEyNjMzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzOC9vcmlnaW5hbF84MzgwZGJmMzI2ZGM1MmQ0ZDQxOGJhMTI2YjEyNjMzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzOC9vcmlnaW5hbF84MzgwZGJmMzI2ZGM1MmQ0ZDQxOGJhMTI2YjEyNjMzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzOC9vcmlnaW5hbF84MzgwZGJmMzI2ZGM1MmQ0ZDQxOGJhMTI2YjEyNjMzOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 8380dbf326dc52d4d418ba126b126339.png
+    file_size: 1772031
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47700236
+  block_type: Image
+  title: MATERIAL ATLAS - FOUR WINDOWS ON TRANSITION
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 3
+  created_at: '2026-07-08T14:35:33Z'
+  updated_at: '2026-07-08T14:36:09Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700236/original_ceae9bf24ca193f360348e8f7071ab25.png?1783521334
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNi9vcmlnaW5hbF9jZWFlOWJmMjRjYTE5M2YzNjAzNDhlOGY3MDcxYWIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNi9vcmlnaW5hbF9jZWFlOWJmMjRjYTE5M2YzNjAzNDhlOGY3MDcxYWIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNi9vcmlnaW5hbF9jZWFlOWJmMjRjYTE5M2YzNjAzNDhlOGY3MDcxYWIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNi9vcmlnaW5hbF9jZWFlOWJmMjRjYTE5M2YzNjAzNDhlOGY3MDcxYWIyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: ceae9bf24ca193f360348e8f7071ab25.png
+    file_size: 1930867
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47700235
+  block_type: Image
+  title: SYNTHESIS - THE 4 + 1 VIEW
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-07-08T14:35:31Z'
+  updated_at: '2026-07-08T14:36:09Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700235/original_ee0dda3a32707806fdb8fd432e447e25.png?1783521332
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNS9vcmlnaW5hbF9lZTBkZGEzYTMyNzA3ODA2ZmRiOGZkNDMyZTQ0N2UyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNS9vcmlnaW5hbF9lZTBkZGEzYTMyNzA3ODA2ZmRiOGZkNDMyZTQ0N2UyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNS9vcmlnaW5hbF9lZTBkZGEzYTMyNzA3ODA2ZmRiOGZkNDMyZTQ0N2UyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzNS9vcmlnaW5hbF9lZTBkZGEzYTMyNzA3ODA2ZmRiOGZkNDMyZTQ0N2UyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: ee0dda3a32707806fdb8fd432e447e25.png
+    file_size: 2111233
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47700232
+  block_type: Image
+  title: FIELD NOTES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-07-08T14:35:29Z'
+  updated_at: '2026-07-08T14:36:04Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700232/original_2a94a019be3fbe85395caa23136c16a0.png?1783521330
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzMi9vcmlnaW5hbF8yYTk0YTAxOWJlM2ZiZTg1Mzk1Y2FhMjMxMzZjMTZhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzMi9vcmlnaW5hbF8yYTk0YTAxOWJlM2ZiZTg1Mzk1Y2FhMjMxMzZjMTZhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzMi9vcmlnaW5hbF8yYTk0YTAxOWJlM2ZiZTg1Mzk1Y2FhMjMxMzZjMTZhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDIzMi9vcmlnaW5hbF8yYTk0YTAxOWJlM2ZiZTg1Mzk1Y2FhMjMxMzZjMTZhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1535
+    height: 1024
+    aspect_ratio: 1.499
+    content_type: image/png
+    filename: 2a94a019be3fbe85395caa23136c16a0.png
+    file_size: 2071688
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

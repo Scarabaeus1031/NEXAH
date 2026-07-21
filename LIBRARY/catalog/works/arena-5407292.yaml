@@ -1,0 +1,547 @@
+schema_version: '0.1'
+catalog_key: arena:5407292
+authority: noncanonical_website_catalog
+registered_entity_id: NX-000009
+display_title: THE ATLAS OF ATLASES
+source:
+  arena_channel_id: 5407292
+  arena_slug: the-atlas-of-atlases
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/the-atlas-of-atlases
+  live_title: THE ATLAS OF ATLASES
+  description: "How do human beings find their way through reality?  \nThis collection is the entrance hall of the NEXAH Library.\n\
+    Rather than presenting a single theory, it maps three complementary ways of understanding orientation:\n• Relational Cartography\
+    \ — how relations create structure and meaning.\n• The Atlas of Life — how living systems grow, adapt and remain coherent.\n\
+    • Design as Orientation — how humans have always designed tools to navigate reality, from cave paintings to cognitive\
+    \ maps.\nTogether they form an atlas of atlases:\na map that connects maps.\nAcross science, nature, architecture, psychology,\
+    \ design and culture, the same recurring motifs appear again and again:\nRelation.\nOrientation.\nTransition.\nNavigation.\n\
+    Meaning.\nReturn.\nThis collection is not intended as a finished worldview.\nIt is an invitation to compare perspectives,\
+    \ discover patterns and build better maps for navigating an increasingly complex world.\nBecause before we design better\
+    \ systems,\nwe first need better ways to orient ourselves within them.\nOrientation is not the destination.\nIt is the\
+    \ beginning of every meaningful journey.\nNEXAH Library\nThe Architecture of Orientation"
+  visibility: closed
+  state: available
+  member_count: 18
+  created_at: '2026-07-06T14:20:47Z'
+  updated_at: '2026-07-10T22:51:04Z'
+editorial:
+  classification_state: canonical
+  object_family: work
+  type: atlas
+  form: meta_atlas
+  library_function: meta_navigation
+  publication_status: published
+  revision_state: approved
+  content_maturity: developing
+  series: null
+  confidence: canonical
+  human_decision: confirmed
+catalog_depth: atlas_structure
+cover:
+  arena_block_id: 47625553
+  title: THE ATLAS OF ATLASES
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625553/original_5783094ff597393417d8c99869753f24.png?1783347719
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1My9vcmlnaW5hbF81NzgzMDk0ZmY1OTczOTM0MTdkOGM5OTg2OTc1M2YyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1My9vcmlnaW5hbF81NzgzMDk0ZmY1OTczOTM0MTdkOGM5OTg2OTc1M2YyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1My9vcmlnaW5hbF81NzgzMDk0ZmY1OTczOTM0MTdkOGM5OTg2OTc1M2YyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1My9vcmlnaW5hbF81NzgzMDk0ZmY1OTczOTM0MTdkOGM5OTg2OTc1M2YyNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: 5783094ff597393417d8c99869753f24.png
+  file_size: 2691115
+  alt_text: null
+structure:
+  block_count: 18
+  titled_block_count: 18
+  title_coverage: 1.0
+  foreword:
+  - sequence_index: 2
+    arena_block_id: 47625552
+    title: FOREWORD
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    plate:
+    - sequence_index: 4
+      arena_block_id: 47625548
+      title: NEXAH XV ATLAS *- PLATE O THE HUMAN ORIENTATION FIELD
+    - sequence_index: 5
+      arena_block_id: 47625546
+      title: NEXAH XV ATLAS + PLATE I ORIENT. CREATE ARCHITECTS OF ORIENTATION
+    - sequence_index: 6
+      arena_block_id: 47625545
+      title: NEXAH XV ATLAS+ WHAT IS ORIENTATION? PLATE O
+    - sequence_index: 11
+      arena_block_id: 47625536
+      title: PLATE I PERCEPTION
+    - sequence_index: 12
+      arena_block_id: 47625529
+      title: PLATE II * SPACE %22We shape our dwellings, and afterwards our dwellings shape us.%22 THE ART OF SHAPING SPACE
+    - sequence_index: 13
+      arena_block_id: 47625527
+      title: PLATE III RELATION THE ART OF CONNECTION
+    - sequence_index: 14
+      arena_block_id: 47625525
+      title: '* PLATE IV MEANING THE ART OF SIGNIFICANCE'
+    - sequence_index: 15
+      arena_block_id: 47625524
+      title: '* PLATE V * TRANSFORMATIONTHE ART of CHANGE'
+    - sequence_index: 16
+      arena_block_id: 47625522
+      title: '* PLATE VI DESIGN THE ART OF ORIENTATION'
+    - sequence_index: 17
+      arena_block_id: 47625519
+      title: PLATE 7(omega) THE TWO JOURNEYS
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47625553
+  block_type: Image
+  title: THE ATLAS OF ATLASES
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 18
+  created_at: '2026-07-06T14:21:35Z'
+  updated_at: '2026-07-06T14:22:02Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625553/original_5783094ff597393417d8c99869753f24.png?1783347719
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 5783094ff597393417d8c99869753f24.png
+    file_size: 2691115
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47625552
+  block_type: Image
+  title: FOREWORD
+  description: null
+  page_role: foreword
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-07-06T14:21:33Z'
+  updated_at: '2026-07-06T14:22:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625552/original_5f1bcecfd67b1a614fb86cffae1138e0.png?1783347718
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1Mi9vcmlnaW5hbF81ZjFiY2VjZmQ2N2IxYTYxNGZiODZjZmZhZTExMzhlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1Mi9vcmlnaW5hbF81ZjFiY2VjZmQ2N2IxYTYxNGZiODZjZmZhZTExMzhlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1Mi9vcmlnaW5hbF81ZjFiY2VjZmQ2N2IxYTYxNGZiODZjZmZhZTExMzhlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU1Mi9vcmlnaW5hbF81ZjFiY2VjZmQ2N2IxYTYxNGZiODZjZmZhZTExMzhlMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 5f1bcecfd67b1a614fb86cffae1138e0.png
+    file_size: 2674425
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47625549
+  block_type: Image
+  title: '- NEXAH LIBRARY + THE ATLAS OF ATLASES'
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-07-06T14:21:29Z'
+  updated_at: '2026-07-06T14:23:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625549/original_913aa799add36eb112ca497b885bd4ed.png?1783347707
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OS9vcmlnaW5hbF85MTNhYTc5OWFkZDM2ZWIxMTJjYTQ5N2I4ODViZDRlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OS9vcmlnaW5hbF85MTNhYTc5OWFkZDM2ZWIxMTJjYTQ5N2I4ODViZDRlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OS9vcmlnaW5hbF85MTNhYTc5OWFkZDM2ZWIxMTJjYTQ5N2I4ODViZDRlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OS9vcmlnaW5hbF85MTNhYTc5OWFkZDM2ZWIxMTJjYTQ5N2I4ODViZDRlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1149
+    height: 1369
+    aspect_ratio: 0.8393
+    content_type: image/png
+    filename: 913aa799add36eb112ca497b885bd4ed.png
+    file_size: 2816114
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47625548
+  block_type: Image
+  title: NEXAH XV ATLAS *- PLATE O THE HUMAN ORIENTATION FIELD
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 15
+  created_at: '2026-07-06T14:21:27Z'
+  updated_at: '2026-07-06T14:21:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625548/original_e9b57b58bf455cdfeadc904be8d50587.png?1783347706
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OC9vcmlnaW5hbF9lOWI1N2I1OGJmNDU1Y2RmZWFkYzkwNGJlOGQ1MDU4Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OC9vcmlnaW5hbF9lOWI1N2I1OGJmNDU1Y2RmZWFkYzkwNGJlOGQ1MDU4Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OC9vcmlnaW5hbF9lOWI1N2I1OGJmNDU1Y2RmZWFkYzkwNGJlOGQ1MDU4Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0OC9vcmlnaW5hbF9lOWI1N2I1OGJmNDU1Y2RmZWFkYzkwNGJlOGQ1MDU4Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: e9b57b58bf455cdfeadc904be8d50587.png
+    file_size: 2897848
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47625546
+  block_type: Image
+  title: NEXAH XV ATLAS + PLATE I ORIENT. CREATE ARCHITECTS OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 14
+  created_at: '2026-07-06T14:21:25Z'
+  updated_at: '2026-07-06T14:23:37Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625546/original_192a67d02d39ed44aa4407af4cd11418.png?1783347699
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Ni9vcmlnaW5hbF8xOTJhNjdkMDJkMzllZDQ0YWE0NDA3YWY0Y2QxMTQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Ni9vcmlnaW5hbF8xOTJhNjdkMDJkMzllZDQ0YWE0NDA3YWY0Y2QxMTQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Ni9vcmlnaW5hbF8xOTJhNjdkMDJkMzllZDQ0YWE0NDA3YWY0Y2QxMTQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Ni9vcmlnaW5hbF8xOTJhNjdkMDJkMzllZDQ0YWE0NDA3YWY0Y2QxMTQxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 192a67d02d39ed44aa4407af4cd11418.png
+    file_size: 2816235
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47625545
+  block_type: Image
+  title: NEXAH XV ATLAS+ WHAT IS ORIENTATION? PLATE O
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 13
+  created_at: '2026-07-06T14:21:23Z'
+  updated_at: '2026-07-06T14:21:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625545/original_f0096b968ad7d12fda2b7202add79495.png?1783347698
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0NS9vcmlnaW5hbF9mMDA5NmI5NjhhZDdkMTJmZGEyYjcyMDJhZGQ3OTQ5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0NS9vcmlnaW5hbF9mMDA5NmI5NjhhZDdkMTJmZGEyYjcyMDJhZGQ3OTQ5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0NS9vcmlnaW5hbF9mMDA5NmI5NjhhZDdkMTJmZGEyYjcyMDJhZGQ3OTQ5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0NS9vcmlnaW5hbF9mMDA5NmI5NjhhZDdkMTJmZGEyYjcyMDJhZGQ3OTQ5NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f0096b968ad7d12fda2b7202add79495.png
+    file_size: 3078670
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47625543
+  block_type: Image
+  title: DESIGN AS ORIENTATION FROM CAVE PAINTINGS TO COGNITIVE MAPS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-07-06T14:21:20Z'
+  updated_at: '2026-07-06T14:24:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625543/original_15070963db24b3505c4045cbce0dd5ae.png?1783347698
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0My9vcmlnaW5hbF8xNTA3MDk2M2RiMjRiMzUwNWM0MDQ1Y2JjZTBkZDVhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0My9vcmlnaW5hbF8xNTA3MDk2M2RiMjRiMzUwNWM0MDQ1Y2JjZTBkZDVhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0My9vcmlnaW5hbF8xNTA3MDk2M2RiMjRiMzUwNWM0MDQ1Y2JjZTBkZDVhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0My9vcmlnaW5hbF8xNTA3MDk2M2RiMjRiMzUwNWM0MDQ1Y2JjZTBkZDVhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 15070963db24b3505c4045cbce0dd5ae.png
+    file_size: 2715509
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47625542
+  block_type: Image
+  title: DESIGN AS ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-07-06T14:21:17Z'
+  updated_at: '2026-07-06T14:21:40Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625542/original_9c9289d64c7714847efed942ebd93fec.png?1783347697
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Mi9vcmlnaW5hbF85YzkyODlkNjRjNzcxNDg0N2VmZWQ5NDJlYmQ5M2ZlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Mi9vcmlnaW5hbF85YzkyODlkNjRjNzcxNDg0N2VmZWQ5NDJlYmQ5M2ZlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Mi9vcmlnaW5hbF85YzkyODlkNjRjNzcxNDg0N2VmZWQ5NDJlYmQ5M2ZlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTU0Mi9vcmlnaW5hbF85YzkyODlkNjRjNzcxNDg0N2VmZWQ5NDJlYmQ5M2ZlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 9c9289d64c7714847efed942ebd93fec.png
+    file_size: 2688271
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47625539
+  block_type: Image
+  title: The Periodic Table of ORIENTATION DESIGNERS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-07-06T14:21:15Z'
+  updated_at: '2026-07-06T14:21:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625539/original_bfbbb1e50c141f6b6b97801347613a92.png?1783347692
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOS9vcmlnaW5hbF9iZmJiYjFlNTBjMTQxZjZiNmI5NzgwMTM0NzYxM2E5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOS9vcmlnaW5hbF9iZmJiYjFlNTBjMTQxZjZiNmI5NzgwMTM0NzYxM2E5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOS9vcmlnaW5hbF9iZmJiYjFlNTBjMTQxZjZiNmI5NzgwMTM0NzYxM2E5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOS9vcmlnaW5hbF9iZmJiYjFlNTBjMTQxZjZiNmI5NzgwMTM0NzYxM2E5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: bfbbb1e50c141f6b6b97801347613a92.png
+    file_size: 2546062
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47625538
+  block_type: Image
+  title: DESIGN AS ORIENTATION_ii
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-07-06T14:21:13Z'
+  updated_at: '2026-07-06T14:21:35Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625538/original_c2043f4e9576b5366484a379e3dcb26e.png?1783347691
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOC9vcmlnaW5hbF9jMjA0M2Y0ZTk1NzZiNTM2NjQ4NGEzNzllM2RjYjI2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOC9vcmlnaW5hbF9jMjA0M2Y0ZTk1NzZiNTM2NjQ4NGEzNzllM2RjYjI2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOC9vcmlnaW5hbF9jMjA0M2Y0ZTk1NzZiNTM2NjQ4NGEzNzllM2RjYjI2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzOC9vcmlnaW5hbF9jMjA0M2Y0ZTk1NzZiNTM2NjQ4NGEzNzllM2RjYjI2ZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: c2043f4e9576b5366484a379e3dcb26e.png
+    file_size: 2684906
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47625536
+  block_type: Image
+  title: PLATE I PERCEPTION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 8
+  created_at: '2026-07-06T14:21:12Z'
+  updated_at: '2026-07-06T14:24:36Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625536/original_6e55d163d3237098d8662d0ca81cfe51.png?1783347689
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzNi9vcmlnaW5hbF82ZTU1ZDE2M2QzMjM3MDk4ZDg2NjJkMGNhODFjZmU1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzNi9vcmlnaW5hbF82ZTU1ZDE2M2QzMjM3MDk4ZDg2NjJkMGNhODFjZmU1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzNi9vcmlnaW5hbF82ZTU1ZDE2M2QzMjM3MDk4ZDg2NjJkMGNhODFjZmU1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUzNi9vcmlnaW5hbF82ZTU1ZDE2M2QzMjM3MDk4ZDg2NjJkMGNhODFjZmU1MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 6e55d163d3237098d8662d0ca81cfe51.png
+    file_size: 2825056
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47625529
+  block_type: Image
+  title: PLATE II * SPACE %22We shape our dwellings, and afterwards our dwellings shape us.%22 THE ART OF SHAPING SPACE
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 7
+  created_at: '2026-07-06T14:21:08Z'
+  updated_at: '2026-07-06T14:21:27Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625529/original_13d3897d509788c06ab28ff1e6727c92.png?1783347680
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyOS9vcmlnaW5hbF8xM2QzODk3ZDUwOTc4OGMwNmFiMjhmZjFlNjcyN2M5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyOS9vcmlnaW5hbF8xM2QzODk3ZDUwOTc4OGMwNmFiMjhmZjFlNjcyN2M5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyOS9vcmlnaW5hbF8xM2QzODk3ZDUwOTc4OGMwNmFiMjhmZjFlNjcyN2M5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyOS9vcmlnaW5hbF8xM2QzODk3ZDUwOTc4OGMwNmFiMjhmZjFlNjcyN2M5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 13d3897d509788c06ab28ff1e6727c92.png
+    file_size: 3001691
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47625527
+  block_type: Image
+  title: PLATE III RELATION THE ART OF CONNECTION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 6
+  created_at: '2026-07-06T14:21:06Z'
+  updated_at: '2026-07-06T14:21:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625527/original_09f57644e69bc1e3972c821d79212798.png?1783347676
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNy9vcmlnaW5hbF8wOWY1NzY0NGU2OWJjMWUzOTcyYzgyMWQ3OTIxMjc5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNy9vcmlnaW5hbF8wOWY1NzY0NGU2OWJjMWUzOTcyYzgyMWQ3OTIxMjc5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNy9vcmlnaW5hbF8wOWY1NzY0NGU2OWJjMWUzOTcyYzgyMWQ3OTIxMjc5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNy9vcmlnaW5hbF8wOWY1NzY0NGU2OWJjMWUzOTcyYzgyMWQ3OTIxMjc5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 09f57644e69bc1e3972c821d79212798.png
+    file_size: 2848139
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 47625525
+  block_type: Image
+  title: '* PLATE IV MEANING THE ART OF SIGNIFICANCE'
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 5
+  created_at: '2026-07-06T14:21:04Z'
+  updated_at: '2026-07-06T14:21:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625525/original_978a1b7f1021f9d37a4bb5e317108111.png?1783347674
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNS9vcmlnaW5hbF85NzhhMWI3ZjEwMjFmOWQzN2E0YmI1ZTMxNzEwODExMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNS9vcmlnaW5hbF85NzhhMWI3ZjEwMjFmOWQzN2E0YmI1ZTMxNzEwODExMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNS9vcmlnaW5hbF85NzhhMWI3ZjEwMjFmOWQzN2E0YmI1ZTMxNzEwODExMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNS9vcmlnaW5hbF85NzhhMWI3ZjEwMjFmOWQzN2E0YmI1ZTMxNzEwODExMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 978a1b7f1021f9d37a4bb5e317108111.png
+    file_size: 2967234
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 47625524
+  block_type: Image
+  title: '* PLATE V * TRANSFORMATIONTHE ART of CHANGE'
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 4
+  created_at: '2026-07-06T14:21:03Z'
+  updated_at: '2026-07-06T14:21:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625524/original_d59e2d09df927b4ca9b9fd18a8490d5b.png?1783347673
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNC9vcmlnaW5hbF9kNTllMmQwOWRmOTI3YjRjYTliOWZkMThhODQ5MGQ1Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNC9vcmlnaW5hbF9kNTllMmQwOWRmOTI3YjRjYTliOWZkMThhODQ5MGQ1Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNC9vcmlnaW5hbF9kNTllMmQwOWRmOTI3YjRjYTliOWZkMThhODQ5MGQ1Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyNC9vcmlnaW5hbF9kNTllMmQwOWRmOTI3YjRjYTliOWZkMThhODQ5MGQ1Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: d59e2d09df927b4ca9b9fd18a8490d5b.png
+    file_size: 2948282
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 47625522
+  block_type: Image
+  title: '* PLATE VI DESIGN THE ART OF ORIENTATION'
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 3
+  created_at: '2026-07-06T14:21:01Z'
+  updated_at: '2026-07-06T14:21:08Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625522/original_81a42578ff662644f9237e0d8bd58858.png?1783347662
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyMi9vcmlnaW5hbF84MWE0MjU3OGZmNjYyNjQ0ZjkyMzdlMGQ4YmQ1ODg1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyMi9vcmlnaW5hbF84MWE0MjU3OGZmNjYyNjQ0ZjkyMzdlMGQ4YmQ1ODg1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyMi9vcmlnaW5hbF84MWE0MjU3OGZmNjYyNjQ0ZjkyMzdlMGQ4YmQ1ODg1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUyMi9vcmlnaW5hbF84MWE0MjU3OGZmNjYyNjQ0ZjkyMzdlMGQ4YmQ1ODg1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 81a42578ff662644f9237e0d8bd58858.png
+    file_size: 2851408
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 47625519
+  block_type: Image
+  title: PLATE 7(omega) THE TWO JOURNEYS
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 2
+  created_at: '2026-07-06T14:20:58Z'
+  updated_at: '2026-07-06T14:21:05Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625519/original_3fda3985589bf8716f1b946a93d711a5.png?1783347660
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxOS9vcmlnaW5hbF8zZmRhMzk4NTU4OWJmODcxNmYxYjk0NmE5M2Q3MTFhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxOS9vcmlnaW5hbF8zZmRhMzk4NTU4OWJmODcxNmYxYjk0NmE5M2Q3MTFhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxOS9vcmlnaW5hbF8zZmRhMzk4NTU4OWJmODcxNmYxYjk0NmE5M2Q3MTFhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxOS9vcmlnaW5hbF8zZmRhMzk4NTU4OWJmODcxNmYxYjk0NmE5M2Q3MTFhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 3fda3985589bf8716f1b946a93d711a5.png
+    file_size: 3026157
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 47625516
+  block_type: Image
+  title: THE CONTINUING ATLAS LIVING LIBRARY OF ORIENTATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-07-06T14:20:56Z'
+  updated_at: '2026-07-06T14:21:01Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47625516/original_991567a53c609ff2bf497950d525d7c3.png?1783347657
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxNi9vcmlnaW5hbF85OTE1NjdhNTNjNjA5ZmYyYmY0OTc5NTBkNTI1ZDdjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxNi9vcmlnaW5hbF85OTE1NjdhNTNjNjA5ZmYyYmY0OTc5NTBkNTI1ZDdjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxNi9vcmlnaW5hbF85OTE1NjdhNTNjNjA5ZmYyYmY0OTc5NTBkNTI1ZDdjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYyNTUxNi9vcmlnaW5hbF85OTE1NjdhNTNjNjA5ZmYyYmY0OTc5NTBkNTI1ZDdjMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 991567a53c609ff2bf497950d525d7c3.png
+    file_size: 2495603
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

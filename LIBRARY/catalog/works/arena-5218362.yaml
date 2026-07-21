@@ -1,0 +1,422 @@
+schema_version: '0.1'
+catalog_key: arena:5218362
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH XV ATLAS — TWO SIDES OF ONE MEDAL
+source:
+  arena_channel_id: 5218362
+  arena_slug: nexah-xv-atlas-two-sides-of-one-medal
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-xv-atlas-two-sides-of-one-medal
+  live_title: NEXAH XV ATLAS  - Two Sides of One Medal
+  description: "NEXAH XV ATLAS is a visual exploration of reality as relation, transition, and navigation.\nIt combines structural\
+    \ thinking, geometry, systems theory, cognition, science, art, perception, and human experience into a unified atlas language.\
+    \ \nThe project does not seek a final answer or absolute theory.\nInstead, it explores how meaning, structure, orientation,\
+    \ coherence, and transformation emerge through relations between systems, observers, and worlds.\nThe atlas moves between:\n\
+    mathematics & feeling\nlogic & experience\nstructure & story\nscience & perception\nmaps & reality\nThrough visual plates,\
+    \ symbolic diagrams, human-centered perspectives, and transition geometries, the series builds an accessible language\
+    \ for navigating complexity without reducing reality to a single worldview.\nNot the what.\nNot the how much.\nThe way\
+    \ things relate, persist, transform, and become."
+  visibility: closed
+  state: available
+  member_count: 13
+  created_at: '2026-05-25T02:11:50Z'
+  updated_at: '2026-06-23T00:03:47Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: visual_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH XV Atlas
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - XV Atlas
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46467824
+  title: TWO SIDES OF ONE MEDAL
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467824/original_c4795a4a5ab9d75987cfc03932c45572.png?1779675202
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyNC9vcmlnaW5hbF9jNDc5NWE0YTVhYjlkNzU5ODdjZmMwMzkzMmM0NTU3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyNC9vcmlnaW5hbF9jNDc5NWE0YTVhYjlkNzU5ODdjZmMwMzkzMmM0NTU3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyNC9vcmlnaW5hbF9jNDc5NWE0YTVhYjlkNzU5ODdjZmMwMzkzMmM0NTU3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyNC9vcmlnaW5hbF9jNDc5NWE0YTVhYjlkNzU5ODdjZmMwMzkzMmM0NTU3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1536
+  height: 1024
+  aspect_ratio: 1.5
+  content_type: image/png
+  filename: c4795a4a5ab9d75987cfc03932c45572.png
+  file_size: 2502827
+  alt_text: null
+structure:
+  block_count: 13
+  titled_block_count: 13
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    plate:
+    - sequence_index: 4
+      arena_block_id: 46467820
+      title: NEXAH XV ATLAS PLATE I - RELATIONAL STRUCTURES
+    - sequence_index: 5
+      arena_block_id: 46467818
+      title: HUMAN PLATE I - WE BECOME THROUGH RELATION
+    - sequence_index: 6
+      arena_block_id: 46467817
+      title: PLATE II - ORIENTATION CLASSES
+    - sequence_index: 7
+      arena_block_id: 46467816
+      title: HUMAN PLATE II - HOW HUMANS ORIENT
+    - sequence_index: 8
+      arena_block_id: 46467813
+      title: PLATE III - LOCAL LINEARITY & GLOBAL CLOSURE
+    - sequence_index: 9
+      arena_block_id: 46467812
+      title: HUMAN PLATE III - THE STORIES WE LIVE INSIDE
+    - sequence_index: 10
+      arena_block_id: 46467811
+      title: PLATE IV - TRANSITION GEOMETRIES
+    - sequence_index: 11
+      arena_block_id: 46467808
+      title: HUMAN PLATE IV - BECOMING
+    transition:
+    - sequence_index: 10
+      arena_block_id: 46467811
+      title: PLATE IV - TRANSITION GEOMETRIES
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46467824
+  block_type: Image
+  title: TWO SIDES OF ONE MEDAL
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-25T02:13:20Z'
+  updated_at: '2026-05-25T18:00:46Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467824/original_c4795a4a5ab9d75987cfc03932c45572.png?1779675202
+    variants: *id001
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c4795a4a5ab9d75987cfc03932c45572.png
+    file_size: 2502827
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46467822
+  block_type: Image
+  title: INDEX OF PLATES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-25T02:13:18Z'
+  updated_at: '2026-05-25T02:13:22Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467822/original_acf6556219556ef99d22fc88c18a68c7.png?1779675199
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMi9vcmlnaW5hbF9hY2Y2NTU2MjE5NTU2ZWY5OWQyMmZjODhjMThhNjhjNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMi9vcmlnaW5hbF9hY2Y2NTU2MjE5NTU2ZWY5OWQyMmZjODhjMThhNjhjNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMi9vcmlnaW5hbF9hY2Y2NTU2MjE5NTU2ZWY5OWQyMmZjODhjMThhNjhjNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMi9vcmlnaW5hbF9hY2Y2NTU2MjE5NTU2ZWY5OWQyMmZjODhjMThhNjhjNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: acf6556219556ef99d22fc88c18a68c7.png
+    file_size: 2087074
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46467821
+  block_type: Image
+  title: INDEX OF PLATES TWO SIDES OF ONE MEDAL - UNITED BY RELATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-25T02:13:16Z'
+  updated_at: '2026-05-25T02:13:19Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467821/original_7884d1a709101cc9f650e4e6117efb28.png?1779675196
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMS9vcmlnaW5hbF83ODg0ZDFhNzA5MTAxY2M5ZjY1MGU0ZTYxMTdlZmIyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMS9vcmlnaW5hbF83ODg0ZDFhNzA5MTAxY2M5ZjY1MGU0ZTYxMTdlZmIyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMS9vcmlnaW5hbF83ODg0ZDFhNzA5MTAxY2M5ZjY1MGU0ZTYxMTdlZmIyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMS9vcmlnaW5hbF83ODg0ZDFhNzA5MTAxY2M5ZjY1MGU0ZTYxMTdlZmIyOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7884d1a709101cc9f650e4e6117efb28.png
+    file_size: 2165550
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46467820
+  block_type: Image
+  title: NEXAH XV ATLAS PLATE I - RELATIONAL STRUCTURES
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 10
+  created_at: '2026-05-25T02:13:10Z'
+  updated_at: '2026-05-25T02:13:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467820/original_5b13cd330273463e3ed28d968bbeff3a.png?1779675192
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMC9vcmlnaW5hbF81YjEzY2QzMzAyNzM0NjNlM2VkMjhkOTY4YmJlZmYzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMC9vcmlnaW5hbF81YjEzY2QzMzAyNzM0NjNlM2VkMjhkOTY4YmJlZmYzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMC9vcmlnaW5hbF81YjEzY2QzMzAyNzM0NjNlM2VkMjhkOTY4YmJlZmYzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgyMC9vcmlnaW5hbF81YjEzY2QzMzAyNzM0NjNlM2VkMjhkOTY4YmJlZmYzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5b13cd330273463e3ed28d968bbeff3a.png
+    file_size: 2141311
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46467818
+  block_type: Image
+  title: HUMAN PLATE I - WE BECOME THROUGH RELATION
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 9
+  created_at: '2026-05-25T02:13:07Z'
+  updated_at: '2026-05-25T02:13:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467818/original_2c9902dfd7252faae25b3c16ac9e4a5f.png?1779675188
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxOC9vcmlnaW5hbF8yYzk5MDJkZmQ3MjUyZmFhZTI1YjNjMTZhYzllNGE1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxOC9vcmlnaW5hbF8yYzk5MDJkZmQ3MjUyZmFhZTI1YjNjMTZhYzllNGE1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxOC9vcmlnaW5hbF8yYzk5MDJkZmQ3MjUyZmFhZTI1YjNjMTZhYzllNGE1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxOC9vcmlnaW5hbF8yYzk5MDJkZmQ3MjUyZmFhZTI1YjNjMTZhYzllNGE1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 2c9902dfd7252faae25b3c16ac9e4a5f.png
+    file_size: 2240066
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46467817
+  block_type: Image
+  title: PLATE II - ORIENTATION CLASSES
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 8
+  created_at: '2026-05-25T02:13:05Z'
+  updated_at: '2026-05-25T02:13:09Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467817/original_3cae50ce13fa4a8b159240ca469ff5a0.png?1779675187
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNy9vcmlnaW5hbF8zY2FlNTBjZTEzZmE0YThiMTU5MjQwY2E0NjlmZjVhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNy9vcmlnaW5hbF8zY2FlNTBjZTEzZmE0YThiMTU5MjQwY2E0NjlmZjVhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNy9vcmlnaW5hbF8zY2FlNTBjZTEzZmE0YThiMTU5MjQwY2E0NjlmZjVhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNy9vcmlnaW5hbF8zY2FlNTBjZTEzZmE0YThiMTU5MjQwY2E0NjlmZjVhMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3cae50ce13fa4a8b159240ca469ff5a0.png
+    file_size: 2003984
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46467816
+  block_type: Image
+  title: HUMAN PLATE II - HOW HUMANS ORIENT
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 7
+  created_at: '2026-05-25T02:13:02Z'
+  updated_at: '2026-05-25T02:13:07Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467816/original_25921916b7498d5e8446a97f2d81ce71.png?1779675183
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNi9vcmlnaW5hbF8yNTkyMTkxNmI3NDk4ZDVlODQ0NmE5N2YyZDgxY2U3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNi9vcmlnaW5hbF8yNTkyMTkxNmI3NDk4ZDVlODQ0NmE5N2YyZDgxY2U3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNi9vcmlnaW5hbF8yNTkyMTkxNmI3NDk4ZDVlODQ0NmE5N2YyZDgxY2U3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxNi9vcmlnaW5hbF8yNTkyMTkxNmI3NDk4ZDVlODQ0NmE5N2YyZDgxY2U3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 25921916b7498d5e8446a97f2d81ce71.png
+    file_size: 2237993
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46467813
+  block_type: Image
+  title: PLATE III - LOCAL LINEARITY & GLOBAL CLOSURE
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 6
+  created_at: '2026-05-25T02:12:49Z'
+  updated_at: '2026-05-25T02:12:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467813/original_5e1e737fdc9977a6061f9c29dace6eec.png?1779675171
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMy9vcmlnaW5hbF81ZTFlNzM3ZmRjOTk3N2E2MDYxZjljMjlkYWNlNmVlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMy9vcmlnaW5hbF81ZTFlNzM3ZmRjOTk3N2E2MDYxZjljMjlkYWNlNmVlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMy9vcmlnaW5hbF81ZTFlNzM3ZmRjOTk3N2E2MDYxZjljMjlkYWNlNmVlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMy9vcmlnaW5hbF81ZTFlNzM3ZmRjOTk3N2E2MDYxZjljMjlkYWNlNmVlYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5e1e737fdc9977a6061f9c29dace6eec.png
+    file_size: 1969170
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46467812
+  block_type: Image
+  title: HUMAN PLATE III - THE STORIES WE LIVE INSIDE
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 5
+  created_at: '2026-05-25T02:12:44Z'
+  updated_at: '2026-05-25T02:12:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467812/original_93116ae20724eff8b5125cfeb333b39a.png?1779675165
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMi9vcmlnaW5hbF85MzExNmFlMjA3MjRlZmY4YjUxMjVjZmViMzMzYjM5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMi9vcmlnaW5hbF85MzExNmFlMjA3MjRlZmY4YjUxMjVjZmViMzMzYjM5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMi9vcmlnaW5hbF85MzExNmFlMjA3MjRlZmY4YjUxMjVjZmViMzMzYjM5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMi9vcmlnaW5hbF85MzExNmFlMjA3MjRlZmY4YjUxMjVjZmViMzMzYjM5YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 93116ae20724eff8b5125cfeb333b39a.png
+    file_size: 2325299
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46467811
+  block_type: Image
+  title: PLATE IV - TRANSITION GEOMETRIES
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  - transition
+  connection_position: 4
+  created_at: '2026-05-25T02:12:42Z'
+  updated_at: '2026-05-25T02:12:47Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467811/original_6ac00cd0166f9c51fd693f29e0433b3a.png?1779675163
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMS9vcmlnaW5hbF82YWMwMGNkMDE2NmY5YzUxZmQ2OTNmMjllMDQzM2IzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMS9vcmlnaW5hbF82YWMwMGNkMDE2NmY5YzUxZmQ2OTNmMjllMDQzM2IzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMS9vcmlnaW5hbF82YWMwMGNkMDE2NmY5YzUxZmQ2OTNmMjllMDQzM2IzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgxMS9vcmlnaW5hbF82YWMwMGNkMDE2NmY5YzUxZmQ2OTNmMjllMDQzM2IzYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6ac00cd0166f9c51fd693f29e0433b3a.png
+    file_size: 2181066
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46467808
+  block_type: Image
+  title: HUMAN PLATE IV - BECOMING
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 3
+  created_at: '2026-05-25T02:12:39Z'
+  updated_at: '2026-05-25T02:12:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467808/original_60c1fc8591df67b9e7be83d186507fa5.png?1779675160
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwOC9vcmlnaW5hbF82MGMxZmM4NTkxZGY2N2I5ZTdiZTgzZDE4NjUwN2ZhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwOC9vcmlnaW5hbF82MGMxZmM4NTkxZGY2N2I5ZTdiZTgzZDE4NjUwN2ZhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwOC9vcmlnaW5hbF82MGMxZmM4NTkxZGY2N2I5ZTdiZTgzZDE4NjUwN2ZhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwOC9vcmlnaW5hbF82MGMxZmM4NTkxZGY2N2I5ZTdiZTgzZDE4NjUwN2ZhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 60c1fc8591df67b9e7be83d186507fa5.png
+    file_size: 2415644
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46467802
+  block_type: Image
+  title: NEXAH - CARTOGRAPHY OF RELATIONS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-25T02:12:18Z'
+  updated_at: '2026-05-25T02:12:31Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467802/original_675bff69158b0939fb6a00d855836b10.png?1779675146
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMi9vcmlnaW5hbF82NzViZmY2OTE1OGIwOTM5ZmI2YTAwZDg1NTgzNmIxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMi9vcmlnaW5hbF82NzViZmY2OTE1OGIwOTM5ZmI2YTAwZDg1NTgzNmIxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMi9vcmlnaW5hbF82NzViZmY2OTE1OGIwOTM5ZmI2YTAwZDg1NTgzNmIxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMi9vcmlnaW5hbF82NzViZmY2OTE1OGIwOTM5ZmI2YTAwZDg1NTgzNmIxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 675bff69158b0939fb6a00d855836b10.png
+    file_size: 2412753
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46467800
+  block_type: Image
+  title: NEXAH RESEARCH ARCHITECTURE THE LIVING STACK
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-25T02:12:16Z'
+  updated_at: '2026-05-25T02:12:29Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46467800/original_6f60dc98243e8ed12bb6d206a99edacb.png?1779675145
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMC9vcmlnaW5hbF82ZjYwZGM5ODI0M2U4ZWQxMmJiNmQyMDZhOTllZGFjYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMC9vcmlnaW5hbF82ZjYwZGM5ODI0M2U4ZWQxMmJiNmQyMDZhOTllZGFjYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMC9vcmlnaW5hbF82ZjYwZGM5ODI0M2U4ZWQxMmJiNmQyMDZhOTllZGFjYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2NzgwMC9vcmlnaW5hbF82ZjYwZGM5ODI0M2U4ZWQxMmJiNmQyMDZhOTllZGFjYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6f60dc98243e8ed12bb6d206a99edacb.png
+    file_size: 2057285
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

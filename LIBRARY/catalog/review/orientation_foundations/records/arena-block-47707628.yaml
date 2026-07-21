@@ -1,0 +1,58 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47707628
+publication:
+  catalog_key: arena:5416617
+  arena_channel_id: 5416617
+  title: ORIENTATION SCIENCE
+source_block:
+  arena_block_id: 47707628
+  sequence_index: 20
+  title: 13 What We Know
+  url: https://www.are.na/block/47707628
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47707628/original_a89ba1d99f703295289e91b28fc753a9.png?1783535874
+  source_fingerprint: 08718f458cf9b29a5129462816d1090754147374abfee4b0b68c8b9905c8c57c
+visual_role: evidence
+visible_text:
+  transcription_status: partial
+  transcription: What We Know — Validated Findings and Key Insights.
+research_elements:
+  definitions: []
+  questions: []
+  observations: []
+  hypotheses: []
+  methods: []
+  models: []
+  evidence_statements:
+  - statement: The page presents patterns, structure, transition rules, multi-scale
+      connection, and navigation as validated findings.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707628
+      source_url: https://www.are.na/block/47707628
+      note: null
+    status: publication_assertion
+  limitations:
+  - statement: The visible page supplies summary claims but no independently inspected
+      protocol, dataset, or validation record within this catalog review.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47707628
+      source_url: https://www.are.na/block/47707628
+      note: null
+    status: publication_assertion
+  open_questions: []
+  concepts: []
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: All findings remain publication assertions. The catalog does not mark
+  them as validated repository evidence.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

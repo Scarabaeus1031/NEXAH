@@ -1,0 +1,250 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+publication:
+  catalog_key: arena:5250350
+  arena_channel_id: 5250350
+  title: THE ARCHITECTURE OF ORIENTATION — VOLUME IV
+  source_url: https://www.are.na/nexah-scarabaeus1031/the-architecture-of-orientation-vol-iv
+page_count: 20
+pages:
+- page_key: arena-block:47699581
+  arena_block_id: 47699581
+  sequence_index: 1
+  title: THE ARCHITECTURE OF ORIENTATION
+  visual_role: cover
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47699581
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699581/original_f109d03676983f3923a61bf8222c91c6.png?1783519831
+  source_fingerprint: cc6a6375a45480d5e97c9b2b4a2da566273001be8625dec75fe2c2a07808ee84
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:46658878
+  arena_block_id: 46658878
+  sequence_index: 2
+  title: THE ARCHITECTURE OF ORIENTATION
+  visual_role: title_page
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/46658878
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658878/original_49e10ee6d6503fd885fdb0951c0acf8e.png?1780347603
+  source_fingerprint: c872e04c57fa1c87d5210a98532d5bb99bd95162ec0ca0ea452159e42f52ba54
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:46997013
+  arena_block_id: 46997013
+  sequence_index: 3
+  title: NEXAH THE CARTOGRAPHY LABORATORY Maps for Navigating Complexity, Transition
+    and Structure
+  visual_role: model
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46997013
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46997013/original_8219a5833e08af498411a2d84121a30c.png?1781311391
+  source_fingerprint: f092e838e3fde7fa3d93e016311bb9b568d2590f57c80ff7530ef5d5b6e479ae
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658890
+  arena_block_id: 46658890
+  sequence_index: 4
+  title: 01 CYBERNETICS & NEXAH
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658890
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658890/original_0ad324efd5e3c112eafb259fd5fb6056.png?1780347614
+  source_fingerprint: 5e8534c0daa0e456984507ecc65db907c6ed43ad221212ffc4206071cd8f3492
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658883
+  arena_block_id: 46658883
+  sequence_index: 5
+  title: 02_DYNAMICAL SYSTEMS & NEXAH
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658883
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658883/original_f68cb2098cedd9a24c61165eb6e23f86.png?1780347609
+  source_fingerprint: b45108a476ae5eeefa59fc03d153095926fbdd4c678362d99fa4b11135e90834
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658888
+  arena_block_id: 46658888
+  sequence_index: 6
+  title: 03_COMPLEX SYSTEMS & NEXAH
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658888
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658888/original_a62a2996fcb7b463d27c944f6fbd2be4.png?1780347613
+  source_fingerprint: c4047c757391d1659d391c0fab64549ddaea10099290b5e78fb6d26b1226f45c
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658879
+  arena_block_id: 46658879
+  sequence_index: 7
+  title: 04_RESILIENCE & NEXAH
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658879
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658879/original_1f92698bae41f0e142dbf969819ccc37.png?1780347604
+  source_fingerprint: 1fb2086d57a7a441abd571b706e3ba3bf155bb0228864035f5f1856ac5a2ae0b
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658881
+  arena_block_id: 46658881
+  sequence_index: 8
+  title: 05_NETWORK SCIENCE & NEXAH
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658881
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658881/original_7763aec727cd7007d61ae351e50b4cef.png?1780347605
+  source_fingerprint: a7186040b5abb81156de7420cf9b5b54f754881cd31ca2fed860f8b1641ebadf
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658887
+  arena_block_id: 46658887
+  sequence_index: 9
+  title: 06_COGNITIVE MAPPING & NEXAH
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658887
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658887/original_975994d15636ca0b536e69ec29d79e9b.png?1780347611
+  source_fingerprint: 6b02c15e4e6f56f132aa63b19041c4ec20d0a8f6e90692ee1b5b5a334214e3a2
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658885
+  arena_block_id: 46658885
+  sequence_index: 10
+  title: 07_VISUALIZATION & NEXAH
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658885
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658885/original_1b3cef021d28788331aa2b3e0689a71d.png?1780347610
+  source_fingerprint: ee69c242680312fc956619b7a424d3783df0b1b4a8fdaba10075794422a921c1
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658884
+  arena_block_id: 46658884
+  sequence_index: 11
+  title: 08_POWER SYSTEMS & NEXAH
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658884
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658884/original_f91358546f2cce6f221a33dde076231b.png?1780347609
+  source_fingerprint: 9b49e11cac8f84b0590f4d1e3c7c66961362c8ad994d8b98ce6df30ef6f163db
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658894
+  arena_block_id: 46658894
+  sequence_index: 12
+  title: WHERE DOES NEXAH LIVE?
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658894
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658894/original_8deb59db15a098fef56415e60335ed99.png?1780347616
+  source_fingerprint: f3ddbe35a2df048e07aa5b387a55b4ed51aef81e6253d731d6bd7f41d030cf23
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658968
+  arena_block_id: 46658968
+  sequence_index: 13
+  title: NEXAH THE CARTOGRAPHY LABORATORY_Overview
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658968
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658968/original_6a854c1c9f2a32ed44cac20f81cfa9b8.png?1780347841
+  source_fingerprint: 0c1432a01f98f05b1bcc892c9197399c60951d387d664c39dfdc7e1523804a16
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658897
+  arena_block_id: 46658897
+  sequence_index: 14
+  title: 10_THE CARTOGRAPHER
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658897
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658897/original_ea65980d0dbcc076f154676b8591eafd.png?1780347618
+  source_fingerprint: 87a2d2cf73f6a6cdbe7cc17fe4105f1660b32d25d99c49c93761b26714d1b712
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658896
+  arena_block_id: 46658896
+  sequence_index: 15
+  title: 11_THE LABORATORY NEXAH REPOSITORY
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658896
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658896/original_02073115f49d78a60631973dd2aea16e.png?1780347617
+  source_fingerprint: f55c12f5502294acf5847b064cc4ca61288c84b3fec27ee2fe16955e2c1d1e4e
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658898
+  arena_block_id: 46658898
+  sequence_index: 16
+  title: 11_THE LABORATORY THE LABORATORY OF STRUCTURE
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658898
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658898/original_9316fa735866f0ba8fd81118fd79def3.png?1780347619
+  source_fingerprint: 12dc726918fe75851288df10ed89ed929658771bfb21a35077ca26186f6631fc
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658891
+  arena_block_id: 46658891
+  sequence_index: 17
+  title: 'THE MUSEUM NEXAH-CODEX : ARE.NA'
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658891
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658891/original_86ca9c203d31d7c64b410780a7795bc4.png?1780347614
+  source_fingerprint: 24021894bc173d2fff179f9898162397e639ce8095482aec9d8924e5d138c269
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658899
+  arena_block_id: 46658899
+  sequence_index: 18
+  title: 13_THE STUDIO
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658899
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658899/original_ea9bf49493392ec90023acff4a8dc18f.png?1780347620
+  source_fingerprint: 5010d40c78b55d0c0c4fbb203d085ea1417d0b25a0c22315d06c42e9bd13f7d0
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:46658901
+  arena_block_id: 46658901
+  sequence_index: 19
+  title: 14_THE BRIDGE Between Vision and Validation
+  visual_role: transition
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/46658901
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658901/original_f7b9025500d0ef35aeecf02bb361a06a.png?1780347621
+  source_fingerprint: d25aa06462cd40dd8a7b5ba450fba8cc8f018235bb7dca5303229adca227f6d4
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:46658902
+  arena_block_id: 46658902
+  sequence_index: 20
+  title: 15_THE ATLAS THE WHOLE ECOSYSTEM
+  visual_role: map
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/46658902
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/46658902/original_0f278c1763cee49e9c09078f40b330a0.png?1780347622
+  source_fingerprint: d3d34fbfa03920dfa4638ac364c132a87034eeb55d8d952d961bf8aee0427c28
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true

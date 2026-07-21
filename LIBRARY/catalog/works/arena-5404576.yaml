@@ -1,0 +1,1036 @@
+schema_version: '0.1'
+catalog_key: arena:5404576
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: FIELD ATLAS II — THE ARCHITECTURE OF AGENCY
+source:
+  arena_channel_id: 5404576
+  arena_slug: field-atlas-ii-the-architecture-of-agency
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/field-atlas-ii-the-architecture-of-agency
+  live_title: 'FIELD ATLAS II The Architecture of Agency '
+  description: "Description\nThe second Field Atlas of the NEXAH Operator Library.\nWhat allows a living system to persist,\
+    \ adapt and act? \nRather than treating agency as an isolated property of intelligent organisms, Field Atlas II explores\
+    \ it as a phenomenon that may emerge across many kinds of systems—from physical fields and biological development to cognition,\
+    \ collective behavior and adaptive networks.\nThrough visual maps, historical perspectives and structural diagrams, this\
+    \ atlas investigates the relationships between fields, transitions, organization and emergence.\nInstead of offering a\
+    \ single theory, it proposes a cartography for exploring one of science’s most fundamental questions:\nHow does structure\
+    \ become capable of action?\nTopics include:\n• The field before form\n• Emergence and self-organization\n• Morphogenesis\
+    \ and developmental systems\n• Agency across scales\n• Transition as the architecture of becoming\nPart of the NEXAH Operator\
+    \ Library."
+  visibility: closed
+  state: available
+  member_count: 36
+  created_at: '2026-07-05T19:46:20Z'
+  updated_at: '2026-07-10T22:48:40Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: field_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: Field Atlas Series
+  confidence: moderate
+  human_decision: pending
+catalog_depth: research_structure
+cover:
+  arena_block_id: 47700889
+  title: FIELD ATLAS II THE ARCHITECTURE OF AGENCY
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700889/original_d69e50efa7537681d2d88c9fcf95ae7f.png?1783522470
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDg4OS9vcmlnaW5hbF9kNjllNTBlZmE3NTM3NjgxZDJkODhjOWZjZjk1YWU3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDg4OS9vcmlnaW5hbF9kNjllNTBlZmE3NTM3NjgxZDJkODhjOWZjZjk1YWU3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDg4OS9vcmlnaW5hbF9kNjllNTBlZmE3NTM3NjgxZDJkODhjOWZjZjk1YWU3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzcwMDg4OS9vcmlnaW5hbF9kNjllNTBlZmE3NTM3NjgxZDJkODhjOWZjZjk1YWU3Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1054
+  height: 1492
+  aspect_ratio: 0.7064
+  content_type: image/png
+  filename: d69e50efa7537681d2d88c9fcf95ae7f.png
+  file_size: 2135178
+  alt_text: null
+structure:
+  block_count: 36
+  titled_block_count: 36
+  title_coverage: 1.0
+  foreword:
+  - sequence_index: 3
+    arena_block_id: 47600643
+    title: FOREWORD
+  index: []
+  part:
+  - sequence_index: 14
+    arena_block_id: 47600627
+    title: PART III THE ARCHITECTURE OF AGENCY
+  - sequence_index: 24
+    arena_block_id: 47600616
+    title: PART I-IV
+  - sequence_index: 25
+    arena_block_id: 47600614
+    title: PART IV FROM LIFE TO NAVIGATION
+  chapter: []
+  numbered_section:
+  - sequence_index: 4
+    arena_block_id: 47600642
+    title: 01 WHY AGENCY?
+  - sequence_index: 5
+    arena_block_id: 47600641
+    title: 02 THE FIELD BEFORE FORM
+  - sequence_index: 6
+    arena_block_id: 47600640
+    title: 03 FROM PHYSICS TO FIELDS
+  - sequence_index: 9
+    arena_block_id: 47600633
+    title: 05 DARWIN
+  - sequence_index: 10
+    arena_block_id: 47600632
+    title: 06 MENDEL
+  - sequence_index: 11
+    arena_block_id: 47600631
+    title: 07 D'ARCY THOMPSON
+  - sequence_index: 12
+    arena_block_id: 47600630
+    title: 08 ALAN TURING
+  - sequence_index: 13
+    arena_block_id: 47600628
+    title: 09 SELF ORGANISATION ASHBY • PRIGOGINE • KAUFFMAN
+  - sequence_index: 16
+    arena_block_id: 47600624
+    title: 10 WHAT IS AGENCY
+  - sequence_index: 17
+    arena_block_id: 47600623
+    title: 11 BIOELECTRIC FIELDS
+  - sequence_index: 18
+    arena_block_id: 47600622
+    title: 12 MORPHOGENESIS
+  - sequence_index: 19
+    arena_block_id: 47600621
+    title: 13 GOAL STATES
+  - sequence_index: 20
+    arena_block_id: 47600620
+    title: 14-15-16
+  - sequence_index: 21
+    arena_block_id: 47600619
+    title: 14 MEMORY BEYOND THE BRAIN
+  - sequence_index: 22
+    arena_block_id: 47600618
+    title: 16 THE TWO-HEADED WORM
+  - sequence_index: 23
+    arena_block_id: 47600617
+    title: 16 THE SCALE OF AGENCY
+  - sequence_index: 26
+    arena_block_id: 47600613
+    title: 17 AGENCY AS NAVIGATION
+  - sequence_index: 27
+    arena_block_id: 47600612
+    title: 18 Fields of Stability
+  - sequence_index: 28
+    arena_block_id: 47600610
+    title: 19 MULTI-AGENT FIELDS
+  - sequence_index: 29
+    arena_block_id: 47600609
+    title: 20 MAPS OF BECOMING
+  - sequence_index: 30
+    arena_block_id: 47600608
+    title: 21 THE OBSERVER
+  - sequence_index: 32
+    arena_block_id: 47600606
+    title: 22_TRAINING CELLS
+  - sequence_index: 33
+    arena_block_id: 47600605
+    title: 24 FROM CONTROL TO COOPERATION
+  - sequence_index: 34
+    arena_block_id: 47600604
+    title: 23 REGENERATION
+  - sequence_index: 35
+    arena_block_id: 47600602
+    title: 25 FUTURE QUESTIONS
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 7
+      arena_block_id: 47600638
+      title: TRANSITION CREATES FORM
+    question:
+    - sequence_index: 35
+      arena_block_id: 47600602
+      title: 25 FUTURE QUESTIONS
+    plate:
+    - sequence_index: 36
+      arena_block_id: 47600598
+      title: FIELD ATLAS II + FINAL PLATE FULL OF AWE
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47700889
+  block_type: Image
+  title: FIELD ATLAS II THE ARCHITECTURE OF AGENCY
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 36
+  created_at: '2026-07-08T14:54:22Z'
+  updated_at: '2026-07-08T14:54:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47700889/original_d69e50efa7537681d2d88c9fcf95ae7f.png?1783522470
+    variants: *id001
+    width: 1054
+    height: 1492
+    aspect_ratio: 0.7064
+    content_type: image/png
+    filename: d69e50efa7537681d2d88c9fcf95ae7f.png
+    file_size: 2135178
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47600644
+  block_type: Image
+  title: FIELD ATLAS II • Mercury (Hard-Fold) THE ARCHITECTURE OF AGENCY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 35
+  created_at: '2026-07-05T19:47:49Z'
+  updated_at: '2026-07-05T19:47:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600644/original_6400cdd71de3562e63c3652ef66fc906.png?1783280870
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0NC9vcmlnaW5hbF82NDAwY2RkNzFkZTM1NjJlNjNjMzY1MmVmNjZmYzkwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0NC9vcmlnaW5hbF82NDAwY2RkNzFkZTM1NjJlNjNjMzY1MmVmNjZmYzkwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0NC9vcmlnaW5hbF82NDAwY2RkNzFkZTM1NjJlNjNjMzY1MmVmNjZmYzkwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0NC9vcmlnaW5hbF82NDAwY2RkNzFkZTM1NjJlNjNjMzY1MmVmNjZmYzkwNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 6400cdd71de3562e63c3652ef66fc906.png
+    file_size: 2433723
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47600643
+  block_type: Image
+  title: FOREWORD
+  description: null
+  page_role: foreword
+  editorial_roles: []
+  connection_position: 34
+  created_at: '2026-07-05T19:47:47Z'
+  updated_at: '2026-07-05T19:47:50Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600643/original_e7a8433658f290f06ad98345b85acaee.png?1783280868
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0My9vcmlnaW5hbF9lN2E4NDMzNjU4ZjI5MGYwNmFkOTgzNDViODVhY2FlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0My9vcmlnaW5hbF9lN2E4NDMzNjU4ZjI5MGYwNmFkOTgzNDViODVhY2FlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0My9vcmlnaW5hbF9lN2E4NDMzNjU4ZjI5MGYwNmFkOTgzNDViODVhY2FlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0My9vcmlnaW5hbF9lN2E4NDMzNjU4ZjI5MGYwNmFkOTgzNDViODVhY2FlZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: e7a8433658f290f06ad98345b85acaee.png
+    file_size: 2321971
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47600642
+  block_type: Image
+  title: 01 WHY AGENCY?
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 33
+  created_at: '2026-07-05T19:47:45Z'
+  updated_at: '2026-07-05T19:47:49Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600642/original_6cf5f93527b7d0052fd5b56d373d4bb4.png?1783280866
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0Mi9vcmlnaW5hbF82Y2Y1ZjkzNTI3YjdkMDA1MmZkNWI1NmQzNzNkNGJiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0Mi9vcmlnaW5hbF82Y2Y1ZjkzNTI3YjdkMDA1MmZkNWI1NmQzNzNkNGJiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0Mi9vcmlnaW5hbF82Y2Y1ZjkzNTI3YjdkMDA1MmZkNWI1NmQzNzNkNGJiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0Mi9vcmlnaW5hbF82Y2Y1ZjkzNTI3YjdkMDA1MmZkNWI1NmQzNzNkNGJiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6cf5f93527b7d0052fd5b56d373d4bb4.png
+    file_size: 2538260
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47600641
+  block_type: Image
+  title: 02 THE FIELD BEFORE FORM
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 32
+  created_at: '2026-07-05T19:47:42Z'
+  updated_at: '2026-07-05T19:47:46Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600641/original_30dbf3edad317568efba394af8553e18.png?1783280864
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MS9vcmlnaW5hbF8zMGRiZjNlZGFkMzE3NTY4ZWZiYTM5NGFmODU1M2UxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MS9vcmlnaW5hbF8zMGRiZjNlZGFkMzE3NTY4ZWZiYTM5NGFmODU1M2UxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MS9vcmlnaW5hbF8zMGRiZjNlZGFkMzE3NTY4ZWZiYTM5NGFmODU1M2UxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MS9vcmlnaW5hbF8zMGRiZjNlZGFkMzE3NTY4ZWZiYTM5NGFmODU1M2UxOC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 30dbf3edad317568efba394af8553e18.png
+    file_size: 2338930
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47600640
+  block_type: Image
+  title: 03 FROM PHYSICS TO FIELDS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 31
+  created_at: '2026-07-05T19:47:41Z'
+  updated_at: '2026-07-05T19:47:45Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600640/original_3cda5ba23989062e5a39c68b9a22f1a7.png?1783280862
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MC9vcmlnaW5hbF8zY2RhNWJhMjM5ODkwNjJlNWEzOWM2OGI5YTIyZjFhNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MC9vcmlnaW5hbF8zY2RhNWJhMjM5ODkwNjJlNWEzOWM2OGI5YTIyZjFhNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MC9vcmlnaW5hbF8zY2RhNWJhMjM5ODkwNjJlNWEzOWM2OGI5YTIyZjFhNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDY0MC9vcmlnaW5hbF8zY2RhNWJhMjM5ODkwNjJlNWEzOWM2OGI5YTIyZjFhNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3cda5ba23989062e5a39c68b9a22f1a7.png
+    file_size: 2395689
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47600638
+  block_type: Image
+  title: TRANSITION CREATES FORM
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 30
+  created_at: '2026-07-05T19:47:38Z'
+  updated_at: '2026-07-05T19:47:43Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600638/original_7f9856132d18d8d2a8da8a191c94aee9.png?1783280860
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzOC9vcmlnaW5hbF83Zjk4NTYxMzJkMThkOGQyYThkYThhMTkxYzk0YWVlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzOC9vcmlnaW5hbF83Zjk4NTYxMzJkMThkOGQyYThkYThhMTkxYzk0YWVlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzOC9vcmlnaW5hbF83Zjk4NTYxMzJkMThkOGQyYThkYThhMTkxYzk0YWVlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzOC9vcmlnaW5hbF83Zjk4NTYxMzJkMThkOGQyYThkYThhMTkxYzk0YWVlOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7f9856132d18d8d2a8da8a191c94aee9.png
+    file_size: 2277648
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47600634
+  block_type: Image
+  title: FIELD ATLAS I - PART II THE RISE OF LIFE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 29
+  created_at: '2026-07-05T19:47:35Z'
+  updated_at: '2026-07-05T19:47:38Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600634/original_d876cbfbc324217b94ea40bb1d4d2374.png?1783280856
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzNC9vcmlnaW5hbF9kODc2Y2JmYmMzMjQyMTdiOTRlYTQwYmIxZDRkMjM3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzNC9vcmlnaW5hbF9kODc2Y2JmYmMzMjQyMTdiOTRlYTQwYmIxZDRkMjM3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzNC9vcmlnaW5hbF9kODc2Y2JmYmMzMjQyMTdiOTRlYTQwYmIxZDRkMjM3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzNC9vcmlnaW5hbF9kODc2Y2JmYmMzMjQyMTdiOTRlYTQwYmIxZDRkMjM3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d876cbfbc324217b94ea40bb1d4d2374.png
+    file_size: 2199397
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47600633
+  block_type: Image
+  title: 05 DARWIN
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 28
+  created_at: '2026-07-05T19:47:33Z'
+  updated_at: '2026-07-05T19:47:37Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600633/original_bf3736c10398707b58f2def1e54e8a02.png?1783280855
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMy9vcmlnaW5hbF9iZjM3MzZjMTAzOTg3MDdiNThmMmRlZjFlNTRlOGEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMy9vcmlnaW5hbF9iZjM3MzZjMTAzOTg3MDdiNThmMmRlZjFlNTRlOGEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMy9vcmlnaW5hbF9iZjM3MzZjMTAzOTg3MDdiNThmMmRlZjFlNTRlOGEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMy9vcmlnaW5hbF9iZjM3MzZjMTAzOTg3MDdiNThmMmRlZjFlNTRlOGEwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: bf3736c10398707b58f2def1e54e8a02.png
+    file_size: 2120735
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47600632
+  block_type: Image
+  title: 06 MENDEL
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 27
+  created_at: '2026-07-05T19:47:32Z'
+  updated_at: '2026-07-05T19:47:36Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600632/original_3adcf9e4f27aad2cad48bcbb01d02e02.png?1783280853
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMi9vcmlnaW5hbF8zYWRjZjllNGYyN2FhZDJjYWQ0OGJjYmIwMWQwMmUwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMi9vcmlnaW5hbF8zYWRjZjllNGYyN2FhZDJjYWQ0OGJjYmIwMWQwMmUwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMi9vcmlnaW5hbF8zYWRjZjllNGYyN2FhZDJjYWQ0OGJjYmIwMWQwMmUwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMi9vcmlnaW5hbF8zYWRjZjllNGYyN2FhZDJjYWQ0OGJjYmIwMWQwMmUwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3adcf9e4f27aad2cad48bcbb01d02e02.png
+    file_size: 2157844
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47600631
+  block_type: Image
+  title: 07 D'ARCY THOMPSON
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 26
+  created_at: '2026-07-05T19:47:31Z'
+  updated_at: '2026-07-05T19:47:34Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600631/original_3f454a8116ace611d61d1381906863d3.png?1783280852
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMS9vcmlnaW5hbF8zZjQ1NGE4MTE2YWNlNjExZDYxZDEzODE5MDY4NjNkMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMS9vcmlnaW5hbF8zZjQ1NGE4MTE2YWNlNjExZDYxZDEzODE5MDY4NjNkMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMS9vcmlnaW5hbF8zZjQ1NGE4MTE2YWNlNjExZDYxZDEzODE5MDY4NjNkMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMS9vcmlnaW5hbF8zZjQ1NGE4MTE2YWNlNjExZDYxZDEzODE5MDY4NjNkMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3f454a8116ace611d61d1381906863d3.png
+    file_size: 2203917
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47600630
+  block_type: Image
+  title: 08 ALAN TURING
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 25
+  created_at: '2026-07-05T19:47:29Z'
+  updated_at: '2026-07-05T19:47:33Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600630/original_383077b1e78584d344fb8e7931dbb517.png?1783280850
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMC9vcmlnaW5hbF8zODMwNzdiMWU3ODU4NGQzNDRmYjhlNzkzMWRiYjUxNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMC9vcmlnaW5hbF8zODMwNzdiMWU3ODU4NGQzNDRmYjhlNzkzMWRiYjUxNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMC9vcmlnaW5hbF8zODMwNzdiMWU3ODU4NGQzNDRmYjhlNzkzMWRiYjUxNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYzMC9vcmlnaW5hbF8zODMwNzdiMWU3ODU4NGQzNDRmYjhlNzkzMWRiYjUxNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 383077b1e78584d344fb8e7931dbb517.png
+    file_size: 2115601
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47600628
+  block_type: Image
+  title: 09 SELF ORGANISATION ASHBY • PRIGOGINE • KAUFFMAN
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 24
+  created_at: '2026-07-05T19:47:25Z'
+  updated_at: '2026-07-05T19:47:29Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600628/original_443f9924a9cc71c9d79c47fde9adf309.png?1783280846
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyOC9vcmlnaW5hbF80NDNmOTkyNGE5Y2M3MWM5ZDc5YzQ3ZmRlOWFkZjMwOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyOC9vcmlnaW5hbF80NDNmOTkyNGE5Y2M3MWM5ZDc5YzQ3ZmRlOWFkZjMwOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyOC9vcmlnaW5hbF80NDNmOTkyNGE5Y2M3MWM5ZDc5YzQ3ZmRlOWFkZjMwOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyOC9vcmlnaW5hbF80NDNmOTkyNGE5Y2M3MWM5ZDc5YzQ3ZmRlOWFkZjMwOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 443f9924a9cc71c9d79c47fde9adf309.png
+    file_size: 2080085
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 47600627
+  block_type: Image
+  title: PART III THE ARCHITECTURE OF AGENCY
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 23
+  created_at: '2026-07-05T19:47:24Z'
+  updated_at: '2026-07-05T19:47:27Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600627/original_7a5a971be0d53415ba3d65b7a4069ab9.png?1783280845
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNy9vcmlnaW5hbF83YTVhOTcxYmUwZDUzNDE1YmEzZDY1YjdhNDA2OWFiOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNy9vcmlnaW5hbF83YTVhOTcxYmUwZDUzNDE1YmEzZDY1YjdhNDA2OWFiOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNy9vcmlnaW5hbF83YTVhOTcxYmUwZDUzNDE1YmEzZDY1YjdhNDA2OWFiOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNy9vcmlnaW5hbF83YTVhOTcxYmUwZDUzNDE1YmEzZDY1YjdhNDA2OWFiOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 7a5a971be0d53415ba3d65b7a4069ab9.png
+    file_size: 2376556
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 47600626
+  block_type: Image
+  title: FIELD ATLAS II • PART III THE ARCHITECTURE OF AGENCY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 22
+  created_at: '2026-07-05T19:47:22Z'
+  updated_at: '2026-07-05T19:47:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600626/original_b0d703018d269a3f5ef9b26f36e4f758.png?1783280843
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNi9vcmlnaW5hbF9iMGQ3MDMwMThkMjY5YTNmNWVmOWIyNmYzNmU0Zjc1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNi9vcmlnaW5hbF9iMGQ3MDMwMThkMjY5YTNmNWVmOWIyNmYzNmU0Zjc1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNi9vcmlnaW5hbF9iMGQ3MDMwMThkMjY5YTNmNWVmOWIyNmYzNmU0Zjc1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNi9vcmlnaW5hbF9iMGQ3MDMwMThkMjY5YTNmNWVmOWIyNmYzNmU0Zjc1OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b0d703018d269a3f5ef9b26f36e4f758.png
+    file_size: 2365282
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 47600624
+  block_type: Image
+  title: 10 WHAT IS AGENCY
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 21
+  created_at: '2026-07-05T19:47:20Z'
+  updated_at: '2026-07-05T19:47:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600624/original_b942769f03caba92b53b933ae7ce75c1.png?1783280842
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNC9vcmlnaW5hbF9iOTQyNzY5ZjAzY2FiYTkyYjUzYjkzM2FlN2NlNzVjMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNC9vcmlnaW5hbF9iOTQyNzY5ZjAzY2FiYTkyYjUzYjkzM2FlN2NlNzVjMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNC9vcmlnaW5hbF9iOTQyNzY5ZjAzY2FiYTkyYjUzYjkzM2FlN2NlNzVjMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyNC9vcmlnaW5hbF9iOTQyNzY5ZjAzY2FiYTkyYjUzYjkzM2FlN2NlNzVjMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b942769f03caba92b53b933ae7ce75c1.png
+    file_size: 2051272
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 47600623
+  block_type: Image
+  title: 11 BIOELECTRIC FIELDS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 20
+  created_at: '2026-07-05T19:47:19Z'
+  updated_at: '2026-07-05T19:47:23Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600623/original_004613e26044225057ba8e851d2a2500.png?1783280840
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMy9vcmlnaW5hbF8wMDQ2MTNlMjYwNDQyMjUwNTdiYThlODUxZDJhMjUwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMy9vcmlnaW5hbF8wMDQ2MTNlMjYwNDQyMjUwNTdiYThlODUxZDJhMjUwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMy9vcmlnaW5hbF8wMDQ2MTNlMjYwNDQyMjUwNTdiYThlODUxZDJhMjUwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMy9vcmlnaW5hbF8wMDQ2MTNlMjYwNDQyMjUwNTdiYThlODUxZDJhMjUwMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 004613e26044225057ba8e851d2a2500.png
+    file_size: 2218368
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 47600622
+  block_type: Image
+  title: 12 MORPHOGENESIS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 19
+  created_at: '2026-07-05T19:47:15Z'
+  updated_at: '2026-07-05T19:47:19Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600622/original_de4d06c1139706040b9fc5c80fd6a997.png?1783280836
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMi9vcmlnaW5hbF9kZTRkMDZjMTEzOTcwNjA0MGI5ZmM1YzgwZmQ2YTk5Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMi9vcmlnaW5hbF9kZTRkMDZjMTEzOTcwNjA0MGI5ZmM1YzgwZmQ2YTk5Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMi9vcmlnaW5hbF9kZTRkMDZjMTEzOTcwNjA0MGI5ZmM1YzgwZmQ2YTk5Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMi9vcmlnaW5hbF9kZTRkMDZjMTEzOTcwNjA0MGI5ZmM1YzgwZmQ2YTk5Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: de4d06c1139706040b9fc5c80fd6a997.png
+    file_size: 2122749
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 47600621
+  block_type: Image
+  title: 13 GOAL STATES
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 18
+  created_at: '2026-07-05T19:47:14Z'
+  updated_at: '2026-07-05T19:47:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600621/original_262fd7d2df1e722035d7d04eca3eb819.png?1783280835
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMS9vcmlnaW5hbF8yNjJmZDdkMmRmMWU3MjIwMzVkN2QwNGVjYTNlYjgxOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMS9vcmlnaW5hbF8yNjJmZDdkMmRmMWU3MjIwMzVkN2QwNGVjYTNlYjgxOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMS9vcmlnaW5hbF8yNjJmZDdkMmRmMWU3MjIwMzVkN2QwNGVjYTNlYjgxOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMS9vcmlnaW5hbF8yNjJmZDdkMmRmMWU3MjIwMzVkN2QwNGVjYTNlYjgxOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 262fd7d2df1e722035d7d04eca3eb819.png
+    file_size: 2174198
+    alt_text: null
+- sequence_index: 20
+  arena_block_id: 47600620
+  block_type: Image
+  title: 14-15-16
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-07-05T19:47:12Z'
+  updated_at: '2026-07-05T19:47:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600620/original_5304bd796896919582032978a8ec4722.png?1783280833
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMC9vcmlnaW5hbF81MzA0YmQ3OTY4OTY5MTk1ODIwMzI5NzhhOGVjNDcyMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMC9vcmlnaW5hbF81MzA0YmQ3OTY4OTY5MTk1ODIwMzI5NzhhOGVjNDcyMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMC9vcmlnaW5hbF81MzA0YmQ3OTY4OTY5MTk1ODIwMzI5NzhhOGVjNDcyMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYyMC9vcmlnaW5hbF81MzA0YmQ3OTY4OTY5MTk1ODIwMzI5NzhhOGVjNDcyMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5304bd796896919582032978a8ec4722.png
+    file_size: 2170620
+    alt_text: null
+- sequence_index: 21
+  arena_block_id: 47600619
+  block_type: Image
+  title: 14 MEMORY BEYOND THE BRAIN
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-07-05T19:47:10Z'
+  updated_at: '2026-07-05T19:47:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600619/original_da1aa834fa4f4fc292dd66a3e457407d.png?1783280832
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOS9vcmlnaW5hbF9kYTFhYTgzNGZhNGY0ZmMyOTJkZDY2YTNlNDU3NDA3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOS9vcmlnaW5hbF9kYTFhYTgzNGZhNGY0ZmMyOTJkZDY2YTNlNDU3NDA3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOS9vcmlnaW5hbF9kYTFhYTgzNGZhNGY0ZmMyOTJkZDY2YTNlNDU3NDA3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOS9vcmlnaW5hbF9kYTFhYTgzNGZhNGY0ZmMyOTJkZDY2YTNlNDU3NDA3ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: da1aa834fa4f4fc292dd66a3e457407d.png
+    file_size: 2124228
+    alt_text: null
+- sequence_index: 22
+  arena_block_id: 47600618
+  block_type: Image
+  title: 16 THE TWO-HEADED WORM
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-07-05T19:47:08Z'
+  updated_at: '2026-07-05T19:47:12Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600618/original_092563350b733ee5b75b0db6d5251840.png?1783280829
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOC9vcmlnaW5hbF8wOTI1NjMzNTBiNzMzZWU1Yjc1YjBkYjZkNTI1MTg0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOC9vcmlnaW5hbF8wOTI1NjMzNTBiNzMzZWU1Yjc1YjBkYjZkNTI1MTg0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOC9vcmlnaW5hbF8wOTI1NjMzNTBiNzMzZWU1Yjc1YjBkYjZkNTI1MTg0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxOC9vcmlnaW5hbF8wOTI1NjMzNTBiNzMzZWU1Yjc1YjBkYjZkNTI1MTg0MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 092563350b733ee5b75b0db6d5251840.png
+    file_size: 2163189
+    alt_text: null
+- sequence_index: 23
+  arena_block_id: 47600617
+  block_type: Image
+  title: 16 THE SCALE OF AGENCY
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-07-05T19:47:04Z'
+  updated_at: '2026-07-05T19:47:08Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600617/original_871e53616ead2741c54853619567e656.png?1783280825
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNy9vcmlnaW5hbF84NzFlNTM2MTZlYWQyNzQxYzU0ODUzNjE5NTY3ZTY1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNy9vcmlnaW5hbF84NzFlNTM2MTZlYWQyNzQxYzU0ODUzNjE5NTY3ZTY1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNy9vcmlnaW5hbF84NzFlNTM2MTZlYWQyNzQxYzU0ODUzNjE5NTY3ZTY1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNy9vcmlnaW5hbF84NzFlNTM2MTZlYWQyNzQxYzU0ODUzNjE5NTY3ZTY1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 871e53616ead2741c54853619567e656.png
+    file_size: 2051192
+    alt_text: null
+- sequence_index: 24
+  arena_block_id: 47600616
+  block_type: Image
+  title: PART I-IV
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-07-05T19:47:02Z'
+  updated_at: '2026-07-05T19:47:06Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600616/original_6d204895b5e6f2280ed496b39e35ab96.png?1783280824
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNi9vcmlnaW5hbF82ZDIwNDg5NWI1ZTZmMjI4MGVkNDk2YjM5ZTM1YWI5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNi9vcmlnaW5hbF82ZDIwNDg5NWI1ZTZmMjI4MGVkNDk2YjM5ZTM1YWI5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNi9vcmlnaW5hbF82ZDIwNDg5NWI1ZTZmMjI4MGVkNDk2YjM5ZTM1YWI5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNi9vcmlnaW5hbF82ZDIwNDg5NWI1ZTZmMjI4MGVkNDk2YjM5ZTM1YWI5Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6d204895b5e6f2280ed496b39e35ab96.png
+    file_size: 2323303
+    alt_text: null
+- sequence_index: 25
+  arena_block_id: 47600614
+  block_type: Image
+  title: PART IV FROM LIFE TO NAVIGATION
+  description: null
+  page_role: part
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-07-05T19:47:01Z'
+  updated_at: '2026-07-05T19:47:04Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600614/original_abda731221b69788d59761991091cc85.png?1783280822
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNC9vcmlnaW5hbF9hYmRhNzMxMjIxYjY5Nzg4ZDU5NzYxOTkxMDkxY2M4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNC9vcmlnaW5hbF9hYmRhNzMxMjIxYjY5Nzg4ZDU5NzYxOTkxMDkxY2M4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNC9vcmlnaW5hbF9hYmRhNzMxMjIxYjY5Nzg4ZDU5NzYxOTkxMDkxY2M4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxNC9vcmlnaW5hbF9hYmRhNzMxMjIxYjY5Nzg4ZDU5NzYxOTkxMDkxY2M4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: abda731221b69788d59761991091cc85.png
+    file_size: 2241301
+    alt_text: null
+- sequence_index: 26
+  arena_block_id: 47600613
+  block_type: Image
+  title: 17 AGENCY AS NAVIGATION
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-07-05T19:46:59Z'
+  updated_at: '2026-07-05T19:47:02Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600613/original_c167d629cf498ffd5c1a963afcac7ea5.png?1783280820
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMy9vcmlnaW5hbF9jMTY3ZDYyOWNmNDk4ZmZkNWMxYTk2M2FmY2FjN2VhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMy9vcmlnaW5hbF9jMTY3ZDYyOWNmNDk4ZmZkNWMxYTk2M2FmY2FjN2VhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMy9vcmlnaW5hbF9jMTY3ZDYyOWNmNDk4ZmZkNWMxYTk2M2FmY2FjN2VhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMy9vcmlnaW5hbF9jMTY3ZDYyOWNmNDk4ZmZkNWMxYTk2M2FmY2FjN2VhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c167d629cf498ffd5c1a963afcac7ea5.png
+    file_size: 2301052
+    alt_text: null
+- sequence_index: 27
+  arena_block_id: 47600612
+  block_type: Image
+  title: 18 Fields of Stability
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-07-05T19:46:56Z'
+  updated_at: '2026-07-05T19:47:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600612/original_21f8e6358cafbf77d799e834af125771.png?1783280818
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMi9vcmlnaW5hbF8yMWY4ZTYzNThjYWZiZjc3ZDc5OWU4MzRhZjEyNTc3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMi9vcmlnaW5hbF8yMWY4ZTYzNThjYWZiZjc3ZDc5OWU4MzRhZjEyNTc3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMi9vcmlnaW5hbF8yMWY4ZTYzNThjYWZiZjc3ZDc5OWU4MzRhZjEyNTc3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMi9vcmlnaW5hbF8yMWY4ZTYzNThjYWZiZjc3ZDc5OWU4MzRhZjEyNTc3MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 21f8e6358cafbf77d799e834af125771.png
+    file_size: 2131039
+    alt_text: null
+- sequence_index: 28
+  arena_block_id: 47600610
+  block_type: Image
+  title: 19 MULTI-AGENT FIELDS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-07-05T19:46:53Z'
+  updated_at: '2026-07-05T19:46:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600610/original_53d5d25f249f8ea3ebf50d3d55ff077c.png?1783280814
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMC9vcmlnaW5hbF81M2Q1ZDI1ZjI0OWY4ZWEzZWJmNTBkM2Q1NWZmMDc3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMC9vcmlnaW5hbF81M2Q1ZDI1ZjI0OWY4ZWEzZWJmNTBkM2Q1NWZmMDc3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMC9vcmlnaW5hbF81M2Q1ZDI1ZjI0OWY4ZWEzZWJmNTBkM2Q1NWZmMDc3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYxMC9vcmlnaW5hbF81M2Q1ZDI1ZjI0OWY4ZWEzZWJmNTBkM2Q1NWZmMDc3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 53d5d25f249f8ea3ebf50d3d55ff077c.png
+    file_size: 2162282
+    alt_text: null
+- sequence_index: 29
+  arena_block_id: 47600609
+  block_type: Image
+  title: 20 MAPS OF BECOMING
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-07-05T19:46:51Z'
+  updated_at: '2026-07-05T19:46:55Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600609/original_77897a53ac475b9b282fd889a57b0da6.png?1783280812
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOS9vcmlnaW5hbF83Nzg5N2E1M2FjNDc1YjliMjgyZmQ4ODlhNTdiMGRhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOS9vcmlnaW5hbF83Nzg5N2E1M2FjNDc1YjliMjgyZmQ4ODlhNTdiMGRhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOS9vcmlnaW5hbF83Nzg5N2E1M2FjNDc1YjliMjgyZmQ4ODlhNTdiMGRhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOS9vcmlnaW5hbF83Nzg5N2E1M2FjNDc1YjliMjgyZmQ4ODlhNTdiMGRhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 77897a53ac475b9b282fd889a57b0da6.png
+    file_size: 2218929
+    alt_text: null
+- sequence_index: 30
+  arena_block_id: 47600608
+  block_type: Image
+  title: 21 THE OBSERVER
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-07-05T19:46:50Z'
+  updated_at: '2026-07-05T19:46:54Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600608/original_c7bdfb3e9fef54aad9a3475a5db385bf.png?1783280811
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOC9vcmlnaW5hbF9jN2JkZmIzZTlmZWY1NGFhZDlhMzQ3NWE1ZGIzODViZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOC9vcmlnaW5hbF9jN2JkZmIzZTlmZWY1NGFhZDlhMzQ3NWE1ZGIzODViZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOC9vcmlnaW5hbF9jN2JkZmIzZTlmZWY1NGFhZDlhMzQ3NWE1ZGIzODViZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwOC9vcmlnaW5hbF9jN2JkZmIzZTlmZWY1NGFhZDlhMzQ3NWE1ZGIzODViZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: c7bdfb3e9fef54aad9a3475a5db385bf.png
+    file_size: 2174148
+    alt_text: null
+- sequence_index: 31
+  arena_block_id: 47600607
+  block_type: Image
+  title: •PART V-THE FUTURE OF MEDICINE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-07-05T19:46:48Z'
+  updated_at: '2026-07-05T19:46:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600607/original_b9880b2e911332979bd6b5d15538f614.png?1783280809
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNy9vcmlnaW5hbF9iOTg4MGIyZTkxMTMzMjk3OWJkNmI1ZDE1NTM4ZjYxNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNy9vcmlnaW5hbF9iOTg4MGIyZTkxMTMzMjk3OWJkNmI1ZDE1NTM4ZjYxNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNy9vcmlnaW5hbF9iOTg4MGIyZTkxMTMzMjk3OWJkNmI1ZDE1NTM4ZjYxNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNy9vcmlnaW5hbF9iOTg4MGIyZTkxMTMzMjk3OWJkNmI1ZDE1NTM4ZjYxNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b9880b2e911332979bd6b5d15538f614.png
+    file_size: 2481400
+    alt_text: null
+- sequence_index: 32
+  arena_block_id: 47600606
+  block_type: Image
+  title: 22_TRAINING CELLS
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-07-05T19:46:47Z'
+  updated_at: '2026-07-05T19:46:51Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600606/original_3eee537a242ed50298d4790d30e3db12.png?1783280808
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNi9vcmlnaW5hbF8zZWVlNTM3YTI0MmVkNTAyOThkNDc5MGQzMGUzZGIxMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNi9vcmlnaW5hbF8zZWVlNTM3YTI0MmVkNTAyOThkNDc5MGQzMGUzZGIxMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNi9vcmlnaW5hbF8zZWVlNTM3YTI0MmVkNTAyOThkNDc5MGQzMGUzZGIxMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNi9vcmlnaW5hbF8zZWVlNTM3YTI0MmVkNTAyOThkNDc5MGQzMGUzZGIxMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 3eee537a242ed50298d4790d30e3db12.png
+    file_size: 2212058
+    alt_text: null
+- sequence_index: 33
+  arena_block_id: 47600605
+  block_type: Image
+  title: 24 FROM CONTROL TO COOPERATION
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-07-05T19:46:44Z'
+  updated_at: '2026-07-05T19:46:48Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600605/original_a0603da8c9015bd987cc6f3b68d59ca3.png?1783280805
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNS9vcmlnaW5hbF9hMDYwM2RhOGM5MDE1YmQ5ODdjYzZmM2I2OGQ1OWNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNS9vcmlnaW5hbF9hMDYwM2RhOGM5MDE1YmQ5ODdjYzZmM2I2OGQ1OWNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNS9vcmlnaW5hbF9hMDYwM2RhOGM5MDE1YmQ5ODdjYzZmM2I2OGQ1OWNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNS9vcmlnaW5hbF9hMDYwM2RhOGM5MDE1YmQ5ODdjYzZmM2I2OGQ1OWNhMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: a0603da8c9015bd987cc6f3b68d59ca3.png
+    file_size: 2054521
+    alt_text: null
+- sequence_index: 34
+  arena_block_id: 47600604
+  block_type: Image
+  title: 23 REGENERATION
+  description: null
+  page_role: numbered_section
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-07-05T19:46:44Z'
+  updated_at: '2026-07-05T19:46:53Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600604/original_13fb003053215ffc095a5598a2cf1d7b.png?1783280805
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNC9vcmlnaW5hbF8xM2ZiMDAzMDUzMjE1ZmZjMDk1YTU1OThhMmNmMWQ3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNC9vcmlnaW5hbF8xM2ZiMDAzMDUzMjE1ZmZjMDk1YTU1OThhMmNmMWQ3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNC9vcmlnaW5hbF8xM2ZiMDAzMDUzMjE1ZmZjMDk1YTU1OThhMmNmMWQ3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwNC9vcmlnaW5hbF8xM2ZiMDAzMDUzMjE1ZmZjMDk1YTU1OThhMmNmMWQ3Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 13fb003053215ffc095a5598a2cf1d7b.png
+    file_size: 2132189
+    alt_text: null
+- sequence_index: 35
+  arena_block_id: 47600602
+  block_type: Image
+  title: 25 FUTURE QUESTIONS
+  description: null
+  page_role: numbered_section
+  editorial_roles:
+  - question
+  connection_position: 2
+  created_at: '2026-07-05T19:46:42Z'
+  updated_at: '2026-07-05T19:46:45Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600602/original_2809e386a2e5ccb94b4947599c49336c.png?1783280803
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwMi9vcmlnaW5hbF8yODA5ZTM4NmEyZTVjY2I5NGI0OTQ3NTk5YzQ5MzM2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwMi9vcmlnaW5hbF8yODA5ZTM4NmEyZTVjY2I5NGI0OTQ3NTk5YzQ5MzM2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwMi9vcmlnaW5hbF8yODA5ZTM4NmEyZTVjY2I5NGI0OTQ3NTk5YzQ5MzM2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDYwMi9vcmlnaW5hbF8yODA5ZTM4NmEyZTVjY2I5NGI0OTQ3NTk5YzQ5MzM2Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 2809e386a2e5ccb94b4947599c49336c.png
+    file_size: 2206800
+    alt_text: null
+- sequence_index: 36
+  arena_block_id: 47600598
+  block_type: Image
+  title: FIELD ATLAS II + FINAL PLATE FULL OF AWE
+  description: null
+  page_role: page
+  editorial_roles:
+  - plate
+  connection_position: 1
+  created_at: '2026-07-05T19:46:28Z'
+  updated_at: '2026-07-05T19:46:32Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47600598/original_b26a95602f61563fee12ed76d6c49202.png?1783280790
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDU5OC9vcmlnaW5hbF9iMjZhOTU2MDJmNjE1NjNmZWUxMmVkNzZkNmM0OTIwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDU5OC9vcmlnaW5hbF9iMjZhOTU2MDJmNjE1NjNmZWUxMmVkNzZkNmM0OTIwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDU5OC9vcmlnaW5hbF9iMjZhOTU2MDJmNjE1NjNmZWUxMmVkNzZkNmM0OTIwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzYwMDU5OC9vcmlnaW5hbF9iMjZhOTU2MDJmNjE1NjNmZWUxMmVkNzZkNmM0OTIwMi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: b26a95602f61563fee12ed76d6c49202.png
+    file_size: 2749779
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

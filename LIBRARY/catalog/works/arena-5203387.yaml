@@ -1,0 +1,419 @@
+schema_version: '0.1'
+catalog_key: arena:5203387
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH MATHEMATICA II — DRIFT FIELDS & RECURSIVE STRUCTURES
+source:
+  arena_channel_id: 5203387
+  arena_slug: nexah-mathematica-ii-drift-fields-recursive-structures
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-mathematica-ii-drift-fields-recursive-structures
+  live_title: NEXAH MATHEMATICA II  -  Drift Fields & Recursive Structures
+  description: "A visual atlas exploring recursive drift structures, polar residue manifolds, persistence geometries, and\
+    \ transition behavior across modular arithmetic systems.\nVolume II extends the structural foundations of NEXAH MATHEMATICA\
+    \ into dynamic recursive fields, transport geometries, and large-scale organization patterns. \nTopics include:\n• polar\
+    \ residue manifolds\n• recursive drift fields\n• structural persistence\n• crossing geometries\n• transition corridors\n\
+    • basin topology\n• control geometry\n• JANUS dynamics\n• recursive transport systems\nCombining modular arithmetic, geometric\
+    \ embeddings, recursive field analysis, and exploratory cartography."
+  visibility: closed
+  state: available
+  member_count: 14
+  created_at: '2026-05-20T21:26:46Z'
+  updated_at: '2026-05-20T22:39:43Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: NEXAH Mathematica
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Mathematica
+  - Research
+catalog_depth: research_structure
+cover:
+  arena_block_id: 46366527
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY_iii
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366527/original_aa20321f927cb2fefcb7e25632b2cd57.png?1779312688
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjUyNy9vcmlnaW5hbF9hYTIwMzIxZjkyN2NiMmZlZmNiN2UyNTYzMmIyY2Q1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjUyNy9vcmlnaW5hbF9hYTIwMzIxZjkyN2NiMmZlZmNiN2UyNTYzMmIyY2Q1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjUyNy9vcmlnaW5hbF9hYTIwMzIxZjkyN2NiMmZlZmNiN2UyNTYzMmIyY2Q1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjUyNy9vcmlnaW5hbF9hYTIwMzIxZjkyN2NiMmZlZmNiN2UyNTYzMmIyY2Q1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1024
+  height: 1536
+  aspect_ratio: 0.6667
+  content_type: image/png
+  filename: aa20321f927cb2fefcb7e25632b2cd57.png
+  file_size: 1873130
+  alt_text: null
+structure:
+  block_count: 14
+  titled_block_count: 14
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part:
+  - sequence_index: 3
+    arena_block_id: 46366553
+    title: PART II RESIDUE TRANSITION GEOMETRY
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 3
+      arena_block_id: 46366553
+      title: PART II RESIDUE TRANSITION GEOMETRY
+    reflection:
+    - sequence_index: 5
+      arena_block_id: 46366732
+      title: POSTER III-B - REFLECTION SYMMETRY
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46366527
+  block_type: Image
+  title: NEXAH MATHEMATICA VOLUME I PRIME RESIDUE GEOMETRY_iii
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-05-20T21:31:27Z'
+  updated_at: '2026-05-20T21:32:31Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366527/original_aa20321f927cb2fefcb7e25632b2cd57.png?1779312688
+    variants: *id001
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: aa20321f927cb2fefcb7e25632b2cd57.png
+    file_size: 1873130
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46366552
+  block_type: Image
+  title: NEXAH MATHEMATICA VOLUME! - PRIME RESIDUE GEOMETRY_ii
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-20T21:32:09Z'
+  updated_at: '2026-05-20T21:32:25Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366552/original_796d68fc42e00781f24d3a96264e2d6f.png?1779312731
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1Mi9vcmlnaW5hbF83OTZkNjhmYzQyZTAwNzgxZjI0ZDNhOTYyNjRlMmQ2Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1Mi9vcmlnaW5hbF83OTZkNjhmYzQyZTAwNzgxZjI0ZDNhOTYyNjRlMmQ2Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1Mi9vcmlnaW5hbF83OTZkNjhmYzQyZTAwNzgxZjI0ZDNhOTYyNjRlMmQ2Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1Mi9vcmlnaW5hbF83OTZkNjhmYzQyZTAwNzgxZjI0ZDNhOTYyNjRlMmQ2Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 796d68fc42e00781f24d3a96264e2d6f.png
+    file_size: 1596511
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46366553
+  block_type: Image
+  title: PART II RESIDUE TRANSITION GEOMETRY
+  description: null
+  page_role: part
+  editorial_roles:
+  - transition
+  connection_position: 12
+  created_at: '2026-05-20T21:32:10Z'
+  updated_at: '2026-05-20T21:32:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366553/original_dbdf0b00225a97b4d25df016696344ae.png?1779312731
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1My9vcmlnaW5hbF9kYmRmMGIwMDIyNWE5N2I0ZDI1ZGYwMTY2OTYzNDRhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1My9vcmlnaW5hbF9kYmRmMGIwMDIyNWE5N2I0ZDI1ZGYwMTY2OTYzNDRhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1My9vcmlnaW5hbF9kYmRmMGIwMDIyNWE5N2I0ZDI1ZGYwMTY2OTYzNDRhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjU1My9vcmlnaW5hbF9kYmRmMGIwMDIyNWE5N2I0ZDI1ZGYwMTY2OTYzNDRhZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: dbdf0b00225a97b4d25df016696344ae.png
+    file_size: 1624659
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46366730
+  block_type: Image
+  title: POSTER III-A - POLAR PEAK DRIFT IN PRIME RESIDUE SYSTEMS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-20T21:39:08Z'
+  updated_at: '2026-05-20T21:51:22Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366730/original_b5b7a4ca8ded0fc4312e58d6ebcc66b3.png?1779313149
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMC9vcmlnaW5hbF9iNWI3YTRjYThkZWQwZmM0MzEyZTU4ZDZlYmNjNjZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMC9vcmlnaW5hbF9iNWI3YTRjYThkZWQwZmM0MzEyZTU4ZDZlYmNjNjZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMC9vcmlnaW5hbF9iNWI3YTRjYThkZWQwZmM0MzEyZTU4ZDZlYmNjNjZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMC9vcmlnaW5hbF9iNWI3YTRjYThkZWQwZmM0MzEyZTU4ZDZlYmNjNjZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1122
+    height: 1402
+    aspect_ratio: 0.8003
+    content_type: image/png
+    filename: b5b7a4ca8ded0fc4312e58d6ebcc66b3.png
+    file_size: 1841877
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46366732
+  block_type: Image
+  title: POSTER III-B - REFLECTION SYMMETRY
+  description: null
+  page_role: page
+  editorial_roles:
+  - reflection
+  connection_position: 10
+  created_at: '2026-05-20T21:39:09Z'
+  updated_at: '2026-05-20T21:39:18Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366732/original_88ae86567212a859fe846eb390dcbcb4.png?1779313150
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMi9vcmlnaW5hbF84OGFlODY1NjcyMTJhODU5ZmU4NDZlYjM5MGRjYmNiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMi9vcmlnaW5hbF84OGFlODY1NjcyMTJhODU5ZmU4NDZlYjM5MGRjYmNiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMi9vcmlnaW5hbF84OGFlODY1NjcyMTJhODU5ZmU4NDZlYjM5MGRjYmNiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMi9vcmlnaW5hbF84OGFlODY1NjcyMTJhODU5ZmU4NDZlYjM5MGRjYmNiNC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 88ae86567212a859fe846eb390dcbcb4.png
+    file_size: 1664352
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46366731
+  block_type: Image
+  title: POSTER III-C - CROSSING GEOMETRY & SILENT ZONES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-20T21:39:09Z'
+  updated_at: '2026-05-20T21:39:16Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366731/original_9c99130cb871f03a2bfc0a9b908973b3.png?1779313150
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMS9vcmlnaW5hbF85Yzk5MTMwY2I4NzFmMDNhMmJmYzBhOWI5MDg5NzNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMS9vcmlnaW5hbF85Yzk5MTMwY2I4NzFmMDNhMmJmYzBhOWI5MDg5NzNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMS9vcmlnaW5hbF85Yzk5MTMwY2I4NzFmMDNhMmJmYzBhOWI5MDg5NzNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjczMS9vcmlnaW5hbF85Yzk5MTMwY2I4NzFmMDNhMmJmYzBhOWI5MDg5NzNiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 9c99130cb871f03a2bfc0a9b908973b3.png
+    file_size: 1721642
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46366729
+  block_type: Image
+  title: POSTER III-D - PEAK FAMILIES & PERSISTENCE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-20T21:39:08Z'
+  updated_at: '2026-05-20T21:39:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366729/original_8dd63d1a51d20444b5331701825a1310.png?1779313149
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOS9vcmlnaW5hbF84ZGQ2M2QxYTUxZDIwNDQ0YjUzMzE3MDE4MjVhMTMxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOS9vcmlnaW5hbF84ZGQ2M2QxYTUxZDIwNDQ0YjUzMzE3MDE4MjVhMTMxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOS9vcmlnaW5hbF84ZGQ2M2QxYTUxZDIwNDQ0YjUzMzE3MDE4MjVhMTMxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOS9vcmlnaW5hbF84ZGQ2M2QxYTUxZDIwNDQ0YjUzMzE3MDE4MjVhMTMxMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 8dd63d1a51d20444b5331701825a1310.png
+    file_size: 1723420
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46366728
+  block_type: Image
+  title: POLAR RESIDUE MANIFOLD OF PRIME SPLINTERS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-20T21:39:08Z'
+  updated_at: '2026-05-20T21:39:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366728/original_bc18950706383a98169352942d7482eb.png?1779313149
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOC9vcmlnaW5hbF9iYzE4OTUwNzA2MzgzYTk4MTY5MzUyOTQyZDc0ODJlYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOC9vcmlnaW5hbF9iYzE4OTUwNzA2MzgzYTk4MTY5MzUyOTQyZDc0ODJlYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOC9vcmlnaW5hbF9iYzE4OTUwNzA2MzgzYTk4MTY5MzUyOTQyZDc0ODJlYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcyOC9vcmlnaW5hbF9iYzE4OTUwNzA2MzgzYTk4MTY5MzUyOTQyZDc0ODJlYi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: bc18950706383a98169352942d7482eb.png
+    file_size: 2227720
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46366705
+  block_type: Image
+  title: SERIES IV - CONTROL GEOMETRY & STRUCTURAL PERSISTENCE_C
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-20T21:38:19Z'
+  updated_at: '2026-05-20T21:38:25Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366705/original_97b1e22a938e8c23b230e5d24c378466.png?1779313100
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwNS9vcmlnaW5hbF85N2IxZTIyYTkzOGU4YzIzYjIzMGU1ZDI0YzM3ODQ2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwNS9vcmlnaW5hbF85N2IxZTIyYTkzOGU4YzIzYjIzMGU1ZDI0YzM3ODQ2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwNS9vcmlnaW5hbF85N2IxZTIyYTkzOGU4YzIzYjIzMGU1ZDI0YzM3ODQ2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwNS9vcmlnaW5hbF85N2IxZTIyYTkzOGU4YzIzYjIzMGU1ZDI0YzM3ODQ2Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 97b1e22a938e8c23b230e5d24c378466.png
+    file_size: 1639861
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46366703
+  block_type: Image
+  title: SERIES IV - CONTROL GEOMETRY & STRUCTURAL PERSISTENCE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-20T21:38:18Z'
+  updated_at: '2026-05-20T21:38:23Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366703/original_5de86b17805b9cd07f38446197df829f.png?1779313099
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMy9vcmlnaW5hbF81ZGU4NmIxNzgwNWI5Y2QwN2YzODQ0NjE5N2RmODI5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMy9vcmlnaW5hbF81ZGU4NmIxNzgwNWI5Y2QwN2YzODQ0NjE5N2RmODI5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMy9vcmlnaW5hbF81ZGU4NmIxNzgwNWI5Y2QwN2YzODQ0NjE5N2RmODI5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMy9vcmlnaW5hbF81ZGU4NmIxNzgwNWI5Y2QwN2YzODQ0NjE5N2RmODI5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 5de86b17805b9cd07f38446197df829f.png
+    file_size: 1636737
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46366702
+  block_type: Image
+  title: SERIES IV - CONTROL GEOMETRY & STRUCTURAL PERSISTENCE_PANEL_C
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-20T21:38:18Z'
+  updated_at: '2026-05-20T21:38:23Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366702/original_fb94bcdcba93226d3febef195b10e2ad.png?1779313099
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMi9vcmlnaW5hbF9mYjk0YmNkY2JhOTMyMjZkM2ZlYmVmMTk1YjEwZTJhZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMi9vcmlnaW5hbF9mYjk0YmNkY2JhOTMyMjZkM2ZlYmVmMTk1YjEwZTJhZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMi9vcmlnaW5hbF9mYjk0YmNkY2JhOTMyMjZkM2ZlYmVmMTk1YjEwZTJhZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMi9vcmlnaW5hbF9mYjk0YmNkY2JhOTMyMjZkM2ZlYmVmMTk1YjEwZTJhZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: fb94bcdcba93226d3febef195b10e2ad.png
+    file_size: 1658348
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46366701
+  block_type: Image
+  title: SERIES IV - CONTROL GEOMETRY & STRUCTURAL PERSISTENCE PANEL D
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-20T21:38:18Z'
+  updated_at: '2026-05-20T21:38:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366701/original_10e5ee689f3a21e2d3e4cb818998e150.png?1779313098
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMS9vcmlnaW5hbF8xMGU1ZWU2ODlmM2EyMWUyZDNlNGNiODE4OTk4ZTE1MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMS9vcmlnaW5hbF8xMGU1ZWU2ODlmM2EyMWUyZDNlNGNiODE4OTk4ZTE1MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMS9vcmlnaW5hbF8xMGU1ZWU2ODlmM2EyMWUyZDNlNGNiODE4OTk4ZTE1MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjcwMS9vcmlnaW5hbF8xMGU1ZWU2ODlmM2EyMWUyZDNlNGNiODE4OTk4ZTE1MC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 10e5ee689f3a21e2d3e4cb818998e150.png
+    file_size: 1658474
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46366699
+  block_type: Image
+  title: SERIES IV - CONTROL GEOMETRY & STRUCTURAL PERSISTENCE PANEL E- Regime Transitions & Structural Reorganization
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-20T21:38:17Z'
+  updated_at: '2026-05-20T21:38:21Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366699/original_4fca0e5735d8066e49bc2c9540a5f59b.png?1779313098
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjY5OS9vcmlnaW5hbF80ZmNhMGU1NzM1ZDgwNjZlNDliYzJjOTU0MGE1ZjU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjY5OS9vcmlnaW5hbF80ZmNhMGU1NzM1ZDgwNjZlNDliYzJjOTU0MGE1ZjU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjY5OS9vcmlnaW5hbF80ZmNhMGU1NzM1ZDgwNjZlNDliYzJjOTU0MGE1ZjU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2NjY5OS9vcmlnaW5hbF80ZmNhMGU1NzM1ZDgwNjZlNDliYzJjOTU0MGE1ZjU5Yi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 4fca0e5735d8066e49bc2c9540a5f59b.png
+    file_size: 1758546
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 46366758
+  block_type: Image
+  title: POLAR RESIDUE GEOMETRY OF PRIME SPLINTERS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-20T21:40:21Z'
+  updated_at: '2026-05-20T21:40:32Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46366758/original_509e6887939ae4d5cbef846bc0ca9f85.png?1779313222
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2Njc1OC9vcmlnaW5hbF81MDllNjg4NzkzOWFlNGQ1Y2JlZjg0NmJjMGNhOWY4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2Njc1OC9vcmlnaW5hbF81MDllNjg4NzkzOWFlNGQ1Y2JlZjg0NmJjMGNhOWY4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2Njc1OC9vcmlnaW5hbF81MDllNjg4NzkzOWFlNGQ1Y2JlZjg0NmJjMGNhOWY4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjM2Njc1OC9vcmlnaW5hbF81MDllNjg4NzkzOWFlNGQ1Y2JlZjg0NmJjMGNhOWY4NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1254
+    height: 1254
+    aspect_ratio: 1.0
+    content_type: image/png
+    filename: 509e6887939ae4d5cbef846bc0ca9f85.png
+    file_size: 2314282
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

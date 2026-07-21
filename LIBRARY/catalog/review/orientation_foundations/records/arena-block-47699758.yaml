@@ -1,0 +1,73 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+page_key: arena-block:47699758
+publication:
+  catalog_key: arena:5415690
+  arena_channel_id: 5415690
+  title: ORIENTATION DESIGN — VOLUME II
+source_block:
+  arena_block_id: 47699758
+  sequence_index: 4
+  title: NEXAH ORIENTATION DESIGN LABORATORY 01 ORIENTATION DESIGN THE DISCIPLINE
+  url: https://www.are.na/block/47699758
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699758/original_1d7585ea600051f8df21eeed1dbbab29.png?1783520219
+  source_fingerprint: 4328cb41bbd2fd74d9260150bd71ac54ffbb2e70b7f1cc00ec7c5141ee0c6c1f
+visual_role: definition
+visible_text:
+  transcription_status: partial
+  transcription: Orientation Design is the study and intentional design of how humans
+    and intelligent systems can understand, navigate and act in complex, dynamic worlds.
+research_elements:
+  definitions:
+  - statement: Orientation Design is the study and intentional design of how humans
+      and intelligent systems can understand, navigate and act in complex, dynamic
+      worlds.
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699758
+      source_url: https://www.are.na/block/47699758
+      note: null
+    status: publication_assertion
+  questions:
+  - statement: How can orientation be intentionally designed?
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699758
+      source_url: https://www.are.na/block/47699758
+      note: null
+    status: publication_assertion
+  observations: []
+  hypotheses: []
+  methods: []
+  models: []
+  evidence_statements: []
+  limitations: []
+  open_questions: []
+  concepts:
+  - statement: orientation design
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699758
+      source_url: https://www.are.na/block/47699758
+      note: null
+    status: observed_label
+  - statement: complex dynamic worlds
+    evidence:
+    - evidence_level: visible_page_text
+      arena_block_id: 47699758
+      source_url: https://www.are.na/block/47699758
+      note: null
+    status: observed_label
+  operator_candidates: []
+  atlas_objects: []
+claim_boundary: This is the Work's field definition and central question, not a canonical
+  discipline definition or validated claim of generality.
+review:
+  method: machine_assisted_visual_review
+  extraction_status: visually_reviewed
+  review_state: queued
+  reviewed_at: '2026-07-20T00:00:00Z'
+  reviewed_by: Codex visual review
+  confidence: high
+  requires_human_review: true
+  notes: Partial transcription and bounded extraction; human acceptance pending.

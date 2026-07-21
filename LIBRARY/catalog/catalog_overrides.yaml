@@ -1,0 +1,92 @@
+schema_version: '0.1'
+status: human_editorial_input
+authority: website_catalog_only
+policy:
+  canonical_registry_changes: false
+  proposal_changes: false
+  arena_writes: false
+  note: Shelves support website discovery and may overlap. They do not establish Entity or Series identity.
+records:
+- arena_channel_id: 5386766
+  shelves: [Laboratory, Research & Documentation]
+  catalog_depth: research_structure
+  catalog_note: Documents the repository, laboratory architecture, and laboratory results.
+- arena_channel_id: 5416617
+  shelves: [Orientation, Research Foundations]
+  catalog_depth: research_structure
+  catalog_note: Research Prospectus for Orientation Science, Version 1.0 (2026).
+- arena_channel_id: 5347685
+  display_title: ODYSSEY 2040 — MANY MAPS. ONE WORLD.
+  series: The Human Journey
+  shelves: [Human Journey]
+  catalog_depth: bibliographic_and_dramaturgic
+  catalog_note: A story about perspective and a call to participate; no longer treated as a new-release category.
+- arena_channel_id: 5397188
+  series: The Human Journey
+  shelves: [Human Journey, Awareness]
+  catalog_depth: bibliographic_and_dramaturgic
+- arena_channel_id: 5369070
+  series: The Human Journey
+  shelves: [Human Journey]
+  catalog_depth: bibliographic_and_dramaturgic
+- arena_channel_id: 5345856
+  shelves: [Whiteboard Series, Research]
+- arena_channel_id: 5345336
+  shelves: [Whiteboard Series, Orientation]
+- arena_channel_id: 5345353
+  shelves: [Whiteboard Series, Orientation]
+- arena_channel_id: 5345385
+  shelves: [Whiteboard Series, Research]
+- arena_channel_id: 5345838
+  shelves: [Whiteboard Series, Research]
+- arena_channel_id: 5442721
+  shelves: [Operator]
+- arena_channel_id: 5391199
+  shelves: [Operator]
+- arena_channel_id: 5393574
+  shelves: [Operator]
+- arena_channel_id: 5442697
+  shelves: [Operator]
+- arena_channel_id: 5404597
+  shelves: [Operator, Wonder]
+  catalog_depth: bibliographic_and_dramaturgic
+- arena_channel_id: 5450904
+  shelves: [Operator, Wonder]
+  catalog_depth: bibliographic_and_dramaturgic
+- arena_channel_id: 5415716
+  shelves: [Orientation]
+  catalog_depth: research_structure
+- arena_channel_id: 5415690
+  shelves: [Orientation]
+  catalog_depth: research_structure
+- arena_channel_id: 5309625
+  shelves: [Orientation]
+  catalog_depth: research_structure
+- arena_channel_id: 5250350
+  shelves: [Orientation]
+  catalog_depth: research_structure
+- arena_channel_id: 5305692
+  shelves: [Orientation]
+  catalog_depth: research_structure
+- arena_channel_id: 5203312
+  shelves: [Mathematica, Research]
+- arena_channel_id: 5203387
+  shelves: [Mathematica, Research]
+- arena_channel_id: 5203476
+  shelves: [Mathematica, Research]
+- arena_channel_id: 5203499
+  shelves: [Mathematica, Research]
+- arena_channel_id: 5203528
+  shelves: [Mathematica, Research]
+- arena_channel_id: 5218362
+  shelves: [XV Atlas, Research]
+- arena_channel_id: 5246392
+  shelves: [XV Atlas, Research]
+- arena_channel_id: 5201262
+  shelves: [XV Atlas, Research]
+- arena_channel_id: 5201307
+  shelves: [XV Atlas, Research]
+- arena_channel_id: 5203074
+  shelves: [XV Atlas, Research]
+- arena_channel_id: 5217666
+  shelves: [Transition Geometry, Research]

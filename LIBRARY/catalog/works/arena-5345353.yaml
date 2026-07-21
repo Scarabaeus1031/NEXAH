@@ -1,0 +1,431 @@
+schema_version: '0.1'
+catalog_key: arena:5345353
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: 🧭 NEXAH PATHFINDER — WHITEBOARD SERIES
+source:
+  arena_channel_id: 5345353
+  arena_slug: nexah-pathfinder-whiteboard-series
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/nexah-pathfinder-whiteboard-series
+  live_title: 🧭 NEXAH PATHFINDER  — WHITEBOARD SERIES
+  description: '🧭 NEXAH PATHFINDER — WHITEBOARD SERIES
+
+    A visual guide to finding better paths through complexity, uncertainty and change.
+
+    This whiteboard series introduces the core ideas behind navigation in dynamic systems. Through landscapes, basins, bridges,
+    portals, ridges and pathways, it explores how individuals, organizations and societies can move from possibility to purpose.
+
+    Rather than treating reality as a collection of isolated objects, Pathfinder views the world as a living field of choices,
+    transitions and destinations. The focus is not prediction, but orientation: understanding where you are, what paths exist,
+    and which actions lead toward desirable futures.
+
+    Across ten interconnected whiteboards, the series develops a practical visual language for decision-making, transition
+    design and collective intelligence.
+
+    Topics:
+
+    Navigation • State Spaces • Attractors • Basins • Bridges • Portals • Path Planning • Collective Intelligence • Decision
+    Making • Future Design • Systems Thinking
+
+    Core Idea:
+
+    “The best way through complexity is not a line. It is a living path.” 🧭'
+  visibility: closed
+  state: available
+  member_count: 14
+  created_at: '2026-06-22T21:33:55Z'
+  updated_at: '2026-06-22T21:50:34Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: work
+  form: whiteboard
+  library_function: research
+  publication_status: published
+  revision_state: review
+  content_maturity: developing
+  series: NEXAH Whiteboard Series
+  confidence: high
+  human_decision: pending
+  shelves:
+  - Whiteboard Series
+  - Orientation
+catalog_depth: research_structure
+cover:
+  arena_block_id: 47227795
+  title: NexaH PATHFINDER The Art of Finding Better Paths
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227795/original_935c79d322ca5908dce335cba2cd145f.png?1782164084
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5NS9vcmlnaW5hbF85MzVjNzlkMzIyY2E1OTA4ZGNlMzM1Y2JhMmNkMTQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5NS9vcmlnaW5hbF85MzVjNzlkMzIyY2E1OTA4ZGNlMzM1Y2JhMmNkMTQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5NS9vcmlnaW5hbF85MzVjNzlkMzIyY2E1OTA4ZGNlMzM1Y2JhMmNkMTQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5NS9vcmlnaW5hbF85MzVjNzlkMzIyY2E1OTA4ZGNlMzM1Y2JhMmNkMTQ1Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1536
+  height: 1024
+  aspect_ratio: 1.5
+  content_type: image/png
+  filename: 935c79d322ca5908dce335cba2cd145f.png
+  file_size: 1130921
+  alt_text: null
+structure:
+  block_count: 14
+  titled_block_count: 14
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    journey:
+    - sequence_index: 13
+      arena_block_id: 47227771
+      title: PATHFINDER OO AN EPILOGUE ON NAVIGATION THE JOURNEY CONTINUES
+    - sequence_index: 14
+      arena_block_id: 47227770
+      title: PATHFINDER 0 THE THE JOURNEY CONTINUES
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 47227795
+  block_type: Image
+  title: NexaH PATHFINDER The Art of Finding Better Paths
+  description: null
+  page_role: cover
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-06-22T21:34:42Z'
+  updated_at: '2026-06-22T21:34:46Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227795/original_935c79d322ca5908dce335cba2cd145f.png?1782164084
+    variants: *id001
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 935c79d322ca5908dce335cba2cd145f.png
+    file_size: 1130921
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 47227792
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES_INDEX
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-06-22T21:34:40Z'
+  updated_at: '2026-06-22T21:34:44Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227792/original_f927b66869c82463f6c6ebeffd8cd781.png?1782164081
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5Mi9vcmlnaW5hbF9mOTI3YjY2ODY5YzgyNDYzZjZjNmViZWZmZDhjZDc4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5Mi9vcmlnaW5hbF9mOTI3YjY2ODY5YzgyNDYzZjZjNmViZWZmZDhjZDc4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5Mi9vcmlnaW5hbF9mOTI3YjY2ODY5YzgyNDYzZjZjNmViZWZmZDhjZDc4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5Mi9vcmlnaW5hbF9mOTI3YjY2ODY5YzgyNDYzZjZjNmViZWZmZDhjZDc4MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f927b66869c82463f6c6ebeffd8cd781.png
+    file_size: 2048847
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 47227791
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 01 THE LANDSCAPE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-06-22T21:34:37Z'
+  updated_at: '2026-06-22T21:34:41Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227791/original_d110516b20daaa4b9e430f66605ea9cc.png?1782164079
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5MS9vcmlnaW5hbF9kMTEwNTE2YjIwZGFhYTRiOWU0MzBmNjY2MDVlYTljYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5MS9vcmlnaW5hbF9kMTEwNTE2YjIwZGFhYTRiOWU0MzBmNjY2MDVlYTljYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5MS9vcmlnaW5hbF9kMTEwNTE2YjIwZGFhYTRiOWU0MzBmNjY2MDVlYTljYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc5MS9vcmlnaW5hbF9kMTEwNTE2YjIwZGFhYTRiOWU0MzBmNjY2MDVlYTljYy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: d110516b20daaa4b9e430f66605ea9cc.png
+    file_size: 2148197
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 47227789
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 02 BASINS & DESTINATIONS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-06-22T21:34:35Z'
+  updated_at: '2026-06-22T21:34:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227789/original_80c342c62dcab352dea5886f63e3622e.png?1782164076
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4OS9vcmlnaW5hbF84MGMzNDJjNjJkY2FiMzUyZGVhNTg4NmY2M2UzNjIyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4OS9vcmlnaW5hbF84MGMzNDJjNjJkY2FiMzUyZGVhNTg4NmY2M2UzNjIyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4OS9vcmlnaW5hbF84MGMzNDJjNjJkY2FiMzUyZGVhNTg4NmY2M2UzNjIyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4OS9vcmlnaW5hbF84MGMzNDJjNjJkY2FiMzUyZGVhNTg4NmY2M2UzNjIyZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 80c342c62dcab352dea5886f63e3622e.png
+    file_size: 2029469
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 47227785
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 03_BRIDGES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 10
+  created_at: '2026-06-22T21:34:33Z'
+  updated_at: '2026-06-22T21:42:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227785/original_25091a0a9d584db10c4b280f2a612a72.png?1782164074
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NS9vcmlnaW5hbF8yNTA5MWEwYTlkNTg0ZGIxMGM0YjI4MGYyYTYxMmE3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NS9vcmlnaW5hbF8yNTA5MWEwYTlkNTg0ZGIxMGM0YjI4MGYyYTYxMmE3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NS9vcmlnaW5hbF8yNTA5MWEwYTlkNTg0ZGIxMGM0YjI4MGYyYTYxMmE3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NS9vcmlnaW5hbF8yNTA5MWEwYTlkNTg0ZGIxMGM0YjI4MGYyYTYxMmE3Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 25091a0a9d584db10c4b280f2a612a72.png
+    file_size: 1874945
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 47227784
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 04_PORTALS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-06-22T21:34:31Z'
+  updated_at: '2026-06-22T21:34:35Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227784/original_55e0abca074e7b203d5882690a49857c.png?1782164072
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NC9vcmlnaW5hbF81NWUwYWJjYTA3NGU3YjIwM2Q1ODgyNjkwYTQ5ODU3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NC9vcmlnaW5hbF81NWUwYWJjYTA3NGU3YjIwM2Q1ODgyNjkwYTQ5ODU3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NC9vcmlnaW5hbF81NWUwYWJjYTA3NGU3YjIwM2Q1ODgyNjkwYTQ5ODU3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4NC9vcmlnaW5hbF81NWUwYWJjYTA3NGU3YjIwM2Q1ODgyNjkwYTQ5ODU3Yy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 55e0abca074e7b203d5882690a49857c.png
+    file_size: 1867165
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 47227783
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 05_RIDGES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-06-22T21:34:27Z'
+  updated_at: '2026-06-22T21:34:32Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227783/original_da2fc493e6198cfd432d53c57145d1dd.png?1782164068
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4My9vcmlnaW5hbF9kYTJmYzQ5M2U2MTk4Y2ZkNDMyZDUzYzU3MTQ1ZDFkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4My9vcmlnaW5hbF9kYTJmYzQ5M2U2MTk4Y2ZkNDMyZDUzYzU3MTQ1ZDFkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4My9vcmlnaW5hbF9kYTJmYzQ5M2U2MTk4Y2ZkNDMyZDUzYzU3MTQ1ZDFkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4My9vcmlnaW5hbF9kYTJmYzQ5M2U2MTk4Y2ZkNDMyZDUzYzU3MTQ1ZDFkZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: da2fc493e6198cfd432d53c57145d1dd.png
+    file_size: 1971329
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 47227782
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 06 WARP EDGES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-06-22T21:34:25Z'
+  updated_at: '2026-06-22T21:34:29Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227782/original_9721962a7290ccadc99ea55b368d05ed.png?1782164066
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4Mi9vcmlnaW5hbF85NzIxOTYyYTcyOTBjY2FkYzk5ZWE1NWIzNjhkMDVlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4Mi9vcmlnaW5hbF85NzIxOTYyYTcyOTBjY2FkYzk5ZWE1NWIzNjhkMDVlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4Mi9vcmlnaW5hbF85NzIxOTYyYTcyOTBjY2FkYzk5ZWE1NWIzNjhkMDVlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4Mi9vcmlnaW5hbF85NzIxOTYyYTcyOTBjY2FkYzk5ZWE1NWIzNjhkMDVlZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 9721962a7290ccadc99ea55b368d05ed.png
+    file_size: 1880358
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 47227780
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 07 THE NAVIGATION GRAPH
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-06-22T21:34:23Z'
+  updated_at: '2026-06-22T21:34:27Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227780/original_1cb82b7f4b3b34cee2d2034121abfd23.png?1782164064
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4MC9vcmlnaW5hbF8xY2I4MmI3ZjRiM2IzNGNlZTJkMjAzNDEyMWFiZmQyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4MC9vcmlnaW5hbF8xY2I4MmI3ZjRiM2IzNGNlZTJkMjAzNDEyMWFiZmQyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4MC9vcmlnaW5hbF8xY2I4MmI3ZjRiM2IzNGNlZTJkMjAzNDEyMWFiZmQyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc4MC9vcmlnaW5hbF8xY2I4MmI3ZjRiM2IzNGNlZTJkMjAzNDEyMWFiZmQyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 1cb82b7f4b3b34cee2d2034121abfd23.png
+    file_size: 1834623
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 47227778
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 08_ROUTE PLANNING
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-06-22T21:34:21Z'
+  updated_at: '2026-06-22T21:34:26Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227778/original_f2f0b572b30095399eb2726ff995a5aa.png?1782164062
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3OC9vcmlnaW5hbF9mMmYwYjU3MmIzMDA5NTM5OWViMjcyNmZmOTk1YTVhYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3OC9vcmlnaW5hbF9mMmYwYjU3MmIzMDA5NTM5OWViMjcyNmZmOTk1YTVhYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3OC9vcmlnaW5hbF9mMmYwYjU3MmIzMDA5NTM5OWViMjcyNmZmOTk1YTVhYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3OC9vcmlnaW5hbF9mMmYwYjU3MmIzMDA5NTM5OWViMjcyNmZmOTk1YTVhYS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: f2f0b572b30095399eb2726ff995a5aa.png
+    file_size: 1790209
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 47227777
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 09_ MULTI_AGENT NAVIGATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-06-22T21:34:19Z'
+  updated_at: '2026-06-22T21:34:23Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227777/original_b0ab97da8d8f5aa3f793ecbf2457259f.png?1782164060
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3Ny9vcmlnaW5hbF9iMGFiOTdkYThkOGY1YWEzZjc5M2VjYmYyNDU3MjU5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3Ny9vcmlnaW5hbF9iMGFiOTdkYThkOGY1YWEzZjc5M2VjYmYyNDU3MjU5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3Ny9vcmlnaW5hbF9iMGFiOTdkYThkOGY1YWEzZjc5M2VjYmYyNDU3MjU5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3Ny9vcmlnaW5hbF9iMGFiOTdkYThkOGY1YWEzZjc5M2VjYmYyNDU3MjU5Zi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b0ab97da8d8f5aa3f793ecbf2457259f.png
+    file_size: 1802718
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 47227775
+  block_type: Image
+  title: NEXAH PATHFINDER SERIES 10 WORLDPEACE 2040
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-06-22T21:34:16Z'
+  updated_at: '2026-06-22T21:34:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227775/original_9b7615579fc406bf400f15e5eb3e98c0.png?1782164057
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3NS9vcmlnaW5hbF85Yjc2MTU1NzlmYzQwNmJmNDAwZjE1ZTVlYjNlOThjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3NS9vcmlnaW5hbF85Yjc2MTU1NzlmYzQwNmJmNDAwZjE1ZTVlYjNlOThjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3NS9vcmlnaW5hbF85Yjc2MTU1NzlmYzQwNmJmNDAwZjE1ZTVlYjNlOThjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3NS9vcmlnaW5hbF85Yjc2MTU1NzlmYzQwNmJmNDAwZjE1ZTVlYjNlOThjMC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 9b7615579fc406bf400f15e5eb3e98c0.png
+    file_size: 1817035
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 47227771
+  block_type: Image
+  title: PATHFINDER OO AN EPILOGUE ON NAVIGATION THE JOURNEY CONTINUES
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 2
+  created_at: '2026-06-22T21:34:14Z'
+  updated_at: '2026-06-22T21:34:19Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227771/original_adb9b04359b29a0bc4889ce505a25725.png?1782164055
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MS9vcmlnaW5hbF9hZGI5YjA0MzU5YjI5YTBiYzQ4ODljZTUwNWEyNTcyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MS9vcmlnaW5hbF9hZGI5YjA0MzU5YjI5YTBiYzQ4ODljZTUwNWEyNTcyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MS9vcmlnaW5hbF9hZGI5YjA0MzU5YjI5YTBiYzQ4ODljZTUwNWEyNTcyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MS9vcmlnaW5hbF9hZGI5YjA0MzU5YjI5YTBiYzQ4ODljZTUwNWEyNTcyNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: adb9b04359b29a0bc4889ce505a25725.png
+    file_size: 1799959
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 47227770
+  block_type: Image
+  title: PATHFINDER 0 THE THE JOURNEY CONTINUES
+  description: null
+  page_role: page
+  editorial_roles:
+  - journey
+  connection_position: 1
+  created_at: '2026-06-22T21:34:09Z'
+  updated_at: '2026-06-22T21:34:13Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/47227770/original_aae3132f9ef376b23a5742ef1586cbb1.png?1782164051
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MC9vcmlnaW5hbF9hYWUzMTMyZjllZjM3NmIyM2E1NzQyZWYxNTg2Y2JiMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MC9vcmlnaW5hbF9hYWUzMTMyZjllZjM3NmIyM2E1NzQyZWYxNTg2Y2JiMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MC9vcmlnaW5hbF9hYWUzMTMyZjllZjM3NmIyM2E1NzQyZWYxNTg2Y2JiMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NzIyNzc3MC9vcmlnaW5hbF9hYWUzMTMyZjllZjM3NmIyM2E1NzQyZWYxNTg2Y2JiMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: aae3132f9ef376b23a5742ef1586cbb1.png
+    file_size: 2109551
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

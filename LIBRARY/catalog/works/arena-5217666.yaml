@@ -1,0 +1,539 @@
+schema_version: '0.1'
+catalog_key: arena:5217666
+authority: noncanonical_website_catalog
+registered_entity_id: null
+display_title: NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION
+source:
+  arena_channel_id: 5217666
+  arena_slug: 00-nexah-atlas-the-operational-geometry-of-transition
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/00-nexah-atlas-the-operational-geometry-of-transition
+  live_title: 00 — 🜂 NEXAH ATLAS  The Operational Geometry of Transition
+  description: "A visual atlas exploring the geometry of transition, coherence, navigation, and emergence. \nNEXAH ATLAS maps\
+    \ how potential becomes experience through structure, flow, alignment, observation, and transformation.\nCombining field\
+    \ architecture, topology, symbolic systems, navigation mechanics, resonance structures, and operational diagrams, the\
+    \ project functions as a hybrid between:\nvisual research framework\nspeculative systems architecture\ncinematic field\
+    \ cartography\ntransition operating system\nsymbolic navigation language\nThe atlas is organized into interconnected channels\
+    \ and chapters, including:\nAperture Series\nWotion Chamber\nTubal Operator\nShell Sequence\nIridescent Cavity\nPink Diamond\
+    \ Harmonic Maps\nMAOS (Multi-Agent Operator System)\nField Architecture & Navigation Systems\nRather than describing static\
+    \ reality, NEXAH focuses on transition itself:\nhow systems drift, align, stabilize, transform, and become coherent experience.\n\
+    The whiteboard “Field Guide” visuals provide orientation and navigation.\nThe dark atlas visuals form the cinematic operational\
+    \ layer of the system.\nNot the whole space.\nNot the whole truth.\nOnly the slice that can align."
+  visibility: closed
+  state: available
+  member_count: 19
+  created_at: '2026-05-24T21:13:05Z'
+  updated_at: '2026-06-01T21:16:02Z'
+editorial:
+  classification_state: proposed
+  object_family: work
+  type: atlas
+  form: research_atlas
+  library_function: foundation
+  publication_status: published
+  revision_state: review
+  content_maturity: exploratory
+  series: null
+  confidence: moderate
+  human_decision: pending
+  shelves:
+  - Transition Geometry
+  - Research
+catalog_depth: atlas_structure
+cover:
+  arena_block_id: 46462002
+  title: NEXAH ATLAS THE OPERATIONAL GEOMETRY OF TRANSITION
+  original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462002/original_449f09d3540416622c86949f12b77d98.png?1779657329
+  variants: &id001
+    small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAwMi9vcmlnaW5hbF80NDlmMDlkMzU0MDQxNjYyMmM4Njk0OWYxMmI3N2Q5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+    medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAwMi9vcmlnaW5hbF80NDlmMDlkMzU0MDQxNjYyMmM4Njk0OWYxMmI3N2Q5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAwMi9vcmlnaW5hbF80NDlmMDlkMzU0MDQxNjYyMmM4Njk0OWYxMmI3N2Q5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAwMi9vcmlnaW5hbF80NDlmMDlkMzU0MDQxNjYyMmM4Njk0OWYxMmI3N2Q5OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+  width: 1536
+  height: 1024
+  aspect_ratio: 1.5
+  content_type: image/png
+  filename: 449f09d3540416622c86949f12b77d98.png
+  file_size: 2702747
+  alt_text: null
+structure:
+  block_count: 19
+  titled_block_count: 19
+  title_coverage: 1.0
+  foreword: []
+  index: []
+  part: []
+  chapter: []
+  numbered_section: []
+  appendix: []
+  closing: []
+  editorial_roles:
+    transition:
+    - sequence_index: 1
+      arena_block_id: 46462002
+      title: NEXAH ATLAS THE OPERATIONAL GEOMETRY OF TRANSITION
+    - sequence_index: 10
+      arena_block_id: 46462033
+      title: TUBAL OPERATOR THE OPERATIONAL ENGINE OF TRANSITION & PERSISTENCE
+  visual_text_status: not_extracted
+  note: Roles are inferred only from public block titles. Text rendered inside image pages requires a separate visual review.
+blocks:
+- sequence_index: 1
+  arena_block_id: 46462002
+  block_type: Image
+  title: NEXAH ATLAS THE OPERATIONAL GEOMETRY OF TRANSITION
+  description: null
+  page_role: cover
+  editorial_roles:
+  - transition
+  connection_position: 19
+  created_at: '2026-05-24T21:15:28Z'
+  updated_at: '2026-05-24T21:20:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462002/original_449f09d3540416622c86949f12b77d98.png?1779657329
+    variants: *id001
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 449f09d3540416622c86949f12b77d98.png
+    file_size: 2702747
+    alt_text: null
+- sequence_index: 2
+  arena_block_id: 46462020
+  block_type: Image
+  title: NEXAH • FIELD ARCHITECTURE & NAVIGATION ATLAS
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 18
+  created_at: '2026-05-24T21:16:05Z'
+  updated_at: '2026-05-24T21:20:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462020/original_20432181036e77d103ce6f2a4b00c3a6.png?1779657366
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAyMC9vcmlnaW5hbF8yMDQzMjE4MTAzNmU3N2QxMDNjZTZmMmE0YjAwYzNhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAyMC9vcmlnaW5hbF8yMDQzMjE4MTAzNmU3N2QxMDNjZTZmMmE0YjAwYzNhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAyMC9vcmlnaW5hbF8yMDQzMjE4MTAzNmU3N2QxMDNjZTZmMmE0YjAwYzNhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAyMC9vcmlnaW5hbF8yMDQzMjE4MTAzNmU3N2QxMDNjZTZmMmE0YjAwYzNhNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 20432181036e77d103ce6f2a4b00c3a6.png
+    file_size: 2703202
+    alt_text: null
+- sequence_index: 3
+  arena_block_id: 46461996
+  block_type: Image
+  title: NEXAH・ FIELD ARCHITECTURE & NAVIGATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 17
+  created_at: '2026-05-24T21:15:18Z'
+  updated_at: '2026-05-24T21:20:08Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461996/original_12f99267e71eeaa5c5f9694d483ccfb3.png?1779657319
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5Ni9vcmlnaW5hbF8xMmY5OTI2N2U3MWVlYWE1YzVmOTY5NGQ0ODNjY2ZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5Ni9vcmlnaW5hbF8xMmY5OTI2N2U3MWVlYWE1YzVmOTY5NGQ0ODNjY2ZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5Ni9vcmlnaW5hbF8xMmY5OTI2N2U3MWVlYWE1YzVmOTY5NGQ0ODNjY2ZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5Ni9vcmlnaW5hbF8xMmY5OTI2N2U3MWVlYWE1YzVmOTY5NGQ0ODNjY2ZiMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 12f99267e71eeaa5c5f9694d483ccfb3.png
+    file_size: 2246989
+    alt_text: null
+- sequence_index: 4
+  arena_block_id: 46461990
+  block_type: Image
+  title: NEXAH ATLAS INDEX
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 16
+  created_at: '2026-05-24T21:15:08Z'
+  updated_at: '2026-05-24T21:20:05Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461990/original_036a6359b78c7d37da2e8b6a9b1f27a5.png?1779657309
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5MC9vcmlnaW5hbF8wMzZhNjM1OWI3OGM3ZDM3ZGEyZThiNmE5YjFmMjdhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5MC9vcmlnaW5hbF8wMzZhNjM1OWI3OGM3ZDM3ZGEyZThiNmE5YjFmMjdhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5MC9vcmlnaW5hbF8wMzZhNjM1OWI3OGM3ZDM3ZGEyZThiNmE5YjFmMjdhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk5MC9vcmlnaW5hbF8wMzZhNjM1OWI3OGM3ZDM3ZGEyZThiNmE5YjFmMjdhNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 036a6359b78c7d37da2e8b6a9b1f27a5.png
+    file_size: 2869573
+    alt_text: null
+- sequence_index: 5
+  arena_block_id: 46462139
+  block_type: Image
+  title: NEXAH THE APERTURE SERIES
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 15
+  created_at: '2026-05-24T21:21:14Z'
+  updated_at: '2026-05-24T21:21:25Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462139/original_7f7bb05b601f2bbc96d4a1b61b466b23.png?1779657676
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjEzOS9vcmlnaW5hbF83ZjdiYjA1YjYwMWYyYmJjOTZkNGExYjYxYjQ2NmIyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjEzOS9vcmlnaW5hbF83ZjdiYjA1YjYwMWYyYmJjOTZkNGExYjYxYjQ2NmIyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjEzOS9vcmlnaW5hbF83ZjdiYjA1YjYwMWYyYmJjOTZkNGExYjYxYjQ2NmIyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjEzOS9vcmlnaW5hbF83ZjdiYjA1YjYwMWYyYmJjOTZkNGExYjYxYjQ2NmIyMy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 7f7bb05b601f2bbc96d4a1b61b466b23.png
+    file_size: 2764692
+    alt_text: null
+- sequence_index: 6
+  arena_block_id: 46462042
+  block_type: Image
+  title: THE WOTION CHAMBER
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 14
+  created_at: '2026-05-24T21:17:45Z'
+  updated_at: '2026-05-24T21:20:03Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462042/original_6647c829a17c4872a99fdb58fee468f1.png?1779657467
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0Mi9vcmlnaW5hbF82NjQ3YzgyOWExN2M0ODcyYTk5ZmRiNThmZWU0NjhmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0Mi9vcmlnaW5hbF82NjQ3YzgyOWExN2M0ODcyYTk5ZmRiNThmZWU0NjhmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0Mi9vcmlnaW5hbF82NjQ3YzgyOWExN2M0ODcyYTk5ZmRiNThmZWU0NjhmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0Mi9vcmlnaW5hbF82NjQ3YzgyOWExN2M0ODcyYTk5ZmRiNThmZWU0NjhmMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 6647c829a17c4872a99fdb58fee468f1.png
+    file_size: 2876966
+    alt_text: null
+- sequence_index: 7
+  arena_block_id: 46462040
+  block_type: Image
+  title: NEXAH VISUAL ENGINE
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 13
+  created_at: '2026-05-24T21:17:42Z'
+  updated_at: '2026-05-24T21:19:57Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462040/original_4749b12472a38b7c79c0ff784b340915.png?1779657463
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0MC9vcmlnaW5hbF80NzQ5YjEyNDcyYTM4YjdjNzljMGZmNzg0YjM0MDkxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0MC9vcmlnaW5hbF80NzQ5YjEyNDcyYTM4YjdjNzljMGZmNzg0YjM0MDkxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0MC9vcmlnaW5hbF80NzQ5YjEyNDcyYTM4YjdjNzljMGZmNzg0YjM0MDkxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjA0MC9vcmlnaW5hbF80NzQ5YjEyNDcyYTM4YjdjNzljMGZmNzg0YjM0MDkxNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 4749b12472a38b7c79c0ff784b340915.png
+    file_size: 2038986
+    alt_text: null
+- sequence_index: 8
+  arena_block_id: 46462037
+  block_type: Image
+  title: NEXAH MASTERBUILD
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 12
+  created_at: '2026-05-24T21:17:38Z'
+  updated_at: '2026-05-24T21:17:45Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462037/original_456fe9c62b530c5a5ac969e57b2d824d.png?1779657460
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNy9vcmlnaW5hbF80NTZmZTljNjJiNTMwYzVhNWFjOTY5ZTU3YjJkODI0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNy9vcmlnaW5hbF80NTZmZTljNjJiNTMwYzVhNWFjOTY5ZTU3YjJkODI0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNy9vcmlnaW5hbF80NTZmZTljNjJiNTMwYzVhNWFjOTY5ZTU3YjJkODI0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNy9vcmlnaW5hbF80NTZmZTljNjJiNTMwYzVhNWFjOTY5ZTU3YjJkODI0ZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 456fe9c62b530c5a5ac969e57b2d824d.png
+    file_size: 2785389
+    alt_text: null
+- sequence_index: 9
+  arena_block_id: 46462035
+  block_type: Image
+  title: TUBAL OPERATOR
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 11
+  created_at: '2026-05-24T21:17:35Z'
+  updated_at: '2026-05-24T21:18:14Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462035/original_e89e72d212dbf761e38618f7791d8356.png?1779657457
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNS9vcmlnaW5hbF9lODllNzJkMjEyZGJmNzYxZTM4NjE4Zjc3OTFkODM1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNS9vcmlnaW5hbF9lODllNzJkMjEyZGJmNzYxZTM4NjE4Zjc3OTFkODM1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNS9vcmlnaW5hbF9lODllNzJkMjEyZGJmNzYxZTM4NjE4Zjc3OTFkODM1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzNS9vcmlnaW5hbF9lODllNzJkMjEyZGJmNzYxZTM4NjE4Zjc3OTFkODM1Ni5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: e89e72d212dbf761e38618f7791d8356.png
+    file_size: 2568824
+    alt_text: null
+- sequence_index: 10
+  arena_block_id: 46462033
+  block_type: Image
+  title: TUBAL OPERATOR THE OPERATIONAL ENGINE OF TRANSITION & PERSISTENCE
+  description: null
+  page_role: page
+  editorial_roles:
+  - transition
+  connection_position: 10
+  created_at: '2026-05-24T21:17:32Z'
+  updated_at: '2026-05-24T21:17:39Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46462033/original_d420d68259717116bf5c5c444ce8332d.png?1779657454
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzMy9vcmlnaW5hbF9kNDIwZDY4MjU5NzE3MTE2YmY1YzVjNDQ0Y2U4MzMyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzMy9vcmlnaW5hbF9kNDIwZDY4MjU5NzE3MTE2YmY1YzVjNDQ0Y2U4MzMyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzMy9vcmlnaW5hbF9kNDIwZDY4MjU5NzE3MTE2YmY1YzVjNDQ0Y2U4MzMyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MjAzMy9vcmlnaW5hbF9kNDIwZDY4MjU5NzE3MTE2YmY1YzVjNDQ0Y2U4MzMyZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: d420d68259717116bf5c5c444ce8332d.png
+    file_size: 2352931
+    alt_text: null
+- sequence_index: 11
+  arena_block_id: 46461976
+  block_type: Image
+  title: NEXAH STANDARD MODEL AS MULTI-REGIME INTERACTING FIELD SYSTEM
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 9
+  created_at: '2026-05-24T21:14:20Z'
+  updated_at: '2026-05-24T21:14:24Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461976/original_ae71aee4d4c84f612d2adb1f82590ce7.png?1779657261
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Ni9vcmlnaW5hbF9hZTcxYWVlNGQ0Yzg0ZjYxMmQyYWRiMWY4MjU5MGNlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Ni9vcmlnaW5hbF9hZTcxYWVlNGQ0Yzg0ZjYxMmQyYWRiMWY4MjU5MGNlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Ni9vcmlnaW5hbF9hZTcxYWVlNGQ0Yzg0ZjYxMmQyYWRiMWY4MjU5MGNlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Ni9vcmlnaW5hbF9hZTcxYWVlNGQ0Yzg0ZjYxMmQyYWRiMWY4MjU5MGNlNy5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: ae71aee4d4c84f612d2adb1f82590ce7.png
+    file_size: 2541274
+    alt_text: null
+- sequence_index: 12
+  arena_block_id: 46461974
+  block_type: Image
+  title: IRIDESCENT CAVITY TOPOLOGY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 8
+  created_at: '2026-05-24T21:14:14Z'
+  updated_at: '2026-05-24T21:14:20Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461974/original_fc97848519d62b13ce87f1c1a8c233a9.png?1779657255
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3NC9vcmlnaW5hbF9mYzk3ODQ4NTE5ZDYyYjEzY2U4N2YxYzFhOGMyMzNhOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3NC9vcmlnaW5hbF9mYzk3ODQ4NTE5ZDYyYjEzY2U4N2YxYzFhOGMyMzNhOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3NC9vcmlnaW5hbF9mYzk3ODQ4NTE5ZDYyYjEzY2U4N2YxYzFhOGMyMzNhOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3NC9vcmlnaW5hbF9mYzk3ODQ4NTE5ZDYyYjEzY2U4N2YxYzFhOGMyMzNhOS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: fc97848519d62b13ce87f1c1a8c233a9.png
+    file_size: 2436634
+    alt_text: null
+- sequence_index: 13
+  arena_block_id: 46461973
+  block_type: Image
+  title: NEXAH - IRIDESCENT CAVITY TOPOLOGY
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 7
+  created_at: '2026-05-24T21:14:12Z'
+  updated_at: '2026-05-24T21:14:17Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461973/original_db2c590af38df98f4861479f888e653d.png?1779657254
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3My9vcmlnaW5hbF9kYjJjNTkwYWYzOGRmOThmNDg2MTQ3OWY4ODhlNjUzZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3My9vcmlnaW5hbF9kYjJjNTkwYWYzOGRmOThmNDg2MTQ3OWY4ODhlNjUzZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3My9vcmlnaW5hbF9kYjJjNTkwYWYzOGRmOThmNDg2MTQ3OWY4ODhlNjUzZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3My9vcmlnaW5hbF9kYjJjNTkwYWYzOGRmOThmNDg2MTQ3OWY4ODhlNjUzZC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1568
+    height: 1003
+    aspect_ratio: 1.5633
+    content_type: image/png
+    filename: db2c590af38df98f4861479f888e653d.png
+    file_size: 2219157
+    alt_text: null
+- sequence_index: 14
+  arena_block_id: 46461972
+  block_type: Image
+  title: IRIDESCENT CAVITY TOPOLOGY — NEXAH UNIFIED MAP
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 6
+  created_at: '2026-05-24T21:14:11Z'
+  updated_at: '2026-05-24T21:14:15Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461972/original_b29c54b6330203d22c0c67fdc1f58343.png?1779657252
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Mi9vcmlnaW5hbF9iMjljNTRiNjMzMDIwM2QyMmMwYzY3ZmRjMWY1ODM0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Mi9vcmlnaW5hbF9iMjljNTRiNjMzMDIwM2QyMmMwYzY3ZmRjMWY1ODM0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Mi9vcmlnaW5hbF9iMjljNTRiNjMzMDIwM2QyMmMwYzY3ZmRjMWY1ODM0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3Mi9vcmlnaW5hbF9iMjljNTRiNjMzMDIwM2QyMmMwYzY3ZmRjMWY1ODM0My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: b29c54b6330203d22c0c67fdc1f58343.png
+    file_size: 2280059
+    alt_text: null
+- sequence_index: 15
+  arena_block_id: 46461970
+  block_type: Image
+  title: PINK DIAMOND HARMONIC MAP - PRIME, CROSSINGS & FOLDING MECHANISM
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 5
+  created_at: '2026-05-24T21:14:08Z'
+  updated_at: '2026-05-24T21:14:11Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461970/original_8d6be809c2d57dc4c4c63092c433f441.png?1779657249
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3MC9vcmlnaW5hbF84ZDZiZTgwOWMyZDU3ZGM0YzRjNjMwOTJjNDMzZjQ0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3MC9vcmlnaW5hbF84ZDZiZTgwOWMyZDU3ZGM0YzRjNjMwOTJjNDMzZjQ0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3MC9vcmlnaW5hbF84ZDZiZTgwOWMyZDU3ZGM0YzRjNjMwOTJjNDMzZjQ0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk3MC9vcmlnaW5hbF84ZDZiZTgwOWMyZDU3ZGM0YzRjNjMwOTJjNDMzZjQ0MS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 8d6be809c2d57dc4c4c63092c433f441.png
+    file_size: 2035725
+    alt_text: null
+- sequence_index: 16
+  arena_block_id: 46461968
+  block_type: Image
+  title: NEXAH FIELD ARCHITECTURE- STRUCTURE → FLOW → ALIGNMENT → OBSERVATION
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 4
+  created_at: '2026-05-24T21:14:06Z'
+  updated_at: '2026-05-24T21:14:10Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461968/original_49c5d03a2b417fac60167c3355319263.png?1779657247
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2OC9vcmlnaW5hbF80OWM1ZDAzYTJiNDE3ZmFjNjAxNjdjMzM1NTMxOTI2My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2OC9vcmlnaW5hbF80OWM1ZDAzYTJiNDE3ZmFjNjAxNjdjMzM1NTMxOTI2My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2OC9vcmlnaW5hbF80OWM1ZDAzYTJiNDE3ZmFjNjAxNjdjMzM1NTMxOTI2My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2OC9vcmlnaW5hbF80OWM1ZDAzYTJiNDE3ZmFjNjAxNjdjMzM1NTMxOTI2My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 49c5d03a2b417fac60167c3355319263.png
+    file_size: 2379602
+    alt_text: null
+- sequence_index: 17
+  arena_block_id: 46461965
+  block_type: Image
+  title: NEXAH Multi-Agent Operator System (NEXAH-MAOS)
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 3
+  created_at: '2026-05-24T21:14:03Z'
+  updated_at: '2026-05-24T21:14:09Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461965/original_15324394c29cbccc8ac5b5c56d79a0fe.png?1779657245
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2NS9vcmlnaW5hbF8xNTMyNDM5NGMyOWNiY2NjOGFjNWI1YzU2ZDc5YTBmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2NS9vcmlnaW5hbF8xNTMyNDM5NGMyOWNiY2NjOGFjNWI1YzU2ZDc5YTBmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2NS9vcmlnaW5hbF8xNTMyNDM5NGMyOWNiY2NjOGFjNWI1YzU2ZDc5YTBmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2NS9vcmlnaW5hbF8xNTMyNDM5NGMyOWNiY2NjOGFjNWI1YzU2ZDc5YTBmZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: 15324394c29cbccc8ac5b5c56d79a0fe.png
+    file_size: 2040450
+    alt_text: null
+- sequence_index: 18
+  arena_block_id: 46461962
+  block_type: Image
+  title: NEXAH XV ATLAS-VOLUME lI_OPERATIONAL NAVIGATION-STABILITY SYSTEMS CORE INDEX
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 2
+  created_at: '2026-05-24T21:13:57Z'
+  updated_at: '2026-05-24T21:14:03Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461962/original_6d4b6176de11f58f6e0d90d70ef420bf.png?1779657238
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2Mi9vcmlnaW5hbF82ZDRiNjE3NmRlMTFmNThmNmUwZDkwZDcwZWY0MjBiZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2Mi9vcmlnaW5hbF82ZDRiNjE3NmRlMTFmNThmNmUwZDkwZDcwZWY0MjBiZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2Mi9vcmlnaW5hbF82ZDRiNjE3NmRlMTFmNThmNmUwZDkwZDcwZWY0MjBiZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2Mi9vcmlnaW5hbF82ZDRiNjE3NmRlMTFmNThmNmUwZDkwZDcwZWY0MjBiZi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1024
+    height: 1536
+    aspect_ratio: 0.6667
+    content_type: image/png
+    filename: 6d4b6176de11f58f6e0d90d70ef420bf.png
+    file_size: 2403885
+    alt_text: null
+- sequence_index: 19
+  arena_block_id: 46461961
+  block_type: Image
+  title: Nexah_Vision
+  description: null
+  page_role: page
+  editorial_roles: []
+  connection_position: 1
+  created_at: '2026-05-24T21:13:55Z'
+  updated_at: '2026-05-24T21:14:00Z'
+  image:
+    original_url: https://d2w9rnfcy7mm78.cloudfront.net/46461961/original_dee9ce0b7087ce8b22a069a59f80fac6.png?1779657237
+    variants:
+      small: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2MS9vcmlnaW5hbF9kZWU5Y2UwYjcwODdjZThiMjJhMDY5YTU5ZjgwZmFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0=
+      medium: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2MS9vcmlnaW5hbF9kZWU5Y2UwYjcwODdjZThiMjJhMDY5YTU5ZjgwZmFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      large: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2MS9vcmlnaW5hbF9kZWU5Y2UwYjcwODdjZThiMjJhMDY5YTU5ZjgwZmFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImhlaWdodCI6MTgwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+      square: https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0NjQ2MTk2MS9vcmlnaW5hbF9kZWU5Y2UwYjcwODdjZThiMjJhMDY5YTU5ZjgwZmFjNi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyMDAsImhlaWdodCI6MTIwMCwiZml0IjoiaW5zaWRlIiwid2l0aG91dEVubGFyZ2VtZW50Ijp0cnVlfSwid2VicCI6eyJxdWFsaXR5Ijo3NX0sImpwZWciOnsicXVhbGl0eSI6NzV9LCJyb3RhdGUiOm51bGx9fQ==
+    width: 1536
+    height: 1024
+    aspect_ratio: 1.5
+    content_type: image/png
+    filename: dee9ce0b7087ce8b22a069a59f80fac6.png
+    file_size: 2364888
+    alt_text: null
+evidence_policy:
+  api_description: source_evidence
+  block_titles: source_evidence
+  page_roles: machine_assisted_structural_inference
+  image_text: not_reviewed
+  semantic_summary: not_generated

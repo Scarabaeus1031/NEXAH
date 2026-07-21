@@ -1,0 +1,250 @@
+schema_version: '0.1'
+authority: noncanonical_catalog_review
+publication:
+  catalog_key: arena:5415690
+  arena_channel_id: 5415690
+  title: ORIENTATION DESIGN — VOLUME II
+  source_url: https://www.are.na/nexah-scarabaeus1031/orientation-design-vol-ii
+page_count: 20
+pages:
+- page_key: arena-block:47699765
+  arena_block_id: 47699765
+  sequence_index: 1
+  title: VOLUME II NEXAH ORIENTATION DESIGN LABORATORY NEXAH Orientation Design A
+    RESEARCH GUIDE
+  visual_role: cover
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47699765
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699765/original_5e93bdb5f3ecf02e8ab77d42d365aca7.png?1783520228
+  source_fingerprint: db4ec2b17f7293b7a1a5f8b166c50d4624454a8eef58465bae4a55f4096fce1c
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47699761
+  arena_block_id: 47699761
+  sequence_index: 2
+  title: NEXAH PREFACE
+  visual_role: foreword
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47699761
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699761/original_905cda6cc4bd2f2b256580b576a6f916.png?1783520221
+  source_fingerprint: f19b001b7f4fc0e7f03737cc68f8638670e77f5899dab832d6f8fad66d9d574e
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47699760
+  arena_block_id: 47699760
+  sequence_index: 3
+  title: CONTENTS
+  visual_role: index
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47699760
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699760/original_992938267cfda387ff56c082d105e394.png?1783520220
+  source_fingerprint: c5c99f2d558913e94dcc03e449b5a92fb566353bbc3dd16c22324d3b916ad401
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47699758
+  arena_block_id: 47699758
+  sequence_index: 4
+  title: NEXAH ORIENTATION DESIGN LABORATORY 01 ORIENTATION DESIGN THE DISCIPLINE
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699758
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699758/original_1d7585ea600051f8df21eeed1dbbab29.png?1783520219
+  source_fingerprint: 4328cb41bbd2fd74d9260150bd71ac54ffbb2e70b7f1cc00ec7c5141ee0c6c1f
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699754
+  arena_block_id: 47699754
+  sequence_index: 5
+  title: 02 THE NEXAH PORTFOLIO ARCHITECTURE THE WHOLE LANDSCAPE. ONE FRAMEWORK.
+  visual_role: model
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699754
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699754/original_34bbb006d692ccb31c04dd3cf0e68827.png?1783520216
+  source_fingerprint: 04c9c9c0d35b77c1fa3052aeece99811dd88e5e0ffaf70894fdf260b231ecaab
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699750
+  arena_block_id: 47699750
+  sequence_index: 6
+  title: 02 THE NEXAH RESEARCH PROGRAM
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699750
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699750/original_7bdbf9ad42b4753d49728c5d69cb47c5.png?1783520213
+  source_fingerprint: 64b954eb37edb1a140ede8d201faa910c3a51b48055260fc07e6ab99fd10fab7
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699748
+  arena_block_id: 47699748
+  sequence_index: 7
+  title: 03 RESEARCH OUTPUTS__
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699748
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699748/original_8667e535733d857cddfa23de9ac2096c.png?1783520211
+  source_fingerprint: e324ab660d82a987b3da582abaf005e597782cdc2de6a809c62499165e24f276
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699746
+  arena_block_id: 47699746
+  sequence_index: 8
+  title: 04 RESEARCH METHODS
+  visual_role: method
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699746
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699746/original_0da97d87ec2db580528430a38cba8f21.png?1783520209
+  source_fingerprint: ce1309349f18f94ac0e4939f90b8ca3db42857c1abb942446197fb686f6e04db
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699743
+  arena_block_id: 47699743
+  sequence_index: 9
+  title: 05 APPLICATIONS
+  visual_role: implementation
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699743
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699743/original_0f211823194dda1135228b06d2b44e5e.png?1783520208
+  source_fingerprint: fe6bd7a1c2a6f0525795d26e0391797861d709f49c6b34c19e8e9f0556691ecc
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699739
+  arena_block_id: 47699739
+  sequence_index: 10
+  title: 06 RESEARCH PRINCIPLES
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699739
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699739/original_7a16c3067ef83aa1a93889080804c3a8.png?1783520202
+  source_fingerprint: a06b513c2d781460da5aaacbcc03fdb6776c013497685eb88e10cdc5bad39bc7
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699736
+  arena_block_id: 47699736
+  sequence_index: 11
+  title: 07 RESEARCH QUESTIONS
+  visual_role: open_question
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699736
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699736/original_8a6a83135b50275bcaed7686ac65b127.png?1783520201
+  source_fingerprint: 8d1ffe6608a2f8d070e70253f341b2db9cdac3f4f0607918fa0cd49e1cb9a871
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699733
+  arena_block_id: 47699733
+  sequence_index: 12
+  title: 08 VISUAL LANGUAGE
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699733
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699733/original_8bc39ec5bd9beec7ffa9275bd9ef8b67.png?1783520173
+  source_fingerprint: c8da332e8b80f026710ddcca9b2e6cefd50988e12213b18fe03971eff59d9231
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699731
+  arena_block_id: 47699731
+  sequence_index: 13
+  title: 09 THE NEXAH LIBRARY
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699731
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699731/original_9af21e21a65cb8eb865b9ffb8252068e.png?1783520170
+  source_fingerprint: e7f2dc6a88200739f26d8e4bc2254887c6eb1578b83b6def9c5c6f85767428e6
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699730
+  arena_block_id: 47699730
+  sequence_index: 14
+  title: 10 REPOSITORY
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699730
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699730/original_eb1a643caed195352031a751ed8f31ec.png?1783520167
+  source_fingerprint: 9c5783454ea7366e825913ed60476e8d87b43e82dabc450da5110997592cf5ee
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699727
+  arena_block_id: 47699727
+  sequence_index: 15
+  title: 10 REPOSITORY II
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699727
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699727/original_3f6e03dafe0b974a2878fb43dd478395.png?1783520163
+  source_fingerprint: 81b1e26c492cf88500965ebd539762629ed89690ef5c1a0c3e1d5b217bc65c34
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699726
+  arena_block_id: 47699726
+  sequence_index: 16
+  title: 11 CONTRIBUTING
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699726
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699726/original_dc287b7ab1f8051be81389cefe0e9c4c.png?1783520160
+  source_fingerprint: 819fd6f78516e0e9631d7606b98f7bcf8cd14ce30d6f292dea6c9000d276e2b4
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699725
+  arena_block_id: 47699725
+  sequence_index: 17
+  title: 12 THE FUTURE
+  visual_role: conclusion
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699725
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699725/original_f07259d657ac2e2e9521450f49bbc2c8.png?1783520157
+  source_fingerprint: 731050f261766ca0cc2d833299df43f06bfdefc7380832917e90d6777eafbd63
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699723
+  arena_block_id: 47699723
+  sequence_index: 18
+  title: A APPENDIX
+  visual_role: body_text
+  visual_review_result: eligible_for_deeper_extraction
+  source_url: https://www.are.na/block/47699723
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699723/original_f04ee78a58c015408f83b916430e5f71.png?1783520156
+  source_fingerprint: 22c5e8e129878b8e84d7d62fab97866c8b89691591fae74ef97136f7aac67e40
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: true
+- page_key: arena-block:47699722
+  arena_block_id: 47699722
+  sequence_index: 19
+  title: B APPENDIX NEXAH ORIENTATION DESIGN LABORATORY GLOSSARY
+  visual_role: reference
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47699722
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699722/original_50136da463980cc29238096bec5b4925.png?1783520155
+  source_fingerprint: 62ab1cd14afddbf60a25765396d61de1316a31f9408de0a3cf42bb43e3328b02
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
+- page_key: arena-block:47699719
+  arena_block_id: 47699719
+  sequence_index: 20
+  title: ORIENTATION IS DESIGNED
+  visual_role: closing
+  visual_review_result: no_research_content
+  source_url: https://www.are.na/block/47699719
+  image_url: https://d2w9rnfcy7mm78.cloudfront.net/47699719/original_ae978553f34acafd4a0025ed6795fe82.png?1783520151
+  source_fingerprint: 2275a7f387a867ed9286162e1819f6cf36277660a00b6672153f59d01bcde51c
+  review_method: human_visual_contact_sheet_review
+  extraction_status: visually_reviewed
+  requires_human_review: false
