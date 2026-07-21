@@ -79,3 +79,7 @@ publication without acquiring authority over their subjects.
 The living operational source of truth for the first public launch is
 [`OPERATIONS_02_LAUNCH_EXECUTION.md`](OPERATIONS_02_LAUNCH_EXECUTION.md). It
 records only verified completion and explicit external or owner blockers.
+
+Launch Control condenses the currently executable result and remaining gates in
+the root [`LAUNCH_STATUS.md`](../LAUNCH_STATUS.md). It is an operational status
+record beneath this Governance Index and cannot alter the Constitution.

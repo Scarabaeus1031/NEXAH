@@ -48,6 +48,7 @@ not described as publicly complete until its public state is observable.
 - [x] ORION publication status and Core mismatch are documented.
 - [x] Experience publication status and reproducible build contract are
   documented.
+- [x] Reviewable GitHub metadata values are prepared in each active repository.
 - [ ] Public GitHub descriptions, homepage fields, topics and profile pins are
   synchronized. **Blocked by GitHub permission.**
 - [ ] Public ORION and Experience repository cross-links are added. **Blocked
@@ -80,6 +81,9 @@ decision.
 - [x] Generated ORION report provenance includes ORION version and source
   digest.
 - [x] Local `pnpm verify` gate is defined.
+- [x] Experience is consolidated in local publication baseline commit
+  `a1e031cb51978ca1207851cc7f292a4a5c37b115` (executable alpha:
+  `28d099c89a109a58385335652c394242ebea278d`).
 - [ ] Repository-wide license is approved and added. **Owner confirmation
   required; no license is inferred from NEXAH or ORION.**
 - [ ] Public GitHub repository and remote are established. **GitHub permission
@@ -105,10 +109,13 @@ releasable.
   required.**
 - [ ] Public GitHub repository and remote are established. **GitHub permission
   required.**
-- [ ] ORION working tree is consolidated into a reviewed immutable baseline.
-- [ ] Core compatibility is verified either against the existing detached pin
-  or through an explicitly approved new compatibility record.
-- [ ] Development Release Gate passes from a clean working tree.
+- [x] ORION working tree is consolidated into local publication baseline commit
+  `18d8a454842c8f25301ca4d3118f7ad903de55a2` (executable baseline:
+  `0a9c031e3d71b75abd007e12b493acc93d8e4cc8`).
+- [x] Core compatibility is verified against the existing unchanged detached
+  pin.
+- [x] Development Release Gate passes in an isolated clean workspace containing
+  ORION `18d8a45…` and Core `9f79bb…`.
 
 **Core mismatch:** `workspace.yaml` pins
 `9f79bb06210402c40c9ef7d9937ca00d86c092b1`. The connected clean NEXAH
@@ -116,8 +123,8 @@ checkout is on the newer local Operations series. It therefore differs from
 the approved ORION Core baseline. The newer commits contain publication and
 Governance work; Operations has not changed the pin.
 
-**Package result:** documentation complete; compatibility, license, public
-identity and clean baseline remain blocking.
+**Package result:** local baseline and configured-pin compatibility complete;
+license, public identity and owner adoption remain blocking.
 
 ### Package F — Framework Publication
 
@@ -127,12 +134,15 @@ identity and clean baseline remain blocking.
   responsibilities.
 - [x] Software and documentation license scopes are explicit.
 - [x] Release and version history is clarified without changing tags.
+- [x] Unnamed release notes, compatibility summary, reproducibility evidence
+  and artifact inventory are prepared.
 - [x] Local full test suite passes: 302 tests.
 - [x] Public smoke jobs for Python 3.10, 3.11 and 3.12 passed on public commit
   `6ac32ec481e8932fd388fef1dd2dc2cfd2529117`.
 - [ ] Public full CI suite is green on the current launch candidate. The
-  repository test job for public commit `6ac32ec…` remains in progress, and
-  local launch commit `1de5c4b6…` has not been authorized for push.
+  repository test job for public commit `6ac32ec…` failed after 49 minutes 26
+  seconds in `Run repository tests`; anonymous access does not expose the
+  failing test log. Local launch commits have not been authorized for push.
 - [ ] GitHub homepage field is corrected; its current target is stale.
   **GitHub permission required.**
 - [ ] GitHub description and topics reflect the current Framework role.
@@ -211,6 +221,11 @@ remains external.
 8. Local Framework verification passed with 302 tests; Experience verification
    passed with 53 tests and 195 generated pages; ORION tests passed and its
    workspace check now reports only the exact Core revision mismatch.
+9. ORION and Experience are consolidated into local immutable commits.
+10. ORION's unchanged configured Core pin passes the complete Development
+    Release Gate in an isolated clean workspace.
+11. GitHub metadata values, Framework release material and Experience
+    deployment handoff are prepared for immediate external execution.
 
 ## Remaining Owner Actions
 
@@ -222,9 +237,9 @@ The owner must confirm:
    separate editorial/assets license.
 3. **Framework release identity:** name and version of the next public
    Framework baseline.
-4. **ORION Core compatibility:** keep the original `9f79bb…` pin for the first
-   publication or approve verification and a compatibility record for a newer
-   NEXAH revision.
+4. **ORION Core adoption:** approve the successfully verified original
+   `9f79bb…` pin for the first publication, or explicitly request qualification
+   of a newer NEXAH revision.
 5. **Legal facts:** applicable USt-IdNr./W-IdNr., current register data and
    whether a data protection officer exists.
 6. **Historical repositories:** approve archive status, historical banners,
@@ -248,6 +263,8 @@ The owner must confirm:
 - configure remotes and public metadata;
 - correct NEXAH homepage, description and topics;
 - configure public CI and required checks;
+- provide authorized access to the failed public test log or supply its exact
+  failing test output before any CI-specific change is attempted;
 - authorize publication of the local Operations commit series (no force-push
   is required; local `main` is directly ahead of public `main`);
 - update profile pins and historical repository status;
@@ -262,7 +279,7 @@ has advanced. Launch remains blocked by:
 
 - unconfirmed licenses for ORION and Experience;
 - missing public ORION and Experience repository identities;
-- unresolved ORION Core compatibility and unconsolidated ORION baseline;
+- owner adoption of the verified ORION/Core pair;
 - public Framework CI not yet green on the current candidate;
 - stale public GitHub metadata and historical pins;
 - unresolved domain/TLS/hosting state;

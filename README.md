@@ -78,6 +78,9 @@ These are different maturity statements, not one repository-wide certification.
 The existing tags, public releases and current package version are explained in
 **[Release and Version History](RELEASES.md)**; no version in one responsibility
 area versions the entire ecosystem.
+The unnamed next Framework package is prepared in
+**[Framework Release Candidate](FRAMEWORK_RELEASE_CANDIDATE.md)**. Its final
+release identity remains an explicit owner decision.
 
 ---
 
@@ -174,6 +177,8 @@ normative language work belongs in
 **[Orientation Language](ORIENTATION_LANGUAGE/README.md)**.
 Release and tag meanings are recorded in **[Release and Version
 History](RELEASES.md)**.
+Current public-launch execution state is recorded once in
+**[Launch Status](LAUNCH_STATUS.md)**.
 
 Software is released under the **[Apache License 2.0](LICENSE)**.
 Original NEXAH documentation and repository research material are released
