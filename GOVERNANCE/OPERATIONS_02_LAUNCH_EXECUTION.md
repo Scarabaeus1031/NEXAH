@@ -26,10 +26,9 @@ not described as publicly complete until its public state is observable.
 - [x] Public remote `main` contains commit
   `6ac32ec481e8932fd388fef1dd2dc2cfd2529117` with the adopted governance
   baseline.
-- [ ] Operations documentation commit
-  `1de5c4b6a4e2804009b0c599624b0f809cc7997f` is published. It is committed
-  locally and one commit ahead of `origin/main`; publishing requires explicit
-  GitHub authorization.
+- [ ] The local Operations documentation series beginning with
+  `1de5c4b6a4e2804009b0c599624b0f809cc7997f` is published. Local `main` is
+  ahead of `origin/main`; publishing requires explicit GitHub authorization.
 
 **Package result:** complete.
 
@@ -112,10 +111,10 @@ releasable.
 - [ ] Development Release Gate passes from a clean working tree.
 
 **Core mismatch:** `workspace.yaml` pins
-`9f79bb06210402c40c9ef7d9937ca00d86c092b1`. The connected NEXAH checkout is
-now at `1de5c4b6a4e2804009b0c599624b0f809cc7997f`. It is clean, but it differs
-from the approved ORION Core baseline. The newer commits contain publication
-and Governance work; Operations has not changed the pin.
+`9f79bb06210402c40c9ef7d9937ca00d86c092b1`. The connected clean NEXAH
+checkout is on the newer local Operations series. It therefore differs from
+the approved ORION Core baseline. The newer commits contain publication and
+Governance work; Operations has not changed the pin.
 
 **Package result:** documentation complete; compatibility, license, public
 identity and clean baseline remain blocking.
@@ -249,8 +248,8 @@ The owner must confirm:
 - configure remotes and public metadata;
 - correct NEXAH homepage, description and topics;
 - configure public CI and required checks;
-- authorize publication of local Framework commit `1de5c4b6…` (no force-push
-  is required; local `main` is one commit ahead of public `main`);
+- authorize publication of the local Operations commit series (no force-push
+  is required; local `main` is directly ahead of public `main`);
 - update profile pins and historical repository status;
 - publish approved tags/releases only after their gates pass.
 
