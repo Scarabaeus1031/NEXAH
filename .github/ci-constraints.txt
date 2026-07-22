@@ -1,0 +1,9 @@
+# Frozen CI environment for byte-reproducible validation artifacts.
+# Versions match the accepted IEEE Geometry V1 environment and the
+# environment used to generate the committed Phase V showcase figures.
+numpy==1.26.4
+matplotlib==3.9.2
+pillow==10.4.0
+pandapower==3.4.0
+scipy==1.13.1
+pytest==7.4.4

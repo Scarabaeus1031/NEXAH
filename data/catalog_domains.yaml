@@ -1,0 +1,124 @@
+schema_version: '0.1'
+authority: architecture_definition
+principle: A catalog describes and orients; it does not automatically canonize.
+shared_models:
+  evidence_levels: [source_metadata, block_title, visible_page_text, visible_diagram, publication_description, repository_document, accepted_contract, human_editorial_decision]
+  extraction_statuses: [not_reviewed, machine_observed, visually_reviewed, human_confirmed, accepted, rejected]
+  review_states: [extracted, queued, reviewed, accepted, revised, rejected]
+  confidence_values: [low, medium, high]
+  stable_source_keys:
+    publication: arena:<channel-id>
+    page: arena-block:<block-id>
+  forbidden_automatic_actions:
+  - allocate canonical identity
+  - promote Proposal
+  - accept Concept definition
+  - create canonical Operator
+  - validate scientific claim
+  - mutate Registry
+  - write to Are.na
+catalogs:
+  publication:
+    catalog_name: Publication Catalog
+    central_question: Which published Works exist, and what source-supported structure do they have?
+    scope: Published Works, editions, parts, chapters, pages, and plates as publication units.
+    included_object_types: [book, report, research_prospectus, guide, atlas_publication, visual_essay, notebook, whiteboard, journey_work, edition, part, chapter, page, plate]
+    excluded_object_types: [research_project, concept, operator, laboratory_environment, reading_path, canonical_scientific_claim]
+    source_authority: publication source and public Are.na metadata
+    catalog_authority: noncanonical Publication Catalog
+    canonical_authority: human-approved Library Registry where allocated
+    identity_policy: Source-keyed by arena channel and block identity; mutable titles and slugs are attributes.
+    evidence_policy: Source metadata and visible publication evidence only.
+    review_policy: Human review required for semantics, series identity, and canonical promotion.
+    relationship_policy: Contains, mentions, defines, documents, and visualizes must remain distinct.
+    consumer_layers: [website, reader, kernel, laboratory_views]
+    current_implementation_status: Existing Website Catalog, 61 public Works.
+  concept:
+    catalog_name: Concept Catalog
+    central_question: Which defined, proposed, observed, or referenced Concepts occur in NEXAH?
+    scope: Concepts, terminology, distinctions, research subjects, and open conceptual questions.
+    included_object_types: [accepted_concept, proposed_concept, mentioned_concept, recurring_notion, distinction, research_subject, open_conceptual_question]
+    excluded_object_types: [unreviewed_repeated_word, operator, publication, decorative_symbol]
+    source_authority: publication page, repository document, glossary, or accepted contract
+    catalog_authority: noncanonical Concept description and occurrence overlay
+    canonical_authority: accepted Living Concept or human-approved knowledge contract
+    identity_policy: Local handles until explicitly accepted; no automatic NX-C identity.
+    evidence_policy: Titles locate mentions only; definitions require explicit page text or accepted contract.
+    review_policy: States are mentioned, observed, proposed, reviewed, accepted, deprecated.
+    relationship_policy: Typed concept relations only; never generic title co-occurrence.
+    consumer_layers: [reader, explanation_layer, kernel, research]
+    current_implementation_status: Partial in Living Concepts and accepted answer contracts; no unified catalog.
+  operator:
+    catalog_name: Operator Catalog
+    central_question: Which explicit operations, transformations, or orientation actions exist?
+    scope: Controlled Operators, proposed candidates, occurrences, families, sequences, and transformation rules.
+    included_object_types: [core_operator, proposed_operator, operator_occurrence, operator_family, operator_sequence, transformation_rule]
+    excluded_object_types: [topic, concept_without_action, visual_metaphor_without_explicit_action]
+    source_authority: controlled registry or explicit Work/research evidence
+    catalog_authority: descriptive occurrence and candidate layer
+    canonical_authority: existing NX-OP controlled Operator Registry
+    identity_policy: Resolve existing NX-OP IDs; keep candidates local and explicitly noncanonical.
+    evidence_policy: An observable or stated action is required.
+    review_policy: Human approval required before Registry inclusion.
+    relationship_policy: operator_applied_to requires an explicit target and evidence.
+    consumer_layers: [kernel, reader, explanation_layer, research]
+    current_implementation_status: Seventeen controlled Core Operators plus noncanonical Work-level evidence.
+  laboratory:
+    catalog_name: Laboratory Catalog
+    central_question: Which research activities, observations, questions, methods, instruments, and evidence records exist?
+    scope: Research programs, projects, experiments, observations, methods, hypotheses, cases, datasets, and validation.
+    included_object_types: [research_program, research_project, experiment, observation, hypothesis, open_question, method, instrument, dataset, case, evidence_record, validation_record, field_investigation, implementation_experiment]
+    excluded_object_types: [published_report_as_publication, publication_status_as_validation, visual_recurrence_as_causation]
+    source_authority: owning research and validation record
+    catalog_authority: descriptive research index
+    canonical_authority: explicit research or validation authority
+    identity_policy: Stable repository-owned lab namespace; link publications by source key.
+    evidence_policy: Preserve protocols, observations, limitations, and validation provenance.
+    review_policy: Scientific support claims require domain-appropriate human review.
+    relationship_policy: Tests, supports, and challenges are distinct typed relationships.
+    consumer_layers: [research, validation, kernel, publication]
+    current_implementation_status: Distributed across RESEARCH, validation, and bounded APPLICATIONS studies.
+  atlas:
+    catalog_name: Atlas Catalog
+    central_question: Which maps, diagrams, cartographies, plates, and representational systems exist?
+    scope: Map-like representational objects inside or outside Atlas publications.
+    included_object_types: [map, diagram, cartographic_plate, coordinate_system, visual_model, relational_map, orientation_map, meta_atlas, map_family, representation]
+    excluded_object_types: [atlas_title_without_map_object, research_claim, concept, publication_identity]
+    source_authority: labeled source page and publication context
+    catalog_authority: noncanonical representational description
+    canonical_authority: future explicit human-reviewed atlas authority
+    identity_policy: Source-keyed by Are.na Block initially.
+    evidence_policy: Describe visible labels and structure without inferring hidden symbolism.
+    review_policy: Human review required for meaning and cross-map relations.
+    relationship_policy: atlas_represents is descriptive and never implies causation.
+    consumer_layers: [website, reader, laboratory, kernel]
+    current_implementation_status: Atlas publications exist; no unified object-level Atlas Catalog.
+  navigation:
+    catalog_name: Navigation Catalog
+    central_question: Which curated paths help a person move through NEXAH?
+    scope: Entry points, paths, shelves, trails, collections, series navigation, and recommendations.
+    included_object_types: [begin_here_path, audience_path, thematic_path, series_navigation, collection, shelf, trail, entry_point, next_step]
+    excluded_object_types: [scientific_relation, canonical_dependency, new_work_identity]
+    source_authority: human editorial decisions and accepted Reader policies
+    catalog_authority: Navigation Catalog
+    canonical_authority: human editorial authority
+    identity_policy: Stable editor-assigned local navigation IDs.
+    evidence_policy: Record audience, purpose, ordering decision, and provenance.
+    review_policy: Editorial review required; recommendations remain audience-dependent.
+    relationship_policy: navigation_recommends never implies conceptual dependency.
+    consumer_layers: [reader, website, kernel, are_na_editorial_layer]
+    current_implementation_status: Implemented in Reader policies, journeys, sequences, shelves, and paths.
+relationship_types:
+  source_contains: {directionality: directed, inverse: contained_by_source, allowed_source_domains: [source], allowed_target_domains: [publication], evidence_required: source_metadata, canonical_or_editorial: descriptive, review_required: false}
+  publication_contains: {directionality: directed, inverse: contained_by_publication, allowed_source_domains: [publication], allowed_target_domains: [publication], evidence_required: source_metadata, canonical_or_editorial: descriptive, review_required: false}
+  publication_mentions: {directionality: directed, inverse: mentioned_in, allowed_source_domains: [publication], allowed_target_domains: [concept], evidence_required: visible_page_text, canonical_or_editorial: descriptive, review_required: true}
+  publication_defines: {directionality: directed, inverse: defined_in, allowed_source_domains: [publication], allowed_target_domains: [concept], evidence_required: visible_page_text, canonical_or_editorial: proposed_until_accepted, review_required: true}
+  publication_documents: {directionality: directed, inverse: documented_by, allowed_source_domains: [publication], allowed_target_domains: [laboratory], evidence_required: repository_document, canonical_or_editorial: descriptive, review_required: true}
+  publication_visualizes: {directionality: directed, inverse: visualized_in, allowed_source_domains: [publication], allowed_target_domains: [atlas], evidence_required: visible_diagram, canonical_or_editorial: descriptive, review_required: true}
+  concept_related_to: {directionality: explicit_per_relation, inverse: explicit_per_relation, allowed_source_domains: [concept], allowed_target_domains: [concept], evidence_required: accepted_contract_or_explicit_source, canonical_or_editorial: explicit, review_required: true}
+  operator_applied_to: {directionality: directed, inverse: uses_operator, allowed_source_domains: [operator], allowed_target_domains: [concept, publication, atlas, laboratory], evidence_required: explicit_action_evidence, canonical_or_editorial: descriptive_or_candidate, review_required: true}
+  experiment_tests: {directionality: directed, inverse: tested_by, allowed_source_domains: [laboratory], allowed_target_domains: [laboratory], evidence_required: protocol_or_validation_record, canonical_or_editorial: research, review_required: true}
+  observation_supports: {directionality: directed, inverse: supported_by, allowed_source_domains: [laboratory], allowed_target_domains: [laboratory, concept], evidence_required: evidence_record, canonical_or_editorial: research, review_required: true}
+  observation_challenges: {directionality: directed, inverse: challenged_by, allowed_source_domains: [laboratory], allowed_target_domains: [laboratory, concept], evidence_required: evidence_record, canonical_or_editorial: research, review_required: true}
+  atlas_represents: {directionality: directed, inverse: represented_by, allowed_source_domains: [atlas], allowed_target_domains: [concept, laboratory, publication], evidence_required: labels_and_source_context, canonical_or_editorial: descriptive, review_required: true}
+  navigation_recommends: {directionality: directed, inverse: recommended_by, allowed_source_domains: [navigation], allowed_target_domains: [publication], evidence_required: human_editorial_decision, canonical_or_editorial: editorial, review_required: true}
