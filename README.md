@@ -26,12 +26,13 @@ problem of orientation.
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
 | Inspect research and evidence | **[Research Portal](RESEARCH/README.md)** |
-| Explore Works, journeys, or editorial practice | **[Public Library on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)** · **[Library Architecture & Registry](LIBRARY/README.md)** · **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
+| Explore Works, journeys, or editorial practice | **[Begin with THE ATLAS OF ATLASES](docs/library/atlas-of-atlases/README.md)** · **[Public Library on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)** · **[Library Architecture & Registry](LIBRARY/README.md)** · **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Evaluate a domain application | **[Applications](APPLICATIONS/README.md)** |
 | Inspect Orientation Translation pilots and methodological evidence | **[Applications / Orientation Translation](APPLICATIONS/orientation_translation/)** |
 
 For the complete directory-level view, use the
-**[Repository Map](REPOSITORY_MAP.md)**.
+**[Repository Map](REPOSITORY_MAP.md)**. Cross-system reader documentation is
+indexed under **[Documentation](docs/README.md)**.
 
 ---
 
@@ -157,7 +158,8 @@ NEXAH/
 ├── nexah/                        implementations
 ├── APPLICATIONS/                 domain use
 ├── LIBRARY/                      editorial communication
-└── EDITORIAL_OPERATING_SYSTEM/   governance and controlled execution
+├── EDITORIAL_OPERATING_SYSTEM/   governance and controlled execution
+└── docs/                         cross-system reader documentation
 ```
 
 Supporting architecture, validation, prototype, and historical areas are

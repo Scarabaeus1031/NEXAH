@@ -10,7 +10,7 @@ six replacement databases.
 
 | Existing area | Objects found | Catalog overlap | Decision |
 |---|---|---|---|
-| `LIBRARY/catalog/` | 61 source-keyed Works, descriptions, covers, 1,647 ordered Blocks, structural roles | Publication | Treat as first Publication Catalog implementation; retain path and Website Catalog label for compatibility. |
+| `LIBRARY/catalog/` | 61 source-keyed Works, descriptions, covers, 1,701 ordered Blocks, structural roles | Publication | Treat as first Publication Catalog implementation; retain path and Website Catalog label for compatibility. |
 | `LIBRARY/registry/entities/` | Ten human-approved `NX-*` entities | Publication / identity | Remains canonical identity authority. Catalog references it; never allocates into it. |
 | `LIBRARY/registry/concepts/` | Seventeen controlled `NX-OP-*` Operators | Operator | Remains canonical Operator authority. Do not duplicate in catalog records. |
 | Proposal classification and overlays | 61 visible Work proposals and editorial classifications | Publication / review | Remains isolated; catalog inclusion does not promote a Proposal. |
@@ -56,4 +56,3 @@ Laboratory, or Atlas object must be promoted through its own authority.
 This audit describes repository objects and conventions. It does not validate
 the scientific claims printed in the Works and does not change Architecture,
 Registry, Proposals, Operators, Kernel behavior, or Are.na.
-

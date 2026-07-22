@@ -1,6 +1,6 @@
 # NEXAH Website Catalog — Current Status
 
-Generated: `2026-07-20T20:06:57+00:00`
+Generated: `2026-07-22` (targeted Atlas of Atlases source refresh)
 
 This is a read-only, non-canonical website catalog. It records public source evidence
 and conservative structural observations; it does not change Registry or Proposal state.
@@ -8,7 +8,7 @@ and conservative structural observations; it does not change Registry or Proposa
 ## Coverage
 
 - Works: **61**
-- Ordered public Blocks: **1647**
+- Ordered public Blocks: **1701**
 - Channel descriptions: **61**
 - Cover references: **61**
 - Works with a detected Foreword: **25**
@@ -54,7 +54,7 @@ Journey Works remain bibliographic and dramaturgic until separately reviewed.
 - [NEXAH ATLAS — A CARTOGRAPHY OF PERSPECTIVES](https://www.are.na/nexah-scarabaeus1031/nexah-atlas-a-cartography-of-perspectives) — atlas; 36 Blocks
 - [NEXAH ATLAS — THE OPERATIONAL GEOMETRY OF TRANSITION](https://www.are.na/nexah-scarabaeus1031/00-nexah-atlas-the-operational-geometry-of-transition) — atlas; 19 Blocks
 - [NEXAH — MAPS OF HUMAN REALITY](https://www.are.na/nexah-scarabaeus1031/nexah-maps-of-human-reality) — atlas; 14 Blocks
-- [THE ATLAS OF ATLASES](https://www.are.na/nexah-scarabaeus1031/the-atlas-of-atlases) — atlas; 18 Blocks
+- [THE ATLAS OF ATLASES](https://www.are.na/nexah-scarabaeus1031/the-atlas-of-atlases) — atlas; 72 Blocks
 - [THE ESSENCE ATLAS](https://www.are.na/nexah-scarabaeus1031/the-essence-atlas) — atlas; 31 Blocks
 - [THE LANGUAGE ATLAS](https://www.are.na/nexah-scarabaeus1031/the-language-atlas) — atlas; 35 Blocks
 - [THE LIVING EQUATION — An Atlas of Orientation](https://www.are.na/nexah-scarabaeus1031/the-living-equation-an-atlas-of-orientation) — atlas; 29 Blocks

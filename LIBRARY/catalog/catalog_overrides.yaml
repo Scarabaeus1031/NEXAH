@@ -7,6 +7,10 @@ policy:
   arena_writes: false
   note: Shelves support website discovery and may overlap. They do not establish Entity or Series identity.
 records:
+- arena_channel_id: 5407292
+  shelves: [Meta Navigation, Atlases]
+  catalog_depth: atlas_structure
+  catalog_note: Official visual onboarding guide and entrance hall for the NEXAH Library.
 - arena_channel_id: 5386766
   shelves: [Laboratory, Research & Documentation]
   catalog_depth: research_structure

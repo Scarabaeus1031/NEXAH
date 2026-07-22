@@ -9,7 +9,7 @@ Living Library, and the Editorial Operating System. Each has a separate
 responsibility and authority. Supporting architecture, validation, prototype,
 and historical areas make those responsibilities inspectable.
 
-**Current-state review:** July 19, 2026
+**Current-state review:** July 22, 2026
 
 ---
 
@@ -22,7 +22,8 @@ and historical areas make those responsibilities inspectable.
 | Use or develop the current implementation | **[nexah/README.md](nexah/README.md)** |
 | Enter the research layer | **[RESEARCH/README.md](RESEARCH/README.md)** |
 | Evaluate applications and claims | **[APPLICATIONS/README.md](APPLICATIONS/README.md)** |
-| Explore Works and reader journeys | **[LIBRARY/README.md](LIBRARY/README.md)** |
+| Enter the visual Library | **[THE ATLAS OF ATLASES](docs/library/atlas-of-atlases/README.md)** |
+| Inspect Library architecture and reader journeys | **[LIBRARY/README.md](LIBRARY/README.md)** |
 | Understand editorial governance | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Inspect non-canonical review instruments | **[Review Toolbox](EDITORIAL_OPERATING_SYSTEM/living_concepts/review/README.md)** |
 | Inspect provisional constitutional principles | **[GOVERNANCE/constitution_review_01/README.md](GOVERNANCE/constitution_review_01/README.md)** |
@@ -59,6 +60,7 @@ NEXAH/
 ├── tests/                        automated repository verification
 ├── testkit/                      observed-evidence and outcome gates
 ├── assets/                       maintained public documentation assets
+├── docs/                         cross-system and visual reader documentation
 ├── README.md           repository overview
 ├── REPOSITORY_MAP.md   directory and reader navigation
 ├── CONTRIBUTING.md     contribution and subsystem routing
@@ -130,9 +132,15 @@ Kernel, or Architecture authority.
 visual NEXAH Library on Are.na. It holds stable Entity IDs, Editions, controlled
 Operator Concepts, and curated relationships for the initial ten-work pilot.
 
-Are.na remains authoritative for visual content and editorial sequence. The
-Registry is authoritative for NEXAH identity and classification. Executable
-read-only queries live in `nexah/library/`.
+New readers enter through **[THE ATLAS OF ATLASES](docs/library/atlas-of-atlases/README.md)**,
+the first-class visual onboarding module under `docs/library/`. It provides a
+59-page approved reading sequence across six atlas fields and the Library
+appendix while preserving 13 additional source pages as supplements.
+
+Are.na remains authoritative for visual source content and live publication
+state. The repository documentation is authoritative for this approved reader
+sequence. The Registry is authoritative for NEXAH identity and classification.
+Executable read-only queries live in `nexah/library/`.
 
 ---
 
@@ -368,7 +376,9 @@ See **[Meta Review 01](APPLICATIONS/orientation_translation/reviews/meta_review_
 
 ```text
 LIBRARY/README.md
-→ Registry and Works
+→ docs/library/atlas-of-atlases/
+→ six atlas fields and Library appendix
+→ Registry and wider Works
 → editorial sequences
 → reader journeys
 ```

@@ -37,6 +37,14 @@ A later human or visual review may enrich selected research books, atlases,
 reports, and whiteboards. Journey Works remain bibliographic and dramaturgic
 unless explicitly reviewed.
 
+### First-class visual documentation
+
+Images are not copied by the Website Catalog. A separately approved Work may,
+however, become first-class repository documentation with its own source
+manifest and reader sequence. **[THE ATLAS OF ATLASES](../../docs/library/atlas-of-atlases/README.md)**
+is the first such module. Its presentation assets belong to `docs/`, not to
+this catalog overlay.
+
 ## Editorial shelves
 
 `catalog_overrides.yaml` records website-only shelves and corrections supplied

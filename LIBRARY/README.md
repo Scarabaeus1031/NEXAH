@@ -26,6 +26,26 @@ The Library is therefore not a database export and not a mirror of Are.na. It
 is a curated architecture for stable identity, meaningful relationships, and
 future navigation across NEXAH works.
 
+## Enter the Library
+
+New readers should begin with **[THE ATLAS OF ATLASES](../docs/library/atlas-of-atlases/README.md)**,
+the official visual entrance hall to the NEXAH Library. It introduces the
+Library's recurring motifs and atlas grammar, then guides the reader through
+six orientation fields and a Library appendix.
+
+```text
+THE ATLAS OF ATLASES
+→ Human · Microscopic · Cosmic · Mathematical · Cultural · Cognitive
+→ Library Appendix
+→ wider NEXAH Library
+```
+
+The **[canonical visual sequence](../docs/library/atlas-of-atlases/index.md)**
+is maintained as first-class documentation. The
+**[public Are.na channel](https://www.are.na/nexah-scarabaeus1031/the-atlas-of-atlases)**
+remains authoritative for the visual source; `NX-000009` remains authoritative
+for the Work's canonical Library identity.
+
 ```text
                  NEXAH
 
@@ -176,7 +196,7 @@ The current pilot contains:
 
 The public Library census now also records **61 Work Channels** in a separate,
 non-canonical [Website Catalog](catalog/README.md). The catalog captures all 61
-public descriptions and cover references plus 1,647 ordered, titled Blocks. It
+public descriptions and cover references plus 1,701 ordered, titled Blocks. It
 is a source-keyed website overlay, not an expansion of the ten-Work Canonical
 Registry.
 
@@ -337,7 +357,8 @@ Important distinctions include:
 - THE VISITOR’S GUIDE is a Work; it is not the future START navigation object.
 - THE OPERATOR LIBRARY is a Reference Guide; it is not the future Operator
   Index.
-- THE ATLAS OF ATLASES is a Meta Atlas; it is not the future Atlases Index.
+- THE ATLAS OF ATLASES is a Meta Atlas and the visual Library entrance hall; it
+  is not the future Atlases Index.
 - THE CARTOGRAPHY LABORATORY is currently registered as a published Laboratory
   Report; the ongoing Laboratory Environment will be a separate Entity.
 

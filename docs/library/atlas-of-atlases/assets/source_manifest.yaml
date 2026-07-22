@@ -1,0 +1,809 @@
+schema_version: '0.1'
+purpose: Source and local-asset manifest for THE ATLAS OF ATLASES documentation module
+authority: Are.na remains authoritative for source visuals; this manifest governs repository presentation copies
+generated_at: '2026-07-22T01:48:21+00:00'
+source:
+  arena_channel_id: 5407292
+  arena_slug: the-atlas-of-atlases
+  canonical_url: https://www.are.na/nexah-scarabaeus1031/the-atlas-of-atlases
+  title: THE ATLAS OF ATLASES
+  visibility: closed
+  member_count: 72
+  updated_at: '2026-07-22T01:24:34Z'
+reading_order:
+  canonical_pages: 59
+  supplemental_source_pages: 13
+  rule: Canonical sequence is editorially declared and may differ from public source position
+assets:
+- source_position: 1
+  arena_block_id: 47625553
+  source_title: THE ATLAS OF ATLASES
+  source_url: https://www.are.na/block/47625553
+  local_file: ../images/001-47625553.jpg
+  sha256: fddbfecc561c46e12335e294cd4e0255d4a6a0d09f3565c61d510cd5904efbb7
+  bytes: 142382
+  route_role: canonical
+  canonical_sequence: 1
+  canonical_section: Entrance Hall
+  canonical_label: Cover
+- source_position: 2
+  arena_block_id: 47625552
+  source_title: FOREWORD
+  source_url: https://www.are.na/block/47625552
+  local_file: ../images/002-47625552.jpg
+  sha256: 8cfd3d080004c9ade188f7b0d72682bd46978b3d3794983637846542d186a596
+  bytes: 151761
+  route_role: canonical
+  canonical_sequence: 2
+  canonical_section: Entrance Hall
+  canonical_label: Foreword
+- source_position: 3
+  arena_block_id: 48119842
+  source_title: HOW TO READ THIS LIBRARY
+  source_url: https://www.are.na/block/48119842
+  local_file: ../images/003-48119842.jpg
+  sha256: 04dc90c528ca6ea01bd8d691e08b5c4fbc6fff617533139b477eb823f12d8632
+  bytes: 169606
+  route_role: canonical
+  canonical_sequence: 3
+  canonical_section: Entrance Hall
+  canonical_label: How to Read This Library
+- source_position: 4
+  arena_block_id: 47625542
+  source_title: DESIGN AS ORIENTATION
+  source_url: https://www.are.na/block/47625542
+  local_file: ../images/004-47625542.jpg
+  sha256: 878f0813aa1e73f702b5d8baf039e322584a35176f955f22397f06365b2fa9ca
+  bytes: 192202
+  route_role: canonical
+  canonical_sequence: 4
+  canonical_section: Entrance Hall
+  canonical_label: Design as Orientation
+- source_position: 5
+  arena_block_id: 47625549
+  source_title: '- NEXAH LIBRARY + THE ATLAS OF ATLASES'
+  source_url: https://www.are.na/block/47625549
+  local_file: ../images/005-47625549.jpg
+  sha256: ee30b943b73ddf5cb6879bd743260a6c05bbb62ba85a0101107be4af827e3499
+  bytes: 231767
+  route_role: canonical
+  canonical_sequence: 5
+  canonical_section: Entrance Hall
+  canonical_label: The Atlas of Atlases
+- source_position: 6
+  arena_block_id: 48120614
+  source_title: RECURRING MOTIFS
+  source_url: https://www.are.na/block/48120614
+  local_file: ../images/006-48120614.jpg
+  sha256: 045822aa93216ae780b957517ccbd2a652ab351e5f3c1ee12c7568747e147428
+  bytes: 210584
+  route_role: canonical
+  canonical_sequence: 6
+  canonical_section: Entrance Hall
+  canonical_label: Recurring Motifs
+- source_position: 7
+  arena_block_id: 48120611
+  source_title: ATLAS GRAMMAR
+  source_url: https://www.are.na/block/48120611
+  local_file: ../images/007-48120611.jpg
+  sha256: 4544e7282d65bdcd8cd5e86522aad8db8bf92d3dfb28b064e074d93bf9beeaab
+  bytes: 227022
+  route_role: canonical
+  canonical_sequence: 7
+  canonical_section: Entrance Hall
+  canonical_label: Atlas Grammar
+- source_position: 8
+  arena_block_id: 48119841
+  source_title: ATLAS ARCHITECTURE MAP
+  source_url: https://www.are.na/block/48119841
+  local_file: ../images/008-48119841.jpg
+  sha256: face31ae3fdd741267a74c4da6a72b67cfdcee8b762e68c3c8bd8c1a2c982d67
+  bytes: 191306
+  route_role: canonical
+  canonical_sequence: 8
+  canonical_section: Entrance Hall
+  canonical_label: Atlas Architecture Map
+- source_position: 9
+  arena_block_id: 48119955
+  source_title: NEXAH ATLAS I _ PLATE I
+  source_url: https://www.are.na/block/48119955
+  local_file: ../images/009-48119955.jpg
+  sha256: 873eeb7969f3943cd65413d143a6d7de0e249d49874a1ba20af97e5f35b8a5d5
+  bytes: 200829
+  route_role: canonical
+  canonical_sequence: 11
+  canonical_section: I — Human Orientation Field
+  canonical_label: Plate I
+- source_position: 10
+  arena_block_id: 48119956
+  source_title: NEXAH ATLAS I _ PLATE II
+  source_url: https://www.are.na/block/48119956
+  local_file: ../images/010-48119956.jpg
+  sha256: 5cfa12d0796b041a698773bc990158cb935103c99fd796a4848028f9172812b1
+  bytes: 194967
+  route_role: canonical
+  canonical_sequence: 12
+  canonical_section: I — Human Orientation Field
+  canonical_label: Plate II
+- source_position: 11
+  arena_block_id: 48119959
+  source_title: NEXAH ATLAS I _ PLATE III
+  source_url: https://www.are.na/block/48119959
+  local_file: ../images/011-48119959.jpg
+  sha256: 627c88c17024c20816af468b64b46b7b5d9db794a2bd77440ccdaac36693a19c
+  bytes: 215174
+  route_role: canonical
+  canonical_sequence: 13
+  canonical_section: I — Human Orientation Field
+  canonical_label: Plate III
+- source_position: 12
+  arena_block_id: 48119958
+  source_title: NEXAH ATLAS I _ PLATE IV
+  source_url: https://www.are.na/block/48119958
+  local_file: ../images/012-48119958.jpg
+  sha256: 837365f7a3393c31b947fcd98e362f80bf994f22142e902ce103ce0eecb29409
+  bytes: 225860
+  route_role: canonical
+  canonical_sequence: 14
+  canonical_section: I — Human Orientation Field
+  canonical_label: Plate IV
+- source_position: 13
+  arena_block_id: 48119961
+  source_title: NEXAH ATLAS I _ PLATE V
+  source_url: https://www.are.na/block/48119961
+  local_file: ../images/013-48119961.jpg
+  sha256: 40057651a4800e7a274b4a082d502f6837c66337dd1a979f2db6654609d53154
+  bytes: 250818
+  route_role: canonical
+  canonical_sequence: 15
+  canonical_section: I — Human Orientation Field
+  canonical_label: Plate V
+- source_position: 14
+  arena_block_id: 48119970
+  source_title: NEXAH ATLAS I _ PLATE VI
+  source_url: https://www.are.na/block/48119970
+  local_file: ../images/014-48119970.jpg
+  sha256: 03914759f777810fdb690664c5a5e4dea23e6692cf064592ec009a25c272f098
+  bytes: 203882
+  route_role: canonical
+  canonical_sequence: 16
+  canonical_section: I — Human Orientation Field
+  canonical_label: Plate VI
+- source_position: 15
+  arena_block_id: 48120620
+  source_title: ATLAS NAVIGATION
+  source_url: https://www.are.na/block/48120620
+  local_file: ../images/015-48120620.jpg
+  sha256: 1f01996ad62ef858b68d5753edcefb8c2bd99ea2a0307655df91723541430246
+  bytes: 181734
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 16
+  arena_block_id: 48119844
+  source_title: THE ATLAS OF ATLASES MASTER INDEX MAP
+  source_url: https://www.are.na/block/48119844
+  local_file: ../images/016-48119844.jpg
+  sha256: b755725a612e1499d5db0337cac7a0cdab94c2d14fd28d10db12a64031ebef5f
+  bytes: 193050
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 17
+  arena_block_id: 48120615
+  source_title: THE TOW JOURNEYS_THREE PATHS. ONE PURPOSE
+  source_url: https://www.are.na/block/48120615
+  local_file: ../images/017-48120615.jpg
+  sha256: a478c198d97250020518f03455fdb8fceaf51a0dda5c6860a88389f882f62d21
+  bytes: 203392
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 18
+  arena_block_id: 48119840
+  source_title: THE SIX WORLDS OF ORIENTATION
+  source_url: https://www.are.na/block/48119840
+  local_file: ../images/018-48119840.jpg
+  sha256: 595d214cbdc199cdabff1d5900d952a3a261913f9aec368dd65e33408a5bcacf
+  bytes: 211944
+  route_role: canonical
+  canonical_sequence: 9
+  canonical_section: Entrance Hall
+  canonical_label: The Six Worlds of Orientation
+- source_position: 19
+  arena_block_id: 47625548
+  source_title: NEXAH XV ATLAS *- PLATE O THE HUMAN ORIENTATION FIELD
+  source_url: https://www.are.na/block/47625548
+  local_file: ../images/019-47625548.jpg
+  sha256: 13b0e16a3a0ba6e2d4815c9bfd5ea96fa25a5c2df2cb67f99d98eff1c490b954
+  bytes: 181483
+  route_role: canonical
+  canonical_sequence: 10
+  canonical_section: Entrance Hall
+  canonical_label: Plate 0
+- source_position: 20
+  arena_block_id: 47625538
+  source_title: DESIGN AS ORIENTATION_ii
+  source_url: https://www.are.na/block/47625538
+  local_file: ../images/020-47625538.jpg
+  sha256: 9540e5d20faa1820a668b2af87ab1a11639a007062cce386dc861668f1b4ddba
+  bytes: 192313
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 21
+  arena_block_id: 47625536
+  source_title: PLATE I PERCEPTION
+  source_url: https://www.are.na/block/47625536
+  local_file: ../images/021-47625536.jpg
+  sha256: bad136b2e545798067cc540c02d5ef4429c75d1055661dc1d350403646bfa617
+  bytes: 196441
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 22
+  arena_block_id: 47625529
+  source_title: PLATE II * SPACE %22We shape our dwellings, and afterwards our dwellings shape us.%22 THE ART OF SHAPING SPACE
+  source_url: https://www.are.na/block/47625529
+  local_file: ../images/022-47625529.jpg
+  sha256: 1812cf785ff0e55dfa25d27f82ea2ca74ddd92a7538612a933eb7d1eb3c579d6
+  bytes: 216001
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 23
+  arena_block_id: 47625527
+  source_title: PLATE III RELATION THE ART OF CONNECTION
+  source_url: https://www.are.na/block/47625527
+  local_file: ../images/023-47625527.jpg
+  sha256: cdce2c0b4c9f7528fc9202839c057d81244c0336b2a99aa92e582832ae9dd0f0
+  bytes: 202666
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 24
+  arena_block_id: 47625525
+  source_title: '* PLATE IV MEANING THE ART OF SIGNIFICANCE'
+  source_url: https://www.are.na/block/47625525
+  local_file: ../images/024-47625525.jpg
+  sha256: 0402e4306939f9e365d4ee2929cc78d44d138fd56293fea80a56ad1bc55effbf
+  bytes: 210179
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 25
+  arena_block_id: 47625524
+  source_title: '* PLATE V * TRANSFORMATIONTHE ART of CHANGE'
+  source_url: https://www.are.na/block/47625524
+  local_file: ../images/025-47625524.jpg
+  sha256: 09fc3a32ddf43fab84c5be55316568fdd6c44edc91432784ef60f579f528d1dc
+  bytes: 215633
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 26
+  arena_block_id: 47625522
+  source_title: '* PLATE VI DESIGN THE ART OF ORIENTATION'
+  source_url: https://www.are.na/block/47625522
+  local_file: ../images/026-47625522.jpg
+  sha256: 5f2597676dfc693ece3cfb39adaa7f0b258015ee1c9983c349783250d2b39c63
+  bytes: 208850
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 27
+  arena_block_id: 47625519
+  source_title: PLATE 7(omega) THE TWO JOURNEYS
+  source_url: https://www.are.na/block/47625519
+  local_file: ../images/027-47625519.jpg
+  sha256: f1e187cb1afe7a9fe319b26a7d439f397eb7b04dfa53c865f447975a36458e07
+  bytes: 209250
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 28
+  arena_block_id: 48120617
+  source_title: ATLAS TIMELINE
+  source_url: https://www.are.na/block/48120617
+  local_file: ../images/028-48120617.jpg
+  sha256: 3817d3cb3a3c963ec21882b7bd5a79ee4a6544eb12ca1263098b661cdc9845ec
+  bytes: 220582
+  route_role: canonical
+  canonical_sequence: 58
+  canonical_section: Library Appendix
+  canonical_label: Atlas Timeline
+- source_position: 29
+  arena_block_id: 48119974
+  source_title: TRANSITION I
+  source_url: https://www.are.na/block/48119974
+  local_file: ../images/029-48119974.jpg
+  sha256: e25bd839767f57dde4f784cac2bf5f3adbf603b1beddc56f84a961f5616e154b
+  bytes: 188288
+  route_role: canonical
+  canonical_sequence: 17
+  canonical_section: I — Human Orientation Field
+  canonical_label: Transition I
+- source_position: 30
+  arena_block_id: 48120056
+  source_title: THE MICROSCOPIC ORIENTATION FIELD Plate I - CELL AS A LIVING LANDSCAPE
+  source_url: https://www.are.na/block/48120056
+  local_file: ../images/030-48120056.jpg
+  sha256: 8d7a2fedb0812b8bcc49089eaacdd678ac7a59fe1c0215298bb5155dd7e9485e
+  bytes: 230177
+  route_role: canonical
+  canonical_sequence: 18
+  canonical_section: II — Microscopic Orientation Field
+  canonical_label: Plate I
+- source_position: 31
+  arena_block_id: 48120050
+  source_title: THE MICROSCOPIC ORIENTATION FIELD Plate II - Structure
+  source_url: https://www.are.na/block/48120050
+  local_file: ../images/031-48120050.jpg
+  sha256: 1c4f33769dcd2e6aa0d88e14347375bb656201ff9ddc6adf67ca10c77dfb7cd4
+  bytes: 225739
+  route_role: canonical
+  canonical_sequence: 19
+  canonical_section: II — Microscopic Orientation Field
+  canonical_label: Plate II
+- source_position: 32
+  arena_block_id: 48120052
+  source_title: THE MICROSCOPIC ORIENTATION FIELD Plate III_Rhythm
+  source_url: https://www.are.na/block/48120052
+  local_file: ../images/032-48120052.jpg
+  sha256: f88f257ab8834a421f2c11daeb135ae3566c6f549cb0e57d63f67f1926f1f753
+  bytes: 230369
+  route_role: canonical
+  canonical_sequence: 20
+  canonical_section: II — Microscopic Orientation Field
+  canonical_label: Plate III
+- source_position: 33
+  arena_block_id: 48120051
+  source_title: THE MICROSCOPIC ORIENTATION FIELD Plate IV
+  source_url: https://www.are.na/block/48120051
+  local_file: ../images/033-48120051.jpg
+  sha256: ae8dd239b147eeacdecab0303bbeb5f432a7c1bc592b00cc47b2420264992c83
+  bytes: 246319
+  route_role: canonical
+  canonical_sequence: 21
+  canonical_section: II — Microscopic Orientation Field
+  canonical_label: Plate IV
+- source_position: 34
+  arena_block_id: 48120057
+  source_title: THE MICROSCOPIC ORIENTATION FIELD Plate V
+  source_url: https://www.are.na/block/48120057
+  local_file: ../images/034-48120057.jpg
+  sha256: ca740bbd4308184caeb7c5a9366d13bfc6ae4e0322c42990c722effb5b84d8e7
+  bytes: 235037
+  route_role: canonical
+  canonical_sequence: 22
+  canonical_section: II — Microscopic Orientation Field
+  canonical_label: Plate V
+- source_position: 35
+  arena_block_id: 48120053
+  source_title: THE MICROSCOPIC ORIENTATION FIELD Plate VI
+  source_url: https://www.are.na/block/48120053
+  local_file: ../images/035-48120053.jpg
+  sha256: 8affa7305d0176199c92f3fa40eb1ea379c504a39203edc967d8a21dfa1d21c9
+  bytes: 234676
+  route_role: canonical
+  canonical_sequence: 23
+  canonical_section: II — Microscopic Orientation Field
+  canonical_label: Plate VI
+- source_position: 36
+  arena_block_id: 48120215
+  source_title: TRANSITION II
+  source_url: https://www.are.na/block/48120215
+  local_file: ../images/036-48120215.jpg
+  sha256: aa013816fd891c66e8eefbf46475b8a2794a5d3909969b16b2020807e27bb18c
+  bytes: 180964
+  route_role: canonical
+  canonical_sequence: 24
+  canonical_section: II — Microscopic Orientation Field
+  canonical_label: Transition II
+- source_position: 37
+  arena_block_id: 48120237
+  source_title: THE COSMIC ORIENTATION FIELD_Plate I - The Stellar Orientation Field
+  source_url: https://www.are.na/block/48120237
+  local_file: ../images/037-48120237.jpg
+  sha256: f7d87fd32bdc6e630d81ecf122bf8e90f09ee05f2e0eeb02c0d662c0a4638c78
+  bytes: 209856
+  route_role: canonical
+  canonical_sequence: 25
+  canonical_section: III — Cosmic Orientation Field
+  canonical_label: Plate I
+- source_position: 38
+  arena_block_id: 48120240
+  source_title: THE COSMIC ORIENTATION FIELD_Plate II - The Pnametary Systems
+  source_url: https://www.are.na/block/48120240
+  local_file: ../images/038-48120240.jpg
+  sha256: d3b5d0c56be9680e001b93d1cc4da10d178f0f285476701c859c3297b33e8563
+  bytes: 224985
+  route_role: canonical
+  canonical_sequence: 26
+  canonical_section: III — Cosmic Orientation Field
+  canonical_label: Plate II
+- source_position: 39
+  arena_block_id: 48120242
+  source_title: THE COSMIC ORIENTATION FIELD_Plate III_The Galactic Orientation Field
+  source_url: https://www.are.na/block/48120242
+  local_file: ../images/039-48120242.jpg
+  sha256: b03178a07b98e042a91ca2f5b7714a7fa6278c3c63e71191abd41e7c1b61482f
+  bytes: 230095
+  route_role: canonical
+  canonical_sequence: 27
+  canonical_section: III — Cosmic Orientation Field
+  canonical_label: Plate III
+- source_position: 40
+  arena_block_id: 48120239
+  source_title: THE COSMIC ORIENTATION FIELD_Plate IV -The local group
+  source_url: https://www.are.na/block/48120239
+  local_file: ../images/040-48120239.jpg
+  sha256: a860f39d39029700a719507be927c29b00c804d0e9a10d104f0d90327afa8514
+  bytes: 237249
+  route_role: canonical
+  canonical_sequence: 28
+  canonical_section: III — Cosmic Orientation Field
+  canonical_label: Plate IV
+- source_position: 41
+  arena_block_id: 48120243
+  source_title: THE COSMIC ORIENTATION FIELD_Plate V Clusers & Superclusters
+  source_url: https://www.are.na/block/48120243
+  local_file: ../images/041-48120243.jpg
+  sha256: 70932ca6d950b96c1bfeb406ce12a475c1db76710cffcd59ba8f5785a9d87cd3
+  bytes: 246248
+  route_role: canonical
+  canonical_sequence: 29
+  canonical_section: III — Cosmic Orientation Field
+  canonical_label: Plate V
+- source_position: 42
+  arena_block_id: 48120241
+  source_title: THE COSMIC ORIENTATION FIELD_Plate VI _ THE COSMIC WEB
+  source_url: https://www.are.na/block/48120241
+  local_file: ../images/042-48120241.jpg
+  sha256: 62c0ba62c8e140e3db081b40d6fdb77e67797b8867db1f5ffe11822fffebb05a
+  bytes: 236802
+  route_role: canonical
+  canonical_sequence: 30
+  canonical_section: III — Cosmic Orientation Field
+  canonical_label: Plate VI
+- source_position: 43
+  arena_block_id: 48120283
+  source_title: TRANSITION III
+  source_url: https://www.are.na/block/48120283
+  local_file: ../images/043-48120283.jpg
+  sha256: c669eebe2164c8fc344df1649643dabca937e6547702693dd9a4fbf094e09264
+  bytes: 189090
+  route_role: canonical
+  canonical_sequence: 31
+  canonical_section: III — Cosmic Orientation Field
+  canonical_label: Transition III
+- source_position: 44
+  arena_block_id: 48120380
+  source_title: NEXAH ATLAS IV - PLATE I _ THE GEOMETRIC ORIENTATION FIELD
+  source_url: https://www.are.na/block/48120380
+  local_file: ../images/044-48120380.jpg
+  sha256: bbf5403b8ac045aff7263fe4dfd2541e9ff18fd333716c21798073445bed87ee
+  bytes: 211595
+  route_role: canonical
+  canonical_sequence: 32
+  canonical_section: IV — Mathematical Orientation Field
+  canonical_label: Plate I
+- source_position: 45
+  arena_block_id: 48120385
+  source_title: NEXAH ATLAS IV - PLATE II _ THE TOPOLOGICAL ORIENTATION FIELD
+  source_url: https://www.are.na/block/48120385
+  local_file: ../images/045-48120385.jpg
+  sha256: b72dff3199c6ef6dc8e3da043debf392bd60731fa7bec16908f41d5fa0c00c9c
+  bytes: 219589
+  route_role: canonical
+  canonical_sequence: 33
+  canonical_section: IV — Mathematical Orientation Field
+  canonical_label: Plate II
+- source_position: 46
+  arena_block_id: 48120381
+  source_title: NEXAH ATLAS IV - PLATE III _ THE OPERATOR ORIENTATION FIELD
+  source_url: https://www.are.na/block/48120381
+  local_file: ../images/046-48120381.jpg
+  sha256: 821d1353c899d5de877e08b81fabf9d7806a473d4332d84ffc9dd2a81fdc10de
+  bytes: 268408
+  route_role: canonical
+  canonical_sequence: 34
+  canonical_section: IV — Mathematical Orientation Field
+  canonical_label: Plate III
+- source_position: 47
+  arena_block_id: 48120383
+  source_title: NEXAH ATLAS IV - PLATE IV _ THE SYMMETRY ORIENTATION FIELD
+  source_url: https://www.are.na/block/48120383
+  local_file: ../images/047-48120383.jpg
+  sha256: fa0c51841b9087e356b274ca42a6fb15dc97a6bd0c1d53dc925bb684676176b7
+  bytes: 248866
+  route_role: canonical
+  canonical_sequence: 35
+  canonical_section: IV — Mathematical Orientation Field
+  canonical_label: Plate IV
+- source_position: 48
+  arena_block_id: 48120344
+  source_title: NEXAH ATLAS IV - PLATE V THE TRANSFORMATION ORIENTATION FIELD
+  source_url: https://www.are.na/block/48120344
+  local_file: ../images/048-48120344.jpg
+  sha256: abdd528317fe8cbd2567c6362bff53f2c0f1fc9644bc8ffa48f76ccfbb63cb92
+  bytes: 240422
+  route_role: canonical
+  canonical_sequence: 36
+  canonical_section: IV — Mathematical Orientation Field
+  canonical_label: Plate V
+- source_position: 49
+  arena_block_id: 48120359
+  source_title: NEXAH ATLAS IV - PLATE VI MATH IS THE BRIDGE BETWEEN THE SEEN AND THE CONCEIVABLE
+  source_url: https://www.are.na/block/48120359
+  local_file: ../images/049-48120359.jpg
+  sha256: c8b40c35672ed6f45afed70f83d43d08262f30c30758e3546fd8b955c990fc33
+  bytes: 186182
+  route_role: canonical
+  canonical_sequence: 37
+  canonical_section: IV — Mathematical Orientation Field
+  canonical_label: Plate VI
+- source_position: 50
+  arena_block_id: 48120505
+  source_title: TRANSITION IV
+  source_url: https://www.are.na/block/48120505
+  local_file: ../images/050-48120505.jpg
+  sha256: d7a5bfdc374953c5e17be1fede51a154145fa57af2472e5ad5d33a5691a48a8b
+  bytes: 184308
+  route_role: canonical
+  canonical_sequence: 38
+  canonical_section: IV — Mathematical Orientation Field
+  canonical_label: Transition IV
+- source_position: 51
+  arena_block_id: 48120520
+  source_title: NEXAH ATLAS THE CuLTURAL ORIENTATION FIELD V - PLATE I THE LANGUAGE FIELD
+  source_url: https://www.are.na/block/48120520
+  local_file: ../images/051-48120520.jpg
+  sha256: 575950d1ebb8f11e8031d91b2def03991f902ef7208bd38f7bc18de931cb5bfc
+  bytes: 250747
+  route_role: canonical
+  canonical_sequence: 39
+  canonical_section: V — Cultural Orientation Field
+  canonical_label: Plate I
+- source_position: 52
+  arena_block_id: 48120521
+  source_title: NEXAH ATLAS THE CuLTURAL ORIENTATION FIELD V - PLATE II _ THE WRINING FIELD
+  source_url: https://www.are.na/block/48120521
+  local_file: ../images/052-48120521.jpg
+  sha256: 0f10ff2bff752a2562ce7cb23befce55c20b538f8050a2ededd4ef5f10190e39
+  bytes: 237042
+  route_role: canonical
+  canonical_sequence: 40
+  canonical_section: V — Cultural Orientation Field
+  canonical_label: Plate II
+- source_position: 53
+  arena_block_id: 48120525
+  source_title: NEXAH ATLAS THE CuLTURAL ORIENTATION FIELD V - PLATE IV THE NAVIGATION FIELD
+  source_url: https://www.are.na/block/48120525
+  local_file: ../images/053-48120525.jpg
+  sha256: d6e1cff86742a83ee2ab4f40e059af80b6f549857d213c2d2867c25f657922ce
+  bytes: 263839
+  route_role: canonical
+  canonical_sequence: 42
+  canonical_section: V — Cultural Orientation Field
+  canonical_label: Plate IV
+- source_position: 54
+  arena_block_id: 48120524
+  source_title: NEXAH ATLAS THE CuLTURAL ORIENTATION FIELD V - PLATE III _ THE CARTOGRAPHIC FIELD
+  source_url: https://www.are.na/block/48120524
+  local_file: ../images/054-48120524.jpg
+  sha256: 8336fa457a2201dbb99489c6058e178c1e2ac46d2b0eae86ac854a81a293d08f
+  bytes: 278042
+  route_role: canonical
+  canonical_sequence: 41
+  canonical_section: V — Cultural Orientation Field
+  canonical_label: Plate III
+- source_position: 55
+  arena_block_id: 48120523
+  source_title: NEXAH ATLAS THE CuLTURAL ORIENTATION FIELD V - PLATE VI THE CIVILIZATIONAL FIELD
+  source_url: https://www.are.na/block/48120523
+  local_file: ../images/055-48120523.jpg
+  sha256: a5f5139b63c8374a32ec2561bb793f3a9dbac14ebb5f085c6ad14ad2e87eeeee
+  bytes: 259814
+  route_role: canonical
+  canonical_sequence: 44
+  canonical_section: V — Cultural Orientation Field
+  canonical_label: Plate VI
+- source_position: 56
+  arena_block_id: 48120522
+  source_title: NEXAH ATLAS THE CuLTURAL ORIENTATION FIELD V - PLATE V THE SCIENTIFIC FIELD
+  source_url: https://www.are.na/block/48120522
+  local_file: ../images/056-48120522.jpg
+  sha256: e8eddd6ca66254eccafdac03a91795c31d8a285e1d99a3355afcc4daf58920d5
+  bytes: 267685
+  route_role: canonical
+  canonical_sequence: 43
+  canonical_section: V — Cultural Orientation Field
+  canonical_label: Plate V
+- source_position: 57
+  arena_block_id: 48120538
+  source_title: TRANSITION V
+  source_url: https://www.are.na/block/48120538
+  local_file: ../images/057-48120538.jpg
+  sha256: 2194b566ead2041ea17f36046b2d3b85803deef8d8b385a71bb9ebe8b093a6aa
+  bytes: 185063
+  route_role: canonical
+  canonical_sequence: 45
+  canonical_section: V — Cultural Orientation Field
+  canonical_label: Transition V
+- source_position: 58
+  arena_block_id: 48120543
+  source_title: NEXAH THE COGNITIVE ORIENTATION FIELD_NEXAH ATLAS VI - PLATE I _ THE PERCEPTUAL FIELD
+  source_url: https://www.are.na/block/48120543
+  local_file: ../images/058-48120543.jpg
+  sha256: db8804b2f0ac02d48c935eb16ad05520cd02ee5496c7810546910060aabfb3aa
+  bytes: 243245
+  route_role: canonical
+  canonical_sequence: 46
+  canonical_section: VI — Cognitive Orientation Field
+  canonical_label: Plate I
+- source_position: 59
+  arena_block_id: 48120547
+  source_title: NEXAH THE COGNITIVE ORIENTATION FIELD_NEXAH ATLAS VI - PLATE II _ THE ATTENTIONAL FIELD
+  source_url: https://www.are.na/block/48120547
+  local_file: ../images/059-48120547.jpg
+  sha256: 9856795d34581a6dbbb97c1764c3a3c15019cdd20d579de74b1c6f25235b1bb3
+  bytes: 256857
+  route_role: canonical
+  canonical_sequence: 47
+  canonical_section: VI — Cognitive Orientation Field
+  canonical_label: Plate II
+- source_position: 60
+  arena_block_id: 48120546
+  source_title: NEXAH THE COGNITIVE ORIENTATION FIELD_NEXAH ATLAS VI - PLATE III THE MEMORY FIELD
+  source_url: https://www.are.na/block/48120546
+  local_file: ../images/060-48120546.jpg
+  sha256: d4c72ef6686e954590431bcd3215575ed5b44cb0b17cbe4fe34fa03ed0e45073
+  bytes: 262494
+  route_role: canonical
+  canonical_sequence: 48
+  canonical_section: VI — Cognitive Orientation Field
+  canonical_label: Plate III
+- source_position: 61
+  arena_block_id: 48120548
+  source_title: NEXAH THE COGNITIVE ORIENTATION FIELD_NEXAH ATLAS VI - PLATE IV THE PREDICTION FIELD
+  source_url: https://www.are.na/block/48120548
+  local_file: ../images/061-48120548.jpg
+  sha256: 3c9f61ee912eebc3c7dd36cc08a2f540e758a3be19382877681edc587e62a137
+  bytes: 262795
+  route_role: canonical
+  canonical_sequence: 49
+  canonical_section: VI — Cognitive Orientation Field
+  canonical_label: Plate IV
+- source_position: 62
+  arena_block_id: 48120544
+  source_title: NEXAH THE COGNITIVE ORIENTATION FIELD_NEXAH ATLAS VI - PLATE V THE DECISION FIELD
+  source_url: https://www.are.na/block/48120544
+  local_file: ../images/062-48120544.jpg
+  sha256: 255018c91ef8dad287878468fb08cecc8b18bc8acecb1e1964383d4941712f09
+  bytes: 258160
+  route_role: canonical
+  canonical_sequence: 50
+  canonical_section: VI — Cognitive Orientation Field
+  canonical_label: Plate V
+- source_position: 63
+  arena_block_id: 48120545
+  source_title: NEXAH THE COGNITIVE ORIENTATION FIELD_NEXAH ATLAS VI - PLATE VI THE COLLECTIVE FIELD
+  source_url: https://www.are.na/block/48120545
+  local_file: ../images/063-48120545.jpg
+  sha256: 74e6e63b3845cc6c8d3571c55ccc50c568e15af39eca2b2857b84ef98c17c53c
+  bytes: 259026
+  route_role: canonical
+  canonical_sequence: 51
+  canonical_section: VI — Cognitive Orientation Field
+  canonical_label: Plate VI
+- source_position: 64
+  arena_block_id: 48120610
+  source_title: CONTINUING ATLAS
+  source_url: https://www.are.na/block/48120610
+  local_file: ../images/064-48120610.jpg
+  sha256: 77d94546a47c4c76964fad921408a7c6a8e2fdab39314450d682e36f54f8a66a
+  bytes: 187797
+  route_role: canonical
+  canonical_sequence: 52
+  canonical_section: Library Appendix
+  canonical_label: Continuing Atlas
+- source_position: 65
+  arena_block_id: 48120613
+  source_title: PERIODIC TABLE OF ORIENTATION DESIGNERS
+  source_url: https://www.are.na/block/48120613
+  local_file: ../images/065-48120613.jpg
+  sha256: b80bd5d0c471ccc45f75f330846c206ca993c48b5658e9d05eb0953c0f830aa5
+  bytes: 209867
+  route_role: canonical
+  canonical_sequence: 55
+  canonical_section: Library Appendix
+  canonical_label: Periodic Table of Orientation Designers
+- source_position: 66
+  arena_block_id: 48119793
+  source_title: ARCHITECTS OF ORIENTATION
+  source_url: https://www.are.na/block/48119793
+  local_file: ../images/066-48119793.jpg
+  sha256: 790cea561ba38d748e06b963431c99f0fb73f16c5af6394511c934847b5c7de4
+  bytes: 197881
+  route_role: canonical
+  canonical_sequence: 53
+  canonical_section: Library Appendix
+  canonical_label: Architects of Orientation
+- source_position: 67
+  arena_block_id: 48119809
+  source_title: ORIENTATION DESIGNERS
+  source_url: https://www.are.na/block/48119809
+  local_file: ../images/067-48119809.jpg
+  sha256: 976c10606df43ae95ebd114b9460626fbb92601905dcf033dac0aae5935b6966
+  bytes: 199279
+  route_role: canonical
+  canonical_sequence: 54
+  canonical_section: Library Appendix
+  canonical_label: Orientation Designers
+- source_position: 68
+  arena_block_id: 47625546
+  source_title: NEXAH XV ATLAS + PLATE I ORIENT. CREATE ARCHITECTS OF ORIENTATION
+  source_url: https://www.are.na/block/47625546
+  local_file: ../images/068-47625546.jpg
+  sha256: d56ff25ad9cbfd793fa2a5937098b9879524ae7db9d55ac243d755f1836d11be
+  bytes: 180629
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 69
+  arena_block_id: 47625539
+  source_title: The Periodic Table of ORIENTATION DESIGNERS
+  source_url: https://www.are.na/block/47625539
+  local_file: ../images/069-47625539.jpg
+  sha256: 69ba44f11b170a32b8240fbd11c2db06fa7da9b59794c95670f5b1af08e3229f
+  bytes: 186570
+  route_role: supplemental
+  canonical_sequence: null
+  canonical_section: null
+  canonical_label: null
+- source_position: 70
+  arena_block_id: 48120612
+  source_title: ABOUT NEXAH LIBRARY
+  source_url: https://www.are.na/block/48120612
+  local_file: ../images/070-48120612.jpg
+  sha256: f1082cba406418a0db2169a361c6431717c48fbab70913ddaa30c29a62e0303d
+  bytes: 195561
+  route_role: canonical
+  canonical_sequence: 57
+  canonical_section: Library Appendix
+  canonical_label: About NEXAH Library
+- source_position: 71
+  arena_block_id: 48120609
+  source_title: HOW TO BUILD YOUR OWN ATLAS
+  source_url: https://www.are.na/block/48120609
+  local_file: ../images/071-48120609.jpg
+  sha256: 0b8e3146648f9a492ffb19b818a4f13d39c5ce6c601f82f4f259d7962f1bef88
+  bytes: 208753
+  route_role: canonical
+  canonical_sequence: 56
+  canonical_section: Library Appendix
+  canonical_label: How to Build Your Own Atlas
+- source_position: 72
+  arena_block_id: 48120619
+  source_title: THE COMPLETE NEXAH LIBRARY
+  source_url: https://www.are.na/block/48120619
+  local_file: ../images/072-48120619.jpg
+  sha256: 1e5ba3021ed1db2514524177b4814930d0e2e82b4cd4b4062654a2ecb68fb60f
+  bytes: 218960
+  route_role: canonical
+  canonical_sequence: 59
+  canonical_section: Library Appendix
+  canonical_label: The Complete NEXAH Library
