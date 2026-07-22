@@ -1,5 +1,9 @@
 # NEXAH — The Orientation Ecosystem
 
+[![NEXAH CI](https://github.com/Scarabaeus1031/NEXAH/actions/workflows/ci.yml/badge.svg)](https://github.com/Scarabaeus1031/NEXAH/actions/workflows/ci.yml)
+[![Public Experience](https://img.shields.io/badge/public_experience-nexah.de-0b2745)](https://nexah.de)
+[![Code License: Apache 2.0](https://img.shields.io/badge/code-Apache--2.0-b48738)](LICENSE)
+
 **Understanding before action.**
 
 NEXAH is an **evidence-bound orientation ecosystem** for making relationships,
