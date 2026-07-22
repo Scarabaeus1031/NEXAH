@@ -56,6 +56,10 @@ It is not a claim that no physical boundary exists elsewhere.
 python -m pytest tests/validation/test_ieee_geometry_v1.py -q
 ```
 
-The test executes the validation twice and requires byte-identical results.
+The test replays the frozen protocol and verifies its declared environment,
+adapter, freeze, evaluation counts, evidence boundary, and limitations. Figure
+generation is deterministic within one declared runtime; committed PNG and
+solver byte streams remain reviewed canonical artifacts because font rendering
+and floating-point backends can differ across operating systems.
 For contracts, formulas, provenance, and limitations, continue with the
 **[Research path](RESEARCH_PATH.md)**.

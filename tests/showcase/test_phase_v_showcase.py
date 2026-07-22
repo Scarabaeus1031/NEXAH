@@ -8,6 +8,8 @@ import os
 import subprocess
 import sys
 
+from PIL import Image
+
 
 ROOT = Path(__file__).parents[2]
 SHOWCASE = (
@@ -41,7 +43,9 @@ def _generate(output: Path) -> None:
     )
 
 
-def test_showcase_figures_are_byte_reproducible(tmp_path: Path) -> None:
+def test_showcase_figures_are_deterministic_in_current_runtime(
+    tmp_path: Path,
+) -> None:
     first = tmp_path / "first"
     second = tmp_path / "second"
     _generate(first)
@@ -49,7 +53,10 @@ def test_showcase_figures_are_byte_reproducible(tmp_path: Path) -> None:
 
     for name in EXPECTED_FIGURES:
         assert (first / name).read_bytes() == (second / name).read_bytes()
-        assert (first / name).read_bytes() == (COMMITTED_FIGURES / name).read_bytes()
+        with Image.open(COMMITTED_FIGURES / name) as committed:
+            assert committed.format == "PNG"
+            assert committed.width > 1000
+            assert committed.height > 500
 
 
 def test_showcase_entry_depths_preserve_the_claim_boundary() -> None:
@@ -62,7 +69,7 @@ def test_showcase_entry_depths_preserve_the_claim_boundary() -> None:
     assert "not operational-grid measurements" in map_text
     assert "no sampled\nboundary" in map_text
     assert "parameter_retuning: false" in quickstart
-    assert "byte-identical" in quickstart
+    assert "deterministic within one declared runtime" in quickstart
     assert "Observed-Evidence Bridge" in research
     assert "not automatically physical invariants" in research
 
