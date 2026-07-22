@@ -19,9 +19,9 @@ problem of orientation.
 
 | I want to… | Begin here |
 |---|---|
-| Enter the public Experience | **[nexah.de](https://nexah.de)** — public host remains subject to the Operations launch gate |
-| Inspect deterministic navigation | **`NEXAH-ORION`** — approved public repository identity; GitHub creation remains pending |
-| Inspect the Experience source | **`NEXAH-Experience`** — approved public repository identity; GitHub creation remains pending |
+| Enter the public Experience | **[nexah.de](https://nexah.de)** — the public entrance to NEXAH |
+| Inspect deterministic navigation | **[NEXAH-ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)** — navigation, reports, validation and LYRA |
+| Inspect the Experience source | **[NEXAH-Experience](https://github.com/Scarabaeus1031/NEXAH-Experience)** — public presentation, Library, Living Atlas, Laboratory and Reading Spaces |
 | Understand the purpose and principles | **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** · **[Governance Index](GOVERNANCE/README.md)** · **[NEXAH Manifesto](MANIFESTO.md)** |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
