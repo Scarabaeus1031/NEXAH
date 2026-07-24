@@ -1,8 +1,14 @@
-# NEXAH — The Orientation Ecosystem
+# NEXAH — Research & Framework
 
 [![NEXAH CI](https://github.com/Scarabaeus1031/NEXAH/actions/workflows/ci.yml/badge.svg)](https://github.com/Scarabaeus1031/NEXAH/actions/workflows/ci.yml)
 [![Public Experience](https://img.shields.io/badge/public_experience-nexah.de-0b2745)](https://nexah.de)
 [![Code License: Apache 2.0](https://img.shields.io/badge/code-Apache--2.0-b48738)](LICENSE)
+
+This repository preserves the research, framework, Orientation Language, experiments, applications, governance and historical development of the **NEXAH Orientation Ecosystem**.
+
+**Public path:** [Discover NEXAH](https://nexah.de) · [Use the Visitor Guide](https://nexah.de/visitor-guide/) · [Try NEXAHEDRON](https://nexahedron.com) · [Inspect ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)
+
+It is not the public landing page, the ORION repository or the Human-facing Workspace. It is the scientific workshop and long-term record behind those public chapters.
 
 **Understanding before action.**
 
@@ -24,7 +30,8 @@ problem of orientation.
 | I want to… | Begin here |
 |---|---|
 | Enter the public Experience | **[nexah.de](https://nexah.de)** — the public entrance to NEXAH |
-| Inspect deterministic navigation | **[NEXAH-ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)** — navigation, reports, validation and LYRA |
+| Inspect the certified deterministic Core | **[NEXAH-ORION](https://github.com/Scarabaeus1031/NEXAH-ORION)** — structural representation, relations, navigation, orientation map and certified expression |
+| Try one Human-facing Orientation Session | **[NEXAHEDRON](https://nexahedron.com)** — the reference Workspace |
 | Inspect the Experience source | **[NEXAH-Experience](https://github.com/Scarabaeus1031/NEXAH-Experience)** — public presentation, Library, Living Atlas, Laboratory and Reading Spaces |
 | Understand the purpose and principles | **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** · **[Governance Index](GOVERNANCE/README.md)** · **[NEXAH Manifesto](MANIFESTO.md)** |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
