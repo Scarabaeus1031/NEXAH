@@ -82,10 +82,12 @@ the maintained release policy.
    any actual mismatch corrected, and its review date and candidate commit
    recorded or the document explicitly retained as a dated snapshot.
 
-3. **Create one clean, immutable candidate.**  
-   The four reviews and Identity Alignment Pass are currently uncommitted.
-   Freeze only a clean worktree, record the commit SHA, and preserve an artifact
-   inventory and checksums as required by the existing release policy.
+3. **Approve one clean, immutable candidate.**
+   The four reviews, Identity Alignment Pass, and this planning review are now
+   present in repository history. Freeze only a deliberately approved clean
+   worktree, record its commit SHA, and preserve an artifact inventory and
+   checksums as required by the existing release policy. Presence on `main`
+   does not by itself designate a freeze candidate.
 
 4. **Run integrity checks on the exact candidate.**  
    This review observed a successful canonical test invocation:
@@ -191,7 +193,7 @@ unidentified, or unreproducible canonical repository.
 | Ambiguous “NEXAH Version 1” identity | The repository rejects one ecosystem-wide version and already has a historical `v1.0.0` tag | Approve a new, unambiguous Framework release name/tag and state its scope |
 | Outdated Governance status in `REPOSITORY_MAP.md` | A maintained current-state map contradicts the adopted Constitution | Replace only the current Governance status and preserve the review as historical |
 | Unverified current System State | A document labelled current ground truth predates the final candidate | Recheck facts and stamp the final review date/commit or mark it as a dated snapshot |
-| No immutable final candidate | The reviewed state is still a dirty worktree | Commit the intended files, record the SHA, and freeze only that clean tree |
+| No approved final candidate | Repository history contains the review set, but no exact commit has been approved as the freeze artifact | Approve the intended clean commit, record its SHA, and freeze only that tree |
 | No green CI on the exact freeze commit | Existing release policy requires it; a local pass is not the public release record | Run the canonical suite and required checks on the final commit until CI is green |
 | Unverified canonical outbound links | A canonical entry point must not direct readers to missing resources without qualification | Check maintained front-door links and correct or qualify only actual failures |
 
@@ -205,7 +207,7 @@ Library cleanup item belongs in this blocker list.
 | P0 | Define the Framework freeze scope, name, tag, and exact independently versioned exclusions | Prevents a false ecosystem-wide Version 1 claim | Yes |
 | P0 | Correct the Governance status in `REPOSITORY_MAP.md` | Removes a direct contradiction in current navigation | Yes |
 | P0 | Verify and stamp `SYSTEM_STATE.md` against the final candidate | Makes “current ground truth” accurate at freeze | Yes |
-| P0 | Commit one clean candidate and record its SHA | Makes the freeze identifiable and reproducible | Yes |
+| P0 | Approve one clean candidate and record its SHA | Makes the freeze identifiable and reproducible | Yes |
 | P0 | Pass tests, Markdown/link checks, diff checks, and public CI on that SHA | Satisfies maintained release discipline | Yes |
 | P0 | Verify canonical front-door outbound links | Prevents broken canonical navigation | Yes |
 | P1 | Implement the single-page Evidence Atlas | Completes the strongest review-supported navigation gap | No, if explicitly deferred and not linked as existing |
@@ -410,4 +412,3 @@ research expansion.
 After those items, this review recommends approval. The Evidence Atlas should
 preferably be included for a complete Version 1 navigation layer, but its
 absence alone does not make the frozen repository false.
-
