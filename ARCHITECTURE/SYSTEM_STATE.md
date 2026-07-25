@@ -3,9 +3,15 @@
 > This document reflects the **current implemented and empirically observed state of NEXAH**,  
 > not an idealized or finalized architecture.
 
-**Text review:** July 17, 2026
+**Text review:** July 25, 2026
 
 **Visual snapshot:** July 16, 2026
+
+**Framework 1.0 freeze preparation:** current implementation statements and
+limitations were rechecked against the maintained repository and validation
+suite on July 25, 2026. This document does not record its own commit hash;
+the exact immutable candidate is identified by the Framework release record
+and annotated freeze tag.
 
 Related references:
 

@@ -172,11 +172,13 @@ as established evidence.
 Readers who want to inspect evidence rather than the conceptual overview
 should proceed through:
 
-1. **[VALIDATION/README.md](VALIDATION/README.md)** — validation program
-2. **[FINDINGS/README.md](FINDINGS/README.md)** — condensed observations
-3. **[APPLIED_CASES/README.md](APPLIED_CASES/README.md)** — system-specific cases
-4. **[FIGURES/README.md](FIGURES/README.md)** — visual synthesis
-5. **[PAPER_DRAFT.md](PAPER_DRAFT.md)** — integrated argument
+1. **[Evidence Atlas](../docs/evidence/README.md)** — non-authoritative
+   claim-level navigation to owning sources
+2. **[VALIDATION/README.md](VALIDATION/README.md)** — validation program
+3. **[FINDINGS/README.md](FINDINGS/README.md)** — condensed observations
+4. **[APPLIED_CASES/README.md](APPLIED_CASES/README.md)** — system-specific cases
+5. **[FIGURES/README.md](FIGURES/README.md)** — visual synthesis
+6. **[PAPER_DRAFT.md](PAPER_DRAFT.md)** — integrated argument
 
 The executable reference pipeline is maintained separately in the
 **[NEXAH Demonstrator](../PROTO_CORE/NEXAH_DEMONSTRATOR/)**.

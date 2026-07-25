@@ -12,6 +12,8 @@ responsibility and boundary.
   state, and executable start
 - **[Repository Map](../REPOSITORY_MAP.md)** — complete directory-level
   navigation
+- **[Evidence Atlas](evidence/README.md)** — bounded claims, status, limits,
+  and links to authoritative owning sources
 
 ## Library documentation
 

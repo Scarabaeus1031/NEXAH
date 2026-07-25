@@ -44,14 +44,16 @@ the maintained Orientation Kernel implementation track. It does not mean:
 
 ## Next public baseline
 
-The next Framework release must receive a new, explicitly approved release
-identity. It must not reuse an existing tag. Before that release:
+The next Framework release is prepared as **NEXAH Framework 1.0** with the
+distinct planned tag `framework-v1.0.0`. This identity applies only to the
+Framework repository and does not reuse or reinterpret the historical
+Kernel-scope `v1.0.0` tag. Before publication:
 
 1. the intended artifact scope must be named;
 2. the exact commit and test evidence must be recorded;
 3. public CI must pass on that commit;
 4. release notes must state limits and compatibility;
-5. the release owner must approve the version and tag.
+5. the release owner must approve creation of the annotated tag.
 
 Constitution v1.0 may be published or referenced as a governance baseline under
 an unambiguous name such as `constitution-v1.0`; doing so does not create a

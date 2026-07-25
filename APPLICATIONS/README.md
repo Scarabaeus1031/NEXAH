@@ -2,6 +2,10 @@
 
 The Applications Layer is where NEXAH methods meet concrete systems.
 
+The non-authoritative **[NEXAH Evidence Atlas](../docs/evidence/README.md)**
+provides claim-level navigation to selected application results and limits.
+Application protocols and their owning evidence remain authoritative.
+
 It contains runnable demonstrations, system-specific research programs,
 integration tools, conceptual models, and experimental navigation prototypes.
 These are not finished products. They are working environments for asking:

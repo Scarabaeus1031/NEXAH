@@ -26,7 +26,7 @@ and historical areas make those responsibilities inspectable.
 | Inspect Library architecture and reader journeys | **[LIBRARY/README.md](LIBRARY/README.md)** |
 | Understand editorial governance | **[EDITORIAL_OPERATING_SYSTEM/README.md](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Inspect non-canonical review instruments | **[Review Toolbox](EDITORIAL_OPERATING_SYSTEM/living_concepts/review/README.md)** |
-| Inspect provisional constitutional principles | **[GOVERNANCE/constitution_review_01/README.md](GOVERNANCE/constitution_review_01/README.md)** |
+| Inspect adopted governance and constitutional principles | **[GOVERNANCE/README.md](GOVERNANCE/README.md)** · **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** |
 | Inspect architecture and system state | **[ARCHITECTURE/README.md](ARCHITECTURE/README.md)** |
 | Run the executable Demonstrator path | **[PROTO_CORE/NEXAH_DEMONSTRATOR/](PROTO_CORE/NEXAH_DEMONSTRATOR/README.md)** |
 
@@ -81,9 +81,9 @@ Editorial Operating System → governance and controlled execution
 ```
 
 Cross-cutting architecture, provenance, validation, security, and version
-history support all six areas. `GOVERNANCE/` records provisional cross-system
-constitutional review; it is not a seventh subsystem and grants no authority
-by repository placement.
+history support all six areas. `GOVERNANCE/` maintains the adopted
+constitutional baseline and cross-system governance; it is not a seventh
+subsystem and grants no authority by repository placement.
 
 ---
 
@@ -166,13 +166,17 @@ repository root.
 
 ## ⚖️ GOVERNANCE/
 
-**[GOVERNANCE/](GOVERNANCE/constitution_review_01/README.md)** contains the
-historical reconstruction and provisional candidate for a small NEXAH
-Constitution. The candidate is **non-canonical and pending human review**.
+**[GOVERNANCE/](GOVERNANCE/README.md)** contains the adopted
+**[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** and the
+cross-system Governance Index.
 
 Governance is cross-cutting review material. It does not replace OLS
 Specification Governance, Library or Registry authority, Editorial Governance,
 Architecture decisions, or the responsibility of any primary subsystem.
+
+The earlier
+**[Constitution Review 01](GOVERNANCE/constitution_review_01/README.md)**
+remains preserved as non-canonical historical review evidence.
 
 ---
 

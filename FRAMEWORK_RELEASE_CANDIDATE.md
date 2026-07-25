@@ -1,75 +1,99 @@
-# NEXAH Framework Release Candidate
+# NEXAH Framework 1.0 Release Candidate
 
 ## Status
 
-**Prepared, unnamed, and not released.**
+**Prepared and not released.**
 
-This package contains the release material that can be completed before the
-release owner assigns the next Framework version and tag. It does not rename
-or reinterpret any historical release.
+**Framework identity:** NEXAH Framework 1.0
 
-## Release scope
+**Planned tag:** `framework-v1.0.0`
 
-The candidate publishes the maintained NEXAH Framework repository, including:
+**Preparation date:** July 25, 2026
+
+This release identity applies only to the maintained Framework repository. It
+does not rename or reinterpret any historical release and does not synchronize
+the versions of artifacts with independent authority.
+
+## Scope
+
+The candidate preserves the maintained NEXAH Framework repository, including:
 
 - the adopted Ecosystem Constitution v1.0 and Governance Index;
-- the Framework architecture and six repository subsystems;
-- Orientation Language specifications and registries;
-- the Orientation Kernel implementation track currently declared as `0.7.0`;
-- bounded Research, Applications, Library Registry and Editorial Operating
-  System material; and
-- repository verification, contribution, security and licensing records.
+- Framework Architecture and the six repository subsystem responsibilities;
+- Orientation Language specifications, registries, and OLS 1.0.0;
+- the Orientation Kernel implementation track declared as `0.7.0`;
+- bounded Research, validation, Applications, Library Registry, and Editorial
+  Operating System material;
+- the non-authoritative Evidence Atlas; and
+- repository verification, contribution, security, licensing, and review
+  records.
 
-The candidate is not an ecosystem-wide version, ORION release, Experience
-release, production-readiness declaration or universal scientific claim.
+The candidate is a canonical source baseline. It is not a production-readiness
+declaration and does not complete active Research or Library work.
 
-Approved publication identities are `NEXAH` for this Framework,
-`NEXAH-ORION` for deterministic navigation and `NEXAH-Experience` for the
-public presentation repository. Software licensing is Apache 2.0; original
-documentation, specifications, research, books and visual material remain
-under CC BY 4.0 where applicable.
-
-## Compatibility summary
+## Independent version authorities
 
 | Surface | Candidate statement |
 |---|---|
-| Python | The maintained package declares Python `>=3.10`. |
-| Kernel package | `nexah` remains on implementation track `0.7.0`. |
-| Orientation Language | OLS versions retain their own release authority. |
-| Constitution | Constitution v1.0 is governance, not a software version. |
-| ORION | ORION keeps its independent version and exact Core pin. This candidate does not change that pin. |
-| Experience | Experience consumes only explicitly recorded public baselines; it is not bundled. |
-| Historical tags | `v0.5`, `v0.5.0` and `v1.0.0` retain their documented historical meanings. |
+| Framework repository | Released as NEXAH Framework 1.0 from one exact Git commit |
+| Orientation Language | OLS 1.0.0 retains its own semantic release authority |
+| Orientation Kernel | `nexah` remains on implementation track `0.7.0` |
+| Constitution | Constitution v1.0 remains an adopted governance baseline, not software |
+| ORION | ORION retains its independent version and exact Core pin; it is not bundled |
+| Experience | Experience retains its independent publication and package records; it is not bundled |
+| Historical tags | `v0.5`, `v0.5.0`, and `v1.0.0` retain their documented historical meanings |
 
-## Verification summary
+The planned `framework-v1.0.0` tag is intentionally distinct from the
+historical Kernel-scope `v1.0.0` tag.
 
-Local verification on 21 July 2026:
+## Included components
+
+- canonical repository documentation and current navigation;
+- adopted Governance and maintained Architecture;
+- released OLS material, unchanged by this preparation pass;
+- current Kernel source and tests, without a package-version change;
+- reproducible validation bundles and bounded application records;
+- Research and historical artifacts at their existing local status;
+- Library and editorial records at their existing local status;
+- six completed independent reviews and the Identity Alignment Pass;
+- this release-preparation record and the Evidence Atlas.
+
+## Excluded components
+
+- independent ORION and Experience repositories;
+- public hosting, DNS, TLS, legal, and deployment state;
+- generated caches, credentials, private workspaces, model files, and
+  temporary outputs;
+- unavailable external or conversational evidence;
+- any new architecture, OLS semantics, scientific claim, or synchronized
+  ecosystem version.
+
+## Verification
+
+Release-preparation verification on July 25, 2026:
 
 ```text
-python -m pytest -q
-302 passed, 164 warnings
+python -m pytest -q -p no:cacheprovider
+302 passed, 162 warnings
 ```
 
-Public CI evidence for public Governance commit `6ac32ec481e8932fd388fef1dd2dc2cfd2529117`:
+The final candidate must also pass:
 
-- Python 3.10 smoke job: passed;
-- Python 3.11 smoke job: passed;
-- Python 3.12 smoke job: passed;
-- full repository test job: failed after 49 minutes 26 seconds in
-  `Run repository tests` with exit code 1.
+- Markdown structure and local-link validation;
+- documentation entry-point and release-integrity checks;
+- `python -m nexah.library release-check`;
+- Python source compilation;
+- source distribution and wheel construction;
+- `git diff --check`; and
+- complete public CI on the exact candidate SHA.
 
-The anonymous public API exposes no failing test name, and anonymous GitHub
-access requires sign-in to view logs. Local execution of the same
-`python -m pytest -q` command passes all 302 tests. The precise CI-only failure
-must therefore be read from an authorized job log before any test or workflow
-change is made.
-
-The final release commit must receive a new complete green public CI run. A
-local green run or partial public run is supporting evidence, not a substitute.
+The immutable candidate SHA and public CI URL belong in the annotated tag and
+public release record after CI completes. A local green run is supporting
+evidence, not a substitute for green public CI on that SHA.
 
 ## Reproducibility
 
-From a clean checkout of the final candidate commit:
+From a clean checkout of the candidate commit:
 
 ```sh
 python -m venv .venv
@@ -82,49 +106,59 @@ python -m build
 
 The release record must capture:
 
-- the final commit SHA;
+- exact candidate commit SHA;
 - Python and build-tool versions;
 - CI run URL and conclusions;
-- filenames, sizes and SHA-256 checksums of the source distribution and wheel;
-- approved release name and tag; and
-- known limits stated in the root README and `ARCHITECTURE/SYSTEM_STATE.md`.
+- filenames, sizes, and SHA-256 checksums of the source distribution and
+  wheel;
+- approved release identity and tag; and
+- known limits stated here and in `ARCHITECTURE/SYSTEM_STATE.md`.
 
 ## Artifact inventory
 
 | Artifact | Authority | Publication condition |
 |---|---|---|
-| Git source snapshot | Framework repository | Exact approved commit |
-| Python source distribution | Kernel implementation | Built from the approved commit |
-| Python wheel | Kernel implementation | Built from the approved commit |
-| Constitution v1.0 | Governance | Published unchanged from its canonical German source |
-| Architecture and repository documentation | Owning Framework areas | Included as documentation, not promoted beyond current status |
-| Research and validation records | Research | Provenance and evidence boundaries preserved |
-| Release notes and checksums | Operations | Generated for the approved commit and release name |
+| Git source snapshot | Framework repository | exact approved commit |
+| Python source distribution and wheel | Kernel implementation | built from the approved commit; package remains `0.7.0` |
+| Constitution v1.0 | Governance | included unchanged from its canonical source |
+| OLS 1.0.0 | Orientation Language | included unchanged from its canonical release |
+| Architecture and repository documentation | owning Framework areas | included without promotion beyond current status |
+| Research and validation records | Research | provenance and evidence boundaries preserved |
+| Evidence Atlas | cross-system documentation | navigation only; source areas retain authority |
+| Release notes, checksums, and tag | Operations | generated for the approved commit and Framework identity |
 
-Generated caches, local workspaces, credentials, model files, private research,
-temporary outputs and independent ORION or Experience repositories are never
-release artifacts.
+## Known limitations
 
-### Wheel preflight
+- The Kernel remains a bounded `0.7.0` implementation track rather than one
+  unified runtime for every repository lineage.
+- Research maturity remains uneven and locally declared.
+- Reader effect, generalized Processor conformance, broad operational domain
+  validity, and universal mechanisms are not established.
+- Library direct traversability and twelve manual editorial cleanup actions
+  remain open.
+- POA, NTO, and DERIS/HYDRA evidence chains identified by Discovery Atlas
+  Review 01 remain blocked because their authoritative primary sources are not
+  repository-addressable.
 
-The package sources at local Framework commit `7daa0ecc…` were exported with
-`git archive` and built outside the working tree without dependencies or build
-isolation:
+## Prohibited interpretations
 
-```text
-nexah-0.7.0-py3-none-any.whl
-157918 bytes
-SHA-256 41128146de0c84ba20fa81761afd0b09abfc079f9bf00444bd64838663ba76e7
-```
+Framework 1.0 must not be described as:
 
-This proves the current package can produce a wheel in the available build
-environment. It is preflight evidence only. The final wheel and source
-distribution must be rebuilt and rehashed from the owner-approved release
-commit after the release identity is assigned.
+- an ecosystem-wide synchronized version;
+- a new OLS, Kernel, Constitution, ORION, or Experience release;
+- general OLS implementation conformance;
+- a universal scientific theory or mechanism;
+- operational prediction, recommendation, authorization, or control;
+- proof that visual recurrence establishes shared mathematics;
+- completion of active Research or the Living Library.
 
-## Owner gate
+## Remaining publication gate
 
-The only unresolved semantic release field is the next Framework release name
-and tag. After owner approval, Operations records that identity, publishes the
-local commits, waits for green CI, builds and hashes the final artifacts, and
-creates the release without rewriting prior tags.
+After the candidate commit is created, Operations must:
+
+1. verify the clean checkout and exact candidate SHA;
+2. obtain a complete green public CI run on that SHA;
+3. build the source distribution and wheel from that SHA;
+4. record filenames, sizes, SHA-256 checksums, tool versions, and CI URL;
+5. create the annotated `framework-v1.0.0` tag without moving or reusing any
+   historical tag.

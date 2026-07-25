@@ -36,7 +36,7 @@ problem of orientation.
 | Understand the purpose and principles | **[Ecosystem Constitution v1.0](GOVERNANCE/ECOSYSTEM_CONSTITUTION.md)** · **[Governance Index](GOVERNANCE/README.md)** · **[NEXAH Manifesto](MANIFESTO.md)** |
 | Read the published specification | **[Orientation Language](ORIENTATION_LANGUAGE/README.md)** |
 | Use or develop the software | **[Orientation Kernel](nexah/README.md)** |
-| Inspect research and evidence | **[Research Portal](RESEARCH/README.md)** |
+| Inspect research and evidence | **[Evidence Atlas](docs/evidence/README.md)** · **[Research Portal](RESEARCH/README.md)** |
 | Explore Works, journeys, or editorial practice | **[Begin with THE ATLAS OF ATLASES](docs/library/atlas-of-atlases/README.md)** · **[Public Library on Are.na](https://www.are.na/nexah-scarabaeus1031/channels)** · **[Library Architecture & Registry](LIBRARY/README.md)** · **[Editorial Operating System](EDITORIAL_OPERATING_SYSTEM/README.md)** |
 | Evaluate a domain application | **[Applications](APPLICATIONS/README.md)** |
 | Inspect Orientation Translation pilots and methodological evidence | **[Applications / Orientation Translation](APPLICATIONS/orientation_translation/)** |
@@ -92,9 +92,10 @@ These are different maturity statements, not one repository-wide certification.
 The existing tags, public releases and current package version are explained in
 **[Release and Version History](RELEASES.md)**; no version in one responsibility
 area versions the entire ecosystem.
-The unnamed next Framework package is prepared in
-**[Framework Release Candidate](FRAMEWORK_RELEASE_CANDIDATE.md)**. Its final
-release identity remains an explicit owner decision.
+The next repository baseline is prepared as
+**[NEXAH Framework 1.0](FRAMEWORK_RELEASE_CANDIDATE.md)** with the distinct
+planned tag `framework-v1.0.0`. This identity applies only to the Framework
+repository and does not synchronize independently versioned artifacts.
 
 ---
 

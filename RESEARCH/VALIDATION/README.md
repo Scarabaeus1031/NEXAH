@@ -7,6 +7,11 @@ representations, and dynamical systems.
 It is an evidence archive under active development. It is not an independent
 verification of a finalized theory.
 
+For repository-wide claim-level navigation across supported findings, negative
+results, limitations, and blocked evidence chains, use the non-authoritative
+**[NEXAH Evidence Atlas](../../docs/evidence/README.md)**. The validation
+bundles in this directory remain the empirical authority.
+
 ![NEXAH Validation Summary](./visuals/nexah_validation_summary_visual.png)
 
 ---
