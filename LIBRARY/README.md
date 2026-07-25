@@ -28,6 +28,13 @@ future navigation across NEXAH works.
 
 ## Enter the Library
 
+> Works preserve different statuses and perspectives. A shared visual motif is
+> an invitation to compare, not evidence of one theory or mechanism. Consult
+> the **[Library Architecture](architecture/LIBRARY_ARCHITECTURE_V1.md)** for
+> Work identity and Registry authority, and the
+> **[Catalog Status](catalog/CATALOG_STATUS.md)** for current coverage and
+> limitations.
+
 New readers should begin with **[THE ATLAS OF ATLASES](../docs/library/atlas-of-atlases/README.md)**,
 the official visual entrance hall to the NEXAH Library. It introduces the
 Library's recurring motifs and atlas grammar, then guides the reader through

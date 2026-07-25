@@ -1,5 +1,12 @@
 # 🧭 NEXAH — Research Navigation Index
 
+> **Status — transition-geometry research navigation.** This index organizes
+> one locally owned NEXAH research program; it does not define the identity of
+> the whole repository. Mechanism statements are working interpretations under
+> bounded evidence. Read them with the **[Research Layer scope](README.md)** and
+> the
+> **[repository responsibility boundaries](../README.md#repository-organization)**.
+
 This document defines the primary navigation layer
 for the NEXAH research framework.
 
@@ -36,6 +43,9 @@ dynamics
 
 into a unified operational research architecture.
 
+Here, “unified” describes navigation across this research program. It does not
+claim one repository-wide scientific mechanism, theory, or runtime.
+
 ---
 
 # 🌊 Emergent Transition Geometry
@@ -60,6 +70,10 @@ inside the NEXAH research stack.
 # 🧠 Fundamental Transition Mechanism
 
 ![NEXAH Core Mechanism](./CORE_CONCEPTS/visuals/nexah_phase_mismatch_control_mechanism.png)
+
+“Fundamental Transition Mechanism” is the working label used inside this
+research program. It identifies a candidate operational model, not an
+established repository-wide mechanism.
 
 The minimal operational mechanism currently consists of:
 
@@ -211,6 +225,10 @@ appears geometrically structured
 
 → causal activation layer
 
+Here, “causal activation layer” names a working mechanism hypothesis inside
+this research program, not a validated causal or repository architecture
+layer.
+
 Introduces:
 
 - phase mismatch
@@ -228,6 +246,10 @@ activates transitions
 ```
 
 rather than instability magnitude alone.
+
+This statement records the mechanism hypothesis. Current evidence supports the
+reported local correlations; it does not by itself establish general
+causation.
 
 ---
 

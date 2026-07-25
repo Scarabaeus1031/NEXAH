@@ -1,5 +1,12 @@
 # 🧠 NEXAH — Transition Geometry & Phase-Driven Structure in Dynamical Systems
 
+> **Status — transition-geometry research program.** This document summarizes
+> one locally owned NEXAH research program; it does not define the identity of
+> the whole repository. Mechanism statements below are working interpretations
+> under bounded evidence. Read them with the **[Research Layer scope](README.md)**
+> and the
+> **[repository responsibility boundaries](../README.md#repository-organization)**.
+
 ## 🔑 Central Research Perspective
 
 NEXAH investigates whether transitions in nonlinear systems
