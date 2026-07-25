@@ -92,10 +92,13 @@ These are different maturity statements, not one repository-wide certification.
 The existing tags, public releases and current package version are explained in
 **[Release and Version History](RELEASES.md)**; no version in one responsibility
 area versions the entire ecosystem.
-The next repository baseline is prepared as
+The current frozen repository baseline is
 **[NEXAH Framework 1.0](FRAMEWORK_RELEASE_CANDIDATE.md)** with the distinct
-planned tag `framework-v1.0.0`. This identity applies only to the Framework
-repository and does not synchronize independently versioned artifacts.
+annotated tag `framework-v1.0.0` at commit
+`87f438d05a8841166ea32719b9fda807acf5cb6b`. This identity applies only to the
+Framework repository and does not synchronize independently versioned
+artifacts. Later documentation commits do not move or reinterpret the frozen
+tag.
 
 ---
 

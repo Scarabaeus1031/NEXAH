@@ -1,14 +1,16 @@
-# NEXAH Framework 1.0 Release Candidate
+# NEXAH Framework 1.0 Release Record
 
 ## Status
 
-**Prepared and not released.**
+**Released and frozen.**
 
 **Framework identity:** NEXAH Framework 1.0
 
-**Planned tag:** `framework-v1.0.0`
+**Tag:** `framework-v1.0.0`
 
-**Preparation date:** July 25, 2026
+**Frozen commit:** `87f438d05a8841166ea32719b9fda807acf5cb6b`
+
+**Release date:** July 25, 2026
 
 This release identity applies only to the maintained Framework repository. It
 does not rename or reinterpret any historical release and does not synchronize
@@ -16,7 +18,7 @@ the versions of artifacts with independent authority.
 
 ## Scope
 
-The candidate preserves the maintained NEXAH Framework repository, including:
+The release preserves the maintained NEXAH Framework repository, including:
 
 - the adopted Ecosystem Constitution v1.0 and Governance Index;
 - Framework Architecture and the six repository subsystem responsibilities;
@@ -28,12 +30,12 @@ The candidate preserves the maintained NEXAH Framework repository, including:
 - repository verification, contribution, security, licensing, and review
   records.
 
-The candidate is a canonical source baseline. It is not a production-readiness
+The release is a canonical source baseline. It is not a production-readiness
 declaration and does not complete active Research or Library work.
 
 ## Independent version authorities
 
-| Surface | Candidate statement |
+| Surface | Release statement |
 |---|---|
 | Framework repository | Released as NEXAH Framework 1.0 from one exact Git commit |
 | Orientation Language | OLS 1.0.0 retains its own semantic release authority |
@@ -43,7 +45,7 @@ declaration and does not complete active Research or Library work.
 | Experience | Experience retains its independent publication and package records; it is not bundled |
 | Historical tags | `v0.5`, `v0.5.0`, and `v1.0.0` retain their documented historical meanings |
 
-The planned `framework-v1.0.0` tag is intentionally distinct from the
+The `framework-v1.0.0` tag is intentionally distinct from the
 historical Kernel-scope `v1.0.0` tag.
 
 ## Included components
@@ -56,7 +58,7 @@ historical Kernel-scope `v1.0.0` tag.
 - Research and historical artifacts at their existing local status;
 - Library and editorial records at their existing local status;
 - six completed independent reviews and the Identity Alignment Pass;
-- this release-preparation record and the Evidence Atlas.
+- this release record and the Evidence Atlas.
 
 ## Excluded components
 
@@ -70,14 +72,14 @@ historical Kernel-scope `v1.0.0` tag.
 
 ## Verification
 
-Release-preparation verification on July 25, 2026:
+Release verification recorded on July 25, 2026:
 
 ```text
 python -m pytest -q -p no:cacheprovider
 302 passed, 162 warnings
 ```
 
-The final candidate must also pass:
+The release procedure also required:
 
 - Markdown structure and local-link validation;
 - documentation entry-point and release-integrity checks;
@@ -87,13 +89,15 @@ The final candidate must also pass:
 - `git diff --check`; and
 - complete public CI on the exact candidate SHA.
 
-The immutable candidate SHA and public CI URL belong in the annotated tag and
-public release record after CI completes. A local green run is supporting
-evidence, not a substitute for green public CI on that SHA.
+The annotated tag binds the immutable Framework identity to commit
+`87f438d05a8841166ea32719b9fda807acf5cb6b`. The repository freeze record
+reports green CI and CodeQL for the release; a durable CI run URL and artifact
+checksums should be added to this record when available. The local green run is
+supporting evidence, not a substitute for inspectable public CI provenance.
 
 ## Reproducibility
 
-From a clean checkout of the candidate commit:
+From a clean checkout of the frozen commit:
 
 ```sh
 python -m venv .venv
@@ -152,13 +156,16 @@ Framework 1.0 must not be described as:
 - proof that visual recurrence establishes shared mathematics;
 - completion of active Research or the Living Library.
 
-## Remaining publication gate
+## Publication completion
 
-After the candidate commit is created, Operations must:
+Operations completed the identity-bearing publication actions:
 
-1. verify the clean checkout and exact candidate SHA;
-2. obtain a complete green public CI run on that SHA;
-3. build the source distribution and wheel from that SHA;
-4. record filenames, sizes, SHA-256 checksums, tool versions, and CI URL;
-5. create the annotated `framework-v1.0.0` tag without moving or reusing any
-   historical tag.
+1. froze exact commit `87f438d05a8841166ea32719b9fda807acf5cb6b`;
+2. created the annotated `framework-v1.0.0` tag without moving or reusing any
+   historical tag; and
+3. published the commit and tag in the public Framework repository.
+
+For stronger long-term auditability, the release record should additionally
+retain the durable CI run URL, build-tool versions, artifact filenames and
+SHA-256 checksums when those records are available. Their absence from this
+document does not move or weaken the frozen source identity.

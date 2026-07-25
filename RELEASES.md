@@ -42,18 +42,19 @@ the maintained Orientation Kernel implementation track. It does not mean:
 - ORION v0.7; or
 - a production-readiness declaration.
 
-## Next public baseline
+## Current public Framework baseline
 
-The next Framework release is prepared as **NEXAH Framework 1.0** with the
-distinct planned tag `framework-v1.0.0`. This identity applies only to the
-Framework repository and does not reuse or reinterpret the historical
-Kernel-scope `v1.0.0` tag. Before publication:
+**NEXAH Framework 1.0** was frozen on 25 July 2026 with the distinct annotated
+tag `framework-v1.0.0` at commit
+`87f438d05a8841166ea32719b9fda807acf5cb6b`.
 
-1. the intended artifact scope must be named;
-2. the exact commit and test evidence must be recorded;
-3. public CI must pass on that commit;
-4. release notes must state limits and compatibility;
-5. the release owner must approve creation of the annotated tag.
+This identity applies only to the Framework repository and does not reuse or
+reinterpret the historical Kernel-scope `v1.0.0` tag. The release scope,
+verification record, limits and remaining provenance improvements are recorded
+in the **[NEXAH Framework 1.0 Release Record](FRAMEWORK_RELEASE_CANDIDATE.md)**.
+
+Post-freeze documentation commits may clarify the public record. They do not
+move the tag or alter the frozen source baseline.
 
 Constitution v1.0 may be published or referenced as a governance baseline under
 an unambiguous name such as `constitution-v1.0`; doing so does not create a
