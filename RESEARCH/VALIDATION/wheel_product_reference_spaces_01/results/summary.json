@@ -1,0 +1,148 @@
+{
+  "boundary_31_32_33": {
+    "absolute_curvature_percentile": 0.833333333333,
+    "curvature_at_32": 0.315417390317,
+    "flagged_at_95_percent": false,
+    "normalized_gain_31": 0.22824411129,
+    "normalized_gain_32": 0.098376569445,
+    "normalized_gain_33": 0.283926417917
+  },
+  "decisions": {
+    "boundary_31_32_33_flagged": false,
+    "crt_6_7_42_exact": true,
+    "joint_mod42_interaction_supported": true,
+    "mod280_mod360_distinguishable": true,
+    "mod6_dual_transition_supported": true,
+    "stabilization_supported": false
+  },
+  "experiment": "wheel_product_reference_spaces_01",
+  "input": {
+    "bootstrap_runs": 10000,
+    "folds": 5,
+    "mod6_null_runs_per_fold": 100,
+    "policies": [
+      "all_primes",
+      "without_2_3"
+    ],
+    "prime_count": 20000,
+    "scan_moduli": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      120,
+      210,
+      280,
+      360
+    ]
+  },
+  "mean_reflection_tv": {
+    "120": 0.9995997999,
+    "280": 1.0,
+    "30": 0.553576788394,
+    "360": 1.0,
+    "40": 0.731265632816,
+    "42": 0.739669834917,
+    "6": 0.014107053527
+  },
+  "mod280_vs_mod360": {
+    "all_primes": {
+      "bootstrap_95_ci": [
+        0.01776120658,
+        0.022943320159
+      ],
+      "distinguishable": true,
+      "mod360_minus_mod280_normalized_gain": 0.02035226337
+    },
+    "without_2_3": {
+      "bootstrap_95_ci": [
+        0.017732834532,
+        0.022924309
+      ],
+      "distinguishable": true,
+      "mod360_minus_mod280_normalized_gain": 0.020328571766
+    }
+  },
+  "mod42_product": {
+    "all_primes": {
+      "bootstrap_95_ci": [
+        0.544395406895,
+        0.566213659806
+      ],
+      "joint_advantage_mean_bits": 0.554646741245,
+      "joint_interaction_supported": true
+    },
+    "without_2_3": {
+      "bootstrap_95_ci": [
+        0.544403531214,
+        0.566199579527
+      ],
+      "joint_advantage_mean_bits": 0.554648166634,
+      "joint_interaction_supported": true
+    }
+  },
+  "mod6": {
+    "all_primes": {
+      "max_null_empirical_p": 0.009900990099,
+      "mean_information_gain_bits": 0.02176309337,
+      "supported": true
+    },
+    "without_2_3": {
+      "max_null_empirical_p": 0.009900990099,
+      "mean_information_gain_bits": 0.021655497646,
+      "supported": true
+    }
+  }
+}

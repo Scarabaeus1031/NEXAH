@@ -80,6 +80,8 @@ The current experiments investigate:
 | Synchronization-field organization | Kuramoto and comparison systems | [`systems/kuramoto/`](systems/kuramoto/) | Experimental system-level evidence |
 | Parameter-driven transition geometry | Mandelbrot / Julia | [`fractal_tests/`](fractal_tests/) | Experimental extension |
 | Recursive directional transport | Multiple exploratory systems | [`JANUS_OPERATOR/`](../CORE_CONCEPTS/JANUS_OPERATOR/) | Experimental / semi-formal |
+| Prime-residue transition specificity | First 20,000 primes | [`prime_modular_residue_comparison_01/`](prime_modular_residue_comparison_01/) | Bounded held-out validation |
+| Wheel and product reference spaces | Prime residues, CRT products, wheel lifts | [`wheel_product_reference_spaces_01/`](wheel_product_reference_spaces_01/) | Bounded held-out and exact-arithmetic validation |
 
 This matrix identifies where evidence lives; it does not assign universal
 validity to the associated interpretation.
@@ -99,6 +101,8 @@ validity to the associated interpretation.
 | **[systems/](systems/)** | Larger system-specific validation programs |
 | **[fractal/](fractal/)** | Conceptual fractal-transition documents |
 | **[fractal_tests/](fractal_tests/)** | Executable parameter-driven fractal experiments |
+| **[prime_modular_residue_comparison_01/](prime_modular_residue_comparison_01/)** | Held-out Mod-7/Mod-17/control comparison and 7-to-17 bridge test |
+| **[wheel_product_reference_spaces_01/](wheel_product_reference_spaces_01/)** | Mod-6 baseline, Mod-42 CRT product, wheel/lift and boundary tests |
 | **[visuals/](visuals/)** | Validation overview visuals |
 
 The distinction between `fractal/` and `fractal_tests/` is intentional:

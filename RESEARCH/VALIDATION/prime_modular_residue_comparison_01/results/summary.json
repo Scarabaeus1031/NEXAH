@@ -1,0 +1,244 @@
+{
+  "bridge_7_to_17": {
+    "all_primes": {
+      "bootstrap_95_ci": [
+        -0.0041,
+        0.0036
+      ],
+      "fixed_bridge_supported": false,
+      "fixed_minus_majority_mean": -0.0002,
+      "mean_fixed_accuracy": 0.0609,
+      "mean_learned_lookup_accuracy": 0.0592,
+      "mean_majority_accuracy": 0.0611
+    },
+    "without_2_3": {
+      "bootstrap_95_ci": [
+        -0.0044,
+        0.0036
+      ],
+      "fixed_bridge_supported": false,
+      "fixed_minus_majority_mean": -0.0002,
+      "mean_fixed_accuracy": 0.0609,
+      "mean_learned_lookup_accuracy": 0.0592,
+      "mean_majority_accuracy": 0.0611
+    }
+  },
+  "decisions": {
+    "fixed_7_to_17_bridge_supported": false,
+    "mod17_predictive_advantage_supported": false,
+    "mod17_stabilization_supported": false,
+    "stabilization_reason": "No dynamical intervention or stability endpoint is present."
+  },
+  "experiment": "prime_modular_residue_comparison_01",
+  "input": {
+    "bootstrap_runs": 10000,
+    "first_primes": [
+      2,
+      3
+    ],
+    "folds": 5,
+    "moduli": [
+      5,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23
+    ],
+    "null_runs_per_fold": 100,
+    "prime_count": 20000
+  },
+  "mod17_vs_mod7": {
+    "all_primes": {
+      "bootstrap_95_ci": [
+        0.3655691145,
+        0.393276071835
+      ],
+      "highest_gain_modulus": 23,
+      "mod17_exceeds_mod7": true,
+      "mod17_is_highest": false,
+      "mod17_minus_mod7_mean_bits": 0.379748464627,
+      "ranking": [
+        {
+          "mean_information_gain_bits": 0.753943951872,
+          "modulus": 23
+        },
+        {
+          "mean_information_gain_bits": 0.562255660156,
+          "modulus": 19
+        },
+        {
+          "mean_information_gain_bits": 0.469913401746,
+          "modulus": 17
+        },
+        {
+          "mean_information_gain_bits": 0.293026319783,
+          "modulus": 13
+        },
+        {
+          "mean_information_gain_bits": 0.220528641357,
+          "modulus": 11
+        },
+        {
+          "mean_information_gain_bits": 0.090164937119,
+          "modulus": 7
+        },
+        {
+          "mean_information_gain_bits": 0.063433000941,
+          "modulus": 5
+        }
+      ]
+    },
+    "without_2_3": {
+      "bootstrap_95_ci": [
+        0.365572909192,
+        0.393302351169
+      ],
+      "highest_gain_modulus": 23,
+      "mod17_exceeds_mod7": true,
+      "mod17_is_highest": false,
+      "mod17_minus_mod7_mean_bits": 0.379760384744,
+      "ranking": [
+        {
+          "mean_information_gain_bits": 0.753871401939,
+          "modulus": 23
+        },
+        {
+          "mean_information_gain_bits": 0.562222655145,
+          "modulus": 19
+        },
+        {
+          "mean_information_gain_bits": 0.469922959505,
+          "modulus": 17
+        },
+        {
+          "mean_information_gain_bits": 0.293020676127,
+          "modulus": 13
+        },
+        {
+          "mean_information_gain_bits": 0.220523427963,
+          "modulus": 11
+        },
+        {
+          "mean_information_gain_bits": 0.09016257476,
+          "modulus": 7
+        },
+        {
+          "mean_information_gain_bits": 0.063434416931,
+          "modulus": 5
+        }
+      ]
+    }
+  },
+  "prediction_aggregates": {
+    "all_primes": {
+      "11": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.220528641357,
+        "mean_marginal_accuracy": 0.098449224612,
+        "mean_markov_accuracy": 0.209204602301,
+        "mean_null_z": 32.202465283415
+      },
+      "13": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.293026319783,
+        "mean_marginal_accuracy": 0.08084042021,
+        "mean_markov_accuracy": 0.195797898949,
+        "mean_null_z": 37.45761767421
+      },
+      "17": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.469913401746,
+        "mean_marginal_accuracy": 0.061130565283,
+        "mean_markov_accuracy": 0.191795897949,
+        "mean_null_z": 43.051694836757
+      },
+      "19": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.562255660156,
+        "mean_marginal_accuracy": 0.055227613807,
+        "mean_markov_accuracy": 0.186593296648,
+        "mean_null_z": 48.621887312455
+      },
+      "23": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.753943951872,
+        "mean_marginal_accuracy": 0.043821910955,
+        "mean_markov_accuracy": 0.184992496248,
+        "mean_null_z": 53.689223516977
+      },
+      "5": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.063433000941,
+        "mean_marginal_accuracy": 0.247023511756,
+        "mean_markov_accuracy": 0.338469234617,
+        "mean_null_z": 17.449123056396
+      },
+      "7": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.090164937119,
+        "mean_marginal_accuracy": 0.165182591296,
+        "mean_markov_accuracy": 0.250325162581,
+        "mean_null_z": 20.201734041976
+      }
+    },
+    "without_2_3": {
+      "11": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.220523427963,
+        "mean_marginal_accuracy": 0.098449224612,
+        "mean_markov_accuracy": 0.209204602301,
+        "mean_null_z": 33.81021781595
+      },
+      "13": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.293020676127,
+        "mean_marginal_accuracy": 0.08084042021,
+        "mean_markov_accuracy": 0.195797898949,
+        "mean_null_z": 34.573106530428
+      },
+      "17": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.469922959505,
+        "mean_marginal_accuracy": 0.061130565283,
+        "mean_markov_accuracy": 0.191795897949,
+        "mean_null_z": 43.232304008897
+      },
+      "19": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.562222655145,
+        "mean_marginal_accuracy": 0.055227613807,
+        "mean_markov_accuracy": 0.186593296648,
+        "mean_null_z": 47.424245320936
+      },
+      "23": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.753871401939,
+        "mean_marginal_accuracy": 0.043821910955,
+        "mean_markov_accuracy": 0.184992496248,
+        "mean_null_z": 56.788196341134
+      },
+      "5": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.063434416931,
+        "mean_marginal_accuracy": 0.247023511756,
+        "mean_markov_accuracy": 0.338469234617,
+        "mean_null_z": 17.336614564819
+      },
+      "7": {
+        "max_null_empirical_p": 0.009900990099,
+        "mean_information_gain_bits": 0.09016257476,
+        "mean_marginal_accuracy": 0.165182591296,
+        "mean_markov_accuracy": 0.250325162581,
+        "mean_null_z": 20.104516459189
+      }
+    }
+  },
+  "prime_2_3_sensitivity": {
+    "difference_change_bits": 1.1920117e-05,
+    "sensitive": false,
+    "sign_changed": false,
+    "threshold_bits": 0.001
+  }
+}

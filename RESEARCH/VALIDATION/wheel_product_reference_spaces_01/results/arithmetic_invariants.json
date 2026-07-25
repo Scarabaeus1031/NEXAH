@@ -1,0 +1,73 @@
+{
+  "crt_6_7_42": {
+    "all_42_states_roundtrip": true,
+    "all_prime_coordinates_roundtrip": true,
+    "formula": "(7*a + 36*b) mod 42"
+  },
+  "grid_intersections": {
+    "360_refines": [
+      20,
+      24,
+      30,
+      60,
+      120
+    ],
+    "common_24_node_60_tick_angles_degrees": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210,
+      240,
+      270,
+      300,
+      330
+    ],
+    "common_angle_count": 12,
+    "lcm_20_24_30": 120,
+    "lcm_7_17_30": 3570
+  },
+  "mod6": {
+    "allowed_prime_residues_after_3": [
+      1,
+      5
+    ],
+    "exact_gap_2_count": 2370,
+    "exact_gap_4_count": 2354,
+    "exceptions_in_input": [],
+    "transition_counts": {
+      "1->1": 4056,
+      "1->5": 5925,
+      "5->1": 5926,
+      "5->5": 4090
+    }
+  },
+  "wheel_lift": {
+    "phi_280": 96,
+    "phi_360": 96,
+    "radical_360": 30,
+    "unit_lifts_mod360_per_mod30_class": {
+      "1": 12,
+      "11": 12,
+      "13": 12,
+      "17": 12,
+      "19": 12,
+      "23": 12,
+      "29": 12,
+      "7": 12
+    },
+    "units_mod30": [
+      1,
+      7,
+      11,
+      13,
+      17,
+      19,
+      23,
+      29
+    ]
+  }
+}
